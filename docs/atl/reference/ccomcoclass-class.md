@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37df260d16c04210fb7e66c0ec9a747a3dad7da4
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 11c391e6ad467c835cd8c65ec872db74b85404a2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760157"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097609"
 ---
 # <a name="ccomcoclass-class"></a>CComCoClass 类
 
@@ -36,16 +36,16 @@ ms.locfileid: "43760157"
 ## <a name="syntax"></a>语法
 
 ```
-template <class T, const CLSID* pclsid = &CLSID_NULL>  
+template <class T, const CLSID* pclsid = &CLSID_NULL>
 class CComCoClass
 ```
 
 #### <a name="parameters"></a>参数
 
-*T*  
+*T*<br/>
 您的类，派生自`CComCoClass`。
 
-*pclsid*  
+*pclsid*<br/>
 指向对象的 CLSID 的指针。
 
 ## <a name="members"></a>成员
@@ -91,13 +91,13 @@ static HRESULT CreateInstance(IUnknown* punkOuter, Q** pp);
 
 ### <a name="parameters"></a>参数
 
-*Q*  
+*Q*<br/>
 应通过返回的 COM 接口*pp*。
 
-*punkOuter*  
+*punkOuter*<br/>
 [in]未知的外部或聚合的控制未知。
 
-*pp*  
+*pp*<br/>
 [out]如果创建成功接收的请求的接口指针的指针变量的地址。
 
 ### <a name="return-value"></a>返回值
@@ -166,24 +166,25 @@ static HRESULT Error(
 
 ### <a name="parameters"></a>参数
 
-*lpszDesc*  
-[in]描述错误的字符串。 Unicode 版本`Error`规定*lpszDesc*属于类型 LPCOLESTR; ANSI 版本指定的类型 LPCSTR。  
-*iid*  
+*lpszDesc*<br/>
+[in]描述错误的字符串。 Unicode 版本`Error`规定*lpszDesc*属于类型 LPCOLESTR; ANSI 版本指定的类型 LPCSTR。
+
+*iid*<br/>
 [in]如果错误由操作系统定义的错误或 GUID_NULL （默认值） 的接口的 IID。
 
-*hRes*  
+*hRes*<br/>
 [in]所需的 HRESULT 返回到调用方。 默认值为 0。 有关详细信息*hRes*，请参阅备注。
 
-*nID*  
+*nID*<br/>
 [in]资源标识符的错误描述字符串的存储位置。 此值应介于 0x0200 和 0xffff 内，之间 （含）。 在调试版本中， **ASSERT**如果会导致*nID*没有有效的字符串进行索引。 在发布版本中的错误描述字符串将设置为"未知错误。"
 
-*dwHelpID*  
+*dwHelpID*<br/>
 [in]错误的帮助上下文标识符。
 
-*lpszHelpFile*  
+*lpszHelpFile*<br/>
 [in]路径和描述错误的帮助文件的名称。
 
-*hInst*  
+*hInst*<br/>
 [in]资源的句柄。 默认情况下，此参数是`_AtlModule::GetResourceInstance`，其中`_AtlModule`是全局实例[CAtlModule](../../atl/reference/catlmodule-class.md)。
 
 ### <a name="return-value"></a>返回值

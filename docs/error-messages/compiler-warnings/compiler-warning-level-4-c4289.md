@@ -1,5 +1,5 @@
 ---
-title: 编译器警告 （等级 4） C4289 |Microsoft 文档
+title: 编译器警告 （等级 C4289 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f7f09bd85d3740d43b6e4b6a80ed562f8cc2261
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 35cb22c767c0ea64a1536bd4d02ad8653bb94250
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33292602"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46102835"
 ---
 # <a name="compiler-warning-level-4-c4289"></a>编译器警告（等级 4）C4289
-使用了非标准扩展 :“var”: 在 for 循环中声明的循环控制变量用在了 for 循环范围外  
-  
- 使用编译时[/Ze](../../build/reference/za-ze-disable-language-extensions.md)和 **/zc: forscope-** 中, 声明的变量[为](../../cpp/for-statement-cpp.md)之后使用循环已**为**-循环作用域。  
-  
- 请参阅[/zc: forscope](../../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md)有关如何指定标准行为中的**为**循环也 **/Ze**。  
-  
- 默认情况下，此警告处于关闭状态。 请参阅 [默认情况下处于关闭状态的编译器警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md) 了解详细信息。  
-  
- 下面的示例生成 C4289:  
-  
-```  
-// C4289.cpp  
-// compile with: /W4 /Zc:forScope-  
-#pragma warning(default:4289)  
-int main() {  
-   for (int i = 0 ; ; )   // C4289  
-      break;  
-   i++;  
-}  
+
+使用了非标准扩展 :“var”: 在 for 循环中声明的循环控制变量用在了 for 循环范围外
+
+使用编译时[/Ze](../../build/reference/za-ze-disable-language-extensions.md)和 **/zc: forscope-** 中, 声明的变量[有关](../../cpp/for-statement-cpp.md)之后使用循环**为**-循环作用域。
+
+请参阅[/zc: forscope](../../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md)有关如何指定中的标准行为的信息**有关**循环也 **/Ze**。
+
+默认情况下，此警告处于关闭状态。 请参阅 [默认情况下处于关闭状态的编译器警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md) 了解详细信息。
+
+下面的示例生成 C4289:
+
+```
+// C4289.cpp
+// compile with: /W4 /Zc:forScope-
+#pragma warning(default:4289)
+int main() {
+   for (int i = 0 ; ; )   // C4289
+      break;
+   i++;
+}
 ```

@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2113 |Microsoft 文档
+title: 编译器错误 C2113 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92ad712fa27d6350b672a7bfc1636d0fb3b80b7b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 94dd75ad7df782a92dfe359ebabf0abe1175ad75
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33166330"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46096166"
 ---
 # <a name="compiler-error-c2113"></a>编译器错误 C2113
-“-”：指针只能从另一个指针上进行减法运算  
-  
- 减法操作中的右操作数是一个指针，但左操作数不是。
+
+“-”：指针只能从另一个指针上进行减法运算
+
+减法操作中的右操作数是一个指针，但左操作数不是。

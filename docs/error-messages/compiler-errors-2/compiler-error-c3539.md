@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C3539 |Microsoft 文档
+title: 编译器错误 C3539 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,35 +16,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f704bd283ab5228a8988d587707e978aa5b49e1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4b2f78b69e00290dcc283e3fc340d25a4a071776
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33256397"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091876"
 ---
 # <a name="compiler-error-c3539"></a>编译器错误 C3539
-type： 模板自变量不能包含 auto 的类型  
-  
- 指定的模板自变量类型不能包含的用法`auto`关键字。  
-  
-### <a name="to-correct-this-error"></a>更正此错误  
-  
-1.  未指定模板参数与`auto`关键字。  
-  
-## <a name="example"></a>示例  
- 下面的示例生成 C3539。  
-  
-```  
-// C3539.cpp  
-// Compile with /Zc:auto  
-template<class T> class C{};  
-int main()  
-{  
-   C<auto> c;   // C3539  
-   return 0;  
-}  
-```  
-  
-## <a name="see-also"></a>请参阅  
- [auto 关键字](../../cpp/auto-keyword.md)
+
+type： 模板参数不能为包含 auto 的类型
+
+指定的模板自变量类型不能包含的使用情况`auto`关键字。
+
+### <a name="to-correct-this-error"></a>更正此错误
+
+1. 未指定模板参数与`auto`关键字。
+
+## <a name="example"></a>示例
+
+下面的示例生成 C3539。
+
+```
+// C3539.cpp
+// Compile with /Zc:auto
+template<class T> class C{};
+int main()
+{
+   C<auto> c;   // C3539
+   return 0;
+}
+```
+
+## <a name="see-also"></a>请参阅
+
+[auto 关键字](../../cpp/auto-keyword.md)

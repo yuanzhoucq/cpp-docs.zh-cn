@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C3395 |Microsoft 文档
+title: 编译器错误 C3395 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 202162ecac8907852ca621599f5306884e59ae98
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b604db63466df28d951e8c0027d85f55013f4d5a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33254305"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46103420"
 ---
 # <a name="compiler-error-c3395"></a>编译器错误 C3395
-function: __declspec （dllexport） 不能应用于具有函数\__clrcall 调用约定  
-  
- `__declspec(dllexport)` 和[__clrcall](../../cpp/clrcall.md)不兼容。  有关详细信息，请参阅[dllexport、 dllimport](../../cpp/dllexport-dllimport.md)。  
-  
- 下面的示例生成 C3395:  
-  
-```  
-// C3395.cpp  
-// compile with: /clr /c  
-  
-__declspec(dllexport) void __clrcall Test(){}   // C3395  
-void __clrcall Test2(){}   // OK  
-__declspec(dllexport) void Test3(){}   // OK  
+
+function: __declspec （dllexport） 不能应用于具有函数\__clrcall 调用约定
+
+`__declspec(dllexport)` 并[__clrcall](../../cpp/clrcall.md)不兼容。  有关详细信息，请参阅[dllexport、 dllimport](../../cpp/dllexport-dllimport.md)。
+
+下面的示例生成 C3395:
+
+```
+// C3395.cpp
+// compile with: /clr /c
+
+__declspec(dllexport) void __clrcall Test(){}   // C3395
+void __clrcall Test2(){}   // OK
+__declspec(dllexport) void Test3(){}   // OK
 ```

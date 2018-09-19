@@ -1,5 +1,5 @@
 ---
-title: uint_4 类 |Microsoft 文档
+title: uint_4 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -278,15 +278,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 490242014a907455a9511cd54f5e46a809318691
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: fa93e1b7c406e1799946b56e29b9fa32a39b1996
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33694389"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106293"
 ---
 # <a name="uint4-class"></a>uint_4 类
-表示短矢量的四个无符号整数。  
+表示的四个无符号整数中的短矢量。  
   
 ## <a name="syntax"></a>语法  
   
@@ -306,7 +306,7 @@ class uint_4;
   
 |名称|描述|  
 |----------|-----------------|  
-|[uint_4 构造函数](#uint_4__ctor) |已重载。 默认构造函数，将初始化为 0 的所有元素。|  
+|[uint_4 构造函数](#uint_4__ctor) |已重载。 默认构造函数，初始化 0 的所有元素。|  
 
   
 ### <a name="public-methods"></a>公共方法  
@@ -465,7 +465,7 @@ class uint_4;
   
 ### <a name="public-constants"></a>公共常量  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[大小常量](#size)||  
 
@@ -613,7 +613,7 @@ class uint_4;
   
 ## <a name="uint_4__ctor"></a> uint_4 
 
-默认构造函数，将初始化为 0 的所有元素。
+默认构造函数，初始化 0 的所有元素。
   
 ## <a name="syntax"></a>语法  
   
@@ -649,23 +649,23 @@ explicit inline uint_4(
 ```  
   
 #### <a name="parameters"></a>参数  
- `_V0`  
- 要初始化元素 0 的值。  
+*_V0*<br/>
+要初始化元素 0 的值。  
   
- `_V1`  
- 要初始化元素 1 的值。  
+*_V1*<br/>
+要初始化元素 1 的值。  
   
- `_V2`  
- 要初始化元素 2 的值。  
+*_V2*<br/>
+要初始化元素 2 的值。  
   
- `_V3`  
- 要初始化元素 3 的值。  
+*_V3*<br/>
+要初始化元素 3 的值。  
   
- `_V`  
- 用于初始化值。  
+*（_V)*<br/>
+用于初始化值。  
   
- `_Other`  
- 用于初始化的对象。  
+*_Other*<br/>
+用于初始化的对象。  
   
 ## <a name=""></a> 大小 
 

@@ -138,14 +138,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c1934c7857e8c7813f653b6f12be0ba523ec63fb
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 8b421bcc84152fede78ca985bbf2896f42a148fe
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42573215"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46100433"
 ---
 # <a name="cdynamicaccessor-class"></a>CDynamicAccessor 类
+
 使您可以在不知道数据库架构（数据库的基础结构）的情况下访问数据源。  
   
 ## <a name="syntax"></a>语法
@@ -155,7 +156,8 @@ class CDynamicAccessor : public CAccessorBase
 ```  
 
 ## <a name="requirements"></a>要求  
- **标头**：atldbcli.h  
+
+**标头**：atldbcli.h  
   
 ## <a name="members"></a>成员  
   
@@ -185,13 +187,15 @@ class CDynamicAccessor : public CAccessorBase
 |[SetValue](#setvalue)|将存储到缓冲区的数据。|  
   
 ## <a name="remarks"></a>备注  
- 使用`CDynamicAccessor`方法以获取列信息，例如列名、 列数、 数据类型等。 然后可以使用此列的信息来在运行时动态创建取值函数。  
+
+使用`CDynamicAccessor`方法以获取列信息，例如列名、 列数、 数据类型等。 然后可以使用此列的信息来在运行时动态创建取值函数。  
   
- 列信息存储在缓冲区的创建和管理此类。 从缓冲区使用获取数据[GetValue](../../data/oledb/cdynamicaccessor-getvalue.md)。  
+列信息存储在缓冲区的创建和管理此类。 从缓冲区使用获取数据[GetValue](../../data/oledb/cdynamicaccessor-getvalue.md)。  
   
- 有关的讨论和使用动态访问器类的示例，请参阅[使用动态访问器](../../data/oledb/using-dynamic-accessors.md)。  
+有关的讨论和使用动态访问器类的示例，请参阅[使用动态访问器](../../data/oledb/using-dynamic-accessors.md)。  
 
 ## <a name="addbindentry"></a> Cdynamicaccessor:: Addbindentry
+
 将绑定条目添加到输出列。  
   
 ### <a name="syntax"></a>语法  
@@ -201,16 +205,20 @@ HRESULT AddBindEntry(const DBCOLUMNINFO& info) throw();
 ```  
   
 #### <a name="parameters"></a>参数  
- *信息*  
- [in]一个`DBCOLUMNINFO`结构，它包含的列信息。 请参阅中的"DBCOLUMNINFO 结构" [icolumnsinfo:: Getcolumninfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\))中*OLE DB 程序员参考*。  
+
+*信息*<br/>
+[in]一个`DBCOLUMNINFO`结构，它包含的列信息。 请参阅中的"DBCOLUMNINFO 结构" [icolumnsinfo:: Getcolumninfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\))中*OLE DB 程序员参考*。  
   
 ### <a name="return-value"></a>返回值  
- 一个标准的 HRESULT 值。  
+
+一个标准的 HRESULT 值。  
   
 ### <a name="remarks"></a>备注  
- 使用此方法重写使用创建的默认访问器时`CDynamicAccessor`(请参阅[如何实现提取的数据？](../../data/oledb/fetching-data.md))。 
+
+使用此方法重写使用创建的默认访问器时`CDynamicAccessor`(请参阅[如何实现提取的数据？](../../data/oledb/fetching-data.md))。 
   
 ## <a name="cdynamicaccessor"></a> Cdynamicaccessor:: Cdynamicaccessor
+
 实例化并初始化`CDynamicAccessor`对象。  
   
 ### <a name="syntax"></a>语法  
@@ -221,18 +229,21 @@ CDynamicAccessor(DBBLOBHANDLINGENUM eBlobHandling = DBBLOBHANDLING_DEFAULT,
 ```  
   
 #### <a name="parameters"></a>参数  
- *eBlobHandling*  
- 指定二进制大型对象 (BLOB) 数据的处理方式。 默认值为 DBBLOBHANDLING_DEFAULT。 请参阅[SetBlobHandling](../../data/oledb/cdynamicaccessor-setblobhandling.md) DBBLOBHANDLINGENUM 值的说明。  
+
+*eBlobHandling*<br/>
+指定二进制大型对象 (BLOB) 数据的处理方式。 默认值为 DBBLOBHANDLING_DEFAULT。 请参阅[SetBlobHandling](../../data/oledb/cdynamicaccessor-setblobhandling.md) DBBLOBHANDLINGENUM 值的说明。  
   
- *nBlobSize*  
- 最大 BLOB 大小（以字节为单位）；该值之上的列数据被视为 BLOB。 默认值为 8000。 请参阅[SetBlobSizeLimit](../../data/oledb/cdynamicaccessor-setblobsizelimit.md)有关详细信息。  
+*nBlobSize*<br/>
+最大 BLOB 大小（以字节为单位）；该值之上的列数据被视为 BLOB。 默认值为 8000。 请参阅[SetBlobSizeLimit](../../data/oledb/cdynamicaccessor-setblobsizelimit.md)有关详细信息。  
   
 ### <a name="remarks"></a>备注  
- 如果使用构造函数来初始化`CDynamicAccessor`对象，您可以指定它将如何绑定 Blob。 Blob 可以包含二进制数据，例如图形、 声音或已编译代码。 默认行为是将视为 Blob 列超过 8,000 个字节，并尝试将其绑定到`ISequentialStream`对象。 但是，可以指定不同的值为 BLOB 大小。  
+
+如果使用构造函数来初始化`CDynamicAccessor`对象，您可以指定它将如何绑定 Blob。 Blob 可以包含二进制数据，例如图形、 声音或已编译代码。 默认行为是将视为 Blob 列超过 8,000 个字节，并尝试将其绑定到`ISequentialStream`对象。 但是，可以指定不同的值为 BLOB 大小。  
   
- 此外可以指定如何`CDynamicAccessor`处理被称为 BLOB 数据的列数据： 它可以处理 BLOB 数据以默认方式; 可以跳过 （不绑定） BLOB 数据; 也可以将 BLOB 数据绑定中提供程序分配内存。  
+此外可以指定如何`CDynamicAccessor`处理被称为 BLOB 数据的列数据： 它可以处理 BLOB 数据以默认方式; 可以跳过 （不绑定） BLOB 数据; 也可以将 BLOB 数据绑定中提供程序分配内存。  
 
 ## <a name="close"></a> Cdynamicaccessor:: Close
+
 取消绑定所有列时，释放分配的内存，并释放[IAccessor](/previous-versions/windows/desktop/ms719672\(v=vs.85\))类中的接口指针。  
   
 ### <a name="syntax"></a>语法  
@@ -242,6 +253,7 @@ void Close() throw();
 ```  
 
 ## <a name="getblobhandling"></a> Cdynamicaccessor:: Getblobhandling
+
 检索 BLOB 处理的当前行值。  
   
 ### <a name="syntax"></a>语法  
@@ -251,9 +263,11 @@ const DBBLOBHANDLINGENUM GetBlobHandling() const;
 ```  
   
 ### <a name="remarks"></a>备注  
- 返回处理值的 BLOB *eBlobHandling*通过设置[SetBlobHandling](../../data/oledb/cdynamicaccessor-setblobhandling.md)。 
+
+返回处理值的 BLOB *eBlobHandling*通过设置[SetBlobHandling](../../data/oledb/cdynamicaccessor-setblobhandling.md)。 
 
 ## <a name="getblobsizelimit"></a> Cdynamicaccessor:: Getblobsizelimit
+
 检索以字节为单位的最大 BLOB 大小。  
   
 ### <a name="syntax"></a>语法  
@@ -263,9 +277,11 @@ const DBLENGTH GetBlobSizeLimit() const;
 ```  
   
 ### <a name="remarks"></a>备注  
- 返回处理值的 BLOB *nBlobSize*通过设置[SetBlobSizeLimit](../../data/oledb/cdynamicaccessor-setblobsizelimit.md)。  
+
+返回处理值的 BLOB *nBlobSize*通过设置[SetBlobSizeLimit](../../data/oledb/cdynamicaccessor-setblobsizelimit.md)。  
 
 ## <a name="getbookmark"></a> Cdynamicaccessor:: Getbookmark
+
 检索当前行的书签。  
   
 ### <a name="syntax"></a>语法  
@@ -275,16 +291,20 @@ HRESULT GetBookmark(CBookmark< >* pBookmark) const throw();
 ```  
   
 #### <a name="parameters"></a>参数  
- *pBookmark*  
- [out]一个指向[CBookmark](../../data/oledb/cbookmark-class.md)对象。  
+
+*pBookmark*<br/>
+[out]一个指向[CBookmark](../../data/oledb/cbookmark-class.md)对象。  
   
 ### <a name="return-value"></a>返回值  
- 一个标准的 HRESULT 值。  
+
+一个标准的 HRESULT 值。  
   
 ### <a name="remarks"></a>备注  
- 您需要设置`DBPROP_IRowsetLocate`为 variant_true，则检索一个书签。 
+
+您需要设置`DBPROP_IRowsetLocate`为 variant_true，则检索一个书签。 
 
 ## <a name="getcolumncount"></a> Cdynamicaccessor:: Getcolumncount
+
 检索列的数。  
   
 ### <a name="syntax"></a>语法  
@@ -294,9 +314,11 @@ DBORDINAL GetColumnCount() const throw();
 ```  
   
 ### <a name="return-value"></a>返回值  
- 检索的列数。  
+
+检索的列数。  
 
 ## <a name="getcolumnflags"></a> Cdynamicaccessor:: Getcolumnflags
+
 检索列特征。  
   
 ### <a name="syntax"></a>语法  
@@ -307,19 +329,23 @@ bool GetColumnFlags(DBORDINAL nColumn,
 ```  
   
 #### <a name="parameters"></a>参数  
- *nColumn*  
- [in] 列号。 列号从 1 开始。 值为 0 指书签列，如果有的话。  
+
+*nColumn*<br/>
+[in] 列号。 列号从 1 开始。 值为 0 指书签列，如果有的话。  
   
- *pFlags*  
- [out]指向描述列特征的位掩码的指针。 请参阅中的"DBCOLUMNFLAGS 枚举类型" [icolumnsinfo:: Getcolumninfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\))中*OLE DB 程序员参考*。  
+*pFlags*<br/>
+[out]指向描述列特征的位掩码的指针。 请参阅中的"DBCOLUMNFLAGS 枚举类型" [icolumnsinfo:: Getcolumninfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\))中*OLE DB 程序员参考*。  
   
 ### <a name="return-value"></a>返回值  
- 返回 **，则返回 true**如果成功检索列特征。 否则，返回 **false**。  
+
+返回 **，则返回 true**如果成功检索列特征。 否则，返回 **false**。  
   
 ### <a name="remarks"></a>备注  
- 从一个偏移的列号。 列零是一种特殊情况;如果可用，则该书签。
+
+从一个偏移的列号。 列零是一种特殊情况;如果可用，则该书签。
 
 ## <a name="getcolumninfo"></a> Cdynamicaccessor:: Getcolumninfo
+
 返回所需的大多数使用者的列元数据。  
   
 ### <a name="syntax"></a>语法  
@@ -332,25 +358,29 @@ HRESULT GetColumnInfo(IRowset* pRowset,
 ```  
   
 #### <a name="parameters"></a>参数  
- *pRowset*  
- [in]一个指向[IRowset](/previous-versions/windows/desktop/ms720986\(v=vs.85\))接口。  
+
+*pRowset*<br/>
+[in]一个指向[IRowset](/previous-versions/windows/desktop/ms720986\(v=vs.85\))接口。  
   
- *pColumns*  
- [out]一个指向内存中要在行集中; 返回的列数此数字包括书签列，如果有的话。  
+*pColumns*<br/>
+[out]一个指向内存中要在行集中; 返回的列数此数字包括书签列，如果有的话。  
   
- *ppColumnInfo*  
- [out]指向内存中要返回的数组的指针`DBCOLUMNINFO`结构。 请参阅中的"DBCOLUMNINFO 结构" [icolumnsinfo:: Getcolumninfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\))中*OLE DB 程序员参考*。  
+*ppColumnInfo*<br/>
+[out]指向内存中要返回的数组的指针`DBCOLUMNINFO`结构。 请参阅中的"DBCOLUMNINFO 结构" [icolumnsinfo:: Getcolumninfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\))中*OLE DB 程序员参考*。  
   
- *ppStringsBuffer*  
- [out]指向在其中存储的所有字符串值返回一个指向内存的指针 (在使用名称*columnid* ; 二是*pwszName*) 单个分配块中。  
+*ppStringsBuffer*<br/>
+[out]指向在其中存储的所有字符串值返回一个指向内存的指针 (在使用名称*columnid* ; 二是*pwszName*) 单个分配块中。  
   
 ### <a name="return-value"></a>返回值  
- 一个标准的 HRESULT 值。  
+
+一个标准的 HRESULT 值。  
   
 ### <a name="remarks"></a>备注  
- 请参阅[icolumnsinfo:: Getcolumninfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\))中*OLE DB 程序员参考*有关数据类型信息`DBORDINAL`， `DBCOLUMNINFO`，和`OLECHAR`。  
+
+请参阅[icolumnsinfo:: Getcolumninfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\))中*OLE DB 程序员参考*有关数据类型信息`DBORDINAL`， `DBCOLUMNINFO`，和`OLECHAR`。  
 
 ## <a name="getcolumnname"></a> Cdynamicaccessor:: Getcolumnname
+
 检索指定列的名称。  
   
 ### <a name="syntax"></a>语法  
@@ -360,13 +390,16 @@ LPOLESTR GetColumnName(DBORDINAL nColumn) const throw();
 ```  
   
 #### <a name="parameters"></a>参数  
- *nColumn*  
- [in] 列号。 列号从 1 开始。 值为 0 指书签列，如果有的话。  
+
+*nColumn*<br/>
+[in] 列号。 列号从 1 开始。 值为 0 指书签列，如果有的话。  
   
 ### <a name="return-value"></a>返回值  
- 指定列的名称。  
+
+指定列的名称。  
 
 ## <a name="getcolumntype"></a> Cdynamicaccessor:: Getcolumntype
+
 检索指定列的数据类型。  
   
 ### <a name="syntax"></a>语法  
@@ -377,16 +410,19 @@ bool GetColumnType(DBORDINAL nColumn,
 ```  
   
 #### <a name="parameters"></a>参数  
- *nColumn*  
- [in] 列号。 列号从 1 开始。 值为 0 指书签列，如果有的话。  
+
+*nColumn*<br/>
+[in] 列号。 列号从 1 开始。 值为 0 指书签列，如果有的话。  
   
- *pType*  
- [out]指向指定列的数据类型的指针。  
+*pType*<br/>
+[out]指向指定列的数据类型的指针。  
   
 ### <a name="return-value"></a>返回值  
- 返回 **，则返回 true**成功后或**false**失败。  
+
+返回 **，则返回 true**成功后或**false**失败。  
 
 ## <a name="getlength"></a> Cdynamicaccessor:: Getlength
+
 检索指定列的长度。  
   
 ### <a name="syntax"></a>语法  
@@ -403,22 +439,26 @@ bool GetLength(const WCHAR* pColumnName,
 ```  
   
 #### <a name="parameters"></a>参数  
- *nColumn*  
- [in] 列号。 列号从 1 开始。 值为 0 指书签列，如果有的话。  
+
+*nColumn*<br/>
+[in] 列号。 列号从 1 开始。 值为 0 指书签列，如果有的话。  
   
- *pColumnName*  
- [in] 指向包含列名的字符串的指针。  
+*pColumnName*<br/>
+[in] 指向包含列名的字符串的指针。  
   
- *pLength*  
- [out]指向包含以字节为单位的列的长度的整数的指针。  
+*pLength*<br/>
+[out]指向包含以字节为单位的列的长度的整数的指针。  
   
 ### <a name="return-value"></a>返回值  
- 返回 **，则返回 true**如果找到指定的列。 否则，此函数返回**false**。  
+
+返回 **，则返回 true**如果找到指定的列。 否则，此函数返回**false**。  
   
 ### <a name="remarks"></a>备注  
- 第一个重写使用的列号，而第二个和第三个重写 ANSI 或 Unicode 格式，使用列名称分别。 
+
+第一个重写使用的列号，而第二个和第三个重写 ANSI 或 Unicode 格式，使用列名称分别。 
 
 ## <a name="getordinal"></a> Cdynamicaccessor:: Getordinal
+
 根据列名检索列号。  
   
 ### <a name="syntax"></a>语法  
@@ -432,16 +472,19 @@ bool GetOrdinal(const WCHAR* pColumnName,
 ```  
   
 #### <a name="parameters"></a>参数  
- *pColumnName*  
- [in] 指向包含列名的字符串的指针。  
+
+*pColumnName*<br/>
+[in] 指向包含列名的字符串的指针。  
   
- *pOrdinal*  
- [out] 指向列号的指针。  
+*pOrdinal*<br/>
+[out] 指向列号的指针。  
   
 ### <a name="return-value"></a>返回值  
- 返回 **，则返回 true**如果找到具有指定名称的列。 否则，此函数返回**false**。
+
+返回 **，则返回 true**如果找到具有指定名称的列。 否则，此函数返回**false**。
 
 ## <a name="getstatus"></a> Cdynamicaccessor:: Getstatus
+
 检索指定列的状态。  
   
 ### <a name="syntax"></a>语法  
@@ -458,19 +501,22 @@ bool GetStatus(const WCHAR* pColumnName,
 ```  
   
 #### <a name="parameters"></a>参数  
- *nColumn*  
- [in] 列号。 列号从 1 开始。 值为 0 指书签列，如果有的话。  
+
+*nColumn*<br/>
+[in] 列号。 列号从 1 开始。 值为 0 指书签列，如果有的话。  
   
- *pColumnName*  
- [in] 指向包含列名的字符串的指针。  
+*pColumnName*<br/>
+[in] 指向包含列名的字符串的指针。  
   
- *pStatus*  
- [out]指向包含的列状态的变量的指针。 请参阅[DBSTATUS](/previous-versions/windows/desktop/ms722617\(v=vs.85\))中*OLE DB 程序员参考*有关详细信息。  
+*pStatus*<br/>
+[out]指向包含的列状态的变量的指针。 请参阅[DBSTATUS](/previous-versions/windows/desktop/ms722617\(v=vs.85\))中*OLE DB 程序员参考*有关详细信息。  
   
 ### <a name="return-value"></a>返回值  
- 返回 **，则返回 true**如果找到指定的列。 否则，此函数返回**false**。  
+
+返回 **，则返回 true**如果找到指定的列。 否则，此函数返回**false**。  
 
 ## <a name="getvalue"></a> Cdynamicaccessor:: Getvalue
+
 检索指定列的数据。  
   
 ### <a name="syntax"></a>语法  
@@ -493,29 +539,33 @@ bool GetValue(const WCHAR* pColumnName, ctype* pData) const throw();
 ```  
   
 #### <a name="parameters"></a>参数  
- *ctype*  
- [in]处理字符串类型以外的任意数据类型的模板化参数 (`CHAR*`， `WCHAR*`)，这需要特殊处理。 `GetValue` 使用基于此处指定相应的数据类型。  
+
+*ctype*<br/>
+[in]处理字符串类型以外的任意数据类型的模板化参数 (`CHAR*`， `WCHAR*`)，这需要特殊处理。 `GetValue` 使用基于此处指定相应的数据类型。  
   
- *nColumn*  
- [in] 列号。 列号从 1 开始。 值为 0 指书签列，如果有的话。  
+*nColumn*<br/>
+[in] 列号。 列号从 1 开始。 值为 0 指书签列，如果有的话。  
   
- *pColumnName*  
- [in]列名称。  
+*pColumnName*<br/>
+[in]列名称。  
   
- *pData*  
- [out]指向指定列的内容的指针。  
+*pData*<br/>
+[out]指向指定列的内容的指针。  
   
 ### <a name="return-value"></a>返回值  
- 如果你想要将字符串数据传递，使用非模板化版本的`GetValue`。 此方法的非模板化版本返回`void*`，它指向包含指定的列数据的缓冲区的一部分。 如果找不到列，返回 NULL。  
+
+如果你想要将字符串数据传递，使用非模板化版本的`GetValue`。 此方法的非模板化版本返回`void*`，它指向包含指定的列数据的缓冲区的一部分。 如果找不到列，返回 NULL。  
   
- 对于所有其他数据类型，它是更易于使用的模板化版本`GetValue`。 模板化版本，会返回 **，则返回 true**成功后或**false**失败。  
+对于所有其他数据类型，它是更易于使用的模板化版本`GetValue`。 模板化版本，会返回 **，则返回 true**成功后或**false**失败。  
   
 ### <a name="remarks"></a>备注  
- 使用非模板化版本，返回包含字符串和包含其他数据类型的列的模板化版本中的列。  
+
+使用非模板化版本，返回包含字符串和包含其他数据类型的列的模板化版本中的列。  
   
- 在调试模式下，如果您将收到一个断言的大小*pData*是为它所指向的列的大小不相等。  
+在调试模式下，如果您将收到一个断言的大小*pData*是为它所指向的列的大小不相等。  
 
 ## <a name="setblobhandling"></a> Cdynamicaccessor:: Setblobhandling
+
 设置 BLOB 处理的当前行值。  
   
 ### <a name="syntax"></a>语法  
@@ -525,21 +575,24 @@ bool SetBlobHandling(DBBLOBHANDLINGENUM eBlobHandling);
 ```  
   
 #### <a name="parameters"></a>参数  
- *eBlobHandling*  
- 指定处理 BLOB 数据的方式。 它可以采用以下值：  
+
+*eBlobHandling*<br/>
+指定处理 BLOB 数据的方式。 它可以采用以下值：  
   
--   DBBLOBHANDLING_DEFAULT： 处理列的数据大于*nBlobSize* (通过设置`SetBlobSizeLimit`) 作为 BLOB 数据，检索通过`ISequentialStream`或`IStream`对象。 此选项将尝试将每个列以包含大于数据绑定*nBlobSize*或列出为 DBTYPE_IUNKNOWN 作为 BLOB 数据。  
+- DBBLOBHANDLING_DEFAULT： 处理列的数据大于*nBlobSize* (通过设置`SetBlobSizeLimit`) 作为 BLOB 数据，检索通过`ISequentialStream`或`IStream`对象。 此选项将尝试将每个列以包含大于数据绑定*nBlobSize*或列出为 DBTYPE_IUNKNOWN 作为 BLOB 数据。  
   
--   DBBLOBHANDLING_NOSTREAMS： 处理列的数据大于*nBlobSize* (通过设置`SetBlobSizeLimit`) 作为 BLOB 数据，检索通过提供程序分配，使用者拥有的内存中的引用。 此选项可用于具有一个以上的 BLOB 列的表，该提供程序只支持一个`ISequentialStream`每个访问器的对象。  
+- DBBLOBHANDLING_NOSTREAMS： 处理列的数据大于*nBlobSize* (通过设置`SetBlobSizeLimit`) 作为 BLOB 数据，检索通过提供程序分配，使用者拥有的内存中的引用。 此选项可用于具有一个以上的 BLOB 列的表，该提供程序只支持一个`ISequentialStream`每个访问器的对象。  
   
--   DBBLOBHANDLING_SKIP： 跳过 （不绑定） 限定为包含 Blob 的列 （访问器不能将绑定或检索列的值，但它仍将检索的列状态和长度）。  
+- DBBLOBHANDLING_SKIP： 跳过 （不绑定） 限定为包含 Blob 的列 （访问器不能将绑定或检索列的值，但它仍将检索的列状态和长度）。  
   
 ### <a name="remarks"></a>备注  
- 在调用 `SetBlobHandling` 之前应当先调用 `Open`。  
+
+在调用 `SetBlobHandling` 之前应当先调用 `Open`。  
   
- 构造函数方法[CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)设置处理到 DBBLOBHANDLING_DEFAULT 值的 BLOB。
+构造函数方法[CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)设置处理到 DBBLOBHANDLING_DEFAULT 值的 BLOB。
 
 ## <a name="setblobsizelimit"></a> Cdynamicaccessor:: Setblobsizelimit
+
 以字节为单位设置的最大 BLOB 大小。  
   
 ### <a name="syntax"></a>语法  
@@ -549,15 +602,18 @@ void SetBlobSizeLimit(DBLENGTH nBlobSize);
 ```  
   
 #### <a name="parameters"></a>参数  
- *nBlobSize*  
- 指定的 BLOB 大小限制。  
+
+*nBlobSize*<br/>
+指定的 BLOB 大小限制。  
   
 ### <a name="remarks"></a>备注  
- 以字节为单位; 设置的最大 BLOB 大小大于此值的列数据被视为 BLOB。 某些提供程序 （例如 2 GB) 的列提供极大的大小。 而不是尝试此大小的列分配内存时，您通常会尝试绑定这些列作为 Blob。 这样您无需分配所有内存，但您仍可以读取而无需担心截断的所有数据。 但是，有某些情况的下，您可能需要强制`CDynamicAccessor`以其本机数据类型绑定大的列。 若要执行此操作，调用`SetBlobSizeLimit`之前调用`Open`。  
+
+以字节为单位; 设置的最大 BLOB 大小大于此值的列数据被视为 BLOB。 某些提供程序 （例如 2 GB) 的列提供极大的大小。 而不是尝试此大小的列分配内存时，您通常会尝试绑定这些列作为 Blob。 这样您无需分配所有内存，但您仍可以读取而无需担心截断的所有数据。 但是，有某些情况的下，您可能需要强制`CDynamicAccessor`以其本机数据类型绑定大的列。 若要执行此操作，调用`SetBlobSizeLimit`之前调用`Open`。  
   
- 构造函数方法[CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)设置为默认值为 8000 个字节的最大 BLOB 大小。  
+构造函数方法[CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)设置为默认值为 8000 个字节的最大 BLOB 大小。  
 
 ## <a name="setlength"></a> Cdynamicaccessor:: Setlength
+
 设置指定列的长度。  
   
 ### <a name="syntax"></a>语法  
@@ -574,19 +630,22 @@ bool SetLength(const WCHAR* pColumnName,
 ```  
   
 #### <a name="parameters"></a>参数  
- *nColumn*  
- [in] 列号。 列号从 1 开始。 值为 0 指书签列，如果有的话。  
+
+*nColumn*<br/>
+[in] 列号。 列号从 1 开始。 值为 0 指书签列，如果有的话。  
   
- *nLength*  
- [in]以字节为单位的列的长度。  
+*nLength*<br/>
+[in]以字节为单位的列的长度。  
   
- *pColumnName*  
- [in] 指向包含列名的字符串的指针。  
+*pColumnName*<br/>
+[in] 指向包含列名的字符串的指针。  
   
 ### <a name="return-value"></a>返回值  
- 返回 **，则返回 true**如果已成功设置指定的列长度。 否则，此函数返回**false**。  
+
+返回 **，则返回 true**如果已成功设置指定的列长度。 否则，此函数返回**false**。  
 
 ## <a name="setstatus"></a> Cdynamicaccessor:: Setstatus
+
 设置指定列的状态。  
   
 ### <a name="syntax"></a>语法  
@@ -603,19 +662,22 @@ bool SetStatus(const WCHAR* pColumnName,
 ```  
   
 #### <a name="parameters"></a>参数  
- *nColumn*  
- [in] 列号。 列号从 1 开始。 值为 0 指书签列，如果有的话。  
+
+*nColumn*<br/>
+[in] 列号。 列号从 1 开始。 值为 0 指书签列，如果有的话。  
   
- *status*  
- [in]列状态。 请参阅[DBSTATUS](/previous-versions/windows/desktop/ms722617\(v=vs.85\))中*OLE DB 程序员参考*有关详细信息。  
+*status*<br/>
+[in]列状态。 请参阅[DBSTATUS](/previous-versions/windows/desktop/ms722617\(v=vs.85\))中*OLE DB 程序员参考*有关详细信息。  
   
- *pColumnName*  
- [in] 指向包含列名的字符串的指针。  
+*pColumnName*<br/>
+[in] 指向包含列名的字符串的指针。  
   
 ### <a name="return-value"></a>返回值  
- 返回 **，则返回 true**如果指定的列状态设置成功。 否则，此函数返回**false**。 
+
+返回 **，则返回 true**如果指定的列状态设置成功。 否则，此函数返回**false**。 
 
 ## <a name="setvalue"></a> Cdynamicaccessor:: Setvalue
+
 将数据存储到指定的列。  
   
 ### <a name="syntax"></a>语法  
@@ -638,26 +700,29 @@ bool SetValue(
 ```  
   
 #### <a name="parameters"></a>参数  
- *ctype*  
- [in]处理字符串类型以外的任意数据类型的模板化参数 (`CHAR*`， `WCHAR*`)，这需要特殊处理。 `GetValue` 使用基于此处指定相应的数据类型。  
+
+*ctype*<br/>
+[in]处理字符串类型以外的任意数据类型的模板化参数 (`CHAR*`， `WCHAR*`)，这需要特殊处理。 `GetValue` 使用基于此处指定相应的数据类型。  
   
- *pColumnName*  
- [in] 指向包含列名的字符串的指针。  
+*pColumnName*<br/>
+[in] 指向包含列名的字符串的指针。  
   
- *data*  
- [in]指向包含数据的内存的指针。  
+*data*<br/>
+[in]指向包含数据的内存的指针。  
   
- *nColumn*  
- [in] 列号。 列号从 1 开始。 值为 0 指书签列，如果有的话。  
+*nColumn*<br/>
+[in] 列号。 列号从 1 开始。 值为 0 指书签列，如果有的话。  
   
 ### <a name="return-value"></a>返回值  
- 如果你想要设置字符串数据，使用非模板化版本的`GetValue`。 此方法的非模板化版本返回`void*`，它指向包含指定的列数据的缓冲区的一部分。 如果找不到列，返回 NULL。  
+
+如果你想要设置字符串数据，使用非模板化版本的`GetValue`。 此方法的非模板化版本返回`void*`，它指向包含指定的列数据的缓冲区的一部分。 如果找不到列，返回 NULL。  
   
- 对于所有其他数据类型，它是更易于使用的模板化版本`GetValue`。 模板化版本，会返回 **，则返回 true**成功后或**false**失败。  
+对于所有其他数据类型，它是更易于使用的模板化版本`GetValue`。 模板化版本，会返回 **，则返回 true**成功后或**false**失败。  
 
 ## <a name="see-also"></a>请参阅  
- [OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [OLE DB 使用者模板参考](../../data/oledb/ole-db-consumer-templates-reference.md)   
- [CAccessor 类](../../data/oledb/caccessor-class.md)   
- [CDynamicParameterAccessor 类](../../data/oledb/cdynamicparameteraccessor-class.md)   
- [CManualAccessor 类](../../data/oledb/cmanualaccessor-class.md)
+
+[OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[OLE DB 使用者模板参考](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[CAccessor 类](../../data/oledb/caccessor-class.md)<br/>
+[CDynamicParameterAccessor 类](../../data/oledb/cdynamicparameteraccessor-class.md)<br/>
+[CManualAccessor 类](../../data/oledb/cmanualaccessor-class.md)

@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2713 |Microsoft 文档
+title: 编译器错误 C2713 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3eab5ee25df49355e82cede0f03d633f13ac20bf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a40c248226cd8f863bb099d16272dfa149f1dc2c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33235713"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46102705"
 ---
 # <a name="compiler-error-c2713"></a>编译器错误 C2713
-只有一种形式的允许每个函数的异常处理  
-  
- 不能使用结构化的异常处理 (`__try`/`__except`) 和 c + + 异常处理 (`try`/`catch`) 相同的函数中。
+
+只有一个窗体的每个函数允许异常处理
+
+不能使用结构化的异常处理 (`__try`/`__except`) 和 c + + 异常处理 (`try`/`catch`) 在同一函数中。

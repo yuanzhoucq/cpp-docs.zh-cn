@@ -1,5 +1,5 @@
 ---
-title: 编译器警告 （等级 4） C4682 |Microsoft 文档
+title: 编译器警告 （等级 C4682 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,38 +16,39 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 076e8de6cbffa1f531cec875fd682a1daee42e74
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: aa804b96c2177fc4d263b76feeaa770fea07b5de
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33293528"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46092630"
 ---
 # <a name="compiler-warning-level-4-c4682"></a>编译器警告（等级 4）C4682
-“parameter”: 未指定方向参数特性，默认为 [in]  
-  
- 特性化接口中参数的方法不具有方向性特性： [in](../../windows/in-cpp.md) 或 [out](../../windows/out-cpp.md)。参数默认为 in。  
-  
- 默认情况下，此警告处于关闭状态。 请参阅 [默认情况下处于关闭状态的编译器警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md) 了解详细信息。  
-  
- 下面的示例生成 C4682：  
-  
-```  
-// C4682.cpp  
-// compile with: /W4  
-#pragma warning(default : 4682)  
-#include <windows.h>  
-[module(name="MyModule")];  
-  
-[ library_block, object, uuid("c54ad59d-d516-41dd-9acd-afda17565c2b") ]  
-__interface IMyIface : IUnknown  
-{  
-   HRESULT f1(int i, int *pi); // C4682  
-   // try the following line  
-   // HRESULT f1([in] int i, [in] int *pi);  
-};  
-  
-int main()  
-{  
-}  
+
+“parameter”: 未指定方向参数特性，默认为 [in]
+
+特性化接口中参数的方法不具有方向性特性： [in](../../windows/in-cpp.md) 或 [out](../../windows/out-cpp.md)。参数默认为 in。
+
+默认情况下，此警告处于关闭状态。 请参阅 [默认情况下处于关闭状态的编译器警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md) 了解详细信息。
+
+下面的示例生成 C4682：
+
+```
+// C4682.cpp
+// compile with: /W4
+#pragma warning(default : 4682)
+#include <windows.h>
+[module(name="MyModule")];
+
+[ library_block, object, uuid("c54ad59d-d516-41dd-9acd-afda17565c2b") ]
+__interface IMyIface : IUnknown
+{
+   HRESULT f1(int i, int *pi); // C4682
+   // try the following line
+   // HRESULT f1([in] int i, [in] int *pi);
+};
+
+int main()
+{
+}
 ```

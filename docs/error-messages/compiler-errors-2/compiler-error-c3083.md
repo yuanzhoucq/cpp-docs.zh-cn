@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C3083 |Microsoft 文档
+title: 编译器错误 C3083 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7e0a60fbe976e8ab511efce8fc46d59e473958a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 28bc0a42aa6f6f59c9241a615764b474b23957b1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33253041"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091629"
 ---
 # <a name="compiler-error-c3083"></a>编译器错误 C3083
-function： 左侧的符号:: 必须是类型  
-  
- 不正确地调用的函数。  
-  
-## <a name="example"></a>示例  
- 下面的示例生成 C3083。  
-  
-```  
-// C3083.cpp  
-// compile with: /c  
-struct N {  
-   ~N();  
-};  
-  
-struct N1 {  
-   ~N1();  
-};  
-  
-N::N::~N() {}   // C3083  
-N1::~N1() {}   // OK  
+
+function： 左侧的符号:: 必须是类型
+
+错误地调用的函数。
+
+## <a name="example"></a>示例
+
+下面的示例生成 C3083。
+
+```
+// C3083.cpp
+// compile with: /c
+struct N {
+   ~N();
+};
+
+struct N1 {
+   ~N1();
+};
+
+N::N::~N() {}   // C3083
+N1::~N1() {}   // OK
 ```

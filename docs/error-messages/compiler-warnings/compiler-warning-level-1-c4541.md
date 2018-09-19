@@ -1,5 +1,5 @@
 ---
-title: 编译器警告 （等级 1） C4541 |Microsoft 文档
+title: 编译器警告 （等级 1） C4541 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d1f750ad9362f868b29ba93ea383b60156e648d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6c5b8959d7bdfb92c2813e4c7d81de652625942b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33274672"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46098974"
 ---
 # <a name="compiler-warning-level-1-c4541"></a>编译器警告（等级 1）C4541
-identifier 在多态类型 type 与 /GR-; 上使用可能会导致不可预知的行为  
-  
- 尝试使用的功能，而不启用运行时类型信息需要运行时类型信息。 与重新编译[/GR](../../build/reference/gr-enable-run-time-type-information.md)。
+
+identifier 多态类型 type 与 /GR-; 上使用可能会导致不可预知的行为
+
+您尝试使用一项功能，而不启用运行时类型信息需要运行时类型信息。 使用重新编译[/GR](../../build/reference/gr-enable-run-time-type-information.md)。

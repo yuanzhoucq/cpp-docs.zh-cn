@@ -38,14 +38,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2bc335a0c83e57b8abfeb708d9c6acce977010dd
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: bde6a3947d7afa836d93387e80c9b7885b1bc15c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42571928"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099403"
 ---
 # <a name="icolumnsinfoimpl-class"></a>IColumnsInfoImpl 类
+
 提供的实现[IColumnsInfo](/previous-versions/windows/desktop/ms724541\(v=vs.85\))接口。  
   
 ## <a name="syntax"></a>语法
@@ -58,11 +59,13 @@ class ATL_NO_VTABLE IColumnsInfoImpl :
 ```  
   
 ### <a name="parameters"></a>参数  
- *T*  
- 您的类，派生自`IColumnsInfoImpl`。  
+
+*T*<br/>
+您的类，派生自`IColumnsInfoImpl`。  
 
 ## <a name="requirements"></a>要求  
- **标头：** atldb.h  
+
+**标头：** atldb.h  
   
 ## <a name="members"></a>成员  
   
@@ -74,9 +77,11 @@ class ATL_NO_VTABLE IColumnsInfoImpl :
 |[MapColumnIDs](#mapcolumnids)|在由指定的列 Id 标识的行集返回的列序号的数组。|  
   
 ## <a name="remarks"></a>备注  
- 针对行集和命令必需的接口。 若要修改的提供程序的行为`IColumnsInfo`实现中，您需要修改提供程序列映射。  
+
+针对行集和命令必需的接口。 若要修改的提供程序的行为`IColumnsInfo`实现中，您需要修改提供程序列映射。  
 
 ## <a name="getcolumninfo"></a> Icolumnsinfoimpl:: Getcolumninfo
+
 返回所需的大多数使用者的列元数据。  
   
 ### <a name="syntax"></a>语法  
@@ -88,9 +93,11 @@ STDMETHOD (GetColumnInfo)(DBORDINAL* pcColumns,
 ```  
   
 #### <a name="parameters"></a>参数  
- 请参阅[icolumnsinfo:: Getcolumninfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\))中*OLE DB 程序员参考*。  
+
+请参阅[icolumnsinfo:: Getcolumninfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\))中*OLE DB 程序员参考*。  
 
 ## <a name="mapcolumnids"></a> Icolumnsinfoimpl:: Mapcolumnids
+
 在由指定的列 Id 标识的行集返回的列序号的数组。  
   
 ### <a name="syntax"></a>语法  
@@ -102,8 +109,10 @@ STDMETHOD (MapColumnIDs)(DBORDINAL cColumnIDs,
 ```  
   
 #### <a name="parameters"></a>参数  
- 请参阅[IColumnsInfo::MapColumnIDs](/previous-versions/windows/desktop/ms714200\(v=vs.85\))中*OLE DB 程序员参考*。  
+
+请参阅[IColumnsInfo::MapColumnIDs](/previous-versions/windows/desktop/ms714200\(v=vs.85\))中*OLE DB 程序员参考*。  
   
 ## <a name="see-also"></a>请参阅  
- [OLE DB 提供程序模板](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [OLE DB 提供程序模板体系结构](../../data/oledb/ole-db-provider-template-architecture.md)
+
+[OLE DB 提供程序模板](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[OLE DB 提供程序模板体系结构](../../data/oledb/ole-db-provider-template-architecture.md)

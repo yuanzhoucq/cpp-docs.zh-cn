@@ -1,5 +1,5 @@
 ---
-title: 编译器警告 （等级 1） C4124 |Microsoft 文档
+title: 编译器警告 （等级 1） C4124 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: accd58c123bcd74e54176eed5eb974c3df33dbab
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a69190487c22987ead2d00ec102785ed42ea93c4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33279313"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46090919"
 ---
 # <a name="compiler-warning-level-1-c4124"></a>编译器警告 （等级 1） C4124
-与堆栈检查 __fastcall 做效率很低  
-  
- `__fastcall`关键字与堆栈检查启用一起使用。  
-  
- `__fastcall`约定生成更快的代码，但堆栈检查会导致代码较慢。 使用时`__fastcall`，关闭堆栈检查与**check_stack**杂注或 /Gs。  
-  
- 仅为第一个函数声明在这些情况下发出此警告。
+
+带有堆栈检查的 __fastcall 是低效的
+
+`__fastcall`关键字用于启用堆栈检查。
+
+`__fastcall`约定生成使代码更快，但堆栈检查会导致速度较慢的代码。 使用时`__fastcall`，关闭堆栈检查与**check_stack**杂注或 /Gs。
+
+仅对在这些情况下声明的第一个函数，将发出此警告。

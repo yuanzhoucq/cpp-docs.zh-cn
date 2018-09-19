@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2598 |Microsoft 文档
+title: 编译器错误 C2598 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2fb41e0072f319c701f5f0cf13670a5f8f7051a0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 11747df117ea714ea3c4d7ce41e9229c79becc93
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33199387"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46102692"
 ---
 # <a name="compiler-error-c2598"></a>编译器错误 C2598
-链接规范必须在全局范围内  
-  
- 在本地范围声明链接说明符。  
-  
- 下面的示例生成 C2598:  
-  
-```  
-// C2598.cpp  
-// compile with: /c  
-void func() {  
-   extern "C" int func2();   // C2598  
-}  
-  
-extern "C" int func( int i );  
+
+链接规范必须在全局范围内
+
+链接说明符声明在本地作用域内。
+
+下面的示例生成 C2598:
+
+```
+// C2598.cpp
+// compile with: /c
+void func() {
+   extern "C" int func2();   // C2598
+}
+
+extern "C" int func( int i );
 ```

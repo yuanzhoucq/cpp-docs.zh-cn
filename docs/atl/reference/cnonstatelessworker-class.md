@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb3b6411e9ce34ba0196d25c8a63f3f066d78549
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: a4aa07273e68f0320823d258f324bb8631aef77a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765117"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095594"
 ---
 # <a name="cnonstatelessworker-class"></a>CNonStatelessWorker 类
 
@@ -38,13 +38,13 @@ ms.locfileid: "43765117"
 ## <a name="syntax"></a>语法
 
 ```
-template <class Worker>  
+template <class Worker>
 class CNonStatelessWorker
 ```
 
 #### <a name="parameters"></a>参数
 
-*辅助角色*  
+*辅助角色*<br/>
 辅助角色线程类符合[辅助原型](../../atl/reference/worker-archetype.md)合适上处理的请求排队[CThreadPool](../../atl/reference/cthreadpool-class.md)。
 
 ## <a name="members"></a>成员
@@ -130,6 +130,6 @@ void Terminate(void* /* pvParam */) throw();
 
 ## <a name="see-also"></a>请参阅
 
-[CThreadPool 类](../../atl/reference/cthreadpool-class.md)   
-[辅助原型](../../atl/reference/worker-archetype.md)   
+[CThreadPool 类](../../atl/reference/cthreadpool-class.md)<br/>
+[Worker Archetype](../../atl/reference/worker-archetype.md)<br/>
 [类](../../atl/reference/atl-classes.md)

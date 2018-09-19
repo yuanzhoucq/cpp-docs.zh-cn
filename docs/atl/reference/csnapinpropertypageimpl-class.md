@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0eb34b0ce7b087a457b751604ffd86e61085bf5
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: c89f577168593dcb22570af63801fc05654eb4b3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753069"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46100672"
 ---
 # <a name="csnapinpropertypageimpl-class"></a>CSnapInPropertyPageImpl 类
 
@@ -125,7 +125,7 @@ CSnapInPropertyPageImpl(LPCTSTR lpszTitle = NULL);
 
 ### <a name="parameters"></a>参数
 
-*lpszTitle*  
+*lpszTitle*<br/>
 [in]属性页的标题。
 
 ### <a name="remarks"></a>备注
@@ -326,10 +326,10 @@ LRESULT QuerySiblings(WPARAM wParam, LPARAM lParam);
 
 ### <a name="parameters"></a>参数
 
-*wParam*  
+*wParam*<br/>
 [in]指定消息相关的其他信息。
 
-*lParam*  
+*lParam*<br/>
 [in]指定消息相关的其他信息。
 
 ### <a name="return-value"></a>返回值
@@ -350,7 +350,7 @@ void SetModified(BOOL bChanged = TRUE);
 
 ### <a name="parameters"></a>参数
 
-*bChanged*  
+*bChanged*<br/>
 [in]若要指示自上次应用;，已修改的属性页设置如果为 FALSE，以指示已应用，或应忽略的属性页设置。
 
 ### <a name="remarks"></a>备注

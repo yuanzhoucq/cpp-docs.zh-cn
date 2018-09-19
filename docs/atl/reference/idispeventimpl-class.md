@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac922526abec73d7219f64cb1004319e9547fef6
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 815a276cb07a91da73acb68a32cceef4b2138325
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757876"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093828"
 ---
 # <a name="idispeventimpl-class"></a>IDispEventImpl 类
 
@@ -45,31 +45,31 @@ template <UINT nID, class T,
     const GUID* plibid = &GUID_NULL,
     WORD wMajor = 0,
     WORD wMinor = 0, 
-    class tihclass = CcomTypeInfoHolder>  
+    class tihclass = CcomTypeInfoHolder>
 class ATL_NO_VTABLE IDispEventImpl : public IDispEventSimpleImpl<nID, T, pdiid>
 ```
 
 #### <a name="parameters"></a>参数
 
-*nID*  
+*nID*<br/>
 源对象的唯一标识符。 当`IDispEventImpl`类的基类为复合控件，此参数使用所需的所包含控件的资源 ID。 在其他情况下，使用任意的正整数。
 
-*T*  
+*T*<br/>
 用户的类，该类派生自`IDispEventImpl`。
 
-*pdiid*  
+*pdiid*<br/>
 指向此类实现的事件调度接口的 IID 的指针。 此接口必须由表示类型库中定义*plibid*， *wMajor*，并*wMinor*。
 
-*plibid*  
+*plibid*<br/>
 对类型库，用于定义调度接口的指针指向的*pdiid*。 如果 **& GUID_NULL**，将从溯源事件的对象加载类型库。
 
-*wMajor*  
+*wMajor*<br/>
 类型库的主版本。 默认值为 0。
 
-*wMinor*  
+*wMinor*<br/>
 类型库的次版本。 默认值为 0。
 
-*tihclass*  
+*tihclass*<br/>
 用于管理的类型信息的类*T*。默认值为类型的类`CComTypeInfoHolder`; 但是，您可以通过提供一种类型的类而不覆盖此模板参数`CComTypeInfoHolder`。
 
 ## <a name="members"></a>成员
@@ -143,16 +143,16 @@ HRESULT GetFuncInfoFromId(
 
 ### <a name="parameters"></a>参数
 
-*iid*  
+*iid*<br/>
 [in]对函数的 ID 的引用。
 
-*dispidMember*  
+*dispidMember*<br/>
 [in]函数的调度 ID。
 
-*lcid*  
+*lcid*<br/>
 [in]区域设置上下文的函数 id。
 
-*信息*  
+*信息*<br/>
 [in]结构，该值指示如何调用该函数。
 
 ### <a name="return-value"></a>返回值
@@ -213,10 +213,10 @@ VARTYPE GetUserDefinedType(
 
 ### <a name="parameters"></a>参数
 
-*PTI*  
+*PTI*<br/>
 [in]一个指向[ITypeInfo](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-itypeinfo)包含用户定义类型的接口。
 
-*hrt*  
+*hrt*<br/>
 [in]要检索的类型说明的句柄。
 
 ### <a name="return-value"></a>返回值
@@ -249,10 +249,10 @@ typedef tihclass _tihclass;
 
 ## <a name="see-also"></a>请参阅
 
-[_ATL_FUNC_INFO 结构](../../atl/reference/atl-func-info-structure.md)   
-[IDispatchImpl 类](../../atl/reference/idispatchimpl-class.md)   
-[IDispEventSimpleImpl 类](../../atl/reference/idispeventsimpleimpl-class.md)   
-[SINK_ENTRY](composite-control-macros.md#sink_entry)   
-[SINK_ENTRY_EX](composite-control-macros.md#sink_entry_ex)   
-[SINK_ENTRY_INFO](composite-control-macros.md#sink_entry_info)   
+[_ATL_FUNC_INFO 结构](../../atl/reference/atl-func-info-structure.md)<br/>
+[IDispatchImpl 类](../../atl/reference/idispatchimpl-class.md)<br/>
+[IDispEventSimpleImpl 类](../../atl/reference/idispeventsimpleimpl-class.md)<br/>
+[SINK_ENTRY](composite-control-macros.md#sink_entry)<br/>
+[SINK_ENTRY_EX](composite-control-macros.md#sink_entry_ex)<br/>
+[SINK_ENTRY_INFO](composite-control-macros.md#sink_entry_info)<br/>
 [类概述](../../atl/atl-class-overview.md)

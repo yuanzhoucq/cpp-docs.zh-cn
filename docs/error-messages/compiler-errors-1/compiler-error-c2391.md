@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2391 |Microsoft 文档
+title: 编译器错误 C2391 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a16ed19f5cac9d6c23a3f709e40fc290223e93c7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1201651ffc52dae7b8f184895f8005750ee4697e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33224760"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46102367"
 ---
 # <a name="compiler-error-c2391"></a>编译器错误 C2391
-identifier： 在类型定义，无法使用 friend  
-  
- `friend`声明中包含完整类声明。 A`friend`声明可以指定的成员函数或详细的类型说明符，但不是完整的类声明。  
-  
- 下面的示例生成 C2326:  
-  
-```  
-// C2391.cpp  
-// compile with: /c  
-class D {   
-   void func( int );   
-};  
-  
-class A {  
-   friend class B { int i; };   // C2391  
-  
-   // OK  
-   friend class C;  
-   friend void D::func(int);  
-};  
+
+identifier: friend 不能在类型定义过程
+
+`friend`声明包含完整的类声明。 一个`friend`声明可以指定的成员函数或详细的类型说明符，但不是完整的类声明。
+
+下面的示例生成 C2326:
+
+```
+// C2391.cpp
+// compile with: /c
+class D {
+   void func( int );
+};
+
+class A {
+   friend class B { int i; };   // C2391
+
+   // OK
+   friend class C;
+   friend void D::func(int);
+};
 ```

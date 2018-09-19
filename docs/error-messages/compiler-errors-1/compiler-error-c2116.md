@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2116 |Microsoft 文档
+title: 编译器错误 C2116 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e45ef2fe60a3f30a064ccbb3e4c7636df90165a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 20a551d8e0df55418c195db791e46693979758a2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33165472"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46104032"
 ---
 # <a name="compiler-error-c2116"></a>编译器错误 C2116
-函数参数列表有差异  
-  
- 默认参数列表中的参数与形参列表不匹配。
+
+函数参数列表有差异
+
+默认参数列表中的参数与形参列表不匹配。

@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33eac78dc871dd2a9869452bc829150c3356fd0a
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 6861f19e6b785ac72edec54577b92dea0c307bff
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43754938"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46100599"
 ---
 # <a name="ccommultithreadmodel-class"></a>CComMultiThreadModel 类
 
@@ -99,7 +99,7 @@ typedef CComAutoCriticalSection AutoCriticalSection;
 
 下面的代码模仿[CComObjectRootEx](ccomobjectrootex-class.md)，并演示`AutoCriticalSection`线程环境中正在使用。
 
-```cpp  
+```cpp
 template<class ThreadModel>
 class CMyAutoCritClass
 {
@@ -175,7 +175,7 @@ static ULONG WINAPI Decrement(LPLONG p) throw ();
 
 ### <a name="parameters"></a>参数
 
-*p*  
+*p*<br/>
 [in]指向要递减的变量。
 
 ### <a name="return-value"></a>返回值
@@ -196,7 +196,7 @@ static ULONG WINAPI Increment(LPLONG p) throw ();
 
 ### <a name="parameters"></a>参数
 
-*p*  
+*p*<br/>
 [in]指向要递增的变量。
 
 ### <a name="return-value"></a>返回值
@@ -233,7 +233,7 @@ typedef CComMultiThreadModelNoCS ThreadModelNoCS;
 
 ## <a name="see-also"></a>请参阅
 
-[CComSingleThreadModel 类](ccomsinglethreadmodel-class.md)   
-[CComAutoCriticalSection 类](ccomautocriticalsection-class.md)   
-[CComCriticalSection 类](ccomcriticalsection-class.md)   
+[CComSingleThreadModel 类](ccomsinglethreadmodel-class.md)<br/>
+[CComAutoCriticalSection 类](ccomautocriticalsection-class.md)<br/>
+[CComCriticalSection 类](ccomcriticalsection-class.md)<br/>
 [类概述](../atl-class-overview.md)

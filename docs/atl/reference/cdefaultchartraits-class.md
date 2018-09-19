@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 080a7b9f5da71535f8b141555ec1890a521fe715
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 69b6a7b94e993641452154ede11d65929424df5e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761977"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095750"
 ---
 # <a name="cdefaultchartraits-class"></a>CDefaultCharTraits 类
 
@@ -33,13 +33,13 @@ ms.locfileid: "43761977"
 ## <a name="syntax"></a>语法
 
 ```
-template <typename T>  
+template <typename T>
 class CDefaultCharTraits
 ```
 
 #### <a name="parameters"></a>参数
 
-*T*  
+*T*<br/>
 要存储在集合中的数据类型。
 
 ## <a name="members"></a>成员
@@ -64,13 +64,13 @@ class CDefaultCharTraits
 调用此函数可将字符转换为小写。
 
 ```
-static wchar_t CharToLower(wchar_t x);  
+static wchar_t CharToLower(wchar_t x);
 static char CharToLower(char x);
 ```
 
 ### <a name="parameters"></a>参数
 
-*x*  
+*x*<br/>
 要转换为小写的字符。
 
 ### <a name="example"></a>示例
@@ -82,13 +82,13 @@ static char CharToLower(char x);
 调用此函数可将字符转换为大写。
 
 ```
-static wchar_t CharToUpper(wchar_t x);  
+static wchar_t CharToUpper(wchar_t x);
 static char CharToUpper(char x);
 ```
 
 ### <a name="parameters"></a>参数
 
-*x*  
+*x*<br/>
 要转换为大写的字符。
 
 ## <a name="see-also"></a>请参阅

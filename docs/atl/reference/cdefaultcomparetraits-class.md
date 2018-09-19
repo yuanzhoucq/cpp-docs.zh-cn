@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f4983984c8bf1cad2996818625091b60cdb732a9
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1aecfcb493bfc35e0d6f059c296af1b358eee93f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758552"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46103195"
 ---
 # <a name="cdefaultcomparetraits-class"></a>CDefaultCompareTraits 类
 
@@ -33,13 +33,13 @@ ms.locfileid: "43758552"
 ## <a name="syntax"></a>语法
 
 ```
-template<typename T>  
+template<typename T>
 class CDefaultCompareTraits
 ```
 
 #### <a name="parameters"></a>参数
 
-*T*  
+*T*<br/>
 要存储在集合中的数据类型。
 
 ## <a name="members"></a>成员
@@ -71,10 +71,10 @@ static bool CompareElements(const T& element1, const T& element2);
 
 ### <a name="parameters"></a>参数
 
-*element1*  
+*element1*<br/>
 第一个元素。
 
-*element2*  
+*element2*<br/>
 第二个元素。
 
 ### <a name="return-value"></a>返回值
@@ -95,10 +95,10 @@ static int CompareElementsOrdered(const T& element1, const T& element2);
 
 ### <a name="parameters"></a>参数
 
-*element1*  
+*element1*<br/>
 第一个元素。
 
-*element2*  
+*element2*<br/>
 第二个元素。
 
 ### <a name="return-value"></a>返回值

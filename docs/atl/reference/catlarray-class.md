@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f09bafd0bbda8a64b7a60fe6cacf996106385787
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: c08387d5c1a2a9b9b757bab7a8112783a3810065
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753007"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097791"
 ---
 # <a name="catlarray-class"></a>CAtlArray 类
 
@@ -55,10 +55,10 @@ class CAtlArray
 
 #### <a name="parameters"></a>参数
 
-*E*  
+*E*<br/>
 要存储在数组中的数据类型。
 
-*ETraits*  
+*ETraits*<br/>
 用于复制或移动元素的代码。
 
 ## <a name="members"></a>成员
@@ -124,7 +124,7 @@ size_t Add();
 
 ### <a name="parameters"></a>参数
 
-*元素*  
+*元素*<br/>
 要添加到数组的元素。
 
 ### <a name="return-value"></a>返回值
@@ -149,7 +149,7 @@ size_t Append(const CAtlArray<E, ETraits>& aSrc);
 
 ### <a name="parameters"></a>参数
 
-*aSrc*  
+*aSrc*<br/>
 要追加的数组。
 
 ### <a name="return-value"></a>返回值
@@ -222,7 +222,7 @@ void Copy(const CAtlArray<E, ETraits>& aSrc);
 
 ### <a name="parameters"></a>参数
 
-*aSrc*  
+*aSrc*<br/>
 要复制到一个数组的元素的源。
 
 ### <a name="remarks"></a>备注
@@ -265,7 +265,7 @@ E& GetAt(size_t iElement) throw();
 
 ### <a name="parameters"></a>参数
 
-*iElement*  
+*iElement*<br/>
 要返回的数组元素的索引值。
 
 ### <a name="return-value"></a>返回值
@@ -335,10 +335,10 @@ void InsertArrayAt(size_t iStart, const CAtlArray<E, ETraits>* paNew);
 
 ### <a name="parameters"></a>参数
 
-*iStart*  
+*iStart*<br/>
 数组是要插入的索引。
 
-*paNew*  
+*paNew*<br/>
 要插入的数组。
 
 ### <a name="remarks"></a>备注
@@ -364,13 +364,13 @@ void InsertAt(size_t iElement, INARGTYPE element, size_t nCount = 1);
 
 ### <a name="parameters"></a>参数
 
-*iElement*  
+*iElement*<br/>
 元素的位置插入索引。
 
-*元素*  
+*元素*<br/>
 要插入的元素的值。
 
-*nCount*  
+*nCount*<br/>
 要添加的元素数。
 
 ### <a name="remarks"></a>备注
@@ -414,7 +414,7 @@ const E& operator[](size_t ielement) const throw();
 
 ### <a name="parameters"></a>参数
 
-*iElement*  
+*iElement*<br/>
 要返回的数组元素的索引值。
 
 ### <a name="return-value"></a>返回值
@@ -463,10 +463,10 @@ void RemoveAt(size_t iElement, size_t nCount = 1);
 
 ### <a name="parameters"></a>参数
 
-*iElement*  
+*iElement*<br/>
 要移除的第一个元素的索引。
 
-*nCount*  
+*nCount*<br/>
 要移除的元素数。
 
 ### <a name="remarks"></a>备注
@@ -489,10 +489,10 @@ void SetAt(size_t iElement, INARGTYPE element);
 
 ### <a name="parameters"></a>参数
 
-*iElement*  
+*iElement*<br/>
 指向要设置的数组元素的索引。
 
-*元素*  
+*元素*<br/>
 指定元素的新值。
 
 ### <a name="remarks"></a>备注
@@ -513,10 +513,10 @@ bool SetCount(size_t nNewSize, int nGrowBy = - 1);
 
 ### <a name="parameters"></a>参数
 
-*nNewSize*  
+*nNewSize*<br/>
 数组所需的大小。
 
-*nGrowBy*  
+*nGrowBy*<br/>
 一个值，该值用于确定缓冲区的大小。 值为-1 会导致将用于在内部计算的值。
 
 ### <a name="return-value"></a>返回值
@@ -543,10 +543,10 @@ void SetAtGrow(size_t iElement, INARGTYPE element);
 
 ### <a name="parameters"></a>参数
 
-*iElement*  
+*iElement*<br/>
 指向要设置的数组元素的索引。
 
-*元素*  
+*元素*<br/>
 指定元素的新值。
 
 ### <a name="remarks"></a>备注
@@ -559,9 +559,9 @@ void SetAtGrow(size_t iElement, INARGTYPE element);
 
 ## <a name="see-also"></a>请参阅
 
-[MMXSwarm 示例](../../visual-cpp-samples.md)   
-[DynamicConsumer 示例](../../visual-cpp-samples.md)   
-[UpdatePV 示例](../../visual-cpp-samples.md)   
-[字幕示例](../../visual-cpp-samples.md)   
-[CArray 类](../../mfc/reference/carray-class.md)   
+[MMXSwarm 示例](../../visual-cpp-samples.md)<br/>
+[DynamicConsumer 示例](../../visual-cpp-samples.md)<br/>
+[UpdatePV 示例](../../visual-cpp-samples.md)<br/>
+[字幕示例](../../visual-cpp-samples.md)<br/>
+[CArray 类](../../mfc/reference/carray-class.md)<br/>
 [类概述](../../atl/atl-class-overview.md)

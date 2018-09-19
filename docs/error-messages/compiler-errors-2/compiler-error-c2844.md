@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2844 |Microsoft 文档
+title: 编译器错误 C2844 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a45e4a94e3d474be670f822d56a7c080f25693c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5dd4cbdc30523563207fe2a66c1c5cb158f84c94
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33247304"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46092097"
 ---
 # <a name="compiler-error-c2844"></a>编译器错误 C2844
-member： 不能为接口 interface 的成员  
-  
- [接口类](../../windows/interface-class-cpp-component-extensions.md)不能包含的数据成员，除非它也是一个属性。  
-  
- 在接口中不允许一个属性或成员函数之外的任何内容。 此外，不允许构造函数、 析构函数和运算符。  
-  
- 下面的示例生成 C2844:  
-  
-```  
-// C2844a.cpp  
-// compile with: /clr /c  
-public interface class IFace {  
-   int i;   // C2844  
-   // try the following line instead  
-   // property int Size;  
-};  
-```  
+
+member： 不能为接口 interface 的成员
+
+[接口类](../../windows/interface-class-cpp-component-extensions.md)不能包含数据成员，除非它也是一个属性。
+
+在接口中不允许属性或成员函数之外的任何内容。 此外，不允许构造函数、 析构函数和运算符。
+
+下面的示例生成 C2844:
+
+```
+// C2844a.cpp
+// compile with: /clr /c
+public interface class IFace {
+   int i;   // C2844
+   // try the following line instead
+   // property int Size;
+};
+```

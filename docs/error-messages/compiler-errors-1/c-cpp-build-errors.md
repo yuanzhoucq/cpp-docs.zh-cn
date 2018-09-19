@@ -1,5 +1,5 @@
 ---
-title: C/c + + 生成错误 |Microsoft 文档
+title: C/c + + 生成错误 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/17/2017
 ms.technology:
@@ -310,20 +310,20 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65a6eb5fe80c25912c76e3446efb1ee00413fff1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 14529f9246572299fc6629ec13ff4eab837bb5fd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33171267"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095841"
 ---
 # <a name="cc-build-errors"></a>C/C++ 生成错误
 
-本部分中的文档的文章说明诊断错误消息和生成工具生成的警告消息。
+在本部分文档中的文章解释了诊断错误消息和生成工具生成的警告消息。
 
 [!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]
 
 ## <a name="see-also"></a>请参阅
 
-[C/C++ 生成参考](../../build/reference/c-cpp-building-reference.md)   
+[C/C++ 生成参考](../../build/reference/c-cpp-building-reference.md)<br/>
 [在 Visual Studio 中进行调试](/visualstudio/debugger/debugging-in-visual-studio)

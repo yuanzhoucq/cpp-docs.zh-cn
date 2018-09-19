@@ -1,5 +1,5 @@
 ---
-title: 错误 C1057 |Microsoft 文档
+title: 错误 C1057 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe3e00b79757d87b54efd8be2492b473a54c73d8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6b2fde010917e9e22c523b86ad816929e8526b6b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33224647"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46092661"
 ---
 # <a name="fatal-error-c1057"></a>错误 C1057
-宏扩展中遇到意外的文件结束  
-  
- 编译器在收集宏调用参数，可能是由于宏调用中缺少右括号时达到源文件的末尾。
+
+宏扩展中遇到意外的文件结束
+
+编译器在收集宏调用参数，很可能是由于宏调用中缺少右括号时达到源代码文件的末尾。

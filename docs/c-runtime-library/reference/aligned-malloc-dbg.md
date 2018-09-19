@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f8786af730567155ca865440e612bb983e2bea8
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 076ccfcf164eb17e2a855f175c8714cd63a91817
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39402973"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093034"
 ---
 # <a name="alignedmallocdbg"></a>_aligned_malloc_dbg
 
@@ -56,16 +56,16 @@ void * _aligned_malloc_dbg(
 
 ### <a name="parameters"></a>参数
 
-*size*  
+*size*<br/>
 请求的内存分配的大小。
 
-*对齐方式*  
+*对齐方式*<br/>
 对齐值，必须是 2 的整数次幂。
 
-*filename*  
+*filename*<br/>
 指向已请求分配操作的源文件名的指针或 NULL。
 
-*linenumber*  
+*linenumber*<br/>
 请求分配操作所在的源文件中的行数或 NULL。
 
 ## <a name="return-value"></a>返回值
@@ -96,4 +96,4 @@ void * _aligned_malloc_dbg(
 
 ## <a name="see-also"></a>请参阅
 
-[调试例程](../../c-runtime-library/debug-routines.md)  
+[调试例程](../../c-runtime-library/debug-routines.md)

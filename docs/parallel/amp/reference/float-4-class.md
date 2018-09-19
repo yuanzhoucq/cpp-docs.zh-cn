@@ -1,5 +1,5 @@
 ---
-title: float_4 类 |Microsoft 文档
+title: float_4 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -278,15 +278,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f5420cbaf6710f12852575926fc6280e1a33ce66
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: dd4de23a4395d8e09a51e8df4a8c101132b4ae7f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33694506"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46104811"
 ---
 # <a name="float4-class"></a>float_4 类
-表示短矢量的四个浮点数。  
+表示四个浮点数的短矢量。  
   
 ## <a name="syntax"></a>语法  
   
@@ -306,7 +306,7 @@ class float_4;
   
 |名称|描述|  
 |----------|-----------------|  
-|[float_4 构造函数](#ctor)|已重载。 默认构造函数，将初始化为 0 的所有元素。|  
+|[float_4 构造函数](#ctor)|已重载。 默认构造函数，初始化 0 的所有元素。|  
   
 ### <a name="public-methods"></a>公共方法  
   
@@ -464,7 +464,7 @@ class float_4;
   
 ### <a name="public-constants"></a>公共常量  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[大小常量](#float_4__size)||  
   
@@ -611,7 +611,7 @@ class float_4;
   
 ##  <a name="ctor"></a> float_4 
 
- 默认构造函数，将初始化为 0 的所有元素。  
+ 默认构造函数，初始化 0 的所有元素。  
   
 ```  
 float_4() restrict(amp,
@@ -662,23 +662,23 @@ explicit inline float_4(
 ```  
   
 ### <a name="parameters"></a>参数  
- `_V0`  
- 要初始化元素 0 的值。  
+*_V0*<br/>
+要初始化元素 0 的值。  
   
- `_V1`  
- 要初始化元素 1 的值。  
+*_V1*<br/>
+要初始化元素 1 的值。  
   
- `_V2`  
- 要初始化元素 2 的值。  
+*_V2*<br/>
+要初始化元素 2 的值。  
   
- `_V3`  
- 要初始化元素 3 的值。  
+*_V3*<br/>
+要初始化元素 3 的值。  
   
- `_V`  
- 用于初始化值。  
+*（_V)*<br/>
+用于初始化值。  
   
- `_Other`  
- 用于初始化的对象。  
+*_Other*<br/>
+用于初始化的对象。  
   
 ##  <a name="float_4__size"></a> 大小 
 

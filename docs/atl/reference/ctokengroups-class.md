@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87109793625435945c45b2643ccd674946acff49
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1d14a839cded7d22236912ba52a733a9ce15f7aa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752640"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46103227"
 ---
 # <a name="ctokengroups-class"></a>CTokenGroups 类
 
@@ -92,19 +92,19 @@ class CTokenGroups
 将添加`CSid`的或现有的`TOKEN_GROUPS`结构`CTokenGroups`对象。
 
 ```
-void Add(const CSid& rSid, DWORD dwAttributes) throw(... );  
+void Add(const CSid& rSid, DWORD dwAttributes) throw(... );
 void Add(const TOKEN_GROUPS& rTokenGroups) throw(...);
 ```
 
 ### <a name="parameters"></a>参数
 
-*rSid*  
+*rSid*<br/>
 一个[CSid](../../atl/reference/csid-class.md)对象。
 
-*dwAttributes*  
+*dwAttributes*<br/>
 要将与相关联的特性`CSid`对象。
 
-*rTokenGroups*  
+*rTokenGroups*<br/>
 一个[TOKEN_GROUPS](/windows/desktop/api/winnt/ns-winnt-_token_groups)结构。
 
 ### <a name="remarks"></a>备注
@@ -117,13 +117,13 @@ void Add(const TOKEN_GROUPS& rTokenGroups) throw(...);
 
 ```
 CTokenGroups() throw();
-CTokenGroups(const CTokenGroups& rhs) throw(... );  
+CTokenGroups(const CTokenGroups& rhs) throw(... );
 CTokenGroups(const TOKEN_GROUPS& rhs) throw(...);
 ```
 
 ### <a name="parameters"></a>参数
 
-*rhs*  
+*rhs*<br/>
 `CTokenGroups`对象或[TOKEN_GROUPS](/windows/desktop/api/winnt/ns-winnt-_token_groups)结构用来构造`CTokenGroups`对象。
 
 ### <a name="remarks"></a>备注
@@ -152,7 +152,7 @@ bool Delete(const CSid& rSid) throw();
 
 ### <a name="parameters"></a>参数
 
-*rSid*  
+*rSid*<br/>
 [CSid](../../atl/reference/csid-class.md)为其安全标识符 (SID) 和属性应删除的对象。
 
 ### <a name="return-value"></a>返回值
@@ -215,10 +215,10 @@ void GetSidsAndAttributes(
 
 ### <a name="parameters"></a>参数
 
-*pSids*  
+*pSids*<br/>
 指向数组的指针[CSid](../../atl/reference/csid-class.md)对象。
 
-*pAttributes*  
+*pAttributes*<br/>
 指向 dword 值的数组的指针。 如果省略或为 NULL，此参数，不会检索属性。
 
 ### <a name="remarks"></a>备注
@@ -237,10 +237,10 @@ bool LookupSid(
 
 ### <a name="parameters"></a>参数
 
-*rSid*  
+*rSid*<br/>
 [CSid](../../atl/reference/csid-class.md)对象。
 
-*pdwAttributes*  
+*pdwAttributes*<br/>
 指向一个 dword 值，将接受`CSid`对象的属性。 如果省略或为 NULL，将不会检索该属性。
 
 ### <a name="return-value"></a>返回值
@@ -256,13 +256,13 @@ bool LookupSid(
 赋值运算符。
 
 ```
-CTokenGroups& operator= (const TOKEN_GROUPS& rhs) throw(...);  
+CTokenGroups& operator= (const TOKEN_GROUPS& rhs) throw(...);
 CTokenGroups& operator= (const CTokenGroups& rhs) throw(...);
 ```
 
 ### <a name="parameters"></a>参数
 
-*rhs*  
+*rhs*<br/>
 `CTokenGroups`对象或[TOKEN_GROUPS](/windows/desktop/api/winnt/ns-winnt-_token_groups)结构，以将分配给`CTokenGroups`对象。
 
 ### <a name="return-value"></a>返回值
@@ -273,7 +273,7 @@ CTokenGroups& operator= (const CTokenGroups& rhs) throw(...);
 
 将值转换为一个指向`TOKEN_GROUPS`结构。
 
-```  
+```
 operator const TOKEN_GROUPS *() const throw(...);
 ```
 
@@ -283,7 +283,7 @@ operator const TOKEN_GROUPS *() const throw(...);
 
 ## <a name="see-also"></a>请参阅
 
-[安全示例](../../visual-cpp-samples.md)   
-[CSid 类](../../atl/reference/csid-class.md)   
-[类概述](../../atl/atl-class-overview.md)   
+[安全示例](../../visual-cpp-samples.md)<br/>
+[CSid 类](../../atl/reference/csid-class.md)<br/>
+[类概述](../../atl/atl-class-overview.md)<br/>
 [安全全局函数](../../atl/reference/security-global-functions.md)

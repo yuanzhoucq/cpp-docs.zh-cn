@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 985289041f1461ef9486a55fedd9816c1ebb3f35
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 5650707f9c08c144d2f5832744117dfdd06acc08
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752558"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106902"
 ---
 # <a name="window-class-macros"></a>窗口类宏
 
@@ -29,8 +29,8 @@ ms.locfileid: "43752558"
 
 |||
 |-|-|
-|[{2&AMP;GT;DECLARE_WND_CLASS&AMP;LT;2](#declare_wnd_class)|可以指定新的窗口类的名称。| 
-|[DECLARE_WND_CLASS2](#declare_wnd_class2)|(Visual Studio 2017)可以指定新的窗口类和封闭类的新类将使用其窗口过程的名称。| 
+|[{2&AMP;GT;DECLARE_WND_CLASS&AMP;LT;2](#declare_wnd_class)|可以指定新的窗口类的名称。|
+|[DECLARE_WND_CLASS2](#declare_wnd_class2)|(Visual Studio 2017)可以指定新的窗口类和封闭类的新类将使用其窗口过程的名称。|
 |[DECLARE_WND_SUPERCLASS](#declare_wnd_superclass)|可以指定新的窗口类将基于现有窗口类的名称。|
 |[DECLARE_WND_CLASS_EX](#declare_wnd_class_ex)|允许您指定的类的参数。|  
 
@@ -48,7 +48,7 @@ DECLARE_WND_CLASS( WndClassName )
 
 ### <a name="parameters"></a>参数
 
-*WndClassName*  
+*WndClassName*<br/>
 [in]新的窗口类的名称。 如果为 NULL，ATL 将生成的窗口类名称。
 
 ### <a name="remarks"></a>备注
@@ -83,10 +83,10 @@ DECLARE_WND_CLASS2( WndClassName, EnclosingClass )
 
 ### <a name="parameters"></a>参数
 
-*WndClassName*  
+*WndClassName*<br/>
 [in]新的窗口类的名称。 如果为 NULL，ATL 将生成的窗口类名称。 
 
-*EnclosingClass*  
+*EnclosingClass*<br/>
 [in]包含新的窗口类的窗口类的名称。 不能为 NULL。
 
 ### <a name="remarks"></a>备注
@@ -104,10 +104,10 @@ DECLARE_WND_SUPERCLASS( WndClassName, OrigWndClassName )
 
 ### <a name="parameters"></a>参数
 
-*WndClassName*  
+*WndClassName*<br/>
 [in]窗口名称类，将超类*OrigWndClassName*。 如果为 NULL，ATL 将生成的窗口类名称。
 
-*OrigWndClassName*  
+*OrigWndClassName*<br/>
 [in]将现有的窗口类的名称。
 
 ### <a name="remarks"></a>备注
@@ -134,13 +134,13 @@ DECLARE_WND_CLASS_EX( WndClassName, style, bkgnd )
 
 ### <a name="parameters"></a>参数
 
-*WndClassName*  
+*WndClassName*<br/>
 [in]新的窗口类的名称。 如果为 NULL，ATL 将生成的窗口类名称。
 
-*style*  
+*style*<br/>
 [in]窗口的样式。
 
-*背景*  
+*背景*<br/>
 [in]窗口的背景色。
 
 ### <a name="remarks"></a>备注

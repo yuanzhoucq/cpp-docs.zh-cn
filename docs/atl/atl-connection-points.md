@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3f7c9360af2b5e2220daacabcd9ac04e108871dc
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: fe2cf03debbfd88f19ccc77d3922a9a5c50a50d2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764223"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091265"
 ---
 # <a name="atl-connection-points"></a>ATL 连接点
 
@@ -33,18 +33,18 @@ ms.locfileid: "43764223"
 
 ## <a name="in-this-section"></a>本节内容
 
-[ATL 连接点类](../atl/atl-connection-point-classes.md)  
+[ATL 连接点类](../atl/atl-connection-point-classes.md)<br/>
 简要介绍支持连接点的 ATL 类。
 
-[将连接点添加到对象](../atl/adding-connection-points-to-an-object.md)  
+[将连接点添加到对象](../atl/adding-connection-points-to-an-object.md)<br/>
 概述了用于将连接点添加到对象的步骤。
 
-[ATL 连接点示例](../atl/atl-connection-point-example.md)  
+[ATL 连接点示例](../atl/atl-connection-point-example.md)<br/>
 提供了声明连接点的一个示例。
 
 ## <a name="related-sections"></a>相关章节
 
-[ATL](../atl/active-template-library-atl-concepts.md)  
+[ATL](../atl/active-template-library-atl-concepts.md)<br/>
 提供了关于如何使用 Active Template Library 进行编程的概念性主题的链接。
 
 ## <a name="see-also"></a>请参阅

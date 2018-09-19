@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb4b35d851858eaab5ba0df471cc2d0bd30f19bc
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: a8fc5cc44eeb06c5afec23b6a0a094c14987c599
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763076"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46096088"
 ---
 # <a name="iperpropertybrowsingimpl-class"></a>IPerPropertyBrowsingImpl 类
 
@@ -48,7 +48,7 @@ class ATL_NO_VTABLE IPerPropertyBrowsingImpl :
 
 #### <a name="parameters"></a>参数
 
-*T*  
+*T*<br/>
 您的类，派生自`IPerPropertyBrowsingImpl`。
 
 ## <a name="members"></a>成员
@@ -153,6 +153,6 @@ ATL 使用对象的属性映射来获取此信息。
 
 ## <a name="see-also"></a>请参阅
 
-[IPropertyPageImpl 类](../../atl/reference/ipropertypageimpl-class.md)   
-[ISpecifyPropertyPagesImpl 类](../../atl/reference/ispecifypropertypagesimpl-class.md)   
+[IPropertyPageImpl 类](../../atl/reference/ipropertypageimpl-class.md)<br/>
+[ISpecifyPropertyPagesImpl 类](../../atl/reference/ispecifypropertypagesimpl-class.md)<br/>
 [类概述](../../atl/atl-class-overview.md)

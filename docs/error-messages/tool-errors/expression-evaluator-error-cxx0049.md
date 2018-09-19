@@ -1,5 +1,5 @@
 ---
-title: 表达式计算器错误 CXX0049 |Microsoft 文档
+title: 表达式计算器错误 CXX0049 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d40a823ebcac377198254555181d9821320a848
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ea9193363ca5d2fa03ad585816ee618e3c194a16
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33295576"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097064"
 ---
 # <a name="expression-evaluator-error-cxx0049"></a>表达式计算器错误 CXX0049
-已过时的 OMF-请重新链接程序  
-  
- 程序使用了旧的 OMF （对象模块格式）。  
-  
- 重新链接程序使用的当前链接器版本。  
-  
- 此错误是与 CAN0049 相同。
+
+已过时的 OMF-请重新链接程序
+
+该程序使用了旧 OMF （对象模块格式）。
+
+重新使用当前的链接器版本的程序的链接。
+
+此错误是与 CAN0049 相同。

@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C3805 |Microsoft 文档
+title: 编译器错误 C3805 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5aa7a2d388e950b7825c8dba78df565bc4a798a5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b83f75cca9b292c454fc40ad5487cf80ee9ceaef
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33265047"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106332"
 ---
 # <a name="compiler-error-c3805"></a>编译器错误 C3805
-token： 意外的标记，应输入} 或标识符  
-  
- 定义一个属性时, 遇到无效的标记。 删除无效的令牌。
+
+token： 意外的标记，应输入} 或标识符
+
+定义属性时, 遇到了无效的令牌。 删除无效的令牌。

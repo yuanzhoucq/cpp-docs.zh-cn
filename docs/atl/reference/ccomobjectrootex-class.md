@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5dcaa927bc9fe38ca45cf938a20cf08713ecff1d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f24cf6cce5cdf268367f547e8a536dcdae7cc859
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755506"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46098948"
 ---
 # <a name="ccomobjectrootex-class"></a>CComObjectRootEx 类
 
@@ -44,13 +44,13 @@ ms.locfileid: "43755506"
 ## <a name="syntax"></a>语法
 
 ```
-template<class ThreadModel>  
+template<class ThreadModel>
 class CComObjectRootEx : public CComObjectRootBase
 ```
 
 #### <a name="parameters"></a>参数
 
-*ThreadModel*  
+*ThreadModel*<br/>
 其方法实现所需的线程处理模型的类。 您可以通过设置显式选择的线程模型*ThreadModel*到[CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md)， [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)，或[CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md)。 你可以通过设置接受服务器的默认线程模型*ThreadModel*到[CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel)或[CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)。  
 
 ## <a name="members"></a>成员
@@ -205,16 +205,16 @@ static HRESULT InternalQueryInterface(
 
 ### <a name="parameters"></a>参数
 
-*pThis*  
+*pThis*<br/>
 [in]指向包含向公开的接口的 COM 映射的对象的指针`QueryInterface`。
 
-*pEntries*  
+*pEntries*<br/>
 [in]一个指向`_ATL_INTMAP_ENTRY`访问的可用接口映射的结构。
 
-*iid*  
+*iid*<br/>
 [in]所请求的接口的 GUID。
 
-*ppvObject*  
+*ppvObject*<br/>
 [out]中指定的接口指针的指针*iid*，或如果找不到该接口，则为 NULL。
 
 ### <a name="return-value"></a>返回值
@@ -308,7 +308,7 @@ static void WINAPI ObjectMain(bool bStarting);
 
 ### <a name="parameters"></a>参数
 
-*bStarting*  
+*bStarting*<br/>
 [out]值为 TRUE，如果正在初始化类;否则为 FALSE。
 
 ### <a name="remarks"></a>备注
@@ -343,10 +343,10 @@ HRESULT OuterQueryInterface(REFIID iid, void** ppvObject);
 
 ### <a name="parameters"></a>参数
 
-*iid*  
+*iid*<br/>
 [in]所请求的接口的 GUID。
 
-*ppvObject*  
+*ppvObject*<br/>
 [out]中指定的接口指针的指针*iid*，或如果聚合不支持该接口，则为 NULL。
 
 ### <a name="return-value"></a>返回值
@@ -381,7 +381,7 @@ void Unlock();
 
 ## <a name="see-also"></a>请参阅
 
-[CComAggObject 类](../../atl/reference/ccomaggobject-class.md)   
-[CComObject 类](../../atl/reference/ccomobject-class.md)   
-[CComPolyObject 类](../../atl/reference/ccompolyobject-class.md)   
+[CComAggObject 类](../../atl/reference/ccomaggobject-class.md)<br/>
+[CComObject 类](../../atl/reference/ccomobject-class.md)<br/>
+[CComPolyObject 类](../../atl/reference/ccompolyobject-class.md)<br/>
 [类概述](../../atl/atl-class-overview.md)

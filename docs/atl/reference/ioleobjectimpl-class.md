@@ -59,12 +59,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b82aa22c3cc1c217ba4dfd332c43f6663c94638e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: fe5f3234738a16b4c072b667982d36032e30f7dd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761870"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107112"
 ---
 # <a name="ioleobjectimpl-class"></a>IOleObjectImpl 类
 
@@ -76,13 +76,13 @@ ms.locfileid: "43761870"
 ## <a name="syntax"></a>语法
 
 ```
-template<class T>  
+template<class T>
 class ATL_NO_VTABLE IOleObjectImpl : public IOleObject
 ```
 
 #### <a name="parameters"></a>参数
 
-*T*  
+*T*<br/>
 您的类，派生自`IOleObjectImpl`。
 
 ## <a name="members"></a>成员
@@ -219,10 +219,10 @@ HRESULT DoVerbDiscardUndo(LPCRECT /* prcPosRect */, HWND /* hwndParent */);
 
 ### <a name="parameters"></a>参数
 
-*prcPosRec*  
+*prcPosRec*<br/>
 [in]指针到矩形容器想要绘制到的控件。
 
-*hwndParent*  
+*hwndParent*<br/>
 [in]包含控件的窗口的句柄。
 
 ### <a name="return-value"></a>返回值
@@ -239,10 +239,10 @@ HRESULT DoVerbHide(LPCRECT /* prcPosRect */, HWND /* hwndParent */);
 
 ### <a name="parameters"></a>参数
 
-*prcPosRec*  
+*prcPosRec*<br/>
 [in]指针到矩形容器想要绘制到的控件。
 
-*hwndParent*  
+*hwndParent*<br/>
 [in]包含控件的窗口的句柄。 不使用 ATL 实现中。
 
 ### <a name="return-value"></a>返回值
@@ -259,10 +259,10 @@ HRESULT DoVerbInPlaceActivate(LPCRECT prcPosRect, HWND /* hwndParent */);
 
 ### <a name="parameters"></a>参数
 
-*prcPosRec*  
+*prcPosRec*<br/>
 [in]指针到矩形容器想要绘制到的控件。
 
-*hwndParent*  
+*hwndParent*<br/>
 [in]包含控件的窗口的句柄。 不使用 ATL 实现中。
 
 ### <a name="return-value"></a>返回值
@@ -283,10 +283,10 @@ HRESULT DoVerbOpen(LPCRECT /* prcPosRect */, HWND /* hwndParent */);
 
 ### <a name="parameters"></a>参数
 
-*prcPosRec*  
+*prcPosRec*<br/>
 [in]指针到矩形容器想要绘制到的控件。
 
-*hwndParent*  
+*hwndParent*<br/>
 [in]包含控件的窗口的句柄。
 
 ### <a name="return-value"></a>返回值
@@ -303,10 +303,10 @@ HRESULT DoVerbPrimary(LPCRECT prcPosRect, HWND hwndParent);
 
 ### <a name="parameters"></a>参数
 
-*prcPosRec*  
+*prcPosRec*<br/>
 [in]指针到矩形容器想要绘制到的控件。
 
-*hwndParent*  
+*hwndParent*<br/>
 [in]包含控件的窗口的句柄。
 
 ### <a name="return-value"></a>返回值
@@ -327,10 +327,10 @@ HRESULT DoVerbShow(LPCRECT prcPosRect, HWND /* hwndParent */);
 
 ### <a name="parameters"></a>参数
 
-*prcPosRec*  
+*prcPosRec*<br/>
 [in]指针到矩形容器想要绘制到的控件。
 
-*hwndParent*  
+*hwndParent*<br/>
 [in]包含控件的窗口的句柄。 不使用 ATL 实现中。
 
 ### <a name="return-value"></a>返回值
@@ -347,10 +347,10 @@ HRESULT DoVerbUIActivate(LPCRECT prcPosRect, HWND /* hwndParent */);
 
 ### <a name="parameters"></a>参数
 
-*prcPosRec*  
+*prcPosRec*<br/>
 [in]指针到矩形容器想要绘制到的控件。
 
-*hwndParent*  
+*hwndParent*<br/>
 [in]包含控件的窗口的句柄。 不使用 ATL 实现中。
 
 ### <a name="return-value"></a>返回值
@@ -833,6 +833,6 @@ STDMETHOD(Update)(void);
 
 ## <a name="see-also"></a>请参阅
 
-[CComControl 类](../../atl/reference/ccomcontrol-class.md)   
-[ActiveX 控件接口](/windows/desktop/com/activex-controls-interfaces)   
+[CComControl 类](../../atl/reference/ccomcontrol-class.md)<br/>
+[ActiveX 控件接口](/windows/desktop/com/activex-controls-interfaces)<br/>
 [类概述](../../atl/atl-class-overview.md)

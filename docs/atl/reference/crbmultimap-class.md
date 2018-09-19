@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be0b81d1baddfd8d89112f7f7b9d63624a6aa3b6
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ae9a83ff8cc8e4909e23e7751e0c82da690a0c21
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757762"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093813"
 ---
 # <a name="crbmultimap-class"></a>CRBMultiMap 类
 
@@ -40,22 +40,22 @@ ms.locfileid: "43757762"
 template<typename K,
          typename V, 
          class KTraits = CElementTraits<K>, 
-         class VTraits = CElementTraits<V>>  
+         class VTraits = CElementTraits<V>>
 class CRBMultiMap : public CRBTree<K, V, KTraits, VTraits>
 ```
 
 #### <a name="parameters"></a>参数
 
-*K*  
+*K*<br/>
 Key 元素类型。
 
-*V*  
+*V*<br/>
 值元素类型。
 
-*KTraits*  
+*KTraits*<br/>
 用于复制或移动关键元素的代码。 请参阅[CElementTraits 类](../../atl/reference/celementtraits-class.md)的更多详细信息。
 
-*VTraits*  
+*VTraits*<br/>
 用于复制或移动值元素的代码。
 
 ## <a name="members"></a>成员
@@ -111,7 +111,7 @@ explicit CRBMultiMap(size_t nBlockSize = 10) throw();
 
 ### <a name="parameters"></a>参数
 
-*nBlockSize*  
+*nBlockSize*<br/>
 块大小。
 
 ### <a name="remarks"></a>备注
@@ -148,7 +148,7 @@ POSITION FindFirstWithKey(KINARGTYPE key) const throw();
 
 ### <a name="parameters"></a>参数
 
-*key*  
+*key*<br/>
 指定用于标识要查找的元素的键。
 
 ### <a name="return-value"></a>返回值
@@ -180,10 +180,10 @@ V& GetNextValueWithKey(
 
 ### <a name="parameters"></a>参数
 
-*pos*  
+*pos*<br/>
 获取到调用的位置值[CRBMultiMap::FindFirstWithKey](#findfirstwithkey)或[CRBMultiMap::GetNextWithKey](#getnextwithkey)，或以前调用`GetNextValueWithKey`。
 
-*key*  
+*key*<br/>
 指定用于标识要查找的元素的键。
 
 ### <a name="return-value"></a>返回值
@@ -215,10 +215,10 @@ CPair* GetNextWithKey(
 
 ### <a name="parameters"></a>参数
 
-*pos*  
+*pos*<br/>
 获取到调用的位置值[CRBMultiMap::FindFirstWithKey](#findfirstwithkey)或[CRBMultiMap::GetNextValueWithKey](#getnextvaluewithkey)，或以前调用`GetNextWithKey`。
 
-*key*  
+*key*<br/>
 指定用于标识要查找的元素的键。
 
 ### <a name="return-value"></a>返回值
@@ -241,10 +241,10 @@ POSITION Insert(KINARGTYPE key, VINARGTYPE value) throw(...);
 
 ### <a name="parameters"></a>参数
 
-*key*  
+*key*<br/>
 要添加到密钥值`CRBMultiMap`对象。
 
-*value*  
+*value*<br/>
 要添加到值`CRBMultiMap`与相关联的对象*密钥*。
 
 ### <a name="return-value"></a>返回值
@@ -269,7 +269,7 @@ size_t RemoveKey(KINARGTYPE key) throw();
 
 ### <a name="parameters"></a>参数
 
-*key*  
+*key*<br/>
 指定用于标识要删除的元素的键。
 
 ### <a name="return-value"></a>返回值
@@ -288,7 +288,7 @@ size_t RemoveKey(KINARGTYPE key) throw();
 
 ## <a name="see-also"></a>请参阅
 
-[CRBTree 类](../../atl/reference/crbtree-class.md)   
-[CAtlMap 类](../../atl/reference/catlmap-class.md)   
-[CRBMap 类](../../atl/reference/crbmap-class.md)   
+[CRBTree 类](../../atl/reference/crbtree-class.md)<br/>
+[CAtlMap 类](../../atl/reference/catlmap-class.md)<br/>
+[CRBMap 类](../../atl/reference/crbmap-class.md)<br/>
 [类概述](../../atl/atl-class-overview.md)

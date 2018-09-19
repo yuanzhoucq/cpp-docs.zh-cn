@@ -82,12 +82,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4708f180a1a1f5e936a6b30650a6432d48878d53
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 148bb42b7dc6b650bb85860b0bcce3b70c61318e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45726747"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099876"
 ---
 # <a name="ctooltipctrl-class"></a>CToolTipCtrl Class
 封装“工具提示控件”功能，此控件是一个小型弹出窗口，显示说明应用程序中工具用途的单行文本。  
@@ -573,24 +573,25 @@ BOOL HitTest(
   
  `TTHITTESTINFO`结构定义，如下所示：  
   
- `typedef struct _TT_HITTESTINFO { // tthti`  
+```cpp
+typedef struct _TT_HITTESTINFO { // tthti
+    HWND hwnd;   // handle of tool or window with tool
+    POINT pt;    // client coordinates of point to test
+    TOOLINFO ti; // receives information about the tool
+} TTHITTESTINFO, FAR * LPHITTESTINFO;
+```
   
- `HWND hwnd;   // handle of tool or window with tool`  
+- `hwnd`  
+
+   指定工具的句柄。  
   
- `POINT pt;    // client coordinates of point to test`  
+- `pt`  
+
+   如果该点在该工具的边框，请指定点的坐标。  
   
- `TOOLINFO ti; // receives information about the tool`  
-  
- `} TTHITTESTINFO, FAR * LPHITTESTINFO;`  
-  
- `hwnd`  
- 指定工具的句柄。  
-  
- `pt`  
- 如果该点在该工具的边框，请指定点的坐标。  
-  
- `ti`  
- 有关工具的信息。 有关详细信息`TOOLINFO`结构，请参阅[CToolTipCtrl::GetToolInfo](#gettoolinfo)。  
+- `ti`  
+
+   有关工具的信息。 有关详细信息`TOOLINFO`结构，请参阅[CToolTipCtrl::GetToolInfo](#gettoolinfo)。  
   
 ##  <a name="pop"></a>  CToolTipCtrl::Pop  
  从视图中删除显示的工具提示窗口。  

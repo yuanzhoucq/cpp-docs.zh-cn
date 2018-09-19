@@ -188,12 +188,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62bb1ca2cc4ba07e3f3262f6babee3ed4c52caa2
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: db4e6a01fbf7384cfbc2e1ef2b3c5ed48991998d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45708209"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095418"
 ---
 # <a name="cframewndex-class"></a>CFrameWndEx 类
 实现 Windows 单文档界面 (SDI) 重叠式或弹出框架窗口功能，并提供管理窗口的成员。 它扩展了[CFrameWnd](../../mfc/reference/cframewnd-class.md)类。  
@@ -1198,17 +1198,12 @@ afx_msg LRESULT OnMenuChar(
   
 ### <a name="return-value"></a>返回值  
  高序位字必须是以下值之一。  
-  
- `0`  
- 框架应忽略键击。  
-  
- `1`  
- 框架应关闭菜单。  
-  
- `2`  
- 框架应选择其中一个菜单中显示的项。 低序位字包含要选择的命令 ID。  
-  
-### <a name="remarks"></a>备注  
+
+|||
+|-|-|
+ `0` | 框架应忽略键击。  
+ `1`  | 框架应关闭菜单。  
+ `2`  | 框架应选择其中一个菜单中显示的项。 低序位字包含要选择的命令 ID。  
   
 ##  <a name="onmousemove"></a>  CFrameWndEx::OnMouseMove  
  当指针移动，框架将调用此方法。  

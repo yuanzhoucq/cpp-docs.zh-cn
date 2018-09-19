@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C3280 |Microsoft 文档
+title: 编译器错误 C3280 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b47d9f552b84db462734d3ae7dd83fd1257d2044
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ed102abc0f46b896b70cb4681db4b0924b6c5822
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33249224"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46085105"
 ---
 # <a name="compiler-error-c3280"></a>编译器错误 C3280
-“class”: 无法将托管类型的成员函数编译成非托管函数  
-  
- 托管的类成员函数不能编译为非托管函数。  
-  
- 以下示例生成 C3280：  
-  
-```  
-// C3280_2.cpp  
-// compile with: /clr  
-ref struct A {  
-   void func();  
-};  
-  
-#pragma managed(push,off)  
-  
-void A::func()   // C3280  
-{  
-}  
-  
-#pragma managed(pop)  
-```  
+
+“class”: 无法将托管类型的成员函数编译成非托管函数
+
+托管的类成员函数不能编译为非托管函数。
+
+以下示例生成 C3280：
+
+```
+// C3280_2.cpp
+// compile with: /clr
+ref struct A {
+   void func();
+};
+
+#pragma managed(push,off)
+
+void A::func()   // C3280
+{
+}
+
+#pragma managed(pop)
+```

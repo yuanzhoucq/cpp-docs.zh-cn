@@ -39,12 +39,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54677e573f36fca65cc46dc5207e8812e4fa4fa6
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d2045a6c14a37d270d895a5eeb4fa455711e7354
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752925"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097674"
 ---
 # <a name="ccombstr-class"></a>CComBSTR 类
 
@@ -141,16 +141,16 @@ HRESULT Append(LPCOLESTR lpsz, int nLen) throw();
 
 ### <a name="parameters"></a>参数
 
-*bstrSrc*  
+*bstrSrc*<br/>
 [in]一个`CComBSTR`对象以追加。
 
-*ch*  
+*ch*<br/>
 [in]要追加的字符。
 
-*lpsz*  
+*lpsz*<br/>
 [in]要追加的以零结尾的字符字符串。 可以通过 LPCOLESTR 重载或 ANSI 字符串通过 LPCSTR 版本传递 Unicode 字符串。
 
-*nLen*  
+*nLen*<br/>
 [in]中的字符数*lpsz*追加。
 
 ### <a name="return-value"></a>返回值
@@ -175,7 +175,7 @@ HRESULT AppendBSTR(BSTR p) throw();
 
 ### <a name="parameters"></a>参数
 
-*p*  
+*p*<br/>
 [in]要追加 BSTR。
 
 ### <a name="return-value"></a>返回值
@@ -200,10 +200,10 @@ HRESULT AppendBytes(const char* lpsz, int nLen) throw();
 
 ### <a name="parameters"></a>参数
 
-*lpsz*  
+*lpsz*<br/>
 [in]指向要追加的字节数组的指针。
 
-*p*  
+*p*<br/>
 [in]要追加的字节数。
 
 ### <a name="return-value"></a>返回值
@@ -224,7 +224,7 @@ HRESULT ArrayToBSTR(const SAFEARRAY* pSrc) throw();
 
 ### <a name="parameters"></a>参数
 
-*pSrc*  
+*pSrc*<br/>
 [in]Safearray，包含用于创建字符串的元素。
 
 ### <a name="return-value"></a>返回值
@@ -241,7 +241,7 @@ HRESULT AssignBSTR(const BSTR bstrSrc) throw();
 
 ### <a name="parameters"></a>参数
 
-*bstrSrc*  
+*bstrSrc*<br/>
 [in]若要分配给当前 BSTR`CComBSTR`对象。
 
 ### <a name="return-value"></a>返回值
@@ -258,7 +258,7 @@ void Attach(BSTR src) throw();
 
 ### <a name="parameters"></a>参数
 
-*src*  
+*src*<br/>
 [in]若要附加到对象 BSTR。
 
 ### <a name="remarks"></a>备注
@@ -282,7 +282,7 @@ HRESULT BSTRToArray(LPSAFEARRAY* ppArray) throw();
 
 ### <a name="parameters"></a>参数
 
-*ppArray*  
+*ppArray*<br/>
 [out]指向用来保存对函数结果 safearray 的指针。
 
 ### <a name="return-value"></a>返回值
@@ -315,31 +315,31 @@ unsigned int ByteLength() const throw();
 
 ```
 CComBSTR() throw();
-CComBSTR(const CComBSTR& src);  
-CComBSTR(REFGUID  guid);  
-CComBSTR(int nSize);  
-CComBSTR(int nSize, LPCOLESTR sz);  
-CComBSTR(int nSize, LPCSTR sz);  
-CComBSTR(LPCOLESTR pSrc);  
-CComBSTR(LPCSTR pSrc);  
+CComBSTR(const CComBSTR& src);
+CComBSTR(REFGUID  guid);
+CComBSTR(int nSize);
+CComBSTR(int nSize, LPCOLESTR sz);
+CComBSTR(int nSize, LPCSTR sz);
+CComBSTR(LPCOLESTR pSrc);
+CComBSTR(LPCSTR pSrc);
 CComBSTR(CComBSTR&& src) throw(); // (Visual Studio 2017)
 ```
 
 ### <a name="parameters"></a>参数
 
-*nSize*  
+*nSize*<br/>
 [in]要从复制的字符数*sz*或字符数的初始大小`CComBSTR`。
 
-*sz*  
+*sz*<br/>
 [in] 要复制的一个字符串。 Unicode 版本指定 LPCOLESTR;ANSI 版本指定 LPCSTR。
 
-*pSrc*  
+*pSrc*<br/>
 [in] 要复制的一个字符串。 Unicode 版本指定 LPCOLESTR;ANSI 版本指定 LPCSTR。
 
-*src*  
+*src*<br/>
 [in] 一个 `CComBSTR` 对象。
 
-*guid*  
+*guid*<br/>
 [in]对引用`GUID`结构。
 
 ### <a name="remarks"></a>备注
@@ -396,10 +396,10 @@ HRESULT CopyTo(VARIANT* pvarDest) throw();
 
 ### <a name="parameters"></a>参数
 
-*pbstr*  
+*pbstr*<br/>
 [out]在其中返回由此方法分配的字符串 BSTR 的地址。
 
-*pvarDest*  
+*pvarDest*<br/>
 [out]在其中返回由此方法分配的字符串的变体的地址。
 
 ### <a name="return-value"></a>返回值
@@ -499,7 +499,7 @@ BSTR m_str;
 
 强制转换`CComBSTR`为 BSTR 对象。
 
-```  
+```
 operator BSTR() const throw();
 ```
 
@@ -544,13 +544,13 @@ bool operator!= (int nNull) const throw();
 
 ### <a name="parameters"></a>参数
 
-*bstrSrc*  
+*bstrSrc*<br/>
 [in] 一个 `CComBSTR` 对象。
 
-*pszSrc*  
+*pszSrc*<br/>
 [in]以零结尾的字符串。
 
-*nNull*  
+*nNull*<br/>
 [in]必须为 NULL。
 
 ### <a name="return-value"></a>返回值
@@ -586,16 +586,16 @@ BSTR* operator&() throw();
 将字符串追加到`CComBSTR`对象。
 
 ```
-CComBSTR& operator+= (const CComBSTR& bstrSrc);  
+CComBSTR& operator+= (const CComBSTR& bstrSrc);
 CComBSTR& operator+= (const LPCOLESTR pszSrc);
 ```
 
 ### <a name="parameters"></a>参数
 
-*bstrSrc*  
+*bstrSrc*<br/>
 [in]一个`CComBSTR`对象以追加。
 
-*pszSrc*  
+*pszSrc*<br/>
 [in]要追加的以零结尾的字符串。
 
 ### <a name="remarks"></a>备注
@@ -629,8 +629,8 @@ bool operator<(LPCSTR pszSrc) const throw();
 集[m_str](#m_str)成员添加到一份*pSrc*或一份的 BSTR 成员*src*。移动赋值运算符将移动`src`而不复制该项。
 
 ```
-CComBSTR& operator= (const CComBSTR& src);  
-CComBSTR& operator= (LPCOLESTR pSrc);  
+CComBSTR& operator= (const CComBSTR& src);
+CComBSTR& operator= (LPCOLESTR pSrc);
 CComBSTR& operator= (LPCSTR pSrc);
 CComBSTR& operator= (CComBSTR&& src) throw(); // (Visual Studio 2017)
 ```
@@ -656,13 +656,13 @@ bool operator== (int nNull) const throw();
 
 ### <a name="parameters"></a>参数
 
-*bstrSrc*  
+*bstrSrc*<br/>
 [in] 一个 `CComBSTR` 对象。
 
-*pszSrc*  
+*pszSrc*<br/>
 [in]以零结尾的字符串。
 
-*nNull*  
+*nNull*<br/>
 [in]必须为 NULL。
 
 ### <a name="return-value"></a>返回值
@@ -699,7 +699,7 @@ HRESULT ReadFromStream(IStream* pStream) throw();
 
 ### <a name="parameters"></a>参数
 
-*pStream*  
+*pStream*<br/>
 [in]一个指向[IStream](/windows/desktop/api/objidl/nn-objidl-istream)上包含数据的流接口。
 
 ### <a name="return-value"></a>返回值
@@ -756,7 +756,7 @@ HRESULT WriteToStream(IStream* pStream) throw();
 
 ### <a name="parameters"></a>参数
 
-*pStream*  
+*pStream*<br/>
 [in]一个指向[IStream](/windows/desktop/api/objidl/nn-objidl-istream)流上的接口。
 
 ### <a name="return-value"></a>返回值
@@ -773,5 +773,5 @@ HRESULT WriteToStream(IStream* pStream) throw();
 
 ## <a name="see-also"></a>请参阅
 
-[类概述](../../atl/atl-class-overview.md)   
+[类概述](../../atl/atl-class-overview.md)<br/>
 [ATL 和 MFC 字符串转换宏](string-conversion-macros.md)

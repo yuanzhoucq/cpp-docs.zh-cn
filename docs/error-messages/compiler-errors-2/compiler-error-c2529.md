@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2529 |Microsoft 文档
+title: 编译器错误 C2529 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb2d5de2375a243250b320ac313de4129795eb32
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9a6919c65dbe900cd4d6d4a60ef5370c6a683523
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33199750"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46104278"
 ---
 # <a name="compiler-error-c2529"></a>编译器错误 C2529
-name： 引用的引用是非法的  
-  
- ： 使用指针的语法，并声明对指针的引用，则可能修复此错误。  
-  
- 下面的示例生成 C2529:  
-  
-```  
-// C2529.cpp  
-// compile with: /c  
-int i;  
-int &ri = i;  
-int &(&rri) = ri;   // C2529  
+
+name： 引用的引用是非法的
+
+通过使用指针的语法并声明对指针的引用可能会修复此错误。
+
+下面的示例生成 C2529:
+
+```
+// C2529.cpp
+// compile with: /c
+int i;
+int &ri = i;
+int &(&rri) = ri;   // C2529
 ```

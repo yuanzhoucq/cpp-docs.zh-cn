@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45e4b8fe74355d99258677fd4746ad2461f508d3
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 05fcef5ee1141de8261bc4ecc813cd573fb8f901
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757798"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099495"
 ---
 # <a name="ccomclassfactory2-class"></a>CComClassFactory2 类
 
@@ -36,7 +36,7 @@ ms.locfileid: "43757798"
 ## <a name="syntax"></a>语法
 
 ```
-template <class license>  
+template <class license>
 class CComClassFactory2 : public IClassFactory2,
     public CComObjectRootEx<CComGlobalsThreadModel>,
     public license
@@ -44,7 +44,7 @@ class CComClassFactory2 : public IClassFactory2,
 
 #### <a name="parameters"></a>参数
 
-*许可证*  
+*许可证*<br/>
 实现以下静态函数的类：
 
 - `static BOOL VerifyLicenseKey( BSTR bstr );`
@@ -105,13 +105,13 @@ STDMETHOD(CreateInstance)(LPUNKNOWN pUnkOuter, REFIID riid, void** ppvObj);
 
 ### <a name="parameters"></a>参数
 
-*pUnkOuter*  
+*pUnkOuter*<br/>
 [in]如果对象正在创建的聚合，然后*pUnkOuter*必须是未知的外部。 否则为*pUnkOuter*必须为 NULL。
 
-*riid*  
+*riid*<br/>
 [in]所请求的接口的 IID。 如果*pUnkOuter*为非 NULL *riid*必须是`IID_IUnknown`。
 
-*ppvObj*  
+*ppvObj*<br/>
 [out]通过标识的接口指针的指针*riid*。 如果该对象不支持此接口， *ppvObj*设置为 NULL。
 
 ### <a name="return-value"></a>返回值
@@ -138,19 +138,19 @@ STDMETHOD(CreateInstanceLic)(
 
 ### <a name="parameters"></a>参数
 
-*pUnkOuter*  
+*pUnkOuter*<br/>
 [in]如果对象正在创建的聚合，然后*pUnkOuter*必须是未知的外部。 否则为*pUnkOuter*必须为 NULL。
 
-*pUnkReserved*  
+*pUnkReserved*<br/>
 [in]不使用。 必须为 NULL。
 
-*riid*  
+*riid*<br/>
 [in]所请求的接口的 IID。 如果*pUnkOuter*为非 NULL *riid*必须是`IID_IUnknown`。
 
-*bstrKey*  
+*bstrKey*<br/>
 [in]通过调用以前获取的运行时许可证密钥`RequestLicKey`。 创建该对象需要此密钥。
 
-*ppvObject*  
+*ppvObject*<br/>
 [out]指向由指定的接口指针的指针*riid*。 如果该对象不支持此接口， *ppvObject*设置为 NULL。
 
 ### <a name="return-value"></a>返回值
@@ -171,7 +171,7 @@ STDMETHOD(GetLicInfo)(LICINFO* pLicInfo);
 
 ### <a name="parameters"></a>参数
 
-*pLicInfo*  
+*pLicInfo*<br/>
 [out]指向`LICINFO`结构。
 
 ### <a name="return-value"></a>返回值
@@ -192,7 +192,7 @@ STDMETHOD(LockServer)(BOOL fLock);
 
 ### <a name="parameters"></a>参数
 
-*纷纷采用*  
+*纷纷采用*<br/>
 [in]如果为 TRUE，将增加的锁计数;否则，将减少锁计数。
 
 ### <a name="return-value"></a>返回值
@@ -215,10 +215,10 @@ STDMETHOD(RequestLicKey)(DWORD dwReserved, BSTR* pbstrKey);
 
 ### <a name="parameters"></a>参数
 
-*dwReserved*  
+*dwReserved*<br/>
 [in]不使用。 必须为零。
 
-*pbstrKey*  
+*pbstrKey*<br/>
 [out]指向指针的许可证密钥。
 
 ### <a name="return-value"></a>返回值
@@ -233,8 +233,8 @@ STDMETHOD(RequestLicKey)(DWORD dwReserved, BSTR* pbstrKey);
 
 ## <a name="see-also"></a>请参阅
 
-[CComClassFactoryAutoThread 类](../../atl/reference/ccomclassfactoryautothread-class.md)   
-[CComClassFactorySingleton 类](../../atl/reference/ccomclassfactorysingleton-class.md)   
-[CComObjectRootEx 类](../../atl/reference/ccomobjectrootex-class.md)   
-[CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)   
+[CComClassFactoryAutoThread 类](../../atl/reference/ccomclassfactoryautothread-class.md)<br/>
+[CComClassFactorySingleton 类](../../atl/reference/ccomclassfactorysingleton-class.md)<br/>
+[CComObjectRootEx 类](../../atl/reference/ccomobjectrootex-class.md)<br/>
+[CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)<br/>
 [类概述](../../atl/atl-class-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: 资源编译器错误 RC2135 |Microsoft 文档
+title: 资源编译器错误 RC2135 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14600b00b1347f7fe63c0bc8b6d1ab5c70b68fad
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8bd510aa4a6045b3e691ba89d05b327d35818b8b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33318020"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46092981"
 ---
 # <a name="resource-compiler-error-rc2135"></a>资源编译器错误 RC2135
-找不到文件：filename  
-  
- 找不到资源编译器命令行中指定的文件。 检查文件是否已被移动到另一个目录和文件名称和路径是否正确键入。  
-  
- 文件中搜索使用**包括**环境变量或 Visual c + +**包括**设置。
+
+找不到文件：filename
+
+找不到资源编译器命令行中指定的文件。 请检查文件是否已被移动到另一个目录，以及是否正确键入文件名和路径。
+
+使用搜索文件**INCLUDE**环境变量或 Visual c + + **INCLUDE**设置。

@@ -1,5 +1,5 @@
 ---
-title: location 类 |Microsoft 文档
+title: location 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fdfb555375df4b9f791db25fa2dee47222f79063
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: a7d441aff74faede9ecbc41f03fe52cd05528e06
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688019"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46104759"
 ---
 # <a name="location-class"></a>location 类
 硬件上物理位置的抽象。  
@@ -96,8 +96,8 @@ static location __cdecl from_numa_node(unsigned short _NumaNodeNumber);
 ```  
   
 ### <a name="parameters"></a>参数  
- `_NumaNodeNumber`  
- 要构造位置的 NUMA 节点号。  
+*_NumaNodeNumber*<br/>
+要构造位置的 NUMA 节点号。  
   
 ### <a name="return-value"></a>返回值  
  表示 `_NumaNodeNumber` 参数指定的 NUMA 节点的位置。  
@@ -120,12 +120,17 @@ location(
 ```  
   
 ### <a name="parameters"></a>参数  
- `_Src`  
- `_LocationType`  
- `_Id`  
- `_BindingId`  
- `_PBinding`  
-  
+*_Src*<br/>
+
+*_LocationType*<br/>
+
+*Id （_i)*<br/>
+
+*_BindingId*<br/>
+
+*_PBinding*<br/>
+（可选）绑定指针。
+
 ### <a name="remarks"></a>备注  
  默认构造的位置表示整个系统。  
   
@@ -138,7 +143,8 @@ bool operator!= (const location& _Rhs) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `_Rhs`  
+*_Rhs*<br/>
+操作数`location`。
   
 ### <a name="return-value"></a>返回值  
  如果两个位置不同，则为 `true`；否则为 `false`。  
@@ -152,8 +158,8 @@ location& operator= (const location& _Rhs);
 ```  
   
 ### <a name="parameters"></a>参数  
- `_Rhs`  
- 源 `location` 对象。  
+*_Rhs*<br/>
+源 `location` 对象。  
   
 ### <a name="return-value"></a>返回值  
   
@@ -166,10 +172,11 @@ bool operator== (const location& _Rhs) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `_Rhs`  
+*_Rhs*<br/>
+操作数`location`。
   
 ### <a name="return-value"></a>返回值  
- `true` 如果两个位置相同，和`false`否则为。  
+ `true` 如果两个位置都完全相同，和`false`否则为。  
   
 ## <a name="see-also"></a>请参阅  
  [并发命名空间](concurrency-namespace.md)

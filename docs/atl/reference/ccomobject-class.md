@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0600d675d37e2fed1d318645daaedcce5f80ed89
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: e7a6f4f014d609e8b650951d459c23b07fd4a006
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752366"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46085441"
 ---
 # <a name="ccomobject-class"></a>CComObject 类
 
@@ -36,13 +36,13 @@ ms.locfileid: "43752366"
 ## <a name="syntax"></a>语法
 
 ```
-template<class Base>  
+template<class Base>
 class CComObject : public Base
 ```
 
 #### <a name="parameters"></a>参数
 
-*基本*  
+*基本*<br/>
 您的类，派生自[CComObjectRoot](../../atl/reference/ccomobjectroot-class.md)或[CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)，如你想要的对象上支持任何其他接口也一样。
 
 ## <a name="members"></a>成员
@@ -101,7 +101,7 @@ CComObject(void* = NULL);
 
 ### <a name="parameters"></a>参数
 
-\*void  
+\*void<br/>
 [in]未使用此未命名的参数。 存在与其他对称性`CComXXXObjectXXX`构造函数。
 
 ### <a name="remarks"></a>备注
@@ -132,7 +132,7 @@ static HRESULT WINAPI CreateInstance(CComObject<Base>** pp);
 
 ### <a name="parameters"></a>参数
 
-*pp*  
+*pp*<br/>
 [out]一个指向**CComObject <** `Base` **>** 指针。 如果`CreateInstance`就会失败， *pp*设置为 NULL。
 
 ### <a name="return-value"></a>返回值
@@ -157,19 +157,19 @@ static HRESULT WINAPI CreateInstance(CComObject<Base>** pp);
 
 ```
 STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
-template <class Q>  
+template <class Q>
 HRESULT STDMETHODCALLTYPE QueryInterface(Q** pp);
 ```
 
 ### <a name="parameters"></a>参数
 
-*iid*  
+*iid*<br/>
 [in]所请求的接口的标识符。
 
-*ppvObject*  
+*ppvObject*<br/>
 [out]通过标识的接口指针的指针*iid*。 如果该对象不支持此接口， *ppvObject*设置为 NULL。
 
-*pp*  
+*pp*<br/>
 [out]由类型标识的接口指针的指针`Q`。 如果该对象不支持此接口， *pp*设置为 NULL。
 
 ### <a name="return-value"></a>返回值
@@ -190,8 +190,8 @@ STDMETHOD_(ULONG, Release)();
 
 ## <a name="see-also"></a>请参阅
 
-[CComAggObject 类](../../atl/reference/ccomaggobject-class.md)   
-[CComPolyObject 类](../../atl/reference/ccompolyobject-class.md)   
-[DECLARE_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_aggregatable)   
-[DECLARE_NOT_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_not_aggregatable)   
+[CComAggObject 类](../../atl/reference/ccomaggobject-class.md)<br/>
+[CComPolyObject 类](../../atl/reference/ccompolyobject-class.md)<br/>
+[DECLARE_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_aggregatable)<br/>
+[DECLARE_NOT_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_not_aggregatable)<br/>
 [类概述](../../atl/atl-class-overview.md)

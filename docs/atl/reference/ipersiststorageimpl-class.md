@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 93a1c08e8e50e8ef1236b253d471c2332c4e6e03
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1479ced25a741e27a195b529b6bf8825b47ce41e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763765"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099598"
 ---
 # <a name="ipersiststorageimpl-class"></a>IPersistStorageImpl 类
 
@@ -42,13 +42,13 @@ ms.locfileid: "43763765"
 ## <a name="syntax"></a>语法
 
 ```
-template <class T>  
+template <class T>
 class ATL_NO_VTABLE IPersistStorageImpl : public IPersistStorage
 ```
 
 #### <a name="parameters"></a>参数
 
-*T*  
+*T*<br/>
 您的类，派生自`IPersistStorageImpl`。
 
 ## <a name="members"></a>成员
@@ -185,7 +185,7 @@ STDMETHOD(SaveCompleted)(IStorage*);
 
 ## <a name="see-also"></a>请参阅
 
-[存储和流](/windows/desktop/Stg/storages-and-streams)   
-[IPersistStreamInitImpl 类](../../atl/reference/ipersiststreaminitimpl-class.md)   
-[IPersistPropertyBagImpl 类](../../atl/reference/ipersistpropertybagimpl-class.md)   
+[存储和流](/windows/desktop/Stg/storages-and-streams)<br/>
+[IPersistStreamInitImpl 类](../../atl/reference/ipersiststreaminitimpl-class.md)<br/>
+[IPersistPropertyBagImpl 类](../../atl/reference/ipersistpropertybagimpl-class.md)<br/>
 [类概述](../../atl/atl-class-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2566 |Microsoft 文档
+title: 编译器错误 C2566 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd7685a7633aa06424f1999fbf539dbfd8b62703
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 868098b6f939fe95166b7228566e19f710f19ee5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33199701"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46094905"
 ---
 # <a name="compiler-error-c2566"></a>编译器错误 C2566
-条件表达式中的重载的函数  
-  
- 无法评估条件表达式中的重载的函数。
+
+条件表达式中的重载的函数
+
+无法计算条件表达式中的重载的函数。

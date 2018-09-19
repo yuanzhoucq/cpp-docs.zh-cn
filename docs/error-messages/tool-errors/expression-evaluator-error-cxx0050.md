@@ -1,5 +1,5 @@
 ---
-title: 表达式计算器错误 CXX0050 |Microsoft 文档
+title: 表达式计算器错误 CXX0050 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 32d5510c0db76cc688c850538d9bd5f75c653151
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 34b5bde82eff004628073f1ec6d8b372bd02afc0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33296089"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095416"
 ---
 # <a name="expression-evaluator-error-cxx0050"></a>表达式计算器错误 CXX0050
-左侧的:: 必须是类/结构/联合  
-  
- 范围解析运算符左侧的符号 (`::`) 不是类、 结构或联合。  
-  
- 此错误是与 CAN0050 相同。
+
+左侧:: 必须是类/结构/联合
+
+范围解析运算符左侧的符号 (`::`) 不是类、 结构或联合。
+
+此错误是与 CAN0050 相同。

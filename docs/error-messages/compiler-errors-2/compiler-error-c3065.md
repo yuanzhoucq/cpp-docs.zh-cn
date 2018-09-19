@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C3065 |Microsoft 文档
+title: 编译器错误 C3065 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7a6bb966fd973a9ede675e98761e8649ca20c27
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 35867da62dad9e399e4b4672f84478e4ea9688a5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33246952"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46104923"
 ---
 # <a name="compiler-error-c3065"></a>编译器错误 C3065
-不允许在非类范围上声明属性  
-  
- 在类的外部使用了 [property](../../cpp/property-cpp.md) __declspec 修饰符。  只能在类内部声明属性。  
-  
- 以下示例生成 C3065：  
-  
-```  
-// C3065.cpp  
-// compile with: /c  
-__declspec(property(get=get_i)) int i;   // C3065  
-  
-class x {  
-public:  
-   __declspec(property(get=get_i)) int i;   // OK  
-};  
+
+不允许在非类范围上声明属性
+
+在类的外部使用了 [property](../../cpp/property-cpp.md) __declspec 修饰符。  只能在类内部声明属性。
+
+以下示例生成 C3065：
+
+```
+// C3065.cpp
+// compile with: /c
+__declspec(property(get=get_i)) int i;   // C3065
+
+class x {
+public:
+   __declspec(property(get=get_i)) int i;   // OK
+};
 ```

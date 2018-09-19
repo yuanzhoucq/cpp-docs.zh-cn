@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2007 |Microsoft 文档
+title: 编译器错误 C2007 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 159a4b8f9dffc4f6ee96b0bb1935682f9f6db281
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d2ac9383b144496228038529808e24dfd1c0f7a1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33163532"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097323"
 ---
 # <a name="compiler-error-c2007"></a>编译器错误 C2007
-\#定义语法  
-  
- 后未出现标识符`#define`。 若要解决此错误，使用标识符。  
-  
- 下面的示例生成 C2007:  
-  
-```  
-// C2007.cpp  
-#define   // C2007  
-```  
-  
- 可能的解决方法：  
-  
-```  
-// C2007b.cpp  
-// compile with: /c  
-#define true 1  
+
+\#定义语法
+
+后未出现标识符`#define`。 若要解决此错误，请使用标识符。
+
+下面的示例生成 C2007:
+
+```
+// C2007.cpp
+#define   // C2007
+```
+
+可能的解决方法：
+
+```
+// C2007b.cpp
+// compile with: /c
+#define true 1
 ```

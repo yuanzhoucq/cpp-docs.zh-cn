@@ -1,5 +1,5 @@
 ---
-title: 链接器工具错误 LNK1264 |Microsoft 文档
+title: 链接器工具错误 LNK1264 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ed21327028fc9849f6e0694bb82ae34c6084842
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8232e83774dc53755b77ad9c8b3bbb2a0bcc6ae6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33301458"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46102733"
 ---
 # <a name="linker-tools-error-lnk1264"></a>链接器工具错误 LNK1264
-指定的 /ltcg: pginstrument 但不需要; 的代码生成检测失败  
-  
- **/Ltcg: pginstrument**已指定，但没有使用已编译的.obj 上未找到文件[/GL](../../build/reference/gl-whole-program-optimization.md)。 检测不能将位置和链接失败。 必须在命令行上至少一个使用编译的.obj 文件 **/GL** ，以便检测才能发生。  
-  
- 按配置优化 (PGO) 选项仅适用于 64 位编译器。
+
+指定 /ltcg: pginstrument 但没有所需; 的代码生成检测失败
+
+**/Ltcg: pginstrument**已指定，但找到了文件是使用编译任何.obj [/GL](../../build/reference/gl-whole-program-optimization.md)。 检测不能采用的位置，以及失败的链接。 必须在命令行上至少一个使用编译的.obj 文件 **/GL**以便进行检测。
+
+按配置优化 (PGO) 是仅在 64 位编译器中可用。
