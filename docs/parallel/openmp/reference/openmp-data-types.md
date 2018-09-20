@@ -1,5 +1,5 @@
 ---
-title: OpenMP 数据类型 |Microsoft 文档
+title: OpenMP 数据类型 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,22 +12,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f33666b35f45bb668ab135941a0d15297442408a
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: b41eaf7012c1d119071281f98177e4a4d841890b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33690941"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46410062"
 ---
 # <a name="openmp-data-types"></a>OpenMP 数据类型
-提供 OpenMP API 中使用的数据类型的链接。  
-  
- 标准 OpenMP 的 Visual c + + 实现包括以下数据类型。  
-  
-|数据类型|描述|  
-|---------------|-----------------|  
-|[omp_lock_t](../../../parallel/openmp/reference/omp-lock-t.md)|一种保存锁、 锁是否可用或如果一个线程拥有锁的状态。|  
-|[omp_nest_lock_t](../../../parallel/openmp/reference/omp-nest-lock-t.md)|一种保存有关锁的信息的以下部分之一： 是否锁定，并且可线程的标识的拥有锁和嵌套的计数。|  
-  
-## <a name="see-also"></a>请参阅  
- [库参考](../../../parallel/openmp/reference/openmp-library-reference.md)
+
+OpenMP API 中使用的数据类型到提供的链接。
+
+OpenMP 标准的 Visual c + + 实现包括以下数据类型。
+
+|数据类型|描述|
+|---------------|-----------------|
+|[omp_lock_t](../../../parallel/openmp/reference/omp-lock-t.md)|一个类型，持有锁、 锁是否可用，或如果线程拥有锁的状态。|
+|[omp_nest_lock_t](../../../parallel/openmp/reference/omp-nest-lock-t.md)|包含有关某个锁的信息的以下部分之一的类型： 是否锁可用，并且线程标识拥有锁和嵌套的计数。|
+
+## <a name="see-also"></a>请参阅
+
+[库参考](../../../parallel/openmp/reference/openmp-library-reference.md)

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 47925bcc647d253775e4dd61f6a7f5d5fb586dde
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 2083992bcb444a10b495b7007c698499f9cd9628
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42599278"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46419160"
 ---
 # <a name="semaphorelock-method"></a>Semaphore::Lock 方法
 
@@ -43,10 +43,10 @@ static SyncLock Lock(
 
 ### <a name="parameters"></a>参数
 
-*毫秒*  
+*毫秒*<br/>
 超时间隔（以毫秒为单位）。 默认值为 INFINITE，其表示将无限期地等待。
 
-*h*  
+*h*<br/>
 句柄**信号量**对象。
 
 ## <a name="return-value"></a>返回值
