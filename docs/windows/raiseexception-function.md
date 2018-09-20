@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 49024e903237160cc26a9c095cf9f313b43ccb6f
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 12032318f898b2986b64d5cd8a1e611a31d1fc8c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42600760"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46372387"
 ---
 # <a name="raiseexception-function"></a>RaiseException 函数
 
@@ -38,10 +38,10 @@ inline void __declspec(noreturn)   RaiseException(
 
 ### <a name="parameters"></a>参数
 
-*hr*  
+*hr*<br/>
 异常引发; 异常代码也就是说，操作失败的 HRESULT。
 
-*dwExceptionFlags*  
+*dwExceptionFlags*<br/>
 一个标志，指示持续性异常 （标志值为零） 或 noncontinuable 异常 （标志值为非零）。 默认情况下，例外情况是了不可继续操作。
 
 ## <a name="remarks"></a>备注

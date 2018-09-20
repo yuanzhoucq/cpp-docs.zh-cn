@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4fedde29441c9c14b68dec5cff998be57d216e29
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: f13af220107ba8d5bc5c26c65c2034f125a39454
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42607655"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46382448"
 ---
 # <a name="criticalsectionlock-method"></a>CriticalSection::Lock 方法
 
@@ -40,7 +40,7 @@ SyncLock Lock();
 
 ### <a name="parameters"></a>参数
 
-*cs*  
+*cs*<br/>
 用户指定的关键部分对象。
 
 ## <a name="return-value"></a>返回值

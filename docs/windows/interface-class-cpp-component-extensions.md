@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 775fbe39edc9478b1fce3afb39ee2bf1f6d5ed36
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 0c7ebdf83730b661cbd855ba730da1abeee936c5
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45714306"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46377066"
 ---
 # <a name="interface-class--c-component-extensions"></a>接口类（C++ 组件扩展）
 
@@ -36,21 +36,21 @@ ms.locfileid: "45714306"
 ```cpp
 interface_access
 interface class
- name :  inherit_accessbase_interface{};interface_accessinterface structname :  inherit_accessbase_interface{};
+name :  inherit_accessbase_interface{};interface_accessinterface structname :  inherit_accessbase_interface{};
 ```
 
 ### <a name="parameters"></a>参数
 
-*interface_access*  
+*interface_access*<br/>
 在程序集外部接口的可访问性。  可能的值为**公共**并**专用**。  **专用**是默认值。 不能具有嵌套的接口*interface_access*说明符。
 
-*name*  
+*name*<br/>
 接口的名称。
 
-*inherit_access*  
+*inherit_access*<br/>
 可访问性*base_interface*。  唯一允许的可访问性的基接口是**公共**（默认值）。
 
-*base_interface*  
+*base_interface*<br/>
 （可选）接口的基接口*名称*。
 
 ### <a name="remarks"></a>备注

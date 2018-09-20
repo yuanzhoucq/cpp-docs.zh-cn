@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 32970c9d30e1804071190ee5a57c42fd4b6334af
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: c3964ce5257a6b2398571c9ed3ba5792b5bd9cca
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43677246"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46384476"
 ---
 # <a name="iidppvargshelper-function"></a>IID_PPV_ARGS_Helper 函数
 
@@ -42,10 +42,10 @@ void** IID_PPV_ARGS_Helper(
 
 ### <a name="parameters"></a>参数
 
-*T*  
+*T*<br/>
 自变量的类型*pp*。
 
-*pp*  
+*pp*<br/>
 一个双向间接指针。
 
 ## <a name="return-value"></a>返回值

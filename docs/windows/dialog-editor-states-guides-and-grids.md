@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 22e27a5dddacf87a9768d7f6b8d27765d902b5ff
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 3d0cc73df8304377bde00d8da2ab3c501ea5db45
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318364"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46373264"
 ---
 # <a name="dialog-editor-states-guides-and-grids-c"></a>对话框编辑器状态 （参考线和网格） （c + +） 
 
@@ -50,6 +50,6 @@ Win32
 
 ## <a name="see-also"></a>请参阅
 
-[对话框上的控件排列](../windows/arrangement-of-controls-on-dialog-boxes.md)  
-[对话框中的控件](../windows/controls-in-dialog-boxes.md)  
+[对话框上的控件排列](../windows/arrangement-of-controls-on-dialog-boxes.md)<br/>
+[对话框中的控件](../windows/controls-in-dialog-boxes.md)<br/>
 [控件 (MFC)](../mfc/controls-mfc.md)

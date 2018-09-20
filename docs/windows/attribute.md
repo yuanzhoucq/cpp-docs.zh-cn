@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 54699888fc2988dd9b4ccec2a57b6d9df0d4e79e
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 335b22b015bf244e39d67781eae21b3c43328256
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314768"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46379783"
 ---
 # <a name="attribute"></a>attribute
 
@@ -43,13 +43,13 @@ ms.locfileid: "44314768"
 
 ### <a name="parameters"></a>参数
 
-*AllowOn*  
+*AllowOn*<br/>
 指定自定义的特性可以应用于的语言元素。 默认值是`System::AttributeTargets::All`(请参阅[System::AttributeTargets](https://msdn.microsoft.com/library/system.attributetargets.aspx))。
 
-*AllowMultiple*  
+*AllowMultiple*<br/>
 指定是否可以重复应用自定义属性构造。 默认值为 FALSE。
 
-*继承*  
+*继承*<br/>
 指示该特性将由子类继承。 编译器不提供特殊支持此功能;它是作业的属性使用者 (`Reflection`，例如) 遵循此信息。 如果*继承*为 TRUE，结果为继承该属性。 如果*AllowMultiple*为 TRUE，如果该属性将派生的成员; 上累积*AllowMultiple*为 FALSE 时，属性将重写 （或替换） 中继承。 如果*继承*为 FALSE 时，该属性不能被继承。 默认值为 TRUE。
 
 ## <a name="remarks"></a>备注

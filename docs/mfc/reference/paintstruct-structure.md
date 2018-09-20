@@ -16,52 +16,56 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dddf9c117f2366496609f8bdf4ffc2f069f66ace
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 531dbc3c0e9b609aeaf5d9179491aa0fb3990363
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43199568"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46382916"
 ---
 # <a name="paintstruct-structure"></a>PAINTSTRUCT 结构
-`PAINTSTRUCT`结构包含可用于绘制的窗口工作区的信息。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-typedef struct tagPAINTSTRUCT {  
-    HDC hdc;  
-    BOOL fErase;  
-    RECT rcPaint;  
-    BOOL fRestore;  
-    BOOL fIncUpdate;  
-    BYTE rgbReserved[16];  
-} PAINTSTRUCT;  
-```  
-  
-#### <a name="parameters"></a>参数  
- *hdc*  
- 标识要用于绘制的显示上下文。  
-  
- *fErase*  
- 指定是否需要重新绘制背景。 它不是 0，如果应用程序应重绘后台。 应用程序负责绘制背景，如果没有背景画笔的情况下创建一个 Windows 窗口类 (请参阅的说明`hbrBackground`的成员[WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576) Windows SDK 中的结构)。  
-  
- *rcPaint*  
- 指定右上角和右下角的绘制请求在其中的矩形。  
-  
- *fRestore*  
- 保留的成员。 它是由 Windows 在内部使用。  
-  
- *fIncUpdate*  
- 保留的成员。 它是由 Windows 在内部使用。  
-  
- *rgbReserved [16]*  
- 保留的成员。 保留的由 Windows 在内部使用的内存块。  
-  
-## <a name="requirements"></a>要求  
- **标头：** winuser.h  
-  
-## <a name="see-also"></a>请参阅  
- [结构、 样式、 回调和消息映射](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [CPaintDC::m_ps](../../mfc/reference/cpaintdc-class.md#m_ps)
+
+`PAINTSTRUCT`结构包含可用于绘制的窗口工作区的信息。
+
+## <a name="syntax"></a>语法
+
+```
+typedef struct tagPAINTSTRUCT {
+    HDC hdc;
+    BOOL fErase;
+    RECT rcPaint;
+    BOOL fRestore;
+    BOOL fIncUpdate;
+    BYTE rgbReserved[16];
+} PAINTSTRUCT;
+```
+
+#### <a name="parameters"></a>参数
+
+*hdc*<br/>
+标识要用于绘制的显示上下文。
+
+*fErase*<br/>
+指定是否需要重新绘制背景。 它不是 0，如果应用程序应重绘后台。 应用程序负责绘制背景，如果没有背景画笔的情况下创建一个 Windows 窗口类 (请参阅的说明`hbrBackground`的成员[WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576) Windows SDK 中的结构)。
+
+*rcPaint*<br/>
+指定右上角和右下角的绘制请求在其中的矩形。
+
+*fRestore*<br/>
+保留的成员。 它是由 Windows 在内部使用。
+
+*fIncUpdate*<br/>
+保留的成员。 它是由 Windows 在内部使用。
+
+*rgbReserved [16]*<br/>
+保留的成员。 保留的由 Windows 在内部使用的内存块。
+
+## <a name="requirements"></a>要求
+
+**标头：** winuser.h
+
+## <a name="see-also"></a>请参阅
+
+[结构、样式、回调和消息映射](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)<br/>
+[CPaintDC::m_ps](../../mfc/reference/cpaintdc-class.md#m_ps)
 

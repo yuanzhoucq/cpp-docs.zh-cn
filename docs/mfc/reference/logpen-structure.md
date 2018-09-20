@@ -16,61 +16,66 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c677f86a44d24e0d0d2742d47ee1534532001528
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: a535858a0d5540db481fd42918b4079f30c90728
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338527"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46375663"
 ---
 # <a name="logpen-structure"></a>LOGPEN 结构
-`LOGPEN`结构定义样式、 宽度和颜色的钢笔、 drawing 对象用于绘制线条和边框。 [CPen::CreatePenIndirect](../../mfc/reference/cpen-class.md#createpenindirect)函数使用`LOGPEN`结构。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-typedef struct tagLOGPEN {  /* lgpn */  
-    UINT lopnStyle;  
-    POINT lopnWidth;  
-    COLORREF lopnColor;  
-} LOGPEN;  
-```  
-  
-#### <a name="parameters"></a>参数  
- *lopnStyle*  
- 指定的笔类型。 此成员可以是下列值之一：  
-  
-- PS_SOLID 创建实心笔。  
-  
-- PS_DASH 创建虚线的笔。 （仅当钢笔的宽度为 1 时有效）。  
-  
-- PS_DOT 创建以点分隔的笔。 （仅当钢笔的宽度为 1 时有效）。  
-  
-- 使用替代的笔 PS_DASHDOT 创建短划线和点。 （仅当钢笔的宽度为 1 时有效）。  
-  
-- PS_DASHDOTDOT 创建一个使用替代的短划线和双点笔的。 （仅当钢笔的宽度为 1 时有效）。  
-  
-- PS_NULL 创建空的笔。  
-  
-- PS_INSIDEFRAME 通过 GDI 创建钢笔绘制一条线绘制闭合形状的框架内生成输出指定的绑定矩形的函数 (例如， `Ellipse`， `Rectangle`， `RoundRect`， `Pie`，和`Chord`成员函数）。 此样式时用于 GDI 输出未指定的绑定矩形的函数 (例如，`LineTo`成员函数)，框架不受限制的笔绘制的区域。  
-  
-     如果笔具有 PS_INSIDEFRAME 样式和颜色的不匹配逻辑的颜色表中的颜色，笔绘制抖色的颜色。 PS_SOLID 笔样式不能用于与抖色创建钢笔。 PS_INSIDEFRAME 样式等同于 PS_SOLID 钢笔的宽度是否小于或等于 1。  
-  
-     使用 GDI 对象使用 PS_INSIDEFRAME 样式时生成的函数以外`Ellipse`， `Rectangle`，和`RoundRect`，行可能无法完全在指定范围内。  
-  
- *lopnWidth*  
- 指定钢笔的宽度，以逻辑单位。 如果`lopnWidth`成员为 0，触笔位于 1 个像素宽而不考虑当前映射模式的光栅设备上。  
-  
- *lopnColor*  
- 指定的钢笔颜色。  
-  
-## <a name="remarks"></a>备注  
- `y`中的值[点](../../mfc/reference/point-structure1.md)结构`lopnWidth`成员未使用。  
-  
-## <a name="requirements"></a>要求  
- **标头：** wingdi.h  
-  
-## <a name="see-also"></a>请参阅  
- [结构、 样式、 回调和消息映射](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [CPen::CreatePenIndirect](../../mfc/reference/cpen-class.md#createpenindirect)
+
+`LOGPEN`结构定义样式、 宽度和颜色的钢笔、 drawing 对象用于绘制线条和边框。 [CPen::CreatePenIndirect](../../mfc/reference/cpen-class.md#createpenindirect)函数使用`LOGPEN`结构。
+
+## <a name="syntax"></a>语法
+
+```
+typedef struct tagLOGPEN {  /* lgpn */
+    UINT lopnStyle;
+    POINT lopnWidth;
+    COLORREF lopnColor;
+} LOGPEN;
+```
+
+#### <a name="parameters"></a>参数
+
+*lopnStyle*<br/>
+指定的笔类型。 此成员可以是下列值之一：
+
+- PS_SOLID 创建实心笔。
+
+- PS_DASH 创建虚线的笔。 （仅当钢笔的宽度为 1 时有效）。
+
+- PS_DOT 创建以点分隔的笔。 （仅当钢笔的宽度为 1 时有效）。
+
+- 使用替代的笔 PS_DASHDOT 创建短划线和点。 （仅当钢笔的宽度为 1 时有效）。
+
+- PS_DASHDOTDOT 创建一个使用替代的短划线和双点笔的。 （仅当钢笔的宽度为 1 时有效）。
+
+- PS_NULL 创建空的笔。
+
+- PS_INSIDEFRAME 通过 GDI 创建钢笔绘制一条线绘制闭合形状的框架内生成输出指定的绑定矩形的函数 (例如， `Ellipse`， `Rectangle`， `RoundRect`， `Pie`，和`Chord`成员函数）。 此样式时用于 GDI 输出未指定的绑定矩形的函数 (例如，`LineTo`成员函数)，框架不受限制的笔绘制的区域。
+
+     如果笔具有 PS_INSIDEFRAME 样式和颜色的不匹配逻辑的颜色表中的颜色，笔绘制抖色的颜色。 PS_SOLID 笔样式不能用于与抖色创建钢笔。 PS_INSIDEFRAME 样式等同于 PS_SOLID 钢笔的宽度是否小于或等于 1。
+
+     使用 GDI 对象使用 PS_INSIDEFRAME 样式时生成的函数以外`Ellipse`， `Rectangle`，和`RoundRect`，行可能无法完全在指定范围内。
+
+*lopnWidth*<br/>
+指定钢笔的宽度，以逻辑单位。 如果`lopnWidth`成员为 0，触笔位于 1 个像素宽而不考虑当前映射模式的光栅设备上。
+
+*lopnColor*<br/>
+指定的钢笔颜色。
+
+## <a name="remarks"></a>备注
+
+`y`中的值[点](../../mfc/reference/point-structure1.md)结构`lopnWidth`成员未使用。
+
+## <a name="requirements"></a>要求
+
+**标头：** wingdi.h
+
+## <a name="see-also"></a>请参阅
+
+[结构、样式、回调和消息映射](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)<br/>
+[CPen::CreatePenIndirect](../../mfc/reference/cpen-class.md#createpenindirect)
 

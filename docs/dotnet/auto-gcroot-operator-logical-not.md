@@ -20,59 +20,63 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 107ac80f84d949a96132a4fc05c90ad7a7e20fbc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1cba64c079b423a05ff5760a90e1b06d269a1a90
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33103367"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46381876"
 ---
 # <a name="autogcrootoperator"></a>auto_gcroot::operator!
-使用的运算符`auto_gcroot`条件表达式中。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-bool operator!() const;  
-```  
-  
-## <a name="return-value"></a>返回值  
- `true` 如果包装的对象无效;`false`否则为。  
-  
-## <a name="example"></a>示例  
-  
-```  
-// msl_auto_gcroot_operator_not.cpp  
-// compile with: /clr  
-#include <msclr\auto_gcroot.h>  
-  
-using namespace System;  
-using namespace msclr;  
-  
-int main() {  
-   auto_gcroot<String^> s;  
-   if ( s ) Console::WriteLine( "s is valid" );  
-   if ( !s ) Console::WriteLine( "s is invalid" );  
-   s = "something";  
-   if ( s ) Console::WriteLine( "now s is valid" );  
-   if ( !s ) Console::WriteLine( "now s is invalid" );  
-   s.reset();  
-   if ( s ) Console::WriteLine( "now s is valid" );  
-   if ( !s ) Console::WriteLine( "now s is invalid" );  
-}  
-```  
-  
-```Output  
-s is invalid  
-now s is valid  
-now s is invalid  
-```  
-  
-## <a name="requirements"></a>要求  
- **标头文件** \<msclr\auto_gcroot.h >  
-  
- **Namespace** msclr  
-  
-## <a name="see-also"></a>请参阅  
- [auto_gcroot 成员](../dotnet/auto-gcroot-members.md)   
- [auto_gcroot::operator bool](../dotnet/auto-gcroot-operator-bool.md)
+
+使用运算符`auto_gcroot`条件表达式中。
+
+## <a name="syntax"></a>语法
+
+```
+bool operator!() const;
+```
+
+## <a name="return-value"></a>返回值
+
+`true` 如果已包装的对象是无效;`false`否则为。
+
+## <a name="example"></a>示例
+
+```
+// msl_auto_gcroot_operator_not.cpp
+// compile with: /clr
+#include <msclr\auto_gcroot.h>
+
+using namespace System;
+using namespace msclr;
+
+int main() {
+   auto_gcroot<String^> s;
+   if ( s ) Console::WriteLine( "s is valid" );
+   if ( !s ) Console::WriteLine( "s is invalid" );
+   s = "something";
+   if ( s ) Console::WriteLine( "now s is valid" );
+   if ( !s ) Console::WriteLine( "now s is invalid" );
+   s.reset();
+   if ( s ) Console::WriteLine( "now s is valid" );
+   if ( !s ) Console::WriteLine( "now s is invalid" );
+}
+```
+
+```Output
+s is invalid
+now s is valid
+now s is invalid
+```
+
+## <a name="requirements"></a>要求
+
+**标头文件** \<msclr\auto_gcroot.h >
+
+**Namespace** msclr
+
+## <a name="see-also"></a>请参阅
+
+[auto_gcroot 成员](../dotnet/auto-gcroot-members.md)<br/>
+[auto_gcroot::operator bool](../dotnet/auto-gcroot-operator-bool.md)

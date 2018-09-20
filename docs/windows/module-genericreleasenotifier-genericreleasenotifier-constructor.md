@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 98bcc3d3fcaf7aea3b2632cacb1ff38eedb868b8
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 23b13dc170748e1a605103624450c605b1975719
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42612307"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46391249"
 ---
 # <a name="modulegenericreleasenotifiergenericreleasenotifier-constructor"></a>Module::GenericReleaseNotifier::GenericReleaseNotifier 构造函数
 
@@ -39,10 +39,10 @@ GenericReleaseNotifier(
 
 ### <a name="parameters"></a>参数
 
-*回调*  
+*回调*<br/>
 Lambda、 functor 或可以使用括号函数运算符调用的函数指针事件处理程序 (`()`)。
 
-*release*  
+*release*<br/>
 指定 **，则返回 true**若要启用调用基础[模块:: ReleaseNotifier::Release()](../windows/module-releasenotifier-release.md)方法; 否则，指定**false**。
 
 ## <a name="requirements"></a>要求

@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 18b1f059ce6825e132c6fff0a52029a005442f53
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ff4a2078bef03127507d1da35599ea391904bee7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42598370"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46382630"
 ---
 # <a name="walkthrough-creating-a-standard-c-program-c"></a>演练： 创建标准 c + + 程序 （c + +）
 
@@ -81,5 +81,5 @@ Visual c + + 使用 2003 c + + 标准，与以下几点主要例外进行编译�
 
 ## <a name="see-also"></a>请参阅
 
-[C++ 语言参考](../cpp/cpp-language-reference.md)  
+[C++ 语言参考](../cpp/cpp-language-reference.md)<br/>
 [C++ 标准库](../standard-library/cpp-standard-library-reference.md)

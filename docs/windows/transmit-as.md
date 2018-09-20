@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0082626926e711d5c8f122b10552328fac52a069
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 24b46a2872d0a4f235d06e3f34f7640995be300d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222948"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46375315"
 ---
 # <a name="transmitas"></a>transmit_as
 
@@ -38,7 +38,7 @@ ms.locfileid: "43222948"
 
 ### <a name="parameters"></a>参数
 
-*type*  
+*type*<br/>
 指定客户端和服务器之间传输的数据类型。
 
 ## <a name="remarks"></a>备注
@@ -92,6 +92,6 @@ struct _TREE_NODE_TYPE * right;
 
 ## <a name="see-also"></a>请参阅
 
-[IDL 特性](../windows/idl-attributes.md)  
-[Typedef、Enum、Union 和 Struct 特性](../windows/typedef-enum-union-and-struct-attributes.md)  
+[IDL 特性](../windows/idl-attributes.md)<br/>
+[Typedef、Enum、Union 和 Struct 特性](../windows/typedef-enum-union-and-struct-attributes.md)<br/>
 [export](../windows/export.md)  
