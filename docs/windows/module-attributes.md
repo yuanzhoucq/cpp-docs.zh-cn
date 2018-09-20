@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 38e031ada2f7375607ddaf5bc298ee1b5d87680c
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 85f12cea7004ef8e2bbf46fcb3b3e76f463be3b9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44316934"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46378873"
 ---
 # <a name="module-attributes"></a>模块特性
 以下属性只能应用于[模块](../windows/module-cpp.md)属性。
@@ -31,4 +31,5 @@ ms.locfileid: "44316934"
 |[helpstringdll](../windows/helpstringdll.md)|指定要用于执行文档字符串查找 （本地化） DLL 的名称。|
   
 ## <a name="see-also"></a>请参阅
- [按用法分的特性](../windows/attributes-by-usage.md)
+
+[按用法分的特性](../windows/attributes-by-usage.md)

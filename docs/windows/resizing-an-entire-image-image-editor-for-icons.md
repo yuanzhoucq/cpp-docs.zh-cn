@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5465ccacf6fb051e787cf390c82108cb9344d203
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 2326918b6efd4c8da5f74527166d8f373dbacefc
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42613104"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46376833"
 ---
 # <a name="resizing-an-entire-image-image-editor-for-icons"></a>调整整个图像大小（图标的图像编辑器）
 
@@ -48,5 +48,5 @@ ms.locfileid: "42613104"
 
 ## <a name="see-also"></a>请参阅
 
-[加速键](../windows/accelerator-keys-image-editor-for-icons.md)  
+[加速键](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
 [调整图像大小](../windows/resizing-an-image-image-editor-for-icons.md)

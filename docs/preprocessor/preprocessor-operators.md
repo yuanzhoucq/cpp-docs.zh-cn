@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fca1c097a01f34fb2cc708489338391dfced982f
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: b80c9c8ef371808fc98d0475afc00223b13194ea
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42541357"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46384034"
 ---
 # <a name="preprocessor-operators"></a>预处理器运算符
 四个预处理器特定运算符的上下文中使用`#define`指令 （请参阅以下有关每个摘要列表）。 字符串化、 charizing，和标记粘贴运算符接下来的三各节所述。 有关的信息`defined`运算符，请参阅[#if、 #elif，#else 和 #endif 指令](../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md)。  
@@ -34,6 +34,6 @@ ms.locfileid: "42541357"
   
 ## <a name="see-also"></a>请参阅  
  
-[预处理器指令](../preprocessor/preprocessor-directives.md)   
-[预定义的宏](../preprocessor/predefined-macros.md)   
+[预处理器指令](../preprocessor/preprocessor-directives.md)<br/>
+[预定义宏](../preprocessor/predefined-macros.md)<br/>
 [C/C++ 预处理器参考](../preprocessor/c-cpp-preprocessor-reference.md)

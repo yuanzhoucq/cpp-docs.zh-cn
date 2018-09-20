@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 49fada071661bd647e012bfdfac2aeedabba68fa
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 47afe841a2a8e4a1c41baf68dfd139a70b320c7d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43206597"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46394460"
 ---
 # <a name="helpstringcontext"></a>helpstringcontext
 
@@ -38,7 +38,7 @@ ms.locfileid: "43206597"
 
 ### <a name="parameters"></a>参数
 
-*contextID*  
+*contextID*<br/>
 中的 32 位的帮助上下文标识符**帮助**文件。
 
 ## <a name="remarks"></a>备注
@@ -79,8 +79,8 @@ __interface IMyI
 
 ## <a name="see-also"></a>请参阅
 
-[IDL 特性](../windows/idl-attributes.md)  
-[接口特性](../windows/interface-attributes.md)  
-[类特性](../windows/class-attributes.md)  
-[方法特性](../windows/method-attributes.md)  
+[IDL 特性](../windows/idl-attributes.md)<br/>
+[接口特性](../windows/interface-attributes.md)<br/>
+[类特性](../windows/class-attributes.md)<br/>
+[方法特性](../windows/method-attributes.md)<br/>
 [模块](../windows/module-cpp.md)  

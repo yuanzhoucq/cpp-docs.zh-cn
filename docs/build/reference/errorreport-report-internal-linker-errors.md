@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 30cc9cbab9a3575eee2f791b0af7dfcaffc1538d
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 3b4b19eed4b481ffa44688e15fb1567e73da1a8f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45701085"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46373446"
 ---
 # <a name="errorreport-report-internal-linker-errors"></a>/ERRORREPORT（报告内部链接器错误）
 
@@ -64,6 +64,6 @@ ms.locfileid: "45701085"
 
 ## <a name="see-also"></a>请参阅
 
-[/errorReport （报告内部编译器错误）](../../build/reference/errorreport-report-internal-compiler-errors.md)
+[/errorReport（报告内部编译器错误）](../../build/reference/errorreport-report-internal-compiler-errors.md)<br/>
 [设置链接器选项](../../build/reference/setting-linker-options.md)<br/>
 [链接器选项](../../build/reference/linker-options.md)
