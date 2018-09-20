@@ -1,5 +1,5 @@
 ---
-title: 模式和无模式对话框 |Microsoft 文档
+title: 模式和无模式对话框 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,33 +17,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4f03d67e1eb9962f4303694db4850e800151404
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6e355c3bcef9edb68e49903dafbf4719fe0aa925
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33346556"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46417522"
 ---
 # <a name="modal-and-modeless-dialog-boxes"></a>模式和无模式对话框
-你可以使用类[CDialog](../mfc/reference/cdialog-class.md)管理两种类型的对话框：  
-  
--   *有模式对话框*，即要求用户响应后再继续执行程序  
-  
--   *无模式对话框*，它位于屏幕和均可在任何时候使用，但允许其他用户活动  
-  
- 资源编辑和创建对话框模板的过程是相同的模式和无模式对话框。  
-  
- 创建你的程序的对话框需要执行下列步骤：  
-  
-1.  使用[对话框编辑器](../windows/dialog-editor.md)设计对话框并创建其对话框模板资源。  
-  
-2.  创建对话框类。  
-  
-3.  连接[消息处理程序的对话框资源控件](../windows/adding-event-handlers-for-dialog-box-controls.md)对话框类中。  
-  
-4.  添加数据成员与关联对话框的控件指定[对话框数据交换](../mfc/dialog-data-exchange.md)和[对话框数据验证](../mfc/dialog-data-validation.md)的控件。  
-  
-## <a name="see-also"></a>请参阅  
- [对话框](../mfc/dialog-boxes.md)   
- [对话框的生命周期](../mfc/life-cycle-of-a-dialog-box.md)
+
+可以使用类[CDialog](../mfc/reference/cdialog-class.md)来管理两种类型的对话框：
+
+- *模式对话框*，此操作需要用户响应后再继续执行程序
+
+- *无模式对话框*，这均可在任何时间使用屏幕上都只允许用户执行其他活动
+
+资源编辑和创建对话框模板的过程是相同的模式和无模式对话框。
+
+创建您的程序的对话框需要执行以下步骤：
+
+1. 使用[对话框编辑器](../windows/dialog-editor.md)设计对话框并创建其对话框模板资源。
+
+1. 创建对话框类。
+
+1. 连接[向消息处理程序的对话框资源控件](../windows/adding-event-handlers-for-dialog-box-controls.md)对话框类中。
+
+1. 添加数据成员关联的对话框的控件，并指定[对话框数据交换](../mfc/dialog-data-exchange.md)并[对话框数据验证](../mfc/dialog-data-validation.md)的控件。
+
+## <a name="see-also"></a>请参阅
+
+[对话框](../mfc/dialog-boxes.md)<br/>
+[对话框的生命周期](../mfc/life-cycle-of-a-dialog-box.md)
 

@@ -1,5 +1,5 @@
 ---
-title: CDaoWorkspaceInfo 结构 |Microsoft 文档
+title: CDaoWorkspaceInfo 结构 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,45 +17,50 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 705c855a817f0c6ca342e51258c7d6c1e61fa392
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: f46bfec2d74b0d1fd292b3c9852ba8ea568329a2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36951073"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46441754"
 ---
 # <a name="cdaoworkspaceinfo-structure"></a>CDaoWorkspaceInfo 结构
-`CDaoWorkspaceInfo`结构包含有关定义为数据访问对象 (DAO) 数据库访问工作区的信息。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-struct CDaoWorkspaceInfo  
-{  
-    CString m_strName;           // Primary  
-    CString m_strUserName;       // Secondary  
-    BOOL m_bIsolateODBCTrans;    // All  
-};  
-```  
-  
-#### <a name="parameters"></a>参数  
- *m_strName*  
- 唯一命名的工作区对象。 若要直接检索此属性的值，调用 querydef 对象[GetName](../../mfc/reference/cdaoquerydef-class.md#getname)成员函数。 有关详细信息，请参阅主题 DAO 帮助中的"名称属性"。  
-  
- *m_strUserName*  
- 一个值，表示工作区中对象的所有者。 有关相关信息，请参阅主题 DAO 帮助中的"用户名属性"。  
-  
- *m_bIsolateODBCTrans*  
- 一个值，该值指示是否隔离，则涉及相同的 ODBC 数据库的多个事务。 有关详细信息，请参阅[CDaoWorkspace::SetIsolateODBCTrans](../../mfc/reference/cdaoworkspace-class.md#setisolateodbctrans)。 有关相关信息，请参阅主题 DAO 帮助中的"IsolateODBCTrans 属性"。  
-  
-## <a name="remarks"></a>备注  
- 工作区是类的对象[CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md)。 对主、 辅助数据库，以及所有上面的引用指示如何通过返回的信息[GetWorkspaceInfo](../../mfc/reference/cdaoworkspace-class.md#getworkspaceinfo)类中的成员函数`CDaoWorkspace`。  
-  
- 检索的信息[CDaoWorkspace::GetWorkspaceInfo](../../mfc/reference/cdaoworkspace-class.md#getworkspaceinfo)成员函数将存储在`CDaoWorkspaceInfo`结构。 `CDaoWorkspaceInfo` 此外定义`Dump`成员函数在调试生成。 你可以使用`Dump`以转储的内容`CDaoWorkspaceInfo`对象。  
-  
-## <a name="requirements"></a>要求  
- **标头：** afxdao.h  
-  
-## <a name="see-also"></a>请参阅  
- [结构、 样式、 回调和消息映射](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [CDaoWorkspace 类](../../mfc/reference/cdaoworkspace-class.md)
+
+`CDaoWorkspaceInfo`结构包含有关为数据访问对象 (DAO) 数据库访问定义的工作区的信息。
+
+## <a name="syntax"></a>语法
+
+```
+struct CDaoWorkspaceInfo
+{
+    CString m_strName;           // Primary
+    CString m_strUserName;       // Secondary
+    BOOL m_bIsolateODBCTrans;    // All
+};
+```
+
+#### <a name="parameters"></a>参数
+
+*m_strName*<br/>
+唯一地命名工作区对象。 若要直接检索此属性的值，请调用 querydef 对象[GetName](../../mfc/reference/cdaoquerydef-class.md#getname)成员函数。 有关详细信息，请参阅主题 DAO 帮助中的"名称属性"。
+
+*m_strUserName*<br/>
+一个值，表示工作区对象的所有者。 有关相关信息，请参阅主题 DAO 帮助中的"用户名属性"。
+
+*m_bIsolateODBCTrans*<br/>
+一个值，指示是否涉及同一个 ODBC 数据库的多个事务之间隔离。 有关详细信息，请参阅[CDaoWorkspace::SetIsolateODBCTrans](../../mfc/reference/cdaoworkspace-class.md#setisolateodbctrans)。 有关相关信息，请参阅主题 DAO 帮助中的"IsolateODBCTrans 属性"。
+
+## <a name="remarks"></a>备注
+
+在工作区是类的对象[CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md)。 对主要、 次要和上面所有的引用指示如何通过返回的信息[GetWorkspaceInfo](../../mfc/reference/cdaoworkspace-class.md#getworkspaceinfo)类中的成员函数`CDaoWorkspace`。
+
+检索的信息[CDaoWorkspace::GetWorkspaceInfo](../../mfc/reference/cdaoworkspace-class.md#getworkspaceinfo)成员函数存储在`CDaoWorkspaceInfo`结构。 `CDaoWorkspaceInfo` 此外定义了`Dump`成员函数在调试生成。 可以使用`Dump`转储的内容`CDaoWorkspaceInfo`对象。
+
+## <a name="requirements"></a>要求
+
+**标头：** afxdao.h
+
+## <a name="see-also"></a>请参阅
+
+[结构、样式、回调和消息映射](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)<br/>
+[CDaoWorkspace 类](../../mfc/reference/cdaoworkspace-class.md)

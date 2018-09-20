@@ -1,5 +1,5 @@
 ---
-title: 标头控件使用图像列表 |Microsoft 文档
+title: 标头控件使用图像列表 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,41 +16,43 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2da3737b54c53903f8fc8ff30cccba6165cbde45
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 477ed175e6f8e81acdae5c873d1436e6c3dbbd60
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382774"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46423554"
 ---
 # <a name="using-image-lists-with-header-controls"></a>对标题控件使用图像列表
-标头项都具有显示标头项中的某个图像的功能。 存储在关联的图像列表中，此图像为 16 x 16 像素，并且具有相同的特性列表视图控件中使用的图标图像。 为了成功实现此行为，必须首先创建和初始化的图像列表，将列表与标头控件相关联，然后修改项的图像将显示的标题项的属性。  
-  
- 以下过程说明了使用指向标头控件的详细信息 (`m_pHdrCtrl`) 以及指向图像列表的指针 (`m_pHdrImages`)。  
-  
-### <a name="to-display-an-image-in-a-header-item"></a>标头项中显示图像  
-  
-1.  构造一个新的图像列表 （或使用现有的图像列表对象） 使用[CImageList](../mfc/reference/cimagelist-class.md)构造函数，存储结果的指针。  
-  
-2.  通过调用中初始化新的图像列表对象[CImageList::Create](../mfc/reference/cimagelist-class.md#create)。 下面的代码是此调用的一个示例。  
-  
-     [!code-cpp[NVC_MFCControlLadenDialog#15](../mfc/codesnippet/cpp/using-image-lists-with-header-controls_1.cpp)]  
-  
-3.  添加为每个标头项的映像。 以下代码添加两个预定义的映像。  
-  
-     [!code-cpp[NVC_MFCControlLadenDialog#16](../mfc/codesnippet/cpp/using-image-lists-with-header-controls_2.cpp)]  
-  
-4.  标头控件，通过调用相关联的图像列表[CHeaderCtrl::SetImageList](../mfc/reference/cheaderctrl-class.md#setimagelist)。  
-  
-5.  修改要显示的关联的图像列表中的映像的标头项。 下面的示例从分配的第一个图像， `m_phdrImages`，到第一个标头项， `m_pHdrCtrl`。  
-  
-     [!code-cpp[NVC_MFCControlLadenDialog#17](../mfc/codesnippet/cpp/using-image-lists-with-header-controls_3.cpp)]  
-  
- 有关使用的参数值的详细信息，请查阅相关[CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)。  
-  
+
+标头项具有显示标头项内的图像的能力。 存储在关联的图像列表中，此图像是 16 x 16 像素，并且具有相同的特性列表视图控件中使用的图标图像。 为了成功实现此行为，必须首先创建和初始化的图像列表中，将列表与标头控件相关联，然后修改都会显示图像的标头项的属性。
+
+以下过程说明了使用指向标头控件的详细信息 (`m_pHdrCtrl`) 和图像列表的指针 (`m_pHdrImages`)。
+
+### <a name="to-display-an-image-in-a-header-item"></a>若要显示的图像中的标头项
+
+1. 构造一个新的图像列表 （或使用现有的图像列表对象） 使用[CImageList](../mfc/reference/cimagelist-class.md)构造函数中，存储结果的指针。
+
+1. 初始化新的图像列表对象通过调用[CImageList::Create](../mfc/reference/cimagelist-class.md#create)。 下面的代码是此调用的一个示例。
+
+     [!code-cpp[NVC_MFCControlLadenDialog#15](../mfc/codesnippet/cpp/using-image-lists-with-header-controls_1.cpp)]
+
+1. 添加为每个标头项的映像。 以下代码添加两个预定义的映像。
+
+     [!code-cpp[NVC_MFCControlLadenDialog#16](../mfc/codesnippet/cpp/using-image-lists-with-header-controls_2.cpp)]
+
+1. 将图像列表与标头控件通过调用相关联[CHeaderCtrl::SetImageList](../mfc/reference/cheaderctrl-class.md#setimagelist)。
+
+1. 修改要显示来自关联的图像列表的图像的标头项。 以下示例将从分配的第一个图像`m_phdrImages`，与第一个标头项， `m_pHdrCtrl`。
+
+     [!code-cpp[NVC_MFCControlLadenDialog#17](../mfc/codesnippet/cpp/using-image-lists-with-header-controls_3.cpp)]
+
+有关使用的参数值的详细信息，请查阅相关[CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)。
+
 > [!NOTE]
->  很可能有多个使用相同的图像列表的控件。 例如，在标准列表视图控件中，可能有图像列表 （的 16 x 16 像素的图像） 的列表视图控件的小图标视图和列表视图控件的标题项使用。  
-  
-## <a name="see-also"></a>请参阅  
- [使用 CHeaderCtrl](../mfc/using-cheaderctrl.md)
+>  很可能有多个控件使用相同的图像列表。 例如，在标准列表视图控件中，可能有的图像列表 （16 x 16 像素的图像） 由列表视图控件的小图标视图和列表视图控件的标头项。
+
+## <a name="see-also"></a>请参阅
+
+[使用 CHeaderCtrl](../mfc/using-cheaderctrl.md)
 

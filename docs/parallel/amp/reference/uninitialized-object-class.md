@@ -18,61 +18,66 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 821f3c25d195a2c92ac04fdf5f9e5a59b493c257
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 9fada1f3c4c9372e7a979868f60ac559ecc14a79
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46113833"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46416248"
 ---
 # <a name="uninitializedobject-class"></a>uninitialized_object 类
-使用未初始化的对象时引发的异常。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-class uninitialized_object : public runtime_exception;  
-```  
-  
-## <a name="members"></a>成员  
-  
-### <a name="public-constructors"></a>公共构造函数  
-  
-|名称|描述|  
-|----------|-----------------|  
-|[uninitialized_object 构造函数](#ctor)|初始化 `uninitialized_object` 类的新实例。|  
 
-  
-## <a name="inheritance-hierarchy"></a>继承层次结构  
- `exception`  
-  
- `runtime_exception`  
-  
- `uninitialized_object`  
-  
-## <a name="requirements"></a>要求  
- **标头：** amprt.h  
-  
- **命名空间：** 并发  
-## <a name="uninitialized_object__ctor"></a> unsupported_feature 
+使用未初始化的对象时引发的异常。
 
-构造的功能异常的新实例。  
-  
-### <a name="syntax"></a>语法  
-  
-```  
-explicit unsupported_feature(  
-    const char * _Message ) throw();  
-  
-unsupported_feature() throw();  
-```  
-  
-### <a name="parameters"></a>参数  
+## <a name="syntax"></a>语法
+
+```
+class uninitialized_object : public runtime_exception;
+```
+
+## <a name="members"></a>成员
+
+### <a name="public-constructors"></a>公共构造函数
+
+|名称|描述|
+|----------|-----------------|
+|[uninitialized_object 构造函数](#ctor)|初始化 `uninitialized_object` 类的新实例。|
+
+## <a name="inheritance-hierarchy"></a>继承层次结构
+
+`exception`
+
+`runtime_exception`
+
+`uninitialized_object`
+
+## <a name="requirements"></a>要求
+
+**标头：** amprt.h
+
+**命名空间：** 并发
+## <a name="uninitialized_object__ctor"></a> unsupported_feature
+
+构造的功能异常的新实例。
+
+### <a name="syntax"></a>语法
+
+```
+explicit unsupported_feature(
+    const char * _Message ) throw();
+
+unsupported_feature() throw();
+```
+
+### <a name="parameters"></a>参数
+
 *消息 （_m)*<br/>
-错误说明。  
-  
-### <a name="return-value"></a>返回值  
- `unsupported_feature` 对象。 
+错误说明。
 
-## <a name="see-also"></a>请参阅  
- [并发命名空间 (C++ AMP)](concurrency-namespace-cpp-amp.md)
+### <a name="return-value"></a>返回值
+
+`unsupported_feature` 对象。
+
+## <a name="see-also"></a>请参阅
+
+[并发命名空间 (C++ AMP)](concurrency-namespace-cpp-amp.md)

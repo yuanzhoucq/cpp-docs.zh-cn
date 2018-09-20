@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 615138b44ab9fdbbf94d4130428ba708697c2aee
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d583bbbfeb4cd426684d1091a165335f7cbb6e64
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42601843"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46441391"
 ---
 # <a name="modifying-the-layout-grid"></a>修改布局网格
 
@@ -52,5 +52,5 @@ Win32
 
 ## <a name="see-also"></a>请参阅
 
-[对话框编辑器状态（参考线和网格）](../windows/dialog-editor-states-guides-and-grids.md)  
+[对话框编辑器状态（参考线和网格）](../windows/dialog-editor-states-guides-and-grids.md)<br/>
 [对话框中的控件](../windows/controls-in-dialog-boxes.md)

@@ -1,5 +1,5 @@
 ---
-title: Internet 安全性 （c + +） |Microsoft 文档
+title: Internet 安全性 （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,22 +23,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f4454eceae2cc5f2e6b46510fe95889c664a568a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1f5beba4f9a33a5bd9ee93baae6176d3ea592d2e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33348844"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46445810"
 ---
 # <a name="internet-security-c"></a>Internet 安全性 (C++)
-代码安全性是一个主要问题对于开发人员和 Internet 应用程序的用户。 有风险： 恶意代码、 被篡改的代码和代码未知的站点或作者。  
-  
- 在开发用于 Internet 时，有两种基本方法安全。 第一种称为"沙盒处理。" 在此方法中，应用程序是限于一组特定的 Api，以及从具有潜在危险的字体，例如，程序可能会破坏用户的计算机上的数据的文件 I/O 排除。 第二个是使用数字签名实现的。 这种方法称为"shrinkwrap"互联网。 代码验证和签名使用私钥/公钥关键技术。 运行代码之前，验证其数字签名以确保代码是从已知的经过身份验证源，并后已签名的代码未被修改。  
-  
- 在第一种情况，你可以信任应用程序不会执行任何损害，而您信任的源的应用程序。 在第二个数字签名用于验证真实性。 数字签名是用来标识和提供有关代码的发布者详细信息的行业标准。 其技术基于标准，包括 RSA 和 X.509。 浏览器通常允许用户选择他们想要下载并运行未知来源的代码。  
-  
-  
-## <a name="see-also"></a>请参阅  
- [MFC Internet 编程任务](../mfc/mfc-internet-programming-tasks.md)   
- [MFC Internet 编程基础知识](../mfc/mfc-internet-programming-basics.md)
+
+代码安全是一个主要问题对于开发人员和 Internet 应用程序的用户。 有风险： 恶意代码、 被篡改的代码和代码未知的站点或作者。
+
+针对 Internet 进行开发时，有两种基本安全方法。 第一种称为"沙盒处理。" 在这种方法中的应用程序限制为一组特定的 Api，并且从具有潜在危险的服务，例如文件 I/O 程序可能会破坏用户的计算机上的数据中排除。 第二个是使用数字签名实现的。 这种方法称为"shrinkwrap"为 Internet。 代码验证和签名使用私钥/公钥关键技术。 运行代码之前，验证其数字签名以确保代码是从已知的经过身份验证源和代码在已签名后未被修改。
+
+在第一种情况下，您信任应用程序不会执行任何不利影响和信任的应用程序的源。 在第二种，使用数字签名以验证真实性。 数字签名是用来确定，并提供有关代码的发布服务器的详细信息的行业标准。 其技术，基于标准，包括 RSA 和 X.509。 浏览器通常允许用户选择他们想要下载并运行未知来源的代码。
+
+
+## <a name="see-also"></a>请参阅
+
+[MFC Internet 编程任务](../mfc/mfc-internet-programming-tasks.md)<br/>
+[MFC Internet 编程基础知识](../mfc/mfc-internet-programming-basics.md)
 

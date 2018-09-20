@@ -1,5 +1,5 @@
 ---
-title: 用户按钮处理程序 |Microsoft 文档
+title: 用户按钮处理程序 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -27,25 +27,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81cf497e73987e2a7c8ef285a705bc6e7554f7ab
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b5b7a93afaee003f093e479cbdf9c9e14731cef7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373854"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46447306"
 ---
 # <a name="user-button-handlers"></a>用户按钮处理程序
-下面的映射条目对应的函数原型。  
-  
-|映射条目|函数原型|  
-|---------------|------------------------|  
-|ON_BN_CLICKED ( \<id >， \<f x n >)|afx_msg void f x n （);|  
-|ON_BN_DISABLE ( \<id >， \<f x n >)|afx_msg void f x n （);|  
-|ON_BN_DOUBLECLICKED ( \<id >， \<f x n >)|afx_msg void f x n （);|  
-|ON_BN_HILITE ( \<id >， \<f x n >)|afx_msg void f x n （);|  
-|ON_BN_PAINT ( \<id >， \<f x n >)|afx_msg void f x n （);|  
-|ON_BN_UNHILITE ( \<id >， \<f x n >)|afx_msg void f x n （);|  
-  
-## <a name="see-also"></a>请参阅  
- [消息映射](../../mfc/reference/message-maps-mfc.md)
+
+下面的映射条目对应于函数原型。
+
+|映射条目|函数原型|
+|---------------|------------------------|
+|ON_BN_CLICKED ( \<id >， \<memberFxn >)|afx_msg void memberFxn （);|
+|ON_BN_DISABLE ( \<id >， \<memberFxn >)|afx_msg void memberFxn （);|
+|ON_BN_DOUBLECLICKED ( \<id >， \<memberFxn >)|afx_msg void memberFxn （);|
+|ON_BN_HILITE ( \<id >， \<memberFxn >)|afx_msg void memberFxn （);|
+|ON_BN_PAINT ( \<id >， \<memberFxn >)|afx_msg void memberFxn （);|
+|ON_BN_UNHILITE ( \<id >， \<memberFxn >)|afx_msg void memberFxn （);|
+
+## <a name="see-also"></a>请参阅
+
+[消息映射](../../mfc/reference/message-maps-mfc.md)
 

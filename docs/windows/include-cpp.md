@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 232dfb803e9327b857d26a4294786c2742a1143c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 617747a9eda77d8dc2ba21006b649daead9546d3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43215963"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46419316"
 ---
 # <a name="include-c"></a>include (C++)
 
@@ -38,7 +38,7 @@ ms.locfileid: "43215963"
 
 ### <a name="parameters"></a>参数
 
-*header_file*  
+*header_file*<br/>
 在生成的.idl 文件中包含所需的文件的名称。
 
 ## <a name="remarks"></a>备注
@@ -73,9 +73,9 @@ ms.locfileid: "43215963"
 
 ## <a name="see-also"></a>请参阅
 
-[IDL 特性](../windows/idl-attributes.md)  
-[独立特性](../windows/stand-alone-attributes.md)  
-[import](../windows/import.md)  
-[importidl](../windows/importidl.md)  
-[includelib](../windows/includelib-cpp.md)  
+[IDL 特性](../windows/idl-attributes.md)<br/>
+[独立特性](../windows/stand-alone-attributes.md)<br/>
+[import](../windows/import.md)<br/>
+[importidl](../windows/importidl.md)<br/>
+[includelib](../windows/includelib-cpp.md)<br/>
 [importlib](../windows/importlib.md)  
