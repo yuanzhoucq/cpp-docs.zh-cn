@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3838fc2888567fa700eebd127bc7990175bdbc8
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: bacba9ea15598e4c722682a081b64b80db34e00b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43693583"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46430561"
 ---
 # <a name="tn014-custom-controls"></a>TN014：自定义控件
 
@@ -144,5 +144,5 @@ MFC 常规示例[CTRLTEST](../visual-cpp-samples.md)提供自我描述菜单和�
 
 ## <a name="see-also"></a>请参阅
 
-[按编号列出的技术说明](../mfc/technical-notes-by-number.md)  
-[按类别列出的技术说明](../mfc/technical-notes-by-category.md)  
+[按编号列出的技术说明](../mfc/technical-notes-by-number.md)<br/>
+[按类别列出的技术说明](../mfc/technical-notes-by-category.md)

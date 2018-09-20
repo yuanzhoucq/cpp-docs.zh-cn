@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 85d0adfd03b6822b949523643aa97f7a7d8b088b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 020632ff17ade10e7fcb9cd46d245849189b6860
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42607625"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46416781"
 ---
 # <a name="synclockwithstatustsynclockwithstatust-constructor"></a>SyncLockWithStatusT::SyncLockWithStatusT 构造函数
 
@@ -43,13 +43,13 @@ explicit SyncLockWithStatusT(
 
 ### <a name="parameters"></a>参数
 
-*other*  
+*other*<br/>
 对另一个右值引用**SyncLockWithStatusT**对象。
 
-*sync*  
+*sync*<br/>
 对另一个引用**SyncLockWithStatusT**对象。
 
-*status*  
+*status*<br/>
 值[status_](../windows/synclockwithstatust-status-data-member.md)的数据成员*其他*参数或*同步*参数。
 
 ## <a name="remarks"></a>备注
@@ -66,5 +66,5 @@ explicit SyncLockWithStatusT(
 
 ## <a name="see-also"></a>请参阅
 
-[SyncLockWithStatusT 类](../windows/synclockwithstatust-class.md)  
+[SyncLockWithStatusT 类](../windows/synclockwithstatust-class.md)<br/>
 [SyncLockWithStatusT::GetStatus 方法](../windows/synclockwithstatust-getstatus-method.md)

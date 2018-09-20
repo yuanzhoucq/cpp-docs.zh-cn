@@ -1,5 +1,5 @@
 ---
-title: CDCRenderTarget 类 |Microsoft 文档
+title: CDCRenderTarget 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -30,149 +30,169 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36f8a038cd282ddf233fe2cf15a134c52962ebff
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: fc5903f50136aaffcb0358e1a60c99a71e67540e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36953696"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46447123"
 ---
 # <a name="cdcrendertarget-class"></a>CDCRenderTarget 类
-ID2D1DCRenderTarget 包装器。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-class CDCRenderTarget : public CRenderTarget;  
-```  
-  
-## <a name="members"></a>成员  
-  
-### <a name="public-constructors"></a>公共构造函数  
-  
-|名称|描述|  
-|----------|-----------------|  
-|[CDCRenderTarget::CDCRenderTarget](#cdcrendertarget)|构造 CDCRenderTarget 对象。|  
-  
-### <a name="public-methods"></a>公共方法  
-  
-|名称|描述|  
-|----------|-----------------|  
-|[CDCRenderTarget::Attach](#attach)|附加现有呈现器对对象的目标接口|  
-|[CDCRenderTarget::BindDC](#binddc)|将呈现器目标绑定到它发出的绘图命令的设备上下文|  
-|[CDCRenderTarget::Create](#create)|创建 CDCRenderTarget。|  
-|[CDCRenderTarget::Detach](#detach)|分离呈现器目标接口从该对象|  
-|[CDCRenderTarget::GetDCRenderTarget](#getdcrendertarget)|返回 ID2D1DCRenderTarget 接口|  
-  
-### <a name="public-operators"></a>公共运算符  
-  
-|名称|描述|  
-|----------|-----------------|  
-|[CDCRenderTarget::operator ID2D1DCRenderTarget *](#operator_id2d1dcrendertarget_star)|返回 ID2D1DCRenderTarget 接口|  
-  
-### <a name="protected-data-members"></a>受保护的数据成员  
-  
-|name|描述|  
-|----------|-----------------|  
-|[CDCRenderTarget::m_pDCRenderTarget](#m_pdcrendertarget)|指向 ID2D1DCRenderTarget 对象的指针。|  
-  
-## <a name="inheritance-hierarchy"></a>继承层次结构  
- [CObject](../../mfc/reference/cobject-class.md)  
-  
- [CRenderTarget](../../mfc/reference/crendertarget-class.md)  
-  
- [CDCRenderTarget](../../mfc/reference/cdcrendertarget-class.md)  
-  
-## <a name="requirements"></a>要求  
- **标头：** afxrendertarget.h  
-  
-##  <a name="attach"></a>  CDCRenderTarget::Attach  
- 附加现有呈现器对对象的目标接口  
-  
-```  
+
+ID2D1DCRenderTarget 包装器。
+
+## <a name="syntax"></a>语法
+
+```
+class CDCRenderTarget : public CRenderTarget;
+```
+
+## <a name="members"></a>成员
+
+### <a name="public-constructors"></a>公共构造函数
+
+|名称|描述|
+|----------|-----------------|
+|[CDCRenderTarget::CDCRenderTarget](#cdcrendertarget)|构造一个 CDCRenderTarget 对象。|
+
+### <a name="public-methods"></a>公共方法
+
+|名称|描述|
+|----------|-----------------|
+|[CDCRenderTarget::Attach](#attach)|附加现有呈现器目标接口的对象|
+|[CDCRenderTarget::BindDC](#binddc)|将呈现器目标绑定到它所颁发的绘图命令的设备上下文|
+|[CDCRenderTarget::Create](#create)|创建 CDCRenderTarget。|
+|[CDCRenderTarget::Detach](#detach)|分离对象中的呈现器目标接口|
+|[CDCRenderTarget::GetDCRenderTarget](#getdcrendertarget)|返回 ID2D1DCRenderTarget 接口|
+
+### <a name="public-operators"></a>公共运算符
+
+|名称|描述|
+|----------|-----------------|
+|[CDCRenderTarget::operator ID2D1DCRenderTarget *](#operator_id2d1dcrendertarget_star)|返回 ID2D1DCRenderTarget 接口|
+
+### <a name="protected-data-members"></a>受保护的数据成员
+
+|name|描述|
+|----------|-----------------|
+|[CDCRenderTarget::m_pDCRenderTarget](#m_pdcrendertarget)|指向 ID2D1DCRenderTarget 对象的指针。|
+
+## <a name="inheritance-hierarchy"></a>继承层次结构
+
+[CObject](../../mfc/reference/cobject-class.md)
+
+[CRenderTarget](../../mfc/reference/crendertarget-class.md)
+
+[CDCRenderTarget](../../mfc/reference/cdcrendertarget-class.md)
+
+## <a name="requirements"></a>要求
+
+**标头：** afxrendertarget.h
+
+##  <a name="attach"></a>  CDCRenderTarget::Attach
+
+附加现有呈现器目标接口的对象
+
+```
 void Attach(ID2D1DCRenderTarget* pTarget);
-```  
-  
-### <a name="parameters"></a>参数  
- *pTarget*  
- 现有呈现器目标接口。 不能为 NULL  
-  
-##  <a name="binddc"></a>  CDCRenderTarget::BindDC  
- 将呈现器目标绑定到它发出的绘图命令的设备上下文  
-  
-```  
+```
+
+### <a name="parameters"></a>参数
+
+*pTarget*<br/>
+现有呈现器目标的接口。 不能为 NULL
+
+##  <a name="binddc"></a>  CDCRenderTarget::BindDC
+
+将呈现器目标绑定到它所颁发的绘图命令的设备上下文
+
+```
 BOOL BindDC(
-    const CDC& dc,  
+    const CDC& dc,
     const CRect& rect);
-```  
-  
-### <a name="parameters"></a>参数  
- *dc*  
- 设备上下文呈现目标发出绘图命令  
-  
- *rect*  
- 设备上下文 (HDC) 呈现器目标绑定到的句柄的尺寸  
-  
-### <a name="return-value"></a>返回值  
- 如果该方法成功，则返回 TRUE。 否则，它将返回 FALSE。  
-  
-##  <a name="cdcrendertarget"></a>  CDCRenderTarget::CDCRenderTarget  
- 构造 CDCRenderTarget 对象。  
-  
-```  
+```
+
+### <a name="parameters"></a>参数
+
+*dc*<br/>
+向其呈现器目标问题的绘图命令在设备上下文
+
+*rect*<br/>
+维度的句柄绑定到呈现目标设备上下文 (HDC)
+
+### <a name="return-value"></a>返回值
+
+如果该方法成功，则返回 TRUE。 否则，它返回 FALSE。
+
+##  <a name="cdcrendertarget"></a>  CDCRenderTarget::CDCRenderTarget
+
+构造一个 CDCRenderTarget 对象。
+
+```
 CDCRenderTarget();
-```  
-  
-##  <a name="create"></a>  CDCRenderTarget::Create  
- 创建 CDCRenderTarget。  
-  
-```  
+```
+
+##  <a name="create"></a>  CDCRenderTarget::Create
+
+创建 CDCRenderTarget。
+
+```
 BOOL Create(const D2D1_RENDER_TARGET_PROPERTIES& props);
-```  
-  
-### <a name="parameters"></a>参数  
- *属性*  
- 呈现模式、 像素格式、 远程处理选项、 DPI 信息和硬件呈现所需的最小 DirectX 支持中。  
-  
-### <a name="return-value"></a>返回值  
- 如果该方法成功，则返回 TRUE。 否则，它将返回 FALSE。  
-  
-##  <a name="detach"></a>  CDCRenderTarget::Detach  
- 分离呈现器目标接口从该对象  
-  
-```  
+```
+
+### <a name="parameters"></a>参数
+
+*属性*<br/>
+呈现模式、 像素格式、 远程处理选项、 DPI 信息和硬件呈现时所需的最小的 DirectX 支持。
+
+### <a name="return-value"></a>返回值
+
+如果该方法成功，则返回 TRUE。 否则，它返回 FALSE。
+
+##  <a name="detach"></a>  CDCRenderTarget::Detach
+
+分离对象中的呈现器目标接口
+
+```
 ID2D1DCRenderTarget* Detach();
-```  
-  
-### <a name="return-value"></a>返回值  
- 指向分离呈现器目标接口。  
-  
-##  <a name="getdcrendertarget"></a>  CDCRenderTarget::GetDCRenderTarget  
- 返回 ID2D1DCRenderTarget 接口  
-  
-```  
+```
+
+### <a name="return-value"></a>返回值
+
+指向已分离的呈现器目标接口。
+
+##  <a name="getdcrendertarget"></a>  CDCRenderTarget::GetDCRenderTarget
+
+返回 ID2D1DCRenderTarget 接口
+
+```
 ID2D1DCRenderTarget* GetDCRenderTarget();
-```  
-  
-### <a name="return-value"></a>返回值  
- 指向 ID2D1DCRenderTarget 接口或如果尚未初始化对象的 NULL 指针。  
-  
-##  <a name="m_pdcrendertarget"></a>  CDCRenderTarget::m_pDCRenderTarget  
- 指向 ID2D1DCRenderTarget 对象的指针。  
-  
-```  
-ID2D1DCRenderTarget* m_pDCRenderTarget;  
-```  
-  
-##  <a name="operator_id2d1dcrendertarget_star"></a>  CDCRenderTarget::operator ID2D1DCRenderTarget *  
- 返回 ID2D1DCRenderTarget 接口  
-  
-```  
+```
+
+### <a name="return-value"></a>返回值
+
+指向 ID2D1DCRenderTarget 接口或如果对象尚未初始化，则为 NULL 指针。
+
+##  <a name="m_pdcrendertarget"></a>  CDCRenderTarget::m_pDCRenderTarget
+
+指向 ID2D1DCRenderTarget 对象的指针。
+
+```
+ID2D1DCRenderTarget* m_pDCRenderTarget;
+```
+
+##  <a name="operator_id2d1dcrendertarget_star"></a>  CDCRenderTarget::operator ID2D1DCRenderTarget *
+
+返回 ID2D1DCRenderTarget 接口
+
+```
 operator ID2D1DCRenderTarget*();
-```   
-  
-### <a name="return-value"></a>返回值  
- 指向 ID2D1DCRenderTarget 接口或如果尚未初始化对象的 NULL 指针。  
-  
-## <a name="see-also"></a>请参阅  
- [类](../../mfc/reference/mfc-classes.md)
+```
+
+### <a name="return-value"></a>返回值
+
+指向 ID2D1DCRenderTarget 接口或如果对象尚未初始化，则为 NULL 指针。
+
+## <a name="see-also"></a>请参阅
+
+[类](../../mfc/reference/mfc-classes.md)

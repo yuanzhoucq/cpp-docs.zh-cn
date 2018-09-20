@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2bfc53148a6c0813f3dbe82123db1db5e657a206
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 72a31a5c6e95e0c8d6b8477315c716ca0a7a9331
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42603822"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46411334"
 ---
 # <a name="modulebasemodulebase-constructor"></a>ModuleBase::ModuleBase 构造函数
 
@@ -46,5 +46,5 @@ ModuleBase();
 
 ## <a name="see-also"></a>请参阅
 
-[ModuleBase 类](../windows/modulebase-class.md)  
+[ModuleBase 类](../windows/modulebase-class.md)<br/>
 [Microsoft::WRL::Details 命名空间](../windows/microsoft-wrl-details-namespace.md)

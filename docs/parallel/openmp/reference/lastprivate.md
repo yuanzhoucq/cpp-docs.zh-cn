@@ -16,38 +16,42 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c87dfc47f7f2554e75567a1de4ea9cb2e06eaa00
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 7124e51b604a55d049be13d3bbcccc4e5810ca67
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46028189"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46412829"
 ---
 # <a name="lastprivate"></a>lastprivate
-指定变量在封闭上下文版本将设置为专用版本的任何线程执行的最后一次迭代 （for 循环构造） 或最后一个部分 （#pragma 节）。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-lastprivate(var)  
-```  
-  
+
+指定变量在封闭上下文版本将设置为专用版本的任何线程执行的最后一次迭代 （for 循环构造） 或最后一个部分 （#pragma 节）。
+
+## <a name="syntax"></a>语法
+
+```
+lastprivate(var)
+```
+
 ### <a name="parameters"></a>参数
-  
+
 *var*<br/>
-设置为等于私有版本的任何线程的变量执行的最后一次迭代 （for 循环构造） 或最后一个部分 （#pragma 节）。  
-  
-## <a name="remarks"></a>备注  
- `lastprivate` 适用于以下指令：  
-  
--   [for](../../../parallel/openmp/reference/for-openmp.md)  
-  
--   [部分](../../../parallel/openmp/reference/sections-openmp.md)  
-  
- 有关详细信息，请参阅[2.7.2.3 lastprivate](../../../parallel/openmp/2-7-2-3-lastprivate.md)。  
-  
-## <a name="example"></a>示例  
- 请参阅[计划](../../../parallel/openmp/reference/schedule.md)有关的使用示例`lastprivate`子句。  
-  
-## <a name="see-also"></a>请参阅  
- [子句](../../../parallel/openmp/reference/openmp-clauses.md)
+设置为等于私有版本的任何线程的变量执行的最后一次迭代 （for 循环构造） 或最后一个部分 （#pragma 节）。
+
+## <a name="remarks"></a>备注
+
+`lastprivate` 适用于以下指令：
+
+- [for](../../../parallel/openmp/reference/for-openmp.md)
+
+- [部分](../../../parallel/openmp/reference/sections-openmp.md)
+
+有关详细信息，请参阅[2.7.2.3 lastprivate](../../../parallel/openmp/2-7-2-3-lastprivate.md)。
+
+## <a name="example"></a>示例
+
+请参阅[计划](../../../parallel/openmp/reference/schedule.md)有关的使用示例`lastprivate`子句。
+
+## <a name="see-also"></a>请参阅
+
+[子句](../../../parallel/openmp/reference/openmp-clauses.md)

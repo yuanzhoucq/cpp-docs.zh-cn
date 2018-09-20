@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f255c8c178d063c040dca4ed6da52c65370c96b
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 819d95883cecb4d219fd11c4ab83e18afa2dbbd4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45702659"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46444926"
 ---
 # <a name="arch-x86"></a>/arch (x86)
 
@@ -90,6 +90,6 @@ r = t + d;     // This should produce the same overall result
 
 ## <a name="see-also"></a>请参阅
 
-[/arch （最小 CPU 体系结构）](../../build/reference/arch-minimum-cpu-architecture.md)
+[/arch（最小 CPU 体系结构）](../../build/reference/arch-minimum-cpu-architecture.md)<br/>
 [编译器选项](../../build/reference/compiler-options.md)<br/>
 [设置编译器选项](../../build/reference/setting-compiler-options.md)

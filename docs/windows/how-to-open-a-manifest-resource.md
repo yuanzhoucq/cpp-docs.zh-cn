@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7bb55c18bf577e8ef7bbf1f9504af1df0e1ebe7f
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 0825e34515a458d49b8353f3053654094d8b9526
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315517"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46407278"
 ---
 # <a name="how-to-open-a-manifest-resource"></a>如何：打开清单资源
 
@@ -49,6 +49,6 @@ Win32
 
 ## <a name="see-also"></a>请参阅
 
-[清单资源](../windows/manifest-resources.md)  
-[控件](../mfc/controls-mfc.md)  
+[清单资源](../windows/manifest-resources.md)<br/>
+[控件](../mfc/controls-mfc.md)<br/>
 [使用资源文件](../windows/working-with-resource-files.md)

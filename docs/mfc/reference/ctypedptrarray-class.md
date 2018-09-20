@@ -1,5 +1,5 @@
 ---
-title: CTypedPtrArray 类 |Microsoft 文档
+title: CTypedPtrArray 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -32,277 +32,314 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c9082e28aad1edc584a1796d5bb5e97b5601753f
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: a83e425863afe4a8f355c4ce4543935c4e910216
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37122910"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46408006"
 ---
 # <a name="ctypedptrarray-class"></a>CTypedPtrArray 类
-为 `CPtrArray` 类或 `CObArray`类的对象提供安全类型“包装器”。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-template<class BASE_CLASS, class TYPE>  
-class CTypedPtrArray : public BASE_CLASS  
-```  
-  
-#### <a name="parameters"></a>参数  
- *BASE_CLASS*  
- 类的基类类型化的指针数组;必须为数组类 (`CObArray`或`CPtrArray`)。  
-  
- *类型*  
- 基类数组中存储的元素的类型。  
-  
-## <a name="members"></a>成员  
-  
-### <a name="public-methods"></a>公共方法  
-  
-|名称|描述|  
-|----------|-----------------|  
-|[CTypedPtrArray::Add](#add)|将新元素添加到数组末尾。 如有必要，请扩展该数组|  
-|[CTypedPtrArray::Append](#append)|另一个的末尾添加一个数组的内容。 如有必要，请扩展该数组|  
-|[CTypedPtrArray::Copy](#copy)|将另一个数组复制到该数组；根据需要扩展该数组。|  
-|[CTypedPtrArray::ElementAt](#elementat)|在该数组中返回对元素指针的临时引用。|  
-|[CTypedPtrArray::GetAt](#getat)|返回给定索引位置处的值。|  
-|[CTypedPtrArray::InsertAt](#insertat)|在指定索引处插入一个元素（或另一个数组中的所有元素）。|  
-|[CTypedPtrArray::SetAt](#setat)|设置给定索引的值；不允许对该数组进行扩展。|  
-|[CTypedPtrArray::SetAtGrow](#setatgrow)|设置给定索引的值；根据需要扩展该数组。|  
-  
-### <a name="public-operators"></a>公共运算符  
-  
-|名称|描述|  
-|----------|-----------------|  
-|[CTypedPtrArray::operator]](#operator_at)|设置或获取位于指定索引处的元素。|  
-  
-## <a name="remarks"></a>备注  
- 当你使用`CTypedPtrArray`而非`CPtrArray`或`CObArray`，c + + 类型检查工具可帮助消除错误引起的不匹配的指针类型。  
-  
- 此外，`CTypedPtrArray`包装执行大量如果你使用所需的强制转换`CObArray`或`CPtrArray`。  
-  
- 因为所有`CTypedPtrArray`函数内联，使用此模板不会显著影响大小或代码的速度。  
-  
- 有关详细信息使用`CTypedPtrArray`，请参阅文章[集合](../../mfc/collections.md)和[基于模板的类](../../mfc/template-based-classes.md)。  
-  
-## <a name="inheritance-hierarchy"></a>继承层次结构  
- `BASE_CLASS`  
-  
- `CTypedPtrArray`  
-  
-## <a name="requirements"></a>要求  
- **标头：** afxtempl.h  
-  
-##  <a name="add"></a>  CTypedPtrArray::Add  
- 此成员函数将调用`BASE_CLASS` **:: 添加**。  
-  
-```  
+
+为 `CPtrArray` 类或 `CObArray`类的对象提供安全类型“包装器”。
+
+## <a name="syntax"></a>语法
+
+```
+template<class BASE_CLASS, class TYPE>
+class CTypedPtrArray : public BASE_CLASS
+```
+
+#### <a name="parameters"></a>参数
+
+*BASE_CLASS*<br/>
+基的类的类型化的指针数组;必须为数组类 (`CObArray`或`CPtrArray`)。
+
+*类型*<br/>
+存储基类数组中的元素的类型。
+
+## <a name="members"></a>成员
+
+### <a name="public-methods"></a>公共方法
+
+|名称|描述|
+|----------|-----------------|
+|[CTypedPtrArray::Add](#add)|将新元素添加到数组的末尾。 如有必要，扩展该数组|
+|[CTypedPtrArray::Append](#append)|将一个数组的内容添加到另一个结束。 如有必要，扩展该数组|
+|[CTypedPtrArray::Copy](#copy)|将另一个数组复制到该数组；根据需要扩展该数组。|
+|[CTypedPtrArray::ElementAt](#elementat)|在该数组中返回对元素指针的临时引用。|
+|[CTypedPtrArray::GetAt](#getat)|返回给定索引位置处的值。|
+|[CTypedPtrArray::InsertAt](#insertat)|在指定索引处插入一个元素（或另一个数组中的所有元素）。|
+|[CTypedPtrArray::SetAt](#setat)|设置给定索引的值；不允许对该数组进行扩展。|
+|[CTypedPtrArray::SetAtGrow](#setatgrow)|设置给定索引的值；根据需要扩展该数组。|
+
+### <a name="public-operators"></a>公共运算符
+
+|名称|描述|
+|----------|-----------------|
+|[CTypedPtrArray::operator]](#operator_at)|设置或获取位于指定索引处的元素。|
+
+## <a name="remarks"></a>备注
+
+当你使用`CTypedPtrArray`而非`CPtrArray`或`CObArray`，c + + 类型检查功能可帮助消除错误引起的不匹配的指针类型。
+
+此外，`CTypedPtrArray`包装执行大量的强制转换，如果您使用，则将需要`CObArray`或`CPtrArray`。
+
+因为所有`CTypedPtrArray`函数是内联的使用此模板不会严重影响的大小或代码的速度。
+
+有关使用的详细信息`CTypedPtrArray`，请参阅文章[集合](../../mfc/collections.md)并[基于模板的类](../../mfc/template-based-classes.md)。
+
+## <a name="inheritance-hierarchy"></a>继承层次结构
+
+`BASE_CLASS`
+
+`CTypedPtrArray`
+
+## <a name="requirements"></a>要求
+
+**标头：** afxtempl.h
+
+##  <a name="add"></a>  CTypedPtrArray::Add
+
+此成员函数将调用`BASE_CLASS` **:: 添加**。
+
+```
 INT_PTR Add(TYPE newElement);
-```  
-  
-### <a name="parameters"></a>参数  
- *类型*  
- 模板参数来指定要添加到数组的元素的类型。  
-  
- *newElement*  
- 要添加到该数组的元素。  
-  
-### <a name="return-value"></a>返回值  
- 添加元素的索引。  
-  
-### <a name="remarks"></a>备注  
- 有关详细说明，请参阅[CObArray::Add](../../mfc/reference/cobarray-class.md#add)。  
-  
-##  <a name="append"></a>  CTypedPtrArray::Append  
- 此成员函数将调用`BASE_CLASS`:: 追加 * *。  
-  
-```  
+```
+
+### <a name="parameters"></a>参数
+
+*类型*<br/>
+指定要添加到数组元素类型模板参数。
+
+*newElement*<br/>
+要添加到该数组的元素。
+
+### <a name="return-value"></a>返回值
+
+添加的元素的索引。
+
+### <a name="remarks"></a>备注
+
+有关更多详细说明，请参阅[CObArray::Add](../../mfc/reference/cobarray-class.md#add)。
+
+##  <a name="append"></a>  CTypedPtrArray::Append
+
+此成员函数调用`BASE_CLASS`:: Append * *。
+
+```
 INT_PTR Append(const CTypedPtrArray<BASE_CLASS, TYPE>& src);
-```  
-  
-### <a name="parameters"></a>参数  
- *BASE_CLASS*  
- 类的基类类型化的指针数组;必须为数组类 ( [CObArray](../../mfc/reference/cobarray-class.md)或[CPtrArray](../../mfc/reference/cptrarray-class.md))。  
-  
- *类型*  
- 基类数组中存储的元素的类型。  
-  
- *src*  
- 要追加到一个数组的元素的源。  
-  
-### <a name="return-value"></a>返回值  
- 第一个追加的元素的索引。  
-  
-### <a name="remarks"></a>备注  
- 有关详细说明，请参阅[CObArray::Append](../../mfc/reference/cobarray-class.md#append)。  
-  
-##  <a name="copy"></a>  CTypedPtrArray::Copy  
- 此成员函数将调用`BASE_CLASS` **:: 复制**。  
-  
-```  
+```
+
+### <a name="parameters"></a>参数
+
+*BASE_CLASS*<br/>
+基的类的类型化的指针数组;必须为数组类 ( [CObArray](../../mfc/reference/cobarray-class.md)或[CPtrArray](../../mfc/reference/cptrarray-class.md))。
+
+*类型*<br/>
+存储基类数组中的元素的类型。
+
+*src*<br/>
+要追加到数组的元素的源。
+
+### <a name="return-value"></a>返回值
+
+第一个追加的元素的索引。
+
+### <a name="remarks"></a>备注
+
+有关更多详细说明，请参阅[CObArray::Append](../../mfc/reference/cobarray-class.md#append)。
+
+##  <a name="copy"></a>  CTypedPtrArray::Copy
+
+此成员函数将调用`BASE_CLASS` **:: 复制**。
+
+```
 void Copy(const CTypedPtrArray<BASE_CLASS, TYPE>& src);
-```  
-  
-### <a name="parameters"></a>参数  
- *BASE_CLASS*  
- 类的基类类型化的指针数组;必须为数组类 ( [CObArray](../../mfc/reference/cobarray-class.md)或[CPtrArray](../../mfc/reference/cptrarray-class.md))。  
-  
- *类型*  
- 基类数组中存储的元素的类型。  
-  
- *src*  
- 要复制到数组的元素的源。  
-  
-### <a name="remarks"></a>备注  
- 有关详细说明，请参阅[CObArray::Copy](../../mfc/reference/cobarray-class.md#copy)。  
-  
-##  <a name="elementat"></a>  CTypedPtrArray::ElementAt  
- 此内联函数调用`BASE_CLASS` **:: ElementAt**。  
-  
-```  
+```
+
+### <a name="parameters"></a>参数
+
+*BASE_CLASS*<br/>
+基的类的类型化的指针数组;必须为数组类 ( [CObArray](../../mfc/reference/cobarray-class.md)或[CPtrArray](../../mfc/reference/cptrarray-class.md))。
+
+*类型*<br/>
+存储基类数组中的元素的类型。
+
+*src*<br/>
+要复制到数组的元素的源。
+
+### <a name="remarks"></a>备注
+
+有关更多详细说明，请参阅[CObArray::Copy](../../mfc/reference/cobarray-class.md#copy)。
+
+##  <a name="elementat"></a>  CTypedPtrArray::ElementAt
+
+此内联函数将调用`BASE_CLASS` **:: ElementAt**。
+
+```
 TYPE& ElementAt(INT_PTR nIndex);
-```  
-  
-### <a name="parameters"></a>参数  
- *类型*  
- 模板参数来指定存储在此数组中元素的类型。  
-  
- *nIndex*  
- 整数索引大于或等于 0 且小于或等于返回的值`BASE_CLASS` **:: GetUpperBound**。  
-  
-### <a name="return-value"></a>返回值  
- 对指定的位置处的元素的临时引用*nIndex*。 此元素是由模板参数指定的类型*类型*。  
-  
-### <a name="remarks"></a>备注  
- 有关详细说明，请参阅[CObArray::ElementAt](../../mfc/reference/cobarray-class.md#elementat)。  
-  
-##  <a name="getat"></a>  CTypedPtrArray::GetAt  
- 此内联函数调用`BASE_CLASS` **:: GetAt**。  
-  
-```  
-TYPE GetAt(INT_PTR nIndex) const;  
-```  
-  
-### <a name="parameters"></a>参数  
- *类型*  
- 模板参数来指定存储在数组中元素的类型。  
-  
- *nIndex*  
- 整数索引大于或等于 0 且小于或等于返回的值`BASE_CLASS` **:: GetUpperBound**。  
-  
-### <a name="return-value"></a>返回值  
- 指定的位置处的元素的副本*nIndex*。 此元素是由模板参数指定的类型*类型*。  
-  
-### <a name="remarks"></a>备注  
- 有关详细说明，请参阅[CObArray::GetAt](../../mfc/reference/cobarray-class.md#getat)  
-  
-##  <a name="insertat"></a>  CTypedPtrArray::InsertAt  
- 此成员函数将调用`BASE_CLASS` **:: InsertAt**。  
-  
-```  
+```
+
+### <a name="parameters"></a>参数
+
+*类型*<br/>
+指定此数组中存储的元素类型模板参数。
+
+*nIndex*<br/>
+大于或等于 0 的整数索引且小于或等于返回的值`BASE_CLASS` **:: GetUpperBound**。
+
+### <a name="return-value"></a>返回值
+
+对指定的位置处的元素的临时引用*nIndex*。 此元素是模板参数指定的类型的*类型*。
+
+### <a name="remarks"></a>备注
+
+有关更多详细说明，请参阅[CObArray::ElementAt](../../mfc/reference/cobarray-class.md#elementat)。
+
+##  <a name="getat"></a>  CTypedPtrArray::GetAt
+
+此内联函数将调用`BASE_CLASS` **:: GetAt**。
+
+```
+TYPE GetAt(INT_PTR nIndex) const;
+```
+
+### <a name="parameters"></a>参数
+
+*类型*<br/>
+指定数组中存储的元素类型模板参数。
+
+*nIndex*<br/>
+大于或等于 0 的整数索引且小于或等于返回的值`BASE_CLASS` **:: GetUpperBound**。
+
+### <a name="return-value"></a>返回值
+
+指定的位置处的元素的副本*nIndex*。 此元素是模板参数指定的类型的*类型*。
+
+### <a name="remarks"></a>备注
+
+有关更多详细说明，请参阅[CObArray::GetAt](../../mfc/reference/cobarray-class.md#getat)
+
+##  <a name="insertat"></a>  CTypedPtrArray::InsertAt
+
+此成员函数将调用`BASE_CLASS` **:: InsertAt**。
+
+```
 void InsertAt(
-    INT_PTR nIndex,  
-    TYPE newElement,  
+    INT_PTR nIndex,
+    TYPE newElement,
     INT_PTR nCount = 1);
 
- 
+
 void InsertAt(
-    INT_PTR nStartIndex,  
+    INT_PTR nStartIndex,
     CTypedPtrArray<BASE_CLASS, TYPE>* pNewArray);
-```  
-  
-### <a name="parameters"></a>参数  
- *nIndex*  
- 可能返回的值大于整数索引[CObArray::GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound)。  
-  
- *类型*  
- 基类数组中存储的元素的类型。  
-  
- *newElement*  
- 要放置此数组中的对象指针。 A *newElement*的值**NULL**允许。  
-  
- *nCount*  
- 此元素应为次数插入 （默认为 1）。  
-  
- *nStartIndex*  
- 可能返回的值大于整数索引`CObArray::GetUpperBound`。  
-  
- *BASE_CLASS*  
- 类的基类类型化的指针数组;必须为数组类 ( [CObArray](../../mfc/reference/cobarray-class.md)或[CPtrArray](../../mfc/reference/cptrarray-class.md))。  
-  
- *pNewArray*  
- 包含要添加到该数组的元素的另一个数组。  
-  
-### <a name="remarks"></a>备注  
- 有关详细说明，请参阅[CObArray::InsertAt](../../mfc/reference/cobarray-class.md#insertat)。  
-  
-##  <a name="operator_at"></a>  CTypedPtrArray::operator]  
- 这些内联运算符调用`BASE_CLASS` **:: 运算符 []**。  
-  
-```  
-TYPE& operator[ ](int_ptr nindex);  
-TYPE operator[ ](int_ptr nindex) const;  
-```  
-  
-### <a name="parameters"></a>参数  
- *类型*  
- 模板参数来指定存储在数组中元素的类型。  
-  
- *nIndex*  
- 整数索引大于或等于 0 且小于或等于返回的值`BASE_CLASS` **:: GetUpperBound**。  
-  
-### <a name="remarks"></a>备注  
- 第一个运算符，为不数组调用**const**，可在右侧 （右值） 或赋值语句的左侧 （左值）。 第二个，为调用**const**数组，可以使用仅在右侧。  
-  
- 库的调试版本断言下标 （或者在左侧或赋值语句右侧） 是否超出界限。  
-  
-##  <a name="setat"></a>  CTypedPtrArray::SetAt  
- 此成员函数将调用`BASE_CLASS` **:: SetAt**。  
-  
-```  
+```
+
+### <a name="parameters"></a>参数
+
+*nIndex*<br/>
+可能会高于返回的值的整数索引[CObArray::GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound)。
+
+*类型*<br/>
+存储基类数组中的元素的类型。
+
+*newElement*<br/>
+要放置此数组中的对象指针。 一个*newElement*的值**NULL**允许。
+
+*nCount*<br/>
+此元素应为次数插入 （默认值为 1）。
+
+*nStartIndex*<br/>
+可能会高于返回的值的整数索引`CObArray::GetUpperBound`。
+
+*BASE_CLASS*<br/>
+基的类的类型化的指针数组;必须为数组类 ( [CObArray](../../mfc/reference/cobarray-class.md)或[CPtrArray](../../mfc/reference/cptrarray-class.md))。
+
+*pNewArray*<br/>
+另一个数组，其中包含要添加到该数组的元素。
+
+### <a name="remarks"></a>备注
+
+有关更多详细说明，请参阅[CObArray::InsertAt](../../mfc/reference/cobarray-class.md#insertat)。
+
+##  <a name="operator_at"></a>  CTypedPtrArray::operator]
+
+这些内联运算符调用`BASE_CLASS` **:: 运算符 []**。
+
+```
+TYPE& operator[ ](int_ptr nindex);
+TYPE operator[ ](int_ptr nindex) const;
+```
+
+### <a name="parameters"></a>参数
+
+*类型*<br/>
+指定数组中存储的元素类型模板参数。
+
+*nIndex*<br/>
+大于或等于 0 的整数索引且小于或等于返回的值`BASE_CLASS` **:: GetUpperBound**。
+
+### <a name="remarks"></a>备注
+
+第一个运算符为数组不是调用**const**，可以在右侧 （右值） 或赋值语句左侧 （左值） 上使用。 第二个，为调用**const**数组，可以使用仅在右侧。
+
+在库的调试版本断言的下标 （无论在左侧或右侧的赋值语句） 是否超出界限。
+
+##  <a name="setat"></a>  CTypedPtrArray::SetAt
+
+此成员函数将调用`BASE_CLASS` **:: SetAt**。
+
+```
 void SetAt(
-    INT_PTR nIndex,  
+    INT_PTR nIndex,
     TYPE ptr);
-```  
-  
-### <a name="parameters"></a>参数  
- *nIndex*  
- 整数索引大于或等于 0 且小于或等于返回的值[CObArray::GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound)。  
-  
- *类型*  
- 基类数组中存储的元素的类型。  
-  
- *ptr*  
- 指向数组中的位置 nIndex 插入的元素的指针。 允许 NULL 值。  
-  
-### <a name="remarks"></a>备注  
- 有关详细说明，请参阅[CObArray::SetAt](../../mfc/reference/cobarray-class.md#setat)。  
-  
-##  <a name="setatgrow"></a>  CTypedPtrArray::SetAtGrow  
- 此成员函数将调用`BASE_CLASS` **:: SetAtGrow**。  
-  
-```  
+```
+
+### <a name="parameters"></a>参数
+
+*nIndex*<br/>
+大于或等于 0 的整数索引且小于或等于返回的值[CObArray::GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound)。
+
+*类型*<br/>
+存储基类数组中的元素的类型。
+
+*ptr*<br/>
+指向要插入 nIndex 在数组中的元素的指针。 允许 NULL 值。
+
+### <a name="remarks"></a>备注
+
+有关更多详细说明，请参阅[CObArray::SetAt](../../mfc/reference/cobarray-class.md#setat)。
+
+##  <a name="setatgrow"></a>  CTypedPtrArray::SetAtGrow
+
+此成员函数将调用`BASE_CLASS` **:: SetAtGrow**。
+
+```
 void SetAtGrow(
-    INT_PTR nIndex,  
+    INT_PTR nIndex,
     TYPE newElement);
-```  
-  
-### <a name="parameters"></a>参数  
- *nIndex*  
- 大于或等于 0 的整数索引。  
-  
- *类型*  
- 基类数组中存储的元素的类型。  
-  
- *newElement*  
- 要添加到该数组的对象指针。 A **NULL**允许值。  
-  
-### <a name="remarks"></a>备注  
- 有关详细说明，请参阅[CObArray::SetAtGrow](../../mfc/reference/cobarray-class.md#setatgrow)。  
-  
-## <a name="see-also"></a>请参阅  
- [MFC 示例收集](../../visual-cpp-samples.md)   
- [层次结构图](../../mfc/hierarchy-chart.md)   
- [CPtrArray 类](../../mfc/reference/cptrarray-class.md)   
- [CObArray 类](../../mfc/reference/cobarray-class.md)
+```
+
+### <a name="parameters"></a>参数
+
+*nIndex*<br/>
+一个大于或等于 0 的整数索引。
+
+*类型*<br/>
+存储基类数组中的元素的类型。
+
+*newElement*<br/>
+要添加到该数组的对象指针。 一个**NULL**允许值。
+
+### <a name="remarks"></a>备注
+
+有关更多详细说明，请参阅[CObArray::SetAtGrow](../../mfc/reference/cobarray-class.md#setatgrow)。
+
+## <a name="see-also"></a>请参阅
+
+[MFC 示例收集](../../visual-cpp-samples.md)<br/>
+[层次结构图](../../mfc/hierarchy-chart.md)<br/>
+[CPtrArray 类](../../mfc/reference/cptrarray-class.md)<br/>
+[CObArray 类](../../mfc/reference/cobarray-class.md)

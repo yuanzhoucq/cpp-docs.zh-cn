@@ -1,5 +1,5 @@
 ---
-title: 如何： 使用事件中 C + + /cli CLI |Microsoft 文档
+title: 如何： 使用事件中 C + + /cli CLI |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,639 +15,649 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 079f5fccfbefea98b44f49fb06bee8199436a1b1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: df6fb831b6a5644b56781cc199f0f0d38ebbcd41
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33138034"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46408500"
 ---
 # <a name="how-to-use-events-in-ccli"></a>如何：在 C++/CLI 中使用事件
-这篇文章演示如何使用声明事件和函数来调用该事件的接口和实现接口的类和事件处理程序。  
-  
-## <a name="interface-events"></a>接口事件  
- 下面的代码示例添加一个事件处理程序，调用事件-这将导致其名称写入控制台的事件处理程序 —，然后再移除事件处理程序。  
-  
-```  
-// mcppv2_events2.cpp  
-// compile with: /clr  
-using namespace System;  
-  
-delegate void Del(int, float);  
-  
-// interface that has an event and a function to invoke the event  
-interface struct I {  
-public:  
-   event Del ^ E;  
-   void fire(int, float);     
-};  
-  
-// class that implements the interface event and function  
-ref class EventSource: public I {  
-public:  
-   virtual event Del^ E;  
-   virtual void fire(int i, float f) {  
-      E(i, f);  
-   }  
-};  
-  
-// class that defines the event handler  
-ref class EventReceiver {  
-public:  
-   void Handler(int i , float f) {  
-      Console::WriteLine("EventReceiver::Handler");  
-   }  
-};  
-  
-int main () {  
-   I^ es = gcnew EventSource();  
-   EventReceiver^ er = gcnew EventReceiver();  
-  
-   // hook the handler to the event  
-   es->E += gcnew Del(er, &EventReceiver::Handler);  
-  
-   // call the event  
-   es -> fire(1, 3.14);  
-  
-   // unhook the handler from the event  
-   es->E -= gcnew Del(er, &EventReceiver::Handler);  
-}  
-```  
-  
- **输出**  
-  
-```Output  
-EventReceiver::Handler  
-```  
-  
-## <a name="custom-accessor-methods"></a>自定义访问器方法  
- 下面的示例演示如何定义某一事件的行为，以及添加或删除，处理程序时引发事件时。  
-  
-```  
-// mcppv2_events6.cpp  
-// compile with: /clr  
-using namespace System;  
-  
-public delegate void MyDel();  
-public delegate int MyDel2(int, float);  
-  
-ref class EventSource {  
-public:  
-   MyDel ^ pE;  
-   MyDel2 ^ pE2;  
-  
-   event MyDel^ E {  
-      void add(MyDel^ p) {  
-         pE = static_cast<MyDel^> (Delegate::Combine(pE, p));   
-         // cannot refer directly to the event  
-         // E = static_cast<MyDel^> (Delegate::Combine(pE, p));   // error  
-      }  
-  
-      void remove(MyDel^ p) {  
-         pE = static_cast<MyDel^> (Delegate::Remove(pE, p));  
-      }  
-  
-      void raise() {  
-         if (pE != nullptr)  
-            pE->Invoke();  
-      }  
-   }  // E event block  
-  
-   event MyDel2^ E2 {  
-      void add(MyDel2^ p2) {  
-         pE2 = static_cast<MyDel2^> (Delegate::Combine(pE2, p2));   
-      }  
-  
-      void remove(MyDel2^ p2) {  
-         pE2 = static_cast<MyDel2^> (Delegate::Remove(pE2, p2));  
-      }  
-  
-      int raise(int i, float f) {  
-         if (pE2 != nullptr) {  
-            return pE2->Invoke(i, f);  
-         }  
-         return 1;  
-      }  
-   } // E2 event block  
-};  
-  
-public ref struct EventReceiver {  
-   void H1() {  
-      Console::WriteLine("In event handler H1");  
-   }  
-  
-   int H2(int i, float f) {  
-      Console::WriteLine("In event handler H2 with args {0} and {1}", i.ToString(), f.ToString());  
-      return 0;  
-   }  
-};  
-  
-int main() {  
-   EventSource ^ pE = gcnew EventSource;  
-   EventReceiver ^ pR = gcnew EventReceiver;  
-  
-   // hook event handlers  
-   pE->E += gcnew MyDel(pR, &EventReceiver::H1);  
-   pE->E2 += gcnew MyDel2(pR, &EventReceiver::H2);  
-  
-   // raise events  
-   pE->E();  
-   pE->E2::raise(1, 2.2);   // call event through scope path  
-  
-   // unhook event handlers  
-   pE->E -= gcnew MyDel(pR, &EventReceiver::H1);  
-   pE->E2 -= gcnew MyDel2(pR, &EventReceiver::H2);  
-  
-   // raise events, but no handlers  
-   pE->E();  
-   pE->E2::raise(1, 2.5);  
-}  
-```  
-  
- **输出**  
-  
-```Output  
-In event handler H1  
-In event handler H2 with args 1 and 2.2  
-```  
-  
-## <a name="override-default-access-on-add-remove-and-raise-accessors"></a>重写默认访问上的添加、 删除和引发访问器  
- 此示例演示如何重写上添加、 移除和引发事件方法的默认访问权限：  
-  
-```  
-// mcppv2_events3.cpp  
-// compile with: /clr  
-public delegate void f(int);  
-  
-public ref struct E {  
-   f ^ _E;  
-public:  
-   void handler(int i) {  
-      System::Console::WriteLine(i);  
-   }  
-  
-   E() {  
-      _E = nullptr;  
-   }  
-  
-   event f^ Event {  
-      void add(f ^ d) {  
-         _E += d;  
-      }  
-   private:  
-      void remove(f ^ d) {  
-        _E -= d;  
-      }  
-  
-   protected:  
-      void raise(int i) {  
-         if (_E) {  
-            _E->Invoke(i);  
-         }  
-      }  
-   }  
-  
-   // a member function to access all event methods  
-   static void Go() {  
-      E^ pE = gcnew E;  
-      pE->Event += gcnew f(pE, &E::handler);  
-      pE->Event(17);   // prints 17  
-      pE->Event -= gcnew f(pE, &E::handler);  
-      pE->Event(17);   // no output  
-   }  
-};  
-  
-int main() {  
-   E::Go();  
-}  
-```  
-  
- **输出**  
-  
-```Output  
-17  
-```  
-  
-## <a name="multiple-event-handlers"></a>多个事件处理程序  
- 事件接收器或任何其他客户端代码，可以将一个或多个处理程序添加到事件。  
-  
-```  
-// mcppv2_events4.cpp  
-// compile with: /clr  
-using namespace System;  
-#include <stdio.h>  
-  
-delegate void ClickEventHandler(int, double);  
-delegate void DblClickEventHandler(String^);  
-  
-ref class EventSource {  
-public:  
-   event ClickEventHandler^ OnClick;  
-   event DblClickEventHandler^ OnDblClick;  
-  
-   void FireEvents() {  
-      OnClick(7, 3.14159);  
-      OnDblClick("Started");  
-   }  
-};  
-  
-ref struct EventReceiver {  
-public:  
-   void Handler1(int x, double y) {  
-      System::Console::Write("Click(x={0},y={1})\n", x, y);  
-   };  
-  
-   void Handler2(String^ s) {  
-      System::Console::Write("DblClick(s={0})\n", s);  
-   }  
-  
-   void Handler3(String^ s) {  
-      System::Console::WriteLine("DblClickAgain(s={0})\n", s);  
-   }  
-  
-   void AddHandlers(EventSource^ pES) {  
-      pES->OnClick +=   
-         gcnew ClickEventHandler(this,&EventReceiver::Handler1);  
-      pES->OnDblClick +=   
-         gcnew DblClickEventHandler(this,&EventReceiver::Handler2);  
-      pES->OnDblClick +=   
-         gcnew DblClickEventHandler(this, &EventReceiver::Handler3);  
-   }  
-  
-   void RemoveHandlers(EventSource^ pES) {  
-      pES->OnClick -=   
-         gcnew ClickEventHandler(this, &EventReceiver::Handler1);  
-      pES->OnDblClick -=   
-         gcnew DblClickEventHandler(this, &EventReceiver::Handler2);  
-      pES->OnDblClick -=   
-         gcnew DblClickEventHandler(this, &EventReceiver::Handler3);  
-   }  
-};  
-  
-int main() {  
-   EventSource^ pES = gcnew EventSource;  
-   EventReceiver^ pER = gcnew EventReceiver;  
-  
-   // add handlers  
-   pER->AddHandlers(pES);  
-  
-   pES->FireEvents();  
-  
-   // remove handlers  
-   pER->RemoveHandlers(pES);  
-}  
-```  
-  
- **输出**  
-  
-```Output  
-Click(x=7,y=3.14159)  
-DblClick(s=System.Char[])  
-DblClickAgain(s=System.Char[])  
-```  
-  
-## <a name="static-events"></a>静态事件  
- 下面的示例演示如何定义和使用静态事件。  
-  
-```  
-// mcppv2_events7.cpp  
-// compile with: /clr  
-using namespace System;  
-  
-public delegate void MyDel();  
-public delegate int MyDel2(int, float);  
-  
-ref class EventSource {  
-public:  
-   static MyDel ^ psE;  
-   static event MyDel2 ^ E2;   // event keyword, compiler generates add,   
-                               // remove, and Invoke  
-  
-   static event MyDel ^ E {  
-      static void add(MyDel ^ p) {  
-         psE = static_cast<MyDel^> (Delegate::Combine(psE, p));  
-      }  
-  
-      static void remove(MyDel^ p) {  
-         psE = static_cast<MyDel^> (Delegate::Remove(psE, p));  
-      }  
-  
-      static void raise() {  
-         if (psE != nullptr)   //psE!=0 -> C2679, use nullptr  
-            psE->Invoke();   
-      }  
-   }  
-  
-   static int Fire_E2(int i, float f) {  
-      return E2(i, f);  
-   }  
-};  
-  
-public ref struct EventReceiver {  
-   void H1() {  
-      Console::WriteLine("In event handler H1");  
-   }  
-  
-   int H2(int i, float f) {  
-      Console::WriteLine("In event handler H2 with args {0} and {1}", i.ToString(), f.ToString());  
-      return 0;  
-   }  
-};  
-  
-int main() {  
-   EventSource^ pE = gcnew EventSource;  
-   EventReceiver^ pR = gcnew EventReceiver;  
-  
-   // Called with "this"  
-   // hook event handlers  
-   pE->E += gcnew MyDel(pR, &EventReceiver::H1);  
-   pE->E2 += gcnew MyDel2(pR, &EventReceiver::H2);  
-  
-   // raise events  
-   pE->E();  
-   pE->Fire_E2(11, 11.11);  
-  
-   // unhook event handlers  
-   pE->E -= gcnew MyDel(pR, &EventReceiver::H1);  
-   pE->E2 -= gcnew MyDel2(pR, &EventReceiver::H2);  
-  
-   // Not called with "this"  
-   // hook event handler  
-   EventSource::E += gcnew MyDel(pR, &EventReceiver::H1);  
-   EventSource::E2 += gcnew MyDel2(pR, &EventReceiver::H2);  
-  
-   // raise events  
-   EventSource::E();  
-   EventSource::Fire_E2(22, 22.22);  
-  
-   // unhook event handlers  
-   EventSource::E -= gcnew MyDel(pR, &EventReceiver::H1);  
-   EventSource::E2 -= gcnew MyDel2(pR, &EventReceiver::H2);  
-}  
-```  
-  
- **输出**  
-  
-```Output  
-In event handler H1  
-In event handler H2 with args 11 and 11.11  
-In event handler H1  
-In event handler H2 with args 22 and 22.22  
-```  
-  
-## <a name="virtual-events"></a>虚拟事件  
- 此示例在接口和类中实现虚拟、 托管事件：  
-  
-```  
-// mcppv2_events5.cpp  
-// compile with: /clr  
-using namespace System;  
-  
-public delegate void MyDel();  
-public delegate int MyDel2(int, float);  
-  
-// managed class that has a virtual event  
-ref class IEFace {  
-public:  
-   virtual event MyDel ^ E;   // declares three accessors (add, remove, and raise)  
-};  
-  
-// managed interface that has a virtual event  
-public interface struct IEFace2 {  
-public:  
-   event MyDel2 ^ E2;   // declares two accessors (add and remove)  
-};  
-  
-// implement virtual events  
-ref class EventSource : public IEFace, public IEFace2 {  
-public:  
-   virtual event MyDel2 ^ E2;  
-  
-   void Fire_E() {  
-      E();  
-   }  
-  
-   int Fire_E2(int i, float f) {  
-      try {  
-         return E2(i, f);  
-      }  
-      catch(System::NullReferenceException^) {  
-         return 0;   // no handlers  
-      }  
-   }  
-};  
-  
-// class to hold event handlers, the event receiver  
-public ref struct EventReceiver {  
-   // first handler  
-   void H1() {  
-      Console::WriteLine("In handler H1");  
-   }  
-  
-   // second handler  
-   int H2(int i, float f) {  
-      Console::WriteLine("In handler H2 with args {0} and {1}", i.ToString(), f.ToString());  
-      return 0;  
-   }  
-};  
-  
-int main() {  
-   EventSource ^ pE = gcnew EventSource;  
-   EventReceiver ^ pR = gcnew EventReceiver;  
-  
-   // add event handlers  
-   pE->E += gcnew MyDel(pR, &EventReceiver::H1);  
-   pE->E2 += gcnew MyDel2(pR, &EventReceiver::H2);  
-  
-   // raise events  
-   pE->Fire_E();  
-   pE->Fire_E2(1, 2.2);  
-  
-   // remove event handlers  
-   pE->E -= gcnew MyDel(pR, &EventReceiver::H1);  
-   pE->E2 -= gcnew MyDel2(pR, &EventReceiver::H2);  
-  
-   // raise events, but no handlers; so, no effect  
-   pE->Fire_E();  
-   pE->Fire_E2(1, 2.5);  
-}  
-```  
-  
- **输出**  
-  
-```Output  
-In handler H1  
-In handler H2 with args 1 and 2.2  
-```  
-  
- 不能指定的简单事件以重写或隐藏基类事件。  必须定义所有事件访问器函数，然后指定`new`或`override`上每个访问器函数的关键字。  
-  
-```  
-// mcppv2_events5_a.cpp  
-// compile with: /clr /c  
-delegate void Del();  
-  
-ref struct A {  
-   virtual event Del ^E;  
-   virtual event Del ^E2;  
-};  
-  
-ref struct B : A {  
-   virtual event Del ^E override;   // C3797  
-   virtual event Del ^E2 new;   // C3797  
-};  
-  
-ref struct C : B {  
-   virtual event Del ^E {   // OK  
-      void raise() override {}  
-      void add(Del ^) override {}  
-      void remove(Del^) override {}  
-   }  
-  
-   virtual event Del ^E2 {   // OK  
-      void raise() new {}  
-      void add(Del ^) new {}  
-      void remove(Del^) new {}  
-   }  
-};  
-```  
-  
-## <a name="abstract-events"></a>抽象事件  
- 下面的示例演示如何实现抽象事件。  
-  
-```  
-// mcppv2_events10.cpp  
-// compile with: /clr /W1  
-using namespace System;  
-public delegate void Del();  
-public delegate void Del2(String^ s);  
-  
-interface struct IEvent {  
-public:  
-   // in this case, no raised method is defined  
-   event Del^ Event1;  
-  
-   event Del2^ Event2 {  
-   public:  
-      void add(Del2^ _d);  
-      void remove(Del2^ _d);  
-      void raise(String^ s);  
-   }  
-  
-   void fire();  
-};  
-  
-ref class EventSource: public IEvent {  
-public:  
-   virtual event Del^ Event1;  
-   event Del2^ Event2 {  
-      virtual void add(Del2^ _d) {  
-         d = safe_cast<Del2^>(System::Delegate::Combine(d, _d));  
-      }  
-  
-      virtual void remove(Del2^ _d) {  
-         d = safe_cast<Del2^>(System::Delegate::Remove(d, _d));  
-      }  
-  
-      virtual void raise(String^ s) {  
-         if (d) {  
-            d->Invoke(s);  
-         }  
-      }  
-   }  
-  
-   virtual void fire() {  
-      return Event1();  
-   }  
-  
-private:  
-   Del2^ d;  
-};  
-  
-ref class EventReceiver {  
-public:  
-   void func() {  
-      Console::WriteLine("hi");  
-   }  
-  
-   void func(String^ str) {  
-      Console::WriteLine(str);  
-   }  
-};  
-  
-int main () {  
-   IEvent^ es = gcnew EventSource;  
-   EventReceiver^ er = gcnew EventReceiver;  
-   es->Event1 += gcnew Del(er, &EventReceiver::func);  
-   es->Event2 += gcnew Del2(er, &EventReceiver::func);  
-  
-   es->fire();  
-   es->Event2("hello from Event2");  
-   es->Event1 -= gcnew Del(er, &EventReceiver::func);  
-   es->Event2 -= gcnew Del2(er, &EventReceiver::func);  
-   es->Event2("hello from Event2");  
-}  
-```  
-  
- **输出**  
-  
-```Output  
-hi  
-hello from Event2  
-```  
-  
-## <a name="raising-events-that-are-defined-in-a-different-assembly"></a>引发在其他程序集中定义的事件  
- 可以在一个程序集中定义并由另一个程序集的事件和事件处理程序。  
-  
-```  
-// mcppv2_events8.cpp  
-// compile with: /LD /clr  
-using namespace System;  
-  
-public delegate void Del(String^ s);  
-  
-public ref class Source {  
-public:  
-   event Del^ Event;  
-   void Fire(String^ s) {  
-      Event(s);  
-   }  
-};  
-```  
-  
- 此客户端代码使用事件：  
-  
-```  
-// mcppv2_events9.cpp  
-// compile with: /clr  
-#using "mcppv2_events8.dll"  
-using namespace System;  
-  
-ref class Receiver {  
-public:  
-   void Handler(String^ s) {  
-      Console::WriteLine(s);  
-   }  
-};  
-  
-int main() {  
-   Source^ src = gcnew Source;  
-   Receiver^ rc1 = gcnew Receiver;  
-   Receiver^ rc2 = gcnew Receiver;  
-   src -> Event += gcnew Del(rc1, &Receiver::Handler);  
-   src -> Event += gcnew Del(rc2, &Receiver::Handler);  
-   src->Fire("hello");  
-   src -> Event -= gcnew Del(rc1, &Receiver::Handler);  
-   src -> Event -= gcnew Del(rc2, &Receiver::Handler);  
-}  
-```  
-  
- **输出**  
-  
-```Output  
-hello  
-hello  
-```  
-  
-## <a name="see-also"></a>请参阅  
- [event](../windows/event-cpp-component-extensions.md)
+
+本文介绍如何使用声明事件和函数调用该事件的接口和实现接口的类和事件处理程序。
+
+## <a name="interface-events"></a>接口事件
+
+下面的代码示例将添加一个事件处理程序，调用事件 — 这将导致其名称写入控制台的事件处理程序，然后删除事件处理程序。
+
+```
+// mcppv2_events2.cpp
+// compile with: /clr
+using namespace System;
+
+delegate void Del(int, float);
+
+// interface that has an event and a function to invoke the event
+interface struct I {
+public:
+   event Del ^ E;
+   void fire(int, float);
+};
+
+// class that implements the interface event and function
+ref class EventSource: public I {
+public:
+   virtual event Del^ E;
+   virtual void fire(int i, float f) {
+      E(i, f);
+   }
+};
+
+// class that defines the event handler
+ref class EventReceiver {
+public:
+   void Handler(int i , float f) {
+      Console::WriteLine("EventReceiver::Handler");
+   }
+};
+
+int main () {
+   I^ es = gcnew EventSource();
+   EventReceiver^ er = gcnew EventReceiver();
+
+   // hook the handler to the event
+   es->E += gcnew Del(er, &EventReceiver::Handler);
+
+   // call the event
+   es -> fire(1, 3.14);
+
+   // unhook the handler from the event
+   es->E -= gcnew Del(er, &EventReceiver::Handler);
+}
+```
+
+**输出**
+
+```Output
+EventReceiver::Handler
+```
+
+## <a name="custom-accessor-methods"></a>自定义访问器方法
+
+下面的示例演示如何添加或删除，处理程序的时间和引发事件时定义某一事件的行为。
+
+```
+// mcppv2_events6.cpp
+// compile with: /clr
+using namespace System;
+
+public delegate void MyDel();
+public delegate int MyDel2(int, float);
+
+ref class EventSource {
+public:
+   MyDel ^ pE;
+   MyDel2 ^ pE2;
+
+   event MyDel^ E {
+      void add(MyDel^ p) {
+         pE = static_cast<MyDel^> (Delegate::Combine(pE, p));
+         // cannot refer directly to the event
+         // E = static_cast<MyDel^> (Delegate::Combine(pE, p));   // error
+      }
+
+      void remove(MyDel^ p) {
+         pE = static_cast<MyDel^> (Delegate::Remove(pE, p));
+      }
+
+      void raise() {
+         if (pE != nullptr)
+            pE->Invoke();
+      }
+   }  // E event block
+
+   event MyDel2^ E2 {
+      void add(MyDel2^ p2) {
+         pE2 = static_cast<MyDel2^> (Delegate::Combine(pE2, p2));
+      }
+
+      void remove(MyDel2^ p2) {
+         pE2 = static_cast<MyDel2^> (Delegate::Remove(pE2, p2));
+      }
+
+      int raise(int i, float f) {
+         if (pE2 != nullptr) {
+            return pE2->Invoke(i, f);
+         }
+         return 1;
+      }
+   } // E2 event block
+};
+
+public ref struct EventReceiver {
+   void H1() {
+      Console::WriteLine("In event handler H1");
+   }
+
+   int H2(int i, float f) {
+      Console::WriteLine("In event handler H2 with args {0} and {1}", i.ToString(), f.ToString());
+      return 0;
+   }
+};
+
+int main() {
+   EventSource ^ pE = gcnew EventSource;
+   EventReceiver ^ pR = gcnew EventReceiver;
+
+   // hook event handlers
+   pE->E += gcnew MyDel(pR, &EventReceiver::H1);
+   pE->E2 += gcnew MyDel2(pR, &EventReceiver::H2);
+
+   // raise events
+   pE->E();
+   pE->E2::raise(1, 2.2);   // call event through scope path
+
+   // unhook event handlers
+   pE->E -= gcnew MyDel(pR, &EventReceiver::H1);
+   pE->E2 -= gcnew MyDel2(pR, &EventReceiver::H2);
+
+   // raise events, but no handlers
+   pE->E();
+   pE->E2::raise(1, 2.5);
+}
+```
+
+**输出**
+
+```Output
+In event handler H1
+In event handler H2 with args 1 and 2.2
+```
+
+## <a name="override-default-access-on-add-remove-and-raise-accessors"></a>重写默认访问权限添加、 删除和引发的访问器
+
+此示例演示如何重写上添加、 删除和引发事件方法的默认访问权限：
+
+```
+// mcppv2_events3.cpp
+// compile with: /clr
+public delegate void f(int);
+
+public ref struct E {
+   f ^ _E;
+public:
+   void handler(int i) {
+      System::Console::WriteLine(i);
+   }
+
+   E() {
+      _E = nullptr;
+   }
+
+   event f^ Event {
+      void add(f ^ d) {
+         _E += d;
+      }
+   private:
+      void remove(f ^ d) {
+        _E -= d;
+      }
+
+   protected:
+      void raise(int i) {
+         if (_E) {
+            _E->Invoke(i);
+         }
+      }
+   }
+
+   // a member function to access all event methods
+   static void Go() {
+      E^ pE = gcnew E;
+      pE->Event += gcnew f(pE, &E::handler);
+      pE->Event(17);   // prints 17
+      pE->Event -= gcnew f(pE, &E::handler);
+      pE->Event(17);   // no output
+   }
+};
+
+int main() {
+   E::Go();
+}
+```
+
+**输出**
+
+```Output
+17
+```
+
+## <a name="multiple-event-handlers"></a>多个事件处理程序
+
+事件接收器或任何其他客户端代码，可以向事件添加一个或多个处理程序。
+
+```
+// mcppv2_events4.cpp
+// compile with: /clr
+using namespace System;
+#include <stdio.h>
+
+delegate void ClickEventHandler(int, double);
+delegate void DblClickEventHandler(String^);
+
+ref class EventSource {
+public:
+   event ClickEventHandler^ OnClick;
+   event DblClickEventHandler^ OnDblClick;
+
+   void FireEvents() {
+      OnClick(7, 3.14159);
+      OnDblClick("Started");
+   }
+};
+
+ref struct EventReceiver {
+public:
+   void Handler1(int x, double y) {
+      System::Console::Write("Click(x={0},y={1})\n", x, y);
+   };
+
+   void Handler2(String^ s) {
+      System::Console::Write("DblClick(s={0})\n", s);
+   }
+
+   void Handler3(String^ s) {
+      System::Console::WriteLine("DblClickAgain(s={0})\n", s);
+   }
+
+   void AddHandlers(EventSource^ pES) {
+      pES->OnClick +=
+         gcnew ClickEventHandler(this,&EventReceiver::Handler1);
+      pES->OnDblClick +=
+         gcnew DblClickEventHandler(this,&EventReceiver::Handler2);
+      pES->OnDblClick +=
+         gcnew DblClickEventHandler(this, &EventReceiver::Handler3);
+   }
+
+   void RemoveHandlers(EventSource^ pES) {
+      pES->OnClick -=
+         gcnew ClickEventHandler(this, &EventReceiver::Handler1);
+      pES->OnDblClick -=
+         gcnew DblClickEventHandler(this, &EventReceiver::Handler2);
+      pES->OnDblClick -=
+         gcnew DblClickEventHandler(this, &EventReceiver::Handler3);
+   }
+};
+
+int main() {
+   EventSource^ pES = gcnew EventSource;
+   EventReceiver^ pER = gcnew EventReceiver;
+
+   // add handlers
+   pER->AddHandlers(pES);
+
+   pES->FireEvents();
+
+   // remove handlers
+   pER->RemoveHandlers(pES);
+}
+```
+
+**输出**
+
+```Output
+Click(x=7,y=3.14159)
+DblClick(s=System.Char[])
+DblClickAgain(s=System.Char[])
+```
+
+## <a name="static-events"></a>静态事件
+
+下面的示例演示如何定义和使用静态事件。
+
+```
+// mcppv2_events7.cpp
+// compile with: /clr
+using namespace System;
+
+public delegate void MyDel();
+public delegate int MyDel2(int, float);
+
+ref class EventSource {
+public:
+   static MyDel ^ psE;
+   static event MyDel2 ^ E2;   // event keyword, compiler generates add,
+                               // remove, and Invoke
+
+   static event MyDel ^ E {
+      static void add(MyDel ^ p) {
+         psE = static_cast<MyDel^> (Delegate::Combine(psE, p));
+      }
+
+      static void remove(MyDel^ p) {
+         psE = static_cast<MyDel^> (Delegate::Remove(psE, p));
+      }
+
+      static void raise() {
+         if (psE != nullptr)   //psE!=0 -> C2679, use nullptr
+            psE->Invoke();
+      }
+   }
+
+   static int Fire_E2(int i, float f) {
+      return E2(i, f);
+   }
+};
+
+public ref struct EventReceiver {
+   void H1() {
+      Console::WriteLine("In event handler H1");
+   }
+
+   int H2(int i, float f) {
+      Console::WriteLine("In event handler H2 with args {0} and {1}", i.ToString(), f.ToString());
+      return 0;
+   }
+};
+
+int main() {
+   EventSource^ pE = gcnew EventSource;
+   EventReceiver^ pR = gcnew EventReceiver;
+
+   // Called with "this"
+   // hook event handlers
+   pE->E += gcnew MyDel(pR, &EventReceiver::H1);
+   pE->E2 += gcnew MyDel2(pR, &EventReceiver::H2);
+
+   // raise events
+   pE->E();
+   pE->Fire_E2(11, 11.11);
+
+   // unhook event handlers
+   pE->E -= gcnew MyDel(pR, &EventReceiver::H1);
+   pE->E2 -= gcnew MyDel2(pR, &EventReceiver::H2);
+
+   // Not called with "this"
+   // hook event handler
+   EventSource::E += gcnew MyDel(pR, &EventReceiver::H1);
+   EventSource::E2 += gcnew MyDel2(pR, &EventReceiver::H2);
+
+   // raise events
+   EventSource::E();
+   EventSource::Fire_E2(22, 22.22);
+
+   // unhook event handlers
+   EventSource::E -= gcnew MyDel(pR, &EventReceiver::H1);
+   EventSource::E2 -= gcnew MyDel2(pR, &EventReceiver::H2);
+}
+```
+
+**输出**
+
+```Output
+In event handler H1
+In event handler H2 with args 11 and 11.11
+In event handler H1
+In event handler H2 with args 22 and 22.22
+```
+
+## <a name="virtual-events"></a>虚拟事件
+
+此示例在接口和类中实现虚拟的托管事件：
+
+```
+// mcppv2_events5.cpp
+// compile with: /clr
+using namespace System;
+
+public delegate void MyDel();
+public delegate int MyDel2(int, float);
+
+// managed class that has a virtual event
+ref class IEFace {
+public:
+   virtual event MyDel ^ E;   // declares three accessors (add, remove, and raise)
+};
+
+// managed interface that has a virtual event
+public interface struct IEFace2 {
+public:
+   event MyDel2 ^ E2;   // declares two accessors (add and remove)
+};
+
+// implement virtual events
+ref class EventSource : public IEFace, public IEFace2 {
+public:
+   virtual event MyDel2 ^ E2;
+
+   void Fire_E() {
+      E();
+   }
+
+   int Fire_E2(int i, float f) {
+      try {
+         return E2(i, f);
+      }
+      catch(System::NullReferenceException^) {
+         return 0;   // no handlers
+      }
+   }
+};
+
+// class to hold event handlers, the event receiver
+public ref struct EventReceiver {
+   // first handler
+   void H1() {
+      Console::WriteLine("In handler H1");
+   }
+
+   // second handler
+   int H2(int i, float f) {
+      Console::WriteLine("In handler H2 with args {0} and {1}", i.ToString(), f.ToString());
+      return 0;
+   }
+};
+
+int main() {
+   EventSource ^ pE = gcnew EventSource;
+   EventReceiver ^ pR = gcnew EventReceiver;
+
+   // add event handlers
+   pE->E += gcnew MyDel(pR, &EventReceiver::H1);
+   pE->E2 += gcnew MyDel2(pR, &EventReceiver::H2);
+
+   // raise events
+   pE->Fire_E();
+   pE->Fire_E2(1, 2.2);
+
+   // remove event handlers
+   pE->E -= gcnew MyDel(pR, &EventReceiver::H1);
+   pE->E2 -= gcnew MyDel2(pR, &EventReceiver::H2);
+
+   // raise events, but no handlers; so, no effect
+   pE->Fire_E();
+   pE->Fire_E2(1, 2.5);
+}
+```
+
+**输出**
+
+```Output
+In handler H1
+In handler H2 with args 1 and 2.2
+```
+
+简单事件不能指定要重写或隐藏基类事件。  必须定义所有事件访问器函数，然后指定`new`或`override`上每个访问器函数的关键字。
+
+```
+// mcppv2_events5_a.cpp
+// compile with: /clr /c
+delegate void Del();
+
+ref struct A {
+   virtual event Del ^E;
+   virtual event Del ^E2;
+};
+
+ref struct B : A {
+   virtual event Del ^E override;   // C3797
+   virtual event Del ^E2 new;   // C3797
+};
+
+ref struct C : B {
+   virtual event Del ^E {   // OK
+      void raise() override {}
+      void add(Del ^) override {}
+      void remove(Del^) override {}
+   }
+
+   virtual event Del ^E2 {   // OK
+      void raise() new {}
+      void add(Del ^) new {}
+      void remove(Del^) new {}
+   }
+};
+```
+
+## <a name="abstract-events"></a>抽象事件
+
+下面的示例演示如何实现抽象事件。
+
+```
+// mcppv2_events10.cpp
+// compile with: /clr /W1
+using namespace System;
+public delegate void Del();
+public delegate void Del2(String^ s);
+
+interface struct IEvent {
+public:
+   // in this case, no raised method is defined
+   event Del^ Event1;
+
+   event Del2^ Event2 {
+   public:
+      void add(Del2^ _d);
+      void remove(Del2^ _d);
+      void raise(String^ s);
+   }
+
+   void fire();
+};
+
+ref class EventSource: public IEvent {
+public:
+   virtual event Del^ Event1;
+   event Del2^ Event2 {
+      virtual void add(Del2^ _d) {
+         d = safe_cast<Del2^>(System::Delegate::Combine(d, _d));
+      }
+
+      virtual void remove(Del2^ _d) {
+         d = safe_cast<Del2^>(System::Delegate::Remove(d, _d));
+      }
+
+      virtual void raise(String^ s) {
+         if (d) {
+            d->Invoke(s);
+         }
+      }
+   }
+
+   virtual void fire() {
+      return Event1();
+   }
+
+private:
+   Del2^ d;
+};
+
+ref class EventReceiver {
+public:
+   void func() {
+      Console::WriteLine("hi");
+   }
+
+   void func(String^ str) {
+      Console::WriteLine(str);
+   }
+};
+
+int main () {
+   IEvent^ es = gcnew EventSource;
+   EventReceiver^ er = gcnew EventReceiver;
+   es->Event1 += gcnew Del(er, &EventReceiver::func);
+   es->Event2 += gcnew Del2(er, &EventReceiver::func);
+
+   es->fire();
+   es->Event2("hello from Event2");
+   es->Event1 -= gcnew Del(er, &EventReceiver::func);
+   es->Event2 -= gcnew Del2(er, &EventReceiver::func);
+   es->Event2("hello from Event2");
+}
+```
+
+**输出**
+
+```Output
+hi
+hello from Event2
+```
+
+## <a name="raising-events-that-are-defined-in-a-different-assembly"></a>引发在其他程序集中定义的事件
+
+可以在一个程序集中定义和使用另一个程序集的事件和事件处理程序。
+
+```
+// mcppv2_events8.cpp
+// compile with: /LD /clr
+using namespace System;
+
+public delegate void Del(String^ s);
+
+public ref class Source {
+public:
+   event Del^ Event;
+   void Fire(String^ s) {
+      Event(s);
+   }
+};
+```
+
+此客户端代码使用该事件：
+
+```
+// mcppv2_events9.cpp
+// compile with: /clr
+#using "mcppv2_events8.dll"
+using namespace System;
+
+ref class Receiver {
+public:
+   void Handler(String^ s) {
+      Console::WriteLine(s);
+   }
+};
+
+int main() {
+   Source^ src = gcnew Source;
+   Receiver^ rc1 = gcnew Receiver;
+   Receiver^ rc2 = gcnew Receiver;
+   src -> Event += gcnew Del(rc1, &Receiver::Handler);
+   src -> Event += gcnew Del(rc2, &Receiver::Handler);
+   src->Fire("hello");
+   src -> Event -= gcnew Del(rc1, &Receiver::Handler);
+   src -> Event -= gcnew Del(rc2, &Receiver::Handler);
+}
+```
+
+**输出**
+
+```Output
+hello
+hello
+```
+
+## <a name="see-also"></a>请参阅
+
+[event](../windows/event-cpp-component-extensions.md)

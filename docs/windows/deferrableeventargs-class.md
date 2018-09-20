@@ -1,24 +1,32 @@
 ---
 title: DeferrableEventArgs 类 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
+f1_keywords:
+- event/Microsoft::WRL::DeferrableEventArgs
+- event/Microsoft::WRL::DeferrableEventArgs::GetDeferral
+- event/Microsoft::WRL::DeferrableEventArgs::InvokeAllFinished
 dev_langs:
 - C++
+helpviewer_keywords:
+- Microsoft::WRL::DeferrableEventArgs class
+- Microsoft::WRL::DeferrableEventArgs::GetDeferral method
+- Microsoft::WRL::DeferrableEventArgs::InvokeAllFinished method
 ms.assetid: ece89267-7b72-40e1-8185-550c865b070a
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8a53e33d55ccfac7eff763e53240295ea9b7b2a1
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 082cae10bbd01c4c46fcfaa84bfd94ba6178bc1a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42600966"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46401779"
 ---
 # <a name="deferrableeventargs-class"></a>DeferrableEventArgs 类
 
@@ -36,26 +44,26 @@ class DeferrableEventArgs : public TEventArgsInterface
 
 ### <a name="parameters"></a>参数
 
-*TEventArgsInterface*  
+*TEventArgsInterface*<br/>
 声明延迟事件的自变量的接口类型。
 
-*TEventArgsClass*  
+*TEventArgsClass*<br/>
 实现的类*TEventArgsInterface*。
 
 ## <a name="members"></a>成员
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
-|----------|-----------------|
-|[DeferrableEventArgs::GetDeferral 方法](../windows/deferrableeventargs-getdeferral-method.md)|获取对[延迟](http://go.microsoft.com/fwlink/p/?linkid=526520)表示延迟的事件的对象。|
-|[DeferrableEventArgs::InvokeAllFinished 方法](../windows/deferrableeventargs-invokeallfinished-method.md)|调用以指示处理延迟事件的全部过程都已完成。|
+名称                                                         | 描述
+------------------------------------------------------------ | -----------------------------------------------------------------------------------------------------------------------------
+[Deferrableeventargs:: Getdeferral](#getdeferral)             | 获取对[延迟](http://go.microsoft.com/fwlink/p/?linkid=526520)表示延迟的事件的对象。
+[Deferrableeventargs:: Invokeallfinished](#invokeallfinished) | 调用以指示处理延迟事件的全部过程都已完成。
 
 ## <a name="remarks"></a>备注
 
 将此类的实例传递给延迟事件的事件句柄。 模板参数表示一个接口，该接口为特定类型的延迟事件定义事件参数的详细信息以及定义实现该接口的类。
 
-此类显示为一个延迟事件的事件处理程序的第一个自变量。 您可以调用[GetDeferral](../windows/deferrableeventargs-getdeferral-method.md)方法来获取[延迟](http://go.microsoft.com/fwlink/p/?linkid=526520)可以从中获取有关延迟事件的所有信息的对象。 处理完事件后，应对 Deferral 对象调用 Complete。 然后应调用[InvokeAllFinished](../windows/deferrableeventargs-invokeallfinished-method.md)在事件处理程序方法结束时，可确保所有延迟事件的完成已正确传递。
+此类显示为一个延迟事件的事件处理程序的第一个自变量。 您可以调用[GetDeferral](#getdeferral)方法来获取[延迟](http://go.microsoft.com/fwlink/p/?linkid=526520)可以从中获取有关延迟事件的所有信息的对象。 处理完事件后，应对 Deferral 对象调用 Complete。 然后应调用[InvokeAllFinished](#invokeallfinished)在事件处理程序方法结束时，可确保所有延迟事件的完成已正确传递。
 
 ## <a name="requirements"></a>要求
 
@@ -63,6 +71,31 @@ class DeferrableEventArgs : public TEventArgsInterface
 
 **命名空间：** Microsoft::WRL
 
-## <a name="see-also"></a>请参阅
+## <a name="getdeferral"></a>Deferrableeventargs:: Getdeferral
 
-[Microsoft::WRL Namespace](../windows/microsoft-wrl-namespace.md)
+获取对[延迟](http://go.microsoft.com/fwlink/p/?linkid=526520)表示延迟的事件的对象。
+
+```cpp
+HRESULT GetDeferral([out, retval] Windows::Foundation::IDeferral** result)  
+```
+
+### <a name="parameters"></a>参数
+
+*结果*<br/>
+将引用的指针[延迟](http://go.microsoft.com/fwlink/p/?linkid=526520)对象在调用完成时。
+
+### <a name="return-value"></a>返回值
+
+如果成功，则为 S_OK；否则为指示错误的 HRESULT。
+
+## <a name="invokeallfinished"></a>Deferrableeventargs:: Invokeallfinished
+
+调用以指示处理延迟事件的全部过程都已完成。
+  
+```cpp
+void InvokeAllFinished()  
+```
+  
+### <a name="remarks"></a>备注
+
+应在事件源调用后调用此方法[InvokeAll](../windows/eventsource-invokeall-method.md)。 调用此方法将阻止发生进一步的延迟，并且如果没有发生延迟将强制完成处理程序来执行。

@@ -1,5 +1,5 @@
 ---
-title: 1.5 规范引用 |Microsoft 文档
+title: 1.5 规范引用 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,18 +12,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc062a1902e8e3c8f64a98af84fed54c272dc727
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 1be82b922d673d173daabf9185b6936111abc3b8
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33685588"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46444614"
 ---
 # <a name="15-normative-references"></a>1.5 规范引用
--   ISO/IEC 9899: 1999*信息技术-编程语言-C*。此 OpenMP API 规范的 ISO/IEC 9899: 1999 指的是 C99。  
-  
--   ISO/IEC 9899: 1990，*信息技术-编程语言-C*。此 OpenMP API 规范的 ISO/IEC 9899: 1990 指的是 C90。  
-  
--   ISO/IEC 14882:1998*信息技术的编程语言的 c + +*。 此 OpenMP API 规范的 ISO/IEC 14882:1998 指的是 c + +。  
-  
- 在此 OpenMP API 规范是指 C，实现支持的基本语言进行引用。
+
+- ISO/IEC 9899:1999*信息技术-编程语言-C*。此 OpenMP API 规范将 ISO/IEC 9899:1999 称为 C99。
+
+- ISO/IEC 9899:1990*信息技术-编程语言-C*。此 OpenMP API 规范将 ISO/IEC 9899:1990 称为 C90。
+
+- ISO/IEC 14882:1998*信息技术-编程语言-c + +*。 ISO/IEC 14882:1998 作为 c + + 引用此 OpenMP API 规范。
+
+在此 OpenMP API 规范是指 C，引用是对实现支持的基本语言。

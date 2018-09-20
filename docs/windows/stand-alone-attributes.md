@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5d395053231f54570e1bf86ba79f6237b89681fc
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 1c44223dad2ac4d6306bf3896cd8ec7be84a5a2b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315543"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46407759"
 ---
 # <a name="stand-alone-attributes"></a>独立特性
 独立属性不是 c + + 关键字进行操作，但更像是代码行。 独立特性语句需要行尾的分号。
@@ -45,4 +45,5 @@ ms.locfileid: "44315543"
 |[pragma](../windows/pragma.md)|将指定的字符串，而无需引号字符，发送到生成的.idl 文件。|
   
 ## <a name="see-also"></a>请参阅
- [按用法分的特性](../windows/attributes-by-usage.md)
+
+[按用法分的特性](../windows/attributes-by-usage.md)

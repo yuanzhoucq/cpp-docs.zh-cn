@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 09390e25ffe06ce6702aef68d73c352e063a48ef
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 3dbf6d861dd446745ba0cc3581c7e3e5511c01d3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45716776"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46409358"
 ---
 # <a name="generic-classes-ccli"></a>泛型类 (C++/CLI)
 
@@ -47,38 +47,38 @@ class-body
 
 在上述语法中，使用以下术语：
 
-*特性*  
+*特性*<br/>
 （可选）声明性的其他信息。 有关特性和特性类的详细信息，请参阅“特性”。
 
-*类键*  
+*类键*<br/>
 任一**类**或**typename**
 
 *类型的参数的标识符*，标识符指定的类型参数的名称的逗号分隔列表。
 
-*约束子句*  
+*约束子句*<br/>
 （不以逗号分隔） 的列表**其中**子句指定的类型参数约束。 采用格式：
 
 > **其中***类型参数标识符* **:** *约束列表***...** 
 
-*约束列表*  
+*约束列表*<br/>
 *类或接口*[`,` *...*]
 
-*可访问性修饰符*  
+*可访问性修饰符*<br/>
 泛型类的可访问性修饰符。 对于 Windows 运行时，是唯一允许的修饰符**专用**。 公共语言运行时，将允许的修饰符**私有**并**公共**。
 
-*identifier*  
+*identifier*<br/>
 泛型类，任何有效的 c + + 标识符的名称。
 
-*修饰符*  
+*修饰符*<br/>
 （可选）允许的修饰符包括**密封**并**抽象**。
 
-*基础列表*  
+*基础列表*<br/>
 一个列表，其中包含一个基本类和任何实现的接口，所有逗号分隔。
 
-*类-正文*  
+*类-正文*<br/>
 包含字段、 成员函数等的类的正文。
 
-*声明符*  
+*声明符*<br/>
 此类型的任何变量的声明。 例如： `^`*标识符*[`,` ...]
 
 您可以声明如这些泛型类 (请注意，关键字**类**可能使用而不是**typename**)。 在此示例中， `ItemType`，`KeyType`和`ValueType`指定点处的未知类型的类型。 `HashTable<int, int>` 为泛型类型构造的类型`HashTable<KeyType, ValueType>`。 可以从单一的泛型类型构造的不同构造类型数。 构造泛型类的构造的类型来处理任何其他 ref 类类型。

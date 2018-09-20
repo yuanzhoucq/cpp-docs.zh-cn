@@ -23,12 +23,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 34030a8ef91e5a25bdb1a13981925c5ddf1f05df
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: a32106dd9802643a827f8a3e97298f389d31d3b4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45721547"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46430665"
 ---
 # <a name="u-u-undefine-symbols"></a>/U、/u（未定义符号）
 
@@ -83,7 +83,7 @@ ms.locfileid: "45721547"
 
 [编译器选项](../../build/reference/compiler-options.md)<br/>
 [设置编译器选项](../../build/reference/setting-compiler-options.md)<br/>
-[/J (默认 char 类型是无符号)](../../build/reference/j-default-char-type-is-unsigned.md)
-[/GR （启用运行时类型信息）](../../build/reference/gr-enable-run-time-type-information.md)
-[/EH （异常处理模型）](../../build/reference/eh-exception-handling-model.md) 
- [/MD、 /MT、 /LD （使用运行时库）](../../build/reference/md-mt-ld-use-run-time-library.md)
+[/J（默认 char 类型是无符号的）](../../build/reference/j-default-char-type-is-unsigned.md)<br/>
+[/GR（启用运行时类型信息）](../../build/reference/gr-enable-run-time-type-information.md)<br/>
+[/EH（异常处理模型）](../../build/reference/eh-exception-handling-model.md)<br/>
+[/MD、/MT、/LD（使用运行时库）](../../build/reference/md-mt-ld-use-run-time-library.md)

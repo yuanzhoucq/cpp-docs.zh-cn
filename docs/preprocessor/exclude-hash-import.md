@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d700f19235ac18af27fa958420aa4ed467807624
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: e5798c7515c411b9abf9d10229a6185e01bb92f7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42538388"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46400193"
 ---
 # <a name="exclude-import"></a>exclude (#import)
 **C + + 专用**  
@@ -49,5 +49,5 @@ exclude("Name1"[, "Name2",...])
   
 ## <a name="see-also"></a>请参阅  
  
-[#import 属性](../preprocessor/hash-import-attributes-cpp.md)   
+[#import 属性](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [#import 指令](../preprocessor/hash-import-directive-cpp.md)

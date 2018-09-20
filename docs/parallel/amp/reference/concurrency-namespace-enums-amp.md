@@ -1,5 +1,5 @@
 ---
-title: 并发命名空间枚举 (AMP) |Microsoft 文档
+title: 并发命名空间枚举 (AMP) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: reference
@@ -13,47 +13,50 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a67b5e77b8ab8c52e55dea96e64a3f16a4d70e39
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: d4f842b799a81179fa1a612e652aae391ca3375d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695663"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46435657"
 ---
 # <a name="concurrency-namespace-enums-amp"></a>并发命名空间枚举 (AMP)
-|||  
-|-|-|  
-|[access_type 枚举](#access_type)|[queuing_mode 枚举](#queuing_mode)|  
-  
-##  <a name="access_type"></a>  access_type 枚举  
- 用于表示数据的访问权限的各种类型的枚举类型。  
-  
-```  
-enum access_type;  
-```  
-### <a name="values"></a>值  
-  
-|名称|描述|  
-|----------|-----------------|  
-|`access_type_auto`|自动选择最佳`access_type`快捷键。|  
-|`access_type_none`|专用。 分配仅可在快捷键上和不在 CPU 上访问。|  
-|`access_type_read`|共享。 分配快捷键上是可访问且在 CPU 上可读。|  
-|`access_type_read_write`|共享。 分配快捷键上是可访问以及在 CPU 上可写。|  
-|`access_type_write`|共享。 分配快捷键上是可访问和可读且在 CPU 上可写。|  
 
-  
-##  <a name="queuing_mode"></a>  queuing_mode 枚举  
- 指定在快捷键受支持的排队模式。  
-  
-```  
-enum queuing_mode;  
-``` 
-### <a name="values"></a>值  
-  
-|名称|描述|  
-|----------|-----------------|  
-|`queuing_mode_immediate`|对任何指定排队模式命令，例如， [parallel_for_each 函数 (c + + AMP)](concurrency-namespace-functions-amp.md#parallel_for_each)，只要它们返回到调用方发送到相应的快捷键设备。|  
-|`queuing_mode_automatic`|指定命令，将在对应的命令队列上排队的排队模式[accelerator_view](accelerator-view-class.md)对象。 命令发送到设备时[accelerator_view:: flush](accelerator-view-class.md#flush)调用。|   
-  
-## <a name="see-also"></a>请参阅  
- [并发命名空间 (C++ AMP)](concurrency-namespace-cpp-amp.md)
+|||
+|-|-|
+|[access_type 枚举](#access_type)|[queuing_mode 枚举](#queuing_mode)|
+
+##  <a name="access_type"></a>  access_type 枚举
+
+用于表示对数据的访问的各种类型的枚举类型。
+
+```
+enum access_type;
+```
+### <a name="values"></a>值
+
+|名称|描述|
+|----------|-----------------|
+|`access_type_auto`|自动选择最佳`access_type`加速器。|
+|`access_type_none`|专用。 分配才可访问加速器上而不是 CPU。|
+|`access_type_read`|共享。 分配可通过快捷键访问，并且是在 CPU 上可读。|
+|`access_type_read_write`|共享。 分配可通过快捷键访问，并且是在 CPU 上可写。|
+|`access_type_write`|共享。 分配可通过快捷键访问，并且是可读且在 CPU 上可写。|
+
+##  <a name="queuing_mode"></a>  queuing_mode 枚举
+
+指定在快捷键支持的排队模式。
+
+```
+enum queuing_mode;
+```
+### <a name="values"></a>值
+
+|名称|描述|
+|----------|-----------------|
+|`queuing_mode_immediate`|指定任何的排队模式命令，例如， [parallel_for_each 函数 (c + + AMP)](concurrency-namespace-functions-amp.md#parallel_for_each)，只要它们返回给调用方发送到相应的加速器设备。|
+|`queuing_mode_automatic`|指定命令必须排对应的命令队列的排队模式[accelerator_view](accelerator-view-class.md)对象。 命令发送到设备时[accelerator_view:: flush](accelerator-view-class.md#flush)调用。|
+
+## <a name="see-also"></a>请参阅
+
+[并发命名空间 (C++ AMP)](concurrency-namespace-cpp-amp.md)

@@ -1,5 +1,5 @@
 ---
-title: __noop |Microsoft 文档
+title: __noop |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,39 +17,42 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14d7ab3f1a61dc0644bf5683376ac676fbfcd6b9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 97820367f0960925dfcac1db339260cd3f52b8bc
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33322609"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46430210"
 ---
 # <a name="noop"></a>__noop
-**Microsoft 专用**  
-  
- `__noop`内部函数，则指定应忽略的函数和分析自变量列表，但没有代码将生成的自变量。 它被预定在采用数量可变的自变量的全局调试函数中使用。  
-  
- 编译器将转换`__noop`内部函数在编译时的 0 到。  
-  
-## <a name="example"></a>示例  
- 下面的代码演示如何使用`__noop`。  
-  
-```  
-// compiler_intrinsics__noop.cpp  
-// compile with or without /DDEBUG  
-#include <stdio.h>  
-  
-#if DEBUG  
-   #define PRINT   printf_s  
-#else  
-   #define PRINT   __noop  
-#endif  
-  
-int main() {  
-   PRINT("\nhello\n");  
-}  
-```  
-  
-## <a name="see-also"></a>请参阅  
- [编译器内部函数](../intrinsics/compiler-intrinsics.md)   
- [关键字](../cpp/keywords-cpp.md)
+
+**Microsoft 专用**
+
+`__noop`内部函数，则指定应忽略函数和参数列表进行分析，但没有代码生成的自变量。 它被适用于在采用可变数量的参数的全局调试函数中使用。
+
+编译器将为`__noop`0 在编译时的内部。
+
+## <a name="example"></a>示例
+
+下面的代码演示如何使用`__noop`。
+
+```
+// compiler_intrinsics__noop.cpp
+// compile with or without /DDEBUG
+#include <stdio.h>
+
+#if DEBUG
+   #define PRINT   printf_s
+#else
+   #define PRINT   __noop
+#endif
+
+int main() {
+   PRINT("\nhello\n");
+}
+```
+
+## <a name="see-also"></a>请参阅
+
+[编译器内部函数](../intrinsics/compiler-intrinsics.md)<br/>
+[关键字](../cpp/keywords-cpp.md)

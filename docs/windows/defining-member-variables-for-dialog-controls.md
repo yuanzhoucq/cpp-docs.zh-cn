@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e6734391e56f076f247bd8887a7fdb61142b3669
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: fa4d894fb3fc436abab84bfee11199f59bd66f78
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317857"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46402390"
 ---
 # <a name="defining-member-variables-for-dialog-controls-c"></a>定义对话框控件 （c + +） 的成员变量
 
@@ -55,11 +55,11 @@ MFC
 
 ## <a name="see-also"></a>请参阅
 
-[将消息映射到函数](../mfc/reference/mapping-messages-to-functions.md)  
-[用代码向导添加功能](../ide/adding-functionality-with-code-wizards-cpp.md)  
-[MFC 类向导](../mfc/reference/mfc-class-wizard.md)  
-[添加类](../ide/adding-a-class-visual-cpp.md)  
-[添加成员函数](../ide/adding-a-member-function-visual-cpp.md)  
-[添加成员变量](../ide/adding-a-member-variable-visual-cpp.md)  
-[重写虚函数](../ide/overriding-a-virtual-function-visual-cpp.md)  
+[将消息映射到函数](../mfc/reference/mapping-messages-to-functions.md)<br/>
+[用代码向导添加功能](../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
+[MFC 类向导](../mfc/reference/mfc-class-wizard.md)<br/>
+[添加类](../ide/adding-a-class-visual-cpp.md)<br/>
+[添加成员函数](../ide/adding-a-member-function-visual-cpp.md)<br/>
+[添加成员变量](../ide/adding-a-member-variable-visual-cpp.md)<br/>
+[重写虚函数](../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
 [MFC 消息处理程序](../mfc/reference/adding-an-mfc-message-handler.md)

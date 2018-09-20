@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6c2de62df47e46183c1169956a18ddc10822b22a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 99e82de06f64816521c47c78648108a9ae815279
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42611916"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46443223"
 ---
 # <a name="dontusenewusemakeoperator-new-operator"></a>DontUseNewUseMake::operator new 运算符
 
@@ -39,10 +39,10 @@ void* operator new(
 
 ### <a name="parameters"></a>参数
 
-*__unnamed0*  
+*__unnamed0*<br/>
 一个未命名的参数，它指定要分配的内存字节数。
 
-*放置*  
+*放置*<br/>
 要分配的类型。
 
 ## <a name="return-value"></a>返回值
@@ -61,5 +61,5 @@ void* operator new(
 
 ## <a name="see-also"></a>请参阅
 
-[DontUseNewUseMake 类](../windows/dontusenewusemake-class.md)  
+[DontUseNewUseMake 类](../windows/dontusenewusemake-class.md)<br/>
 [Microsoft::WRL::Details 命名空间](../windows/microsoft-wrl-details-namespace.md)

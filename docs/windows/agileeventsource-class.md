@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8efebf67d87decef1fb6e53f2efa42acc9ac487c
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4f8ef724c78bdc61ef470199fbb5e956e374493f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46068515"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46405232"
 ---
 # <a name="agileeventsource-class"></a>AgileEventSource 类
 
@@ -83,10 +83,10 @@ HRESULT Add(
 
 ### <a name="parameters"></a>参数
 
-*delegateInterface*  
+*delegateInterface*<br/>
 为委托对象，表示事件处理程序的接口。
 
-*令牌*  
+*令牌*<br/>
 此操作完成后，表示该事件的句柄。 使用此令牌作为参数`Remove()`方法，丢弃的事件处理程序。
 
 ### <a name="return-value"></a>返回值

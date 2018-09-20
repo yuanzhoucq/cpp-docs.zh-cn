@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5cae3a52c3434317ee26292de13d3e0471d78998
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 67d077ca620661ffda2e8664b2a4fb9ef5ea7168
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42541355"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46408253"
 ---
 # <a name="noautoexclude"></a>no_auto_exclude
 **C + + 专用**  
@@ -42,5 +42,5 @@ no_auto_exclude
   
 ## <a name="see-also"></a>请参阅  
  
-[#import 属性](../preprocessor/hash-import-attributes-cpp.md)   
+[#import 属性](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [#import 指令](../preprocessor/hash-import-directive-cpp.md)

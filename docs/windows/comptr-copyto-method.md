@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c295767070da04d0173e3299576338e700a1c6aa
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: c9b84cbcc970183222ed06752dc61b5672615868
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42597008"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46405380"
 ---
 # <a name="comptrcopyto-method"></a>ComPtr::CopyTo 方法
 
@@ -48,13 +48,13 @@ HRESULT CopyTo(
 
 ### <a name="parameters"></a>参数
 
-*U*  
+*U*<br/>
 类型名称。
 
-*ptr*  
+*ptr*<br/>
 此操作完成后，指向所请求的接口的指针。
 
-*riid*  
+*riid*<br/>
 接口 ID。
 
 ## <a name="return-value"></a>返回值

@@ -1,5 +1,5 @@
 ---
-title: STL/CLR 容器元素的要求 |Microsoft 文档
+title: STL/CLR 容器元素的需求 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,25 +18,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 523b3e8d3f9c04a933f37032fcea670d75dafccf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fcba36fdf280cef31efb9a84288475fcbb82b291
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33162431"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46400414"
 ---
 # <a name="requirements-for-stlclr-container-elements"></a>STL/CLR 容器元素的需求
-插入 STL/CLR 容器的所有引用类型必须至少具有以下元素：  
-  
--   公共复制构造函数。  
-  
--   公共赋值运算符。  
-  
--   公共析构函数。  
-  
- 此外，如的关联容器[设置](../dotnet/set-stl-clr.md)和[映射](../dotnet/map-stl-clr.md)必须具有公共比较运算符定义，即`operator<`默认情况下。 对容器的某些运算还可能需要定义公共默认构造函数和公共等效运算符。  
-  
- 与引用类型相似，要插入关联容器的引用类型的值类型和句柄必须有一个比较运算符，如 `operator<`。 引用类型的值类型或句柄没有对公共复制构造函数、公共赋值运算符和公共析构函数的需求。  
-  
-## <a name="see-also"></a>请参阅  
- [C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)
+
+插入 STL/CLR 容器的所有引用类型必须至少具有以下元素：
+
+- 公共复制构造函数。
+
+- 公共赋值运算符。
+
+- 公共析构函数。
+
+此外，如关联容器[设置](../dotnet/set-stl-clr.md)并[地图](../dotnet/map-stl-clr.md)必须具有公共比较运算符定义，这是`operator<`默认情况下。 对容器的某些运算还可能需要定义公共默认构造函数和公共等效运算符。
+
+与引用类型相似，要插入关联容器的引用类型的值类型和句柄必须有一个比较运算符，如 `operator<`。 引用类型的值类型或句柄没有对公共复制构造函数、公共赋值运算符和公共析构函数的需求。
+
+## <a name="see-also"></a>请参阅
+
+[C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)
