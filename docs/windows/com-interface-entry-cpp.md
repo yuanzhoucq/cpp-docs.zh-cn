@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9c0b2c53bf06a748be522606f5904f307cc00df8
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 555dcfe83ab114db48942a5be604ff344dafa8ed
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42591351"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46398711"
 ---
 # <a name="cominterfaceentry-c"></a>com_interface_entry (C++)
 
@@ -38,7 +38,7 @@ ms.locfileid: "42591351"
 
 ### <a name="parameters"></a>参数
 
-*com_interface_entry*  
+*com_interface_entry*<br/>
 包含的项的实际文本的字符串。 有关可能的值的列表，请参阅[COM_INTERFACE_ENTRY 宏](../atl/reference/com-interface-entry-macros.md)。
 
 ## <a name="remarks"></a>备注
@@ -130,6 +130,6 @@ END_COM_MAP()
 
 ## <a name="see-also"></a>请参阅
 
-[COM 特性](../windows/com-attributes.md)  
-[类特性](../windows/class-attributes.md)  
+[COM 特性](../windows/com-attributes.md)<br/>
+[类特性](../windows/class-attributes.md)<br/>
 [Typedef、Enum、Union 和 Struct 特性](../windows/typedef-enum-union-and-struct-attributes.md)  

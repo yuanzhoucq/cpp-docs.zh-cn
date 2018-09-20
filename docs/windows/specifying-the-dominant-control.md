@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a4721cec6ebc11cf2107afe0048da90164c0f47f
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 31bb19a0854bd28573d474a65781808eaecd7ce2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315556"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46407561"
 ---
 # <a name="specifying-the-dominant-control"></a>指定主导控件
 
@@ -48,6 +48,6 @@ Win32
 
 ## <a name="see-also"></a>请参阅
 
-[选定多个控件](../windows/selecting-multiple-controls.md)  
-[“选择”控件](../windows/selecting-controls.md)  
+[选定多个控件](../windows/selecting-multiple-controls.md)<br/>
+[“选择”控件](../windows/selecting-controls.md)<br/>
 [对话框中的控件](../windows/controls-in-dialog-boxes.md)

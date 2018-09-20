@@ -1,5 +1,5 @@
 ---
-title: 树控件项位置 |Microsoft 文档
+title: 树控件项位置 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,23 +17,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7b7576786f456320a355920a7a9ef9e4935ab03
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7e24c21a8a44f09e9141b1763646d1a887bda158
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382146"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46412088"
 ---
 # <a name="tree-control-item-position"></a>树控件项位置
-向树控件添加项时设置某一项的初始位置 ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) 通过使用`InsertItem`成员函数。 成员函数调用指定的父项的句柄和句柄的新项之后要插入的项。 第二个句柄必须标识给定父的子项目或这些值之一： `TVI_FIRST`， `TVI_LAST`，或`TVI_SORT`。  
-  
- 当`TVI_FIRST`或`TVI_LAST`指定，则树控件将新项的开头或末尾给定的父项的子项列表。 当`TVI_SORT`指定，则树控件将新项插入到的项标签的文本所基于的按字母顺序的子项列表。  
-  
- 通过调用放入字母顺序的子项的父项的列表[SortChildren](../mfc/reference/ctreectrl-class.md#sortchildren)成员函数。 此函数包括一个参数，指定是否所有级别的降序从给定的父项的子项还进行了按字母顺序都排序。  
-  
- [SortChildrenCB](../mfc/reference/ctreectrl-class.md#sortchildrencb)成员函数使你可以根据你定义的条件的子项进行排序。 在调用此函数时，你指定一个应用程序定义的回调函数，可以调用树控件，每当需要确定的两个子项的相对顺序。 回调函数接收两个 32 位应用程序定义的值进行比较的项和一个第三个 32 位值，在调用时指定`SortChildrenCB`。  
-  
-## <a name="see-also"></a>请参阅  
- [使用 CTreeCtrl](../mfc/using-ctreectrl.md)   
- [控件](../mfc/controls-mfc.md)
+
+当项添加到树控件设置了项的初始位置 ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) 使用`InsertItem`成员函数。 成员函数调用指定的父项句柄并在其后插入新项的项的句柄。 第二个句柄必须标识给定父级的子项目或这些值之一： `TVI_FIRST`， `TVI_LAST`，或`TVI_SORT`。
+
+当`TVI_FIRST`或`TVI_LAST`指定，则树控件将新项放置在开头或末尾的子项目的给定的父项的列表。 当`TVI_SORT`树控件将新项插入到按字母顺序对项标签的文本中的子项目列表的指定。
+
+您可以通过调用放置于按字母顺序的子项目的父项的列表[SortChildren](../mfc/reference/ctreectrl-class.md#sortchildren)成员函数。 此函数包含一个参数，指定是否也按字母顺序排序的降序从给定的父项的子项目的所有级别。
+
+[SortChildrenCB](../mfc/reference/ctreectrl-class.md#sortchildrencb)成员函数允许您根据您定义的条件的子项进行排序。 当调用此函数时，您指定的树控件，可以调用时需要确定两个子项的相对顺序的应用程序定义的回调函数。 回调函数接收两个 32 位应用程序定义的值进行比较的项和调用时指定一个第三个 32 位值`SortChildrenCB`。
+
+## <a name="see-also"></a>请参阅
+
+[使用 CTreeCtrl](../mfc/using-ctreectrl.md)<br/>
+[控件](../mfc/controls-mfc.md)
 

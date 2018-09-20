@@ -25,12 +25,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 18616b1010dfe6a23861c512b1113c30fe5251ce
-ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
+ms.openlocfilehash: 27a2cfaaf4ddb5ae58cdcd212b5fdcb7ded73bb0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45535348"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46434721"
 ---
 # <a name="implements-structure"></a>Implements 结构
 
@@ -69,37 +69,37 @@ struct __declspec(novtable) Implements<RuntimeClassFlags<flags>, I0, I1, I2, I3,
 
 ### <a name="parameters"></a>参数
 
-*I0*  
+*I0*<br/>
 第零个接口 id。 （必需）
 
-*I1*  
+*I1*<br/>
 第一个接口 id。 （可选）
 
-*I2*  
+*I2*<br/>
 第二个接口 id。 （可选）
 
-*I3*  
+*I3*<br/>
 第三个接口 id。 （可选）
 
-*I4*  
+*I4*<br/>
 第四个接口 id。 （可选）
 
-*I5*  
+*I5*<br/>
 第五个接口 id。 （可选）
 
-*I6*  
+*I6*<br/>
 第六个接口 id。 （可选）
 
-*I7*  
+*I7*<br/>
 第七个接口 id。 （可选）
 
-*I8*  
+*I8*<br/>
 第八个接口 id。 （可选）
 
-*I9*  
+*I9*<br/>
 第九个接口 id。 （可选）
 
-*flags*  
+*flags*<br/>
 配置标志的类。 一个或多个[RuntimeClassType](../windows/runtimeclasstype-enumeration.md)中指定的枚举[RuntimeClassFlags](../windows/runtimeclassflags-structure.md)结构。
 
 ## <a name="remarks"></a>备注
@@ -163,10 +163,10 @@ __forceinline HRESULT CanCastTo(
 
 ### <a name="parameters"></a>参数
 
-*riid*  
+*riid*<br/>
 对接口 id。
 
-*ppv*  
+*ppv*<br/>
 如果成功，指向接口由指定*riid*。
 
 ### <a name="return-value"></a>返回值
@@ -206,10 +206,10 @@ __forceinline static void FillArrayWithIid(
 
 ### <a name="parameters"></a>参数
 
-*index*  
+*index*<br/>
 一个从零开始的索引，该值指示此操作的起始数组元素。 此操作完成后，*索引*都会增加 1。
 
-*iid*  
+*iid*<br/>
 类型 IID 的数组。
 
 ### <a name="remarks"></a>备注

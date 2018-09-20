@@ -1,5 +1,5 @@
 ---
-title: 初始化 CStatusBarCtrl 对象的组成部分 |Microsoft 文档
+title: 初始化 CStatusBarCtrl 对象的组成部分 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,25 +22,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89cea1516924530f821003affd96e2848687882b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5fa5c4da3bb91983eceea739d42fae12e73b9b0f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344329"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46406716"
 ---
 # <a name="initializing-the-parts-of-a-cstatusbarctrl-object"></a>初始化 CStatusBarCtrl 对象的组成部分
-默认情况下，状态栏使用独立的窗格显示状态信息。 这些窗格（也称为部件）可包含文本字符串、图标或两者。  
-  
- 使用[SetParts](../mfc/reference/cstatusbarctrl-class.md#setparts)若要定义多少部件和长度，状态栏将具有。 创建状态栏的部件后，请调用[SetText](../mfc/reference/cstatusbarctrl-class.md#settext)和[SetIcon](../mfc/reference/cstatusbarctrl-class.md#seticon)以设置的文本或图标的状态栏的特定部分。 成功设置部件后，控件会自动重绘。  
-  
- 以下示例初始化具有四个窗格的现有 `CStatusBarCtrl` 对象 (`m_StatusBarCtrl`)，然后在第二个部件中设置一个图标 (IDI_ICON1) 和一些文本。  
-  
- [!code-cpp[NVC_MFCControlLadenDialog#31](../mfc/codesnippet/cpp/initializing-the-parts-of-a-cstatusbarctrl-object_1.cpp)]  
-  
- 有关详细信息的模式设置`CStatusBarCtrl`对象到简单，请参阅[设置 CStatusBarCtrl 对象的模式](../mfc/setting-the-mode-of-a-cstatusbarctrl-object.md)。  
-  
-## <a name="see-also"></a>请参阅  
- [使用 CStatusBarCtrl](../mfc/using-cstatusbarctrl.md)   
- [控件](../mfc/controls-mfc.md)
+
+默认情况下，状态栏使用独立的窗格显示状态信息。 这些窗格（也称为部件）可包含文本字符串、图标或两者。
+
+使用[SetParts](../mfc/reference/cstatusbarctrl-class.md#setparts)若要定义部件的数量和长度，状态栏将具有。 创建状态栏的部件后，请调用[SetText](../mfc/reference/cstatusbarctrl-class.md#settext)并[SetIcon](../mfc/reference/cstatusbarctrl-class.md#seticon)若要设置的文本或图标状态栏的特定部分。 成功设置部件后，控件会自动重绘。
+
+以下示例初始化具有四个窗格的现有 `CStatusBarCtrl` 对象 (`m_StatusBarCtrl`)，然后在第二个部件中设置一个图标 (IDI_ICON1) 和一些文本。
+
+[!code-cpp[NVC_MFCControlLadenDialog#31](../mfc/codesnippet/cpp/initializing-the-parts-of-a-cstatusbarctrl-object_1.cpp)]
+
+有关如何设置模式的详细信息`CStatusBarCtrl`对象到简单，请参阅[设置 CStatusBarCtrl 对象的模式](../mfc/setting-the-mode-of-a-cstatusbarctrl-object.md)。
+
+## <a name="see-also"></a>请参阅
+
+[使用 CStatusBarCtrl](../mfc/using-cstatusbarctrl.md)<br/>
+[控件](../mfc/controls-mfc.md)
 

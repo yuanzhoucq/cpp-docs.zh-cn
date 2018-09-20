@@ -25,12 +25,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54968c551a79dbda1f81af682222e22ced5fdf0f
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 0a851f93ae845d56b9c986e822e94970ad5cccd5
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45700082"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46427129"
 ---
 # <a name="fp-name-pch-file"></a>/Fp（命名 .Pch 文件）
 
@@ -80,7 +80,7 @@ CL /YuMYAPP.H /FpMYPCH.PCH PROG.CPP
 
 ## <a name="see-also"></a>请参阅
 
-[输出文件 (/ F) 选项](../../build/reference/output-file-f-options.md)
+[输出文件 (/F) 选项](../../build/reference/output-file-f-options.md)<br/>
 [编译器选项](../../build/reference/compiler-options.md)<br/>
 [设置编译器选项](../../build/reference/setting-compiler-options.md)<br/>
 [指定路径名](../../build/reference/specifying-the-pathname.md)

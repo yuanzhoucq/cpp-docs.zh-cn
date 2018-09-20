@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 63adaad4fe074225ef32d99edd2a1402acf5e045
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 528245bd2b0ef734ce192f266fe73e813078a568
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45709119"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46407291"
 ---
 # <a name="validate-charset-validate-for-compatible-characters"></a>/validate-charset （验证兼容的字符）
 
@@ -57,6 +57,6 @@ Visual Studio 使用的源字符集和执行字符集之间的转换过程的内
 
 [编译器选项](../../build/reference/compiler-options.md)<br/>
 [设置编译器选项](../../build/reference/setting-compiler-options.md)<br/>
-[/execution-charset （设置执行字符集）](../../build/reference/execution-charset-set-execution-character-set.md)
-[/source-charset （设置源字符集）](../../build/reference/source-charset-set-source-character-set.md)
-[/utf-8 （设置源和可执行文件为 utf-8 字符集）](../../build/reference/utf-8-set-source-and-executable-character-sets-to-utf-8.md)
+[/execution-charset （设置执行字符集）](../../build/reference/execution-charset-set-execution-character-set.md)<br/>
+[/source-charset（设置源字符集）](../../build/reference/source-charset-set-source-character-set.md)<br/>
+[/utf-8（将源和可执行字符集设置为 UTF-8）](../../build/reference/utf-8-set-source-and-executable-character-sets-to-utf-8.md)

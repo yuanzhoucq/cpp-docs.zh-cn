@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c13635f4b73ee34de11b8c18b0cdd9943b261a29
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 6123f87abb9922a9736ac56f64d28e78887a0fdd
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42591180"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46403563"
 ---
 # <a name="hstringreferencehstringreference-constructor"></a>HStringReference::HStringReference 构造函数
 
@@ -41,16 +41,16 @@ HStringReference(HStringReference&& other) throw();
 
 ### <a name="parameters"></a>参数
 
-*sizeDest*  
+*sizeDest*<br/>
 指定的目标大小的模板参数**HStringReference**缓冲区。
 
-*str*  
+*str*<br/>
 对宽字符串的引用。
 
-*Len*  
+*Len*<br/>
 最大长度*str*要在此操作中使用的参数缓冲区。 如果*len*参数未指定，整个*str*使用参数。 如果*len*大于*sizeDest*， *len*设置为*sizeDest*-1。
 
-*other*  
+*other*<br/>
 另一个**HStringReference**对象。
 
 ## <a name="remarks"></a>备注

@@ -1,5 +1,5 @@
 ---
-title: 值类型和它们的行为 (C + + /cli CLI) |Microsoft 文档
+title: 值类型及其行为 (C + + CLI) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,29 +15,32 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 9c05d6198b57eeee473ab7a5ec467083a5783a55
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4d2d980e48a6f948c35faf0c4e42969795ef8dc7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33169538"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46404652"
 ---
 # <a name="value-types-and-their-behaviors-ccli"></a>值类型及其行为 (C++/CLI)
-值类型已以多种方式从托管扩展中的 c + + 更改为 Visual c + +。 在本部分中，我们看看 CLR 枚举类型以及值类类型，以及查看装箱和到 CLR 堆上的装箱实例的访问，以及一看内部和钉住指针。 在此区域中进行了广泛的语言更改。  
-  
-## <a name="in-this-section"></a>本节内容  
- [CLR 枚举类型](../dotnet/value-types-and-their-behaviors-cpp-cli.md)  
- 讨论中的声明和枚举的行为的更改。  
-  
- [值类型的隐式装箱](../dotnet/implicit-boxing-of-value-types.md)  
- 讨论动机是针对隐式装箱的值类型和行为中的后续更改。  
-  
- [装箱值的跟踪句柄](../dotnet/a-tracking-handle-to-a-boxed-value.md)  
- 讨论如何隐式装箱的值类型转换为装箱的值对象的跟踪句柄。  
-  
- [值类型语义](../dotnet/value-type-semantics.md)  
- 讨论对值类型语义，包括继承的虚方法、 类默认构造函数、 内部指针，并钉住指针的更改。  
-  
-## <a name="see-also"></a>请参阅  
- [C + + /cli 迁移入门](../dotnet/cpp-cli-migration-primer.md)   
- [类和结构](../windows/classes-and-structs-cpp-component-extensions.md)
+
+值类型的已更改以各种方式从托管扩展 c + + Visual c + +。 在本部分中，我们查看 CLR 枚举类型和值类类型，以及查看装箱和 CLR 堆上的已装箱实例访问权限，以及内部指针和钉住指针看。 在此区域中进行了广泛的语言更改。
+
+## <a name="in-this-section"></a>本节内容
+
+[CLR 枚举类型](../dotnet/value-types-and-their-behaviors-cpp-cli.md)<br/>
+讨论声明和行为的枚举中的更改。
+
+[值类型的隐式装箱](../dotnet/implicit-boxing-of-value-types.md)<br/>
+介绍隐式装箱的值类型和行为中的后续更改的动机。
+
+[装箱值的跟踪句柄](../dotnet/a-tracking-handle-to-a-boxed-value.md)<br/>
+讨论如何隐式装箱值的类型转换为的跟踪句柄的装箱的值对象。
+
+[值类型语义](../dotnet/value-type-semantics.md)<br/>
+讨论对值类型语义，包括继承的虚方法、 类默认构造函数、 内部指针和钉住指针更改。
+
+## <a name="see-also"></a>请参阅
+
+[C++/CLI 迁移入门](../dotnet/cpp-cli-migration-primer.md)<br/>
+[类和结构](../windows/classes-and-structs-cpp-component-extensions.md)

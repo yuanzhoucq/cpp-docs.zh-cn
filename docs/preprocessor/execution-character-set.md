@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3f6851813172c39cd3c8c5dfe19b4d12ba81d090
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: a387b051bbecedd1c6c4dba8fc3881a3c1f3a4b9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42539548"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46446811"
 ---
 # <a name="executioncharacterset"></a>execution_character_set
 指定执行字符集，用于字符串和字符文本。 此指令则不需要使用 u8 前缀标记的文字。  
@@ -50,6 +50,6 @@ ms.locfileid: "42539548"
   
 ## <a name="see-also"></a>请参阅  
  
-[Pragma 指令和 __Pragma 关键字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)   
-[/execution-charset （设置执行字符集）](../build/reference/execution-charset-set-execution-character-set.md)   
+[Pragma 指令和 __Pragma 关键字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)<br/>
+[/execution-charset （设置执行字符集）](../build/reference/execution-charset-set-execution-character-set.md)<br/>
 [/utf-8（将源和可执行字符集设置为 UTF-8）](../build/reference/utf-8-set-source-and-executable-character-sets-to-utf-8.md)

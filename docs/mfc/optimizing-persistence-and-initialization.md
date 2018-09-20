@@ -1,5 +1,5 @@
 ---
-title: 优化持久性和初始化 |Microsoft 文档
+title: 优化持久性和初始化 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,42 +17,44 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d03966cb61e1ccab3f8f3886638efdf95a534a73
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 395fc71f42dd947de331051233a5dcce086f7bb3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36930308"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46400804"
 ---
 # <a name="optimizing-persistence-and-initialization"></a>优化持久性和初始化
-默认情况下，持久性和初始化的控件中处理通过`DoPropExchange`成员函数。 在典型的控件中，该函数包含到多个调用**PX_** 函数 (`PX_Color`， `PX_Font`，依次类推)，一个用于每个属性。  
-  
- 此方法具有优势，单个`DoPropExchange`可以用于实现，用于初始化、 持久性采用二进制格式，以及为采用由一些容器使用的所谓的"属性的包"格式的暂留。 此一个函数提供了有关的属性和及其默认值以一个方便的位置的所有信息。  
-  
- 但是，此一般性会降低效率。 **PX_** 函数获取通过本质上是不太多层实现其灵活性高效相比更直接，但不太灵活的方法。 此外，如果控件将传递到的默认值**PX_** 函数，每次，即使在环境下的默认值一定不能使用时必须提供默认值。 如果生成的默认值为普通的任务 （例如，从环境属性获取值时），则额外，在不使用默认值的位置的情况下进行不必要的工作。  
-  
- 你可以通过重写控件的提高控件的二进制暂留性能`Serialize`函数。 此成员函数的默认实现将调用你`DoPropExchange`函数。 通过重写它，你可以提供更直接为二进制持久性的实现。 例如，考虑这`DoPropExchange`函数：  
-  
- [!code-cpp[NVC_MFC_AxOpt#1](../mfc/codesnippet/cpp/optimizing-persistence-and-initialization_1.cpp)]  
-  
- 若要提高此控件的二进制持久性的性能，可以重写`Serialize`函数，如下所示：  
-  
- [!code-cpp[NVC_MFC_AxOpt#2](../mfc/codesnippet/cpp/optimizing-persistence-and-initialization_2.cpp)]  
-  
- `dwVersion`局部变量可以用于检测正在加载或保存的控件的持久状态的版本。 你可以使用此变量，而不是调用[CPropExchange::GetVersion](../mfc/reference/cpropexchange-class.md#getversion)。  
-  
- 在的持久性格式中节省少量空间**BOOL**属性 (需要与生成的格式兼容和`PX_Bool`)，你可以存储属性作为**字节**、，如下所示：  
-  
- [!code-cpp[NVC_MFC_AxOpt#3](../mfc/codesnippet/cpp/optimizing-persistence-and-initialization_3.cpp)]  
-  
- 请注意，在负载情况下，使用临时变量，然后分配其值，而不是强制转换*m_boolProp*到**字节**引用。 强制转换方法将导致仅使用一个字节的*m_boolProp*被修改，使其余的字节未初始化的。  
-  
- 对于相同的控件，你可以通过重写优化控件的初始化[COleControl::OnResetState](../mfc/reference/colecontrol-class.md#onresetstate) ，如下所示：  
-  
- [!code-cpp[NVC_MFC_AxOpt#4](../mfc/codesnippet/cpp/optimizing-persistence-and-initialization_4.cpp)]  
-  
- 尽管`Serialize`和`OnResetState`已被重写，`DoPropExchange`函数应保持不变因为它仍将用于保留结果中的属性包格式。 请务必保留所有这三个函数以确保控件一致地管理其属性而不考虑哪种持久性机制容器使用。  
-  
-## <a name="see-also"></a>请参阅  
- [MFC ActiveX 控件：优化](../mfc/mfc-activex-controls-optimization.md)
+
+默认情况下，持久性和初始化的控件中处理通过`DoPropExchange`成员函数。 在典型的控件中，此函数包含对多个调用**PX_** 函数 (`PX_Color`， `PX_Font`，依此类推)，一个用于每个属性。
+
+此方法具有优势，单个`DoPropExchange`初始化、 以二进制格式暂留和暂留中使用一些容器的所谓"属性的包"格式，可以使用实现。 此函数提供了有关的属性和其默认值在一个方便的位置中的所有信息。
+
+但是，这种通用性的代价是效率。 **PX_** 函数可获取通过本质上是要少的多层实现其灵活性比更直接，但不太灵活方法有效。 此外，如果控件将传递到的默认值**PX_** 函数，每次，即使在有些情况下，默认值一定不能使用必须提供默认值。 如果生成的默认值是非常重要的任务 （例如，当从一个环境属性获取值），则额外，在不使用默认值的情况下进行不必要的工作。
+
+可以通过重写控件的提高控件的二进制暂留性能`Serialize`函数。 此成员函数的默认实现将调用你`DoPropExchange`函数。 通过重写它，您可以为二进制持久性更直接的实现。 例如，考虑这`DoPropExchange`函数：
+
+[!code-cpp[NVC_MFC_AxOpt#1](../mfc/codesnippet/cpp/optimizing-persistence-and-initialization_1.cpp)]
+
+若要提高此控件的二进制暂留的性能，可以重写`Serialize`函数，如下所示：
+
+[!code-cpp[NVC_MFC_AxOpt#2](../mfc/codesnippet/cpp/optimizing-persistence-and-initialization_2.cpp)]
+
+`dwVersion`本地变量可用于检测待加载或保存的控件的持久状态的版本。 您可以使用此变量，而不是调用[CPropExchange::GetVersion](../mfc/reference/cpropexchange-class.md#getversion)。
+
+若要保存小的空间中的持久性格式**BOOL**属性 (而将其与生成的格式兼容`PX_Bool`)，可以存储属性作为**字节**，按如下所示：
+
+[!code-cpp[NVC_MFC_AxOpt#3](../mfc/codesnippet/cpp/optimizing-persistence-and-initialization_3.cpp)]
+
+请注意，在负载情况下，使用临时变量，然后分配它的值，而不是强制转换*m_boolProp*到**字节**引用。 类型转换技术将导致仅使用一个字节的*m_boolProp*被修改，保留未初始化的剩余字节数。
+
+对于同一个控件，可以通过重写优化控件的初始化[COleControl::OnResetState](../mfc/reference/colecontrol-class.md#onresetstate) ，如下所示：
+
+[!code-cpp[NVC_MFC_AxOpt#4](../mfc/codesnippet/cpp/optimizing-persistence-and-initialization_4.cpp)]
+
+尽管`Serialize`并`OnResetState`已重写`DoPropExchange`函数应保持不变因为仍用于持久性的属性包格式。 请务必维护所有这三个函数以确保该控件一致地管理其属性而不考虑哪种持久性机制容器使用。
+
+## <a name="see-also"></a>请参阅
+
+[MFC ActiveX 控件：优化](../mfc/mfc-activex-controls-optimization.md)
 

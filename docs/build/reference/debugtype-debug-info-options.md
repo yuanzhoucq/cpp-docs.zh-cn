@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98edb5945c2cf01d90cd5dae1a750c0fdd37757f
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 1255c92a7de4a0f1707cd20f91e8b9f1de640942
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45723276"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46440454"
 ---
 # <a name="debugtype-debug-info-options"></a>/DEBUGTYPE（调试信息选项）
 
@@ -54,7 +54,7 @@ ms.locfileid: "45723276"
 
 ## <a name="see-also"></a>请参阅
 
-[/DEBUG （生成调试信息）](../../build/reference/debug-generate-debug-info.md)
-[/DRIVER （Windows NT 内核模式驱动程序）](../../build/reference/driver-windows-nt-kernel-mode-driver.md)
-[/PROFILE (性能工具 Profiler)](../../build/reference/profile-performance-tools-profiler.md) 
- [（WinDbg、 KD、 CDB、 NTSD） 的 Windows 调试工具](/windows-hardware/drivers/debugger/index)
+[/DEBUG（生成调试信息）](../../build/reference/debug-generate-debug-info.md)<br/>
+[/DRIVER（Windows NT 内核模式驱动程序）](../../build/reference/driver-windows-nt-kernel-mode-driver.md)<br/>
+[/PROFILE（性能工具探查器）](../../build/reference/profile-performance-tools-profiler.md)<br/>
+[（WinDbg、 KD、 CDB、 NTSD） 的 Windows 调试工具](/windows-hardware/drivers/debugger/index)

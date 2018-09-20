@@ -15,14 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ad982ee72e93a2779e4f3334984a325514248565
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 02dd1b2cbe4d1da2364d884a0326cdc394bc16af
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315101"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46444874"
 ---
 # <a name="attributes-by-group"></a>按组分的特性
+
 C + + 特性已组织成以下的功能组。
   
 |特性|描述|
@@ -32,10 +33,11 @@ C + + 特性已组织成以下的功能组。
 |[OLE DB 使用者特性](../windows/ole-db-consumer-attributes.md)|将代码注入-根据[OLE DB 使用者模板](../data/oledb/ole-db-consumer-templates-reference.md)— 若要创建使用 OLE DB 使用者执行任务，例如打开表执行命令和访问数据。|
 |[编译器特性](../windows/compiler-attributes.md)|由 Visual c + + 编译器提供。|
   
- 有关如何定义自定义属性的.NET Framework 应用程序的信息，请参阅[用户定义的特性](../windows/user-defined-attributes-cpp-component-extensions.md)。
+有关如何定义自定义属性的.NET Framework 应用程序的信息，请参阅[用户定义的特性](../windows/user-defined-attributes-cpp-component-extensions.md)。
   
 ## <a name="see-also"></a>请参阅
- [C++ 特性参考](../windows/cpp-attributes-reference.md)  
- [概念](../windows/attributed-programming-concepts.md)  
- [按用法分的特性](../windows/attributes-by-usage.md)  
- [按字母顺序的特性参考](../windows/attributes-alphabetical-reference.md)
+
+[C++ 特性参考](../windows/cpp-attributes-reference.md)<br/>
+[概念](../windows/attributed-programming-concepts.md)<br/>
+[按用法分的特性](../windows/attributes-by-usage.md)<br/>
+[按字母顺序的特性参考](../windows/attributes-alphabetical-reference.md)
