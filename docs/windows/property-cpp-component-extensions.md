@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6db0aa5801a8eca896282b65e4d9f156e9b38318
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6f9c444861587e21724fe5f6aff545935fed6086
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43212807"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46420499"
 ---
 # <a name="property--c-component-extensions"></a>属性（C++ 组件扩展）
 
@@ -33,15 +33,15 @@ ms.locfileid: "43212807"
 
 你可以声明以下一种属性类型。
 
-*简单的属性*  
+*简单的属性*<br/>
 默认情况下，会创建*set 访问器*分配的属性值， *get 访问器*检索属性值，并包含属性值的编译器生成的私有数据成员。
 
-*属性块*  
+*属性块*<br/>
 用于创建用户定义的 get 和/或 set 访问器。 如果定义了 get 及 set 访问器，则属性为读/写，如果只定义了 get 访问器，则属性为只读，如果只定义了 set 访问器，则属性为只写。
 
 必须显式声明数据成员，以包含属性值。
 
-*索引的属性*  
+*索引的属性*<br/>
 可用于获取和设置由一个或多个索引指定的属性值的属性块。
 
 可以创建索引的属性，其具有用户定义的属性名称或*默认*属性名称。 默认索引属性的名称是在其中定义该属性的类的名称。 若要声明默认属性，指定**默认**关键字而不是属性名称。
@@ -71,27 +71,27 @@ property type default[index_list] {
 
 ### <a name="parameters"></a>参数
 
-*type*  
+*type*<br/>
 属性值的数据类型，因此是属性本身。
 
-*property_name*  
+*property_name*<br/>
 属性的名称。
 
-*访问修饰符*  
+*访问修饰符*<br/>
 访问限定符。 是有效的限定符**静态**并**虚拟**。
 
 Get 或 set 访问器不需要能达成**虚拟**限定符，但它们必须达成**静态**限定符。
 
-*继承修饰符*  
+*继承修饰符*<br/>
 继承限定符。 是有效的限定符**抽象**并**密封**。
 
-*index_list*  
+*index_list*<br/>
 以逗号分隔的一个或多个索引列表。 每个索引包含索引类型，以及可以在属性方法体中使用的可选标识符。
 
-*value*  
+*value*<br/>
 在设置操作中分配给属性的值，或在 get 操作中检索的值。
 
-*property_body*  
+*property_body*<br/>
 Set 或 get 访问器的属性方法体。 *Property_body*可以使用*index_list*访问基础属性数据成员，或作为用户定义的处理中的参数。
 
 ## <a name="windows-runtime"></a>Windows 运行时
@@ -123,16 +123,16 @@ modifier property type default[index];
 
 ### <a name="parameters"></a>参数
 
-*修饰符*  
+*修饰符*<br/>
 可用于属性声明或 get/set 访问器方法的修饰符。 可能的值为**静态**并**虚拟**。
 
-*type*  
+*type*<br/>
 由属性表示的值类型。
 
-*property_name*  
+*property_name*<br/>
 引发方法的参数；必须与委托签名匹配。
 
-*index_list*  
+*index_list*<br/>
 一个或多个以逗号分隔的索引的列表，在方括号（下标运算符 ([])）中指定。 对于每个索引，指定类型以及选择指定可以在属性方法体中使用的标识符。
 
 ### <a name="remarks"></a>备注

@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2f1324fdef8e63f202536f46c4b164905a9130cd
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: a925ad172e5cf146d830207383d4bad0da57ff9e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44312673"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46417562"
 ---
 # <a name="removing-space-between-buttons-on-a-toolbar-c"></a>移除工具栏 （c + +） 上的按钮之间的间隔
 
@@ -41,5 +41,5 @@ MFC 或 ATL
 
 ## <a name="see-also"></a>请参阅
 
-[创建、移动和编辑工具栏按钮](../windows/creating-moving-and-editing-toolbar-buttons.md)  
+[创建、移动和编辑工具栏按钮](../windows/creating-moving-and-editing-toolbar-buttons.md)<br/>
 [工具栏编辑器](../windows/toolbar-editor.md)

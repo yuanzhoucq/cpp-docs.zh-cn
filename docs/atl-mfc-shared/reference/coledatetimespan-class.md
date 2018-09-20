@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ee7ccca718a05529e5ebc88bccc7d23d258810c
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f313b659629f824828c52948b9a73c50f86b5e40
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758357"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46434175"
 ---
 # <a name="coledatetimespan-class"></a>COleDateTimeSpan 类
 
@@ -763,9 +763,9 @@ enum DateTimeSpanStatus{
 
 ## <a name="see-also"></a>请参阅
 
-[COleDateTime 类](../../atl-mfc-shared/reference/coledatetime-class.md)   
-[CTime 类](../../atl-mfc-shared/reference/ctime-class.md)   
-[CTimeSpan 类](../../atl-mfc-shared/reference/ctimespan-class.md)   
-[层次结构图表](../../mfc/hierarchy-chart.md)   
+[COleDateTime 类](../../atl-mfc-shared/reference/coledatetime-class.md)<br/>
+[CTime 类](../../atl-mfc-shared/reference/ctime-class.md)<br/>
+[CTimeSpan 类](../../atl-mfc-shared/reference/ctimespan-class.md)<br/>
+[层次结构图](../../mfc/hierarchy-chart.md)<br/>
 [ATL/MFC 共享类](../../atl-mfc-shared/atl-mfc-shared-classes.md)
 

@@ -20,107 +20,118 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f522635c170af784b5bd9f2bb7011fd51e345b3
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 3f427c59362e348d7b50aa3e24e608cf180ddc41
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43211602"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46423190"
 ---
 # <a name="coleupdatedialog-class"></a>COleUpdateDialog 类
-用于 OLE“编辑链接”对话框的特例，当你只需要更新文档中现有的链接对象或嵌入对象时才可使用。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-class COleUpdateDialog : public COleLinksDialog  
-```  
-  
-## <a name="members"></a>成员  
-  
-### <a name="public-constructors"></a>公共构造函数  
-  
-|名称|描述|  
-|----------|-----------------|  
-|[COleUpdateDialog::COleUpdateDialog](#coleupdatedialog)|构造 `COleUpdateDialog` 对象。|  
-  
-### <a name="public-methods"></a>公共方法  
-  
-|名称|描述|  
-|----------|-----------------|  
-|[COleUpdateDialog::DoModal](#domodal)|显示**编辑链接**更新模式中的对话框。|  
-  
-## <a name="remarks"></a>备注  
- 有关特定于 OLE 的对话框的详细信息，请参阅文章[OLE 中的对话框](../../mfc/dialog-boxes-in-ole.md)。  
-  
-## <a name="inheritance-hierarchy"></a>继承层次结构  
- [CObject](../../mfc/reference/cobject-class.md)  
-  
- [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
-  
- [CWnd](../../mfc/reference/cwnd-class.md)  
-  
- [CDialog](../../mfc/reference/cdialog-class.md)  
-  
- [CCommonDialog](../../mfc/reference/ccommondialog-class.md)  
-  
- [COleDialog](../../mfc/reference/coledialog-class.md)  
-  
- [COleLinksDialog](../../mfc/reference/colelinksdialog-class.md)  
-  
- `COleUpdateDialog`  
-  
-## <a name="requirements"></a>要求  
- **标头：** afxodlgs.h  
-  
-##  <a name="coleupdatedialog"></a>  COleUpdateDialog::COleUpdateDialog  
- 构造 `COleUpdateDialog` 对象。  
-  
-```  
+
+用于 OLE“编辑链接”对话框的特例，当你只需要更新文档中现有的链接对象或嵌入对象时才可使用。
+
+## <a name="syntax"></a>语法
+
+```
+class COleUpdateDialog : public COleLinksDialog
+```
+
+## <a name="members"></a>成员
+
+### <a name="public-constructors"></a>公共构造函数
+
+|名称|描述|
+|----------|-----------------|
+|[COleUpdateDialog::COleUpdateDialog](#coleupdatedialog)|构造 `COleUpdateDialog` 对象。|
+
+### <a name="public-methods"></a>公共方法
+
+|名称|描述|
+|----------|-----------------|
+|[COleUpdateDialog::DoModal](#domodal)|显示**编辑链接**更新模式中的对话框。|
+
+## <a name="remarks"></a>备注
+
+有关特定于 OLE 的对话框的详细信息，请参阅文章[OLE 中的对话框](../../mfc/dialog-boxes-in-ole.md)。
+
+## <a name="inheritance-hierarchy"></a>继承层次结构
+
+[CObject](../../mfc/reference/cobject-class.md)
+
+[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+
+[CWnd](../../mfc/reference/cwnd-class.md)
+
+[CDialog](../../mfc/reference/cdialog-class.md)
+
+[CCommonDialog](../../mfc/reference/ccommondialog-class.md)
+
+[COleDialog](../../mfc/reference/coledialog-class.md)
+
+[COleLinksDialog](../../mfc/reference/colelinksdialog-class.md)
+
+`COleUpdateDialog`
+
+## <a name="requirements"></a>要求
+
+**标头：** afxodlgs.h
+
+##  <a name="coleupdatedialog"></a>  COleUpdateDialog::COleUpdateDialog
+
+构造 `COleUpdateDialog` 对象。
+
+```
 explicit COleUpdateDialog(
-    COleDocument* pDoc,  
-    BOOL bUpdateLinks = TRUE,  
-    BOOL bUpdateEmbeddings = FALSE,  
+    COleDocument* pDoc,
+    BOOL bUpdateLinks = TRUE,
+    BOOL bUpdateEmbeddings = FALSE,
     CWnd* pParentWnd = NULL);
-```  
-  
-### <a name="parameters"></a>参数  
- *来写*  
- 指向包含可能需要更新的链接的文档。  
-  
- *bUpdateLinks*  
- 确定是否要更新链接的对象的标志。  
-  
- *bUpdateEmbeddings*  
- 确定是否要更新嵌入的对象的标志。  
-  
- *pParentWnd*  
- 指向父或所有者窗口对象 (类型的`CWnd`) 对话框对象属于的。 如果它为 NULL，父窗口的对话框的将设置为应用程序主窗口。  
-  
-### <a name="remarks"></a>备注  
- 此函数将构造仅`COleUpdateDialog`对象。 若要显示的对话框，请调用[DoModal](../../mfc/reference/colelinksdialog-class.md#domodal)。 应使用此类以代替`COleLinksDialog`当你想要更新仅现有链接或嵌入的项。  
-  
-##  <a name="domodal"></a>  COleUpdateDialog::DoModal  
- 编辑链接对话框框中显示更新模式。  
-  
-```  
+```
+
+### <a name="parameters"></a>参数
+
+*来写*<br/>
+指向包含可能需要更新的链接的文档。
+
+*bUpdateLinks*<br/>
+确定是否要更新链接的对象的标志。
+
+*bUpdateEmbeddings*<br/>
+确定是否要更新嵌入的对象的标志。
+
+*pParentWnd*<br/>
+指向父或所有者窗口对象 (类型的`CWnd`) 对话框对象属于的。 如果它为 NULL，父窗口的对话框的将设置为应用程序主窗口。
+
+### <a name="remarks"></a>备注
+
+此函数将构造仅`COleUpdateDialog`对象。 若要显示的对话框，请调用[DoModal](../../mfc/reference/colelinksdialog-class.md#domodal)。 应使用此类以代替`COleLinksDialog`当你想要更新仅现有链接或嵌入的项。
+
+##  <a name="domodal"></a>  COleUpdateDialog::DoModal
+
+编辑链接对话框框中显示更新模式。
+
+```
 virtual INT_PTR DoModal();
-```  
-  
-### <a name="return-value"></a>返回值  
- 对话框中的完成状态。 以下值之一：  
-  
-- IDOK 如果对话框的成功返回。  
-  
-- IDCANCEL 如果没有当前文档中的链接或嵌入项，则需要更新。  
-  
-- IDABORT 是否发生错误。 如果返回 IDABORT，调用[COleDialog::GetLastError](../../mfc/reference/coledialog-class.md#getlasterror)成员函数以获取有关发生的错误类型的详细信息。 有关可能的错误的列表，请参阅[OleUIEditLinks](/windows/desktop/api/oledlg/nf-oledlg-oleuieditlinksa) Windows SDK 中的函数。  
-  
-### <a name="remarks"></a>备注  
- 除非用户选择取消按钮更新所有链接和/或嵌入内容。  
-  
-## <a name="see-also"></a>请参阅  
- [MFC 示例 OCLIENT](../../visual-cpp-samples.md)   
- [COleLinksDialog 类](../../mfc/reference/colelinksdialog-class.md)   
- [层次结构图表](../../mfc/hierarchy-chart.md)   
- [COleLinksDialog 类](../../mfc/reference/colelinksdialog-class.md)
+```
+
+### <a name="return-value"></a>返回值
+
+对话框中的完成状态。 以下值之一：
+
+- IDOK 如果对话框的成功返回。
+
+- IDCANCEL 如果没有当前文档中的链接或嵌入项，则需要更新。
+
+- IDABORT 是否发生错误。 如果返回 IDABORT，调用[COleDialog::GetLastError](../../mfc/reference/coledialog-class.md#getlasterror)成员函数以获取有关发生的错误类型的详细信息。 有关可能的错误的列表，请参阅[OleUIEditLinks](/windows/desktop/api/oledlg/nf-oledlg-oleuieditlinksa) Windows SDK 中的函数。
+
+### <a name="remarks"></a>备注
+
+除非用户选择取消按钮更新所有链接和/或嵌入内容。
+
+## <a name="see-also"></a>请参阅
+
+[MFC 示例 OCLIENT](../../visual-cpp-samples.md)<br/>
+[COleLinksDialog 类](../../mfc/reference/colelinksdialog-class.md)<br/>
+[层次结构图](../../mfc/hierarchy-chart.md)<br/>
+[COleLinksDialog 类](../../mfc/reference/colelinksdialog-class.md)

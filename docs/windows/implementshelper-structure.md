@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bcacfb8d5cd6d15cf9ca5f9f5bb8e937119dc863
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 4ff40e03bf464d4c6f434b491c8b48d2b797d72b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43691568"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46440521"
 ---
 # <a name="implementshelper-structure"></a>ImplementsHelper 结构
 
@@ -41,13 +41,13 @@ friend struct Details::ImplementsHelper;
 
 ### <a name="parameters"></a>参数
 
-*RuntimeClassFlagsT*  
+*RuntimeClassFlagsT*<br/>
 指定一个或多个标记的字段[RuntimeClassType](../windows/runtimeclasstype-enumeration.md)枚举器。
 
-*ILst*  
+*ILst*<br/>
 接口 Id 的列表。
 
-*IsDelegateToClass*  
+*IsDelegateToClass*<br/>
 指定 **，则返回 true**如果的当前实例`Implements`是一个基类中的第一个接口 ID *ILst*; 否则为**false**。
 
 ## <a name="remarks"></a>备注

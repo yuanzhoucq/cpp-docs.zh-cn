@@ -1,5 +1,5 @@
 ---
-title: 菜单示例列表 |Microsoft 文档
+title: 菜单示例列表 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,24 +14,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b9b1cc957dbc32978902d6efd072f032ae7508a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cb28fb0b842cb551f3a53f126122b1ccddad4a75
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344303"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46422020"
 ---
 # <a name="menu-sample-list"></a>菜单示例列表
-请参阅以下演示创建、 编辑和更新菜单的示例程序：  
-  
- *MDI 示例： 启用和禁用菜单项*  
-  
--   [SCRIBBLE](../visual-cpp-samples.md)  
-  
- *动态更改菜单*  
-  
--   [DYNAMENU](../visual-cpp-samples.md)  
-  
-## <a name="see-also"></a>请参阅  
- [菜单](../mfc/menus-mfc.md)
+
+请参阅以下说明创建、 编辑和更新菜单的示例程序：
+
+*MDI 示例： 启用和禁用菜单项*
+
+- [SCRIBBLE](../visual-cpp-samples.md)
+
+*动态更改菜单*
+
+- [DYNAMENU](../visual-cpp-samples.md)
+
+## <a name="see-also"></a>请参阅
+
+[菜单](../mfc/menus-mfc.md)
 

@@ -16,12 +16,12 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4fb801e4f4cd39fba7f06e066ae0bf2f92e76a21
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d9b71435b4fd2952746b2b097d08008624f8942b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42601432"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46412530"
 ---
 # <a name="walkthrough-creating-and-using-a-static-library-c"></a>演练：创建和使用静态库 (C++)
 
@@ -136,5 +136,5 @@ ms.locfileid: "42601432"
 
 ## <a name="see-also"></a>请参阅
 
-[演练：创建和使用动态链接库 (C++)](../build/walkthrough-creating-and-using-a-dynamic-link-library-cpp.md)  
+[演练：创建和使用动态链接库 (C++)](../build/walkthrough-creating-and-using-a-dynamic-link-library-cpp.md)<br/>
 [桌面应用程序 (Visual C++)](../windows/desktop-applications-visual-cpp.md)

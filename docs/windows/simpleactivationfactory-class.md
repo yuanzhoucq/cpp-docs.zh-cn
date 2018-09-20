@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 07c37dbf1629461141d592eb1987ce071324e22c
-ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
+ms.openlocfilehash: 111015fdd8887ae779aeb8fecc8274cfcf7c6c68
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44691466"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46441273"
 ---
 # <a name="simpleactivationfactory-class"></a>SimpleActivationFactory 类
 
@@ -43,7 +43,7 @@ class SimpleActivationFactory : public ActivationFactory<>;
 
 ### <a name="parameters"></a>参数
 
-*基本*  
+*基本*<br/>
 基类。
 
 ## <a name="remarks"></a>备注
@@ -106,7 +106,7 @@ STDMETHOD( ActivateInstance )(
 
 #### <a name="parameters"></a>参数
 
-*ppvObject*  
+*ppvObject*<br/>
 此操作完成后，指向由指定的对象的实例`Base`类模板参数。
 
 ### <a name="return-value"></a>返回值
@@ -129,7 +129,7 @@ STDMETHOD( GetRuntimeClassName )(
 
 #### <a name="parameters"></a>参数
 
-*runtimeName*  
+*runtimeName*<br/>
 此操作完成后，运行时类名称。
 
 ### <a name="return-value"></a>返回值
@@ -152,7 +152,7 @@ STDMETHOD(
 
 #### <a name="parameters"></a>参数
 
-*trustLvl*  
+*trustLvl*<br/>
 此操作完成后，当前类对象的信任级别。
 
 ### <a name="return-value"></a>返回值

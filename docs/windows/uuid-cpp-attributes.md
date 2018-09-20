@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 36b438662fb42cdeeb894906753a38168208f5ae
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 37e5db99d97bc65f1f4a75e2e56e1f0e719dd9ab
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43218814"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46427168"
 ---
 # <a name="uuid-c-attributes"></a>uuid（C++ 特性）
 
@@ -38,7 +38,7 @@ ms.locfileid: "43218814"
 
 ### <a name="parameters"></a>参数
 
-*uuid*  
+*uuid*<br/>
 一个 128 位的唯一标识符。
 
 ## <a name="remarks"></a>备注
@@ -70,8 +70,8 @@ ms.locfileid: "43218814"
 
 ## <a name="see-also"></a>请参阅
 
-[IDL 特性](../windows/idl-attributes.md)  
-[接口特性](../windows/interface-attributes.md)  
-[类特性](../windows/class-attributes.md)  
-[Typedef、Enum、Union 和 Struct 特性](../windows/typedef-enum-union-and-struct-attributes.md)  
+[IDL 特性](../windows/idl-attributes.md)<br/>
+[接口特性](../windows/interface-attributes.md)<br/>
+[类特性](../windows/class-attributes.md)<br/>
+[Typedef、Enum、Union 和 Struct 特性](../windows/typedef-enum-union-and-struct-attributes.md)<br/>
 [uuid](/windows/desktop/Midl/uuid)  

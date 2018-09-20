@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a7f5879a3a76e9af795a5dfc808423b43515662a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 496b1ccac5b998ba08f4e2eccfe31ffd18f2c37d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42609296"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46431783"
 ---
 # <a name="moduleregisterwinrtobject-method"></a>Module::RegisterWinRTObject 方法
 
@@ -39,16 +39,16 @@ HRESULT RegisterWinRTObject(const wchar_t* serverName,
 
 ### <a name="parameters"></a>参数
 
-*服务器名称*  
+*服务器名称*<br/>
 指定受此操作影响的对象子集的名称。
 
-*activatableClassIds*  
+*activatableClassIds*<br/>
 要注册的可激活 CLSID 的数组。
 
-*Cookie*  
+*Cookie*<br/>
 标识已注册类对象的值。 此值以后将用于撤销注册。
 
-*count*  
+*count*<br/>
 要注册的对象的数量。
 
 ## <a name="return-value"></a>返回值
@@ -62,4 +62,5 @@ HRESULT RegisterWinRTObject(const wchar_t* serverName,
 **命名空间：** Microsoft::WRL
 
 ## <a name="see-also"></a>请参阅
+
 [Module 类](../windows/module-class.md)

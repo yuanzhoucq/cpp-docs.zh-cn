@@ -18,17 +18,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca5545f7ebf828a04321db999d74aaa0d8a42187
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 899d51cf20d911d5ef0e46400330a59865cdd9af
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43214728"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46435072"
 ---
 # <a name="making-owner-drawn-header-controls"></a>定义所有者描述的标题控件
-你可以定义标头控件的单个项 ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) 为所有者描述的项。 有关详细信息，请参阅[所有者描述的标题控件](/windows/desktop/Controls/header-controls)Windows SDK 中。  
-  
-## <a name="see-also"></a>请参阅  
- [使用 CHeaderCtrl](../mfc/using-cheaderctrl.md)   
- [控件](../mfc/controls-mfc.md)
+
+你可以定义标头控件的单个项 ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) 为所有者描述的项。 有关详细信息，请参阅[所有者描述的标题控件](/windows/desktop/Controls/header-controls)Windows SDK 中。
+
+## <a name="see-also"></a>请参阅
+
+[使用 CHeaderCtrl](../mfc/using-cheaderctrl.md)<br/>
+[控件](../mfc/controls-mfc.md)
 

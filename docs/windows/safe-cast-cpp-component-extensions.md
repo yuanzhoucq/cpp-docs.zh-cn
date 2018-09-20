@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 85a27fceabcac9c5fa3b36fae4990da7dcd65deb
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 8d5a4f92e16c2d758fa5e2b88575b12d5710dd08
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222921"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46404199"
 ---
 # <a name="safecast-c-component-extensions"></a>safe_cast（C++ 组件扩展）
 
@@ -60,10 +60,10 @@ expression
 
 ### <a name="parameters"></a>参数
 
-*类型 id*  
+*类型 id*<br/>
 要转换的类型*表达式*到。 引用或值类型的句柄、值类型或是对引用或值类型的跟踪引用。
 
-*表达式*  
+*表达式*<br/>
 一个表达式，计算结果是引用或值类型的句柄、值类型或是对引用或值类型的跟踪引用。
 
 ### <a name="remarks"></a>备注
@@ -124,10 +124,10 @@ expression
 
 ### <a name="parameters"></a>参数
 
-*类型 id*  
+*类型 id*<br/>
 引用或值类型的句柄、值类型或是对引用或值类型的跟踪引用。
 
-*表达式*  
+*表达式*<br/>
 一个表达式，计算结果是引用或值类型的句柄、值类型或是对引用或值类型的跟踪引用。
 
 ### <a name="remarks"></a>备注
