@@ -1,5 +1,5 @@
 ---
-title: 服务器： 用户界面问题 |Microsoft 文档
+title: 服务器： 用户界面问题 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18382d305c8128a70e17651de913f38303286885
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 539486ac1bce56fdc972943abcf8c7de72635f72
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33379666"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46445550"
 ---
 # <a name="servers-user-interface-issues"></a>服务器：用户界面问题
-服务器应用程序的一些功能必须添加到用户界面才能向容器应用程序提供 OLE 项。 在菜单和需要添加到服务器应用程序的其他资源的进一步信息，请参阅[菜单和资源： 服务器添加](../mfc/menus-and-resources-server-additions.md)。  
-  
-## <a name="see-also"></a>请参阅  
- [服务器](../mfc/servers.md)   
- [菜单和资源 (OLE)](../mfc/menus-and-resources-ole.md)
+
+服务器应用程序的一些功能必须添加到用户界面才能向容器应用程序提供 OLE 项。 菜单和其他资源的需要添加到服务器应用程序的详细信息，请参阅[菜单和资源： 服务器添加](../mfc/menus-and-resources-server-additions.md)。
+
+## <a name="see-also"></a>请参阅
+
+[服务器](../mfc/servers.md)<br/>
+[菜单和资源 (OLE)](../mfc/menus-and-resources-ole.md)
 

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 257ca11dcc44b22d6ddbb5043315d29a70377148
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: ebebd8d0b6dc53ef5d83374c329ebe35d23f7fe8
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313944"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46443535"
 ---
 # <a name="how-to-specify-include-directories-for-resources-c"></a>如何： 指定资源 （c + +） 的包含目录
 
@@ -40,8 +40,8 @@ Win32
 
 ## <a name="see-also"></a>请参阅
 
-[“资源包括”对话框](../windows/resource-includes-dialog-box.md)  
-[TN035：在 Visual C++ 中使用多个资源文件和头文件](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md)  
-[符号：资源标识符](../windows/symbols-resource-identifiers.md)  
-[资源文件](../windows/resource-files-visual-studio.md)  
+[“资源包括”对话框](../windows/resource-includes-dialog-box.md)<br/>
+[TN035：在 Visual C++ 中使用多个资源文件和头文件](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md)<br/>
+[符号：资源标识符](../windows/symbols-resource-identifiers.md)<br/>
+[资源文件](../windows/resource-files-visual-studio.md)<br/>
 [资源编辑器](../windows/resource-editors.md)

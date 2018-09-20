@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 847a93efc74c4e6111f49679219e1b26a70022f6
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: ab72225287eab71180e80a059bc320829c24b5f7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45707496"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46419264"
 ---
 # <a name="qpar-report-auto-parallelizer-reporting-level"></a>/Qpar-report（自动并行化程序报告等级）
 
@@ -53,7 +53,7 @@ ms.locfileid: "45707496"
 
 ## <a name="see-also"></a>请参阅
 
-[/Q 选项 （低级别操作）](../../build/reference/q-options-low-level-operations.md)
+[/Q 选项（低级别操作）](../../build/reference/q-options-low-level-operations.md)<br/>
 [编译器选项](../../build/reference/compiler-options.md)<br/>
 [设置编译器选项](../../build/reference/setting-compiler-options.md)<br/>
 [本机代码中的并行编程](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/04/12/auto-vectorizer-in-visual-studio-2012-overview/)

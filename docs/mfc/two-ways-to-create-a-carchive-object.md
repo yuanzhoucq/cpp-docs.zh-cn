@@ -1,5 +1,5 @@
 ---
-title: 创建 CArchive 对象两种方法 |Microsoft 文档
+title: 两种方式创建 CArchive 对象 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,58 +23,62 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cba1596e1dd114dcd46610b824405740a783c21e
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 10b87f57daaf510252fe6f07dc3ba2d9d0a8650d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36954788"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46409332"
 ---
 # <a name="two-ways-to-create-a-carchive-object"></a>创建 CArchive 对象的两种方法
-可通过两种方法创建 `CArchive` 对象：  
-  
--   [隐式创建框架通过 CArchive 对象](#_core_implicit_creation_of_a_carchive_object_via_the_framework)  
-  
--   [显式创建 CArchive 对象](#_core_explicit_creation_of_a_carchive_object)  
-  
-##  <a name="_core_implicit_creation_of_a_carchive_object_via_the_framework"></a> 隐式创建框架通过 CArchive 对象  
- 最常见的且最简单，方法是让创建的框架`CArchive`保存、 另存为和文件菜单上的打开命令代表文档的对象。  
-  
- 下面是框架时你的应用程序的用户发出文件菜单中的另存为命令的用途：  
-  
-1.  显示**另存为**对话框中，并从用户获取文件名。  
-  
-2.  将打开由作为用户命名的文件`CFile`对象。  
-  
-3.  创建`CArchive`指向此对象`CFile`对象。 在创建`CArchive`对象，该框架将模式设置"存储"（写入、 序列化），而不是"负载"（读取、 反序列化）。  
-  
-4.  调用`Serialize`函数中定义你`CDocument`-派生类，将其传递到的引用`CArchive`对象。  
-  
- 文档的`Serialize`函数然后可将数据写入`CArchive`对象，稍后所述。 返回从后你`Serialize`函数，框架会销毁`CArchive`对象，然后`CFile`对象。  
-  
- 因此，如果你让创建的框架`CArchive`对象对于你的文档，所要做是实现文档的`Serialize`写入和读取到和从存档的函数。 你还必须实现`Serialize`任何`CObject`-派生对象的文档的`Serialize`直接或间接函数反过来序列化。  
-  
-##  <a name="_core_explicit_creation_of_a_carchive_object"></a> 显式创建 CArchive 对象  
- 除了通过该框架将文档序列化，有可能需要其他情况下`CArchive`对象。 例如，你可能想要序列化数据传入和传出剪贴板，由表示`CSharedFile`对象。 或者，你可能想要用于保存从框架所提供的一个不同的文件的用户界面。 在这种情况下，你可以显式创建`CArchive`对象。 你执行此相同的方式框架执行的操作，使用以下过程。  
-  
-#### <a name="to-explicitly-create-a-carchive-object"></a>若要显式创建 CArchive 对象  
-  
-1.  构造`CFile`对象派生自`CFile`。  
-  
-2.  传递`CFile`为构造函数的对象`CArchive`，下面的示例中所示：  
-  
-     [!code-cpp[NVC_MFCSerialization#5](../mfc/codesnippet/cpp/two-ways-to-create-a-carchive-object_1.cpp)]  
-  
-     第二个参数`CArchive`构造函数是一个枚举的值，指定是否将用于从文件存储或加载数据到或使用存档。 `Serialize`对象的函数调用通过检查此状态`IsStoring`存档对象的函数。  
-  
- 在存储或加载到或者来自数据完成时`CArchive`对象，请关闭它。 尽管`CArchive`(和`CFile`) 的存档 （和文件），对象将自动关闭，则你最好显式执行操作，因为这会从错误恢复更容易。 有关错误处理的详细信息，请参阅文章[异常： 捕捉和删除异常](../mfc/exceptions-catching-and-deleting-exceptions.md)。  
-  
-#### <a name="to-close-the-carchive-object"></a>若要关闭 CArchive 对象  
-  
-1.  下面的示例演示如何关闭`CArchive`对象：  
-  
-     [!code-cpp[NVC_MFCSerialization#6](../mfc/codesnippet/cpp/two-ways-to-create-a-carchive-object_2.cpp)]  
-  
-## <a name="see-also"></a>请参阅  
- [序列化：对象的序列化](../mfc/serialization-serializing-an-object.md)
+
+可通过两种方法创建 `CArchive` 对象：
+
+- [隐式创建 CArchive 对象通过框架](#_core_implicit_creation_of_a_carchive_object_via_the_framework)
+
+- [显式创建 CArchive 对象](#_core_explicit_creation_of_a_carchive_object)
+
+##  <a name="_core_implicit_creation_of_a_carchive_object_via_the_framework"></a> 隐式创建 CArchive 对象通过框架
+
+最常见且最简单的方法是让框架来创建`CArchive`保存、 另存为，并在文件菜单上的打开命令代表文档的对象。
+
+下面是框架应用程序的用户发出文件菜单中的另存为命令时的用途：
+
+1. 提供了**另存为**对话框中，并从用户获取文件名。
+
+1. 打开文件的用户作为名为`CFile`对象。
+
+1. 创建`CArchive`指向此对象`CFile`对象。 在创建`CArchive`对象时，框架将设置模式"存储"（写入、 序列化），而不是"加载"（读取、 反序列化）。
+
+1. 调用`Serialize`函数中定义你`CDocument`-派生的类，并向其传递到引用`CArchive`对象。
+
+您的文档`Serialize`函数然后将数据写入`CArchive`对象，如稍后所述。 返回从时你`Serialize`函数，该框架会销毁`CArchive`对象，然后`CFile`对象。
+
+因此，如果让框架创建`CArchive`对象的文档，只需是实现文档的`Serialize`写入和读取到和从存档的函数。 您还必须实现`Serialize`任何`CObject`-派生的对象的文档的`Serialize`函数直接或间接反过来将序列化。
+
+##  <a name="_core_explicit_creation_of_a_carchive_object"></a> 显式创建 CArchive 对象
+
+除了通过框架将文档序列化，在时可能需要其他场合`CArchive`对象。 例如，你可能想要序列化数据传入和传出剪贴板，由表示`CSharedFile`对象。 或者，你可能想要用于保存的文件，由框架提供的一个不同的用户界面。 在这种情况下，可以显式创建`CArchive`对象。 为此的相同框架执行的操作，使用以下过程。
+
+#### <a name="to-explicitly-create-a-carchive-object"></a>若要显式创建 CArchive 对象
+
+1. 构造`CFile`对象派生自`CFile`。
+
+1. 传递`CFile`对象的构造函数与`CArchive`，如以下示例所示：
+
+     [!code-cpp[NVC_MFCSerialization#5](../mfc/codesnippet/cpp/two-ways-to-create-a-carchive-object_1.cpp)]
+
+     第二个参数`CArchive`构造函数是一个枚举的值，指定是否将用于从文件存储或加载数据或使用存档。 `Serialize`函数的对象通过调用检查此状态`IsStoring`存档对象函数。
+
+完成后，存储或加载数据传入或传出`CArchive`对象，请关闭它。 尽管`CArchive`(和`CFile`) 存档 （和文件），会自动关闭对象，它是很好的做法显式执行操作，因为它可从错误中的恢复更轻松。 有关错误处理的详细信息，请参阅文章[异常： 捕捉和删除异常](../mfc/exceptions-catching-and-deleting-exceptions.md)。
+
+#### <a name="to-close-the-carchive-object"></a>若要关闭 CArchive 对象
+
+1. 下面的示例演示如何关闭`CArchive`对象：
+
+     [!code-cpp[NVC_MFCSerialization#6](../mfc/codesnippet/cpp/two-ways-to-create-a-carchive-object_2.cpp)]
+
+## <a name="see-also"></a>请参阅
+
+[序列化：对象的序列化](../mfc/serialization-serializing-an-object.md)
 

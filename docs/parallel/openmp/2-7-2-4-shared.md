@@ -1,5 +1,5 @@
 ---
-title: 2.7.2.4 共享 |Microsoft 文档
+title: 2.7.2.4 共享 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,18 +12,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1de0e32e16d889acb8f1339d783bc194b3508dda
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 9d1a545f1c505f9f578cad682399c8d69a882824
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695689"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46400141"
 ---
 # <a name="2724-shared"></a>2.7.2.4 shared
-此子句共享中出现的变量*变量列表*团队中的所有线程间。 在团队中的所有线程都访问相同的存储区域，以进行**共享**变量。  
-  
- 语法**共享**子句是，如下所示：  
-  
-```  
-shared(variable-list)  
+
+此子句共享中出现的变量*变量列表*在团队中的所有线程之间。 发生在团队内的所有线程都访问相同的存储区域以进行**共享**变量。
+
+语法**共享**子句如下所示：
+
+```
+shared(variable-list)
 ```

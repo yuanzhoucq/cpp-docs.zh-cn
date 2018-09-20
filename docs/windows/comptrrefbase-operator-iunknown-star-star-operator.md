@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a1a5b91ce4ffdfd376e6fbc7fa704fc1ecc0dc45
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 839b0220497db7ff0355ea7ed3ab923126e3175e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42613011"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46420928"
 ---
 # <a name="comptrrefbaseoperator-iunknown-operator"></a>ComPtrRefBase::operator IUnknown** 运算符
 
@@ -48,5 +48,5 @@ operator IUnknown**() const;
 
 ## <a name="see-also"></a>请参阅
 
-[ComPtrRefBase 类](../windows/comptrrefbase-class.md)  
+[ComPtrRefBase 类](../windows/comptrrefbase-class.md)<br/>
 [Microsoft::WRL::Details 命名空间](../windows/microsoft-wrl-details-namespace.md)

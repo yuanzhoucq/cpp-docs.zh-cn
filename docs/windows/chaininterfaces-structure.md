@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f0fc65d2aeab01de022e23d0645682800a7d555d
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 88ddd3dd59000b629f6e72933b1a0b02cc582c89
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42602360"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46409866"
 ---
 # <a name="chaininterfaces-structure"></a>ChainInterfaces 结构
 
@@ -63,43 +63,43 @@ struct ChainInterfaces<MixIn<DerivedType, BaseType, hasImplements>, I1, I2, I3, 
 
 ### <a name="parameters"></a>参数
 
-*I0*  
+*I0*<br/>
 （必需）接口 ID 0。
 
-*I1*  
+*I1*<br/>
 （必需）接口 ID 为 1。
 
-*I2*  
+*I2*<br/>
 （可选）接口 ID 为 2。
 
-*I3*  
+*I3*<br/>
 （可选）ID 为 3 的接口。
 
-*I4*  
+*I4*<br/>
 （可选）接口 ID 4。
 
-*I5*  
+*I5*<br/>
 （可选）接口 ID 5。
 
-*I6*  
+*I6*<br/>
 （可选）接口 ID 6。
 
-*I7*  
+*I7*<br/>
 （可选）接口 ID 7。
 
-*I8*  
+*I8*<br/>
 （可选）接口 ID 8。
 
-*I9*  
+*I9*<br/>
 （可选）接口 ID 9。
 
-*DerivedType*  
+*DerivedType*<br/>
 派生的类型。
 
-*BaseType*  
+*BaseType*<br/>
 派生类型的基类型。
 
-*hasImplements*  
+*hasImplements*<br/>
 一个布尔值，如果 **，则返回 true**，意味着不能使用[MixIn](../windows/mixin-structure.md)不是派生的类结构[实现](../windows/implements-structure.md)结构。
 
 ## <a name="members"></a>成员

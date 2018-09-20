@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: abbe93f5359171c88134ff61759e9edc63db2451
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 7cccebf6e1c6004a2416f4fdeb254369f9aa7b72
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42610428"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46410307"
 ---
 # <a name="moduleregistercomobject-method"></a>Module::RegisterCOMObject 方法
 
@@ -42,19 +42,19 @@ WRL_NOTHROW virtual HRESULT RegisterCOMObject(
 
 ### <a name="parameters"></a>参数
 
-*服务器名称*  
+*服务器名称*<br/>
 服务器的完全限定名。
 
-*clsid*  
+*clsid*<br/>
 要注册的 CLSID 的数组。
 
-*工厂*  
+*工厂*<br/>
 其可用性正发布的类对象的 IUnknown 接口的数组。
 
-*Cookie*  
+*Cookie*<br/>
 完成此操作后，指向标识已注册类对象的值的指针数组。 以后将使用这些值来撤销注册。
 
-*count*  
+*count*<br/>
 要注册的 CLSID 的数量。
 
 ## <a name="return-value"></a>返回值
@@ -74,4 +74,5 @@ COM 对象是使用 CLSCTX 枚举的 CLSCTX_LOCAL_SERVER 枚举器注册的。
 **命名空间：** Microsoft::WRL
 
 ## <a name="see-also"></a>请参阅
+
 [Module 类](../windows/module-class.md)

@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a6c8d05d326e11ecfef4df8d22cbf2b8d92bd77
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: cbb90d36ea3da8e443eede8a3d74a35246077d52
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42539169"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46410256"
 ---
 # <a name="inlinedepth"></a>inline_depth
 指定内联启发式搜索深度，这样一来，如果它是在晚于 （在调用关系图） 深度，则函数将不内联*n*。  
@@ -53,5 +53,5 @@ ms.locfileid: "42539169"
   
 ## <a name="see-also"></a>请参阅  
  
-[Pragma 指令和 __Pragma 关键字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)   
+[Pragma 指令和 __Pragma 关键字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)<br/>
 [inline_recursion](../preprocessor/inline-recursion.md)

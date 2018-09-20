@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b6d6bd580faf8c242ca5ac5e9b4b29ded9a7750a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d79888a58e5fc6d6911c4cc123877c1537f22cf1
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42612205"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46441923"
 ---
 # <a name="key-wrl-apis-by-category"></a>按类别列出的关键 WRL API
 下表列出主类、 结构、 函数和 Windows 运行时 c + + 模板库中的宏。 省略中帮助程序命名空间和类的构造。 这些列表提供了 API 文档，从而按命名空间排列。
@@ -76,4 +76,5 @@ ms.locfileid: "42612205"
 |[InspectableClass 宏](../windows/inspectableclass-macro.md)|设置运行时类名称和信任级别。|
   
 ## <a name="see-also"></a>请参阅
- [Windows 运行时 C++ 模板库 (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)
+
+[Windows 运行时 C++ 模板库 (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)

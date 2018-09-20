@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d89fef6c2ed3f8ff1a4211cdf8da59d8406e7031
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: bde6909716b55298a515aac32580a24f26c823fc
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45715398"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46406641"
 ---
 # <a name="dbcolumn"></a>db_column
 
@@ -43,7 +43,7 @@ ms.locfileid: "45715398"
 
 #### <a name="parameters"></a>参数
 
-*序号*  
+*序号*<br/>
 列序号 (`DBCOLUMNINFO`序号) 或列名称 （ANSI 或 Unicode 字符串） 要将数据绑定到行集中的字段相对应。 如果使用数字，则可以跳过连续序号 (例如： 1、 2、 3、 5)。 如果您使用的 OLE DB 访问接口支持的名称包含空格。 例如，可以使用以下格式：
 
 ```cpp
@@ -51,19 +51,19 @@ ms.locfileid: "45715398"
 [db_column(L"city_name")] TCHAR szCity[30];
 ```
 
-*dbtype*  
+*dbtype*<br/>
 （可选）OLE DB[类型指示符](/previous-versions/windows/desktop/ms711251\(v=vs.85\))列条目。
 
-*precision*  
+*precision*<br/>
 （可选）要用于列条目精度。 有关详细信息，请参阅的说明`bPrecision`元素的[DBBINDING 结构](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
 
-*缩放*  
+*缩放*<br/>
 （可选）要用于列项目的比例。 有关详细信息，请参阅的说明`bScale`元素的[DBBINDING 结构](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
 
-*status*  
+*status*<br/>
 （可选）成员变量，用来保存此列的状态。 状态指示该列的值是数据值或其他某个值，如空值。 有关可能的值，请参阅[状态](/previous-versions/windows/desktop/ms722617\(v=vs.85\))中*OLE DB 程序员参考*。
 
-*length*  
+*length*<br/>
 （可选）成员变量，用来保存的列的大小以字节为单位。
 
 ## <a name="remarks"></a>备注
@@ -131,5 +131,5 @@ class CProducts {
 
 ## <a name="see-also"></a>请参阅
 
-[OLE DB 使用者特性](../windows/ole-db-consumer-attributes.md)  
+[OLE DB 使用者特性](../windows/ole-db-consumer-attributes.md)<br/>
 [类特性](../windows/class-attributes.md)  

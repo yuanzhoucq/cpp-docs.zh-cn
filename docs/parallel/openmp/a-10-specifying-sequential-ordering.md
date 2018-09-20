@@ -1,5 +1,5 @@
 ---
-title: 指定顺序排序的 A.10 |Microsoft 文档
+title: A.10 指定顺序排序 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,23 +12,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 48e512a669025403b76b76b49c5bb496b5eacd23
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 29f2089760e9aef6f9e992c5725eab12b7be3b20
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33690073"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46432225"
 ---
 # <a name="a10---specifying-sequential-ordering"></a>A.10   指定顺序排序
-排序部分 ([部分 2.6.6](../../parallel/openmp/2-6-6-ordered-construct.md)页 22 上) 可用于按顺序排序的输出中并行执行的工作。 下面的程序输出顺序中的索引：  
-  
-```  
-#pragma omp for ordered schedule(dynamic)  
-    for (i=lb; i<ub; i+=st)  
-        work(i);  
-void work(int k)  
-{  
-    #pragma omp ordered  
-        printf_s(" %d", k);  
-}  
+
+排序部分 ([部分 2.6.6](../../parallel/openmp/2-6-6-ordered-construct.md) 22 页上) 可用于按顺序排序的并行完成工作的输出。 以下程序将输出按顺序排列的索引：
+
+```
+#pragma omp for ordered schedule(dynamic)
+    for (i=lb; i<ub; i+=st)
+        work(i);
+void work(int k)
+{
+    #pragma omp ordered
+        printf_s(" %d", k);
+}
 ```

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4cec0e02a6a61638f8aed1b4015fea065cbfd343
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: baa73d252bd52f52d40c14bd8e0a411679c24b36
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43207683"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46437620"
 ---
 # <a name="defaultvtable"></a>defaultvtable
 
@@ -38,7 +38,7 @@ ms.locfileid: "43207683"
 
 ### <a name="parameters"></a>参数
 
-*interface*  
+*interface*<br/>
 你想要具有默认 vtable 的 COM 对象的指定的接口。
 
 ## <a name="remarks"></a>备注
@@ -90,5 +90,5 @@ class CMyC3 : public IMyI3 {};
 
 ## <a name="see-also"></a>请参阅
 
-[IDL 特性](../windows/idl-attributes.md)  
+[IDL 特性](../windows/idl-attributes.md)<br/>
 [类特性](../windows/class-attributes.md)  

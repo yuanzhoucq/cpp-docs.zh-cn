@@ -344,14 +344,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d3c5f68d35c4cf77073de3f8d2e6090f62a6dae2
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 292121e95b20061e95e85b49c60d4758bd18a568
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46050094"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46435527"
 ---
 # <a name="colecontrol-class"></a>COleControl 类
+
 用于开发 OLE 控件的重要基类。
 
 ## <a name="syntax"></a>语法
@@ -1440,15 +1441,13 @@ void FireReadyStateChange();
 
 就绪状态可以是下列值之一：
 
-READYSTATE_UNINITIALIZED 默认初始化状态
-
-READYSTATE_LOADING 控件当前正在加载其属性
-
-READYSTATE_LOADED 控件已经初始化
-
-READYSTATE_INTERACTIVE 控件有数据不足，无法进行交互，但尚未加载不全都是异步的数据
-
-READYSTATE_COMPLETE 控件具有其所有数据
+|||
+|-|-|
+|READYSTATE_UNINITIALIZED|默认值初始化状态|
+|READYSTATE_LOADING|控件当前正在加载其属性|
+|READYSTATE_LOADED|初始化控件|
+|READYSTATE_INTERACTIVE|控件有数据不足，无法进行交互，但尚未加载不全都是异步的数据|
+|READYSTATE_COMPLETE|控件具有所有数据|
 
 使用[GetReadyState](#getreadystate)来确定控件的当前的准备情况。
 
@@ -1466,11 +1465,11 @@ virtual DWORD GetActivationPolicy();
 
 POINTERINACTIVE 枚举中的标志的组合。 可能的标志包括：
 
-POINTERINACTIVE_ACTIVATEONENTRY 对象应该是就地激活时在鼠标移动操作期间鼠标进入它。
-
-POINTERINACTIVE_DEACTIVATEONLEAVE 应停用该对象，当鼠标离开对象期间鼠标移动操作。
-
-POINTERINACTIVE_ACTIVATEONDRAG 对象应就地激活期间将它上拖动鼠标时，并删除操作。
+|||
+|-|-|
+|POINTERINACTIVE_ACTIVATEONENTRY|该对象应就地激活时在鼠标移动操作期间鼠标进入它。|
+|POINTERINACTIVE_DEACTIVATEONLEAVE|当鼠标移动操作过程中鼠标离开对象时，应停用该对象。|
+|POINTERINACTIVE_ACTIVATEONDRAG|该对象应就地激活期间将它上拖动鼠标时，删除操作。|
 
 ### <a name="remarks"></a>备注
 
@@ -1915,15 +1914,13 @@ long GetReadyState();
 
 就绪状态为控件，下列值之一：
 
-READYSTATE_UNINITIALIZED 默认初始化状态
-
-READYSTATE_LOADING 控件当前正在加载其属性
-
-READYSTATE_LOADED 控件已经初始化
-
-READYSTATE_INTERACTIVE 控件有数据不足，无法进行交互，但尚未加载不全都是异步的数据
-
-READYSTATE_COMPLETE 控件具有其所有数据
+|||
+|-|-|
+|READYSTATE_UNINITIALIZED|默认值初始化状态|
+|READYSTATE_LOADING|控件当前正在加载其属性|
+|READYSTATE_LOADED|初始化控件|
+|READYSTATE_INTERACTIVE|控件有数据不足，无法进行交互，但尚未加载不全都是异步的数据|
+|READYSTATE_COMPLETE|控件具有所有数据|
 
 ### <a name="remarks"></a>备注
 
@@ -2065,15 +2062,13 @@ void InternalSetReadyState(long lNewReadyState);
 *lNewReadyState*<br/>
 要设置进行控制，以下值之一的准备情况状态：
 
-READYSTATE_UNINITIALIZED 默认初始化状态
-
-READYSTATE_LOADING 控件当前正在加载其属性
-
-READYSTATE_LOADED 控件已经初始化
-
-READYSTATE_INTERACTIVE 控件有数据不足，无法进行交互，但尚未加载不全都是异步的数据
-
-READYSTATE_COMPLETE 控件具有其所有数据
+|||
+|-|-|
+|READYSTATE_UNINITIALIZED|默认值初始化状态|
+|READYSTATE_LOADING|控件当前正在加载其属性|
+|READYSTATE_LOADED|初始化控件|
+|READYSTATE_INTERACTIVE|控件有数据不足，无法进行交互，但尚未加载不全都是异步的数据|
+|READYSTATE_COMPLETE|控件具有所有数据|
 
 ### <a name="remarks"></a>备注
 
@@ -2848,13 +2843,12 @@ virtual DWORD OnGetViewStatus();
 
 如果成功，则 VIEWSTATUS 枚举值之一否则为 0。 可能的值为以下任意组合：
 
-VIEWSTATUS_OPAQUE 对象是完全不透明的。 如果未设置此位，该对象包含透明部分。 此位仅适用于与内容相关的方面和不适用于 DVASPECT_ICON 或 DVASPECT_DOCPRINT。
-
-VIEWSTATUS_SOLIDBKGND 对象具有纯色背景 （包含在纯色，而非画笔图案中）。 仅当 VIEWSTATUS_OPAQUE 设置且仅适用于与内容相关的方面和不适用于 DVASPECT_ICON 或 DVASPECT_DOCPRINT 此位为有意义。
-
-VIEWSTATUS_DVASPECTOPAQUE 对象支持 DVASPECT_OPAQUE。 可以使用此方面调用参数时所采取的绘图方位的所有 IViewObjectEx 方法。
-
-VIEWSTATUS_DVASPECTTRANSPARENT 对象支持 DVASPECT_TRANSPARENT。 所有`IViewObjectEx`方法可以对此调用参数时所采取的绘图方位。
+|||
+|-|-|
+|VIEWSTATUS_OPAQUE|对象是完全不透明的。 如果未设置此位，该对象包含透明部分。 此位仅适用于与内容相关的方面和不适用于 DVASPECT_ICON 或 DVASPECT_DOCPRINT。|
+|VIEWSTATUS_SOLIDBKGND|对象具有纯色背景 （包含在纯色，而非画笔图案中）。 仅当 VIEWSTATUS_OPAQUE 设置且仅适用于与内容相关的方面和不适用于 DVASPECT_ICON 或 DVASPECT_DOCPRINT 此位为有意义。|
+|VIEWSTATUS_DVASPECTOPAQUE|对象支持 DVASPECT_OPAQUE。 可以使用此方面调用参数时所采取的绘图方位的所有 IViewObjectEx 方法。|
+|VIEWSTATUS_DVASPECTTRANSPARENT|对象支持 DVASPECT_TRANSPARENT。 所有`IViewObjectEx`方法可以对此调用参数时所采取的绘图方位。|
 
 ### <a name="remarks"></a>备注
 

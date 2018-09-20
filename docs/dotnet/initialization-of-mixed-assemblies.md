@@ -21,19 +21,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 9004d62caa5368294a5a53e4e2587da05d1d495c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ba9f3143fb110b25f384e462e7dfcd69c0140802
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43204537"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46439570"
 ---
 # <a name="initialization-of-mixed-assemblies"></a>混合程序集的初始化
 
 Windows 开发人员必须始终为持谨慎态度的加载程序锁时运行过程中的代码`DllMain`。 但是，有一些其他注意事项的派上用场时面对的 C + + /cli clr 混合模式程序集。
 
 中的代码[DllMain](/windows/desktop/Dlls/dllmain)不能访问 CLR。 这意味着 `DllMain` 不应直接或间接调用托管函数；在 `DllMain`中不应声明或实现托管代码；并且在 `DllMain`中不应发生垃圾回收或自动库加载。
-  
+
 ## <a name="causes-of-loader-lock"></a>加载程序锁定的原因
 
 随着 .NET 平台的引入，出现了两个截然不同的加载执行模块（EXE 或 DLL）的机制：一个适用于 Windows，用于非托管模块；另一个适用于 .NET 公共语言运行库 (CLR)，加载 .NET 程序集。 混合 DLL 加载问题与 Microsoft Windows OS 加载程序密切相关。
@@ -130,7 +130,7 @@ CObject* op = new CObject(arg1, arg2);
 为方便用户处理加载程序锁，当两种版本同时出现时，链接器将选择本机实现，而不选择托管实现。 这样可以避免上述问题。 但是，由于编译器中有两个未解决的问题，所以在此发行版中此规则有两种例外情况：
 
 - 对内联函数的调用通过全局静态函数指针来实现。 这种情况特别值得注意，因为虚函数就是通过全局函数指针调用的。 例如，应用于对象的
-  
+
 ```cpp
 #include "definesmyObject.h"
 #include "definesclassC.h"
@@ -170,15 +170,15 @@ void DuringLoaderlock(C & c)
    若要执行此操作，打开**属性**网格中解决方案的启动项目。 选择**配置属性** > **调试**。 设置**调试器类型**到**仅限本机的**。
 
 1. 启动调试器 (F5)。
-  
+
 1. 当 **/clr**生成诊断中，选择**重试**，然后选择**中断**。
-  
+
 1. 打开“调用堆栈”窗口。 (在菜单栏上依次选择**调试** > **Windows** > **调用堆栈**。)有问题`DllMain`或带绿色箭头标识静态初始值设定项。 如果未标识出有问题的函数，必须执行以下步骤来找到该函数。
 
 1. 打开**即时**窗口 (在菜单栏上依次选择**调试** > **Windows** > **即时**。)
 
 1. 键入到.load sos.dll**即时**窗口以加载 SOS 调试服务。
-  
+
 1. 键入 ！ dumpstack**即时**时段以获取完整的内部列表 **/clr**堆栈。
 
 1. 查找 _CorDllMain 的 （最接近堆栈的底部） 的第一个实例 (如果`DllMain`导致问题) 或 _VTableBootstrapThunkInitHelperStub 或 GetTargetForVTableEntry （如果静态初始值设定项导致问题）。 紧挨着位于此调用下方的堆栈项是 MSIL 实现的函数的调用，该函数曾试图在有加载程序锁时执行。

@@ -19,38 +19,41 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ca265bc8a6adc3da747e94ca67cd57749687f21
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: ce3b59bc6665c4622078285a0c3b4b5011bc7d9b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539368"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46433369"
 ---
 # <a name="enable"></a>_enable
-**Microsoft 专用**  
-  
- 启用中断。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-void _enable(void);  
-```  
-  
-## <a name="requirements"></a>要求  
-  
-|内部函数|体系结构|  
-|---------------|------------------|  
-|`_enable`|x86、 ARM、 x64|  
-  
- **标头文件** \<intrin.h >  
-  
-## <a name="remarks"></a>备注  
- `_enable` 指示处理器设置中断标志。 在 x86 系统上，此函数会生成“设置中断标志”(`sti`) 指令。  
-  
- 此函数只有在内核模式下才可用。 如果在用户模式下使用，会引发特权指令异常。  
-  
-**结束 Microsoft 专用**  
-  
-## <a name="see-also"></a>请参阅  
- [编译器内部函数](../intrinsics/compiler-intrinsics.md)
+
+**Microsoft 专用**
+
+启用中断。
+
+## <a name="syntax"></a>语法
+
+```
+void _enable(void);
+```
+
+## <a name="requirements"></a>要求
+
+|内部函数|体系结构|
+|---------------|------------------|
+|`_enable`|x86、 ARM、 x64|
+
+**标头文件** \<intrin.h >
+
+## <a name="remarks"></a>备注
+
+`_enable` 指示处理器设置中断标志。 在 x86 系统上，此函数会生成“设置中断标志”(`sti`) 指令。
+
+此函数只有在内核模式下才可用。 如果在用户模式下使用，会引发特权指令异常。
+
+**结束 Microsoft 专用**
+
+## <a name="see-also"></a>请参阅
+
+[编译器内部函数](../intrinsics/compiler-intrinsics.md)

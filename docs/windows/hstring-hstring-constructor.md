@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 80af8f463d6cd1af631c6cb37c0239e7a9e85c3f
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 59ec7c1635b825cc300e28e5c02e2a3864a6c123
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42595880"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46442248"
 ---
 # <a name="hstringhstring-constructor"></a>HString::HString 构造函数
 
@@ -35,10 +35,10 @@ HString(HString&& other) throw();
 
 #### <a name="parameters"></a>参数
 
-*hstr*  
+*hstr*<br/>
 HSTRING 句柄。
 
-*other*  
+*other*<br/>
 将现有**HString**对象。
 
 ## <a name="remarks"></a>备注

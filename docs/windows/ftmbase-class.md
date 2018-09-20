@@ -35,12 +35,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 687fd4f4bd77043bd0b74c7bcc39fb6a496b60be
-ms.sourcegitcommit: 87d317ac62620c606464d860aaa9e375a91f4c99
+ms.openlocfilehash: e8a1dcd96ab42f48c91bbed2057475fa412c8925
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45601452"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46432797"
 ---
 # <a name="ftmbase-class"></a>FtmBase 类
 
@@ -106,7 +106,7 @@ static HRESULT CreateGlobalInterfaceTable(
 
 ### <a name="parameters"></a>参数
 
-*Git*  
+*Git*<br/>
 此操作完成后，指向全局接口表的指针。
 
 ### <a name="return-value"></a>返回值
@@ -129,7 +129,7 @@ STDMETHODIMP DisconnectObject(
 
 ### <a name="parameters"></a>参数
 
-*dwReserved*  
+*dwReserved*<br/>
 留待将来使用；必须为零。
 
 ### <a name="return-value"></a>返回值
@@ -161,26 +161,26 @@ STDMETHODIMP GetMarshalSizeMax(
 
 ### <a name="parameters"></a>参数
 
-*riid*  
+*riid*<br/>
 引用封送的接口标识符。
 
-*pv*  
+*pv*<br/>
 接口指针进行封送;可以为 NULL。
 
-*dwDestContext*  
+*dwDestContext*<br/>
 其中将被取消封送指定的接口的目标上下文。
 
 指定一个或多个 MSHCTX 枚举值。
 
 目前，取消封送可以发生在当前进程 (MSHCTX_INPROC) 的另一单元中或作为当前进程 (MSHCTX_LOCAL) 在同一台计算机上的另一个进程中。
 
-*pvDestContext*  
+*pvDestContext*<br/>
 保留供将来使用;必须为 NULL。
 
-*mshlflags*  
+*mshlflags*<br/>
 标志，指示要封送处理的数据是否传输回客户端进程 — 典型用例，或写入到全局表，其中可以由多个客户端检索它。 指定一个或多个 MSHLFLAGS 枚举值。
 
-*pSize*  
+*pSize*<br/>
 此操作完成后，指向要写入到封送处理流的数据量上限。
 
 ### <a name="return-value"></a>返回值
@@ -204,23 +204,23 @@ STDMETHODIMP GetUnmarshalClass(
 
 ### <a name="parameters"></a>参数
 
-*riid*  
+*riid*<br/>
 引用封送的接口标识符。
 
-*pv*  
+*pv*<br/>
 指向要封送处理; 的接口如果调用方不具有到所需的接口指针，则可以为 NULL。
 
-*dwDestContext*  
+*dwDestContext*<br/>
 其中将被取消封送指定的接口的目标上下文。
 
 指定一个或多个 MSHCTX 枚举值。
 
 在当前进程 (MSHCTX_INPROC) 的另一单元中或作为当前进程 (MSHCTX_LOCAL) 在同一台计算机上的另一个进程中，可能发生取消封送。
 
-*pvDestContext*  
+*pvDestContext*<br/>
 保留供将来使用;必须为 NULL。
 
-*mshlflags*  
+*mshlflags*<br/>
 此操作完成后，若要使用客户端进程中创建的代理的 CLSID 的指针。
 
 *pCid*
@@ -246,26 +246,26 @@ STDMETHODIMP MarshalInterface(
 
 ### <a name="parameters"></a>参数
 
-*pStm*  
+*pStm*<br/>
 指向要封送处理期间使用的流。
 
-*riid*  
+*riid*<br/>
 引用封送的接口标识符。 此接口必须派生自`IUnknown`接口。
 
-*pv*  
+*pv*<br/>
 要封送处理; 的接口指针的指针如果调用方不具有到所需的接口指针，则可以为 NULL。
 
-*dwDestContext*  
+*dwDestContext*<br/>
 其中将被取消封送指定的接口的目标上下文。
 
 指定一个或多个 MSHCTX 枚举值。
 
 在当前进程 (MSHCTX_INPROC) 的另一单元或者当前进程 (MSHCTX_LOCAL) 在同一台计算机上的另一个进程中，会发生取消封送。
 
-*pvDestContext*  
+*pvDestContext*<br/>
 留待将来使用；必须为零。
 
-*mshlflags*  
+*mshlflags*<br/>
 指定要封送处理的数据是否传输回客户端进程 — 典型用例，或写入到全局表，其中可以由多个客户端检索它。
 
 ### <a name="return-value"></a>返回值
@@ -298,7 +298,7 @@ STDMETHODIMP ReleaseMarshalData(
 
 ### <a name="parameters"></a>参数
 
-*pStm*  
+*pStm*<br/>
 指向包含要销毁的数据包的流。
 
 ### <a name="return-value"></a>返回值
@@ -319,13 +319,13 @@ STDMETHODIMP UnmarshalInterface(
 
 ### <a name="parameters"></a>参数
 
-*pStm*  
+*pStm*<br/>
 指向要取消封送的接口指针的流。
 
-*riid*  
+*riid*<br/>
 为要取消封送的接口的标识符的引用。
 
-*ppv*  
+*ppv*<br/>
 此操作完成后，接收中请求的接口指针的指针变量的地址*riid*。 如果此操作成功，**ppv*包含要取消封送的接口的请求的接口指针。
 
 ### <a name="return-value"></a>返回值

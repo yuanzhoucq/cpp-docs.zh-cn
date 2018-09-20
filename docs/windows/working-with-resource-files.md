@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a39b4147bd997659f264b60fb1fc88956784bbaf
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: d72e37b8625480779620025dfd1e1eda1101b824
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318182"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46430548"
 ---
 # <a name="working-with-resource-files"></a>使用资源文件
 
@@ -39,24 +39,24 @@ ms.locfileid: "44318182"
 
 ## <a name="in-this-section"></a>本节内容
 
-[资源文件](../windows/resource-files-visual-studio.md)  
+[资源文件](../windows/resource-files-visual-studio.md)<br/>
 描述资源文件以及在 Windows 桌面应用程序中使用它们的方式。 还提供指向描述如何使用资源文件的主题的链接。
 
-[符号：资源标识符](../windows/symbols-resource-identifiers.md)  
+[符号：资源标识符](../windows/symbols-resource-identifiers.md)<br/>
 描述符号并提供有关在项目中使用 **“资源符号”** 对话框管理符号的信息。
 
-[资源编辑器](../windows/resource-editors.md)  
+[资源编辑器](../windows/resource-editors.md)<br/>
 描述 Visual Studio 中提供的资源编辑器、可以用各个编辑器修改的资源的类型，并提供指向有关使用各编辑器的详细信息的链接。
 
 ## <a name="related-sections"></a>相关章节
 
-[Visual C++](../visual-cpp-in-visual-studio.md)  
+[Visual C++](../visual-cpp-in-visual-studio.md)<br/>
 提供 Visual C++ 文档的链接。
 
-[与我们交流](/visualstudio/ide/talk-to-us)  
+[与我们交流](/visualstudio/ide/talk-to-us)<br/>
 提供指向特定信息的链接，这些信息说明如何使用文档集、如何与产品支持部门联系以及如何使用辅助功能。
 
 ## <a name="see-also"></a>请参阅
 
-[Windows 桌面应用程序](../windows/windows-desktop-applications-cpp.md)  
+[Windows 桌面应用程序](../windows/windows-desktop-applications-cpp.md)<br/>
 [菜单和其他资源](https://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)
