@@ -1,5 +1,5 @@
 ---
-title: CCmdUI 类 |Microsoft 文档
+title: CCmdUI 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,20 +20,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a857d1cddcc78c7cfff4243b9c99194986af3d9b
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 18b5675aff2d10f224238a1ba6d3b919e1b285a7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36956481"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46374577"
 ---
 # <a name="the-ccmdui-class"></a>CCmdUI 类
-在框架将更新命令传送到其处理程序时，框架会传递给处理程序一个指向 `CCmdUI` 对象（或 `CCmdUI` 派生的类的对象）的指针。 此对象表示生成命令的菜单项或工具栏按钮或其他用户界面对象。 更新处理程序通过指针调用 `CCmdUI` 结构的成员函数来更新用户界面对象。 例如，以下是一个用于“全部清除”菜单项的更新处理程序：  
-  
- [!code-cpp[NVC_MFCDocView#3](../mfc/codesnippet/cpp/the-ccmdui-class_1.cpp)]  
-  
- 此处理程序调用`Enable`有权访问菜单项对象的成员函数。 `Enable` 使该项可供使用。  
-  
-## <a name="see-also"></a>请参阅  
- [如何：更新用户界面对象](../mfc/how-to-update-user-interface-objects.md)
+
+在框架将更新命令传送到其处理程序时，框架会传递给处理程序一个指向 `CCmdUI` 对象（或 `CCmdUI` 派生的类的对象）的指针。 此对象表示生成命令的菜单项或工具栏按钮或其他用户界面对象。 更新处理程序通过指针调用 `CCmdUI` 结构的成员函数来更新用户界面对象。 例如，以下是一个用于“全部清除”菜单项的更新处理程序：
+
+[!code-cpp[NVC_MFCDocView#3](../mfc/codesnippet/cpp/the-ccmdui-class_1.cpp)]
+
+此处理程序调用`Enable`有权访问菜单项对象的成员函数。 `Enable` 将项可供使用。
+
+## <a name="see-also"></a>请参阅
+
+[如何：更新用户界面对象](../mfc/how-to-update-user-interface-objects.md)
 

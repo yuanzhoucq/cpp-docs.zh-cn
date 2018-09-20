@@ -1,5 +1,5 @@
 ---
-title: 'typeof 转到 t:: typeid |Microsoft 文档'
+title: 'typeof 转到 t:: typeid |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,32 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 0ae9f772a68735555748e6edbeb6196f1a73d2c9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4433061fceef455685b6588c81c8c2e434253433
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33164513"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46374660"
 ---
 # <a name="typeof-goes-to-ttypeid"></a>typeof 转到 T::typeid
-`typeof`由 c + + 托管扩展中使用的运算符`typeid`Visual c + + 中的关键字。  
-  
- 在托管扩展中，`__typeof()`运算符返回关联`Type*`对象时传递的托管类型的名称。 例如：  
-  
-```  
-// Creates and initializes a new Array instance.  
-Array* myIntArray =   
-   Array::CreateInstance( __typeof(Int32), 5 );  
-```  
-  
- 在新语法中，`__typeof`其他形式的已替换为`typeid`返回`Type^`时指定的托管的类型。  
-  
-```  
-// Creates and initializes a new Array instance.  
-Array^ myIntArray =   
-   Array::CreateInstance( Int32::typeid, 5 );  
-```  
-  
-## <a name="see-also"></a>请参阅  
- [常规语言更改 (C + + /cli CLI)](../dotnet/general-language-changes-cpp-cli.md)   
- [typeid](../windows/typeid-cpp-component-extensions.md)
+
+`typeof`对于由 c + + 托管扩展中使用运算符`typeid`Visual c + + 中的关键字。
+
+在托管扩展`__typeof()`运算符将返回关联`Type*`对象时传递的托管类型的名称。 例如：
+
+```
+// Creates and initializes a new Array instance.
+Array* myIntArray =
+   Array::CreateInstance( __typeof(Int32), 5 );
+```
+
+在新语法中，`__typeof`已由其他形式的`typeid`返回`Type^`时指定的托管的类型。
+
+```
+// Creates and initializes a new Array instance.
+Array^ myIntArray =
+   Array::CreateInstance( Int32::typeid, 5 );
+```
+
+## <a name="see-also"></a>请参阅
+
+[常规语言更改 (C++/CLI)](../dotnet/general-language-changes-cpp-cli.md)<br/>
+[typeid](../windows/typeid-cpp-component-extensions.md)

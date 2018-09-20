@@ -1,5 +1,5 @@
 ---
-title: 使用 Nestable 锁 A.17 |Microsoft 文档
+title: A.17 使用可嵌套锁 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,53 +12,54 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9cbf11af9704a6f868502f66dba5c6448d66abfa
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 16f2888df773f8611f1d8b41bac16523e2ab0565
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33689904"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46376044"
 ---
 # <a name="a17---using-nestable-locks"></a>A.17   使用可嵌套的锁
-下面的示例 (对于[第 3.2 节](../../parallel/openmp/3-2-lock-functions.md)在页上 41) 演示如何使用 nestable 锁以同步更新同时向整个结构和其成员之一。  
-  
-```  
-#include <omp.h>  
-typedef struct {int a,b; omp_nest_lock_t lck;} pair;  
-  
-void incr_a(pair *p, int a)  
-{  
-    // Called only from incr_pair, no need to lock.  
-    p->a += a;  
-}  
-  
-void incr_b(pair *p, int b)  
-{  
-    // Called both from incr_pair and elsewhere,  
-    // so need a nestable lock.  
-  
-    omp_set_nest_lock(&p->lck);  
-    p->b += b;  
-    omp_unset_nest_lock(&p->lck);  
-}  
-  
-void incr_pair(pair *p, int a, int b)  
-{  
-    omp_set_nest_lock(&p->lck);  
-    incr_a(p, a);  
-    incr_b(p, b);  
-    omp_unset_nest_lock(&p->lck);  
-}  
-  
-void f(pair *p)  
-{  
-    extern int work1(), work2(), work3();  
-    #pragma omp parallel sections  
-    {  
-        #pragma omp section  
-            incr_pair(p, work1(), work2());  
-        #pragma omp section  
-            incr_b(p, work3());  
-    }  
-}  
+
+下面的示例 (对于[第 3.2 节](../../parallel/openmp/3-2-lock-functions.md)上第 41 页) 演示如何使用可嵌套锁来同步更新到整个结构和为其成员之一。
+
+```
+#include <omp.h>
+typedef struct {int a,b; omp_nest_lock_t lck;} pair;
+
+void incr_a(pair *p, int a)
+{
+    // Called only from incr_pair, no need to lock.
+    p->a += a;
+}
+
+void incr_b(pair *p, int b)
+{
+    // Called both from incr_pair and elsewhere,
+    // so need a nestable lock.
+
+    omp_set_nest_lock(&p->lck);
+    p->b += b;
+    omp_unset_nest_lock(&p->lck);
+}
+
+void incr_pair(pair *p, int a, int b)
+{
+    omp_set_nest_lock(&p->lck);
+    incr_a(p, a);
+    incr_b(p, b);
+    omp_unset_nest_lock(&p->lck);
+}
+
+void f(pair *p)
+{
+    extern int work1(), work2(), work3();
+    #pragma omp parallel sections
+    {
+        #pragma omp section
+            incr_pair(p, work1(), work2());
+        #pragma omp section
+            incr_b(p, work3());
+    }
+}
 ```

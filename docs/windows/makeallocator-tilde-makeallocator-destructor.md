@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7115bd3ad6ef1a385b8c2a509f42316c9f8b69bc
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 5ba40aa98321956f19de30f5f4002cb788ff446e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42607193"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46371987"
 ---
 # <a name="makeallocatormakeallocator-destructor"></a>MakeAllocator::~MakeAllocator 析构函数
 
@@ -48,5 +48,5 @@ ms.locfileid: "42607193"
 
 ## <a name="see-also"></a>请参阅
 
-[MakeAllocator 类](../windows/makeallocator-class.md)  
+[MakeAllocator 类](../windows/makeallocator-class.md)<br/>
 [Microsoft::WRL::Details 命名空间](../windows/microsoft-wrl-details-namespace.md)
