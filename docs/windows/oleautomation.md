@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ea14cd3e8c1eebbdbcad3a21d64652acee635407
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: e321f8039cbb51dda8cc9103601bd91218f1cdab
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43219934"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46419422"
 ---
 # <a name="oleautomation"></a>oleautomation
 
@@ -57,5 +57,5 @@ ms.locfileid: "43219934"
 
 ## <a name="see-also"></a>请参阅
 
-[IDL 特性](../windows/idl-attributes.md)  
+[IDL 特性](../windows/idl-attributes.md)<br/>
 [接口特性](../windows/interface-attributes.md)  
