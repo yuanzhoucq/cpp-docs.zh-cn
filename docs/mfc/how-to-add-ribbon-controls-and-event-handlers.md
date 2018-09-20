@@ -1,5 +1,5 @@
 ---
-title: 如何： 添加功能区控件和事件处理程序 |Microsoft 文档
+title: 如何： 添加功能区控件和事件处理程序 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,40 +15,42 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 176323137b2ace0d27d9de162da7fa022441aa88
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f3c4af695553bc97815915454bda2aae481543e9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344414"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46427948"
 ---
 # <a name="how-to-add-ribbon-controls-and-event-handlers"></a>如何：添加功能区控件和事件处理程序
-功能区控件是元素，如按钮和组合框中，添加到面板。 面板将显示一组相关控件的功能区栏的区域。  
-  
- 在本主题中，将打开功能区设计器、 添加一个按钮，然后将显示"Hello World"的事件的链接。  
-  
-### <a name="to-open-the-ribbon-designer"></a>若要打开功能区设计器  
-  
-1.  在 Visual Studio 中，在**视图**菜单上，单击**资源视图**。  
-  
-2.  在**资源视图**，双击功能区资源可将其显示在设计图面上。  
-  
-### <a name="to-add-a-button-and-an-event-handler"></a>若要添加一个按钮和一个事件处理程序  
-  
-1.  从**工具栏**，单击**按钮**并将其拖到设计图面中的一个面板。  
-  
-2.  右键单击该按钮，然后单击**添加事件处理程序**。  
-  
-3.  在**事件处理程序向导**，确认的默认设置，然后单击**添加和编辑**。 有关详细信息，请参阅[事件处理程序向导](../ide/event-handler-wizard.md)。  
-  
-4.  在代码编辑器中，执行处理程序函数中添加以下代码：  
-  
- ```  
+
+功能区控件是元素，例如按钮和组合框中，添加到面板。 面板，显示的一组相关控件的功能区栏区域。
+
+在本主题中，将打开功能区设计器，添加一个按钮，然后链接将显示"Hello World"的事件。
+
+### <a name="to-open-the-ribbon-designer"></a>若要打开功能区设计器
+
+1. 在 Visual Studio 中，在**视图**菜单上，单击**资源视图**。
+
+1. 在中**资源视图**，双击要在设计图面上显示的功能区资源。
+
+### <a name="to-add-a-button-and-an-event-handler"></a>若要添加一个按钮和一个事件处理程序
+
+1. 从**工具栏**，单击**按钮**并将其拖到设计图面中的一个面板。
+
+1. 右键单击该按钮，然后单击**添加事件处理程序**。
+
+1. 在中**事件处理程序向导**，确认默认设置，然后单击**添加和编辑**。 有关详细信息，请参阅[事件处理程序向导](../ide/event-handler-wizard.md)。
+
+1. 在代码编辑器中，将以下代码添加到处理程序函数：
+
+```
     MessageBox((LPCTSTR)L"Hello World");
 
- ```  
-  
-## <a name="see-also"></a>请参阅  
- [RibbonGadgets 示例： 功能区小工具应用程序](../visual-cpp-samples.md)   
- [功能区设计器 (MFC)](../mfc/ribbon-designer-mfc.md)
+```
+
+## <a name="see-also"></a>请参阅
+
+[RibbonGadgets 示例： 功能区的小工具应用程序](../visual-cpp-samples.md)<br/>
+[功能区设计器 (MFC)](../mfc/ribbon-designer-mfc.md)
 

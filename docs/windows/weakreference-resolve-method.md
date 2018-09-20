@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 59e748ef68d78f9cb77eb335f5c5cd44e058f0d4
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 1e0873b366c84e89b23ddbaa6c64f6b484f921e0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42601151"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46446330"
 ---
 # <a name="weakreferenceresolve-method"></a>WeakReference::Resolve 方法
 
@@ -39,10 +39,10 @@ STDMETHOD(Resolve)
 
 ### <a name="parameters"></a>参数
 
-*riid*  
+*riid*<br/>
 接口 ID。
 
-*ppvObject*  
+*ppvObject*<br/>
 此操作完成后，当前的强引用，如果强引用计数不为零的副本。
 
 ## <a name="return-value"></a>返回值
@@ -65,5 +65,5 @@ STDMETHOD(Resolve)
 
 ## <a name="see-also"></a>请参阅
 
-[WeakReference 类 1](../windows/weakreference-class1.md)  
+[WeakReference 类 1](../windows/weakreference-class1.md)<br/>
 [Microsoft::WRL::Details 命名空间](../windows/microsoft-wrl-details-namespace.md)

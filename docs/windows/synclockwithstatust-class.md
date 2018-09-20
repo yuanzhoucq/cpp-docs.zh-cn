@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a0c53832acdd7a785ccc36941cd317a9d0705173
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 69676651c77175b55f4363b525a3ca3acb9be46d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42583621"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46437451"
 ---
 # <a name="synclockwithstatust-class"></a>SyncLockWithStatusT 类
 
@@ -39,7 +39,7 @@ class SyncLockWithStatusT : public SyncLockT<SyncTraits>;
 
 ### <a name="parameters"></a>参数
 
-*SyncTraits*  
+*SyncTraits*<br/>
 可能需要排他的类型或共享资源的所有权。
 
 ## <a name="remarks"></a>备注

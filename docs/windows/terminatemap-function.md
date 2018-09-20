@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e56e3f48a3a58f25d03053867c195d11970893f9
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: f844d63bc04deb4294203f04aef30db48f195fd9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42601402"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46438062"
 ---
 # <a name="terminatemap-function"></a>TerminateMap 函数
 
@@ -39,13 +39,13 @@ inline bool TerminateMap(
 
 ### <a name="parameters"></a>参数
 
-*模块*  
+*模块*<br/>
 一个[模块](../windows/module-class.md)。
 
-*服务器名称*  
+*服务器名称*<br/>
 参数指定的模块中的类工厂的子集名称*模块*。
 
-*forceTerminate*  
+*forceTerminate*<br/>
 **true**终止类而不考虑它们的工厂处于活动状态;**false**不终止类工厂，如果任何工厂处于活动状态。
 
 ## <a name="return-value"></a>返回值

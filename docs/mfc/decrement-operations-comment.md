@@ -1,5 +1,5 @@
 ---
-title: -操作注释 |Microsoft 文档
+title: --Operations 注释 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ee6bf4a330a5fdf1ac294157e69dab39b5f2bdd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 73c4a7a70c9f2ed987337426793bd462c2a94309
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342266"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46372491"
 ---
 # <a name="-operations-comment"></a>// Operations 注释
-`// Operations`的 MFC 类声明的部分包含你可以调用要使其执行操作或执行的操作 （执行操作） 的对象的成员函数。 这些函数是通常非**const**因为它们通常具有副作用。 它们可能是虚方法或非虚拟具体取决于类的需求。 通常情况下，这些成员是公共的。  
-  
- 在此示例中列出从类`CStdioFile`中[注释的示例](../mfc/an-example-of-the-comments.md)，该列表包含在此注释的两个成员函数：`ReadString`和`WriteString`。  
-  
- 与属性一样，可以进一步细分操作。  
-  
-## <a name="see-also"></a>请参阅  
- [使用 MFC 源文件](../mfc/using-the-mfc-source-files.md)   
- [注释示例](../mfc/an-example-of-the-comments.md)   
- [/ / Implementation 注释](../mfc/decrement-implementation-comment.md)   
- [/ / Constructors 注释](../mfc/decrement-constructors-comment.md)   
- [/ / Attributes 注释](../mfc/decrement-attributes-comment.md)   
- [/ / Overridables 注释](../mfc/decrement-overridables-comment.md)
+
+`// Operations` MFC 类声明的部分包含可调用对象以使其执行操作或执行的操作 （执行操作） 的成员函数。 这些函数是通常非**const**因为它们通常具有负面影响。 它们可能是虚拟或非虚拟具体取决于类的需求。 通常情况下，这些成员是公共的。
+
+在类中列出的示例`CStdioFile`，请在[注释示例](../mfc/an-example-of-the-comments.md)，该列表包含在此注释下列两个成员函数：`ReadString`和`WriteString`。
+
+与属性一样，可以进一步细分操作。
+
+## <a name="see-also"></a>请参阅
+
+[使用 MFC 源文件](../mfc/using-the-mfc-source-files.md)<br/>
+[注释示例](../mfc/an-example-of-the-comments.md)<br/>
+[Implementation 注释](../mfc/decrement-implementation-comment.md)<br/>
+[构造函数注释](../mfc/decrement-constructors-comment.md)<br/>
+[Attributes 注释](../mfc/decrement-attributes-comment.md)<br/>
+[可重写注释](../mfc/decrement-overridables-comment.md)
 

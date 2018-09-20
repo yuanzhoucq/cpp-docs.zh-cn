@@ -1,5 +1,5 @@
 ---
-title: 演练： 向应用程序添加 CTaskDialog |Microsoft 文档
+title: 演练： 向应用程序添加 CTaskDialog |Microsoft Docs
 ms.custom: ''
 ms.date: 06/28/2018
 ms.technology:
@@ -15,21 +15,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a0a3d93815a740be59960e6d3e0f9e9ed690923
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: 0f803af896c1bb2a0e5f58e45f4ef9f588f4e66d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37122949"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46420474"
 ---
 # <a name="walkthrough-adding-a-ctaskdialog-to-an-application"></a>演练：向应用程序添加 CTaskDialog
 
 本演练介绍了 [CTaskDialog Class](../mfc/reference/ctaskdialog-class.md) ，并演示如何将其添加到应用程序中。
 
-`CTaskDialog`是任务对话框，用于取代 Windows Vista 或更高版本的 Windows 消息框。 `CTaskDialog` 改进了原始消息框并添加了功能。 在 Visual Studio 中仍支持 Windows 消息框。
+`CTaskDialog`是替换 Windows 消息框在 Windows Vista 或更高版本的任务对话框。 `CTaskDialog` 改进了原始消息框并添加了功能。 在 Visual Studio 中仍支持 Windows 消息框。
 
 > [!NOTE]
-> 早的 Windows 版本高于 Windows Vista 不支持`CTaskDialog`。 如果你想要向在早期版本的 Windows 上运行你的应用程序的用户显示一条消息，则必须编写备用对话框选项的程序。 可以使用静态方法 [CTaskDialog::IsSupported](../mfc/reference/ctaskdialog-class.md#issupported) 在运行时确定用户的计算机能否显示 `CTaskDialog`中的 Windows 消息框。 此外，仅当应用程序使用 Unicode 库生成时， `CTaskDialog` 才可用。
+> 以前的 Windows 版本高于 Windows Vista 不支持`CTaskDialog`。 如果你想要向在早期版本的 Windows 上运行你的应用程序的用户显示一条消息，则必须编写备用对话框选项的程序。 可以使用静态方法 [CTaskDialog::IsSupported](../mfc/reference/ctaskdialog-class.md#issupported) 在运行时确定用户的计算机能否显示 `CTaskDialog`中的 Windows 消息框。 此外，仅当应用程序使用 Unicode 库生成时， `CTaskDialog` 才可用。
 
 `CTaskDialog` 支持使用多种可选元素来收集和显示信息。 例如， `CTaskDialog` 可以显示命令链接、自定义按钮、自定义图标和页脚。 `CTaskDialog` 还具有多种方法，可查询任务对话框状态以确定用户选择的可选元素。
 
@@ -53,7 +53,7 @@ ms.locfileid: "37122949"
 
 3. 在包含列表后面添加 `#include "afxtaskdialog.h"` 。
 
-4. 查找 `CMyProjectApp::InitInstance`方法。 在 `return TRUE;` 语句的前面插入以下代码行。 此代码将创建我们在 Windows 消息框或 `CTaskDialog`中使用的字符串。  
+4. 查找 `CMyProjectApp::InitInstance`方法。 在 `return TRUE;` 语句的前面插入以下代码行。 此代码将创建我们在 Windows 消息框或 `CTaskDialog`中使用的字符串。
 
     ```cpp
     CString message("My message to the user");
@@ -102,9 +102,9 @@ ms.locfileid: "37122949"
 
 ### <a name="to-add-functionality-to-the-ctaskdialog"></a>向 CTaskDialog 添加功能的步骤
 
-1. 导航到**资源视图**。 如果看不到**资源视图**，你可以打开它从**视图**菜单。
+1. 导航到**资源视图**。 如果无法看到**资源视图**，可以将其打开**视图**菜单。
 
-2. 展开**资源视图**直到能够选择**字符串表**文件夹。 展开该文件夹并双击**字符串表**条目。
+2. 展开**资源视图**直到可以选择**字符串表**文件夹。 展开它，然后双击**字符串表**条目。
 
 3. 滚动到字符串表的底部并添加一个新条目。 将 ID 更改为 `TEMP_LINE1`。 将标题设置为 **Command Line 1**。
 
@@ -201,6 +201,6 @@ ms.locfileid: "37122949"
 
 ## <a name="see-also"></a>请参阅
 
-[对话框](../mfc/dialog-boxes.md)  
-[CTaskDialog 类](../mfc/reference/ctaskdialog-class.md)  
-[CTaskDialog::CTaskDialog](../mfc/reference/ctaskdialog-class.md#ctaskdialog)  
+[对话框](../mfc/dialog-boxes.md)<br/>
+[CTaskDialog 类](../mfc/reference/ctaskdialog-class.md)<br/>
+[CTaskDialog::CTaskDialog](../mfc/reference/ctaskdialog-class.md#ctaskdialog)

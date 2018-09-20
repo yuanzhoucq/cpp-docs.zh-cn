@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c5cc7da4629ba00bbb1c48d764b836897c0b3748
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 87fac131c053afa3c3b6d6da549d7a002fa95b64
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44316973"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46445017"
 ---
 # <a name="editing-a-string-in-a-version-information-resource-c"></a>编辑版本信息资源 （c + +） 中的字符串
 
@@ -48,5 +48,5 @@ Win32
 
 ## <a name="see-also"></a>请参阅
 
-[版本信息编辑器](../windows/version-information-editor.md)  
+[版本信息编辑器](../windows/version-information-editor.md)<br/>
 [版本信息 (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms646981.aspx)

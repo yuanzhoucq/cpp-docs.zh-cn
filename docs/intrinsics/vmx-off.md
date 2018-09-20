@@ -17,36 +17,39 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 924cd8f502b6fe41aa4733df3dc59a372c27e6cb
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: ba075822c348d9d4b0dc3f580f3f136bb7d49a7a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43683630"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46415403"
 ---
 # <a name="vmxoff"></a>__vmx_off
-**Microsoft 专用**  
-  
- 停用在处理器中的虚拟机扩展 (VMX) 操作。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-void __vmx_off();  
-```  
-  
-## <a name="remarks"></a>备注  
- `__vmx_off`函数等同于`VMXOFF`计算机指令。 此函数支持主机的虚拟机监视器与来宾操作系统及其应用程序进行交互。 有关详细信息，搜索"Intel 虚拟化技术规范的 IA-32 Intel 体系结构，"文档在文档数字 C97063 002 [Intel Corporation](https://software.intel.com/en-us/articles/intel-sdm)站点。  
-  
-## <a name="requirements"></a>要求  
-  
-|内部函数|体系结构|  
-|---------------|------------------|  
-|`__vmx_off`|x86、x64|  
-  
- **标头文件** \<intrin.h >  
-  
-**结束 Microsoft 专用**  
-  
-## <a name="see-also"></a>请参阅  
- [编译器内部函数](../intrinsics/compiler-intrinsics.md)
+
+**Microsoft 专用**
+
+停用在处理器中的虚拟机扩展 (VMX) 操作。
+
+## <a name="syntax"></a>语法
+
+```
+void __vmx_off();
+```
+
+## <a name="remarks"></a>备注
+
+`__vmx_off`函数等同于`VMXOFF`计算机指令。 此函数支持主机的虚拟机监视器与来宾操作系统及其应用程序进行交互。 有关详细信息，搜索"Intel 虚拟化技术规范的 IA-32 Intel 体系结构，"文档在文档数字 C97063 002 [Intel Corporation](https://software.intel.com/en-us/articles/intel-sdm)站点。
+
+## <a name="requirements"></a>要求
+
+|内部函数|体系结构|
+|---------------|------------------|
+|`__vmx_off`|x86、x64|
+
+**标头文件** \<intrin.h >
+
+**结束 Microsoft 专用**
+
+## <a name="see-also"></a>请参阅
+
+[编译器内部函数](../intrinsics/compiler-intrinsics.md)

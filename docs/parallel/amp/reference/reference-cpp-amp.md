@@ -1,5 +1,5 @@
 ---
-title: 引用 (c + + AMP) |Microsoft 文档
+title: 参考 (c + + AMP) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,40 +16,39 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c39528bf3b1e6c9235e4b2daabcd8bbddd0d52f
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 3d48ce4d0317ba8d66b609ca89e6cb3b43970e52
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33685887"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46431432"
 ---
 # <a name="reference-c-amp"></a>参考 (C++ AMP)
-本部分包含对 c + + Accelerated Massive Parallelism (c + + AMP) 运行时的参考信息。  
-  
+
+本部分包含有关 c + + Accelerated Massive Parallelism (c + + AMP) 运行时参考信息。
+
 > [!NOTE]
->  C++ 语言标准将保留以下划线 (`_`) 字符开头的标识符，供实现（例如库）使用。 请勿在代码中使用以下划线开头的名称。 其名称遵循此约定的代码元素的行为尚未得到保证，在将来发布的版本中可能会有更改。 出于这些原因，此文档中省略了此类代码元素。  
-  
-## <a name="in-this-section"></a>本节内容  
- [并发命名空间 (C++ AMP)](concurrency-namespace-cpp-amp.md)  
- 提供的类和启用 c + + 代码，在数据并行硬件加速的函数。  
-  
- [Concurrency::direct3d 命名空间](concurrency-direct3d-namespace.md)  
- 提供了支持 D3D 互操作性的函数。 启用 AMP 代码中的计算 D3D 资源的无缝利用和在 AMP 中创建在 D3D 代码中，而无需创建冗余中间副本的资源的使用。 可以使用 c + + AMP 以增量方式加速 DirectX 应用程序的需要进行大量计算的部分而对从 AMP 计算生成数据使用 D3D API。  
-  
- [Concurrency::fast_math 命名空间](concurrency-fast-math-namespace.md)  
- 函数中`fast_math`命名空间不符合 C99 标准。 提供了只有单精度的每个函数的版本。 这些函数将使用 DirectX 内部函数，其速度要快于中的相应函数`precise_math`命名空间和不需要扩展的双精度支持加速器，但它们是不太准确。 有两个版本的每个函数以便与 C99 代码; 的源级别兼容这两个版本采用并返回单精度值。  
-  
- [Concurrency::graphics 命名空间](concurrency-graphics-namespace.md)  
- 图形编程提供类型和函数所设计的。  
-  
- [Concurrency::precise_math 命名空间](concurrency-precise-math-namespace.md)  
- 函数中`precise_math`命名空间是符合 C99。 每个函数的单精度和双精度版本是包含。 这些函数-这包括单精度函数-需要扩展的双精度支持加速器上。  
-  
-## <a name="related-sections"></a>相关章节  
- [C++ AMP (C++ Accelerated Massive Parallelism)](../../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)  
- C + + AMP 通过利用通常显示为在离散图形卡的图形处理单元 (GPU) 的数据并行硬件加速执行 c + + 代码。
+>  C++ 语言标准将保留以下划线 (`_`) 字符开头的标识符，供实现（例如库）使用。 请勿在代码中使用以下划线开头的名称。 其名称遵循此约定的代码元素的行为尚未得到保证，在将来发布的版本中可能会有更改。 出于这些原因，此文档中省略了此类代码元素。
 
+## <a name="in-this-section"></a>本节内容
 
+[并发命名空间 (C++ AMP)](concurrency-namespace-cpp-amp.md)<br/>
+提供类和启用的数据并行硬件上的 c + + 代码加速的函数。
 
+[Concurrency::direct3d 命名空间](concurrency-direct3d-namespace.md)<br/>
+提供支持 D3D 互操作性的函数。 启用无缝使用 D3D 资源在 AMP 代码中的计算和使用资源在 AMP 中创建在 D3D 代码中，而无需创建冗余的中间副本。 可以使用 c + + AMP 来增量加速您的 DirectX 应用程序的计算密集型部分，并使用从 AMP 计算生成的数据上的 D3D API。
 
+[Concurrency::fast_math 命名空间](concurrency-fast-math-namespace.md)<br/>
+中的函数`fast_math`命名空间不符合 C99 标准。 提供了每个函数仅单精度版本。 这些函数使用 DirectX 内部函数，其速度要快于中的相应函数`precise_math`命名空间并不需要扩展的双精度支持快捷键，但它们是不太准确。 有两个版本的每个函数与 C99 代码; 的源级别兼容性的这两个版本采用并返回单精度值。
+
+[Concurrency::graphics 命名空间](concurrency-graphics-namespace.md)<br/>
+为图形编程中提供类型和设计的功能。
+
+[Concurrency::precise_math 命名空间](concurrency-precise-math-namespace.md)<br/>
+中的函数`precise_math`命名空间是符合 C99。 包含每个函数的单精度和双精度版本。 这些函数，这包括单精度函数 — 需要扩展的双精度快捷键支持。
+
+## <a name="related-sections"></a>相关章节
+
+[C++ AMP (C++ Accelerated Massive Parallelism)](../../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)<br/>
+C + + AMP 可加速 c + + 代码的执行方法通过利用的是通常表示为离散图像卡上的图形处理单元 (GPU) 的数据并行硬件。
 

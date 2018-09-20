@@ -1,5 +1,5 @@
 ---
-title: Genericcontrol 处理程序 |Microsoft 文档
+title: Genericcontrol 处理程序 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,20 +19,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae941e7a59fe673dea6068c6ca6df5feb94db239
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 060bda1de088f3e1e84791601f176097f764c412
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372925"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46446421"
 ---
 # <a name="generic-control-handler"></a>GenericControl 处理程序
-下面的映射条目对应于函数原型。  
-  
-|映射条目|函数原型|  
-|---------------|------------------------|  
-|ON_CONTROL ( \<wNotifyCode >， \<id >， \<f x n >)|afx_msg void f x n （);|  
-  
-## <a name="see-also"></a>请参阅  
- [消息映射](../../mfc/reference/message-maps-mfc.md)
+
+下面的映射条目对应于函数原型。
+
+|映射条目|函数原型|
+|---------------|------------------------|
+|ON_CONTROL ( \<wNotifyCode >， \<id >， \<memberFxn >)|afx_msg void memberFxn （);|
+
+## <a name="see-also"></a>请参阅
+
+[消息映射](../../mfc/reference/message-maps-mfc.md)
 
