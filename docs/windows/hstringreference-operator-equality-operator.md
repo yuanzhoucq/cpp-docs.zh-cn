@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b07df3dc50704a87883e1a387fe9c842c1732b54
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e369aa819c7bff372113b2e422fef2441485a85a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42610528"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46381370"
 ---
 # <a name="hstringreferenceoperator-operator"></a>HStringReference::Operator== 运算符
 
@@ -44,10 +44,10 @@ inline bool operator==(
 
 ### <a name="parameters"></a>参数
 
-*lhs*  
+*lhs*<br/>
 要比较的第一个参数。 *lhs*可以是**HStringReference**对象或 HSTRING 句柄。
 
-*rhs*  
+*rhs*<br/>
 要比较的第二个参数。  *rhs*可以是**HStringReference**对象或 HSTRING 句柄。
 
 ## <a name="return-value"></a>返回值

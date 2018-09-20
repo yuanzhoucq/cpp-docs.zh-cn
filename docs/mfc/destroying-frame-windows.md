@@ -1,5 +1,5 @@
 ---
-title: 销毁框架窗口 |Microsoft 文档
+title: 销毁框架 Windows |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -25,24 +25,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81182c0e5633e19126d3036b5793de7658ad3d2a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 742ea2fedff2e4f044e46242a4152c12855ab15e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33343471"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46396150"
 ---
 # <a name="destroying-frame-windows"></a>销毁框架窗口
-MFC 框架管理窗口析构，以及与 framework 文档和视图关联的窗口的创建。 如果你创建其他 windows，你将负责销毁它们。  
-  
- 在框架中，当用户关闭帧窗口时，窗口的默认[OnClose](../mfc/reference/cwnd-class.md#onclose)处理程序调用[DestroyWindow](../mfc/reference/cwnd-class.md#destroywindow)。 在销毁 Windows 窗口时调用的最后一个成员函数是[OnNcDestroy](../mfc/reference/cwnd-class.md#onncdestroy)，其中进行一些清理，然后调用[默认](../mfc/reference/cwnd-class.md#default)成员函数来执行 Windows 清理，最后调用虚拟成员函数[PostNcDestroy](../mfc/reference/cwnd-class.md#postncdestroy)。 [CFrameWnd](../mfc/reference/cframewnd-class.md)实现`PostNcDestroy`删除 c + + 窗口对象。 你决不应使用 c + +**删除**运算符框架窗口。 请改用 `DestroyWindow`。  
-  
- 当主窗口关闭时，应用程序关闭。 如果存在修改未保存的文档，框架将显示一个消息框，以询问如果应保存文档，并确保必要时，将保存的相应文档。  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>你想进一步了解什么  
-  
--   [创建文档框架窗口](../mfc/creating-document-frame-windows.md)  
-  
-## <a name="see-also"></a>请参阅  
- [使用框架窗口](../mfc/using-frame-windows.md)
+
+MFC 框架管理窗口析构，以及与 framework 文档和视图相关联的窗口的创建。 如果您创建其他窗口，您有责任销毁它们。
+
+在 framework 中，当用户关闭帧窗口时，窗口的默认[OnClose](../mfc/reference/cwnd-class.md#onclose)处理程序调用[DestroyWindow](../mfc/reference/cwnd-class.md#destroywindow)。 当销毁 Windows 窗口时调用的最后一个成员函数是[OnNcDestroy](../mfc/reference/cwnd-class.md#onncdestroy)，其中进行一些清理，调用[默认](../mfc/reference/cwnd-class.md#default)成员函数来执行 Windows 清理，最后调用虚拟成员函数[PostNcDestroy](../mfc/reference/cwnd-class.md#postncdestroy)。 [CFrameWnd](../mfc/reference/cframewnd-class.md)的实现`PostNcDestroy`删除 c + + 窗口对象。 你决不应使用 c + +**删除**框架窗口上的运算符。 请改用 `DestroyWindow`。
+
+当主窗口关闭时，应用程序关闭。 如果那里修改的未保存的文档，框架将显示一个消息框，询问是否应保存文档，并可确保根据需要保存相应文档。
+
+## <a name="what-do-you-want-to-know-more-about"></a>你想要了解更多信息
+
+- [创建文档框架窗口](../mfc/creating-document-frame-windows.md)
+
+## <a name="see-also"></a>请参阅
+
+[使用框架窗口](../mfc/using-frame-windows.md)
 

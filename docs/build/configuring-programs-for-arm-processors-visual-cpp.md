@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ce0e7e1f7c0936daed0fa6a51f6e254403205e0
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: fbdf882367deb34570dd5b5ebb1b4001be739297
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45714956"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46373852"
 ---
 # <a name="configure-visual-c-for-arm-processors"></a>为 ARM 处理器配置 Visual c + +
 
@@ -25,16 +25,22 @@ ms.locfileid: "45714956"
 
 ## <a name="in-this-section"></a>本节内容
 
-[ARM ABI 约定概述](../build/overview-of-arm-abi-conventions.md)描述由 ARM 上 Windows 进行注册、 调用约定和异常处理的应用程序二进制接口。
+[ARM ABI 约定概述](../build/overview-of-arm-abi-conventions.md)<br/>
+描述由 ARM 上的 Windows 用于进行注册、调用约定以及处理异常的应用程序二进制接口。
 
-[ARM64 ABI 约定概述](../build/arm64-windows-abi-conventions.md)介绍使用 Windows 在 ARM64 上进行注册、 调用约定和异常处理的应用程序二进制接口。
+[ARM64 ABI 约定概述](../build/arm64-windows-abi-conventions.md)<br/>
+介绍使用 Windows 在 ARM64 上进行注册、 调用约定和异常处理的应用程序二进制接口。
 
-[Visual c + + ARM 迁移的常见问题](../build/common-visual-cpp-arm-migration-issues.md)介绍 c + + 代码元素，通常被认为是可移植的体系结构，但这对于 ARM 比用于 x86 和 x64 产生不同的结果。
+[Visual C++ ARM 迁移的常见问题](../build/common-visual-cpp-arm-migration-issues.md)<br/>
+描述了通常被认为可以跨体系结构移植的 C++ 代码元素，但它们为 ARM 产生的结果不同于为 x86 和 x64 产生的结果。
 
-[ARM 异常处理](../build/arm-exception-handling.md)描述结构化异常处理在 ARM 上 Windows 期间用于展开堆栈的编码方案。
+[ARM 异常处理](../build/arm-exception-handling.md)<br/>
+描述了在 ARM 上的 Windows 中在结构化异常处理期间用于展开堆栈的编码方案。
 
-[ARM64 的异常处理](../build/arm64-exception-handling.md)描述结构化异常处理在 Windows 上 ARM64 期间用于展开堆栈的编码方案。
+[ARM64 异常处理](../build/arm64-exception-handling.md)<br/>
+介绍在 ARM64 上的 Windows 中的结构化的异常处理期间用于展开堆栈的编码方案。
 
 ## <a name="related-sections"></a>相关章节
 
-[ARM 内部函数](../intrinsics/arm-intrinsics.md)介绍使用 ARM 体系结构的处理器的编译器内部函数。
+[ARM 内部函数](../intrinsics/arm-intrinsics.md)<br/>
+描述适用于使用 ARM 架构的处理器的编译器内部函数。

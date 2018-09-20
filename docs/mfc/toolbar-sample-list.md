@@ -1,5 +1,5 @@
 ---
-title: 工具栏示例列表 |Microsoft 文档
+title: 工具栏示例列表 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,22 +14,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2c6cab9cd5d7a47689696d58afce780887770e0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2e235b491193da873aba31870574a9bfb6c4d653
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381519"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46383069"
 ---
 # <a name="toolbar-sample-list"></a>工具栏示例列表
-请参阅以下演示使用 MFC 的工具栏的示例程序：  
-  
--   [SCRIBBLE](../visual-cpp-samples.md)  
-  
--   [CTRLBARS](../visual-cpp-samples.md)  
-  
--   [DOCKTOOL](../visual-cpp-samples.md)  
-  
-## <a name="see-also"></a>请参阅  
- [工具栏](../mfc/toolbars.md)
+
+请参阅以下说明使用 MFC 的工具栏的示例程序：
+
+- [SCRIBBLE](../visual-cpp-samples.md)
+
+- [CTRLBARS](../visual-cpp-samples.md)
+
+- [DOCKTOOL](../visual-cpp-samples.md)
+
+## <a name="see-also"></a>请参阅
+
+[工具栏](../mfc/toolbars.md)
 

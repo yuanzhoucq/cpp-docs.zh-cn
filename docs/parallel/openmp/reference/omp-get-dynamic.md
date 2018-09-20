@@ -1,5 +1,5 @@
 ---
-title: omp_get_dynamic |Microsoft 文档
+title: omp_get_dynamic |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d97cae8091f88c283412b36ef757b03c72f7580d
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: c2b5a285ef019cd1752b60065f7040d9a937ce38
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691258"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46389884"
 ---
 # <a name="ompgetdynamic"></a>omp_get_dynamic
-返回一个值，该值指示是否可以由运行时调整后续并行区域中的可用线程数。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-int omp_get_dynamic();  
-```  
-  
-## <a name="return-value"></a>返回值  
- 如果不为零，则启用动态调整的线程。  
-  
-## <a name="remarks"></a>备注  
- 使用指定的线程的动态调整[omp_set_dynamic](../../../parallel/openmp/reference/omp-set-dynamic.md)和[OMP_DYNAMIC](../../../parallel/openmp/reference/omp-dynamic.md)。  
-  
- 有关详细信息，请参阅[3.1.7 omp_set_dynamic 函数](../../../parallel/openmp/3-1-7-omp-set-dynamic-function.md)。  
-  
-## <a name="example"></a>示例  
- 请参阅[omp_set_dynamic](../../../parallel/openmp/reference/omp-set-dynamic.md)有关的使用示例`omp_get_dynamic`。  
-  
-## <a name="see-also"></a>请参阅  
- [函数](../../../parallel/openmp/reference/openmp-functions.md)
+
+返回一个值，该值指示是否后续并行区域中可用的线程数可以调整运行时。
+
+## <a name="syntax"></a>语法
+
+```
+int omp_get_dynamic();
+```
+
+## <a name="return-value"></a>返回值
+
+如果非零值，则启用动态调整线程。
+
+## <a name="remarks"></a>备注
+
+使用指定的线程的动态调整[omp_set_dynamic](../../../parallel/openmp/reference/omp-set-dynamic.md)并[OMP_DYNAMIC](../../../parallel/openmp/reference/omp-dynamic.md)。
+
+有关详细信息，请参阅[3.1.7 omp_set_dynamic 函数](../../../parallel/openmp/3-1-7-omp-set-dynamic-function.md)。
+
+## <a name="example"></a>示例
+
+请参阅[omp_set_dynamic](../../../parallel/openmp/reference/omp-set-dynamic.md)有关的使用示例`omp_get_dynamic`。
+
+## <a name="see-also"></a>请参阅
+
+[函数](../../../parallel/openmp/reference/openmp-functions.md)
