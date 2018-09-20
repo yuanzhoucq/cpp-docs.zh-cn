@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d8e029b1ffc4e17e55f2cb69405bb272b92e94e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6d8d4b0f740e69b57944cb35f2213ae0fd54b511
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43221389"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46386283"
 ---
 # <a name="tn071-mfc-iolecommandtarget-implementation"></a>TN071：MFC IOleCommandTarget 实现
 
@@ -59,11 +59,11 @@ DECLARE_OLECMD_MAP ()
 BEGIN_OLECMD_MAP(theClass, baseClass)
 ```
 
-*类*  
- 包含命令映射的类的名称。
+*类*<br/>
+包含命令映射的类的名称。
 
-*baseClass*  
- 包含命令映射的类的基类的名称。
+*baseClass*<br/>
+包含命令映射的类的基类的名称。
 
 此宏表示命令映射的开头。 包含命令映射的类在实现文件中使用此宏。
 
@@ -77,14 +77,14 @@ END_OLECMD_MAP()
 ON_OLECMD(pguid, olecmdid, id)
 ```
 
-*pguid*  
- 指向 OLE 命令的命令组的 GUID。 此参数是**NULL**标准 OLE 命令组。
+*pguid*<br/>
+指向 OLE 命令的命令组的 GUID。 此参数是**NULL**标准 OLE 命令组。
 
-*olecmdid*  
- OLE 命令要调用的命令 ID。
+*olecmdid*<br/>
+OLE 命令要调用的命令 ID。
 
-*id*  
- WM_COMMAND 消息发送到调用此 OLE 命令时包含命令映射的应用程序的 ID。
+*id*<br/>
+WM_COMMAND 消息发送到调用此 OLE 命令时包含命令映射的应用程序的 ID。
 
 使用命令映射中 ON_OLECMD 宏以添加你想要处理的 OLE 命令的条目。 收到的 OLE 命令，它们将转换为指定的 WM_COMMAND 消息并通过使用标准 MFC 命令路由体系结构的应用程序的消息映射路由。
 
@@ -158,5 +158,5 @@ void CContainerCntrItem::DoOleCmd()
 
 ## <a name="see-also"></a>请参阅
 
-[按编号列出的技术说明](../mfc/technical-notes-by-number.md)  
-[按类别列出的技术说明](../mfc/technical-notes-by-category.md)  
+[按编号列出的技术说明](../mfc/technical-notes-by-number.md)<br/>
+[按类别列出的技术说明](../mfc/technical-notes-by-category.md)

@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ad05e9448af9148965ca2f0137d3e0d666d48871
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 5615756f8716ae1f4c73ccf98e2754b57f674216
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315387"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46392953"
 ---
 # <a name="grouping-radio-buttons-on-a-dialog-box-c"></a>在对话框 （c + +） 上的单选按钮分组
 
@@ -69,6 +69,6 @@ Win32
 
 ## <a name="see-also"></a>请参阅
 
-[对话框上的控件排列](../windows/arrangement-of-controls-on-dialog-boxes.md)  
-[对话框中的控件](../windows/controls-in-dialog-boxes.md)  
+[对话框上的控件排列](../windows/arrangement-of-controls-on-dialog-boxes.md)<br/>
+[对话框中的控件](../windows/controls-in-dialog-boxes.md)<br/>
 [控件](../mfc/controls-mfc.md)

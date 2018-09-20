@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2bbf6cb67973d7538aa7aea0d846cbadf030d585
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: dc59b9c93cebb622f40881d961709079abcd9166
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42590647"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46388623"
 ---
 # <a name="eventtargetarrayeventtargetarray-constructor"></a>EventTargetArray::EventTargetArray 构造函数
 
@@ -39,7 +39,7 @@ EventTargetArray(
 
 ### <a name="parameters"></a>参数
 
-*hr*  
+*hr*<br/>
 此构造函数的操作之后, 参数*hr*指示数组的分配是成功还是失败。 下表列出了可能的值为*hr*。
 
 已成功，则为 S_OK 该操作。
@@ -48,7 +48,7 @@ EventTargetArray(
 
 S_FALSE 参数*项*小于或等于零。
 
-*项*  
+*项*<br/>
 要分配的数组元素数。
 
 ## <a name="remarks"></a>备注
@@ -65,5 +65,5 @@ S_FALSE 参数*项*小于或等于零。
 
 ## <a name="see-also"></a>请参阅
 
-[EventTargetArray 类](../windows/eventtargetarray-class.md)  
+[EventTargetArray 类](../windows/eventtargetarray-class.md)<br/>
 [Microsoft::WRL::Details 命名空间](../windows/microsoft-wrl-details-namespace.md)

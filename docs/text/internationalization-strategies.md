@@ -21,30 +21,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d92b95cac23eed029a49239d791df237377d8376
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d630aa39cb4eb4e56a0d64446ac5a5ea7a67881c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42587124"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46395851"
 ---
 # <a name="internationalization-strategies"></a>国际化策略
-具体取决于您的目标操作系统和市场，有几个国际化策略：  
-  
--   你的应用程序使用 Unicode。  
-  
-     使用特定于 Unicode 的功能和所有字符宽度都为 16 位 （尽管出于特殊目的，可以在程序的某些部分中使用 ANSI 字符）。 C 运行时库提供用于仅限 Unicode 的编程函数、 宏和数据类型。 MFC 是完全支持 Unicode 的。  
-  
--   应用程序使用 MBCS，并可以在任何 Win32 平台上运行。  
-  
-     使用特定于 MBCS 的功能。 字符串可以包含单字节字符、 双字节字符，或两者。 C 运行时库提供用于仅使用 MBCS 编程函数、 宏和数据类型。 MFC 是完全启用 MBCS 的。  
-  
--   为应用程序的源代码编写的完整可移植性 — 通过使用符号重新编译`_UNICODE`或符号`_MBCS`定义，您可以生成使用的版本。 有关详细信息，请参阅[Tchar.h 中的一般文本映射](../text/generic-text-mappings-in-tchar-h.md)。  
-  
-     使用完全可移植的 C 运行时函数、 宏和数据类型。 MFC 的灵活性支持任何这些策略。  
-  
- 这些主题的其余部分集中精力编写完全可移植代码，可以生成为 Unicode 或 MBCS。  
-  
-## <a name="see-also"></a>请参阅  
- [Unicode 和 MBCS](../text/unicode-and-mbcs.md)   
- [区域设置和代码页](../text/locales-and-code-pages.md)
+
+具体取决于您的目标操作系统和市场，有几个国际化策略：
+
+- 你的应用程序使用 Unicode。
+
+   使用特定于 Unicode 的功能和所有字符宽度都为 16 位 （尽管出于特殊目的，可以在程序的某些部分中使用 ANSI 字符）。 C 运行时库提供用于仅限 Unicode 的编程函数、 宏和数据类型。 MFC 是完全支持 Unicode 的。
+
+- 应用程序使用 MBCS，并可以在任何 Win32 平台上运行。
+
+   使用特定于 MBCS 的功能。 字符串可以包含单字节字符、 双字节字符，或两者。 C 运行时库提供用于仅使用 MBCS 编程函数、 宏和数据类型。 MFC 是完全启用 MBCS 的。
+
+- 为应用程序的源代码编写的完整可移植性 — 通过使用符号重新编译`_UNICODE`或符号`_MBCS`定义，您可以生成使用的版本。 有关详细信息，请参阅[Tchar.h 中的一般文本映射](../text/generic-text-mappings-in-tchar-h.md)。
+
+   使用完全可移植的 C 运行时函数、 宏和数据类型。 MFC 的灵活性支持任何这些策略。
+
+这些主题的其余部分集中精力编写完全可移植代码，可以生成为 Unicode 或 MBCS。
+
+## <a name="see-also"></a>请参阅
+
+[Unicode 和 MBCS](../text/unicode-and-mbcs.md)<br/>
+[区域设置和代码页](../text/locales-and-code-pages.md)

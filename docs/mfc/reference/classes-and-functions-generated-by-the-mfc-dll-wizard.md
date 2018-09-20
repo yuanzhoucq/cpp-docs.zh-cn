@@ -19,24 +19,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd1b1d65148a951ba78e0408ab590a2c979648f7
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 76aa828727ccfcf93c7b9b0242e60b747c1873f8
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339574"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46390846"
 ---
 # <a name="classes-and-functions-generated-by-the-mfc-dll-wizard"></a>MFC DLL 向导生成的类和函数
-MFC DLL 向导生成的代码取决于要创建的 DLL 和所选的选项的类型。 MFC DLL 向导生成的两种形式的规则 MFC Dll 相同的代码。  
-  
-|DLL 类型|选项|类|函数|  
-|-----------------|------------|-------------|---------------|  
-|[扩展](../../build/extension-dlls-overview.md)|无|无|`DllMain`|  
-|[正则](../../build/regular-dlls-dynamically-linked-to-mfc.md)|无|应用程序类派生自 `CWinApp`|无|  
-|[正则](../../build/regular-dlls-dynamically-linked-to-mfc.md)|自动化|应用程序类派生自 `CWinApp`|`DllGetClassObjectDllCanUnloadNowDllRegisterServer`|  
-|[扩展](../../build/extension-dlls-overview.md)|窗口套接字|无|`DllMain`|  
-|[正则](../../build/regular-dlls-dynamically-linked-to-mfc.md)|窗口套接字|应用程序类派生自 `CWinApp`|`InitInstance` 包含对调用 `AfxSocketInit`|  
-  
-## <a name="see-also"></a>请参阅  
- [MFC DLL 向导](../../mfc/reference/mfc-dll-wizard.md)
+
+MFC DLL 向导生成的代码取决于要创建的 DLL 和所选的选项的类型。 MFC DLL 向导生成的两种形式的规则 MFC Dll 相同的代码。
+
+|DLL 类型|选项|类|函数|
+|-----------------|------------|-------------|---------------|
+|[扩展](../../build/extension-dlls-overview.md)|无|无|`DllMain`|
+|[正则](../../build/regular-dlls-dynamically-linked-to-mfc.md)|无|应用程序类派生自 `CWinApp`|无|
+|[正则](../../build/regular-dlls-dynamically-linked-to-mfc.md)|自动化|应用程序类派生自 `CWinApp`|`DllGetClassObjectDllCanUnloadNowDllRegisterServer`|
+|[扩展](../../build/extension-dlls-overview.md)|窗口套接字|无|`DllMain`|
+|[正则](../../build/regular-dlls-dynamically-linked-to-mfc.md)|窗口套接字|应用程序类派生自 `CWinApp`|`InitInstance` 包含对调用 `AfxSocketInit`|
+
+## <a name="see-also"></a>请参阅
+
+[MFC DLL 向导](../../mfc/reference/mfc-dll-wizard.md)
 

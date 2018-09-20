@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: aebe1a48e037d2780f9b0c6443cbcba3e158677f
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 07b129e2810b7b1310eb8988ca60fbd6e5dcad5a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318013"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46391914"
 ---
 # <a name="ole-db-consumer-attributes"></a>OLE DB 使用者特性
 OLE DB 使用者特性注入代码中，基于[OLE DB 使用者模板](../data/oledb/ole-db-consumer-templates-reference.md)，若要创建使用 OLE DB 使用者执行任务，例如打开表执行命令和访问数据。
@@ -40,4 +40,5 @@ OLE DB 使用者特性注入代码中，基于[OLE DB 使用者模板](../data/o
 |[db_table](../windows/db-table.md)|将打开一个 OLE DB 表。|
   
 ## <a name="see-also"></a>请参阅
- [按组分的特性](../windows/attributes-by-group.md)
+
+[按组分的特性](../windows/attributes-by-group.md)

@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 753971a7b010c8e3af1c36c56833a123c182a708
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: b641644818648143fe6153f6cfbfa0859757f92b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318117"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46394735"
 ---
 # <a name="creating-a-device-image-image-editor-for-icons"></a>创建设备图像（图标的图像编辑器）
 
@@ -53,6 +53,6 @@ ms.locfileid: "44318117"
 
 ## <a name="see-also"></a>请参阅
 
-[图标和光标： 显示设备的图像资源](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)  
-[加速键](../windows/accelerator-keys-image-editor-for-icons.md)  
+[图标和光标： 显示设备的图像资源](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)<br/>
+[加速键](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
 [图标和光标： 显示设备的图像资源](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)

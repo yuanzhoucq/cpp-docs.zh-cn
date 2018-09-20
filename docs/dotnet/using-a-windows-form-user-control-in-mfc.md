@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 795c16a46356eb9599e02b43b51066b603b8b9ce
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 4fef169cb0e2386c1629064ad7ea8a1a70a5c517
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222103"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46382071"
 ---
 # <a name="using-a-windows-form-user-control-in-mfc"></a>在 MFC 中使用 Windows 窗体用户控件
 
@@ -85,5 +85,5 @@ ms.locfileid: "43222103"
 
 ## <a name="see-also"></a>请参阅
 
-[用户界面元素](../mfc/user-interface-elements-mfc.md)  
-[窗体视图](../mfc/form-views-mfc.md)  
+[用户界面元素](../mfc/user-interface-elements-mfc.md)<br/>
+[窗体视图](../mfc/form-views-mfc.md)

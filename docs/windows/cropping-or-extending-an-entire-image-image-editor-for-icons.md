@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bbb5bfb19d56ae41d743de795788961690f327b0
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d6e507fbb352279d406861b7ae1b2cf29aaa943c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42583411"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46394902"
 ---
 # <a name="cropping-or-extending-an-entire-image-image-editor-for-icons"></a>裁剪或扩展整个图像（图标的图像编辑器）
 
@@ -46,5 +46,5 @@ ms.locfileid: "42583411"
 
 ## <a name="see-also"></a>请参阅
 
-[加速键](../windows/accelerator-keys-image-editor-for-icons.md)  
+[加速键](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
 [调整图像大小](../windows/resizing-an-image-image-editor-for-icons.md)

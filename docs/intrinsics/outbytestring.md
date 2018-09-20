@@ -18,50 +18,54 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54a816bd4df165b3df9de723560192ac9072b29c
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 7ef1bb6e4804fc71531f694a3dac4c5504941bf0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45718830"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46393758"
 ---
 # <a name="outbytestring"></a>__outbytestring
-**Microsoft 专用**  
-  
- 将生成`rep outsb`指令，将发送第一个`Count`指向的数据的字节`Buffer`到指定的端口`Port`。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-void __outbytestring(   
-   unsigned short Port,   
-   unsigned char* Buffer,   
-   unsigned long Count   
-);  
-```  
-  
-#### <a name="parameters"></a>参数  
+
+**Microsoft 专用**
+
+将生成`rep outsb`指令，将发送第一个`Count`指向的数据的字节`Buffer`到指定的端口`Port`。
+
+## <a name="syntax"></a>语法
+
+```
+void __outbytestring( 
+   unsigned short Port, 
+   unsigned char* Buffer, 
+   unsigned long Count 
+);
+```
+
+#### <a name="parameters"></a>参数
+
 *端口*<br/>
-[in]要向其发送数据的端口。  
-  
+[in]要向其发送数据的端口。
+
 *Buffer*<br/>
-[in]要指定的端口发送的数据。  
-  
+[in]要指定的端口发送的数据。
+
 “计数”<br/>
-[in]要发送的数据的字节数。  
-  
-## <a name="requirements"></a>要求  
-  
-|内部函数|体系结构|  
-|---------------|------------------|  
-|`__outbytestring`|x86、x64|  
-  
- **标头文件** \<intrin.h >  
-  
-## <a name="remarks"></a>备注  
- 此例程仅可用作内部函数。  
-  
-**结束 Microsoft 专用**  
-  
-## <a name="see-also"></a>请参阅  
- [编译器内部函数](../intrinsics/compiler-intrinsics.md)
+[in]要发送的数据的字节数。
+
+## <a name="requirements"></a>要求
+
+|内部函数|体系结构|
+|---------------|------------------|
+|`__outbytestring`|x86、x64|
+
+**标头文件** \<intrin.h >
+
+## <a name="remarks"></a>备注
+
+此例程仅可用作内部函数。
+
+**结束 Microsoft 专用**
+
+## <a name="see-also"></a>请参阅
+
+[编译器内部函数](../intrinsics/compiler-intrinsics.md)

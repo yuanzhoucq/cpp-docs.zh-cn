@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ac443927c2dcbb00cc01dd3cd63a95441a4a1bf0
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: ea891ce5ee5c3570577edf7c2122b2cd39b5c64d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45711789"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46378546"
 ---
 # <a name="module-c"></a>module (C++)
 
@@ -52,7 +52,7 @@ ms.locfileid: "45711789"
 
 ### <a name="parameters"></a>参数
 
-*type*  
+*type*<br/>
 （可选）可以是以下值之一：
 
 - `dll` 添加函数和类，使产生的 DLL 发挥进程内 COM 服务器。 这是默认值。
@@ -63,50 +63,50 @@ ms.locfileid: "45711789"
 
 - `unspecified` 禁用相关模块特性的 ATL 代码注入： 注入 ATL Module 类、 全局实例 _AtlModule 和入口点函数。 不要禁用该项目中的其他特性的 ATL 代码注入。
 
-*name*  
+*name*<br/>
 （可选）库块的名称。
 
-*version*  
+*version*<br/>
 （可选）你想要分配到的库块的版本号。 默认值为 1.0。
 
-*uuid*  
+*uuid*<br/>
 库的唯一 ID。 如果省略此参数，ID 将自动为库生成参数。 可能需要检索*uuid*库块，您可以通过使用标识符来执行此操作 **__uuidof (** *libraryname* **)**。
 
-*lcid*  
+*lcid*<br/>
 本地化参数。 请参阅[lcid](/windows/desktop/Midl/lcid)有关详细信息。
 
-*control*  
+*control*<br/>
 （可选）指定库中的所有组件的控件。
 
-*helpstring*  
+*helpstring*<br/>
 指定类型库。
 
-*helpstringdll*  
+*helpstringdll*<br/>
 （可选）设置要用于执行文档字符串查找的.dll 文件的名称。 请参阅[helpstringdll](/windows/desktop/Midl/helpstringdll)有关详细信息。
 
-*helpfile*  
+*helpfile*<br/>
 （可选）名称**帮助**类型库文件。
 
-*helpcontext*  
+*helpcontext*<br/>
 （可选）**帮助 ID**该类型库。
 
-*helpstringcontext*  
+*helpstringcontext*<br/>
 （可选）请参阅[helpstringcontext](../windows/helpstringcontext.md)有关详细信息。
 
-*hidden*  
+*hidden*<br/>
 （可选）禁止显示整个媒体库。 这种用法与控件一起使用。 主机需要创建新的类型库，该库对控件进行包装，使其具有扩展特性。 请参阅[隐藏](/windows/desktop/Midl/hidden)MIDL 特性的详细信息。
 
-*restricted*  
+*restricted*<br/>
 （可选）不能随意调用库中的成员。 请参阅[受限](/windows/desktop/Midl/restricted)MIDL 特性的详细信息。
 
-*custom*  
+*custom*<br/>
 （可选）一个或多个属性则它类似于[自定义](../windows/custom-cpp.md)属性。 第一个参数*自定义*是该特性的 GUID。 例如：
 
 ```
 [module(custom={guid,1}, custom={guid1,2})]
 ```
 
-*资源名称*  
+*资源名称*<br/>
 用 rgs 文件字符串资源 ID 来注册 DLL、可执行文件或服务应用程序的 APP ID。 模块是服务类型模块时，也使用此参数获取包含服务名称的字符串 ID。
 
 > [!NOTE]
@@ -188,13 +188,13 @@ BOOL WINAPI DllMain(DWORD dwReason, LPVOID lpReserved) {
 
 ## <a name="see-also"></a>请参阅
 
-[IDL 特性](../windows/idl-attributes.md)  
-[类特性](../windows/class-attributes.md)  
-[独立特性](../windows/stand-alone-attributes.md)  
-[Typedef、Enum、Union 和 Struct 特性](../windows/typedef-enum-union-and-struct-attributes.md)  
-[usesgetlasterror](../windows/usesgetlasterror.md)  
-[库](/windows/desktop/Midl/library)  
-[helpcontext](../windows/helpcontext.md)  
-[helpstring](../windows/helpstring.md)  
-[helpfile](../windows/helpfile.md)  
+[IDL 特性](../windows/idl-attributes.md)<br/>
+[类特性](../windows/class-attributes.md)<br/>
+[独立特性](../windows/stand-alone-attributes.md)<br/>
+[Typedef、Enum、Union 和 Struct 特性](../windows/typedef-enum-union-and-struct-attributes.md)<br/>
+[usesgetlasterror](../windows/usesgetlasterror.md)<br/>
+[库](/windows/desktop/Midl/library)<br/>
+[helpcontext](../windows/helpcontext.md)<br/>
+[helpstring](../windows/helpstring.md)<br/>
+[helpfile](../windows/helpfile.md)<br/>
 [version](../windows/version-cpp.md)  

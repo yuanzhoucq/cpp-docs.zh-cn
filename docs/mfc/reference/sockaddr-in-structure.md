@@ -16,62 +16,67 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e5ec6ebf4329ff03c75240dc7cec93e9ba46331
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 207f437c4af4d8eee41bb625490534416e376dca
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885733"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46377456"
 ---
 # <a name="sockaddrin-structure"></a>SOCKADDR_IN 结构
-在 Internet 地址族， `SOCKADDR_IN` Windows 套接字使用结构来指定要连接套接字的本地或远程终结点地址。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-struct sockaddr_in{  
-    short sin_family;  
-    unsigned short sin_port;  
-struct in_addr sin_addr;  
-    char sin_zero[8];  
-};  
-```  
-  
-#### <a name="parameters"></a>参数  
- *sin_family*  
- 地址的系列 （必须是 AF_INET）。  
-  
- *sin_port*  
- IP 端口。  
-  
- *sin_addr*  
- IP 地址。  
-  
- *sin_zero*  
- 填充结构使大小相同`SOCKADDR`。  
-  
-## <a name="remarks"></a>备注  
- 此窗体中的`SOCKADDR`结构特定于 Internet 地址族并可转换为`SOCKADDR`。  
-  
- 此结构的 IP 地址组件是类型的`IN_ADDR`。 `IN_ADDR` Windows 套接字标头文件 WINSOCK 中定义结构。H，如下所示：  
-  
-```  
+
+在 Internet 地址族， `SOCKADDR_IN` Windows 套接字使用结构来指定要连接套接字的本地或远程终结点地址。
+
+## <a name="syntax"></a>语法
+
+```
+struct sockaddr_in{
+    short sin_family;
+    unsigned short sin_port;
+struct in_addr sin_addr;
+    char sin_zero[8];
+};
+```
+
+#### <a name="parameters"></a>参数
+
+*sin_family*<br/>
+地址的系列 （必须是 AF_INET）。
+
+*sin_port*<br/>
+IP 端口。
+
+*sin_addr*<br/>
+IP 地址。
+
+*sin_zero*<br/>
+填充结构使大小相同`SOCKADDR`。
+
+## <a name="remarks"></a>备注
+
+此窗体中的`SOCKADDR`结构特定于 Internet 地址族并可转换为`SOCKADDR`。
+
+此结构的 IP 地址组件是类型的`IN_ADDR`。 `IN_ADDR` Windows 套接字标头文件 WINSOCK 中定义结构。H，如下所示：
+
+```
 struct in_addr {
     union {
-        struct {  
-            unsigned char s_b1, s_b2, s_b3, s_b4;  
-        } S_un_b;  
-        struct {  
+        struct {
+            unsigned char s_b1, s_b2, s_b3, s_b4;
+        } S_un_b;
+        struct {
             unsigned short s_w1, s_w2;
         } S_un_w;
         unsigned long S_addr;
-    } S_un;  
-};  
-```  
-  
-## <a name="requirements"></a>要求  
- **标头：** winsock2.h  
-  
-## <a name="see-also"></a>请参阅  
- [结构、 样式、 回调和消息映射](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [SOCKADDR 结构](../../mfc/reference/sockaddr-structure.md)
+    } S_un;
+};
+```
+
+## <a name="requirements"></a>要求
+
+**标头：** winsock2.h
+
+## <a name="see-also"></a>请参阅
+
+[结构、样式、回调和消息映射](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)<br/>
+[SOCKADDR 结构](../../mfc/reference/sockaddr-structure.md)

@@ -1,5 +1,5 @@
 ---
-title: 序列化 (C + + /cli CLI) |Microsoft 文档
+title: 序列化 (C + + CLI) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,43 +20,48 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: f4a410da74c37ee722c04f21e2cde906b9d061d2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ae8fe34cbb1307fc0d8799b9a0cd662a1a1fdde7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33164554"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46387570"
 ---
 # <a name="serialization-ccli"></a>序列化 (C++/CLI)
-序列化 （的过程中存储的对象或成员在永久介质状态） 的托管类 （包括单个字段或属性） 受<xref:System.SerializableAttribute>和<xref:System.NonSerializedAttribute>类。  
-  
-## <a name="remarks"></a>备注  
- 应用**SerializableAttribute**到托管的类，以便序列化整个类或仅为特定字段或属性进行序列化托管类的部分应用的自定义属性。 使用**NonSerializedAttribute**到免除字段或托管类的属性从要序列化的自定义属性。  
-  
-## <a name="example"></a>示例  
-  
-### <a name="description"></a>描述  
- 在下面的示例中，类`MyClass`(和属性`m_nCount`) 标记为可序列化。 但是，`m_nData`不序列化属性，如所示**所以**自定义属性：  
-  
-### <a name="code"></a>代码  
-  
-```  
-// serialization_and_mcpp.cpp  
-// compile with: /LD /clr  
-using namespace System;  
-  
-[ Serializable ]  
-public ref class MyClass {  
-public:  
-   int m_nCount;  
-private:  
-   [ NonSerialized ]  
-   int m_nData;  
-};  
-```  
-  
-### <a name="comments"></a>注释  
- 请注意，可以使用其"短名称"引用这两个属性 (**Serializable**和**所以**)。 这做进一步的解释在[应用特性](/dotnet/standard/attributes/applying-attributes)。  
-  
-## <a name="see-also"></a>请参阅  
- [使用 C++/CLI (Visual C++) 进行 .NET 编程](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+
+序列化 （存储对象或成员添加到永久性介质的状态的过程） 的托管类 （包括各个字段或属性） 受<xref:System.SerializableAttribute>和<xref:System.NonSerializedAttribute>类。
+
+## <a name="remarks"></a>备注
+
+将应用**SerializableAttribute**于托管类，以序列化整个类或仅向特定字段或属性进行序列化的托管类的部分应用的自定义属性。 使用**nonserializedattribute 特性**从要序列化到的托管类中免除的字段或属性的自定义属性。
+
+## <a name="example"></a>示例
+
+### <a name="description"></a>描述
+
+在下面的示例中，类`MyClass`(和属性`m_nCount`) 被标记为可序列化。 但是，`m_nData`所示，不序列化属性**NonSerialized**自定义属性：
+
+### <a name="code"></a>代码
+
+```
+// serialization_and_mcpp.cpp
+// compile with: /LD /clr
+using namespace System;
+
+[ Serializable ]
+public ref class MyClass {
+public:
+   int m_nCount;
+private:
+   [ NonSerialized ]
+   int m_nData;
+};
+```
+
+### <a name="comments"></a>注释
+
+请注意，可以使用其"短名称"引用这两个属性 (**Serializable**并**NonSerialized**)。 对此进行进一步[应用属性](/dotnet/standard/attributes/applying-attributes)。
+
+## <a name="see-also"></a>请参阅
+
+[使用 C++/CLI (Visual C++) 进行 .NET 编程](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

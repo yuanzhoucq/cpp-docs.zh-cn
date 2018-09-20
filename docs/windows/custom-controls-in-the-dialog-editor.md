@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c1bebca381bc9d6d644ac1aac95b902065268a9d
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 9ae41727caedfaf09ac5f312ea4d794398cb572c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317701"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46383416"
 ---
 # <a name="custom-controls-in-the-dialog-editor-c"></a>自定义控件在对话框编辑器中 （c + +）
 
@@ -59,5 +59,5 @@ Win32
 
 ## <a name="see-also"></a>请参阅
 
-[对话框中的控件](../windows/controls-in-dialog-boxes.md)  
+[对话框中的控件](../windows/controls-in-dialog-boxes.md)<br/>
 [控件](../mfc/controls-mfc.md)

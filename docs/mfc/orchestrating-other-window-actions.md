@@ -1,5 +1,5 @@
 ---
-title: 协调其他窗口操作 |Microsoft 文档
+title: 协调其他窗口操作 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,16 +19,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 488d34ead9a56250febe24bec7ebd4323ec07d95
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c689504efbafe40cce54b9c333724a1390925cf9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345636"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46375833"
 ---
 # <a name="orchestrating-other-window-actions"></a>协调其他窗口操作
-框架窗口会协调半模式状态，如上下文相关的帮助和打印预览。 在打印预览中的框架窗口的角色的说明，请参阅[打印和打印预览](../mfc/printing-and-print-preview.md)。  
-  
-## <a name="see-also"></a>请参阅  
- [使用框架窗口](../mfc/using-frame-windows.md)
+
+框架窗口会协调半模式状态，如上下文相关的帮助和打印预览。 在打印预览中的框架窗口的角色的说明，请参阅[打印和打印预览](../mfc/printing-and-print-preview.md)。
+
+## <a name="see-also"></a>请参阅
+
+[使用框架窗口](../mfc/using-frame-windows.md)
 

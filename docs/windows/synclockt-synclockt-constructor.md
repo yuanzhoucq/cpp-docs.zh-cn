@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3dfee1d923536f519917a50ed44fd5c115007c27
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: f2d8244b94a308970e87646505cdcade533b717f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42601962"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46376002"
 ---
 # <a name="synclocktsynclockt-constructor"></a>SyncLockT::SyncLockT 构造函数
 
@@ -42,10 +42,10 @@ explicit SyncLockT(
 
 ### <a name="parameters"></a>参数
 
-*other*  
+*other*<br/>
 对另一个右值引用**SyncLockT**对象。
 
-*sync*  
+*sync*<br/>
 对另一个引用`SyncLockWithStatusT`对象。
 
 ## <a name="remarks"></a>备注

@@ -1,5 +1,5 @@
 ---
-title: C + + /cli 迁移入门 |Microsoft 文档
+title: C + + /cli 迁移入门 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,37 +19,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: add55156b23dd2f9eb746f032d8406bad3b9db56
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 88b32ea226971c0fa5b6d269a8992629c3c4de77
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33108681"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46385426"
 ---
 # <a name="ccli-migration-primer"></a>C++/CLI 迁移入门
-这是你的 Visual c + + 程序将从移动 Managed Extensions for c + + 到 Visual c + + 的指南。 
-  
- C + + /cli CLI 扩展到 ISO c + + 标准语言动态组件编程范例。 新语言提供大量的重大改进，通过托管扩展。 本部分提供对 Visual c + + 这样的映射存在，其中指出存在没有映射这些构造 c + + 语言功能的托管扩展的枚举的列表以及它们的映射。  
-  
-## <a name="in-this-section"></a>本节内容  
- [更改概要 (C++/CLI)](../dotnet/outline-of-changes-cpp-cli.md)  
- 快速参考，提供所做的更改的列表在五个常规类别高级大纲。  
-  
- [语言关键字 (C++/CLI)](../dotnet/language-keywords-cpp-cli.md)  
- 讨论语言关键字，其中包括双下划线删除以及上下文和空格分隔的关键字的介绍中的更改。  
-  
- [托管类型 (C + + /cli CL)](../dotnet/managed-types-cpp-cl.md)  
- 查看中声明的公共类型系统 (CTS) 的语法更改这包括类、 数组 （包括参数数组）、 枚举和等等的声明中的更改。  
-  
- [类或接口中的成员声明 (C++/CLI)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)  
- 显示涉及如标量属性、 索引属性、 运算符、 委托和事件的类成员的更改。  
-  
- [值类型及其行为 (C++/CLI)](../dotnet/value-types-and-their-behaviors-cpp-cli.md)  
- 重点值类型和新的内部和钉住指针系列。 它还介绍了大量的重大语义的更改，例如隐式装箱、 永久性装箱的值类型和值类中的默认构造函数的支持删除简介。  
-  
- [常规语言更改 (C++/CLI)](../dotnet/general-language-changes-cpp-cli.md)  
- 语义的详细信息更改，例如强制转换表示法的支持字符串文本的行为和更改语义之间 ISO c + + 和 C + + /cli CLI。  
-  
-## <a name="see-also"></a>请参阅  
- [混合 （本机和托管） 程序集](../dotnet/mixed-native-and-managed-assemblies.md)   
- [适用于运行时平台的组件扩展](../windows/component-extensions-for-runtime-platforms.md)
+
+这是您的 Visual c + + 程序从转为托管扩展 c + + 的 Visual c + + 的指南。
+
+C + + /cli CLI 扩展到 ISO-C + + 标准语言动态组件编程范例。 新的语言通过托管扩展提供了大量重要改进。 本部分提供对 c + + 语言功能的托管扩展的枚举的列表以及它们映射到 Visual c + + 这样的映射存在，其中指出存在没有映射这些构造。
+
+## <a name="in-this-section"></a>本节内容
+
+[更改概要 (C++/CLI)](../dotnet/outline-of-changes-cpp-cli.md)<br/>
+方便参考，提供的更改的列表下有五个常规类别的高度概括。
+
+[语言关键字 (C++/CLI)](../dotnet/language-keywords-cpp-cli.md)<br/>
+讨论语言关键字，包括删除双下划线和的上下文和空格分隔的关键字引入的更改。
+
+[将托管类型 (C + + /cli CL)](../dotnet/managed-types-cpp-cl.md)<br/>
+查看在声明中的通用类型系统 (CTS) 的语法更改这包括类、 数组 （包括参数数组）、 枚举和等等的声明中的更改。
+
+[类或接口中的成员声明 (C++/CLI)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)<br/>
+显示涉及类成员，例如标量属性、 索引属性、 运算符、 委托和事件的更改。
+
+[值类型及其行为 (C++/CLI)](../dotnet/value-types-and-their-behaviors-cpp-cli.md)<br/>
+重点讨论值类型和内部指针和钉住指针的新系列。 它还讨论若干重大语义更改，如隐式装箱，装箱的值类型的不可变性和对值类内部的默认构造函数的支持删除引入。
+
+[常规语言更改 (C++/CLI)](../dotnet/general-language-changes-cpp-cli.md)<br/>
+详细信息如支持强制转换表示法的语义更改字符串文本的行为和 ISO c + + 和 C + 之间的语义更改 + CLI。
+
+## <a name="see-also"></a>请参阅
+
+[混合（本机和托管）程序集](../dotnet/mixed-native-and-managed-assemblies.md)<br/>
+[适用于运行时平台的组件扩展](../windows/component-extensions-for-runtime-platforms.md)

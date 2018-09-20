@@ -1,5 +1,5 @@
 ---
-title: A.30 利用 Reprivatization |Microsoft 文档
+title: A.30 重新私有化的使用 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,26 +12,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6026bba31fcc0db4e28ced14b3e847ac0cf8bf58
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 27f9ee3f7605231323c5a176eebf1b07c0a05507
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33689605"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46378028"
 ---
 # <a name="a30---use-of-reprivatization"></a>A.30   重新私有化的使用
-下面的示例演示变量的 reprivatization。 可以标记私有变量`private`再次嵌套指令中。 它们无需在封闭的并行区域中共享。  
-  
-```  
-int i, a;  
-...  
-#pragma omp parallel private(a)  
-{  
-  ...  
-  #pragma omp parallel for private(a)  
-  for (i=0; i<10; i++)  
-     {  
-       ...  
-     }  
-}  
+
+下面的示例演示如何重新私有化的变量。 可以标记为私有变量`private`再次在嵌套指令中。 它们无需封闭并行区域中的共享。
+
+```
+int i, a;
+...
+#pragma omp parallel private(a)
+{
+  ...
+  #pragma omp parallel for private(a)
+  for (i=0; i<10; i++)
+     {
+       ...
+     }
+}
 ```
