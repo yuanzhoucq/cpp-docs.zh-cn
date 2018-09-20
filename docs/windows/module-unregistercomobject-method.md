@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3409e0e2c1cac5f3934902523edd2653839989ed
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 46450142c0455dd4eb96f627abd077e478d96fea
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42575753"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46383501"
 ---
 # <a name="moduleunregistercomobject-method"></a>Module::UnregisterCOMObject 方法
 
@@ -39,13 +39,13 @@ virtual HRESULT UnregisterCOMObject(
 
 ### <a name="parameters"></a>参数
 
-*服务器名称*  
+*服务器名称*<br/>
 （未使用）
 
-*Cookie*  
+*Cookie*<br/>
 指针的数组，其指向标识要注销的类对象的值。 该数组通过创建[RegisterCOMObject](../windows/module-registercomobject-method.md)方法。
 
-*count*  
+*count*<br/>
 要注销的类的数量。
 
 ## <a name="return-value"></a>返回值
@@ -59,4 +59,5 @@ virtual HRESULT UnregisterCOMObject(
 **命名空间：** Microsoft::WRL
 
 ## <a name="see-also"></a>请参阅
+
 [Module 类](../windows/module-class.md)

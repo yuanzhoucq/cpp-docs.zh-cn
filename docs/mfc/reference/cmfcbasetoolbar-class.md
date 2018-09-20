@@ -22,88 +22,98 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6cececaa0380f2e3806348e40debbf9b9ca2c351
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 023b8d4c48d5e9f04aeb1207db2236d6ef8b7ba6
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45705232"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46395474"
 ---
 # <a name="cmfcbasetoolbar-class"></a>CMFCBaseToolBar 类
-工具栏的基类。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-class CMFCBaseToolBar : public CPane  
-```  
-  
-## <a name="members"></a>成员  
-  
-### <a name="public-constructors"></a>公共构造函数  
-  
-|名称|描述|  
-|----------|-----------------|  
-|`CMFCBaseToolBar::CMFCBaseToolBar`|默认构造函数。|  
-|`CMFCBaseToolBar::~CMFCBaseToolBar`|析构函数。|  
-  
-### <a name="public-methods"></a>公共方法  
-  
-|名称|描述|  
-|----------|-----------------|  
-|`CMFCBaseToolBar::CreateObject`|由框架用于创建此类类型的动态实例。|  
-|[CMFCBaseToolBar::GetDockingMode](#getdockingmode)|返回停靠模式。 (重写[cbasepane:: Getdockingmode](../../mfc/reference/cbasepane-class.md#getdockingmode)。)|  
-|[CMFCBaseToolBar::GetMinSize](#getminsize)|返回一个工具栏的最小大小。 (重写[CPane::GetMinSize](../../mfc/reference/cpane-class.md#getminsize)。)|  
-|[CMFCBaseToolBar::OnAfterChangeParent](#onafterchangeparent)|在窗格的父级更改后由框架调用。 (重写[CBasePane::OnAfterChangeParent](../../mfc/reference/cbasepane-class.md#onafterchangeparent)。)|  
-  
-## <a name="inheritance-hierarchy"></a>继承层次结构  
- [CObject](../../mfc/reference/cobject-class.md)  
-  
- [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
-  
- [CWnd](../../mfc/reference/cwnd-class.md)  
-  
- [CBasePane](../../mfc/reference/cbasepane-class.md)  
-  
- [CPane](../../mfc/reference/cpane-class.md)  
-  
- [CMFCBaseToolBar](../../mfc/reference/cmfcbasetoolbar-class.md)  
-  
-## <a name="requirements"></a>要求  
- **标头：** afxbasetoolbar.h  
-  
-##  <a name="getdockingmode"></a>  CMFCBaseToolBar::GetDockingMode  
- 返回停靠模式。  
-  
-```  
-virtual AFX_DOCK_TYPE GetDockingMode() const;  
-```  
-  
-### <a name="return-value"></a>返回值  
- 停靠模式。  
-  
-##  <a name="getminsize"></a>  CMFCBaseToolBar::GetMinSize  
- 返回一个工具栏的最小大小。  
-  
-```  
-virtual void GetMinSize(CSize& size) const;  
-```  
-  
-### <a name="parameters"></a>参数  
+
+工具栏的基类。
+
+## <a name="syntax"></a>语法
+
+```
+class CMFCBaseToolBar : public CPane
+```
+
+## <a name="members"></a>成员
+
+### <a name="public-constructors"></a>公共构造函数
+
+|名称|描述|
+|----------|-----------------|
+|`CMFCBaseToolBar::CMFCBaseToolBar`|默认构造函数。|
+|`CMFCBaseToolBar::~CMFCBaseToolBar`|析构函数。|
+
+### <a name="public-methods"></a>公共方法
+
+|名称|描述|
+|----------|-----------------|
+|`CMFCBaseToolBar::CreateObject`|由框架用于创建此类类型的动态实例。|
+|[CMFCBaseToolBar::GetDockingMode](#getdockingmode)|返回停靠模式。 (重写[cbasepane:: Getdockingmode](../../mfc/reference/cbasepane-class.md#getdockingmode)。)|
+|[CMFCBaseToolBar::GetMinSize](#getminsize)|返回一个工具栏的最小大小。 (重写[CPane::GetMinSize](../../mfc/reference/cpane-class.md#getminsize)。)|
+|[CMFCBaseToolBar::OnAfterChangeParent](#onafterchangeparent)|在窗格的父级更改后由框架调用。 (重写[CBasePane::OnAfterChangeParent](../../mfc/reference/cbasepane-class.md#onafterchangeparent)。)|
+
+## <a name="inheritance-hierarchy"></a>继承层次结构
+
+[CObject](../../mfc/reference/cobject-class.md)
+
+[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+
+[CWnd](../../mfc/reference/cwnd-class.md)
+
+[CBasePane](../../mfc/reference/cbasepane-class.md)
+
+[CPane](../../mfc/reference/cpane-class.md)
+
+[CMFCBaseToolBar](../../mfc/reference/cmfcbasetoolbar-class.md)
+
+## <a name="requirements"></a>要求
+
+**标头：** afxbasetoolbar.h
+
+##  <a name="getdockingmode"></a>  CMFCBaseToolBar::GetDockingMode
+
+返回停靠模式。
+
+```
+virtual AFX_DOCK_TYPE GetDockingMode() const;
+```
+
+### <a name="return-value"></a>返回值
+
+停靠模式。
+
+##  <a name="getminsize"></a>  CMFCBaseToolBar::GetMinSize
+
+返回一个工具栏的最小大小。
+
+```
+virtual void GetMinSize(CSize& size) const;
+```
+
+### <a name="parameters"></a>参数
+
 *size*<br/>
-[out]工具栏的最小大小。  
-  
-##  <a name="onafterchangeparent"></a>  CMFCBaseToolBar::OnAfterChangeParent  
- 在窗格的父级更改后由框架调用。  
-  
-```  
+[out]工具栏的最小大小。
+
+##  <a name="onafterchangeparent"></a>  CMFCBaseToolBar::OnAfterChangeParent
+
+在窗格的父级更改后由框架调用。
+
+```
 virtual void OnAfterChangeParent(CWnd* pWndOldParent);
-```  
-  
-### <a name="parameters"></a>参数  
+```
+
+### <a name="parameters"></a>参数
+
 *pWndOldParent*<br/>
-[in]指向上一个父窗口的指针。  
-  
-## <a name="see-also"></a>请参阅  
- [层次结构图表](../../mfc/hierarchy-chart.md)   
- [类](../../mfc/reference/mfc-classes.md)
+[in]指向上一个父窗口的指针。
+
+## <a name="see-also"></a>请参阅
+
+[层次结构图](../../mfc/hierarchy-chart.md)<br/>
+[类](../../mfc/reference/mfc-classes.md)

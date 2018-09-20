@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa06eaf8f16a80b849ce911468fc0001366b9e29
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 3f4517125121c0129da028437bc7ce367f9f96b2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45725460"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46373917"
 ---
 # <a name="fi-name-forced-include-file"></a>/FI（命名强制包含文件）
 
@@ -59,7 +59,7 @@ ms.locfileid: "45725460"
 
 ## <a name="see-also"></a>请参阅
 
-[输出文件 (/ F) 选项](../../build/reference/output-file-f-options.md)
+[输出文件 (/F) 选项](../../build/reference/output-file-f-options.md)<br/>
 [编译器选项](../../build/reference/compiler-options.md)<br/>
 [设置编译器选项](../../build/reference/setting-compiler-options.md)<br/>
 [指定路径名](../../build/reference/specifying-the-pathname.md)

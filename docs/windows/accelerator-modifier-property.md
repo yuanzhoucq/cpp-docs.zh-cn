@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 793e02b4ac083d6fe84ba2cc76ee340bcf2484e9
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 3c053af58842c75910b0214ae828c652daa33a81
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44316050"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46389286"
 ---
 # <a name="accelerator-modifier-property-c"></a>快捷键 Modifier 属性 （c + +）
 
@@ -43,5 +43,5 @@ Win32
 
 ## <a name="see-also"></a>请参阅
 
-[设置快捷键属性](../windows/setting-accelerator-properties.md)  
+[设置快捷键属性](../windows/setting-accelerator-properties.md)<br/>
 [快捷键编辑器](../windows/accelerator-editor.md)

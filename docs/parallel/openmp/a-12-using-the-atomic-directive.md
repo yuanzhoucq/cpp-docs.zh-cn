@@ -1,5 +1,5 @@
 ---
-title: 使用原子指令 A.12 |Microsoft 文档
+title: A.12 使用 atomic 指令 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,26 +12,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 719d7a9843a0759b5a5bd558e07a2004f9ef1543
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 04daed582cfe87f6e4803b30919af3e07037de7f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691400"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46378743"
 ---
 # <a name="a12---using-the-atomic-directive"></a>A.12   使用 atomic 指令
-下面的示例可避免争用条件 (的元素的同时更新*x*由多个线程) 通过使用`atomic`指令 ([部分 2.6.4](../../parallel/openmp/2-6-4-atomic-construct.md)第 19 页上):  
-  
-```  
-#pragma omp parallel for shared(x, y, index, n)  
-    for (i=0; i<n; i++)   
-    {  
-        #pragma omp atomic  
-            x[index[i]] += work1(i);  
-        y[i] += work2(i);  
-    }  
-```  
-  
- 使用的优点`atomic`在此示例中的指令是它允许更新的 x 会并行发生在两个不同的元素。 如果`critical`指令 ([部分 2.6.2](../../parallel/openmp/2-6-2-critical-construct.md)第 18 页上) 已使用，则所有更新到的元素*x*将按顺序 （但不在任何保证顺序） 执行。  
-  
- 请注意，`atomic`指令仅适用于紧靠它的 C 或 c + + 语句。  因此，元素的*y*未在此示例中以原子方式更新。
+
+下面的示例可避免争用条件 (同时进行更新的元素*x*由多个线程) 通过使用`atomic`指令 ([部分 2.6.4](../../parallel/openmp/2-6-4-atomic-construct.md)第 19 页上):
+
+```
+#pragma omp parallel for shared(x, y, index, n)
+    for (i=0; i<n; i++)
+    {
+        #pragma omp atomic
+            x[index[i]] += work1(i);
+        y[i] += work2(i);
+    }
+```
+
+使用的优点`atomic`指令在此示例中是允许更新的 x 会并行发生两个不同元素。 如果`critical`指令 ([部分 2.6.2](../../parallel/openmp/2-6-2-critical-construct.md)第 18 页上) 然后所有更新的元素到相反，使用*x*会按顺序 （尽管不在任何有保证的顺序） 执行。
+
+请注意，`atomic`指令仅适用于紧随的 C 或 c + + 语句。  因此中的元素*y*不在此示例中以原子方式更新。

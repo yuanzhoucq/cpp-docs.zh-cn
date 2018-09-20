@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5d21348d9c252fbcd3024ca6531671979d8834eb
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 138921cfb635125210e5f5bf9305c91243c4489c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42605813"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46387219"
 ---
 # <a name="implements-c"></a>implements (C++)
 
@@ -39,10 +39,10 @@ ms.locfileid: "42605813"
 
 ### <a name="parameters"></a>参数
 
-*interfaces*  
+*interfaces*<br/>
 以逗号分隔列表将为 IDL 组件类的成员的接口。 用于指定单个接口的速记方法是**实现 (** *interface_name* **)**。
 
-*dispinterfaces*  
+*dispinterfaces*<br/>
 以逗号分隔的将是 IDL 组件类的成员的调度接口的列表。 用于指定单个调度接口的速记方法是**实现 (调度接口 =** *dispinterface_name* **)**。
 
 ## <a name="remarks"></a>备注
@@ -558,5 +558,5 @@ public:
 
 ## <a name="see-also"></a>请参阅
 
-[编译器特性](../windows/compiler-attributes.md)  
+[编译器特性](../windows/compiler-attributes.md)<br/>
 [类特性](../windows/class-attributes.md)  

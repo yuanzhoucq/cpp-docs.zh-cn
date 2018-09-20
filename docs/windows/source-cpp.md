@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ccd5f5220a49ddb63554b4c3b96533a3066d4d4b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: d3f4cacd380a86138095b0f8b3bf67f860d45cda
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43214587"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46390534"
 ---
 # <a name="source-c"></a>source (C++)
 
@@ -38,7 +38,7 @@ ms.locfileid: "43214587"
 
 ### <a name="parameters"></a>参数
 
-*interfaces*  
+*interfaces*<br/>
 到类属性，指定将应用源时的一个或多个接口。 源应用到属性或方法时，不使用此参数。
 
 ## <a name="remarks"></a>备注
@@ -96,7 +96,7 @@ class NN : public b
 
 ## <a name="see-also"></a>请参阅
 
-[IDL 特性](../windows/idl-attributes.md)  
-[类特性](../windows/class-attributes.md)  
-[方法特性](../windows/method-attributes.md)  
+[IDL 特性](../windows/idl-attributes.md)<br/>
+[类特性](../windows/class-attributes.md)<br/>
+[方法特性](../windows/method-attributes.md)<br/>
 [coclass](../windows/coclass.md)  

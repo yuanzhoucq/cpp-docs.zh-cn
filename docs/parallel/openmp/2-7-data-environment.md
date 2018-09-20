@@ -1,5 +1,5 @@
 ---
-title: 2.7 数据环境 |Microsoft 文档
+title: 2.7 数据环境 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,16 +12,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1b0f253ce14ffc5d3740e582a9a51feea56ad32
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 17c60c621defa15c034f57d0af8f14637db54f03
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33690060"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46378132"
 ---
 # <a name="27-data-environment"></a>2.7 数据环境
-本节介绍指令和多个子句，用于控制数据环境并行区域，在执行期间，如下所示：  
-  
--   A **threadprivate**指令 （请参阅以下部分） 提供可以使文件范围、 命名空间范围或静态的块范围变量为线程本地。  
-  
--   可在指令以并行或工作共享构造的持续时间内控制变量的共享属性中指定的子句中所述[部分 2.7.2](../../parallel/openmp/2-7-2-data-sharing-attribute-clauses.md)第 25 页上。
+
+本节介绍指令和多个子句，用于控制数据环境的并行区域，在执行期间，如下所示：
+
+- 一个**threadprivate**指令 （请参阅以下部分） 提供了可使文件范围、 命名空间范围或静态的块范围变量为线程本地。
+
+- 要并行或工作共享构造的持续时间内控制变量的共享属性的指令只能指定子句中所述[部分 2.7.2](../../parallel/openmp/2-7-2-data-sharing-attribute-clauses.md)第 25 页上。

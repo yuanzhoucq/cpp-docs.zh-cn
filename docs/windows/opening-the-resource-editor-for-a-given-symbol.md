@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b4b2c6f37a1e496310b1520754a90feb2facb163
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 6d8c478765a53c3884b736e798ffb51a46e73912
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313177"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46385477"
 ---
 # <a name="opening-the-resource-editor-for-a-given-symbol-c"></a>打开给定符号 （c + +） 的资源编辑器
 
@@ -48,5 +48,5 @@ Win32
 
 ## <a name="see-also"></a>请参阅
 
-[查看资源符号](../windows/viewing-resource-symbols.md)  
+[查看资源符号](../windows/viewing-resource-symbols.md)<br/>
 [预定义的符号 ID](../windows/predefined-symbol-ids.md)

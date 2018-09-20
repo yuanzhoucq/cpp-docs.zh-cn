@@ -1,5 +1,5 @@
 ---
-title: 用于创建 ActiveX 控件的操作顺序 |Microsoft 文档
+title: 用于创建 ActiveX 控件的操作顺序 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,29 +18,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: caf4c74f2263505ad5d7112021003f92c85a4b84
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2d794b8bf762503900dad18c7457c31101ea6d62
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33380365"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46377705"
 ---
 # <a name="sequence-of-operations-for-creating-activex-controls"></a>用于创建 ActiveX 控件的操作顺序
-下表显示你的角色和框架的角色中创建 ActiveX 控件 （以前称为 OLE 控件）。  
-  
-### <a name="creating-activex-controls"></a>创建 ActiveX 控件  
-  
-|任务|您执行的操作|框架执行的操作|  
-|----------|------------|------------------------|  
-|创建 ActiveX 控件框架。|运行 MFC ActiveX 控件向导以创建您的控件。 在选项页中指定您需要的选项。 选项包括在项目、 许可、 子类化，以及有关框方法的类型和控件的名称。|MFC ActiveX 控件向导创建 ActiveX 控件的文件具有基本功能，包括源文件你应用程序、 控件和属性页或页面; 例如：资源文件;一个项目文件;和其他人，所有定制的您的规范。|  
-|请参阅而无需添加你自己的代码线控件和 ActiveX 控件向导提供的内容。|生成 ActiveX 控件，并使用 Internet 资源管理器对其进行测试或[TSTCON 示例](../visual-cpp-samples.md)。|正在运行的控件具有可调整大小和移动的能力。 它还具有**有关框**可以调用的方法 （如果选择）。|  
-|实现控件的方法和属性。|通过添加成员函数以提供对控件的数据的公开的接口实现特定于控件的方法和属性。 添加成员变量以保留数据结构和事件处理程序用于触发事件; 当你确定。|框架已定义一个映射，以便支持控件的事件、 属性和方法，从而使你能够专注于如何实现的属性和方法。 默认属性页仅可查看和提供默认有关框方法。|  
-|构造该控件的属性页。|使用 Visual c + + 资源编辑器直观地编辑控件的属性页接口：<br /><br /> -创建附加的属性页。<br />-创建并编辑位图、 图标和光标。<br /><br /> 你还可以在对话框编辑器中测试的属性页。|MFC 应用程序向导创建的默认资源文件提供了很多您需要的资源。 利用 Visual C++，您可以轻松直观地编辑现有资源和添加新资源。|  
-|测试控件的事件、 方法和属性。|重新生成该控件，并使用测试容器测试您的处理程序是否正常工作。|你可以调用该控件的方法和操作其通过属性页界面或测试容器的属性。 此外，使用测试容器，以从控件触发的跟踪事件和控件的容器接收通知。|  
-  
-## <a name="see-also"></a>请参阅  
- [基于框架生成](../mfc/building-on-the-framework.md)   
- [用于生成 MFC 应用程序的操作顺序](../mfc/sequence-of-operations-for-building-mfc-applications.md)   
- [用于创建 OLE 应用程序的操作顺序](../mfc/sequence-of-operations-for-creating-ole-applications.md)   
- [数据库应用程序的创建操作顺序](../mfc/sequence-of-operations-for-creating-database-applications.md)
+
+下表显示了创建 ActiveX 控件 （以前称为 OLE 控件） 你的角色和框架的角色。
+
+### <a name="creating-activex-controls"></a>创建 ActiveX 控件
+
+|任务|您执行的操作|框架执行的操作|
+|----------|------------|------------------------|
+|创建 ActiveX 控件框架。|运行 MFC ActiveX 控件向导创建您的控件。 在选项页中指定您需要的选项。 选项包括在项目、 许可、 子类化和关于中方法的类型和控件的名称。|MFC ActiveX 控件向导会创建具有基本功能，包括源代码文件为你的应用程序、 控件和属性页或页面; 例如： 对 ActiveX 控件文件资源文件;一个项目文件;和其他人，所有针对您的规范。|
+|请参阅而无需将你自己的代码行添加控件和 ActiveX 控件向导提供的哪些功能。|生成 ActiveX 控件并对其进行测试与 Internet 资源管理器或[TSTCON 示例](../visual-cpp-samples.md)。|在运行控件具有可调整大小和移动功能。 它还具有**关于框**可以调用的方法 （如果选择）。|
+|实现控件的方法和属性。|通过添加成员函数以提供对控件的数据的公开的接口来实现特定于控件的方法和属性。 添加成员变量以保留数据结构，并使用事件处理程序来引发事件时确定。|该框架已定义一个映射，以便支持控件的事件、 属性和方法，从而使您可以专注于如何实现的属性和方法。 默认属性页仅可查看和提供默认的关于框方法。|
+|控件的属性页来构造。|使用 Visual c + + 资源编辑器以直观地编辑控件的属性页界面：<br /><br /> -创建附加属性页。<br />-创建和编辑位图、 图标和光标。<br /><br /> 此外可以在对话框编辑器中测试的属性页。|MFC 应用程序向导创建的默认资源文件提供了很多您需要的资源。 利用 Visual C++，您可以轻松直观地编辑现有资源和添加新资源。|
+|测试控件的事件、 方法和属性。|重新生成该控件，并使用测试容器测试您的处理程序正常工作。|您可以调用控件的方法并控制其属性通过属性页界面或测试容器。 此外，使用测试容器，以从控件触发的跟踪事件和控件的容器所收到的通知。|
+
+## <a name="see-also"></a>请参阅
+
+[基于框架生成](../mfc/building-on-the-framework.md)<br/>
+[MFC 应用程序的构建操作顺序](../mfc/sequence-of-operations-for-building-mfc-applications.md)<br/>
+[OLE 应用程序的创建操作顺序](../mfc/sequence-of-operations-for-creating-ole-applications.md)<br/>
+[数据库应用程序的创建操作顺序](../mfc/sequence-of-operations-for-creating-database-applications.md)
 
