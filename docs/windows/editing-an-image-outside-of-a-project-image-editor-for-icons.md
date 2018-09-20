@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a99b66588b3158252106ba95aaddfc73e260c9ac
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 2cabf76b4d98fc1732fdc2761b89774164595116
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42613717"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46419384"
 ---
 # <a name="editing-an-image-outside-of-a-project-image-editor-for-icons"></a>在项目外部编辑图像（图标的图像编辑器）
 
@@ -43,5 +43,5 @@ ms.locfileid: "42613717"
 
 ## <a name="see-also"></a>请参阅
 
-[编辑图形资源](../windows/editing-graphical-resources-image-editor-for-icons.md)  
+[编辑图形资源](../windows/editing-graphical-resources-image-editor-for-icons.md)<br/>
 [图标的图像编辑器](../windows/image-editor-for-icons.md)

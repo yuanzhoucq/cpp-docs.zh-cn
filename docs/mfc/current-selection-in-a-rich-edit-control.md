@@ -17,25 +17,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b115f576100ec89b2de4d3b2e63fe74b96337c7
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c5870c7c3352a53d85bdd15020a1e7f535ef6efc
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43209826"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46403664"
 ---
 # <a name="current-selection-in-a-rich-edit-control"></a>Rich Edit 控件中的当前选定内容
-用户可以选择在 rich edit 控件中的文本 ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) 通过使用鼠标或键盘。 当前所选内容是所选字符的范围或选定的插入点，如果任何字符的位置。 应用程序可以获取有关当前所选内容的信息，设置当前选定内容，确定在当前所选内容更改，并显示或隐藏所选内容突出显示。  
-  
- 若要确定格式文本编辑控件中的当前所选内容，请使用[GetSel](../mfc/reference/cricheditctrl-class.md#getsel)成员函数。 若要设置当前选定内容，请使用[SetSel](../mfc/reference/cricheditctrl-class.md#setsel)成员函数。 [CHARRANGE](/windows/desktop/api/richedit/ns-richedit-_charrange)结构使用这些函数使用指定的字符范围。 若要检索当前所选内容的信息，可以使用[GetSelectionType](../mfc/reference/cricheditctrl-class.md#getselectiontype)成员函数。  
-  
- 默认情况下，rich edit 控件显示和隐藏选择突出显示，当获得或失去焦点时。 您可以通过显示或隐藏选择突出显示在任何时候使用[HideSelection](../mfc/reference/cricheditctrl-class.md#hideselection)成员函数。 例如，应用程序可能会提供搜索对话框 rich edit 控件中查找文本。 应用程序可能会选择匹配的文本而无需关闭该对话框，在这种情况下它必须使用`HideSelection`以突出显示所选内容。  
-  
- 若要获取 rich edit 控件中的所选的文本，请使用[GetSelText](../mfc/reference/cricheditctrl-class.md#getseltext)成员函数。 该文本复制到指定的字符数组。 您必须确保数组足够大以保存所选的文本加上终止 null 字符。  
-  
- 可以使用 rich edit 控件中的字符串搜索[FindText](../mfc/reference/cricheditctrl-class.md#findtext)成员函数[FINDTEXTEX](/windows/desktop/api/richedit/ns-richedit-_findtextexa)结构，与此函数可指定搜索和要搜索的字符串的文本范围。 此外可以将此类选项指定为搜索是否区分大小写。  
-  
-## <a name="see-also"></a>请参阅  
- [使用 CRichEditCtrl](../mfc/using-cricheditctrl.md)   
- [控件](../mfc/controls-mfc.md)
+
+用户可以选择在 rich edit 控件中的文本 ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) 通过使用鼠标或键盘。 当前所选内容是所选字符的范围或选定的插入点，如果任何字符的位置。 应用程序可以获取有关当前所选内容的信息，设置当前选定内容，确定在当前所选内容更改，并显示或隐藏所选内容突出显示。
+
+若要确定格式文本编辑控件中的当前所选内容，请使用[GetSel](../mfc/reference/cricheditctrl-class.md#getsel)成员函数。 若要设置当前选定内容，请使用[SetSel](../mfc/reference/cricheditctrl-class.md#setsel)成员函数。 [CHARRANGE](/windows/desktop/api/richedit/ns-richedit-_charrange)结构使用这些函数使用指定的字符范围。 若要检索当前所选内容的信息，可以使用[GetSelectionType](../mfc/reference/cricheditctrl-class.md#getselectiontype)成员函数。
+
+默认情况下，rich edit 控件显示和隐藏选择突出显示，当获得或失去焦点时。 您可以通过显示或隐藏选择突出显示在任何时候使用[HideSelection](../mfc/reference/cricheditctrl-class.md#hideselection)成员函数。 例如，应用程序可能会提供搜索对话框 rich edit 控件中查找文本。 应用程序可能会选择匹配的文本而无需关闭该对话框，在这种情况下它必须使用`HideSelection`以突出显示所选内容。
+
+若要获取 rich edit 控件中的所选的文本，请使用[GetSelText](../mfc/reference/cricheditctrl-class.md#getseltext)成员函数。 该文本复制到指定的字符数组。 您必须确保数组足够大以保存所选的文本加上终止 null 字符。
+
+可以使用 rich edit 控件中的字符串搜索[FindText](../mfc/reference/cricheditctrl-class.md#findtext)成员函数[FINDTEXTEX](/windows/desktop/api/richedit/ns-richedit-_findtextexa)结构，与此函数可指定搜索和要搜索的字符串的文本范围。 此外可以将此类选项指定为搜索是否区分大小写。
+
+## <a name="see-also"></a>请参阅
+
+[使用 CRichEditCtrl](../mfc/using-cricheditctrl.md)<br/>
+[控件](../mfc/controls-mfc.md)
 

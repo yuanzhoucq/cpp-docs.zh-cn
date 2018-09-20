@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6baefb7ef0af5054cb46ed4ad74b6a6bf80fbb61
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 28b162b63ad1fbd2363b4519817d466055e96bc9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45699916"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46429274"
 ---
 # <a name="default-c"></a>default (C++)
 
@@ -41,7 +41,7 @@ ms.locfileid: "45699916"
 
 ### <a name="parameters"></a>参数
 
-*interface1*  
+*interface1*<br/>
 默认接口，将可用于根据类（使用 **default** 属性定义）创建对象的脚本环境。
 
 如果未指定默认接口，则第一个出现的非源接口用作默认接口。
@@ -125,6 +125,6 @@ int main() {
 
 ## <a name="see-also"></a>请参阅
 
-[IDL 特性](../windows/idl-attributes.md)  
-[类特性](../windows/class-attributes.md)  
+[IDL 特性](../windows/idl-attributes.md)<br/>
+[类特性](../windows/class-attributes.md)<br/>
 [coclass](../windows/coclass.md)  

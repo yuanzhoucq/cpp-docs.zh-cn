@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 83ff74a460c7cb34a50d0fbdf338eccc3da27f98
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a519d9b978f5b48377b1a85d52274cba35c9d075
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43197434"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46401796"
 ---
 # <a name="cinternetsession-class"></a>CInternetSession 类
 
@@ -115,7 +115,7 @@ class CInternetSession : public CObject
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
-[CObject](../../mfc/reference/cobject-class.md)  
+[CObject](../../mfc/reference/cobject-class.md)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;`CInternetSession`
 
 ## <a name="requirements"></a>要求
@@ -138,13 +138,13 @@ CInternetSession(
 
 ### <a name="parameters"></a>参数
 
-*pstrAgent*  
+*pstrAgent*<br/>
 指向用于标识应用程序或调用 Internet 函数 （例如，"Microsoft Internet 浏览器"） 的实体的名称的字符串的指针。 如果*pstrAgent*为 NULL （默认值），框架将调用全局函数[AfxGetAppName](application-information-and-management.md#afxgetappname)，它返回以 null 结尾的字符串包含应用程序的名称。 某些协议使用此字符串来标识你的应用程序到服务器。
 
-*dwContext*  
+*dwContext*<br/>
 操作的上下文标识符。 *dwContext*标识返回的操作的状态信息[CInternetSession::OnStatusCallback](#onstatuscallback)。 默认值设置为 1;但是，你可以显式分配操作的特定的上下文 ID。 将与该上下文 id。 关联的对象以及它执行任何工作
 
-*dwAccessType*  
+*dwAccessType*<br/>
 所需访问权限的类型。 以下是有效的值，其中只有一个可能提供：
 
 - INTERNET_OPEN_TYPE_PRECONFIG 连接使用预配置的注册表中的设置。 此访问类型设置为默认值。 若要通过 TIS 代理进行连接，设置*dwAccessType*为此值; 然后，设置注册表正确。
@@ -155,13 +155,13 @@ CInternetSession(
 
 如何通过不同类型的代理的连接信息，请参阅[典型 FTP 客户端应用程序中的步骤](../../mfc/steps-in-a-typical-ftp-client-application.md)。
 
-*pstrProxyName*  
+*pstrProxyName*<br/>
 首选 CERN 代理服务器的名称如果*dwAccessType*设置为 INTERNET_OPEN_TYPE_PROXY。 默认值为 NULL。
 
-*pstrProxyBypass*  
+*pstrProxyBypass*<br/>
 指向包含一系列可选服务器地址的字符串的指针。 使用代理服务器访问时，可能会跳过这些地址。 如果提供 NULL 值，则将从注册表中读取的旁路列表。 此参数才有意义才*dwAccessType*设置为 INTERNET_OPEN_TYPE_PROXY。
 
-*dwFlags*  
+*dwFlags*<br/>
 指示各种缓存选项。 默认值设置为 0。 可能值包括：
 
 - INTERNET_FLAG_DONT_CACHE 不缓存数据，在本地或任何网关服务器中。
@@ -200,7 +200,7 @@ BOOL EnableStatusCallback(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>参数
 
-*bEnable*  
+*bEnable*<br/>
 指定是启用还是禁用回调。 默认值为 TRUE。
 
 ### <a name="return-value"></a>返回值
@@ -255,16 +255,16 @@ static BOOL GetCookie(
 
 ### <a name="parameters"></a>参数
 
-*pstrUrl*  
+*pstrUrl*<br/>
 指向包含 URL 的字符串的指针。
 
-*pstrCookieName*  
+*pstrCookieName*<br/>
 指向包含要获取为指定的 URL 的 cookie 的名称的字符串的指针。
 
-*pstrCookieData*  
+*pstrCookieData*<br/>
 在第一个重载中，指向包含接收的 cookie 数据的缓冲区的地址的字符串的指针。 此值可以为 NULL。 在第二个重载中，对引用[CString](../../atl-mfc-shared/reference/cstringt-class.md)对象接收的 cookie 数据。
 
-*dwBufLen*  
+*dwBufLen*<br/>
 变量指定的大小*pstrCookieData*缓冲区。 如果函数成功，该缓冲区接收复制到的数据量*pstrCookieData*缓冲区。 如果*pstrCookieData*为 NULL，此参数中接收值，指定要复制的所有 cookie 数据所需的缓冲区的大小。
 
 ### <a name="return-value"></a>返回值
@@ -291,10 +291,10 @@ static DWORD GetCookieLength(
 
 ### <a name="parameters"></a>参数
 
-*pstrUrl*  
+*pstrUrl*<br/>
 指向包含 URL 的字符串的指针
 
-*pstrCookieName*  
+*pstrCookieName*<br/>
 指向包含的 cookie 的名称的字符串的指针。
 
 ### <a name="return-value"></a>返回值
@@ -320,13 +320,13 @@ CFtpConnection* GetFtpConnection(
 
 ### <a name="parameters"></a>参数
 
-*pstrServer*  
+*pstrServer*<br/>
 指向包含 FTP 服务器名称的字符串的指针。
 
-*pstrUserName*  
+*pstrUserName*<br/>
 指向一个以 null 结尾的字符串，指定要登录的用户的名称。 如果为 NULL，则默认值是匿名的。
 
-*pstrPassword*  
+*pstrPassword*<br/>
 一个指向一个以 null 结尾的字符串，指定要用于登录的密码。 如果这两个*pstrPassword*并*pstrUserName*为 NULL 时，默认匿名密码是用户的电子邮件名称。 如果*pstrPassword*为 NULL （或空字符串），但*pstrUserName*不为 NULL，则使用空密码。 下表描述了四个可能的设置的行为*pstrUserName*并*pstrPassword*:
 
 |*pstrUserName*|*pstrPassword*|发送到 FTP 服务器的用户名|发送到 FTP 服务器的密码|
@@ -336,10 +336,10 @@ CFtpConnection* GetFtpConnection(
 |NULL|非 NULL 字符串|错误|错误||
 |非 NULL 字符串|非 NULL 字符串|*pstrUserName*|*pstrPassword*|
 
-*nPort*  
+*nPort*<br/>
 标识要在服务器上使用的 TCP/IP 端口号。
 
-*bPassive*  
+*bPassive*<br/>
 为此 FTP 会话指定被动还是主动模式。 如果设置为 TRUE，则将设置 Win32 API `dwFlag` INTERNET_FLAG_PASSIVE 到。
 
 ### <a name="return-value"></a>返回值
@@ -368,16 +368,16 @@ CGopherConnection* GetGopherConnection(
 
 ### <a name="parameters"></a>参数
 
-*pstrServer*  
+*pstrServer*<br/>
 指向包含 gopher 服务器名称的字符串的指针。
 
-*pstrUserName*  
+*pstrUserName*<br/>
 指向包含的用户名称的字符串的指针。
 
-*pstrPassword*  
+*pstrPassword*<br/>
 指向包含访问密码的字符串的指针。
 
-*nPort*  
+*nPort*<br/>
 标识要在服务器上使用的 TCP/IP 端口号。
 
 ### <a name="return-value"></a>返回值
@@ -409,19 +409,19 @@ CHttpConnection* GetHttpConnection(
 
 ### <a name="parameters"></a>参数
 
-*pstrServer*  
+*pstrServer*<br/>
 指向包含 HTTP 服务器名称的字符串的指针。
 
-*nPort*  
+*nPort*<br/>
 标识要在服务器上使用的 TCP/IP 端口号。
 
-*pstrUserName*  
+*pstrUserName*<br/>
 指向包含的用户名称的字符串的指针。
 
-*pstrPassword*  
+*pstrPassword*<br/>
 指向包含访问密码的字符串的指针。
 
-*dwflags*  
+*dwflags*<br/>
 任意组合`INTERNET_FLAG_*`标志。 请参阅中的表**备注**一部分[chttpconnection::](../../mfc/reference/chttpconnection-class.md#openrequest)有关的说明*dwFlags*值。
 
 ### <a name="return-value"></a>返回值
@@ -446,16 +446,16 @@ virtual void OnStatusCallback(
 
 ### <a name="parameters"></a>参数
 
-*dwContext*  
+*dwContext*<br/>
 由应用程序提供的上下文值。
 
-*dwInternetStatus*  
+*dwInternetStatus*<br/>
 状态代码指示进行回调。 请参阅**备注**有关可能的值的表。
 
-*lpvStatusInformation*  
+*lpvStatusInformation*<br/>
 指向包含与此回调相关的信息的缓冲区的指针。
 
-*dwStatusInformationLength*  
+*dwStatusInformationLength*<br/>
 大小*lpvStatusInformation*。
 
 ### <a name="remarks"></a>备注
@@ -484,7 +484,7 @@ virtual void OnStatusCallback(
 > [!NOTE]
 > 状态回调需要线程状态保护。 如果在共享库中使用 MFC，重写的开头添加以下行：
 
- [!code-cpp[NVC_MFCHtmlHttp#8](../../mfc/reference/codesnippet/cpp/cinternetsession-class_1.cpp)]
+[!code-cpp[NVC_MFCHtmlHttp#8](../../mfc/reference/codesnippet/cpp/cinternetsession-class_1.cpp)]
 
 有关异步操作的详细信息，请参阅文章[Internet 前几个步骤： WinInet](../../mfc/wininet-basics.md)。
 
@@ -503,13 +503,13 @@ CStdioFile* OpenURL(
 
 ### <a name="parameters"></a>参数
 
-*pstrURL*  
+*pstrURL*<br/>
 一个指向的 URL 以开始读取的名称。 仅 Url 开头文件:，ftp:，gopher:，或 http： 支持。 如果断言*pstrURL*为 NULL。
 
-*dwContext*  
+*dwContext*<br/>
 使用回调中返回的句柄传递的应用程序定义的值。
 
-*dwFlags*  
+*dwFlags*<br/>
 描述如何处理此连接的标志。 请参阅**备注**有关有效的标志的详细信息。 是有效的标志：
 
 - INTERNET_FLAG_TRANSFER_ASCII 默认值。 将文件传输为 ASCII 文本。
@@ -526,10 +526,10 @@ CStdioFile* OpenURL(
 
 - INTERNET_FLAG_PASSIVE 用于 FTP 站点。 使用被动 FTP 语义。 用于[CInternetConnection](../../mfc/reference/cinternetconnection-class.md)的`OpenURL`。
 
-*pstrHeaders*  
+*pstrHeaders*<br/>
 指向包含要发送到 HTTP 服务器的标头的字符串的指针。
 
-*dwHeadersLength*  
+*dwHeadersLength*<br/>
 长度 （以字符为单位的其他标头）。 如果这是-1l 并*pstrHeaders*为非 NULL，则*pstrHeaders*假设为零终止，并且长度进行计算。
 
 ### <a name="return-value"></a>返回值
@@ -574,13 +574,13 @@ static BOOL SetCookie(
 
 ### <a name="parameters"></a>参数
 
-*pstrUrl*  
+*pstrUrl*<br/>
 指向一个以 null 结尾的字符串，指定应为其设置 cookie 的 URL 的指针。
 
-*pstrCookieName*  
+*pstrCookieName*<br/>
 指向包含的 cookie 的名称的字符串的指针。
 
-*pstrCookieData*  
+*pstrCookieData*<br/>
 指向包含要将 URL 与相关联的实际字符串数据的字符串的指针。
 
 ### <a name="return-value"></a>返回值
@@ -611,19 +611,19 @@ BOOL SetOption(
 
 ### <a name="parameters"></a>参数
 
-*dwOption*  
+*dwOption*<br/>
 若要设置 Internet 选项。 请参阅[选项标志](/windows/desktop/WinInet/option-flags)Windows SDKfor 的可能的选项列表中。
 
-*lpBuffer*  
+*lpBuffer*<br/>
 包含的选项设置的缓冲区。
 
-*dwBufferLength*  
+*dwBufferLength*<br/>
 长度*lpBuffer*或的大小*dwValue*。
 
-*dwValue*  
+*dwValue*<br/>
 一个包含选项设置的 dword 值。
 
-*dwFlags*  
+*dwFlags*<br/>
 指示各种缓存选项。 默认值设置为 0。 可能值包括：
 
 - INTERNET_FLAG_DONT_CACHE 不缓存数据，在本地或任何网关服务器中。
@@ -636,9 +636,9 @@ BOOL SetOption(
 
 ## <a name="see-also"></a>请参阅
 
-[CObject 类](../../mfc/reference/cobject-class.md)  
-[层次结构图](../../mfc/hierarchy-chart.md)  
-[CInternetConnection 类](../../mfc/reference/cinternetconnection-class.md)  
-[CHttpConnection 类](../../mfc/reference/chttpconnection-class.md)  
-[CFtpConnection 类](../../mfc/reference/cftpconnection-class.md)  
-[CGopherConnection 类](../../mfc/reference/cgopherconnection-class.md)  
+[CObject 类](../../mfc/reference/cobject-class.md)<br/>
+[层次结构图](../../mfc/hierarchy-chart.md)<br/>
+[CInternetConnection 类](../../mfc/reference/cinternetconnection-class.md)<br/>
+[CHttpConnection 类](../../mfc/reference/chttpconnection-class.md)<br/>
+[CFtpConnection 类](../../mfc/reference/cftpconnection-class.md)<br/>
+[CGopherConnection 类](../../mfc/reference/cgopherconnection-class.md)

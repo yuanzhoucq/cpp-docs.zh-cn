@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7c8924f7b22ed86adf7721018c4df3094a2069c1
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 4798cf5c283fc4a663da0e1af7110df63496a6c9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200690"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46408240"
 ---
 # <a name="viprogid"></a>vi_progid
 
@@ -38,7 +38,7 @@ ms.locfileid: "43200690"
 
 ### <a name="parameters"></a>参数
 
-*name*  
+*name*<br/>
 该对象表示独立于版本的 ProgID。
 
 Progid 提供用来标识 COM/ActiveX 对象的类标识符 (CLSID) 的用户可读版本。
@@ -72,7 +72,7 @@ Progid 提供用来标识 COM/ActiveX 对象的类标识符 (CLSID) 的用户可
 
 ## <a name="see-also"></a>请参阅
 
-[IDL 特性](../windows/idl-attributes.md)  
-[Typedef、Enum、Union 和 Struct 特性](../windows/typedef-enum-union-and-struct-attributes.md)  
-[类特性](../windows/class-attributes.md)  
+[IDL 特性](../windows/idl-attributes.md)<br/>
+[Typedef、Enum、Union 和 Struct 特性](../windows/typedef-enum-union-and-struct-attributes.md)<br/>
+[类特性](../windows/class-attributes.md)<br/>
 [ProgID 密钥](/windows/desktop/com/-progid--key)  

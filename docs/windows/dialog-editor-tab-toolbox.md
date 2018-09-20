@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2fa16a2cf15d5004ff80dda3188d79ffcba72ec1
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 4b6e05e654b66c2178b7dc6e772c95df89512d1d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44316206"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46399842"
 ---
 # <a name="dialog-editor-tab-toolbox-c"></a>对话框编辑器选项卡上，工具箱 （c + +）
 
@@ -100,10 +100,10 @@ Win32
 
 ## <a name="see-also"></a>请参阅
 
-[控件](../mfc/controls-mfc.md)  
-[控件类](../mfc/control-classes.md)  
-[对话框类](../mfc/dialog-box-classes.md)  
-[滚动条样式](../mfc/reference/styles-used-by-mfc.md#scroll-bar-styles)  
-[Rich Edit 控件示例](../mfc/rich-edit-control-examples.md)  
-[添加对话框控件的事件处理程序](../windows/adding-event-handlers-for-dialog-box-controls.md)  
+[控件](../mfc/controls-mfc.md)<br/>
+[控件类](../mfc/control-classes.md)<br/>
+[对话框类](../mfc/dialog-box-classes.md)<br/>
+[滚动条样式](../mfc/reference/styles-used-by-mfc.md#scroll-bar-styles)<br/>
+[Rich Edit 控件示例](../mfc/rich-edit-control-examples.md)<br/>
+[添加对话框控件的事件处理程序](../windows/adding-event-handlers-for-dialog-box-controls.md)<br/>
 [对话框控件和变量类型](../ide/dialog-box-controls-and-variable-types.md)

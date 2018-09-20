@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9ae4f50e6d2d614e444766babf8e55f5c9f83932
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: a8b84bcaec7dbadfb7b735264df12f7e958dcd20
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42609539"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46444689"
 ---
 # <a name="modulecreate-method"></a>Module::Create 方法
 
@@ -45,16 +45,16 @@ WRL_NOTHROW static Module& Create(
 
 ### <a name="parameters"></a>参数
 
-*T*  
+*T*<br/>
 模块类型。
 
-*回调*  
+*回调*<br/>
 释放该模块的最后一个实例对象时调用。
 
-*object*  
+*object*<br/>
 *对象*并*方法*结合使用的参数。 点到最后一个实例对象时释放模块中的最后一个实例对象。
 
-*方法*  
+*方法*<br/>
 *对象*并*方法*结合使用的参数。 指向最后一个实例对象时释放模块中的最后一个实例对象的方法。
 
 ## <a name="return-value"></a>返回值

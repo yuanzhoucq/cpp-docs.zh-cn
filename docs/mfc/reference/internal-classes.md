@@ -1,5 +1,5 @@
 ---
-title: 内部类 |Microsoft 文档
+title: 内部类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -317,107 +317,109 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f7d1ef39a80ce8a06cef14ad227c7de54163644
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fc2a7d2d51a66742794d0a58da19e77463318fc7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372542"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46411724"
 ---
 # <a name="internal-classes"></a>内部类
-在 MFC 中内部使用以下类。 为了保持完整性，本节将说明这些内部类，但这些内部类不在代码中直接使用。  
-  
-## <a name="in-this-section"></a>本节内容  
-  
-|类|描述|  
-|-----------|-----------------|  
-|`CCommandManager Class`|`CCommandManager`类管理命令和及其与映像的关联。|  
-|`CDialogImpl Class (MFC)`|提供的实现详细信息，以便对话框基于框的类，如`CDialogEx`。|  
-|`CDocumentAdapter Class`|搜索和组织的处理程序所需的实现 IDocument 接口。|  
-|`CFrameImpl Class`|`CFrameImpl`类处理工具栏自定义项以下框架窗口类： [CFrameWndEx 类](../../mfc/reference/cframewndex-class.md)， [CMDIFrameWndEx 类](../../mfc/reference/cmdiframewndex-class.md)，和[COleIPFrameWndEx 类](../../mfc/reference/coleipframewndex-class.md).|  
-|`CFullScreenImpl Class`|SDI 和 MDI 应用程序共有的实现全屏功能。|  
-|`CMDIClientAreaWnd Class`|`CMDIClientAreaWnd`类是一个帮助器类，它简化了 MDI 选项卡和 MDI 选项卡式组的实现。|  
-|`CMemDC Class`|用于内存设备上下文的帮助器类。 内存设备上下文支持屏幕外绘制。|  
-|`CMenuHash Class`|读取的状态`CMFCToolBar`从存档对象或将状态写入存档。|  
-|`CMenuImages Class`|提供的功能，以显示预定义的映像，如关闭按钮、 最大化按钮、 单选按钮和箭头。|  
-|`CMFCCaptionButtonEx Class`|包含系统标题按钮的非工作区。|  
-|`CMFCCaptionMenuButton Class`|表示位于标题区域的任务窗格或工具栏中的菜单按钮。|  
-|`CMFCColorPropertySheet Class`|使用[CMFCColorDialog 类](../../mfc/reference/cmfccolordialog-class.md)提供一个选项卡式的对话框。|  
-|`CMFCControlBarImpl Class`|提供的实现详细信息，来控制基于栏的类，如`CMFCReBar`和`CMFCToolBar`。|  
-|`CMFCControlRenderer Class`|处理图像呈现一个帮助器类。|  
-|`CMFCControlRendererInfo Class`|传递到参数的帮助程序类`CMFCControlRenderer`类。|  
-|`CMFCCustomizeButton Class`|支持的菜单命令或工具栏按钮来启动一个自定义对话框。|  
-|`CMFCCustomizeMenuButton Class`|表示自定义菜单上的单个按钮。|  
-|`CMFCDropDownListBox Class`|提供了以下功能区组合框下拉列表框功能。|  
-|`CMFCMousePropertyPage Class`|使用户能够自定义鼠标行为属性页。|  
-|`CMFCOutlookBarPaneAdapter Class`||  
-|`CMFCOutlookBarPaneButton Class`|实现框架将添加到按钮`CMFCOutlookBarPane`对象。|  
-|`CMFCOutlookBarPaneList Class`|扩展`CMFCOutlookBarPane`类以提供 Outlook 视觉样式。|  
-|`CMFCOutlookBarScrollButton Class`|提供了以下滚动功能`CMFCOutlookBarTabCtrl`类。|  
-|`CMFCOutlookBarToolBar Class`|实现工具栏具有 Outlook 2003 视觉样式。|  
-|`CMFCPropertySheetCategoryInfo Class`|表示一个树控件中的节点。|  
-|`CMFCPropertySheetTabCtrl Class`|扩展`CMFCTabCtrl`类以提供属性表功能。|  
-|`CMFCProperySheetListBox Class`|扩展`CListBox`类以提供属性表功能。|  
-|`CMFCReBarState Class`||  
-|`CMFCRibbonCaptionButton Class`|实现的系统标题按钮。|  
-|`CMFCRibbonCmdUI Class`|根据需要应用程序空闲时，更新功能区栏对象。|  
-|`CMFCRibbonCommandsListBox Class`||  
-|`CMFCRibbonDefaultPanelButton Class`||  
-|`CMFCRibbonGalleryIcon Class`|表示中的项`CMFCRibbonGallery`对象。|  
-|`CMFCRibbonKeyboardCustomizeDialog Class`|实现包含功能区栏的应用程序一个键盘自定义对话框。|  
-|`CMFCRibbonKeyTip Class`|实现一个弹出窗口，显示功能区栏的键提示。|  
-|`CMFCRibbonPanelMenu Class`||  
-|`CMFCRibbonPanelMenuBar Class`|表示一个弹出菜单栏中功能区栏。|  
-|`CMFCRibbonQuickAccessToolBar Class`|实现快速访问工具栏功能区元素。|  
-|`CMFCRibbonRichEditCtrl Class`|在功能区栏上实现位于一个编辑控件。|  
-|`CMFCRibbonTab Class`|表示功能区栏上的选项卡。|  
-|`CMFCShadowRenderer Class`||  
-|`CMFCShowAllButton Class`|表示位于展开以显示隐藏的命令的弹出菜单底部的按钮。|  
-|`CMFCStatusBarPaneInfo Class`|描述的内容和外观`CMFCStatusBar`窗格。|  
-|`CMFCTabButton Class`|提供与选项卡控件的选项卡按钮功能。|  
-|`CMFCTabInfo Class`|提供选项卡到选项卡控件有关的信息。|  
-|`CMFCTasksPaneFrameWnd Class`|管理任务窗格的自定义标题按钮。|  
-|`CMFCTasksPanePropertyPage Class`|管理之间的关系`CMFCTasksPane`对象和其名称。|  
-|`CMFCTasksPaneToolBar Class`|实现位于顶部导航工具栏`CMFCTasksPane`对象。|  
-|`CMFCToolBarButtonsListButton Class`|显示的用户可以在自定义项中期间选择的映像列表**按钮外观**对话框。|  
-|`CMFCToolBarDateTimeCtrlImpl Class`|实现放置源为`CMFCToolBar`对象。|  
-|`CMFCToolBarDropSource Class`|实现放置源为`CMFCToolBar`对象。|  
-|`CMFCToolBarDropTarget Class`|实现放置目标的`CMFCToolBar`对象。|  
-|`CMFCToolBarEditCtrl Class`|编辑控件功能提供给`CMFCToolBarEditBoxButton`对象。|  
-|`CMFCToolBarMenuButtonsButton Class`|表示位于菜单栏右侧的系统标题按钮。|  
-|`CMFCToolBarNameDialog Class`|表示一个对话框，允许用户指定新的工具栏标题。|  
-|`CMFCToolBarsCommandsListBox Class`|表示包含工具栏命令的列表的列表框。|  
-|`CMFCToolBarsCommandsPropertyPage Class`|实现命令自定义属性页上。|  
-|`CMFCToolBarsKeyboardPropertyPage Class`||  
-|`CMFCToolBarsListCheckBox Class`|显示工具栏的列表上**工具栏**页**自定义**对话框。|  
-|`CMFCToolBarsListPropertyPage Class`|表示显示的工具栏中的列表的属性页**自定义**对话框。|  
-|`CMFCToolBarsMenuPropertyPage Class`|表示包含中的菜单自定义选项的属性页**自定义**对话框。|  
-|`CMFCToolBarsOptionsPropertyPage Class`|表示**选项**页面**自定义**对话框。|  
-|`CMFCToolBarSpinEditBoxButton Class`|表示编辑框位于数值调节钮。|  
-|`CMFCToolBarsToolsPropertyPage Class`|表示允许用户自定义用户工具的属性页。|  
-|`CMFCToolBarSystemMenuButton Class`|实现用户，从而最大化 MDI 子窗口时，框架将添加到主菜单栏的系统标题按钮。|  
-|`CMFCVisualManagerBitmapCache Class`|管理`CMFCControlRenderer`对象来提高位图上的操作的性能。|  
-|`CMultiDocTemplateEx Class`|扩展`CMultiDocTemplate`类以提供访问权限菜单资源 id。|  
-|`COleCntrFrameWndEx Class`||  
-|`COleDocIPFrameWndEx Class`|提供 OLE 支持。|  
-|`COleServerDocEx Class`|提供 OLE 服务器文档上的操作。|  
-|`CPaneContainerGC Class`||  
-|`CPngImage Class`|提供对使用.png 文件格式的图像资源的访问。|  
-|`CPreviewViewEx Class`||  
-|`CRecentPaneContainerInfo Class`|包含停靠的窗格中的前一状态。|  
-|`CRibbonCategoryScroll Class`|实现时，将显示不在功能区栏的区域中的所有元素都适合的滚动按钮。|  
-|`CSmartDockingGroupGuide Class`|表示智能停靠组的中央元素。|  
-|`CSmartDockingGroupGuidesManager Class`|管理智能停靠组指南。|  
-|`CSmartDockingGroupGuidesWnd Class`|实现框架使用，以显示智能停靠指南中央组的分层、 非矩形窗口。|  
-|`CSmartDockingHighlighterWnd Class`|实现包含要进行正在停靠的可停靠的窗格中对象的区域的半透明窗口。|  
-|`CSmartDockingManager Class`|提供了以下智能停靠功能`CDockingManager`对象。|  
-|`CSmartDockingStandaloneGuide Class`|实现智能停靠指南。|  
-|`CSmartDockingStandaloneGuideWnd Class`|实现框架使用，以显示智能停靠指南的分层、 非矩形窗口。|  
-|`CTagManager Class`|`CTagManager`类旨在读取以类似 XML 的标记格式存储的值。|  
-|`CVSListBoxBase Class`|提供了以下基本功能`CVSListBox`类。|  
-|`CVSListBoxEditCtrl Class`|通过显示打开一个对话框中的小按钮扩展标准列表框编辑控件。|  
-|`CVSToolsListBox Class`|通过提供其他按钮来添加、 删除和列表框中移动项扩展标准列表框控件。|  
-  
-## <a name="see-also"></a>请参阅  
- [MFC 桌面应用程序](../../mfc/mfc-desktop-applications.md)
+
+在 MFC 在内部使用以下类。 为了保持完整性，本节将说明这些内部类，但这些内部类不在代码中直接使用。
+
+## <a name="in-this-section"></a>本节内容
+
+|类|描述|
+|-----------|-----------------|
+|`CCommandManager Class`|`CCommandManager`类管理命令和它们与映像关联。|
+|`CDialogImpl Class (MFC)`|提供到对话框框基于类的实现详细信息，例如`CDialogEx`。|
+|`CDocumentAdapter Class`|实现 IDocument 接口所需的搜索和组织的处理程序。|
+|`CFrameImpl Class`|`CFrameImpl`类处理以下的框架窗口类工具栏自定义项： [CFrameWndEx 类](../../mfc/reference/cframewndex-class.md)， [CMDIFrameWndEx 类](../../mfc/reference/cmdiframewndex-class.md)，并[COleIPFrameWndEx 类](../../mfc/reference/coleipframewndex-class.md).|
+|`CFullScreenImpl Class`|SDI 和 MDI 应用程序的公共实现全屏幕功能。|
+|`CMDIClientAreaWnd Class`|`CMDIClientAreaWnd`类是一个帮助器类，可简化 MDI 选项卡和 MDI 选项卡式组的实现。|
+|`CMemDC Class`|用于内存设备上下文的帮助器类。 内存设备上下文支持屏幕外绘制。|
+|`CMenuHash Class`|读取的状态`CMFCToolBar`存档中的对象或将状态写入到存档。|
+|`CMenuImages Class`|提供的功能，以显示预定义的图像，如关闭按钮、 最大化按钮、 单选按钮和箭头。|
+|`CMFCCaptionButtonEx Class`|保存系统标题按钮的非工作区。|
+|`CMFCCaptionMenuButton Class`|表示位于任务窗格或工具栏的标题区域中的菜单按钮。|
+|`CMFCColorPropertySheet Class`|通过使用[CMFCColorDialog 类](../../mfc/reference/cmfccolordialog-class.md)提供选项卡式的对话框。|
+|`CMFCControlBarImpl Class`|提供了实现详细信息，以控制基于栏的类，例如`CMFCReBar`和`CMFCToolBar`。|
+|`CMFCControlRenderer Class`|处理图像呈现一个帮助器类。|
+|`CMFCControlRendererInfo Class`|传递到参数的帮助程序类`CMFCControlRenderer`类。|
+|`CMFCCustomizeButton Class`|支持菜单命令或启动自定义对话框中的工具栏按钮。|
+|`CMFCCustomizeMenuButton Class`|表示自定义菜单上的单个按钮。|
+|`CMFCDropDownListBox Class`|提供功能区组合框的下拉列表框的功能。|
+|`CMFCMousePropertyPage Class`|使用户能够自定义鼠标行为的属性页。|
+|`CMFCOutlookBarPaneAdapter Class`||
+|`CMFCOutlookBarPaneButton Class`|实现一个按钮，该框架将添加到`CMFCOutlookBarPane`对象。|
+|`CMFCOutlookBarPaneList Class`|扩展了`CMFCOutlookBarPane`类以提供 Outlook 视觉样式。|
+|`CMFCOutlookBarScrollButton Class`|提供了以下滚动功能`CMFCOutlookBarTabCtrl`类。|
+|`CMFCOutlookBarToolBar Class`|实现的工具栏上有 Outlook 2003 视觉样式。|
+|`CMFCPropertySheetCategoryInfo Class`|表示树控件中的节点。|
+|`CMFCPropertySheetTabCtrl Class`|扩展了`CMFCTabCtrl`类以提供属性表功能。|
+|`CMFCProperySheetListBox Class`|扩展了`CListBox`类以提供属性表功能。|
+|`CMFCReBarState Class`||
+|`CMFCRibbonCaptionButton Class`|实现系统标题按钮。|
+|`CMFCRibbonCmdUI Class`|根据需要在应用程序处于空闲状态时，更新功能区栏的对象。|
+|`CMFCRibbonCommandsListBox Class`||
+|`CMFCRibbonDefaultPanelButton Class`||
+|`CMFCRibbonGalleryIcon Class`|表示中的项`CMFCRibbonGallery`对象。|
+|`CMFCRibbonKeyboardCustomizeDialog Class`|实现包含功能区栏应用程序的一个键盘自定义对话框。|
+|`CMFCRibbonKeyTip Class`|实现一个弹出窗口，显示功能区栏的键提示。|
+|`CMFCRibbonPanelMenu Class`||
+|`CMFCRibbonPanelMenuBar Class`|表示功能区栏中的弹出菜单条。|
+|`CMFCRibbonQuickAccessToolBar Class`|实现快速访问工具栏功能区元素。|
+|`CMFCRibbonRichEditCtrl Class`|在功能区栏上实现位于一个编辑控件。|
+|`CMFCRibbonTab Class`|表示功能区栏上的选项卡。|
+|`CMFCShadowRenderer Class`||
+|`CMFCShowAllButton Class`|表示位于一个展开以显示隐藏的命令的弹出菜单底部的按钮。|
+|`CMFCStatusBarPaneInfo Class`|介绍的内容和外观`CMFCStatusBar`窗格。|
+|`CMFCTabButton Class`|提供了以下选项卡控件选项卡按钮功能。|
+|`CMFCTabInfo Class`|提供了有关选项卡到选项卡控件的信息。|
+|`CMFCTasksPaneFrameWnd Class`|管理任务窗格的自定义标题按钮。|
+|`CMFCTasksPanePropertyPage Class`|管理之间的关系`CMFCTasksPane`对象，且其名称。|
+|`CMFCTasksPaneToolBar Class`|实现位于顶部的导航工具栏`CMFCTasksPane`对象。|
+|`CMFCToolBarButtonsListButton Class`|显示的用户可以在自定义期间选择的映像列表**按钮外观**对话框。|
+|`CMFCToolBarDateTimeCtrlImpl Class`|实现放置源为`CMFCToolBar`对象。|
+|`CMFCToolBarDropSource Class`|实现放置源为`CMFCToolBar`对象。|
+|`CMFCToolBarDropTarget Class`|实现放置目标的`CMFCToolBar`对象。|
+|`CMFCToolBarEditCtrl Class`|提供到编辑控件功能`CMFCToolBarEditBoxButton`对象。|
+|`CMFCToolBarMenuButtonsButton Class`|表示系统标题按钮位于右侧的菜单栏。|
+|`CMFCToolBarNameDialog Class`|表示一个对话框，允许用户指定新的工具栏标题。|
+|`CMFCToolBarsCommandsListBox Class`|表示包含一系列工具栏命令的列表框。|
+|`CMFCToolBarsCommandsPropertyPage Class`|实现命令自定义属性页上。|
+|`CMFCToolBarsKeyboardPropertyPage Class`||
+|`CMFCToolBarsListCheckBox Class`|显示工具栏的列表上**工具栏**页**自定义**对话框。|
+|`CMFCToolBarsListPropertyPage Class`|表示属性页，显示的列表中的工具栏**自定义**对话框。|
+|`CMFCToolBarsMenuPropertyPage Class`|表示包含中的菜单自定义选项的属性页**自定义**对话框。|
+|`CMFCToolBarsOptionsPropertyPage Class`|表示**选项**页面**自定义**对话框。|
+|`CMFCToolBarSpinEditBoxButton Class`|表示位于编辑框的旋转按钮。|
+|`CMFCToolBarsToolsPropertyPage Class`|表示允许用户自定义用户工具属性页。|
+|`CMFCToolBarSystemMenuButton Class`|实现系统标题按钮时用户可以最大化的 MDI 子窗口，框架将添加到主菜单栏。|
+|`CMFCVisualManagerBitmapCache Class`|管理`CMFCControlRenderer`对象来提高位图上的操作的性能。|
+|`CMultiDocTemplateEx Class`|扩展了`CMultiDocTemplate`类提供访问权限菜单资源 id。|
+|`COleCntrFrameWndEx Class`||
+|`COleDocIPFrameWndEx Class`|提供了 OLE 支持。|
+|`COleServerDocEx Class`|提供对 OLE 服务器文档的操作。|
+|`CPaneContainerGC Class`||
+|`CPngImage Class`|提供使用.png 文件格式的图像资源的访问权限。|
+|`CPreviewViewEx Class`||
+|`CRecentPaneContainerInfo Class`|保存停靠窗格的前一状态。|
+|`CRibbonCategoryScroll Class`|实现时，将显示未在功能区栏的区域中容纳所有元素的滚动按钮。|
+|`CSmartDockingGroupGuide Class`|表示智能停靠组的中心元素。|
+|`CSmartDockingGroupGuidesManager Class`|管理智能停靠组指南。|
+|`CSmartDockingGroupGuidesWnd Class`|实现框架使用，以显示智能停靠参考线的中心组的分层的、 非矩形窗口。|
+|`CSmartDockingHighlighterWnd Class`|实现一个半透明窗口，其中介绍了要停靠的可停靠窗格对象要执行的区域。|
+|`CSmartDockingManager Class`|提供了以下智能停靠功能`CDockingManager`对象。|
+|`CSmartDockingStandaloneGuide Class`|实现智能停靠指南。|
+|`CSmartDockingStandaloneGuideWnd Class`|实现一个分层的、 非矩形窗口，框架将使用显示智能停靠指南。|
+|`CTagManager Class`|`CTagManager`类用于读取以类似 XML 的标记格式存储的值。|
+|`CVSListBoxBase Class`|提供了以下基本功能`CVSListBox`类。|
+|`CVSListBoxEditCtrl Class`|通过显示一个小按钮，将打开一个对话框来扩展标准列表框编辑控件。|
+|`CVSToolsListBox Class`|其他按钮来添加、 删除和列表框中移动项，从而扩展标准列表框控件。|
+
+## <a name="see-also"></a>请参阅
+
+[MFC 桌面应用程序](../../mfc/mfc-desktop-applications.md)
 

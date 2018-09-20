@@ -1,5 +1,5 @@
 ---
-title: TN055： 将迁移到 MFC DAO 类 MFC ODBC 数据库类应用程序 |Microsoft 文档
+title: TN055： 将迁移到 MFC DAO 类 MFC ODBC 数据库类应用程序 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/20/2018
 ms.technology:
@@ -24,17 +24,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d46150ee76219732d0895e818fa00c68dc588853
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 808f0f470e99b95502891552ade7b8c677dfdf17
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36957385"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46396826"
 ---
 # <a name="tn055-migrating-mfc-odbc-database-class-applications-to-mfc-dao-classes"></a>TN055：将 MFC ODBC 数据库类应用程序迁移到 MFC DAO 类
 
 > [!NOTE]
-> Visual c + + 环境和向导不支持 DAO （尽管 DAO 类包括并且仍可以使用它们）。 Microsoft 建议你使用[OLE DB 模板](../data/oledb/ole-db-templates.md)或[ODBC 和 MFC](../data/odbc/odbc-and-mfc.md)为新项目。 你只应在维护现有应用程序使用 DAO。
+> Visual c + + 环境和向导不支持 DAO （尽管 DAO 类包含并且仍可以使用它们）。 Microsoft 建议您使用[OLE DB 模板](../data/oledb/ole-db-templates.md)或[ODBC 和 MFC](../data/odbc/odbc-and-mfc.md)为新项目。 仅应在维护现有应用程序使用 DAO。
 
 ## <a name="overview"></a>概述
 
@@ -99,7 +99,7 @@ DAO 类包括更多对象和更丰富的方法集，但本节将仅详述相似�
 
    对于 ODBC 类，MFC 需要通过宏或枚举类型定义这些选项。
 
-   对于 DAO 类，DAO 在标头文件 (DBDAOINT.H) 中提供了对这些选项的定义。 因此，记录集类型是 `CRecordset` 的枚举成员，但对于 DAO，此类型是一个常量。 例如，你将使用**快照**时指定的一种`CRecordset`ODBC 中但**DB_OPEN_SNAPSHOT**时指定的一种`CDaoRecordset`。
+   对于 DAO 类，DAO 在标头文件 (DBDAOINT.H) 中提供了对这些选项的定义。 因此，记录集类型是 `CRecordset` 的枚举成员，但对于 DAO，此类型是一个常量。 例如，你将使用**快照**指定的类型时`CRecordset`ODBC 中，但**DB_OPEN_SNAPSHOT**指定的类型时`CDaoRecordset`。
 
 - 默认记录集类型`CRecordset`是**快照**时的默认记录集类型`CDaoRecordset`是**动态集**（请参阅下面有关 ODBC 类快照的其他问题的说明）。
 
@@ -109,14 +109,14 @@ DAO 类包括更多对象和更丰富的方法集，但本节将仅详述相似�
 
 - ODBC 类的事务成员函数是 `CDatabase` 的成员，充当数据库级别。 在 DAO 类中，事务成员函数是高级类 (`CDaoWorkspace`) 的成员，因此可能影响共享同一工作区（事务区）的多个 `CDaoDatabase` 对象。
 
-- 异常类已更改。 `CDBExceptions` ODBC 类中引发和`CDaoExceptions`在 DAO 类中。
+- 异常类已更改。 `CDBExceptions` ODBC 类中引发和`CDaoExceptions`DAO 类中。
 
-- `RFX_Date` 使用`CTime`和`TIMESTAMP_STRUCT`对象，而`DFX_Date`使用`COleDateTime`。 `COleDateTime`几乎等同于`CTime`，但依赖于使用 8 字节 OLE**日期**而不是一个 4 字节**time_t**以便它可以存放多范围较大的数据。
+- `RFX_Date` 使用`CTime`并`TIMESTAMP_STRUCT`对象，而`DFX_Date`使用`COleDateTime`。 `COleDateTime`几乎等同于`CTime`，但基于 8 字节 OLE**日期**而不是一个 4 字节**time_t**以便它可以保存更大范围的数据。
 
    > [!NOTE]
-   > DAO (`CDaoRecordset`) 快照为只读，而 ODBC (`CRecordset`) 快照是可根据驱动程序和 ODBC 光标库的使用进行更新的。 如果您使用的是光标库，则可更新 `CRecordset` 快照。 如果您使用的是 Desktop Driver Pack 3.0 中的任何 Microsoft 驱动程序，则 `CRecordset` 快照为只读。 如果你使用的另一个驱动程序，请检查驱动程序的文档，了解如果快照 (`STATIC_CURSORS`) 是只读的。
+   > DAO (`CDaoRecordset`) 快照为只读，而 ODBC (`CRecordset`) 快照是可根据驱动程序和 ODBC 光标库的使用进行更新的。 如果您使用的是光标库，则可更新 `CRecordset` 快照。 如果您使用的是 Desktop Driver Pack 3.0 中的任何 Microsoft 驱动程序，则 `CRecordset` 快照为只读。 如果使用的另一个驱动程序，检查驱动程序的文档，查看快照 (`STATIC_CURSORS`) 是只读的。
 
 ## <a name="see-also"></a>请参阅
 
-[按编号列出的技术说明](../mfc/technical-notes-by-number.md)  
-[按类别列出的技术说明](../mfc/technical-notes-by-category.md)  
+[按编号列出的技术说明](../mfc/technical-notes-by-number.md)<br/>
+[按类别列出的技术说明](../mfc/technical-notes-by-category.md)

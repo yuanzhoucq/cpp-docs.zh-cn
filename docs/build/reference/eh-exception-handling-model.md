@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e946406a708f26685d6f1b7307476b6253c5362e
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: e2c368ac8dfcb5a9d283f4b567e68d4a629c1ba4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45713282"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46417418"
 ---
 # <a name="eh-exception-handling-model"></a>/EH（异常处理模型）
 
@@ -120,5 +120,5 @@ int main() {
 [编译器选项](../../build/reference/compiler-options.md)<br/>
 [设置编译器选项](../../build/reference/setting-compiler-options.md)<br/>
 [错误和异常处理](../../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
-[异常规范 (throw)](../../cpp/exception-specifications-throw-cpp.md)
-[结构化异常处理 （C/c + +）](../../cpp/structured-exception-handling-c-cpp.md)
+[异常规范 (throw)](../../cpp/exception-specifications-throw-cpp.md)<br/>
+[结构化异常处理 (C/C++)](../../cpp/structured-exception-handling-c-cpp.md)

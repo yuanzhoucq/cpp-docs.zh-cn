@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7979dd21d68c5b1e2606573a5271fc8deafdfb07
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 62efb2b1aa2cd2caa0c5701696689ea3df19f962
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604175"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46443602"
 ---
 # <a name="activationfactorycallback-function"></a>ActivationFactoryCallback 函数
 
@@ -39,10 +39,10 @@ inline HRESULT STDAPICALLTYPE ActivationFactoryCallback(
 
 ### <a name="parameters"></a>参数
 
-*activationId*  
+*activationId*<br/>
 一个字符串，指定运行时类名称的句柄。
 
-*ppFactory*  
+*ppFactory*<br/>
 此操作完成后，对应于参数的激活工厂*activationId*。
 
 ## <a name="return-value"></a>返回值

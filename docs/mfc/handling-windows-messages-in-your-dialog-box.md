@@ -1,5 +1,5 @@
 ---
-title: 处理您对话框中的 Windows 消息 |Microsoft 文档
+title: 处理您对话框中的 Windows 消息 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7adaa21be5aada2de4cb5a4dd883e591e066185
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b8773f7b93c67441fdf1cf6b6b992b152da14619
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33343803"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46401012"
 ---
 # <a name="handling-windows-messages-in-your-dialog-box"></a>处理您对话框中的 Windows 消息
-对话框是窗口，因此，如果您提供了合适的处理程序函数，对话框就能处理 Windows 消息。 当使用添加类向导创建对话框类时，该向导会将空消息映射添加到该类。 使用“属性”窗口可映射您希望您的类处理的任何 Windows 消息和命令。  
-  
- 请参阅[将 Windows 消息映射到对话框类](../mfc/mapping-windows-messages-to-your-class.md)有关详细信息。  
-  
-## <a name="see-also"></a>请参阅  
- [对话框的生命周期](../mfc/life-cycle-of-a-dialog-box.md)
+
+对话框是窗口，因此，如果您提供了合适的处理程序函数，对话框就能处理 Windows 消息。 当使用添加类向导创建对话框类时，该向导会将空消息映射添加到该类。 使用“属性”窗口可映射您希望您的类处理的任何 Windows 消息和命令。
+
+请参阅[将 Windows 消息映射到对话框类](../mfc/mapping-windows-messages-to-your-class.md)有关详细信息。
+
+## <a name="see-also"></a>请参阅
+
+[对话框的生命周期](../mfc/life-cycle-of-a-dialog-box.md)
 

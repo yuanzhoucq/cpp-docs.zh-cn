@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 63da1f6ffb684cd2971808f4a56167e19f7bd347
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 329f1d21489b57130531db20014e249588f101a6
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313398"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46400505"
 ---
 # <a name="including-shared-read-only-or-calculated-symbols"></a>包含共享（只读）或计算符号
 
@@ -82,7 +82,7 @@ Win32
 
 ## <a name="see-also"></a>请参阅
 
-[符号名限制](../windows/symbol-name-restrictions.md)  
-[符号值限制](../windows/symbol-value-restrictions.md)  
-[预定义的符号 ID](../windows/predefined-symbol-ids.md)  
+[符号名限制](../windows/symbol-name-restrictions.md)<br/>
+[符号值限制](../windows/symbol-value-restrictions.md)<br/>
+[预定义的符号 ID](../windows/predefined-symbol-ids.md)<br/>
 [符号：资源标识符](../windows/symbols-resource-identifiers.md)

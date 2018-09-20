@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ae2d5121e17a9325ec45143e7e90e7d2a211f380
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 2892f957cf8937b5b030e7624bf3e39f546a7103
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43223093"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46437596"
 ---
 # <a name="helpstring"></a>helpstring
 
@@ -38,7 +38,7 @@ ms.locfileid: "43223093"
 
 ### <a name="parameters"></a>参数
 
-*string*  
+*string*<br/>
 帮助字符串的文本。
 
 ## <a name="remarks"></a>备注
@@ -64,10 +64,10 @@ ms.locfileid: "43223093"
 
 ## <a name="see-also"></a>请参阅
 
-[IDL 特性](../windows/idl-attributes.md)  
-[接口特性](../windows/interface-attributes.md)  
-[类特性](../windows/class-attributes.md)  
-[方法特性](../windows/method-attributes.md)  
-[Typedef、Enum、Union 和 Struct 特性](../windows/typedef-enum-union-and-struct-attributes.md)  
-[helpfile](../windows/helpfile.md)  
+[IDL 特性](../windows/idl-attributes.md)<br/>
+[接口特性](../windows/interface-attributes.md)<br/>
+[类特性](../windows/class-attributes.md)<br/>
+[方法特性](../windows/method-attributes.md)<br/>
+[Typedef、Enum、Union 和 Struct 特性](../windows/typedef-enum-union-and-struct-attributes.md)<br/>
+[helpfile](../windows/helpfile.md)<br/>
 [helpcontext](../windows/helpcontext.md)  

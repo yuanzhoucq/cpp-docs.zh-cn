@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e4881dfdcb92e778501982482abc13cc91836b0
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 0850a30c0e0e85cd1d90ba5b2399a295a482a3ce
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42543077"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46444666"
 ---
 # <a name="loop"></a>循环
 控制自动并行化如何考虑循环代码和/或从自动向量化进行的考虑中排除循环。  
@@ -57,5 +57,5 @@ ms.locfileid: "42543077"
   
 ## <a name="see-also"></a>请参阅  
  
-[自动并行化和自动矢量化](../parallel/auto-parallelization-and-auto-vectorization.md)   
+[自动并行化和自动矢量化](../parallel/auto-parallelization-and-auto-vectorization.md)<br/>
 [Pragma 指令和 __Pragma 关键字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

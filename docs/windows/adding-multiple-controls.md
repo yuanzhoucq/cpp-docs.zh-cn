@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: abaf92080710d4b69fc85684d523d2478bcd60d4
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 464b86ba90d4c53adfcf5016cad38d0fbc9034f5
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317129"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46413349"
 ---
 # <a name="adding-multiple-controls"></a>添加多个控件
 
@@ -40,6 +40,6 @@ Win32
 
 ## <a name="see-also"></a>请参阅
 
-[对话框中的控件](../windows/controls-in-dialog-boxes.md)  
-[添加对话框控件的事件处理程序](../windows/adding-event-handlers-for-dialog-box-controls.md)  
+[对话框中的控件](../windows/controls-in-dialog-boxes.md)<br/>
+[添加对话框控件的事件处理程序](../windows/adding-event-handlers-for-dialog-box-controls.md)<br/>
 [对话框控件和变量类型](../ide/dialog-box-controls-and-variable-types.md)

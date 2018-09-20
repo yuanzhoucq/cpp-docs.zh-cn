@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 47fcbdb82501744c8155432e4f4cf220ed945dec
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 6140b6764efe530664a1904940f3a8426e6fee02
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45709899"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46445849"
 ---
 # <a name="dbcommand"></a>db_command
 
@@ -43,7 +43,7 @@ ms.locfileid: "45709899"
 
 ### <a name="parameters"></a>参数
 
-*command*  
+*command*<br/>
 包含 OLE DB 命令文本的命令字符串。 一个简单的例子是：
 
 ```cpp
@@ -64,15 +64,15 @@ ms.locfileid: "45709899"
 
 - **\[** *bindtype* **]** 是以下不区分大小写的字符串之一：
 
-  -   **\[db_column]** 将每个成员变量绑定到行集中的列。
+  - **\[db_column]** 将每个成员变量绑定到行集中的列。
 
-  -   **\[bindto]** (与相同 **\[db_column]**)。
+  - **\[bindto]** (与相同 **\[db_column]**)。
 
-  -   **\[在]** 将作为输入参数的成员变量绑定。
+  - **\[在]** 将作为输入参数的成员变量绑定。
 
-  -   **\[out] 一个**将作为输出参数的成员变量绑定。
+  - **\[out] 一个**将作为输出参数的成员变量绑定。
 
-  -   **\[in，out]** 成员将变量绑定为输入/输出参数。
+  - **\[in，out]** 成员将变量绑定为输入/输出参数。
 
 - *szVarX*， *nVarX*解析为当前作用域内的成员变量。
 
@@ -99,25 +99,25 @@ TCHAR m_state[3] = 'CA';
 ]
 ```
 
-*name*  
+*name*<br/>
 （可选）用于处理行集的句柄的名称。 如果指定名称 ， **db_command** 会生成具有指定名称 的类，可以用它来遍历行集或执行多个操作查询。 如果未指定名称 ，则无法向用户返回多个行的结果。
 
-*source_name*  
+*source_name*<br/>
 （可选）`CSession`变量或具有的类的实例`db_source`特性应用于它执行命令。 请参阅 [db_source](../windows/db-source.md)。
 
 执行**db_command** 检查，确认用于 *source_name* 的变量有效，使指定的变量位于函数或全局范围内。
 
-*hresult*  
+*hresult*<br/>
 （可选）标识将接收此数据库命令的 HRESULT 的变量。 如果该变量不存在，属性将自动插入。
 
-*绑定*  
+*绑定*<br/>
 （可选）可以从 OLE DB 命令分离绑定参数。
 
 如果指定的值*绑定*， **db_command**将分析相关联的值，但不会分析\[ *bindtype*] 参数。 这种用法允许使用 OLE DB 提供程序语法。 若要禁用分析，但不绑定参数，请指定`Bindings=""`。
 
 如果未指定的值*绑定*， **db_command**将分析绑定参数块，查找 **(** 后, 跟 **\[** _bindtype_**]** 在方括号内后, 跟一个或多个以前声明 c + + 成员变量后, 接 **)**。 将从生成的命令中去除括号间的所有文本，并且这些参数将用于为此命令构造列和参数绑定。
 
-*bulk_fetch*  
+*bulk_fetch*<br/>
 （可选）一个整数值，指定要提取的行数。
 
 默认值为 1，指定单行提取（行集将为 [CRowset](../data/oledb/crowset-class.md)类型）。
@@ -266,5 +266,5 @@ int main() {
 
 ## <a name="see-also"></a>请参阅
 
-[OLE DB 使用者特性](../windows/ole-db-consumer-attributes.md)  
+[OLE DB 使用者特性](../windows/ole-db-consumer-attributes.md)<br/>
 [独立特性](../windows/stand-alone-attributes.md)  

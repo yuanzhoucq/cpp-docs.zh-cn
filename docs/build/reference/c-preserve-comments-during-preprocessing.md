@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 20973969385d0b5c61872a12f4d0168420bc2eef
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 8716c0a0f954b0a2ad0bbe0e25c29a4445b11823
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45713175"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46428338"
 ---
 # <a name="c-preserve-comments-during-preprocessing"></a>/C（在预处理期间保留注释）
 
@@ -76,6 +76,6 @@ int i;   // a variable
 
 [编译器选项](../../build/reference/compiler-options.md)<br/>
 [设置编译器选项](../../build/reference/setting-compiler-options.md)<br/>
-[/E （预处理到 stdout）](../../build/reference/e-preprocess-to-stdout.md)
-[/P （预处理到文件）](../../build/reference/p-preprocess-to-a-file.md)
-[/EP （不预处理到 stdout #line 指令)](../../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md)
+[/E（预处理到 stdout）](../../build/reference/e-preprocess-to-stdout.md)<br/>
+[/P（预处理到文件）](../../build/reference/p-preprocess-to-a-file.md)<br/>
+[/EP（不使用 #line 指令预处理到 stdout）](../../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md)

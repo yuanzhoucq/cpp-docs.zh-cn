@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3eb82c5c86411af63ea79a4dbcf2e54d2d3ce5f5
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: aba3fc80e13504485cc5a4f93fb3ad35031d4ef7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46038296"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46440038"
 ---
 # <a name="walkthrough-creating-a-uwp-app-using-wrl-and-media-foundation"></a>演练： 创建使用 WRL 和媒体基础的 UWP 应用
 
@@ -131,6 +131,6 @@ ms.locfileid: "46038296"
 
 ## <a name="see-also"></a>请参阅
 
-[Windows 运行时 C++ 模板库 (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)  
-[Microsoft 媒体基础](/windows/desktop/medfound/microsoft-media-foundation-sdk)  
+[Windows 运行时 C++ 模板库 (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)<br/>
+[Microsoft 媒体基础](/windows/desktop/medfound/microsoft-media-foundation-sdk)<br/>
 [媒体扩展示例](http://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096)

@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6ef3a2ce99309781ecbfd0c406fe8e0f6f7e0613
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 5b34b0a55f079962860bb0d9055f19780273d267
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42592113"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46406374"
 ---
 # <a name="converting-an-image-from-one-format-to-another-image-editor-for-icons"></a>将图像从一种格式转换为另一种格式（图标的图像编辑器）
 
@@ -47,5 +47,5 @@ ms.locfileid: "42592113"
 
 ## <a name="see-also"></a>请参阅
 
-[编辑图形资源](../windows/editing-graphical-resources-image-editor-for-icons.md)  
+[编辑图形资源](../windows/editing-graphical-resources-image-editor-for-icons.md)<br/>
 [图标的图像编辑器](../windows/image-editor-for-icons.md)

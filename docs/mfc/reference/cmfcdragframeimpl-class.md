@@ -16,110 +16,119 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c8cd05dc5d4cdff535b8e571e94d9033d0220ccf
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 8cf56cec1a9b09a9176577fa7fce58a853a1d3aa
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45710159"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46433993"
 ---
 # <a name="cmfcdragframeimpl-class"></a>CMFCDragFrameImpl 类
-`CMFCDragFrameImpl`类绘制当用户在标准停靠模式下拖动窗格时显示的拖动矩形。  
-   有关更多详细信息，请参阅中的源代码**VC\\atlmfc\\src\\mfc**的 Visual Studio 安装文件夹。  
-   
-## <a name="syntax"></a>语法  
-  
-```  
-class CMFCDragFrameImpl  
-```  
-  
-## <a name="remarks"></a>备注  
- 此类的一个对象嵌入到每个[CPane 类](../../mfc/reference/cpane-class.md)对象。 因此，使用每个窗格`CanFloat`方法会在用户拖动它时显示拖动矩形。  
-  
- 可以通过使用控制的拖动矩形粗细[AFX_GLOBAL_DATA::m_nDragFrameThicknessFloat](afx-global-data-structure.md#m_ndragframethicknessfloat)并[AFX_GLOBAL_DATA::m_nDragFrameThicknessDock](afx-global-data-structure.md#m_ndragframethicknessdock)。  
-  
-## <a name="inheritance-hierarchy"></a>继承层次结构  
- [CMFCDragFrameImpl](../../mfc/reference/cmfcdragframeimpl-class.md)  
-  
-## <a name="requirements"></a>要求  
- **标头：** afxdragframeimpl.h  
-  
-##  <a name="enddrawdragframe"></a>  CMFCDragFrameImpl::EndDrawDragFrame  
 
-  
-```  
+`CMFCDragFrameImpl`类绘制当用户在标准停靠模式下拖动窗格时显示的拖动矩形。
+有关更多详细信息，请参阅中的源代码**VC\\atlmfc\\src\\mfc**的 Visual Studio 安装文件夹。
+
+## <a name="syntax"></a>语法
+
+```
+class CMFCDragFrameImpl
+```
+
+## <a name="remarks"></a>备注
+
+此类的一个对象嵌入到每个[CPane 类](../../mfc/reference/cpane-class.md)对象。 因此，使用每个窗格`CanFloat`方法会在用户拖动它时显示拖动矩形。
+
+可以通过使用控制的拖动矩形粗细[AFX_GLOBAL_DATA::m_nDragFrameThicknessFloat](afx-global-data-structure.md#m_ndragframethicknessfloat)并[AFX_GLOBAL_DATA::m_nDragFrameThicknessDock](afx-global-data-structure.md#m_ndragframethicknessdock)。
+
+## <a name="inheritance-hierarchy"></a>继承层次结构
+
+[CMFCDragFrameImpl](../../mfc/reference/cmfcdragframeimpl-class.md)
+
+## <a name="requirements"></a>要求
+
+**标头：** afxdragframeimpl.h
+
+##  <a name="enddrawdragframe"></a>  CMFCDragFrameImpl::EndDrawDragFrame
+
+
+```
 void EndDrawDragFrame(BOOL bClearInternalRects = TRUE);
-```  
-  
-### <a name="parameters"></a>参数  
- [in]*bClearInternalRects*  
-  
-### <a name="remarks"></a>备注  
-  
-##  <a name="init"></a>  CMFCDragFrameImpl::Init  
+```
 
-  
-```  
+### <a name="parameters"></a>参数
+
+[in]*bClearInternalRects*
+
+### <a name="remarks"></a>备注
+
+##  <a name="init"></a>  CMFCDragFrameImpl::Init
+
+
+```
 void Init(CWnd* pDraggedWnd);
-```  
-  
-### <a name="parameters"></a>参数  
- [in]*pDraggedWnd*  
-  
-### <a name="remarks"></a>备注  
-  
-##  <a name="movedragframe"></a>  CMFCDragFrameImpl::MoveDragFrame  
+```
 
-  
-```  
+### <a name="parameters"></a>参数
+
+[in]*pDraggedWnd*
+
+### <a name="remarks"></a>备注
+
+##  <a name="movedragframe"></a>  CMFCDragFrameImpl::MoveDragFrame
+
+
+```
 void MoveDragFrame(BOOL bForceMove = FALSE);
-```  
-  
-### <a name="parameters"></a>参数  
- [in]*bForceMove*  
-  
-### <a name="remarks"></a>备注  
-  
-##  <a name="placetabpredocking"></a>  CMFCDragFrameImpl::PlaceTabPreDocking  
+```
 
-  
-```  
+### <a name="parameters"></a>参数
+
+[in]*bForceMove*
+
+### <a name="remarks"></a>备注
+
+##  <a name="placetabpredocking"></a>  CMFCDragFrameImpl::PlaceTabPreDocking
+
+
+```
 void PlaceTabPreDocking(
-    CBaseTabbedPane* pTabbedBar,  
-    BOOL bFirstTime);  
-  
+    CBaseTabbedPane* pTabbedBar,
+    BOOL bFirstTime);
+
 void PlaceTabPreDocking(CWnd* pCBarToPlaceOn);
-```  
-  
-### <a name="parameters"></a>参数  
+```
+
+### <a name="parameters"></a>参数
+
 *pTabbedBar*<br/>
-[in][in]*bFirstTime*  
- [in]*pCBarToPlaceOn*  
-  
-### <a name="remarks"></a>备注  
-  
-##  <a name="removetabpredocking"></a>  CMFCDragFrameImpl::RemoveTabPreDocking  
+[in][in]*bFirstTime* [in] *pCBarToPlaceOn*
 
-  
-```  
+### <a name="remarks"></a>备注
+
+##  <a name="removetabpredocking"></a>  CMFCDragFrameImpl::RemoveTabPreDocking
+
+
+```
 void RemoveTabPreDocking(CDockablePane* pOldTargetBar = NULL);
-```  
-  
-### <a name="parameters"></a>参数  
- [in]*pOldTargetBar*  
-  
-### <a name="remarks"></a>备注  
-  
-##  <a name="resetstate"></a>  CMFCDragFrameImpl::ResetState  
+```
 
-  
-```  
+### <a name="parameters"></a>参数
+
+[in]*pOldTargetBar*
+
+### <a name="remarks"></a>备注
+
+##  <a name="resetstate"></a>  CMFCDragFrameImpl::ResetState
+
+
+```
 void ResetState();
-```  
-  
-### <a name="remarks"></a>备注  
-  
-## <a name="see-also"></a>请参阅  
- [层次结构图表](../../mfc/hierarchy-chart.md)   
- [类](../../mfc/reference/mfc-classes.md)   
- [CPane 类](../../mfc/reference/cpane-class.md)
+```
+
+### <a name="remarks"></a>备注
+
+## <a name="see-also"></a>请参阅
+
+[层次结构图](../../mfc/hierarchy-chart.md)<br/>
+[类](../../mfc/reference/mfc-classes.md)<br/>
+[CPane 类](../../mfc/reference/cpane-class.md)

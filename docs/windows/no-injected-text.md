@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 055b14c38e3084a7368953cbce4f95373e1a77f3
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 2cd7288b4475197d9980aab2eb9037419304c0fd
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45706302"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46442924"
 ---
 # <a name="noinjectedtext"></a>no_injected_text
 
@@ -38,7 +38,7 @@ ms.locfileid: "45706302"
 
 ### <a name="parameters"></a>参数
 
-*一个布尔值*  
+*一个布尔值*<br/>
 （可选）**，则返回 true**如果你想注入，没有代码**false**若要允许代码注入。 **true**是默认值。
 
 ## <a name="remarks"></a>备注

@@ -22,66 +22,75 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: acf1ba02e9bbf6afd14e41be7dda406d257cb681
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 6ec1e6215cd085ed948e4b0554bca12a678563d6
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339756"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46434006"
 ---
 # <a name="iview-interface"></a>IView 接口
-实现几种方法的[CWinFormsView](../../mfc/reference/cwinformsview-class.md)用于将查看通知发送到的托管控件。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-interface class IView  
-```  
-  
-## <a name="members"></a>成员  
-  
-### <a name="public-methods"></a>公共方法  
-  
-|名称|描述|  
-|----------|-----------------|  
-|[IView::OnActivateView](#onactivateview)|由 MFC 激活或停用视图时调用。|  
-|[IView::OnInitialUpdate](#oninitialupdate)|该视图首次附加到文档中之后, 但在最初显示的视图之前由框架调用。|  
-|[IView::OnUpdate](#onupdate)|后已修改，视图的文档，则由 MFC 调用使用此功能，要更新其显示效果以反映修改的视图。|  
-  
-## <a name="remarks"></a>备注  
- `IView` 实现几种方法的`CWinFormsView`使用将转发到承载托管控件的常见查看通知。 这些是[OnInitialUpdate](#oninitialupdate)， [OnUpdate](#onupdate)并[OnActivateView](#onactivateview)。  
-  
- `IView` 类似于[CView](../../mfc/reference/cview-class.md)，但只能用于托管的视图和控件。  
-  
- 有关使用 Windows 窗体的详细信息，请参阅[在 MFC 中使用 Windows 窗体用户控件](../../dotnet/using-a-windows-form-user-control-in-mfc.md)。  
-  
 
-## <a name="requirements"></a>要求  
- 标头： afxwinforms.h （在程序集 atlmfc\lib\mfcmifc80.dll 中定义）  
+实现几种方法的[CWinFormsView](../../mfc/reference/cwinformsview-class.md)用于将查看通知发送到的托管控件。
 
-## <a name="onactivateview"></a> IView::OnActivateView  
+## <a name="syntax"></a>语法
+
+```
+interface class IView
+```
+
+## <a name="members"></a>成员
+
+### <a name="public-methods"></a>公共方法
+
+|名称|描述|
+|----------|-----------------|
+|[IView::OnActivateView](#onactivateview)|由 MFC 激活或停用视图时调用。|
+|[IView::OnInitialUpdate](#oninitialupdate)|该视图首次附加到文档中之后, 但在最初显示的视图之前由框架调用。|
+|[IView::OnUpdate](#onupdate)|后已修改，视图的文档，则由 MFC 调用使用此功能，要更新其显示效果以反映修改的视图。|
+
+## <a name="remarks"></a>备注
+
+`IView` 实现几种方法的`CWinFormsView`使用将转发到承载托管控件的常见查看通知。 这些是[OnInitialUpdate](#oninitialupdate)， [OnUpdate](#onupdate)并[OnActivateView](#onactivateview)。
+
+`IView` 类似于[CView](../../mfc/reference/cview-class.md)，但只能用于托管的视图和控件。
+
+有关使用 Windows 窗体的详细信息，请参阅[在 MFC 中使用 Windows 窗体用户控件](../../dotnet/using-a-windows-form-user-control-in-mfc.md)。
+
+
+## <a name="requirements"></a>要求
+
+标头： afxwinforms.h （在程序集 atlmfc\lib\mfcmifc80.dll 中定义）
+
+## <a name="onactivateview"></a> IView::OnActivateView
+
 由 MFC 激活或停用视图时调用。
 ```
 void OnActivateView(bool activate);
 ```
 ## <a name="parameters"></a>参数
-*激活*  
-指示是否视图处于激活或停用。  
+
+*激活*<br/>
+指示是否视图处于激活或停用。
 
 ## <a name="oninitialupdate"></a> IView::OnInitialUpdate
+
 该视图首次附加到文档中之后, 但在最初显示的视图之前由框架调用。
 ```
 void OnInitialUpdate();
 ```
 
-## <a name="onupdate"></a> IView::OnUpdate 
-由 MFC 视图的文档已被修改后调用。  
+## <a name="onupdate"></a> IView::OnUpdate
+
+由 MFC 视图的文档已被修改后调用。
 ```
 void OnUpdate();
 ```
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>备注
+
 使用此功能，要更新其显示效果以反映修改的视图。
 
-## <a name="see-also"></a>请参阅  
- [CWinFormsView 类](../../mfc/reference/cwinformsview-class.md)   
- [CView 类](../../mfc/reference/cview-class.md)
+## <a name="see-also"></a>请参阅
+
+[CWinFormsView 类](../../mfc/reference/cwinformsview-class.md)<br/>
+[CView 类](../../mfc/reference/cview-class.md)
