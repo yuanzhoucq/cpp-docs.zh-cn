@@ -1,5 +1,5 @@
 ---
-title: 创建 Windows |Microsoft 文档
+title: 创建 Windows |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,26 +17,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 446ebb4904b8f34576b03f88988bfc58138736a1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1bf0263bfd67a2bfbd9489c7cfea6946ee2eda9f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33341892"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46394018"
 ---
 # <a name="creating-windows"></a>创建窗口
-框架自动创建框架程序中的大部分所需的窗口。 [文档/视图创建](../mfc/document-view-creation.md)演示了框架如何创建与文档和视图的框架窗口。 但是对于特殊用途可以创建你自己的 windows — 包括您自己的框架窗口或视图的子窗口-除了提供框架的窗口。  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>你想进一步了解什么  
-  
--   [注册窗口"类"](../mfc/registering-window-classes.md) （而不是 c + + 窗口对象）  
-  
--   [常规窗口创建序列](../mfc/general-window-creation-sequence.md)  
-  
--   [销毁窗口对象](../mfc/destroying-window-objects.md)  
-  
--   [使用窗口对象](../mfc/working-with-window-objects.md)  
-  
-## <a name="see-also"></a>请参阅  
- [窗口对象](../mfc/window-objects.md)
+
+框架会自动在框架程序中创建的大多数窗口所需。 [文档/视图创建](../mfc/document-view-creation.md)演示框架如何创建与文档和视图相关联的框架窗口。 但是对于特殊用途可以创建你自己的 windows — 包括您自己的框架窗口或视图的子窗口，除了框架所提供的 windows。
+
+## <a name="what-do-you-want-to-know-more-about"></a>你想要了解更多信息
+
+- [注册窗口"类"](../mfc/registering-window-classes.md) （而不是 c + + 窗口对象）
+
+- [常规窗口创建序列](../mfc/general-window-creation-sequence.md)
+
+- [销毁窗口对象](../mfc/destroying-window-objects.md)
+
+- [使用窗口对象](../mfc/working-with-window-objects.md)
+
+## <a name="see-also"></a>请参阅
+
+[窗口对象](../mfc/window-objects.md)
 

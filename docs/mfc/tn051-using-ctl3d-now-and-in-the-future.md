@@ -1,5 +1,5 @@
 ---
-title: TN051： 现在和将来使用 CTL3D |Microsoft 文档
+title: TN051： 现在和将来使用 CTL3D |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a19077bcba252d252418b6c3554c6172ed1aaa2c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dfffe63e80160cab1c85ef19de321b361e1c26cb
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382267"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46388629"
 ---
 # <a name="tn051-using-ctl3d-now-and-in-the-future"></a>TN051：现在和将来使用 CTL3D
-此之前讨论 CTL3D 和 MFC 的技术说明现已过时。 控件的 3D 效果将由 MFC 自动实现。  
-  
-## <a name="see-also"></a>请参阅  
- [按编号列出的技术说明](../mfc/technical-notes-by-number.md)   
- [按类别列出的技术说明](../mfc/technical-notes-by-category.md)
+
+此之前讨论 CTL3D 和 MFC 的技术说明现已过时。 控件的 3D 效果将由 MFC 自动实现。
+
+## <a name="see-also"></a>请参阅
+
+[按编号列出的技术说明](../mfc/technical-notes-by-number.md)<br/>
+[按类别列出的技术说明](../mfc/technical-notes-by-category.md)
 

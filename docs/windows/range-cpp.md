@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a4f84684c5d8f8feb8595da628976c90a2593c96
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 80b8546e461930ac184e0f5b3ed2b34499cc8d3c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43201346"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46384217"
 ---
 # <a name="range-c"></a>range (C++)
 
@@ -39,10 +39,10 @@ ms.locfileid: "43201346"
 
 ### <a name="parameters"></a>参数
 
-*low*  
+*low*<br/>
 范围下限值。
 
-*high*  
+*high*<br/>
 高范围值。
 
 ## <a name="remarks"></a>备注
@@ -80,7 +80,7 @@ __interface ICustom {
 
 ## <a name="see-also"></a>请参阅
 
-[IDL 特性](../windows/idl-attributes.md)  
-[方法特性](../windows/method-attributes.md)  
-[参数特性](../windows/parameter-attributes.md)  
+[IDL 特性](../windows/idl-attributes.md)<br/>
+[方法特性](../windows/method-attributes.md)<br/>
+[参数特性](../windows/parameter-attributes.md)<br/>
 [数据成员特性](../windows/data-member-attributes.md)  

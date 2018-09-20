@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3cecffa8505aaead738007e2a0872c3f1bc5a6d6
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: c1d7c3741af7f5a0ea3a66d491f4aecc2afc8cb9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42593643"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46392185"
 ---
 # <a name="createclassfactory-function"></a>CreateClassFactory 函数
 
@@ -42,16 +42,16 @@ inline HRESULT STDMETHODCALLTYPE CreateClassFactory(
 
 ### <a name="parameters"></a>参数
 
-*flags*  
+*flags*<br/>
 一个或多个组合[RuntimeClassType](../windows/runtimeclasstype-enumeration.md)枚举值。
 
-*entry*  
+*entry*<br/>
 指向[CreatorMap](../windows/creatormap-structure.md)包含有关参数的初始化和注册信息*riid*。
 
-*riid*  
+*riid*<br/>
 引用接口 id。
 
-*ppFactory*  
+*ppFactory*<br/>
 如果此操作成功完成，指向类工厂。
 
 ## <a name="return-value"></a>返回值

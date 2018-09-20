@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 037200c509574199dbecf56c950590e00e7aa71f
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 875bc3163bc579c7d6da8055a0a24275e8be92a1
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313606"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46393849"
 ---
 # <a name="attributes-by-usage"></a>按用法分的特性
 
@@ -43,7 +43,7 @@ ms.locfileid: "44313606"
 
 ## <a name="see-also"></a>请参阅
 
-[C++ 特性参考](../windows/cpp-attributes-reference.md)  
-[概念](../windows/attributed-programming-concepts.md)  
-[按组分的特性](../windows/attributes-by-group.md)  
+[C++ 特性参考](../windows/cpp-attributes-reference.md)<br/>
+[概念](../windows/attributed-programming-concepts.md)<br/>
+[按组分的特性](../windows/attributes-by-group.md)<br/>
 [按字母顺序的特性参考](../windows/attributes-alphabetical-reference.md)

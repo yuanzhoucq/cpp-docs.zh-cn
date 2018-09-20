@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 24ca52eccc814b82e5f9bdd6ddac6458fb5992fe
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 2e0fd86cb8a9c9fa86da0a1781f49fe57c5ce6d1
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42607131"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46394423"
 ---
 # <a name="comptroperator-operator"></a>ComPtr::operator== 运算符
 
@@ -47,10 +47,10 @@ bool operator==(
 
 ### <a name="parameters"></a>参数
 
-*a*  
+*a*<br/>
 对引用**ComPtr**对象。
 
-*b*  
+*b*<br/>
 对另一个引用**ComPtr**对象。
 
 ## <a name="return-value"></a>返回值
@@ -67,5 +67,5 @@ bool operator==(
 
 ## <a name="see-also"></a>请参阅
 
-[Microsoft::WRL Namespace](../windows/microsoft-wrl-namespace.md)  
+[Microsoft::WRL Namespace](../windows/microsoft-wrl-namespace.md)<br/>
 [ComPtr 类](../windows/comptr-class.md)

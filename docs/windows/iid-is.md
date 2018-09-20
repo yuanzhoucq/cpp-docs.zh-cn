@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 597d4c2e6fa9904906c2971c3c442a9f26779834
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 3f1616168829d488a0b0a899f1dd09f9b02700ee
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43215073"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46389338"
 ---
 # <a name="iidis"></a>iid_is
 
@@ -38,7 +38,7 @@ ms.locfileid: "43215073"
 
 ### <a name="parameters"></a>参数
 
-*表达式*  
+*表达式*<br/>
 指定 COM 接口的 IID 是 C 语言表达式指向一个接口指针。
 
 ## <a name="remarks"></a>备注
@@ -79,5 +79,5 @@ __interface IFireTabCtrl : IDispatch
 
 ## <a name="see-also"></a>请参阅
 
-[IDL 特性](../windows/idl-attributes.md)  
+[IDL 特性](../windows/idl-attributes.md)<br/>
 [参数特性](../windows/parameter-attributes.md)  

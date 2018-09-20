@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6faa29858e94c7d80d6039e35278b6a7ae263a85
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 69aecab15ffb1914dbc8a6a6ae15fca307bc77ef
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43213972"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46386244"
 ---
 # <a name="tn006-message-maps"></a>TN006：消息映射
 
@@ -87,7 +87,7 @@ protected:
 > [!NOTE]
 > 类向导要求您使用**afx_msg**消息映射处理程序声明中的关键字。
 
- 通过使用简单约定来自这些函数签名。 该函数的名称始终以开头`"On`"。 这被跟"WM_"中删除的 Windows 消息的名称和每个单词首字母大写的第一个字母。 参数的顺序*wParam*跟`LOWORD`(*lParam*) 然后`HIWORD`(*lParam*)。 不传递未使用的参数。 任何由 MFC 类包装的句柄将转换为指向相应的 MFC 对象的指针。 下面的示例演示如何处理 WM_PAINT 消息和导致`CMyWnd::OnPaint`要调用的函数：
+通过使用简单约定来自这些函数签名。 该函数的名称始终以开头`"On`"。 这被跟"WM_"中删除的 Windows 消息的名称和每个单词首字母大写的第一个字母。 参数的顺序*wParam*跟`LOWORD`(*lParam*) 然后`HIWORD`(*lParam*)。 不传递未使用的参数。 任何由 MFC 类包装的句柄将转换为指向相应的 MFC 对象的指针。 下面的示例演示如何处理 WM_PAINT 消息和导致`CMyWnd::OnPaint`要调用的函数：
 
 ```cpp
 BEGIN_MESSAGE_MAP(CMyWnd, CMyParentWndClass)
@@ -97,7 +97,7 @@ BEGIN_MESSAGE_MAP(CMyWnd, CMyParentWndClass)
 END_MESSAGE_MAP()
 ```
 
- 消息映射表必须定义之外的任何函数或类定义的范围。 它不应将放在 extern"C"块中。
+消息映射表必须定义之外的任何函数或类定义的范围。 它不应将放在 extern"C"块中。
 
 > [!NOTE]
 > ClassWizard 将修改消息映射条目之间发生的 / / {{和 / /}} 注释括号。
@@ -223,7 +223,7 @@ ON_UPDATE_COMMAND_UI(id, memberFxn)
     }
     ```
 
- 高级的用户可以通过使用单个命令处理程序处理一系列命令： [ON_COMMAND_RANGE](reference/message-map-macros-mfc.md#on_command_range)或 ON_COMMAND_RANGE_EX。 请参阅有关这些宏的详细信息的产品文档。
+高级的用户可以通过使用单个命令处理程序处理一系列命令： [ON_COMMAND_RANGE](reference/message-map-macros-mfc.md#on_command_range)或 ON_COMMAND_RANGE_EX。 请参阅有关这些宏的详细信息的产品文档。
 
 > [!NOTE]
 > 类向导支持创建 ON_COMMAND 和 ON_UPDATE_COMMAND_UI 处理程序，但它不支持创建 ON_COMMAND_EX 或 ON_COMMAND_RANGE 处理程序。 但是，类向导将分析，以便可以浏览所有四个命令处理程序变体。
@@ -251,5 +251,5 @@ Windows 公共控件使用功能更强大[WM_NOTIFY](https://msdn.microsoft.com/
 
 ## <a name="see-also"></a>请参阅
 
-[按编号列出的技术说明](../mfc/technical-notes-by-number.md)  
-[按类别列出的技术说明](../mfc/technical-notes-by-category.md)  
+[按编号列出的技术说明](../mfc/technical-notes-by-number.md)<br/>
+[按类别列出的技术说明](../mfc/technical-notes-by-category.md)

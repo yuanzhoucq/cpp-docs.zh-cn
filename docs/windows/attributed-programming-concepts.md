@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9f91474ec4c435b6fb2a005b47c67210a54d0804
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: abe76a4153ecfb0e4db4ce9e92eb63f5b00067ff
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317259"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46394642"
 ---
 # <a name="attributed-programming-concepts"></a>特性化编程概念
 
@@ -32,27 +32,27 @@ Visual c + + 包含多种材料，帮助您在程序中使用属性。 属性，
 
 ## <a name="in-this-section"></a>本节内容
 
-[特性用途](../windows/purpose-of-attributes.md)  
+[特性用途](../windows/purpose-of-attributes.md)<br/>
 提供特性化编程的概述。
 
-[特性的基本机制](../windows/basic-mechanics-of-attributes.md)  
+[特性的基本机制](../windows/basic-mechanics-of-attributes.md)<br/>
 介绍属性在项目中的工作方式。
 
-[生成特性化程序](../windows/building-an-attributed-program.md)  
+[生成特性化程序](../windows/building-an-attributed-program.md)<br/>
 提供有关在项目中使用 c + + 编译器选项的信息。
 
-[特性类别](../windows/attribute-categories.md)  
+[特性类别](../windows/attribute-categories.md)<br/>
 提供指向 Visual c + + 中使用的属性的类别。
 
-[属性 Programmming 常见问题](../windows/attribute-programming-faq.md)  
+[属性 Programmming 常见问题](../windows/attribute-programming-faq.md)<br/>
 解答有关常见问题特性化编程。
 
 ## <a name="related-sections"></a>相关章节
 
-[属性参考](../windows/cpp-attributes-reference.md)  
+[属性参考](../windows/cpp-attributes-reference.md)<br/>
 提供指向参考主题描述各个属性和它们的使用。
 
-[调试插入的代码](/visualstudio/debugger/how-to-debug-injected-code)  
+[调试插入的代码](/visualstudio/debugger/how-to-debug-injected-code)<br/>
 描述调试特性化的程序。
 
 [__super](../cpp/super.md)和[__interface](../cpp/interface.md)  

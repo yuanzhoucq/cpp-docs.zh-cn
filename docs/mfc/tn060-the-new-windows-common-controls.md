@@ -1,5 +1,5 @@
 ---
-title: TN060： 新 Windows 公共控件 |Microsoft 文档
+title: TN060： 新 Windows 公共控件 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6626f9be05c9c6bd3cb583a27eefcb29eede6871
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0028d7b2f2121f9463dcb45b13bf34305c39f3d4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381473"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46388962"
 ---
 # <a name="tn060-the-new-windows-common-controls"></a>TN060：新的 Windows 公共控件
-描述新的 Windows 公共控件以及如何使用它们，技术说明 60 已合并到[控件](../mfc/controls-mfc.md)。  
-  
-## <a name="see-also"></a>请参阅  
- [按编号列出的技术说明](../mfc/technical-notes-by-number.md)   
- [按类别列出的技术说明](../mfc/technical-notes-by-category.md)
+
+描述新的 Windows 公共控件以及如何使用它们，技术说明 60 已合并到[控件](../mfc/controls-mfc.md)。
+
+## <a name="see-also"></a>请参阅
+
+[按编号列出的技术说明](../mfc/technical-notes-by-number.md)<br/>
+[按类别列出的技术说明](../mfc/technical-notes-by-category.md)
 

@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df624c04b1fd5a80b6e54928adb8f3ca7424920a
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c6bf8f299ef46166c5b09a716e5bed21fd3b9b01
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43215171"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46387091"
 ---
 # <a name="tn038-mfcole-iunknown-implementation"></a>TN038：MFC/OLE IUnknown 实现
 
@@ -414,7 +414,7 @@ CAggrExample::CAggrExample()
 }
 
 BOOL CAggrExample::OnCreateAggregates()
-{ 
+{
     // wire up aggregate with correct controlling unknown
     m_lpAggrInner = CoCreateInstance(CLSID_Example,
         GetControllingUnknown(), CLSCTX_INPROC_SERVER,
@@ -471,10 +471,10 @@ DWORD ExternalQueryInterface(
 
 #### <a name="parameters"></a>参数
 
-*lpIID*  
+*lpIID*<br/>
 指向 IID 的较远指针（QueryInterface 的第一个自变量）
 
-*ppvObj*  
+*ppvObj*<br/>
 指向 IUnknown* 的指针（QueryInterface 的第二个自变量）
 
 #### <a name="remarks"></a>备注
@@ -520,10 +520,10 @@ END_INTERFACE_PART(localClass)
 
 #### <a name="parameters"></a>参数
 
-*localClass*  
+*localClass*<br/>
 实现接口的类的名称
 
-*iface*  
+*iface*<br/>
 此类实现的接口的名称
 
 #### <a name="remarks"></a>备注
@@ -560,10 +560,10 @@ END_INTERFACE_MAP
 
 #### <a name="parameters"></a>参数
 
-*类*  
+*类*<br/>
 要在其中定义接口映射的类
 
-*baseClass*  
+*baseClass*<br/>
 从其类*类*派生。
 
 #### <a name="remarks"></a>备注
@@ -578,13 +578,13 @@ INTERFACE_PART(theClass, iid, localClass)
 
 #### <a name="parameters"></a>参数
 
-*类*  
+*类*<br/>
 包含接口映射的类的名称。
 
-*iid*  
+*iid*<br/>
 要映射到嵌入类的 `IID`。
 
-*localClass*  
+*localClass*<br/>
 本地类的名称（去掉“X”）。
 
 #### <a name="remarks"></a>备注
@@ -626,10 +626,10 @@ INTERFACE_AGGREGATE(theClass, theAggr)
 
 #### <a name="parameters"></a>参数
 
-*类*  
+*类*<br/>
 包含接口映射的类的名称，
 
-*theAggr*  
+*theAggr*<br/>
 要聚合的成员变量的名称。
 
 #### <a name="remarks"></a>备注
@@ -638,5 +638,5 @@ INTERFACE_AGGREGATE(theClass, theAggr)
 
 ## <a name="see-also"></a>请参阅
 
-[按编号列出的技术说明](../mfc/technical-notes-by-number.md)  
-[按类别列出的技术说明](../mfc/technical-notes-by-category.md)  
+[按编号列出的技术说明](../mfc/technical-notes-by-number.md)<br/>
+[按类别列出的技术说明](../mfc/technical-notes-by-category.md)

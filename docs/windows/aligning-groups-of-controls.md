@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9b28868ee3df91c97c37ceb3451b59c0a12e6d0c
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: c791f2951eb7ac9947d48b563bde624bc3b7979f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42592495"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46393576"
 ---
 # <a name="aligning-groups-of-controls"></a>对齐控件组
 
@@ -54,6 +54,6 @@ Win32
 
 ## <a name="see-also"></a>请参阅
 
-[对话框上的控件排列](../windows/arrangement-of-controls-on-dialog-boxes.md)  
-[对话框中的控件](../windows/controls-in-dialog-boxes.md)  
+[对话框上的控件排列](../windows/arrangement-of-controls-on-dialog-boxes.md)<br/>
+[对话框中的控件](../windows/controls-in-dialog-boxes.md)<br/>
 [控件](../mfc/controls-mfc.md)

@@ -22,12 +22,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 82479dab780fce677eeee84c4ccde880fe19d2bc
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 43ba8086481ea2a8dde20d06b1dc143b297138f8
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314906"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46378301"
 ---
 # <a name="creating-an-icon-or-other-image-image-editor-for-icons"></a>创建图标或其他图像（图标的图像编辑器）
 
@@ -67,8 +67,8 @@ ms.locfileid: "44314906"
 
 ## <a name="see-also"></a>请参阅
 
-[图标和光标： 显示设备的图像资源](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)  
-[将位图转换为工具栏](../windows/converting-bitmaps-to-toolbars.md)  
-[创建新工具栏](../windows/creating-new-toolbars.md)  
-[编辑图形资源](../windows/editing-graphical-resources-image-editor-for-icons.md)  
+[图标和光标： 显示设备的图像资源](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)<br/>
+[将位图转换为工具栏](../windows/converting-bitmaps-to-toolbars.md)<br/>
+[创建新工具栏](../windows/creating-new-toolbars.md)<br/>
+[编辑图形资源](../windows/editing-graphical-resources-image-editor-for-icons.md)<br/>
 [图标的图像编辑器](../windows/image-editor-for-icons.md)

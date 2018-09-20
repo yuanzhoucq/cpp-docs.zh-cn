@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6e084a0f876d0b2598a5317e15057162c602474a
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: aa64b7b4785f8865a372a256ecc5c9d3f8738dcb
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45717114"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46385854"
 ---
 # <a name="dbtable"></a>db_table
 
@@ -41,16 +41,16 @@ ms.locfileid: "45717114"
 
 #### <a name="parameters"></a>参数
 
-*db_table*  
+*db_table*<br/>
 指定 （例如"产品"） 的数据库表的名称的字符串。
 
-*name*  
+*name*<br/>
 （可选）句柄用于处理表的名称。 如果你想要返回多个行的结果，必须指定此参数。 **db_table**生成具有指定的变量*名称*可用来遍历行集或执行多个操作查询。
 
-*source_name*  
+*source_name*<br/>
 （可选）`CSession`变量或具有的类的实例`db_source`特性应用于它执行命令。 请参阅 [db_source](../windows/db-source.md)。
 
-*hresult*  
+*hresult*<br/>
 （可选）标识将接收此数据库命令的 HRESULT 的变量。 如果该变量不存在，属性将自动插入。
 
 ## <a name="remarks"></a>备注

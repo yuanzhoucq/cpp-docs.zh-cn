@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 848ea415d0638b6135c69cd14e442f45dab40237
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ec3ba8280ab481211d98c9dc5256c94e76e193e2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43220356"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46396437"
 ---
 # <a name="custom-c"></a>custom (C++)
 
@@ -39,10 +39,10 @@ ms.locfileid: "43220356"
 
 ### <a name="parameters"></a>参数
 
-*uuid*  
+*uuid*<br/>
 唯一 ID。
 
-*value*  
+*value*<br/>
 一个值，可以将放入一个变体。
 
 ## <a name="remarks"></a>备注
@@ -66,10 +66,10 @@ ms.locfileid: "43220356"
 
 ## <a name="see-also"></a>请参阅
 
-[IDL 特性](../windows/idl-attributes.md)  
-[独立特性](../windows/stand-alone-attributes.md)  
-[Typedef、Enum、Union 和 Struct 特性](../windows/typedef-enum-union-and-struct-attributes.md)  
-[参数特性](../windows/parameter-attributes.md)  
-[方法特性](../windows/method-attributes.md)  
-[类特性](../windows/class-attributes.md)  
+[IDL 特性](../windows/idl-attributes.md)<br/>
+[独立特性](../windows/stand-alone-attributes.md)<br/>
+[Typedef、Enum、Union 和 Struct 特性](../windows/typedef-enum-union-and-struct-attributes.md)<br/>
+[参数特性](../windows/parameter-attributes.md)<br/>
+[方法特性](../windows/method-attributes.md)<br/>
+[类特性](../windows/class-attributes.md)<br/>
 [接口特性](../windows/interface-attributes.md)  

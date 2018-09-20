@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 80519b17fc5d9aee963ec3718cf82c7fe44d686b
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: b2fb77dc73686a6765d9102cd31fa1399ad21044
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44316362"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46396072"
 ---
 # <a name="menu-editor"></a>菜单编辑器
 
@@ -73,8 +73,8 @@ Win32
 
 ## <a name="see-also"></a>请参阅
 
-[使用资源文件](../windows/working-with-resource-files.md)  
-[资源编辑器](../windows/resource-editors.md)  
-[用户界面对象和命令 ID](../mfc/user-interface-objects-and-command-ids.md)  
-[菜单](../mfc/menus-mfc.md)  
+[使用资源文件](../windows/working-with-resource-files.md)<br/>
+[资源编辑器](../windows/resource-editors.md)<br/>
+[用户界面对象和命令 ID](../mfc/user-interface-objects-and-command-ids.md)<br/>
+[菜单](../mfc/menus-mfc.md)<br/>
 [菜单](https://msdn.microsoft.com/library/windows/desktop/ms646977.aspx)

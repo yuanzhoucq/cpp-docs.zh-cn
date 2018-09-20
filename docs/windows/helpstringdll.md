@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bc10f86a8fa646a1072de8b7c5e30121d98750cf
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 1eecedca8988c95466a3f257fbc77768b7c67b3b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43219947"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46392861"
 ---
 # <a name="helpstringdll"></a>helpstringdll
 
@@ -38,7 +38,7 @@ ms.locfileid: "43219947"
 
 ### <a name="parameters"></a>参数
 
-*string*  
+*string*<br/>
 要用于执行文档字符串查找 DLL。
 
 ## <a name="remarks"></a>备注
@@ -75,7 +75,7 @@ __interface IMyI
 
 ## <a name="see-also"></a>请参阅
 
-[IDL 特性](../windows/idl-attributes.md)  
-[接口特性](../windows/interface-attributes.md)  
-[类特性](../windows/class-attributes.md)  
+[IDL 特性](../windows/idl-attributes.md)<br/>
+[接口特性](../windows/interface-attributes.md)<br/>
+[类特性](../windows/class-attributes.md)<br/>
 [方法特性](../windows/method-attributes.md)  

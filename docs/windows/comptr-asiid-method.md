@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d79707eaa3e5e93ab5c05e120d1556ee86168af2
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d3dfa87d950a12f115fb157124765fa5fd06eced
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42607293"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46396099"
 ---
 # <a name="comptrasiid-method"></a>ComPtr::AsIID 方法
 
@@ -39,10 +39,10 @@ WRL_NOTHROW HRESULT AsIID(
 
 ### <a name="parameters"></a>参数
 
-*riid*  
+*riid*<br/>
 接口 ID。
 
-*p*  
+*p*<br/>
 如果对象具有的接口 ID 等于*riid*，指向由指定的接口的双向间接指针*riid*参数; 否则为一个指向`IUnknown`。
 
 ## <a name="return-value"></a>返回值

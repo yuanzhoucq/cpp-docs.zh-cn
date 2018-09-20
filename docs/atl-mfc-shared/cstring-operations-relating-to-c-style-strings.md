@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cda24d58e26157b8730ae5d010e0874195151b79
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: c7047161a059432b43d4ff1a92e9c4d10dc01d51
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756923"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46387011"
 ---
 # <a name="cstring-operations-relating-to-c-style-strings"></a>与 C 样式字符串相关的 CString 操作
 
@@ -111,6 +111,6 @@ strcpy(myString, (LPCTSTR)aCString);
 
 ## <a name="see-also"></a>请参阅
 
-[字符串 (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)   
+[字符串 (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)<br/>
 [CString 参数传递](../atl-mfc-shared/cstring-argument-passing.md)
 
