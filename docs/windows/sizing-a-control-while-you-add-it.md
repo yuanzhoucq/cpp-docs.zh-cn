@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: da998c748a3471f053c922e0a80c33d1526b2055
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: e60803ec9696e541376aa8530cb4c01d32b9e569
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313138"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46418854"
 ---
 # <a name="sizing-a-control-while-you-add-it"></a>添加控件时调整其大小
 
@@ -49,6 +49,6 @@ Win32
 
 ## <a name="see-also"></a>请参阅
 
-[对话框中的控件](../windows/controls-in-dialog-boxes.md)  
-[添加对话框控件的事件处理程序](../windows/adding-event-handlers-for-dialog-box-controls.md)  
+[对话框中的控件](../windows/controls-in-dialog-boxes.md)<br/>
+[添加对话框控件的事件处理程序](../windows/adding-event-handlers-for-dialog-box-controls.md)<br/>
 [对话框控件和变量类型](../ide/dialog-box-controls-and-variable-types.md)

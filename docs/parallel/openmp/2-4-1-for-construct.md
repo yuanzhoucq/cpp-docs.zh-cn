@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac142c628f3c2bef0bc29a2ffd50df8a9efda400
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: cb9a554d9141223be7a5f6bc741c86b8f03511e2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43216532"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46428534"
 ---
 # <a name="241-for-construct"></a>2.4.1 for 构造
 
@@ -115,28 +115,28 @@ OpenMP 兼容的程序不应依赖于正确的执行的特定计划。 程序不
 
 限制**为**指令如下所示：
 
--   **有关**循环必须是结构化的块中，并且，此外，其执行必须未终止的**中断**语句。
+- **有关**循环必须是结构化的块中，并且，此外，其执行必须未终止的**中断**语句。
 
--   循环的值控制的表达式**有关**与关联的循环**为**指令必须是相同的团队中的所有线程。
+- 循环的值控制的表达式**有关**与关联的循环**为**指令必须是相同的团队中的所有线程。
 
--   **为**循环迭代变量必须具有带符号的整数类型。
+- **为**循环迭代变量必须具有带符号的整数类型。
 
--   只有一个**计划**子句可出现在**为**指令。
+- 只有一个**计划**子句可出现在**为**指令。
 
--   只有一个**排序**子句可出现在**为**指令。
+- 只有一个**排序**子句可出现在**为**指令。
 
--   只有一个**nowait**子句可出现在**为**指令。
+- 只有一个**nowait**子句可出现在**为**指令。
 
--   它是未指定的 if 或任何一侧效果内的何种频率*使用 chunk_size*， *lb*， *b*，或者*incr*表达式发生。
+- 它是未指定的 if 或任何一侧效果内的何种频率*使用 chunk_size*， *lb*， *b*，或者*incr*表达式发生。
 
--   值*使用 chunk_size*表达式必须是相同的团队中的所有线程。
+- 值*使用 chunk_size*表达式必须是相同的团队中的所有线程。
 
 ## <a name="cross-references"></a>交叉引用：
 
--   **私有**， **firstprivate**， **lastprivate**，和**减少**子句，请参阅[部分 2.7.2](../../parallel/openmp/2-7-2-data-sharing-attribute-clauses.md)第 25 页上。
+- **私有**， **firstprivate**， **lastprivate**，和**减少**子句，请参阅[部分 2.7.2](../../parallel/openmp/2-7-2-data-sharing-attribute-clauses.md)第 25 页上。
 
--   **OMP_SCHEDULE**环境变量，请参阅[第 4.1 节](../../parallel/openmp/4-1-omp-schedule.md)第 48 页。
+- **OMP_SCHEDULE**环境变量，请参阅[第 4.1 节](../../parallel/openmp/4-1-omp-schedule.md)第 48 页。
 
--   **按序**构造，请参阅[部分 2.6.6](../../parallel/openmp/2-6-6-ordered-construct.md) 22 页上。
+- **按序**构造，请参阅[部分 2.6.6](../../parallel/openmp/2-6-6-ordered-construct.md) 22 页上。
 
--   [附录 D](../../parallel/openmp/d-using-the-schedule-clause.md)，93，页提供了有关使用 schedule 子句的详细信息。
+- [附录 D](../../parallel/openmp/d-using-the-schedule-clause.md)，93，页提供了有关使用 schedule 子句的详细信息。

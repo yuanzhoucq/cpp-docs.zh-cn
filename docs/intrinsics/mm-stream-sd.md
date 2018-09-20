@@ -17,84 +17,88 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2fb8608e03a514228ecdbaf321124c17a00aeb5c
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: b965c1882e6126f34e9e81c99c950e072246db97
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45700162"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46437595"
 ---
 # <a name="mmstreamsd"></a>_mm_stream_sd
 
-**Microsoft 专用**  
-  
- 64 位数据而无需污染缓存写入内存位置中。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-void _mm_stream_sd(  
-   double * Dest,  
-   __m128d Source  
-);  
-```  
-  
-#### <a name="parameters"></a>参数  
-*dest*<br/>
-[out]指向源数据将写入的位置的指针。  
-  
-*Source*<br/>
-[in]128 位值，该值包含`double`64 位在其下中写入值...  
-  
-## <a name="return-value"></a>返回值  
- 无。  
-  
-## <a name="requirements"></a>要求  
-  
-|内部函数|体系结构|  
-|---------------|------------------|  
-|`_mm_stream_sd`|SSE4a|  
-  
- **标头文件** \<intrin.h >  
-  
-## <a name="remarks"></a>备注  
- 此内部函数生成`movntsd`指令。 若要确定此指令的硬件支持，请调用`__cpuid`与内部`InfoType=0x80000001`，并检查的 6 位`CPUInfo[2] (ECX)`。 如果硬件支持此指令和 0 否则，此位为 1。  
-  
- 如果你运行使用的代码`_mm_stream_sd`内部函数不支持的硬件上`movntsd`指令，则结果不可预知。  
-  
-## <a name="example"></a>示例  
-  
-```  
-// Compile this sample with: /EHsc  
-#include <iostream>  
-#include <intrin.h>  
-using namespace std;  
-  
-int main()  
-{  
-    __m128d vals;  
-    double d[2];  
-  
-    d[0] = -1.;  
-    d[1] = -2.;  
-    vals.m128d_f64[0] = 0.;  
-    vals.m128d_f64[1] = 1.;  
-    _mm_stream_sd(&d[1], vals);  
-    cout << "d[0] = " << d[0] << ", d[1] = " << d[1] << endl;  
-}  
-  
-```  
-  
-```Output  
-d[0] = -1, d[1] = 1  
-```  
-  
-**结束 Microsoft 专用**  
+**Microsoft 专用**
 
-高级微设备，inc.版权所有 2007保留所有权利。 重新生成具有高级微设备，inc.的权限  
-  
-## <a name="see-also"></a>请参阅  
- [_mm_stream_ss](../intrinsics/mm-stream-ss.md)   
- [_mm_store_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_store_sd)   
- [_mm_sfence](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sfence)   
- [编译器内部函数](../intrinsics/compiler-intrinsics.md)
+64 位数据而无需污染缓存写入内存位置中。
+
+## <a name="syntax"></a>语法
+
+```
+void _mm_stream_sd(
+   double * Dest,
+   __m128d Source
+);
+```
+
+#### <a name="parameters"></a>参数
+
+*dest*<br/>
+[out]指向源数据将写入的位置的指针。
+
+*Source*<br/>
+[in]128 位值，该值包含`double`64 位在其下中写入值...
+
+## <a name="return-value"></a>返回值
+
+无。
+
+## <a name="requirements"></a>要求
+
+|内部函数|体系结构|
+|---------------|------------------|
+|`_mm_stream_sd`|SSE4a|
+
+**标头文件** \<intrin.h >
+
+## <a name="remarks"></a>备注
+
+此内部函数生成`movntsd`指令。 若要确定此指令的硬件支持，请调用`__cpuid`与内部`InfoType=0x80000001`，并检查的 6 位`CPUInfo[2] (ECX)`。 如果硬件支持此指令和 0 否则，此位为 1。
+
+如果你运行使用的代码`_mm_stream_sd`内部函数不支持的硬件上`movntsd`指令，则结果不可预知。
+
+## <a name="example"></a>示例
+
+```
+// Compile this sample with: /EHsc
+#include <iostream>
+#include <intrin.h>
+using namespace std;
+
+int main()
+{
+    __m128d vals;
+    double d[2];
+
+    d[0] = -1.;
+    d[1] = -2.;
+    vals.m128d_f64[0] = 0.;
+    vals.m128d_f64[1] = 1.;
+    _mm_stream_sd(&d[1], vals);
+    cout << "d[0] = " << d[0] << ", d[1] = " << d[1] << endl;
+}
+
+```
+
+```Output
+d[0] = -1, d[1] = 1
+```
+
+**结束 Microsoft 专用**
+
+高级微设备，inc.版权所有 2007保留所有权利。 重新生成具有高级微设备，inc.的权限
+
+## <a name="see-also"></a>请参阅
+
+[_mm_stream_ss](../intrinsics/mm-stream-ss.md)<br/>
+[_mm_store_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_store_sd)<br/>
+[_mm_sfence](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sfence)<br/>
+[编译器内部函数](../intrinsics/compiler-intrinsics.md)

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 21b9efe8fc1ce5cb7ab90edd30b38253d44dabc0
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 2f937c2cdaa4bb7f31b39b8a28c657274830fc36
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44106803"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46446601"
 ---
 # <a name="event-maps"></a>事件映射
 
@@ -89,10 +89,10 @@ BEGIN_EVENT_MAP(theClass,  baseClass)
 
 ### <a name="parameters"></a>参数
 
-*类*  
+*类*<br/>
 指定其事件将此映射的控件类的名称。
 
-*baseClass*  
+*baseClass*<br/>
 指定的类的基类名称*类*。
 
 ### <a name="remarks"></a>备注
@@ -127,13 +127,13 @@ EVENT_CUSTOM(pszName, pfnFire,  vtsParams)
 
 ### <a name="parameters"></a>参数
 
-*pszName*  
+*pszName*<br/>
 事件的名称。
 
-*pfnFire*  
+*pfnFire*<br/>
 事件触发函数的名称。
 
-*vtsParams*  
+*vtsParams*<br/>
 指定函数的参数列表的一个或多个常量的以空格分隔的列表。
 
 ### <a name="remarks"></a>备注
@@ -197,16 +197,16 @@ EVENT_CUSTOM_ID(
 
 ### <a name="parameters"></a>参数
 
-*pszName*  
+*pszName*<br/>
 事件的名称。
 
-*dispid*  
+*dispid*<br/>
 使用控件时触发此事件的调度 ID。
 
-*pfnFire*  
+*pfnFire*<br/>
 事件触发函数的名称。
 
-*vtsParams*  
+*vtsParams*<br/>
 在激发事件时，变量参数列表传递给控件容器。
 
 ### <a name="remarks"></a>备注
@@ -268,10 +268,10 @@ ON_STDOLEVERB(iVerb, memberFxn)
 
 ### <a name="parameters"></a>参数
 
-*iVerb*  
+*iVerb*<br/>
 重写谓词的标准谓词索引。
 
-*memberFxn*  
+*memberFxn*<br/>
 框架在调用谓词时调用的函数。
 
 ### <a name="remarks"></a>备注

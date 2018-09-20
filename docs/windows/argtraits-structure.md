@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e3eade86404bcd4fef7ce3356d36a43ac6a59a8f
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 047754338566d476fa8e832d58dd2d4cd0776a63
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42597750"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46418393"
 ---
 # <a name="argtraits-structure"></a>ArgTraits 结构
 
@@ -120,37 +120,37 @@ struct ArgTraits<HRESULT (STDMETHODCALLTYPE TDelegateInterface::*)(TArg1, TArg2,
 
 ### <a name="parameters"></a>参数
 
-*TMemberFunction*  
+*TMemberFunction*<br/>
 ArgTraits 结构，它不能与任何匹配的 Typename 参数`Invoke`方法签名。
 
-*TDelegateInterface*  
+*TDelegateInterface*<br/>
 委托的接口。
 
-*TArg1*  
+*TArg1*<br/>
 第一个参数的类型`Invoke`方法。
 
-*TArg2*  
+*TArg2*<br/>
 第二个自变量的类型`Invoke`方法。
 
-*TArg3*  
+*TArg3*<br/>
 第三个自变量的类型`Invoke`方法。
 
-*TArg4*  
+*TArg4*<br/>
 第四个自变量的类型`Invoke`方法。
 
-*TArg5*  
+*TArg5*<br/>
 第五个自变量的类型`Invoke`方法。
 
-*TArg6*  
+*TArg6*<br/>
 第六个自变量的类型`Invoke`方法。
 
-*TArg7*  
+*TArg7*<br/>
 第七个自变量的类型`Invoke`方法。
 
-*TArg8*  
+*TArg8*<br/>
 第八个自变量的类型`Invoke`方法。
 
-*TArg9*  
+*TArg9*<br/>
 第九个自变量的类型`Invoke`方法。
 
 ## <a name="remarks"></a>备注

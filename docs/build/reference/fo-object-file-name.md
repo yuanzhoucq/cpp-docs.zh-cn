@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9ab671cbae276796ce89ec12cecbc16334e234e
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 2f526779819bd21a13d4ec077ea0f1f5153385f8
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45724229"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46418263"
 ---
 # <a name="fo-object-file-name"></a>/Fo（对象文件名）
 
@@ -66,7 +66,7 @@ CL /FoB:\OBJECT\ THIS.C
 
 ## <a name="see-also"></a>请参阅
 
-[输出文件 (/ F) 选项](../../build/reference/output-file-f-options.md)
+[输出文件 (/F) 选项](../../build/reference/output-file-f-options.md)<br/>
 [编译器选项](../../build/reference/compiler-options.md)<br/>
 [设置编译器选项](../../build/reference/setting-compiler-options.md)<br/>
 [指定路径名](../../build/reference/specifying-the-pathname.md)

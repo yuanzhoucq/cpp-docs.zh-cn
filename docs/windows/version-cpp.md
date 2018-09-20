@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 87186ee70b5863f51a7cd91f8695052f361bd11c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 60a5ad42f83d9e9528fd5bdc4c8d3e62254a3677
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222527"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46438727"
 ---
 # <a name="version-c"></a>version (C++)
 
@@ -39,7 +39,7 @@ ms.locfileid: "43222527"
 
 ### <a name="parameters"></a>参数
 
-*version*  
+*version*<br/>
 版本号`coclass`。 如果未指定，则将在.idl 文件中放置 1.0。
 
 ## <a name="remarks"></a>备注
@@ -65,5 +65,5 @@ ms.locfileid: "43222527"
 
 ## <a name="see-also"></a>请参阅
 
-[编译器特性](../windows/compiler-attributes.md)  
+[编译器特性](../windows/compiler-attributes.md)<br/>
 [类特性](../windows/class-attributes.md)  

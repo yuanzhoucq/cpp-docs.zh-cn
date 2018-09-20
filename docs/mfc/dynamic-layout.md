@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a6976669127dca79be59b85efbd15273b0f580a1
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: 08fc6f6a5b93851468d412e34b3ee0a85ab534e5
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43132057"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46413245"
 ---
 # <a name="dynamic-layout"></a>动态布局
 
@@ -153,8 +153,8 @@ ms.locfileid: "43132057"
 
 ## <a name="see-also"></a>请参阅
 
-[CMFCDynamicLayout 类](../mfc/reference/cmfcdynamiclayout-class.md)  
-[控件类](../mfc/control-classes.md)  
-[对话框类](../mfc/dialog-box-classes.md)  
-[对话框编辑器](../windows/dialog-editor.md)  
+[CMFCDynamicLayout 类](../mfc/reference/cmfcdynamiclayout-class.md)<br/>
+[控件类](../mfc/control-classes.md)<br/>
+[对话框类](../mfc/dialog-box-classes.md)<br/>
+[对话框编辑器](../windows/dialog-editor.md)<br/>
 [在 Visual c + + 2015年中的 mfc 动态对话框布局](https://mariusbancila.ro/blog/2015/07/27/dynamic-dialog-layout-for-mfc-in-visual-c-2015/)

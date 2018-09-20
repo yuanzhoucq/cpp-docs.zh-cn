@@ -18,54 +18,59 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46f676bbe61784adab40f90e329b87aa1c1aae52
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 9b51c3d800195f265a0ed0a717c7e8f318434306
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46026747"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46412868"
 ---
 # <a name="improperschedulerattach-class"></a>improper_scheduler_attach 类
-此类描述在已附加到当前上下文的 `Scheduler` 对象上调用 `Attach` 方法时引发的异常。  
-  
-## <a name="syntax"></a>语法  
-  
+
+此类描述在已附加到当前上下文的 `Scheduler` 对象上调用 `Attach` 方法时引发的异常。
+
+## <a name="syntax"></a>语法
+
 ```
 class improper_scheduler_attach : public std::exception;
-```  
-  
-## <a name="members"></a>成员  
-  
-### <a name="public-constructors"></a>公共构造函数  
-  
-|名称|描述|  
-|----------|-----------------|  
-|[improper_scheduler_attach](#ctor)|已重载。 构造 `improper_scheduler_attach` 对象。|  
-  
-## <a name="inheritance-hierarchy"></a>继承层次结构  
- `exception`  
-  
- `improper_scheduler_attach`  
-  
-## <a name="requirements"></a>要求  
- **标头：** concrt.h  
-  
- **命名空间：** 并发  
-  
-##  <a name="ctor"></a> improper_scheduler_attach 
+```
 
- 构造 `improper_scheduler_attach` 对象。  
-  
+## <a name="members"></a>成员
+
+### <a name="public-constructors"></a>公共构造函数
+
+|名称|描述|
+|----------|-----------------|
+|[improper_scheduler_attach](#ctor)|已重载。 构造 `improper_scheduler_attach` 对象。|
+
+## <a name="inheritance-hierarchy"></a>继承层次结构
+
+`exception`
+
+`improper_scheduler_attach`
+
+## <a name="requirements"></a>要求
+
+**标头：** concrt.h
+
+**命名空间：** 并发
+
+##  <a name="ctor"></a> improper_scheduler_attach
+
+构造 `improper_scheduler_attach` 对象。
+
 ```
 explicit _CRTIMP improper_scheduler_attach(_In_z_ const char* _Message) throw();
 
 improper_scheduler_attach() throw();
-```  
-  
-### <a name="parameters"></a>参数  
+```
+
+### <a name="parameters"></a>参数
+
 *消息 （_m)*<br/>
-错误的描述性消息。  
-  
-## <a name="see-also"></a>请参阅  
- [并发 Namespace](concurrency-namespace.md)   
- [Scheduler 类](scheduler-class.md)
+错误的描述性消息。
+
+## <a name="see-also"></a>请参阅
+
+[并发命名空间](concurrency-namespace.md)<br/>
+[Scheduler 类](scheduler-class.md)

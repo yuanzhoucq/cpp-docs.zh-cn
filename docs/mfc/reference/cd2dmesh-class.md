@@ -1,5 +1,5 @@
 ---
-title: CD2DMesh 类 |Microsoft 文档
+title: CD2DMesh 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -34,176 +34,200 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc5db59c16c10026bf411d640c864cf0107691cb
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: a7ed748a7f098dcbec68decbff29f8973e0b8476
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36952230"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46405978"
 ---
 # <a name="cd2dmesh-class"></a>CD2DMesh 类
-ID2D1Mesh 包装器。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-class CD2DMesh : public CD2DResource;  
-```  
-  
-## <a name="members"></a>成员  
-  
-### <a name="public-constructors"></a>公共构造函数  
-  
-|名称|描述|  
-|----------|-----------------|  
-|[CD2DMesh::CD2DMesh](#cd2dmesh)|构造 CD2DMesh 对象。|  
-|[CD2DMesh:: ~ CD2DMesh](#_dtorcd2dmesh)|析构函数。 当 D2D 网格对象被销毁时调用。|  
-  
-### <a name="public-methods"></a>公共方法  
-  
-|名称|描述|  
-|----------|-----------------|  
-|[CD2DMesh::Attach](#attach)|附加现有的资源的对象的接口|  
-|[CD2DMesh::Create](#create)|创建 CD2DMesh。 (重写[CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create)。)|  
-|[CD2DMesh::Destroy](#destroy)|销毁 CD2DMesh 对象。 (重写[CD2DResource::Destroy](../../mfc/reference/cd2dresource-class.md#destroy)。)|  
-|[CD2DMesh::Detach](#detach)|分离资源接口从该对象|  
-|[CD2DMesh::Get](#get)|返回 ID2D1Mesh 接口|  
-|[CD2DMesh::IsValid](#isvalid)|检查资源有效性 (重写[CD2DResource::IsValid](../../mfc/reference/cd2dresource-class.md#isvalid)。)|  
-|[CD2DMesh::Open](#open)|打开用于填充的网格。|  
-  
-### <a name="public-operators"></a>公共运算符  
-  
-|名称|描述|  
-|----------|-----------------|  
-|[CD2DMesh::operator ID2D1Mesh *](#operator_id2d1mesh_star)|返回 ID2D1Mesh 接口|  
-  
-### <a name="protected-data-members"></a>受保护的数据成员  
-  
-|name|描述|  
-|----------|-----------------|  
-|[CD2DMesh::m_pMesh](#m_pmesh)|指向 ID2D1Mesh 的指针。|  
-  
-## <a name="inheritance-hierarchy"></a>继承层次结构  
- [CObject](../../mfc/reference/cobject-class.md)  
-  
- [CD2DResource](../../mfc/reference/cd2dresource-class.md)  
-  
- `CD2DMesh`  
-  
-## <a name="requirements"></a>要求  
- **标头：** afxrendertarget.h  
-  
-##  <a name="_dtorcd2dmesh"></a>  CD2DMesh:: ~ CD2DMesh  
- 析构函数。 当 D2D 网格对象被销毁时调用。  
-  
-```  
+
+ID2D1Mesh 包装器。
+
+## <a name="syntax"></a>语法
+
+```
+class CD2DMesh : public CD2DResource;
+```
+
+## <a name="members"></a>成员
+
+### <a name="public-constructors"></a>公共构造函数
+
+|名称|描述|
+|----------|-----------------|
+|[CD2DMesh::CD2DMesh](#cd2dmesh)|构造一个 CD2DMesh 对象。|
+|[CD2DMesh:: ~ CD2DMesh](#_dtorcd2dmesh)|析构函数。 当 D2D 网格对象被销毁时调用。|
+
+### <a name="public-methods"></a>公共方法
+
+|名称|描述|
+|----------|-----------------|
+|[CD2DMesh::Attach](#attach)|附加现有的资源的对象的接口|
+|[CD2DMesh::Create](#create)|创建 CD2DMesh。 (重写[CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create)。)|
+|[CD2DMesh::Destroy](#destroy)|销毁 CD2DMesh 对象。 (重写[CD2DResource::Destroy](../../mfc/reference/cd2dresource-class.md#destroy)。)|
+|[CD2DMesh::Detach](#detach)|分离对象中的资源接口|
+|[CD2DMesh::Get](#get)|返回 ID2D1Mesh 接口|
+|[CD2DMesh::IsValid](#isvalid)|检查资源有效性 (重写[CD2DResource::IsValid](../../mfc/reference/cd2dresource-class.md#isvalid)。)|
+|[CD2DMesh::Open](#open)|此时会打开用于填充的网格。|
+
+### <a name="public-operators"></a>公共运算符
+
+|名称|描述|
+|----------|-----------------|
+|[CD2DMesh::operator ID2D1Mesh *](#operator_id2d1mesh_star)|返回 ID2D1Mesh 接口|
+
+### <a name="protected-data-members"></a>受保护的数据成员
+
+|name|描述|
+|----------|-----------------|
+|[CD2DMesh::m_pMesh](#m_pmesh)|指向 ID2D1Mesh 的指针。|
+
+## <a name="inheritance-hierarchy"></a>继承层次结构
+
+[CObject](../../mfc/reference/cobject-class.md)
+
+[CD2DResource](../../mfc/reference/cd2dresource-class.md)
+
+`CD2DMesh`
+
+## <a name="requirements"></a>要求
+
+**标头：** afxrendertarget.h
+
+##  <a name="_dtorcd2dmesh"></a>  CD2DMesh:: ~ CD2DMesh
+
+析构函数。 当 D2D 网格对象被销毁时调用。
+
+```
 virtual ~CD2DMesh();
-```  
-  
-##  <a name="attach"></a>  CD2DMesh::Attach  
- 附加现有的资源的对象的接口  
-  
-```  
+```
+
+##  <a name="attach"></a>  CD2DMesh::Attach
+
+附加现有的资源的对象的接口
+
+```
 void Attach(ID2D1Mesh* pResource);
-```  
-  
-### <a name="parameters"></a>参数  
- *pResource*  
- 现有资源接口。 不能为 NULL  
-  
-##  <a name="cd2dmesh"></a>  CD2DMesh::CD2DMesh  
- 构造 CD2DMesh 对象。  
-  
-```  
+```
+
+### <a name="parameters"></a>参数
+
+*pResource*<br/>
+现有资源的接口。 不能为 NULL
+
+##  <a name="cd2dmesh"></a>  CD2DMesh::CD2DMesh
+
+构造一个 CD2DMesh 对象。
+
+```
 CD2DMesh(
-    CRenderTarget* pParentTarget,  
+    CRenderTarget* pParentTarget,
     BOOL bAutoDestroy = TRUE);
-```  
-  
-### <a name="parameters"></a>参数  
- *pParentTarget*  
- 指向该呈现器目标的指针。  
-  
- *bAutoDestroy*  
- 指示该对象将销毁所有者 (pParentTarget)。  
-  
-##  <a name="create"></a>  CD2DMesh::Create  
- 创建 CD2DMesh。  
-  
-```  
+```
+
+### <a name="parameters"></a>参数
+
+*pParentTarget*<br/>
+指向该呈现器目标的指针。
+
+*bAutoDestroy*<br/>
+指示所有者 (pParentTarget) 将销毁该对象。
+
+##  <a name="create"></a>  CD2DMesh::Create
+
+创建 CD2DMesh。
+
+```
 virtual HRESULT Create(CRenderTarget* pRenderTarget);
-```  
-  
-### <a name="parameters"></a>参数  
- *pRenderTarget*  
- 指向该呈现器目标的指针。  
-  
-### <a name="return-value"></a>返回值  
- 如果该方法成功，则返回，则为 S_OK。 否则，它返回一个 HRESULT 错误代码。  
-  
-##  <a name="destroy"></a>  CD2DMesh::Destroy  
- 销毁 CD2DMesh 对象。  
-  
-```  
+```
+
+### <a name="parameters"></a>参数
+
+*pRenderTarget*<br/>
+指向该呈现器目标的指针。
+
+### <a name="return-value"></a>返回值
+
+如果该方法成功，它会返回 S_OK。 否则，它返回一个 HRESULT 错误代码。
+
+##  <a name="destroy"></a>  CD2DMesh::Destroy
+
+销毁 CD2DMesh 对象。
+
+```
 virtual void Destroy();
-```  
-  
-##  <a name="detach"></a>  CD2DMesh::Detach  
- 分离资源接口从该对象  
-  
-```  
+```
+
+##  <a name="detach"></a>  CD2DMesh::Detach
+
+分离对象中的资源接口
+
+```
 ID2D1Mesh* Detach();
-```  
-  
-### <a name="return-value"></a>返回值  
- 指向分离的资源接口指针。  
-  
-##  <a name="get"></a>  CD2DMesh::Get  
- 返回 ID2D1Mesh 接口  
-  
-```  
+```
+
+### <a name="return-value"></a>返回值
+
+指向已分离的资源接口指针。
+
+##  <a name="get"></a>  CD2DMesh::Get
+
+返回 ID2D1Mesh 接口
+
+```
 ID2D1Mesh* Get();
-```  
-  
-### <a name="return-value"></a>返回值  
- 指向 ID2D1Mesh 接口或如果尚未初始化对象的 NULL 指针。  
-  
-##  <a name="isvalid"></a>  CD2DMesh::IsValid  
- 检查资源有效性  
-  
-```  
-virtual BOOL IsValid() const;  
-```  
-  
-### <a name="return-value"></a>返回值  
- 如果资源是有效，则为，TRUE否则为 FALSE。  
-  
-##  <a name="m_pmesh"></a>  CD2DMesh::m_pMesh  
- 指向 ID2D1Mesh 的指针。  
-  
-```  
-ID2D1Mesh* m_pMesh;  
-```  
-  
-##  <a name="open"></a>  CD2DMesh::Open  
- 打开用于填充的网格。  
-  
-```  
+```
+
+### <a name="return-value"></a>返回值
+
+指向 ID2D1Mesh 接口或如果对象尚未初始化，则为 NULL 指针。
+
+##  <a name="isvalid"></a>  CD2DMesh::IsValid
+
+检查资源有效性
+
+```
+virtual BOOL IsValid() const;
+```
+
+### <a name="return-value"></a>返回值
+
+如果资源是有效，则为，TRUE否则为 FALSE。
+
+##  <a name="m_pmesh"></a>  CD2DMesh::m_pMesh
+
+指向 ID2D1Mesh 的指针。
+
+```
+ID2D1Mesh* m_pMesh;
+```
+
+##  <a name="open"></a>  CD2DMesh::Open
+
+此时会打开用于填充的网格。
+
+```
 ID2D1TessellationSink* Open();
-```  
-  
-### <a name="return-value"></a>返回值  
- 用于填充网格 ID2D1TessellationSink 指向的指针。  
-  
-##  <a name="operator_id2d1mesh_star"></a>  CD2DMesh::operator ID2D1Mesh *  
- 返回 ID2D1Mesh 接口  
-  
-```  
+```
+
+### <a name="return-value"></a>返回值
+
+用于填充网格 ID2D1TessellationSink 指向的指针。
+
+##  <a name="operator_id2d1mesh_star"></a>  CD2DMesh::operator ID2D1Mesh *
+
+返回 ID2D1Mesh 接口
+
+```
 operator ID2D1Mesh*();
-```   
-  
-### <a name="return-value"></a>返回值  
- 指向 ID2D1Mesh 接口或如果尚未初始化对象的 NULL 指针。  
-  
-## <a name="see-also"></a>请参阅  
- [类](../../mfc/reference/mfc-classes.md)
+```
+
+### <a name="return-value"></a>返回值
+
+指向 ID2D1Mesh 接口或如果对象尚未初始化，则为 NULL 指针。
+
+## <a name="see-also"></a>请参阅
+
+[类](../../mfc/reference/mfc-classes.md)

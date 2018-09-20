@@ -17,17 +17,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51904ac06ae6c2db5586f8dc405f85145c5b1f30
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ec080e556b57afadbc3d958f4dba5ac6393108aa
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33343055"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46408903"
 ---
 # <a name="do-i-have-to-derive-new-classes-from-cobject"></a>我是否必须从 CObject 中派生新类？
-不，您不会。  
-  
- 从派生类[CObject](../mfc/reference/cobject-class.md)时需要提供，如序列化或动态可的功能。 许多数据类需要序列化到文件中，因此，通常最好从 `CObject` 派生。 从派生类的一个示例的`CObject`，请参阅[Scribble 示例](../visual-cpp-samples.md)。  
-  
-## <a name="see-also"></a>请参阅  
- [CObject 类：常见问题](../mfc/cobject-class-frequently-asked-questions.md)
+
+不，您不会。
+
+从派生类[CObject](../mfc/reference/cobject-class.md)时所需的序列化或动态可创建性等的功能。 许多数据类需要序列化到文件中，因此，通常最好从 `CObject` 派生。 为举例说明一个类派生自`CObject`，请参阅[Scribble 示例](../visual-cpp-samples.md)。
+
+## <a name="see-also"></a>请参阅
+
+[CObject 类：常见问题](../mfc/cobject-class-frequently-asked-questions.md)

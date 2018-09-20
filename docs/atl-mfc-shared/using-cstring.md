@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c97ca07e06da3663dfd0a06a125f361b4e4dc591
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 7e3de9b373a80ef939f5ac5ff3d746e0ebdc8b74
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758025"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46405458"
 ---
 # <a name="using-cstring"></a>使用 CString
 
@@ -54,41 +54,41 @@ int main() {
 
 ## <a name="in-this-section"></a>本节内容
 
-[基本 CString 操作](../atl-mfc-shared/basic-cstring-operations.md)  
+[基本 CString 操作](../atl-mfc-shared/basic-cstring-operations.md)<br/>
 介绍基本 `CString` 操作，包括从 C 文本字符串创建对象、访问 `CString` 中的单个字符、串联两个对象以及比较 `CString` 对象。
 
-[字符串数据管理](../atl-mfc-shared/string-data-management.md)  
+[字符串数据管理](../atl-mfc-shared/string-data-management.md)<br/>
 讨论将 Unicode 和 MBCS 和 `CString` 一起使用。
 
-[CString 语义](../atl-mfc-shared/cstring-semantics.md)  
+[CString 语义](../atl-mfc-shared/cstring-semantics.md)<br/>
 说明如何使用 `CString` 对象。
 
-[与 C 样式字符串相关的 CString 操作](../atl-mfc-shared/cstring-operations-relating-to-c-style-strings.md)  
+[与 C 样式字符串相关的 CString 操作](../atl-mfc-shared/cstring-operations-relating-to-c-style-strings.md)<br/>
 介绍操作 `CString` 对象的内容，像 C 样式 null 结尾的字符串一样。
 
-[为 BSTR 分配和释放内存](../atl-mfc-shared/allocating-and-releasing-memory-for-a-bstr.md)  
+[为 BSTR 分配和释放内存](../atl-mfc-shared/allocating-and-releasing-memory-for-a-bstr.md)<br/>
 讨论如何为 BSTR 和 COM 对象使用内存。
 
-[CString 异常清理](../atl-mfc-shared/cstring-exception-cleanup.md)  
+[CString 异常清理](../atl-mfc-shared/cstring-exception-cleanup.md)<br/>
 说明 MFC 3.0 和更高版本中的显式清理不再是必需的。
 
-[CString 参数传递](../atl-mfc-shared/cstring-argument-passing.md)  
+[CString 参数传递](../atl-mfc-shared/cstring-argument-passing.md)<br/>
 说明如何将 CString 对象传递到函数以及如何从函数返回 `CString` 对象。
 
-[Unicode 和多字节字符集 (MBCS) 支持](../atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md)  
+[Unicode 和多字节字符集 (MBCS) 支持](../atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md)<br/>
 讨论如何为 Unicode 和 MBCS 支持启用 MFC。
 
 ## <a name="reference"></a>参考
 
-[CStringT](../atl-mfc-shared/reference/cstringt-class.md)  
+[CStringT](../atl-mfc-shared/reference/cstringt-class.md)<br/>
 提供有关 `CStringT` 类的参考信息。
 
-[CSimpleStringT 类](../atl-mfc-shared/reference/csimplestringt-class.md)  
+[CSimpleStringT 类](../atl-mfc-shared/reference/csimplestringt-class.md)<br/>
 提供有关 `CSimpleStringT` 类的参考信息。
 
 ## <a name="related-sections"></a>相关章节
 
-[字符串 (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)  
+[字符串 (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)<br/>
 包含指向介绍管理字符串数据的多种方法的主题的链接。
 
 [字符串 (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)

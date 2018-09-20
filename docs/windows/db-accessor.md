@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: efca93e2e9b52ce646ef07465682815978550414
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 61c20647d96a66cf4b50e6f0b031cc04353553e5
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42607772"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46410645"
 ---
 # <a name="dbaccessor"></a>db_accessor
 
@@ -39,10 +39,10 @@ ms.locfileid: "42607772"
 
 #### <a name="parameters"></a>参数
 
-*num*  
+*num*<br/>
 指定访问器数 （从零开始的整数索引）。 必须指定访问器中增加的数字顺序，使用整数，或者定义的值。
 
-*auto*  
+*auto*<br/>
 一个布尔值，该值指定访问器是自动检索 (TRUE) 还是未检索到 (FALSE)。
 
 ## <a name="remarks"></a>备注

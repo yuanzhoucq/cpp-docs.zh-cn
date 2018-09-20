@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7014440c3479016c89b774f9a80cc03fc4b5d4c3
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 9c06e06633e6d0a990c72ebb65a4bd999df45a55
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45708222"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46406667"
 ---
 # <a name="ignoreidl-don39t-process-attributes-into-midl"></a>/IGNOREIDL (Don&#39;t 属性处理到 MIDL)
 
@@ -54,7 +54,7 @@ ms.locfileid: "45708222"
 
 [设置链接器选项](../../build/reference/setting-linker-options.md)<br/>
 [链接器选项](../../build/reference/linker-options.md)<br/>
-[/IDLOUT （命名 MIDL 输出文件）](../../build/reference/idlout-name-midl-output-files.md)
-[/TLBOUT （名称。TLB 文件）](../../build/reference/tlbout-name-dot-tlb-file.md)
-[/MIDL （指定 MIDL 命令行选项）](../../build/reference/midl-specify-midl-command-line-options.md)
-[生成特性化的程序](../../windows/building-an-attributed-program.md)
+[/IDLOUT（命名 MIDL 输出文件）](../../build/reference/idlout-name-midl-output-files.md)<br/>
+[/TLBOUT（命名 .TLB 文件）](../../build/reference/tlbout-name-dot-tlb-file.md)<br/>
+[/MIDL（指定 MIDL 命令行选项）](../../build/reference/midl-specify-midl-command-line-options.md)<br/>
+[生成特性化程序](../../windows/building-an-attributed-program.md)

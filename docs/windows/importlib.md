@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a790887f54e01cea835c6110e3d81e1c2d3afeaa
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 3df5a1893567b54337a5c3807fcace6a02154670
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43206696"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46416001"
 ---
 # <a name="importlib"></a>importlib
 
@@ -38,7 +38,7 @@ ms.locfileid: "43206696"
 
 ### <a name="parameters"></a>参数
 
-*tlb_file*  
+*tlb_file*<br/>
 要导入当前项目类型库中的 .tlb 文件的名称（用引号引起来）。
 
 ## <a name="remarks"></a>备注
@@ -71,9 +71,9 @@ ms.locfileid: "43206696"
 
 ## <a name="see-also"></a>请参阅
 
-[编译器特性](../windows/compiler-attributes.md)  
-[独立特性](../windows/stand-alone-attributes.md)  
-[import](../windows/import.md)  
-[importidl](../windows/importidl.md)  
-[include](../windows/include-cpp.md)  
+[编译器特性](../windows/compiler-attributes.md)<br/>
+[独立特性](../windows/stand-alone-attributes.md)<br/>
+[import](../windows/import.md)<br/>
+[importidl](../windows/importidl.md)<br/>
+[include](../windows/include-cpp.md)<br/>
 [includelib](../windows/includelib-cpp.md)

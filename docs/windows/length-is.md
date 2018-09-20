@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1852e765ed859f95f6de5319a1e9d8fa364f7681
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: aff0c2e2600f7f0c300d1043c9844104fd70c4e4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43207058"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46415325"
 ---
 # <a name="lengthis"></a>length_is
 
@@ -38,7 +38,7 @@ ms.locfileid: "43207058"
 
 ### <a name="parameters"></a>参数
 
-*表达式*  
+*表达式*<br/>
 一个或多个 C 语言表达式。 允许使用空参数槽。
 
 ## <a name="remarks"></a>备注
@@ -64,10 +64,10 @@ ms.locfileid: "43207058"
 
 ## <a name="see-also"></a>请参阅
 
-[IDL 特性](../windows/idl-attributes.md)  
-[Typedef、Enum、Union 和 Struct 特性](../windows/typedef-enum-union-and-struct-attributes.md)  
-[参数特性](../windows/parameter-attributes.md)  
-[first_is](../windows/first-is.md)  
-[max_is](../windows/max-is.md)  
-[last_is](../windows/last-is.md)  
+[IDL 特性](../windows/idl-attributes.md)<br/>
+[Typedef、Enum、Union 和 Struct 特性](../windows/typedef-enum-union-and-struct-attributes.md)<br/>
+[参数特性](../windows/parameter-attributes.md)<br/>
+[first_is](../windows/first-is.md)<br/>
+[max_is](../windows/max-is.md)<br/>
+[last_is](../windows/last-is.md)<br/>
 [size_is](../windows/size-is.md)  

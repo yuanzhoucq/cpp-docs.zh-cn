@@ -463,14 +463,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d06bac8aef674472b817817fde4191f1d655365e
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 575f21e03659f973a25b1ad2e7aae211f9dae187
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45723224"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46412101"
 ---
 # <a name="reference-concurrency-runtime"></a>参考（并发运行时）
+
 本部分包含有关并发运行时参考信息。
 
 > [!Note]
@@ -478,7 +479,8 @@ ms.locfileid: "45723224"
 
 ## <a name="in-this-section"></a>本节内容
 
-[并发 Namespace](concurrency-namespace.md)并发命名空间提供类和函数，使您可以访问为并发运行时，c + + 的并发编程框架。 有关详细信息，请参阅[并发运行时](../concurrency-runtime.md)。
+[并发命名空间](concurrency-namespace.md)<br/>
+并发命名空间提供类和函数，使您可以访问为并发运行时，c + + 的并发编程框架。 有关详细信息，请参阅[并发运行时](../concurrency-runtime.md)。
 
 [std 命名空间](std-namespace.md)
 

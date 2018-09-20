@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 73047962daf32eae6c01bb0ea6f6688a83e19402
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 0539275a09a64e31a9ecad17cab899368701e353
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45715528"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46412207"
 ---
 # <a name="idlmodule"></a>idl_module
 
@@ -46,31 +46,31 @@ function declaration
 
 ### <a name="parameters"></a>参数
 
-*name*  
+*name*<br/>
 用户定义的名称，会在.idl 文件中显示的代码块。
 
-*dll 名称*  
+*dll 名称*<br/>
 （可选）包含导出的.dll 文件。
 
-*uuid*  
+*uuid*<br/>
 （可选）唯一的 id。
 
-*helpstring*  
+*helpstring*<br/>
 （可选）用于描述类型库的字符串。
 
-*helpstringcontext*  
+*helpstringcontext*<br/>
 （可选）帮助主题中的.hlp 或.chm 文件的 ID。
 
-*helpcontext*  
+*helpcontext*<br/>
 （可选）此类型库的帮助 ID。
 
-*hidden*  
+*hidden*<br/>
 （可选）一个参数，阻止显示库。 请参阅[隐藏](/windows/desktop/Midl/hidden)MIDL 特性的详细信息。
 
-*restricted*  
+*restricted*<br/>
 （可选）不能随意调用库中的成员。 请参阅[受限](/windows/desktop/Midl/restricted)MIDL 特性的详细信息。
 
-*函数声明*  
+*函数声明*<br/>
 您将定义该函数。
 
 ## <a name="remarks"></a>备注
@@ -111,6 +111,6 @@ void FuncName(int i);
 
 ## <a name="see-also"></a>请参阅
 
-[IDL 特性](../windows/idl-attributes.md)  
-[独立特性](../windows/stand-alone-attributes.md)  
+[IDL 特性](../windows/idl-attributes.md)<br/>
+[独立特性](../windows/stand-alone-attributes.md)<br/>
 [entry](../windows/entry.md)  

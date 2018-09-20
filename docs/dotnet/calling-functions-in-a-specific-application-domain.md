@@ -1,5 +1,5 @@
 ---
-title: 在特定应用程序域内调用函数 |Microsoft 文档
+title: 在特定的应用程序域中调用函数 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: fc6765e7a96b2d2775d1dd729a43e89cec876e19
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 269225967ff63e98c1efe8a4ff38cd980d3485f7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33104901"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46409754"
 ---
 # <a name="calling-functions-in-a-specific-application-domain"></a>调用特定应用程序域中的函数
-在特定应用程序域内调用函数的支持。  
-  
-## <a name="in-this-section"></a>本节内容  
- [call_in_appdomain 函数](../dotnet/call-in-appdomain-function.md)  
-  
-## <a name="see-also"></a>请参阅  
- [C++ 支持库](../dotnet/cpp-support-library.md)
+
+在特定的应用程序域中调用函数的支持。
+
+## <a name="in-this-section"></a>本节内容
+
+[call_in_appdomain 函数](../dotnet/call-in-appdomain-function.md)
+
+## <a name="see-also"></a>请参阅
+
+[C++ 支持库](../dotnet/cpp-support-library.md)

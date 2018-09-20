@@ -1,5 +1,5 @@
 ---
-title: 服务器： 实现服务器 |Microsoft 文档
+title: 服务器： 实现服务器 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,43 +15,45 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ea51d6cd811572d73b0de64072f3d335e2682fd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d024c9468b06291ba93c4e404674925202fabcad
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381688"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46406784"
 ---
 # <a name="servers-implementing-a-server"></a>服务器：实现服务器
-此文章介绍了 MFC 应用程序向导为可视化编辑服务器应用程序创建的代码。 如果你未使用应用程序向导，本文列出了，你必须编写代码来实现服务器应用程序的区域。  
-  
- 如果将应用程序向导创建新的服务器应用程序，它为你提供大量的特定服务器的代码。 如果你将可视化编辑服务器功能添加到现有应用程序，你必须重复的应用程序向导将添加必要的服务器代码的其余部分之前提供的代码。  
-  
- 应用程序向导提供的服务器代码划分为多个类别：  
-  
--   定义服务器资源：  
-  
-    -   服务器正在编辑自己的窗口中的嵌入的项时使用的菜单资源。  
-  
-    -   使用服务器处于就地活动状态时的菜单和工具栏资源。  
-  
-     对这些资源的详细信息，请参阅[菜单和资源： 服务器添加](../mfc/menus-and-resources-server-additions.md)。  
-  
--   定义一个项类派生自`COleServerItem`。 服务器项的更多详细信息，请参阅[服务器： 服务器项](../mfc/servers-server-items.md)。  
-  
--   更改文档类的基类`COleServerDoc`。 有关更多详细信息，请参阅[服务器： 实现服务器文档](../mfc/servers-implementing-server-documents.md)。  
-  
--   定义的框架窗口类派生自`COleIPFrameWnd`。 有关更多详细信息，请参阅[服务器： 实现就地框架窗口](../mfc/servers-implementing-in-place-frame-windows.md)。  
-  
--   在 Windows 注册数据库中创建服务器应用程序的条目，并向 OLE 系统注册的服务器的新实例。 本主题的信息，请参阅[注册](../mfc/registration.md)。  
-  
--   初始化和启动服务器应用程序。 本主题的信息，请参阅[注册](../mfc/registration.md)。  
-  
- 有关详细信息，请参阅[COleServerItem](../mfc/reference/coleserveritem-class.md)， [COleServerDoc](../mfc/reference/coleserverdoc-class.md)，和[COleIPFrameWnd](../mfc/reference/coleipframewnd-class.md)中*类库参考*。  
-  
-## <a name="see-also"></a>请参阅  
- [服务器](../mfc/servers.md)   
- [容器](../mfc/containers.md)   
- [菜单和资源 (OLE)](../mfc/menus-and-resources-ole.md)   
- [注册](../mfc/registration.md)
+
+此文章介绍了 MFC 应用程序向导创建的可视化编辑服务器应用程序的代码。 如果不使用应用程序向导，本文列出了必须在其中编写代码来实现服务器应用程序的领域。
+
+如果使用应用程序向导创建新的服务器应用程序，它为您提供大量的特定于服务器的代码。 如果要添加到现有应用程序的可视化编辑服务器功能，必须复制应用程序向导会添加必要的服务器代码的其余部分之前提供的代码。
+
+应用程序向导提供的服务器代码划分为几个类别：
+
+- 定义服务器资源：
+
+   - 服务器在编辑嵌入的项在其自己的窗口中时使用的菜单资源。
+
+   - 使用服务器处于就地活动状态时的菜单和工具栏资源。
+
+     这些资源的详细信息，请参阅[菜单和资源： 服务器添加](../mfc/menus-and-resources-server-additions.md)。
+
+- 定义项类派生自`COleServerItem`。 服务器项的更多详细信息，请参阅[服务器： 服务器项](../mfc/servers-server-items.md)。
+
+- 更改到的文档类的基类`COleServerDoc`。 有关更多详细信息，请参阅[服务器： 实现服务器文档](../mfc/servers-implementing-server-documents.md)。
+
+- 定义框架窗口类派生自`COleIPFrameWnd`。 有关更多详细信息，请参阅[服务器： 实现就地框架 Windows](../mfc/servers-implementing-in-place-frame-windows.md)。
+
+- Windows 注册数据库中创建服务器应用程序的条目，并向 OLE 系统注册的服务器的新实例。 本主题的信息，请参阅[注册](../mfc/registration.md)。
+
+- 初始化和启动服务器应用程序。 本主题的信息，请参阅[注册](../mfc/registration.md)。
+
+有关详细信息，请参阅[COleServerItem](../mfc/reference/coleserveritem-class.md)， [COleServerDoc](../mfc/reference/coleserverdoc-class.md)，并[COleIPFrameWnd](../mfc/reference/coleipframewnd-class.md)中*类库参考*。
+
+## <a name="see-also"></a>请参阅
+
+[服务器](../mfc/servers.md)<br/>
+[容器](../mfc/containers.md)<br/>
+[菜单和资源 (OLE)](../mfc/menus-and-resources-ole.md)<br/>
+[注册](../mfc/registration.md)
 

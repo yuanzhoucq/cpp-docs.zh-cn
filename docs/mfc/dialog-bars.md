@@ -1,5 +1,5 @@
 ---
-title: 对话栏 |Microsoft 文档
+title: 对话栏 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,28 +18,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7c68ca2725d25b493003ad7d847176c7dd8d17d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ed0e773dda8a1a31a028a0b6c5e349b2e3655982
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33348802"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46401493"
 ---
 # <a name="dialog-bars"></a>对话栏
-对话栏是一个工具栏，一种类型的[控件条](../mfc/control-bars.md)可以包含任何类型的控件。 因为它具有无模式对话框的特征[CDialogBar](../mfc/reference/cdialogbar-class.md)对象提供更强大的工具栏。  
-  
- 工具栏和 `CDialogBar` 对象之间有一些主要差异。 `CDialogBar` 对象是从可以借助 Visual C++ 对话框编辑器创建的、可包含各种 Windows 控件的对话框模板资源创建的。 用户可以在控件之间进行切换。 您可以指定对齐样式，以将对话栏与父框架窗口的任何部分对齐，甚至可以在调整父窗口大小时将其留在原来的位置。 下图演示了带有各种控件的对话栏。  
-  
- ![VC 对话栏](../mfc/media/vc378t1.gif "vc378t1")  
-对话栏  
-  
- 在其他方面，使用 `CDialogBar` 对象与使用无模式对话框类似。 使用对话框编辑器来设计和创建对话框资源。  
-  
- 对话栏的优点之一是，它们可以包括除按钮之外的控件。  
-  
- 虽然从 `CDialog` 派生您自己的对话框类很正常，但您通常不会为对话栏派生您自己的类。 对话栏是扩展到一个主窗口以及任何对话栏控件通知消息，如**BN_CLICKED**或**EN_CHANGE**，将发送到对话栏的主窗口的父级。  
-  
-## <a name="see-also"></a>请参阅  
- [用户界面元素](../mfc/user-interface-elements-mfc.md)   
- [示例](../visual-cpp-samples.md)
+
+对话栏是一个工具栏，一种类型的[控件条](../mfc/control-bars.md)，可以包含任何类型的控件。 因为它具有无模式对话框的特征[CDialogBar](../mfc/reference/cdialogbar-class.md)对象提供了更强大的工具栏。
+
+工具栏和 `CDialogBar` 对象之间有一些主要差异。 `CDialogBar` 对象是从可以借助 Visual C++ 对话框编辑器创建的、可包含各种 Windows 控件的对话框模板资源创建的。 用户可以在控件之间进行切换。 您可以指定对齐样式，以将对话栏与父框架窗口的任何部分对齐，甚至可以在调整父窗口大小时将其留在原来的位置。 下图演示了带有各种控件的对话栏。
+
+![VC 对话栏](../mfc/media/vc378t1.gif "vc378t1")对话栏
+
+在其他方面，使用 `CDialogBar` 对象与使用无模式对话框类似。 使用对话框编辑器来设计和创建对话框资源。
+
+对话栏的优点之一是，它们可以包括除按钮之外的控件。
+
+虽然从 `CDialog` 派生您自己的对话框类很正常，但您通常不会为对话栏派生您自己的类。 对话栏是扩展到主窗口和任何对话栏控件通知消息，如**BN_CLICKED**或**EN_CHANGE**，将发送到对话栏的主窗口的父级。
+
+## <a name="see-also"></a>请参阅
+
+[用户界面元素](../mfc/user-interface-elements-mfc.md)<br/>
+[示例](../visual-cpp-samples.md)
 

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8e18f64d48b357ed691f42fc900f68c8e8054776
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 71ff4e3fdb80b48e306e543bdb683c3dd2b26ec3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317246"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46443327"
 ---
 # <a name="com-attributes"></a>COM 特性
 COM 特性注入的代码来支持 COM 开发和.NET Framework 公共语言运行时开发的许多方面。 这些区域的范围从自定义接口实现和支持的现有接口支持常用属性、 方法和事件。 此外，支持可以找到复合和 ActiveX 控件实现的。
@@ -44,4 +44,5 @@ COM 特性注入的代码来支持 COM 开发和.NET Framework 公共语言运�
 |[vi_progid](../windows/vi-progid.md)|定义控件的独立于版本的 ProgID。|
   
 ## <a name="see-also"></a>请参阅
- [按组分的特性](../windows/attributes-by-group.md)
+
+[按组分的特性](../windows/attributes-by-group.md)

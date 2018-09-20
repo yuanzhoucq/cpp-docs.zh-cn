@@ -1,5 +1,5 @@
 ---
-title: -特性注释 |Microsoft 文档
+title: -特性注释 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,26 +17,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 44b34c2e2d22d0a0a2feb15f6bf2793b68dc7042
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 04288cb4482ad477d0ddf69f621afc0b12b3bf93
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36929564"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46414844"
 ---
 # <a name="-attributes-comment"></a>// Attributes 注释
-MFC 类声明的 `// Attributes` 部分包含对象的公共特性（或属性）。 通常，它们是成员变量或 Get/Set 函数。 “Get”和“Set”函数可能是或可能不是虚拟的。 "Get"函数通常是**const**，因为在大多数情况下它们不具有副作用。 这些成员通常是公共的；通常可在实现部分中找到受保护的特性和私有特性。  
-  
- 在此示例中列出从类`CStdioFile`下[注释的示例](../mfc/an-example-of-the-comments.md)，该列表包含一个成员变量， *m_pStream*。 类 `CDC` 在此注释下列出了近 20 个成员。  
-  
+
+MFC 类声明的 `// Attributes` 部分包含对象的公共特性（或属性）。 通常，它们是成员变量或 Get/Set 函数。 “Get”和“Set”函数可能是或可能不是虚拟的。 "Get"函数通常是**const**，因为它们在大多数情况下没有负面影响。 这些成员通常是公共的；通常可在实现部分中找到受保护的特性和私有特性。
+
+在类中列出的示例`CStdioFile`下[注释示例](../mfc/an-example-of-the-comments.md)，该列表包含一个成员变量， *m_pStream*。 类 `CDC` 在此注释下列出了近 20 个成员。
+
 > [!NOTE]
->  大型类（如 `CDC` 和 `CWnd`）可能具有非常多的成员，因此只是在一个组中列出所有特性并不会大幅提高清晰性。 在这种情况下，类库使用其他注释作为标题来进一步描述这些成员。 例如，`CDC` 使用 `// Device-Context Functions`、`// Drawing Tool Functions`、`// Drawing Attribute Functions` 等。 表示特性的组将采用上述常用语法。 许多 OLE 类都具有一个称为 `// Interface Maps` 的实现部分。  
-  
-## <a name="see-also"></a>请参阅  
- [使用 MFC 源文件](../mfc/using-the-mfc-source-files.md)   
- [注释示例](../mfc/an-example-of-the-comments.md)   
- [/ / Implementation 注释](../mfc/decrement-implementation-comment.md)   
- [/ / Constructors 注释](../mfc/decrement-constructors-comment.md)   
- [/ / Operations 注释](../mfc/decrement-operations-comment.md)   
- [/ / Overridables 注释](../mfc/decrement-overridables-comment.md)
+>  大型类（如 `CDC` 和 `CWnd`）可能具有非常多的成员，因此只是在一个组中列出所有特性并不会大幅提高清晰性。 在这种情况下，类库使用其他注释作为标题来进一步描述这些成员。 例如，`CDC` 使用 `// Device-Context Functions`、`// Drawing Tool Functions`、`// Drawing Attribute Functions` 等。 表示特性的组将采用上述常用语法。 许多 OLE 类都具有一个称为 `// Interface Maps` 的实现部分。
+
+## <a name="see-also"></a>请参阅
+
+[使用 MFC 源文件](../mfc/using-the-mfc-source-files.md)<br/>
+[注释示例](../mfc/an-example-of-the-comments.md)<br/>
+[Implementation 注释](../mfc/decrement-implementation-comment.md)<br/>
+[构造函数注释](../mfc/decrement-constructors-comment.md)<br/>
+[Operations 注释](../mfc/decrement-operations-comment.md)<br/>
+[可重写注释](../mfc/decrement-overridables-comment.md)
 

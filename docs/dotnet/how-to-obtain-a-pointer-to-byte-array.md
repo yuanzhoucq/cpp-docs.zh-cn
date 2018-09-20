@@ -1,5 +1,5 @@
 ---
-title: 如何： 获取指向字节数组的 |Microsoft 文档
+title: 如何： 获取字节数组的指针 |Microsoft Docs
 ms.custom: get-started-article
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,32 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 1319da3f41903c469655cd533116de7a38d6b5b4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c20449a5e02e7743999d02f6a03254976e58fcfb
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33127963"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46429287"
 ---
 # <a name="how-to-obtain-a-pointer-to-byte-array"></a>如何：获取字节数组的指针
-你可以获取指向中的数组块的指针<xref:System.Byte>通过采用第一个元素的地址，并将其分配给指针的数组。  
-  
-## <a name="example"></a>示例  
-  
-```  
-// pointer_to_Byte_array.cpp  
-// compile with: /clr  
-using namespace System;  
-int main() {  
-   Byte bArr[] = {1, 2, 3};  
-   Byte* pbArr = &bArr[0];  
-  
-   array<Byte> ^ bArr2 = gcnew array<Byte>{1,2,3};  
-   interior_ptr<Byte> pbArr2 = &bArr2[0];  
-}  
-```  
-  
-## <a name="see-also"></a>请参阅  
- [使用 C++ 互操作（隐式 PInvoke）](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+
+你可以获取指向中的数组块<xref:System.Byte>通过获取第一个元素的地址并将其分配给指针的数组。
+
+## <a name="example"></a>示例
+
+```
+// pointer_to_Byte_array.cpp
+// compile with: /clr
+using namespace System;
+int main() {
+   Byte bArr[] = {1, 2, 3};
+   Byte* pbArr = &bArr[0];
+
+   array<Byte> ^ bArr2 = gcnew array<Byte>{1,2,3};
+   interior_ptr<Byte> pbArr2 = &bArr2[0];
+}
+```
+
+## <a name="see-also"></a>请参阅
+
+[使用 C++ 互操作（隐式 PInvoke）](../dotnet/using-cpp-interop-implicit-pinvoke.md)

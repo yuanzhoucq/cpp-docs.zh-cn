@@ -152,12 +152,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c2419925896112eb235bcdfe77d9916373f0091
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: b9a1472cba13f477143c9b9ace27cb2555f41406
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42544383"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46408422"
 ---
 # <a name="predefined-macros"></a>预定义的宏
 
@@ -443,6 +443,6 @@ Microsoft Visual c + + 支持这些其他预定义的宏。
 
 ## <a name="see-also"></a>请参阅
 
-[宏 （C/c + +）](../preprocessor/macros-c-cpp.md)   
-[预处理器运算符](../preprocessor/preprocessor-operators.md)   
+[宏 (C/C++)](../preprocessor/macros-c-cpp.md)<br/>
+[预处理器运算符](../preprocessor/preprocessor-operators.md)<br/>
 [预处理器指令](../preprocessor/preprocessor-directives.md)

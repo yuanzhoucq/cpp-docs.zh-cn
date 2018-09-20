@@ -19,33 +19,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23727ed40b12506ddd47a03055eaf8514d5685c5
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: fcb8859f00724eb7865198c662850a60314ffdc3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541541"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46419979"
 ---
 # <a name="int2c"></a>__int2c
-**Microsoft 专用**  
-  
- 将生成`int 2c`指令，这会触发`2c`中断。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-void __int2c(void);  
-```  
-  
-## <a name="requirements"></a>要求  
-  
-|内部函数|体系结构|  
-|---------------|------------------|  
-|`__int2c`|x86、x64|  
-  
- **标头文件** \<intrin.h >  
-  
-**结束 Microsoft 专用**  
-  
-## <a name="see-also"></a>请参阅  
- [编译器内部函数](../intrinsics/compiler-intrinsics.md)
+
+**Microsoft 专用**
+
+将生成`int 2c`指令，这会触发`2c`中断。
+
+## <a name="syntax"></a>语法
+
+```
+void __int2c(void);
+```
+
+## <a name="requirements"></a>要求
+
+|内部函数|体系结构|
+|---------------|------------------|
+|`__int2c`|x86、x64|
+
+**标头文件** \<intrin.h >
+
+**结束 Microsoft 专用**
+
+## <a name="see-also"></a>请参阅
+
+[编译器内部函数](../intrinsics/compiler-intrinsics.md)

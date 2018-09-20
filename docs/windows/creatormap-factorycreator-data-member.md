@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 90367a21d76fe7fe735d1174bc9b9d40900dec78
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 12d4fdd415ab37c9af0b0b34651e7cd2f00cf31b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42600825"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46405276"
 ---
 # <a name="creatormapfactorycreator-data-member"></a>CreatorMap::factoryCreator 数据成员
 
@@ -35,21 +35,21 @@ HRESULT (*factoryCreator)(
    unsigned int* currentflags,
    const CreatorMap* entry,
    REFIID iidClassFactory,
- IUnknown** factory);
+IUnknown** factory);
 ```
 
 ### <a name="parameters"></a>参数
 
-*currentflags*  
+*currentflags*<br/>
 之一[RuntimeClassType](../windows/runtimeclasstype-enumeration.md)枚举器。
 
-*entry*  
+*entry*<br/>
 CreatorMap。
 
-*iidClassFactory*  
+*iidClassFactory*<br/>
 类工厂的接口 ID。
 
-*工厂*  
+*工厂*<br/>
 操作完成后，类工厂的地址。
 
 ## <a name="return-value"></a>返回值
@@ -68,5 +68,5 @@ CreatorMap。
 
 ## <a name="see-also"></a>请参阅
 
-[CreatorMap 结构](../windows/creatormap-structure.md)  
+[CreatorMap 结构](../windows/creatormap-structure.md)<br/>
 [Microsoft::WRL::Details 命名空间](../windows/microsoft-wrl-details-namespace.md)

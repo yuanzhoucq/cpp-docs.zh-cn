@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 88990595fdf1f6cbb88efd40ec6247b70d90c586
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 89e4a639ad953593195401fe2eadeb5d7877a160
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314893"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46445851"
 ---
 # <a name="adding-controls-to-a-dialog-causes-the-dialog-to-no-longer-function-c"></a>向对话框添加控件导致对话框不再工作 （c + +）
 
@@ -70,5 +70,5 @@ Win32
 
 ## <a name="see-also"></a>请参阅
 
-[对话框编辑器疑难解答](../windows/troubleshooting-the-dialog-editor.md)  
+[对话框编辑器疑难解答](../windows/troubleshooting-the-dialog-editor.md)<br/>
 [对话框编辑器](../windows/dialog-editor.md)
