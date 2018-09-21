@@ -1,7 +1,7 @@
 ---
 title: STL/CLR 库参考 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/18/2018"
 ms.technology:
 - cpp-cli
 ms.topic: reference
@@ -17,16 +17,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 78dc5c57ca000dfa03dba640c46cec16aaca133f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 14217396801731505753be121e98f0aebf5b5f22
+ms.sourcegitcommit: 338e1ddc2f3869d92ba4b73599d35374cf1d5b69
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46429469"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46494382"
 ---
 # <a name="stlclr-library-reference"></a>STL/CLR 库参考
 
-STL/CLR 库是子集的一种封装的 c + + 标准库，适用于 c + + 和.NET Framework 公共语言运行时 (CLR)。 通过 STL/CLR，您可以使用所有容器、 迭代器和托管环境中的标准库算法。
+STL/CLR 库提供类似于 c + + 标准库容器的接口与 c + + 和.NET Framework 公共语言运行时 (CLR) 一起使用。 STL/CLR 是完全独立于 Microsoft 的 c + + 标准库实现。 STL/CLR 的旧版支持维持不变，但不是保持为最新的 c + + 标准。 我们强烈建议使用本机[c + + 标准库](../standard-library/cpp-standard-library-reference.md)而不是 STL/CLR 尽可能的容器。
 
 若要使用 STL/CLR:
 
@@ -34,7 +34,7 @@ STL/CLR 库是子集的一种封装的 c + + 标准库，适用于 c + + 和.NET
 
 - 用限定库`cliext::`而不是`std::`。
 
-STL/CLR 公开它使用在.NET 程序集的跨程序集应用场景中的泛型类型和接口**Microsoft.VisualC.STLCLR.dll**。 .NET Framework 3.5 中包含该 DLL。 如果重新发布使用 STL/CLR 的应用程序，您需要包括.NET Framework 3.5，以及你的项目使用，安装项目的依赖项部分中的任何其他 Visual c + + 库。
+STL/CLR 库适用于 c + + 和.NET Framework 公共语言运行时 (CLR) 提供一个类似于 STL 的接口。 此库的旧版支持维持不变，但不是保持为最新的 c + + 标准。 我们强烈建议使用本机[c + + 标准库](../standard-library/cpp-standard-library-reference.md)而不是 STL/CLR 容器。
 
 ## <a name="in-this-section"></a>本节内容
 

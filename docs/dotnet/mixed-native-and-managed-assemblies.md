@@ -1,7 +1,7 @@
 ---
 title: 混合 （本机和托管） 程序集 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/18/2018
 ms.technology:
 - cpp-cli
 ms.topic: conceptual
@@ -23,18 +23,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 2a48f34edec8a9f24f22d35be482d3b297215dbe
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 4ee94905bc4c40f6d080e34098e24bd71d495141
+ms.sourcegitcommit: 338e1ddc2f3869d92ba4b73599d35374cf1d5b69
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43210620"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46494486"
 ---
 # <a name="mixed-native-and-managed-assemblies"></a>混合 （本机和托管） 程序集
 
-混合程序集都能包含非托管的机器指令和 MSIL 指令。 这使他们能够调用并且调用.NET 组件，同时保留与不完全受管理的组件的兼容性。 使用混合程序集，开发人员可以编写使用混合托管和非托管功能的应用程序。 这使得混合程序集的现有 Visual c + + 应用程序迁移到.NET 平台非常适合。
+混合程序集都能包含非托管的机器指令和 MSIL 指令。 这使他们能够调用并且调用.NET 组件，同时保留与本机 c + + 库的兼容性。 使用混合程序集，开发人员可以编写使用混合使用.NET 和本机 c + + 代码的应用程序。
 
-例如，完全由非托管函数组成的现有应用程序可将迁移到.NET 平台重新编译使用的只是一个模块 **/clr**编译器开关。 此模块然后可以使用.NET 功能，但保持兼容的应用程序的剩余部分。 这样一来，应用程序可以转换为.NET 平台中逐步逐块的方式。 甚至可以决定是在同一文件中函数的函数的基础上的托管和非托管编译 (请参阅[managed、 unmanaged](../preprocessor/managed-unmanaged.md))。
+例如，完全由本机 c + + 代码组成的现有库可将迁移到.NET 平台重新编译使用的只是一个模块 **/clr**编译器开关。 此模块然后可以使用.NET 功能，但保持兼容的应用程序的剩余部分。 甚至可以决定是在同一文件中函数的函数的基础上的托管和本机编译 (请参阅[managed、 unmanaged](../preprocessor/managed-unmanaged.md))。
 
 Visual c + + 使用仅支持混合的托管程序集的新一代 **/clr**编译器选项。 **/Clr: pure**并 **/clr: safe**编译器选项在 Visual Studio 2015 中弃用，在 Visual Studio 2017 中不受支持。 如果您需要纯或可验证的托管程序集，我们建议使用 C# 创建它们。
 
