@@ -1,7 +1,7 @@
 ---
 title: 如何： 迁移到-clr |Microsoft Docs
 ms.custom: get-started-article
-ms.date: 11/04/2016
+ms.date: 09/18/2018
 ms.technology:
 - cpp-cli
 ms.topic: conceptual
@@ -20,16 +20,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 818b6e102d9da759aa8889779515917b96e22c89
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: cf55b6f5dc422bb01babe0bdf8d8c27ce50371da
+ms.sourcegitcommit: 338e1ddc2f3869d92ba4b73599d35374cf1d5b69
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46412959"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46494460"
 ---
 # <a name="how-to-migrate-to-clr"></a>如何：迁移到 /clr
 
-本主题讨论编译本机代码时出现的问题 **/clr** (请参阅[/clr （公共语言运行时编译）](../build/reference/clr-common-language-runtime-compilation.md)有关详细信息)。 **/clr**允许 Visual c + + 模块调用和被调用保留与非托管模块的兼容性的同时从.NET 程序集。 请参阅[混合 （本机和托管） 程序集](../dotnet/mixed-native-and-managed-assemblies.md)并[本机和.NET 互操作性](../dotnet/native-and-dotnet-interoperability.md)有关详细信息进行编译的优势 **/clr**。
+本主题讨论编译本机代码时出现的问题 **/clr** (请参阅[/clr （公共语言运行时编译）](../build/reference/clr-common-language-runtime-compilation.md)有关详细信息)。 **/clr**允许本机 c + + 代码调用和被调用从除了其他本机 c + + 代码的.NET 程序集。 请参阅[混合 （本机和托管） 程序集](../dotnet/mixed-native-and-managed-assemblies.md)并[本机和.NET 互操作性](../dotnet/native-and-dotnet-interoperability.md)有关详细信息进行编译的优势 **/clr**。
 
 ## <a name="known-issues-compiling-library-projects-with-clr"></a>已知的问题编译类库项目使用 /clr
 
@@ -132,7 +132,7 @@ COMObj2->Method(args);  // C++ equivalent
 
 ### <a name="loader-lock-deadlock"></a>加载程序锁死锁
 
-在 Visual Studio 2010 及更高版本，因为在早期版本中，而是确定的仍然会出现"加载程序锁死锁"检测和报告在运行时。 请参阅[混合程序集初始化](../dotnet/initialization-of-mixed-assemblies.md)的详细的背景、 指南和解决方案。
+"加载程序锁死锁"可能会发生，但具有确定性并将检测到并在运行时报告。 请参阅[混合程序集初始化](../dotnet/initialization-of-mixed-assemblies.md)的详细的背景、 指南和解决方案。
 
 ### <a name="data-exports"></a>数据导出
 

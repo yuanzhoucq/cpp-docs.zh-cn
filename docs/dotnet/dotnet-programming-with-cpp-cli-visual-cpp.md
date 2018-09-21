@@ -1,7 +1,7 @@
 ---
 title: .NET 编程中的使用 C + + /cli （Visual c + +） |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/18/2018
 ms.technology:
 - cpp-cli
 ms.topic: conceptual
@@ -18,18 +18,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 105b1d709ca2d9bb68741050489ffa1ee75c8067
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 338404abe7499b6d9ff7679420f069a2857ce1e0
+ms.sourcegitcommit: 338e1ddc2f3869d92ba4b73599d35374cf1d5b69
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46410567"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46494434"
 ---
 # <a name="net-programming-with-ccli-visual-c"></a>使用 C++/CLI (Visual C++) 进行 .NET 编程
 
-下面的主题介绍可如何将 Visual C++ 的目标设定为 .NET 平台。
+**Visual Studio 2015**： 默认情况下，使用 Visual Studio 2015 创建的 CLR 项目目标.NET Framework 4.5.2。 若要在创建新项目时将目标设定为 .NET Framework 4.6，请在“新建项目”  对话框中，更改该对话框顶部中间的下拉列表中的目标框架。 若要更改现有项目的目标框架，请关闭项目、编辑项目文件 (.vcxproj)，并将目标 Framework 版本的值更改为 4.6。 设置将在你下次打开该项目时生效。 
 
-默认情况下，使用 Visual Studio 2015 创建的 CLR 项目将以.NET Framework 4.5.2 为目标。 若要在创建新项目时将目标设定为 .NET Framework 4.6，请在“新建项目”  对话框中，更改该对话框顶部中间的下拉列表中的目标框架。 若要更改现有项目的目标框架，请关闭项目、编辑项目文件 (.vcxproj)，并将目标 Framework 版本的值更改为 4.6。 设置将在你下次打开该项目时生效。
+**Visual Studio 2017**： 在 Visual Studio 2017 中，默认框架是 4.6.1 和 Framework 版本选择器是在底部**新建项目对话框**。 C + + /cli 默认情况下不安装 CLI 本身。 若要安装组件，请打开 Visual Studio 安装程序并选择 C + + /cli 下 Visual c + + CLI 组件。 
 
 ## <a name="in-this-section"></a>本节内容
 
