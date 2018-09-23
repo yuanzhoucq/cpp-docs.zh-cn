@@ -43,68 +43,73 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 140b53fd90d393f2629dda6573d994635b96f417
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 604fe4a5fd3daa2cfef7698cd044c7edc56232b2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32391504"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069633"
 ---
 # <a name="outp-outpw-outpd"></a>_outp、_outpw、_outpd
-按端口、字节 (`_outp`)、字 (`_outpw`) 或双字 (`_outpd`) 输出。  
-  
+
+按端口、字节 (`_outp`)、字 (`_outpw`) 或双字 (`_outpd`) 输出。
+
 > [!IMPORTANT]
->  这些函数已过时。 从 Visual Studio 2015 开始，CRT 中不再提供这些函数。  
-  
+>  这些函数已过时。 从 Visual Studio 2015 开始，CRT 中不再提供这些函数。
+
 > [!IMPORTANT]
->  此 API 不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-  
-      int _outp(  
-unsigned short port,  
-int databyte   
-);  
-unsigned short _outpw(  
-unsigned short port,  
-unsigned short dataword   
-);  
-unsigned long _outpd(  
-unsigned short port,  
-unsigned long dataword   
-);  
-```  
-  
-#### <a name="parameters"></a>参数  
- *port*  
- 端口号。  
-  
- *databyte、dataword*  
- 输出值。  
-  
-## <a name="return-value"></a>返回值  
- 这些函数返回数据输出。 无错误返回。  
-  
-## <a name="remarks"></a>备注  
- `_outp`、 `_outpw`和 `_outpd` 函数分别将字节、字和双字写入指定的输出端口。 *port* 参数可为 0 - 65,535 范围内的任何无符号整数。*databyte* 可为 0 - 255 范围内的任何整数；*dataword* 可分别为整数、无符号短整数和无符号长整数范围内的任何值。  
-  
- 由于这些函数可直接将数据写入 I/O 端口，因此无法用于用户代码。 有关在这些操作系统中使用 I/O 端口的信息，请在 MSDN 上搜索“Win32 中的串行通信”。  
-  
-## <a name="requirements"></a>惠?  
-  
-|例程所返回的值|必需的标头|  
-|-------------|---------------------|  
-|`_outp`|\<conio.h>|  
-|`_outpw`|\<conio.h>|  
-|`_outpd`|\<conio.h>|  
-  
- 有关更多兼容性信息，请参阅 [兼容性](../c-runtime-library/compatibility.md)。  
-  
-## <a name="libraries"></a>库  
- [C 运行时库](../c-runtime-library/crt-library-features.md)的所有版本。  
-  
-## <a name="see-also"></a>请参阅  
- [控制台和端口 I/O](../c-runtime-library/console-and-port-i-o.md)   
- [_inp、_inpw、_inpd](../c-runtime-library/inp-inpw-inpd.md)
+>  此 API 不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
+
+## <a name="syntax"></a>语法
+
+```
+
+      int _outp(
+unsigned short port,
+int databyte
+);
+unsigned short _outpw(
+unsigned short port,
+unsigned short dataword
+);
+unsigned long _outpd(
+unsigned short port,
+unsigned long dataword
+);
+```
+
+#### <a name="parameters"></a>参数
+*port*<br/>
+端口号。
+
+*databyte、dataword*<br/>
+输出值。
+
+## <a name="return-value"></a>返回值
+
+这些函数返回数据输出。 无错误返回。
+
+## <a name="remarks"></a>备注
+
+`_outp`、 `_outpw`和 `_outpd` 函数分别将字节、字和双字写入指定的输出端口。 *port* 参数可为 0 - 65,535 范围内的任何无符号整数。*databyte* 可为 0 - 255 范围内的任何整数；*dataword* 可分别为整数、无符号短整数和无符号长整数范围内的任何值。
+
+由于这些函数可直接将数据写入 I/O 端口，因此无法用于用户代码。 有关在这些操作系统中使用 I/O 端口的信息，请在 MSDN 上搜索“Win32 中的串行通信”。
+
+## <a name="requirements"></a>要求
+
+|例程所返回的值|必需的标头|
+|-------------|---------------------|
+|`_outp`|\<conio.h>|
+|`_outpw`|\<conio.h>|
+|`_outpd`|\<conio.h>|
+
+有关更多兼容性信息，请参阅 [兼容性](../c-runtime-library/compatibility.md)。
+
+## <a name="libraries"></a>库
+
+[C 运行时库](../c-runtime-library/crt-library-features.md)的所有版本。
+
+## <a name="see-also"></a>请参阅
+
+[控制台和端口 I/O](../c-runtime-library/console-and-port-i-o.md)<br/>
+[_inp、_inpw、_inpd](../c-runtime-library/inp-inpw-inpd.md)

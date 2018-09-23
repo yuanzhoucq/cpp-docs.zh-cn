@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 409f10dffdf6816f3ff0ab4e71060c9bcb6eaf9f
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 5bf60222b276050af5296d678985eda8fd12948b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43684207"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46027549"
 ---
 # <a name="ltremarksgt-visual-c"></a>&lt;remarks&gt; (Visual C++)
 \<remarks> 标记用于添加有关某个类型的信息，从而补充由 [\<summary>](../ide/summary-visual-cpp.md) 指定的信息。 此信息显示在[对象浏览器](/visualstudio/ide/viewing-the-structure-of-code)和代码注释 Web 报表中。  
@@ -35,8 +35,8 @@ ms.locfileid: "43684207"
 ```  
   
 #### <a name="parameters"></a>参数  
- `description`  
- 对成员的说明。  
+description<br/>
+对成员的说明。  
   
 ## <a name="remarks"></a>备注  
  使用 [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) 进行编译可以将文档注释处理到文件中。  

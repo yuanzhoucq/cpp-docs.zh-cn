@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bfd0715acd7eb18c4ccc83d496a1e9a98084fdf
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8a58338d980db5acd8f41c71e23c37c1700a0761
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757944"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46055112"
 ---
 # <a name="initializing-aggregate-types"></a>初始化聚合类型
 
@@ -109,13 +109,13 @@ triplet nlist[2][3] =
 
 在此示例中，`nlist` 声明为结构的 2x3 数组，每个结构具有三个成员。 初始化的第 1 行将值赋给 `nlist` 的第一行，如下所示：
 
-1.  第 1 行上的第一个左大括号告知编译器 `nlist` 的第一个聚合成员（即 `nlist[0]`）的初始化已开始。
+1. 第 1 行上的第一个左大括号告知编译器 `nlist` 的第一个聚合成员（即 `nlist[0]`）的初始化已开始。
 
-2.  第二个左大括号指示 `nlist[0]` 的第一个聚合成员（即 `nlist[0][0]` 处的结构）的初始化已开始。
+1. 第二个左大括号指示 `nlist[0]` 的第一个聚合成员（即 `nlist[0][0]` 处的结构）的初始化已开始。
 
-3.  第一个右大括号结束 `nlist[0][0]` 结构的初始化；下一个左大括号开始 `nlist[0][1]` 的初始化。
+1. 第一个右大括号结束 `nlist[0][0]` 结构的初始化；下一个左大括号开始 `nlist[0][1]` 的初始化。
 
-4.  此过程将继续，直到右大括号结束 `nlist[0]` 的初始化的行的末尾。
+1. 此过程将继续，直到右大括号结束 `nlist[0]` 的初始化的行的末尾。
 
 第 2 行采用类似的方法将值赋给 `nlist` 的第二行。 请注意，包含第 1 行和第 2 行上的初始值设定项的大括号的外部集是必需的。 忽略外部大括号的下列构造将会导致错误：
 

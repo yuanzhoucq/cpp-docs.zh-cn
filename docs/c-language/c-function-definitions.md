@@ -22,14 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 265dfe599d4c3586b350787baab5977562326991
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: cbfc7e7bd6a3f2ef727a0cc259f222afad0ab555
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757677"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46055229"
 ---
 # <a name="c-function-definitions"></a>C 函数定义
+
 函数定义指定函数的名称、函数期望接收的参数的类型和数量以及函数的返回类型。 函数定义还包括带有局部变量的声明的函数体和确定函数行为的语句。
 
 ## <a name="syntax"></a>语法
@@ -103,4 +104,5 @@ compound-statement 是包含局部变量声明、对在外部声明的项的引�
 [函数特性](../c-language/function-attributes.md)、[存储类](../c-language/storage-class.md)、[返回类型](../c-language/return-type.md)、[参数](../c-language/parameters.md)和[函数体](../c-language/function-body.md)节详细地描述了函数定义的组成部分。
 
 ## <a name="see-also"></a>请参阅
+
 [函数](../c-language/functions-c.md)

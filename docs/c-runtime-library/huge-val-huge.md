@@ -24,24 +24,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2d763b8c5379223ddacb8077c463efa0b91acfa
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a9917d614261afaffe28ea92f913799c429a9611
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32390500"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46060715"
 ---
 # <a name="hugeval-huge"></a>HUGE_VAL、_HUGE
-## <a name="syntax"></a>语法  
-  
-```  
-  
-#include <math.h>  
-  
-```  
-  
-## <a name="remarks"></a>备注  
- `HUGE_VAL` 是可表示的最大双精度值。 在出现错误时，该值将由许多运行时数学函数返回。 对于某些函数，将返回 -`HUGE_VAL`。 `HUGE_VAL` 定义为 `_HUGE`，而运行时数学函数返回 `HUGE_VAL`。 为确保一致性，还应在代码中使用 `HUGE_VAL`。  
-  
-## <a name="see-also"></a>请参阅  
- [全局常量](../c-runtime-library/global-constants.md)
+
+## <a name="syntax"></a>语法
+
+```
+
+#include <math.h>
+
+```
+
+## <a name="remarks"></a>备注
+
+`HUGE_VAL` 是可表示的最大双精度值。 在出现错误时，该值将由许多运行时数学函数返回。 对于某些函数，将返回 -`HUGE_VAL`。 `HUGE_VAL` 定义为 `_HUGE`，而运行时数学函数返回 `HUGE_VAL`。 为确保一致性，还应在代码中使用 `HUGE_VAL`。
+
+## <a name="see-also"></a>请参阅
+
+[全局常量](../c-runtime-library/global-constants.md)

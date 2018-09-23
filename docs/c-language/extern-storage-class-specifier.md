@@ -18,39 +18,39 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 365f4cf424ee51c493859e1d79f733b2cfcf331c
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 24f25116a955c83f8f3685b9646c3086238d306e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964179"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020844"
 ---
 # <a name="extern-storage-class-specifier"></a>extern 存储类说明符
 
-使用 extern 存储类说明符声明的变量是对变量的引用，变量名称与另一个源文件中定义的名称相同。 它用于显示外部级别变量定义。 声明为 extern 的变量没有为自己分配的存储；它只是名称。 
-  
-## <a name="example"></a>示例  
- 此示例阐释内部和外部级别的声明：  
-  
-```c  
+使用 extern 存储类说明符声明的变量是对变量的引用，变量名称与另一个源文件中定义的名称相同。 它用于显示外部级别变量定义。 声明为 extern 的变量没有为自己分配的存储；它只是名称。
 
-// Source1.c  
+## <a name="example"></a>示例
+
+此示例阐释内部和外部级别的声明：
+
+```c
+
+// Source1.c
 
 int i = 1;
 
-
 // Source2. c
 
-#include <stdio.h>  
+#include <stdio.h>
 
-// Refers to the i that is defined in Source1.c:   
+// Refers to the i that is defined in Source1.c:
 extern int i;
 
 void func(void);
 
 int main()
 {
-    // Prints 1:   
+    // Prints 1:
     printf_s("%d\n", i);
     func();
     return;
@@ -58,20 +58,21 @@ int main()
 
 void func(void)
 {
-    // Address of global i assigned to pointer variable:  
+    // Address of global i assigned to pointer variable:
     static int *external_i = &i;
 
-    // This definition of i hides the global i in Source.c:   
+    // This definition of i hides the global i in Source.c:
     int i = 16;
 
-    // Prints 16, 1:  
+    // Prints 16, 1:
     printf_s("%d\n%d\n", i, *external_i);
 }
-```  
-  
- 在此示例中，变量 `i` 是在 Source1.c 中定义，初始值为 1。 Source2.c 中的 extern 声明让“i”在此文件中显示。 
+```
 
- 在 `func` 函数中，全局变量 `i` 的地址用于初始化 static 指针变量 `external_i`。 此用法之所以有效是因为全局变量具有 static 生存期，这意味着其地址在程序执行期间不会更改。 接下来，变量 `i` 在 `func` 的范围内定义为初始值为 16 的局部变量。 此定义不会影响外部级别 `i` 的值（通过对局部变量使用它的名称来隐藏它）。 全局 `i` 的值现在只能通过指针 `external_i` 访问。   
-  
-## <a name="see-also"></a>请参阅  
- [内部级别声明的存储类说明符](../c-language/storage-class-specifiers-for-internal-level-declarations.md)
+在此示例中，变量 `i` 是在 Source1.c 中定义，初始值为 1。 Source2.c 中的 extern 声明让“i”在此文件中显示。
+
+在 `func` 函数中，全局变量 `i` 的地址用于初始化 static 指针变量 `external_i`。 此用法之所以有效是因为全局变量具有 static 生存期，这意味着其地址在程序执行期间不会更改。 接下来，变量 `i` 在 `func` 的范围内定义为初始值为 16 的局部变量。 此定义不会影响外部级别 `i` 的值（通过对局部变量使用它的名称来隐藏它）。 全局 `i` 的值现在只能通过指针 `external_i` 访问。
+
+## <a name="see-also"></a>请参阅
+
+[内部级别声明的存储类说明符](../c-language/storage-class-specifiers-for-internal-level-declarations.md)

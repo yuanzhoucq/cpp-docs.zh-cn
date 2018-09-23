@@ -29,30 +29,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c3500c0bd17b2638026f45c23b047e2bee411cf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c09801841e25b5de2f98e64c01bf48b1eea9992b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32386993"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052083"
 ---
 # <a name="cipow"></a>_CIpow
-基于堆栈中的顶部值，计算提升到 *y* 电源的 *x*。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-void __cdecl _CIpow();  
-```  
-  
-## <a name="remarks"></a>备注  
- 此版本的 `pow` 函数具有编译器理解的专用化调用约定。 它将加快执行的速度，因为它可防止生成副本和帮助注册表分配。  
-  
- 生成的值被将被推送到堆栈顶部。  
-  
-## <a name="requirements"></a>惠?  
- **平台：** x86  
-  
-## <a name="see-also"></a>请参阅  
- [按字母顺序的函数参考](../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [pow、powf、powl](../c-runtime-library/reference/pow-powf-powl.md)
+
+基于堆栈中的顶部值，计算提升到 *y* 电源的 *x*。
+
+## <a name="syntax"></a>语法
+
+```
+void __cdecl _CIpow();
+```
+
+## <a name="remarks"></a>备注
+
+此版本的 `pow` 函数具有编译器理解的专用化调用约定。 它将加快执行的速度，因为它可防止生成副本和帮助注册表分配。
+
+生成的值被将被推送到堆栈顶部。
+
+## <a name="requirements"></a>要求
+ **平台：** x86
+
+## <a name="see-also"></a>请参阅
+
+[按字母顺序的函数参考](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
+[pow、powf、powl](../c-runtime-library/reference/pow-powf-powl.md)

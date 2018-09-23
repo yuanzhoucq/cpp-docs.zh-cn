@@ -33,36 +33,39 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1bb491e8073acf2af525814b595ce79365df0fa1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 63da23d30b12859c79427432bce38e1156e190de
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32389034"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46063328"
 ---
 # <a name="math-error-constants"></a>数学错误常量
-## <a name="syntax"></a>语法  
-  
-```  
-  
-#include <math.h>  
-  
-```  
-  
-## <a name="remarks"></a>备注  
- 运行库的数学例程可生成数学错误常量。  
-  
- 如下所述，这些错误对应于 MATH.H 中定义的异常类型，并在发生数学错误后由 `_matherr` 函数返回。  
-  
-|返回的常量|含义|  
-|--------------|-------------|  
-|`_DOMAIN`|函数的自变量位于函数域的外部。|  
-|`_OVERFLOW`|结果太大而无法在函数的返回类型中表示。|  
-|`_PLOSS`|发生了有效位部分丢失的情况。|  
-|`_SING`|自变量奇异性：函数的自变量具有非法值。 （例如，将值 0 传递到需要非零值的函数。）|  
-|`_TLOSS`|发生了有效位完全丢失的情况。|  
-|`_UNDERFLOW`|结果太小而无法表示。|  
-  
-## <a name="see-also"></a>请参阅  
- [_matherr](../c-runtime-library/reference/matherr.md)   
- [全局常量](../c-runtime-library/global-constants.md)
+
+## <a name="syntax"></a>语法
+
+```
+
+#include <math.h>
+
+```
+
+## <a name="remarks"></a>备注
+
+运行库的数学例程可生成数学错误常量。
+
+如下所述，这些错误对应于 MATH.H 中定义的异常类型，并在发生数学错误后由 `_matherr` 函数返回。
+
+|返回的常量|含义|
+|--------------|-------------|
+|`_DOMAIN`|函数的自变量位于函数域的外部。|
+|`_OVERFLOW`|结果太大而无法在函数的返回类型中表示。|
+|`_PLOSS`|发生了有效位部分丢失的情况。|
+|`_SING`|自变量奇异性：函数的自变量具有非法值。 （例如，将值 0 传递到需要非零值的函数。）|
+|`_TLOSS`|发生了有效位完全丢失的情况。|
+|`_UNDERFLOW`|结果太小而无法表示。|
+
+## <a name="see-also"></a>请参阅
+
+[_matherr](../c-runtime-library/reference/matherr.md)<br/>
+[全局常量](../c-runtime-library/global-constants.md)

@@ -19,24 +19,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31914118283c9d0c5c502e3426ba12e86d7c7680
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ff4e032e205680da84369075514e3177fa5fb33e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32385164"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46051017"
 ---
 # <a name="simple-assignment-c"></a>简单赋值 (C)
-简单赋值运算符可将其右操作数赋给其左操作数。 右操作数的值将转换为赋值表达式的类型，并替换存储在左侧操作数指定的对象中的值。 用于赋值的转换规则适用（请参阅[赋值转换](../c-language/assignment-conversions.md)）。  
-  
-```  
-double x;  
-int y;  
-  
-x = y;  
-```  
-  
- 在此示例中，将 `y` 的值转换为类型 double 并赋给 `x`。  
-  
-## <a name="see-also"></a>请参阅  
- [C 赋值运算符](../c-language/c-assignment-operators.md)
+
+简单赋值运算符可将其右操作数赋给其左操作数。 右操作数的值将转换为赋值表达式的类型，并替换存储在左侧操作数指定的对象中的值。 用于赋值的转换规则适用（请参阅[赋值转换](../c-language/assignment-conversions.md)）。
+
+```
+double x;
+int y;
+
+x = y;
+```
+
+在此示例中，将 `y` 的值转换为类型 double 并赋给 `x`。
+
+## <a name="see-also"></a>请参阅
+
+[C 赋值运算符](../c-language/c-assignment-operators.md)

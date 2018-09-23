@@ -16,21 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd2e208c5bad728156ea39f228b1b9157c4aaaa5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b749fb64594796efb49b565193b86c2e68facc6a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407397"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024250"
 ---
 # <a name="wcharmax"></a>WCHAR_MAX
-`wchar_t` 类型的最大值。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-#include <wchar.h>  
-```  
-  
-## <a name="see-also"></a>请参阅  
- [全局常量](../c-runtime-library/global-constants.md)
+
+`wchar_t` 类型的最大值。
+
+## <a name="syntax"></a>语法
+
+```
+#include <wchar.h>
+```
+
+## <a name="see-also"></a>请参阅
+
+[全局常量](../c-runtime-library/global-constants.md)

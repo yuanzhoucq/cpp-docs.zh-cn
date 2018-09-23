@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b9956299370b4a41ce725cf903ff2aefe55bf53
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ed871ee2148b6b731ab9354cd45c2e178b4d85a8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33336731"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46056074"
 ---
 # <a name="ltreturnsgt-visual-c"></a>&lt;returns&gt; (Visual C++)
 在方法声明的注释中应使用 \<returns> 标记来描述返回值。  
@@ -35,8 +35,8 @@ ms.locfileid: "33336731"
 ```  
   
 #### <a name="parameters"></a>参数  
- `description`  
- 返回值的说明。  
+description<br/>
+返回值的说明。  
   
 ## <a name="remarks"></a>备注  
  使用 [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) 进行编译可以将文档注释处理到文件中。  

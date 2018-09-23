@@ -20,18 +20,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 34ce75fa9670f28079774f4ba564657d0b4614ac
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9d263d1d61a6dcc6921d6918db2b89386e918551
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32391277"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46018309"
 ---
 # <a name="low-level-io"></a>低级别 I/O
 
 这些函数将为低于流 I/O 提供的操作的低级别操作直接调用操作系统。 低级别输入和输出调用不会缓冲数据或设置数据格式。
 
- 低级别例程可以使用以下预定义的文件描述符访问程序启动时打开的标准流。
+低级别例程可以使用以下预定义的文件描述符访问程序启动时打开的标准流。
 
 |流|文件描述符|
 |------------|---------------------|
@@ -39,7 +39,7 @@ ms.locfileid: "32391277"
 |**stdout**|1|
 |**stderr**|2|
 
- 发生错误时，低级别 I/O 例程将设置 [errno](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 全局变量。 只有在程序需要 STDIO.H 中定义的常量（例如文件尾指示符 (EOF)）时，在使用低级别函数时必须将 STDIO.H 包含在内。
+发生错误时，低级别 I/O 例程将设置 [errno](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 全局变量。 只有在程序需要 STDIO.H 中定义的常量（例如文件尾指示符 (EOF)）时，在使用低级别函数时必须将 STDIO.H 包含在内。
 
 ## <a name="low-level-io-functions"></a>低级别 I/O 函数
 
@@ -64,5 +64,5 @@ ms.locfileid: "32391277"
 ## <a name="see-also"></a>请参阅
 
 [输入和输出](../c-runtime-library/input-and-output.md)<br/>
- [按类别分的通用 C 运行时例程](../c-runtime-library/run-time-routines-by-category.md)<br/>
- [系统调用](../c-runtime-library/system-calls.md)<br/>
+[按类别分的通用 C 运行时例程](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[系统调用](../c-runtime-library/system-calls.md)<br/>

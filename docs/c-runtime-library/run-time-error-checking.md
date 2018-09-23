@@ -17,18 +17,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2468cd05efdf732fbf955b8532a61d24fa6c0ff4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: eaa4972a12729a5697db3574fcf89b0fb2b252ff
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409119"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068450"
 ---
 # <a name="run-time-error-checking"></a>运行时错误检查
 
 C 运行库包含支持运行时错误检查 (RTC) 的函数。 利用运行时错误检查，您可以生成程序来报告特定类型的运行时错误。 您可指定如何报告错误以及报告哪些类型的错误。 有关详细信息，请参阅[如何：使用本机运行时检查](/visualstudio/debugger/how-to-use-native-run-time-checks)。
 
- 使用下列函数自定义程序执行运行时错误检查的方式。
+使用下列函数自定义程序执行运行时错误检查的方式。
 
 ## <a name="run-time-error-checking-functions"></a>运行时错误检查函数
 
@@ -42,6 +42,6 @@ C 运行库包含支持运行时错误检查 (RTC) 的函数。 利用运行时�
 ## <a name="see-also"></a>请参阅
 
 [按类别分的通用 C 运行时例程](../c-runtime-library/run-time-routines-by-category.md)<br/>
- [/RTC（运行时错误检查）](../build/reference/rtc-run-time-error-checks.md)<br/>
- [runtime_checks](../preprocessor/runtime-checks.md)<br/>
- [调试例程](../c-runtime-library/debug-routines.md)<br/>
+[/RTC（运行时错误检查）](../build/reference/rtc-run-time-error-checks.md)<br/>
+[runtime_checks](../preprocessor/runtime-checks.md)<br/>
+[调试例程](../c-runtime-library/debug-routines.md)<br/>

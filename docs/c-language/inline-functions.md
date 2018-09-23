@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be5afa2dc4980f9393deb498c7a5decdc56aece5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 127438da4929e58e07e10701dd64869b084fe4c5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32387367"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46078577"
 ---
 # <a name="inline-functions"></a>内联函数
 
@@ -45,7 +45,7 @@ ms.locfileid: "32387367"
 
 使用 `__inline` 的函数不应与内联汇编常程序代码相混淆。 有关详细信息，请参阅[内联汇编程序](../c-language/inline-assembler-c.md)。
 
-**结束 Microsoft 专用**  
+**结束 Microsoft 专用**
 
 ## <a name="see-also"></a>请参阅
 

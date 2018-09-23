@@ -14,25 +14,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4d22df877ab757134ee6da86a5ff22ec106f958
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: a2394516773f428ae62fb9e8e39dd78dd790bebd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208570"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46033909"
 ---
 # <a name="delimiters-for-visual-c-documentation-tags"></a>Visual C++ 文档标记的分隔符
 文档标记需要使用分隔符，用来向编译器指示文档注释开始和结束的位置。  
   
  可以使用以下采用 XML 文档标记的分隔符：  
+|||
+|-|-|
+|`///`  | 这是在文档示例中显示的格式，由 Visual C++ 项目模板使用。  |
+| `/** */`  | 这些是多行分隔符。  |
   
- `///`  
- 这是在文档示例中显示的格式，由 Visual C++ 项目模板使用。  
-  
- `/** */`  
- 这些是多行分隔符。  
-  
- 使用 `/** */` 分隔符时，需遵守一些格式设置规则：  
+使用 `/** */` 分隔符时，需遵守一些格式设置规则：  
   
 -   对于包含 `/**` 分隔符的行，如果行的其余部分为空格，则不将此行作为注释处理。 如果第一个字符为空格，则忽略此空格字符，并处理该行的其余部分。 否则，将 `/**` 分隔符后面的行的所有文本作为注释的一部分进行处理。  
   
@@ -40,7 +38,7 @@ ms.locfileid: "39208570"
   
 -   对于那些位于以 `/**` 分隔符开头的行之后的行，编译器会在每行的开头部分（由可选空格和星号 (`*`) 组成，后面是更多可选空格）寻找一个它们共同的模式。 如果编译器在每行的开头部分找到一组共同的字符，则将忽略 `/**` 分隔符之后所有行的这种模式，直到或者包括包含 `*/` 分隔符的那一行。  
   
- 示例如下：  
+示例如下：  
   
 -   以下注释中将被处理的唯一部分是以 `<summary>` 开头的行。 下列两种标记格式将产生相同的注释：  
   

@@ -31,48 +31,51 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 944a127fb71beb7dba1ba9434cbc5d778230c055
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7428251531c0b57855941ed06c658c7b60224bab
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32391452"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46034429"
 ---
 # <a name="daylight-dstbias-timezone-and-tzname"></a>_daylight、_dstbias、_timezone 和 _tzname
-`_daylight`、`_dstbias`、`_timezone` 和 `_tzname` 在某些时间和日期例程中用来调整本地时间。 这些全局变量因安全性更高的函数版本（它们取代了全局变量）而被弃用。  
-  
-|全局变量|等效函数|  
-|---------------------|---------------------------|  
-|`_daylight`|[_get_daylight](../c-runtime-library/reference/get-daylight.md)|  
-|`_dstbias`|[_get_dstbias](../c-runtime-library/reference/get-dstbias.md)|  
-|`_timezone`|[_get_timezone](../c-runtime-library/reference/get-timezone.md)|  
-|`_tzname`|[_get_tzname](../c-runtime-library/reference/get-tzname.md)|  
-  
- 在 Time.h 中按如下方式声明它们。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-extern int _daylight;   
-extern int _dstbias;   
-extern long _timezone;   
-extern char *_tzname[2];  
-```  
-  
-## <a name="remarks"></a>备注  
- 在调用 `_ftime`、`localtime` 或 `_tzset` 时，`_daylight`、`_dstbias`、`_timezone` 和 `_tzname` 的值由 `TZ` 环境变量的值确定。 如果您未显式设置 `TZ` 的值，则 `_tzname[0]` 和 `_tzname[1]` 将分别包含“PST”和“PDT”的默认设置。  时间操作函数（[_tzset](../c-runtime-library/reference/tzset.md)、[_ftime](../c-runtime-library/reference/ftime-ftime32-ftime64.md)，和 [localtime](../c-runtime-library/reference/localtime-localtime32-localtime64.md)）尝试通过在操作系统中查询每个变量的默认值来设置 `_daylight`、`_dstbias` 和 `_timezone` 的值。 下表显示了时区全局变量的值。  
-  
-|变量|“值”|  
-|--------------|-----------|  
-|`_daylight`|如果在 `TZ` 中指定或从操作系统确定夏令时 (DST) 时区，则为非零值；否则为 0。 默认值为 1。|  
-|`_dstbias`|夏令时的偏移量。|  
-|`_timezone`|协调世界时和本地时间之间的差异（以秒为单位）。 默认值为 28,800。|  
-|`_tzname[0]`|派生自 `TZ` 环境变量的时区名称。 默认值是“PST”。|  
-|`_tzname[1]`|派生自 `TZ` 环境变量的 DST 时区名称。 默认值为“PDT”（太平洋夏令时）。|  
-  
-## <a name="see-also"></a>请参阅  
- [全局变量](../c-runtime-library/global-variables.md)   
- [_get_daylight](../c-runtime-library/reference/get-daylight.md)   
- [_get_dstbias](../c-runtime-library/reference/get-dstbias.md)   
- [_get_timezone](../c-runtime-library/reference/get-timezone.md)   
- [_get_tzname](../c-runtime-library/reference/get-tzname.md)
+
+`_daylight`、`_dstbias`、`_timezone` 和 `_tzname` 在某些时间和日期例程中用来调整本地时间。 这些全局变量因安全性更高的函数版本（它们取代了全局变量）而被弃用。
+
+|全局变量|等效函数|
+|---------------------|---------------------------|
+|`_daylight`|[_get_daylight](../c-runtime-library/reference/get-daylight.md)|
+|`_dstbias`|[_get_dstbias](../c-runtime-library/reference/get-dstbias.md)|
+|`_timezone`|[_get_timezone](../c-runtime-library/reference/get-timezone.md)|
+|`_tzname`|[_get_tzname](../c-runtime-library/reference/get-tzname.md)|
+
+在 Time.h 中按如下方式声明它们。
+
+## <a name="syntax"></a>语法
+
+```
+extern int _daylight; 
+extern int _dstbias; 
+extern long _timezone; 
+extern char *_tzname[2];
+```
+
+## <a name="remarks"></a>备注
+
+在调用 `_ftime`、`localtime` 或 `_tzset` 时，`_daylight`、`_dstbias`、`_timezone` 和 `_tzname` 的值由 `TZ` 环境变量的值确定。 如果您未显式设置 `TZ` 的值，则 `_tzname[0]` 和 `_tzname[1]` 将分别包含“PST”和“PDT”的默认设置。  时间操作函数（[_tzset](../c-runtime-library/reference/tzset.md)、[_ftime](../c-runtime-library/reference/ftime-ftime32-ftime64.md)，和 [localtime](../c-runtime-library/reference/localtime-localtime32-localtime64.md)）尝试通过在操作系统中查询每个变量的默认值来设置 `_daylight`、`_dstbias` 和 `_timezone` 的值。 下表显示了时区全局变量的值。
+
+|变量|“值”|
+|--------------|-----------|
+|`_daylight`|如果在 `TZ` 中指定或从操作系统确定夏令时 (DST) 时区，则为非零值；否则为 0。 默认值为 1。|
+|`_dstbias`|夏令时的偏移量。|
+|`_timezone`|协调世界时和本地时间之间的差异（以秒为单位）。 默认值为 28,800。|
+|`_tzname[0]`|派生自 `TZ` 环境变量的时区名称。 默认值是“PST”。|
+|`_tzname[1]`|派生自 `TZ` 环境变量的 DST 时区名称。 默认值为“PDT”（太平洋夏令时）。|
+
+## <a name="see-also"></a>请参阅
+
+[全局变量](../c-runtime-library/global-variables.md)<br/>
+[_get_daylight](../c-runtime-library/reference/get-daylight.md)<br/>
+[_get_dstbias](../c-runtime-library/reference/get-dstbias.md)<br/>
+[_get_timezone](../c-runtime-library/reference/get-timezone.md)<br/>
+[_get_tzname](../c-runtime-library/reference/get-tzname.md)

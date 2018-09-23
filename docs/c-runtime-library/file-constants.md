@@ -35,49 +35,41 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31d6deadb3d7cae7ed8717056b632cd46fa79370
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e026de7b18d6809251e49f71d382c741f62be512
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32389710"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028958"
 ---
 # <a name="file-constants"></a>文件常量
-## <a name="syntax"></a>语法  
-  
-```  
-  
-#include <fcntl.h>  
-  
-```  
-  
-## <a name="remarks"></a>备注  
- 由这些常量中的一个或多个常量构成的整数表达式确定允许进行的读取或写入操作的类型。 它是通过将一个或多个常量与平移模式常量组合来构成的。  
-  
- 文件常量如下所示：  
-  
- `_O_APPEND`  
- 在每次执行写入操作前，将文件指针重新定位到文件尾。  
-  
- `_O_CREAT`  
- 创建一个文件并打开该文件以进行写入；如果有由 filename 指定的文件存在，则此操作不起作用。  
-  
- `_O_EXCL`  
- 如果由 filename 指定的文件存在，则将返回一个错误值。 仅在与 `_O_CREAT` 一起使用时适用。  
-  
- `_O_RDONLY`  
- 打开文件以仅供读取；如果提供此标志，则无法提供 `_O_RDWR` 和 `_O_WRONLY`。  
-  
- `_O_RDWR`  
- 打开文件以供读取和写入；如果提供此标志，则无法提供 `_O_RDONLY` 和 `_O_WRONLY`。  
-  
- `_O_TRUNC`  
- 打开现有文件并将其截断为零长度；此文件必须具有写入权限。 销毁此文件的内容。 如果提供此标志，则无法指定 `_O_RDONLY`。  
-  
- `_O_WRONLY`  
- 打开文件以仅供写入；如果提供此标志，则无法提供 `_O_RDONLY` 和 `_O_RDWR`。  
-  
-## <a name="see-also"></a>请参阅  
- [_open、_wopen](../c-runtime-library/reference/open-wopen.md)   
- [_sopen、_wsopen](../c-runtime-library/reference/sopen-wsopen.md)   
- [全局常量](../c-runtime-library/global-constants.md)
+
+## <a name="syntax"></a>语法
+
+```
+
+#include <fcntl.h>
+
+```
+
+## <a name="remarks"></a>备注
+
+由这些常量中的一个或多个常量构成的整数表达式确定允许进行的读取或写入操作的类型。 它是通过将一个或多个常量与平移模式常量组合来构成的。
+
+文件常量如下所示：
+
+|返回的常量|描述|
+|-|-|
+| `_O_APPEND`  | 在每次执行写入操作前，将文件指针重新定位到文件尾。  |
+| `_O_CREAT`  | 创建一个文件并打开该文件以进行写入；如果有由 filename 指定的文件存在，则此操作不起作用。  |
+| `_O_EXCL`  | 如果由 filename 指定的文件存在，则将返回一个错误值。 仅在与 `_O_CREAT` 一起使用时适用。  |
+| `_O_RDONLY`  | 打开文件以仅供读取；如果提供此标志，则无法提供 `_O_RDWR` 和 `_O_WRONLY`。  |
+| `_O_RDWR`  | 打开文件以供读取和写入；如果提供此标志，则无法提供 `_O_RDONLY` 和 `_O_WRONLY`。  |
+| `_O_TRUNC`  | 打开现有文件并将其截断为零长度；此文件必须具有写入权限。 销毁此文件的内容。 如果提供此标志，则无法指定 `_O_RDONLY`。  |
+| `_O_WRONLY`  | 打开文件以仅供写入；如果提供此标志，则无法提供 `_O_RDONLY` 和 `_O_RDWR`。  |
+
+## <a name="see-also"></a>请参阅
+
+[_open、_wopen](../c-runtime-library/reference/open-wopen.md)<br/>
+[_sopen、_wsopen](../c-runtime-library/reference/sopen-wsopen.md)<br/>
+[全局常量](../c-runtime-library/global-constants.md)

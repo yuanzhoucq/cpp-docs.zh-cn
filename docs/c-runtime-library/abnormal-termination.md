@@ -27,34 +27,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f70520b60ccfaf1af5b223bcb4ea1a90639aa484
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7e311c27d61eca82019f8069b0984557af02c74a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32385548"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028202"
 ---
 # <a name="abnormaltermination"></a>_abnormal_termination
-指示是否在系统执行终止处理程序的内部列表时进入 [try-finally 语句](../cpp/try-finally-statement.md)的 `__finally` 块。  
-  
-## <a name="syntax"></a>语法  
-  
-```cpp  
-int   _abnormal_termination(  
-   );  
-```  
-  
-## <a name="return-value"></a>返回值  
- 如果系统*展开*堆栈，则为 `true`；否则为 `false`。  
-  
-## <a name="remarks"></a>备注  
- 这是用于管理展开异常的内部函数，并且不应从用户代码调用。  
-  
-## <a name="requirements"></a>惠?  
-  
-|例程所返回的值|必需的标头|  
-|-------------|---------------------|  
-|_abnormal_termination|excpt.h|  
-  
-## <a name="see-also"></a>请参阅  
- [try-finally 语句](../cpp/try-finally-statement.md)
+
+指示是否在系统执行终止处理程序的内部列表时进入 [try-finally 语句](../cpp/try-finally-statement.md)的 `__finally` 块。
+
+## <a name="syntax"></a>语法
+
+```cpp
+int   _abnormal_termination(
+   );
+```
+
+## <a name="return-value"></a>返回值
+
+如果系统*展开*堆栈，则为 `true`；否则为 `false`。
+
+## <a name="remarks"></a>备注
+
+这是用于管理展开异常的内部函数，并且不应从用户代码调用。
+
+## <a name="requirements"></a>要求
+
+|例程所返回的值|必需的标头|
+|-------------|---------------------|
+|_abnormal_termination|excpt.h|
+
+## <a name="see-also"></a>请参阅
+
+[try-finally 语句](../cpp/try-finally-statement.md)

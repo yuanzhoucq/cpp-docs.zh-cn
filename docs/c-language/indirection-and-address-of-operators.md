@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75afd44b8c0a31d9f3731a4c6f9fb86c15de4328
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 618a8053bea59896615d23514c2cf8aff29bea93
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32389415"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087470"
 ---
 # <a name="indirection-and-address-of-operators"></a>间接寻址和 Address-of 运算符
 
@@ -52,7 +52,6 @@ ms.locfileid: "32389415"
 
 如果操作数是一元 &#42; 运算符的结果，则不对两个运算符进行运算，并且结果像是同时省略了这两个运算符。 结果不为左值，运算符约束仍适用。 如果操作数是 &#91;&#93; 运算符的结果，则不会对 & 运算符进行运算，也不会对 &#91;&#93; 运算符暗含的一元 &#42; 进行运算。 其结果与删除 & 运算符并将 &#91;&#93; 运算符更改为 + 运算符的效果相同。 否则，结果为指向对象或操作数指定的函数的指针。
 
-
 ## <a name="examples"></a>示例
 
 下面的示例使用这些常用声明：
@@ -65,7 +64,7 @@ double d;
 
 此语句使用 address-of 运算符 (&) 来获取数组 `a` 的第六个元素的地址。 结果存储在指针变量 `pa` 中：
 
-```C  
+```C
 pa = &a[5];
 ```
 
@@ -89,11 +88,11 @@ int roundup( void );     /* Function declaration */
 int  *proundup  = roundup;
 int  *pround  = &roundup;
 assert( pround == proundup );
-```  
+```
 
 一旦声明函数 `roundup`，将声明并初始化指向 `roundup` 的两个指针。 第一个指针为 `proundup`，它仅通过函数名称进行初始化；第二个指针为 `pround`，它在初始化中使用 address-of 运算符。 初始化是等效的。
 
 ## <a name="see-also"></a>请参阅
 
-[间接寻址运算符：&#42;](../cpp/indirection-operator-star.md)  
-[Address-of 运算符：&](../cpp/address-of-operator-amp.md)  
+[间接寻址运算符：&#42;](../cpp/indirection-operator-star.md)<br/>
+[Address-of 运算符：&](../cpp/address-of-operator-amp.md)

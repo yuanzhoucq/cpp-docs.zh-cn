@@ -17,20 +17,20 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 262479a4538843cef2af61be0ec56347c7afc75f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: f4c194432c3d7442677a78046ac893e5e3e2a7ee
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222443"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46101340"
 ---
 # <a name="character-classification"></a>字符分类
 
 其中的每个例程均针对条件满意度测试指定的单字节字符、宽字符或多字节字符。 （根据定义，0 和 127 之间的 ASCII 字符集是所有多字节字符集的子集。 例如，日语的片假名包括 ASCII 以及非 ASCII 字符。）
 
- 测试条件受区域设置的 LC_CTYPE 类别设置影响；有关详细信息，请参阅 [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)。 这些不带 **_l** 后缀的函数版本使用此区域设置相关的行为的当前区域设置；带有 **_l** 后缀的版本相同，只不过它们使用传递的区域设置参数。
+测试条件受区域设置的 LC_CTYPE 类别设置影响；有关详细信息，请参阅 [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)。 这些不带 **_l** 后缀的函数版本使用此区域设置相关的行为的当前区域设置；带有 **_l** 后缀的版本相同，只不过它们使用传递的区域设置参数。
 
- 与你可能编写的测试相比，这些例程的执行速度通常更快，因此应优先考虑。 例如，以下代码执行速度慢于调用 `isalpha(c)`：
+与你可能编写的测试相比，这些例程的执行速度通常更快，因此应优先考虑。 例如，以下代码执行速度慢于调用 `isalpha(c)`：
 
 ```C
 if ((c >= 'A') && (c <= 'Z')) || ((c >= 'a') && (c <= 'z'))
