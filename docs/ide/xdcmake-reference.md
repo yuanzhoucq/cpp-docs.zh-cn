@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 383347dc5cd1ce0dcadff6bdee802b90fd52e85d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: caf28f01778bea31bc84a57fa74fed3221673dec
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333900"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039954"
 ---
 # <a name="xdcmake-reference"></a>XDCMake 参考
 xdcmake.exe 是一个将 .xdc 文件编译为 .xml 文件的程序。 当使用 [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) 编译源代码且源代码文件包含带 XML 标记的文档注释时，Visual C++ 编译器为每个源代码文件创建 .xdc 文件。  
@@ -41,13 +41,12 @@ xdcmake.exe 是一个将 .xdc 文件编译为 .xml 文件的程序。 当使用 
  xdcmake `input_filename options`  
   
 ## <a name="parameters"></a>参数  
- 其中：  
   
- `input_filename`  
- 用作 xdcmake.exe 输入的 .xdc 文件的文件名。 指定一个或多个 .xdc 文件或通过 *.xdc 使用当前目录中的所有 .xdc 文件。  
+*input_filename*<br/>
+用作 xdcmake.exe 输入的 .xdc 文件的文件名。 指定一个或多个 .xdc 文件或通过 *.xdc 使用当前目录中的所有 .xdc 文件。  
   
- `options`  
- 零个或多个以下项：  
+*options*<br/>
+零个或多个以下项：  
   
 |选项|描述|  
 |------------|-----------------|  
@@ -61,5 +60,5 @@ xdcmake.exe 是一个将 .xdc 文件编译为 .xml 文件的程序。 当使用 
   
  若要详细了解如何将文档注释添加到源代码文件，请参阅[建议的文档注释标记](../ide/recommended-tags-for-documentation-comments-visual-cpp.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [XML 文档](../ide/xml-documentation-visual-cpp.md)

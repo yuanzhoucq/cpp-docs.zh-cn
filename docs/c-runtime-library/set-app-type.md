@@ -18,19 +18,20 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc9b3901cb031a1cc08d911889dc97818cfb5a44
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1b2ad7e22bf6ba366a33dd44ce49c1a384f88b87
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32410176"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46041254"
 ---
 # <a name="setapptype"></a>_set_app_type
-在启动时使用的内部函数告知 CRT，应用属于控制台应用程序还是 GUI 应用。  
-  
-## <a name="syntax"></a>语法  
-  
-```cpp  
+
+在启动时使用的内部函数告知 CRT，应用属于控制台应用程序还是 GUI 应用。
+
+## <a name="syntax"></a>语法
+
+```cpp
 typedef enum _crt_app_type
 {
     _crt_unknown_app,
@@ -40,25 +41,27 @@ typedef enum _crt_app_type
 
 void __cdecl _set_app_type(
     _crt_app_type appType
-    ); 
-```  
-  
-## <a name="parameters"></a>参数  
- `appType`  
- 表示应用程序类型的值。 可能的值为：  
-  
-|“值”|描述|  
-|----------------|-----------------|  
-|_crt_unknown_app|未知应用程序类型。|  
-|_crt_console_app|控制台（命令行）应用程序。|  
-|_crt_gui_app|GUI (Windows) 应用程序。|  
-  
-## <a name="remarks"></a>备注  
- 通常情况下，不需要调用此函数。 它是在应用中调用 `main` 前执行的 C 运行时启动代码的一部分。
- 
-## <a name="requirements"></a>惠?  
-  
-|例程所返回的值|必需的标头|  
-|-------------|---------------------|  
+    );
+```
+
+## <a name="parameters"></a>参数
+
+*appType*<br/>
+表示应用程序类型的值。 可能的值为：
+
+|“值”|描述|
+|----------------|-----------------|
+|_crt_unknown_app|未知应用程序类型。|
+|_crt_console_app|控制台（命令行）应用程序。|
+|_crt_gui_app|GUI (Windows) 应用程序。|
+
+## <a name="remarks"></a>备注
+
+通常情况下，不需要调用此函数。 它是在应用中调用 `main` 前执行的 C 运行时启动代码的一部分。
+
+## <a name="requirements"></a>要求
+
+|例程所返回的值|必需的标头|
+|-------------|---------------------|
 |_set_app_type|process.h|
 

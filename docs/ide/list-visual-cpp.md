@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bff8e3588e31414f50cb6d150c0e8c9f2603586b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 15133673a33930222d5bf4c621c9ec9361e31f24
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33323974"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46046402"
 ---
 # <a name="ltlistgt-visual-c"></a>&lt;list&gt; (Visual C++)
 \<listheader> 块用于定义表或定义列表的标题行。 定义表时，只需提供标题中的术语的项。  
@@ -44,11 +44,11 @@ ms.locfileid: "33323974"
 ```  
   
 #### <a name="parameters"></a>参数  
- `term`  
- 要定义的术语，将在 `description` 中进行定义。  
+*term*<br/>
+要定义的术语，将在 `description` 中进行定义。  
   
- `description`  
- 项目符号或编号列表中的项或 `term` 的定义。  
+description<br/>
+项目符号或编号列表中的项或 `term` 的定义。  
   
 ## <a name="remarks"></a>备注  
  列表中的每个项均使用 \<item> 块指定。 创建定义列表时，需要同时指定 `term` 和 `description`。 但是，对于表、项目符号列表或编号列表，只需提供 `description` 的项。  
@@ -59,7 +59,7 @@ ms.locfileid: "33323974"
   
 ## <a name="example"></a>示例  
   
-```  
+```cpp  
 // xml_list_tag.cpp  
 // compile with: /doc /LD  
 // post-build command: xdcmake xml_list_tag.dll  
