@@ -1,28 +1,36 @@
 ---
 title: ModuleBase 类 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/21/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::Details::ModuleBase
+- implements/Microsoft::WRL::Details::ModuleBase::DecrementObjectCount
+- implements/Microsoft::WRL::Details::ModuleBase::IncrementObjectCount
+- implements/Microsoft::WRL::Details::ModuleBase::ModuleBase
+- implements/Microsoft::WRL::Details::ModuleBase::~ModuleBase
 dev_langs:
 - C++
 helpviewer_keywords:
 - ModuleBase class
+- Microsoft::WRL::Details::ModuleBase::DecrementObjectCount method
+- Microsoft::WRL::Details::ModuleBase::IncrementObjectCount method
+- Microsoft::WRL::Details::ModuleBase::ModuleBase, constructor
+- Microsoft::WRL::Details::ModuleBase::~ModuleBase, destructor
 ms.assetid: edce7591-6893-46f7-94a7-382827775548
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e6d60e5114d189ddede87899bb55fba25a296c57
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: a87b5d617663e87e8c69596e6b1eedca61996b80
+ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42601466"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47169549"
 ---
 # <a name="modulebase-class"></a>ModuleBase 类
 
@@ -42,17 +50,17 @@ class ModuleBase;
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
-|----------|-----------------|
-|[ModuleBase::ModuleBase 构造函数](../windows/modulebase-modulebase-constructor.md)|初始化 `Module` 类的实例。|
-|[ModuleBase::~ModuleBase 析构函数](../windows/modulebase-tilde-modulebase-destructor.md)|取消初始化的当前实例`Module`类。|
+名称                                         | 描述
+-------------------------------------------- | ---------------------------------------------------------
+[Modulebase:: Modulebase](#modulebase)        | 初始化 `Module` 类的实例。
+[ModuleBase:: ~ ModuleBase](#tilde-modulebase) | 取消初始化的当前实例`Module`类。
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
-|----------|-----------------|
-|[ModuleBase::DecrementObjectCount 方法](../windows/modulebase-decrementobjectcount-method.md)|实现时，递减的对象数模块所跟踪。|
-|[ModuleBase::IncrementObjectCount 方法](../windows/modulebase-incrementobjectcount-method.md)|实现时，递增模块所跟踪的对象数。|
+名称                                                      | 描述
+--------------------------------------------------------- | -------------------------------------------------------------------------
+[Modulebase:: Decrementobjectcount](#decrementobjectcount) | 实现时，递减的对象数模块所跟踪。
+[Modulebase:: Incrementobjectcount](#incrementobjectcount) | 实现时，递增模块所跟踪的对象数。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -64,6 +72,58 @@ class ModuleBase;
 
 **Namespace:** Microsoft::WRL::Details
 
-## <a name="see-also"></a>请参阅
+## <a name="tilde-modulebase"></a>ModuleBase:: ~ ModuleBase
 
-[Microsoft::WRL::Details 命名空间](../windows/microsoft-wrl-details-namespace.md)
+支持 WRL 基础结构，不应在代码中直接使用。
+
+```cpp
+virtual ~ModuleBase();
+```
+
+### <a name="remarks"></a>备注
+
+取消初始化的当前实例`ModuleBase`类。
+
+## <a name="decrementobjectcount"></a>Modulebase:: Decrementobjectcount
+
+支持 WRL 基础结构，不应在代码中直接使用。
+
+```cpp
+virtual long DecrementObjectCount() = 0;
+```
+
+### <a name="return-value"></a>返回值
+
+递减操作之前的计数。
+
+### <a name="remarks"></a>备注
+
+实现时，递减的对象数模块所跟踪。
+
+## <a name="incrementobjectcount"></a>Modulebase:: Incrementobjectcount
+
+支持 WRL 基础结构，不应在代码中直接使用。
+
+```cpp
+virtual long IncrementObjectCount() = 0;
+```
+
+### <a name="return-value"></a>返回值
+
+递增操作之前的计数。
+
+### <a name="remarks"></a>备注
+
+实现时，递增模块所跟踪的对象数。
+
+## <a name="modulebase"></a>Modulebase:: Modulebase
+
+支持 WRL 基础结构，不应在代码中直接使用。
+
+```cpp
+ModuleBase();
+```
+
+### <a name="remarks"></a>备注
+
+初始化 `Module` 类的实例。

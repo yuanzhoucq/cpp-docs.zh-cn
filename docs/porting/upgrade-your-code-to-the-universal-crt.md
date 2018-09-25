@@ -8,12 +8,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1091a28448aa6531aa909117e0284e19bbcc7cd8
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 4f53ee06b4d964307cdcc294e415f6e470eb176f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42578142"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46401052"
 ---
 # <a name="upgrade-your-code-to-the-universal-crt"></a>将代码升级到通用 CRT
 
@@ -51,8 +51,8 @@ C 和 C++ 编译器特定的运行时支持库 **vcruntime**，包含支持程�
   
 ## <a name="see-also"></a>请参阅  
 
-[Visual C++ 移植和升级指南](visual-cpp-porting-and-upgrading-guide.md)  
-[潜在的升级问题概述 (Visual C++)](overview-of-potential-upgrade-issues-visual-cpp.md)  
-[从 Visual C++ 早期版本升级项目](upgrading-projects-from-earlier-versions-of-visual-cpp.md)  
-[Visual C++ 更改历史记录（2003 - 2015）](visual-cpp-change-history-2003-2015.md)  
+[Visual C++ 移植和升级指南](visual-cpp-porting-and-upgrading-guide.md)<br/>
+[潜在的升级问题概述 (Visual C++)](overview-of-potential-upgrade-issues-visual-cpp.md)<br/>
+[从 Visual C++ 早期版本升级项目](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
+[Visual C++ 更改历史记录（2003 - 2015）](visual-cpp-change-history-2003-2015.md)<br/>
 [Visual Studio 2017 中 C++ 的符合性改进](../cpp-conformance-improvements-2017.md)  

@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2cec232bb4e4f2f6ac1ab9af703b368eec0ba5dd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eec1620d9ae84e5c0b957b7426ad388c70626813
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33331514"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46379211"
 ---
 # <a name="linker-property-pages"></a>“链接器”属性页
 
@@ -51,13 +51,13 @@ ms.locfileid: "33331514"
 
 Per-user Redirection 强制将任何对 HKCR 的写入重定向到 HKEY\_CURRENT\_USER (HKCU)。 如果关闭了 Per-user Redirection，当程序试图写入到 HKCR 时，可能导致[项目生成错误 PRJ0050](../error-messages/tool-errors/project-build-error-prj0050.md)。
 
-### <a name="link-library-dependencies"></a>Link Library Dependencies
+### <a name="link-library-dependencies"></a>链接库依赖项
 
 指定是否链接由依赖项目生成的 .lib 文件。 通常，需要链接 .lib 文件，但某些 DLL 可能并非如此。
 
 也可通过提供文件名和相对路径来指定 .obj 文件，如“..\\..\MyLibProject\MyObjFile.obj”。 如果 .obj 文件 的源代码包含预编译标头（如 pch.h），则 pch.obj 文件位于 MyObjFile.obj 所在的文件夹中，且必须将 pch.obj 添加为附加依赖项。
 
-### <a name="use-library-dependency-inputs"></a>Use Library Dependency Inputs
+### <a name="use-library-dependency-inputs"></a>使用库依赖项输入
 
 在大型项目中，当依赖项目生成 .lib 文件时，将禁用增量链接。 如果有许多依赖项目生成 .lib 文件，则生成应用程序可能需要很长时间。 当此属性设置为“是”时，项目系统链接 .obj 文件中依赖项目生成的 .lib 文件，从而启用增量链接。
 
@@ -65,5 +65,5 @@ Per-user Redirection 强制将任何对 HKCR 的写入重定向到 HKEY\_CURRENT
 
 ## <a name="see-also"></a>请参阅
 
-[“选项”对话框 ->“项目和解决方案”->“VC++ 项目设置”](/visualstudio/ide/reference/vcpp-project-settings-projects-and-solutions-options-dialog-box)  
-[属性页](../ide/property-pages-visual-cpp.md)  
+[“选项”对话框 ->“项目和解决方案”->“VC++ 项目设置”](/visualstudio/ide/reference/vcpp-project-settings-projects-and-solutions-options-dialog-box)<br>
+[属性页](../ide/property-pages-visual-cpp.md)

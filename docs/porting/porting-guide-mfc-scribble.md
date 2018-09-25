@@ -12,14 +12,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a73a822e3cf6daa9d9d7c3ebdabbcd4671fc5c7e
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: a8230cf66fd3cc8cdce017c07f05f58b381ebd14
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42578157"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46400908"
 ---
 # <a name="porting-guide-mfc-scribble"></a>迁移指南：MFC Scribble
+
 本主题是向你介绍 Visual C++ 项目升级过程的几个主题中的第一个主题，具体升级过程为将在较旧版本的 Visual Studio 中创建的 Visual C++ 项目升级到 Visual Studio 2017。 这些主题通过示例介绍升级过程，从非常简单的项目开始，过渡到稍微更复杂的项目。 在本主题中，我们将完成特定项目 (MFC Scribble) 的升级过程。 它很适合作为对 C++ 项目升级过程的基本介绍。  
   
 每个版本的 Visual Studio 都可能引入不兼容问题，使从较早版本的 Visual Studio 移动代码到较新的版本变得复杂。 有时需要对你的代码进行必要的更改，因此你必须重新编译并更新代码，有时需要对项目文件进行必要的更改。 当你打开使用早期版本的 Visual Studio 创建的项目时，Visual Studio 会自动询问你是否要将项目或解决方案更新到最新版本。 这些工具通常仅升级项目文件；它们不修改你的源代码。  
@@ -37,6 +38,7 @@ MFC Scribble 是一个众所周知的示例，已包括在许多不同版本的 
 请注意，使用 `/Upgrade` 选项（而不是使用向导来升级项目），你还可以在命令行运行 devenv。 请参阅 [/Upgrade (devenv.exe)](/visualstudio/ide/reference/upgrade-devenv-exe)。 这在为大量项目自动执行升级过程中很有帮助。  
   
 ### <a name="step-1-converting-the-project-file"></a>步骤 1。 转换项目文件  
+
 在 Visual Studio 2017 中打开旧的项目文件时，Visual Studio 主动将项目文件转换为我们接受的最新版本。 出现了下面的对话框：  
   
 ![复查项目和解决方案更改](../porting/media/scribbleprojectupgrade.PNG "ScribbleProjectUpgrade")  
@@ -56,6 +58,7 @@ Visual Studio 随后将显示一个迁移报告，该报告列出旧项目文件
 在本例中，问题都是警告，并且 Visual Studio 在项目文件中进行了相应的更改。 项目关注的最大差别就在于生成工具从 vcbuild 更改为 msbuild。 在 Visual Studio 2010 中首先引入了此更改。 其他更改包括项目文件本身中元素序列的重新排列。 针对此简单项目，无需对这些问题进行深入关注。  
   
 ### <a name="step-2-getting-it-to-build"></a>步骤 2。 开始生成  
+
 在生成之前，我们检查平台工具集以便了解项目系统使用的是何种编译器版本。 在“配置属性”之下的“项目属性”对话框中，请在“常规”类别中查看“平台工具集”属性。 它包含 Visual Studio 的版本和平台工具版本号，在本例中，Visual Studio 2017 版本的工具版本号为 v141。 转换使用 Visual C++ 2010、2012、2013 或 2015 进行初始编译的项目时，工具集不自动更新为 Visual Studio 2017 工具集。   
   
 若要切换到 Unicode，请打开“配置属性”之下的项目属性，选择“常规”部分，然后找到“字符集”属性。 将此项从“使用多字节字符集”更改为“使用 Unicode 字符集”。 此更改的效果：现在定义了 _UNICODE 和 UNICODE 宏，而未定义 _MBCS，这一点你可以在“命令行”属性处的“C/C++”类别之下的“属性”对话框中进行验证。  
@@ -72,18 +75,20 @@ Visual Studio 随后将显示一个迁移报告，该报告列出旧项目文件
 _WIN32_WINNT not defined. Defaulting to _WIN32_WINNT_MAXVER (see WinSDKVer.h)  
 ```  
   
- 这是一个警告而不是错误，在升级 Visual C++ 项目时很常见。 这是定义我们的应用程序将在其上运行的最低版本的 Windows 的宏。 如果我们忽略该警告，则接受表示当前 Windows 版本的默认值（_WIN32_WINNT_MAXVER）。 有关可能的值的表，请参阅 [Using the Windows Headers](/windows/desktop/WinProg/using-the-windows-headers)（使用 Windows 标头）。 例如，我们可以将其设置为自 Vista 起的任何版本上运行。  
+这是一个警告而不是错误，在升级 Visual C++ 项目时很常见。 这是定义我们的应用程序将在其上运行的最低版本的 Windows 的宏。 如果我们忽略该警告，则接受表示当前 Windows 版本的默认值（_WIN32_WINNT_MAXVER）。 有关可能的值的表，请参阅 [Using the Windows Headers](/windows/desktop/WinProg/using-the-windows-headers)（使用 Windows 标头）。 例如，我们可以将其设置为自 Vista 起的任何版本上运行。  
   
-```  
+```cpp
 #define _WIN32_WINNT _WIN32_WINNT_VISTA  
 ```  
   
 如果代码使用你用此宏该指定的 Windows 版本上不可用的部分 Windows API，则你应该将其视为编译器错误。 对于 Scribble 代码，不存在任何错误。  
   
 ### <a name="step-3-testing-and-debugging"></a>步骤 3。 测试和调试  
+
 由于没有任何测试套件，因此我们只是启动应用，通过用户界面手动测试其功能。 观察不到任何问题。  
   
 ### <a name="step-4-improve-the-code"></a>步骤 4。 改进代码  
+
 现在你已经迁移到 Visual Studio 2017，建议执行一些更改来利用新的 C++ 功能。 当前版本的 C++ 编译器相比早期版本更符合 C++ 标准，因此如果想做一些代码更改以使代码更加安全，并更易于移植到其他编译器和操作系统上，则应考虑做些改进。  
   
 ## <a name="next-steps"></a>后续步骤  
@@ -92,5 +97,5 @@ Scribble 是一款小巧而简单 Windows 桌面应用程序，且不难转换�
   
 ## <a name="see-also"></a>请参阅  
  
-[移植和升级：示例和案例研究](../porting/porting-and-upgrading-examples-and-case-studies.md)   
+[移植和升级：示例和案例研究](../porting/porting-and-upgrading-examples-and-case-studies.md)<br/>
 [下一个示例：COM Spy](../porting/porting-guide-com-spy.md)

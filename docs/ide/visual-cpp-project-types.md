@@ -20,19 +20,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80ac3479338dcb7f6be9e7e5f3f150cc8e15a9a9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 45b62d5ce8f49b023721cf7323dc42e1c65c2109
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339977"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46396683"
 ---
 # <a name="visual-c-project-types"></a>Visual C++ 项目类型
 
 可以使用项目模板来创建基本程序结构、菜单、工具栏、图标、引用以及适合要创建的项目类型的 `#include` 语句。 Visual Studio 包括多种类型的 Visual C++ 项目模板并为其中许多项目模板提供了向导，以便可以在创建项目时对其进行自定义。 在创建项目之后，可以立即生成它并运行应用程序；在开发应用程序时最好间歇性生成该项目。
 
-不必使用模板来创建项目，但在大多数情况下这样做会更为高效，因为修改提供的项目文件和结构比从头创建它们更为简单。  
-  
+不必使用模板来创建项目，但在大多数情况下这样做会更为高效，因为修改提供的项目文件和结构比从头创建它们更为简单。
+
 > [!NOTE]
 > 你可以使用 C++ 项目模板来创建 C 语言项目。 在生成的项目中，找到文件扩展名为 .cpp 的文件并将它更改为 .c。 然后，在该项目（而非解决方案）的“项目属性”  页上，依次展开“配置属性” 和“C/C++”  ，然后选择“高级” 。 将“编译为”  设置更改为“编译为 C 代码 (/TC)” 。
 
@@ -42,8 +42,8 @@ Visual Studio 中包含的项目模板取决于安装的产品版本和工作负
 
 ### <a name="windows-desktop"></a>Windows 桌面
 
-|项目模板|描述|  
-|----------------------|-----------------------------| 
+|项目模板|描述|
+|----------------------|-----------------------------|
 |[Windows 控制台应用程序](../windows/creating-a-console-application.md)|用于创建 Windows 控制台应用程序的项目。|
 |[Windows 桌面应用程序](../windows/walkthrough-creating-windows-desktop-applications-cpp.md)|用于创建 Windows 桌面 (Win32) 应用程序的项目。|
 |[动态链接库](../build/walkthrough-creating-and-using-a-dynamic-link-library-cpp.md)|用于创建动态链接库 (DLL) 的项目。|
@@ -104,4 +104,4 @@ Visual Studio 中包含的项目模板取决于安装的产品版本和工作负
 
 ## <a name="see-also"></a>请参阅
 
-[使用应用程序向导创建桌面项目](../ide/creating-desktop-projects-by-using-application-wizards.md)   
+[使用应用程序向导创建桌面项目](../ide/creating-desktop-projects-by-using-application-wizards.md)

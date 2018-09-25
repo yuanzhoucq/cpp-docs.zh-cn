@@ -18,63 +18,67 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15133673a33930222d5bf4c621c9ec9361e31f24
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 2ac136ac009f9597c3773e210aaabf4adcb6b738
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46046402"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46433238"
 ---
 # <a name="ltlistgt-visual-c"></a>&lt;list&gt; (Visual C++)
-\<listheader> 块用于定义表或定义列表的标题行。 定义表时，只需提供标题中的术语的项。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-<list type="bullet" | "number" | "table">  
-   <listheader>  
-      <term>term</term>  
-      <description>description</description>  
-   </listheader>  
-   <item>  
-      <term>term</term>  
-      <description>description</description>  
-   </item>  
-</list>  
-```  
-  
-#### <a name="parameters"></a>参数  
+
+\<listheader> 块用于定义表或定义列表的标题行。 定义表时，只需提供标题中的术语的项。
+
+## <a name="syntax"></a>语法
+
+```
+<list type="bullet" | "number" | "table">
+   <listheader>
+      <term>term</term>
+      <description>description</description>
+   </listheader>
+   <item>
+      <term>term</term>
+      <description>description</description>
+   </item>
+</list>
+```
+
+#### <a name="parameters"></a>参数
+
 *term*<br/>
-要定义的术语，将在 `description` 中进行定义。  
-  
+要定义的术语，将在 `description` 中进行定义。
+
 description<br/>
-项目符号或编号列表中的项或 `term` 的定义。  
-  
-## <a name="remarks"></a>备注  
- 列表中的每个项均使用 \<item> 块指定。 创建定义列表时，需要同时指定 `term` 和 `description`。 但是，对于表、项目符号列表或编号列表，只需提供 `description` 的项。  
-  
- 列表或表可根据需要具有多个 \<item> 块。  
-  
- 使用 [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) 进行编译可以将文档注释处理到文件中。  
-  
-## <a name="example"></a>示例  
-  
-```cpp  
-// xml_list_tag.cpp  
-// compile with: /doc /LD  
-// post-build command: xdcmake xml_list_tag.dll  
-/// <remarks>Here is an example of a bulleted list:  
-/// <list type="bullet">  
-/// <item>  
-/// <description>Item 1.</description>  
-/// </item>  
-/// <item>  
-/// <description>Item 2.</description>  
-/// </item>  
-/// </list>  
-/// </remarks>  
-class MyClass {};  
-```  
-  
-## <a name="see-also"></a>请参阅  
- [XML 文档](../ide/xml-documentation-visual-cpp.md)
+项目符号或编号列表中的项或 `term` 的定义。
+
+## <a name="remarks"></a>备注
+
+列表中的每个项均使用 \<item> 块指定。 创建定义列表时，需要同时指定 `term` 和 `description`。 但是，对于表、项目符号列表或编号列表，只需提供 `description` 的项。
+
+列表或表可根据需要具有多个 \<item> 块。
+
+使用 [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) 进行编译可以将文档注释处理到文件中。
+
+## <a name="example"></a>示例
+
+```cpp
+// xml_list_tag.cpp
+// compile with: /doc /LD
+// post-build command: xdcmake xml_list_tag.dll
+/// <remarks>Here is an example of a bulleted list:
+/// <list type="bullet">
+/// <item>
+/// <description>Item 1.</description>
+/// </item>
+/// <item>
+/// <description>Item 2.</description>
+/// </item>
+/// </list>
+/// </remarks>
+class MyClass {};
+```
+
+## <a name="see-also"></a>请参阅
+
+[XML 文档](../ide/xml-documentation-visual-cpp.md)

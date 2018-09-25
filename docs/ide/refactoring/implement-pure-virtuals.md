@@ -10,17 +10,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: afce516f2718a76658846ed4f992aeabff75330b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 234ae9a67bcbc60ea156fbacb5169d0bd1573a91
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33328021"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46442755"
 ---
 # <a name="implement-pure-virtuals"></a>实现纯虚方法
-功能：让你可以立即生成实现类中所有纯虚方法所需的代码。 
+功能：让你可以立即生成实现类中所有纯虚方法所需的代码。
 
-时间：想要从具有纯虚函数的类中继承时使用该功能。  
+时间：想要从具有纯虚函数的类中继承时使用该功能。
 
 原因：可以手动逐一实现所有纯虚函数，但此功能可自动生成所有方法签名。
 

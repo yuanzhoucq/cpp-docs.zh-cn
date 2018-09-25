@@ -20,14 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18217b1d4574f6591287ab6cb83e28c67fe95537
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a5dddac6d5e8b5be1b99d9c8004fcaa36d6b0b30
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43218119"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46394024"
 ---
 # <a name="porting-from-unix-to-win32"></a>从 UNIX 到 Win32 的迁移
+
 将应用程序从 UNIX 迁移到 Windows 时，有以下几个选项：  
   
 - 使用 UNIX 库来将应用程序从 UNIX 迁移到 Win32  
@@ -84,6 +85,6 @@ UNIX 程序员考虑的另一个选项是 Windows POSIX 子系统。 但是，�
   
 ## <a name="see-also"></a>请参阅  
  
-[Visual C++ 移植和升级指南](visual-cpp-change-history-2003-2015.md)   
-[UNIX](../c-runtime-library/unix.md)   
+[Visual C++ 移植和升级指南](visual-cpp-change-history-2003-2015.md)<br/>
+[UNIX](../c-runtime-library/unix.md)<br/>
 [推理规则](../build/inference-rules.md)

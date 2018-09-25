@@ -12,14 +12,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 019e63009706fd5d0ab22044642449c5bce3c3a6
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 84aded46176c1c286ce5270254a0455dfce39d5d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222376"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46427863"
 ---
 # <a name="porting-guide-spy"></a>迁移指南：Spy++
+
 此移植案例研究旨在让你了解典型的移植项目、可能遇到的问题类型，以及解决移植问题的一些常用提示和技巧。 这并不是权威的移植指南，因为移植项目的体验很大程度取决于代码的详细信息。  
   
 ## <a name="spy"></a>Spy++  
@@ -74,7 +75,7 @@ C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\atlmfc\include\afxv_w32.h
   
 Microsoft 不再为 Windows XP 提供支持，因此，即使 Visual Studio 2015 中允许面向 Windows XP，你仍应在应用程序中逐步取消对此版本的支持，并鼓励你的用户采用新版本的 Windows。  
   
- 若要消除此错误，请将“项目属性”设置更新为当前要面向的最低版本的 Windows，以定义 WINVER。 [此处](/windows/desktop/WinProg/using-the-windows-headers)可找到包含各种 Windows 版本的值的表。  
+若要消除此错误，请将“项目属性”设置更新为当前要面向的最低版本的 Windows，以定义 WINVER。 [此处](/windows/desktop/WinProg/using-the-windows-headers)可找到包含各种 Windows 版本的值的表。  
   
 Stdafx.h 文件包含一些宏定义。  
   
@@ -551,7 +552,7 @@ wsprintf(szTmp, _T("%d.%2.2d.%4.4d"), rmj, rmm, rup);
   
 _T 宏可以使字符串文本编译为 char 字符串或 wchar_t 字符串，具体取决于 MBCS 或 UNICODE 的设置。 若要在 Visual Studio 中将所有字符串替换为 _T，首先需要打开“快速替换”框（键盘：Ctrl+F）或“在文件中替换”（键盘：Ctrl+Shift+H），然后选中“使用正则表达式”复选框。 输入 `((\".*?\")|('.+?'))` 作为搜索文本，输入 `_T($1)` 作为替换文本。 如果某些字符串周围已存在 _T 宏，此过程将重新添加该宏，并且可能还会发现不需要 _T 的情况（例如使用 `#include` 时），因此最好使用“替换下一个”而不是“全部替换”。  
   
- 此特定函数 [wsprintf](/windows/desktop/api/winuser/nf-winuser-wsprintfa) 实际上在 Windows 标头中已定义，相关文档建议不使用此函数，因为可能会发生缓冲区溢出。 `szTmp` 缓冲区未给定大小，因此函数无法检查该缓冲区是否可容纳要写入的所有数据。 请参阅下一节有关移植到安全 CRT 的内容，我们将在下一节修复其他类似的问题。 最终使用 [_stprintf_s](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md) 进行替换。  
+此特定函数 [wsprintf](/windows/desktop/api/winuser/nf-winuser-wsprintfa) 实际上在 Windows 标头中已定义，相关文档建议不使用此函数，因为可能会发生缓冲区溢出。 `szTmp` 缓冲区未给定大小，因此函数无法检查该缓冲区是否可容纳要写入的所有数据。 请参阅下一节有关移植到安全 CRT 的内容，我们将在下一节修复其他类似的问题。 最终使用 [_stprintf_s](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md) 进行替换。  
   
 这是转换为 Unicode 时的另一个常见错误。  
   
@@ -680,5 +681,5 @@ int CPerfTextDataBase::NumStrings(LPCTSTR mszStrings) const
   
 ## <a name="see-also"></a>请参阅  
 
-[移植和升级：示例和案例研究](../porting/porting-and-upgrading-examples-and-case-studies.md)   
+[移植和升级：示例和案例研究](../porting/porting-and-upgrading-examples-and-case-studies.md)<br/>
 [上一个案例研究：COM Spy](../porting/porting-guide-com-spy.md)

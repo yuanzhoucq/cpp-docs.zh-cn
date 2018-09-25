@@ -17,23 +17,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4ea6619804c4215ecb53fa0e92a2b12bbdc5e31
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9dfadd39281143baa35d8a4e30fcef345335cacc
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33334394"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46401900"
 ---
 # <a name="makefile-project-wizard"></a>生成文件项目向导
-使用此向导为生成引擎创建要执行的命令行。 创建项目后，可在项目的[属性页](../ide/working-with-project-properties.md)中查看和编辑项目的属性。  
-  
-## <a name="overview"></a>概述  
- 此向导页描述正在创建的项目的当前项目设置。 默认情况下，项目设置为生成 ProjName.exe 的调试和发布配置。  
-  
- 若要更改这些默认值，请单击向导左列中的“[应用程序设置](../ide/application-settings-makefile-project-wizard.md)”选项卡，并进行所需的更改。  
-  
-## <a name="see-also"></a>请参阅  
- [创建生成文件项目](../ide/creating-a-makefile-project.md)   
- [NMAKE 参考](../build/nmake-reference.md)   
- [生成文件中的特殊字符](../build/special-characters-in-a-makefile.md)   
- [生成文件的内容](../build/contents-of-a-makefile.md)
+
+使用此向导为生成引擎创建要执行的命令行。 创建项目后，可在项目的[属性页](../ide/working-with-project-properties.md)中查看和编辑项目的属性。
+
+## <a name="overview"></a>概述
+
+此向导页描述正在创建的项目的当前项目设置。 默认情况下，项目设置为生成 ProjName.exe 的调试和发布配置。
+
+若要更改这些默认值，请单击向导左列中的“[应用程序设置](../ide/application-settings-makefile-project-wizard.md)”选项卡，并进行所需的更改。
+
+## <a name="see-also"></a>请参阅
+
+[创建生成文件项目](../ide/creating-a-makefile-project.md)<br>
+[NMAKE 参考](../build/nmake-reference.md)<br>
+[生成文件中的特殊字符](../build/special-characters-in-a-makefile.md)<br>
+[生成文件的内容](../build/contents-of-a-makefile.md)
