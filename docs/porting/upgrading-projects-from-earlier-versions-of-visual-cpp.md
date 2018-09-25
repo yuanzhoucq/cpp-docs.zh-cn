@@ -15,14 +15,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed8a8ab088f3fbb10b5f477d125dbf3f2a7ac932
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 8091bbba7dcee344677c54a7944708679f2ff867
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42578293"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46411841"
 ---
 # <a name="upgrading-projects-from-earlier-versions-of-visual-c"></a>从 Visual C++ 早期版本升级项目
+
 在大多数情况下，你可以打开在 Visual Studio 早期版本中创建的项目。 但是，为实现这一点，Visual Studio 将升级项目。 如果你保存升级的该项目，它将无法在早期版本中打开。  
   
 > [!IMPORTANT]
@@ -44,7 +45,7 @@ ms.locfileid: "42578293"
   
 ## <a name="see-also"></a>请参阅  
 
-[生成系统更改](../build/build-system-changes.md)  
-[Visual Studio 2017 中 Visual C++ 的新增功能](../what-s-new-for-visual-cpp-in-visual-studio.md) 
-[Visual C++ 更改历史记录（2003 - 2015）](../porting/visual-cpp-change-history-2003-2015.md)   
+[生成系统更改](../build/build-system-changes.md)<br/>
+[Visual Studio 2017 中 Visual C++ 的新增功能](../what-s-new-for-visual-cpp-in-visual-studio.md)<br/>
+[Visual C++ 更改历史记录（2003 - 2015）](../porting/visual-cpp-change-history-2003-2015.md)<br/>
 [非标准行为](../cpp/nonstandard-behavior.md)

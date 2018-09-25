@@ -12,14 +12,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d264c77668e0220c4198657b8133f0ebea34e6cb
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 9cf2cd2828a7eb4b590cf18bcca1dcac055d5e6c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42578179"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46439791"
 ---
 # <a name="porting-and-upgrading-examples-and-case-studies"></a>迁移和升级：示例和案例研究
+
 通过查看成功的迁移情景，可以了解从以前的 Visual C++ 版本迁移到当前版本可能会遇到的问题。  
   
 ## <a name="examples-of-successful-migrations"></a>成功迁移示例 

@@ -10,17 +10,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 44211105429e33c136999a7877ac6ee42af29f17
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5058e0b3bab1fb5fb5e8d52b55e3fa7c37fd8a4e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33327835"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46430032"
 ---
 # <a name="move-definition-location"></a>移动定义位置
 功能：让你可以将函数定义立即移动到相应的头文件。
 
-时间：具有一个想要移动到头文件的函数时使用该功能。  
+时间：具有一个想要移动到头文件的函数时使用该功能。
 
 原因：可以手动移动该函数，但此功能将自动移动函数，在必要时创建头文件。
 

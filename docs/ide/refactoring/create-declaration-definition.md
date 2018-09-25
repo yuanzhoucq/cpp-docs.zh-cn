@@ -10,17 +10,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60d583ec47a3f9c5b61599a5945e3cfa0d375b1d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 383691a5c2da2af6e4a992ab8766cd99ffa3d781
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33331278"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46408383"
 ---
 # <a name="create-declaration--definition"></a>创建声明/定义
 功能：允许立即生成函数的声明或定义。
 
-时间：有需要声明的函数，反之亦然。  
+时间：有需要声明的函数，反之亦然。
 
 原因：可手动创建声明/定义，但这将自动创建声明/定义，并在需要时创建头文件/代码文件。
 

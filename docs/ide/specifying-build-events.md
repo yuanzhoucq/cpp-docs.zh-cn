@@ -25,12 +25,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5940f0d6efaec402a4a85ed659f42d7eab1bf91d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dfdedf01c6203c483c1aa30d5d2934caa66e76d2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33334959"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46375960"
 ---
 # <a name="specifying-build-events"></a>指定生成事件
 
@@ -64,6 +64,6 @@ ms.locfileid: "33334959"
 
 ## <a name="see-also"></a>请参阅
 
-[了解自定义生成步骤和生成事件](../ide/understanding-custom-build-steps-and-build-events.md)  
-[用于生成命令和属性的常用宏](../ide/common-macros-for-build-commands-and-properties.md)  
-[生成自定义项疑难解答](../ide/troubleshooting-build-customizations.md)  
+[了解自定义生成步骤和生成事件](../ide/understanding-custom-build-steps-and-build-events.md)<br>
+[用于生成命令和属性的常用宏](../ide/common-macros-for-build-commands-and-properties.md)<br>
+[生成自定义项疑难解答](../ide/troubleshooting-build-customizations.md)

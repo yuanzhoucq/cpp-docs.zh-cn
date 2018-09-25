@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df30bdea71a890eed25f546a53e7f329fa330762
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: d4e7742afd3fecc4dd115624da0c1650dc662004
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43132015"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46412517"
 ---
 # <a name="ide-and-tools-for-visual-c-development"></a>用于 Visual C++ 开发的 IDE 和工具
 
@@ -29,7 +29,7 @@ ms.locfileid: "43132015"
 
 ## <a name="creating-a-solution-and-projects"></a>创建解决方案和项目
 
-一个项目基本上就是一组植入进可执行文件的源代码文件和资源（例如图像或数据文件）。 
+一个项目基本上就是一组植入进可执行文件的源代码文件和资源（例如图像或数据文件）。
 
 Visual Studio 2015 提供对 MSBuild 项目的支持。 可下载适用于其他生成系统（例如 Qt 或 CMake）的 Visual Studio 扩展。
 
@@ -119,7 +119,7 @@ Visual Studio 包含用于 C++ 的静态代码分析工具，包括 [C++ Core Gu
 
 ## <a name="deploy-completed-applications"></a>部署已完成的应用程序
 
-使用“项目” > “Microsoft Store”菜单选项，可通过 Microsoft Store 向客户部署 UWP 应用。 将在后台自动处理 CRT 的部署。 有关详细信息，请参阅[发布 Windows 应用和游戏](/windows/uwp/publish/)。 
+使用“项目” > “Microsoft Store”菜单选项，可通过 Microsoft Store 向客户部署 UWP 应用。 将在后台自动处理 CRT 的部署。 有关详细信息，请参阅[发布 Windows 应用和游戏](/windows/uwp/publish/)。
 
 将本机 C++ 桌面应用程序部署到另一台计算机时，必须安装该应用程序及其依赖的任何库文件。 可通过三种方式使用应用程序部署通用 C++ 运行时 (UCRT)：集中部署、本地部署或静态链接。 有关详细信息，请参阅[部署桌面应用程序](../ide/deploying-native-desktop-applications-visual-cpp.md)。
 
