@@ -5,7 +5,7 @@ ms.custom: mvc
 ms.date: 12/12/2017
 ms.topic: tutorial
 ms.technology:
-- devlang-C++
+- cpp-tools
 ms.devlang: C++
 dev_langs:
 - C++
@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05a5204234eb127da676e3b4a12ef875baecdad0
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: c9c32f6811a18fae00cb2943a9ca97a89cf159a1
+ms.sourcegitcommit: 92c568e9466ffd7346a4120c478c9bdea61c8756
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45705778"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47029588"
 ---
 # <a name="build-and-run-a-c-console-app-project"></a>生成并运行 c + + 控制台应用程序项目
 
@@ -45,7 +45,7 @@ ms.locfileid: "45705778"
 
    ![启动项目](../build/media/vscpp-start-without-debugging.gif "启动项目")
 
-    打开一个控制台窗口，然后运行您的应用程序。 当在 Visual Studio 中启动控制台应用程序时，它运行你的代码，然后打印"按任意键继续。 . ." 若要让人可以看到输出。
+   打开一个控制台窗口，然后运行您的应用程序。 当在 Visual Studio 中启动控制台应用程序时，它运行你的代码，然后打印"按任意键继续。 . ." 若要让人可以看到输出。
 
 祝贺你！ 你已创建你的第一个"Hello，world ！" 在 Visual Studio 中的控制台应用 ！ 按某个键关闭控制台窗口并返回到 Visual Studio。
 

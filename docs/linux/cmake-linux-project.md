@@ -15,16 +15,16 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: bbc19b4c8e698c520be2283376ac5297cdae33df
-ms.sourcegitcommit: f923f667065cd6c4203d10ca9520600ee40e5f84
+ms.openlocfilehash: 346e83461fd9dbfb7635b85e8765d241564d3157
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42900507"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45708001"
 ---
 # <a name="configure-a-linux-cmake-project"></a>配置 Linux CMake 项目
 
-**Visual Studio 2017 版本 15.4 及更高版本**  
+**Visual Studio 2017 版本 15.4 及更高版本**<br/>
 为 Visual Studio 安装 Linux C++ 工作负载时，会默认选中对 Linux 的 CMake 支持。 现在即可处理使用 CMake 的现有基本代码，无需将其转换为 Visual Studio 项目。 如果基本代码为跨平台代码，则从 Visual Studio 中可同时面向 Windows 和 Linux。
 
 本主题假定你基本了解 Visual Studio 中的 CMake 支持。 有关详细信息，请参阅 [Visual C++ 的 CMake 工具](../ide/cmake-tools-for-visual-cpp.md)。 有关 CMake 本身的详细信息，请参阅[使用 CMake 生成、测试并打包软件](https://cmake.org/)。
@@ -65,7 +65,7 @@ add_executable(hello-cmake hello.cpp)
 
 ![在 Linux 上生成 CMake 缓存](media/cmake-linux-1.png "Generate the CMake cache on Linux")
 
-**Visual Studio 2017 版本 15.7 及更高版本：**  
+**Visual Studio 2017 版本 15.7 及更高版本：**<br/>
 为了向远程头提供 IntelliSense 支持，Visual Studio 会自动将远程头复制到本地 Windows 计算机上的目录中。 有关详细信息，请参阅[远程标头的 IntelliSense](configure-a-linux-project.md#remote_intellisense)。
 
 ## <a name="debug-the-project"></a>调试项目

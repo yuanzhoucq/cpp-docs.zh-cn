@@ -14,17 +14,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f258740c32cf232c93926efb3efa98e2596ff108
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: eafccc1a2dda9143a39516878851f2c3a62a2d32
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32381663"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46103322"
 ---
 # <a name="file-position-in-append-mode"></a>追加模式中的文件位置
-**ANSI 4.9.3** 追加模式流的文件位置指示器最初是位于文件的开头还是结尾  
-  
- 在追加模式中打开文件时，文件位置指示器最初指向文件的末尾。  
-  
-## <a name="see-also"></a>请参阅  
- [库函数](../c-language/library-functions.md)
+
+**ANSI 4.9.3** 追加模式流的文件位置指示器最初是位于文件的开头还是结尾
+
+在追加模式中打开文件时，文件位置指示器最初指向文件的末尾。
+
+## <a name="see-also"></a>请参阅
+
+[库函数](../c-language/library-functions.md)

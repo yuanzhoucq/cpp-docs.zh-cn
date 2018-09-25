@@ -14,17 +14,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 124863b551729c590dbbd9724a266201d0bff851
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6c5675c62f4cdef11366ecbe640a2e84dc78282a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32382141"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075203"
 ---
 # <a name="declarators-maximum-number"></a>声明符：最大数目
-**ANSI 3.5.4** 可以修改算术、结构或联合类型的声明符的最大数量  
-  
- Microsoft C 不限制声明符的数目。 该数字仅受可用内存限制。  
-  
-## <a name="see-also"></a>请参阅  
- [实现定义的行为](../c-language/implementation-defined-behavior.md)
+
+**ANSI 3.5.4** 可以修改算术、结构或联合类型的声明符的最大数量
+
+Microsoft C 不限制声明符的数目。 该数字仅受可用内存限制。
+
+## <a name="see-also"></a>请参阅
+
+[实现定义的行为](../c-language/implementation-defined-behavior.md)

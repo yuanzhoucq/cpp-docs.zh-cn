@@ -35,46 +35,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 178082356eb08130879cd3b4f2118cbf75e451ce
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 42745d25c0f743fa1a11226d5cfe433327c8ff2a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32390261"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46077043"
 ---
 # <a name="file-attribute-constants"></a>文件特性常量
-## <a name="syntax"></a>语法  
-  
-```  
-  
-#include <io.h>  
-```  
-  
-## <a name="remarks"></a>备注  
- 这些常量指定由函数指定的文件或目录的当前特性。  
-  
- 特性可以通过以下清单常量表示：  
-  
- `_A_ARCH`  
- 存档。 每当通过 BACKUP 命令更改或清除文件时进行设置。 值：0x20  
-  
- `_A_HIDDEN`  
- 隐藏文件。 使用 DIR 命令时通常不可见，除非使用 /AH 选项。 返回常规文件和具有此特性的文件的相关信息。 值：0x02  
-  
- `_A_NORMAL`  
- 正常。 可以不受限制地读取或写入的文件。 值：0x00  
-  
- `_A_RDONLY`  
- 只读。 无法打开文件进行写入且无法创建具有相同名称的文件。 值：0x01  
-  
- `_A_SUBDIR`  
- 子目录。 值：0x10  
-  
- `_A_SYSTEM`  
- 系统文件。 使用 DIR 命令时通常不可见，除非使用 /AS 选项。 值：0x04  
-  
- 可以使用 OR 运算符 (& #124;) 组合多个常量。  
-  
-## <a name="see-also"></a>请参阅  
- [文件名搜索函数](../c-runtime-library/filename-search-functions.md)   
- [全局常量](../c-runtime-library/global-constants.md)
+
+## <a name="syntax"></a>语法
+
+```
+
+#include <io.h>
+```
+
+## <a name="remarks"></a>备注
+
+这些常量指定由函数指定的文件或目录的当前特性。
+
+特性可以通过以下清单常量表示：
+
+|返回的常量|描述|
+|-|-|
+|`_A_ARCH`| 存档。 每当通过 BACKUP 命令更改或清除文件时进行设置。 值：0x20|
+|`_A_HIDDEN`| 隐藏文件。 使用 DIR 命令时通常不可见，除非使用 /AH 选项。 返回常规文件和具有此特性的文件的相关信息。 值：0x02|
+|`_A_NORMAL`| 正常。 可以不受限制地读取或写入的文件。 值：0x00|
+|`_A_RDONLY`| 只读。 无法打开文件进行写入且无法创建具有相同名称的文件。 值：0x01|
+|`_A_SUBDIR`| 子目录。 值：0x10|
+|`_A_SYSTEM`| 系统文件。 使用 DIR 命令时通常不可见，除非使用 /AS 选项。 值：0x04|
+
+可以使用 OR 运算符 (& #124;) 组合多个常量。
+
+## <a name="see-also"></a>请参阅
+
+[文件名搜索函数](../c-runtime-library/filename-search-functions.md)<br/>
+[全局常量](../c-runtime-library/global-constants.md)

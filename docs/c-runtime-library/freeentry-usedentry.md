@@ -22,23 +22,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d75dbc61ae2c9b0c30217a782519ba4e826d2b98
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 60487a502fd304be39f973659cb5fd3432ec7a1d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32390773"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46096790"
 ---
 # <a name="freeentry-usedentry"></a>_FREEENTRY、_USEDENTRY
-## <a name="syntax"></a>语法  
-  
-```  
-#include <malloc.h>  
-```  
-  
-## <a name="remarks"></a>备注  
- 这些常量表示由 `_heapwalk` 例程分配给 _HEAPINFO 结构的 _useflag 元素的值。 它们指示堆条目的状态。  
-  
-## <a name="see-also"></a>请参阅  
- [_heapwalk](../c-runtime-library/reference/heapwalk.md)   
- [全局常量](../c-runtime-library/global-constants.md)
+
+## <a name="syntax"></a>语法
+
+```
+#include <malloc.h>
+```
+
+## <a name="remarks"></a>备注
+
+这些常量表示由 `_heapwalk` 例程分配给 _HEAPINFO 结构的 _useflag 元素的值。 它们指示堆条目的状态。
+
+## <a name="see-also"></a>请参阅
+
+[_heapwalk](../c-runtime-library/reference/heapwalk.md)<br/>
+[全局常量](../c-runtime-library/global-constants.md)

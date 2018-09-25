@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 066459593be4970fde141333a6f22f0846f8bbc4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fc14f5831904e2fea9bfa7ef7607f2085d1f0e58
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412646"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46061255"
 ---
 # <a name="using-tcharh-data-types-with-mbcs"></a>将 TCHAR.H 数据类型用于 _MBCS
 
@@ -35,7 +35,7 @@ ms.locfileid: "32412646"
 
 - MBCS 专用例程。 在这种情况下，字符串参数类型应为无符号 char*。 例如，_tcsrev 映射到 _mbsrev，其需要并返回无符号 char* 类型的字符串。 同样，如果将 _TCHAR 一般文本数据类型用于字符串类型，则会出现潜在的类型冲突，因为 _TCHAR 映射到类型 char。
 
- 以下是防止此类型冲突（以及可能导致的 C 编译器警告或 C++ 编译器错误）的三个解决方案：
+以下是防止此类型冲突（以及可能导致的 C 编译器警告或 C++ 编译器错误）的三个解决方案：
 
 - 使用默认行为。 TCHAR.H 为运行时库中的例程提供一般文本例程原型，如下例所示。
 

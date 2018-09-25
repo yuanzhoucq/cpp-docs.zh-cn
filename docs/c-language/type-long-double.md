@@ -15,15 +15,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3803116cdd9681462644299ee28be15b76950f2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 575ac3462af83aaf4e612cc8b591dce78160695a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32384839"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46081698"
 ---
 # <a name="type-long-double"></a>长双精度类型
-`long double` 类型与 [double](../c-language/type-double.md) 类型相同。  
-  
-## <a name="see-also"></a>请参阅  
- [基本类型的存储](../c-language/storage-of-basic-types.md)
+
+`long double` 类型与 [double](../c-language/type-double.md) 类型相同。
+
+## <a name="see-also"></a>请参阅
+
+[基本类型的存储](../c-language/storage-of-basic-types.md)

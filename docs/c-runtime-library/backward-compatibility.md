@@ -19,21 +19,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e9a04dec046435478ca621ad8f5e2e3c4323f3e2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f3056b90f3c6f0f62158a9b6dcfe145cda9740c6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32386233"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46092188"
 ---
 # <a name="backward-compatibility"></a>向后兼容性
-对于产品版本间的兼容性，库 OLDNAMES.LIB 将旧名称映射到新名称。 例如，`open` 将映射到 `_open`。 仅在使用以下命令行选项的组合进行编译时必须显式链接 OLDNAMES.LIB：  
-  
--   `/Zl`（从对象文件中忽略默认库名称）和 `/Ze`（默认值 - 使用 Microsoft 扩展）  
-  
--   `/link`（链接器控件）、`/NOD`（无默认库搜索）和 `/Ze`  
-  
- 有关编译器命令行选项的详细信息，请参阅[编译器参考](../build/reference/compiler-options.md)。  
-  
-## <a name="see-also"></a>请参阅  
- [兼容性](../c-runtime-library/compatibility.md)
+
+对于产品版本间的兼容性，库 OLDNAMES.LIB 将旧名称映射到新名称。 例如，`open` 将映射到 `_open`。 仅在使用以下命令行选项的组合进行编译时必须显式链接 OLDNAMES.LIB：
+
+- `/Zl`（从对象文件中忽略默认库名称）和 `/Ze`（默认值 - 使用 Microsoft 扩展）
+
+- `/link`（链接器控件）、`/NOD`（无默认库搜索）和 `/Ze`
+
+有关编译器命令行选项的详细信息，请参阅[编译器参考](../build/reference/compiler-options.md)。
+
+## <a name="see-also"></a>请参阅
+
+[兼容性](../c-runtime-library/compatibility.md)

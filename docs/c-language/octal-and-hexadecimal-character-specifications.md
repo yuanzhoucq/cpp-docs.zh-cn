@@ -15,36 +15,38 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eeb1f8e08fbb1d4f30517485c9296febab5a0de0
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 7df785067fdde74fbbc4bb5a45dfdc1ca797da7b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43198751"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46077615"
 ---
 # <a name="octal-and-hexadecimal-character-specifications"></a>八进制和十六进制字符规范
-序列 \\ooo 表示可以将 ASCII 字符集中的任何字符指定为三位数八进制字符代码。 八进制整数的数字值用于指定所需字符或宽字符的值。  
-  
- 同样，序列 \xhhh 可使用户将任何 ASCII 字符指定为十六进制字符代码。 例如，可以将 ASCII 退格符指定为常规 C 转义序列 (\b)，或者也可以将其编码为 \010（八进制）或 \x008（十六进制）。  
-  
- 在八进制转义序列中只能使用 0 到 7 的数字。 八进制转义序列绝不能长于三位且不能由第一个不是八进制数字的字符结尾。 虽然不需要使用所有三个数字，但必须至少使用其中一个。 例如，ASCII 退格符的八进制表示形式是 \10，字母 A 的八进制表示形式是 \101，如 ASCII 图表中所提供。  
-  
- 同样，对十六进制转义序列必须至少使用一个数字，但是您可以忽略第二个和第三个数字。 因此，可以将退格符的十六进制转义序列指定为 \x8、\x08 或 \x008。  
-  
- 八进制或十六进制转义序列的值必须在字符常量的类型 unsigned char 和宽字符常量的类型 `wchar_t` 的可表示值的范围内。 有关宽字符常量的信息，请参阅[多字节和宽字符](../c-language/multibyte-and-wide-characters.md)。  
-  
- 不同于八进制转义常量，转义序列中的十六进制数字的数量不受限制。 十六进制转义序列在第一个不是十六进制数字的字符处结尾。 由于十六进制数字包含字母 a 到 f，因此必须小心谨慎，确保转义序列在预期的数字处终止。 为了避免混淆，您可以将八进制或十六进制字符定义放入宏定义：  
-  
-```  
-#define Bell '\x07'  
-```  
-  
- 对于十六进制值，可以拆开字符串以清楚地显示正确的值：  
-  
-```  
-"\xabc"    /* one character  */  
-"\xab" "c" /* two characters */  
-```  
-  
-## <a name="see-also"></a>请参阅  
- [C 字符常量](../c-language/c-character-constants.md)
+
+序列 \\ooo 表示可以将 ASCII 字符集中的任何字符指定为三位数八进制字符代码。 八进制整数的数字值用于指定所需字符或宽字符的值。
+
+同样，序列 \xhhh 可使用户将任何 ASCII 字符指定为十六进制字符代码。 例如，可以将 ASCII 退格符指定为常规 C 转义序列 (\b)，或者也可以将其编码为 \010（八进制）或 \x008（十六进制）。
+
+在八进制转义序列中只能使用 0 到 7 的数字。 八进制转义序列绝不能长于三位且不能由第一个不是八进制数字的字符结尾。 虽然不需要使用所有三个数字，但必须至少使用其中一个。 例如，ASCII 退格符的八进制表示形式是 \10，字母 A 的八进制表示形式是 \101，如 ASCII 图表中所提供。
+
+同样，对十六进制转义序列必须至少使用一个数字，但是您可以忽略第二个和第三个数字。 因此，可以将退格符的十六进制转义序列指定为 \x8、\x08 或 \x008。
+
+八进制或十六进制转义序列的值必须在字符常量的类型 unsigned char 和宽字符常量的类型 `wchar_t` 的可表示值的范围内。 有关宽字符常量的信息，请参阅[多字节和宽字符](../c-language/multibyte-and-wide-characters.md)。
+
+不同于八进制转义常量，转义序列中的十六进制数字的数量不受限制。 十六进制转义序列在第一个不是十六进制数字的字符处结尾。 由于十六进制数字包含字母 a 到 f，因此必须小心谨慎，确保转义序列在预期的数字处终止。 为了避免混淆，您可以将八进制或十六进制字符定义放入宏定义：
+
+```
+#define Bell '\x07'
+```
+
+对于十六进制值，可以拆开字符串以清楚地显示正确的值：
+
+```
+"\xabc"    /* one character  */
+"\xab" "c" /* two characters */
+```
+
+## <a name="see-also"></a>请参阅
+
+[C 字符常量](../c-language/c-character-constants.md)

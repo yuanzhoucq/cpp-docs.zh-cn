@@ -17,26 +17,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1aa9c72cbb8724da00b2d370884bd7ddbf7264cc
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 4dfda5807aab0c9930780b8374ffc934dde001c0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763235"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46096803"
 ---
 # <a name="while-statement-c"></a>While 语句 (C)
 
-利用 `while` 语句，您可以重复语句直到指定的表达式变为 false。  
-  
+利用 `while` 语句，您可以重复语句直到指定的表达式变为 false。
+
 ## <a name="syntax"></a>语法
 
 *iteration-statement*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**while (**  *expression*  **)**  *statement*
-  
-expression 必须具有算法或指针类型。 执行过程如下所示：  
-  
-1. 计算 expression。  
-  
+
+expression 必须具有算法或指针类型。 执行过程如下所示：
+
+1. 计算 expression。
+
 2. 如果 expression 最初为 false，则绝不执行 `while` 语句体，并且控制从 `while` 语句到程序中下一语句的传递。
 
    如果 expression 为 true（非零），则执行语句体，并且此过程从第 1 步开始重复。

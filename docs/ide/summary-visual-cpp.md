@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47b7063dc9156e8feb41d447283ee457a13f1f4d
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: dae0eef25b11d49e5f869d88862e602d862135c1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43692297"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082243"
 ---
 # <a name="ltsummarygt-visual-c"></a>&lt;summary&gt; (Visual C++)
 \<summary> 标记应当用于描述类型或类型成员。 使用 [\<remarks>](../ide/remarks-visual-cpp.md) 可针对某个类型说明添加补充信息。  
@@ -35,8 +35,8 @@ ms.locfileid: "43692297"
 ```  
   
 #### <a name="parameters"></a>参数  
- `description`  
- 对象的摘要。  
+description<br/>
+对象的摘要。  
   
 ## <a name="remarks"></a>备注  
  \<summary> 标记的文本是 IntelliSense 中类型相关信息的唯一源，它也在[对象浏览器](/visualstudio/ide/viewing-the-structure-of-code)和代码注释 Web 报表中显示。  

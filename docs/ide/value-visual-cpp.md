@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e78c8ace8b482baa29fbabaf102a8a1bccadd06
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0a194e45fd79ae59dc91abb21a9fb038d3ec4008
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33325391"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46041683"
 ---
 # <a name="ltvaluegt-visual-c"></a>&lt;value&gt; (Visual C++)
 借助 \<value>标记，可以描述属性和属性访问器方法。 请注意，在 Visual Studio 集成开发环境中使用代码向导添加属性时，将为新属性添加 [\<summary>](../ide/summary-visual-cpp.md)标记。 然后，应手动添加 \<value> 标记，描述属性表示的值。  
@@ -35,8 +35,8 @@ ms.locfileid: "33325391"
 ```  
   
 #### <a name="parameters"></a>参数  
- `property-description`  
- 属性的说明。  
+*property-description*<br/>
+属性的说明。  
   
 ## <a name="remarks"></a>备注  
  使用 [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) 进行编译可以将文档注释处理到文件中。  

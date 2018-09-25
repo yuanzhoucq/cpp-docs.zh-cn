@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: cf55b6f5dc422bb01babe0bdf8d8c27ce50371da
-ms.sourcegitcommit: 338e1ddc2f3869d92ba4b73599d35374cf1d5b69
+ms.openlocfilehash: 210cf8d3183e9fcd94cfa51d875a0b26e4a8fa07
+ms.sourcegitcommit: 92c568e9466ffd7346a4120c478c9bdea61c8756
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46494460"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47029653"
 ---
 # <a name="how-to-migrate-to-clr"></a>如何：迁移到 /clr
 
@@ -85,8 +85,6 @@ NewFunc2 = (MYPROC)GetProcAddress( hLib, "Func2" );
 C + + 还要求这些函数是原型或完全定义可以引用或调用之前。
 
 在 C 代码中使用恰好是 c + + 中的关键字的标识符 (如`virtual`， `new`， `delete`， `bool`， `true`，`false`等) 必须重命名。 这通常可以通过简单的搜索和替换操作。
-
-最后，而 C 样式 COM 调用需要显式使用 v 表和`this`指针，c + + 不：
 
 ```
 COMObj1->lpVtbl->Method(COMObj, args);  // C code

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69e2950fcc0b29fb819445f3216ef262a2657e4a
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: e88890917986e54b3b912d50e97da77032abab34
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43686416"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46078785"
 ---
 # <a name="ltparamgt-visual-c"></a>&lt;param&gt; (Visual C++)
 在方法声明的注释中，应使用 \<param> 标记来描述方法参数之一。  
@@ -35,11 +35,11 @@ ms.locfileid: "43686416"
 ```  
   
 #### <a name="parameters"></a>参数  
- `name`  
- 方法参数的名称。  将名称括在单引号或双引号中。  如果编译器没有找到 `name`，它会发出警告。  
+*name*<br/>
+方法参数的名称。  将名称括在单引号或双引号中。  如果编译器没有找到 `name`，它会发出警告。  
   
- `description`  
- 参数的说明。  
+description<br/>
+参数的说明。  
   
 ## <a name="remarks"></a>备注  
  \<param> 标记的文本将显示在 IntelliSense、[对象浏览器](/visualstudio/ide/viewing-the-structure-of-code)和代码注释 Web 报表中。  
@@ -48,7 +48,7 @@ ms.locfileid: "43686416"
   
 ## <a name="example"></a>示例  
   
-```  
+```cpp  
 // xml_param_tag.cpp  
 // compile with: /clr /doc /LD  
 // post-build command: xdcmake xml_param_tag.dll  

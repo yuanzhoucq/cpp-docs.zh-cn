@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eaab56876651a1056ef89d57bebb2799d1bb3194
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 0bcb9d5dbadc0fbaa33a3c8df6f9193704514e0a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604136"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46083283"
 ---
 # <a name="language-strings"></a>Language Strings
 
@@ -101,7 +101,7 @@ Microsoft C 运行时库实现还支持下面这些语言字符串：
 
 ## <a name="see-also"></a>请参阅
 
-[区域设置名称、语言和国家/地区字符串](../c-runtime-library/locale-names-languages-and-country-region-strings.md)  
-[国家/地区字符串](../c-runtime-library/country-region-strings.md)  
-[setlocale、_wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)  
-[_create_locale、_wcreate_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md)  
+[区域设置名称、语言和国家/地区字符串](../c-runtime-library/locale-names-languages-and-country-region-strings.md)<br/>
+[国家/地区字符串](../c-runtime-library/country-region-strings.md)<br/>
+[setlocale、_wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)<br/>
+[_create_locale、_wcreate_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md)

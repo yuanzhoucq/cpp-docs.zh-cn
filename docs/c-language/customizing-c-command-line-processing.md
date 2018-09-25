@@ -22,19 +22,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 824de86ec0930fb93bf5fa0a2a8ac15a4237e4fb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 541cfed194262aa5bff6810b19d5d2c89468ffa4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32384393"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46090810"
 ---
 # <a name="customizing-c-command-line-processing"></a>自定义 C 命令行处理
-如果程序不采用命令行自变量，则可以通过取消使用执行命令行处理的库例程来节省少量空间。 此例程称为 _setargv（在宽字符环境中，称为 _wsetargv），如[展开通配符参数](../c-language/expanding-wildcard-arguments.md)中所述。 若要禁止使用它，请在包含 main 函数的文件中定义一个不执行任何操作的例程，并将其命名为 _setargv（在宽字符环境中为 _wsetargv）。 随后，对 _setargv 或 _wsetargv 的调用由 _setargv 或 _wsetargv 的定义实现，并且不会加载库版本。  
-  
- 同样，如果从不通过 `envp` 自变量访问环境表，则可以提供用来代替 _setenvp（或 _wsetenvp）的你自己的空例程（环境处理例程）。  
-  
- 如果程序在 C 运行库中调用 _spawn 或 _exec 系列例程，则不应停止环境处理例程，因为需使用此例程将环境从生成进程传递到新进程。  
-  
-## <a name="see-also"></a>请参阅  
- [main 函数和程序执行](../c-language/main-function-and-program-execution.md)
+
+如果程序不采用命令行自变量，则可以通过取消使用执行命令行处理的库例程来节省少量空间。 此例程称为 _setargv（在宽字符环境中，称为 _wsetargv），如[展开通配符参数](../c-language/expanding-wildcard-arguments.md)中所述。 若要禁止使用它，请在包含 main 函数的文件中定义一个不执行任何操作的例程，并将其命名为 _setargv（在宽字符环境中为 _wsetargv）。 随后，对 _setargv 或 _wsetargv 的调用由 _setargv 或 _wsetargv 的定义实现，并且不会加载库版本。
+
+同样，如果从不通过 `envp` 自变量访问环境表，则可以提供用来代替 _setenvp（或 _wsetenvp）的你自己的空例程（环境处理例程）。
+
+如果程序在 C 运行库中调用 _spawn 或 _exec 系列例程，则不应停止环境处理例程，因为需使用此例程将环境从生成进程传递到新进程。
+
+## <a name="see-also"></a>请参阅
+
+[main 函数和程序执行](../c-language/main-function-and-program-execution.md)

@@ -14,17 +14,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d397beb6744594d6af898ce3e7dd832587a2ee30
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3195894d3c01c90c503d7bf124cbee2d91124aa3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32385828"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46038680"
 ---
 # <a name="signal-function-c"></a>signal 函数 (C)
-**ANSI 4.7.1.1** signal 函数的信号集  
-  
- 传递给 signal 的第一个参数必须为《运行时库参考》中描述的 signal 函数的符号常量之一。 《运行时库参考》中的信息还列出了每个信号的操作模式支持。 SIGNAL.H 中也定义了这些常量。  
-  
-## <a name="see-also"></a>请参阅  
- [库函数](../c-language/library-functions.md)
+
+**ANSI 4.7.1.1** signal 函数的信号集
+
+传递给 signal 的第一个参数必须为《运行时库参考》中描述的 signal 函数的符号常量之一。 《运行时库参考》中的信息还列出了每个信号的操作模式支持。 SIGNAL.H 中也定义了这些常量。
+
+## <a name="see-also"></a>请参阅
+
+[库函数](../c-language/library-functions.md)

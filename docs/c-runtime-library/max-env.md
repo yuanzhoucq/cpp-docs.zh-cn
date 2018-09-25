@@ -18,24 +18,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d4de09242f8758d8420bf100461dc88e4b51e50
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ff4b60a5c35b1448e1d27b51ba354f4a95658b46
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32389008"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46034263"
 ---
 # <a name="maxenv"></a>_MAX_ENV
-环境变量允许的最大字符串长度。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-  
-#include <stdio.h>  
-  
-```  
-  
-## <a name="see-also"></a>请参阅  
- [环境常量](../c-runtime-library/environmental-constants.md)   
- [全局常量](../c-runtime-library/global-constants.md)
+
+环境变量允许的最大字符串长度。
+
+## <a name="syntax"></a>语法
+
+```
+
+#include <stdio.h>
+
+```
+
+## <a name="see-also"></a>请参阅
+
+[环境常量](../c-runtime-library/environmental-constants.md)<br/>
+[全局常量](../c-runtime-library/global-constants.md)
