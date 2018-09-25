@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dcf760219f06ab71684d9d67240712fa501b3c00
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 0c38485e84f0b06e79e02ba780926b6e08378220
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45722600"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46392913"
 ---
 # <a name="c-standard-library-reference"></a>C++ 标准库参考
 
@@ -32,10 +32,13 @@ C++ 程序可以从符合标准的 C++ 标准库实现中调用大量函数。 �
 
 ## <a name="in-this-section"></a>本节内容
 
-[C + + 标准库概述](../standard-library/cpp-standard-library-overview.md)提供的 Microsoft 实现的 c + + 标准库的概述。
+[C++ 标准库概述](../standard-library/cpp-standard-library-overview.md)<br/>
+提供 Microsoft 实现 C++ 标准库的概述。
 
-[iostream 编程](../standard-library/iostream-programming.md)提供 iostream 编程的概述。
+[iostream 编程](../standard-library/iostream-programming.md)<br/>
+提供 iostream 编程的概述。
 
-[头文件引用](../standard-library/cpp-standard-library-header-files.md)提供指向讨论具有代码示例的 c + + 标准库头文件的参考主题。
+[头文件引用](../standard-library/cpp-standard-library-header-files.md)<br/>
+提供指向参考主题的链接，这些主题讨论了具有代码示例的 C++ 标准库头文件。
 
 

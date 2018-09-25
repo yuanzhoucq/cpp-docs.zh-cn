@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6a92e7904b3b42422bebf5a80e0f1b03dd818f86
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 2e2939c7f0a68401b4c1a8c43b5c6335a0acfcb3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314570"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46403932"
 ---
 # <a name="creating-a-new-custom-or-data-resource-c"></a>创建新的自定义资源或数据资源 （c + +）
 
@@ -40,9 +40,9 @@ ms.locfileid: "44314570"
 
 3. 在中**编译时指令**框中，键入`#include`语句，为包含自定义资源的文件的名称。 例如：
 
-```cpp
+    ```cpp
     #include mydata.rc
- ```
+    ```
 
    请确保所键入内容的语法和拼写正确。 在“编译时指令”  框中键入时，其内容会插入到资源脚本文件中。
 

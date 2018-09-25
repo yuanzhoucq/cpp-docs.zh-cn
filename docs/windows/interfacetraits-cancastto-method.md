@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: aea326149c9748ff480d523a1078f54ba733cb14
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 705b495e3f6d626a742fd1a63989c8cc658446a4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42610415"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46379654"
 ---
 # <a name="interfacetraitscancastto-method"></a>InterfaceTraits::CanCastTo 方法
 
@@ -41,13 +41,13 @@ static __forceinline bool CanCastTo(
 
 ### <a name="parameters"></a>参数
 
-*ptr*  
+*ptr*<br/>
 指向类型的名称。
 
-*riid*  
+*riid*<br/>
 接口 ID `Base`。
 
-*ppv*  
+*ppv*<br/>
 如果此操作成功， *ppv*指向由指定的界面`Base`。 否则为*ppv*设置为**nullptr**。
 
 ## <a name="return-value"></a>返回值
@@ -68,5 +68,5 @@ static __forceinline bool CanCastTo(
 
 ## <a name="see-also"></a>请参阅
 
-[InterfaceTraits 结构](../windows/interfacetraits-structure.md)  
+[InterfaceTraits 结构](../windows/interfacetraits-structure.md)<br/>
 [Microsoft::WRL::Details 命名空间](../windows/microsoft-wrl-details-namespace.md)

@@ -1,5 +1,5 @@
 ---
-title: 根类： CObject |Microsoft 文档
+title: 根类： CObject |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,22 +19,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2398f1e775dfa8b9331a4abc0137207c85531aff
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0804397888d64ac5b6cab9a60f9912b27358bc43
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385065"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46373316"
 ---
 # <a name="root-class-cobject"></a>根类：CObject
-大多数 Microsoft 基础类 (MFC) 库中的类派生而来的单个基类根处的类层次结构。 `CObject` 提供了大量有用的功能，所有派生的类，使用系统开销很低。 有关详细信息`CObject`和及其功能，请参阅[使用 CObject](../mfc/using-cobject.md)。  
-  
- [CObject](../mfc/reference/cobject-class.md)  
- 最终大多数 MFC 类的基类。 支持序列化数据和获取有关类的运行时信息。  
-  
- [CRuntimeClass](../mfc/reference/cruntimeclass-structure.md)  
- 用来在运行时确定对象的确切的类结构。  
-  
-## <a name="see-also"></a>请参阅  
- [类概述](../mfc/class-library-overview.md)
+
+大多数 Microsoft 基础类 (MFC) 库中的类派生自单个根处的基类的类层次结构。 `CObject` 提供了大量有用的功能，所有派生的类，以非常低的开销。 有关详细信息`CObject`和及其功能，请参阅[使用 CObject](../mfc/using-cobject.md)。
+
+[CObject](../mfc/reference/cobject-class.md)<br/>
+大多数 MFC 类的最终基类。 支持序列化数据并获取有关类的运行时信息。
+
+[CRuntimeClass](../mfc/reference/cruntimeclass-structure.md)<br/>
+用来在运行时确定对象的具体类结构。
+
+## <a name="see-also"></a>请参阅
+
+[类概述](../mfc/class-library-overview.md)
 

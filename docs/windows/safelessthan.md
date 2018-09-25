@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 88f734cbcee303741858c933d1c3729720f0e76f
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: a5824b1e3ba050cf8c6d9c0f7b56231211f1f59a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45710261"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46377176"
 ---
 # <a name="safelessthan"></a>SafeLessThan
 
@@ -69,9 +69,9 @@ inline bool SafeLessThan (
 
 ## <a name="see-also"></a>请参阅
 
-[SafeInt 函数](../windows/safeint-functions.md)  
-[SafeInt 库](../windows/safeint-library.md)  
-[SafeInt 类](../windows/safeint-class.md)  
-[SafeLessThanEquals](../windows/safelessthanequals.md)  
-[SafeGreaterThan](../windows/safegreaterthan.md)  
+[SafeInt 函数](../windows/safeint-functions.md)<br/>
+[SafeInt 库](../windows/safeint-library.md)<br/>
+[SafeInt 类](../windows/safeint-class.md)<br/>
+[SafeLessThanEquals](../windows/safelessthanequals.md)<br/>
+[SafeGreaterThan](../windows/safegreaterthan.md)<br/>
 [SafeGreaterThanEquals](../windows/safegreaterthanequals.md)

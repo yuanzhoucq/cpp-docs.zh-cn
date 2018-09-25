@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a73d5bb3ef67469ad1cc12b2a2c2757cf1ce137
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: a2e61616ae6a481925bdb8b9b135f0a6a9fdfff7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45712818"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46407928"
 ---
 # <a name="ctabbedpane-class"></a>CTabbedPane 类
 
@@ -183,9 +183,9 @@ virtual BOOL DetachPane(
 
 ### <a name="parameters"></a>参数
 
-[in]*pBar*  
+[in]*pBar*
 
-[in]*bHide*  
+[in]*bHide*
 
 ### <a name="return-value"></a>返回值
 
@@ -225,9 +225,9 @@ virtual BOOL FloatTab(
 ### <a name="parameters"></a>参数
 
 *pBar*<br/>
-[in][in]*nTabID*  
+[in][in]*nTabID*
 *dockMethod*<br/>
-[in][in]*bHide*  
+[in][in]*bHide*
 
 ### <a name="return-value"></a>返回值
 
@@ -308,6 +308,7 @@ AFX_IMPORT_DATA static BOOL m_bTabsAlwaysTop;
 默认值为 FALSE。
 
 ##  <a name="m_ptabwndrtc"></a>  CTabbedPane::m_pTabWndRTC
+
 自定义 `CMFCTabCtrl`-派生对象的运行时类信息。
 
 ```
@@ -351,8 +352,8 @@ static void SetTabAutoColors(const CArray<COLORREF, COLORREF>& arColors);
 
 ## <a name="see-also"></a>请参阅
 
-[层次结构图](../../mfc/hierarchy-chart.md)  
-[类](../../mfc/reference/mfc-classes.md)  
-[CDockablePane 类](../../mfc/reference/cdockablepane-class.md)  
-[CBaseTabbedPane 类](../../mfc/reference/cbasetabbedpane-class.md)  
-[CMFCOutlookBar 类](../../mfc/reference/cmfcoutlookbar-class.md)  
+[层次结构图](../../mfc/hierarchy-chart.md)<br/>
+[类](../../mfc/reference/mfc-classes.md)<br/>
+[CDockablePane 类](../../mfc/reference/cdockablepane-class.md)<br/>
+[CBaseTabbedPane 类](../../mfc/reference/cbasetabbedpane-class.md)<br/>
+[CMFCOutlookBar 类](../../mfc/reference/cmfcoutlookbar-class.md)

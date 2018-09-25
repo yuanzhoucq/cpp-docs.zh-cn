@@ -1,5 +1,5 @@
 ---
-title: 'TN057: MFC 组件的本地化 |Microsoft 文档'
+title: TN057： 本地化的 MFC 组件 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/28/2018
 ms.technology:
@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec786277432ab1ce47614c3afac627733edc4985
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: 8dcd3117d50d2d8905e5382cf226ba487c13a7c7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37121152"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46414207"
 ---
 # <a name="tn057-localization-of-mfc-components"></a>TN057：MFC 组件的本地化
 
@@ -45,7 +45,7 @@ ms.locfileid: "37121152"
 
 ## <a name="localizing-your-components-resources"></a>本地化组件的资源
 
-本地化应用程序或 DLL 涉及将这些资源替换为与目标语言匹配的资源。 对于您自己的资源，此操作比较简单：在资源编辑器中编辑资源并生成您的应用程序。 如果你的代码编写正确将字符串或你希望本地化硬编码为 c + + 源代码的文本不所有本地化都可以只需通过修改资源。 事实上，你可以以某种方式实现你的组件，使它们都提供甚至不涉及生成原始代码的本地化版本。 这种方法更复杂，但很值得，并且这是为 MFC 本身选择的机制。 也可以通过将 EXE 或 DLL 文件加载到资源编辑器并直接编辑资源来本地化应用程序。 如有可能，每当您生成新版本的应用程序时，它都会要求重新应用那些更改。
+本地化应用程序或 DLL 涉及将这些资源替换为与目标语言匹配的资源。 对于您自己的资源，此操作比较简单：在资源编辑器中编辑资源并生成您的应用程序。 如果你的代码编写正确，将字符串或你希望本地化硬编码到 c + + 源代码的文本不可以通过简单修改资源来完成所有本地化。 事实上，你可以以某种方式实现你的组件，使它们都提供甚至不涉及生成原始代码的本地化版本。 这种方法更复杂，但很值得，并且这是为 MFC 本身选择的机制。 也可以通过将 EXE 或 DLL 文件加载到资源编辑器并直接编辑资源来本地化应用程序。 如有可能，每当您生成新版本的应用程序时，它都会要求重新应用那些更改。
 
 避免这种情况的一个方法是在单独的 DLL（有时称为附属 DLL）中放置所有资源。 此 DLL 随后在运行时以动态方式加载，资源将从此 DLL 加载而不是从包含你的所有代码的主模块加载。 MFC 直接支持此方法。 请考虑一个名为 MYAPP.EXE 的应用程序；它可以将所有资源放在一个名为 MYRES.DLL 的 DLL 中。 在应用程序的 `InitInstance` 中，它将执行以下代码以加载该 DLL 并使 MFC 从该位置加载资源：
 
@@ -65,7 +65,7 @@ CMyApp::InitInstance()
 
 从那以后，MFC 将从该 DLL 而非 myapp.exe 加载资源。 但是，所有资源都必须存在于该 DLL 中；MFC 不会搜索应用程序的实例来寻找给定的资源。 此方法适用于同样常规 MFC Dll 以及 OLE 控件。 您的安装程序将根据用户想采用的资源区域设置复制相应版本的 MYRES.DLL。
 
-创建纯资源 DLL 相对简单一些。 您创建 DLL 项目，向其添加 .RC 文件，然后添加必需的资源。 如果您有不使用此方法的现有项目，则可以从该项目中复制资源。 将资源文件添加到项目后，你差不多已做好生成项目的准备。 必须执行唯一操作是设置链接器选项以包括 **/NOENTRY**。 这将通知链接器，该 DLL 没有入口点-因为它没有代码，它具有不到入口点。
+创建纯资源 DLL 相对简单一些。 您创建 DLL 项目，向其添加 .RC 文件，然后添加必需的资源。 如果您有不使用此方法的现有项目，则可以从该项目中复制资源。 将资源文件添加到项目后，你差不多已做好生成项目的准备。 必须执行的唯一操作是设置链接器选项以包括 **/NOENTRY**。 这将告知链接器 DLL 具有不到入口点-因为它不有任何代码，它具有无入口点。
 
 > [!NOTE]
 > Visual C++ 4.0 和更高版本中的资源编辑器通过 .RC 文件支持多种语言。 这使您在单个项目中管理本地化很容易。 每种语言的资源由资源编辑器生成的预处理器指令控制。
@@ -74,15 +74,15 @@ CMyApp::InitInstance()
 
 您生成的任何 MFC 应用程序都会重复使用 MFC 中的两个内容：代码和资源。 也就是说，MFC 有各种错误消息、内置对话框以及 MFC 类使用的其他资源。 若要完全本地化应用程序，您不仅需要本地化应用程序的资源，还需要本地化直接来自 MFC 的资源。 MFC 自动提供了很多不同语言的资源文件，这样，当您面向的语言是 MFC 已支持的语言之一时，您只需确保使用这些本地化资源即可。
 
-到本文撰写之时为止，MFC 支持中文、德语、西班牙语、法语、意大利语、日语和朝鲜语。 包含这些本地化版本的文件位于 MFC\INCLUDE\L.*（“L”表示已本地化）目录中。 例如，德语位于 MFC\INCLUDE\L.DEU 中。 若要使应用程序而不是位于 MFC\INCLUDE 中的文件中使用这些 RC 文件，添加`/IC:\PROGRAM FILES\MICROSOFT VISUAL STUDIO .NET 2003\VC7\MFC\INCLUDE\L.DEU`到 RC 的命令行 （这是只是一个示例; 你将需要进行替换你的选择，以及在其中安装了 Visual C 的目录的区域设置++).
+到本文撰写之时为止，MFC 支持中文、德语、西班牙语、法语、意大利语、日语和朝鲜语。 包含这些本地化版本的文件位于 MFC\INCLUDE\L.*（“L”表示已本地化）目录中。 例如，德语位于 MFC\INCLUDE\L.DEU 中。 若要使应用程序以使用这些 RC 文件而不是 MFC\INCLUDE 中的文件，添加`/IC:\PROGRAM FILES\MICROSOFT VISUAL STUDIO .NET 2003\VC7\MFC\INCLUDE\L.DEU`到 RC 命令行 （这是只是一个示例; 你需要替换您的选择，以及在其中安装了 Visual C 的目录的区域设置++).
 
-如果应用程序以静态方式与 MFC 链接，以上指令将有效。 大多数应用程序以动态方式进行链接（因为这是 AppWizard 的默认设置）。 在此方案中，不仅代码以动态方式链接的资源也是如此。 因此，您可以在应用程序中本地化资源，但 MFC 实现资源仍将从 MFC7x.DLL（或更高版本）加载或从 MFC7xLOC.DLL（如果存在）加载。 您可以从两个不同的角度达到此目的。
+如果应用程序以静态方式与 MFC 链接，以上指令将有效。 大多数应用程序以动态方式进行链接（因为这是 AppWizard 的默认设置）。 在此方案中，不只是动态链接-因此是资源。 因此，您可以在应用程序中本地化资源，但 MFC 实现资源仍将从 MFC7x.DLL（或更高版本）加载或从 MFC7xLOC.DLL（如果存在）加载。 您可以从两个不同的角度达到此目的。
 
-更复杂的方法是附带本地化的 MFC7xLOC.DLL（如 MFC7xDEU 用于德语、MFC7xESP.DLL 用于西班牙语，等等）或更高版本之一，并在用户安装您的应用程序时将相应的 MFC7xLOC.DLL 安装到系统目录中。 这对于开发人员和最终用户可能非常复杂，因此不建议采用。 请参阅[技术说明 56](../mfc/tn056-installation-of-localized-mfc-components.md)有关此技术和及其告诫的详细信息。
+更复杂的方法是附带本地化的 MFC7xLOC.DLL（如 MFC7xDEU 用于德语、MFC7xESP.DLL 用于西班牙语，等等）或更高版本之一，并在用户安装您的应用程序时将相应的 MFC7xLOC.DLL 安装到系统目录中。 这对于开发人员和最终用户可能非常复杂，因此不建议采用。 请参阅[技术说明 56](../mfc/tn056-installation-of-localized-mfc-components.md)有关此方法及其告诫的详细信息。
 
 最简单最安全的方法是将本地化的 MFC 资源包含在您的应用程序或 DLL 本身（或其附属 DLL，如果正在使用）中。 这将恰当地避免安装 MFC7xLOC.DLL 的问题。 为此，请遵循前面给出的静态情况的同一指示（将 RC 命令行正确设置为指向本地化资源)，只不过您还必须删除 AppWizard 添加的 `/D_AFXDLL` 定义。 定义 `/D_AFXDLL` 后，AFXRES.H（和其他 MFC RC 文件）实际上不会定义任何资源（因为它们将从 MFC DLL 拉取）。
 
 ## <a name="see-also"></a>请参阅
 
-[按编号列出的技术说明](../mfc/technical-notes-by-number.md)  
-[按类别列出的技术说明](../mfc/technical-notes-by-category.md)  
+[按编号列出的技术说明](../mfc/technical-notes-by-number.md)<br/>
+[按类别列出的技术说明](../mfc/technical-notes-by-category.md)

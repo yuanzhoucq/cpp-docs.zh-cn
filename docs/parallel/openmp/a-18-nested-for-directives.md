@@ -1,5 +1,5 @@
 ---
-title: A.18 嵌套的 for 指令 |Microsoft 文档
+title: A.18 嵌套的 for 指令 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,51 +12,52 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0f52baeaa4b6c37f0da1b818a5ae2b8471dabc9
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 4a4e8a984a111d409e07d55c0c1f6e6adbed91e4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33690863"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46433564"
 ---
 # <a name="a18---nested-for-directives"></a>A.18   嵌套的 for 指令
-下面的示例对`for`指令嵌套 ([部分 2.9](../../parallel/openmp/2-9-directive-nesting.md)在页上 33) 兼容因为内部和外部`for`指令将绑定到不同的并行区域：  
-  
-```  
-#pragma omp parallel default(shared)  
-{  
-    #pragma omp for  
-        for (i=0; i<n; i++)   
-        {  
-            #pragma omp parallel shared(i, n)  
-            {  
-                #pragma omp for  
-                    for (j=0; j<n; j++)  
-                        work(i, j);  
-            }  
-        }  
-}  
-```  
-  
- 下面的变体前面中也是示例的符合的：  
-  
-```  
-#pragma omp parallel default(shared)  
-{  
-    #pragma omp for  
-        for (i=0; i<n; i++)  
-            work1(i, n);  
-}  
-  
-void work1(int i, int n)  
-{  
-    int j;  
-    #pragma omp parallel default(shared)  
-    {  
-        #pragma omp for  
-            for (j=0; j<n; j++)  
-                work2(i, j);  
-    }  
-    return;  
-}  
+
+下面的示例对`for`指令嵌套 ([部分 2.9](../../parallel/openmp/2-9-directive-nesting.md)第 33 页上) 是符合因为内部和外部`for`指令将绑定到不同的并行区域：
+
+```
+#pragma omp parallel default(shared)
+{
+    #pragma omp for
+        for (i=0; i<n; i++)
+        {
+            #pragma omp parallel shared(i, n)
+            {
+                #pragma omp for
+                    for (j=0; j<n; j++)
+                        work(i, j);
+            }
+        }
+}
+```
+
+此外，还符合前面的示例中的以下变体：
+
+```
+#pragma omp parallel default(shared)
+{
+    #pragma omp for
+        for (i=0; i<n; i++)
+            work1(i, n);
+}
+
+void work1(int i, int n)
+{
+    int j;
+    #pragma omp parallel default(shared)
+    {
+        #pragma omp for
+            for (j=0; j<n; j++)
+                work2(i, j);
+    }
+    return;
+}
 ```

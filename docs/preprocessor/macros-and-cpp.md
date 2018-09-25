@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d81fb8f8f41a57fc2bd1a87c6726b92756bf26b5
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 58f3be857e0a77a62a5f2d4d1d0b650f02fd391b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42540549"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46425517"
 ---
 # <a name="macros-and-c"></a>宏和 C++
 C++ 提供新功能，其中一些取代了 ANSI C 预处理器提供的功能。 这些新功能可增强语言的类型安全性和可预见性：  
@@ -39,5 +39,5 @@ C++ 提供新功能，其中一些取代了 ANSI C 预处理器提供的功能�
   
 ## <a name="see-also"></a>请参阅  
  
-[预定义的宏](../preprocessor/predefined-macros.md)   
+[预定义宏](../preprocessor/predefined-macros.md)<br/>
 [宏 (C/C++)](../preprocessor/macros-c-cpp.md)

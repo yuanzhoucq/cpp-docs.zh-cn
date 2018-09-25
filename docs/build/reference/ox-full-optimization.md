@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d93bfe44fab0400ce4c3c173473601745f85196c
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 6e1da84c3a4ec481d3af2880a80f5923bf0c50cc
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45721521"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46438075"
 ---
 # <a name="ox-enable-most-speed-optimizations"></a>/Ox （启用最大速度优化）
 
@@ -77,6 +77,6 @@ ms.locfileid: "45721521"
 
 ## <a name="see-also"></a>请参阅
 
-[/O 选项 （优化代码）](../../build/reference/o-options-optimize-code.md)
+[/O 选项（优化代码）](../../build/reference/o-options-optimize-code.md)<br/>
 [编译器选项](../../build/reference/compiler-options.md)<br/>
 [设置编译器选项](../../build/reference/setting-compiler-options.md)

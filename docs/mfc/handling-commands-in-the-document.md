@@ -1,5 +1,5 @@
 ---
-title: 处理文档中的命令 |Microsoft 文档
+title: 处理文档中的命令 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,16 +19,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a1e848827b46d40c1ec39f2af4788e6957932c5
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 8845ea7c44fd5a34774db0508302f5959987cdc9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36929107"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46441260"
 ---
 # <a name="handling-commands-in-the-document"></a>处理文档中的命令
-您的文档类可能还会处理菜单项、 工具栏按钮或快捷键生成的某些命令。 默认情况下，`CDocument`处理保存和另存为命令上的文件菜单中，使用序列化。 也可能由成员函数的文档处理的其他命令的影响的数据。 例如，在 Scribble 程序中，类`CScribDoc`对于编辑清除所有命令，将删除所有当前存储在文档中的数据提供一个处理程序。 文档可以具有消息映射，但不同视图，文档无法处理标准 Windows 消息 — 仅**WM_COMMAND**消息或"命令。"  
-  
-## <a name="see-also"></a>请参阅  
- [使用文档](../mfc/using-documents.md)
+
+您的文档类也可能处理菜单项、 工具栏按钮或快捷键生成的某些命令。 默认情况下，`CDocument`处理保存并另存为命令文件菜单中，使用序列化。 也可能由文档的成员函数处理会影响的数据的其他命令。 例如，在随意画图程序中，类`CScribDoc`编辑清除所有命令，将删除所有当前存储在文档中的数据提供一个处理程序。 文档可以具有消息映射，但与不同的视图，文档不能处理标准 Windows 消息 — 仅**WM_COMMAND**消息或"命令"。
+
+## <a name="see-also"></a>请参阅
+
+[使用文档](../mfc/using-documents.md)
 

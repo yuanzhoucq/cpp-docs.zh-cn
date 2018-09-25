@@ -1,5 +1,5 @@
 ---
-title: MFC ActiveX 控件： 创建自动化服务器 |Microsoft 文档
+title: MFC ActiveX 控件： 创建自动化服务器 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,46 +16,48 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 617d84b8603467da74b21be8c2bfb2e6cb418f7b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5fa8370bb02e71c457f7967d5cb6b508e743333e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33346758"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46373930"
 ---
 # <a name="mfc-activex-controls-creating-an-automation-server"></a>MFC ActiveX 控件：创建自动化服务器
-你可以为自动化服务器，从而以编程方式在另一个应用程序中嵌入该控件和控件中调用方法，从应用程序开发 MFC ActiveX 控件。 此类控件也仍可用于承载 ActiveX 控件容器中。  
-  
-### <a name="to-create-a-control-as-an-automation-server"></a>若要创建的控件为自动化服务器  
-  
-1.  [创建](../mfc/reference/mfc-activex-control-wizard.md)控件。  
-  
-2.  [将方法添加](../mfc/mfc-activex-controls-methods.md)。  
-  
-3.  重写[IsInvokeAllowed](../mfc/reference/colecontrol-class.md#isinvokeallowed)。 有关详细信息，请参阅知识库文章 Q146120。  
-  
-4.  生成控件。  
-  
-### <a name="to-programmatically-access-the-methods-in-an-automation-server"></a>以编程方式访问自动化服务器中的方法  
-  
-1.  创建应用程序，例如， [MFC exe](../mfc/reference/mfc-application-wizard.md)。  
-  
-2.  开头的`InitInstance`函数中，添加以下行：  
-  
-     [!code-cpp[NVC_MFC_AxCont#17](../mfc/codesnippet/cpp/mfc-activex-controls-creating-an-automation-server_1.cpp)]  
-  
-3.  在类视图中，右键单击项目节点并选择**从类型库添加类**导入类型库。  
-  
-     这将向项目添加文件扩展名为.h 和.cpp 文件。  
-  
-4.  在你将在其中调用 ActiveX 控件中存在一个或多个方法的类标头文件，添加以下行： `#include filename.h`，其中文件名称是导入类型库时已创建的标头文件的名称。  
-  
-5.  在函数调用将对 ActiveX 控件中的方法中，将创建控件的包装器类的对象的代码添加和创建 ActiveX 对象。 例如，下面的 MFC 代码实例化`CCirc`控件，获取的标题属性中，然后在对话框中单击确定按钮时显示的结果：  
-  
-     [!code-cpp[NVC_MFC_AxCont#18](../mfc/codesnippet/cpp/mfc-activex-controls-creating-an-automation-server_2.cpp)]  
-  
- 如果应用程序中使用后，你可以将方法添加到 ActiveX 控件，你可以开始使用应用程序中的控件的最新版本，通过删除时导入类型库创建的文件。 然后再次导入类型库。  
-  
-## <a name="see-also"></a>请参阅  
- [MFC ActiveX 控件](../mfc/mfc-activex-controls.md)
+
+可以为自动化服务器，从而以编程方式在另一个应用程序中嵌入该控件和控件中调用方法，从应用程序开发的 MFC ActiveX 控件。 此类控件仍可托管在 ActiveX 控件容器中。
+
+### <a name="to-create-a-control-as-an-automation-server"></a>若要创建的控件作为自动化服务器
+
+1. [创建](../mfc/reference/mfc-activex-control-wizard.md)控件。
+
+1. [将方法添加](../mfc/mfc-activex-controls-methods.md)。
+
+1. 重写[IsInvokeAllowed](../mfc/reference/colecontrol-class.md#isinvokeallowed)。 有关详细信息，请参阅知识库文章 Q146120。
+
+1. 生成控件。
+
+### <a name="to-programmatically-access-the-methods-in-an-automation-server"></a>若要以编程方式访问自动化服务器中的方法
+
+1. 创建应用程序，例如， [MFC exe](../mfc/reference/mfc-application-wizard.md)。
+
+1. 在开头`InitInstance`函数中，添加以下行：
+
+     [!code-cpp[NVC_MFC_AxCont#17](../mfc/codesnippet/cpp/mfc-activex-controls-creating-an-automation-server_1.cpp)]
+
+1. 在类视图中，右键单击项目节点并选择**从类型库添加类**导入类型库。
+
+     这将添加到项目的包含文件扩展名为.h 和.cpp 文件。
+
+1. 在其中你将调用 ActiveX 控件中的一个或多个方法的类标头文件，添加以下行： `#include filename.h`，其中文件名是导入类型库时已创建的标头文件的名称。
+
+1. 在函数调用将对 ActiveX 控件中的方法中，添加用于创建控件的包装器类的对象代码并创建 ActiveX 对象。 例如，下面的 MFC 代码实例化`CCirc`控件，获取 Caption 属性，并在对话框中单击确定按钮时显示结果：
+
+     [!code-cpp[NVC_MFC_AxCont#18](../mfc/codesnippet/cpp/mfc-activex-controls-creating-an-automation-server_2.cpp)]
+
+如果将方法添加到 ActiveX 控件使用的应用程序中后，可以开始通过删除文件导入类型库时创建的应用程序中使用该控件的最新版本。 然后再次导入类型库。
+
+## <a name="see-also"></a>请参阅
+
+[MFC ActiveX 控件](../mfc/mfc-activex-controls.md)
 

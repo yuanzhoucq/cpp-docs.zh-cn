@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bf6ca06ffbd3912ac3545bc3c014224412c01bc1
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 4bbb5c62fb53d1246c1b8cc282b4ee36f0fcf58e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43221165"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46377313"
 ---
 # <a name="aggregates"></a>aggregates
 
@@ -42,10 +42,10 @@ ms.locfileid: "43221165"
 
 ### <a name="parameters"></a>参数
 
-*clsid*  
+*clsid*<br/>
 指定可聚合对象的 CLSID。
 
-*variable_name*  
+*variable_name*<br/>
 要插入的变量的名称。 此变量包含`IUnknown`正在聚合的对象。
 
 ## <a name="remarks"></a>备注
@@ -106,9 +106,9 @@ struct CObject : IObject
 
 ## <a name="see-also"></a>请参阅
 
-[COM 特性](../windows/com-attributes.md)  
-[类特性](../windows/class-attributes.md)  
-[Typedef、Enum、Union 和 Struct 特性](../windows/typedef-enum-union-and-struct-attributes.md)  
-[聚合](/windows/desktop/com/aggregation)  
-[聚合](/windows/desktop/Midl/aggregatable)  
+[COM 特性](../windows/com-attributes.md)<br/>
+[类特性](../windows/class-attributes.md)<br/>
+[Typedef、Enum、Union 和 Struct 特性](../windows/typedef-enum-union-and-struct-attributes.md)<br/>
+[聚合](/windows/desktop/com/aggregation)<br/>
+[聚合](/windows/desktop/Midl/aggregatable)<br/>
 [COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND](../atl/reference/com-interface-entry-macros.md#com_interface_entry_autoaggregate_blind)  

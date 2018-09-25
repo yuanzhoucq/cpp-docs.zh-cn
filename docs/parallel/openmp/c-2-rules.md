@@ -12,20 +12,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb83b35a03608e272e9af67159b61e5dbf4e1ec6
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1c5845a9125bb32254fc0c03b03e9b6076a086d1
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755016"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46404769"
 ---
 # <a name="c2-rules"></a>C.2 规则
+
 表示法是部分所述 6.1 C 标准。 此语法附录显示 OpenMP C 和 c + + 指令的基本语言语法的扩展。
 
 **/\* 在 c + + (ISO/IEC 14882:1998) \*/**
 
 *语句-seq*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*语句*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*statement*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*openmp 指令*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*语句-seq 语句*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*语句-seq openmp 指令*
@@ -33,7 +34,7 @@ ms.locfileid: "43755016"
 **/\* 在 C90 (ISO/IEC 9899:1990) \*/**
 
 statement-list：<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*语句*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*statement*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*openmp 指令*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*语句列表语句*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*语句列表 openmp 指令*
@@ -41,8 +42,8 @@ statement-list：<br/>
 **/\* 在 C99 (ISO/IEC 9899:1999) \*/**
 
 *阻止项*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*声明*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*语句*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*declaration*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*statement*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*openmp 指令*
 
 **/\* 标准语句 \*/**
@@ -67,7 +68,7 @@ statement-list：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*flush 指令*
 
 *结构化块*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*语句*
+&nbsp;&nbsp;&nbsp;&nbsp;*statement*
 
 *并行构造*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*并行指令结构化块*
@@ -100,7 +101,7 @@ statement-list：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**计划 (** *安排类型* **，** *表达式* **)**
 
 *计划类型*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**静态**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**static**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**动态**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**引导式**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**运行时**
@@ -194,7 +195,7 @@ statement-list：<br/>
 
 **/\* 标准声明 \*/**
 
-*声明*:<br/>
+*declaration*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*threadprivate 指令*
 
 *threadprivate 指令*:<br/>
@@ -217,7 +218,7 @@ statement-list：<br/>
 **/\* 在 C 中 \*/**
 
 *变量列表*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*标识符*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*identifier*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*变量列表* **，** *标识符*
 
 **/\* 在 c + + \*/**

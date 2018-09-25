@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ffb84fd072f4ddd3dc76445c720debef5c364642
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 33f81412ef9580768269663aa23afe06ad4d62f7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42590430"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46374662"
 ---
 # <a name="comptras-method"></a>ComPtr::As 方法
 
@@ -44,10 +44,10 @@ HRESULT As(
 
 ### <a name="parameters"></a>参数
 
-*U*  
+*U*<br/>
 要由参数表示的接口*p*。
 
-*p*  
+*p*<br/>
 一个**ComPtr**对象，表示指定参数的接口*U*。参数*p*必须是当前指**ComPtr**对象。
 
 ## <a name="remarks"></a>备注

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b2336562abb82ae89bd2f6864d0678023a3ccf69
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 87516cf45a39602bea462b8e94f17d3ef64ad0eb
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42600523"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46431614"
 ---
 # <a name="interfacelisthelper-structure"></a>InterfaceListHelper 结构
 
@@ -53,34 +53,34 @@ struct InterfaceListHelper<T0, Nil, Nil, Nil, Nil, Nil, Nil, Nil, Nil>;
 
 ### <a name="parameters"></a>参数
 
-*T0*  
+*T0*<br/>
 模板参数 0，这是必需的。
 
-T1  
+T1<br/>
 模板参数 1，即默认情况下未指定。
 
-T2  
+T2<br/>
 模板参数 2，即默认情况下未指定。第三个模板参数。
 
-*T3*  
+*T3*<br/>
 模板参数 3，即默认情况下未指定。
 
-*T4*  
+*T4*<br/>
 模板参数 4，即默认情况下未指定。
 
-*T5*  
+*T5*<br/>
 模板参数 5，即默认情况下未指定。
 
-*T6*  
+*T6*<br/>
 模板参数，6，即默认情况下未指定。
 
-*T7*  
+*T7*<br/>
 模板参数，7，即默认情况下未指定。
 
-*T8*  
+*T8*<br/>
 模板参数，8，即默认情况下未指定。
 
-*T9*  
+*T9*<br/>
 模板参数，9，即默认情况下未指定。
 
 ## <a name="remarks"></a>备注

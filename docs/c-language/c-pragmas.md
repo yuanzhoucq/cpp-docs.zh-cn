@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a87a6518eec495961d1f8d40c625e589db01bd3b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 70a31d32ce7bdf89cd0216926c6628b4fa7bdd27
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32382109"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46027344"
 ---
 # <a name="c-pragmas"></a>C 杂注
 
@@ -37,8 +37,8 @@ ms.locfileid: "32382109"
 
 有关 Microsoft C 编译器杂注的说明，请参阅 [Pragma 指令和 __Pragma 关键字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)。
 
- **结束 Microsoft 专用**
+**结束 Microsoft 专用**
 
 ## <a name="see-also"></a>请参阅
 
-[源文件和源程序](../c-language/source-files-and-source-programs.md)  
+[源文件和源程序](../c-language/source-files-and-source-programs.md)

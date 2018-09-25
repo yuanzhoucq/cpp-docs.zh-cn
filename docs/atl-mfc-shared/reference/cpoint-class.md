@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc0506d5b4f264a2bdbecf30a7732c93c927bf18
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 29f487f77fac6c3f6def51b69715d1d47257dd7c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767977"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46374218"
 ---
 # <a name="cpoint-class"></a>CPoint 类
 
@@ -352,9 +352,9 @@ CPoint operator-() const throw();
 
 ## <a name="see-also"></a>请参阅
 
-[MFC 示例 MDI](../../visual-cpp-samples.md)   
-[层次结构图表](../../mfc/hierarchy-chart.md)   
-[POINT 结构](../../mfc/reference/point-structure1.md)   
-[CRect 类](../../atl-mfc-shared/reference/crect-class.md)   
+[MFC 示例 MDI](../../visual-cpp-samples.md)<br/>
+[层次结构图](../../mfc/hierarchy-chart.md)<br/>
+[POINT 结构](../../mfc/reference/point-structure1.md)<br/>
+[CRect 类](../../atl-mfc-shared/reference/crect-class.md)<br/>
 [CSize 类](../../atl-mfc-shared/reference/csize-class.md)
 

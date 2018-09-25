@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f0b9c290cb8e5ced7537fb377d6e7ac52f20d089
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 5abae461b4298d8a6300f5d7ad9f3e162a5b21c8
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314542"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46447380"
 ---
 # <a name="creating-a-dialog-box-c-that-users-cannot-exit"></a>创建一个对话框 （c + +） 该用户无法退出
 
@@ -51,6 +51,6 @@ Win32
 
 ## <a name="see-also"></a>请参阅
 
-[如何：创建资源](../windows/how-to-create-a-resource.md)  
-[资源文件](../windows/resource-files-visual-studio.md)  
+[如何：创建资源](../windows/how-to-create-a-resource.md)<br/>
+[资源文件](../windows/resource-files-visual-studio.md)<br/>
 [对话框编辑器](../windows/dialog-editor.md)

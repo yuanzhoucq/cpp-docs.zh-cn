@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5dab76460dcbbb70f55dac864292ad9a6f1fca99
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: a8b02b51dca4ae3712274b2b011c1967e5006637
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42607815"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46422397"
 ---
 # <a name="make-function"></a>Make 函数
 
@@ -174,61 +174,61 @@ ComPtr<T> Make();
 
 ### <a name="parameters"></a>参数
 
-*T*  
+*T*<br/>
 用户指定的类，该类继承`WRL::RuntimeClass`。
 
-*TArg1*  
+*TArg1*<br/>
 传递到指定的运行时类的参数 1 的类型。
 
-*TArg2*  
+*TArg2*<br/>
 传递到指定的运行时类的参数 2 的类型。
 
-*TArg3*  
+*TArg3*<br/>
 传递到指定的运行时类的参数 3 的类型。
 
-*TArg4*  
+*TArg4*<br/>
 传递到指定的运行时类的参数 4 的类型。
 
-*TArg5*  
+*TArg5*<br/>
 参数 5 传递到指定的运行时类的类型。
 
-*TArg6*  
+*TArg6*<br/>
 自 6 变量传递给指定的运行时类的类型。
 
-*TArg7*  
+*TArg7*<br/>
 7 传递给自变量指定的运行时类的类型。
 
-*TArg8*  
+*TArg8*<br/>
 8 传递给自变量指定的运行时类的类型。
 
-*TArg9*  
+*TArg9*<br/>
 参数 9，传递到指定的运行时类的类型。
 
-*arg1*  
+*arg1*<br/>
 传递到指定的运行时类的参数 1。
 
-*Arg2*  
+*Arg2*<br/>
 传递到指定的运行时类的参数 2。
 
-*arg3*  
+*arg3*<br/>
 传递到指定的运行时类的参数 3。
 
-*了 arg4*  
+*了 arg4*<br/>
 传递到指定的运行时类的参数 4。
 
-*arg5*  
+*arg5*<br/>
 参数传递到指定的运行时类 5。
 
-*了 arg6*  
+*了 arg6*<br/>
 参数传递到指定的运行时类 6。
 
-*arg7*  
+*arg7*<br/>
 参数传递到指定的运行时类 7。
 
-*arg8*  
+*arg8*<br/>
 参数传递到指定的运行时类 8。
 
-*arg9*  
+*arg9*<br/>
 参数传递到指定的运行时类 9。
 
 ## <a name="return-value"></a>返回值

@@ -30,60 +30,64 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13707791b78de2c000535d60ed3f298046e4576c
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: c323780308d71158bf717898a05f3454fabf0c3d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451281"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46030231"
 ---
 # <a name="getmainargs-wgetmainargs"></a>__getmainargs、__wgetmainargs
-调用命令行解析，并通过传递的指针将参数复制到 `main()`。  
-  
-## <a name="syntax"></a>语法  
-  
-```cpp  
-int __getmainargs(  
-    int * _Argc,   
-   char *** _Argv,   
-   char *** _Env,   
-   int _DoWildCard,  
-_startupinfo * _StartInfo);  
-  
- int __wgetmainargs (  
-   int *_Argc,  
-   wchar_t ***_Argv,  
-   wchar_t ***_Env,  
-   int _DoWildCard,  
-   _startupinfo * _StartInfo)  
-  
-```  
-  
-#### <a name="parameters"></a>参数  
- `_Argc`  
- 包含 `argv` 后面的参数数的整数。 `argc` 参数始终大于或等于 1。  
-  
- `_Argv`  
- 表示由杂注用户输入的命令行自变量的以 null 结尾的字符串的数组。 按照约定，`argv[0]` 是用于调用程序的命令，argv[1] 是第一个命令行参数，依此类推，直到 argv[argc]（其始终为 NULL）。 第一个命令行参数始终是 `argv[1]`，而最后一个命令行参数是 `argv[argc - 1]`。  
-  
- `_Env`  
- 表示用户环境中的变量集的字符串数组。 该数组由 NULL 项终止。  
-  
- `_DoWildCard`  
- 一个整数，如果将其设置为 1，则扩展命令行自变量中的通配符；如果设置为 0，则不执行任何操作。  
-  
- `_StartInfo`  
- 要传递给 CRT DLL 的其他信息。  
-  
-## <a name="return-value"></a>返回值  
- 如果成功，则为 0；如果失败，则为负值。  
-  
-## <a name="remarks"></a>备注  
- 在非宽字符平台上使用 `__getmainargs`，并且在宽字符 (Unicode) 平台上使用 `__wgetmainargs`。  
-  
-## <a name="requirements"></a>惠?  
-  
-|例程所返回的值|必需的标头|  
-|-------------|---------------------|  
-|__getmainargs|internal.h|  
+
+调用命令行解析，并通过传递的指针将参数复制到 `main()`。
+
+## <a name="syntax"></a>语法
+
+```cpp
+int __getmainargs(
+    int * _Argc,
+   char *** _Argv,
+   char *** _Env,
+   int _DoWildCard,
+_startupinfo * _StartInfo);
+
+int __wgetmainargs (
+   int *_Argc,
+   wchar_t ***_Argv,
+   wchar_t ***_Env,
+   int _DoWildCard,
+   _startupinfo * _StartInfo)
+
+```
+
+#### <a name="parameters"></a>参数
+
+`_Argc`<br/>
+包含 `argv` 后面的参数数的整数。 `argc` 参数始终大于或等于 1。
+
+`_Argv`<br/>
+表示由杂注用户输入的命令行自变量的以 null 结尾的字符串的数组。 按照约定，`argv[0]` 是用于调用程序的命令，argv[1] 是第一个命令行参数，依此类推，直到 argv[argc]（其始终为 NULL）。 第一个命令行参数始终是 `argv[1]`，而最后一个命令行参数是 `argv[argc - 1]`。
+
+`_Env`<br/>
+表示用户环境中的变量集的字符串数组。 该数组由 NULL 项终止。
+
+`_DoWildCard`<br/>
+一个整数，如果将其设置为 1，则扩展命令行自变量中的通配符；如果设置为 0，则不执行任何操作。
+
+`_StartInfo`<br/>
+要传递给 CRT DLL 的其他信息。
+
+## <a name="return-value"></a>返回值
+
+如果成功，则为 0；如果失败，则为负值。
+
+## <a name="remarks"></a>备注
+
+在非宽字符平台上使用 `__getmainargs`，并且在宽字符 (Unicode) 平台上使用 `__wgetmainargs`。
+
+## <a name="requirements"></a>要求
+
+|例程所返回的值|必需的标头|
+|-------------|---------------------|
+|__getmainargs|internal.h|
 |__wgetmainargs|internal.h|

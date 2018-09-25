@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c9e22bafdbc1be365667a7f69801743108ad4f23
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 2293bd70e391ef021d8187e3fca2a9a0ab4d98d2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42602594"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46427623"
 ---
 # <a name="operator-operator-microsoftwrl"></a>operator== 运算符 (Microsoft::WRL)
 
@@ -65,10 +65,10 @@ WRL_NOTHROW bool operator==(
 
 ### <a name="parameters"></a>参数
 
-*a*  
+*a*<br/>
 左对象。
 
-*b*  
+*b*<br/>
 右对象。
 
 ## <a name="return-value"></a>返回值

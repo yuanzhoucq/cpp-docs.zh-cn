@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9b5250a730b0ce80cbbe9698b4b5e636a85986b6
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 13ddef5b6bb83de16c72438e2b9f2bb3d4e8d635
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43223181"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46386348"
 ---
 # <a name="id"></a>id
 
@@ -38,7 +38,7 @@ ms.locfileid: "43223181"
 
 ### <a name="parameters"></a>参数
 
-*dispid*  
+*dispid*<br/>
 接口方法的调度 ID。
 
 ## <a name="remarks"></a>备注
@@ -64,9 +64,9 @@ ms.locfileid: "43223181"
 
 ## <a name="see-also"></a>请参阅
 
-[IDL 特性](../windows/idl-attributes.md)  
-[方法特性](../windows/method-attributes.md)  
-[数据成员特性](../windows/data-member-attributes.md)  
-[defaultvalue](../windows/defaultvalue.md)  
-[in](../windows/in-cpp.md)  
+[IDL 特性](../windows/idl-attributes.md)<br/>
+[方法特性](../windows/method-attributes.md)<br/>
+[数据成员特性](../windows/data-member-attributes.md)<br/>
+[defaultvalue](../windows/defaultvalue.md)<br/>
+[in](../windows/in-cpp.md)<br/>
 [out](../windows/out-cpp.md)  

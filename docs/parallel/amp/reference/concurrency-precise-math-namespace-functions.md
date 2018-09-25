@@ -98,14 +98,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5dc3be0a13d593b605f4953530bff0885a8f198
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: dac840ecb0d3dadd25387eebff9c28ff83213cbe
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46018296"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46448527"
 ---
 # <a name="concurrencyprecisemath-namespace-functions"></a>Concurrency:: precise_math 命名空间函数
+
 ||||
 |-|-|-|
 |[acos](#acos)|[acosf](#acosf)|[acosh](#acosh)|
@@ -155,161 +156,184 @@ ms.locfileid: "46018296"
 |[truncf](#truncf)|
 
 ##  <a name="acos"></a>acos
+
 计算自变量的反余弦值
 
-```  
+```
 inline float acos(float _X) restrict(amp);
 
-
 inline double acos(double _X) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 返回自变量的反余弦值
 
 ##  <a name="acosf"></a>  acosf
+
 计算自变量的反余弦值
 
-```  
+```
 inline float acosf(float _X) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 返回自变量的反余弦值
 
 ##  <a name="acosh"></a>  acosh
+
 计算自变量的反双曲余弦值
 
-```  
+```
 inline float acosh(float _X) restrict(amp);
 
-
 inline double acosh(double _X) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 返回自变量的反双曲余弦值
 
 ##  <a name="acoshf"></a>  acoshf
+
 计算自变量的反双曲余弦值
 
-```  
+```
 inline float acoshf(float _X) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 返回自变量的反双曲余弦值
 
 ##  <a name="asin"></a>  asin
+
 计算自变量的反正弦值
 
-```  
+```
 inline float asin(float _X) restrict(amp);
 
-
 inline double asin(double _X) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 返回自变量的反正弦值
 
 ##  <a name="asinf"></a>  asinf
+
 计算自变量的反正弦值
 
-```  
+```
 inline float asinf(float _X) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 返回自变量的反正弦值
 
 ##  <a name="asinh"></a>  asinh
+
 计算自变量的反双曲正弦值
 
-```  
+```
 inline float asinh(float _X) restrict(amp);
 
-
 inline double asinh(double _X) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 返回自变量的反双曲正弦值
 
 ##  <a name="asinhf"></a>  asinhf
+
 计算自变量的反双曲正弦值
 
-```  
+```
 inline float asinhf(float _X) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 返回自变量的反双曲正弦值
 
 ##  <a name="atan"></a>  atan
+
 计算参数的反正切值
 
-```  
+```
 inline float atan(float _X) restrict(amp);
 
-
 inline double atan(double _X) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 返回自变量的反正切值
 
 ##  <a name="atan2"></a>  atan2
+
 计算 _Y/_X 的反正切值
 
-```  
+```
 inline float atan2(
     float _Y,
     float _X) restrict(amp);
 
-
 inline double atan2(
     double _Y,
     double _X) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_Y*<br/>
 浮点值
 
@@ -317,18 +341,21 @@ inline double atan2(
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 返回 _Y/_X 的反正切值
 
 ##  <a name="atan2f"></a>  atan2f
+
 计算 _Y/_X 的反正切值
 
-```  
+```
 inline float atan2f(
     float _Y,
     float _X) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_Y*<br/>
 浮点值
 
@@ -336,130 +363,150 @@ inline float atan2f(
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 返回 _Y/_X 的反正切值
 
 ##  <a name="atanf"></a>  atanf
+
 计算参数的反正切值
 
-```  
+```
 inline float atanf(float _X) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 返回自变量的反正切值
 
 ##  <a name="atanh"></a>  atanh
+
 计算自变量的反双曲正切值
 
-```  
+```
 inline float atanh(float _X) restrict(amp);
 
-
 inline double atanh(double _X) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 返回自变量的反双曲正切值
 
 ##  <a name="atanhf"></a>  atanhf
+
 计算自变量的反双曲正切值
 
-```  
+```
 inline float atanhf(float _X) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 返回自变量的反双曲正切值
 
 ##  <a name="cbrt"></a>  cbrt
+
 计算自变量的实立方根
 
-```  
+```
 inline float cbrt(float _X) restrict(amp);
 
-
 inline double cbrt(double _X) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 返回自变量的实立方根
 
 ##  <a name="cbrtf"></a>  cbrtf
+
 计算自变量的实立方根
 
-```  
+```
 inline float cbrtf(float _X) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 返回自变量的实立方根
 
 ##  <a name="ceil"></a>  ceil
+
 计算参数的上限
 
-```  
+```
 inline float ceil(float _X) restrict(amp);
 
-
 inline double ceil(double _X) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 返回自变量的上限
 
 ##  <a name="ceilf"></a>  ceilf
+
 计算参数的上限
 
-```  
+```
 inline float ceilf(float _X) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 返回自变量的上限
 
 ##  <a name="copysign"></a>  copysign
+
 用 _X 的大小和 _Y 的符号生成一个值
 
-```  
+```
 inline float copysign(
     float _X,
     float _Y) restrict(amp);
 
-
 inline double copysign(
     double _X,
     double _Y) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
@@ -467,18 +514,21 @@ inline double copysign(
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 返回一个值，它具有 _X 的大小和 _Y 的符号
 
 ##  <a name="copysignf"></a>  copysignf
+
 用 _X 的大小和 _Y 的符号生成一个值
 
-```  
+```
 inline float copysignf(
     float _X,
     float _Y) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
@@ -486,383 +536,445 @@ inline float copysignf(
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 返回一个值，它具有 _X 的大小和 _Y 的符号
 
 ##  <a name="cos"></a>  cos
+
 计算参数的余弦值
 
-```  
+```
 inline float cos(float _X) restrict(amp);
 
-
 inline double cos(double _X) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 返回自变量的余弦值
 
 ##  <a name="cosf"></a>  cosf
+
 计算参数的余弦值
 
-```  
+```
 inline float cosf(float _X) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 返回自变量的余弦值
 
 ##  <a name="cosh"></a>  cosh
+
 计算参数的双曲余弦值
 
-```  
+```
 inline float cosh(float _X) restrict(amp);
 
-
 inline double cosh(double _X) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 返回自变量的反双曲余弦值
 
 ##  <a name="coshf"></a>  coshf
+
 计算参数的双曲余弦值
 
-```  
+```
 inline float coshf(float _X) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 返回自变量的反双曲余弦值
 
 ##  <a name="cospi"></a>  cospi
+
 计算 pi 的余弦值\*_X
 
-```  
+```
 inline float cospi(float _X) restrict(amp);
 
-
 inline double cospi(double _X) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 返回 pi 的余弦值\*_X
 
 ##  <a name="cospif"></a>  cospif
+
 计算 pi 的余弦值\*_X
 
-```  
+```
 inline float cospif(float _X) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 返回 pi 的余弦值\*_X
 
 ##  <a name="erf"></a>  erf
+
 计算 _X 的错误函数
 
-```  
+```
 inline float erf(float _X) restrict(amp);
 
-
 inline double erf(double _X) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 返回 _X 的错误函数
 
 ##  <a name="erfc"></a>  erfc
+
 计算 _X 的互补错误函数
 
-```  
+```
 inline float erfc(float _X) restrict(amp);
 
-
 inline double erfc(double _X) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 返回 _X 的互补错误函数
 
 ##  <a name="erfcf"></a>  erfcf
+
 计算 _X 的互补错误函数
 
-```  
+```
 inline float erfcf(float _X) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 返回 _X 的互补错误函数
 
 ##  <a name="erfcinv"></a>  erfcinv
+
 计算 _X 的反互补错误函数
 
-```  
+```
 inline float erfcinv(float _X) restrict(amp);
 
-
 inline double erfcinv(double _X) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 返回 _X 的反互补错误函数
 
 ##  <a name="erfcinvf"></a>  erfcinvf
+
 计算 _X 的反互补错误函数
 
-```  
+```
 inline float erfcinvf(float _X) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 返回 _X 的反互补错误函数
 
 ##  <a name="erff"></a>  erff
+
 计算 _X 的错误函数
 
-```  
+```
 inline float erff(float _X) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 返回 _X 的错误函数
 
 ##  <a name="erfinv"></a>  erfinv
+
 计算 _X 的反向错误函数
 
-```  
+```
 inline float erfinv(float _X) restrict(amp);
 
-
 inline double erfinv(double _X) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 返回 _X 的反向错误函数
 
 ##  <a name="erfinvf"></a>  erfinvf
+
 计算 _X 的反向错误函数
 
-```  
+```
 inline float erfinvf(float _X) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 返回 _X 的反向错误函数
 
 ##  <a name="exp10"></a>  exp10
+
 计算基数 10 的自变量的指数
 
-```  
+```
 inline float exp10(float _X) restrict(amp);
 
-
 inline double exp10(double _X) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 返回 base 10 参数的指数
 
 ##  <a name="exp10f"></a>  exp10f
+
 计算基数 10 的自变量的指数
 
-```  
+```
 inline float exp10f(float _X) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 返回 base 10 参数的指数
 
 ##  <a name="expm1"></a>  expm1
+
 计算自变量的以 e 为底的指数，减去 1
 
-```  
+```
 inline float expm1(float exponent) restrict(amp);
 
-
 inline double expm1(double exponent) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *指数*<br/>
 指数项*n*的数学表达式`e` <sup>n</sup>，其中`e`是自然对数的底数。
 
 ### <a name="return-value"></a>返回值
+
 返回自变量的以 e 为底的指数，减去 1
 
 ##  <a name="expm1f"></a>  expm1f
+
 计算自变量的以 e 为底的指数，减去 1
 
-```  
+```
 inline float expm1f(float exponent) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *指数*<br/>
 指数项*n*的数学表达式`e` <sup>n</sup>，其中`e`是自然对数的底数。
 
 ### <a name="return-value"></a>返回值
+
 返回自变量的以 e 为底的指数，减去 1
 
 ##  <a name="exp"></a>  exp
+
 计算以 e 为底的参数的指数
 
-```  
+```
 inline float exp(float _X) restrict(amp);
 
-
 inline double exp(double _X) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 返回自变量以 e 为底的指数
 
 ##  <a name="expf"></a>  expf
+
 计算以 e 为底的参数的指数
 
-```  
+```
 inline float expf(float _X) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 返回自变量以 e 为底的指数
 
 ##  <a name="exp2"></a>  exp2
+
 计算 2 为底的参数的指数
 
-```  
+```
 inline float exp2(float _X) restrict(amp);
 
-
 inline double exp2(double _X) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 返回自变量以 2 为底的指数
 
 ##  <a name="exp2f"></a>  exp2f
+
 计算 2 为底的参数的指数
 
-```  
+```
 inline float exp2f(float _X) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 返回自变量以 2 为底的指数
 
 ##  <a name="fabs"></a>  fabs
+
 返回自变量的绝对值
 
-```  
+```
 inline float fabs(float _X) restrict(amp);
 
-
 inline double fabs(double _X) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 返回自变量的绝对值
 
 ##  <a name="fabsf"></a>  fabsf
+
 返回自变量的绝对值
 
-```  
+```
 inline float fabsf(float _X) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 返回自变量的绝对值
 
 ## <a name="fdim"></a> fdim
+
 计算参数之间的正数差。
-```  
+```
 inline float fdim(
    float _X,
    float _Y
@@ -871,17 +983,19 @@ inline double fdim(
    double _X,
    double _Y
 ) restrict(amp);
-``` 
+```
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值 *_Y*<br/>
 浮点值
 
-
 ### <a name="return-value"></a>返回值
+
 _X 和 _Y 如果 _X 大于 _Y; 之间的差异否则为 + 0。
 
 ## <a name="fdimf"></a> fdimf
+
 计算参数之间的正数差。
 ```
 inline float fdimf(
@@ -890,45 +1004,53 @@ inline float fdimf(
 ) restrict(amp);
 ```
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值 *_Y*<br/>
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 _X 和 _Y 如果 _X 大于 _Y; 之间的差异否则为 + 0。
 
 ##  <a name="floor"></a>  floor
+
 计算参数的下限
 
-```  
+```
 inline float floor(float _X) restrict(amp);
 
-
 inline double floor(double _X) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 返回自变量的下限
 
 ##  <a name="floorf"></a>  floorf
+
 计算参数的下限
 
-```  
+```
 inline float floorf(float _X) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 返回自变量的下限
 
 ## <a name="a-namefma-fma"></a><a name="fma"> fma
+
 计算产品的第一个和第二个指定参数，然后将第三个指定的参数添加到结果;整个计算是作为单个操作执行的。
 ```
 inline float fma(
@@ -944,6 +1066,7 @@ inline double fma(
 ) restrict(amp);
 ```
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 第一个浮点自变量。
 *_Y*<br/>
@@ -952,9 +1075,11 @@ inline double fma(
 第三个浮点自变量。
 
 ### <a name="return-value"></a>返回值
+
 该表达式的结果 (_X \* _Y) + _Z。 整个计算执行作为单个操作;也就是说，子表达式计算到无限精度并且仅对最终结果舍入。
 
 ## <a name="fmaf"></a> fmaf
+
 计算产品的第一个和第二个指定参数，然后将第三个指定的参数添加到结果;整个计算是作为单个操作执行的。
 ```
 inline float fmaf(
@@ -962,8 +1087,9 @@ inline float fmaf(
    float _Y,
    float _Z
 ) restrict(amp);
-```  
+```
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 第一个浮点自变量。
 *_Y*<br/>
@@ -972,23 +1098,25 @@ inline float fmaf(
 第三个浮点自变量。
 
 ### <a name="return-value"></a>返回值
+
 该表达式的结果 (_X \* _Y) + _Z。 整个计算执行作为单个操作;也就是说，子表达式计算到无限精度并且仅对最终结果舍入。
 
 ##  <a name="fmax"></a>  fmax
+
 确定自变量的最大数值
 
-```  
+```
 inline float fmax(
     float _X,
     float _Y) restrict(amp);
 
-
 inline double fmax(
     double _X,
     double _Y) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
@@ -996,18 +1124,21 @@ inline double fmax(
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 返回自变量的最大数值
 
 ##  <a name="fmaxf"></a>  fmaxf
+
 确定自变量的最大数值
 
-```  
+```
 inline float fmaxf(
     float _X,
     float _Y) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
@@ -1015,23 +1146,25 @@ inline float fmaxf(
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 返回自变量的最大数值
 
 ##  <a name="fmin"></a>  fmin
+
 确定自变量的最小数值
 
-```  
+```
 inline float fmin(
     float _X,
     float _Y) restrict(amp);
 
-
 inline double fmin(
     double _X,
     double _Y) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
@@ -1039,18 +1172,21 @@ inline double fmin(
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 返回自变量的最小数值
 
 ##  <a name="fminf"></a>  fminf
+
 确定自变量的最小数值
 
-```  
+```
 inline float fminf(
     float _X,
     float _Y) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
@@ -1058,23 +1194,25 @@ inline float fminf(
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 返回自变量的最小数值
 
-##  <a name="fmod"></a>  fmod 函数 (c + + AMP)  
+##  <a name="fmod"></a>  fmod 函数 (c + + AMP)
+
 计算指定第一个参数除以第二个指定参数的余数。
 
-```  
+```
 inline float fmod(
     float _X,
     float _Y) restrict(amp);
 
-
 inline double fmod(
     double _X,
     double _Y) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 第一个浮点自变量。
 
@@ -1082,18 +1220,21 @@ inline double fmod(
 第二个浮点自变量。
 
 ### <a name="return-value"></a>返回值
+
 其余`_X`除以`_Y`; 的值，即`_X`  -  `_Y` *n*，其中*n*均为整数，以便的量`_X`  -  `_Y` *n*小于的量`_Y`。
 
 ##  <a name="fmodf"></a>  fmodf
+
 计算指定第一个参数除以第二个指定参数的余数。
 
-```  
+```
 inline float fmodf(
     float _X,
     float _Y) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 第一个浮点自变量。
 
@@ -1101,40 +1242,44 @@ inline float fmodf(
 第二个浮点自变量。
 
 ### <a name="return-value"></a>返回值
+
 其余`_X`除以`_Y`; 的值，即`_X`  -  `_Y` *n*，其中*n*均为整数，以便的量`_X`  -  `_Y` *n*小于的量`_Y`。
 
 ##  <a name="fpclassify"></a>  fpclassify
+
 将自变量值分类为 NaN、无穷大、正常、次正常、零
 
-```  
+```
 inline int fpclassify(float _X) restrict(amp);
 
-
 inline int fpclassify(double _X) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 返回与自变量值相对应的数字分类宏的值。
 
 ##  <a name="frexp"></a>  frexp
+
 获取的尾数和 _X 的指数
 
-```  
+```
 inline float frexp(
     float _X,
     _Out_ int* _Exp) restrict(amp);
 
-
 inline double frexp(
     double _X,
     _Out_ int* _Exp) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
@@ -1142,18 +1287,21 @@ inline double frexp(
 以浮点值形式返回 _X 的整数指数。
 
 ### <a name="return-value"></a>返回值
+
 返回尾数 _X
 
 ##  <a name="frexpf"></a>  frexpf
+
 获取的尾数和 _X 的指数
 
-```  
+```
 inline float frexpf(
     float _X,
     _Out_ int* _Exp) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
@@ -1161,23 +1309,25 @@ inline float frexpf(
 以浮点值形式返回 _X 的整数指数。
 
 ### <a name="return-value"></a>返回值
+
 返回尾数 _X
 
 ##  <a name="hypot"></a>  hypot
+
 计算 _X 和 _Y 平方和的平方根
 
-```  
+```
 inline float hypot(
     float _X,
     float _Y) restrict(amp);
 
-
 inline double hypot(
     double _X,
     double _Y) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
@@ -1185,18 +1335,21 @@ inline double hypot(
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 返回 _X 和 _Y 平方和的平方根
 
 ##  <a name="hypotf"></a>  hypotf
+
 计算 _X 和 _Y 平方和的平方根
 
-```  
+```
 inline float hypotf(
     float _X,
     float _Y) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
@@ -1204,122 +1357,137 @@ inline float hypotf(
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 返回 _X 和 _Y 平方和的平方根
 
 ##  <a name="ilogb"></a>  ilogb
+
 以有符号整数值形式提取 _X 的指数
 
-```  
+```
 inline int ilogb(float _X) restrict(amp);
 
-
 inline int ilogb(double _X) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 以有符号整数值形式返回 _X 的指数
 
 ##  <a name="ilogbf"></a>  ilogbf
+
 以有符号整数值形式提取 _X 的指数
 
-```  
+```
 inline int ilogbf(float _X) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 以有符号整数值形式返回 _X 的指数
 
 ##  <a name="isfinite"></a>  isfinite
+
 确定参数是否具有有限的值
 
-```  
+```
 inline int isfinite(float _X) restrict(amp);
 
-
 inline int isfinite(double _X) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 当且仅当自变量具有有限值时，返回一个非零值
 
 ##  <a name="isinf"></a>  isinf
+
 确定参数是否是无穷
 
-```  
+```
 inline int isinf(float _X) restrict(amp);
 
-
 inline int isinf(double _X) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 当且仅当自变量具有无限值时，返回一个非零值
 
 ##  <a name="isnan"></a>  isnan
+
 确定参数是否是 NaN
 
-```  
+```
 inline int isnan(float _X) restrict(amp);
 
-
 inline int isnan(double _X) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 当且仅当自变量具有 NaN 值时，返回一个非零值
 
 ##  <a name="isnormal"></a>  isnormal
+
 确定自变量是否规范
 
-```  
+```
 inline int isnormal(float _X) restrict(amp);
 
-
 inline int isnormal(double _X) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 当且仅当自变量具有规范值时，返回一个非零值
 
 ##  <a name="ldexp"></a>  ldexp
+
 计算将实数从指定的尾数和指数。
 
-```  
+```
 inline float ldexp(
     float _X,
     int _Exp) restrict(amp);
 
-
 inline double ldexp(
     double _X,
     double _Exp) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值尾数
 
@@ -1327,18 +1495,21 @@ inline double ldexp(
 整数值指数
 
 ### <a name="return-value"></a>返回值
+
 返回 _X \* 2 ^ 2^_exp
 
 ##  <a name="ldexpf"></a>  ldexpf
+
 计算将实数从指定的尾数和指数。
 
-```  
+```
 inline float ldexpf(
     float _X,
     int _Exp) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值尾数
 
@@ -1346,23 +1517,25 @@ inline float ldexpf(
 整数值指数
 
 ### <a name="return-value"></a>返回值
+
 返回 _X \* 2 ^ 2^_exp
 
 ##  <a name="lgamma"></a>  lgamma
+
 计算自变量伽玛绝对值的自然对数
 
-```  
+```
 inline float lgamma(
     float _X,
     _Out_ int* _Sign) restrict(amp);
 
-
 inline double lgamma(
     double _X,
     _Out_ int* _Sign) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
@@ -1370,18 +1543,21 @@ inline double lgamma(
 返回符号
 
 ### <a name="return-value"></a>返回值
+
 返回自变量伽玛绝对值的自然对数
 
 ##  <a name="lgammaf"></a>  lgammaf
+
 计算自变量伽玛绝对值的自然对数
 
-```  
+```
 inline float lgammaf(
     float _X,
     _Out_ int* _Sign) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
@@ -1389,178 +1565,205 @@ inline float lgammaf(
 返回符号
 
 ### <a name="return-value"></a>返回值
+
 返回自变量伽玛绝对值的自然对数
 
 ##  <a name="log"></a>  log
+
 计算自变量的以 e 为底的对数
 
-```  
+```
 inline float log(float _X) restrict(amp);
 
-
 inline double log(double _X) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 返回自变量以 e 为底的对数
 
 ##  <a name="log10"></a>  log10
+
 计算自变量的以 10 为基数的对数
 
-```  
+```
 inline float log10(float _X) restrict(amp);
 
-
 inline double log10(double _X) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 返回自变量以 10 为底的对数
 
 ##  <a name="log10f"></a>  log10f
+
 计算自变量的以 10 为基数的对数
 
-```  
+```
 inline float log10f(float _X) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 返回自变量以 10 为底的对数
 
 ##  <a name="log1p"></a>  log1p
+
 计算 1 加自变量的以 e 为底的对数
 
-```  
+```
 inline float log1p(float _X) restrict(amp);
 
-
 inline double log1p(double _X) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 返回 1加自变量的以 e 为底的对数
 
 ##  <a name="log1pf"></a>  log1pf
+
 计算 1 加自变量的以 e 为底的对数
 
-```  
+```
 inline float log1pf(float _X) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 返回 1加自变量的以 e 为底的对数
 
 ##  <a name="log2"></a>  log2
+
 计算参数的 2 为底对数
 
-```  
+```
 inline float log2(float _X) restrict(amp);
 
-
 inline double log2(double _X) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 返回自变量以 10 为底的对数
 
 ##  <a name="log2f"></a>  log2f
+
 计算参数的 2 为底对数
 
-```  
+```
 inline float log2f(float _X) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 返回自变量以 10 为底的对数
 
 ##  <a name="logb"></a>  logb
+
 以浮点格式的有符号整数值形式提取 _X 的指数
 
-```  
+```
 inline float logb(float _X) restrict(amp);
 
-
 inline double logb(double _X) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 返回 _X 的有符号指数
 
 ##  <a name="logbf"></a>  logbf
+
 以浮点格式的有符号整数值形式提取 _X 的指数
 
-```  
+```
 inline float logbf(float _X) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 返回 _X 的有符号指数
 
 ##  <a name="logf"></a>  logf
+
 计算自变量的以 e 为底的对数
 
-```  
+```
 inline float logf(float _X) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 返回自变量以 e 为底的对数
 
 ##  <a name="modf"></a>  modf
+
 将拆分为小数部分指定的参数和整数部分。
 
-```  
+```
 inline float modf(
     float _X,
     _Out_ float* _Iptr) restrict(amp);
 
-
 inline double modf(
     double _X,
     _Out_ double* _Iptr) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
@@ -1568,18 +1771,21 @@ inline double modf(
 [out]整数部分`_X`，作为浮点值。
 
 ### <a name="return-value"></a>返回值
+
 有符号的小数部分的`_X`。
 
 ##  <a name="modff"></a>  modff
+
 将拆分为小数部分指定的参数和整数部分。
 
-```  
+```
 inline float modff(
     float _X,
     _Out_ float* _Iptr) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
@@ -1587,82 +1793,95 @@ inline float modff(
 整数部分`_X`，作为浮点值。
 
 ### <a name="return-value"></a>返回值
+
 返回的有符号的小数部分`_X`。
 
 ##  <a name="nan"></a>  nan
+
 返回一个静态 NaN
 
-```  
+```
 inline double nan(int _X) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 整数值
 
 ### <a name="return-value"></a>返回值
+
 如果可以，用 _X 中指示的内容返回静态 NaN
 
 ##  <a name="nanf"></a>  nanf
+
 返回一个静态 NaN
 
-```  
+```
 inline float nanf(int _X) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 整数值
 
 ### <a name="return-value"></a>返回值
+
 如果可以，用 _X 中指示的内容返回静态 NaN
 
 ##  <a name="nearbyint"></a>  nearbyint
+
 通过使用当前舍入方向，将自变量舍入为浮点格式的整数值。
 
-```  
+```
 inline float nearbyint(float _X) restrict(amp);
 
-
 inline double nearbyint(double _X) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 返回舍入后的整数值。
 
 ##  <a name="nearbyintf"></a>  nearbyintf
+
 通过使用当前舍入方向，将自变量舍入为浮点格式的整数值。
 
-```  
+```
 inline float nearbyintf(float _X) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 返回舍入后的整数值。
 
 ##  <a name="nextafter"></a>  nextafter
+
 在 _Y 方向上 _X 后确定函数的类型中的下一步可表示值
 
-```  
+```
 inline float nextafter(
     float _X,
     float _Y) restrict(amp);
 
-
 inline double nextafter(
     double _X,
     double _Y) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
@@ -1670,18 +1889,21 @@ inline double nextafter(
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 在 _Y 方向上 _X 后返回函数的类型中的下一个可表示值，
 
 ##  <a name="nextafterf"></a>  nextafterf
+
 在 _Y 方向上 _X 后确定函数的类型中的下一步可表示值
 
-```  
+```
 inline float nextafterf(
     float _X,
     float _Y) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
@@ -1689,54 +1911,61 @@ inline float nextafterf(
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 在 _Y 方向上 _X 后返回函数的类型中的下一个可表示值，
 
 ##  <a name="phi"></a>  phi
+
 返回自变量的累积分布函数
 
-```  
+```
 inline float phi(float _X) restrict(amp);
 
-
 inline double phi(double _X) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 返回自变量的累积分布函数
 
 ##  <a name="phif"></a>  phif
+
 返回自变量的累积分布函数
 
-```  
+```
 inline float phif(float _X) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 返回自变量的累积分布函数
 
 ##  <a name="pow"></a>  pow
+
 计算 _X 的 _Y 次幂
 
-```  
+```
 inline float pow(
     float _X,
     float _Y) restrict(amp);
 
-
 inline double pow(
     double _X,
     double _Y) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值，底数
 
@@ -1746,15 +1975,17 @@ inline double pow(
 ### <a name="return-value"></a>返回值
 
 ##  <a name="powf"></a>  powf
+
 计算 _X 的 _Y 次幂
 
-```  
+```
 inline float powf(
     float _X,
     float _Y) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值，底数
 
@@ -1764,82 +1995,93 @@ inline float powf(
 ### <a name="return-value"></a>返回值
 
 ##  <a name="probit"></a>  概率
+
 返回自变量的反转累积分布函数
 
-```  
+```
 inline float probit(float _X) restrict(amp);
 
-
 inline double probit(double _X) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 返回自变量的反转累积分布函数
 
 ##  <a name="probitf"></a>  probitf
+
 返回自变量的反转累积分布函数
 
-```  
+```
 inline float probitf(float _X) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 返回自变量的反转累积分布函数
 
 ##  <a name="rcbrt"></a>  rcbrt
+
 返回自变量的立方根的倒数
 
-```  
+```
 inline float rcbrt(float _X) restrict(amp);
 
-
 inline double rcbrt(double _X) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 返回自变量的立方根的倒数
 
 ##  <a name="rcbrtf"></a>  rcbrtf
+
 返回自变量的立方根的倒数
 
-```  
+```
 inline float rcbrtf(float _X) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 返回自变量的立方根的倒数
 
 ##  <a name="remainder"></a>  其余部分
+
 计算余数：_X REM _Y
 
-```  
+```
 inline float remainder(
     float _X,
     float _Y) restrict(amp);
 
-
 inline double remainder(
     double _X,
     double _Y) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
@@ -1847,18 +2089,21 @@ inline double remainder(
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 返回 _X REM _Y
 
 ##  <a name="remainderf"></a>  remainderf
+
 计算余数：_X REM _Y
 
-```  
+```
 inline float remainderf(
     float _X,
     float _Y) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
@@ -1866,25 +2111,27 @@ inline float remainderf(
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 返回 _X REM _Y
 
 ##  <a name="remquo"></a>  remquo
+
 计算指定第一个参数除以第二个指定参数的余数。 此外计算第一个指定参数除以第二个指定的参数的有效数字的有效数字的商，并返回商使用第三个参数中指定的位置。
 
-```  
+```
 inline float remquo(
     float _X,
     float _Y,
     _Out_ int* _Quo) restrict(amp);
 
-
 inline double remquo(
     double _X,
     double _Y,
     _Out_ int* _Quo) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 第一个浮点自变量。
 
@@ -1895,19 +2142,22 @@ inline double remquo(
 [out]一个整数，用于返回小数位数的商的地址`_X`小数位数除以`_Y`。
 
 ### <a name="return-value"></a>返回值
+
 返回余数`_X`除以`_Y`。
 
 ##  <a name="remquof"></a>  remquof
+
 计算指定第一个参数除以第二个指定参数的余数。 此外计算第一个指定参数除以第二个指定的参数的有效数字的有效数字的商，并返回商使用第三个参数中指定的位置。
 
-```  
+```
 inline float remquof(
     float _X,
     float _Y,
     _Out_ int* _Quo) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 第一个浮点自变量。
 
@@ -1918,85 +2168,97 @@ inline float remquof(
 [out]一个整数，用于返回小数位数的商的地址`_X`小数位数除以`_Y`。
 
 ### <a name="return-value"></a>返回值
+
 返回余数`_X`除以`_Y`。
 
 ##  <a name="round"></a>  舍入
+
 将 _X 四舍五入为最接近的整数
 
-```  
+```
 inline float round(float _X) restrict(amp);
 
-
 inline double round(double _X) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 返回最接近 _X 的整数
 
 ##  <a name="roundf"></a>  roundf
+
 将 _X 四舍五入为最接近的整数
 
-```  
+```
 inline float roundf(float _X) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 返回最接近 _X 的整数
 
 ##  <a name="rsqrt"></a>  rsqrt
+
 返回自变量的平方根的倒数
 
-```  
+```
 inline float rsqrt(float _X) restrict(amp);
 
-
 inline double rsqrt(double _X) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 返回自变量的平方根的倒数
 
 ##  <a name="rsqrtf"></a>  rsqrtf
+
 返回自变量的平方根的倒数
 
-```  
+```
 inline float rsqrtf(float _X) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 返回自变量的平方根的倒数
 
 ##  <a name="scalb"></a>  scalb
+
 用 _X 乘以 FLT_RADIX 的 _Y 次方
 
-```  
+```
 inline float scalb(
     float _X,
     float _Y) restrict(amp);
 
-
 inline double scalb(
     double _X,
     double _Y) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
@@ -2004,18 +2266,21 @@ inline double scalb(
 浮点值
 
 ### <a name="return-value"></a>返回值
-返回 _X \* (FLT_RADIX ^ _Y)  
+
+返回 _X \* (FLT_RADIX ^ _Y)
 
 ##  <a name="scalbf"></a>  scalbf
+
 用 _X 乘以 FLT_RADIX 的 _Y 次方
 
-```  
+```
 inline float scalbf(
     float _X,
     float _Y) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
@@ -2023,23 +2288,25 @@ inline float scalbf(
 浮点值
 
 ### <a name="return-value"></a>返回值
-返回 _X \* (FLT_RADIX ^ _Y)  
+
+返回 _X \* (FLT_RADIX ^ _Y)
 
 ##  <a name="scalbn"></a>  scalbn
+
 用 _X 乘以 FLT_RADIX 的 _Y 次方
 
-```  
+```
 inline float scalbn(
     float _X,
     int _Y) restrict(amp);
 
-
 inline double scalbn(
     double _X,
     int _Y) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
@@ -2047,18 +2314,21 @@ inline double scalbn(
 整数值
 
 ### <a name="return-value"></a>返回值
-返回 _X \* (FLT_RADIX ^ _Y)  
+
+返回 _X \* (FLT_RADIX ^ _Y)
 
 ##  <a name="scalbnf"></a>  scalbnf
+
 用 _X 乘以 FLT_RADIX 的 _Y 次方
 
-```  
+```
 inline float scalbnf(
     float _X,
     int _Y) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
@@ -2066,87 +2336,99 @@ inline float scalbnf(
 整数值
 
 ### <a name="return-value"></a>返回值
-返回 _X \* (FLT_RADIX ^ _Y)  
+
+返回 _X \* (FLT_RADIX ^ _Y)
 
 ##  <a name="signbit"></a>  signbit
+
 确定 _X 的符号是否为负号
 
-```  
+```
 inline int signbit(float _X) restrict(amp);
 
-
 inline int signbit(double _X) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 当且仅当 _X 的符号为负号时，返回一个非零值
 
 ##  <a name="signbitf"></a>  signbitf
+
 确定 _X 的符号是否为负号
 
-```  
+```
 inline int signbitf(float _X) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 当且仅当 _X 的符号为负号时，返回一个非零值
 
 ##  <a name="sin"></a>  sin
+
 计算参数的正弦值
 
-```  
+```
 inline float sin(float _X) restrict(amp);
 
-
 inline double sin(double _X) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 返回自变量的正弦值
 
 ##  <a name="sinf"></a>  sinf
+
 计算参数的正弦值
 
-```  
+```
 inline float sinf(float _X) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 返回自变量的正弦值
 
 ##  <a name="sincos"></a>  sincos
+
 计算 _X 的正弦和余弦值
 
-```  
+```
 inline void sincos(
     float _X,
     _Out_ float* _S,
     _Out_ float* _C) restrict(amp);
 
-
 inline void sincos(
     double _X,
     _Out_ double* _S,
     _Out_ double* _C) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
@@ -2157,16 +2439,18 @@ inline void sincos(
 返回 _X 的余弦值
 
 ##  <a name="sincosf"></a>  sincosf
+
 计算 _X 的正弦和余弦值
 
-```  
+```
 inline void sincosf(
     float _X,
     _Out_ float* _S,
     _Out_ float* _C) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
@@ -2177,252 +2461,293 @@ inline void sincosf(
 返回 _X 的余弦值
 
 ##  <a name="sinh"></a>  sinh
+
 计算参数的双曲正弦值
 
-```  
+```
 inline float sinh(float _X) restrict(amp);
 
-
 inline double sinh(double _X) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 返回自变量的双曲正弦值
 
 ##  <a name="sinhf"></a>  sinhf
+
 计算参数的双曲正弦值
 
-```  
+```
 inline float sinhf(float _X) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 返回自变量的双曲正弦值
 
 ##  <a name="sinpi"></a>  sinpi
+
 计算 pi 的正弦值\*_X
 
-```  
+```
 inline float sinpi(float _X) restrict(amp);
 
-
 inline double sinpi(double _X) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 返回 pi 的正弦值\*_X
 
 ##  <a name="sinpif"></a>  sinpif
+
 计算 pi 的正弦值\*_X
 
-```  
+```
 inline float sinpif(float _X) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 返回 pi 的正弦值\*_X
 
 ##  <a name="sqrt"></a>  sqrt
+
 计算自变量的平方根
 
-```  
+```
 inline float sqrt(float _X) restrict(amp);
 
-
 inline double sqrt(double _X) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 返回自变量的平方根
 
 ##  <a name="sqrtf"></a>  sqrtf
+
 计算自变量的平方根
 
-```  
+```
 inline float sqrtf(float _X) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 返回自变量的平方根
 
 ##  <a name="tan"></a>  tan
+
 计算参数的正切值
 
-```  
+```
 inline float tan(float _X) restrict(amp);
 
-
 inline double tan(double _X) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 返回自变量的正切值
 
 ##  <a name="tanf"></a>  tanf
+
 计算参数的正切值
 
-```  
+```
 inline float tanf(float _X) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 返回自变量的正切值
 
 ##  <a name="tanh"></a>  tanh
+
 计算参数的双曲正切值
 
-```  
+```
 inline float tanh(float _X) restrict(amp);
 
-
 inline double tanh(double _X) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 返回自变量的双曲正切值
 
 ##  <a name="tanhf"></a>  tanhf
+
 计算参数的双曲正切值
 
-```  
+```
 inline float tanhf(float _X) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 返回自变量的双曲正切值
 
 ##  <a name="tanpi"></a>  tanpi
+
 计算 pi 的正切值\*_X
 
-```  
+```
 inline float tanpi(float _X) restrict(amp);
 
-
 inline double tanpi(double _X) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 返回 pi 的正切值\*_X
 
 ##  <a name="tanpif"></a>  tanpif
+
 计算 pi 的正切值\*_X
 
-```  
+```
 inline float tanpif(float _X) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 返回 pi 的正切值\*_X
 
 ##  <a name="tgamma"></a>  tgamma
+
 计算 _X 的伽玛函数
 
-```  
+```
 inline float tgamma(float _X) restrict(amp);
 
-
 inline double tgamma(double _X) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 返回 _X 的伽玛函数的结果
 
 ##  <a name="tgammaf"></a>  tgammaf
+
 计算 _X 的伽玛函数
 
-```  
+```
 inline float tgammaf(float _X) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 返回 _X 的伽玛函数的结果
 
 ##  <a name="trunc"></a>  trunc
+
 将截断为整数部分参数
 
-```  
+```
 inline float trunc(float _X) restrict(amp);
 
-
 inline double trunc(double _X) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 返回自变量的整数部分
 
 ##  <a name="truncf"></a>  truncf
+
 将截断为整数部分参数
 
-```  
+```
 inline float truncf(float _X) restrict(amp);
-```  
+```
 
 ### <a name="parameters"></a>参数
+
 *_X*<br/>
 浮点值
 
 ### <a name="return-value"></a>返回值
+
 返回自变量的整数部分
 
 ## <a name="see-also"></a>请参阅
+
 [Concurrency::precise_math 命名空间](concurrency-precise-math-namespace.md)

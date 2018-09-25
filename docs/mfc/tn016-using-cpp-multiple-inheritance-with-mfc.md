@@ -1,5 +1,5 @@
 ---
-title: Tn016： 对 MFC 使用 c + + 多重继承 |Microsoft 文档
+title: Tn016： 对 MFC 使用 c + + 多重继承 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/28/2018
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 059e239f549f8da79207e5ff6a485643252d6d6b
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: 4c0ed5c1bc73f58bec1f9ad0d6a790fe3d3c0239
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37123352"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46444679"
 ---
 # <a name="tn016-using-c-multiple-inheritance-with-mfc"></a>TN016：对 MFC 使用 C++ 多重继承
 
@@ -35,17 +35,17 @@ ms.locfileid: "37123352"
 
 ## <a name="cruntimeclass"></a>CRuntimeClass
 
-持久性和 MFC 使用动态对象创建机制[CRuntimeClass](../mfc/reference/cruntimeclass-structure.md)数据结构唯地标识类。 MFC 将这些结构之一与应用程序中的每个动态和/或可序列化类关联。 这些结构通过 `AFX_CLASSINIT` 类型的特殊静态对象之一在应用程序启动时初始化。
+持久性和 MFC 使用的动态对象创建机制[CRuntimeClass](../mfc/reference/cruntimeclass-structure.md)数据结构唯地标识类。 MFC 将这些结构之一与应用程序中的每个动态和/或可序列化类关联。 这些结构通过 `AFX_CLASSINIT` 类型的特殊静态对象之一在应用程序启动时初始化。
 
 `CRuntimeClass` 的当前实现不支持 MI 运行时类型信息。 这并不意味着您在不能在 MFC 应用程序中使用 MI。 但是，当您使用具有多个基类的对象时，您将负有某些责任。
 
-[CObject::IsKindOf](../mfc/reference/cobject-class.md#iskindof)方法将不正确确定对象的类型这是如果它具有多个基类。 因此，不能使用[CObject](../mfc/reference/cobject-class.md)作为虚拟基类，以及对所有调用`CObject`成员函数如[cobject:: Serialize](../mfc/reference/cobject-class.md#serialize)和[CObject::operator 新](../mfc/reference/cobject-class.md#operator_new)必须具有作用域限定符，因此该 c + + 可以消除歧义相应的函数调用。 当程序在 MFC 中使用 MI 时，包含 `CObject` 基类的类需要是基类列表中最左侧的类。
+[CObject::IsKindOf](../mfc/reference/cobject-class.md#iskindof)方法将不正确确定对象类型具有多个基类。 因此，不能使用[CObject](../mfc/reference/cobject-class.md)为虚拟基类，并为所有调用`CObject`之类的成员函数[cobject:: Serialize](../mfc/reference/cobject-class.md#serialize)和[CObject::operator 新](../mfc/reference/cobject-class.md#operator_new)必须具有范围限定符，因此该 c + + 可以消除相应函数调用。 当程序在 MFC 中使用 MI 时，包含 `CObject` 基类的类需要是基类列表中最左侧的类。
 
 替代方法是使用 `dynamic_cast` 运算符。 如果将具有 MI 的对象强制转换为其基类之一，则会强制编译器使用指定基类中的函数。 有关详细信息，请参阅[dynamic_cast 运算符](../cpp/dynamic-cast-operator.md)。
 
 ## <a name="cobject---the-root-of-all-classes"></a>CObject - 所有类的根
 
-所有重要类都直接或间接从 `CObject` 类派生。 `CObject` 没有任何成员数据，但它确实有一些默认功能。 当您使用 MI 时，您通常从两个或多个 `CObject` 派生类进行继承。 下面的示例演示如何从继承类[CFrameWnd](../mfc/reference/cframewnd-class.md)和[CObList](../mfc/reference/coblist-class.md):
+所有重要类都直接或间接从 `CObject` 类派生。 `CObject` 没有任何成员数据，但它确实有一些默认功能。 当您使用 MI 时，您通常从两个或多个 `CObject` 派生类进行继承。 下面的示例演示了一个类可以继承[CFrameWnd](../mfc/reference/cframewnd-class.md)和一个[CObList](../mfc/reference/coblist-class.md):
 
 ```cpp
 class CListWnd : public CFrameWnd, public CObList
@@ -55,7 +55,7 @@ class CListWnd : public CFrameWnd, public CObList
 CListWnd myListWnd;
 ```
 
-在这种情况下，`CObject` 将被包含两次。 这意味着您需要一种消除对 `CObject` 方法或运算符的任何引用的多义性的方法。 **运算符 new**和[运算符 delete](../mfc/reference/cobject-class.md#operator_delete)都必须消除多义性的两个运算符。 另举一例，以下代码导致在编译时出现错误：
+在这种情况下，`CObject` 将被包含两次。 这意味着您需要一种消除对 `CObject` 方法或运算符的任何引用的多义性的方法。 **运算符 new**并[运算符 delete](../mfc/reference/cobject-class.md#operator_delete)都必须消除歧义的两个运算符。 另举一例，以下代码导致在编译时出现错误：
 
 ```cpp
 myListWnd.Dump(afxDump); // compile time error, CFrameWnd::Dump or CObList::Dump
@@ -63,7 +63,7 @@ myListWnd.Dump(afxDump); // compile time error, CFrameWnd::Dump or CObList::Dump
 
 ## <a name="reimplementing-cobject-methods"></a>Reimplementing CObject 方法
 
-当您要创建包含两个或更多 `CObject` 派生基类的新类时，应重新实现您希望其他人使用的 `CObject` 方法。 运算符**新**和**删除**是必需的和[转储](../mfc/reference/cobject-class.md#dump)建议。 以下示例重新实现**新**和**删除**运算符和`Dump`方法：
+当您要创建包含两个或更多 `CObject` 派生基类的新类时，应重新实现您希望其他人使用的 `CObject` 方法。 运算符**新**并**删除**都是必需的并且[转储](../mfc/reference/cobject-class.md#dump)建议。 以下示例重新实现**新**并**删除**运算符和`Dump`方法：
 
 ```cpp
 class CListWnd : public CFrameWnd, public CObList
@@ -92,7 +92,7 @@ public:
 
 ## <a name="cobjectiskindof-and-run-time-typing"></a>CObject::IsKindOf 和运行时类型检查
 
-支持的 MFC 中运行时类型检查机制`CObject`使用 DECLARE_DYNAMIC、 IMPLEMENT_DYNAMIC、 DECLARE_DYNCREATE、 IMPLEMENT_DYNCREATE、 DECLARE_SERIAL 和 IMPLEMENT_SERIAL 宏。 这些宏可执行运行时类型检查以保证向下转换的安全性。
+中受 MFC 支持运行时类型检查机制`CObject`使用 DECLARE_DYNAMIC、 IMPLEMENT_DYNAMIC、 DECLARE_DYNCREATE、 IMPLEMENT_DYNCREATE、 DECLARE_SERIAL 和 IMPLEMENT_SERIAL 宏。 这些宏可执行运行时类型检查以保证向下转换的安全性。
 
 这些宏仅支持一个基类，并且以有限的方式用于多重继承类。 IMPLEMENT_DYNAMIC 或 IMPLEMENT_SERIAL 中指定的基类应是第一个 （或最左侧的） 基类。 此位置将使您能够仅为最左侧的基类执行类型检查。 运行时类型系统将对附加基类一无所知。 在以下示例中，运行时系统将对 `CFrameWnd` 执行类型检查，但对 `CObList` 一无所知。
 
@@ -125,7 +125,7 @@ class CListEdit : public CObList, public CEdit
 
 ## <a name="a-sample-program-using-mi"></a>使用 MI 的示例程序
 
-下面的示例是一个独立的应用程序组成的一个类派生自`CFrameWnd`和[CWinApp](../mfc/reference/cwinapp-class.md)。 我们不建议以这种方式构建应用程序，但这是包含一个类的最小的 MFC 应用程序的示例。
+下面的示例是一个独立的应用程序组成的一个类派生自`CFrameWnd`并[CWinApp](../mfc/reference/cwinapp-class.md)。 我们不建议以这种方式构建应用程序，但这是包含一个类的最小的 MFC 应用程序的示例。
 
 ```cpp
 #include <afxwin.h>
@@ -194,5 +194,5 @@ CHelloAppAndFrame theHelloAppAndFrame;
 
 ## <a name="see-also"></a>请参阅
 
-[按编号列出的技术说明](../mfc/technical-notes-by-number.md)  
-[按类别列出的技术说明](../mfc/technical-notes-by-category.md)  
+[按编号列出的技术说明](../mfc/technical-notes-by-number.md)<br/>
+[按类别列出的技术说明](../mfc/technical-notes-by-category.md)

@@ -1,7 +1,7 @@
 ---
 title: 演练： 创建标准 c + + 程序 （c + +） |Microsoft Docs
 ms.custom: get-started-article
-ms.date: 11/04/2016
+ms.date: 09/18/2018
 ms.technology:
 - cpp-windows
 ms.topic: conceptual
@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 18b1f059ce6825e132c6fff0a52029a005442f53
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d5481b9391d47887d85ca43746f1a6aff5f6eb92
+ms.sourcegitcommit: 92c568e9466ffd7346a4120c478c9bdea61c8756
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42598370"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47029614"
 ---
 # <a name="walkthrough-creating-a-standard-c-program-c"></a>演练： 创建标准 c + + 程序 （c + +）
 
@@ -45,41 +45,48 @@ Visual c + + 使用 2003 c + + 标准，与以下几点主要例外进行编译�
 
 1. 通过指向创建项目**新建**上**文件**菜单中，然后单击**项目**。
 
-2. 在中**Visual c + +** 项目类型窗格中，单击**Windows Desktop**，然后单击**Windows 控制台应用程序**。
+1. 在中**Visual c + +** 项目类型窗格中，单击**Windows Desktop**，然后单击**Windows 控制台应用程序**。 
 
-3. 键入项目的名称。
+   > [!NOTE]
+   > 对于版本的 Visual Studio 2017，在**新的项目**对话框框中，展开**已安装** > **模板** >  **Visual c + +**，然后选择**Win32**。 在中间窗格中，选择 **“Win32 控制台应用程序”**。 
+
+   键入项目的名称。
 
    默认情况下，包含项目的解决方案具有相同的名称为项目，但您可以键入不同名称。 此外可以键入项目的不同位置。
 
    单击“确定”，创建项目。
 
-4. 如果**解决方案资源管理器**未显示，在**视图**菜单中，单击**解决方案资源管理器**。
+   > [!NOTE]
+   > 对于版本的 Visual Studio 2017 中，填写**Win32 应用程序向导**。 单击**下一步**，然后确保**控制台应用程序**处于选中状态，并取消选中**预编译标头**框。 单击 **“完成”**。
 
-5. 将新的源文件添加到项目中，按如下所示。
+1. 如果**解决方案资源管理器**未显示，在**视图**菜单中，单击**解决方案资源管理器**。
+
+1. 将新的源文件添加到项目中，按如下所示。
 
    1. 在中**解决方案资源管理器**，右键单击**源文件**文件夹，指向**添加**，然后单击**新项**。
 
-   2. 在中**代码**节点中，单击**c + + 文件 (.cpp)**，键入该文件的名称，然后单击**添加**。
+   1. 在中**代码**节点中，单击**c + + 文件 (.cpp)**，键入该文件的名称，然后单击**添加**。
 
    .Cpp 文件将显示在**源文件**中的文件夹**解决方案资源管理器**，并在 Visual Studio 编辑器中打开该文件。
 
-6. 中的文件在编辑器中，键入一个有效的 c + + 程序，使用 c + + 标准库，或复制其中一个示例程序并将其粘贴在文件中。
+1. 中的文件在编辑器中，键入一个有效的 c + + 程序，使用 c + + 标准库，或复制其中一个示例程序并将其粘贴在文件中。
 
-7. 保存该文件。
+1. 保存该文件。
 
-8. 在 **“生成”** 菜单上，单击 **“生成解决方案”**。
+1. 在 **“生成”** 菜单上，单击 **“生成解决方案”**。
 
    **输出**窗口显示编译进度，例如，生成日志和一条指示生成状态消息的位置有关的信息。
 
-9. 在“调试”菜单上，单击“开始执行(不调试)”。
+1. 在“调试”菜单上，单击“开始执行(不调试)”。
 
    如果使用示例程序，命令窗口会显示，并显示是否在集中找到了特定的整数。
 
 ## <a name="next-steps"></a>后续步骤
 
-**上一步：** [控制台应用程序在 Visual c + +](../windows/console-applications-in-visual-cpp.md)。 **下一步：**[演练： 编译本机 c + + 程序命令行上](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)。
+**上一步：** [控制台在 Visual c + + 中的应用程序](../windows/console-applications-in-visual-cpp.md)<br/>
+**下一步：** [演练： 编译本机 c + + 程序命令行上](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)<br/>
 
 ## <a name="see-also"></a>请参阅
 
-[C++ 语言参考](../cpp/cpp-language-reference.md)  
-[C++ 标准库](../standard-library/cpp-standard-library-reference.md)
+[C++ 语言参考](../cpp/cpp-language-reference.md)<br/>
+[C++ 标准库](../standard-library/cpp-standard-library-reference.md)<br/>

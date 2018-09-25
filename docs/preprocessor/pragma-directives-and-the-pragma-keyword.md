@@ -23,12 +23,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76a29a7ae4734e5d1f1930d5309163d1e1519aa4
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: f195a553c29c8a1cd0ef57f82c9f57a1f3672048
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42539744"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46405289"
 ---
 # <a name="pragma-directives-and-the-pragma-keyword"></a>Pragma 指令和 __Pragma 关键字
 杂注指令指定计算机或操作系统特定的编译器功能。 **__Pragma**关键字，这是特定于 Microsoft 编译器，可以在宏定义中编码杂注指令。  
@@ -117,6 +117,6 @@ return _hr; \
   
 ## <a name="see-also"></a>请参阅  
  
-[C/c + + 预处理器参考](../preprocessor/c-cpp-preprocessor-reference.md)   
-[C 杂注](../c-language/c-pragmas.md)   
+[C/C++ 预处理器参考](../preprocessor/c-cpp-preprocessor-reference.md)<br/>
+[C 杂注](../c-language/c-pragmas.md)<br/>
 [关键字](../cpp/keywords-cpp.md)

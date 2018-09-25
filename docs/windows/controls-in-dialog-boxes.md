@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d8128859f2b136fb945376eeea8afa0d1ef8e6e1
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: f00fd37f41461933221996c8940c333bd71620ae
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317102"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46388682"
 ---
 # <a name="controls-in-dialog-box-ces"></a>Es 控件在对话框中 （c + +）
 
@@ -64,6 +64,6 @@ Win32
 
 ## <a name="see-also"></a>请参阅
 
-[添加对话框控件的事件处理程序](../windows/adding-event-handlers-for-dialog-box-controls.md)  
-[对话框控件和变量类型](../ide/dialog-box-controls-and-variable-types.md)  
+[添加对话框控件的事件处理程序](../windows/adding-event-handlers-for-dialog-box-controls.md)<br/>
+[对话框控件和变量类型](../ide/dialog-box-controls-and-variable-types.md)<br/>
 [对话框编辑器](../windows/dialog-editor.md)

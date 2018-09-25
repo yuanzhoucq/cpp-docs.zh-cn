@@ -26,19 +26,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9c157dee9e1c8b604822d81fb87e2aef25ef97c
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 0831c59f9ea5c5068dc8cf70ca203c240bdcacc7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43682279"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46424983"
 ---
 # <a name="tn056-installation-of-localized-mfc-components"></a>TN056：安装本地化的 MFC 组件
-讨论了本地化 MFC 组件的安装的此技术说明现已过时。  
-  
- **请参阅**[技术说明 57](../mfc/tn057-localization-of-mfc-components.md)有关本地化 MFC 应用程序的详细信息。  
-  
-## <a name="see-also"></a>请参阅  
- [按编号列出的技术说明](../mfc/technical-notes-by-number.md)   
- [按类别列出的技术说明](../mfc/technical-notes-by-category.md)
+
+讨论了本地化 MFC 组件的安装的此技术说明现已过时。
+
+**请参阅**[技术说明 57](../mfc/tn057-localization-of-mfc-components.md)有关本地化 MFC 应用程序的详细信息。
+
+## <a name="see-also"></a>请参阅
+
+[按编号列出的技术说明](../mfc/technical-notes-by-number.md)<br/>
+[按类别列出的技术说明](../mfc/technical-notes-by-category.md)
 

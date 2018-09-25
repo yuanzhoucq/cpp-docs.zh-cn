@@ -1,5 +1,5 @@
 ---
-title: 序列化： 序列化 vs。数据库输入-输出 |Microsoft 文档
+title: 序列化： 序列化与数据库输入-输出 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,20 +17,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d43c0259dd394a7dbbe7ef5b2ed558c9351e73a8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 67621d44766e6f4b726c8553024933fd0e904a17
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33379572"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46381538"
 ---
-# <a name="serialization-serialization-vs-database-inputoutput"></a>序列化： 序列化 vs。数据库输入/输出
-本文介绍何时使用文档对象和序列化，基于文件的输入/输出 (I/O) 以及其他 I/O 技术相应何时-由于应用程序读取和写入在每个事务的基础，如下所示数据库应用程序的数据。 如果不使用序列化，也不需要的文件打开保存，并且将另存为命令。 涉及主题包括：  
-  
--   [关于处理输入/输出的建议](../mfc/recommendations-for-handling-input-output.md)  
-  
--   [处理数据库应用程序中的文件菜单](../mfc/file-menu-in-an-mfc-database-application.md)  
-  
-## <a name="see-also"></a>请参阅  
- [序列化](../mfc/serialization-in-mfc.md)
+# <a name="serialization-serialization-vs-database-inputoutput"></a>序列化： 序列化与数据库输入/输出
+
+此文章介绍了何时使用文档对象和序列化，用于基于文件的输入/输出 (I/O) 和其他 I/O 技术的适当，因为该应用程序的读取和写入数据在每个事务的基础，如数据库应用程序中所示。 如果不使用序列化，您还不需要打开文件、 保存，并将保存为命令。 涵盖的主题包括：
+
+- [关于处理输入/输出的建议](../mfc/recommendations-for-handling-input-output.md)
+
+- [处理数据库应用程序中的文件菜单](../mfc/file-menu-in-an-mfc-database-application.md)
+
+## <a name="see-also"></a>请参阅
+
+[序列化](../mfc/serialization-in-mfc.md)
 

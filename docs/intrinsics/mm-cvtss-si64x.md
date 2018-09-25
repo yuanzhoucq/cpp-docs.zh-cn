@@ -17,82 +17,87 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cba221f0944f840f9cdf76da86ec7ce37f37ca8
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 928cd812df87fef20a6ba551bd596c4214bfdd9f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45713773"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46417002"
 ---
 # <a name="mmcvtsssi64x"></a>_mm_cvtss_si64x
-**Microsoft 专用**  
-  
- 生成扩展的 x64 版本的转换标量单精度浮点数到 64 位整数 (`cvtss2si`) 指令。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-__int64 _mm_cvtss_si64x(   
-   __m128 value   
-);  
-```  
-  
-#### <a name="parameters"></a>参数  
+
+**Microsoft 专用**
+
+生成扩展的 x64 版本的转换标量单精度浮点数到 64 位整数 (`cvtss2si`) 指令。
+
+## <a name="syntax"></a>语法
+
+```
+__int64 _mm_cvtss_si64x( 
+   __m128 value 
+);
+```
+
+#### <a name="parameters"></a>参数
+
 *value*<br/>
-[in]`__m128`结构，它包含浮点数。  
-  
-## <a name="return-value"></a>返回值  
- 一个 64 位整数的第一个浮点值转换为整数的结果。  
-  
-## <a name="requirements"></a>要求  
-  
-|内部函数|体系结构|  
-|---------------|------------------|  
-|`_mm_cvtss_si64x`|X64|  
-  
- **标头文件** \<intrin.h >  
-  
-## <a name="remarks"></a>备注  
- 转换为整数并返回结构值的第一个元素。 在 MXCSR 舍入的控制位用于确定舍入行为。 默认舍入模式为舍入到最近的如果小数部分为 0.5 则舍入为偶数。 因为`__m128`结构表示 XMM 寄存器 XMM 寄存器，此内部函数采用一个值，并将其写入到系统内存。  
-  
- 此例程仅可用作内部函数。  
-  
-## <a name="example"></a>示例  
-  
-```  
-// _mm_cvtss_si64x.cpp  
-// processor: x64  
-#include <intrin.h>  
-#include <stdio.h>  
-  
-#pragma intrinsic(_mm_cvtss_si64x)  
-  
-int main()  
-{  
-    __m128 a;  
-    __int64 b = 54;  
-  
-    // _mm_load_ps requires an aligned buffer.  
-    __declspec(align(16)) float af[4] =  
-                           { 101.25, 200.75, 300.5, 400.5 };  
-  
-    // Load a with the floating point values.  
-    // The values will be copied to the XMM registers.  
-    a = _mm_load_ps(af);  
-  
-    // Extract the first element of a and convert to an integer  
-    b = _mm_cvtss_si64x(a);  
-  
-    printf_s("%I64d\n", b);  
-}  
-```  
-  
-```Output  
-101  
-```  
-  
-**结束 Microsoft 专用**  
-  
-## <a name="see-also"></a>请参阅  
- [__m128d](../cpp/m128d.md)   
- [编译器内部函数](../intrinsics/compiler-intrinsics.md)
+[in]`__m128`结构，它包含浮点数。
+
+## <a name="return-value"></a>返回值
+
+一个 64 位整数的第一个浮点值转换为整数的结果。
+
+## <a name="requirements"></a>要求
+
+|内部函数|体系结构|
+|---------------|------------------|
+|`_mm_cvtss_si64x`|X64|
+
+**标头文件** \<intrin.h >
+
+## <a name="remarks"></a>备注
+
+转换为整数并返回结构值的第一个元素。 在 MXCSR 舍入的控制位用于确定舍入行为。 默认舍入模式为舍入到最近的如果小数部分为 0.5 则舍入为偶数。 因为`__m128`结构表示 XMM 寄存器 XMM 寄存器，此内部函数采用一个值，并将其写入到系统内存。
+
+此例程仅可用作内部函数。
+
+## <a name="example"></a>示例
+
+```
+// _mm_cvtss_si64x.cpp
+// processor: x64
+#include <intrin.h>
+#include <stdio.h>
+
+#pragma intrinsic(_mm_cvtss_si64x)
+
+int main()
+{
+    __m128 a;
+    __int64 b = 54;
+
+    // _mm_load_ps requires an aligned buffer.
+    __declspec(align(16)) float af[4] =
+                           { 101.25, 200.75, 300.5, 400.5 };
+
+    // Load a with the floating point values.
+    // The values will be copied to the XMM registers.
+    a = _mm_load_ps(af);
+
+    // Extract the first element of a and convert to an integer
+    b = _mm_cvtss_si64x(a);
+
+    printf_s("%I64d\n", b);
+}
+```
+
+```Output
+101
+```
+
+**结束 Microsoft 专用**
+
+## <a name="see-also"></a>请参阅
+
+[__m128d](../cpp/m128d.md)<br/>
+[编译器内部函数](../intrinsics/compiler-intrinsics.md)

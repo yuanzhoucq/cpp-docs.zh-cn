@@ -1,5 +1,5 @@
 ---
-title: 资源管理类 |Microsoft 文档
+title: 资源管理类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,22 +19,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: f5457cf9062de233a4489f92cb2a1bf561a2e30d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 511902e96870a82cfccadda4df47f47d848ae03f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33161429"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46417912"
 ---
 # <a name="resource-management-classes"></a>资源管理类
-这些类提供托管类的自动管理。  
-  
-## <a name="in-this-section"></a>本节内容  
-  
-|||  
-|-|-|  
-|[auto_gcroot](../dotnet/auto-gcroot.md)|在本机类型中嵌入虚拟句柄。|  
-|[auto_handle](../dotnet/auto-handle.md)|在托管类型中嵌入虚拟句柄。|  
-  
-## <a name="see-also"></a>请参阅  
- [C++ 支持库](../dotnet/cpp-support-library.md)
+
+这些类提供托管类的自动管理。
+
+## <a name="in-this-section"></a>本节内容
+
+|||
+|-|-|
+|[auto_gcroot](../dotnet/auto-gcroot.md)|在本机类型中嵌入虚拟句柄。|
+|[auto_handle](../dotnet/auto-handle.md)|在托管类型中嵌入虚拟句柄。|
+
+## <a name="see-also"></a>请参阅
+
+[C++ 支持库](../dotnet/cpp-support-library.md)

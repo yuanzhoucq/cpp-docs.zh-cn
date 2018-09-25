@@ -1,5 +1,5 @@
 ---
-title: 在程序执行过程中操作菜单 |Microsoft 文档
+title: 在程序执行过程中操作菜单 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,18 +18,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4979b75a7644ab747d1a32c14826a25678e276b6
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 93257b89645692885aba728f2dffa698152122db
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36929755"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46433707"
 ---
 # <a name="manipulating-menus-during-program-execution"></a>在程序执行过程中操作菜单
-使用类 `CMenu` 即时操作菜单和菜单项。 `CMenu` 封装 Windows HMENU 句柄并提供与菜单一起使用的成员函数。  
-  
- 请参阅类概述[CMenu](../mfc/reference/cmenu-class.md)有关详细信息。  
-  
-## <a name="see-also"></a>请参阅  
- [菜单](../mfc/menus-mfc.md)
+
+使用类 `CMenu` 即时操作菜单和菜单项。 `CMenu` 封装 Windows HMENU 句柄并提供了与菜单一起使用的成员函数。
+
+查看类的概览[CMenu](../mfc/reference/cmenu-class.md)有关详细信息。
+
+## <a name="see-also"></a>请参阅
+
+[菜单](../mfc/menus-mfc.md)
 

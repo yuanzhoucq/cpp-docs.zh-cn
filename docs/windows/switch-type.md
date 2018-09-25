@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: faa2a3be7260eecb16599db967336bcb7b774c99
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 0ed603a416e7f56e4415ce36ad4b3fd8059d311f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200121"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46415741"
 ---
 # <a name="switchtype"></a>switch_type
 
@@ -38,7 +38,7 @@ type
 
 ### <a name="parameters"></a>参数
 
-*type*  
+*type*<br/>
 开关类型可以是整数、 字符、 布尔值或枚举类型。
 
 ## <a name="remarks"></a>备注
@@ -83,6 +83,6 @@ struct SizedValue2 {
 
 ## <a name="see-also"></a>请参阅
 
-[IDL 特性](../windows/idl-attributes.md)  
-[Typedef、Enum、Union 和 Struct 特性](../windows/typedef-enum-union-and-struct-attributes.md)  
+[IDL 特性](../windows/idl-attributes.md)<br/>
+[Typedef、Enum、Union 和 Struct 特性](../windows/typedef-enum-union-and-struct-attributes.md)<br/>
 [export](../windows/export.md)  

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ee1c3be0ecc06dd2ccfb28882b6dc99912d7e13
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d776adab3404bf1244c7365e905866b4d041fc00
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43762471"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091902"
 ---
 # <a name="array-declarations"></a>数组声明
 
@@ -48,9 +48,9 @@ direct-declarator: /\* 函数声明符 \*/<br/>
 
 由于 constant-expression 是可选的，因此该语法有两种形式：
 
--   第一种形式定义一个数组变量。 括号内的 constant-expression 参数指定数组中的元素数量。 constant-expression（如果有）必须具有整型类型和大于零的值。 每个元素均具有 type-specifier 给定的类型，可以是除 `void` 之外的任何类型。 数组元素不能是函数类型。
+- 第一种形式定义一个数组变量。 括号内的 constant-expression 参数指定数组中的元素数量。 constant-expression（如果有）必须具有整型类型和大于零的值。 每个元素均具有 type-specifier 给定的类型，可以是除 `void` 之外的任何类型。 数组元素不能是函数类型。
 
--   第二种形式声明已在其他位置定义了变量。 它省略括号中的 constant-expression 参数而不是括号。 仅在之前已初始化数组、将其声明为参数或声明为对在程序中的其他位置显式定义的某个数组的引用的情况下才能使用此形式。
+- 第二种形式声明已在其他位置定义了变量。 它省略括号中的 constant-expression 参数而不是括号。 仅在之前已初始化数组、将其声明为参数或声明为对在程序中的其他位置显式定义的某个数组的引用的情况下才能使用此形式。
 
 在两种形式中，direct-declarator 都会命名变量并且可以修改变量的类型。 紧跟 direct-declarator 的方括号 ([ ]) 会将声明符修改为数组类型。
 
@@ -75,6 +75,7 @@ char A[2][3];
 若要引用数组的单个元素，请使用下标表达式，如[后缀运算符](../c-language/postfix-operators.md)中所述。
 
 ## <a name="examples"></a>示例
+
 这些示例阐释了数组声明：
 
 ```C

@@ -18,90 +18,99 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd15238408f90f268a5fea96635136077c795779
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: ea128a6122bf69735d118045eef2e8d8e323f8de
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46059103"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46393408"
 ---
 # <a name="schedulerptr-structure"></a>scheduler_ptr 结构
-表示指向计划程序的指针。 此类存在是为了通过使用 shared_ptr 或无格式引用通过使用原始指针允许指定共享生存期。  
-  
-## <a name="syntax"></a>语法  
-  
+
+表示指向计划程序的指针。 此类存在是为了通过使用 shared_ptr 或无格式引用通过使用原始指针允许指定共享生存期。
+
+## <a name="syntax"></a>语法
+
 ```
 struct scheduler_ptr;
-```  
-  
-## <a name="members"></a>成员  
-  
-### <a name="public-constructors"></a>公共构造函数  
-  
-|名称|描述|  
-|----------|-----------------|  
-|[scheduler_ptr::scheduler_ptr](#ctor)|已重载。 创建一个从 shared_ptr 到计划程序的计划程序指针|  
-  
-### <a name="public-methods"></a>公共方法  
-  
-|名称|描述|  
-|----------|-----------------|  
-|[scheduler_ptr::get](#get)|返回指向计划程序的原始指针|  
-  
-### <a name="public-operators"></a>公共运算符  
-  
-|名称|描述|  
-|----------|-----------------|  
-|[scheduler_ptr:: operator bool](#operator_bool)|测试计划程序指针是否为非 null|  
-|[scheduler_ptr::operator-&gt;](#operator_ptr)|行为类似于指针|  
-  
-## <a name="inheritance-hierarchy"></a>继承层次结构  
- `scheduler_ptr`  
-  
-## <a name="requirements"></a>要求  
- **标头：** pplinterface.h  
-  
- **命名空间：** 并发  
-  
-##  <a name="get"></a>  scheduler_ptr:: get 方法  
- 返回指向计划程序的原始指针  
-  
+```
+
+## <a name="members"></a>成员
+
+### <a name="public-constructors"></a>公共构造函数
+
+|名称|描述|
+|----------|-----------------|
+|[scheduler_ptr::scheduler_ptr](#ctor)|已重载。 创建一个从 shared_ptr 到计划程序的计划程序指针|
+
+### <a name="public-methods"></a>公共方法
+
+|名称|描述|
+|----------|-----------------|
+|[scheduler_ptr::get](#get)|返回指向计划程序的原始指针|
+
+### <a name="public-operators"></a>公共运算符
+
+|名称|描述|
+|----------|-----------------|
+|[scheduler_ptr:: operator bool](#operator_bool)|测试计划程序指针是否为非 null|
+|[scheduler_ptr::operator-&gt;](#operator_ptr)|行为类似于指针|
+
+## <a name="inheritance-hierarchy"></a>继承层次结构
+
+`scheduler_ptr`
+
+## <a name="requirements"></a>要求
+
+**标头：** pplinterface.h
+
+**命名空间：** 并发
+
+##  <a name="get"></a>  scheduler_ptr:: get 方法
+
+返回指向计划程序的原始指针
+
 ```
 scheduler_interface* get() const;
-```  
-  
-### <a name="return-value"></a>返回值  
-  
-##  <a name="operator_bool"></a>  scheduler_ptr:: operator bool   
- 测试计划程序指针是否为非 null  
-  
+```
+
+### <a name="return-value"></a>返回值
+
+##  <a name="operator_bool"></a>  scheduler_ptr:: operator bool
+
+测试计划程序指针是否为非 null
+
 '' 运算符 bool （) const;
-```  
-  
-##  <a name="operator_ptr"></a>  scheduler_ptr::operator-&gt;   
- Behave like a pointer  
-  
+```
+
+##  <a name="operator_ptr"></a>  scheduler_ptr::operator-&gt;
+
+Behave like a pointer
+
 ```
 scheduler_interface * 运算符-> const; （)
-```  
-  
-### Return Value  
-  
-##  <a name="ctor"></a>  scheduler_ptr::scheduler_ptr Constructor  
- Creates a scheduler pointer from shared_ptr to scheduler  
-  
+```
+
+### Return Value
+
+##  <a name="ctor"></a>  scheduler_ptr::scheduler_ptr Constructor
+
+Creates a scheduler pointer from shared_ptr to scheduler
+
 ```
 显式 scheduler_ptr （std:: < scheduler_interface > 计划程序）;
 
 显式 scheduler_ptr (_In_opt_ scheduler_interface * pScheduler);
-```  
-  
-### Parameters  
+```
+
+### Parameters
+
 *scheduler*<br/>
 The scheduler to convert.
 
 *pScheduler*<br/>
 The scheduler pointer to convert.
-  
-## See Also  
- [concurrency Namespace](concurrency-namespace.md)
+
+## See Also
+
+[concurrency Namespace](concurrency-namespace.md)

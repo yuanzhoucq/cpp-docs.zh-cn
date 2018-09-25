@@ -1,5 +1,5 @@
 ---
-title: CDaoRelationFieldInfo 结构 |Microsoft 文档
+title: CDaoRelationFieldInfo 结构 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,43 +17,48 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d86faf89aea0f991a9fdd27bec6bb7969404986
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 0e61eb5a1abab68d4833bb8eb0953758234d9be6
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36956906"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46423530"
 ---
 # <a name="cdaorelationfieldinfo-structure"></a>CDaoRelationFieldInfo 结构
-`CDaoRelationFieldInfo`结构包含有关中的数据访问对象 (DAO) 定义的关系的字段的信息。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-struct CDaoRelationFieldInfo  
-{  
-    CString m_strName;           // Primary  
-    CString m_strForeignName;    // Primary  
-};  
-```  
-  
-#### <a name="parameters"></a>参数  
- *m_strName*  
- 关系的主表中的字段的名称。  
-  
- *m_strForeignName*  
- 关系的外表中的字段的名称。  
-  
-## <a name="remarks"></a>备注  
- DAO 关系对象主表和外部表中定义该关系的字段中指定的字段。 对主上述结构定义中的引用指示如何在返回的信息`m_pFieldInfos`的成员[CDaoRelationInfo](../../mfc/reference/cdaorelationinfo-structure.md)通过调用获取对象[GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo)类的成员函数`CDaoDatabase`。  
-  
- 关系对象和关系字段对象不由 MFC 类表示。 相反，DAO 对象类的基础 MFC 对象[CDaoDatabase](../../mfc/reference/cdaodatabase-class.md)包含称为关系集合的关系对象的集合。 每个关系对象，反过来，包含关系字段对象的集合。 每个关系字段对象与外部表中的字段关联的主表中的字段。 综上所述，关系字段对象定义一组字段在每个表中，它们共同定义该关系。 `CDaoDatabase` 让您访问具有关系对象`CDaoRelationInfo`对象通过调用`GetRelationInfo`成员函数。 `CDaoRelationInfo`对象，然后，有一个数据成员， `m_pFieldInfos`，指向数组的`CDaoRelationFieldInfo`对象。  
-  
- 调用[GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo)的包含的成员函数`CDaoDatabase`对象的集合是的关系存储你感兴趣的关系对象。 然后访问`m_pFieldInfos`的成员[CDaoRelationInfo](../../mfc/reference/cdaorelationinfo-structure.md)对象。 `CDaoRelationFieldInfo` 此外定义`Dump`成员函数在调试生成。 你可以使用`Dump`以转储的内容`CDaoRelationFieldInfo`对象。  
-  
-## <a name="requirements"></a>要求  
- **标头：** afxdao.h  
-  
-## <a name="see-also"></a>请参阅  
- [结构、 样式、 回调和消息映射](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [CDaoRelationInfo 结构](../../mfc/reference/cdaorelationinfo-structure.md)
+
+`CDaoRelationFieldInfo`结构包含有关中的数据访问对象 (DAO) 定义的关系的字段的信息。
+
+## <a name="syntax"></a>语法
+
+```
+struct CDaoRelationFieldInfo
+{
+    CString m_strName;           // Primary
+    CString m_strForeignName;    // Primary
+};
+```
+
+#### <a name="parameters"></a>参数
+
+*m_strName*<br/>
+关系的主表中的字段的名称。
+
+*m_strForeignName*<br/>
+关系的外表中的字段的名称。
+
+## <a name="remarks"></a>备注
+
+DAO 关系对象的主表和外部表中定义的关系的字段中指定的字段。 对上面的结构定义中的主引用指示如何在返回的信息`m_pFieldInfos`的成员[CDaoRelationInfo](../../mfc/reference/cdaorelationinfo-structure.md)获取通过调用对象[GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo)类的成员函数`CDaoDatabase`。
+
+一个 MFC 类不表示关系对象和关系的字段对象。 相反，DAO 对象类的基础 MFC 对象[CDaoDatabase](../../mfc/reference/cdaodatabase-class.md)包含称为关系集合的关系对象的集合。 每个关系对象，包含关系字段对象的集合。 关系字段的每个对象与外部表中的字段关联的主表中的字段。 合起来看，关系字段对象定义一组字段在每个表中，它们共同定义关系。 `CDaoDatabase` 使您能够访问具有关系对象`CDaoRelationInfo`对象通过调用`GetRelationInfo`成员函数。 `CDaoRelationInfo`对象，然后，有一个数据成员， `m_pFieldInfos`，，它指向的数组`CDaoRelationFieldInfo`对象。
+
+调用[GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo)成员函数的包含`CDaoDatabase`中它的集合是的关系存储你感兴趣的关系对象的对象。 然后，访问`m_pFieldInfos`的成员[CDaoRelationInfo](../../mfc/reference/cdaorelationinfo-structure.md)对象。 `CDaoRelationFieldInfo` 此外定义了`Dump`成员函数在调试生成。 可以使用`Dump`转储的内容`CDaoRelationFieldInfo`对象。
+
+## <a name="requirements"></a>要求
+
+**标头：** afxdao.h
+
+## <a name="see-also"></a>请参阅
+
+[结构、样式、回调和消息映射](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)<br/>
+[CDaoRelationInfo 结构](../../mfc/reference/cdaorelationinfo-structure.md)

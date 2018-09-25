@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: af0cfe6f3a94aa1bc2afc4e4857864f81099567e
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: de7f4c94ec0d9cb5a9a57315ebda015b7737132c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42591726"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46392757"
 ---
 # <a name="pinptr-ccli"></a>pin_ptr (C++/CLI)
 
@@ -51,16 +51,16 @@ ms.locfileid: "42591726"
 
 ### <a name="parameters"></a>参数
 
-*cv_qualifier*  
+*cv_qualifier*<br/>
 **const**或**易失性**限定符。 默认情况下是钉住指针**易失性**。 做法是多余的但不是错误声明钉住指针**易失性**。
 
-*type*  
+*type*<br/>
 类型*初始值设定项*。
 
-*var*  
+*var*<br/>
 名称**pin_ptr**变量。
 
-*initializer*  
+*initializer*<br/>
 可以分配给本机指针的引用类型、托管数组的元素或者任何其他对象的成员。
 
 ### <a name="remarks"></a>备注

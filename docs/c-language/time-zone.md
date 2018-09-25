@@ -14,17 +14,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c3979916452fbea9154e28070c96dce9e278059a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1f5b39c90d9f9d873905c21a2f61b8114a8979cf
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32385535"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46096764"
 ---
 # <a name="time-zone"></a>时区
-**ANSI 4.12.1** 本地时区和夏令时  
-  
- 本地时区为太平洋标准时间。 Microsoft C 支持夏令时。  
-  
-## <a name="see-also"></a>请参阅  
- [库函数](../c-language/library-functions.md)
+
+**ANSI 4.12.1** 本地时区和夏令时
+
+本地时区为太平洋标准时间。 Microsoft C 支持夏令时。
+
+## <a name="see-also"></a>请参阅
+
+[库函数](../c-language/library-functions.md)

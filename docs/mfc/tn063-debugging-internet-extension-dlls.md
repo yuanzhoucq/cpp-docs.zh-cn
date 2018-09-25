@@ -1,5 +1,5 @@
 ---
-title: TN063： 调试 Internet MFC 扩展 Dll |Microsoft 文档
+title: TN063： 调试 Internet MFC 扩展 Dll |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68bb9ad7a16d35f7a5529bd82bb4d6547eec2e0b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eb432bf77e9095473d25c3ffc686660567c034bf
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33380459"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46395370"
 ---
 # <a name="tn063-debugging-internet-mfc-extension-dlls"></a>TN063： 调试 Internet MFC 扩展 Dll
-此信息已过期且已删除。  
-  
-## <a name="see-also"></a>请参阅  
- [按编号列出的技术说明](../mfc/technical-notes-by-number.md)   
- [按类别列出的技术说明](../mfc/technical-notes-by-category.md)
+
+此信息已过期且已删除。
+
+## <a name="see-also"></a>请参阅
+
+[按编号列出的技术说明](../mfc/technical-notes-by-number.md)<br/>
+[按类别列出的技术说明](../mfc/technical-notes-by-category.md)
 

@@ -29,30 +29,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88f74e34a75698f95906de23d7093f6680a0d127
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 227aca74ef64884c64ba83c9f36eb16417041fd4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32386613"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46081554"
 ---
 # <a name="ciexp"></a>_CIexp
-计算堆栈顶部值的指数。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-void __cdecl _CIexp();  
-```  
-  
-## <a name="remarks"></a>备注  
- 此版本的 `exp` 函数具有编译器理解的专用化调用约定。 它将加快执行的速度，因为它可防止生成副本和帮助注册表分配。  
-  
- 生成的值被将被推送到堆栈顶部。  
-  
-## <a name="requirements"></a>惠?  
- **平台：** x86  
-  
-## <a name="see-also"></a>请参阅  
- [按字母顺序的函数参考](../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [exp、expf、expl](../c-runtime-library/reference/exp-expf.md)
+
+计算堆栈顶部值的指数。
+
+## <a name="syntax"></a>语法
+
+```
+void __cdecl _CIexp();
+```
+
+## <a name="remarks"></a>备注
+
+此版本的 `exp` 函数具有编译器理解的专用化调用约定。 它将加快执行的速度，因为它可防止生成副本和帮助注册表分配。
+
+生成的值被将被推送到堆栈顶部。
+
+## <a name="requirements"></a>要求
+ **平台：** x86
+
+## <a name="see-also"></a>请参阅
+
+[按字母顺序的函数参考](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
+[exp、expf、expl](../c-runtime-library/reference/exp-expf.md)

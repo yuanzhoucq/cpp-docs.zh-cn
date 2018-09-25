@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e8d69ccb0b5a0c0f0dd13d377841732d9f663e91
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 9e1cf7f100c34023e6fea96c9764cce2371dcaaf
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42607580"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46412685"
 ---
 # <a name="object-c"></a>object (C++)
 
@@ -59,9 +59,9 @@ ms.locfileid: "42607580"
 
 ## <a name="see-also"></a>请参阅
 
-[IDL 特性](../windows/idl-attributes.md)  
-[接口特性](../windows/interface-attributes.md)  
-[dual](../windows/dual.md)  
-[dispinterface](../windows/dispinterface.md)  
-[custom](../windows/custom-cpp.md)  
+[IDL 特性](../windows/idl-attributes.md)<br/>
+[接口特性](../windows/interface-attributes.md)<br/>
+[dual](../windows/dual.md)<br/>
+[dispinterface](../windows/dispinterface.md)<br/>
+[custom](../windows/custom-cpp.md)<br/>
 [__interface](../cpp/interface.md)  

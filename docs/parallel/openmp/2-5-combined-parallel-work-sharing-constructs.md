@@ -1,5 +1,5 @@
 ---
-title: 2.5 组合的并行工作共享构造 |Microsoft 文档
+title: 2.5 组合的并行工作共享构造 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,18 +12,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7aea758cbf43cd49affc01afda0e9f34c24b3331
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 3c456eceb39d969e6841e3d3bf9028fae4bf5000
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33689293"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46404756"
 ---
 # <a name="25-combined-parallel-work-sharing-constructs"></a>2.5 组合的并行工作共享构造
-组合的并行工作共享构造是用于指定并行区域包含只有一个工作共享构造的快捷方式。 这些指令的语义相等的显式指定**并行**指令跟 single 的工作共享构造。  
-  
- 下列各节描述组合并行工作共享构造：  
-  
--   **为并行**指令。  
-  
--   **并行部分**指令。
+
+组合的并行工作共享构造是用于指定包含只有一个工作共享构造的并行区域的快捷方式。 这些指令的语义是相同的显式指定**并行**指令后跟 single 的工作共享构造。
+
+以下部分介绍了组合并行工作共享构造：
+
+- **并行的**指令。
+
+- **并行部分**指令。

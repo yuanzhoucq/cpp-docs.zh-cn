@@ -1,5 +1,5 @@
 ---
-title: HTML 帮助： 为您的程序的上下文相关帮助 |Microsoft 文档
+title: HTML 帮助： 为程序的上下文相关帮助 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,16 +15,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69d698a0350a8a61f4247f79b40f3f070c4885eb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 21b4d93d5a6d7a31f7f305f8530f734f023753d4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33346310"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46406822"
 ---
 # <a name="html-help-context-sensitive-help-for-your-programs"></a>HTML 帮助：为程序提供区分上下文的帮助
+
 > [!IMPORTANT]
->  此版本的 MFC 中不支持 HTML 帮助。  
-  
-## <a name="see-also"></a>请参阅  
- [用户界面元素](../mfc/user-interface-elements-mfc.md)
+>  此版本的 MFC 中不支持 HTML 帮助。
+
+## <a name="see-also"></a>请参阅
+
+[用户界面元素](../mfc/user-interface-elements-mfc.md)

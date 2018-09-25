@@ -1,28 +1,34 @@
 ---
 title: 'Module:: genericreleasenotifier 类 |Microsoft Docs'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/17/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - module/Microsoft::WRL::Module::GenericReleaseNotifier
+- module/Microsoft::WRL::Module::GenericReleaseNotifier::callback_
+- module/Microsoft::WRL::Module::GenericReleaseNotifier::GenericReleaseNotifier
+- module/Microsoft::WRL::Module::GenericReleaseNotifier::Invoke
 dev_langs:
 - C++
 helpviewer_keywords:
-- GenericReleaseNotifier class
+- Microsoft::WRL::Module::GenericReleaseNotifier class
+- Microsoft::WRL::Module::GenericReleaseNotifier::callback_ data member
+- Microsoft::WRL::Module::GenericReleaseNotifier::GenericReleaseNotifier, constructor
+- Microsoft::WRL::Module::GenericReleaseNotifier::Invoke method
 ms.assetid: 244a8fbe-f89b-409b-aa65-db3e37f9b125
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: da35e2c257fef72ea75e05768960098111727359
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 18aeac7767fbd4c1688b202670a812e5738ef62f
+ms.sourcegitcommit: 338e1ddc2f3869d92ba4b73599d35374cf1d5b69
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42611620"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46494421"
 ---
 # <a name="modulegenericreleasenotifier-class"></a>Module::GenericReleaseNotifier 类
 
@@ -37,28 +43,28 @@ class GenericReleaseNotifier : public ReleaseNotifier;
 
 ### <a name="parameters"></a>参数
 
-*T*  
+*T*<br/>
 包含事件处理程序位置的数据成员的类型。
 
 ## <a name="members"></a>成员
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
-|----------|-----------------|
-|[Module::GenericReleaseNotifier::GenericReleaseNotifier 构造函数](../windows/module-genericreleasenotifier-genericreleasenotifier-constructor.md)|初始化的新实例**module:: genericreleasenotifier**类。|
+名称                                                                                                     | 描述
+-------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------
+[Module::GenericReleaseNotifier::GenericReleaseNotifier](#genericreleasenotifier-genericreleasenotifier) | 初始化 `Module::GenericReleaseNotifier` 类的新实例。
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
-|----------|-----------------|
-|[Module::GenericReleaseNotifier::Invoke 方法](../windows/module-genericreleasenotifier-invoke-method.md)|调用与当前关联的事件处理程序**module:: genericreleasenotifier**对象。|
+名称                                                                     | 描述
+------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------
+[Module:: genericreleasenotifier:: 调用](#genericreleasenotifier-invoke) | 调用与当前关联的事件处理程序`Module::GenericReleaseNotifier`对象。
 
 ### <a name="protected-data-members"></a>受保护的数据成员
 
-|name|描述|
-|----------|-----------------|
-|[Module::GenericReleaseNotifier::callback_ 数据成员](../windows/module-genericreleasenotifier-callback-data-member.md)|包含 lambda、 functor 或函数指针事件处理程序与当前相关联**module:: genericreleasenotifier**对象。|
+name                                                                          | 描述
+----------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------
+[Module::GenericReleaseNotifier::callback_](#genericreleasenotifier-callback) | 包含 lambda、 functor 或与当前关联的指针函数事件处理程序`Module::GenericReleaseNotifier`对象。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -72,5 +78,37 @@ class GenericReleaseNotifier : public ReleaseNotifier;
 
 **命名空间：** Microsoft::WRL
 
-## <a name="see-also"></a>请参阅
-[Module 类](../windows/module-class.md)
+## <a name="genericreleasenotifier-callback"></a>Module::GenericReleaseNotifier::callback_
+
+包含 lambda、 functor 或与当前关联的指针函数事件处理程序`Module::GenericReleaseNotifier`对象。
+
+```cpp
+T callback_;
+```
+
+## <a name="genericreleasenotifier-genericreleasenotifier"></a>Module::GenericReleaseNotifier::GenericReleaseNotifier
+
+初始化 `Module::GenericReleaseNotifier` 类的新实例。
+
+```cpp
+GenericReleaseNotifier(
+   T callback,
+   bool release
+) throw() : ReleaseNotifier(release), callback_(callback);
+```
+
+### <a name="parameters"></a>参数
+
+*回调*  
+Lambda、 functor 或可以使用括号函数运算符调用的函数指针事件处理程序 (`()`)。
+
+*release*  
+指定`true`若要启用调用基础[模块:: ReleaseNotifier::Release()](../windows/module-releasenotifier-release.md)方法; 否则，请指定`false`。
+
+## <a name="genericreleasenotifier-invoke"></a>Module:: genericreleasenotifier:: 调用
+
+调用与当前关联的事件处理程序`Module::GenericReleaseNotifier`对象。
+
+```cpp
+void Invoke();
+```

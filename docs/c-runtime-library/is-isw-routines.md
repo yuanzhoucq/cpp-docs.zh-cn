@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98f7edcf115a6fadc741c7f1bcde8f240c93abcc
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: db047c2b16eb67f086bc26976783e829189d4266
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43895118"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095100"
 ---
 # <a name="is-isw-routines"></a>is、isw 例程
 
@@ -61,75 +61,75 @@ ms.locfileid: "43895118"
 
 在“C”区域设置中，**is** 例程的测试条件如下所示：
 
-`isalnum`  
+`isalnum`<br/>
 字母数字（A - Z、a-z 或 0-9）。
 
-`isalpha`  
+`isalpha`<br/>
 字母（A - Z 或 a - z）。
 
-`__isascii`  
+`__isascii`<br/>
 ASCII 字符 (0x00 - 0x7F)。
 
-`isblank`  
+`isblank`<br/>
 水平制表符或空格字符（0x09 或 0x20）。
 
-`iscntrl`  
+`iscntrl`<br/>
 控制字符（0x00-0x1F 或 0x7F）。
 
-`__iscsym`  
+`__iscsym`<br/>
 字母、下划线或数字。
 
-`__iscsymf`  
+`__iscsymf`<br/>
 字母或下划线。
 
-`isdigit`  
+`isdigit`<br/>
 十进制数字 (0 - 9)。
 
-`isgraph`  
+`isgraph`<br/>
 除空格 ( ) 之外的可打印字符。
 
-`islower`  
+`islower`<br/>
 小写字母 (a - z)。
 
-`isprint`  
+`isprint`<br/>
 包括空格的可打印字符 (0x20 - 0x7E)。
 
-`ispunct`  
+`ispunct`<br/>
 标点字符。
 
-`isspace`  
+`isspace`<br/>
 空白字符（0x09-0x0D 或 0x20）。
 
-`isupper`  
+`isupper`<br/>
 大写字母 (A - Z)。
 
-`isxdigit`  
+`isxdigit`<br/>
 十六进制数字（A-F、a-f 或 0-9）。
 
 对于 **isw** 例程，指定条件的测试结果与区域设置无关。 **isw** 函数的测试条件如下所示：
 
-`iswalnum`  
+`iswalnum`<br/>
 `iswalpha` 或 `iswdigit`。
 
-`iswalpha`  
+`iswalpha`<br/>
 属于其中一个实现定义的集合（其中 `iswcntrl`、`iswdigit`、`iswpunct` 或 `iswspace` 没有一个为非零）的任何宽字符。 `iswalpha` 仅针对 `iswupper` 或 `iswlower` 为非零的宽字符返回非零。
 
-`iswascii`  
+`iswascii`<br/>
 ASCII 字符 (0x0000-0x007F) 的宽字符表示形式。
 
-`iswblank`  
+`iswblank`<br/>
 对应于标准空格字符，或是实现定义的宽字符集（其中 `iswalnum` 为 false）之一的宽字符。 标准空白字符是空格 (L' ') 和水平制表符 (L'\t')。
 
-`iswcntrl`  
+`iswcntrl`<br/>
 控制宽字符。
 
-`__iswcsym`  
+`__iswcsym`<br/>
 `isalnum` 为 true 的任何宽字符，或“_”字符。
 
-`__iswcsymf`  
+`__iswcsymf`<br/>
 `iswalpha` 为 true 的任何宽字符，或“_”字符。
 
-`iswctype`  
+`iswctype`<br/>
 字符的属性由 `desc` 参数指定。 `iswctype` 的 `desc` 参数的每个有效值都有一个等效的宽字符分类例程，如下表所示：
 
 ### <a name="equivalence-of-iswctypec-desc-to-other-isw-testing-routines"></a>iswctype(c, desc) 与其他 isw 测试例程的等效性
@@ -150,28 +150,28 @@ ASCII 字符 (0x0000-0x007F) 的宽字符表示形式。
 |**_UPPER**|**iswupper(** `c` **)**|
 |**_HEX**|**iswxdigit(** `c` **)**|
 
-`iswdigit`  
+`iswdigit`<br/>
 对应于十进制数字字符的宽字符。
 
-`iswgraph`  
+`iswgraph`<br/>
 除了空格宽字符 (L' ') 之外的可打印宽字符。
 
-`iswlower`  
+`iswlower`<br/>
 小写字母，或 `iswcntrl`、`iswdigit`、`iswpunct` 或 `iswspace` 没有一个为非零的其中一个实现定义的宽字符集。 `iswlower` 仅对与小写字母对应的宽字符返回非零值。
 
-`iswprint`  
+`iswprint`<br/>
 包含空格宽字符 (L' ') 的可打印宽字符。
 
-`iswpunct`  
+`iswpunct`<br/>
 既不是空格宽字符 (L' ') 也不是 `iswalnum` 为非零值的宽字符的可打印宽字符。
 
-`iswspace`  
+`iswspace`<br/>
 对应于标准空白字符，或是实现定义的宽字符集（其中 `iswalnum` 为 false）之一的宽字符。 标准空白字符是：空格 (L' ')、换页符 (L'\f')、换行符 (L'\n')、回车符 (L'\r')、水平制表符 (L'\t') 和垂直制表符 (L'\v')。
 
-`iswupper`  
+`iswupper`<br/>
 宽字符是一个大写字母，或是 `iswcntrl`、`iswdigit`、`iswpunct` 或 `iswspace` 没有一个为非零的其中一个实现定义的宽字符集。 `iswupper` 仅对与大写字母对应的宽字符返回非零值。
 
-`iswxdigit`  
+`iswxdigit`<br/>
 对应于十六进制数字字符的宽字符。
 
 ## <a name="example"></a>示例
@@ -181,16 +181,16 @@ ASCII 字符 (0x0000-0x007F) 的宽字符表示形式。
 /* This program tests all characters between 0x0
 * and 0x7F, then displays each character with abbreviations
 * for the character-type codes that apply.
-*/  
+*/
 
 #include <stdio.h>
 #include <ctype.h>
 
-int main( void )  
-{  
+int main( void )
+{
    int ch;
-   for( ch = 0; ch <= 0x7F; ch++ )  
-   {  
+   for( ch = 0; ch <= 0x7F; ch++ )
+   {
       printf( "%.2x  ", ch );
       printf( " %c", isprint( ch )  ? ch   : ' ' );
       printf( "%4s", isalnum( ch )  ? "AN" : "" );
@@ -208,9 +208,9 @@ int main( void )
       printf( "%3s", isupper( ch )  ? "U"  : "" );
       printf( "%3s", isxdigit( ch ) ? "X"  : "" );
       printf( ".\n" );
-   }  
-}  
-```  
+   }
+}
+```
 
 ## <a name="output"></a>输出
 
@@ -347,8 +347,8 @@ int main( void )
 
 ## <a name="see-also"></a>请参阅
 
-[字符分类](../c-runtime-library/character-classification.md)   
-[区域设置](../c-runtime-library/locale.md)   
-[setlocale、_wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)   
-[多字节字符序列的解释](../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
+[字符分类](../c-runtime-library/character-classification.md)<br/>
+[区域设置](../c-runtime-library/locale.md)<br/>
+[setlocale、_wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)<br/>
+[多字节字符序列的解释](../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [to 函数](../c-runtime-library/to-functions.md)

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: eab2a577d0c7b31f833a8dcc0208f9939b729ad9
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: f9e6ee8da9c30ca3d5da9f772e46beca76f424be
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42607464"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46398438"
 ---
 # <a name="asyncbasegetoncomplete-method"></a>AsyncBase::GetOnComplete 方法
 
@@ -38,7 +38,7 @@ STDMETHOD(
 
 ### <a name="parameters"></a>参数
 
-*completeHandler*  
+*completeHandler*<br/>
 存储当前完成事件处理程序的地址的位置。
 
 ## <a name="return-value"></a>返回值

@@ -14,58 +14,60 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 95eed7834e46f6a42a363e8a8f8134945beb54fc
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 7e989b6f2193142de8feb4124e365285957ee804
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541571"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46439858"
 ---
 # <a name="deprecated-ansi-apis"></a>弃用的 ANSI API
-Microsoft 基础类 (MFC) 库迁移到类和方法，基于 Unicode 字符集中。 因此，已弃用某些 MFC 方法的 ANSI 版本。 在以后的应用程序中使用这些方法的 Unicode 版本。  
-  
- Windows 公共控件版本 6.1、 预装 Windows Vista 中，从开始不推荐使用以下 ANSI 方法。  
-  
-## <a name="cbutton-class"></a>CButton 类  
-  
-```  
+
+Microsoft 基础类 (MFC) 库迁移到类和方法，基于 Unicode 字符集中。 因此，已弃用某些 MFC 方法的 ANSI 版本。 在以后的应用程序中使用这些方法的 Unicode 版本。
+
+Windows 公共控件版本 6.1、 预装 Windows Vista 中，从开始不推荐使用以下 ANSI 方法。
+
+## <a name="cbutton-class"></a>CButton 类
+
+```
 AFX_ANSI_DEPRECATED BOOL GetIdealSize(LPSIZE psize) const;
 
- 
+
 AFX_ANSI_DEPRECATED BOOL GetImageList(PBUTTON_IMAGELIST pbuttonImagelist) const;
 
- 
+
 AFX_ANSI_DEPRECATED BOOL GetTextMargin(LPRECT pmargin) const;
 
- 
+
 AFX_ANSI_DEPRECATED BOOL SetImageList(PBUTTON_IMAGELIST pbuttonImagelist);
 
 AFX_ANSI_DEPRECATED BOOL SetTextMargin(LPRECT pmargin);
-```  
-  
-## <a name="ccomboboxex-class"></a>CComboBoxEx 类  
-  
-```  
+```
+
+## <a name="ccomboboxex-class"></a>CComboBoxEx 类
+
+```
 AFX_ANSI_DEPRECATED HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
-```  
-  
-## <a name="cedit-class"></a>CEdit 类  
-  
-```  
+```
+
+## <a name="cedit-class"></a>CEdit 类
+
+```
 AFX_ANSI_DEPRECATED BOOL GetCueBanner(LPWSTR lpszText,
     int cchText) const;
 
- 
+
 AFX_ANSI_DEPRECATED BOOL SetCueBanner(LPCWSTR lpszText,
     BOOL fDrawIfFocused = FALSE);
-```  
-  
-## <a name="clinkctrl-class"></a>CLinkCtrl 类  
- 整个类已弃用。  
-  
-## <a name="clistctrl-class"></a>CListCtrl 类  
-  
-```  
+```
+
+## <a name="clinkctrl-class"></a>CLinkCtrl 类
+
+整个类已弃用。
+
+## <a name="clistctrl-class"></a>CListCtrl 类
+
+```
 AFX_ANSI_DEPRECATED void CancelEditLabel();
 
 AFX_ANSI_DEPRECATED int EnableGroupView(BOOL fEnable);
@@ -73,37 +75,37 @@ AFX_ANSI_DEPRECATED int EnableGroupView(BOOL fEnable);
 AFX_ANSI_DEPRECATED int GetGroupInfo(int iGroupId,
     PLVGROUP pgrp) const;
 
- 
+
 AFX_ANSI_DEPRECATED void GetGroupMetrics(PLVGROUPMETRICS pGroupMetrics) const;
 
- 
+
 AFX_ANSI_DEPRECATED BOOL GetInsertMark(LPLVINSERTMARK lvim) const;
 
- 
+
 AFX_ANSI_DEPRECATED COLORREF GetInsertMarkColor() const;
 
- 
+
 AFX_ANSI_DEPRECATED int GetInsertMarkRect(LPRECT pRect) const;
 
- 
+
 AFX_ANSI_DEPRECATED COLORREF GetOutlineColor() const;
 
- 
+
 AFX_ANSI_DEPRECATED UINT GetSelectedColumn() const;
 
- 
+
 AFX_ANSI_DEPRECATED BOOL GetTileInfo(PLVTILEINFO pti) const;
 
- 
+
 AFX_ANSI_DEPRECATED BOOL GetTileViewInfo(PLVTILEVIEWINFO ptvi) const;
 
- 
+
 AFX_ANSI_DEPRECATED DWORD GetView() const;
 
- 
+
 AFX_ANSI_DEPRECATED BOOL HasGroup(int iGroupId) const;
 
- 
+
 AFX_ANSI_DEPRECATED int InsertGroup(int index,
     PLVGROUP pgrp);
 
@@ -112,10 +114,10 @@ AFX_ANSI_DEPRECATED void InsertGroupSorted(PLVINSERTGROUPSORTED pStructInsert);
 AFX_ANSI_DEPRECATED int InsertMarkHitTest(LPPOINT pPoint,
     LPLVINSERTMARK lvim) const;
 
- 
+
 AFX_ANSI_DEPRECATED BOOL IsGroupViewEnabled() const;
 
- 
+
 AFX_ANSI_DEPRECATED void MoveGroup(int iGroupId,
     int toIndex);
 
@@ -149,34 +151,35 @@ AFX_ANSI_DEPRECATED DWORD SetView(int iView);
 
 AFX_ANSI_DEPRECATED BOOL SortGroups(PFNLVGROUPCOMPARE _pfnGroupCompare,
     LPVOID _plv);
-```  
-  
-## <a name="crebarctrl-class"></a>CReBarCtrl 类  
-  
-```  
+```
+
+## <a name="crebarctrl-class"></a>CReBarCtrl 类
+
+```
 AFX_ANSI_DEPRECATED void GetBandMargins(PMARGINS pMargins) const;
 
- 
+
 AFX_ANSI_DEPRECATED HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
-```  
-  
-## <a name="ctoolbarctrl-class"></a>CToolBarCtrl 类  
-  
-```  
+```
+
+## <a name="ctoolbarctrl-class"></a>CToolBarCtrl 类
+
+```
 AFX_ANSI_DEPRECATED void GetMetrics(LPTBMETRICS ptbm) const;
 
- 
+
 AFX_ANSI_DEPRECATED void SetMetrics(LPTBMETRICS ptbm);
 
 AFX_ANSI_DEPRECATED HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
-```  
-  
-## <a name="ctooltipctrl-class"></a>CToolTipCtrl 类  
-  
-```  
+```
+
+## <a name="ctooltipctrl-class"></a>CToolTipCtrl 类
+
+```
 AFX_ANSI_DEPRECATED HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
-```  
-  
-## <a name="see-also"></a>请参阅  
- [Windows Vista 公用控件的生成要求](../mfc/build-requirements-for-windows-vista-common-controls.md)
+```
+
+## <a name="see-also"></a>请参阅
+
+[Windows Vista 公用控件的生成要求](../mfc/build-requirements-for-windows-vista-common-controls.md)
 

@@ -1,5 +1,5 @@
 ---
-title: 2.7.2.8 copyprivate |Microsoft 文档
+title: 2.7.2.8 copyprivate |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,32 +12,33 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c809f297da5059a98915e8055dfe23f45074366f
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 6815afe12344f94ed33d6b9260472f3e29eb72a0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691598"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46406355"
 ---
 # <a name="2728-copyprivate"></a>2.7.2.8 copyprivate
-**Copyprivate**子句提供了一种机制来使用的私有变量的其他成员广播来自团队的成员的一个值。 它是另一种共享的变量的值时提供此类共享的变量是非常困难的 （例如，在需要一个不同的变量在每个级别的递归）。 **Copyprivate**子句只能出现在**单个**指令。  
-  
- 语法**copyprivate**子句是，如下所示：  
-  
-```  
-  
-copyprivate(  
-variable-list  
-)  
-  
-```  
-  
- 效果**copyprivate**其变量列表中的变量上的子句发生在与关联的结构化块执行后**单个**构造，以及在任何中的线程之前团队已离开构造末尾屏障。 然后，在团队成员，以在每个变量中的所有其他线程*变量列表*，该变量将成为 （就像分配） 包含定义相应的值中的线程来执行构造的变量的结构化块。  
-  
- 限制到**copyprivate**子句如下所示：  
-  
--   中指定的变量**copyprivate**子句不得出现在**私有**或**firstprivate**子句相同**单**指令。  
-  
--   如果**单个**指令与**copyprivate**在并行区域的动态范围中遇到子句中的所有变量都指定**copyprivate**子句必须在封闭上下文中为私有。  
-  
--   中指定的变量**copyprivate**子句必须具有可访问的明确复制赋值运算符。
+
+**Copyprivate**子句提供了一种机制来使用私有变量广播来自团队的成员的其他成员的值。 它是使用共享的变量值时提供此类共享的变量会很困难 （例如，在需要在每个级别的不同变量的递归） 的替代方法。 **Copyprivate**子句仅可出现在**单个**指令。
+
+语法**copyprivate**子句如下所示：
+
+```
+
+copyprivate(
+variable-list
+)
+
+```
+
+效果**copyprivate**其变量列表中的变量上的子句与关联的结构化块执行后会发生**单个**构造，并在任何中的线程前团队已离开构造结束时的障碍。 然后，在团队中每个变量中的所有其他线程*变量列表*，该变量将成为使用相应的值定义 （像是通过赋值） 中执行构造的线程的变量的结构化块。
+
+限制**copyprivate**子句如下所示：
+
+- 中指定的变量**copyprivate**子句不能出现在**专用**或**firstprivate**子句相同**单**指令。
+
+- 如果**单个**指令与**copyprivate**并行区域的动态范围中遇到子句中指定的所有变量**copyprivate**子句必须是在封闭上下文中的私钥。
+
+- 中指定的变量**copyprivate**子句必须具有可访问的明确复制赋值运算符。

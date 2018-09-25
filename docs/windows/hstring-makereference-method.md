@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 061b3be0e642bb8e7406f54a469723c70559d85a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ebc8632d273e650cf11e70177bbfbeb0e90e8601
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42610156"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46394850"
 ---
 # <a name="hstringmakereference-method"></a>HString::MakeReference 方法
 
@@ -41,13 +41,13 @@ template<unsigned int sizeDest>
 
 ### <a name="parameters"></a>参数
 
-*sizeDest*  
+*sizeDest*<br/>
 一个模板参数，指定的目标大小`HStringReference`缓冲区。
 
-*str*  
+*str*<br/>
 对宽字符串的引用。
 
-*Len*  
+*Len*<br/>
 最大长度*str*要在此操作中使用的参数缓冲区。 如果*len*参数未指定，整个*str*使用参数。
 
 ## <a name="return-value"></a>返回值

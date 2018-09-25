@@ -1,5 +1,5 @@
 ---
-title: 从对话框对象检索数据 |Microsoft 文档
+title: 从对话框对象检索数据 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -31,24 +31,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b221bd97d9ee943e19b043bcc9be6aba0fa1672
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 3055468c04bba7c9cb999d0a642c0819524ff7e7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36929590"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46391399"
 ---
 # <a name="retrieving-data-from-the-dialog-object"></a>从对话框对象检索数据
-框架可以轻松地进行初始化的控件在对话框中的值并从控件中检索值。 更费力的手动方法是调用函数，如`SetDlgItemText`和`GetDlgItemText`类的成员函数`CWnd`，其应用到控制窗口。 使用这些函数中，你访问每个控件单独来设置或获取其值，如调用函数`SetWindowText`和`GetWindowText`。 初始化和检索，自动执行框架的方法。  
-  
- 对话框数据交换 (DDX) 可以更轻松地交换的控件中的对话框对象中的对话框框和成员变量之间的数据。 此 exchange 两种方式工作。 若要初始化的控件在对话框中，你可以在对话框对象中设置数据成员的值和框架将这些值传输给控件之前显示的对话框。 然后你可以随时更新对话框数据成员与用户输入的数据。 此时，你可以使用通过引用数据成员变量的数据。  
-  
- 你还可以安排对话框控件以使用对话框数据验证 (DDV) 来自动验证的值。  
-  
- 中的更详细地解释了 DDX 和 DDV[对话框数据交换和验证](../mfc/dialog-data-exchange-and-validation.md)。  
-  
- 对于模式对话框，你可以检索用户输入时的任何数据`DoModal`返回 IDOK 但对话框之前在销毁对象。 对于无模式对话框，你可以从检索数据的对话框对象在任何时候通过调用`UpdateData`具有自变量**TRUE** ，然后访问对话框类成员变量。 中的更详细地讨论了此主题[对话框数据交换和验证](../mfc/dialog-data-exchange-and-validation.md)。  
-  
-## <a name="see-also"></a>请参阅  
- [对话框的生命周期](../mfc/life-cycle-of-a-dialog-box.md)
+
+该框架提供的简单方法来初始化对话框中的控件的值和从控件检索值。 更费力的手动方法是调用函数，例如`SetDlgItemText`并`GetDlgItemText`类的成员函数`CWnd`，这不适用于控制 windows。 使用这些函数，您访问每个控件分别来设置或获取它的值，如调用函数`SetWindowText`和`GetWindowText`。 框架的方法会自动初始化并检索。
+
+对话框数据交换 (DDX) 可让你更轻松地交换数据之间的对话框对象中的对话框框和成员变量中的控件。 此交换适用于这两种方式。 若要初始化的控件在对话框中，可以在对话框对象中设置数据成员的值和框架将这些值传输给控件之前显示的对话框。 然后可以在任何时候更新对话框数据成员的用户输入的数据。 此时，您可以使用数据： 数据成员变量引用。
+
+您还可以安排对话框控件与对话框数据验证 (DDV) 自动进行验证的值。
+
+中更详细地介绍 DDX 和 DDV[对话框数据交换和验证](../mfc/dialog-data-exchange-and-validation.md)。
+
+对于模式对话框，可以检索用户输入时的任何数据`DoModal`返回 IDOK 但对话框之前在销毁对象。 对于无模式对话框，您可以从检索数据的对话框对象在任何时候通过调用`UpdateData`使用参数**TRUE** ，然后访问对话框类成员变量。 中更详细地讨论了此主题[对话框数据交换和验证](../mfc/dialog-data-exchange-and-validation.md)。
+
+## <a name="see-also"></a>请参阅
+
+[对话框的生命周期](../mfc/life-cycle-of-a-dialog-box.md)
 

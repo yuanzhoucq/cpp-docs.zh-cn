@@ -29,12 +29,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6f9b121b75e31fdd79313e36b9e1e19c1cf3200e
-ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
+ms.openlocfilehash: 12fd66c7ff5a6f6fee7588aa7bd51ae2053ba7e8
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44691531"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46386972"
 ---
 # <a name="weakref-class"></a>WeakRef 类
 
@@ -141,10 +141,10 @@ HRESULT As(
 
 ### <a name="parameters"></a>参数
 
-*U*  
+*U*<br/>
 接口 ID。
 
-*ptr*  
+*ptr*<br/>
 此操作完成后，一个对象，表示参数*U*。
 
 ### <a name="return-value"></a>返回值
@@ -176,10 +176,10 @@ HRESULT AsIID(
 
 ### <a name="parameters"></a>参数
 
-*riid*  
+*riid*<br/>
 接口 ID。
 
-*ptr*  
+*ptr*<br/>
 此操作完成后，一个对象，表示参数*riid*。
 
 ### <a name="return-value"></a>返回值
@@ -220,13 +220,13 @@ HRESULT CopyTo(
 
 ### <a name="parameters"></a>参数
 
-*U*  
+*U*<br/>
 指针`IInspectable`接口。 如果错误发出*U*不派生自`IInspectable`。
 
-*riid*  
+*riid*<br/>
 接口 ID。 如果错误发出*riid*不派生自`IWeakReference`。
 
-*ptr*  
+*ptr*<br/>
 指向的双向间接指针`IInspectable`或`IWeakReference`。
 
 ### <a name="return-value"></a>返回值
@@ -284,7 +284,7 @@ WeakRef(
 
 ### <a name="parameters"></a>参数
 
-*ptr*  
+*ptr*<br/>
 指针、 引用或对现有对象的初始化当前的右值引用`WeakRef`对象。
 
 ### <a name="remarks"></a>备注

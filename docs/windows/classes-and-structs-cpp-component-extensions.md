@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 04a632e657b57519d02c013d9c03e558b9aec8e1
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 60e388e18e6d3607dac1946c3fd9a511e948afd4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45726617"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46448371"
 ---
 # <a name="classes-and-structs--c-component-extensions"></a>类和结构（C++ 组件扩展）
 
@@ -46,19 +46,19 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
 
 ### <a name="parameters"></a>参数
 
-*class_access*  
+*class_access*<br/>
 （可选）类或结构的程序集外部的可访问性。 可能的值为**公共**并**专用**(**专用**是默认值)。 嵌套的类或结构不能有*class_access*说明符。
 
-*name*  
+*name*<br/>
 类或结构的名称。
 
-*修饰符*  
+*修饰符*<br/>
 （可选）[抽象](../windows/abstract-cpp-component-extensions.md)并[密封](../windows/sealed-cpp-component-extensions.md)是有效修饰符。
 
-*inherit_access*  
+*inherit_access*<br/>
 （可选）可访问性*base_type*。 仅允许可访问性是**公共**(**公共**是默认值)。
 
-*base_type*  
+*base_type*<br/>
 （可选）基类型中。 但是，值类型不能充当基类型。
 
 有关详细信息，请参阅中的 Windows 运行时和通用语言 Runtimesections 此参数的特定于语言的说明。
@@ -97,7 +97,7 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
 
 ### <a name="parameters"></a>参数
 
-*base_type*  
+*base_type*<br/>
 （可选）基类型中。 一个**ref 类**或**ref 结构**可以继承自零个或多个接口以及零个或一个**ref**类型。 一个**值类**或**值结构**只能继承自零个或多个接口。
 
 当使用声明对象**ref 类**或**ref 结构**关键字，该对象被访问的对象的句柄; 即，指向对象的引用计数器指针。 声明的变量超出范围时，编译器会自动删除基础对象。 当对象在调用中用作参数或存储在变量中时，实际是在传递或存储该对象的句柄。
@@ -116,7 +116,7 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
 
 ### <a name="parameters"></a>参数
 
-*base_type*  
+*base_type*<br/>
 （可选）基类型中。 一个**ref 类**或**ref 结构**可以继承自零个或多个托管接口以及零个或一个 ref 类型。 一个**值类**或**值结构**只能继承自零个或多个托管接口。
 
 **Ref 类**并**ref 结构**关键字会告知编译器的类或结构是在堆上分配。 当对象在调用中用作参数或存储在变量中时，实际是在传递或存储该对象的引用。

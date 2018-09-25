@@ -1,5 +1,5 @@
 ---
-title: marshal_context::marshal_context |Microsoft 文档
+title: marshal_context::marshal_context |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,34 +20,39 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 1e8838864c4ec1c6414401608b848cb12b01c16e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 02f238a8d9b9d484073794b9a75888325d95107b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33140115"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46399439"
 ---
 # <a name="marshalcontextmarshalcontext"></a>marshal_context::marshal_context
-构造`marshal_context`用于托管和本机数据类型之间的数据转换对象。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-marshal_context();  
-```  
-  
-## <a name="remarks"></a>备注  
- 某些数据转换需要封送上下文。 请参阅[概述的封送处理在 c + +](../dotnet/overview-of-marshaling-in-cpp.md)有关哪些翻译需要上下文，并且的封送处理文件具有要包括在你的应用程序的详细信息。  
-  
-## <a name="example"></a>示例  
- 请参阅示例[marshal_context::marshal_as](../dotnet/marshal-context-marshal-as.md)。  
-  
-## <a name="requirements"></a>要求  
- **标头文件：** \<msclr\marshal.h >， \<msclr\marshal_windows.h >， \<msclr\marshal_cppstd.h >，或\<msclr\marshal_atl.h >  
-  
- **Namespace:** msclr::interop  
-  
-## <a name="see-also"></a>请参阅  
- [C + + 中的封送处理概述](../dotnet/overview-of-marshaling-in-cpp.md)   
- [marshal_as](../dotnet/marshal-as.md)   
- [marshal_context 类](../dotnet/marshal-context-class.md)
+
+构造`marshal_context`要用于托管和本机数据类型之间的数据转换对象。
+
+## <a name="syntax"></a>语法
+
+```
+marshal_context();
+```
+
+## <a name="remarks"></a>备注
+
+某些数据转换需要封送上下文。 请参阅[Overview of Marshaling c + + 中](../dotnet/overview-of-marshaling-in-cpp.md)有关哪些转换需要上下文以及哪些封送文件必须包含在应用程序中的详细信息。
+
+## <a name="example"></a>示例
+
+有关示例，请参阅[marshal_context::marshal_as](../dotnet/marshal-context-marshal-as.md)。
+
+## <a name="requirements"></a>要求
+
+**标头文件：** \<msclr\marshal.h >， \<msclr\marshal_windows.h >， \<msclr\marshal_cppstd.h >，或\<msclr\marshal_atl.h >
+
+**Namespace:** msclr::interop
+
+## <a name="see-also"></a>请参阅
+
+[C++ 中的封送处理概述](../dotnet/overview-of-marshaling-in-cpp.md)<br/>
+[marshal_as](../dotnet/marshal-as.md)<br/>
+[marshal_context 类](../dotnet/marshal-context-class.md)

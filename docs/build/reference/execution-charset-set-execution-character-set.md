@@ -3,8 +3,7 @@ title: -执行-字符集 （设置执行字符集） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
-- cpp
-- devlang-cpp
+- cpp-tools
 ms.topic: reference
 f1_keywords:
 - execution-charset
@@ -19,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3cd7acf018930c013f477cf4c3a8b3260a8d53ec
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: ca6681fde6ae4e46dea62e0258138f567ef8ebc5
+ms.sourcegitcommit: 92c568e9466ffd7346a4120c478c9bdea61c8756
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45714611"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47029601"
 ---
 # <a name="execution-charset-set-execution-character-set"></a>/execution-charset （设置执行字符集）
 
@@ -38,10 +37,10 @@ ms.locfileid: "45714611"
 
 ## <a name="arguments"></a>自变量
 
-**IANA_name**<br/>
+*IANA_name*<br/>
 IANA 定义字符集名称。
 
-**CPID**<br/>
+*CPID*<br/>
 代码页标识符。
 
 ## <a name="remarks"></a>备注
@@ -66,6 +65,6 @@ IANA 定义字符集名称。
 
 [编译器选项](../../build/reference/compiler-options.md)<br/>
 [设置编译器选项](../../build/reference/setting-compiler-options.md)<br/>
-[/source-charset （设置源字符集）](../../build/reference/source-charset-set-source-character-set.md)
-[/utf-8 （设置源和可执行文件为 utf-8 字符集）](../../build/reference/utf-8-set-source-and-executable-character-sets-to-utf-8.md)
-[/validate-charset （验证兼容的字符）](../../build/reference/validate-charset-validate-for-compatible-characters.md)
+[/source-charset（设置源字符集）](../../build/reference/source-charset-set-source-character-set.md)<br/>
+[/utf-8（将源和可执行字符集设置为 UTF-8）](../../build/reference/utf-8-set-source-and-executable-character-sets-to-utf-8.md)<br/>
+[/validate-charset（验证兼容的字符）](../../build/reference/validate-charset-validate-for-compatible-characters.md)

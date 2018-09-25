@@ -15,17 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0b48dc1aa1f2e966836bba8d04227f7c74d5abd
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 3ec7072f4536dd2817ed5cef7e8dbe365fc1dd5f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43208109"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46399271"
 ---
 # <a name="header-control-examples"></a>标题控件示例
-标头控件的示例，请参阅[标头控件](/windows/desktop/Controls/header-controls)Windows SDK 中。  
-  
-## <a name="see-also"></a>请参阅  
- [使用 CHeaderCtrl](../mfc/using-cheaderctrl.md)   
- [控件](../mfc/controls-mfc.md)
+
+标头控件的示例，请参阅[标头控件](/windows/desktop/Controls/header-controls)Windows SDK 中。
+
+## <a name="see-also"></a>请参阅
+
+[使用 CHeaderCtrl](../mfc/using-cheaderctrl.md)<br/>
+[控件](../mfc/controls-mfc.md)
 

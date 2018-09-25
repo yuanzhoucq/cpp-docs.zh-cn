@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 180586f55ea57100286c3c598ac62eb83107d7c9
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: b715f3cc6bc505d9698484ad7c47b8262f2bc728
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45714371"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46444406"
 ---
 # <a name="optimizing-your-code"></a>优化代码
 
@@ -33,11 +33,14 @@ ms.locfileid: "45714371"
 
 以下主题介绍了一些 C/c + + 语言中的优化功能。
 
-[优化杂注和关键字](../../build/reference/optimization-pragmas-and-keywords.md)关键字和杂注，您可以使用在代码中以提高性能的列表。
+[优化杂注和关键字](../../build/reference/optimization-pragmas-and-keywords.md)<br/>
+关键字和杂注，您可以使用在代码中以提高性能的列表。
 
-[按类别列出的编译器选项](../../build/reference/compiler-options-listed-by-category.md)的列表 **/O**专门影响执行速度或代码大小的编译器选项。
+[按类别列出的编译器选项](../../build/reference/compiler-options-listed-by-category.md)<br/>
+一系列 **/O**专门影响执行速度或代码大小的编译器选项。
 
-[右值引用声明符： & &](../../cpp/rvalue-reference-declarator-amp-amp.md)右值引用支持的实现*移动语义*。 如果可以显著提高的移动语义用于实现模板库，使用这些模板的应用程序的性能。
+[规则引用声明符：&&](../../cpp/rvalue-reference-declarator-amp-amp.md)<br/>
+右值引用支持的实现*移动语义*。 如果可以显著提高的移动语义用于实现模板库，使用这些模板的应用程序的性能。
 
 ### <a name="the-optimize-pragma"></a>优化杂注
 
@@ -59,9 +62,11 @@ ms.locfileid: "45714371"
 
 以下主题讨论最佳编程实践。
 
-[提高时间关键代码的提示](../../build/reference/tips-for-improving-time-critical-code.md)更好地编码技术可产生更好的性能。 本主题建议的编码技术可以帮助您确保你的代码的时间关键部分满意地执行。
+[提高时间关键代码的技巧](../../build/reference/tips-for-improving-time-critical-code.md)<br/>
+更好地编码技术可产生更好的性能。 本主题建议的编码技术可以帮助您确保你的代码的时间关键部分满意地执行。
 
-[优化最佳做法](../../build/reference/optimization-best-practices.md)提供了有关如何最好地优化您的应用程序的一般准则。
+[优化最佳做法](../../build/reference/optimization-best-practices.md)<br/>
+提供有关如何最好地优化您的应用程序的常规指南。
 
 ## <a name="debugging-optimized-code"></a>调试优化的代码
 

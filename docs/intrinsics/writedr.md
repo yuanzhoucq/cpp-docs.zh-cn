@@ -16,43 +16,47 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b559edf26c847404d718440e86037cab4026297b
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 5fd9bd5145947711c245f552672843d604160d06
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45704946"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46402162"
 ---
 # <a name="writedr"></a>__writedr
-将指定的值写入到指定的调试注册。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-void __writedr(unsigned DebugRegister, unsigned DebugValue);  
-void __writedr(unsigned DebugRegister, unsigned __int64 DebugValue);  
-```  
-  
-#### <a name="parameters"></a>参数  
+
+将指定的值写入到指定的调试注册。
+
+## <a name="syntax"></a>语法
+
+```
+void __writedr(unsigned DebugRegister, unsigned DebugValue);
+void __writedr(unsigned DebugRegister, unsigned __int64 DebugValue);
+```
+
+#### <a name="parameters"></a>参数
+
 *DebugRegister*<br/>
-[in]一个介于 0 到 7 标识调试注册。  
-  
+[in]一个介于 0 到 7 标识调试注册。
+
 *DebugValue*<br/>
-[in]一个值，以写入调试注册。  
-  
-## <a name="remarks"></a>备注  
- 这些内部函数仅在内核模式中可用，例程只能用作内部函数。  
-  
-## <a name="requirements"></a>要求  
-  
-|内部函数|体系结构|  
-|---------------|------------------|  
-|`__writedr`|x86、x64|  
-  
- **标头文件** \<intrin.h >  
-  
-**结束 Microsoft 专用**  
-  
-## <a name="see-also"></a>请参阅  
- [编译器内部函数](../intrinsics/compiler-intrinsics.md)   
- [__readdr](../intrinsics/readdr.md)
+[in]一个值，以写入调试注册。
+
+## <a name="remarks"></a>备注
+
+这些内部函数仅在内核模式中可用，例程只能用作内部函数。
+
+## <a name="requirements"></a>要求
+
+|内部函数|体系结构|
+|---------------|------------------|
+|`__writedr`|x86、x64|
+
+**标头文件** \<intrin.h >
+
+**结束 Microsoft 专用**
+
+## <a name="see-also"></a>请参阅
+
+[编译器内部函数](../intrinsics/compiler-intrinsics.md)<br/>
+[__readdr](../intrinsics/readdr.md)

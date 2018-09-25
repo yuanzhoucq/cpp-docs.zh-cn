@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6a98c9016281a67211a41d1c63fcb9886a0b3c35
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 008aade041a1a8effd432c0c01eb898bb15381f7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222505"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46414677"
 ---
 # <a name="dispinterface"></a>dispinterface
 
@@ -68,10 +68,10 @@ dispinterface helloPro
 
 ## <a name="see-also"></a>请参阅
 
-[IDL 特性](../windows/idl-attributes.md)  
-[按用法分的特性](../windows/attributes-by-usage.md)  
-[uuid](../windows/uuid-cpp-attributes.md)  
-[dual](../windows/dual.md)  
-[custom](../windows/custom-cpp.md)  
-[object](../windows/object-cpp.md)  
+[IDL 特性](../windows/idl-attributes.md)<br/>
+[按用法分的特性](../windows/attributes-by-usage.md)<br/>
+[uuid](../windows/uuid-cpp-attributes.md)<br/>
+[dual](../windows/dual.md)<br/>
+[custom](../windows/custom-cpp.md)<br/>
+[object](../windows/object-cpp.md)<br/>
 [__interface](../cpp/interface.md)  

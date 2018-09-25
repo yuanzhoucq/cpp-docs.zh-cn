@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a1117ba3933d714486f314510d0288f0c63bf4b8
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 029528baabcc32c14fb6b35e4a13f4118602d5d5
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43202371"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46417795"
 ---
 # <a name="asyncuuid"></a>async_uuid
 
@@ -38,7 +38,7 @@ ms.locfileid: "43202371"
 
 ### <a name="parameters"></a>参数
 
-*uuid*  
+*uuid*<br/>
 一个标识接口的版本的 UUID。
 
 ## <a name="remarks"></a>备注
@@ -74,5 +74,5 @@ __interface ICustom {
 
 ## <a name="see-also"></a>请参阅
 
-[IDL 特性](../windows/idl-attributes.md)  
+[IDL 特性](../windows/idl-attributes.md)<br/>
 [接口特性](../windows/interface-attributes.md)  

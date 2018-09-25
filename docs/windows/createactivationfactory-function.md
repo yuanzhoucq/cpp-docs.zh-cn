@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dd43102eb3a3b4e7bb14e65e0c710b814fc10cff
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: aed52e5ba209a826130b1a85aa866fe024174818
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42593827"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46424633"
 ---
 # <a name="createactivationfactory-function"></a>CreateActivationFactory 函数
 
@@ -40,16 +40,16 @@ template<typename Factory>
 
 ### <a name="parameters"></a>参数
 
-*flags*  
+*flags*<br/>
 一个或多个组合[RuntimeClassType](../windows/runtimeclasstype-enumeration.md)枚举值。
 
-*entry*  
+*entry*<br/>
 指向[CreatorMap](../windows/creatormap-structure.md)包含有关参数的初始化和注册信息*riid*。
 
-*riid*  
+*riid*<br/>
 引用接口 id。
 
-*ppFactory*  
+*ppFactory*<br/>
 如果此操作成功，完成到激活工厂的指针。
 
 ## <a name="return-value"></a>返回值

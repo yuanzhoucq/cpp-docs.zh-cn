@@ -18,58 +18,64 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 19a4a150b2cdf067802a1220a77640f20a1fea51
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 655776543a0c368bf5d13719d10b507c941a0fa9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46106189"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46404691"
 ---
 # <a name="improperlock-class"></a>improper_lock 类
-此类描述错误获取锁时引发的异常。  
-  
-## <a name="syntax"></a>语法  
-  
+
+此类描述错误获取锁时引发的异常。
+
+## <a name="syntax"></a>语法
+
 ```
 class improper_lock : public std::exception;
-```  
-  
-## <a name="members"></a>成员  
-  
-### <a name="public-constructors"></a>公共构造函数  
-  
-|名称|描述|  
-|----------|-----------------|  
-|[improper_lock](#ctor)|已重载。 构造一个 `improper_lock exception`。|  
-  
-## <a name="remarks"></a>备注  
- 通常情况下，尝试获取相同的上下文上的非可重入锁以递归方式时，将引发此异常。  
-  
-## <a name="inheritance-hierarchy"></a>继承层次结构  
- `exception`  
-  
- `improper_lock`  
-  
-## <a name="requirements"></a>要求  
- **标头：** concrt.h  
-  
- **命名空间：** 并发  
-  
-##  <a name="ctor"></a> improper_lock 
+```
 
- 构造一个 `improper_lock exception`。  
-  
+## <a name="members"></a>成员
+
+### <a name="public-constructors"></a>公共构造函数
+
+|名称|描述|
+|----------|-----------------|
+|[improper_lock](#ctor)|已重载。 构造一个 `improper_lock exception`。|
+
+## <a name="remarks"></a>备注
+
+通常情况下，尝试获取相同的上下文上的非可重入锁以递归方式时，将引发此异常。
+
+## <a name="inheritance-hierarchy"></a>继承层次结构
+
+`exception`
+
+`improper_lock`
+
+## <a name="requirements"></a>要求
+
+**标头：** concrt.h
+
+**命名空间：** 并发
+
+##  <a name="ctor"></a> improper_lock
+
+构造一个 `improper_lock exception`。
+
 ```
 explicit _CRTIMP improper_lock(_In_z_ const char* _Message) throw();
 
 improper_lock() throw();
-```  
-  
-### <a name="parameters"></a>参数  
+```
+
+### <a name="parameters"></a>参数
+
 *消息 （_m)*<br/>
-错误的描述性消息。  
-  
-## <a name="see-also"></a>请参阅  
- [并发 Namespace](concurrency-namespace.md)   
- [critical_section 类](critical-section-class.md)   
- [reader_writer_lock 类](reader-writer-lock-class.md)
+错误的描述性消息。
+
+## <a name="see-also"></a>请参阅
+
+[并发命名空间](concurrency-namespace.md)<br/>
+[critical_section 类](critical-section-class.md)<br/>
+[reader_writer_lock 类](reader-writer-lock-class.md)

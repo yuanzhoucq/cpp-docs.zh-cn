@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: abad906c7fcc5c86a6901757ddfbb5dfeff2ec29
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 2065b96875f2c441b24eb69f8ca51b06fe5717f0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45704895"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46444473"
 ---
 # <a name="generic-interfaces-visual-c"></a>泛型接口 (Visual C++)
 
@@ -42,31 +42,31 @@ ms.locfileid: "45704895"
 
 ## <a name="remarks"></a>备注
 
-*特性*  
+*特性*<br/>
 （可选）声明性的其他信息。 属性和属性类的详细信息，请参阅**属性**。
 
-*类键*  
+*类键*<br/>
 **类**或**typename**
 
-*type-parameter-identifier(s)*  
+*type-parameter-identifier(s)*<br/>
 以逗号分隔的标识符列表。
 
-*类型形参约束子句*  
+*类型形参约束子句*<br/>
 将窗体中指定[泛型类型参数的约束 (C + + CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)
 
-*可访问性修饰符*  
+*可访问性修饰符*<br/>
 （可选）可访问性修饰符 (例如**公钥 / 私钥**)。
 
-*identifier*  
+*identifier*<br/>
 接口名称。
 
-*基础列表*  
+*基础列表*<br/>
 （可选）包含一个或多个显式基接口由逗号分隔的列表。
 
-*接口体内*  
+*接口体内*<br/>
 接口成员的声明。
 
-*声明符*  
+*声明符*<br/>
 （可选）基于此类型的变量的声明。
 
 ## <a name="example"></a>示例

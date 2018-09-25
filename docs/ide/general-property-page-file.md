@@ -15,26 +15,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 523ac16a647116f4d18da7e516adb4f0e6bb7fc4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8ad4689c15e14ba0bbac61c8c3b28148536b9057
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33324030"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715463"
 ---
 # <a name="general-property-page-file"></a>“常规”属性页（文件）
 
 在“解决方案资源管理器”中选定文件时，“配置属性”节点下的“常规”属性页包含以下属性：
 
-**从生成中排除**  
-指定文件是否应位于当前配置的生成中。
+- **从生成中排除**
 
-若要以编程方式访问此属性，请参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCFileConfiguration.ExcludedFromBuild%2A>。
+   指定文件是否应位于当前配置的生成中。
 
-**工具**  
-该工具将用于生成此文件。 请参阅[指定自定义生成工具](../ide/specifying-custom-build-tools.md)，获取详细信息。
+   若要以编程方式访问此属性，请参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCFileConfiguration.ExcludedFromBuild%2A>。
 
-若要以编程方式访问此属性，请参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCFileConfiguration.Tool%2A>。
+- **工具**
+
+   该工具将用于生成此文件。 请参阅[指定自定义生成工具](../ide/specifying-custom-build-tools.md)，获取详细信息。
+
+   若要以编程方式访问此属性，请参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCFileConfiguration.Tool%2A>。
 
 有关如何访问“配置属性”节点下的“常规”属性页，请参阅[使用项目属性](../ide/working-with-project-properties.md)。
 

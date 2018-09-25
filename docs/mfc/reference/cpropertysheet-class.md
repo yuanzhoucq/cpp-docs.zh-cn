@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d2e9e13f7b5838cb13497dd874f7f0cf42f34e98
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6ec12275291321751c539d095c60fa9dabffa2b7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200141"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46445173"
 ---
 # <a name="cpropertysheet-class"></a>CPropertySheet 类
 
@@ -181,7 +181,7 @@ void AddPage(CPropertyPage* pPage);
 
 ### <a name="parameters"></a>参数
 
-*pPage*  
+*pPage*<br/>
 指向要添加到属性表页。 不能为 NULL。
 
 ### <a name="remarks"></a>备注
@@ -237,25 +237,25 @@ void Construct(
 
 ### <a name="parameters"></a>参数
 
-*nIDCaption*  
+*nIDCaption*<br/>
 要用于属性表的标题的 ID。
 
-*pParentWnd*  
+*pParentWnd*<br/>
 向属性表的父窗口的指针。 如果为 NULL，父窗口将应用程序的主窗口。
 
-*iSelectPage*  
+*iSelectPage*<br/>
 最初将成为在最前面的页的索引。 默认值为添加到表中的第一页。
 
-*pszCaption*  
+*pszCaption*<br/>
 包含要用于属性表的标题的字符串指针。 不能为 NULL。
 
-*hbmWatermark*  
+*hbmWatermark*<br/>
 属性页的水印位图的句柄。
 
-*hpalWatermark*  
+*hpalWatermark*<br/>
 水印位图和/或标头位图的调色板的句柄。
 
-*hbmHeader*  
+*hbmHeader*<br/>
 属性页的标头位图的句柄。
 
 ### <a name="remarks"></a>备注
@@ -312,25 +312,25 @@ CPropertySheet(
 
 ### <a name="parameters"></a>参数
 
-*nIDCaption*  
+*nIDCaption*<br/>
 要用于属性表的标题的 ID。
 
-*pParentWnd*  
+*pParentWnd*<br/>
 指向属性表的父窗口。 如果为 NULL，父窗口将应用程序的主窗口。
 
-*iSelectPage*  
+*iSelectPage*<br/>
 最初将成为在最前面的页的索引。 默认值为添加到表中的第一页。
 
-*pszCaption*  
+*pszCaption*<br/>
 指向包含要用于属性表的标题的字符串。 不能为 NULL。
 
-*hbmWatermark*  
+*hbmWatermark*<br/>
 属性表的背景位图句柄。
 
-*hpalWatermark*  
+*hpalWatermark*<br/>
 调色板的句柄的水印位图和/或标头位图。
 
-*hbmHeader*  
+*hbmHeader*<br/>
 位图的句柄标头的属性页。
 
 ### <a name="remarks"></a>备注
@@ -357,13 +357,13 @@ virtual BOOL Create(CWnd* pParentWnd = NULL,
 
 ### <a name="parameters"></a>参数
 
-*pParentWnd*  
+*pParentWnd*<br/>
 指向父窗口。 如果为 NULL，则父级为桌面。
 
-*dwStyle*  
+*dwStyle*<br/>
 属性表的窗口样式。 有关可用样式的完整列表，请参阅[的窗口样式](../../mfc/reference/styles-used-by-mfc.md#window-styles)。
 
-*dwExStyle*  
+*dwExStyle*<br/>
 属性表的扩展的窗口样式。 有关可用样式的完整列表，请参阅[扩展窗口样式](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)
 
 ### <a name="return-value"></a>返回值
@@ -445,7 +445,7 @@ void EnableStackedTabs(BOOL bStacked);
 
 ### <a name="parameters"></a>参数
 
-*bStacked*  
+*bStacked*<br/>
 指示是否在属性表中启用了堆积选项卡。 通过设置来禁用标记的堆积的行*bStacked*为 FALSE。
 
 ### <a name="remarks"></a>备注
@@ -468,7 +468,7 @@ void EndDialog(int nEndID);
 
 ### <a name="parameters"></a>参数
 
-*nEndID*  
+*nEndID*<br/>
 要用作返回值的属性表的标识符。
 
 ### <a name="remarks"></a>备注
@@ -527,7 +527,7 @@ CPropertyPage* GetPage(int nPage) const;
 
 ### <a name="parameters"></a>参数
 
-*n 页面*  
+*n 页面*<br/>
 索引所需的页上，从 0 开始。 必须是介于 0 和一个小于页面在属性表中，非独占数之间。
 
 ### <a name="return-value"></a>返回值
@@ -564,7 +564,7 @@ int GetPageIndex(CPropertyPage* pPage);
 
 ### <a name="parameters"></a>参数
 
-*pPage*  
+*pPage*<br/>
 指向包含要查找的索引的页。 不能为 NULL。
 
 ### <a name="return-value"></a>返回值
@@ -623,7 +623,7 @@ void MapDialogRect(LPRECT lpRect) const;
 
 ### <a name="parameters"></a>参数
 
-*lpRect*  
+*lpRect*<br/>
 指向[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构或[CRect](../../atl-mfc-shared/reference/crect-class.md)对象，它包含对话框中要转换的坐标。
 
 ### <a name="remarks"></a>备注
@@ -664,7 +664,7 @@ void PressButton(int nButton);
 
 ### <a name="parameters"></a>参数
 
-*n 按钮*  
+*n 按钮*<br/>
 n 按钮： 标识按钮按下。 此参数可以是下列值之一：
 
 - PSBTN_BACK 选择后退按钮。
@@ -702,10 +702,10 @@ void RemovePage(int nPage);
 
 ### <a name="parameters"></a>参数
 
-*pPage*  
+*pPage*<br/>
 指向页后，可以从属性表中删除。 不能为 NULL。
 
-*n 页面*  
+*n 页面*<br/>
 要删除的页的索引。 必须是介于 0 和一个小于页面在属性表中，非独占数之间。
 
 ### <a name="remarks"></a>备注
@@ -723,10 +723,10 @@ BOOL SetActivePage(CPropertyPage* pPage);
 
 ### <a name="parameters"></a>参数
 
-*n 页面*  
+*n 页面*<br/>
 若要设置的页的索引。 它必须介于 0 和一个小于页面在属性表中，非独占数之间。
 
-*pPage*  
+*pPage*<br/>
 指向要设置的属性表中的页。 它不能为 NULL。
 
 ### <a name="return-value"></a>返回值
@@ -751,7 +751,7 @@ void SetFinishText(LPCTSTR lpszText);
 
 ### <a name="parameters"></a>参数
 
-*lpszText*  
+*lpszText*<br/>
 指向要在完成命令按钮上显示的文本。
 
 ### <a name="remarks"></a>备注
@@ -774,10 +774,10 @@ void SetTitle(
 
 ### <a name="parameters"></a>参数
 
-*nStyle*  
+*nStyle*<br/>
 指定属性表标题的样式。 0 或作为 PSH_PROPTITLE，必须指定样式。 如果样式设置为 PSH_PROPTITLE，指定为标题的文本之后显示单词"属性"。 例如，调用`SetTitle`（"简单"，PSH_PROPTITLE） 将导致"简单属性。"的属性表标题
 
-*lpszText*  
+*lpszText*<br/>
 指向要将其用于在属性表的标题栏标题的文本。
 
 ### <a name="remarks"></a>备注
@@ -798,7 +798,7 @@ void SetWizardButtons(DWORD dwFlags);
 
 ### <a name="parameters"></a>参数
 
-*dwFlags*  
+*dwFlags*<br/>
 一组自定义的函数和向导按钮的外观的标志。 此参数可以是以下值的组合：
 
 - PSWIZB_BACK 后退按钮
@@ -847,9 +847,9 @@ void SetWizardMode();
 
 ## <a name="see-also"></a>请参阅
 
-[MFC 示例 CMNCTRL1](../../visual-cpp-samples.md)  
-[MFC 示例 CMNCTRL2](../../visual-cpp-samples.md)  
-[MFC 示例 PROPDLG](../../visual-cpp-samples.md)  
-[MFC 示例 SNAPVW](../../visual-cpp-samples.md)  
-[CWnd 类](../../mfc/reference/cwnd-class.md)  
-[层次结构图](../../mfc/hierarchy-chart.md)  
+[MFC 示例 CMNCTRL1](../../visual-cpp-samples.md)<br/>
+[MFC 示例 CMNCTRL2](../../visual-cpp-samples.md)<br/>
+[MFC 示例 PROPDLG](../../visual-cpp-samples.md)<br/>
+[MFC 示例 SNAPVW](../../visual-cpp-samples.md)<br/>
+[CWnd 类](../../mfc/reference/cwnd-class.md)<br/>
+[层次结构图](../../mfc/hierarchy-chart.md)

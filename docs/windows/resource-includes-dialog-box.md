@@ -22,12 +22,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1263b5037d9e5ed3cf81eaa55f6e4accb8737e6b
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 626327fec8efda873551e6d9ee502d7405eec5a7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45705843"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46371974"
 ---
 # <a name="resource-includes-dialog-box-c"></a>资源包括对话框 （c + +）
 
@@ -58,7 +58,7 @@ Win32
 
 ## <a name="see-also"></a>请参阅
 
-[如何：指定资源的包含目录](../windows/how-to-specify-include-directories-for-resources.md)  
-[符号：资源标识符](../windows/symbols-resource-identifiers.md)  
-[资源文件](../windows/resource-files-visual-studio.md)  
+[如何：指定资源的包含目录](../windows/how-to-specify-include-directories-for-resources.md)<br/>
+[符号：资源标识符](../windows/symbols-resource-identifiers.md)<br/>
+[资源文件](../windows/resource-files-visual-studio.md)<br/>
 [资源编辑器](../windows/resource-editors.md)

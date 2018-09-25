@@ -20,22 +20,22 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 638d4fbe6fd4dfce1fb3eeb246ef85c5b60fada0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3f3bf660b2e1c8301e9c6c8ba1bd1e11fa3956de
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392505"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082217"
 ---
 # <a name="locale"></a>区域设置
 
 区域设置指你可以用来自定义程序的国家/地区和语言设置。 一些与区域设置相关的类别包括日期和货币值的显示格式。 有关详细信息，请参阅[区域设置类别](../c-runtime-library/locale-categories.md)。
 
- 在使用不带 _l 后缀的函数时，可使用 [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) 函数来更改或查询当前的程序或线程区域设置信息的一部分或全部。 带有 _l 后缀的函数仅在其执行过程中使用传入的区域设置参数来获取区域设置信息。 若要创建用于带有 _l 后缀的函数的区域设置，请使用 [_create_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md)。 若要释放此区域设置，请使用 [_free_locale](../c-runtime-library/reference/free-locale.md)。 若要获取当前区域设置，请使用 [_get_current_locale](../c-runtime-library/reference/get-current-locale.md)。
+在使用不带 _l 后缀的函数时，可使用 [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) 函数来更改或查询当前的程序或线程区域设置信息的一部分或全部。 带有 _l 后缀的函数仅在其执行过程中使用传入的区域设置参数来获取区域设置信息。 若要创建用于带有 _l 后缀的函数的区域设置，请使用 [_create_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md)。 若要释放此区域设置，请使用 [_free_locale](../c-runtime-library/reference/free-locale.md)。 若要获取当前区域设置，请使用 [_get_current_locale](../c-runtime-library/reference/get-current-locale.md)。
 
- 使用 [_configthreadlocale](../c-runtime-library/reference/configthreadlocale.md) 可控制是每个线程都有自己的区域设置，还是程序中的所有线程都共享同一区域设置。 有关详细信息，请参阅[区域设置和代码页](../text/locales-and-code-pages.md)。
+使用 [_configthreadlocale](../c-runtime-library/reference/configthreadlocale.md) 可控制是每个线程都有自己的区域设置，还是程序中的所有线程都共享同一区域设置。 有关详细信息，请参阅[区域设置和代码页](../text/locales-and-code-pages.md)。
 
- 下表中的函数还有更安全的版本，由 _s（“secure”）后缀指示。 有关详细信息，请参阅 [Security Features in the CRT](../c-runtime-library/security-features-in-the-crt.md)。
+下表中的函数还有更安全的版本，由 _s（“secure”）后缀指示。 有关详细信息，请参阅 [Security Features in the CRT](../c-runtime-library/security-features-in-the-crt.md)。
 
 ## <a name="locale-dependent-routines"></a>与区域设置相关的例程
 
@@ -82,4 +82,4 @@ ms.locfileid: "32392505"
 ## <a name="see-also"></a>请参阅
 
 [国际化](../c-runtime-library/internationalization.md)<br/>
- [按类别分的通用 C 运行时例程](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[按类别分的通用 C 运行时例程](../c-runtime-library/run-time-routines-by-category.md)<br/>

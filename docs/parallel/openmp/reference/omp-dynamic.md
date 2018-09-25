@@ -1,5 +1,5 @@
 ---
-title: OMP_DYNAMIC |Microsoft 文档
+title: OMP_DYNAMIC |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,41 +16,45 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de4a81d861bf72943a67356577da37c36df63f69
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: b02a2a4d660057ab83da39add7fd32bcff3e6d90
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695806"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46392133"
 ---
 # <a name="ompdynamic"></a>OMP_DYNAMIC
-指定运行时 OpenMP 是否可以调整并行区域中的线程数。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-set OMP_DYNAMIC[=TRUE | =FALSE]  
-```  
-  
-## <a name="remarks"></a>备注  
- `OMP_DYNAMIC`环境变量可以通过重写[omp_set_dynamic](../../../parallel/openmp/reference/omp-set-dynamic.md)函数。  
-  
- OpenMP 标准的 Visual c + + 实现中的默认值是`OMP_DYNAMIC=FALSE`。  
-  
- 有关详细信息，请参阅[4.3 OMP_DYNAMIC](../../../parallel/openmp/4-3-omp-dynamic.md)。  
-  
-## <a name="example"></a>示例  
- 下面的命令集`OMP_DYNAMIC`为 TRUE 的环境变量：  
-  
-```  
-set OMP_DYNAMIC=TRUE  
-```  
-  
- 下面的命令显示的当前设置`OMP_DYNAMIC`环境变量：  
-  
-```  
-set OMP_DYNAMIC  
-```  
-  
-## <a name="see-also"></a>请参阅  
- [环境变量](../../../parallel/openmp/reference/openmp-environment-variables.md)
+
+指定 OpenMP 运行时是否可以调整并行区域中的线程数。
+
+## <a name="syntax"></a>语法
+
+```
+set OMP_DYNAMIC[=TRUE | =FALSE]
+```
+
+## <a name="remarks"></a>备注
+
+`OMP_DYNAMIC`环境变量可以通过重写[omp_set_dynamic](../../../parallel/openmp/reference/omp-set-dynamic.md)函数。
+
+OpenMP 标准的 Visual c + + 实现中的默认值是`OMP_DYNAMIC=FALSE`。
+
+有关详细信息，请参阅[4.3 OMP_DYNAMIC](../../../parallel/openmp/4-3-omp-dynamic.md)。
+
+## <a name="example"></a>示例
+
+下面的命令集`OMP_DYNAMIC`为 TRUE 的环境变量：
+
+```
+set OMP_DYNAMIC=TRUE
+```
+
+下面的命令显示的当前设置`OMP_DYNAMIC`环境变量：
+
+```
+set OMP_DYNAMIC
+```
+
+## <a name="see-also"></a>请参阅
+
+[环境变量](../../../parallel/openmp/reference/openmp-environment-variables.md)

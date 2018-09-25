@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d301f2bc7464d52be643d252e4febf7049657c2b
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: f001f61a9425a064d3b899beb6cbb689471da5bf
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45724749"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46442586"
 ---
 # <a name="event--c-component-extensions"></a>event（C++ 组件扩展）
 
@@ -50,19 +50,19 @@ modifiereventdelegate^ event_name
 
 ### <a name="parameters"></a>参数
 
-*修饰符*  
+*修饰符*<br/>
 修饰符可用于事件声明或事件访问器方法。  可能的值为**静态**并**虚拟**。
 
-*delegate*  
+*delegate*<br/>
 [委托](../windows/delegate-cpp-component-extensions.md)，其签名必须匹配的事件处理程序。
 
-*event_name*  
+*event_name*<br/>
 事件的名称。
 
-*return_value*  
+*return_value*<br/>
 事件访问器方法的返回值。  若要通过验证，返回类型必须是**void**。
 
-*参数*  
+*参数*<br/>
 （可选）为参数`raise`方法，它的签名匹配*委托*参数。
 
 ### <a name="remarks"></a>备注
@@ -71,10 +71,10 @@ modifiereventdelegate^ event_name
 
 有两种类型的事件声明：
 
-*事件数据成员*  
+*事件数据成员*<br/>
 编译器会自动以委托类型成员的形式为事件创建存储空间，并创建内部 `add()`、`remove()` 和 `raise()` 成员函数。 必须在类中声明事件数据成员。 委托的返回类型必须与事件处理程序的返回类型匹配。
 
-*事件块*  
+*事件块*<br/>
 事件块可显式声明并自定义 `add()`、`remove()` 和 `raise()` 方法的行为。
 
 可以使用**运算符 + =** 并**运算符-=** 添加和删除事件处理程序或调用`add()`和`remove()`方法显式。
@@ -114,19 +114,19 @@ modifiereventdelegate^ event_name
 
 ### <a name="parameters"></a>参数
 
-*修饰符*  
+*修饰符*<br/>
 修饰符可用于事件声明或事件访问器方法。  可能的值为**静态**并**虚拟**。
 
-*delegate*  
+*delegate*<br/>
 [委托](../windows/delegate-cpp-component-extensions.md)，其签名必须匹配的事件处理程序。
 
-*event_name*  
+*event_name*<br/>
 事件的名称。
 
-*return_value*  
+*return_value*<br/>
 事件访问器方法的返回值。  若要通过验证，返回类型必须是**void**。
 
-*参数*  
+*参数*<br/>
 （可选）为参数`raise`方法，它的签名匹配*委托*参数。
 
 ### <a name="remarks"></a>备注
@@ -137,10 +137,10 @@ modifiereventdelegate^ event_name
 
 有两种类型的事件声明：
 
-*事件数据成员*  
+*事件数据成员*<br/>
 委托类型成员形式的事件存储空间由数据成员事件的编译器创建。  必须在类中声明事件数据成员。 这也称为普通事件（请参阅下面的代码示例。）
 
-*事件块*  
+*事件块*<br/>
 事件块允许通过实现添加、删除和引发方法来自定义添加、删除和引发方法的行为。 添加、删除和引发方法的签名必须与委托的签名匹配。  事件块事件不是数据成员，且任何用作数据成员的情况都将生成编译器错误。
 
 事件处理程序的返回类型必须与委托的返回类型匹配。

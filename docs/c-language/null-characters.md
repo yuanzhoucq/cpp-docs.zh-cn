@@ -14,17 +14,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: baddd548eddbcc46f5eb9005c54a4cc2530a6e79
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f1d0c745af234b62d562e7e57e4c20a9e57a4a6c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32383873"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46044868"
 ---
 # <a name="null-characters"></a>Null 字符
-**ANSI 4.9.2** 可附加到写入二进制流的数据的 null 字符的数量  
-  
- 可以将任意数量的 null 字符附加到二进制流中。  
-  
-## <a name="see-also"></a>请参阅  
- [库函数](../c-language/library-functions.md)
+
+**ANSI 4.9.2** 可附加到写入二进制流的数据的 null 字符的数量
+
+可以将任意数量的 null 字符附加到二进制流中。
+
+## <a name="see-also"></a>请参阅
+
+[库函数](../c-language/library-functions.md)

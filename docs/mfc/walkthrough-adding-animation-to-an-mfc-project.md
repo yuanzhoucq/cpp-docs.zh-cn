@@ -1,5 +1,5 @@
 ---
-title: 演练： 向 MFC 项目添加动画 |Microsoft 文档
+title: 演练： 向 MFC 项目添加动画 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/28/2018
 ms.technology:
@@ -15,28 +15,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f647c7621c01a18cedc8d08d1a3f344b19139a90
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: dfcab237070b401d78c3fc52fc765930272832da
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37121794"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46439271"
 ---
 # <a name="walkthrough-adding-animation-to-an-mfc-project"></a>演练：向 MFC 项目添加动画
 
-本演练介绍如何将基本的动画的对象添加到 Visual c + +，Microsoft 基础类库 (MFC) 项目。
+本演练介绍了如何将基本动画的对象添加到 Visual c + +，Microsoft 基础类库 (MFC) 项目。
 
 本演练演示如何完成这些任务：
 
 - 创建 MFC 应用程序。
 
-- 添加一个菜单，然后添加命令来启动和停止动画。
+- 添加一个菜单，然后添加命令以启动和停止动画。
 
-- 创建启动和停止命令的处理程序。
+- 创建用于启动和停止命令处理程序。
 
-- 向项目添加动画的对象。
+- 向项目添加动画效果的对象。
 
-- Center 窗口中经过动画处理的对象。
+- 中心窗口中经过动画处理的对象。
 
 - 验证结果。
 
@@ -46,31 +46,31 @@ ms.locfileid: "37121794"
 
 若要完成本演练，您必须具有 Visual Studio。
 
-### <a name="to-create-an-mfc-application"></a>若要创建 MFC 应用程序
+### <a name="to-create-an-mfc-application"></a>若要创建的 MFC 应用程序
 
 1. 在 **“文件”** 菜单上指向 **“新建”** ，然后单击 **“项目”**。
 
-2. 在**新项目**对话框中，在左窗格中下**已安装的模板**，展开**Visual c + +** ，然后选择**MFC**。 在中间窗格中，选择**MFC 应用程序**。 在**名称**框中，键入*MFCAnimationWalkthrough*。 单击 **“确定”**。
+2. 在中**新的项目**对话框中，在下的左窗格**已安装的模板**，展开**Visual c + +** ，然后选择**MFC**。 在中间窗格中，选择**MFC 应用程序**。 在中**名称**框中，键入*MFCAnimationWalkthrough*。 单击 **“确定”**。
 
-3. 在**MFC 应用程序向导**对话框框中，确认**应用程序类型**是**多个文档**，**项目样式**是**Visual Studio**，和**文档/视图体系结构支持**选项。 单击 **“完成”**。
+3. 在中**MFC 应用程序向导**对话框框中，确保**应用程序类型**是**多个文档**，**项目样式**是**Visual Studio**，并**文档/视图体系结构支持**选择选项。 单击 **“完成”**。
 
-### <a name="to-add-a-menu-and-then-add-commands-to-start-and-stop-an-animation"></a>若要添加一个菜单，然后添加命令来启动和停止动画
+### <a name="to-add-a-menu-and-then-add-commands-to-start-and-stop-an-animation"></a>若要添加菜单，然后添加用于启动和停止动画命令
 
-1. 上**视图**菜单上，指向**其他窗口**，然后单击**资源视图**。
+1. 上**视图**菜单，依次指向**其他 Windows** ，然后单击**资源视图**。
 
-2. 在**资源视图**，导航到**菜单**文件夹并将其打开。 双击`IDR_MFCAnimationWalTYPE`资源以将其打开以进行修改。
+2. 在中**资源视图**，导航到**菜单**文件夹并将其打开。 双击`IDR_MFCAnimationWalTYPE`资源将其打开以进行修改。
 
-3. 在菜单栏上，在**此处键入**框中，键入*a&nimation*创建动画菜单。
+3. 在菜单栏上，在**请在此处输入**框中，键入*a&nimation*来创建动画菜单。
 
-4. 下**动画**中**此处键入**框中，键入*启动 （&) 转发*创建转发启动命令。
+4. 下**动画**，在**在此处键入**框中，键入*开始和转发*创建向前开始命令。
 
-5. 下**转发启动**中**此处键入**框中，键入*开始和下移一层*。
+5. 下**开始向前**，在**在此处键入**框中，键入*开始和向后*。
 
-6. 下**启动向后**中**此处键入**框中，键入 *（&) 顶部*创建停止命令。
+6. 下**开始向后**，在**在此处键入**框中，键入*S （& t)* 创建 Stop 命令。
 
 7. 保存 MFCAnimationWalkthrough.rc 并将其关闭。
 
-8. 在**解决方案资源管理器**，双击以打开进行修改的 MainFrm.cpp。 在`CMainFrame::OnCreate`方法中，找到具有多个调用的部分`lstBasicCommands.AddTail`。 此部分中之后, 添加以下代码。  
+8. 在中**解决方案资源管理器**，双击 MainFrm.cpp 中将其打开以进行修改。 在中`CMainFrame::OnCreate`方法中，找到具有多个调用的部分`lstBasicCommands.AddTail`。 恰好在该部分后添加以下代码。
 
     ```cpp
     lstBasicCommands.AddTail(ID_ANIMATION_STARTFORWARD);
@@ -80,31 +80,31 @@ ms.locfileid: "37121794"
 
 9. 保存该文件并将其关闭。
 
-### <a name="to-create-handlers-for-the-start-and-stop-commands"></a>创建处理程序开始和停止命令
+### <a name="to-create-handlers-for-the-start-and-stop-commands"></a>若要创建的处理程序开始和停止命令
 
 1. 上**项目**菜单上，单击**类向导**。
 
-2. 在**MFC 类向导**下**类名**，选择`CMFCAnimationWalkthroughView`。
+2. 在中**MFC 类向导**下**类名**，选择`CMFCAnimationWalkthroughView`。
 
 3. 上**命令**选项卡上，在**对象 Id**框中，选择`ID_ANIMATION_STARTFORWARD`，然后在**消息**框中，选择`COMMAND`。 单击**添加处理程序**。
 
-4. 在**添加成员函数**对话框中，单击**确定**。
+4. 在中**添加成员函数**对话框中，单击**确定**。
 
-5. 在**对象 Id**框中，选择`ID_ANIMATION_STARTBACKWARD`，然后在**消息**框中，选择`COMMAND`。 单击**添加处理程序**。
+5. 在中**的对象 Id**框中，选择`ID_ANIMATION_STARTBACKWARD`，然后在**消息**框中，选择`COMMAND`。 单击**添加处理程序**。
 
-6. 在**添加成员函数**对话框中，单击**确定**。
+6. 在中**添加成员函数**对话框中，单击**确定**。
 
-7. 在**对象 Id**框中，选择`ID_ANIMATION_STOP`，然后在**消息**框中，选择`COMMAND`。 单击**添加处理程序**，然后单击**确定**。
+7. 在中**的对象 Id**框中，选择`ID_ANIMATION_STOP`，然后在**消息**框中，选择`COMMAND`。 单击**添加处理程序**，然后单击**确定**。
 
-8. 在**添加成员函数**对话框中，单击**确定**。
+8. 在中**添加成员函数**对话框中，单击**确定**。
 
-9. 在**MFC 类向导**，单击**确定**。
+9. 在中**MFC 类向导**，单击**确定**。
 
 10. 保存 MFCAnimationWalkthroughView.cpp，这是在编辑器中打开，但不要将其关闭。
 
-### <a name="to-add-an-animated-object-to-the-project"></a>若要向项目添加动画的对象
+### <a name="to-add-an-animated-object-to-the-project"></a>若要向项目添加动画效果的对象
 
-1. 在解决方案资源管理器中，双击 MFCAnimationWalkthroughView.h 打开进行修改。 之前的定义`CMFCAnimationWalkthroughView`类中，添加以下代码以创建一个自定义动画控制器，将处理与动画对象的计划冲突。
+1. 在解决方案资源管理器中双击 MFCAnimationWalkthroughView.h 将其打开以进行修改。 变量定义前面的`CMFCAnimationWalkthroughView`类中，添加以下代码以创建自定义动画控制器将处理与动画对象计划冲突。
 
     ```cpp
     class CCustomAnimationController : public CAnimationController
@@ -123,7 +123,7 @@ ms.locfileid: "37121794"
     };
     ```
 
-2. 在结束`CMFCAnimationWalkthroughView`类中，添加下面的代码。
+2. 末尾的`CMFCAnimationWalkthroughView`类中，添加以下代码。
 
     ```cpp
     CCustomAnimationController m_animationController;
@@ -131,7 +131,7 @@ ms.locfileid: "37121794"
     CAnimationRect m_animationRect;
     ```
 
-3. 后`DECLARE_MESSAGE_MAP()`行，添加以下代码。
+3. 之后`DECLARE_MESSAGE_MAP()`行，添加以下代码。
 
     ```cpp
     void Animate(BOOL bDirection);
@@ -159,7 +159,7 @@ ms.locfileid: "37121794"
     m_animationController.AddAnimationObject(&m_animationRect);
     ```
 
-7. 找到`CAnimationWalthroughView::PreCreateWindow`方法，然后将它替换为以下代码。
+7. 找到`CAnimationWalthroughView::PreCreateWindow`方法，然后使用以下代码替换它。
 
     ```cpp
     BOOL CMFCAnimationWalkthroughView::PreCreateWindow(CREATESTRUCT& cs)
@@ -172,7 +172,7 @@ ms.locfileid: "37121794"
     }
     ```
 
-8. 找到`CAnimationWalkthroughView::OnDraw`方法，然后将它替换为以下代码。
+8. 找到`CAnimationWalkthroughView::OnDraw`方法，然后使用以下代码替换它。
 
     ```cpp
     void CMFCAnimationWalkthroughView::OnDraw(CDC* pDC)
@@ -280,11 +280,11 @@ ms.locfileid: "37121794"
 
 10. 上**项目**菜单上，单击**类向导**。
 
-11. 在**MFC 类向导**下**类名**，选择`CMFCAnimationWalkthroughView`。
+11. 在中**MFC 类向导**下**类名**，选择`CMFCAnimationWalkthroughView`。
 
 12. 上**消息**选项卡上，在**消息**框中，选择`WM_ERASEBKGND`，单击**添加处理程序**，然后单击**确定**。
 
-13. 在 MFCAnimationWalkthroughView.cpp 中的实现替换`OnEraseBkgnd`替换为以下代码以减少出现闪烁动画对象，而它重绘。
+13. 在 MFCAnimationWalkthroughView.cpp 中的实现替换`OnEraseBkgnd`以下代码，以减少出现闪烁动画效果的对象，而重绘。
 
     ```cpp
     BOOL CMFCAnimationWalkthroughView::OnEraseBkgnd(CDC* /*pDC*/)
@@ -293,7 +293,7 @@ ms.locfileid: "37121794"
     }
     ```
 
-14. 替换的实现`CMFCAnimationWalkthroughView::OnAnimationStartforward`， `CMFCAnimationWalkthroughView::OnAnimationStartbackward`，和`CMFCAnimationWalkthroughView::OnAnimationStop`替换为以下代码。
+14. 替换的实现`CMFCAnimationWalkthroughView::OnAnimationStartforward`， `CMFCAnimationWalkthroughView::OnAnimationStartbackward`，和`CMFCAnimationWalkthroughView::OnAnimationStop`用下面的代码。
 
     ```cpp
     void CMFCAnimationWalkthroughView::OnAnimationStartforward()
@@ -321,7 +321,7 @@ ms.locfileid: "37121794"
 
 ### <a name="to-center-the-animated-object-in-the-window"></a>到中心窗口中经过动画处理的对象
 
-1. 在**解决方案资源管理器**，双击 MFCAnimationWalkthroughView.h 打开进行修改。 在结束`CMFCAnimationWalkthroughView`类，紧随其后的定义`m_animationRect`，添加以下代码。
+1. 在中**解决方案资源管理器**，双击 MFCAnimationWalkthroughView.h 将其打开以进行修改。 在末尾`CMFCAnimationWalkthroughView`类中，紧随其后的定义`m_animationRect`，添加以下代码。
 
     ```cpp
     BOOL m_bCurrentDirection;
@@ -331,11 +331,11 @@ ms.locfileid: "37121794"
 
 3. 上**项目**菜单上，单击**类向导**。
 
-4. 在**MFC 类向导**下**类名**，选择`CMFCAnimationWalkthroughView`。
+4. 在中**MFC 类向导**下**类名**，选择`CMFCAnimationWalkthroughView`。
 
 5. 上**消息**选项卡上，在**消息**框中，选择`WM_SIZE`，单击**添加处理程序**，然后单击**确定**。
 
-6. 在 MFCAnimationWalkthroughView.cpp，替换为代码`CMFCAnimationWalkthroughView::OnSize`替换为以下代码。
+6. 在 MFCAnimationWalkthroughView.cpp 中的代码替换为`CMFCAnimationWalkthroughView::OnSize`用下面的代码。
 
     ```cpp
     void CMFCAnimationWalkthroughView::OnSize(UINT nType, int cx, int cy)
@@ -358,13 +358,13 @@ ms.locfileid: "37121794"
     }
     ```
 
-7. 构造函数的开头`CMFCAnimationWalkthroughView`，添加以下代码。
+7. 构造函数开头`CMFCAnimationWalkthroughView`，添加以下代码。
 
     ```cpp
     m_bCurrentDirection = TRUE;
     ```
 
-8. 开头的`CMFCAnimationWalkthroughView::Animate`方法，添加以下代码。
+8. 在开头`CMFCAnimationWalkthroughView::Animate`方法中，添加以下代码。
 
     ```cpp
     m_bCurrentDirection = bDirection;
@@ -372,10 +372,10 @@ ms.locfileid: "37121794"
 
 9. 保存该文件并将其关闭。
 
-### <a name="to-verify-the-results"></a>若要验证的结果
+### <a name="to-verify-the-results"></a>若要验证结果
 
-1. 生成并运行应用程序。 上**动画**菜单上，单击**转发启动**。 矩形应显示，然后填上中心区域。 当你单击**启动向后**、 应颠倒动画，并单击**停止**，它应停止。 在动画运行时，应更改矩形的填充颜色，且应顶部的动画窗口显示当前颜色。
+1. 生成并运行应用程序。 上**动画**菜单上，单击**向前开始**。 一个矩形应显示，并填充中心区域。 当您单击**开始向后**、 动画都应反转，并单击**停止**，它应该停止。 在动画运行时，应更改矩形的填充颜色和当前颜色应显示在动画窗口的顶部。
 
 ## <a name="see-also"></a>请参阅
 
-[演练](../mfc/walkthroughs-mfc.md)  
+[演练](../mfc/walkthroughs-mfc.md)

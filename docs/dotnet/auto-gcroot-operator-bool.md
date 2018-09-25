@@ -1,5 +1,5 @@
 ---
-title: auto_gcroot::operator bool |Microsoft 文档
+title: auto_gcroot::operator bool |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,62 +21,67 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 8dbb38ecfa7f1a60af44a59ccd1953b6d6e787fd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6e21626b9b69d1c25ca638f659b6d8cc1a850594
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33104225"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46421214"
 ---
 # <a name="autogcrootoperator-bool"></a>auto_gcroot::operator bool
-使用的运算符`auto_gcroot`条件表达式中。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-operator bool() const;  
-```  
-  
-## <a name="return-value"></a>返回值  
- `true` 已包装的对象是否有效，则为`false`否则为。  
-  
-## <a name="remarks"></a>备注  
- 此运算符实际将转换为`_detail_class::_safe_bool`即比更安全`bool`因为它不能转换为整型。  
-  
-## <a name="example"></a>示例  
-  
-```  
-// msl_auto_gcroot_operator_bool.cpp  
-// compile with: /clr  
-#include <msclr\auto_gcroot.h>  
-  
-using namespace System;  
-using namespace msclr;  
-  
-int main() {  
-   auto_gcroot<String^> s;  
-   if ( s ) Console::WriteLine( "s is valid" );  
-   if ( !s ) Console::WriteLine( "s is invalid" );  
-   s = "something";  
-   if ( s ) Console::WriteLine( "now s is valid" );  
-   if ( !s ) Console::WriteLine( "now s is invalid" );  
-   s.reset();  
-   if ( s ) Console::WriteLine( "now s is valid" );  
-   if ( !s ) Console::WriteLine( "now s is invalid" );  
-}  
-```  
-  
-```Output  
-s is invalid  
-now s is valid  
-now s is invalid  
-```  
-  
-## <a name="requirements"></a>要求  
- **标头文件** \<msclr\auto_gcroot.h >  
-  
- **Namespace** msclr  
-  
-## <a name="see-also"></a>请参阅  
- [auto_gcroot 成员](../dotnet/auto-gcroot-members.md)   
- [auto_gcroot::operator!](../dotnet/auto-gcroot-operator-logical-not.md)
+
+使用运算符`auto_gcroot`条件表达式中。
+
+## <a name="syntax"></a>语法
+
+```
+operator bool() const;
+```
+
+## <a name="return-value"></a>返回值
+
+`true` 已包装的对象是否有效，则为`false`否则为。
+
+## <a name="remarks"></a>备注
+
+此运算符实际将转换为`_detail_class::_safe_bool`这是比更安全`bool`因为不能将它转换为整型类型。
+
+## <a name="example"></a>示例
+
+```
+// msl_auto_gcroot_operator_bool.cpp
+// compile with: /clr
+#include <msclr\auto_gcroot.h>
+
+using namespace System;
+using namespace msclr;
+
+int main() {
+   auto_gcroot<String^> s;
+   if ( s ) Console::WriteLine( "s is valid" );
+   if ( !s ) Console::WriteLine( "s is invalid" );
+   s = "something";
+   if ( s ) Console::WriteLine( "now s is valid" );
+   if ( !s ) Console::WriteLine( "now s is invalid" );
+   s.reset();
+   if ( s ) Console::WriteLine( "now s is valid" );
+   if ( !s ) Console::WriteLine( "now s is invalid" );
+}
+```
+
+```Output
+s is invalid
+now s is valid
+now s is invalid
+```
+
+## <a name="requirements"></a>要求
+
+**标头文件** \<msclr\auto_gcroot.h >
+
+**Namespace** msclr
+
+## <a name="see-also"></a>请参阅
+
+[auto_gcroot 成员](../dotnet/auto-gcroot-members.md)<br/>
+[auto_gcroot::operator!](../dotnet/auto-gcroot-operator-logical-not.md)

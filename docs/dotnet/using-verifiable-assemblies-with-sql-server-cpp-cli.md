@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: bbd42d3d51921ccab01dfdcaed9ad988e22ae9a8
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 2bb4adbb960f9d062cc8573c7ca0f7cd5dcd0426
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894698"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46382214"
 ---
 # <a name="using-verifiable-assemblies-with-sql-server-ccli"></a>结合使用 SQL Server 和可验证的程序集 (C++/CLI)
 
@@ -42,19 +42,20 @@ SQL Server transact-sql (T-SQL) 以允许你可验证程序集安装到 SQL Serv
 CREATE ASSEMBLY <assemblyName> FROM <'Assembly UNC Path'> WITH
   PERMISSION_SET <permissions>
 DROP ASSEMBLY <assemblyName>
-```  
+```
 
 PERMISSION_SET 命令指定安全上下文中，且可以具有不受限制的、 安全的或扩展的值。
 
 此外，您可以使用 CREATE FUNCTION 命令将绑定到类中的方法名称：
 
 ```sql
-CREATE FUNCTION <FunctionName>(<FunctionParams>)  
+CREATE FUNCTION <FunctionName>(<FunctionParams>)
 RETURNS returnType
 [EXTERNAL NAME <AssemblyName>:<ClassName>::<StaticMethodName>]
-```  
+```
 
 ## <a name="example"></a>示例
+
 以下 SQL 脚本 (例如，名为"MyScript.sql") 将程序集加载到 SQL Server，并使类的方法可用：
 
 ```sql
@@ -69,23 +70,23 @@ with permission_set safe
 -- Create function on assembly with no external access
 drop function GetQuoteNoEA
 go
-create function GetQuoteNoEA(@sym nvarchar(10))  
+create function GetQuoteNoEA(@sym nvarchar(10))
 returns real
 external name stockNoEA:StockQuotes::GetQuote
 go
 
 -- To call the function
-select dbo.GetQuoteNoEA('MSFT')  
+select dbo.GetQuoteNoEA('MSFT')
 go
-```  
+```
 
 在 SQL 查询分析器或在命令行使用 sqlcmd.exe 实用工具，可以以交互方式执行 SQL 脚本。 下面的命令行连接到 MyServer、 使用的默认数据库，使用可信的连接、 输入 MyScript.sql，并输出 MyResult.txt。
 
 ```cmd
 sqlcmd -S MyServer -E -i myScript.sql -o myResult.txt
-```  
+```
 
 ## <a name="see-also"></a>请参阅
 
-[如何： 将迁移到 /clr: safe (C + + CLI)](../dotnet/how-to-migrate-to-clr-safe-cpp-cli.md)   
+[如何： 将迁移到 /clr: safe (C + + CLI)](../dotnet/how-to-migrate-to-clr-safe-cpp-cli.md)<br/>
 [类和结构](../cpp/classes-and-structs-cpp.md)

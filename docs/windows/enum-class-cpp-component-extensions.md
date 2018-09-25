@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 72c312bdec9248cdc38150163d914b2ac7036ab8
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 993f0e190d87b140fba0008872d57f2a34b6a5cb
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45711082"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46377261"
 ---
 # <a name="enum-class--c-component-extensions"></a>枚举类（C++ 组件扩展）
 
@@ -44,23 +44,23 @@ accessenum structenumeration-identifier[:underlying-type] { enumerator-list } [v
 
 ### <a name="parameters"></a>参数
 
-*access*  
+*access*<br/>
 可以是枚举的可访问性**公共**或**专用**。
 
-*enumeration-identifier*  
+*enumeration-identifier*<br/>
 枚举的名称。
 
-*underlying-type*  
+*underlying-type*<br/>
 （可选）枚举的基础类型。
 
 （可选。 Windows 仅限运行时） 的基础类型的枚举，它可以是**bool**， **char**， `char16`， `int16`， `uint16`， **int**， `uint32`， `int64`，或`uint64`。
 
-*enumerator-list*  
+*enumerator-list*<br/>
 以逗号分隔的枚举器名称列表。
 
 每个枚举数的值都是一个常数表达式，由编译器隐式定义或由表示法 *enumerator*`=`*constant-expression*。 如果隐式定义第一个枚举器，则其值为零。 每个后续的隐式定义的枚举器值是前一个枚举器的值 + 1。
 
-*var*  
+*var*<br/>
 （可选）枚举类型的变量的名称。
 
 ### <a name="remarks"></a>备注
@@ -92,19 +92,19 @@ accessenum structname [:type] { enumerator-list } var;
 
 ### <a name="parameters"></a>参数
 
-*access*  
+*access*<br/>
 枚举的可访问性。 可以是**公共**或**专用**。
 
-*enumerator-list*  
+*enumerator-list*<br/>
 枚举中以逗号分隔的标识符（枚举器）列表。
 
-*name*  
+*name*<br/>
 枚举的名称。 不允许匿名托管枚举。
 
-*type*  
+*type*<br/>
 （可选）基础类型*标识符*。 这可以是任何标量类型，例如符号或无符号的版本**int**，**短**，或**长**。  **bool**或**char**还允许使用。
 
-*var*  
+*var*<br/>
 （可选）枚举类型的变量的名称。
 
 ### <a name="remarks"></a>备注

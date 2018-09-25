@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 17f44f972482aefda0c65c7599fa6a83b49c36fb
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 90caa3234cd5a8c271d11e964f725447ad0517a1
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45723238"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46391730"
 ---
 # <a name="grid-settings-dialog-box-c-image-editor-for-icons"></a>网格设置对话框 （c + +） （图标的图像编辑器）
 
@@ -51,5 +51,5 @@ ms.locfileid: "45723238"
 
 ## <a name="see-also"></a>请参阅
 
-[调整图像大小](../windows/resizing-an-image-image-editor-for-icons.md)  
+[调整图像大小](../windows/resizing-an-image-image-editor-for-icons.md)<br/>
 [图标的图像编辑器](../windows/image-editor-for-icons.md)

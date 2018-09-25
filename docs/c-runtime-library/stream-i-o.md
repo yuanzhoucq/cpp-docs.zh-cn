@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3fba53f16fad9321701e641020ed01349b13a5c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9ab13141c573ad302528a09b74cb3a5e2aaa0382
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418090"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46035202"
 ---
 # <a name="stream-io"></a>流 I/O
 
@@ -89,23 +89,23 @@ ms.locfileid: "32418090"
 |[_vsnprintf、_vsnwprintf](../c-runtime-library/reference/vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md)、[vsnprintf_s、_vsnprintf_s、_vsnprintf_s_l、_vsnwprintf_s、_vsnwprintf_s_l](../c-runtime-library/reference/vsnprintf-s-vsnprintf-s-vsnprintf-s-l-vsnwprintf-s-vsnwprintf-s-l.md)|将指定长度的格式化数据写入缓冲区|
 |[vsprintf、vswprintf](../c-runtime-library/reference/vsprintf-vsprintf-l-vswprintf-vswprintf-l-vswprintf-l.md)、[vsprintf_s、_vsprintf_s_l、vswprintf_s、_vswprintf_s_l](../c-runtime-library/reference/vsprintf-s-vsprintf-s-l-vswprintf-s-vswprintf-s-l.md)|将格式化数据写入缓冲区|
 
- 当程序开始执行时，启动代码将自动开启若干流：标准输入（由 stdin 指向）、标准输出（由 stdout 指向）和标准错误（由 stderr 指向）。 默认情况下，这些流将定向到控制台（键盘和屏幕）。 使用 freopen，将 stdin、stdout 或 stderr 重定向到磁盘文件或设备。
+当程序开始执行时，启动代码将自动开启若干流：标准输入（由 stdin 指向）、标准输出（由 stdout 指向）和标准错误（由 stderr 指向）。 默认情况下，这些流将定向到控制台（键盘和屏幕）。 使用 freopen，将 stdin、stdout 或 stderr 重定向到磁盘文件或设备。
 
- 默认情况下，会对使用流例程打开的文件执行缓冲操作。 当 stdout 和 stderr 函数是完整的，或在进行了每次库调用之后要写入字符设备，则这将刷新两个函数。 如果某个程序异常终止，则可能不会刷新输出缓冲区，从而导致数据丢失。 使用 fflush 或 _flushall 以确保与指定文件相关联的缓冲区或所有打开的缓冲区被刷新到操作系统，操作系统在将数据写入磁盘之前可缓存数据。 “提交到磁盘”功能可确保刷新的缓冲区内容不会在出现系统故障时丢失。
+默认情况下，会对使用流例程打开的文件执行缓冲操作。 当 stdout 和 stderr 函数是完整的，或在进行了每次库调用之后要写入字符设备，则这将刷新两个函数。 如果某个程序异常终止，则可能不会刷新输出缓冲区，从而导致数据丢失。 使用 fflush 或 _flushall 以确保与指定文件相关联的缓冲区或所有打开的缓冲区被刷新到操作系统，操作系统在将数据写入磁盘之前可缓存数据。 “提交到磁盘”功能可确保刷新的缓冲区内容不会在出现系统故障时丢失。
 
- 有两种方法将缓冲区内容提交到磁盘：
+有两种方法将缓冲区内容提交到磁盘：
 
--   与文件 COMMODE.OBJ 链接以设置全局提交标志。 全局标志的默认设置是 n，意味着“不提交”。
+- 与文件 COMMODE.OBJ 链接以设置全局提交标志。 全局标志的默认设置是 n，意味着“不提交”。
 
--   使用 fopen 或 _fdopen 将模式标志设置为 c。
+- 使用 fopen 或 _fdopen 将模式标志设置为 c。
 
- 专门使用 c 或 n 标志打开的任何文件的行为以该标志为准，而不考虑全局提交/不提交标志的状态。
+专门使用 c 或 n 标志打开的任何文件的行为以该标志为准，而不考虑全局提交/不提交标志的状态。
 
- 如果你的程序未显式关闭流，则程序终止时流会自动关闭。 但是，你应在程序完成流操作时关闭流，因为可以同时打开的流的数量是有限。 请参阅 [_setmaxstdio](../c-runtime-library/reference/setmaxstdio.md) 获取有关此限制的信息。
+如果你的程序未显式关闭流，则程序终止时流会自动关闭。 但是，你应在程序完成流操作时关闭流，因为可以同时打开的流的数量是有限。 请参阅 [_setmaxstdio](../c-runtime-library/reference/setmaxstdio.md) 获取有关此限制的信息。
 
- 只有通过对 fflush 或对文件定位函数（fseek、fsetpos 或 rewind）进行干预调用时，输入才能直接跟随输出。 如果输入操作遇到文件末尾，则输出可以在没有对文件定位函数进行干预调用的情况下跟随输入。
+只有通过对 fflush 或对文件定位函数（fseek、fsetpos 或 rewind）进行干预调用时，输入才能直接跟随输出。 如果输入操作遇到文件末尾，则输出可以在没有对文件定位函数进行干预调用的情况下跟随输入。
 
 ## <a name="see-also"></a>请参阅
 
 [输入和输出](../c-runtime-library/input-and-output.md)<br/>
- [按类别分的通用 C 运行时例程](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[按类别分的通用 C 运行时例程](../c-runtime-library/run-time-routines-by-category.md)<br/>

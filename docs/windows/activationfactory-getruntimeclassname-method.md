@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8847083fe134c36f506e7080772b1e5f0e2a873c
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: fbae13c6ce70533b8338d47893b6007a3032abab
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42590177"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46416300"
 ---
 # <a name="activationfactorygetruntimeclassname-method"></a>ActivationFactory::GetRuntimeClassName 方法
 
@@ -38,7 +38,7 @@ STDMETHOD(
 
 ### <a name="parameters"></a>参数
 
-*runtimeName*  
+*runtimeName*<br/>
 此操作完成后，包含对象的运行时类名称的字符串的句柄的当前**ActivationFactory**实例化。
 
 ## <a name="return-value"></a>返回值

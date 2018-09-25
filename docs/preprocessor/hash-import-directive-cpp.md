@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 30c1cd29a48b5a47f64e5a5148a157d5120d45e3
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 5bb62a61762c2c4e042777376f4d2b9f3ffc747e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42539748"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46429742"
 ---
 # <a name="import-directive-c"></a>#import 指令 (C++)
 **C + + 专用**  
@@ -203,5 +203,5 @@ using namespace MyLib;
   
 ## <a name="see-also"></a>请参阅  
 
-[预处理器指令](../preprocessor/preprocessor-directives.md)   
+[预处理器指令](../preprocessor/preprocessor-directives.md)<br/>
 [编译器 COM 支持](../cpp/compiler-com-support.md)

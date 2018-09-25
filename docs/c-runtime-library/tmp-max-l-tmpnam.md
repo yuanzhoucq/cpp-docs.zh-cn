@@ -19,22 +19,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fef1a50b1446b9bff0eafc982e77a1bd6db568cc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cee175eb7f12952dfe7e30ef79842ee03a96fbb1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407647"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019674"
 ---
 # <a name="tmpmax-ltmpnam"></a>TMP_MAX、L_tmpnam
-## <a name="syntax"></a>语法  
-  
-```  
-#include <stdio.h>  
-```  
-  
-## <a name="remarks"></a>备注  
- `TMP_MAX` 是 `tmpnam` 函数可生成的最大数量的唯一文件名。 `L_tmpnam` 是 `tmpnam` 生成的临时文件名的长度。  
-  
-## <a name="see-also"></a>请参阅  
- [全局常量](../c-runtime-library/global-constants.md)
+
+## <a name="syntax"></a>语法
+
+```
+#include <stdio.h>
+```
+
+## <a name="remarks"></a>备注
+
+`TMP_MAX` 是 `tmpnam` 函数可生成的最大数量的唯一文件名。 `L_tmpnam` 是 `tmpnam` 生成的临时文件名的长度。
+
+## <a name="see-also"></a>请参阅
+
+[全局常量](../c-runtime-library/global-constants.md)

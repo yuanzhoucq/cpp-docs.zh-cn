@@ -18,71 +18,74 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b0b259c730a7db343cc08ff077cf57043f292a6
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 694b9fead94bee55e1337df9511f59237ed88b57
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541174"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46425803"
 ---
 # <a name="addressofreturnaddress"></a>_AddressOfReturnAddress
-**Microsoft 专用**  
-  
- 提供了保留当前函数的返回地址的内存位置的地址。 不可能使用此地址来访问其他内存位置 （例如，函数的自变量）。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-void * _AddressOfReturnAddress();  
-```  
-  
-## <a name="requirements"></a>要求  
-  
-|内部函数|体系结构|  
-|---------------|------------------|  
-|`_AddressOfReturnAddress`|x86、x64|  
-  
- **标头文件** \<intrin.h >  
-  
-## <a name="remarks"></a>备注  
- 当`_AddressOfReturnAddress`编译的程序中使用[/clr](../build/reference/clr-common-language-runtime-compilation.md)，函数包含`_AddressOfReturnAddress`调用编译为本机函数。 当函数编译为托管函数包含调用`_AddressOfReturnAddress`，`_AddressOfReturnAddress`可能会发生意外行为。  
-  
- 此例程仅可用作内部函数。  
-  
-## <a name="example"></a>示例  
-  
-```  
-// compiler_intrinsics_AddressOfReturnAddress.cpp  
-// processor: x86, x64  
-#include <stdio.h>  
-#include <intrin.h>  
-  
-// This function will print three values:  
-//   (1) The address retrieved from _AddressOfReturnAdress  
-//   (2) The return address stored at the location returned in (1)  
-//   (3) The return address retrieved the _ReturnAddress* intrinsic  
-// Note that (2) and (3) should be the same address.  
-__declspec(noinline)  
-void func() {  
-   void* pvAddressOfReturnAddress = _AddressOfReturnAddress();  
-   printf_s("%p\n", pvAddressOfReturnAddress);  
-   printf_s("%p\n", *((void**) pvAddressOfReturnAddress));  
-   printf_s("%p\n", _ReturnAddress());  
-}  
-  
-int main() {  
-   func();  
-}  
-```  
-  
-```Output  
-0012FF78  
-00401058  
-00401058  
-```  
-  
-**结束 Microsoft 专用**  
-  
-## <a name="see-also"></a>请参阅  
- [编译器内部函数](../intrinsics/compiler-intrinsics.md)   
- [关键字](../cpp/keywords-cpp.md)
+
+**Microsoft 专用**
+
+提供了保留当前函数的返回地址的内存位置的地址。 不可能使用此地址来访问其他内存位置 （例如，函数的自变量）。
+
+## <a name="syntax"></a>语法
+
+```
+void * _AddressOfReturnAddress();
+```
+
+## <a name="requirements"></a>要求
+
+|内部函数|体系结构|
+|---------------|------------------|
+|`_AddressOfReturnAddress`|x86、x64|
+
+**标头文件** \<intrin.h >
+
+## <a name="remarks"></a>备注
+
+当`_AddressOfReturnAddress`编译的程序中使用[/clr](../build/reference/clr-common-language-runtime-compilation.md)，函数包含`_AddressOfReturnAddress`调用编译为本机函数。 当函数编译为托管函数包含调用`_AddressOfReturnAddress`，`_AddressOfReturnAddress`可能会发生意外行为。
+
+此例程仅可用作内部函数。
+
+## <a name="example"></a>示例
+
+```
+// compiler_intrinsics_AddressOfReturnAddress.cpp
+// processor: x86, x64
+#include <stdio.h>
+#include <intrin.h>
+
+// This function will print three values:
+//   (1) The address retrieved from _AddressOfReturnAdress
+//   (2) The return address stored at the location returned in (1)
+//   (3) The return address retrieved the _ReturnAddress* intrinsic
+// Note that (2) and (3) should be the same address.
+__declspec(noinline)
+void func() {
+   void* pvAddressOfReturnAddress = _AddressOfReturnAddress();
+   printf_s("%p\n", pvAddressOfReturnAddress);
+   printf_s("%p\n", *((void**) pvAddressOfReturnAddress));
+   printf_s("%p\n", _ReturnAddress());
+}
+
+int main() {
+   func();
+}
+```
+
+```Output
+0012FF78
+00401058
+00401058
+```
+
+**结束 Microsoft 专用**
+
+## <a name="see-also"></a>请参阅
+
+[编译器内部函数](../intrinsics/compiler-intrinsics.md)<br/>
+[关键字](../cpp/keywords-cpp.md)

@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2710609cbf20861c77dae1cb0aea327983efef6e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 9142ba85a78259c0a6e5ae06f3745d414e62e908
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46098168"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46425621"
 ---
 # <a name="smart-pointers-modern-c"></a>智能指针（现代 C++）
 
@@ -86,29 +86,39 @@ C++ 智能指针思路类似于在语言（如 C#）中创建对象的过程：�
 
 当你使用 COM 对象时，请将接口指针包装到适当的智能指针类型中。 活动模板库 (ATL) 针对各种目的定义了多种智能指针。 你还可以使用 `_com_ptr_t` 智能指针类型，编译器在从 .tlb 文件创建包装器类时会使用该类型。 无需包含 ATL 标头文件时，它是最好的选择。
 
-[CComPtr 类](../atl/reference/ccomptr-class.md)使用此步骤，除非您不能使用 atl。 使用 `AddRef` 和 `Release` 方法执行引用计数。 有关详细信息，请参阅[如何： 创建和使用 CComPtr 和 CComQIPtr 实例](../cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md)。
+[CComPtr 类](../atl/reference/ccomptr-class.md)<br/>
+除非你无法使用 ATL，否则使用此类型。 使用 `AddRef` 和 `Release` 方法执行引用计数。 有关详细信息，请参阅[如何： 创建和使用 CComPtr 和 CComQIPtr 实例](../cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md)。
 
-[CComQIPtr 类](../atl/reference/ccomqiptr-class.md)Resembles`CComPtr`而且还为调用提供简化的语法`QueryInterface`对 COM 对象。 有关详细信息，请参阅[如何： 创建和使用 CComPtr 和 CComQIPtr 实例](../cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md)。
+[CComQIPtr 类](../atl/reference/ccomqiptr-class.md)<br/>
+类似于 `CComPtr`，但还提供了用于在 COM 对象上调用 `QueryInterface` 的简化语法。 有关详细信息，请参阅[如何： 创建和使用 CComPtr 和 CComQIPtr 实例](../cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md)。
 
-[CComHeapPtr 类](../atl/reference/ccomheapptr-class.md)使用的对象的智能指针`CoTaskMemFree`来释放内存。
+[CComHeapPtr 类](../atl/reference/ccomheapptr-class.md)<br/>
+指向使用 `CoTaskMemFree` 释放内存的对象的智能指针。
 
-[CComGITPtr 类](../atl/reference/ccomgitptr-class.md)从全局接口表 (GIT) 获取的接口的智能指针。
+[CComGITPtr 类](../atl/reference/ccomgitptr-class.md)<br/>
+从全局接口表 (GIT) 获取的接口的智能指针。
 
-[_com_ptr_t 类](../cpp/com-ptr-t-class.md)Resembles`CComQIPtr`功能但不依赖于 ATL 标头。
+[_com_ptr_t 类](../cpp/com-ptr-t-class.md)<br/>
+在功能上类似于 `CComQIPtr`，但不依赖于 ATL 标头。
 
 ### <a name="atl-smart-pointers-for-poco-objects"></a>POCO 对象的 ATL 智能指针
 
 除 COM 对象的智能指针外，ATL 还为纯旧 C++ 对象定义了智能指针和智能指针集合。 在经典 Windows 编程中，这些类型可用于替代 C++ 标准库集合中，，尤其是在不需要代码可移植性时或当不需要混合的编程模型的 C++ 标准库和 atl。 
 
-[CAutoPtr 类](../atl/reference/cautoptr-class.md)通过转移副本所有权增强唯一所有权的智能指针。 等同于已弃用的 `std::auto_ptr` 类。
+[CAutoPtr 类](../atl/reference/cautoptr-class.md)<br/>
+通过转移副本所有权增强唯一所有权的智能指针。 等同于已弃用的 `std::auto_ptr` 类。
 
-[CHeapPtr 类](../atl/reference/cheapptr-class.md)智能指针的对象的情况下使用 C 分配[malloc](../c-runtime-library/reference/malloc.md)函数。
+[CHeapPtr 类](../atl/reference/cheapptr-class.md)<br/>
+通过使用 C 分配对象的智能指针[malloc](../c-runtime-library/reference/malloc.md)函数。
 
-[CAutoVectorPtr 类](../atl/reference/cautovectorptr-class.md)通过使用分配的数组的智能指针`new[]`。
+[CAutoVectorPtr 类](../atl/reference/cautovectorptr-class.md)<br/>
+使用 `new[]` 分配的数组的智能指针。
 
-[CAutoPtrArray 类](../atl/reference/cautoptrarray-class.md)类来封装的数组`CAutoPtr`元素。
+[CAutoPtrArray 类](../atl/reference/cautoptrarray-class.md)<br/>
+封装一个 `CAutoPtr` 元素数组的类。
 
-[CAutoPtrList 类](../atl/reference/cautoptrlist-class.md)类来封装用于操作的列表的方法`CAutoPtr`节点。
+[CAutoPtrList 类](../atl/reference/cautoptrlist-class.md)<br/>
+封装用于操作 `CAutoPtr` 节点列表的方法的类。
 
 ## <a name="see-also"></a>请参阅
 

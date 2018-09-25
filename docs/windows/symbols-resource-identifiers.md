@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8a1a0b16ebee0ebac141d5c1675d7ff7560b374b
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: c3bbcc774115311cd4ed0f302e4d9812ecfc6505
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318201"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46422243"
 ---
 # <a name="symbols-resource-identifiers-c"></a>符号： 资源标识符 （c + +）
 
@@ -75,6 +75,6 @@ Win32
 
 ## <a name="see-also"></a>请参阅
 
-[如何：在资源中搜索符号](../windows/how-to-search-for-symbols-in-resources.md)  
-[资源编辑器](../windows/resource-editors.md)  
+[如何：在资源中搜索符号](../windows/how-to-search-for-symbols-in-resources.md)<br/>
+[资源编辑器](../windows/resource-editors.md)<br/>
 [资源文件](../windows/resource-files-visual-studio.md)

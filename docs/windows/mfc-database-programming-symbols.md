@@ -17,14 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 50696d8f6ee0aa1c61374c0758905a5bb7063ab5
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 732fab9e0f9f0233de6de7db6328c2e6736db5d0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42606932"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46437702"
 ---
 # <a name="mfc-database-programming-symbols"></a>MFC 数据库编程符号
+
 添加了数据库的支持，此表中的符号只能出现在 MFC 项目中。 它们支持与 SQL 服务器和数据库编程的 MFC 连接。
   
 |||
@@ -45,8 +46,10 @@ ms.locfileid: "42606932"
 |AFX_IDP_SQL_SQL_NO_TOTAL|AFX_IDP_SQL_UPDATE_DELETE_FAILED|
   
 ## <a name="requirements"></a>要求
- MFC
+
+MFC
   
 ## <a name="see-also"></a>请参阅
- [MFC 预定义的符号](../windows/mfc-predefined-symbols.md)  
- [符号：资源标识符](../windows/symbols-resource-identifiers.md)
+
+[MFC 预定义的符号](../windows/mfc-predefined-symbols.md)<br/>
+[符号：资源标识符](../windows/symbols-resource-identifiers.md)

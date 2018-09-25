@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3ce2f65fd740fd2bf133d65b25cbb52838c53dd2
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ba6ed66359ee833b51154e47f8f6c26c0de8994c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42601207"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46408942"
 ---
 # <a name="explicit-overrides--c-component-extensions"></a>显式重写（C++ 组件扩展）
 
@@ -37,16 +37,16 @@ overriding-function-declarator = function { overriding-function-definition }
 
 ### <a name="parameters"></a>参数
 
-*重写函数声明符*  
+*重写函数声明符*<br/>
 重写的函数返回类型、 名称和参数列表。  请注意，重写的函数不需要具有被重写的函数相同的名称。
 
-*type*  
+*type*<br/>
 包含用于重写的函数的基类型。
 
-*函数*  
+*函数*<br/>
 以逗号分隔的一个或多个重写的函数名称的列表。
 
-*重写函数定义*  
+*重写函数定义*<br/>
 定义重写的函数的函数正文语句。
 
 ### <a name="remarks"></a>备注

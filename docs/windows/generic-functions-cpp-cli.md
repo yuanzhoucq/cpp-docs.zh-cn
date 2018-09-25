@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bc930fdc142dc7b044b4dbd60cfd459b7ce52aea
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: b8c51b3468a636335a74b8a4206a6b533d3a200b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45709134"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46398854"
 ---
 # <a name="generic-functions-ccli"></a>泛型函数 (C++/CLI)
 
@@ -63,28 +63,28 @@ return-type identifier<type-parameter identifier(s)>
 
 ### <a name="parameters"></a>参数
 
-*特性*  
+*特性*<br/>
 （可选）声明性的其他信息。 有关属性和属性类的详细信息，请参阅属性。
 
-*修饰符*  
+*修饰符*<br/>
 （可选）对于函数，如静态修饰符。  **虚拟**不允许，因为虚方法不是泛型。
 
-*返回类型*  
+*返回类型*<br/>
 由方法返回的类型。 如果返回类型为 void，则需要没有返回值。
 
-*identifier*  
+*identifier*<br/>
 函数名称。
 
-*类型参数标识符*  
+*类型参数标识符*<br/>
 以逗号分隔的标识符列表。
 
-*形参*  
+*形参*<br/>
 （可选）参数列表。
 
-*类型形参约束子句*  
+*类型形参约束子句*<br/>
 这可能会用作类型参数的类型上指定的限制，接受窗体中指定[泛型类型参数的约束 (C + + CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)。
 
-*函数体*  
+*函数体*<br/>
 可能引用的类型参数标识符的方法的正文。
 
 ### <a name="remarks"></a>备注
@@ -193,5 +193,5 @@ My function returned a string: Hello generic functions!
 
 ## <a name="see-also"></a>请参阅
 
-[适用于运行时平台的组件扩展](../windows/component-extensions-for-runtime-platforms.md)  
+[适用于运行时平台的组件扩展](../windows/component-extensions-for-runtime-platforms.md)<br/>
 [泛型](../windows/generics-cpp-component-extensions.md)

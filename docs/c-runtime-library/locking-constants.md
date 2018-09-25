@@ -29,42 +29,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 588c286cbad5e0097394a38eed34c09fc04af3ea
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: abf776ab72d692be6d573803353f35946df145ec
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32389964"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031908"
 ---
 # <a name="locking-constants"></a>_locking 常量
-## <a name="syntax"></a>语法  
-  
-```  
-  
-#include <sys/locking.h>  
-  
-```  
-  
-## <a name="remarks"></a>备注  
- `_locking` 函数调用中的 mode 参数指定要执行的锁定操作。  
-  
- mode 参数必须是以下清单常量之一。  
-  
- `_LK_LOCK`  
- 锁定指定字节。 如果无法锁定字节，该函数会在 1 秒后再次尝试。 如果在 10 次尝试后仍无法锁定字节，该函数将返回一个错误。  
-  
- `_LK_RLCK`  
- 与 `_LK_LOCK` 相同。  
-  
- `_LK_NBLCK`  
- 锁定指定字节。 如果无法锁定字节，该函数将返回一个错误。  
-  
- `_LK_NBRLCK`  
- 与 `_LK_NBLCK` 相同。  
-  
- `_LK_UNLCK`  
- 解锁指定字节。 （这些字节必须在之前锁定。）  
-  
-## <a name="see-also"></a>请参阅  
- [_locking](../c-runtime-library/reference/locking.md)   
- [全局常量](../c-runtime-library/global-constants.md)
+
+## <a name="syntax"></a>语法
+
+```
+#include <sys/locking.h>
+```
+
+## <a name="remarks"></a>备注
+
+`_locking` 函数调用中的 mode 参数指定要执行的锁定操作。
+
+mode 参数必须是以下清单常量之一。
+
+|||
+|-|-|
+| `_LK_LOCK`  | 锁定指定字节。 如果无法锁定字节，该函数会在 1 秒后再次尝试。 如果在 10 次尝试后仍无法锁定字节，该函数将返回一个错误。  |
+| `_LK_RLCK`  | 与 `_LK_LOCK` 相同。  |
+|`_LK_NBLCK`  | 锁定指定字节。 如果无法锁定字节，该函数将返回一个错误。  |
+| `_LK_NBRLCK`  | 与 `_LK_NBLCK` 相同。  |
+| `_LK_UNLCK`  | 解锁指定字节。 （这些字节必须在之前锁定。）  |
+
+## <a name="see-also"></a>请参阅
+
+[_locking](../c-runtime-library/reference/locking.md)<br/>
+[全局常量](../c-runtime-library/global-constants.md)

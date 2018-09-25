@@ -3,8 +3,7 @@ title: -验证-字符集 （验证兼容的字符） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
-- cpp
-- devlang-cpp
+- cpp-tools
 ms.topic: reference
 f1_keywords:
 - /validate-charset
@@ -18,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 63adaad4fe074225ef32d99edd2a1402acf5e045
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 698a221dadf21e6d314f5556210d84b98853757f
+ms.sourcegitcommit: 92c568e9466ffd7346a4120c478c9bdea61c8756
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45709119"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47029523"
 ---
 # <a name="validate-charset-validate-for-compatible-characters"></a>/validate-charset （验证兼容的字符）
 
@@ -57,6 +56,6 @@ Visual Studio 使用的源字符集和执行字符集之间的转换过程的内
 
 [编译器选项](../../build/reference/compiler-options.md)<br/>
 [设置编译器选项](../../build/reference/setting-compiler-options.md)<br/>
-[/execution-charset （设置执行字符集）](../../build/reference/execution-charset-set-execution-character-set.md)
-[/source-charset （设置源字符集）](../../build/reference/source-charset-set-source-character-set.md)
-[/utf-8 （设置源和可执行文件为 utf-8 字符集）](../../build/reference/utf-8-set-source-and-executable-character-sets-to-utf-8.md)
+[/execution-charset （设置执行字符集）](../../build/reference/execution-charset-set-execution-character-set.md)<br/>
+[/source-charset（设置源字符集）](../../build/reference/source-charset-set-source-character-set.md)<br/>
+[/utf-8（将源和可执行字符集设置为 UTF-8）](../../build/reference/utf-8-set-source-and-executable-character-sets-to-utf-8.md)

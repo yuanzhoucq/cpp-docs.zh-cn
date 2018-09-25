@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6226b583b60bb458d75ba82ac1fd0b758028dca8
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: c1fc2d9f816e5487f5d89f9c429db85f2592731f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315491"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46439531"
 ---
 # <a name="dialog-editor-c"></a>对话框编辑器 （c + +）
 
@@ -71,8 +71,8 @@ Win32
 
 ## <a name="see-also"></a>请参阅
 
-[资源编辑器](../windows/resource-editors.md)  
-[控件](../mfc/controls-mfc.md)  
-[控件类](../mfc/control-classes.md)  
-[对话框类](../mfc/dialog-box-classes.md)  
+[资源编辑器](../windows/resource-editors.md)<br/>
+[控件](../mfc/controls-mfc.md)<br/>
+[控件类](../mfc/control-classes.md)<br/>
+[对话框类](../mfc/dialog-box-classes.md)<br/>
 [对话框控件和变量类型](../ide/dialog-box-controls-and-variable-types.md)

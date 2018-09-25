@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8646ad544b6c481ea394add9e6e8faa82919e15
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 09db7dbb2af9294e215ab60c716f73eee821b29a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45725031"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46438569"
 ---
 # <a name="errlook-reference"></a>ERRLOOK 参考
 
@@ -30,14 +30,19 @@ ms.locfileid: "45725031"
 
 ## <a name="in-this-section"></a>本节内容
 
-[值编辑控件](../../build/reference/value-edit-control.md)介绍 ERRLOOK 中的值编辑控件。
+[“值”编辑控件](../../build/reference/value-edit-control.md)<br/>
+介绍 ERRLOOK 中的值编辑控件。
 
-[错误消息编辑控件](../../build/reference/error-message-edit-control.md)描述中 ERRLOOK 的错误消息编辑控件。
+[“错误消息”编辑控件](../../build/reference/error-message-edit-control.md)<br/>
+描述中 ERRLOOK 的错误消息编辑控件。
 
-[模块按钮](../../build/reference/modules-button.md)介绍 ERRLOOK 中的模块按钮。
+[“模块”按钮](../../build/reference/modules-button.md)<br/>
+介绍在 ERRLOOK 模块按钮。
 
-[查看按钮](../../build/reference/look-up-button.md)介绍 ERRLOOK 中的查找按钮。
+[“查找”按钮](../../build/reference/look-up-button.md)<br/>
+介绍 ERRLOOK 中的查找按钮。
 
 ## <a name="related-sections"></a>相关章节
 
-[C/c + + 生成工具](../../build/reference/c-cpp-build-tools.md)提供指向探讨 C/c + + 生成工具在 Visual c + + 中提供。
+[C/C++ 生成工具](../../build/reference/c-cpp-build-tools.md)<br/>
+提供指向探讨 C/c + + 生成工具在 Visual c + + 中提供。

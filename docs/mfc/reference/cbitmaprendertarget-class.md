@@ -1,5 +1,5 @@
 ---
-title: CBitmapRenderTarget 类 |Microsoft 文档
+title: CBitmapRenderTarget 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -28,129 +28,146 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a0eece5c7ba74f523836ab5916b8817671dac287
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: ee70825711efd82ce451a0433a63d98d93850552
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36956747"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46417054"
 ---
 # <a name="cbitmaprendertarget-class"></a>CBitmapRenderTarget 类
-ID2D1BitmapRenderTarget 包装器。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-class CBitmapRenderTarget : public CRenderTarget;  
-```  
-  
-## <a name="members"></a>成员  
-  
-### <a name="public-constructors"></a>公共构造函数  
-  
-|名称|描述|  
-|----------|-----------------|  
-|[CBitmapRenderTarget::CBitmapRenderTarget](#cbitmaprendertarget)|构造 CBitmapRenderTarget 对象。|  
-  
-### <a name="public-methods"></a>公共方法  
-  
-|名称|描述|  
-|----------|-----------------|  
-|[CBitmapRenderTarget::Attach](#attach)|附加现有呈现器对对象的目标接口|  
-|[CBitmapRenderTarget::Detach](#detach)|分离呈现器目标接口从该对象|  
-|[CBitmapRenderTarget::GetBitmap](#getbitmap)|检索此呈现器目标位图。 返回的位图可以用于绘制操作。|  
-|[CBitmapRenderTarget::GetBitmapRenderTarget](#getbitmaprendertarget)|返回 ID2D1BitmapRenderTarget 接口|  
-  
-### <a name="public-operators"></a>公共运算符  
-  
-|名称|描述|  
-|----------|-----------------|  
-|[CBitmapRenderTarget::operator ID2D1BitmapRenderTarget *](#operator_id2d1bitmaprendertarget_star)|返回 ID2D1BitmapRenderTarget 接口|  
-  
-### <a name="protected-data-members"></a>受保护的数据成员  
-  
-|name|描述|  
-|----------|-----------------|  
-|[CBitmapRenderTarget::m_pBitmapRenderTarget](#m_pbitmaprendertarget)|指向 ID2D1BitmapRenderTarget 对象的指针。|  
-  
-## <a name="inheritance-hierarchy"></a>继承层次结构  
- [CObject](../../mfc/reference/cobject-class.md)  
-  
- [CRenderTarget](../../mfc/reference/crendertarget-class.md)  
-  
- `CBitmapRenderTarget` 
-  
-## <a name="requirements"></a>要求  
- **标头：** afxrendertarget.h  
-  
-##  <a name="attach"></a>  CBitmapRenderTarget::Attach  
- 附加现有呈现器对对象的目标接口  
-  
-```  
+
+ID2D1BitmapRenderTarget 包装器。
+
+## <a name="syntax"></a>语法
+
+```
+class CBitmapRenderTarget : public CRenderTarget;
+```
+
+## <a name="members"></a>成员
+
+### <a name="public-constructors"></a>公共构造函数
+
+|名称|描述|
+|----------|-----------------|
+|[CBitmapRenderTarget::CBitmapRenderTarget](#cbitmaprendertarget)|构造一个 CBitmapRenderTarget 对象。|
+
+### <a name="public-methods"></a>公共方法
+
+|名称|描述|
+|----------|-----------------|
+|[CBitmapRenderTarget::Attach](#attach)|附加现有呈现器目标接口的对象|
+|[CBitmapRenderTarget::Detach](#detach)|分离对象中的呈现器目标接口|
+|[CBitmapRenderTarget::GetBitmap](#getbitmap)|检索此呈现器目标的位图。 返回的位图可以用于绘制操作。|
+|[CBitmapRenderTarget::GetBitmapRenderTarget](#getbitmaprendertarget)|返回 ID2D1BitmapRenderTarget 接口|
+
+### <a name="public-operators"></a>公共运算符
+
+|名称|描述|
+|----------|-----------------|
+|[CBitmapRenderTarget::operator ID2D1BitmapRenderTarget *](#operator_id2d1bitmaprendertarget_star)|返回 ID2D1BitmapRenderTarget 接口|
+
+### <a name="protected-data-members"></a>受保护的数据成员
+
+|name|描述|
+|----------|-----------------|
+|[CBitmapRenderTarget::m_pBitmapRenderTarget](#m_pbitmaprendertarget)|指向 ID2D1BitmapRenderTarget 对象的指针。|
+
+## <a name="inheritance-hierarchy"></a>继承层次结构
+
+[CObject](../../mfc/reference/cobject-class.md)
+
+[CRenderTarget](../../mfc/reference/crendertarget-class.md)
+
+`CBitmapRenderTarget`
+
+## <a name="requirements"></a>要求
+
+**标头：** afxrendertarget.h
+
+##  <a name="attach"></a>  CBitmapRenderTarget::Attach
+
+附加现有呈现器目标接口的对象
+
+```
 void Attach(ID2D1BitmapRenderTarget* pTarget);
-```  
-  
-### <a name="parameters"></a>参数  
- *pTarget*  
- 现有呈现器目标接口。 不能为 NULL  
-  
-##  <a name="cbitmaprendertarget"></a>  CBitmapRenderTarget::CBitmapRenderTarget  
- 构造 CBitmapRenderTarget 对象。  
-  
-```  
+```
+
+### <a name="parameters"></a>参数
+
+*pTarget*<br/>
+现有呈现器目标的接口。 不能为 NULL
+
+##  <a name="cbitmaprendertarget"></a>  CBitmapRenderTarget::CBitmapRenderTarget
+
+构造一个 CBitmapRenderTarget 对象。
+
+```
 CBitmapRenderTarget();
-```  
-  
-##  <a name="detach"></a>  CBitmapRenderTarget::Detach  
- 分离呈现器目标接口从该对象  
-  
-```  
+```
+
+##  <a name="detach"></a>  CBitmapRenderTarget::Detach
+
+分离对象中的呈现器目标接口
+
+```
 ID2D1BitmapRenderTarget* Detach();
-```  
-  
-### <a name="return-value"></a>返回值  
- 指向分离呈现器目标接口。  
-  
-##  <a name="getbitmap"></a>  CBitmapRenderTarget::GetBitmap  
- 检索此呈现器目标位图。 返回的位图可以用于绘制操作。  
-  
-```  
+```
+
+### <a name="return-value"></a>返回值
+
+指向已分离的呈现器目标接口。
+
+##  <a name="getbitmap"></a>  CBitmapRenderTarget::GetBitmap
+
+检索此呈现器目标的位图。 返回的位图可以用于绘制操作。
+
+```
 BOOL GetBitmap(CD2DBitmap& bitmap);
-```  
-  
-### <a name="parameters"></a>参数  
- *位图*  
- 此方法返回时，包含此呈现器目标的有效位图。 此位图可以用于绘制操作。  
-  
-### <a name="return-value"></a>返回值  
- 如果该方法成功，则返回 TRUE。 否则，它将返回 FALSE。  
-  
-##  <a name="getbitmaprendertarget"></a>  CBitmapRenderTarget::GetBitmapRenderTarget  
- 返回 ID2D1BitmapRenderTarget 接口  
-  
-```  
+```
+
+### <a name="parameters"></a>参数
+
+*位图*<br/>
+此方法返回时，包含此呈现器目标的有效位图。 此位图可以用于绘制操作。
+
+### <a name="return-value"></a>返回值
+
+如果该方法成功，则返回 TRUE。 否则，它返回 FALSE。
+
+##  <a name="getbitmaprendertarget"></a>  CBitmapRenderTarget::GetBitmapRenderTarget
+
+返回 ID2D1BitmapRenderTarget 接口
+
+```
 ID2D1BitmapRenderTarget* GetBitmapRenderTarget();
-```  
-  
-### <a name="return-value"></a>返回值  
- 指向 ID2D1BitmapRenderTarget 接口或如果尚未初始化对象的 NULL 指针。  
-  
-##  <a name="m_pbitmaprendertarget"></a>  CBitmapRenderTarget::m_pBitmapRenderTarget  
- 指向 ID2D1BitmapRenderTarget 对象的指针。  
-  
-```  
-ID2D1BitmapRenderTarget* m_pBitmapRenderTarget;  
-```  
-  
-##  <a name="operator_id2d1bitmaprendertarget_star"></a>  CBitmapRenderTarget::operator ID2D1BitmapRenderTarget *  
- 返回 ID2D1BitmapRenderTarget 接口  
-  
-```  
+```
+
+### <a name="return-value"></a>返回值
+
+指向 ID2D1BitmapRenderTarget 接口或如果对象尚未初始化，则为 NULL 指针。
+
+##  <a name="m_pbitmaprendertarget"></a>  CBitmapRenderTarget::m_pBitmapRenderTarget
+
+指向 ID2D1BitmapRenderTarget 对象的指针。
+
+```
+ID2D1BitmapRenderTarget* m_pBitmapRenderTarget;
+```
+
+##  <a name="operator_id2d1bitmaprendertarget_star"></a>  CBitmapRenderTarget::operator ID2D1BitmapRenderTarget *
+
+返回 ID2D1BitmapRenderTarget 接口
+
+```
 operator ID2D1BitmapRenderTarget*();
-```   
-  
-### <a name="return-value"></a>返回值  
- 指向 ID2D1BitmapRenderTarget 接口或如果尚未初始化对象的 NULL 指针。  
-  
-## <a name="see-also"></a>请参阅  
- [类](../../mfc/reference/mfc-classes.md)
+```
+
+### <a name="return-value"></a>返回值
+
+指向 ID2D1BitmapRenderTarget 接口或如果对象尚未初始化，则为 NULL 指针。
+
+## <a name="see-also"></a>请参阅
+
+[类](../../mfc/reference/mfc-classes.md)

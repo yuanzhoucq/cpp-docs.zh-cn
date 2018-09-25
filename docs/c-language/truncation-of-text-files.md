@@ -15,17 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 837361ce7116deb0b425e380959de3acb6dafa57
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ed3d760989d131ecdc2491d0b1952e657949fb03
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32385571"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46065668"
 ---
 # <a name="truncation-of-text-files"></a>文本文件的截断
-**ANSI 4.9.3** 文本流中的写入是否会导致关联的文件在该点以外被截断  
-  
- 对文本流进行写入不会在该点以外截断文件。  
-  
-## <a name="see-also"></a>请参阅  
- [库函数](../c-language/library-functions.md)
+
+**ANSI 4.9.3** 文本流中的写入是否会导致关联的文件在该点以外被截断
+
+对文本流进行写入不会在该点以外截断文件。
+
+## <a name="see-also"></a>请参阅
+
+[库函数](../c-language/library-functions.md)

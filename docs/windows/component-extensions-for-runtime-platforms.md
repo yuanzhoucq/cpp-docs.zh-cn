@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 160ae864218304fbc94324ecfd9d6229729ca379
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 0619585a0a5b59ffb6b8cfbe22e7930909369b23
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318338"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46386743"
 ---
 # <a name="component-extensions-for-runtime-platforms"></a>适用于运行时平台的组件扩展
 
@@ -141,5 +141,5 @@ C++ 扩展中已添加下列关键字。
 
 ## <a name="see-also"></a>请参阅
 
-[使用 C++/CLI (Visual C++) 进行 .NET 编程](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)  
+[使用 C++/CLI (Visual C++) 进行 .NET 编程](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)<br/>
 [本机和 .NET 的互操作性](../dotnet/native-and-dotnet-interoperability.md)

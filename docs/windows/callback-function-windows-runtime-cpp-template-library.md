@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 57d1a3adc160323726bcdd31808cf82bc8da2e7f
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 19bb77128eee9cc8af514e60730c3a39115695cc
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42609249"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46426531"
 ---
 # <a name="callback-function-windows-runtime-c-template-library"></a>回调函数（Windows 运行时 C++ 模板库）
 
@@ -201,49 +201,49 @@ ComPtr<TDelegateInterface> Callback(
 
 ### <a name="parameters"></a>参数
 
-*TDelegateInterface*  
+*TDelegateInterface*<br/>
 一个模板参数，指定在事件发生时要调用的委托接口。
 
-*TCallback*  
+*TCallback*<br/>
 一个模板参数，指定代表对象及其回调成员函数的对象类型。
 
-*TCallbackObject*  
+*TCallbackObject*<br/>
 一个模板参数，该参数指定一个对象，在事件发生时要调用的方法是这个对象的成员函数。
 
-*TArg1*  
+*TArg1*<br/>
 一个模板参数，指定第一个回调方法自变量的类型。
 
-*TArg2*  
+*TArg2*<br/>
 一个模板参数，指定第二个回调方法自变量的类型。
 
-*TArg3*  
+*TArg3*<br/>
 一个模板参数，指定第三个回调方法自变量的类型。
 
-*TArg4*  
+*TArg4*<br/>
 一个模板参数，指定第四个回调方法自变量的类型。
 
-*TArg5*  
+*TArg5*<br/>
 一个模板自变量，指定第五个回调方法自变量的类型。
 
-*TArg6*  
+*TArg6*<br/>
 一个模板参数，指定第六个回调方法自变量的类型。
 
-*TArg7*  
+*TArg7*<br/>
 一个模板参数，指定第七个回调方法自变量的类型。
 
-*TArg8*  
+*TArg8*<br/>
 一个模板参数，指定第八个回调方法自变量的类型。
 
-*TArg9*  
+*TArg9*<br/>
 一个模板参数，指定第九个回调方法自变量的类型。
 
-*回调*  
+*回调*<br/>
 一个对象，表示回调对象及其成员函数。
 
-*object*  
+*object*<br/>
 一个对象，在事件发生时调用该对象的成员函数。
 
-*方法*  
+*方法*<br/>
 在事件发生时要调用的成员函数。
 
 ## <a name="return-value"></a>返回值

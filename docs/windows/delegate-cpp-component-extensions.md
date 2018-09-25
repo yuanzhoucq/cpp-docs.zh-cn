@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 46b09b5cbe74849c3dc08e8faee3ee4ca645a55b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 13ce7d2a35245716adc70b9e84532ea7d1a4a440
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42602929"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46432396"
 ---
 # <a name="delegate--c-component-extensions"></a>委托（C++ 组件扩展）
 
@@ -57,16 +57,16 @@ delegate-type-identifier
 
 ### <a name="parameters"></a>参数
 
-*access*  
+*access*<br/>
 （可选）委托，它可以是可访问性**公共**（默认值） 或**专用**。 此外可使用限定的函数原型**const**或**易失性**关键字。
 
-*返回类型*  
+*返回类型*<br/>
 函数原型的返回类型。
 
-*委托类型标识符*  
+*委托类型标识符*<br/>
 声明的委托类型的名称。
 
-*参数*  
+*参数*<br/>
 （可选）类型和函数原型的标识符。
 
 ### <a name="remarks"></a>备注
@@ -91,10 +91,10 @@ function_declaration
 
 ### <a name="parameters"></a>参数
 
-*access*  
+*access*<br/>
 （可选）在程序集外的可访问性可以是委托的公共或私有。  默认值为私有。  在类中，委托可以具有任何可访问性。
 
-*function_declaration*  
+*function_declaration*<br/>
 可以绑定到委托的函数的签名。 委托的返回类型可以是任何托管的类型。 互操作性方面的考虑，建议的委托的返回类型均为符合 CLS 类型。
 
 若要定义未绑定的委托中的第一个参数*function_declaration*的类型应该**这**对象的指针。

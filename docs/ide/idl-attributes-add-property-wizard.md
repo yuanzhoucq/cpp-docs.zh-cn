@@ -14,27 +14,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12fee7eadecbd81e3c4e410d254de50bcf3a9ac0
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 7da654321dfae520f458374654a21a9e8ebb98f5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43208821"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706640"
 ---
 # <a name="idl-attributes-add-property-wizard"></a>“添加属性向导”->“IDL 特性”
 使用“添加属性向导”的此页面来指定属性的任何接口定义语言 (IDL) 设置。  
   
- **id**  
- 设置标识属性的数字 ID。 此选项不适用于自定义接口的属性。 请参阅 MIDL 引用中的 [ID](/windows/desktop/Midl/id)。  
+- **id**
+
+   设置标识属性的数字 ID。 此选项不适用于自定义接口的属性。 请参阅 MIDL 引用中的 [ID](/windows/desktop/Midl/id)。  
   
- **helpcontext**  
- 指定一个上下文 ID，使用户在帮助文件中查看关于此属性的信息。 请参阅 MIDL 引用中的 [helpcontext](/windows/desktop/Midl/helpcontext)。  
+- **helpcontext**
+
+   指定一个上下文 ID，使用户在帮助文件中查看关于此属性的信息。 请参阅 MIDL 引用中的 [helpcontext](/windows/desktop/Midl/helpcontext)。  
   
- **helpstring**  
- 指定一个字符串，用于描述应用该字符串的元素。 默认情况下，它设置为“属性（属性名称）”。 请参阅 MIDL 引用中的 [helpstring](/windows/desktop/Midl/helpstring)。  
+- **helpstring**
+
+   指定一个字符串，用于描述应用该字符串的元素。 默认情况下，它设置为“属性（属性名称）”。 请参阅 MIDL 引用中的 [helpstring](/windows/desktop/Midl/helpstring)。  
   
 ## <a name="other-options"></a>其他选项  
- 并非所有选项都适用于所有属性类型。  
+
+并非所有选项都适用于所有属性类型。  
   
 |选项|描述|  
 |------------|-----------------|  

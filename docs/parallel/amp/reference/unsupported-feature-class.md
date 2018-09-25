@@ -18,62 +18,67 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7472e8fa8932983569ad9e2a9c1fe6cdfc9318b7
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4ed33df07ed6fe9f99f5e9a135e3286672e7a013
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46059675"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46393563"
 ---
 # <a name="unsupportedfeature-class"></a>unsupported_feature 类
-使用不支持的功能时引发的异常。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-class unsupported_feature : public runtime_exception;  
-```  
-  
-## <a name="members"></a>成员  
-  
-### <a name="public-constructors"></a>公共构造函数  
-  
-|名称|描述|  
-|----------|-----------------|  
-|[unsupported_feature 构造函数](#ctor)|构造的新实例`unsupported_feature`异常。|  
 
-  
-## <a name="inheritance-hierarchy"></a>继承层次结构  
- `exception`  
-  
- `runtime_exception`  
-  
- `unsupported_feature`  
-  
-## <a name="unsupported_feature__ctor"></a> unsupported_feature 
+使用不支持的功能时引发的异常。
 
-  构造的功能异常的新实例。  
-  
-### <a name="syntax"></a>语法  
-  
-```  
-explicit unsupported_feature(  
-    const char * _Message ) throw();  
-  
-unsupported_feature() throw();  
-```  
-  
-### <a name="parameters"></a>参数  
+## <a name="syntax"></a>语法
+
+```
+class unsupported_feature : public runtime_exception;
+```
+
+## <a name="members"></a>成员
+
+### <a name="public-constructors"></a>公共构造函数
+
+|名称|描述|
+|----------|-----------------|
+|[unsupported_feature 构造函数](#ctor)|构造的新实例`unsupported_feature`异常。|
+
+## <a name="inheritance-hierarchy"></a>继承层次结构
+
+`exception`
+
+`runtime_exception`
+
+`unsupported_feature`
+
+## <a name="unsupported_feature__ctor"></a> unsupported_feature
+
+  构造的功能异常的新实例。
+
+### <a name="syntax"></a>语法
+
+```
+explicit unsupported_feature(
+    const char * _Message ) throw();
+
+unsupported_feature() throw();
+```
+
+### <a name="parameters"></a>参数
+
 *消息 （_m)*<br/>
-错误说明。  
-  
-### <a name="return-value"></a>返回值  
- `unsupported_feature` 对象。  
-  
-## <a name="requirements"></a>要求  
- **标头：** amprt.h  
-  
- **命名空间：** 并发  
-  
-## <a name="see-also"></a>请参阅  
- [并发命名空间 (C++ AMP)](concurrency-namespace-cpp-amp.md)
+错误说明。
+
+### <a name="return-value"></a>返回值
+
+`unsupported_feature` 对象。
+
+## <a name="requirements"></a>要求
+
+**标头：** amprt.h
+
+**命名空间：** 并发
+
+## <a name="see-also"></a>请参阅
+
+[并发命名空间 (C++ AMP)](concurrency-namespace-cpp-amp.md)

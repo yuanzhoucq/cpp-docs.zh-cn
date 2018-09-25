@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 997b8bc01424b102551815f19ff9a487113e5f6b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e4aaef2cca5146291f7d3708a995a116768e0467
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42601008"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46382929"
 ---
 # <a name="registrationscript"></a>registration_script
 
@@ -38,7 +38,7 @@ ms.locfileid: "42601008"
 
 ### <a name="parameters"></a>参数
 
-*脚本*  
+*脚本*<br/>
 自定义注册脚本 (.rgs) 文件的完整路径。 值为**无**，如`script = "none"`，指示组件类具有未注册要求。
 
 ## <a name="remarks"></a>备注
@@ -85,6 +85,6 @@ class CMyClass:public IFace {};
 
 ## <a name="see-also"></a>请参阅
 
-[COM 特性](../windows/com-attributes.md)  
-[类特性](../windows/class-attributes.md)  
+[COM 特性](../windows/com-attributes.md)<br/>
+[类特性](../windows/class-attributes.md)<br/>
 [rdx](../windows/rdx.md)  

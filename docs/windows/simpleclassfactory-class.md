@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b20cbb906676705113bd1a84884cc5719b8272bf
-ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
+ms.openlocfilehash: 4a3e262567927b818072c1e05acd18aa64cbaa6c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44691440"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46446501"
 ---
 # <a name="simpleclassfactory-class"></a>SimpleClassFactory 类
 
@@ -39,7 +39,7 @@ class SimpleClassFactory : public ClassFactory<>;
 
 ### <a name="parameters"></a>参数
 
-*基本*  
+*基本*<br/>
 基类。
 
 ## <a name="remarks"></a>备注
@@ -102,15 +102,15 @@ STDMETHOD( CreateInstance )(
 
 #### <a name="parameters"></a>参数
 
-*pUnkOuter*  
+*pUnkOuter*<br/>
 必须为`nullptr`; 否则为返回值是 CLASS_E_NOAGGREGATION。
 
 SimpleClassFactory 不支持聚合。 如果受支持聚合，并且正在创建的对象是一个聚合的组成部分*pUnkOuter*是一个指向控制`IUnknown`聚合的接口。
 
-*riid*  
+*riid*<br/>
 若要创建的对象 ID 的接口。
 
-*ppvObject*  
+*ppvObject*<br/>
 此操作完成后，指向由指定的对象的实例*riid*参数。
 
 ### <a name="return-value"></a>返回值

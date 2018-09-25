@@ -39,12 +39,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3bc016367495be8cc10c09605e8018811bde5ca9
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 5dfe6622edcd8446b844b5d3d7c03d1fd5d0197c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46118903"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46379406"
 ---
 # <a name="runtimeclass-class"></a>RuntimeClass 类
 
@@ -61,10 +61,10 @@ template <unsigned int classFlags, typename ...TInterfaces> class RuntimeClass;
 
 ### <a name="parameters"></a>参数
 
-*classFlags*  
+*classFlags*<br/>
 可选参数。 一个或多个组合[RuntimeClassType](../windows/runtimeclasstype-enumeration.md)枚举值。 `__WRL_CONFIGURATION_LEGACY__`可以定义宏，若要更改的项目中的所有运行时类 classFlags 的默认值。 如果定义，RuntimeClass 实例是默认情况下非敏捷。 未定义时，RuntimeClass 实例是默认情况下敏捷的。 若要避免多义性始终指定`Microsoft::WRL::FtmBase`中`TInterfaces`或`RuntimeClassType::InhibitFtmBase`。 请注意，如果 InhibitFtmBase 和 FtmBase 是同时使用该对象将是敏捷类。
 
-*TInterfaces*  
+*TInterfaces*<br/>
 接口列表中的该对象实现之外`IUnknown`，`IInspectable`或控制的其他接口[RuntimeClassType](../windows/runtimeclasstype-enumeration.md)。 它还可能会列出其他类以值得注意的是派生自`Microsoft::WRL::FtmBase`使对象敏捷，从而使该实现`IMarshal`。
 
 ## <a name="members"></a>成员
@@ -152,10 +152,10 @@ STDMETHOD(
 
 ### <a name="parameters"></a>参数
 
-*iidCount*  
+*iidCount*<br/>
 此操作完成后，数组中的元素总数*iid*。
 
-*iid*  
+*iid*<br/>
 此操作完成后，指向接口 ID 数组的指针。
 
 ### <a name="return-value"></a>返回值
@@ -174,7 +174,7 @@ STDMETHOD( GetRuntimeClassName )(
 
 ### <a name="parameters"></a>参数
 
-*runtimeName*  
+*runtimeName*<br/>
 此操作完成后，运行时类名称。
 
 ### <a name="return-value"></a>返回值
@@ -197,7 +197,7 @@ STDMETHOD(GetTrustLevel)(
 
 ### <a name="parameters"></a>参数
 
-*trustLvl*  
+*trustLvl*<br/>
 此操作完成后，当前的信任级别`RuntimeClass`对象。
 
 ### <a name="return-value"></a>返回值
@@ -220,7 +220,7 @@ STDMETHOD(
 
 ### <a name="parameters"></a>参数
 
-*weakReference*  
+*weakReference*<br/>
 此操作完成后，指向弱引用对象的指针。
 
 ### <a name="return-value"></a>返回值
@@ -253,10 +253,10 @@ STDMETHOD(
 
 ### <a name="parameters"></a>参数
 
-*riid*  
+*riid*<br/>
 接口 ID。
 
-*ppvObject*  
+*ppvObject*<br/>
 当此 opereation 完成时，为指定的接口指针*riid*参数。
 
 ### <a name="return-value"></a>返回值

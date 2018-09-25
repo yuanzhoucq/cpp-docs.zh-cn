@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 398149d0d65b0dcf4c914d8f35e4c6faf209173f
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 5c97d69bbca685ca64245d5d784452029c14f73f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42606982"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46393617"
 ---
 # <a name="activatableclass-macros"></a>ActivatableClass 宏
 
@@ -53,13 +53,13 @@ ActivatableClassWithFactoryEx(
 
 ### <a name="parameters"></a>参数
 
-*类名*  
+*类名*<br/>
 要创建的类的名称。
 
-*工厂*  
+*工厂*<br/>
 将创建指定类的实例的工厂。
 
-*服务器名称*  
+*服务器名称*<br/>
 一个模块中指定的工厂的子集的名称。
 
 ## <a name="remarks"></a>备注

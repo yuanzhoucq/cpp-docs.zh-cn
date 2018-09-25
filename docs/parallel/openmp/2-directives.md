@@ -1,5 +1,5 @@
 ---
-title: 2. 指令 |Microsoft 文档
+title: 2. 指令 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,12 +12,13 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b1c56bb4daaa6b87cf8e59e072cb73a746712f9
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: ab664bf15dd098b9d3e3bd7d6bd9c73db47fff2e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695884"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46436905"
 ---
 # <a name="2-directives"></a>2.指令
-指令基于 **#pragma** C 和 c + + 标准中定义的指令。  支持的 OpenMP C 和 c + + API 的编译器将包括命令行选项，可激活并允许所有 OpenMP 编译器指令解释。
+
+基于指令 **#pragma** C 和 c + + 标准中定义的指令。  OpenMP C 和 c + + API 支持的编译器将包括激活并允许所有 OpenMP 编译器指令的解释的命令行选项。

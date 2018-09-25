@@ -19,29 +19,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5beaab3fe1642b3988e9d0dcbf258eab02e26b7
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ac4ed378640942dbe33490d618cec7289125b0c8
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42610304"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46418783"
 ---
 # <a name="mbcs-programming-tips"></a>MBCS 编程提示
-在新开发中，您应该为最终用户可能看到的所有字符串使用 Unicode 字符编码。 MBCS 是已经被 Unicode 取代的旧技术。 本节为必须维护使用 MBCS 的现有程序的开发人员提供了一些提示，以及有关不适合转换为 Unicode 的情况的提示。 建议适用于 MFC 应用程序和如果不使用 MFC 编写的应用程序。 包括以下主题：  
-  
--   [常规 MBCS 编程建议](../text/general-mbcs-programming-advice.md)  
-  
--   [递增和递减指针](../text/incrementing-and-decrementing-pointers.md)  
-  
--   [字节索引](../text/byte-indices.md)  
-  
--   [字符串中的最后一个字符](../text/last-character-in-a-string.md)  
-  
--   [字符赋值](../text/character-assignment.md)  
-  
--   [字符比较](../text/character-comparison.md)  
-  
--   [缓冲区溢出](../text/buffer-overflow.md)  
-  
-## <a name="see-also"></a>请参阅  
- [支持多字节字符集 (MBCS)](../text/support-for-multibyte-character-sets-mbcss.md)
+
+在新开发中，您应该为最终用户可能看到的所有字符串使用 Unicode 字符编码。 MBCS 是已经被 Unicode 取代的旧技术。 本节为必须维护使用 MBCS 的现有程序的开发人员提供了一些提示，以及有关不适合转换为 Unicode 的情况的提示。 建议适用于 MFC 应用程序和如果不使用 MFC 编写的应用程序。 包括以下主题：
+
+- [常规 MBCS 编程建议](../text/general-mbcs-programming-advice.md)
+
+- [递增和递减指针](../text/incrementing-and-decrementing-pointers.md)
+
+- [字节索引](../text/byte-indices.md)
+
+- [字符串中的最后一个字符](../text/last-character-in-a-string.md)
+
+- [字符赋值](../text/character-assignment.md)
+
+- [字符比较](../text/character-comparison.md)
+
+- [缓冲区溢出](../text/buffer-overflow.md)
+
+## <a name="see-also"></a>请参阅
+
+[支持多字节字符集 (MBCS)](../text/support-for-multibyte-character-sets-mbcss.md)

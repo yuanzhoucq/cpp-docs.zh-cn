@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3c758226935151bd11faec12aed459aeb2606ca9
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 8b220ecd69ce539c03339ac73048efb2750d2e32
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43684819"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46401792"
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Windows 运行时 C++ 模板库 (WRL)
 
@@ -50,43 +50,43 @@ Windows 运行时 c + + 模板库和 C + + /cli CX 提供不同的优点。 以�
 
 以下是一些可以帮助您立刻开始工作与 Windows 运行时 c + + 模板库的资源。
 
-[Windows 运行时库 (WRL)](http://channel9.msdn.com/Events/Windows-Camp/Developing-Windows-8-Metro-style-apps-in-Cpp/The-Windows-Runtime-Library-WRL-)  
+[Windows 运行时库 (WRL)](http://channel9.msdn.com/Events/Windows-Camp/Developing-Windows-8-Metro-style-apps-in-Cpp/The-Windows-Runtime-Library-WRL-)<br/>
 在此第 9 频道视频中，详细了解 Windows 运行时 c + + 模板库的可帮助你编写通用 Windows 平台 (UWP) 应用以及如何编写和使用 Windows 运行时组件。
 
-[如何： 激活和使用 Windows 运行时组件](../windows/how-to-activate-and-use-a-windows-runtime-component-using-wrl.md)  
+[如何： 激活和使用 Windows 运行时组件](../windows/how-to-activate-and-use-a-windows-runtime-component-using-wrl.md)<br/>
 演示如何使用 Windows 运行时 c + + 模板库初始化 Windows 运行时和激活和使用 Windows 运行时组件。
 
-[如何： 完成异步操作](../windows/how-to-complete-asynchronous-operations-using-wrl.md)  
+[如何： 完成异步操作](../windows/how-to-complete-asynchronous-operations-using-wrl.md)<br/>
 演示如何使用 Windows 运行时 c + + 模板库启动异步操作并在操作完成时执行工作。
 
-[如何： 处理事件](../windows/how-to-handle-events-using-wrl.md)  
+[如何： 处理事件](../windows/how-to-handle-events-using-wrl.md)<br/>
 演示如何使用 Windows 运行时 c + + 模板库来订阅和处理 Windows 运行时对象的事件。
 
-[演练：使用 WRL 和媒体基础创建 UWP 应用](../windows/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation.md)  
+[演练：使用 WRL 和媒体基础创建 UWP 应用](../windows/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation.md)<br/>
 了解如何创建使用的 UWP 应用[Microsoft 媒体基础](/windows/desktop/medfound/microsoft-media-foundation-sdk)。
 
-[如何： 创建传统型 COM 组件](../windows/how-to-create-a-classic-com-component-using-wrl.md)  
+[如何： 创建传统型 COM 组件](../windows/how-to-create-a-classic-com-component-using-wrl.md)<br/>
 演示如何使用 Windows 运行时 c + + 模板库创建基本的 COM 组件和注册和使用 COM 组件从桌面应用程序的基本方法。
 
-[如何：直接实例化 WRL 组件](../windows/how-to-instantiate-wrl-components-directly.md)  
+[如何：直接实例化 WRL 组件](../windows/how-to-instantiate-wrl-components-directly.md)<br/>
 了解如何使用[Microsoft::WRL::Make](../windows/make-function.md)并[Microsoft::WRL::Details::MakeAndInitialize](../windows/makeandinitialize-function.md)函数来实例化其定义的模块中的组件。
 
-[如何：使用 winmdidl.exe 和 midlrt.exe 通过窗口元数据创建 .h 文件](../windows/use-winmdidl-and-midlrt-to-create-h-files-from-windows-metadata.md)  
+[如何：使用 winmdidl.exe 和 midlrt.exe 通过窗口元数据创建 .h 文件](../windows/use-winmdidl-and-midlrt-to-create-h-files-from-windows-metadata.md)<br/>
 演示如何通过从 .winmd 元数据创建 IDL 文件，使用 WRL 中的自定义 Windows 运行时组件。
 
-[演练：使用任务和 XML HTTP 请求进行连接](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)  
+[演练：使用任务和 XML HTTP 请求进行连接](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)<br/>
 演示如何使用[IXMLHTTPRequest2](/previous-versions/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2)并[IXMLHTTPRequest2Callback](/previous-versions/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2callback)接口与任务以将 HTTP GET 和 POST 请求发送到 UWP 应用中的 web 服务结合使用。
 
-[必应地图行程优化器示例](http://code.msdn.microsoft.com/Bing-Maps-trip-optimizer-c4e037f7)  
+[必应地图行程优化器示例](http://code.msdn.microsoft.com/Bing-Maps-trip-optimizer-c4e037f7)<br/>
 使用`HttpRequest`中定义的类[演练： 使用任务和 XML HTTP 请求](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)完整的 UWP 应用的上下文中。
 
-[使用 c + + 示例创建 Windows 运行时 DLL 组件](http://code.msdn.microsoft.com/windowsapps/Creating-a-Windows-Runtime-6c399797)  
+[使用 c + + 示例创建 Windows 运行时 DLL 组件](http://code.msdn.microsoft.com/windowsapps/Creating-a-Windows-Runtime-6c399797)<br/>
 演示如何使用 Windows 运行时 c + + 模板库创建进程内 DLL 组件和使用它从 C + + /cli CX、 JavaScript 和 C#。
 
-[DirectX 大理石迷宫游戏示例](http://code.msdn.microsoft.com/windowsapps/DirectX-Marble-Maze-Game-e4806345)  
+[DirectX 大理石迷宫游戏示例](http://code.msdn.microsoft.com/windowsapps/DirectX-Marble-Maze-Game-e4806345)<br/>
 演示如何使用 Windows 运行时 c + + 模板库来管理 COM 组件，如 DirectX 和媒体基础的一个完整的三维游戏上下文中的生存期。
 
-[从桌面应用程序示例发送 toast 通知](http://code.msdn.microsoft.com/windowsdesktop/Sending-toast-notifications-71e230a2)  
+[从桌面应用程序示例发送 toast 通知](http://code.msdn.microsoft.com/windowsdesktop/Sending-toast-notifications-71e230a2)<br/>
 演示如何使用 Windows 运行时 c + + 模板库以使用从桌面应用的 toast 通知。
 
 ## <a name="windows-runtime-c-template-library-compared-to-atl"></a>Windows 运行时 c + + 模板库与 ATL 比较

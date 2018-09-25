@@ -2,10 +2,10 @@
 title: 在 Visual Studio 2017 中安装 c + + 支持 |Microsoft Docs
 description: 安装 Visual c + + 的 Visual Studio 支持
 ms.custom: mvc
-ms.date: 06/21/2018
+ms.date: 09/17/2018
 ms.topic: tutorial
 ms.technology:
-- devlang-C++
+- cpp-tools
 ms.devlang: C++
 dev_langs:
 - C++
@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3e0fef319fbe119118e3a915a66bea3546bbb9a
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 80e84bb7c81ccd9c3347989e68041125993ee73c
+ms.sourcegitcommit: 92c568e9466ffd7346a4120c478c9bdea61c8756
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45702892"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47029627"
 ---
 # <a name="install-c-support-in-visual-studio"></a>在 Visual Studio 中安装 c + + 支持
 
@@ -37,7 +37,7 @@ ms.locfileid: "45702892"
 
 ## <a name="visual-studio-2015-installation"></a>Visual Studio 2015 安装
 
-若要安装 Visual Studio 2015，请转到[下载较旧版本的 Visual Studio](https://www.visualstudio.com/vs/older-downloads/)。 运行安装程序并选择“自定义安装”，然后选择 C++ 组件。
+若要安装 Visual Studio 2015，请转到[下载较旧版本的 Visual Studio](https://www.visualstudio.com/vs/older-downloads/)。 运行安装程序并选择“自定义安装”，然后选择 C++ 组件。 若要将 c + + 支持添加到现有 Visual Studio 2015 安装，单击 Windows 开始按钮并键入**添加或删除程序**。 从结果列表中打开的程序，然后在已安装的程序列表中找到 Visual Studio 2015 安装。 双击它，然后选择**修改**，然后选择要安装的 Visual c + + 组件。
 
 一般情况下，强烈建议使用 Visual Studio 2017，即使需要使用 Visual Studio 2015 编译器编译代码。 有关详细信息，请参阅 [使用 Visual Studio 中的本机多重目标生成旧项目](../porting/use-native-multi-targeting.md)。
 

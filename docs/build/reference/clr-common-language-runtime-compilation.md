@@ -1,7 +1,7 @@
 ---
 title: -clr （公共语言运行时编译） |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/18/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -23,12 +23,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b46f61ef727c1b283137bb3d537d2dbad416c1d8
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: dcd5739f2fb0663609ce7bcabc920cc3aa20d8e1
+ms.sourcegitcommit: 338e1ddc2f3869d92ba4b73599d35374cf1d5b69
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45703815"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46494408"
 ---
 # <a name="clr-common-language-runtime-compilation"></a>/clr（公共语言运行时编译）
 
@@ -45,15 +45,15 @@ ms.locfileid: "45703815"
 
 - 无
 
-   不带任何选项 **/clr**创建应用程序的元数据。 其他 CLR 应用程序可以使用该元数据，并且该应用程序也可以使用其他 CLR 组件的元数据中的类型和数据。 有关详细信息，请参阅[混合 （本机和托管） 程序集](../../dotnet/mixed-native-and-managed-assemblies.md)并[如何： 迁移到 /clr](../../dotnet/how-to-migrate-to-clr.md)。
+   不带任何选项 **/clr**创建应用程序的元数据。 其他 CLR 应用程序可以使用该元数据，并且该应用程序也可以使用其他 CLR 组件的元数据中的类型和数据。 有关详细信息，请参阅[混合 （本机和托管） 程序集](../../dotnet/mixed-native-and-managed-assemblies.md)。
 
 - **纯**
 
-   **/clr: pure 已弃用**。 未来版本的编译器可能不支持此选项。 建议移植对 C# 来说必须是纯 MSIL 的代码。
+   **/clr: pure 已弃用**。 在 Visual Studio 2017 中删除的选项。 建议移植对 C# 来说必须是纯 MSIL 的代码。
 
 - **安全**
 
-   **/clr: safe 已弃用**。 未来版本的编译器可能不支持此选项。 我们建议你对必须是安全 MSIL C# 的代码进行移植。
+   **/clr: safe 已弃用**。 在 Visual Studio 2017 中删除的选项。 我们建议你对必须是安全 MSIL C# 的代码进行移植。
 
 - **noAssembly**
 
@@ -112,31 +112,6 @@ class {} x;
 ```
 
 使用 ildasm.exe 查看元数据。
-
-## <a name="managed-extensions-for-c"></a>C++ 托管扩展
-
-Visual C++ 不再支持 **/clr:oldsyntax** 选项。 此选项在 Visual Studio 2005 中已弃用。 使用 C++ 编写托管代码所支持的语法是 C++/CLI。 有关更多信息，请参见 [Component Extensions for Runtime Platforms](../../windows/component-extensions-for-runtime-platforms.md)。
-
-如果具有使用 Managed Extensions for C++ 的代码，建议将其移植为使用 C++/CLI 语法。 有关如何移植代码的信息，请参阅 [C++/CLI Migration Primer](../../dotnet/cpp-cli-migration-primer.md)。
-
-#### <a name="to-set-this-compiler-option-in-visual-studio"></a>在 Visual Studio 中设置此编译器选项
-
-1. 在 **“解决方案资源管理器”** 中，右键单击项目名，然后选择 **“属性”** 以打开项目的 **“属性页”** 对话框。
-
-1. 选择**配置属性** > **常规**属性页。
-
-1. 修改**公共语言运行时支持**属性。
-
-   > [!NOTE]
-   > 在“属性页”对话框中启用 **/clr** 时，还将根据需要调整与 **/clr** 不兼容的编译器选项属性。  例如，如果设置了 **/RTC** ，又启用了 **/clr** ，则将关闭 **/RTC** 。
-   >
-   >  此外，调试 **/clr**应用程序中，设置**调试器类型**属性设置为**混合**或者**仅限托管**。 有关详细信息，请参阅[c + + 调试配置的项目设置](/visualstudio/debugger/project-settings-for-a-cpp-debug-configuration)。
-
-   了解如何创建模块，请参阅[/NOASSEMBLY （创建 MSIL 模块）](../../build/reference/noassembly-create-a-msil-module.md)。
-
-#### <a name="to-set-this-compiler-option-programmatically"></a>以编程方式设置此编译器选项
-
-- 请参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.CompileAsManaged%2A>。
 
 ## <a name="see-also"></a>请参阅
 

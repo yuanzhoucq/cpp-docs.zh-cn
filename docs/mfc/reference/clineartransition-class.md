@@ -24,101 +24,113 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 64b53cafc60e556ac142cdaf1f56608e5ab3de70
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 0eb283b40c860df148cb9c193f7b00a05ecb78c6
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43211736"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46395604"
 ---
 # <a name="clineartransition-class"></a>CLinearTransition 类
-封装线性转换。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-class CLinearTransition : public CBaseTransition;  
-```  
-  
-## <a name="members"></a>成员  
-  
-### <a name="public-constructors"></a>公共构造函数  
-  
-|名称|描述|  
-|----------|-----------------|  
-|[CLinearTransition::CLinearTransition](#clineartransition)|构造的线性转换对象并初始化其持续时间和最终值。|  
-  
-### <a name="public-methods"></a>公共方法  
-  
-|名称|描述|  
-|----------|-----------------|  
-|[CLinearTransition::Create](#create)|调用要创建封装的转换 COM 对象的转换库。 (重写[CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create)。)|  
-  
-### <a name="public-data-members"></a>公共数据成员  
-  
-|名称|描述|  
-|----------|-----------------|  
-|[CLinearTransition::m_dblFinalValue](#m_dblfinalvalue)|转换结束时的动画变量的值。|  
-|[CLinearTransition::m_duration](#m_duration)|过渡的持续时间。|  
-  
-## <a name="remarks"></a>备注  
- 在期间线性转换，动画变量的值转换以线性方式从其初始值为指定的最终值。 因为会自动清除所有转换，我们建议分配它们使用新运算符。 封装 IUIAnimationTransition 创建 COM 对象通过 CAnimationController::AnimateGroup，直到它为 NULL。 创建此 COM 对象不起作用之后更改成员变量。  
-  
-## <a name="inheritance-hierarchy"></a>继承层次结构  
- [CObject](../../mfc/reference/cobject-class.md)  
-  
- [CBaseTransition](../../mfc/reference/cbasetransition-class.md)  
-  
- [CLinearTransition](../../mfc/reference/clineartransition-class.md)  
-  
-## <a name="requirements"></a>要求  
- **标头：** afxanimationcontroller.h  
-  
-##  <a name="clineartransition"></a>  CLinearTransition::CLinearTransition  
- 构造的线性转换对象并初始化其持续时间和最终值。  
-  
-```  
+
+封装线性转换。
+
+## <a name="syntax"></a>语法
+
+```
+class CLinearTransition : public CBaseTransition;
+```
+
+## <a name="members"></a>成员
+
+### <a name="public-constructors"></a>公共构造函数
+
+|名称|描述|
+|----------|-----------------|
+|[CLinearTransition::CLinearTransition](#clineartransition)|构造的线性转换对象并初始化其持续时间和最终值。|
+
+### <a name="public-methods"></a>公共方法
+
+|名称|描述|
+|----------|-----------------|
+|[CLinearTransition::Create](#create)|调用要创建封装的转换 COM 对象的转换库。 (重写[CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create)。)|
+
+### <a name="public-data-members"></a>公共数据成员
+
+|名称|描述|
+|----------|-----------------|
+|[CLinearTransition::m_dblFinalValue](#m_dblfinalvalue)|转换结束时的动画变量的值。|
+|[CLinearTransition::m_duration](#m_duration)|过渡的持续时间。|
+
+## <a name="remarks"></a>备注
+
+在期间线性转换，动画变量的值转换以线性方式从其初始值为指定的最终值。 因为会自动清除所有转换，我们建议分配它们使用新运算符。 封装 IUIAnimationTransition 创建 COM 对象通过 CAnimationController::AnimateGroup，直到它为 NULL。 创建此 COM 对象不起作用之后更改成员变量。
+
+## <a name="inheritance-hierarchy"></a>继承层次结构
+
+[CObject](../../mfc/reference/cobject-class.md)
+
+[CBaseTransition](../../mfc/reference/cbasetransition-class.md)
+
+[CLinearTransition](../../mfc/reference/clineartransition-class.md)
+
+## <a name="requirements"></a>要求
+
+**标头：** afxanimationcontroller.h
+
+##  <a name="clineartransition"></a>  CLinearTransition::CLinearTransition
+
+构造的线性转换对象并初始化其持续时间和最终值。
+
+```
 CLinearTransition(
-    UI_ANIMATION_SECONDS duration,  
+    UI_ANIMATION_SECONDS duration,
     DOUBLE dblFinalValue);
-```  
-  
-### <a name="parameters"></a>参数  
- *持续时间*  
- 过渡的持续时间。  
-  
- *dblFinalValue*  
- 转换结束时的动画变量的值。  
-  
-##  <a name="create"></a>  CLinearTransition::Create  
- 调用要创建封装的转换 COM 对象的转换库。  
-  
-```  
+```
+
+### <a name="parameters"></a>参数
+
+*持续时间*<br/>
+过渡的持续时间。
+
+*dblFinalValue*<br/>
+转换结束时的动画变量的值。
+
+##  <a name="create"></a>  CLinearTransition::Create
+
+调用要创建封装的转换 COM 对象的转换库。
+
+```
 virtual BOOL Create(
-    IUIAnimationTransitionLibrary* pLibrary,  
+    IUIAnimationTransitionLibrary* pLibrary,
     IUIAnimationTransitionFactory* \*not used*\);
-```  
-  
-### <a name="parameters"></a>参数  
-*pLibrary*  
- 一个指向[IUIAnimationTransitionLibrary 接口](/windows/desktop/api/uianimation/nn-uianimation-iuianimationtransitionlibrary)，用于定义的标准转换库。  
-  
-### <a name="return-value"></a>返回值  
- 如果成功，则创建转换，则返回 TRUE否则为 FALSE。  
-  
-##  <a name="m_dblfinalvalue"></a>  CLinearTransition::m_dblFinalValue  
- 转换结束时的动画变量的值。  
-  
-```  
-DOUBLE m_dblFinalValue;  
-```  
-  
-##  <a name="m_duration"></a>  CLinearTransition::m_duration  
- 过渡的持续时间。  
-  
-```  
-UI_ANIMATION_SECONDS m_duration;  
-```  
-  
-## <a name="see-also"></a>请参阅  
- [类](../../mfc/reference/mfc-classes.md)
+```
+
+### <a name="parameters"></a>参数
+
+*pLibrary*<br/>
+一个指向[IUIAnimationTransitionLibrary 接口](/windows/desktop/api/uianimation/nn-uianimation-iuianimationtransitionlibrary)，用于定义的标准转换库。
+
+### <a name="return-value"></a>返回值
+
+如果成功，则创建转换，则返回 TRUE否则为 FALSE。
+
+##  <a name="m_dblfinalvalue"></a>  CLinearTransition::m_dblFinalValue
+
+转换结束时的动画变量的值。
+
+```
+DOUBLE m_dblFinalValue;
+```
+
+##  <a name="m_duration"></a>  CLinearTransition::m_duration
+
+过渡的持续时间。
+
+```
+UI_ANIMATION_SECONDS m_duration;
+```
+
+## <a name="see-also"></a>请参阅
+
+[类](../../mfc/reference/mfc-classes.md)

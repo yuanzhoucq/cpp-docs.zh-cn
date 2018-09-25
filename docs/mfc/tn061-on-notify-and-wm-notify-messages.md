@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d2f1259227fa8d27778dbf0e40b13f5460b7041
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 2395cb7b1f3d719fd64494ee9b9c7c64ba222bac
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43218780"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46381824"
 ---
 # <a name="tn061-onnotify-and-wmnotify-messages"></a>TN061：ON_NOTIFY 和 WM_NOTIFY 消息
 
@@ -104,14 +104,14 @@ ON_NOTIFY(wNotifyCode, id, memberFxn)
 
 参数的位置是：
 
-*wNotifyCode*  
- 通知消息来处理，例如 LVN_KEYDOWN 的代码。
+*wNotifyCode*<br/>
+通知消息来处理，例如 LVN_KEYDOWN 的代码。
 
-*id*  
- 为其发送通知的控件子标识符。
+*id*<br/>
+为其发送通知的控件子标识符。
 
-*memberFxn*  
- 要发送此通知时调用的成员函数。
+*memberFxn*<br/>
+要发送此通知时调用的成员函数。
 
 必须使用以下原型声明成员函数：
 
@@ -121,11 +121,11 @@ afx_msg void memberFxn(NMHDR* pNotifyStruct, LRESULT* result);
 
 参数的位置是：
 
-*pNotifyStruct*  
- 指向通知结构，如上面的部分中所述的指针。
+*pNotifyStruct*<br/>
+指向通知结构，如上面的部分中所述的指针。
 
-*结果*  
- 您将设置指向结果代码的步骤，再返回。
+*结果*<br/>
+您将设置指向结果代码的步骤，再返回。
 
 ## <a name="example"></a>示例
 
@@ -141,7 +141,7 @@ ON_NOTIFY(LVN_KEYDOWN, IDC_LIST1, OnKeydownList1)
 void CMessageReflectionDlg::OnKeydownList1(NMHDR* pNMHDR, LRESULT* pResult)
 {
     LV_KEYDOWN* pLVKeyDow = (LV_KEYDOWN*)pNMHDR;
-    
+
     // TODO: Add your control notification handler
     //       code here
 
@@ -167,17 +167,17 @@ ON_NOTIFY_RANGE(wNotifyCode, id, idLast, memberFxn)
 
 参数的位置是：
 
-*wNotifyCode*  
- 通知消息来处理，例如 LVN_KEYDOWN 的代码。
+*wNotifyCode*<br/>
+通知消息来处理，例如 LVN_KEYDOWN 的代码。
 
-*id*  
- 在连续范围的标识符中第一个标识符。
+*id*<br/>
+在连续范围的标识符中第一个标识符。
 
-*idLast*  
- 在连续范围的标识符中的最后一个标识符。
+*idLast*<br/>
+在连续范围的标识符中的最后一个标识符。
 
-*memberFxn*  
- 要发送此通知时调用的成员函数。
+*memberFxn*<br/>
+要发送此通知时调用的成员函数。
 
 必须使用以下原型声明成员函数：
 
@@ -187,14 +187,14 @@ afx_msg void memberFxn(UINT id, NMHDR* pNotifyStruct, LRESULT* result);
 
 参数的位置是：
 
-*id*  
- 向你发送通知的控件子标识符。
+*id*<br/>
+向你发送通知的控件子标识符。
 
-*pNotifyStruct*  
- 指向通知结构，如上文所述的指针。
+*pNotifyStruct*<br/>
+指向通知结构，如上文所述的指针。
 
-*结果*  
- 您将设置指向结果代码的步骤，再返回。
+*结果*<br/>
+您将设置指向结果代码的步骤，再返回。
 
 ##  <a name="_mfcnotes_tn061_on_notify_ex.2c_.on_notify_ex_range"></a> ON_NOTIFY_EX ON_NOTIFY_EX_RANGE
 
@@ -221,5 +221,5 @@ afx_msg BOOL memberFxn(UINT id, NMHDR* pNotifyStruct, LRESULT* result);
 
 ## <a name="see-also"></a>请参阅
 
-[按编号列出的技术说明](../mfc/technical-notes-by-number.md)  
-[按类别列出的技术说明](../mfc/technical-notes-by-category.md)  
+[按编号列出的技术说明](../mfc/technical-notes-by-number.md)<br/>
+[按类别列出的技术说明](../mfc/technical-notes-by-category.md)

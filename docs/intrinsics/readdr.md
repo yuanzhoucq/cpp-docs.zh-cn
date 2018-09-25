@@ -16,43 +16,48 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d5cabbd1d779de4c6c081b57b8f241d9fa92f62
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: dffb51782e87903feaeb733765fcf9f4763a64f6
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45709054"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46385139"
 ---
 # <a name="readdr"></a>__readdr
-读取指定的调试寄存器的值。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-unsigned         __readdr(unsigned int DebugRegister);  
-unsigned __int64 __readdr(unsigned int DebugRegister);  
-```  
-  
-#### <a name="parameters"></a>参数  
+
+读取指定的调试寄存器的值。
+
+## <a name="syntax"></a>语法
+
+```
+unsigned         __readdr(unsigned int DebugRegister);
+unsigned __int64 __readdr(unsigned int DebugRegister);
+```
+
+#### <a name="parameters"></a>参数
+
 *DebugRegister*<br/>
-[in]从 0 到 7 标识调试常量注册。  
-  
-## <a name="return-value"></a>返回值  
- 指定的调试寄存器的值。  
-  
-## <a name="remarks"></a>备注  
- 这些内部函数仅在内核模式中可用，例程只能用作内部函数。  
-  
-## <a name="requirements"></a>要求  
-  
-|内部函数|体系结构|  
-|---------------|------------------|  
-|`__readdr`|x86、x64|  
-  
- **标头文件** \<intrin.h >  
-  
-**结束 Microsoft 专用**  
-  
-## <a name="see-also"></a>请参阅  
- [编译器内部函数](../intrinsics/compiler-intrinsics.md)   
- [__readeflags](../intrinsics/readeflags.md)
+[in]从 0 到 7 标识调试常量注册。
+
+## <a name="return-value"></a>返回值
+
+指定的调试寄存器的值。
+
+## <a name="remarks"></a>备注
+
+这些内部函数仅在内核模式中可用，例程只能用作内部函数。
+
+## <a name="requirements"></a>要求
+
+|内部函数|体系结构|
+|---------------|------------------|
+|`__readdr`|x86、x64|
+
+**标头文件** \<intrin.h >
+
+**结束 Microsoft 专用**
+
+## <a name="see-also"></a>请参阅
+
+[编译器内部函数](../intrinsics/compiler-intrinsics.md)<br/>
+[__readeflags](../intrinsics/readeflags.md)

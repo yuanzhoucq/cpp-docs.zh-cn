@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 95875eaea7206cbfb4ded271e329f10d7aee13fe
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a40ad39b089ea68209bfef2997f015c355ca6893
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43221886"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46414038"
 ---
 # <a name="entry"></a>entry
 
@@ -38,7 +38,7 @@ ms.locfileid: "43221886"
 
 ### <a name="parameters"></a>参数
 
-*id*  
+*id*<br/>
 入口点的 ID。
 
 ## <a name="remarks"></a>备注

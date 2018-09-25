@@ -33,12 +33,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 08347b4ccfa44d8645acc2bd5e96775bab4e7740
-ms.sourcegitcommit: 87d317ac62620c606464d860aaa9e375a91f4c99
+ms.openlocfilehash: cd9ab28ccce14c5ac0975b7050588ee6524cfcc9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45601491"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46408344"
 ---
 # <a name="eventsource-class"></a>EventSource 类
 
@@ -53,7 +53,7 @@ class EventSource;
 
 ### <a name="parameters"></a>参数
 
-*TDelegateInterface*  
+*TDelegateInterface*<br/>
 一个委托，表示一个事件处理程序接口。
 
 ## <a name="members"></a>成员
@@ -104,10 +104,10 @@ HRESULT Add(
 
 ### <a name="parameters"></a>参数
 
-*delegateInterface*  
+*delegateInterface*<br/>
 为委托对象，表示事件处理程序的接口。
 
-*令牌*  
+*令牌*<br/>
 此操作完成后，表示该事件的句柄。 使用此令牌作为参数[Remove()](#remove)方法，丢弃的事件处理程序。
 
 ### <a name="return-value"></a>返回值
@@ -302,64 +302,64 @@ void InvokeAll(
 
 ### <a name="parameters"></a>参数
 
-*T0*  
+*T0*<br/>
 第零个事件处理程序自变量的类型。
 
-T1  
+T1<br/>
 第一个事件处理程序自变量的类型。
 
-T2  
+T2<br/>
 第二个事件处理程序自变量的类型。
 
-*T3*  
+*T3*<br/>
 第三个事件处理程序自变量的类型。
 
-*T4*  
+*T4*<br/>
 第四个事件处理程序自变量的类型。
 
-*T5*  
+*T5*<br/>
 第五个事件处理程序自变量的类型。
 
-*T6*  
+*T6*<br/>
 第六个事件处理程序自变量的类型。
 
-*T7*  
+*T7*<br/>
 第七个事件处理程序自变量的类型。
 
-*T8*  
+*T8*<br/>
 第八个事件处理程序自变量的类型。
 
-*T9*  
+*T9*<br/>
 第九个事件处理程序自变量的类型。
 
-*arg0*  
+*arg0*<br/>
 第零个事件处理程序自变量。
 
-*arg1*  
+*arg1*<br/>
 第一个事件处理程序自变量。
 
-*Arg2*  
+*Arg2*<br/>
 第二个事件处理程序自变量。
 
-*arg3*  
+*arg3*<br/>
 第三个事件处理程序自变量。
 
-*了 arg4*  
+*了 arg4*<br/>
 第四个事件处理程序自变量。
 
-*arg5*  
+*arg5*<br/>
 第五个事件处理程序自变量。
 
-*了 arg6*  
+*了 arg6*<br/>
 第六个事件处理程序自变量。
 
-*arg7*  
+*arg7*<br/>
 第七事件处理程序自变量。
 
-*arg8*  
+*arg8*<br/>
 第八个事件处理程序自变量。
 
-*arg9*  
+*arg9*<br/>
 第九个事件处理程序自变量。
 
 ## <a name="remove"></a>Eventsource:: Remove
@@ -374,7 +374,7 @@ HRESULT Remove(
 
 ### <a name="parameters"></a>参数
 
-*令牌*  
+*令牌*<br/>
 一个表示事件处理程序的句柄。 此令牌已由注册事件处理程序时返回[add （)](#add)方法。
 
 ### <a name="return-value"></a>返回值

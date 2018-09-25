@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 980058c588e02751113b889d44cf0bb5f69066f1
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: b693d83872ca1c918c97e47f75c89f788748353c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42538387"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46375898"
 ---
 # <a name="preprocessor"></a>预处理器
 预处理器是将源文件的文本作为翻译的第一阶段操作的文本处理器。 预处理器不会分析源文本，但会为了查找宏调用而将源文本细分为标记。 尽管编译器一般会在其第一个传递中调用预处理器，但还是可以为了在不进行编译的情况下处理文本而单独调用预处理器。  
@@ -48,5 +48,5 @@ ms.locfileid: "42538387"
   
 ## <a name="see-also"></a>请参阅  
  
-[C/c + + 预处理器参考](../preprocessor/c-cpp-preprocessor-reference.md)   
+[C/C++ 预处理器参考](../preprocessor/c-cpp-preprocessor-reference.md)<br/>
 [转换阶段](../preprocessor/phases-of-translation.md)

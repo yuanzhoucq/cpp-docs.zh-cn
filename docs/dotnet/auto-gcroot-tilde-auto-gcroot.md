@@ -1,5 +1,5 @@
 ---
-title: 'auto_gcroot:: ~ auto_gcroot |Microsoft 文档'
+title: 'auto_gcroot:: ~ auto_gcroot |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,66 +21,70 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: f0e99c7e99e8c6c68996ceea4d4a8120f6e048ca
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 64a1548af10ec777f77cd95e1aeaa9c712c31565
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33102418"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46415780"
 ---
 # <a name="autogcrootautogcroot"></a>auto_gcroot::~auto_gcroot
-`auto_gcroot`析构函数。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-~auto_gcroot();  
-```  
-  
-## <a name="remarks"></a>备注  
- 析构函数也 destructs 拥有的对象。  
-  
-## <a name="example"></a>示例  
-  
-```  
-// msl_auto_gcroot_dtor.cpp  
-// compile with: /clr  
-#include <msclr\auto_gcroot.h>  
-  
-using namespace System;  
-using namespace msclr;  
-  
-ref class ClassA {  
-public:  
-   ClassA() { Console::WriteLine( "ClassA constructor" ); }  
-   ~ClassA() { Console::WriteLine( "ClassA destructor" ); }  
-};  
-  
-int main()  
-{  
-   // create a new scope for a:  
-   {  
-      auto_gcroot<ClassA^> a = gcnew ClassA;  
-   }  
-   // a goes out of scope here, invoking its destructor  
-   // which in turns destructs the ClassA object.  
-  
-   Console::WriteLine( "done" );  
-}  
-```  
-  
-```Output  
-ClassA constructor  
-ClassA destructor  
-done  
-```  
-  
-## <a name="requirements"></a>要求  
- **标头文件** \<msclr\auto_gcroot.h >  
-  
- **Namespace** msclr  
-  
-## <a name="see-also"></a>请参阅  
- [auto_gcroot 成员](../dotnet/auto-gcroot-members.md)   
- [auto_gcroot::release](../dotnet/auto-gcroot-release.md)   
- [auto_gcroot::auto_gcroot](../dotnet/auto-gcroot-auto-gcroot.md)
+
+`auto_gcroot`析构函数。
+
+## <a name="syntax"></a>语法
+
+```
+~auto_gcroot();
+```
+
+## <a name="remarks"></a>备注
+
+析构函数也 destructs 拥有的对象。
+
+## <a name="example"></a>示例
+
+```
+// msl_auto_gcroot_dtor.cpp
+// compile with: /clr
+#include <msclr\auto_gcroot.h>
+
+using namespace System;
+using namespace msclr;
+
+ref class ClassA {
+public:
+   ClassA() { Console::WriteLine( "ClassA constructor" ); }
+   ~ClassA() { Console::WriteLine( "ClassA destructor" ); }
+};
+
+int main()
+{
+   // create a new scope for a:
+   {
+      auto_gcroot<ClassA^> a = gcnew ClassA;
+   }
+   // a goes out of scope here, invoking its destructor
+   // which in turns destructs the ClassA object.
+
+   Console::WriteLine( "done" );
+}
+```
+
+```Output
+ClassA constructor
+ClassA destructor
+done
+```
+
+## <a name="requirements"></a>要求
+
+**标头文件** \<msclr\auto_gcroot.h >
+
+**Namespace** msclr
+
+## <a name="see-also"></a>请参阅
+
+[auto_gcroot 成员](../dotnet/auto-gcroot-members.md)<br/>
+[auto_gcroot::release](../dotnet/auto-gcroot-release.md)<br/>
+[auto_gcroot::auto_gcroot](../dotnet/auto-gcroot-auto-gcroot.md)

@@ -34,191 +34,209 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ca3af6aba4c208672038de2ca663efdb2cc9d9a
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: dc4a6ee892c70a53e28031ff8dd9ef874d252a86
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45700929"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46380864"
 ---
 # <a name="cmenutearoffmanager-class"></a>CMenuTearOffManager 类
-管理可拖曳菜单。 可拖曳菜单是菜单栏上的菜单。 用户可以从菜单栏移开可拖曳菜单，从而使可拖拽菜单浮动。  
-  
-   有关更多详细信息，请参阅中的源代码**VC\\atlmfc\\src\\mfc**的 Visual Studio 安装文件夹。  
-   
-## <a name="syntax"></a>语法  
-  
-```  
-class CMenuTearOffManager : public CObject  
-```  
-  
-## <a name="members"></a>成员  
-  
-### <a name="public-constructors"></a>公共构造函数  
-  
-|名称|描述|  
-|----------|-----------------|  
-|[CMenuTearOffManager::CMenuTearOffManager](#cmenutearoffmanager)|构造 `CMenuTearOffManager` 对象。|  
-  
-### <a name="public-methods"></a>公共方法  
-  
-|名称|描述|  
-|----------|-----------------|  
-|[CMenuTearOffManager::Build](#build)||  
-|[CMenuTearOffManager::GetRegPath](#getregpath)||  
-|[CMenuTearOffManager::Initialize](#initialize)|初始化`CMenuTearOffManager`对象。|  
-|[CMenuTearOffManager::IsDynamicID](#isdynamicid)||  
-|[CMenuTearOffManager::Parse](#parse)||  
-|[CMenuTearOffManager::Reset](#reset)||  
-|[CMenuTearOffManager::SetInUse](#setinuse)||  
-|[CMenuTearOffManager::SetupTearOffMenus](#setuptearoffmenus)||  
-  
-## <a name="remarks"></a>备注  
- 为了在您的应用程序中使用拖曳菜单，您必须具有`CMenuTearOffManager`对象。 在大多数情况下，不会创建或初始化`CMenuTearOffManager`直接对象。 这在调用时为您处理[CWinAppEx::EnableTearOffMenus](../../mfc/reference/cwinappex-class.md#enabletearoffmenus)函数。  
-  
-## <a name="example"></a>示例  
- 下面的示例演示如何构造和初始化`CMenuTearOffManager`对象通过调用`CWinAppEX::EnableTearOffMenus`方法。 此代码片段属于 [Word Pad 示例](../../visual-cpp-samples.md)。  
-  
- [!code-cpp[NVC_MFC_WordPad#12](../../mfc/reference/codesnippet/cpp/cmenutearoffmanager-class_1.cpp)]  
-  
-## <a name="inheritance-hierarchy"></a>继承层次结构  
- [CObject](../../mfc/reference/cobject-class.md)  
-  
- `CMenuTearOffManager`   
-  
-## <a name="requirements"></a>要求  
- **标头：** afxmenutearoffmanager.h  
-  
-##  <a name="build"></a>  CMenuTearOffManager::Build  
 
-  
-```  
+管理可拖曳菜单。 可拖曳菜单是菜单栏上的菜单。 用户可以从菜单栏移开可拖曳菜单，从而使可拖拽菜单浮动。
+
+   有关更多详细信息，请参阅中的源代码**VC\\atlmfc\\src\\mfc**的 Visual Studio 安装文件夹。
+
+## <a name="syntax"></a>语法
+
+```
+class CMenuTearOffManager : public CObject
+```
+
+## <a name="members"></a>成员
+
+### <a name="public-constructors"></a>公共构造函数
+
+|名称|描述|
+|----------|-----------------|
+|[CMenuTearOffManager::CMenuTearOffManager](#cmenutearoffmanager)|构造 `CMenuTearOffManager` 对象。|
+
+### <a name="public-methods"></a>公共方法
+
+|名称|描述|
+|----------|-----------------|
+|[CMenuTearOffManager::Build](#build)||
+|[CMenuTearOffManager::GetRegPath](#getregpath)||
+|[CMenuTearOffManager::Initialize](#initialize)|初始化`CMenuTearOffManager`对象。|
+|[CMenuTearOffManager::IsDynamicID](#isdynamicid)||
+|[CMenuTearOffManager::Parse](#parse)||
+|[CMenuTearOffManager::Reset](#reset)||
+|[CMenuTearOffManager::SetInUse](#setinuse)||
+|[CMenuTearOffManager::SetupTearOffMenus](#setuptearoffmenus)||
+
+## <a name="remarks"></a>备注
+
+为了在您的应用程序中使用拖曳菜单，您必须具有`CMenuTearOffManager`对象。 在大多数情况下，不会创建或初始化`CMenuTearOffManager`直接对象。 这在调用时为您处理[CWinAppEx::EnableTearOffMenus](../../mfc/reference/cwinappex-class.md#enabletearoffmenus)函数。
+
+## <a name="example"></a>示例
+
+下面的示例演示如何构造和初始化`CMenuTearOffManager`对象通过调用`CWinAppEX::EnableTearOffMenus`方法。 此代码片段属于 [Word Pad 示例](../../visual-cpp-samples.md)。
+
+[!code-cpp[NVC_MFC_WordPad#12](../../mfc/reference/codesnippet/cpp/cmenutearoffmanager-class_1.cpp)]
+
+## <a name="inheritance-hierarchy"></a>继承层次结构
+
+[CObject](../../mfc/reference/cobject-class.md)
+
+`CMenuTearOffManager`
+
+## <a name="requirements"></a>要求
+
+**标头：** afxmenutearoffmanager.h
+
+##  <a name="build"></a>  CMenuTearOffManager::Build
+
+
+```
 void Build(
-    UINT uiTearOffBarID,  
+    UINT uiTearOffBarID,
     CString& strText);
-```  
-  
-### <a name="parameters"></a>参数  
+```
+
+### <a name="parameters"></a>参数
+
 *uiTearOffBarID*<br/>
-[in][in]*strText*  
-  
-### <a name="remarks"></a>备注  
-  
-##  <a name="cmenutearoffmanager"></a>  CMenuTearOffManager::CMenuTearOffManager  
- 构造[CMenuTearOffManager](../../mfc/reference/cmenutearoffmanager-class.md)对象。  
-  
-```  
+[in][in]*strText*
+
+### <a name="remarks"></a>备注
+
+##  <a name="cmenutearoffmanager"></a>  CMenuTearOffManager::CMenuTearOffManager
+
+构造[CMenuTearOffManager](../../mfc/reference/cmenutearoffmanager-class.md)对象。
+
+```
 CMenuTearOffManager();
-```  
-  
-### <a name="remarks"></a>备注  
- 在大多数情况下，不应创建`CMenuTearOffManager`手动。 你的应用程序框架创建`CMenuTearOffManager`对象在调用时[CWinAppEx::EnableTearOffMenus](../../mfc/reference/cwinappex-class.md#enabletearoffmenus)。  
-  
-##  <a name="getregpath"></a>  CMenuTearOffManager::GetRegPath  
+```
 
-  
-```  
-LPCTSTR GetRegPath() const;  
-```  
-  
-### <a name="return-value"></a>返回值  
-  
-### <a name="remarks"></a>备注  
-  
-##  <a name="initialize"></a>  CMenuTearOffManager::Initialize  
- 初始化[CMenuTearOffManager](../../mfc/reference/cmenutearoffmanager-class.md)对象。  
-  
-```  
+### <a name="remarks"></a>备注
+
+在大多数情况下，不应创建`CMenuTearOffManager`手动。 你的应用程序框架创建`CMenuTearOffManager`对象在调用时[CWinAppEx::EnableTearOffMenus](../../mfc/reference/cwinappex-class.md#enabletearoffmenus)。
+
+##  <a name="getregpath"></a>  CMenuTearOffManager::GetRegPath
+
+
+```
+LPCTSTR GetRegPath() const;
+```
+
+### <a name="return-value"></a>返回值
+
+### <a name="remarks"></a>备注
+
+##  <a name="initialize"></a>  CMenuTearOffManager::Initialize
+
+初始化[CMenuTearOffManager](../../mfc/reference/cmenutearoffmanager-class.md)对象。
+
+```
 BOOL Initialize(
-    LPCTSTR lpszRegEntry,  
-    UINT uiTearOffMenuFirst,  
+    LPCTSTR lpszRegEntry,
+    UINT uiTearOffMenuFirst,
     UINT uiTearOffMenuLast);
-```  
-  
-### <a name="parameters"></a>参数  
+```
+
+### <a name="parameters"></a>参数
+
 *lpszRegEntry*<br/>
-[in]一个字符串，包含注册表项的路径。 您的应用程序在此注册表项中存储的分离式条形图的设置。  
-  
+[in]一个字符串，包含注册表项的路径。 您的应用程序在此注册表项中存储的分离式条形图的设置。
+
 *uiTearOffMenuFirst*<br/>
-[in]分离式菜单第一个菜单 ID。  
-  
+[in]分离式菜单第一个菜单 ID。
+
 *uiTearOffMenuLast*<br/>
-[in]分离式菜单最后一个菜单 ID。  
-  
-### <a name="return-value"></a>返回值  
- 如果成功，则不为 0；否则为 0。  
-  
-### <a name="remarks"></a>备注  
- 从菜单 Id 的范围*uiTearOffMenuFirst*到*uiTearOffMenuLast*必须是连续的时间间隔。 间隔用于定义可以出现在应用程序中同时拖曳菜单数。  
-  
-##  <a name="isdynamicid"></a>  CMenuTearOffManager::IsDynamicID  
+[in]分离式菜单最后一个菜单 ID。
 
-  
-```  
-BOOL IsDynamicID(UINT uiID) const;  
-```  
-  
-### <a name="parameters"></a>参数  
- [in]*uiID*  
-  
-### <a name="return-value"></a>返回值  
-  
-### <a name="remarks"></a>备注  
-  
-##  <a name="parse"></a>  CMenuTearOffManager::Parse  
+### <a name="return-value"></a>返回值
 
-  
-```  
+如果成功，则不为 0；否则为 0。
+
+### <a name="remarks"></a>备注
+
+从菜单 Id 的范围*uiTearOffMenuFirst*到*uiTearOffMenuLast*必须是连续的时间间隔。 间隔用于定义可以出现在应用程序中同时拖曳菜单数。
+
+##  <a name="isdynamicid"></a>  CMenuTearOffManager::IsDynamicID
+
+
+```
+BOOL IsDynamicID(UINT uiID) const;
+```
+
+### <a name="parameters"></a>参数
+
+[in]*uiID*
+
+### <a name="return-value"></a>返回值
+
+### <a name="remarks"></a>备注
+
+##  <a name="parse"></a>  CMenuTearOffManager::Parse
+
+
+```
 UINT Parse(CString& str);
-```  
-  
-### <a name="parameters"></a>参数  
- [in]*str*  
-  
-### <a name="return-value"></a>返回值  
-  
-### <a name="remarks"></a>备注  
-  
-##  <a name="reset"></a>  CMenuTearOffManager::Reset  
+```
 
-  
-```  
+### <a name="parameters"></a>参数
+
+[in]*str*
+
+### <a name="return-value"></a>返回值
+
+### <a name="remarks"></a>备注
+
+##  <a name="reset"></a>  CMenuTearOffManager::Reset
+
+
+```
 void Reset(HMENU hmenu);
-```  
-  
-### <a name="parameters"></a>参数  
- [in]*hmenu*  
-  
-### <a name="remarks"></a>备注  
-  
-##  <a name="setinuse"></a>  CMenuTearOffManager::SetInUse  
+```
 
-  
-```  
+### <a name="parameters"></a>参数
+
+[in]*hmenu*
+
+### <a name="remarks"></a>备注
+
+##  <a name="setinuse"></a>  CMenuTearOffManager::SetInUse
+
+
+```
 void SetInUse(
-    UINT uiCmdId,  
+    UINT uiCmdId,
     BOOL bUse = TRUE);
-```  
-  
-### <a name="parameters"></a>参数  
-*uiCmdId*<br/>
-[in][in]*bUse*  
-  
-### <a name="remarks"></a>备注  
-  
-##  <a name="setuptearoffmenus"></a>  CMenuTearOffManager::SetupTearOffMenus  
+```
 
-  
-```  
+### <a name="parameters"></a>参数
+
+*uiCmdId*<br/>
+[in][in]*bUse*
+
+### <a name="remarks"></a>备注
+
+##  <a name="setuptearoffmenus"></a>  CMenuTearOffManager::SetupTearOffMenus
+
+
+```
 void SetupTearOffMenus(HMENU hMenu);
-```  
-  
-### <a name="parameters"></a>参数  
- [in]*hMenu*  
-  
-### <a name="remarks"></a>备注  
-  
-## <a name="see-also"></a>请参阅  
- [层次结构图表](../../mfc/hierarchy-chart.md)   
- [类](../../mfc/reference/mfc-classes.md)   
- [CWinAppEx 类](../../mfc/reference/cwinappex-class.md)
+```
+
+### <a name="parameters"></a>参数
+
+[in]*hMenu*
+
+### <a name="remarks"></a>备注
+
+## <a name="see-also"></a>请参阅
+
+[层次结构图](../../mfc/hierarchy-chart.md)<br/>
+[类](../../mfc/reference/mfc-classes.md)<br/>
+[CWinAppEx 类](../../mfc/reference/cwinappex-class.md)

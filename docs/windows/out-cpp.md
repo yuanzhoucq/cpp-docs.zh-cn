@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 88e5960b4f809b9c0a43e10fa8fbb69544c9d9bc
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 1b90222faedf298f75bfea72c661a3f23f26eaed
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43194912"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46394865"
 ---
 # <a name="out-c"></a>out (C++)
 
@@ -57,7 +57,7 @@ ms.locfileid: "43194912"
 
 ## <a name="see-also"></a>请参阅
 
-[IDL 特性](../windows/idl-attributes.md)  
-[参数特性](../windows/parameter-attributes.md)  
-[defaultvalue](../windows/defaultvalue.md)  
+[IDL 特性](../windows/idl-attributes.md)<br/>
+[参数特性](../windows/parameter-attributes.md)<br/>
+[defaultvalue](../windows/defaultvalue.md)<br/>
 [id](../windows/id.md)  

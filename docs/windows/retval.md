@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7ff83b156054774a06a371e7832dc73dc95a579c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6e10d147702908eff5dcdd8889f588030dcffbce
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43221253"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46384853"
 ---
 # <a name="retval"></a>retval
 
@@ -59,6 +59,6 @@ ms.locfileid: "43221253"
 
 ## <a name="see-also"></a>请参阅
 
-[IDL 特性](../windows/idl-attributes.md)  
-[参数特性](../windows/parameter-attributes.md)  
+[IDL 特性](../windows/idl-attributes.md)<br/>
+[参数特性](../windows/parameter-attributes.md)<br/>
 [方法特性](../windows/method-attributes.md)  

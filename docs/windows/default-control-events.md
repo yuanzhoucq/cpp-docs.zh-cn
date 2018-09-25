@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7a57cb6c72d7d444c345140f4a738a3d4a3232c0
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 95c3d15414dbb312c60029a86707c1d32df56adc
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315608"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46405510"
 ---
 # <a name="default-control-events"></a>默认控件事件
 
@@ -63,9 +63,9 @@ Win32
 
 ## <a name="see-also"></a>请参阅
 
-[定义对话框控件的成员变量](../windows/defining-member-variables-for-dialog-controls.md)  
-[与用户界面对象关联的消息类型](../mfc/reference/message-types-associated-with-user-interface-objects.md)  
-[编辑消息处理程序](../mfc/reference/editing-a-message-handler.md)  
-[为反射消息定义消息处理程序](../mfc/reference/defining-a-message-handler-for-a-reflected-message.md)  
-[声明基于新控件类的变量](../mfc/reference/declaring-a-variable-based-on-your-new-control-class.md)  
+[定义对话框控件的成员变量](../windows/defining-member-variables-for-dialog-controls.md)<br/>
+[与用户界面对象关联的消息类型](../mfc/reference/message-types-associated-with-user-interface-objects.md)<br/>
+[编辑消息处理程序](../mfc/reference/editing-a-message-handler.md)<br/>
+[为反射消息定义消息处理程序](../mfc/reference/defining-a-message-handler-for-a-reflected-message.md)<br/>
+[声明基于新控件类的变量](../mfc/reference/declaring-a-variable-based-on-your-new-control-class.md)<br/>
 [重写虚函数](../ide/overriding-a-virtual-function-visual-cpp.md)

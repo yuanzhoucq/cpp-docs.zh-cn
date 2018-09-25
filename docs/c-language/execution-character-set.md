@@ -16,15 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e76adb397c9131bbaa7c2c40124de31348c56a31
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c074ddd193765029a2925e1a98c4ab1787f9a82a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32382820"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082672"
 ---
 # <a name="execution-character-set"></a>执行字符集
-此内容通常指“执行字符集”。 执行字符集不一定与用于编写 C 程序的源字符集相同。 执行字符集包含源字符集中的所有字符以及 null 字符、换行符、退格符、水平制表符、垂直制表符、回车和转义序列。 源和执行字符集在其他实现中可能不同。  
-  
-## <a name="see-also"></a>请参阅  
- [C 字符常量](../c-language/c-character-constants.md)
+
+此内容通常指“执行字符集”。 执行字符集不一定与用于编写 C 程序的源字符集相同。 执行字符集包含源字符集中的所有字符以及 null 字符、换行符、退格符、水平制表符、垂直制表符、回车和转义序列。 源和执行字符集在其他实现中可能不同。
+
+## <a name="see-also"></a>请参阅
+
+[C 字符常量](../c-language/c-character-constants.md)

@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c2ac6d8722bcdfed06ae97508b0ca7e5bb8ea00a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ebebe0bbceafe82c41ec99b2532c965670776127
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42601447"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46426388"
 ---
 # <a name="activateinstance-function"></a>ActivateInstance 函数
 
@@ -41,13 +41,13 @@ inline HRESULT ActivateInstance(
 
 ### <a name="parameters"></a>参数
 
-*T*  
+*T*<br/>
 要激活的类型。
 
-*activatableClassId*  
+*activatableClassId*<br/>
 定义参数的类 ID 的名称*T*。
 
-*实例*  
+*实例*<br/>
 此操作完成后，对的实例的引用*T*。
 
 ## <a name="return-value"></a>返回值

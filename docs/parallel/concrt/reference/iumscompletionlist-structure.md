@@ -1,5 +1,5 @@
 ---
-title: IUMSCompletionList 结构 |Microsoft 文档
+title: IUMSCompletionList 结构 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,55 +18,63 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ee957355510a2f62f5317d330403dc246ee8f2e
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: aabab7a127fdc072b8d3863a53c02e20139afc5a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33687070"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46433682"
 ---
 # <a name="iumscompletionlist-structure"></a>IUMSCompletionList 结构
-表示 UMS 完成列表。 UMS 线程阻止时，将分派计划程序的指定计划上下文，以便决定原始线程被阻止时，在基础虚拟处理器根上计划哪些内容。 如果原始线程解除阻止，则操作系统将它排队到完成列表，该列表可以通过此接口访问。 计划程序可以在指定计划上下文中或其搜索工作的任何其他位置查询完成列表。  
-  
-## <a name="syntax"></a>语法  
-  
+
+表示 UMS 完成列表。 UMS 线程阻止时，将分派计划程序的指定计划上下文，以便决定原始线程被阻止时，在基础虚拟处理器根上计划哪些内容。 如果原始线程解除阻止，则操作系统将它排队到完成列表，该列表可以通过此接口访问。 计划程序可以在指定计划上下文中或其搜索工作的任何其他位置查询完成列表。
+
+## <a name="syntax"></a>语法
+
 ```
 struct IUMSCompletionList;
-```  
-  
-## <a name="members"></a>成员  
-  
-### <a name="public-methods"></a>公共方法  
-  
-|名称|描述|  
-|----------|-----------------|  
-|[IUMSCompletionList::GetUnblockNotifications](#getunblocknotifications)|检索的链`IUMSUnblockNotification`表示其相关联的线程代理已解除阻止，因为上一次此方法调用的执行上下文的接口。|  
-  
-## <a name="remarks"></a>备注  
- 计划程序必须要格外小心利用此接口可取消排队从完成列表项后要执行的操作。 项应放置在可运行的上下文的计划程序的列表，并可通常越早越好。 完全有可能某一取消排队项已被授予的任意锁的所有权。 计划程序可以进行可能会阻止取消排队项的调用和通常可以通过在调度器的列表上的这些项的位置之间没有任意函数调用。  
-  
-## <a name="inheritance-hierarchy"></a>继承层次结构  
- `IUMSCompletionList`  
-  
-## <a name="requirements"></a>要求  
- **标头：** concrtrm.h  
-  
- **命名空间：** 并发  
-  
-##  <a name="getunblocknotifications"></a>  Iumscompletionlist:: Getunblocknotifications 方法  
- 检索的链`IUMSUnblockNotification`表示其相关联的线程代理已解除阻止，因为上一次此方法调用的执行上下文的接口。  
-  
+```
+
+## <a name="members"></a>成员
+
+### <a name="public-methods"></a>公共方法
+
+|名称|描述|
+|----------|-----------------|
+|[IUMSCompletionList::GetUnblockNotifications](#getunblocknotifications)|检索的链`IUMSUnblockNotification`表示其关联的线程代理已解除阻塞，因为上一次此方法调用的执行上下文的接口。|
+
+## <a name="remarks"></a>备注
+
+计划程序必须格外小心使用此接口可从完成列表项的取消排队后要执行的操作。 项应放置在可运行的上下文的计划程序的列表，并尽可能快地进行常规访问。 它是完全有可能取消排队项之一已被授予任意锁的所有权。 计划程序可以调用取消排队项和一个列表，其中可以通常从内部进行访问计划程序上的这些项的位置之间可能会阻止任何任意函数调用。
+
+## <a name="inheritance-hierarchy"></a>继承层次结构
+
+`IUMSCompletionList`
+
+## <a name="requirements"></a>要求
+
+**标头：** concrtrm.h
+
+**命名空间：** 并发
+
+##  <a name="getunblocknotifications"></a>  Iumscompletionlist:: Getunblocknotifications 方法
+
+检索的链`IUMSUnblockNotification`表示其关联的线程代理已解除阻塞，因为上一次此方法调用的执行上下文的接口。
+
 ```
 virtual IUMSUnblockNotification *GetUnblockNotifications() = 0;
-```  
-  
-### <a name="return-value"></a>返回值  
- 链`IUMSUnblockNotification`接口。  
-  
-### <a name="remarks"></a>备注  
- 一旦重新计划任务的执行上下文，返回的通知均无效。  
-  
-## <a name="see-also"></a>请参阅  
- [并发 Namespace](concurrency-namespace.md)   
- [IUMSScheduler 结构](iumsscheduler-structure.md)   
- [IUMSUnblockNotification 结构](iumsunblocknotification-structure.md)
+```
+
+### <a name="return-value"></a>返回值
+
+链`IUMSUnblockNotification`接口。
+
+### <a name="remarks"></a>备注
+
+一旦重新计划任务的执行上下文返回的通知无效。
+
+## <a name="see-also"></a>请参阅
+
+[并发命名空间](concurrency-namespace.md)<br/>
+[IUMSScheduler 结构](iumsscheduler-structure.md)<br/>
+[IUMSUnblockNotification 结构](iumsunblocknotification-structure.md)

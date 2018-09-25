@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb4142b742ae6c2a758c2a2fb5e09c604959433f
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: bb3bdc2b4e00cd9e2167adeb0ad7d3023af9eb2e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42541165"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46384203"
 ---
 # <a name="injectstatement"></a>inject_statement
 **C + + 专用**  
@@ -46,5 +46,5 @@ inject_statement("source_text")
   
 ## <a name="see-also"></a>请参阅  
  
-[#import 属性](../preprocessor/hash-import-attributes-cpp.md)   
+[#import 属性](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [#import 指令](../preprocessor/hash-import-directive-cpp.md)

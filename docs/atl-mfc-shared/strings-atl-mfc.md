@@ -31,12 +31,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a918866710575ecc091fcce4564a7617d28a102d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f0751b218fe540a49c2cf0efde1dcf8976f2ebf6
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752770"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46387310"
 ---
 # <a name="strings-atlmfc"></a>字符串 (ATL/MFC)
 
@@ -44,18 +44,18 @@ ms.locfileid: "43752770"
 
 ## <a name="in-this-section"></a>本节内容
 
-[使用 CStringT](../atl-mfc-shared/using-cstringt.md)  
+[使用 CStringT](../atl-mfc-shared/using-cstringt.md)<br/>
 介绍如何使用 CStringT 的模板类的编程。
 
-[使用 CString](../atl-mfc-shared/using-cstring.md)  
+[使用 CString](../atl-mfc-shared/using-cstring.md)<br/>
 介绍如何编写使用 CString、 CStringT 的默认实现。
 
 ## <a name="related-sections"></a>相关章节
 
-[CStringT 概述](../atl-mfc-shared/reference/cstringt-class.md)  
+[CStringT 概述](../atl-mfc-shared/reference/cstringt-class.md)<br/>
 提供有关共享的参考信息`CStringT`类。
 
-[MFC 概念](../mfc/mfc-concepts.md)  
+[MFC 概念](../mfc/mfc-concepts.md)<br/>
 提供了概念性和基于任务的主题可帮助您使用 MFC 库进行编程。
 
 ## <a name="see-also"></a>请参阅

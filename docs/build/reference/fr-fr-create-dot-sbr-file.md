@@ -23,12 +23,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a5691a87f7350c7816e8ddb58d5591e16cc18189
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 6afcd4aa8ba2e86d687739bc3891f45f2da5672c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45709585"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46379148"
 ---
 # <a name="fr-fr-create-sbr-file"></a>/FR、/Fr（创建 .Sbr 文件）
 
@@ -70,7 +70,7 @@ ms.locfileid: "45709585"
 
 ## <a name="see-also"></a>请参阅
 
-[输出文件 (/ F) 选项](../../build/reference/output-file-f-options.md)
+[输出文件 (/F) 选项](../../build/reference/output-file-f-options.md)<br/>
 [编译器选项](../../build/reference/compiler-options.md)<br/>
 [设置编译器选项](../../build/reference/setting-compiler-options.md)<br/>
 [指定路径名](../../build/reference/specifying-the-pathname.md)

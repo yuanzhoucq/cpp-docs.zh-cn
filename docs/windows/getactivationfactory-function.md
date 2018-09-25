@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 99c5d961f3e25e17506e25148260b6966152af44
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: f5afaa14d926cc7dde86cdbdb6b5ca8162f81d7c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42596117"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46402143"
 ---
 # <a name="getactivationfactory-function"></a>GetActivationFactory 函数
 
@@ -42,13 +42,13 @@ inline HRESULT GetActivationFactory(
 
 ### <a name="parameters"></a>参数
 
-*T*  
+*T*<br/>
 模板参数，用于指定的激活工厂的类型。
 
-*activatableClassId*  
+*activatableClassId*<br/>
 激活工厂可以生成的类的名称。
 
-*工厂*  
+*工厂*<br/>
 此操作完成后，对类型的激活工厂的引用*T*。
 
 ## <a name="return-value"></a>返回值

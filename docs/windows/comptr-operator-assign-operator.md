@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fb26a6d7449dae4abe28be5687cea7d84ece7b8d
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 177d6ebde6a4611e9a08dc3dade63bd6c3acc3fa
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604838"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46401623"
 ---
 # <a name="comptroperator-operator"></a>ComPtr::operator= 运算符
 
@@ -59,10 +59,10 @@ WRL_NOTHROW ComPtr& operator=(
 
 ### <a name="parameters"></a>参数
 
-*U*  
+*U*<br/>
 一个类。
 
-*other*  
+*other*<br/>
 指针、 引用或右值引用类型或另一**ComPtr**。
 
 ## <a name="return-value"></a>返回值

@@ -29,38 +29,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 854873987cd83b89efc5c9006c1e091023c91226
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 22d4c6da3b897d0158f790a0146e3f10f7aa385c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32389057"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093113"
 ---
 # <a name="setapptype"></a>__set_app_type
-设置当前应用程序类型。  
-  
-## <a name="syntax"></a>语法  
-  
-```cpp  
-void __set_app_type (  
-   int at  
-   )  
-```  
-  
-#### <a name="parameters"></a>参数  
- `at`  
- 表示应用程序类型的值。 可能的值为：  
-  
-|“值”|描述|  
-|-----------|-----------------|  
-|_UNKNOWN_APP|未知应用程序类型。|  
-|_CONSOLE_APP|控制台（命令行）应用程序。|  
-|_GUI_APP|GUI (Windows) 应用程序。|  
-  
-## <a name="remarks"></a>备注  
-  
-## <a name="requirements"></a>惠?  
-  
-|例程所返回的值|必需的标头|  
-|-------------|---------------------|  
+
+设置当前应用程序类型。
+
+## <a name="syntax"></a>语法
+
+```cpp
+void __set_app_type (
+   int at
+   )
+```
+
+#### <a name="parameters"></a>参数
+
+*at*<br/>
+表示应用程序类型的值。 可能的值为：
+
+|“值”|描述|
+|-----------|-----------------|
+|_UNKNOWN_APP|未知应用程序类型。|
+|_CONSOLE_APP|控制台（命令行）应用程序。|
+|_GUI_APP|GUI (Windows) 应用程序。|
+
+## <a name="remarks"></a>备注
+
+## <a name="requirements"></a>要求
+
+|例程所返回的值|必需的标头|
+|-------------|---------------------|
 |__set_app_type|internal.h|

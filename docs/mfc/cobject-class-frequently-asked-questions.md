@@ -1,5 +1,5 @@
 ---
-title: CObject 类： 常见问题 |Microsoft 文档
+title: CObject 类： 常见问题 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,21 +16,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7487d8fdc016642e56a469d45c8063e764823ff
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 987ae71b556abea1279605f42f5c633083221554
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33343562"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46433939"
 ---
 # <a name="cobject-class-frequently-asked-questions"></a>CObject 类：常见问题
-本节包含有关 `CObject` 类的问题。  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>你想进一步了解什么  
-  
--   [我必须从 CObject 派生新类](do-i-have-to-derive-new-classes-from-cobject-q.md)  
-  
--   [什么成本是我从 CObject 中派生一个类](what-does-it-cost-me-to-derive-a-class-from-cobject-q.md)  
-  
-## <a name="see-also"></a>请参阅  
- [使用 CObject](../mfc/using-cobject.md)
+
+本节包含有关 `CObject` 类的问题。
+
+## <a name="what-do-you-want-to-know-more-about"></a>你想要了解更多信息
+
+- [我必须从 CObject 中派生新类](do-i-have-to-derive-new-classes-from-cobject-q.md)
+
+- [费用是多少从 CObject 派生类](what-does-it-cost-me-to-derive-a-class-from-cobject-q.md)
+
+## <a name="see-also"></a>请参阅
+
+[使用 CObject](../mfc/using-cobject.md)

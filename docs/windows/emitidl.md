@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7e1cb0a77c04a1bfea03f742686e1b28a6e2f04c
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 0c1704bf6ea5d8eaa2fc76db61fe0143c06b46ae
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43687845"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46429638"
 ---
 # <a name="emitidl"></a>emitidl
 
@@ -36,7 +36,7 @@ ms.locfileid: "43687845"
 
 ### <a name="parameters"></a>参数
 
-*state*  
+*state*<br/>
 这些可能值之一： `true`， `false`， `forced`， `restricted`， `push`，或`pop`。
 
 - 如果`true`，在源代码文件中遇到任何 IDL 类别特性放在生成的.idl 文件。 这是默认设置**emitidl**。
@@ -77,5 +77,5 @@ ms.locfileid: "43687845"
 
 ## <a name="see-also"></a>请参阅
 
-[编译器特性](../windows/compiler-attributes.md)  
+[编译器特性](../windows/compiler-attributes.md)<br/>
 [独立特性](../windows/stand-alone-attributes.md)  

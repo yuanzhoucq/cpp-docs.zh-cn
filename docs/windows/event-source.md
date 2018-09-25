@@ -22,12 +22,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6fc8d8100786f78d516bb5f880e4238b7e3a2388
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d2dfcf61ced958519e7255bd241d3c0ea911824e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42611859"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46408916"
 ---
 # <a name="eventsource"></a>event_source
 
@@ -45,7 +45,7 @@ ms.locfileid: "42611859"
 
 ### <a name="parameters"></a>参数
 
-*type*  
+*type*<br/>
 以下值之一的枚举：
 
 - `native` ，用于非托管 C/C++ 代码（非托管类的默认值）。
@@ -58,10 +58,10 @@ ms.locfileid: "42611859"
     #include <atlcom.h>
     ```
 
-*optimize*  
+*optimize*<br/>
 当*类型*是`native`，可以指定`optimize=size`，以指示中已有 4 个字节的存储 （最小值） 的所有事件的类或`optimize=speed`（默认值） 以指示存在 4 * （事件数） 个字节的存储。
 
-*修饰*  
+*修饰*<br/>
 当*类型*是`native`，可以指定`decorate=false`，以指示合并 (.mrg) 文件中的扩展的名称不应包含封闭类名。 [/Fx](../build/reference/fx-merge-injected-code.md) 允许生成 .mrg 文件。 `decorate=false`其默认值时，会导致合并文件中的完全限定类型名称。
 
 ## <a name="remarks"></a>备注
@@ -88,9 +88,9 @@ ms.locfileid: "42611859"
 
 ## <a name="see-also"></a>请参阅
 
-[编译器特性](../windows/compiler-attributes.md)  
-[event_receiver](../windows/event-receiver.md)  
-[__event](../cpp/event.md)  
-[__hook](../cpp/hook.md)  
-[__unhook](../cpp/unhook.md)  
+[编译器特性](../windows/compiler-attributes.md)<br/>
+[event_receiver](../windows/event-receiver.md)<br/>
+[__event](../cpp/event.md)<br/>
+[__hook](../cpp/hook.md)<br/>
+[__unhook](../cpp/unhook.md)<br/>
 [类特性](../windows/class-attributes.md)  

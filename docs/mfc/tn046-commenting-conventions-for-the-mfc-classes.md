@@ -1,5 +1,5 @@
 ---
-title: 'TN046: MFC 类的注释约定 |Microsoft 文档'
+title: 'TN046: MFC 类的注释约定 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de24840ed3b6b7b747bb16cf26cbdb5aed29b1eb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9984e85bbdd047f7673d683e5c5237d93acb818b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33380820"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46429599"
 ---
 # <a name="tn046-commenting-conventions-for-the-mfc-classes"></a>TN046：MFC 类的注释约定
-此技术说明最初描述了用于注释 MFC 类的约定。 此信息现在包含在[MFC： 使用 MFC 源文件](../mfc/using-the-mfc-source-files.md)。  
-  
-## <a name="see-also"></a>请参阅  
- [按编号列出的技术说明](../mfc/technical-notes-by-number.md)   
- [按类别列出的技术说明](../mfc/technical-notes-by-category.md)
+
+此技术说明最初描述了用于注释 MFC 类的约定。 此信息现在包含在[MFC： 使用 MFC 源文件](../mfc/using-the-mfc-source-files.md)。
+
+## <a name="see-also"></a>请参阅
+
+[按编号列出的技术说明](../mfc/technical-notes-by-number.md)<br/>
+[按类别列出的技术说明](../mfc/technical-notes-by-category.md)
 

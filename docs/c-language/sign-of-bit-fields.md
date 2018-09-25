@@ -12,17 +12,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f8e09aea98c63015e86eeacf8f3458723aa4e61
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 351fb7704faf8a168d13cde2558015c340e44d72
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32385829"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46090033"
 ---
 # <a name="sign-of-bit-fields"></a>位域的符号
-**ANSI 3.5.2.1**“纯”`int` 域被视为 signed int 位域还是 unsigned int 位域  
-  
- 位域可以带符号也可以不带符号。 纯位域被视为带符号的。  
-  
-## <a name="see-also"></a>请参阅  
- [结构、联合、枚举和位域](../c-language/structures-unions-enumerations-and-bit-fields.md)
+
+**ANSI 3.5.2.1**“纯”`int` 域被视为 signed int 位域还是 unsigned int 位域
+
+位域可以带符号也可以不带符号。 纯位域被视为带符号的。
+
+## <a name="see-also"></a>请参阅
+
+[结构、联合、枚举和位域](../c-language/structures-unions-enumerations-and-bit-fields.md)

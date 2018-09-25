@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 606f9560f6d490e1d50d94dd12103713781c4f1b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 98de9ff79016ebc4ce231b92f5e93ed48e551ada
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42603755"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46445043"
 ---
 # <a name="comptrrefcomptrref-constructor"></a>ComPtrRef::ComPtrRef 构造函数
 
@@ -38,7 +38,7 @@ ComPtrRef(
 
 ### <a name="parameters"></a>参数
 
-*ptr*  
+*ptr*<br/>
 基础值的另一个**ComPtrRef**对象。
 
 ## <a name="remarks"></a>备注
@@ -53,5 +53,5 @@ ComPtrRef(
 
 ## <a name="see-also"></a>请参阅
 
-[ComPtrRef 类](../windows/comptrref-class.md)  
+[ComPtrRef 类](../windows/comptrref-class.md)<br/>
 [Microsoft::WRL::Details 命名空间](../windows/microsoft-wrl-details-namespace.md)

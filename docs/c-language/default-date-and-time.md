@@ -15,19 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8646e612505099476b39109c3ef5f9084f7403ab
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 61f512d82ee33e0b900d61ff4a90c18336f88a16
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752149"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020647"
 ---
 # <a name="default-date-and-time"></a>默认日期和时间
 
-ANSI 3.8.8 转换的日期和时间不可用时应遵循的 `__DATE__` 和 `__TIME__` 的定义  
-  
-当操作系统不提供转换的时间和日期时，`__DATE__` 和 `__TIME__` 的默认值为 `May 03 1957` 和 `17:00:00`。  
-  
+ANSI 3.8.8 转换的日期和时间不可用时应遵循的 `__DATE__` 和 `__TIME__` 的定义
+
+当操作系统不提供转换的时间和日期时，`__DATE__` 和 `__TIME__` 的默认值为 `May 03 1957` 和 `17:00:00`。
+
 ## <a name="see-also"></a>请参阅
 
 [预处理指令](../c-language/preprocessing-directives.md)

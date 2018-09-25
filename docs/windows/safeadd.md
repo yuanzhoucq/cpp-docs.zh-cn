@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ada0997a03cefbec4bcc4faa26ad4eaf8c176ff2
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 2ddf4f69c3c897c8f462554ce6a9db6b2a03408f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45704882"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46400572"
 ---
 # <a name="safeadd"></a>SafeAdd
 
@@ -71,7 +71,7 @@ inline bool SafeAdd (
 
 ## <a name="see-also"></a>请参阅
 
-[SafeInt 函数](../windows/safeint-functions.md)  
-[SafeInt 库](../windows/safeint-library.md)  
-[SafeInt 类](../windows/safeint-class.md)  
+[SafeInt 函数](../windows/safeint-functions.md)<br/>
+[SafeInt 库](../windows/safeint-library.md)<br/>
+[SafeInt 类](../windows/safeint-class.md)<br/>
 [SafeSubtract](../windows/safesubtract.md)

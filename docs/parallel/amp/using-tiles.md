@@ -1,5 +1,5 @@
 ---
-title: 使用磁贴 |Microsoft 文档
+title: 使用磁贴 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/28/2018
 ms.technology:
@@ -12,34 +12,34 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c02b5d558ccf2c1353e96dd1990b6d4178457aa
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: df2f449cce01dc2d0903ff802ffb94914b68bceb
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37121944"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46386252"
 ---
 # <a name="using-tiles"></a>使用平铺
 
-可用平铺来最大化你的应用程序加速。 平铺将线程划分为相等的矩形子集或*磁贴*。 如果你使用相应的磁贴大小和平铺的算法，你可以在 c + + AMP 代码中获取更多的加速。 平铺的基本组件包括：
+可以使用平铺来最大化应用程序加速。 平铺将线程划分为相等的矩形子集或*磁贴*。 如果您使用合适的平铺大小和平铺的算法，您可以在 c + + AMP 代码中获取更多加速。 平铺的基本组件包括：
 
-- `tile_static` 变量。 平铺的主要优点是带来的性能提升`tile_static`访问。 访问中的数据`tile_static`内存可能很有权访问在全局空间中的数据比快很多 (`array`或`array_view`对象)。 实例`tile_static`为每个图块，创建变量并将磁贴中的所有线程都有权访问该变量。 在典型的平铺算法中的数据复制到`tile_static`一次从全局内存的内存，并且从然后访问次数多`tile_static`内存。
+- `tile_static` 变量。 平铺的主要优点是从性能提升`tile_static`访问。 中的数据的访问权限`tile_static`内存可以明显快于访问全局空间中的数据 (`array`或`array_view`对象)。 实例`tile_static`变量，将创建的每个磁贴和磁贴中的所有线程都都可以访问该变量。 在典型的平铺算法中，数据复制到`tile_static`一次从全局内存的内存，然后从访问很多时候`tile_static`内存。
 
-- [tile_barrier:: wait 方法](reference/tile-barrier-class.md#wait)。 调用`tile_barrier::wait`挂起当前线程的执行，直到所有相同的磁贴中的线程到达调用`tile_barrier::wait`。 你不能保证线程将在中运行，仅该磁贴中的无线程将执行之后调用的顺序`tile_barrier::wait`之前的所有线程都已达到调用。 这意味着，通过使用`tile_barrier::wait`方法，你可以在磁贴的磁贴基础，而不是线程的线程的基础上执行任务。 典型的平铺算法具有代码以初始化`tile_static`整个磁贴的内存跟调用`tile_barrer::wait`。 下面的代码`tile_barrier::wait`包含需要访问所有的计算`tile_static`值。
+- [tile_barrier:: wait 方法](reference/tile-barrier-class.md#wait)。 调用`tile_barrier::wait`挂起当前线程的执行，直到同一平铺中线程的所有调用`tile_barrier::wait`。 不能保证线程将在中运行，只能确保平铺中的任何线程将执行之后调用的顺序`tile_barrier::wait`之前的所有线程都达到调用。 这意味着，通过使用`tile_barrier::wait`方法中，你可以在磁贴的磁贴的基础，而不是在线程的线程的基础上执行任务。 典型的平铺算法有代码来初始化`tile_static`将整个磁贴的内存后跟调用`tile_barrer::wait`。 下面的代码`tile_barrier::wait`包含需要访问所有的计算`tile_static`值。
 
-- 本地和全局索引。 您有权访问的相对于整个线程索引`array_view`或`array`对象和相对于该磁贴的索引。 使用本地索引可以使你的代码易于阅读和调试。 通常，您可以使用本地索引访问`tile_static`变量和访问的全局索引`array`和`array_view`变量。
+- 本地和全局索引。 您可以访问相对于整个线程的索引`array_view`或`array`对象和平铺的索引。 使用本地索引可以使代码更易阅读和调试。 通常情况下，使用本地索引访问`tile_static`变量和全局索引访问`array`和`array_view`变量。
 
-- [tiled_extent 类](../../parallel/amp/reference/tiled-extent-class.md)和[tiled_index 类](../../parallel/amp/reference/tiled-index-class.md)。 你使用`tiled_extent`对象而不是`extent`对象在`parallel_for_each`调用。 你使用`tiled_index`对象而不是`index`对象在`parallel_for_each`调用。
+- [tiled_extent 类](../../parallel/amp/reference/tiled-extent-class.md)并[tiled_index 类](../../parallel/amp/reference/tiled-index-class.md)。 您使用`tiled_extent`对象而不是`extent`对象中`parallel_for_each`调用。 您使用`tiled_index`对象而不是`index`对象中`parallel_for_each`调用。
 
-若要充分利用平铺的您的算法必须计算域划分为磁贴，然后磁贴将数据复制到`tile_static`更快地访问的变量。
+若要利用平铺的您的算法必须计算域划分为磁贴，然后复制到磁贴数据`tile_static`变量以提高访问速度。
 
-## <a name="example-of-global-tile-and-local-indices"></a>示例的全局、 磁贴和本地索引
+## <a name="example-of-global-tile-and-local-indices"></a>示例中的全局、 平铺和本地索引
 
-下图表示数据，排列在 2 x 3 磁贴 8 x 9 的矩阵。
+下图表示排列在 2x3 平铺中的数据的 8x9 矩阵。
 
-![8&#45;通过&#45;9 矩阵划分为 2&#45;通过&#45;3 磁贴](../../parallel/amp/media/usingtilesmatrix.png "usingtilesmatrix")
+![8&#45;的&#45;9 矩阵划分为 2&#45;的&#45;3 个磁贴](../../parallel/amp/media/usingtilesmatrix.png "usingtilesmatrix")
 
-下面的示例显示全局、 磁贴，并此本地索引平铺的矩阵。 `array_view`对象创建的使用类型的元素`Description`。 `Description`包含全局，磁贴和矩阵中的元素的本地索引。 在调用代码`parallel_for_each`设置的全局值、 磁贴和每个元素的本地索引。 该输出显示中的值`Description`结构。
+下面的示例显示全局、 平铺和本地索引此平铺矩阵。 `array_view`通过使用类型的元素创建对象`Description`。 `Description`持有的全局、 平铺和本地索引矩阵中的元素。 在调用代码`parallel_for_each`设置的全局值、 磁贴和本地索引的每个元素。 该输出显示中的值`Description`结构。
 
 ```cpp
 #include <iostream>
@@ -73,11 +73,11 @@ void SetConsoleColor(int color) {
 // A helper function for formatting the output.
 void SetConsoleSize(int height, int width) {
     COORD coord;
-    
+
     coord.X = width;
     coord.Y = height;
     SetConsoleScreenBufferSize(GetStdHandle(STD_OUTPUT_HANDLE), coord);
-    
+
     SMALL_RECT* rect = new SMALL_RECT();
     rect->Left = 0;
     rect->Top = 0;
@@ -151,35 +151,35 @@ void main() {
 }
 ```
 
-该示例的主要工作是中的定义`array_view`对象和对`parallel_for_each`。
+该示例的主要工作是在定义中的`array_view`对象，并向调用`parallel_for_each`。
 
-1. 向量的`Description`结构复制到 8 x 9`array_view`对象。
+1. 向量`Description`结构复制到 8x9`array_view`对象。
 
-2. `parallel_for_each`方法调用与`tiled_extent`对象作为计算域。 `tiled_extent`对象通过调用创建`extent::tile()`方法`descriptions`变量。 类型参数的调用`extent::tile()`， `<2,3>`，指定创建 2 x 3 磁贴。 因此，8 x 9 矩阵平铺到 12 的磁贴、 四个行和三个列。
+2. `parallel_for_each`方法调用与`tiled_extent`对象作为计算域。 `tiled_extent`对象创建通过调用`extent::tile()`方法的`descriptions`变量。 对调用的类型参数`extent::tile()`， `<2,3>`，指定创建 2x3 平铺。 因此，8x9 矩阵平铺为 12 个图块、 四个行和三个列。
 
-3. `parallel_for_each`方法调用通过使用`tiled_index<2,3>`对象 (`t_idx`) 作为索引。 类型参数的索引 (`t_idx`) 必须与匹配的类型参数的计算域 (`descriptions.extent.tile< 2, 3>()`)。
+3. `parallel_for_each`方法通过使用调用`tiled_index<2,3>`对象 (`t_idx`) 作为索引。 索引的类型参数 (`t_idx`) 必须与匹配的类型参数的计算域 (`descriptions.extent.tile< 2, 3>()`)。
 
-4. 当执行每个线程时，索引`t_idx`返回信息有关的磁贴线程处于 (`tiled_index::tile`属性) 和在磁贴中线程的位置 (`tiled_index::local`属性)。
+4. 每个线程执行时，索引`t_idx`返回有关哪个磁贴的线程是中的信息 (`tiled_index::tile`属性) 以及平铺中线程的位置 (`tiled_index::local`属性)。
 
-## <a name="tile-synchronizationtilestatic-and-tilebarrierwait"></a>磁贴同步-tile_static 和 tile_barrier:: wait
+## <a name="tile-synchronizationtilestatic-and-tilebarrierwait"></a>磁贴同步 — tile_static 和 tile_barrier:: wait
 
-前面的示例演示的磁贴布局和索引，但不是本身非常有用。  平铺将显得十分有用磁贴是不可或缺的一部分的算法和攻击`tile_static`变量。 由于将磁贴中的所有线程访问的`tile_static`变量，对调用`tile_barrier::wait`使用对访问进行同步`tile_static`变量。 尽管所有磁贴中的线程都可以访问`tile_static`变量，没有任何有保证的磁贴中的线程的执行顺序。 下面的示例演示如何使用`tile_static`变量和`tile_barrier::wait`方法来计算每个图块的平均值。 以下是了解该示例的密钥：
+前面的示例说明了平铺布局和索引，但不是本身非常有用。  磁贴是必不可少的算法和利用漏洞攻击的一部分时，平铺变得有用`tile_static`变量。 因为磁贴中的所有线程都有权`tile_static`变量，调用`tile_barrier::wait`用于同步对`tile_static`变量。 虽然平铺中线程的所有有权访问`tile_static`变量，没有平铺中线程的执行顺序并未保证。 下面的示例演示如何使用`tile_static`变量和`tile_barrier::wait`方法来计算每个平铺的平均值。 以下是理解此示例的密钥：
 
-1. RawData 存储在 8x8 矩阵。
+1. RawData 存储在 8x8 矩阵中。
 
-2. 磁贴大小为 2 x 2。 这将创建的磁贴的 4 x 4 网格和平均值可以通过使用存储在 4 x 4 矩阵`array`对象。 有有限的数量的你可以通过 AMP 限制的函数中引用捕获的类型。 `array`类是其中之一。
+2. 平铺大小是 2x2。 这将创建的磁贴的 4x4 网格和平均值可以通过使用存储在 4 x 4 矩阵`array`对象。 有只有有限的数量的可以捕获由 AMP 限制的函数中引用的类型。 `array`类是其中之一。
 
-3. 通过使用定义的矩阵大小和样本大小`#define`语句，因为的类型参数`array`， `array_view`， `extent`，和`tiled_index`必须是常量值。 你还可以使用`const int static`声明。 作为一项额外权益，十分常见更改的样本大小来计算平均超过 4 x 4 磁贴。
+3. 通过使用定义矩阵大小和样本大小`#define`语句，因为的类型参数`array`， `array_view`， `extent`，和`tiled_index`必须是常数值。 此外可以使用`const int static`声明。 作为另一个好处，很容易更改示例尺寸以计算平均超过 4 × 4 磁贴。
 
-4. A `tile_static` 2 x 2 浮点值的数组声明每个磁贴。 尽管该声明是在每个线程的代码路径，为矩阵中每个磁贴创建只有一个数组。
+4. 一个`tile_static`2x2 浮点值的数组声明每个磁贴。 尽管该声明是为每个线程的代码路径中，只有一个数组为矩阵中每个磁贴创建。
 
-5. 没有要将值复制到每个磁贴中的代码行`tile_static`数组。 为每个线程，该值被复制到数组中后, 线程执行将停止对的调用由于`tile_barrier::wait`。
+5. 没有要将值复制到每个磁贴中的代码行`tile_static`数组。 为每个线程的值复制到的数组后的线程上, 将停止执行的调用由于`tile_barrier::wait`。
 
-6. 在所有磁贴中的线程都已达到屏障，可以计算平均值。 针对每个线程执行的代码，因为没有`if`语句仅计算在一个线程上的平均值。 平均存储在平均值变量。 屏障是实质上是构造，用于通过在磁贴，来控制计算可能使用一样使用`for`循环。
+6. 如果所有平铺中线程已达到屏障，可以计算平均值。 由于针对每个线程执行的代码，没有`if`语句，即仅计算一个线程上的平均值。 该平均值存储在平均值变量。 屏障是实质上是通过磁贴中，控制计算的构造，可能会使用一样使用`for`循环。
 
 7. 中的数据`averages`变量，因为它是`array`对象，必须复制回主机。 此示例使用向量转换运算符。
 
-8. 在完整的示例中，您可以更改 SAMPLESIZE 为 4，并执行正确的代码而无需任何其他更改。
+8. 在完整的示例中，可以将 SAMPLESIZE 更改为 4，并执行正确的代码而无需任何其他更改。
 
 ```cpp
 #include <iostream>
@@ -262,7 +262,7 @@ int main() {
 
 ## <a name="race-conditions"></a>争用条件
 
-它可能是创建容易让人想到`tile_static`变量名为`total`和递增该变量为每个线程，如下：
+可能尝试创建`tile_static`名为变量`total`并递增该变量为每个线程，像这样：
 
 ```cpp
 // Do not do this.
@@ -273,7 +273,7 @@ t_idx.barrier.wait();
 averages(t_idx.tile[0],t_idx.tile[1]) /= (float) (SAMPLESIZE* SAMPLESIZE);
 ```
 
-使用此方法的第一个问题在于`tile_static`变量不能有初始值设定项。 第二个问题是分配给的上是一个争用条件`total`，因为所有磁贴中的线程有权访问该变量顺序不分先后。 你无法编程一种算法以仅允许一个线程访问的总金额在每个屏障，如下所示。 但是，此解决方案不是可扩展的。
+这种方法的第一个问题是`tile_static`变量不能有初始值设定项。 第二个问题是分配给上是一个争用条件`total`，因为所有平铺中线程顺序不分先后有权访问该变量。 可以编写为只允许一个线程访问每个关卡处总数，按如下所示的算法。 但是，此解决方案不是可扩展的。
 
 ```cpp
 // Do not do this.
@@ -291,25 +291,25 @@ t_idx.barrier.wait();
 // etc.
 ```
 
-## <a name="memory-fences"></a>内存界定
+## <a name="memory-fences"></a>内存屏障
 
-有两种类型的内存存取，必须同步-全局内存访问和`tile_static`内存访问。 A`concurrency::array`对象分配仅全局内存。 A`concurrency::array_view`可以引用全局内存`tile_static`内存，或两者，具体取决于它的构造方式。  有两种类型的内存必须同步：
+有两种类型的内存访问都必须同步，全局内存访问和`tile_static`内存访问。 一个`concurrency::array`对象仅分配全局内存。 一个`concurrency::array_view`可以引用全局内存`tile_static`内存，或两者，具体取决于构造方式。  有两种必须同步的内存：
 
 - 全局内存
 
 - `tile_static`
 
-A*内存界定*可确保访问可供其他线程中的线程磁贴，该内存，并且根据程序顺序执行访问该内存。 若要确保这一点，编译器和处理器不重新排列读取和写入围墙。 在 c + + AMP 内存界定创建通过调用这些方法之一：
+一个*内存界定*可确保内存访问可用于其他线程在线程平铺，并且内存访问根据程序顺序执行。 若要确保这一点，编译器和处理器重新排序读取和写入界定。 在 c + + AMP 中内存界定创建调用这些方法之一：
 
-- [tile_barrier:: wait 方法](reference/tile-barrier-class.md#wait)： 创建这两围墙全局和`tile_static`内存。
+- [tile_barrier:: wait 方法](reference/tile-barrier-class.md#wait)： 创建界定全局和`tile_static`内存。
 
-- [tile_barrier:: wait_with_all_memory_fence 方法](reference/tile-barrier-class.md#wait_with_all_memory_fence)： 创建这两围墙全局和`tile_static`内存。
+- [tile_barrier:: wait_with_all_memory_fence 方法](reference/tile-barrier-class.md#wait_with_all_memory_fence)： 创建界定全局和`tile_static`内存。
 
-- [tile_barrier:: wait_with_global_memory_fence 方法](reference/tile-barrier-class.md#wait_with_global_memory_fence)： 创建围墙围绕仅全局内存。
+- [tile_barrier:: wait_with_global_memory_fence 方法](reference/tile-barrier-class.md#wait_with_global_memory_fence)： 创建仅全局内存界定。
 
-- [tile_barrier:: wait_with_tile_static_memory_fence 方法](reference/tile-barrier-class.md#wait_with_tile_static_memory_fence)： 创建解决唯一围墙`tile_static`内存。
+- [tile_barrier:: wait_with_tile_static_memory_fence 方法](reference/tile-barrier-class.md#wait_with_tile_static_memory_fence)： 创建唯一界定`tile_static`内存。
 
-调用特定围墙需要可以提高你的应用程序的性能。 屏障类型会影响编译器和硬件重新语句的排序。 例如，如果你使用全局内存围墙应用仅为全局内存访问，因此，编译器和硬件可能重新排序读取和写入到`tile_static`上围墙两条边的变量。
+调用需要可以提高您的应用程序性能的特定限制。 关卡类型影响如何编译器和硬件重新排列语句。 例如，如果你使用全局内存界定，它将应用仅为是全局内存访问并因此，编译器和硬件可能重新排序读取和写入到`tile_static`上隔离的两个方面的变量。
 
 在下一步的示例中，屏障同步写入`tileValues`、`tile_static`变量。 在此示例中，`tile_barrier::wait_with_tile_static_memory_fence`而不是调用`tile_barrier::wait`。
 
@@ -341,5 +341,5 @@ parallel_for_each(matrix.extent.tile<SAMPLESIZE, SAMPLESIZE>(),
 
 ## <a name="see-also"></a>请参阅
 
-[C++ AMP (C++ Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)  
-[tile_static 关键字](../../cpp/tile-static-keyword.md)  
+[C++ AMP (C++ Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)<br/>
+[tile_static 关键字](../../cpp/tile-static-keyword.md)

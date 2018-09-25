@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b26d58f13e819ce4bb605beba9beecbbc1fa94a6
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 4240ae1b9c4930ed0925db2607ff6e20f698b0a6
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42596302"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46394317"
 ---
 # <a name="weakreferenceweakreference-destructor"></a>WeakReference::~WeakReference 析构函数
 
@@ -48,5 +48,5 @@ virtual ~WeakReference();
 
 ## <a name="see-also"></a>请参阅
 
-[Microsoft::WRL::Details Namespace](../windows/microsoft-wrl-details-namespace.md)
+[Microsoft::WRL::Details 命名空间](../windows/microsoft-wrl-details-namespace.md)<br/>
 [WeakReference 类](../windows/weakreference-class1.md)

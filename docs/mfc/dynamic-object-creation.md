@@ -1,5 +1,5 @@
 ---
-title: 动态对象创建 |Microsoft 文档
+title: 动态对象创建 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,22 +17,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5763e3f0f3ee5a0e58ac20fe9f637e4f7e097999
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 19f6a895eb48b3ae1816edc45747c865e7e03b96
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33346641"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46420148"
 ---
 # <a name="dynamic-object-creation"></a>动态对象创建
-本文说明了如何在运行时动态地创建对象。 过程使用运行时类信息，如本文所述[访问运行时类信息](../mfc/accessing-run-time-class-information.md)。  
-  
-#### <a name="to-dynamically-create-an-object-given-its-run-time-class"></a>在给定运行时类的情况下动态创建对象  
-  
-1.  使用以下代码，借助 `CreateObject` 的 `CRuntimeClass` 函数动态地创建一个对象。 请注意，在失败时，`CreateObject`返回**NULL**而不是引发异常：  
-  
-     [!code-cpp[NVC_MFCCObjectSample#6](../mfc/codesnippet/cpp/dynamic-object-creation_1.cpp)]  
-  
-## <a name="see-also"></a>请参阅  
- [使用 CObject](../mfc/using-cobject.md)
+
+本文说明了如何在运行时动态地创建对象。 该过程使用运行时类信息，如本文所述[访问运行时类信息](../mfc/accessing-run-time-class-information.md)。
+
+#### <a name="to-dynamically-create-an-object-given-its-run-time-class"></a>在给定运行时类的情况下动态创建对象
+
+1. 使用以下代码，借助 `CreateObject` 的 `CRuntimeClass` 函数动态地创建一个对象。 请注意，在失败时，`CreateObject`将返回**NULL**而不是引发异常：
+
+     [!code-cpp[NVC_MFCCObjectSample#6](../mfc/codesnippet/cpp/dynamic-object-creation_1.cpp)]
+
+## <a name="see-also"></a>请参阅
+
+[使用 CObject](../mfc/using-cobject.md)
 

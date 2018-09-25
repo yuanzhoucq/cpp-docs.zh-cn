@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0800812e39d4d5240b87b24961585610814cd367
-ms.sourcegitcommit: 27b5712badd09a09c499d887e2e4cf2208a28603
+ms.openlocfilehash: 28d1df72efcc1fa7408922876ad91bafcd2b005a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44384951"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46422658"
 ---
 # <a name="c-developer-guidance-for-speculative-execution-side-channels"></a>推理执行端通道的 c + + 开发人员指南
 
@@ -31,7 +31,7 @@ ms.locfileid: "44384951"
 
 本文提供的指导与漏洞所表示的类：
 
-1. CVE-2017-5753，也称为 Spectre 变体 1。 此硬件漏洞类与相关端通道可能会出现由于条件分支预测时，会出现的推理执行。 （从 15.5.5 版开始） 的 Visual Studio 2017 中 Visual c + + 编译器支持`/Qspectre`开关这提供了一组有限的潜在易受攻击的编码模式编译时缓解与相关的 CVE 2017-5753。 `/Qspectre`开关也会出现在通过 Visual Studio 2015 Update 3 [KB 4338871](https://support.microsoft.com/help/4338871)。 文档[/Qspectre](https://docs.microsoft.com/cpp/build/reference/qspectre)标志提供有关其效果和使用情况详细信息。 
+1. CVE-2017-5753，也称为 Spectre 变体 1。 此硬件漏洞类与相关端通道可能会出现由于条件分支预测时，会出现的推理执行。 （从 15.5.5 版开始） 的 Visual Studio 2017 中 Visual c + + 编译器支持`/Qspectre`开关这提供了一组有限的潜在易受攻击的编码模式编译时缓解与相关的 CVE 2017-5753。 `/Qspectre`开关也会出现在通过 Visual Studio 2015 Update 3 [KB 4338871](https://support.microsoft.com/help/4338871)。 文档[/Qspectre](https://docs.microsoft.com/cpp/build/reference/qspectre)标志提供有关其效果和使用情况详细信息。
 
 2. CVE-2018年-3639，也称为[推理存储区绕过 (SSB)](https://aka.ms/sescsrdssb)。 此硬件漏洞类与相关端通道可能会出现由于之前作为内存访问预测结果依赖于存储的负载的推理执行。
 
@@ -55,9 +55,9 @@ unsigned char ReadByte(unsigned char *buffer, unsigned int buffer_size, unsigned
 }
 ```
 
-在此示例中，`ReadByte`是提供到该缓冲区的缓冲区、 缓冲区大小和索引。 索引指定的参数，通过`untrusted_index`，提供的无特权的上下文中，例如非管理的过程。 如果`untrusted_index`是小于`buffer_size`，然后从读取该索引处的字符`buffer`和用于对索引到共享的内存引用区域`shared_buffer`。 
+在此示例中，`ReadByte`是提供到该缓冲区的缓冲区、 缓冲区大小和索引。 索引指定的参数，通过`untrusted_index`，提供的无特权的上下文中，例如非管理的过程。 如果`untrusted_index`是小于`buffer_size`，然后从读取该索引处的字符`buffer`和用于对索引到共享的内存引用区域`shared_buffer`。
 
-从体系结构的角度看，此代码序列是完全安全保证，如`untrusted_index`将始终小于`buffer_size`。 但是，出现推理执行的情况下就可以在 CPU 将条件的分支误预测和执行主体 if 语句，即使`untrusted_index`大于或等于`buffer_size`。 因此，CPU 可能推测性读取一个字节的边界 from beyond `buffer` （这可能是机密） 并可以使用该字节值来计算通过后续加载地址`shared_buffer`。 
+从体系结构的角度看，此代码序列是完全安全保证，如`untrusted_index`将始终小于`buffer_size`。 但是，出现推理执行的情况下就可以在 CPU 将条件的分支误预测和执行主体 if 语句，即使`untrusted_index`大于或等于`buffer_size`。 因此，CPU 可能推测性读取一个字节的边界 from beyond `buffer` （这可能是机密） 并可以使用该字节值来计算通过后续加载地址`shared_buffer`。
 
 而 CPU 将最终能够检测到此预测，也显示超出界限从读取的字节值有关的信息在 CPU 缓存中保留残留的负面影响`buffer`。 小于可以检测到这些副作用的方式快速探测系统上运行的特权的上下文行中的每个缓存`shared_buffer`访问。 完成此操作时可以执行的步骤如下：
 
@@ -73,14 +73,14 @@ unsigned char ReadByte(unsigned char *buffer, unsigned int buffer_size, unsigned
 
 ## <a name="what-software-scenarios-can-be-impacted"></a>哪些软件方案可能会受到影响？
 
-使用等进程的安全软件开发[安全开发生命周期](https://www.microsoft.com/en-us/sdl/)(SDL) 通常需要开发人员标识存在于其应用程序信任边界。 在其中应用程序可能不太受信任的上下文，如在系统上的另一个进程或非管理用户模式进程在内核模式设备驱动程序的情况下提供的数据进行交互的地方存在一条信任边界。 涉及推理执行端通道的安全漏洞的新类是与信任边界隔离代码和数据的设备上的现有软件安全模型中的许多相关。 
+使用等进程的安全软件开发[安全开发生命周期](https://www.microsoft.com/en-us/sdl/)(SDL) 通常需要开发人员标识存在于其应用程序信任边界。 在其中应用程序可能不太受信任的上下文，如在系统上的另一个进程或非管理用户模式进程在内核模式设备驱动程序的情况下提供的数据进行交互的地方存在一条信任边界。 涉及推理执行端通道的安全漏洞的新类是与信任边界隔离代码和数据的设备上的现有软件安全模型中的许多相关。
 
 下表提供了开发人员可能需要会担心发生这些漏洞的软件安全模型的摘要：
 
 |信任边界|描述|
 |----------------|----------------|
-|虚拟机边界|隔离在单独的虚拟机接收来自另一个虚拟机不受信任的数据的工作负荷的应用程序可能会面临风险。| 
-|内核边界|从非管理用户模式进程接收不受信任的数据的内核模式设备驱动程序可能会面临风险。| 
+|虚拟机边界|隔离在单独的虚拟机接收来自另一个虚拟机不受信任的数据的工作负荷的应用程序可能会面临风险。|
+|内核边界|从非管理用户模式进程接收不受信任的数据的内核模式设备驱动程序可能会面临风险。|
 |进程边界|从本地系统上运行的另一个进程接收不受信任的数据，例如通过远程过程调用 (RPC)、 共享的内存或其他进程间通信 (IPC) 机制可能有风险的应用程序。|
 |Enclave 边界|接收来自外部 enclave 的不受信任的数据 （例如 Intel SGX) 安全 enclave 内执行的应用程序可能会面临风险。|
 |语言边界|应用程序，用于解释或实时 (JIT) 编译和执行不受信任的代码编写的更高级别的语言可能有风险。|
@@ -133,7 +133,7 @@ unsigned char ReadBytes(unsigned char *buffer, unsigned int buffer_size) {
 
 ### <a name="array-out-of-bounds-load-feeding-an-indirect-branch"></a>数组越界加载将馈送间接分支
 
-这种编码模式涉及条件分支预测可能导致这种情况越界越界读取权访问的函数指针间接分支目标到哪个然后潜在客户地址的数组。 以下代码片段提供一个示例，说明了这一点。 
+这种编码模式涉及条件分支预测可能导致这种情况越界越界读取权访问的函数指针间接分支目标到哪个然后潜在客户地址的数组。 以下代码片段提供一个示例，说明了这一点。
 
 在此示例中，不受信任的消息标识符提供给通过 DispatchMessage`untrusted_message_id`参数。 如果`untrusted_message_id`是小于`MAX_MESSAGE_ID`，则它将使用的函数指针的数组进行索引和分支到相应的分支目标。 此代码是安全的体系结构方面，但如果 CPU 误预测条件分支，可能会导致`DispatchTable`编制索引`untrusted_message_id`时其值是大于或等于`MAX_MESSAGE_ID`，因此从而导致越界访问。 这可能导致从派生的数组，这可能导致信息泄露，具体取决于推测性地执行的代码的边界之外的分支目标地址的推理执行。
 
@@ -188,7 +188,7 @@ unsigned char WriteSlot(unsigned int untrusted_index, void *ptr) {
 
 ## <a name="speculative-type-confusion"></a>推理类型混淆
 
-此类别处理编码模式可能导致引发推理类型混淆。 推理执行期间使用非体系结构的路径上的类型不正确访问内存时，将发生这种情况。 条件分支预测和推理存储区绕过可能会导致推理类型混淆。 
+此类别处理编码模式可能导致引发推理类型混淆。 推理执行期间使用非体系结构的路径上的类型不正确访问内存时，将发生这种情况。 条件分支预测和推理存储区绕过可能会导致推理类型混淆。
 
 推理存储区绕过，这会导致编译器将多种类型的变量的堆栈位置重新使用的方案。 这是因为该体系结构的类型的变量存储区`A`可能会被绕过，从而允许类型的负载`A`推测性地执行之前分配该变量。 如果以前存储的变量的不同类型，这可以创建推理类型混淆的条件。
 
@@ -368,6 +368,5 @@ unsigned char ReadByte(unsigned char *buffer, unsigned int buffer_size, unsigned
 
 ## <a name="see-also"></a>请参阅
 
-[若要缓解推理执行旁道漏洞的指南](https://portal.msrc.microsoft.com/security-guidance/advisory/ADV180002)
-
+[若要缓解推理执行旁道漏洞的指南](https://portal.msrc.microsoft.com/security-guidance/advisory/ADV180002)<br/>
 [防御推理执行端通道硬件漏洞](https://blogs.technet.microsoft.com/srd/2018/03/15/mitigating-speculative-execution-side-channel-hardware-vulnerabilities/)
