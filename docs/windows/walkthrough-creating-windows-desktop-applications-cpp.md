@@ -1,7 +1,7 @@
 ---
 title: 演练： 创建传统的 Windows 桌面应用程序 （c + +） |Microsoft Docs
 ms.custom: get-started-article
-ms.date: 06/12/2018
+ms.date: 09/18/2018
 ms.technology:
 - cpp-windows
 ms.topic: conceptual
@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 34342fbca00a127d1fdee13d29626bc2a3dfe53f
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 7e9541517852696073a3dbbff560bb6c44fd3264
+ms.sourcegitcommit: 92c568e9466ffd7346a4120c478c9bdea61c8756
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43679200"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47029666"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>演练： 创建传统的 Windows 桌面应用程序 （c + +）
 
@@ -120,7 +120,7 @@ Windows API （也称为 Win32 API、 Windows 桌面 API 和 Windows 经典 API�
    有关参数和此函数的返回值的信息，请参阅[WinMain 入口点](https://msdn.microsoft.com/library/windows/desktop/ms633559)。
 
    > [!NOTE]
-   > 什么是所有这些多余的字词，如`CALLBACK`，或`HINSTANCE`，或`_In_`？ 传统的 Windows API 使用 typedef 和预处理器宏来全面抽象出的类型和特定于平台的详细信息的一些代码，调用约定，如 **__declspec**声明，以及编译器杂注。 在 Visual Studio 中，您可以使用 IntelliSense[快速信息](/visualstudio/ide/using-intellisense#quick-info)功能来查看这些 typedef 和宏的定义。 经过单词感兴趣，请将鼠标悬停或选中它，然后按 ctrl-K，ctrl-I 表示包含定义一个小型弹出窗口。 有关详细信息，请参阅[使用 IntelliSense](/visualstudio/ide/using-intellisense)。 参数和返回类型通常使用*SAL 注释*来帮助你捕获编程错误。 有关详细信息，请参阅[使用 SAL 注释减少 C/c + + 代码缺陷](/visualstudio/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects)。
+   > 什么是所有这些多余的字词，如`CALLBACK`，或`HINSTANCE`，或`_In_`？ 传统的 Windows API 使用 typedef 和预处理器宏来全面抽象出的类型和特定于平台的详细信息的一些代码，调用约定，如 **__declspec**声明，以及编译器杂注。 在 Visual Studio 中，您可以使用 IntelliSense[快速信息](/visualstudio/ide/using-intellisense#quick-info)功能来查看这些 typedef 和宏的定义。 经过单词感兴趣，请将鼠标悬停或选中它，然后按**Ctrl**+**K**， **Ctrl**+**我**为包含定义的小弹出窗口。 有关详细信息，请参阅[使用 IntelliSense](/visualstudio/ide/using-intellisense)。 参数和返回类型通常使用*SAL 注释*来帮助你捕获编程错误。 有关详细信息，请参阅[使用 SAL 注释减少 C/c + + 代码缺陷](/visualstudio/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects)。
 
 1. Windows 桌面程序需要&lt;windows.h >。 &lt;tchar.h > 定义`TCHAR`宏，最终解析到**wchar_t**如果在项目中定义了 UNICODE 符号，否则它将解析为**char**。  如果始终生成与支持 UNICODE，不需要 TCHAR 和可以只需使用**wchar_t**直接。
 
