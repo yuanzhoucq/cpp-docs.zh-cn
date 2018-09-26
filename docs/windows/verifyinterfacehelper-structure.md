@@ -1,28 +1,30 @@
 ---
 title: VerifyInterfaceHelper 结构 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/24/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::Details::VerifyInterfaceHelper
+- implements/Microsoft::WRL::Details::VerifyInterfaceHelper::Verify
 dev_langs:
 - C++
 helpviewer_keywords:
-- VerifyInterfaceHelper structure
+- Microsoft::WRL::Details::VerifyInterfaceHelper structure
+- Microsoft::WRL::Details::VerifyInterfaceHelper::Verify method
 ms.assetid: ea95b641-199a-4fdf-964b-186b40cb3ba7
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 62914b6e46b1fe98c95fba3ab96821c961888db8
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e7aa7d796fb30a30a100f5f914feec57909407e5
+ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46413643"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47169757"
 ---
 # <a name="verifyinterfacehelper-structure"></a>VerifyInterfaceHelper 结构
 
@@ -58,9 +60,9 @@ struct VerifyInterfaceHelper<false, I>;
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
-|----------|-----------------|
-|[VerifyInterfaceHelper::Verify 方法](../windows/verifyinterfacehelper-verify-method.md)||
+名称                                            | 描述
+----------------------------------------------- | ---------------------------------------------------------------------------------------------------
+[VerifyInterfaceHelper::Verify 方法](#verify) | 验证当前的模板参数指定的接口满足某些要求。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -72,6 +74,14 @@ struct VerifyInterfaceHelper<false, I>;
 
 **Namespace:** Microsoft::WRL::Details
 
-## <a name="see-also"></a>请参阅
+## <a name="verify"></a>Verifyinterfacehelper:: Verify
 
-[Microsoft::WRL::Details 命名空间](../windows/microsoft-wrl-details-namespace.md)
+支持 WRL 基础结构，不应在代码中直接使用。
+
+```cpp
+static void Verify();
+```
+
+### <a name="remarks"></a>备注
+
+验证当前的模板参数指定的接口满足某些要求。

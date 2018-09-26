@@ -1,28 +1,30 @@
 ---
 title: IsBaseOfStrict 结构 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/21/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - internal/Microsoft::WRL::Details::IsBaseOfStrict
+- internal/Microsoft::WRL::Details::IsBaseOfStrict::value
 dev_langs:
 - C++
 helpviewer_keywords:
-- IsBaseOfStrict structure
+- Microsoft::WRL::Details::IsBaseOfStrict structure
+- Microsoft::WRL::Details::IsBaseOfStrict::value constant
 ms.assetid: 6fed7366-c8d4-4991-b4fb-43ed93f8e1bf
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 52db5abd0487624f52f692e785007adaf9eac7ee
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 137f572f01d4aa72b9141c3ca172426fdb575b48
+ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46428260"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47169519"
 ---
 # <a name="isbaseofstrict-structure"></a>IsBaseOfStrict 结构
 
@@ -55,15 +57,15 @@ struct IsBaseOfStrict<Base, Base>;
 
 测试一种类型是否是另一种类型的基类。
 
-第一个模板测试是否从可能产生的基类型派生的类型 **，则返回 true**或**false**。 第二个模板测试是否派生的类型是从其自身，这将始终产生**false**。
+第一个模板测试是否从可能产生的基类型派生的类型`true`或`false`。 第二个模板测试是否派生的类型是从其自身，这将始终产生`false`。
 
 ## <a name="members"></a>成员
 
 ### <a name="public-constants"></a>公共常量
 
-|name|描述|
-|----------|-----------------|
-|[IsBaseOfStrict::value 常量](../windows/isbaseofstrict-value-constant.md)|指示是否是一个类型的另一个基类。|
+name                            | 描述
+------------------------------- | --------------------------------------------------
+[Isbaseofstrict:: Value](#value) | 指示是否是一个类型的另一个基类。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -75,6 +77,16 @@ struct IsBaseOfStrict<Base, Base>;
 
 **Namespace:** Microsoft::WRL::Details
 
-## <a name="see-also"></a>请参阅
+## <a name="value"></a>Isbaseofstrict:: Value
 
-[Microsoft::WRL::Details 命名空间](../windows/microsoft-wrl-details-namespace.md)
+支持 WRL 基础结构，不应在代码中直接使用。
+
+```cpp
+static const bool value = __is_base_of(Base, Derived);
+```
+
+### <a name="remarks"></a>备注
+
+指示是否是一个类型的另一个基类。
+
+`value` 是`true`如果类型`Base`是类型的基类`Derived`，否则它是`false`。

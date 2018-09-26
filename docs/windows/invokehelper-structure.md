@@ -1,28 +1,34 @@
 ---
 title: InvokeHelper 结构 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/21/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - event/Microsoft::WRL::Details::InvokeHelper
+- event/Microsoft::WRL::Details::InvokeHelper::callback_
+- event/Microsoft::WRL::Details::InvokeHelper::Invoke
+- event/Microsoft::WRL::Details::InvokeHelper::InvokeHelper
 dev_langs:
 - C++
 helpviewer_keywords:
-- InvokeHelper structure
+- Microsoft::WRL::Details::InvokeHelper structure
+- Microsoft::WRL::Details::callback_ data member
+- Microsoft::WRL::Details::Invoke method
+- Microsoft::WRL::Details::InvokeHelper, constructor
 ms.assetid: 555ad2bc-4dd6-4e65-a2e2-1242c395f0e5
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0ffef0c6a55116bf3a228d7d5da4bd698607d7fa
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6eccc9a7eacf9cdd3b98796f575d966b7b566864
+ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46431029"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47169532"
 ---
 # <a name="invokehelper-structure"></a>InvokeHelper 结构
 
@@ -96,7 +102,7 @@ struct InvokeHelper<TDelegateInterface, TCallback, 9> : Microsoft::WRL::RuntimeC
 事件处理程序函数的类型。
 
 *argCount*<br/>
-中的参数数目**InvokeHelper**专用化。
+中的参数数目`InvokeHelper`专用化。
 
 ## <a name="remarks"></a>备注
 
@@ -106,27 +112,27 @@ struct InvokeHelper<TDelegateInterface, TCallback, 9> : Microsoft::WRL::RuntimeC
 
 ### <a name="public-typedefs"></a>公共 Typedef
 
-|名称|描述|
-|----------|-----------------|
-|`Traits`|类定义的每个事件处理程序自变量的类型的同义词。|
+名称     | 描述
+-------- | -----------------------------------------------------------------------------
+`Traits` | 类定义的每个事件处理程序自变量的类型的同义词。
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
-|----------|-----------------|
-|[InvokeHelper::InvokeHelper 构造函数](../windows/invokehelper-invokehelper-constructor.md)|初始化的新实例**InvokeHelper**类。|
+名称                                        | 描述
+------------------------------------------- | -------------------------------------------------------
+[Invokehelper:: Invokehelper](#invokehelper) | 初始化 `InvokeHelper` 类的新实例。
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
-|----------|-----------------|
-|[InvokeHelper::Invoke 方法](../windows/invokehelper-invoke-method.md)|调用其签名包含指定的数量的参数的事件处理程序。|
+名称                            | 描述
+------------------------------- | -----------------------------------------------------------------------------------
+[Invokehelper:: Invoke](#invoke) | 调用其签名包含指定的数量的参数的事件处理程序。
 
 ### <a name="public-data-members"></a>公共数据成员
 
-|名称|描述|
-|----------|-----------------|
-|[InvokeHelper::callback_ 数据成员](../windows/invokehelper-callback-data-member.md)|表示事件发生时要调用的事件处理程序。|
+名称                                 | 描述
+------------------------------------ | ----------------------------------------------------------
+[Invokehelper:: Callback_](#callback) | 表示事件发生时要调用的事件处理程序。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -138,6 +144,111 @@ struct InvokeHelper<TDelegateInterface, TCallback, 9> : Microsoft::WRL::RuntimeC
 
 **Namespace:** Microsoft::WRL::Details
 
-## <a name="see-also"></a>请参阅
+## <a name="callback"></a>Invokehelper:: Callback_
 
-[Microsoft::WRL::Details 命名空间](../windows/microsoft-wrl-details-namespace.md)
+支持 WRL 基础结构，不应在代码中直接使用。
+
+```cpp
+TCallback callback_;
+```
+
+### <a name="remarks"></a>备注
+
+表示事件发生时要调用的事件处理程序。
+
+`TCallback`模板参数指定的事件处理程序的类型。
+
+## <a name="invoke"></a>Invokehelper:: Invoke
+
+支持 WRL 基础结构，不应在代码中直接使用。
+
+```cpp
+STDMETHOD(
+   Invoke
+)();
+STDMETHOD(
+   Invoke
+)(typename Traits;
+STDMETHOD(
+   Invoke
+)( typename Traits;
+STDMETHOD(
+   Invoke
+)( typename Traits;
+STDMETHOD(
+   Invoke
+)( typename Traits;
+STDMETHOD(
+   Invoke
+)( typename Traits;
+STDMETHOD(
+   Invoke
+)( typename Traits;
+STDMETHOD(
+   Invoke
+)( typename Traits;
+STDMETHOD(
+   Invoke
+)( typename Traits;
+STDMETHOD(
+   Invoke
+)( typename Traits;
+```
+
+### <a name="parameters"></a>参数
+
+*arg1*<br/>
+参数 1。
+
+*Arg2*<br/>
+参数 2。
+
+*arg3*<br/>
+参数 3。
+
+*了 arg4*<br/>
+参数 4。
+
+*arg5*<br/>
+参数 5。
+
+*了 arg6*<br/>
+自变量 6。
+
+*arg7*<br/>
+参数 7。
+
+*arg8*<br/>
+参数 8。
+
+*arg9*<br/>
+参数 9。
+
+### <a name="return-value"></a>返回值
+
+如果成功，则为 S_OK否则为描述错误的 HRESULT。
+
+### <a name="remarks"></a>备注
+
+调用其签名包含指定的数量的参数的事件处理程序。
+
+## <a name="invokehelper"></a>Invokehelper:: Invokehelper
+
+支持 WRL 基础结构，不应在代码中直接使用。
+
+```cpp
+explicit InvokeHelper(
+   TCallback callback
+);
+```
+
+### <a name="parameters"></a>参数
+
+*回调*<br/>
+事件处理程序。
+
+### <a name="remarks"></a>备注
+
+初始化 `InvokeHelper` 类的新实例。
+
+`TCallback`模板参数指定的事件处理程序的类型。
