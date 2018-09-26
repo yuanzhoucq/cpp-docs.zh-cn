@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2870b2958f2e18b711ea568fdda2ae01d41e37f6
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ca5ef287ad853387635bbcc349374e1f174b4fd6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752718"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095932"
 ---
 # <a name="pointer-declarations"></a>指针声明
 
@@ -34,18 +34,18 @@ ms.locfileid: "43752718"
 &nbsp;&nbsp;&nbsp;&nbsp;pointer<sub>opt</sub> direct-declarator
 
 *direct-declarator*：<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;identifier<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*identifier*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;( declarator )<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;direct-declarator [ constant-expression<sub>opt</sub> ]<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;direct-declarator ( parameter-type-list )<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;direct-declarator ( identifier-list<sub>opt</sub> )
 
 *pointer*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<strong>\*</strong> type-qualifier-list<sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<strong>\*</strong> type-qualifier-list<sub>opt</sub> pointer
+&nbsp;&nbsp;&nbsp;&nbsp;<strong>\*</strong> *type-qualifier-list*<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<strong>\*</strong> *type-qualifier-list*<sub>opt</sub> *pointer*
 
 *type-qualifier-list*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;type-qualifier<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*type-qualifier*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;type-qualifier-list type-qualifier
 
 *type-specifier* 用于指定对象的类型，可以是任何基本、结构或联合类型。 指针变量也可以指向函数、数组和其他指针。 （有关声明和解释更复杂的指针类型的信息，请参阅[解释更复杂的声明符](../c-language/interpreting-more-complex-declarators.md)。）
@@ -59,6 +59,7 @@ ms.locfileid: "43752718"
 在定义结构、联合或枚举类型之前，您可以声明指向结构、联合或枚举类型的指针。 您可使用结构或联合标记声明指针，如下面的示例所示。 此类声明是允许的，因为编译器不需要知道要为指针变量分配空间的结构或联合的大小。
 
 ## <a name="examples"></a>示例
+
 以下示例演示了指针声明。
 
 ```
