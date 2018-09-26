@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d4b7184e2eebcea83770aff55a5e9f75242aa1c1
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 04e331da219f0c7a3996dda69d53769ea443b55e
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43206166"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44319092"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Visual C++ 更改历史记录（2003 - 2015）
 
@@ -65,7 +65,7 @@ ms.locfileid: "43206166"
   
 - **数学库函数的 C++ 重载** 在早期版本中，\<math.h> 定义数学库函数的部分（非全部） C++ 重载。 \<cmath> 定义了其余的重载，因此为了获取所有重载，其中一个需要包括 \<cmath> 标头。 这就会导致只包括 \<math.h> 的代码中的函数重载解析出现问题。 现在，已从 \<math.h> 中删除了所有 C++ 重载，现在仅包含在 \<cmath> 中。  
   
-     若要解决错误，请包括 <cmath>cmath> 以获取已从 \<math.h> 中删除的函数的声明。 下表列出了移动的函数。  
+     若要解决错误，包括 \<cmath> 以获取已从 \<math.h> 中删除的函数的声明。 下表列出了移动的函数。  
   
      移动的函数：  
   
