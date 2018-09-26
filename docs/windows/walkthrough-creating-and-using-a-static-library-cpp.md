@@ -16,12 +16,12 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8d495843d7979ace1d23710eb50c910e9089cf9c
-ms.sourcegitcommit: 92c568e9466ffd7346a4120c478c9bdea61c8756
+ms.openlocfilehash: a85789123b1dd9129916683c08484bf6607a0687
+ms.sourcegitcommit: 9799816278ffa3e6b64199862ec57143c1b1ea56
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "47029692"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47188114"
 ---
 # <a name="walkthrough-creating-and-using-a-static-library-c"></a>演练：创建和使用静态库 (C++)
 
@@ -60,7 +60,7 @@ ms.locfileid: "47029692"
 
         1. 下**应用程序类型**，选择**静态库 (.lib)**。
 
-        1. 下**Additioal 选项**，取消选中**预编译标头**复选框。
+        1. 下**其他选项**，取消选中**预编译标头**复选框。
 
         1. 选择**确定**创建项目。
 
@@ -108,7 +108,7 @@ ms.locfileid: "47029692"
 
         1. 下**应用程序类型**，选择**控制台应用程序 (.exe)**。
 
-        1. 下**Additioal 选项**，取消选中**预编译标头**复选框。
+        1. 下**其他选项**，取消选中**预编译标头**复选框。
 
         1. 选择**确定**创建项目。
 
