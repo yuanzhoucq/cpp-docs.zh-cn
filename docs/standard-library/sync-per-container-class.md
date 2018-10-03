@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d511eb29c081cfbb85770b35e31aab927b2480b
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: d470b60716ab81636be838f2a61e58542a52ffd9
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38957116"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48234835"
 ---
 # <a name="syncpercontainer-class"></a>sync_per_container 类
 
@@ -33,7 +33,7 @@ ms.locfileid: "38957116"
 ```cpp
 template <class Cache>
 class sync_per_container
- : public Cache
+    : public Cache
 ```
 
 ### <a name="parameters"></a>参数

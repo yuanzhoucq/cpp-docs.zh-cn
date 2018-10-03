@@ -1,7 +1,7 @@
 ---
 title: ATL OLE DB 提供程序向导 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/03/2018
 ms.technology:
 - cpp-atl
 ms.topic: reference
@@ -17,16 +17,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15104e0252ad6994b6220b433c7324085199440c
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 6857bf80aaaad36b4dcfc4fbf1330eccd03f971a
+ms.sourcegitcommit: d1527eb2d50156bf923f2a32ec3af9efc7fc4304
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45717205"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48250349"
 ---
 # <a name="atl-ole-db-provider-wizard"></a>ATL OLE DB 提供程序向导
 
 此向导将创建构成的 OLE DB 访问接口的类。
+
+> [!WARNING]
+> 在 Visual Studio 2017 版本 15.9 此代码向导已弃用，将 Visual Studio 的未来版本中删除。 很少使用此向导。 ATL 和 MFC 的常规支持不受此向导中删除。 如果你想要共享您对此不推荐使用的反馈，请先完成[这项调查](https://www.surveymonkey.com/r/QDWKKCN)。 你的反馈对我们很重要。
+
 
 ## <a name="remarks"></a>备注
 

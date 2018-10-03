@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 326535395599a76f521100475cfc80b014ba6cd9
-ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
+ms.openlocfilehash: 16613425633f55eeed152e86c1b4fea7f00a784c
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47169432"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48234053"
 ---
 # <a name="walkthrough-adding-animation-to-an-mfc-project"></a>演练：向 MFC 项目添加动画
 
@@ -100,11 +100,11 @@ ms.locfileid: "47169432"
 
 1. 在中**MFC 类向导**，单击**确定**。
 
-1. 保存 MFCAnimationWalkthroughView.cpp，这是在编辑器中打开，但不要将其关闭。
+1. 保存 MFCAnimationWalkthroughView.cpp，这是在编辑器中打开，但请勿将其关闭。
 
 ### <a name="to-add-an-animated-object-to-the-project"></a>若要向项目添加动画效果的对象
 
-1. 在解决方案资源管理器中双击 MFCAnimationWalkthroughView.h 将其打开以进行修改。 变量定义前面的`CMFCAnimationWalkthroughView`类中，添加以下代码以创建自定义动画控制器将处理与动画对象计划冲突。
+1. 在中**解决方案资源管理器**，双击 MFCAnimationWalkthroughView.h 将其打开以进行修改。 变量定义前面的`CMFCAnimationWalkthroughView`类中，添加以下代码以创建自定义动画控制器将处理与动画对象计划冲突。
 
     ```cpp
     class CCustomAnimationController : public CAnimationController

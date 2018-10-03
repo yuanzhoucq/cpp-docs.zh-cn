@@ -1,28 +1,46 @@
 ---
 title: ComPtrRef 类 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/21/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - client/Microsoft::WRL::Details::ComPtrRef
+- client/Microsoft::WRL::Details::ComPtrRef::ComPtrRef
+- client/Microsoft::WRL::Details::ComPtrRef::GetAddressOf
+- client/Microsoft::WRL::Details::ComPtrRef::operator==
+- client/Microsoft::WRL::Details::ComPtrRef::operator!=
+- client/Microsoft::WRL::Details::ComPtrRef::operator InterfaceType**
+- client/Microsoft::WRL::Details::ComPtrRef::operator*
+- client/Microsoft::WRL::Details::ComPtrRef::operator T*
+- client/Microsoft::WRL::Details::ComPtrRef::operator void**
+- client/Microsoft::WRL::Details::ComPtrRef::ReleaseAndGetAddressOf
 dev_langs:
 - C++
 helpviewer_keywords:
-- ComPtrRef class
+- Microsoft::WRL::Details::ComPtrRef class
+- Microsoft::WRL::Details::ComPtrRef::ComPtrRef, constructor
+- Microsoft::WRL::Details::ComPtrRef::GetAddressOf method
+- Microsoft::WRL::Details::ComPtrRef::operator== operator
+- Microsoft::WRL::Details::ComPtrRef::operator!= operator
+- Microsoft::WRL::Details::ComPtrRef::operator InterfaceType** operator
+- Microsoft::WRL::Details::ComPtrRef::operator* operator
+- Microsoft::WRL::Details::ComPtrRef::operator T* operator
+- Microsoft::WRL::Details::ComPtrRef::operator void** operator
+- Microsoft::WRL::Details::ComPtrRef::ReleaseAndGetAddressOf method
 ms.assetid: d6bdfd20-e977-45b4-9ac1-1b8efbdb77de
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d4ec1139efae422035ef34030cfcffcc5547f0a2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e19b8bb5ecf1215c3f9c4eb74cf36eb9d7fc7200
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46418497"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235797"
 ---
 # <a name="comptrref-class"></a>ComPtrRef 类
 
@@ -37,7 +55,7 @@ template <
 class ComPtrRef : public ComPtrRefBase<T>;
 ```
 
-#### <a name="parameters"></a>参数
+### <a name="parameters"></a>参数
 
 *T*<br/>
 一个[ComPtr\<T >](../windows/comptr-class.md)类型派生自它，而不仅仅是所表示接口`ComPtr`。
@@ -50,27 +68,27 @@ class ComPtrRef : public ComPtrRefBase<T>;
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
-|----------|-----------------|
-|[ComPtrRef::ComPtrRef 构造函数](../windows/comptrref-comptrref-constructor.md)|初始化的新实例**ComPtrRef**到另一个类从指定的指针**ComPtrRef**对象。|
+名称                               | 描述
+---------------------------------- | -------------------------------------------------------------------------------------------------------------
+[Comptrref:: Comptrref](#comptrref) | 初始化的新实例`ComPtrRef`类从指定的指针到另一个`ComPtrRef`对象。
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
-|----------|-----------------|
-|[ComPtrRef::GetAddressOf 方法](../windows/comptrref-getaddressof-method.md)|检索指向当前所表示接口的指针的地址**ComPtrRef**对象。|
-|[ComPtrRef::ReleaseAndGetAddressOf 方法](../windows/comptrref-releaseandgetaddressof-method.md)|删除当前**ComPtrRef**对象并返回到由表示的接口的指针到-的指针**ComPtrRef**对象。|
+名称                                                         | 描述
+------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------
+[Comptrref:: Getaddressof](#getaddressof)                     | 检索指向当前所表示接口的指针的地址`ComPtrRef`对象。
+[Comptrref:: Releaseandgetaddressof](#releaseandgetaddressof) | 删除当前`ComPtrRef`对象并返回到由表示的接口的指针到-的指针`ComPtrRef`对象。
 
 ### <a name="public-operators"></a>公共运算符
 
-|名称|描述|
-|----------|-----------------|
-|[ComPtrRef::operator InterfaceType** 运算符](../windows/comptrref-operator-interfacetype-star-star-operator.md)|删除当前**ComPtrRef**对象并返回到由表示的接口的指针到-的指针**ComPtrRef**对象。|
-|[ComPtrRef::operator T* 运算符](../windows/comptrref-operator-t-star-operator.md)|返回的值[ptr_](../windows/comptrrefbase-ptr-data-member.md)当前 ComPtrRef 对象的数据成员。|
-|[ComPtrRef::operator void** 运算符](../windows/comptrref-operator-void-star-star-operator.md)|删除当前**ComPtrRef**对象，将强制转换到由表示的接口指针**ComPtrRef**对象作为指针-到-指针-若要**void**，，然后返回转换的指针。|
-|[ComPtrRef::operator* 运算符](../windows/comptrref-operator-star-operator.md)|检索指向当前所表示接口的指针**ComPtrRef**对象。|
-|[ComPtrRef::operator== 运算符](../windows/comptrref-operator-equality-operator.md)|指示两个**ComPtrRef**对象是否相等。|
-|[ComPtrRef::operator!= 运算符](../windows/comptrref-operator-inequality-operator.md)|指示两个**ComPtrRef**对象是否不相等。|
+名称                                                                     | 描述
+------------------------------------------------------------------------ | -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+[Comptrref:: Operator InterfaceType * *](#operator-interfacetype-star-star) | 删除当前`ComPtrRef`对象并返回到由表示的接口的指针到-的指针`ComPtrRef`对象。
+[Comptrref:: Operator T *](#operator-t-star)                               | 返回的值[ptr_](../windows/comptrrefbase-ptr-data-member.md)当前 ComPtrRef 对象的数据成员。
+[Comptrref:: Operator void * *](#operator-void-star-star)                   | 删除当前`ComPtrRef`对象，将强制转换到由表示的接口指针`ComPtrRef`对象作为指针-到-指针-到`void`，然后返回强制转换指针。
+[Comptrref:: Operator *](#operator-star)                                   | 检索指向当前所表示接口的指针`ComPtrRef`对象。
+[Comptrref:: Operator = =](#operator-equality)                              | 指示两个 `ComPtrRef` 对象是否相等。
+[Comptrref:: Operator ！ =](#operator-inequality)                            | 指示两个 `ComPtrRef` 对象是否不相等。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -84,6 +102,207 @@ class ComPtrRef : public ComPtrRefBase<T>;
 
 **Namespace:** Microsoft::WRL::Details
 
-## <a name="see-also"></a>请参阅
+## <a name="comptrref"></a>Comptrref:: Comptrref
 
-[Microsoft::WRL::Details 命名空间](../windows/microsoft-wrl-details-namespace.md)
+支持 WRL 基础结构，不应在代码中直接使用。
+
+```cpp
+ComPtrRef(
+   _In_opt_ T* ptr
+);
+```
+
+### <a name="parameters"></a>参数
+
+*ptr*<br/>
+基础值的另一个`ComPtrRef`对象。
+
+### <a name="remarks"></a>备注
+
+初始化的新实例`ComPtrRef`类从指定的指针到另一个`ComPtrRef`对象。
+
+## <a name="getaddressof"></a>Comptrref:: Getaddressof
+
+支持 WRL 基础结构，不应在代码中直接使用。
+
+```cpp
+InterfaceType* const * GetAddressOf() const;
+```
+
+### <a name="return-value"></a>返回值
+
+指向当前所表示接口的指针的地址`ComPtrRef`对象。
+
+### <a name="remarks"></a>备注
+
+检索指向当前所表示接口的指针的地址`ComPtrRef`对象。
+
+## <a name="operator-equality"></a>Comptrref:: Operator = =
+
+支持 WRL 基础结构，不应在代码中直接使用。
+
+```cpp
+bool operator==(
+   const Details::ComPtrRef<ComPtr<T>>& a,
+   const Details::ComPtrRef<ComPtr<U>>& b
+);
+
+bool operator==(
+   const Details::ComPtrRef<ComPtr<T>>& a,
+   decltype(__nullptr)  
+);
+
+bool operator==(
+   decltype(__nullptr),
+   const Details::ComPtrRef<ComPtr<T>>& a
+);
+
+bool operator==(
+   const Details::ComPtrRef<ComPtr<T>>& a,
+   void* b
+);
+
+bool operator==(
+   void* b,
+   const Details::ComPtrRef<ComPtr<T>>& a
+);
+```
+
+### <a name="parameters"></a>参数
+
+*a*<br/>
+对 `ComPtrRef` 对象的引用。
+
+*b*<br/>
+对另一个引用`ComPtrRef`对象或到匿名类型的指针 (`void*`)。
+
+### <a name="return-value"></a>返回值
+
+第一个运算符产生`true`如果对象等同于对象*b*; 否则为`false`。
+
+第二个和第三个运算符会产生`true`如果对象等于`nullptr`; 否则为`false`。
+
+第四个和第五个运算符会产生`true`如果对象等同于对象*b*; 否则为`false`。
+
+### <a name="remarks"></a>备注
+
+指示两个 `ComPtrRef` 对象是否相等。
+
+## <a name="operator-inequality"></a>Comptrref:: Operator ！ =
+
+支持 WRL 基础结构，不应在代码中直接使用。
+
+```cpp
+bool operator!=(
+   const Details::ComPtrRef<ComPtr<T>>& a,
+   const Details::ComPtrRef<ComPtr<U>>& b
+);
+
+bool operator!=(
+   const Details::ComPtrRef<ComPtr<T>>& a,
+   decltype(__nullptr)  
+);
+
+bool operator!=(
+   decltype(__nullptr),
+   const Details::ComPtrRef<ComPtr<T>>& a
+);
+
+bool operator!=(
+   const Details::ComPtrRef<ComPtr<T>>& a,
+   void* b
+);
+
+bool operator!=(
+   void* b,
+   const Details::ComPtrRef<ComPtr<T>>& a
+);
+```
+
+### <a name="parameters"></a>参数
+
+*a*<br/>
+对 `ComPtrRef` 对象的引用。
+
+*b*<br/>
+对另一个引用`ComPtrRef`对象或指向的匿名对象的指针 (`void*`)。
+
+### <a name="return-value"></a>返回值
+
+第一个运算符产生`true`如果对象不是等于对象*b*; 否则为`false`。
+
+第二个和第三个运算符会产生`true`如果对象是否不等于`nullptr`; 否则为`false`。
+
+第四个和第五个运算符会产生`true`如果对象不是等于对象*b*; 否则为`false`。
+
+### <a name="remarks"></a>备注
+
+指示两个 `ComPtrRef` 对象是否不相等。
+
+## <a name="operator-interfacetype-star-star"></a>Comptrref:: Operator InterfaceType * *
+
+支持 WRL 基础结构，不应在代码中直接使用。
+
+```cpp
+operator InterfaceType**();
+```
+
+### <a name="remarks"></a>备注
+
+删除当前`ComPtrRef`对象并返回到由表示的接口的指针到-的指针`ComPtrRef`对象。
+
+## <a name="operator-star"></a>Comptrref:: Operator *
+
+支持 WRL 基础结构，不应在代码中直接使用。
+
+```cpp
+InterfaceType* operator *();
+```
+
+### <a name="return-value"></a>返回值
+
+指向由当前的接口`ComPtrRef`对象。
+
+### <a name="remarks"></a>备注
+
+检索指向当前所表示接口的指针`ComPtrRef`对象。
+
+## <a name="operator-t-star"></a>Comptrref:: Operator T *
+
+支持 WRL 基础结构，不应在代码中直接使用。
+
+```cpp
+operator T*();
+```
+
+### <a name="remarks"></a>备注
+
+返回的值[ptr_](../windows/comptrrefbase-ptr-data-member.md)数据成员的当前`ComPtrRef`对象。
+
+## <a name="operator-void-star-star"></a>Comptrref:: Operator void\*\*
+
+支持 WRL 基础结构，不应在代码中直接使用。
+
+```cpp
+operator void**() const;
+```
+
+### <a name="remarks"></a>备注
+
+删除当前`ComPtrRef`对象，将强制转换到由表示的接口指针`ComPtrRef`对象作为指针-到-指针-到`void`，然后返回强制转换指针。
+
+## <a name="releaseandgetaddressof"></a>Comptrref:: Releaseandgetaddressof
+
+支持 WRL 基础结构，不应在代码中直接使用。
+
+```cpp
+InterfaceType** ReleaseAndGetAddressOf();
+```
+
+### <a name="return-value"></a>返回值
+
+指向表示的接口的已删除`ComPtrRef`对象。
+
+### <a name="remarks"></a>备注
+
+删除当前`ComPtrRef`对象并返回到由表示的接口的指针到-的指针`ComPtrRef`对象。

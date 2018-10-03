@@ -152,12 +152,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b9a1472cba13f477143c9b9ace27cb2555f41406
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a95141aa97d7272970adaaa69f3f63de2a622780
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46408422"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235641"
 ---
 # <a name="predefined-macros"></a>预定义的宏
 
@@ -435,7 +435,7 @@ Microsoft Visual c + + 支持这些其他预定义的宏。
 
 - **&#95;WINRT&#95;DLL**定义为 1 时编译为 c + + 和同时[/ZW （Windows 运行时编译）](../build/reference/zw-windows-runtime-compilation.md)并[/LD 或 /LDd](../build/reference/md-mt-ld-use-run-time-library.md)编译器选项设置。 否则，未定义。
 
- 用于确定 ATL 或 MFC 库版本的预处理器宏不是由编译器预定义的。 这些宏是在库、 标头中定义，因此它们未定义的预处理器指令中包含必需的标头之前。
+用于确定 ATL 或 MFC 库版本的预处理器宏不是由编译器预定义的。 这些宏是在库、 标头中定义，因此它们未定义的预处理器指令中包含必需的标头之前。
 
 - **&#95;ATL&#95;VER**中定义\<atldef.h > 作为整形文本进行编码的 ATL 版本编号。
 

@@ -1,7 +1,7 @@
 ---
 title: MFC ODBC 使用者向导 |Microsoft Docs
 ms.custom: ''
-ms.date: 09/17/2018
+ms.date: 10/03/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -17,16 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2df730c5ee38c41cc6f40ac7000802bbe0bbb30d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 23a264c48f0a03888f8b6ac744129de75d8ad757
+ms.sourcegitcommit: d1527eb2d50156bf923f2a32ec3af9efc7fc4304
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46400310"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48250466"
 ---
 # <a name="mfc-odbc-consumer-wizard"></a>MFC ODBC 使用者向导
 
-在此处插入摘要的"搜索结果"。
+> [!WARNING]
+> 在 Visual Studio 2017 版本 15.9 此代码向导已弃用，将 Visual Studio 的未来版本中删除。 很少使用此向导。 ATL 和 MFC 的常规支持不受此向导中删除。 如果你想要共享您对此不推荐使用的反馈，请先完成[这项调查](https://www.surveymonkey.com/r/QDWKKCN)。 你的反馈对我们很重要。
 
 此向导设置了 ODBC 记录集类和数据绑定访问指定的数据源所需。
 

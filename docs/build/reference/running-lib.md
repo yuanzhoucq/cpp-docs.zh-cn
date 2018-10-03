@@ -1,7 +1,7 @@
 ---
 title: 运行 LIB |Microsoft Docs
 ms.custom: ''
-ms.date: 09/05/2018
+ms.date: 09/28/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff75c149ff3cfff5a360314386cc4828d00f4e8d
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 5d8a221a829d3cded8d974c608bdd27edab07f60
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894598"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235409"
 ---
 # <a name="running-lib"></a>运行 LIB
 
@@ -62,25 +62,29 @@ ms.locfileid: "43894598"
 
 该文件*commandfile*是一个文本文件。 无空格或制表符之间允许 at 符号 (**\@**) 和文件名称。 没有默认扩展名;必须指定完整的文件名，包括任何扩展。 不能使用通配符。 可以使用的文件的名称来指定绝对或相对路径。
 
-在命令文件中，参数可以分隔空格或制表符，因为它们可以在命令行;它们还可以由换行符分隔。 使用分号 （;） 来标记注释。 LIB 忽略从分号到行尾的所有文本。
+在命令文件中，参数可以分隔空格或制表符，因为它们可以在命令行;它们还可以由换行符分隔。 使用分号 (**;**) 来标记注释。 LIB 忽略从分号到行尾的所有文本。
 
 您可以在命令文件中，指定所有或命令行的一部分，并且可以使用多个 LIB 命令中的命令文件。 LIB 接受命令文件输入，如同它命令行上该位置中指定。 不能嵌套命令文件。 LIB 回显命令文件的内容，除非使用 /NOLOGO 选项。
 
 ## <a name="using-lib-options"></a>使用 LIB 选项
 
-选项包括选项说明符，短划线 （-） 或正斜杠 （/） 后, 跟的选项的名称。 不能缩写选项名称。 某些选项带自变量，在冒号 （:） 后指定。 中的选项规范允许空格或制表符。 使用一个或多个空格或制表符分隔命令行上的选项规范。 选项名及其关键字或文件的参数不区分大小写，但使用作为参数的标识符区分大小写。 LIB 处理选项和命令文件中的命令行上指定的顺序。 如果使用不同的参数重复一个选项，要处理的最后一个优先。
+选项包括为任一短划线选项说明符 (**-**) 或正斜杠 (**/**) 后, 跟的选项的名称。 不能缩写选项名称。 某些选项带自变量，指定在冒号 (**:**)。 中的选项规范允许空格或制表符。 使用一个或多个空格或制表符分隔命令行上的选项规范。 选项名及其关键字或文件的参数不区分大小写，但使用作为参数的标识符区分大小写。 LIB 处理选项和命令文件中的命令行上指定的顺序。 如果使用不同的参数重复一个选项，要处理的最后一个优先。
 
 以下选项适用于所有 LIB 的模式：
 
 > **/ERRORREPORT** [**NONE** &AMP;#124; **提示** &AMP;#124; **队列** &AMP;#124; **发送**]
 
-如果 lib.exe 在运行时失败，可以使用 /ERRORREPORT 有关这些内部错误向 Microsoft 发送信息。
+如果 lib.exe 在运行时失败，则可以使用 **/ERRORREPORT**有关这些内部错误向 Microsoft 发送信息。
 
-/ERRORREPORT 的详细信息，请参阅[/errorReport （报告内部编译器错误）](../../build/reference/errorreport-report-internal-compiler-errors.md)。
+有关详细信息 **/ERRORREPORT**，请参阅[/errorReport （报告内部编译器错误）](../../build/reference/errorreport-report-internal-compiler-errors.md)。
 
 > **/LTCG**
 
-导致要生成使用链接时间代码生成库。  有关详细信息，请参阅[/LTCG](../../build/reference/ltcg-link-time-code-generation.md)。
+"LTCG"代表*链接时间代码生成*。 此功能要求编译器之间的合作 ([cl.exe](compiler-options.md))，LIB 和链接器 ([链接](linker-options.md)) 以优化受任何组件可以单独执行的操作的代码。
+
+为 LIB **/LTCG**选项指定 cl.exe 的输入，包括使用生成的对象文件[/GL](gl-whole-program-optimization.md)编译器选项。 如果 LIB 遇到这种输入并 **/LTCG**未指定，则它将使用显示信息性消息后，将启用 /LTCG 重新启动。 换而言之，不需要显式设置此选项，但它可以提高生成性能，若要这样做，因为不需要重启 LIB。
+
+在生成过程中，LIB 的输出发送到链接。 链接都有其自己单独 **/LTCG**它用于执行各种优化，包括全程序优化和配置文件按配置优化 (PGO) 检测的选项。 有关链接选项的详细信息，请参阅[/LTCG](ltcg-link-time-code-generation.md)。
 
 > **/ 计算机**
 

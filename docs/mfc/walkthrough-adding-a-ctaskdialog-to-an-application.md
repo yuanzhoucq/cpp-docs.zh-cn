@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 48efa5d85ac6c7ba7e989cc55196f12fb391fa6d
-ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
+ms.openlocfilehash: 899ddba8ee72039702f05b0d369b79e347f7db7e
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47169718"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235602"
 ---
 # <a name="walkthrough-adding-a-ctaskdialog-to-an-application"></a>演练：向应用程序添加 CTaskDialog
 
@@ -43,7 +43,7 @@ ms.locfileid: "47169718"
 
 ## <a name="replacing-a-windows-message-box-with-a-ctaskdialog"></a>将 Windows 消息框替换为 CTaskDialog
 
-以下过程演示了将要替换 Windows 消息框的 `CTaskDialog`最基本的用法。 此示例还更改了与任务对话框关联的图标。 更改该图标会使 `CTaskDialog` 的外观与 Windows 消息框相同。
+以下过程演示了将要替换 Windows 消息框的 `CTaskDialog`最基本的用法。 此示例还更改了与任务对话框关联的图标。 更改图标使`CTaskDialog`显示给 Windows 消息框相同。
 
 ### <a name="to-replace-a-windows-message-box-with-a-ctaskdialog"></a>将 Windows 消息框替换为 CTaskDialog 的步骤
 
@@ -61,7 +61,7 @@ ms.locfileid: "47169718"
     CString emptyString;
     ```
 
-1. 在步骤 4 中的代码的后面添加以下代码。 此代码可保证用户的计算机支持 `CTaskDialog`。 如果不支持该对话框，应用程序将改为显示 Windows 消息框。
+1. 在步骤 4 中的代码的后面添加以下代码。 此代码可保证用户的计算机支持 `CTaskDialog`。 如果对话框不受支持，该应用程序显示 Windows 消息框。
 
     ```cpp
     if (CTaskDialog::IsSupported())
@@ -92,7 +92,7 @@ ms.locfileid: "47169718"
     taskDialog.DoModal();
     ```
 
-如果不希望 `CTaskDialog` 显示与 Windows 消息框相同的图标，可以忽略步骤 7。 如果忽略该步骤，当应用程序显示 `CTaskDialog` 时，该对话框没有图标。
+如果不希望，可以避免第 7 步`CTaskDialog`为 Windows 消息框显示相同的图标。 如果您避免了该步骤`CTaskDialog`时应用程序将显示它具有无图标。
 
 编译并运行该应用程序。 在启动后，应用程序将显示任务对话框。
 
@@ -181,7 +181,7 @@ ms.locfileid: "47169718"
 
 ### <a name="to-display-a-ctaskdialog-without-creating-a-ctaskdialog-object"></a>显示 CTaskDialog 而不创建 CTaskDialog 对象的步骤
 
-1. 打开 MyProject.cpp 文件（如果尚未打开）。
+1. 如果尚未打开，请打开 MyProject.cpp 文件。
 
 1. 导航到 `if (CTaskDialog::IsSupported())` 语句的右括号处。
 
@@ -197,7 +197,7 @@ ms.locfileid: "47169718"
 
 编译并运行该应用程序。 应用程序将显示两个任务对话框。 第一个对话框是从**到向 CTaskDialog 添加功能**过程; 第二个对话框是从上一个过程。
 
-这些示例并未演示 `CTaskDialog`的所有可用选项，但是可以帮助你入门。 有关该类的完整描述，请参阅 [CTaskDialog Class](../mfc/reference/ctaskdialog-class.md) 。
+这些示例不演示所有可用的选项`CTaskDialog`，但是可以帮助你入门。 有关该类的完整描述，请参阅 [CTaskDialog Class](../mfc/reference/ctaskdialog-class.md) 。
 
 ## <a name="see-also"></a>请参阅
 

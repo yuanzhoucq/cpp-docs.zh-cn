@@ -1,29 +1,37 @@
 ---
 title: CreatorMap 结构 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/21/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - module/Microsoft::WRL::Details::CreatorMap
 - implements/Microsoft::WRL::Details::CreatorMap
+- module/Microsoft::WRL::Details::CreatorMap::activationId
+- module/Microsoft::WRL::Details::CreatorMap::factoryCache
+- module/Microsoft::WRL::Details::CreatorMap::factoryCreator
+- module/Microsoft::WRL::Details::CreatorMap::serverName
 dev_langs:
 - C++
 helpviewer_keywords:
-- CreatorMap structure
+- Microsoft::WRL::Details::CreatorMap structure
+- Microsoft::WRL::Details::CreatorMap::activationId data member
+- Microsoft::WRL::Details::CreatorMap::factoryCache data member
+- Microsoft::WRL::Details::CreatorMap::factoryCreator data member
+- Microsoft::WRL::Details::CreatorMap::serverName data member
 ms.assetid: 94e40927-90c3-4107-bca3-3ad2dc4beda9
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c0a622eaa40cedfd7bf22259cf81382290f20f3a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: a7bf4ec2132e19989c5f1ae7c47003056928d0fd
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42593729"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48234926"
 ---
 # <a name="creatormap-structure"></a>CreatorMap 结构
 
@@ -39,7 +47,7 @@ struct CreatorMap;
 
 包含有关如何初始化、 注册和注销的对象的信息。
 
-**CreatorMap**包含以下信息：
+`CreatorMap` 包含下列信息：
 
 - 如何初始化、 注册和注销的对象。
 
@@ -51,12 +59,12 @@ struct CreatorMap;
 
 ### <a name="public-data-members"></a>公共数据成员
 
-|名称|描述|
-|----------|-----------------|
-|[CreatorMap::activationId 数据成员](../windows/creatormap-activationid-data-member.md)|表示通过经典的 COM 类 ID 或 Windows 运行时名称标识的对象 ID。|
-|[CreatorMap::factoryCache 数据成员](../windows/creatormap-factorycache-data-member.md)|存储的工厂缓存指向**CreatorMap**。|
-|[CreatorMap::factoryCreator 数据成员](../windows/creatormap-factorycreator-data-member.md)|创建指定的工厂**CreatorMap**。|
-|[CreatorMap::serverName 数据成员](../windows/creatormap-servername-data-member.md)|将存储的服务器名称**CreatorMap**。|
+名称                                          | 描述
+--------------------------------------------- | ------------------------------------------------------------------------------------------------------
+[Creatormap:: Activationid](#activationid)     | 表示通过经典的 COM 类 ID 或 Windows 运行时名称标识的对象 ID。
+[Creatormap:: Factorycache](#factorycache)     | 存储的工厂缓存指向`CreatorMap`。
+[Creatormap:: Factorycreator](#factorycreator) | 创建指定的工厂`CreatorMap`。
+[Creatormap:: Servername](#servername)         | 将存储的服务器名称`CreatorMap`。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -68,6 +76,83 @@ struct CreatorMap;
 
 **Namespace:** Microsoft::WRL::Details
 
-## <a name="see-also"></a>请参阅
+## <a name="activationid"></a>Creatormap:: Activationid
 
-[Microsoft::WRL::Details 命名空间](../windows/microsoft-wrl-details-namespace.md)
+支持 WRL 基础结构，不应在代码中直接使用。
+
+```cpp
+union {
+   const IID* clsid;
+   const wchar_t* (*getRuntimeName)();
+} activationId;
+```
+
+### <a name="parameters"></a>参数
+
+*clsid*<br/>
+接口 ID。
+
+*getRuntimeName*<br/>
+用于检索对象的 Windows 运行时名称的函数。
+
+### <a name="remarks"></a>备注
+
+表示通过经典的 COM 类 ID 或 Windows 运行时名称标识的对象 ID。
+
+## <a name="factorycache"></a>Creatormap:: Factorycache
+
+支持 WRL 基础结构，不应在代码中直接使用。
+
+```cpp
+FactoryCache* factoryCache;
+```
+
+### <a name="remarks"></a>备注
+
+存储的工厂缓存指向`CreatorMap`。
+
+## <a name="factorycreator"></a>Creatormap:: Factorycreator
+
+支持 WRL 基础结构，不应在代码中直接使用。
+
+```cpp
+HRESULT (*factoryCreator)(
+   unsigned int* currentflags,
+   const CreatorMap* entry,
+   REFIID iidClassFactory,
+IUnknown** factory);
+```
+
+### <a name="parameters"></a>参数
+
+*currentflags*<br/>
+之一[RuntimeClassType](../windows/runtimeclasstype-enumeration.md)枚举器。
+
+*entry*<br/>
+CreatorMap。
+
+*iidClassFactory*<br/>
+类工厂的接口 ID。
+
+*工厂*<br/>
+操作完成后，类工厂的地址。
+
+### <a name="return-value"></a>返回值
+
+如果成功，则为 S_OK；否则为指示错误的 HRESULT。
+
+### <a name="remarks"></a>备注
+
+为指定 CreatorMap 创建的工厂。
+
+## <a name="servername"></a>Creatormap:: Servername
+
+支持 WRL 基础结构，不应在代码中直接使用。
+
+```cpp
+const wchar_t* serverName;
+```
+
+### <a name="remarks"></a>备注
+
+存储 CreatorMap 的服务器名称。

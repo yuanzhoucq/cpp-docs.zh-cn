@@ -17,18 +17,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 017dac5f9cba676980629109b53f4b2aec4af940
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 57f6e24ec664128a47813c29ce07a4272ce4a771
+ms.sourcegitcommit: d1527eb2d50156bf923f2a32ec3af9efc7fc4304
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45713214"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48250362"
 ---
 # <a name="atl-active-server-page-component-wizard"></a>ATL Active Server Page 组件向导
 
 此向导将 Active Server Pages (ASP) 组件插入到项目中。 Microsoft Internet 信息服务 (IIS) 使用 ASP 组件作为其增强的 Web 页面开发体系结构的一部分。
 
 通过使用此向导，可以指定组件的线程模型和它聚合的支持。 您还可以指示支持错误信息接口、 连接点和自由线程封送处理。
+
+> [!WARNING]
+> 在 Visual Studio 2017 版本 15.9 此代码向导已弃用，将 Visual Studio 的未来版本中删除。 很少使用此向导。 ATL 和 MFC 的常规支持不受此向导中删除。 如果你想要共享您对此不推荐使用的反馈，请先完成[这项调查](https://www.surveymonkey.com/r/QDWKKCN)。 你的反馈对我们很重要。
 
 ## <a name="remarks"></a>备注
 
