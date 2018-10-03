@@ -15,26 +15,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8267704e6bb1b43a13cc05d21d0572695365fd6
-ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
+ms.openlocfilehash: 1995d3472f175872e084e2654531a2e72a90f950
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47169744"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235504"
 ---
 # <a name="walkthrough-putting-controls-on-toolbars"></a>演练：将控件置于工具栏上
 
-本主题介绍如何将一个包含 Windows 控件的工具栏按钮添加到工具栏。 在 MFC 中，工具栏按钮必须是[CMFCToolBarButton 类](../mfc/reference/cmfctoolbarbutton-class.md)-派生的类，例如[CMFCToolBarComboBoxButton 类](../mfc/reference/cmfctoolbarcomboboxbutton-class.md)， [CMFCToolBarEditBoxButton 类](../mfc/reference/cmfctoolbareditboxbutton-class.md)，[CMFCDropDownToolbarButton 类](../mfc/reference/cmfcdropdowntoolbarbutton-class.md)，或[CMFCToolBarMenuButton 类](../mfc/reference/cmfctoolbarmenubutton-class.md)。
+本文介绍如何添加包含到工具栏上的 Windows 控件的工具栏按钮。 在 MFC 中，工具栏按钮必须是[CMFCToolBarButton 类](../mfc/reference/cmfctoolbarbutton-class.md)-派生的类，例如[CMFCToolBarComboBoxButton 类](../mfc/reference/cmfctoolbarcomboboxbutton-class.md)， [CMFCToolBarEditBoxButton 类](../mfc/reference/cmfctoolbareditboxbutton-class.md)，[CMFCDropDownToolbarButton 类](../mfc/reference/cmfcdropdowntoolbarbutton-class.md)，或[CMFCToolBarMenuButton 类](../mfc/reference/cmfctoolbarmenubutton-class.md)。
 
 ## <a name="adding-controls-to-toolbars"></a>将控件添加到工具栏
 
 若要将控件添加到工具栏，请执行以下步骤：
 
-1. 在父级工具栏资源中保留该按钮的虚拟资源 ID。 详细了解如何使用创建按钮**工具栏编辑器**在 Visual Studio 中，请参阅[工具栏编辑器](../windows/toolbar-editor.md)主题。
+1. 在父级工具栏资源中保留该按钮的虚拟资源 ID。 详细了解如何使用创建按钮**工具栏编辑器**在 Visual Studio 中，请参阅[工具栏编辑器](../windows/toolbar-editor.md)一文。
 
 1. 在父级工具栏的所有位图中保留该按钮的工具栏图像（按钮图标）。
 
-1. 在处理 `AFX_WM_RESETTOOLBAR` 消息的消息处理程序中，执行下列操作：
+1. 处理的消息处理程序中`AFX_WM_RESETTOOLBAR`消息，请执行以下步骤：
 
    1. 使用 `CMFCToolbarButton` 派生的类构造此按钮控件。
 
@@ -51,7 +51,7 @@ ms.locfileid: "47169744"
 
 ## <a name="example-creating-a-find-combo-box"></a>示例：创建一个 Find 组合框
 
-本部分介绍如何创建**查找**出现在工具栏上，其中包含最近使用过的搜索字符串的组合框控件。 用户可在控件中键入一个字符串，然后按 Enter 键来搜索文档，或按 Esc 键将焦点返回主框架。 此示例假定文档穦 [CEditView 类](../mfc/reference/ceditview-class.md)-派生的视图。
+本部分介绍如何创建**查找**出现在工具栏上，其中包含使用最新的搜索字符串的组合框控件。 用户可在控件中键入一个字符串，然后按 Enter 键来搜索文档，或按 Esc 键将焦点返回主框架。 此示例假定文档穦 [CEditView 类](../mfc/reference/ceditview-class.md)-派生的视图。
 
 ### <a name="creating-the-find-control"></a>创建 Find 控件
 
@@ -72,7 +72,7 @@ ms.locfileid: "47169744"
 
 1. 在 `CFindComboBox` 类中，重写 `PreTranslateMessage` 虚方法。 此方法使组合框，以处理[WM_KEYDOWN](/windows/desktop/inputdev/wm-keydown)消息。 如果用户点击 Esc 键 (`VK_ESCAPE`)，则将焦点返回到主框架窗口。 如果用户点击 Enter 键 (`VK_ENTER`)，则会向主框架窗口发送一条包含 `WM_COMMAND` 命令 ID 的 `ID_EDIT_FIND_COMBO` 消息。
 
-1. 为创建一个类**查找**组合框按钮，派生自[CMFCToolBarComboBoxButton 类](../mfc/reference/cmfctoolbarcomboboxbutton-class.md)。 在此示例中，该类名为 `CFindComboButton`。
+1. 为创建一个类**查找**组合框按钮，派生自[CMFCToolBarComboBoxButton 类](../mfc/reference/cmfctoolbarcomboboxbutton-class.md)。 在此示例中，名为`CFindComboButton`。
 
 1. `CMFCToolbarComboBoxButton` 的构造函数具有三个参数：按钮的命令 ID、按钮图像索引和组合框的样式。 按以下方式设置这些参数：
 

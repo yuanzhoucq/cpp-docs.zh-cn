@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 210cf8d3183e9fcd94cfa51d875a0b26e4a8fa07
-ms.sourcegitcommit: 92c568e9466ffd7346a4120c478c9bdea61c8756
+ms.openlocfilehash: 165ea5b42ea4e293eb60b7a798778e3a461e0385
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "47029653"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235446"
 ---
 # <a name="how-to-migrate-to-clr"></a>如何：迁移到 /clr
 
@@ -118,7 +118,7 @@ COMObj2->Method(args);  // C++ equivalent
 
 编译的项目编译某些模块的位置的最简单办法 **/clr**是完全禁用预编译标头。 （在项目属性页对话框中，打开 C/c + + 节点，并选择预编译标头。 然后创建/使用预编译标头属性更改为"不使用预编译标头"。）
 
-但是，特别是对于大型项目中，预编译标头提供更好的编译速度，因此禁用此功能不需要这样做。 在这种情况下最好配置 **/clr**和非 **/clr**文件以使用单独的预编译标头。 这可以通过一个步骤中选择多要编译的模块 **/clr**使用解决方案资源管理器中，右键单击组，并选择属性。 然后更改通过文件创建/使用 PCH 和预编译头文件的属性，以分别使用不同的标头文件的名称和 PCH 文件。
+但是，特别是对于大型项目中，预编译标头提供更好的编译速度，因此禁用此功能不需要这样做。 在这种情况下最好配置 **/clr**和非 **/clr**文件以使用单独的预编译标头。 这可以通过一个步骤中选择多要编译的模块 **/clr**使用**解决方案资源管理器**、 右键单击组，并选择属性。 然后更改通过文件创建/使用 PCH 和预编译头文件的属性，以分别使用不同的标头文件的名称和 PCH 文件。
 
 ## <a name="fixing-errors"></a>修复错误
 

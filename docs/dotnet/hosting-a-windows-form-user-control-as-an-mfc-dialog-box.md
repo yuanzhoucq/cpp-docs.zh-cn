@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 2355a5341259978e402ecc6f8de5c684c9435e3a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5867f9524d897657641ab9db392d77585117a465
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46433057"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48234979"
 ---
 # <a name="hosting-a-windows-form-user-control-as-an-mfc-dialog-box"></a>以 MFC 对话框的形式承载 Windows 窗体用户控件
 
@@ -56,7 +56,7 @@ MFC 提供模板类[CWinFormsDialog](../mfc/reference/cwinformsdialog-class.md) 
 
 1. 添加一个新类的子类`CDialog`。
 
-     右键单击项目名称，然后添加该子类的 MFC 类 (名为 CHostForWinForm) `CDialog`。 由于不需要对话框资源，可以删除的资源 ID （选择资源视图中，展开对话框文件夹并删除 IDD_HOSTFORWINFORM 资源。  然后，删除所有引用的 id 在代码中。）。
+     右键单击项目名称，然后添加该子类的 MFC 类 (名为 CHostForWinForm) `CDialog`。 由于不需要对话框资源，可以删除的资源 ID (选择**资源视图**，展开**对话框**文件夹，然后删除`IDD_HOSTFORWINFORM`资源。  然后，删除所有引用的 id 在代码中。）。
 
 1. 替换`CDialog`CHostForWinForm.h 和 CHostForWinForm.cpp 文件中`CWinFormsDialog<WindowsControlLibrary1::UserControl1>`。
 

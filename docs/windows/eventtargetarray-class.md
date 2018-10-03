@@ -1,28 +1,40 @@
 ---
 title: EventTargetArray 类 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/21/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - event/Microsoft::WRL::Details::EventTargetArray
+- event/Microsoft::WRL::Details::EventTargetArray::AddTail
+- event/Microsoft::WRL::Details::EventTargetArray::Begin
+- event/Microsoft::WRL::Details::EventTargetArray::End
+- event/Microsoft::WRL::Details::EventTargetArray::EventTargetArray
+- event/Microsoft::WRL::Details::EventTargetArray::Length
+- event/Microsoft::WRL::Details::EventTargetArray::~EventTargetArray
 dev_langs:
 - C++
 helpviewer_keywords:
-- EventTargetArray class
+- Microsoft::WRL::Details::EventTargetArray class
+- Microsoft::WRL::Details::EventTargetArray::AddTail method
+- Microsoft::WRL::Details::EventTargetArray::Begin method
+- Microsoft::WRL::Details::EventTargetArray::End method
+- Microsoft::WRL::Details::EventTargetArray::EventTargetArray, constructor
+- Microsoft::WRL::Details::EventTargetArray::Length method
+- Microsoft::WRL::Details::EventTargetArray::~EventTargetArray, destructor
 ms.assetid: e3cadb7c-2160-4cbb-a2f8-c28733d1e96d
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3be91f85838ceb557edd5def7d7984aaf8904ea5
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: a02c571f33378ed65fc4b0c4efc7d1a82144279f
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42575660"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48234692"
 ---
 # <a name="eventtargetarray-class"></a>EventTargetArray 类
 
@@ -38,25 +50,25 @@ class EventTargetArray : public Microsoft::WRL::RuntimeClass<Microsoft::WRL::Run
 
 表示事件处理程序的数组。
 
-与之关联的事件处理程序[EventSource](../windows/eventsource-class.md)对象存储在受保护**EventTargetArray**数据成员。
+与之关联的事件处理程序[EventSource](../windows/eventsource-class.md)对象存储在受保护`EventTargetArray`数据成员。
 
 ## <a name="members"></a>成员
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
-|----------|-----------------|
-|[EventTargetArray::EventTargetArray 构造函数](../windows/eventtargetarray-eventtargetarray-constructor.md)|初始化的新实例**EventTargetArray**类。|
-|[EventTargetArray::~EventTargetArray 析构函数](../windows/eventtargetarray-tilde-eventtargetarray-destructor.md)|取消初始化当前**EventTargetArray**类。|
+名称                                                           | 描述
+-------------------------------------------------------------- | -----------------------------------------------------------
+[Eventtargetarray:: Eventtargetarray](#eventtargetarray)        | 初始化 `EventTargetArray` 类的新实例。
+[EventTargetArray:: ~ EventTargetArray](#tilde-eventtargetarray) | 取消初始化当前`EventTargetArray`类。
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
-|----------|-----------------|
-|[EventTargetArray::AddTail 方法](../windows/eventtargetarray-addtail-method.md)|将指定的事件处理程序附加到事件处理程序的内部数组的末尾。|
-|[EventTargetArray::Begin 方法](../windows/eventtargetarray-begin-method.md)|获取事件处理程序的内部数组中的第一个元素的地址。|
-|[EventTargetArray::End 方法](../windows/eventtargetarray-end-method.md)|获取事件处理程序的内部数组中的最后一个元素的地址。|
-|[EventTargetArray::Length 方法](../windows/eventtargetarray-length-method.md)|获取事件处理程序的内部数组中元素的当前数目。|
+名称                                  | 描述
+------------------------------------- | ---------------------------------------------------------------------------------------
+[Eventtargetarray:: Addtail](#addtail) | 将指定的事件处理程序附加到事件处理程序的内部数组的末尾。
+[Eventtargetarray:: Begin](#begin)     | 获取事件处理程序的内部数组中的第一个元素的地址。
+[Eventtargetarray:: End](#end)         | 获取事件处理程序的内部数组中的最后一个元素的地址。
+[Eventtargetarray:: Length](#length)   | 获取事件处理程序的内部数组中元素的当前数目。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -68,6 +80,117 @@ class EventTargetArray : public Microsoft::WRL::RuntimeClass<Microsoft::WRL::Run
 
 **Namespace:** Microsoft::WRL::Details
 
-## <a name="see-also"></a>请参阅
+## <a name="tilde-eventtargetarray"></a>EventTargetArray:: ~ EventTargetArray
 
-[Microsoft::WRL::Details 命名空间](../windows/microsoft-wrl-details-namespace.md)
+支持 WRL 基础结构，不应在代码中直接使用。
+
+```cpp
+~EventTargetArray();
+```
+
+### <a name="remarks"></a>备注
+
+取消初始化当前`EventTargetArray`类。
+
+## <a name="addtail"></a>Eventtargetarray:: Addtail
+
+支持 WRL 基础结构，不应在代码中直接使用。
+
+```cpp
+void AddTail(
+   _In_ IUnknown* element
+);
+```
+
+### <a name="parameters"></a>参数
+
+*元素*<br/>
+指向要追加的事件处理程序。
+
+### <a name="remarks"></a>备注
+
+将指定的事件处理程序附加到事件处理程序的内部数组的末尾。
+
+`AddTail()` 应仅在内部使用`EventSource`类。
+
+## <a name="begin"></a>Eventtargetarray:: Begin
+
+支持 WRL 基础结构，不应在代码中直接使用。
+
+```cpp
+ComPtr<IUnknown>* Begin();
+```
+
+### <a name="return-value"></a>返回值
+
+事件处理程序在内部数组的第一个元素的地址。
+
+### <a name="remarks"></a>备注
+
+获取事件处理程序的内部数组中的第一个元素的地址。
+
+## <a name="end"></a>Eventtargetarray:: End
+
+支持 WRL 基础结构，不应在代码中直接使用。
+
+```cpp
+ComPtr<IUnknown>* End();
+```
+
+### <a name="return-value"></a>返回值
+
+事件处理程序在内部数组的最后一个元素的地址。
+
+### <a name="remarks"></a>备注
+
+获取事件处理程序的内部数组中的最后一个元素的地址。
+
+## <a name="eventtargetarray"></a>Eventtargetarray:: Eventtargetarray
+
+支持 WRL 基础结构，不应在代码中直接使用。
+
+```cpp
+EventTargetArray(
+   _Out_ HRESULT* hr,
+   size_t items
+);
+```
+
+### <a name="parameters"></a>参数
+
+*hr*<br/>
+此构造函数的操作之后, 参数*hr*指示数组的分配是成功还是失败。 以下列表显示的可能值*hr*。
+
++   S_OK<br/>
+    操作成功。
+
++   E_OUTOFMEMORY<br/>
+    无法为数组分配内存。
+
++   S_FALSE<br/>
+    参数*项*小于或等于零。
+
+*项*<br/>
+要分配的数组元素数。
+
+### <a name="remarks"></a>备注
+
+初始化 `EventTargetArray` 类的新实例。
+
+`EventTargetArray` 用于将数组中的事件处理程序`EventSource`对象。
+
+## <a name="length"></a>Eventtargetarray:: Length
+
+支持 WRL 基础结构，不应在代码中直接使用。
+
+```cpp
+size_t Length();
+```
+
+### <a name="return-value"></a>返回值
+
+当前的事件处理程序内部数组中的元素数。
+
+### <a name="remarks"></a>备注
+
+获取事件处理程序的内部数组中元素的当前数目。

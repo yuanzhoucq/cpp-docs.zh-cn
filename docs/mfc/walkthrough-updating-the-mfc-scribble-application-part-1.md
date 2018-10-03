@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d028d1cb3a42a68aab67d2b6fa90165a7d6264b
-ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
+ms.openlocfilehash: 48cbc29685660f00665fbbb08be76779272d0fcf
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47169770"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235498"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>演练： 更新 MFC 随意画图应用程序 （第 1 部分）
 
@@ -54,7 +54,7 @@ ms.locfileid: "47169770"
 
 ##  <a name="replaceclass"></a> 替换为基的类
 
-若要转换支持 menu 的支持功能区的应用程序的应用程序，必须更新在基类中派生应用程序、 框架窗口和工具栏类。 （我们建议你执行操作不修改原始的 Scribble 示例; 相反，清理 Scribble 项目、 将其复制到另一个目录，并修改副本，然后。）
+若要转换支持 menu 的支持功能区的应用程序的应用程序，必须更新在基类中派生应用程序、 框架窗口和工具栏类。 （我们建议，你无需修改原始的 Scribble 示例。 相反，清理 Scribble 项目、 将其复制到另一个目录，然后修改副本。）
 
 ### <a name="to-replace-the-base-classes-in-the-scribble-application"></a>若要替换中随意画图应用程序的基本类
 
@@ -115,7 +115,7 @@ ms.locfileid: "47169770"
 
 ##  <a name="addbitmap"></a> 将位图添加到项目
 
-本演练的下一步四个步骤需要位图资源。 你可以获取相应位图以各种方式：
+本演练的下一步四个步骤需要位图资源。 可以以多种方式来获取相应的位图：
 
 - 使用[资源编辑器](../windows/resource-editors.md)创造您自己的位图。 或使用资源编辑器来组合来自于包含在 Visual Studio，可以从下载的可移植网络图形 (.png) 映像的位图[Visual Studio 图像库](https://docs.microsoft.com/visualstudio/designers/the-visual-studio-image-library)。
 
@@ -165,7 +165,7 @@ ms.locfileid: "47169770"
 
 ##  <a name="addribbon"></a> 向项目添加功能区资源
 
-在转换使用菜单到使用功能区的应用程序的应用程序时，您无需删除或禁用现有的菜单。 相反，创建功能区资源、 添加功能区按钮，然后将新的按钮与现有的菜单项相关联。 尽管菜单都不再可见，但从功能区栏中的消息路由通过菜单。 此外，菜单快捷方式继续工作。
+在转换使用菜单到使用功能区的应用程序的应用程序时，您无需删除或禁用现有的菜单。 只需创建功能区资源、 添加功能区按钮，然后将新的按钮与现有的菜单项相关联。 尽管菜单都不再可见，但从功能区栏中的消息将路由通过菜单和菜单快捷方式继续工作。
 
 功能区组成**应用程序**按钮，这是在功能区的左上方的大按钮和一个或多个类别选项卡。 每个类别选项卡包含一个或多个作为容器的功能区按钮和控件的面板。 下面的过程演示如何创建功能区资源，然后自定义**应用程序**按钮。
 
@@ -213,7 +213,7 @@ ms.locfileid: "47169770"
 
    1. 与**项**类型**按钮**选中状态，单击**添加**添加一个按钮。 更改**标题**到`E&xit`， **ID**到`ID_APP_EXIT`，**映像**到`8`。
 
-   1. 已修改**按钮**。 单击**关闭**退出**项编辑器**。
+   1. 在你修改**按钮**。 单击**关闭**退出**项编辑器**。
 
 ##  <a name="createinstance"></a> 创建实例的功能区栏
 
@@ -221,14 +221,14 @@ ms.locfileid: "47169770"
 
 ### <a name="to-create-an-instance-of-the-ribbon-bar"></a>若要创建功能区栏的实例
 
-1. 在 mainfrm.h 中文件中，将数据成员添加到受保护节`CMainFrame`，主框架的类定义。 此成员表示功能区栏。
+1. 在 mainfrm.h 中文件中，将数据成员添加到受保护节`CMainFrame`，主框架的类定义。 此成员是为功能区栏。
 
     ```cpp
     // Ribbon bar for the application
     CMFCRibbonBar m_wndRibbonBar;
     ```
 
-2. 在 mainfrm.cpp 文件中，添加以下代码之前最终`return`语句的末尾`CMainFrame::OnCreate`函数。 这将创建功能区栏的一个实例。
+2. 在 mainfrm.cpp 文件中，添加以下代码之前最终`return`语句的末尾`CMainFrame::OnCreate`函数。 创建功能区栏的实例。
 
     ```cpp
     // Create the ribbon bar
@@ -250,9 +250,9 @@ ms.locfileid: "47169770"
 
 1. Scribble 程序要求只有一个类别。 在设计视图中，在**工具箱**，双击**类别**添加一个并显示其属性。 按如下所示更改属性值：**标题**到`&Home`， **Large Images**到`IDB_RIBBON_HOMELARGE`，**较小的图像**到`IDB_RIBBON_HOMESMALL`。
 
-1. 每个功能区类别划分为多个命名的面板。 每个面板包含一组执行相关的操作的控件。 此类别都有一个面板。 单击**面板**，然后将更改**标题**到`Edit`。
+1. 每个功能区类别划分为多个命名的面板。 每个面板包含一组控件该完成相关的操作。 此类别都有一个面板。 单击**面板**，然后将更改**标题**到`Edit`。
 
-1. 向**编辑**面板中，添加一个按钮，负责清除文档的内容。 已在中定义此按钮的消息 ID`IDR_SCRIBBTYPE`菜单资源。 指定`Clear All`作为按钮文本的修饰按钮位图的索引。 打开**工具箱**，然后拖动**按钮**到**编辑**面板。 单击该按钮，然后更改**标题**到`Clear All`， **ID**到`ID_EDIT_CLEAR_ALL`，**图像索引**到`0`， **Large Image Index**到`0`。
+1. 向**编辑**面板中，添加一个按钮用于清除文档的内容负责。 已在中定义此按钮的消息 ID`IDR_SCRIBBTYPE`菜单资源。 指定`Clear All`作为按钮文本的修饰按钮位图的索引。 打开**工具箱**，然后拖动**按钮**到**编辑**面板。 单击该按钮，然后更改**标题**到`Clear All`， **ID**到`ID_EDIT_CLEAR_ALL`，**图像索引**到`0`， **Large Image Index**到`0`。
 
 1. 保存所做的更改，然后生成并运行应用程序。 应显示随意画图应用程序，并且它应该具有位于窗口而不是菜单栏的顶部功能区栏。 功能区栏应具有一个类别**主页**，并**主页**应具有一个面板**编辑**。 你添加的功能区按钮应与现有的事件处理程序相关联并**开放**，**关闭**，**保存**，**打印**，并**全部清除**按钮应按预期方式工作。
 
@@ -274,7 +274,7 @@ ms.locfileid: "47169770"
 
 ## <a name="next-steps"></a>后续步骤
 
-已修改经典的 Scribble 1.0 MFC 示例，使用**功能区设计器**。 现在，转到[第 2 部分](../mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md)。
+在你修改经典的 Scribble 1.0 MFC 示例，使用**功能区设计器**。 现在，转到[第 2 部分](../mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md)。
 
 ## <a name="see-also"></a>请参阅
 

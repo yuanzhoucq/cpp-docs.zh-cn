@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 208ae27e694396a21b76bc482c87084e03a21975
-ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
+ms.openlocfilehash: d3623eb594ff82660e97809eef609a33e74e74dc
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47169679"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235433"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-2"></a>演练：更新 MFC 随意画图应用程序（第 2 部分）
 
@@ -116,17 +116,17 @@ ms.locfileid: "47169679"
 
 1. 单击第二个的组合框。 更改**标题**到`Thick Pen`， **ID**到`ID_PEN_THICK_WIDTH`，**类型**到`Drop List`，**数据**到`5;6;7;8;9;10;11;12;13;14;15;16;17;18;19;20;`，并**文本**到`5`。
 
-1. 新的组合框不对应于任何现有的菜单项。 因此，必须创建每笔选项的菜单项。
+1. 新的组合框不对应任何现有的菜单项，因此必须创建每笔选项的菜单项。
 
    1. 在中**资源视图**窗口中，打开**IDR_SCRIBBTYPE**菜单资源。
 
    1. 单击**笔**以打开钢笔菜单。 然后单击**请在此处输入**并键入`Thi&n Pen`。
 
-   1. 右键单击您只需键入要打开的文本**属性**窗口，然后更改 ID 属性设置为`ID_PEN_THIN_WIDTH`。
+   1. 右键单击刚才打开的文本**属性**窗口，然后更改 ID 属性设置为`ID_PEN_THIN_WIDTH`。
 
-   1. 此外必须创建每个笔菜单项的事件处理程序。 右键单击**此应用程序 & n 笔**菜单项，您刚刚创建，然后单击**添加事件处理程序**。 **事件处理程序向导**显示。
+   1. 创建每个笔菜单项的事件处理程序。 右键单击**此应用程序 & n 笔**菜单项，您创建，然后单击**添加事件处理程序**。 **事件处理程序向导**显示。
 
-   1. 在中**类列表**框中的向导中，选择**CScribbleDoc** ，然后单击**添加和编辑**。 这将创建名为一个事件处理程序`CScribbleDoc::OnPenThinWidth`。
+   1. 在中**类列表**框中的向导中，选择**CScribbleDoc** ，然后单击**添加和编辑**。 该命令创建名为一个事件处理程序`CScribbleDoc::OnPenThinWidth`。
 
    1. 将下列代码添加到 `CScribbleDoc::OnPenThinWidth`。
 
@@ -156,11 +156,11 @@ ms.locfileid: "47169679"
 
    1. 单击**笔**以打开钢笔菜单。 然后单击**请在此处输入**并键入`Thic&k Pen`。
 
-   1. 右键单击您只需键入要显示的文本**属性**窗口。 将 ID 属性更改为`ID_PEN_THICK_WIDTH`。
+   1. 右键单击您键入要显示的文本**属性**窗口。 将 ID 属性更改为`ID_PEN_THICK_WIDTH`。
 
-   1. 右键单击**胖笔**菜单项，您刚刚创建，然后单击**添加事件处理程序**。 **事件处理程序向导**显示。
+   1. 右键单击**胖笔**菜单项，您创建，然后单击**添加事件处理程序**。 **事件处理程序向导**显示。
 
-   1. 在中**类列表**框中的向导中，选择**CScribbleDoc** ，然后单击**添加和编辑**。 这将创建名为一个事件处理程序`CScribbleDoc::OnPenThickWidth`。
+   1. 在中**类列表**框中的向导中，选择**CScribbleDoc** ，然后单击**添加和编辑**。 该命令创建名为一个事件处理程序`CScribbleDoc::OnPenThickWidth`。
 
    1. 将下列代码添加到 `CScribbleDoc::OnPenThickWidth`。
 
@@ -190,17 +190,17 @@ ms.locfileid: "47169679"
 
 ### <a name="to-add-a-color-button-to-the-pen-panel"></a>若要将颜色按钮添加到笔面板
 
-1. 添加颜色按钮之前，请为其创建菜单项。 在中**资源视图**窗口中，打开**IDR_SCRIBBTYPE**菜单资源。 单击**笔**菜单项以打开钢笔菜单。 然后单击**请在此处输入**并键入`&Color`。 右键单击您只需键入要显示的文本**属性**窗口。 更改为 ID `ID_PEN_COLOR`。
+1. 添加颜色按钮之前，请为其创建菜单项。 在中**资源视图**窗口中，打开**IDR_SCRIBBTYPE**菜单资源。 单击**笔**菜单项以打开钢笔菜单。 然后单击**请在此处输入**并键入`&Color`。 右键单击您键入要显示的文本**属性**窗口。 更改为 ID `ID_PEN_COLOR`。
 
 1. 现在，添加颜色按钮。 从**工具箱**，拖动**颜色按钮**到**笔**面板。
 
 1. 单击颜色按钮。 更改**标题**到`Color`， **ID**到`ID_PEN_COLOR`，**简单介绍**到`True`，**大图像索引**到`1`，并**拆分模式**到`False`。
 
-1. 保存所做的更改，然后生成并运行应用程序。 新的颜色按钮应显示在**笔**面板。 但是，它不能使用因为它尚不具备的事件处理程序。 后续步骤演示如何添加颜色按钮的事件处理程序。
+1. 保存所做的更改，然后生成并运行应用程序。 新的颜色按钮应显示在**笔**面板。 但是，它不能使用因为它尚不具有事件处理程序。 后续步骤演示如何添加颜色按钮的事件处理程序。
 
 ##  <a name="addcolormember"></a> 将颜色成员添加到文档类
 
-因为原始随意画图应用程序没有颜色的笔，则必须为它们编写实现。 若要存储的文档，笔颜色将新成员添加到文档类， `CscribbleDoc`。
+由于原始随意画图应用程序没有颜色的笔，则必须为其编写实现。 若要存储的文档，笔颜色将新成员添加到文档类， `CscribbleDoc`。
 
 ### <a name="to-add-a-color-member-to-the-document-class"></a>若要将颜色成员添加到文档类
 
@@ -211,7 +211,7 @@ ms.locfileid: "47169679"
    COLORREF m_penColor;
    ```
 
-1. 每个文档包含一系列笔尖用户已绘制。 通过定义每个笔画`CStroke`对象。 `CStroke`类不包括有关钢笔颜色的信息。 因此，必须修改类。 在 scribdoc.h，在`CStroke`类中，添加以下代码行后的定义`m_nPenWidth`数据成员。
+1. 每个文档包含一系列笔尖用户已绘制。 通过定义每个笔画`CStroke`对象。 `CStroke`类不包括有关钢笔颜色的信息，因此必须修改类。 在 scribdoc.h，在`CStroke`类中，添加以下代码行后的定义`m_nPenWidth`数据成员。
 
    ```cpp
    // Pen color for the stroke
@@ -267,7 +267,7 @@ ms.locfileid: "47169679"
 
    1. 右键单击**颜色**菜单项，并单击**添加事件处理程序**。 **事件处理程序向导**出现。
 
-   1. 在中**类列表**框中的向导中，选择**CScribbleDoc** ，然后单击**添加和编辑**按钮。 这将创建`CScribbleDoc::OnPenColor`事件处理程序存根 （stub)。
+   1. 在中**类列表**框中的向导中，选择**CScribbleDoc** ，然后单击**添加和编辑**按钮。 该命令将创建`CScribbleDoc::OnPenColor`事件处理程序存根 （stub)。
 
 1. 替换为存根`CScribbleDoc::OnPenColor`事件处理程序替换下面的代码。
 
@@ -287,7 +287,7 @@ ms.locfileid: "47169679"
    }
    ```
 
-1. 保存所做的更改，然后生成并运行应用程序。 您应能够按颜色按钮并更改笔的颜色。
+1. 保存所做的更改，然后生成并运行应用程序。 现在可以按颜色按钮，并更改笔的颜色。
 
 ##  <a name="initpensave"></a> 初始化笔和保存首选项
 
@@ -343,7 +343,7 @@ ms.locfileid: "47169679"
 
 ## <a name="conclusion"></a>结束语
 
-您已更新 MFC 随意画图应用程序。 修改现有的应用程序时，本演练使用作为指南。
+已更新 MFC 随意画图应用程序。 修改现有的应用程序时，本演练使用作为指南。
 
 ## <a name="see-also"></a>请参阅
 

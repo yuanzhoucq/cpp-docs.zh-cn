@@ -24,12 +24,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5ffea6dede3bc6bcc7c28b2326299362e78ed2b9
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 8c9aebeb2216bf8248b3182159a0f0aef1482c3b
+ms.sourcegitcommit: d1527eb2d50156bf923f2a32ec3af9efc7fc4304
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42599296"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48250440"
 ---
 # <a name="microsoftwrl-namespace"></a>Microsoft::WRL 命名空间
 
@@ -89,7 +89,7 @@ namespace Microsoft::WRL;
 |名称|描述|
 |----------|-----------------|
 |[AsWeak 函数](../windows/asweak-function.md)|检索对指定实例的弱引用。|
-|[回调函数](../windows/callback-function-windows-runtime-cpp-template-library.md)|创建一个对象，该对象的成员函数是一个回调方法。|
+|[回调函数 (WRL)](../windows/callback-function-wrl.md)|创建一个对象，该对象的成员函数是一个回调方法。|
 |[CreateActivationFactory 函数](../windows/createactivationfactory-function.md)|创建为可由 Windows 运行时激活的指定类生成实例的工厂。|
 |[CreateClassFactory 函数](../windows/createclassfactory-function.md)|创建为指定类生成实例的工厂。|
 |[Make 函数](../windows/make-function.md)|初始化指定的 Windows 运行时类。|

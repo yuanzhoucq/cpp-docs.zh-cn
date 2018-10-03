@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bb7039481469bbd6c307ab1ec88b508ff089733
-ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
+ms.openlocfilehash: 2d86749cc8481f2472ed2ebe29dd535e05dcb2e2
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47169575"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48236018"
 ---
 # <a name="walkthrough-creating-a-ribbon-application-by-using-mfc"></a>演练：使用 MFC 创建功能区应用程序
 
@@ -28,7 +28,7 @@ ms.locfileid: "47169575"
 
 ## <a name="prerequisites"></a>系统必备
 
-本演练假定您已设置了 Visual Studio 以使用**常规开发设置**。 如果您使用其他设置，则以下说明中引用的某些用户界面 (UI) 元素可能不会显示。
+本演练假定您已设置了 Visual Studio 以使用**常规开发设置**。 如果你使用不同的设置，在下面的说明中引用的用户界面 (UI) 元素的一些可能不显示。
 
 ### <a name="to-create-an-mfc-application-that-has-a-ribbon"></a>创建带功能区的 MFC 应用程序
 
@@ -73,7 +73,7 @@ ms.locfileid: "47169575"
 
 1. 接下来，自定义面板。 面板用于对逻辑上相关的项进行分组。 例如，在**主页**此应用程序的选项卡**剪切**，**复制**，以及**粘贴**命令都位于**剪贴板**面板。 若要自定义面板，右键单击**Panel1** ，然后单击**属性**。 在中**属性**窗口中，更改**标题**到*收藏夹*。
 
-    您可以指定**图像索引**面板。 此数值用于指定如果功能区面板添加到显示的图标**快速访问工具栏**。 该图标不会显示在功能区面板上。
+    您可以指定**图像索引**面板。 此数值用于指定如果功能区面板添加到显示的图标**快速访问工具栏**。 图标未显示在功能区面板。
 
 1. 若要验证功能区类别和面板是否已成功创建，请预览此功能区控件。 上**功能区编辑器工具栏**，单击**测试功能区**按钮。 一个**自定义**选项卡和**收藏夹**面板应显示在功能区上。
 
