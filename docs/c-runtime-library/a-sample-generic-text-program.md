@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dbb02f426e839eff20a1dcd37ab41d4a08640599
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3adde04ba8fe259c25f3439cef247192eea175f2
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46081528"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48233667"
 ---
 # <a name="a-sample-generic-text-program"></a>示例一般文本程序
 
@@ -31,7 +31,7 @@ ms.locfileid: "46081528"
 
 以下程序 GENTEXT.C 提供了有关 TCHAR.H 中定义的通用文本映射的更详细的说明：
 
-```
+```C
 // GENTEXT.C
 // use of generic-text mappings defined in TCHAR.H
 
@@ -67,12 +67,11 @@ int __cdecl _tmain(int argc, _TCHAR **argv, _TCHAR **envp)
    _tprintf(_T("'%s'\n"), _tcsrev(_tcsdup(str)));
    return 0;
 }
-
 ```
 
 如果已定义 `_MBCS`，则 GENTEXT.C 将映射到以下 MBCS 程序：
 
-```
+```C
 // crt_mbcsgtxt.c
 
 /*
@@ -110,7 +109,7 @@ int __cdecl main(int argc, char **argv, char **envp)
 
 如果已定义 `_UNICODE`，则 GENTEXT.C 将映射到程序的以下 Unicode 版本。 有关将 Unicode 程序中的`wmain` 用作 `main` 的替代的详细信息，请参阅 *C 语言参考*中的[使用 wmain](../c-language/using-wmain.md)。
 
-```
+```C
 // crt_unicgtxt.c
 
 /*
@@ -148,7 +147,7 @@ int __cdecl wmain(int argc, wchar_t **argv, wchar_t **envp)
 
 如果 `_MBCS` 和 `_UNICODE` 均未定义，则 GENTEXT.C 将映射到单字节 ASCII 代码，如下所示：
 
-```
+```C
 // crt_sbcsgtxt.c
 /*
  * Use of generic-text mappings defined in TCHAR.H
@@ -183,7 +182,7 @@ int __cdecl main(int argc, char **argv, char **envp)
 }
 ```
 
- **结束 Microsoft 专用**
+**结束 Microsoft 专用**
 
 ## <a name="see-also"></a>请参阅
 
