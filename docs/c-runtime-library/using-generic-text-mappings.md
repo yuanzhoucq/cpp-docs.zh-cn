@@ -37,12 +37,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c9435076bdc02f9f0b8a909ffdbc60dd06e1a388
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4aeee73cb065e40d345dcbfe35ac2d6a7be03d90
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46097518"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48234653"
 ---
 # <a name="using-generic-text-mappings"></a>使用一般文本映射
 
@@ -105,7 +105,7 @@ RetVal = strrev(szString);
 
 因此，可以编写、维护和编译单个源代码文件，来与特定于三种字符集中任何一种的例程一起运行。
 
- **结束 Microsoft 专用**
+**结束 Microsoft 专用**
 
 ## <a name="see-also"></a>请参阅
 
