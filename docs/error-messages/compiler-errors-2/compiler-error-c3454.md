@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f85ff8c33cc43bdc1af9a3bf02d9240a0fd5e09c
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: e469f6715775288720c61ad8a61e16956e4c63d1
+ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46098766"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48789158"
 ---
 # <a name="compiler-error-c3454"></a>编译器错误 C3454
 
@@ -29,7 +29,7 @@ ms.locfileid: "46098766"
 
 必须为它定义一个类，使其成为特性。
 
-有关更多信息，请参见 [attribute](../../windows/attribute.md)。
+有关详细信息，请参阅[属性](../../windows/attributes/attribute.md)。
 
 ## <a name="example"></a>示例
 

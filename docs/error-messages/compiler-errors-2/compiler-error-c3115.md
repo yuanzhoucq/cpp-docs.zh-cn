@@ -16,18 +16,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da47a6987a1b540dc42b154c1a181c67e1524043
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 716566066a58c20378128ee56d9da0aa070b6e9b
+ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46090680"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48788682"
 ---
 # <a name="compiler-error-c3115"></a>编译器错误 C3115
 
 attribute: construct 上不允许使用此特性
 
-特性被应用到了意外的构造。  请参阅[按使用情况的特性](../../windows/attributes-by-usage.md)有关详细信息。
+特性被应用到了意外的构造。  请参阅[按使用情况的特性](../../windows/attributes/attributes-by-usage.md)有关详细信息。
 
 ## <a name="example"></a>示例
 

@@ -1,7 +1,7 @@
 ---
 title: 用户定义的特性 （c + + 组件扩展） |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/02/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 605759e241498e83174f4d6b16435c3119c56671
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 3c2f5568b067c119bfa65744290c39d7ca577072
+ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42600376"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48789223"
 ---
 # <a name="user-defined-attributes--c-component-extensions"></a>用户定义的特性（C++ 组件扩展）
 
@@ -47,7 +47,7 @@ C + + /cli CX 属性支持只有属性，但不是属性构造函数或方法。
 
 ### <a name="remarks"></a>备注
 
-信息和本主题中的语法旨在取代中提供的信息[属性](../windows/attribute.md)。
+信息和本主题中的语法旨在取代中提供的信息[属性](attributes/attribute.md)。
 
 可以通过定义一个类型并使定义的自定义特性<xref:System.Attribute>基类的类型和 （可选） 将应用<xref:System.AttributeUsageAttribute>属性。
 
@@ -55,9 +55,9 @@ C + + /cli CX 属性支持只有属性，但不是属性构造函数或方法。
 
 有关详细信息，请参阅
 
-- [特性目标](../windows/attribute-targets-cpp-component-extensions.md)
+- [特性目标](attribute-targets-cpp-component-extensions.md)
 
-- [特性参数类型](../windows/attribute-parameter-types-cpp-component-extensions.md)
+- [特性参数类型](attribute-parameter-types-cpp-component-extensions.md)
 
 有关 Visual c + + 中签名程序集的信息，请参阅[强名称程序集 （程序集签名） (C + + CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md)。
 
@@ -177,7 +177,7 @@ Service Access = Read
 
 特性参数必须是编译时常量;在大多数情况下，它们应是常量文字。
 
-请参阅[typeid](../windows/typeid-cpp-component-extensions.md)有关如何从自定义特性块中返回的 system:: type 值的信息。
+请参阅[typeid](typeid-cpp-component-extensions.md)有关如何从自定义特性块中返回的 system:: type 值的信息。
 
 ```cpp
 // extending_metadata_e.cpp
@@ -216,4 +216,4 @@ ref struct B {};
 
 ## <a name="see-also"></a>请参阅
 
-[适用于运行时平台的组件扩展](../windows/component-extensions-for-runtime-platforms.md)
+[适用于运行时平台的组件扩展](component-extensions-for-runtime-platforms.md)

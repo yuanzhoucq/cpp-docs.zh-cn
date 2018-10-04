@@ -16,18 +16,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a9d25a77b6936a3b5b741a1da927c6beb24cbb1
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 90cd0b401624ea6815b31b55a7da9c8796746ce8
+ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46072220"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48789197"
 ---
 # <a name="compiler-warning-level-3-c4580"></a>编译器警告（等级 3）C4580
 
 [attribute] 已弃用；改为指定 System::Attribute 或 Platform::Metadata 作为基类
 
-[[特性](../../windows/attribute.md)] 是无法再用于创建用户定义的特性的首选的语法。 有关详细信息，请参阅 [User-Defined Attributes](../../windows/user-defined-attributes-cpp-component-extensions.md)。 对于 CLR 代码，请从 `System::Attribute` 派生特性。 对于 Windows 运行时代码，请从 `Platform::Metadata` 派生特性。
+[[特性](../../windows/attributes/attribute.md)] 是无法再用于创建用户定义的特性的首选的语法。 有关详细信息，请参阅 [User-Defined Attributes](../../windows/user-defined-attributes-cpp-component-extensions.md)。 对于 CLR 代码，请从 `System::Attribute` 派生特性。 对于 Windows 运行时代码，请从 `Platform::Metadata` 派生特性。
 
 ## <a name="example"></a>示例
 
