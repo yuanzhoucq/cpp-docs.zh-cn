@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e20fce19824cf093625347bca42f55cbad302b61
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f66ff77ef10f45b19a33a286f63f4bf923f639a2
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46040604"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48820381"
 ---
 # <a name="ole-db-architectural-design-issues"></a>OLE DB 结构设计问题
 
@@ -46,7 +46,7 @@ Microsoft 还提供了几个库来实现此目的： OLE DB 模板库、 OLE DB 
 
 - [Microsoft 帮助和支持](https://support.microsoft.com/)
 
-- [Microsoft 数据访问技术文章概述](https://msdn.microsoft.com/en-us/library/ms810811.aspx)
+- [Microsoft 数据访问技术文章概述](https://msdn.microsoft.com/library/ms810811.aspx)
 
 ## <a name="see-also"></a>请参阅
 

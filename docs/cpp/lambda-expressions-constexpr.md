@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c6a48067ebc145c907a81212a9acca55c3f4665
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 71c28ab1531c2af19f2b8f594db457d0272b0664
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46066591"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48820355"
 ---
 # <a name="constexpr-lambda-expressions-in-c"></a>c + + 中的 constexpr lambda 表达式
 
@@ -38,7 +38,9 @@ ms.locfileid: "46066591"
         return [n] { return n + 1; }();
     }
 ```
+
 Lambda 是隐式**constexpr**如果其结果满足的要求**constexpr**函数：
+
 ```cpp
     auto answer = [](int n)
     {
@@ -47,6 +49,7 @@ Lambda 是隐式**constexpr**如果其结果满足的要求**constexpr**函数�
 
     constexpr int response = answer(10);
 ```
+
 如果 lambda 是隐式或显式**constexpr**，并将其转换为函数指针，生成的函数也是**constexpr**:
 
 ```cpp

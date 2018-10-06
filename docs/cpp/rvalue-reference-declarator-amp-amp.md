@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ceb0d29a5e49efa4f387f2949a0aa670082a62ab
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 64a42a65e112930767aa27f94612d06b7fb2d34a
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46021936"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821629"
 ---
 # <a name="rvalue-reference-declarator-ampamp"></a>右值引用声明符： &amp;&amp;
 
@@ -63,7 +63,7 @@ int main()
 
 在 Visual c + + 2010 中之前, 每个调用到**operator +** 分配并返回新的临时`string`对象 （右值）。 **operator +** 由于不知道源字符串是左值还是右值，因此无法追加到另一个字符串。 如果两个源字符串都是左值，则它们可能会在程序中的其他位置引用，因此不能修改。 利用右值引用**operator +** 可以修改为采用右值，不能在程序中其他位置引用。 因此， **operator +** 现在可以将一个字符串追加到另一个。 这可以显著减少 `string` 类必须执行的动态内存分配的数量。 有关详细信息`string`类，请参阅[asic_string 类](../standard-library/basic-string-class.md)。
 
-当编译器无法使用返回值优化 (RVO) 或命名返回值优化 (NRVO) 时，移动语义也很有用。 在这些情况下，如果类型定义了移动构造函数，则编译器将调用该函数。 有关命名返回值优化的详细信息，请参阅[Visual C++ 2005年中名为返回值优化](https://msdn.microsoft.com/en-us/library/ms364057.aspx)。
+当编译器无法使用返回值优化 (RVO) 或命名返回值优化 (NRVO) 时，移动语义也很有用。 在这些情况下，如果类型定义了移动构造函数，则编译器将调用该函数。 有关命名返回值优化的详细信息，请参阅[Visual C++ 2005年中名为返回值优化](https://msdn.microsoft.com/library/ms364057.aspx)。
 
 若要更好地了解移动语义，请考虑将元素插入 `vector` 对象的示例。 如果超出 `vector` 对象的容量，则 `vector` 对象必须为其元素重新分配内存，然后将所有元素复制到其他内存位置，以便为插入的元素腾出空间。 当插入操作复制某个元素时，它将创建一个新元素，调用复制构造函数以将数据从上一个元素复制到新元素，然后销毁上一个元素。 利用移动语义，您可以直接移动对象而不必执行成本高昂的内存分配和复制操作。
 

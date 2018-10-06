@@ -202,12 +202,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a901b7bd102736bfbeec95a1afe8e44dc26ae3b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 86adc1e2337b32ced77cafda92229ed9724ba548
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46412168"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821512"
 ---
 # <a name="cwinapp-class"></a>CWinApp 类
 
@@ -367,7 +367,7 @@ class CWinApp : public CWinThread
 
 - `CWinApp`密钥可重写。
 
-`m_hPrevInstance`数据成员不再存在。 有关检测的前一个实例的信息`CWinApp`，请参阅知识库文章"如何确定上一实例的应用程序"(KB106385) 网址[ http://support.microsoft.com/default.aspxscid=kb; en-我们; 106385](http://support.microsoft.com/default.aspxscid=kb;en-us;106385)。
+`m_hPrevInstance`数据成员不再存在。 有关检测的前一个实例的信息`CWinApp`，请参阅知识库文章"如何确定上一实例的应用程序"(KB106385) 网址[ http://support.microsoft.com/default.aspxscid=kb; 106385](http://support.microsoft.com/default.aspxscid=kb;106385)。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -1073,7 +1073,7 @@ virtual BOOL InitInstance();
 重写`InitInstance`初始化在 Windows 下运行的应用程序的每个新实例。 通常情况下，重写`InitInstance`来构造您的主窗口对象和设置`CWinThread::m_pMainWnd`数据成员，使其指向该窗口。 重写此成员函数的详细信息，请参阅[CWinApp： 应用程序类](../../mfc/cwinapp-the-application-class.md)。
 
 > [!NOTE]
-> MFC 应用程序必须初始化为单线程单元 (STA)。 如果您调用[CoInitializeEx](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializeex)在你`InitInstance`重写中，指定 COINIT_APARTMENTTHREADED （而非 COINIT_MULTITHREADED）。 有关详细信息，请参阅 PRB: MFC 应用程序停止响应时初始化为多线程单元 （828643） 在应用程序[ http://support.microsoft.com/default.aspxscid=kb; en-我们; 828643](http://support.microsoft.com/default.aspxscid=kb;en-us;828643)。
+> MFC 应用程序必须初始化为单线程单元 (STA)。 如果您调用[CoInitializeEx](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializeex)在你`InitInstance`重写中，指定 COINIT_APARTMENTTHREADED （而非 COINIT_MULTITHREADED）。 有关详细信息，请参阅 PRB: MFC 应用程序停止响应时初始化为多线程单元 （828643） 在应用程序[ http://support.microsoft.com/default.aspxscid=kb; 828643](http://support.microsoft.com/default.aspxscid=kb;828643)。
 
 ### <a name="example"></a>示例
 

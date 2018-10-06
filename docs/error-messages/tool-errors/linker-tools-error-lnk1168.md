@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0a80aa365edf3e39c41ed73d815cc82de6ce9a52
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 0910c23202b975999e10ef2effaebc470c62fb9d
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46118162"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821070"
 ---
 # <a name="linker-tools-error-lnk1168"></a>链接器工具错误 LNK1168
 
@@ -35,7 +35,7 @@ ms.locfileid: "46118162"
 
 如果文件被防病毒程序锁定，则可以通过防病毒程序从自动扫描中排除生成输出目录，从而修复此问题。 防病毒扫描程序通常当在文件系统中创建新文件时触发，在扫描继续时，它们持有文件上的锁。 有关如何从扫描中排除特定目录的详细信息，请参考防病毒程序文档。
 
-如果文件被搜索索引服务锁定，则可通过从自动索引中排除生成输出目录来修复此问题。 有关详细信息，请参考索引服务的文档。 若要更改 Windows 搜索索引服务，请使用**索引选项**在 Windows 中**控制面板**。 有关详细信息，请参阅[使用索引改进 Windows 搜索： 常见问题](http://windows.microsoft.com/en-us/windows/improve-windows-searches-using-index-faq#1TC=windows-7)。
+如果文件被搜索索引服务锁定，则可通过从自动索引中排除生成输出目录来修复此问题。 有关详细信息，请参考索引服务的文档。 若要更改 Windows 搜索索引服务，请使用**索引选项**在 Windows 中**控制面板**。 有关详细信息，请参阅[使用索引改进 Windows 搜索： 常见问题](http://windows.microsoft.com/windows/improve-windows-searches-using-index-faq#1TC=windows-7)。
 
 如果可执行文件无法被生成进程覆盖，则可能被文件资源管理器锁定。 如果**应用程序体验**服务已被禁用，文件资源管理器可能保持的可执行文件句柄锁长一段时间。 若要解决此问题，请运行**services.msc** ，然后打开**属性**对话框**应用程序体验**服务。 更改**启动类型**从**禁用**到**手动**。
 

@@ -1,7 +1,7 @@
 ---
 title: 演练： 编译命令行上的本机 c + + 程序 |Microsoft Docs
 ms.custom: conceptual
-ms.date: 06/21/2018
+ms.date: 09/24/2018
 ms.technology:
 - cpp-tools
 ms.topic: conceptual
@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 855b3e3947839a08d920bb27b664ea4ce1027bf8
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: d7f8fad0c4676e8dfedcf8e80332c0a239f230cb
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45713110"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821187"
 ---
 # <a name="walkthrough-compiling-a-native-c-program-on-the-command-line"></a>演练：在命令行上编译本机 C++ 程序
 
@@ -40,10 +40,10 @@ Visual Studio 是全功能的编辑器、 资源管理器、 调试器和编译�
 
 Visual Studio 的生成工具安装命令行编译器、 工具和生成 C 和 c + + 程序所需的库。 它非常适合生成实验室或教室练习和相对较快的安装。 若要安装的命令行工具，下载[Visual Studio 2017 生成工具](https://go.microsoft.com/fwlink/p/?linkid=875721)。
 
-可以在命令行上生成的 C 或 c + + 程序前，必须验证安装了工具，以及，您可以从命令行访问它们。 Visual c + + 有复杂要求命令行环境才能找到工具、 标头，以及使用的库。 **不能在普通命令提示符窗口中使用 Visual c + +** 而无需执行一些准备工作。 幸运的是，Visual c + + 安装可启动已设置为命令行生成环境的开发人员命令提示符快捷的方式。 遗憾的是，开发人员命令提示符快捷方式和它们的位置的名称是在几乎每个版本的 Visual c + + 和不同版本的 Windows 上不同。 在第一个演练任务查找适合使用。
+可以在命令行上生成的 C 或 c + + 程序前，必须验证安装了工具，以及，您可以从命令行访问它们。 Visual c + + 有复杂要求要查找的工具、 标头和使用的库的命令行环境。 **不能在普通命令提示符窗口中使用 Visual c + +** 而无需执行一些准备工作。 幸运的是，Visual c + + 安装可启动已设置为命令行生成环境的开发人员命令提示符快捷的方式。 遗憾的是，开发人员命令提示符快捷方式和所处位置的名称是在几乎每个版本的 Visual c + + 和不同版本的 Windows 上不同的。 在第一个演练任务查找适合使用。
 
 > [!NOTE]
-> 开发人员命令提示符快捷方式会自动设置编译器和工具，以及任何必需的标头和库的正确路径。 您必须设置这些环境值自己如果使用常规的命令提示符窗口。 有关详细信息，请参阅[为命令行生成设置路径和环境变量](../build/setting-the-path-and-environment-variables-for-command-line-builds.md)。 我们建议你使用而不是构建你自己的开发人员命令提示符快捷方式。
+> 开发人员命令提示符快捷方式会自动设置编译器和工具，以及任何必需的标头和库的正确路径。 必须设置这些环境值自己如果使用正则表达式**命令提示符下**窗口。 有关详细信息，请参阅[为命令行生成设置路径和环境变量](../build/setting-the-path-and-environment-variables-for-command-line-builds.md)。 我们建议你使用而不是构建你自己的开发人员命令提示符快捷方式。
 
 ### <a name="open-a-developer-command-prompt"></a>打开开发人员命令提示
 
@@ -51,9 +51,9 @@ Visual Studio 的生成工具安装命令行编译器、 工具和生成 C 和 c
 
    如果已在 Windows 10 上安装 Microsoft Visual c + + 生成工具 2015年，打开**启动**菜单，然后选择**的所有应用**。 向下滚动并打开**Visual c + + 生成工具**文件夹。 选择**Visual c + + 2015 x86 本机工具命令提示**若要打开命令提示符窗口。
 
-   如果使用不同版本的 Visual Studio 或正在运行不同版本的 Windows，在开始菜单中查找或包含开发人员命令提示符快捷方式的 Visual Studio 工具文件夹的起始页。 此外可以使用 Windows 搜索功能搜索"开发人员命令提示符"并选择一个与你已安装的 Visual Studio 版本匹配。 使用快捷方式打开命令提示符窗口。
+   如果要使用不同版本的 Visual Studio 或在运行不同版本的 Windows，在开始菜单中查找或包含开发人员命令提示符快捷方式的 Visual Studio 工具文件夹的起始页。 此外可以使用 Windows 搜索功能搜索"开发人员命令提示符"并选择一个与你已安装的 Visual Studio 版本匹配。 使用快捷方式打开命令提示符窗口。
 
-2. 接下来，验证正确设置 Visual c + + 开发人员命令提示。 在命令提示符窗口中，输入`cl`并验证输出看起来类似如下：
+1. 接下来，验证正确设置 Visual c + + 开发人员命令提示。 在命令提示符窗口中，输入`cl`并验证输出看起来类似于：
 
    ```Output
    C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise>cl
@@ -63,7 +63,7 @@ Visual Studio 的生成工具安装命令行编译器、 工具和生成 C 和 c
    usage: cl [ option... ] filename... [ /link linkoption... ]
    ```
 
-   可能存在的当前目录或版本号，具体取决于 Visual c + + 和安装任何更新的版本之间的差异。 如果这是类似于您所看到的内容，你已做好生成在命令行 C 或 c + + 程序。
+   可能存在的当前目录或版本号，具体取决于 Visual c + + 和安装任何更新的版本之间的差异。 如果上面的输出类似于您所看到的内容，然后你便可以构建在命令行 C 或 c + + 程序。
 
    > [!NOTE]
    > 如果您遇到错误，如"'cl' 无法识别为内部或外部命令、 可操作程序或批处理文件中，"错误 C1034 或错误 LNK1104 运行时**cl**命令，则可以不使用开发人员命令提示符下，或有问题与你安装的 Visual c + +。 必须修复此问题，然后才能继续。
@@ -75,13 +75,13 @@ Visual Studio 的生成工具安装命令行编译器、 工具和生成 C 和 c
 
 ### <a name="create-a-visual-c-source-file-and-compile-it-on-the-command-line"></a>创建 Visual c + + 源文件并在命令行上对其进行编译
 
-1. 在开发人员命令提示符窗口中，输入**md c:\hello**以创建一个目录，然后输入**cd c:\hello**更改为该目录。 这是在创建您的源文件和编译的程序的目录。
+1. 在开发人员命令提示符窗口中，输入`md c:\hello`以创建一个目录，然后输入`cd c:\hello`更改为该目录。 此目录是在其中创建源文件和编译的程序。
 
-2. 输入**notepad hello.cpp**在命令提示符窗口中。
+1. 输入`notepad hello.cpp`在命令提示符窗口中。
 
-   选择**是**时记事本会提示您创建一个文件。 这将打开一个空白的记事本窗口，供你在一个名为 hello.cpp 文件中输入你的代码。
+   选择**是**时记事本会提示您创建一个文件。 此步骤将打开一个空白的记事本窗口，供你在一个名为 hello.cpp 文件中输入你的代码。
 
-3. 在记事本中，输入以下代码行：
+1. 在记事本中，输入以下代码行：
 
    ```cpp
    #include <iostream>
@@ -92,13 +92,13 @@ Visual Studio 的生成工具安装命令行编译器、 工具和生成 C 和 c
    }
    ```
 
-   这是一个非常简单的程序，会在屏幕上写入一行文本，然后退出。 为了尽量减少错误，请将此代码复制并粘贴到记事本中。
+   此代码是一个简单的程序，将在屏幕上写入一行文本，然后退出。 为了尽量减少错误，请将此代码复制并粘贴到记事本中。
 
-4. 保存所有内容！ 在记事本中，在“文件”  菜单上选择“保存” 。
+1. 保存所有内容！ 在记事本中，在“文件”  菜单上选择“保存” 。
 
-   恭喜，已创建 Visual c + + 源文件，hello.cpp，即准备进行编译。
+   恭喜，现已创建 Visual c + + 源文件，hello.cpp，即准备进行编译。
 
-5. 切换回开发人员命令提示窗口。 输入**dir**在命令提示符下，若要列出 c:\hello 目录的内容。 应会看到源文件 hello.cpp 在目录列表中，如下所示：
+1. 切换回开发人员命令提示窗口。 输入`dir`在命令提示符下，若要列出 c:\hello 目录的内容。 应会看到源文件 hello.cpp 中的目录列表中，类似于如下所示：
 
    ```Output
    c:\hello>dir
@@ -117,7 +117,7 @@ Visual Studio 的生成工具安装命令行编译器、 工具和生成 C 和 c
 
    您的计算机上将不同的日期，以及其他详细信息。 如果看不到源代码文件，hello.cpp，请确保已更改为你创建 c:\hello 目录，并在记事本中，请确保在此目录中保存您的源文件。 此外请确保扩展名为.cpp 文件，不带.txt 扩展名保存的源代码。
 
-6. 在开发人员命令提示符下输入`cl /EHsc hello.cpp`来编译你的程序。
+1. 在开发人员命令提示符下输入`cl /EHsc hello.cpp`来编译你的程序。
 
    cl.exe 编译器会生成包含已编译代码的 .obj 文件，然后运行链接器来创建名为 basic.exe 的可执行程序。 此名称会显示在编译器显示的多行输出信息中。 编译器的输出应如下所示：
 
@@ -148,7 +148,7 @@ Visual Studio 的生成工具安装命令行编译器、 工具和生成 C 和 c
    Hello, world, from Visual C++!
    ```
 
-   祝贺你，只是已编译，并使用命令行工具运行 c + + 程序。
+   祝贺你，你已编译并运行 c + + 程序使用命令行工具。
 
 ## <a name="next-steps"></a>后续步骤
 
@@ -156,13 +156,13 @@ Visual Studio 的生成工具安装命令行编译器、 工具和生成 C 和 c
 
 可以使用在本演练中的步骤来生成你自己的 c + + 代码而无需键入显示的示例代码。 此外可以生成许多其他位置查找的 c + + 代码示例程序。 可以将你的源代码和生成你的应用在任何可写目录中。 默认情况下，Visual Studio IDE 在文档文件夹中，名为你的 Visual Studio 版本的 Visual Studio 文件夹的项目子文件夹中创建项目。
 
-若要编译的程序具有多个源代码文件，输入所有内容位于命令行中，像这样它们：
+若要编译有其他的源代码文件的程序，其所有上输入命令行中，如：
 
 `cl /EHsc file1.cpp file2.cpp file3.cpp`
 
-**/EHsc** 命令行选项指示编译器启用 C++ 异常处理。 有关详细信息，请参阅 [/EH（异常处理模型）](../build/reference/eh-exception-handling-model.md)。
+`/EHsc`命令行选项指示编译器启用 c + + 异常处理。 有关详细信息，请参阅 [/EH（异常处理模型）](../build/reference/eh-exception-handling-model.md)。
 
-提供此类的多个源文件，编译器使用第一个输入的文件来创建程序名称。 在这种情况下，它将输出一个名为 file1.exe 程序。 若要将名称更改为 program1.exe，添加[/out](../build/reference/out-output-file-name.md)链接器选项：
+时提供额外的源文件时，编译器使用第一个输入的文件创建程序名称。 在这种情况下，它将输出一个名为 file1.exe 程序。 若要将名称更改为 program1.exe，添加[/out](../build/reference/out-output-file-name.md)链接器选项：
 
 `cl /EHsc file1.cpp file2.cpp file3.cpp /link /out:program1.exe`
 
@@ -170,11 +170,11 @@ Visual Studio 的生成工具安装命令行编译器、 工具和生成 C 和 c
 
 `cl /W4 /EHsc file1.cpp file2.cpp file3.cpp /link /out:program1.exe`
 
-编译器、 cl.exe，具有更多的选项可以应用于生成、 优化、 调试和分析你的代码。 有关快速列表中，输入**cl /？** 在开发人员命令提示符。 也可以编译和链接单独并应用更复杂的生成方案中的链接器选项。 编译器和链接器选项和使用情况的详细信息，请参阅[C/c + + 生成参考](../build/reference/c-cpp-building-reference.md)。
+编译器、 cl.exe，具有更多的选项可以应用于生成、 优化、 调试和分析你的代码。 有关快速列表中，输入`cl /?`开发人员命令提示符处。 也可以编译和链接单独并应用更复杂的生成方案中的链接器选项。 编译器和链接器选项和使用情况的详细信息，请参阅[C/c + + 生成参考](../build/reference/c-cpp-building-reference.md)。
 
 您可以使用 NMAKE 和生成文件或 MSBuild 和项目文件，若要配置和命令行上生成更复杂的项目。 有关使用这些工具的详细信息，请参阅[NMAKE 参考](../build/nmake-reference.md)并[MSBuild](../build/msbuild-visual-cpp.md)。
 
-C 和 c + + 语言非常相似，但不是相同。 Visual c + + 编译器使用一个简单的规则来确定你的代码对其进行编译时要使用的语言。 默认情况下，Visual C++ 编译器将以 .c 结尾的所有文件视为 C 源代码，将以 .cpp 结尾的所有文件视为 C++ 源代码。 若要强制编译器将所有文件视为 c + + 而不考虑文件扩展名，请使用[/TC](../build/reference/tc-tp-tc-tp-specify-source-file-type.md)编译器选项。
+C 和 c + + 语言非常相似，但不是相同。 Visual c + + 编译器使用一个简单的规则来确定你的代码对其进行编译时要使用的语言。 默认情况下，Visual C++ 编译器将以 .c 结尾的所有文件视为 C 源代码，将以 .cpp 结尾的所有文件视为 C++ 源代码。 若要强制编译器将所有文件视为 c + + 非根据文件扩展名，请使用[/TC](../build/reference/tc-tp-tc-tp-specify-source-file-type.md)编译器选项。
 
 Visual c + + 编译器将包含符合 ISO C99 标准，但不是完全符合标准 C 运行时库 (CRT)。 在大多数情况下，可移植代码将编译并按预期方式运行。 Visual c + + 不支持的 CRT 更改一些在 ISO C11 中。 由 Visual c + + 编译器已弃用某些库函数和 POSIX 函数名称。 支持的函数，但首选的名称已更改。 有关详细信息，请参阅[CRT 中的安全功能](../c-runtime-library/security-features-in-the-crt.md)并[编译器警告 （等级 3） C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)。
 

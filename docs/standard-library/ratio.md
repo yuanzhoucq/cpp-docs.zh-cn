@@ -41,12 +41,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a5ffa7666f9b976312bf1c3115d93204bdd8f8a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 53f3e618378abd70506e2fed45767c7c856320b0
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853747"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821114"
 ---
 # <a name="ltratiogt"></a>&lt;ratio&gt;
 
@@ -62,7 +62,7 @@ ms.locfileid: "33853747"
 
 ```cpp
 template<std::intmax_t Numerator, std::intmax_t Denominator = 1>
-   struct ratio // holds the ratio of Numerator to Denominator
+struct ratio // holds the ratio of Numerator to Denominator
 {
    static constexpr std::intmax_t num;
    static constexpr std::intmax_t den;
@@ -70,7 +70,7 @@ template<std::intmax_t Numerator, std::intmax_t Denominator = 1>
 }
 ```
 
-模板`ratio`定义的静态常量`num`和`den`以便`num`  /  `den` = = 分子 / 分母和`num`和`den`具有没有常见因素。 `num` / `den` 是由模板类表示的值。 因此，`type`指定实例化`ratio<num, den>`。
+该模板`ratio`定义的静态常量`num`并`den`以便`num`  /  `den` = = 分子 / 分母和`num`和`den`不具有常见因素。 `num` / `den` 是由模板类表示的值。 因此，`type`指定实例化`ratio<num, den>`。
 
 ### <a name="specializations"></a>专用化
 
@@ -80,7 +80,7 @@ template<std::intmax_t Numerator, std::intmax_t Denominator = 1>
 
 每个专用化采用两个同时必须为 `ratio` 的专用化的模板参数。 `type` 的值由关联的逻辑操作确定。
 
-|名称|`type` 值|
+|name|`type` 值|
 |----------|------------------|
 |`ratio_add`|`R1 + R2`|
 |`ratio_divide`|`R1 / R2`|
