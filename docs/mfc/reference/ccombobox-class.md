@@ -118,12 +118,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82c9ad08977e6b24886060c49b74c66697113cdf
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 03d418fc45d3947248c78d70af5d036bd93b204d
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46447422"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821499"
 ---
 # <a name="ccombobox-class"></a>CComboBox 类
 
@@ -256,7 +256,7 @@ class CComboBox : public CWnd
 
 如果在嵌入`CComboBox`对象在另一个窗口中的对象，不需要将其销毁。 如果您创建`CComboBox`对象在堆栈上被自动销毁。 如果您创建`CComboBox`通过使用堆上的对象**新**函数，必须调用**删除**上要销毁 Windows 组合框时对其进行销毁的对象。
 
-**请注意**如果你想要处理 WM_KEYDOWN 和 WM_CHAR 消息，则必须为子类组合框的编辑和列表框控件中，派生类从`CEdit`和`CListBox`，并将这些消息的处理程序添加到派生的类。 有关详细信息，请参阅[ http://support.microsoft.com/default.aspxscid=kb; en-我们;Q174667](http://support.microsoft.com/default.aspxscid=kb;en-us;q174667)并[CWnd::SubclassWindow](../../mfc/reference/cwnd-class.md#subclasswindow)。
+**请注意**如果你想要处理 WM_KEYDOWN 和 WM_CHAR 消息，则必须为子类组合框的编辑和列表框控件中，派生类从`CEdit`和`CListBox`，并将这些消息的处理程序添加到派生的类。 有关详细信息，请参阅[ http://support.microsoft.com/default.aspxscid=kb;Q174667](http://support.microsoft.com/default.aspxscid=kb;q174667)并[CWnd::SubclassWindow](../../mfc/reference/cwnd-class.md#subclasswindow)。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 

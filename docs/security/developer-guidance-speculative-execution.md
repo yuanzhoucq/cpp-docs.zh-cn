@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28d1df72efcc1fa7408922876ad91bafcd2b005a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2ba89aadc8e1c617ed8e101a226560b80cb9e431
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46422658"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821395"
 ---
 # <a name="c-developer-guidance-for-speculative-execution-side-channels"></a>推理执行端通道的 c + + 开发人员指南
 
@@ -73,7 +73,7 @@ unsigned char ReadByte(unsigned char *buffer, unsigned int buffer_size, unsigned
 
 ## <a name="what-software-scenarios-can-be-impacted"></a>哪些软件方案可能会受到影响？
 
-使用等进程的安全软件开发[安全开发生命周期](https://www.microsoft.com/en-us/sdl/)(SDL) 通常需要开发人员标识存在于其应用程序信任边界。 在其中应用程序可能不太受信任的上下文，如在系统上的另一个进程或非管理用户模式进程在内核模式设备驱动程序的情况下提供的数据进行交互的地方存在一条信任边界。 涉及推理执行端通道的安全漏洞的新类是与信任边界隔离代码和数据的设备上的现有软件安全模型中的许多相关。
+使用等进程的安全软件开发[安全开发生命周期](https://www.microsoft.com/sdl/)(SDL) 通常需要开发人员标识存在于其应用程序信任边界。 在其中应用程序可能不太受信任的上下文，如在系统上的另一个进程或非管理用户模式进程在内核模式设备驱动程序的情况下提供的数据进行交互的地方存在一条信任边界。 涉及推理执行端通道的安全漏洞的新类是与信任边界隔离代码和数据的设备上的现有软件安全模型中的许多相关。
 
 下表提供了开发人员可能需要会担心发生这些漏洞的软件安全模型的摘要：
 
@@ -341,7 +341,7 @@ unsigned char ReadByte(unsigned char *buffer, unsigned int buffer_size, unsigned
 
 ### <a name="speculation-barrier-via-compiler-time-instrumentation"></a>通过编译器时检测推理屏障
 
-（从 15.5.5 版开始） 的 Visual Studio 2017 中 Visual c + + 编译器支持`/Qspectre`开关，这样将自动插入推理屏障的一组有限的潜在易受攻击的编码模式与相关的 CVE 2017-5753。 文档[/Qspectre](https://docs.microsoft.com/en-us/cpp/build/reference/qspectre)标志提供有关其效果和使用情况详细信息。 请务必请注意，此标志不涵盖所有可能有漏洞的编码模式，这种情况下开发人员不应依赖于它作为一种全面缓解此类漏洞。
+（从 15.5.5 版开始） 的 Visual Studio 2017 中 Visual c + + 编译器支持`/Qspectre`开关，这样将自动插入推理屏障的一组有限的潜在易受攻击的编码模式与相关的 CVE 2017-5753。 文档[/Qspectre](https://docs.microsoft.com/cpp/build/reference/qspectre)标志提供有关其效果和使用情况详细信息。 请务必请注意，此标志不涵盖所有可能有漏洞的编码模式，这种情况下开发人员不应依赖于它作为一种全面缓解此类漏洞。
 
 ### <a name="masking-array-indices"></a>屏蔽数组索引
 

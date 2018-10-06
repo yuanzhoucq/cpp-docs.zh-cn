@@ -1,7 +1,7 @@
 ---
 title: /Qspectre |Microsoft Docs
 ms.custom: ''
-ms.date: 1/23/2018
+ms.date: 09/24/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aaf77e1856f535dba81d4b61e2ce19d363f48038
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9ed4b84ab761653dde4da6adcd14ec8e77334688
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46386946"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821642"
 ---
 # <a name="qspectre"></a>/Qspectre
 
@@ -32,11 +32,13 @@ ms.locfileid: "46386946"
 
 ## <a name="remarks"></a>备注
 
-**/Qspectre**选项是可用在 Visual Studio 2017 版本 15.7 及更高版本。 它会导致编译器插入以缓解特定的说明[Spectre 安全漏洞](https://spectreattack.com/spectre.pdf)。 调用这些漏洞*推理执行旁道攻击*、 会影响许多操作系统和现代处理器中，包括来自 Intel、 AMD 处理器和 ARM。
+**/Qspectre**选项是推出 Visual Studio 2017 15.5.5 版和更高版本，并通过 Visual Studio 2015 Update 3 [KB 4338871](https://support.microsoft.com/en-us/help/4338871/visual-studio-2015-update-3-spectre-variant-1-toolset-qspectre)。 它会导致编译器插入以缓解特定的说明[Spectre 安全漏洞](https://spectreattack.com/spectre.pdf)。 调用这些漏洞*推理执行旁道攻击*、 会影响许多操作系统和现代处理器中，包括来自 Intel、 AMD 处理器和 ARM。
 
 **/Qspectre**选项默认情况下处于关闭状态。
 
-在其初始版本中， **/Qspectre**选项仅适用于优化的代码。 您应确保编写代码的任何优化选项 (例如， [/o2 或/o1](o1-o2-minimize-size-maximize-speed.md)但不是[/Od](od-disable-debug.md)) 以确保应用缓解措施。 同样，检查使用的任何代码[#pragma 优化 ("stg"，off)](../../preprocessor/optimize.md)。
+在其初始版本中， **/Qspectre**选项仅处理优化的代码。 在 Visual Studio 2017 版本 15.7 及更高版本， **/Qspectre**选项支持所有优化级别。 
+
+Microsoft Visual c + + 库中也会提供与 Spectre 缓解版本。 可以在 Visual Studio 安装程序下载用于 Visual Studio 2017 的 Spectre 缓解库。 在中找到**各个组件**选项卡上的**编译器、 生成工具和运行时**，并且在名称中具有"Libs 有关 Spectre"。 DLL 和静态运行时库与已启用的缓解是适用于 Visual c + + 运行时的子集： VC + + 启动代码、 vcruntime140、 msvcp140、 concrt140 和 vcamp140。 应用程序本地的部署; 仅支持 Dll尚未修改的 Visual c + + 2017年运行时库可再发行的内容。 也可为 MFC 和 ATL 中, 找到安装 Spectre 缓解库**各个组件**选项卡上的**Sdk、 库和框架**。
 
 ### <a name="applicability"></a>适用性
 
@@ -44,9 +46,9 @@ ms.locfileid: "46386946"
 
 ### <a name="availability"></a>可用性
 
-**/Qspectre**选项现已推出 Visual Studio 2017 版本 15.5.5 和对 Microsoft Visual c + + 编译器 （msvc） 编写的所有更新或者在 2018 年 1 月 23 日。 使用 Visual Studio 安装程序来更新编译器，并作为单独的组件安装的 Spectre 缓解库。 **/Qspectre**选项也是可在 Visual Studio 2015 Update 3 中通过一个修补程序。 有关详细信息，请参阅[KB 4338871](https://support.microsoft.com/help/4338871)。
+**/Qspectre**选项可在 Visual Studio 2017 版本 15.5.5 以及在或者 2018 年 1 月 23 日在 Microsoft Visual c + + 编译器 （msvc） 编写的所有更新。 使用 Visual Studio 安装程序来更新编译器，并作为单独的组件安装的 Spectre 缓解库。 **/Qspectre**选项也是可在 Visual Studio 2015 Update 3 中通过一个修补程序。 有关详细信息，请参阅[KB 4338871](https://support.microsoft.com/help/4338871)。
 
-所有版本的 Visual Studio 2017 版本 15.5 和所有预览版的 Visual Studio 版本 15.6 已包含一个未记录的选项， **/d2guardspecload**，，等效于的初始行为 **/Qspectre**. 可以使用 **/d2guardspecload**将相同的缓解措施应用于这些版本的编译器中的代码。 请更新您的生成以使用 **/Qspectre**中的支持选项; 编译器 **/Qspectre**选项也可能在更高版本的编译器支持新的缓解措施。
+所有版本的 Visual Studio 2017 版本 15.5 和所有预览版的 Visual Studio 2017 版本 15.6 包含一个未记录的选项， **/d2guardspecload**，，等效于的初始行为 **/Qspectre**. 可以使用 **/d2guardspecload**将相同的缓解措施应用于这些版本的编译器中的代码。 请更新您的生成以使用 **/Qspectre**中的支持选项; 编译器 **/Qspectre**选项也可能在更高版本的编译器支持新的缓解措施。
 
 ### <a name="effect"></a>效果
 
@@ -62,9 +64,9 @@ ms.locfileid: "46386946"
 
 **/Qspectre**编译器选项生成的隐式链接的已生成提供 Spectre 缓解措施的运行时库版本的代码。 这些库都必须通过使用 Visual Studio 安装程序安装的可选组件：
 
-- VC + + 2017年版本*version_number* Libs 面向 Spectre （x86 和 x64）
-- 带有 Spectre 缓解措施的 Visual C++ ATL (x86/x64)
-- 带有 Spectre 缓解措施的 Visual C++ MFC for x86/x64
+- VC + + 2017年版本*version_numbers*面向 Spectre 的 Libs \[（x86 和 x64） |(ARM) |(ARM64)]
+- Visual c + + ATL for \[(x86/x64) |ARM |ARM64] 带有 Spectre 缓解措施
+- Visual c + + MFC for \[x86/x64 |ARM |ARM64] 带有 Spectre 缓解措施
 
 如果使用生成你的代码 **/Qspectre**和这些库并不安装，生成系统报告**警告 MSB8038： 已启用 Spectre 缓解措施，但找不到 Spectre 缓解库**。 如果在 MFC 或 ATL 代码生成失败，并且链接器报表错误，例如**错误 LNK1104： 无法打开文件 oldnames.lib**，这些缺少的库可能就是原因。
 

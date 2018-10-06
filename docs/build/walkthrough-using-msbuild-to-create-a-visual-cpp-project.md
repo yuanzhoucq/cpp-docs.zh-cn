@@ -1,7 +1,7 @@
 ---
 title: 演练： 使用 MSBuild 创建 Visual c + + 项目 |Microsoft Docs
 ms.custom: ''
-ms.date: 06/25/2018
+ms.date: 09/24/2018
 ms.technology:
 - cpp-tools
 ms.topic: conceptual
@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8bb957f0ab1dd2ea7d05151257aee0e15561e8a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e8a1c45342cf1f5eb178764d6fd723950f52e7e0
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42609694"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821227"
 ---
 # <a name="walkthrough-using-msbuild-to-create-a-visual-c-project"></a>演练：使用 MSBuild 创建 Visual C++ 项目
 
-本演练演示如何使用 MSBuild 生成 Visual c + + 项目的命令提示符处。 您将学习如何创建 c + + 源代码文件和 Visual c + + 控制台应用程序的基于 XML 的项目文件。 后生成项目时，您将学习如何自定义生成过程。
+本演练演示如何使用 MSBuild 生成 Visual c + + 项目的命令提示符处。 您将了解如何创建 c + + 源代码文件和 Visual c + + 控制台应用程序的基于 XML 的项目文件。 后生成项目时，将了解如何自定义生成过程。
 
 本演练阐释了以下任务：
 
@@ -53,13 +53,13 @@ ms.locfileid: "42609694"
 
 ## <a name="creating-the-c-source-files"></a>创建 c + + 源文件
 
-在本演练将创建具有源文件和头文件的项目。 源文件 main.cpp 包含控制台应用程序的主函数。 标头文件 main.h 包含代码以包括 iostream 标头文件。 可以通过使用 Visual Studio 或文本编辑器 （如 Visual Studio Code） 创建这些 c + + 文件。
+在本演练中，将创建具有源文件和头文件的项目。 源文件 main.cpp 包含控制台应用程序的主函数。 标头文件 main.h 包含代码以包括 iostream 标头文件。 可以通过使用 Visual Studio 或文本编辑器 （如 Visual Studio Code） 创建这些 c + + 文件。
 
 ### <a name="to-create-the-c-source-files-for-your-project"></a>若要创建你的项目的 c + + 源代码文件
 
 1. 创建你的项目的目录。
 
-2. 创建名为 main.cpp 的文件并将以下代码添加到此文件：
+1. 创建名为 main.cpp 的文件并将以下代码添加到此文件：
 
     ```cpp
     // main.cpp : the application source code.
@@ -72,7 +72,7 @@ ms.locfileid: "42609694"
     }
     ```
 
-3. 创建名为 main.h 的文件并将以下代码添加到此文件：
+1. 创建名为 main.h 的文件并将以下代码添加到此文件：
 
     ```cpp
     // main.h: the application header code.
@@ -81,24 +81,24 @@ ms.locfileid: "42609694"
 
 ## <a name="creating-the-xml-msbuild-project-file"></a>创建 XML MSBuild 项目文件
 
-MSBuild 项目文件是一个包含项目根元素的 XML 文件 (\<项目 >)。 在下面的示例项目中，\<项目 > 元素包含七个子元素：
+MSBuild 项目文件是一个包含项目根元素的 XML 文件 (`<Project>`)。 在下面的示例项目中，`<Project>`元素包含七个子元素：
 
-- 三个项组标记 (\<ItemGroup >)，用于指定项目配置和平台、 源文件名和头文件的名称。
+- 三个项组标记 (`<ItemGroup>`)，用于指定项目配置和平台、 源文件名和头文件的名称。
 
-- 三个导入标记 (\<导入 >)，用于指定 Microsoft Visual c + + 设置的位置。
+- 三个导入标记 (`<Import>`)，用于指定 Microsoft Visual c + + 设置的位置。
 
-- 属性组标记 (\<PropertyGroup >)，指定项目设置。
+- 属性组标记 (`<PropertyGroup>`)，指定项目设置。
 
 ### <a name="to-create-the-msbuild-project-file"></a>若要创建 MSBuild 项目文件
 
-1. 使用文本编辑器创建名为的项目文件`myproject.vcxproj`，然后添加以下根\<项目 > 元素。 在以下过程步骤根目录之间中插入元素\<项目 > 标记：
+1. 使用文本编辑器创建名为的项目文件`myproject.vcxproj`，然后添加以下根`<Project>`元素。 在以下过程步骤根目录之间中插入元素`<Project>`标记：
 
     ```xml
     <Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
     </Project>
     ```
 
-2. 添加以下两个\<ProjectConfiguration > 中的子元素\<ItemGroup > 元素。 子元素指定调试和发布适用于 32 位 Windows 操作系统的配置：
+1. 添加以下两个`<ProjectConfiguration>`中的子元素`<ItemGroup>`元素。 子元素指定调试和发布适用于 32 位 Windows 操作系统的配置：
 
     ```xml
     <ItemGroup>
@@ -113,13 +113,13 @@ MSBuild 项目文件是一个包含项目根元素的 XML 文件 (\<项目 >)。
     </ItemGroup>
     ```
 
-3. 以下代码添加到\<导入 / > 元素，它指定此项目的默认 c + + 设置的路径：
+1. 以下代码添加到`<Import>`元素，它指定此项目的默认 c + + 设置的路径：
 
     ```xml
     <Import Project="$(VCTargetsPath)\Microsoft.Cpp.default.props" />
     ```
 
-4. 添加以下属性组元素 (\<PropertyGroup >)，它指定两个项目属性：
+1. 添加以下属性组元素 (`<PropertyGroup>`)，它指定两个项目属性：
 
     ```xml
     <PropertyGroup>
@@ -128,13 +128,13 @@ MSBuild 项目文件是一个包含项目根元素的 XML 文件 (\<项目 >)。
     </PropertyGroup>
     ```
 
-5. 以下代码添加到\<导入 / > 元素，用于指定此项目的当前 c + + 设置的路径：
+1. 以下代码添加到`<Import>`元素，用于指定此项目的当前 c + + 设置的路径：
 
     ```xml
     <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
     ```
 
-6. 添加以下\<ClCompile > 中的子元素\<ItemGroup > 元素。 子元素指定要编译的 C/c + + 源文件的名称：
+1. 添加以下`<ClCompile>`中的子元素`<ItemGroup>`元素。 子元素指定要编译的 C/c + + 源文件的名称：
 
     ```xml
     <ItemGroup>
@@ -143,9 +143,9 @@ MSBuild 项目文件是一个包含项目根元素的 XML 文件 (\<项目 >)。
     ```
 
    > [!NOTE]
-   > \<ClCompile > 是*构建面向*中定义， **VCTargets**目录。
+   > `<ClCompile>` 是*构建面向*中定义， **VCTargets**目录。
 
-7. 添加以下\<ClInclude > 中的子元素\<ItemGroup > 元素。 子元素指定 C/c + + 源代码文件的标头文件的名称：
+1. 添加以下`<ClInclude>`中的子元素`<ItemGroup>`元素。 子元素指定 C/c + + 源代码文件的标头文件的名称：
 
     ```xml
     <ItemGroup>
@@ -153,7 +153,7 @@ MSBuild 项目文件是一个包含项目根元素的 XML 文件 (\<项目 >)。
     </ItemGroup>
     ```
 
-8. 以下代码添加到\<导入 > 元素，它指定定义此项目的目标的文件的路径：
+1. 以下代码添加到`<Import>`元素，它指定定义此项目的目标的文件的路径：
 
     ```xml
     <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Targets" />
@@ -197,7 +197,7 @@ MSBuild 项目文件是一个包含项目根元素的 XML 文件 (\<项目 >)。
 
 `msbuild myproject.vcxproj /p:configuration=debug`
 
-MSBuild 创建目录的输出文件，然后编译并链接项目以生成 Myproject.exe 程序。 生成过程完成后，使用以下命令运行该应用程序：
+MSBuild 创建目录的输出文件，然后编译并链接项目以生成 Myproject.exe 程序。 生成过程完成后，使用以下命令从 debug 文件夹中运行应用程序：
 
 `myproject`
 
@@ -219,7 +219,7 @@ MSBuild，可执行预定义的生成的目标、 应用用户定义的属性，
 
 ### <a name="using-msbuild-with-build-targets"></a>将 MSBuild 用于生成目标
 
-一个*构建目标*是一组命名的预定义或用户定义可以在生成期间执行的命令。 使用目标命令行选项 (**/t**) 指定了生成目标。 情况下`myproject`示例项目，在预定义**干净**目标删除调试文件夹中的所有文件并创建新的日志文件。
+一个*构建目标*是一组命名的预定义或用户定义可以在生成期间执行的命令。 使用目标命令行选项 (`/t`) 指定了生成目标。 有关`myproject`示例项目，在预定义**干净**目标删除调试文件夹中的所有文件并创建新的日志文件。
 
 在命令提示符下键入以下命令以清理`myproject`。
 
@@ -227,7 +227,7 @@ MSBuild，可执行预定义的生成的目标、 应用用户定义的属性，
 
 ### <a name="using-msbuild-with-build-properties"></a>将 MSBuild 用于生成属性
 
-属性命令行选项 (**/p**) 使你可以覆盖在项目生成文件中的属性。 在中`myproject`示例项目、 发布或调试生成配置指定由`Configuration`属性。 指定用于运行生成的应用程序的操作系统和`Platform`属性。
+属性命令行选项 (`/p`) 使你可以覆盖在项目生成文件中的属性。 在中`myproject`示例项目、 发布或调试生成配置指定由`Configuration`属性。 指定用于运行生成的应用程序的操作系统和`Platform`属性。
 
 在命令提示符下键入以下命令创建的调试版本`myproject`只应在 32 位 Windows 上运行的应用程序。
 
@@ -259,7 +259,7 @@ MSBuild，可执行预定义的生成的目标、 应用用户定义的属性，
 
 ### <a name="using-msbuild-with-a-different-toolset"></a>将 MSBuild 用于不同的工具集
 
-如果你具有的工具集和其他版本的 Visual c + + 安装的库，MSBuild 可以生成有关最新 Visual c + + 版本或其他已安装版本的应用程序。 例如，如果你已安装 Visual Studio 2012，若要为 Windows XP 中，指定的 Visual c + + 11.0 工具集将添加以下属性组元素到的 Myproject.vcxproj 项目文件后 Microsoft.Cpp.props`<Import />`元素：
+如果你具有的工具集和其他版本的 Visual c + + 安装的库，MSBuild 可以生成有关最新 Visual c + + 版本或其他已安装版本的应用程序。 例如，如果你已安装 Visual Studio 2012 Visual c + + 11.0 工具集指定为 Windows XP 中，将以下属性组元素添加到后的 Myproject.vcxproj 项目文件`Microsoft.Cpp.props`\<导入 / > 元素：
 
 ```xml
 <PropertyGroup>
@@ -267,11 +267,9 @@ MSBuild，可执行预定义的生成的目标、 应用用户定义的属性，
 </PropertyGroup>
 ```
 
-若要重新生成你的项目的 Visual c + + 11.0 Windows XP 工具集，请键入以下命令之一：
+若要重新生成你的项目的 Visual c + + 11.0 Windows XP 工具集，请键入以下命令：
 
 `msbuild myproject.vcxproj /p:PlatformToolset=v110_xp /t:rebuild`
-
-`msbuild myproject.vcxproj /t:rebuild`
 
 ### <a name="adding-msbuild-customizations"></a>添加 MSBuild 自定义项
 

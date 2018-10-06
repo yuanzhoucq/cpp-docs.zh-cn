@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 705f4f0d41b98c46e2cd61962d84fe8412b9e296
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: aa5cf1be80b22d3577347dbf7de9ee262125aa86
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46414051"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821356"
 ---
 # <a name="message-map-macros-mfc"></a>消息映射宏 (MFC)
 
@@ -81,7 +81,6 @@ ms.locfileid: "46414051"
 |[ON_CONTROL_RANGE](#on_control_range)|指示哪个函数将处理来自在宏的第二个和第三个参数中指定的控件 ID 的范围的通知。 第一个参数是控件通知消息，如 BN_CLICKED。|
 
 消息映射、 消息映射声明和分界宏和消息映射宏的详细信息，请参阅[消息映射](../../mfc/reference/message-maps-mfc.md)并[消息处理和映射主题](../../mfc/message-handling-and-mapping.md)。 有关消息映射范围的详细信息，请参阅[消息映射范围的处理程序](../../mfc/handlers-for-message-map-ranges.md)。
-
 
 ## <a name="begin_message_map"></a> BEGIN_MESSAGE_MAP
 
@@ -125,15 +124,18 @@ END_MESSAGE_MAP()
 
 ### <a name="syntax"></a>语法
 
-  ```
+```
 BEGIN_TEMPLATE_MESSAGE_MAP( theClass, type_name, baseClass )
 ```
+
 ### <a name="parameters"></a>参数
 
 *类*<br/>
 指定的消息将此映射的类的名称。
+
 type_name<br/>
 为类指定模板参数的名称。
+
 *baseClass*<br/>
 指定的类的基类名称*类*。
 
@@ -181,7 +183,6 @@ class CMainFrame : public CMDIFrameWnd
 ### <a name="requirements"></a>要求
 
 **标头:** afxwin.h
-
 
 ## <a name="end_message_map"></a>  END_MESSAGE_MAP
 
@@ -245,9 +246,10 @@ END_MESSAGE_MAP()
 
 ### <a name="syntax"></a>语法
 
-  ```
+```
 ON_COMMAND_EX(id, memberFxn);
 ```
+
 ### <a name="parameters"></a>参数
 
 *id*<br/>
@@ -267,6 +269,7 @@ ON_COMMAND_EX(id, memberFxn);
 ```
 ON_COMMAND_EX(id,  memberFxn);
 ```
+
 ### <a name="parameters"></a>参数
 
 *id*<br/>
@@ -287,8 +290,7 @@ ON_COMMAND_EX(id,  memberFxn);
 ### <a name="see-also"></a>请参阅
 
 [ON_COMMAND](message-map-macros-mfc.md#on_command)<br/>
-[TN006： 消息映射] tm006 消息 maps.md)
-
+[TN006：消息映射](../tn006-message-maps.md)
 
 ## <a name="on_control"></a>  ON_CONTROL
 
@@ -322,7 +324,6 @@ ON_CONTROL( wNotifyCode, id, memberFxn )
 ### <a name="requirements"></a>要求
 
 **标头：** afxmsg_.h
-
 
 ## <a name="on_message"></a>  ON_MESSAGE
 
@@ -382,7 +383,7 @@ LRESULT CMyWnd2::OnMyMessage(WPARAM wParam, LPARAM lParam)
 
 **标头：** afxmsg_.h
 
-## <a name="on_olecmd"></a>  ON_OLECMD  
+## <a name="on_olecmd"></a>  ON_OLECMD
 
 将命令路由命令调度接口通过`IOleCommandTarget`。
 
@@ -545,7 +546,6 @@ ON_REGISTERED_MESSAGE( nMessageVariable, memberFxn )
 ```cpp
 static UINT NEAR WM_FIND = RegisterWindowMessage(_T("COMMDLG_FIND"));
 
-
 BEGIN_MESSAGE_MAP(CMyWnd3, CWnd)
    ON_REGISTERED_MESSAGE(WM_FIND, OnFind)
 END_MESSAGE_MAP()
@@ -560,7 +560,7 @@ END_MESSAGE_MAP()
 [RegisterWindowMessage](https://msdn.microsoft.com/library/windows/desktop/ms644947)<br/>
 [用户定义的处理程序](user-defined-handlers.md)
 
-## <a name="on_registered_thread_message"></a>  ON_REGISTERED_THREAD_MESSAGE    
+## <a name="on_registered_thread_message"></a>  ON_REGISTERED_THREAD_MESSAGE
 
 指示哪个函数将处理由 Windows RegisterWindowMessage 函数注册的消息。
 
@@ -586,7 +586,7 @@ RegisterWindowMessage 用于定义新的窗口消息来保证是唯一的在整�
 
 **标头：** afxmsg_.h
 
-## <a name="on_thread_message"></a>  ON_THREAD_MESSAGE  
+## <a name="on_thread_message"></a>  ON_THREAD_MESSAGE
 
 指示哪个函数将处理用户定义的消息。
 
@@ -612,7 +612,7 @@ ON_THREAD_MESSAGE( message, memberFxn )
 
 **标头：** afxole.h
 
-## <a name="on_update_command_ui"></a>  ON_UPDATE_COMMAND_UI    
+## <a name="on_update_command_ui"></a>  ON_UPDATE_COMMAND_UI
 
 此宏指示哪个函数将处理用户界面更新命令消息。
 
@@ -699,7 +699,7 @@ void CChildFrame::OnRangeCmds(UINT nID)
 
 **标头：** afxmsg_.h
 
-## <a name="on_update_command_ui_range"></a>  ON_UPDATE_COMMAND_UI_RANGE    
+## <a name="on_update_command_ui_range"></a>  ON_UPDATE_COMMAND_UI_RANGE
 
 将一组连续的命令 Id 映射到单个更新消息处理程序函数。
 
@@ -730,7 +730,7 @@ ON_UPDATE_COMMAND_UI_RANGE( id1, id2, memberFxn )
 
 **标头：** afxmsg_.h
 
-## <a name="on_control_range"></a>  ON_CONTROL_RANGE    
+## <a name="on_control_range"></a>  ON_CONTROL_RANGE
 
 使用此宏将连续范围的控件 Id 映射到指定的 Windows 通知消息，如 BN_CLICKED 单个消息处理程序函数。
 
