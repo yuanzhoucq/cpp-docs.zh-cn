@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62b49c20248ca4825bcf2c95b6c7adc956a39025
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 6bf350b0a129c642678fc6af1bac7d35633fe909
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45714516"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860974"
 ---
 # <a name="exports"></a>EXPORTS
 
@@ -82,11 +82,11 @@ EXPORTS
 
 1. [__Declspec （dllexport)](../../cpp/dllexport-dllimport.md)的源代码中的关键字
 
-2. .DEF 文件中的 `EXPORTS` 语句
+1. .DEF 文件中的 `EXPORTS` 语句
 
-3. [/Export](../../build/reference/export-exports-a-function.md) LINK 命令中的规范
+1. [/Export](../../build/reference/export-exports-a-function.md) LINK 命令中的规范
 
-4. 一个[注释](../../preprocessor/comment-c-cpp.md)指令中的源代码的窗体`#pragma comment(linker, "/export: definition ")`。 下面的示例演示一个 #pragma 注释指令之前函数声明中，其中`PlainFuncName`是未修饰的名称，和`_PlainFuncName@4`是该函数的修饰的名：
+1. 一个[注释](../../preprocessor/comment-c-cpp.md)指令中的源代码的窗体`#pragma comment(linker, "/export: definition ")`。 下面的示例演示一个 #pragma 注释指令之前函数声明中，其中`PlainFuncName`是未修饰的名称，和`_PlainFuncName@4`是该函数的修饰的名：
 
     ```cpp
     #pragma comment(linker, "/export:PlainFuncName=_PlainFuncName@4")

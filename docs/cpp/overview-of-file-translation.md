@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 829afe53d5fde976b7877475cf577b6204be8aed
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 1d0aa647f6f94d31f1a06bb09b143554dba51b68
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46051082"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861741"
 ---
 # <a name="overview-of-file-translation"></a>文件转换概述
 
@@ -32,9 +32,9 @@ C++ 程序（如 C 程序）由一个或多个文件组成。 这些文件中的
 
 1. 词法切分。 字符映射以及三元组处理、行拼接和切分在此翻译阶段执行。
 
-2. 预处理。 此翻译阶段，将引用的辅助源文件`#include`指令，处理"stringizing"和"字符化"指令，并执行标记粘贴和宏扩展 (请参阅[预处理器指令](../preprocessor/preprocessor-directives.md)在中*预处理器参考 》* 有关详细信息)。 预处理阶段的结果是一系列共同用于定义“翻译单元”的标记。
+1. 预处理。 此翻译阶段，将引用的辅助源文件`#include`指令，处理"stringizing"和"字符化"指令，并执行标记粘贴和宏扩展 (请参阅[预处理器指令](../preprocessor/preprocessor-directives.md)在中*预处理器参考 》* 有关详细信息)。 预处理阶段的结果是一系列共同用于定义“翻译单元”的标记。
 
-     预处理器指令总是以开头数字符号 (**#**) 字符 （即，在行上的第一个非空白字符必须是数字符号）。 一个给定行上只能出现一个预处理器指令。 例如：
+   预处理器指令总是以开头数字符号 (**#**) 字符 （即，在行上的第一个非空白字符必须是数字符号）。 一个给定行上只能出现一个预处理器指令。 例如：
 
     ```cpp
     #include <iostream>  // Include text of iostream in
@@ -43,9 +43,9 @@ C++ 程序（如 C 程序）由一个或多个文件组成。 这些文件中的
                          //  text string).
     ```
 
-3. 代码生成。 此翻译阶段使用在预处理阶段生成的标记来生成对象代码。
+1. 代码生成。 此翻译阶段使用在预处理阶段生成的标记来生成对象代码。
 
-     在此阶段中，将执行源代码的语法和语义检查。
+   在此阶段中，将执行源代码的语法和语义检查。
 
 请参阅[翻译阶段](../preprocessor/phases-of-translation.md)中*预处理器参考 》* 有关详细信息。
 

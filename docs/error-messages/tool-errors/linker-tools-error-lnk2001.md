@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb8e560e46da06c4312ab4261016ccd5a5ddda68
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3da81f46514fbdd7d01ce9c2a9d8be6007301b45
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46017842"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861572"
 ---
 # <a name="linker-tools-error-lnk2001"></a>链接器工具错误 LNK2001
 
@@ -73,9 +73,9 @@ ms.locfileid: "46017842"
 
 如果你的代码引用符号从一个版本的库，但提供给链接器库的不同版本，可以发生此错误。 通常情况下，不能混合对象文件或为不同版本的编译器生成的库。 新版本中随附的库可能包含不能在早期版本中，以及进行相反转换中包含的库中找到的符号。 若要解决此问题，请将它们链接在一起之前生成的所有对象文件和库使用相同版本的编译器。
 
--  工具&#124;选项&#124;项目&#124;VC + + 目录对话框中，在库文件的所选内容，可以更改库搜索顺序。 在项目属性页对话框中的链接器文件夹也可能包含可能是过期的路径。
+- 工具&#124;选项&#124;项目&#124;VC + + 目录对话框中，在库文件的所选内容，可以更改库搜索顺序。 在项目属性页对话框中的链接器文件夹也可能包含可能是过期的路径。
 
--  新的 SDK 安装 （可能是到其他位置） 和搜索顺序不会更新以指向新位置时，可能会出现此问题。 通常情况下，应将路径放到新的 SDK include 和 lib 目录默认 Visual c + + 位置的前面。 此外，包含嵌入的路径的项目可能仍然指向旧路径有效，但已过期的情况下安装到其他位置的新版本添加的新功能。
+- 新的 SDK 安装 （可能是到其他位置） 和搜索顺序不会更新以指向新位置时，可能会出现此问题。 通常情况下，应将路径放到新的 SDK include 和 lib 目录默认 Visual c + + 位置的前面。 此外，包含嵌入的路径的项目可能仍然指向旧路径有效，但已过期的情况下安装到其他位置的新版本添加的新功能。
 
 - 如果您在命令行生成并创建了自己的环境变量，请验证工具、 库和标头文件的路径转到一致的版本。 有关详细信息，请参阅[为命令行生成设置路径和环境变量](../../build/setting-the-path-and-environment-variables-for-command-line-builds.md)
 

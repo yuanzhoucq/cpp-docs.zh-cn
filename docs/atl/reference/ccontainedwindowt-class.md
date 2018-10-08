@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c64db5a041845bbd068bab1a72ad461740170b8
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 5e65451fcb506da9072d0dc8031ffba1b30280e6
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46040474"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861429"
 ---
 # <a name="ccontainedwindowt-class"></a>CContainedWindowT 类
 
@@ -118,7 +118,7 @@ class CContainedWindowT : public TBase
 |创建控件|[ATL 教程](../../atl/active-template-library-atl-tutorial.md)|
 |使用 ATL 中的窗口|[ATL 窗口类](../../atl/atl-window-classes.md)|
 |ATL 项目向导|[创建 ATL 项目](../../atl/reference/creating-an-atl-project.md)|
-|Windows|[Windows](https://msdn.microsoft.com/library/windows/desktop/ms632595)和 Windows SDK 中的后续主题|
+|Windows|[Windows](/windows/desktop/winmsg/windows)和 Windows SDK 中的后续主题|
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 

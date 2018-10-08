@@ -64,19 +64,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd0858763d31e1f46e1cb366154871f06ae7a910
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7053c72536c0ab91420f1bbc068f39843eb99c1b
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46400401"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861806"
 ---
 # <a name="cimage-class"></a>CImage 类
 
 `CImage` 提供了增强的位图支持，包括加载和保存 JPEG、 GIF、 BMP、 和可移植网络图形 (PNG) 格式图像的能力。
 
 > [!IMPORTANT]
->  不能在 Windows 运行时中执行的应用程序中使用此类和其成员。
+> 不能在 Windows 运行时中执行的应用程序中使用此类和其成员。
 
 ## <a name="syntax"></a>语法
 
@@ -163,10 +163,10 @@ class CImage
 若要确定是否附加的位图 DIB 部分，请调用[IsDibSection](#isdibsection)。
 
 > [!NOTE]
-> **请注意**在 Visual Studio.NET 2003 中，此类保留数的计数`CImage`创建的对象。 每当在计数归为 0，该函数`GdiplusShutdown`自动调用以释放使用的 GDI + 资源。 这可确保任何`CImage`创建的 Dll 的直接或间接对象始终正确销毁并且`GdiplusShutdown`不能从调用`DllMain`。
+> 在 Visual Studio.NET 2003 中，此类保留数的计数`CImage`创建的对象。 每当在计数归为 0，该函数`GdiplusShutdown`自动调用以释放使用的 GDI + 资源。 这可确保任何`CImage`创建的 Dll 的直接或间接对象始终正确销毁并且`GdiplusShutdown`不能从调用`DllMain`。
 
 > [!NOTE]
->  使用全局`CImage`不建议在 DLL 中的对象。 如果你需要使用全局`CImage`对象中的 DLL，调用[CImage::ReleaseGDIPlus](#releasegdiplus)来显式释放资源使用的 GDI +。
+> 使用全局`CImage`不建议在 DLL 中的对象。 如果你需要使用全局`CImage`对象中的 DLL，调用[CImage::ReleaseGDIPlus](#releasegdiplus)来显式释放资源使用的 GDI +。
 
 `CImage` 不能选择到新[CDC](../../mfc/reference/cdc-class.md)。 `CImage` 创建其自己 HDC 的图像。 由于一次仅为一个 HDC 选择 HBITMAP，与关联 HBITMAP`CImage`不能选择到另一个 HDC。 如果您需要 CDC，检索从 HDC`CImage`并将其交给 [CDC::FromHandle] (../../mfc/reference/cdc-class.md#cdc__fromhandle。
 
@@ -183,7 +183,6 @@ m_myImage.ReleaseDC();
 
 当你使用`CImage`在 MFC 项目中，请注意在项目中的成员函数需要指向的指针[CBitmap](../../mfc/reference/cbitmap-class.md)对象。 如果你想要使用`CImage`使用此类函数，如[CMenu::AppendMenu](../../mfc/reference/cmenu-class.md#appendmenu)，使用[CBitmap::FromHandle](../../mfc/reference/cbitmap-class.md#fromhandle)，将其传递你`CImage`HBITMAP，并使用返回`CBitmap*`。  
 
-
 ## <a name="example"></a>示例
 
 ```cpp  
@@ -199,15 +198,14 @@ void CMyDlg::OnRButtonDown(UINT nFlags, CPoint point)
 }
 ```
 
-
 通过`CImage`，有权访问 DIB 部分的实际位。 可以使用`CImage`对象之前使用 Win32 HBITMAP 或 DIB 部分。
 
 可以使用`CImage`从 MFC 或 atl。
 
 > [!NOTE]
->  创建项目使用时`CImage`，则必须定义`CString`包含之前`atlimage.h`。 如果你的项目使用而不使用 MFC ATL，包括`atlstr.h`包含之前`atlimage.h`。 如果你的项目使用 MFC （或它是否与 MFC 支持 ATL 项目），包括`afxstr.h`包含之前`atlimage.h`。  
+> 创建项目使用时`CImage`，则必须定义`CString`包含之前`atlimage.h`。 如果你的项目使用而不使用 MFC ATL，包括`atlstr.h`包含之前`atlimage.h`。 如果你的项目使用 MFC （或它是否与 MFC 支持 ATL 项目），包括`afxstr.h`包含之前`atlimage.h`。  
 >   
->  同样，必须包括`atlimage.h`包含之前`atlimpl.cpp`。 若要轻松地完成此操作，包括`atlimage.h`在您`stdafx.h`。
+> 同样，必须包括`atlimage.h`包含之前`atlimpl.cpp`。 若要轻松地完成此操作，包括`atlimage.h`在您`stdafx.h`。
 
 ## <a name="requirements"></a>要求
 
@@ -219,81 +217,81 @@ void CMyDlg::OnRButtonDown(UINT nFlags, CPoint point)
 
 ```
 BOOL AlphaBlend(
-HDC hDestDC,
-int xDest,
-int yDest,
-BYTE bSrcAlpha = 0xff,
-BYTE bBlendOp = AC_SRC_OVER) const throw();
+    HDC hDestDC,
+    int xDest,
+    int yDest,
+    BYTE bSrcAlpha = 0xff,
+    BYTE bBlendOp = AC_SRC_OVER) const throw();
 
 BOOL AlphaBlend(
-HDC hDestDC,
-const POINT& pointDest,
-BYTE bSrcAlpha = 0xff,
-BYTE bBlendOp = AC_SRC_OVER) const throw();
+    HDC hDestDC,
+    const POINT& pointDest,
+    BYTE bSrcAlpha = 0xff,
+    BYTE bBlendOp = AC_SRC_OVER) const throw();
 
 BOOL AlphaBlend(
-HDC hDestDC,
-int xDest,
-int yDest,
-int nDestWidth,
-int nDestHeight,
-int xSrc,
-int ySrc,
-int nSrcWidth,
-int nSrcHeight,
-BYTE bSrcAlpha = 0xff,
-BYTE bBlendOp = AC_SRC_OVER);
+    HDC hDestDC,
+    int xDest,
+    int yDest,
+    int nDestWidth,
+    int nDestHeight,
+    int xSrc,
+    int ySrc,
+    int nSrcWidth,
+    int nSrcHeight,
+    BYTE bSrcAlpha = 0xff,
+    BYTE bBlendOp = AC_SRC_OVER);
 
 BOOL AlphaBlend(
-HDC hDestDC,
-const RECT& rectDest,
-const RECT& rectSrc,
-BYTE bSrcAlpha = 0xff,
-BYTE bBlendOp = AC_SRC_OVER);
+    HDC hDestDC,
+    const RECT& rectDest,
+    const RECT& rectSrc,
+    BYTE bSrcAlpha = 0xff,
+    BYTE bBlendOp = AC_SRC_OVER);
 ```
 
 ### <a name="parameters"></a>参数
 
-*hDestDC*  
+*hDestDC*<br/>
 目标设备上下文的句柄。
 
-*xDest*  
+*xDest*<br/>
 X 坐标中的目标矩形左上角的逻辑单元。
 
-*yDest*  
+*yDest*<br/>
 Y 坐标中的目标矩形左上角的逻辑单元。
 
-*bSrcAlpha*  
+*bSrcAlpha*<br/>
 要用于整个源位图的 alpha 透明度值。 默认值 0xff (255) 假定您的图像是不透明的并且你想要使用仅每像素 alpha 值。
 
-*bBlendOp*  
+*bBlendOp*<br/>
 对源和目标位图、 要应用于整个源位图和源位图的格式信息的全局 alpha 值的 alpha 值混合处理函数。 目前仅限于 AC_SRC_OVER 源和目标 blend 函数。
 
-*pointDest*  
+*pointDest*<br/>
 对引用[点](https://msdn.microsoft.com/library/windows/desktop/dd162805)标识中的逻辑单元的目标矩形左上的角的结构。
 
-*nDestWidth*  
+*nDestWidth*<br/>
 使用逻辑单位，目标矩形的宽度。
 
-*nDestHeight*  
+*nDestHeight*<br/>
 使用逻辑单位，目标矩形的高度。
 
-*xSrc*  
+*xSrc*<br/>
 源矩形左上角逻辑 x 坐标。
 
-*ySrc*  
+*ySrc*<br/>
 源矩形左上角逻辑 y 坐标。
 
-*nSrcWidth*  
+*nSrcWidth*<br/>
 使用逻辑单位，源矩形的宽度。
 
-*nSrcHeight*  
+*nSrcHeight*<br/>
 使用逻辑单位，源矩形的高度。
 
-*rectDest*  
+*rectDest*<br/>
 对引用[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构，确定目标。
 
-*rectSrc*  
+*rectSrc*<br/>
 对引用`RECT`结构，用于标识源。
 
 ### <a name="return-value"></a>返回值
@@ -316,10 +314,10 @@ void Attach(HBITMAP hBitmap, DIBOrientation eOrientation = DIBOR_DEFAULT) throw(
 
 ### <a name="parameters"></a>参数
 
-*hBitmap*  
+*hBitmap*<br/>
 HBITMAP 句柄。
 
-*eOrientation*  
+*eOrientation*<br/>
 指定位图的方向。 可以是以下各项之一：
 
 - 由操作系统确定 DIBOR_DEFAULT 位图的方向。 但是，这可能始终没有预期的结果在所有操作系统上。 有关这方面的详细信息，请参阅以下知识库文章 (**Q186586**): PRB: getobject （） 始终返回正高度为 DIB 部分。
@@ -338,66 +336,66 @@ HBITMAP 句柄。
 
 ```
 BOOL BitBlt(
-HDC hDestDC,
-int xDest,
-int yDest,
-DWORD dwROP = SRCCOPY) const throw();
+    HDC hDestDC,
+    int xDest,
+    int yDest,
+    DWORD dwROP = SRCCOPY) const throw();
 
 BOOL BitBlt(
-HDC hDestDC,
-const POINT& pointDest,
-DWORD dwROP = SRCCOPY) const throw();
+    HDC hDestDC,
+    const POINT& pointDest,
+    DWORD dwROP = SRCCOPY) const throw();
 
 BOOL BitBlt(
-HDC hDestDC,
-int xDest,
-int yDest,
-int nDestWidth,
-int nDestHeight,
-int xSrc,
-int ySrc,
-DWORD dwROP = SRCCOPY) const throw();
+    HDC hDestDC,
+    int xDest,
+    int yDest,
+    int nDestWidth,
+    int nDestHeight,
+    int xSrc,
+    int ySrc,
+    DWORD dwROP = SRCCOPY) const throw();
 
 BOOL BitBlt(
-HDC hDestDC,
-const RECT& rectDest,
-const POINT& pointSrc,
-DWORD dwROP = SRCCOPY) const throw();
+    HDC hDestDC,
+    const RECT& rectDest,
+    const POINT& pointSrc,
+    DWORD dwROP = SRCCOPY) const throw();
 ```
 
 ### <a name="parameters"></a>参数
 
-*hDestDC*  
+*hDestDC*<br/>
 目标 HDC。
 
-*xDest*  
+*xDest*<br/>
 目标矩形左上角逻辑 x 坐标。
 
-*yDest*  
+*yDest*<br/>
 目标矩形左上角逻辑 y 坐标。
 
-*dwROP*  
+*dwROP*<br/>
 要执行的光栅操作。 光栅操作代码定义了如何结合在一起的源、 目标和模式的位 （根据当前选定的画笔的定义） 形成目标。 请参阅[BitBlt](/windows/desktop/api/wingdi/nf-wingdi-bitblt) Windows SDK for 其他光栅操作代码及其说明的列表中。
 
-*pointDest*  
+*pointDest*<br/>
 一个[点](https://msdn.microsoft.com/library/windows/desktop/dd162805)结构，指示目标矩形左上的角。
 
-*nDestWidth*  
+*nDestWidth*<br/>
 使用逻辑单位，目标矩形的宽度。
 
-*nDestHeight*  
+*nDestHeight*<br/>
 使用逻辑单位，目标矩形的高度。
 
-*xSrc*  
+*xSrc*<br/>
 源矩形左上角逻辑 x 坐标。
 
-*ySrc*  
+*ySrc*<br/>
 源矩形左上角逻辑 y 坐标。
 
-*rectDest*  
+*rectDest*<br/>
 一个[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构，指示目标矩形。
 
-*pointSrc*  
+*pointSrc*<br/>
 一个`POINT`结构，指示源矩形左上的角。
 
 ### <a name="return-value"></a>返回值
@@ -430,30 +428,30 @@ CImage() throw();
 
 ```
 BOOL Create(
-int nWidth,
-int nHeight,
-int nBPP,
-DWORD dwFlags = 0) throw();
+    int nWidth,
+    int nHeight,
+    int nBPP,
+    DWORD dwFlags = 0) throw();
 ```
 
 ### <a name="parameters"></a>参数
 
-*nWidth*  
+*nWidth*<br/>
 宽度`CImage`位图，以像素为单位。
 
-*nHeight*  
+*nHeight*<br/>
 高度`CImage`位图，以像素为单位。 如果*nHeight*为正，位图是自下而上的 DIB，其源是左下的角。 如果*nHeight*是负数，位图是自上而下的 DIB 和其源是左上的角。
 
-*nBPP*  
+*nBPP*<br/>
 位 / 像素的位图中的数字。 通常 4、 8、 16、 24、 或 32。 可以是 1 单色位图或掩码。
 
-*dwFlags*  
+*dwFlags*<br/>
 指定位图对象是否具有 alpha 通道。 可以是零个或多个以下值的组合：
 
 - *createAlphaChannel*如果只能在*nBPP*为 32，和*eCompression*是 BI_RGB。 如果指定，创建的映像已存储在每个像素 （非 alpha 32 位映像中未使用） 的第 4 个字节中的每个像素的 alpha （透明度） 值。 调用时，会自动使用此 alpha 通道[cimage:: Alphablend](#alphablend)。
 
 > [!NOTE]
->  在调用[cimage:: Draw](#draw)，具有 alpha 通道的映像是自动 alpha 值混合处理到目标。
+> 在调用[cimage:: Draw](#draw)，具有 alpha 通道的映像是自动 alpha 值混合处理到目标。
 
 ### <a name="return-value"></a>返回值
 
@@ -465,36 +463,36 @@ DWORD dwFlags = 0) throw();
 
 ```
 BOOL CreateEx(
-int nWidth,
-int nHeight,
-int nBPP,
-DWORD eCompression,
-const DWORD* pdwBitmasks = NULL,
-DWORD dwFlags = 0) throw();
+    int nWidth,
+    int nHeight,
+    int nBPP,
+    DWORD eCompression,
+    const DWORD* pdwBitmasks = NULL,
+    DWORD dwFlags = 0) throw();
 ```
 
 ### <a name="parameters"></a>参数
 
-*nWidth*  
+*nWidth*<br/>
 宽度`CImage`位图，以像素为单位。
 
-*nHeight*  
+*nHeight*<br/>
 高度`CImage`位图，以像素为单位。 如果*nHeight*为正，位图是自下而上的 DIB，其源是左下的角。 如果*nHeight*是负数，位图是自上而下的 DIB 和其源是左上的角。
 
-*nBPP*  
+*nBPP*<br/>
 位 / 像素的位图中的数字。 通常 4、 8、 16、 24、 或 32。 可以是 1 单色位图或掩码。
 
-*eCompression*  
+*eCompression*<br/>
 指定压缩自下而上的位图 （Dib 上而下不能压缩） 的压缩的类型。 可以是以下值之一：
 
 - BI_RGB 格式是未压缩。 指定此值时调用`CImage::CreateEx`等效于调用`CImage::Create`。
 
 - 未压缩 BI_BITFIELDS 格式和颜色表包含三个 DWORD 颜色掩码，每个像素分别指定红色、 绿色和蓝色组件。 此值与 16 和 32 bpp 位图一起使用时有效。
 
-*pdwBitfields*  
+*pdwBitfields*<br/>
 仅当使用*eCompression*设置到 BI_BITFIELDS，否则它必须为 NULL。 指向的三个 DWORD 位掩码，指定颜色的红色、 绿色和蓝色组件分别使用每个像素的位数组的指针。 有关限制的位域的信息，请参阅[BITMAPINFOHEADER](https://msdn.microsoft.com/library/windows/desktop/dd183376) Windows SDK 中。
 
-*dwFlags*  
+*dwFlags*<br/>
 指定位图对象是否具有 alpha 通道。 可以是零个或多个以下值的组合：
 
 - *createAlphaChannel*如果只能在*nBPP*为 32，和*eCompression*是 BI_RGB。 如果指定，创建的映像已存储在每个像素 （非 alpha 32 位映像中未使用） 的第 4 个字节中的每个像素的 alpha （透明度） 值。 调用时，会自动使用此 alpha 通道[cimage:: Alphablend](#alphablend)。
@@ -541,78 +539,78 @@ HBITMAP Detach() throw();
 
 ```
 BOOL Draw(
-HDC hDestDC,
-int xDest,
-int yDest,
-int nDestWidth,
-int nDestHeight,
-int xSrc,
-int ySrc,
-int nSrcWidth,
-int nSrcHeight) const throw();
+    HDC hDestDC,
+    int xDest,
+    int yDest,
+    int nDestWidth,
+    int nDestHeight,
+    int xSrc,
+    int ySrc,
+    int nSrcWidth,
+    int nSrcHeight) const throw();
 
 BOOL Draw(
-HDC hDestDC,
-const RECT& rectDest,
-const RECT& rectSrc) const throw();
+    HDC hDestDC,
+    const RECT& rectDest,
+    const RECT& rectSrc) const throw();
 
 BOOL Draw(
-HDC hDestDC,
-int xDest,
-int yDest) const throw();
+    HDC hDestDC,
+    int xDest,
+    int yDest) const throw();
 
 BOOL Draw(
-HDC hDestDC,
-const POINT& pointDest) const throw();
+    HDC hDestDC,
+    const POINT& pointDest) const throw();
 
 BOOL Draw(
-HDC hDestDC,
-int xDest,
-int yDest,
-int nDestWidth,
-int nDestHeight) const throw();
+    HDC hDestDC,
+    int xDest,
+    int yDest,
+    int nDestWidth,
+    int nDestHeight) const throw();
 
 BOOL Draw(
-HDC hDestDC,
-const RECT& rectDest) const throw();
+    HDC hDestDC,
+    const RECT& rectDest) const throw();
 ```
 
 ### <a name="parameters"></a>参数
 
-*hDestDC*  
+*hDestDC*<br/>
 目标设备上下文的句柄。
 
-*xDest*  
+*xDest*<br/>
 X 坐标中的目标矩形左上角的逻辑单元。
 
-*yDest*  
+*yDest*<br/>
 Y 坐标中的目标矩形左上角的逻辑单元。
 
-*nDestWidth*  
+*nDestWidth*<br/>
 使用逻辑单位，目标矩形的宽度。
 
-*nDestHeight*  
+*nDestHeight*<br/>
 使用逻辑单位，目标矩形的高度。
 
-*xSrc*  
+*xSrc*<br/>
 X 坐标，以逻辑单元的源矩形左上角。
 
-*ySrc*  
+*ySrc*<br/>
 Y 坐标，以逻辑单元的源矩形左上角。
 
-*nSrcWidth*  
+*nSrcWidth*<br/>
 使用逻辑单位，源矩形的宽度。
 
-*nSrcHeight*  
+*nSrcHeight*<br/>
 使用逻辑单位，源矩形的高度。
 
-*rectDest*  
+*rectDest*<br/>
 对引用[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构，确定目标。
 
-*rectSrc*  
+*rectSrc*<br/>
 对引用`RECT`结构，用于标识源。
 
-*pointDest*  
+*pointDest*<br/>
 对引用[点](https://msdn.microsoft.com/library/windows/desktop/dd162805)标识中的逻辑单元的目标矩形左上的角的结构。
 
 ### <a name="return-value"></a>返回值
@@ -642,7 +640,7 @@ void* GetBits() throw();
 使用此指针，以及返回的值[GetPitch](#getpitch)，可以找到并更改图像中的单个像素。
 
 > [!NOTE]
->  此方法支持仅 DIB 部分位图;因此，访问的像素`CImage`对象相同的方式 DIB 部分的像素为单位。 返回的指针指向的位置 （0，0） 像素。
+> 此方法支持仅 DIB 部分位图;因此，访问的像素`CImage`对象相同的方式 DIB 部分的像素为单位。 返回的指针指向的位置 （0，0） 像素。
 
 ##  <a name="getbpp"></a>  CImage::GetBPP
 
@@ -667,20 +665,21 @@ int GetBPP() const throw();
 从控制板的 DIB 部分中的项的范围中检索红、 绿、 蓝 (RGB) 颜色值。
 
 ```
-void GetColorTable(UINT iFirstColor,
-UINT nColors,
-RGBQUAD* prgbColors) const throw();
+void GetColorTable(
+    UINT iFirstColor,
+    UINT nColors,
+    RGBQUAD* prgbColors) const throw();
 ```
 
 ### <a name="parameters"></a>参数
 
-*iFirstColor*  
+*iFirstColor*<br/>
 要检索的第一个条目的颜色表索引。
 
-*nColors*  
+*nColors*<br/>
 若要检索的颜色表条目数。
 
-*prgbColors*  
+*prgbColors*<br/>
 指向数组的指针[RGBQUAD](/windows/desktop/api/wingdi/ns-wingdi-tagrgbquad)结构以检索颜色表条目。
 
 ##  <a name="getdc"></a>  CImage::GetDC
@@ -704,25 +703,26 @@ HDC GetDC() const throw();
 查找可用的图像格式保存图像。
 
 ```
-static HRESULT GetExporterFilterString(CSimpleString& strExporters,
-CSimpleArray<GUID>& aguidFileTypes,
-LPCTSTR pszAllFilesDescription = NULL,
-DWORD dwExclude = excludeDefaultSave,
-TCHAR chSeparator = _T('|'));
+static HRESULT GetExporterFilterString(
+    CSimpleString& strExporters,
+    CSimpleArray<GUID>& aguidFileTypes,
+    LPCTSTR pszAllFilesDescription = NULL,
+    DWORD dwExclude = excludeDefaultSave,
+    TCHAR chSeparator = _T('|'));
 ```
 
 ### <a name="parameters"></a>参数
 
-*strExporters*  
+*strExporters*<br/>
 对 `CSimpleString` 对象的引用。 请参阅**备注**有关详细信息。
 
-*aguidFileTypes*  
+*aguidFileTypes*<br/>
 Guid 的数组，每个元素对应于一个字符串中的文件类型。 在中的示例*pszAllFilesDescription*下面， *aguidFileTypes*[0] 是 GUID_NULL，剩余的数组值是当前的操作系统支持的图像文件格式。
 
 > [!NOTE]
->  常量的完整列表，请参阅**图像文件格式常量**Windows SDK 中。
+> 常量的完整列表，请参阅**图像文件格式常量**Windows SDK 中。
 
-*pszAllFilesDescription*  
+*pszAllFilesDescription*<br/>
 如果此参数不为 NULL，则筛选器字符串将列表的开头带有一个附加的筛选器。 此筛选器将具有的当前值*pszAllFilesDescription*有关其说明，并接受文件列表中的任何其他导出程序支持的任何文件扩展名。
 
 例如：  
@@ -736,7 +736,7 @@ _T("All Image Files"));
 ```
 
 
-*dwExclude*  
+*dwExclude*<br/>
 指定要从列表中排除的文件类型的位标志的集。 允许使用的标志是：
 
 - `excludeGIF` = 0x01 排除 GIF 文件。
@@ -761,7 +761,7 @@ _T("All Image Files"));
 
 - `excludeDefaultSave` = `excludeIcon &#124; excludeEMF &#124; excludeWMF` 来保存，这些文件将被排除默认情况下，因为它们通常具有特殊的要求了。
 
-*chSeparator*  
+*chSeparator*<br/>
 使用图像格式之间的分隔符。 请参阅**备注**有关详细信息。
 
 ### <a name="return-value"></a>返回值
@@ -799,25 +799,26 @@ int GetHeight() const throw();
 查找可用的映像格式加载图像。
 
 ```
-static HRESULT GetImporterFilterString(CSimpleString& strImporters,
-CSimpleArray<GUID>& aguidFileTypes,
-LPCTSTR pszAllFilesDescription = NULL,
-DWORD dwExclude = excludeDefaultLoad,
-TCHAR chSeparator = _T('|'));
+static HRESULT GetImporterFilterString(
+    CSimpleString& strImporters,
+    CSimpleArray<GUID>& aguidFileTypes,
+    LPCTSTR pszAllFilesDescription = NULL,
+    DWORD dwExclude = excludeDefaultLoad,
+    TCHAR chSeparator = _T('|'));
 ```
 
 ### <a name="parameters"></a>参数
 
-*strImporters*  
+*strImporters*<br/>
 对 `CSimpleString` 对象的引用。 请参阅**备注**有关详细信息。
 
-*aguidFileTypes*  
+*aguidFileTypes*<br/>
 Guid 的数组，每个元素对应于一个字符串中的文件类型。 在中的示例*pszAllFilesDescription*下面， *aguidFileTypes*[0] 是 GUID_NULL 剩余数组值是当前的操作系统支持的图像文件格式。
 
 > [!NOTE]
->  常量的完整列表，请参阅**图像文件格式常量**Windows SDK 中。
+> 常量的完整列表，请参阅**图像文件格式常量**Windows SDK 中。
 
-*pszAllFilesDescription*  
+*pszAllFilesDescription*<br/>
 如果此参数不为 NULL，则筛选器字符串将列表的开头带有一个附加的筛选器。 此筛选器将具有的当前值*pszAllFilesDescription*有关其说明，并接受文件列表中的任何其他导出程序支持的任何文件扩展名。
 
 例如：  
@@ -831,7 +832,7 @@ _T("All Image Files"));
 ```
 
 
-*dwExclude*  
+*dwExclude*<br/>
 指定要从列表中排除的文件类型的位标志的集。 允许使用的标志是：
 
 - `excludeGIF` = 0x01 排除 GIF 文件。
@@ -856,7 +857,7 @@ _T("All Image Files"));
 
 - `excludeDefaultSave` = `excludeIcon &#124; excludeEMF &#124; excludeWMF` 来保存，这些文件将被排除默认情况下，因为它们通常具有特殊的要求了。
 
-*chSeparator*  
+*chSeparator*<br/>
 使用图像格式之间的分隔符。 请参阅**备注**有关详细信息。
 
 ### <a name="remarks"></a>备注
@@ -908,22 +909,22 @@ int GetPitch() const throw();
 使用`GetPitch`与[GetBits](#getbits)查找单个像素的图像。
 
 > [!NOTE]
->  此方法支持仅 DIB 部分位图。
+> 此方法支持仅 DIB 部分位图。
 
 ##  <a name="getpixel"></a>  CImage::GetPixel
 
 检索指定的位置处的像素的颜色*x*并*y*。
 
 ```
-COLORREF GetPixel(int x,int y) const throw();
+COLORREF GetPixel(int x, int y) const throw();
 ```
 
 ### <a name="parameters"></a>参数
 
-*x*  
+*x*<br/>
 像素的 x 坐标。
 
-*y*  
+*y*<br/>
 像素的 y 坐标。
 
 ### <a name="return-value"></a>返回值
@@ -935,15 +936,15 @@ COLORREF GetPixel(int x,int y) const throw();
 检索一个像素的确切地址。
 
 ```
-void* GetPixelAddress(int x,int y) throw();
+void* GetPixelAddress(int x, int y) throw();
 ```
 
 ### <a name="parameters"></a>参数
 
-*x*  
+*x*<br/>
 像素的 x 坐标。
 
-*y*  
+*y*<br/>
 像素的 y 坐标。
 
 ### <a name="remarks"></a>备注
@@ -953,7 +954,7 @@ void* GetPixelAddress(int x,int y) throw();
 对于具有小于 8 位 / 像素的格式，此方法返回包含像素的字节的地址。 例如，如果您的图像格式具有每像素 4 位`GetPixelAddress`返回字节，并且您的第一个像素的地址必须为每个字节的 2 个像素计算。
 
 > [!NOTE]
->  此方法支持仅 DIB 部分位图。
+> 此方法支持仅 DIB 部分位图。
 
 ##  <a name="gettransparentcolor"></a>  CImage::GetTransparentColor
 
@@ -1026,7 +1027,7 @@ bool IsIndexed() const throw();
 此方法返回 TRUE，仅当位图为 8 位 （256 色） 或更少。
 
 > [!NOTE]
->  此方法支持仅 DIB 部分位图。
+> 此方法支持仅 DIB 部分位图。
 
 ##  <a name="isnull"></a>  CImage::IsNull
 
@@ -1067,10 +1068,10 @@ HRESULT Load(IStream* pStream) throw();
 
 ### <a name="parameters"></a>参数
 
-*pszFileName*  
+*pszFileName*<br/>
 指向包含要加载的图像文件的名称的字符串的指针。
 
-*pStream*  
+*pStream*<br/>
 指向包含要加载的图像文件的名称的流的指针。
 
 ### <a name="return-value"></a>返回值
@@ -1089,23 +1090,23 @@ HRESULT Load(IStream* pStream) throw();
 
 ```
 void LoadFromResource(
-HINSTANCE hInstance,
-LPCTSTR pszResourceName) throw();
+    HINSTANCE hInstance,
+    LPCTSTR pszResourceName) throw();
 
 void LoadFromResource(
-HINSTANCE hInstance,
-UINT nIDResource) throw();
+    HINSTANCE hInstance,
+    UINT nIDResource) throw();
 ```
 
 ### <a name="parameters"></a>参数
 
-*hInstance*  
+*hInstance*<br/>
 包含要加载的图像的模块的实例的句柄。
 
-*pszResourceName*  
+*pszResourceName*<br/>
 指向包含的包含要加载的图像的资源名称的字符串的指针。
 
-*nIDResource*  
+*nIDResource*<br/>
 若要加载的资源 ID。
 
 ### <a name="remarks"></a>备注
@@ -1118,85 +1119,85 @@ UINT nIDResource) throw();
 
 ```
 BOOL MaskBlt(
-HDC hDestDC,
-int xDest,
-int yDest,
-int nDestWidth,
-int nDestHeight,
-int xSrc,
-int ySrc,
-HBITMAP hbmMask,
-int xMask,
-int yMask,
-DWORD dwROP = SRCCOPY) const throw();
+    HDC hDestDC,
+    int xDest,
+    int yDest,
+    int nDestWidth,
+    int nDestHeight,
+    int xSrc,
+    int ySrc,
+    HBITMAP hbmMask,
+    int xMask,
+    int yMask,
+    DWORD dwROP = SRCCOPY) const throw();
 
 BOOL MaskBlt(
-HDC hDestDC,
-const RECT& rectDest,
-const POINT& pointSrc,
-HBITMAP hbmMask,
-const POINT& pointMask,
-DWORD dwROP = SRCCOPY) const throw();
+    HDC hDestDC,
+    const RECT& rectDest,
+    const POINT& pointSrc,
+    HBITMAP hbmMask,
+    const POINT& pointMask,
+    DWORD dwROP = SRCCOPY) const throw();
 
 BOOL MaskBlt(
-HDC hDestDC,
-int xDest,
-int yDest,
-HBITMAP hbmMask,
-DWORD dwROP = SRCCOPY) const throw();
+    HDC hDestDC,
+    int xDest,
+    int yDest,
+    HBITMAP hbmMask,
+    DWORD dwROP = SRCCOPY) const throw();
 
 BOOL MaskBlt(
-HDC hDestDC,
-const POINT& pointDest,
-HBITMAP hbmMask,
-DWORD dwROP = SRCCOPY) const throw();
+    HDC hDestDC,
+    const POINT& pointDest,
+    HBITMAP hbmMask,
+    DWORD dwROP = SRCCOPY) const throw();
 ```
 
 ### <a name="parameters"></a>参数
 
-*hDestDC*  
+*hDestDC*<br/>
 其可执行文件包含资源的模块句柄。
 
-*xDest*  
+*xDest*<br/>
 X 坐标中的目标矩形左上角的逻辑单元。
 
-*yDest*  
+*yDest*<br/>
 Y 坐标中的目标矩形左上角的逻辑单元。
 
-*nDestWidth*  
+*nDestWidth*<br/>
 使用逻辑单位，目标矩形和源位图的宽度。
 
-*nDestHeight*  
+*nDestHeight*<br/>
 使用逻辑单位，目标矩形和源位图的高度。
 
-*xSrc*  
+*xSrc*<br/>
 源位图左上角逻辑 x 坐标。
 
-*ySrc*  
+*ySrc*<br/>
 源位图左上角逻辑 y 坐标。
 
-*hbmMask*  
+*hbmMask*<br/>
 结合使用与源设备上下文中颜色位图的单色掩码位图的句柄。
 
-*xMask*  
+*xMask*<br/>
 通过指定的掩码位图的水平像素偏移量*hbmMask*参数。
 
-*yMask*  
+*yMask*<br/>
 通过指定的掩码位图的垂直像素偏移量*hbmMask*参数。
 
-*dwROP*  
+*dwROP*<br/>
 指定该方法用来控制数据源和目标数据的组合的前景色和背景三元光栅操作代码。 后台光栅操作代码存储在此值; 高序位字的高序位字节前景色光栅操作代码存储在此值; 高序位字的低序位字节此值的低序位字将被忽略，并且应为零。 前景色和背景，此方法的上下文中的讨论，请参阅`MaskBlt`Windows SDK 中。 常见的光栅操作代码的列表，请参阅`BitBlt`Windows SDK 中。
 
-*rectDest*  
+*rectDest*<br/>
 对引用`RECT`结构，确定目标。
 
-*pointSrc*  
+*pointSrc*<br/>
 一个`POINT`结构，指示源矩形左上的角。
 
-*pointMask*  
+*pointMask*<br/>
 一个`POINT`结构，指示掩码位图左上的角。
 
-*pointDest*  
+*pointDest*<br/>
 对引用`POINT`标识中的逻辑单元的目标矩形左上的角的结构。
 
 ### <a name="return-value"></a>返回值
@@ -1217,62 +1218,62 @@ Y 坐标中的目标矩形左上角的逻辑单元。
 
 ```
 BOOL PlgBlt(
-HDC hDestDC,
-const POINT* pPoints,
-HBITMAP hbmMask = NULL) const throw();
+    HDC hDestDC,
+    const POINT* pPoints,
+    HBITMAP hbmMask = NULL) const throw();
 
 BOOL PlgBlt(
-HDC hDestDC,
-const POINT* pPoints,
-int xSrc,
-int ySrc,
-int nSrcWidth,
-int nSrcHeight,
-HBITMAP hbmMask = NULL,
-int xMask = 0,
-int yMask = 0) const throw();
+    HDC hDestDC,
+    const POINT* pPoints,
+    int xSrc,
+    int ySrc,
+    int nSrcWidth,
+    int nSrcHeight,
+    HBITMAP hbmMask = NULL,
+    int xMask = 0,
+    int yMask = 0) const throw();
 
 BOOL PlgBlt(
-HDC hDestDC,
-const POINT* pPoints,
-const RECT& rectSrc,
-HBITMAP hbmMask = NULL,
-const POINT& pointMask = CPoint(0, 0)) const throw();
+    HDC hDestDC,
+    const POINT* pPoints,
+    const RECT& rectSrc,
+    HBITMAP hbmMask = NULL,
+    const POINT& pointMask = CPoint(0, 0)) const throw();
 ```
 
 ### <a name="parameters"></a>参数
 
-*hDestDC*  
+*hDestDC*<br/>
 目标设备上下文的句柄。
 
-*pPoints*  
+*pPoints*<br/>
 指向数组的逻辑空间的标识的目标的平行四边形的三个角的三个点的指针。 源矩形左上的角映射到此数组，此数组中的第二个点的右上角和第三个点到左下的角中的第一个点。 源矩形的右下角将映射到的平行四边形中的隐式第四个点。
 
-*hbmMask*  
+*hbmMask*<br/>
 用于屏蔽源矩形的颜色的可选单色位图句柄。
 
-*xSrc*  
+*xSrc*<br/>
 X 坐标，以逻辑单元的源矩形左上角。
 
-*ySrc*  
+*ySrc*<br/>
 Y 坐标，以逻辑单元的源矩形左上角。
 
-*nSrcWidth*  
+*nSrcWidth*<br/>
 使用逻辑单位，源矩形的宽度。
 
-*nSrcHeight*  
+*nSrcHeight*<br/>
 使用逻辑单位，源矩形的高度。
 
-*xMask*  
+*xMask*<br/>
 单色位图左上角 x 坐标。
 
-*yMask*  
+*yMask*<br/>
 单色位图左上角 y 坐标。
 
-*rectSrc*  
+*rectSrc*<br/>
 对引用[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构，它指定源矩形的坐标。
 
-*pointMask*  
+*pointMask*<br/>
 一个[点](https://msdn.microsoft.com/library/windows/desktop/dd162805)结构，指示掩码位图左上的角。
 
 ### <a name="return-value"></a>返回值
@@ -1314,22 +1315,24 @@ void ReleaseGDIPlus() throw();
 将图像保存到指定的流或文件在磁盘上。
 
 ```
-HRESULT Save(IStream* pStream,
-REFGUID guidFileType) const throw();
+HRESULT Save(
+    IStream* pStream,
+    REFGUID guidFileType) const throw();
 
-HRESULT Save(LPCTSTR pszFileName,
-REFGUID guidFileType= GUID_NULL) const throw();
+HRESULT Save(
+    LPCTSTR pszFileName,
+    REFGUID guidFileType = GUID_NULL) const throw();
 ```
 
 ### <a name="parameters"></a>参数
 
-*pStream*  
+*pStream*<br/>
 指向包含文件的图像数据的 COM IStream 对象的指针。
 
-*pszFileName*  
+*pszFileName*<br/>
 指向图像的文件名称的指针。
 
-*guidFileType*  
+*guidFileType*<br/>
 若要保存为图像文件类型。 可以是以下各项之一：
 
 - `ImageFormatBMP` 未压缩的位图图像。
@@ -1341,7 +1344,7 @@ REFGUID guidFileType= GUID_NULL) const throw();
 - `ImageFormatGIF` GIF 压缩的映像。
 
 > [!NOTE]
->  常量的完整列表，请参阅**图像文件格式常量**Windows SDK 中。
+> 常量的完整列表，请参阅**图像文件格式常量**Windows SDK 中。
 
 ### <a name="return-value"></a>返回值
 
@@ -1364,13 +1367,13 @@ void SetColorTable(
 
 ### <a name="parameters"></a>参数
 
-*iFirstColor*  
+*iFirstColor*<br/>
 要设置的第一个条目的颜色表索引。
 
-*nColors*  
+*nColors*<br/>
 若要设置的颜色表条目数。
 
-*prgbColors*  
+*prgbColors*<br/>
 指向数组的指针[RGBQUAD](/windows/desktop/api/wingdi/ns-wingdi-tagrgbquad)结构，以设置颜色表条目。
 
 ### <a name="remarks"></a>备注
@@ -1387,13 +1390,13 @@ void SetPixel(int x, int y, COLORREF color) throw();
 
 ### <a name="parameters"></a>参数
 
-*x*  
+*x*<br/>
 要设置的像素的水平位置。
 
-*y*  
+*y*<br/>
 要设置的像素的垂直位置。
 
-*颜色*  
+*颜色*<br/>
 为其设置像素的颜色。
 
 ### <a name="remarks"></a>备注
@@ -1410,13 +1413,13 @@ void SetPixelIndexed(int x, int y, int iIndex) throw();
 
 ### <a name="parameters"></a>参数
 
-*x*  
+*x*<br/>
 要设置的像素的水平位置。
 
-*y*  
+*y*<br/>
 要设置的像素的垂直位置。
 
-*iIndex*  
+*iIndex*<br/>
 一种颜色的调色板中的索引。
 
 ##  <a name="setpixelrgb"></a>  CImage::SetPixelRGB
@@ -1425,28 +1428,28 @@ void SetPixelIndexed(int x, int y, int iIndex) throw();
 
 ```
 void SetPixelRGB(  
-int x,
-int y,
-BYTE r,
-BYTE g,
-BYTE b) throw();
+    int x,
+    int y,
+    BYTE r,
+    BYTE g,
+    BYTE b) throw();
 ```
 
 ### <a name="parameters"></a>参数
 
-*x*  
+*x*<br/>
 要设置的像素的水平位置。
 
-*y*  
+*y*<br/>
 要设置的像素的垂直位置。
 
-*r*  
+*r*<br/>
 红色颜色的强度。
 
-*g*  
+*g*<br/>
 绿色颜色的强度。
 
-*b*  
+*b*<br/>
 蓝色颜色的强度。
 
 ### <a name="remarks"></a>备注
@@ -1463,7 +1466,7 @@ LONG SetTransparentColor(LONG iTransparentColor) throw();
 
 ### <a name="parameters"></a>参数
 
-*iTransparentColor*  
+*iTransparentColor*<br/>
 要设置为透明的颜色的调色板中的索引。 如果为-1，没有颜色设置为透明。
 
 ### <a name="return-value"></a>返回值
@@ -1476,73 +1479,73 @@ LONG SetTransparentColor(LONG iTransparentColor) throw();
 
 ```
 BOOL StretchBlt(
-HDC hDestDC,
-int xDest,
-int yDest,
-int nDestWidth,
-int nDestHeight,
-DWORD dwROP = SRCCOPY) const throw();
+    HDC hDestDC,
+    int xDest,
+    int yDest,
+    int nDestWidth,
+    int nDestHeight,
+    DWORD dwROP = SRCCOPY) const throw();
 
 BOOL StretchBlt(
-HDC hDestDC,
-const RECT& rectDest,
-DWORD dwROP = SRCCOPY) const throw();
+    HDC hDestDC,
+    const RECT& rectDest,
+    DWORD dwROP = SRCCOPY) const throw();
 
 BOOL StretchBlt(
-HDC hDestDC,
-int xDest,
-int yDest,
-int nDestWidth,
-int nDestHeight,
-int xSrc,
-int ySrc,
-int nSrcWidth,
-int nSrcHeight,
-DWORD dwROP = SRCCOPY) const throw();
+    HDC hDestDC,
+    int xDest,
+    int yDest,
+    int nDestWidth,
+    int nDestHeight,
+    int xSrc,
+    int ySrc,
+    int nSrcWidth,
+    int nSrcHeight,
+    DWORD dwROP = SRCCOPY) const throw();
 
 BOOL StretchBlt(
-HDC hDestDC,
-const RECT& rectDest,
-const RECT& rectSrc,
-DWORD dwROP = SRCCOPY) const throw();
+    HDC hDestDC,
+    const RECT& rectDest,
+    const RECT& rectSrc,
+    DWORD dwROP = SRCCOPY) const throw();
 ```
 
 ### <a name="parameters"></a>参数
 
-*hDestDC*  
+*hDestDC*<br/>
 目标设备上下文的句柄。
 
-*xDest*  
+*xDest*<br/>
 X 坐标中的目标矩形左上角的逻辑单元。
 
-*yDest*  
+*yDest*<br/>
 Y 坐标中的目标矩形左上角的逻辑单元。
 
-*nDestWidth*  
+*nDestWidth*<br/>
 使用逻辑单位，目标矩形的宽度。
 
-*nDestHeight*  
+*nDestHeight*<br/>
 使用逻辑单位，目标矩形的高度。
 
-*dwROP*  
+*dwROP*<br/>
 要执行的光栅操作。 光栅操作代码定义了如何结合在一起的源、 目标和模式的位 （根据当前选定的画笔的定义） 形成目标。 请参阅[BitBlt](/windows/desktop/api/wingdi/nf-wingdi-bitblt) Windows SDK for 其他光栅操作代码及其说明的列表中。
 
-*rectDest*  
+*rectDest*<br/>
 对引用[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构，确定目标。
 
-*xSrc*  
+*xSrc*<br/>
 X 坐标，以逻辑单元的源矩形左上角。
 
-*ySrc*  
+*ySrc*<br/>
 Y 坐标，以逻辑单元的源矩形左上角。
 
-*nSrcWidth*  
+*nSrcWidth*<br/>
 使用逻辑单位，源矩形的宽度。
 
-*nSrcHeight*  
+*nSrcHeight*<br/>
 使用逻辑单位，源矩形的高度。
 
-*rectSrc*  
+*rectSrc*<br/>
 对引用`RECT`结构，用于标识源。
 
 ### <a name="return-value"></a>返回值
@@ -1559,73 +1562,73 @@ Y 坐标，以逻辑单元的源矩形左上角。
 
 ```
 BOOL TransparentBlt(
-HDC hDestDC,
-int xDest,
-int yDest,
-int nDestWidth,
-int nDestHeight,
-UINT crTransparent = CLR_INVALID) const throw();
+    HDC hDestDC,
+    int xDest,
+    int yDest,
+    int nDestWidth,
+    int nDestHeight,
+    UINT crTransparent = CLR_INVALID) const throw();
 
 BOOL TransparentBlt(
-HDC hDestDC,
-const RECT& rectDest,
-UINT crTransparent = CLR_INVALID) const throw();
+    HDC hDestDC,
+    const RECT& rectDest,
+    UINT crTransparent = CLR_INVALID) const throw();
 
 BOOL TransparentBlt(
-HDC hDestDC,
-int xDest,
-int yDest,
-int nDestWidth,
-int nDestHeight,
-int xSrc,
-int ySrc,
-int nSrcWidth,
-int nSrcHeight,
-UINT crTransparent = CLR_INVALID) const throw();
+    HDC hDestDC,
+    int xDest,
+    int yDest,
+    int nDestWidth,
+    int nDestHeight,
+    int xSrc,
+    int ySrc,
+    int nSrcWidth,
+    int nSrcHeight,
+    UINT crTransparent = CLR_INVALID) const throw();
 
 BOOL TransparentBlt(
-HDC hDestDC,
-const RECT& rectDest,
-const RECT& rectSrc,
-UINT crTransparent = CLR_INVALID) const throw();
+    HDC hDestDC,
+    const RECT& rectDest,
+    const RECT& rectSrc,
+    UINT crTransparent = CLR_INVALID) const throw();
 ```
 
 ### <a name="parameters"></a>参数
 
-*hDestDC*  
+*hDestDC*<br/>
 目标设备上下文的句柄。
 
-*xDest*  
+*xDest*<br/>
 X 坐标中的目标矩形左上角的逻辑单元。
 
-*yDest*  
+*yDest*<br/>
 Y 坐标中的目标矩形左上角的逻辑单元。
 
-*nDestWidth*  
+*nDestWidth*<br/>
 使用逻辑单位，目标矩形的宽度。
 
-*nDestHeight*  
+*nDestHeight*<br/>
 使用逻辑单位，目标矩形的高度。
 
-*crTransparent*  
+*crTransparent*<br/>
 中要被视为透明的源位图的颜色。 通过默认情况下，CLR_INVALID，指示应使用当前设置为图像的透明色的颜色。
 
-*rectDest*  
+*rectDest*<br/>
 对引用[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构，确定目标。
 
-*xSrc*  
+*xSrc*<br/>
 X 坐标，以逻辑单元的源矩形左上角。
 
-*ySrc*  
+*ySrc*<br/>
 Y 坐标，以逻辑单元的源矩形左上角。
 
-*nSrcWidth*  
+*nSrcWidth*<br/>
 使用逻辑单位，源矩形的宽度。
 
-*nSrcHeight*  
+*nSrcHeight*<br/>
 使用逻辑单位，源矩形的高度。
 
-*rectSrc*  
+*rectSrc*<br/>
 对引用`RECT`结构，用于标识源。
 
 ### <a name="return-value"></a>返回值
@@ -1635,7 +1638,6 @@ Y 坐标，以逻辑单元的源矩形左上角。
 ### <a name="remarks"></a>备注
 
 `TransparentBlt` 支持的每个像素和 8 位每像素 4 位的源位图。 使用[cimage:: Alphablend](#alphablend)使用透明度指定每个像素 32 位的位图。
-
 
 ### <a name="example"></a>示例  
 
@@ -1666,7 +1668,6 @@ BOOL TransparentBlt(CImage* pSrcImage, CImage* pDstImage,
 }
 ```
 
-
 ## <a name="see-also"></a>请参阅
 
 [MMXSwarm 示例](../../visual-cpp-samples.md)<br/>
@@ -1676,4 +1677,3 @@ BOOL TransparentBlt(CImage* pSrcImage, CImage* pDstImage,
 [ATL COM 桌面组件](../../atl/atl-com-desktop-components.md)<br/>
 [与设备无关位图](/windows/desktop/gdi/device-independent-bitmaps)<br/>
 [CreateDIBSection](/windows/desktop/api/wingdi/nf-wingdi-createdibsection)   
-

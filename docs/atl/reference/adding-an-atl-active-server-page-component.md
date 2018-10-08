@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a326b72ac5594d7ef5f0b9ad26f9bdf4e8472bd4
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a9410ac275ecd321184153d45fd5b044deb80e5b
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46112988"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861507"
 ---
 # <a name="adding-an-atl-active-server-page-component"></a>添加 ATL Active Server Page 组件
 
@@ -36,13 +36,13 @@ Active Server Pages 组件是 Internet 信息服务体系结构，它提供以�
 
 - 为基于 Web 的应用程序，可以使用 ASP 错误处理功能。
 
-### <a name="to-add-an-atl-active-server-pages-component-to-your-project"></a>若要向项目添加 ATL Active Server Pages 组件
+## <a name="to-add-an-atl-active-server-pages-component-to-your-project"></a>若要向项目添加 ATL Active Server Pages 组件
 
 1. 在中**解决方案资源管理器**右键单击你想要添加的 ATL Active Server Pages 组件的项目的名称。
 
-2. 从快捷菜单中，单击“添加”，然后单击“添加类”。
+1. 从快捷菜单中，单击“添加”，然后单击“添加类”。
 
-3. 在中[添加类](../../ide/add-class-dialog-box.md)对话框中，在模板窗格中，单击**ATL Active Server Page 组件**，然后单击**打开**以显示[ATL Active ServerPage 组件向导](../../atl/reference/atl-active-server-page-component-wizard.md)。
+1. 在中[添加类](../../ide/add-class-dialog-box.md)对话框中**模板**窗格中，单击**ATL Active Server Page 组件**，然后单击**打开**显示[ATL Active Server Page 组件向导](../../atl/reference/atl-active-server-page-component-wizard.md)。
 
 ## <a name="see-also"></a>请参阅
 
@@ -52,4 +52,3 @@ Active Server Pages 组件是 Internet 信息服务体系结构，它提供以�
 [添加方法](../../ide/adding-a-method-visual-cpp.md)<br/>
 [MFC 类](../../mfc/reference/adding-an-mfc-class.md)<br/>
 [添加一般 C++ 类](../../ide/adding-a-generic-cpp-class.md)
-

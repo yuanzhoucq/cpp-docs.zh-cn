@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e95ad940aac14892ac14e8d56ba64f49d0bbf7c0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 66cbf25324b71c3fd28bdd344c7a217348cdb5d9
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46423827"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861611"
 ---
 # <a name="12-definition-of-terms"></a>1.2 术语的定义
 
@@ -43,7 +43,7 @@ ms.locfileid: "46423827"
 
    中从词法上包含的语句*结构化的块*。
 
--  主线程
+- 主线程
 
    创建了团队的线程时*并行区域*输入。
 
@@ -75,7 +75,7 @@ ms.locfileid: "46423827"
 
    结构化的块是具有单个条目和单个出口的语句 （单个或复合）。 没有语句跳转入或移出该语句是否是结构化的块 (包括调用**longjmp**(3 C) 或使用**引发**，但调用**退出**允许)。 复合语句是结构化的块，如果始终执行开始左括号 **{** ，始终结尾处结束 **}**。 表达式语句、 选择语句、 迭代语句或**尝试**块是结构化的块，如果通过将其封闭在获得相应的复合语句 **{** 和 **}** 是结构化的块。 跳转语句、 标记的语句或声明语句不是结构化的块。
 
--  团队
+- 团队
 
    执行过程中的一种构造都联合的一个或多个线程。
 

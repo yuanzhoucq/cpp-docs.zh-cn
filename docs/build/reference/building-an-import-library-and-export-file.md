@@ -35,12 +35,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6a980a96198db80f0956895292d37f123d0351c
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 75f629c8a9c8a06f02024e9d52ab13b2d12b234c
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45723302"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860382"
 ---
 # <a name="building-an-import-library-and-export-file"></a>生成导入库和导出文件
 
@@ -52,9 +52,9 @@ ms.locfileid: "45723302"
 
 1. 一个 **__declspec （dllexport)** 中的一个定义*objfiles*或*库*
 
-2. /EXPORT 规范：*名称*LIB 命令行上
+1. /EXPORT 规范：*名称*LIB 命令行上
 
-3. 中的定义**导出**中的语句*deffile*
+1. 中的定义**导出**中的语句*deffile*
 
 这些是用于链接的导出程序时，指定导出的相同方法。 程序可以使用多个方法。 您可以指定部件的 LIB 命令 (如多个*objfiles*或 /EXPORT 规范) 中的 LIB 命令中的命令文件，正如您可以在 LINK 命令中。
 

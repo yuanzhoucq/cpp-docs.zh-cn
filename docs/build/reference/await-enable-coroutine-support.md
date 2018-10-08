@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5da401f940a39c135ba0b64571b6330a42fed796
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 09cab9f0c7d94c3c51eb63008ec6b7cfb1292f89
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45725486"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860571"
 ---
 # <a name="await-enable-coroutine-support"></a>/await （启用协同程序支持）
 
@@ -44,9 +44,9 @@ ms.locfileid: "45725486"
 
 1. 打开你的项目**属性页**对话框。
 
-2. 下**配置属性**，展开**C/c + +** 文件夹，然后选择**命令行**属性页。
+1. 下**配置属性**，展开**C/c + +** 文件夹，然后选择**命令行**属性页。
 
-3. 输入 **/await**中的编译器选项**其他选项**框。 选择**确定**或**应用**以保存所做的更改。
+1. 输入 **/await**中的编译器选项**其他选项**框。 选择**确定**或**应用**以保存所做的更改。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>以编程方式设置此编译器选项
 

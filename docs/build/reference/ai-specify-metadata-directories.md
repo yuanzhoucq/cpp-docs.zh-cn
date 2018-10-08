@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 985ff4eb96b904dc9c5b4377b336109b00e06b40
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: ba4cb1411bca452de0f146626421315fa7dc177e
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45716582"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48859856"
 ---
 # <a name="ai-specify-metadata-directories"></a>/AI（指定元数据目录）
 
@@ -49,9 +49,9 @@ ms.locfileid: "45716582"
 
 1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。
 
-2. 选择**配置属性** > **C/c + +** > **常规**属性页。
+1. 选择**配置属性** > **C/c + +** > **常规**属性页。
 
-3. 修改**其他 #using 目录**属性。
+1. 修改**其他 #using 目录**属性。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>以编程方式设置此编译器选项
 

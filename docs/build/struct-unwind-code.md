@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1da6f078741c598099e71da9164f54b56da3f355
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: f5bccddd2ddd5c0f9dfbc828a7da3a66fa13339d
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45726643"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861715"
 ---
 # <a name="struct-unwindcode"></a>UNWIND_CODE 结构
 
@@ -112,17 +112,17 @@ ms.locfileid: "45726643"
 
 1. RIP 寄信人地址从顶部到堆栈中弹出*Temp*
 
-2. 推送 SS
+1. 推送 SS
 
-3. 推送旧 RSP
+1. 推送旧 RSP
 
-4. 推送 EFLAGS
+1. 推送 EFLAGS
 
-5. 推送 CS
+1. 推送 CS
 
-6. 推送*Temp*
+1. 推送*Temp*
 
-7. 推送错误代码 （如果操作信息等于 1）
+1. 推送错误代码 （如果操作信息等于 1）
 
 模拟`UWOP_PUSH_MACHFRAME`操作递减 RSP 由 40 （op 信息等于 0） 或 48 （操作信息等于 1）。
 

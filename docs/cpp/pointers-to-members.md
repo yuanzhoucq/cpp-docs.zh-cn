@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 509181abc0d9b3e2f2c2d4c76275e635ba3a4477
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 971f3df56f049b919ebb1f3fb8f517c97b2829e7
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46076068"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861273"
 ---
 # <a name="pointers-to-members"></a>指向成员的指针
 
@@ -56,7 +56,7 @@ ms.locfileid: "46076068"
   - 类的限定名。
   - `::` 运算符。
   - 适当类型的类的非静态成员的名称。
-  -  像往常一样，允许在单个声明中使用多个声明符（以及任何关联的初始值设定项）。
+  - 像往常一样，允许在单个声明中使用多个声明符（以及任何关联的初始值设定项）。
 
 指向类的成员的指针与普通指针不同，因为它有该成员的类型的类型信息和该成员所属的类的类型信息。 常规指针只标识内存中的一个对象或只具有其地址。 指向类的某个成员的指针标识类的所有实例中的该成员。 以下示例声明类、`Window` 和一些指向成员数据的指针。
 

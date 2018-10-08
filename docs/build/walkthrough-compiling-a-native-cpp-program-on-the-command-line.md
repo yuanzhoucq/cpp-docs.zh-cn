@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d7f8fad0c4676e8dfedcf8e80332c0a239f230cb
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 122d33be06755b92a17db62237787151a0811898
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821187"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860402"
 ---
 # <a name="walkthrough-compiling-a-native-c-program-on-the-command-line"></a>演练：在命令行上编译本机 C++ 程序
 
@@ -53,7 +53,7 @@ Visual Studio 的生成工具安装命令行编译器、 工具和生成 C 和 c
 
    如果要使用不同版本的 Visual Studio 或在运行不同版本的 Windows，在开始菜单中查找或包含开发人员命令提示符快捷方式的 Visual Studio 工具文件夹的起始页。 此外可以使用 Windows 搜索功能搜索"开发人员命令提示符"并选择一个与你已安装的 Visual Studio 版本匹配。 使用快捷方式打开命令提示符窗口。
 
-1. 接下来，验证正确设置 Visual c + + 开发人员命令提示。 在命令提示符窗口中，输入`cl`并验证输出看起来类似于：
+1. 接下来，验证正确设置 Visual c + + 开发人员命令提示。 在命令提示符窗口中，输入`cl`并验证输出看起来类似如下：
 
    ```Output
    C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise>cl
@@ -140,7 +140,7 @@ Visual Studio 的生成工具安装命令行编译器、 工具和生成 C 和 c
    > [!NOTE]
    > 如果你获取不同的编译器或链接器错误或警告，请查看源代码以更正任何错误，然后将其保存并再次运行编译器。 有关特定错误的信息，使用搜索框在此 MSDN 页上查找错误号。
 
-7. 若要运行 hello.exe 程序，请在命令提示处输入 `hello`。
+1. 若要运行 hello.exe 程序，请在命令提示处输入 `hello`。
 
    该程序显示以下文本并退出：
 

@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f6f287f98b542a3d8eb24f9cc2b5e725e27dceb
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 28e4e2ea0118d79e2746db93ba30478ed2563434
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45725967"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860532"
 ---
 # <a name="base-base-address"></a>/BASE（基址）
 
@@ -78,9 +78,9 @@ link dlltwo.obj /dll /base:@dlls.txt,two
 
 1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置 Visual c + + 项目属性](../../ide/working-with-project-properties.md)。
 
-2. 选择**配置属性** > **链接器** > **高级**属性页。
+1. 选择**配置属性** > **链接器** > **高级**属性页。
 
-3. 修改**基址**属性。
+1. 修改**基址**属性。
 
 ### <a name="to-set-this-linker-option-programmatically"></a>以编程方式设置此链接器选项
 
