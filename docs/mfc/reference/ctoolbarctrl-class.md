@@ -192,12 +192,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 486e7ba1b91f1e5b8a7f99f27b89183ed32608a1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c5a71e6f358a682adad2d12f7b567dc0bad3d0f3
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46409644"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861872"
 ---
 # <a name="ctoolbarctrl-class"></a>CToolBarCtrl 类
 
@@ -440,11 +440,11 @@ typedef struct _TBBUTTON {
 
    按钮图像，则此按钮没有图像为-1 的从零开始的索引。
 
--  `idCommand`
+- `idCommand`
 
    与按钮关联的命令标识符。 选择该按钮时，此标识符将发送 WM_COMMAND 消息中。 如果`fsStyle`成员具有 TBSTYLE_SEP 的值，此成员必须为零。
 
--  `fsState`
+- `fsState`
 
    按钮状态标志。 它可以是下面列出的值的组合：
 

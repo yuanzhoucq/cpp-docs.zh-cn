@@ -16,25 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f2437e33610222183aa03a22cf6638156aaaa5e9
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: acd380c8eee7b4fa1b325e8dee0bfad55a42c790
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46077030"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861065"
 ---
 # <a name="c-runtime-error-r6017"></a>C 运行时错误 R6017
 
 意外的多线程锁定错误
 
 > [!NOTE]
->  如果运行应用时遇到此错误消息，该应用已关闭，因为它具有内部问题。 有多种原因引起此错误，但通常由应用程序的代码中的一个缺陷。
+> 如果运行应用时遇到此错误消息，该应用已关闭，因为它具有内部问题。 有多种原因引起此错误，但通常由应用程序的代码中的一个缺陷。
 >
->  可以尝试以下步骤来修复此错误：
+> 可以尝试以下步骤来修复此错误：
 >
->  -   使用**应用程序和功能**或**程序和功能**页**控制面板**来修复或重新安装该程序。
-> -   检查**Windows Update**中**控制面板**的软件更新。
-> -   检查应用程序的更新版本。 如果问题仍然存在，请与应用供应商联系。
+> - 使用**应用程序和功能**或**程序和功能**页**控制面板**来修复或重新安装该程序。
+> - 检查**Windows Update**中**控制面板**的软件更新。
+> - 检查应用程序的更新版本。 如果问题仍然存在，请与应用供应商联系。
 
 **程序员提供的的信息**
 

@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 36f8233d7d3683a885fc0f38468ad5a7b9b59c57
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6c9b9cb66e64f85ad8800faf11011e351a3f3539
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46030763"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861351"
 ---
 # <a name="data-source-programmatically-configuring-an-odbc-data-source"></a>数据源：以编程方式配置 ODBC 数据源
 
@@ -85,7 +85,7 @@ BOOL SQLConfigDataSource(HWND hwndParent,UINT fRequest, LPCSTR lpszDriver, LPCST
 *lpszAttributes*<br/>
 在窗体中的属性列表"键名 = 值"。 由两个连续的 null 结束符列表的末尾与 null 终止符分隔这些字符串。 这些属性是主要是特定于驱动程序中的默认项进入新的数据源的注册表。 此函数的 ODBC API 参考中未提到的一个重要的项是"DSN"（"数据源名称"），它指定新的数据源的名称。 其他项是特定于新数据源的驱动程序。 通常不需要提供的所有条目，因为驱动程序可以提示用户用新值的对话框。 (设置*hwndParent*到 NULL 可导致此问题。)你可能想要显式提供默认值，以便不提示用户。  
   
-###### <a name="to-determine-the-description-of-a-driver-for-the-lpszdriver-parameter-using-odbc-administrator"></a>若要确定 lpszDriver 参数使用 ODBC 管理器的驱动程序的说明  
+#### <a name="to-determine-the-description-of-a-driver-for-the-lpszdriver-parameter-using-odbc-administrator"></a>若要确定 lpszDriver 参数使用 ODBC 管理器的驱动程序的说明  
   
 1. 运行 ODBC 管理器。  
   
@@ -97,23 +97,23 @@ BOOL SQLConfigDataSource(HWND hwndParent,UINT fRequest, LPCSTR lpszDriver, LPCST
   
 查找的键名和值的一种方法*lpszAttributes*参数是一个已配置的数据源 （可能是一个已配置由 ODBC 管理器） 的 Odbc.ini 文件。  
   
-###### <a name="to-find-keynames-and-values-for-the-lpszattributes-parameter"></a>若要查找 lpszAttributes 参数的键名及值  
+#### <a name="to-find-keynames-and-values-for-the-lpszattributes-parameter"></a>若要查找 lpszAttributes 参数的键名及值  
   
 1. 运行 Windows 注册表编辑器 （或者，对于 16 位，打开 Odbc.ini 文件）。  
   
 1. 查找 ODBC 数据源信息使用以下项之一：  
   
-    -   适用于 32 位，找不到该项**HKEY_CURRENT_USER\Software\ODBC\ODBC。INI\ODBC 数据源**的左窗格中。  
+   - 适用于 32 位，找不到该项**HKEY_CURRENT_USER\Software\ODBC\ODBC。INI\ODBC 数据源**的左窗格中。  
   
-         右窗格中列出了项的窗体:"pub: REG_SZ:*<data source name>*"，其中*<data source name>* 是已与你想的驱动程序所需的设置配置的数据源若要使用。 选择所需的数据源，如 SQL Server。 字符串后面的项"pub:"是，在顺序中，键名和值要在中使用你*lpszAttributes*参数。  
+      右窗格中列出了项的窗体:"pub: REG_SZ:*<data source name>*"，其中*<data source name>* 是已与你想的驱动程序所需的设置配置的数据源若要使用。 选择所需的数据源，如 SQL Server。 字符串后面的项"pub:"是，在顺序中，键名和值要在中使用你*lpszAttributes*参数。  
   
-    -   对于 16 位，由标记 Odbc.ini 文件中找到的部分 [*\<数据源名称 >*]。  
+   - 对于 16 位，由标记 Odbc.ini 文件中找到的部分 [*\<数据源名称 >*]。  
   
-         该行之后的行是窗体的"键名 = 值"。 这些是完全使用中的条目你*lpszAttributes*参数。  
+      该行之后的行是窗体的"键名 = 值"。 这些是完全使用中的条目你*lpszAttributes*参数。  
   
 您可能想要检查要使用的特定驱动程序的文档。 可以驱动程序可以通过运行 ODBC 管理器访问联机帮助中找到有用的信息。 这些帮助文件通常位于 WINDOWS\SYSTEM 目录中的 Windows NT、 Windows 3.1 或 Windows 95。  
   
-###### <a name="to-obtain-online-help-for-your-odbc-driver"></a>若要获取 ODBC 驱动程序的联机帮助  
+#### <a name="to-obtain-online-help-for-your-odbc-driver"></a>若要获取 ODBC 驱动程序的联机帮助  
   
 1. 运行 ODBC 管理器。  
   

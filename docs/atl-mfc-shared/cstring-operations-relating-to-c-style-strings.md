@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7047161a059432b43d4ff1a92e9c4d10dc01d51
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3a2567182f0e2622a72ceb9b98988c4d122a3561
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46387011"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860558"
 ---
 # <a name="cstring-operations-relating-to-c-style-strings"></a>与 C 样式字符串相关的 CString 操作
 
@@ -67,7 +67,7 @@ strcpy(myString, (LPCTSTR)aCString);
 [!code-cpp[NVC_ATLMFC_Utilities#189](../atl-mfc-shared/codesnippet/cpp/cstring-operations-relating-to-c-style-strings_1.cpp)]
 
 > [!NOTE]
->  第三个参数`strcpy_s`(或 Unicode/MBCS 可移植`_tcscpy_s`) 是`const wchar_t*`(Unicode) 或`const char*`(ANSI)。 上面的示例为此参数传递 `CString`。 C++ 编译器自动应用针对 `CString` 类定义的转换函数，此函数可将 `CString` 转换为 `LPCTSTR`。 定义从一种类型到另一种类型的强制转换操作的功能是 C++ 的最有用的功能之一。
+> 第三个参数`strcpy_s`(或 Unicode/MBCS 可移植`_tcscpy_s`) 是`const wchar_t*`(Unicode) 或`const char*`(ANSI)。 上面的示例为此参数传递 `CString`。 C++ 编译器自动应用针对 `CString` 类定义的转换函数，此函数可将 `CString` 转换为 `LPCTSTR`。 定义从一种类型到另一种类型的强制转换操作的功能是 C++ 的最有用的功能之一。
 
 ##  <a name="_core_working_with_standard_run.2d.time_library_string_functions"></a> 使用标准运行时库字符串函数
 
@@ -83,13 +83,13 @@ strcpy(myString, (LPCTSTR)aCString);
 
 `GetBuffer` 和 `ReleaseBuffer` 方法提供对 `CString` 对象的内部字符缓冲区的访问权限，并使你可以直接修改它。 以下步骤介绍如何将这些函数用于此目的。
 
-#### <a name="to-use-getbuffer-and-releasebuffer-to-access-the-internal-character-buffer-of-a-cstring-object"></a>使用 GetBuffer 和 ReleaseBuffer 访问 CString 对象的内部字符缓冲区
+### <a name="to-use-getbuffer-and-releasebuffer-to-access-the-internal-character-buffer-of-a-cstring-object"></a>使用 GetBuffer 和 ReleaseBuffer 访问 CString 对象的内部字符缓冲区
 
 1. 为 `GetBuffer` 对象调用 `CString` 并指定所需的缓冲区的长度。
 
-2. 使用由 `GetBuffer` 返回的指针以将字符直接写入 `CString` 对象中。
+1. 使用由 `GetBuffer` 返回的指针以将字符直接写入 `CString` 对象中。
 
-3. 为 `ReleaseBuffer` 对象调用 `CString` 以更新所有内部 `CString` 状态信息，例如，字符串的长度。 直接修改 `CString` 对象的内容后，你必须在调用任何其他 `ReleaseBuffer` 成员函数前先调用 `CString`。
+1. 为 `ReleaseBuffer` 对象调用 `CString` 以更新所有内部 `CString` 状态信息，例如，字符串的长度。 直接修改 `CString` 对象的内容后，你必须在调用任何其他 `ReleaseBuffer` 成员函数前先调用 `CString`。
 
 ##  <a name="_core_using_cstring_objects_with_variable_argument_functions"></a> 将 CString 对象使用与可变自变量函数
 
@@ -113,4 +113,3 @@ strcpy(myString, (LPCTSTR)aCString);
 
 [字符串 (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)<br/>
 [CString 参数传递](../atl-mfc-shared/cstring-argument-passing.md)
-

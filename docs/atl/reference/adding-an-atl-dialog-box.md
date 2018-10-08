@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 512f791b3db513c2a143bda84a8dc2677b341544
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 1b8074ad511544dcc6638ca804a26745e3da317b
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46106034"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860337"
 ---
 # <a name="adding-an-atl-dialog-box"></a>添加 ATL 对话框
 
@@ -30,15 +30,15 @@ ms.locfileid: "46106034"
 默认情况下，ATL 对话框向导实现派生自的对话框[CAxDialogImpl](../../atl/reference/caxdialogimpl-class.md)。 此类包括支持托管 ActiveX 和 Windows 控件。 如果在向导生成代码后不希望 ActiveX 控件支持的系统开销的所有实例替换都为`CAxDialogImpl`带有[CSimpleDialog](../../atl/reference/csimpledialog-class.md)或[CDialogImpl](../../atl/reference/cdialogimpl-class.md)作为基类.
 
 > [!NOTE]
->  `CSimpleDialog` 创建仅支持 Windows 公共控件的模式对话框框。 `CDialogImpl` 创建模式对话框或无模式的对话框。
+> `CSimpleDialog` 创建仅支持 Windows 公共控件的模式对话框框。 `CDialogImpl` 创建模式对话框或无模式的对话框。
 
-### <a name="to-add-an-atl-dialog-resource-to-your-project"></a>若要向项目添加 ATL 对话框资源
+## <a name="to-add-an-atl-dialog-resource-to-your-project"></a>若要向项目添加 ATL 对话框资源
 
 1. 创建 ATL 项目使用[ATL 项目向导](../../atl/reference/atl-project-wizard.md)。
 
-2. 从[类视图](/visualstudio/ide/viewing-the-structure-of-code)，右键单击项目名称，然后单击**添加**从快捷菜单。 单击**将类添加**。
+1. 从[类视图](/visualstudio/ide/viewing-the-structure-of-code)，右键单击项目名称，然后单击**添加**从快捷菜单。 单击**将类添加**。
 
-3. 中的模板窗格[添加类](../../ide/add-class-dialog-box.md)对话框中，单击**ATL 对话框**。 单击**开放**以显示[ATL 对话框向导](../../atl/reference/atl-dialog-wizard.md)。
+1. 在中**模板**窗格[添加类](../../ide/add-class-dialog-box.md)对话框中，单击**ATL 对话框**。 单击**开放**以显示[ATL 对话框向导](../../atl/reference/atl-dialog-wizard.md)。
 
 有关详细信息，请参阅[实现对话框](../../atl/implementing-a-dialog-box.md)。
 
@@ -47,4 +47,3 @@ ms.locfileid: "46106034"
 [添加类](../../ide/adding-a-class-visual-cpp.md)<br/>
 [窗口类](../../atl/atl-window-classes.md)<br/>
 [消息映射](../../atl/message-maps-atl.md)
-

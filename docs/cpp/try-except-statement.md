@@ -1,7 +1,7 @@
 ---
 title: 请尝试-除非语句 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/05/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 107b759345e221ad8100f11d97b79c5bd9fd2b65
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6e938f5b7e5f25461ae921fbfa3c49920eca86eb
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46031428"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861923"
 ---
 # <a name="try-except-statement"></a>try-except 语句
 
@@ -50,7 +50,14 @@ ms.locfileid: "46031428"
 
 ## <a name="syntax"></a>语法
 
-> **__try** {/ / 受保护的代码} **__except** (*表达式*) {/ / 异常处理程序代码}
+> **__try** <br/>
+> {<br/>
+> &nbsp;&nbsp;&nbsp;&nbsp;受保护的代码<br/>
+> }<br/>
+> **__except** (*表达式*)<br/>
+> {<br/>
+> &nbsp;&nbsp;&nbsp;&nbsp;异常处理程序代码<br/>
+> }<br/>
 
 ## <a name="remarks"></a>备注
 
@@ -67,15 +74,15 @@ ms.locfileid: "46031428"
 
 1. 执行受保护节。
 
-2. 如果在受保护节执行过程中不发生任何异常，则继续执行之后的语句 **__except**子句。
+1. 如果在受保护节执行过程中不发生任何异常，则继续执行之后的语句 **__except**子句。
 
-3. 如果受保护节执行过程中发生异常或任何例程中受保护的节调用的 **__except** *表达式*(称为*筛选器*表达式)进行评估，值将确定异常的处理方式。 有三个值：
+1. 如果受保护节执行过程中发生异常或任何例程中受保护的节调用的 **__except** *表达式*(称为*筛选器*表达式)进行评估，值将确定异常的处理方式。 有三个可能的值：
 
-   EXCEPTION_CONTINUE_EXECUTION (-1) 异常已消除。 从出现异常的点继续执行。
+   - EXCEPTION_CONTINUE_EXECUTION (-1) 异常已消除。 从出现异常的点继续执行。
 
-   EXCEPTION_CONTINUE_SEARCH (0) 异常无法识别。 继续向上搜索堆栈查找处理程序，首先是所在的 **try-except** 语句，然后是具有下一个最高优先级的处理程序。
+   - EXCEPTION_CONTINUE_SEARCH (0) 异常无法识别。 继续向上搜索堆栈查找处理程序，首先是所在的 **try-except** 语句，然后是具有下一个最高优先级的处理程序。
 
-   EXCEPTION_EXECUTE_HANDLER (1) 异常可识别。 将控件传输到异常处理程序，通过执行 **__except**复合语句，然后继续执行后的 **__except**块。
+   - EXCEPTION_EXECUTE_HANDLER (1) 异常可识别。 将控件传输到异常处理程序，通过执行 **__except**复合语句，然后继续执行后的 **__except**块。
 
 因为 **__except**作为 C 表达式计算表达式，它被限制为单个值、 条件表达式运算符或逗号运算符。 如果需要更大量的处理，表达式可调用返回上面列出的三个值之一的例程。
 
@@ -83,9 +90,7 @@ ms.locfileid: "46031428"
 
 它不是有效的跳转到 **__try**语句，但有效跳出。 如果在执行会终止进程不调用异常处理程序**试用-除**语句。
 
-有关详细信息，请参阅知识库文章 Q315937：“如何：捕获 Visual C++ 应用程序中的堆栈溢出”。
-
-## <a name="the-leave-keyword"></a>__leave 关键字
+### <a name="the-leave-keyword"></a>__leave 关键字
 
 **__Leave**关键字是仅在受保护节的有效**试用-除**语句和其效果是跳转到受保护部分的结尾。 将继续执行异常处理程序后的第一个语句。
 
@@ -170,7 +175,7 @@ int main()
 }
 ```
 
-## <a name="output"></a>输出
+### <a name="output"></a>输出
 
 ```Output
 hello

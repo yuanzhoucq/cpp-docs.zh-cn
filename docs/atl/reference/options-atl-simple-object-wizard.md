@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d337d31150b6da1a1556589d63fd60d63842efce
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 7a337ceffbbfb1577b58fea2f60213cd79052b00
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46098779"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861364"
 ---
 # <a name="options-atl-simple-object-wizard"></a>选项，ATL 简单对象向导
 
@@ -60,7 +60,7 @@ ATL 项目和 ATL COM 类的详细信息，请参阅[ATL COM 桌面组件](../..
    |选项|描述|
    |------------|-----------------|
    |**双**|指定对象支持双重接口 (其 vtable 具有自定义接口函数和后期绑定`IDispatch`方法)。 允许这两个 COM 客户端和[自动化控制器](../../mfc/automation-clients.md)若要访问的对象。 默认值。|
-   |**自定义**|指定的对象支持自定义界面 （其 vtable 具有自定义接口函数）。 尤其是跨进程边界，可以快于双重接口自定义界面。<br /><br /> -   **自动化兼容**允许自动化控制器，以访问具有自定义接口支持的对象。|
+   |**自定义**|指定的对象支持自定义界面 （其 vtable 具有自定义接口函数）。 尤其是跨进程边界，可以快于双重接口自定义界面。<br /><br /> - **自动化兼容**允许自动化控制器，以访问具有自定义接口支持的对象。|
 
 - **支持**
 

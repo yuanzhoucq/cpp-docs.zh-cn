@@ -116,12 +116,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12982c212cf8ff4fe502638a5c466306bfe15eb1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 32456b15cc00d296354016f8769e020f8133b609
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46374283"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861728"
 ---
 # <a name="cframewnd-class"></a>CFrameWnd 类
 
@@ -1103,7 +1103,7 @@ virtual BOOL SetMenuBarState(DWORD nState);
 
 |参数|描述|
 |---------------|-----------------|
-|*nState*|[in]指定是否显示或隐藏菜单。 *NState*参数可以具有以下值：<br /><br /> -如果它隐藏的但如果它是可见不起作用，AFX_MBS_VISIBLE (0x01)-显示菜单。<br />-如果可见，但如果它隐藏不起作用，AFX_MBS_HIDDEN (0x02)-隐藏菜单。|
+|*nState*|[in]指定是否显示或隐藏菜单。 *NState*参数可以具有以下值：<br /><br />-如果它隐藏的但如果它是可见不起作用，AFX_MBS_VISIBLE (0x01)-显示菜单。<br />-如果可见，但如果它隐藏不起作用，AFX_MBS_HIDDEN (0x02)-隐藏菜单。|
 
 ### <a name="return-value"></a>返回值
 
@@ -1125,7 +1125,7 @@ virtual void SetMenuBarVisibility(DWORD nStyle);
 
 |参数|描述|
 |---------------|-----------------|
-|*nStyle*|[in]指定菜单是隐藏的默认情况下或可见且具有焦点。 *NStyle*参数可以具有以下值：<br /><br /> -AFX_MBV_KEEPVISIBLE (0X01)-<br />     菜单显示在任何时候，并且默认情况下没有焦点。<br />-AFX_MBV_DISPLAYONFOCUS (0X02)-<br />     默认情况下隐藏菜单。 如果菜单处于隐藏状态，请按 ALT 键以显示菜单，并为其提供焦点。 如果显示菜单上，则按 ALT 或 ESC 键，若要隐藏菜单。<br />-AFX_MBV_ DISPLAYONFOCUS (0x02) &#124; AFX_MBV_DISPLAYONF10 (0x04)<br />     （按位组合 (OR)）-默认情况下隐藏菜单。 如果菜单处于隐藏状态，请按 F10 键，以显示菜单，并为其提供焦点。 如果显示菜单上，则按 F10 键来切换打开或关闭菜单焦点。 直到按下 ALT 或 ESC 键，可以将其隐藏，则会显示菜单。|
+|*nStyle*|[in]指定菜单是隐藏的默认情况下或可见且具有焦点。 *NStyle*参数可以具有以下值：<br /><br />-AFX_MBV_KEEPVISIBLE (0X01)-<br />     菜单显示在任何时候，并且默认情况下没有焦点。<br />-AFX_MBV_DISPLAYONFOCUS (0X02)-<br />     默认情况下隐藏菜单。 如果菜单处于隐藏状态，请按 ALT 键以显示菜单，并为其提供焦点。 如果显示菜单上，则按 ALT 或 ESC 键，若要隐藏菜单。<br />-AFX_MBV_ DISPLAYONFOCUS (0x02) &#124; AFX_MBV_DISPLAYONF10 (0x04)<br />     （按位组合 (OR)）-默认情况下隐藏菜单。 如果菜单处于隐藏状态，请按 F10 键，以显示菜单，并为其提供焦点。 如果显示菜单上，则按 F10 键来切换打开或关闭菜单焦点。 直到按下 ALT 或 ESC 键，可以将其隐藏，则会显示菜单。|
 
 ### <a name="remarks"></a>备注
 

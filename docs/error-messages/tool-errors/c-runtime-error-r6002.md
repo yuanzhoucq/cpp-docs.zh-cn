@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc23cf3c692eef37a86b5385d2e9e3a68340374e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: cde499e919a7b222a41229576ef3b2d37d55d648
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46080917"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860636"
 ---
 # <a name="c-runtime-error-r6002"></a>C 运行时错误 R6002
 
@@ -30,13 +30,13 @@ ms.locfileid: "46080917"
 未链接所必需的浮点库。
 
 > [!NOTE]
->  如果运行应用时遇到此错误消息，该应用已关闭，因为它具有内部问题。 有多种原因引起此错误，但通常导致应用程序的代码中有缺陷，或尝试运行的应用程序不为特定计算机处理器生成。
+> 如果运行应用时遇到此错误消息，该应用已关闭，因为它具有内部问题。 有多种原因引起此错误，但通常导致应用程序的代码中有缺陷，或尝试运行的应用程序不为特定计算机处理器生成。
 >
->  可以尝试以下步骤来修复此错误：
+> 可以尝试以下步骤来修复此错误：
 >
->  -   使用**应用程序和功能**或**程序和功能**页**控制面板**来修复或重新安装该程序。
-> -   检查**Windows Update**中**控制面板**的软件更新。
-> -   检查应用程序的更新版本。 如果问题仍然存在，请与应用供应商联系。
+> - 使用**应用程序和功能**或**程序和功能**页**控制面板**来修复或重新安装该程序。
+> - 检查**Windows Update**中**控制面板**的软件更新。
+> - 检查应用程序的更新版本。 如果问题仍然存在，请与应用供应商联系。
 
 **程序员提供的的信息**
 

@@ -15,24 +15,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47bbd73efc13eb28ed177c39366ae58cd9c91adc
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a996df63430a2d6b1942112122a1f185ba8f13de
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46063185"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48859596"
 ---
 # <a name="adding-an-atl-control"></a>添加 ATL 控件
 
 使用此向导将用户界面对象添加到所有潜在容器支持接口的项目。 若要支持这些接口，该项目必须已创建为 ATL 应用程序或作为包含 ATL 支持的 MFC 应用程序。 可使用 [ATL 项目向导](../../atl/reference/atl-project-wizard.md)创建 ATL 应用程序，或[将 ATL 对象添加到 MFC 应用程序](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)以实现 MFC 应用程序的 ATL 支持。
 
-### <a name="to-add-an-atl-control-to-your-project"></a>若要向项目添加 ATL 控件
+## <a name="to-add-an-atl-control-to-your-project"></a>若要向项目添加 ATL 控件
 
 1. 在上述**解决方案资源管理器**或[类视图](/visualstudio/ide/viewing-the-structure-of-code)，右键单击你想要添加的 ATL 简单对象的项目的名称。
 
-2. 单击**外**从快捷菜单，然后单击**添加类**。
+1. 单击**外**从快捷菜单，然后单击**添加类**。
 
-3. 在中[添加类](../../ide/add-class-dialog-box.md)对话框中，在模板窗格中，单击**ATL 控件**，然后单击**添加**以显示[ATL 控件向导](../../atl/reference/atl-control-wizard.md)。
+1. 在中[添加类](../../ide/add-class-dialog-box.md)对话框中，在模板窗格中，单击**ATL 控件**，然后单击**添加**以显示[ATL 控件向导](../../atl/reference/atl-control-wizard.md)。
 
 使用**ATL 控件向导**，可以创建一个三种类型的控件：
 
@@ -48,4 +48,3 @@ ms.locfileid: "46063185"
 
 [向复合控件添加功能](../../atl/adding-functionality-to-the-composite-control.md)<br/>
 [ATL COM 对象基础知识](../../atl/fundamentals-of-atl-com-objects.md)   
-

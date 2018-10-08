@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 800b3d7d588d1038ac61cb7c9c4b9f1913bec9d4
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 509464ba78a6b7693a849d9f753b13328ab868f9
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45722366"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860740"
 ---
 # <a name="delayload-delay-load-import"></a>/DELAYLOAD（延迟加载导入）
 
@@ -46,9 +46,9 @@ ms.locfileid: "45722366"
 
 1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。
 
-2. 在中**链接器**文件夹，选择**输入**属性页。
+1. 在中**链接器**文件夹，选择**输入**属性页。
 
-3. 修改**延迟加载的 Dll**属性。
+1. 修改**延迟加载的 Dll**属性。
 
 ### <a name="to-set-this-linker-option-programmatically"></a>以编程方式设置此链接器选项
 

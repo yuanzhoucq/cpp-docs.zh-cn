@@ -16,50 +16,50 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a08563396a77dec5f72ea35e10dd8a349095077
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: ed2e1f8f24b3d33dd7d45bb597b252ead1453647
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314230"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861143"
 ---
 # <a name="modifying-the-atl-dhtml-control"></a>修改 ATL DHTML 控件
 
 ATL 控件向导提供了起始代码，这样可以生成并运行该控件，因此您可以查看项目文件中写入方法的方式以及如何 DHTML 调用到控件的 c + + 代码中使用的调度方法。 可以将任何 dispatch 方法添加到该接口。 然后，您可以在 HTML 资源调用方法。
 
-#### <a name="to-modify-the-atl-dhtml-control"></a>若要修改的 ATL DHTML 控件
+## <a name="to-modify-the-atl-dhtml-control"></a>若要修改的 ATL DHTML 控件
 
-1. 在类视图中，展开控件项目。
+1. 在中**类视图**，展开控件项目。
 
    请注意以"UI"结尾的接口，有一种方法， `OnClick`。 不是以"UI"结尾的接口没有任何方法。
 
-2. 添加一个名为方法`MethodInvoked`到不是以"UI。"结尾的接口
+1. 添加一个名为方法`MethodInvoked`到不是以"UI。"结尾的接口
 
    此方法将添加到在控件容器用于容器交互，而不是 DHTML 用来与控件交互的接口的接口。 仅在容器可以调用此方法。
 
-3. 在.cpp 文件中找到无存根方法，并添加代码以显示一个消息框，例如：
+1. 在.cpp 文件中找到无存根方法，并添加代码以显示一个消息框，例如：
 
    [!code-cpp[NVC_ATL_COM#5](../atl/codesnippet/cpp/modifying-the-atl-dhtml-control_1.cpp)]
 
-4. 添加另一种方法称为`HelloHTML`，但这次，将其添加到"用户界面。"中结束的接口 找出用作存根`HelloHTML`方法在.cpp 文件，并添加代码以显示一个消息框，例如：
+1. 添加另一种方法称为`HelloHTML`，但这次，将其添加到"用户界面。"中结束的接口 找出用作存根`HelloHTML`方法在.cpp 文件，并添加代码以显示一个消息框，例如：
 
    [!code-cpp[NVC_ATL_COM#6](../atl/codesnippet/cpp/modifying-the-atl-dhtml-control_2.cpp)]
 
-5. 添加第三种方法， `GoToURL`，到不是以"UI。"结尾的接口 实现此方法通过调用[IWebBrowser2::Navigate](https://msdn.microsoft.com/library/aa752133.aspx)，按如下所示：
+1. 添加第三种方法， `GoToURL`，到不是以"UI。"结尾的接口 实现此方法通过调用[IWebBrowser2::Navigate](https://msdn.microsoft.com/library/aa752133.aspx)，按如下所示：
 
    [!code-cpp[NVC_ATL_COM#7](../atl/codesnippet/cpp/modifying-the-atl-dhtml-control_3.cpp)]
 
-   可以使用**IWebBrowser2**方法因为 ATL.h 文件中为您提供指向该接口的指针。
+   可以使用`IWebBrowser2`方法因为 ATL.h 文件中为您提供指向该接口的指针。
 
 接下来，修改要调用的方法创建的 HTML 资源。 您将添加用于调用这些方法的三个按钮。
 
-#### <a name="to-modify-the-html-resource"></a>若要修改 HTML 资源
+## <a name="to-modify-the-html-resource"></a>若要修改 HTML 资源
 
-1. 在解决方案资源管理器，双击要显示的 HTML 资源的.htm 文件。
+1. 在中**解决方案资源管理器**，双击要显示的 HTML 资源的.htm 文件。
 
    检查 HTML，尤其是对外部 Windows 调度方法调用。 HTML 调用项目的`OnClick`方法和参数指示该控件的正文 (`theBody`) 和要分配的颜色 ("`red`")。 方法调用后面的文本是按钮显示的标签。
 
-2. 添加另一个`OnClick`方法，仅更改颜色。 例如：
+1. 添加另一个`OnClick`方法，仅更改颜色。 例如：
 
     ```html
     <br>
@@ -69,7 +69,7 @@ ATL 控件向导提供了起始代码，这样可以生成并运行该控件，�
 
    此方法将创建一个按钮，标记为**刷新**，用户可以单击以将控件返回到原始的白色背景。
 
-3. 将调用添加到`HelloHTML`方法创建。 例如：
+1. 将调用添加到`HelloHTML`方法创建。 例如：
 
     ```html
     <br>

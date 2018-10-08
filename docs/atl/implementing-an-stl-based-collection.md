@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d414df9d5e5f7d930497d42b5ec73d92a65ac3cc
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: cc7df3233b5605c4b19269571d1afa0f5a6215ae
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46116697"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861091"
 ---
 # <a name="implementing-a-c-standard-library-based-collection"></a>实现 c + + 标准库基于集合
 
@@ -57,15 +57,15 @@ ATL 提供`ICollectionOnSTLImpl`接口以使您能够快速在您的对象上实
 
 1. 因为自动化客户端访问的集合接口是通常双`_NewEnum`属性通过`IDispatch::Invoke`。 但是，自动化客户端可以访问通过 vtable，剩余的方法，因此双重接口要优于调度接口。
 
-2. 如果双重接口或调度接口中，将不提供在运行时 (即，不会提供额外的方法或通过属性`IDispatch::Invoke`)，应该应用**nonextensible**属性为你的定义。 此属性允许自动化客户端执行完整的代码在编译时验证。 在这种情况下，不应扩展接口。
+1. 如果双重接口或调度接口中，将不提供在运行时 (即，不会提供额外的方法或通过属性`IDispatch::Invoke`)，应该应用**nonextensible**属性为你的定义。 此属性允许自动化客户端执行完整的代码在编译时验证。 在这种情况下，不应扩展接口。
 
-3. 如果你希望自动化客户端将无法使用此属性，则正确的 DISPID 至关重要。 （请注意 DISPID_NEWENUM 中已有一个下划线）。
+1. 如果你希望自动化客户端将无法使用此属性，则正确的 DISPID 至关重要。 （请注意 DISPID_NEWENUM 中已有一个下划线）。
 
-4. 你可以提供任何值的 DISPID 作为`Item`属性。 但是，`Item`通常使用 DISPID_VALUE 来使其集合的默认属性。 这允许自动化客户端引用的属性，而无需显式命名。
+1. 你可以提供任何值的 DISPID 作为`Item`属性。 但是，`Item`通常使用 DISPID_VALUE 来使其集合的默认属性。 这允许自动化客户端引用的属性，而无需显式命名。
 
-5. 用于的返回值的数据类型`Item`属性是存储在集合中就 COM 客户端所关注的项的类型。 接口将返回字符串，因此，应使用标准 COM 字符串类型，BSTR。 你可以将数据存储在不同的格式在内部如稍后您将看到。
+1. 用于的返回值的数据类型`Item`属性是存储在集合中就 COM 客户端所关注的项的类型。 接口将返回字符串，因此，应使用标准 COM 字符串类型，BSTR。 你可以将数据存储在不同的格式在内部如稍后您将看到。
 
-6. 使用的 DISPID 值`Count`是完全任意的属性。 为此属性没有标准 DISPID。
+1. 使用的 DISPID 值`Count`是完全任意的属性。 为此属性没有标准 DISPID。
 
 ##  <a name="vcconstorage_and_exposure_typedefs"></a> 创建用于存储和曝光 Typedef
 
@@ -114,4 +114,3 @@ Visual Basic 支持对此接口的成功至关重要，因为返回的枚举数`
 [集合和枚举数](../atl/atl-collections-and-enumerators.md)<br/>
 [ATLCollections 示例](../visual-cpp-samples.md)<br/>
 [ATL 复制策略类](../atl/atl-copy-policy-classes.md)
-

@@ -25,19 +25,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e2c3e0eb625c492cb9f0e9a1234d33149ac201a1
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 79855860b4d2d6bfee328f8fa07f2a3ba6cfd69c
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46040227"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861455"
 ---
 # <a name="cworkerthread-class"></a>CWorkerThread 类
 
 此类创建工作线程或使用现有工作区，等待上一个或多个内核对象句柄，并发出一个句柄的信号时执行指定的客户端函数。
 
 > [!IMPORTANT]
->  不能在 Windows 运行时中执行的应用程序中使用此类和其成员。
+> 不能在 Windows 运行时中执行的应用程序中使用此类和其成员。
 
 ## <a name="syntax"></a>语法
 
@@ -46,7 +46,7 @@ template <class ThreadTraits = DefaultThreadTraits>
 class CWorkerThread
 ```
 
-#### <a name="parameters"></a>参数
+### <a name="parameters"></a>参数
 
 *ThreadTraits*<br/>
 类提供线程创建函数，如[CRTThreadTraits](../../atl/reference/crtthreadtraits-class.md)或[Win32ThreadTraits](../../atl/reference/win32threadtraits-class.md)。
@@ -84,19 +84,19 @@ class CWorkerThread
 
 1. 创建此类的实例。
 
-2. 调用[CWorkerThread::Initialize](#initialize)。
+1. 调用[CWorkerThread::Initialize](#initialize)。
 
-3. 调用[CWorkerThread::AddHandle](#addhandle)使用的内核对象以及指向的实现的句柄[IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md)。
+1. 调用[CWorkerThread::AddHandle](#addhandle)使用的内核对象以及指向的实现的句柄[IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md)。
 
-     - 或 -
+   \- 或 -
 
-     调用[CWorkerThread::AddTimer](#addtimer)用一个指针指向的实现[IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md)。
+   调用[CWorkerThread::AddTimer](#addtimer)用一个指针指向的实现[IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md)。
 
-4. 实现[IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute)发出信号的句柄或计时器时采取某种操作。
+1. 实现[IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute)发出信号的句柄或计时器时采取某种操作。
 
-5. 若要从可等待对象的列表中删除一个对象，调用[CWorkerThread::RemoveHandle](#removehandle)。
+1. 若要从可等待对象的列表中删除一个对象，调用[CWorkerThread::RemoveHandle](#removehandle)。
 
-6. 若要终止该线程，调用[CWorkerThread::Shutdown](#shutdown)。
+1. 若要终止该线程，调用[CWorkerThread::Shutdown](#shutdown)。
 
 ## <a name="requirements"></a>要求
 
