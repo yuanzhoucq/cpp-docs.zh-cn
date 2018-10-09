@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0cb9518f60db98bd590cecdffa09ee7d814241ac
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7ec05f200d81a9753563a654257d9df3dd50a19f
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46447903"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861104"
 ---
 # <a name="mfc-program-or-control-source-and-header-files"></a>MFC 程序或控件的源文件和头文件
 
@@ -36,7 +36,7 @@ ms.locfileid: "46447903"
 |Dlgproxy.cpp, Dlgproxy.h|在基于对话框的程序中，主对话框的项目自动化代理类的实现和头文件。 仅当选择了“自动化支持”时才使用此选项。|
 |Projnamedoc.cpp, Projnamedoc.h|派生和实现名为 `CProjnameDoc` 的文档类，并包括用于初始化文档、序列化（保存和加载）文档以及实现调试诊断的骨框架成员函数。|
 |Projnameset.h/.cpp|创建的程序支持数据库并包含记录集类时创建。|
-|Projnameview.cpp, Projnameview.h|派生并实现名为 `CProjnameView` 的视图类，该类用于显示和打印文档数据。 `CProjnameView` 类派生自以下任一 MFC 类：<br /><br /> -   [CEditView](../mfc/reference/ceditview-class.md)<br />-   [CFormView](../mfc/reference/cformview-class.md)<br />-   [CRecordView](../mfc/reference/crecordview-class.md)<br />-   [COleDBRecordView](../mfc/reference/coledbrecordview-class.md)<br />-   [CTreeView](../mfc/reference/ctreeview-class.md)<br />-   [CListView](../mfc/reference/clistview-class.md)<br />-   [CRichEditView](../mfc/reference/cricheditview-class.md)<br />-   [CScrollView](../mfc/reference/cscrollview-class.md)<br />-   [CView](../mfc/reference/cview-class.md)<br />-   [CHTMLView](../mfc/reference/chtmlview-class.md)<br />-   [CHTMLEditView](../mfc/reference/chtmleditview-class.md)<br /><br /> 项目的视图类包含用于绘制视图和实现调试诊断的框架成员函数。 如果启用了打印支持，则会为打印、打印设置和打印预览命令消息添加消息映射项。 这些项在基视图类中调用相应的成员函数。|
+|Projnameview.cpp, Projnameview.h|派生并实现名为 `CProjnameView` 的视图类，该类用于显示和打印文档数据。 `CProjnameView` 类派生自以下任一 MFC 类：<br /><br />- [CEditView](../mfc/reference/ceditview-class.md)<br />- [CFormView](../mfc/reference/cformview-class.md)<br />- [CRecordView](../mfc/reference/crecordview-class.md)<br />- [COleDBRecordView](../mfc/reference/coledbrecordview-class.md)<br />- [CTreeView](../mfc/reference/ctreeview-class.md)<br />- [CListView](../mfc/reference/clistview-class.md)<br />- [CRichEditView](../mfc/reference/cricheditview-class.md)<br />- [CScrollView](../mfc/reference/cscrollview-class.md)<br />- [CView](../mfc/reference/cview-class.md)<br />- [CHTMLView](../mfc/reference/chtmlview-class.md)<br />- [CHTMLEditView](../mfc/reference/chtmleditview-class.md)<br /><br /> 项目的视图类包含用于绘制视图和实现调试诊断的框架成员函数。 如果启用了打印支持，则会为打印、打印设置和打印预览命令消息添加消息映射项。 这些项在基视图类中调用相应的成员函数。|
 |ProjnamePropPage.h, ProjnamePropPage.cpp|声明并实现 `CProjnamePropPage` 类。 `CProjnamePropPage` 派生自 `COlePropertyPage`，并提供一个框架成员函数 `DoDataExchange` 来实现数据交换和验证。|
 |IPframe.cpp, IPframe.h|在应用程序向导的“自动化选项”页中选择了“微型服务器”或“全服务器”选项时创建（第 3 步，共 6 步）。 文件派生并实现名为 CInPlaceFrame 的就地框架窗口类，容器程序就地激活服务器时使用。|
 |Mainfrm.cpp, Mainfrm.h|从 [CFrameWnd](../mfc/reference/cframewnd-class.md)（针对 SDI 应用程序）或 [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md)（针对 MDI 应用程序）派生 CMainFrame 类。 如果在应用程序向导的“应用程序选项”页中选择了相应的选项，CMainFrame 类将处理工具栏按钮和状态栏的创建（第 4 步，共 6 步）。 有关使用 CMainFrame 的信息，请参阅[应用程序向导创建的框架窗口类](../mfc/frame-window-classes-created-by-the-application-wizard.md)。|

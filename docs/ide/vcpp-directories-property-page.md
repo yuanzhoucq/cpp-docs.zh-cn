@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 238f26e8955d4be676c3bf37f7cc8b2d842b3de9
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 82aaa2dc43177963b9b38c398e74aaa0ffff11dd
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46394427"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821213"
 ---
 # <a name="vc-directories-property-page-windows"></a>“VC++ 目录”属性页 (Windows)
 
@@ -76,11 +76,13 @@ VC++ 目录属性适用于项目，而不是顶级解决方案节点。 如果�
 
 若要详细了解宏以及为何要尽可能地使用宏而不是硬编码的路径，请参阅[使用项目属性](../ide/working-with-project-properties.md#bkmkPropertiesVersusMacros)。
 
-若要查看常用宏的列表，请参阅[用于生成命令和属性的常用宏](https://docs.microsoft.com/en-us/cpp/ide/common-macros-for-build-commands-and-properties)。
+若要查看常用宏的列表，请参阅[用于生成命令和属性的常用宏](https://docs.microsoft.com/cpp/ide/common-macros-for-build-commands-and-properties)。
 
 可以通过两种方式来定义自己的宏：
--   在开发人员命令提示符处设置环境变量。 所有环境变量都将被视为 MSBuild 属性/宏。
--   在 .props 文件中定义用户宏。 有关详细信息，请参阅[属性页宏](working-with-project-properties.md#bkmkPropertiesVersusMacros)。
+
+- 在开发人员命令提示符处设置环境变量。 所有环境变量都将被视为 MSBuild 属性/宏。
+
+- 在 .props 文件中定义用户宏。 有关详细信息，请参阅[属性页宏](working-with-project-properties.md#bkmkPropertiesVersusMacros)。
 
 有关详细信息，请参阅以下博客文章：[VC++ Directories](http://blogs.msdn.com/b/vsproject/archive/2009/07/07/vc-directories.aspx)（VC++ 目录）、[Inherited Properties and Property Sheets](http://blogs.msdn.com/b/vsproject/archive/2009/06/23/inherited-properties-and-property-sheets.aspx)（继承的属性和属性表）和 [Visual Studio 2010 C++ Project Upgrade Guide](http://blogs.msdn.com/b/vcblog/archive/2010/03/02/visual-studio-2010-c-project-upgrade-guide.aspx)（Visual Studio 2010 C++ 项目升级指南）。
 

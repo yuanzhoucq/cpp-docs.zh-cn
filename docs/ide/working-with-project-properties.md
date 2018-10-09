@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85439e191ac8676603c9d7fab8a41bb126e97b9e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4420bdac9e788f80142546d8b09781a8aa3ce06d
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46398659"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821382"
 ---
 # <a name="working-with-project-properties"></a>使用项目属性
 
@@ -250,7 +250,7 @@ Visual C++ 编译器 (cl.exe) 可识别某些环境变量，尤其是 LIB、LIBP
 
 ## <a name="modifying-properties-and-targets-without-changing-the-project-file"></a>修改属性和目标无需更改项目文件
 
-可以从 MSBuild 命令提示符处重写项目属性和目标而无需更改项目文件。 当你想要暂时或偶尔应用某些属性时，这非常有用。 它假定你对 MSBuild 有一定了解。 有关详细信息，请参阅 [MSBUild](https://docs.microsoft.com/en-us/visualstudio/msbuild/msbuild)。
+可以从 MSBuild 命令提示符处重写项目属性和目标而无需更改项目文件。 当你想要暂时或偶尔应用某些属性时，这非常有用。 它假定你对 MSBuild 有一定了解。 有关详细信息，请参阅 [MSBUild](https://docs.microsoft.com/visualstudio/msbuild/msbuild)。
 
 > [!IMPORTANT]
 > 可以使用 Visual Studio 中的 XML 编辑器或任何文本编辑器来创建 .props 或 .targets 文件。 不要在此情况下使用“属性管理器”，因为它会将属性添加到项目文件中。

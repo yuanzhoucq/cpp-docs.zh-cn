@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4dfda5807aab0c9930780b8374ffc934dde001c0
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6993f209f5e7c5ab6f56ae886f2d57ba90a19936
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46096803"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860642"
 ---
 # <a name="while-statement-c"></a>While 语句 (C)
 
@@ -37,7 +37,7 @@ expression 必须具有算法或指针类型。 执行过程如下所示：
 
 1. 计算 expression。
 
-2. 如果 expression 最初为 false，则绝不执行 `while` 语句体，并且控制从 `while` 语句到程序中下一语句的传递。
+1. 如果 expression 最初为 false，则绝不执行 `while` 语句体，并且控制从 `while` 语句到程序中下一语句的传递。
 
    如果 expression 为 true（非零），则执行语句体，并且此过程从第 1 步开始重复。
 
