@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa5cf1be80b22d3577347dbf7de9ee262125aa86
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: c2d5a0f2f5f7515e36997b876373dcf25bb6fc03
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821356"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890629"
 ---
 # <a name="message-map-macros-mfc"></a>消息映射宏 (MFC)
 
@@ -352,7 +352,7 @@ ON_MESSAGE( message, memberFxn )
 应在必须映射到消息处理程序函数每个用户定义的消息的消息映射中的一个 ON_MESSAGE 宏语句。
 
 > [!NOTE]
->  用户定义的消息，除了 ON_MESSAGE 处理不太常见的 Windows 消息。 有关详细信息，请参阅知识库文章[99848： 信息： 使用 ON_MESSAGE() 宏映射不太常见消息](http://go.microsoft.com/fwlink/p/?linkid=192022)。
+>  用户定义的消息，除了 ON_MESSAGE 处理不太常见的 Windows 消息。 有关详细信息，请参阅[消息映射](../../mfc/tn006-message-maps.md)。
 
 有关详细信息和示例，请参阅[消息处理和映射主题](../../mfc/message-handling-and-mapping.md)和[用户定义处理程序](user-defined-handlers.md)
 

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad47d769dbfd09cc741be18598355dc34486bd54
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: d964c375adf80caef3bb5a6eb06c67ef8e3e7200
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46045687"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890044"
 ---
 # <a name="compiler-warning-level-1-c4251"></a>编译器警告（等级 1）C4251
 
@@ -39,11 +39,9 @@ identifier： 类 type 需要有 dll 接口的类 type2 的客户端使用
 
 您可以避免通过定义一个 DLL，它定义了具有虚函数的类和函数，可以调用来实例化并删除对象类型的导出类。  然后，可以只需调用虚函数的类型。
 
-导出模板的详细信息，请参阅[ http://support.microsoft.com/default.aspx?scid=KB;EN-US; 168958](http://support.microsoft.com/default.aspx?scid=KB;EN-US;168958)。
-
 如果从 c + + 标准库，编译调试版本中的类型派生，则可以忽略 C4251 (**/MTd**)，其中编译器错误消息是指 _Container_base。
 
-```
+```cpp
 // C4251.cpp
 // compile with: /EHsc /MTd /W2 /c
 #include <vector>

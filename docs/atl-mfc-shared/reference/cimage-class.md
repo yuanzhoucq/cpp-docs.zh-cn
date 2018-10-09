@@ -64,12 +64,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7053c72536c0ab91420f1bbc068f39843eb99c1b
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: df61ebeea72a7cf860237b760288cc47ff353bf2
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861806"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890655"
 ---
 # <a name="cimage-class"></a>CImage 类
 
@@ -320,7 +320,7 @@ HBITMAP 句柄。
 *eOrientation*<br/>
 指定位图的方向。 可以是以下各项之一：
 
-- 由操作系统确定 DIBOR_DEFAULT 位图的方向。 但是，这可能始终没有预期的结果在所有操作系统上。 有关这方面的详细信息，请参阅以下知识库文章 (**Q186586**): PRB: getobject （） 始终返回正高度为 DIB 部分。
+- 由操作系统确定 DIBOR_DEFAULT 位图的方向。
 
 - DIBOR_BOTTOMUP 位图的行是按相反的顺序。 这将导致[CImage::GetBits](#getbits)返回快要结束的时候位图缓冲区的指针和[CImage::GetPitch](#getpitch)返回一个负数。
 

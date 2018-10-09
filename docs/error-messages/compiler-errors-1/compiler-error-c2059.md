@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88d33ba33483ba8a2c9764f5336218a354d644e6
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 78640f61cb1d0f81fc405cbc3cfce16be0de5022
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46096946"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890070"
 ---
 # <a name="compiler-error-c2059"></a>编译器错误 C2059
 
@@ -76,8 +76,6 @@ struct ag_type {
 void func(ag_type arg = {5, 7.0});   // C2059
 void func(ag_type arg = ag_type(5, 7.0));   // OK
 ```
-
-如果你定义的成员模板类或函数的类之外，还可以获取 C2059。 有关信息，请参阅[知识库文章 241949](http://support.microsoft.com/kb/241949)。
 
 C2059 可能格式不正确的强制转换。
 

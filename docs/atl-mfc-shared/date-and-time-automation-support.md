@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38933847065544f97d60dfc109436f059a025f7a
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1ce0acc7eb90e534e1e66882f5a4a6a88b1eb782
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763849"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890174"
 ---
 # <a name="date-and-time-automation-support"></a>日期和时间： 自动化支持
 
@@ -57,11 +57,8 @@ ms.locfileid: "43763849"
 
 CRT 正确地计算差值为 23 个小时。 `COleDateTimeSpan` 计算差值为 24 小时。
 
-请注意，一种解决方法使用接近结束时的示例显示使用正确的日期`COleDateTime::Format`。 请参阅知识库文章"BUG: Format("%D") 出于`COleDateTime`和`COleDateTimeSpan`"(Q167338)。
-
 [!code-cpp[NVC_ATLMFC_Utilities#176](../atl-mfc-shared/codesnippet/cpp/date-and-time-automation-support_1.cpp)]
 
 ## <a name="see-also"></a>请参阅
 
 [日期和时间](../atl-mfc-shared/date-and-time.md)
-

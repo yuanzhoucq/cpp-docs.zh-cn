@@ -45,12 +45,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee8e59fbc88e63343d4da75a4cbf95d4f83bf815
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 1aefd61d724f7716392b5fd2d15ef3a2f9ff0006
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45701358"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890226"
 ---
 # <a name="md-mt-ld-use-run-time-library"></a>/MD、/MT、/LD（使用运行时库）
 
@@ -80,8 +80,6 @@ ms.locfileid: "45701358"
 传递给链接器给定调用的所有模块必须使用相同的运行时库编译器选项都编译 (**/MD**， **/MT**， **/LD**)。
 
 有关如何使用运行时库的调试版本的详细信息，请参阅[C 运行时库参考](../../c-runtime-library/c-run-time-library-reference.md)。
-
-知识库文章 Q140584 也讨论如何选择适当的 C 运行库。
 
 有关 Dll 的详细信息，请参阅[Visual c + + 中的 Dll](../../build/dlls-in-visual-cpp.md)。
 

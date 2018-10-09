@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47d1a5308b379d8bd1923bb9ad1ad805cb6bded3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6004c3acd052d1424004017941a5e4aa110c602c
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46432808"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890331"
 ---
 # <a name="activex-controls-on-the-internet"></a>Internet 上的 ActiveX 控件
 
@@ -170,10 +170,6 @@ ActiveX 控件不受 Internet 限制。 ActiveX 控件还可在任何容器中�
 例如，如果仅提供 10 个字节并且对 1K 文件异步调用“读取”，则“读取”将不阻止，但与目前可用的 10 字节一起返回。
 
 您实现[异步名字对象](../mfc/asynchronous-monikers-on-the-internet.md)使用`CAsyncMonikerFile`类。 但是，ActiveX 控件可以使用 `CDataPathProperty` 类（派生自 `CAsyncMonikerFile`）帮助实现异步控件属性。
-
-ASYNDOWN 示例将演示如何使用计时器设置异步循环来读取数据。 ASYNDOWN 在知识库文章“如何：AsyncDown 演示了异步数据下载”(Q177244) 中有详细描述，并且可从 Microsoft 下载中心下载。 （有关从 Microsoft 下载中心下载文件的详细信息，请参阅 Microsoft 知识库文章“如何从联机服务获取 Microsoft 支持文件”(Q119591)）。您可以找到知识库文章[ http://support.microsoft.com/support ](http://support.microsoft.com/support)。
-
-ASYNDOWN 中使用的基本方法是在中设置计时器**CDataPathProperty::OnDataAvailable**指示数据可用。 接收计时器消息后，应用程序将读取 128 字节的数据块并填充编辑控件。 如果处理计时器消息后数据不可用，则将关闭计时器。 如果之后有更多数据到达，则 `OnDataAvailable` 将启用计时器。
 
 ## <a name="displaying-a-control-on-a-web-page"></a>在网页上显示控件
 

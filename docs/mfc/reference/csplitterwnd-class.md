@@ -82,12 +82,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e56ab939cd6b3cfcb0601eaec1e450835069705f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 549669841a4b10468679795ca045f5626f5e9101
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46389526"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890668"
 ---
 # <a name="csplitterwnd-class"></a>CSplitterWnd 类
 
@@ -181,11 +181,7 @@ class CSplitterWnd : public CWnd
 
 创建拆分器窗口时创建这些特殊的滚动条。 例如，`CSplitterWnd`具有一行、 两个列，并且 WS_VSCROLL 样式将显示由两个窗格共享的垂直滚动条。 当用户移动滚动条时，WM_VSCROLL 消息发送到两个窗格。 当窗格设置滚动条位置时，请设置共享的滚动条。
 
-拆分窗口的详细信息，请参阅：
-
-- [技术说明 29](../../mfc/tn029-splitter-windows.md)
-
-- 知识库文章 Q262024： 如何： 使用 CPropertySheet 作为子 CSplitterWnd
+拆分窗口的详细信息，请参阅[技术注意 29](../../mfc/tn029-splitter-windows.md)。
 
 有关如何创建动态拆分窗口的详细信息，请参阅：
 
@@ -898,7 +894,7 @@ virtual void SetActivePane(
 如果*pWnd*为 NULL，指定将处于活动状态的窗格中的列。
 
 *pWnd*<br/>
-一个指向`CWnd`对象。 如果为 NULL，指定在窗格*行*并*col*设置活动。 如果不为 NULL，指定设置活动的窗格。
+指向 `CWnd` 对象的指针。 如果为 NULL，指定在窗格*行*并*col*设置活动。 如果不为 NULL，指定设置活动的窗格。
 
 ### <a name="remarks"></a>备注
 

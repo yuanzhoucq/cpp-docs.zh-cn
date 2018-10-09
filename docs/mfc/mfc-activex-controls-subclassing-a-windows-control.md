@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94b989594316f2eac3e65fad2cb5bf419e7ee2eb
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 03fc15cc2d2a73c0e8a1a016a2a477a5c65cdc15
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46407526"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890552"
 ---
 # <a name="mfc-activex-controls-subclassing-a-windows-control"></a>MFC ActiveX 控件：创建 Windows 控件的子类
 
@@ -48,10 +48,8 @@ ms.locfileid: "46407526"
 
 - [处理反射给控件所有 ActiveX 控件消息 (OCM)](#_core_handling_reflected_window_messages)
 
-    > [!NOTE]
-    >  其中的大部分工作为您完成 ActiveX 控件向导如果您选择要使用子类化控件**选择父窗口类**上的下拉列表**控制设置**页。
-
-有关子类化控件的详细信息，请参阅知识库文章 Q243454。
+   > [!NOTE]
+   > 其中的大部分工作为您完成 ActiveX 控件向导如果您选择要使用子类化控件**选择父窗口类**上的下拉列表**控制设置**页。
 
 ##  <a name="_core_overriding_issubclassedcontrol_and_precreatewindow"></a> 重写 IsSubclassedControl 和 PreCreateWindow
 
@@ -65,7 +63,7 @@ ms.locfileid: "46407526"
 
 请注意，在此示例中，将在 `PreCreateWindow` 中指定 Windows 按钮控件。 但是，任何标准 Windows 控件都可以子类化。 有关标准 Windows 控件的详细信息，请参阅[控件](../mfc/controls-mfc.md)。
 
-当子类化 Windows 控件，您可能想要指定特定窗口样式 (WS_) 或要在创建控件的窗口中使用的扩展的窗口样式 (WS_EX_) 标志。 可以设置这些参数中的值`PreCreateWindow`成员函数通过修改`cs.style`和`cs.dwExStyle`结构字段。 应使用进行到这些字段的修改**或者**操作，用于保留由类设置的默认标志`COleControl`。 例如，如果控件将对 BUTTON 控件进行子类化，而您希望控件显示为复选框，则应在 `CSampleCtrl::PreCreateWindow` 的实现中，在返回语句之前插入以下代码行：
+当子类化 Windows 控件，您可能想要指定特定窗口样式 (WS_) 或要在创建控件的窗口中使用的扩展的窗口样式 (WS_EX_) 标志。 可以设置这些参数中的值`PreCreateWindow`成员函数通过修改`cs.style`和`cs.dwExStyle`结构字段。 应使用进行到这些字段的修改**或者**操作，用于保留由类设置的默认标志`COleControl`。 例如，如果控件将对 BUTTON 控件进行子类化，而你希望控件显示为复选框，则应在 `CSampleCtrl::PreCreateWindow` 的实现中，在返回语句之前插入以下代码行：
 
 [!code-cpp[NVC_MFC_AxSub#3](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_3.cpp)]
 
