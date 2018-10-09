@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5bb62a61762c2c4e042777376f4d2b9f3ffc747e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 60397fea85e3fd121469ae4568dac18fa6b9ddb1
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46429742"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890317"
 ---
 # <a name="import-directive-c"></a>#import 指令 (C++)
 **C + + 专用**  
@@ -185,11 +185,9 @@ using namespace MyLib;
 中的实际文件名 **#import**注释是交叉引用的类型库的完整路径，如存储在注册表中。 如果由于缺少类型定义遇到错误，请检查位于 .TLH 头处的注释来了解需要先导入的依赖类型库。 错误可能是语法错误（例如，C2143、C2146、C2321）、C2501（缺少声明说明符）或者编译 .TLI 时的 C2433（数据声明上不允许“inline”）。  
   
 您必须确定哪些依赖项的注释否则不由系统标头提供的然后提供 **#import**指令之前的某个时刻 **#import**指令的从属项若要解决这些错误的类型库。  
-  
-有关详细信息，请参阅知识库文章“#import 包装器方法可能导致访问冲突”(Q242527) 或“将 #import 用于 XML 时的编译器错误”(Q269194)。 您可以查找知识库文章位于 MSDN 库媒体或位于[Microsoft 支持部门](https://support.microsoft.com/)。  
-  
-##  <a name="_predir_the_23import_directive_import_attributes"></a> #import 属性  
- 
+
+##  <a name="_predir_the_23import_directive_import_attributes"></a> #import 属性
+
 **#import**可以选择性地包含一个或多个属性。 这些特性通知编译器修改类型库标头的内容。 反斜杠 (**\\**) 符号可以用于在单个包含附加行 **#import**语句。 例如：  
   
 ```  

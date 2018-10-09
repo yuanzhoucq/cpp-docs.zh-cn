@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5fa8370bb02e71c457f7967d5cb6b508e743333e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: abc9af657e790fcedf949719776581b5c1877e89
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46373930"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48889981"
 ---
 # <a name="mfc-activex-controls-creating-an-automation-server"></a>MFC ActiveX 控件：创建自动化服务器
 
@@ -33,7 +33,7 @@ ms.locfileid: "46373930"
 
 1. [将方法添加](../mfc/mfc-activex-controls-methods.md)。
 
-1. 重写[IsInvokeAllowed](../mfc/reference/colecontrol-class.md#isinvokeallowed)。 有关详细信息，请参阅知识库文章 Q146120。
+1. 重写[IsInvokeAllowed](../mfc/reference/colecontrol-class.md#isinvokeallowed)。
 
 1. 生成控件。
 

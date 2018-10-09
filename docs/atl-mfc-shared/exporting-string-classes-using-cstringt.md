@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5355b6e81354ef04b7cc4d2c3495289c9d1d029d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f2d77516ae53b0ee1c4f39e4d8f095848aa00acc
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46444198"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48889966"
 ---
 # <a name="exporting-string-classes-using-cstringt"></a>使用 CStringT 导出字符串类
 
@@ -29,7 +29,7 @@ ms.locfileid: "46444198"
 
 - 与新`CStringT`你可以自定义模板类`CString`使用指定字符特征，类似于 c + + 标准库中的模板的模板参数的行为。
 
-- 当您从 DLL 使用导出字符串类`CStringT`，编译器还会自动将导出`CString`基类。 由于`CString`本身是一种模板类，它可能实例化，由编译器使用时，除非编译器已注意到，`CString`从 DLL 导入。 如果你已迁移项目从 Visual c + + 6.0 到 Visual c + +.NET，可以看到链接器的多重定义的符号错误`CString`由于冲突而`CString`导入从 DLL 和本地实例化的版本。 若要执行此操作的正确方法如下所述。 有关此问题的详细信息，请参阅知识库文章"链接时出现的错误在导入 CString 派生类"(Q309801) 处[ http://support.microsoft.com/default.aspx ](http://support.microsoft.com/default.aspx)。
+- 当您从 DLL 使用导出字符串类`CStringT`，编译器还会自动将导出`CString`基类。 由于`CString`本身是一种模板类，它可能实例化，由编译器使用时，除非编译器已注意到，`CString`从 DLL 导入。 如果你已迁移项目从 Visual c + + 6.0 到 Visual c + +.NET，可以看到链接器的多重定义的符号错误`CString`由于冲突而`CString`导入从 DLL 和本地实例化的版本。 若要执行此操作的正确方法如下所述。
 
 以下方案会导致链接器生成的符号错误多次定义的类。 假设您要导出`CString`的派生类 (`CMyString`) 从 MFC 扩展 DLL:
 

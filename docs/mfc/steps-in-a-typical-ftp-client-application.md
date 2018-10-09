@@ -18,24 +18,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d87682d9110aa37fbb806f7d1dcd70009cf2ad63
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4ac1eef12a3f782f3ad9ba8a9bb526989876251e
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46406953"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890213"
 ---
 # <a name="steps-in-a-typical-ftp-client-application"></a>典型 FTP 客户端应用程序中的步骤
 
 典型 FTP 客户端应用程序创建[CInternetSession](../mfc/reference/cinternetsession-class.md)和一个[CFtpConnection](../mfc/reference/cftpconnection-class.md)对象。 请注意，这些 MFC WinInet 类并不实际控制代理类型设置;执行 IIS。
-
-此外，请参阅以下知识库文章：
-
-- 如何： 使用 FTP 进行基于 CERN 代理帐户使用 WinInet API (文章 ID: Q166961)
-
-- 示例： 使用 CERN 基于密码的 FTP 保护代理 (文章 ID: Q216214)
-
-- Internet 服务管理器无法显示已安装的代理服务 (文章 ID: Q216802)
 
 下表显示了可能会执行典型 FTP 客户端应用程序中的步骤。
 

@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ddf4b505689521fbdfd702eb1944ac0779f16bf
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: dc5bca0f7ff1b2fdb2650eadbcdca4778d9b53ef
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46409566"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890355"
 ---
 # <a name="upgrading-an-existing-activex-control"></a>升级现有 ActiveX 控件
 
@@ -56,7 +56,7 @@ ms.locfileid: "46409566"
 
 ##  <a name="_core_packaging_code_for_downloading"></a> 用于下载的打包代码
 
-有关此主题的详细信息，请参阅知识库文章“打包 MFC 控件以便通过 Internet 使用”(Q167158)。 您可以找到知识库文章[ http://support.microsoft.com/support ](http://support.microsoft.com/support)。
+有关此主题的详细信息，请参阅[打包 ActiveX 控件](https://docs.microsoft.com//previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa751974%28v%3dvs.85%29)。
 
 ### <a name="the-codebase-tag"></a>CODEBASE 标记
 
@@ -94,7 +94,7 @@ Cabinet 文件是使用 MFC 打包 ActiveX 控件的推荐方法。 通过在 Ca
 
 ### <a name="creating-cab-files"></a>创建 CAB 文件
 
-您可以从知识库文章中下载 Cabinet 开发工具包[310618: Microsoft Cabinet 开发工具包](http://go.microsoft.com/fwlink/p/?linkid=148204)。 在此工具包中，您将找到构造 Cabinet 文件所需的工具。
+工具来创建 cabinet 文件是现已成为[Windows 10 SDK](https://dev.windows.com/downloads/windows-10-sdk)。
 
 `CODEBASE` 指向的 Cabinet 文件应包含 ActiveX 控件的 .ocx 文件和用于控制其安装的 .inf 文件。 您可以通过指定控件文件的名称和一个 .inf 文件来创建 Cabinet 文件。 不要在此 Cabinet 文件中包含可能已存在于系统上的依赖 DLL。 例如，MFC DLL 在单独的 Cabinet 文件中打包并通过控制 .inf 文件来引用。
 

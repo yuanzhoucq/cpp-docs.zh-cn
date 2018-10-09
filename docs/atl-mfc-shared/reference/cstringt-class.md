@@ -90,12 +90,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 253282092bb71b6d4a5c520355ab4f8b51015c9f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6d6a6afeca0bcf0d08a0a206983d3db33b61a041
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46445134"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890694"
 ---
 # <a name="cstringt-class"></a>CStringT 类
 
@@ -224,7 +224,7 @@ public CSimpleStringT<BaseType,
 `CString``CStringA`，和`CStringW`导出从 MFC DLL (MFC90。DLL)，永远不会从用户 Dll。 这样做是为了防止`CStringT`从被多次定义。
 
 > [!NOTE]
->  如果你的代码包含中所述的链接器错误的解决方法[Linking Errors When You Import CString-Derived 类"(Q309801)](https://support.microsoft.com/help/309801/you-may-receive-an-lnk2019-error-message-when-you-build-a-visual-c-200)，应删除该代码。 不再需要它。
+>  如果你的代码包含中所述的链接器错误的解决方法[使用 CStringT 导出字符串类](../../atl-mfc-shared/exporting-string-classes-using-cstringt.md)，应删除该代码。 不再需要它。
 
 下面的字符串类型可用于基于 MFC 的应用程序中：
 

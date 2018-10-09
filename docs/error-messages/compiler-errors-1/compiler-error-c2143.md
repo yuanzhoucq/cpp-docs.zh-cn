@@ -16,20 +16,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c6352c87748bafa635d8d6dae29bf37b78ac6c1
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 5c729ecbdea13c36cf5df71efa16d12853fc4433
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46041982"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890489"
 ---
 # <a name="compiler-error-c2143"></a>编译器错误 C2143
 
 语法错误： 缺少 token1 之前 token2
 
 编译器需要特定的标记 （即，空白区域以外的语言元素），但发现另一个标记。
-
-有关此错误的信息时它发生在使用 try 函数块时，请参阅[知识库文章 241706](http://support.microsoft.com/kb/241706)。
 
 检查[c + + 语言参考](../../cpp/cpp-language-reference.md)以确定代码是否语法不正确。 因为编译器可能会报告此错误，在遇到导致问题的行之后，检查代码的多个错误之前的行。
 

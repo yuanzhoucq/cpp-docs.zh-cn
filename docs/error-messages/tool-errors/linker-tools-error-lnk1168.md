@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0910c23202b975999e10ef2effaebc470c62fb9d
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: e8b9f8614feb98f7e21392565aa610b7d42cd512
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821070"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890160"
 ---
 # <a name="linker-tools-error-lnk1168"></a>链接器工具错误 LNK1168
 
@@ -38,7 +38,3 @@ ms.locfileid: "48821070"
 如果文件被搜索索引服务锁定，则可通过从自动索引中排除生成输出目录来修复此问题。 有关详细信息，请参考索引服务的文档。 若要更改 Windows 搜索索引服务，请使用**索引选项**在 Windows 中**控制面板**。 有关详细信息，请参阅[使用索引改进 Windows 搜索： 常见问题](http://windows.microsoft.com/windows/improve-windows-searches-using-index-faq#1TC=windows-7)。
 
 如果可执行文件无法被生成进程覆盖，则可能被文件资源管理器锁定。 如果**应用程序体验**服务已被禁用，文件资源管理器可能保持的可执行文件句柄锁长一段时间。 若要解决此问题，请运行**services.msc** ，然后打开**属性**对话框**应用程序体验**服务。 更改**启动类型**从**禁用**到**手动**。
-
-## <a name="see-also"></a>请参阅
-
-[当你尝试生成解决方案或在 Visual c + + 中的 ActiveX 项目时，可能会收到"错误 PRJ0008"严重错误 LNK1168"错误消息](http://support.microsoft.com/kb/308358)

@@ -104,12 +104,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2935ac160f5d778faf119390d1f023d00d6d322b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d4ae42373ddf70cf4945c540e781397d7d67bd21
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448540"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890746"
 ---
 # <a name="cedit-class"></a>CEdit Class
 
@@ -225,11 +225,7 @@ class CEdit : public CWnd
 
 若要修改某些样式 （如 ES_READONLY) 的编辑控件中必须将特定消息发送到控件而不是使用[ModifyStyle](cwnd-class.md#modifystyle)。 请参阅[编辑控件样式](/windows/desktop/Controls/edit-control-styles)Windows SDK 中。
 
-有关详细信息`CEdit`，请参阅：
-
-- [控件](../../mfc/controls-mfc.md)
-
-- 知识库文章 Q259949： 信息： SetCaretPos() 是不适合使用 CEdit 或 CRichEditCtrl 控件
+有关详细信息`CEdit`，请参阅[控件](../../mfc/controls-mfc.md)。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -1014,7 +1010,7 @@ void ReplaceSel(LPCTSTR lpszNewText, BOOL bCanUndo = FALSE);
 指向包含替换文本的以 null 结尾的字符串。
 
 *bCanUndo*<br/>
-若要指定此函数可撤消，设置此参数的值为 TRUE。 默认值为 FALSE。
+若要指定此函数可撤消，设置此参数的值为 TRUE。 默认值是 FALSE。
 
 ### <a name="remarks"></a>备注
 
@@ -1051,7 +1047,7 @@ BOOL SetCueBanner(
 
 如果为 TRUE，即使在控件有焦点时绘制提示标志。 当用户开始在控件中键入时，提示标志将消失。
 
-默认值为 FALSE。
+默认值是 FALSE。
 
 ### <a name="return-value"></a>返回值
 

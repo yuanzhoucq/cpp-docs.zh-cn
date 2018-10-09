@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f91ec33db2d3a7b6772556233a3c99b501ede76
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: b0cd401aa1ee3611befb39d630f48f6aed36211c
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46017334"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48889941"
 ---
 # <a name="compiler-error-c2555"></a>编译器错误 C2555
 
@@ -43,11 +43,9 @@ is
 Guid CheckSources(Guid sourceID, Guid carouselIDs[]) [];
 ```
 
-C2555 的详细信息，请参阅知识库文章 Q240862。
-
 下面的示例生成 C2555:
 
-```
+```cpp
 // C2555.cpp
 // compile with: /c
 struct X {

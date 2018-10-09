@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d23a9be38ebb870adf098b34fac79afff6345cd8
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 660b2fc2f6ece6f60ff7bd1868b3a65bc8f045c1
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46394733"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890031"
 ---
 # <a name="mfc-com"></a>MFC COM
 
@@ -57,8 +57,6 @@ Active 技术包括客户端和服务器技术，包括以下：
 - 本部分还介绍如何编写使用 MFC，例如，在 COM 组件[连接点](../mfc/connection-points.md)。
 
 什么仍然会调用 OLE 与现在称为 active 技术的讨论，请参阅主题上[OLE](../mfc/ole-in-mfc.md)。
-
-此外，请参阅知识库文章 Q248019： 如何： 防止服务器忙对话框框中使其不显示期间耗时较长 COM 操作。
 
 ## <a name="in-this-section"></a>本节内容
 

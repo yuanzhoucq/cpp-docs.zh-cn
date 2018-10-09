@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc42cd1eab4f19c8184ad500b4a4a1871747d6aa
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 9a68a0ae6392c2a9a64c9ff6c567451c2672c861
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45713084"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890187"
 ---
 # <a name="dll-frequently-asked-questions"></a>DLL 常见问题
 
@@ -39,7 +39,7 @@ ms.locfileid: "45713084"
 
 ## <a name="mfc_multithreaded_1"></a> 非 MFC DLL 是否可以创建多个线程？
 
-不同的是在初始化期间，MFC DLL 可以安全地创建多个线程，只要它使用本地存储 (TLS) 之类的函数的 Win32 线程**TlsAlloc**分配线程本地存储区。 但是，如果使用非 MFC DLL **__declspec （thread)** 分配线程本地存储区，客户端应用程序必须隐式链接到 DLL。 如果客户端应用程序显式链接到 DLL 时，调用**LoadLibrary**则无法成功加载 DLL。 有关创建 MFC Dll 内的多个线程的详细信息，请参阅知识库文章"PRB:: 调用 LoadLibrary() 到加载 DLL，具有静态 TLS"(Q118816)。 有关 Dll 中的线程本地变量的详细信息，请参阅[线程](../cpp/thread.md)。
+不同的是在初始化期间，MFC DLL 可以安全地创建多个线程，只要它使用本地存储 (TLS) 之类的函数的 Win32 线程**TlsAlloc**分配线程本地存储区。 但是，如果使用非 MFC DLL **__declspec （thread)** 分配线程本地存储区，客户端应用程序必须隐式链接到 DLL。 如果客户端应用程序显式链接到 DLL 时，调用**LoadLibrary**则无法成功加载 DLL。 有关 Dll 中的线程本地变量的详细信息，请参阅[线程](../cpp/thread.md)。
 
 在启动期间创建一个新的 MFC 线程非 MFC DLL 将停止响应的应用程序加载时。 这包括通过调用创建一个线程只要`AfxBeginThread`或`CWinThread::CreateThread`内：
 
@@ -49,13 +49,11 @@ ms.locfileid: "45713084"
 
 - 提供`DllMain`或**RawDllMain** MFC 扩展 DLL 中的函数。
 
-有关在初始化期间创建的线程的详细信息，请参阅知识库文章"PRB:: 无法创建 MFC 线程在 DLL 启动"(Q142243)。
-
 ## <a name="mfc_multithreaded_2"></a> 多线程应用程序可以访问在不同线程中非 MFC DLL？
 
 多线程应用程序可以访问来自不同线程动态链接到 MFC 的规则 MFC Dll 和 MFC 扩展 Dll。 和截至 Visual c + + 4.2 版开始，应用程序可以访问从应用程序中创建的多个线程，静态链接到 MFC 的规则 MFC Dll。
 
-之前的版本 4.2，只有一个外部线程可以将附加到静态链接到 MFC 的规则 MFC DLL。 有关限制访问静态 （在 Visual c + + 4.2 版开始） 之前的多个线程从链接到 MFC 的规则 MFC Dll 的详细信息，请参阅知识库文章中，"多个线程和 MFC _USRDLLs"(Q122676)。
+之前的版本 4.2，只有一个外部线程可以将附加到静态链接到 MFC 的规则 MFC DLL。
 
 请注意，术语 USRDLL 不再使用 Visual c + + 文档中。 静态链接到 MFC 的规则 MFC DLL 具有 usrdll 相同的特性。
 

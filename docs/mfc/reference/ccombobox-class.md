@@ -118,12 +118,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03d418fc45d3947248c78d70af5d036bd93b204d
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 912bbd37d4d9afcb60158d41b82b7fa829eeb4ec
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821499"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890642"
 ---
 # <a name="ccombobox-class"></a>CComboBox 类
 
@@ -147,7 +147,7 @@ class CComboBox : public CWnd
 
 |名称|描述|
 |----------|-----------------|
-|[Ccombobox:: Addstring](#addstring)|将字符串添加到列表框中的一个组合框，或在列表框使用 CBS_SORT 样式的排序位置列表的末尾。|
+|[CComboBox::AddString](#addstring)|将字符串添加到列表框中的一个组合框，或在列表框使用 CBS_SORT 样式的排序位置列表的末尾。|
 |[CComboBox::Clear](#clear)|删除 （清除） 当前选定内容，如果有，编辑控件中。|
 |[CComboBox::CompareItem](#compareitem)|由框架调用以确定新列表项的已排序的所有者描述的组合框中的相对位置。|
 |[CComboBox::Copy](#copy)|复制当前所选内容，如果有，CF_TEXT 格式在剪贴板上。|
@@ -256,7 +256,7 @@ class CComboBox : public CWnd
 
 如果在嵌入`CComboBox`对象在另一个窗口中的对象，不需要将其销毁。 如果您创建`CComboBox`对象在堆栈上被自动销毁。 如果您创建`CComboBox`通过使用堆上的对象**新**函数，必须调用**删除**上要销毁 Windows 组合框时对其进行销毁的对象。
 
-**请注意**如果你想要处理 WM_KEYDOWN 和 WM_CHAR 消息，则必须为子类组合框的编辑和列表框控件中，派生类从`CEdit`和`CListBox`，并将这些消息的处理程序添加到派生的类。 有关详细信息，请参阅[ http://support.microsoft.com/default.aspxscid=kb;Q174667](http://support.microsoft.com/default.aspxscid=kb;q174667)并[CWnd::SubclassWindow](../../mfc/reference/cwnd-class.md#subclasswindow)。
+**请注意**如果你想要处理 WM_KEYDOWN 和 WM_CHAR 消息，则必须为子类组合框的编辑和列表框控件中，派生类从`CEdit`和`CListBox`，并将这些消息的处理程序添加到派生的类。 有关详细信息，请参阅[CWnd::SubclassWindow](../../mfc/reference/cwnd-class.md#subclasswindow)。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -1070,7 +1070,7 @@ int InsertString(
 
 ### <a name="remarks"></a>备注
 
-与不同[AddString](#addstring)成员函数`InsertString`成员函数不会导致与列表[CBS_SORT](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles)样式进行排序。
+与 [AddString](#addstring) 成员函数不同， `InsertString` 成员函数不会导致对一个列表的 [CBS_SORT](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) 样式进行排序。
 
 > [!NOTE]
 >  此函数不受 Windows`ComboBoxEx`控件。 有关此控件的详细信息，请参阅[ComboBoxEx 控件](/windows/desktop/Controls/comboboxex-controls)Windows SDK 中。

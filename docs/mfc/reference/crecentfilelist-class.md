@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a6ac97eaa55dde337068e450c0223b4ec4409f8
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1394c3c614d80a07bfea7f411576d5b303d67da8
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46393303"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890596"
 ---
 # <a name="crecentfilelist-class"></a>CRecentFileList 类
 
@@ -78,10 +78,6 @@ class CRecentFileList
 ## <a name="remarks"></a>备注
 
 可以添加到文件，或将其从 MRU 文件列表中删除，可以读取或写入注册表的文件列表或。可以更新 INI 文件，并显示 MRU 文件列表的菜单。
-
-MRU 菜单项的详细信息，请参阅
-
-- 知识库文章 Q243751： 如何： 为 MFC 应用程序中的 MRU 菜单项添加命令处理程序
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
