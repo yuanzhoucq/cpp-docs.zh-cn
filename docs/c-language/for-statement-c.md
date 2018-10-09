@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f0090195506e26cab165e3ddadca0342c0b35b6
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a6ad4b23e6caef15b5dabaaa3102d72e3ff84fbc
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46084050"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860584"
 ---
 # <a name="for-statement-c"></a>for 语句 (C)
 
@@ -34,7 +34,7 @@ ms.locfileid: "46084050"
 
 1. 将计算 *init-expression*（如果有）。 这将为循环指定初始化。 对 *init-expression* 的类型没有限制。
 
-2. 将计算 *cond-expression*（如果有）。 此表达式必须具有算法或指针类型。 它在每次迭代前计算。 可能有三个结果：
+1. 将计算 *cond-expression*（如果有）。 此表达式必须具有算法或指针类型。 它在每次迭代前计算。 可能有三个结果：
 
    - 如果 *cond-expression* 为 **true**（非零），则执行语句，然后计算 *loop-expression*（若有）。 在每次迭代之后，将计算 *loop-expression*。 对其类型没有限制。 副作用将按顺序执行。 该过程随后从计算 *cond-expression* 重新开始。
 
