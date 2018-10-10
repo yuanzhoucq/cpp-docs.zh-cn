@@ -274,12 +274,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a93294e955dcdc04b320302c573dcbbb827670d
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: c530a9853aad3e16e5e4094f4d90e30c2643c0d8
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821561"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890889"
 ---
 # <a name="clistctrl-class"></a>CListCtrl 类
 
@@ -457,12 +457,6 @@ class CListCtrl : public CWnd
 - 报表视图
 
      每个项将显示在其自己的行，在右侧列中排列的其他信息。 最左侧列包含的小图标和标签，并且后续列都包含由应用程序指定的子项。 内嵌的标题控件 (类[CHeaderCtrl](../../mfc/reference/cheaderctrl-class.md)) 实现这些列。 标头控件和报表视图中的列的详细信息，请参阅[使用 CListCtrl： 控件 （报表视图） 中添加列](../../mfc/adding-columns-to-the-control-report-view.md)。
-
-另请参见：
-
-- 知识库文章 Q250614： 如何： 在报表视图中 CListCtrl 中的排序项
-
-- 知识库文章 Q200054: PRB: OnTimer() 是不调用重复列表控件
 
 控件的当前列表视图的样式确定当前的视图。 这些样式和其使用情况的详细信息，请参阅[使用 CListCtrl： 更改列表控件样式](../../mfc/changing-list-control-styles.md)。
 

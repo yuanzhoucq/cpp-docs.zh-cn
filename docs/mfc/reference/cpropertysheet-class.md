@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ec12275291321751c539d095c60fa9dabffa2b7
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 50b1816320521f8ad20ee64fc4a051f938e902ec
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46445173"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890772"
 ---
 # <a name="cpropertysheet-class"></a>CPropertySheet 类
 
@@ -155,7 +155,7 @@ class CPropertySheet : public CWnd
 
 若要创建向导类型对话框，请按照你创建的标准属性表，但调用时要遵循的相同步骤[SetWizardMode](#setwizardmode)在调用之前[DoModal](#domodal)。 若要启用的向导按钮，调用[SetWizardButtons](#setwizardbuttons)，使用标志自定义其功能和外观。 若要启用**完成**按钮，调用[SetFinishText](#setfinishtext)用户已在向导的最后一页上执行操作之后。
 
-有关如何使用详细信息`CPropertySheet`对象，请参阅文章[属性表和属性页](../../mfc/property-sheets-and-property-pages-in-mfc.md)。 此外，请参阅知识库文章 Q146916： 如何： 使用标准按钮创建无模式 CPropertySheet，且项目 Q300606： 如何： 设计可调整大小的 MFC 属性表。
+有关如何使用详细信息`CPropertySheet`对象，请参阅文章[属性表和属性页](../../mfc/property-sheets-and-property-pages-in-mfc.md)。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
