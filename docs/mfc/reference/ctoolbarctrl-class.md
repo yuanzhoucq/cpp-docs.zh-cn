@@ -192,12 +192,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c5a71e6f358a682adad2d12f7b567dc0bad3d0f3
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 2473f33508274bb0f0aa9aebcb462973ec80b267
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861872"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890811"
 ---
 # <a name="ctoolbarctrl-class"></a>CToolBarCtrl 类
 
@@ -731,8 +731,6 @@ void Customize();
 ### <a name="remarks"></a>备注
 
 此对话框允许用户自定义工具栏，通过添加和删除按钮。 若要支持自定义，工具栏的父窗口必须处理自定义通知消息中所述[处理自定义通知](../../mfc/handling-customization-notifications.md)。 您的工具栏必须也已创建具有 CCS_ADJUSTABLE 样式中所述[CToolBarCtrl::Create](#create)。
-
-有关详细信息，请参阅知识库文章 Q241850: PRB: CToolBarCtrl::Customize 不会保留到自定义对话框可见调用。
 
 ##  <a name="deletebutton"></a>  CToolBarCtrl::DeleteButton
 

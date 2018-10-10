@@ -344,12 +344,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 292121e95b20061e95e85b49c60d4758bd18a568
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 160d9857097c4cac1912d2ca44b0433905c238f5
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46435527"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890863"
 ---
 # <a name="colecontrol-class"></a>COleControl 类
 
@@ -957,7 +957,7 @@ virtual void DoPropExchange(CPropExchange* pPX);
 ### <a name="parameters"></a>参数
 
 *pPX*<br/>
-一个指向`CPropExchange`对象。 框架提供了此对象以建立的上下文属性 exchange，包括其方向。
+指向 `CPropExchange` 对象的指针。 框架提供了此对象以建立的上下文属性 exchange，包括其方向。
 
 ### <a name="remarks"></a>备注
 
@@ -1093,7 +1093,7 @@ BOOL ExchangeVersion(
 ### <a name="parameters"></a>参数
 
 *pPX*<br/>
-一个指向`CPropExchange`对象。 框架提供了此对象以建立的上下文属性 exchange，包括其方向。
+指向 `CPropExchange` 对象的指针。 框架提供了此对象以建立的上下文属性 exchange，包括其方向。
 
 *dwVersionDefault*<br/>
 控件的当前版本号。
@@ -2158,7 +2158,7 @@ BOOL IsInvokeAllowed(DISPID dispid);
 
 ### <a name="remarks"></a>备注
 
-框架的实现`IDispatch::Invoke`调用`IsInvokeAllowed`若要确定给定的函数 (由标识`dispid`) 可能会调用。 OLE 控件的默认行为是允许仅当控件已初始化; 调用自动化方法但是，`IsInvokeAllowed`是虚拟函数，可以被重写如有必要 （例如，当控件用作自动化服务器）。 有关详细信息，请参阅知识库文章 Q166472，"如何： 使用 OLE 控件作为自动化服务器。" 知识库文章位于[ http://support.microsoft.com ](http://support.microsoft.com/)。
+框架的实现`IDispatch::Invoke`调用`IsInvokeAllowed`若要确定给定的函数 (由标识`dispid`) 可能会调用。 OLE 控件的默认行为是允许仅当控件已初始化; 调用自动化方法但是，`IsInvokeAllowed`是虚拟函数，可以被重写如有必要 （例如，当控件用作自动化服务器）。
 
 ##  <a name="ismodified"></a>  COleControl::IsModified
 
