@@ -41,12 +41,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: faf3080c6363ef0227b71e550ff658b1790d37b9
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 519837379369f08108d3d5b5b300fe0bcb9ac5e7
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46090693"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083809"
 ---
 # <a name="ccommodule-class"></a>CComModule 类
 
@@ -386,7 +386,7 @@ HRESULT RegisterClassObjects(DWORD dwClsContext, DWORD dwFlags) throw();
 ### <a name="parameters"></a>参数
 
 *dwClsContext*<br/>
-[in]指定在其中运行的类对象的上下文。 可能的值为 CLSCTX_INPROC_SERVER、 CLSCTX_INPROC_HANDLER 或 CLSCTX_LOCAL_SERVER。 有关这些值的说明，请参阅[CLSCTX](https://msdn.microsoft.com/library/windows/desktop/ms693716) Windows SDK 中。
+[in]指定在其中运行的类对象的上下文。 可能的值为 CLSCTX_INPROC_SERVER、 CLSCTX_INPROC_HANDLER 或 CLSCTX_LOCAL_SERVER。 有关这些值的说明，请参阅[CLSCTX](/windows/desktop/api/wtypesbase/ne-wtypesbase-tagclsctx) Windows SDK 中。
 
 *dwFlags*<br/>
 [in]确定指向类对象的连接类型。 可能的值为 REGCLS_SINGLEUSE、 REGCLS_MULTIPLEUSE 或 REGCLS_MULTI_SEPARATE。 有关这些值的说明，请参阅[结合](/windows/desktop/api/combaseapi/ne-combaseapi-tagregcls)Windows SDK 中。
@@ -412,7 +412,7 @@ HRESULT RegisterServer(
 ### <a name="parameters"></a>参数
 
 *bRegTypeLib*<br/>
-[in]指示是否将已注册类型库。 默认值为 FALSE。
+[in]指示是否将已注册类型库。 默认值是 FALSE。
 
 *pCLSID*<br/>
 [in]指向要注册的对象的 CLSID。 如果将注册为 NULL （默认值），在对象映射中的所有对象。

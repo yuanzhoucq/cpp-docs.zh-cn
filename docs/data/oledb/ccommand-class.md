@@ -60,12 +60,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e9cc04c6d9e270e0c3b5c3bd02e05b426ccf4c53
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: de27441658c4c0537384447028a0383a0d87756b
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46060923"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083256"
 ---
 # <a name="ccommand-class"></a>CCommand 类
 
@@ -86,13 +86,13 @@ class CCommand :
 ### <a name="parameters"></a>参数  
 
 *TAccessor*<br/>
-您希望命令使用的访问器类的类型（如 `CDynamicParameterAccessor`、`CDynamicStringAccessor` 或 `CEnumeratorAccessor`）。 默认值为 `CNoAccessor`，它指定该类不支持参数或输出列。  
+你希望命令使用的访问器类的类型（如 `CDynamicParameterAccessor`、`CDynamicStringAccessor` 或 `CEnumeratorAccessor`）。 默认值为 `CNoAccessor`，它指定该类不支持参数或输出列。  
   
 *TRowset*<br/>
 您希望命令使用的行集类的类型（如 `CArrayRowset` 或 `CNoRowset`）。 默认值为 `CRowset`。  
   
 *TMultiple*<br/>
-若要使用 OLE DB 命令可以返回多个结果，指定[CMultipleResults](../../data/oledb/cmultipleresults-class.md)。 否则，请使用[CNoMultipleResults](../../data/oledb/cnomultipleresults-class.md)。 有关详细信息，请参阅[IMultipleResults](/previous-versions/windows/desktop/ms721289\(v=vs.85\))。  
+若要使用 OLE DB 命令可以返回多个结果，指定[CMultipleResults](../../data/oledb/cmultipleresults-class.md)。 否则，请使用[CNoMultipleResults](../../data/oledb/cnomultipleresults-class.md)。 有关详细信息，请参阅[IMultipleResults](/previous-versions/windows/desktop/ms721289)。  
 
 ## <a name="requirements"></a>要求  
 
@@ -144,7 +144,7 @@ void Close();
   
 在执行命令时，应将同时调用`Close`并[ReleaseCommand](../../data/oledb/ccommand-releasecommand.md)的命令。  
   
-当您要重复执行同一命令时，您应通过在调用 `Close` 之前调用 `Execute` 来发布每个结果集访问器。 在序列末尾，应通过调用 `ReleaseCommand` 发布参数访问器。 另一种常见情形是调用具有输出参数的存储过程。 在很多提供程序（如 SQL Server 的 OLE DB 提供程序）上，输出参数值在你关闭结果集访问器前不可访问。 调用 `Close` 以关闭返回的行集和结果集访问器而不返回参数访问器，从而让您检索输出参数值。  
+当你要重复执行同一命令时，你应通过在调用 `Close` 之前调用 `Execute` 来发布每个结果集访问器。 在序列末尾，应通过调用 `ReleaseCommand` 发布参数访问器。 另一种常见情形是调用具有输出参数的存储过程。 在很多提供程序（如 SQL Server 的 OLE DB 提供程序）上，输出参数值在你关闭结果集访问器前不可访问。 调用 `Close` 以关闭返回的行集和结果集访问器而不返回参数访问器，从而让你检索输出参数值。  
   
 ### <a name="example"></a>示例  
 
@@ -224,13 +224,13 @@ HRESULT Open(DBPROPSET *pPropSet = NULL,
 [in]在其中执行命令会话。  
   
 *wszCommand*<br/>
-[in]若要执行，该命令传递为 Unicode 字符串。 使用时，可以为 NULL `CAccessor`，在这种情况下该命令将检索传递给的值从[DEFINE_COMMAND](../../data/oledb/define-command.md)宏。 请参阅[icommand:: Execute](/previous-versions/windows/desktop/ms718095\(v=vs.85\))中*OLE DB 程序员参考*有关详细信息。  
+[in]若要执行，该命令传递为 Unicode 字符串。 使用时，可以为 NULL `CAccessor`，在这种情况下该命令将检索传递给的值从[DEFINE_COMMAND](../../data/oledb/define-command.md)宏。 请参阅[icommand:: Execute](/previous-versions/windows/desktop/ms718095)中*OLE DB 程序员参考*有关详细信息。  
   
 *szCommand*<br/>
 [in]与相同*wszCommand*只不过此参数采用 ANSI 命令字符串。 此方法的第四个窗体可以采用 NULL 值。 有关详细信息的本主题中的更高版本，请参阅"备注"。  
   
 *pPropSet*<br/>
-[in]指向数组的指针[DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\))结构包含要设置属性和值。 请参阅[属性设置和属性组](/previous-versions/windows/desktop/ms713696\(v=vs.85\))中*OLE DB 程序员参考*Windows SDK 中。  
+[in]指向数组的指针[DBPROPSET](/previous-versions/windows/desktop/ms714367)结构包含要设置属性和值。 请参阅[属性设置和属性组](/previous-versions/windows/desktop/ms713696)中*OLE DB 程序员参考*Windows SDK 中。  
   
 *pRowsAffected*<br/>
 [输入/输出]指向内存位置返回受命令影响的行数的指针。 如果 *\*pRowsAffected*为 NULL，会返回任何行。 否则为`Open`设置 *\*pRowsAffected*根据以下条件：  
@@ -242,13 +242,13 @@ HRESULT Open(DBPROPSET *pPropSet = NULL,
 |该命令不会更新、 删除或插入行|*\*pRowsAffected*是不确定的。|  
   
 *guidCommand*<br/>
-[in]分析命令文本中指定的语法和一般规则要使用的提供程序的 GUID。 请参阅[ICommandText::GetCommandText](/previous-versions/windows/desktop/ms709825\(v=vs.85\))并[icommandtext:: Setcommandtext](/previous-versions/windows/desktop/ms709757\(v=vs.85\))中*OLE DB 程序员参考*有关详细信息。  
+[in]分析命令文本中指定的语法和一般规则要使用的提供程序的 GUID。 请参阅[ICommandText::GetCommandText](/previous-versions/windows/desktop/ms709825)并[icommandtext:: Setcommandtext](/previous-versions/windows/desktop/ms709757)中*OLE DB 程序员参考*有关详细信息。  
   
 *bBind*<br/>
 [in]指定是否正在执行后自动绑定命令。 默认值是 **，则返回 true**，这将导致自动绑定的命令。 设置*bBind*到**false**可防止自动绑定命令，以便您可以手动绑定。 （手动绑定是 OLAP 用户特别关注。）  
   
 *ulPropSets*<br/>
-[in]数[DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\))结构传入*pPropSet*参数。  
+[in]数[DBPROPSET](/previous-versions/windows/desktop/ms714367)结构传入*pPropSet*参数。  
   
 ### <a name="return-value"></a>返回值  
 
@@ -271,7 +271,7 @@ HRESULT Open(DBPROPSET *pPropSet = NULL,
 
 ## <a name="create"></a> Ccommand:: Create
 
-调用[ccommand:: Createcommand](../../data/oledb/ccommand-createcommand.md)命令创建为指定的会话，然后调用[icommandtext:: Setcommandtext](/previous-versions/windows/desktop/ms709825\(v=vs.85\))指定的命令文本。  
+调用[ccommand:: Createcommand](../../data/oledb/ccommand-createcommand.md)命令创建为指定的会话，然后调用[icommandtext:: Setcommandtext](/previous-versions/windows/desktop/ms709825)指定的命令文本。  
   
 ### <a name="syntax"></a>语法  
   
@@ -297,7 +297,7 @@ HRESULT CCommandBase::Create(const CSession& session,
 [in]ANSI 的文本命令字符串的指针。  
   
 *guidCommand*<br/>
-[in]分析命令文本中指定的语法和一般规则要使用的提供程序的 GUID。 本地语言的说明，请参阅[ICommandText::GetCommandText](/previous-versions/windows/desktop/ms709825\(v=vs.85\))中*OLE DB 程序员参考*。  
+[in]分析命令文本中指定的语法和一般规则要使用的提供程序的 GUID。 本地语言的说明，请参阅[ICommandText::GetCommandText](/previous-versions/windows/desktop/ms709825)中*OLE DB 程序员参考*。  
   
 ### <a name="return-value"></a>返回值  
 
@@ -344,7 +344,7 @@ HRESULT CCommandBase::GetParameterInfo(DB_UPARAMS* pParams,
   
 #### <a name="parameters"></a>参数  
 
-请参阅[icommandwithparameters:: Getparameterinfo](/previous-versions/windows/desktop/ms714917\(v=vs.85\))中*OLE DB 程序员参考*。  
+请参阅[icommandwithparameters:: Getparameterinfo](/previous-versions/windows/desktop/ms714917)中*OLE DB 程序员参考*。  
   
 ### <a name="return-value"></a>返回值  
 
@@ -371,7 +371,7 @@ HRESULT CCommandBase::Prepare(ULONG cExpectedRuns = 0) throw();
   
 ### <a name="remarks"></a>备注  
 
-此方法将 OLE DB 方法包装[icommandprepare:: Prepare](/previous-versions/windows/desktop/ms718370\(v=vs.85\))。  
+此方法将 OLE DB 方法包装[icommandprepare:: Prepare](/previous-versions/windows/desktop/ms718370)。  
 
 ## <a name="releasecommand"></a> Ccommand:: Releasecommand
 
@@ -401,7 +401,7 @@ HRESULT CCommandBase::SetParameterInfo(DB_UPARAMS ulParams,
   
 #### <a name="parameters"></a>参数  
 
-请参阅[icommandwithparameters:: Setparameterinfo](/previous-versions/windows/desktop/ms725393\(v=vs.85\))中*OLE DB 程序员参考*。  
+请参阅[icommandwithparameters:: Setparameterinfo](/previous-versions/windows/desktop/ms725393)中*OLE DB 程序员参考*。  
   
 ### <a name="return-value"></a>返回值  
 
@@ -423,7 +423,7 @@ HRESULT CCommandBase::Unprepare() throw();
   
 ### <a name="remarks"></a>备注  
 
-此方法将 OLE DB 方法包装[icommandprepare:: Unprepare](/previous-versions/windows/desktop/ms719635\(v=vs.85\))。 
+此方法将 OLE DB 方法包装[icommandprepare:: Unprepare](/previous-versions/windows/desktop/ms719635)。 
   
 ## <a name="see-also"></a>请参阅  
 

@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0ddfd6de46d6d0700265f5308f06458b3cdd984a
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: b2870aa742806671e39728c3b73604dcf4e810e9
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43677822"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083081"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>C++ 中 Windows 编程概述
 
@@ -54,11 +54,11 @@ UWP 应用程序均可在所有 Windows 10 设备，例如平板电脑和移动�
 
 有关详细信息 UWP 一般情况下，请参阅[通用 Windows 平台 (UWP) 应用是什么？](/windows/uwp/get-started/whats-a-uwp)。
 
-所有这些概念的详细信息，请参阅[Windows 通用应用指南](http://go.microsoft.com/fwlink/p/?linkid=534605)。
+有关所有这些概念的详细信息，请参阅 [Windows 通用应用指南](http://go.microsoft.com/fwlink/p/?linkid=534605)。
 
 ##  <a name="BK_Native"></a> 桌面和服务器应用程序
 
-若要了解桌面 Windows 客户端应用程序的基础知识，请参阅[c + + 中开发 Windows 应用程序](https://msdn.microsoft.com/vstudio//hh304489)并[c + + 中 Windows 编程介绍](https://msdn.microsoft.com/library/windows/desktop/ff381398\(v=vs.85\).aspx)。
+若要了解桌面 Windows 客户端应用程序的基础知识，请参阅 [使用 C++ 开发 Windows 应用程序](https://msdn.microsoft.com/vstudio//hh304489) 和 [使用 C++ 的 Windows 编程介绍](https://msdn.microsoft.com/library/windows/desktop/ff381398)。
 
 在 Windows 10 中，您可以使用 Visual c + + 创建多种桌面程序：
 
@@ -68,7 +68,7 @@ UWP 应用程序均可在所有 Windows 10 设备，例如平板电脑和移动�
 
 - 在.NET Framework 运行企业和业务线应用程序。 大多数.NET Framework 应用程序是用 C# 或 Visual Basic。 您可以使用 C + + /cli CLI，若要创建启用.NET 代码，以使用本机 c + + 库的互操作层。 有关详细信息，请参阅[.NET 编程使用 C + + /cli （Visual c + +）](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)。
 
-- 在本机代码中运行的 SQL 数据库客户端。 有关详细信息，请参阅[SQL Server Native Client](/sql/relational-databases/native-client/odbc/sql-server-native-client-odbc)。
+- 在本机代码中运行的 SQL 数据库客户端。 有关详细信息，请参阅 [SQL Server Native Client](/sql/relational-databases/native-client/odbc/sql-server-native-client-odbc)。
 
 - Microsoft Office 应用程序的外接程序。 有关详细信息，请参阅 [为 Outlook 2010 构建 C++ 外接程序](http://go.microsoft.com/fwlink/p/?LinkId=256420)
 
@@ -76,7 +76,7 @@ UWP 应用程序均可在所有 Windows 10 设备，例如平板电脑和移动�
 
 - Windows 服务。 有关详细信息，请参阅 [Introduction to Windows Service Applications](/dotnet/framework/windows-services/introduction-to-windows-service-applications)。
 
-你可以使用 Visual C++ 在 Win32 DLL 或 COM DLL 中打包绝大多数自定义高性能功能，这些功能可供 C++ 应用或使用其他语言（例如，C# 或 Visual Basic）编写的应用使用。 有关 Win32 DLL 的详细信息，请参阅 [DLLs in Visual C++](../build/dlls-in-visual-cpp.md)。 有关 COM 开发的详细信息，请参阅[组件对象模型 (COM)](/windows/desktop/com/component-object-model--com--portal)。
+你可以使用 Visual C++ 在 Win32 DLL 或 COM DLL 中打包绝大多数自定义高性能功能，这些功能可供 C++ 应用或使用其他语言（例如，C# 或 Visual Basic）编写的应用使用。 有关 Win32 DLL 的详细信息，请参阅 [DLLs in Visual C++](../build/dlls-in-visual-cpp.md)。 有关 COM 开发的详细信息，请参阅 [Component Object Model (COM)](/windows/desktop/com/component-object-model--com--portal)。
 
 ## <a name="games"></a>游戏
 

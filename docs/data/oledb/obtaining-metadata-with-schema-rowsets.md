@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 60bed04015060bd65f4d4c771a228e3b50c3486e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 8c4e3003beb0e50887f6b765904095c65dd8f1b6
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46057090"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083653"
 ---
 # <a name="obtaining-metadata-with-schema-rowsets"></a>用架构行集合获取元数据
 
@@ -63,7 +63,7 @@ CRestrictions<CAccessor<CColumnsInfo>
   
 [CRestrictions](../../data/oledb/crestrictions-class.md)类提供了限制支持。 创建架构行集的实例后，调用[crestrictions:: Open](../../data/oledb/crestrictions-open.md)。 此方法返回基于所指定限制的结果集。  
   
-若要指定限制，请参阅[附录 b： 架构行集](/previous-versions/windows/desktop/ms712921\(v=vs.85\))并查找正在使用的行集。 例如，`CColumns`对应于[COLUMNS 行集](/previous-versions/windows/desktop/ms723052\(v%3dvs.85\)); 该主题列出了 COLUMNS 行集中的限制列： TABLE_CATALOG、 TABLE_SCHEMA、 TABLE_NAME、 COLUMN_NAME。 必须遵循此顺序来指定你的限制。  
+若要指定限制，请参阅[附录 b： 架构行集](/previous-versions/windows/desktop/ms712921)并查找正在使用的行集。 例如，`CColumns`对应于[COLUMNS 行集](/previous-versions/windows/desktop/ms723052\(v%3dvs.85\)); 该主题列出了 COLUMNS 行集中的限制列： TABLE_CATALOG、 TABLE_SCHEMA、 TABLE_NAME、 COLUMN_NAME。 必须遵循此顺序来指定你的限制。  
   
 因此，例如，如果你想要按表名称限制，注意 TABLE_NAME 是第三个限制列，然后调用`Open`，所需的表名指定为第三个限制参数，如以下示例所示。  
   
@@ -93,7 +93,7 @@ CRestrictions<CAccessor<CColumnsInfo>
   
 有关架构行集的引用，typedef 类中提供的 OLE DB 模板 (请参阅[架构行集类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md))。  
   
-有关 OLE DB 架构行集，包括限制列的详细信息请参阅[附录 b： 架构行集](/previous-versions/windows/desktop/ms712921\(v=vs.85\))中的 OLE DB 程序员参考。  
+有关 OLE DB 架构行集，包括限制列的详细信息请参阅[附录 b： 架构行集](/previous-versions/windows/desktop/ms712921)中的 OLE DB 程序员参考。  
   
 有关如何使用架构行集类的更复杂的示例，请参阅[CatDB](https://github.com/Microsoft/VCSamples)并[DBViewer](https://github.com/Microsoft/VCSamples)示例。  
   

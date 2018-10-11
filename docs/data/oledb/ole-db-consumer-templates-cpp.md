@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 18bbcf64bc76d26535f9a5c2c51229048422af56
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: b22f97401900a24ae864174872027b18509dfe0c
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46021572"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082418"
 ---
 # <a name="ole-db-consumer-templates-c"></a>OLE DB 使用者模板 (C++)
 
@@ -35,7 +35,7 @@ OLE DB 使用者模板支持 OLE DB 2.6 版规范。 （OLE DB 使用者模板�
   
 - 用于 OLE DB 编程的本机 C/C++ 数据类型。  
   
-要使用 OLE DB 模板，应熟悉 C++ 模板、COM 和 OLE DB 接口。 如果您不熟悉 OLE DB，请参阅[OLE DB 程序员参考](/previous-versions/windows/desktop/ms718124\(v=vs.85\))。  
+要使用 OLE DB 模板，应熟悉 C++ 模板、COM 和 OLE DB 接口。 如果不熟悉 OLE DB，请参阅 [OLE DB 程序员参考](/previous-versions/windows/desktop/ms718124)。  
   
 OLE DB 模板支持现有 OLE DB 对象模型而不是添加新的对象模型。 OLE DB 使用者模板中的顶层类并行于 OLE DB 规范中定义的组件。 OLE DB 使用者模板的设计包括高级功能，如行集上的多个访问器。 模板和多重继承的使用可缩小库的规模并让库变得灵活。  
   
@@ -71,5 +71,5 @@ OLE DB 使用者将数据库表中的列与局部变量绑定；它使用 [访�
 
 [OLE DB 编程](../../data/oledb/ole-db-programming.md)<br/>
 [数据访问](../data-access-in-cpp.md)<br/>
-[OLE DB SDK 文档](/previous-versions/windows/desktop/ms722784\(v=vs.85\))   
-[OLE DB 程序员参考](/previous-versions/windows/desktop/ms713643\(v=vs.85\))
+[OLE DB SDK 文档](/previous-versions/windows/desktop/ms722784)   
+[OLE DB 程序员参考](/previous-versions/windows/desktop/ms713643)

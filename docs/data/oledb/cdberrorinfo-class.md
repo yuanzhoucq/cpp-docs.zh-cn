@@ -55,16 +55,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2669f7ff0756c0450e64b1b37624bb95f2c1216e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: dd5b08ed22c715a91a1f9fd97749fa6293fa75bb
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46111285"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49084160"
 ---
 # <a name="cdberrorinfo-class"></a>CDBErrorInfo 类
 
-支持使用 OLE DB 的 OLE DB 错误处理[IErrorRecords](/previous-versions/windows/desktop/ms718112\(v=vs.85\))接口。  
+支持使用 OLE DB 的 OLE DB 错误处理[IErrorRecords](/previous-versions/windows/desktop/ms718112)接口。  
   
 ## <a name="syntax"></a>语法
 
@@ -83,10 +83,10 @@ class CDBErrorInfo
 |||  
 |-|-|  
 |[GetAllErrorInfo](#getallerrorinfo)|返回错误记录中包含的所有错误信息。|  
-|[GetBasicErrorInfo](#getbasicerrorinfo)|调用[IErrorRecords::GetBasicErrorInfo](/previous-versions/windows/desktop/ms723907\(v=vs.85\))返回有关指定的错误的基本信息。|  
-|[GetCustomErrorObject](#getcustomerrorobject)|调用[IErrorRecords::GetCustomErrorObject](/previous-versions/windows/desktop/ms725417\(v=vs.85\))上自定义错误对象返回到接口的指针。|  
-|[GetErrorInfo](#geterrorinfo)|调用[ierrorrecords:: Geterrorinfo](/previous-versions/windows/desktop/ms711230\(v=vs.85\))返回`IErrorInfo`到指定的记录的接口指针。|  
-|[GetErrorParameters](#geterrorparameters)|调用[IErrorRecords::GetErrorParameters](/previous-versions/windows/desktop/ms715793\(v=vs.85\))返回错误参数。|  
+|[GetBasicErrorInfo](#getbasicerrorinfo)|调用[IErrorRecords::GetBasicErrorInfo](/previous-versions/windows/desktop/ms723907)返回有关指定的错误的基本信息。|  
+|[GetCustomErrorObject](#getcustomerrorobject)|调用[IErrorRecords::GetCustomErrorObject](/previous-versions/windows/desktop/ms725417)上自定义错误对象返回到接口的指针。|  
+|[GetErrorInfo](#geterrorinfo)|调用[ierrorrecords:: Geterrorinfo](/previous-versions/windows/desktop/ms711230)返回`IErrorInfo`到指定的记录的接口指针。|  
+|[GetErrorParameters](#geterrorparameters)|调用[IErrorRecords::GetErrorParameters](/previous-versions/windows/desktop/ms715793)返回错误参数。|  
 |[GetErrorRecords](#geterrorrecords)|获取指定对象的错误记录。|  
   
 ## <a name="remarks"></a>备注  
@@ -133,7 +133,7 @@ HRESULT GetAllErrorInfo(ULONG ulRecordNum,
   
 ### <a name="return-value"></a>返回值  
 
-如果成功，则为 S_OK。 请参阅[ierrorrecords:: Geterrorinfo](/previous-versions/windows/desktop/ms711230\(v=vs.85\))中*OLE DB 程序员参考*有关其他返回值。  
+如果成功，则为 S_OK。 请参阅[ierrorrecords:: Geterrorinfo](/previous-versions/windows/desktop/ms711230)中*OLE DB 程序员参考*有关其他返回值。  
   
 ### <a name="remarks"></a>备注  
 
@@ -145,7 +145,7 @@ HRESULT GetAllErrorInfo(ULONG ulRecordNum,
 
 ## <a name="getbasicerrorinfo"></a> Cdberrorinfo:: Getbasicerrorinfo
 
-调用[IErrorRecords::GetBasicErrorInfo](/previous-versions/windows/desktop/ms723907\(v=vs.85\))返回有关该错误，如返回代码和特定于提供程序的错误号的基本信息。  
+调用[IErrorRecords::GetBasicErrorInfo](/previous-versions/windows/desktop/ms723907)返回有关该错误，如返回代码和特定于提供程序的错误号的基本信息。  
   
 ### <a name="syntax"></a>语法  
   
@@ -156,7 +156,7 @@ HRESULT GetBasicErrorInfo(ULONG ulRecordNum,
   
 #### <a name="parameters"></a>参数  
 
-请参阅[IErrorRecords::GetBasicErrorInfo](/previous-versions/windows/desktop/ms723907\(v=vs.85\))中*OLE DB 程序员参考*。  
+请参阅[IErrorRecords::GetBasicErrorInfo](/previous-versions/windows/desktop/ms723907)中*OLE DB 程序员参考*。  
   
 ### <a name="return-value"></a>返回值  
 
@@ -164,7 +164,7 @@ HRESULT GetBasicErrorInfo(ULONG ulRecordNum,
 
 ## <a name="getcustomerrorobject"></a> Cdberrorinfo:: Getcustomerrorobject
 
-调用[IErrorRecords::GetCustomErrorObject](/previous-versions/windows/desktop/ms725417\(v=vs.85\))上自定义错误对象返回到接口的指针。  
+调用[IErrorRecords::GetCustomErrorObject](/previous-versions/windows/desktop/ms725417)上自定义错误对象返回到接口的指针。  
   
 ### <a name="syntax"></a>语法  
   
@@ -175,7 +175,7 @@ HRESULT GetCustomErrorObject(ULONG ulRecordNum,
   
 #### <a name="parameters"></a>参数  
 
-请参阅[IErrorRecords::GetCustomErrorObject](/previous-versions/windows/desktop/ms725417\(v=vs.85\))中*OLE DB 程序员参考*。  
+请参阅[IErrorRecords::GetCustomErrorObject](/previous-versions/windows/desktop/ms725417)中*OLE DB 程序员参考*。  
   
 ### <a name="return-value"></a>返回值  
 
@@ -183,7 +183,7 @@ HRESULT GetCustomErrorObject(ULONG ulRecordNum,
 
 ## <a name="geterrorinfo"></a> Cdberrorinfo:: Geterrorinfo
 
-调用[ierrorrecords:: Geterrorinfo](/previous-versions/windows/desktop/ms711230\(v=vs.85\))返回[IErrorInfo](/previous-versions/windows/desktop/ms718112\(v=vs.85\))到指定的记录的接口指针。  
+调用[ierrorrecords:: Geterrorinfo](/previous-versions/windows/desktop/ms711230)返回[IErrorInfo](/previous-versions/windows/desktop/ms718112)到指定的记录的接口指针。  
   
 ### <a name="syntax"></a>语法  
   
@@ -194,7 +194,7 @@ HRESULT GetErrorInfo(ULONG ulRecordNum,
   
 #### <a name="parameters"></a>参数  
 
-请参阅[ierrorrecords:: Geterrorinfo](/previous-versions/windows/desktop/ms711230\(v=vs.85\))中*OLE DB 程序员参考*。  
+请参阅[ierrorrecords:: Geterrorinfo](/previous-versions/windows/desktop/ms711230)中*OLE DB 程序员参考*。  
   
 ### <a name="return-value"></a>返回值  
 
@@ -202,7 +202,7 @@ HRESULT GetErrorInfo(ULONG ulRecordNum,
 
 ## <a name="geterrorparameters"></a> Cdberrorinfo:: Geterrorparameters
 
-调用[IErrorRecords::GetErrorParameters](/previous-versions/windows/desktop/ms715793\(v=vs.85\))返回错误参数。  
+调用[IErrorRecords::GetErrorParameters](/previous-versions/windows/desktop/ms715793)返回错误参数。  
   
 ### <a name="syntax"></a>语法  
   
@@ -213,7 +213,7 @@ HRESULT GetErrorParameters(ULONG ulRecordNum,
   
 #### <a name="parameters"></a>参数  
 
-请参阅[IErrorRecords::GetErrorParameters](/previous-versions/windows/desktop/ms715793\(v=vs.85\))中*OLE DB 程序员参考*。  
+请参阅[IErrorRecords::GetErrorParameters](/previous-versions/windows/desktop/ms715793)中*OLE DB 程序员参考*。  
   
 ### <a name="return-value"></a>返回值  
 

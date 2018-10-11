@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b860084b12f285effff7cf3c8fc74409a9baf4a3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c34c70f1bca3091ba078846b7b94ad947d5f31cb
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46389528"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083107"
 ---
 # <a name="cdbexception-class"></a>CDBException 类
 
@@ -142,7 +142,7 @@ class CDBException : public CException
 
 该字符串采用窗体"状态: %s，本机: %ld，源: %s"，其中的格式代码，按顺序，将替换为描述的值：
 
-- 包含五个字符的错误代码的以 null 结尾的字符串返回 SQLSTATE *szSqlState* ODBC 函数的参数`SQLError`。 附录 A 列出了 SQLSTATE 值[ODBC 错误代码](/previous-versions/windows/desktop/ms714687\(v=vs.85\))，在*ODBC 程序员参考*。 示例:"S0022"。
+- 包含五个字符的错误代码的以 null 结尾的字符串返回 SQLSTATE *szSqlState* ODBC 函数的参数`SQLError`。 附录 A 列出了 SQLSTATE 值[ODBC 错误代码](/previous-versions/windows/desktop/ms714687)，在*ODBC 程序员参考*。 示例:"S0022"。
 
 - 在中返回特定于数据源的本机错误代码*pfNativeError*参数的`SQLError`函数。 示例： 207。
 
@@ -150,7 +150,7 @@ class CDBException : public CException
 
 该框架将错误字符串解释，并将放入其组件`m_strStateNativeOrigin`; 如果`m_strStateNativeOrigin`包含信息的多个错误，这些错误由换行符分隔。 该框架将放入的字母数字错误文本`m_strError`。
 
-有关用于构成此字符串的代码的其他信息，请参阅[SQLError](/previous-versions/windows/desktop/ms716312\(v=vs.85\))函数，在*ODBC 程序员参考*。
+有关用于构成此字符串的代码的其他信息，请参阅[SQLError](/previous-versions/windows/desktop/ms716312)函数，在*ODBC 程序员参考*。
 
 ### <a name="example"></a>示例
 

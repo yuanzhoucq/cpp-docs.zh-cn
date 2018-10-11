@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ce585f9dc8439a02a2883229e8d9ec006c29c24
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 086fab7d1d50f96ab05c38f2e6d524d7ff344e02
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45717686"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49081911"
 ---
 # <a name="delay-delay-load-import-settings"></a>/DELAY（延迟加载导入设置）
 
@@ -46,7 +46,7 @@ ms.locfileid: "45717686"
 
 - NOBIND 限定符通知链接器不要在最终图像中包含可绑定的 IAT。 默认值是为延迟加载的 DLL 创建可绑定的 IAT。 无法静态绑定生成的图像。 （可以在执行之前静态绑定包含可绑定 IAT 的图像。）请参阅[/绑定](../../build/reference/bind.md)。
 
-   如果绑定了 DLL，该帮助器函数将尝试使用绑定的信息，而不是调用[GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212.aspx)上每个引用的导入。 如果时间戳或首选地址与加载的 DLL 的时间戳或首选地址不匹配，则 Helper 函数将假定绑定的 IAT 已经过期并继续执行，就像绑定的 IAT 不存在一样。
+   如果绑定了 DLL，该帮助器函数将尝试使用绑定的信息，而不是调用[GetProcAddress](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress)上每个引用的导入。 如果时间戳或首选地址与加载的 DLL 的时间戳或首选地址不匹配，则 Helper 函数将假定绑定的 IAT 已经过期并继续执行，就像绑定的 IAT 不存在一样。
 
    NOBIND 导致程序图像比较大，但是可以加快 DLL 的加载时间。 如果从不打算绑定 DLL，则 NOBIND 将禁止生成绑定的 IAT。
 

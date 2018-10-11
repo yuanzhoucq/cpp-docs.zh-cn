@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b64e92eaca38743f0bc9de31f9be7684271c4674
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9783da47a22260f0edbe5ddf6d8f5021aae31e5c
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46374345"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083796"
 ---
 # <a name="application-information-and-management"></a>应用程序信息和管理
 
@@ -591,7 +591,7 @@ HINSTANCE AFXAPI AfxLoadLibrary(LPCTSTR lpszModuleName);
 
 ### <a name="remarks"></a>备注
 
-它将返回一个句柄，可在[GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212)获取 DLL 函数的地址。 `AfxLoadLibrary` 此外可以用于映射其他可执行模块。
+它将返回一个句柄，可在[GetProcAddress](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress)获取 DLL 函数的地址。 `AfxLoadLibrary` 此外可以用于映射其他可执行模块。
 
 每个进程维护每个已加载的库模块引用的计数。 此引用计数会在每次递增`AfxLoadLibrary`称为，将减少每次`AfxFreeLibrary`调用。 当引用计数达到零时，将从调用进程的地址空间取消映射模块，并且句柄不再有效。
 
@@ -752,7 +752,7 @@ void AFXAPI AfxSetPerUserRegistration(BOOL bEnable);
 
 Windows Vista，访问注册表，通常可用的应用程序之前**HKEY_CLASSES_ROOT**节点。 但是，与 Windows Vista 或更高版本的操作系统，必须在提升模式下将 HKCR 写入运行应用程序。
 
-此方法使应用程序可以读取和写入注册表，而无需通过将从 HKCR 到 HKCU 注册表访问重定向在提升模式下运行。 有关详细信息，请参阅[Linker Property Pages](../../ide/linker-property-pages.md)。
+此方法使应用程序可以读取和写入注册表，而无需通过将从 HKCR 到 HKCU 注册表访问重定向在提升模式下运行。 有关详细信息，请参阅 [Linker Property Pages](../../ide/linker-property-pages.md)。
 
 如果启用注册表重定向，则框架会将访问从到的 HKCR **HKEY_CURRENT_USER\Software\Classes**。 仅 MFC 和 ATL 框架受重定向影响。
 

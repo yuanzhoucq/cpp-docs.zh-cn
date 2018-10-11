@@ -101,16 +101,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a92f52f7d97e3c89de3d147c2c1b798d4af6d3a4
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: d0db07c8419db53d30612e6edbbe134634e37a74
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46019453"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083939"
 ---
 # <a name="cdynamicparameteraccessor-class"></a>CDynamicParameterAccessor 类
 
-类似于[CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)获取通过调用设置的参数信息，但[ICommandWithParameters](/sql/relational-databases/native-client-ole-db-interfaces/icommandwithparameters)接口。
+类似于 [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) ，但通过调用 [ICommandWithParameters](/sql/relational-databases/native-client-ole-db-interfaces/icommandwithparameters) 接口获取要调用的参数信息。
 
 ## <a name="syntax"></a>语法
 
@@ -323,7 +323,7 @@ DBSTATUS* GetParamStatus(DBORDINAL nParam) const throw();
 [in] 参数号（相对于 1 的偏移量）。 将为返回值保留参数 0。 参数号是基于参数在 SQL 或存储的过程调用中的顺序的参数索引。 请参阅[SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md)有关的示例。  
   
 *pStatus*<br/>
-[out]指向包含指定的参数的 DBSTATUS 状态的变量的指针。 DBSTATUS 值的信息，请参阅[状态](/previous-versions/windows/desktop/ms722617\(v=vs.85\))中*OLE DB 程序员参考*，或在 oledb.h DBSTATUS 搜索。  
+[out]指向包含指定的参数的 DBSTATUS 状态的变量的指针。 DBSTATUS 值的信息，请参阅[状态](/previous-versions/windows/desktop/ms722617)中*OLE DB 程序员参考*，或在 oledb.h DBSTATUS 搜索。  
   
 ### <a name="remarks"></a>备注  
 
@@ -435,7 +435,7 @@ bool SetParam(TCHAR* pParamName,
 [in]指向包含要写入缓冲区的数据的内存的指针。  
   
 *status*<br/>
-[in]DBSTATUS 列状态。 DBSTATUS 值的信息，请参阅[状态](/previous-versions/windows/desktop/ms722617\(v=vs.85\))中*OLE DB 程序员参考*，或在 oledb.h DBSTATUS 搜索。  
+[in]DBSTATUS 列状态。 DBSTATUS 值的信息，请参阅[状态](/previous-versions/windows/desktop/ms722617)中*OLE DB 程序员参考*，或在 oledb.h DBSTATUS 搜索。  
   
 ### <a name="return-value"></a>返回值  
 
@@ -483,7 +483,7 @@ bool SetParamStatus(DBORDINAL nParam,
 [in] 参数号（相对于 1 的偏移量）。 将为返回值保留参数 0。 参数号是基于参数在 SQL 或存储的过程调用中的顺序的参数索引。 请参阅[SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md)有关的示例。  
   
 *status*<br/>
-[in]指定参数的 DBSTATUS 状态。 DBSTATUS 值的信息，请参阅[状态](/previous-versions/windows/desktop/ms722617\(v=vs.85\))中*OLE DB 程序员参考*，或在 oledb.h DBSTATUS 搜索。  
+[in]指定参数的 DBSTATUS 状态。 DBSTATUS 值的信息，请参阅[状态](/previous-versions/windows/desktop/ms722617)中*OLE DB 程序员参考*，或在 oledb.h DBSTATUS 搜索。  
   
 ### <a name="remarks"></a>备注  
 
@@ -512,7 +512,7 @@ bool SetParamString(DBORDINAL nParam,
 [in]一个指向 ANSI (**CHAR**) 或 Unicode (**WCHAR**) 的字符串的指定参数的数据。 请参阅 oledb.h DBSTATUS。  
   
 *status*<br/>
-[in]指定参数的 DBSTATUS 状态。 DBSTATUS 值的信息，请参阅[状态](/previous-versions/windows/desktop/ms722617\(v=vs.85\))中*OLE DB 程序员参考*，或在 oledb.h DBSTATUS 搜索。  
+[in]指定参数的 DBSTATUS 状态。 DBSTATUS 值的信息，请参阅[状态](/previous-versions/windows/desktop/ms722617)中*OLE DB 程序员参考*，或在 oledb.h DBSTATUS 搜索。  
   
 ### <a name="remarks"></a>备注  
 

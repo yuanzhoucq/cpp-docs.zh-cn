@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3bafe1aa7197ef037bdd54b7215173866e8c15d3
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 8ede88e44c957ae34e9bb9c3f451e0f058310346
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46039148"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083549"
 ---
 # <a name="ole-db-provider-templates-reference"></a>OLE DB 提供程序模板参考
 
@@ -63,7 +63,7 @@ OLE DB 要求提供程序实现`HACCESSOR`，这是指向数组的一个标记`D
 打开并返回包含来自单个基表或索引的所有行的行集。 会话对象的必需接口。  
   
 [IRowsetChangeImpl](../../data/oledb/irowsetchangeimpl-class.md)<br/>
-实现 OLE DB [IRowsetChange](/previous-versions/windows/desktop/ms715790\(v=vs.85\))接口，可更新的现有行，删除行，并将插入新行中列的值。  
+实现 OLE DB [IRowsetChange](/previous-versions/windows/desktop/ms715790)接口，可更新的现有行，删除行，并将插入新行中列的值。  
   
 [IRowsetCreatorImpl](../../data/oledb/irowsetcreatorimpl-class.md)<br/>
 此类继承自[IObjectWithSite](/windows/desktop/api/ocidl/nn-ocidl-iobjectwithsite)并重写[IObjectWithSite::SetSite](/windows/desktop/api/ocidl/nf-ocidl-iobjectwithsite-setsite)。 `IRowsetCreatorImpl` 执行相同的功能`IObjectWithSite`还可以启用 OLE DB 属性，但`DBPROPCANSCROLLBACKWARDS`和`DBPROPCANFETCHBACKWARDS`。  
@@ -78,13 +78,13 @@ OLE DB 要求提供程序实现`HACCESSOR`，这是指向数组的一个标记`D
 实现通过使用属性的行集属性设置命令类中定义的映射。 行集的必需接口。  
   
 [IRowsetLocateImpl](../../data/oledb/irowsetlocateimpl-class.md)<br/>
-实现 OLE DB [IRowsetLocate](/previous-versions/windows/desktop/ms721190\(v=vs.85\))接口，从行集提取任意行。 若要在行集中支持 OLE DB 的书签，请从此类继承的行集。  
+实现 OLE DB [IRowsetLocate](/previous-versions/windows/desktop/ms721190)接口，从行集提取任意行。 若要在行集中支持 OLE DB 的书签，请从此类继承的行集。  
   
 [IRowsetNotifyCP](../../data/oledb/irowsetnotifycp-class.md)<br/>
-实现广播函数向侦听器建议的连接点`IID_IRowsetNotify`对行集的内容的更改。 处理通知的使用者实现[IRowsetNotify](/previous-versions/windows/desktop/ms712959\(v=vs.85\))并将其注册对该连接点。  
+实现广播函数向侦听器建议的连接点`IID_IRowsetNotify`对行集的内容的更改。 处理通知的使用者实现[IRowsetNotify](/previous-versions/windows/desktop/ms712959)并将其注册对该连接点。  
   
 [IRowsetUpdateImpl](../../data/oledb/irowsetupdateimpl-class.md)<br/>
-实现 OLE DB [IRowsetUpdate](/previous-versions/windows/desktop/ms714401\(v=vs.85\))接口，可让使用者要延迟所做的更改传输[IRowsetChange](/previous-versions/windows/desktop/ms715790\(v=vs.85\))到数据源，并撤消在传输之前的更改。  
+实现 OLE DB [IRowsetUpdate](/previous-versions/windows/desktop/ms714401)接口，可让使用者要延迟所做的更改传输[IRowsetChange](/previous-versions/windows/desktop/ms715790)到数据源，并撤消在传输之前的更改。  
   
 ## <a name="command-classes"></a>命令类  
 
@@ -120,7 +120,7 @@ OLE DB 要求提供程序实现`HACCESSOR`，这是指向数组的一个标记`D
   
 [IErrorRecordsImpl](../../data/oledb/ierrorrecordsimpl-class.md)  
   
-实现 OLE DB [IErrorRecords](/previous-versions/windows/desktop/ms718112\(v=vs.85\))接口添加到的记录并从数据成员中检索的记录。  
+实现 OLE DB [IErrorRecords](/previous-versions/windows/desktop/ms718112)接口添加到的记录并从数据成员中检索的记录。  
   
 ## <a name="see-also"></a>请参阅  
 

@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 76dc4cb86601be714e7ca1d442eb904d016e877b
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 47b869ffc6ad3dd1492ab052d648bcb8acde7e52
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46102772"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083692"
 ---
 # <a name="supporting-transactions-in-ole-db"></a>在 OLE DB 中支持事务
 
@@ -33,11 +33,11 @@ ms.locfileid: "46102772"
   
 OLE DB 提供以下三种方法支持事务：  
   
-- [ITransactionLocal::StartTransaction](/previous-versions/windows/desktop/ms709786\(v=vs.85\))  
+- [ITransactionLocal::StartTransaction](/previous-versions/windows/desktop/ms709786)  
   
-- [ITransaction::Commit](/previous-versions/windows/desktop/ms713008\(v=vs.85\))  
+- [ITransaction::Commit](/previous-versions/windows/desktop/ms713008)  
   
-- [ITransaction::Abort](/previous-versions/windows/desktop/ms709833\(v=vs.85\))  
+- [ITransaction::Abort](/previous-versions/windows/desktop/ms709833)  
   
 ## <a name="relationship-of-sessions-and-transactions"></a>会话和事务之间的关系  
 
@@ -59,7 +59,7 @@ OLE DB 提供以下三种方法支持事务：
   
 ## <a name="nested-transactions"></a>嵌套的事务  
 
-一个[transaction](/previous-versions/windows/desktop/ms716985\(v=vs.85\))发生时启动新的本地事务在会话中存在活动事务。 作为当前事务下的嵌套事务启动新事务。 如果提供程序不支持嵌套的事务，则调用`StartTransaction`时已存在对该会话的活动事务返回 XACT_E_XTIONEXISTS。  
+一个[transaction](/previous-versions/windows/desktop/ms716985)发生时启动新的本地事务在会话中存在活动事务。 作为当前事务下的嵌套事务启动新事务。 如果提供程序不支持嵌套的事务，则调用`StartTransaction`时已存在对该会话的活动事务返回 XACT_E_XTIONEXISTS。  
   
 ## <a name="distributed-transactions"></a>分布式事务  
 

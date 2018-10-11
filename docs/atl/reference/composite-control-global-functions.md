@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54e4ab00a0d0df90601d06d9e2ffa100d82d4c03
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: dee59f5e86cddeec47da47c648b0cf12789cc85a
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46037354"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49084095"
 ---
 # <a name="composite-control-global-functions"></a>复合控件全局函数
 
@@ -81,7 +81,7 @@ ATLAPI_(int) AtlAxDialogBox(
 [in]标识其可执行文件包含对话框模板的模块的实例。
 
 *lpTemplateName*<br/>
-[in]标识对话框模板。 此参数是指向一个以 null 结尾的字符字符串，指定的对话框模板的名称的指针或整数值，该值指定对话框模板的资源标识符。 如果参数指定资源标识符，其高序位字必须为零，其低序位字必须包含标识符。 可以使用[MAKEINTRESOURCE](https://msdn.microsoft.com/library/windows/desktop/ms648029)宏来创建此值。
+[in]标识对话框模板。 此参数是指向一个以 null 结尾的字符字符串，指定的对话框模板的名称的指针或整数值，该值指定对话框模板的资源标识符。 如果参数指定资源标识符，其高序位字必须为零，其低序位字必须包含标识符。 可以使用[MAKEINTRESOURCE](/windows/desktop/api/winuser/nf-winuser-makeintresourcea)宏来创建此值。
 
 *hWndParent*<br/>
 [in]标识拥有对话框的窗口。
@@ -128,7 +128,7 @@ ATLAPI_(HWND) AtlAxCreateDialog(
 [in]标识其可执行文件包含对话框模板的模块的实例。
 
 *lpTemplateName*<br/>
-[in]标识对话框模板。 此参数是指向一个以 null 结尾的字符字符串，指定的对话框模板的名称的指针或整数值，该值指定对话框模板的资源标识符。 如果参数指定资源标识符，其高序位字必须为零，其低序位字必须包含标识符。 可以使用[MAKEINTRESOURCE](https://msdn.microsoft.com/library/windows/desktop/ms648029)宏来创建此值。
+[in]标识对话框模板。 此参数是指向一个以 null 结尾的字符字符串，指定的对话框模板的名称的指针或整数值，该值指定对话框模板的资源标识符。 如果参数指定资源标识符，其高序位字必须为零，其低序位字必须包含标识符。 可以使用[MAKEINTRESOURCE](/windows/desktop/api/winuser/nf-winuser-makeintresourcea)宏来创建此值。
 
 *hWndParent*<br/>
 [in]标识拥有对话框的窗口。

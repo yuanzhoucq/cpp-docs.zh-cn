@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0fa55ba0193f24acdf308888c3ec505c33003292
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 11a58511684a58ebb0b8ec13138bfbdb7afa4729
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790352"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49081898"
 ---
 # <a name="dbsource"></a>db_source
 
@@ -37,7 +37,7 @@ ms.locfileid: "48790352"
 ### <a name="parameters"></a>参数
 
 *db_source*<br/>
-用于连接到数据源的连接字符串。 有关连接字符串的格式，请参阅[连接字符串和数据链接](/previous-versions/windows/desktop/ms718376\(v=vs.85\))在 Microsoft 数据访问组件 (MDAC) SDK。
+用于连接到数据源的连接字符串。 有关连接字符串的格式，请参阅[连接字符串和数据链接](/previous-versions/windows/desktop/ms718376)在 Microsoft 数据访问组件 (MDAC) SDK。
 
 *name*<br/>
 （可选）当你使用**db_source**的类上*名称*是具有的数据源对象的实例**db_source**特性应用于它 （请参阅示例 1）。 当你使用**db_source**中的方法实现，以内联方式*名称*是一个变量 （本地到方法），可用于访问数据源 （请参见示例 2）。 将此传递*名称*到*source_name*参数的`db_command`若要将数据源与命令相关联。
@@ -88,7 +88,7 @@ class CMyCommand {};
 |**必需的特性**|无|
 |**无效的特性**|无|
 
-有关特性上下文的详细信息，请参阅[特性上下文](cpp-attributes-com-net.md#contexts)。
+有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
 ## <a name="see-also"></a>请参阅
 

@@ -41,12 +41,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cc8fbe595259b0f5e59d3ac844710222042540c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 68211c3807893d28adb5e90e8863967b7f60318f
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43206063"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083562"
 ---
 # <a name="mktime-mktime32-mktime64"></a>mktime、_mktime32、_mktime64
 
@@ -93,7 +93,7 @@ __time64_t _mktime64(
 
 - 小于零的值，使用 C 运行时库代码计算有效的是标准时间还是夏令时。
 
-C 运行时库将从 [TZ](tzset.md) 环境变量中确定夏令时行为。 如果**TZ**未设置，Win32 API 调用[GetTimeZoneInformation](https://msdn.microsoft.com/library/windows/desktop/ms724421.aspx)用于从操作系统中获取夏令时信息。 如果此操作失败，则该库将假设使用用于实现夏令时计算的美国规则。 **tm_isdst**是必填的字段。 如果未设置，则未定义其值，并且这些函数的返回值不可预知。 如果*timeptr*指向**tm**返回通过以前调用结构[asctime](asctime-wasctime.md)， [gmtime](gmtime-gmtime32-gmtime64.md)，或[localtime](localtime-localtime32-localtime64.md)（或这些函数的变量）， **tm_isdst**字段包含正确的值。
+C 运行时库将从 [TZ](tzset.md) 环境变量中确定夏令时行为。 如果**TZ**未设置，Win32 API 调用[GetTimeZoneInformation](/windows/desktop/api/timezoneapi/nf-timezoneapi-gettimezoneinformation)用于从操作系统中获取夏令时信息。 如果此操作失败，则该库将假设使用用于实现夏令时计算的美国规则。 **tm_isdst**是必填的字段。 如果未设置，则未定义其值，并且这些函数的返回值不可预知。 如果*timeptr*指向**tm**返回通过以前调用结构[asctime](asctime-wasctime.md)， [gmtime](gmtime-gmtime32-gmtime64.md)，或[localtime](localtime-localtime32-localtime64.md)（或这些函数的变量）， **tm_isdst**字段包含正确的值。
 
 请注意， **gmtime**并**localtime** (并 **_gmtime32**， **_gmtime64**， **_localtime32**，和 **_localtime64**) 使用每个线程一个缓冲区用于转换。 如果提供此缓冲区**mktime**， **_mktime32**或 **_mktime64**，以前的内容会被销毁。
 

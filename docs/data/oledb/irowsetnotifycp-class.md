@@ -35,16 +35,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 15e00f27c5ad5d5312928bda8f73304a8417a6bc
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 1c6bda8180d775b49c6bfe6bc98e3ddabe535ac0
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46071817"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082834"
 ---
 # <a name="irowsetnotifycp-class"></a>IRowsetNotifyCP 类
 
-实现连接点接口的提供程序站点[IRowsetNotify](/previous-versions/windows/desktop/ms712959\(v=vs.85\))。  
+实现连接点接口的提供程序站点[IRowsetNotify](/previous-versions/windows/desktop/ms712959)。  
   
 ## <a name="syntax"></a>语法
 
@@ -96,7 +96,7 @@ class IRowsetNotifyCP :
 
 ## <a name="onfieldchange"></a> Irowsetnotifycp:: Fire_onfieldchange
 
-广播[OnFieldChange](/previous-versions/windows/desktop/ms715961\(v=vs.85\))事件，以通知使用者对列的值的更改。  
+广播[OnFieldChange](/previous-versions/windows/desktop/ms715961)事件，以通知使用者对列的值的更改。  
   
 ### <a name="syntax"></a>语法  
   
@@ -112,11 +112,11 @@ HRESULT Fire_OnFieldChange(IRowset* pRowset,
   
 #### <a name="parameters"></a>参数  
 
-请参阅[IRowsetNotify::OnFieldChange](/previous-versions/windows/desktop/ms715961\(v=vs.85\))中*OLE DB 程序员参考*。 
+请参阅[IRowsetNotify::OnFieldChange](/previous-versions/windows/desktop/ms715961)中*OLE DB 程序员参考*。 
 
 ## <a name="onrowchange"></a> Irowsetnotifycp:: Fire_onrowchange
 
-广播[OnRowChange](/previous-versions/windows/desktop/ms722694\(v=vs.85\))事件与连接点上的所有侦听器`IID_IRowsetNotify`以通知使用者的影响的行的更改。  
+广播[OnRowChange](/previous-versions/windows/desktop/ms722694)事件与连接点上的所有侦听器`IID_IRowsetNotify`以通知使用者的影响的行的更改。  
   
 ### <a name="syntax"></a>语法  
   
@@ -131,11 +131,11 @@ HRESULT Fire_OnRowChange(IRowset* pRowset,
   
 #### <a name="parameters"></a>参数  
 
-请参阅[irowsetnotify:: Onrowchange](/previous-versions/windows/desktop/ms722694\(v=vs.85\))中*OLE DB 程序员参考*。  
+请参阅[irowsetnotify:: Onrowchange](/previous-versions/windows/desktop/ms722694)中*OLE DB 程序员参考*。  
 
 ## <a name="onrowsetchange"></a> Irowsetnotifycp:: Fire_onrowsetchange
 
-广播[OnRowsetChange](/previous-versions/windows/desktop/ms722669\(v=vs.85\))事件与连接点上的所有侦听器`IID_IRowsetNotify`以通知使用者的更改会影响整个行集。  
+广播[OnRowsetChange](/previous-versions/windows/desktop/ms722669)事件与连接点上的所有侦听器`IID_IRowsetNotify`以通知使用者的更改会影响整个行集。  
   
 ### <a name="syntax"></a>语法  
   
@@ -148,7 +148,7 @@ HRESULT Fire_OnRowsetChange(IRowset* pRowset,
   
 #### <a name="parameters"></a>参数  
 
-请参阅[IRowsetNotify::OnRowsetChange](/previous-versions/windows/desktop/ms722669\(v=vs.85\))中*OLE DB 程序员参考*。
+请参阅[IRowsetNotify::OnRowsetChange](/previous-versions/windows/desktop/ms722669)中*OLE DB 程序员参考*。
   
 ## <a name="see-also"></a>请参阅  
 

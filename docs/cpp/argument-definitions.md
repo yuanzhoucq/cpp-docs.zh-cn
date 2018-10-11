@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0cf75e1c0fe2b3ff0d883a8785e69aef489c0545
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: e0c42478e5e6ce3c9efe66c45ed32292f2040a83
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46056386"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49084147"
 ---
 # <a name="argument-definitions"></a>自变量定义
 
@@ -45,7 +45,7 @@ int wmain( int argc, wchar_t* argv[], wchar_t* envp[]);
 第一个命令行参数始终是`argv` **[1]** 和最后一项`argv` **[** `argc` -1 **]**。
 
 > [!NOTE]
->  按照约定，`argv`[0] 是用于调用程序的命令。  但是，就可以生成进程使用[CreateProcess](https://msdn.microsoft.com/library/windows/desktop/ms683197)并且使用第一个和第二个参数 (*lpApplicationName*并*lpCommandLine*)， `argv`**[0]** 可能不是可执行名称; 而使用[GetModuleFileName](https://msdn.microsoft.com/library/windows/desktop/ms683197)来检索可执行文件的名称和其完全限定的路径。
+>  按照约定，`argv`[0] 是用于调用程序的命令。  但是，就可以生成进程使用[CreateProcess](/windows/desktop/api/libloaderapi/nf-libloaderapi-getmodulefilenamea)并且使用第一个和第二个参数 (*lpApplicationName*并*lpCommandLine*)， `argv`**[0]** 可能不是可执行名称; 而使用[GetModuleFileName](/windows/desktop/api/libloaderapi/nf-libloaderapi-getmodulefilenamea)来检索可执行文件的名称和其完全限定的路径。
 
 ## <a name="microsoft-specific"></a>Microsoft 专用
 

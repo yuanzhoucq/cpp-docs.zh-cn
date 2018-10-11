@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3f9e5ac3d0a7f640ba9d7361d755763bd68dd728
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 9ab1f5e35deff1117c544dfa372abb9949502001
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46042190"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082944"
 ---
 # <a name="ole-db-provider-templates-c"></a>OLE DB 提供程序模板 (C++)
 
@@ -81,5 +81,5 @@ OLE DB 提供程序模板支持 OLE DB 版本 2.7 规范。 使用 OLE DB 提供
 ## <a name="see-also"></a>请参阅  
 
 [数据访问](../data-access-in-cpp.md)<br/>
-[OLE DB SDK 文档](/previous-versions/windows/desktop/ms722784\(v=vs.85\))   
-[OLE DB 程序员参考](/previous-versions/windows/desktop/ms713643\(v=vs.85\))
+[OLE DB SDK 文档](/previous-versions/windows/desktop/ms722784)   
+[OLE DB 程序员参考](/previous-versions/windows/desktop/ms713643)

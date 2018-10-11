@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e8c641cc543f213b6c81950c22b97f25b31d6c4e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 957fe69b413496af46aa8e19afd45ee41e58b490
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46057323"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49081768"
 ---
 # <a name="session-object-interfaces"></a>会话对象接口
 
@@ -32,24 +32,24 @@ ms.locfileid: "46057323"
   
 |接口|是否必需？|实现的 OLE DB 模板？|  
 |---------------|---------------|--------------------------------------|  
-|[IGetDataSource](/previous-versions/windows/desktop/ms709721\(v=vs.85\))|强制|是|  
-|[IOpenRowset](/previous-versions/windows/desktop/ms716946\(v=vs.85\))|强制|是|  
-|[ISessionProperties](/previous-versions/windows/desktop/ms713721\(v=vs.85\))|强制|是|  
-|[IAlterIndex](/previous-versions/windows/desktop/ms714943\(v=vs.85\))|Optional|否|  
-|[IAlterTable](/previous-versions/windows/desktop/ms719764\(v=vs.85\))|Optional|否|  
-|[IBindResource](/previous-versions/windows/desktop/ms714936\(v=vs.85\))|Optional|否|  
-|[ICreateRow](/previous-versions/windows/desktop/ms716832\(v=vs.85\))|Optional|否|  
-|[IDBCreateCommand](/previous-versions/windows/desktop/ms711625\(v=vs.85\))|Optional|是|  
-|[IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\))|Optional|是|  
-|[IIndexDefinition](/previous-versions/windows/desktop/ms711593\(v=vs.85\))|Optional|否|  
-|[ISupportErrorInfo](/previous-versions/windows/desktop/ms715816\(v=vs.85\))|Optional|是|  
-|[ITableCreation](/previous-versions/windows/desktop/ms713639\(v=vs.85\))|Optional|否|  
-|[ITableDefinition](/previous-versions/windows/desktop/ms714277\(v=vs.85\))|Optional|否|  
-|[ITableDefinitionWithConstraints](/previous-versions/windows/desktop/ms720947\(v=vs.85\))|Optional|否|  
-|[ITransaction](/previous-versions/windows/desktop/ms723053\(v=vs.85\))|Optional|否|  
-|[ITransactionJoin](/previous-versions/windows/desktop/ms718071\(v=vs.85\))|Optional|否|  
-|[ITransactionLocal](/previous-versions/windows/desktop/ms714893\(v=vs.85\))|Optional|否|  
-|[ITransactionObject](/previous-versions/windows/desktop/ms713659\(v=vs.85\))|Optional|否|  
+|[IGetDataSource](/previous-versions/windows/desktop/ms709721)|强制|是|  
+|[IOpenRowset](/previous-versions/windows/desktop/ms716946)|强制|是|  
+|[ISessionProperties](/previous-versions/windows/desktop/ms713721)|强制|是|  
+|[IAlterIndex](/previous-versions/windows/desktop/ms714943)|Optional|否|  
+|[IAlterTable](/previous-versions/windows/desktop/ms719764)|Optional|否|  
+|[IBindResource](/previous-versions/windows/desktop/ms714936)|Optional|否|  
+|[ICreateRow](/previous-versions/windows/desktop/ms716832)|Optional|否|  
+|[IDBCreateCommand](/previous-versions/windows/desktop/ms711625)|Optional|是|  
+|[IDBSchemaRowset](/previous-versions/windows/desktop/ms713686)|Optional|是|  
+|[IIndexDefinition](/previous-versions/windows/desktop/ms711593)|Optional|否|  
+|[ISupportErrorInfo](/previous-versions/windows/desktop/ms715816)|Optional|是|  
+|[ITableCreation](/previous-versions/windows/desktop/ms713639)|Optional|否|  
+|[ITableDefinition](/previous-versions/windows/desktop/ms714277)|Optional|否|  
+|[ITableDefinitionWithConstraints](/previous-versions/windows/desktop/ms720947)|Optional|否|  
+|[ITransaction](/previous-versions/windows/desktop/ms723053)|Optional|否|  
+|[ITransactionJoin](/previous-versions/windows/desktop/ms718071)|Optional|否|  
+|[ITransactionLocal](/previous-versions/windows/desktop/ms714893)|Optional|否|  
+|[ITransactionObject](/previous-versions/windows/desktop/ms713659)|Optional|否|  
   
 会话对象创建行集对象。 如果提供程序支持的命令，该会话还会创建命令对象 (`CCommand`，实现 OLE DB `TCommand`)。 命令对象实现`ICommand`接口并使用`ICommand::Execute`方法以在行集上执行命令下, 图中所示。  
   

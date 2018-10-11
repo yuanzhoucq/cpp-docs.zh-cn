@@ -41,12 +41,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e1f22b0206499b227b8b7812e004e46f565d803a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 87ef1c3f3867b7cd5890a29db3a8c45300ebdd58
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46105409"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083393"
 ---
 # <a name="cutlprops-class"></a>CUtlProps 类
 
@@ -132,7 +132,7 @@ virtual HRESULT CUtlPropsBase::IsValidValue(ULONG /* iCurSet */,
 属性集数组; 中的索引如果只有一个属性集，则为零。  
   
 *pDBProp*<br/>
-属性 ID 和中的新值[DBPROP](/previous-versions/windows/desktop/ms717970\(v=vs.85\))结构。  
+属性 ID 和中的新值[DBPROP](/previous-versions/windows/desktop/ms717970)结构。  
   
 ### <a name="return-value"></a>返回值  
 
@@ -194,7 +194,7 @@ virtual HRESULT OnPropertyChanged(ULONG /* iCurSet */,
 属性集数组; 中的索引如果只有一个属性集，则为零。  
   
 *pDBProp*<br/>
-属性 ID 和中的新值[DBPROP](/previous-versions/windows/desktop/ms717970\(v=vs.85\))结构。  
+属性 ID 和中的新值[DBPROP](/previous-versions/windows/desktop/ms717970)结构。  
   
 ### <a name="return-value"></a>返回值  
 
