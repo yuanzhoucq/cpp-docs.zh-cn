@@ -23,16 +23,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c6d8a07ded3da02c21c4ee8c528474efc6e52b6c
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: b06d6c730562203cdef1191a9d73012c3b19c2c8
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46021559"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083954"
 ---
 # <a name="idbcreatecommandimpl-class"></a>IDBCreateCommandImpl 类
 
-提供的实现[IDBCreateCommand](/previous-versions/windows/desktop/ms711625\(v=vs.85\))接口。  
+提供的实现[IDBCreateCommand](/previous-versions/windows/desktop/ms711625)接口。  
   
 ## <a name="syntax"></a>语法
 
@@ -80,7 +80,7 @@ STDMETHOD(CreateCommand)(IUnknown * pUnkOuter,
   
 #### <a name="parameters"></a>参数  
 
-请参阅[idbcreatecommand:: Createcommand](/previous-versions/windows/desktop/ms709772\(v=vs.85\))中*OLE DB 程序员参考*。  
+请参阅[idbcreatecommand:: Createcommand](/previous-versions/windows/desktop/ms709772)中*OLE DB 程序员参考*。  
   
 某些参数对应于*OLE DB 程序员参考*中所述的不同名称的参数`IDBCreateCommand::CreateCommand`:  
   

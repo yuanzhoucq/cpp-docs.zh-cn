@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 163949c4421cca8e4d5e414a18bda4ed98f32d3d
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 2555bdd9c1de130cd692131c12b7b2afc37537be
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861637"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083036"
 ---
 # <a name="atl-ole-db-consumer-wizard"></a>ATL OLE DB 使用者向导
 
@@ -36,7 +36,7 @@ ms.locfileid: "48861637"
 
 - **数据源**
 
-   **数据源**按钮的使你可以设置使用指定的 OLE DB 访问接口的指定的数据源。 单击此按钮时**数据链接属性**对话框随即出现。 有关详细信息生成连接字符串和**数据链接属性**对话框中，请参阅[数据链接 API 概述](/previous-versions/windows/desktop/ms718102\(v=vs.85\))Windows SDK 文档中。
+   **数据源**按钮的使你可以设置使用指定的 OLE DB 访问接口的指定的数据源。 单击此按钮时**数据链接属性**对话框随即出现。 有关详细信息生成连接字符串和**数据链接属性**对话框中，请参阅[数据链接 API 概述](/previous-versions/windows/desktop/ms718102)Windows SDK 文档中。
 
    以下附加信息描述了中的选项卡**数据链接属性**对话框。
 
@@ -177,13 +177,13 @@ ms.locfileid: "48861637"
 
 - **支持**
 
-   选中复选框以指定的更新，在使用者 （默认值为 none） 中支持的种类。 以下各项将设置[DBPROP_IRowsetChange](/previous-versions/windows/desktop/ms715892\(v=vs.85\))和的相应条目[DBPROP_UPDATABILITY](/previous-versions/windows/desktop/ms722676\(v=vs.85\))在属性集映射。
+   选中复选框以指定的更新，在使用者 （默认值为 none） 中支持的种类。 以下各项将设置[DBPROP_IRowsetChange](/previous-versions/windows/desktop/ms715892)和的相应条目[DBPROP_UPDATABILITY](/previous-versions/windows/desktop/ms722676)在属性集映射。
 
    - **更改**
 
       指定使用者在行集中支持的行数据的更新。
 
-   - 插入
+   - **插入**
 
       指定使用者支持到行集中插入行。
 
@@ -195,4 +195,4 @@ ms.locfileid: "48861637"
 
 [ATL OLE DB 使用者](../../atl/reference/adding-an-atl-ole-db-consumer.md)<br/>
 [用代码向导添加功能](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
-[连接字符串和数据链接 (OLE DB)](/previous-versions/windows/desktop/ms718376\(v=vs.85\))
+[连接字符串和数据链接 (OLE DB)](/previous-versions/windows/desktop/ms718376)

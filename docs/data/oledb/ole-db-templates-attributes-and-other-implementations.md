@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 6e5fa63a0da718b80c2b0d61e5215a947e21d496
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 8b2cbe36a933580edc09e8139dca0ed6ec090f90
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46101705"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082652"
 ---
 # <a name="ole-db-templates-attributes-and-other-implementations"></a>OLE DB 模板、特性和其他实现
 
@@ -36,7 +36,7 @@ OLE DB 模板，都是 ATL （动态模板库） 的一部分，使高性能 OLE
   
 - **OLE DB 提供程序模板**用于实现 OLE DB 服务器 （提供程序） 应用程序。  
   
-要使用 OLE DB 模板，应熟悉 C++ 模板、COM 和 OLE DB 接口。 如果您不熟悉 OLE DB，请参阅[OLE DB 程序员参考](/previous-versions/windows/desktop/ms713643\(v=vs.85\))。  
+要使用 OLE DB 模板，应熟悉 C++ 模板、COM 和 OLE DB 接口。 如果不熟悉 OLE DB，请参阅 [OLE DB 程序员参考](/previous-versions/windows/desktop/ms713643)。  
   
 有关详细信息，你可以：  
   
@@ -48,7 +48,7 @@ OLE DB 模板，都是 ATL （动态模板库） 的一部分，使高性能 OLE
   
 - 请参阅的列表[OLE DB 模板示例](https://github.com/Microsoft/VCSamples)。  
   
-- 请参阅[OLE DB 程序员参考](/previous-versions/windows/desktop/ms713643\(v=vs.85\))（在 Windows SDK 中)。  
+- 请参阅[OLE DB 程序员参考](/previous-versions/windows/desktop/ms713643)（在 Windows SDK 中)。  
   
 ## <a name="ole-db-attributes"></a>OLE DB 属性  
 
@@ -56,11 +56,11 @@ OLE DB 模板，都是 ATL （动态模板库） 的一部分，使高性能 OLE
   
 ## <a name="mfc-ole-db-classes"></a>MFC OLE DB 类  
 
-MFC 库包含一个类， [COleDBRecordView](../../mfc/reference/coledbrecordview-class.md)，在控件中显示数据库记录。 该视图是直接连接到的窗体视图`CRowset`对象，并显示字段的`CRowset`对话框模板的控件中的对象。 它还会提供默认实现将移到第一个下, 一步上, 一个，或最后一个记录和更新当前在视图上的记录的接口。 有关详细信息，请参阅`COleDBRecordView`。  
+MFC 库包含一个类， [COleDBRecordView](../../mfc/reference/coledbrecordview-class.md)，在控件中显示数据库记录。 该视图是直接连接到的窗体视图`CRowset`对象，并显示字段的`CRowset`对话框模板的控件中的对象。 它还会提供默认实现将移到第一个下, 一步上, 一个，或最后一个记录和更新当前在视图上的记录的接口。 有关详细信息，请参阅 `COleDBRecordView` 。  
   
 ## <a name="ole-db-sdk-interfaces"></a>OLE DB SDK 接口  
 
-在 OLE DB 模板不支持的 OLE DB 功能的情况下，您需要使用 OLE DB 接口本身。 有关详细信息，请参阅[OLE DB 程序员参考](/previous-versions/windows/desktop/ms713643\(v=vs.85\))Windows SDK 中。  
+在 OLE DB 模板不支持的 OLE DB 功能的情况下，您需要使用 OLE DB 接口本身。 有关详细信息，请参阅[OLE DB 程序员参考](/previous-versions/windows/desktop/ms713643)Windows SDK 中。  
   
 ## <a name="see-also"></a>请参阅  
 

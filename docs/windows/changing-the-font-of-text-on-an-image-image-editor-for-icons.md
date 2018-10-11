@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5a49cb4fa88b3a014d79969cc86fc03fa1136efa
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5491f8a761eee80595265150ee0cb89c682b3079
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46405341"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49084043"
 ---
 # <a name="changing-the-font-of-text-on-an-image-image-editor-for-icons"></a>更改图像上文本的字体（图标的图像编辑器）
 
@@ -32,7 +32,7 @@ ms.locfileid: "46405341"
 
 ### <a name="to-change-the-font-of-text-on-an-image"></a>若要更改图像上文本的字体
 
-1. 创建 c + + Windows 窗体应用程序。 有关详细信息，请参阅[创建一个 Windows 应用程序项目](/previous-versions/visualstudio/visual-studio-2010/42wc9kk5\(v=vs.100\))。 `app.ico`默认情况下将文件添加到你的项目。
+1. 创建 c + + Windows 窗体应用程序。 有关详细信息，请参阅[创建一个 Windows 应用程序项目](/previous-versions/visualstudio/visual-studio-2010/42wc9kk5)。 `app.ico`默认情况下将文件添加到你的项目。
 
 2. 在中**解决方案资源管理器**，双击文件 app.ico。 [的图像编辑器](../windows/image-editor-for-icons.md)将打开。
 

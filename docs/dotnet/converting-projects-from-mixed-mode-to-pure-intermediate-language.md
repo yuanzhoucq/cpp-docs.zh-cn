@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 263a90710d2103c4ea97e6c56da67d676ba7366b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 7f9cbfce7e04040f0e1618148a3c258f21bb84b8
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222075"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083458"
 ---
 # <a name="converting-projects-from-mixed-mode-to-pure-intermediate-language"></a>将项目从混合模式转换为纯中间语言
 
@@ -84,26 +84,26 @@ ms.locfileid: "43222075"
 
 3. 删除所有非托管的类型：
 
-   在适当情况下，则会将非托管的类型替换到结构中的引用[系统](https://msdn.microsoft.com/library/system.appdomainmanager.appdomainmanager.aspx)命名空间。 下表中列出了常见的托管的类型：
+   在适当情况下，则会将非托管的类型替换到结构中的引用[系统](/dotnet/api/system)命名空间。 下表中列出了常见的托管的类型：
 
    |结构|描述|
    |---------------|-----------------|
-   |[布尔值](https://msdn.microsoft.com/library/system.boolean\(v=vs.140\).aspx)|表示布尔值。|
-   |[Byte](https://msdn.microsoft.com/library/system.byte\(v=vs.140\).aspx)|表示一个 8 位无符号整数。|
-   |[Char](https://msdn.microsoft.com/library/system.char\(v=vs.140\).aspx)|表示一个 Unicode 字符。|
-   |[DateTime](https://msdn.microsoft.com/library/system.datetime.datetime.aspx)|表示时间上的一刻，通常以日期和当天的时间表示。|
-   |[小数](https://msdn.microsoft.com/library/system.decimal\(v=vs.140\).aspx)|表示十进制数。|
-   |[双精度](https://msdn.microsoft.com/library/system.double\(v=vs.140\).aspx)|表示一个双精度浮点数。|
-   |[Guid](https://msdn.microsoft.com/library/system.guid\(v=vs.140\).aspx)|表示全局唯一标识符 (GUID)。|
-   |[Int16](https://msdn.microsoft.com/library/system.int16\(v=vs.140\).aspx)|表示 16 位有符号整数。|
-   |[Int32](https://msdn.microsoft.com/library/system.int32\(v=vs.140\).aspx)|表示 32 位带符号整数。|
-   |[Int64](https://msdn.microsoft.com/library/system.int64\(v=vs.140\).aspx)|表示 64 位有符号整数。|
-   |[IntPtr](https://msdn.microsoft.com/library/system.intptr\(v=vs.140\).aspx)|用于表示指针或句柄的平台特定类型。|
-   |[SByte](https://msdn.microsoft.com/library/system.byte.aspx)|表示 8 位有符号整数。|
-   |[单精度](https://msdn.microsoft.com/library/system.single.aspx)|表示一个单精度浮点数。|
-   |[TimeSpan](https://msdn.microsoft.com/library/system.timespan\(v=vs.140\).aspx)|表示一个时间间隔。|
-   |[UInt16](https://msdn.microsoft.com/library/system.uint16\(v=vs.140\).aspx)|表示 16 位无符号整数。|
-   |[UInt32](https://msdn.microsoft.com/library/system.uint32\(v=vs.140\).aspx)|表示 32 位无符号整数。|
-   |[UInt64](https://msdn.microsoft.com/library/system.uint64\(v=vs.140\).aspx)|表示 64 位无符号整数。|
-   |[UIntPtr](https://msdn.microsoft.com/library/system.uintptr\(v=vs.140\).aspx)|用于表示指针或句柄的平台特定类型。|
-   |[Void](https://msdn.microsoft.com/library/system.void\(v=vs.140\).aspx)|指示不会返回一个值; 的方法也就是说，该方法具有 void 返回类型。|
+   |[布尔值](/dotnet/api/system.boolean)|表示布尔值。|
+   |[Byte](/dotnet/api/system.byte)|表示一个 8 位无符号整数。|
+   |[Char](/dotnet/api/system.char)|表示一个 Unicode 字符。|
+   |[DateTime](/dotnet/api/system.datetime.datetime.aspx)|表示时间上的一刻，通常以日期和当天的时间表示。|
+   |[小数](/dotnet/api/system.decimal)|表示十进制数。|
+   |[双精度](/dotnet/api/system.double)|表示一个双精度浮点数。|
+   |[Guid](/dotnet/api/system.guid)|表示全局唯一标识符 (GUID)。|
+   |[Int16](/dotnet/api/system.int16)|表示 16 位有符号整数。|
+   |[Int32](/dotnet/api/system.int32)|表示 32 位带符号整数。|
+   |[Int64](/dotnet/api/system.int64)|表示 64 位有符号整数。|
+   |[IntPtr](/dotnet/api/system.intptr)|用于表示指针或句柄的平台特定类型。|
+   |[SByte](/dotnet/api/system.byte.aspx)|表示 8 位有符号整数。|
+   |[单精度](/dotnet/api/system.single.aspx)|表示一个单精度浮点数。|
+   |[TimeSpan](/dotnet/api/system.timespan)|表示一个时间间隔。|
+   |[UInt16](/dotnet/api/system.uint16)|表示 16 位无符号整数。|
+   |[UInt32](/dotnet/api/system.uint32)|表示 32 位无符号整数。|
+   |[UInt64](/dotnet/api/system.uint64)|表示 64 位无符号整数。|
+   |[UIntPtr](/dotnet/api/system.uintptr)|用于表示指针或句柄的平台特定类型。|
+   |[Void](/dotnet/api/system.void)|指示不会返回一个值; 的方法也就是说，该方法具有 void 返回类型。|

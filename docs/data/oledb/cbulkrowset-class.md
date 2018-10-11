@@ -113,12 +113,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3406614b99e2057c9469fe69d02a9fcbe4eae23b
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3538a8cd15fc315f4d91d1c83c517811acce1802
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46116758"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082899"
 ---
 # <a name="cbulkrowset-class"></a>CBulkRowset 类
 
@@ -165,7 +165,7 @@ class CBulkRowset : public CRowset<TAccessor>
 
 ## <a name="addrefrows"></a> Cbulkrowset:: Addrefrows
 
-调用[irowset:: Addrefrows](/previous-versions/windows/desktop/ms719619\(v=vs.85\))来增加当前从 bulk 行集检索到的所有行的引用计数。  
+调用[irowset:: Addrefrows](/previous-versions/windows/desktop/ms719619)来增加当前从 bulk 行集检索到的所有行的引用计数。  
   
 ### <a name="syntax"></a>语法  
   
@@ -264,7 +264,7 @@ HRESULT MoveToBookmark(const CBookmarkBase& bookmark,
   
 ### <a name="return-value"></a>返回值  
 
-请参阅[irowset:: Getdata](/previous-versions/windows/desktop/ms716988\(v=vs.85\))中*OLE DB 程序员参考*。 
+请参阅[irowset:: Getdata](/previous-versions/windows/desktop/ms716988)中*OLE DB 程序员参考*。 
 
 ## <a name="movetoratio"></a> Cbulkrowset:: Movetoratio
 
@@ -295,11 +295,11 @@ HRESULT MoveToRatio(DBCOUNTITEM nNumerator,
   
 `(nNumerator *  RowsetSize ) / nDenominator`  
   
-其中`RowsetSize`是行集，以行为单位的大小。 此公式的准确性取决于特定的提供程序。 有关详细信息，请参阅[irowsetscroll:: Getrowsatratio](/previous-versions/windows/desktop/ms709602\(v=vs.85\))中*OLE DB 程序员参考*。   
+其中`RowsetSize`是行集，以行为单位的大小。 此公式的准确性取决于特定的提供程序。 有关详细信息，请参阅[irowsetscroll:: Getrowsatratio](/previous-versions/windows/desktop/ms709602)中*OLE DB 程序员参考*。   
 
 ## <a name="releaserows"></a> Cbulkrowset:: Releaserows
 
-调用[irowset:: Releaserows](/previous-versions/windows/desktop/ms719771\(v=vs.85\))要递减当前从 bulk 行集检索到的所有行的引用计数。  
+调用[irowset:: Releaserows](/previous-versions/windows/desktop/ms719771)要递减当前从 bulk 行集检索到的所有行的引用计数。  
   
 ### <a name="syntax"></a>语法  
   

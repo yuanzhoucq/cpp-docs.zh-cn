@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 42545b24bff14daf66f719a78ba414f1ae86c5c0
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 52b5c5bea282e4ebb4106d8e9c2fede40f375ae3
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790497"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083602"
 ---
 # <a name="dbcolumn"></a>db_column
 
@@ -45,23 +45,23 @@ ms.locfileid: "48790497"
 ```
 
 *dbtype*<br/>
-（可选）OLE DB[类型指示符](/previous-versions/windows/desktop/ms711251\(v=vs.85\))列条目。
+（可选）OLE DB[类型指示符](/previous-versions/windows/desktop/ms711251)列条目。
 
 *precision*<br/>
-（可选）要用于列条目精度。 有关详细信息，请参阅的说明`bPrecision`元素的[DBBINDING 结构](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
+（可选）要用于列条目精度。 有关详细信息，请参阅的说明`bPrecision`元素的[DBBINDING 结构](/previous-versions/windows/desktop/ms716845)
 
 *缩放*<br/>
-（可选）要用于列项目的比例。 有关详细信息，请参阅的说明`bScale`元素的[DBBINDING 结构](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
+（可选）要用于列项目的比例。 有关详细信息，请参阅的说明`bScale`元素的[DBBINDING 结构](/previous-versions/windows/desktop/ms716845)
 
 *status*<br/>
-（可选）成员变量，用来保存此列的状态。 状态指示该列的值是数据值或其他某个值，如空值。 有关可能的值，请参阅[状态](/previous-versions/windows/desktop/ms722617\(v=vs.85\))中*OLE DB 程序员参考*。
+（可选）成员变量，用来保存此列的状态。 状态指示该列的值是数据值或其他某个值，如空值。 有关可能的值，请参阅[状态](/previous-versions/windows/desktop/ms722617)中*OLE DB 程序员参考*。
 
 *length*<br/>
 （可选）成员变量，用来保存的列的大小以字节为单位。
 
 ## <a name="remarks"></a>备注
 
-**db_column**将指定的表列绑定到行集中的变量。 分隔可以参与在 OLE DB 中的成员数据`IAccessor`-基于绑定。 此属性设置了通常使用 OLE DB 使用者宏定义的列映射[BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md)， [END_COLUMN_MAP](../../data/oledb/end-column-map.md)，并[COLUMN_ENTRY](../../data/oledb/column-entry.md)。 这些操作 OLE DB [DBBINDING 结构](/previous-versions/windows/desktop/ms716845\(v=vs.85\))绑定指定的列。 您会使用标记每个成员**db_column**属性将占用列项的窗体中的列映射中的一个条目。 因此，调用此属性，可使列映射，即，命令或表类中。
+**db_column**将指定的表列绑定到行集中的变量。 分隔可以参与在 OLE DB 中的成员数据`IAccessor`-基于绑定。 此属性设置了通常使用 OLE DB 使用者宏定义的列映射[BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md)， [END_COLUMN_MAP](../../data/oledb/end-column-map.md)，并[COLUMN_ENTRY](../../data/oledb/column-entry.md)。 这些操作 OLE DB [DBBINDING 结构](/previous-versions/windows/desktop/ms716845)绑定指定的列。 您会使用标记每个成员**db_column**属性将占用列项的窗体中的列映射中的一个条目。 因此，调用此属性，可使列映射，即，命令或表类中。
 
 使用**db_column**结合使用[db_table](db-table.md)或[db_command](db-command.md)属性。
 
@@ -120,7 +120,7 @@ class CProducts {
 |**必需的特性**|无|
 |**无效的特性**|无|
 
-有关特性上下文的详细信息，请参阅[特性上下文](cpp-attributes-com-net.md#contexts)。
+有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
 ## <a name="see-also"></a>请参阅
 

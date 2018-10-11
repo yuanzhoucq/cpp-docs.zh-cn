@@ -25,16 +25,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b90d89a5a9541f0c3c68efc8031e6cb1dd87ad84
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 34daf1f1c8624206070c73c9f012192c8b3dec66
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46019024"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082626"
 ---
 # <a name="isessionpropertiesimpl-class"></a>ISessionPropertiesImpl 类
 
-提供的实现[ISessionProperties](/previous-versions/windows/desktop/ms713721\(v=vs.85\))接口。  
+提供的实现[ISessionProperties](/previous-versions/windows/desktop/ms713721)接口。  
   
 ## <a name="syntax"></a>语法
 
@@ -85,7 +85,7 @@ STDMETHOD(GetProperties)(ULONG cPropertyIDSets,
   
 #### <a name="parameters"></a>参数  
 
-请参阅[ISessionProperties::GetProperties](/previous-versions/windows/desktop/ms723643\(v=vs.85\))中*OLE DB 程序员参考*。 
+请参阅[ISessionProperties::GetProperties](/previous-versions/windows/desktop/ms723643)中*OLE DB 程序员参考*。 
 
 ## <a name="setproperties"></a> Isessionpropertiesimpl:: Setproperties
 
@@ -100,7 +100,7 @@ STDMETHOD(SetProperties)(ULONG cPropertySets,
   
 #### <a name="parameters"></a>参数  
 
-请参阅[ISessionProperties::SetProperties](/previous-versions/windows/desktop/ms714405\(v=vs.85\))中*OLE DB 程序员参考*。  
+请参阅[ISessionProperties::SetProperties](/previous-versions/windows/desktop/ms714405)中*OLE DB 程序员参考*。  
   
 ## <a name="see-also"></a>请参阅  
 

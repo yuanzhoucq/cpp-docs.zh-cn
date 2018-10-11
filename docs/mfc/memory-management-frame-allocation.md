@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca2d98898c232cdb65d3ac5d1288b06aca403772
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1138a675d64561a2e8399accd93c4ebb5eff382d
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46398113"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083851"
 ---
 # <a name="memory-management-frame-allocation"></a>内存管理：帧分配
 
@@ -47,7 +47,7 @@ ms.locfileid: "46398113"
 
 在将某个对象定义为帧变量时，会在遇到定义的位置自动调用其构造函数。 如果对象超出范围，则在回收此对象的内存之前将自动调用其析构函数。 此自动构造和析构非常方便，但您必须意识到自动调用，特别是对于析构函数。
 
-在帧上分配对象的主要好处是可自动删除这些对象。 在帧上分配对象时，不必担心忘记导致内存泄漏的对象。 (有关内存泄漏的详细信息，请参阅文章[在 MFC 中检测内存泄漏](/previous-versions/visualstudio/visual-studio-2010/c99kz476\(v=vs.100\))。)帧分配的缺点是无法在帧变量的范围之外使用这些变量。 选择帧分配还是堆分配所依据的另一个因素是：对于大型结构和对象，通常更好的选择是使用堆而不是存储堆栈，因为堆栈空间通常是有限的。
+在帧上分配对象的主要好处是可自动删除这些对象。 在帧上分配对象时，不必担心忘记导致内存泄漏的对象。 (有关内存泄漏的详细信息，请参阅文章[在 MFC 中检测内存泄漏](/previous-versions/visualstudio/visual-studio-2010/c99kz476)。)帧分配的缺点是无法在帧变量的范围之外使用这些变量。 选择帧分配还是堆分配所依据的另一个因素是：对于大型结构和对象，通常更好的选择是使用堆而不是存储堆栈，因为堆栈空间通常是有限的。
 
 ## <a name="see-also"></a>请参阅
 

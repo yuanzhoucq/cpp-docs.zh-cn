@@ -16,16 +16,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: aef8b069e9f77b61ee0c6c26d8d9232ee139867d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a7d8f7a55379707282fd5ea9ad2063d00392d7eb
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46098909"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082613"
 ---
 # <a name="setting-properties-in-your-provider"></a>在提供程序中设置属性
 
-找到所需的属性的属性组和属性 ID。 有关详细信息，请参阅[OLE DB 属性](/previous-versions/windows/desktop/ms722734\(v=vs.85\))中*OLE DB 程序员参考*。  
+找到所需的属性的属性组和属性 ID。 有关详细信息，请参阅[OLE DB 属性](/previous-versions/windows/desktop/ms722734)中*OLE DB 程序员参考*。  
   
 在向导生成的提供程序代码中，找到的属性组相对应的属性映射。 属性组的名称通常对应于对象的名称。 在命令或行集; 中找不到命令和行集属性可以在数据源对象中找到数据源和初始化属性。  
   
@@ -33,7 +33,7 @@ ms.locfileid: "46098909"
   
 - 对您的属性相对应的属性 ID。 从属性名称的前面，必须删除前七个字符 ("DBPROP_")。 例如，如果你想要添加`DBPROP_MAXROWS`，将传递`MAXROWS`的第一个元素。 如果这是自定义属性，则传递 GUID 的全名 (例如， `DBMYPROP_MYPROPERTY`)。  
   
-- 属性的变体类型 (在[OLE DB 属性](/previous-versions/windows/desktop/ms722734\(v=vs.85\))中*OLE DB 程序员参考*)。 输入 | VT_ 类型 （如 VT_BOOL 或 VT_I2） 相对应的数据类型。  
+- 属性的变体类型 (在[OLE DB 属性](/previous-versions/windows/desktop/ms722734)中*OLE DB 程序员参考*)。 输入 | VT_ 类型 （如 VT_BOOL 或 VT_I2） 相对应的数据类型。  
   
 - 标志以指示属性是否可读和可写以及它所属的组。 例如，下面的代码指示属于组的行集的读/写属性：  
   

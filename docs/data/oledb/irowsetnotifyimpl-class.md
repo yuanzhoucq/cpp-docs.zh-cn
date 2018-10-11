@@ -31,16 +31,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d2d63b4046774bd7e1c427639db3483536e94bc5
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 9ade96e5d73d86519a067d632a4e05250d1264cf
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46095334"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082301"
 ---
 # <a name="irowsetnotifyimpl-class"></a>IRowsetNotifyImpl 类
 
-实现和注册[IRowsetNotify](/previous-versions/windows/desktop/ms712959\(v=vs.85\))上使用者 （也称为"接收器"），以便它可以处理通知。  
+实现和注册[IRowsetNotify](/previous-versions/windows/desktop/ms712959)上使用者 （也称为"接收器"），以便它可以处理通知。  
   
 ## <a name="syntax"></a>语法
 
@@ -66,7 +66,7 @@ class ATL_NO_VTABLE IRowsetNotifyImpl : public IRowsetNotify
 
 请参阅[接收通知](../../data/oledb/receiving-notifications.md)如何实现上使用者连接点接口。  
   
-`IRowsetNotifyImpl` 提供有关虚拟实现`IRowsetNotify`，具有可实现空功能`IRowsetNotify`方法[OnFieldChange](/previous-versions/windows/desktop/ms715961\(v=vs.85\))， [OnRowChange](/previous-versions/windows/desktop/ms722694\(v=vs.85\))，和[OnRowsetChange](/previous-versions/windows/desktop/ms722669\(v=vs.85\)). 如果在实现时，在从此类继承`IRowsetNotify`接口，可以实现仅需要的方法。 此外需要自行提供的其他方法的空实现。  
+`IRowsetNotifyImpl` 提供有关虚拟实现`IRowsetNotify`，具有可实现空功能`IRowsetNotify`方法[OnFieldChange](/previous-versions/windows/desktop/ms715961)， [OnRowChange](/previous-versions/windows/desktop/ms722694)，和[OnRowsetChange](/previous-versions/windows/desktop/ms722669). 如果在实现时，在从此类继承`IRowsetNotify`接口，可以实现仅需要的方法。 此外需要自行提供的其他方法的空实现。  
 
 ## <a name="onfieldchange"></a> Irowsetnotifyimpl:: Onfieldchange
 
@@ -87,15 +87,15 @@ STDMETHOD(OnFieldChange)(
   
 #### <a name="parameters"></a>参数  
 
-请参阅[IRowsetNotify::OnFieldChange](/previous-versions/windows/desktop/ms715961\(v=vs.85\))有关参数说明。  
+请参阅[IRowsetNotify::OnFieldChange](/previous-versions/windows/desktop/ms715961)有关参数说明。  
   
 ### <a name="return-value"></a>返回值  
 
-请参阅[IRowsetNotify::OnFieldChange](/previous-versions/windows/desktop/ms715961\(v=vs.85\))有关返回值说明。  
+请参阅[IRowsetNotify::OnFieldChange](/previous-versions/windows/desktop/ms715961)有关返回值说明。  
   
 ### <a name="remarks"></a>备注  
 
-此方法包装[IRowsetNotify::OnFieldChange](/previous-versions/windows/desktop/ms715961\(v=vs.85\))方法。 有关详细信息，请参阅“OLE DB 程序员参考”中对该方法的描述。  
+此方法包装[IRowsetNotify::OnFieldChange](/previous-versions/windows/desktop/ms715961)方法。 有关详细信息，请参阅“OLE DB 程序员参考”中对该方法的描述。  
 
 ## <a name="onrowchange"></a> Irowsetnotifyimpl:: Onrowchange
 
@@ -115,15 +115,15 @@ STDMETHOD(OnRowChange)(
   
 #### <a name="parameters"></a>参数  
 
-请参阅[irowsetnotify:: Onrowchange](/previous-versions/windows/desktop/ms722694\(v=vs.85\))有关参数说明。  
+请参阅[irowsetnotify:: Onrowchange](/previous-versions/windows/desktop/ms722694)有关参数说明。  
   
 ### <a name="return-value"></a>返回值  
 
-请参阅[irowsetnotify:: Onrowchange](/previous-versions/windows/desktop/ms722694\(v=vs.85\))有关返回值说明。  
+请参阅[irowsetnotify:: Onrowchange](/previous-versions/windows/desktop/ms722694)有关返回值说明。  
   
 ### <a name="remarks"></a>备注  
 
-此方法包装[irowsetnotify:: Onrowchange](/previous-versions/windows/desktop/ms722694\(v=vs.85\))方法。 有关详细信息，请参阅“OLE DB 程序员参考”中对该方法的描述。 
+此方法包装[irowsetnotify:: Onrowchange](/previous-versions/windows/desktop/ms722694)方法。 有关详细信息，请参阅“OLE DB 程序员参考”中对该方法的描述。 
 
 ## <a name="onrowsetchange"></a> Irowsetnotifyimpl:: Onrowsetchange
 
@@ -141,19 +141,19 @@ STDMETHOD(OnRowsetChange)(
   
 #### <a name="parameters"></a>参数  
 
-请参阅[IRowsetNotify::OnRowsetChange](/previous-versions/windows/desktop/ms722669\(v=vs.85\))有关参数说明。  
+请参阅[IRowsetNotify::OnRowsetChange](/previous-versions/windows/desktop/ms722669)有关参数说明。  
   
 ### <a name="return-value"></a>返回值  
 
-请参阅[IRowsetNotify::OnRowsetChange](/previous-versions/windows/desktop/ms722669\(v=vs.85\))有关返回值说明。  
+请参阅[IRowsetNotify::OnRowsetChange](/previous-versions/windows/desktop/ms722669)有关返回值说明。  
   
 ### <a name="remarks"></a>备注  
 
-此方法包装[IRowsetNotify::OnRowsetChange](/previous-versions/windows/desktop/ms722669\(v=vs.85\))方法。 有关详细信息，请参阅“OLE DB 程序员参考”中对该方法的描述。
+此方法包装[IRowsetNotify::OnRowsetChange](/previous-versions/windows/desktop/ms722669)方法。 有关详细信息，请参阅“OLE DB 程序员参考”中对该方法的描述。
   
 ## <a name="see-also"></a>请参阅  
 
 [OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[IRowsetNotify](/previous-versions/windows/desktop/ms712959\(v=vs.85\))   
+[IRowsetNotify](/previous-versions/windows/desktop/ms712959)   
 [IRowsetNotifyCP 类](../../data/oledb/irowsetnotifycp-class.md)

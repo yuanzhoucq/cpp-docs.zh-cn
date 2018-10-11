@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7ab24f981e90342a679b1a0a542b540192fee06e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a98848799163fd31037dc137b92b94878a1ee675
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46107820"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082457"
 ---
 # <a name="supporting-notifications"></a>支持通知
 
@@ -33,7 +33,7 @@ ms.locfileid: "46107820"
 
 若要实现通知，提供程序类必须继承[IRowsetNotifyCP](../../data/oledb/irowsetnotifycp-class.md)并[IConnectionPointContainer](../../atl/reference/iconnectionpointcontainerimpl-class.md)。  
   
-`IRowsetNotifyCP` 实现连接点接口的提供程序站点[IRowsetNotify](/previous-versions/windows/desktop/ms712959\(v=vs.85\))。 `IRowsetNotifyCP` 实现广播函数向侦听器建议的连接点`IID_IRowsetNotify`对行集的内容的更改。  
+`IRowsetNotifyCP` 实现连接点接口的提供程序站点[IRowsetNotify](/previous-versions/windows/desktop/ms712959)。 `IRowsetNotifyCP` 实现广播函数向侦听器建议的连接点`IID_IRowsetNotify`对行集的内容的更改。  
   
 请注意，您还必须实现和注册`IRowsetNotify`上使用使用者 （也称为接收器） [IRowsetNotifyImpl](../../data/oledb/irowsetnotifyimpl-class.md) ，以便使用者可以处理通知。 有关实现上使用者连接点接口的信息，请参阅[接收通知](../../data/oledb/receiving-notifications.md)。  
   

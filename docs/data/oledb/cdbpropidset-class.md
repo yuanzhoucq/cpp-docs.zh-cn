@@ -44,12 +44,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9619ffdf9fd24bd73548fb3992084eb0a5d437a7
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 514a013cf3f327c0c73ca8469900693d6a4e5e21
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46114470"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49084030"
 ---
 # <a name="cdbpropidset-class"></a>CDBPropIDSet 类
 
@@ -83,7 +83,7 @@ class CDBPropIDSet : public tagDBPROPIDSET
   
 ## <a name="remarks"></a>备注  
 
-OLE DB 使用者使用`DBPROPIDSET`结构传递的使用者要为其获取属性信息的属性 Id 的数组。 在单个标识的属性[DBPROPIDSET](/previous-versions/windows/desktop/ms717981\(v=vs.85\))结构属于一个属性集。  
+OLE DB 使用者使用`DBPROPIDSET`结构传递的使用者要为其获取属性信息的属性 Id 的数组。 在单个标识的属性[DBPROPIDSET](/previous-versions/windows/desktop/ms717981)结构属于一个属性集。  
 
 ## <a name="addpropertyid"></a> Cdbpropidset:: Addpropertyid
 
@@ -102,7 +102,7 @@ bool AddPropertyID(DBPROPID propid) throw();
 
 ## <a name="cdbpropidset"></a> Cdbpropidset:: Cdbpropidset
 
-构造函数。 初始化`rgProperties`， `cProperties`，和 （可选）`guidPropertySet`的字段[DBPROPIDSET](/previous-versions/windows/desktop/ms717981\(v=vs.85\))结构。  
+构造函数。 初始化`rgProperties`， `cProperties`，和 （可选）`guidPropertySet`的字段[DBPROPIDSET](/previous-versions/windows/desktop/ms717981)结构。  
   
 ### <a name="syntax"></a>语法  
   
@@ -135,7 +135,7 @@ void SetGUID(const GUID& guid) throw();
 #### <a name="parameters"></a>参数  
 
 *guid*<br/>
-[in]使用 GUID 来设置`guidPropertySet`字段[DBPROPIDSET](/previous-versions/windows/desktop/ms717981\(v=vs.85\))结构。  
+[in]使用 GUID 来设置`guidPropertySet`字段[DBPROPIDSET](/previous-versions/windows/desktop/ms717981)结构。  
   
 ### <a name="remarks"></a>备注  
 

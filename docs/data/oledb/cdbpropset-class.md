@@ -44,12 +44,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c6d62b8d4b033d1b90c753d5de1752f0cb737f0d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: e998f0bed867356218e4a1b1c772d396c53afecb
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46114652"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082977"
 ---
 # <a name="cdbpropset-class"></a>CDBPropSet 类
 
@@ -138,7 +138,7 @@ bool AddProperty(DWORD dwPropertyID,
 
 ## <a name="cdbpropset"></a> Cdbpropset:: Cdbpropset
 
-构造函数。 初始化`rgProperties`， `cProperties`，并`guidPropertySet`的字段[DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\))结构。  
+构造函数。 初始化`rgProperties`， `cProperties`，并`guidPropertySet`的字段[DBPROPSET](/previous-versions/windows/desktop/ms714367)结构。  
   
 ### <a name="syntax"></a>语法  
   
@@ -171,7 +171,7 @@ void SetGUID(const GUID& guid) throw();
 #### <a name="parameters"></a>参数  
 
 *guid*<br/>
-[in]使用 GUID 来设置`guidPropertySet`字段[DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\))结构。  
+[in]使用 GUID 来设置`guidPropertySet`字段[DBPROPSET](/previous-versions/windows/desktop/ms714367)结构。  
   
 ### <a name="remarks"></a>备注  
 
@@ -192,5 +192,5 @@ CDBPropSet& operator =(CDBPropSet& propset) throw();
 [OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [OLE DB 使用者模板参考](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [CDBPropIDSet 类](../../data/oledb/cdbpropidset-class.md)<br/>
-[DBPROPSET 结构](/previous-versions/windows/desktop/ms714367\(v=vs.85\))   
-[DBPROP 结构](/previous-versions/windows/desktop/ms717970\(v=vs.85\))
+[DBPROPSET 结构](/previous-versions/windows/desktop/ms714367)   
+[DBPROP 结构](/previous-versions/windows/desktop/ms717970)

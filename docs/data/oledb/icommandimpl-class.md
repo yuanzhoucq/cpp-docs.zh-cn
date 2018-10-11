@@ -63,16 +63,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 41636a0ff93a247b33c3d7fb7c13a65c05e1aa1d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 5f04104aadc2897118a402a06d93db27a5a16079
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46041462"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082808"
 ---
 # <a name="icommandimpl-class"></a>ICommandImpl 类
 
-提供用于实现[ICommand](/previous-versions/windows/desktop/ms709737\(v=vs.85\))接口。  
+提供用于实现[ICommand](/previous-versions/windows/desktop/ms709737)接口。  
   
 ## <a name="syntax"></a>语法
 
@@ -130,7 +130,7 @@ STDMETHOD(Cancel)();
   
 ### <a name="remarks"></a>备注  
 
-请参阅[ICommand::Cancel](/previous-versions/windows/desktop/ms714402\(v=vs.85\))中*OLE DB 程序员参考*。  
+请参阅[ICommand::Cancel](/previous-versions/windows/desktop/ms714402)中*OLE DB 程序员参考*。  
 
 ## <a name="cancelexecution"></a> Icommandimpl:: Cancelexecution
 
@@ -189,7 +189,7 @@ HRESULT CreateRowset(IUnknown* pUnkOuter,
 
 若要创建多个行集，或提供你自己创建不同的行集的条件，将放到不同的调用`CreateRowset`从`Execute`。  
   
-请参阅[icommand:: Execute](/previous-versions/windows/desktop/ms718095\(v=vs.85\))中*OLE DB 程序员参考。*  
+请参阅[icommand:: Execute](/previous-versions/windows/desktop/ms718095)中*OLE DB 程序员参考。*  
 
 ## <a name="execute"></a> Icommandimpl:: Execute
 
@@ -207,7 +207,7 @@ HRESULT Execute(IUnknown* pUnkOuter,
   
 #### <a name="parameters"></a>参数  
 
-请参阅[icommand:: Execute](/previous-versions/windows/desktop/ms718095\(v=vs.85\))中*OLE DB 程序员参考*。  
+请参阅[icommand:: Execute](/previous-versions/windows/desktop/ms718095)中*OLE DB 程序员参考*。  
   
 ### <a name="remarks"></a>备注  
 
@@ -228,7 +228,7 @@ STDMETHOD (GetDBSession) (REFIID riid,
   
 #### <a name="parameters"></a>参数  
 
-请参阅[ICommand::GetDBSession](/previous-versions/windows/desktop/ms719622\(v=vs.85\))中*OLE DB 程序员参考*。  
+请参阅[ICommand::GetDBSession](/previous-versions/windows/desktop/ms719622)中*OLE DB 程序员参考*。  
   
 ### <a name="remarks"></a>备注  
 

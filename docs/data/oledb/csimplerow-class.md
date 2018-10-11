@@ -46,12 +46,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: aa4953c5ba879f5fa0fe8c5b892f91dfa8d15dc9
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: fb27c7fc401fb27b3677659f4f1b5539c19fda2c
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46095205"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082691"
 ---
 # <a name="csimplerow-class"></a>CSimpleRow 类
 
@@ -112,11 +112,11 @@ HRESULT Compare(CSimpleRow* pRow);
 #### <a name="parameters"></a>参数  
 
 *pRow*<br/>
-一个指向`CSimpleRow`对象。  
+指向 `CSimpleRow` 对象的指针。  
   
 ### <a name="return-value"></a>返回值  
 
-HRESULT 值，通常为 S_OK，指示两个行是相同的行实例，或 S_FALSE，指示两个行都不同。 请参阅[IRowsetIdentity::IsSameRow](/previous-versions/windows/desktop/ms719629\(v=vs.85\))中*OLE DB 程序员参考*有关其他可能的返回值。 
+HRESULT 值，通常为 S_OK，指示两个行是相同的行实例，或 S_FALSE，指示两个行都不同。 请参阅[IRowsetIdentity::IsSameRow](/previous-versions/windows/desktop/ms719629)中*OLE DB 程序员参考*有关其他可能的返回值。 
 
 ## <a name="csimplerow"></a> Csimplerow:: Csimplerow
 

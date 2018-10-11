@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb101179cff40d79ab142e55b4fc46cc8941d126
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d1e050baf87374b98d5490ef8a760ca13620e240
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46399543"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083926"
 ---
 # <a name="cdatabase-class"></a>CDatabase 类
 
@@ -202,7 +202,7 @@ void Cancel();
 
 ### <a name="remarks"></a>备注
 
-请注意，MFC ODBC 类不能再使用异步处理;若要执行的异步操作，您必须直接调用 ODBC API 函数[SQLSetConnectOption](/previous-versions/windows/desktop/ms713564\(v=vs.85\))。 有关详细信息，请参阅[异步执行](/previous-versions/windows/desktop/ms713563\(v=vs.85\))Windows SDK 中。
+请注意，MFC ODBC 类不能再使用异步处理;若要执行的异步操作，您必须直接调用 ODBC API 函数[SQLSetConnectOption](/previous-versions/windows/desktop/ms713564)。 有关详细信息，请参阅[异步执行](/previous-versions/windows/desktop/ms713563)Windows SDK 中。
 
 ##  <a name="cantransact"></a>  CDatabase::CanTransact
 
@@ -509,7 +509,7 @@ virtual BOOL Open(
 不支持在此版本的类库。 目前，断言失败时，如果此参数为 TRUE。 总是打开数据源的共享 （非独占）。
 
 *bReadOnly*<br/>
-如果你想为只读的并禁止对数据源的更新的连接，则为 TRUE。 所有从属记录集中继承该属性。 默认值为 FALSE。
+如果你想为只读的并禁止对数据源的更新的连接，则为 TRUE。 所有从属记录集中继承该属性。 默认值是 FALSE。
 
 *lpszConnect*<br/>
 指定连接字符串。 连接字符串连接信息，还可能包括数据源名称，在数据源、 用户身份验证字符串 （密码，如果数据源需要一个） 和其他信息有效的用户 ID。 整个连接字符串必须以字符串"ODBC;"为前缀（大写或小写）。 "ODBC"; 使用字符串来表示网络连接到 ODBC 数据源;这是为了向上兼容时类库的未来版本可能支持非 ODBC 数据源。

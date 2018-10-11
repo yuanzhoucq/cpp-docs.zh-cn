@@ -41,12 +41,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: afae1f91907e8fd22640dd87fe607a067900edfa
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 1ef9799c65f4932bf314f3c11fd8324e0fb40bf2
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46024640"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49081731"
 ---
 # <a name="caccessorrowset-class"></a>CAccessorRowset 类
 
@@ -82,7 +82,7 @@ class CAccessorRowset : public TAccessor, public TRowset<TAccessor>
 |[CAccessorRowset](#caccessorrowset)|构造函数。|  
 |[关闭](#close)|关闭的行集和任何访问器。|  
 |[FreeRecordMemory](#freerecordmemory)|释放当前需要释放的记录中的任何列。|  
-|[GetColumnInfo](#getcolumninfo)|实现[icolumnsinfo:: Getcolumninfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\))。|  
+|[GetColumnInfo](#getcolumninfo)|实现[icolumnsinfo:: Getcolumninfo](/previous-versions/windows/desktop/ms722704)。|  
   
 ## <a name="remarks"></a>备注  
 
@@ -153,7 +153,7 @@ HRESULT GetColumnInfo(DBORDINAL* pColumns,
   
 #### <a name="parameters"></a>参数  
 
-请参阅[icolumnsinfo:: Getcolumninfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\))中*OLE DB 程序员参考*。  
+请参阅[icolumnsinfo:: Getcolumninfo](/previous-versions/windows/desktop/ms722704)中*OLE DB 程序员参考*。  
   
 ### <a name="return-value"></a>返回值  
 
@@ -163,7 +163,7 @@ HRESULT GetColumnInfo(DBORDINAL* pColumns,
 
 用户必须释放返回的列信息和字符串缓冲区。 当你使用时使用此方法的第二个版本[CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)和需要重写这些绑定。  
   
-有关详细信息，请参阅[icolumnsinfo:: Getcolumninfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\))中*OLE DB 程序员参考*。  
+有关详细信息，请参阅[icolumnsinfo:: Getcolumninfo](/previous-versions/windows/desktop/ms722704)中*OLE DB 程序员参考*。  
   
 ## <a name="see-also"></a>请参阅  
 

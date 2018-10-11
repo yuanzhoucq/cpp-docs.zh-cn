@@ -13,18 +13,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9d4f44e3587e9b274bbe89e2fa4f91accadb08ab
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 991e3e74ba280b615d951c12472de46833b7de72
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43688254"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083341"
 ---
 # <a name="desktop-applications-visual-c"></a>桌面应用程序 （Visual c + +）
 
 一个*桌面应用程序*c + + 中是可以访问 Windows Api 和是运行在窗口中或在系统控制台中的完整集的本机应用程序。 （尽管不再受正式支持 Windows XP，并且从那以后引入了许多 Windows api），在 c + + 的桌面应用程序可以在 Windows XP 到 Windows 10 上运行。
 
-桌面应用程序与来自通用 Windows 平台 (UWP) 应用于运行 Windows 10 电脑以及 XBox、 Windows Phone、 Surface Hub 和其他设备上可以运行不同。 有关桌面 vs 的详细信息。UWP 应用程序，请参阅[选择你的技术](https://msdn.microsoft.com/library/windows/desktop/dn614993\(v=vs.85\).aspx)。
+桌面应用程序与来自通用 Windows 平台 (UWP) 应用于运行 Windows 10 电脑以及 XBox、 Windows Phone、 Surface Hub 和其他设备上可以运行不同。 有关桌面 vs 的详细信息。UWP 应用程序，请参阅[选择你的技术](https://msdn.microsoft.com/library/windows/desktop/dn614993)。
 
 
 ### <a name="desktop-bridge"></a>桌面桥
@@ -35,7 +35,7 @@ ms.locfileid: "43688254"
 
 ### <a name="terminology"></a>术语
 
-- 一个*Win32*应用程序是在可以进行的 c + + 的桌面应用程序使用的本机 Windows [Windows C Api 和/或 COM Api](https://msdn.microsoft.com/library/windows/desktop/ff818516\(v=vs.85\).aspx) CRT 和标准库 Api 和第三方库。 在窗口中运行的 Win32 应用程序需要开发人员可以显式使用内部 Windows 过程函数的 Windows 消息。 不管名称如何，Win32 应用程序可以编译为 32 位 (x86) 或 64 位 (x64) 二进制。 在 Visual Studio IDE 中的条款 x86 和 Win32 是同义的。
+- 一个*Win32*应用程序是在可以进行的 c + + 的桌面应用程序使用的本机 Windows [Windows C Api 和/或 COM Api](https://msdn.microsoft.com/library/windows/desktop/ff818516) CRT 和标准库 Api 和第三方库。 在窗口中运行的 Win32 应用程序需要开发人员可以显式使用内部 Windows 过程函数的 Windows 消息。 不管名称如何，Win32 应用程序可以编译为 32 位 (x86) 或 64 位 (x64) 二进制。 在 Visual Studio IDE 中的条款 x86 和 Win32 是同义的。
 
 - [组件对象模型 (COM)](/windows/desktop/com/the-component-object-model)是一种规范，用来相互通信的不同语言编写的程序。 许多 Windows 组件作为 COM 对象实现，并且遵循标准 COM 规则对象的创建过程的接口发现和对象的析构。  使用 c + + 桌面应用程序的 COM 对象是相对简单，但更高级编写你自己的 COM 对象。 [活动模板库 (ATL)](../atl/atl-com-desktop-components.md)提供宏和 helper 函数，简化了 COM 开发。
 

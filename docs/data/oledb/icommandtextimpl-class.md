@@ -33,16 +33,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 6283f29455cc3d835babdd83414e9dc98127eacd
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: b73111fe05a7c752edda0c95f1289a125828d4a5
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46029723"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082548"
 ---
 # <a name="icommandtextimpl-class"></a>ICommandTextImpl 类
 
-提供一个实现[ICommandText](/previous-versions/windows/desktop/ms714914\(v=vs.85\))接口。  
+提供一个实现[ICommandText](/previous-versions/windows/desktop/ms714914)接口。  
   
 ## <a name="syntax"></a>语法
 
@@ -93,7 +93,7 @@ STDMETHOD(GetCommandText)(GUID * pguidDialect,
   
 #### <a name="parameters"></a>参数  
 
-请参阅[ICommandText::GetCommandText](/previous-versions/windows/desktop/ms709825\(v=vs.85\))中*OLE DB 程序员参考*。 *PguidDialect*默认情况下忽略参数。  
+请参阅[ICommandText::GetCommandText](/previous-versions/windows/desktop/ms709825)中*OLE DB 程序员参考*。 *PguidDialect*默认情况下忽略参数。  
 
 ## <a name="setcommandtext"></a> Icommandtextimpl:: Setcommandtext
 
@@ -108,7 +108,7 @@ STDMETHOD(SetCommandText)(REFGUID rguidDialect,
   
 #### <a name="parameters"></a>参数  
 
-请参阅[icommandtext:: Setcommandtext](/previous-versions/windows/desktop/ms709757\(v=vs.85\))中*OLE DB 程序员参考*。 
+请参阅[icommandtext:: Setcommandtext](/previous-versions/windows/desktop/ms709757)中*OLE DB 程序员参考*。 
 
 ## <a name="strcommandtext"></a> Icommandtextimpl:: M_strcommandtext
 
