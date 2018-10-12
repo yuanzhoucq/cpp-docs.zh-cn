@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 231eed17f155b9ec184e0cf4fe3bd91e7770a7f4
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 608472f3133464137d2d0f96128453e4239b16a2
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45716844"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162082"
 ---
 # <a name="gh-enable-penter-hook-function"></a>/Gh（启用 _penter 挂钩函数）
 
@@ -43,7 +43,7 @@ ms.locfileid: "45716844"
 除非您打算显式调用`_penter`，不需要提供原型。 该函数必须看起来似乎具有以下原型，并且必须在进入时推送所有寄存器的内容，在退出时弹出未更改的内容：
 
 ```
-void __declspec(naked) _cdecl _penter( void );
+void __declspec(naked) __cdecl _penter( void );
 ```
 
 此声明不是适用于 64 位项目。
@@ -66,7 +66,7 @@ void __declspec(naked) _cdecl _penter( void );
 
 下面的代码，编译时使用 **/Gh**，显示了如何`_penter`调用了两次; 一次输入函数时`main`一次输入函数时`x`。
 
-```
+```cpp
 // Gh_compiler_option.cpp
 // compile with: /Gh
 // processor: x86
@@ -77,7 +77,7 @@ int main() {
    x();
 }
 
-extern "C" void __declspec(naked) _cdecl _penter( void ) {
+extern "C" void __declspec(naked) __cdecl _penter( void ) {
    _asm {
       push eax
       push ebx

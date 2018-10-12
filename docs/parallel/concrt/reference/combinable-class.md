@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60e1f944d19efd22cb2c6c7d6a3752d6d32ae1e3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d544ac392e2eb227d7e1c37412110d09272f10d5
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46381668"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162499"
 ---
 # <a name="combinable-class"></a>combinable 类
 
@@ -182,7 +182,7 @@ T& local(bool& _Exists);
 ### <a name="parameters"></a>参数
 
 *_Exists*<br/>
-一个布尔值对的引用。 此参数由引用的布尔值将设置为`true`如果子计算已存在，此线程上并设置为`false`如果这是此线程上的第一个子计算。
+一个布尔值对的引用。 此参数由引用的布尔值将设置为 **，则返回 true**如果子计算已存在，此线程上并设置为**false**如果这是此线程上的第一个子计算。
 
 ### <a name="return-value"></a>返回值
 

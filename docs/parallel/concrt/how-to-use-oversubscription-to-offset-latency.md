@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f96a8a27b511c1a93114c32d048043aa9562fe1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 24e1113dac068a20e535bee3e8fd5fa9dcfb9064
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46392954"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163564"
 ---
 # <a name="how-to-use-oversubscription-to-offset-latency"></a>如何：使用过度订阅偏移延迟
 
@@ -30,7 +30,7 @@ ms.locfileid: "46392954"
 
 此示例使用[异步代理库](../../parallel/concrt/asynchronous-agents-library.md)从 HTTP 服务器下载文件。 `http_reader`类派生自[concurrency:: agent](../../parallel/concrt/reference/agent-class.md)并使用消息传递来异步读取要下载的 URL 名称。
 
-`http_reader`类使用[concurrency:: task_group](reference/task-group-class.md)类来同时读取每个文件。 每个任务将调用[concurrency::Context::Oversubscribe](reference/context-class.md#oversubscribe)方法替换`_BeginOversubscription`参数设置为`true`启用过度订阅当前上下文中的。 然后，每个任务使用 Microsoft 基础类 (MFC) [CInternetSession](../../mfc/reference/cinternetsession-class.md)并[CHttpFile](../../mfc/reference/chttpfile-class.md)类，以下载该文件。 最后，调用每个任务`Context::Oversubscribe`与`_BeginOversubscription`参数设置为`false`禁用过度订阅。
+`http_reader`类使用[concurrency:: task_group](reference/task-group-class.md)类来同时读取每个文件。 每个任务将调用[concurrency::Context::Oversubscribe](reference/context-class.md#oversubscribe)方法替换`_BeginOversubscription`参数设置为**true**启用过度订阅当前上下文中的。 然后，每个任务使用 Microsoft 基础类 (MFC) [CInternetSession](../../mfc/reference/cinternetsession-class.md)并[CHttpFile](../../mfc/reference/chttpfile-class.md)类，以下载该文件。 最后，调用每个任务`Context::Oversubscribe`与`_BeginOversubscription`参数设置为**false**禁用过度订阅。
 
 启用过度订阅后，运行时将创建要在其中运行任务的一个其他线程。 每个线程可以过度订阅当前上下文，从而创建其他线程。 `http_reader`类使用[concurrency:: unbounded_buffer](reference/unbounded-buffer-class.md)对象来限制应用程序使用的线程数。 代理初始化具有固定数量的令牌值的缓冲区。 对于每个下载操作，该代理令牌值从缓冲区中读取之前该操作将启动，然后将该值返回写入缓冲区在操作完成后。 如果缓冲区为空，则代理会等待下载操作将返回到缓冲区中写入值之一。
 
@@ -68,7 +68,7 @@ Downloaded 1801040 bytes in 3276 ms.
 
 ## <a name="compiling-the-code"></a>编译代码
 
-复制示例代码并将其粘贴到 Visual Studio 项目中，或将其粘贴在文件中名为`download-oversubscription.cpp`，然后运行的以下一项在 Visual Studio 命令提示符窗口中的命令。
+复制示例代码并将其粘贴到 Visual Studio 项目中，或将其粘贴在文件中名为`download-oversubscription.cpp`，然后运行的以下项中的命令**Visual Studio 命令提示符**窗口。
 
 **cl.exe /EHsc /MD /D"_AFXDLL"download-oversubscription.cpp**
 

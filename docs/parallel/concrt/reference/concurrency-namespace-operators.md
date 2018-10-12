@@ -13,12 +13,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9eb820b533b74d5634695ddabda26f081a35f95
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8065be6cc53cad04d5d52bea91da05bb3125dd63
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46436918"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162563"
 ---
 # <a name="concurrency-namespace-operators"></a>并发命名空间运算符
 
@@ -70,7 +70,7 @@ inline task<void> operator||(
 
 ### <a name="remarks"></a>备注
 
-如果两个任务均被取消或引发异常，则返回的任务将在已取消状态下完成，并且当您对此任务调用 `get()` 或 `wait()` 时将引发一种异常（在遇到异常的情况下）。
+如果两个任务均被取消或引发异常，则返回的任务将在已取消状态下完成，并且当你对此任务调用 `get()` 或 `wait()` 时将引发一种异常（在遇到异常的情况下）。
 
 ##  <a name="operator_amp_amp"></a>  运算符&amp;&amp;运算符
 
@@ -119,7 +119,7 @@ inline task<void>  operator&&(
 
 ### <a name="remarks"></a>备注
 
-如果其中一个任务被取消或引发异常，则返回的任务将提前完成（处于已取消状态），并且，如果您对该任务调用 `get()` 或 `wait()`，则在遇到异常的情况下将会引发异常。
+如果其中一个任务被取消或引发异常，则返回的任务将提前完成（处于已取消状态），并且，如果你对该任务调用 `get()` 或 `wait()`，则在遇到异常的情况下将会引发异常。
 
 ##  <a name="operator_eq_eq"></a>  运算符 = = 运算符
 
@@ -151,7 +151,7 @@ inline bool operator== (
 
 ### <a name="return-value"></a>返回值
 
-`true` 如果运算符左侧的并发向量等于运算符; 右侧的并发向量否则为`false`。
+**true**如果运算符左侧的并发向量等于运算符右侧的并发向量; 否则为**false**。
 
 ### <a name="remarks"></a>备注
 
@@ -189,7 +189,7 @@ inline bool operator!= (
 
 ### <a name="return-value"></a>返回值
 
-`true` 如果并发向量是否不相等;`false`并发向量是否相等。
+**true**并发向量是否不相等; 如果**false**并发向量是否相等。
 
 ### <a name="remarks"></a>备注
 
@@ -227,7 +227,7 @@ inline bool operator<(
 
 ### <a name="return-value"></a>返回值
 
-`true` 如果运算符左侧的并发向量小于运算符; 右侧的并发向量否则为`false`。
+**true**如果运算符左侧的并发向量小于运算符; 右侧的并发向量否则为**false**。
 
 ### <a name="remarks"></a>备注
 
@@ -265,7 +265,7 @@ inline bool operator<= (
 
 ### <a name="return-value"></a>返回值
 
-`true` 如果运算符左侧的并发向量是否小于或等于运算符; 右侧的并发向量否则为`false`。
+**true**运算符左侧的并发向量是否小于或等于运算符右侧的并发向量，; 否则为**false**。
 
 ### <a name="remarks"></a>备注
 
@@ -303,7 +303,7 @@ inline bool operator>(
 
 ### <a name="return-value"></a>返回值
 
-如果运算符左侧的并发向量大于运算符右侧的并发向量，则为 `true`；否则为 `false`。
+**true**如果运算符左侧的并发向量大于运算符右侧的并发向量; 否则为**false**。
 
 ### <a name="remarks"></a>备注
 
@@ -341,7 +341,7 @@ inline bool operator>= (
 
 ### <a name="return-value"></a>返回值
 
-`true` 如果运算符左侧的并发向量大于或等于运算符; 右侧的并发向量否则为`false`。
+**true**如果运算符左侧的并发向量大于或等于运算符右侧的并发向量; 否则为**false**。
 
 ### <a name="remarks"></a>备注
 

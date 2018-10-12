@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9fc41bdccf9cce3d455d4effd3541731929e5de2
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 90ceaf20a5d601fc2904b7ce8610b4a3906e30ac
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48789262"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161198"
 ---
 # <a name="isbaseofstrict-structure"></a>IsBaseOfStrict 结构
 
@@ -52,7 +52,7 @@ struct IsBaseOfStrict<Base, Base>;
 
 测试一种类型是否是另一种类型的基类。
 
-第一个模板测试是否从可能产生的基类型派生的类型`true`或`false`。 第二个模板测试是否派生的类型是从其自身，这将始终产生`false`。
+第一个模板测试是否从可能产生的基类型派生的类型 **，则返回 true**或**false**。 第二个模板测试是否派生的类型是从其自身，这将始终产生**false**。
 
 ## <a name="members"></a>成员
 
@@ -84,4 +84,4 @@ static const bool value = __is_base_of(Base, Derived);
 
 指示是否是一个类型的另一个基类。
 
-`value` 是`true`如果类型`Base`是类型的基类`Derived`，否则它是`false`。
+`value` 是 **，则返回 true**如果类型`Base`是类型的基类`Derived`，否则是**false**。

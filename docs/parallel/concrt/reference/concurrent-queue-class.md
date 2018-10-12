@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41e4c6f3a540f44f6cec0d94ffab74d65a1ffe52
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7f8f864dcbf412b9dea0d96f6a0ba046792d7827
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46386582"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162966"
 ---
 # <a name="concurrentqueue-class"></a>concurrent_queue 类
 
@@ -177,7 +177,7 @@ bool empty() const;
 
 ### <a name="return-value"></a>返回值
 
-`true` 如果我们查看的时在并发队列为空`false`否则为。
+**true**如果我们查看的时在并发队列为空**false**否则为。
 
 ### <a name="remarks"></a>备注
 
@@ -229,11 +229,11 @@ bool try_pop(T& _Dest);
 
 ### <a name="return-value"></a>返回值
 
-`true` 如果项已成功取消排队，`false`否则为。
+**true**项已成功取消排队，如果**false**否则为。
 
 ### <a name="remarks"></a>备注
 
-如果项已成功取消排队，参数`_Dest`接收取消排队的值，保留在队列中的原始值将被销毁，并且此函数将返回`true`。 如果没有任何项取消排队，此函数将返回`false`而无需阻止，和的内容`_Dest`是未定义的参数。
+如果项已成功取消排队，参数`_Dest`接收取消排队的值，保留在队列中的原始值将被销毁，并且此函数将返回**true**。 如果没有任何项取消排队，此函数将返回`false`而无需阻止，和的内容`_Dest`是未定义的参数。
 
 `try_pop` 是并发安全方面的方法调用`push`， `try_pop`，和`empty`。
 

@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad6feef707d991d07fa4e086bc8535f32b991825
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 9c337ec94f863e6c19851bcf962db61f277491cf
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45716845"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163239"
 ---
 # <a name="msbuild-visual-c-overview"></a>MSBuild (Visual C++) 概述
 
@@ -111,7 +111,7 @@ MSBuild 是的标准生成 Visual c + + 项目系统。 Visual Studio 集成的�
 
 ### <a name="useenv-property"></a>UseEnv 属性
 
-默认情况下，当前项目的特定于平台的设置重写的路径、 INCLUDE、 LIB、 LIBPATH、 配置和平台的环境变量。 设置`UseEnv`属性设置为`true`以保证的环境变量不重写。
+默认情况下，当前项目的特定于平台的设置重写的路径、 INCLUDE、 LIB、 LIBPATH、 配置和平台的环境变量。 设置`UseEnv`属性设置为**true**以保证的环境变量不重写。
 
 `msbuild myProject.vcxproj /p:UseEnv=true`
 

@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b1cedafaea33ac642e3a5593468b996f2442bd50
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 47504b7a471dc38f30e4ceb59b5feeffcc53db6d
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894559"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161824"
 ---
 # <a name="calling-dll-functions-from-visual-basic-applications"></a>从 Visual Basic 应用程序调用 DLL 函数
 
@@ -33,7 +33,7 @@ ms.locfileid: "43894559"
 
 `__stdcall` 创建正确的函数的调用约定 （被调用的函数清理堆栈和从右到左传递的参数），但以不同的方式修饰函数名。 因此，当 **__declspec （dllexport)** 使用在 DLL 中导出的函数，修饰的名被导出。
 
-`__stdcall`名称修饰用下划线 (_) 作为符号名的前缀，并追加的符号宽度 at 符号 (**\@**) 字符后跟在参数列表 （所需的堆栈空间） 中的字节数。 因此，函数声明为：
+`__stdcall`名称修饰用下划线符号名的前缀 ( **\_** )，并将附加的符号宽度 at 符号 (**\@**) 字符后跟的数自变量列表 （所需的堆栈空间） 中的字节数。 因此，函数声明为：
 
 ```C
 int __stdcall func (int a, double b)
@@ -45,7 +45,7 @@ C 调用约定 (`__cdecl`) 将作为该名称修饰`_func`。
 
 若要获取修饰的名，请使用[/map](../build/reference/map-generate-mapfile.md)。 利用 **__declspec （dllexport)** 执行以下操作：
 
-- 如果使用 C 调用约定导出函数 (**_cdecl**)，它会导出名称时抽出前导下划线 (_)。
+- 如果使用 C 调用约定导出函数 (`__cdecl`)，则它抽出前导下划线 ( **\_** ) 导出名称时。
 
 - 如果要导出的函数不使用 C 调用约定 (例如， `__stdcall`)，它导出修饰的名。
 

@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36fe82bc5d17cd3c4951b008af28ba89b171c78f
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: acf3ae2fd16eb3aacbc0a2e681ae39aece1b4dd4
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44103927"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163213"
 ---
 # <a name="platformcollectionsvector-class"></a>Platform::Collections::Vector 类
 
@@ -71,7 +71,7 @@ template <typename T, typename E>
 
 **向量**类是 c + + 具体实现[Windows::Foundation::Collections::IVector](/uwp/api/Windows.Foundation.Collections.IVector_T_)接口。
 
-如果尝试使用**向量**在公共返回值或参数，编译器将引发的错误 C3986 中的类型。 可以修复此错误，通过更改参数或返回值类型设置为[Windows::Foundation::Collections::IVector](/uwp/api/Windows.Foundation.Collections.IVector_T_)。 有关更多信息，请参见 [集合 (C++/CX)](../cppcx/collections-c-cx.md)。
+如果尝试使用**向量**在公共返回值或参数，编译器将引发的错误 C3986 中的类型。 通过将参数或返回值的类型更改为 [Windows::Foundation::Collections::IVector](/uwp/api/Windows.Foundation.Collections.IVector_T_)可修复该错误。 有关更多信息，请参见 [集合 (C++/CX)](../cppcx/collections-c-cx.md)。
 
 ### <a name="members"></a>成员
 
@@ -240,11 +240,11 @@ virtual bool IndexOf(T value, unsigned int* index);
 *index*<br/>
 项的从零开始的索引如果参数*值*找到; 否则为 0。
 
-*索引*参数为 0，如果项目是 Vector 的第一个元素，或者找不到该项。 如果返回值为 `true`，则表明找到该项目，并且它是第一个元素；否则，表示未找到该项目。
+*索引*参数为 0，如果项目是 Vector 的第一个元素，或者找不到该项。 如果返回值是 **，则返回 true**，找到该项目，它是第一个元素; 否则，未找到项。
 
 ### <a name="return-value"></a>返回值
 
-如果找到指定项目，则为 `true`；否则，为 `false`。
+**true**如果指定的项; 否则为**false**。
 
 ### <a name="remarks"></a>备注
 
@@ -401,4 +401,4 @@ Vector(std::initializer_list<T> il);
 ## <a name="see-also"></a>请参阅
 
 [平台 Namespace](platform-namespace-c-cx.md)<br/>
-[C + + 创建 Windows 运行时组件](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)
+[用 C++ 创建 Windows 运行时组件](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)

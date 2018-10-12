@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17babc058ef3e1851da686e9a8c5bf17cefbc2fd
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f84ca4c924c837ec008c16d6ff3b77af379df4cd
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46426999"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163798"
 ---
 # <a name="cancellation-in-the-ppl"></a>PPL 中的取消操作
 
@@ -91,7 +91,7 @@ PPL 使用任务和任务组来管理细化的任务和计算。 可以嵌套任
 
 - 有关`task`对象，请使用[concurrency:: cancel_current_task](reference/concurrency-namespace-functions.md#cancel_current_task)函数。 `cancel_current_task` 取消当前任务及其任何基于值的延续。 (它不会取消取消*令牌*的任务或其延续与该键相关联。)
 
-- 对于任务组和并行算法，使用[concurrency:: is_current_task_group_canceling](reference/concurrency-namespace-functions.md#is_current_task_group_canceling)函数来取消，并尽快从任务正文时返回此函数将返回`true`。 （请勿从任务组调用 `cancel_current_task`。）
+- 对于任务组和并行算法，使用[concurrency:: is_current_task_group_canceling](reference/concurrency-namespace-functions.md#is_current_task_group_canceling)函数来取消，并尽快从任务正文时返回此函数将返回 **，则返回 true**. （请勿从任务组调用 `cancel_current_task`。）
 
 下面的示例演示用于进行任务取消的第一个基本模式。 任务正文偶尔检查循环内的取消。
 

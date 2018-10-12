@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: f60cf71305731391d03763810775eaf7f8e5fd7e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7579c7493cd05d3cf2a0a119e601dd63ed5faf91
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46411529"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162238"
 ---
 # <a name="lockoperator"></a>lock::operator==
 
@@ -46,11 +46,11 @@ template<class T> bool operator==(
 
 ## <a name="return-value"></a>返回值
 
-返回`true`如果`t`锁的对象，相同`false`否则为。
+返回 **，则返回 true**如果`t`是锁定的对象相同**false**否则为。
 
 ## <a name="example"></a>示例
 
-```
+```cpp
 // msl_lock_op_eq.cpp
 // compile with: /clr
 #include <msclr/lock.h>

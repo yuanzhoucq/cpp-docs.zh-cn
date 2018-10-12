@@ -144,7 +144,7 @@
 ### [生成自定义项疑难解答](troubleshooting-build-customizations.md)
 ### [设置自定义生成步骤或生成事件输出的格式](formatting-the-output-of-a-custom-build-step-or-build-event.md)
 ## [用于生成命令和属性的常用宏](common-macros-for-build-commands-and-properties.md)
-## [项目文件](project-files.md)
+## [示例项目文件](project-files.md)
 ## [演练：在 Visual Studio 中编译面向 CLR 的 C++ 程序](walkthrough-compiling-a-cpp-program-that-targets-the-clr-in-visual-studio.md)
 # [使用 Visual Studio IDE 进行 C++ 桌面开发](using-the-visual-studio-ide-for-cpp-desktop-development.md)
 ## [演练：使用项目和解决方案 (C++)](walkthrough-working-with-projects-and-solutions-cpp.md)

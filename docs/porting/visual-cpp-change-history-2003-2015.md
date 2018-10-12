@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1f7d94dafa34c5ab01dfbcf28e2c429642dbf68
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d6f0e5ce08e362cef0fd625036a92c1d13885ded
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46397300"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821538"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Visual C++ 更改历史记录（2003 - 2015）
 
@@ -2966,7 +2966,7 @@ Visual Studio 2013 中的 C++ 编译器可以检测到 _ITERATOR_DEBUG_LEVEL 中
 
 ### <a name="mfc-and-atl"></a>MFC 和 ATL
 
-- **仅 Visual Studio 2013**：Visual Studio 中不再包括 MFC MBCS 库，因为 Unicode 很受欢迎，大大减少了 MBCS 的使用。 此更改也使 MFC 与 Windows SDK 本身更加紧密联合在一起，因为许多新控件和消息都仅支持 Unicode。 但是，如果必须继续使用 MFC MBCS 库，可以从 MSDN 下载中心下载，下载位置：[适用于 Visual Studio 2013 的多字节 MFC 库](https://www.microsoft.com/en-us/download/details.aspx?id=40770)（Multibyte MFC Library for Visual Studio 2013）。 Visual C++ 可再发行组件包仍包含此库。  （请注意：Visual Studio 2015 及更高版本的 C++ 安装组件中包含 MBCS DLL）。
+- **仅 Visual Studio 2013**：Visual Studio 中不再包括 MFC MBCS 库，因为 Unicode 很受欢迎，大大减少了 MBCS 的使用。 此更改也使 MFC 与 Windows SDK 本身更加紧密联合在一起，因为许多新控件和消息都仅支持 Unicode。 但是，如果必须继续使用 MFC MBCS 库，可以从 MSDN 下载中心下载，下载位置：[适用于 Visual Studio 2013 的多字节 MFC 库](https://www.microsoft.com/download/details.aspx?id=40770)（Multibyte MFC Library for Visual Studio 2013）。 Visual C++ 可再发行组件包仍包含此库。  （请注意：Visual Studio 2015 及更高版本的 C++ 安装组件中包含 MBCS DLL）。
 
 - MFC 功能区的辅助功能已更改。  现在显示的是分层体系结构，而不是一级体系结构。 通过调用 `CRibbonBar::EnableSingleLevelAccessibilityMode()` 可继续使用旧有行为。
 

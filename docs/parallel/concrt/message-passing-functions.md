@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b0b7a7afb25d46fa3b521353c4577fbed66e69fd
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7435bdbc4d5959771a1f80e2ad12f038a8157bae
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46436983"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162277"
 ---
 # <a name="message-passing-functions"></a>消息传递函数
 
@@ -41,9 +41,9 @@ ms.locfileid: "46436983"
 
 [Concurrency:: send](reference/concurrency-namespace-functions.md#send)函数将消息同步发送到指定的目标和[concurrency:: asend](reference/concurrency-namespace-functions.md#asend)函数将消息异步发送到指定的目标。 同时`send`和`asend`函数等待，直到目标指示它最终将接受或拒绝该消息。
 
-`send`函数等待，直到目标接受或拒绝该消息才会返回。 `send`函数返回`true`如果消息传递和`false`否则为。 因为`send`同步，工作函数`send`函数等待要接收的消息，在返回之前的目标。
+`send`函数等待，直到目标接受或拒绝该消息才会返回。 `send`函数返回**true**如果消息传递和**false**否则为。 因为`send`同步，工作函数`send`函数等待要接收的消息，在返回之前的目标。
 
-相反，`asend`函数不会等待要接受或拒绝该消息，在返回之前的目标。 相反，`asend`函数返回`true`如果目标接受消息，并且最终将采用它。 否则为`asend`返回`false`以指示目标是拒绝了消息或推迟是否使该消息的决策。
+相反，`asend`函数不会等待要接受或拒绝该消息，在返回之前的目标。 相反，`asend`函数返回**true**如果目标接受消息，并且最终将采用它。 否则为`asend`将返回**false**以指示目标是拒绝了消息或推迟是否使该消息的决策。
 
 [[返回页首](#top)]
 

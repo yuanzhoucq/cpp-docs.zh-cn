@@ -1,13 +1,15 @@
 ---
 title: __uuidof 运算符 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/10/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
 f1_keywords:
 - __LIBID_cpp
 - __uuidof_cpp
+- __uuidof
+- _uuidof
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 84fd779d50fb481cffc97b61a65f255c6c8f52a1
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: c75e33dd7aab1e96a1d2d3464e974a7095f83f3f
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46056725"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163850"
 ---
 # <a name="uuidof-operator"></a>__uuidof 运算符
 
@@ -50,7 +52,9 @@ __uuidof (expression)
 - 使用创建库块[模块](../windows/module-cpp.md)属性。
 
 > [!NOTE]
->  在调试版本中， **__uuidof**始终初始化动态 （在运行时） 的对象。 在发布版本中， **__uuidof**可静态 （在编译时） 初始化的对象。
+> 在调试版本中， **__uuidof**始终初始化动态 （在运行时） 的对象。 在发布版本中， **__uuidof**可静态 （在编译时） 初始化的对象。
+
+与以前版本的兼容性 **_uuidof**是的同义词 **__uuidof**除非编译器选项[/Za\(禁用语言扩展)](../build/reference/za-ze-disable-language-extensions.md)是指定。
 
 ## <a name="example"></a>示例
 

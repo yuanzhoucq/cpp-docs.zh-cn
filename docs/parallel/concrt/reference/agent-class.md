@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04202b647910914de8ebe92397efe1373e9508be
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8d6d91f312b028f44e0671c7960d4b06c2634928
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46401363"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162500"
 ---
 # <a name="agent-class"></a>agent 类
 
@@ -108,7 +108,7 @@ agent(ScheduleGroup& _PGroup);
 
 ### <a name="remarks"></a>备注
 
-运行时使用的默认计划程序，如果未指定`_PScheduler`或`_PGroup`参数。
+如果未指定 `_PScheduler` 或 `_PGroup` 函数，运行时将使用默认的计划程序。
 
 ##  <a name="dtor"></a> ~ 代理
 
@@ -132,7 +132,7 @@ bool cancel();
 
 ### <a name="return-value"></a>返回值
 
-`true` 如果代理已被取消，`false`否则为。 如果它已启动运行或已完成，代理不能取消。
+**true**代理已被取消，如果**false**否则为。 如果它已启动运行或已完成，代理不能取消。
 
 ##  <a name="done"></a> 完成
 
@@ -144,7 +144,7 @@ bool done();
 
 ### <a name="return-value"></a>返回值
 
-`true` 如果代理移至`agent_done`状态，`false`否则为。 已取消的代理不能移动到`agent_done`状态。
+**true**如果将代理移至`agent_done`状态， **false**否则为。 已取消的代理不能移动到`agent_done`状态。
 
 ### <a name="remarks"></a>备注
 
@@ -172,7 +172,7 @@ bool start();
 
 ### <a name="return-value"></a>返回值
 
-`true` 如果正确，启动`false`否则为。 无法启动已取消的代理。
+**true**如果正确，启动**false**否则为。 无法启动已取消的代理。
 
 ##  <a name="status"></a> 状态
 
