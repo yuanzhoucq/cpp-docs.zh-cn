@@ -1,12 +1,14 @@
 ---
 title: __declspec |Microsoft Docs
 ms.custom: ''
-ms.date: 1/23/2018
+ms.date: 10/09/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
 f1_keywords:
 - __declspec_cpp
+- __declspec
+- _declspec
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b159bcdae6e7f576ed92275ec5f79d25132b53e5
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f413c56b665a1878fb1e948b975ab8e4cbc0daf4
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46111311"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163577"
 ---
 # <a name="declspec"></a>__declspec
 
@@ -66,6 +68,8 @@ extended-decl-modifier：<br/>
 扩展的特性语法支持这些特定于 Microsoft 的存储类特性：[对齐](../cpp/align-cpp.md)，[分配](../cpp/allocate.md)， [appdomain](../cpp/appdomain.md)， [code_seg](../cpp/code-seg-declspec.md)，[弃用](../cpp/deprecated-cpp.md)， [dllexport](../cpp/dllexport-dllimport.md)， [dllimport](../cpp/dllexport-dllimport.md)， [jitintrinsic](../cpp/jitintrinsic.md)，[裸](../cpp/naked-cpp.md)， [noalias](../cpp/noalias.md)， [noinline](../cpp/noinline.md)， [noreturn](../cpp/noreturn.md)， [nothrow](../cpp/nothrow-cpp.md)， [novtable](../cpp/novtable.md)[进程](../cpp/process.md)，[限制](../cpp/restrict.md)， [safebuffers](../cpp/safebuffers.md)， [selectany](../cpp/selectany.md)， [spectre](../cpp/spectre.md)，和[线程](../cpp/thread.md)。 它还支持这些 COM 对象属性：[属性](../cpp/property-cpp.md)并[uuid](../cpp/uuid-cpp.md)。
 
 **Code_seg**， **dllexport**， **dllimport**，**裸**， **noalias**， **nothrow**，**属性**，**限制**， **selectany**，**线程**，和**uuid**存储类特性是仅的声明的函数应用于的对象的属性。 **线程**属性会影响数据仅和对象。 **裸**并**spectre**特性影响函数只能。 **Dllimport**并**dllexport**特性影响函数、 数据和对象。 **属性**， **selectany**，并**uuid**特性影响 COM 对象。
+
+与以前版本的兼容性 **_declspec**是的同义词 **__declspec**除非编译器选项[/Za\(禁用语言扩展)](../build/reference/za-ze-disable-language-extensions.md)是指定。
 
 **__Declspec**关键字应放置在简单声明的开头处。 编译器将忽略，而无需任何警告 **__declspec**关键字放在 * 或 & 和变量声明中标识符的前面。
 

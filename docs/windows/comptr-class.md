@@ -61,12 +61,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4f549f0737d74829dbd79c280f3f6c1acd9bca6e
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 12afcfe09335082f873d88e1aa825b4eee3a1ae2
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235992"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163226"
 ---
 # <a name="comptr-class"></a>ComPtr 类
 
@@ -539,9 +539,9 @@ bool operator==(
 
 ### <a name="return-value"></a>返回值
 
-第一个运算符产生`true`如果对象等同于对象*b*; 否则为`false`。
+第一个运算符产生 **，则返回 true**如果对象是否等于对象*b*; 否则为**false**。
 
-第二个和第三个运算符会产生`true`如果对象等于`nullptr`; 否则为`false`。
+第二个和第三个运算符会产生 **，则返回 true**如果对象等于**nullptr**; 否则为**false**。
 
 ## <a name="operator-inequality"></a>Comptr:: Operator ！ =
 
@@ -574,9 +574,9 @@ bool operator!=(
 
 ### <a name="return-value"></a>返回值
 
-第一个运算符产生`true`如果对象不是等于对象*b*; 否则为`false`。
+第一个运算符产生 **，则返回 true**如果对象不等于对象*b*; 否则为**false**。
 
-第二个和第三个运算符会产生`true`如果对象是否不等于`nullptr`; 否则为`false`。
+第二个和第三个运算符会产生 **，则返回 true**如果对象是否不等于**nullptr**; 否则为**false**。
 
 ## <a name="operator-microsoft-wrl-details-booltype"></a>Comptr:: Operator Microsoft::WRL::Details::BoolType
 
@@ -588,7 +588,7 @@ WRL_NOTHROW operator Microsoft::WRL::Details::BoolType() const;
 
 ### <a name="return-value"></a>返回值
 
-如果接口与此相关联`ComPtr`的地址[boolstruct:: Member](../windows/boolstruct-member-data-member.md)数据成员; 否则为`nullptr`。
+如果接口与此相关联`ComPtr`的地址[boolstruct:: Member](../windows/boolstruct-member-data-member.md)数据成员; 否则为**nullptr**。
 
 ## <a name="ptr"></a>Comptr:: Ptr_
 

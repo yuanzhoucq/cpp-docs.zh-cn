@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 681aa3ef5a1434ab191854f23a9e7bc908b65728
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: ce6f57846a0dcad79eead500286525e94c66a8e6
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46082412"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162290"
 ---
 # <a name="implementing-a-simple-consumer"></a>实现简单使用者
 
@@ -34,17 +34,17 @@ ms.locfileid: "46082412"
 - "将 XML 支持添加到使用者"显示了如何修改输出以 XML 数据形式检索到的行集数据的使用者代码。  
   
 > [!NOTE]
->  在本部分中描述的使用者应用程序可用于测试的 MyProv 和提供程序的示例提供程序。  
+> 在本部分中描述的使用者应用程序可用于测试的 MyProv 和提供程序的示例提供程序。  
   
 > [!NOTE]
->  若要生成使用者应用程序来测试 MyProv (相同的提供程序中所述[增强简单的只读提供程序](../../data/oledb/enhancing-the-simple-read-only-provider.md))，在"添加书签支持添加到使用者。"中所述，必须包含书签支持  
+> 若要生成使用者应用程序来测试 MyProv (相同的提供程序中所述[增强简单的只读提供程序](../../data/oledb/enhancing-the-simple-read-only-provider.md))，在"添加书签支持添加到使用者。"中所述，必须包含书签支持  
   
 > [!NOTE]
->  若要生成使用者应用程序测试提供程序，在"添加书签支持向使用者"中所述的书签支持忽略并跳到"添加到使用者的 XML 支持"。  
+> 若要生成使用者应用程序测试提供程序，在"添加书签支持向使用者"中所述的书签支持忽略并跳到"添加到使用者的 XML 支持"。  
   
 ## <a name="retrieving-data-with-the-consumer"></a>使用者检索数据  
   
-#### <a name="to-modify-the-console-application-to-use-the-ole-db-consumer"></a>若要修改控制台应用程序使用 OLE DB 使用者  
+### <a name="to-modify-the-console-application-to-use-the-ole-db-consumer"></a>若要修改控制台应用程序使用 OLE DB 使用者  
   
 1. MyCons.cpp 中的方法是插入的粗体文本，如下所示更改主代码：  
   
@@ -94,9 +94,9 @@ ms.locfileid: "46082412"
 - 书签的行，将其追加到文件末尾的输出。  
   
 > [!NOTE]
->  如果使用此使用者应用程序来测试提供程序示例提供程序应用程序，将在本部分中所述的书签支持。  
+> 如果使用此使用者应用程序来测试提供程序示例提供程序应用程序，将在本部分中所述的书签支持。  
   
-#### <a name="to-instantiate-the-bookmark"></a>若要实例化该书签  
+### <a name="to-instantiate-the-bookmark"></a>若要实例化该书签  
   
 1. 访问器需要包含类型的对象[CBookmark](../../data/oledb/cbookmark-class.md)。 *NSize*参数指定书签缓冲区的大小以字节为单位 (通常为 32 位平台，4) 和 64 位平台为 8。 将以下声明添加到用户记录类中的列数据成员：  
   
@@ -111,7 +111,7 @@ ms.locfileid: "46082412"
        ...  
     ```  
   
-#### <a name="to-request-a-bookmark-column-from-the-provider"></a>若要从提供程序请求书签列  
+### <a name="to-request-a-bookmark-column-from-the-provider"></a>若要从提供程序请求书签列  
   
 1. 中的以下代码添加`GetRowsetProperties`中用户记录类的方法：  
   
@@ -125,7 +125,7 @@ ms.locfileid: "46082412"
     }  
     ```  
   
-#### <a name="to-add-a-bookmark-entry-to-the-column-map"></a>若要将书签项添加到列映射  
+### <a name="to-add-a-bookmark-entry-to-the-column-map"></a>若要将书签项添加到列映射  
   
 1. 将以下条目添加到用户记录类中的列映射：  
   
@@ -139,7 +139,7 @@ ms.locfileid: "46082412"
     END_COLUMN_MAP()  
     ```  
   
-#### <a name="to-use-a-bookmark-in-your-main-code"></a>若要在主代码中使用书签  
+### <a name="to-use-a-bookmark-in-your-main-code"></a>若要在主代码中使用书签  
   
 1. 在 MyCons.cpp 文件从以前创建的控制台应用程序中，更改主代码读取，如下所示。 若要使用书签，主代码需要实例化它自己的书签对象 (`myBookmark`); 这是从访问器中的一个不同书签 (`m_bookmark`)。  
   
@@ -184,7 +184,7 @@ ms.locfileid: "46082412"
        {  
           nCounter++;  
           if(nCounter == 5 )  
-             myBookmark = rs.bookmark;  
+             myBookmark = rs.m_bookmark;  
           // Output the column information for each row:  
           outfile << rs.m_ProductID << rs.m_ProductName << lPrice << rs.m_QuantityPerUnit << rs.m_UnitsInStock << rs.m_ReorderLevel << endl;  
           hr = rs.MoveNext();  
@@ -216,7 +216,7 @@ ms.locfileid: "46082412"
 
 如中所述[访问 XML 数据](../../data/oledb/accessing-xml-data.md)，有两种方法来从数据源中检索 XML 数据： 使用[CStreamRowset](../../data/oledb/cstreamrowset-class.md)也可以使用[CXMLAccessor](../../data/oledb/cxmlaccessor-class.md)。 此示例使用`CStreamRowset`，这是更有效，但要求你具有在其执行此示例应用程序在计算机上运行的 SQL Server 2000。  
   
-#### <a name="to-modify-the-command-class-to-inherit-from-cstreamrowset"></a>若要修改命令类，以从 CStreamRowset 继承  
+### <a name="to-modify-the-command-class-to-inherit-from-cstreamrowset"></a>若要修改命令类，以从 CStreamRowset 继承  
   
 1. 在以前创建的使用者的应用程序的情况下，更改你`CCommand`声明，以指定`CStreamRowset`与行集类，如下所示：  
   
@@ -224,7 +224,7 @@ ms.locfileid: "46082412"
     class CProducts : public CCommand<CAccessor<CProductsAccessor>, CStreamRowset >  
     ```  
   
-#### <a name="to-modify-the-main-code-to-retrieve-and-output-the-xml-data"></a>若要修改主要代码，以检索和输出的 XML 数据  
+### <a name="to-modify-the-main-code-to-retrieve-and-output-the-xml-data"></a>若要修改主要代码，以检索和输出的 XML 数据  
   
 1. 在 MyCons.cpp 文件从以前创建的控制台应用程序中，更改主代码读取，如下所示：  
   

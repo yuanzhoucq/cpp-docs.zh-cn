@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8adba73274fbc9821eb8096e82268b24b41718f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 72fa49d763159385607330231994d15952f0c771
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46430031"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163135"
 ---
 # <a name="ischedulerproxy-structure"></a>ISchedulerProxy 结构
 
@@ -124,7 +124,7 @@ virtual IExecutionResource* RequestInitialVirtualProcessors(bool doSubscribeCurr
 
 ### <a name="return-value"></a>返回值
 
-`IExecutionResource`接口对于当前线程，如果将参数`doSubscribeCurrentThread`具有值`true`。 如果值为`false`，该方法将返回`NULL`。
+`IExecutionResource`接口对于当前线程，如果将参数`doSubscribeCurrentThread`具有值**true**。 如果值为**false**，该方法返回 NULL。
 
 ### <a name="remarks"></a>备注
 
@@ -132,7 +132,7 @@ virtual IExecutionResource* RequestInitialVirtualProcessors(bool doSubscribeCurr
 
 资源管理器资源授予到计划程序通过调用方法[ischeduler:: Addvirtualprocessors](ischeduler-structure.md#addvirtualprocessors)虚拟处理器根的列表。 该方法为以回调形式对计划程序之前调用此方法返回。
 
-如果计划程序通过将参数设置请求订阅的当前线程`doSubscribeCurrentThread`到`true`，该方法将返回`IExecutionResource`接口。 订阅必须通过使用终止在以后[iexecutionresource:: Remove](iexecutionresource-structure.md#remove)方法。
+如果计划程序通过将参数设置请求订阅的当前线程`doSubscribeCurrentThread`到**true**，该方法将返回`IExecutionResource`接口。 订阅必须通过使用终止在以后[iexecutionresource:: Remove](iexecutionresource-structure.md#remove)方法。
 
 在确定哪些硬件线程选择时，资源管理器将尝试优化的处理器节点关联。 如果当前线程的请求订阅，则表示当前线程要参与分配给此计划程序的工作。 在这种情况下，已分配的虚拟处理器根位于当前线程在其执行，如有可能的处理器节点上。
 

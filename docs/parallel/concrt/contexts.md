@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7be66658c9452fa97c1971ae6719dccb06dbd836
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9fb14544a799861053c2fdf2a5bb92f210eb5c46
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46378210"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163824"
 ---
 # <a name="contexts"></a>上下文
 
@@ -67,7 +67,7 @@ ms.locfileid: "46378210"
 > [!NOTE]
 >  仅从由并发运行时创建的线程中启用过度订阅。 不由运行时 （包括主线程） 创建的线程调用时，则过度订阅无效。
 
-若要启用过度订阅当前上下文中的，调用[concurrency::Context::Oversubscribe](reference/context-class.md#oversubscribe)方法替换`_BeginOversubscription`参数设置为`true`。 如果启用过度订阅由并发运行时创建的线程上，这会导致运行时创建一个其他线程。 在所有需要过度订阅完成的任务之后, 调用`Context::Oversubscribe`与`_BeginOversubscription`参数设置为`false`。
+若要启用过度订阅当前上下文中的，调用[concurrency::Context::Oversubscribe](reference/context-class.md#oversubscribe)方法替换`_BeginOversubscription`参数设置为**true**。 如果启用过度订阅由并发运行时创建的线程上，这会导致运行时创建一个其他线程。 在所有需要过度订阅完成的任务之后, 调用`Context::Oversubscribe`与`_BeginOversubscription`参数设置为**false**。
 
 您可以启用过度订阅多个时间从当前上下文中，但必须启用它同样次数禁用它。 此外可以嵌套过度订阅;它是由另一个使用过度订阅的任务创建的任务可以过度订阅其上下文。 但是，如果嵌套的任务和其父级属于相同的上下文中，只有最外层到调用`Context::Oversubscribe`将导致其他线程的创建。
 
