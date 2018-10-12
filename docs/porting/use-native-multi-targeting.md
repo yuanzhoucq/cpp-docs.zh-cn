@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb9d7b950e4c38ea53db6e459edfa1a179eb971d
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 62404de4012bcd49888da527ae93ed1b2137a48a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42578418"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46374140"
 ---
 # <a name="use-native-multi-targeting-in-visual-studio-to-build-old-projects"></a>使用 Visual Studio 中的本机多目标来生成旧项目
 
@@ -70,19 +70,11 @@ Visual Studio 2008 具有自己的专用 C++ 生成系统 VCBuild。 从 Visual 
 
 可能有无法或不打算升级的旧版 Visual C++ 项目，而不是与项目匹配的平台工具集版本。 在这种情况下，为了获得工具集，可以安装所需版本的免费 Visual Studio 社区版或速成版。 从 Visual Studio 2008 开始，每个版本的 Visual Studio 都可以安装从当前 Visual Studio 面向该版本时所需的编译器、工具和库。 搜索 Microsoft 下载中心以查找和下载 Visual Studio 的特定版本。 请确保在安装过程中选择 C++ 安装选项。 安装完成后，运行该版本的 Visual Studio 以安装任何更新。 同时查找可能需要的任何 Windows 更新更改。 此更新检查过程可能需要重复多次以获取每个更新。
 
-下面是可能会需要的 Visual Studio 下载内容：
-
-  - [Microsoft Visual Studio Community 2015](https://www.microsoft.com/download/details.aspx?id=48146)  
-  - [Microsoft Visual Studio Express 2013 for Windows Desktop with Update 5](https://www.microsoft.com/download/details.aspx?id=48131)  
-  - [Microsoft Visual Studio Express 2012 for Windows Desktop](https://www.microsoft.com/download/details.aspx?id=34673)  
-  - [Visual Studio 2012 Update 5](https://www.microsoft.com/download/details.aspx?id=34673)  
-  - [Microsoft Visual C++ 2010 速成版（Web 安装程序）](https://download.microsoft.com/download/1/D/9/1D9A6C0E-FC89-43EE-9658-B9F0E3A76983/vc_web.exe)  
-  - [Microsoft Visual Studio 2010 Service Pack 1](https://www.microsoft.com/download/details.aspx?id=23691)  
-  - [Microsoft Visual C++ 2008 速成版 SP1（Web 安装程序）](https://go.microsoft.com/?linkid=7729279)  
+有关当前可用的下载，请参阅[下载较旧的 Visual Studio 软件](https://visualstudio.microsoft.com/vs/older-downloads/)。
 
 安装这些产品后，“属性页”对话框中的“平台工具集”属性下拉列表自动更新为显示可用工具集。 现在，可以使用最新版 Visual Studio 为这些较旧版本的工具集生成项目，而无需对这些旧版本进行转换或升级。
 
 ## <a name="see-also"></a>请参阅
 
-[从 Visual C++ 早期版本升级项目](upgrading-projects-from-earlier-versions-of-visual-cpp.md)  
+[从 Visual C++ 早期版本升级项目](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
 [Visual Studio 2017 中 C++ 的符合性改进](../cpp-conformance-improvements-2017.md)  

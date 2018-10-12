@@ -29,36 +29,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5bee1decf5b5a3676e6111960282c19e87628c48
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 47227d4be0ad1c5145a9064d11b4ea633c7d7fc1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32391374"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46035781"
 ---
 # <a name="localunwind2"></a>_local_unwind2
-内部 CRT 函数。 运行在指示的范围表中列出的所有终止处理程序。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-void _local_unwind2(  
-   PEXCEPTION_REGISTRATION xr,  
-   int stop  
-);  
-```  
-  
-#### <a name="parameters"></a>参数  
- [in] `xr`  
- 与一个范围表相关联的注册记录。  
-  
- [in] `stop`  
- 指示应停止 `_local_unwind2` 的位置的词法级别。  
-  
-## <a name="remarks"></a>备注  
- 此方法仅可由运行时环境使用。 请不要在代码中调用该方法。  
-  
- 当此方法执行终止处理程序时，它将从当前词汇级别开始，并按自己的方式运行到更高的词汇级别，直到它达到由 `stop` 指示的级别。 它不会在由 `stop` 指示的级别上执行终止处理程序。  
-  
-## <a name="see-also"></a>请参阅  
- [按字母顺序的函数参考](../c-runtime-library/reference/crt-alphabetical-function-reference.md)
+
+内部 CRT 函数。 运行在指示的范围表中列出的所有终止处理程序。
+
+## <a name="syntax"></a>语法
+
+```
+void _local_unwind2(
+   PEXCEPTION_REGISTRATION xr,
+   int stop
+);
+```
+
+#### <a name="parameters"></a>参数
+
+*xr*<br/>
+[in] 与一个范围表相关联的注册记录。
+
+*stop*<br/>
+[in] 指示应停止 `_local_unwind2` 的位置的词法级别。
+
+## <a name="remarks"></a>备注
+
+此方法仅可由运行时环境使用。 请不要在代码中调用该方法。
+
+当此方法执行终止处理程序时，它将从当前词汇级别开始，并按自己的方式运行到更高的词汇级别，直到它达到由 `stop` 指示的级别。 它不会在由 `stop` 指示的级别上执行终止处理程序。
+
+## <a name="see-also"></a>请参阅
+
+[按字母顺序的函数参考](../c-runtime-library/reference/crt-alphabetical-function-reference.md)

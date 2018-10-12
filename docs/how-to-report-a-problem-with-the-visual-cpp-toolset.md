@@ -10,12 +10,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 359c9d3f72ffa87abf49c6e3ca90743ad0fc80a3
-ms.sourcegitcommit: 9be4b66efa45dc132cef06eb3b258c2252ea23a9
+ms.openlocfilehash: 279598c320131b163b936091560de45255c18a4d
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42583907"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235004"
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset-or-documentation"></a>如何使用 Visual C++ 工具集或文档报告问题
 
@@ -370,14 +370,12 @@ Visual Studio 用户可使用 Visual Studio 中的“报告问题”工具报告
 
 ### <a name="use-the-visual-studio-developer-community-pages"></a>使用“Visual Studio 开发者社区”页面
 
-还可使用“Visual Studio 开发者社区”页面轻松报告问题并查找有关 Visual Studio 以及 C++ 编译器、工具和库的解决方案。 可使用 [Visual Studio 问题](https://developercommunity.visualstudio.com/spaces/8/index.html)页面报告有关 IDE 或安装的问题。 有关 C++ 编译器、链接器及其他工具和库的相关问题，请使用 [C++ 问题](https://developercommunity.visualstudio.com/spaces/62/index.html)页面。
+还可使用“Visual Studio 开发者社区”页面轻松报告问题并查找有关 Visual Studio 以及 C++ 编译器、工具和库的解决方案。 有针对 [Visual Studio](https://developercommunity.visualstudio.com/spaces/8/index.html)、[Visual Studio for Mac](https://developercommunity.visualstudio.com/spaces/41/index.html)、[.NET](https://developercommunity.visualstudio.com/spaces/61/index.html)、[C++](https://developercommunity.visualstudio.com/spaces/62/index.html)、[Azure DevOps](https://developercommunity.visualstudio.com/spaces/21/index.html) 和 [TFS](https://developercommunity.visualstudio.com/spaces/22/index.html) 的特定开发者社区页。 在这些选项卡下，在每页顶部附近，有一个搜索框，可用于查找报告的问题与你的问题相似的帖子或主题。 你可能发现你的问题已经有解决方案或相关的其他有用信息。 如果有人之前已报告过相同问题，请投票赞成该主题并进行评论，而不是创建新的问题报告。 若要评论、投票或报告新问题，系统可能要求你登录 Visual Studio 帐户并同意开发者社区应用访问你的个人资料。
 
-在每页顶部附近的“开发者社区”横幅中有一个搜索框，可用于查找报告了与你问题相似的问题的帖子或主题。 你可能发现现有主题中已存在解决方案或与你问题相关的其他有用信息。 如果有人之前已报告过相同问题，请投票赞成该主题并进行评论，而不是创建新的问题报告。
-
-如果之前无人报告你的问题，请选择“开发者社区”页面上搜索框附近的“报告问题”按钮。 系统可能要求你登录 Visual Studio 帐户并同意开发者社区应用访问你的个人资料。 登录后，将直接转到可报告问题的页面。 可附上重现代码和命令行、屏幕截图、相关讨论的链接，以及你认为相关和有用的任何其他信息。
+有关 C++ 编译器、链接器及其他工具和库的相关问题，请使用 [C++](https://developercommunity.visualstudio.com/spaces/62/index.html) 页面。 如果搜索你的问题后发现之前无人报告该问题，请选择页面顶部的搜索框附近的“报告问题”按钮。 可附上重现代码和命令行、屏幕截图、相关讨论的链接，以及你认为相关和有用的任何其他信息。
 
 > [!TIP]
-> 对于可能在 Visual Studio 中遇到的、与工具集无关的问题（例如 UI 问题、损坏的 IDE 功能或常规故障），“报告问题工具”可能是最佳之选，因为它具有屏幕截图功能，可以记录导致问题的 UI 操作。 还可在[开发人员社区](https://developercommunity.visualstudio.com/)站点报告这些错误。
+> 对于可能会在 Visual Studio 中遇到的与 C++ 工具集无关的其他类型问题（例如，UI 问题、IDE 功能损坏或常规故障），请使用 IDE 中的“报告问题”工具。 这是最佳选择，因为该工具具备屏幕截图功能，并且可以记录导致你所遇到的问题的 UI 操作。 还可在[开发者社区](https://developercommunity.visualstudio.com/)站点查找这些错误。 有关详细信息，请参阅[如何报告 Visual Studio 的问题](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017)。
 
 ### <a name="reports-and-privacy"></a>报表和隐私
 

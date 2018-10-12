@@ -13,12 +13,12 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 9b3977c46e05ab0b175dad3658d1dcc390d33354
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: bba17549abc9f747d93299cf22c39ae7c3e8f4d6
+ms.sourcegitcommit: 87d317ac62620c606464d860aaa9e375a91f4c99
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39207661"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45601439"
 ---
 # <a name="connect-to-your-remote-linux-computer"></a>连接到远程 Linux 计算机
 
@@ -41,7 +41,7 @@ ms.locfileid: "39207661"
    | **用户名**           | 要进行身份验证的用户
    | **身份验证类型** | 同时支持密码或私钥
    | **密码**            | 输入的用户名的密码
-   | **私钥文件**    | 为 ssh 连接创建的私钥
+   | **私钥文件**    | 为 ssh 连接创建的私钥文件
    | **密码**          | 与上面选择的私钥一起使用的密码
 
 1. 单击“**连接**”按钮，尝试连接到远程计算机。  如果连接失败，则需要更改的输入框将以红色标出。

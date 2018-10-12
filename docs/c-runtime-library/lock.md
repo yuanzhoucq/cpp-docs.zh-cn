@@ -30,37 +30,42 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9a518402d027ae128fcf403752fafb448461628
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 38cd49dd483b556c8bda95e7a77109a9d4682e7c
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32390464"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48233614"
 ---
 # <a name="lock"></a>_lock
-获取多线程锁定。  
-  
+
+获取多线程锁定。
+
 > [!IMPORTANT]
->  此函数已过时。 从 Visual Studio 2015 开始，CRT 中不再提供此函数。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-void __cdecl _lock  
-   int locknum  
-);  
-```  
-  
-#### <a name="parameters"></a>参数  
- [in] `locknum`  
- 要获取的锁定标识符。  
-  
-## <a name="remarks"></a>备注  
- 如果已获取锁定，则此方法仍获取锁定会导致内部 C 运行时 (CRT) 错误。 如果此方法无法获取锁定，则它将退出并显示错误，同时将错误代码设置为 `_RT_LOCK`。  
-  
-## <a name="requirements"></a>惠?  
- **源：** mlock.c  
-  
-## <a name="see-also"></a>请参阅  
- [按字母顺序的函数参考](../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [_unlock](../c-runtime-library/unlock.md)
+>  此函数已过时。 从 Visual Studio 2015 开始，CRT 中不再提供此函数。
+
+## <a name="syntax"></a>语法
+
+```
+void __cdecl _lock
+   int locknum
+);
+```
+
+#### <a name="parameters"></a>参数
+
+*locknum*<br/>
+[in] 要获取的锁定标识符。
+
+## <a name="remarks"></a>备注
+
+如果已获取锁定，则此方法仍获取锁定会导致内部 C 运行时 (CRT) 错误。 如果此方法无法获取锁定，则它将退出并显示错误，同时将错误代码设置为 `_RT_LOCK`。
+
+## <a name="requirements"></a>要求
+
+**源：** mlock.c
+
+## <a name="see-also"></a>请参阅
+
+[按字母顺序的函数参考](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
+[_unlock](../c-runtime-library/unlock.md)

@@ -1,7 +1,7 @@
 ---
 title: 使用安装项目部署 Visual C++ 应用程序 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/17/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -14,42 +14,60 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36aad914fc9552cea06eabd0898fe33b9b09481e
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 058bbcd1128d8dfa5d546385d5684a927447902e
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42605826"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48234614"
 ---
 # <a name="walkthrough-deploying-a-visual-c-application-by-using-a-setup-project"></a>演练：使用安装项目部署 Visual C++ 应用程序
-介绍如何使用安装项目部署 Visual C++ 应用程序。  
+
+介绍如何使用安装项目部署 Visual C++ 应用程序。
+
+## <a name="prerequisites"></a>系统必备
+
+你需要以下组件来完成本演练：  
   
-## <a name="prerequisites"></a>系统必备  
- 你需要以下组件来完成本演练：  
+- 已安装 Visual Studio 的计算机。  
   
--   已安装 Visual Studio 2012 的计算机。  
-  
--   另一台没有 Visual C++ 库的计算机。  
+- 另一台没有 Visual C++ 库的计算机。  
   
 ### <a name="to-deploy-an-application-by-using-a-setup-project"></a>使用安装项目部署应用程序  
+
+1. 创建新项目。 在 **“文件”** 菜单上，指向 **“新建”**，然后单击 **“项目”**。 
   
-1.  使用 MFC 应用程序向导创建新的 Visual Studio 解决方案。 要查找该向导，请在“新建项目”对话框中展开“Visual C++”节点，依次选择“MFC”、“MFC 应用程序”，输入项目的名称，然后单击“确定”。  
+1. 使用 MFC 应用程序向导创建新的 Visual Studio 解决方案。 要查找该向导，请在“新建项目”对话框中展开“Visual C++”节点，依次选择“MFC”、“MFC 应用程序”，输入项目的名称，然后单击“确定”。 单击 **“完成”**。
+
+   > [!NOTE]
+   > 如果缺少“MFC 应用程序”类型：<br/>
+   > Visual Studio 2017：选择“新建项目”对话框左窗格中的“打开 Visual Studio 安装程序”。 安装位于“可选”组件部分中“使用 C++ 的桌面开发”下名为“适用于 x86 和 x64 的 Visual C++ MFC”的选项。<br/>
+   > Visual Studio 2015：单击 Windows“开始”按钮并键入“添加或删除程序”。 从结果列表打开程序，然后在已安装程序列表中找到你的 Microsoft Visual Studio 2015 安装程序。 双击它，然后选择“修改”，并选择“Visual C++”下的“Microsoft 基础类”组件。
   
-2.  将活动解决方案配置更改为“发布”。 从“生成”菜单中，选择“Configuration Manager”。 从“Configuration Manager”对话框的“活动解决方案配置”下拉框中选择“发布”。  
+1. 将活动解决方案配置更改为“发布”。 从“生成”菜单中，选择“Configuration Manager”。 从“Configuration Manager”对话框的“活动解决方案配置”下拉框中选择“发布”。 单击 **“关闭”**。
   
-3.  按 F7 生成应用程序。 或者，在“生成”菜单上，单击“生成解决方案”。 此操作可使安装项目使用此 MFC 应用程序项目的输出。  
+1. 按 Ctrl+Shift+B 生成应用程序。 或者，在“生成”菜单上，单击“生成解决方案”。 生成应用程序可使安装项目使用此 MFC 应用程序项目的输出。   
+
+1. 如果尚未执行此操作，请下载 Microsoft Visual Studio 安装程序项目扩展。 此扩展可供 Visual Studio 开发人员免费使用，并向 Visual Studio 添加安装和部署项目模板功能。 当连接到 Internet 后，在 Visual Studio 中，选择“工具” > “扩展和更新”。 在“扩展和更新”对话框下，选择“联机”选项卡并在搜索框中键入“Microsoft Visual Studio 安装程序项目”。 点击 Enter，选择”Microsoft Visual Studio”\<“版本”>”安装程序项目”，然后单击“下载”。 选择运行并安装扩展，然后重新启动 Visual Studio。 
   
-4.  如果尚未执行此操作，请下载对 Visual Studio 开发人员免费的 InstallShield Limited Edition (ISLE)，并替换 Visual Studio 中项目模板的功能以进行安装和部署。 连接到 Internet 后，通过在菜单栏上依次选择“文件”、“新建”、“项目”，或右键单击“解决方案资源管理器”中的解决方案，然后依次选择“添加”、“新建项目”来打开“新建项目”对话框。 展开“其他项目类型”节点，在“安装和部署”节点中选择“启用 InstallShield Limited Edition”，然后按照显示的说明进行操作。 下载、安装并激活 InstallShield Limited Edition 后，请关闭 Visual Studio，然后重新打开它。  
+1. 在菜单栏上，依次选择“文件” > “最近使用的项目和解决方案”，然后选择重新打开项目。   
   
-5.  再次打开“新建项目”对话框，展开“其他项目类型”节点，然后在“InstallShield Limited Edition”节点中选择“InstallShield Limited Edition 项目”。  
+1. 在菜单栏上，依次选择“文件” > “新建” > “项目”，打开“新建项目”对话框。 然后在对话框的左窗格中，依次展开“已安装应用程序” > “其他项目类型”节点，并选择“Visual Studio 安装程序”。 在中间窗格中，选择“安装项目”。  
   
-6.  按照 InstallShield Limited Edition 模板创建的安装项目的“入门”节点中的说明，将输出引用添加到 Visual Studio MFC 项目中。  
+1. 在“名称”框中输入安装项目的名称。 在“解决方案”下拉列表中，选择“添加到解决方案”。 选择“确定”按钮，创建安装项目。 在编辑器窗口中打开“文件助手(ProjectName)”选项卡。  
+
+1. 右键单击“应用程序文件夹”节点，然后选择“添加” > “项目输出”以打开“添加项目输出组”对话框。 在对话框中，选择“主输出”，然后单击“确定”。 将出现名为“ProjectName (活动)主输出”的新项。
+
+1. 右键单击“应用程序文件夹”节点，然后选择“添加” > “程序集”以打开“选择组件”对话框。 选择并添加程序所需的任何 DLL，如文章[确定要重新分发的 DLL](determining-which-dlls-to-redistribute.md) 中所述。 
+
+1. 选择“ProjectName (活动)主输出”项，右键单击并选择“创建 ProjectName (活动)主输出的快捷方式”。 将出现名为“ProjectName (活动)主输出的快捷方式”的新项。 可以重命名快捷方式项，然后将该项拖放到窗口左侧的“用户程序菜单”节点。
+
+1. 在菜单栏上，依次选择“生成” > “Configuration Manager”。 在“项目”表的“生成”列下，勾选部署项目框。 单击 **“关闭”**。
   
-7.  生成安装项目以创建安装程序文件 (setup.exe)。 要执行此操作，请右键单击“解决方案资源管理器”中的安装项目节点，然后选择“生成”。  
+1. 在菜单栏上，依次选择“生成” > “生成解决方案”，生成 MFC 项目和部署项目。  
   
-     InstallShield Limited Edition 将在安装项目树中创建安装文件（默认情况下，它可能位于安装项目的 Express\SingleImage\DiskImages\DISK1 子文件夹中）。  
-  
-8.  在没有 Visual C++ 库的第二台计算机上运行安装程序。  
+1. 在解决方案文件夹中，找到从部署项目中生成的 setup.exe 程序。 可在另一台计算机上复制此文件（和 .msi 文件），来安装应用程序及其所需的库文件。 在没有 Visual C++ 库的第二台计算机上运行安装程序。
   
 ## <a name="see-also"></a>请参阅  
- [部署示例](../ide/deployment-examples.md)
+
+[部署示例](deployment-examples.md)<br/>
