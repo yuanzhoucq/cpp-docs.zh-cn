@@ -1,7 +1,7 @@
 ---
 title: 创建简单使用者 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/09/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -15,46 +15,46 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 120829b08ab65c10cca7ab922fc4f9be732ccc53
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 85efb2a1d699914c6d7ffb1fd079a38be70f0b52
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48860805"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163837"
 ---
 # <a name="creating-a-simple-consumer"></a>创建简单使用者
 
 使用 ATL 项目向导和 ATL OLE DB 使用者向导生成的 OLE DB 模板使用者。
 
-### <a name="to-create-a-console-application-for-an-ole-db-consumer"></a>若要为 OLE DB 使用者创建一个控制台应用程序
+## <a name="to-create-a-console-application-for-an-ole-db-consumer"></a>若要为 OLE DB 使用者创建一个控制台应用程序
 
 1. 在 **“文件”** 菜单上，单击 **“新建”**，然后单击 **“项目”**。
 
    此时将出现 “新建项目” 对话框。
 
-1. 在项目类型窗格中，单击**Visual c + + 项目**文件夹，，然后单击**Win32 项目**模板窗格中的图标。 在中**名称**框中，例如，输入你的项目名称**MyCons**。
+1. 在中**项目类型**窗格中，单击**已安装** > **模板** > **Visual c + +** 文件夹，并然后单击**Win32 控制台应用程序**中的图标**模板**窗格。 在中**名称**框中，例如，输入你的项目名称*MyCons*。
 
 1. 单击 **“确定”**。
 
-   Win32 项目向导出现。
+   Win32 应用程序向导出现。
 
-1. 上**应用程序设置**页上，选择**控制台应用程序**，然后选择**添加对 ATL 的支持**。
+1. 上**应用程序设置**页上，选择**控制台应用程序**，然后选择**为 ATL 添加常用标头文件**。
 
 1. 单击**完成**若要关闭向导并生成该项目。
 
 接下来，使用 ATL OLE DB 使用者向导添加 OLE DB 使用者对象。
 
-#### <a name="to-create-a-consumer-with-the-atl-ole-db-consumer-wizard"></a>若要创建使用者使用 ATL OLE DB 使用者向导
+## <a name="to-create-a-consumer-with-the-atl-ole-db-consumer-wizard"></a>若要创建使用者使用 ATL OLE DB 使用者向导
 
-1. 在类视图中，右键单击`MyCons`项目。
+1. 在中**解决方案资源管理器**，右键单击`MyCons`项目。
 
-1. 在快捷菜单上，单击**外**，然后单击**添加类**。
+1. 在快捷菜单上，单击**外**，然后单击**类**。
 
    **添加类**对话框随即出现。
 
-1. 在类别窗格中，单击**Visual c + +**，单击**ATL OLE DB 使用者**图标在模板窗格中，然后单击**打开**。
+1. 在中**类别**窗格中，单击**已安装** > **Visual c + +** > **ATL**，单击**ATL OLEDB 使用者**中的图标**模板**窗格中，，然后单击**添加**。
 
-   将出现 ATL OLE DB 使用者向导。
+   ATL OLEDB 使用者向导会显示。
 
 1. 单击**数据源**按钮。
 
@@ -64,7 +64,7 @@ ms.locfileid: "48860805"
 
    - 上**提供程序**选项卡上，指定 OLE DB 访问接口。
 
-   - 上**连接**选项卡上，在服务器上指定服务器名称、 登录 ID 和你的数据源和数据库的密码。
+   - 上**连接**选项卡上，在服务器上指定所需的信息，例如服务器名称、 登录 ID 和数据源和数据库的密码。
 
    > [!NOTE]
    > 安全问题**允许保存密码**的功能**数据链接属性**对话框。 在中**输入信息以登录到服务器上**，有两个单选按钮：**使用 Windows NT 集成安全性**并**使用特定用户名和密码**。
@@ -79,7 +79,7 @@ ms.locfileid: "48860805"
 
    **选择数据库对象**对话框随即出现。
 
-1. 使用树控件选择表、 视图或存储的过程。 在此过程中，从 Northwind 数据库中选择产品表。
+1. 使用树控件选择表、 视图或存储的过程。 在此过程中，选择`Products`表从`Northwind`数据库。
 
 1. 单击 **“确定”**。 此操作将返回到 ATL OLE DB 使用者向导。
 

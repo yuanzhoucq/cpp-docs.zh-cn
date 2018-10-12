@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9c5c360246282f8b6062d21061856a57bd2c7194
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 26b313aa3e1dec6d401ed27e1a4f8ae0bd870eaa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32384328"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118513"
 ---
 # <a name="c-bitwise-operators"></a>C 按位运算符
 
@@ -35,17 +35,11 @@ ms.locfileid: "32384328"
 
 ## <a name="syntax"></a>语法
 
-*AND-expression*：  
-&nbsp;&nbsp;*equality-expression*  
-&nbsp;&nbsp;*AND-expression* **&** *equality-expression*
+*AND-expression*: &nbsp;&nbsp;*equality-expression* &nbsp;&nbsp;*AND-expression* **&** *equality-expression*
 
-*exclusive-OR-expression*：  
-&nbsp;&nbsp;*AND-expression*  
-&nbsp;&nbsp;*exclusive-OR-expression* **^** *AND-expression*
+*exclusive-OR-expression*: &nbsp;&nbsp;*AND-expression* &nbsp;&nbsp;*exclusive-OR-expression* **^** *AND-expression*
 
-*inclusive-OR-expression*:  
-&nbsp;&nbsp;*exclusive-OR-expression*  
-&nbsp;&nbsp;*inclusive-OR-expression* | *exclusive-OR-expression*
+*inclusive-OR-expression*: &nbsp;&nbsp;*exclusive-OR-expression* &nbsp;&nbsp;*inclusive-OR-expression* &#124; *exclusive-OR-expression*
 
 按位运算符的操作数必须具有整数类型，但其类型会不同。 这些运算符执行常用算术转换；结果的类型是转换后操作数的类型。
 
@@ -96,6 +90,6 @@ n = i ^ j;
 
 ## <a name="see-also"></a>请参阅
 
-[按位 AND 运算符：(&)](../cpp/bitwise-and-operator-amp.md)  
-[按位异或运算符：^](../cpp/bitwise-exclusive-or-operator-hat.md)  
-[按位“与或”运算符：&#124;](../cpp/bitwise-inclusive-or-operator-pipe.md)  
+[按位 AND 运算符：(&)](../cpp/bitwise-and-operator-amp.md)<br/>
+[按位异或运算符：^](../cpp/bitwise-exclusive-or-operator-hat.md)<br/>
+[按位“与或”运算符：&#124;](../cpp/bitwise-inclusive-or-operator-pipe.md)

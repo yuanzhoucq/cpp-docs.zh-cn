@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f87b8ce4c8270b8f0d22c2396358e8e1118a4bbd
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 57bd79e1df35f650d78da3108137d58405b33f25
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765032"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082009"
 ---
 # <a name="c-string-literals"></a>C 字符串文本
 
@@ -29,17 +29,11 @@ ms.locfileid: "43765032"
 
 ## <a name="syntax"></a>语法
 
-string-literal：  
-&nbsp;&nbsp;&nbsp;&nbsp;**"** *s-char-sequence*<sub>opt</sub> **"**  
-&nbsp;&nbsp;&nbsp;&nbsp;**L"** *s-char-sequence*<sub>opt</sub> **"**
+*string-literal*: &nbsp;&nbsp;&nbsp;&nbsp;**"** *s-char-sequence*<sub>opt</sub> **"** &nbsp;&nbsp;&nbsp;&nbsp;**L"** *s-char-sequence*<sub>opt</sub> **"**
 
-s-char-sequence：  
-&nbsp;&nbsp;&nbsp;&nbsp;*s-char*  
-&nbsp;&nbsp;&nbsp;&nbsp;*s-char-sequence* *s-char*
+*s-char-sequence*: &nbsp;&nbsp;&nbsp;&nbsp;*s-char* &nbsp;&nbsp;&nbsp;&nbsp;*s-char-sequence* *s-char*
 
-s-char：  
-&nbsp;&nbsp;&nbsp;&nbsp;除双引号 (")、反斜杠 (\\) 或者换行符以外的任何源字符集成员  
-&nbsp;&nbsp;&nbsp;&nbsp;*escape-sequence*
+*s-char*：&nbsp;&nbsp;&nbsp;&nbsp;除双引号 (")、反斜杠 (\\) 或换行符 &nbsp;&nbsp;&nbsp;&nbsp;*escape-sequence* 之外的源字符集的任何成员
 
 ## <a name="remarks"></a>备注
 
@@ -53,4 +47,4 @@ char *amessage = "This is a string literal.";
 
 ## <a name="see-also"></a>请参阅
 
-[C 的元素](../c-language/elements-of-c.md)  
+[C 的元素](../c-language/elements-of-c.md)

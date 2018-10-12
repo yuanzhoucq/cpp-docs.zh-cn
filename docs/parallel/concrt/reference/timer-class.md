@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b821dcc3426c6e1d9f3cd2f2ff8eb057197ca8d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e37348fe92354d2ea7be3168dc5b3c9aee9fcd63
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46416196"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163094"
 ---
 # <a name="timer-class"></a>timer 类
 
@@ -193,11 +193,11 @@ virtual bool reserve_message(runtime_object_identity _MsgId);
 
 ### <a name="return-value"></a>返回值
 
-`true` 如果消息已成功保留，`false`否则为。
+**true**成功保留该消息，如果**false**否则为。
 
 ### <a name="remarks"></a>备注
 
-之后`reserve`调用时，如果它将返回`true`、 任一`consume`或`release`必须调用以获取或释放消息的所有权。
+之后`reserve`调用时，如果它将返回**true**，而是`consume`或`release`必须调用以获取或释放消息的所有权。
 
 ##  <a name="resume_propagation"></a> resume_propagation
 
@@ -267,11 +267,11 @@ timer(
 `Scheduler`对象在其中的传播任务的`timer`计划消息块计划。
 
 *_ScheduleGroup*<br/>
-`ScheduleGroup`对象在其中的传播任务的`timer`计划消息块。 所用 `Scheduler` 对象由该计划组提示。
+在其中计划了 `ScheduleGroup` 消息块的传播任务的 `timer` 对象。 所用 `Scheduler` 对象由该计划组提示。
 
 ### <a name="remarks"></a>备注
 
-运行时使用的默认计划程序，如果未指定`_Scheduler`或`_ScheduleGroup`参数。
+如果未指定 `_Scheduler` 或 `_ScheduleGroup` 函数，运行时将使用默认的计划程序。
 
 ##  <a name="dtor"></a> ~ 计时器
 

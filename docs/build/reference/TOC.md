@@ -197,7 +197,7 @@
 ### [/CLRIMAGETYPE（指定 CLR 映像的类型）](clrimagetype-specify-type-of-clr-image.md)
 ### [/CLRSUPPORTLASTERROR（为 PInvoke 调用保留上次的错误代码）](clrsupportlasterror-preserve-last-error-code-for-pinvoke-calls.md)
 ### [/CLRTHREADATTRIBUTE（设置 CLR 线程特性）](clrthreadattribute-set-clr-thread-attribute.md)
-### [/CLRUNMANAGEDCODECHECK（添加 SupressUnmanagedCodeSecurityAttribute）](clrunmanagedcodecheck-add-supressunmanagedcodesecurityattribute.md)
+### [/CLRUNMANAGEDCODECHECK（删除 SuppressUnmanagedCodeSecurityAttribute）](clrunmanagedcodecheck-add-supressunmanagedcodesecurityattribute.md)
 ### [/DEBUG（生成调试信息）](debug-generate-debug-info.md)
 ### [/DEBUGTYPE（调试信息选项）](debugtype-debug-info-options.md)
 ### [/DEF（指定模块定义文件）](def-specify-module-definition-file.md)

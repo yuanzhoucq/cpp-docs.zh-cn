@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dca97238310c42b9a537baa4056563b25c20c617
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 98734522410b867d735d0af25f440d5b45874563
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43895222"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46393277"
 ---
 # <a name="hint-files"></a>提示文件
 
@@ -52,9 +52,9 @@ STDMETHOD(myMethod)(int parameter1);
 
 ```cpp
 // Header file.
-#define STDMETHOD(method) HRESULT (STDMETHODCALLTYPE * method)  
+#define STDMETHOD(method) HRESULT (STDMETHODCALLTYPE * method)
 #define STDMETHODCALLTYPE __stdcall
-#define HRESULT void*  
+#define HRESULT void*
 ```
 
 分析系统无法解释源代码，因为名为 `STDMETHOD` 的函数似乎已声明，且该声明在语法上是不正确的，因为它有两个参数列表。 分析系统不会打开头文件来发现 `STDMETHOD`、`STDMETHODCALLTYPE` 和 `HRESULT` 宏的定义。 由于分析系统无法解释 `STDMETHOD` 宏，因此它会忽略整个语句，然后继续分析。
@@ -127,21 +127,21 @@ STDMETHOD(myMethod)(int parameter1);
 
 在以下源代码中，`FormatWindowClassName()` 函数的参数类型为 `PXSTR`，参数名称为 `szBuffer`。 但是，分析系统会将 `_Pre_notnull_` 和 `_Post_z_` SAL 注释误认为参数类型或参数名称。
 
-**源代码：**  
+**源代码：**
 
-```  
-static void FormatWindowClassName(_Pre_notnull__Post_z_ PXSTR szBuffer)  
-```  
+```cpp
+static void FormatWindowClassName(_Pre_notnull__Post_z_ PXSTR szBuffer)
+```
 
 **策略：** Null 定义
 
-在此情况下，策略将 SAL 注释视为不存在。 为此，请指定替换字符串为 NULL 的提示。 因此，分析系统忽略注释，且“类视图”浏览器不显示注释。 （Visual C++ 包含隐藏 SAL 注释的内置提示文件。）  
+在此情况下，策略将 SAL 注释视为不存在。 为此，请指定替换字符串为 NULL 的提示。 因此，分析系统忽略注释，且“类视图”浏览器不显示注释。 （Visual C++ 包含隐藏 SAL 注释的内置提示文件。）
 
-**提示文件：**  
+**提示文件：**
 
-```  
+```cpp.hint
 #define _Pre_notnull_
-```  
+```
 
 ### <a name="concealed-cc-language-elements"></a>隐藏的 C/C++ 语言元素
 
@@ -149,11 +149,11 @@ static void FormatWindowClassName(_Pre_notnull__Post_z_ PXSTR szBuffer)
 
 在以下源代码中，`START_NAMESPACE` 宏隐藏未配对的左大括号 (`{`)。
 
-**源代码：**  
+**源代码：**
 
-```  
+```cpp
 #define START_NAMESPACE namespace MyProject {
-```  
+```
 
 **策略：** 直接复制
 
@@ -161,11 +161,11 @@ static void FormatWindowClassName(_Pre_notnull__Post_z_ PXSTR szBuffer)
 
 请注意，如果源文件中的宏包含其他宏，则仅在有效提示集中已存在这些哄时，才对其进行解释。
 
-**提示文件：**  
+**提示文件：**
 
-```  
+```cpp.hint
 #define START_NAMESPACE namespace MyProject {
-```  
+```
 
 ### <a name="maps"></a>映射
 
@@ -173,9 +173,9 @@ static void FormatWindowClassName(_Pre_notnull__Post_z_ PXSTR szBuffer)
 
 以下源代码定义了 `BEGIN_CATEGORY_MAP`、`IMPLEMENTED_CATEGORY` 和 `END_CATEGORY_MAP` 宏。
 
-**源代码：**  
+**源代码：**
 
-```  
+```cpp
 #define BEGIN_CATEGORY_MAP(x)\
 static const struct ATL::_ATL_CATMAP_ENTRY* GetCategoryMap() throw() {\
 static const struct ATL::_ATL_CATMAP_ENTRY pMap[] = {
@@ -183,15 +183,15 @@ static const struct ATL::_ATL_CATMAP_ENTRY pMap[] = {
 #define END_CATEGORY_MAP()\
    { _ATL_CATMAP_ENTRY_END, NULL } };\
    return( pMap ); }
-```  
+```
 
 **策略：** 识别映射元素
 
 为映射的开始、中间（若有）和结束元素指定提示。 使用特殊映射替换字符串 `@<`、`@=` 和 `@>`。 有关详细信息，请参阅本主题中的 `Syntax` 一节。
 
-**提示文件：**  
+**提示文件：**
 
-```  
+```cpp.hint
 // Start of the map.
 #define BEGIN_CATEGORY_MAP(x) @<
 // Intermediate map element.
@@ -200,7 +200,7 @@ static const struct ATL::_ATL_CATMAP_ENTRY pMap[] = {
 #define REQUIRED_CATEGORY( catid ) @=
 // End of the map.
 #define END_CATEGORY_MAP() @>
-```  
+```
 
 ### <a name="composite-macros"></a>复合宏
 
@@ -208,11 +208,11 @@ static const struct ATL::_ATL_CATMAP_ENTRY pMap[] = {
 
 以下源代码包含指定命名空间作用域开始的 `START_NAMESPACE` 宏和指定映射开始的 `BEGIN_CATEGORY_MAP` 宏。
 
-**源代码：**  
+**源代码：**
 
-```  
+```cpp
 #define NSandMAP START_NAMESPACE BEGIN_CATEGORY_MAP
-```  
+```
 
 **策略：** 直接复制
 
@@ -220,31 +220,31 @@ static const struct ATL::_ATL_CATMAP_ENTRY pMap[] = {
 
 在此示例中，假定 `START_NAMESPACE` 已经具有本主题中 `Concealed C/C++ Language Elements` 子标题中所述的提示。 并假定 `BEGIN_CATEGORY_MAP` 具有先前在 `Maps` 中所述的提示。
 
-**提示文件：**  
+**提示文件：**
 
-```  
+```cpp.hint
 #define NSandMAP START_NAMESPACE BEGIN_CATEGORY_MAP
-```  
+```
 
 ### <a name="inconvenient-macros"></a>不合适的宏
 
 某些宏可由分析系统解释，但很难被源代码读取，因为宏很长或很复杂。 为方便阅读，可提供一个简化宏显示形式的提示。
 
-**源代码：**  
+**源代码：**
 
-```  
-#define STDMETHOD(methodName) HRESULT (STDMETHODCALLTYPE * methodName)  
-```  
+```cpp
+#define STDMETHOD(methodName) HRESULT (STDMETHODCALLTYPE * methodName)
+```
 
 **策略：** 简化
 
 创建一个显示更简单的宏定义的提示。
 
-**提示文件：**  
+**提示文件：**
 
-```  
+```cpp.hint
 #define STDMETHOD(methodName) void* methodName
-```  
+```
 
 ## <a name="example"></a>示例
 
@@ -254,7 +254,7 @@ static const struct ATL::_ATL_CATMAP_ENTRY pMap[] = {
 
 ### <a name="hint-file-directories"></a>提示文件目录
 
-![通用的以及项目特定的提示文件目录。](../ide/media/hintfile.png "提示文件")  
+![通用的以及项目特定的提示文件目录。](../ide/media/hintfile.png "提示文件")
 
 ### <a name="directories-and-hint-file-contents"></a>目录和提示文件内容
 
@@ -262,41 +262,41 @@ static const struct ATL::_ATL_CATMAP_ENTRY pMap[] = {
 
 - vcpackages
 
-    ```  
-    // vcpackages (partial list)  
+    ```cpp.hint
+    // vcpackages (partial list)
     #define _In_
     #define _In_opt_
     #define _In_z_
     #define _In_opt_z_
-    #define _In_count_(size)  
-    ```  
+    #define _In_count_(size)
+    ```
 
 - 调试
 
-    ```  
+    ```cpp.hint
     // Debug
     #undef _In_
     #define OBRACE {
     #define CBRACE }
-    #define RAISE_EXCEPTION(x) throw (x)  
+    #define RAISE_EXCEPTION(x) throw (x)
     #define START_NAMESPACE namespace MyProject {
     #define END_NAMESPACE }
-    ```  
+    ```
 
 - A1
 
-    ```  
+    ```cpp.hint
     // A1
     #define START_NAMESPACE namespace A1Namespace {
-    ```  
+    ```
 
 - A2
 
-    ```  
+    ```cpp.hint
     // A2
     #undef OBRACE
     #undef CBRACE
-    ```  
+    ```
 
 ### <a name="effective-hints"></a>有效提示
 
@@ -306,19 +306,19 @@ static const struct ATL::_ATL_CATMAP_ENTRY pMap[] = {
 
 - 有效提示：
 
-    ```  
-    // vcpackages (partial list)  
+    ```cpp.hint
+    // vcpackages (partial list)
     #define _In_opt_
     #define _In_z_
     #define _In_opt_z_
-    #define _In_count_(size)  
+    #define _In_count_(size)
     // Debug...
-    #define RAISE_EXCEPTION(x) throw (x)  
+    #define RAISE_EXCEPTION(x) throw (x)
     // A1
     #define START_NAMESPACE namespace A1Namespace {
     // ...Debug
     #define END_NAMESPACE }
-    ```  
+    ```
 
 以下注释适用于上述列表。
 
@@ -332,10 +332,10 @@ static const struct ATL::_ATL_CATMAP_ENTRY pMap[] = {
 
 ## <a name="see-also"></a>请参阅
 
-[为 Visual C++ 项目创建的文件类型](../ide/file-types-created-for-visual-cpp-projects.md)    
-[#define 指令 (C/C++)](../preprocessor/hash-define-directive-c-cpp.md)   
-[#undef 指令 (C/C++)](../preprocessor/hash-undef-directive-c-cpp.md)   
-[SAL 注释](../c-runtime-library/sal-annotations.md)   
-[消息映射](../mfc/reference/message-maps-mfc.md)   
-[消息映射宏](../atl/reference/message-map-macros-atl.md)   
+[为 Visual C++ 项目创建的文件类型](../ide/file-types-created-for-visual-cpp-projects.md)<br>
+[#define 指令 (C/C++)](../preprocessor/hash-define-directive-c-cpp.md)<br>
+[#undef 指令 (C/C++)](../preprocessor/hash-undef-directive-c-cpp.md)<br>
+[SAL 批注](../c-runtime-library/sal-annotations.md)<br>
+[消息映射](../mfc/reference/message-maps-mfc.md)<br>
+[消息映射宏](../atl/reference/message-map-macros-atl.md)<br>
 [对象映射宏](../atl/reference/object-map-macros.md)

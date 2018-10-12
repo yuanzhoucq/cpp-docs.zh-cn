@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: be9c1bc8125c30eb2208b389097eac7e1cf38e09
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2534563ba85ec3d2d513c192637d3ae8b3beb971
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46374381"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162355"
 ---
 # <a name="autohandleoperator-bool"></a>auto_handle::operator bool
 
@@ -40,11 +40,11 @@ operator bool();
 
 ## <a name="return-value"></a>返回值
 
-`true` 已包装的对象是否有效，则为`false`否则为。
+**true**已包装的对象是否有效，则为**false**否则为。
 
 ## <a name="remarks"></a>备注
 
-此运算符实际将转换为`_detail_class::_safe_bool`这是比更安全`bool`因为不能将它转换为整型类型。
+此运算符实际将转换为`_detail_class::_safe_bool`这是比更安全**bool**因为不能将它转换为整型类型。
 
 ## <a name="example"></a>示例
 

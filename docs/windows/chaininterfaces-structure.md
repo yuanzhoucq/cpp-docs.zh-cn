@@ -27,12 +27,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: df483f08e96f2bd479504028ce4ce17513bb7d41
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 28683d8c69a800cb6f9a365beda26c75b3a69d15
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48789016"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161809"
 ---
 # <a name="chaininterfaces-structure"></a>ChainInterfaces 结构
 
@@ -117,7 +117,7 @@ struct ChainInterfaces<
 派生类型的基类型。
 
 *hasImplements*<br/>
-一个布尔值，如果`true`，意味着不能使用[MixIn](../windows/mixin-structure.md)不是派生的类结构[实现](../windows/implements-structure.md)结构。
+一个布尔值，如果 **，则返回 true**，意味着不能使用[MixIn](../windows/mixin-structure.md)不是派生的类结构[实现](../windows/implements-structure.md)结构。
 
 ## <a name="members"></a>成员
 
@@ -169,7 +169,7 @@ __forceinline bool CanCastTo(
 
 ### <a name="return-value"></a>返回值
 
-`true` 如果所有的强制转换操作成功，则否则为`false`。
+**true**如果所有的强制转换操作成功; 否则为**false**。
 
 ## <a name="casttounknown"></a>Chaininterfaces:: Casttounknown
 
@@ -216,7 +216,7 @@ static const unsigned long IidCount = Details::InterfaceTraits<I0>::IidCount + D
 
 ### <a name="remarks"></a>备注
 
-模板参数*I0*并*I1*是必需的并且参数*I2*通过*I9*都是可选的。每个接口的 IID 计数通常为 1。
+模板参数*I0*并*I1*是必需的并且参数*I2*通过*I9*都是可选的。 每个接口的 IID 计数通常为 1。
 
 ## <a name="verify"></a>Chaininterfaces:: Verify
 

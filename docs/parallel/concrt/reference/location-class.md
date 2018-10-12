@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e4e2b7af8e99059151963398215a18411797101
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8c2352662de2d55be823064afd16354ff7f2c72e
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46380147"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163616"
 ---
 # <a name="location-class"></a>location 类
 
@@ -157,7 +157,7 @@ bool operator!= (const location& _Rhs) const;
 
 ### <a name="return-value"></a>返回值
 
-如果两个位置不同，则为 `true`；否则为 `false`。
+**true**如果两个位置不同， **false**否则为。
 
 ##  <a name="operator_eq"></a> 运算符 =
 
@@ -189,7 +189,7 @@ bool operator== (const location& _Rhs) const;
 
 ### <a name="return-value"></a>返回值
 
-`true` 如果两个位置都完全相同，和`false`否则为。
+**true**如果两个位置是相同的并**false**否则为。
 
 ## <a name="see-also"></a>请参阅
 

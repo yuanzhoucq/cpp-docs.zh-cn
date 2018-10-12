@@ -1,35 +1,32 @@
 ---
 title: Visual Studio 中的 Visual C++ | Microsoft Docs
+description: Visual C++ 是 Microsoft C++ 编译器、代码编辑器和 Visual Studio IDE 中相关工具的名称。 使用 Visual C++ 开发面向 Windows、Linux、Android 和 iOS 的程序。
 ms.custom: ''
-ms.date: 08/22/2018
+ms.date: 09/26/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
-- unmanaged code, C++
-- development environment, Visual C++
-- unmanaged code
-- Visual C++
-- Visual C++, reference
+- Visual C++, home page
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6116a1b27595c6400edfcb79daafb362fb7aec5f
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: ae68abc0768c0a06526af6439a8a881684ecdb15
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43684486"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821269"
 ---
 # <a name="visual-c-in-visual-studio"></a>Visual Studio 中的 Visual C++
 
 > [!NOTE]  
 > 此开发人员文档适用于 Visual Studio 2015 和 Visual Studio 2017。 
 
-> 如果要查找 Visual C++ 可再发行包以便运行程序，请转到 [Microsoft 下载中心](http://www.microsoft.com/en-us/download/) ，并在搜索框中输入“Visual C++”。  
+> 如果要查找 Visual C++ 可再发行包以便运行程序，请转到 [Microsoft 下载中心](http://www.microsoft.com/download/) ，并在搜索框中输入“Visual C++”。  
   
 
 Microsoft Visual C++（通常缩写为 Visual C++ 或 MSVC）是 Windows Visual Studio 的一部分，指 C++、C 和汇编语言开发的工具和库。 这些工具和库可用于创建通用 Windows 平台 (UWP) 应用、本机桌面和服务器应用程序、在 Windows、Linux、Android 和 iOS 上运行的跨平台库和应用以及使用 .NET Framework 的托管应用。 从 Windows 桌面的简单控制台应用到最复杂的应用，从移动设备的设备驱动程序和操作系统组件到跨平台游戏，再从 Azure 云中的最小 IoT 设备到多服务器的高性能计算等所有内容都可以使用 Visual C++ 编写。
@@ -81,10 +78,20 @@ MSVC C++ 编译器中按功能列出的符合性状态列表。
 
 ## <a name="c-development-tools"></a>C++ 开发工具
 
-[IDE 和开发工具](ide/ide-and-tools-for-visual-cpp-development.md)。
-如何使用 Visual Studio IDE 来创建项目、处理源代码文件、链接到库、编译、调试、创建单元测试、执行静态分析、部署等。
+[IDE 和开发工具](ide/ide-and-tools-for-visual-cpp-development.md)<br/>
+如何使用 Visual Studio IDE 来创建项目、编辑代码、链接到库、编译、调试、创建单元测试、执行静态分析、部署等。
 
-[编译器和生成工具](build/building-c-cpp-programs.md) Microsoft C++ 编译器和链接器选项、错误消息、命令行示例、不同平台的配置以及生成参考主题。 
+[编译器和生成工具](build/building-c-cpp-programs.md)<br/>
+Microsoft C++ 编译器和链接器选项、错误消息、命令行示例、不同平台的配置以及生成参考主题。
+
+[调试本机代码](/visualstudio/debugger/debugging-native-code)<br/>
+在 C++ 项目中使用 Visual Studio 调试器。
+
+[C/C++ 代码分析概述](/visualstudio/code-quality/code-analysis-for-c-cpp-overview)<br/>
+使用 SAL 注释或 C++ Core Guidelines 检查器执行静态分析。
+
+[在 Visual Studio 中编写 C/C++ 单元测试](/visualstudio/test/writing-unit-tests-for-c-cpp)<br/>
+使用面向 C++、Google Test、Boost.Test，或 CTest 的 Microsoft 单元测试框架创建单元测试。
 
 ## <a name="write-applications-in-c"></a>使用 C++ 编写应用程序
 
@@ -94,9 +101,11 @@ MSVC C++ 编译器中按功能列出的符合性状态列表。
 [桌面应用程序 (C++)](windows/desktop-applications-visual-cpp.md)<br/>
 了解如何创建适用于 Windows 的传统本机 C++ 桌面应用程序。
 
-[使用 C++/CLI 进行 .NET 编程](dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md) 了解如何创建 DLL，在本机 C++ 和以 C# 或 Visual Basic 等语言编写的 .NET 程序之间实现互操作性。
+[使用 C++/CLI 进行 .NET 编程](dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)<br/>
+了解如何创建 DLL，在本机 C++ 和以 C# 或 Visual Basic 等语言编写的 .NET 程序之间实现互操作性。
 
-[Linux 编程](linux/index.md)使用 Visual Studio IDE 编写代码，并将其部署到远程 Linux 计算机上，以便使用 GCC 进行编译。
+[Linux 编程](linux/index.md)<br/>
+使用 Visual Studio IDE 编写代码，并将其部署到远程 Linux 计算机上，以便使用 GCC 进行编译。
 
 [Visual C++ 中的 DLL](build/dlls-in-visual-cpp.md)<br/>
 查明如何使用 Win32、ATL 和 MFC 创建 Windows 桌面 DLL，并提供有关如何编译和注册 DLL 的信息。
@@ -116,11 +125,15 @@ C++ 中有多种选项可使你连接到 Web 和云。
 [文本和字符串](text/text-and-strings-in-visual-cpp.md)<br/>
 了解有关处理不同的文本和字符串格式以及针对本地和国际开发编码的信息。
 
-## <a name="c-language-reference"></a>C++ 语言参考
+## <a name="languages-reference"></a>语言参考
 
-有关 C++ 语言的信息，请参阅 [C++ Language Reference](cpp/cpp-language-reference.md)。
+[C++ 语言参考](cpp/cpp-language-reference.md)
 
-有关 C++ 预处理器的信息，请参阅 [C/C++ Preprocessor Reference](preprocessor/c-cpp-preprocessor-reference.md)。
+[C/C++ 预处理器参考](preprocessor/c-cpp-preprocessor-reference.md)
+
+[C 语言参考](c-language/c-language-reference.md)
+
+[编译器内部函数和程序集语言](intrinsics/compiler-intrinsics-and-assembly-language.md)
 
 ## <a name="c-libraries-in-visual-studio"></a>Visual Studio 中的 C++ 库
 

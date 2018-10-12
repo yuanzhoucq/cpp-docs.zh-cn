@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 78cbd53baf9e9ade8c20f3b9f5fa419eeb2d1c80
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 211005f273500992440c0e95d2c3c4e3adcef581
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441910"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163408"
 ---
 # <a name="concurrency-namespace-functions-amp"></a>并发命名空间函数 (AMP)
 
@@ -92,7 +92,7 @@ inline bool atomic_compare_exchange(
 
 ### <a name="return-value"></a>返回值
 
-如果操作成功，则为 `true`；否则为 `false`。
+**true**如果操作成功; 否则为**false**。
 
 ##  <a name="atomic_exchange"></a>  atomic_exchange 函数 (c + + AMP)
 
@@ -554,7 +554,7 @@ concurrency::completion_future copy_async(
 
 ##  <a name="direct3d_abort"></a>  direct3d_abort
 
-用 `restrict(amp)` 限制子句中止函数的执行。 当 AMP 运行时检测该调用时，将引发[runtime_exception](runtime-exception-class.md)异常并显示错误消息"参考光栅器： 着色器中止指令命中"。
+用 `restrict(amp)` 限制子句中止函数的执行。 当 AMP 运行时检测该调用时，将引发 [runtime_exception](runtime-exception-class.md) 异常并显示错误消息“参考光栅器: 命中着色器中止指令”。
 
 ```
 void direct3d_abort() restrict(amp);

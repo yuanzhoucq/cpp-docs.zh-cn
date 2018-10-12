@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 912cdb59a1841bbe3bbe3e71202a796a3e67a94e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 642b73f81146fa8df68d36ee3b63b1902ed66619
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46390250"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162394"
 ---
 # <a name="iexecutionresource-structure"></a>IExecutionResource 结构
 
@@ -79,7 +79,7 @@ virtual unsigned int CurrentSubscriptionLevel() const = 0;
 
 订阅级别会告诉您正在运行的线程数与相关联的硬件线程。 这只包括资源管理器已意识到已订阅的线程和有效执行线程代理的虚拟处理器根的窗体中的线程。
 
-调用方法[ischedulerproxy:: Subscribecurrentthread](ischedulerproxy-structure.md#subscribecurrentthread)，或方法[ischedulerproxy:: Requestinitialvirtualprocessors](ischedulerproxy-structure.md#requestinitialvirtualprocessors)与参数`doSubscribeCurrentThread`设置为值`true`按 1 递增硬件线程的订阅级别。 它们还返回`IExecutionResource`表示订阅的接口。 相应地调用[iexecutionresource:: Remove](#remove)递减 1 的硬件线程的订阅级别。
+调用方法[ischedulerproxy:: Subscribecurrentthread](ischedulerproxy-structure.md#subscribecurrentthread)，或方法[ischedulerproxy:: Requestinitialvirtualprocessors](ischedulerproxy-structure.md#requestinitialvirtualprocessors)与参数`doSubscribeCurrentThread`设置为值 **，则返回 true**按 1 递增硬件线程的订阅级别。 它们还返回`IExecutionResource`表示订阅的接口。 相应地调用[iexecutionresource:: Remove](#remove)递减 1 的硬件线程的订阅级别。
 
 激活使用方法的虚拟处理器根的 act [ivirtualprocessorroot:: Activate](ivirtualprocessorroot-structure.md#activate)按 1 递增硬件线程的订阅级别。 方法[ivirtualprocessorroot:: Deactivate](ivirtualprocessorroot-structure.md#deactivate)，或[iexecutionresource:: Remove](#remove)递减一个激活虚拟处理器根上调用时需要的订阅级别。
 

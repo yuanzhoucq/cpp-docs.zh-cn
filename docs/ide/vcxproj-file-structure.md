@@ -1,7 +1,7 @@
 ---
 title: .vcxproj 和 .props 文件结构 | Microsoft Docs
 ms.custom: ''
-ms.date: 04/27/2017
+ms.date: 09/18/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -14,16 +14,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe466ff9250543a61fde8da41900b152a9874e09
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 957d9e1063c71e342339eb4e6a6c913eeb5a8f64
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33337345"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46374083"
 ---
 # <a name="vcxproj-and-props-file-structure"></a>.vcxproj 和 .props 文件结构
 
-MSBuild 是 Visual Studio 中默认的项目系统；在 Visual C++ 中选择“文件 | 新项目”会创建一个 MSBuild 项目，其设置存储于扩展名为  **的 XML 项目文件中**`.vcxproj`。 项目文件还可以导入 .props 文件和 .targets 文件，这两种文件能存储设置。 在大多数情况下，从不需要手动编辑项目文件，而且其实也不应手动编辑它，除非你对 MSBuild 非常了解。 应尽可能地使用 Visual Studio 属性页来修改项目设置（请参阅[使用项目属性](working-with-project-properties.md)）。 但在某些情况下，可能需要手动修改项目文件或属性表。 针对这类情况，本文包含与文件结构相关的基本信息。
+[MSBuild](../build/msbuild-visual-cpp.md) 是 Visual Studio 中默认的项目系统；在 Visual C++ 中选择“文件” > “新建项目”会创建一个 MSBuild 项目，其设置存储于扩展名为 `.vcxproj` 的 XML 项目文件中。 项目文件还可以导入 .props 文件和 .targets 文件，这两种文件能存储设置。 在大多数情况下，从不需要手动编辑项目文件，而且其实也不应手动编辑它，除非你对 MSBuild 非常了解。 应尽可能地使用 Visual Studio 属性页来修改项目设置（请参阅[使用项目属性](working-with-project-properties.md)）。 但在某些情况下，可能需要手动修改项目文件或属性表。 针对这类情况，本文包含与文件结构相关的基本信息。
 
 **重要提示：**
 
@@ -43,6 +43,8 @@ MSBuild 是 Visual Studio 中默认的项目系统；在 Visual C++ 中选择“
    <ClCompile Include="$(IntDir)\generated.cpp"/>
    ```
 
+   “不支持”表示不能保证宏适用于 IDE 中的所有操作。 未在不同配置中更改其值的宏应正常工作，但如果将某项移动到不同筛选器或项目，则可能不会保留宏。 为不同配置更改其值的宏会引起问题，因为 IDE 不希望不同的项目配置有不同的项目项路径。
+
 1. 为了确保能在“项目属性”对话框中正确地添加、删除或修改项目属性，该文件必须包含每个项目配置各自的组，且条件必须为这种形式：
 
    ```xml
@@ -58,7 +60,9 @@ MSBuild 是 Visual Studio 中默认的项目系统；在 Visual C++ 中选择“
 要注意的第一点是顶级元素按特定顺序显示。 例如:
 
 - 大多数的属性组和项定义组都在导入 Microsoft.Cpp.Default.props 后出现。
+
 - 所有目标都在文件末尾导入。
+
 - 存在多个属性组，每个都带有唯一标签并按特定顺序显示。
 
 由于 MSBuild 基于按顺序的计算模型，所以项目文件中的元素顺序非常重要。  如果项目文件（包括导入的所有 .props 和 .targets 文件）包含多个属性定义，则最新的定义会覆盖前面的定义。 在下面的示例中，在编译期间会设置值“xyz”，因为它是 MSBuild 引擎在执行计算期间最后遇到的值。
@@ -72,20 +76,20 @@ MSBuild 是 Visual Studio 中默认的项目系统；在 Visual C++ 中选择“
 
 ```xml
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns='http://schemas.microsoft.com/developer/msbuild/2003'>
-   <ItemGroup Label="ProjectConfigurations" />
-   <PropertyGroup Label="Globals" />
-   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.default.props" />
-   <PropertyGroup Label="Configuration" />
-   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
-   <ImportGroup Label="ExtensionSettings" />
-   <ImportGroup Label="PropertySheets" />
-   <PropertyGroup Label="UserMacros" />
-   <PropertyGroup />
-   <ItemDefinitionGroup />
-   <ItemGroup />
-   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
-   <ImportGroup Label="ExtensionTargets" />
- </Project>
+  <ItemGroup Label="ProjectConfigurations" />
+  <PropertyGroup Label="Globals" />
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.default.props" />
+  <PropertyGroup Label="Configuration" />
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup />
+  <ItemGroup />
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+</Project>
 ```
 
 以下各节描述这些元素各自的用途以及它们如此排序的原因：
@@ -112,23 +116,27 @@ MSBuild 是 Visual Studio 中默认的项目系统；在 Visual C++ 中选择“
 
 下面的代码片段演示一个项目配置。 此示例中的配置名称为“Debug|x64”。 项目配置名称的格式必须为 $(Configuration)|$(Platform)。 项目配置节点可以具有两个属性：配置和平台。 在配置处于活动状态时，将自动采用此处指定的值来自动设置这些属性。
 
-   ```xml
-   <ProjectConfiguration Include="Debug|x64">
-     <Configuration>Debug</Configuration>
-     <Platform>x64</Platform>
-   </ProjectConfiguration>
-   ```
+```xml
+<ProjectConfiguration Include="Debug|x64">
+  <Configuration>Debug</Configuration>
+  <Platform>x64</Platform>
+</ProjectConfiguration>
+```
 
 IDE 会查找一个项目配置，此配置可以是由所有 ProjectConfiguration 项中使用的配置值和平台值构成的任意组合。 这通常意味着项目可能具有无意义的项目配置以满足此要求。 例如，如果项目具有这些配置：
 
 - Debug|Win32
+
 - Retail|Win32
+
 - Special 32-bit Optimization|Win32
 
 那么即使“Special 32-bit Optimization”对于 x64 是没有意义的，项目还是需要这些配置：
 
 - 调试|x64
+
 - Retail|x64
+
 - Special 32-bit Optimization|x64
 
 可以在“解决方案配置管理器”中禁用任何配置的生成和部署命令。
@@ -136,7 +144,7 @@ IDE 会查找一个项目配置，此配置可以是由所有 ProjectConfigurati
 ### <a name="globals-propertygroup-element"></a>Globals PropertyGroup 元素
 
 ```xml
- <PropertyGroup Label="Globals" />
+<PropertyGroup Label="Globals" />
 ```
 
 `Globals` 包含项目级别设置，例如 ProjectGuid、RootNamespace 和 ApplicationType/ApplicationTypeRevision。 最后两项通常定义目标操作系统。 由于引用和项目项当前无法具备条件，所以一个项目只能面向一个操作系统。 通常不会在项目文件中的其他位置重写这些属性。 此组不依赖于配置，所以通常在项目文件中只存在一个 Globals 组。
@@ -202,7 +210,7 @@ PropertyGroup 必须位于 `<Import Project="$(VCTargetsPath)\Microsoft.Cpp.prop
 ### <a name="per-configuration-itemdefinitiongroup-elements"></a>按配置 ItemDefinitionGroup 元素
 
 ```xml
- <ItemDefinitionGroup />
+<ItemDefinitionGroup />
 ```
 
 包含项定义。 它们必须和无标签的按配置 PropertyGroup 元素遵循同样的条件规则。
@@ -217,34 +225,35 @@ PropertyGroup 必须位于 `<Import Project="$(VCTargetsPath)\Microsoft.Cpp.prop
 
 元数据应具备每个配置的配置条件，即使它们都是一样的。 例如:
 
-   ```xml
-   <ItemGroup>
-     <ClCompile Include="stdafx.cpp">
-       <TreatWarningAsError Condition="‘$(Configuration)|$(Platform)’==’Debug|Win32’">true</TreatWarningAsError>
-       <TreatWarningAsError Condition="‘$(Configuration)|$(Platform)’==’Debug|x64’">true</TreatWarningAsError>
-     </ClCompile>
-   </ItemGroup>
-   ```
+```xml
+<ItemGroup>
+  <ClCompile Include="stdafx.cpp">
+    <TreatWarningAsError Condition="‘$(Configuration)|$(Platform)’==’Debug|Win32’">true</TreatWarningAsError>
+    <TreatWarningAsError Condition="‘$(Configuration)|$(Platform)’==’Debug|x64’">true</TreatWarningAsError>
+  </ClCompile>
+</ItemGroup>
+```
 
 Visual C++ 项目系统目前不支持在项目项中使用通配符。
 
-   ```xml
-   <ItemGroup>
-     <ClCompile Include="*.cpp"> <!--Error-->
-   </ItemGroup>
-   ```
+```xml
+<ItemGroup>
+  <ClCompile Include="*.cpp"> <!--Error-->
+</ItemGroup>
+```
 
 Visual C++ 项目系统目前不支持在项目项中使用宏。
 
-   ```xml
-   <ItemGroup>
-     <ClCompile Include="$(IntDir)\generated.cpp"> <!--not guaranteed to work in all scenarios-->
-   </ItemGroup>
-   ```
+```xml
+<ItemGroup>
+  <ClCompile Include="$(IntDir)\generated.cpp"> <!--not guaranteed to work in all scenarios-->
+</ItemGroup>
+```
 
 ItemGroup 中指定了引用，且这些引用具有以下限制：
 
 - 引用不支持条件。
+
 - 引用元数据不支持条件。
 
 ### <a name="microsoftcpptargets-import-element"></a>Microsoft.Cpp.targets Import 元素
@@ -293,5 +302,5 @@ Visual Studio IDE 依赖于按上述顺序排列的项目文件。 例如，当�
 
 ## <a name="see-also"></a>请参阅
 
-[使用项目属性](working-with-project-properties.md)  
-[属性页 XML 文件](property-page-xml-files.md)  
+[使用项目属性](working-with-project-properties.md)<br/>
+[属性页 XML 文件](property-page-xml-files.md)

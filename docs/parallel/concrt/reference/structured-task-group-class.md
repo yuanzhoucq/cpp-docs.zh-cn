@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4aa6df9afddc43980818439ee2c7bbd29ca2f848
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a9e87ebd4523b5211c94955b5bec7905ed848946
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46446070"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161679"
 ---
 # <a name="structuredtaskgroup-class"></a>structured_task_group 类
 
@@ -54,7 +54,7 @@ class structured_task_group;
 |名称|描述|
 |----------|-----------------|
 |[取消](#cancel)|可以最大努力尝试取消的子树的根节点的此任务组的工作。 对任务组计划每个任务都将获取取消间接在可能的情况。|
-|[is_canceling](#is_canceling)|通知调用方任务组当前正在取消操作。 这不一定表示的`cancel`上调用了方法`structured_task_group`对象 (尽管这样肯定会让此方法以返回`true`)。 它可能发生此情况的`structured_task_group`对象正在执行内联和任务组进一步向上工作树中已取消。 在这些位置等的情况下运行时可以确定取消将流过提前`structured_task_group`对象，`true`也将返回。|
+|[is_canceling](#is_canceling)|通知调用方任务组当前正在取消操作。 这不一定表示的`cancel`上调用了方法`structured_task_group`对象 (尽管这样肯定会让此方法返回**true**)。 它可能发生此情况的`structured_task_group`对象正在执行内联和任务组进一步向上工作树中已取消。 在这些位置等的情况下运行时可以确定取消将流过提前`structured_task_group`对象， **true**也将返回。|
 |[run](#run)|已重载。 在计划任务`structured_task_group`对象。 调用方管理的生存期`task_handle`传入的对象`_Task_handle`参数。 采用参数 `_Placement` 的版本会导致任务偏向在该参数指定的位置执行。|
 |[run_and_wait](#run_and_wait)|已重载。 计划任务以运行内联将在调用上下文的帮助下`structured_task_group`完整的取消支持的对象。 如果`task_handle`对象作为参数传递`run_and_wait`，调用方负责管理的生存期`task_handle`对象。 然后函数等待直到上的所有工作`structured_task_group`对象已完成或已取消。|
 |[等待](#wait)|等待，直到上的所有工作`structured_task_group`已完成或已取消。|
@@ -97,7 +97,7 @@ void cancel();
 
 ##  <a name="is_canceling"></a> is_canceling
 
-通知调用方任务组当前正在取消操作。 这不一定表示的`cancel`上调用了方法`structured_task_group`对象 (尽管这样肯定会让此方法以返回`true`)。 它可能发生此情况的`structured_task_group`对象正在执行内联和任务组进一步向上工作树中已取消。 在这些位置等的情况下运行时可以确定取消将流过提前`structured_task_group`对象，`true`也将返回。
+通知调用方任务组当前正在取消操作。 这不一定表示的`cancel`上调用了方法`structured_task_group`对象 (尽管这样肯定会让此方法返回**true**)。 它可能发生此情况的`structured_task_group`对象正在执行内联和任务组进一步向上工作树中已取消。 在这些位置等的情况下运行时可以确定取消将流过提前`structured_task_group`对象， **true**也将返回。
 
 ```
 bool is_canceling();

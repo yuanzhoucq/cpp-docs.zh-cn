@@ -1,7 +1,7 @@
 ---
 title: 使用可再发行组件包 (C++) 部署应用 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/17/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 569c5c8adcb57ae92f111929efca544c76412a4b
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 9759811554fd0998a919c9939a0441c63c26a3f8
+ms.sourcegitcommit: 338e1ddc2f3869d92ba4b73599d35374cf1d5b69
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43895274"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46494343"
 ---
 # <a name="walkthrough-deploying-a-visual-c-application-by-using-the-visual-c-redistributable-package"></a>演练：使用 Visual C++ 可再发行组件包部署 Visual C++ 应用程序
 
@@ -35,66 +35,66 @@ ms.locfileid: "43895274"
 
 ### <a name="to-use-the-visual-c-redistributable-package-to-deploy-an-application"></a>使用 Visual C++ 可再发行组件包部署应用程序
 
-1. 按照[演练：使用安装项目部署 Visual C++ 应用程序](../ide/deploying-visual-cpp-application-by-using-the-vcpp-redistributable-package.md)中的前三个步骤创建并生成 MFC 应用程序。
+1.  按照[演练：使用安装项目部署 Visual C++ 应用程序](walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project.md)中的步骤创建并生成 MFC 应用程序。
 
-2. 创建文件，将其命名为 setup.bat，并向其添加以下命令。 将 `MyMFCApplication` 更改为项目名称。
+1. 创建文件，将其命名为 setup.bat，并向其添加以下命令。 将 `MyMFCApplication` 更改为项目名称。
 
     ```cmd
     @echo off
     vcredist_x86.exe
     mkdir "C:\Program Files\MyMFCApplication"
     copy MyMFCApplication.exe "C:\Program Files\MyMFCApplication"
-    ```  
+    ```
 
-3. 创建自解压安装程序文件：
+1. 创建自解压安装程序文件：
 
    1. 在命令提示符处或“运行”窗口中，运行 iexpress.exe。
 
-   2. 选择“新建自解压指令文件”，然后选择“下一步”按钮。
+   1. 选择“新建自解压指令文件”，然后选择“下一步”按钮。
 
-   3. 选择“解压文件并运行安装命令”然后选择“下一步”。
+   1. 选择“解压文件并运行安装命令”然后选择“下一步”。
 
-   4. 在文本框中，输入 MFC 应用程序的名称，然后选择“下一步”。
+   1. 在文本框中，输入 MFC 应用程序的名称，然后选择“下一步”。
 
-   5. 在“确认提示”页上，选择“无提示”，然后选择“下一步”。
+   1. 在“确认提示”页上，选择“无提示”，然后选择“下一步”。
 
-   6. 在“许可协议”页上，选择“不显示许可”，然后选择“下一步”。
+   1. 在“许可协议”页上，选择“不显示许可”，然后选择“下一步”。
 
-   7. 在“包文件”页上，添加以下文件，然后选择“下一步”。
+   1. 在“包文件”页上，添加以下文件，然后选择“下一步”。
 
       - MFC 应用程序（.exe 文件）。
 
-      - vcredist_x86.exe。 此文件位于 \Program Files\Microsoft SDKs\Windows\v7.0A\Bootstrapper\Packages\vcredist_x86\\。
+      - vcredist_x86.exe。 此文件位于 \Program Files (x86)\Microsoft Visual Studio \<version>\SDK\Bootstrapper\Packages\. 中 也可以从 [Microsoft](https://www.microsoft.com/download/confirmation.aspx?id=5555) 下载此文件。
 
       - 在之前的步骤中创建的 setup.bat 文件。
 
-   8. 在“安装要启动的程序”页上，在“安装程序”文本框中输入以下命令行，然后选择“下一步”。
+   1. 在“安装要启动的程序”页上，在“安装程序”文本框中输入以下命令行，然后选择“下一步”。
 
-      **cmd.exe /c “setup.bat”**  
+      **cmd.exe /c “setup.bat”**
 
-   9. 在“显示窗口”页上，选择“默认”，然后选择“下一步”。
+   1. 在“显示窗口”页上，选择“默认”，然后选择“下一步”。
 
-   10. 在“完成消息”页上，选择“无消息”，然后选择“下一步”。
+   1. 在“完成消息”页上，选择“无消息”，然后选择“下一步”。
 
-   11. 在“包名和选项”页上，输入自解压安装程序文件的名称，选择“使用包内的长文件名称存储文件”选项，然后选择“下一步”。 文件名的末尾必须是 Setup.exe，例如，MyMFCApplicationSetup.exe。
+   1. 在“包名和选项”页上，输入自解压安装程序文件的名称，选择“使用包内的长文件名称存储文件”选项，然后选择“下一步”。 文件名的末尾必须是 Setup.exe，例如，*MyMFCApplicationSetup.exe*。
 
-   12. 在“配置重启”页上，选择“不重启”，然后选择“下一步”。
+   1. 在“配置重启”页上，选择“不重启”，然后选择“下一步”。
 
-   13. 在“保存自解压指令”页上，选择“保存自解压指令(SED)文件”，然后选择“下一步”。
+   1. 在“保存自解压指令”页上，选择“保存自解压指令(SED)文件”，然后选择“下一步”。
 
-   14. 在“创建包”页上，选择“下一步”。
+   1. 在“创建包”页上，选择“下一步”。 选择“完成”。
 
-4. 在另一台没有 Visual C++ 库的计算机上测试自解压安装程序文件：
+1. 在另一台没有 Visual C++ 库的计算机上测试自解压安装程序文件：
 
-   1. 在该计算机上，下载安装程序文件的副本，然后通过运行它并按照其提供的步骤进行安装。
+   1. 在该计算机上，下载安装程序文件的副本，然后通过运行它并按照其提供的步骤进行安装。 根据所选选项，安装可能需要“以管理员身份运行”命令。
 
-   2. 运行 MFC 应用程序。
+   1. 运行 MFC 应用程序。
 
       自解压安装程序文件可安装在步骤 2 中指定的文件夹中的 MFC 应用程序。 由于 Visual C++ 可再发行组件包安装程序包含在自解压安装程序文件中，因此应用程序成功运行。
 
       > [!IMPORTANT]
-      > 为了确定安装的运行时版本，安装程序会检查注册表项 \HKLM\SOFTWARE\Microsoft\VisualStudio\11.0\VC\Runtimes\\[platform]。 如果当前安装的版本比安装程序尝试安装的版本高，则安装程序成功返回而不安装较旧版本，并在控制面板中的已安装程序页上留下其他条目。
+      > 为了确定安装的运行时版本，安装程序会检查注册表项 \HKLM\SOFTWARE\Microsoft\VisualStudio\\\<version>\VC\Runtimes\\<platform>。 如果当前安装的版本比安装程序尝试安装的版本高，则安装程序成功返回而不安装较旧版本，并在控制面板中的已安装程序页上留下其他条目。
 
 ## <a name="see-also"></a>请参阅
 
-[部署示例](../ide/deployment-examples.md)
+[部署示例](deployment-examples.md)<br/>

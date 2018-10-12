@@ -31,12 +31,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b9a157f747f32b7e146a0bc89ac695837c37974
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 30eb0befda4d439bf4153d7c6726c982d3bf19ae
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46399673"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163330"
 ---
 # <a name="acceleratorview-class"></a>accelerator_view 类
 
@@ -74,9 +74,9 @@ class accelerator_view;
 
 |名称|描述|
 |----------|-----------------|
-|[operator!=](#operator_neq)|比较此`accelerator_view`与另一个对象，并返回`false`如果它们是相同的; 否则，返回`true`。|
+|[operator!=](#operator_neq)|比较此`accelerator_view`与另一个对象，并返回**false**如果它们是相同的; 否则返回**true**。|
 |[operator=](#operator_eq)|将指定的内容复制`accelerator_view`到此对象。|
-|[operator==](#operator_eq_eq)|比较此`accelerator_view`与另一个对象，并返回`true`如果它们是相同的; 否则，返回`false`。|
+|[operator==](#operator_eq_eq)|比较此`accelerator_view`与另一个对象，并返回**true**如果它们是相同的; 否则返回**false**。|
 
 ### <a name="public-data-members"></a>公共数据成员
 
@@ -86,7 +86,7 @@ class accelerator_view;
 |[is_auto_selection](#is_auto_selection)|获取一个布尔值，该值指示是否在运行时将自动选择适当的快捷键时`accelerator_view`对象传递给[parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each)。|
 |[is_debug](#is_debug)|获取一个布尔值，该值指示是否`accelerator_view`对象具有为广泛错误报告启用了调试层。|
 |[queuing_mode](#queuing_mode)|获取的排队模式`accelerator_view`对象。|
-|[version](#version)|获取加速器的版本。|
+|[版本](#version)|获取加速器的版本。|
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -183,7 +183,7 @@ bool get_is_auto_selection() const;
 
 ### <a name="return-value"></a>返回值
 
-`true` 如果在运行时将自动选择适当的快捷键;否则为`false`。
+**true**如果在运行时将自动选择适当的快捷键; 否则为**false**。
 
 ## <a name="accelerator_view__get_is_debug"></a> get_is_debug
 
@@ -249,7 +249,7 @@ __declspec(property(get= get_is_debug)) bool is_debug;
 
 ## <a name="accelerator_view__operator_neq"></a> 运算符 ！ =
 
-比较此 accelerator_view 对象与另一个，并返回`false`如果它们是相同的; 否则，返回`true`。
+比较此 accelerator_view 对象与另一个，并返回**false**如果它们是相同的; 否则，返回**true**。
 
 ### <a name="syntax"></a>语法
 
@@ -264,7 +264,7 @@ bool operator!= (    const accelerator_view & _Other ) const;
 
 ### <a name="return-value"></a>返回值
 
-如果两个对象相同，则为 `false`；否则为 `true`。
+**false**如果两个对象都相同; 否则为**true**。
 
 ## <a name="accelerator_view__operator_eq"></a> 运算符 =
 
@@ -287,7 +287,7 @@ accelerator_view & operator= (    const accelerator_view & _Other );
 
 ## <a name="accelerator_view__operator_eq_eq"></a> 运算符 = =
 
-比较此 accelerator_view 对象与另一个，并返回`true`如果它们是相同的; 否则，返回`false`。
+比较此 accelerator_view 对象与另一个，并返回 **，则返回 true**如果它们是相同的; 否则，返回**false**。
 
 ### <a name="syntax"></a>语法
 
@@ -302,7 +302,7 @@ bool operator= = (    const accelerator_view & _Other ) const;
 
 ### <a name="return-value"></a>返回值
 
-如果两个对象相同，则为 `true`；否则为 `false`。
+**true**如果两个对象都相同; 否则为**false**。
 
 ## <a name="accelerator_view__queuing_mode"></a> queuing_mode
 

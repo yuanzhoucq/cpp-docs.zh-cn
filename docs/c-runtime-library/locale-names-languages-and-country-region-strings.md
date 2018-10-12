@@ -20,23 +20,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c072074c24466458ebd19e1335f49169c5c22bd5
-ms.sourcegitcommit: 3b78ddea5fd3e22b7c5cd2d787ec71a518a52223
+ms.openlocfilehash: 2622702cd19dab3cad2613aa3df28b5cef464853
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42578270"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076003"
 ---
 # <a name="locale-names-languages-and-countryregion-strings"></a>区域设置名称、语言和国家/地区字符串
 
 `setlocale` 和 `_create_locale` 函数的 *locale* 参数可使用 Windows NLS API 支持的区域设置名称、语言、国家/地区代码和代码页设置。 *locale* 参数采取以下格式：
 
-> *locale* :: "*locale_name*"  
-&nbsp;&nbsp;&nbsp;&nbsp;| "*language*\[\_*country-region*]\[.*code_page*]]"  
-&nbsp;&nbsp;&nbsp;&nbsp;| ".*code_page*"  
-&nbsp;&nbsp;&nbsp;&nbsp;| "C"  
-&nbsp;&nbsp;&nbsp;&nbsp;| ""  
-&nbsp;&nbsp;&nbsp;&nbsp;| NULL  
+> *locale* :: "*locale_name*" &nbsp;&nbsp;&nbsp;&nbsp;| "*language*\[\_*country-region*]\[.*code_page*]]" &nbsp;&nbsp;&nbsp;&nbsp;| ".*code_page*" &nbsp;&nbsp;&nbsp;&nbsp;| "C" &nbsp;&nbsp;&nbsp;&nbsp;| "" &nbsp;&nbsp;&nbsp;&nbsp;| NULL
 
 首选区域设置名称格式，例如英语（美国）使用 `en-US`，或波斯尼亚语（西里尔文，波斯尼亚和黑塞哥维那）使用 `bs-Cyrl-BA`。 [Locale Names（区域设置名称）](/windows/desktop/Intl/locale-names)中介绍了这一系列区域设置名称。 有关 Windows 操作系统版本支持的区域设置名称列表，请转到“[MS-LCID]：Windows 语言代码标识符 (LCID) 参考”中的[附录 A：产品行为](https://msdn.microsoft.com/library/cc233982.aspx)，参阅其中表内的“语言标记”列。 该资源列出了支持的语言、脚本和区域设置名称的地区部分。 有关采用非默认排序顺序的受支持的区域设置名称的信息，请参阅 [Sort Order Identifiers（排序顺序标识符）](/windows/desktop/Intl/sort-order-identifiers) 中的“区域性名称” 列。 在 Windows 10 或更高版本下，允许使用与有效的 BCP-47 语言标记对应的区域设置名称。 例如，`jp-US` 是一个有效的 BCP-47 标记，但实际上只有 `US` 对于区域设置功能有效。
 
@@ -50,8 +45,7 @@ ms.locfileid: "42578270"
 
 使用 `setlocale` 类别，可以为 `_wsetlocale` 和 `LC_ALL` 函数同时指定所有区域设置类别。 这些类别可以全部设置为同一区域设置，你也可以使用具有该格式的区域设置参数分别设置每个类别：
 
-> LC_ALL_specifier :: locale  
-&nbsp;&nbsp;&nbsp;&nbsp;| [LC_COLLATE=locale][;LC_CTYPE=locale][;LC_MONETARY=locale][;LC_NUMERIC=locale][;LC_TIME=locale]
+> LC_ALL_specifier :: locale &nbsp;&nbsp;&nbsp;&nbsp;| [LC_COLLATE=locale][;LC_CTYPE=locale][;LC_MONETARY=locale][;LC_NUMERIC=locale][;LC_TIME=locale]
 
 你可以指定多个类别类型，由分号分隔。 未指定的类别类型使用当前的区域设置。 例如，该代码片段将所有类别的当前区域设置设为 `de-DE`，然后将类别 `LC_MONETARY` 设为 `en-GB`，将 `LC_TIME` 设为 `es-ES`：
 
@@ -62,9 +56,9 @@ _wsetlocale(LC_ALL, L"LC_MONETARY=en-GB;LC_TIME=es-ES");
 
 ## <a name="see-also"></a>请参阅
 
-[C 运行时库参考](../c-runtime-library/c-run-time-library-reference.md)  
-[_get_current_locale](../c-runtime-library/reference/get-current-locale.md)  
-[setlocale、_wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)  
-[_create_locale、_wcreate_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md)  
-[语言字符串](../c-runtime-library/language-strings.md)  
-[国家/地区字符串](../c-runtime-library/country-region-strings.md)  
+[C 运行时库参考](../c-runtime-library/c-run-time-library-reference.md)<br/>
+[_get_current_locale](../c-runtime-library/reference/get-current-locale.md)<br/>
+[setlocale、_wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)<br/>
+[_create_locale、_wcreate_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md)<br/>
+[语言字符串](../c-runtime-library/language-strings.md)<br/>
+[国家/地区字符串](../c-runtime-library/country-region-strings.md)

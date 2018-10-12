@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 489ff00571c79d89c9e807f0d8796989e7a0f84f
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: e9b8ee4c80310c4d94ed432d48ee9702c41f80bf
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45714983"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161783"
 ---
 # <a name="gh-enable-pexit-hook-function"></a>/GH（启用 _pexit 挂钩函数）
 
@@ -43,7 +43,7 @@ ms.locfileid: "45714983"
 除非您打算显式调用`_pexit`，不需要提供原型。 该函数必须看起来似乎具有以下原型，并且必须在进入时推送所有寄存器的内容，在退出时弹出未更改的内容：
 
 ```
-void __declspec(naked) _cdecl _pexit( void );
+void __declspec(naked) __cdecl _pexit( void );
 ```
 
 `_pexit` 类似于`_penter`; 请参阅[/Gh (启用 _penter 挂钩函数)](../../build/reference/gh-enable-penter-hook-function.md)以举例说明如何编写`_pexit`函数。

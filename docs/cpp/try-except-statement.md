@@ -1,7 +1,7 @@
 ---
 title: 请尝试-除非语句 |Microsoft Docs
 ms.custom: ''
-ms.date: 10/05/2018
+ms.date: 10/09/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -11,6 +11,7 @@ f1_keywords:
 - EXCEPTION_CONTINUE_SEARCH
 - _exception_info
 - __except
+- _except
 - EXCEPTION_CONTINUE_EXECUTION
 - _exception_code
 - __except_cpp
@@ -35,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e938f5b7e5f25461ae921fbfa3c49920eca86eb
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: af4d14eb3fad691a5ff10665a83879ae4319a3d9
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861923"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162030"
 ---
 # <a name="try-except-statement"></a>try-except 语句
 
@@ -89,6 +90,8 @@ ms.locfileid: "48861923"
 每个应用程序都可以有各自的异常处理程序。
 
 它不是有效的跳转到 **__try**语句，但有效跳出。 如果在执行会终止进程不调用异常处理程序**试用-除**语句。
+
+与以前版本的兼容性 **_finally**， **_except**，并 **_leave**是的同义词 **__try**， **__except**，并 **__leave**除非编译器选项[/Za\(禁用语言扩展)](../build/reference/za-ze-disable-language-extensions.md)指定。
 
 ### <a name="the-leave-keyword"></a>__leave 关键字
 

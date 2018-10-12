@@ -14,29 +14,34 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d4444e70ec158d7afa35c3955bbef9af4bfa12f2
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: aefcd05f4187e22adf5f21c4beffa74ca8be39b3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758869"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46420551"
 ---
 # <a name="open-folder-projects-in-visual-c"></a>Visual C++ 中的“打开文件夹”项目
 
-Visual Studio 2017 及更高版本中提供了“打开文件夹”功能，可通过它打开源文件的文件夹并借助 IntelliSense、浏览、重构、调试及更多方面的支持立即开始进行编码。 不加载 .sln 或 .vcxproj 文件；如有需要，可以通过简单的 .json 文件指定自定义任务和生成及启动参数。 借助“打开文件夹”的支持，Visual C++ 现在不仅支持文件的松散集合，还几乎支持所有的生成系统，包括 CMake、Ninja、QMake（用于 Qt 项目）、gyp、SCons、Gradle、Buck 及更多其他系统。 
+Visual Studio 2017 及更高版本中提供了“打开文件夹”功能，可通过它打开源文件的文件夹并借助 IntelliSense、浏览、重构、调试及更多方面的支持立即开始进行编码。 不加载 .sln 或 .vcxproj 文件；如有需要，可以通过简单的 .json 文件指定自定义任务和生成及启动参数。
+借助“打开文件夹”的支持，Visual C++ 现在不仅支持文件的松散集合，还几乎支持所有的生成系统，包括 CMake、Ninja、QMake（用于 Qt 项目）、gyp、SCons、Gradle、Buck 及更多其他系统。
 
-若要使用“打开文件夹”，请从主菜单选择“文件 | 打开 | 文件夹”或按 Ctrl+Shift+Alt+O。解决方案资源管理器会立即显示该文件夹中的所有文件。 可以单击任何文件开始编辑。 在后台，Visual Studio 开始对文件编制索引，以启用 IntelliSense、导航和重构功能。 在编辑、创建、移动或删除文件时，Visual Studio 会自动跟踪更改，并不断更新其 IntelliSense 索引。 
-  
+若要使用“打开文件夹”，请从主菜单选择“文件 | 打开 | 文件夹”或按 Ctrl+Shift+Alt+O。解决方案资源管理器会立即显示该文件夹中的所有文件。 可以单击任何文件开始编辑。 在后台，Visual Studio 开始对文件编制索引，以启用 IntelliSense、导航和重构功能。 在编辑、创建、移动或删除文件时，Visual Studio 会自动跟踪更改，并不断更新其 IntelliSense 索引。
+
 ## <a name="cmake-projects"></a>CMake 项目
+
 CMake 作为 Visual C++ 的 CMake 工具集成在 Visual Studio IDE 中，是 C++ 桌面工作负载的一个组件。 有关详细信息，请参阅 [Visual C++ 的 CMake 工具](cmake-tools-for-visual-cpp.md)。
- 
+
 ## <a name="qmake-projects-that-target-the-qt-framework"></a>面向 Qt 框架的 QMake 项目
+
 可以使用 Visual C++ 的 CMake 工具面向 Qt 生成 Qt 项目，或者可以使用适用于 Visual Studio 2015 或 Visual Studio 2017 的 [Qt Visual Studio 扩展](https://download.qt.io/development_releases/vsaddin/)。
 
 ## <a name="gyp-cons-scons-buck-etc"></a>gyp、Cons、SCons、Buck 等等
-可使用以 Visual C++ 进行编写的任何生成系统，并依然能享受 Visual C++ IDE 和调试程序的优势。 打开项目的根文件夹时，Visual C++ 使用试探法将源文件编入索引用于 IntelliSense 和浏览。 可以通过编辑 CppProperties.json 文件提供关于代码结构的提示。 还可以用同样的方式，通过编辑 launch.vs.json 文件配置生成程序。 
+
+可使用以 Visual C++ 进行编写的任何生成系统，并依然能享受 Visual C++ IDE 和调试程序的优势。 打开项目的根文件夹时，Visual C++ 使用试探法将源文件编入索引用于 IntelliSense 和浏览。 可以通过编辑 CppProperties.json 文件提供关于代码结构的提示。 还可以用同样的方式，通过编辑 launch.vs.json 文件配置生成程序。
 
 ## <a name="configuring-open-folder-projects"></a>配置“打开文件夹”项目
+
 可以通过三个 JSON 文件来自定义“打开文件夹”项目：
 |||
 |-|-|
@@ -45,6 +50,7 @@ CMake 作为 Visual C++ 的 CMake 工具集成在 Visual Studio IDE 中，是 C+
 |tasks.vs.json|指定自定义生成命令和编译器开关。 通过“解决方案资源管理器”上下文菜单项“配置任务”进行访问。|
 
 ### <a name="configure-intellisense-with-cpppropertiesjson"></a>使用 CppProperties.json 配置 IntelliSense
+
 IntelliSense 和浏览行为在一定程序上取决于活动的生成配置，该配置定义 #include 路径、编译器开关和其他参数。 Visual Studio 默认提供“调试”和“发布”配置。 对于某些项目，可能需要创建自定义配置，从而让 IntelliSense 和浏览功能完全理解你的代码。 若要定义新的配置，请在根文件夹中创建名为 CppProperties.json 的文件。 下面是一个示例：
 
 ```json
@@ -64,30 +70,21 @@ IntelliSense 和浏览行为在一定程序上取决于活动的生成配置，�
 ```
 一个配置可能会有以下列出的其中几个属性：
 
-|||  
-|-|-| 
+|||
+|-|-|
 |`name`|显示在 C++ 配置下拉列表中的配置名称|
 |`includePath`|应在包含路径中指定的文件夹的列表（对于大多数编译器，映射到 /I）|
 |`defines`|应定义的宏的列表（对于大多数编译器，映射到 /D）|
 |`compilerSwitches`|可以影响 IntelliSense 行为的一个或多个附加开关|
 |`forcedInclude`|会自动包含在每个编译单元的标头（对于 MSVC，映射到 /FI；对于 clang，映射到 -include）|
 |`undefines`|未定义的宏的列表（对于 MSVC，映射到 /U）|
-|`intelliSenseMode`|要使用的 IntelliSense 引擎。 你可以为 MSVC、gcc 或 Clang 指定体系结构特定的变量：
-- msvc-x86（默认）
-- msvc-x64
-- msvc-arm
-- windows-clang-x86
-- windows-clang-x64
-- windows-clang-arm
-- Linux-x64
-- Linux-x86
-- Linux-arm
-- gccarm
+|`intelliSenseMode`|要使用的 IntelliSense 引擎。 你可以为 MSVC、gcc 或 Clang 指定体系结构特定的变量：<br/><br/>- msvc-x86（默认）<br/>- msvc-x64<br/>- msvc-arm<br/>- windows-clang-x86<br/>- windows-clang-x64<br/>- windows-clang-arm<br/>- Linux-x64<br/>- Linux-x86<br/>- Linux-arm<br/>- gccarm|
 
 #### <a name="environment-variables"></a>环境变量
+
 CppProperties.json 支持用于包含路径和其他属性值的系统环境变量扩展。 语法为 `${env.FOODIR}`，用于扩展环境变量 `%FOODIR%`。 还支持下列系统定义的变量：
 
-|变量名|描述|  
+|变量名|描述|
 |-----------|-----------------|
 |vsdev|默认的 Visual Studio 环境|
 |msvc_x86|使用 x86 工具为 x86 编译|
@@ -100,7 +97,7 @@ CppProperties.json 支持用于包含路径和其他属性值的系统环境变�
 
 安装 Linux 工作负载后，可使用以下环境变量远程定向到 Linux 和 WSL：
 
-|变量名|描述|  
+|变量名|描述|
 |-----------|-----------------|
 |linux_x86|远程将 x86 Linux 设为目标|
 |linux_x64|远程将 x64 Linux 设为目标|
@@ -117,7 +114,7 @@ CppProperties.json 支持用于包含路径和其他属性值的系统环境变�
       "INCLUDE": "${workspaceRoot}\\src\\includes"
     }
   ],
- 
+
   "configurations": [
     {
       "inheritEnvironments": [
@@ -157,7 +154,7 @@ CppProperties.json 支持用于包含路径和其他属性值的系统环境变�
       "INCLUDE": "${workspaceRoot}\\src\\includes"
     }
   ],
- 
+
   "configurations": [
     {
       "inheritEnvironments": [
@@ -178,7 +175,7 @@ CppProperties.json 支持用于包含路径和其他属性值的系统环境变�
           "INCLUDE": "${env.INCLUDE};${workspaceRoot}\\src\\includes64"
         }
       ],
- 
+
       "inheritEnvironments": [
         "msvc_x64"
       ],
@@ -197,6 +194,7 @@ CppProperties.json 支持用于包含路径和其他属性值的系统环境变�
 所有自定义和默认环境变量也能用于 tasks.vs.json 和 launch.vs.json。
 
 #### <a name="macros"></a>宏
+
 可访问 CppProperties.json 中的下列内置宏：
 |||
 |-|-|
@@ -226,9 +224,10 @@ CppProperties.json 支持用于包含路径和其他属性值的系统环境变�
 }
 ```
 
-**Note：**`%WindowsSdkDir%` 和 `%VCToolsInstallDir%` 并不是作为全局环境变量设置的，所以请确保从定义这些变量的“适用于 VS 2017 的开发人员命令提示”启动 devenv.exe。
+> [!Note]
+> `%WindowsSdkDir%` 和 `%VCToolsInstallDir%` 并不是作为全局环境变量设置的，所以请确保从定义这些变量的“适用于 VS 2017 的开发人员命令提示”启动 devenv.exe。
 
-若要对缺少包含路径引起的 IntelliSense 错误进行故障排除，请打开“错误列表”，筛选出“仅限 IntelliSense”和错误代码 E1696“无法打开源文件...”的结果。 
+若要对缺少包含路径引起的 IntelliSense 错误进行故障排除，请打开“错误列表”，筛选出“仅限 IntelliSense”和错误代码 E1696“无法打开源文件...”的结果。
 
 可以在 CppProperties.json 中创建任意数量的配置。 每个配置都会显示在配置下拉列表中：
 
@@ -247,7 +246,8 @@ CppProperties.json 支持用于包含路径和其他属性值的系统环境变�
 }
 ```
 ### <a name="define-tasks-with-tasksvsjson"></a>使用 tasks.vs.json 定义任务
-可以通过直接在 IDE 中作为任务运行来自动执行生成脚本，或者对当前工作区中的现有文件自动执行任何其他外部操作。 可以通过右键单击文件或文件夹并选择“配置任务”来配置新任务。 
+
+可以通过直接在 IDE 中作为任务运行来自动执行生成脚本，或者对当前工作区中的现有文件自动执行任何其他外部操作。 可以通过右键单击文件或文件夹并选择“配置任务”来配置新任务。
 
 ![“打开文件夹”配置任务](media/open-folder-config-tasks.png)
 
@@ -269,9 +269,8 @@ CppProperties.json 支持用于包含路径和其他属性值的系统环境变�
 ```
 保存 tasks.vs.json 后，可以在文件夹中右键单击任一 .cpp 文件，选择上下文菜单中的“Echo 文件名”，并查看输出窗口中显示的文件名。
 
-
-
 #### <a name="appliesto"></a>appliesTo
+
 可通过在 `appliesTo` 字段中指定其名称来创建任何文件或文件夹任务，例如 `"appliesTo" : "hello.cpp"`。 以下文件掩码可用作值：
 |||
 |-|-|
@@ -284,10 +283,11 @@ CppProperties.json 支持用于包含路径和其他属性值的系统环境变�
 |`"/makefile"`| 任务仅适用于工作区根目录中的生成文件|
 
 #### <a name="output"></a>输出
+
 使用 `output` 属性来指定按 F5 时启动的可执行文件。 例如:
 
 ```json
-      "output": "${workspaceRoot}\\bin\\hellomake.exe" 
+      "output": "${workspaceRoot}\\bin\\hellomake.exe"
 ```
 
 #### <a name="macros-for-tasksvsjson"></a>tasks.vs.json 宏
@@ -303,6 +303,7 @@ CppProperties.json 支持用于包含路径和其他属性值的系统环境变�
 |`${fileExtname}`| 所选文件的扩展名（例如“.cpp”）|
 
 #### <a name="custom-macros"></a>自定义宏
+
 若要在 tasks.vs.json 中定义自定义宏，请将名称/值对添加到任务块之前。 以下示例定义了在 `args` 属性中使用的名为 `outDir` 的宏：
 
 ```json
@@ -323,7 +324,8 @@ CppProperties.json 支持用于包含路径和其他属性值的系统环境变�
 ```
 
 ### <a name="configure-debugging-parameters-with-launchvsjson"></a>使用 launch.vs.json 配置调试参数
-若要自定义程序的命令行参数，请右键单击解决方案资源管理器中的可执行文件，并选择“调试和启动设置”。 这将打开现有的 `launch.vs.json` 文件，如果该文件不存在，则新建由所选程序相关信息填充的文件。 
+
+若要自定义程序的命令行参数，请右键单击解决方案资源管理器中的可执行文件，并选择“调试和启动设置”。 这将打开现有的 `launch.vs.json` 文件，如果该文件不存在，则新建由所选程序相关信息填充的文件。
 
 若要指定其他参数，将它们添加到 `args` JSON 数组即可，如下面的代码所示：
 
@@ -345,5 +347,6 @@ CppProperties.json 支持用于包含路径和其他属性值的系统环境变�
 保存该文件时，新配置将出现在“调试目标”下拉列表中，且可以选择该配置来启动调试程序。 可以根据需要创建任意数量的调试配置，用于任意数量的可执行文件。 如果现在按 F5，调试程序将启动并命中可能已设置的任何断点。 现可使用所有熟悉的调试程序窗口及其功能。
 
 ## <a name="see-also"></a>请参阅
+
 [用于 Visual C++ 开发的 IDE 和工具](ide-and-tools-for-visual-cpp-development.md)
 

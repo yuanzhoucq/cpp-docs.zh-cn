@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28bedc703a8fa965b5380cb8c7eba840d07f7772
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d5ad7d0210f99b1b1aa5c481ed1b8695c68fb311
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46396930"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163382"
 ---
 # <a name="best-practices-in-the-parallel-patterns-library"></a>并行模式库中的最佳做法
 
@@ -180,7 +180,7 @@ Container 1: Freeing resources...Exiting program...
 
 在任务执行协作停滞操作时，运行时可在第一个任务等待数据时执行其他工作。 当运行时取消停滞时，它将重新安排正在等待的任务。 通常运行时会先重新安排最近取消停滞的任务，然后再重新安排后来取消停滞的任务。 因此，运行时在停滞操作期间可能安排不必要的工作，这会导致性能下降。 相应地，如果在取消并行工作前执行停滞操作，则停滞操作会延迟对 `cancel` 的调用。 这将导致其他任务执行不必要的工作。
 
-请看下面定义 `parallel_find_answer` 函数的示例，该函数搜索所提供的满足提供的谓词函数的数组的元素。 当谓词函数返回 `true` 时，并行工作函数将创建 `Answer` 对象并取消整个任务。
+请看下面定义 `parallel_find_answer` 函数的示例，该函数搜索所提供的满足提供的谓词函数的数组的元素。 当谓词函数返回 **，则返回 true**，并行工作函数将创建`Answer`对象并取消整个任务。
 
 [!code-cpp[concrt-blocking-cancel#1](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_13.cpp)]
 
