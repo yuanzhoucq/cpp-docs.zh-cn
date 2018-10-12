@@ -11,12 +11,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2050be008f89ff2d125842d5919407dc292eed40
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: b0b8a17cf83171a570f2ca3f6ff40c657d17164d
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44105830"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162342"
 ---
 # <a name="platformcollectionsunorderedmap-class"></a>Platform::Collections::UnorderedMap 类
 
@@ -58,7 +58,7 @@ ref class Map sealed;
 
 - 公共枚举类
 
-**UnorderedMap**基本上是包装[std:: unordered_map](../standard-library/unordered-map-class.md)支持 Windows 运行时类型的存储。 是的具体实现[Windows::Foundation::Collections::IMap](/uwp/api/Windows.Foundation.Collections.IMap_K_V_)并[IObservableMap](/uwp/api/Windows.Foundation.Collections.IObservableMap_K_V_)类型公共之间传递 Windows 运行时接口。 如果你尝试在公共返回值或参数中使用 `Platform::Collections::UnorderedMap` 类型，则将引发编译器错误 C3986。 可通过更改参数或返回值的类型来修复该错误[Windows::Foundation::Collections::IMap](/uwp/api/Windows.Foundation.Collections.IMap_K_V_)。
+**UnorderedMap**基本上是包装[std:: unordered_map](../standard-library/unordered-map-class.md)支持 Windows 运行时类型的存储。 是的具体实现[Windows::Foundation::Collections::IMap](/uwp/api/Windows.Foundation.Collections.IMap_K_V_)并[IObservableMap](/uwp/api/Windows.Foundation.Collections.IObservableMap_K_V_)类型公共之间传递 Windows 运行时接口。 如果你尝试在公共返回值或参数中使用 `Platform::Collections::UnorderedMap` 类型，则将引发编译器错误 C3986。 通过将参数或返回值的类型更改为 [Windows::Foundation::Collections::IMap](/uwp/api/Windows.Foundation.Collections.IMap_K_V_)可修复该错误。
 
 有关详细信息，请参阅[集合](../cppcx/collections-c-cx.md)。
 
@@ -163,7 +163,7 @@ bool HasKey(
 
 ### <a name="return-value"></a>返回值
 
-如果找到该键，则为 `true`；否则为 `false`。
+**true**如果该键; 否则为**false**。
 
 ## <a name="insert"></a>  UnorderedMap::Insert Method
 
@@ -188,7 +188,7 @@ virtual bool Insert(
 
 ### <a name="return-value"></a>返回值
 
-`true` 如果当前映射中的现有元素的键与匹配*键*并且该元素的值部分设置为*值*。 `false` 如果当前映射中的没有任何现有元素匹配*键*并*密钥*并*值*参数构成键值对并随后将添加到当前 UnorderedMap。
+**true**如果当前映射中的现有元素的键匹配*密钥*，该元素的值部分设置为*值*。 **false**如果当前映射中的没有任何现有元素匹配*密钥*并且*密钥*并*值*参数构成键值对并随后将添加到当前 UnorderedMap。
 
 ## <a name="lookup"></a>  Unorderedmap:: Lookup 方法
 
@@ -374,4 +374,4 @@ UnorderedMap(
 [Platform::Collections::Map 类](../cppcx/platform-collections-map-class.md)<br/>
 [Platform::Collections::UnorderedMapView 类](../cppcx/platform-collections-unorderedmapview-class.md)<br/>
 [集合](../cppcx/collections-c-cx.md)<br/>
-[C + + 创建 Windows 运行时组件](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)
+[用 C++ 创建 Windows 运行时组件](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)

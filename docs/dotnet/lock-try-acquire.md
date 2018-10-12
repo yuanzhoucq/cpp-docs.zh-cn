@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 7782f59ae63c185995fe52f19bca739bc12fcaa1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0f121ff9915e49c98bc9f32ff683f8d08914f560
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46375839"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163460"
 ---
 # <a name="locktryacquire"></a>lock::try_acquire
 
@@ -50,7 +50,7 @@ bool try_acquire(
 
 ## <a name="return-value"></a>返回值
 
-`true` 如果已获取锁，`false`否则为。
+**true**已获取锁，如果**false**否则为。
 
 ## <a name="remarks"></a>备注
 
@@ -60,7 +60,7 @@ bool try_acquire(
 
 此示例跨多个线程使用单个类的实例。  类自身上使用锁来确保对其内部数据的访问是为每个线程保持一致。  主应用程序线程的类的同一实例上使用锁来定期检查以查看任何工作线程仍存在，并等待，直到所有工作线程退出已完成其任务。
 
-```
+```cpp
 // msl_lock_try_acquire.cpp
 // compile with: /clr
 #include <msclr/lock.h>

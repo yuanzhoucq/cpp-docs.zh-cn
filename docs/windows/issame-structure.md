@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 26ecab69c2c31db51e137ad012bf67541e03a095
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 2af59860016835f8e8dfddc9d0a77204ff866bd3
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48788456"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161848"
 ---
 # <a name="issame-structure"></a>IsSame 结构
 
@@ -92,4 +92,4 @@ struct IsSame<T1, T1>
 
 指示一种类型是否与另一个相同。
 
-`value` 是`true`模板参数是相同的如果和`false`如果模板参数不同。
+`value` 是 **，则返回 true**如果模板参数相同，并且**false**如果模板参数不同。

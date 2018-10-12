@@ -65,12 +65,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a1003553cb0c3fc3abc8c24a6870485816397eaa
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 9647e18af021caf67dea5d946c9e5bf00fb50807
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861949"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162927"
 ---
 # <a name="asyncbase-class"></a>AsyncBase 类
 
@@ -233,7 +233,7 @@ inline bool ContinueAsyncOperation();
 
 ### <a name="return-value"></a>返回值
 
-`true` 如果异步操作的当前状态是*启动*，这意味着该操作应继续。 否则为`false`，这意味着该操作应该中止。
+**true**异步操作的当前状态是否*启动*，这意味着该操作应继续。 否则为**false**，这意味着该操作应该中止。
 
 ## <a name="currentstatus"></a>Asyncbase:: Currentstatus
 
@@ -528,7 +528,7 @@ bool TryTransitionToCompleted(
 
 ### <a name="return-value"></a>返回值
 
-`true` 如果异步操作已完成;否则为`false`。
+**true**如果异步操作已完成; 否则为**false**。
 
 ## <a name="trytransitiontoerror"></a>Asyncbase:: Trytransitiontoerror
 
@@ -547,7 +547,7 @@ bool TryTransitionToError(
 
 ### <a name="return-value"></a>返回值
 
-`true` 如果内部错误状态发生了更改;否则为`false`。
+**true**内部错误状态已更改; 否则为如果**false**。
 
 ### <a name="remarks"></a>备注
 

@@ -1,12 +1,14 @@
 ---
 title: __restrict |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/10/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
 f1_keywords:
 - __restrict_cpp
+- __restrict
+- _restrict
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d9754f8b0b218fc4d627eb0e27504e8521bf776
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 9245571e21be04cc250347f30ce8ddb464ff9b55
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46076432"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163447"
 ---
 # <a name="restrict"></a>__restrict
 
@@ -34,6 +36,8 @@ ms.locfileid: "46076432"
 - 当 **__restrict**是使用，编译器将不会传播变量的非别名属性。 也就是说，如果将分配 **__restrict**变量为非 **__restrict**变量时，编译器仍允许非 __restrict 变量使用别名。 这是不同的行为**限制**C99 规范中的关键字。
 
 通常，如果你影响整个函数的行为，则使用 `__declspec ( restrict )` 要好过使用关键字。
+
+与以前版本的兼容性 **_restrict**是的同义词 **__restrict**除非编译器选项[/Za\(禁用语言扩展)](../build/reference/za-ze-disable-language-extensions.md)是指定。
 
 在 Visual Studio 2015 及更高版本， **__restrict**可应用于 c + + 引用。
 

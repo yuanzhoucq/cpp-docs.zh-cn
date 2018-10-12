@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 845addc73d0dd542b7bb6a4abccbf915005ddd41
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 4dab192b2d5d4210461bd791e3f4d9996363c953
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235810"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163291"
 ---
 # <a name="safeint-class"></a>SafeInt 类
 
@@ -194,7 +194,7 @@ name    | 语法
 
 - `((uint)~0) > -1`
 
-第一条语句解析为`true`，但第二个语句解析为`false`。 按位求反的 0 为 0xFFFFFFFF。 在第二个语句中，默认的比较运算符比较 0xFFFFFFFF 为 0xFFFFFFFF，并将认为它们相等。 比较运算符中的`SafeInt`类意识到第二个参数是负数，而第一个参数是无符号。 因此，尽管位表示形式是相同的`SafeInt`逻辑运算符意识到无符号的整数是否大于-1。
+第一条语句解析为 **，则返回 true**，但第二个语句解析为`false`。 按位求反的 0 为 0xFFFFFFFF。 在第二个语句中，默认的比较运算符比较 0xFFFFFFFF 为 0xFFFFFFFF，并将认为它们相等。 比较运算符中的`SafeInt`类意识到第二个参数是负数，而第一个参数是无符号。 因此，尽管位表示形式是相同的`SafeInt`逻辑运算符意识到无符号的整数是否大于-1。
 
 当你使用时要小心`SafeInt`类一起使用`?:`三元运算符。 请考虑以下代码行。
 

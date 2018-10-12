@@ -1,12 +1,14 @@
 ---
 title: __fastcall |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/09/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
 f1_keywords:
 - __fastcall_cpp
+- __fastcall
+- _fastcall
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72e3a36c646249fe34791d6703fd0350111b4137
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: fa181349ab01ea2a375bacbb5e23d073a99f3f11
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46099676"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161237"
 ---
 # <a name="fastcall"></a>__fastcall
 
@@ -63,9 +65,11 @@ void CMyClass::mymethod() { return; }
 void __fastcall CMyClass::mymethod() { return; }
 ```
 
+与以前版本的兼容性 **_fastcall**是的同义词 **__fastcall**除非编译器选项[/Za\(禁用语言扩展)](../build/reference/za-ze-disable-language-extensions.md)是指定。
+
 ## <a name="example"></a>示例
 
-在下面的示例中，函数 `DeleteAggrWrapper` 是寄存器中传递的参数：
+在下面的示例中，函数 `DeleteAggrWrapper` 是寄存器中传递的自变量：
 
 ```cpp
 // Example of the __fastcall keyword

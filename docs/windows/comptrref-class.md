@@ -35,12 +35,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a674d63c52f6f204d0bb69c69cd5814cd6d9761a
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 85f9498f44f4f1ec2598e6263c003d041f519105
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48788937"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162212"
 ---
 # <a name="comptrref-class"></a>ComPtrRef 类
 
@@ -176,11 +176,11 @@ bool operator==(
 
 ### <a name="return-value"></a>返回值
 
-第一个运算符产生`true`如果对象等同于对象*b*; 否则为`false`。
+第一个运算符产生 **，则返回 true**如果对象是否等于对象*b*; 否则为**false**。
 
-第二个和第三个运算符会产生`true`如果对象等于`nullptr`; 否则为`false`。
+第二个和第三个运算符会产生 **，则返回 true**如果对象等于**nullptr**; 否则为**false**。
 
-第四个和第五个运算符会产生`true`如果对象等同于对象*b*; 否则为`false`。
+第四个和第五个运算符会产生 **，则返回 true**如果对象是否等于对象*b*; 否则为**false**。
 
 ### <a name="remarks"></a>备注
 
@@ -227,11 +227,11 @@ bool operator!=(
 
 ### <a name="return-value"></a>返回值
 
-第一个运算符产生`true`如果对象不是等于对象*b*; 否则为`false`。
+第一个运算符产生 **，则返回 true**如果对象不等于对象*b*; 否则为**false**。
 
-第二个和第三个运算符会产生`true`如果对象是否不等于`nullptr`; 否则为`false`。
+第二个和第三个运算符会产生 **，则返回 true**如果对象是否不等于**nullptr**; 否则为**false**。
 
-第四个和第五个运算符会产生`true`如果对象不是等于对象*b*; 否则为`false`。
+第四个和第五个运算符会产生 **，则返回 true**如果对象不等于对象*b*; 否则为**false**。
 
 ### <a name="remarks"></a>备注
 

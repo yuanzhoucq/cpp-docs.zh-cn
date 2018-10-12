@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe3c516881115dd96337f950d83de2d30c57161b
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 9cfad80ac1f16d200f29504be1d4fb818e6e6afd
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44102507"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163889"
 ---
 # <a name="platformcollectionsvectorview-class"></a>Platform::Collections::VectorView 类
 
@@ -140,7 +140,7 @@ virtual unsigned int GetMany(
 要检索的项开头从零开始的索引。
 
 *dest*<br/>
-此操作完成后，在指定的元素处开始的项的数组`startIndex`VectorView 中最后一个元素结尾。
+此操作完成时的项列表，以由 `startIndex` 指定的元素开始，以 VectorView 中最后一个元素结尾。
 
 ### <a name="return-value"></a>返回值
 
@@ -168,11 +168,11 @@ virtual bool IndexOf(
 *index*<br/>
 如果找到参数 `value`，则为该项的从零开始的索引；否则，为 0。
 
-如果该项目是 VectorView 的第一个元素，或者未找到该项目，则 `index` 参数为 0。 如果返回值为 `true`，则表明找到该项目，并且它是第一个元素；否则，表示未找到该项目。
+*索引*参数为 0，如果任一项的第一个元素`VectorView`或找不到该项。 如果返回值是 **，则返回 true**，找到该项目，它是第一个元素; 否则，未找到项。
 
 ### <a name="return-value"></a>返回值
 
-如果找到指定项目，则为 `true`；否则，为 `false`。
+**true**如果指定的项; 否则为**false**。
 
 ## <a name="size"></a>  Vectorview:: Size 方法
 
@@ -285,4 +285,4 @@ VectorView 中元素的数量。
 ## <a name="see-also"></a>请参阅
 
 [平台 Namespace](platform-namespace-c-cx.md)<br/>
-[C + + 创建 Windows 运行时组件](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)
+[用 C++ 创建 Windows 运行时组件](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)

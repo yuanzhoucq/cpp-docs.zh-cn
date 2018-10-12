@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46789b74d0b7b8d882a1e2ea90103c4c2f1e934b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ffc1ea1f512e049f3a6af15170429a3618323dc5
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46396338"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162992"
 ---
 `unbounded_buffer` 消息块是多目标、多源、有序的 `propagator_block`，能够存储不限数量的消息。
 
@@ -175,7 +175,7 @@ bool enqueue(
 
 ### <a name="return-value"></a>返回值
 
-`true` 如果该项已被接受，`false`否则为。
+**true**该项已被接受，如果**false**否则为。
 
 ##  <a name="link_target_notification"></a> link_target_notification
 
@@ -274,11 +274,11 @@ virtual bool reserve_message(
 
 ### <a name="return-value"></a>返回值
 
-`true` 如果消息已成功保留，`false`否则为。
+**true**成功保留该消息，如果**false**否则为。
 
 ### <a name="remarks"></a>备注
 
-之后`reserve`调用时，如果它将返回`true`、 任一`consume`或`release`必须调用以获取或释放消息的所有权。
+之后`reserve`调用时，如果它将返回**true**，而是`consume`或`release`必须调用以获取或释放消息的所有权。
 
 ##  <a name="resume_propagation"></a> resume_propagation
 
@@ -321,7 +321,7 @@ virtual bool supports_anonymous_source();
 
 ### <a name="return-value"></a>返回值
 
-`true` 因为该块没有推迟所提供的消息。
+**true**因为该块没有推迟提供的消息。
 
 ##  <a name="ctor"></a> unbounded_buffer
 
@@ -359,10 +359,10 @@ unbounded_buffer(
 确定是否应接受提供的消息的筛选器函数。
 
 *_PScheduler*<br/>
-`Scheduler`对象在其中的传播任务的`unbounded_buffer`计划消息块。
+在其中计划了 `Scheduler` 消息块的传播任务的 `unbounded_buffer` 对象。
 
 *_PScheduleGroup*<br/>
-`ScheduleGroup`对象在其中的传播任务的`unbounded_buffer`计划消息块。 所用 `Scheduler` 对象由该计划组提示。
+在其中计划了 `ScheduleGroup` 消息块的传播任务的 `unbounded_buffer` 对象。 所用 `Scheduler` 对象由该计划组提示。
 
 ### <a name="remarks"></a>备注
 

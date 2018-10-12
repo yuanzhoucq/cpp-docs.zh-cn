@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13ddf5a303096d3244f6b8b59e58bcb41bafe91f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ee06d9a30339a72bd7137db6f277a1eb41028d50
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46374257"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163083"
 ---
 # <a name="singleassignment-class"></a>single_assignment 类
 
@@ -58,7 +58,7 @@ class single_assignment : public propagator_block<multi_link_registry<ITarget<T>
 
 |名称|描述|
 |----------|-----------------|
-|[single_assignment](#ctor)|已重载。 构造`single_assignment`消息块。|
+|[single_assignment](#ctor)|已重载。 构造 `single_assignment` 消息块。|
 |[~ single_assignment 析构函数](#dtor)|销毁`single_assignment`消息块。|
 
 ### <a name="public-methods"></a>公共方法
@@ -158,7 +158,7 @@ bool has_value() const;
 
 ### <a name="return-value"></a>返回值
 
-`true` 如果块已接收一个值，`false`否则为。
+**true**块已接收一个值，如果**false**否则为。
 
 ##  <a name="link_target_notification"></a> link_target_notification
 
@@ -236,11 +236,11 @@ virtual bool reserve_message(runtime_object_identity _MsgId);
 
 ### <a name="return-value"></a>返回值
 
-`true` 如果消息已成功保留，`false`否则为。
+**true**成功保留该消息，如果**false**否则为。
 
 ### <a name="remarks"></a>备注
 
-之后`reserve`调用时，如果它将返回`true`、 任一`consume`或`release`必须调用以获取或释放消息的所有权。
+之后`reserve`调用时，如果它将返回**true**，而是`consume`或`release`必须调用以获取或释放消息的所有权。
 
 ##  <a name="resume_propagation"></a> resume_propagation
 
@@ -274,7 +274,7 @@ virtual message_status send_message(
 
 ##  <a name="ctor"></a> single_assignment
 
-构造`single_assignment`消息块。
+构造 `single_assignment` 消息块。
 
 ```
 single_assignment();
@@ -303,10 +303,10 @@ single_assignment(
 确定是否应接受提供的消息的筛选器函数。
 
 *_PScheduler*<br/>
-`Scheduler`对象在其中的传播任务的`single_assignment`计划消息块。
+在其中计划了 `Scheduler` 消息块的传播任务的 `single_assignment` 对象。
 
 *_PScheduleGroup*<br/>
-`ScheduleGroup`对象在其中的传播任务的`single_assignment`计划消息块。 所用 `Scheduler` 对象由该计划组提示。
+在其中计划了 `ScheduleGroup` 消息块的传播任务的 `single_assignment` 对象。 所用 `Scheduler` 对象由该计划组提示。
 
 ### <a name="remarks"></a>备注
 

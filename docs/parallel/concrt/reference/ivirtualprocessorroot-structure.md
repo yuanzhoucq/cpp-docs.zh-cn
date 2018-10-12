@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7466c00ec1a5c507a84a098b3dca79d57ffee91e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 891fcd96901423e5d5c23b840784f9e050dbbe81
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46445979"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162914"
 ---
 # <a name="ivirtualprocessorroot-structure"></a>IVirtualProcessorRoot 结构
 
@@ -111,7 +111,7 @@ virtual bool Deactivate(_Inout_ IExecutionContext* pContext) = 0;
 
 ### <a name="return-value"></a>返回值
 
-一个布尔值。 值为`true`指示从返回的线程代理`Deactivate`方法以响应对的调用`Activate`方法。 值为`false`指示线程代理返回从资源管理器中的通知事件的响应中的方法。 对于用户模式计划 (UMS) 线程计划程序，这表示项目出现在计划程序的完成列表中，并处理其所需的计划程序。
+一个布尔值。 值为 **，则返回 true**指示从返回的线程代理`Deactivate`方法以响应对的调用`Activate`方法。 值为`false`指示线程代理返回从资源管理器中的通知事件的响应中的方法。 对于用户模式计划 (UMS) 线程计划程序，这表示项目出现在计划程序的完成列表中，并处理其所需的计划程序。
 
 ### <a name="remarks"></a>备注
 
@@ -119,9 +119,9 @@ virtual bool Deactivate(_Inout_ IExecutionContext* pContext) = 0;
 
 已停用的虚拟处理器根可能会通过调用唤醒`Activate`方法，使用同一参数中传递给`Deactivate`方法。 计划程序负责确保为调用`Activate`和`Deactivate`配对方法，但它们不需要按特定顺序接收。 资源管理器可以处理接收到呼叫`Activate`方法获得调用之前`Deactivate`所代表的方法。
 
-如果虚拟处理器根唤醒和返回值从`Deactivate`方法将值`false`，计划程序应查询 UMS 完成列表通过`IUMSCompletionList::GetUnblockNotifications`方法，处理的该信息，然后随后调用`Deactivate`再次方法。 这应为理想实现之前重复`Deactivate`方法将返回值`true`。
+如果虚拟处理器根唤醒和返回值从`Deactivate`方法将值**false**，计划程序应查询 UMS 完成列表通过`IUMSCompletionList::GetUnblockNotifications`方法，该信息，act，然后随后调用`Deactivate`再次方法。 这应为理想实现之前重复`Deactivate`方法将返回值`true`。
 
-`invalid_argument` 如果引发参数`pContext`具有值`NULL`。
+`invalid_argument` 如果引发参数`pContext`值为 NULL。
 
 `invalid_operation` 如果尚未激活过虚拟处理器根，则会引发或自变量`pContext`不表示最近调度由此虚拟处理器根的执行上下文。
 

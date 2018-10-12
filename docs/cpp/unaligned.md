@@ -1,12 +1,14 @@
 ---
 title: __unaligned |Microsoft Docs
 ms.custom: ''
-ms.date: 03/09/2018
+ms.date: 10/10/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
 f1_keywords:
 - __unaligned_cpp
+- __unaligned
+- _unaligned
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9593a0b3c6e6980f5be2ce9dcf13e505e94dcace
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 444bc3372b22676cacb3ee89b9c0ad92000cedcc
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46040164"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161211"
 ---
 # <a name="unaligned"></a>__unaligned
 
@@ -32,6 +34,8 @@ ms.locfileid: "46040164"
 此修饰符描述所处理的指针; 的数据的对齐方式指针本身被假定对齐。
 
 偶尔 **__unaligned**关键字因平台和环境。 未能将适当地标记数据可能会导致性能损失范围到硬件故障的问题。 **__Unaligned**修饰符不能用于 x86 平台。
+
+与以前版本的兼容性 **_unaligned**是的同义词 **__unaligned**除非编译器选项[/Za\(禁用语言扩展)](../build/reference/za-ze-disable-language-extensions.md)指定。
 
 有关对齐的详细信息，请参阅：
 

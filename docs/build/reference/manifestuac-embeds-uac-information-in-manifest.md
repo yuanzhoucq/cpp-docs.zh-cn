@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b3997f8beb414992464c51ca1c1fd944145c43d
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: d8c8c3cc219f0cf658dc2669ccc10adf3aba55bd
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45715138"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163525"
 ---
 # <a name="manifestuac-embeds-uac-information-in-manifest"></a>/MANIFESTUAC（将 UAC 信息嵌入到清单中）
 
@@ -50,7 +50,7 @@ ms.locfileid: "45715138"
 之一*asInvoker*， *highestAvailable*，或*requireAdministrator*。 默认值为 asInvoker。 有关详细信息，请参阅本主题后面备注部分。
 
 *_uiAccess*<br/>
-如果您希望应用程序绕过用户界面保护级别并将输入引导到桌面上的更高权限窗口，则为 `true`；否则为 `false`。 默认为 `false`。 设置为`true`仅为用户界面辅助功能应用程序。
+**true**如果您希望应用程序来绕过用户界面保护级别并将输入到桌面上的更高权限窗口; 否则为**false**。 默认情况下**false**。 设置为 **，则返回 true**仅为用户界面辅助功能应用程序。
 
 ## <a name="remarks"></a>备注
 

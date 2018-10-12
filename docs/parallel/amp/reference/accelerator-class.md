@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7748ae0f3993c1df97dcf97308fd6dfbfafdc8b6
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a154d266ead19cfef00f30a5327c5b18809a4111
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46375865"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163161"
 ---
 # <a name="accelerator-class"></a>accelerator 类
 
@@ -102,9 +102,9 @@ class accelerator;
 
 |名称|描述|
 |----------|-----------------|
-|[operator!=](#operator_neq)|比较此`accelerator`与另一个对象，并返回`false`如果它们是相同的; 否则，返回`true`。|
+|[operator!=](#operator_neq)|比较此`accelerator`与另一个对象，并返回**false**如果它们是相同的; 否则返回**true**。|
 |[operator=](#operator_eq)|将指定的内容复制`accelerator`到此对象。|
-|[operator==](#operator_eq_eq)|比较此`accelerator`与另一个对象，并返回`true`如果它们是相同的; 否则，返回`false`。|
+|[operator==](#operator_eq_eq)|比较此`accelerator`与另一个对象，并返回**true**如果它们是相同的; 否则返回**false**。|
 
 ### <a name="public-data-members"></a>公共数据成员
 
@@ -125,7 +125,7 @@ class accelerator;
 |[supports_cpu_shared_memory](#supports_cpu_shared_memory)|指示是否`accelerator`支持共享内存。|
 |[supports_double_precision](#supports_double_precision)|指示快捷键是否支持双精度算术。|
 |[supports_limited_double_precision](#supports_limited_double_precision)|指示快捷键是否限制了对双精度算术的支持。|
-|[version](#version)|获取版本`accelerator`。|
+|[版本](#version)|获取版本`accelerator`。|
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -362,7 +362,7 @@ bool get_has_display() const;
 
 ### <a name="return-value"></a>返回值
 
-`true` 如果`accelerator`可以输出到显示; 否则为`false`。
+**true**如果`accelerator`可以输出到显示; 否则为**false**。
 
 ##  <a name="get_is_debug"></a> get_is_debug
 
@@ -375,7 +375,7 @@ bool get_is_debug() const;
 
 ### <a name="return-value"></a>返回值
 
-`true` 如果`accelerator`具有为广泛错误报告启用了调试层。 否则为 `false`。
+**true**如果`accelerator`具有为广泛错误报告启用了调试层。 否则为**false**。
 
 ##  <a name="get_is_emulated"></a> get_is_emulated
 
@@ -388,7 +388,7 @@ bool get_is_emulated() const;
 
 ### <a name="return-value"></a>返回值
 
-`true` 如果`accelerator`被模拟。 否则为 `false`。
+**true**如果`accelerator`被模拟。 否则为**false**。
 
 ##  <a name="get_supports_cpu_shared_memory"></a> get_supports_cpu_shared_memory
 
@@ -401,11 +401,11 @@ bool get_supports_cpu_shared_memory() const;
 
 ### <a name="return-value"></a>返回值
 
-`true` 如果快捷键支持 CPU 共享内存;否则为`false`。
+**true**如果快捷键支持 CPU 共享内存; 否则为**false**。
 
 ##  <a name="get_supports_double_precision"></a> get_supports_double_precision
 
-返回一个布尔值，指示快捷键是否支持双精度算术，包括模糊乘法加法 (FMA)、 除法、 倒数以及之间的强制转换`int`和`double`。
+返回一个布尔值，指示快捷键是否支持双精度算术，包括模糊乘法加法 (FMA)、 除法、 倒数以及之间的强制转换**int**和**双精度**
 
 ```
 bool get_supports_double_precision() const;
@@ -414,11 +414,11 @@ bool get_supports_double_precision() const;
 
 ### <a name="return-value"></a>返回值
 
-`true` 如果快捷键支持双精度算术;否则为`false`。
+**true**如果快捷键支持双精度算术; 否则为**false**。
 
 ##  <a name="get_supports_limited_double_precision"></a> get_supports_limited_double_precision
 
-返回一个布尔值，指示快捷键是否限制了对双精度算术的支持。 如果快捷键仅提供有限的支持，则不支持融化乘法加法 (FMA)、除法以及 `int` 和 `double` 之间的相互转换。
+返回一个布尔值，指示快捷键是否限制了对双精度算术的支持。 如果快捷键仅有限的支持，然后融化乘法加法 (FMA)、 除法、 倒数以及之间的强制转换**int**并**double**不受支持。
 
 ```
 bool get_supports_limited_double_precision() const;
@@ -427,7 +427,7 @@ bool get_supports_limited_double_precision() const;
 
 ### <a name="return-value"></a>返回值
 
-如果快捷键对双精度算术只提供有限的支持，则为 `true`；否则为 `false`。
+**true**如果快捷键是否限制了对双精度算术; 否则为**false**。
 
 ##  <a name="get_version"></a> get_version
 
@@ -468,7 +468,7 @@ __declspec(property(get= get_is_emulated)) bool is_emulated;
 
 ##  <a name="operator_neq"></a> 运算符 ！ =
 
-比较此`accelerator`与另一个对象，并返回`false`如果它们是相同的; 否则，返回`true`。
+比较此`accelerator`与另一个对象，并返回**false**如果它们是相同的; 否则返回**true**。
 
 ```
 bool operator!= (const accelerator& _Other) const;
@@ -482,7 +482,7 @@ bool operator!= (const accelerator& _Other) const;
 
 ### <a name="return-value"></a>返回值
 
-`false` 如果两个`accelerator`是相同的对象; 否则为`true`。
+**false**如果两个`accelerator`是相同的对象; 否则为**true**。
 
 ##  <a name="operator_eq"></a> 运算符 =
 
@@ -503,7 +503,7 @@ accelerator& operator= (const accelerator& _Other);
 
 ##  <a name="operator_eq_eq"></a> 运算符 = =
 
-比较此`accelerator`与另一个对象，并返回`true`如果它们是相同的; 否则，返回`false`。
+比较此`accelerator`与另一个对象，并返回**true**如果它们是相同的; 否则返回**false**。
 
 ```
 bool operator== (const accelerator& _Other) const;
@@ -517,7 +517,7 @@ bool operator== (const accelerator& _Other) const;
 
 ### <a name="return-value"></a>返回值
 
-`true` 如果另`accelerator`对象是与此相同`accelerator`对象; 否则为`false`。
+**true**如果另`accelerator`对象是否与此相同`accelerator`对象; 否则为**false**。
 
 ##  <a name="set_default"></a> set_default
 
@@ -534,7 +534,7 @@ static inline bool set_default(std::wstring _Path);
 
 ### <a name="return-value"></a>返回值
 
-`true` 如果调用成功设置默认快捷键。 否则为 `false`。
+**true**如果调用成功设置默认快捷键。 否则为**false**。
 
 ##  <a name="set_default_cpu_access_type"></a> set_default_cpu_access_type
 
@@ -664,7 +664,7 @@ bool get_is_auto_selection() const;
 
 ### <a name="return-value"></a>返回值
 
-`true` 如果在运行时将自动选择适当的快捷键;否则为`false`。
+**true**如果在运行时将自动选择适当的快捷键; 否则为**false**。
 
 ##  <a name="get_is_debug"></a> get_is_debug
 
@@ -737,7 +737,7 @@ bool operator!= (const accelerator_view& _Other) const;
 
 ### <a name="return-value"></a>返回值
 
-如果两个对象相同，则为 `false`；否则为 `true`。
+**false**如果两个对象都相同; 否则为**true**。
 
 ##  <a name="operator_eq"></a> 运算符 =
 
@@ -758,7 +758,7 @@ accelerator_view& operator= (const accelerator_view& _Other);
 
 ##  <a name="operator_eq_eq"></a> 运算符 = =
 
-比较此[accelerator_view](accelerator-view-class.md)与另一个对象，并返回`true`如果它们是相同的; 否则，返回`false`。
+比较此[accelerator_view](accelerator-view-class.md)与另一个对象，并返回**true**如果它们是相同的; 否则，返回**false**。
 
 ```
 bool operator== (const accelerator_view& _Other) const;
@@ -772,7 +772,7 @@ bool operator== (const accelerator_view& _Other) const;
 
 ### <a name="return-value"></a>返回值
 
-如果两个对象相同，则为 `true`；否则为 `false`。
+**true**如果两个对象都相同; 否则为**false**。
 
 ##  <a name="queuing_mode"></a> queuing_mode
 

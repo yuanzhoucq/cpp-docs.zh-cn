@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e40a98bd546f29cd42629ad991866a85a86852c9
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: bac539fc2826b5628769126d9802688c01f01c7b
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46399296"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163200"
 ---
 # <a name="task-class-concurrency-runtime"></a>task 类（并发运行时）
 
@@ -134,7 +134,7 @@ bool is_apartment_aware() const;
 
 ### <a name="return-value"></a>返回值
 
-如果任务解包一个 `true` 接口或继承自此类任务，则为 `IAsyncInfo`；否则为 `false`。
+**true**如果任务解包`IAsyncInfo`接口或继承自此类任务**false**否则为。
 
 ##  <a name="is_done"></a>  task:: is_done 方法 （并发运行时）
 
@@ -169,7 +169,7 @@ bool operator!= (const task<void>& _Rhs) const;
 
 ### <a name="return-value"></a>返回值
 
-如果这两个对象引用不同基础任务，则为 `true`；否则为 `false`。
+**true**如果两个对象引用不同基础任务，并**false**否则为。
 
 ##  <a name="operator_eq"></a> 运算符 =
 
@@ -209,7 +209,7 @@ bool operator== (const task<void>& _Rhs) const;
 
 ### <a name="return-value"></a>返回值
 
-如果这两个对象引用同一基础任务，则为 `true`；否则为 `false`。
+**true**如果对象引用同一基础任务，并**false**否则为。
 
 ##  <a name="scheduler"></a>  task:: scheduler 方法 （并发运行时）
 
@@ -354,7 +354,7 @@ task_status wait() const;
 ### <a name="remarks"></a>备注
 
 > [!IMPORTANT]
->  在通用 Windows 平台 (UWP) 应用中，不要调用`wait`在 STA 上运行的代码 否则，运行时会引发[concurrency:: invalid_operation](invalid-operation-class.md)原因是此方法阻止当前线程并可能导致应用停止响应。 但是，可以调用[concurrency::task::get](#get)方法来接收基于任务的延续在先行任务的结果。
+>  在通用 Windows 平台 (UWP) 应用中，不要调用`wait`在 STA 上运行的代码 否则，运行时会引发 [concurrency::invalid_operation](invalid-operation-class.md) ，原因是此方法阻止当前线程并可能导致应用停止响应。 但是，你可以调用 [concurrency::task::get](#get) 方法来接收基于任务的延续中的先行任务的结果。
 
 ## <a name="see-also"></a>请参阅
 

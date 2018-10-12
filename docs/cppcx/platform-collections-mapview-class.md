@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e222ba48121702c2388e64cea5e81da627f324a
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: e1dd4aab5912b2f15e8c0b36c7e482001809099d
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44110852"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163902"
 ---
 # <a name="platformcollectionsmapview-class"></a>Platform::Collections::MapView 类
 
@@ -117,11 +117,11 @@ bool HasKey(K key);
 ### <a name="parameters"></a>参数
 
 *key*<br/>
-用于定位 MapView 元素的键。 类型`key`是 typename *K*。
+用于定位 MapView 元素的键。 类型*键*是 typename *K*。
 
 ### <a name="return-value"></a>返回值
 
-如果找到该键，则为 `true`；否则为 `false`。
+**true**如果该键; 否则为**false**。
 
 ##  <a name="lookup"></a> Mapview:: Lookup 方法
 

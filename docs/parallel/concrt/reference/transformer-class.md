@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 803cb474edbce6eb3d397e025ecc31bd5332cc92
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8e5c6b9d15ef2ca456fd91dbd7829d94e33e2c0a
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46427876"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162225"
 ---
 # <a name="transformer-class"></a>transformer 类
 
@@ -61,7 +61,7 @@ class transformer : public propagator_block<single_link_registry<ITarget<_Output
 
 |名称|描述|
 |----------|-----------------|
-|[transformer](#ctor)|已重载。 构造`transformer`消息块。|
+|[transformer](#ctor)|已重载。 构造 `transformer` 消息块。|
 |[~ transformer 析构函数](#dtor)|销毁`transformer`消息块。|
 
 ### <a name="protected-methods"></a>受保护的方法
@@ -205,11 +205,11 @@ virtual bool reserve_message(runtime_object_identity _MsgId);
 
 ### <a name="return-value"></a>返回值
 
-`true` 如果消息已成功保留，`false`否则为。
+**true**成功保留该消息，如果**false**否则为。
 
 ### <a name="remarks"></a>备注
 
-之后`reserve`调用时，如果它将返回`true`、 任一`consume`或`release`必须调用以获取或释放消息的所有权。
+之后`reserve`调用时，如果它将返回**true**，而是`consume`或`release`必须调用以获取或释放消息的所有权。
 
 ##  <a name="resume_propagation"></a> resume_propagation
 
@@ -251,11 +251,11 @@ virtual bool supports_anonymous_source();
 
 ### <a name="return-value"></a>返回值
 
-`true` 因为该块没有推迟所提供的消息。
+**true**因为该块没有推迟提供的消息。
 
 ##  <a name="ctor"></a> 转换器
 
-构造`transformer`消息块。
+构造 `transformer` 消息块。
 
 ```
 transformer(
@@ -302,10 +302,10 @@ transformer(
 确定是否应接受提供的消息的筛选器函数。
 
 *_PScheduler*<br/>
-`Scheduler`对象在其中的传播任务的`transformer`计划消息块。
+在其中计划了 `Scheduler` 消息块的传播任务的 `transformer` 对象。
 
 *_PScheduleGroup*<br/>
-`ScheduleGroup`对象在其中的传播任务的`transformer`计划消息块。 所用 `Scheduler` 对象由该计划组提示。
+在其中计划了 `ScheduleGroup` 消息块的传播任务的 `transformer` 对象。 所用 `Scheduler` 对象由该计划组提示。
 
 ### <a name="remarks"></a>备注
 

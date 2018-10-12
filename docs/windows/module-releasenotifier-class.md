@@ -25,12 +25,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5c9af03549eec7b62cc34aec2840764c54d2a21e
-ms.sourcegitcommit: 338e1ddc2f3869d92ba4b73599d35374cf1d5b69
+ms.openlocfilehash: e2dae7809a5926fa93626fa33148d444fe12807b
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46494356"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161887"
 ---
 # <a name="modulereleasenotifier-class"></a>Module::ReleaseNotifier 类
 
@@ -56,7 +56,7 @@ class ReleaseNotifier;
 名称                                                         | 描述
 ------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------
 [Module:: releasenotifier:: 调用](#releasenotifier-invoke)   | 实现后，在释放模块中的最后一个对象时调用事件处理程序。
-[Module::ReleaseNotifier::Release](#releasenotifier-release) | 删除当前`Module::ReleaseNotifier`对象如果对象使用参数的构造`true`。
+[Module::ReleaseNotifier::Release](#releasenotifier-release) | 删除当前`Module::ReleaseNotifier`对象如果对象使用参数的构造**true**。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -86,7 +86,7 @@ virtual void Invoke() = 0;
 
 ## <a name="releasenotifier-release"></a>Module::ReleaseNotifier::Release
 
-删除当前`Module::ReleaseNotifier`对象如果对象使用参数的构造`true`。
+删除当前`Module::ReleaseNotifier`对象如果对象使用参数的构造**true**。
 
 ```cpp
 void Release() throw();

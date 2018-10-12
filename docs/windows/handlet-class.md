@@ -37,12 +37,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: db772a5c6a1434032febe24560514c7e7086d798
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: ae6e7c1ec602cb57df071ecac24a0ac084331c3c
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48789288"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162316"
 ---
 # <a name="handlet-class"></a>HandleT 类
 
@@ -220,7 +220,7 @@ virtual bool InternalClose();
 
 ### <a name="return-value"></a>返回值
 
-`true` 如果当前`HandleT`关闭成功; 否则为`false`。
+**true**如果当前`HandleT`关闭成功; 否则为**false**。
 
 ### <a name="remarks"></a>备注
 
@@ -236,7 +236,7 @@ bool IsValid() const;
 
 ### <a name="return-value"></a>返回值
 
-`true` 如果`HandleT`表示的句柄; 否则为`false`。
+**true**如果`HandleT`表示的句柄; 否则为**false**。
 
 ## <a name="operator-assign"></a>Handlet:: Operator =
 

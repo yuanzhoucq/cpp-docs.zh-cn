@@ -47,12 +47,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fea4f576e347ca03dda1142b3118bf605bc9f385
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 2a70b39352f26d76e9199b9da46f679507b148ed
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235342"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163102"
 ---
 # <a name="hstring-class"></a>HString 类
 
@@ -225,7 +225,7 @@ bool IsValid() const throw()
 
 ### <a name="parameters"></a>参数
 
-`true` 如果当前`HString`对象不为空; 否则为`false`。
+**true**如果当前`HString`对象不为空; 否则为**false**。
 
 ## <a name="makereference"></a>Hstring:: Makereference
 
@@ -250,7 +250,7 @@ template<unsigned int sizeDest>
 *str*<br/>
 对宽字符串的引用。
 
-*Len*<br/>
+len<br/>
 最大长度*str*要在此操作中使用的参数缓冲区。 如果*len*参数未指定，整个*str*使用参数。
 
 ### <a name="return-value"></a>返回值
@@ -310,7 +310,7 @@ inline bool operator==(
 
 ### <a name="return-value"></a>返回值
 
-`true` 如果*lhs*并*rhs*参数是相等; 否则为`false`。
+**true**如果*lhs*并*rhs*参数不相等; 否则为**false**。
 
 ## <a name="operator-inequality"></a>Hstring:: Operator ！ = 运算符
 
@@ -343,7 +343,7 @@ inline bool operator!=( const HString& lhs,
 
 ### <a name="return-value"></a>返回值
 
-`true` 如果*lhs*并*rhs*参数是否不相等; 否则为`false`。
+**true**如果*lhs*并*rhs*参数是否不相等; 否则为**false**。
 
 ## <a name="operator-less-than"></a>Hstring:: Operator&lt;运算符
 
@@ -365,7 +365,7 @@ inline bool operator<(
 
 ### <a name="return-value"></a>返回值
 
-`true` 如果*lhs*参数是不会早于*rhs*参数; 否则为`false`。
+**true**如果*lhs*参数是小于*rhs*参数; 否则为**false**。
 
 ## <a name="release"></a>Hstring:: Release
 
@@ -396,7 +396,7 @@ HRESULT Set(
 *str*<br/>
 宽字符字符串。
 
-*Len*<br/>
+len<br/>
 最大长度*str*分配给当前的参数`HString`对象。
 
 *hstr*<br/>

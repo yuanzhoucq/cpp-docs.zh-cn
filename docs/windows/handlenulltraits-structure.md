@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 517e861020c48d08f40c9683822e3df23cbf38a2
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 1060d28e35a52e2a8c5c550664d36d8272628526
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235888"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161731"
 ---
 # <a name="handlenulltraits-structure"></a>HANDLENullTraits 结构
 
@@ -80,7 +80,7 @@ inline static bool Close(
 
 ### <a name="return-value"></a>返回值
 
-`true` 如果处理*h*关闭成功; 否则为`false`。
+**true**如果处理*h*关闭成功; 否则为**false**。
 
 ## <a name="getinvalidvalue"></a>Handlenulltraits:: Getinvalidvalue
 

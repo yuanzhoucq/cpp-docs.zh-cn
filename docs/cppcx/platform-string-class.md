@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3777116bf2a641a4fdc220306680c0150d5ba2d0
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 2d9c68bde9fdd49e4007b8b6e1d92899d71dde4e
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44106407"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162537"
 ---
 # <a name="platformstring-class"></a>Platform::String 类
 
@@ -174,7 +174,7 @@ String^ Concat( String^ str1, String^ str2);
 
 其值为 `str1` 与 `str2` 的值相连的新 String^ 对象。
 
-如果`str1`是`null`并`str2`不是，`str1`返回。 如果`str2`是`null`并`str1`不是，`str2`返回。 如果 `str1` 和 `str2` 都是 `null`，则返回空字符串 (L "")。
+如果 `str1` 是 `null` 而 `str2` 不是，则返回 `str1`。 如果 `str2` 是 `null` 而 `str1` 不是，则返回 `str2`。 如果 `str1` 和 `str2` 都是 `null`，则返回空字符串 (L "")。
 
 ## <a name="data"></a>  String:: data 方法
 
@@ -240,7 +240,7 @@ bool String::Equals(String^ str);
 
 ### <a name="return-value"></a>返回值
 
-如果 `true` 等于当前对象，则为 `str`，否则为 `false`。
+**true**如果`str`等于当前对象; 否则为**false**。
 
 ### <a name="remarks"></a>备注
 
@@ -272,7 +272,7 @@ bool IsEmpty();
 
 ### <a name="return-value"></a>返回值
 
-如果当前字符串对象是 `true` 或为空字符串 (L "")，则为 `null`；否则，为 `false`。
+**true**如果当前`String`对象是**null**或空字符串 (L""); 否则为**false**。
 
 ## <a name="isfastpass"></a>  String:: isfastpass 方法
 
@@ -286,7 +286,7 @@ bool IsFastPass();
 
 ### <a name="return-value"></a>返回值
 
-如果当前 String 对象已快速传递，则为 `true`；否则为 `false`。
+**true**如果当前`String`对象是快速传递; 否则为**false**。
 
 ### <a name="remarks"></a>备注
 
@@ -294,7 +294,7 @@ bool IsFastPass();
 
 ## <a name="length"></a>  String:: length 方法
 
-检索当前字符串对象中的字符数。
+检索当前中的字符数`String`对象。
 
 ### <a name="syntax"></a>语法
 
@@ -304,7 +304,7 @@ unsigned int Length();
 
 ### <a name="return-value"></a>返回值
 
-当前字符串对象中的字符数。
+在当前的字符数`String`对象。
 
 ### <a name="remarks"></a>备注
 
@@ -337,7 +337,7 @@ bool String::operator+( String^ str1, String^ str2);
 
 ### <a name="return-value"></a>返回值
 
-如果 `true` 等于 `str1`，则为 `str2`；否则为 `false`。
+**true**如果*str1*等于*str2*; 否则为**false**。
 
 ### <a name="remarks"></a>备注
 
@@ -356,14 +356,14 @@ bool String::operator==( String^ str1, String^ str2);
 ### <a name="parameters"></a>参数
 
 *str1*<br/>
-要比较的第一个字符串对象。
+要比较的第一个 `String` 对象。
 
 *str2*<br/>
-要比较的第二个字符串对象。
+要比较的第二个 `String` 对象。
 
 ### <a name="return-value"></a>返回值
 
-如果 `true` 的内容等于 `str1`，则为 `str2`；否则为 `false`。
+**true**如果的内容`str1`等于`str2`; 否则为**false**。
 
 ### <a name="remarks"></a>备注
 
@@ -371,7 +371,7 @@ bool String::operator==( String^ str1, String^ str2);
 
 ##  <a name="operator-greater-than"></a>  String::operator&gt;
 
-指示一个字符串对象的值是否大于或等于第二个字符串对象的值。
+指示是否有一个的值`String`对象是否大于第二个值`String`对象。
 
 ### <a name="syntax"></a>语法
 
@@ -382,14 +382,14 @@ bool String::operator>( String^ str1, String^ str2);
 ### <a name="parameters"></a>参数
 
 *str1*<br/>
-第一个字符串对象。
+第一个 `String` 对象。
 
 *str2*<br/>
-第二个字符串对象。
+第二个 `String` 对象。
 
 ### <a name="return-value"></a>返回值
 
-如果 `str1` 的值大于 `str2` 的值，则为 `true`；否则为 `false`。
+**true**如果的值`str1`的值大于`str2`; 否则为**false**。
 
 ### <a name="remarks"></a>备注
 
@@ -397,7 +397,7 @@ bool String::operator>( String^ str1, String^ str2);
 
 ## <a name="operator-greater-than-or-equals"></a> String::operator&gt;=
 
-指示一个字符串对象的值是否大于或等于第二个字符串对象的值。
+指示是否有一个的值`String`对象是否大于或等于第二个值`String`对象。
 
 ### <a name="syntax"></a>语法
 
@@ -408,18 +408,18 @@ bool String::operator>=( String^ str1, String^ str2);
 ### <a name="parameters"></a>参数
 
 *str1*<br/>
-第一个字符串对象。
+第一个 `String` 对象。
 
 *str2*<br/>
-第二个字符串对象。
+第二个 `String` 对象。
 
 ### <a name="return-value"></a>返回值
 
-如果 `str1` 的值大于或等于 `str2` 的值，则为 `true`；否则为 `false`。
+**true**如果的值`str1`大于或等于的值`str2`; 否则为**false**。
 
 ## <a name="operator-inequality"></a> String:: operator ！ =
 
-指示两个指定字符串对象是否具有不同的值。
+指示两个指定`String`对象具有不同的值。
 
 ### <a name="syntax"></a>语法
 
@@ -430,18 +430,18 @@ bool String::operator!=( String^ str1, String^ str2);
 ### <a name="parameters"></a>参数
 
 *str1*<br/>
-要比较的第一个字符串对象。
+要比较的第一个 `String` 对象。
 
 *str2*<br/>
-要比较的第二个字符串对象。
+要比较的第二个 `String` 对象。
 
 ### <a name="return-value"></a>返回值
 
-如果 `true` 不等于 `str1`，则为 `str2`；否则为 `false`。
+**true**如果`str1`不等于`str2`; 否则为**false**。
 
 ## <a name="operator-less-than"></a> String:: operator&lt;
 
-指示一个字符串对象的值是否小于第二个字符串对象的值。
+指示是否有一个的值`String`对象是否小于第二个值`String`对象。
 
 ### <a name="syntax"></a>语法
 
@@ -452,18 +452,18 @@ bool String::operator<( String^ str1, String^ str2);
 ### <a name="parameters"></a>参数
 
 *str1*<br/>
-第一个字符串对象。
+第一个 `String` 对象。
 
 *str2*<br/>
-第二个字符串对象。
+第二个 `String` 对象。
 
 ### <a name="return-value"></a>返回值
 
-如果 `str1` 的值小于 `str2` 的值，则为 `true`；否则为 `false`。
+**true**如果的值*str1*的值少于*str2*; 否则为**false**。
 
 ## <a name="ctor"></a> String:: string 构造函数
 
-使用输入字符串数据初始化字符串类的新实例。
+初始化的新实例`String`副本的输入的字符串数据的类。
 
 ### <a name="syntax"></a>语法
 
@@ -475,7 +475,7 @@ String(char16* s, unsigned int n);
 
 ### <a name="parameters"></a>参数
 
-*s*<br/>
+*秒*<br/>
 初始化字符串的一系列宽字符。 char16
 
 *n*<br/>
@@ -492,7 +492,7 @@ String^ s = L"Hello!";
 
 ## <a name="tostring"></a> String::ToString
 
-返回一个字符串对象，其值与当前字符串相同。
+返回`String`对象，其值是与当前字符串相同。
 
 ### <a name="syntax"></a>语法
 
@@ -502,7 +502,7 @@ String^ String::ToString();
 
 ### <a name="return-value"></a>返回值
 
-其值与当前字符串相同的字符串对象。
+一个`String`对象，其值是与当前字符串相同。
 
 ## <a name="see-also"></a>请参阅
 

@@ -1,7 +1,7 @@
 ---
 title: 内联函数 （C++） |Microsoft 文档
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/09/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -9,6 +9,10 @@ f1_keywords:
 - __forceinline_cpp
 - __inline_cpp
 - inline_cpp
+- __inline
+- _inline
+- __forceinline
+- _forceinline
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31738407b788f69998681442f15a8f1c104477a3
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 21f3d74a7b640e203a8a5882710849c98ba5b40f
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46017816"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163580"
 ---
 # <a name="inline-functions-c"></a>内联函数 (C++)
 
@@ -84,7 +88,7 @@ int main()
 
 编译器将内联扩展选项和关键字视为建议。 不保证会对函数进行内联。 你不能强制编译器内联某个特定函数，即使 **__forceinline**关键字。 使用编译时 **/clr**，编译器将不内联函数是否存在安全特性应用于函数。
 
-**内联**关键字是仅在 C++ 中可用。 **__Inline**并 **__forceinline**关键字是 C 和 c + + 中可用。 与以前版本的兼容性 **_inline**是的同义词 **__inline**。
+**内联**关键字是仅在 C++ 中可用。 **__Inline**并 **__forceinline**关键字是 C 和 c + + 中可用。 与以前版本的兼容性 **_inline**和 **_forceinline**是的同义词 **__inline**，以及 **__forceinline**除非编译器选项[/Za\(禁用语言扩展)](../build/reference/za-ze-disable-language-extensions.md)指定。
 
 **内联**关键字告知编译器内联展开是首选。 但是，编译器可以创建函数的单独实例（实例化），并创建标准调用链接而不是内联插入代码。 可能会出现这种行为的两种情况是：
 

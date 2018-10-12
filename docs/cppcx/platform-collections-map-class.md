@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9eccefff291dc509f846bce951cfe9508834876e
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 7e64f5857a2b0530fb0346a2635611db03fd9bc8
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44103874"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162550"
 ---
 # <a name="platformcollectionsmap-class"></a>Platform::Collections::Map 类
 
@@ -173,7 +173,7 @@ bool HasKey(K key);
 
 ### <a name="return-value"></a>返回值
 
-如果找到该键，则为 `true`；否则为 `false`。
+**true**如果该键; 否则为**false**。
 
 ## <a name="insert"></a>  Map:: insert 方法
 
@@ -195,7 +195,7 @@ virtual bool Insert(K key, V value);
 
 ### <a name="return-value"></a>返回值
 
-`true` 如果当前映射中的现有元素的键与匹配*键*并且该元素的值部分设置为*值*。 `false` 如果当前映射中的没有任何现有元素匹配*键*并*密钥*并*值*参数是构成键-值对并随后添加到当前映射。
+**true**如果当前映射中的现有元素的键匹配*密钥*，该元素的值部分设置为*值*。 **false**如果当前映射中的没有任何现有元素匹配*密钥*并且*密钥*并*值*参数构成键值对并随后将添加到当前映射。
 
 ## <a name="lookup"></a>  Map:: lookup 方法
 
@@ -304,4 +304,4 @@ Map 中的元素数目。
 ## <a name="see-also"></a>请参阅
 
 [平台 Namespace](platform-namespace-c-cx.md)<br/>
-[C + + 创建 Windows 运行时组件](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)
+[用 C++ 创建 Windows 运行时组件](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)
