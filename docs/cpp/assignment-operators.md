@@ -17,14 +17,12 @@ f1_keywords:
 - '&='
 - ^=
 - '|='
-- '&&='
 dev_langs:
 - C++
 helpviewer_keywords:
 - operators [C++], assignment
 - assignment operators [C++], C++
 - '&= operator'
-- '&&= operator'
 - ^= operator
 - += operator
 - '>>= operator'
@@ -43,32 +41,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15c9efaf8dc5b9f0886a697ad2b872e24264820f
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 1429bcb9f4002cb65cc14000d3bcf62004000566
+ms.sourcegitcommit: b05cff71a8a6a8a4c7bbea1263fd0a711853f921
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46017893"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49307914"
 ---
 # <a name="assignment-operators"></a>赋值运算符
 
 ## <a name="syntax"></a>语法
 
-```
-expression assignment-operator expression 
-assignment-operator : one of
-   =   *=   /=   %=   +=   -=   <<=   >>=   &=   ^=   |=  &&=
-```
+*表达式**赋值运算符**表达式*
+
+*赋值运算符*： 之一<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<strong>= * = / = %= + =-= \< \<= >> = & = ^ =   \|=</strong>
 
 ## <a name="remarks"></a>备注
 
-赋值运算符将值存储在左操作数指定的对象中。 有三种类型的赋值操作：
+赋值运算符将值存储在左操作数指定的对象中。 有两种类型的赋值操作：
 
-1. 简单赋值，在其中的第二个操作数的值存储在第一个操作数指定的对象中。 1. 复合赋值，算术、 移位或位运算执行再存储结果。
-1. 中的资源而不复制传输移动赋值 （对于类类型）。
+1. *简单赋值*，在这第二个操作数的值存储在第一个操作数指定的对象。
 
+1. *复合赋值*，算术、 移位或位运算执行再存储结果。
 
-下表中的所有赋值运算符都除外 = 和 & & = 运算符是复合赋值运算符。
+下表中除 = 运算符之外的所有其他赋值运算符都是复合赋值运算符。
 
 ### <a name="assignment-operators"></a>赋值运算符
 
@@ -85,7 +82,6 @@ assignment-operator : one of
 |**&=**|获取第一个和第二个操作数的按位“与”；将结果存储在第一个操作数指定的对象中。|
 |**^=**|获取第一个和第二个操作数的按位“异或”；将结果存储在第一个操作数指定的对象中。|
 |**\|=**|获取第一个和第二个操作数的按位“与或”；将结果存储在第一个操作数指定的对象中。|
-|**&&=**| （对于类类型） 的移动赋值运算符。 如果第二个操作数为右值，（而不将其复制） 将其资源移到第一个操作数。 请参阅[移动构造函数和移动赋值运算符](move-constructors-and-move-assignment-operators-cpp.md)有关详细信息。|
 
 **运算符关键字**
 
@@ -125,11 +121,11 @@ int main() {
 
 ## <a name="simple-assignment"></a>简单赋值
 
-简单赋值运算符 (=) 将使第二个操作数的值存储在第一个操作数指定的对象中。 如果两个对象都是算术类型，则在存储值之前，正确的操作数将转换为左侧的类型。
+简单赋值运算符 (**=**) 会导致要存储在第一个操作数指定的对象中的第二个操作数的值。 如果两个对象都是算术类型，则在存储值之前，正确的操作数将转换为左侧的类型。
 
-常量和可变类型的对象可赋给可变类型的左值或者既不是常量类型也不是可变类型的左值。
+对象**const**并**易失性**类型可以分配到左值的类型仅包含**易失性**，或者是否既不**const**也不**易失性**。
 
-对类类型（结构、联合和类类型）的对象的赋值由名为 operator= 的函数执行。 此运算符函数值的默认行为是执行按位复制；但是，可使用重载运算符修改此行为。 (请参阅[重载运算符](../cpp/operator-overloading.md)有关详细信息。)
+对象的类类型 （结构、 联合和类类型） 的赋值由名为的函数执行`operator=`。 此运算符函数值的默认行为是执行按位复制；但是，可使用重载运算符修改此行为。 请参阅[运算符重载](../cpp/operator-overloading.md)有关详细信息。 此外，类类型可以具有*复制赋值*并*移动赋值*运算符。 有关详细信息，请参阅[复制构造函数和复制赋值运算符](copy-constructors-and-copy-assignment-operators-cpp.md)并[移动构造函数和移动赋值运算符](move-constructors-and-move-assignment-operators-cpp.md)。
 
 任何从给定基类明确派生的类的对象均可赋给基类的对象。 反之则不然，因为有一个隐式转换，它能从派生类转换到基类，但不能从基类转换到派生类。 例如：
 
@@ -169,7 +165,7 @@ UserType1 A;
 UserType2 B = A;
 ```
 
-上面的代码显示了一个初始值设定项；它调用了采用 `UserType2` 类型的参数的 `UserType1` 的构造函数。 给定以下代码
+上面的代码显示了一个初始值设定项；它调用了采用 `UserType2` 类型的自变量的 `UserType1` 的构造函数。 给定以下代码
 
 ```cpp
 UserType1 A;
@@ -186,21 +182,21 @@ B = A;
 
 可能具有以下效果之一：
 
-- 将为 `UserType2` 调用函数 operator=，前提是 operator= 提供 `UserType1` 参数。
+- 调用函数`operator=`有关`UserType2`提供`operator=`随提供`UserType1`参数。
 
 - 如果存在显式转换函数 `UserType1::operator UserType2`，则调用该函数。
 
-- 调用采用 `UserType2::UserType2` 参数并复制结果的构造函数 `UserType1`，前提是存在此类构造函数。
+- 调用采用 `UserType2::UserType2` 自变量并复制结果的构造函数 `UserType1`，前提是存在此类构造函数。
 
 ## <a name="compound-assignment"></a>复合赋值
 
-复合赋值运算符，在表中所示[赋值运算符](../cpp/assignment-operators.md)，在窗体中指定*e1* `op` =  *e2*，其中*e1*是非常量类型可修改左值和*e2*是以下之一：
+复合赋值运算符，在表中所示[赋值运算符](#assignment-operators)，在窗体中指定*e1* *op*= *e2*，其中*e1*是可修改左值不是**const**类型和*e2*是以下之一：
 
 - 算术类型
 
-- 一个指针，如果`op`是 + 或-
+- 一个指针，如果*op*是**+** 或 **-**
 
-*E1* `op` =  *e2*形式的行为方式作为*e1* *= e1* `op` *e2*，但*e1*只计算一次。
+*E1* *op*= *e2*形式表现为*e1* **=** *e1* *op* *e2*，但*e1*只计算一次。
 
 对枚举类型的复合赋值将生成错误消息。 如果左操作数属于指针类型，则右操作数必须属于指针类型或必须是计算结果为 0 的常量表达式。 如果左操作数属于整数类型，则右操作数不能属于指针类型。
 
