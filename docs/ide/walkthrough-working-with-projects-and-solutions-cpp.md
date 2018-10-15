@@ -1,7 +1,7 @@
 ---
 title: 演练：使用项目和解决方案 (C++) | Microsoft Docs
 ms.custom: ''
-ms.date: 12/13/2017
+ms.date: 09/14/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f62b2317669949473c8b0e68ad4410a3d9b03806
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 56b5e41872ebe4b3cdc4800d7818cceb05f03dd1
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339130"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235147"
 ---
 # <a name="walkthrough-working-with-projects-and-solutions-c"></a>演练：使用项目和解决方案 (C++)
 
@@ -42,11 +42,14 @@ ms.locfileid: "33339130"
 
 ### <a name="to-create-a-project"></a>创建项目
 
-1. 在菜单栏上选择“文件”>“新建”>“项目”。
+1. 在菜单栏上，依次选择“文件” > “新建” > “项目”。
 
 1. 在“新建项目”对话框的左窗格中展开“已安装”，并选择“Visual C++”（如果它尚未打开）。
 
 1. 在中间窗格的已安装模板列表中，选择“Windows 控制台应用程序”。
+
+   > [!NOTE]
+   > 在以前版本的 Visual Studio 中，安装的模板被称为“Win32 控制台应用程序”。
 
 1. 在“名称”框中输入项目的名称。 对于此示例，请输入“游戏”。
 
@@ -66,9 +69,9 @@ ms.locfileid: "33339130"
 
 ### <a name="to-add-a-class-to-a-project"></a>向项目添加类
 
-1. 如果 Visual Studio 中未显示“解决方案资源管理器”窗口，请在菜单栏上选择“视图”>“解决方案资源管理器”。
+1. 如果 Visual Studio 中未显示“解决方案资源管理器”窗口，请在菜单栏上选择“视图” > “解决方案资源管理器”。
 
-1. 在“解决方案资源管理器”中，选择“游戏”项目。 在菜单栏上选择“项目”>“添加类”。
+1. 在“解决方案资源管理器”中，选择“游戏”项目。 在菜单栏上选择“项目” > “添加类”。
 
 1. 在“添加类”对话框中的“类名”框内输入“Cardgame”。 请勿修改默认的文件名和设置。 选择“确定”  按钮。
 
@@ -88,17 +91,15 @@ ms.locfileid: "33339130"
 
       `Cardgame();`
 
-      对构造函数进行修改，使其带有一个类型为 `int`、名为“players”的参数。
+      修改构造函数，使其带有一个类型为 `int`、名为“players”的参数。
 
-      <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#101](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_2.h)]-->
-      `Cardgame(int players);`
+      <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#101](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_2.h)]--> `Cardgame(int players);`
 
    - 在默认析构函数之后，为名为 GetParticipants 的 `static int` 成员函数添加内联声明，该成员函数没有参数且返回 `totalParticipants` 值。
 
-      <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#102](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_3.h)]-->
-      `static int GetParticipants() { return totalParticipants; }`
+      <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#102](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_3.h)]--> `static int GetParticipants() { return totalParticipants; }`
 
-   在你对 Cardgame.h 文件进行更改之后，该文件应类似于：
+   在你对 Cardgame.h 文件进行更改之后，该文件应类似于以下代码：
 
    <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#103](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_4.h)]-->
    ```cpp
@@ -109,20 +110,20 @@ ms.locfileid: "33339130"
        static int totalParticipants;
    public:
        Cardgame(int players);
-       ~Cardgame(void);
+       ~Cardgame();
        static int GetParticipants() { return totalParticipants; }
    };
    ```
 
-   `#pragma once` 行通知编译器仅包含一次头文件。 有关详细信息，请参阅 [once](../preprocessor/once.md)。 有关此头文件中其他 C++ 关键字的信息，请参阅[类](../cpp/class-cpp.md)、[int](../cpp/fundamental-types-cpp.md)、[静态](../cpp/storage-classes-cpp.md)和[公共](../cpp/public-cpp.md)。
+   `#pragma once` 行通知编译器仅包含一次头文件。 有关详细信息，请参阅 [once](../preprocessor/once.md)。 有关上述头文件中其他 C++ 关键字的信息，请参阅[类](../cpp/class-cpp.md)、[int](../cpp/fundamental-types-cpp.md)、[静态](../cpp/storage-classes-cpp.md)和[公共](../cpp/public-cpp.md)。
 
 1. 选择编辑窗格顶部的“Cardgame.cpp”选项卡，打开它进行编辑。
 
-1. 删除文件中的所有内容，并用此代码替换：
+1. 删除文件中的所有内容，并将其替换为以下代码：
 
    <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#111](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_5.cpp)]-->
    ```cpp
-   #include "stdafx.h"
+   #include "pch.h"
    #include "Cardgame.h"
    #include <iostream>
 
@@ -159,7 +160,7 @@ ms.locfileid: "33339130"
    // Game.cpp : Defines the entry point for the console application.
    //
 
-   #include "stdafx.h"
+   #include "pch.h"
    #include "Cardgame.h"
    #include <iostream>
 
@@ -179,7 +180,7 @@ ms.locfileid: "33339130"
        return 0;
    }
    ```
-此代码将测试函数 `PlayGames` 添加到源代码，并在 `main` 中调用。 
+此代码会将测试函数 `PlayGames` 添加到源代码，并在 `main` 中调用。
 
 ## <a name="build-and-run-your-app-project"></a>生成并运行应用项目
 
@@ -187,17 +188,17 @@ ms.locfileid: "33339130"
 
 ### <a name="to-build-and-run-the-project"></a>生成并运行此项目
 
-1. 在菜单栏上，依次选择“生成”>“生成解决方案”。
+1. 在菜单栏上，依次选择“生成” > “生成解决方案”。
 
    来自生成的输出显示在“输出”窗口中。 如果生成成功，输出应类似于：
 
    ```Output
    1>------ Build started: Project: Game, Configuration: Debug Win32 ------
-   1>  stdafx.cpp
-   1>  Game.cpp
-   1>  Cardgame.cpp
-   1>  Generating Code...
-   1>  Game.vcxproj -> C:\Users\username\Source\Repos\Game\Debug\Game.exe
+   1>pch.cpp
+   1>Cardgame.cpp
+   1>Game.cpp
+   1>Generating Code...
+   1>Game.vcxproj -> C:\Users\<username>\source\repos\Game\Debug\Game.exe
    ========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========
    ```
 
@@ -205,7 +206,7 @@ ms.locfileid: "33339130"
 
    如果生成未成功，请将你的代码与前面步骤中显示的代码进行比较。
 
-1. 要运行项目，请在菜单栏上选择“调试”>“开始执行(不调试)”。 应显示控制台窗口，并且其输出应类似于：
+1. 要运行项目，请在菜单栏上选择“调试” > “开始执行(不调试)”。 应显示控制台窗口，并且其输出应类似于：
 
    ```Output
    4 players have started a new game.  There are now 4 players in total.
@@ -219,10 +220,10 @@ ms.locfileid: "33339130"
 
 ## <a name="next-steps"></a>后续步骤
 
-**上一篇：**[使用 Visual Studio IDE 进行 C++ 桌面开发](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)。  
-**下一篇：**[演练：生成项目 (C++)](../ide/walkthrough-building-a-project-cpp.md)。
+上一步：[使用 Visual Studio IDE 进行 C++ 桌面开发](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)<br/>
+下一步：[演练：生成项目 (C++)](../ide/walkthrough-building-a-project-cpp.md)<br/>
 
 ## <a name="see-also"></a>请参阅
 
-[C++ 语言参考](../cpp/cpp-language-reference.md)  
-[生成 C/C++ 程序](../build/building-c-cpp-programs.md)
+[C++ 语言参考](../cpp/cpp-language-reference.md)<br/>
+[生成 C/C++ 程序](../build/building-c-cpp-programs.md)<br/>

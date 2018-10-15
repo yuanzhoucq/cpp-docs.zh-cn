@@ -1,7 +1,7 @@
 ---
 title: 在 Visual Studio 中配置 C++ Linux 项目 | Microsoft Docs
 ms.custom: ''
-ms.date: 09/05/2018
+ms.date: 09/18/2018
 ms.reviewer: ''
 ms.suite: ''
 ms.technology:
@@ -14,12 +14,12 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: fbc0674a7659ffccd5ab5c655f74167acebdca97
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 17597ae7497288312b8ddcfcf53a77130fbbf2d8
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43895196"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46383231"
 ---
 # <a name="configure-a-linux-project"></a>配置 Linux 项目
 
@@ -33,9 +33,11 @@ ms.locfileid: "43895196"
 
 默认情况下，可执行文件 (.out) 是使用该工具生成的。  若要生成静态或动态库，或使用现有生成文件，请使用“**配置类型**”选项。
 
+有关属性页中选项的详细信息，请参阅 [Linux 项目属性页参考](prop-pages-linux.md)。
+
 ## <a name="remote-settings"></a>远程设置
 
-要更改有关远程 Linux 计算机的设置，请配置“常规”设置中出现的远程选项：
+要更改有关远程 Linux 计算机的设置，请配置[“常规”](prop-pages/general-linux.md)设置中出现的远程选项：
 
 - 要更改目标 Linux 计算机，请使用“远程生成计算机”这一项。  这可以让你选择之前创建的连接之一。  若要创建新条目，请参阅[连接到远程 Linux 计算机](connect-to-your-remote-linux-computer.md)部分。
 
@@ -44,11 +46,12 @@ ms.locfileid: "43895196"
 - “远程生成项目目录”是在远程 Linux 计算机上生成此特定项目的位置。  该位置默认为 **$(RemoteRootDir)/$(ProjectName)**，它将扩展到以当前项目命名的目录，在上面设置的根目录下。
 
 > [!NOTE]
-> 要更改默认的 C 和 C++ 编译器，或者用于生成项目的链接器和存档程序，请使用“C/C++”>“常规”部分和“链接器”>“常规”部分中的相应条目。  可以将这些条目设置为使用 GCC 的某个版本，例如甚至是使用 Clang 编译器。
+> 要更改默认的 C 和 C++ 编译器，或者用于生成项目的链接器和存档程序，请使用“C/C++”>“常规”部分和“链接器”>“常规”部分中的相应条目。  可以将这些条目设置为使用 GCC 的某个版本，例如甚至是使用 Clang 编译器。 有关详细信息，请参阅 [C/C+ + 属性 (Linux C++)](prop-pages/c-cpp-linux.md) 和[链接器属性 (Linux C++)](prop-pages/linker-linux.md)。
 
 ## <a name="include-directories-and-intellisense-support"></a>包含目录和 IntelliSense 支持
 
-**Visual Studio 2017 15.6 及早期版本：** 默认情况下，Visual Studio 不包括来自 Linux 计算机的任何系统级包含文件。  例如，Visual Studio 中不存在 **/usr/include** 目录中的项。
+Visual Studio 2017 版本 15.6 及更高版本：<br/>
+默认情况下，Visual Studio 不包括来自 Linux 计算机的任何系统级包含文件。  例如，Visual Studio 中不存在 **/usr/include** 目录中的项。
 如需完整的 [IntelliSense](/visualstudio/ide/using-intellisense) 支持，你需要将这些文件复制到开发计算机上的某个位置，并将 Visual Studio 指向此位置。  一种选择是使用 scp（安全复制）来复制这些文件。  在 Windows 10 上，你可以使用 [Windows 上的 Bash](https://msdn.microsoft.com/commandline/wsl/about) 来运行 scp。  对于之前版本的 Windows，你可以使用类似 [PSCP（PuTTY 安全复制）](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html)来操作。
 
 可以使用类似如下命令复制文件：
@@ -61,7 +64,8 @@ ms.locfileid: "43895196"
 
 ![VC++ 目录](media/settings_directories.png)
 
-**Visual Studio 2017 15.7 及更高版本：** 请参阅[管理 Intellisense 远程标头](#remote_intellisense)。
+**Visual Studio 2017 版本 15.7 及更高版本：**<br/>
+请参阅[管理 IntelliSense 的远程标头](#remote_intellisense)。
 
 ## <a name="copy-sources"></a>复制源
 
@@ -97,8 +101,8 @@ apt install zip
 
 ## <a name="see-also"></a>请参阅
 
-[使用项目属性](../ide/working-with-project-properties.md)  
-[C++ 常规属性 (Linux C++)](../linux/prop-pages/general-linux.md)  
-[VC++ 目录 (Linux C++)](../linux/prop-pages/directories-linux.md)  
-[复制源项目属性 (Linux C++)](../linux/prop-pages/copy-sources-project.md)  
+[使用项目属性](../ide/working-with-project-properties.md)<br/>
+[C++ 常规属性 (Linux C++)](../linux/prop-pages/general-linux.md)<br/>
+[VC++ 目录 (Linux C++)](../linux/prop-pages/directories-linux.md)<br/>
+[复制源项目属性 (Linux C++)](../linux/prop-pages/copy-sources-project.md)<br/>
 [生成事件属性 (Linux C++)](../linux/prop-pages/build-events-linux.md)
