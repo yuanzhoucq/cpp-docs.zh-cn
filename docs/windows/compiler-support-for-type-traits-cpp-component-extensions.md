@@ -1,7 +1,7 @@
 ---
-title: 编译器支持类型特征 （c + + 组件扩展） |Microsoft Docs
+title: 编译器支持类型特征 (C + + /cli 和 C + + /cli CX) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -71,16 +71,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5df33233f78eed1f3dc6c9403eb4b1740ccf1a70
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: dfa3f599da4594e9cb0d416def1846b9937664f8
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42588277"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328527"
 ---
-# <a name="compiler-support-for-type-traits-c-component-extensions"></a>编译器支持类型特征（C++ 组件扩展）
+# <a name="compiler-support-for-type-traits-ccli-and-ccx"></a>编译器支持类型特征 (C + + /cli 和 C + + /cli CX)
 
-编译器支持*类型特征*，这表示在编译时类型的各种特征。
+Microsoft c + + 编译器支持*类型特征*C + /cli 和 C + + /CX 扩展，指示在编译时类型的各种特征。
 
 ## <a name="all-runtimes"></a>所有运行时
 
@@ -90,9 +90,9 @@ ms.locfileid: "42588277"
 
 以下列表包含编译器支持类型特征。 所有类型特征将返回**false**如果不满足类型特征的名称指定的条件。
 
-(在以下列表中，编写代码示例仅在 C + + /cli CLI。 但相应的类型特征也支持 Visual c + + 组件扩展中，除非另有说明。 "术语平台类型"是指 Windows 运行时类型或公共语言运行时类型。）
+(在以下列表中，编写代码示例仅在 C + + /cli CLI。 但相应的类型特征也支持在 C + + /cli CX 除非另有说明。 "术语平台类型"是指 Windows 运行时类型或公共语言运行时类型。）
 
-- `__has_assign(` `type` `)`
+- `__has_assign(` *类型* `)`
 
    返回 **，则返回 true**如果平台或本机类型具有复制赋值运算符。
 
@@ -106,7 +106,7 @@ ms.locfileid: "42588277"
     }
     ```
 
-- `__has_copy(` `type` `)`
+- `__has_copy(` *类型* `)`
 
    返回 **，则返回 true**如果平台或本机类型具有复制构造函数。
 
@@ -120,9 +120,9 @@ ms.locfileid: "42588277"
     }
     ```
 
-- `__has_finalizer(` `type` `)`
+- `__has_finalizer(` *类型* `)`
 
-   （不支持在 Visual c + + 组件扩展）返回 **，则返回 true**如果 CLR 类型有终结器。 请参阅[析构函数和终结器中如何： 定义和使用类和结构 (C + + CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)有关详细信息。
+   (不支持在 C + + /cli CX。)返回 **，则返回 true**如果 CLR 类型有终结器。 请参阅[析构函数和终结器中如何： 定义和使用类和结构 (C + + CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)有关详细信息。
 
     ```cpp
     using namespace System;
@@ -137,7 +137,7 @@ ms.locfileid: "42588277"
     }
     ```
 
-- `__has_nothrow_assign(` `type` `)`
+- `__has_nothrow_assign(` *类型* `)`
 
    返回 **，则返回 true**如果复制赋值运算符具有空异常规范。
 
@@ -153,7 +153,7 @@ ms.locfileid: "42588277"
     }
     ```
 
-- `__has_nothrow_constructor(` `type` `)`
+- `__has_nothrow_constructor(` *类型* `)`
 
    返回 **，则返回 true**如果默认构造函数具有空异常规范。
 
@@ -169,7 +169,7 @@ ms.locfileid: "42588277"
     }
     ```
 
-- `__has_nothrow_copy(` `type` `)`
+- `__has_nothrow_copy(` *类型* `)`
 
    返回 **，则返回 true**如果复制构造函数具有空异常规范。
 
@@ -185,7 +185,7 @@ ms.locfileid: "42588277"
     }
     ```
 
-- `__has_trivial_assign(` `type` `)`
+- `__has_trivial_assign(` *类型* `)`
 
    返回 **，则返回 true**如果该类型具有一个普通的、 由编译器生成的赋值运算符。
 
@@ -199,7 +199,7 @@ ms.locfileid: "42588277"
     }
     ```
 
-- `__has_trivial_constructor(` `type` `)`
+- `__has_trivial_constructor(` *类型* `)`
 
    返回 **，则返回 true**类型是否包含普通的、 由编译器生成的构造函数。
 
@@ -213,7 +213,7 @@ ms.locfileid: "42588277"
     }
     ```
 
-- `__has_trivial_copy(` `type` `)`
+- `__has_trivial_copy(` *类型* `)`
 
    返回 **，则返回 true**如果该类型具有一个普通的、 由编译器生成复制构造函数。
 
@@ -227,7 +227,7 @@ ms.locfileid: "42588277"
     }
     ```
 
-- `__has_trivial_destructor(` `type` `)`
+- `__has_trivial_destructor(` *类型* `)`
 
    返回 **，则返回 true**如果该类型具有一个普通的、 由编译器生成的析构函数。
 
@@ -242,7 +242,7 @@ ms.locfileid: "42588277"
     }
     ```
 
-- `__has_user_destructor(` `type` `)`
+- `__has_user_destructor(` *类型* `)`
 
    返回 **，则返回 true**如果平台或本机类型具有用户声明析构函数。
 
@@ -259,7 +259,7 @@ ms.locfileid: "42588277"
     }
     ```
 
-- `__has_virtual_destructor(` `type` `)`
+- `__has_virtual_destructor(` *类型* `)`
 
    返回 **，则返回 true**如果该类型具有虚拟析构函数。
 
@@ -278,11 +278,11 @@ ms.locfileid: "42588277"
     }
     ```
 
-- `__is_abstract(` `type` `)`
+- `__is_abstract(` *类型* `)`
 
-   返回 **，则返回 true**类型是否为抽象类型。 有关本机抽象类型的详细信息，请参阅[抽象](../windows/abstract-cpp-component-extensions.md)。
+   返回 **，则返回 true**类型是否为抽象类型。 有关本机抽象类型的详细信息，请参阅[抽象类](../cpp/abstract-classes-cpp.md)。
 
-   `__is_abstract` 也适用于平台类型。 具有至少一个成员的接口为抽象类型，就像是具有至少一个抽象成员的引用类型。 有关抽象平台类型的详细信息，请参阅[抽象类](../cpp/abstract-classes-cpp.md)
+   `__is_abstract` 也适用于平台类型。 具有至少一个成员的接口为抽象类型，就像是具有至少一个抽象成员的引用类型。 有关抽象平台类型的详细信息，请参阅[抽象](../windows/abstract-cpp-component-extensions.md)。
 
     ```cpp
     // is_abstract.cpp
@@ -318,7 +318,7 @@ ms.locfileid: "42588277"
     }
     ```
 
-- `__is_class(` `type` `)`
+- `__is_class(` *类型* `)`
 
    返回 **，则返回 true**如果类型为本机类或结构。
 
@@ -350,9 +350,9 @@ ms.locfileid: "42588277"
     }
     ```
 
-- `__is_delegate(` `type` `)`
+- `__is_delegate(` *类型* `)`
 
-   返回 **，则返回 true**如果`type`是一个委托。 有关详细信息，请参阅[委托 （c + + 组件扩展）](../windows/delegate-cpp-component-extensions.md)。
+   返回 **，则返回 true**如果`type`是一个委托。 有关详细信息，请参阅[委托 (C + + /cli 和 C + + /cli CX)](../windows/delegate-cpp-component-extensions.md)。
 
     ```cpp
     delegate void MyDel();
@@ -361,7 +361,7 @@ ms.locfileid: "42588277"
     }
     ```
 
-- `__is_empty(` `type` `)`
+- `__is_empty(` *类型* `)`
 
    返回 **，则返回 true**如果类型没有实例数据成员。
 
@@ -377,7 +377,7 @@ ms.locfileid: "42588277"
     }
     ```
 
-- `__is_enum(` `type` `)`
+- `__is_enum(` *类型* `)`
 
    返回 **，则返回 true**类型是否为本机枚举。
 
@@ -399,7 +399,7 @@ ms.locfileid: "42588277"
     }
     ```
 
-- `__is_interface_class(` `type` `)`
+- `__is_interface_class(` *类型* `)`
 
    返回 **，则返回 true**如果传递一个平台接口。 有关详细信息，请参阅[接口类](../windows/interface-class-cpp-component-extensions.md)。
 
@@ -413,7 +413,7 @@ ms.locfileid: "42588277"
     }
     ```
 
-- `__is_pod(` `type` `)`
+- `__is_pod(` *类型* `)`
 
    返回 **，则返回 true**如果类型是一个类或联合没有构造函数或私有或受保护的非静态成员、 基类和没有虚函数。 请参见 C++ 标准，8.5.1/1、9/4 和 3.9/10 小节以获取有关 POD 的详细信息。
 
@@ -429,7 +429,7 @@ ms.locfileid: "42588277"
     }
     ```
 
-- `__is_polymorphic(` `type` `)`
+- `__is_polymorphic(` *类型* `)`
 
    返回 **，则返回 true**如果本机类型具有虚函数。
 
@@ -445,7 +445,7 @@ ms.locfileid: "42588277"
     }
     ```
 
-- `__is_ref_array(` `type` `)`
+- `__is_ref_array(` *类型* `)`
 
    返回 **，则返回 true**如果传递一个平台数组。 有关详细信息，请参阅[数组](../windows/arrays-cpp-component-extensions.md)。
 
@@ -457,7 +457,7 @@ ms.locfileid: "42588277"
     }
     ```
 
-- `__is_ref_class(` `type` `)`
+- `__is_ref_class(` *类型* `)`
 
    返回 **，则返回 true**如果传递一个引用类。 用户定义的引用类型的详细信息，请参阅[类和结构](../windows/classes-and-structs-cpp-component-extensions.md)。
 
@@ -470,7 +470,7 @@ ms.locfileid: "42588277"
     }
     ```
 
-- `__is_sealed(` `type` `)`
+- `__is_sealed(` *类型* `)`
 
    返回 **，则返回 true**如果传递一个平台或本机类型标记为密封。 有关详细信息，请参阅[密封](../windows/sealed-cpp-component-extensions.md)。
 
@@ -481,7 +481,7 @@ ms.locfileid: "42588277"
     }
     ```
 
-- `__is_simple_value_class(` `type` `)`
+- `__is_simple_value_class(` *类型* `)`
 
    返回 **，则返回 true**如果传递不包含对垃圾回收堆引用的值类型。 用户定义的值类型的详细信息，请参阅[类和结构](../windows/classes-and-structs-cpp-component-extensions.md)。
 
@@ -499,7 +499,7 @@ ms.locfileid: "42588277"
     }
     ```
 
-- `__is_union(` `type` `)`
+- `__is_union(` *类型* `)`
 
    返回 **，则返回 true**类型是否为联合。
 
@@ -516,7 +516,7 @@ ms.locfileid: "42588277"
     }
     ```
 
-- `__is_value_class(` `type` `)`
+- `__is_value_class(` *类型* `)`
 
    返回 **，则返回 true**如果传递值类型。 用户定义的值类型的详细信息，请参阅[类和结构](../windows/classes-and-structs-cpp-component-extensions.md)。
 
@@ -580,4 +580,4 @@ R is a ref class
 
 ## <a name="see-also"></a>请参阅
 
-[适用于运行时平台的组件扩展](../windows/component-extensions-for-runtime-platforms.md)
+[适用于.NET 和 UWP 组件扩展](../windows/component-extensions-for-runtime-platforms.md)

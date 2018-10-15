@@ -1,7 +1,7 @@
 ---
-title: 事件 （c + + 组件扩展） |Microsoft Docs
+title: 事件 (C + + /cli 和 C + + /cli CX) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -18,14 +18,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f001f61a9425a064d3b899beb6cbb689471da5bf
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 85a3e2cb92df4396f607db920c3dfd280530c7e9
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46442586"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328501"
 ---
-# <a name="event--c-component-extensions"></a>event（C++ 组件扩展）
+# <a name="event--ccli-and-ccx"></a>事件 (C + + /cli 和 C + + /cli CX)
 
 **事件**关键字声明*事件*，这是到已注册的订阅的通知 (*事件处理程序*) 已发生的相关事情。
 
@@ -282,4 +282,4 @@ int main() {
 
 ## <a name="see-also"></a>请参阅
 
-[适用于运行时平台的组件扩展](../windows/component-extensions-for-runtime-platforms.md)
+[适用于.NET 和 UWP 组件扩展](../windows/component-extensions-for-runtime-platforms.md)

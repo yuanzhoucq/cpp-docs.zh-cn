@@ -1,7 +1,7 @@
 ---
-title: nullptr （c + + 组件扩展） |Microsoft Docs
+title: nullptr (C + + /cli 和 C + + /cli CX) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -16,14 +16,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0596276589790ee6fae8e071e50b4d9b55dd8b85
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 46a68e3ab7119dfb2c99578f299b9d38cbc5736d
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46439609"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328488"
 ---
-# <a name="nullptr--c-component-extensions"></a>nullptr（C++ 组件扩展）
+# <a name="nullptr--ccli-and-ccx"></a>nullptr (C + + /cli 和 C + + /cli CX)
 
 **Nullptr**关键字表示*为 null 指针值*。 使用 null 指针值指示，对象句柄、 内部指针或本机指针类型不指向对象。
 
@@ -235,5 +235,5 @@ int main() {
 
 ## <a name="see-also"></a>请参阅
 
-[适用于运行时平台的组件扩展](../windows/component-extensions-for-runtime-platforms.md)<br/>
+[适用于.NET 和 UWP 组件扩展](../windows/component-extensions-for-runtime-platforms.md)<br/>
 [nullptr](../cpp/nullptr.md)

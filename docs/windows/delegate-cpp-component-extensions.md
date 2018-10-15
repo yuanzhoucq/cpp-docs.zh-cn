@@ -1,7 +1,7 @@
 ---
-title: 委托 （c + + 组件扩展） |Microsoft Docs
+title: 委托 (C + + /cli 和 C + + /cli CX) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -18,14 +18,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 13ce7d2a35245716adc70b9e84532ea7d1a4a440
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2281dfb6648f9c4756800a0693f184ccaa7435d7
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46432396"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327955"
 ---
-# <a name="delegate--c-component-extensions"></a>委托（C++ 组件扩展）
+# <a name="delegate--ccli-and-ccx"></a>委托 (C + + /cli 和 C + + /cli CX)
 
 声明表示的函数指针的类型。
 
@@ -131,7 +131,7 @@ function_declaration
 
 - [如何：定义和使用委托 (C++/CLI)](../dotnet/how-to-define-and-use-delegates-cpp-cli.md)
 
-- [泛型委托 (Visual C++)](../windows/generic-delegates-visual-cpp.md)
+- [泛型委托 (C + + CLI)](../windows/generic-delegates-visual-cpp.md)
 
 ### <a name="requirements"></a>要求
 
@@ -212,4 +212,4 @@ in static func3 11
 
 ## <a name="see-also"></a>请参阅
 
-[适用于运行时平台的组件扩展](../windows/component-extensions-for-runtime-platforms.md)
+[适用于.NET 和 UWP 组件扩展](../windows/component-extensions-for-runtime-platforms.md)

@@ -1,7 +1,7 @@
 ---
-title: 如何： 通过泛型 （Visual c + +） 提高性能 |Microsoft Docs
+title: 如何： 通过泛型提高性能 (C + + CLI) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -18,16 +18,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9f946970f78b432774a5e4c7ba20fd15a00ae654
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: ead9491e7b5302cadfa59eb7d98215fb3c41eb09
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318520"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327812"
 ---
-# <a name="how-to-improve-performance-with-generics-visual-c"></a>如何：通过泛型提高性能 (Visual C++)
+# <a name="how-to-improve-performance-with-generics-ccli"></a>如何： 通过泛型提高性能 (C + + CLI)
 
-采用泛型可以根据类型参数创建可重用的代码。 类型参数的实际类型将推迟，直到由客户端代码调用。 有关泛型的详细信息，请参阅[泛型](../windows/generics-cpp-component-extensions.md)。
+采用泛型可以根据类型参数创建可重用的代码。 类型参数的实际类型将推迟，直到由客户端代码调用。 有关泛型的详细信息，请参阅 [Generics](../windows/generics-cpp-component-extensions.md)。
 
 本文讨论泛型如何有助于提高使用集合的应用程序的性能。
 

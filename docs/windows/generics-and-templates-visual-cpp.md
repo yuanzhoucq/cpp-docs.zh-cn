@@ -1,7 +1,7 @@
 ---
-title: 泛型和模板 （Visual c + +） |Microsoft Docs
+title: 泛型和模板 (C + + CLI) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -16,14 +16,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f8a58e26b571c119d45cb981c582ebec335eface
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 4d63d7620aa4d2cb83b954494172da9db55f6a2e
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42590997"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328215"
 ---
-# <a name="generics-and-templates-visual-c"></a>泛型和模板 (Visual C++)
+# <a name="generics-and-templates-ccli"></a>泛型和模板 (C + + CLI)
 
 泛型和模板是为参数化类型提供支持这两种语言功能。 但是，它们不同，并且具有不同用途。 本主题概述了很多差异。
 
@@ -61,7 +61,7 @@ ms.locfileid: "42590997"
 
 下面的示例演示使用模板和泛型在一起的一个简单示例。 在此示例中，模板类将通过其参数传递给泛型类型。 不能反过来。
 
-当你想要对现有泛型 API，是对 Visual c + + 程序集，本地的模板代码生成时或当您需要将一层额外的参数化添加到泛型类型，若要利用的模板不 supporte 某些功能时，可以使用此习惯用法通过泛型 d。
+你想要对现有泛型 API，是本地的 C + 的模板代码生成时，可以使用此习惯用法 + CLI 程序集，或当需要将一层额外的参数化添加到泛型类型，若要利用模板的某些功能不受支持 by 泛型。
 
 ### <a name="code"></a>代码
 

@@ -1,7 +1,7 @@
 ---
-title: 部分 （c + + 组件扩展） |Microsoft Docs
+title: 部分 (C + + /cli 和 C + + /cli CX) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -18,14 +18,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 340323d2b540c74e600b76129edd360b73d0db23
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ace57934c741d0a6e7b7ab6fbe5e482540a9bc48
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46372131"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327864"
 ---
-# <a name="partial--c-component-extensions"></a>部分（C++ 组件扩展）
+# <a name="partial--ccli-and-ccx"></a>部分 (C + + /cli 和 C + + /cli CX)
 
 **分部**关键字，相同的 ref 类，以编写独立地在不同的文件中的不同部分。
 

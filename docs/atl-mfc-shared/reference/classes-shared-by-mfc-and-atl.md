@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 566164f40f8795c8402b04c9c25e13dda036961d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 50295c9d296449e36ed4a305b568d2e0aaed10a3
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765432"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327903"
 ---
 # <a name="classes-shared-by-mfc-and-atl"></a>由 MFC 和 ATL 共享的类
 
@@ -33,8 +33,8 @@ ms.locfileid: "43765432"
 |[中的 CImage](../../atl-mfc-shared/reference/cimage-class.md)|提供了增强的位图支持，包括加载和保存 JPEG、 GIF、 BMP、 和可移植网络图形 (PNG) 格式图像的能力。|atlimage.h|
 |[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)|封装 OLE 自动化中使用的日期数据类型。|atlcomtime.h|
 |[COleDateTimeSpan](../../atl-mfc-shared/reference/coledatetimespan-class.md)|表示相对时间，时间跨度。|atlcomtime.h|
-|[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)|类似于 Windows 的类[点](../../mfc/reference/point-structure1.md)结构，它还包括成员函数以操作`CPoint`和`POINT`结构。|atltypes.h|
-|[CRect](../../atl-mfc-shared/reference/crect-class.md)|类似于 Windows 的类[RECT](../../mfc/reference/rect-structure1.md)结构，它还包括成员函数以操作`CRect`对象和 Windows`RECT`结构。|atltypes.h|
+|[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)|类似于 Windows 的类[点](../../mfc/reference/point-structure.md)结构，它还包括成员函数以操作`CPoint`和`POINT`结构。|atltypes.h|
+|[CRect](../../atl-mfc-shared/reference/crect-class.md)|类似于 Windows 的类[RECT](../../mfc/reference/rect-structure.md)结构，它还包括成员函数以操作`CRect`对象和 Windows`RECT`结构。|atltypes.h|
 |[CSimpleStringT](../../atl-mfc-shared/reference/csimplestringt-class.md)|表示`CSimpleStringT`对象。|atlsimpstr.h|
 |[CSize](../../atl-mfc-shared/reference/csize-class.md)|一个类似于实现相对坐标或位置的 Windows 大小结构的类。|atltypes.h|
 |[CStrBufT](../../atl-mfc-shared/reference/cstrbuft-class.md)|提供的自动资源清除`GetBuffer`并`ReleaseBuffer`现有调用`CStringT`对象。|atlsimpstr.h|

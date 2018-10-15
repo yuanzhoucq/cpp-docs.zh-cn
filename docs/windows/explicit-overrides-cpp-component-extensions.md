@@ -1,7 +1,7 @@
 ---
-title: 显式重写 （c + + 组件扩展） |Microsoft Docs
+title: 显式重写 (C + + /cli 和 C + + /cli CX) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -15,14 +15,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ba6ed66359ee833b51154e47f8f6c26c0de8994c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 689c8420c2526f94f88c8b2ba8433c2310281874
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46408942"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328033"
 ---
-# <a name="explicit-overrides--c-component-extensions"></a>显式重写（C++ 组件扩展）
+# <a name="explicit-overrides--ccli-and-ccx"></a>显式重写 (C + + /cli 和 C + + /cli CX)
 
 本主题讨论如何显式重写基类或接口的成员。 命名的显式重写仅应该用于重写的方法与具有不同的名称派生方法。
 
@@ -184,4 +184,4 @@ public:
 
 ## <a name="see-also"></a>请参阅
 
-[适用于运行时平台的组件扩展](../windows/component-extensions-for-runtime-platforms.md)
+[适用于.NET 和 UWP 组件扩展](../windows/component-extensions-for-runtime-platforms.md)
