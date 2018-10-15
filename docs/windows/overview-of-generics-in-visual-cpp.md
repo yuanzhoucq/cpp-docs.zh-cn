@@ -1,7 +1,7 @@
 ---
-title: Visual c + + 中的泛型概述 |Microsoft Docs
+title: 概述泛型在 C + + /cli CLI |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -22,20 +22,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2c1a6e9b9734fbb836d9e061b15534e23b95b29c
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 9e6240fd5e33f44c42d8a0d33302b9ef4cf9f8bb
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42590933"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327851"
 ---
-# <a name="overview-of-generics-in-visual-c"></a>Visual C++ 中的泛型概述
+# <a name="overview-of-generics-in-ccli"></a>概述泛型在 C + + /cli CLI
 
 泛型是公共语言运行时所支持的参数化类型。 参数化类型是用在使用泛型时指定的未知类型参数定义的类型。
 
 ## <a name="why-generics"></a>为什么使用泛型？
 
-C++ 支持模板，模板和泛型均支持参数化类型创建类型化的集合类。 但是，模板提供编译时的参数化。 您不能引用包含模板定义的程序集和创建模板的新专用化。 编译之后，专用化模板看起来与其他任何类或方法类似。 相比之下，泛型在 MSIL 中作为参数化类型发出，是运行时已知的参数化类型；引用包含泛型类型的程序集的源代码可以创建泛型类型的专用化。 Visual c + + 模板和泛型比较详细信息，请参阅[泛型和模板 （Visual c + +）](../windows/generics-and-templates-visual-cpp.md)。
+C++ 支持模板，模板和泛型均支持参数化类型创建类型化的集合类。 但是，模板提供编译时的参数化。 您不能引用包含模板定义的程序集和创建模板的新专用化。 编译之后，专用化模板看起来与其他任何类或方法类似。 相比之下，泛型在 MSIL 中作为参数化类型发出，是运行时已知的参数化类型；引用包含泛型类型的程序集的源代码可以创建泛型类型的专用化。 标准 c + + 模板和泛型比较详细信息，请参阅[泛型和模板 (C + + CLI)](../windows/generics-and-templates-visual-cpp.md)。
 
 ## <a name="generic-functions-and-types"></a>泛型函数和类型
 

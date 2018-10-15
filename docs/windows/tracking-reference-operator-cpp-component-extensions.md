@@ -1,7 +1,7 @@
 ---
-title: 跟踪引用运算符 （c + + 组件扩展） |Microsoft Docs
+title: 跟踪引用运算符 (C + + /cli 和 C + + /cli CX) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -18,14 +18,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: da01a2dd7e871bb555b2b5711a59dbb5e65424a8
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 8ea8cec7a3cc2e24c55c9f8454b421f5488f1c89
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604071"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327916"
 ---
-# <a name="tracking-reference-operator-c-component-extensions"></a>跟踪引用运算符（C++ 组件扩展）
+# <a name="tracking-reference-operator-ccli-and-ccx"></a>跟踪引用运算符 (C + + /cli 和 C + + /cli CX)
 
 一个*跟踪引用*(`%`) 的行为类似于普通的 c + + 引用 (`&`)，只不过当对象被分配给跟踪引用，该对象的引用计数会递增。
 

@@ -1,7 +1,7 @@
 ---
 title: 泛型函数 (C + + CLI) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b8c51b3468a636335a74b8a4206a6b533d3a200b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0d687dfbee48105001d3be04fd4918b9889e2d04
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46398854"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327695"
 ---
 # <a name="generic-functions-ccli"></a>泛型函数 (C++/CLI)
 
@@ -91,7 +91,7 @@ return-type identifier<type-parameter identifier(s)>
 
 泛型函数是使用泛型类型参数声明的函数。 它们可能是类或结构或独立函数中的方法。 单个泛型声明隐式声明一的系列区别只体现在不同的实际类型为泛型类型参数替换的函数。
 
-Visual c + + 中不能使用泛型类型参数声明类或结构的构造函数。
+不能使用泛型类型参数声明的类或结构的构造函数。
 
 调用时，泛型类型参数替换为实际类型。 可以使用类似于模板函数调用语法的尖括号中显式指定的实际类型。 如果调用不带类型参数，编译器将尝试推导从函数调用中提供的参数的实际类型。 如果无法从使用的参数推导预期的类型参数，编译器将报告错误。
 
@@ -193,5 +193,5 @@ My function returned a string: Hello generic functions!
 
 ## <a name="see-also"></a>请参阅
 
-[适用于运行时平台的组件扩展](../windows/component-extensions-for-runtime-platforms.md)<br/>
+[适用于.NET 和 UWP 组件扩展](../windows/component-extensions-for-runtime-platforms.md)<br/>
 [泛型](../windows/generics-cpp-component-extensions.md)

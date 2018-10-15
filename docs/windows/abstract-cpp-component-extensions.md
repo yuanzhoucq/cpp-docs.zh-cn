@@ -1,7 +1,7 @@
 ---
-title: abstract （c + + 组件扩展） |Microsoft Docs
+title: 抽象 (C + + /cli 和 C + + /cli CX) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -18,14 +18,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 463848ea5f01bf232850d548c9f4255c07409254
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 78a5b42de6b0ac54d060bb6369566aa446863289
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42610994"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328189"
 ---
-# <a name="abstract--c-component-extensions"></a>abstract（C++ 组件扩展）
+# <a name="abstract--ccli-and-ccx"></a>抽象 (C + + /cli 和 C + + /cli CX)
 
 **抽象**关键字声明以下两者：
 
@@ -37,12 +37,9 @@ ms.locfileid: "42610994"
 
 ### <a name="syntax"></a>语法
 
-```cpp
-      class-declaration
-      class-identifier
-      abstract {}
-virtualreturn-typemember-function-identifier() abstract ;
-```
+*类声明**类标识符***抽象 {}**
+
+**虚拟***返回类型**成员函数标识符* **（） 抽象;**
 
 ### <a name="remarks"></a>备注
 
@@ -115,4 +112,4 @@ public:
 
 ## <a name="see-also"></a>请参阅
 
-[适用于运行时平台的组件扩展](../windows/component-extensions-for-runtime-platforms.md)
+[适用于.NET 和 UWP 组件扩展](../windows/component-extensions-for-runtime-platforms.md)

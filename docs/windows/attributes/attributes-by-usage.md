@@ -15,18 +15,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 39dac1bda25a66ecd67feac167e0029931a204e0
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 49e298af793655bb3ea3854909a16dd4db03c6a3
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790503"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328176"
 ---
 # <a name="attributes-by-usage"></a>按用法分的特性
 
 本主题列出根据它们适用于 c + + 语言元素的属性。
 
-如果属性优先于不在该属性的范围内的 Visual c + + 元素，特性块视为注释。
+如果属性优先于不在该属性的范围内的元素，特性块视为注释。
 
 |特性|描述|
 |---------------|-----------------|
@@ -89,6 +89,6 @@ ms.locfileid: "48790503"
 
 ## <a name="see-also"></a>请参阅
 
-[对于 COM 和.NET 的 c + + 特性](cpp-attributes-com-net.md)<br/>
+[COM 和 .NET 的 C++ 属性](cpp-attributes-com-net.md)<br/>
 [按组分的特性](attributes-by-group.md)<br/>
 [按字母顺序的特性参考](attributes-alphabetical-reference.md)

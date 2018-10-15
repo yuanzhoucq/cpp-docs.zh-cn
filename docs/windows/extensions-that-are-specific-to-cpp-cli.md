@@ -1,7 +1,7 @@
 ---
 title: 扩展的特定于 C + + /cli CLI |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -13,15 +13,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e4a2b0c631c4356bed7ff190c2867a8540b57526
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0bb6b1738b0eecbfd4e97171d2a9faea2d9b6005
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46444653"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327760"
 ---
 # <a name="extensions-that-are-specific-to-ccli"></a>C++/CLI 特有的扩展
-以下语言功能，它们文档的此部分中所述，仅适用于 C + + /cli CLI。
+
+以下语言功能仅适用于 C + + /cli CLI:
   
 [__identifier (C++/CLI)](../windows/identifier-cpp-cli.md)  
   
@@ -37,4 +38,4 @@ ms.locfileid: "46444653"
   
 ## <a name="see-also"></a>请参阅
 
-[适用于运行时平台的组件扩展](../windows/component-extensions-for-runtime-platforms.md)
+[适用于.NET 和 UWP 组件扩展](../windows/component-extensions-for-runtime-platforms.md)

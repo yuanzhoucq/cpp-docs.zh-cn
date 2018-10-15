@@ -1,7 +1,7 @@
 ---
-title: 文本 （c + + 组件扩展） |Microsoft Docs
+title: 文本 (C + + /cli 和 C + + /cli CX) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -18,14 +18,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 76a57261b28679c4f05b677dc7b49008535c921b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 8168b3cd981bb288df35659ffd3520a7c8597d1e
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42596441"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328060"
 ---
-# <a name="literal-c-component-extensions"></a>文本（C++ 组件扩展）
+# <a name="literal-ccli-and-ccx"></a>文本 (C + + /cli 和 C + + /cli CX)
 
 （数据成员） 的变量标记为**文字**中 **/clr**编译是等同的本机**静态常量**变量。
 
@@ -137,4 +137,4 @@ class B {
 
 ## <a name="see-also"></a>请参阅
 
-[适用于运行时平台的组件扩展](../windows/component-extensions-for-runtime-platforms.md)
+[适用于.NET 和 UWP 组件扩展](../windows/component-extensions-for-runtime-platforms.md)

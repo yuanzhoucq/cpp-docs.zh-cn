@@ -1,7 +1,7 @@
 ---
-title: Windows 运行时和托管的模板 （c + + 组件扩展） |Microsoft Docs
+title: Windows 运行时和托管的模板 (C + + /cli 和 C + + /cli CX) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -15,14 +15,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0a7d08354bcd2b0b0d8cf1db6e4bd58fb9821708
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: b83aa54b9f9697fddbefc6da29e7cf99d497cc12
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42591444"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328293"
 ---
-# <a name="windows-runtime-and-managed-templates-c-component-extensions"></a>Windows 运行时和托管模板（C++ 组件扩展）
+# <a name="windows-runtime-and-managed-templates-ccli-and-ccx"></a>Windows 运行时和托管的模板 (C + + /cli 和 C + + /cli CX)
 
 使用模板可以定义 Windows 运行时或公共语言运行时类型的原型，然后使用不同模板类型参数实例化该类型的变体。
 
@@ -50,7 +50,7 @@ ms.locfileid: "42591444"
 
 ### <a name="examples"></a>示例
 
-使用托管类型模板参数实例化泛型类型是可行的，但是无法使用泛型类型模板参数实例化托管模板。 这是因为泛型类型在运行时解析。 有关详细信息，请参阅[泛型和模板 （Visual c + +）](../windows/generics-and-templates-visual-cpp.md)。
+使用托管类型模板参数实例化泛型类型是可行的，但是无法使用泛型类型模板参数实例化托管模板。 这是因为泛型类型在运行时解析。 有关详细信息，请参阅[泛型和模板 (C + + CLI)](../windows/generics-and-templates-visual-cpp.md)。
 
 ```cpp
 // managed_templates.cpp
@@ -142,4 +142,4 @@ class A <int> {};
 
 ## <a name="see-also"></a>请参阅
 
-[适用于运行时平台的组件扩展](../windows/component-extensions-for-runtime-platforms.md)
+[适用于.NET 和 UWP 组件扩展](../windows/component-extensions-for-runtime-platforms.md)

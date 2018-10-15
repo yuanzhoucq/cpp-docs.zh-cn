@@ -1,7 +1,7 @@
 ---
-title: 特性目标 （c + + 组件扩展） |Microsoft Docs
+title: 特性目标 (C + + /cli 和 C + + /cli CX) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -15,14 +15,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d7a4cc42a0913636b0b63057f0f265f3fb8a034c
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 9dfb469bb9dcea8a2c1e197fa7c305d08d155cf1
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42589411"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327775"
 ---
-# <a name="attribute-targets-c-component-extensions"></a>特性目标（C++ 组件扩展）
+# <a name="attribute-targets-ccli-and-ccx"></a>特性目标 (C + + /cli 和 C + + /cli CX)
 
 特性用法说明符允许指定特性目标。  每个特性定义为应用于特定的语言元素。 例如，某个特征可能定义为仅应用于类和结构。  以下列表演示了自定义属性可以使用的语法元素。 可以结合使用这些值（使用逻辑或）。
 

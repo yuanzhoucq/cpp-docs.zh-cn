@@ -1,7 +1,7 @@
 ---
-title: typeid （c + + 组件扩展） |Microsoft Docs
+title: typeid (C + + /cli 和 C + + /cli CX) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -15,18 +15,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e1daf9d33b3eb21bf7d196a4263b5f2f7009b183
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b31344b1ba72b37bcfff45a3fd4feefda85f6a7a
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46435397"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327578"
 ---
-# <a name="typeid--c-component-extensions"></a>typeid（C++ 组件扩展）
+# <a name="typeid--ccli-and-ccx"></a>typeid (C + + /cli 和 C + + /cli CX)
 
 获取一个值，该值指示对象类型。
 
-> [!WARNING]
+> [!NOTE]
 > 本主题引用 typeid 的 C++ 组件扩展版本。 此关键字的 ISO c + + 版本，请参阅[typeid 运算符](../cpp/typeid-operator.md)。
 
 ## <a name="all-runtimes"></a>所有运行时
@@ -200,4 +200,4 @@ int::typeid == handle_to_int::typeid, as expected
 
 ## <a name="see-also"></a>请参阅
 
-[适用于运行时平台的组件扩展](../windows/component-extensions-for-runtime-platforms.md)
+[适用于.NET 和 UWP 组件扩展](../windows/component-extensions-for-runtime-platforms.md)
