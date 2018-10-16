@@ -1,7 +1,7 @@
 ---
 title: “VC++ 目录”属性页 | Microsoft Docs
 ms.custom: ''
-ms.date: 04/26/2018
+ms.date: 10/09/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82aaa2dc43177963b9b38c398e74aaa0ffff11dd
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 1799bfedaacd5e1560b1294524f717db8912f6b0
+ms.sourcegitcommit: 243ee0395ee44654a81ce1232f4581fb54904868
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821213"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072393"
 ---
 # <a name="vc-directories-property-page-windows"></a>“VC++ 目录”属性页 (Windows)
 
@@ -76,7 +76,7 @@ VC++ 目录属性适用于项目，而不是顶级解决方案节点。 如果�
 
 若要详细了解宏以及为何要尽可能地使用宏而不是硬编码的路径，请参阅[使用项目属性](../ide/working-with-project-properties.md#bkmkPropertiesVersusMacros)。
 
-若要查看常用宏的列表，请参阅[用于生成命令和属性的常用宏](https://docs.microsoft.com/cpp/ide/common-macros-for-build-commands-and-properties)。
+若要查看常用宏的列表，请参阅[用于生成命令和属性的常用宏](common-macros-for-build-commands-and-properties.md)。
 
 可以通过两种方式来定义自己的宏：
 

@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6f0e5ce08e362cef0fd625036a92c1d13885ded
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: bcf3ce1f0ddc5003886c367cfe5db8968a911ee9
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821538"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083978"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Visual C++ 更改历史记录（2003 - 2015）
 
@@ -282,7 +282,7 @@ ms.locfileid: "48821538"
 
 - **clock**
 
-   在早期版本中，已使用 Windows API [GetSystemTimeAsFileTime](https://msdn.microsoft.com/library/windows/desktop/ms724397.aspx) 实现了 [clock](../c-runtime-library/reference/clock.md) 函数。 使用此实现，clock 函数对系统时间比较敏感，因此不一定是单一的。 已根据 [QueryPerformanceCounter](https://msdn.microsoft.com/library/windows/desktop/ms644904.aspx) 重新实现了 clock 函数，现在它是单一的。
+   在早期版本中，已使用 Windows API [GetSystemTimeAsFileTime](/windows/desktop/api/sysinfoapi/nf-sysinfoapi-getsystemtimeasfiletime) 实现了 [clock](../c-runtime-library/reference/clock.md) 函数。 使用此实现，clock 函数对系统时间比较敏感，因此不一定是单一的。 已根据 [QueryPerformanceCounter](https://msdn.microsoft.com/library/windows/desktop/ms644904.aspx) 重新实现了 clock 函数，现在它是单一的。
 
 - fstat 和 _utime
 
@@ -2545,7 +2545,7 @@ ms.locfileid: "48821538"
 
 - **弃用属性化 ATL 代码支持**（默认开启等级 1 (`/W1`)）
 
-   以前版本的编译器支持属性化 ATL 代码。 由于下一阶段将删除[从 Visual Studio 2008](https://msdn.microsoft.com/library/bb384632\(v=vs.90\).aspx) 开始的属性化 ATL 代码支持，所以已弃用属性化 ATL 代码。 编译器现将发出编译器警告 C4467 以帮助识别这类已弃用的代码。
+   以前版本的编译器支持属性化 ATL 代码。 由于下一阶段将删除[从 Visual Studio 2008](https://msdn.microsoft.com/library/bb384632) 开始的属性化 ATL 代码支持，所以已弃用属性化 ATL 代码。 编译器现将发出编译器警告 C4467 以帮助识别这类已弃用的代码。
 
     ```Output
     warning C4467: Usage of ATL attributes is deprecated
