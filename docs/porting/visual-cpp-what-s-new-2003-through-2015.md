@@ -13,12 +13,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01ee370b4fd96419ce095fa9a93450b98b241dd2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 51921f8e55b9d4ce4e1875f5216984fe3257ca97
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448566"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49084108"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Visual C++ 新增功能（2003 - 2015）
 
@@ -1360,7 +1360,7 @@ ms.locfileid: "46448566"
 
 - **弃用属性化 ATL 代码支持**（默认开启等级 1 (`/W1`)）
 
-   以前版本的编译器支持属性化 ATL 代码。 由于下一阶段将删除[从 Visual C++ 2008](https://msdn.microsoft.com/library/bb384632\(v=vs.90\).aspx) 开始的属性化 ATL 代码支持，所以已弃用属性化 ATL 代码。 编译器现将发出编译器警告 C4467 以帮助识别这类已弃用的代码。
+   以前版本的编译器支持属性化 ATL 代码。 由于下一阶段将删除[从 Visual C++ 2008](https://msdn.microsoft.com/library/bb384632) 开始的属性化 ATL 代码支持，所以已弃用属性化 ATL 代码。 编译器现将发出编译器警告 C4467 以帮助识别这类已弃用的代码。
 
    ```Output
     warning C4467: Usage of ATL attributes is deprecated

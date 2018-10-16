@@ -46,12 +46,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9af035e65e383c8027c8c19df02e18c298f625e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4ea24e45c26abe418023d4f065117928bb17ae2b
+ms.sourcegitcommit: 3f3f1d687e109b63399e14e2c8f4404787bdfae7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401043"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49336530"
 ---
 # <a name="lround-lroundf-lroundl-llround-llroundf-llroundl"></a>lround、lroundf、lroundl、llround、llroundf、llroundl
 
@@ -99,19 +99,19 @@ long long llroundl(
 
 ## <a name="return-value"></a>返回值
 
-**Lround**和**llround**函数将返回最接近**长**或**长****长**到整数*x*。 中间值从零舍入，这与浮点舍入模式的设置无关。 无错误返回。
+**Lround**并**llround**函数返回最接近**长**或**长****长**到整数*x*。 中间值从零舍入，这与浮点舍入模式的设置无关。 无错误返回。
 
 |输入|SEH 异常|Matherr 异常|
 |-----------|-------------------|-----------------------|
-|± **QNAN**， **IND**|无|**_DOMAIN**|
+|为**QNAN**， **IND**|无|**（_D)**|
 
 ## <a name="remarks"></a>备注
 
-由于 c + + 允许重载，你可以调用的重载**lround**或**llround**采用并返回**float**和**长** **double**值。 在 C 程序中， **lround**和**llround**始终采用并返回**double**。
+由于 c + + 允许重载，可以调用的重载**lround**或**llround**采用并返回**float**并**长** **双**值。 在 C 程序中， **lround**并**llround**始终采用并返回**double**。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**lround**， **lroundf**， **lroundl**， **llround**， **llroundf**， **llroundl**|\<math.h>|
 
@@ -121,7 +121,7 @@ long long llroundl(
 
 ```C
 // crt_lround.c
-// Build with: cl /W3 /Tc crt_lround.c
+// Build with: cl /W4 /Tc crt_lround.c
 // This example displays the rounded results of
 // the floating-point values 2.499999, -2.499999,
 // 2.8, -2.8, 3.5 and -3.5.
@@ -133,7 +133,7 @@ int main( void )
 {
    double x = 2.499999;
    float y = 2.8f;
-   long double z = 3.5;
+   long double z = 3.5L;
 
    printf("lround(%f) is %d\n", x, lround(x));
    printf("lround(%f) is %d\n", -x, lround(-x));
@@ -149,8 +149,8 @@ lround(2.499999) is 2
 lround(-2.499999) is -2
 lroundf(2.800000) is 3
 lroundf(-2.800000) is -3
-lroundl(2.500000) is 4
-lroundl(-2.500000) is -4
+lroundl(3.500000) is 4
+lroundl(-3.500000) is -4
 ```
 
 ## <a name="see-also"></a>请参阅

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f79f8648c2c0d12bf521c38e2db025a8841ab927
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 2b8508b5a14e67092339a456f5b85f78d17906a5
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46061079"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082535"
 ---
 # <a name="argument-description"></a>自变量说明
 
@@ -33,7 +33,7 @@ main 和 wmain 函数中的 `argc` 形参是一个整数，用来指定从命令
 
 `argv` 形参是一个指针数组，这些指针指向表示程序实参的以 null 结尾的字符串。 该数组的每个元素指向传递给 main（或 wmain）的参数的字符串表示形式。 （有关数组的信息，请参阅[数组声明](../c-language/array-declarations.md)。）`argv` 参数可以声明为指向类型 `char` (`char *argv[]`) 的指针数组，或者声明为一个指针（指向指向类型 `char` (`char **argv`) 的多个指针）。 对于 wmain，`argv` 参数可以声明为指向类型 `wchar_t` (`wchar_t *argv[]`) 的指针数组，或者声明为一个指针（指向类型 `wchar_t` (`wchar_t **argv`) 的多个指针）。
 
-按照约定，`argv`[0] 是用于调用程序的命令。  但是，可以使用 [CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa) 来生成进程，并且如果同时使用了第一个和第二个参数（`lpApplicationName` 和 `lpCommandLine`），`argv`[0] 可能不是可执行名称；请使用 [GetModuleFileName](https://msdn.microsoft.com/library/windows/desktop/ms683197) 来检索可执行名称。
+按照约定，`argv`[0] 是用于调用程序的命令。  但是，可以使用 [CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa) 来生成进程，并且如果同时使用了第一个和第二个参数（`lpApplicationName` 和 `lpCommandLine`），`argv`[0] 可能不是可执行名称；请使用 [GetModuleFileName](/windows/desktop/api/libloaderapi/nf-libloaderapi-getmodulefilenamea) 来检索可执行名称。
 
 最后一个指针 (`argv[argc]`) 是 NULL。 （有关获取环境变量信息的替代方法，请参阅《运行时库参考》中的 [getenv](../c-runtime-library/reference/getenv-wgetenv.md)。）
 
