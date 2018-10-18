@@ -1,7 +1,7 @@
 ---
 title: 使用者向导生成的类 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/15/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -21,22 +21,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a4ffcb231824c120c90eaae1751a016ef63b8211
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a7498f15072f3b9687476ba7f6c291ebf5ff88cd
+ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46106176"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49410768"
 ---
 # <a name="consumer-wizard-generated-classes"></a>使用者向导生成的类
 
-当使用 ATL OLE DB 使用者向导生成一个使用者时，可以选择使用 OLE DB 模板或 OLE DB 属性。 在这两种情况下，向导将分别生成命令类和用户记录类。 命令类包含用于打开在向导中指定的数据源和行集的代码。 用户记录类包含选定数据库表的列映射。 但是，这两种情况下生成的代码各不相同：  
+当你使用**ATL OLE DB 使用者向导**生成一个使用者，您可以使用 OLE DB 模板或 OLE DB 属性的选择。 在这两种情况下，向导将分别生成命令类和用户记录类。 命令类包含用于打开在向导中指定的数据源和行集的代码。 用户记录类包含选定数据库表的列映射。 但是，这两种情况下生成的代码各不相同：  
   
-- 如果选择模板化使用者，则向导将生成命令类和用户记录类。 命令类将具有你在向导的“类”框中输入的名称（例如 `CProducts`），用户记录类将具有“*类名*Accessor”格式的名称（例如 `CProductsAccessor`）。 这两个类都位于使用者的头文件中。  
+- 如果选择模板化使用者，则向导将生成命令类和用户记录类。 命令类将具有名称中输入**类**框在向导中 (例如， `CProducts`)，用户记录类将具有窗体的名称"*ClassName*访问器"（例如，`CProductsAccessor`). 这两个类都位于使用者的头文件中。  
   
 - 如果选择属性化使用者，则用户记录类将具有“_*类名*Accessor”格式的名称，并将插入。 也就是说，只能在文本编辑器中查看命令类，并只能以插入代码的形式查看用户记录类。 有关查看插入代码的信息，请参阅 [调试插入代码](/visualstudio/debugger/how-to-debug-injected-code)。  
   
-下面的示例使用在 Northwind 数据库的 Products 表上创建的命令类，来演示向导生成的用于命令类和用户记录类的使用者代码。  
+下面的示例使用上创建的命令类`Products`表的`Northwind`数据库来演示向导生成的使用者代码的命令类和用户记录类。  
   
 ## <a name="templated-user-record-classes"></a>模板化用户记录类  
 
@@ -47,10 +47,10 @@ ms.locfileid: "46106176"
 用户记录类的第一部分包括数据成员声明以及每个数据绑定列的状态和长度数据成员。 有关这些成员的信息，请参阅 [向导生成的取值函数中的字段状态数据成员](../../data/oledb/field-status-data-members-in-wizard-generated-accessors.md)。  
   
 > [!NOTE]
->  如果修改用户记录类或编写自己的使用者，则数据变量必须在状态和长度变量之前出现。  
+> 如果修改用户记录类或编写自己的使用者，则数据变量必须在状态和长度变量之前出现。  
   
 > [!NOTE]
->  ATL OLE DB 使用者向导使用`DB_NUMERIC`类型来绑定数值数据类型。 它之前使用`DBTYPE_VARNUMERIC`(由描述的格式`DB_VARNUMERIC`类型; 请参阅 Oledb.h)。 如果不使用向导来创建使用者，建议你使用`DB_NUMERIC`。  
+> ATL OLE DB 使用者向导使用`DB_NUMERIC`类型来绑定数值数据类型。 它之前使用`DBTYPE_VARNUMERIC`(由描述的格式`DB_VARNUMERIC`类型; 请参阅 Oledb.h)。 如果不使用向导来创建使用者，建议你使用`DB_NUMERIC`。  
   
 ```cpp  
 // Products.H : Declaration of the CProducts class  
@@ -159,7 +159,7 @@ class CProducts : public CCommand<CAccessor<CProductsAccessor>>
   
 ## <a name="attribute-injected-user-record-classes"></a>属性插入的用户记录类  
 
-如果使用数据库属性（[db_command](../../windows/db-command.md) 或 [db_table](../../windows/db-table.md)）创建 OLE DB 使用者，属性将插入一个名称为“_*类名*Accessor”格式的用户记录类。 例如，如果将命令类命名为 `COrders`，用户记录类将为 `_COrdersAccessor`。 虽然用户记录类将出现在“类视图”中，但双击它将定位到头文件中的命令类或表类。 在这些情况下，只能通过查看属性插入的代码来查看用户记录类的实际声明。  
+如果使用数据库属性（[db_command](../../windows/db-command.md) 或 [db_table](../../windows/db-table.md)）创建 OLE DB 使用者，属性将插入一个名称为“_*类名*Accessor”格式的用户记录类。 例如，如果将命令类命名为 `COrders`，用户记录类将为 `_COrdersAccessor`。 虽然用户记录类将出现在**类视图**，双击它改为导航到标头文件中的命令或表类。 在这些情况下，只能通过查看属性插入的代码来查看用户记录类的实际声明。  
   
 如果在属性化使用者中添加或重写方法，可能会出现问题。 例如，可以将 `_COrdersAccessor` 构造函数添加到 `COrders` 声明中，但请注意，实际上这一操作将构造函数添加到了插入的 `COrdersAccessor` 类中。 此类构造函数可以初始化列/参数，但不可以以这种方式创建一个复制构造函数，因为它不能直接实例化 `COrdersAccessor` 对象。 如果 `COrders` 类上直接需要构造函数（或其他方法），建议定义一个派生自 `COrders` 的新类，并将所需的方法添加到其中。  
   

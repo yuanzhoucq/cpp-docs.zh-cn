@@ -1,7 +1,7 @@
 ---
 title: 图标的图像编辑器 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/17/2018
 ms.technology:
 - cpp-windows
 ms.topic: conceptual
@@ -23,16 +23,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fe7cad7fccabd7acc8af7ecf1f3711d5b0d636ce
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ecd2b3b94f04a246242a33494a124171e95cae7c
+ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46379185"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49410657"
 ---
 # <a name="image-editor-for-icons"></a>图标的图像编辑器
 
-图像编辑器具有一组丰富的图像创建和编辑工具，以及有助于创建工具栏位图的功能。 除了位图、图标和光标，你还可以使用 **“图像”** 菜单上的命令和 **“图像编辑器”** 工具栏上的工具来编辑 GIF 或 JPEG 格式的图像。
+单击解决方案资源管理器的图像文件 （如.ico、.bmp、.png），图像将图像编辑器中打开方式在代码编辑器中打开代码文件完全相同。 图像编辑器选项卡处于活动状态，可以看到与用于创建和编辑映像的许多工具工具栏。 除了位图、图标和光标，你还可以使用 **“图像”** 菜单上的命令和 **“图像编辑器”** 工具栏上的工具来编辑 GIF 或 JPEG 格式的图像。
 
 使用图像编辑器，可以执行下列操作：
 

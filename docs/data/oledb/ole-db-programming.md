@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3ed6610f71561a62d3ff99a794bb166bdcabd3d3
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 32f3fc1b6a990a746c3dc87740c63fbe898f79d5
+ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083510"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49410624"
 ---
 # <a name="ole-db-programming"></a>OLE DB 编程
 
@@ -40,7 +40,7 @@ Visual C++ 还具有用于创建 OLE DB 初学者应用程序的向导支持。
 |使用 OLE DB 提供程序模板（概念性主题）|[OLE DB 提供程序模板](../../data/oledb/ole-db-provider-templates-cpp.md)|  
 |OLE DB 模板类和宏|[OLE DB 模板参考](../../data/oledb/ole-db-templates.md)（Visual c + +）|  
 |OLE DB 使用者特性|[OLE DB 使用者特性](../../windows/ole-db-consumer-attributes.md)|  
-|OLE DB 接口|[OLE DB 程序员参考](/previous-versions/windows/desktop/ms713643)（在 Windows SDK 中)|  
+|OLE DB 接口|[OLE DB 程序员参考](/previous-versions/windows/desktop/ms713643(v%3dvs.85))（在 Windows SDK 中)| 
 |OLE DB 模板示例|[OLE DB 模板示例](https://github.com/Microsoft/VCSamples)| 
 |数据访问编程概述 (Visual C++)|[数据访问编程](../../data/data-access-programming-mfc-atl.md)|  
 |ODBC 概念主题|[开放式数据库连接 (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)|  
