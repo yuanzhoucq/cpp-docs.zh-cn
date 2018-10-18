@@ -47,16 +47,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2a70b39352f26d76e9199b9da46f679507b148ed
-ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
+ms.openlocfilehash: a93c36748eb01a1c647a2aa433196c7364f60744
+ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49163102"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49410806"
 ---
 # <a name="hstring-class"></a>HString 类
 
-用于管理使用 RAII 模式 HSTRING 的生存期的帮助器类。
+用于管理的生命周期的帮助器类[HSTRING](/windows/desktop/WinRT/hstring)使用 RAII 模式。
 
 ## <a name="syntax"></a>语法
 
@@ -66,7 +66,7 @@ class HString;
 
 ## <a name="remarks"></a>备注
 
-Windows 运行时提供通过 HSTRING 句柄的字符串的访问权限。 `HString`类提供便利函数和运算符以简化使用 HSTRING 句柄。 此类可以处理它拥有通过 RAII 模式在 HSTRING 的生存期。
+Windows 运行时提供通过字符串的访问权限[HSTRING](/windows/desktop/WinRT/hstring)句柄。 `HString`类提供便利函数和运算符以简化使用 HSTRING 句柄。 此类可以处理它拥有通过 RAII 模式在 HSTRING 的生存期。
 
 ## <a name="members"></a>成员
 
