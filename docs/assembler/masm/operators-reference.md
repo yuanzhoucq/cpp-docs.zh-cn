@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4708af3c0fa272a1ca803f549ce8953caccaa27
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 5c9f5beb0e3525de6df88e44248410810502962e
+ms.sourcegitcommit: 4cbde5d164d681204c4011dc95a921d75292f423
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43688171"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49459148"
 ---
 # <a name="masm-operators-reference"></a>MASM 运算符参考
 
@@ -36,7 +36,7 @@ ms.locfileid: "43688171"
 
 ||||
 |-|-|-|
-|[!（运行时逻辑非）](operator-logical-not-masm-run-time.md)|[！ = （运行时不等于）](operator-not-equal-masm.md)|[&#124;&#124;(运行时逻辑或)](operator-logical-or.md)|
+|[\! （运行时逻辑非）](operator-logical-not-masm-run-time.md)|[\!= （运行时不等于）](operator-not-equal-masm.md)|[&#124;&#124;(运行时逻辑或)](operator-logical-or.md)|
 |[& & (逻辑的运行时和)](operator-logical-and-masm-run-time.md)|[< (运行时内)](operator-less-than-masm-run-time.md)|[\<= （运行时小于或等于）](operator-less-or-equal-masm-run-time.md)|
 |[= = （等于运行时）](operator-equal-masm-run-time.md)|[> （大于运行时）](operator-greater-than-masm-run-time.md)|[> = （运行时大于或等于）](operator-greater-or-equal-masm-run-time.md)|
 |[& (位运行时和)](operator-bitwise-and.md)|||
@@ -54,7 +54,7 @@ ms.locfileid: "43688171"
 
 ||||
 |-|-|-|
-|[!（字符文本）](operator-logical-not-masm.md)|[%（视为文本）](operator-percent.md)||
+|[\! （字符文本）](operator-logical-not-masm.md)|[%（视为文本）](operator-percent.md)||
 |[;;（将视为注释）](operator-semicolons.md)|[&lt; &gt; （将视为一个文本）](operator-literal.md)|[& & （替换参数值）](operator-logical-and-masm.md)|
 
 ## <a name="miscellaneous"></a>杂项
