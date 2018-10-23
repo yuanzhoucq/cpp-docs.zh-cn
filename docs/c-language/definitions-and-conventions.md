@@ -1,5 +1,5 @@
 ---
-title: 定义和转换 | Microsoft Docs
+title: 定义和约定 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,7 +21,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 09/18/2018
 ms.locfileid: "46034403"
 ---
-# <a name="definitions-and-conventions"></a>定义和转换
+# <a name="definitions-and-conventions"></a>定义和约定
 
 终止符是语法定义中的终结点。 不提供其他解决方法。 终止符包括保留字和用户定义的标识符的集。
 
