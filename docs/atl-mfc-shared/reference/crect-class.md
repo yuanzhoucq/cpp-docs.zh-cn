@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b135b318a77835d22d7547e78f3b5c4f7ee3daee
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: e8033ceb709ab66c37e1801cd4033e6830467f2b
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328579"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808610"
 ---
 # <a name="crect-class"></a>CRect 类
 
@@ -259,7 +259,7 @@ void CopyRect(LPCRECT lpSrcRect) throw();
 
 ### <a name="parameters"></a>参数
 
-*lpSrcRect*  
+*lpSrcRect*<br/>
 指向[RECT](../../mfc/reference/rect-structure.md)结构或`CRect`将被复制的对象。
 
 ### <a name="example"></a>示例
@@ -300,34 +300,34 @@ CRect(POINT topLeft, POINT bottomRight) throw();
 
 ### <a name="parameters"></a>参数
 
-*l*  
+*l*<br/>
 指定的左侧的位置`CRect`。
 
-*t*  
+*t*<br/>
 指定的顶部`CRect`。
 
-*r*  
+*r*<br/>
 指定的正确位置`CRect`。
 
-*b*  
+*b*<br/>
 指定的底部`CRect`。
 
-*srcRect*  
+*srcRect*<br/>
 是指[RECT](../../mfc/reference/rect-structure.md)结构的坐标`CRect`。
 
-*lpSrcRect*  
+*lpSrcRect*<br/>
 指向`RECT`结构的坐标`CRect`。
 
-*点*  
+*点*<br/>
 指定要构造的矩形的起始点。 对应于左上角。
 
-*size*  
+*size*<br/>
 指定到右下角的矩形来构造的左上角的位移。
 
-*左边框*  
+*左边框*<br/>
 指定的左上角位置`CRect`。
 
-*bottomRight*  
+*bottomRight*<br/>
 指定的右下角位置`CRect`。
 
 ### <a name="remarks"></a>备注
@@ -387,28 +387,28 @@ void DeflateRect(int l, int t, int r, int b) throw();
 
 ### <a name="parameters"></a>参数
 
-*x*  
+*x*<br/>
 指定单位数目以 deflate 左侧和右侧的`CRect`。
 
-*y*  
+*y*<br/>
 指定要 deflate 顶部和底部的单位数`CRect`。
 
-*size*  
+*size*<br/>
 一个[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)或[CSize](csize-class.md) ，指定要 deflate 的单位数`CRect`。 `cx`值指定要 deflate 左侧和右侧的单位数和`cy`值指定要 deflate 的顶部和底部的单位数。
 
-*lpRect*  
+*lpRect*<br/>
 指向[RECT](../../mfc/reference/rect-structure.md)结构或`CRect`，指定要 deflate 每一侧的单位数。
 
-*l*  
+*l*<br/>
 指定要 deflate 左侧和右侧的单位数`CRect`。
 
-*t*  
+*t*<br/>
 指定要 deflate 顶部的单位数`CRect`。
 
-*r*  
+*r*<br/>
 指定要 deflate 右侧的单位数`CRect`。
 
-*b*  
+*b*<br/>
 指定要 deflate 底部的单位数`CRect`。
 
 ### <a name="remarks"></a>备注
@@ -442,7 +442,7 @@ BOOL EqualRect(LPCRECT lpRect) const throw();
 
 ### <a name="parameters"></a>参数
 
-*lpRect*  
+*lpRect*<br/>
 指向[RECT](../../mfc/reference/rect-structure.md)结构或`CRect`对象，其中包含一个矩形的左上角和右下角坐标。
 
 ### <a name="return-value"></a>返回值
@@ -518,28 +518,28 @@ void InflateRect(int l, int t, int r,  int b) throw();
 
 ### <a name="parameters"></a>参数
 
-*x*  
+*x*<br/>
 指定要放大量左侧的单位数和右侧的`CRect`。
 
-*y*  
+*y*<br/>
 指定要放大量顶部和底部的单位数`CRect`。
 
-*size*  
+*size*<br/>
 一个[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)或[CSize](csize-class.md) ，指定要放大量的单位数`CRect`。 `cx`值指定要放大量左侧和右侧的单位数和`cy`值指定要放大量的顶部和底部的单位数。
 
-*lpRect*  
+*lpRect*<br/>
 指向[RECT](../../mfc/reference/rect-structure.md)结构或`CRect`，指定要放大量每一侧的单位数。
 
-*l*  
+*l*<br/>
 指定的放大量左侧和右侧的单位数`CRect`。
 
-*t*  
+*t*<br/>
 指定要放大量的顶部的单位数`CRect`。
 
-*r*  
+*r*<br/>
 指定要放大量右侧的单位数`CRect`。
 
-*b*  
+*b*<br/>
 指定要放大量的底部的单位数`CRect`。
 
 ### <a name="remarks"></a>备注
@@ -568,10 +568,10 @@ BOOL IntersectRect(LPCRECT lpRect1, LPCRECT lpRect2) throw();
 
 ### <a name="parameters"></a>参数
 
-*lpRect1*  
+*lpRect1*<br/>
 指向[RECT](../../mfc/reference/rect-structure.md)结构或`CRect`对象，其中包含源矩形。
 
-*lpRect2*  
+*lpRect2*<br/>
 指向`RECT`结构或`CRect`对象，其中包含源矩形。
 
 ### <a name="return-value"></a>返回值
@@ -684,7 +684,7 @@ void MoveToX(int x) throw();
 
 ### <a name="parameters"></a>参数
 
-*x*  
+*x*<br/>
 矩形的左上角绝对 x 坐标。
 
 ### <a name="example"></a>示例
@@ -712,13 +712,13 @@ void MoveToXY(POINT point) throw();
 
 ### <a name="parameters"></a>参数
 
-*x*  
+*x*<br/>
 矩形的左上角绝对 x 坐标。
 
-*y*  
+*y*<br/>
 矩形的左上角绝对 y 坐标。
 
-*点*  
+*点*<br/>
 一个`POINT`结构，它指定矩形的绝对的左上角。
 
 ### <a name="example"></a>示例
@@ -745,7 +745,7 @@ void MoveToY(int y) throw();
 
 ### <a name="parameters"></a>参数
 
-*y*  
+*y*<br/>
 矩形的左上角绝对 y 坐标。
 
 ### <a name="example"></a>示例
@@ -803,16 +803,16 @@ void OffsetRect(SIZE size) throw();
 
 ### <a name="parameters"></a>参数
 
-*x*  
+*x*<br/>
 指定要向左移动或右。 它必须是负数，以向左移动。
 
-*y*  
+*y*<br/>
 指定要上移或下移的量。 它必须为负数向上移动。
 
-*点*  
+*点*<br/>
 包含[点](../../mfc/reference/point-structure.md)结构或[CPoint](cpoint-class.md)对象，它指定要移动这两个维度。
 
-*size*  
+*size*<br/>
 包含[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)结构或[CSize](csize-class.md)对象，它指定要移动这两个维度。
 
 ### <a name="remarks"></a>备注
@@ -872,7 +872,7 @@ void operator=(const RECT& srcRect) throw();
 
 ### <a name="parameters"></a>参数
 
-*srcRect*  
+*srcRect*<br/>
 是指源矩形。 可以是[RECT](../../mfc/reference/rect-structure.md)或`CRect`。
 
 ### <a name="example"></a>示例
@@ -900,7 +900,7 @@ BOOL operator==(const RECT& rect) const throw();
 
 ### <a name="parameters"></a>参数
 
-*rect*  
+*rect*<br/>
 是指源矩形。 可以是[RECT](../../mfc/reference/rect-structure.md)或`CRect`。
 
 ### <a name="return-value"></a>返回值
@@ -946,7 +946,7 @@ BOOL operator!=(const RECT& rect) const throw();
 
 ### <a name="parameters"></a>参数
 
-*rect*  
+*rect*<br/>
 是指源矩形。 可以是[RECT](../../mfc/reference/rect-structure.md)或`CRect`。
 
 ### <a name="return-value"></a>返回值
@@ -993,13 +993,13 @@ void operator+=(LPCRECT lpRect) throw();
 
 ### <a name="parameters"></a>参数
 
-*点*  
+*点*<br/>
 一个[点](../../mfc/reference/point-structure.md)结构或[CPoint](cpoint-class.md)对象，它指定要移动矩形的单位数。
 
-*size*  
+*size*<br/>
 一个[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)结构或[CSize](csize-class.md)对象，它指定要移动矩形的单位数。
 
-*lpRect*  
+*lpRect*<br/>
 指向[RECT](../../mfc/reference/rect-structure.md)结构或`CRect`对象，其中包含要放大量的每一侧的单位数`CRect`。
 
 ### <a name="remarks"></a>备注
@@ -1036,13 +1036,13 @@ void operator-=(LPCRECT lpRect) throw();
 
 ### <a name="parameters"></a>参数
 
-*点*  
+*点*<br/>
 一个[点](../../mfc/reference/point-structure.md)结构或[CPoint](cpoint-class.md)对象，它指定要移动矩形的单位数。
 
-*size*  
+*size*<br/>
 一个[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)结构或[CSize](csize-class.md)对象，它指定要移动矩形的单位数。
 
-*lpRect*  
+*lpRect*<br/>
 指向[RECT](../../mfc/reference/rect-structure.md)结构或`CRect`对象，其中包含要 deflate 的每一侧的单位数`CRect`。
 
 ### <a name="remarks"></a>备注
@@ -1077,7 +1077,7 @@ void operator&=(const RECT& rect) throw();
 
 ### <a name="parameters"></a>参数
 
-*rect*  
+*rect*<br/>
 包含[RECT](../../mfc/reference/rect-structure.md)或`CRect`。
 
 ### <a name="remarks"></a>备注
@@ -1101,7 +1101,7 @@ void operator|=(const RECT& rect) throw();
 
 ### <a name="parameters"></a>参数
 
-*rect*  
+*rect*<br/>
 包含`CRect`或[RECT](../../mfc/reference/rect-structure.md)。
 
 ### <a name="remarks"></a>备注
@@ -1140,13 +1140,13 @@ CRect operator+(SIZE size) const throw();
 
 ### <a name="parameters"></a>参数
 
-*点*  
+*点*<br/>
 一个[点](../../mfc/reference/point-structure.md)结构或[CPoint](cpoint-class.md)对象，它指定要移动的返回值的单位数。
 
-*size*  
+*size*<br/>
 一个[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)结构或[CSize](csize-class.md)对象，它指定要移动的返回值的单位数。
 
-*lpRect*  
+*lpRect*<br/>
 指向[RECT](../../mfc/reference/rect-structure.md)结构或`CRect`对象，其中包含要放大量双方的返回值的单位数。
 
 ### <a name="return-value"></a>返回值
@@ -1184,13 +1184,13 @@ CRect operator-(LPCRECT lpRect) const throw();
 
 ### <a name="parameters"></a>参数
 
-*点*  
+*点*<br/>
 一个[点](../../mfc/reference/point-structure.md)结构或`CPoint`对象，它指定要移动的返回值的单位数。
 
-*size*  
+*size*<br/>
 一个[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)结构或`CSize`对象，它指定要移动的返回值的单位数。
 
-*lpRect*  
+*lpRect*<br/>
 指向[RECT](../../mfc/reference/rect-structure.md)结构或`CRect`对象，其中包含要 deflate 双方的返回值的单位数。
 
 ### <a name="return-value"></a>返回值
@@ -1226,7 +1226,7 @@ CRect operator&(const RECT& rect2) const throw();
 
 ### <a name="parameters"></a>参数
 
-*rect2*  
+*rect2*<br/>
 包含[RECT](../../mfc/reference/rect-structure.md)或`CRect`。
 
 ### <a name="return-value"></a>返回值
@@ -1264,7 +1264,7 @@ rect2) const throw();
 
 ### <a name="parameters"></a>参数
 
-*rect2*  
+*rect2*<br/>
 包含[RECT](../../mfc/reference/rect-structure.md)或`CRect`。
 
 ### <a name="return-value"></a>返回值
@@ -1306,7 +1306,7 @@ BOOL PtInRect(POINT point) const throw();
 
 ### <a name="parameters"></a>参数
 
-*点*  
+*点*<br/>
 包含[点](../../mfc/reference/point-structure.md)结构或[CPoint](cpoint-class.md)对象。
 
 ### <a name="return-value"></a>返回值
@@ -1358,16 +1358,16 @@ void SetRect(int x1, int y1, int x2, int y2) throw();
 
 ### <a name="parameters"></a>参数
 
-*x1*  
+*x1*<br/>
 指定窗口左上角的 x 坐标。
 
-*y1*  
+*y1*<br/>
 指定窗口左上角的 y 坐标。
 
-*x2*  
+*x2*<br/>
 指定的右下角的 x 坐标。
 
-*y2*  
+*y2*<br/>
 指定的右下角的 y 坐标。
 
 ### <a name="example"></a>示例
@@ -1438,10 +1438,10 @@ BOOL SubtractRect(LPCRECT lpRectSrc1, LPCRECT lpRectSrc2) throw();
 
 ### <a name="parameters"></a>参数
 
-*lpRectSrc1*  
+*lpRectSrc1*<br/>
 指向[RECT](../../mfc/reference/rect-structure.md)结构或`CRect`对象是要减去一个矩形。
 
-*lpRectSrc2*  
+*lpRectSrc2*<br/>
 指向`RECT`结构或`CRect`指向对象，它是被减数矩形*lpRectSrc1*参数。
 
 ### <a name="return-value"></a>返回值
@@ -1526,10 +1526,10 @@ BOOL UnionRect(LPCRECT lpRect1, LPCRECT lpRect2) throw();
 
 ### <a name="parameters"></a>参数
 
-*lpRect1*  
+*lpRect1*<br/>
 指向[RECT](../../mfc/reference/rect-structure.md)或`CRect`，其中包含源矩形。
 
-*lpRect2*  
+*lpRect2*<br/>
 指向`RECT`或`CRect`，其中包含源矩形。
 
 ### <a name="return-value"></a>返回值

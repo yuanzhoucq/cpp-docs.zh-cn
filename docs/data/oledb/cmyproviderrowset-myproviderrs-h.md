@@ -1,34 +1,37 @@
 ---
-title: CMyProviderRowset (MyProviderRS.H) |Microsoft Docs
+title: CCustomRowset (CustomRS.H) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/22/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
 f1_keywords:
 - cmyproviderrowset
 - myproviderrs.h
+- ccustomrowset
+- customrs.h
 dev_langs:
 - C++
 helpviewer_keywords:
 - OLE DB providers, wizard-generated files
 - CMyProviderRowset class in MyProviderRS.H
+- CCustomRowset class in CustomRS.H
 ms.assetid: 7ba1a124-3842-40eb-a36b-302190a1af3a
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c7c9830970f6e09d1993ac2fd78510b84068efaa
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4ee7aed5463054256d6903e485b83ce201a685d2
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46021261"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49807908"
 ---
-# <a name="cmyproviderrowset-myproviderrsh"></a>CMyProviderRowset (MyProviderRS.H)
+# <a name="ccustomrowset-customrsh"></a>CCustomRowset (CustomRS.H)
 
-该向导生成的行集对象的项。 在此例中，它称为 `CMyProviderRowset`。 `CMyProviderRowset`类继承自调用一个 OLE DB 提供程序类`CRowsetImpl`，它可实现行集对象的所有必要的接口。 下面的代码演示的继承链`CRowsetImpl`:  
+该向导生成的行集对象的项。 在此例中，它称为 `CCustomRowset`。 `CCustomRowset`类继承自调用一个 OLE DB 提供程序类`CRowsetImpl`，它可实现行集对象的所有必要的接口。 下面的代码演示的继承链`CRowsetImpl`:  
   
 ```cpp  
 template <class T, class Storage, class CreatorClass,   

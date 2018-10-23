@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f313b659629f824828c52948b9a73c50f86b5e40
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: be0e05d61d4949deaee683c5b8f43d18e0501d23
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46434175"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808974"
 ---
 # <a name="coledatetimespan-class"></a>COleDateTimeSpan 类
 
@@ -124,7 +124,7 @@ bool operator>=(const COleDateTimeSpan& dateSpan) const throw();
 
 ### <a name="parameters"></a>参数
 
-*dateSpan*  
+*dateSpan*<br/>
 要比较的 `COleDateTimeSpan`。
 
 ### <a name="return-value"></a>返回值
@@ -154,7 +154,7 @@ COleDateTimeSpan(LONG lDays, int nHours, int nMins, int nSecs) throw();
 
 ### <a name="parameters"></a>参数
 
-*dblSpanSrc*  
+*dblSpanSrc*<br/>
 若要复制到新天数`COleDateTimeSpan`对象。
 
 *lDays*， *n 小时*， *nMins*， *nSecs*  
@@ -189,7 +189,7 @@ CString Format(UINT nID) const;
 
 ### <a name="parameters"></a>参数
 
-*pFormat*  
+*pFormat*<br/>
 格式设置字符串类似于`printf`格式设置字符串。 格式设置代码，前面有百分比 (`%`) 登录，将替换为相应`COleDateTimeSpan`组件。 格式设置字符串中的其他字符被复制到返回的字符串不变。 值和格式设置代码的含义`Format`如下所示：
 
 - **%H**当前天的小时
@@ -204,7 +204,7 @@ CString Format(UINT nID) const;
 
 -
 
-*nID*  
+*nID*<br/>
 格式控制字符串资源 ID。
 
 ### <a name="return-value"></a>返回值
@@ -731,7 +731,7 @@ void SetStatus(DateTimeSpanStatus status) throw();
 
 ### <a name="parameters"></a>参数
 
-*status*  
+*status*<br/>
 为此新的状态值`COleDateTimeSpan`对象。
 
 ### <a name="remarks"></a>备注

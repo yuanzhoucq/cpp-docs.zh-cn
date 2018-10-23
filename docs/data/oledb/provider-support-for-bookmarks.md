@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e7f97011e66c72c79c3ab6db3b6011e1d4d76ce7
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: d01674929522326c21eea2ad7d40f33e8ff6fae6
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46017168"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49807518"
 ---
 # <a name="provider-support-for-bookmarks"></a>用于书签的提供程序支持
 
@@ -247,7 +247,7 @@ HRESULT hr = table.Compare(table.dwBookmark, table.dwBookmark,
 }  
 ```  
   
-While 循环包含代码以调用`Compare`中的方法`IRowsetLocate`接口。 您拥有的代码应始终传递，因为比较完全相同的书签。 此外，在临时变量中存储一个书签，以便可以使用这段时间后循环完成调用`MoveToBookmark`使用者模板中的函数。 `MoveToBookmark`函数调用`GetRowsAt`中的方法`IRowsetLocate`。  
+**虽然**循环包含调用代码`Compare`中的方法`IRowsetLocate`接口。 您拥有的代码应始终传递，因为比较完全相同的书签。 此外，在临时变量中存储一个书签，以便您可以使用它后**虽然**循环完成调用`MoveToBookmark`使用者模板中的函数。 `MoveToBookmark`函数调用`GetRowsAt`中的方法`IRowsetLocate`。  
   
 此外需要更新使用者中的用户记录。 要处理一个书签和中的条目的类中添加的条目`COLUMN_MAP`:  
   

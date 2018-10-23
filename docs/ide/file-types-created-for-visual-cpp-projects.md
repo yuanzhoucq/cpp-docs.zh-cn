@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 939937ec79ae3e6d172b48d22368176088064397
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: dba47b8464c7fcdd170df1819b65aa448d8f8aeb
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46434344"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808416"
 ---
 # <a name="file-types-created-for-visual-c-projects"></a>为 Visual C++ 项目创建的文件类型
 
@@ -57,7 +57,7 @@ ms.locfileid: "46434344"
 
 下表显示 Visual C++ 项目中的常见文件，并使用其文件扩展名标识它们。
 
-|文件扩展名|类型|内容|
+|文件扩展名|类型|目录|
 |--------------------|----------|--------------|
 |.asmx|源|部署文件。|
 |.asp|源|Active Server Page 文件。|
@@ -105,4 +105,3 @@ ms.locfileid: "46434344"
 
 [创建和管理 Visual C++ 项目](../ide/creating-and-managing-visual-cpp-projects.md)<br>
 [Visual C++ 项目类型](../ide/visual-cpp-project-types.md)<br>
-[其他语言的向导支持](../ide/wizard-support-for-other-languages.md)

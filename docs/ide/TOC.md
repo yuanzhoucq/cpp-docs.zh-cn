@@ -26,7 +26,6 @@
 ### [属性页 XML 文件](property-page-xml-files.md)
 ### [.vcxproj 和 .props 文件结构](vcxproj-file-structure.md)
 ## [使用应用程序向导创建桌面项目](creating-desktop-projects-by-using-application-wizards.md)
-### [其他语言的向导支持](wizard-support-for-other-languages.md)
 ### [创建生成文件项目](creating-a-makefile-project.md)
 #### [生成文件项目向导](makefile-project-wizard.md)
 ##### [应用程序设置，生成文件项目向导](application-settings-makefile-project-wizard.md)

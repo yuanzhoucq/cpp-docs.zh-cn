@@ -25,12 +25,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4a3f80d3e421701ac0612ddb2552d10d1eff1f02
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6d8bcd61fb77b12db612bb12ae516a8665caaee8
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46056022"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808220"
 ---
 # <a name="consumer-wizard-generated-methods"></a>使用者向导生成的方法
 
@@ -40,7 +40,7 @@ ms.locfileid: "46056022"
   
 - `CloseAll` 关闭所有打开的行集并释放所有命令执行。  
   
-- `OpenRowset` OpenAll 打开使用者的行集或行集调用。  
+- `OpenRowset` 由调用`OpenAll`打开使用者的行集或行集。  
   
 - `GetRowsetProperties` 检索指向设置的可以设置哪些属性的行集的属性。  
   
@@ -91,7 +91,7 @@ int main(int argc, char* argv[])
   
 ## <a name="remarks"></a>备注  
 
-请注意，如果定义了`HasBookmark`方法，`OpenAll`代码将 DBPROP_IRowsetLocate 属性设置; 请确保您才这样做如果您的提供程序支持该属性。  
+请注意，如果定义了`HasBookmark`方法，`OpenAll`的代码设置`DBPROP_IRowsetLocate`属性; 请确保您才这样做如果您的提供程序支持该属性。  
   
 ## <a name="openrowset"></a>OpenRowset  
   
@@ -104,7 +104,7 @@ HRESULT OpenRowset(const CSession& session, LPCWSTR szCommand = NULL);
   
 `OpenAll` 调用此方法以在使用者中打开行集或行集。 通常情况下，不需要调用`OpenRowset`除非你想要使用多个数据源/会话/行集。 `OpenRowset` 命令或表类标头文件中声明：  
   
-```  
+```cpp  
 // OLE DB Template version:  
 HRESULT OpenRowset(DBPROPSET *pPropSet = NULL)  
 {  
@@ -117,7 +117,7 @@ HRESULT OpenRowset(DBPROPSET *pPropSet = NULL)
 }  
 ```  
   
-属性以不同方式实现此方法。 此版本需要会话对象，并默认为 db_command 中, 指定的命令字符串，尽管可以将传递一个不同的命令字符串。 请注意，如果定义了`HasBookmark`方法，`OpenRowset`代码将 DBPROP_IRowsetLocate 属性设置; 请确保您才这样做如果您的提供程序支持该属性。  
+属性以不同方式实现此方法。 此版本需要会话对象，并默认为 db_command 中, 指定的命令字符串，尽管可以将传递一个不同的命令字符串。 请注意，如果定义了`HasBookmark`方法，`OpenRowset`的代码设置`DBPROP_IRowsetLocate`属性; 请确保您才这样做如果您的提供程序支持该属性。  
   
 ```cpp  
 // Attribute-injected version:  
@@ -142,7 +142,7 @@ HRESULT OpenRowset(const CSession& session, LPCWSTR szCommand=NULL)
 void GetRowsetProperties(CDBPropSet* pPropSet);  
 ```  
   
-此方法检索一个指向行集的属性集;此指针可用于设置 DBPROP_IRowsetChange 等属性。 `GetRowsetProperties` 可在用户记录类，如下所示。 可以修改此代码以设置其他行集属性：  
+此方法检索一个指向行集的属性集;可以使用此指针设置属性，例如`DBPROP_IRowsetChange`。 `GetRowsetProperties` 可在用户记录类，如下所示。 可以修改此代码以设置其他行集属性：  
   
 ```cpp  
 void GetRowsetProperties(CDBPropSet* pPropSet)  

@@ -1,7 +1,7 @@
 ---
 title: IAtlStringMgr 类 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad98923c21a28976b54c2251f2da83eb0ec4cf5f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6d637750ab4aa9dc30ca7b297373cb2c752802d8
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46408136"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808863"
 ---
 # <a name="iatlstringmgr-class"></a>IAtlStringMgr 类
 
@@ -73,10 +73,10 @@ CStringData* Allocate(int nAllocLength,int nCharSize) throw();
 
 ### <a name="parameters"></a>参数
 
-*nAllocLength*  
+*nAllocLength*<br/>
 新的内存块中的字符数。
 
-*nCharSize*  
+*nCharSize*<br/>
 字符串管理器使用的字符类型大小 （以字节为单位）。
 
 ### <a name="return-value"></a>返回值
@@ -124,7 +124,7 @@ void Free(CStringData* pData) throw();
 
 ### <a name="parameters"></a>参数
 
-*pData*  
+*pData*<br/>
 指向要释放的内存块的指针。
 
 ### <a name="remarks"></a>备注
@@ -151,31 +151,31 @@ CStringData* GetNilString() throw();
 调用此函数返回空字符串表示形式。
 
 > [!NOTE]
->  在实现自定义字符串管理器时，该函数必须永远不会失败。 您可以通过嵌入的实例来确保这`CNilStringData`字符串管理器类，并返回一个指针，到该实例中。
+> 在实现自定义字符串管理器时，该函数必须永远不会失败。 您可以通过嵌入的实例来确保这`CNilStringData`字符串管理器类，并返回一个指针，到该实例中。
 
 > [!NOTE]
->  有关用法示例，请参阅[内存管理和 CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md)。
+> 有关用法示例，请参阅[内存管理和 CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md)。
 
-##  <a name="reallocate"></a>  IAtlStringMgr::Reallocate
+## <a name="reallocate"></a>  IAtlStringMgr::Reallocate
 
 重新分配字符串数据结构。
 
 ```
-CStringData* Reallocate(  
-CStringData* pData,
-int nAllocLength,
-int nCharSize) throw();
+CStringData* Reallocate(
+    CStringData* pData,
+    int nAllocLength,
+    int nCharSize) throw();
 ```
 
 ### <a name="parameters"></a>参数
 
-*pData*  
+*pData*<br/>
 指向此内存管理器以前分配的内存指针。
 
-*nAllocLength*  
+*nAllocLength*<br/>
 新的内存块中的字符数。
 
-*nCharSize*  
+*nCharSize*<br/>
 字符串管理器使用的字符类型大小 （以字节为单位）。
 
 ### <a name="return-value"></a>返回值
@@ -189,10 +189,9 @@ int nCharSize) throw();
 调用[IAtlStringMgr::Free](#free)来释放由此方法分配的内存。
 
 > [!NOTE]
->  有关用法示例，请参阅[内存管理和 CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md)。
+> 有关用法示例，请参阅[内存管理和 CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md)。
 
 ## <a name="see-also"></a>请参阅
 
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>
 [ATL/MFC 共享类](../../atl-mfc-shared/atl-mfc-shared-classes.md)
-

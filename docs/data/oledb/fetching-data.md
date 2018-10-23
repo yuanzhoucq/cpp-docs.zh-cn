@@ -1,7 +1,7 @@
 ---
 title: 提取数据 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/19/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -18,22 +18,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b7aaff3ccd2756ecfbac1cf745aaac74b76a91f9
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 4f0467d322242bb222e5365b45a57e1aa2fe2943
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48859947"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49807466"
 ---
 # <a name="fetching-data"></a>提取数据
 
 打开数据源、 会话和行集对象后，可以提取数据。 具体取决于正在使用的访问器的类型，可能需要将列绑定。
 
-### <a name="to-fetch-data"></a>若要提取的数据
+## <a name="to-fetch-data"></a>若要提取的数据
 
 1. 打开使用相应的行集**打开**命令。
 
-1. 如果使用的`CManualAccessor`，绑定的输出列，如果尚未这样做。 若要绑定的列，调用`GetColumnInfo`，，然后使用绑定创建取值函数，如下面的示例中所示：
+1. 如果您使用的`CManualAccessor`，绑定的输出列，如果尚未这样做。 下面的示例取自[DBViewer](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/dbviewer)示例。 若要绑定的列，调用`GetColumnInfo`，，然后使用绑定创建取值函数，如下面的示例中所示：
 
     ```cpp
     // From the DBViewer Sample CDBTreeView::OnQueryEdit
@@ -50,7 +50,7 @@ ms.locfileid: "48859947"
     rs.Bind();
     ```
 
-1. 编写`while`循环，以检索数据。 在循环中，调用`MoveNext`前进游标和测试，则为 S_OK，针对返回的值，如下面的示例中所示：
+1. 编写**虽然**循环，以检索数据。 在循环中，调用`MoveNext`前进游标和测试，则为 S_OK，针对返回的值，如下面的示例中所示：
 
     ```cpp
     while (rs.MoveNext() == S_OK)
@@ -60,7 +60,7 @@ ms.locfileid: "48859947"
     }
     ```
 
-1. 在`while`循环中，您可以根据你访问器的类型获取数据。
+1. 内**虽然**循环中，您可以根据你访问器的类型获取数据。
 
    - 如果您使用[CAccessor](../../data/oledb/caccessor-class.md)类，您应该具有一个包含数据成员的用户记录。 可以访问使用这些数据成员，您的数据，如下面的示例中所示：
 

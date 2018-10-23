@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39329f4895060ff950f36c3d10dd5e4020f3b98a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 92761508a5e93c7ef0d0a4099dde587987a50dad
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448423"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49809156"
 ---
 # <a name="coledatetime-class"></a>COleDateTime 类
 
@@ -165,7 +165,7 @@ bool operator>=(const COleDateTime& date) const throw();
 
 ### <a name="parameters"></a>参数
 
-*日期*  
+*日期*<br/>
 要比较的 `COleDateTime` 对象。
 
 ### <a name="remarks"></a>备注
@@ -210,22 +210,22 @@ COleDateTime(const DBTIMESTAMP& dbts) throw();
 
 ### <a name="parameters"></a>参数
 
-*dateSrc*  
+*dateSrc*<br/>
 将现有`COleDateTime`对象复制到新`COleDateTime`对象。
 
-*varSrc*  
+*varSrc*<br/>
 将现有`VARIANT`数据结构 (可能`COleVariant`对象) 转换为日期/时间值 (VT_DATE) 并复制到新`COleDateTime`对象。
 
-*dtSrc*  
+*dtSrc*<br/>
 日期/时间 (`DATE`) 要复制到新值`COleDateTime`对象。
 
-*timeSrc*  
+*timeSrc*<br/>
 一个`time_t`或`__time64_t`值转换为日期/时间值并复制到新`COleDateTime`对象。
 
-*systimeSrc*  
+*systimeSrc*<br/>
 一个`SYSTEMTIME`结构转换为日期/时间值并复制到新`COleDateTime`对象。
 
-*filetimeSrc*  
+*filetimeSrc*<br/>
 一个`FILETIME`结构转换为日期/时间值并复制到新`COleDateTime`对象。 请注意，`FILETIME`使用协调世界时 (UTC)，因此如果结构中传递了本地时间，则结果将为不正确。 请参阅[文件时间](/windows/desktop/SysInfo/file-times)Windows SDK for 的详细信息中。
 
 *nYear*， *nMonth*，*第几日*，*几点*， *nMin*， *nSec*  
@@ -234,7 +234,7 @@ COleDateTime(const DBTIMESTAMP& dbts) throw();
 *wDosDate*， *wDosTime*  
 MS-DOS 日期和时间值转换为日期/时间值并复制到新`COleDateTime`对象。
 
-*dbts*  
+*dbts*<br/>
 对引用[DBTimeStamp](https://msdn.microsoft.com/library/system.data.oledb.oledbtype)结构，它包含当前本地时间。
 
 ### <a name="remarks"></a>备注
@@ -297,7 +297,7 @@ CString Format(UINT nFormatID) const;
 
 ### <a name="parameters"></a>参数
 
-*dwFlags*  
+*dwFlags*<br/>
 指示下列区域设置标志之一：
 
 - LOCALE_NOUSEROVERRIDE 使用系统默认区域设置，而不是自定义用户设置。
@@ -306,10 +306,10 @@ CString Format(UINT nFormatID) const;
 
 - VAR_DATEVALUEONLY 在分析过程中忽略时间部分。
 
-*lcid*  
+*lcid*<br/>
 指示要使用用于转换的区域设置 ID。 有关语言标识符的详细信息，请参阅[语言标识符](/windows/desktop/Intl/language-identifiers)。
 
-*lpszFormat*  
+*lpszFormat*<br/>
 格式设置字符串类似于`printf`格式设置字符串。 每个格式设置代码，注释按百分比 ( `%`) 登录，将替换为相应`COleDateTime`组件。 格式设置字符串中的其他字符被复制到返回的字符串不变。 请参阅运行时函数[strftime](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)有关详细信息。 值和格式设置代码的含义`Format`是：
 
 - `%H` 在当前的一天中的小时数
@@ -320,7 +320,7 @@ CString Format(UINT nFormatID) const;
 
 - `%%` 百分比符号
 
-*nFormatID*  
+*nFormatID*<br/>
 格式控制字符串资源 ID。
 
 ### <a name="return-value"></a>返回值
@@ -356,7 +356,7 @@ bool GetAsDBTIMESTAMP(DBTIMESTAMP& dbts) const throw();
 
 ### <a name="parameters"></a>参数
 
-*dbts*  
+*dbts*<br/>
 对引用[DBTimeStamp](https://msdn.microsoft.com/library/system.data.oledb.oledbtype)结构。
 
 ### <a name="return-value"></a>返回值
@@ -381,7 +381,7 @@ bool GetAsSystemTime(SYSTEMTIME& sysTime) const throw();
 
 ### <a name="parameters"></a>参数
 
-*sysTime*  
+*sysTime*<br/>
 对引用[SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)接收从转换后的日期/时间值的结构`COleDateTime`对象。
 
 ### <a name="return-value"></a>返回值
@@ -404,7 +404,7 @@ bool GetAsUDATE(UDATE& udate) const throw();
 
 ### <a name="parameters"></a>参数
 
-*udate*  
+*udate*<br/>
 对引用`UDATE`结构，以接收转换后的日期/时间值从`COleDateTime`对象。
 
 ### <a name="return-value"></a>返回值
@@ -938,10 +938,10 @@ LCID lcid = LANG_USER_DEFAULT) throw();
 
 ### <a name="parameters"></a>参数
 
-*lpszDate*  
+*lpszDate*<br/>
 指向以 null 结尾的字符串，这是要分析的指针。 有关详细信息，请参阅“备注”。
 
-*dwFlags*  
+*dwFlags*<br/>
 指示用于区域设置和分析的标志。 一个或多个下列标志：
 
 - LOCALE_NOUSEROVERRIDE 使用系统默认区域设置，而不是自定义用户设置。
@@ -950,7 +950,7 @@ LCID lcid = LANG_USER_DEFAULT) throw();
 
 - VAR_DATEVALUEONLY 在分析过程中忽略时间部分。
 
-*lcid*  
+*lcid*<br/>
 指示要使用用于转换的区域设置 ID。
 
 ### <a name="return-value"></a>返回值
@@ -1151,7 +1151,7 @@ void SetStatus(DateTimeStatus status) throw();
 
 ### <a name="parameters"></a>参数
 
-*status*  
+*status*<br/>
 为此新的状态值`COleDateTime`对象。
 
 ### <a name="remarks"></a>备注
