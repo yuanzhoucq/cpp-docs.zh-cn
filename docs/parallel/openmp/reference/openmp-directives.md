@@ -39,12 +39,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e761115642cb9ab95931a89ac3b511256d88708b
-ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
+ms.openlocfilehash: 4d92d196cc38e6033c6f16332e4977f2481c4496
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49809000"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990329"
 ---
 # <a name="openmp-directives"></a>OpenMP 指令
 
@@ -66,7 +66,7 @@ Visual c + + 支持以下 OpenMP 指令：
 [single](#single)                     | 可以指定一段代码应在单个线程，不一定是主线程上执行。
 [threadprivate](#threadprivate)       | 指定一个变量是线程私有的。
 
-## <a name="atomic"></a>Atomic — 原子
+## <a name="atomic"></a>原子
 
 指定将以原子方式更新的内存位置。
 
@@ -111,7 +111,7 @@ int main() {
 Number of threads: 10
 ```
 
-## <a name="barrier"></a>barrier
+## <a name="barrier"></a>屏障
 
 同步团队; 中的所有线程所有线程在屏障，都暂停，直到所有线程都执行屏障。
 
@@ -129,7 +129,7 @@ Number of threads: 10
 
 有关如何使用的示例`barrier`，请参阅[主](#master)。
 
-## <a name="critical"></a>critical
+## <a name="critical"></a>关键
 
 指定代码仅执行一个线程上一次。
 
@@ -209,7 +209,7 @@ int main()
 max = 29358
 ```
 
-## <a name="flush-openmp"></a>flush (OpenMP)
+## <a name="flush-openmp"></a>刷新 (OpenMP)
 
 指定的所有线程都都共享的所有对象的内存的相同视图。
 
@@ -285,7 +285,7 @@ Thread 1: process data
 data = 2
 ```
 
-## <a name="for-openmp"></a>for (OpenMP)
+## <a name="for-openmp"></a>对于 (OpenMP)
 
 导致中完成的工作`for`要在线程之间划分的并行区域内的循环。
 
@@ -382,7 +382,7 @@ int main() {
 The sum of 1 through 10 is 55
 ```
 
-## <a name="master"></a>master
+## <a name="master"></a>Master
 
 指定只有主线程应执行的程序部分。
 
@@ -515,7 +515,7 @@ test2() iteration 3
 test2() iteration 4
 ```
 
-## <a name="parallel"></a>parallel
+## <a name="parallel"></a>并行
 
 定义并行区域，这是由多个线程并行执行的代码。
 
@@ -578,7 +578,7 @@ Hello from thread 3
 
 请注意，在不同计算机上的输出顺序而异。
 
-## <a name="sections-openmp"></a>sections (OpenMP)
+## <a name="sections-openmp"></a>部分 (OpenMP)
 
 标识代码段来分担所有线程。
 
@@ -588,7 +588,7 @@ Hello from thread 3
    #pragma omp section
    {
       code_block
-   } 
+   } 
 }
 ```
 
@@ -641,7 +641,7 @@ Hello from thread 0
 可以指定一段代码应在单个线程，不一定是主线程上执行。
 
 ```
-#pragma omp single [clauses] 
+#pragma omp single [clauses] 
 {
    code_block
 }

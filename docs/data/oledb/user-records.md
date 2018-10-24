@@ -1,7 +1,7 @@
 ---
 title: 用户记录 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/22/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -26,16 +26,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4389fdd35c36a8f7708361176889111b1665f2c6
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 10025d7bdb8035ee6ce9c070ab57bc52c507f585
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46073639"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990160"
 ---
 # <a name="user-records"></a>用户记录
 
-若要使用静态访问器 (取值函数，它是派生自`CAccessor`)，使用者必须具有用户记录。 用户记录是包含用于处理输入或输出的数据元素的 c + + 类。 在 ATL OLE DB 使用者向导生成的使用者用户记录。 可以将方法添加到可选任务，如处理的命令的用户记录。  
+若要使用静态访问器 (取值函数，它是派生自`CAccessor`)，使用者必须具有用户记录。 用户记录是包含用于处理输入或输出的数据元素的 c + + 类。 **ATL OLE DB 使用者向导**生成使用者用户记录。 可以将方法添加到可选任务，如处理的命令的用户记录。  
   
 下面的代码演示示例记录的处理命令。 用户记录中 BEGIN_COLUMN_MAP 表示传递给使用者从提供程序的数据行集。 BEGIN_PARAM_MAP 表示一组命令参数。 此示例使用[CCommand](../../data/oledb/ccommand-class.md)类来处理命令参数。 映射条目中的数据成员表示到一个连续的类的每个实例的内存块的偏移量。 COLUMN_ENTRY 宏对应于提供者端 PROVIDER_COLUMN_ENTRY 宏。  
   
@@ -66,7 +66,7 @@ END_PARAM_MAP()
   
 ## <a name="wizard-generated-user-records"></a>向导生成的用户记录  
 
-如果使用 ATL OLE DB 使用者向导生成一个使用者，您可以使用 OLE DB 模板或 OLE DB 属性的选择。 生成的代码是在每种情况不同。 有关此代码的详细信息，请参阅[使用者向导生成的类](../../data/oledb/consumer-wizard-generated-classes.md)。  
+如果您使用**ATL OLE DB 使用者向导**生成一个使用者，您可以使用 OLE DB 模板或 OLE DB 属性的选择。 生成的代码是在每种情况不同。 有关此代码的详细信息，请参阅[使用者向导生成的类](../../data/oledb/consumer-wizard-generated-classes.md)。  
   
 ## <a name="user-record-support-for-multiple-accessors"></a>对多个访问器的用户记录支持  
 

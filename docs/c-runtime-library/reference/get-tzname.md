@@ -1,7 +1,7 @@
 ---
 title: _get_tzname | Microsoft 文档
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/22/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -34,12 +34,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4b49aa404dda6234382ae461459dece64e5996d
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: d773d5d98466963ef621cc3fa7bc5ab8b4acc40a
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451688"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990303"
 ---
 # <a name="gettzname"></a>_get_tzname
 
@@ -59,10 +59,10 @@ errno_t _get_tzname(
 ### <a name="parameters"></a>参数
 
 *pReturnValue*<br/>
-字符串长度*timeZoneName*包括 null 结束符。
+字符串长度*timeZoneName*包括 null 终止符。
 
 *timeZoneName*<br/>
-具体取决于时区名称或夏时制标准时间区域名称 (DST) 的表示形式的字符字符串的地址*索引*。
+具体取决于所在的时区名称或夏令时标准时区名称 (DST) 的表示形式的字符字符串的地址*索引*。
 
 *sizeInBytes*<br/>
 大小*timeZoneName*字符以字节为单位的字符串。
@@ -70,11 +70,19 @@ errno_t _get_tzname(
 *index*<br/>
 要检索的两个时区名称之一的索引。
 
+|*index*|内容*timeZoneName*|*timeZoneName*默认值|
+|-|-|-|
+|0|时区名称|"PST"|
+|1|夏令时标准时区名称|"PDT"|
+|> 1 或 < 0|**errno**设置为**EINVAL**|未修改|
+
+除非在运行时显式更改值，默认值分别为 "PST" 和 "PDT"。
+
 ## <a name="return-value"></a>返回值
 
 如果成功，则为零否则为**errno**键入值。
 
-如果任一*timeZoneName*是**NULL**，或*sizeInBytes*为零或小于零 （但不是能同时），无效参数处理程序调用时中, 所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，此函数将**errno**到**EINVAL**并返回**EINVAL**。
+如果任一*timeZoneName*是**NULL**，或*sizeInBytes*为零或小于零 （但不是两者），无效参数处理程序调用时，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，此函数可设置**errno**到**EINVAL** ，并返回**EINVAL**。
 
 ### <a name="error-conditions"></a>错误条件
 
@@ -88,21 +96,55 @@ errno_t _get_tzname(
 
 ## <a name="remarks"></a>备注
 
-**_Get_tzname**函数将检索到的地址的字符字符串表示形式的时区名称或夏时制标准时间区域名称 (DST) *timeZoneName*具体取决于索引值，以及在字符串的大小*pReturnValue*。 如果*timeZoneName*是**NULL**和*sizeInBytes*为零，只需区域，以字节为单位返回在任一时间的字符串的大小*pReturnValue*. 标准时区的索引值必须为 0，夏令时标准时区的索引值必须为 1；索引的任何其他值都具有不确定的结果。
+**_Get_tzname**函数将检索到的地址的当前时区名称或夏令时标准时区名称 (DST) 的字符字符串表示形式*timeZoneName*具体取决于索引值，以及在字符串的大小*pReturnValue*。 如果*timeZoneName*是**NULL**并*sizeInBytes*是零，以保存指定的时区字符串的大小和终止 null 以字节为单位返回中*pReturnValue*。 索引值必须是标准时区的时间为 0 或 1 表示夏令时标准时区的时间;任何其他值*索引*具有不确定的结果。
 
-### <a name="index-values"></a>索引值
+## <a name="example"></a>示例
 
-|*index*|内容*timeZoneName*|*timeZoneName*默认值|
-|-------------|--------------------------------|----------------------------------|
-|0|时区名称|"PST"|
-|1|夏令时标准时区名称|"PDT"|
-|> 1 或 < 0|**errno**设置为**EINVAL**|未修改|
+此示例会调用 **_get_tzname**若要获得所需的缓冲区大小，以显示当前夏令时标准时区名称，将分配一个缓冲区的大小，调用 **_get_tzname**再次以加载中的名称缓冲，并将其打印到控制台。
 
-除非在运行时显式更改值，默认值分别为 "PST" 和 "PDT"。  这些字符数组的大小受**TZNAME_MAX**值。
+```C
+// crt_get_tzname.c
+// Compile by using: cl /W4 crt_get_tzname.c
+#include <stdio.h>
+#include <time.h>
+#include <malloc.h>
+
+enum TZINDEX {
+    STD,
+    DST
+};
+
+int main()
+{
+    size_t tznameSize = 0;
+    char * tznameBuffer = NULL;
+
+    // Get the size of buffer required to hold DST time zone name
+    if (_get_tzname(&tznameSize, NULL, 0, DST))
+        return 1;    // Return an error value if it failed
+
+    // Allocate a buffer for the name
+    if (NULL == (tznameBuffer = (char *)(malloc(tznameSize))))
+        return 2;    // Return an error value if it failed
+
+    // Load the name in the buffer
+    if (_get_tzname(&tznameSize, tznameBuffer, tznameSize, DST))
+        return 3;    // Return an error value if it failed
+
+    printf_s("The current Daylight standard time zone name is %s.\n", tznameBuffer);
+    return 0;
+}
+```
+
+### <a name="output"></a>输出
+
+```Output
+The current Daylight standard time zone name is PDT.
+```
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_get_tzname**|\<time.h>|
 
@@ -115,4 +157,3 @@ errno_t _get_tzname(
 [_get_daylight](get-daylight.md)<br/>
 [_get_dstbias](get-dstbias.md)<br/>
 [_get_timezone](get-timezone.md)<br/>
-[TZNAME_MAX](../../c-runtime-library/tzname-max.md)<br/>

@@ -1,7 +1,7 @@
 ---
 title: OLE DB 编程 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/22/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 32f3fc1b6a990a746c3dc87740c63fbe898f79d5
-ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
+ms.openlocfilehash: 2628756992298fa61bad070b72f66232d65bec5f
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49410624"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990031"
 ---
 # <a name="ole-db-programming"></a>OLE DB 编程
 
@@ -32,7 +32,7 @@ OLE DB 模板是使高性能 OLE DB 数据库技术更易用的 C++ 模板，它
   
 Visual C++ 还具有用于创建 OLE DB 初学者应用程序的向导支持。  
   
-此外，您可以使用属性来实现 OLE DB 使用者模板。  
+此外，可以使用属性来实现 OLE DB 使用者模板。  
   
 |了解更多信息|请参阅|  
 |-------------------------|---------|  

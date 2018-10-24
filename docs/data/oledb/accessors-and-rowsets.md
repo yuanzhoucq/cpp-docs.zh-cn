@@ -1,7 +1,7 @@
 ---
 title: 访问器和行集 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/22/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -28,12 +28,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f8dc681e149d54742e4bf5e7ff44afeebe2292eb
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: c3247cd3b5844df76b8a115a3f28a76874db2a16
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46113092"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990173"
 ---
 # <a name="accessors-and-rowsets"></a>访问器和行集合
 
@@ -50,7 +50,7 @@ ms.locfileid: "46113092"
   
 - [CAccessor](../../data/oledb/caccessor-class.md)在设计时知道数据库源的结构时使用此访问器。 `CAccessor` 以静态方式将数据库记录，其中包含缓冲区，绑定到数据源。  
   
-- [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)在设计时不知道数据库的结构时使用此访问器。 `CDynamicAccessor` 调用`IColumnsInfo::GetColumnInfo`若要获取的数据库列信息。 它创建和管理取值函数和缓冲区。  
+- [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)时您不知道数据库的结构在设计时使用此访问器。 `CDynamicAccessor` 调用`IColumnsInfo::GetColumnInfo`若要获取的数据库列信息。 它创建和管理取值函数和缓冲区。  
   
 - [CDynamicParameterAccessor](../../data/oledb/cdynamicparameteraccessor-class.md)使用此访问器来处理未知的命令类型。 在准备命令时`CDynamicParameterAccessor`即可获取参数信息从`ICommandWithParameters`接口，如果提供程序支持`ICommandWithParameters`。  
   
@@ -77,7 +77,7 @@ OLE DB 模板支持三种类型的行集 （请参阅上图中）： 单一行�
 ![RowsetType 图](../../data/oledb/media/vcrowsettypes.gif "vcrowsettypes")  
 行集类  
   
-[架构行集](../../data/oledb/obtaining-metadata-with-schema-rowsets.md)执行不访问数据中的数据存储，但改为访问有关数据存储，称为元数据的信息。 在其中的数据库结构不在编译时已知，并且必须在运行时获取的情况下通常用于架构行集。  
+[架构行集](../../data/oledb/obtaining-metadata-with-schema-rowsets.md)不访问数据中的数据存储，但改为访问有关数据存储，称为元数据的信息。 在其中的数据库结构不在编译时已知，并且必须在运行时获取的情况下通常用于架构行集。  
   
 ## <a name="see-also"></a>请参阅  
 

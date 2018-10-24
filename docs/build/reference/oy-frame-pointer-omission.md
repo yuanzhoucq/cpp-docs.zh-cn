@@ -1,5 +1,5 @@
 ---
-title: -Oy （框架指针省略） |Microsoft 文档
+title: -Oy （框架指针省略） |Microsoft Docs
 ms.custom: ''
 ms.date: 09/22/2017
 ms.technology:
@@ -23,12 +23,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6feb682d364c4c40fd01e4aff33404c4506d9c1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6c077b5a350d7381adc5412ca4a318713d720ad6
+ms.sourcegitcommit: 1870c342d44b10990fd015e60856225c3026e8c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32377256"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49963046"
 ---
 # <a name="oy-frame-pointer-omission"></a>/Oy（框架指针省略）
 
@@ -40,15 +40,15 @@ ms.locfileid: "32377256"
 
 ## <a name="remarks"></a>备注
 
-此选项可以加快函数调用的速度，因为无需设置和移除任何框架指针。 它还可以使一个或多个寄存器（Intel 386 或更高版本上的 EBP）空闲出来，以便存储频繁使用的变量和子表达式。
+此选项可以加快函数调用的速度，因为无需设置和移除任何框架指针。 它还可以使一个或多个寄存器用于常规用途。
 
-**/Oy**启用框架指针省略和 **/Oy-** 禁止省略。 **/Oy**仅适用于 x86 编译器。
+**/Oy**启用帧指针省略和 **/Oy-** 禁止省略。 **/Oy**仅适用于 x86 的编译器。
 
-如果你的代码需要基于 EBP 的寻址，你可以指定 **/Oy-** 选项后 **/Ox**选项或使用[优化](../../preprocessor/optimize.md)与"**y**"和**关闭**自变量以获取使用基于 EBP 的寻址的最大优化。 编译器可检测大部分需要基于 EBP 的寻址的情况（例如，使用 `_alloca` 和 `setjmp` 函数以及使用结构化异常处理的情况）。
+如果代码需要基于 EBP 的寻址，您可以指定 **/Oy-** 选项后 **/Ox**选项，或使用[优化](../../preprocessor/optimize.md)与"**y**"并**关闭**参数以获取基于 EBP 的寻址的最大优化。 编译器可检测大部分需要基于 EBP 的寻址的情况（例如，使用 `_alloca` 和 `setjmp` 函数以及使用结构化异常处理的情况）。
 
-[/Ox （启用最速度优化）](../../build/reference/ox-full-optimization.md)和[/O1、 /O2 （最小化大小、 最大化速度）](../../build/reference/o1-o2-minimize-size-maximize-speed.md)选项暗含 **/Oy**。 指定 **/Oy-** 后 **/Ox**， **/O1**，或 **/O2**选项禁用 **/Oy**，无论它是显式或隐式。
+[/Ox （启用最速度优化）](../../build/reference/ox-full-optimization.md)并[/o1，/o2 （最小化大小、 最大化速度）](../../build/reference/o1-o2-minimize-size-maximize-speed.md)选项暗含 **/Oy**。 指定 **/Oy-** 后 **/Ox**， **/o1**，或者 **/o2**选项禁用 **/Oy**，无论它是显式或隐式。
 
-**/Oy**编译器选项使得调试器更加难以使用，因为编译器取消显示帧指针信息。 如果指定 debug 编译器选项 ([/Z7、 /Zi、 /ZI](../../build/reference/z7-zi-zi-debug-information-format.md))，我们建议您指定 **/Oy-** 在任何其他优化编译器选项后的选项。
+**/Oy**编译器选项使得调试器更加难以使用，因为编译器取消显示帧指针信息。 如果指定 debug 编译器选项 ([/Z7、 /Zi、 /ZI](../../build/reference/z7-zi-zi-debug-information-format.md))，我们建议您指定 **/Oy-** 后任何其他优化编译器选项的选项。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
@@ -58,7 +58,7 @@ ms.locfileid: "32377256"
 
 1. 单击**优化**属性页。
 
-1. 修改**省略框架指针**属性。 此属性仅添加或移除 **/Oy**选项。 如果你想要添加 **/Oy-** 选项，请单击**命令行**和修改**其他选项**。
+1. 修改**省略框架指针**属性。 此属性仅添加或移除 **/Oy**选项。 如果你想要添加 **/Oy-** 选项，单击**命令行**和修改**其他选项**。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>以编程方式设置此编译器选项
 

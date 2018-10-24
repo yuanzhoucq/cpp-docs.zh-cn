@@ -1,7 +1,7 @@
 ---
 title: 创建 OLE DB 使用者使用向导 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/22/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -15,16 +15,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2f9a301d6e8b2c26d5be7c4234550ba4af7eefd3
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 76f16c10ff4342e32a6081e89581945c53ee607c
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46097873"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990101"
 ---
 # <a name="creating-an-ole-db-consumer-using-a-wizard"></a>使用向导创建 OLE DB 使用者
 
-此过程说明如何使用 ATL 项目向导和 ATL OLE DB 使用者向导生成的 OLE DB 模板使用者，然后修改主代码的控制台应用程序，以检索并显示数据库表中的数据。  
+此过程说明了如何使用**ATL 项目向导**和 **ATL OLE DB 使用者向导*生成的 OLE DB 模板使用者，然后修改的控制台应用程序到主代码检索和显示数据库表中的数据。  
   
 最后两个部分介绍由向导生成的 OLE DB 使用者代码。  
   

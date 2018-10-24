@@ -1,7 +1,7 @@
 ---
 title: 创建 OLE DB 使用者 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/22/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -15,16 +15,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d4ef6d5d54bb3d6ed55ec2837a2300d8a1dcb03e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f64145a8d6269a5c6fd09f7178343a59ebc1b3ad
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46034074"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49989913"
 ---
 # <a name="creating-an-ole-db-consumer"></a>创建 OLE DB 使用者
 
-尽管使用该向导是建议的方法，可以使用或不使用 ATL OLE DB 使用者向导，创建 OLE DB 模板使用者。 使用者可以运行任何应用程序都支持 atl。  
+您可以创建 OLE DB 模板使用者，带或不带**ATL OLE DB 使用者向导**，但使用该向导是建议的方法。 使用者可以运行任何应用程序都支持 atl。  
   
 此节涵盖以下主题：  
   

@@ -1,6 +1,6 @@
 ---
 title: 编译器警告 C4800-通过 C5999 |Microsoft Docs
-ms.date: 05/30/2018
+ms.date: 10/24/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -99,18 +99,20 @@ f1_keywords:
 - C5042
 - C5043
 - C5044
+- C5045
+- C5046
 dev_langs:
 - C++
 author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: deee159c9da6fce9001d010a1a6b1db9b3b1d666
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 27f212865965883732e8bd956cafecf50e0a8de3
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861416"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990342"
 ---
 # <a name="compiler-warnings-c4800-through-c5999"></a>编译器警告 C4800-通过 C5999
 
@@ -251,3 +253,4 @@ ms.locfileid: "48861416"
 |编译器警告 （等级 2） C5043|'*规范*： 异常规范与前面的声明不匹配|
 |编译器警告 （等级 C5044|命令行选项的参数*选项*指向的路径*路径*不存在|
 |[编译器警告 C5045](c5045.md)|为内存负载如果 /Qspectre 开关指定，编译器将插入 Spectre 缓解措施|
+|[编译器警告 （等级 2） C5046](c5046.md)|'*函数*： 涉及带有内部链接未定义类型的符号|

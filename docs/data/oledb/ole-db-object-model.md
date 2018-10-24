@@ -1,7 +1,7 @@
 ---
 title: OLE DB 对象模型 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/22/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -16,18 +16,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c0bd4c8f18addf50dfcee525dea255f75b2fdf75
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: d82b6d51e423109c433438731f16878284c2c277
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46101467"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990251"
 ---
 # <a name="ole-db-object-model"></a>OLE DB 对象模型
 
-OLE DB 对象模型包含以下对象或组件。 第四个对象或列出的组件 （数据源、 会话、 命令和行集） 允许您连接到数据源并查看它。 在显示时使用的数据与其余部分中，从访问器中，开始。  
+OLE DB 对象模型由以下对象或组件。 第四个对象或列出的组件 （数据源、 会话、 命令和行集） 允许您连接到数据源并查看它。 在显示时使用的数据与其余部分中，从访问器中，开始。  
   
-## <a name="data-sources"></a>数据源  
+## <a name="data-sources"></a>Data Sources  
 
 数据源对象允许您连接到数据源，如文件或 DBMS。 数据源对象创建和管理的连接并包含权限和身份验证信息 （如登录名和密码）。 数据源对象可以创建一个或多个会话。  
   
@@ -47,41 +47,41 @@ OLE DB 对象模型包含以下对象或组件。 第四个对象或列出的组
   
 ## <a name="rowsets"></a>行集  
 
-行集公开表格格式的数据。 索引是一种特殊情况的行集。 可以从会话或命令创建行集。  
+行集以表格格式显示数据。 索引是一种特殊情况的行集。 可以从会话或命令创建行集。  
   
 ### <a name="schema-rowsets"></a>架构行集合  
 
-架构包含有关数据库的元数据 （结构化信息）。 架构行集是包含架构信息的行集。 DBMS 某些 OLE DB 访问接口支持架构行集对象。 有关架构行集的详细信息，请参阅[用架构行集获取元数据](../../data/oledb/obtaining-metadata-with-schema-rowsets.md)并[架构行集类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)。  
+架构必须具有数据库的元数据 （结构化信息）。 架构行集是具有架构信息的行集。 DBMS 某些 OLE DB 访问接口支持架构行集对象。 有关架构行集的详细信息，请参阅[用架构行集获取元数据](../../data/oledb/obtaining-metadata-with-schema-rowsets.md)并[架构行集类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)。  
   
 ### <a name="view-objects"></a>查看对象  
 
-视图对象定义的行和列集中的行的子集。 它包含任何数据。 查看对象不能合并来自多个行集的数据。  
+视图对象定义的行和列集中的行的子集。 它没有自己的任何数据。 查看对象不能合并来自多个行集的数据。  
   
 ## <a name="accessors"></a>访问器  
 
-仅 OLE DB 使用访问器的概念。 取值函数说明数据使用者中的存储方式。 行集字段 （列） 和数据成员声明中使用者之间，它包含一组绑定 （称为列映射）。  
+仅 OLE DB 使用访问器的概念。 取值函数说明数据使用者中的存储方式。 行集字段 （列） 和数据成员声明中使用者之间，它具有一组绑定 （称为列映射）。  
   
 ##  <a name="vcconoledbcomponents_transactions"></a> 事务  
 
 当提交或中止在非最低级别的嵌套的事务时，需要使用事务对象。 事务是 ACID 测试通过定义一个不可分的工作单元。 ACID 代表：  
   
-- 原子性： 不能被分成较小的工作单元。  
+- 原子性，不能被分成较小的工作单元  
   
-- 并发： 一次可以出现多个事务。  
+- 并发，每次可以进行多个事务  
   
-- 隔离： 一个事务具有有限的了解由另一个所做的更改。  
+- 隔离，一个事务具有有限的了解由另一个所做的更改  
   
-- 持续性： 事务进行永久性更改。  
+- 持续性，该事务可进行持久更改 
   
-## <a name="enumerators"></a>枚举数  
+## <a name="enumerators"></a>枚举器  
 
-枚举器搜索可用的数据源和其他枚举器。 未为特定的数据源的自定义的使用者使用枚举器来搜索要使用的数据源。  
+枚举器搜索可用的数据源和其他枚举器。 为特定的数据源不自定义的使用者使用枚举器来搜索要使用的数据源。  
   
 根枚举器随附在 Microsoft 数据访问 SDK 中，将遍历注册表查找的数据源和其他枚举器。 其他枚举器遍历注册表或搜索提供程序特定的方式。  
   
 ## <a name="errors"></a>错误  
 
-任何 OLE DB 对象上的任何接口可能会产生错误。 错误包含其他错误，包括一个可选的自定义错误对象信息。 此信息包含在一个 HRESULT。  
+任何 OLE DB 对象上的任何接口可能会产生错误。 错误都有一个错误，包括一个可选的自定义错误对象有关的其他信息。 此信息存储在一个 HRESULT。  
   
 ## <a name="notifications"></a>通知  
 
