@@ -2,7 +2,7 @@
 title: 在 Visual Studio 中安装 C++ Linux 工作负荷 | Microsoft Docs
 description: 介绍如何在 Visual Studio 中下载、安装和设置用于 C++ 的 Linux 工作负荷。
 ms.custom: ''
-ms.date: 09/12/2018
+ms.date: 10/12/2018
 ms.technology:
 - cpp-linux
 ms.tgt_pltfrm: Linux
@@ -13,12 +13,12 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 403f1bcd8634c3f471f34ff1266501de5bf05d52
-ms.sourcegitcommit: 87d317ac62620c606464d860aaa9e375a91f4c99
+ms.openlocfilehash: 060859879c6164bd8af10763ae5f828c9136abe5
+ms.sourcegitcommit: b05cff71a8a6a8a4c7bbea1263fd0a711853f921
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45601387"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49307901"
 ---
 # <a name="download-install-and-setup-the-linux-workload"></a>下载、安装和设置 Linux 工作负载
 
@@ -41,7 +41,7 @@ ms.locfileid: "45601387"
 
 Windows 10 上的另一个选项是激活适用于 Linux 的 Windows 子系统。 有关详细信息，请参阅 [Windows 10 安装指南](/windows/wsl/install-win10)。
 
-## <a name="linux-setup"></a>Linux 安装程序
+## <a name="linux-setup-ubuntu"></a>Linux 安装程序：Ubuntu
 
 目标 Linux 计算机必须安装 **openssh-server**、**g++**、**gdb** 和 **gdbserver**，并且必须运行 ssh 守护程序。 需要压缩才能自动将远程标头与本地计算机同步以获得 Intellisense 支持。 如果这些应用程序尚不存在，则可以按如下所述进行安装：
 
@@ -49,10 +49,27 @@ Windows 10 上的另一个选项是激活适用于 Linux 的 Windows 子系统�
 
    `sudo apt-get install openssh-server g++ gdb gdbserver zip`
 
-   由于 sudo 命令，可能会提示你输入 root 密码。  如果是这样，输入密码然后继续。  完成后，将可以安装这些服务和工具。
+   由于 sudo 命令，可能会提示你输入 root 密码。  如果是这样，输入密码然后继续。 完成后，可安装所需服务和工具。
 
 1. 通过运行以下命令，确保 ssh 服务在 Linux 计算机上运行：
 
    `sudo service ssh start`
 
    这将启动该服务并在后台运行它，准备接受连接。
+
+## <a name="linux-setup-fedora"></a>Linux 安装程序：Fedora
+
+运行 Fedora 的目标计算机使用 dnf 包安装程序。 要下载“openssh-server”、“g++”、“gdb”、“gdbserver”和“zip”并重启 ssh 守护程序，请遵循以下说明：
+
+1. 在 Linux 计算机上的 shell 提示符下，运行：
+
+   `sudo dnf install openssh-server g++ gdb gdbserver zip`
+
+   由于 sudo 命令，可能会提示你输入 root 密码。  如果是这样，输入密码然后继续。 完成后，可安装所需服务和工具。
+
+1. 通过运行以下命令，确保 ssh 服务在 Linux 计算机上运行：
+
+   `sudo systemctl start sshd`
+
+   这将启动该服务并在后台运行它，准备接受连接。
+

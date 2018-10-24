@@ -15,12 +15,12 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 82134d48853896ccb70c2620cd70c803fcc74bc8
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 0e735ece878797ffdcf89fffefa33473107ad3d5
+ms.sourcegitcommit: 7098d64443ffbd4a47f30bc41753007b570b47e8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821044"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120559"
 ---
 # <a name="configure-a-linux-cmake-project"></a>配置 Linux CMake 项目
 
@@ -30,7 +30,7 @@ ms.locfileid: "48821044"
 本主题假定你基本了解 Visual Studio 中的 CMake 支持。 有关详细信息，请参阅 [Visual C++ 的 CMake 工具](../ide/cmake-tools-for-visual-cpp.md)。 有关 CMake 本身的详细信息，请参阅[使用 CMake 生成、测试并打包软件](https://cmake.org/)。
 
 > [!NOTE]  
-> 使用 Visual Studio 中的 CMake 支持需要 CMake 3.8 中引入的服务器模式支持。 如需支持 Visual Studio 中 [CMake 目标视图](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/cmake-support-in-visual-studio-targets-view-single-file-compilation-and-cache-generation-settings/)窗格的，由 Microsoft 提供的 CMake 变体，请在 [https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases) 下载最新预生成二进制文件。 如果包管理器提供的版本低于 CMake 3.8，则可通过[基于源生成 CMake](#build-a-supported-cmake-release-from-source) 进行解决；如果更喜欢使用标准版 CMake，也可从官方 [CMake 下载页](https://cmake.org/download/)下载它。 
+> 使用 Visual Studio 中的 CMake 支持需要 CMake 3.8 中引入的服务器模式支持。 对于 Microsoft 提供的 CMake 变体，请在 [https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases) 中下载最新的预生成二进制文件。 
 
 ## <a name="open-a-folder"></a>打开文件夹
 
@@ -118,49 +118,10 @@ add_executable(hello-cmake hello.cpp)
 
 这些选项可用于生成前后以及 CMake 生成前在远程框中运行命令。 它们可以是远程框上的任何有效命令。 输出通过管道传递回 Visual Studio。
 
-## <a name="build-a-supported-cmake-release-from-source"></a>从源生成受支持的 CMake 版本
+## <a name="download-prebuilt-cmake-binaries"></a>下载预生成的 CMake 二进制文件
 
-Linux 计算机所需的最低 CMake 版本是 3.8，并它还必须支持服务器模式。 若要进行验证，请运行此命令：
+你的 Linux 发行版可能具有更早版本的 CMake。 使用 Visual Studio 中的 CMake 支持需要 CMake 3.8 中引入的服务器模式支持。 对于 Microsoft 提供的 CMake 变体，请在 [https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases) 中下载最新的预生成二进制文件。 
 
-```cmd
-cmake --version
-```
-
-若要验证是否启用了该服务器模式，请运行：
-
-```cmd
-cmake -E capabilities
-```
-
-在输出中，查找“‘serverMode’:true”。 请注意，即使按如下所述从源编译 CMake，也应该在完成后检查各项功能。 Linux 系统可能存在限制，会阻止启用服务器模式。
-
-若要在 Linux 系统 shell 中开始从源生成 CMake，请确保包管理器为最新版，且 git 和 cmake 均可用。
-
-首先，从我们用于维护 Visual Studio CMake 支持分支的 [Microsoft CMake 存储库](https://github.com/Microsoft/CMake)中克隆 CMake 源：
-
-```cmd
-sudo apt-get update
-sudo apt-get install -y git cmake
-git clone https://github.com/Microsoft/CMake.git
-cd CMake
-```
-
-接下来，若要生成最新版 CMake，并将它安装到 /usr/local/bin，请运行下面这些命令：
-
-```cmd
-mkdir out
-cd out
-cmake ../
-make
-sudo make install
-```
-
-接下来，运行下面的命令，以验证版本是否不低于 3.8，且是否已启用服务器模式：
-
-```cmd
-/usr/local/bin/cmake –version
-cmake -E capabilities
-```
 
 ## <a name="see-also"></a>请参阅
 

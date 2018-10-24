@@ -1,32 +1,30 @@
 ---
-title: 项目文件 | Microsoft Docs
+title: 示例项目文件 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/09/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
-- .vcproj files
-- Visual C++ projects, project file format
-- VCPROJ (Visual C++ project file) format
-- project files [C++], .vcproj file format
+- .vcxproj files
+- C++ projects, project file format
 ms.assetid: 5261cf45-3136-40a6-899e-dc1339551401
 author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7202dff0bd1a790a4e8727bbac9d375daecb8e7a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 591802e04348ca08bded17504b3fb19fb9aa7213
+ms.sourcegitcommit: 243ee0395ee44654a81ce1232f4581fb54904868
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46389004"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072380"
 ---
 # <a name="project-files"></a>项目文件
 
-Visual C++ 项目文件是基于 XML 的文件，具有 .vcxproj 文件扩展名并包含生成 Visual C++ 项目所需的信息。
+Visual C++ 项目文件是基于 XML 的文件，具有 .vcxproj 文件扩展名并包含生成 Visual C++ 项目所需的信息。 请注意，项目文件导入扩展名为 .props 或 .targets 的各种项目文件。 这些文件包含其他生成信息，并且可能本身引用其他 .props 或 .targets 文件。 文件路径中的宏（例如 `$(VCTargetsPath)`）取决于安装的 Visual Studio。 有关这些宏以及 .props 和 .targets 文件的详细信息，请参阅 [VC++ 目录属性页](vcpp-directories-property-page.md)、[使用项目属性](working-with-project-properties.md#bkmkPropertiesVersusMacros)和[用于生成命令和属性的常用宏](common-macros-for-build-commands-and-properties.md)。
 
 ## <a name="example"></a>示例
 
