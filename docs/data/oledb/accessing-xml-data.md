@@ -1,7 +1,7 @@
 ---
 title: 访问 XML 数据 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: cfde3980e58ba86d6923eaac765332a23e40ad7e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: d7db1d790ca9caeea6bd9c7853139f59ffa0ab6c
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46062496"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808714"
 ---
 # <a name="accessing-xml-data"></a>访问 XML 数据
 
@@ -34,7 +34,7 @@ ms.locfileid: "46062496"
 |功能|CStreamRowset|CXMLAccessor|  
 |-------------------|-------------------|------------------|  
 |传输的数据量|立即从所有列和行中检索数据。|从所有列中的检索数据，但一次只有一个行。 必须导航使用方法，如行`MoveNext`。|  
-|格式化字符串|SQL Server 格式的 XML 字符串，并将其发送给使用者。|检索以本机格式 （提供程序将作为 Unicode 字符串发送的请求） 的行集数据，然后生成包含 XML 格式的数据的字符串。|  
+|格式化字符串|SQL Server 格式的 XML 字符串，并将其发送给使用者。|检索以本机格式 （提供程序将作为 Unicode 字符串发送的请求） 的行集数据，然后生成 XML 格式保存数据的字符串。|  
 |控制格式设置|具有某些级别的控制如何通过设置某些特定于 SQL Server 2000 的属性设置的 XML 字符串的格式。|你可以不控制生成的 XML 字符串的格式。|  
   
 虽然`CStreamRowset`能在 XML 格式检索数据的多个整体高效的方式仅受 SQL Server 2000。  
@@ -61,12 +61,12 @@ CCommand<CNoAccessor, CStreamRowset> myCmd;
 myCmd.m_spStream->Read()  
 ```  
   
-SQL Server 2000 执行 XML 格式设置，并返回所有列和行集作为一个 XML 字符串的所有行。  
+SQL Server 2000 进行 XML 格式化，并返回所有列和行集作为一个 XML 字符串的所有行。  
   
 有关使用示例`Read`方法，请参阅中的"添加 XML 支持向使用者"[实现简单使用者](../../data/oledb/implementing-a-simple-consumer.md)。  
   
 > [!NOTE]
->  XML 支持使用`CStreamRowset`仅适用于 SQL Server 2000 和要求的 SQL Server 2000 （安装与 MDAC） 具有 OLE DB 访问接口。  
+> XML 支持使用`CStreamRowset`仅适用于 SQL Server 2000 和要求的 SQL Server 2000 （安装与 MDAC） 具有 OLE DB 访问接口。  
   
 ## <a name="retrieving-xml-data-using-cxmlaccessor"></a>使用 CXMLAccessor 中检索 XML 数据  
 

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3f5e32599096b4e0fa451c18b3e05adf01b34ff4
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b372959105407074cd2a7295837e2c47ef629da7
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46407590"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162160"
 ---
 # <a name="adding-references-in-visual-c-projects"></a>在 Visual C++ 项目中添加引用
 
@@ -84,11 +84,11 @@ ActiveX 引用属性仅可用于对 COM 组件的引用。 只有在“引用”
 
 - **复制本地附属程序集**
 
-   指定是否在生成期间将所引用程序集的附属程序集复制到目标位置。 仅在“复制本地”  为 `true`时使用。
+   指定是否在生成期间将所引用程序集的附属程序集复制到目标位置。 仅在“复制本地”为“true”时使用。
 
 - **引用程序集输出**
 
-   指定在生成过程中使用此程序集。 若为 `true`，则在生成期间在编译器命令行上使用此程序集。
+   指定在生成过程中使用此程序集。 若为“true”，则在生成期间在编译器命令行上使用此程序集。
 
 ### <a name="project-to-project-reference-properties"></a>项目到项目引用属性
 
@@ -144,7 +144,7 @@ ActiveX 引用属性仅可用于对 COM 组件的引用。 只有在“引用”
 
 - **强名称**
 
-   如果所引用程序集具有强名称，则为 `true`。 强名称程序集的版本是唯一的。
+   如果引用的程序集具有强名称，则为`true` 。 强名称程序集的版本是唯一的。
 
 - **Version**
 

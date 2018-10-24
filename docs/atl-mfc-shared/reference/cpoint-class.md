@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a1ab725391b03eeba35e230c3e0a5ebe0913fec2
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 18f6f49cbcb9fc95ecec73ee22f6830458c561db
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328345"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808532"
 ---
 # <a name="cpoint-class"></a>CPoint 类
 
@@ -99,19 +99,19 @@ CPoint(LPARAM dwPoint) throw();
 
 ### <a name="parameters"></a>参数
 
-*initX*  
+*initX*<br/>
 指定 `x` 的 `CPoint` 成员的值。
 
-*initY*  
+*initY*<br/>
 指定 `y` 的 `CPoint` 成员的值。
 
-*initPt*  
+*initPt*<br/>
 [点](../../mfc/reference/point-structure.md)结构或`CPoint`，指定用于初始化的值`CPoint`。
 
-*initSize*  
+*initSize*<br/>
 [大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)结构或[CSize](../../atl-mfc-shared/reference/csize-class.md) ，指定用于初始化的值`CPoint`。
 
-*dwPoint*  
+*dwPoint*<br/>
 集`x`成员添加到的低序位字*dwPoint*并且`y`成员添加到的高序位字*dwPoint*。
 
 ### <a name="remarks"></a>备注
@@ -157,16 +157,16 @@ void Offset(SIZE size) throw();
 
 ### <a name="parameters"></a>参数
 
-*拼音*  
+*拼音*<br/>
 指定的偏移量`x`的成员`CPoint`。
 
-*正文*  
+*正文*<br/>
 指定的偏移量`y`的成员`CPoint`。
 
-*点*  
+*点*<br/>
 指定的量 ([点](../../mfc/reference/point-structure.md)或`CPoint`) 的偏移`CPoint`。
 
-*size*  
+*size*<br/>
 指定的量 ([大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)或[CSize](../../atl-mfc-shared/reference/csize-class.md)) 的偏移`CPoint`。
 
 ### <a name="example"></a>示例
@@ -183,7 +183,7 @@ BOOL operator==(POINT point) const throw();
 
 ### <a name="parameters"></a>参数
 
-*点*  
+*点*<br/>
 包含[点](../../mfc/reference/point-structure.md)结构或`CPoint`对象。
 
 ### <a name="return-value"></a>返回值
@@ -204,7 +204,7 @@ BOOL operator!=(POINT point) const throw();
 
 ### <a name="parameters"></a>参数
 
-*点*  
+*点*<br/>
 包含[点](../../mfc/reference/point-structure.md)结构或`CPoint`对象。
 
 ### <a name="return-value"></a>返回值
@@ -226,10 +226,10 @@ void operator+=(POINT point) throw();
 
 ### <a name="parameters"></a>参数
 
-*size*  
+*size*<br/>
 包含[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)结构或[CSize](../../atl-mfc-shared/reference/csize-class.md)对象。
 
-*点*  
+*点*<br/>
 包含[点](../../mfc/reference/point-structure.md)结构或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)对象。
 
 ### <a name="remarks"></a>备注
@@ -255,10 +255,10 @@ void operator-=(POINT point) throw();
 
 ### <a name="parameters"></a>参数
 
-*size*  
+*size*<br/>
 包含[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)结构或[CSize](../../atl-mfc-shared/reference/csize-class.md)对象。
 
-*点*  
+*点*<br/>
 包含[点](../../mfc/reference/point-structure.md)结构或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)对象。
 
 ### <a name="remarks"></a>备注
@@ -285,13 +285,13 @@ CRect operator+(const RECT* lpRect) const throw();
 
 ### <a name="parameters"></a>参数
 
-*size*  
+*size*<br/>
 包含[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)结构或[CSize](../../atl-mfc-shared/reference/csize-class.md)对象。
 
-*点*  
+*点*<br/>
 包含[点](../../mfc/reference/point-structure.md)结构或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)对象。
 
-*lpRect*  
+*lpRect*<br/>
 包含一个指向[RECT](../../mfc/reference/rect-structure.md)结构或[CRect](../../atl-mfc-shared/reference/crect-class.md)对象。
 
 ### <a name="return-value"></a>返回值
@@ -321,13 +321,13 @@ CPoint operator-() const throw();
 
 ### <a name="parameters"></a>参数
 
-*点*  
+*点*<br/>
 一个[点](../../mfc/reference/point-structure.md)结构或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)对象。
 
-*size*  
+*size*<br/>
 一个[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)结构或[CSize](../../atl-mfc-shared/reference/csize-class.md)对象。
 
-*lpRect*  
+*lpRect*<br/>
 一个指向[RECT](../../mfc/reference/rect-structure.md)结构或[CRect](../../atl-mfc-shared/reference/crect-class.md)对象。
 
 ### <a name="return-value"></a>返回值

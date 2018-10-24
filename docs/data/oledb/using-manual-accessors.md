@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 5aa7f72cc76f80e2304faf93ca0c6198c505e88a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 8805878f880d1c195ddf89abc283719e73ff5182
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46101632"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808922"
 ---
 # <a name="using-manual-accessors"></a>使用手动访问器
 
@@ -36,7 +36,7 @@ ms.locfileid: "46101632"
   
 - 查看是否有多个返回行集  
   
-若要使用 OLE DB 使用者模板执行此操作，请使用`CManualAccessor`类，请执行以下步骤：  
+若要执行这些操作与 OLE DB 使用者模板，请使用`CManualAccessor`类，请执行以下步骤：  
   
 1. 打开`CCommand`对象与`CManualAccessor`作为模板参数。  
   

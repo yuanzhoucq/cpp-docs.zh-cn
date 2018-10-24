@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7ce6949e582142e208058b4fa59d02008513e29f
-ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
+ms.openlocfilehash: cd8412ed280c0a256ea8acb7274da5d6238134fc
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49410728"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49807792"
 ---
 # <a name="creating-a-consumer-without-using-a-wizard"></a>不使用向导创建使用者
 
@@ -67,7 +67,7 @@ ms.locfileid: "49410728"
     hr = rs.Open();            // (Open also executes the command)  
     ```  
   
-- 使用的 （可选） 设置行集属性`CDBPropSet::AddProperty`并将它们作为参数传递`rs.Open`。 有关如何完成此操作的示例，请参阅**GetRowsetProperties**中[使用者向导生成方法](../../data/oledb/consumer-wizard-generated-methods.md)。  
+- 使用的 （可选） 设置行集属性`CDBPropSet::AddProperty`并将它们作为参数传递`rs.Open`。 有关如何完成此操作的示例，请参阅`GetRowsetProperties`中[使用者向导生成方法](../../data/oledb/consumer-wizard-generated-methods.md)。  
   
 - 现在可以使用行集来检索/操作数据。  
   

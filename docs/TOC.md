@@ -14,7 +14,6 @@
 # [C++ 标准库](standard-library/cpp-standard-library-reference.md)
 # [Windows 开发](windows/overview-of-windows-programming-in-cpp.md)
 # [Linux 开发](linux/download-install-and-setup-the-linux-development-workload.md)
-# [使用 C++/CLI 的 .NET开发](dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
 # [Visual C++ 中的云和 Web 编程](cloud/cloud-and-web-programming-in-visual-cpp.md)
 # [并行编程](parallel/parallel-programming-in-visual-cpp.md)
 # [数据访问](data/data-access-in-cpp.md)

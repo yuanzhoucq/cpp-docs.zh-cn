@@ -1,7 +1,7 @@
 ---
 title: 使用数据库特性简化数据访问 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/19/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -29,12 +29,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 41d1692fc69ba4ff29e091ca736cae60b10a402a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 2689aab8b33c01c9a4d72b231a11a251813ac625
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46054072"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808012"
 ---
 # <a name="simplifying-data-access-with-database-attributes"></a>使用数据库特性简化数据访问
 
@@ -52,18 +52,26 @@ ms.locfileid: "46054072"
   
 - `db_table`特性化的版本中的调用是等效于下面的模板声明：  
   
-    ```  
+    ```cpp  
     class CAuthorsNoAttr : public CTable<CAccessor<CAuthorsNoAttrAccessor>>  
     ```  
   
 - `db_column`特性化的版本中的调用是列映射到等效的 (请参阅`BEGIN_COLUMN_MAP ... END_COLUMN_MAP`) 模板声明中。  
   
-属性将为您插入的用户记录类声明。 用户记录类相当于`CAuthorsNoAttrAccessor`模板声明中。 如果表类是`CAuthors`，名为插入的用户记录类`CAuthorsAccessor`，和你仅可以查看其声明中插入的代码。 详细信息，请参阅"特性插入的用户记录类"中[用户记录](../../data/oledb/user-records.md)。  
+属性将为您插入的用户记录类声明。 用户记录类等于`CAuthorsNoAttrAccessor`模板声明中。 如果表类是`CAuthors`，名为插入的用户记录类`CAuthorsAccessor`，和你仅可以查看其声明中插入的代码。 详细信息，请参阅"特性插入的用户记录类"中[用户记录](../../data/oledb/user-records.md)。  
   
-请注意，在特性化和模板化代码，必须设置行集属性使用`CDBPropSet::AddProperty`。  
+在特性化和模板化代码，必须设置行集属性使用`CDBPropSet::AddProperty`。  
   
-本主题中讨论的特性相关的信息，请参阅[OLE DB 使用者特性](../../windows/ole-db-consumer-attributes.md)。  
-  
+本主题中讨论的特性相关的信息，请参阅[OLE DB 使用者特性](../../windows/ole-db-consumer-attributes.md)。
+
+> [!NOTE]
+> 以下`include`语句所需编译下面的示例：
+> ```cpp
+> #include <atlbase.h>  
+> #include <atlplus.h>  
+> #include <atldbcli.h>    
+> ```
+
 ## <a name="table-and-accessor-declaration-using-attributes"></a>表和使用属性访问器声明  
 
 下面的代码调用`db_source`和`db_table`表类上。 `db_source` 指定数据源和要使用的连接。 `db_table` 将插入相应的模板代码以声明的表类。 `db_column` 指定列映射，并将访问器声明。 可以在支持 atl。 任何项目中使用 OLE DB 使用者特性  
@@ -85,15 +93,15 @@ ms.locfileid: "46054072"
 class CAuthors  
 {  
 public:  
-   DWORD m_dwAuIDStatus;  
-   DWORD m_dwAuthorStatus;  
-   DWORD m_dwYearBornStatus;  
-   DWORD m_dwAuIDLength;  
-   DWORD m_dwAuthorLength;  
-   DWORD m_dwYearBornLength;  
-   [ db_column(1, status=m_dwAuIDStatus, length=m_dwAuIDLength) ] LONG m_AuID;  
-   [ db_column(2, status=m_dwAuthorStatus, length=m_dwAuthorLength) ] TCHAR m_Author[51];  
-   [ db_column(3, status=m_dwYearBornStatus, length=m_dwYearBornLength) ] SHORT m_YearBorn;  
+   DBSTATUS m_dwAuIDStatus;
+   DBSTATUS m_dwAuthorStatus;
+   DBSTATUS m_dwYearBornStatus;
+   DBLENGTH m_dwAuIDLength;
+   DBLENGTH m_dwAuthorLength;
+   DBLENGTH m_dwYearBornLength;
+   [db_column("1", status = "m_dwAuIDStatus", length = "m_dwAuIDLength")] LONG m_AuID;
+   [db_column("2", status = "m_dwAuthorStatus", length = "m_dwAuthorLength")] TCHAR m_Author[51];
+   [db_column("3", status = "m_dwYearBornStatus", length = "m_dwYearBornLength")] SHORT m_YearBorn;
    void GetRowsetProperties(CDBPropSet* pPropSet)  
    {  
       pPropSet->AddProperty(DBPROP_CANFETCHBACKWARDS, true);  

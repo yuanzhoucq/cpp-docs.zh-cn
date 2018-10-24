@@ -1,7 +1,7 @@
 ---
 title: CTimeSpan 类 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -33,12 +33,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b70e4ca31f4346e8ad0b6dda4e66192e2e53111
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 32e6599fa19c23751beaf3545696a90a2d117248
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46397515"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49809078"
 ---
 # <a name="ctimespan-class"></a>CTimeSpan 类
 
@@ -114,7 +114,7 @@ bool operator>=(CTimeSpan span) const throw();
 
 ### <a name="parameters"></a>参数
 
-*s p a n*  
+*s p a n*<br/>
 要比较的对象。
 
 ### <a name="return-value"></a>返回值
@@ -133,22 +133,22 @@ bool operator>=(CTimeSpan span) const throw();
 CTimeSpan() throw();
 CTimeSpan(__time64_t time) throw();
 
-CTimeSpan(  
-LONG lDays,
-int nHours,
-int nMins,
-int nSecs) throw();
+CTimeSpan(
+    LONG lDays,
+    int nHours,
+    int nMins,
+    int nSecs) throw();
 ```
 
 ### <a name="parameters"></a>参数
 
-*timeSpanSrc*  
+*timeSpanSrc*<br/>
 一个`CTimeSpan`已存在的对象。
 
-*time*  
+*time*<br/>
 一个 **__time64_t**时间值，该值是在时间跨度的秒数。
 
-*lDays*， *n 小时*， *nMins*， *nSecs*  
+*lDays*， *n 小时*， *nMins*， *nSecs*<br/>
 天、 小时、 分钟和秒，分别。
 
 ### <a name="remarks"></a>备注
@@ -163,12 +163,12 @@ int nSecs) throw();
 
 - `CTimeSpan( LONG, int, int, int );` 构造`CTimeSpan`从每个组件的组件的对象限制为以下范围：
 
-    |组件|范围|  
-    |---------------|-----------|  
-    |*lDays*|0-25,000 （近似）|  
-    |*n 小时*|0-23|  
-    |*nMins*|0-59|  
-    |*nSecs*|0-59|
+   |组件|范围|
+   |---------------|-----------|
+   |*lDays*|0-25,000 （近似）|
+   |*n 小时*|0-23|
+   |*nMins*|0-59|
+   |*nSecs*|0-59|
 
 请注意，Microsoft 基础类库的调试版本断言，如果一个或多个时间组件不在范围。 它由你负责验证之前调用的参数。
 
@@ -188,7 +188,7 @@ CString Format(UINT nID) const;
 
 ### <a name="parameters"></a>参数
 
-*pFormat*， *pszFormat*  
+*pFormat*， *pszFormat*<br/>
 格式设置字符串类似于`printf`格式设置字符串。 格式设置代码，前面有百分比 (`%`) 登录，将替换为相应`CTimeSpan`组件。 格式设置字符串中的其他字符被复制到返回的字符串不变。 值和格式设置代码的含义`Format`如下所示：
 
 - **%D**总在此天数 `CTimeSpan`
@@ -201,7 +201,7 @@ CString Format(UINT nID) const;
 
 - **%%** 百分比符号
 
-*nID*  
+*nID*<br/>
 用于标识此格式的字符串的 ID。
 
 ### <a name="return-value"></a>返回值
@@ -355,7 +355,7 @@ CTimeSpan operator-(CTimeSpan span) const throw();
 
 ### <a name="parameters"></a>参数
 
-*s p a n*  
+*s p a n*<br/>
 要添加到值`CTimeSpan`对象。
 
 ### <a name="return-value"></a>返回值
@@ -381,7 +381,7 @@ CTimeSpan& operator-=(CTimeSpan span) throw();
 
 ### <a name="parameters"></a>参数
 
-*s p a n*  
+*s p a n*<br/>
 要添加到值`CTimeSpan`对象。
 
 ### <a name="return-value"></a>返回值
@@ -409,7 +409,7 @@ CArchive& Serialize64(CArchive& ar);
 
 ### <a name="parameters"></a>参数
 
-*ar*  
+*ar*<br/>
 `CArchive`你想要更新的对象。
 
 ### <a name="return-value"></a>返回值

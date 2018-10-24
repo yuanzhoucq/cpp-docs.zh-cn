@@ -16,20 +16,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3e75a100bb5b56b613419160a3ea063bce42bbdb
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 70fab2751e216ca90dbe09e31c88f9aa80aa7b90
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46092318"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808259"
 ---
 # <a name="using-multiple-result-sets-from-one-stored-procedure"></a>使用一个存储过程返回的多个结果集
 
-大多数存储的过程返回多个结果集。 此类存储的过程通常包含一个或多个 select 语句。 使用者需要考虑此选项以处理所有结果集。  
+大多数存储的过程返回多个结果集。 此类存储的过程通常包含一个或多个 select 语句。 使用者需要考虑此包含处理所有结果集。  
   
-### <a name="to-handle-multiple-result-sets"></a>若要处理多个结果集  
+## <a name="to-handle-multiple-result-sets"></a>若要处理多个结果集  
   
-1. 创建`CCommand`类的`CMultipleResults`作为模板参数和所选的取值函数。 通常情况下，这是一个动态或手动访问器。 如果使用另一种类型的访问器，您可能不能以确定每个行集的输出列。  
+1. 创建`CCommand`类的`CMultipleResults`作为模板参数和您的选择，通常一个动态或手动访问器的取值函数。 如果使用另一种类型的访问器，您可能不能以确定每个行集的输出列。  
   
 1. 像往常一样执行存储的过程并将列绑定 (请参阅[我如何提取的数据？](../../data/oledb/fetching-data.md))。  
   

@@ -1,7 +1,7 @@
 ---
 title: Module 类 |Microsoft Docs
 ms.custom: ''
-ms.date: 09/17/2018
+ms.date: 10/18/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -53,12 +53,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0fa34cb8fce2854f4b3864629b86122bdfe6b35f
-ms.sourcegitcommit: 338e1ddc2f3869d92ba4b73599d35374cf1d5b69
+ms.openlocfilehash: 5df7ae90a347d82b303d7db251e533733c8e4a86
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46494525"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808625"
 ---
 # <a name="module-class"></a>Module 类
 
@@ -177,22 +177,22 @@ WRL_NOTHROW static Module& Create(
 template<typename T>
 WRL_NOTHROW static Module& Create(
    _In_ T* object,
-   _In_ void (T::* method)()  
+   _In_ void (T::* method)()
 );
 ```
 
 ### <a name="parameters"></a>参数
 
-*T*  
+*T*<br/>
 模块类型。
 
-*回调*  
+*回调*<br/>
 释放该模块的最后一个实例对象时调用。
 
-*object*  
+*object*<br/>
 *对象*并*方法*结合使用的参数。 点到最后一个实例对象时释放模块中的最后一个实例对象。
 
-*方法*  
+*方法*<br/>
 *对象*并*方法*结合使用的参数。 指向最后一个实例对象时释放模块中的最后一个实例对象的方法。
 
 ### <a name="return-value"></a>返回值
@@ -225,13 +225,13 @@ WRL_NOTHROW HRESULT GetActivationFactory(
 
 ### <a name="parameters"></a>参数
 
-*pActivatibleClassId*  
+*pActivatibleClassId*<br/>
 运行时类的 IID。
 
-*ppIFactory*  
+*ppIFactory*<br/>
 指定运行时类的 IActivationFactory。
 
-*服务器名称*  
+*服务器名称*<br/>
 当前模块中类工厂的子集名称。 指定中使用的服务器名称[ActivatableClassWithFactoryEx](../windows/activatableclass-macros.md)宏，或指定`nullptr`若要获取默认服务器名称。
 
 ### <a name="return-value"></a>返回值
@@ -253,16 +253,16 @@ WRL_NOTHROW HRESULT GetActivationFactory(
 
 ### <a name="parameters"></a>参数
 
-*clsid*  
+*clsid*<br/>
 类 ID。
 
-*riid*  
+*riid*<br/>
 您请求的接口 ID。
 
-*ppv*  
+*ppv*<br/>
 指向返回对象的指针。
 
-*服务器名称*  
+*服务器名称*<br/>
 在 `ActivatableClassWithFactory`、`ActivatableClassWithFactoryEx` 或 `ActivatableClass` 宏中指定的服务器名称；或用于获取默认服务器名称的 `nullptr`。
 
 ### <a name="return-value"></a>返回值
@@ -344,19 +344,19 @@ WRL_NOTHROW virtual HRESULT RegisterCOMObject(
 
 ### <a name="parameters"></a>参数
 
-*服务器名称*  
+*服务器名称*<br/>
 服务器的完全限定名。
 
-*clsid*  
+*clsid*<br/>
 要注册的 CLSID 的数组。
 
-*工厂*  
+*工厂*<br/>
 其可用性正发布的类对象的 IUnknown 接口的数组。
 
-*Cookie*  
+*Cookie*<br/>
 完成此操作后，指向标识已注册类对象的值的指针数组。 以后将使用这些值来撤销注册。
 
-*count*  
+*count*<br/>
 要注册的 CLSID 的数量。
 
 ### <a name="return-value"></a>返回值
@@ -381,10 +381,10 @@ HRESULT RegisterObjects(
 
 ### <a name="parameters"></a>参数
 
-*模块*  
+*module*<br/>
 COM 或 Windows 运行时对象的数组。
 
-*服务器名称*  
+*服务器名称*<br/>
 创建对象的服务器的名称。
 
 ### <a name="return-value"></a>返回值
@@ -399,21 +399,21 @@ COM 或 Windows 运行时对象的数组。
 HRESULT RegisterWinRTObject(const wchar_t* serverName,
    wchar_t** activatableClassIds,
    WINRT_REGISTRATION_COOKIE* cookie,
-   unsigned int count)  
+   unsigned int count)
 ```
 
 ### <a name="parameters"></a>参数
 
-*服务器名称*  
+*服务器名称*<br/>
 指定受此操作影响的对象子集的名称。
 
-*activatableClassIds*  
+*activatableClassIds*<br/>
 要注册的可激活 CLSID 的数组。
 
-*Cookie*  
+*Cookie*<br/>
 标识已注册类对象的值。 此值以后将用于撤销注册。
 
-*count*  
+*count*<br/>
 要注册的对象的数量。
 
 ### <a name="return-value"></a>返回值
@@ -453,13 +453,13 @@ virtual HRESULT UnregisterCOMObject(
 
 ### <a name="parameters"></a>参数
 
-*服务器名称*  
+*服务器名称*<br/>
 （未使用）
 
-*Cookie*  
+*Cookie*<br/>
 指针的数组，其指向标识要注销的类对象的值。 该数组通过创建[RegisterCOMObject](#registercomobject)方法。
 
-*count*  
+*count*<br/>
 要注销的类的数量。
 
 ### <a name="return-value"></a>返回值
@@ -478,10 +478,10 @@ HRESULT UnregisterObjects(
 
 ### <a name="parameters"></a>参数
 
-*模块*  
+*module*<br/>
 指向模块的指针。
 
-*服务器名称*  
+*服务器名称*<br/>
 指定受此操作影响的对象子集的限定名。
 
 ### <a name="return-value"></a>返回值
@@ -501,5 +501,5 @@ virtual HRESULT UnregisterWinRTObject(
 
 ### <a name="parameters"></a>参数
 
-*Cookie*  
+*Cookie*<br/>
 指针，其指向标识将撤销其注册的类对象的值。

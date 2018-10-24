@@ -1,7 +1,7 @@
 ---
 title: TN041:-OLE1 迁移到 MFC 的 OLE 2 |Microsoft Docs
 ms.custom: ''
-ms.date: 06/28/2018
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75177743b893bdcf48b52b27c25ea4070e000f88
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c2f93ffa79c5f737be032ae9edffa6c3e49c7055
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46377053"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49809013"
 ---
 # <a name="tn041-mfcole1-migration-to-mfcole-2"></a>TN041：MFC/OLE1 迁移到 MFC/OLE 2
 
@@ -301,7 +301,7 @@ ON_COMMAND(ID_OLE_EDIT_CONVERT, OnEditConvert)
 
 OLE 最有趣的功能之一是就地激活（也称为“可视化编辑”）。 此功能可让服务器接管容器的一部分用户界面，以便为用户提供更无缝的编辑界面。 若要向 OCLIENT 实现就地激活，则需要添加一些特殊资源和一些附加代码。 这些资源和代码通常由 AppWizard 提供 — 事实上，此处的很多代码是直接通过“容器”支持从新的 AppWizard 应用程序借用的。
 
-首先，当存在处于就地活动状态的项时，必须添加要使用的菜单资源。 您可以复制 IDR_OCLITYPE 资源并删除除“文件”和“窗口”弹出项之外的所有资源，以便在 Visual C++ 中创建此额外菜单资源。 文件和窗口弹出窗口，以指示组的分隔之间插入两个分隔条 (它应如下所示： 文件&#124;&#124;窗口)。 这些分隔条的含义以及服务器和容器菜单如何合并的详细信息请参阅"菜单和资源： 菜单合并"中*OLE 2 类*。
+首先，当存在处于就地活动状态的项时，必须添加要使用的菜单资源。 您可以复制 IDR_OCLITYPE 资源并删除除“文件”和“窗口”弹出项之外的所有资源，以便在 Visual C++ 中创建此额外菜单资源。 文件和窗口弹出窗口，以指示组的分隔之间插入两个分隔条 (它应如下所示： 文件&#124;&#124;窗口)。 有关这些分隔条的含义以及服务器和容器菜单如何合并的详细信息请参阅[菜单和资源： 菜单合并](../mfc/menus-and-resources-menu-merging.md)。
 
 创建这些菜单后，您需要通知框架。 此操作在将文档模板添加 InitInstance 中的文档模板列表前通过调用文档模板的 `CDocTemplate::SetContainerInfo` 完成。 注册文档模板的新代码如下所示：
 
@@ -618,7 +618,7 @@ CServerItem 还将重写`COleServerItem::OnGetTextData`。 此函数在 MFC/OLE 
 \hiersvr\svrview.cpp(325) : error C2660: 'CopyToClipboard' : function does not take 2 parameters
 ```
 
-`COleServerItem::CopyToClipboard` 不再支持“bIncludeNative”标志。 将总是复制本机数据（服务器项的 Serialize 函数写出的数据），因此您应移除第一个参数。 此外，当发生错误而不是返回 FALSE 时，`CopyToClipboard` 将引发异常。 请按如下方式更改 CServerView::OnEditCopy 的代码：
+`COleServerItem::CopyToClipboard` 不再支持`bIncludeNative`标志。 将总是复制本机数据（服务器项的 Serialize 函数写出的数据），因此您应移除第一个参数。 此外，当发生错误而不是返回 FALSE 时，`CopyToClipboard` 将引发异常。 请按如下方式更改 CServerView::OnEditCopy 的代码：
 
 ```cpp
 void CServerView::OnEditCopy()
@@ -654,7 +654,7 @@ void CServerView::OnEditCopy()
 
 - 您需要向框架告知这些特殊资源和类。
 
-菜单资源很容易创建。 运行 Visual C++，将菜单资源 IDR_HIERSVRTYPE 复制到名为 IDR_HIERSVRTYPE_SRVR_IP 的菜单资源。 修改菜单，以便只保留“编辑”和“帮助”菜单弹出项。 在编辑和帮助菜单之间菜单中添加两个分隔符 (它应如下所示： 编辑&#124;&#124;帮助)。 这些分隔条的含义以及服务器和容器菜单如何合并的详细信息，请参阅"菜单和资源： 菜单合并"中*OLE 2 类*。
+菜单资源很容易创建。 运行 Visual C++，将菜单资源 IDR_HIERSVRTYPE 复制到名为 IDR_HIERSVRTYPE_SRVR_IP 的菜单资源。 修改菜单，以便只保留“编辑”和“帮助”菜单弹出项。 在编辑和帮助菜单之间菜单中添加两个分隔符 (它应如下所示： 编辑&#124;&#124;帮助)。 有关这些分隔条的含义以及服务器和容器菜单如何合并的详细信息，请参阅[菜单和资源： 菜单合并](../mfc/menus-and-resources-menu-merging.md)。
 
 子集工具栏的位图创建起来很轻松：在选中“服务器”选项的情况下从新的 AppWizard 生成的应用程序中复制位图。 此位图随后会导入 Visual C++。 请确保为位图提供 ID IDR_HIERSVRTYPE_SRVR_IP。
 
@@ -677,7 +677,7 @@ pMenu->TrackPopupMenu(TPM_CENTERALIGN | TPM_RIGHTBUTTON,
     AfxGetApp()->m_pMainWnd);
 ```
 
-请注意，对引用 *`AfxGetApp()->m_pMainWnd*`。 当服务器已就地激活时，它有一个主窗口，并且 m_pMainWnd 已设置，但它通常不可见。 此外，此窗口是指*主要*窗口中的应用程序，MDI 框架窗口出现时服务器完全打开或独立运行。 此窗口不引用活动框架窗口，后者在就地激活后是派生自 `COleIPFrameWnd` 的框架窗口。 为了在就地编辑时获得正确的活动窗口，此版本的 MFC 添加了一个新函数 `AfxGetMainWnd`。 通常情况下，应使用此函数，而不是 *`AfxGetApp()->m_pMainWnd*`。 此代码需要进行以下更改：
+请注意，对引用`AfxGetApp()->m_pMainWnd`。 当服务器已就地激活时，它有一个主窗口，并且 m_pMainWnd 已设置，但它通常不可见。 此外，此窗口是指*主要*窗口中的应用程序，MDI 框架窗口出现时服务器完全打开或独立运行。 此窗口不引用活动框架窗口，后者在就地激活后是派生自 `COleIPFrameWnd` 的框架窗口。 为了在就地编辑时获得正确的活动窗口，此版本的 MFC 添加了一个新函数 `AfxGetMainWnd`。 通常情况下，应使用此函数，而不是`AfxGetApp()->m_pMainWnd`。 此代码需要进行以下更改：
 
 ```cpp
 pMenu->TrackPopupMenu(TPM_CENTERALIGN | TPM_RIGHTBUTTON,
