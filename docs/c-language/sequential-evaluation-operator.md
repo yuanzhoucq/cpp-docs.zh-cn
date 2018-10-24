@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a285cc87ec4182586663afcb3559101167ae7261
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 0cee62bdf19e6ba3196e0336cb29a7c7606775b5
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46095568"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808285"
 ---
 # <a name="sequential-evaluation-operator"></a>顺序评估运算符
 
@@ -29,9 +29,9 @@ ms.locfileid: "46095568"
 
 ## <a name="syntax"></a>语法
 
-*expression*: *assignment-expression*
-
-*expression*  **,**  *assignment-expression*
+*expression*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*assignment-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*expression* **,** *assignment-expression*
 
 顺序计算运算符的左操作数的计算结果为 `void` 表达式。 该运算的结果与右操作数具有相同的值和类型。 所有操作数都可以是任意类型。 顺序计算运算符在其操作数之间不执行类型转换，也不产生左值。 第一个操作数后有一个序列点，这意味着来自左操作数的计算的所有副作用在开始右操作数的计算前已完成。 有关详细信息，请参阅[序列点](../c-language/c-sequence-points.md)。
 

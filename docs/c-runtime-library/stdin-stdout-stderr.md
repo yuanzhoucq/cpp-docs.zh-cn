@@ -1,7 +1,7 @@
 ---
 title: stdin、stdout、stderr | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/23/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: conceptual
@@ -23,20 +23,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a36d5fd60a19222e6f802e5a14037fb01ff865f5
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 707811a9c05135cb46520dd72895d677cdc0a6e4
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46071973"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808701"
 ---
 # <a name="stdin-stdout-stderr"></a>stdin、stdout、stderr
 
 ## <a name="syntax"></a>语法
 
 ```
-
-      FILE *stdin; 
+FILE *stdin; 
 FILE *stdout; 
 FILE *stderr; 
 #include <stdio.h>
@@ -53,12 +52,12 @@ FILE *stderr;
 |指针|流|
 |-------------|------------|
 |`stdin`|标准输入|
-|**stdout**|标准输出|
+|`stdout`|标准输出|
 |`stderr`|标准错误|
 
-这些指针可用作函数自变量。 一些函数（如 getchar 和 `putchar`）将自动使用 `stdin` 和 stdout。
+这些指针可用作函数自变量。 某些函数（如 [getchar](../c-runtime-library/reference/getchar-getwchar.md) 和 [putchar](../c-runtime-library/reference/putchar-putwchar.md)）会自动使用 `stdin` 和 `stdout`。
 
-这些指针是常量，无法分配新的值。 `freopen` 函数可用于将流重定向到磁盘文件或其他设备。 操作系统使您可以在命令级别重定向程序的标准输入和输出。
+这些指针是常量，无法分配新的值。 [freopen](../c-runtime-library/reference/freopen-wfreopen.md) 函数可用于将流重定向到磁盘文件或其他设备。 操作系统使您可以在命令级别重定向程序的标准输入和输出。
 
 ## <a name="see-also"></a>请参阅
 

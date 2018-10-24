@@ -1,7 +1,7 @@
 ---
 title: C 关系和相等运算符 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1bf3c406059fe8744843e1353ad997acc19c499b
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 9251aeb93ec53c47ca9c7474785b5180c36a3887
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46058232"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808948"
 ---
 # <a name="c-relational-and-equality-operators"></a>C 关系和相等运算符
 
@@ -31,32 +31,28 @@ ms.locfileid: "46058232"
 
 **语法**
 
-*relational-expression*: *shift-expression*
+*relational-expression*：<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*shift-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*relational-expression* **&lt;** *shift-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*relational-expression* **>** *shift-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*relational-expression* **&lt;=** *shift-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*relational-expression* **>=** *shift-expression*<br/>
 
-*relational-expression*  **\<**  *shift-expression*
-
-*relational-expression*  **>**  *shift-expression*
-
-relational-expression  **\<=**  shift-expression
-
-*relational-expression*  **>=**  *shift-expression*
-
-*equality-expression*: *relational-expression*
-
-*equality-expression*  **==**  *relational-expression*
-
-*equality-expression*  **!=**  *relational-expression*
+*equality-expression*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*relational-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*equality-expression* **==** *relational-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*equality-expression* **!=** *relational-expression*
 
 关系运算符和相等运算符测试以下关系：
 
 |运算符|测试的关系|
 |--------------|-------------------------|
-|**\<**|第一个操作数小于第二个操作数|
+|**&lt;**|第一个操作数小于第二个操作数|
 |**>**|第一个操作数大于第二个操作数|
-|**\<=**|第一个操作数小于或等于第二个操作数|
+|**&lt;=**|第一个操作数小于或等于第二个操作数|
 |**>=**|第一个操作数大于或等于第二个操作数|
-|`==`|第一个操作数等于第二个操作数|
-|`!=`|第一个操作数不等于第二个操作数|
+|**==**|第一个操作数等于第二个操作数|
+|**!=**|第一个操作数不等于第二个操作数|
 
 上面的列表中的前四个运算符的优先级高于相等运算符（`==` 和 `!=`）的优先级。 请参阅表 [C 运算符的优先级和关联性](../c-language/precedence-and-order-of-evaluation.md)中的优先级信息。
 
@@ -64,7 +60,7 @@ relational-expression  **\<=**  shift-expression
 
 - 任意关系运算符或相等运算符的操作数可以是指向同一类型的指针。 对于相等 (`==`) 运算符和不相等（`!=`）运算符，比较的结果指示两个指针是否对相同的内存位置寻址。 对于其他关系运算符（\<、>、\<= 和 >=），比较的结果指示所指向的对象的两个内存地址的相对位置。 关系运算符仅比较偏移量。
 
-     仅为同一个对象的部分定义指针比较。 如果指针引用数组的成员，则比较与相应下标的比较是等效的。 第一个数组元素的地址“少于”最后一个元素的地址。 对于结构，指向稍后声明的结构成员的指针“大于”指向之前在结构中声明的成员的指针。 指向同一联合的成员的指针是相等的。
+   仅为同一个对象的部分定义指针比较。 如果指针引用数组的成员，则比较与相应下标的比较是等效的。 第一个数组元素的地址“少于”最后一个元素的地址。 对于结构，指向稍后声明的结构成员的指针“大于”指向之前在结构中声明的成员的指针。 指向同一联合的成员的指针是相等的。
 
 - 指针值可以与常量值 0 进行比较以确定相等 (`==`) 或不相等 (`!=`)。 值为 0 的指针称为“null”指针；即，它不指向有效的内存位置。
 
@@ -74,14 +70,14 @@ relational-expression  **\<=**  shift-expression
 
 下面的示例阐释了关系运算符和相等运算符。
 
-```
+```C
 int x = 0, y = 0;
 if ( x < y )
 ```
 
 由于 `x` 和 `y` 相等，因此该示例中的表达式会生成值 0。
 
-```
+```C
 char array[10];
 char *p;
 
@@ -91,7 +87,7 @@ for ( p = array; p < &array[10]; p++ )
 
 此示例中的片段将 `array` 的每个元素设置为 null 字符常量。
 
-```
+```C
 enum color { red, white, green } col;
    .
    .
