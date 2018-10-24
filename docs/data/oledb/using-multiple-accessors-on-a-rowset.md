@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3ab75c1a8b0c6addf41366c63f14305b68ce5bc5
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 43fa36e0f5b79a6901c1294345f54386340c43ef
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48860688"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808454"
 ---
 # <a name="using-multiple-accessors-on-a-rowset"></a>在一个行集合上使用多个访问器
 
@@ -35,25 +35,25 @@ ms.locfileid: "48860688"
 
    - 访问器 1 包含除为主键的所有列。
 
-- **性能。** 在此方案中，一个或多个列包含大量的数据，例如，图形、 声音或视频文件。 每次移动到某一行时，可能不要检索的列具有大型数据文件中，因为这样做将会减慢应用程序的性能。
+- **性能。** 在此方案中，一个或多个列具有大量的数据，例如，图形、 声音或视频文件。 每次移动到某一行时，可能不想要检索列与大型数据文件，因为这样做将会减慢应用程序的性能。
 
-   你可以设置单独的访问器中的第一个访问器包含除具有大型数据的所有列，并从这些列检索数据自动保存功能。这是自动访问器。 第二个访问器检索仅包含大型数据的列，但它不会检索数据来自此列自动。 您可以更新或按需获取大型数据的其他方法。
+   你可以设置单独的访问器中的第一个访问器包含除具有大型数据的所有列，并从这些列检索数据自动保存功能。第一个访问器是自动访问器。 第二个访问器检索仅包含大型数据的列，但它不会自动从该列检索数据。 您可以更新或按需获取大型数据的其他方法。
 
    - 访问器 0 是一个自动访问器;它将检索除具有较大的数据的所有列。
 
-   - 访问器 1 不是一个自动访问器;它将检索大型数据的列。
+   - 访问器 1 不是自动的访问器;它将检索大型数据的列。
 
    使用自动参数来指定访问器是否为自动访问器。
 
-- **多个 ISequentialStream 列。** 在此方案中，您有多个列包含`ISequentialStream`数据。 但是，每个访问器仅限于一个`ISequentialStream`数据流。 若要解决此问题，设置多个取值函数，每个都包含一个`ISequentialStream`指针。
+- **多个 ISequentialStream 列。** 在此方案中，您有多个列包含`ISequentialStream`数据。 但是，每个访问器仅限于一个`ISequentialStream`数据流。 若要解决此问题，设置多个取值函数，每个都拥有一个`ISequentialStream`指针。
 
 通常情况下创建使用访问器[BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md)并[END_ACCESSOR](../../data/oledb/end-accessor.md)宏。 此外可以使用[db_accessor](../../windows/db-accessor.md)属性。 (访问器中进行了描述进一步[用户记录](../../data/oledb/user-records.md)。)宏或该属性指定访问器是自动或非自动访问器：
 
 - 在自动访问器中，如移动方法`MoveFirst`， `MoveLast`， `MoveNext`，和`MovePrev`对所有自动指定列中检索数据。 访问器 0 应自动访问器。
 
-- 在非自动访问器检索才会显式如调用方法`Update`， `Insert`， `Fetch`，或`Delete`。 在上面所述方案中，您可能不想要检索每次移动的所有列。 可以将一个或多个列放在单独的访问器，并确保一个非自动访问器中，这样做，如下所示。
+- 检索显式如调用的方法会执行非自动访问器中`Update`， `Insert`， `Fetch`，或`Delete`。 在上面所述方案中，您可能不想要检索每次移动的所有列。 可以将一个或多个列放在单独的访问器，并确保一个非自动访问器中，这样做，如下所示。
 
-以下示例使用多个访问器读取和写入到 SQL Server pubs 数据库使用多个访问器的作业表。 这是最常用的多个访问器;请参阅上述"多个读/写行集"方案。
+以下示例使用多个访问器读取和写入到 SQL Server pubs 数据库使用多个访问器的作业表。 此示例中是最常用的多个访问器;请参阅上述"多个读/写行集"方案。
 
 用户记录类如下所示。 设置两个访问器： 访问器 0 包含仅的主键列 (ID) 和访问器 1 包含其他列。
 

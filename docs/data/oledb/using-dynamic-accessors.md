@@ -1,7 +1,7 @@
 ---
 title: 使用动态访问器 |Microsoft Docs
 ms.custom: ''
-ms.date: 02/14/2018
+ms.date: 10/18/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -16,16 +16,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: fed93404a6c11addb8068d6140fda48d1c02a253
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3a776043d8a65d0a037d17c1c2538a4606b4c9d1
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46056726"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808376"
 ---
 # <a name="using-dynamic-accessors"></a>使用动态访问器
 
-动态访问器，可以在不知道数据库架构 （基础结构） 时访问数据源。 OLE DB 模板库提供了几个类可帮助您执行此操作。
+动态访问器，可以在不知道数据库架构 （基础结构） 时访问数据源。 OLE DB 模板库提供了几个类可帮助您。
 
 [DynamicConsumer](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/DynamicConsumer)示例演示如何使用动态访问器类来获取列信息和动态创建访问器。
 
@@ -34,8 +34,6 @@ ms.locfileid: "46056726"
 [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) ，可在不知道数据库架构 （数据库的基础结构） 时访问数据源。 `CDynamicAccessor` 方法获取列信息，例如列名称、 计数和数据类型。 此列信息用于在运行时动态创建取值函数。 列信息存储在缓冲区的创建和管理此类。 从缓冲区使用获取数据[GetValue](../../data/oledb/cdynamicaccessor-getvalue.md)方法。
 
 ## <a name="example"></a>示例
-
-### <a name="code"></a>代码
 
 ```cpp
 // Using_Dynamic_Accessors.cpp
@@ -103,13 +101,11 @@ int main(int argc, char* argv[] )
 
 ## <a name="using-cdynamicstringaccessor"></a>使用 CDynamicStringAccessor
 
-[CDynamicStringAccessor](../../data/oledb/cdynamicstringaccessor-class.md)工作方式类似于[CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)，重要的一种方法中除外。 虽然`CDynamicAccessor`请求数据以本机格式提供程序，报告`CDynamicStringAccessor`请求提供程序提取从字符串数据作为数据存储区访问的所有数据。 这是对于不需要计算的数据存储，如在显示或输出数据存储区的内容中的值的简单任务特别有用。
+[CDynamicStringAccessor](../../data/oledb/cdynamicstringaccessor-class.md)工作方式类似于[CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)，重要的一种方法中除外。 虽然`CDynamicAccessor`请求数据以本机格式提供程序，报告`CDynamicStringAccessor`请求提供程序提取从字符串数据作为数据存储区访问的所有数据。 该过程是对于不需要计算的数据存储，如在显示或输出数据存储区的内容中的值的简单任务特别有用。
 
-使用`CDynamicStringAccessor`方法可获取列信息。 此列信息用于在运行时动态创建取值函数。 创建和管理此类缓冲区中存储的列信息。 从缓冲区使用获取数据[cdynamicstringaccessor:: Getstring](../../data/oledb/cdynamicstringaccessor-getstring.md)或将其存储到缓冲区使用[cdynamicstringaccessor:: Setstring](../../data/oledb/cdynamicstringaccessor-setstring.md)。
+使用`CDynamicStringAccessor`方法来获取列信息。 此列信息用于在运行时动态创建取值函数。 创建和管理此类缓冲区中存储的列信息。 从缓冲区使用获取数据[cdynamicstringaccessor:: Getstring](../../data/oledb/cdynamicstringaccessor-getstring.md)或将其存储到缓冲区使用[cdynamicstringaccessor:: Setstring](../../data/oledb/cdynamicstringaccessor-setstring.md)。
 
 ## <a name="example"></a>示例
-
-### <a name="code"></a>代码
 
 ```cpp
 // Using_Dynamic_Accessors_b.cpp

@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6ac44a9a27b5c3ad62279dc3065aa9e0aac5236
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d9f48ffb9cad787159a40a58d85e6bff5dacc475
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46378212"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808246"
 ---
 # <a name="cfixedstringt-class"></a>CFixedStringT 类
 
@@ -39,10 +39,10 @@ class CFixedStringT : private CFixedStringMgr, public StringType
 
 #### <a name="parameters"></a>参数
 
-*StringType*  
+*StringType*<br/>
 用作固定的字符串的对象的基类，并且可以是任何`CStringT`-基于的类型。 一些示例包括`CString`， `CStringA`，和`CStringW`。
 
-*t_nChars*  
+*t_nChars*<br/>
 存储在缓冲区中的字符数。
 
 ## <a name="members"></a>成员
@@ -101,13 +101,13 @@ explicit CFixedStringT(const unsigned char* psz);
 
 ### <a name="parameters"></a>参数
 
-*psz*  
+*psz*<br/>
 以 null 结尾的字符串复制到此`CFixedStringT`对象。
 
-*str*  
+*str*<br/>
 将现有`CFixedStringT`复制到此对象`CFixedStringT`对象。
 
-*pStringMgr*  
+*pStringMgr*<br/>
 指向的内存管理器的`CFixedStringT`对象。 有关详细信息`IAtlStringMgr`和内存管理`CFixedStringT`，请参阅[内存管理和 CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md)。
 
 ### <a name="remarks"></a>备注
@@ -129,10 +129,10 @@ CFixedStringT<StringType, t_nChars>& operator=(const StringType& str);
 
 ### <a name="parameters"></a>参数
 
-*str*  
+*str*<br/>
 以 null 结尾的字符串复制到此`CFixedStringT`对象。
 
-*psz*  
+*psz*<br/>
 将现有`CFixedStringT`复制到此`CFixedStringT`对象。
 
 ### <a name="remarks"></a>备注

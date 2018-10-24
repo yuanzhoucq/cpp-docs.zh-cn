@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 85efb2a1d699914c6d7ffb1fd079a38be70f0b52
-ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
+ms.openlocfilehash: c9cb2003b857bb156709e4ba2a3345dfb57bfd3c
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49163837"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808935"
 ---
 # <a name="creating-a-simple-consumer"></a>创建简单使用者
 
@@ -32,15 +32,15 @@ ms.locfileid: "49163837"
 
    此时将出现 “新建项目” 对话框。
 
-1. 在中**项目类型**窗格中，单击**已安装** > **模板** > **Visual c + +** 文件夹，并然后单击**Win32 控制台应用程序**中的图标**模板**窗格。 在中**名称**框中，例如，输入你的项目名称*MyCons*。
+1. 在中**项目类型**窗格中，单击**已安装** > **Visual c + +** > **Windows 桌面**文件夹中，然后单击**Windows 桌面向导**中的图标**模板**窗格。 在中**名称**框中，例如，输入你的项目名称*MyCons*。
 
 1. 单击 **“确定”**。
 
-   Win32 应用程序向导出现。
+   **Windows 桌面项目**向导显示。
 
 1. 上**应用程序设置**页上，选择**控制台应用程序**，然后选择**为 ATL 添加常用标头文件**。
 
-1. 单击**完成**若要关闭向导并生成该项目。
+1. 单击**确定**若要关闭向导并生成该项目。
 
 接下来，使用 ATL OLE DB 使用者向导添加 OLE DB 使用者对象。
 
@@ -48,9 +48,9 @@ ms.locfileid: "49163837"
 
 1. 在中**解决方案资源管理器**，右键单击`MyCons`项目。
 
-1. 在快捷菜单上，单击**外**，然后单击**类**。
+1. 在快捷菜单上，单击**外**，然后单击**新项**。
 
-   **添加类**对话框随即出现。
+   “添加新项”对话框随即出现。
 
 1. 在中**类别**窗格中，单击**已安装** > **Visual c + +** > **ATL**，单击**ATL OLEDB 使用者**中的图标**模板**窗格中，，然后单击**添加**。
 

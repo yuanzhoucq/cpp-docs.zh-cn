@@ -1,7 +1,7 @@
 ---
 title: CSimpleStringT 类 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7a4abff1faaa8fe93f15fb2d4a7e5ba15d6e434
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1f835558bb4d97f90857d44ef63e4b8f6075d2c0
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46434656"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49809143"
 ---
 # <a name="csimplestringt-class"></a>CSimpleStringT 类
 
@@ -66,7 +66,7 @@ class CSimpleStringT
 
 ### <a name="parameters"></a>参数
 
-*BaseType*  
+*BaseType*<br/>
 字符串类的字符类型。 可以是以下各项之一：
 
 - **char** （适用于 ANSI 字符串）。
@@ -151,13 +151,13 @@ void Append(PCXSTR pszSrc);
 ```
 #### <a name="parameters"></a>参数
 
-*strSrc*  
+*strSrc*<br/>
 `CSimpleStringT`要追加的对象。
 
-*pszSrc*  
+*pszSrc*<br/>
 指向包含要追加的字符的字符串的指针。
 
-*nLength*  
+*nLength*<br/>
 要追加的字符数。
 
 ### <a name="remarks"></a>备注
@@ -187,7 +187,7 @@ void AppendChar(XCHAR ch);
 ```
 #### <a name="parameters"></a>参数
 
-*ch*  
+*ch*<br/>
 要追加的字符
 
 ### <a name="remarks"></a>备注
@@ -209,13 +209,13 @@ static void CopyChars(
 
 #### <a name="parameters"></a>参数
 
-*pchDest*  
+*pchDest*<br/>
 指向字符字符串的指针。
 
-*pchSrc*  
+*pchSrc*<br/>
 指向包含要复制的字符的字符串的指针。
 
-*nChars*  
+*nChars*<br/>
 数*pchSrc*要复制的字符。
 
 ### <a name="remarks"></a>备注
@@ -249,13 +249,13 @@ static void CopyCharsOverlapped(
 
 #### <a name="parameters"></a>参数
 
-*pchDest*  
+*pchDest*<br/>
 指向字符字符串的指针。
 
-*pchSrc*  
+*pchSrc*<br/>
 指向包含要复制的字符的字符串的指针。
 
-*nChars*  
+*nChars*<br/>
 数*pchSrc*要复制的字符。
 
 ### <a name="remarks"></a>备注
@@ -280,19 +280,19 @@ explicit CSimpleStringT(IAtlStringMgr* pStringMgr) throw();
 ```
 #### <a name="parameters"></a>参数
 
-*strSrc*  
+*strSrc*<br/>
 将现有`CSimpleStringT`复制到此对象`CSimpleStringT`对象。
 
-*pchSrc*  
+*pchSrc*<br/>
 指向数组的长度的字符的指针*nLength*，null 终止。
 
-*pszSrc*  
+*pszSrc*<br/>
 以 null 结尾的字符串复制到此`CSimpleStringT`对象。
 
-*nLength*  
+*nLength*<br/>
 中的字符数的计数`pch`。
 
-*pStringMgr*  
+*pStringMgr*<br/>
 指向的内存管理器的`CSimpleStringT`对象。 有关详细信息`IAtlStringMgr`和内存管理`CSimpleStringT`，请参阅[内存管理和 CStringT](../memory-management-with-cstringt.md)。
 
 ### <a name="remarks"></a>备注
@@ -419,7 +419,7 @@ XCHAR GetAt(int iChar) const;
 ```
 #### <a name="parameters"></a>参数
 
-*iChar*  
+*iChar*<br/>
 中的字符的从零开始索引`CSimpleStringT`对象。 *IChar*参数必须是大于或等于 0 且小于返回的值[GetLength](#getlength)。 否则为`GetAt`将生成一个异常。
 
 ### <a name="return-value"></a>返回值
@@ -451,7 +451,7 @@ PXSTR GetBuffer();
 ```
 #### <a name="parameters"></a>参数
 
-*nMinBufferLength*  
+*nMinBufferLength*<br/>
 最小字符缓冲区可以容纳的字符数。 此值不包括 null 终止符的占用空间。
 
 如果*nMinBufferLength*大于当前缓冲区的长度`GetBuffer`销毁当前缓冲区、 替换请求的大小的缓冲区并将对象引用计数重置为零。 如果您以前称为[LockBuffer](#lockbuffer)上此缓冲区，则会丢失缓冲区锁。
@@ -498,7 +498,7 @@ PXSTR GetBufferSetLength(int nLength);
 ```
 #### <a name="parameters"></a>参数
 
-*nLength*  
+*nLength*<br/>
 确切大小`CSimpleStringT`以字符为单位的字符缓冲区。
 
 ### <a name="return-value"></a>返回值
@@ -696,7 +696,7 @@ XCHAR operator[](int iChar) const;
 ```
 #### <a name="parameters"></a>参数
 
-*iChar*  
+*iChar*<br/>
 字符串中字符的从零开始索引。
 
 ### <a name="remarks"></a>备注
@@ -727,7 +727,7 @@ XCHAR operator[](int iChar) const;
 
 ### <a name="parameters"></a>参数
 
-*iChar*  
+*iChar*<br/>
 字符串中字符的从零开始索引。
 
 ### <a name="remarks"></a>备注
@@ -755,13 +755,13 @@ CSimpleStringT& operator +=(wchar_t ch);
 ```
 #### <a name="parameters"></a>参数
 
-*pszSrc*  
+*pszSrc*<br/>
 指向以 null 结尾的字符串的指针。
 
-*strSrc*  
+*strSrc*<br/>
 一个指向现有`CSimpleStringT`对象。
 
-*ch*  
+*ch*<br/>
 要追加的字符。
 
 ### <a name="remarks"></a>备注
@@ -789,10 +789,10 @@ CSimpleStringT& operator =(const CSimpleStringT& strSrc);
 ```
 #### <a name="parameters"></a>参数
 
-*pszSrc*  
+*pszSrc*<br/>
 指向以 null 结尾的字符串的指针。
 
-*strSrc*  
+*strSrc*<br/>
 一个指向现有`CSimpleStringT`对象。
 
 ### <a name="remarks"></a>备注
@@ -894,7 +894,7 @@ void Preallocate( int nLength);
 ```
 #### <a name="parameters"></a>参数
 
-*nLength*  
+*nLength*<br/>
 确切大小`CSimpleStringT`以字符为单位的字符缓冲区。
 
 ### <a name="remarks"></a>备注
@@ -934,7 +934,7 @@ void ReleaseBuffer(int nNewLength = -1);
 ```
 #### <a name="parameters"></a>参数
 
-*nNewLength*  
+*nNewLength*<br/>
 以字符为单位，不包括 null 终止符的字符串的新长度。 如果字符串为 null 终止，则为-1 默认值设置`CSimpleStringT`大小到字符串的当前长度。
 
 ### <a name="remarks"></a>备注
@@ -974,7 +974,7 @@ void ReleaseBufferSetLength(int nNewLength);
 ```
 #### <a name="parameters"></a>参数
 
-*nNewLength*  
+*nNewLength*<br/>
 发布字符串的长度
 
 ### <a name="remarks"></a>备注
@@ -992,10 +992,10 @@ void SetAt(int iChar, XCHAR ch);
 ```
 #### <a name="parameters"></a>参数
 
-*iChar*  
+*iChar*<br/>
 中的字符的从零开始索引`CSimpleStringT`对象。 *IChar*参数必须是大于或等于 0 且小于返回的值[GetLength](#getlength)。
 
-*ch*  
+*ch*<br/>
 新字符。
 
 ### <a name="remarks"></a>备注
@@ -1023,7 +1023,7 @@ void SetManager(IAtlStringMgr* pStringMgr);
 ```
 #### <a name="parameters"></a>参数
 
-*pStringMgr*  
+*pStringMgr*<br/>
 指向新内存管理器的指针。
 
 ### <a name="remarks"></a>备注
@@ -1051,10 +1051,10 @@ void SetString(PCXSTR pszSrc);
 ```
 #### <a name="parameters"></a>参数
 
-*pszSrc*  
+*pszSrc*<br/>
 指向以 null 结尾的字符串的指针。
 
-*nLength*  
+*nLength*<br/>
 中的字符数的计数*pszSrc*。
 
 ### <a name="remarks"></a>备注
@@ -1091,7 +1091,7 @@ ATL_NOINLINE static int StringLength(PCXSTR psz) throw();
 ```
 #### <a name="parameters"></a>参数
 
-*psz*  
+*psz*<br/>
 指向以 null 结尾的字符串的指针。
 
 ### <a name="return-value"></a>返回值
@@ -1121,7 +1121,7 @@ void Truncate(int nNewLength);
 ```
 #### <a name="parameters"></a>参数
 
-*nNewLength*  
+*nNewLength*<br/>
 新字符串的长度。
 
 ### <a name="remarks"></a>备注

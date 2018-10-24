@@ -1,7 +1,7 @@
 ---
 title: high_method_prefix |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -16,35 +16,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 883f573100c31fab8cc0142d371f6a8a14f8783f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1fb69b9fbb7ede0ca458007aec1bee2cf38e286f
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46428715"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49807713"
 ---
 # <a name="highmethodprefix"></a>high_method_prefix
-**C + + 专用**  
-  
-指定用于命名高级属性和方法的前缀。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-high_method_prefix("Prefix")  
-```  
-  
-### <a name="parameters"></a>参数  
-Prefix  
-要使用的前缀。  
-  
-## <a name="remarks"></a>备注  
- 
-默认情况下，由未使用前缀命名的成员函数公开高级错误处理属性和方法。 这些名称来自类型库。  
-  
-**结束 c + + 专用**  
-  
-## <a name="see-also"></a>请参阅  
- 
+
+**C + + 专用**
+
+指定用于命名高级属性和方法的前缀。
+
+## <a name="syntax"></a>语法
+
+```
+high_method_prefix("Prefix")
+```
+
+### <a name="parameters"></a>参数
+
+Prefix<br/>
+要使用的前缀。
+
+## <a name="remarks"></a>备注
+
+默认情况下，由未使用前缀命名的成员函数公开高级错误处理属性和方法。 这些名称来自类型库。
+
+**结束 c + + 专用**
+
+## <a name="see-also"></a>请参阅
+
 [#import 属性](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [#import 指令](../preprocessor/hash-import-directive-cpp.md)

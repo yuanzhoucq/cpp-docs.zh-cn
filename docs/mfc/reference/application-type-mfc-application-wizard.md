@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7d27245e06350a9174699fc20246d5e8997795d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: df0b938186716ab86b8eaeadd69d123ff14e57e0
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46434370"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808766"
 ---
 # <a name="application-type-mfc-application-wizard"></a>MFC 应用程序向导的应用程序类型
 
@@ -58,7 +58,7 @@ ms.locfileid: "46434370"
 
 - **资源语言**
 
-   设置你的资源的语言。 为 Visual studio 已安装，该列表显示在系统上可用的语言。 如果你想要选择你的系统语言以外的语言，必须已安装该语言的相应的模板文件夹。 有关安装中提供的默认值不同的语言资源的详细信息**资源语言**列表中，请参阅[其他语言的向导支持](../../ide/wizard-support-for-other-languages.md)。
+   设置你的资源的语言。 为 Visual studio 已安装，该列表显示在系统上可用的语言。 如果你想要选择你的系统语言以外的语言，必须已安装该语言的相应的模板文件夹。
 
    您选择的语言反映在**本地化字符串**的选项[文档模板字符串、 MFC 应用程序向导](../../mfc/reference/document-template-strings-mfc-application-wizard.md)向导页。
 

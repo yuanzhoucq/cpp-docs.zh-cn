@@ -1,7 +1,7 @@
 ---
 title: CTime 类 |Microsoft Docs
 ms.custom: ''
-ms.date: 10/12/2018
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c14dc8c8c9b697ecb7dcf1ff227eb7a76ad7cfa5
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 8c99fe44b5012e08a4b32a9e84d4255e4ee2b7e0
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328592"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808831"
 ---
 # <a name="ctime-class"></a>CTime 类
 
@@ -49,7 +49,7 @@ ms.locfileid: "49328592"
 ## <a name="syntax"></a>语法
 
 ```
-class CTime  
+class CTime
 ```
 
 ## <a name="members"></a>成员
@@ -119,17 +119,17 @@ class CTime
 比较运算符。
 
 ```
-bool operator==(CTime time) const throw(); 
+bool operator==(CTime time) const throw();
 bool operator!=(CTime time) const throw();
 bool operator<(CTime time) const throw();
 bool operator>(CTime time) const throw();
 bool operator<=(CTime time) const throw();
-bool operator>=(CTime time) const throw(); 
+bool operator>=(CTime time) const throw();
 ```
 
 ### <a name="parameters"></a>参数
 
-*time*  
+*time*<br/>
 要比较的 `CTime` 对象。
 
 ### <a name="return-value"></a>返回值
@@ -152,22 +152,21 @@ CTime(int nYear, int nMonth, int nDay,
 CTime(WORD wDosDate, WORD wDosTime, int nDST = -1);
 CTime(const SYSTEMTIME& st, int nDST = - 1) throw();
 CTime(const FILETIME& ft, int nDST = - 1);
-CTime(const DBTIMESTAMP& dbts,int nDST = -1) throw();
+CTime(const DBTIMESTAMP& dbts, int nDST = -1) throw();
 ```
 
 ### <a name="parameters"></a>参数
 
-*timeSrc*  
+*timeSrc*<br/>
 指示`CTime`已存在的对象。
 
-*time*  
-一个 **__time64_t**时间值，该值是自 1970 年 1 月 1 日 UTC 之后的秒数。 请注意这将调整为本地时间。 例如，如果位于纽约和创建`CTime`通过将为 0 时，参数传递的对象[CTime::GetMonth](#getmonth)将返回 12。  
+*time*<br/>
+一个 **__time64_t**时间值，该值是自 1970 年 1 月 1 日 UTC 之后的秒数。 请注意这将调整为本地时间。 例如，如果位于纽约和创建`CTime`通过将为 0 时，参数传递的对象[CTime::GetMonth](#getmonth)将返回 12。
 
-
-*nYear*， *nMonth*，*第几日*，*几点*， *nMin*， *nSec*  
+*nYear*， *nMonth*，*第几日*，*几点*， *nMin*， *nSec*<br/>
 指示要复制到新的日期和时间值`CTime`对象。
 
-*nDST*  
+*nDST*<br/>
 指示夏令时是否生效。 可以具有三个值之一：
 
 - *nDST*设置为 0Standard 时间是否生效。
@@ -176,16 +175,16 @@ CTime(const DBTIMESTAMP& dbts,int nDST = -1) throw();
 
 - *nDST*设置为小于 0The 默认的值。 自动计算标准时间还是夏令时是否生效。
 
-*wDosDate*， *wDosTime*  
+*wDosDate*， *wDosTime*<br/>
 MS-DOS 日期和时间值转换为日期/时间值并复制到新`CTime`对象。
 
-*st*  
+*st*<br/>
 一个[SYSTEMTIME](../../mfc/reference/systemtime-structure.md)结构转换为日期/时间值并复制到新`CTime`对象。
 
-*ft*  
+*ft*<br/>
 一个[FILETIME](../../mfc/reference/filetime-structure.md)结构转换为日期/时间值并复制到新`CTime`对象。
 
-dbts  
+*dbts*<br/>
 对包含当前本地时间的 DBTIMESTAMP 结构的引用。
 
 ### <a name="remarks"></a>备注
@@ -200,13 +199,13 @@ dbts
 
 - `CTime( int, int, ...);` 构造`CTime`从每个组件的本地时间组件的对象限制为以下范围：
 
-   |组件|范围|  
-   |---------------|-----------|  
-   |*nYear*|1970-3000|  
-   |*nMonth*|1-12|  
-   |*第几日*|1-31|  
-   |*几点*|0-23|  
-   |*nMin*|0-59|  
+   |组件|范围|
+   |---------------|-----------|
+   |*nYear*|1970-3000|
+   |*nMonth*|1-12|
+   |*第几日*|1-31|
+   |*几点*|0-23|
+   |*nMin*|0-59|
    |*nSec*|0-59|
 
    此构造函数生成相应的转换为 UTC。 Microsoft 基础类库的调试版本断言，如果一个或多个时间组件不在范围。 你必须验证之前调用的参数。 此构造函数需要本地时间。
@@ -231,16 +230,16 @@ dbts
 调用此成员函数来创建日期时间值的格式化表示形式。
 
 ```
-CString Format(LPCTSTR pszFormat) const; 
-CString Format(UINT nFormatID) const; 
+CString Format(LPCTSTR pszFormat) const;
+CString Format(UINT nFormatID) const;
 ```
 
 ### <a name="parameters"></a>参数
 
-*pszFormat*  
+*pszFormat*<br/>
 格式设置字符串类似于`printf`格式设置字符串。 格式设置代码，前面有百分比 (`%`) 登录，将替换为相应`CTime`组件。 格式设置字符串中的其他字符被复制到返回的字符串不变。 请参阅运行时函数[strftime](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)的格式设置代码的列表。
 
-*nFormatID*  
+*nFormatID*<br/>
 用于标识此格式的字符串的 ID。
 
 ### <a name="return-value"></a>返回值
@@ -268,10 +267,10 @@ CString FormatGmt(UINT nFormatID) const;
 
 ### <a name="parameters"></a>参数
 
-*pszFormat*  
+*pszFormat*<br/>
 指定的格式设置字符串类似于`printf`格式设置字符串。 请参阅运行时函数[strftime](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)有关详细信息。
 
-*nFormatID*  
+*nFormatID*<br/>
 用于标识此格式的字符串的 ID。
 
 ### <a name="return-value"></a>返回值
@@ -298,7 +297,7 @@ bool GetAsDBTIMESTAMP(DBTIMESTAMP& dbts) const throw();
 
 ### <a name="parameters"></a>参数
 
-*dbts*  
+*dbts*<br/>
 对包含当前本地时间的 DBTIMESTAMP 结构的引用。
 
 ### <a name="return-value"></a>返回值
@@ -323,7 +322,7 @@ bool GetAsSystemTime(SYSTEMTIME& st) const throw();
 
 ### <a name="parameters"></a>参数
 
-*timeDest*  
+*timeDest*<br/>
 对引用[SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)结构，它将保存转换后的日期/时间值的`CTime`对象。
 
 ### <a name="return-value"></a>返回值
@@ -359,7 +358,7 @@ static CTime WINAPI GetCurrentTime() throw();
 返回由一天表示`CTime`对象。
 
 ```
-int GetDay() const throw(); 
+int GetDay() const throw();
 ```
 
 ### <a name="return-value"></a>返回值
@@ -404,7 +403,7 @@ struct tm* GetGmtTm(struct tm* ptm) const;
 
 ### <a name="parameters"></a>参数
 
-*ptm*  
+*ptm*<br/>
 指向将接收时间数据的缓冲区。 如果该指针为 NULL，将引发异常。
 
 ### <a name="return-value"></a>返回值
@@ -451,7 +450,7 @@ struct tm* GetLocalTm(struct tm* ptm) const;
 
 ### <a name="parameters"></a>参数
 
-*ptm*  
+*ptm*<br/>
 指向将接收时间数据的缓冲区。 如果该指针为 NULL，将引发异常。
 
 ### <a name="return-value"></a>返回值
@@ -574,7 +573,7 @@ CTime& operator=(__time64_t time) throw();
 
 ### <a name="parameters"></a>参数
 
-*time*  
+*time*<br/>
 新的日期/时间值中。
 
 ### <a name="return-value"></a>返回值
@@ -597,10 +596,10 @@ CTimeSpan operator-(CTime time) const throw();
 
 ### <a name="parameters"></a>参数
 
-*时间跨度*  
+*时间跨度*<br/>
 `CTimeSpan`要添加或减去的对象。
 
-*time*  
+*time*<br/>
 `CTime`要减去的对象。
 
 ### <a name="return-value"></a>返回值
@@ -626,7 +625,7 @@ CTime& operator-=(CTimeSpan span) throw();
 
 ### <a name="parameters"></a>参数
 
-*s p a n*  
+*s p a n*<br/>
 `CTimeSpan`要添加或减去的对象。
 
 ### <a name="return-value"></a>返回值
@@ -654,7 +653,7 @@ CArchive& Serialize64(CArchive& ar);
 
 ### <a name="parameters"></a>参数
 
-*ar*  
+*ar*<br/>
 `CArchive`你想要更新的对象。
 
 ### <a name="return-value"></a>返回值

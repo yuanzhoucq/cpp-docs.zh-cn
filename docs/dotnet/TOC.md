@@ -1,4 +1,4 @@
-# [使用 C++/CLI (Visual C++) 进行 .NET 编程](dotnet-programming-with-cpp-cli-visual-cpp.md)
+# [使用 C++/CLI 进行 .NET 编程](dotnet-programming-with-cpp-cli-visual-cpp.md)
 ## [C++/CLI 任务](cpp-cli-tasks.md)
 ### [如何：创建 CLR 空项目](how-to-create-clr-empty-projects.md)
 ### [如何：创建 CLR 控制台应用程序 (C++/CLI)](how-to-create-clr-console-applications-cpp-cli.md)

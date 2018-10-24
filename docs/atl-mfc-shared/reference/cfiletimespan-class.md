@@ -1,7 +1,7 @@
 ---
 title: CFileTimeSpan 类 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c69a45ec56c5ee6f1c8d7a48be2cac2d158dc6e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 27be228c735b667d76f1dc70d9ae36f4229acd01
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46381928"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808961"
 ---
 # <a name="cfiletimespan-class"></a>CFileTimeSpan 类
 
@@ -93,10 +93,10 @@ CFileTimeSpan(LONGLONG nSpan) throw();
 
 ### <a name="parameters"></a>参数
 
-*s p a n*  
+*s p a n*<br/>
 一个现有的 `CFileTimeSpan` 对象。
 
-*nSpan*  
+*nSpan*<br/>
 以毫秒为单位的时间段。
 
 ### <a name="remarks"></a>备注
@@ -125,7 +125,7 @@ CFileTimeSpan operator-(CFileTimeSpan span) const throw();
 
 ### <a name="parameters"></a>参数
 
-*s p a n*  
+*s p a n*<br/>
 一个 `CFileTimeSpan` 对象。
 
 ### <a name="return-value"></a>返回值
@@ -142,7 +142,7 @@ bool operator!=(CFileTimeSpan span) const throw();
 
 ### <a name="parameters"></a>参数
 
-*s p a n*  
+*s p a n*<br/>
 要比较的 `CFileTimeSpan` 对象。
 
 ### <a name="return-value"></a>返回值
@@ -159,7 +159,7 @@ CFileTimeSpan operator+(CFileTimeSpan span) const throw();
 
 ### <a name="parameters"></a>参数
 
-*s p a n*  
+*s p a n*<br/>
 一个 `CFileTimeSpan` 对象。
 
 ### <a name="return-value"></a>返回值
@@ -176,7 +176,7 @@ CFileTimeSpan& operator+=(CFileTimeSpan span) throw();
 
 ### <a name="parameters"></a>参数
 
-*s p a n*  
+*s p a n*<br/>
 一个 `CFileTimeSpan` 对象。
 
 ### <a name="return-value"></a>返回值
@@ -193,7 +193,7 @@ bool operator<(CFileTimeSpan span) const throw();
 
 ### <a name="parameters"></a>参数
 
-*s p a n*  
+*s p a n*<br/>
 要比较的 `CFileTimeSpan` 对象。
 
 ### <a name="return-value"></a>返回值
@@ -210,7 +210,7 @@ bool operator<=(CFileTimeSpan span) const throw();
 
 ### <a name="parameters"></a>参数
 
-*s p a n*  
+*s p a n*<br/>
 要比较的 `CFileTimeSpan` 对象。
 
 ### <a name="return-value"></a>返回值
@@ -227,7 +227,7 @@ CFileTimeSpan& operator=(const CFileTimeSpan& span) throw();
 
 ### <a name="parameters"></a>参数
 
-*s p a n*  
+*s p a n*<br/>
 一个 `CFileTimeSpan` 对象。
 
 ### <a name="return-value"></a>返回值
@@ -244,7 +244,7 @@ CFileTimeSpan& operator-=(CFileTimeSpan span) throw();
 
 ### <a name="parameters"></a>参数
 
-*s p a n*  
+*s p a n*<br/>
 一个 `CFileTimeSpan` 对象。
 
 ### <a name="return-value"></a>返回值
@@ -261,7 +261,7 @@ bool operator==(CFileTimeSpan span) const throw();
 
 ### <a name="parameters"></a>参数
 
-*s p a n*  
+*s p a n*<br/>
 要比较的 `CFileTimeSpan` 对象。
 
 ### <a name="return-value"></a>返回值
@@ -278,7 +278,7 @@ bool operator>(CFileTimeSpan span) const throw();
 
 ### <a name="parameters"></a>参数
 
-*s p a n*  
+*s p a n*<br/>
 要比较的 `CFileTimeSpan` 对象。
 
 ### <a name="return-value"></a>返回值
@@ -295,7 +295,7 @@ bool operator>=(CFileTimeSpan span) const throw();
 
 ### <a name="parameters"></a>参数
 
-*s p a n*  
+*s p a n*<br/>
 要比较的 `CFileTimeSpan` 对象。
 
 ### <a name="return-value"></a>返回值
@@ -312,7 +312,7 @@ void SetTimeSpan(LONGLONG nSpan) throw();
 
 ### <a name="parameters"></a>参数
 
-*nSpan*  
+*nSpan*<br/>
 以毫秒为单位的时间跨度的新值。
 
 ## <a name="see-also"></a>请参阅
@@ -321,4 +321,3 @@ void SetTimeSpan(LONGLONG nSpan) throw();
 [CFileTime 类](../../atl-mfc-shared/reference/cfiletime-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>
 [ATL/MFC 共享类](../../atl-mfc-shared/atl-mfc-shared-classes.md)
-

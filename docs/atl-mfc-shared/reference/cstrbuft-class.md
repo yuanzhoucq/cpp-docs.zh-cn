@@ -1,7 +1,7 @@
 ---
 title: CStrBufT 类 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43c460d45e0f1ce41cebd463bc3ba6b7f295d9ca
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 82152ea3df6bb21ee1405790acf9d3fb2c9630c5
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46411178"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808987"
 ---
 # <a name="cstrbuft-class"></a>CStrBufT 类
 
@@ -43,7 +43,7 @@ class CStrBufT
 
 #### <a name="parameters"></a>参数
 
-*TCharType*  
+*TCharType*<br/>
 字符类型`CStrBufT`类。 可以是以下各项之一：
 
 - **char** （适用于 ANSI 字符串）
@@ -121,13 +121,13 @@ explicit CStrBufT(StringType& str) throw(...);
 
 ### <a name="parameters"></a>参数
 
-*str*  
+*str*<br/>
 与缓冲区关联的字符串对象。 通常情况下，开发人员将使用的预定义的 typedef `CStrBuf` （TCHAR 变体）， `CStrBufA` (**char**变体) 和`CStrBufW`(**wchar_t**变体)。
 
-*nMinLength*  
+*nMinLength*<br/>
 字符缓冲区的最小长度。
 
-*dwFlags*  
+*dwFlags*<br/>
 确定是否自动确定字符串长度。 可以是以下各项之一：
 
 - AUTO_LENGTH 字符串长度会自动确定何时[CSimpleStringT::Release](../../atl-mfc-shared/reference/csimplestringt-class.md#releasebuffer)调用。 字符串必须是以 null 结尾。 默认值。
@@ -212,7 +212,7 @@ void SetLength(int nLength);
 
 ### <a name="parameters"></a>参数
 
-*nLength*  
+*nLength*<br/>
 新的字符串对象的字符缓冲区的长度。
 
 > [!NOTE]
