@@ -1,7 +1,7 @@
 ---
 title: 为提供程序创建项目 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/22/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f4d776dbbfbab5e038e14c15a9c281c8edb09153
-ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
+ms.openlocfilehash: 86f85b95b4b45624a778bc183cabadda886d002d
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49410871"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990068"
 ---
 # <a name="creating-a-project-for-the-provider"></a>为提供程序创建项目
 
@@ -32,7 +32,10 @@ ms.locfileid: "49410871"
   
      此时将出现 “新建项目” 对话框。  
   
-1. 在中**项目类型**窗格中，单击**Visual c + + 项目**文件夹。 在中**模板**窗格中，单击**ATL 项目**。  
+1. 在中**项目类型**窗格中，单击**已安装** > **Visual c + +** > **MFC/ATL**文件夹。 在中**模板**窗格中，单击**ATL 项目**。  
+
+    > [!NOTE]
+    > 在以前版本的 Visual Studio 中，找到下的项目类型**已安装** > **模板** > **Visual c + +**  > **ATL**。
   
 1. 在中**名称**框中，输入项目的名称，然后单击**确定**。  
   

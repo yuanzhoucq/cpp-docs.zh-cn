@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a98848799163fd31037dc137b92b94878a1ee675
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 73bc32cd4a02affa98c53f892e5d34e1650d08f7
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49082457"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990095"
 ---
 # <a name="supporting-notifications"></a>支持通知
 
@@ -39,7 +39,7 @@ ms.locfileid: "49082457"
   
 此外，类还必须包含一个映射，以定义连接点条目，如下：  
   
-```  
+```cpp  
 BEGIN_CONNECTION_POINT_MAP  
    CONNECTIONPOINT_ENTRY (IID_IRowsetNotify)  
 END_CONNECTION_POINT_MAP  
@@ -52,7 +52,7 @@ END_CONNECTION_POINT_MAP
 例如，下面是有关继承链`RUpdateRowset`中[UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV):  
   
 > [!NOTE]
->  示例代码可能不同于此处; 列出示例代码应视为较新版本。  
+> 示例代码可能不同于此处; 列出示例代码应视为较新版本。  
   
 ```cpp
 ///////////////////////////////////////////////////////////////////////////  
@@ -71,7 +71,7 @@ public CRowsetImpl< RUpdateRowset, CAgentMan, CUpdateCommand,
 
 此外需要将以下代码添加到行集合中的 COM 映射：  
   
-```  
+```cpp  
 COM_INTERFACE_ENTRY(IConnectionPointContainer)  
 COM_INTERFACE_ENTRY_IMPL(IConnectionPointContainer)  
 ```  
@@ -82,7 +82,7 @@ COM_INTERFACE_ENTRY_IMPL(IConnectionPointContainer)
 
 此外需要添加连接点映射。 它应如下所示：  
   
-```  
+```cpp  
 BEGIN_CONNECTION_POINT_MAP(rowset-name)  
      CONNECTION_POINT_ENTRY(_uuidof(IRowsetNotify))  
 END_CONNECTION_POINT_MAP()  

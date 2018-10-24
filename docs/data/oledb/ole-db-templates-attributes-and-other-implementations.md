@@ -1,7 +1,7 @@
 ---
 title: OLE DB 模板、 属性和其他实现 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/22/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8b2cbe36a933580edc09e8139dca0ed6ec090f90
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 5798eeb4e99e4901ea83a26e4e570c18437ff445
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49082652"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49989926"
 ---
 # <a name="ole-db-templates-attributes-and-other-implementations"></a>OLE DB 模板、特性和其他实现
 
@@ -36,7 +36,7 @@ OLE DB 模板，都是 ATL （动态模板库） 的一部分，使高性能 OLE
   
 - **OLE DB 提供程序模板**用于实现 OLE DB 服务器 （提供程序） 应用程序。  
   
-要使用 OLE DB 模板，应熟悉 C++ 模板、COM 和 OLE DB 接口。 如果不熟悉 OLE DB，请参阅 [OLE DB 程序员参考](/previous-versions/windows/desktop/ms713643)。  
+要使用 OLE DB 模板，应熟悉 C++ 模板、COM 和 OLE DB 接口。 如果您不熟悉 OLE DB，请参阅[OLE DB 程序员参考](/previous-versions/windows/desktop/ms713643)。  
   
 有关详细信息，你可以：  
   
@@ -60,7 +60,7 @@ MFC 库包含一个类， [COleDBRecordView](../../mfc/reference/coledbrecordvie
   
 ## <a name="ole-db-sdk-interfaces"></a>OLE DB SDK 接口  
 
-在 OLE DB 模板不支持的 OLE DB 功能的情况下，您需要使用 OLE DB 接口本身。 有关详细信息，请参阅[OLE DB 程序员参考](/previous-versions/windows/desktop/ms713643)Windows SDK 中。  
+在其中 OLE DB 模板不支持 OLE DB 功能的情况下，您需要使用 OLE DB 接口本身。 有关详细信息，请参阅[OLE DB 程序员参考](/previous-versions/windows/desktop/ms713643)Windows SDK 中。  
   
 ## <a name="see-also"></a>请参阅  
 
