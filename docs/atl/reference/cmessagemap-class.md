@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3f09347fdfaaf20e465e5be05ce446dfec449526
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 5fcbb20ac27eea7999c634f78b14e85a6221b11b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46024380"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053432"
 ---
 # <a name="cmessagemap-class"></a>CMessageMap 类
 
@@ -69,7 +69,7 @@ class ATL_NO_VTABLE CMessageMap
 访问由标识的消息映射*dwMsgMapID*中`CMessageMap`-派生的类。
 
 ```
-virtual BOOL ProcessWindowMessage(  
+virtual BOOL ProcessWindowMessage(
     HWND hWnd,
     UINT uMsg,
     WPARAM wParam,

@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17040448771e4ca3c0f999e72a9c08f0e1fa28aa
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: c10908454252b1ae381a2b96835ce09f3aa6db6f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46058492"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053651"
 ---
 # <a name="registry-macros"></a>注册表宏
 
@@ -41,7 +41,7 @@ ms.locfileid: "46058492"
 |[DECLARE_REGISTRY](#declare_registry)|进入，或者在系统注册表中删除该主要对象的项。|
 |[DECLARE_REGISTRY_APPID_RESOURCEID](#declare_registry_appid_resourceid)|指定自动注册所需的信息*appid*。|
 |[DECLARE_REGISTRY_RESOURCE](#declare_registry_resource)|找到的已命名的资源并运行在其注册表脚本。|
-|[DECLARE_REGISTRY_RESOURCEID](#declare_registry_resourceid)|查找由一个 ID 号标识的资源并运行其中的注册表脚本。|  
+|[DECLARE_REGISTRY_RESOURCEID](#declare_registry_resourceid)|查找由一个 ID 号标识的资源并运行其中的注册表脚本。|
 
 ## <a name="requirements"></a>要求
 
@@ -96,10 +96,10 @@ DECLARE_NO_REGISTRY()
 
 ```
 DECLARE_REGISTRY(
-    class, 
-    pid, 
-    vpid, 
-    nid, 
+    class,
+    pid,
+    vpid,
+    nid,
     flags )
 ```
 
@@ -132,7 +132,7 @@ pid<br/>
 
 ```
 DECLARE_REGISTRY_APPID_RESOURCEID(
-    resid, 
+    resid,
     appid )
 ```
 
@@ -173,7 +173,7 @@ DECLARE_REGISTRY_RESOURCE( x )
 
 [!code-cpp[NVC_ATL_COM#56](../../atl/codesnippet/cpp/registry-macros_2.h)]
 
-如果你想要在运行时替换的替换值的 ATL，不要指定 DECLARE_REGISTRY_RESOURCE 或 DECLARE_REGISTRY_RESOURCEID 宏。 相反，创建一个数组`_ATL_REGMAP_ENTRIES`结构，其中的每个条目都包含变量的占位符的值的占位符替换为在运行时与成对出现。 然后调用[CAtlModule::UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced)或[CAtlModule::UpdateRegistryFromResourceS](catlmodule-class.md#updateregistryfromresources)，将数组传递。 这会添加所有中的替换值`_ATL_REGMAP_ENTRIES`到注册机构的替换映射的结构。  
+如果你想要在运行时替换的替换值的 ATL，不要指定 DECLARE_REGISTRY_RESOURCE 或 DECLARE_REGISTRY_RESOURCEID 宏。 相反，创建一个数组`_ATL_REGMAP_ENTRIES`结构，其中的每个条目都包含变量的占位符的值的占位符替换为在运行时与成对出现。 然后调用[CAtlModule::UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced)或[CAtlModule::UpdateRegistryFromResourceS](catlmodule-class.md#updateregistryfromresources)，将数组传递。 这会添加所有中的替换值`_ATL_REGMAP_ENTRIES`到注册机构的替换映射的结构。
 
 有关可替换参数和脚本的详细信息，请参阅文章[ATL 注册表组件 （注册器）](../../atl/atl-registry-component-registrar.md)。
 
@@ -198,7 +198,7 @@ DECLARE_REGISTRY_RESOURCEID( x )
 
 [!code-cpp[NVC_ATL_COM#56](../../atl/codesnippet/cpp/registry-macros_2.h)]
 
-如果你想要在运行时替换的替换值的 ATL，不要指定 DECLARE_REGISTRY_RESOURCE 或 DECLARE_REGISTRY_RESOURCEID 宏。 相反，创建一个数组`_ATL_REGMAP_ENTRIES`结构，其中的每个条目都包含变量的占位符的值的占位符替换为在运行时与成对出现。 然后调用[CAtlModule::UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced)或[CAtlModule::UpdateRegistryFromResourceS](catlmodule-class.md#updateregistryfromresources)，将数组传递。 这会添加所有中的替换值`_ATL_REGMAP_ENTRIES`到注册机构的替换映射的结构。  
+如果你想要在运行时替换的替换值的 ATL，不要指定 DECLARE_REGISTRY_RESOURCE 或 DECLARE_REGISTRY_RESOURCEID 宏。 相反，创建一个数组`_ATL_REGMAP_ENTRIES`结构，其中的每个条目都包含变量的占位符的值的占位符替换为在运行时与成对出现。 然后调用[CAtlModule::UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced)或[CAtlModule::UpdateRegistryFromResourceS](catlmodule-class.md#updateregistryfromresources)，将数组传递。 这会添加所有中的替换值`_ATL_REGMAP_ENTRIES`到注册机构的替换映射的结构。
 
 有关可替换参数和脚本的详细信息，请参阅文章[ATL 注册表组件 （注册器）](../../atl/atl-registry-component-registrar.md)。
 

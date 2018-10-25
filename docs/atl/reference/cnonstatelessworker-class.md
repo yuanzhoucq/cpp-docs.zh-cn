@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4aa07273e68f0320823d258f324bb8631aef77a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 90c50d3a918f452372aacae5beb36f5425d6a77a
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46095594"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053612"
 ---
 # <a name="cnonstatelessworker-class"></a>CNonStatelessWorker 类
 
@@ -75,7 +75,7 @@ class CNonStatelessWorker
 
 ##  <a name="execute"></a>  CNonStatelessWorker::Execute
 
-实现[WorkerArchetype::Execute](worker-archetype.md#execute)。  
+实现[WorkerArchetype::Execute](worker-archetype.md#execute)。
 
 ```
 void Execute(
@@ -86,7 +86,7 @@ void Execute(
 
 ### <a name="remarks"></a>备注
 
-此方法创建的实例*辅助角色*上的堆栈和调用类[初始化](worker-archetype.md#initialize)对该对象。 如果初始化成功，此方法还会调用[Execute](worker-archetype.md#execute)并[终止](worker-archetype.md#terminate)对同一对象。  
+此方法创建的实例*辅助角色*上的堆栈和调用类[初始化](worker-archetype.md#initialize)对该对象。 如果初始化成功，此方法还会调用[Execute](worker-archetype.md#execute)并[终止](worker-archetype.md#terminate)对同一对象。
 
 ##  <a name="initialize"></a>  CNonStatelessWorker::Initialize
 

@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3fbc661a870c7adc6e2e5dda5def744fa3e0396
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 23b538904c78fc0f0bc88b7c12de1bc4862a88ab
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46417005"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053404"
 ---
 # <a name="mapi-support-in-mfc"></a>MFC 中的 MAPI 支持
 
@@ -44,11 +44,11 @@ MAPI 需要读取要发送附件的文件。 如果应用程序将其数据文�
 
 1. 使用 Visual c + + 菜单编辑器中添加其命令 ID 是 ID_FILE_SEND_MAIL 菜单项。
 
-     此命令 ID 提供的 AFXRES 中的框架。H. 该命令可添加到任何菜单上，但通常将其添加到**文件**菜单。
+   此命令 ID 提供的 AFXRES 中的框架。H. 该命令可添加到任何菜单上，但通常将其添加到**文件**菜单。
 
 1. 手动添加到文档的消息映射的以下代码：
 
-     [!code-cpp[NVC_MFCDocView#9](../mfc/codesnippet/cpp/mapi-support-in-mfc_1.cpp)]
+   [!code-cpp[NVC_MFCDocView#9](../mfc/codesnippet/cpp/mapi-support-in-mfc_1.cpp)]
 
     > [!NOTE]
     >  此消息映射适用于一个派生出的文档`CDocument`或`COleDocument`— 即使在消息映射中您的派生的文档类提取在任一情况下，正确的基类。

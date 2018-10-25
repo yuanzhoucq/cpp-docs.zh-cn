@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 83606041250dafed0ef57eb4eea18d7314e0bbef
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ba22c87ee601d66ccfb1092047e69be42d8163c3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46429261"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052743"
 ---
 # <a name="inserting-a-form-into-a-project"></a>在项目中插入窗体
 
@@ -33,7 +33,7 @@ ms.locfileid: "46429261"
 
 1. 从快捷菜单中，单击**外**，然后单击**添加类**。
 
-     如果**新的窗体**命令不可用，你的项目可能基于活动模板库 (ATL)。 若要将窗体添加到 ATL 项目中，您必须[指定某些设置](../atl/reference/application-settings-atl-project-wizard.md)首次创建项目时。
+   如果**新的窗体**命令不可用，你的项目可能基于活动模板库 (ATL)。 若要将窗体添加到 ATL 项目中，您必须[指定某些设置](../atl/reference/application-settings-atl-project-wizard.md)首次创建项目时。
 
 1. 从**MFC**文件夹中，单击**的 MFC 类**。
 

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b20b5ea002ac16feb99707610fbe4556bf3254f7
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3b06302d330ec8677a3de9b3ccaebf0b7b237b0e
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46375989"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053886"
 ---
 # <a name="application-control"></a>应用程序控件
 
@@ -41,7 +41,6 @@ OLE 需要大量控制应用程序和它们的对象。 OLE 系统 Dll 必须能
 |[AfxOleUnlockControl](#afxoleunlockcontrol)| 解除锁定指定控件的类工厂。 |
 |[AfxOleRegisterServerClass](#afxoleregisterserverclass)|OLE 系统注册表中注册服务器。|
 |[AfxOleSetEditMenu](#afxoleseteditmenu)|实现的用户界面*typename*对象命令。|
-
 
 ##  <a name="afxolecanexitapp"></a>  AfxOleCanExitApp
 
@@ -192,6 +191,7 @@ void AFXAPI AfxOleUnlockApp();
 BOOL AFXAPI AfxOleLockControl(  REFCLSID clsid  );
 BOOL AFXAPI AfxOleLockControl( LPCTSTR lpszProgID );
 ```
+
 ### <a name="parameters"></a>参数
 
 *clsid*<br/>
@@ -357,6 +357,7 @@ void AFXAPI AfxOleSetEditMenu(
 BOOL AFXAPI AfxOleUnlockControl( REFCLSID clsid );
 BOOL AFXAPI AfxOleUnlockControl( LPCTSTR lpszProgID );
 ```
+
 ### <a name="parameters"></a>参数
 
 *clsid*<br/>

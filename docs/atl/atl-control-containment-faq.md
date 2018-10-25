@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28e22df4eba5a12806221beea1966d1c1cdeae46
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: af14755b9be9413feb3a519d09200577c9260c5a
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46052896"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053704"
 ---
 # <a name="atl-control-containment-faq"></a>ATL 控件包含常见问题
 
@@ -37,7 +37,7 @@ ATL 的控件承载代码不会要求你使用任何 ATL 类;您可以只需创�
 |[CAxWindow2T](../atl/reference/caxwindow2t-class.md)|包装 **"AtlAxWinLic80"** 窗口中，提供用于创建窗口、 创建控件和/或将一个授权的控件附加到窗口，并检索该主机对象上的接口指针的方法。|
 |[CComCompositeControl](../atl/reference/ccomcompositecontrol-class.md)|充当基于对话框资源的 ActiveX 控件类的基类。 此类控件可以包含其他 ActiveX 控件。|
 |[CAxDialogImpl](../atl/reference/caxdialogimpl-class.md)|充当基于对话框资源的对话框类的基类。 此类对话框可以包含 ActiveX 控件。|
-|[CWindow](../atl/reference/cwindow-class.md)|提供了一种方法， [GetDlgControl](../atl/reference/cwindow-class.md#getdlgcontrol)，这将返回的接口指针上的控件，给定及其主机窗口的 ID。 此外，Windows API 包装器公开的`CWindow`通常使窗口管理更加轻松。|  
+|[CWindow](../atl/reference/cwindow-class.md)|提供了一种方法， [GetDlgControl](../atl/reference/cwindow-class.md#getdlgcontrol)，这将返回的接口指针上的控件，给定及其主机窗口的 ID。 此外，Windows API 包装器公开的`CWindow`通常使窗口管理更加轻松。|
 
 ## <a name="what-is-the-atl-control-hosting-api"></a>什么是 ATL 控件承载 API？
 
@@ -62,11 +62,11 @@ ATL 的控件承载 API 是允许任何窗口，使其作为 ActiveX 控件容�
 前七个函数调用[AtlAxWinInit](reference/composite-control-global-functions.md#atlaxwininit)隐式。
 
 > [!NOTE]
->  控件承载 API 窗体的 ActiveX 控件包含的 ATL 的支持的基础。 但是，通常会有很少需要直接调用这些函数，如果您充分利用或充分利用 ATL 的包装类。 有关详细信息，请参阅[的 ATL 类促进 ActiveX 控件包含](which-atl-classes-facilitate-activex-control-containment-q.md)。  
+>  控件承载 API 窗体的 ActiveX 控件包含的 ATL 的支持的基础。 但是，通常会有很少需要直接调用这些函数，如果您充分利用或充分利用 ATL 的包装类。 有关详细信息，请参阅[的 ATL 类促进 ActiveX 控件包含](which-atl-classes-facilitate-activex-control-containment-q.md)。
 
 ## <a name="what-is-atlaxwin100"></a>什么是 AtlAxWin100？
 
-`AtlAxWin100` 是一个窗口类来帮助提供 ATL 的控件承载功能的名称。 创建此类的实例时，窗口过程将自动使用控件承载 API 来创建与窗口相关联的主机对象，然后将其与指定为窗口的标题控件。 
+`AtlAxWin100` 是一个窗口类来帮助提供 ATL 的控件承载功能的名称。 创建此类的实例时，窗口过程将自动使用控件承载 API 来创建与窗口相关联的主机对象，然后将其与指定为窗口的标题控件。
 
 ## <a name="when-do-i-need-to-call-atlaxwininit"></a>何时需要调用 AtlAxWinInit？
 

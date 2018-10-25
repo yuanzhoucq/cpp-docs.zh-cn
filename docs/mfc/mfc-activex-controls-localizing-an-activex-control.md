@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2705061b1914ac8fad9f7ca8d769df16bab2f5c1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1a970c7fd75eec2ea028f74220cbdb046e5d23bd
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46415689"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053274"
 ---
 # <a name="mfc-activex-controls-localizing-an-activex-control"></a>MFC ActiveX 控件：本地化 ActiveX 控件
 
@@ -68,7 +68,7 @@ ms.locfileid: "46415689"
 
 1. 控件项目打开，请在**项目**菜单上，单击**添加现有项**。
 
-     **添加现有项**对话框随即出现。
+   **添加现有项**对话框随即出现。
 
 1. 如果需要，选择要查看的驱动器和目录。
 
