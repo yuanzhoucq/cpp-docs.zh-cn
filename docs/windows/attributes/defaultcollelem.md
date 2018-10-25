@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d6ae1ca24a15ff5f12ebd54667a5a8b8d476e177
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: c32bac1157966b5946aa777c55937747f6fbfeba
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790340"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059150"
 ---
 # <a name="defaultcollelem"></a>defaultcollelem
 
@@ -66,9 +66,9 @@ __interface IMyForm
 |**必需的特性**|无|
 |**无效的特性**|无|
 
-有关详细信息，请参阅[特性上下文](cpp-attributes-com-net.md#contexts)。
+有关详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
 ## <a name="see-also"></a>请参阅
 
 [IDL 特性](idl-attributes.md)<br/>
-[方法特性](method-attributes.md)  
+[方法特性](method-attributes.md)

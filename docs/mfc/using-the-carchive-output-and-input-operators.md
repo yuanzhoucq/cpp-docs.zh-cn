@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49ea94258c163c241243934f41d55d896d0d1fa2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 74660dc2baeff683d35fac8d4b9dda06bdbec22d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46372452"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50061308"
 ---
 # <a name="using-the-carchive-ltlt-and-gtgt-operators"></a>使用 CArchive &lt; &lt;并&gt;&gt;运算符
 
@@ -33,13 +33,13 @@ ms.locfileid: "46372452"
 
 1. 下面的示例演示如何将对象存储在通过存档文件：
 
-     [!code-cpp[NVC_MFCSerialization#7](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_1.cpp)]
+   [!code-cpp[NVC_MFCSerialization#7](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_1.cpp)]
 
 #### <a name="to-load-an-object-from-a-value-previously-stored-in-a-file"></a>若要从以前存储在文件中的值加载对象
 
 1. 下面的示例演示如何从以前存储在文件中的值加载对象：
 
-     [!code-cpp[NVC_MFCSerialization#8](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_2.cpp)]
+   [!code-cpp[NVC_MFCSerialization#8](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_2.cpp)]
 
 通常情况下，存储和加载数据传入和传出文件通过在存档`Serialize`函数的`CObject`的派生类，您必须声明与 DECLARE_SERIALIZE 宏保持一致。 对引用`CArchive`对象传递给你`Serialize`函数。 在调用`IsLoading`的函数`CArchive`对象，以确定是否`Serialize`调用函数以从文件加载数据或存储文件的数据。
 

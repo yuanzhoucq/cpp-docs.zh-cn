@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aacbb7709daf6952f00276663e20131e967a554d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 24eded7bac023bd2291e0c574012f72ba86b6bcf
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46022352"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053794"
 ---
 # <a name="functions-c"></a>函数 (C++)
 
@@ -101,7 +101,7 @@ int sum(int a, int b)
 
     ```
 
-     有关详细信息，请参阅[程序和链接](../cpp/program-and-linkage-cpp.md)。
+   有关详细信息，请参阅[程序和链接](../cpp/program-and-linkage-cpp.md)。
 
 1. **内联**，指示编译器将该函数的每个调用替换为函数代码本身。 在某个函数快速执行并且在性能关键代码段中重复调用的情况下，内联可以帮助提高性能。
 
@@ -112,7 +112,7 @@ int sum(int a, int b)
     }
     ```
 
-     有关详细信息，请参阅[内联函数](../cpp/inline-functions-cpp.md)。
+   有关详细信息，请参阅[内联函数](../cpp/inline-functions-cpp.md)。
 
 1. 一个`noexcept`表达式，指定函数是否可以引发异常。 在以下示例中，该函数时不引发异常`is_pod`表达式的计算结果**true**。
 
@@ -123,7 +123,7 @@ int sum(int a, int b)
     T copy_object(T& obj) noexcept(std::is_pod<T>) {...}
     ```
 
-     有关详细信息，请参阅[noexcept](../cpp/noexcept-cpp.md)。
+   有关详细信息，请参阅[noexcept](../cpp/noexcept-cpp.md)。
 
 1. （仅限成员函数）Cv 限定符中，指定函数是否是**const**或**易失性**。
 
@@ -263,7 +263,6 @@ auto Add(const Lhs& lhs, const Rhs& rhs) -> decltype(lhs + rhs)
 ```
 
 当**自动**使用与结合使用尾随返回类型，它只是作为一个占位符，任何 decltype 表达式生成的并本身不执行类型推断。
-
 
 ## <a name="function-local-variables"></a>函数局部变量
 
@@ -426,7 +425,7 @@ typedef int (*fp)(int);
 fp myFunction(char* s); // function returning function pointer
 ```
 
-如果不执行此操作，则函数声明的正确语法可以通过用函数名称和参数列表替换标识符（上例中为 `fp`）来从函数指针的声明符语法推导出，如下所示：
+如果不执行此操作，则函数声明的正确语法可以通过用函数名称和自变量列表替换标识符（上例中为 `fp`）来从函数指针的声明符语法推导出，如下所示：
 
 ```cpp
 int (*myFunction(char* s))(int);

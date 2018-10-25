@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 49e298af793655bb3ea3854909a16dd4db03c6a3
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 7dc5519fbef10ca6c369bcffacacb8351dbc0390
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328176"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060424"
 ---
 # <a name="attributes-by-usage"></a>按用法分的特性
 
@@ -43,7 +43,7 @@ ms.locfileid: "49328176"
 
 ## <a name="module-attributes"></a>模块特性
 以下属性只能应用于[模块](module-cpp.md)属性。
-  
+
 |特性|描述|
 |---------------|-----------------|
 |[helpstringdll](helpstringdll.md)|指定要用于执行文档字符串查找 （本地化） DLL 的名称。|
@@ -85,7 +85,6 @@ ms.locfileid: "49328176"
 - 不允许使用任何重载的方法。
 
 未指定时[uuid](uuid-cpp-attributes.md)属性，并在不同的属性项目中使用相同的接口名称，就会生成相同的 GUID。
-
 
 ## <a name="see-also"></a>请参阅
 

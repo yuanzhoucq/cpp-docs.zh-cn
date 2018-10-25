@@ -84,12 +84,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8c5b1a1bd1358caa491370b2e38b35bde1f8fc7
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 309d3eb7c7bdfffed387293835926e549c00cfcd
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46387506"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054340"
 ---
 # <a name="cmfccolorbar-class"></a>CMFCColorBar 类
 
@@ -321,7 +321,6 @@ CMFCColorBar(
     UINT nCommandID,
     CMFCColorButton* pParentBtn);
 
-
 CMFCColorBar(
     const CArray<COLORREF,COLORREF>& colors,
     COLORREF color,
@@ -333,7 +332,6 @@ CMFCColorBar(
     COLORREF colorAutomatic,
     UINT nCommandID,
     CMFCRibbonColorButton* pParentRibbonBtn);
-
 
 CMFCColorBar(
     CMFCColorBar& src,
@@ -882,7 +880,7 @@ void SetDocumentColors(
 [in]将替换当前文档颜色的颜色列表。
 
 *bShowWhenDocked*<br/>
-[in]若要显示文档的颜色，颜色栏控件停靠; 时，则返回 TRUE否则为 FALSE。 默认值为 FALSE。
+[in]若要显示文档的颜色，颜色栏控件停靠; 时，则返回 TRUE否则为 FALSE。 默认值是 FALSE。
 
 ### <a name="remarks"></a>备注
 

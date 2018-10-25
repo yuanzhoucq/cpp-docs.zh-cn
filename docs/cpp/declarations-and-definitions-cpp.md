@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f2155fef0f9287273b3c45e9318665acfdae527
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 2c0ebbc2686c229d7818042672cdb1d6d2143f81
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46070634"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50058071"
 ---
 # <a name="declarations-and-definitions-c"></a>声明和定义 (C++)
 
@@ -35,7 +35,7 @@ ms.locfileid: "46070634"
 
 1. 是类声明中的静态数据成员。
 
-     由于静态类数据成员是类的所有对象所共享的分离变量，因此必须在类声明的外部对它们进行定义和初始化。 (有关类和类成员的详细信息，请参阅[类](../cpp/classes-and-structs-cpp.md)。)
+   由于静态类数据成员是类的所有对象所共享的分离变量，因此必须在类声明的外部对它们进行定义和初始化。 (有关类和类成员的详细信息，请参阅[类](../cpp/classes-and-structs-cpp.md)。)
 
 1. 是没有下列定义的类名声明，例如 `class T;`。
 

@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51fff5b7e43b489bdaf2a27b115af26c48e33956
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3bf023dbc52ccac7311a62aba1a290b1a03190dd
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46400780"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060554"
 ---
 # <a name="mfc-activex-controls-adding-stock-events-to-an-activex-control"></a>MFC ActiveX 控件：向 ActiveX 控件添加常用事件
 
@@ -73,13 +73,13 @@ ms.locfileid: "46400780"
 |-----------|---------------------|--------------|
 |单击|**void FireClick （)**|触发时控制捕获鼠标，任何**BUTTONUP**接收 （左侧、 中间或右侧） 消息，并在控件上释放该按钮。 此事件之前发生的股票鼠标按下和 MouseUp 事件。<br /><br /> 事件映射条目： **EVENT_STOCK_CLICK （)**|
 |DblClick|**void FireDblClick （)**|单击与类似但时引发的**BUTTONDBLCLK**接收消息。<br /><br /> 事件映射条目： **EVENT_STOCK_DBLCLICK （)**|
-|Error|**void FireError (SCODE***scode* **，LPCSTR** `lpszDescription` **，UINT**`nHelpID`**= 0)** |当将范围之外的方法调用或属性访问 ActiveX 控件中发生错误时引发。<br /><br /> 事件映射条目： **EVENT_STOCK_ERROREVENT （)**|
-|KeyDown|**void FireKeyDown (短**`nChar` **，short**`nShiftState`**)** |时引发的`WM_SYSKEYDOWN`或`WM_KEYDOWN`接收消息。<br /><br /> 事件映射条目： **EVENT_STOCK_KEYDOWN （)**|
-|按键|**void FireKeyPress (短** <strong>\*</strong> `pnChar` **)** |时引发的`WM_CHAR`接收消息。<br /><br /> 事件映射条目： **EVENT_STOCK_KEYPRESS （)**|
-|KeyUp|**void FireKeyUp (短**`nChar` **，short**`nShiftState`**)** |时引发的`WM_SYSKEYUP`或`WM_KEYUP`接收消息。<br /><br /> 事件映射条目： **EVENT_STOCK_KEYUP （)**|
-|鼠标按下|**void FireMouseDown (短**`nButton` **，short** `nShiftState` **，float***x* **，float** *y***)** |如果任何激发**BUTTONDOWN**收到 （左侧、 中间或右侧）。 将鼠标捕获前激发此事件。<br /><br /> 事件映射条目： **EVENT_STOCK_MOUSEDOWN （)**|
-|MouseMove|**void FireMouseMove (短**`nButton` **，short** `nShiftState` **，float***x* **，float** *y***)** |当收到 WM_MOUSEMOVE 消息时触发。<br /><br /> 事件映射条目： **EVENT_STOCK_MOUSEMOVE （)**|
-|MouseUp|**void FireMouseUp (短**`nButton` **，short** `nShiftState` **，float***x* **，float** *y***)** |如果任何激发**BUTTONUP**收到 （左侧、 中间或右侧）。 激发此事件之前释放鼠标捕获。<br /><br /> 事件映射条目： **EVENT_STOCK_MOUSEUP （)**|
+|Error|**void FireError (SCODE***scode* **，LPCSTR** `lpszDescription` **，UINT**`nHelpID`**= 0)**|当将范围之外的方法调用或属性访问 ActiveX 控件中发生错误时引发。<br /><br /> 事件映射条目： **EVENT_STOCK_ERROREVENT （)**|
+|KeyDown|**void FireKeyDown (短**`nChar` **，short**`nShiftState`**)**|时引发的`WM_SYSKEYDOWN`或`WM_KEYDOWN`接收消息。<br /><br /> 事件映射条目： **EVENT_STOCK_KEYDOWN （)**|
+|按键|**void FireKeyPress (短** <strong>\*</strong> `pnChar` **)**|时引发的`WM_CHAR`接收消息。<br /><br /> 事件映射条目： **EVENT_STOCK_KEYPRESS （)**|
+|KeyUp|**void FireKeyUp (短**`nChar` **，short**`nShiftState`**)**|时引发的`WM_SYSKEYUP`或`WM_KEYUP`接收消息。<br /><br /> 事件映射条目： **EVENT_STOCK_KEYUP （)**|
+|鼠标按下|**void FireMouseDown (短**`nButton` **，short** `nShiftState` **，float***x* **，float** *y***)**|如果任何激发**BUTTONDOWN**收到 （左侧、 中间或右侧）。 将鼠标捕获前激发此事件。<br /><br /> 事件映射条目： **EVENT_STOCK_MOUSEDOWN （)**|
+|MouseMove|**void FireMouseMove (短**`nButton` **，short** `nShiftState` **，float***x* **，float** *y***)**|当收到 WM_MOUSEMOVE 消息时触发。<br /><br /> 事件映射条目： **EVENT_STOCK_MOUSEMOVE （)**|
+|MouseUp|**void FireMouseUp (短**`nButton` **，short** `nShiftState` **，float***x* **，float** *y***)**|如果任何激发**BUTTONUP**收到 （左侧、 中间或右侧）。 激发此事件之前释放鼠标捕获。<br /><br /> 事件映射条目： **EVENT_STOCK_MOUSEUP （)**|
 |Readystatechange 等|**void FireReadyStateChange （)**|当控件转换为收到的数据量由于下一步的就绪状态时引发。<br /><br /> 事件映射条目： **EVENT_STOCK_READYSTATECHANGE （)**|
 
 ##  <a name="_core_adding_a_stock_event_using_classwizard"></a> 添加常用事件使用添加事件向导
@@ -94,7 +94,7 @@ ms.locfileid: "46400780"
 
 1. 从快捷菜单中，单击**外**，然后单击**添加事件**。
 
-     这将打开添加事件向导。
+   这将打开添加事件向导。
 
 1. 在中**事件名称**下拉列表中，选择`KeyPress`。
 

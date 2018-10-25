@@ -16,31 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a01e6cf423aece9fba74c4b81fa247d57844e107
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 233e302d4035801e7d8871754d8ecfcfee54cf1a
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46439882"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060906"
 ---
 # <a name="nosmartpointers"></a>no_smart_pointers
-**C + + 专用**  
-  
-取消对类型库中所有接口的智能指针的创建。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-no_smart_pointers  
-```  
-  
-## <a name="remarks"></a>备注  
- 
-默认情况下，当使用 `#import` 时，您将获得针对类型库中的所有接口的智能指针声明。 这些智能指针都是类型[_com_ptr_t 类](../cpp/com-ptr-t-class.md)。  
-  
-**结束 c + + 专用**  
-  
-## <a name="see-also"></a>请参阅  
- 
+**C + + 专用**
+
+取消对类型库中所有接口的智能指针的创建。
+
+## <a name="syntax"></a>语法
+
+```
+no_smart_pointers
+```
+
+## <a name="remarks"></a>备注
+
+默认情况下，当使用 `#import` 时，您将获得针对类型库中的所有接口的智能指针声明。 这些智能指针都是类型[_com_ptr_t 类](../cpp/com-ptr-t-class.md)。
+
+**结束 c + + 专用**
+
+## <a name="see-also"></a>请参阅
+
 [#import 属性](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [#import 指令](../preprocessor/hash-import-directive-cpp.md)

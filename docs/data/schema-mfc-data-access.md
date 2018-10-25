@@ -20,20 +20,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7ff1759203593cd556a91cbe17b93388488a2b07
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 597b3870dbfc70b6e1ac392a45491ee0f1804c2f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46091239"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055419"
 ---
 # <a name="schema--mfc-data-access"></a>架构（MFC 数据访问）
 
-数据库架构描述了表格的当前结构和数据库中的数据库视图。 一般情况下，向导生成的代码假定数据集所访问的表格的架构不会改变，但数据库类可以处理部分架构更改，如添加、重新排序或删除未绑定的列。 如果表格更改，则必须手动更新表格的记录集，然后重新编译应用程序。  
-  
-你还可以补充由向导生成的代码来处理在编译时并非完全清楚架构的数据库。 有关详细信息，请参阅[记录集： 动态绑定数据列 (ODBC)](../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)。  
-  
-## <a name="see-also"></a>请参阅  
+数据库架构描述了表格的当前结构和数据库中的数据库视图。 一般情况下，向导生成的代码假定数据集所访问的表格的架构不会改变，但数据库类可以处理部分架构更改，如添加、重新排序或删除未绑定的列。 如果表格更改，则必须手动更新表格的记录集，然后重新编译应用程序。
+
+你还可以补充由向导生成的代码来处理在编译时并非完全清楚架构的数据库。 有关详细信息，请参阅[记录集： 动态绑定数据列 (ODBC)](../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)。
+
+## <a name="see-also"></a>请参阅
 
 [数据访问编程 (MFC/ATL)](../data/data-access-programming-mfc-atl.md)<br/>
 [SQL](../data/odbc/sql.md)<br/>

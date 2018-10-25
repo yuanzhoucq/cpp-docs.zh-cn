@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b14adec8d601778e255ae7e4242fc552fc820e64
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8c34b4a842655ebce6fccaa89a1dfc6d4ef49add
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46396696"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063479"
 ---
 # <a name="mfc-activex-controls-using-fonts"></a>MFC ActiveX 控件：使用字体
 
@@ -64,7 +64,7 @@ ms.locfileid: "46396696"
 
 1. 从快捷菜单中，单击**外**，然后单击**添加属性**。
 
-     这将打开添加属性向导。
+   这将打开添加属性向导。
 
 1. 在中**属性名称**框中，单击**字体**。
 
@@ -90,7 +90,7 @@ ms.locfileid: "46396696"
 
 1. 从快捷菜单中，单击**外**，然后单击**添加属性**。
 
-     这将打开添加属性向导。
+   这将打开添加属性向导。
 
 1. 在中**属性名称**框中，单击**标题**。
 
@@ -132,7 +132,7 @@ ms.locfileid: "46396696"
 
 1. 从快捷菜单中，单击**外**，然后单击**添加属性**。
 
-     这将打开添加属性向导。
+   这将打开添加属性向导。
 
 1. 在中**属性名称**框中，键入属性的名称。 对于此示例中，使用**HeadingFont**。
 
@@ -168,35 +168,35 @@ DISP_PROPERTY_EX 宏将相关联`HeadingFont`与其对应的属性名称`CSample
 
 - 初始化*m_fontHeading*控件构造函数中。
 
-     [!code-cpp[NVC_MFC_AxFont#9](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_9.cpp)]
+   [!code-cpp[NVC_MFC_AxFont#9](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_9.cpp)]
 
 - 声明静态 FONTDESC 结构包含字体的默认属性。
 
-     [!code-cpp[NVC_MFC_AxFont#10](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_10.cpp)]
+   [!code-cpp[NVC_MFC_AxFont#10](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_10.cpp)]
 
 - 在控件中`DoPropExchange`成员函数中，添加对的调用`PX_Font`函数。 这提供了初始化和自定义字体属性的持久性。
 
-     [!code-cpp[NVC_MFC_AxFont#11](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_11.cpp)]
+   [!code-cpp[NVC_MFC_AxFont#11](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_11.cpp)]
 
 - 完成实现控件`GetHeadingFont`成员函数。
 
-     [!code-cpp[NVC_MFC_AxFont#12](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_12.cpp)]
+   [!code-cpp[NVC_MFC_AxFont#12](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_12.cpp)]
 
 - 完成实现控件`SetHeadingFont`成员函数。
 
-     [!code-cpp[NVC_MFC_AxFont#13](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_13.cpp)]
+   [!code-cpp[NVC_MFC_AxFont#13](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_13.cpp)]
 
 - 修改控件`OnDraw`成员函数，以定义一个变量来保存以前选择的字体。
 
-     [!code-cpp[NVC_MFC_AxFont#14](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_14.cpp)]
+   [!code-cpp[NVC_MFC_AxFont#14](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_14.cpp)]
 
 - 修改控件`OnDraw`成员函数要通过添加以下代码行字体的地方都要使用的设备上下文中选择自定义字体。
 
-     [!code-cpp[NVC_MFC_AxFont#15](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_15.cpp)]
+   [!code-cpp[NVC_MFC_AxFont#15](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_15.cpp)]
 
 - 修改控件`OnDraw`成员函数以返回到设备上下文选择上一字体，通过将以下行添加后使用的字体。
 
-     [!code-cpp[NVC_MFC_AxFont#16](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_16.cpp)]
+   [!code-cpp[NVC_MFC_AxFont#16](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_16.cpp)]
 
 在实现自定义的字体属性后，应实现标准的字体属性页，允许控制用户更改控件的当前字体。 若要添加标准的字体属性页的属性页 ID，请 BEGIN_PROPPAGEIDS 宏后插入以下行：
 

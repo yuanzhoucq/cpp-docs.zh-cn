@@ -19,52 +19,52 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 70607e0518d13015ee11895270ad3306cd3da24b
-ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
+ms.openlocfilehash: 2be281252bc9166473eeb5d0e57a509941ad3673
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49808168"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057798"
 ---
 # <a name="passing-ole-db-conformance-tests"></a>通过 OLE DB 一致性测试
 
-为了使提供程序更加一致，数据访问 SDK 提供了一组 OLE DB 一致性测试。 测试检查您的提供程序的所有方面，并为你提供合理的保证，在提供程序按预期方式运行。 您可以在 Microsoft 数据访问 SDK 中找到 OLE DB 一致性测试。 本部分重点介绍应执行通过一致性测试的操作。 有关正在运行的 OLE DB 一致性测试的信息，请参阅 SDK。  
-  
-## <a name="running-the-conformance-tests"></a>运行一致性测试  
+为了使提供程序更加一致，数据访问 SDK 提供了一组 OLE DB 一致性测试。 测试检查您的提供程序的所有方面，并为你提供合理的保证，在提供程序按预期方式运行。 您可以在 Microsoft 数据访问 SDK 中找到 OLE DB 一致性测试。 本部分重点介绍应执行通过一致性测试的操作。 有关正在运行的 OLE DB 一致性测试的信息，请参阅 SDK。
 
-在 Visual c + + 6.0 中，OLE DB 提供程序模板添加了大量挂钩函数，以使你能够检查值和属性。 其中的大多数功能已添加以响应对符合性测试。  
-  
+## <a name="running-the-conformance-tests"></a>运行一致性测试
+
+在 Visual c + + 6.0 中，OLE DB 提供程序模板添加了大量挂钩函数，以使你能够检查值和属性。 其中的大多数功能已添加以响应对符合性测试。
+
 > [!NOTE]
-> 您需要添加多个验证函数，以使提供程序通过 OLE DB 一致性测试。  
-  
-此提供程序需要两个验证例程。 第一个例程， `CRowsetImpl::ValidateCommandID`，是行集类的一部分。 它是由提供程序模板调用在行集的创建过程。 此示例使用此例程来告诉使用者不支持索引。 第一个调用是对`CRowsetImpl::ValidateCommandID`(请注意，在提供程序使用`_RowsetBaseClass`添加的接口映射中的 typedef`CMyProviderRowset`中[用于书签的提供程序支持](../../data/oledb/provider-support-for-bookmarks.md)，因此无需键入模板的长行自变量）。 接下来，返回 DB_E_NOINDEX，如果索引参数不为 NULL （指示使用者想要使用我们的索引）。 有关命令 Id 的详细信息，请参阅 OLE DB 规范，并查找`IOpenRowset::OpenRowset`。  
-  
-下面的代码是`ValidateCommandID`验证例程：  
-  
+> 您需要添加多个验证函数，以使提供程序通过 OLE DB 一致性测试。
+
+此提供程序需要两个验证例程。 第一个例程， `CRowsetImpl::ValidateCommandID`，是行集类的一部分。 它是由提供程序模板调用在行集的创建过程。 此示例使用此例程来告诉使用者不支持索引。 第一个调用是对`CRowsetImpl::ValidateCommandID`(请注意，在提供程序使用`_RowsetBaseClass`添加的接口映射中的 typedef`CCustomRowset`中[用于书签的提供程序支持](../../data/oledb/provider-support-for-bookmarks.md)，因此无需键入模板的长行自变量）。 接下来，返回 DB_E_NOINDEX，如果索引参数不为 NULL （指示使用者想要使用我们的索引）。 有关命令 Id 的详细信息，请参阅 OLE DB 规范，并查找`IOpenRowset::OpenRowset`。
+
+下面的代码是`ValidateCommandID`验证例程：
+
 ```cpp
-/////////////////////////////////////////////////////////////////////  
-// MyProviderRS.H  
-// Class: CMyProviderRowset   
-  
-HRESULT ValidateCommandID(DBID* pTableID, DBID* pIndexID)  
-{  
-   HRESULT hr = _RowsetBaseClass::ValidateCommandID(pTableID, pIndexID);  
-   if (hr != S_OK)  
-      return hr;  
-  
-   if (pIndexID != NULL)  
-      return DB_E_NOINDEX;    // Doesn't support indexes  
-  
-   return S_OK;  
-}  
-```  
-  
-提供程序模板调用`OnPropertyChanged`方法，只要有人更改某个属性上`DBPROPSET_ROWSET`组。 如果你想要处理的其他组的属性，您将它们添加到适当的对象 (即`DBPROPSET_SESSION`检查进入`CMyProviderSession`类)。  
-  
-代码首先检查以查看是否链接到另一个属性。 如果链接属性，它会设置`DBPROP_BOOKMARKS`属性设置为`True`。 OLE DB 规范的附录 C 包含有关属性的信息。 此信息还将告诉您是否将属性链接到另一个。  
-  
-您可能还想要添加`IsValidValue`到你的代码例程。 模板调用`IsValidValue`时尝试设置属性。 如果需要额外的处理设置的属性值时，会重写此方法。 您可以为每个属性集的下列方法之一。  
-  
-## <a name="see-also"></a>请参阅  
+/////////////////////////////////////////////////////////////////////
+// CustomRS.H
+// Class: CCustomRowset
+
+HRESULT ValidateCommandID(DBID* pTableID, DBID* pIndexID)
+{
+   HRESULT hr = _RowsetBaseClass::ValidateCommandID(pTableID, pIndexID);
+   if (hr != S_OK)
+      return hr;
+
+   if (pIndexID != NULL)
+      return DB_E_NOINDEX;    // Doesn't support indexes
+
+   return S_OK;
+}
+```
+
+提供程序模板调用`OnPropertyChanged`方法，只要有人更改某个属性上`DBPROPSET_ROWSET`组。 如果你想要处理的其他组的属性，您将它们添加到适当的对象 (即`DBPROPSET_SESSION`检查进入`CCustomSession`类)。
+
+代码首先检查以查看是否链接到另一个属性。 如果链接属性，它会设置`DBPROP_BOOKMARKS`属性设置为`True`。 OLE DB 规范的附录 C 包含有关属性的信息。 此信息还将告诉您是否将属性链接到另一个。
+
+您可能还想要添加`IsValidValue`到你的代码例程。 模板调用`IsValidValue`时尝试设置属性。 如果需要额外的处理设置的属性值时，会重写此方法。 您可以为每个属性集的下列方法之一。
+
+## <a name="see-also"></a>请参阅
 
 [高级提供程序技术](../../data/oledb/advanced-provider-techniques.md)

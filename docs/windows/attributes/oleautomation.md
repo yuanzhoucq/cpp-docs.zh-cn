@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a3a0ec5a39d6e99e5ceb6ec4ed089373e3057c1e
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: ccc83dd6f51c3b7072b17d141f29e93c63688fa1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790350"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059527"
 ---
 # <a name="oleautomation"></a>oleautomation
 
@@ -53,9 +53,9 @@ ms.locfileid: "48790350"
 |**必需的特性**|无|
 |**无效的特性**|**dispinterface**|
 
-有关特性上下文的详细信息，请参阅[特性上下文](cpp-attributes-com-net.md#contexts)。
+有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
 ## <a name="see-also"></a>请参阅
 
 [IDL 特性](idl-attributes.md)<br/>
-[接口特性](interface-attributes.md)  
+[接口特性](interface-attributes.md)

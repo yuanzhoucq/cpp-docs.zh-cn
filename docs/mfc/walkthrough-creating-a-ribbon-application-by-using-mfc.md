@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d86749cc8481f2472ed2ebe29dd535e05dcb2e2
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 12070bd690cc2b6228ae5f86e69d9d698bd28348
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48236018"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50056914"
 ---
 # <a name="walkthrough-creating-a-ribbon-application-by-using-mfc"></a>演练：使用 MFC 创建功能区应用程序
 
@@ -38,7 +38,7 @@ ms.locfileid: "48236018"
 
 1. 在中设置以下选项**MFC 应用程序向导**:
 
-    1. 在中**应用程序类型**部分中，在**视觉样式和颜色**，选择**Office 2007 （蓝色主题）**。 
+    1. 在中**应用程序类型**部分中，在**视觉样式和颜色**，选择**Office 2007 （蓝色主题）**。
 
     1. 在中**复合文档支持**部分中，请确保**None**处于选中状态。
 
@@ -46,7 +46,7 @@ ms.locfileid: "48236018"
 
     1. 在中**数据库支持**部分中，请确保**None**处于选中状态。
 
-    1. 在中**用户界面功能**部分中，请确保**使用功能区**处于选中状态。 
+    1. 在中**用户界面功能**部分中，请确保**使用功能区**处于选中状态。
 
     1. 默认情况下**MFC 应用程序向导**添加了对多个停靠窗格支持。 由于本演练仅介绍功能区，因此您可以从应用程序中删除这些选项。 在中**高级功能**部分中，清除所有选项。
 

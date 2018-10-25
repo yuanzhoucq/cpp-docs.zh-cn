@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 91bed0ebfdacae21f2d606c0b8fa1bb43326816d
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 54fcef3c7b2ef86273a570e483f65b34b3b2efc2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790548"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063090"
 ---
 # <a name="idlmodule"></a>idl_module
 
@@ -56,10 +56,10 @@ function declaration
 （可选）此类型库的帮助 ID。
 
 *hidden*<br/>
-（可选）一个参数，阻止显示库。 请参阅[隐藏](/windows/desktop/Midl/hidden)MIDL 特性的详细信息。
+（可选）一个参数，阻止显示库。 更多详细信息，请参阅 [隐藏](/windows/desktop/Midl/hidden) MIDL 特性。
 
 *restricted*<br/>
-（可选）不能随意调用库中的成员。 请参阅[受限](/windows/desktop/Midl/restricted)MIDL 特性的详细信息。
+（可选）不能随意调用库中的成员。 更多详细信息，请参阅 [受限](/windows/desktop/Midl/restricted) MIDL 特性。
 
 *函数声明*<br/>
 您将定义该函数。
@@ -98,10 +98,10 @@ void FuncName(int i);
 |**必需的特性**|无|
 |**无效的特性**|无|
 
-有关详细信息，请参阅[特性上下文](cpp-attributes-com-net.md#contexts)。
+有关详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
 ## <a name="see-also"></a>请参阅
 
 [IDL 特性](idl-attributes.md)<br/>
 [独立特性](stand-alone-attributes.md)<br/>
-[entry](entry.md)  
+[entry](entry.md)

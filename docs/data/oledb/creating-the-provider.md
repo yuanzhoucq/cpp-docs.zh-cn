@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0dbdf7350eeba1a29392bafc2f099a857e212e37
-ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
+ms.openlocfilehash: 230620a2375ac5aa822e55496d1f26751ee6f7b3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49410741"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055341"
 ---
 # <a name="creating-the-provider"></a>创建提供程序
 
@@ -32,7 +32,7 @@ ms.locfileid: "49410741"
 
 1. 在中**添加类**对话框中的**已安装** > **Visual c + +** > **ATL**，选择**ATL OLEDB 提供程序**图标，，然后单击**打开**。
 
-1. 在中**ATL OLE DB 提供程序向导**，输入在提供程序的短名称**短名称**框。 下面的主题使用短名称"MyProvider"，但可以使用其他名称。 其他名称框填充根据输入的名称。
+1. 在中**ATL OLE DB 提供程序向导**，输入在提供程序的短名称**短名称**框。 下面的主题使用短名称*自定义*，但你可以使用其他名称。 其他名称框填充根据输入的名称。
 
 1. 如果需要，编辑的其他名称框。 除了对象和文件名称，可以编辑以下：
 

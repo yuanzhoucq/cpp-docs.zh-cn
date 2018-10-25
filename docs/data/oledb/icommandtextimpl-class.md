@@ -33,94 +33,94 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b73111fe05a7c752edda0c95f1289a125828d4a5
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: a2ddd7e1a4397b36daba8b354c84941d0d1c4d0e
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49082548"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057967"
 ---
 # <a name="icommandtextimpl-class"></a>ICommandTextImpl 类
 
-提供一个实现[ICommandText](/previous-versions/windows/desktop/ms714914)接口。  
-  
+提供一个实现[ICommandText](/previous-versions/windows/desktop/ms714914)接口。
+
 ## <a name="syntax"></a>语法
 
 ```cpp
-template <class T >  
-class ATL_NO_VTABLE ICommandTextImpl   
-   : public ICommandImpl<T, ICommandText>  
-```  
-  
-### <a name="parameters"></a>参数  
+template <class T >
+class ATL_NO_VTABLE ICommandTextImpl
+   : public ICommandImpl<T, ICommandText>
+```
+
+### <a name="parameters"></a>参数
 
 *T*<br/>
-命令类派生自`ICommandTextImpl`。 
+命令类派生自`ICommandTextImpl`。
 
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>要求
 
-**标头：** altdb.h  
-  
-## <a name="members"></a>成员  
-  
-### <a name="interface-methods"></a>接口方法  
-  
-|||  
-|-|-|  
-|[GetCommandText](#getcommandtext)|返回到最后一次调用设置的文本命令[SetCommandText](../../data/oledb/icommandtextimpl-setcommandtext.md)。|  
-|[SetCommandText](#setcommandtext)|设置替换现有命令文本的命令文本。|  
-  
-### <a name="data-members"></a>数据成员  
-  
-|||  
-|-|-|  
-|[m_strCommandText](#strcommandtext)|存储命令文本。|  
-  
-## <a name="remarks"></a>备注  
+**标头：** altdb.h
 
-在命令上必需的接口。  
- 
+## <a name="members"></a>成员
+
+### <a name="interface-methods"></a>接口方法
+
+|||
+|-|-|
+|[GetCommandText](#getcommandtext)|返回到最后一次调用设置的文本命令[SetCommandText](../../data/oledb/icommandtextimpl-setcommandtext.md)。|
+|[SetCommandText](#setcommandtext)|设置替换现有命令文本的命令文本。|
+
+### <a name="data-members"></a>数据成员
+
+|||
+|-|-|
+|[m_strCommandText](#strcommandtext)|存储命令文本。|
+
+## <a name="remarks"></a>备注
+
+在命令上必需的接口。
+
 ## <a name="getcommandtext"></a> Icommandtextimpl:: Getcommandtext
 
-返回到最后一次调用设置的文本命令[SetCommandText](../../data/oledb/icommandtextimpl-setcommandtext.md)。  
-  
-### <a name="syntax"></a>语法  
-  
-```cpp
-STDMETHOD(GetCommandText)(GUID * pguidDialect,   
-   LPOLESTR * ppwszCommand);  
-```  
-  
-#### <a name="parameters"></a>参数  
+返回到最后一次调用设置的文本命令[SetCommandText](../../data/oledb/icommandtextimpl-setcommandtext.md)。
 
-请参阅[ICommandText::GetCommandText](/previous-versions/windows/desktop/ms709825)中*OLE DB 程序员参考*。 *PguidDialect*默认情况下忽略参数。  
+### <a name="syntax"></a>语法
+
+```cpp
+STDMETHOD(GetCommandText)(GUID * pguidDialect, 
+   LPOLESTR * ppwszCommand);
+```
+
+#### <a name="parameters"></a>参数
+
+请参阅[ICommandText::GetCommandText](/previous-versions/windows/desktop/ms709825)中*OLE DB 程序员参考*。 *PguidDialect*默认情况下忽略参数。
 
 ## <a name="setcommandtext"></a> Icommandtextimpl:: Setcommandtext
 
-设置替换现有命令文本的命令文本。  
-  
-### <a name="syntax"></a>语法  
-  
-```cpp
-STDMETHOD(SetCommandText)(REFGUID rguidDialect,   
-   LPCOLESTR pwszCommand);  
-```  
-  
-#### <a name="parameters"></a>参数  
+设置替换现有命令文本的命令文本。
 
-请参阅[icommandtext:: Setcommandtext](/previous-versions/windows/desktop/ms709757)中*OLE DB 程序员参考*。 
+### <a name="syntax"></a>语法
+
+```cpp
+STDMETHOD(SetCommandText)(REFGUID rguidDialect, 
+   LPCOLESTR pwszCommand);
+```
+
+#### <a name="parameters"></a>参数
+
+请参阅[icommandtext:: Setcommandtext](/previous-versions/windows/desktop/ms709757)中*OLE DB 程序员参考*。
 
 ## <a name="strcommandtext"></a> Icommandtextimpl:: M_strcommandtext
 
-存储命令文本字符串。  
-  
-### <a name="syntax"></a>语法  
-  
+存储命令文本字符串。
+
+### <a name="syntax"></a>语法
+
 ```cpp
-CComBSTR m_strCommandText;  
-```  
-  
-## <a name="see-also"></a>请参阅  
+CComBSTR m_strCommandText;
+```
+
+## <a name="see-also"></a>请参阅
 
 [OLE DB 提供程序模板](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [OLE DB 提供程序模板体系结构](../../data/oledb/ole-db-provider-template-architecture.md)

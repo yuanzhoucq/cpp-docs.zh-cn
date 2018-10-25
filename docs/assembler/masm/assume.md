@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a0e43548292d2ffecbebdaead6aa12d6dacc352
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 6fbba50e56ae06dc3afb64582d4a131bba75a6c8
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43693803"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055848"
 ---
 # <a name="assume"></a>ASSUME
 
@@ -33,7 +33,6 @@ ms.locfileid: "43693803"
 > 假设*dataregister*:*类型*[[， *dataregister*:*类型*]]...<br/>
 > 假设*注册*： 错误 [[，*注册*： 错误]]...<br/>
 > 假设 [[*注册*:]] 执行任何操作 [[，*注册*： 执行任何操作]]...
-
 
 ## <a name="remarks"></a>备注
 

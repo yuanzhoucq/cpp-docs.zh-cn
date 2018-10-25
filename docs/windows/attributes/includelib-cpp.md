@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6be5bb96f819bf1f1b0ba90d345a3c2d312daeea
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 96d4ecff09cf00b5221fd0c9c80b4584b203a781
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790536"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059644"
 ---
 # <a name="includelib-c"></a>includelib (C++)
 
@@ -65,7 +65,7 @@ ms.locfileid: "48790536"
 |**必需的特性**|无|
 |**无效的特性**|无|
 
-有关详细信息，请参阅[特性上下文](cpp-attributes-com-net.md#contexts)。
+有关详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
 ## <a name="see-also"></a>请参阅
 
@@ -74,4 +74,4 @@ ms.locfileid: "48790536"
 [import](import.md)<br/>
 [importidl](importidl.md)<br/>
 [include](include-cpp.md)<br/>
-[importlib](importlib.md)  
+[importlib](importlib.md)

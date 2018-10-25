@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61c0e3e26679b2b84e3ea18a8e1bb92722d73e22
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 75e32021420848e7493d9652bb37cb12fa4df56b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46442898"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055458"
 ---
 # <a name="customizing-the-header-item39s-appearance"></a>自定义标头项&#39;的外观
 
@@ -31,15 +31,15 @@ ms.locfileid: "46442898"
 
 - 若要使标题项看起来，使用**HDS_BUTTONS**样式。
 
-     如果要执行操作（如按特定列为数据排序）来响应对某个标题项的单击，就像在 Microsoft Outlook 中所做的一样，请使用此样式。
+   如果要执行操作（如按特定列为数据排序）来响应对某个标题项的单击，就像在 Microsoft Outlook 中所做的一样，请使用此样式。
 
 - 若要为标题项提供"热跟踪"外观，鼠标光标移过它们时，使用**HDS_HOTTRACK**样式。
 
-     当指针越过其他平面栏中的某个项时，热跟踪将显示 3D 轮廓。
+   当指针越过其他平面栏中的某个项时，热跟踪将显示 3D 轮廓。
 
 - 若要指示应隐藏标题控件，请使用**HDS_HIDDEN**样式。
 
-     **HDS_HIDDEN**样式指示标题控件旨在用作数据容器而不是可视控件。 此样式不会自动隐藏控件，而会影响 `CHeaderCtrl::Layout` 的行为。 中返回的值*cy*的成员`WINDOWPOS`结构将为零，该值指示控件不应对用户可见。
+   **HDS_HIDDEN**样式指示标题控件旨在用作数据容器而不是可视控件。 此样式不会自动隐藏控件，而会影响 `CHeaderCtrl::Layout` 的行为。 中返回的值*cy*的成员`WINDOWPOS`结构将为零，该值指示控件不应对用户可见。
 
 有关这些属性的详细信息，请参阅[项](/windows/desktop/Controls/header-controls)Windows SDK 中。 有关将项添加到标题控件的信息，请参阅[将项添加到标头控件](../mfc/adding-items-to-the-header-control.md)。
 

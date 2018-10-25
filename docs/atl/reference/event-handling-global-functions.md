@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: acc8aeb54e98e531756d71d6be389dca8a494f4c
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 5ef89aec3a0eaf53c6c97b3480008b7e9fd586e3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46091447"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054886"
 ---
 # <a name="event-handling-global-functions"></a>事件处理全局函数
 
@@ -33,11 +33,11 @@ ms.locfileid: "46091447"
 
 |||
 |-|-|
-|[AtlWaitWithMessageLoop](#atlwaitwithmessageloop)|等待对象发出信号，同时根据需要调度窗口消息。|  
+|[AtlWaitWithMessageLoop](#atlwaitwithmessageloop)|等待对象发出信号，同时根据需要调度窗口消息。|
 
 ## <a name="requirements"></a>要求
 
-**标头：** atlbase.h  
+**标头：** atlbase.h
 
 ##  <a name="atlwaitwithmessageloop"></a>  AtlWaitWithMessageLoop
 

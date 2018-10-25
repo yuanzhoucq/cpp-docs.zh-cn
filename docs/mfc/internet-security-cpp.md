@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f5beba4f9a33a5bd9ee93baae6176d3ea592d2e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3b61df9a17903f50ea922edf9c29eee926063254
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46445810"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055406"
 ---
 # <a name="internet-security-c"></a>Internet 安全性 (C++)
 
@@ -37,7 +37,6 @@ ms.locfileid: "46445810"
 针对 Internet 进行开发时，有两种基本安全方法。 第一种称为"沙盒处理。" 在这种方法中的应用程序限制为一组特定的 Api，并且从具有潜在危险的服务，例如文件 I/O 程序可能会破坏用户的计算机上的数据中排除。 第二个是使用数字签名实现的。 这种方法称为"shrinkwrap"为 Internet。 代码验证和签名使用私钥/公钥关键技术。 运行代码之前，验证其数字签名以确保代码是从已知的经过身份验证源和代码在已签名后未被修改。
 
 在第一种情况下，您信任应用程序不会执行任何不利影响和信任的应用程序的源。 在第二种，使用数字签名以验证真实性。 数字签名是用来确定，并提供有关代码的发布服务器的详细信息的行业标准。 其技术，基于标准，包括 RSA 和 X.509。 浏览器通常允许用户选择他们想要下载并运行未知来源的代码。
-
 
 ## <a name="see-also"></a>请参阅
 
