@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2281dfb6648f9c4756800a0693f184ccaa7435d7
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: fd0f63aebaa6dd742e1ce701e42cf8238fb6033f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49327955"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068083"
 ---
 # <a name="delegate--ccli-and-ccx"></a>委托 (C + + /cli 和 C + + /cli CX)
 
@@ -52,7 +52,7 @@ return-type
 delegate-type-identifier
 (
 [ parameters ]
-)  
+)
 ```
 
 ### <a name="parameters"></a>参数
@@ -131,7 +131,7 @@ function_declaration
 
 - [如何：定义和使用委托 (C++/CLI)](../dotnet/how-to-define-and-use-delegates-cpp-cli.md)
 
-- [泛型委托 (C + + CLI)](../windows/generic-delegates-visual-cpp.md)
+- [泛型委托 (C++/CLI)](../windows/generic-delegates-visual-cpp.md)
 
 ### <a name="requirements"></a>要求
 
@@ -171,14 +171,14 @@ int main () {
    MyDel^ DelInst;
 
    // test if delegate is initialized
-   if (DelInst)  
+   if (DelInst)
       DelInst(7);
 
    // assigning to delegate
    DelInst = gcnew MyDel(a, &A::func1);
 
    // invoke delegate
-   if (DelInst)  
+   if (DelInst)
       DelInst(8);
 
    // add a function
@@ -212,4 +212,4 @@ in static func3 11
 
 ## <a name="see-also"></a>请参阅
 
-[适用于.NET 和 UWP 组件扩展](../windows/component-extensions-for-runtime-platforms.md)
+[ .NET 和 UWP 的组件扩展](../windows/component-extensions-for-runtime-platforms.md)

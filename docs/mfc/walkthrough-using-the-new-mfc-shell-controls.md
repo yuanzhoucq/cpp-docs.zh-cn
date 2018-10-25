@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47b169371b8551622650687e5d7bd8c06f560725
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 168d7c1740f9b33af1eca539e30514ce76259ceb
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48236044"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076329"
 ---
 # <a name="walkthrough-using-the-new-mfc-shell-controls"></a>演练：使用新的 MFC Shell 控件
 
@@ -35,17 +35,17 @@ ms.locfileid: "48236044"
 
 1. 在中**新的项目**对话框框中，展开**Visual c + +** 中的节点**项目类型**窗格，然后选择**MFC**。 然后，在**模板**窗格中，选择**MFC 应用程序**。 键入项目的名称，如`MFCShellControls`然后单击**确定**。 之后**MFC 应用程序向导**显示，使用以下选项：
 
-    1. 上**应用程序类型**窗格下**应用程序类型**，清除**选项卡式文档**选项。 接下来，选择**单个文档**，然后选择**文档/视图体系结构支持**。 下**项目样式**，选择**Visual Studio**，并从**视觉样式和颜色**下拉列表中，选择**Office 2007 （蓝色主题）**. 
+    1. 上**应用程序类型**窗格下**应用程序类型**，清除**选项卡式文档**选项。 接下来，选择**单个文档**，然后选择**文档/视图体系结构支持**。 下**项目样式**，选择**Visual Studio**，并从**视觉样式和颜色**下拉列表中，选择**Office 2007 （蓝色主题）**.
 
     1. 上**复合文档支持**窗格中，选择**None**。
 
     1. 请勿进行任何更改到**文档模板字符串**窗格。
 
-    1. 上**数据库支持**(Visual Studio 2015 和更低版本) 窗格中选择**None**因为应用程序不需要使用数据库。 
+    1. 上**数据库支持**(Visual Studio 2015 和更低版本) 窗格中选择**None**因为应用程序不需要使用数据库。
 
-    1. 上**用户界面功能**窗格中，请确保**使用菜单栏和工具栏**选择选项。 将所有其他选项保留原样。 
+    1. 上**用户界面功能**窗格中，请确保**使用菜单栏和工具栏**选择选项。 将所有其他选项保留原样。
 
-    1. 上**高级功能**窗格下**高级功能**，选择仅**ActiveX 控件**并**公共控件清单**。 下**高级框架窗格**，选择仅**导航窗格**选项。 它将导致向导以创建与窗口的左侧窗格`CMFCShellTreeCtrl`已嵌入。 
+    1. 上**高级功能**窗格下**高级功能**，选择仅**ActiveX 控件**并**公共控件清单**。 下**高级框架窗格**，选择仅**导航窗格**选项。 它将导致向导以创建与窗口的左侧窗格`CMFCShellTreeCtrl`已嵌入。
 
     1. 我们不会进行任何更改**生成的类**窗格中，请单击**完成**创建新的 MFC 项目。
 

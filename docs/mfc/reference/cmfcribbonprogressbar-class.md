@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27fec3420343b5b6af240f89bb922256cee52a7b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c056ce5a9747be280e465e2054402f43761c64e2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46375558"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50071568"
 ---
 # <a name="cmfcribbonprogressbar-class"></a>CMFCRibbonProgressBar 类
 
@@ -81,7 +81,7 @@ class CMFCRibbonProgressBar : public CMFCRibbonBaseElement
 
 ## <a name="example"></a>示例
 
-下面的示例演示如何使用中的各种方法`CMFCRibbonProgressBar`类。 该示例演示如何设置在无限 （其中一个操作的完成时间是未知） 的模式下，工作的进度栏设置进度栏的最小值和最大值以及设置进度栏的当前位置。 此代码片段属于[MS Office 2007 演示示例](../../visual-cpp-samples.md)。
+下面的示例演示了如何使用 `CMFCRibbonProgressBar` 类中的各种方法。 该示例演示如何设置在无限 （其中一个操作的完成时间是未知） 的模式下，工作的进度栏设置进度栏的最小值和最大值以及设置进度栏的当前位置。 此代码片段属于[MS Office 2007 演示示例](../../visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_MSOffice2007Demo#11](../../mfc/reference/codesnippet/cpp/cmfcribbonprogressbar-class_1.cpp)]
 
@@ -103,7 +103,6 @@ class CMFCRibbonProgressBar : public CMFCRibbonBaseElement
 
 ```
 CMFCRibbonProgressBar();
-
 
 CMFCRibbonProgressBar(
     UINT nID,
@@ -174,7 +173,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 
 ### <a name="parameters"></a>参数
 
-[in]*pDC*
+[in]*pDC*<br/>
 
 ### <a name="return-value"></a>返回值
 
@@ -206,7 +205,7 @@ virtual void OnDraw(CDC* pDC);
 
 ### <a name="parameters"></a>参数
 
-[in]*pDC*
+[in]*pDC*<br/>
 
 ### <a name="remarks"></a>备注
 

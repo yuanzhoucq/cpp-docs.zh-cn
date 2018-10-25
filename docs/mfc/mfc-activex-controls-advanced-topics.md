@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18d0a15b2fe1d61e1b7ba14d210b428f282bff4d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e2b0c4b137079d90a1f51cb852f6046c676d32b8
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46386361"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067925"
 ---
 # <a name="mfc-activex-controls-advanced-topics"></a>MFC ActiveX 控件：高级主题
 
@@ -188,7 +188,7 @@ MFC 数据库类的一般概述，请参阅[MFC 数据库类 （DAO 和 ODBC）]
 
 - 为对话框项声明本地变量和子类。 插入如下所示的代码 (`CMyCtrl`是包装类，IDC_MYCTRL1 是控件的 ID):
 
-     [!code-cpp[NVC_MFC_AxCont#19](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-topics_6.cpp)]
+   [!code-cpp[NVC_MFC_AxCont#19](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-topics_6.cpp)]
 
 ## <a name="see-also"></a>请参阅
 

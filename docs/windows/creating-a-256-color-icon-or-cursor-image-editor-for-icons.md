@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1d6e3af00bfe906a1954f7fc1d2b0af1ea52945e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: dcd9edb155afa9138778f1d464a5e59a20dd7ffd
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46415910"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070026"
 ---
 # <a name="creating-a-256-color-icon-or-cursor-image-editor-for-icons"></a>创建 256 色图标或光标（图标的图像编辑器）
 
@@ -34,7 +34,7 @@ ms.locfileid: "46415910"
 
 1. 在中[资源视图](../windows/resource-view-window.md)，右键单击.rc 文件，然后选择**插入资源**从快捷菜单。 (如果已有现有的图像资源在.rc 文件中，例如游标，只需可以右击**游标**文件夹，然后选择**插入光标**从快捷菜单。)
 
-   > [!NOTE] 
+   > [!NOTE]
    > 如果你的项目尚未包含 .rc 文件，请参阅 [创建新的资源脚本文件](../windows/how-to-create-a-resource-script-file.md)。
 
 2. 在中[插入资源对话框](../windows/add-resource-dialog-box.md)，选择**图标**或**游标**然后单击**新建**。

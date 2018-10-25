@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b92f634e120bf40fe2355a4c09e0e0fb68e9ec2c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 61da17093d56dcfd8b0eeec3ade7955f27bc6b85
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46407436"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077707"
 ---
 # <a name="accessing-run-time-class-information"></a>访问运行时类信息
 
@@ -50,7 +50,7 @@ ms.locfileid: "46407436"
 
 1. 将 `RUNTIME_CLASS` 与类名一起使用，如此处为 `CObject` 类所示的：
 
-     [!code-cpp[NVC_MFCCObjectSample#4](../mfc/codesnippet/cpp/accessing-run-time-class-information_1.cpp)]
+   [!code-cpp[NVC_MFCCObjectSample#4](../mfc/codesnippet/cpp/accessing-run-time-class-information_1.cpp)]
 
 您很少需要直接访问运行时类对象。 更常见的用法是将运行时类对象传递给 `IsKindOf` 函数，如下面的过程中所示。 `IsKindOf` 函数测试一个对象来确定它是否属于某个特定类。
 
@@ -58,11 +58,11 @@ ms.locfileid: "46407436"
 
 1. 确保类具有运行时类支持。 它是派生的类必须具有已直接或间接从`CObject`并用**DECLARE**_**动态**并`IMPLEMENT_DYNAMIC`，则`DECLARE_DYNCREATE`和`IMPLEMENT_DYNCREATE`，或`DECLARE_SERIAL`并`IMPLEMENT_SERIAL`宏一文中所述[从 CObject 派生类](../mfc/deriving-a-class-from-cobject.md)。
 
-1. 调用该类的对象的 `IsKindOf` 成员函数，并使用 `RUNTIME_CLASS` 宏生成 `CRuntimeClass` 参数，如下所示：
+1. 调用该类的对象的 `IsKindOf` 成员函数，并使用 `RUNTIME_CLASS` 宏生成 `CRuntimeClass` 自变量，如下所示：
 
-     [!code-cpp[NVC_MFCCObjectSample#2](../mfc/codesnippet/cpp/accessing-run-time-class-information_2.h)]
+   [!code-cpp[NVC_MFCCObjectSample#2](../mfc/codesnippet/cpp/accessing-run-time-class-information_2.h)]
 
-     [!code-cpp[NVC_MFCCObjectSample#5](../mfc/codesnippet/cpp/accessing-run-time-class-information_3.cpp)]
+   [!code-cpp[NVC_MFCCObjectSample#5](../mfc/codesnippet/cpp/accessing-run-time-class-information_3.cpp)]
 
     > [!NOTE]
     >  则 IsKindOf 将返回 **，则返回 TRUE**如果对象是指定类或派生自指定类的类的成员。 `IsKindOf` 不支持多重继承或虚拟基类，但您可以根据需要对派生的 Microsoft 基础类使用多重继承。

@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4983d2a56407449873c8b4db73d82fa2ef864058
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 297a54b588cadc3a43e1b08ca89820807edb8ba2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328254"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069836"
 ---
 # <a name="cdialogimpl-class"></a>CDialogImpl 类
 
@@ -115,12 +115,12 @@ template <class T,
 
 ```
 HWND Create(
-    HWND hWndParent,  
-    LPARAM dwInitParam = NULL );  
+    HWND hWndParent,
+    LPARAM dwInitParam = NULL );
 
 HWND Create(
-    HWND hWndParent,  
-    RECT&, 
+    HWND hWndParent,
+    RECT&,
     LPARAM dwInitParam = NULL);
 ```
 
@@ -144,7 +144,7 @@ HWND Create(
 
 ##  <a name="destroywindow"></a>  CDialogImpl::DestroyWindow
 
-销毁一个无模式对话框。  
+销毁一个无模式对话框。
 
 ```
 BOOL DestroyWindow();
@@ -160,13 +160,13 @@ BOOL DestroyWindow();
 
 ##  <a name="dialogproc"></a>  CDialogImpl::DialogProc
 
-此静态函数可实现对话框过程。  
+此静态函数可实现对话框过程。
 
 ```
 static LRESULT CALLBACK DialogProc(
-    HWND hWnd,  
-    UINT uMsg,  
-    WPARAM wParam,  
+    HWND hWnd,
+    UINT uMsg,
+    WPARAM wParam,
     LPARAM lParam);
 ```
 
@@ -199,8 +199,8 @@ static LRESULT CALLBACK DialogProc(
 创建模式对话框。
 
 ```
-INT_PTR DoModal(  
-    HWND hWndParent = ::GetActiveWindow(),   
+INT_PTR DoModal(
+    HWND hWndParent = ::GetActiveWindow(),
     LPARAM dwInitParam = NULL);
 ```
 
@@ -306,9 +306,9 @@ virtual void OnFinalMessage(HWND hWnd);
 
 ```
 static LRESULT CALLBACK StartDialogProc(
-    HWND hWnd,  
-    UINT uMsg,  
-    WPARAM wParam,  
+    HWND hWnd,
+    UINT uMsg,
+    WPARAM wParam,
     LPARAM lParam);
 ```
 

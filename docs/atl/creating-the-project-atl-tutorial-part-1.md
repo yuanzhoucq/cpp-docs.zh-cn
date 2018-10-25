@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd53bc778b3229522d34993c72833500732323b3
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 654ddd149eb6875bede85bdef51641c359644f51
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821096"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075627"
 ---
 # <a name="creating-the-project-atl-tutorial-part-1"></a>创建项目（ATL 教程，第 1 部分）
 
@@ -30,13 +30,13 @@ ms.locfileid: "48821096"
 > 本教程将创建与多边形的示例相同的源代码。 如果你想要避免手动输入的源代码，您可以从中进行下载[多边形示例抽象](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/Controls/Polygon)。 然后可以指多边形源代码在你完成本教程中，或使用它来检查自己的项目中的错误。
 > 若要编译，请打开 stdafx.h 并替换为：
 > ```
-> #ifndef WINVER  
-> #define WINVER 0x0400   
+> #ifndef WINVER
+> #define WINVER 0x0400
 > #endif
 > ```
 > 替换为
 > ```
-> #ifndef WINVER  
+> #ifndef WINVER
 > #define WINVER 0x0500
 > #define _WIN32_WINNT 0x0500
 > #endif

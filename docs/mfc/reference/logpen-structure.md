@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a535858a0d5540db481fd42918b4079f30c90728
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e0fa2a4b422a7bd1f36fc46837adec4136b693fb
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46375663"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50064949"
 ---
 # <a name="logpen-structure"></a>LOGPEN 结构
 
@@ -56,9 +56,9 @@ typedef struct tagLOGPEN {  /* lgpn */
 
 - PS_INSIDEFRAME 通过 GDI 创建钢笔绘制一条线绘制闭合形状的框架内生成输出指定的绑定矩形的函数 (例如， `Ellipse`， `Rectangle`， `RoundRect`， `Pie`，和`Chord`成员函数）。 此样式时用于 GDI 输出未指定的绑定矩形的函数 (例如，`LineTo`成员函数)，框架不受限制的笔绘制的区域。
 
-     如果笔具有 PS_INSIDEFRAME 样式和颜色的不匹配逻辑的颜色表中的颜色，笔绘制抖色的颜色。 PS_SOLID 笔样式不能用于与抖色创建钢笔。 PS_INSIDEFRAME 样式等同于 PS_SOLID 钢笔的宽度是否小于或等于 1。
+   如果笔具有 PS_INSIDEFRAME 样式和颜色的不匹配逻辑的颜色表中的颜色，笔绘制抖色的颜色。 PS_SOLID 笔样式不能用于与抖色创建钢笔。 PS_INSIDEFRAME 样式等同于 PS_SOLID 钢笔的宽度是否小于或等于 1。
 
-     使用 GDI 对象使用 PS_INSIDEFRAME 样式时生成的函数以外`Ellipse`， `Rectangle`，和`RoundRect`，行可能无法完全在指定范围内。
+   使用 GDI 对象使用 PS_INSIDEFRAME 样式时生成的函数以外`Ellipse`， `Rectangle`，和`RoundRect`，行可能无法完全在指定范围内。
 
 *lopnWidth*<br/>
 指定钢笔的宽度，以逻辑单位。 如果`lopnWidth`成员为 0，触笔位于 1 个像素宽而不考虑当前映射模式的光栅设备上。

@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: e6bac12d841a065495f7775598c65f39a0aaba67
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d0b62bbca87e5b4fcabcf5124271ee8be68b755f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46394265"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068835"
 ---
 # <a name="windows-formsmfc-programming-differences"></a>Windows 窗体/MFC 编程差异
 
@@ -39,31 +39,31 @@ Windows 窗体应用程序的详细信息，请参阅[Windows 窗体介绍](/dot
 
 - Shell 集成
 
-     MFC 处理动态数据交换 (DDE) 命令和在右键单击文档和选择这种谓词作为打开、 编辑或打印时使用 shell 的命令行参数。 Windows 窗体没有 shell 集成并不响应外壳动词。
+   MFC 处理动态数据交换 (DDE) 命令和在右键单击文档和选择这种谓词作为打开、 编辑或打印时使用 shell 的命令行参数。 Windows 窗体没有 shell 集成并不响应外壳动词。
 
 - 文档模板
 
-     在 MFC 中，文档模板将视图，它包含在框架窗口 （在 MDI、 SDI 或 MTI 模式下），与打开的文档相关联。 Windows 窗体具有到文档模板没有等效项。
+   在 MFC 中，文档模板将视图，它包含在框架窗口 （在 MDI、 SDI 或 MTI 模式下），与打开的文档相关联。 Windows 窗体具有到文档模板没有等效项。
 
 - 文档
 
-     MFC 注册文档文件类型，并从命令行程序中打开文档时处理的文档类型。 Windows 窗体的任何文档支持。
+   MFC 注册文档文件类型，并从命令行程序中打开文档时处理的文档类型。 Windows 窗体的任何文档支持。
 
 - 文档状态
 
-     MFC 维护文档的已更新状态。 因此，当关闭应用程序、 关闭上一个视图包含的应用程序，或从 Windows 中退出，MFC 会提示你保存文档。 Windows 窗体具有没有等效的支持。
+   MFC 维护文档的已更新状态。 因此，当关闭应用程序、 关闭上一个视图包含的应用程序，或从 Windows 中退出，MFC 会提示你保存文档。 Windows 窗体具有没有等效的支持。
 
 - 命令
 
-     MFC 提供的命令的概念。 菜单栏、 工具栏和上下文菜单所有可以调用相同的命令，例如，剪切和复制。 在 Windows 窗体中的命令是从特定的 UI 元素 （如菜单项）; 紧密绑定的事件因此，您必须显式挂接命令的所有事件。 此外可以处理多个事件与 Windows 窗体中的单个处理程序。 有关详细信息，请参阅[将多个事件连接到单个事件处理程序在 Windows 窗体中](/dotnet/framework/winforms/how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms)。
+   MFC 提供的命令的概念。 菜单栏、 工具栏和上下文菜单所有可以调用相同的命令，例如，剪切和复制。 在 Windows 窗体中的命令是从特定的 UI 元素 （如菜单项）; 紧密绑定的事件因此，您必须显式挂接命令的所有事件。 此外可以处理多个事件与 Windows 窗体中的单个处理程序。 有关详细信息，请参阅[将多个事件连接到单个事件处理程序在 Windows 窗体中](/dotnet/framework/winforms/how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms)。
 
 - 命令传送
 
-     MFC 命令路由，该活动视图或处理命令的文档。 因为在同一命令通常具有不同的视图的不同的含义 （例如，副本的行为以不同的方式比在图形编辑器中的文本编辑视图中），需要由活动视图处理命令。 Windows 窗体菜单和工具栏已活动视图没有固有了解，因为不能具有不同的处理程序的每个视图类型的应用**MenuItem.Click**而无需编写额外的内部代码的事件。
+   MFC 命令路由，该活动视图或处理命令的文档。 因为在同一命令通常具有不同的视图的不同的含义 （例如，副本的行为以不同的方式比在图形编辑器中的文本编辑视图中），需要由活动视图处理命令。 Windows 窗体菜单和工具栏已活动视图没有固有了解，因为不能具有不同的处理程序的每个视图类型的应用**MenuItem.Click**而无需编写额外的内部代码的事件。
 
 - 命令更新机制
 
-     MFC 提供的命令更新机制。 因此，活动视图或文档是负责 UI 元素 （例如，启用或禁用菜单项或工具按钮，以及选中状态） 的状态。 Windows 窗体具有命令更新机制没有等效项。
+   MFC 提供的命令更新机制。 因此，活动视图或文档是负责 UI 元素 （例如，启用或禁用菜单项或工具按钮，以及选中状态） 的状态。 Windows 窗体具有命令更新机制没有等效项。
 
 ## <a name="see-also"></a>请参阅
 

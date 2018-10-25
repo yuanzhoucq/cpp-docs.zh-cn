@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b5e499a6faabda20450a7af76d97664b90464b36
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 239f50011c91320c2b5e0a96449139e8eeab10ff
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790336"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50072858"
 ---
 # <a name="progid"></a>progid
 
@@ -68,11 +68,11 @@ Progid 提供用来标识 COM/ActiveX 对象的类标识符 (CLSID) 的用户可
 |**必需的特性**|无|
 |**无效的特性**|无|
 
-有关特性上下文的详细信息，请参阅[特性上下文](cpp-attributes-com-net.md#contexts)。
+有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
 ## <a name="see-also"></a>请参阅
 
 [IDL 特性](idl-attributes.md)<br/>
 [类特性](class-attributes.md)<br/>
 [Typedef、Enum、Union 和 Struct 特性](typedef-enum-union-and-struct-attributes.md)<br/>
-[ProgID 密钥](/windows/desktop/com/-progid--key)  
+[ProgID 密钥](/windows/desktop/com/-progid--key)

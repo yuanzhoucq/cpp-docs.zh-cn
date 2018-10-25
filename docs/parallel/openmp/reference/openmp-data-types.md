@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 254dffebc258867088f738b10a11bf48d31bd0a4
-ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
+ms.openlocfilehash: 97cf6ccad0a3b30c0abfa0076ea9c6a30b205d67
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49990057"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50065195"
 ---
 # <a name="openmp-data-types"></a>OpenMP 数据类型
 
@@ -33,10 +33,10 @@ OpenMP API 中使用的数据类型到提供的链接。
 
 OpenMP 标准的 Visual c + + 实现包括以下数据类型。
 
-数据类型                           | 描述
------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-[omp_lock_t](#omp-lock-t)           | 一个类型，持有锁、 锁是否可用，或如果线程拥有锁的状态。
-[omp_nest_lock_t](#omp-nest-lock-t) | 包含有关某个锁的信息的以下部分之一的类型： 是否锁可用，并且线程标识拥有锁和嵌套的计数。
+|数据类型|描述|
+|---------|-----------|
+|[omp_lock_t](#omp-lock-t)|一个类型，持有锁、 锁是否可用，或如果线程拥有锁的状态。|
+|[omp_nest_lock_t](#omp-nest-lock-t)|包含有关某个锁的信息的以下部分之一的类型： 是否锁可用，并且线程标识拥有锁和嵌套的计数。|
 
 ## <a name="omp-lock-t"></a>omp_lock_t
 
@@ -44,17 +44,17 @@ OpenMP 标准的 Visual c + + 实现包括以下数据类型。
 
 以下函数使用`omp_lock_t`:
 
-- [omp_init_lock](../../../parallel/openmp/reference/omp-init-lock.md)
-- [omp_destroy_lock](../../../parallel/openmp/reference/omp-destroy-lock.md)
-- [omp_set_lock](../../../parallel/openmp/reference/omp-set-lock.md)
-- [omp_unset_lock](../../../parallel/openmp/reference/omp-unset-lock.md)
-- [omp_test_lock](../../../parallel/openmp/reference/omp-test-lock.md)
+- [omp_init_lock](openmp-functions.md#omp-init-lock)
+- [omp_destroy_lock](openmp-functions.md#omp-destroy-lock)
+- [omp_set_lock](openmp-functions.md#omp-set-lock)
+- [omp_unset_lock](openmp-functions.md#omp-unset-lock)
+- [omp_test_lock](openmp-functions.md#omp-test-lock)
 
 有关详细信息，请参阅[3.2 锁函数](../../../parallel/openmp/3-2-lock-functions.md)。
 
 ### <a name="example"></a>示例
 
-请参阅[omp_init_lock](../../../parallel/openmp/reference/omp-init-lock.md)有关的使用示例`omp_lock_t`。
+请参阅[omp_init_lock](openmp-functions.md#omp-init-lock)有关的使用示例`omp_lock_t`。
 
 ## <a name="omp-nest-lock-t"></a>omp_nest_lock_t
 
@@ -62,14 +62,14 @@ OpenMP 标准的 Visual c + + 实现包括以下数据类型。
 
 以下函数使用`omp_nest_lock_t`:
 
-- [omp_init_nest_lock](../../../parallel/openmp/reference/omp-init-nest-lock.md)
-- [omp_destroy_nest_lock](../../../parallel/openmp/reference/omp-destroy-nest-lock.md)
-- [omp_set_nest_lock](../../../parallel/openmp/reference/omp-set-nest-lock.md)
-- [omp_unset_nest_lock](../../../parallel/openmp/reference/omp-unset-nest-lock.md)
-- [omp_test_nest_lock](../../../parallel/openmp/reference/omp-test-nest-lock.md)
+- [omp_init_nest_lock](openmp-functions.md#omp-init-nest-lock)
+- [omp_destroy_nest_lock](openmp-functions.md#omp-destroy-nest-lock)
+- [omp_set_nest_lock](openmp-functions.md#omp-set-nest-lock)
+- [omp_unset_nest_lock](openmp-functions.md#omp-unset-nest-lock)
+- [omp_test_nest_lock](openmp-functions.md#omp-test-nest-lock)
 
 有关详细信息，请参阅[3.2 锁函数](../../../parallel/openmp/3-2-lock-functions.md)。
 
 ### <a name="example"></a>示例
 
-请参阅[omp_init_nest_lock](../../../parallel/openmp/reference/omp-init-nest-lock.md)有关的使用示例`omp_nest_lock_t`。
+请参阅[omp_init_nest_lock](openmp-functions.md#omp-init-nest-lock)有关的使用示例`omp_nest_lock_t`。

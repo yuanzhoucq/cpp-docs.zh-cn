@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e5147faaf0170a10295006f12d7e95f5dfd3e8d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 159d452c3b0a813c52d8486f52d67b9817c3a558
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46380693"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069277"
 ---
 # <a name="ccriticalsection-class"></a>CCriticalSection 类
 
@@ -81,7 +81,7 @@ class CCriticalSection : public CSyncObject
 
 - 要使用独立的独立方法`CCriticalSection`对象，构造`CCriticalSection`对象时需要它。 成功返回后从构造函数，显式锁定的对象通过调用[锁](#lock)。 调用[解锁](#unlock)完成后访问的关键部分。 此方法，更清晰的某个人可以读取源代码，同时是更容易出现错误必须记得要锁定和解锁之前和之后访问的关键部分。
 
-     更好的方法是使用[CSingleLock](../../mfc/reference/csinglelock-class.md)类。 它还具有`Lock`和`Unlock`方法，但你无需担心如何取消锁定资源，如果发生异常。
+   更好的方法是使用[CSingleLock](../../mfc/reference/csinglelock-class.md)类。 它还具有`Lock`和`Unlock`方法，但你无需担心如何取消锁定资源，如果发生异常。
 
 - 嵌入方法还可以共享一个类，通过多个线程通过添加`CCriticalSection`-类型的类和锁定时所需的数据成员的数据成员。
 

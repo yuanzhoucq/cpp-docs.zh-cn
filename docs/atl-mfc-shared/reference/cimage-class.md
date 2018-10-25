@@ -64,12 +64,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df61ebeea72a7cf860237b760288cc47ff353bf2
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: a1c27d20970b8e8634e8438c25733fd90a3ad632
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48890655"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50064792"
 ---
 # <a name="cimage-class"></a>CImage 类
 
@@ -172,7 +172,7 @@ class CImage
 
 ## <a name="example"></a>示例
 
-```cpp  
+```cpp
 // Get a CDC for the image
 CDC* pDC = CDC::FromHandle(m_myImage.GetDC());
 
@@ -181,19 +181,19 @@ pDC->Rectangle(0, 40, 100, 50);
 m_myImage.ReleaseDC();
 ```
 
-当你使用`CImage`在 MFC 项目中，请注意在项目中的成员函数需要指向的指针[CBitmap](../../mfc/reference/cbitmap-class.md)对象。 如果你想要使用`CImage`使用此类函数，如[CMenu::AppendMenu](../../mfc/reference/cmenu-class.md#appendmenu)，使用[CBitmap::FromHandle](../../mfc/reference/cbitmap-class.md#fromhandle)，将其传递你`CImage`HBITMAP，并使用返回`CBitmap*`。  
+当你使用`CImage`在 MFC 项目中，请注意在项目中的成员函数需要指向的指针[CBitmap](../../mfc/reference/cbitmap-class.md)对象。 如果你想要使用`CImage`使用此类函数，如[CMenu::AppendMenu](../../mfc/reference/cmenu-class.md#appendmenu)，使用[CBitmap::FromHandle](../../mfc/reference/cbitmap-class.md#fromhandle)，将其传递你`CImage`HBITMAP，并使用返回`CBitmap*`。
 
 ## <a name="example"></a>示例
 
-```cpp  
+```cpp
 void CMyDlg::OnRButtonDown(UINT nFlags, CPoint point)
 {
     UNREFERENCED_PARAMETER(nFlags);
-    
+
     CBitmap* pBitmap = CBitmap::FromHandle(m_myImage);
     m_pmenuPop->AppendMenu(0, ID_BMPCOMMAND, pBitmap);
     ClientToScreen(&point);
-    m_pmenuPop->TrackPopupMenu(TPM_RIGHTBUTTON | TPM_LEFTALIGN, point.x, 
+    m_pmenuPop->TrackPopupMenu(TPM_RIGHTBUTTON | TPM_LEFTALIGN, point.x,
     point.y, this);
 }
 ```
@@ -203,8 +203,8 @@ void CMyDlg::OnRButtonDown(UINT nFlags, CPoint point)
 可以使用`CImage`从 MFC 或 atl。
 
 > [!NOTE]
-> 创建项目使用时`CImage`，则必须定义`CString`包含之前`atlimage.h`。 如果你的项目使用而不使用 MFC ATL，包括`atlstr.h`包含之前`atlimage.h`。 如果你的项目使用 MFC （或它是否与 MFC 支持 ATL 项目），包括`afxstr.h`包含之前`atlimage.h`。  
->   
+> 创建项目使用时`CImage`，则必须定义`CString`包含之前`atlimage.h`。 如果你的项目使用而不使用 MFC ATL，包括`atlstr.h`包含之前`atlimage.h`。 如果你的项目使用 MFC （或它是否与 MFC 支持 ATL 项目），包括`afxstr.h`包含之前`atlimage.h`。<br/>
+> <br/>
 > 同样，必须包括`atlimage.h`包含之前`atlimpl.cpp`。 若要轻松地完成此操作，包括`atlimage.h`在您`stdafx.h`。
 
 ## <a name="requirements"></a>要求
@@ -302,7 +302,7 @@ Y 坐标中的目标矩形左上角的逻辑单元。
 
 Alpha 混合位图支持每个像素的颜色混合。
 
-当*bBlendOp*设置源像素的 alpha 值的目标位图为 AC_SRC_OVER 默认放置源位图。  
+当*bBlendOp*设置源像素的 alpha 值的目标位图为 AC_SRC_OVER 默认放置源位图。
 
 ##  <a name="attach"></a>  CImage::Attach
 
@@ -506,9 +506,9 @@ BOOL CreateEx(
 
 ### <a name="example"></a>示例
 
-以下示例创建一个 100 x 100 像素的位图，使用 16 位进行编码的每个像素。 在给定的 16 位像素，0-3 位进行编码的红色组件、 4-7 位编码绿色，和 8 到 11 位用于对蓝色编码。 其余的 4 位是未使用。  
+以下示例创建一个 100 x 100 像素的位图，使用 16 位进行编码的每个像素。 在给定的 16 位像素，0-3 位进行编码的红色组件、 4-7 位编码绿色，和 8 到 11 位用于对蓝色编码。 其余的 4 位是未使用。
 
-```cpp  
+```cpp
 DWORD adwBitmasks[3] = { 0x0000000f, 0x000000f0, 0x00000f00 };
 m_myImage.CreateEx(100, 100, 16, BI_BITFIELDS, adwBitmasks, 0);
 ```
@@ -725,16 +725,15 @@ Guid 的数组，每个元素对应于一个字符串中的文件类型。 在�
 *pszAllFilesDescription*<br/>
 如果此参数不为 NULL，则筛选器字符串将列表的开头带有一个附加的筛选器。 此筛选器将具有的当前值*pszAllFilesDescription*有关其说明，并接受文件列表中的任何其他导出程序支持的任何文件扩展名。
 
-例如：  
+例如：
 
-```cpp  
+```cpp
 //First filter in the list will be titled "All Image Files", and
 //will accept files with any extension supported by any exporter.
 CImage::GetExporterFilterString(
-    strExporters, aguidFileTypes, 
+    strExporters, aguidFileTypes,
 _T("All Image Files"));
 ```
-
 
 *dwExclude*<br/>
 指定要从列表中排除的文件类型的位标志的集。 允许使用的标志是：
@@ -821,16 +820,15 @@ Guid 的数组，每个元素对应于一个字符串中的文件类型。 在�
 *pszAllFilesDescription*<br/>
 如果此参数不为 NULL，则筛选器字符串将列表的开头带有一个附加的筛选器。 此筛选器将具有的当前值*pszAllFilesDescription*有关其说明，并接受文件列表中的任何其他导出程序支持的任何文件扩展名。
 
-例如：  
+例如：
 
-```cpp  
+```cpp
 //First filter in the list will be titled "All Image Files", and
 //will accept files with any extension supported by any importer.
 CImage::GetImporterFilterString(
-    strImporters, aguidFileTypes, 
+    strImporters, aguidFileTypes,
 _T("All Image Files"));
 ```
-
 
 *dwExclude*<br/>
 指定要从列表中排除的文件类型的位标志的集。 允许使用的标志是：
@@ -1360,7 +1358,7 @@ DIB 部分控制板中设置的条目范围的红色、 绿色、 蓝色 (RGB) �
 
 ```
 void SetColorTable(
-    UINT iFirstColor, 
+    UINT iFirstColor,
     UINT nColors,
     const RGBQUAD* prgbColors) throw();
 ```
@@ -1427,7 +1425,7 @@ void SetPixelIndexed(int x, int y, int iIndex) throw();
 在指定的位置设置像素*x*并*y*到所指示的颜色*r*， *g*，和*b*、 为红色，绿色、 蓝色 (RGB) 映像。
 
 ```
-void SetPixelRGB(  
+void SetPixelRGB(
     int x,
     int y,
     BYTE r,
@@ -1639,12 +1637,12 @@ Y 坐标，以逻辑单元的源矩形左上角。
 
 `TransparentBlt` 支持的每个像素和 8 位每像素 4 位的源位图。 使用[cimage:: Alphablend](#alphablend)使用透明度指定每个像素 32 位的位图。
 
-### <a name="example"></a>示例  
+### <a name="example"></a>示例
 
-```cpp  
-// Performs a transparent blit from the source image to the destination 
+```cpp
+// Performs a transparent blit from the source image to the destination
 // image using the images' current transparency settings
-BOOL TransparentBlt(CImage* pSrcImage, CImage* pDstImage, 
+BOOL TransparentBlt(CImage* pSrcImage, CImage* pDstImage,
        int xDest, int yDest, int nDestWidth, int nDestHeight)
 {
     HDC hDstDC = NULL;
@@ -1676,4 +1674,4 @@ BOOL TransparentBlt(CImage* pSrcImage, CImage* pDstImage,
 [CreateDIBSection](/windows/desktop/api/wingdi/nf-wingdi-createdibsection)<br/>
 [ATL COM 桌面组件](../../atl/atl-com-desktop-components.md)<br/>
 [与设备无关位图](/windows/desktop/gdi/device-independent-bitmaps)<br/>
-[CreateDIBSection](/windows/desktop/api/wingdi/nf-wingdi-createdibsection)   
+[CreateDIBSection](/windows/desktop/api/wingdi/nf-wingdi-createdibsection)

@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 59689abec68fc6cff2a742bd4db97b58cd023af1
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 91098a0a225519f9b657d9424872e99be0e86354
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44316258"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50065533"
 ---
 # <a name="creating-a-menu-c"></a>创建菜单 （c + +）
 
@@ -37,8 +37,8 @@ ms.locfileid: "44316258"
 
 2. 选择菜单栏上的“新建项目”  框（包含“请在此处输入”的矩形）。
 
-   ![菜单编辑器中的新项框](../windows/media/vcmenueditornewitembox.gif "vcMenuEditorNewItemBox")  
-新建项目框
+   ![菜单编辑器中的新项框](../windows/media/vcmenueditornewitembox.gif "vcMenuEditorNewItemBox")<br/>
+   新建项目框
 
 3. 键入新菜单的名称，例如“文件”。
 
@@ -46,8 +46,8 @@ ms.locfileid: "44316258"
 
    为菜单栏上的新菜单指定名称后，新项目框移到右边（允许你添加另一菜单），并且另一个新项目框在第一个菜单下面打开，以便可以向其添加菜单命令。
 
-   ![展开新项框](../windows/media/vcmenueditornewitemboxexpanded.gif "vcMenuEditorNewItemBoxExpanded")  
-新项目框的焦点在键入菜单名称后转移
+   ![展开新项框](../windows/media/vcmenueditornewitemboxexpanded.gif "vcMenuEditorNewItemBoxExpanded")<br/>
+   新项目框的焦点在键入菜单名称后转移
 
    > [!NOTE]
    > 若要在菜单栏上创建单项菜单，请设置**Popup**属性设置为**False**。

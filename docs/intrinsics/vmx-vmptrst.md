@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f9cd2ebdbcf2ad2feb3b66412fbcd5687e85dce
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: b1014d41ea53405ea96ea5a3e19e627d72663f21
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48820563"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50074938"
 ---
 # <a name="vmxvmptrst"></a>__vmx_vmptrst
 
@@ -33,20 +33,21 @@ ms.locfileid: "48820563"
 ## <a name="syntax"></a>语法
 
 ```
-void __vmx_vmptrst( 
-   unsigned __int64 *VmcsPhysicalAddress 
+void __vmx_vmptrst( 
+   unsigned __int64 *VmcsPhysicalAddress 
 );
 ```
 
-#### <a name="parameters"></a>参数
+### <a name="parameters"></a>参数
 
-[in] *`VmcsPhysicalAddress`存储当前 VMCS 指针的地址。
+*VmcsPhysicalAddress*<br/>
+[in]存储当前 VMCS 指针地址。
 
 ## <a name="remarks"></a>备注
 
 VMCS 指针是一个 64 位物理地址。
 
-`__vmx_vmptrst`函数等同于`VMPTRST`计算机指令。 此函数支持主机的虚拟机监视器与来宾操作系统及其应用程序进行交互。 有关详细信息，搜索"Intel 虚拟化技术规范的 IA-32 Intel 体系结构，"文档在文档数字 C97063 002 [Intel Corporation](https://software.intel.com/articles/intel-sdm)站点。
+`__vmx_vmptrst` 函数等同于 `VMPTRST` 计算机指令。 此函数支持主机的虚拟机监视器与来宾操作系统及其应用程序进行交互。 有关详细信息，搜索"Intel 虚拟化技术规范的 IA-32 Intel 体系结构，"文档在文档数字 C97063 002 [Intel Corporation](https://software.intel.com/articles/intel-sdm)站点。
 
 ## <a name="requirements"></a>要求
 

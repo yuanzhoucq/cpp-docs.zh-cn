@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a996df63430a2d6b1942112122a1f185ba8f13de
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 16bea4bb35a7eeffa1c6986953d7245ff588abd3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48859596"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075523"
 ---
 # <a name="adding-an-atl-control"></a>添加 ATL 控件
 
@@ -47,4 +47,4 @@ ms.locfileid: "48859596"
 ## <a name="see-also"></a>请参阅
 
 [向复合控件添加功能](../../atl/adding-functionality-to-the-composite-control.md)<br/>
-[ATL COM 对象基础知识](../../atl/fundamentals-of-atl-com-objects.md)   
+[ATL COM 对象基础知识](../../atl/fundamentals-of-atl-com-objects.md)

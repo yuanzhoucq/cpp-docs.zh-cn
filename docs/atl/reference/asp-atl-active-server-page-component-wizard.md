@@ -16,18 +16,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31ac9d8ab0200d8dd56bbca3c82eb0ebec32388b
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 210ef0d41cd0653718908b10ad64cd6004886c64
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46015961"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077746"
 ---
 # <a name="asp-atl-active-server-page-component-wizard"></a>ASP，ATL Active Server Page 组件向导
 
 ATL Active Server Page 组件向导此页用于指定用于处理信息和状态与 ASP 组件相关的可选设置。
 
-- **可选方法**  
+- **可选方法**
 
    添加了可选的 ASP 方法， **onstartpage 是否**并**OnEndPage**，对你的对象。 若要设置任何 Active Server Pages 内部对象，必须选择此选项。 默认情况下，选择它。
 
@@ -35,7 +35,7 @@ ATL Active Server Page 组件向导此页用于指定用于处理信息和状态
 
    [Onstartpage 是否](https://msdn.microsoft.com/library/ms691624.aspx)脚本会尝试访问该对象在首次调用。 **OnEndPage**对象完成时调用处理脚本。
 
-- **内部对象**  
+- **内部对象**
 
    必须选择**onstartpage 是否/OnEndPage**选项可以设置任何 ASP 内部对象。
 

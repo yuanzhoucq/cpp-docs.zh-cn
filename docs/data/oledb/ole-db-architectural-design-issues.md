@@ -15,17 +15,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a79cc4dfa36170293a8832571ba3348d6e2c8865
-ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
+ms.openlocfilehash: 0a0fc54c002511b9c091acc5d5e3fbe4636ad933
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49990018"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50072234"
 ---
 # <a name="ole-db-architectural-design-issues"></a>OLE DB 结构设计问题
 
-启动 OLE DB 应用程序之前，请考虑以下问题：  
-  
+启动 OLE DB 应用程序之前，请考虑以下问题：
+
 ## <a name="what-programming-implementation-will-you-use-to-write-your-ole-db-application"></a>您将使用哪些编程实现来编写 OLE DB 应用程序？
 
 Microsoft 还提供了几个库来完成此任务： OLE DB 模板库、 OLE DB 属性和 OLE DB SDK 中的原始 OLE DB 接口。 此外，还有一些向导，可帮助您编写您的程序。 这些实现中所述[OLE DB 模板、 特性和其他实现](../../data/oledb/ole-db-templates-attributes-and-other-implementations.md)。

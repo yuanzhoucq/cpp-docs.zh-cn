@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0c6bb07071efa162b5b33ae5f1dfe72ac7ea02e8
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: b0d86b31823ec31461f953c7cfc16a5774f215fd
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790364"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067158"
 ---
 # <a name="supporterrorinfo"></a>support_error_info
 
@@ -41,9 +41,9 @@ ms.locfileid: "48790364"
 
 ## <a name="remarks"></a>备注
 
-**support_error_info** C++ 属性实现针对将目标对象遇到的详细上下文错误返回到客户端的支持。 若要支持错误，方法的对象`IErrorInfo`接口必须由对象实现。 有关详细信息，请参阅[支持 IDispatch 和 IErrorInfo](../../atl/supporting-idispatch-and-ierrorinfo.md)。
+**support_error_info** C++ 属性实现针对将目标对象遇到的详细上下文错误返回到客户端的支持。 若要支持错误，方法的对象`IErrorInfo`接口必须由对象实现。 有关详细信息，请参阅 [支持 IDispatch 和 IErrorInfo](../../atl/supporting-idispatch-and-ierrorinfo.md)。
 
-此特性将添加[ISupportErrorInfoImpl](../../atl/reference/isupporterrorinfoimpl-class.md)类作为目标对象的基类。 这会导致的默认实现`ISupportErrorInfo`和单个接口在生成对象上的错误时，可以使用。
+此属性将 [ISupportErrorInfoImpl](../../atl/reference/isupporterrorinfoimpl-class.md) 类作为基类添加到目标对象。 这会导致的默认实现`ISupportErrorInfo`和单个接口在生成对象上的错误时，可以使用。
 
 ## <a name="example"></a>示例
 
@@ -80,9 +80,9 @@ class CMyClass
 |**必需的特性**|无|
 |**无效的特性**|无|
 
-有关特性上下文的详细信息，请参阅[特性上下文](cpp-attributes-com-net.md#contexts)。
+有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
 ## <a name="see-also"></a>请参阅
 
 [COM 特性](com-attributes.md)<br/>
-[类特性](class-attributes.md)  
+[类特性](class-attributes.md)

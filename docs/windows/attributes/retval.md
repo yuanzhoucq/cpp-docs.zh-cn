@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e2b71271dc0579e1d0682b95a0d3bdf57d197d1a
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: ffa4b43c595bfa75d805e8896aad8c44ac6baa50
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790502"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50064701"
 ---
 # <a name="retval"></a>retval
 
@@ -55,10 +55,10 @@ ms.locfileid: "48790502"
 |**必需的特性**|**out**|
 |**无效的特性**|**in**|
 
-有关特性上下文的详细信息，请参阅[特性上下文](cpp-attributes-com-net.md#contexts)。
+有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
 ## <a name="see-also"></a>请参阅
 
 [IDL 特性](idl-attributes.md)<br/>
 [参数特性](parameter-attributes.md)<br/>
-[方法特性](method-attributes.md)  
+[方法特性](method-attributes.md)

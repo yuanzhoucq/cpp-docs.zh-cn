@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 06948a41703377a3d0d09ed4d11792f0cf7d7c6c
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: ddbd516421f72e1d6ee13a9c32fe90f99aec44e3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790561"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067951"
 ---
 # <a name="public-c-attributes"></a>public（C++ 特性）
 
@@ -67,9 +67,9 @@ __interface IFireTabCtrl : IDispatch
 |**必需的特性**|无|
 |**无效的特性**|无|
 
-有关特性上下文的详细信息，请参阅[特性上下文](cpp-attributes-com-net.md#contexts)。
+有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
 ## <a name="see-also"></a>请参阅
 
 [IDL 特性](idl-attributes.md)<br/>
-[Typedef、Enum、Union 和 Struct 特性](typedef-enum-union-and-struct-attributes.md)  
+[Typedef、Enum、Union 和 Struct 特性](typedef-enum-union-and-struct-attributes.md)

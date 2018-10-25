@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a9cc4a142a0aefc4937df493fa87552464b4294
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 7115d73319dc7b76386367fb93329906cd72a027
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46043412"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50073404"
 ---
 # <a name="aggregation-and-class-factory-macros"></a>聚合和类工厂宏
 
@@ -51,7 +51,7 @@ ms.locfileid: "46043412"
 |[DECLARE_ONLY_AGGREGATABLE](#declare_only_aggregatable)|声明必须聚合对象。|
 |[DECLARE_POLY_AGGREGATABLE](#declare_poly_aggregatable)|检查外部未知的值，并可聚合或是不可聚合，根据需要声明您的对象。|
 |[DECLARE_PROTECT_FINAL_CONSTRUCT](#declare_protect_final_construct)|内部对象的构造期间删除可防止外部对象。|
-|[DECLARE_VIEW_STATUS](#declare_view_status)|指定对容器的 VIEWSTATUS 标志。|  
+|[DECLARE_VIEW_STATUS](#declare_view_status)|指定对容器的 VIEWSTATUS 标志。|
 
 ## <a name="requirements"></a>要求
 

@@ -29,12 +29,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: adbd47e8aeeb777b9a5e077429d74ef542abb85d
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: f40e0509f5e532ea85930052a6bda35d89e47ae1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48788807"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50071019"
 ---
 # <a name="weakref-class"></a>WeakRef 类
 
@@ -75,7 +75,7 @@ class WeakRef : public ComPtr<IWeakReference>;
 
 一个`WeakRef`对象通常用于表示由外部线程或应用程序控制其存在性的对象。 例如，构造`WeakRef`中对文件对象的引用的对象。 文件打开时，强引用有效。 但文件关闭时，强引用无效。
 
-请注意，没有行为更改[作为](#as)， [AsIID](#asiid)并[CopyTo](#copyto) Windows 10 SDK 中的方法。 以前，在调用任何一种方法后，你可以检查`WeakRef`为`nullptr`以确定是否强引用已成功获得，如以下代码所示：
+请注意，Windows 10 SDK 中的 [As](#as)、 [AsIID](#asiid) 和 [CopyTo](#copyto) 方法中没有发生行为更改。 以前，在调用任何一种方法后，你可以检查`WeakRef`为`nullptr`以确定是否强引用已成功获得，如以下代码所示：
 
 ```cpp
 WeakRef wr;
@@ -88,7 +88,7 @@ HRESULT hr = wr.As(&strongRef);
 
 // This check won't work with the Windows 10 SDK version of the library.
 // Check the input pointer instead.
-if(wr == nullptr)  
+if(wr == nullptr)
 {
     wprintf(L"Couldn’t get strong ref!");
 }
@@ -97,7 +97,7 @@ if(wr == nullptr)
 使用 Windows 10 SDK（或更高版本）时以上代码无效。 相反，应检查传入的指针`nullptr`。
 
 ```cpp
-if (strongRef == nullptr)  
+if (strongRef == nullptr)
 {
     wprintf(L"Couldn't get strong ref!");
 }
@@ -244,7 +244,7 @@ HRESULT CopyTo(
 返回`ComPtrRef`对象，表示当前`WeakRef`对象。
 
 ```cpp
-Details::ComPtrRef<WeakRef> operator&() throw()  
+Details::ComPtrRef<WeakRef> operator&() throw()
 ```
 
 ### <a name="return-value"></a>返回值
@@ -262,7 +262,7 @@ Details::ComPtrRef<WeakRef> operator&() throw()
 ```cpp
 WeakRef();
 WeakRef(
-   decltype(__nullptr)  
+   decltype(__nullptr)
 );
 
 WeakRef(

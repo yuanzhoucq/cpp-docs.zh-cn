@@ -78,150 +78,150 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7a2eaaf273bb2c0ae4f3ab297fe444a41e81c873
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: aef24c5c55bc3a3250c483536d0a63f967608b20
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46058050"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50064325"
 ---
 # <a name="cbookmark-class"></a>CBookmark 类
 
-在其缓冲区中保存的书签值。  
-  
+在其缓冲区中保存的书签值。
+
 ## <a name="syntax"></a>语法
 
 ```cpp
-template < DBLENGTH nSize = 0 >  
+template < DBLENGTH nSize = 0 >
 class CBookmark : public CBookmarkBase
-  
-template <>  
-class CBookmark< 0 > : public CBookmarkBase  
-```  
-  
-### <a name="parameters"></a>参数  
+
+template <>
+class CBookmark< 0 > : public CBookmarkBase
+```
+
+### <a name="parameters"></a>参数
 
 *nSize*<br/>
-以字节为单位的书签缓冲区的大小。 当*nSize*为零，将在运行时动态创建书签缓冲区。  
+以字节为单位的书签缓冲区的大小。 当*nSize*为零，将在运行时动态创建书签缓冲区。
 
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>要求
 
-**标头:** atldbcli.h  
-  
-## <a name="members"></a>成员  
-  
-### <a name="methods"></a>方法  
-  
-|||  
-|-|-|  
-|[CBookmark](#cbookmark)|构造函数|  
-|[GetBuffer](#getbuffer)|检索指向缓冲区的指针。|  
-|[GetSize](#getsize)|检索以字节为单位的缓冲区的大小。|  
-|[SetBookmark](#setbookmark)|设置书签值。|  
-  
-### <a name="operators"></a>运算符  
-  
-|||  
-|-|-|  
-|[operator =](#operator)|将分配一个`CBookmark`到另一个类。|  
-  
-## <a name="remarks"></a>备注  
+**标头:** atldbcli.h
 
-`CBookmark<0>` 模板专用化的`CBookmark`; 在运行时动态创建其缓冲区。  
+## <a name="members"></a>成员
+
+### <a name="methods"></a>方法
+
+|||
+|-|-|
+|[CBookmark](#cbookmark)|构造函数|
+|[GetBuffer](#getbuffer)|检索指向缓冲区的指针。|
+|[GetSize](#getsize)|检索以字节为单位的缓冲区的大小。|
+|[SetBookmark](#setbookmark)|设置书签值。|
+
+### <a name="operators"></a>运算符
+
+|||
+|-|-|
+|[operator =](#operator)|将分配一个`CBookmark`到另一个类。|
+
+## <a name="remarks"></a>备注
+
+`CBookmark<0>` 模板专用化的`CBookmark`; 在运行时动态创建其缓冲区。
 
 ## <a name="cbookmark"></a> Cbookmark:: Cbookmark
 
-构造函数。  
-  
-### <a name="syntax"></a>语法  
-  
+构造函数。
+
+### <a name="syntax"></a>语法
+
 ```cpp
 CBookmark();
-   
-CBookmark(DBLENGTH nSize);  
-```  
-  
-#### <a name="parameters"></a>参数  
+ 
+CBookmark(DBLENGTH nSize);
+```
+
+#### <a name="parameters"></a>参数
 
 *nSize*<br/>
-[in] 书签缓冲区的大小（以字节为单位）。  
-  
-### <a name="remarks"></a>备注  
+[in] 书签缓冲区的大小（以字节为单位）。
 
-第一个函数将缓冲区设置为 NULL，而缓冲区大小为 0。 第二个函数将缓冲区大小设置为*nSize*，并为字节数组的缓冲区*nSize*字节。  
-  
+### <a name="remarks"></a>备注
+
+第一个函数将缓冲区设置为 NULL，而缓冲区大小为 0。 第二个函数将缓冲区大小设置为*nSize*，并为字节数组的缓冲区*nSize*字节。
+
 > [!NOTE]
->  此函数选项仅适用于`CBookmark<0>`。 
-  
+>  此函数选项仅适用于`CBookmark<0>`。
+
 ## <a name="getbuffer"></a> Cbookmark:: Getbuffer
 
-检索书签缓冲区的指针。  
-  
-### <a name="syntax"></a>语法  
-  
-```cpp
-virtual BYTE* GetBuffer() const throw();  
-```  
-  
-### <a name="return-value"></a>返回值  
+检索书签缓冲区的指针。
 
-指向书签缓冲区的指针。 
+### <a name="syntax"></a>语法
+
+```cpp
+virtual BYTE* GetBuffer() const throw();
+```
+
+### <a name="return-value"></a>返回值
+
+指向书签缓冲区的指针。
 
 ## <a name="getsize"></a> Cbookmark:: Getsize
 
-检索书签缓冲区的大小。  
-  
-### <a name="syntax"></a>语法  
-  
-```cpp
-virtual DBLENGTH GetSize() const throw();  
-```  
-  
-### <a name="return-value"></a>返回值  
+检索书签缓冲区的大小。
 
-缓冲区的大小（以字节为单位）。  
+### <a name="syntax"></a>语法
+
+```cpp
+virtual DBLENGTH GetSize() const throw();
+```
+
+### <a name="return-value"></a>返回值
+
+缓冲区的大小（以字节为单位）。
 
 ## <a name="setbookmark"></a> Cbookmark:: Setbookmark
 
-将书签值引用的复制*pBuffer*到`CBookmark`缓冲和缓冲区大小设置为*nSize*。  
-  
-### <a name="syntax"></a>语法  
-  
+将书签值引用的复制*pBuffer*到`CBookmark`缓冲和缓冲区大小设置为*nSize*。
+
+### <a name="syntax"></a>语法
+
 ```cpp
-HRESULT SetBookmark(DBLENGTH nSize, BYTE* pBuffer) throw();  
-```  
-  
-#### <a name="parameters"></a>参数  
+HRESULT SetBookmark(DBLENGTH nSize, BYTE* pBuffer) throw();
+```
+
+#### <a name="parameters"></a>参数
 
 *nSize*<br/>
-[in]书签缓冲区的大小。  
-  
+[in]书签缓冲区的大小。
+
 *pBuffer*<br/>
-[in]指向包含书签值的字节数组的指针。  
-  
-### <a name="return-value"></a>返回值  
+[in]指向包含书签值的字节数组的指针。
 
-标准的 HRESULT。  
-  
-### <a name="remarks"></a>备注  
+### <a name="return-value"></a>返回值
 
-此函数选项仅适用于`CBookmark<0>`。 
+标准的 HRESULT。
+
+### <a name="remarks"></a>备注
+
+此函数选项仅适用于`CBookmark<0>`。
 
 ## <a name="operator"></a> Cbookmark:: Operator =
 
-将一个 `CBookmark` 对象分配给其他对象。  
-  
-### <a name="syntax"></a>语法  
-  
+将一个 `CBookmark` 对象分配给其他对象。
+
+### <a name="syntax"></a>语法
+
 ```cpp
-CBookmark& operator =(const CBookmark& bookmark) throw();  
-```  
-  
-### <a name="remarks"></a>备注  
+CBookmark& operator =(const CBookmark& bookmark) throw();
+```
 
-仅在需要此运算符`CBookmark<0>`。   
+### <a name="remarks"></a>备注
 
-## <a name="see-also"></a>请参阅  
+仅在需要此运算符`CBookmark<0>`。
+
+## <a name="see-also"></a>请参阅
 
 [OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [OLE DB 使用者模板参考](../../data/oledb/ole-db-consumer-templates-reference.md)

@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27c1d945cf9e801ec1fe2346232aebcad559982a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 5931d12acfead0a3832e84c3008bfde2ffd4a8d6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46019885"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077668"
 ---
 # <a name="iconnectionpointcontainerimpl-class"></a>IConnectionPointContainerImpl 类
 
@@ -36,7 +36,7 @@ ms.locfileid: "46019885"
 
 ```
 template<class T>
-class ATL_NO_VTABLE IConnectionPointContainerImpl 
+class ATL_NO_VTABLE IConnectionPointContainerImpl
    : public IConnectionPointContainer
 ```
 

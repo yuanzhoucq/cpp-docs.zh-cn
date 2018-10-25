@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d87fe1060756e46418411584fa6042533bbc1f2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: cc766b3f5410cc52543b5d2bafc06b87d9222e4a
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46385503"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077928"
 ---
 # <a name="walkthrough-removing-work-from-a-user-interface-thread"></a>演练：从用户界面线程中移除工作
 
@@ -72,7 +72,7 @@ ms.locfileid: "46385503"
 
 1. 单击**完成**以创建项目并关闭**MFC 应用程序向导**。
 
-     验证应用程序已成功创建，可以通过生成并运行它。 若要在生成应用程序，**构建**菜单上，单击**生成解决方案**。 如果成功生成了应用程序，通过单击运行该应用程序**开始调试**上**调试**菜单。
+   验证应用程序已成功创建，可以通过生成并运行它。 若要在生成应用程序，**构建**菜单上，单击**生成解决方案**。 如果成功生成了应用程序，通过单击运行该应用程序**开始调试**上**调试**菜单。
 
 ##  <a name="serial"></a> 实现 Mandelbrot 应用程序的序列化版本
 
@@ -82,37 +82,37 @@ ms.locfileid: "46385503"
 
 1. 在 stdafx.h 中，添加以下`#include`指令：
 
-     [!code-cpp[concrt-mandelbrot#1](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_1.h)]
+   [!code-cpp[concrt-mandelbrot#1](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_1.h)]
 
 1. 在 ChildView.h 之后,`pragma`指令，定义`BitmapPtr`类型。 `BitmapPtr`类型可使一个指向`Bitmap`对象共享的多个组件。 `Bitmap`时不再被引用的任何组件删除对象。
 
-     [!code-cpp[concrt-mandelbrot#2](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_2.h)]
+   [!code-cpp[concrt-mandelbrot#2](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_2.h)]
 
 1. 在 ChildView.h，将以下代码添加到`protected`一部分`CChildView`类：
 
-     [!code-cpp[concrt-mandelbrot#3](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_3.h)]
+   [!code-cpp[concrt-mandelbrot#3](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_3.h)]
 
 1. 在 ChildView.cpp，注释掉或删除以下行。
 
-     [!code-cpp[concrt-mandelbrot#4](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_4.cpp)]
+   [!code-cpp[concrt-mandelbrot#4](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_4.cpp)]
 
-     在调试版本中此步骤可防止应用程序使用`DEBUG_NEW`与 GDI + 不兼容的分配器。
+   在调试版本中此步骤可防止应用程序使用`DEBUG_NEW`与 GDI + 不兼容的分配器。
 
 1. 在 ChildView.cpp，添加`using`指令`Gdiplus`命名空间。
 
-     [!code-cpp[concrt-mandelbrot#5](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_5.cpp)]
+   [!code-cpp[concrt-mandelbrot#5](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_5.cpp)]
 
 1. 将以下代码添加到构造函数和析构函数的`CChildView`类来初始化和关闭 GDI +。
 
-     [!code-cpp[concrt-mandelbrot#6](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_6.cpp)]
+   [!code-cpp[concrt-mandelbrot#6](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_6.cpp)]
 
 1. 实现 `CChildView::DrawMandelbrot` 方法。 此方法为指定绘制 Mandelbrot 不规则图形`Bitmap`对象。
 
-     [!code-cpp[concrt-mandelbrot#7](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_7.cpp)]
+   [!code-cpp[concrt-mandelbrot#7](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_7.cpp)]
 
 1. 实现 `CChildView::OnPaint` 方法。 此方法调用`CChildView::DrawMandelbrot`，然后将复制的内容`Bitmap`到窗口的对象。
 
-     [!code-cpp[concrt-mandelbrot#8](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_8.cpp)]
+   [!code-cpp[concrt-mandelbrot#8](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_8.cpp)]
 
 9. 验证已成功更新应用程序通过生成并运行它。
 
@@ -136,25 +136,25 @@ ms.locfileid: "46385503"
 
 1. 在 stdafx.h 中，添加以下`#include`指令：
 
-     [!code-cpp[concrt-mandelbrot#101](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_9.h)]
+   [!code-cpp[concrt-mandelbrot#101](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_9.h)]
 
 1. 在 ChildView.h，添加`task_group`并`unbounded_buffer`到成员变量`protected`一部分`CChildView`类。 `task_group`对象包含的任务的执行绘制;`unbounded_buffer`对象保留已完成的 Mandelbrot 映像。
 
-     [!code-cpp[concrt-mandelbrot#102](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_10.h)]
+   [!code-cpp[concrt-mandelbrot#102](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_10.h)]
 
 1. 在 ChildView.cpp，添加`using`指令`concurrency`命名空间。
 
-     [!code-cpp[concrt-mandelbrot#103](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_11.cpp)]
+   [!code-cpp[concrt-mandelbrot#103](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_11.cpp)]
 
 1. 在`CChildView::DrawMandelbrot`方法，在调用`Bitmap::UnlockBits`，调用[concurrency:: send](reference/concurrency-namespace-functions.md#send)函数来传递`Bitmap`到 UI 线程的对象。 然后画图将消息发布到 UI 线程，并使工作区无效。
 
-     [!code-cpp[concrt-mandelbrot#104](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_12.cpp)]
+   [!code-cpp[concrt-mandelbrot#104](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_12.cpp)]
 
 1. 更新`CChildView::OnPaint`方法来接收更新后`Bitmap`对象，并在客户端窗口中绘制图像。
 
-     [!code-cpp[concrt-mandelbrot#105](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_13.cpp)]
+   [!code-cpp[concrt-mandelbrot#105](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_13.cpp)]
 
-     `CChildView::OnPaint`方法创建生成 Mandelbrot 映像，如果不存在消息缓冲区中的任务。 将不包含的消息缓冲区`Bitmap`对象在情况下，如初始绘制消息和另一个窗口移动客户端窗口的前面。
+   `CChildView::OnPaint`方法创建生成 Mandelbrot 映像，如果不存在消息缓冲区中的任务。 将不包含的消息缓冲区`Bitmap`对象在情况下，如初始绘制消息和另一个窗口移动客户端窗口的前面。
 
 1. 验证已成功更新应用程序通过生成并运行它。
 
@@ -194,37 +194,37 @@ Mandelbrot 应用程序创建`Bitmap`对象的维度匹配客户端窗口的大�
 
 1. 在 ChildView.h，在`protected`一部分`CChildView`类中，添加声明`OnSize`， `OnSizing`，和`OnDestroy`消息映射函数。
 
-     [!code-cpp[concrt-mandelbrot#201](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_15.h)]
+   [!code-cpp[concrt-mandelbrot#201](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_15.h)]
 
 1. 在 ChildView.cpp，修改要包含的处理程序的消息映射`WM_SIZE`， `WM_SIZING`，和`WM_DESTROY`消息。
 
-     [!code-cpp[concrt-mandelbrot#202](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_16.cpp)]
+   [!code-cpp[concrt-mandelbrot#202](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_16.cpp)]
 
 1. 实现 `CChildView::OnSizing` 方法。 此方法将取消任何现有的绘制任务。
 
-     [!code-cpp[concrt-mandelbrot#203](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_17.cpp)]
+   [!code-cpp[concrt-mandelbrot#203](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_17.cpp)]
 
 1. 实现 `CChildView::OnSize` 方法。 此方法取消任何现有的绘制任务，并创建新的绘图任务更新的客户端窗口大小。
 
-     [!code-cpp[concrt-mandelbrot#204](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_18.cpp)]
+   [!code-cpp[concrt-mandelbrot#204](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_18.cpp)]
 
 1. 实现 `CChildView::OnDestroy` 方法。 此方法将取消任何现有的绘制任务。
 
-     [!code-cpp[concrt-mandelbrot#205](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_19.cpp)]
+   [!code-cpp[concrt-mandelbrot#205](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_19.cpp)]
 
 1. 在 ChildView.cpp，定义`scope_guard`类，该类实现 RAII 模式。
 
-     [!code-cpp[concrt-mandelbrot#206](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_20.cpp)]
+   [!code-cpp[concrt-mandelbrot#206](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_20.cpp)]
 
 1. 将以下代码添加到`CChildView::DrawMandelbrot`方法之后调用`Bitmap::LockBits`:
 
-     [!code-cpp[concrt-mandelbrot#207](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_21.cpp)]
+   [!code-cpp[concrt-mandelbrot#207](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_21.cpp)]
 
-     此代码通过创建处理取消`scope_guard`对象。 对象离开范围时，它将取消锁定位图位。
+   此代码通过创建处理取消`scope_guard`对象。 对象离开范围时，它将取消锁定位图位。
 
 1. 修改的最终`CChildView::DrawMandelbrot`方法关闭`scope_guard`对象但不锁定，位图位之后的任何消息发送到 UI 线程之前。 这可确保不锁定位图位之前不会更新 UI 线程。
 
-     [!code-cpp[concrt-mandelbrot#208](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_22.cpp)]
+   [!code-cpp[concrt-mandelbrot#208](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_22.cpp)]
 
 9. 验证已成功更新应用程序通过生成并运行它。
 

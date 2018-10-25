@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a1b4adb3de5c6ec57b9f6bc2c48385916c3e5076
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 075804ae82d2e8431bef97d656aeee212feb6757
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46445693"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50073794"
 ---
 # <a name="win32-internet-classes"></a>Win32 Internet 类
 
@@ -32,7 +32,6 @@ MFC 包装 Win32 Internet (WinInet) 和 ActiveX 技术，以使 Internet 编程�
 
 >[!IMPORTANT]
 > ActiveX 是一项传统技术，不应使用新的开发。 本文将取代 ActiveX 的现代技术的详细信息，请参阅[ActiveX 控件](activex-controls.md)。
-
 
 [CInternetSession](../mfc/reference/cinternetsession-class.md)<br/>
 创建和初始化一个 Internet 会话或多个同时 Internet 会话，并如有必要，描述向代理服务器连接。

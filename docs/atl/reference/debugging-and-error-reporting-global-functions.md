@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3bef300671894e054ddf9b1ca0ab9dcf3b135370
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f035ac105dee4e668ca8bee0bab18c2a31fd027f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46019404"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069147"
 ---
 # <a name="debugging-and-error-reporting-global-functions"></a>调试和错误报告全局函数
 
@@ -47,11 +47,11 @@ HRESULT AtlHresultFromLastError();
 
 ### <a name="remarks"></a>备注
 
-`AtlHresultFromLastError` 调用`GetLastError`若要获取的最后一个错误，并将其转换为 HRESULT 使用返回 HRESULT_FROM_WIN32 宏后返回错误。  
+`AtlHresultFromLastError` 调用`GetLastError`若要获取的最后一个错误，并将其转换为 HRESULT 使用返回 HRESULT_FROM_WIN32 宏后返回错误。
 
 ### <a name="requirements"></a>要求
 
-**标头：** atlcomcli.h  
+**标头：** atlcomcli.h
 
 ##  <a name="atlhresultfromwin32"></a>  AtlHresultFromWin32
 
@@ -71,11 +71,11 @@ AtlHresultFromWin32(DWORD error);
 将使用宏返回 HRESULT_FROM_WIN32 HRESULT 转换为 Win32 错误代码。
 
 > [!NOTE]
->  而不是使用`HRESULT_FROM_WIN32(GetLastError())`，使用函数[AtlHresultFromLastError](debugging-and-error-reporting-global-functions.md#atlhresultfromlasterror)。  
+>  而不是使用`HRESULT_FROM_WIN32(GetLastError())`，使用函数[AtlHresultFromLastError](debugging-and-error-reporting-global-functions.md#atlhresultfromlasterror)。
 
 ### <a name="requirements"></a>要求
 
-**标头：** atlcomcli.h  
+**标头：** atlcomcli.h
 
 ##  <a name="atlreporterror"></a>  AtlReportError
 
@@ -166,7 +166,7 @@ HRESULT WINAPI AtlReportError(
 [!code-cpp[NVC_ATL_COM#52](../../atl/codesnippet/cpp/debugging-and-error-reporting-global-functions_1.cpp)]
 
 > [!CAUTION]
->  不要使用`AtlReportError`中 c + + catch 处理程序。 这些函数的有些重写使用 ATL 字符串转换宏在内部，这反过来使用`_alloca`内部函数。 使用`AtlReportError`在 c + + catch 处理程序可能会导致 c + + catch 处理程序中的异常。  
+>  不要使用`AtlReportError`中 c + + catch 处理程序。 这些函数的有些重写使用 ATL 字符串转换宏在内部，这反过来使用`_alloca`内部函数。 使用`AtlReportError`在 c + + catch 处理程序可能会导致 c + + catch 处理程序中的异常。
 
 ### <a name="requirements"></a>要求
 
@@ -203,11 +203,11 @@ ATL 和 MFC 代码出现错误条件时使用此函数。 它还可以从你自�
 
 ### <a name="example"></a>示例
 
-[!code-cpp[NVC_ATL_Windowing#95](../../atl/codesnippet/cpp/debugging-and-error-reporting-global-functions_2.h)]  
+[!code-cpp[NVC_ATL_Windowing#95](../../atl/codesnippet/cpp/debugging-and-error-reporting-global-functions_2.h)]
 
 ## <a name="requirements"></a>要求
 
-**标头：** atldef.h  
+**标头：** atldef.h
 
 ##  <a name="atlthrowlastwin32"></a>  AtlThrowLastWin32
 
@@ -225,7 +225,7 @@ inline void AtlThrowLastWin32();
 
 如果在 ATL 项目中未定义 _ATL_NO_EXCEPTIONS，该函数将引发[CAtlException](../../atl/reference/catlexception-class.md)。
 
-如果定义 _ATL_NO_EXCEPTIONS，则该函数将导致断言失败而不是引发异常。  
+如果定义 _ATL_NO_EXCEPTIONS，则该函数将导致断言失败而不是引发异常。
 
 ## <a name="requirements"></a>要求
 

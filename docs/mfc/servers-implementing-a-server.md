@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d024c9468b06291ba93c4e404674925202fabcad
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a1dd43b806852e578c28dc7a647cb367ad6f2780
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46406784"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076615"
 ---
 # <a name="servers-implementing-a-server"></a>服务器：实现服务器
 
@@ -36,7 +36,7 @@ ms.locfileid: "46406784"
 
    - 使用服务器处于就地活动状态时的菜单和工具栏资源。
 
-     这些资源的详细信息，请参阅[菜单和资源： 服务器添加](../mfc/menus-and-resources-server-additions.md)。
+   这些资源的详细信息，请参阅[菜单和资源： 服务器添加](../mfc/menus-and-resources-server-additions.md)。
 
 - 定义项类派生自`COleServerItem`。 服务器项的更多详细信息，请参阅[服务器： 服务器项](../mfc/servers-server-items.md)。
 

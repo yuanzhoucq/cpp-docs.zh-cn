@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fe6941e8809c0d735013b56d340f27302890b149
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 66188f1879c42eaf9429675a2f235130e263211f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790360"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50072520"
 ---
 # <a name="c-attributes-for-com-and-net"></a>对于 COM 和.NET 的 c + + 特性
 
@@ -90,21 +90,21 @@ Visual c + + 特性置于源代码后，你可能想 Visual c + + 编译器为�
 ## <a name="contexts"></a> 特性上下文
 
 可以使用四个基本字段描述 c + + 特性： 它们可以应用到的目标 (**适用于**)，如果它们是可重复的还是不 (**Repeatable**)，则所需的其他属性 (存在**所需属性**)，并与其他属性的不兼容性 (**无效属性**)。 在每个属性的参考主题中的相关表中列出这些字段。 下面描述了每个字段。
-  
+
 ### <a name="applies-to"></a>适用于
 
 此字段描述了不同的 c + + 语言元素的指定属性的合法目标。 例如，如果属性中指定"的类"**适用于**字段中，这表示该属性可以仅应用于合法的 c + + 类。 如果该特性应用于类的成员函数，会产生语法错误。
-  
+
 有关详细信息，请参阅[按使用情况的特性](attributes-by-usage.md)。
-  
+
 ### <a name="repeatable"></a>可重复
 
 此字段规定是否该属性可以重复应用于同一个目标。 属性的大多数都不是可重复。
-  
+
 ### <a name="required-attributes"></a>必需的特性
 
 此字段中列出了需要其他属性指定的属性才能正常运行 （即，应用到同一目标） 存在。 它是常见的一个属性以包含此字段的任何条目。
-  
+
 ### <a name="invalid-attributes"></a>无效的属性
 
 此字段中列出了与指定的特性不兼容的其他属性。 它是常见的一个属性以包含此字段的任何条目。

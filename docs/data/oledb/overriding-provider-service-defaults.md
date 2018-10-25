@@ -16,32 +16,32 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 77ea251b91e55d3a3f01b6591828beffaaa9272d
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 4cd51eaa06c8e9600b80d4a3cf6e192443105e65
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083380"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50072182"
 ---
 # <a name="overriding-provider-service-defaults"></a>重写提供程序服务默认值
 
-OLEDB_SERVICES 的提供程序的注册表值返回的默认值为[DBPROP_INIT_OLEDBSERVICES](/previous-versions/windows/desktop/ms716898)的数据源对象的初始化属性。  
-  
-只要存在注册表项，提供程序的对象聚合的用户可以重写提供程序的默认设置已启用的服务通过设置`DBPROP_INIT_OLEDBSERVICES`之前初始化属性。 若要启用或禁用特定服务，用户通常获取的当前值`DBPROP_INIT_OLEDBSERVICES`属性，设置或清除要启用或禁用的特定属性的位并重置该属性。 `DBPROP_INIT_OLEDBSERVICES` 可以直接在 OLE DB 或 ADO 到传递的连接字符串中设置或`IDataInitialize::GetDatasource`。 下表中列出的相应值以启用/禁用各项服务。  
-  
-|启用的默认服务|DBPROP_INIT_OLEDBSERVICES 属性值|连接字符串中的值|  
-|------------------------------|------------------------------------------------|--------------------------------|  
-|所有服务 （默认值）|`DBPROPVAL_OS_ENABLEALL`|"OLE DB 服务 =-1;"|  
-|除池和登记|`DBPROPVAL_OS_ENABLEALL &`<br /><br /> `~DBPROPVAL_OS_RESOURCEPOOLING &`<br /><br /> `~DBPROPVAL_OS_TXNENLISTMENT`|"OLE DB 服务 =-4;"|  
-|除客户端游标|`DBPROPVAL_OS_ENABLEALL &`<br /><br /> `~DBPROPVAL_OS_CLIENTCURSOR`|"OLE DB 服务 =-5;"|  
-|除池，登记和客户端游标|`DBPROPVAL_OS_ENABLEALL &`<br /><br /> `~DBPROPVAL_OS_TXNENLISTMENT &`<br /><br /> `~DBPROPVAL_OS_CLIENTCURSOR`|"OLE DB 服务 =-7;"|  
-|没有服务|`~DBPROPVAL_OS_ENABLEALL`|"OLE DB 服务 = 0;"|  
-  
-如果注册表项不存在提供程序中，组件管理器也不会对提供程序的对象，并将调用任何服务，即使用户显式请求。  
-  
-## <a name="see-also"></a>请参阅  
+OLEDB_SERVICES 的提供程序的注册表值返回的默认值为[DBPROP_INIT_OLEDBSERVICES](/previous-versions/windows/desktop/ms716898)的数据源对象的初始化属性。
 
-[资源池](/previous-versions/windows/desktop/ms713655)   
-[使用者如何使用资源池](/previous-versions/windows/desktop/ms715907)   
-[提供程序如何有效地使用资源池](/previous-versions/windows/desktop/ms714906)   
-[启用和禁用 OLE DB 服务](../../data/oledb/enabling-and-disabling-ole-db-services.md)
+只要存在注册表项，提供程序的对象聚合的用户可以重写提供程序的默认设置已启用的服务通过设置`DBPROP_INIT_OLEDBSERVICES`之前初始化属性。 若要启用或禁用特定服务，用户通常获取的当前值`DBPROP_INIT_OLEDBSERVICES`属性，设置或清除要启用或禁用的特定属性的位并重置该属性。 `DBPROP_INIT_OLEDBSERVICES` 可以直接在 OLE DB 或 ADO 到传递的连接字符串中设置或`IDataInitialize::GetDatasource`。 下表中列出的相应值以启用/禁用各项服务。
+
+|启用的默认服务|DBPROP_INIT_OLEDBSERVICES 属性值|连接字符串中的值|
+|------------------------------|------------------------------------------------|--------------------------------|
+|所有服务 （默认值）|`DBPROPVAL_OS_ENABLEALL`|"OLE DB 服务 =-1;"|
+|除池和登记|`DBPROPVAL_OS_ENABLEALL &`<br /><br /> `~DBPROPVAL_OS_RESOURCEPOOLING &`<br /><br /> `~DBPROPVAL_OS_TXNENLISTMENT`|"OLE DB 服务 =-4;"|
+|除客户端游标|`DBPROPVAL_OS_ENABLEALL &`<br /><br /> `~DBPROPVAL_OS_CLIENTCURSOR`|"OLE DB 服务 =-5;"|
+|除池，登记和客户端游标|`DBPROPVAL_OS_ENABLEALL &`<br /><br /> `~DBPROPVAL_OS_TXNENLISTMENT &`<br /><br /> `~DBPROPVAL_OS_CLIENTCURSOR`|"OLE DB 服务 =-7;"|
+|没有服务|`~DBPROPVAL_OS_ENABLEALL`|"OLE DB 服务 = 0;"|
+
+如果注册表项不存在提供程序中，组件管理器也不会对提供程序的对象，并将调用任何服务，即使用户显式请求。
+
+## <a name="see-also"></a>请参阅
+
+[资源池](/previous-versions/windows/desktop/ms713655)<br/>
+[使用者如何使用资源池](/previous-versions/windows/desktop/ms715907)<br/>
+[提供程序如何有效地使用资源池](/previous-versions/windows/desktop/ms714906)<br/>
+[启用和禁用 OLE DB 服务](../../data/oledb/enabling-and-disabling-ole-db-services.md)<br/>

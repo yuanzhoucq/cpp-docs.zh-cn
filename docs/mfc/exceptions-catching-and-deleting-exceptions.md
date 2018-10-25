@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5bd59cc19c80e305a7e57fb711a49f59a024d528
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5ad6ad1c4d1d7d74f60acbd985ee549d708ae28f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46434760"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50074119"
 ---
 # <a name="exceptions-catching-and-deleting-exceptions"></a>异常：捕捉和删除异常
 
@@ -36,9 +36,9 @@ ms.locfileid: "46434760"
 
 - **捕获**块引发新异常。
 
-     当然，如果您再次引发同一异常，则不得删除此异常：
+   当然，如果您再次引发同一异常，则不得删除此异常：
 
-     [!code-cpp[NVC_MFCExceptions#3](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_1.cpp)]
+   [!code-cpp[NVC_MFCExceptions#3](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_1.cpp)]
 
 - 执行返回内**捕获**块。
 
@@ -49,15 +49,15 @@ ms.locfileid: "46434760"
 
 1. 使用**尝试**关键字设置**尝试**块。 执行可能引发异常中的任何程序语句**尝试**块。
 
-     使用**捕获**关键字设置**捕获**块。 将异常处理代码中的放置**捕获**块。 中的代码**捕获**仅当执行块中的代码**尝试**该块引发一个异常中指定的类型**捕获**语句。
+   使用**捕获**关键字设置**捕获**块。 将异常处理代码中的放置**捕获**块。 中的代码**捕获**仅当执行块中的代码**尝试**该块引发一个异常中指定的类型**捕获**语句。
 
-     以下框架演示如何**尝试**并**捕获**正常排列基块：
+   以下框架演示如何**尝试**并**捕获**正常排列基块：
 
-     [!code-cpp[NVC_MFCExceptions#4](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_2.cpp)]
+   [!code-cpp[NVC_MFCExceptions#4](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_2.cpp)]
 
-     当引发异常时，控制权将传递给第一个**捕获**其异常声明匹配异常的类型的块。 您可以有选择地处理不同类型的异常和顺序**捕获**阻止如下所示：
+   当引发异常时，控制权将传递给第一个**捕获**其异常声明匹配异常的类型的块。 您可以有选择地处理不同类型的异常和顺序**捕获**阻止如下所示：
 
-     [!code-cpp[NVC_MFCExceptions#5](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_3.cpp)]
+   [!code-cpp[NVC_MFCExceptions#5](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_3.cpp)]
 
 有关详细信息，请参阅[异常： 从 MFC 异常宏转换](../mfc/exceptions-converting-from-mfc-exception-macros.md)。
 

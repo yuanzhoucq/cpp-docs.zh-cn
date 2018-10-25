@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca420ce09cae5bf7c11dcfb0ad384e0002bdc4b1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 738d441cf88b41740cb0cff933916489cac683f2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46403562"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50073092"
 ---
 # <a name="handlers-for-message-map-ranges"></a>消息映射范围的处理程序
 
@@ -81,7 +81,7 @@ ms.locfileid: "46403562"
 
 - 在宏参数：
 
-     前两个宏采用三个参数：
+   前两个宏采用三个参数：
 
    - 范围的起始命令 ID
 
@@ -89,9 +89,9 @@ ms.locfileid: "46403562"
 
    - 消息处理程序函数的名称
 
-     命令 Id 的范围必须是连续的。
+   命令 Id 的范围必须是连续的。
 
-     第三个宏`ON_CONTROL_RANGE`，采用附加第一个参数： 控件通知消息，如**EN_CHANGE**。
+   第三个宏`ON_CONTROL_RANGE`，采用附加第一个参数： 控件通知消息，如**EN_CHANGE**。
 
 ##  <a name="_core_declaring_the_handler_function"></a> 声明处理程序函数
 
@@ -113,11 +113,11 @@ ms.locfileid: "46403562"
 
 - 两个命令 Id，开始和结束连续范围。
 
-     它们就在这里**ID_VIEW_ZOOM25**并**ID_VIEW_ZOOM300**。
+   它们就在这里**ID_VIEW_ZOOM25**并**ID_VIEW_ZOOM300**。
 
 - 命令处理程序函数的名称。
 
-     此处它具有`OnZoom`。
+   此处它具有`OnZoom`。
 
 函数声明将类似于以下：
 
@@ -137,15 +137,15 @@ ms.locfileid: "46403562"
 
 - 特定的控件通知消息。
 
-     此处却**BN_CLICKED**。
+   此处却**BN_CLICKED**。
 
 - 与连续范围的控件关联的控件 ID 值。
 
-     这些如下**IDC_BUTTON1**并**IDC_BUTTON10**。
+   这些如下**IDC_BUTTON1**并**IDC_BUTTON10**。
 
 - 消息处理程序函数的名称。
 
-     此处它具有`OnButtonClicked`。
+   此处它具有`OnButtonClicked`。
 
 当您编写处理程序函数时，指定额外**UINT**参数，如以下所示：
 

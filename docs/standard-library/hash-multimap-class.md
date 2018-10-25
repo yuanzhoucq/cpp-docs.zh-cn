@@ -1,7 +1,7 @@
 ---
 title: hash_multimap 类 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d34569f1b0f984a521b7d5a79221e089f1a1df0
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 3796ba7b243305fbae75e64f44e14964a89a9805
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235758"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075315"
 ---
 # <a name="hashmultimap-class"></a>hash_multimap 类
 
@@ -125,7 +125,7 @@ class hash_multimap
 *Key*<br/>
 要存储在 hash_multimap 中的键数据类型。
 
-*类型*<br/>
+*Type*<br/>
 要存储在 hash_multimap 中的元素数据类型。
 
 *特征*<br/>
@@ -1497,7 +1497,6 @@ hash_multimap(
     initializer_list<Type> IList,
     const Compare& Comp);
 
-
 hash_multimap(
     initializer_list<Type> IList,
     const Compare& Comp,
@@ -1554,7 +1553,7 @@ hash_multimap(
 ## <a name="insert"></a>hash_multimap::insert
 
 > [!NOTE]
-> 此 API 已废弃不用。 替代项为 [unordered_multimap 类](../standard-library/unordered-multimap-class.md)。
+> 此 API 已废弃不用。 替代项为 [unordered_multimap Class](../standard-library/unordered-multimap-class.md)。
 
 将一个元素或元素范围插入到 hash_multimap 中。
 
@@ -2477,9 +2476,9 @@ value_compare value_comp() const;
 
 ### <a name="remarks"></a>备注
 
-对于 hash_multimap *m*，如果 *e*1( *k*1 *, d*1) 和 *e*2( *k*2 *, d*2) 两个元素为 [value_type](#value_type) 类型的对象，其中 *k*1 和 *k*2 为 [key_type](#key_type) 类型的键，`d`1 和 `d`2 为 [mapped_type](#mapped_type) 类型的数据，则 *m.*`value_comp`( )( *e*1 *, e*2) 等同于 *m.*`key_comp`( ) ( *k*1 *, k*2)。 存储对象会定义成员函数
+有关 hash_multimap *m*，如果两个元素*e1* (*k1*， *d1*) 和*e2*(*k2*， *d2*) 的对象的类型[value_type](#value_type)，其中*版 k1*并*k2*是其键的类型[key_type](#key_type)并*d1*并*d2*是其数据类型[mapped_type](#mapped_type)，然后`m.value_comp()(e1, e2)`等效于`m.key_comp()(k1, k2)`. 存储对象会定义成员函数
 
-**bool operator**( **value_type&**`left`, **value_type&** `right`);
+`bool operator( value_type& left, value_type& right);`
 
 如果 `left` 的键值在排序顺序中先于且不等于 `right` 的键值，则该函数会返回 **true**。
 

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 19d43d108888d1d89b4fa6173ab3ebd0e8e55bbc
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a8794c2625e3ecda442cc0e7a1079ede148ed8e9
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46400245"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50074808"
 ---
 # <a name="csemaphore-class"></a>CSemaphore 类
 
@@ -106,6 +106,4 @@ CSemaphore(
 
 [CSyncObject 类](../../mfc/reference/csyncobject-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)
-
-
 

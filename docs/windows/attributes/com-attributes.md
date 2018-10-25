@@ -17,17 +17,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 83d518aded30215684970e58d2868625fb8cd0e5
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 2aa88f88fe26b96202f2a917bddf5c8bb07c0d3c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790516"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50071122"
 ---
 # <a name="com-attributes"></a>COM 特性
 
 COM 特性注入的代码来支持 COM 开发和.NET Framework 公共语言运行时开发的许多方面。 这些区域的范围从自定义接口实现和支持的现有接口支持常用属性、 方法和事件。 此外，支持可以找到复合和 ActiveX 控件实现的。
-  
+
 |特性|描述|
 |---------------|-----------------|
 |[aggregatable](aggregatable.md)|表示一个控件，可以聚合由另一个控件。|
@@ -41,9 +41,9 @@ COM 特性注入的代码来支持 COM 开发和.NET Framework 公共语言运�
 |[requires_category](requires-category.md)|指定所需的组件类别的类。|
 |[support_error_info](support-error-info.md)|支持的错误报告目标对象。|
 |[synchronize](synchronize.md)|同步访问的方法。|
-|[线程处理](threading-cpp.md)|指定 COM 对象的线程处理模型。|
+|[threading](threading-cpp.md)|指定 COM 对象的线程处理模型。|
 |[vi_progid](vi-progid.md)|定义控件的独立于版本的 ProgID。|
-  
+
 ## <a name="see-also"></a>请参阅
 
 [按组分的特性](attributes-by-group.md)

@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 680ff7d339f592cf112a91fc303a6367fbc4805b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b972d4552a8e41ca0dcea4ef57d48ef161ea35b9
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46408748"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069225"
 ---
 # <a name="template-based-classes"></a>基于模板的类
 
@@ -47,11 +47,11 @@ MFC 预定义了两种类别的基于模板的集合：
 
 - [简单数组、 列表和映射类](#_core_using_simple_array.2c_.list.2c_.and_map_templates)
 
-     `CArray`, `CList`, `CMap`
+   `CArray`, `CList`, `CMap`
 
 - [数组、 列表和的类型化指针的映射](#_core_using_typed.2d.pointer_collection_templates)
 
-     `CTypedPtrArray`, `CTypedPtrList`, `CTypedPtrMap`
+   `CTypedPtrArray`, `CTypedPtrList`, `CTypedPtrMap`
 
 简单的集合类都派生自类`CObject`，因此它们继承序列化、 动态创建和其他属性`CObject`。 类型化的指针集合类需要你指定从派生的类，它必须是一个预定义 mfc，如非模板指针集合`CPtrList`或`CPtrArray`。 新集合类继承自指定的基类，并用新类的成员函数对基类成员的封装的调用来强制实施类型安全性。
 

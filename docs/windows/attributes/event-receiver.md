@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b8e049d8338ba63e4d127c8a83fd3d9add32c6a1
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 95e5d65d437b60f6421978682997067d8f53a3d5
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790391"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50073950"
 ---
 # <a name="eventreceiver"></a>event_receiver
 
@@ -85,7 +85,7 @@ ms.locfileid: "48790391"
 |**必需的特性**|`coclass` 当*layout_dependent*=**，则返回 true**|
 |**无效的特性**|无|
 
-有关详细信息，请参阅[特性上下文](cpp-attributes-com-net.md#contexts)。
+有关详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
 ## <a name="see-also"></a>请参阅
 
@@ -94,4 +94,4 @@ ms.locfileid: "48790391"
 [__event](../../cpp/event.md)<br/>
 [__hook](../../cpp/hook.md)<br/>
 [__unhook](../../cpp/unhook.md)<br/>
-[类特性](class-attributes.md)  
+[类特性](class-attributes.md)
