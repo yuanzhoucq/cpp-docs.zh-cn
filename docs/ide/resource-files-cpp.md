@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9ba28a426c439454d8b0723f8d2997bbefa5759
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 101d58eeb61335939db507ff6addd0c4fa7917f0
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46417223"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861897"
 ---
 # <a name="resource-files-c"></a>资源文件 (C++)
 
@@ -31,7 +31,7 @@ ms.locfileid: "46417223"
 
 |文件名|目录位置|解决方案资源管理器位置|描述|
 |---------------|------------------------|--------------------------------|-----------------|
-|Projname.rc|Projname|源文件|项目的资源脚本文件。 资源脚本文件包含以下内容，具体取决于项目类型以及为项目选择的支持（例如工具栏、对话框或 HTML）：<br /><br /> - 默认菜单定义。<br />- 快捷键和字符串表。<br />- 默认“关于”对话框。<br />- 其他对话框。<br />- 图标文件 (res\\Projname.ico)。<br />- 版本信息。<br />- 位图。<br />- 工具栏。<br />- HTML 文件。<br /><br /> 资源文件包含标准 Microsoft 基础类资源的文件 Afxres.rc。|
+|Projname.rc|Projname|源文件|项目的资源脚本文件。 资源脚本文件包含以下内容，具体取决于项目类型以及为项目选择的支持（例如工具栏、对话框或 HTML）：<br /><br />- 默认菜单定义。<br />- 快捷键和字符串表。<br />- 默认“关于”对话框。<br />- 其他对话框。<br />- 图标文件 (res\\Projname.ico)。<br />- 版本信息。<br />- 位图。<br />- 工具栏。<br />- HTML 文件。<br /><br /> 资源文件包含标准 Microsoft 基础类资源的文件 Afxres.rc。|
 |Resource.h|Projname|头文件|资源头文件，其中包括项目使用的资源的定义。|
 |Projname.rc2|Projname\res|源文件|其中包含项目使用的其他资源的脚本文件。 可在项目的 .rc 文件下包含 .rc2 文件。<br /><br /> .rc2 文件可用于包括多个不同项目使用的资源。 不必为不同的项目多次创建相同资源，而是将它们放在 .rc2 文件中，并将 .rc2 文件包含到主 .rc 文件中。|
 |Projname.def|Projname|源文件|DLL 项目的模块定义文件。 对于控件，它提供了控件的名称和说明，以及运行时堆的大小。|
