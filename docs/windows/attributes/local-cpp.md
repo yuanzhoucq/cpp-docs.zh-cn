@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e24efe4d4ad4f4e28b93503ecf82936e3113c1ed
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: e510e4faa707c954c52ae9daae4c4dc0d4c800dd
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790534"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057148"
 ---
 # <a name="local-c"></a>local (C++)
 
@@ -53,11 +53,11 @@ ms.locfileid: "48790534"
 |**必需的特性**|无|
 |**无效的特性**|`dispinterface`|
 
-有关详细信息，请参阅[特性上下文](cpp-attributes-com-net.md#contexts)。
+有关详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
 ## <a name="see-also"></a>请参阅
 
 [IDL 特性](idl-attributes.md)<br/>
 [接口特性](interface-attributes.md)<br/>
 [方法特性](method-attributes.md)<br/>
-[call_as](call-as.md)  
+[call_as](call-as.md)

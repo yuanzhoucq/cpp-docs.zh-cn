@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c695dbee2b92a2a3fbc5de0830f298b81e63ad8d
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: fbb7bc07ab3b3942f1a3a6fa20c69327c0bd1a53
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790338"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063752"
 ---
 # <a name="out-c"></a>out (C++)
 
@@ -36,11 +36,11 @@ ms.locfileid: "48790338"
 
 ## <a name="remarks"></a>备注
 
-**出**c + + 属性具有相同的功能[出](/windows/desktop/Midl/out-idl)MIDL 特性。
+**out** C++ 属性具有与 [out](/windows/desktop/Midl/out-idl) MIDL 属性相同的功能。
 
 ## <a name="example"></a>示例
 
-有关示例，请参阅[可绑定](bindable.md)的示例使用**出**。
+请参阅 [bindable](bindable.md) 示例以了解 **out**的示例使用。
 
 ## <a name="requirements"></a>要求
 
@@ -53,11 +53,11 @@ ms.locfileid: "48790338"
 |**必需的特性**|无|
 |**无效的特性**|无|
 
-有关特性上下文的详细信息，请参阅[特性上下文](cpp-attributes-com-net.md#contexts)。
+有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
 ## <a name="see-also"></a>请参阅
 
 [IDL 特性](idl-attributes.md)<br/>
 [参数特性](parameter-attributes.md)<br/>
 [defaultvalue](defaultvalue.md)<br/>
-[id](id.md)  
+[id](id.md)

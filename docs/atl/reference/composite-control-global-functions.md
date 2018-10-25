@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dee59f5e86cddeec47da47c648b0cf12789cc85a
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 8c8493650ef2c86a89c1a3060deb5ee6269a38a7
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49084095"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068640"
 ---
 # <a name="composite-control-global-functions"></a>复合控件全局函数
 
@@ -56,11 +56,11 @@ ms.locfileid: "49084095"
 |[AtlSetChildSite](#atlsetchildsite)|初始化`IUnknown`的子站点。|
 |[AtlAxWinInit](#atlaxwininit)|初始化 AxWin 对象的托管代码。|
 |[AtlAxWinTerm](#atlaxwinterm)|取消初始化 AxWin 对象的托管代码。|
-|[AtlGetObjectSourceInterface](#atlgetobjectsourceinterface)|返回对象的默认源接口的信息。|  
+|[AtlGetObjectSourceInterface](#atlgetobjectsourceinterface)|返回对象的默认源接口的信息。|
 
 ## <a name="requirements"></a>要求
 
-**标头：** atlhost.h  
+**标头：** atlhost.h
 
 ##  <a name="atlaxdialogbox"></a>  AtlAxDialogBox
 
@@ -101,7 +101,7 @@ ATLAPI_(int) AtlAxDialogBox(
 若要使用`AtlAxDialogBox`与包含 ActiveX 控件的对话框模板，请指定有效的 CLSID、 应用程序标识或 URL 作为字符串*文本*字段**控制**对话框资源的部分以及"AtlAxWin80"作为*类名*字段下的同一部分。 以下内容演示的哪些是有效**控制**部分可能如下所示：
 
 ```
-CONTROL    "{04FE35E9-ADBC-4f1d-83FE-8FA4D1F71C7F}", IDC_TEST,  
+CONTROL    "{04FE35E9-ADBC-4f1d-83FE-8FA4D1F71C7F}", IDC_TEST,
     "AtlAxWin80", WS_GROUP | WS_TABSTOP, 0, 0, 100, 100
 ```
 
@@ -261,7 +261,7 @@ ATLAPI AtlAxCreateControlEx(
 
 ##  <a name="atlaxcreatecontrollic"></a>  AtlAxCreateControlLic
 
-创建授权的 ActiveX 控件，初始化它并在指定窗口中承载它。  
+创建授权的 ActiveX 控件，初始化它并在指定窗口中承载它。
 
 ```
 ATLAPI AtlAxCreateControlLic(
@@ -484,7 +484,7 @@ ATLAPI_(BOOL) AtlAxWinInit();
 
 ### <a name="remarks"></a>备注
 
-使用 ATL 控件承载 API 之前，必须调用此函数。 向此函数中调用 **"AtlAxWin"** 窗口类可用于调用[CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa)或[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa)，如 Windows SDK 中所述。  
+使用 ATL 控件承载 API 之前，必须调用此函数。 向此函数中调用 **"AtlAxWin"** 窗口类可用于调用[CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa)或[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa)，如 Windows SDK 中所述。
 
 ##  <a name="atlaxwinterm"></a>  AtlAxWinTerm
 

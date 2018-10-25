@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f90524b63a7d89d43cb6ed080804ed72fe2429e3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7f6ed7b94509c5dafd868680254c5f48f0066b7f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46412663"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054223"
 ---
 # <a name="crgn-class"></a>CRgn 类
 
@@ -622,7 +622,7 @@ static CRgn* PASCAL FromHandle(HRGN hRgn);
 
 ### <a name="return-value"></a>返回值
 
-一个指向`CRgn`对象。 如果该函数不成功，返回值为 NULL。
+指向 `CRgn` 对象的指针。 如果该函数不成功，返回值为 NULL。
 
 ### <a name="remarks"></a>备注
 
@@ -852,6 +852,4 @@ void SetRectRgn(LPCRECT lpRect);
 
 [CWnd 类](../../mfc/reference/cwnd-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)
-
-
 

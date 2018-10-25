@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c777f2800d16775ccb9a6ba51baa708d861e0d68
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 8e92b52ce3b14b5ee26641186222ddc228877e71
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313346"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057265"
 ---
 # <a name="changing-the-properties-of-a-resource-c"></a>更改属性的资源 （c + +）
 
@@ -29,7 +29,7 @@ ms.locfileid: "44313346"
 
 1. 在中[资源视图](../windows/resource-view-window.md)，右键单击你想要编辑，并选择的资源**属性**从快捷菜单。
 
-   > [!NOTE] 
+   > [!NOTE]
    > 如果你的项目尚未包含 .rc 文件，请参阅 [创建新的资源脚本文件](../windows/how-to-create-a-resource-script-file.md)。
 
 2. 在中[属性窗口](/visualstudio/ide/reference/properties-window)，更改所需的资源的属性。

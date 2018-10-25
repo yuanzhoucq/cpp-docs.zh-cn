@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b31344b1ba72b37bcfff45a3fd4feefda85f6a7a
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 1196956208d490674d4705a8d1e61ea3381d94a2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49327578"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50065182"
 ---
 # <a name="typeid--ccli-and-ccx"></a>typeid (C + + /cli 和 C + + /cli CX)
 
@@ -110,7 +110,7 @@ int main() {
    Type ^ pType = pG->GetType();
    Type ^ pType2 = G::typeid;
 
-   if (pType == pType2)  
+   if (pType == pType2)
       Console::WriteLine("typeid and GetType returned the same System::Type");
    Console::WriteLine(G::typeid);
 
@@ -123,7 +123,7 @@ int main() {
 typeid and GetType returned the same System::Type
 G
 
-System.Single*  
+System.Single*
 ```
 
 下面的示例显示可以使用 system:: type 来获取上一种类型的属性类型的变量。  它还演示了，对于某些类型，您将必须创建要使用的 typedef `typeid`。
@@ -169,13 +169,13 @@ int main() {
    Console::WriteLine(MyType->IsClass);
 
    array<Object^>^ MyArray = MyType -> GetCustomAttributes(true);
-   for (int i = 0 ; i < MyArray->Length ; i++ )  
+   for (int i = 0 ; i < MyArray->Length ; i++ )
       Console::WriteLine(MyArray[i]);
 
-   if (int::typeid != pointer_to_int::typeid)  
+   if (int::typeid != pointer_to_int::typeid)
       Console::WriteLine("int::typeid != pointer_to_int::typeid, as expected");
 
-   if (int::typeid == handle_to_int::typeid)  
+   if (int::typeid == handle_to_int::typeid)
       Console::WriteLine("int::typeid == handle_to_int::typeid, as expected");
 }
 ```
@@ -200,4 +200,4 @@ int::typeid == handle_to_int::typeid, as expected
 
 ## <a name="see-also"></a>请参阅
 
-[适用于.NET 和 UWP 组件扩展](../windows/component-extensions-for-runtime-platforms.md)
+[ .NET 和 UWP 的组件扩展](../windows/component-extensions-for-runtime-platforms.md)

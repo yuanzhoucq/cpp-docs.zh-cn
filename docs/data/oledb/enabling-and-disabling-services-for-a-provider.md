@@ -16,26 +16,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a5db612c836e4b902e7cad83017661246f4b649e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: c9b255e715a635494e3acc34124871e90ceca8f7
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46079383"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055367"
 ---
 # <a name="enabling-and-disabling-services-for-a-provider"></a>为提供程序启用或禁用服务
 
-可以启用或禁用默认情况下的所有应用程序访问单个提供程序的单个 OLE DB 服务。 这是通过添加提供程序的 CLSID 下 OLEDB_SERVICES 注册表项具有`DWORD`值，该值指定要启用或禁用的服务下, 表中所示。  
-  
-|启用的默认服务|关键字值|  
-|------------------------------|-------------------|  
-|所有服务 （默认值）|0xffffffff|  
-|除池和登记|0xfffffffe|  
-|除客户端游标|0xfffffffb|  
-|除池，登记和客户端游标|0xfffffff0|  
-|没有服务|0x00000000|  
-|聚合函数，所有服务已禁用|\<缺少密钥 >|  
-  
-## <a name="see-also"></a>请参阅  
+可以启用或禁用默认情况下的所有应用程序访问单个提供程序的单个 OLE DB 服务。 这是通过添加提供程序的 CLSID 下 OLEDB_SERVICES 注册表项具有`DWORD`值，该值指定要启用或禁用的服务下, 表中所示。
+
+|启用的默认服务|关键字值|
+|------------------------------|-------------------|
+|所有服务 （默认值）|0xffffffff|
+|除池和登记|0xfffffffe|
+|除客户端游标|0xfffffffb|
+|除池，登记和客户端游标|0xfffffff0|
+|没有服务|0x00000000|
+|聚合函数，所有服务已禁用|\<缺少密钥 >|
+
+## <a name="see-also"></a>请参阅
 
 [启用和禁用 OLE DB 服务](../../data/oledb/enabling-and-disabling-ole-db-services.md)

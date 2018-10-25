@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26e59888a26b5f71b697e398e81b16012dd35e3a
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: c9844c610a1b5bffab8f5fba67daff90a52412e4
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42539547"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50065169"
 ---
 # <a name="includealias"></a>include_alias
 
@@ -31,7 +31,7 @@ ms.locfileid: "42539547"
 
 ## <a name="syntax"></a>语法
 
-> #<a name="pragma-includealiaslongfilename-shortfilename"></a>include_alias 杂注 ("*long_filename*"，"*short_filename*")  
+> #<a name="pragma-includealiaslongfilename-shortfilename"></a>include_alias 杂注 ("*long_filename*"，"*short_filename*")
 > #<a name="pragma-includealiaslongfilename-shortfilename"></a>include_alias 杂注 (*long_filename*， *short_filename*)
 
 ## <a name="remarks"></a>备注
@@ -59,7 +59,7 @@ ms.locfileid: "42539547"
 ```
 
 将不执行指定别名（替换）操作，因为头文件字符串不完全匹配。 此外，用作自变量的头文件名`/Yu`并`/Yc`编译器选项或`hdrstop`杂注时，将不会替换。 例如，如果源文件包含以下指令，
-  
+
 ```cpp
 #include <AppleSystemHeaderStop.h>
 ```
@@ -111,7 +111,7 @@ myfile.h(15) : error C2059 : syntax error
 #include "one.h"
 ```
 
-编译器将搜索文件 TWO.H 而不是 THREE.H。  
+编译器将搜索文件 TWO.H 而不是 THREE.H。
 
 ## <a name="see-also"></a>请参阅
 

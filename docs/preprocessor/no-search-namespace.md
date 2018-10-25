@@ -16,29 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c9ebcdd54e145ff17dc7c473abf6a3ae37e35e0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0895bc1ab6141eaadbeda4a567b8e4cfaad30658
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46440090"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50072273"
 ---
 # <a name="nosearchnamespace"></a>no_search_namespace
-**C + + 专用**  
-  
-具有相同的功能[no_namespace](../preprocessor/no-namespace.md)属性，但在您使用的类型库使用`#import`指令与[auto_search](../preprocessor/auto-search.md)属性。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-no_search_namespace  
-```  
-  
-## <a name="remarks"></a>备注  
- 
-**结束 c + + 专用**  
-  
-## <a name="see-also"></a>请参阅  
- 
+**C + + 专用**
+
+具有相同的功能[no_namespace](../preprocessor/no-namespace.md)属性，但在您使用的类型库使用`#import`指令与[auto_search](../preprocessor/auto-search.md)属性。
+
+## <a name="syntax"></a>语法
+
+```
+no_search_namespace
+```
+
+## <a name="remarks"></a>备注
+
+**结束 c + + 专用**
+
+## <a name="see-also"></a>请参阅
+
 [#import 属性](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [#import 指令](../preprocessor/hash-import-directive-cpp.md)

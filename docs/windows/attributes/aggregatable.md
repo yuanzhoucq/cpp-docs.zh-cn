@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0b686cd19d76706bb6a30286cf611c563c1aed50
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 169b0ab1194783f1e7de44c9ae0a153e9d4d3071
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790353"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057824"
 ---
 # <a name="aggregatable"></a>aggregatable
 
@@ -49,7 +49,7 @@ ms.locfileid: "48790353"
 
 **聚合**c + + 属性具有相同的功能[聚合](/windows/desktop/Midl/aggregatable)MIDL 特性。 这意味着，编译器会将传递**聚合**属性通过到生成的.idl 文件。
 
-此属性要求[组件类](coclass.md)， [progid](progid.md)，或[vi_progid](vi-progid.md)属性 （或隐含其中一种的另一个属性） 也应用于同一个元素。 如果使用任何单个属性，则会自动应用另外两个属性。 例如，如果`progid`应用时，`vi_progid`和`coclass`也会应用。
+此属性要求 [coclass](coclass.md)、 [progid](progid.md)或 [vi_progid](vi-progid.md) 属性（或隐含这些属性之一的其他属性）也应用于同一个元素。 如果使用任何单个属性，则会自动应用另外两个属性。 例如，如果`progid`应用时，`vi_progid`和`coclass`也会应用。
 
 ### <a name="atl-projects"></a>ATL 项目
 
@@ -88,11 +88,11 @@ class CMyClass {};
 |**必需的特性**|一个或多个以下： `coclass`， `progid`，或`vi_progid`。|
 |**无效的特性**|无|
 
-有关特性上下文的详细信息，请参阅[特性上下文](cpp-attributes-com-net.md#contexts)。
+有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
 ## <a name="see-also"></a>请参阅
 
 [IDL 特性](idl-attributes.md)<br/>
 [类特性](class-attributes.md)<br/>
 [Typedef、Enum、Union 和 Struct 特性](typedef-enum-union-and-struct-attributes.md)<br/>
-[聚合](/windows/desktop/com/aggregation)  
+[聚合](/windows/desktop/com/aggregation)

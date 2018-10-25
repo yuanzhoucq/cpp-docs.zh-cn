@@ -47,12 +47,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a93c36748eb01a1c647a2aa433196c7364f60744
-ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
+ms.openlocfilehash: 8165a404924b997d70d0097c28ac7d34ade92fc3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49410806"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063856"
 ---
 # <a name="hstring-class"></a>HString 类
 
@@ -115,7 +115,7 @@ Windows 运行时提供通过字符串的访问权限[HSTRING](/windows/desktop/
 销毁的当前实例`HString`类。
 
 ```cpp
-~HString() throw()  
+~HString() throw()
 ```
 
 ## <a name="attach"></a>Hstring:: Attach
@@ -125,7 +125,7 @@ Windows 运行时提供通过字符串的访问权限[HSTRING](/windows/desktop/
 ```cpp
 void Attach(
        HSTRING hstr
-       ) throw()  
+       ) throw()
 ```
 
 ### <a name="parameters"></a>参数
@@ -157,7 +157,7 @@ HRESULT CopyTo(
 取消关联指定`HString`从其基础值的对象。
 
 ```cpp
-HSTRING Detach() throw()  
+HSTRING Detach() throw()
 ```
 
 ### <a name="return-value"></a>返回值
@@ -169,7 +169,7 @@ HSTRING Detach() throw()
 检索基础 HSTRING 句柄的值。
 
 ```cpp
-HSTRING Get() const throw()  
+HSTRING Get() const throw()
 ```
 
 ### <a name="return-value"></a>返回值
@@ -181,7 +181,7 @@ HSTRING Get() const throw()
 检索指向基础 HSTRING 句柄。
 
 ```cpp
-HSTRING* GetAddressOf() throw()  
+HSTRING* GetAddressOf() throw()
 ```
 
 ### <a name="return-value"></a>返回值
@@ -220,7 +220,7 @@ HSTRING 句柄。
 指示是否当前`HString`对象是否为空。
 
 ```cpp
-bool IsValid() const throw()  
+bool IsValid() const throw()
 ```
 
 ### <a name="parameters"></a>参数
@@ -262,7 +262,7 @@ len<br/>
 另一个的值移`HString`对象与当前`HString`对象。
 
 ```cpp
-HString& operator=(HString&& other) throw()  
+HString& operator=(HString&& other) throw()
 ```
 
 ### <a name="parameters"></a>参数
@@ -297,7 +297,7 @@ inline bool operator==(
 
 inline bool operator==(
                  const HString& lhs,
-                 const HSTRING& rhs) throw()  
+                 const HSTRING& rhs) throw()
 ```
 
 ### <a name="parameters"></a>参数
@@ -330,7 +330,7 @@ inline bool operator!=( const HSTRING& lhs,
                         const HString& rhs) throw()
 
 inline bool operator!=( const HString& lhs,
-                        const HSTRING& rhs) throw()  
+                        const HSTRING& rhs) throw()
 ```
 
 ### <a name="parameters"></a>参数
@@ -352,7 +352,7 @@ inline bool operator!=( const HString& lhs,
 ```cpp
 inline bool operator<(
     const HString& lhs,
-    const HString& rhs) throw()  
+    const HString& rhs) throw()
 ```
 
 ### <a name="parameters"></a>参数
@@ -372,7 +372,7 @@ inline bool operator<(
 删除基础字符串值，并初始化当前`HString`对象为空值。
 
 ```cpp
-void Release() throw()  
+void Release() throw()
 ```
 
 ## <a name="set"></a>Hstring:: Set

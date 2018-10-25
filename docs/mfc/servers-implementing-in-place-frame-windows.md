@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24c63c10feff624abe399952b682303a6e262d35
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e6ef01a7943bbb0c14ec630651757a8665373b85
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46425010"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055212"
 ---
 # <a name="servers-implementing-in-place-frame-windows"></a>服务器：实现就地框架窗口
 
@@ -39,15 +39,15 @@ ms.locfileid: "46425010"
 
 1. 在框架窗口类中声明 `COleResizeBar` 成员。 这在您需要在服务器应用程序中支持就地重设大小时是必需的。
 
-     声明`OnCreate`消息处理程序 (使用**属性**窗口)，并调用`Create`对于你`COleResizeBar`成员，如果您已定义。
+   声明`OnCreate`消息处理程序 (使用**属性**窗口)，并调用`Create`对于你`COleResizeBar`成员，如果您已定义。
 
 1. 如果您有一个工具栏，请在框架窗口类中声明 `CToolBar` 成员。
 
-     当服务器处于就地活动状态时，请重写 `OnCreateControlBars` 成员函数以创建工具栏。 例如：
+   当服务器处于就地活动状态时，请重写 `OnCreateControlBars` 成员函数以创建工具栏。 例如：
 
-     [!code-cpp[NVC_MFCOleServer#1](../mfc/codesnippet/cpp/servers-implementing-in-place-frame-windows_1.cpp)]
+   [!code-cpp[NVC_MFCOleServer#1](../mfc/codesnippet/cpp/servers-implementing-in-place-frame-windows_1.cpp)]
 
-     请参阅下面步骤 5 中对此代码的讨论。
+   请参阅下面步骤 5 中对此代码的讨论。
 
 1. 在主 .cpp 文件中包含此就地框架窗口类的标头文件。
 

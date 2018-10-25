@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6004c3acd052d1424004017941a5e4aa110c602c
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: 1bf8d43d9325ff6900cd1c5cd63629ead434acbc
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48890331"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055510"
 ---
 # <a name="activex-controls-on-the-internet"></a>Internet 上的 ActiveX 控件
 
@@ -67,7 +67,7 @@ ActiveX 控件不受 Internet 限制。 ActiveX 控件还可在任何容器中�
 
 - 下载小块数据。
 
-     下载位图或视频数据等大型流时，请与容器合作异步访问控件的数据。 以增量方式或渐进式检索数据，与还可能检索数据的其他控件协作。 代码还可以异步下载。
+   下载位图或视频数据等大型流时，请与容器合作异步访问控件的数据。 以增量方式或渐进式检索数据，与还可能检索数据的其他控件协作。 代码还可以异步下载。
 
 - 下载后台中的代码和属性。
 
@@ -75,15 +75,15 @@ ActiveX 控件不受 Internet 限制。 ActiveX 控件还可在任何容器中�
 
 - 考虑存储永久数据（属性和大型数据 Blob（如位图图像或视频数据））的方式。
 
-     具有大量永久数据（如大型位图或 AVI 文件）的控件需要特别关注下载方式。 文档或页面可尽可能变得可见，并且允许用户在控件检索背景数据时与页面交互。
+   具有大量永久数据（如大型位图或 AVI 文件）的控件需要特别关注下载方式。 文档或页面可尽可能变得可见，并且允许用户在控件检索背景数据时与页面交互。
 
 - 编写有效的例程以缩减代码大小和运行时间。
 
-     只具有少量字节永久数据的小按钮和标签控件适用于在 Internet 环境中使用并且将在浏览器中运行良好。
+   只具有少量字节永久数据的小按钮和标签控件适用于在 Internet 环境中使用并且将在浏览器中运行良好。
 
 - 考虑将进度传送到容器。
 
-     将异步下载的进度通知给容器，包括用户可开始与页面交互的时间以及下载完成的时间。 容器可以将进度（如完成百分比）显示给用户。
+   将异步下载的进度通知给容器，包括用户可开始与页面交互的时间以及下载完成的时间。 容器可以将进度（如完成百分比）显示给用户。
 
 - 考虑在客户端计算机上注册控件的方式。
 
@@ -99,7 +99,7 @@ ActiveX 控件不受 Internet 限制。 ActiveX 控件还可在任何容器中�
 
 1. 上**控制设置**页上，选择**异步加载属性**。 选择此选项将为您设置就绪状态属性和就绪状态更改事件。
 
-     此外可以选择其他优化，如**无窗口激活**中, 所述[ActiveX 控件： 优化](../mfc/mfc-activex-controls-optimization.md)。
+   此外可以选择其他优化，如**无窗口激活**中, 所述[ActiveX 控件： 优化](../mfc/mfc-activex-controls-optimization.md)。
 
 1. 选择**完成**创建项目。
 
@@ -111,15 +111,15 @@ ActiveX 控件不受 Internet 限制。 ActiveX 控件还可在任何容器中�
 
 1. 在此类中，重写 `OnDataAvailable`。 将在数据可显示时调用此函数。 在数据变得可用后，您可以通过选择的任何方式（例如，逐渐呈现的方式）处理数据。
 
-     下面的代码摘要是在编辑控件中逐渐显示数据的简单示例。 请注意，使用标志**BSCF_FIRSTDATANOTIFICATION**清除编辑控件。
+   下面的代码摘要是在编辑控件中逐渐显示数据的简单示例。 请注意，使用标志**BSCF_FIRSTDATANOTIFICATION**清除编辑控件。
 
-     [!code-cpp[NVC_MFCActiveXControl#1](../mfc/codesnippet/cpp/activex-controls-on-the-internet_1.cpp)]
+   [!code-cpp[NVC_MFCActiveXControl#1](../mfc/codesnippet/cpp/activex-controls-on-the-internet_1.cpp)]
 
-     请注意，您必须包括 AFXCMN.H 以使用 `CListCtrl` 类。
+   请注意，您必须包括 AFXCMN.H 以使用 `CListCtrl` 类。
 
 1. 当控件的整体状态发生更改（例如，从正在加载到已初始化或用户交互），请调用 `COleControl::InternalSetReadyState`。 如果您的控件具有只有一个数据路径属性，可以将代码添加在**BSCF_LASTDATANOTIFICATION**以通知容器您的下载已完成。 例如：
 
-     [!code-cpp[NVC_MFCActiveXControl#2](../mfc/codesnippet/cpp/activex-controls-on-the-internet_2.cpp)]
+   [!code-cpp[NVC_MFCActiveXControl#2](../mfc/codesnippet/cpp/activex-controls-on-the-internet_2.cpp)]
 
 1. 重写 `OnProgress`。 在 `OnProgress` 中，将为您传递一个显示最大范围的数以及一个显示当前下载还有多久完成的数。 您可以使用这些数字向用户显示完成百分比等状态。
 
@@ -135,19 +135,19 @@ ActiveX 控件不受 Internet 限制。 ActiveX 控件还可在任何容器中�
 
 1. 将 `CDataPathProperty` 派生类的成员变量声明为 ActiveX 控件类。
 
-     [!code-cpp[NVC_MFCActiveXControl#3](../mfc/codesnippet/cpp/activex-controls-on-the-internet_3.h)]
+   [!code-cpp[NVC_MFCActiveXControl#3](../mfc/codesnippet/cpp/activex-controls-on-the-internet_3.h)]
 
 1. 实现 `Get/Set` 方法。 有关`Get`，返回的字符串。 对于 `Set`，将加载属性并调用 `SetModifiedFlag`。
 
-     [!code-cpp[NVC_MFCActiveXControl#4](../mfc/codesnippet/cpp/activex-controls-on-the-internet_4.cpp)]
+   [!code-cpp[NVC_MFCActiveXControl#4](../mfc/codesnippet/cpp/activex-controls-on-the-internet_4.cpp)]
 
 1. 在中[DoPropExchange](../mfc/reference/colecontrol-class.md#dopropexchange)，添加以下行：
 
-     [!code-cpp[NVC_MFCActiveXControl#5](../mfc/codesnippet/cpp/activex-controls-on-the-internet_5.cpp)]
+   [!code-cpp[NVC_MFCActiveXControl#5](../mfc/codesnippet/cpp/activex-controls-on-the-internet_5.cpp)]
 
 1. 重写[ResetData](../mfc/reference/cdatapathproperty-class.md#resetdata)以通知属性重置其控件通过添加以下行：
 
-     [!code-cpp[NVC_MFCActiveXControl#6](../mfc/codesnippet/cpp/activex-controls-on-the-internet_6.cpp)]
+   [!code-cpp[NVC_MFCActiveXControl#6](../mfc/codesnippet/cpp/activex-controls-on-the-internet_6.cpp)]
 
 ## <a name="deciding-whether-to-derive-from-cdatapathproperty-or-ccacheddatapathproperty"></a>确定派生自 CDataPathProperty 还是 CCachedDataPathProperty
 
@@ -200,8 +200,6 @@ ActiveX 控件不受 Internet 限制。 ActiveX 控件还可在任何容器中�
 [!code-cpp[NVC_MFCActiveXControl#8](../mfc/codesnippet/cpp/activex-controls-on-the-internet_8.cpp)]
 
 你将更新就绪状态，因为你的代码下载通过调用[colecontrol:: Internalsetreadystate](../mfc/reference/colecontrol-class.md#internalsetreadystate)。 您可以调用 `InternalSetReadyState` 的一个位置是从 `OnProgress` 派生类的 `CDataPathProperty` 重写。
-
-
 
 ## <a name="see-also"></a>请参阅
 

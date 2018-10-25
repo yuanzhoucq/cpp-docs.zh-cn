@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 719ff1a87f3f1afc19cf38736c0059c46a8a9bdc
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: ce6a8b2ef9ac807e48cff42186453666cebda5ee
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46110869"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055979"
 ---
 # <a name="linker-tools-error-lnk1106"></a>链接器工具错误 LNK1106
 
@@ -33,16 +33,16 @@ ms.locfileid: "46110869"
 
 1. 磁盘已满。
 
-     释放一些空间，并重新链接。
+   释放一些空间，并重新链接。
 
 1. 尝试通过网络链接。
 
-     某些网络不完全支持链接器使用的内存映射文件。 请尝试在本地磁盘上链接。
+   某些网络不完全支持链接器使用的内存映射文件。 请尝试在本地磁盘上链接。
 
 1. 在磁盘上的坏扇区。
 
-     尽管操作系统和磁盘硬件应已检测到此类错误，您可能想要运行磁盘检查程序。
+   尽管操作系统和磁盘硬件应已检测到此类错误，您可能想要运行磁盘检查程序。
 
 1. 堆空间不足。
 
-     请参阅[C1060](../../error-messages/compiler-errors-1/fatal-error-c1060.md)有关详细信息。
+   请参阅[C1060](../../error-messages/compiler-errors-1/fatal-error-c1060.md)有关详细信息。

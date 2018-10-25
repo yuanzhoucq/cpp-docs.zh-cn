@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 378cd6fd283cd36142e293b51fdb91527afb6f88
-ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
+ms.openlocfilehash: e5cce23d34c739ed6a3aca67e05b59c6cafd9191
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49808896"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062296"
 ---
 # <a name="atl-com-desktop-components"></a>ATL COM 桌面组件
 
@@ -61,4 +61,4 @@ ATL 引用记录了活动模板库 (ATL)，一组基于模板的 c + + 类，用
 演示如何使用 ATL 编写 COM 对象的示例代码。
 
 [OLE DB 模板](../data/oledb/ole-db-templates.md)<br/>
-提供 OLE DB 使用者参考资料和提供程序模板，实现许多常用 OLE DB 接口的一组模板类。  
+提供 OLE DB 使用者参考资料和提供程序模板，实现许多常用 OLE DB 接口的一组模板类。

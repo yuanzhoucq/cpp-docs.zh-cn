@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dced1bd7db0f3eec9d9d070deb8cf990496116ae
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: e0ac5ceda3b979454c5d37e513cbd77a4d3e3e20
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821655"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063349"
 ---
 # <a name="member-access-control-c"></a>成员访问控制 (C++)
 
@@ -247,7 +247,6 @@ int main()
 ![沿继承关系图的路径访问](../cpp/media/vc38v91.gif "vc38V91")访问沿路径的继承关系图
 
 在该图中，通过类 `VBase` 始终到达类 `RightPath` 中声明的名称。 右路径是更易于访问的，因为 `RightPath` 将 `VBase` 声明为公共基类，而 `LeftPath` 将 `VBase` 声明为私有基类。
-
 
 ## <a name="see-also"></a>请参阅
 

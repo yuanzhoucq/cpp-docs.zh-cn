@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a4dbf1b085ca5ffddd87396fc367bf19f2ad02e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 841a140236c092ad14501698db90007bce0322ec
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46383049"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054873"
 ---
 # <a name="ddxdhtml-helper-macros"></a>DDX_DHtml 帮助器宏
 
@@ -58,8 +58,6 @@ DDX_DHtml 帮助器宏允许轻松访问常用的属性的 HTML 页上的控件�
 ## <a name="ddx_dhtml_anchor_href"></a> DDX_DHtml_Anchor_Href
 
 设置或检索的目标 URL 或定位点。
-
-
 
 ```
 DDX_DHtml_Anchor_Href(
@@ -113,8 +111,6 @@ DDX_DHtml_Anchor_Target(
 
 设置或检索当前元素的开始和结束标记之间的 HTML。
 
-
-
 ```
 DDX_DHtml_ElementInnerHtml(
     CDataExchange* dx,
@@ -137,12 +133,9 @@ DDX_DHtml_ElementInnerHtml(
 
 此宏将调用[CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext)函数使用 DISPID_IHTMLELEMENT_INNERHTML 调度 id。
 
-
 ## <a name="ddx_dhtml_elementinnertext"></a>  DDX_DHtml_ElementInnerText
 
 设置或检索当前元素的开始和结束标记之间的文本。
-
-
 
 ```
 DDX_DHtml_ElementInnerText(
@@ -224,8 +217,6 @@ DDX_DHtml_Frame_Src(
 
 设置或检索关联的帧的 URL。
 
-
-
 ```
 DDX_DHtml_IFrame_Src(
     CDataExchange* dx,
@@ -275,7 +266,6 @@ DDX_DHtml_Img_Src(
 当使用 DDX_DHtml_Img_Src 宏来检索一个 IMAGE 元素的 src 属性，Internet Explorer 图像对象将返回图像源的完全转义的 URL。 例如，如果 DDX_DHtml_Img_Src 宏用于将一个 IMAGE 元素的 src 属性设置为字符串"一些有趣的图片"，检索该属性，Internet Explorer 时将返回字符串"res://d:\myapplication\myapp.exe/some%20interesting %20picture。"
 
 此宏将调用[CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext)函数使用 DISPID_IHTMLIMGELEMENT_SRC 调度 id。
-
 
 ## <a name="see-also"></a>请参阅
 

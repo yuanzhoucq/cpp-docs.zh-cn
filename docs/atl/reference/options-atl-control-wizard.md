@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 25116b0750016fdbb4ffd792d0b16efb6c6c1793
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 9c1acf9602dedf0eef1b8d96344914c367ce5926
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45711929"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50073547"
 ---
 # <a name="options-atl-control-wizard"></a>选项，ATL 控件向导
 
@@ -49,11 +49,11 @@ ms.locfileid: "45711929"
 
    - 包含复合控件的 HTML 测试页。
 
-     默认情况下，此控件设置[CComControlBase::m_bWindowOnly](../../atl/reference/ccomcontrolbase-class.md#m_bwindowonly)为 true，以指示这是有窗口的控件。 它实现了接收器映射。 有关详细信息，请参阅[支持 DHTML 控件](../../atl/atl-support-for-dhtml-controls.md)。
+   默认情况下，此控件设置[CComControlBase::m_bWindowOnly](../../atl/reference/ccomcontrolbase-class.md#m_bwindowonly)为 true，以指示这是有窗口的控件。 它实现了接收器映射。 有关详细信息，请参阅[支持 DHTML 控件](../../atl/atl-support-for-dhtml-controls.md)。
 
 - **DHTML 控件**: ATL DHTML 控件指定用户界面，使用 HTML。 DHTML UI 类包含 COM 映射。 默认情况下，此控件设置[CComControlBase::m_bWindowOnly](../../atl/reference/ccomcontrolbase-class.md#m_bwindowonly)为 true，以指示这是有窗口的控件。
 
-     有关详细信息，请参阅[标识 DHTML 控件项目的元素](../../atl/identifying-the-elements-of-the-dhtml-control-project.md)。
+   有关详细信息，请参阅[标识 DHTML 控件项目的元素](../../atl/identifying-the-elements-of-the-dhtml-control-project.md)。
 
 ### <a name="minimal-control"></a>最低限度的控制
 

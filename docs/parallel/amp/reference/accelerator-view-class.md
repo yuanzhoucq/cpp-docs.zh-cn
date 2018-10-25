@@ -31,12 +31,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 30eb0befda4d439bf4153d7c6726c982d3bf19ae
-ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
+ms.openlocfilehash: b556a86506e3aae73f7ac4e1ac961b539364d6db
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49163330"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053555"
 ---
 # <a name="acceleratorview-class"></a>accelerator_view 类
 
@@ -167,6 +167,7 @@ void flush();
 ```
 accelerator get_accelerator() const;
 ```
+
 ### <a name="return-value"></a>返回值
 
 Accelerator_view 对象的快捷键对象。

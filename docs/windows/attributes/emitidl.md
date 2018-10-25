@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5e11e1ce061fcf2e9ce21155dcbeb93b45b66238
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 520b9bf8d6a71593acd95ebaac98a72036fcabf2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790480"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070018"
 ---
 # <a name="emitidl"></a>emitidl
 
@@ -49,7 +49,8 @@ ms.locfileid: "48790480"
 
 - `push` 使您能够保存当前**emitidl**设置应用于内部**emitidl**堆栈，并`pop`允许设置**emitidl**到顶部的内部是任何值**emitidl**堆栈。
 
-`defaultimports=`*布尔*\(可选)  
+`defaultimports=`*布尔*\(可选)
+
 - 如果*布尔*是**true**，docobj.idl 导入到生成的.idl 文件。 此外，如果.idl 文件具有相同名称作为.h 文件`#include`到您的源的代码中找到与.h 文件中，相同的目录，则生成的.idl 文件包含该.idl 文件的导入语句。
 
 - 如果*布尔*是**false**，docobj.idl 不会导入生成的.idl 文件。 必须显式导入具有.idl 文件[导入](import.md)。
@@ -73,9 +74,9 @@ ms.locfileid: "48790480"
 |**必需的特性**|无|
 |**无效的特性**|无|
 
-有关详细信息，请参阅[特性上下文](cpp-attributes-com-net.md#contexts)。
+有关详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
 ## <a name="see-also"></a>请参阅
 
 [编译器特性](compiler-attributes.md)<br/>
-[独立特性](stand-alone-attributes.md)  
+[独立特性](stand-alone-attributes.md)

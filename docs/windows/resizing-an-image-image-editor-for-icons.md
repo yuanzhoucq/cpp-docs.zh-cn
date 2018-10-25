@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6e81ca5418782b993f406f33b0b207bc8acb5ba0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: dc70d6cd5933608067a43cdb7dcca1e11dd22a2d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46393654"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082282"
 ---
 # <a name="resizing-an-image-image-editor-for-icons"></a>调整图像大小（图标的图像编辑器）
 
@@ -37,7 +37,7 @@ ms.locfileid: "46393654"
 
 有两种方式调整图像大小： 调整大小控点和[属性窗口](/visualstudio/ide/reference/properties-window)。 您可以拖动调整大小控点，若要更改的所有大小或映像的一部分。 可以拖动调整大小控点都是可靠的。 您不能拖动空心的句柄。 可以使用**属性**窗口来调整大小整个仅，图像不是所选的一部分。
 
-![大小调整控点上位图](../mfc/media/vcimageeditorsizinghandles.gif "vcImageEditorSizingHandles")  
+![大小调整控点上位图](../mfc/media/vcimageeditorsizinghandles.gif "vcImageEditorSizingHandles")<br/>
 大小调整控点
 
 > [!NOTE]

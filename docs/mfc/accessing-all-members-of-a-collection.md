@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 320457928ef8bc1a03d86b3a898bc0b719e116a2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8bcaaf4723e8b6a1ad40fb534b7114f317d76f6b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46442872"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060814"
 ---
 # <a name="accessing-all-members-of-a-collection"></a>访问集合的所有成员
 
@@ -48,38 +48,38 @@ MFC 数组集合类（无论是否基于模板）使用索引来访问其元素�
 
 1. 使用按次序的索引号与 `GetAt` 成员函数：
 
-     [!code-cpp[NVC_MFCCollections#12](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_1.cpp)]
+   [!code-cpp[NVC_MFCCollections#12](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_1.cpp)]
 
-     此示例使用一个类型化的指针数组，其中包含指向 `CPerson` 对象的指针。 数组派生自 `CObArray`类，这是一个非模板预定义类。 `GetAt` 返回一个指向 `CPerson` 对象的指针。 对于类型化的指针集合类（数组或列表），第一个参数指定基类；第二个参数指定要存储的类型。
+   此示例使用一个类型化的指针数组，其中包含指向 `CPerson` 对象的指针。 数组派生自 `CObArray`类，这是一个非模板预定义类。 `GetAt` 返回一个指向 `CPerson` 对象的指针。 对于类型化的指针集合类（数组或列表），第一个参数指定基类；第二个参数指定要存储的类型。
 
-     `CTypedPtrArray`类还重载 **[]** 运算符，以便可以使用的惯例数组下标语法来访问数组的元素。 正文中的语句的替代方法**为**循环更高版本
+   `CTypedPtrArray`类还重载 **[]** 运算符，以便可以使用的惯例数组下标语法来访问数组的元素。 正文中的语句的替代方法**为**循环更高版本
 
-     [!code-cpp[NVC_MFCCollections#13](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_2.cpp)]
+   [!code-cpp[NVC_MFCCollections#13](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_2.cpp)]
 
-     此运算符同时存在于 **常量** 和非**常量** 版本。 **常量** 版本（为 **常量** 数组调用）仅可在赋值语句右侧出现。
+   此运算符同时存在于 **常量** 和非**常量** 版本。 **常量** 版本（为 **常量** 数组调用）仅可在赋值语句右侧出现。
 
 ### <a name="_core_to_iterate_a_list"></a> 循环访问列表
 
 1. 使用成员函数 `GetHeadPosition` 和 `GetNext` 来访问列表：
 
-     [!code-cpp[NVC_MFCCollections#14](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_3.cpp)]
+   [!code-cpp[NVC_MFCCollections#14](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_3.cpp)]
 
-     此示例使用一个类型化的指针列表，包含指向 `CPerson` 对象的指针。 列表声明类似于 [循环访问数组](#_core_to_iterate_an_array) 步骤中数组的列表声明，但它派生自 `CObList`类。 `GetNext` 返回一个指向 `CPerson` 对象的指针。
+   此示例使用一个类型化的指针列表，包含指向 `CPerson` 对象的指针。 列表声明类似于 [循环访问数组](#_core_to_iterate_an_array) 步骤中数组的列表声明，但它派生自 `CObList`类。 `GetNext` 返回一个指向 `CPerson` 对象的指针。
 
 ### <a name="_core_to_iterate_a_map"></a> 循环访问映射
 
 1. 使用 `GetStartPosition` 来到映射的开头，使用 `GetNextAssoc` 反复获取映射中的下一个键和值，如下所示：
 
-     [!code-cpp[NVC_MFCCollections#15](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_4.cpp)]
+   [!code-cpp[NVC_MFCCollections#15](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_4.cpp)]
 
-     此示例使用简单的映射模板（而不是类型化的指针集合），该模板使用 `CString` 键，并存储指向 `CPerson` 对象的指针。 当使用访问函数（如 `GetNextAssoc`）时，该类提供了指向 `CPerson` 对象的指针。 如果改为使用非模板映射集合之一，则必须将返回的 `CObject` 指针转换为指向 `CPerson`的指针。
+   此示例使用简单的映射模板（而不是类型化的指针集合），该模板使用 `CString` 键，并存储指向 `CPerson` 对象的指针。 当使用访问函数（如 `GetNextAssoc`）时，该类提供了指向 `CPerson` 对象的指针。 如果改为使用非模板映射集合之一，则必须将返回的 `CObject` 指针转换为指向 `CPerson`的指针。
 
     > [!NOTE]
     >  对于非模板映射，编译器需要最后一个 `CObject` 参数中 `GetNextAssoc`指针的引用。 在输入时，必须将指针转换为类型，如下例所示。
 
-     模板解决方案更简单，可帮助提高类型安全性。 非模板代码更复杂一些，正如你在这里看到的：
+   模板解决方案更简单，可帮助提高类型安全性。 非模板代码更复杂一些，正如你在这里看到的：
 
-     [!code-cpp[NVC_MFCCollections#16](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_5.cpp)]
+   [!code-cpp[NVC_MFCCollections#16](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_5.cpp)]
 
 有关详细信息，请参阅 [删除 CObject 集合中的所有对象](../mfc/deleting-all-objects-in-a-cobject-collection.md)。
 

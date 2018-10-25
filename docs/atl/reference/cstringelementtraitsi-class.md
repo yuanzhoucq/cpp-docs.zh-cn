@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d34277bd3c9b47c5ba9367d19348e43ea263f43b
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 29df4bd550a5de232b5ced0510e8dbfc68e59d42
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46089900"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060749"
 ---
 # <a name="cstringelementtraitsi-class"></a>CStringElementTraitsI 类
 
@@ -120,7 +120,7 @@ static int CompareElementsOrdered(INARGTYPE str1, INARGTYPE str2) throw();
 
 ### <a name="return-value"></a>返回值
 
-如果字符串相等则为零，< 0 如果*str1*是小于*str2*，或 > 0 如果*str1*大于*str2*。 [CStringT::Compare](../../atl-mfc-shared/reference/cstringt-class.md#compare)方法用于执行比较。  
+如果字符串相等则为零，< 0 如果*str1*是小于*str2*，或 > 0 如果*str1*大于*str2*。 [CStringT::Compare](../../atl-mfc-shared/reference/cstringt-class.md#compare)方法用于执行比较。
 
 ### <a name="remarks"></a>备注
 

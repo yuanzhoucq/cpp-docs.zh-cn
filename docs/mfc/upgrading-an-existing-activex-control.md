@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc5bca0f7ff1b2fdb2650eadbcdca4778d9b53ef
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: 0567913eac57c4150f9fe6d051d2fc8e0e31860b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48890355"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082919"
 ---
 # <a name="upgrading-an-existing-activex-control"></a>升级现有 ActiveX 控件
 
@@ -213,11 +213,11 @@ HKEY_CLASSES_ROOT\CLSID\{06889605-B8D0-101A-91F1-00608CEAD5B3}\Implemented Categ
 
 1. 插入\<对象 > 标记为授权控件许可证管理器标记之后。
 
-     例如，显示 Microsoft Masked Edit 控件的 HTML 页如下所示。 第一个类 ID 用于许可证管理器控件，第二个类 ID 用于 Masked Edit 控件。 将标记更改为指向之前创建的 .lpk 文件的相对路径，并添加对象标记（包括控件的类 ID）。
+   例如，显示 Microsoft Masked Edit 控件的 HTML 页如下所示。 第一个类 ID 用于许可证管理器控件，第二个类 ID 用于 Masked Edit 控件。 将标记更改为指向之前创建的 .lpk 文件的相对路径，并添加对象标记（包括控件的类 ID）。
 
 1. 插入\<嵌入 > 属性为 LPK 文件，如果使用 NCompass ActiveX 插件。
 
-     如果您的控件可能会查看其他活动启用浏览器-例如，使用 NCompass ActiveX 插件的 Netscape — 您必须添加\<嵌入 > 语法如下所示。
+   如果您的控件可能会查看其他活动启用浏览器-例如，使用 NCompass ActiveX 插件的 Netscape — 您必须添加\<嵌入 > 语法如下所示。
 
 ```
 <OBJECT CLASSID="clsid:5220cb21-c88d-11cf-b347-00aa00a28331">

@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 876f3b45cc9f45ab5ff1aaa7e07116482f89afc1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2035e665bd7d8cba502c3516498934f32c2b3dd0
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46442079"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080840"
 ---
 # <a name="security-implications-of-customization"></a>自定义对安全有何影响
 
@@ -38,7 +38,7 @@ MFC 允许用户自定义应用程序用户界面的外观，例如，图标和�
 
 - 将数据存储在安全文件而不是注册表中。
 
-     若要完成第一次这两种方法之一，从派生类[CSettingsStore 类](../mfc/reference/csettingsstore-class.md)并重写其方法来实现加密或存储在注册表外的。
+   若要完成第一次这两种方法之一，从派生类[CSettingsStore 类](../mfc/reference/csettingsstore-class.md)并重写其方法来实现加密或存储在注册表外的。
 
 - 还可以在应用程序中禁用自定义。
 

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e885ef1db8f282bbdca2e8c39c3d1221d791d1a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 7e067b1d72b80950b4ed33fbae8cac7333ac0438
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46067631"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083069"
 ---
 # <a name="atl-module-classes"></a>ATL Module 类
 
@@ -55,15 +55,15 @@ ms.locfileid: "46067631"
 
 - 进行中的功能`CComModule`精细。
 
-     COM、 窗口化、 调试接口，和特定于应用程序 （DLL 或 EXE） 功能的支持现已在单独的类。
+   COM、 窗口化、 调试接口，和特定于应用程序 （DLL 或 EXE） 功能的支持现已在单独的类。
 
 - 自动声明每个这些模块的全局的实例。
 
-     所需的模块类的全局实例链接到项目。
+   所需的模块类的全局实例链接到项目。
 
 - 删除调用 Init 和字词方法的必要性。
 
-     Init 和术语方法的模块类; 已移到构造函数和析构函数不再需要调用 Init 和术语。
+   Init 和术语方法的模块类; 已移到构造函数和析构函数不再需要调用 Init 和术语。
 
 ## <a name="see-also"></a>请参阅
 

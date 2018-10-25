@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3aea9e17d17008642f9421beb47be38cac401132
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4e94fa412b76107dde90d3a6a664ec68c6b6bdaf
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46071309"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078786"
 ---
 # <a name="temporary-objects"></a>临时对象
 
@@ -41,9 +41,9 @@ ms.locfileid: "46071309"
                     //   value.
     ```
 
-     由于未将返回值复制到另一个对象，因此创建了临时对象。 创建临时内存更常见的情况是在计算必须调用重载运算符函数的表达式时。 这些重载运算符函数将返回一般不会复制到其他对象的用户定义的类型。
+   由于未将返回值复制到另一个对象，因此创建了临时对象。 创建临时内存更常见的情况是在计算必须调用重载运算符函数的表达式时。 这些重载运算符函数将返回一般不会复制到其他对象的用户定义的类型。
 
-     请考虑表达式 `ComplexResult = Complex1 + Complex2 + Complex3`。 将计算表达式 `Complex1 + Complex2`，并且结果将存储在临时对象中。 接下来，该表达式*临时*`+ Complex3`计算，并将结果复制到`ComplexResult`（假设赋值运算符不过载）。
+   请考虑表达式 `ComplexResult = Complex1 + Complex2 + Complex3`。 将计算表达式 `Complex1 + Complex2`，并且结果将存储在临时对象中。 接下来，该表达式*临时*`+ Complex3`计算，并将结果复制到`ComplexResult`（假设赋值运算符不过载）。
 
 - 存储强制转换为用户定义的类型的结果。 在给定类型的对象显式转换为用户定义的类型时，将构造一个新对象作为临时对象。
 

@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2359bb3909c803e4df1efdeef9058a3553908ff9
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 51e612e889c06b8736e13e3c0fe04baf07b11a9b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46074046"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078279"
 ---
 # <a name="cstringelementtraits-class"></a>CStringElementTraits 类
 
@@ -114,7 +114,7 @@ static int CompareElementsOrdered(INARGTYPE str1, INARGTYPE str2);
 
 ### <a name="return-value"></a>返回值
 
-如果字符串相等则为零，< 0 如果*str1*是小于*str2*，或 > 0 如果*str1*大于*str2*。 [CStringT::Compare](../../atl-mfc-shared/reference/cstringt-class.md#compare)方法用于执行比较。  
+如果字符串相等则为零，< 0 如果*str1*是小于*str2*，或 > 0 如果*str1*大于*str2*。 [CStringT::Compare](../../atl-mfc-shared/reference/cstringt-class.md#compare)方法用于执行比较。
 
 ##  <a name="copyelements"></a>  CStringElementTraits::CopyElements
 

@@ -48,139 +48,139 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a5de49679652b04afa4df08ce9d4ea015ebd031d
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 89762d37977efd4c999c38ee9bc586420655f1cc
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49082717"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078357"
 ---
 # <a name="iaccessorimpl-class"></a>IAccessorImpl 类
 
-提供的实现[IAccessor](/previous-versions/windows/desktop/ms719672)接口。  
-  
+提供的实现[IAccessor](/previous-versions/windows/desktop/ms719672)接口。
+
 ## <a name="syntax"></a>语法
 
 ```cpp
-template <class T, 
+template <class T,
    class BindType = ATLBINDINGS,
-   class BindingVector = CAtlMap <HACCESSOR hAccessor, BindType* pBindingsStructure>>  
-class ATL_NO_VTABLE IAccessorImpl : public IAccessorImplBase<BindType>  
-```  
-  
-### <a name="parameters"></a>参数  
+   class BindingVector = CAtlMap <HACCESSOR hAccessor, BindType* pBindingsStructure>>
+class ATL_NO_VTABLE IAccessorImpl : public IAccessorImplBase<BindType>
+```
+
+### <a name="parameters"></a>参数
 
 *T*<br/>
-行集或命令对象类。  
-  
+行集或命令对象类。
+
 *BindType*<br/>
-绑定信息的存储单位。 默认值是`ATLBINDINGS`结构 （请参阅 atldb.h）。  
-  
+绑定信息的存储单位。 默认值是`ATLBINDINGS`结构 （请参阅 atldb.h）。
+
 *BindingVector*<br/>
-列信息的存储单元。 默认值是[CAtlMap](../../atl/reference/catlmap-class.md)其中的关键元素是 HACCESSOR 值，值元素是一个指向`BindType`结构。  
-  
-## <a name="requirements"></a>要求  
+列信息的存储单元。 默认值是[CAtlMap](../../atl/reference/catlmap-class.md)其中的关键元素是 HACCESSOR 值，值元素是一个指向`BindType`结构。
 
-**标头：** atldb.h  
+## <a name="requirements"></a>要求
 
-## <a name="members"></a>成员  
-  
-### <a name="methods"></a>方法  
-  
-|||  
-|-|-|  
-|[IAccessorImpl](#iaccessorimpl)|构造函数。|  
-  
-### <a name="interface-methods"></a>接口方法  
-  
-|||  
-|-|-|  
-|[AddRefAccessor](#addrefaccessor)|将引用计数添加到现有的访问器。|  
-|[CreateAccessor](#createaccessor)|从一组绑定创建取值函数。|  
-|[GetBindings](#getbindings)|访问器中返回的绑定。|  
-|[ReleaseAccessor](#releaseaccessor)|释放访问器。|  
-  
-## <a name="remarks"></a>备注  
+**标头：** atldb.h
 
-这是必需的对于行集和命令。 OLE DB 要求提供商实现 HACCESSOR，这是一种标记的数组[DBBINDING](/previous-versions/windows/desktop/ms716845)结构。 提供的 HACCESSORs`IAccessorImpl`是地址`BindType`结构。 默认情况下`BindType`指`ATLBINDINGS`中`IAccessorImpl`的模板定义。 `BindType` 提供使用的一种机制`IAccessorImpl`跟踪中的元素数及其`DBBINDING`数组以及引用计数和访问器标志。  
+## <a name="members"></a>成员
+
+### <a name="methods"></a>方法
+
+|||
+|-|-|
+|[IAccessorImpl](#iaccessorimpl)|构造函数。|
+
+### <a name="interface-methods"></a>接口方法
+
+|||
+|-|-|
+|[AddRefAccessor](#addrefaccessor)|将引用计数添加到现有的访问器。|
+|[CreateAccessor](#createaccessor)|从一组绑定创建取值函数。|
+|[GetBindings](#getbindings)|访问器中返回的绑定。|
+|[ReleaseAccessor](#releaseaccessor)|释放访问器。|
+
+## <a name="remarks"></a>备注
+
+这是必需的对于行集和命令。 OLE DB 要求提供商实现 HACCESSOR，这是一种标记的数组[DBBINDING](/previous-versions/windows/desktop/ms716845)结构。 提供的 HACCESSORs`IAccessorImpl`是地址`BindType`结构。 默认情况下`BindType`指`ATLBINDINGS`中`IAccessorImpl`的模板定义。 `BindType` 提供使用的一种机制`IAccessorImpl`跟踪中的元素数及其`DBBINDING`数组以及引用计数和访问器标志。
 
 ## <a name="iaccessorimpl"></a> Iaccessorimpl:: Iaccessorimpl
 
-构造函数。  
-  
-### <a name="syntax"></a>语法  
-  
+构造函数。
+
+### <a name="syntax"></a>语法
+
 ```cpp
-IAccessorImpl();  
-```  
+IAccessorImpl();
+```
 
 ## <a name="addrefaccessor"></a> Iaccessorimpl:: Addrefaccessor
 
-将引用计数添加到现有的访问器。  
-  
-### <a name="syntax"></a>语法  
-  
+将引用计数添加到现有的访问器。
+
+### <a name="syntax"></a>语法
+
 ```cpp
-STDMETHOD(AddRefAccessor)(HACCESSOR hAccessor,  
-   DBREFCOUNT* pcRefCount);  
-```  
-  
-#### <a name="parameters"></a>参数  
+STDMETHOD(AddRefAccessor)(HACCESSOR hAccessor,
+   DBREFCOUNT* pcRefCount);
+```
+
+#### <a name="parameters"></a>参数
 
 请参阅[IAccessor::AddRefAccessor](/previous-versions/windows/desktop/ms714978)中*OLE DB 程序员参考*。
 
 ## <a name="createaccessor"></a> Iaccessorimpl:: Createaccessor
 
-从一组绑定创建取值函数。  
-  
-### <a name="syntax"></a>语法  
-  
-```cpp
-STDMETHOD(CreateAccessor)(DBACCESSORFLAGS dwAccessorFlags,  
-   DBCOUNTITEM cBindings,  
-   const DBBINDING rgBindings[],  
-   DBLENGTH cbRowSize,  
-   HACCESSOR* phAccessor,  
-   DBBINDSTATUS rgStatus[]);  
-```  
-  
-#### <a name="parameters"></a>参数  
+从一组绑定创建取值函数。
 
-请参阅[iaccessor:: Createaccessor](/previous-versions/windows/desktop/ms720969)中*OLE DB 程序员参考*。  
+### <a name="syntax"></a>语法
+
+```cpp
+STDMETHOD(CreateAccessor)(DBACCESSORFLAGS dwAccessorFlags,
+   DBCOUNTITEM cBindings,
+   const DBBINDING rgBindings[],
+   DBLENGTH cbRowSize,
+   HACCESSOR* phAccessor,
+   DBBINDSTATUS rgStatus[]);
+```
+
+#### <a name="parameters"></a>参数
+
+请参阅[iaccessor:: Createaccessor](/previous-versions/windows/desktop/ms720969)中*OLE DB 程序员参考*。
 
 ## <a name="getbindings"></a> Iaccessorimpl:: Getbindings
 
-从访问器中的使用者返回的基本列绑定。  
-  
-### <a name="syntax"></a>语法  
-  
-```cpp
-STDMETHOD(GetBindings)(HACCESSOR hAccessor,  
-   DBACCESSORFLAGS* pdwAccessorFlags,  
-   DBCOUNTITEM* pcBindings,  
-   DBBINDING** prgBindings);  
-```  
-  
-#### <a name="parameters"></a>参数  
+从访问器中的使用者返回的基本列绑定。
 
-请参阅[IAccessor::GetBindings](/previous-versions/windows/desktop/ms721253)中*OLE DB 程序员参考*。 
+### <a name="syntax"></a>语法
+
+```cpp
+STDMETHOD(GetBindings)(HACCESSOR hAccessor,
+   DBACCESSORFLAGS* pdwAccessorFlags,
+   DBCOUNTITEM* pcBindings,
+   DBBINDING** prgBindings);
+```
+
+#### <a name="parameters"></a>参数
+
+请参阅[IAccessor::GetBindings](/previous-versions/windows/desktop/ms721253)中*OLE DB 程序员参考*。
 
 ## <a name="releaseaccessor"></a> Iaccessorimpl:: Releaseaccessor
 
-释放访问器。  
-  
-### <a name="syntax"></a>语法  
-  
+释放访问器。
+
+### <a name="syntax"></a>语法
+
 ```cpp
-STDMETHOD(ReleaseAccessor)(HACCESSOR hAccessor,  
-   DBREFCOUNT* pcRefCount);  
-```  
-  
-#### <a name="parameters"></a>参数  
+STDMETHOD(ReleaseAccessor)(HACCESSOR hAccessor,
+   DBREFCOUNT* pcRefCount);
+```
+
+#### <a name="parameters"></a>参数
 
 请参阅[iaccessor:: Releaseaccessor](/previous-versions/windows/desktop/ms719717)中*OLE DB 程序员参考*。
-  
-## <a name="see-also"></a>请参阅  
+
+## <a name="see-also"></a>请参阅
 
 [OLE DB 提供程序模板](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [OLE DB 提供程序模板体系结构](../../data/oledb/ole-db-provider-template-architecture.md)

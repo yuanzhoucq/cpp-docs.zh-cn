@@ -90,12 +90,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d9acae5f87223a3b23c492f02596452fabb745f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ca8a6689d0ac305a0dc3264b0311a4d7bf2e7d11
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441286"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076069"
 ---
 # <a name="cmfcbutton-class"></a>CMFCButton 类
 
@@ -419,8 +419,6 @@ static BOOL IsWindowsThemingEnabled();
 
 如果按钮边框的样式对应于当前的 Windows 主题; 则为 TRUE否则为 FALSE。
 
-
-
 ## <a name="a-namembdontusewinxptheme-cmfcbuttonmbdontusewinxptheme"></a><a name="m_bDontUseWinXPTheme"/> CMFCButton::m_bDontUseWinXPTheme
 
 指定是否在绘制按钮时使用 Windows XP 主题。
@@ -446,7 +444,6 @@ BOOL m_bDrawFocus;
 ##  <a name="m_bGrayDisabled"></a>  CMFCButton::m_bGrayDisabled
 
 为 TRUE 时，启用已禁用的按钮绘制为灰显。
-
 
 ```
 BOOL m_bGrayDisabled;
@@ -479,7 +476,6 @@ BOOL m_bResponseOnButtonDown;
 ```
 BOOL m_bRightImage;
 ```
-
 
 ##  <a name="m_bTopImage"></a>  CMFCButton::m_bTopImage](#m_bTopImage)
 
@@ -663,7 +659,7 @@ virtual void OnDrawText(
 [in]指定如何设置文本格式的标志。 有关详细信息，请参阅*nFormat*的参数[CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext)方法。
 
 *uiState*<br/>
-[in]保留。
+[in] 保留。
 
 ### <a name="remarks"></a>备注
 
@@ -739,14 +735,12 @@ void SetCheckedImage(
     HICON hIconDisabled=NULL,
     BOOL bAlphaBlend=FALSE);
 
-
 void SetCheckedImage(
     HBITMAP hBitmap,
     BOOL bAutoDestroy=TRUE,
     HBITMAP hBitmapHot=NULL,
     BOOL bMap3dColors=TRUE,
     HBITMAP hBitmapDisabled=NULL);
-
 
 void SetCheckedImage(
     UINT uiBmpResId,
@@ -828,14 +822,12 @@ void SetImage(
     HICON hIconDisabled=NULL,
     BOOL bAlphaBlend=FALSE);
 
-
 void SetImage(
     HBITMAP hBitmap,
     BOOL bAutoDestroy=TRUE,
     HBITMAP hBitmapHot=NULL,
     BOOL bMap3dColors=TRUE,
     HBITMAP hBitmapDisabled=NULL);
-
 
 void SetImage(
     UINT uiBmpResId,

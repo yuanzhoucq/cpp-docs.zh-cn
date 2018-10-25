@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b94172d57bc21e7f747a5d0986ef28dbfb80e481
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 33c79dc8c83f40d0b553a2c44cf22fa107f5ef34
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46428637"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50065585"
 ---
 # <a name="mfc-activex-controls"></a>MFC ActiveX 控件
 
@@ -109,19 +109,19 @@ ActiveX 控件使用多个编程元素与控件容器和用户高效地交互。
 
 - **\Common7\Tools**
 
-     包含测试容器文件 （TstCon32.exe，以及其帮助文件）。
+   包含测试容器文件 （TstCon32.exe，以及其帮助文件）。
 
 - **\Vc7\atlmfc\include**
 
-     包含用于开发 mfc ActiveX 控件包含文件
+   包含用于开发 mfc ActiveX 控件包含文件
 
 - **\Vc7\atlmfc\src\mfc**
 
-     包含在 MFC 中的特定 ActiveX 控件类的源代码
+   包含在 MFC 中的特定 ActiveX 控件类的源代码
 
 - **\Vc7\atlmfc\lib**
 
-     包含开发与 MFC 的 ActiveX 控件所需的库
+   包含开发与 MFC 的 ActiveX 控件所需的库
 
 也有适用于 MFC ActiveX 控件示例。 有关这些示例的详细信息，请参阅[控件示例： MFC-Based ActiveX 控件](../visual-cpp-samples.md)
 

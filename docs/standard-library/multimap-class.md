@@ -1,7 +1,7 @@
 ---
 title: multimap 类 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5cde4954dd7222fbe9a406756a81466346f4dd01
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 9ae6c027947cf869a159b1561a7f7a3b853af0c2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235927"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068926"
 ---
 # <a name="multimap-class"></a>multimap 类
 
@@ -122,7 +122,7 @@ class multimap;
 *Key*<br/>
 要存储在多重映射中的键数据类型。
 
-*类型*<br/>
+*Type*<br/>
 要存储在多重映射中的元素数据类型。
 
 *特征*<br/>
@@ -887,7 +887,6 @@ The multimap m2 is empty.
 ```cpp
 const_iterator end() const;
 
-
 iterator end();
 ```
 
@@ -1030,7 +1029,6 @@ size_type erase(
 
 ```cpp
 iterator find(const Key& key);
-
 
 const_iterator find(const Key& key) const;
 ```
@@ -1194,19 +1192,16 @@ int main( )
 pair<iterator, bool> insert(
     const value_type& Val);
 
-
 // (2) single element, perfect forwarded
 template <class ValTy>
 pair<iterator, bool>
 insert(
     ValTy&& Val);
 
-
 // (3) single element with hint
 iterator insert(
     const_iterator Where,
     const value_type& Val);
-
 
 // (4) single element, perfect forwarded, with hint
 template <class ValTy>
@@ -1214,13 +1209,11 @@ iterator insert(
     const_iterator Where,
     ValTy&& Val);
 
-
 // (5) range
 template <class InputIterator>
 void insert(
     InputIterator First,
     InputIterator Last);
-
 
 // (6) initializer list
 void insert(
@@ -2339,7 +2332,7 @@ value_compare value_comp() const;
 
 ### <a name="remarks"></a>备注
 
-对于多重映射 *m*，如果 *e*1( *k*1, *d*1) 和 *e*2( *k*2, `d`2) 两个元素为类型 `value_type` 的对象，其中 *k*1 和 *k*2 为 `key_type` 类型的键，`d`1 和 `d`2 为 `mapped_type` 类型的数据，则 *m.*`value_comp`( *e*1, *e*2) 等同于 *m.*`key_comp`( *k*1, *k*2)。
+多重映射*m*，如果两个元素*e1*(*k1*， *d1*) 和*e2*(*k2*， *d2*) 的对象的类型`value_type`，其中*k1*并*k2*是其键的类型`key_type`和*d1*并*d2*是其数据类型`mapped_type`，然后`m.value_comp(e1, e2)`等效于`m.key_comp(k1, k2)`。
 
 ### <a name="example"></a>示例
 

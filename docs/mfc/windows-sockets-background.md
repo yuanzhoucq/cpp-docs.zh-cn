@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7fe08de0cbeaf6e70c8d786f3cfc849094117cd2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a6146106a7ae378821fc7133d2d65597d1225cc1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46389523"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50079657"
 ---
 # <a name="windows-sockets-background"></a>Windows 套接字：背景
 
@@ -69,11 +69,11 @@ Windows 套接字规范，Windows 套接字： 为网络计算在 Microsoft Wind
 
 - Stream 套接字
 
-     为没有记录边界的数据流提供 Stream 套接字： 字节流。 流保证传递并进行正确排序和不重复。
+   为没有记录边界的数据流提供 Stream 套接字： 字节流。 流保证传递并进行正确排序和不重复。
 
 - 数据报套接字
 
-     数据报，不能保证传递和可能不会进行序列化作为套接字支持面向记录的数据流发送或不重复。
+   数据报，不能保证传递和可能不会进行序列化作为套接字支持面向记录的数据流发送或不重复。
 
 "序列化"表示的数据包会发送顺序传递。 "无重复"意味着一次只能获取一个特定的数据包。
 

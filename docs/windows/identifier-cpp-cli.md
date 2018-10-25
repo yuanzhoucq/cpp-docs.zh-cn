@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 09a8b69402dbe3812bdd49f8944c979300209bff
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: ee4aa1686980d2baecd0b261a615818fc5a6c0ee
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328267"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082588"
 ---
 # <a name="identifier-ccli"></a>__identifier (C++/CLI)
 
@@ -34,7 +34,7 @@ ms.locfileid: "49328267"
 ### <a name="syntax"></a>语法
 
 ```cpp
-__identifier(C++_keyword)  
+__identifier(C++_keyword)
 ```
 
 ### <a name="remarks"></a>备注
@@ -106,5 +106,5 @@ int main() {
 
 ## <a name="see-also"></a>请参阅
 
-[适用于.NET 和 UWP 组件扩展](../windows/component-extensions-for-runtime-platforms.md)<br/>
-[适用于.NET 和 UWP 组件扩展](../windows/component-extensions-for-runtime-platforms.md)
+[ .NET 和 UWP 的组件扩展](../windows/component-extensions-for-runtime-platforms.md)<br/>
+[ .NET 和 UWP 的组件扩展](../windows/component-extensions-for-runtime-platforms.md)

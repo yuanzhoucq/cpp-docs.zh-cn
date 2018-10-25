@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8a4ac19f9ead379b66d93a7be031bb53bc50fe5
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 7e9e62c1969d61f84319c0ffadf50f9f96534380
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46109335"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055473"
 ---
 # <a name="registry-data-exchange-macros"></a>注册表数据交换宏
 
@@ -39,7 +39,7 @@ ms.locfileid: "46109335"
 |[RDX_BINARY](#rdx_binary)|BYTE 类型的指定的成员变量相关联的指定的注册表项。|
 |[RDX_CSTRING_TEXT](#rdx_cstring_text)|将指定的注册表项与指定的成员类型的变量的 CString 相关联。|
 |[RDX_DWORD](#rdx_dword)|指定的注册表条目相关联的指定的成员变量的类型为 DWORD。|
-|[RDX_TEXT](#rdx_text)|将指定的注册表项与指定的成员类型的变量的 TCHAR 相关联。|  
+|[RDX_TEXT](#rdx_text)|将指定的注册表项与指定的成员类型的变量的 TCHAR 相关联。|
 
 ## <a name="requirements"></a>要求
 
@@ -80,10 +80,10 @@ BYTE 类型的指定的成员变量相关联的指定的注册表项。
 
 ```
 RDX_BINARY(
-    rootkey, 
-    subkey, 
-    valuename, 
-    member, 
+    rootkey,
+    subkey,
+    valuename,
+    member,
     member_size )
 ```
 
@@ -98,7 +98,7 @@ RDX_BINARY(
 *valuename*<br/>
 注册表项中。
 
-*成员*<br/>
+*member*<br/>
 要与指定的注册表项相关联的成员变量。
 
 *member_size*<br/>
@@ -114,10 +114,10 @@ RDX_BINARY(
 
 ```
 RDX_CSTRING_TEXT(
-    rootkey, 
-    subkey, 
-    valuename, 
-    member, 
+    rootkey,
+    subkey,
+    valuename,
+    member,
     member_size )
 ```
 
@@ -132,7 +132,7 @@ RDX_CSTRING_TEXT(
 *valuename*<br/>
 注册表项中。
 
-*成员*<br/>
+*member*<br/>
 要与指定的注册表项相关联的成员变量。
 
 *member_size*<br/>
@@ -148,10 +148,10 @@ RDX_CSTRING_TEXT(
 
 ```
 RDX_DWORD(
-    rootkey, 
-    subkey, 
-    valuename, 
-    member, 
+    rootkey,
+    subkey,
+    valuename,
+    member,
     member_size )
 ```
 
@@ -166,7 +166,7 @@ RDX_DWORD(
 *valuename*<br/>
 注册表项中。
 
-*成员*<br/>
+*member*<br/>
 要与指定的注册表项相关联的成员变量。
 
 *member_size*<br/>
@@ -182,10 +182,10 @@ RDX_DWORD(
 
 ```
 RDX_TEXT(
-    rootkey, 
-    subkey, 
-    valuename, 
-    member, 
+    rootkey,
+    subkey,
+    valuename,
+    member,
     member_size )
 ```
 
@@ -200,7 +200,7 @@ RDX_TEXT(
 *valuename*<br/>
 注册表项中。
 
-*成员*<br/>
+*member*<br/>
 要与指定的注册表项相关联的成员变量。
 
 *member_size*<br/>

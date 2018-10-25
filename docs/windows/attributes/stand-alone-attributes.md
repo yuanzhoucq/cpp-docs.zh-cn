@@ -16,16 +16,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b46b5c3b4750957c548becfcc5143f5eed858f71
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 0df8cb1def78e3a7b564f268eb1b3b0a2069fb11
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790362"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062842"
 ---
 # <a name="stand-alone-attributes"></a>独立特性
+
 独立属性不是 c + + 关键字进行操作，但更像是代码行。 独立特性语句需要行尾的分号。
-  
+
+## <a name="stand-alone-attribute-list"></a>独立的属性列表
+
 |特性|描述|
 |---------------|-----------------|
 |[cpp_quote](cpp-quote.md)|将指定的字符串，而无需引号字符，发送到生成的头文件。|
@@ -40,10 +43,10 @@ ms.locfileid: "48790362"
 |[include](include-cpp.md)|指定要包括在生成的.idl 文件中的一个或多个标头文件。|
 |[includelib](includelib-cpp.md)|导致要生成的.idl 文件中包含的.idl 或.h 文件。|
 |[library_block](library-block.md)|将放置在.idl 文件的库块中的构造。|
-|[模块](module-cpp.md)|定义.Idl 文件中的库块。|
+|[module](module-cpp.md)|定义.Idl 文件中的库块。|
 |[no_injected_text](no-injected-text.md)|禁止编译器注入代码作为特性使用结果。|
 |[pragma](pragma.md)|将指定的字符串，而无需引号字符，发送到生成的.idl 文件。|
-  
+
 ## <a name="see-also"></a>请参阅
 
 [按用法分的特性](attributes-by-usage.md)

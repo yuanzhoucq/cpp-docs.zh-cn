@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9391d99f75bdb5ac2191a65e525ce989aefcd6b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6c4e2f27a6f123d870e56750180a5b7d4ee624fc
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46421279"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50066404"
 ---
 # <a name="walkthrough-creating-a-custom-message-block"></a>演练：创建自定义消息块
 
@@ -92,19 +92,19 @@ ms.locfileid: "46421279"
 
 [!code-cpp[concrt-priority-buffer#2](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_3.h)]
 
-     The `priority_buffer` class stores `message` objects in a `priority_queue` object. These type specializations enable the priority queue to sort messages according to their priority. The priority is the first element of the `tuple` object.
+   `priority_buffer`类存储`message`中的对象`priority_queue`对象。 这些类型专用化启用优先级队列进行排序根据它们的优先级别的消息。 优先级是第一个元素的`tuple`对象。
 
 1. 在中`concurrencyex`命名空间中，声明`priority_buffer`类。
 
 [!code-cpp[concrt-priority-buffer#3](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_4.h)]
 
-     The `priority_buffer` class derives from `propagator_block`. Therefore, it can both send and receive messages. The `priority_buffer` class can have multiple targets that receive messages of type `Type`. It can also have multiple sources that send messages of type `tuple<PriorityType, Type>`.
+   `priority_buffer` 类派生自 `propagator_block`。 因此，它可以同时发送和接收消息。 `priority_buffer`类可以具有多个目标接收消息的类型的`Type`。 它还可以发送消息的类型的多个源`tuple<PriorityType, Type>`。
 
 1. 在中`private`一部分`priority_buffer`类中，添加以下成员变量。
 
 [!code-cpp[concrt-priority-buffer#6](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_5.h)]
 
-     The `priority_queue` object holds incoming messages; the `queue` object holds outgoing messages. A `priority_buffer` object can receive multiple messages simultaneously; the `critical_section` object synchronizes access to the queue of input messages.
+   `priority_queue`对象包含传入消息;`queue`对象保留传出消息。 一个`priority_buffer`对象可以同时接收多个消息;`critical_section`对象同步到输入消息的队列的访问。
 
 1. 在`private`部分中，定义的复制构造函数和赋值运算符。 这可以防止`priority_queue`对象赋值。
 
@@ -122,65 +122,65 @@ ms.locfileid: "46421279"
 
 [!code-cpp[concrt-priority-buffer#9](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_9.h)]
 
-     The `propagate_to_any_targets` method transfers the message that is at the front of the input queue to the output queue and propagates out all messages in the output queue.
+   `propagate_to_any_targets`方法传输位于输入输出队列到队列的开头和传播输出队列中的所有消息的消息。
 
 10. 在中`protected`部分中，定义`accept_message`方法。
 
 [!code-cpp[concrt-priority-buffer#8](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_10.h)]
 
-     When a target block calls the `accept_message` method, the `priority_buffer` class transfers ownership of the message to the first target block that accepts it. (This resembles the behavior of `unbounded_buffer`.)
+   当目标块调用`accept_message`方法，`priority_buffer`类将该消息的所有权转移到第一个目标块接受它。 (这类似于的行为`unbounded_buffer`。)
 
 11. 在中`protected`部分中，定义`reserve_message`方法。
 
 [!code-cpp[concrt-priority-buffer#10](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_11.h)]
 
-     The `priority_buffer` class permits a target block to reserve a message when the provided message identifier matches the identifier of the message that is at the front of the queue. In other words, a target can reserve the message if the `priority_buffer` object has not yet received an additional message and has not yet  propagated out the current one.
+   `priority_buffer`类允许目标块提供的消息标识符匹配的消息位于队列开头的标识符时保留消息。 换而言之，目标可以保留该消息，如果`priority_buffer`对象尚未收到的其他消息，并且当前尚不传播。
 
 12. 在中`protected`部分中，定义`consume_message`方法。
 
 [!code-cpp[concrt-priority-buffer#11](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_12.h)]
 
-     A target block calls `consume_message` to transfer ownership of the message that it reserved.
+   目标块调用`consume_message`要传输的消息，将其保留的所有权。
 
 13. 在中`protected`部分中，定义`release_message`方法。
 
 [!code-cpp[concrt-priority-buffer#12](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_13.h)]
 
-     A target block calls `release_message` to cancel its reservation to a message.
+   目标块调用`release_message`取消消息到其保留。
 
 14. 在中`protected`部分中，定义`resume_propagation`方法。
 
 [!code-cpp[concrt-priority-buffer#13](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_14.h)]
 
-     The runtime calls `resume_propagation` after a target block either consumes or releases a reserved message. This method propagates out any messages that are in the output queue.
+   运行时调用`resume_propagation`目标块使用或释放保留的消息之后。 此方法传播输出队列中的任何消息。
 
 15. 在中`protected`部分中，定义`link_target_notification`方法。
 
 [!code-cpp[concrt-priority-buffer#14](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_15.h)]
 
-     The `_M_pReservedFor` member variable is defined by the base class, `source_block`. This member variable points to the target block, if any, that is holding a reservation to the message that is at the front of the output queue. The runtime calls `link_target_notification` when a new target is linked to the `priority_buffer` object. This method propagates out any messages that are in the output queue if no target is holding a reservation.
+   `_M_pReservedFor`成员变量定义的基类， `source_block`。 此成员变量指向目标块后，如果有持有预订与前面的输出队列的消息。 运行时调用`link_target_notification`时，新目标已链接到`priority_buffer`对象。 此方法传播是输出队列中，如果没有目标存放保留任何消息。
 
 16. 在中`private`部分中，定义`propagate_priority_order`方法。
 
 [!code-cpp[concrt-priority-buffer#15](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_16.h)]
 
-     This method propagates out all messages from the output queue. Every message in the queue is offered to every target block until one of the target blocks accepts the message. The `priority_buffer` class preserves the order of the outgoing messages. Therefore, the first message in the output queue must be accepted by a target block before this method offers any other message to the target blocks.
+   此方法传播输出队列中的所有消息。 在队列中的每条消息提供到每个目标块，直到其中一个目标块接受消息。 `priority_buffer`类保留传出消息的顺序。 因此，输出队列中的第一个消息必须接受由目标块之前此方法还提供了向目标块的任何其他消息。
 
 17. 在中`protected`部分中，定义`propagate_message`方法。
 
 [!code-cpp[concrt-priority-buffer#16](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_17.h)]
 
-     The `propagate_message` method enables the `priority_buffer` class to act as a message receiver, or target. This method receives the message that is offered by the provided source block and inserts that message into the priority queue. The `propagate_message` method then asynchronously sends all output messages to the target blocks.
+   `propagate_message`方法使`priority_buffer`类作为消息接收方或目标。 此方法接收的消息，提供由提供的源块并将该消息插入到优先级队列。 `propagate_message`方法然后以异步方式发送所有消息输出到目标块。
 
-     The runtime calls this method when you call the [concurrency::asend](reference/concurrency-namespace-functions.md#asend) function or when the message block is connected to other message blocks.
+   运行时调用此方法调用时[concurrency:: asend](reference/concurrency-namespace-functions.md#asend)函数或消息块连接至其他消息块。
 
 18. 在中`protected`部分中，定义`send_message`方法。
 
 [!code-cpp[concrt-priority-buffer#17](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_18.h)]
 
-     The `send_message` method resembles `propagate_message`. However it sends the output messages synchronously instead of asynchronously.
+   `send_message`方法类似于`propagate_message`。 但是，它将发送以同步方式而不是以异步方式将输出消息。
 
-     The runtime calls this method during a synchronous send operation, such as when you call the [concurrency::send](reference/concurrency-namespace-functions.md#send) function.
+   运行时调用此方法同步发送操作，例如当你调用期间[concurrency:: send](reference/concurrency-namespace-functions.md#send)函数。
 
 `priority_buffer`类包含很平常的许多消息块类型的构造函数重载。 某些构造函数重载可获取[concurrency:: scheduler](../../parallel/concrt/reference/scheduler-class.md)或[concurrency:: schedulegroup](../../parallel/concrt/reference/schedulegroup-class.md)使消息块由特定任务计划程序管理的对象。 其他构造函数重载采用一个筛选器函数。 筛选器函数，允许接受或拒绝其有效负载基于消息的消息块。 有关消息筛选器的详细信息，请参阅[异步消息块](../../parallel/concrt/asynchronous-message-blocks.md)。 有关任务计划程序的详细信息，请参阅[任务计划程序](../../parallel/concrt/task-scheduler-concurrency-runtime.md)。
 

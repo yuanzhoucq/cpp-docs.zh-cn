@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 411b8f58b38d2b35c1353d1ff446407026977d66
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6537cdb9e7ff9806bef3bfec85a94e0d50808477
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46030139"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078461"
 ---
 # <a name="ccomsafearray-class"></a>CComSafeArray 类
 
@@ -100,7 +100,7 @@ class CComSafeArray
 |----------|-----------------|
 |[CComSafeArray::operator LPSAFEARRAY](#operator_lpsafearray)|将值转换为`SAFEARRAY`指针。|
 |[CComSafeArray::operator\[\]](ccomsafearray-class.md#operator_at)|从数组中检索元素。|
-|[CComSafeArray::operator =](#operator_eq)|赋值运算符。|  
+|[CComSafeArray::operator =](#operator_eq)|赋值运算符。|
 
 ### <a name="public-data-members"></a>公共数据成员
 
@@ -110,7 +110,7 @@ class CComSafeArray
 
 ## <a name="remarks"></a>备注
 
-`CComSafeArray` 提供的包装器[SAFEARRAY Data Type](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagsafearray)类，使其可以轻松地创建和管理单个数组和多维数组的几乎所有支持 VARIANT 的类型。
+`CComSafeArray` 为 [SAFEARRAY Data Type](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagsafearray) 类提供包装器，从而可以轻松地创建并管理几乎所有支持 VARIANT 的类型的一维数组和多维数组。
 
 `CComSafeArray` 可简化数组在进程之间的传递，此外还可以对照上限和下限检查数组索引值，从而提供额外的安全性。
 
@@ -159,7 +159,7 @@ HRESULT Add(const T& t, BOOL bCopy = TRUE);
 ### <a name="parameters"></a>参数
 
 *psaSrc*<br/>
-一个指向`SAFEARRAY`对象。
+指向 `SAFEARRAY` 对象的指针。
 
 *ulCount*<br/>
 要添加到数组的对象数。
@@ -311,7 +311,7 @@ HRESULT Create(ULONG ulCount = 0, LONG lLBound = 0);
 ### <a name="parameters"></a>参数
 
 *pBound*<br/>
-一个指向`SAFEARRAYBOUND`对象。
+指向 `SAFEARRAYBOUND` 对象的指针。
 
 *uDims*<br/>
 数组中的维度数。
@@ -597,7 +597,7 @@ ATL::CComSafeArray<T>& operator=(const SAFEARRAY* psaSrc);
 对 `CComSafeArray` 对象的引用。
 
 *psaSrc*<br/>
-一个指向`SAFEARRAY`对象。
+指向 `SAFEARRAY` 对象的指针。
 
 ### <a name="return-value"></a>返回值
 

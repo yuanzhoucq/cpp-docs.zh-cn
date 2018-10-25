@@ -1,5 +1,5 @@
 ---
-title: fp_contract |Microsoft 文档
+title: fp_contract |Microsoft Docs
 ms.custom: ''
 ms.date: 03/12/2018
 ms.technology:
@@ -18,26 +18,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 514b4708129d625ea7880e4c61be22c4b1ac2db5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 95f23fa132a263970047a480ccde37382b6d03de
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33912883"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052159"
 ---
 # <a name="fpcontract"></a>fp_contract
 
-确定浮点缩写式是否发生。 浮点缩写式是一个指令，如 FMA （Fused Multiply-添加），它将合并两个单独浮点运算成一条指令。 因为而不是每次操作后的舍入，处理器可能舍入一次在这两个操作后，这些指令的使用可能会影响浮点精度。
+确定浮点缩写式是否会发生。 浮点缩写式是一个指令如 FMA （Fused-乘加） 结合了两个单独浮点运算成一条指令。 因为而不是每次操作后的舍入，处理器可能舍入一次只能在这两项操作后，这些指令的使用可能会影响浮点精度。
 
 ## <a name="syntax"></a>语法
 
-> **#pragma fp_contract (** {**上** | **关闭**} **)**  
+> **#pragma fp_contract (** {**上** | **关闭**} **)**
 
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>备注
 
-默认情况下， **fp_contract**是**上**。 这将告知编译器尽可能使用浮点缩写式说明。 设置**fp_contract**到**关闭**保留单独的浮点指令。
+默认情况下**fp_contract**是**上**。 这将告知编译器使用浮点缩写式的说明，在可能的情况。 设置**fp_contract**到**关闭**来保留单个浮点指令。
 
-浮点行为的详细信息，请参阅[/fp （指定浮点行为）](../build/reference/fp-specify-floating-point-behavior.md)。
+有关浮点行为的详细信息，请参阅[/fp （指定浮点行为）](../build/reference/fp-specify-floating-point-behavior.md)。
 
 其他浮点杂注包括：
 
@@ -47,8 +47,8 @@ ms.locfileid: "33912883"
 
 ## <a name="example"></a>示例
 
-此示例从生成的代码不使用 fused multiply-添加指令，即使它是在目标处理器上可用。 如果注释掉`#pragma fp_contract (off)`，生成的代码可能使用 fused multiply-添加指令，如果可用。  
-  
+此示例中生成的代码不使用融合的乘加指令，即使它是可在目标处理器上。 如果注释掉`#pragma fp_contract (off)`，生成的代码可能会使用融合的乘加指令是否可用。
+
 ```cpp
 // pragma_directive_fp_contract.cpp
 // on x86 and x64 compile with: /O2 /fp:fast /arch:AVX2

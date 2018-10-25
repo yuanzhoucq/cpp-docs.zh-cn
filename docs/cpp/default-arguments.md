@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3448f915ae7b738c839ceaa4fb7adeb00492d9f4
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 48261d545737215ff44b1b56bb3b2d48839b6eb4
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46112858"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067054"
 ---
 # <a name="default-arguments"></a>默认自变量
 
@@ -112,7 +112,7 @@ print( d, 0 ); // Override default argument to achieve other
     }
     ```
 
-     此代码的问题在于定义中的函数声明重新定义了 `prec` 的默认参数。
+   此代码的问题在于定义中的函数声明重新定义了 `prec` 的默认自变量。
 
 - 以后的声明可添加额外的默认自变量。
 

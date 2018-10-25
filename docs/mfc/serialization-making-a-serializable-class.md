@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 378a99021ca1b48599ee934d659542384068e195
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2f3824e87a2016a848b3723aaa293f235f6f9b09
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46443340"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054860"
 ---
 # <a name="serialization-making-a-serializable-class"></a>序列化：定义可序列化的类
 
@@ -55,7 +55,7 @@ ms.locfileid: "46443340"
 
 ##  <a name="_core_overriding_the_serialize_member_function"></a> 重写 Serialize 成员函数
 
-在 `Serialize` 类中定义的 `CObject` 成员函数负责实际上序列化捕获对象的当前状态所需的数据。 `Serialize` 函数具有一个 `CArchive` 参数，供它读取和写入对象数据。 [CArchive](../mfc/reference/carchive-class.md)对象具有成员函数时， `IsStoring`，指示是否`Serialize`存储 （写入数据） 或加载 （读取数据）。 使用结果`IsStoring`作为指南，您可以插入对象的数据`CArchive`对象使用插入运算符 (**<\<**) 或使用提取运算符 (提取数据**>>**).
+在 `Serialize` 类中定义的 `CObject` 成员函数负责实际上序列化捕获对象的当前状态所需的数据。 `Serialize` 函数具有一个 `CArchive` 自变量，供它读取和写入对象数据。 [CArchive](../mfc/reference/carchive-class.md)对象具有成员函数时， `IsStoring`，指示是否`Serialize`存储 （写入数据） 或加载 （读取数据）。 使用结果`IsStoring`作为指南，您可以插入对象的数据`CArchive`对象使用插入运算符 (**<\<**) 或使用提取运算符 (提取数据**>>**).
 
 请考虑派生自类`CObject`并且具有的类型的两个新成员变量`CString`并**WORD**。 以下类声明片段显示了新成员变量以及重写的 `Serialize` 成员函数的声明：
 
@@ -67,9 +67,9 @@ ms.locfileid: "46443340"
 
 1. 插入或提取特定于您的类的成员变量。
 
-     插入和提取运算符与存档类交互以读取和写入数据。 以下代码示例演示如何为前面声明的 `Serialize` 类实现 `CPerson`：
+   插入和提取运算符与存档类交互以读取和写入数据。 以下代码示例演示如何为前面声明的 `Serialize` 类实现 `CPerson`：
 
-     [!code-cpp[NVC_MFCSerialization#2](../mfc/codesnippet/cpp/serialization-making-a-serializable-class_2.cpp)]
+   [!code-cpp[NVC_MFCSerialization#2](../mfc/codesnippet/cpp/serialization-making-a-serializable-class_2.cpp)]
 
 此外可以使用[carchive:: Read](../mfc/reference/carchive-class.md#read)并[carchive:: Write](../mfc/reference/carchive-class.md#write)成员函数来读取和写入大量的非类型化数据。
 

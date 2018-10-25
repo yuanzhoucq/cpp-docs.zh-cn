@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9fb72e2961eec53b2dea8e37cfc39ccbcc0c5f27
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6936a48d1a3e1845d56c73524c84800d9d605155
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46397164"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50065500"
 ---
 # <a name="dialog-box-components-in-the-framework"></a>框架中的对话框组件
 
@@ -31,11 +31,11 @@ ms.locfileid: "46397164"
 
 - 对话框模板资源，用来指定对话框的控件及其位置。
 
-     对话框资源存储 Windows 从中创建并显示对话框窗口的对话框模板。 该模板指定对话框的特征，包括其大小、位置、样式以及对话框的控件的类型和位置。 您通常会使用作为资源存储的对话框模板，但您也可以在内存中创建自己的模板。
+   对话框资源存储 Windows 从中创建并显示对话框窗口的对话框模板。 该模板指定对话框的特征，包括其大小、位置、样式以及对话框的控件的类型和位置。 您通常会使用作为资源存储的对话框模板，但您也可以在内存中创建自己的模板。
 
 - 对话框类，派生自[CDialog](../mfc/reference/cdialog-class.md)，以提供用于管理对话框中的一种编程接口。
 
-     对话框是一个窗口，它在可见时将附加到 Windows 窗口。 创建对话框窗口后，对话框模板资源将用作用于创建对话框的子窗口控件的模板。
+   对话框是一个窗口，它在可见时将附加到 Windows 窗口。 创建对话框窗口后，对话框模板资源将用作用于创建对话框的子窗口控件的模板。
 
 ## <a name="see-also"></a>请参阅
 

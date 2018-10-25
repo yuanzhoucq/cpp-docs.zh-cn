@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4cff60e5316202842b2ee22c5c6ba10813839b5d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 127e5187f2e6511279633ffe9b5e26b24014f6b2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46035846"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070642"
 ---
 # <a name="application-settings-atl-project-wizard"></a>应用程序设置，ATL 项目向导
 
@@ -31,15 +31,15 @@ ms.locfileid: "46035846"
 
 选择三种服务器类型之一：
 
-- **动态链接库 (DLL)**  
+- **动态链接库 (DLL)**
 
    选择要创建一个进程内服务器。
 
-- **可执行文件 (EXE)**  
+- **可执行文件 (EXE)**
 
    选择此选项可以创建本地进程外服务器。 此选项不允许对 MFC 或 COM + 1.0 的支持。 它不允许为合并代理/存根 （stub） 代码。
 
-- **服务 (EXE)**  
+- **服务 (EXE)**
 
    选择此项可创建 Windows 启动时在后台运行的 Windows 应用程序。 此选项不允许对 MFC 或 COM + 1.0 的支持或不允许合并代理/存根 （stub） 代码。
 
@@ -48,15 +48,15 @@ ms.locfileid: "46035846"
 > [!NOTE]
 > 所有其他选项都适用于仅限 DLL 项目。
 
-- **允许合并代理/存根 （stub） 代码**  
+- **允许合并代理/存根 （stub） 代码**
 
    选择**允许合并代理/存根代码**为方便起见需要封送接口时的复选框。 此选项将在相同的 MIDL 生成的代理和存根 （stub） 代码可执行文件作为服务器。
 
-- **MFC 支持**  
+- **MFC 支持**
 
    选择此选项可以指定您的对象包括 MFC 支持。 此选项将项目链接到 MFC 库，以便可以访问的任何类和它们所包含的函数。
 
-- **支持 COM + 1.0**  
+- **支持 COM + 1.0**
 
    选择要修改的项目生成设置来支持 COM + 1.0 组件。 除了标准库的列表，该向导将添加 COM + 1.0 组件特定的库 comsvcs.lib
 

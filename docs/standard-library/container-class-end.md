@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d22551a9832b18bbb246ea99dafe75dad11c361
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0062b63c839b7f7f5b3b4c16bf3779e44f7c983b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842477"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083121"
 ---
 # <a name="container-classend"></a>Container Class::end
 
@@ -33,7 +33,6 @@ ms.locfileid: "33842477"
 ```
 
     const_iterator end() const;
-
 
 iterator end();
 ```

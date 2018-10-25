@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69838a690fcdddc58194caf38e3666fef023222c
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 057652eaf1f188cfd61dcfa4a0d433a43ef8c56c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46028046"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068887"
 ---
 # <a name="com-map-macros"></a>COM 映射宏
 
@@ -31,7 +31,7 @@ ms.locfileid: "46028046"
 |||
 |-|-|
 |[BEGIN_COM_MAP](#begin_com_map)|表示 COM 接口映射项的开头。|
-|[END_COM_MAP](#end_com_map)|表示 COM 接口映射项的结尾。|  
+|[END_COM_MAP](#end_com_map)|表示 COM 接口映射项的结尾。|
 
 ## <a name="requirements"></a>要求
 
@@ -52,7 +52,7 @@ BEGIN_COM_MAP(x)
 
 ### <a name="remarks"></a>备注
 
-[CComObjectRootEx::InternalQueryInterface](ccomobjectrootex-class.md#internalqueryinterface)仅在 COM 映射中返回的接口指针。 启动与 BEGIN_COM_MAP 宏保持一致的接口映射，您的接口的每个添加的条目[COM_INTERFACE_ENTRY](com-interface-entry-macros.md#com_interface_entry)宏或其一个变体，并完成对地图[END_COM_MAP](#end_com_map)宏。  
+[CComObjectRootEx::InternalQueryInterface](ccomobjectrootex-class.md#internalqueryinterface)仅在 COM 映射中返回的接口指针。 启动与 BEGIN_COM_MAP 宏保持一致的接口映射，您的接口的每个添加的条目[COM_INTERFACE_ENTRY](com-interface-entry-macros.md#com_interface_entry)宏或其一个变体，并完成对地图[END_COM_MAP](#end_com_map)宏。
 
 ### <a name="example"></a>示例
 

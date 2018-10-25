@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b8d3db1d8c19b68adb8cec53984e0dfe5a189651
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7ff5c3f28a47eb4e1810f046a242f6170c537bf2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46389859"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054923"
 ---
 # <a name="using-common-controls-in-a-dialog-box"></a>在对话框中使用公共控件
 
@@ -42,7 +42,7 @@ ms.locfileid: "46389859"
 
 1. 在中[OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog)对话框类，将设置为公共控件的初始条件。 通过使用在上一步中创建的成员变量，使用成员函数设置初始值和其他设置。 有关设置的详细信息，请参阅下列控件描述。
 
-     此外可以使用[对话框数据交换](../mfc/dialog-data-exchange-and-validation.md)(DDX) 在一个对话框中初始化控件。
+   此外可以使用[对话框数据交换](../mfc/dialog-data-exchange-and-validation.md)(DDX) 在一个对话框中初始化控件。
 
 1. 在对话框控件的处理程序中，使用成员变量操作控件。 有关方法的详细信息，请参阅下列控件描述。
 

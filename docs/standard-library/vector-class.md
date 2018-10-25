@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07dddbcfba7920efdda1f222843299ef29f19f0c
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 926a0f90f366f3644bfce33f15a0a85dd1792a85
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235784"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076745"
 ---
 # <a name="vector-class"></a>vector 类
 
@@ -116,7 +116,7 @@ class vector
 
 ### <a name="parameters"></a>参数
 
-*类型*<br/>
+*Type*<br/>
 要存储在矢量中的元素数据类型
 
 *分配器*<br/>
@@ -370,7 +370,7 @@ const_reference back() const;
 
 如果将 `back` 的返回值分配给 `const_reference`，则无法修改矢量对象。 如果将 `back` 的返回值分配给 `reference`，则可以修改矢量对象。
 
-当使用定义为 1 或 2 的 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) 进行编译时，如果试图访问空矢量中的元素，将发生运行时错误。  有关详细信息，请参阅[经过检查的迭代器](../standard-library/checked-iterators.md)。
+当使用定义为 1 或 2 的 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) 进行编译时，如果试图访问空矢量中的元素，将发生运行时错误。  有关更多信息，请参见 [Checked Iterators](../standard-library/checked-iterators.md) 。
 
 ### <a name="example"></a>示例
 
@@ -402,7 +402,6 @@ int main() {
 
 ```cpp
 const_iterator begin() const;
-
 
 iterator begin();
 ```
@@ -789,7 +788,6 @@ int main( )
 ```cpp
 const_pointer data() const;
 
-
 pointer data();
 ```
 
@@ -1165,7 +1163,7 @@ const_reference front() const;
 
 如果将 `front` 的返回值分配给 `const_reference`，则无法修改矢量对象。 如果将 `front` 的返回值分配给 **reference**，则可以修改矢量对象。
 
-当使用定义为 1 或 2 的 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) 进行编译时，如果试图访问空矢量中的元素，将发生运行时错误。  有关详细信息，请参阅[经过检查的迭代器](../standard-library/checked-iterators.md)。
+当使用定义为 1 或 2 的 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) 进行编译时，如果试图访问空矢量中的元素，将发生运行时错误。  有关更多信息，请参见 [Checked Iterators](../standard-library/checked-iterators.md) 。
 
 ### <a name="example"></a>示例
 
@@ -1410,7 +1408,7 @@ const_reference operator[](size_type Pos) const;
 
 如果将 `operator[]` 的返回值分配给 `const_reference`，则无法修改矢量对象。 如果将 `operator[]` 的返回值分配给引用，则可以修改矢量对象。
 
-当使用定义为 1 或 2 的 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) 进行编译时，如果试图访问矢量边界之外的元素，将发生运行时错误。  有关详细信息，请参阅[经过检查的迭代器](../standard-library/checked-iterators.md)。
+当使用定义为 1 或 2 的 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) 进行编译时，如果试图访问矢量边界之外的元素，将发生运行时错误。  有关更多信息，请参见 [Checked Iterators](../standard-library/checked-iterators.md) 。
 
 ### <a name="example"></a>示例
 
@@ -1554,7 +1552,6 @@ void pop_back();
 
 ```cpp
 void push_back(const T& Val);
-
 
 void push_back(T&& Val);
 ```

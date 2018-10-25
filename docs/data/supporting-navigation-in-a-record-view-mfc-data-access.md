@@ -17,22 +17,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e1cb1b6bb4fa69bb89dd7ddd6b9483b36ea5552a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 49c29a4410db2d4253fbd8afc917cd4298df513c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46078837"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50074821"
 ---
 # <a name="supporting-navigation-in-a-record-view--mfc-data-access"></a>支持在记录视图中导航（MFC 数据访问）
 
-本主题介绍如何支持记录到记录中的移动应用[CRecordView](../mfc/reference/crecordview-class.md)类，包括有关的信息：  
-  
-- [命令处理](../data/command-handlers-for-record-scrolling-mfc-data-access.md)用于记录滚动命令。  
-  
-- [用户界面更新处理程序的滚动](../data/user-interface-updating-for-record-views-mfc-data-access.md)命令。  
-  
-## <a name="see-also"></a>请参阅  
+本主题介绍如何支持记录到记录中的移动应用[CRecordView](../mfc/reference/crecordview-class.md)类，包括有关的信息：
+
+- [命令处理](../data/command-handlers-for-record-scrolling-mfc-data-access.md)用于记录滚动命令。
+
+- [用户界面更新处理程序的滚动](../data/user-interface-updating-for-record-views-mfc-data-access.md)命令。
+
+## <a name="see-also"></a>请参阅
 
 [记录视图（MFC 数据访问）](../data/record-views-mfc-data-access.md)<br/>
 [ODBC 驱动程序列表](../data/odbc/odbc-driver-list.md)

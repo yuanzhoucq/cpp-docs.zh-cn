@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f029460f03589619de25c0d3240bb03edca095bb
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4685b050f7fca71a8aaaf05b072069bdd985ccdc
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46392341"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50061672"
 ---
 # <a name="cmfctooltipinfo-class"></a>CMFCToolTipInfo 类
 
@@ -259,7 +259,7 @@ CMFCToolTipInfo& operator=(CMFCToolTipInfo& src);
 
 ### <a name="parameters"></a>参数
 
-[in]*src*
+[in]*src*<br/>
 
 ### <a name="return-value"></a>返回值
 

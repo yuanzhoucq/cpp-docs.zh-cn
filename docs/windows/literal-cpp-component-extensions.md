@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8168b3cd981bb288df35659ffd3520a7c8597d1e
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 626f05dff87bcff2d10d0726bcc10dfa767117d5
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328060"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069916"
 ---
 # <a name="literal-ccli-and-ccx"></a>文本 (C + + /cli 和 C + + /cli CX)
 
@@ -91,11 +91,11 @@ public ref struct A {
 注意 `sc` 和 `lit` 在元数据上的区别：`modopt` 指令应用于 `sc`，表示其他编译器会将其忽略。
 
 ```
-.field public static int32 modopt([mscorlib]System.Runtime.CompilerServices.IsConst) sc = int32(0x0000000A)  
+.field public static int32 modopt([mscorlib]System.Runtime.CompilerServices.IsConst) sc = int32(0x0000000A)
 ```
 
 ```
-.field public static literal int32 lit = int32(0x0000000A)  
+.field public static literal int32 lit = int32(0x0000000A)
 ```
 
 ## <a name="example"></a>示例
@@ -137,4 +137,4 @@ class B {
 
 ## <a name="see-also"></a>请参阅
 
-[适用于.NET 和 UWP 组件扩展](../windows/component-extensions-for-runtime-platforms.md)
+[ .NET 和 UWP 的组件扩展](../windows/component-extensions-for-runtime-platforms.md)

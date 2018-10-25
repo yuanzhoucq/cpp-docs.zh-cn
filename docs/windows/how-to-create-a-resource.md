@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 61105469abc25de38d0d9ae9a59755e08fd298b6
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 23717c35d0590c88a4904e5b6b6ddb0e4c7ccffc
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46438634"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50071962"
 ---
 # <a name="how-to-create-a-resource"></a>如何：创建资源
 
@@ -33,7 +33,7 @@ ms.locfileid: "46438634"
 
 1. 与你的.rc 文件中的焦点[资源视图](../windows/resource-view-window.md)，单击**编辑**菜单，然后选择**添加资源**(或右键单击.rc 文件中的**资源视图** ，然后选择**添加资源**从快捷菜单)。
 
-   > [!NOTE] 
+   > [!NOTE]
    > 如果你的项目尚未包含 .rc 文件，请参阅 [创建新的资源脚本文件](../windows/how-to-create-a-resource-script-file.md)。
 
 2. 在 [“添加资源”对话框](../windows/add-resource-dialog-box.md)中，选择你想要向项目中添加的资源的类型。
@@ -48,7 +48,7 @@ ms.locfileid: "46438634"
 
 ### <a name="to-create-a-new-resource-in-class-view"></a>在“类视图”中创建新资源
 
-1. 在中[类视图](/visualstudio/ide/viewing-the-structure-of-code)，右键单击您的类，然后选择**添加**，然后单击**添加资源**从快捷菜单。
+1. 在 [“类视图”](/visualstudio/ide/viewing-the-structure-of-code)中，右击你的类，选择 **“添加”**，然后从快捷菜单单击 **“添加资源”** 。
 
 2. 在 [“添加资源”对话框](../windows/add-resource-dialog-box.md)中，选择你想要向项目中添加的资源的类型。
 
@@ -70,4 +70,4 @@ Win32
 
 [资源文件](../windows/resource-files-visual-studio.md)<br/>
 [资源编辑器](../windows/resource-editors.md)<br/>
-[“添加资源”对话框](../windows/add-resource-dialog-box.md)
+[Add Resource Dialog Box](../windows/add-resource-dialog-box.md)

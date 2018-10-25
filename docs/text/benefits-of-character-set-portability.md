@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 115a4524f3b11d847291015f3bee5ca10f628310
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d016b95ea2a2d5d94b8db47a2d6c9d5cc577083f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46423437"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50064441"
 ---
 # <a name="benefits-of-character-set-portability"></a>字符集可迁移性的好处
 
@@ -29,7 +29,6 @@ ms.locfileid: "46423437"
 - 移植编码使基本代码的灵活性。 你可以稍后它轻松转移到 Unicode 或 MBCS。
 
 - 使用 Unicode 使 Windows 应用程序更高效。 由于 Windows 使用 Unicode，因此必须转换传递到和从操作系统的非 Unicode 字符串，这可能会产生开销。
-
 
 ## <a name="see-also"></a>请参阅
 

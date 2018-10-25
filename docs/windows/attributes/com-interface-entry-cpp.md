@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 06377d9fc3f0eff1487c5d920d257d68bece46b2
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 6ccd3277b5ad627c6956e6f5620ee6aed1640cc5
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790386"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50074002"
 ---
 # <a name="cominterfaceentry-c"></a>com_interface_entry (C++)
 
@@ -44,7 +44,7 @@ ms.locfileid: "48790386"
 
 **Com_interface_entry** c + + 属性将 unabridged 的字符字符串的内容插入到目标对象的 COM 接口映射。 如果该属性一次应用于目标对象，该条目插入到现有的接口映射的开头。 如果该特性重复应用于相同的目标对象，会将条目插入按接收的顺序中的接口映射的开头。
 
-此属性要求[组件类](coclass.md)， [progid](progid.md)，或[vi_progid](vi-progid.md)属性 （或隐含其中一种的另一个属性） 也应用于同一个元素。 如果使用任何单个属性，则会自动应用另外两个属性。 例如，如果`progid`应用时，`vi_progid`和`coclass`也会应用。
+此属性要求 [coclass](coclass.md)、 [progid](progid.md)或 [vi_progid](vi-progid.md) 属性（或隐含这些属性之一的其他属性）也应用于同一个元素。 如果使用任何单个属性，则会自动应用另外两个属性。 例如，如果`progid`应用时，`vi_progid`和`coclass`也会应用。
 
 因为第一个**com_interface_entry**导致新的接口的接口映射开头插入它必须是以下 COM_INTERFACE_ENTRY 类型之一：
 
@@ -93,7 +93,7 @@ __interface IMyClass{};
 [ coclass,
   com_interface_entry ("COM_INTERFACE_ENTRY (IMyClass)"),
   com_interface_entry ("COM_INTERFACE_ENTRY_NOINTERFACE(IDebugTest)"),
-  uuid("b85f8626-e76e-4775-b6a0-4826a9e94af2")  
+  uuid("b85f8626-e76e-4775-b6a0-4826a9e94af2")
 ]
 
 class CMyClass: public IMyClass, public IDebugTest
@@ -104,14 +104,14 @@ class CMyClass: public IMyClass, public IDebugTest
 为生成的 COM 对象映射`CMyBaseClass`如下所示：
 
 ```cpp
-BEGIN_COM_MAP(CMyClass)  
-    COM_INTERFACE_ENTRY (IMyClass)  
-    COM_INTERFACE_ENTRY_NOINTERFACE(IDebugTest)  
-    COM_INTERFACE_ENTRY(IMyClass)  
-    COM_INTERFACE_ENTRY2(IDispatch, IMyClass)  
-    COM_INTERFACE_ENTRY(IDebugTest)  
-    COM_INTERFACE_ENTRY(IProvideClassInfo)  
-END_COM_MAP()  
+BEGIN_COM_MAP(CMyClass)
+    COM_INTERFACE_ENTRY (IMyClass)
+    COM_INTERFACE_ENTRY_NOINTERFACE(IDebugTest)
+    COM_INTERFACE_ENTRY(IMyClass)
+    COM_INTERFACE_ENTRY2(IDispatch, IMyClass)
+    COM_INTERFACE_ENTRY(IDebugTest)
+    COM_INTERFACE_ENTRY(IProvideClassInfo)
+END_COM_MAP()
 ```
 
 ## <a name="requirements"></a>要求
@@ -125,10 +125,10 @@ END_COM_MAP()
 |**必需的特性**|一个或多个以下： `coclass`， `progid`，或`vi_progid`。|
 |**无效的特性**|无|
 
-有关特性上下文的详细信息，请参阅[特性上下文](cpp-attributes-com-net.md#contexts)。
+有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
 ## <a name="see-also"></a>请参阅
 
 [COM 特性](com-attributes.md)<br/>
 [类特性](class-attributes.md)<br/>
-[Typedef、Enum、Union 和 Struct 特性](typedef-enum-union-and-struct-attributes.md)  
+[Typedef、Enum、Union 和 Struct 特性](typedef-enum-union-and-struct-attributes.md)

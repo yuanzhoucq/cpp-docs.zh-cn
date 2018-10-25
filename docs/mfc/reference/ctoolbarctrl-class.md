@@ -192,12 +192,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2473f33508274bb0f0aa9aebcb462973ec80b267
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: 7334fe1a48f0828a542baa77670f3ad7888b52e2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48890811"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083550"
 ---
 # <a name="ctoolbarctrl-class"></a>CToolBarCtrl 类
 
@@ -371,7 +371,6 @@ Windows 工具栏公共控件是包含一个或多个按钮的矩形的子窗口
 int AddBitmap(
     int nNumButtons,
     UINT nBitmapID);
-
 
 int AddBitmap(
     int nNumButtons,

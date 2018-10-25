@@ -13,20 +13,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e8251f45d07e8a410c41a89fbc618839e9bbb838
-ms.sourcegitcommit: 6a6b2061db9d51c5cc79775512de54589a4d2fbc
+ms.openlocfilehash: 6ea59ae2cb0c12a60a8463434105f1cc6af0a77d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49347223"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50073522"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>C++ 中 Windows 编程概述
 
 您可以使用 Visual c + + 编写多种 (x 86、 x64 或 ARM） 的 Windows PC 运行的程序在云中或 Xbox 上的 Windows 服务器上。 编写良好的 c + + 程序具有这些质量：
+
 - 有效内存要求
-- 节约功耗 
+- 节约功耗
 - 能够充分利用多核和众核设备
-- 能够执行图形处理单元 (GPU) 上的常规计算  
+- 能够执行图形处理单元 (GPU) 上的常规计算
 - 能够利用硬件中的其他最新进展。
 
 Windows 应用有好几大类别可以使用 Visual C ++ 进行开发。 这些类别具有不同的编程模型或应用程序模型，多年来引入了。 每个模型使用不同的库和 Api 来提供对平台的访问，并创建用户界面如窗口和对话框。 可在任何这些类别中，有几个限制适用于 UWP 的 c + + 标准库以及第三方库。
@@ -98,7 +99,7 @@ Microsoft 库包括：
 
 - 并发运行时：一种可以简化多核和众核设备编程的并行和异步编程工作的库。 有关详细信息，请参阅 [Concurrency Runtime](../parallel/concrt/concurrency-runtime.md)。
 
-许多 Windows 编程方案还需要 Windows SDK，Windows SDK 包括可以实现对 Windows 操作系统组件访问的标头文件。 默认情况下，Visual Studio 安装 Windows SDK 的 c + + 桌面工作负载，从而使开发通用 Windows 应用的组件。 若要开发 UWP 应用，需要 Windows SDK 的 Windows 10 版本。 有关信息，请参阅[Windows 10 SDK](https://dev.windows.com/downloads/windows-10-sdk)。 (适用于 Windows 的早期版本的 Windows sdk 的详细信息，请参阅[Windows SDK 存档](https://developer.microsoft.com/windows/downloads/sdk-archive))。 
+许多 Windows 编程方案还需要 Windows SDK，Windows SDK 包括可以实现对 Windows 操作系统组件访问的标头文件。 默认情况下，Visual Studio 安装 Windows SDK 的 c + + 桌面工作负载，从而使开发通用 Windows 应用的组件。 若要开发 UWP 应用，需要 Windows SDK 的 Windows 10 版本。 有关信息，请参阅[Windows 10 SDK](https://dev.windows.com/downloads/windows-10-sdk)。 (适用于 Windows 的早期版本的 Windows sdk 的详细信息，请参阅[Windows SDK 存档](https://developer.microsoft.com/windows/downloads/sdk-archive))。
 
 **程序文件 (x86) \Windows 工具包**是已安装的 Windows sdk 的所有版本的默认位置。
 

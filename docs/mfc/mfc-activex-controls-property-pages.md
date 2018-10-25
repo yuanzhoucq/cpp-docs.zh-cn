@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04a533acecd837fd5bad51612ce7b7eced841178
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 19dc08fc29de4affaea987025a2bc8b92bc56460
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46376481"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50079852"
 ---
 # <a name="mfc-activex-controls-property-pages"></a>MFC ActiveX 控件：属性页
 
@@ -86,7 +86,7 @@ ActiveX 控件属性页会显示在两种方法：
 
 1. 打开 IDD_PROPPAGE_SAMPLE 对话框。
 
-     ActiveX 控件向导的对话框 ID，在这种情况下，示例末尾追加的项目的名称。
+   ActiveX 控件向导的对话框 ID，在这种情况下，示例末尾追加的项目的名称。
 
 1. 拖放所选的控件从工具箱拖动到对话框框区域。
 

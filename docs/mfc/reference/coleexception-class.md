@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e3b93e2c52feab4dea5c4d069d48991a2e14ee54
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2705a1889e7b9c9c0960cce45b8dc7b411e16982
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46438894"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060997"
 ---
 # <a name="coleexception-class"></a>COleException 类
 
@@ -115,13 +115,11 @@ SCODE 的详细信息，请参阅[COM 错误代码的结构](/windows/desktop/co
 
 ### <a name="example"></a>示例
 
-  有关示例，请参阅[coledispatchdriver:: Createdispatch](../../mfc/reference/coledispatchdriver-class.md#createdispatch)。
+  请参阅 [COleDispatchDriver::CreateDispatch](../../mfc/reference/coledispatchdriver-class.md#createdispatch)的示例。
 
 ## <a name="see-also"></a>请参阅
 
 [MFC 示例 CALCDRIV](../../visual-cpp-samples.md)<br/>
 [CException 类](../../mfc/reference/cexception-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)
-
-
 

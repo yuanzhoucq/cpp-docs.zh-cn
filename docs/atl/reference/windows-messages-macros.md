@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58c9f26b33c3ab2bcdc4e7f0c0a676835da0e3c3
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 3f9d312104254323e98f6b2fd031adf1064ecfac
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758838"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078214"
 ---
 # <a name="windows-messages-macros"></a>Windows 消息宏
 
@@ -27,7 +27,7 @@ ms.locfileid: "43758838"
 
 |||
 |-|-|
-|[WM_FORWARDMSG](#wm_forwardmsg)|使用转发到另一个窗口中进行处理的窗口收到的消息。|  
+|[WM_FORWARDMSG](#wm_forwardmsg)|使用转发到另一个窗口中进行处理的窗口收到的消息。|
 
 ## <a name="requirements"></a>要求
 

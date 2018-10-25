@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 622c0720f55e638d6640094f095e59d2d5e5f931
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f756da8f553d68e89dcbee737adbab75f256ae8d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46069334"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053118"
 ---
 # <a name="specifying-compiler-optimization-for-an-atl-project"></a>指定 ATL 项目的编译器优化
 
@@ -51,7 +51,7 @@ ATL 然后定义 _ATL_NO_VTABLE，如下所示：
 
 必须使用 ATL_NO_VTABLE，并由此`declspec(novtable)`，与仅基类，这些类不是直接可创建对象。 您必须使用`declspec(novtable)`使用派生程度最高的类在项目中，因为此类 (通常[CComObject](../../atl/reference/ccomobject-class.md)， [CComAggObject](../../atl/reference/ccomaggobject-class.md)，或[CComPolyObject](../../atl/reference/ccompolyobject-class.md))初始化你的项目的 vtable 指针。
 
-您不得使用任何对象的构造函数从调用虚函数`declspec(novtable)`。 应将移到这些调用[FinalConstruct](ccomobjectrootex-class.md#finalconstruct)方法。  
+您不得使用任何对象的构造函数从调用虚函数`declspec(novtable)`。 应将移到这些调用[FinalConstruct](ccomobjectrootex-class.md#finalconstruct)方法。
 
 如果您不确定是否应该使用`declspec(novtable)`修饰符，您可以从任何类定义中，删除 ATL_NO_VTABLE 宏或，可以通过指定全局禁止
 

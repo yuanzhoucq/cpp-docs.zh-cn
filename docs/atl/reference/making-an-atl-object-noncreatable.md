@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0b20cbae3036ffecfa63f2e3ee6be8e2153fc8f
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: fff45e65fde53d5621d35766e7170c300ee138f9
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48860909"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068471"
 ---
 # <a name="making-an-atl-object-noncreatable"></a>使 ATL 对象不可创建
 
@@ -34,14 +34,14 @@ ms.locfileid: "48860909"
 
 1. 添加[noncreatable](../../windows/noncreatable.md) .idl 文件中组件类的属性。 例如：
 
-    ```  
-    [uuid(A1992E3D-3CF0-11D0-826F-00A0C90F2851), 
-    helpstring("MyObject"), 
-    noncreatable]  
-    coclass MyObject  
-    {  
-        [default] interface IMyInterface;  
-    }  
+    ```
+    [uuid(A1992E3D-3CF0-11D0-826F-00A0C90F2851),
+    helpstring("MyObject"),
+    noncreatable]
+    coclass MyObject
+    {
+        [default] interface IMyInterface;
+    }
     ```
 
 ## <a name="see-also"></a>请参阅

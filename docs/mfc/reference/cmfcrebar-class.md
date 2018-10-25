@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db431b80a569436aab477b89be447ee6df1932b2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e3b91d0397b1eec53988e7acd5a5b7dce61db4ec
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46423996"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059878"
 ---
 # <a name="cmfcrebar-class"></a>CMFCReBar 类
 
@@ -81,7 +81,7 @@ Rebar 对象的行为类似于工具栏对象。 Rebar 控件可以包含一个�
 
 ## <a name="example"></a>示例
 
-下面的示例演示如何使用中的各种方法`CMFCReBar`类。 该示例演示如何创建 rebar 控件并向其添加带区。 带区充当内部工具栏。 此代码片段属于[Rebar 测试示例](../../visual-cpp-samples.md)。
+下面的示例演示了如何使用 `CMFCReBar` 类中的各种方法。 该示例演示如何创建 rebar 控件并向其添加带区。 带区充当内部工具栏。 此代码片段属于[Rebar 测试示例](../../visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_RebarTest#1](../../mfc/reference/codesnippet/cpp/cmfcrebar-class_1.h)]
 [!code-cpp[NVC_MFC_RebarTest#2](../../mfc/reference/codesnippet/cpp/cmfcrebar-class_2.cpp)]
@@ -117,12 +117,14 @@ BOOL AddBar(
 
 ### <a name="parameters"></a>参数
 
-[in][out]*pBar*指向要插入到 rebar 的子窗口的指针。 引用的对象必须具有**WS_CHILD**窗口样式。
+*pBar*<br/>
+[in、 out]指向要插入到 rebar 的子窗口的指针。 引用的对象必须具有**WS_CHILD**窗口样式。
 
 *pszText*<br/>
 [in]指定在 rebar 中显示的文本。 文本不是子窗口的一部分。 相反，它被显示在 rebar 本身。
 
-[in][out]*pbmp*指定要在 rebar 背景上显示的位图。
+*pbmp*<br/>
+[in、 out]指定要在 rebar 背景上显示的位图。
 
 *dwStyle*<br/>
 [in]包含要应用于带区的样式。 带样式的完整列表，请参阅的说明`fStyle`中[REBARBANDINFO](/windows/desktop/api/commctrl/ns-commctrl-tagrebarbandinfoa) Windows SDK 文档中的结构。
@@ -151,7 +153,8 @@ BOOL Create(
 
 ### <a name="parameters"></a>参数
 
-[in][out]*pParentWnd*指向此 rebar 控件的父窗口的指针。
+*pParentWnd*<br/>
+[in、 out]指向此 rebar 控件的父窗口的指针。
 
 *dwCtrlStyle*<br/>
 [in]指定对 rebar 控件的样式。 默认样式值是**RBS_BANDBORDERS**，它显示缩小范围行来分隔相邻带，可在 rebar 控件。 有关有效的样式的列表，请参阅[Rebar 控件样式](/windows/desktop/Controls/rebar-control-styles)Windows SDK 文档中。
@@ -186,7 +189,6 @@ CReBarCtrl& GetReBarCtrl() const;
 
 ##  <a name="calcfixedlayout"></a>  CMFCReBar::CalcFixedLayout
 
-
 ```
 virtual CSize CalcFixedLayout(
     BOOL bStretch,
@@ -195,15 +197,14 @@ virtual CSize CalcFixedLayout(
 
 ### <a name="parameters"></a>参数
 
-*bStretch*<br/>
-[in][in]*bHorz*
+[in]*bStretch*<br/>
+[in]*bHorz*<br/>
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
 ##  <a name="canfloat"></a>  CMFCReBar::CanFloat
-
 
 ```
 virtual BOOL CanFloat() const;
@@ -215,19 +216,17 @@ virtual BOOL CanFloat() const;
 
 ##  <a name="enabledocking"></a>  CMFCReBar::EnableDocking
 
-
 ```
 void EnableDocking(DWORD dwDockStyle);
 ```
 
 ### <a name="parameters"></a>参数
 
-[in]*dwDockStyle*
+[in]*dwDockStyle*<br/>
 
 ### <a name="remarks"></a>备注
 
 ##  <a name="getrebarbandinfosize"></a>  CMFCReBar::GetReBarBandInfoSize
-
 
 ```
 UINT GetReBarBandInfoSize() const;
@@ -239,21 +238,19 @@ UINT GetReBarBandInfoSize() const;
 
 ##  <a name="onshowcontrolbarmenu"></a>  CMFCReBar::OnShowControlBarMenu
 
-
 ```
 virtual BOOL OnShowControlBarMenu(CPoint);
 ```
 
 ### <a name="parameters"></a>参数
 
-[in]*CPoint*
+[in]*CPoint*<br/>
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
 ##  <a name="ontoolhittest"></a>  CMFCReBar::OnToolHitTest
-
 
 ```
 virtual INT_PTR OnToolHitTest(
@@ -263,15 +260,14 @@ virtual INT_PTR OnToolHitTest(
 
 ### <a name="parameters"></a>参数
 
-*点*<br/>
-[in][in]*pTI*
+[in]*点*<br/>
+[in]*pTI*<br/>
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
 ##  <a name="onupdatecmdui"></a>  CMFCReBar::OnUpdateCmdUI
-
 
 ```
 virtual void OnUpdateCmdUI(
@@ -281,13 +277,12 @@ virtual void OnUpdateCmdUI(
 
 ### <a name="parameters"></a>参数
 
-*pTarget*<br/>
-[in][in]*bDisableIfNoHndler*
+[in]*pTarget*<br/>
+[in]*bDisableIfNoHndler*<br/>
 
 ### <a name="remarks"></a>备注
 
 ##  <a name="setpanealignment"></a>  CMFCReBar::SetPaneAlignment
-
 
 ```
 virtual void SetPaneAlignment(DWORD dwAlignment);
@@ -295,7 +290,7 @@ virtual void SetPaneAlignment(DWORD dwAlignment);
 
 ### <a name="parameters"></a>参数
 
-[in]*dwAlignment*
+[in]*dwAlignment*<br/>
 
 ### <a name="remarks"></a>备注
 

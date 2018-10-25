@@ -15,16 +15,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c9cb2003b857bb156709e4ba2a3345dfb57bfd3c
-ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
+ms.openlocfilehash: 5a989466cff50d7e336bc9af8fee68f7ab72929d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49808935"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054912"
 ---
 # <a name="creating-a-simple-consumer"></a>创建简单使用者
 
-使用 ATL 项目向导和 ATL OLE DB 使用者向导生成的 OLE DB 模板使用者。
+使用**ATL 项目向导**并**ATL OLE DB 使用者向导**生成的 OLE DB 模板使用者。
 
 ## <a name="to-create-a-console-application-for-an-ole-db-consumer"></a>若要为 OLE DB 使用者创建一个控制台应用程序
 
@@ -42,7 +42,7 @@ ms.locfileid: "49808935"
 
 1. 单击**确定**若要关闭向导并生成该项目。
 
-接下来，使用 ATL OLE DB 使用者向导添加 OLE DB 使用者对象。
+接下来，使用**ATL OLE DB 使用者向导**添加 OLE DB 使用者对象。
 
 ## <a name="to-create-a-consumer-with-the-atl-ole-db-consumer-wizard"></a>若要创建使用者使用 ATL OLE DB 使用者向导
 
@@ -54,7 +54,7 @@ ms.locfileid: "49808935"
 
 1. 在中**类别**窗格中，单击**已安装** > **Visual c + +** > **ATL**，单击**ATL OLEDB 使用者**中的图标**模板**窗格中，，然后单击**添加**。
 
-   ATL OLEDB 使用者向导会显示。
+   **ATL OLEDB 使用者向导**出现。
 
 1. 单击**数据源**按钮。
 
@@ -62,26 +62,26 @@ ms.locfileid: "49808935"
 
 1. 在中**数据链接属性**对话框框中，执行以下操作：
 
-   - 上**提供程序**选项卡上，指定 OLE DB 访问接口。
+    1. 上**提供程序**选项卡上，指定 OLE DB 访问接口。
 
-   - 上**连接**选项卡上，在服务器上指定所需的信息，例如服务器名称、 登录 ID 和数据源和数据库的密码。
+    1. 上**连接**选项卡上，在服务器上指定所需的信息，例如服务器名称、 登录 ID 和数据源和数据库的密码。
 
-   > [!NOTE]
-   > 安全问题**允许保存密码**的功能**数据链接属性**对话框。 在中**输入信息以登录到服务器上**，有两个单选按钮：**使用 Windows NT 集成安全性**并**使用特定用户名和密码**。
+       > [!NOTE]
+       > 安全问题**允许保存密码**的功能**数据链接属性**对话框。 在中**输入信息以登录到服务器上**，有两个单选按钮：**使用 Windows NT 集成安全性**并**使用特定用户名和密码**。
 
-   > [!NOTE]
-   > 如果选择**使用特定用户名和密码**，可以选择保存密码 (使用**允许保存密码**复选框); 但是，此选项是不安全。 我们建议您选择**使用 Windows NT 集成安全性**; 此选项使用 Windows NT 身份验证。
+       > [!NOTE]
+       > 如果选择**使用特定用户名和密码**，可以选择保存密码 (使用**允许保存密码**复选框); 但是，此选项是不安全。 我们建议您选择**使用 Windows NT 集成安全性**; 此选项使用 Windows NT 身份验证。
 
-   > [!NOTE]
-   > 如果无法使用 Windows NT 集成安全性，应使用的中间层应用程序提示用户输入密码或者与安全机制来帮助保护其将密码存储在一个位置 (而不是在源代码中)。
+       > [!NOTE]
+       > 如果无法使用 Windows NT 集成安全性，应使用的中间层应用程序提示用户输入密码或者与安全机制来帮助保护其将密码存储在一个位置 (而不是在源代码中)。
 
-   选择您的提供程序和其他设置后，单击**测试连接**验证在前面的对话框页上所做的选择。 如果**结果**框报表`Test connection succeeded`，单击**确定**若要创建数据链接。
+   1. 选择您的提供程序和其他设置后，单击**测试连接**验证在前面的对话框页上所做的选择。 如果**结果**框报表`Test connection succeeded`，单击**确定**若要创建数据链接。
 
    **选择数据库对象**对话框随即出现。
 
-1. 使用树控件选择表、 视图或存储的过程。 在此过程中，选择`Products`表从`Northwind`数据库。
+1. 使用树控件选择表、 视图或存储的过程。 对于此示例中，选择`Products`表从`Northwind`数据库。
 
-1. 单击 **“确定”**。 此操作将返回到 ATL OLE DB 使用者向导。
+1. 单击 **“确定”**。 你将返回到**ATL OLE DB 使用者向导**。
 
 1. 在向导完成的名称`Class`并 **.h 文件**基于名称的表、 视图或存储所选的过程。 如果需要，可以编辑这些名称。
 
@@ -93,14 +93,14 @@ ms.locfileid: "49808935"
 
 1. 下**支持**，将保留**更改**，**插入**，以及**删除**框被清除。
 
-   选择**更改**，**插入**，并**删除**复选框，以根据需要支持更改、 插入和删除的行集中的记录。 详细了解数据写入数据存储，请参阅[更新行集](../../data/oledb/updating-rowsets.md)。
+   选择**更改**，**插入**，并**删除**复选框，以支持更改、 插入和删除行集中的记录。 详细了解数据写入数据存储，请参阅[更新行集](../../data/oledb/updating-rowsets.md)。
 
 1. 单击**完成**若要创建使用者。
 
 该向导生成命令类和用户记录类，如中所示[使用者向导生成的类](../../data/oledb/consumer-wizard-generated-classes.md)。 命令类将具有你在中输入的名称`Class`向导中框 (在这种情况下， `CProducts`)，用户记录类将具有窗体的名称"*ClassName*访问器"(在这种情况下， `CProductsAccessor`)。
 
 > [!NOTE]
-> 该向导将放入 Products.h 的以下行：
+> 该向导将放到以下行`Products.h`:
 
 ```cpp
 #error Security Issue: The connection string may contain a password

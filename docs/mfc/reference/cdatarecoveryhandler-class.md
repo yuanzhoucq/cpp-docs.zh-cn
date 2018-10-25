@@ -72,12 +72,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7eedad2e1efb72d85da893764fbd1201b9ac4b3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1e038cc779f2a007d680eb8b2577881a55b81d4c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46417275"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076667"
 ---
 # <a name="cdatarecoveryhandler-class"></a>CDataRecoveryHandler 类
 
@@ -234,7 +234,6 @@ CDataRecoveryHandler(
 ### <a name="remarks"></a>备注
 
 MFC 框架会自动创建`CDataRecoveryHandler`为应用程序时使用的对象**新建项目**向导。 除非自定义数据恢复行为或重新启动管理器时，不应创建`CDataRecoveryHandler`对象。
-
 
 ##  <a name="createdocumentinfo"></a>  CDataRecoveryHandler::CreateDocumentInfo
 

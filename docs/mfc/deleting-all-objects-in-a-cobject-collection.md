@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3374b2a292fc6463cb4fd85d0cd56fe9c3556443
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 986bc24c57f8692bfdd98194b9e58c9cee6817f6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448241"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067184"
 ---
 # <a name="deleting-all-objects-in-a-cobject-collection"></a>删除 CObject 集合中的所有对象
 
@@ -68,9 +68,9 @@ ms.locfileid: "46448241"
 
 1. 在删除数组中的所有元素后，调用 `RemoveAll` 函数从数组中移除这些元素。
 
-     删除数组所有元素的代码如下所示：
+   删除数组所有元素的代码如下所示：
 
-     [!code-cpp[NVC_MFCCollections#18](../mfc/codesnippet/cpp/deleting-all-objects-in-a-cobject-collection_2.cpp)]
+   [!code-cpp[NVC_MFCCollections#18](../mfc/codesnippet/cpp/deleting-all-objects-in-a-cobject-collection_2.cpp)]
 
 与上述列表示例一样，您可调用 `RemoveAll` 删除数组中的所有元素或调用 `RemoveAt` 删除独立元素。
 
@@ -82,9 +82,9 @@ ms.locfileid: "46448241"
 
 1. 在删除映射中的所有元素后，调用 `RemoveAll` 函数从映射中移除这些元素。
 
-     删除 `CMap` 集合的所有元素的代码如下所示。 映射中每个元素都具有一个作为键的字符串和一个作为值的 `CPerson` 对象（派生自 `CObject`）。
+   删除 `CMap` 集合的所有元素的代码如下所示。 映射中每个元素都具有一个作为键的字符串和一个作为值的 `CPerson` 对象（派生自 `CObject`）。
 
-     [!code-cpp[NVC_MFCCollections#19](../mfc/codesnippet/cpp/deleting-all-objects-in-a-cobject-collection_3.cpp)]
+   [!code-cpp[NVC_MFCCollections#19](../mfc/codesnippet/cpp/deleting-all-objects-in-a-cobject-collection_3.cpp)]
 
 您可以调用 `RemoveAll` 删除映射中的所有元素或调用 `RemoveKey` 删除具有指定键的独立元素。
 

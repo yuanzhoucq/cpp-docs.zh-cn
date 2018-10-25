@@ -1,7 +1,7 @@
 ---
 title: CMFCAcceleratorKeyAssignCtrl 类 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92b2fb4d9d96045886533f287fa7048d0b07c866
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 67ceb42c5d7f804c2d9a5c094111cb2b909db7fe
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46388012"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50071194"
 ---
 # <a name="cmfcacceleratorkeyassignctrl-class"></a>CMFCAcceleratorKeyAssignCtrl 类
 
@@ -60,7 +60,7 @@ class CMFCAcceleratorKeyAssignCtrl : public CEdit
 |[CMFCAcceleratorKeyAssignCtrl::GetAccel](#getaccel)|检索 `CMFCAcceleratorKeyAssignCtrl` 对象中按下的快捷键的 `ACCEL` 结构。|
 |[CMFCAcceleratorKeyAssignCtrl::IsFocused](#isfocused)||
 |[CMFCAcceleratorKeyAssignCtrl::IsKeyDefined](#iskeydefined)|确定是否已定义快捷键。|
-|[CMFCAcceleratorKeyAssignCtrl::PreTranslateMessage](#pretranslatemessage)|类使用[CWinApp](../../mfc/reference/cwinapp-class.md)窗口消息调度到之前转换[TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)并[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows 函数。 （重写 [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)。）|
+|[CMFCAcceleratorKeyAssignCtrl::PreTranslateMessage](#pretranslatemessage)|在将窗口消息发送到 [TranslateMessage](../../mfc/reference/cwinapp-class.md) 和 [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) Windows 函数之前，由 [CWinApp](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) 类用于对此消息进行转换。 （重写 [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)。）|
 |[CMFCAcceleratorKeyAssignCtrl::ResetKey](#resetkey)|重置快捷键。|
 
 ## <a name="remarks"></a>备注
@@ -153,7 +153,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 
 ### <a name="parameters"></a>参数
 
-[in]*pMsg*
+[in]*pMsg*<br/>
 
 ### <a name="return-value"></a>返回值
 

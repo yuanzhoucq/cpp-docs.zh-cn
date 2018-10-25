@@ -90,12 +90,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f2d31d24007da1ec279e9c9762158b549e83d114
-ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
+ms.openlocfilehash: cf54f03ffd18c9f02920049fa60781a781865cc6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49809117"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082304"
 ---
 # <a name="cstringt-class"></a>CStringT 类
 
@@ -105,8 +105,8 @@ ms.locfileid: "49809117"
 
 ```
 
-template<typename BaseType, class StringTraits>  
-class CStringT :   
+template<typename BaseType, class StringTraits>
+class CStringT :
 public CSimpleStringT<BaseType,
                       _CSTRING_IMPL_::_MFCDLLTraitsCheck<BaseType, StringTraits>
                       ::c_bIsMFCDLLTraits>
@@ -294,7 +294,7 @@ public CSimpleStringT<BaseType,
 分配类型 BSTR 的自动化兼容字符串并将复制的内容`CStringT`对象到其中，包括终止 null 字符。
 
 ```
-BSTR AllocSysString() const;  
+BSTR AllocSysString() const;
 ```
 
 ### <a name="return-value"></a>返回值
@@ -307,8 +307,7 @@ BSTR AllocSysString() const;
 
 通常情况下，如果将此字符串传递给 COM 函数作为 [in] 参数，则这要求调用方释放字符串。 这可以通过使用[SysFreeString](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-sysfreestring)，如 Windows SDK 中所述。 有关详细信息，请参阅[Allocating 和释放内存为 BSTR](../../atl-mfc-shared/allocating-and-releasing-memory-for-a-bstr.md)。
 
-有关在 Windows 中的 OLE 分配函数的详细信息，请参阅[SysAllocString](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-sysallocstring) Windows SDK 中。  
-
+有关在 Windows 中的 OLE 分配函数的详细信息，请参阅[SysAllocString](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-sysallocstring) Windows SDK 中。
 
 ### <a name="example"></a>示例
 
@@ -411,7 +410,7 @@ int CollateNoCase(PCXSTR psz) const throw();
 比较两个字符串 （区分大小写）。
 
 ```
-int Compare(PCXSTR psz) const; 
+int Compare(PCXSTR psz) const;
 ```
 
 ### <a name="parameters"></a>参数
@@ -465,75 +464,75 @@ int CompareNoCase(PCXSTR psz) const throw();
 构造 `CStringT` 对象。
 
 ```
-CStringT() throw() :   
+CStringT() throw() :
     CThisSimpleString(StringTraits::GetDefaultManager());
 
-explicit CStringT(IAtlStringMgr* pStringMgr) throw() :   
-    CThisSimpleString( pStringMgr); 
+explicit CStringT(IAtlStringMgr* pStringMgr) throw() :
+    CThisSimpleString( pStringMgr);
 
 CStringT(const VARIANT& varSrc);
 
 CStringT(const VARIANT& varSrc, IAtlStringMgr* pStringMgr);
 
-CStringT(const CStringT& strSrc) :   
+CStringT(const CStringT& strSrc) :
     CThisSimpleString( strSrc);
 
 operator CSimpleStringT<
-                    BaseType, 
+                    BaseType,
                     !_CSTRING_IMPL_::_MFCDLLTraitsCheck<BaseType, StringTraits>
                     :: c_bIsMFCDLLTraits> &()
 
-template <bool bMFCDLL>  
-CStringT(const CSimpleStringT<BaseType, bMFCDLL>& strSrc) :   
+template <bool bMFCDLL>
+CStringT(const CSimpleStringT<BaseType, bMFCDLL>& strSrc) :
     CThisSimpleString( strSrc);
 
-template <class SystemString>  
-CStringT(SystemString^ pString) :   
+template <class SystemString>
+CStringT(SystemString^ pString) :
     CThisSimpleString( StringTraits::GetDefaultManager());
 
-CStringT(const XCHAR* pszSrc) :   
+CStringT(const XCHAR* pszSrc) :
     CThisSimpleString( StringTraits::GetDefaultManager());
 
-CSTRING_EXPLICIT CStringT(const YCHAR* pszSrc) :   
+CSTRING_EXPLICIT CStringT(const YCHAR* pszSrc) :
     CThisSimpleString( StringTraits::GetDefaultManager());
 
-CStringT(LPCSTR pszSrc, IAtlStringMgr* pStringMgr) :   
+CStringT(LPCSTR pszSrc, IAtlStringMgr* pStringMgr) :
     CThisSimpleString( pStringMgr);
 
-CStringT(LPCWSTR pszSrc, IAtlStringMgr* pStringMgr) :   
+CStringT(LPCWSTR pszSrc, IAtlStringMgr* pStringMgr) :
     CThisSimpleString( pStringMgr);
 
-CSTRING_EXPLICIT CStringT(const unsigned char* pszSrc) :   
+CSTRING_EXPLICIT CStringT(const unsigned char* pszSrc) :
     CThisSimpleString( StringTraits::GetDefaultManager());
 
-/*CSTRING_EXPLICIT*/ CStringT(char* pszSrc) :   
+/*CSTRING_EXPLICIT*/ CStringT(char* pszSrc) :
     CThisSimpleString( StringTraits::GetDefaultManager());
 
-CSTRING_EXPLICIT CStringT(unsigned char* pszSrc) :   
+CSTRING_EXPLICIT CStringT(unsigned char* pszSrc) :
     CThisSimpleString( StringTraits::GetDefaultManager());
 
-CSTRING_EXPLICIT CStringT(wchar_t* pszSrc) :   
+CSTRING_EXPLICIT CStringT(wchar_t* pszSrc) :
     CThisSimpleString( StringTraits::GetDefaultManager());
 
-CStringT(const unsigned char* pszSrc, IAtlStringMgr* pStringMgr) :   
+CStringT(const unsigned char* pszSrc, IAtlStringMgr* pStringMgr) :
     CThisSimpleString( pStringMgr);
 
-CSTRING_EXPLICIT CStringT(char ch, int nLength = 1) :   
+CSTRING_EXPLICIT CStringT(char ch, int nLength = 1) :
     CThisSimpleString( StringTraits::GetDefaultManager());
 
-CSTRING_EXPLICIT CStringT(wchar_t ch, int nLength = 1) :   
+CSTRING_EXPLICIT CStringT(wchar_t ch, int nLength = 1) :
     CThisSimpleString( StringTraits::GetDefaultManager());
 
-CStringT(const XCHAR* pch, int nLength) :   
+CStringT(const XCHAR* pch, int nLength) :
     CThisSimpleString( pch, nLength, StringTraits::GetDefaultManager());
 
-CStringT(const YCHAR* pch, int nLength) :   
+CStringT(const YCHAR* pch, int nLength) :
     CThisSimpleString( StringTraits::GetDefaultManager());
 
-CStringT(const XCHAR* pch, int nLength, AtlStringMgr* pStringMgr) :   
+CStringT(const XCHAR* pch, int nLength, AtlStringMgr* pStringMgr) :
     CThisSimpleString( pch, nLength, pStringMgr);
 
-CStringT(const YCHAR* pch, int nLength, IAtlStringMgr* pStringMgr) :   
+CStringT(const YCHAR* pch, int nLength, IAtlStringMgr* pStringMgr) :
     CThisSimpleString( pStringMgr);
 ```
 
@@ -642,11 +641,11 @@ int Delete(int iIndex, int nCount = 1);
 
 [!code-cpp[NVC_ATLMFC_Utilities#113](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_8.cpp)]
 
-```Output  
+```Output
 Before: Soccer is best,
-    but hockey is quicker!  
+    but hockey is quicker!
 After: Soccer best,
-    but hockey is quicker!  
+    but hockey is quicker!
 ```
 
 ##  <a name="find"></a>  CStringT::Find
@@ -886,7 +885,7 @@ int Insert(int iIndex, XCHAR ch);
 提取最左侧*nCount*从此字符`CStringT`对象并返回提取的子字符串的副本。
 
 ```
-CStringT Left(int nCount) const; 
+CStringT Left(int nCount) const;
 ```
 
 ### <a name="parameters"></a>参数
@@ -997,7 +996,7 @@ CStringT& MakeUpper();
 
 ```
 CStringT Mid(int iFirst, int nCount) const;
-CStringT Mid(int iFirst) const; 
+CStringT Mid(int iFirst) const;
 ```
 
 ### <a name="parameters"></a>参数
@@ -1090,10 +1089,10 @@ friend CStringT operator+(wchar_t ch1, const CStringT& str2,);
 ```
 CStringT& operator+=(const CThisSimpleString& str);
 
-template<bool bMFCDLL>  
+template<bool bMFCDLL>
 CStringT& operator+=(const const CSimpleStringT<BaseType, bMFCDLL>& str);
 
-template<int t_nSize>  
+template<int t_nSize>
 CStringT& operator+=(const CStaticString<XCHAR, t_nSize>& strSrc);
 CStringT& operator+=(PCXSTR pszSrc);
 CStringT& operator+=(PCYSTR pszSrc);
@@ -1105,7 +1104,7 @@ CStringT& operator+=(const VARIANT& var);
 
 ### <a name="parameters"></a>参数
 
-str  
+*str*<br/>
 对 `CThisSimpleString` 对象的引用。
 
 *bMFCDLL*<br/>
@@ -1478,7 +1477,7 @@ int ReverseFind(XCHAR ch) const throw();
 提取最后一个 (即，最右侧) *nCount*从此字符`CStringT`对象并返回提取的子字符串的副本。
 
 ```
-CStringT Right(int nCount) const; 
+CStringT Right(int nCount) const;
 ```
 
 ### <a name="parameters"></a>参数
@@ -1505,7 +1504,7 @@ CStringT Right(int nCount) const;
 重新分配由指向 BSTR *pbstr* ，并将复制的内容`CStringT`对象到其中，包括 NULL 字符。
 
 ```
-BSTR SetSysString(BSTR* pbstr) const; 
+BSTR SetSysString(BSTR* pbstr) const;
 ```
 
 ### <a name="parameters"></a>参数
@@ -1532,7 +1531,7 @@ BSTR SetSysString(BSTR* pbstr) const;
 从开始不在由标识的字符集中的第一个字符的字符串中提取字符*pszCharSet*。
 
 ```
-CStringT SpanExcluding(PCXSTR pszCharSet) const; 
+CStringT SpanExcluding(PCXSTR pszCharSet) const;
 ```
 
 ### <a name="parameters"></a>参数
@@ -1557,7 +1556,7 @@ CStringT SpanExcluding(PCXSTR pszCharSet) const;
 从开始使用由标识的字符集中的第一个字符的字符串中提取字符*pszCharSet*。
 
 ```
-CStringT SpanIncluding(PCXSTR pszCharSet) const; 
+CStringT SpanIncluding(PCXSTR pszCharSet) const;
 ```
 
 ### <a name="parameters"></a>参数
@@ -1582,7 +1581,7 @@ CStringT SpanIncluding(PCXSTR pszCharSet) const;
 在目标字符串中查找下一个标记
 
 ```
-CStringT Tokenize(PCXSTR pszTokens, int& iStart) const; 
+CStringT Tokenize(PCXSTR pszTokens, int& iStart) const;
 ```
 
 ### <a name="parameters"></a>参数

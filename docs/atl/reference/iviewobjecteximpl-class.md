@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a7364f86ad08f882660f49556853826bb7186f6
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 0892c5c4751fc5d6955d73fe838778e475859597
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46108425"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069199"
 ---
 # <a name="iviewobjecteximpl-class"></a>IViewObjectExImpl 类
 
@@ -50,7 +50,7 @@ ms.locfileid: "46108425"
 
 ```
 template<class T>
-class ATL_NO_VTABLE IViewObjectExImpl 
+class ATL_NO_VTABLE IViewObjectExImpl
    : public IViewObjectEx
 ```
 
@@ -283,7 +283,7 @@ STDMETHOD(SetAdvise)(
 
 ### <a name="remarks"></a>备注
 
-指向指针[IAdviseSink](/windows/desktop/api/objidl/nn-objidl-iadvisesink)通知接收器上的接口存储在控件类数据成员[CComControlBase::m_spAdviseSink](ccomcontrolbase-class.md#m_spadvisesink)。  
+指向指针[IAdviseSink](/windows/desktop/api/objidl/nn-objidl-iadvisesink)通知接收器上的接口存储在控件类数据成员[CComControlBase::m_spAdviseSink](ccomcontrolbase-class.md#m_spadvisesink)。
 
 请参阅[IViewObject::SetAdvise](/windows/desktop/api/oleidl/nf-oleidl-iviewobject-setadvise) Windows SDK 中。
 

@@ -76,265 +76,265 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 26d443aaa5a160968a461bbdb81444f5a9f097c9
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 0413a83f51e430c52cfcccba05637a59973dc604
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49084082"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070373"
 ---
 # <a name="ierrorrecordsimpl-class"></a>IErrorRecordsImpl 类
 
-实现 OLE DB [IErrorRecords](/previous-versions/windows/desktop/ms718112)添加到记录且记录检索的数据成员的接口 ([m_rgErrors](../../data/oledb/ierrorrecordsimpl-m-rgerrors.md)) 的类型**CAtlArray <** `RecordClass`**>**.  
-  
+实现 OLE DB [IErrorRecords](/previous-versions/windows/desktop/ms718112)添加到记录且记录检索的数据成员的接口 ([m_rgErrors](../../data/oledb/ierrorrecordsimpl-m-rgerrors.md)) 的类型**CAtlArray <** `RecordClass`**>**.
+
 ## <a name="syntax"></a>语法
 
 ```cpp
-template <class T, class RecordClass = ATLERRORINFO>  
-class IErrorRecordsImpl : public IErrorRecords  
-```  
-  
-### <a name="parameters"></a>参数  
+template <class T, class RecordClass = ATLERRORINFO>
+class IErrorRecordsImpl : public IErrorRecords
+```
+
+### <a name="parameters"></a>参数
 
 *T*<br/>
-一个类派生自`IErrorRecordsImpl`。  
-  
+一个类派生自`IErrorRecordsImpl`。
+
 *RecordClass*<br/>
-一个表示 OLE DB 错误对象的类。  
+一个表示 OLE DB 错误对象的类。
 
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>要求
 
-**标头：** atldb.h  
-  
-## <a name="members"></a>成员  
-  
-### <a name="methods"></a>方法  
-  
-|||  
-|-|-|  
-|[GetErrorDescriptionString](#geterrordescriptionstring)|获取从错误记录的错误描述字符串。|  
-|[GetErrorGUID](#geterrorguid)|获取从错误记录错误的 GUID。|  
-|[GetErrorHelpContext](#geterrorhelpcontext)|从错误记录中获取的帮助上下文 ID。|  
-|[GetErrorHelpFile](#geterrorhelpfile)|获取错误记录的帮助文件的完整路径名。|  
-|[GetErrorSource](#geterrorsource)|获取从错误记录错误的源代码。|  
-  
-### <a name="interface-methods"></a>接口方法  
-  
-|||  
-|-|-|  
-|[AddErrorRecord](#adderrorrecord)|将一条记录添加到 OLE DB 错误对象。|  
-|[GetBasicErrorInfo](#getbasicerrorinfo)|返回有关该错误，如返回代码和特定于提供程序的错误号的基本信息。|  
-|[GetCustomErrorObject](#getcustomerrorobject)|返回一个指向接口上的自定义错误对象。|  
-|[GetErrorInfo](#geterrorinfo)|返回[IErrorInfo](/previous-versions/windows/desktop/ms718112)上指定的记录的接口指针。|  
-|[GetErrorParameters](#geterrorparameters)|返回的错误参数。|  
-|[GetRecordCount](#getrecordcount)|在 OLE DB 记录对象中返回记录的数。|  
-  
-### <a name="data-members"></a>数据成员  
-  
-|||  
-|-|-|  
-|[m_rgErrors](#rgerrors)|错误记录的数组。|  
+**标头：** atldb.h
+
+## <a name="members"></a>成员
+
+### <a name="methods"></a>方法
+
+|||
+|-|-|
+|[GetErrorDescriptionString](#geterrordescriptionstring)|获取从错误记录的错误描述字符串。|
+|[GetErrorGUID](#geterrorguid)|获取从错误记录错误的 GUID。|
+|[GetErrorHelpContext](#geterrorhelpcontext)|从错误记录中获取的帮助上下文 ID。|
+|[GetErrorHelpFile](#geterrorhelpfile)|获取错误记录的帮助文件的完整路径名。|
+|[GetErrorSource](#geterrorsource)|获取从错误记录错误的源代码。|
+
+### <a name="interface-methods"></a>接口方法
+
+|||
+|-|-|
+|[AddErrorRecord](#adderrorrecord)|将一条记录添加到 OLE DB 错误对象。|
+|[GetBasicErrorInfo](#getbasicerrorinfo)|返回有关该错误，如返回代码和特定于提供程序的错误号的基本信息。|
+|[GetCustomErrorObject](#getcustomerrorobject)|返回一个指向接口上的自定义错误对象。|
+|[GetErrorInfo](#geterrorinfo)|返回[IErrorInfo](/previous-versions/windows/desktop/ms718112)上指定的记录的接口指针。|
+|[GetErrorParameters](#geterrorparameters)|返回的错误参数。|
+|[GetRecordCount](#getrecordcount)|在 OLE DB 记录对象中返回记录的数。|
+
+### <a name="data-members"></a>数据成员
+
+|||
+|-|-|
+|[m_rgErrors](#rgerrors)|错误记录的数组。|
 
 ## <a name="geterrordescriptionstring"></a> Ierrorrecordsimpl:: Geterrordescriptionstring
 
-获取从错误记录的错误描述字符串。  
-  
-### <a name="syntax"></a>语法  
-  
+获取从错误记录的错误描述字符串。
+
+### <a name="syntax"></a>语法
+
 ```cpp
-LPOLESTR GetErrorDescriptionString(ERRORINFO& rCurError);  
-```  
-  
-#### <a name="parameters"></a>参数  
+LPOLESTR GetErrorDescriptionString(ERRORINFO& rCurError);
+```
+
+#### <a name="parameters"></a>参数
 
 *rCurError*<br/>
-`ERRORINFO`中记录`IErrorInfo`接口。  
-  
-### <a name="return-value"></a>返回值  
+`ERRORINFO`中记录`IErrorInfo`接口。
 
-指向描述错误的字符串的指针。  
-  
+### <a name="return-value"></a>返回值
+
+指向描述错误的字符串的指针。
+
 ## <a name="geterrorguid"></a> Ierrorrecordsimpl:: Geterrorguid
 
-获取从错误记录错误的 GUID。  
-  
-### <a name="syntax"></a>语法  
-  
+获取从错误记录错误的 GUID。
+
+### <a name="syntax"></a>语法
+
 ```cpp
-REFGUID GetErrorGUID(ERRORINFO& rCurError);  
-```  
-  
-#### <a name="parameters"></a>参数  
+REFGUID GetErrorGUID(ERRORINFO& rCurError);
+```
+
+#### <a name="parameters"></a>参数
 
 *rCurError*<br/>
-`ERRORINFO`中记录`IErrorInfo`接口。  
-  
-### <a name="return-value"></a>返回值  
+`ERRORINFO`中记录`IErrorInfo`接口。
 
-对错误的 GUID 的引用。  
+### <a name="return-value"></a>返回值
+
+对错误的 GUID 的引用。
 
 ## <a name="geterrorhelpcontext"></a> Ierrorrecordsimpl:: Geterrorhelpcontext
 
-从错误记录中获取的帮助上下文 ID。  
-  
-### <a name="syntax"></a>语法  
-  
+从错误记录中获取的帮助上下文 ID。
+
+### <a name="syntax"></a>语法
+
 ```cpp
-DWORD GetErrorHelpContext(ERRORINFO& rCurError);  
-```  
-  
-#### <a name="parameters"></a>参数  
+DWORD GetErrorHelpContext(ERRORINFO& rCurError);
+```
+
+#### <a name="parameters"></a>参数
 
 *rCurError*<br/>
-`ERRORINFO`中记录`IErrorInfo`接口。  
-  
-### <a name="return-value"></a>返回值  
+`ERRORINFO`中记录`IErrorInfo`接口。
 
-错误的帮助上下文 ID。  
+### <a name="return-value"></a>返回值
+
+错误的帮助上下文 ID。
 
 ## <a name="geterrorhelpfile"></a> Ierrorrecordsimpl:: Geterrorhelpfile
 
-获取错误记录中的帮助文件的路径名称。  
-  
-### <a name="syntax"></a>语法  
-  
+获取错误记录中的帮助文件的路径名称。
+
+### <a name="syntax"></a>语法
+
 ```cpp
-LPOLESTR GetErrorHelpFile(ERRORINFO& rCurError);  
-```  
-  
-#### <a name="parameters"></a>参数  
+LPOLESTR GetErrorHelpFile(ERRORINFO& rCurError);
+```
+
+#### <a name="parameters"></a>参数
 
 *rCurError*<br/>
-`ERRORINFO`中记录`IErrorInfo`接口。  
-  
-### <a name="return-value"></a>返回值  
+`ERRORINFO`中记录`IErrorInfo`接口。
+
+### <a name="return-value"></a>返回值
 
 包含错误的帮助文件的路径名称的字符串指针。
 
 ## <a name="geterrorsource"></a> Ierrorrecordsimpl:: Geterrorsource
 
-获取错误记录从导致了错误的源代码。  
-  
-### <a name="syntax"></a>语法  
-  
+获取错误记录从导致了错误的源代码。
+
+### <a name="syntax"></a>语法
+
 ```cpp
-LPOLESTR GetErrorSource(ERRORINFO& rCurError);  
-```  
-  
-#### <a name="parameters"></a>参数  
+LPOLESTR GetErrorSource(ERRORINFO& rCurError);
+```
+
+#### <a name="parameters"></a>参数
 
 *rCurError*<br/>
-`ERRORINFO`中记录`IErrorInfo`接口。  
-  
-### <a name="return-value"></a>返回值  
+`ERRORINFO`中记录`IErrorInfo`接口。
 
-包含错误的源代码的字符串指针。 
+### <a name="return-value"></a>返回值
+
+包含错误的源代码的字符串指针。
 
 ## <a name="adderrorrecord"></a> Ierrorrecordsimpl:: Adderrorrecord
 
-将一条记录添加到 OLE DB 错误对象。  
-  
-### <a name="syntax"></a>语法  
-  
-```cpp
-STDMETHOD(AddErrorRecord )(ERRORINFO *pErrorInfo,  
-   DWORD dwLookupID,  
-   DISPPARAMS *pdispparams,  
-   IUnknown *punkCustomError,  
-   DWORD dwDynamicErrorID);  
-```  
-  
-#### <a name="parameters"></a>参数  
+将一条记录添加到 OLE DB 错误对象。
 
-请参阅[IErrorRecords::AddErrorRecord](/previous-versions/windows/desktop/ms725362)中*OLE DB 程序员参考*。  
+### <a name="syntax"></a>语法
+
+```cpp
+STDMETHOD(AddErrorRecord )(ERRORINFO *pErrorInfo,
+   DWORD dwLookupID,
+   DISPPARAMS *pdispparams,
+   IUnknown *punkCustomError,
+   DWORD dwDynamicErrorID);
+```
+
+#### <a name="parameters"></a>参数
+
+请参阅[IErrorRecords::AddErrorRecord](/previous-versions/windows/desktop/ms725362)中*OLE DB 程序员参考*。
 
 ## <a name="getbasicerrorinfo"></a> Ierrorrecordsimpl:: Getbasicerrorinfo
 
-返回有关该错误，如返回代码和特定于提供程序的错误号的基本信息。  
-  
-### <a name="syntax"></a>语法  
-  
-```cpp
-STDMETHOD(GetBasicErrorInfo )(ULONG ulRecordNum,  
-   ERRORINFO *pErrorInfo);  
-```  
-  
-#### <a name="parameters"></a>参数  
+返回有关该错误，如返回代码和特定于提供程序的错误号的基本信息。
 
-请参阅[IErrorRecords::GetBasicErrorInfo](/previous-versions/windows/desktop/ms723907)中*OLE DB 程序员参考*。 
+### <a name="syntax"></a>语法
+
+```cpp
+STDMETHOD(GetBasicErrorInfo )(ULONG ulRecordNum,
+   ERRORINFO *pErrorInfo);
+```
+
+#### <a name="parameters"></a>参数
+
+请参阅[IErrorRecords::GetBasicErrorInfo](/previous-versions/windows/desktop/ms723907)中*OLE DB 程序员参考*。
 
 ## <a name="getcustomerrorobject"></a> Ierrorrecordsimpl:: Getcustomerrorobject
 
-返回一个指向接口上的自定义错误对象。  
-  
-### <a name="syntax"></a>语法  
-  
-```cpp
-STDMETHOD(GetCustomErrorObject )(ULONG ulRecordNum,  
-   REFIID riid,  
-   IUnknown **ppObject);  
-```  
-  
-#### <a name="parameters"></a>参数  
+返回一个指向接口上的自定义错误对象。
 
-请参阅[IErrorRecords::GetCustomErrorObject](/previous-versions/windows/desktop/ms725417)中*OLE DB 程序员参考*。  
+### <a name="syntax"></a>语法
+
+```cpp
+STDMETHOD(GetCustomErrorObject )(ULONG ulRecordNum,
+   REFIID riid,
+   IUnknown **ppObject);
+```
+
+#### <a name="parameters"></a>参数
+
+请参阅[IErrorRecords::GetCustomErrorObject](/previous-versions/windows/desktop/ms725417)中*OLE DB 程序员参考*。
 
 ## <a name="geterrorinfo"></a> Ierrorrecordsimpl:: Geterrorinfo
 
-返回[IErrorInfo](/previous-versions/windows/desktop/ms718112)上指定的记录的接口指针。  
-  
-### <a name="syntax"></a>语法  
-  
+返回[IErrorInfo](/previous-versions/windows/desktop/ms718112)上指定的记录的接口指针。
+
+### <a name="syntax"></a>语法
+
 ```cpp
-STDMETHOD(GetErrorInfo )(ULONG ulRecordNum,  
-   LCID lcid,  
-   IErrorInfo **ppErrorInfo);  
-```  
-  
-#### <a name="parameters"></a>参数  
+STDMETHOD(GetErrorInfo )(ULONG ulRecordNum,
+   LCID lcid,
+   IErrorInfo **ppErrorInfo);
+```
+
+#### <a name="parameters"></a>参数
 
 请参阅[ierrorrecords:: Geterrorinfo](/previous-versions/windows/desktop/ms711230)中*OLE DB 程序员参考*。
 
 ## <a name="geterrorparameters"></a> Ierrorrecordsimpl:: Geterrorparameters
 
-返回的错误参数。  
-  
-### <a name="syntax"></a>语法  
-  
-```cpp
-STDMETHOD(GetErrorParameters )(ULONG ulRecordNum,  
-   DISPPARAMS *pdispparams);  
-```  
-  
-#### <a name="parameters"></a>参数  
+返回的错误参数。
 
-请参阅[IErrorRecords::GetErrorParameters](/previous-versions/windows/desktop/ms715793)中*OLE DB 程序员参考*。  
+### <a name="syntax"></a>语法
+
+```cpp
+STDMETHOD(GetErrorParameters )(ULONG ulRecordNum,
+   DISPPARAMS *pdispparams);
+```
+
+#### <a name="parameters"></a>参数
+
+请参阅[IErrorRecords::GetErrorParameters](/previous-versions/windows/desktop/ms715793)中*OLE DB 程序员参考*。
 
 ## <a name="getrecordcount"></a> Ierrorrecordsimpl:: Getrecordcount
 
-在 OLE DB 记录对象中返回记录的数。  
-  
-### <a name="syntax"></a>语法  
-  
-```cpp
-STDMETHOD(GetRecordCount )(ULONG *pcRecords);  
-```  
-  
-#### <a name="parameters"></a>参数  
+在 OLE DB 记录对象中返回记录的数。
 
-请参阅[IErrorRecords::GetRecordCount](/previous-versions/windows/desktop/ms722724)中*OLE DB 程序员参考*。  
+### <a name="syntax"></a>语法
+
+```cpp
+STDMETHOD(GetRecordCount )(ULONG *pcRecords);
+```
+
+#### <a name="parameters"></a>参数
+
+请参阅[IErrorRecords::GetRecordCount](/previous-versions/windows/desktop/ms722724)中*OLE DB 程序员参考*。
 
 ## <a name="rgerrors"></a> Ierrorrecordsimpl:: M_rgerrors
 
-错误记录的数组。  
-  
-### <a name="syntax"></a>语法  
-  
+错误记录的数组。
+
+### <a name="syntax"></a>语法
+
 ```cpp
-CAtlArray< RecordClass > m_rgErrors;  
-```  
-  
-## <a name="see-also"></a>请参阅  
+CAtlArray< RecordClass > m_rgErrors;
+```
+
+## <a name="see-also"></a>请参阅
 
 [OLE DB 提供程序模板](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [OLE DB 提供程序模板体系结构](../../data/oledb/ole-db-provider-template-architecture.md)

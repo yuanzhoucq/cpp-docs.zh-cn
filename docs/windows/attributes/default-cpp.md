@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5fb7f205ccdf78e1ef64e2ba2c132e3c2b6b6000
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 2ca39b160aacdf72bb6d6131b757755f87ac22a6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790531"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075068"
 ---
 # <a name="default-c"></a>default (C++)
 
@@ -44,13 +44,13 @@ ms.locfileid: "48790531"
 如果未指定默认接口，则第一个出现的非源接口用作默认接口。
 
 *接口 2*<br/>
-（可选）默认源接口。 您还必须指定此接口[源](source-cpp.md)属性。
+（可选）默认源接口。 你还必须使用 [source](source-cpp.md) 属性指定此接口。
 
 如果未指定默认源接口，则第一个源接口用作默认接口。
 
 ## <a name="remarks"></a>备注
 
-**默认**c + + 属性具有相同的功能[默认](/windows/desktop/Midl/default)MIDL 特性。 **默认**特性也用于[用例](case-cpp.md)属性。
+**default** C++ 属性具有与 [default](/windows/desktop/Midl/default) MIDL 属性相同的功能。 **default** 属性还可以与 [case](case-cpp.md) 属性结合使用。
 
 ## <a name="example"></a>示例
 
@@ -77,7 +77,7 @@ __interface ICustomDispatch : public IDispatch {
    HRESULT Dispatch([in] long l, [out, retval] long *pLong);
 };
 
-[   coclass, default(ICustomDispatch), source(IDual), uuid("9E66A294-4365-11D2-A997-00C04FA37DDB")  
+[   coclass, default(ICustomDispatch), source(IDual), uuid("9E66A294-4365-11D2-A997-00C04FA37DDB")
 ]
 class CClass : public ICustom, public IDual, public ICustomDispatch {
    HRESULT Custom(long l, long *pLong) { return(S_OK); }
@@ -102,7 +102,7 @@ int main() {
 }
 ```
 
-[源](source-cpp.md)属性也有举例说明如何使用**默认**。
+[source](source-cpp.md) 属性也有说明如何使用 **default**的示例。
 
 ## <a name="requirements"></a>要求
 
@@ -115,10 +115,10 @@ int main() {
 |**必需的特性**|**组件类**(当应用于**类**或**结构**)|
 |**无效的特性**|无|
 
-有关详细信息，请参阅[特性上下文](cpp-attributes-com-net.md#contexts)。
+有关详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
 ## <a name="see-also"></a>请参阅
 
 [IDL 特性](idl-attributes.md)<br/>
 [类特性](class-attributes.md)<br/>
-[coclass](coclass.md)  
+[coclass](coclass.md)

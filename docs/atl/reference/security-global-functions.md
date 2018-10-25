@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2cdeef97b92550731b06dcb4a1d425d77f5920a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: bbac8dc499c08d96abd33d49f5adec08095ca420
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46075146"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067274"
 ---
 # <a name="security-global-functions"></a>安全全局函数
 
@@ -50,11 +50,11 @@ ms.locfileid: "46075146"
 |[AtlSetOwnerSid](#atlsetownersid)|调用此函数可设置对象的所有者安全标识符 (SID)。|
 |[AtlGetSacl](#atlgetsacl)|调用此函数可检索指定对象的系统访问控制列表 (SACL) 信息。|
 |[AtlSetSacl](#atlsetsacl)|调用此函数可设置指定对象的系统访问控制列表 (SACL) 信息。|
-|[AtlGetSecurityDescriptor](#atlgetsecuritydescriptor)|调用此函数可检索给定对象的安全说明符。|  
+|[AtlGetSecurityDescriptor](#atlgetsecuritydescriptor)|调用此函数可检索给定对象的安全说明符。|
 
 ## <a name="requirements"></a>要求
 
-**标头：** atlsecurity.h 
+**标头：** atlsecurity.h
 
 ##  <a name="atlgetdacl"></a>  AtlGetDacl
 
@@ -127,7 +127,7 @@ DACL 包含新的安全信息。
 在调试版本中，如果出现断言错误*hObject*是无效的或者如果*dwInheritanceFlowControl*不是三个允许的值之一。
 ### <a name="requirements"></a>要求
 
-**标头：** atlsecurity.h 
+**标头：** atlsecurity.h
 
 ##  <a name="atlgetgroupsid"></a>  AtlGetGroupSid
 
@@ -156,11 +156,11 @@ inline bool AtlGetGroupSid(
 
 ### <a name="return-value"></a>返回值
 
-如果成功，则返回 true；如果失败，则返回 false。  
+如果成功，则返回 true；如果失败，则返回 false。
 
 ### <a name="requirements"></a>要求
 
-**标头：** atlsecurity.h 
+**标头：** atlsecurity.h
 
 ##  <a name="atlsetgroupsid"></a>  AtlSetGroupSid
 
@@ -189,11 +189,11 @@ inline bool AtlSetGroupSid(
 
 ### <a name="return-value"></a>返回值
 
-如果成功，则返回 true；如果失败，则返回 false。  
+如果成功，则返回 true；如果失败，则返回 false。
 
 ### <a name="requirements"></a>要求
 
-**标头：** atlsecurity.h 
+**标头：** atlsecurity.h
 
 ##  <a name="atlgetownersid"></a>  AtlGetOwnerSid
 
@@ -222,11 +222,11 @@ inline bool AtlGetOwnerSid(
 
 ### <a name="return-value"></a>返回值
 
-如果成功，则返回 true；如果失败，则返回 false。  
+如果成功，则返回 true；如果失败，则返回 false。
 
 ### <a name="requirements"></a>要求
 
-**标头：** atlsecurity.h 
+**标头：** atlsecurity.h
 
 ##  <a name="atlsetownersid"></a>  AtlSetOwnerSid
 
@@ -255,11 +255,11 @@ inline bool AtlSetOwnerSid(
 
 ### <a name="return-value"></a>返回值
 
-如果成功，则返回 true；如果失败，则返回 false。  
+如果成功，则返回 true；如果失败，则返回 false。
 
 ### <a name="requirements"></a>要求
 
-**标头：** atlsecurity.h 
+**标头：** atlsecurity.h
 
 ##  <a name="atlgetsacl"></a>  AtlGetSacl
 
@@ -296,11 +296,11 @@ inline bool AtlGetSacl(
 
 ### <a name="remarks"></a>备注
 
-如果`AtlGetSacl`是多个不同对象多次调用将会更有效地调用该函数时使用前一次启用 SE_SECURITY_NAME 特权掌握*bRequestNeededPrivileges*设置为 false。  
+如果`AtlGetSacl`是多个不同对象多次调用将会更有效地调用该函数时使用前一次启用 SE_SECURITY_NAME 特权掌握*bRequestNeededPrivileges*设置为 false。
 
 ### <a name="requirements"></a>要求
 
-**标头：** atlsecurity.h 
+**标头：** atlsecurity.h
 
 ##  <a name="atlsetsacl"></a>  AtlSetSacl
 
@@ -343,11 +343,11 @@ SACL 包含新的安全信息。
 
 在调试版本中，如果出现断言错误*hObject*是无效的或者如果*dwInheritanceFlowControl*不是三个允许的值之一。
 
-如果`AtlSetSacl`是多个不同对象多次调用将会更有效地调用该函数时使用前一次启用 SE_SECURITY_NAME 特权掌握*bRequestNeededPrivileges*设置为 false。  
+如果`AtlSetSacl`是多个不同对象多次调用将会更有效地调用该函数时使用前一次启用 SE_SECURITY_NAME 特权掌握*bRequestNeededPrivileges*设置为 false。
 
 ### <a name="requirements"></a>要求
 
-**标头：** atlsecurity.h 
+**标头：** atlsecurity.h
 
 ##  <a name="atlgetsecuritydescriptor"></a>  AtlGetSecurityDescriptor
 
@@ -390,7 +390,7 @@ bool bRequestNeededPrivileges = true) throw(...);
 
 ### <a name="remarks"></a>备注
 
-如果`AtlGetSecurityDescriptor`是多个不同对象多次调用将会更有效地调用该函数时使用前一次启用 SE_SECURITY_NAME 特权掌握*bRequestNeededPrivileges*设置为 false。  
+如果`AtlGetSecurityDescriptor`是多个不同对象多次调用将会更有效地调用该函数时使用前一次启用 SE_SECURITY_NAME 特权掌握*bRequestNeededPrivileges*设置为 false。
 
 ### <a name="requirements"></a>要求
 

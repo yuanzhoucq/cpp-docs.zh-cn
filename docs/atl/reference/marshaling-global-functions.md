@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c8426a0113ca245f6c9390a5c95f350398938731
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: e0b9a8e72cb3c1334484ed4a4e5c85c8b9a12347
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46106221"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055133"
 ---
 # <a name="marshaling-global-functions"></a>封送全局函数
 
@@ -34,7 +34,7 @@ ms.locfileid: "46106221"
 |-|-|
 |[AtlFreeMarshalStream](#atlfreemarshalstream)|释放的封送数据和`IStream`指针。|
 |[AtlMarshalPtrInProc](#atlmarshalptrinproc)|创建新的流对象，并将封送指定的接口指针。|
-|[AtlUnmarshalPtr](#atlunmarshalptr)|将接口指针转换为流的封送处理数据。|  
+|[AtlUnmarshalPtr](#atlunmarshalptr)|将接口指针转换为流的封送处理数据。|
 
 ## <a name="requirements"></a>要求：
 
@@ -42,7 +42,7 @@ ms.locfileid: "46106221"
 
 ##  <a name="atlfreemarshalstream"></a>  AtlFreeMarshalStream
 
-释放流中的封送数据，然后释放流指针。  
+释放流中的封送数据，然后释放流指针。
 
 ```
 HRESULT AtlFreeMarshalStream(IStream* pStream);

@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1557cf0ee42b10627618fff8a30ea6d5a6fbb169
-ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
+ms.openlocfilehash: b81832ba31fc8ef36510ce4f35c9fb1a5f3426b9
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49807934"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075016"
 ---
 # <a name="executioncharacterset"></a>execution_character_set
 
@@ -52,6 +52,6 @@ ms.locfileid: "49807934"
 
 ## <a name="see-also"></a>请参阅
 
-[Pragma 指令和 __Pragma 关键字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)<br/>
+[Pragma 指令和\_\_杂注关键字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)<br/>
 [/execution-charset （设置执行字符集）](../build/reference/execution-charset-set-execution-character-set.md)<br/>
 [/utf-8（将源和可执行字符集设置为 UTF-8）](../build/reference/utf-8-set-source-and-executable-character-sets-to-utf-8.md)

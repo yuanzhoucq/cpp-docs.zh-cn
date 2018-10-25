@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 660b2fc2f6ece6f60ff7bd1868b3a65bc8f045c1
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: 5ae1ccdcda4fac1cbd0660b054d792999ae449fc
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48890031"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50079280"
 ---
 # <a name="mfc-com"></a>MFC COM
 
@@ -52,7 +52,7 @@ Active 技术包括客户端和服务器技术，包括以下：
 
 - [自动化](../mfc/automation.md)（以前称为 OLE 自动化） 使一个应用程序能够操作在另一个应用程序中实现的对象，或"公开"对象以便操作它们。
 
-     自动化的对象可能是本地或远程 （在另一台计算机可访问的网络）。 自动化可用于 OLE 和 COM 对象。
+   自动化的对象可能是本地或远程 （在另一台计算机可访问的网络）。 自动化可用于 OLE 和 COM 对象。
 
 - 本部分还介绍如何编写使用 MFC，例如，在 COM 组件[连接点](../mfc/connection-points.md)。
 

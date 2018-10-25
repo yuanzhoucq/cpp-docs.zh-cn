@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 87fac131c053afa3c3b6d6da549d7a002fa95b64
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5a456c745a11fa4250ad731f00556b211ad21b8f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46445017"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50061698"
 ---
 # <a name="editing-a-string-in-a-version-information-resource-c"></a>编辑版本信息资源 （c + +） 中的字符串
 
@@ -31,7 +31,7 @@ ms.locfileid: "46445017"
 
 1. 单击相应项目一次以选择它，然后再次开始编辑它。 使所做的更改直接在**版本信息**表中或在[属性窗口](/visualstudio/ide/reference/properties-window)。 进行的更改会在这两个位置得到反映。
 
-   > [!NOTE] 
+   > [!NOTE]
    > 编辑时`FILEFLAGS`中的键**版本信息**编辑器中，您会注意到，不能设置**调试**， **Private Build**，或**特殊构建**属性 (在**属性**窗口) 为.rc 文件：
 
    - **版本信息**编辑器集**调试**具有属性`#ifdef`在资源脚本中，基于`_DEBUG`生成标志。

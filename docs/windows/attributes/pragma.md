@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2d7f6b371db09fd5eac9d6ef7260df7d790c21df
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: ac6b00387669f26bbd6cc02f8dd559199dd6bdd5
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790347"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50074171"
 ---
 # <a name="pragma"></a>pragma
 
@@ -70,10 +70,10 @@ __interface A
 |**必需的特性**|无|
 |**无效的特性**|无|
 
-有关特性上下文的详细信息，请参阅[特性上下文](cpp-attributes-com-net.md#contexts)。
+有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
 ## <a name="see-also"></a>请参阅
 
 [IDL 特性](idl-attributes.md)<br/>
 [独立特性](stand-alone-attributes.md)<br/>
-[pack](../../preprocessor/pack.md)  
+[pack](../../preprocessor/pack.md)

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a5b025e29c93cffe9c600646a2475f7e3230fd03
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a654f820d3c1dcdaa49ed8b3b3203d2c271b6880
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46039538"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055472"
 ---
 # <a name="connection-point-macros"></a>连接点宏
 
@@ -33,7 +33,7 @@ ms.locfileid: "46039538"
 |[BEGIN_CONNECTION_POINT_MAP](#begin_connection_point_map)|表示连接点的映射条目的开头。|
 |[CONNECTION_POINT_ENTRY](#connection_point_entry)|在映射中输入连接的点。|
 |[CONNECTION_POINT_ENTRY_P](#connection_point_entry)| (Visual Studio 2017)类似于 CONNECTION_POINT_ENTRY 但采用一个指向 iid。|
-|[END_CONNECTION_POINT_MAP](#end_connection_point_map)|表示连接点映射项的结尾。|  
+|[END_CONNECTION_POINT_MAP](#end_connection_point_map)|表示连接点映射项的结尾。|
 
 ## <a name="requirements"></a>要求
 
@@ -74,7 +74,7 @@ CONNECTION_POINT_ENTRY_P(piid) // (Visual Studio 2017)
 ### <a name="parameters"></a>参数
 
 *iid*<br/>
-[in]正在添加连接点映射到的接口的 GUID。 
+[in]正在添加连接点映射到的接口的 GUID。
 
 *piid*<br/>
 [in]指向要添加真正接口的 GUID 的指针。

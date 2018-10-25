@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a2567182f0e2622a72ceb9b98988c4d122a3561
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 765cb6ccf24415c174761c57268dc79e1fc6845b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48860558"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062556"
 ---
 # <a name="cstring-operations-relating-to-c-style-strings"></a>与 C 样式字符串相关的 CString 操作
 
@@ -54,9 +54,9 @@ ms.locfileid: "48860558"
 
 若要使用`CString`对象作为 C 样式字符串，请将对象转换为 LPCTSTR。 在以下示例中，`CString` 将返回指向只读 C 样式 null 结尾的字符串的指针。 `strcpy` 函数将 C 样式字符串的副本放入变量 `myString` 中。
 
-```
-CString aCString = "A string";  
-char myString[256];  
+```cpp
+CString aCString = "A string";
+char myString[256];
 strcpy(myString, (LPCTSTR)aCString);
 ```
 
@@ -67,7 +67,7 @@ strcpy(myString, (LPCTSTR)aCString);
 [!code-cpp[NVC_ATLMFC_Utilities#189](../atl-mfc-shared/codesnippet/cpp/cstring-operations-relating-to-c-style-strings_1.cpp)]
 
 > [!NOTE]
-> 第三个参数`strcpy_s`(或 Unicode/MBCS 可移植`_tcscpy_s`) 是`const wchar_t*`(Unicode) 或`const char*`(ANSI)。 上面的示例为此参数传递 `CString`。 C++ 编译器自动应用针对 `CString` 类定义的转换函数，此函数可将 `CString` 转换为 `LPCTSTR`。 定义从一种类型到另一种类型的强制转换操作的功能是 C++ 的最有用的功能之一。
+> 第三个参数`strcpy_s`(或 Unicode/MBCS 可移植`_tcscpy_s`) 是`const wchar_t*`(Unicode) 或`const char*`(ANSI)。 上面的示例为此自变量传递 `CString`。 C++ 编译器自动应用针对 `CString` 类定义的转换函数，此函数可将 `CString` 转换为 `LPCTSTR`。 定义从一种类型到另一种类型的强制转换操作的功能是 C++ 的最有用的功能之一。
 
 ##  <a name="_core_working_with_standard_run.2d.time_library_string_functions"></a> 使用标准运行时库字符串函数
 
@@ -93,7 +93,7 @@ strcpy(myString, (LPCTSTR)aCString);
 
 ##  <a name="_core_using_cstring_objects_with_variable_argument_functions"></a> 将 CString 对象使用与可变自变量函数
 
-某些 C 函数采用数量可变的自变量。 一个要注意的示例是 `printf_s`。 由于声明这种函数的方法，编译器无法确定参数的类型，并且无法确定每个参数上要执行何种转换操作。 因此，在将 `CString` 对象传递到采用数量可变的参数的函数时，使用显示类型强制转换非常重要。
+某些 C 函数采用数量可变的自变量。 一个要注意的示例是 `printf_s`。 由于声明这种函数的方法，编译器无法确定参数的类型，并且无法确定每个参数上要执行何种转换操作。 因此，在将 `CString` 对象传递到采用数量可变的自变量的函数时，使用显示类型强制转换非常重要。
 
 若要使用`CString`中的变量自变量函数，显式转换对象`CString`为 LPCTSTR 字符串，如下面的示例中所示。
 
@@ -101,7 +101,7 @@ strcpy(myString, (LPCTSTR)aCString);
 
 ##  <a name="_core_specifying_cstring_formal_parameters"></a> 指定 CString 形参
 
-对于需要字符串参数的大部分函数，最好将函数原型中的形参指定为指向某个字符 (`const`) 的 `LPCTSTR` 指针，而不是 `CString`。 当将形参指定为`const`指向字符的指针，你可以向 TCHAR 数组，文本字符串中传递一个指针，或者 [`"hi there"`]，或`CString`对象。 `CString`对象将自动转换为 LPCTSTR。 可以使用 LPCTSTR 的任何位置，也可以使用`CString`对象。
+对于需要字符串自变量的大部分函数，最好将函数原型中的形参指定为指向某个字符 (`const`) 的 `LPCTSTR` 指针，而不是 `CString`。 当将形参指定为`const`指向字符的指针，你可以向 TCHAR 数组，文本字符串中传递一个指针，或者 [`"hi there"`]，或`CString`对象。 `CString`对象将自动转换为 LPCTSTR。 可以使用 LPCTSTR 的任何位置，也可以使用`CString`对象。
 
 您可以将形参指定为常量字符串引用 (即， `const CString&`) 如果该参数不会被修改。 Drop **const**修饰符，如果该函数将修改该字符串。 如果需要默认的 null 值，则将其初始化为 null 字符串 [`""`]，如下所示：
 

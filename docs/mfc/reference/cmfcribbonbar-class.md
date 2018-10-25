@@ -198,12 +198,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd7dfaa0511c7d776afd009ad8ea9c1db3008f09
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c8d337fdf6b861b4a64cba2876de33cc65d89b6b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46434280"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070330"
 ---
 # <a name="cmfcribbonbar-class"></a>CMFCRibbonBar 类
 
@@ -1495,7 +1495,6 @@ virtual void OnClickButton(
 
 ##  <a name="oneditcontextmenu"></a>  CMFCRibbonBar::OnEditContextMenu
 
-
 ```
 virtual void OnEditContextMenu(
     CMFCRibbonRichEditCtrl* pEdit,
@@ -1504,8 +1503,8 @@ virtual void OnEditContextMenu(
 
 ### <a name="parameters"></a>参数
 
-*pEdit*<br/>
-[in][in]*点*
+[in]*pEdit*<br/>
+[in]*点*<br/>
 
 ### <a name="remarks"></a>备注
 
@@ -1546,7 +1545,6 @@ BOOL OnSetAccData(long lVal);
 
 ##  <a name="onshowribboncontextmenu"></a>  CMFCRibbonBar::OnShowRibbonContextMenu
 
-
 ```
 virtual BOOL OnShowRibbonContextMenu(
     CWnd* pWnd,
@@ -1557,17 +1555,16 @@ virtual BOOL OnShowRibbonContextMenu(
 
 ### <a name="parameters"></a>参数
 
-*pWnd*<br/>
-[in][in]*x*
-*y*<br/>
-[in][in]*pHit*
+[in]*pWnd*<br/>
+[in]*x*<br/>
+[in]*y*<br/>
+[in]*pHit*<br/>
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
 ##  <a name="onshowribbonqatmenu"></a>  CMFCRibbonBar::OnShowRibbonQATMenu
-
 
 ```
 virtual BOOL OnShowRibbonQATMenu(
@@ -1579,10 +1576,10 @@ virtual BOOL OnShowRibbonQATMenu(
 
 ### <a name="parameters"></a>参数
 
-*pWnd*<br/>
-[in][in]*x*
-*y*<br/>
-[in][in]*pHit*
+[in]*pWnd*<br/>
+[in]*x*<br/>
+[in]*y*<br/>
+[in]*pHit*<br/>
 
 ### <a name="return-value"></a>返回值
 
@@ -2076,7 +2073,6 @@ virtual BOOL LoadFromResource(
     LPCTSTR lpszResType = RT_RIBBON,
     HINSTANCE hInstance = NULL);
 
-
 virtual BOOL LoadFromResource(
     LPCTSTR lpszXMLResID,
     LPCTSTR lpszResType = RT_RIBBON,
@@ -2170,6 +2166,4 @@ TRUE 重新计算功能区布局;FALSE 否则为。
 [CMFCRibbonPanel 类](../../mfc/reference/cmfcribbonpanel-class.md)<br/>
 [CMFCRibbonBaseElement 类](../../mfc/reference/cmfcribbonbaseelement-class.md)<br/>
 [演练： 更新 MFC 随意画图应用程序](../../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md)
-
-
 

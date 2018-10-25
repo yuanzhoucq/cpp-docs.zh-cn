@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 605bc438b51fb96581d679ab0d9d37ed3696a5e4
-ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
+ms.openlocfilehash: 1f9eeea62e1872cbea737313192b3822c23bb433
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49163876"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50064480"
 ---
 # <a name="readerwriterlock-class"></a>reader_writer_lock 类
 
@@ -141,6 +141,7 @@ reader_writer_lock();
 ```
 class scoped_lock;
 ```
+
 ## <a name="scoped_lock_ctor"></a> scoped_lock::scoped_lock
 
 构造`scoped_lock`对象，并获取`reader_writer_lock`传入的对象`_Reader_writer_lock`参数用作编写器。 如果由另一个线程持有锁，此调用将阻塞。

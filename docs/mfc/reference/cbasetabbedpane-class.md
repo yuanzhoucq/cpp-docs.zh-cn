@@ -72,12 +72,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d9a50e3dcfb82e245dcac5f57553b34fef584fa
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: addbc7c81c8cd38f44b7b1004c0b4e23ca183ecb
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46412023"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067315"
 ---
 # <a name="cbasetabbedpane-class"></a>CBaseTabbedPane 类
 
@@ -179,7 +179,8 @@ virtual BOOL AddTab(
 
 ### <a name="parameters"></a>参数
 
-[in][out]*pNewBar*指向添加窗格的指针。 调用此方法后，此指针可能变为无效。 有关详细信息，请参阅“备注”部分。
+*pNewBar*<br/>
+[in、 out]指向添加窗格的指针。 调用此方法后，此指针可能变为无效。 有关详细信息，请参阅“备注”部分。
 
 *bVisible*<br/>
 [in]将选项卡可见，则为 TRUE否则为 FALSE。
@@ -384,7 +385,8 @@ virtual BOOL FloatTab(
 
 ### <a name="parameters"></a>参数
 
-[in][out]*pBar*指向为浮动窗格的指针。
+*pBar*<br/>
+[in、 out]指向为浮动窗格的指针。
 
 *nTabID*<br/>
 [in]指定为浮动选项卡的从零开始的索引。
@@ -594,7 +596,8 @@ virtual BOOL RemovePane(CWnd* pBar);
 
 ### <a name="parameters"></a>参数
 
-[in][out]*pBar*窗格从选项卡式窗格中删除指向的指针。
+*pBar*<br/>
+[in、 out]指向删除选项卡式窗格中的窗格的指针。
 
 ### <a name="return-value"></a>返回值
 
@@ -689,7 +692,8 @@ virtual CMFCAutoHideToolBar* SetAutoHideMode(
 *dwAlignment*<br/>
 [in]指定要创建的自动隐藏窗格的对齐方式。 有关可能的值的列表，请参阅[CPane::MoveByAlignment](../../mfc/reference/cpane-class.md#movebyalignment)。
 
-[in][out]*pCurrAutoHideBar*到当前的自动隐藏工具栏的指针。 可以为 NULL。
+*pCurrAutoHideBar*<br/>
+[in、 out]指向当前的自动隐藏工具栏的指针。 可以为 NULL。
 
 *bUseTimer*<br/>
 [in]指定是否要使用自动隐藏效果，当用户切换到自动隐藏模式下，窗格中，或若要立即隐藏窗格。

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9bfe3858070f4dbbd226d46479609f5d0a630956
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 9934f1f66bf520e8da65953dc3355d447d1844e6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790489"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50072950"
 ---
 # <a name="hidden"></a>隐藏
 
@@ -53,11 +53,11 @@ ms.locfileid: "48790489"
 |**必需的特性**|**组件类**(当应用于**类**或**结构**)|
 |**无效的特性**|无|
 
-有关详细信息，请参阅[特性上下文](cpp-attributes-com-net.md#contexts)。
+有关详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
 ## <a name="see-also"></a>请参阅
 
 [IDL 特性](idl-attributes.md)<br/>
 [接口特性](interface-attributes.md)<br/>
 [类特性](class-attributes.md)<br/>
-[方法特性](method-attributes.md)  
+[方法特性](method-attributes.md)

@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0d8ebfc8f1111049368a76a9b153fcf8079a4edd
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 1255eb0fc00d1b134335807a1f20e6761c49ec90
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49081853"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50064467"
 ---
 # <a name="moving-a-string-from-one-resource-file-to-another-c"></a>将字符串从一个资源文件移动到另一个 （c + +）
 
@@ -53,4 +53,4 @@ Win32
 
 [字符串编辑器](../windows/string-editor.md)<br/>
 [资源文件](../windows/resource-files-visual-studio.md)<br/>
-[自定义窗口布局](/visualstudio/ide/customizing-window-layouts-in-visual-studio)  
+[自定义窗口布局](/visualstudio/ide/customizing-window-layouts-in-visual-studio)

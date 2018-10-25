@@ -15,40 +15,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3cf1ee9b2bd45da321a9d333e48b6cf0a3d178b2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4c7c1b84c23ae16828e2d73cb1f45084dfd5806e
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46405991"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055328"
 ---
 # <a name="cc-preprocessor-reference"></a>C/C++ 预处理器参考
-*C/c + + 预处理器参考 》* 介绍实现在 Microsoft C/c + + 预处理器。 在将 C 和 C++ 文件传递到编译器之前，预处理器将对这些文件执行预先操作。 可以使用预处理器有条件地编译代码、插入文件、指定编译时错误消息以及将计算机特定规则应用于代码节。  
-  
-## <a name="in-this-section"></a>本节内容  
- 
+*C/c + + 预处理器参考 》* 介绍实现在 Microsoft C/c + + 预处理器。 在将 C 和 C++ 文件传递到编译器之前，预处理器将对这些文件执行预先操作。 可以使用预处理器有条件地编译代码、插入文件、指定编译时错误消息以及将计算机特定规则应用于代码节。
+
+## <a name="in-this-section"></a>本节内容
+
 [预处理器指令](../preprocessor/preprocessor-directives.md)<br/>
-介绍通常用于使源程序易于在不同的执行环境中更改和编译的指令。  
-  
+介绍通常用于使源程序易于在不同的执行环境中更改和编译的指令。
+
 [预处理器运算符](../preprocessor/preprocessor-operators.md)<br/>
-讨论在 `#define` 指令的上下文中使用的四个预处理器特定运算符。  
-  
+讨论在 `#define` 指令的上下文中使用的四个预处理器特定运算符。
+
 [预定义宏](../preprocessor/predefined-macros.md)<br/>
-讨论由 ANSI 和 Microsoft C++ 指定的预定义宏。  
-  
+讨论由 ANSI 和 Microsoft C++ 指定的预定义宏。
+
 [杂注](../preprocessor/pragma-directives-and-the-pragma-keyword.md)<br/>
-讨论杂注，杂注提供了一种方法来让每个编译器提供计算机和操作系统特定的功能，同时保持与 C 和 C++ 语言的整体兼容性。  
-  
-## <a name="related-sections"></a>相关章节  
- 
+讨论杂注，杂注提供了一种方法来让每个编译器提供计算机和操作系统特定的功能，同时保持与 C 和 C++ 语言的整体兼容性。
+
+## <a name="related-sections"></a>相关章节
+
 [C++ 语言参考](../cpp/cpp-language-reference.md)<br/>
-提供有关 Microsoft 的 C++ 语言实现的参考材料。  
-  
+提供有关 Microsoft 的 C++ 语言实现的参考材料。
+
 [C 语言参考](../c-language/c-language-reference.md)<br/>
-提供有关 Microsoft 的 C 语言实现的参考材料。  
-  
+提供有关 Microsoft 的 C 语言实现的参考材料。
+
 [生成 C/c + + 程序](../build/reference/c-cpp-building-reference.md)<br/>
-提供指向讨论编译器和链接器选项的主题的链接。  
-  
+提供指向讨论编译器和链接器选项的主题的链接。
+
 [创建和管理 Visual C++ 项目](../ide/creating-and-managing-visual-cpp-projects.md)<br/>
 描述 Visual Studio 中使您能够指定目录（项目系统将在其中进行搜索以找到 C++ 项目的文件）的用户界面。

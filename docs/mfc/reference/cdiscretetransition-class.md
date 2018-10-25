@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98deeff0e6b39a52002416c1b234434623f31b6a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9384fbc79137807015b5b18092806e2a67577b88
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46416209"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50073872"
 ---
 # <a name="cdiscretetransition-class"></a>CDiscreteTransition 类
 
@@ -115,7 +115,6 @@ virtual BOOL Create(
 
 *pLibrary*<br/>
 一个指向[IUIAnimationTransitionLibrary 接口](/windows/desktop/api/uianimation/nn-uianimation-iuianimationtransitionlibrary)，用于定义的标准转换库。
-
 
 ### <a name="return-value"></a>返回值
 

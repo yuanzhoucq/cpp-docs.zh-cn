@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ebc257d78bf658b722a93e9d7c306c9bcf6e88bd
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 87ab9e42af139f9b156fa2a688558077967dfa8c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790477"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067795"
 ---
 # <a name="idl-attributes"></a>IDL 特性
 
@@ -83,7 +83,7 @@ ms.locfileid: "48790477"
 |[licensed](licensed.md)|指示它所应用于的组件类授予许可，并且必须使用实例化`IClassFactory2`。|
 |[local](local-cpp.md)|可以使用 MIDL 编译器为标头生成器界面标头中使用时。 单个函数中使用时，将指定为其生成无存根 （stub） 的本地过程。|
 |[max_is](max-is.md)|指定有效的数组索引的最大值。|
-|[模块](module-cpp.md)|定义.Idl 文件中的库块。|
+|[module](module-cpp.md)|定义.Idl 文件中的库块。|
 |[ms_union](ms-union.md)|控制 nonencapsulated 联合的网络数据表示形式对齐方式。|
 |[no_injected_text](no-injected-text.md)|禁止编译器注入代码作为特性使用结果。|
 |[nonbrowsable](nonbrowsable.md)|指示接口成员不应显示在属性浏览器中。|
@@ -92,7 +92,7 @@ ms.locfileid: "48790477"
 |[object](object-cpp.md)|标识的自定义的接口;自定义特性的代名词。|
 |[odl](odl.md)|标识为对象描述语言 (ODL) 接口的接口。|
 |[oleautomation](oleautomation.md)|指示接口使用自动化兼容。|
-|[可选](optional-cpp.md)|指定的成员函数的可选参数。|
+|[optional](optional-cpp.md)|指定的成员函数的可选参数。|
 |[out](out-cpp.md)|标识从被调用过程返回到调用过程（从服务器到客户端）的指针参数。|
 |[pointer_default](pointer-default.md)|在参数列表中指定除顶级指针显示的所有指针的默认指针特性。|
 |[pragma](pragma.md)|将指定的字符串，而无需引号字符，发送到生成的.idl 文件。|
@@ -102,7 +102,7 @@ ms.locfileid: "48790477"
 |[propput](propput.md)|指定属性设置功能。|
 |[ptr](ptr.md)|将一个指针，指定为完整的指针。|
 |[public](public-cpp-attributes.md)|可确保即使它未从引用的.idl 文件中，一个 typedef 将转到类型库。|
-|[范围](range-cpp.md)|指定参数或在运行时设置其值的字段的允许值的范围。|
+|[range](range-cpp.md)|指定参数或在运行时设置其值的字段的允许值的范围。|
 |[readonly](readonly-cpp.md)|禁止分配给一个变量。|
 |[ref](ref-cpp.md)|标识引用指针。|
 |[requestedit](requestedit.md)|指示该属性支持`OnRequestEdit`通知。|
@@ -125,4 +125,4 @@ ms.locfileid: "48790477"
 
 ## <a name="see-also"></a>请参阅
 
-[按组分的特性](attributes-by-group.md)  
+[按组分的特性](attributes-by-group.md)

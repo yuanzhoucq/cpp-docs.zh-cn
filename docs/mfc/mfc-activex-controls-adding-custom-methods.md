@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 428f43d5cd1a0cfaa4b5f829b59208ce96eab85d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 652f09146ba0bb193efbf889995f6de5f53a9492
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441078"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50074470"
 ---
 # <a name="mfc-activex-controls-adding-custom-methods"></a>MFC ActiveX 控件：添加自定义方法
 
@@ -48,7 +48,7 @@ ActiveX 控件用户可以在任何时候执行特定于控件的操作调用的
 
 1. 从快捷菜单中，单击**外**，然后单击**添加方法**。
 
-     这将打开添加方法向导。
+   这将打开添加方法向导。
 
 1. 在中**方法名称**框中，键入*PtInCircle*。
 

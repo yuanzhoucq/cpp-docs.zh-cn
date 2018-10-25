@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d198368dd3ed1be9110f08712de646156c98bb63
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 19e2e7120a73ed7e386b46f32d105376f3fac9b2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46406771"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069238"
 ---
 # <a name="walkthrough-debugging-a-c-amp-application"></a>演练：调试 C++ AMP 应用程序
 
@@ -247,27 +247,27 @@ ms.locfileid: "46406771"
 
 1. 若要打开**GPU 线程**窗口，请在菜单栏上，选择**调试** > **Windows** > **GPU 线程**。
 
-     可以检查 GPU 线程中的状态**GPU 线程**出现的窗口。
+   可以检查 GPU 线程中的状态**GPU 线程**出现的窗口。
 
 2. 停靠**GPU 线程**窗口底部的 Visual Studio。 选择**展开线程切换**按钮以显示 tile 和线程文本框。 **GPU 线程**窗口显示活动和受阻的 GPU 线程的总数，如下图中所示。
 
      ![具有 4 个活动线程的 GPU 线程窗口](../../parallel/amp/media/campc.png "campc") GPU 线程窗口
 
-     系统为此计算分配了 313 个 Tile。 每个 Tile 包含 32 个线程。 由于本地 GPU 调试在软件模拟器中进行，因此有四个活动的 GPU 线程。 四个线程同时执行指令，然后一起移动到下一条指令。
+   系统为此计算分配了 313 个 Tile。 每个 Tile 包含 32 个线程。 由于本地 GPU 调试在软件模拟器中进行，因此有四个活动的 GPU 线程。 四个线程同时执行指令，然后一起移动到下一条指令。
 
-     在中**GPU 线程**窗口中，有四个 GPU 线程处于活动状态和 28 个 GPU 线程会被阻止[tile_barrier:: wait](reference/tile-barrier-class.md#wait)大约第 21 行处定义的语句 (`t_idx.barrier.wait();`)。 所有这 32 个GPU 线程都属于第一个 Tile `tile[0]`。 当前线程所在的行由箭头指示。 若要切换到其他线程，请使用下列方法之一：
+   在中**GPU 线程**窗口中，有四个 GPU 线程处于活动状态和 28 个 GPU 线程会被阻止[tile_barrier:: wait](reference/tile-barrier-class.md#wait)大约第 21 行处定义的语句 (`t_idx.barrier.wait();`)。 所有这 32 个GPU 线程都属于第一个 Tile `tile[0]`。 当前线程所在的行由箭头指示。 若要切换到其他线程，请使用下列方法之一：
 
     - 在线程中切换行**GPU 线程**窗口中，打开快捷菜单，然后选择**切换到线程**。 如果该行代表多个线程，将按线程坐标切换到第一个线程。
 
     - 在对应的文本框中输入该线程的平铺和线程值，然后选择**切换线程**按钮。
 
-     **调用堆栈**窗口显示当前 GPU 线程的调用堆栈。
+   **调用堆栈**窗口显示当前 GPU 线程的调用堆栈。
 
 ### <a name="to-use-the-parallel-stacks-window"></a>使用“并行堆栈”窗口
 
 1. 若要打开**并行堆栈**窗口，请在菜单栏上，选择**调试** > **Windows** > **并行堆栈**.
 
-     可以使用**并行堆栈**窗口同时检查多个 GPU 线程的堆栈帧。
+   可以使用**并行堆栈**窗口同时检查多个 GPU 线程的堆栈帧。
 
 2. 停靠**并行堆栈**窗口底部的 Visual Studio。
 
@@ -275,19 +275,19 @@ ms.locfileid: "46406771"
 
      ![具有 4 个活动线程的并行堆栈窗口](../../parallel/amp/media/campd.png "campd")并行堆栈窗口
 
-     32 个线程从 `_kernel_stub` 执行到 `parallel_for_each` 函数调用中的 lambda 语句，随后执行到 `sum_kernel_tiled` 函数，再从这里进行并行缩减。 28 超出 32 个线程前进到[tile_barrier:: wait](reference/tile-barrier-class.md#wait)语句和保持阻止状态，在行 22，而其他 4 个线程中保持活动状态`sum_kernel_tiled`第 30 行处的函数。
+   32 个线程从 `_kernel_stub` 执行到 `parallel_for_each` 函数调用中的 lambda 语句，随后执行到 `sum_kernel_tiled` 函数，再从这里进行并行缩减。 28 超出 32 个线程前进到[tile_barrier:: wait](reference/tile-barrier-class.md#wait)语句和保持阻止状态，在行 22，而其他 4 个线程中保持活动状态`sum_kernel_tiled`第 30 行处的函数。
 
-     您可以检查 GPU 线程中可用的属性**GPU 线程**中的丰富数据提示窗口**并行堆栈**窗口。 若要执行此操作，请将鼠标指针停留在堆栈帧**sum_kernel_tiled**。 下图显示了数据提示。
+   您可以检查 GPU 线程中可用的属性**GPU 线程**中的丰富数据提示窗口**并行堆栈**窗口。 若要执行此操作，请将鼠标指针停留在堆栈帧**sum_kernel_tiled**。 下图显示了数据提示。
 
      ![并行堆栈窗口的数据提示](../../parallel/amp/media/campe.png "campe") GPU 线程数据提示
 
-     有关详细信息**并行堆栈**窗口中，请参阅[使用并行堆栈窗口](/visualstudio/debugger/using-the-parallel-stacks-window)。
+   有关详细信息**并行堆栈**窗口中，请参阅[使用并行堆栈窗口](/visualstudio/debugger/using-the-parallel-stacks-window)。
 
 ### <a name="to-use-the-parallel-watch-window"></a>使用“并行监视”窗口
 
 1. 若要打开**并行监视**窗口，请在菜单栏上，选择**调试** > **Windows** > **并行监视**  > **并行监视 1**。
 
-     可以使用**并行监视**窗口来跨多个线程检查表达式的值。
+   可以使用**并行监视**窗口来跨多个线程检查表达式的值。
 
 2. 停靠**并行监视 1**窗口到 Visual Studio 底部。 中的表有 32 行**并行监视**窗口。 每个对应于在这两个 GPU 线程窗口中出现过的 GPU 线程并**并行堆栈**窗口。 现在，可以输入所需的表达式，以检查其在所有这 32 个 GPU 线程中的值。
 
@@ -297,17 +297,17 @@ ms.locfileid: "46406771"
 
 5. 选择**添加监视**再次列标题，键入`localA[localIdx[0]]`，然后选择**Enter**密钥。
 
-     您可以通过选择相应的列标题来按指定表达式排序。
+   您可以通过选择相应的列标题来按指定表达式排序。
 
-     选择**localA [localIdx [0]]** 列标题对列进行排序。 下图显示了排序的结果**localA [localIdx [0]]**。
+   选择**localA [localIdx [0]]** 列标题对列进行排序。 下图显示了排序的结果**localA [localIdx [0]]**。
 
      ![包含分类结果的并行监视窗口](../../parallel/amp/media/campf.png "campf")排序结果
 
-     您可以导出中的内容**并行监视**到 Excel 窗口中的通过选择**Excel**按钮，然后选择**在 Excel 中打开**。 如果开发计算机上安装有 Excel，这将打开包含该内容的 Excel 工作表。
+   您可以导出中的内容**并行监视**到 Excel 窗口中的通过选择**Excel**按钮，然后选择**在 Excel 中打开**。 如果开发计算机上安装有 Excel，这将打开包含该内容的 Excel 工作表。
 
 6. 在右上角的**并行监视**窗口中，没有可用于通过使用布尔表达式筛选内容的筛选器控件。 Enter`localA[localIdx[0]] > 20000`筛选器控件文本框框，然后选择**Enter**密钥。
 
-     该窗口现在只包含 `localA[localIdx[0]]` 值大于 20000 的线程。 内容仍按 `localA[localIdx[0]]` 列排序，这是之前执行的排序操作。
+   该窗口现在只包含 `localA[localIdx[0]]` 值大于 20000 的线程。 内容仍按 `localA[localIdx[0]]` 列排序，这是之前执行的排序操作。
 
 ## <a name="flagging-gpu-threads"></a>标记 GPU 线程
 
@@ -321,20 +321,20 @@ ms.locfileid: "46406771"
 
 3. 在当前处于活动状态的四个线程所在行的左侧，选择标志符号。
 
-     下图显示了在四个活动已标记的线程**GPU 线程**窗口。
+   下图显示了在四个活动已标记的线程**GPU 线程**窗口。
 
      ![使用标记的线程的 GPU 线程窗口](../../parallel/amp/media/campg.png "campg") GPU 线程窗口中的活动线程
 
-     **并行监视**窗口和的数据提示**并行堆栈**这两个窗口指示标记的线程。
+   **并行监视**窗口和的数据提示**并行堆栈**这两个窗口指示标记的线程。
 
 4. 如果你想要重点关注所标记的四个线程，您可以选择显示，请在**GPU 线程**，**并行监视**，并**并行堆栈**windows，仅标记线程数。
 
-     选择**仅显示标记**任何按钮的 windows 或在**调试位置**工具栏。 如下图所示**仅显示标记**按钮**调试位置**工具栏。
+   选择**仅显示标记**任何按钮的 windows 或在**调试位置**工具栏。 如下图所示**仅显示标记**按钮**调试位置**工具栏。
 
      ![调试位置工具栏上仅显示已标记项图标](../../parallel/amp/media/camph.png "camph")
 **仅显示标记**按钮
 
-     现在**GPU 线程**，**并行监视**，并**并行堆栈**windows 显示标记的线程。
+   现在**GPU 线程**，**并行监视**，并**并行堆栈**windows 显示标记的线程。
 
 ## <a name="freezing-and-thawing-gpu-threads"></a>冻结和解冻 GPU 线程
 
@@ -348,11 +348,11 @@ ms.locfileid: "46406771"
 
 3. 打开活动行的快捷菜单，然后选择**冻结**。
 
-     下图中的**GPU 线程**窗口显示所有四个线程均已冻结。
+   下图中的**GPU 线程**窗口显示所有四个线程均已冻结。
 
      ![显示已冻结的线程的 GPU 线程窗口](../../parallel/amp/media/campk.png "campk")冻结线程**GPU 线程**窗口
 
-     同样，**并行监视**窗口显示所有四个线程均已冻结。
+   同样，**并行监视**窗口显示所有四个线程均已冻结。
 
 4. 在菜单栏上依次选择**调试** > **继续**以便接下来的四个 GPU 线程的屏障第 22 行处并到达第 30 行处的断点。 **GPU 线程**窗口会显示四个以前已冻结的线程仍被冻结并处于活动状态。
 
@@ -364,7 +364,7 @@ ms.locfileid: "46406771"
 
 1. 上一个中的线程的快捷菜单**GPU 线程**窗口中，选择**Group By**，**地址**。
 
-     中的线程**GPU 线程**窗口按地址进行分组。 该地址对应于每组线程所在的反汇编指令。 24 个线程位于第 22 行处其中[tile_barrier:: wait 方法](reference/tile-barrier-class.md#wait)执行。 12 个线程位于第 32 行屏障的指令处。 其中 4 个线程经过标记。 8 个线程位于第 30 行的断点处。 其中 4 个线程已冻结。 下图显示了在经过分组的线程**GPU 线程**窗口。
+   中的线程**GPU 线程**窗口按地址进行分组。 该地址对应于每组线程所在的反汇编指令。 24 个线程位于第 22 行处其中[tile_barrier:: wait 方法](reference/tile-barrier-class.md#wait)执行。 12 个线程位于第 32 行屏障的指令处。 其中 4 个线程经过标记。 8 个线程位于第 30 行的断点处。 其中 4 个线程已冻结。 下图显示了在经过分组的线程**GPU 线程**窗口。
 
      ![按地址分组的线程的 GPU 线程窗口](../../parallel/amp/media/campl.png "campl")分组中的线程**GPU 线程**窗口
 
@@ -382,7 +382,7 @@ ms.locfileid: "46406771"
 
 3. 上的快捷菜单**代码编辑器**，选择**当前 Tile 运行到光标处**。
 
-     之前在第 21 行处受阻的 24 个线程将继续运行到第 32 行。 如下所示**GPU 线程**窗口。
+   之前在第 21 行处受阻的 24 个线程将继续运行到第 32 行。 如下所示**GPU 线程**窗口。
 
 ## <a name="see-also"></a>请参阅
 

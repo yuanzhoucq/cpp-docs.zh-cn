@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f4c035fad1fd675fd36fef73d405c63aab3be739
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 0600476df22c3d87bc5694e9ffe2af09f4542439
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46040799"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063258"
 ---
 # <a name="catlcommodule-class"></a>CAtlComModule 类
 
@@ -108,7 +108,7 @@ HRESULT RegisterServer(BOOL bRegTypeLib = FALSE, const CLSID* pCLSID = NULL);
 ### <a name="parameters"></a>参数
 
 *bRegTypeLib*<br/>
-如果类型库的注册，则为 TRUE。 默认值为 FALSE。
+如果类型库的注册，则为 TRUE。 默认值是 FALSE。
 
 *pCLSID*<br/>
 指向要注册的对象的 CLSID。 如果将注册为 NULL （默认值），在对象映射中的所有对象。
@@ -149,14 +149,14 @@ HRESULT RegisterTypeLib();
 
 ```
 HRESULT UnregisterServer(
-    BOOL bRegTypeLib = FALSE,  
+    BOOL bRegTypeLib = FALSE,
     const CLSID* pCLSID = NULL);
 ```
 
 ### <a name="parameters"></a>参数
 
 *bRegTypeLib*<br/>
-如果类型库，则要注销，则为 TRUE。 默认值为 FALSE。
+如果类型库，则要注销，则为 TRUE。 默认值是 FALSE。
 
 *pCLSID*<br/>
 指向要注销的对象的 CLSID。 如果为 NULL （默认值），在对象映射中的所有对象将为未注册。

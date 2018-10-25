@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67a0fd2af9bb8bf3ec11d5a4e2a38c195b18633c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7d29222b461091dcd72a0c894a138a4df15b9d4b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46424243"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057280"
 ---
 # <a name="database-macros-and-globals"></a>数据库宏和全局函数
 
@@ -50,7 +50,6 @@ ms.locfileid: "46424243"
 |-|-|
 |[AfxDbInitModule](#afxdbinitmodule)|添加了对动态链接到 MFC 的规则 MFC DLL 的数据库支持。|
 |[AfxGetHENV](#afxgethenv)|检索 MFC 当前正在使用的 ODBC 环境的句柄。 您可以在直接 ODBC 调用中使用此句柄。|
-
 
 ## <a name="afxdbinitmodule"></a> AfxDbInitModule
 
@@ -74,8 +73,6 @@ void AFXAPI AfxDbInitModule( );
 
 [宏和全局函数](mfc-macros-and-globals.md)
 
-
-
 ##  <a name="afx_odbc_call"></a>  AFX_ODBC_CALL
 
 使用此宏调用可能会返回任何 ODBC API 函数`SQL_STILL_EXECUTING`。
@@ -96,7 +93,6 @@ ODBC API 函数。 有关 ODBC API 函数的详细信息，请参阅 Windows SDK
 然后再调用`AFX_ODBC_CALL`，必须声明一个变量， `nRetCode`，类型 RETCODE。
 
 请注意，MFC ODBC 类现在使用仅同步处理。 若要执行异步操作，必须调用 ODBC API 函数`SQLSetConnectOption`。 有关详细信息，请参阅"异步执行函数"Windows SDK 中的主题。
-
 
 ### <a name="example"></a>示例
 

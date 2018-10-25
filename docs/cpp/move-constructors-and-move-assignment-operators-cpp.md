@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c819d024b9b89d28c0e87b86382bf1c1f23258a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: b097e1d3c7d26c51283d4f63bb2bae14059f21cc
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46118487"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069771"
 ---
 # <a name="move-constructors-and-move-assignment-operators-c"></a>移动构造函数和移动赋值运算符 (C++)
 
@@ -151,14 +151,14 @@ private:
 
 1. 在条件语句中，从要将其赋值的对象中释放所有资源（如内存）。
 
-     以下示例从要将其赋值的对象中释放 `_data` 成员：
+   以下示例从要将其赋值的对象中释放 `_data` 成员：
 
     ```cpp
     // Free the existing resource.
     delete[] _data;
     ```
 
-     执行第一个过程中的步骤 2 和步骤 3 以将数据成员从源对象转移到要构造的对象：
+   执行第一个过程中的步骤 2 和步骤 3 以将数据成员从源对象转移到要构造的对象：
 
     ```cpp
     // Copy the data pointer and its length from the

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5a76fa402cd270bfc7d0fa87902362de50c55a73
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: df131b79d3247e39aecb95c81564d7ac9fc2732d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790189"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50058929"
 ---
 # <a name="coclass"></a>coclass
 
@@ -102,7 +102,7 @@ appobject, uuid("9E66A294-4365-11D2-A997-00C04FA37DDB")]
 class CMyClass : public I {};
 ```
 
-下面的示例演示如何重写由注入代码中出现的函数的默认实现**组件类**属性。 请参阅[/Fx](../../build/reference/fx-merge-injected-code.md)有关查看插入的代码的详细信息。 任何基类或接口，使用的类将出现在注入的代码。 此外，如果您显式指定此类作为基在组件类的类包括在注入的代码默认情况下，特性提供程序将使用在代码中指定的窗体。
+下面的示例演示如何重写由注入代码中出现的函数的默认实现**组件类**属性。 有关查看插入的代码的详细信息，请参阅 [/Fx](../../build/reference/fx-merge-injected-code.md) 。 任何基类或接口，使用的类将出现在注入的代码。 此外，如果您显式指定此类作为基在组件类的类包括在注入的代码默认情况下，特性提供程序将使用在代码中指定的窗体。
 
 ```cpp
 // cpp_attr_ref_coclass2.cpp
@@ -128,7 +128,7 @@ public:
       // you can add to the default implementation
       CRegistryVirtualMachine rvm;
       HRESULT hr;
-      if (FAILED(hr = rvm.AddStandardReplacements()))  
+      if (FAILED(hr = rvm.AddStandardReplacements()))
          return hr;
       rvm.AddReplacement(_T("FriendlyName"), GetObjectFriendlyName());
       return rvm.VMUpdateRegistry(GetOpCodes(), GetOpcodeStringVals(),       GetOpcodeDWORDVals(), GetOpcodeBinaryVals(), bRegister);
@@ -147,7 +147,7 @@ public:
 |**必需的特性**|无|
 |**无效的特性**|无|
 
-有关特性上下文的详细信息，请参阅[特性上下文](cpp-attributes-com-net.md#contexts)。
+有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
 ## <a name="see-also"></a>请参阅
 

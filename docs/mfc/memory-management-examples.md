@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46e41ffab3f3f22bca1a9a721b4f2cdb03129d03
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 05e2a39f94eeefa264a9e93623f4ff7c6b2f2e91
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46391691"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080451"
 ---
 # <a name="memory-management-examples"></a>内存管理：示例
 
@@ -52,19 +52,19 @@ ms.locfileid: "46391691"
 
 1. 定义数组，如下面的代码所示。 自动删除数组和数组变量退出其作用域内时，将回收其内存。
 
-     [!code-cpp[NVC_MFC_Utilities#1](../mfc/codesnippet/cpp/memory-management-examples_1.cpp)]
+   [!code-cpp[NVC_MFC_Utilities#1](../mfc/codesnippet/cpp/memory-management-examples_1.cpp)]
 
 #### <a name="to-allocate-an-array-of-bytes-or-any-primitive-data-type-on-the-heap"></a>若要在堆上分配的字节数 （或任何基元数据类型） 数组
 
 1. 使用**新**运算符与在此示例中所示的数组语法：
 
-     [!code-cpp[NVC_MFC_Utilities#2](../mfc/codesnippet/cpp/memory-management-examples_2.cpp)]
+   [!code-cpp[NVC_MFC_Utilities#2](../mfc/codesnippet/cpp/memory-management-examples_2.cpp)]
 
 #### <a name="to-deallocate-the-arrays-from-the-heap"></a>若要解除分配的堆中的数组
 
 1. 使用**删除**运算符，如下所示：
 
-     [!code-cpp[NVC_MFC_Utilities#3](../mfc/codesnippet/cpp/memory-management-examples_3.cpp)]
+   [!code-cpp[NVC_MFC_Utilities#3](../mfc/codesnippet/cpp/memory-management-examples_3.cpp)]
 
 ##  <a name="_core_allocation_of_a_data_structure"></a> 分配的数据结构
 
@@ -72,15 +72,15 @@ ms.locfileid: "46391691"
 
 1. 定义结构变量，如下所示：
 
-     [!code-cpp[NVC_MFC_Utilities#4](../mfc/codesnippet/cpp/memory-management-examples_4.cpp)]
+   [!code-cpp[NVC_MFC_Utilities#4](../mfc/codesnippet/cpp/memory-management-examples_4.cpp)]
 
-     退出其作用域内时回收结构占用的内存。
+   退出其作用域内时回收结构占用的内存。
 
 #### <a name="to-allocate-data-structures-on-the-heap"></a>若要分配堆上的数据结构
 
 1. 使用**新**来分配堆上的数据结构和**删除**将其解除分配，如以下示例所示：
 
-     [!code-cpp[NVC_MFC_Utilities#5](../mfc/codesnippet/cpp/memory-management-examples_5.cpp)]
+   [!code-cpp[NVC_MFC_Utilities#5](../mfc/codesnippet/cpp/memory-management-examples_5.cpp)]
 
 ##  <a name="_core_allocation_of_an_object"></a> 一个对象的分配
 
@@ -88,25 +88,25 @@ ms.locfileid: "46391691"
 
 1. 对象声明，如下所示：
 
-     [!code-cpp[NVC_MFC_Utilities#6](../mfc/codesnippet/cpp/memory-management-examples_6.cpp)]
+   [!code-cpp[NVC_MFC_Utilities#6](../mfc/codesnippet/cpp/memory-management-examples_6.cpp)]
 
-     该对象退出其作用域，则会自动调用对象的析构函数。
+   该对象退出其作用域，则会自动调用对象的析构函数。
 
 #### <a name="to-allocate-an-object-on-the-heap"></a>若要在堆上分配对象
 
 1. 使用**新**运算符，此运算符返回指向对象的指针，以分配堆上的对象。 使用**删除**运算符将其删除。
 
-     下面的堆和帧示例假定，`CPerson`构造函数不采用任何参数。
+   下面的堆和帧示例假定，`CPerson`构造函数不采用任何参数。
 
-     [!code-cpp[NVC_MFC_Utilities#7](../mfc/codesnippet/cpp/memory-management-examples_7.cpp)]
+   [!code-cpp[NVC_MFC_Utilities#7](../mfc/codesnippet/cpp/memory-management-examples_7.cpp)]
 
-     如果为参数`CPerson`构造函数是一个指向**char**，帧分配的语句是：
+   如果为参数`CPerson`构造函数是一个指向**char**，帧分配的语句是：
 
-     [!code-cpp[NVC_MFC_Utilities#8](../mfc/codesnippet/cpp/memory-management-examples_8.cpp)]
+   [!code-cpp[NVC_MFC_Utilities#8](../mfc/codesnippet/cpp/memory-management-examples_8.cpp)]
 
-     堆分配的语句为：
+   堆分配的语句为：
 
-     [!code-cpp[NVC_MFC_Utilities#9](../mfc/codesnippet/cpp/memory-management-examples_9.cpp)]
+   [!code-cpp[NVC_MFC_Utilities#9](../mfc/codesnippet/cpp/memory-management-examples_9.cpp)]
 
 ## <a name="see-also"></a>请参阅
 

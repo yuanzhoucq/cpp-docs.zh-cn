@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ec76a554068dbec050078a0e0558cecd583410c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: cd9ea4397c655f0ebb28d10febe82581d6ad8771
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46429197"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055003"
 ---
 # <a name="icommandui-interface"></a>ICommandUI 接口
 
@@ -73,6 +73,7 @@ interface class ICommandUI
 ```
 property UICheckState Check;
 ```
+
 ## <a name="remarks"></a>备注
 
 此属性将此命令的用户界面项设置为相应的复选状态。 将检查设置为以下值：
@@ -86,6 +87,7 @@ property UICheckState Check;
 ```
 void ContinueRouting();
 ```
+
 ## <a name="remarks"></a>备注
 
 这是应返回 FALSE 的 ON_COMMAND_EX 处理程序结合使用的高级的成员函数。 有关详细信息，请参阅技术注意 TN006： 消息映射。
@@ -96,6 +98,7 @@ void ContinueRouting();
 ```
 property bool Enabled;
 ```
+
 ## <a name="remarks"></a>备注
 
 此属性启用或禁用此命令的用户界面项目。 将已启用到设置为 true 以启用该项目，为 FALSE，则将其禁用。
@@ -106,6 +109,7 @@ property bool Enabled;
 ```
 property unsigned int ID;
 ```
+
 ## <a name="remarks"></a>备注
 
 此属性获取的菜单项、 工具栏按钮或 ICommandUI 对象表示的其他用户界面对象的 ID （句柄）。
@@ -116,6 +120,7 @@ property unsigned int ID;
 ```
 property unsigned int Index;
 ```
+
 ## <a name="remarks"></a>备注
 
 此属性获取的菜单项、 工具栏按钮或 ICommandUI 对象表示的其他用户界面对象的索引 （句柄）。
@@ -126,6 +131,7 @@ property unsigned int Index;
 ```
 property bool Radio;
 ```
+
 ## <a name="remarks"></a>备注
 
 此属性将此命令的用户界面项设置为相应的复选状态。 将广播到设置为 true 以启用项;否则为 FALSE。
@@ -136,6 +142,7 @@ property bool Radio;
 ```
 property String^ Text;
 ```
+
 ## <a name="remarks"></a>备注
 
 此属性设置为此命令的用户界面项的文本。 将文本设置为文本字符串句柄。

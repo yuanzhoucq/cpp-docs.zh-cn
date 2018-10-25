@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 451cf4b404143ce8f9b94481dd27227f487874d0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b66debe5c6401b4eee01bc81acc58b8445e20c21
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46381161"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068770"
 ---
 # <a name="mfc-activex-controls-licensing-an-activex-control"></a>MFC ActiveX 控件：许可 ActiveX 控件
 
@@ -84,15 +84,15 @@ ActiveX 控件向导现在会生成一种 ActiveX 控件框架，包括基本授
 
 - [VerifyUserLicense](../mfc/reference/coleobjectfactory-class.md#verifyuserlicense)
 
-     验证控件，允许通过检查系统中存在控制许可证文件的设计时使用情况。 在处理过程由框架调用此函数`IClassFactory2::GetLicInfo`和`IClassFactory::CreateInstanceLic`。
+   验证控件，允许通过检查系统中存在控制许可证文件的设计时使用情况。 在处理过程由框架调用此函数`IClassFactory2::GetLicInfo`和`IClassFactory::CreateInstanceLic`。
 
 - [GetLicenseKey](../mfc/reference/coleobjectfactory-class.md#getlicensekey)
 
-     从控件 DLL 请求的唯一键。 此密钥是嵌入在容器应用程序中，与结合使用更高版本， `VerifyLicenseKey`，以创建控件的实例。 在处理过程由框架调用此函数`IClassFactory2::RequestLicKey`。
+   从控件 DLL 请求的唯一键。 此密钥是嵌入在容器应用程序中，与结合使用更高版本， `VerifyLicenseKey`，以创建控件的实例。 在处理过程由框架调用此函数`IClassFactory2::RequestLicKey`。
 
 - [VerifyLicenseKey](../mfc/reference/coleobjectfactory-class.md#verifylicensekey)
 
-     验证嵌入的键和控件的唯一键相同。 这样，要创建的供其使用的控件实例的容器。 在处理过程由框架调用此函数`IClassFactory2::CreateInstanceLic`，可以重写为自定义的验证的许可证密钥。 默认实现将执行字符串比较。 有关详细信息，请参阅[自定义 ActiveX 控件的许可](#_core_customizing_the_licensing_of_an_activex_control)，这篇文章中更高版本。
+   验证嵌入的键和控件的唯一键相同。 这样，要创建的供其使用的控件实例的容器。 在处理过程由框架调用此函数`IClassFactory2::CreateInstanceLic`，可以重写为自定义的验证的许可证密钥。 默认实现将执行字符串比较。 有关详细信息，请参阅[自定义 ActiveX 控件的许可](#_core_customizing_the_licensing_of_an_activex_control)，这篇文章中更高版本。
 
 ###  <a name="_core_header_file_modifications"></a> 标头文件修改
 

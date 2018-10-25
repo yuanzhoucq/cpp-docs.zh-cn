@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9019b8f2314cfefa5b952994e7fa7c3e9d8d459e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8236ed06a5863e2208c77294e4ddb7352b0f83f7
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46442768"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052988"
 ---
 # <a name="form-views-mfc"></a>窗体视图 (MFC)
 
@@ -40,7 +40,7 @@ ms.locfileid: "46442768"
 
 - 创建对话框资源具有适当的样式 （或可以使用尚未与类相关联的现有对话框资源）。
 
-     如果选择现有的对话框资源，可能需要将这些样式设置为对话框的使用属性页。 必须包括一个对话框中的样式：
+   如果选择现有的对话框资源，可能需要将这些样式设置为对话框的使用属性页。 必须包括一个对话框中的样式：
 
      **WS_CHILD**= On
 
@@ -54,17 +54,17 @@ ms.locfileid: "46442768"
 
 - 创建`CDocument`-基于类
 
-     而不是创建一个新类，可以使用任何现有`CDocument`-基于你的项目中的类。
+   而不是创建一个新类，可以使用任何现有`CDocument`-基于你的项目中的类。
 
 - 生成的文档模板 (派生自`CDocument`) 的字符串、 菜单和图标资源。
 
-     此外可以创建基于模板的新类。
+   此外可以创建基于模板的新类。
 
 - 添加到调用`AddDocumentTemplate`在应用程序的`InitInstance`代码。
 
-     Visual c + + 将添加这段代码用于每个新窗体创建，这将在窗体添加到可用的窗体的列表，当用户选择**新建**命令。 此代码包括窗体的关联的资源 ID 和关联的文档、 视图和框架类一起构成新的窗体对象的名称。
+   Visual c + + 将添加这段代码用于每个新窗体创建，这将在窗体添加到可用的窗体的列表，当用户选择**新建**命令。 此代码包括窗体的关联的资源 ID 和关联的文档、 视图和框架类一起构成新的窗体对象的名称。
 
-     文档模板用作文档、 框架窗口和视图之间的连接。 单个文档，可以创建多个模板。
+   文档模板用作文档、 框架窗口和视图之间的连接。 单个文档，可以创建多个模板。
 
 有关详细信息，请参见:
 

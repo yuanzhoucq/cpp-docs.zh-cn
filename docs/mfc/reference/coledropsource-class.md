@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f40ac527ba8ad7e65f025910e96a69f546842e30
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: cb12135a0fbffdeba55130bced80c2f23c365caa
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46447552"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052340"
 ---
 # <a name="coledropsource-class"></a>COleDropSource 类
 
@@ -177,6 +177,4 @@ virtual SCODE QueryContinueDrag(
 [MFC 示例 OCLIENT](../../visual-cpp-samples.md)<br/>
 [CCmdTarget 类](../../mfc/reference/ccmdtarget-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)
-
-
 

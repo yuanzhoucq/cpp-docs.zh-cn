@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c71bfa1eb9acb270195549eec950fb4fdf6c31b3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f41bdf8d2487d81e7c8dc9887807b05afb32acbd
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46438946"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060036"
 ---
 # <a name="walkthrough-creating-a-dataflow-agent"></a>演练：创建数据流代理
 
@@ -78,7 +78,7 @@ ms.locfileid: "46438946"
 
 [!code-cpp[concrt-dataflow-agent#6](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-dataflow-agent_3.cpp)]
 
-     The `countdown_event` class is shown later in this topic.
+   `countdown_event`类在本主题后面所示。
 
 1. 在数据流网络中创建该消息将加入的缓冲区对象。
 
@@ -101,7 +101,7 @@ ms.locfileid: "46438946"
 |成员|描述|
 |------------|-----------------|
 |`increment_active`|一个[concurrency:: transformer](../../parallel/concrt/reference/transformer-class.md)递增有效事件计数器并将输入的值传递到网络的其余部分的对象。|
-|`negatives`, `positives`|[concurrency:: call](../../parallel/concrt/reference/call-class.md)有效事件计数器递增的数字和递减计数的对象。 每个对象使用筛选器接受负数或正数。|
+|`negatives`， `positives`|[concurrency:: call](../../parallel/concrt/reference/call-class.md)有效事件计数器递增的数字和递减计数的对象。 每个对象使用筛选器接受负数或正数。|
 |`sentinel`|一个[concurrency:: call](../../parallel/concrt/reference/call-class.md)接受有效事件计数器的仅零和递减的 sentinel 值的对象。|
 |`connector`|一个[concurrency:: unbounded_buffer](reference/unbounded-buffer-class.md)连接到内部网络的源消息缓冲区的对象。|
 

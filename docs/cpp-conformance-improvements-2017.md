@@ -10,12 +10,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ebcb2e52f67cfe37c4954e530fd2b2393ae23b68
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: a4003868609d8ffd1ea3b29074bdd24c25442ad8
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861689"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054444"
 ---
 # <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-157improvements157-158update158"></a>Visual Studio 2017 版本 15.0、[15.3](#improvements_153)、[15.5](#improvements_155)、[15.6](#improvements_156)、[15.7](#improvements_157) 和 [15.8](#update_158) 中 C++ 的一致性改进
 
@@ -227,9 +227,9 @@ B b(42L); // now calls B(int)
 struct Derived;
 
 struct Base {
-    friend struct Derived;
+    friend struct Derived;
 private:
-    Base() {}
+    Base() {}
 };
 
 struct Derived : Base {};
@@ -247,9 +247,9 @@ Derived d2 {}; // OK in C++14: Calls Derived::Derived()
 struct Derived;
 
 struct Base {
-    friend struct Derived;
+    friend struct Derived;
 private:
-    Base() {}
+    Base() {}
 };
 
 struct Derived : Base {
@@ -1375,7 +1375,7 @@ struct B : A {
 
 ```cpp
 struct X {
-    static constexpr int size = 3;
+    static constexpr int size = 3;
 };
 const int X::size; // C5041
 ```
@@ -1588,7 +1588,7 @@ D<int> d;
 
 ### <a name="constexpr-aggregate-initialization"></a>constexpr 聚合初始化
 
-先前版本的 C++ 编译器错误处理了 constexpr 聚合初始化；它接受了无效代码，其中 aggregate-init-list 拥有太多元素并为其生成了错误的 codegen。 以下代码是一个此类代码的示例： 
+先前版本的 C++ 编译器错误处理了 constexpr 聚合初始化；它接受了无效代码，其中 aggregate-init-list 拥有太多元素并为其生成了错误的 codegen。 以下代码是一个此类代码的示例：
 
 ```cpp
 #include <array>
@@ -1690,15 +1690,14 @@ struct S : Base<T> {
 
 C++ 标准不允许用户将转发声明或定义添加到命名空间 `std`。 如果将声明或定义添加到命名空间 `std` 或命名空间 std 中的命名空间，会导致未定义的行为。
 
-未来的某个时间，Microsoft 将移动定义一些 STL 类型的位置。 在此情况下，它会破坏将转发声明添加到命名空间 `std` 的现有代码。 新警告 C4643 有助于识别此类源问题。 **/default** 模式下启用此警告，默认关闭此警告。 它会影响使用 /Wall 或 /WX 编译的程序。 
+未来的某个时间，Microsoft 将移动定义一些 STL 类型的位置。 在此情况下，它会破坏将转发声明添加到命名空间 `std` 的现有代码。 新警告 C4643 有助于识别此类源问题。 **/default** 模式下启用此警告，默认关闭此警告。 它会影响使用 /Wall 或 /WX 编译的程序。
 
-现在，以下代码引发 C4643：C++ Standard 不允许命名空间 std 中的转发声明“vector”。 
-
+现在，以下代码引发 C4643：C++ Standard 不允许命名空间 std 中的转发声明“vector”。
 
 ```cpp
-namespace std { 
-    template<typename T> class vector; 
-} 
+namespace std {
+    template<typename T> class vector;
+}
 ```
 
 要修复此错误，使用 include 指令，而不是转发声明：
@@ -1714,106 +1713,106 @@ C++ Standard 建议当委托构造函数对自身进行委托时，编译器应�
 如果不出现此错误，以下程序将编译，但会生成无限循环：
 
 ```cpp
-class X { 
-public: 
-    X(int, int); 
+class X {
+public:
+    X(int, int);
     X(int v) : X(v){}
-}; 
+};
 ```
 
 若要避免无限循环，可委托给其他构造函数：
 
 ```cpp
-class X { 
-public: 
+class X {
+public:
 
-    X(int, int); 
-    X(int v) : X(v, 0) {} 
-}; 
+    X(int, int);
+    X(int v) : X(v, 0) {}
+};
 ```
 
 ### <a name="offsetof-with-constant-expressions"></a>常量表达式的 offsetof
 
-传统上，使用需要 [reinterpret_cast](cpp/reinterpret-cast-operator.md) 的宏实现 [offsetof](c-runtime-library/reference/offsetof-macro.md)。 在需要常量表达式的上下文中，此操作是非法的，但从传统上，Microsoft C++ 编译器允许此操作。 STL 中附带的 offsetof 宏正确使用内部编译器 (__builtin_offsetof)，但许多人使用此宏来定义自己的 offsetof。  
+传统上，使用需要 [reinterpret_cast](cpp/reinterpret-cast-operator.md) 的宏实现 [offsetof](c-runtime-library/reference/offsetof-macro.md)。 在需要常量表达式的上下文中，此操作是非法的，但从传统上，Microsoft C++ 编译器允许此操作。 STL 中附带的 offsetof 宏正确使用内部编译器 (__builtin_offsetof)，但许多人使用此宏来定义自己的 offsetof。
 
 在 Visual Studio 2017 版本 15.8 中，编译器限制默认模式下出现这些 reinterpret_casts 的位置，以帮助代码符合标准 C++ 行为。 在 [/permissive-](build/reference/permissive-standards-conformance.md) 下，此类限制更严格。 在需要常量表达式的位置使用 offsetof 的结果会引发警告 C4644：在常量表达式中使用基于宏的 offsetof 模式是不标准的；请改用 C++ 标准库中定义的 offsetof，或引发 C2975：模板参数无效，需要编译时常量表达式。
 
-以下代码在 /default 和 /std:c++17 模式下引发 C4644，在 /permissive- 模式下引发 C2975： 
+以下代码在 /default 和 /std:c++17 模式下引发 C4644，在 /permissive- 模式下引发 C2975：
 
 ```cpp
-struct Data { 
-    int x; 
-}; 
+struct Data {
+    int x;
+};
 
-// Common pattern of user-defined offsetof 
-#define MY_OFFSET(T, m) (unsigned long long)(&(((T*)nullptr)->m)) 
+// Common pattern of user-defined offsetof
+#define MY_OFFSET(T, m) (unsigned long long)(&(((T*)nullptr)->m))
 
-int main() 
+int main()
 
-{ 
-    switch (0) { 
-    case MY_OFFSET(Data, x): return 0; 
-    default: return 1; 
-    } 
-} 
+{
+    switch (0) {
+    case MY_OFFSET(Data, x): return 0;
+    default: return 1;
+    }
+}
 ```
 
 要修复此错误，使用通过 cstddef> 定义的 offsetof\<：
 
 ```cpp
-#include <cstddef>  
+#include <cstddef>
 
-struct Data { 
-    int x; 
-};  
+struct Data {
+    int x;
+};
 
-int main() 
-{ 
-    switch (0) { 
-    case offsetof(Data, x): return 0; 
-    default: return 1; 
-    } 
-} 
+int main()
+{
+    switch (0) {
+    case offsetof(Data, x): return 0;
+    default: return 1;
+    }
+}
 ```
-
 
 ### <a name="cv-qualifiers-on-base-classes-subject-to-pack-expansion"></a>基类上的 cv-qualifiers 受包扩展约束
 
-Microsoft C++ 编译器的以前版本不会检测基类是否有 cv-qualifiers，如果它也受包扩展约束。 
+Microsoft C++ 编译器的以前版本不会检测基类是否有 cv-qualifiers，如果它也受包扩展约束。
 
-在 Visual Studio 2017 版本 15.8 中的 /permissive- 模式下，以下代码引发 C3770：“const S”不是有效基类： 
+在 Visual Studio 2017 版本 15.8 中的 /permissive- 模式下，以下代码引发 C3770：“const S”不是有效基类：
 
 ```cpp
-template<typename... T> 
-class X : public T... { };  
+template<typename... T>
+class X : public T... { };
 
-class S { };  
+class S { };
 
-int main() 
-{ 
-    X<const S> x; 
-} 
+int main()
+{
+    X<const S> x;
+}
 ```
+
 ### <a name="template-keyword-and-nested-name-specifiers"></a>模板关键字和嵌套名称说明符
 
-在 /permissive- 模式下，编译器现在要求 `template` 关键字添加在模板名称前，如果该关键字是在相关的嵌套名称说明符之后。 
+在 /permissive- 模式下，编译器现在要求 `template` 关键字添加在模板名称前，如果该关键字是在相关的嵌套名称说明符之后。
 
 在 /permissive- 模式下，以下代码现在引发 C7510：“foo”：相关的模板名称前必须添加“template”前缀。请注意：请参阅有关编译类模板实例化“X<T>”的参考：
 
 ```cpp
 template<typename T> struct Base
 {
-    template<class U> void foo() {} 
-}; 
+    template<class U> void foo() {}
+};
 
-template<typename T> 
-struct X : Base<T> 
-{ 
-    void foo() 
-    { 
-        Base<T>::foo<int>(); 
-    } 
-}; 
+template<typename T>
+struct X : Base<T>
+{
+    void foo()
+    {
+        Base<T>::foo<int>();
+    }
+};
 ```
 
 要修复此错误，将 `template` 关键字添加到 `Base<T>::foo<int>();` 语句，如以下示例所示：
@@ -1823,16 +1822,16 @@ template<typename T> struct Base
 {
     template<class U> void foo() {}
 };
- 
-template<typename T> 
-struct X : Base<T> 
-{ 
-    void foo() 
-    { 
+
+template<typename T>
+struct X : Base<T>
+{
+    void foo()
+    {
         // Add template keyword here:
-        Base<T>::template foo<int>(); 
-    } 
-}; 
+        Base<T>::template foo<int>();
+    }
+};
 ```
 
 ## <a name="see-also"></a>请参阅
