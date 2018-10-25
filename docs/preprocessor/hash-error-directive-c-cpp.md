@@ -18,32 +18,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d2da939fe52e41e122ecd4926e34fb9c4be735ae
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 143733af9003442996d9f649825f45f93643f536
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42540946"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078792"
 ---
 # <a name="error-directive-cc"></a>#error 指令 (C/C++)
-**#Error**指令在编译时发出用户指定的错误消息，然后终止编译。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-#errortoken-string  
-```  
-  
-## <a name="remarks"></a>备注  
- 
-此指令发出的错误消息包括*令牌字符串*参数。 *令牌字符串*参数不受宏扩展。 此指令通知程序不一致的开发人员或违反约束在预处理过程会十分有用。 下面的示例演示如何处理在预处理期间出错：  
-  
-```  
-#if !defined(__cplusplus)  
-#error C++ compiler required.  
-#endif  
-```  
-  
-## <a name="see-also"></a>请参阅  
- 
+**#Error**指令在编译时发出用户指定的错误消息，然后终止编译。
+
+## <a name="syntax"></a>语法
+
+```
+#errortoken-string
+```
+
+## <a name="remarks"></a>备注
+
+此指令发出的错误消息包括*令牌字符串*参数。 *令牌字符串*参数不受宏扩展。 此指令通知程序不一致的开发人员或违反约束在预处理过程会十分有用。 下面的示例演示如何处理在预处理期间出错：
+
+```
+#if !defined(__cplusplus)
+#error C++ compiler required.
+#endif
+```
+
+## <a name="see-also"></a>请参阅
+
 [预处理器指令](../preprocessor/preprocessor-directives.md)

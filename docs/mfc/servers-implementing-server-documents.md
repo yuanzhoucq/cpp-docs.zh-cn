@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b62de2a1e6cba6ecbb29521518f5442ab002ddf3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7907935971fae7d990c651410e5b76982b798075
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46381941"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060515"
 ---
 # <a name="servers-implementing-server-documents"></a>服务器：实现服务器文档
 
@@ -36,7 +36,7 @@ ms.locfileid: "46381941"
 
 1. 实现`OnGetEmbeddedItem`服务器文档类的成员函数。
 
-     `OnGetEmbeddedItem` 容器应用程序的用户创建或编辑嵌入的项时调用。 它应返回一个表示整个文档项。 这应为的对象在`COleServerItem`-派生的类。
+   `OnGetEmbeddedItem` 容器应用程序的用户创建或编辑嵌入的项时调用。 它应返回一个表示整个文档项。 这应为的对象在`COleServerItem`-派生的类。
 
 1. 重写`Serialize`成员函数以序列化文档的内容。 不需要序列化的服务器项的列表，除非正在使用它们来表示在文档中的本机数据。 有关详细信息，请参阅*实现服务器项*一文中[服务器： 服务器项](../mfc/servers-server-items.md)。
 

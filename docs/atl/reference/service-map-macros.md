@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc7b0ca9388de82d49927a7fe76694212b94246b
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 30715cffb42c1dbf92512fa7314bf70f46f300a3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46053708"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50079930"
 ---
 # <a name="service-map-macros"></a>服务映射宏
 
@@ -33,7 +33,7 @@ ms.locfileid: "46053708"
 |[BEGIN_SERVICE_MAP](#begin_service_map)|表示 ATL 服务映射的开头。|
 |[END_SERVICE_MAP](#end_service_map)|标记 ATL 服务映射的末尾。|
 |[SERVICE_ENTRY](#service_entry)|指示对象支持特定的服务 id。|
-|[SERVICE_ENTRY_CHAIN](#service_entry_chain)|指示[IServiceProviderImpl::QueryService](#queryservice)链接到指定的对象。|  
+|[SERVICE_ENTRY_CHAIN](#service_entry_chain)|指示[IServiceProviderImpl::QueryService](#queryservice)链接到指定的对象。|
 
 ## <a name="requirements"></a>要求
 
@@ -115,7 +115,7 @@ SERVICE_ENTRY_CHAIN( punk )
 创建或访问指定的服务并返回到该服务的指定接口的接口指针。
 
 ```
-STDMETHOD(QueryService)( 
+STDMETHOD(QueryService)(
     REFGUID guidService,
     REFIID riid,
     void** ppvObject);

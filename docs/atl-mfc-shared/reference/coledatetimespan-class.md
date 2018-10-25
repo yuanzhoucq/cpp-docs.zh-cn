@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be0e05d61d4949deaee683c5b8f43d18e0501d23
-ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
+ms.openlocfilehash: 5e50fe341ff52916d16b3c006e438fe2bfa99154
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49808974"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082835"
 ---
 # <a name="coledatetimespan-class"></a>COleDateTimeSpan 类
 
@@ -157,7 +157,7 @@ COleDateTimeSpan(LONG lDays, int nHours, int nMins, int nSecs) throw();
 *dblSpanSrc*<br/>
 若要复制到新天数`COleDateTimeSpan`对象。
 
-*lDays*， *n 小时*， *nMins*， *nSecs*  
+*lDays*， *n 小时*， *nMins*， *nSecs*<br/>
 指示要复制到新的日期和时间值`COleDateTimeSpan`对象。
 
 ### <a name="remarks"></a>备注
@@ -217,10 +217,10 @@ CString Format(UINT nID) const;
 
 此函数的窗体的简短说明如下所示：
 
-**格式 (** *pFormat* **)**  
+**格式 (** *pFormat* **)**<br/>
 此窗体设置使用的格式字符串，包含特殊的格式化代码前面带有百分号 （%） 的值的格式如`printf`。 格式设置字符串作为参数传递给函数。
 
-**格式 (** *nID* **)**  
+**格式 (** *nID* **)**<br/>
 此窗体设置使用的格式字符串，包含特殊的格式化代码前面带有百分号 （%） 的值的格式如`printf`。 格式设置字符串是一个资源。 此字符串资源的 ID 作为参数进行传递。
 
 ### <a name="example"></a>示例
@@ -388,11 +388,11 @@ DateTimeSpanStatus GetStatus() const throw();
 由定义的返回值`DateTimeSpanStatus`枚举中定义的类型`COleDateTimeSpan`类。
 
 ```
-enum DateTimeSpanStatus{  
-   valid = 0,  
-   invalid = 1,  
-   null = 2,  
-};  
+enum DateTimeSpanStatus{
+   valid = 0,
+   invalid = 1,
+   null = 2,
+};
 ```
 
 有关这些状态的值的简要说明，请参阅下面的列表：
@@ -585,11 +585,11 @@ DateTimeSpanStatus m_status;
 ### <a name="remarks"></a>备注
 
 ```
-enum DateTimeSpanStatus{  
-   valid = 0,  
-   invalid = 1,  
-   null = 2,  
-   };  
+enum DateTimeSpanStatus{
+   valid = 0,
+   invalid = 1,
+   null = 2,
+   };
 ```
 
 有关这些状态的值的简要说明，请参阅下面的列表：
@@ -694,7 +694,7 @@ void SetDateTimeSpan(LONG lDays, int nHours, int nMins, int nSecs) throw();
 
 ### <a name="parameters"></a>参数
 
-*lDays*， *n 小时*， *nMins*， *nSecs*  
+*lDays*， *n 小时*， *nMins*， *nSecs*<br/>
 指示日期范围和时间跨度值复制到此`COleDateTimeSpan`对象。
 
 ### <a name="remarks"></a>备注
@@ -739,11 +739,11 @@ void SetStatus(DateTimeSpanStatus status) throw();
 *状态*参数值由定义`DateTimeSpanStatus`枚举中定义的类型`COleDateTimeSpan`类。
 
 ```
-enum DateTimeSpanStatus{  
-   valid = 0,  
-   invalid = 1,  
-   null = 2,  
-   };  
+enum DateTimeSpanStatus{
+   valid = 0,
+   invalid = 1,
+   null = 2,
+   };
 ```
 
 有关这些状态的值的简要说明，请参阅下面的列表：

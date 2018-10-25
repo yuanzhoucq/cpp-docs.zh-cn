@@ -39,12 +39,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d92d196cc38e6033c6f16332e4977f2481c4496
-ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
+ms.openlocfilehash: 98fec6659c2f4e998b946983a0bd2bdea6d0cde1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49990329"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083251"
 ---
 # <a name="openmp-directives"></a>OpenMP 指令
 
@@ -52,19 +52,19 @@ ms.locfileid: "49990329"
 
 Visual c + + 支持以下 OpenMP 指令：
 
-指令                             | 描述
-------------------------------------- | -----------------------------------------------------------------------------------------------------------------
-[atomic](#atomic)                     | 指定将以原子方式更新的内存位置。
-[barrier](#barrier)                   | 同步团队; 中的所有线程所有线程在屏障，都暂停，直到所有线程都执行屏障。
-[critical](#critical)                 | 指定代码仅执行一个线程上一次。
-[flush](#flush-openmp)                | 指定的所有线程都都共享的所有对象的内存的相同视图。
-[for](#for-openmp)                    | 导致中完成的工作`for`要在线程之间划分的并行区域内的循环。
-[master](#master)                     | 指定只有主线程应执行的程序部分。
-[排序](#ordered-openmp-directives) | 指定该代码在并行化`for`应如顺序循环执行循环。
-[parallel](#parallel)                 | 定义并行区域，这是由多个线程并行执行的代码。
-[部分](#sections-openmp)          | 标识代码段来分担所有线程。
-[single](#single)                     | 可以指定一段代码应在单个线程，不一定是主线程上执行。
-[threadprivate](#threadprivate)       | 指定一个变量是线程私有的。
+|指令|描述|
+|---------|-----------|
+|[atomic](#atomic)|指定将以原子方式更新的内存位置。|
+|[barrier](#barrier)|同步团队; 中的所有线程所有线程在屏障，都暂停，直到所有线程都执行屏障。|
+|[critical](#critical)|指定代码仅执行一个线程上一次。|
+|[flush](#flush-openmp)|指定的所有线程都都共享的所有对象的内存的相同视图。|
+|[for](#for-openmp)|导致中完成的工作`for`要在线程之间划分的并行区域内的循环。|
+|[master](#master)|指定只有主线程应执行的程序部分。|
+|[排序](#ordered-openmp-directives)|指定该代码在并行化`for`应如顺序循环执行循环。|
+|[parallel](#parallel)|定义并行区域，这是由多个线程并行执行的代码。|
+|[部分](#sections-openmp)|标识代码段来分担所有线程。|
+|[single](#single)|可以指定一段代码应在单个线程，不一定是主线程上执行。|
+|[threadprivate](#threadprivate)|指定一个变量是线程私有的。|
 
 ## <a name="atomic"></a>原子
 
@@ -306,13 +306,13 @@ data = 2
 
 `for`指令支持以下 OpenMP 子句：
 
-- [firstprivate](../../../parallel/openmp/reference/firstprivate.md)
-- [lastprivate](../../../parallel/openmp/reference/lastprivate.md)
-- [nowait](../../../parallel/openmp/reference/nowait.md)
-- [排序](../../../parallel/openmp/reference/ordered-openmp-directives.md)
-- [private](../../../parallel/openmp/reference/private-openmp.md)
-- [reduction](../../../parallel/openmp/reference/reduction.md)
-- [schedule](../../../parallel/openmp/reference/schedule.md)
+- [firstprivate](openmp-clauses.md#firstprivate)
+- [lastprivate](openmp-clauses.md#lastprivate)
+- [nowait](openmp-clauses.md#nowait)
+- [排序](openmp-clauses.md#ordered-openmp-clauses)
+- [private](openmp-clauses.md#private-openmp)
+- [reduction](openmp-clauses.md#reduction)
+- [schedule](openmp-clauses.md#schedule)
 
 如果`parallel`同时指定，则`clauses`可以由接受的任何子句`parallel`或`for`指令，除`nowait`。
 
@@ -535,14 +535,14 @@ test2() iteration 4
 
 `parallel`指令支持以下 OpenMP 子句：
 
-- [copyin](../../../parallel/openmp/reference/copyin.md)
-- [default](../../../parallel/openmp/reference/default-openmp.md)
-- [firstprivate](../../../parallel/openmp/reference/firstprivate.md)
-- [if](../../../parallel/openmp/reference/if-openmp.md)
-- [num_threads](../../../parallel/openmp/reference/num-threads.md)
-- [private](../../../parallel/openmp/reference/private-openmp.md)
-- [reduction](../../../parallel/openmp/reference/reduction.md)
-- [shared](../../../parallel/openmp/reference/shared-openmp.md)
+- [copyin](openmp-clauses.md#copyin)
+- [default](openmp-clauses.md#default-openmp)
+- [firstprivate](openmp-clauses.md#firstprivate)
+- [if](openmp-clauses.md#if-openmp)
+- [num_threads](openmp-clauses.md#num-threads)
+- [private](openmp-clauses.md#private-openmp)
+- [reduction](openmp-clauses.md#reduction)
+- [shared](openmp-clauses.md#shared-openmp)
 
 `parallel` 也可以用于[各节](#sections-openmp)并[为](#for-openmp)指令。
 
@@ -603,11 +603,11 @@ Hello from thread 3
 
 `sections`指令支持以下 OpenMP 子句：
 
-- [firstprivate](../../../parallel/openmp/reference/firstprivate.md)
-- [lastprivate](../../../parallel/openmp/reference/lastprivate.md)
-- [nowait](../../../parallel/openmp/reference/nowait.md)
-- [private](../../../parallel/openmp/reference/private-openmp.md)
-- [reduction](../../../parallel/openmp/reference/reduction.md)
+- [firstprivate](openmp-clauses.md#firstprivate)
+- [lastprivate](openmp-clauses.md#lastprivate)
+- [nowait](openmp-clauses.md#nowait)
+- [private](openmp-clauses.md#private-openmp)
+- [reduction](openmp-clauses.md#reduction)
 
 如果`parallel`同时指定，则`clauses`可以由接受的任何子句`parallel`或`sections`指令，除`nowait`。
 
@@ -656,10 +656,10 @@ Hello from thread 0
 
 `single`指令支持以下 OpenMP 子句：
 
-- [copyprivate](../../../parallel/openmp/reference/copyprivate.md)
-- [firstprivate](../../../parallel/openmp/reference/firstprivate.md)
-- [nowait](../../../parallel/openmp/reference/nowait.md)
-- [private](../../../parallel/openmp/reference/private-openmp.md)
+- [copyprivate](openmp-clauses.md#copyprivate)
+- [firstprivate](openmp-clauses.md#firstprivate)
+- [nowait](openmp-clauses.md#nowait)
+- [private](openmp-clauses.md#private-openmp)
 
 [主](#master)指令，可以指定应仅在主线程上执行的代码段。
 
@@ -745,4 +745,4 @@ int main()
 
 ### <a name="example"></a>示例
 
-有关使用的示例`threadprivate`，请参阅[专用](../../../parallel/openmp/reference/private-openmp.md)。
+有关使用的示例`threadprivate`，请参阅[专用](openmp-clauses.md#private-openmp)。

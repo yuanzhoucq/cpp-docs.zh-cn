@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 48cbc29685660f00665fbbb08be76779272d0fcf
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 3daa42008bd385b2d45d05106162c99fb9ca0b12
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235498"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082874"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>演练： 更新 MFC 随意画图应用程序 （第 1 部分）
 
@@ -32,7 +32,7 @@ ms.locfileid: "48235498"
 
 本演练中修改经典 Scribble 1.0 MFC 示例，可以使用鼠标来创建线条图形。 此部分演练演示如何修改 Scribble 示例，以便它将显示功能区栏。 [第 2 部分](../mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md)将多个按钮添加到功能区栏。
 
-## <a name="prerequisites"></a>系统必备 
+## <a name="prerequisites"></a>系统必备
 
 [Scribble 1.0 MFC 示例](http://download.microsoft.com/download/4/0/9/40946FEC-EE5C-48C2-8750-B0F8DA1C99A8/MFC/general/Scribble.zip.exe)。 有关将转换为 Visual Studio 2017 的帮助，请参阅[移植指南： MFC Scribble](../porting/porting-guide-mfc-scribble.md)。
 
@@ -146,7 +146,7 @@ ms.locfileid: "48235498"
    1. 导入 filesmall.bmp 文件，其中包含十一个 16 x 16 (16 x 176) 映像。 更改为位图的 ID `IDB_RIBBON_FILESMALL`。
 
    > [!NOTE]
-   > 因为我们需要只有前八个 16 x 16 映像 (16 x 128)，或者可能会出现意外从 176 128 到此位图的右侧的宽度。 
+   > 因为我们需要只有前八个 16 x 16 映像 (16 x 128)，或者可能会出现意外从 176 128 到此位图的右侧的宽度。
 
    1. 导入 filelarge.bmp，其中包含九个 32 x 32 (32 x 288) 映像。 更改为位图的 ID `IDB_RIBBON_FILELARGE`。
 
@@ -161,7 +161,7 @@ ms.locfileid: "48235498"
    1. 导入 panelicons.bmp 位图，其中包含八个 16 x 16 映像。 在中**属性**窗口中的**位图编辑器**，调整到 64 (16 x 64) 位图的宽度。 更改为位图的 ID `IDB_PANEL_ICONS`。
 
    > [!NOTE]
-   > 因为我们需要只有前四个 16 x 16 映像 (16 x 64)，或者可能会出现意外介于 128 到 64 将该位图的右侧的宽度。 
+   > 因为我们需要只有前四个 16 x 16 映像 (16 x 64)，或者可能会出现意外介于 128 到 64 将该位图的右侧的宽度。
 
 ##  <a name="addribbon"></a> 向项目添加功能区资源
 

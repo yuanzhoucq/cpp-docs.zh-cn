@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 018623e9e6a093c4f86b8768e0fd5329f4ea3282
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6da48b12b657944864b1a33216692fce296e5dfd
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46443769"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083446"
 ---
 # <a name="multithreading-when-to-use-the-mfc-synchronization-classes"></a>多线程处理： 何时使用同步类
 
@@ -38,17 +38,17 @@ MFC 提供的多线程的类分为两类： 同步对象 ([CSyncObject](../mfc/r
 
 1. 应用程序没有等待某个操作发生之前其可以访问的资源 （例如，数据必须从接收通信端口可以写入文件之前）？
 
-     如果是，使用`CEvent`。
+   如果是，使用`CEvent`。
 
 2. 可以多个线程中相同的应用程序访问此资源中一次 （例如，你的应用程序允许最多五个 windows 与同一文档视图）？
 
-     如果是，使用`CSemaphore`。
+   如果是，使用`CSemaphore`。
 
 3. 多个应用程序可以使用此资源 （例如，资源 DLL 中是）？
 
-     如果是，使用`CMutex`。
+   如果是，使用`CMutex`。
 
-     如果不是，使用`CCriticalSection`。
+   如果不是，使用`CCriticalSection`。
 
 `CSyncObject` 永远不会直接使用。 它是其他四个同步类的基类。
 

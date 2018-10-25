@@ -16,12 +16,12 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 90754db9c648395ad916cf03682a5c87c0b7da3b
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 3cc592deaed967a7b6e93f9250103e28fb058de3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235303"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080749"
 ---
 # <a name="walkthrough-creating-and-using-a-static-library-c"></a>演练：创建和使用静态库 (C++)
 
@@ -33,11 +33,11 @@ ms.locfileid: "48235303"
 
 - [向静态库添加类](#AddClassToLib)
 
-- [创建一个 c + + 控制台应用程序引用静态库](#CreateAppToRefTheLib)
+- [创建引用静态库的 C++ 控制台应用](#CreateAppToRefTheLib)
 
-- [在应用中的静态库中使用的功能](#UseLibInApp)
+- [在应用中使用静态库的功能](#UseLibInApp)
 
-- [运行该应用程序](#RunApp)
+- [运行应用程序](#RunApp)
 
 ## <a name="prerequisites"></a>系统必备
 
@@ -54,7 +54,7 @@ ms.locfileid: "48235303"
    > [!NOTE]
    > 对于版本的 Visual Studio 2017，在**新的项目**对话框框中，展开**已安装** > **模板** >  **Visual c + +**，然后选择**Win32**。 在中间窗格中，选择 **“Win32 控制台应用程序”**。
 
-1. 指定项目的名称 — 例如， *MathFuncsLib*— 在**名称**框。 指定解决方案的名称 — 例如， *StaticLibrary*— 在**解决方案名称**框。 选择“确定”  按钮。
+1. 在 *“名称”* 框中为项目指定名称，例如 **MathFuncsLib** 。 在 *“解决方案名称”* 框中为解决方案指定名称，例如 **StaticLibrary** 。 选择“确定”  按钮。
 
     - 对于 Visual Studio 2017，
 
@@ -74,13 +74,13 @@ ms.locfileid: "48235303"
 
 ### <a name="to-add-a-class-to-the-static-library"></a>向静态库添加类
 
-1. 若要创建新类的标头文件，打开快捷菜单**MathFuncsLib**项目中**解决方案资源管理器**，然后选择**添加** >  **新项**。 在 **“添加新项”** 对话框的左窗格中，在 **“Visual C++”** 下选择 **“代码”**。 在中间窗格中，选择 **“头文件(.h)”**。 指定的标头文件的名称 — 例如， *MathFuncsLib.h*，然后选择**添加**按钮。 将显示一个空白头文件。
+1. 若要创建新类的标头文件，打开快捷菜单**MathFuncsLib**项目中**解决方案资源管理器**，然后选择**添加** >  **新项**。 在 **“添加新项”** 对话框的左窗格中，在 **“Visual C++”** 下选择 **“代码”**。 在中间窗格中，选择 **“头文件(.h)”**。 为头文件指定名称（例如 *MathFuncsLib.h*），然后选择 **“添加”** 按钮。 将显示一个空白头文件。
 
 1. 添加一个名为类`MyMathFuncs`以执行常见的算术运算，例如加法、 减法、 乘法和除法。 代码应类似于：
 
    [!code-cpp[NVC_Walkthrough_Create_Static_Lib#100](../windows/codesnippet/CPP/walkthrough-creating-and-using-a-static-library-cpp_1.h)]
 
-1. 若要创建新的类的源代码文件，打开快捷菜单**MathFuncsLib**项目中**解决方案资源管理器**，然后选择**添加** >  **新项**。 在 **“添加新项”** 对话框的左窗格中，在 **“Visual C++”** 下选择 **“代码”**。 在中间窗格中，选择 **“C++ 文件(.cpp)”**。 指定的源文件的名称 — 例如， *MathFuncsLib.cpp*，然后选择**添加**按钮。 将显示一个空白源文件。
+1. 若要创建新的类的源代码文件，打开快捷菜单**MathFuncsLib**项目中**解决方案资源管理器**，然后选择**添加** >  **新项**。 在 **“添加新项”** 对话框的左窗格中，在 **“Visual C++”** 下选择 **“代码”**。 在中间窗格中，选择 **“C++ 文件(.cpp)”**。 为源文件指定名称（例如 *MathFuncsLib.cpp*），然后选择 **“添加”** 按钮。 将显示一个空白源文件。
 
 1. 请使用此源文件实现 **MyMathFuncs**的功能。 代码应类似于：
 
@@ -91,18 +91,18 @@ ms.locfileid: "48235303"
    > [!NOTE]
    > 如果使用 Visual Studio 命令行生成，必须分两个步骤来生成程序。 首先，运行`cl /c /EHsc MathFuncsLib.cpp`以编译代码并创建名为的对象文件`MathFuncsLib.obj`。 （`cl` 命令可调用编译器 Cl.exe，并且 `/c` 选项可指定编译而无需链接。 有关详细信息，请参阅[/c （编译而无需链接）](../build/reference/c-compile-without-linking.md)。)其次，运行`lib MathFuncsLib.obj`以链接代码并创建静态库`MathFuncsLib.lib`。 （`lib` 命令可调用库管理器 Lib.exe。 有关详细信息，请参阅 [LIB Reference](../build/reference/lib-reference.md)。）
 
-##  <a name="CreateAppToRefTheLib"></a> 创建一个 c + + 控制台应用程序引用静态库
+##  <a name="CreateAppToRefTheLib"></a> 创建引用静态库的 C++ 控制台应用
 
 ### <a name="to-create-a-c-console-app-that-references-the-static-library"></a>创建引用静态库的 C++ 控制台应用
 
 1. 在菜单栏上，依次选择“文件” > “新建” > “项目”。
 
-1. 在左窗格中**新的项目**对话框框中，展开**已安装** > **Visual c + +**，然后选择**Windows 桌面**. 在中心窗格中，选择**Windows 桌面向导**。 
+1. 在左窗格中**新的项目**对话框框中，展开**已安装** > **Visual c + +**，然后选择**Windows 桌面**. 在中心窗格中，选择**Windows 桌面向导**。
 
    > [!NOTE]
    > 对于版本的 Visual Studio 2017，在**新的项目**对话框框中，展开**已安装** > **模板** >  **Visual c + +**，然后选择**Win32**。 在中间窗格中，选择 **“Win32 控制台应用程序”**。
 
-1. 指定项目的名称 — 例如， *MyExecRefsLib*— 在**名称**框。 在 **“解决方案”** 旁的下拉列表中选择 **“添加到解决方案”**。 该命令将新项目添加到包含静态库的解决方案。 选择“确定”  按钮。
+1. 在 *“名称”* 框中为项目指定名称，例如 **MyExecRefsLib** 。 在 **“解决方案”** 旁的下拉列表中选择 **“添加到解决方案”**。 该命令将新项目添加到包含静态库的解决方案。 选择“确定”  按钮。
 
     - 对于 Visual Studio 2017，
 
@@ -118,7 +118,7 @@ ms.locfileid: "48235303"
 
         1. 请确保**控制台应用程序**处于选中状态。 然后，检查**空项目**框，然后选择**完成**。
 
-##  <a name="UseLibInApp"></a> 在应用中的静态库中使用的功能
+##  <a name="UseLibInApp"></a> 在应用中使用静态库的功能
 
 ### <a name="to-use-the-functionality-from-the-static-library-in-the-app"></a>在应用中使用静态库的功能
 
@@ -138,13 +138,13 @@ ms.locfileid: "48235303"
 
 1. 通过选择来生成可执行文件**构建** > **生成解决方案**菜单栏上。
 
-##  <a name="RunApp"></a> 运行该应用程序
+##  <a name="RunApp"></a> 运行应用程序
 
 ### <a name="to-run-the-app"></a>运行应用
 
 1. 在 **“解决方案资源管理器”** 中打开 **MyExecRefsLib** 的快捷菜单，然后选择 **“设为启动项目”**，确保选择 **MyExecRefsLib**作为默认项目。
 
-1. 若要运行该项目，在菜单栏上，选择**调试** > **启动但不调试**。 输出应类似于：
+1. 要运行项目，请在菜单栏上选择“调试” > “开始执行(不调试)”。 输出应类似于：
 
     ```Output
     a + b = 106.4

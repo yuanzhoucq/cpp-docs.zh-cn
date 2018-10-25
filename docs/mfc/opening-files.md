@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4abd2bf866a97e13324af22032cce9ebcaba4da
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f74c0fdcdb8d6dfe1aced33a1c7087ecde6c89ff
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46408513"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080918"
 ---
 # <a name="opening-files"></a>打开文件
 
@@ -41,15 +41,15 @@ ms.locfileid: "46408513"
 
 1. 创建文件对象，无需指定路径或权限标志。
 
-     通常通过声明创建的文件对象[CFile](../mfc/reference/cfile-class.md)变量上的堆栈帧。
+   通常通过声明创建的文件对象[CFile](../mfc/reference/cfile-class.md)变量上的堆栈帧。
 
 1. 调用[打开](../mfc/reference/cfile-class.md#open)文件对象，提供路径和权限标志的成员函数。
 
-     如果成功打开文件，则 `Open` 的返回值不为零；否则如果指定文件未能打开，则为 0。 `Open` 成员函数的原型如下所示：
+   如果成功打开文件，则 `Open` 的返回值不为零；否则如果指定文件未能打开，则为 0。 `Open` 成员函数的原型如下所示：
 
-     `virtual BOOL Open( LPCTSTR lpszFileName, UINT nOpenFlags, CFileException* pError = NULL );`
+   `virtual BOOL Open( LPCTSTR lpszFileName, UINT nOpenFlags, CFileException* pError = NULL );`
 
-     打开标志指定您需要文件具有哪些权限（如只读）。 可能的标志值定义为 `CFile` 类中的枚举常数，因此它们具有“`CFile::`”的资格，如在 `CFile::modeRead` 中一样。 如果需要创建文件，则请使用 `CFile::modeCreate` 标志。
+   打开标志指定您需要文件具有哪些权限（如只读）。 可能的标志值定义为 `CFile` 类中的枚举常数，因此它们具有“`CFile::`”的资格，如在 `CFile::modeRead` 中一样。 如果需要创建文件，则请使用 `CFile::modeCreate` 标志。
 
 以下示例演示如何创建具有读/写权限的新文件（替换路径相同的任何之前的文件）：
 

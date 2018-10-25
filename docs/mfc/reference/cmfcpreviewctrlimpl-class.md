@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b157cfb497c355f44a15c8e42b81bc30753a4a9
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 29632784248d624f184550f0c598d05cd26b85cf
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441299"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50079540"
 ---
 # <a name="cmfcpreviewctrlimpl-class"></a>CMFCPreviewCtrlImpl 类
 
@@ -183,7 +183,6 @@ virtual void DoPaint(
 *pDC*<br/>
 指向用于绘制的设备上下文的指针。
 
-
 ## <a name="focus"></a> CMFCPreviewCtrlImpl::Focus
 
 设置输入焦点设置到此控件。
@@ -193,6 +192,7 @@ virtual void DoPaint(
 ```
 virtual void Focus();
 ```
+
 ## <a name="getdocument"></a> CMFCPreviewCtrlImpl::GetDocument
 
 返回连接到此预览控件的文档。
@@ -226,6 +226,7 @@ COLORREF m_clrBackColor;
 ```
 COLORREF m_clrTextColor;
 ```
+
 ## <a name="m_font"></a> CMFCPreviewCtrlImpl::m_font 用来在预览窗口中显示的文本字体。
 
 ### <a name="syntax"></a>语法
@@ -233,6 +234,7 @@ COLORREF m_clrTextColor;
 ```
 CFont m_font;
 ```
+
 ## <a name="m_pdocument"></a> CMFCPreviewCtrlImpl::m_pDocument
 
 一个指向其内容预览控件中的文档。
@@ -252,6 +254,7 @@ ATL::IDocument* m_pDocument;
 ```
 virtual void Redraw();
 ```
+
 ## <a name="setdocument"></a> CMFCPreviewCtrlImpl::SetDocument
 
 由要创建的文档实现和预览控件之间的关系的预览处理程序调用。

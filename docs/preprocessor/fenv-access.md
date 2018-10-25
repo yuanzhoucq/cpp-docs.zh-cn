@@ -18,23 +18,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eeb138a8b2598c209005031a3ccd3104fead48dc
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 3c06556d47bf0c471aa7e4fab610971e2b7ad11e
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42540550"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50081464"
 ---
 # <a name="fenvaccess"></a>fenv_access
 禁用 (**上**) 或启用 (**关闭**) 可能会更改的浮点环境的优化标志测试和模式更改。
 
 ## <a name="syntax"></a>语法
 
-> **#pragma fenv_access (** {**上** | **关闭**} **)**  
+> **#pragma fenv_access (** {**上** | **关闭**} **)**
 
 ## <a name="remarks"></a>备注
 
-默认情况下**fenv_access**是**关闭**。 如果编译器可以假设你的代码不会访问或处理浮点环境，则它可以执行很多的浮点代码优化。 设置**fenv_access**到**上**以告知编译器你的代码访问的浮点环境来测试状态标志，例外情况，或设置控制模式标志。 编译器禁用这些优化，以便你的代码可以一致地访问浮点环境。 
+默认情况下**fenv_access**是**关闭**。 如果编译器可以假设你的代码不会访问或处理浮点环境，则它可以执行很多的浮点代码优化。 设置**fenv_access**到**上**以告知编译器你的代码访问的浮点环境来测试状态标志，例外情况，或设置控制模式标志。 编译器禁用这些优化，以便你的代码可以一致地访问浮点环境。
 
 有关浮点行为的详细信息，请参阅[/fp （指定浮点行为）](../build/reference/fp-specify-floating-point-behavior.md)。
 

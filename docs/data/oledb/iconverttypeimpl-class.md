@@ -25,67 +25,67 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 09f70e45891e7dc0b07933fe95dce772e5c7159a
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 351f22f49ec005b07fad6f4b215cdc75637213e0
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49082340"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078474"
 ---
 # <a name="iconverttypeimpl-class"></a>IConvertTypeImpl 类
 
-提供的实现[IConvertType](/previous-versions/windows/desktop/ms715926)接口。  
-  
+提供的实现[IConvertType](/previous-versions/windows/desktop/ms715926)接口。
+
 ## <a name="syntax"></a>语法
 
 ```cpp
-template <class T>  
-class ATL_NO_VTABLE IConvertTypeImpl   
-   : public IConvertType, public CConvertHelper  
-```  
-  
-### <a name="parameters"></a>参数  
+template <class T>
+class ATL_NO_VTABLE IConvertTypeImpl
+   : public IConvertType, public CConvertHelper
+```
+
+### <a name="parameters"></a>参数
 
 *T*<br/>
-您的类，派生自`IConvertTypeImpl`。  
+您的类，派生自`IConvertTypeImpl`。
 
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>要求
 
-**标头：** atldb.h  
-  
-## <a name="members"></a>成员  
-  
-### <a name="interface-methods"></a>接口方法  
-  
-|||  
-|-|-|  
-|[CanConvert](#canconvert)|命令或上一个行集提供类型转换的可用性的信息。|  
-  
-## <a name="remarks"></a>备注  
+**标头：** atldb.h
 
-此接口是必需的对于命令、 行集和索引行集。 `IConvertTypeImpl` 通过将委派给提供的 OLE DB 转换对象实现的接口。  
+## <a name="members"></a>成员
+
+### <a name="interface-methods"></a>接口方法
+
+|||
+|-|-|
+|[CanConvert](#canconvert)|命令或上一个行集提供类型转换的可用性的信息。|
+
+## <a name="remarks"></a>备注
+
+此接口是必需的对于命令、 行集和索引行集。 `IConvertTypeImpl` 通过将委派给提供的 OLE DB 转换对象实现的接口。
 
 ## <a name="canconvert"></a> Iconverttypeimpl:: Canconvert
 
-命令或上一个行集提供类型转换的可用性的信息。  
-  
-### <a name="syntax"></a>语法  
-  
+命令或上一个行集提供类型转换的可用性的信息。
+
+### <a name="syntax"></a>语法
+
 ```cpp
-STDMETHOD(CanConvert)(DBTYPE wFromType,   
-   DBTYPE wToType,   
-   DBCONVERTFLAGS dwConvertFlags);  
-```  
-  
-#### <a name="parameters"></a>参数  
+STDMETHOD(CanConvert)(DBTYPE wFromType, 
+   DBTYPE wToType, 
+   DBCONVERTFLAGS dwConvertFlags);
+```
 
-请参阅[IConvertType::CanConvert](/previous-versions/windows/desktop/ms711224)中*OLE DB 程序员参考*。  
-  
-### <a name="remarks"></a>备注  
+#### <a name="parameters"></a>参数
 
-使用 OLE DB 中的数据转换`MSADC.DLL`。  
-  
-## <a name="see-also"></a>请参阅  
+请参阅[IConvertType::CanConvert](/previous-versions/windows/desktop/ms711224)中*OLE DB 程序员参考*。
+
+### <a name="remarks"></a>备注
+
+使用 OLE DB 中的数据转换`MSADC.DLL`。
+
+## <a name="see-also"></a>请参阅
 
 [OLE DB 提供程序模板](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [OLE DB 提供程序模板体系结构](../../data/oledb/ole-db-provider-template-architecture.md)

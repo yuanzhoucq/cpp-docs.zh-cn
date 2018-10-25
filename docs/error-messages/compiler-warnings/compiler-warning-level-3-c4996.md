@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d618ace9d922daabecf908c76a319e89a9fdedcc
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: dff9f3c988e7ffdf8f15b5502bb0326e2692a128
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46094177"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50079033"
 ---
 # <a name="compiler-warning-level-3-c4996"></a>编译器警告 （等级 3） C4996
 
@@ -82,7 +82,6 @@ Microsoft 已重命名以符合 C99 和 c++03 规则的实现定义的全局函�
 若要解决此问题，我们通常建议更改代码以改为使用建议的函数名称。 但是，更新的名称是特定于 Microsoft 的。 如果您需要将现有的函数名称，用于可移植性原因，可以关闭这些警告。 在其原始名称下的库中的 POSIX 函数现在仍然有效。
 
 若要关闭这些函数的弃用警告，请定义预处理器宏 **\_CRT\_NONSTDC\_否\_警告**。 可以通过包括选项定义此宏在命令行`/D_CRT_NONSTDC_NO_WARNINGS`。
-
 
 ### <a name="unsafe-crt-library-functions"></a>不安全的 CRT 库函数
 

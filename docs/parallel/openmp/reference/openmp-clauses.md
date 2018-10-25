@@ -43,12 +43,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d19a2b1859012a56bdaf3c454f8b92758179bed9
-ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
+ms.openlocfilehash: ea394ca09a086229a8718f4e7e1bfa55115652bc
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49809065"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50056217"
 ---
 # <a name="openmp-clauses"></a>OpenMP 子句
 
@@ -56,21 +56,21 @@ ms.locfileid: "49809065"
 
 Visual c + + 支持以下 OpenMP 子句：
 
-子句                             | 描述
----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-[copyin](#copyin)                  | 允许线程访问主线程的值为[threadprivate](openmp-directives.md#threadprivate)变量。
-[copyprivate](#copyprivate)        | 指定应在所有线程之间共享一个或多个变量。
-[default](#default-openmp)         | 并行区域中指定的未区分范围的变量的行为。
-[firstprivate](#firstprivate)      | 指定每个线程应具有它自己的实例的变量和变量应使用变量的值进行初始化，因为它在并行构造之前存在。
-[if](#if-openmp)                   | 指定并行或序列中是否应执行一个循环。
-[lastprivate](#lastprivate)        | 指定变量在封闭上下文版本将设置为专用版本的任何线程执行的最后一次迭代 （for 循环构造） 或最后一个部分 （#pragma 节）。
-[nowait](#nowait)                  | 重写屏障指令中隐式。
-[num_threads](#num-threads)        | 设置线程团队中的线程数。
-[排序](#ordered-openmp-clauses) | 在并行所需[有关](openmp-directives.md#for-openmp)语句如果[排序](openmp-directives.md#ordered-openmp-directives)指令是在循环中使用。
-[private](#private-openmp)         | 指定每个线程应具有其自己的变量的实例。
-[reduction](#reduction)            | 指定对每个线程都是私有的一个或多个变量来降低操作并行区域末尾的使用者。
-[schedule](#schedule)              | 适用于[为](openmp-directives.md#for-openmp)指令。
-[shared](#shared-openmp)           | 指定应在所有线程之间共享一个或多个变量。
+|子句|描述|
+|------|-----------|
+|[copyin](#copyin)|允许线程访问主线程的值为[threadprivate](openmp-directives.md#threadprivate)变量。|
+|[copyprivate](#copyprivate)|指定应在所有线程之间共享一个或多个变量。|
+|[default](#default-openmp)|并行区域中指定的未区分范围的变量的行为。|
+|[firstprivate](#firstprivate)|指定每个线程应具有它自己的实例的变量和变量应使用变量的值进行初始化，因为它在并行构造之前存在。|
+|[if](#if-openmp)|指定并行或序列中是否应执行一个循环。|
+|[lastprivate](#lastprivate)|指定变量在封闭上下文版本将设置为专用版本的任何线程执行的最后一次迭代 （for 循环构造） 或最后一个部分 （#pragma 节）。|
+|[nowait](#nowait)|重写屏障指令中隐式。|
+|[num_threads](#num-threads)|设置线程团队中的线程数。|
+|[排序](#ordered-openmp-clauses)|在并行所需[有关](openmp-directives.md#for-openmp)语句如果[排序](openmp-directives.md#ordered-openmp-directives)指令是在循环中使用。|
+|[private](#private-openmp)|指定每个线程应具有其自己的变量的实例。|
+|[reduction](#reduction)|指定对每个线程都是私有的一个或多个变量来降低操作并行区域末尾的使用者。|
+|[schedule](#schedule)|适用于[为](openmp-directives.md#for-openmp)指令。|
+|[shared](#shared-openmp)|指定应在所有线程之间共享一个或多个变量。|
 
 ## <a name="copyin"></a>copyin
 
@@ -401,7 +401,7 @@ num_threads(num)
 
 ### <a name="remarks"></a>备注
 
-`num_threads`子句具有相同的功能[omp_set_num_threads](../../../parallel/openmp/reference/omp-set-num-threads.md)函数。
+`num_threads`子句具有相同的功能[omp_set_num_threads](openmp-functions.md#omp-set-num-threads)函数。
 
 `num_threads` 适用于以下指令：
 

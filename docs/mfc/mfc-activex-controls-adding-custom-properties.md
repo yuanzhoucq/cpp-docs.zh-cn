@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98cf8a0532c3b1f2044ba0338d3f2f2bf8e73813
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0070103724385dcb598c20cd15bc29f341628bce
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46390976"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50079436"
 ---
 # <a name="mfc-activex-controls-adding-custom-properties"></a>MFC ActiveX 控件：添加自定义属性
 
@@ -36,19 +36,19 @@ ms.locfileid: "46390976"
 
 - 成员变量实现
 
-     此实现在控件类的成员变量表示该属性的状态。 不一定要知道当属性值更改时，请使用成员变量的实现。 三种类型，此实现创建属性的支持代码量最少。 成员变量实现调度映射项宏[DISP_PROPERTY](../mfc/reference/dispatch-maps.md#disp_property)。
+   此实现在控件类的成员变量表示该属性的状态。 不一定要知道当属性值更改时，请使用成员变量的实现。 三种类型，此实现创建属性的支持代码量最少。 成员变量实现调度映射项宏[DISP_PROPERTY](../mfc/reference/dispatch-maps.md#disp_property)。
 
 - 与通知实现的成员变量
 
-     此实现中包含的成员变量和通过添加属性向导创建的通知函数。 属性值发生更改后通知函数自动调用框架。 成员变量时使用具有通知实现需要属性值发生更改后，收到通知。 此实现中需要更多的时间，因为它需要一个函数调用。 此实现调度映射项宏[DISP_PROPERTY_NOTIFY](../mfc/reference/dispatch-maps.md#disp_property_notify)。
+   此实现中包含的成员变量和通过添加属性向导创建的通知函数。 属性值发生更改后通知函数自动调用框架。 成员变量时使用具有通知实现需要属性值发生更改后，收到通知。 此实现中需要更多的时间，因为它需要一个函数调用。 此实现调度映射项宏[DISP_PROPERTY_NOTIFY](../mfc/reference/dispatch-maps.md#disp_property_notify)。
 
 - Get/Set 方法实现
 
-     此实现包含一对中的控件类的成员函数。 Get/Set 方法实现自动调用的 Get 成员函数时该控件的用户请求的属性的当前值和 Set 成员函数时该控件的用户请求更改的属性。 当你需要在运行时计算的属性值验证实际的属性，在更改之前由该控件的用户传递的值或实现读取-或只写的属性类型，请使用此实现。 此实现调度映射项宏[DISP_PROPERTY_EX](../mfc/reference/dispatch-maps.md#disp_property_ex)。 以下部分中，[使用添加属性向导来添加自定义属性](#_core_using_classwizard_to_add_a_custom_property)，使用 CircleOffset 自定义属性来演示此实现。
+   此实现包含一对中的控件类的成员函数。 Get/Set 方法实现自动调用的 Get 成员函数时该控件的用户请求的属性的当前值和 Set 成员函数时该控件的用户请求更改的属性。 当你需要在运行时计算的属性值验证实际的属性，在更改之前由该控件的用户传递的值或实现读取-或只写的属性类型，请使用此实现。 此实现调度映射项宏[DISP_PROPERTY_EX](../mfc/reference/dispatch-maps.md#disp_property_ex)。 以下部分中，[使用添加属性向导来添加自定义属性](#_core_using_classwizard_to_add_a_custom_property)，使用 CircleOffset 自定义属性来演示此实现。
 
 - 参数化的实现
 
-     添加属性向导支持参数化的实现。 （有时称为属性数组） 的参数化的属性可以用于通过您的控件的单个属性访问的一组值。 此实现的调度映射项宏是 DISP_PROPERTY_PARAM。 有关实现此类型的详细信息，请参阅[实现参数化属性](../mfc/mfc-activex-controls-advanced-topics.md)在文章的 ActiveX 控件： 高级主题。
+   添加属性向导支持参数化的实现。 （有时称为属性数组） 的参数化的属性可以用于通过您的控件的单个属性访问的一组值。 此实现的调度映射项宏是 DISP_PROPERTY_PARAM。 有关实现此类型的详细信息，请参阅[实现参数化属性](../mfc/mfc-activex-controls-advanced-topics.md)在文章的 ActiveX 控件： 高级主题。
 
 ##  <a name="_core_using_classwizard_to_add_a_custom_property"></a> 使用添加属性向导添加自定义属性
 
@@ -66,7 +66,7 @@ ms.locfileid: "46390976"
 
 1. 从快捷菜单中，单击**外**，然后单击**添加属性**。
 
-     这将打开[添加属性向导](../ide/names-add-property-wizard.md)。
+   这将打开[添加属性向导](../ide/names-add-property-wizard.md)。
 
 1. 在中**属性名称**框中，键入*CircleOffset*。
 

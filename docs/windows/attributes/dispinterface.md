@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3b02244e0576f99cc0a6940f2ee4a13511cfbe6f
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: ea3ece20ac6df0fab00f1e21d27c41ae6e115517
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790322"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50065897"
 ---
 # <a name="dispinterface"></a>dispinterface
 
@@ -38,9 +38,9 @@ ms.locfileid: "48790322"
 
 当 **dispinterface** C++ 属性优先于接口时，会导致将接口置于生成的 .idl 文件中的 library 块中。
 
-除非指定基类，否则调度接口派生自 `IDispatch`。 必须指定[id](id.md)调度接口的成员。
+除非指定基类，否则调度接口派生自 `IDispatch`。 必须为调度接口的成员指定 [id](id.md) 。
 
-有关用法示例[dispinterface](/windows/desktop/Midl/dispinterface) MIDL 文档中：
+MIDL 文档中的 [dispinterface](/windows/desktop/Midl/dispinterface) 用法示例：
 
 ```cpp
 dispinterface helloPro
@@ -51,7 +51,7 @@ dispinterface helloPro
 
 ## <a name="example"></a>示例
 
-有关示例，请参阅[可绑定](bindable.md)有关如何使用的示例**dispinterface**。
+有关如何使用 [dispinterface](bindable.md) 的示例，请参阅 **bindable**示例。
 
 ## <a name="requirements"></a>要求
 
@@ -64,7 +64,7 @@ dispinterface helloPro
 |**必需的特性**|无|
 |**无效的特性**|`dual`, `object`, `oleautomation`, `local`, `ms_union`|
 
-有关详细信息，请参阅[特性上下文](cpp-attributes-com-net.md#contexts)。
+有关详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
 ## <a name="see-also"></a>请参阅
 
@@ -74,4 +74,4 @@ dispinterface helloPro
 [dual](dual.md)<br/>
 [custom](custom-cpp.md)<br/>
 [object](object-cpp.md)<br/>
-[__interface](../../cpp/interface.md)  
+[__interface](../../cpp/interface.md)

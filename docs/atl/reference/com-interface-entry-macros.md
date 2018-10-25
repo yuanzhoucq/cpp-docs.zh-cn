@@ -28,16 +28,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa3f3356cf3fdddeeb4245986549fa1bd2e12ae7
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 16aa17ef58e8e4a7f0b8970cb229b6c914f291fe
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46085220"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080112"
 ---
-# <a name="cominterfaceentry-macros"></a>COM_INTERFACE_ENTRY 宏  
+# <a name="cominterfaceentry-macros"></a>COM_INTERFACE_ENTRY 宏
 
-这些宏的对象的接口输入到其 COM 映射，以便可以通过访问这些`QueryInterface`。 COM 映射中的条目的顺序是顺序接口将检查期间匹配 IID `QueryInterface`。  
+这些宏的对象的接口输入到其 COM 映射，以便可以通过访问这些`QueryInterface`。 COM 映射中的条目的顺序是顺序接口将检查期间匹配 IID `QueryInterface`。
 
 |||
 |-|-|
@@ -55,7 +55,7 @@ ms.locfileid: "46085220"
 |[COM_INTERFACE_ENTRY_CHAIN](#com_interface_entry_chain)|当处理到达的 COM 映射中的此条目时处理的基类的 COM 映射。|
 |[COM_INTERFACE_ENTRY_FUNC](#com_interface_entry_func)|以挂钩到 ATL 的常规机制`QueryInterface`逻辑。|
 |[COM_INTERFACE_ENTRY_FUNC_BLIND](#com_interface_entry_func_blind)|与相同[COM_INTERFACE_ENTRY_FUNC](#com_interface_entry_func)，只不过对的调用中查询任何 IID 结果*func*。|
-|[COM_INTERFACE_ENTRY_NOINTERFACE](#com_interface_entry_nointerface)|将返回 E_NOINTERFACE 和终止时为查询指定的接口的 COM 映射处理。|  
+|[COM_INTERFACE_ENTRY_NOINTERFACE](#com_interface_entry_nointerface)|将返回 E_NOINTERFACE 和终止时为查询指定的接口的 COM 映射处理。|
 
 ## <a name="requirements"></a>要求
 
@@ -70,6 +70,7 @@ ms.locfileid: "46085220"
 ```
 COM_INTERFACE_ENTRY( x )
 ```
+
 ### <a name="parameters"></a>参数
 
 *x*<br/>
@@ -88,6 +89,7 @@ BEGIN_COM_MAP(CThisExample)
    COM_INTERFACE_ENTRY(ISupportErrorInfo)
 END_COM_MAP()
 ```
+
 ### <a name="requirements"></a>要求
 
 **标头：** atlcom.h
@@ -406,4 +408,3 @@ COM_INTERFACE_ENTRY_NOINTERFACE(x)
 
 将通过追加构造 IID 的接口*x*到`IID_`。 例如，如果*x*是`IPersistStorage`，将 IID `IID_IPersistStorage`。
 
-  

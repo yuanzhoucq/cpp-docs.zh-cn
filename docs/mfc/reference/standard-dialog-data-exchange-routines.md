@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e178dfd91382db6c72fbced24ac990c09861a766
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e493f978606f4013da21c292ccf8f520e4e56ea5
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46433226"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070408"
 ---
 # <a name="standard-dialog-data-exchange-routines"></a>标准对话框数据交换例程
 
@@ -75,7 +75,7 @@ void AFXAPI DDX_CBIndex(
 
 当`DDX_CBIndex`调用时，*索引*设置为当前的组合框中选择的索引。 如果未不选择任何项，*索引*设置为 0。
 
-有关 DDX 的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。
+有关 DDX 的更多信息，请参阅 [对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。
 
 ### <a name="requirements"></a>要求
 
@@ -110,7 +110,7 @@ void AFXAPI DDX_CBString(
 > [!NOTE]
 >  如果组合框下拉列表框中，交换的值仅限于 255 个字符。
 
-有关 DDX 的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。
+有关 DDX 的更多信息，请参阅 [对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。
 
 ### <a name="requirements"></a>要求
 
@@ -145,7 +145,7 @@ void AFXAPI DDX_CBStringExact(
 > [!NOTE]
 >  如果组合框下拉列表框中，交换的值仅限于 255 个字符。
 
-有关 DDX 的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。
+有关 DDX 的更多信息，请参阅 [对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。
 
 ### <a name="requirements"></a>要求
 
@@ -177,7 +177,7 @@ void AFXAPI DDX_Check(
 
 当`DDX_Check`调用时，*值*设置为复选框控件的当前状态。 有关可能的状态值的列表，请参阅[BM_GETCHECK](/windows/desktop/Controls/bm-getcheck) Windows SDK 中。
 
-有关 DDX 的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。
+有关 DDX 的更多信息，请参阅 [对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。
 
 ### <a name="requirements"></a>要求
 
@@ -209,7 +209,7 @@ void AFXAPI DDX_Control(
 
 *PDX*对象提供框架时`DoDataExchange`调用函数。 因此，`DDX_Control`只应在的重写中调用`DoDataExchange`。
 
-有关 DDX 的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。
+有关 DDX 的更多信息，请参阅 [对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。
 
 ### <a name="requirements"></a>要求
 
@@ -253,7 +253,7 @@ void AFXAPI DDX_DateTimeCtrl(
 
 在上面的第三个版本`DDX_DateTimeCtrl`管理的传输`CString`日期之间的数据的时间控件和一个[CString](../../atl-mfc-shared/reference/cstringt-class.md)的控件视图对象的数据成员。 使用当前区域设置的规则来格式化日期和时间格式化的字符串。
 
-有关 DDX 的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。
+有关 DDX 的更多信息，请参阅 [对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。
 
 ### <a name="requirements"></a>要求
 
@@ -268,10 +268,11 @@ void AFXAPI DDX_DateTimeCtrl(
 ```
 template <typename T>
 void DDX_ManagedControl(
-     CDataExchange* pDX,
-     int nIDC,
-     CWinFormsControl<T>& control );
+   CDataExchange* pDX,
+   int nIDC,
+   CWinFormsControl<T>& control );
 ```
+
 ### <a name="parameters"></a>参数
 
 *pDX*<br/>
@@ -297,8 +298,6 @@ void DDX_ManagedControl(
 
 [CWinFormsControl::CreateManagedControl](cwinformscontrol-class.md#createmanagedcontrol)<br/>
 [CDialog::OnInitDialog](cdialog-class.md#oninitdialog)
-
-
 
 ##  <a name="ddx_ipaddress"></a>  DDX_IPAddress
 
@@ -335,7 +334,7 @@ void AFXAPI DDX_IPAddress(
 
 当`DDX_IPAddress`调用时，*值*是从 IP 地址控件，读取或*值*写入到该控件，具体取决于交换的方向。
 
-有关 DDX 的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。
+有关 DDX 的更多信息，请参阅 [对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。
 
 ### <a name="requirements"></a>要求
 
@@ -367,7 +366,7 @@ void AFXAPI DDX_LBIndex(
 
 当`DDX_LBIndex`调用时，*索引*设置为当前的列表框中选择的索引。 如果未不选择任何项，*索引*设置为-1。
 
-有关 DDX 的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。
+有关 DDX 的更多信息，请参阅 [对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。
 
 ### <a name="requirements"></a>要求
 
@@ -404,7 +403,7 @@ void AFXAPI DDX_LBString(
 > [!NOTE]
 >  如果在列表框，下拉列表框交换的值仅限于 255 个字符。
 
-有关 DDX 的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。
+有关 DDX 的更多信息，请参阅 [对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。
 
 ### <a name="requirements"></a>要求
 
@@ -441,7 +440,7 @@ void AFXAPI DDX_LBStringExact(
 > [!NOTE]
 >  如果在列表框，下拉列表框交换的值仅限于 255 个字符。
 
-有关 DDX 的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。
+有关 DDX 的更多信息，请参阅 [对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。
 
 ### <a name="requirements"></a>要求
 
@@ -481,7 +480,7 @@ void AFXAPI DDX_MonthCalCtrl(
 
 当`DDX_MonthCalCtrl`调用时，*值*设置为月历控件的当前状态。
 
-有关 DDX 的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。
+有关 DDX 的更多信息，请参阅 [对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。
 
 ### <a name="requirements"></a>要求
 
@@ -515,7 +514,7 @@ void AFXAPI DDX_Radio(
 
 例如，在组中的第一个单选按钮是的情况下选中 （带有 WS_GROUP 样式的按钮） 的值**int**成员为 0，依此类推。
 
-有关 DDX 的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。
+有关 DDX 的更多信息，请参阅 [对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。
 
 ### <a name="requirements"></a>要求
 
@@ -547,7 +546,7 @@ void AFXAPI DDX_Scroll(
 
 当`DDX_Scroll`调用时，*值*设置为当前控件的滚动块的位置。 有关与控件的滚动块的当前位置相关联的值的详细信息，请参阅[GetScrollPos](/windows/desktop/api/winuser/nf-winuser-getscrollpos) Windows SDK 中。
 
-有关 DDX 的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。
+有关 DDX 的更多信息，请参阅 [对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。
 
 ### <a name="requirements"></a>要求
 
@@ -579,7 +578,7 @@ void AFXAPI DDX_Slider(
 
 当`DDX_Slider`调用时，*值*设置为当前控件的滚动块的位置或值接收位置，具体取决于交换的方向。
 
-有关 DDX 的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。 滑块控件有关的信息，请参阅[使用 CSliderCtrl](../../mfc/using-csliderctrl.md)。
+有关 DDX 的更多信息，请参阅 [对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。 滑块控件有关的信息，请参阅[使用 CSliderCtrl](../../mfc/using-csliderctrl.md)。
 
 ### <a name="requirements"></a>要求
 
@@ -659,7 +658,7 @@ void AFXAPI DDX_Text(
 
 ### <a name="remarks"></a>备注
 
-有关 DDX 的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。
+有关 DDX 的更多信息，请参阅 [对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。
 
 ### <a name="requirements"></a>要求
 

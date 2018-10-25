@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 81ea5c45aff148d8f0683d0058963571bc02a57a
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: f7bc10b89df58dc72c35855fea43c2a0387f9efd
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790474"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50058461"
 ---
 # <a name="source-c"></a>source (C++)
 
@@ -90,11 +90,11 @@ class NN : public b
 |**必需的特性**|`coclass` （当应用于类或结构）|
 |**无效的特性**|无|
 
-有关特性上下文的详细信息，请参阅[特性上下文](cpp-attributes-com-net.md#contexts)。
+有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
 ## <a name="see-also"></a>请参阅
 
 [IDL 特性](idl-attributes.md)<br/>
 [类特性](class-attributes.md)<br/>
 [方法特性](method-attributes.md)<br/>
-[coclass](coclass.md)  
+[coclass](coclass.md)

@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff86123f395e9647ef848ad017fe3cb69b69dd71
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a460870887f3a012bf02ee6518ba70c65881c804
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46427675"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50081412"
 ---
 # <a name="windows-sockets-in-mfc"></a>MFC 中的 Windows 套接字
 
@@ -42,11 +42,11 @@ MFC 提供两种用于编写与 Windows 套接字，体现在两个 MFC 类的�
 
 - `CAsyncSocket`
 
-     此类封装 Windows 套接字 API。 [CAsyncSocket](../mfc/reference/casyncsocket-class.md)是编程人员了解网络编程并且想直接针对套接字 API 编程的灵活性，但还希望的网络事件通知的回调函数的便利性。 非打包面向对象的 c + + 中使用的窗体中的套接字，此类提供的唯一附加抽象转换为某些与套接字相关的 Windows 消息的回调。 有关详细信息，请参阅[Windows 套接字： 套接字通知](../mfc/windows-sockets-socket-notifications.md)。
+   此类封装 Windows 套接字 API。 [CAsyncSocket](../mfc/reference/casyncsocket-class.md)是编程人员了解网络编程并且想直接针对套接字 API 编程的灵活性，但还希望的网络事件通知的回调函数的便利性。 非打包面向对象的 c + + 中使用的窗体中的套接字，此类提供的唯一附加抽象转换为某些与套接字相关的 Windows 消息的回调。 有关详细信息，请参阅[Windows 套接字： 套接字通知](../mfc/windows-sockets-socket-notifications.md)。
 
 - `CSocket`
 
-     此类派生自`CAsyncSocket`，提供用于处理通过 MFC 套接字的更高级别抽象[CArchive](../mfc/reference/carchive-class.md)对象。 极大地与存档使用套接字类似于使用 MFC 的文件的序列化协议。 这可以更容易地使用比`CAsyncSocket`模型。 [CSocket](../mfc/reference/csocket-class.md)继承许多成员函数从`CAsyncSocket`，它封装 Windows 套接字 Api; 你将需要使用其中的一些功能和了解套接字编程通常。 但是`CSocket`管理的通信时可能需要自行使用原始 API 或类进行很多方面`CAsyncSocket`。 最重要的是，`CSocket`提供锁定 （与后台处理的 Windows 消息），这是至关重要的同步操作`CArchive`。
+   此类派生自`CAsyncSocket`，提供用于处理通过 MFC 套接字的更高级别抽象[CArchive](../mfc/reference/carchive-class.md)对象。 极大地与存档使用套接字类似于使用 MFC 的文件的序列化协议。 这可以更容易地使用比`CAsyncSocket`模型。 [CSocket](../mfc/reference/csocket-class.md)继承许多成员函数从`CAsyncSocket`，它封装 Windows 套接字 Api; 你将需要使用其中的一些功能和了解套接字编程通常。 但是`CSocket`管理的通信时可能需要自行使用原始 API 或类进行很多方面`CAsyncSocket`。 最重要的是，`CSocket`提供锁定 （与后台处理的 Windows 消息），这是至关重要的同步操作`CArchive`。
 
 创建和使用`CSocket`并`CAsyncSocket`对象中所述[Windows 套接字： 使用存档使用套接字](../mfc/windows-sockets-using-sockets-with-archives.md)并[Windows 套接字： 使用类 CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)。
 

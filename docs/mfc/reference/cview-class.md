@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ccb638669712222cac2dee522bf729766a4bc93
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e76dc8ca4a61839b893b4328bdb9d606424def91
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46402260"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062224"
 ---
 # <a name="cview-class"></a>CView 类
 
@@ -196,7 +196,7 @@ BOOL DoPreparePrinting(CPrintInfo* pInfo);
 ### <a name="parameters"></a>参数
 
 *pInfo*<br/>
-指向[CPrintInfo](../../mfc/reference/cprintinfo-structure.md)描述当前打印作业的结构。
+指向描述当前打印作业的 [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) 结构。
 
 ### <a name="return-value"></a>返回值
 
@@ -319,13 +319,13 @@ virtual void OnBeginPrinting(
 指向打印机设备上下文。
 
 *pInfo*<br/>
-指向[CPrintInfo](../../mfc/reference/cprintinfo-structure.md)描述当前打印作业的结构。
+指向描述当前打印作业的 [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) 结构。
 
 ### <a name="remarks"></a>备注
 
-此函数的默认实现不执行任何操作。 重写此函数以分配专用于打印的任何 GDI 资源，例如笔或字体。 选择到设备上下文中的 GDI 对象[OnPrint](#onprint)每个页面的使用它们的成员函数。 如果要使用相同的视图对象执行屏幕显示和打印，请为每个显示所需的 GDI 资源使用单独的变量；这样做可以在打印期间更新屏幕。
+此函数的默认实现不执行任何操作。 重写此函数以分配专用于打印的任何 GDI 资源，例如笔或字体。 在设备上下文中从 [OnPrint](#onprint) 成员函数内为每个使用 GDI 对象的页面选择这些对象。 如果要使用相同的视图对象执行屏幕显示和打印，请为每个显示所需的 GDI 资源使用单独的变量；这样做可以在打印期间更新屏幕。
 
-你也可以使用此函数根据打印机设备上下文的属性执行初始化。 例如，打印文档所需的页面数可能取决于用户在“打印”对话框中指定的设置（例如页面长度）。 在这种情况下，不能指定文档长度，以[OnPreparePrinting](#onprepareprinting)成员函数，其中您平常; 你必须等待，直到已根据对话框设置创建了打印机设备上下文。 [OnBeginPrinting](#onbeginprinting)是第一个可重写函数，可提供访问权限[CDC](../../mfc/reference/cdc-class.md)表示打印机设备上下文，因此你可以从此函数设置文档长度的对象。 请注意，如果此时还不指定文档长度，打印预览期间将不会显示滚动条。
+你也可以使用此函数根据打印机设备上下文的属性执行初始化。 例如，打印文档所需的页面数可能取决于用户在“打印”对话框中指定的设置（例如页面长度）。 在这种情况下，你不能在 [OnPreparePrinting](#onprepareprinting) 成员函数中指定文档长度（这是一般情况下的做法）；你必须等待片刻，直到根据对话框设置创建了打印机设备上下文为止。 [OnBeginPrinting](#onbeginprinting) 是第一个允许你访问 [CDC](../../mfc/reference/cdc-class.md) 对象（表示打印机设备上下文）的可重写函数，因此，你可以从此函数设置文档长度。 请注意，如果此时还不指定文档长度，打印预览期间将不会显示滚动条。
 
 ##  <a name="ondragenter"></a>  CView::OnDragEnter
 
@@ -602,7 +602,7 @@ virtual void OnEndPrinting(
 指向打印机设备上下文。
 
 *pInfo*<br/>
-指向[CPrintInfo](../../mfc/reference/cprintinfo-structure.md)描述当前打印作业的结构。
+指向描述当前打印作业的 [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) 结构。
 
 ### <a name="remarks"></a>备注
 
@@ -626,7 +626,7 @@ virtual void OnEndPrintPreview(
 指向打印机设备上下文。
 
 *pInfo*<br/>
-指向[CPrintInfo](../../mfc/reference/cprintinfo-structure.md)描述当前打印作业的结构。
+指向描述当前打印作业的 [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) 结构。
 
 *点*<br/>
 上次在预览模式下显示的页面上指定的点。
@@ -701,7 +701,7 @@ virtual BOOL OnPreparePrinting(CPrintInfo* pInfo);
 ### <a name="parameters"></a>参数
 
 *pInfo*<br/>
-指向[CPrintInfo](../../mfc/reference/cprintinfo-structure.md)描述当前打印作业的结构。
+指向描述当前打印作业的 [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) 结构。
 
 ### <a name="return-value"></a>返回值
 
@@ -757,7 +757,7 @@ virtual void OnPrint(
 
 - 要打印的图像看起来与屏幕图像不同 （即，如果你的应用程序不是所见即所得）。 而不是传递到设备上下文的打印机`OnDraw`，使用设备上下文来呈现使用属性不会在屏幕上显示的图像。
 
-     如果你需要有关不是用于屏幕显示使用的打印的 GDI 资源，它们选入设备上下文在绘制之前和之后取消选择它们。 应在分配这些 GDI 资源[OnBeginPrinting](#onbeginprinting)且已在发布[OnEndPrinting](#onendprinting)。
+   如果你需要有关不是用于屏幕显示使用的打印的 GDI 资源，它们选入设备上下文在绘制之前和之后取消选择它们。 应在分配这些 GDI 资源[OnBeginPrinting](#onbeginprinting)且已在发布[OnEndPrinting](#onendprinting)。
 
 - 若要实现页眉或页脚。 您仍然可以使用`OnDraw`就可完成呈现的限制可以在打印的区域。
 
