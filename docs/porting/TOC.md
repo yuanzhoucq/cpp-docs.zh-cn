@@ -15,6 +15,7 @@
 ### [修复库内部的依赖项](fix-your-dependencies-on-library-internals.md)
 ### [浮点迁移问题](floating-point-migration-issues.md)
 ### [使用 Visual Studio 中的本机多目标来生成旧项目](use-native-multi-targeting.md)
+### [Visual Studio 2019 预览版已弃用 Visual C++ 功能](features-deprecated-in-visual-studio.md)
 ## [Visual C++ 简介（针对 UNIX 用户）](introduction-to-visual-cpp-for-unix-users.md)
 ## [从 UNIX 移植到 Win32](porting-from-unix-to-win32.md)
 ## [移植到通用 Windows 平台 (C++)](porting-to-the-universal-windows-platform-cpp.md)

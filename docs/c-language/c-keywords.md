@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3091437333d01db3fa556cb3c164e916c3628333
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 80c1f0d4ac5d843732771281202612e31a4073c2
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46057783"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860883"
 ---
 # <a name="c-keywords"></a>C 关键字
 
@@ -48,15 +48,15 @@ ANSI C 标准允许为了编译器实现保留带有两个前导下划线的标�
 
 |||||
 |-|-|-|-|
-|**__asm**|**dllimport**2|**__int8**|**naked**2|
-|**__based**1|**__except**|**__int16**|**__stdcall**|
-|**__cdecl**|**__fastcall**|**__int32**|**thread**2|
+|**__asm**|**dllimport**<sup>2</sup>|**__int8**|**naked**<sup>2</sup>|
+|**__based**<sup>1</sup>|**__except**|**__int16**|**__stdcall**|
+|**__cdecl**|**__fastcall**|**__int32**|**thread**<sup>2</sup>|
 |**__declspec**|**__finally**|**__int64**|**__try**|
-|**dllexport**2|**__inline**|**__leave**||
+|**dllexport**<sup>2</sup>|**__inline**|**__leave**||
 
-1. **__based** 关键字对于 32 位和 64 位目标编译的使用会受到限制。
+<sup>1</sup> **__based** 关键字对于 32 位和 64 位目标编译的使用会受到限制。
 
-2. 这些关键字在与 **__declspec** 一起使用时是特殊标识符；它们在其他上下文中的使用不受限制。
+<sup>2</sup> 这些关键字在与 **__declspec** 一起使用时是特殊标识符；它们在其他上下文中的使用不受限制。
 
 默认情况下将启用 Microsoft 扩展。 若要确保您的程序是完全可移植的，可通过在编译期间指定 /Za 选项（针对 ANSI 兼容性编译）来禁用 Microsoft 扩展。 如果这样做，将禁用 Microsoft 专用关键字。
 

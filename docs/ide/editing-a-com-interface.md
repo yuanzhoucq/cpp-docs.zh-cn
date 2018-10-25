@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 451e7fc6e2a7b4a72188da6b69888bf04b605842
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f660f9d69fc787384fcfbec37caec0064a58ec29
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46412354"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861338"
 ---
 # <a name="editing-a-com-interface"></a>编辑 COM 接口
 
@@ -38,8 +38,8 @@ ms.locfileid: "46412354"
 
 |向导|项目类型|
 |------------|------------------|
-|[添加属性向导](../ide/names-add-property-wizard.md)|支持 ATL 的 ATL 或 MFC 项目。 右键单击要添加属性的接口。<br /><br /> Visual C++ 删除项目类型并相应修改“添加属性向导”中的选项：<br /><br /> -   对于使用 [MFC 应用程序向导](../mfc/reference/mfc-application-wizard.md)创建的项目中的调度接口，调用“添加属性向导”将提供特定于 MFC 的选项。<br />-   对于 MFC ActiveX 控件接口，“添加属性向导”将提供一系列常用方法和属性，你可为你的控件使用所述的这些方法和属性，也可进行自定义。<br />-   对于所有其他接口，“添加属性向导”将提供可用于大多数情况的选项。|
-|[添加方法向导](../ide/add-method-wizard.md)|支持 ATL 的 ATL 或 MFC 项目。 右键单击要添加方法的接口。<br /><br /> Visual C++ 删除项目类型并相应修改“添加方法向导”中的选项：<br /><br /> -   对于使用 [MFC 应用程序向导](../mfc/reference/mfc-application-wizard.md)创建的项目中的调度接口，调用“添加方法向导”将提供特定于 MFC 的选项。<br />-   对于 MFC ActiveX 控件接口，“添加方法向导”将提供一系列常用方法和属性，你可为你的控件使用所述的这些方法和属性，也可进行自定义。<br />-   对于所有其他接口，“添加方法向导”将提供可用于大多数情况的选项。|
+|[添加属性向导](../ide/names-add-property-wizard.md)|支持 ATL 的 ATL 或 MFC 项目。 右键单击要添加属性的接口。<br /><br />Visual C++ 删除项目类型并相应修改“添加属性向导”中的选项：<br /><br />- 对于使用 [MFC 应用程序向导](../mfc/reference/mfc-application-wizard.md)创建的项目中的调度接口，调用“添加属性向导”将提供特定于 MFC 的选项。<br />- 对于 MFC ActiveX 控件接口，“添加属性向导”将提供一系列常用方法和属性，你可为你的控件使用所述的这些方法和属性，也可进行自定义。<br />- 对于所有其他接口，“添加属性向导”将提供可用于大多数情况的选项。|
+|[添加方法向导](../ide/add-method-wizard.md)|支持 ATL 的 ATL 或 MFC 项目。 右键单击要添加方法的接口。<br /><br />Visual C++ 删除项目类型并相应修改“添加方法向导”中的选项：<br /><br />- 对于使用 [MFC 应用程序向导](../mfc/reference/mfc-application-wizard.md)创建的项目中的调度接口，调用“添加方法向导”将提供特定于 MFC 的选项。<br />- 对于 MFC ActiveX 控件接口，“添加方法向导”将提供一系列常用方法和属性，你可为你的控件使用所述的这些方法和属性，也可进行自定义。<br />- 对于所有其他接口，“添加方法向导”将提供可用于大多数情况的选项。|
 
 此外，在“类视图”中右键单击对象的控件类并单击[实现接口](../ide/implement-interface-wizard.md)之后，可在 COM 控件上实现新的接口。
 
