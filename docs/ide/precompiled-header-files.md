@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d2e2bab9da3d19347577f0b1d1e8ab2ed6bb0dc
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d93486d8df8cdb8bc253a0e71037f4e2ddf9e128
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46404015"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890474"
 ---
 # <a name="precompiled-header-files"></a>预编译的头文件
 
@@ -35,7 +35,7 @@ ms.locfileid: "46404015"
 
 |文件名|描述|
 |---------------|-----------------|
-|stdafx.h|标准系统的包含文件和项目特定的包含文件的包含文件，经常使用但不常更改。<br /><br /> 不应定义或取消定义 stdafx.h 中的任何 _AFX_NO_XXX 宏；请参阅知识库文章“PRB：定义 _AFX_NO_XXX 时出现的问题”。 可在 MSDN Library 或 [http:// support.microsoft.com/](http://%20support.microsoft.com/)上查找知识库文章。|
+|stdafx.h|标准系统的包含文件和项目特定的包含文件的包含文件，经常使用但不常更改。<br /><br /> 不应定义或取消任何 stdafx.h 中的任何 _AFX_NO_XXX 宏。|
 |stdafx.cpp|包含预处理器指令 `#include "stdafx.h"` 并添加预编译类型的包含文件。 任何类型的预编译文件（包括头文件）都可通过将编译仅限于有需要的文件，从而支持更快的编译时间。 首次生成项目后，你将注意到由于预编译头文件的存在，随后生成的生成时间将大大加快。|
 
 ## <a name="see-also"></a>请参阅

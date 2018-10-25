@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc82a45c181d4a2b56670af9cc0d6da055737b8d
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 40c74633be8556fc075f10e328521209761f385c
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45722314"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890707"
 ---
 # <a name="whats-new-for-visual-c-in-visual-studio-2017"></a>Visual Studio 2017 中 Visual C++ 的新增功能
 
@@ -65,7 +65,7 @@ Visual Studio 2017 版本 15.7：Visual Studio 15.7 版中的 MSVC 编译器工�
 
 **Visual Studio 2017 版本 15.5**：
 
-由于生成的代码质量更好，Visual C++ 运行时的性能进一步增强。 这意味着只需重新编译代码，即可加快应用的运行速度。 编译器的某些优化是前所未有的，例如条件标量存储的矢量化，将 `sin(x)` 和 `cos(x)` 调用合并到新的 `sincos(x)` 中，以及删减了 SSA 优化器中多余的说明。 其他编译器优化是对现有功能的改进，例如条件表达式的矢量器启发、更佳的循环优化和浮动最小/最大 codegen。 链接器具有一个新的运行速度更快的 /OPT:ICF 实现，可让链接时间最多缩短 9%；此外，还有针对增量链接的其他性能修复。 有关详细信息，请参阅 [/OPT（优化）](https://docs.microsoft.com/en-us/cpp/build/reference/opt-optimizations)和 [/INCREMENTAL（增量链接）](https://docs.microsoft.com/en-us/cpp/build/reference/incremental-link-incrementally)。
+由于生成的代码质量更好，Visual C++ 运行时的性能进一步增强。 这意味着只需重新编译代码，即可加快应用的运行速度。 编译器的某些优化是前所未有的，例如条件标量存储的矢量化，将 `sin(x)` 和 `cos(x)` 调用合并到新的 `sincos(x)` 中，以及删减了 SSA 优化器中多余的说明。 其他编译器优化是对现有功能的改进，例如条件表达式的矢量器启发、更佳的循环优化和浮动最小/最大 codegen。 链接器具有一个新的运行速度更快的 /OPT:ICF 实现，可让链接时间最多缩短 9%；此外，还有针对增量链接的其他性能修复。 有关详细信息，请参阅 [/OPT（优化）](build/reference/opt-optimizations.md)和 [/INCREMENTAL（增量链接）](build/reference/incremental-link-incrementally.md)。
 
 Visual C++ 支持 Intel AVX-512，包括将 AVX-512 中的新函数引入位宽为 128 和 256 的寄存器的向量长度说明。
 
@@ -398,7 +398,7 @@ Visual Studio 2017 版本 15.5：添加了“Windows 应用程序打包项目”
 
 在编写新代码时可使用 C ++ / WinRT，它是 Windows 运行时的标准 C ++ 语言投影，仅在头文件中实现。 它使你可以使用任何符合兼容的 C++ 编译器创作和使用 Windows 运行时 API。 C++/WinRT 旨在为 C++ 开发人员提供对新式 Windows API 的优先访问权限。 有关详细信息，请参阅 [GitHub 上提供的 C++/WinR](https://moderncpp.com/)。
 
-自 [Windows SDK Insider Preview 的 内部版本 17025](https://blogs.windows.com/buildingapps/2017/11/01/windows-10-sdk-preview-build-17025/#ryPH3zAy6yk2cIRX.97) 起，C++/WinRT 包含在 Windows SDK 中。 有关详细信息，请参阅 [C++/WinRT is now included the Windows SDK](https://blogs.msdn.microsoft.com/vcblog/2017/11/01/cppwinrt-is-now-included-the-windows-sdk/)（C++/WinRT 现在包含在 Windows SDK 中）。
+自 Windows SDK Insider Preview 的内部版本 17025 起，C++/WinRT 包含在 Windows SDK 中。 有关详细信息，请参阅 [C++/WinRT is now included the Windows SDK](https://blogs.msdn.microsoft.com/vcblog/2017/11/01/cppwinrt-is-now-included-the-windows-sdk/)（C++/WinRT 现在包含在 Windows SDK 中）。
 
 ## <a name="clangc2-platform-toolset"></a>Clang/C2 平台工具集
 
@@ -439,7 +439,7 @@ Google Test Adapter 和 Boost.Test Adapter 现在作为“使用 C++ 的桌面�
 
 **Visual Studio 2017 15.7 版**：
 
-针对 C++ 单元测试项目添加了对 [CodeLens](https://docs.microsoft.com/en-us/visualstudio/ide/find-code-changes-and-other-history-with-codelens) 的支持。 有关详细信息，请参阅 [Announcing CodeLens for C++ Unit Testing](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/announcing-codelens-for-c-unit-testing/)（宣布推出用于 C++ 单元测试的 CodeLens）。
+针对 C++ 单元测试项目添加了对 [CodeLens](/visualstudio/ide/find-code-changes-and-other-history-with-codelens) 的支持。 有关详细信息，请参阅 [Announcing CodeLens for C++ Unit Testing](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/announcing-codelens-for-c-unit-testing/)（宣布推出用于 C++ 单元测试的 CodeLens）。
 
 ## <a name="visual-studio-graphics-diagnostics"></a>Visual Studio 图形诊断
 
