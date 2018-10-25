@@ -15,16 +15,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 310dc9b8e31f72fbd04c620987d9857932f7a0a1
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 31b9c0c8668ec16d84ad84627eb73a0f406eb21e
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821115"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328371"
 ---
 # <a name="ide-and-compiler-tools-for-visual-c-development"></a>用于 Visual C++ 开发的 IDE 和编译器工具
 
-作为 Visual Studio 集成开发环境 (IDE) 的一部分，Microsoft Visual C++ (MSVC) 共享许多与其他语言相同的窗口和工具。 其中许多窗口和工具（包括“解决方案资源管理器”、“代码编辑器”和“调试程序”）都记录在 [Visual Studio IDE](/visualstudio/ide/visual-studio-ide) 下。 通常，相比为 .NET 语言或 JavaScript 提供的功能集，共享的工具或窗口为 C++ 提供的功能集略有不同。 一些窗口或工具仅在 Visual StudioProfessional 或 Visual Studio Enterprise 版本中可用。
+作为 Visual Studio 集成开发环境 (IDE) 的一部分，Microsoft Visual C++ (MSVC) 共享许多与其他语言相同的窗口和工具。 其中许多窗口和工具（包括“解决方案资源管理器”、“代码编辑器”和“调试器”）都记录在 [Visual Studio IDE](/visualstudio/ide/visual-studio-ide) 下。 通常，相比为 .NET 语言或 JavaScript 提供的功能集，共享的工具或窗口为 C++ 提供的功能集略有不同。 一些窗口或工具仅在 Visual StudioProfessional 或 Visual Studio Enterprise 版本中可用。
 
 除了 Visual Studio IDE 中的共享工具之外，MSVC 还有几种专门用于本机代码开发的工具。 这些工具也会在本文中列出。 有关每个版本的 Visual Studio 可用的工具列表，请参阅 [Visual Studio 版本中的 Visual C++ 工具和功能](visual-cpp-tools-and-features-in-visual-studio-editions.md)。
 
@@ -59,7 +59,7 @@ Visual Studio 2017 可支持要使用的任何生成系统或自定义生成工�
 
 ![设计器和工具箱](media/vs2017-toolbox-designer.png "Visual Studio 2017 工具箱和设计器")
 
-有关设计通用 Windows 平台应用用户界面的详细信息，请参阅[设计和 UI](https://developer.microsoft.com/en-us/windows/design)。
+有关设计通用 Windows 平台应用用户界面的详细信息，请参阅[设计和 UI](https://developer.microsoft.com/windows/design)。
 
 有关为 MFC 应用程序创建用户界面的详细信息，请参阅 [MFC 桌面应用程序](../mfc/mfc-desktop-applications.md)。 有关 Win32 Windows 程序的信息，请参阅 [Windows 桌面应用程序](../windows/windows-desktop-applications-cpp.md)。
 
