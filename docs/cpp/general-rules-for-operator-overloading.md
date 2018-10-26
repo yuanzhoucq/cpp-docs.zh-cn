@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c3064da609c8a81a6e264c7f46d37d4cd5681d1
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3a6eb1b97acfe2fa41511433de3990da8923de7d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46107138"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059540"
 ---
 # <a name="general-rules-for-operator-overloading"></a>运算符重载的一般规则
 
@@ -48,7 +48,7 @@ ms.locfileid: "46107138"
     }
     ```
 
-     前面的代码示例将小于运算符声明为成员函数；但是，加法运算符被声明为具有友元访问的全局函数。 请注意，可以为给定运算符提供多个实现。 对于前面的加法运算符，将提供两个实现以便于交换。 同样可能会添加该运算符`Point`到`Point`， **int**到`Point`，依此类推，可能实现。
+   前面的代码示例将小于运算符声明为成员函数；但是，加法运算符被声明为具有友元访问的全局函数。 请注意，可以为给定运算符提供多个实现。 对于前面的加法运算符，将提供两个实现以便于交换。 同样可能会添加该运算符`Point`到`Point`， **int**到`Point`，依此类推，可能实现。
 
 - 运算符遵循它们通常用于内置类型时指定的操作数的优先级、分组和数量。 因此，没有方法来表达概念"将 2 和 3 添加到类型的对象`Point`，"应为 2，以添加到*x*坐标和 3 以添加到*y*协调。
 
