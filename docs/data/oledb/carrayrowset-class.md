@@ -54,118 +54,118 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e13f262b90ff46955d6ba63fb83a941d712b017a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 5b8613372b84423a14fd995d78ca9d4c0dd1c1ae
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46087872"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070369"
 ---
 # <a name="carrayrowset-class"></a>CArrayRowset 类
 
-使用数组语法访问行集的元素。  
-  
+使用数组语法访问行集的元素。
+
 ## <a name="syntax"></a>语法
 
 ```cpp
-template < class TAccessor >  
-class CArrayRowset : 
-   public CVirtualBuffer <TAccessor>, 
-   protected CBulkRowset <TAccessor>  
-```  
-  
-### <a name="parameters"></a>参数  
+template < class TAccessor >
+class CArrayRowset :
+   public CVirtualBuffer <TAccessor>, 
+   protected CBulkRowset <TAccessor>
+```
+
+### <a name="parameters"></a>参数
 
 *TAccessor*<br/>
-希望集合使用的访问器类的类型。  
+希望集合使用的访问器类的类型。
 
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>要求
 
-**标头:** atldbcli.h  
-  
-## <a name="members"></a>成员  
-  
-### <a name="methods"></a>方法  
-  
-|||  
-|-|-|  
-|[CArrayRowset](#carrayrowset)|构造函数。|  
-|[快照](#snapshot)|将整个行集读入内存。|  
-  
-### <a name="operators"></a>运算符  
-  
-|||  
-|-|-|  
-|[Operator&#91;&#93;](#operator)|访问行集合的元素。|  
-  
-### <a name="data-members"></a>数据成员  
-  
-|||  
-|-|-|  
-|[CArrayRowset::m_nRowsRead](#nrowsread)|已读取的行数。|  
-  
+**标头:** atldbcli.h
+
+## <a name="members"></a>成员
+
+### <a name="methods"></a>方法
+
+|||
+|-|-|
+|[CArrayRowset](#carrayrowset)|构造函数。|
+|[快照](#snapshot)|将整个行集读入内存。|
+
+### <a name="operators"></a>运算符
+
+|||
+|-|-|
+|[Operator&#91;&#93;](#operator)|访问行集合的元素。|
+
+### <a name="data-members"></a>数据成员
+
+|||
+|-|-|
+|[CArrayRowset::m_nRowsRead](#nrowsread)|已读取的行数。|
+
 ## <a name="carrayrowset"></a> Carrayrowset:: Carrayrowset
 
-创建一个新的 `CArrayRowset` 对象。  
-  
-### <a name="syntax"></a>语法  
-  
+创建一个新的 `CArrayRowset` 对象。
+
+### <a name="syntax"></a>语法
+
 ```cpp
-CArrayRowset(int nMax = 100000);  
-```  
-  
-#### <a name="parameters"></a>参数  
+CArrayRowset(int nMax = 100000);
+```
+
+#### <a name="parameters"></a>参数
 
 *最*<br/>
-[in] 行集中的最大行数。 
+[in] 行集中的最大行数。
 
 ## <a name="snapshot"></a> Carrayrowset:: Snapshot
 
-将整个行集读入内存，并创建该行集的图像或快照。  
-  
-### <a name="syntax"></a>语法  
-  
+将整个行集读入内存，并创建该行集的图像或快照。
+
+### <a name="syntax"></a>语法
+
 ```cpp
-HRESULT Snapshot() throw();  
-```  
+HRESULT Snapshot() throw();
+```
 
 ## <a name="operator"></a> Carrayrowset:: Operator
 
-提供用于访问行集中的行的类似数组的语法。  
-  
-### <a name="syntax"></a>语法  
-  
+提供用于访问行集中的行的类似数组的语法。
+
+### <a name="syntax"></a>语法
+
 ```cpp
-TAccessor & operator[](int nrow);  
-```  
-  
-#### <a name="parameters"></a>参数  
+TAccessor & operator[](int nrow);
+```
+
+#### <a name="parameters"></a>参数
 
 *TAccessor*<br/>
-一个指定存储在行集中的访问器类型的模板化参数。  
-  
+一个指定存储在行集中的访问器类型的模板化参数。
+
 *nRow*<br/>
-[in] 要访问的行号（数组元素）。  
-  
-### <a name="return-value"></a>返回值  
+[in] 要访问的行号（数组元素）。
 
-请求行的内容。  
-  
-### <a name="remarks"></a>备注  
+### <a name="return-value"></a>返回值
 
-如果*nRow*超过行集中的行数，将引发异常。  
+请求行的内容。
+
+### <a name="remarks"></a>备注
+
+如果*nRow*超过行集中的行数，将引发异常。
 
 ## <a name="nrowsread"></a> Carrayrowset:: M_nrowsread
 
-包含已读取的行集中的行数。  
-  
-### <a name="syntax"></a>语法  
-  
+包含已读取的行集中的行数。
+
+### <a name="syntax"></a>语法
+
 ```cpp
-ULONG m_nRowsRead;  
-```  
-  
-## <a name="see-also"></a>请参阅  
+ULONG m_nRowsRead;
+```
+
+## <a name="see-also"></a>请参阅
 
 [OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [OLE DB 使用者模板参考](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>

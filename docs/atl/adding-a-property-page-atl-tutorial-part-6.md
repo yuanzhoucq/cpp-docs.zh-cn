@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d0db4d53d64def1c1f55929aa9d7514142955cf
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 00390f5a5872c183fdea385158dfa5020362a06f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821111"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055055"
 ---
 # <a name="adding-a-property-page-atl-tutorial-part-6"></a>添加属性页（ATL 教程，第 6 部分）
 
@@ -45,7 +45,7 @@ ms.locfileid: "48821111"
 
 1. 单击**字符串**以打开**字符串**页，并输入 **& 多边形**作为**标题**。
 
-     **标题**的属性页是在该页面的选项卡中显示的字符串。 **文档字符串**是属性框架使用将放置在状态行或工具提示中的说明。 请注意，标准属性框架当前不使用此字符串中，因此，您可以保留使用默认内容。 你将不会生成**帮助文件**目前，因此请删除该文本框中的条目。
+   **标题**的属性页是在该页面的选项卡中显示的字符串。 **文档字符串**是属性框架使用将放置在状态行或工具提示中的说明。 请注意，标准属性框架当前不使用此字符串中，因此，您可以保留使用默认内容。 你将不会生成**帮助文件**目前，因此请删除该文本框中的条目。
 
 1. 单击**完成**，并且将创建属性页对象。
 

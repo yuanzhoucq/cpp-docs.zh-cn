@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f69172986a2f9bd3ca7c0b2373bb815a2f52186b
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: d14b4598020358de01a7914b369eac2b8f5b016d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46029008"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076095"
 ---
 # <a name="cprivateobjectsecuritydesc-class"></a>CPrivateObjectSecurityDesc 类
 
@@ -84,7 +84,7 @@ class CPrivateObjectSecurityDesc : public CSecurityDesc
 调用此方法将安全描述符和其访问控制列表 (Acl) 转换为支持自动的可继承的访问控制项 (Ace) 传播的格式。
 
 ```
-bool ConvertToAutoInherit(  
+bool ConvertToAutoInherit(
     const CSecurityDesc* pParent,
     GUID* ObjectType,
     bool bIsDirectoryObject,
@@ -142,14 +142,14 @@ CPrivateObjectSecurityDesc() throw();
 调用此方法来分配并初始化由调用资源管理器创建的私有对象的自相关的安全描述符。
 
 ```
-bool Create(  
+bool Create(
     const CSecurityDesc* pParent,
     const CSecurityDesc* pCreator,
     bool bIsDirectoryObject,
     const CAccessToken& Token,
     PGENERIC_MAPPING GenericMapping) throw();
 
-bool Create(  
+bool Create(
     const CSecurityDesc* pParent,
     const CSecurityDesc* pCreator,
     GUID* ObjectType,
@@ -203,7 +203,7 @@ bool Create(
 调用此方法以检索私有对象的安全描述符中的信息。
 
 ```
-bool Get(  
+bool Get(
     SECURITY_INFORMATION si,
     CSecurityDesc* pResult) const throw();
 ```
@@ -246,13 +246,13 @@ CPrivateObjectSecurityDesc& operator= (const CPrivateObjectSecurityDesc& rhs) th
 调用此方法来修改私有对象的安全描述符。
 
 ```
-bool Set(  
+bool Set(
     SECURITY_INFORMATION si,
     const CSecurityDesc& Modification,
     PGENERIC_MAPPING GenericMapping,
     const CAccessToken& Token) throw();
 
-bool Set(  
+bool Set(
     SECURITY_INFORMATION si,
     const CSecurityDesc& Modification,
     ULONG AutoInheritFlags,

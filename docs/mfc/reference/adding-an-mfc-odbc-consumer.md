@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02323f1af8ee36d53cdd29d48989a96e61f72c60
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 15b073d361fe8dbffb7c92718f5d7522534fc7e1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46406790"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052337"
 ---
 # <a name="adding-an-mfc-odbc-consumer"></a>添加 MFC ODBC 使用者
 
@@ -31,7 +31,7 @@ MFC ODBC 使用者包含 ODBC 记录集类和数据绑定访问数据源所必�
 
 1. 在 Visual c + + 文件夹中，双击**MFC ODBC 使用者**图标或选择它，然后单击**打开**。
 
-     MFC ODBC 使用者向导随即打开。
+   MFC ODBC 使用者向导随即打开。
 
 1. 定义设置，如中所述[MFC ODBC 使用者向导](../../mfc/reference/mfc-odbc-consumer-wizard.md)。
 

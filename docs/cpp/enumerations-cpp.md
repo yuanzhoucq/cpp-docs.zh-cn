@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 35aa004a2c4f47c476175ac500777ee8eb6efb07
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 1146c3e07ec6d9be4233981bcb2551a0c768c265
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46028748"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054080"
 ---
 # <a name="enumerations-c"></a>枚举 (C++)
 
@@ -39,7 +39,7 @@ ms.locfileid: "46028748"
 ```
 // unscoped enum:
 enum [identifier] [: type]
-{enum-list}; 
+{enum-list}; 
 
 // scoped enum:
 enum [class|struct]
@@ -134,19 +134,19 @@ int account_num = Hearts; //OK if Hearts is in a unscoped enum
 ```cpp
 namespace ScopedEnumConversions
 {
-    enum class Suit { Diamonds, Hearts, Clubs, Spades };
+    enum class Suit { Diamonds, Hearts, Clubs, Spades };
 
-    void AttemptConversions()
+    void AttemptConversions()
     {
-        Suit hand; 
-        hand = Clubs; // error C2065: 'Clubs' : undeclared identifier
-        hand = Suit::Clubs; //Correct.
-        int account_num = 135692;
-        hand = account_num; // error C2440: '=' : cannot convert from 'int' to 'Suit'
-        hand = static_cast<Suit>(account_num); // OK, but probably a bug!!!
+        Suit hand; 
+        hand = Clubs; // error C2065: 'Clubs' : undeclared identifier
+        hand = Suit::Clubs; //Correct.
+        int account_num = 135692;
+        hand = account_num; // error C2440: '=' : cannot convert from 'int' to 'Suit'
+        hand = static_cast<Suit>(account_num); // OK, but probably a bug!!!
 
-        account_num = Suit::Hearts; // error C2440: '=' : cannot convert from 'Suit' to 'int'
-        account_num = static_cast<int>(Suit::Hearts); // OK
+        account_num = Suit::Hearts; // error C2440: '=' : cannot convert from 'Suit' to 'int'
+        account_num = static_cast<int>(Suit::Hearts); // OK
 }
 ```
 
@@ -155,7 +155,6 @@ namespace ScopedEnumConversions
 ## <a name="no_enumerators"></a> 与任何枚举器枚举
 
 **Visual Studio 2017 15.3 及更高版本**(适用于[/std:C++ 17](../build/reference/std-specify-language-standard-version.md)): 通过使用显式的基础类型和任何枚举器定义枚举 （正则或指定了作用域），你可以有效引入一个新整数类型具有隐式转换为任何其他类型。 通过使用此类型而不其内置的基础类型，则可以消除导致意外的隐式转换的细微错误的可能性。
-
 
 ```cpp
 enum class byte : unsigned char { };

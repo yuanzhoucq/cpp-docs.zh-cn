@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ee79fca8784ade6509cfc5854eaaa165b68edee0
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 95b30d65fe67f2647cb8ca50619f3ab13f167053
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790537"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50058994"
 ---
 # <a name="version-c"></a>version (C++)
 
@@ -37,7 +37,7 @@ ms.locfileid: "48790537"
 
 ### <a name="parameters"></a>参数
 
-*version*<br/>
+*版本*<br/>
 版本号`coclass`。 如果未指定，则将在.idl 文件中放置 1.0。
 
 ## <a name="remarks"></a>备注
@@ -59,9 +59,9 @@ ms.locfileid: "48790537"
 |**必需的特性**|**coclass**|
 |**无效的特性**|无|
 
-有关特性上下文的详细信息，请参阅[特性上下文](cpp-attributes-com-net.md#contexts)。
+有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
 ## <a name="see-also"></a>请参阅
 
 [编译器特性](compiler-attributes.md)<br/>
-[类特性](class-attributes.md)  
+[类特性](class-attributes.md)

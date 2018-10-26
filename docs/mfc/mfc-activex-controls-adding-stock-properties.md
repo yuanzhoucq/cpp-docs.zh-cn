@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4100dc14a25a744e5c28ffd1b16119408d800656
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 038d33a81d96067089eb55affbad6991a62d129f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46404509"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055198"
 ---
 # <a name="mfc-activex-controls-adding-stock-properties"></a>MFC ActiveX 控件：添加常用属性
 
@@ -59,7 +59,7 @@ ms.locfileid: "46404509"
 
 1. 从快捷菜单中，单击**外**，然后单击**添加属性**。
 
-     这将打开[添加属性向导](../ide/names-add-property-wizard.md)。
+   这将打开[添加属性向导](../ide/names-add-property-wizard.md)。
 
 1. 在中**属性名称**框中，单击**标题**。
 

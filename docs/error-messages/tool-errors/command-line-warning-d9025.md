@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 822d1ac0cc1e6b3e728d43b816e7a0a15eee9958
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: c5bcc7cbe6fcd8a61e15e80c43f27703957a1e88
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46063685"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083075"
 ---
 # <a name="command-line-warning-d9025"></a>命令行警告 D9025
 
@@ -35,6 +35,6 @@ ms.locfileid: "46063685"
 
 - 在代码中或在项目的项目设置中，可以指定一个选项。 如果您看一下编译器的[命令行属性页](../../ide/command-line-property-pages.md)如果你看到中的选项冲突**所有选项**字段选项在项目的属性页，否则为设置选项，然后在源代码中设置。
 
-     如果项目的属性页中设置了选项，查看在编译器的预处理器属性页上 （使用解决方案资源管理器中选择的项目节点）。  如果您看不到选项集存在，检查每个源代码文件 （在解决方案资源管理器） 的预处理器属性页设置以确保它不存在添加。
+   如果项目的属性页中设置了选项，查看在编译器的预处理器属性页上 （使用解决方案资源管理器中选择的项目节点）。  如果您看不到选项集存在，检查每个源代码文件 （在解决方案资源管理器） 的预处理器属性页设置以确保它不存在添加。
 
-     如果在代码中设置了选项可以在代码中或在 windows 头文件中设置它。  您可以尝试创建预处理过的文件 ([/P](../../build/reference/p-preprocess-to-a-file.md)) 并在其中搜索符号。
+   如果在代码中设置了选项可以在代码中或在 windows 头文件中设置它。  您可以尝试创建预处理过的文件 ([/P](../../build/reference/p-preprocess-to-a-file.md)) 并在其中搜索符号。

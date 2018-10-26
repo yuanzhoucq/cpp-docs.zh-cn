@@ -13,19 +13,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 991e3e74ba280b615d951c12472de46833b7de72
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 2d8c5188cccceb0c09de95c43a72a645ded0e6a9
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083341"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077512"
 ---
 # <a name="desktop-applications-visual-c"></a>桌面应用程序 （Visual c + +）
 
 一个*桌面应用程序*c + + 中是可以访问 Windows Api 和是运行在窗口中或在系统控制台中的完整集的本机应用程序。 （尽管不再受正式支持 Windows XP，并且从那以后引入了许多 Windows api），在 c + + 的桌面应用程序可以在 Windows XP 到 Windows 10 上运行。
 
 桌面应用程序与来自通用 Windows 平台 (UWP) 应用于运行 Windows 10 电脑以及 XBox、 Windows Phone、 Surface Hub 和其他设备上可以运行不同。 有关桌面 vs 的详细信息。UWP 应用程序，请参阅[选择你的技术](https://msdn.microsoft.com/library/windows/desktop/dn614993)。
-
 
 ### <a name="desktop-bridge"></a>桌面桥
 

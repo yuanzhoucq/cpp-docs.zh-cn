@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88873c9ebde2ce03163e62a59f3dd6fffdd36849
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: fdbf1ba3c4cfda4163076386def70c700c156aa7
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46090277"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057865"
 ---
 # <a name="assertion-and-user-supplied-messages-c"></a>断言和用户提供的消息 (C++)
 
@@ -36,7 +36,7 @@ C++ 语言支持三个错误处理机制来帮助你调试应用程序： [#erro
 
 - [Static_assert](../cpp/static-assert.md)声明实际上是在编译时。 它将测试由用户指定且可以转换为布尔值的整数表达式表示的软件断言。 如果表达式的计算结果为零 (false)，编译器将发出用户指定的消息，并且编译因错误而失败。
 
-     `static_assert` 声明对调试模板尤其有用，因为模板参数可包含在用户指定的表达式中。
+   `static_assert` 声明对调试模板尤其有用，因为模板自变量可包含在用户指定的表达式中。
 
 - [Assert 宏、 _assert、 _wassert](../c-runtime-library/reference/assert-macro-assert-wassert.md)宏实际上是在运行时。 它会计算用户指定的表达式，如果结果为零，系统将发出诊断消息并关闭应用程序。 很多其他宏，如[_ASSERT](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md)和 _ASSERTE、 与此宏类似，但发出不同的系统定义或用户定义诊断消息。
 

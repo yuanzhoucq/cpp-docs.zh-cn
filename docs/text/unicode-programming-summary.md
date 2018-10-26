@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d49f87d5709483a36325afa426a790374fc93837
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9ac931aca05c9df6d5b201fdafb8872c1ee9c789
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46415806"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080671"
 ---
 # <a name="unicode-programming-summary"></a>Unicode 编程摘要
 
@@ -87,7 +87,7 @@ ms.locfileid: "46415806"
     pDC->TextOut( str, str.GetLength( ) );
     ```
 
-     `CDC::TextOut` 采用字符，不是数字的字节的数。
+   `CDC::TextOut` 采用字符，不是数字的字节的数。
 
 - 使用[fopen_s、 _wfopen_s](../c-runtime-library/reference/fopen-s-wfopen-s.md)打开 Unicode 文件。
 

@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 594b02d777d87decfc218064678dbecdf8ecf0c9
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: caa298ebbb96b04145bf2beb52f93838708ae50b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46106345"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50088897"
 ---
 # <a name="property-map-macros"></a>属性映射宏
 
@@ -39,7 +39,7 @@ ms.locfileid: "46106345"
 |[PROP_ENTRY_TYPE](#prop_entry_type)|输入属性映射的属性说明、 属性的 DISPID，和属性页 CLSID。|
 |[改用 PROP_ENTRY_TYPE_EX](#prop_entry_type_ex)|输入的属性说明，属性的 DISPID，CLSID 的属性页和`IDispatch`属性映射到 IID。|
 |[PROP_PAGE](#prop_page)|输入属性映射的属性页 CLSID。|
-|[END_PROP_MAP](#end_prop_map)|将标记 ATL 属性映射的结尾。|  
+|[END_PROP_MAP](#end_prop_map)|将标记 ATL 属性映射的结尾。|
 
 ## <a name="requirements"></a>要求
 
@@ -83,7 +83,7 @@ PROP_DATA_ENTRY( szDesc, member, vt)
 *szDesc*<br/>
 [in]属性说明。
 
-*成员*<br/>
+*member*<br/>
 [in]包含范围; 数据成员例如， `m_sizeExtent`。
 
 *vt*<br/>

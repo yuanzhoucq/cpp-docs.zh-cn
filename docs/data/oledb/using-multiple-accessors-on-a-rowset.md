@@ -1,7 +1,7 @@
 ---
 title: 行集合上使用多个访问器 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/24/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 43fa36e0f5b79a6901c1294345f54386340c43ef
-ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
+ms.openlocfilehash: fb0eeb3a0a3c347c115cb05c2a35d221e6a94fe4
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49808454"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50071033"
 ---
 # <a name="using-multiple-accessors-on-a-rowset"></a>在一个行集合上使用多个访问器
 
@@ -37,7 +37,7 @@ ms.locfileid: "49808454"
 
 - **性能。** 在此方案中，一个或多个列具有大量的数据，例如，图形、 声音或视频文件。 每次移动到某一行时，可能不想要检索列与大型数据文件，因为这样做将会减慢应用程序的性能。
 
-   你可以设置单独的访问器中的第一个访问器包含除具有大型数据的所有列，并从这些列检索数据自动保存功能。第一个访问器是自动访问器。 第二个访问器检索仅包含大型数据的列，但它不会自动从该列检索数据。 您可以更新或按需获取大型数据的其他方法。
+   你可以设置单独的访问器中的第一个访问器包含除具有大型数据的所有列，并从这些列检索数据自动保存功能。第一个访问器是自动访问器。 第二个访问器检索仅保存大型数据的列，但它不会自动从该列检索数据。 您可以更新或按需获取大型数据的其他方法。
 
    - 访问器 0 是一个自动访问器;它将检索除具有较大的数据的所有列。
 
@@ -45,7 +45,7 @@ ms.locfileid: "49808454"
 
    使用自动参数来指定访问器是否为自动访问器。
 
-- **多个 ISequentialStream 列。** 在此方案中，您有多个列包含`ISequentialStream`数据。 但是，每个访问器仅限于一个`ISequentialStream`数据流。 若要解决此问题，设置多个取值函数，每个都拥有一个`ISequentialStream`指针。
+- **多个 ISequentialStream 列。** 在此方案中，已多个列保存`ISequentialStream`数据。 但是，每个访问器仅限于一个`ISequentialStream`数据流。 若要解决此问题，设置多个取值函数，每个都拥有一个`ISequentialStream`指针。
 
 通常情况下创建使用访问器[BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md)并[END_ACCESSOR](../../data/oledb/end-accessor.md)宏。 此外可以使用[db_accessor](../../windows/db-accessor.md)属性。 (访问器中进行了描述进一步[用户记录](../../data/oledb/user-records.md)。)宏或该属性指定访问器是自动或非自动访问器：
 

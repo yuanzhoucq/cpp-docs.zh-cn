@@ -76,12 +76,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a6379112de9b31de55b86cc4bc4e06a94863ac6
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 509c2eb386e235e8ba7c6d2bc016ff92f6499263
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46406811"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077538"
 ---
 # <a name="cmfccaptionbar-class"></a>CMFCCaptionBar 类
 
@@ -158,7 +158,7 @@ class CMFCCaptionBar : public CPane
 
 ## <a name="example"></a>示例
 
-下面的示例演示如何使用中的各种方法`CMFCCaptionBar`类。 该示例演示如何创建标题栏控件、 设置的标题栏的三维边框，设置以像素为单位的标题栏元素边缘的标题栏控件的边缘之间的距离，、 设置的标题栏按钮设置按钮的工具提示、 设置的标题栏的文本标签，设置的标题栏，位图图像，以及设置图像的工具提示的标题栏中。 此代码片段属于[MS Office 2007 演示示例](../../visual-cpp-samples.md)。
+下面的示例演示了如何使用 `CMFCCaptionBar` 类中的各种方法。 该示例演示如何创建标题栏控件、 设置的标题栏的三维边框，设置以像素为单位的标题栏元素边缘的标题栏控件的边缘之间的距离，、 设置的标题栏按钮设置按钮的工具提示、 设置的标题栏的文本标签，设置的标题栏，位图图像，以及设置图像的工具提示的标题栏中。 此代码片段属于[MS Office 2007 演示示例](../../visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_MSOffice2007Demo#1](../../mfc/reference/codesnippet/cpp/cmfccaptionbar-class_1.h)]
 [!code-cpp[NVC_MFC_MSOffice2007Demo#2](../../mfc/reference/codesnippet/cpp/cmfccaptionbar-class_2.cpp)]
@@ -525,7 +525,6 @@ void SetBitmap(
     COLORREF clrTransparent,
     BOOL bStretch=FALSE,
     BarElementAlignment bmpAlignment=ALIGN_RIGHT);
-
 
 void SetBitmap(
     UINT uiBmpResID,

@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0e4eba9940546e72f11c220dc03a6538750ae85
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: af2780c8b7fb332cd739416e5051a57a8bc7f765
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46028332"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50073523"
 ---
 # <a name="registry-and-typelib-global-functions"></a>注册表和类型库全局函数
 
@@ -60,7 +60,7 @@ ms.locfileid: "46028332"
 |||
 |-|-|
 |[AtlGetPerUserRegistration](#atlgetperuserregistration)|检索应用程序将注册表访问重定向是否**HKEY_CURRENT_USER** ( **HKCU**) 节点。|
-|[AtlSetPerUserRegistration](#atlsetperuserregistration)|设置是否在应用程序将注册表访问重定向**HKEY_CURRENT_USER** ( **HKCU**) 节点。|  
+|[AtlSetPerUserRegistration](#atlsetperuserregistration)|设置是否在应用程序将注册表访问重定向**HKEY_CURRENT_USER** ( **HKCU**) 节点。|
 
 ### <a name="requirements"></a>要求
 
@@ -93,7 +93,7 @@ ATLINLINE ATLAPI AtlGetPerUserRegistration(bool* pEnabled);
 
 ### <a name="requirements"></a>要求
 
-**标头：** atlbase.h  
+**标头：** atlbase.h
 
 ## <a name="afxregcreatekey"></a> AfxRegCreateKey
 
@@ -121,11 +121,11 @@ LONG AFXAPI AfxRegCreateKey(HKEY hKey, LPCTSTR lpSubKey, PHKEY phkResult, CAtlTr
 
 ### <a name="return-value"></a>返回值
 
-如果函数成功，返回值为 ERROR_SUCCESS。 如果函数失败，返回值是在 Winerror.h 中定义一个非零错误代码。  
+如果函数成功，返回值为 ERROR_SUCCESS。 如果函数失败，返回值是在 Winerror.h 中定义一个非零错误代码。
 
 ### <a name="requirements"></a>要求
 
-**标头：** afxpriv.h  
+**标头：** afxpriv.h
 
 ## <a name="afxregdeletekey"></a> AfxRegDeleteKey
 
@@ -154,7 +154,7 @@ LONG AFXAPI AfxRegDeleteKey(HKEY hKey, LPCTSTR lpSubKey, CAtlTransactionManager*
 
 ### <a name="requirements"></a>要求
 
-**标头：** afxpriv.h  
+**标头：** afxpriv.h
 
 ## <a name="afxregisterpreviewhandler"></a>
 
@@ -179,7 +179,7 @@ BOOL AFXAPI AfxRegisterPreviewHandler(LPCTSTR lpszCLSID, LPCTSTR lpszShortTypeNa
 
 ### <a name="requirements"></a>要求
 
-**标头：** afxdisp.h   
+**标头：** afxdisp.h
 
 ##  <a name="atlregistertypelib"></a>  AtlRegisterTypeLib
 
@@ -239,11 +239,11 @@ LONG AFXAPI AfxRegOpenKey(HKEY hKey, LPCTSTR lpSubKey, PHKEY phkResult, CAtlTran
 
 ### <a name="requirements"></a>要求
 
-**标头：** afxpriv.h  
+**标头：** afxpriv.h
 
 ## <a name="afxregopenkeyex"></a>  AfxRegOpenKeyEx
 
-打开指定的注册表项。 
+打开指定的注册表项。
 
 ### <a name="syntax"></a>语法
 
@@ -277,7 +277,7 @@ LONG AFXAPI AfxRegOpenKeyEx(HKEY hKey, LPCTSTR lpSubKey, DWORD ulOptions, REGSAM
 
 ### <a name="requirements"></a>要求
 
-**标头：** afxpriv.h  
+**标头：** afxpriv.h
 
 ## <a name="afxunregisterpreviewhandler"></a> AfxUnregisterPreviewHandler
 
@@ -296,7 +296,7 @@ BOOL AFXAPI AfxUnRegisterPreviewHandler(LPCTSTR lpszCLSID);
 
 ### <a name="requirements"></a>要求
 
-**标头：** afxdisp.h  
+**标头：** afxdisp.h
 
 ## <a name="atlsetperuserregistration"></a> AtlSetPerUserRegistration
 
@@ -321,11 +321,11 @@ ATLINLINE ATLAPI AtlSetPerUserRegistration(bool bEnable);
 
 默认情况下不启用注册表重定向。 如果启用此选项时，注册表访问重定向到**HKEY_CURRENT_USER\Software\Classes**。
 
-重定向不是全局的。 仅 MFC 和 ATL 框架受此注册表重定向。  
+重定向不是全局的。 仅 MFC 和 ATL 框架受此注册表重定向。
 
 ### <a name="requirements"></a>要求
 
-**标头：** atlbase.h  
+**标头：** atlbase.h
 
 ##  <a name="atlunregistertypelib"></a>  AtlUnRegisterTypeLib
 
@@ -335,7 +335,7 @@ ATLINLINE ATLAPI AtlSetPerUserRegistration(bool bEnable);
 
 ```
 ATLAPI AtlUnRegisterTypeLib(
-    HINSTANCE hInstTypeLib, 
+    HINSTANCE hInstTypeLib,
     LPCOLESTR lpszIndex);
 ```
 
@@ -353,7 +353,7 @@ ATLAPI AtlUnRegisterTypeLib(
 
 ### <a name="remarks"></a>备注
 
-使用此帮助器函数[CAtlComModule::UnRegisterTypeLib](../../atl/reference/catlcommodule-class.md#unregistertypelib)并[AtlComModuleUnregisterServer](#atlcommoduleunregisterserver)。  
+使用此帮助器函数[CAtlComModule::UnRegisterTypeLib](../../atl/reference/catlcommodule-class.md#unregistertypelib)并[AtlComModuleUnregisterServer](#atlcommoduleunregisterserver)。
 
 ### <a name="requirements"></a>要求
 
@@ -405,7 +405,7 @@ ATLINLINE ATLAPI AtlLoadTypeLib(
 
 ##  <a name="registrydataexchange"></a>  RegistryDataExchange
 
-调用此函数可在系统注册表中进行读取或写入。  
+调用此函数可在系统注册表中进行读取或写入。
 
 ### <a name="syntax"></a>语法
 

@@ -72,12 +72,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 964fab6030e0a89ef69730fd4867973e402db614
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a4a5b6936397728472bf0041735248157091db56
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46442014"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054353"
 ---
 # <a name="cdaoworkspace-class"></a>CDaoWorkspace 类
 
@@ -163,7 +163,7 @@ MFC DAO，用于进行安全控制在不执行用户和组集合。 如果您需
 
 - 显式打开默认工作区。
 
-     通常使用默认工作区时，隐式 — 当您打开新的[CDaoDatabase](../../mfc/reference/cdaodatabase-class.md)或[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)对象。 但可能需要显式访问 — 例如，到数据库引擎或访问工作区集合。 请参阅下面的"隐式使用的默认工作区"。
+   通常使用默认工作区时，隐式 — 当您打开新的[CDaoDatabase](../../mfc/reference/cdaodatabase-class.md)或[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)对象。 但可能需要显式访问 — 例如，到数据库引擎或访问工作区集合。 请参阅下面的"隐式使用的默认工作区"。
 
 - 创建新的工作区。 调用[追加](#append)如果你想要将它们添加到工作区集合。
 
@@ -309,7 +309,6 @@ static void PASCAL CompactDatabase(
     LPCTSTR lpszLocale = dbLangGeneral,
     int nOptions = 0);
 
-
 static void PASCAL CompactDatabase(
     LPCTSTR lpszSrcName,
     LPCTSTR lpszDestName,
@@ -453,7 +452,6 @@ void GetDatabaseInfo(
     int nIndex,
     CDaoDatabaseInfo& dbinfo,
     DWORD dwInfoOptions = AFX_DAO_PRIMARY_INFO);
-
 
 void GetDatabaseInfo(
     LPCTSTR lpszName,
@@ -624,7 +622,6 @@ void GetWorkspaceInfo(
     int nIndex,
     CDaoWorkspaceInfo& wkspcinfo,
     DWORD dwInfoOptions = AFX_DAO_PRIMARY_INFO);
-
 
 void GetWorkspaceInfo(
     LPCTSTR lpszName,

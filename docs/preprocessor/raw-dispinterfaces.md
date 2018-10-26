@@ -16,31 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02133e6b9d884fa8e0a175dd01845035ec8b96a7
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b89c1f549168a762b5ae095c4eacf5ddb1b4d053
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46435943"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062341"
 ---
 # <a name="rawdispinterfaces"></a>raw_dispinterfaces
-**C + + 专用**  
-  
-告知编译器生成低级别的包装函数的调用调度接口方法和属性的`IDispatch::Invoke`并返回 HRESULT 错误代码。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-raw_dispinterfaces  
-```  
-  
-## <a name="remarks"></a>备注  
- 
-如果未指定该特性，则只生成高级包装器，它在失败时引发 C++ 异常。  
-  
-**结束 c + + 专用**  
-  
-## <a name="see-also"></a>请参阅  
- 
+**C + + 专用**
+
+告知编译器生成低级别的包装函数的调用调度接口方法和属性的`IDispatch::Invoke`并返回 HRESULT 错误代码。
+
+## <a name="syntax"></a>语法
+
+```
+raw_dispinterfaces
+```
+
+## <a name="remarks"></a>备注
+
+如果未指定该特性，则只生成高级包装器，它在失败时引发 C++ 异常。
+
+**结束 c + + 专用**
+
+## <a name="see-also"></a>请参阅
+
 [#import 属性](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [#import 指令](../preprocessor/hash-import-directive-cpp.md)

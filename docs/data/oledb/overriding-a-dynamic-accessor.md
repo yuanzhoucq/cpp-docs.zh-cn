@@ -17,69 +17,69 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8e76aefefd4a8b1ab41d084c1e02d0c38ab5c498
-ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
+ms.openlocfilehash: 0f54efa301379f003a4fc35643ad6815e2faf3aa
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49989991"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50056408"
 ---
 # <a name="overriding-a-dynamic-accessor"></a>重写动态访问器
 
-当使用动态访问器如`CDynamicAccessor`，该命令`Open`方法为自动，基于打开行集的列信息创建取值函数。 您可以重写动态访问器来控制完全如何绑定列。  
-  
-若要重写动态访问器，请将传递**false**的最后一个参数作为`CCommand::Open`方法。 这可以防止`Open`从自动创建取值函数。 然后，可以调用`GetColumnInfo`，并调用`AddBindEntry`为每个你想要绑定的列。 下面的代码演示如何执行此操作：  
-  
-```cpp  
-USES_CONVERSION;  
-double   dblProductID;  
-  
-CCommand<CDynamicAccessor> product;  
-// Open the table, passing false to prevent automatic binding   
-product.Open(session, _T("Select * FROM Products"), NULL, NULL, DBGUID_DEFAULT, false);  
-  
+当使用动态访问器如`CDynamicAccessor`，该命令`Open`方法为自动，基于打开行集的列信息创建取值函数。 您可以重写动态访问器来控制完全如何绑定列。
 
-ULONG         nColumns;  
-DBCOLUMNINFO*   pColumnInfo;  
-// Get the column information from the opened rowset.  
-product.GetColumnInfo(&nColumns, &pColumnInfo);  
-  
-// Bind the product ID as a double.  
-pColumnInfo[0].wType          = DBTYPE_R8;  
-pColumnInfo[0].ulColumnSize = 8;  
-product.AddBindEntry(pColumnInfo[0]);  
-  
-// Bind the product name as it is.  
-product.AddBindEntry(pColumnInfo[1]);  
-  
-// Bind the reorder level as a string.  
-pColumnInfo[8].wType          = DBTYPE_STR;  
-pColumnInfo[8].ulColumnSize = 10;  
-product.AddBindEntry(pColumnInfo[8]);  
-  
-// You have finished specifying the bindings. Go ahead and bind.  
-product.Bind();  
-// Free the memory for the column information that was retrieved in   
-// previous call to GetColumnInfo.  
-CoTaskMemFree(pColumnInfo);  
-  
+若要重写动态访问器，请将传递**false**的最后一个参数作为`CCommand::Open`方法。 这可以防止`Open`从自动创建取值函数。 然后，可以调用`GetColumnInfo`，并调用`AddBindEntry`为每个你想要绑定的列。 下面的代码演示如何执行此操作：
 
-char*   pszProductName;  
-char*   pszReorderLevel;  
-bool   bRC;  
-  
-// Loop through the records tracing out the information.  
-while (product.MoveNext() == S_OK)  
-{  
-   bRC = product.GetValue(1, &dblProductID);  
-   pszProductName   = (char*)product.GetValue(2);  
-   pszReorderLevel  = (char*)product.GetValue(9);  
-  
-   ATLTRACE(_T("Override = %lf \"%s\" \"%s\"\n"), dblProductID,  
-      A2T(pszProductName), A2T(pszReorderLevel));  
-}  
-```  
-  
-## <a name="see-also"></a>请参阅  
+```cpp
+USES_CONVERSION;
+double   dblProductID;
+
+CCommand<CDynamicAccessor> product;
+// Open the table, passing false to prevent automatic binding
+product.Open(session, _T("Select * FROM Products"), NULL, NULL, DBGUID_DEFAULT, false);
+
+
+ULONG         nColumns;
+DBCOLUMNINFO*   pColumnInfo;
+// Get the column information from the opened rowset.
+product.GetColumnInfo(&nColumns, &pColumnInfo);
+
+// Bind the product ID as a double.
+pColumnInfo[0].wType          = DBTYPE_R8;
+pColumnInfo[0].ulColumnSize = 8;
+product.AddBindEntry(pColumnInfo[0]);
+
+// Bind the product name as it is.
+product.AddBindEntry(pColumnInfo[1]);
+
+// Bind the reorder level as a string.
+pColumnInfo[8].wType          = DBTYPE_STR;
+pColumnInfo[8].ulColumnSize = 10;
+product.AddBindEntry(pColumnInfo[8]);
+
+// You have finished specifying the bindings. Go ahead and bind.
+product.Bind();
+// Free the memory for the column information that was retrieved in
+// previous call to GetColumnInfo.
+CoTaskMemFree(pColumnInfo);
+
+
+char*   pszProductName;
+char*   pszReorderLevel;
+bool   bRC;
+
+// Loop through the records tracing out the information.
+while (product.MoveNext() == S_OK)
+{
+   bRC = product.GetValue(1, &dblProductID);
+   pszProductName   = (char*)product.GetValue(2);
+   pszReorderLevel  = (char*)product.GetValue(9);
+
+   ATLTRACE(_T("Override = %lf \"%s\" \"%s\"\n"), dblProductID,
+      A2T(pszProductName), A2T(pszReorderLevel));
+}
+```
+
+## <a name="see-also"></a>请参阅
 
 [使用访问器](../../data/oledb/using-accessors.md)

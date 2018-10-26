@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 1d3f8dc2251dbfbcd8155b0edc512a9dc40bacc2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 71e42f7d7a60478ec9344a44e8e86463e5845500
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46393394"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50061568"
 ---
 # <a name="how-to-call-properties-and-methods-of-the-windows-forms-control"></a>如何：调用 Windows 窗体控件的属性和方法
 
@@ -39,11 +39,11 @@ ms.locfileid: "46393394"
 
 1. 将以下行添加到的公共重写部分`CMFC02View`类在 MFC02View.h 中的声明。
 
-     `gcroot<WindowsFormsControlLibrary1::UserControl1 ^> m_ViewControl;`
+   `gcroot<WindowsFormsControlLibrary1::UserControl1 ^> m_ViewControl;`
 
 1. 有关 OnInitialupdate 添加一个替代。
 
-     显示**属性**窗口 (F4)。 在中**类视图**(CTRL + SHIFT + C) 选择 CMFC02View 类。 在中**属性**窗口中，为替代选择图标。 向下到 OnInitialUpdate 列表中的滚动。 单击下拉列表，然后选择\<添加 >。 在 MFC02View.cpp。 请确保 OnInitialUpdate 函数的正文如下所示：
+   显示**属性**窗口 (F4)。 在中**类视图**(CTRL + SHIFT + C) 选择 CMFC02View 类。 在中**属性**窗口中，为替代选择图标。 向下到 OnInitialUpdate 列表中的滚动。 单击下拉列表，然后选择\<添加 >。 在 MFC02View.cpp。 请确保 OnInitialUpdate 函数的正文如下所示：
 
     ```
     CWinFormsView::OnInitialUpdate();
@@ -53,11 +53,11 @@ ms.locfileid: "46393394"
 
 1. 生成并运行该项目。
 
-     在 **“生成”** 菜单上，单击 **“生成解决方案”**。
+   在 **“生成”** 菜单上，单击 **“生成解决方案”**。
 
-     上**调试**菜单上，单击**启动但不调试**。
+   上**调试**菜单上，单击**启动但不调试**。
 
-     请注意，在文本框中现已初始化。
+   请注意，在文本框中现已初始化。
 
 ## <a name="see-also"></a>请参阅
 

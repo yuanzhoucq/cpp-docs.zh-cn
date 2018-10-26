@@ -170,12 +170,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24b663e1b07d1012c1611714390340df3ce3867f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c17b280d658eb615d314526f4fd241bf57c2eed1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448489"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50074730"
 ---
 # <a name="cdockingmanager-class"></a>CDockingManager 类
 
@@ -296,7 +296,7 @@ class CDockingManager : public CObject
 
     - `AFX_DOCK_TYPE::DT_SMART`
 
-     由定义这些停靠模式[CDockingManager::m_dockModeGlobal](#m_dockmodeglobal)并通过调用设置[CDockingManager::SetDockingMode](#setdockingmode)。
+   由定义这些停靠模式[CDockingManager::m_dockModeGlobal](#m_dockmodeglobal)并通过调用设置[CDockingManager::SetDockingMode](#setdockingmode)。
 
 - 如果你想要创建非浮动、 无法调整大小的窗格中，调用[CDockingManager::AddPane](#addpane)方法。 此方法注册到停靠管理器，它负责窗格的布局窗格。
 
@@ -328,7 +328,7 @@ BOOL AddDockSite(
 
 ### <a name="parameters"></a>参数
 
-*信息*<br/>
+info<br/>
 [in]对包含的信息结构的引用将停靠窗格对齐方式。
 
 *ppDockBar*<br/>
@@ -396,7 +396,7 @@ virtual void AdjustDockingLayout(HDWP hdwp = NULL);
 ### <a name="parameters"></a>参数
 
 *hdwp*<br/>
-[in]指定延迟的窗口位置结构。 有关详细信息，请参阅[Windows 数据类型](/windows/desktop/WinProg/windows-data-types)。
+[in]指定延迟的窗口位置结构。 有关详细信息，请参阅 [Windows 数据类型](/windows/desktop/WinProg/windows-data-types)。
 
 ### <a name="remarks"></a>备注
 
@@ -1080,7 +1080,7 @@ BOOL InsertDockSite(
 
 ### <a name="parameters"></a>参数
 
-*信息*<br/>
+info<br/>
 [in]包含有关停靠窗格中的对齐方式信息的结构。
 
 *dwAlignToInsertAfter*<br/>

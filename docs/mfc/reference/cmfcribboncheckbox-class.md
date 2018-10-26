@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b10004551a594d6f969ffaf7893cd2e7efe2d76
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8bc91a98d1909245e09268cc7129084392a4c096
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46396542"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076251"
 ---
 # <a name="cmfcribboncheckbox-class"></a>CMFCRibbonCheckBox 类
 
@@ -227,7 +227,8 @@ virtual BOOL OnDrawMenuImage(CDC*, CRect);
 
 ### <a name="parameters"></a>参数
 
-[in]*CDC** CDC 指向关联的复选框。
+[in]*CDC&#42;*<br/>
+指向与复选框相关联的 CDC。
 
 *CRect*<br/>
 [in]一个`CRect`对象，它指定要在其中绘制的菜单图像的矩形。

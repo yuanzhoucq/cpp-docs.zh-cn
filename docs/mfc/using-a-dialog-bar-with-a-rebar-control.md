@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c881e31d178d6303939c94d68e2824fb11ec2cbd
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f9d4155fec333061c65f148f29e849dc4717f0d2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46425387"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50073755"
 ---
 # <a name="using-a-dialog-bar-with-a-rebar-control"></a>对 Rebar 控件使用对话栏
 
@@ -41,13 +41,13 @@ ms.locfileid: "46425387"
 
 1. 在新的处理程序，修改现有代码，以匹配下面的示例：
 
-     [!code-cpp[NVC_MFCControlLadenDialog#29](../mfc/codesnippet/cpp/using-a-dialog-bar-with-a-rebar-control_1.cpp)]
+   [!code-cpp[NVC_MFCControlLadenDialog#29](../mfc/codesnippet/cpp/using-a-dialog-bar-with-a-rebar-control_1.cpp)]
 
 1. 添加 WM_MOVE 消息的处理程序。
 
 1. 在新的处理程序，修改现有代码，以匹配下面的示例：
 
-     [!code-cpp[NVC_MFCControlLadenDialog#30](../mfc/codesnippet/cpp/using-a-dialog-bar-with-a-rebar-control_2.cpp)]
+   [!code-cpp[NVC_MFCControlLadenDialog#30](../mfc/codesnippet/cpp/using-a-dialog-bar-with-a-rebar-control_2.cpp)]
 
 新的处理程序通过将 WM_ERASEBKGND 消息转发到父窗口和强制重新绘制，每次移动对话栏对象模拟对话栏的透明度。
 

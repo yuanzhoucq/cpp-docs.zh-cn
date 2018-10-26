@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 84f14cccdd4dd142f2fa6e17e48c37a3fecb94ea
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 6a025b54e3c41f283e1877e0b97c7dbb6e5f32bd
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790479"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062804"
 ---
 # <a name="nonextensible"></a>nonextensible
 
@@ -70,9 +70,9 @@ __interface IFireTabCtrl
 |**必需的特性**|`dual` 和`oleautomation`，或 `dispinterface`|
 |**无效的特性**|无|
 
-有关特性上下文的详细信息，请参阅[特性上下文](cpp-attributes-com-net.md#contexts)。
+有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
 ## <a name="see-also"></a>请参阅
 
 [IDL 特性](idl-attributes.md)<br/>
-[接口特性](interface-attributes.md)  
+[接口特性](interface-attributes.md)

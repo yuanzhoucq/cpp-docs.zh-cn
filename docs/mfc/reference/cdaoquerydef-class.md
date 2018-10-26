@@ -76,12 +76,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be2676609cae4de6b2f3995be1bc9311f88e0a84
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a10e1f6adb1fc9274a2a59215564fb60984ea661
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46408704"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50074483"
 ---
 # <a name="cdaoquerydef-class"></a>CDaoQueryDef 类
 
@@ -235,7 +235,7 @@ BOOL CanUpdate();
 
 - 具有更新权限的数据库。
 
-     这取决于是否已实现的安全功能。 MFC 不提供安全; 支持您必须实现它自己通过调用 DAO 直接或通过使用 Microsoft Access。 请参阅主题 DAO 帮助中的"权限属性"。
+   这取决于是否已实现的安全功能。 MFC 不提供安全; 支持您必须实现它自己通过调用 DAO 直接或通过使用 Microsoft Access。 请参阅主题 DAO 帮助中的"权限属性"。
 
 ##  <a name="cdaoquerydef"></a>  CDaoQueryDef::CDaoQueryDef
 
@@ -426,7 +426,6 @@ void GetFieldInfo(
     CDaoFieldInfo& fieldinfo,
     DWORD dwInfoOptions = AFX_DAO_PRIMARY_INFO);
 
-
 void GetFieldInfo(
     LPCTSTR lpszName,
     CDaoFieldInfo& fieldinfo,
@@ -519,7 +518,6 @@ void GetParameterInfo(
     int nIndex,
     CDaoParameterInfo& paraminfo,
     DWORD dwInfoOptions = AFX_DAO_PRIMARY_INFO);
-
 
 void GetParameterInfo(
     LPCTSTR lpszName,
@@ -790,7 +788,6 @@ void SetODBCTimeout(short nODBCTimeout);
 virtual void SetParamValue(
     LPCTSTR lpszName,
     const COleVariant& varValue);
-
 
 virtual void SetParamValue(
     int nIndex,

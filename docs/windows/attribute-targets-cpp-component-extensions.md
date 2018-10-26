@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9dfb469bb9dcea8a2c1e197fa7c305d08d155cf1
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 3ffa13167de3de14e2338942cc9a41acf84b8aae
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49327775"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50058944"
 ---
 # <a name="attribute-targets-ccli-and-ccx"></a>特性目标 (C + + /cli 和 C + + /cli CX)
 
@@ -230,8 +230,8 @@ ms.locfileid: "49327775"
 - 指定特性应用于属性的访问器，而不是属性：
 
     ```cpp
-    [method:MyAttr(123)] property int Property()  
-    [property:MyAttr(123)] property int Property()  
+    [method:MyAttr(123)] property int Property()
+    [property:MyAttr(123)] property int Property()
     [MyAttr(123)] property int get_MyPropy() // default: property
     ```
 

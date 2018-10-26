@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a502cbf61f3542c010a89b82131a95f94856cda
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 26861b11aafd4bfcd4f1d5a7cc618ed27b60e6b8
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46042879"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50071175"
 ---
 # <a name="cregkey-class"></a>CRegKey 类
 
@@ -177,7 +177,7 @@ LONG Close() throw();
 如果不存在的一个子项作为调用此方法来创建指定的键*hKeyParent*。
 
 ```
-LONG Create(  
+LONG Create(
     HKEY hKeyParent,
     LPCTSTR lpszKeyName,
     LPTSTR lpszClass = REG_NONE,
@@ -311,7 +311,7 @@ HKEY Detach() throw();
 调用此方法来枚举打开注册表项的子项。
 
 ```
-LONG EnumKey(  
+LONG EnumKey(
     DWORD iIndex,
     LPTSTR pszName,
     LPDWORD pnNameLength,
@@ -361,7 +361,7 @@ LONG Flush() throw();
 调用此方法以检索保护打开注册表项的安全描述符的副本。
 
 ```
-LONG GetKeySecurity(  
+LONG GetKeySecurity(
     SECURITY_INFORMATION si,
     PSECURITY_DESCRIPTOR psd,
     LPDWORD pnBytes) throw();
@@ -409,7 +409,7 @@ CAtlTransactionManager* m_pTM;
 此方法通知调用方有关更改的属性或打开注册表项的内容。
 
 ```
-LONG NotifyChangeKeyValue(  
+LONG NotifyChangeKeyValue(
     BOOL bWatchSubtree,
     DWORD dwNotifyFilter,
     HANDLE hEvent,
@@ -453,7 +453,7 @@ LONG NotifyChangeKeyValue(
 调用此方法以打开指定的密钥，并设置[m_hKey](#m_hkey)到此密钥的句柄。
 
 ```
-LONG Open(  
+LONG Open(
     HKEY hKeyParent,
     LPCTSTR lpszKeyName,
     REGSAM samDesired = KEY_READ | KEY_WRITE) throw();
@@ -514,7 +514,7 @@ CRegKey& operator= (CRegKey& key) throw();
 调用此方法以检索指定的值名称的二进制数据。
 
 ```
-LONG QueryBinaryValue(  
+LONG QueryBinaryValue(
     LPCTSTR pszValueName,
     void* pValue,
     ULONG* pnBytes) throw();
@@ -547,7 +547,7 @@ LONG QueryBinaryValue(
 调用此方法以检索指定的值名称的 DWORD 数据。
 
 ```
-LONG QueryDWORDValue(  
+LONG QueryDWORDValue(
     LPCTSTR pszValueName,
     DWORD& dwValue) throw();
 ```
@@ -576,7 +576,7 @@ LONG QueryDWORDValue(
 调用此方法以检索指定的值名称的 GUID 数据。
 
 ```
-LONG QueryGUIDValue(  
+LONG QueryGUIDValue(
     LPCTSTR pszValueName,
     GUID& guidValue) throw();
 ```
@@ -605,7 +605,7 @@ LONG QueryGUIDValue(
 调用此方法以检索指定的值名称的多字符串数据。
 
 ```
-LONG QueryMultiStringValue(  
+LONG QueryMultiStringValue(
     LPCTSTR pszValueName,
     LPTSTR pszValue,
     ULONG* pnChars) throw();
@@ -638,7 +638,7 @@ TCHARs 指向的缓冲区的大小*pszValue*。 方法返回时， *pnChars*包�
 调用此方法以检索指定的值名称的 QWORD 数据。
 
 ```
-LONG QueryQWORDValue(  
+LONG QueryQWORDValue(
     LPCTSTR pszValueName,
     ULONGLONG& qwValue) throw();
 ```
@@ -667,7 +667,7 @@ LONG QueryQWORDValue(
 调用此方法以检索指定的值名称的字符串数据。
 
 ```
-LONG QueryStringValue(  
+LONG QueryStringValue(
     LPCTSTR pszValueName,
     LPTSTR pszValue,
     ULONG* pnChars) throw();
@@ -700,7 +700,7 @@ TCHARs 指向的缓冲区的大小*pszValue*。 方法返回时， *pnChars*包�
 调用此方法以检索指定的值字段的数据[m_hKey](#m_hkey)。 此方法的早期版本不再受支持，并被标记为 ATL_DEPRECATED。
 
 ```
-LONG QueryValue(  
+LONG QueryValue(
     LPCTSTR pszValueName,
     DWORD* pdwType,
     void* pData,
@@ -781,7 +781,7 @@ LONG RecurseDeleteKey(LPCTSTR lpszKey) throw();
 调用此方法以设置注册表项的二进制值。
 
 ```
-LONG SetBinaryValue(  
+LONG SetBinaryValue(
     LPCTSTR pszValueName,
     const void* pValue,
     ULONG nBytes) throw();
@@ -859,7 +859,7 @@ LONG SetGUIDValue(LPCTSTR pszValueName, REFGUID guidValue) throw();
 调用此方法以使用指定的项的指定的值字段中存储数据。
 
 ```
-LONG SetKeyValue(  
+LONG SetKeyValue(
     LPCTSTR lpszKeyName,
     LPCTSTR lpszValue,
     LPCTSTR lpszValueName = NULL) throw();
@@ -968,7 +968,7 @@ LONG SetQWORDValue(LPCTSTR pszValueName, ULONGLONG qwValue) throw();
 调用此方法以设置注册表项的字符串值。
 
 ```
-LONG SetStringValue(  
+LONG SetStringValue(
     LPCTSTR pszValueName,
     LPCTSTR pszValue,
     DWORD dwType = REG_SZ) throw();
@@ -998,23 +998,23 @@ LONG SetStringValue(
 调用此方法以将数据存储在指定的值字段中的[m_hKey](#m_hkey)。 此方法的早期版本不再受支持，并被标记为 ATL_DEPRECATED。
 
 ```
-LONG SetValue(  
+LONG SetValue(
     LPCTSTR pszValueName,
     DWORD dwType,
     const void* pValue,
     ULONG nBytes) throw();
 
-static LONG WINAPI SetValue(  
+static LONG WINAPI SetValue(
     HKEY hKeyParent,
     LPCTSTR lpszKeyName,
     LPCTSTR lpszValue,
     LPCTSTR lpszValueName = NULL);
 
-ATL_DEPRECATED LONG SetValue(  
+ATL_DEPRECATED LONG SetValue(
     DWORD dwValue,
     LPCTSTR lpszValueName);
 
-ATL_DEPRECATED LONG SetValue(  
+ATL_DEPRECATED LONG SetValue(
     LPCTSTR lpszValue,
     LPCTSTR lpszValueName = NULL,
     bool bMulti = false,

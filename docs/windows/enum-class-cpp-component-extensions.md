@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7b85807b9e9dd0cec63def8ffc4a9aa69056f270
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 7c63a043b8f1a91654c0b765632969b82725a3c0
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328137"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50066157"
 ---
 # <a name="enum-class--ccli-and-ccx"></a>枚举类 (C + + /cli 和 C + + /cli CX)
 
@@ -175,7 +175,7 @@ void f(int32);
 但是，在当前版本的编译器中，标准枚举将作为属性为 [NativeEnumAttribute] 的托管枚举以及采用 MSIL 形式的以下内容发出，以用于函数签名：
 
 ```cpp
-void f(E)  
+void f(E)
 ```
 
 有关本机枚举的更多信息，请参见 [C++ 枚举声明](../cpp/enumerations-cpp.md)。
@@ -202,7 +202,7 @@ public enum n { c, d };
 // unnamed, standard enum
 public enum { e, f } o;
 
-int main()  
+int main()
 {
    // consume managed enum
    m mym = m::b;
@@ -231,4 +231,4 @@ convert to int: 1
 
 ## <a name="see-also"></a>请参阅
 
-[适用于.NET 和 UWP 组件扩展](../windows/component-extensions-for-runtime-platforms.md)
+[ .NET 和 UWP 的组件扩展](../windows/component-extensions-for-runtime-platforms.md)

@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b5a4551387716c81766ae99759f8188410497be
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: c7b48b2382ee22cc5d11c1145dc494aca4e7997f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42541532"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083186"
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>默认情况下处于关闭状态的编译器警告
 编译器包括默认情况下，关闭的警告，因为大多数开发人员不希望看到它们。 在某些情况下，它们表示一个样式的选择，或在较旧代码中，是常见的惯用语言或语言充分利用 Microsoft 扩展。 在其他情况下，它们指示程序员经常做出错误的假设，这可能会导致意外的或未定义行为的区域。 有些警告可能非常库标头中存在干扰。 C 运行时库以及 c + + 标准库设计用于不发出任何警告仅在警告等级[/w4](../build/reference/compiler-option-warning-level.md)。
@@ -154,12 +154,12 @@ ms.locfileid: "42541532"
 |C5042 （级别 3）|'*函数*： 在块范围内的函数声明不能在标准 c + + 中为指定的内联; 删除内联说明符<sup>15.5</sup>|
 |[C5045](../error-messages/compiler-warnings/c5045.md)|如果指定 /Qspectre 开关，编译器将插入内存负载的 Spectre 缓解<sup>15.7</sup>|
 
-<sup>第 14.1</sup>此警告是从 Visual Studio 2015 Update 1 开始，提供。  
-<sup>14.3</sup>此警告是从 Visual Studio 2015 Update 3 开始，提供。  
-<sup>15.3</sup>此警告是从 Visual Studio 2017 版本 15.3 开始，提供。  
-<sup>15.5</sup>此警告是从 Visual Studio 2017 版本 15.5 开始，提供。  
-<sup>15.7</sup>此警告是从 Visual Studio 2017 版本 15.7 中开始提供。  
-<sup>为永久</sup>此警告处于关闭状态，除非[触发-](../build/reference/permissive-standards-conformance.md)设置编译器选项。  
+<sup>第 14.1</sup>此警告是从 Visual Studio 2015 Update 1 开始，提供。<br/>
+<sup>14.3</sup>此警告是从 Visual Studio 2015 Update 3 开始，提供。<br/>
+<sup>15.3</sup>此警告是从 Visual Studio 2017 版本 15.3 开始，提供。<br/>
+<sup>15.5</sup>此警告是从 Visual Studio 2017 版本 15.5 开始，提供。<br/>
+<sup>15.7</sup>此警告是从 Visual Studio 2017 版本 15.7 中开始提供。<br/>
+<sup>为永久</sup>此警告处于关闭状态，除非[触发-](../build/reference/permissive-standards-conformance.md)设置编译器选项。<br/>
 
 ## <a name="warnings-off-by-default-in-earlier-versions"></a>在早期版本中默认情况下关闭的警告
 

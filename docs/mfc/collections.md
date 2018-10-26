@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b6f2fdeb02fbc5e57bbba58f685d21133841279
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 72bae0d985c81478321109c3c02c07e6b1386028
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46412855"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069901"
 ---
 # <a name="collections"></a>集合
 
@@ -53,15 +53,15 @@ Microsoft 基础类库提供了用来管理对象的组的集合类。 这些类
 
 - 列表
 
-     列表类提供了元素的有序非索引列表，该列表作为双向链接列表实现。 列表具有“头”和“尾”，它在头和尾中添加/移除元素或在中间插入/删除元素非常快。
+   列表类提供了元素的有序非索引列表，该列表作为双向链接列表实现。 列表具有“头”和“尾”，它在头和尾中添加/移除元素或在中间插入/删除元素非常快。
 
 - 数组
 
-     数组类提供了一个以动态方式调整大小、经过排序且编制了整数索引的对象数组。
+   数组类提供了一个以动态方式调整大小、经过排序且编制了整数索引的对象数组。
 
 - 映射（也称为字典）
 
-     映射是将键对象与值对象关联的集合。
+   映射是将键对象与值对象关联的集合。
 
 ##  <a name="_core_the_template_based_collection_classes"></a> 基于模板的集合类
 

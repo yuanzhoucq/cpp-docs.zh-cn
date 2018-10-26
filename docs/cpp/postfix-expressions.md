@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77bcb8257fc6907b48330301cf009fa44f00578d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: d28d909866808fbffb6165e552bf825bf1241771
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46082521"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069810"
 ---
 # <a name="postfix-expressions"></a>后缀表达式
 
@@ -41,7 +41,7 @@ ms.locfileid: "46082521"
 以下语法描述了可能的后缀表达式：
 
 ```
-primary-expression 
+primary-expression 
 postfix-expression[expression]postfix-expression(expression-list)simple-type-name(expression-list)postfix-expression.namepostfix-expression->namepostfix-expression++postfix-expression--cast-keyword < typename > (expression )typeid ( typename )
 ```
 
@@ -83,20 +83,20 @@ simple-type-name ( expression-list )
     Func( 7 );          // Execute function call
     ```
 
-     调用前的概念性初始化为：
+   调用前的概念性初始化为：
 
     ```cpp
     int Temp_i = 7;
     Func( Temp_i );
     ```
 
-     请注意，初始化就像使用等号语法（而不是括号语法）一样执行。 在将值传递到函数之前制作了 `i` 的副本。 (有关详细信息，请参阅[初始值设定项](../cpp/initializers.md)并[转换](../cpp/user-defined-type-conversions-cpp.md))。
+   请注意，初始化就像使用等号语法（而不是括号语法）一样执行。 在将值传递到函数之前制作了 `i` 的副本。 (有关详细信息，请参阅[初始值设定项](../cpp/initializers.md)并[转换](../cpp/user-defined-type-conversions-cpp.md))。
 
-     因此，如果函数原型 （声明） 的类型的自变量调用**长**，如果调用程序提供类型的实际自变量**int**，使用升级自变量标准类型转换为类型**长**(请参阅[标准转换](../cpp/standard-conversions.md))。
+   因此，如果函数原型 （声明） 的类型的自变量调用**长**，如果调用程序提供类型的实际自变量**int**，使用升级自变量标准类型转换为类型**长**(请参阅[标准转换](../cpp/standard-conversions.md))。
 
-     如果提供了一个实际自变量，但它没有到形式自变量类型的标准的或用户定义的转换，则是一个错误。
+   如果提供了一个实际自变量，但它没有到形式自变量类型的标准的或用户定义的转换，则是一个错误。
 
-     对于类类型的实际自变量，将通过调用类的构造函数初始化形式自变量。 (请参阅[构造函数](../cpp/constructors-cpp.md)有关这些特殊类成员函数的详细信息。)
+   对于类类型的实际自变量，将通过调用类的构造函数初始化形式自变量。 (请参阅[构造函数](../cpp/constructors-cpp.md)有关这些特殊类成员函数的详细信息。)
 
 - 执行函数调用。
 
@@ -194,7 +194,7 @@ void print( const char *string, const char *terminator )
 }
 ```
 
-上面的程序声明一个采用两个参数的函数 `print`。 但是，第二个参数，*终止符*，具有默认值， `"\n"`。 在中`main`，前两个调用`print`允许默认第二个自变量提供新行以终止打印的字符串。 第三个调用为第二个自变量指定显式值。 该程序的输出为
+上面的程序声明一个采用两个自变量的函数 `print`。 但是，第二个参数，*终止符*，具有默认值， `"\n"`。 在中`main`，前两个调用`print`允许默认第二个自变量提供新行以终止打印的字符串。 第三个调用为第二个自变量指定显式值。 该程序的输出为
 
 ```Output
 hello,

@@ -37,12 +37,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5cb576ba6ce532bce15b9dda2aa598649044c2d8
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 994095042dc473fda315b6d842d9ec9355ff3671
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46378003"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055393"
 ---
 # <a name="tn062-message-reflection-for-windows-controls"></a>TN062：Windows 控件的消息反射
 
@@ -126,7 +126,7 @@ ON_NOTIFY_REFLECT 和 ON_CONTROL_REFLECT 宏所具有的变体，它允许多个
 
 1. 在现有应用程序中创建一个新对话框。 有关详细信息，请参阅[对话框编辑器](../windows/dialog-editor.md)主题。
 
-     必须具有用来开发可重用控件的应用程序。 如果没有现有的应用程序使用，创建一个基于对话框的应用程序，使用应用程序向导。
+   必须具有用来开发可重用控件的应用程序。 如果没有现有的应用程序使用，创建一个基于对话框的应用程序，使用应用程序向导。
 
 2. 加载到 Visual c + + 项目中，通过使用类向导创建一个名为的新类`CYellowEdit`基于`CEdit`。
 
@@ -145,7 +145,7 @@ ON_NOTIFY_REFLECT 和 ON_CONTROL_REFLECT 宏所具有的变体，它允许多个
 
 5. 使用类向导，将添加到反射 WM_CTLCOLOR 消息的处理程序在`CYellowEdit`类。 请注意，可以处理的消息的列表中的消息名称的前面在等号指示反映该消息。 这中所述[为反射消息定义消息处理程序](../mfc/reference/defining-a-message-handler-for-a-reflected-message.md)。
 
-     类向导为您添加下面的消息映射宏和主干函数：
+   类向导为您添加下面的消息映射宏和主干函数：
 
     ```cpp
     ON_WM_CTLCOLOR_REFLECT()
