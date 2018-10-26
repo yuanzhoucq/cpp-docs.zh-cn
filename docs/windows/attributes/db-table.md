@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 03d6512933d114cf1c3b06fa3fdc9eaa03c70934
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 07910693b3236e3a90d7ad420392552d90abd747
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790499"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052143"
 ---
 # <a name="dbtable"></a>db_table
 
@@ -43,7 +43,7 @@ ms.locfileid: "48790499"
 （可选）句柄用于处理表的名称。 如果你想要返回多个行的结果，必须指定此参数。 **db_table**生成具有指定的变量*名称*可用来遍历行集或执行多个操作查询。
 
 *source_name*<br/>
-（可选）`CSession`变量或具有的类的实例`db_source`特性应用于它执行命令。 请参阅[db_source](db-source.md)。
+（可选）`CSession`变量或具有的类的实例`db_source`特性应用于它执行命令。 请参阅 [db_source](db-source.md)。
 
 *hresult*<br/>
 （可选）标识将接收此数据库命令的 HRESULT 的变量。 如果该变量不存在，属性将自动插入。
@@ -84,8 +84,8 @@ class CProducts {
 |**必需的特性**|无|
 |**无效的特性**|无|
 
-有关特性上下文的详细信息，请参阅[特性上下文](cpp-attributes-com-net.md#contexts)。
+有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
 ## <a name="see-also"></a>请参阅
 
-[OLE DB 使用者特性](ole-db-consumer-attributes.md)  
+[OLE DB 使用者特性](ole-db-consumer-attributes.md)

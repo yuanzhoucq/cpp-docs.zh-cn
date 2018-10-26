@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f96fe03288495eb109795e31c6dfd2bd3928d47c
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f3d0b817fc080ff81e11e1789387f50cb3e871e5
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46036133"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076004"
 ---
 # <a name="cdacl-class"></a>CDacl 类
 
@@ -93,12 +93,12 @@ class CDacl : public CAcl
 将允许的 ACE （访问控制项） 添加到`CDacl`对象。
 
 ```
-bool AddAllowedAce(  
+bool AddAllowedAce(
     const CSid& rSid,
     ACCESS_MASK AccessMask,
     BYTE AceFlags = 0) throw(...);
 
-bool AddAllowedAce(  
+bool AddAllowedAce(
     const CSid& rSid,
     ACCESS_MASK AccessMask,
     BYTE AceFlags,
@@ -138,7 +138,7 @@ bool AddAllowedAce(
 将拒绝的 ACE （访问控制项） 添加到`CDacl`对象。
 
 ```
-bool AddDeniedAce(  
+bool AddDeniedAce(
     const CSid& rSid,
     ACCESS_MASK AccessMask,
     BYTE AceFlags = 0) throw(...);

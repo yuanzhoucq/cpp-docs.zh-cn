@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 342716f3197713a584e2f0a1d20e4de75ece474b
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 800dd3b626a03ec3b04910f6c4c1bbea3e1ab17d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48234303"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053516"
 ---
 # <a name="walkthrough-creating-a-standard-c-program-c"></a>演练： 创建标准 c + + 程序 （c + +）
 
@@ -45,10 +45,10 @@ Visual c + + 遵循 2003 c + + 标准，与以下几点主要例外： 两阶段
 
 1. 通过指向创建项目**新建**上**文件**菜单中，然后单击**项目**。
 
-1. 在中**Visual c + +** 项目类型窗格中，单击**Windows Desktop**，然后单击**Windows 控制台应用程序**。 
+1. 在中**Visual c + +** 项目类型窗格中，单击**Windows Desktop**，然后单击**Windows 控制台应用程序**。
 
    > [!NOTE]
-   > 对于版本的 Visual Studio 2017，在**新的项目**对话框框中，展开**已安装** > **模板** >  **Visual c + +**，然后选择**Win32**。 在中间窗格中，选择 **“Win32 控制台应用程序”**。 
+   > 对于版本的 Visual Studio 2017，在**新的项目**对话框框中，展开**已安装** > **模板** >  **Visual c + +**，然后选择**Win32**。 在中间窗格中，选择 **“Win32 控制台应用程序”**。
 
    键入项目的名称。
 

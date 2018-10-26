@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5c489d1b17df579ecec6c118826a8f770f5664eb
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 256ceee14f38885259da11453efef8451d34248c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44316349"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068003"
 ---
 # <a name="opening-a-resource-for-binary-editing-c"></a>打开资源进行二进制编辑 （c + +）
 
@@ -53,7 +53,7 @@ ms.locfileid: "44316349"
    > [!NOTE]
    > 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发人员指南*。 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[桌面应用中创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的托管应用中的资源的信息，请参阅[Globalizing and Localizing.NET Framework Applications](/dotnet/standard/globalization-localization/index)。
 
-![二进制编辑器](../mfc/media/vcbinaryeditor2.gif "vcBinaryEditor2")  
+![二进制编辑器](../mfc/media/vcbinaryeditor2.gif "vcBinaryEditor2")<br/>
 二进制编辑器中显示的对话框的二进制数据
 
 只有特定 ASCII 值才会二进制编辑器中进行表示（0x20 到 0x7E）。 扩展字符在二进制编辑器的 ASCII 值部分（右面板）中显示为句点。 “可打印”字符是 ASCII 值 32 到 126。

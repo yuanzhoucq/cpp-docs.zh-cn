@@ -21,54 +21,54 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a838bc904a4f09f72962ce7c991bab8e5ac8fcbf
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f14ad79e1cbd2207b4eb1582cb80e0107d68ec39
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46074833"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50064233"
 ---
 # <a name="cnorowset-class"></a>CNoRowset 类
 
-可以用作模板自变量 (`TRowset`) 用于[CCommand](../../data/oledb/ccommand-class.md)或[CTable](../../data/oledb/ctable-class.md)。  
-  
+可以用作模板自变量 (`TRowset`) 用于[CCommand](../../data/oledb/ccommand-class.md)或[CTable](../../data/oledb/ctable-class.md)。
+
 ## <a name="syntax"></a>语法
 
 ```cpp
-template <class TAccessor = CAccessorBase>  
-class CNoRowset  
-```  
-  
-### <a name="parameters"></a>参数  
+template <class TAccessor = CAccessorBase>
+class CNoRowset
+```
+
+### <a name="parameters"></a>参数
 
 *TAccessor*<br/>
-一个访问器类。 默认值为 `CAccessorBase`。  
-  
-## <a name="remarks"></a>备注  
+一个访问器类。 默认值为 `CAccessorBase`。
 
-如果命令不返回行集，请将 `CNoRowset` 用作模板参数。  
-  
-`CNoRowset` 将实现以下存根方法，其中每个方法都对应于其他访问器类方法：  
-  
-- `BindFinished` -指示绑定操作何时完成 (返回`S_OK`)。  
-  
-- `Close` -释放行和当前 IRowset 接口。  
-  
-- `GetIID` - 检索连接点的接口 ID。  
-  
-- `GetInterface` -检索接口。  
-  
-- `GetInterfacePtr` - 检索封装的接口指针。  
-  
-- `SetAccessor` -将指针设置为访问器。  
-  
-- `SetupOptionalRowsetInterfaces` -设置设置为行集的可选接口。  
-  
-## <a name="requirements"></a>要求  
+## <a name="remarks"></a>备注
 
-**标头:** atldbcli.h  
-  
-## <a name="see-also"></a>请参阅  
+如果命令不返回行集，请将 `CNoRowset` 用作模板自变量。
+
+`CNoRowset` 将实现以下存根方法，其中每个方法都对应于其他访问器类方法：
+
+- `BindFinished` -指示绑定操作何时完成 (返回`S_OK`)。
+
+- `Close` -释放行和当前 IRowset 接口。
+
+- `GetIID` - 检索连接点的接口 ID。
+
+- `GetInterface` -检索接口。
+
+- `GetInterfacePtr` - 检索封装的接口指针。
+
+- `SetAccessor` -将指针设置为访问器。
+
+- `SetupOptionalRowsetInterfaces` -设置设置为行集的可选接口。
+
+## <a name="requirements"></a>要求
+
+**标头:** atldbcli.h
+
+## <a name="see-also"></a>请参阅
 
 [OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [OLE DB 使用者模板参考](../../data/oledb/ole-db-consumer-templates-reference.md)

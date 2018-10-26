@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ffee10ea334c6c425aa5ecd81705ef1915dc80c0
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: e48d71ace613eac040f83023f70f2a1f28d09f6e
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790355"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082284"
 ---
 # <a name="rdx"></a>rdx
 
@@ -62,7 +62,7 @@ ms.locfileid: "48790355"
 |**必需的特性**|无|
 |**无效的特性**|无|
 
-有关特性上下文的详细信息，请参阅[特性上下文](cpp-attributes-com-net.md#contexts)。
+有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
 ## <a name="example"></a>示例
 
@@ -90,4 +90,4 @@ public:
 ## <a name="see-also"></a>请参阅
 
 [COM 特性](com-attributes.md)<br/>
-[registration_script](registration-script.md)  
+[registration_script](registration-script.md)

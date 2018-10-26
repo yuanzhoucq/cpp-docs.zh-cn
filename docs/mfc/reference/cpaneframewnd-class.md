@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 34ac2ddb08b485a56274f6067871c5bbd5893f94
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: fb6e87d9deac7a6d0082480196b7dbeecf5a85b8
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46434812"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50081074"
 ---
 # <a name="cpaneframewnd-class"></a>CPaneFrameWnd 类
 
@@ -211,7 +211,7 @@ class CPaneFrameWnd : public CWnd
 |[CPaneFrameWnd::OnShowPane](#onshowpane)|隐藏或显示微型框架窗口的窗格时，由框架进行调用。|
 |[CPaneFrameWnd::PaneFromPoint](#panefrompoint)|如果窗格在微型框架窗口内包含用户提供的点，则返回窗格。|
 |[CPaneFrameWnd::Pin](#pin)||
-|`CPaneFrameWnd::PreTranslateMessage`|类使用[CWinApp](../../mfc/reference/cwinapp-class.md)窗口消息调度到之前转换[TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)并[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows 函数。|
+|`CPaneFrameWnd::PreTranslateMessage`|在将窗口消息发送到 [TranslateMessage](../../mfc/reference/cwinapp-class.md) 和 [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) Windows 函数之前，由 [CWinApp](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) 类用于对此消息进行转换。|
 |[CPaneFrameWnd::RedrawAll](#redrawall)|重绘所有微型框架窗口。|
 |[CPaneFrameWnd::RemoveNonValidPanes](#removenonvalidpanes)|由框架调用以删除非有效窗格。|
 |[CPaneFrameWnd::RemovePane](#removepane)|从微型框架窗口删除窗格。|
@@ -312,7 +312,6 @@ virtual void AdjustLayout();
 
 ##  <a name="adjustpaneframes"></a>  CPaneFrameWnd::AdjustPaneFrames
 
-
 ```
 virtual void AdjustPaneFrames();
 ```
@@ -401,7 +400,6 @@ virtual BOOL CanBeDockedToPane(const CDockablePane* pDockingBar) const;
 
 ##  <a name="checkgrippervisibility"></a>  CPaneFrameWnd::CheckGripperVisibility
 
-
 ```
 virtual void CheckGripperVisibility();
 ```
@@ -440,9 +438,11 @@ virtual BOOL Create(
 *rect*<br/>
 [in]指定的初始大小和袖珍框架窗口的位置。
 
-[in][out]*pParentWnd*指定袖珍框架窗口的父框架。 此值不能为 NULL。
+*pParentWnd*<br/>
+[in、 out]指定与父框架的微型框窗口。 此值不能为 NULL。
 
-[in][out]*pContext*指定用户定义的上下文。
+*pContext*<br/>
+[in、 out]指定用户定义的上下文。
 
 ### <a name="return-value"></a>返回值
 
@@ -480,9 +480,11 @@ virtual BOOL CreateEx(
 *rect*<br/>
 [in]指定的初始大小和袖珍框架窗口的位置。
 
-[in][out]*pParentWnd*指定袖珍框架窗口的父框架。 此值不能为 NULL。
+*pParentWnd*<br/>
+[in、 out]指定与父框架的微型框窗口。 此值不能为 NULL。
 
-[in][out]*pContext*指定用户定义的上下文。
+*pContext*<br/>
+[in、 out]指定用户定义的上下文。
 
 ### <a name="return-value"></a>返回值
 
@@ -607,7 +609,6 @@ virtual CString GetCaptionText();
 
 ##  <a name="getdockingmanager"></a>  CPaneFrameWnd::GetDockingManager
 
-
 ```
 CDockingManager* GetDockingManager() const;
 ```
@@ -648,7 +649,6 @@ virtual CWnd* GetFirstVisiblePane() const;
 
 ##  <a name="gethotpoint"></a>  CPaneFrameWnd::GetHotPoint
 
-
 ```
 CPoint GetHotPoint() const;
 ```
@@ -687,7 +687,6 @@ virtual int GetPaneCount() const;
 
 ##  <a name="getparent"></a>  CPaneFrameWnd::GetParent
 
-
 ```
 CWnd* GetParent();
 ```
@@ -698,7 +697,6 @@ CWnd* GetParent();
 
 ##  <a name="getpinstate"></a>  CPaneFrameWnd::GetPinState
 
-
 ```
 BOOL GetPinState() const;
 ```
@@ -708,7 +706,6 @@ BOOL GetPinState() const;
 ### <a name="remarks"></a>备注
 
 ##  <a name="getrecentfloatingrect"></a>  CPaneFrameWnd::GetRecentFloatingRect
-
 
 ```
 CRect GetRecentFloatingRect() const;
@@ -770,7 +767,6 @@ virtual LRESULT HitTest(
 
 ##  <a name="iscaptured"></a>  CPaneFrameWnd::IsCaptured
 
-
 ```
 BOOL IsCaptured() const;
 ```
@@ -780,7 +776,6 @@ BOOL IsCaptured() const;
 ### <a name="remarks"></a>备注
 
 ##  <a name="isdelayshow"></a>  CPaneFrameWnd::IsDelayShow
-
 
 ```
 BOOL IsDelayShow() const;
@@ -991,14 +986,13 @@ virtual void OnShowPane(
 
 ##  <a name="pin"></a>  CPaneFrameWnd::Pin
 
-
 ```
 void Pin(BOOL bPin = TRUE);
 ```
 
 ### <a name="parameters"></a>参数
 
-[in]*bPin*
+[in]*bPin*<br/>
 
 ### <a name="remarks"></a>备注
 
@@ -1141,19 +1135,17 @@ virtual void SetCaptionButtons(DWORD dwButtons);
 
 ##  <a name="setdelayshow"></a>  CPaneFrameWnd::SetDelayShow
 
-
 ```
 void SetDelayShow(BOOL bDelayShow);
 ```
 
 ### <a name="parameters"></a>参数
 
-[in]*bDelayShow*
+[in]*bDelayShow*<br/>
 
 ### <a name="remarks"></a>备注
 
 ##  <a name="setdockingmanager"></a>  CPaneFrameWnd::SetDockingManager
-
 
 ```
 void SetDockingManager(CDockingManager* pManager);
@@ -1161,7 +1153,7 @@ void SetDockingManager(CDockingManager* pManager);
 
 ### <a name="parameters"></a>参数
 
-[in]*pManager*
+[in]*pManager*<br/>
 
 ### <a name="remarks"></a>备注
 
@@ -1193,14 +1185,13 @@ virtual void SetDockState(CDockingManager* pDockManager);
 
 ##  <a name="sethotpoint"></a>  CPaneFrameWnd::SetHotPoint
 
-
 ```
 void SetHotPoint(CPoint& ptNew);
 ```
 
 ### <a name="parameters"></a>参数
 
-[in]*ptNew*
+[in]*ptNew*<br/>
 
 ### <a name="remarks"></a>备注
 
@@ -1267,19 +1258,17 @@ BOOL StartTearOff(CMFCPopu* pMenu);
 
 ##  <a name="storerecentdocksiteinfo"></a>  CPaneFrameWnd::StoreRecentDockSiteInfo
 
-
 ```
 virtual void StoreRecentDockSiteInfo(CPane* pBar);
 ```
 
 ### <a name="parameters"></a>参数
 
-[in]*pBar*
+[in]*pBar*<br/>
 
 ### <a name="remarks"></a>备注
 
 ##  <a name="storerecenttabrelatedinfo"></a>  CPaneFrameWnd::StoreRecentTabRelatedInfo
-
 
 ```
 virtual void StoreRecentTabRelatedInfo(
@@ -1289,8 +1278,8 @@ virtual void StoreRecentTabRelatedInfo(
 
 ### <a name="parameters"></a>参数
 
-*pDockingBar*<br/>
-[in][in]*pTabbedBar*
+[in]*pDockingBar*<br/>
+[in]*pTabbedBar*<br/>
 
 ### <a name="remarks"></a>备注
 

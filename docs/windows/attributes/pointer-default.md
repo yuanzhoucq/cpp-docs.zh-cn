@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6e8ddf566082bfded1f20a2bfe04e7cef0b5dc14
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 994a4a48c5199c3efb05a00331656b3b23a2a0c0
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790326"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067037"
 ---
 # <a name="pointerdefault"></a>pointer_default
 
@@ -58,9 +58,9 @@ ms.locfileid: "48790326"
 |**必需的特性**|无|
 |**无效的特性**|无|
 
-有关特性上下文的详细信息，请参阅[特性上下文](cpp-attributes-com-net.md#contexts)。
+有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
 ## <a name="see-also"></a>请参阅
 
 [IDL 特性](idl-attributes.md)<br/>
-[接口特性](interface-attributes.md)  
+[接口特性](interface-attributes.md)

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: edc9d5aa1d7c49de34ee3dbb02d2a55542962a50
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 78d108dfda75147e4147e94544ddddcdfa04481d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790498"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062855"
 ---
 # <a name="registrationscript"></a>registration_script
 
@@ -43,7 +43,7 @@ ms.locfileid: "48790498"
 
 **Registration_script** c + + 属性执行指定的自定义注册脚本*脚本*。 如果未指定此属性，使用标准.rgs 文件 （包含注册该组件的信息）。 .Rgs 文件的详细信息，请参阅[ATL 注册表组件 （注册器）](../../atl/atl-registry-component-registrar.md)。
 
-此属性要求[组件类](coclass.md)， [progid](progid.md)，或[vi_progid](vi-progid.md)属性 （或隐含其中一种的另一个属性） 也应用于同一个元素。
+此属性要求 [coclass](coclass.md)、 [progid](progid.md)或 [vi_progid](vi-progid.md) 属性（或隐含这些属性之一的其他属性）也应用于同一个元素。
 
 ## <a name="example"></a>示例
 
@@ -79,10 +79,10 @@ class CMyClass:public IFace {};
 |**必需的特性**|一个或多个以下： `coclass`， `progid`，或`vi_progid`。|
 |**无效的特性**|无|
 
-有关特性上下文的详细信息，请参阅[特性上下文](cpp-attributes-com-net.md#contexts)。
+有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
 ## <a name="see-also"></a>请参阅
 
 [COM 特性](com-attributes.md)<br/>
 [类特性](class-attributes.md)<br/>
-[rdx](rdx.md)  
+[rdx](rdx.md)

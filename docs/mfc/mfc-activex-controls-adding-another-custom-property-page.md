@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce81436781a92c8d2c9156e1d1c02513c3816dc4
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1599500a775bcd1c76f2e63a1f7b20126a2fb329
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46440051"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078201"
 ---
 # <a name="mfc-activex-controls-adding-another-custom-property-page"></a>MFC ActiveX 控件：添加另一自定义属性页
 
@@ -65,7 +65,7 @@ ms.locfileid: "46440051"
 
 1. 从快捷菜单中，单击**外**，然后单击**添加类**。
 
-     这将打开[添加类](../ide/add-class-dialog-box.md)对话框。
+   这将打开[添加类](../ide/add-class-dialog-box.md)对话框。
 
 1. 双击**MFC 类**模板。
 
@@ -95,25 +95,25 @@ ms.locfileid: "46440051"
 
 1. 双击**字符串表**文件夹，然后再双击现有字符串表你想要添加字符串资源。
 
-     这将在窗口中打开字符串表。
+   这将在窗口中打开字符串表。
 
 1. 选择在字符串表末尾的空白行并键入文本或标题的字符串： 例如，"其他属性页。"
 
-     这将打开**字符串属性**页显示**标题**并**ID**框。 **标题**框包含您键入的字符串。
+   这将打开**字符串属性**页显示**标题**并**ID**框。 **标题**框包含您键入的字符串。
 
 1. 在中**ID**框中，选择或输入的字符串 ID。 完成后，请按 Enter。
 
-     此示例使用**IDS_SAMPLE_ADDPAGE**为新的属性页的类型名称。
+   此示例使用**IDS_SAMPLE_ADDPAGE**为新的属性页的类型名称。
 
 1. 重复步骤 3 和 4 使用**IDS_SAMPLE_ADDPPG_CAPTION** ID 和"其他属性页"的标题。
 
 1. 在。新的属性页类的 CPP 文件 (在此示例中， `CAddtlPropPage`) 修改`CAddtlPropPage::CAddtlPropPageFactory::UpdateRegistry`，以便通过传递 IDS_SAMPLE_ADDPAGE [AfxOleRegisterPropertyPageClass](../mfc/reference/registering-ole-controls.md#afxoleregisterpropertypageclass)，如下面的示例：
 
-     [!code-cpp[NVC_MFC_AxUI#33](../mfc/codesnippet/cpp/mfc-activex-controls-adding-another-custom-property-page_2.cpp)]
+   [!code-cpp[NVC_MFC_AxUI#33](../mfc/codesnippet/cpp/mfc-activex-controls-adding-another-custom-property-page_2.cpp)]
 
 1. 修改的构造函数`CAddtlPropPage`以便 IDS_SAMPLE_ADDPPG_CAPTION 传递到`COlePropertyPage`构造函数中的，按如下所示：
 
-     [!code-cpp[NVC_MFC_AxUI#34](../mfc/codesnippet/cpp/mfc-activex-controls-adding-another-custom-property-page_3.cpp)]
+   [!code-cpp[NVC_MFC_AxUI#34](../mfc/codesnippet/cpp/mfc-activex-controls-adding-another-custom-property-page_3.cpp)]
 
 之后进行必要的修改后重新生成项目并使用测试容器测试新的属性页。 请参阅 [使用测试容器测试属性和事件](../mfc/testing-properties-and-events-with-test-container.md) 了解有关如何访问测试容器的信息。
 

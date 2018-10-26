@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d5e735a78f35ac799678b077b7933c6134d568e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4833c10772afd7cfd167171821e13a000a611f15
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46386180"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083030"
 ---
 # <a name="mfc-macros-and-globals"></a>MFC 宏和全局函数
 
@@ -75,7 +75,6 @@ MFC 宏和全局函数提供了以下类别中的功能。
 - [工具栏控件样式](toolbar-control-styles.md)
 
 - [CMFCImagePaintArea::IMAGE_EDIT_MODE 枚举](cmfcimagepaintarea-image-edit-mode-enumeration.md)
-
 
 ## <a name="database"></a>数据库
 
@@ -139,6 +138,4 @@ MFC 宏和全局函数提供了以下类别中的功能。
 ## <a name="see-also"></a>请参阅
 
 [类概述](../../mfc/class-library-overview.md)
-
-
 

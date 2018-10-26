@@ -65,12 +65,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b6ccad2c7c6c925a2c5ef6a7270a95d8a270f0d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 935a92beb49d26240aa63f5cfbd4adc9f22d06e8
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46398984"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078006"
 ---
 # <a name="afxglobaldata-structure"></a>AFX_GLOBAL_DATA 结构
 
@@ -113,13 +113,13 @@ struct AFX_GLOBAL_DATA
 |[AFX_GLOBAL_DATA::IsD2DInitialized](#isd2dinitialized)|初始化 `D2D``DirectWrite` 和 `WIC` 工厂。 在初始化主窗口之前调用此方法。|
 |[AFX_GLOBAL_DATA::Is32BitIcons](#is32biticons)|指示是否支持预定义的 32 位图标。|
 |[AFX_GLOBAL_DATA::IsD2DInitialized](#isd2dinitialized)|确定是否已初始化 `D2D` 。|
-|[AFX_GLOBAL_DATA::IsDwmCompositionEnabled](#isdwmcompositionenabled)|提供了一种简单的方法来调用 Windows [DwmIsCompositionEnabled](/windows/desktop/api/dwmapi/nf-dwmapi-dwmiscompositionenabled)方法。|
+|[AFX_GLOBAL_DATA::IsDwmCompositionEnabled](#isdwmcompositionenabled)|提供了一种简单的方法来调用 Windows [DwmIsCompositionEnabled](/windows/desktop/api/dwmapi/nf-dwmapi-dwmiscompositionenabled) 方法。|
 |[AFX_GLOBAL_DATA::IsHighContrastMode](#ishighcontrastmode)|指示当前是否以高对比度显示图像。|
 |[AFX_GLOBAL_DATA::OnSettingChange](#onsettingchange)|检测桌面菜单动画和任务栏自动隐藏功能的当前状态。|
 |[AFX_GLOBAL_DATA::RegisterWindowClass](#registerwindowclass)|注册指定的 MFC 窗口类。|
 |[AFX_GLOBAL_DATA::ReleaseTaskBarRefs](#releasetaskbarrefs)|释放通过 GetITaskbarList 和 GetITaskbarList3 方法获取的接口。|
-|[AFX_GLOBAL_DATA::Resume](#resume)|重新初始化访问支持 Windows 的方法的内部函数指针[主题和视觉样式](/windows/desktop/Controls/visual-styles-overview)。|
-|[AFX_GLOBAL_DATA::SetLayeredAttrib](#setlayeredattrib)|提供了一种简单的方法来调用 Windows [SetLayeredWindowAttributes](/windows/desktop/api/winuser/nf-winuser-setlayeredwindowattributes)方法。|
+|[AFX_GLOBAL_DATA::Resume](#resume)|重新初始化访问支持 Windows [主题和视觉样式](/windows/desktop/Controls/visual-styles-overview)的方法的内部函数指针。|
+|[AFX_GLOBAL_DATA::SetLayeredAttrib](#setlayeredattrib)|提供了一种简单的方法来调用 Windows [SetLayeredWindowAttributes](/windows/desktop/api/winuser/nf-winuser-setlayeredwindowattributes) 方法。|
 |[AFX_GLOBAL_DATA::SetMenuFont](#setmenufont)|创建指定的逻辑字体。|
 |[AFX_GLOBAL_DATA::ShellCreateItemFromParsingName](#shellcreateitemfromparsingname)|创建并初始化分析名称中的 Shell 项对象。|
 |[AFX_GLOBAL_DATA::UpdateFonts](#updatefonts)|重新初始化框架使用的逻辑字体。|
@@ -169,11 +169,9 @@ struct AFX_GLOBAL_DATA
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>
 [结构、样式、回调和消息映射](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)
 
-
 ## <a name="bisosalphablendingsupport"></a> AFX_GLOBAL_DATA::bIsOSAlphaBlendingSupport
 
 指示操作系统是否支持 alpha 值混合处理。
-
 
 ```
 BOOL  bIsOSAlphaBlendingSupport;
@@ -183,19 +181,17 @@ BOOL  bIsOSAlphaBlendingSupport;
 
 TRUE 指示支持 alpha 值混合处理;否则为 FALSE。
 
-
 ## <a name="cleanup"></a> AFX_GLOBAL_DATA::CleanUp
 
 释放由框架（如画笔、字体和 DLL）分配的资源。
 
-
 ```
 void CleanUp();
 ```
+
 ## <a name="d2d1makerotatematrix"></a> AFX_GLOBAL_DATA::D2D1MakeRotateMatrix
 
 创建以指定点为中心旋转指定角度的旋转转换。
-
 
 ```
 HRESULT D2D1MakeRotateMatrix(
@@ -223,7 +219,6 @@ HRESULT D2D1MakeRotateMatrix(
 
 在指定区域中绘制控件的父级的背景。
 
-
 ```
 BOOL DrawParentBackground(
     CWnd* pWnd,
@@ -250,7 +245,6 @@ BOOL DrawParentBackground(
 
 使用指定主题的视觉样式绘制指定的文本。
 
-
 ```
 BOOL DrawTextOnGlass(
     HTHEME hTheme,
@@ -275,10 +269,10 @@ BOOL DrawTextOnGlass(
 [in]指向设备上下文指针。
 
 *iPartId*<br/>
-[in]具有所需的文本外观的控件部件。 有关详细信息，请参阅中的表的部分列[部件和状态](https://msdn.microsoft.com/library/windows/desktop/bb773210)。 如果此值为 0，则会使用默认字体或在设备上下文中选择的字体绘制文本。
+[in]具有所需的文本外观的控件部件。 有关详细信息，请参阅 [部件和状态](https://msdn.microsoft.com/library/windows/desktop/bb773210)中表格的“部件”列。 如果此值为 0，则会使用默认字体或在设备上下文中选择的字体绘制文本。
 
 *iStateId*<br/>
-[in]具有所需的文本外观的控件状态。 有关详细信息，请参阅中的表的状态列[部件和状态](https://msdn.microsoft.com/library/windows/desktop/bb773210)。
+[in]具有所需的文本外观的控件状态。 有关详细信息，请参阅 [部件和状态](https://msdn.microsoft.com/library/windows/desktop/bb773210)中表格的“状态”列。
 
 *strText*<br/>
 [in]要绘制的文本。
@@ -319,7 +313,6 @@ BOOL DrawTextOnGlass(
 
 启用或禁用 Microsoft Active Accessibility 支持。
 
-
 ```
 void EnableAccessibilitySupport(BOOL bEnable=TRUE);
 ```
@@ -335,7 +328,6 @@ Active Accessibility 是基于 COM 的技术，其使用辅助技术产品改进
 
 使用[AFX_GLOBAL_DATA::IsAccessibilitySupport](#isaccessibilitysupport)方法，以确定是否启用 Microsoft Active Accessibility 支持。
 
-
 ### <a name="see-also"></a>请参阅
 
 [UI 自动化和 Microsoft Active Accessibility](/dotnet/framework/ui-automation/ui-automation-and-microsoft-active-accessibility)<br/>
@@ -344,7 +336,6 @@ Active Accessibility 是基于 COM 的技术，其使用辅助技术产品改进
 ## <a name="excludetag"></a> AFX_GLOBAL_DATA::ExcludeTag
 
 从指定的缓冲区中删除指定的 XML 标记对。
-
 
 ```
 BOOL ExcludeTag(
@@ -392,7 +383,6 @@ XML 标记对包含名为打开和关闭来表示的开始和结束指定的缓�
 
 检索指定用户界面元素的当前颜色。
 
-
 ```
 COLORREF GetColor(int nColor);
 ```
@@ -420,7 +410,6 @@ COLORREF GetColor(int nColor);
 
 返回指向存储在全局数据中的 ID2D1Factory 接口的指针。 如果接口未初始化，则创建具有默认参数的接口。
 
-
 ```
 ID2D1Factory* GetDirect2dFactory();
 ```
@@ -432,7 +421,6 @@ ID2D1Factory* GetDirect2dFactory();
 ## <a name="gethandcursor"></a>  AFX_GLOBAL_DATA::GetHandCursor
 
 检索预定义的游标，类似于手，其标识符为 IDC_HAND。
-
 
 ```
 HCURSOR GetHandCursor();
@@ -446,20 +434,18 @@ HCURSOR GetHandCursor();
 
 检索与非最小化窗口的非工作区相关联的度量值。
 
-
 ```
 BOOL GetNonClientMetrics(NONCLIENTMETRICS& info);
 ```
 
 ### <a name="parameters"></a>参数
 
-*信息*<br/>
+info<br/>
 [in、 out]一个[NONCLIENTMETRICS](https://msdn.microsoft.com/library/windows/desktop/ff729175)结构，其中包含与非最小化窗口的非工作区相关联的可缩放度量值。
 
 ### <a name="return-value"></a>返回值
 
 如果此方法成功，则为 TRUE否则为 FALSE。
-
 
 ### <a name="see-also"></a>请参阅
 
@@ -468,7 +454,6 @@ BOOL GetNonClientMetrics(NONCLIENTMETRICS& info);
 ## <a name="gettextheight"></a> AFX_GLOBAL_DATA::GetTextHeight
 
 检索当前字体中的文本字符高度。
-
 
 ```
 int GetTextHeight(BOOL bHorz = TRUE);
@@ -487,7 +472,6 @@ int GetTextHeight(BOOL bHorz = TRUE);
 
 返回指向存储在全局数据中的 IWICImagingFactory 接口的指针。 如果接口未初始化，则创建具有默认参数的接口。
 
-
 ```
 IWICImagingFactory* GetWICFactory();
 ```
@@ -500,7 +484,6 @@ IWICImagingFactory 接口时的默认工厂的创建成功，或者如果创建�
 
 返回指向存储在全局数据中的 IDWriteFactory 接口的指针。 如果接口未初始化，则创建具有默认参数的接口。
 
-
 ```
 IDWriteFactory* GetWriteFactory();
 ```
@@ -512,7 +495,6 @@ IDWriteFactory* GetWriteFactory();
 ## <a name="initd2d"></a> AFX_GLOBAL_DATA::InitD2D
 
 初始化 D2D、 相同，DirectWrite 和 WIC 工厂。 在初始化主窗口之前调用此方法。
-
 
 ```
 BOOL InitD2D(
@@ -536,10 +518,8 @@ BOOL InitD2D(
 
 指示是否支持预定义的 32 位图标。
 
-
 ```
 BOOL Is32BitIcons() const;
-
 
 ```
 
@@ -555,7 +535,6 @@ BOOL Is32BitIcons() const;
 
 指示是否启用了 Microsoft Active Accessibility 支持。
 
-
 ```
 BOOL IsAccessibilitySupport() const;
 ```
@@ -570,7 +549,6 @@ Microsoft Active Accessibility 是使应用程序可访问的早期解决方案�
 
 使用[AFX_GLOBAL_DATA::EnableAccessibilitySupport](#enableaccessibilitysupport)方法启用或禁用 Active Accessibility 支持。
 
-
 ### <a name="see-also"></a>请参阅
 
 [UI 自动化和 Microsoft Active Accessibility](/dotnet/framework/ui-automation/ui-automation-and-microsoft-active-accessibility)
@@ -578,7 +556,6 @@ Microsoft Active Accessibility 是使应用程序可访问的早期解决方案�
 ## <a name="isd2dinitialized"></a> AFX_GLOBAL_DATA::IsD2DInitialized
 
 确定是否已初始化 D2D
-
 
 ```
 BOOL IsD2DInitialized() const;
@@ -590,8 +567,7 @@ BOOL IsD2DInitialized() const;
 
 ## <a name="isdwmcompositionenabled"></a> AFX_GLOBAL_DATA::IsDwmCompositionEnabled
 
-提供了一种简单的方法来调用 Windows [DwmIsCompositionEnabled](/windows/desktop/api/dwmapi/nf-dwmapi-dwmiscompositionenabled)方法。
-
+提供了一种简单的方法来调用 Windows [DwmIsCompositionEnabled](/windows/desktop/api/dwmapi/nf-dwmapi-dwmiscompositionenabled) 方法。
 
 ```
 BOOL IsDwmCompositionEnabled();
@@ -625,7 +601,6 @@ BOOL IsHighContrastMode() const;
 
 指示操作系统是否支持分层的窗口。
 
-
 ```
 BOOL IsWindowsLayerSupportAvailable() const;
 ```
@@ -642,7 +617,6 @@ BOOL IsWindowsLayerSupportAvailable() const;
 
 指示框架是否使用预定义的 32 位颜色图标或分辨率较低的图标。
 
-
 ```
 BOOL  m_bUseBuiltIn32BitIcons;
 ```
@@ -656,7 +630,6 @@ TRUE 指定框架使用 32 位颜色图标;FALSE 指定较低分辨率图标。 
 ## <a name="m_busesystemfont"></a> AFX_GLOBAL_DATA::m_bUseSystemFont
 
 指示系统字体是否用于菜单、工具栏和功能区。
-
 
 ```
 BOOL m_bUseSystemFont;
@@ -672,7 +645,6 @@ TRUE 指定要使用系统字体;否则为 FALSE。 `AFX_GLOBAL_DATA::AFX_GLOBAL
 
 存储手形光标的句柄。
 
-
 ```
 HCURSOR m_hcurHand;
 ```
@@ -680,7 +652,6 @@ HCURSOR m_hcurHand;
 ## <a name="m_hcurstretch"></a> AFX_GLOBAL_DATA::m_hcurStretch
 
 存储水平拉伸光标的句柄。
-
 
 ```
 HCURSOR m_hcurStretch;
@@ -690,7 +661,6 @@ HCURSOR m_hcurStretch;
 
 存储垂直拉伸光标的句柄。
 
-
 ```
 HCURSOR m_hcurStretchVert;
 ```
@@ -699,14 +669,13 @@ HCURSOR m_hcurStretchVert;
 
 存储工具图标的句柄。
 
-
 ```
 HICON m_hiconTool;
 ```
+
 ## <a name="m_nautohidetoolbarmargin"></a> AFX_GLOBAL_DATA::m_nAutoHideToolBarMargin
 
 指定从最左侧的自动隐藏工具栏到停靠栏左侧的偏移量。
-
 
 ```
 int  m_nAutoHideToolBarMargin;
@@ -720,7 +689,6 @@ int  m_nAutoHideToolBarMargin;
 
 指定自动隐藏工具栏之间的间距。
 
-
 ```
 int   m_nAutoHideToolBarSpacing;
 ```
@@ -732,7 +700,6 @@ int   m_nAutoHideToolBarSpacing;
 ## <a name="m_ndragframethicknessdock"></a> AFX_GLOBAL_DATA::m_nDragFrameThicknessDock
 
 指定用来指示停靠的状态的拖动框架的粗细。
-
 
 ```
 int  m_nDragFrameThicknessDock;
@@ -746,7 +713,6 @@ int  m_nDragFrameThicknessDock;
 
 指定用来指示浮点状态的拖动框架的粗细。
 
-
 ```
 int  m_nDragFrameThicknessFloat;
 ```
@@ -759,7 +725,6 @@ int  m_nDragFrameThicknessFloat;
 
 检测桌面菜单动画和任务栏自动隐藏功能的当前状态。
 
-
 ```
 void OnSettingChange();
 ```
@@ -771,7 +736,6 @@ void OnSettingChange();
 ## <a name="registerwindowclass"></a> AFX_GLOBAL_DATA::RegisterWindowClass
 
 注册指定的 MFC 窗口类。
-
 
 ```
 CString RegisterWindowClass(LPCTSTR lpszClassNamePrefix);
@@ -799,7 +763,6 @@ CString RegisterWindowClass(LPCTSTR lpszClassNamePrefix);
 
 重新初始化访问支持 Windows 主题和视觉样式的方法的内部函数指针。
 
-
 ```
 BOOL Resume();
 ```
@@ -814,8 +777,7 @@ BOOL Resume();
 
 ## <a name="setlayeredattrib"></a> AFX_GLOBAL_DATA::SetLayeredAttrib
 
-提供了一种简单的方法来调用 Windows [SetLayeredWindowAttributes](/windows/desktop/api/winuser/nf-winuser-setlayeredwindowattributes)方法。
-
+提供了一种简单的方法来调用 Windows [SetLayeredWindowAttributes](/windows/desktop/api/winuser/nf-winuser-setlayeredwindowattributes) 方法。
 
 ```
 BOOL SetLayeredAttrib(
@@ -852,7 +814,6 @@ BOOL SetLayeredAttrib(
 
 创建指定的逻辑字体。
 
-
 ```
 BOOL SetMenuFont(
     LPLOGFONT lpLogFont,
@@ -879,7 +840,6 @@ BOOL SetMenuFont(
 
 重新初始化框架使用的逻辑字体。
 
-
 ```
 void UpdateFonts();
 ```
@@ -892,7 +852,6 @@ void UpdateFonts();
 
 初始化框架使用的颜色、颜色深度、画笔、笔和图像。
 
-
 ```
 void UpdateSysColors();
 ```
@@ -900,7 +859,6 @@ void UpdateSysColors();
 ## <a name="biswindows7"></a> AFX_GLOBAL_DATA::bIsWindows7
 
 指示应用程序在 Windows 7 还是更高版本下执行。
-
 
 ```
 BOOL bIsWindows7;
@@ -910,7 +868,6 @@ BOOL bIsWindows7;
 
 指定活动标题的渐变颜色。 通常用于停靠窗格。
 
-
 ```
 COLORREF clrActiveCaptionGradient;
 ```
@@ -919,7 +876,6 @@ COLORREF clrActiveCaptionGradient;
 
 指定非活动标题的渐变颜色。 通常用于停靠窗格。
 
-
 ```
 COLORREF clrInactiveCaptionGradient;
 ```
@@ -927,7 +883,6 @@ COLORREF clrInactiveCaptionGradient;
 ## <a name="getitaskbarlist"></a> AFX_GLOBAL_DATA::GetITaskbarList
 
 在全局数据中创建和存储指向 `ITaskBarList` 接口的指针。
-
 
 ```
 ITaskbarList *GetITaskbarList();
@@ -941,7 +896,6 @@ ITaskbarList *GetITaskbarList();
 
 在全局数据中创建和存储指向 `ITaskBarList3` 接口的指针。
 
-
 ```
 ITaskbarList3 *GetITaskbarList3();
 ```
@@ -953,7 +907,6 @@ ITaskbarList3 *GetITaskbarList3();
 ## <a name="getshellautohidebars"></a> AFX_GLOBAL_DATA::GetShellAutohideBars
 
 确定 Shell 自动隐藏栏的位置。
-
 
 ```
 int GetShellAutohideBars();
@@ -967,7 +920,6 @@ int GetShellAutohideBars();
 
 释放接口通过获得`GetITaskbarList`和`GetITaskbarList3`方法。
 
-
 ```
 void ReleaseTaskBarRefs();
 ```
@@ -975,7 +927,6 @@ void ReleaseTaskBarRefs();
 ## <a name="shellcreateitemfromparsingname"></a> AFX_GLOBAL_DATA::ShellCreateItemFromParsingName
 
 创建并初始化分析名称中的 Shell 项对象。
-
 
 ```
 HRESULT ShellCreateItemFromParsingName(

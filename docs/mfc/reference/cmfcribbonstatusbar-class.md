@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59bc8c58c6f11903b483893e99f415ab836ae358
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4303dc9f5f72e4a9500a1d5a6a7c210e7f7bc62f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448046"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063791"
 ---
 # <a name="cmfcribbonstatusbar-class"></a>CMFCRibbonStatusBar 类
 
@@ -121,7 +121,7 @@ class CMFCRibbonStatusBar : public CMFCRibbonBar
 
 ## <a name="example"></a>示例
 
-下面的示例演示如何使用中的各种方法`CMFCRibbonStatusBar`类。 该示例演示如何将新的功能区元素添加到功能区状态栏，将功能区元素添加到功能区状态栏扩展区域添加分隔符，并启用功能区状态栏的常规模式。
+下面的示例演示了如何使用 `CMFCRibbonStatusBar` 类中的各种方法。 该示例演示如何将新的功能区元素添加到功能区状态栏，将功能区元素添加到功能区状态栏扩展区域添加分隔符，并启用功能区状态栏的常规模式。
 
 [!code-cpp[NVC_MFC_RibbonApp#15](../../mfc/reference/codesnippet/cpp/cmfcribbonstatusbar-class_1.cpp)]
 [!code-cpp[NVC_MFC_RibbonApp#16](../../mfc/reference/codesnippet/cpp/cmfcribbonstatusbar-class_2.cpp)]
@@ -289,8 +289,8 @@ CMFCRibbonBaseElement* FindByID(UINT uiCmdID, BOOL = TRUE);
 
 ### <a name="parameters"></a>参数
 
-*uiCmdID*<br/>
-[in][in]*BOOL*
+[in]*uiCmdID*<br/>
+[in]*BOOL*<br/>
 
 ### <a name="return-value"></a>返回值
 
@@ -385,7 +385,7 @@ virtual BOOL GetExtendedArea(CRect& rect) const;
 
 ### <a name="parameters"></a>参数
 
-[in]*rect*
+[in]*rect*<br/>
 
 ### <a name="return-value"></a>返回值
 
@@ -425,7 +425,7 @@ BOOL IsExtendedElement(CMFCRibbonBaseElement* pElement) const;
 
 ### <a name="parameters"></a>参数
 
-[in]*pElement*
+[in]*pElement*<br/>
 
 ### <a name="return-value"></a>返回值
 

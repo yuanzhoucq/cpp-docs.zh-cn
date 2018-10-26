@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0baba6503d1d5b4e382347f4f4d9680b11f954ce
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 7bef66e8b3c326f205b6399538a811bcc83c9f9d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328514"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070395"
 ---
 # <a name="qspectre"></a>/Qspectre
 
@@ -36,7 +36,7 @@ ms.locfileid: "49328514"
 
 **/Qspectre**选项默认情况下处于关闭状态。
 
-在其初始版本中， **/Qspectre**选项仅处理优化的代码。 在 Visual Studio 2017 版本 15.7 及更高版本， **/Qspectre**选项支持所有优化级别。 
+在其初始版本中， **/Qspectre**选项仅处理优化的代码。 在 Visual Studio 2017 版本 15.7 及更高版本， **/Qspectre**选项支持所有优化级别。
 
 Microsoft Visual c + + 库中也会提供与 Spectre 缓解版本。 可以在 Visual Studio 安装程序下载用于 Visual Studio 2017 的 Spectre 缓解库。 在中找到**各个组件**选项卡上的**编译器、 生成工具和运行时**，并且在名称中具有"Libs 有关 Spectre"。 DLL 和静态运行时库与已启用的缓解是适用于 Visual c + + 运行时的子集： VC + + 启动代码、 vcruntime140、 msvcp140、 concrt140 和 vcamp140。 应用程序本地的部署; 仅支持 Dll尚未修改的 Visual c + + 2017年运行时库可再发行的内容。 也可为 MFC 和 ATL 中, 找到安装 Spectre 缓解库**各个组件**选项卡上的**Sdk、 库和框架**。
 

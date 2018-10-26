@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5a491c120dff7f8f505878d6887498eb5f05fb22
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 7cdfa9011e0021d168c0ad10424a7d326b3c3725
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790403"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062153"
 ---
 # <a name="custom-c"></a>custom (C++)
 
@@ -62,7 +62,7 @@ ms.locfileid: "48790403"
 |**必需的特性**|**组件类**（当使用类）|
 |**无效的特性**|无|
 
-有关特性上下文的详细信息，请参阅[特性上下文](cpp-attributes-com-net.md#contexts)。
+有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
 ## <a name="see-also"></a>请参阅
 
@@ -72,4 +72,4 @@ ms.locfileid: "48790403"
 [参数特性](parameter-attributes.md)<br/>
 [方法特性](method-attributes.md)<br/>
 [类特性](class-attributes.md)<br/>
-[接口特性](interface-attributes.md)  
+[接口特性](interface-attributes.md)

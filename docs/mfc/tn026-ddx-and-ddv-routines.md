@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3930f08ae0708b81dde218a88fcda4dc34931390
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f07ab7b4420a5c33be56a9278b60afb6424e9e83
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46389728"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063544"
 ---
 # <a name="tn026-ddx-and-ddv-routines"></a>TN026：DDX 和 DDV 例程
 
@@ -224,21 +224,21 @@ else
 
    - *promptN*
 
-     若要编辑的项目 (& 加速器) 之上放置的字符串。
+      若要编辑的项目 (& 加速器) 之上放置的字符串。
 
    - *fmtN*
 
-     Arg 类型之一的格式字符：
+      Arg 类型之一的格式字符：
 
-     |字符|类型|
-     |-|-|
-     d | int
-     u | unsigned int
-     D | long int （即，长时间）
-     U | 无符号长时间 (即，DWORD)
-     f | float
-     F | double
-     秒 | 字符串
+      |字符|类型|
+      |-|-|
+      |d | int|
+      |u | unsigned int|
+      |D | long int （即，长时间）|
+      |U | 无符号长时间 (即，DWORD)|
+      |f | float|
+      |F | double|
+      |秒 | 字符串|
 
 ## <a name="see-also"></a>请参阅
 

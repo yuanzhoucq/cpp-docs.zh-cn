@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 95eb37898d4934740e1520df758ed33d3dd4c79a
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: ae14a6346f547d8c362bad478144e915ee9ebb98
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790359"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077287"
 ---
 # <a name="entry"></a>entry
 
@@ -58,8 +58,8 @@ ms.locfileid: "48790359"
 |**必需的特性**|无|
 |**无效的特性**|无|
 
-有关详细信息，请参阅[特性上下文](cpp-attributes-com-net.md#contexts)。
+有关详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
 ## <a name="see-also"></a>请参阅
 
-[IDL 特性](idl-attributes.md)  
+[IDL 特性](idl-attributes.md)

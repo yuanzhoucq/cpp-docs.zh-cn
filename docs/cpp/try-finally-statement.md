@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94a250862f5514f290043bf596ba19bf0834e71e
-ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
+ms.openlocfilehash: 4040f5a05f8c9bccfbf1c8b48a40188f684d48ad
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49161653"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060008"
 ---
 # <a name="try-finally-statement"></a>try-finally 语句
 
@@ -44,7 +44,7 @@ ms.locfileid: "49161653"
 下面的语法描述**的 try-finally**语句：
 
 ```cpp
-__try {
+__try {
    // guarded code
 }
 __finally {
@@ -73,7 +73,7 @@ __finally {
 
 1. 终止处理程序完成后，执行将继续后 **__finally**语句。 无论如何受保护部分结束 (例如，通过**goto**出受保护体或**返回**语句)，执行终止处理程序*之前*控制流移出受保护节。
 
-     一个 **__finally**语句不会阻碍搜索相应的异常处理程序。
+   一个 **__finally**语句不会阻碍搜索相应的异常处理程序。
 
 如果在发生异常 **__try**块中，操作系统必须找到异常处理程序或程序将失败。 如果找到的处理程序，所有 **__finally**块被执行和处理程序中恢复执行。
 

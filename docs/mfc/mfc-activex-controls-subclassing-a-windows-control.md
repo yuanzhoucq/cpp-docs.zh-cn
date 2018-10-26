@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03fc15cc2d2a73c0e8a1a016a2a477a5c65cdc15
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: 7cd03babd97033495ecfa84817938103cde05a73
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48890552"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50081701"
 ---
 # <a name="mfc-activex-controls-subclassing-a-windows-control"></a>MFC ActiveX 控件：创建 Windows 控件的子类
 
@@ -94,12 +94,12 @@ ActiveX 控件容器可以设计为自行执行消息反射，从而不必使用
 
 - 在控件类 .H 文件中，声明一个处理程序函数。 该函数应具有的返回类型**LRESULT**和类型的两个参数**WPARAM**并**LPARAM**分别。 例如：
 
-     [!code-cpp[NVC_MFC_AxSub#5](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_5.h)]
+   [!code-cpp[NVC_MFC_AxSub#5](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_5.h)]
     [!code-cpp[NVC_MFC_AxSub#6](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_6.h)]
 
 - 在控件类中。CPP 文件中，将一个 ON_MESSAGE 条目添加到消息映射。 此条目的参数应该是消息标识符和处理程序函数的名称。 例如：
 
-     [!code-cpp[NVC_MFC_AxSub#7](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_7.cpp)]
+   [!code-cpp[NVC_MFC_AxSub#7](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_7.cpp)]
 
 - 另外，请在。CPP 文件实现`OnOcmCommand`成员函数处理反射的消息。 *WParam*并*lParam*参数是不同于原始窗口消息。
 

@@ -176,12 +176,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 792e84c094497dc6e3b8a37afc4cf4e48046171f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6430e65e15458eec3a0591168ba7717e1236c089
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46387596"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50071844"
 ---
 # <a name="cmfcpropertygridproperty-class"></a>CMFCPropertyGridProperty 类
 
@@ -431,7 +431,6 @@ CMFCPropertyGridProperty(
     DWORD_PTR dwData=0,
     BOOL bIsValueList=FALSE);
 
-
 CMFCPropertyGridProperty(
     const CString& strName,
     const _variant_t& varValue,
@@ -469,7 +468,7 @@ CMFCPropertyGridProperty(
 [in]如果该属性是掩码的编辑控件的有效字符的列表。 默认值为 NULL。
 
 *bIsValueList*<br/>
-[in]如果该属性表示一系列值; 则为 TRUE如果该属性表示的单个值，则为 FALSE。 默认值为 FALSE。
+[in]如果该属性表示一系列值; 则为 TRUE如果该属性表示的单个值，则为 FALSE。 默认值是 FALSE。
 
 ### <a name="remarks"></a>备注
 
@@ -883,7 +882,6 @@ CMFCPropertyGridProperty* HitTest(
     CPoint point,
     CMFCPropertyGridProperty::ClickArea* pnArea=NULL);
 
-
 CMFCPropertyGridProperty* HitTest(
     CPoint pt,
     CMFCPropertyGridProperty::ClickArea* pnArea=NULL,
@@ -902,7 +900,7 @@ CMFCPropertyGridProperty* HitTest(
 [out]此方法返回时，指示包含指定的点的区域。 有关更多信息，请参见“备注”。 默认值为 NULL。
 
 *bPropsOnly*<br/>
-[in]若要测试属性控件; 中的任何区域，则返回 TRUE为 FALSE，则测试只描述区域。 默认值为 FALSE。
+[in]若要测试属性控件; 中的任何区域，则返回 TRUE为 FALSE，则测试只描述区域。 默认值是 FALSE。
 
 ### <a name="return-value"></a>返回值
 
@@ -1422,14 +1420,13 @@ virtual BOOL OnKillFocus(CWnd*);
 
 ##  <a name="onkillselection"></a>  CMFCPropertyGridProperty::OnKillSelection
 
-
 ```
 virtual void OnKillSelection(CMFCPropertyGridProperty*);
 ```
 
 ### <a name="parameters"></a>参数
 
-[in]*CMFCPropertyGridProperty**
+[in]*CMFCPropertyGridProperty&#42;*<br/>
 
 ### <a name="remarks"></a>备注
 
@@ -1437,14 +1434,13 @@ virtual void OnKillSelection(CMFCPropertyGridProperty*);
 
 ##  <a name="onpossizechanged"></a>  CMFCPropertyGridProperty::OnPosSizeChanged
 
-
 ```
 virtual void OnPosSizeChanged(CRect);
 ```
 
 ### <a name="parameters"></a>参数
 
-[in]*CRect*
+[in]*CRect*<br/>
 
 ### <a name="remarks"></a>备注
 
@@ -1519,14 +1515,13 @@ virtual BOOL OnSetCursor() const;
 
 ##  <a name="onsetselection"></a>  CMFCPropertyGridProperty::OnSetSelection
 
-
 ```
-virtual void OnSetSelection(CMFCPropertyGridProperty*);
+virtual void OnSetSelection CMFCPropertyGridProperty*);
 ```
 
 ### <a name="parameters"></a>参数
 
-[in]*CMFCPropertyGridProperty**
+[in]*CMFCPropertyGridProperty&#42;*<br/>
 
 ### <a name="remarks"></a>备注
 

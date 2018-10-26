@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 295e19d875585e0ea166dfce552866b8c1fc81b7
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7c2c954851348fcb96b28a4c47aee4b4475aeaca
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46392263"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070278"
 ---
 # <a name="dialog-data-exchange-functions-for-crecordview-and-cdaorecordview"></a>CRecordView 和 CDaoRecordView 的对话框数据交换函数
 
@@ -98,7 +98,7 @@ void AFXAPI DDX_FieldCBIndex(
 
 如果你正在使用基于 ODBC 的类，请使用第一个版本。 如果你正在使用基于 DAO 的类，请使用第二个版本。
 
-有关 DDX 的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。 有关示例和更多信息的 DDX [CRecordView](../../mfc/reference/crecordview-class.md)并[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)字段，请参阅文章[记录视图](../../data/record-views-mfc-data-access.md)。
+有关 DDX 的更多信息，请参阅 [对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。 有关示例和更多信息的 DDX [CRecordView](../../mfc/reference/crecordview-class.md)并[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)字段，请参阅文章[记录视图](../../data/record-views-mfc-data-access.md)。
 
 ### <a name="example"></a>示例
 
@@ -146,7 +146,7 @@ void AFXAPI DDX_FieldCBString(
 
 如果你正在使用基于 ODBC 的类，请使用第一个版本。 如果你正在使用基于 DAO 的类，请使用第二个版本。
 
-有关 DDX 的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。 有关示例和更多信息的 DDX [CRecordView](../../mfc/reference/crecordview-class.md)并[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)字段，请参阅文章[记录视图](../../data/record-views-mfc-data-access.md)。
+有关 DDX 的更多信息，请参阅 [对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。 有关示例和更多信息的 DDX [CRecordView](../../mfc/reference/crecordview-class.md)并[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)字段，请参阅文章[记录视图](../../data/record-views-mfc-data-access.md)。
 
 ### <a name="example"></a>示例
 
@@ -194,7 +194,7 @@ void AFXAPI DDX_FieldCBStringExact(
 
 如果你正在使用基于 ODBC 的类，请使用第一个版本。 如果你正在使用基于 DAO 的类，请使用第二个版本。
 
-有关 DDX 的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。 有关示例和更多信息的 DDX [CRecordView](../../mfc/reference/crecordview-class.md)并[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)字段，请参阅文章[记录视图](../../data/record-views-mfc-data-access.md)。
+有关 DDX 的更多信息，请参阅 [对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。 有关示例和更多信息的 DDX [CRecordView](../../mfc/reference/crecordview-class.md)并[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)字段，请参阅文章[记录视图](../../data/record-views-mfc-data-access.md)。
 
 ### <a name="example"></a>示例
 
@@ -240,7 +240,7 @@ void AFXAPI DDX_FieldCheck(
 
 当`DDX_FieldCheck`调用时，*值*设置为当前状态的复选框控件或控件的状态设置为*值*，取决于传输的方向。
 
-有关 DDX 的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。
+有关 DDX 的更多信息，请参阅 [对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。
 
 ### <a name="requirements"></a>要求
 
@@ -284,7 +284,7 @@ void AFXAPI DDX_FieldLBIndex(
 
 如果你正在使用基于 ODBC 的类，请使用第一个版本。 如果你正在使用基于 DAO 的类，请使用第二个版本。
 
-有关 DDX 的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。 有关示例和更多信息的 DDX [CRecordView](../../mfc/reference/crecordview-class.md)并[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)字段，请参阅文章[记录视图](../../data/record-views-mfc-data-access.md)。
+有关 DDX 的更多信息，请参阅 [对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。 有关示例和更多信息的 DDX [CRecordView](../../mfc/reference/crecordview-class.md)并[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)字段，请参阅文章[记录视图](../../data/record-views-mfc-data-access.md)。
 
 ### <a name="example"></a>示例
 
@@ -332,7 +332,7 @@ void AFXAPI DDX_FieldLBString(
 
 如果你正在使用基于 ODBC 的类，请使用第一个版本。 如果你正在使用基于 DAO 的类，请使用第二个版本。
 
-有关 DDX 的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。 有关示例和更多信息的 DDX [CRecordView](../../mfc/reference/crecordview-class.md)并[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)字段，请参阅文章[记录视图](../../data/record-views-mfc-data-access.md)。
+有关 DDX 的更多信息，请参阅 [对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。 有关示例和更多信息的 DDX [CRecordView](../../mfc/reference/crecordview-class.md)并[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)字段，请参阅文章[记录视图](../../data/record-views-mfc-data-access.md)。
 
 ### <a name="example"></a>示例
 
@@ -380,7 +380,7 @@ void AFXAPI DDX_FieldLBStringExact(
 
 如果你正在使用基于 ODBC 的类，请使用第一个版本。 如果你正在使用基于 DAO 的类，请使用第二个版本。
 
-有关 DDX 的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。 有关示例和更多信息的 DDX [CRecordView](../../mfc/reference/crecordview-class.md)并[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)字段，请参阅文章[记录视图](../../data/record-views-mfc-data-access.md)。
+有关 DDX 的更多信息，请参阅 [对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。 有关示例和更多信息的 DDX [CRecordView](../../mfc/reference/crecordview-class.md)并[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)字段，请参阅文章[记录视图](../../data/record-views-mfc-data-access.md)。
 
 ### <a name="example"></a>示例
 
@@ -428,7 +428,7 @@ void AFXAPI DDX_FieldRadio(
 
 如果你正在使用基于 ODBC 的类，请使用第一个版本。 如果你正在使用基于 DAO 的类，请使用第二个版本。
 
-有关 DDX 的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。 有关示例和更多信息的 DDX [CRecordView](../../mfc/reference/crecordview-class.md)并[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)字段，请参阅文章[记录视图](../../data/record-views-mfc-data-access.md)。
+有关 DDX 的更多信息，请参阅 [对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。 有关示例和更多信息的 DDX [CRecordView](../../mfc/reference/crecordview-class.md)并[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)字段，请参阅文章[记录视图](../../data/record-views-mfc-data-access.md)。
 
 ### <a name="example"></a>示例
 
@@ -476,7 +476,7 @@ void AFXAPI DDX_FieldScroll(
 
 如果你正在使用基于 ODBC 的类，请使用第一个版本。 如果你正在使用基于 DAO 的类，请使用第二个版本。
 
-有关 DDX 的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。 有关示例和更多信息的 DDX [CRecordView](../../mfc/reference/crecordview-class.md)并[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)字段，请参阅文章[记录视图](../../data/record-views-mfc-data-access.md)。
+有关 DDX 的更多信息，请参阅 [对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。 有关示例和更多信息的 DDX [CRecordView](../../mfc/reference/crecordview-class.md)并[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)字段，请参阅文章[记录视图](../../data/record-views-mfc-data-access.md)。
 
 ### <a name="example"></a>示例
 
@@ -499,11 +499,12 @@ void AFXAPI DDX_FieldScroll(
        CRecordset* pRecordset );
 
 void AFXAPI DDX_FieldSlider(
-     CDataExchange* pDX,
-     int nIDC,
-     int& value,
-     CDaoRecordset* pRecordset );
+   CDataExchange* pDX,
+   int nIDC,
+   int& value,
+   CDaoRecordset* pRecordset );
 ```
+
 ### <a name="parameters"></a>参数
 
 *pDX*<br/>
@@ -526,7 +527,7 @@ void AFXAPI DDX_FieldSlider(
 
 如果你正在使用基于 ODBC 的类，请使用函数的第一个重写。 第二个重写使用基于 DAO 的类。
 
-有关 DDX 的详细信息，请参阅[对话框数据交换和验证](../dialog-data-exchange-and-validation.md)。 有关示例和更多信息的 DDX`CRecordView`并`CDaoRecordView`字段，请参阅[记录视图](../../data/record-views-mfc-data-access.md)。 滑块控件有关的信息，请参阅[使用 CSliderCtrl](../using-csliderctrl.md)。
+有关 DDX 的更多信息，请参阅 [对话框数据交换和验证](../dialog-data-exchange-and-validation.md)。 有关示例和更多信息的 DDX`CRecordView`并`CDaoRecordView`字段，请参阅[记录视图](../../data/record-views-mfc-data-access.md)。 滑块控件有关的信息，请参阅[使用 CSliderCtrl](../using-csliderctrl.md)。
 
 ### <a name="example"></a>示例
 
@@ -674,14 +675,13 @@ void AFXAPI DDX_FieldText(
 
 使用的版本与[CRecordset](../../mfc/reference/crecordset-class.md)参数，如果你正在使用基于 ODBC 的类。 使用的版本与[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)参数，如果你正在使用基于 DAO 的类。
 
-有关 DDX 的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。 有关示例和更多信息的 DDX [CRecordView](../../mfc/reference/crecordview-class.md)并[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)字段，请参阅文章[记录视图](../../data/record-views-mfc-data-access.md)。
+有关 DDX 的更多信息，请参阅 [对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。 有关示例和更多信息的 DDX [CRecordView](../../mfc/reference/crecordview-class.md)并[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)字段，请参阅文章[记录视图](../../data/record-views-mfc-data-access.md)。
 
 ### <a name="example"></a>示例
 
 以下`DoDataExchange`函数[CRecordView](../../mfc/reference/crecordview-class.md)包含`DDX_FieldText`函数调用的三个数据类型：`IDC_COURSELIST`是一个组合框; 其他两个控件的编辑框。 DAO 编程*m_pSet*参数是指向指针[CRecordset](../../mfc/reference/crecordset-class.md)或[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)。
 
 [!code-cpp[NVC_MFCDatabase#43](../../mfc/codesnippet/cpp/dialog-data-exchange-functions-for-crecordview-and-cdaorecordview_1.cpp)]
-
 
 ### <a name="requirements"></a>要求
 

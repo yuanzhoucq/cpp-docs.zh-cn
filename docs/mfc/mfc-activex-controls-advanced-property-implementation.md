@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4aa1116384ac9fd5212046f9a0b3354a3aa70d88
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f18d9466c1608742f63e68caa639c1ad6697df1c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46416079"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063648"
 ---
 # <a name="mfc-activex-controls-advanced-property-implementation"></a>MFC ActiveX 控件：高级属性实现
 
@@ -48,7 +48,7 @@ ms.locfileid: "46416079"
 
 1. 从快捷菜单中，单击**外**，然后单击**添加属性**。
 
-     这将打开[添加属性向导](../ide/names-add-property-wizard.md)。
+   这将打开[添加属性向导](../ide/names-add-property-wizard.md)。
 
 1. 在中**属性名称**框中，键入您的属性的名称。
 

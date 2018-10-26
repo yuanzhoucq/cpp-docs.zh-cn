@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 211428335473f677f520ee14ad688e5ffcbda8fd
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: ee0ea65267320a4730c543cec978c2675ef1cc57
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49327994"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50071948"
 ---
 # <a name="sealed--ccli-and-ccx"></a>密封 (C + + /cli 和 C + + /cli CX)
 
@@ -104,7 +104,7 @@ public:
       System::Console::WriteLine("Y::f override of I1::f");
    }
 
-   /*  
+   /*
    // the following override generates a compiler error
    virtual void g() override {
       System::Console::WriteLine("Y::g override of I1::g");
@@ -150,4 +150,4 @@ public:
 
 ## <a name="see-also"></a>请参阅
 
-[适用于.NET 和 UWP 组件扩展](../windows/component-extensions-for-runtime-platforms.md)
+[ .NET 和 UWP 的组件扩展](../windows/component-extensions-for-runtime-platforms.md)

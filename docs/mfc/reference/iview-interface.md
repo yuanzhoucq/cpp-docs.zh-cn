@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ec1e6215cd085ed948e4b0554bca12a678563d6
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 84ed9bfb8b0c8b5ab30af07d8f0448109161df51
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46434006"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077759"
 ---
 # <a name="iview-interface"></a>IView 接口
 
@@ -57,7 +57,6 @@ interface class IView
 
 有关使用 Windows 窗体的详细信息，请参阅[在 MFC 中使用 Windows 窗体用户控件](../../dotnet/using-a-windows-form-user-control-in-mfc.md)。
 
-
 ## <a name="requirements"></a>要求
 
 标头： afxwinforms.h （在程序集 atlmfc\lib\mfcmifc80.dll 中定义）
@@ -68,6 +67,7 @@ interface class IView
 ```
 void OnActivateView(bool activate);
 ```
+
 ## <a name="parameters"></a>参数
 
 *激活*<br/>
@@ -86,6 +86,7 @@ void OnInitialUpdate();
 ```
 void OnUpdate();
 ```
+
 ## <a name="remarks"></a>备注
 
 使用此功能，要更新其显示效果以反映修改的视图。

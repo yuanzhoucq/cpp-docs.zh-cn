@@ -16,33 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c882a8d4eb2510969401b4280eb66116ad220c77
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3f169b30394e3fdf893475a49946266143772eb7
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46440831"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078058"
 ---
 # <a name="noimplementation"></a>no_implementation
-**C + + 专用**  
-  
-取消生成 .tli 标头，它包含包装器成员函数的实现。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-no_implementation  
-```  
-  
-## <a name="remarks"></a>备注  
- 
-如果指定此特性，则将生成 .tlh 标头（带用于公开类型库项的声明），而无需用于包含 .tli 标头文件的 `#include` 语句。  
-  
-结合使用此特性[implementation_only](../preprocessor/implementation-only.md)。  
-  
-**结束 c + + 专用**  
-  
-## <a name="see-also"></a>请参阅  
- 
+**C + + 专用**
+
+取消生成 .tli 标头，它包含包装器成员函数的实现。
+
+## <a name="syntax"></a>语法
+
+```
+no_implementation
+```
+
+## <a name="remarks"></a>备注
+
+如果指定此特性，则将生成 .tlh 标头（带用于公开类型库项的声明），而无需用于包含 .tli 标头文件的 `#include` 语句。
+
+结合使用此特性[implementation_only](../preprocessor/implementation-only.md)。
+
+**结束 c + + 专用**
+
+## <a name="see-also"></a>请参阅
+
 [#import 属性](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [#import 指令](../preprocessor/hash-import-directive-cpp.md)

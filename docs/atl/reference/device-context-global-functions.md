@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac2e56e4b13f739f61df5b37ab70689784a39882
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 8d85767ad529cb54686ff2cde186bd4a681d3570
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46077537"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063310"
 ---
 # <a name="device-context-global-functions"></a>设备上下文全局函数
 
@@ -53,7 +53,7 @@ HDC AtlCreateTargetDC(HDC hdc, DVTARGETDEVICE* ptd);
 
 如果结构为 NULL 并且*hdc*为 NULL，则创建的默认显示设备的设备上下文。
 
-如果*hdc*不为 NULL 并*ptd*为 NULL，该函数将返回现有*hdc*。  
+如果*hdc*不为 NULL 并*ptd*为 NULL，该函数将返回现有*hdc*。
 
 ## <a name="requirements"></a>要求
 

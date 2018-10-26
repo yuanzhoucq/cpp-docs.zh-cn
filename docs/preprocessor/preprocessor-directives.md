@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3835d3c3d2900b97c16bc82963df2d08f35a879d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f2976feebf4a17465c2bf2010b4dc608550ce077
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46416287"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059462"
 ---
 # <a name="preprocessor-directives"></a>预处理器指令
 
@@ -45,4 +45,4 @@ ms.locfileid: "46416287"
 
 [预处理器运算符](../preprocessor/preprocessor-operators.md)<br/>
 [预定义宏](../preprocessor/predefined-macros.md)<br/>
-[C/C++ 预处理器参考](../preprocessor/c-cpp-preprocessor-reference.md)  
+[C/C++ 预处理器参考](../preprocessor/c-cpp-preprocessor-reference.md)

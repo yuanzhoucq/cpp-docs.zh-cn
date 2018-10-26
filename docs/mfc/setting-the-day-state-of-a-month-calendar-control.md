@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b443e1758f766b7fa2dd9a0169ab98172423779d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5e589f07d1c9c54c3acd2fa3ff6a0f346077f9b4
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46439337"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053092"
 ---
 # <a name="setting-the-day-state-of-a-month-calendar-control"></a>设置月历控件的日状态
 
@@ -51,9 +51,9 @@ MCN_GETDAYSTATE 消息由控件发送，以确定应如何显示可视月份中�
 
 1. 在处理程序主体中，添加以下代码：
 
-     [!code-cpp[NVC_MFCControlLadenDialog#26](../mfc/codesnippet/cpp/setting-the-day-state-of-a-month-calendar-control_1.cpp)]
+   [!code-cpp[NVC_MFCControlLadenDialog#26](../mfc/codesnippet/cpp/setting-the-day-state-of-a-month-calendar-control_1.cpp)]
 
-     此示例将转换*pNMHDR*指向正确的类型，然后确定正在请求多少个月的信息 (`pDayState->cDayState`)。 对于每个月，当前位域 (`pDayState->prgDayState[i]`) 都会初始化为零，然后设置所需的日期（在本例中为每月的第 15 天）。
+   此示例将转换*pNMHDR*指向正确的类型，然后确定正在请求多少个月的信息 (`pDayState->cDayState`)。 对于每个月，当前位域 (`pDayState->prgDayState[i]`) 都会初始化为零，然后设置所需的日期（在本例中为每月的第 15 天）。
 
 ## <a name="see-also"></a>请参阅
 

@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e0d0fde53cc7ffb885e8435fc82cbb899a3bc89
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9023f042cd2c39966adb6a5fb4c71b5e24c3e9d1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46389524"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068042"
 ---
 # <a name="array-class"></a>array 类
 
@@ -671,6 +671,7 @@ array& operator= (
 ```
 static const int rank = _Rank;
 ```
+
 ## <a name="reinterpret_as"></a> reinterpret_as
 
 重新解释通过一维 array_view，其可能具有和值类型不同于源数组的数组。

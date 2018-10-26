@@ -108,12 +108,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b68f0180a581898b552715ccda4bfd0e972facd8
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9f1ed4193111fa97e7fb113a86c7600ba462f059
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46376748"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067847"
 ---
 # <a name="crebarctrl-class"></a>CReBarCtrl 类
 
@@ -1147,5 +1147,4 @@ BOOL SizeToRect(CRect& rect);
 
 [CWnd 类](../../mfc/reference/cwnd-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)
-
 

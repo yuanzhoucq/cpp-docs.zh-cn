@@ -47,12 +47,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ce6099b904c088399dcb43635a1b254567e8320
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: fbfd58491981cdba1b3aa3002736f49a7c09038c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46024902"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054471"
 ---
 # <a name="message-map-macros-atl"></a>消息映射宏 (ATL)
 
@@ -93,11 +93,11 @@ ms.locfileid: "46024902"
 |[REFLECTED_NOTIFY_HANDLER](#reflected_notify_handler)|将反射的 WM_NOTIFY 消息映射到处理程序函数，根据通知代码和控件标识符。|
 |[REFLECTED_NOTIFY_ID_HANDLER](#reflected_notify_id_handler)|将反射的 WM_NOTIFY 消息映射到处理程序函数，基于的控件标识符。|
 |[REFLECTED_NOTIFY_RANGE_CODE_HANDLER](#reflected_notify_range_code_handler)|将反射的 WM_NOTIFY 消息映射到处理程序函数，根据通知代码和连续范围的控件标识符。|
-|[REFLECTED_NOTIFY_RANGE_HANDLER](#reflected_notify_range_handler)|将反射的 WM_NOTIFY 消息映射到处理程序函数，基于连续范围的控件标识符。|  
+|[REFLECTED_NOTIFY_RANGE_HANDLER](#reflected_notify_range_handler)|将反射的 WM_NOTIFY 消息映射到处理程序函数，基于连续范围的控件标识符。|
 
 ## <a name="requirements"></a>要求
 
-**标头：** atlwin.h  
+**标头：** atlwin.h
 
 ##  <a name="alt_msg_map"></a>  ALT_MSG_MAP
 
@@ -136,7 +136,7 @@ ATL 标识由许多每个消息映射。 由 0 标识 （使用 BEGIN_MSG_MAP �
 
 ### <a name="requirements"></a>要求
 
-**标头：** atlwin.h   
+**标头：** atlwin.h
 
 ##  <a name="begin_msg_map"></a>  BEGIN_MSG_MAP
 
@@ -153,7 +153,7 @@ BEGIN_MSG_MAP(theClass)
 
 ### <a name="remarks"></a>备注
 
-[CWindowImpl::WindowProc](cwindowimpl-class.md#windowproc)使用默认消息映射来处理消息发送到的窗口。 消息映射将定向到相应的处理程序函数或另一个消息映射到的消息。  
+[CWindowImpl::WindowProc](cwindowimpl-class.md#windowproc)使用默认消息映射来处理消息发送到的窗口。 消息映射将定向到相应的处理程序函数或另一个消息映射到的消息。
 
 下列宏将消息映射到处理程序函数。 必须在定义此函数*类*。
 
@@ -328,7 +328,7 @@ CHAIN_MSG_MAP_DYNAMIC(dynaChainID)
 
 ### <a name="remarks"></a>备注
 
-CHAIN_MSG_MAP_DYNAMIC 定向消息，在运行时，到另一个对象中的默认消息映射。 与之关联的对象和其消息映射*dynaChainID*，通过定义[CDynamicChain::SetChainEntry](cdynamicchain-class.md#setchainentry)。 您必须派生您的类从`CDynamicChain`才能使用 CHAIN_MSG_MAP_DYNAMIC。 有关示例，请参阅[CDynamicChain](../../atl/reference/cdynamicchain-class.md)概述。  
+CHAIN_MSG_MAP_DYNAMIC 定向消息，在运行时，到另一个对象中的默认消息映射。 与之关联的对象和其消息映射*dynaChainID*，通过定义[CDynamicChain::SetChainEntry](cdynamicchain-class.md#setchainentry)。 您必须派生您的类从`CDynamicChain`才能使用 CHAIN_MSG_MAP_DYNAMIC。 有关示例，请参阅[CDynamicChain](../../atl/reference/cdynamicchain-class.md)概述。
 
 > [!NOTE]
 >  始终以使用消息映射[BEGIN_MSG_MAP](#begin_msg_map)。 然后，可以声明具有 ALT_MSG_MAP 后续的备用消息映射。 [END_MSG_MAP](#end_msg_map)宏标记消息映射的末尾。 每个消息映射必须有且只有一个实例 BEGIN_MSG_MAP 和 END_MSG_MAP。
@@ -823,7 +823,7 @@ REFLECTED_COMMAND_CODE_HANDLER( code, func )
 [in]通知代码。
 
 *func*<br/>
-[in]消息处理程序函数的名称。  
+[in]消息处理程序函数的名称。
 
 ### <a name="requirements"></a>要求
 
@@ -846,11 +846,11 @@ REFLECTED_COMMAND_HANDLER( id, code, func )
 [in]通知代码。
 
 *func*<br/>
-[in]消息处理程序函数的名称。  
+[in]消息处理程序函数的名称。
 
 ### <a name="requirements"></a>要求
 
-**标头：** atlwin.h  
+**标头：** atlwin.h
 
 ##  <a name="reflected_command_id_handler"></a>  REFLECTED_COMMAND_ID_HANDLER
 
@@ -866,11 +866,11 @@ REFLECTED_COMMAND_ID_HANDLER( id, func )
 [in]菜单项、 控件或加速器的标识符。
 
 *func*<br/>
-[in]消息处理程序函数的名称。  
+[in]消息处理程序函数的名称。
 
 ### <a name="requirements"></a>要求
 
-**标头：** atlwin.h  
+**标头：** atlwin.h
 
 ##  <a name="reflected_command_range_code_handler"></a>  REFLECTED_COMMAND_RANGE_CODE_HANDLER
 
@@ -892,11 +892,11 @@ REFLECTED_COMMAND_RANGE_CODE_HANDLER( idFirst, idLast, code, func )
 [in]通知代码。
 
 *func*<br/>
-[in]消息处理程序函数的名称。  
+[in]消息处理程序函数的名称。
 
 ### <a name="requirements"></a>要求
 
-**标头：** atlwin.h  
+**标头：** atlwin.h
 
 ##  <a name="reflected_command_range_handler"></a>  REFLECTED_COMMAND_RANGE_HANDLER
 
@@ -915,11 +915,11 @@ REFLECTED_COMMAND_RANGE_HANDLER( idFirst, idLast, func )
 [in]标记的末尾连续范围的控件标识符。
 
 *func*<br/>
-[in]消息处理程序函数的名称。  
+[in]消息处理程序函数的名称。
 
 ### <a name="requirements"></a>要求
 
-**标头：** atlwin.h  
+**标头：** atlwin.h
 
 ##  <a name="reflected_notify_code_handler"></a>  REFLECTED_NOTIFY_CODE_HANDLER
 
@@ -935,11 +935,11 @@ REFLECTED_NOTIFY_CODE_HANDLER_EX( cd, func )
 [in]通知代码。
 
 *func*<br/>
-[in]消息处理程序函数的名称。  
+[in]消息处理程序函数的名称。
 
 ### <a name="requirements"></a>要求
 
-**标头：** atlwin.h  
+**标头：** atlwin.h
 
 ##  <a name="reflected_notify_handler"></a>  REFLECTED_NOTIFY_HANDLER
 
@@ -958,11 +958,11 @@ REFLECTED_NOTIFY_HANDLER( id, cd, func )
 [in]通知代码。
 
 *func*<br/>
-[in]消息处理程序函数的名称。  
+[in]消息处理程序函数的名称。
 
 ### <a name="requirements"></a>要求
 
-**标头：** atlwin.h  
+**标头：** atlwin.h
 
 ##  <a name="reflected_notify_id_handler"></a>  REFLECTED_NOTIFY_ID_HANDLER
 
@@ -978,11 +978,11 @@ REFLECTED_NOTIFY_ID_HANDLER( id, func )
 [in]菜单项、 控件或加速器的标识符。
 
 *func*<br/>
-[in]消息处理程序函数的名称。  
+[in]消息处理程序函数的名称。
 
 ### <a name="requirements"></a>要求
 
-**标头：** atlwin.h  
+**标头：** atlwin.h
 
 ##  <a name="reflected_notify_range_code_handler"></a>  REFLECTED_NOTIFY_RANGE_CODE_HANDLER
 

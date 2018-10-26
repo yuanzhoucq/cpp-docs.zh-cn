@@ -22,12 +22,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 750e51264f12d1c8961ced4e8b606ea5d040d8c9
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 41a757ccd70fe95ce82f90b1128985986e3722b0
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790370"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057811"
 ---
 # <a name="eventsource"></a>event_source
 
@@ -57,14 +57,14 @@ ms.locfileid: "48790370"
 *optimize*<br/>
 当*类型*是`native`，可以指定`optimize=size`，以指示中已有 4 个字节的存储 （最小值） 的所有事件的类或`optimize=speed`（默认值） 以指示存在 4 * （事件数） 个字节的存储。
 
-*修饰*<br/>
-当*类型*是`native`，可以指定`decorate=false`，以指示合并 (.mrg) 文件中的扩展的名称不应包含封闭类名。 [/Fx](../../build/reference/fx-merge-injected-code.md)允许生成.mrg 文件。 `decorate=false`其默认值时，会导致合并文件中的完全限定类型名称。
+*decorate*<br/>
+当*类型*是`native`，可以指定`decorate=false`，以指示合并 (.mrg) 文件中的扩展的名称不应包含封闭类名。 [/Fx](../../build/reference/fx-merge-injected-code.md) 允许生成 .mrg 文件。 `decorate=false`其默认值时，会导致合并文件中的完全限定类型名称。
 
 ## <a name="remarks"></a>备注
 
 **event_source** C++ 属性指定应用它的类或结构会是事件源。
 
-**event_source**结合使用[event_receiver](event-receiver.md)属性和[__event](../../cpp/event.md)关键字。 使用`event_receiver`可创建事件接收器。 使用 **__event**要这些方法指定为事件的事件源中的方法。
+**event_source** 与 [event_receiver](event-receiver.md) 属性和 [__event](../../cpp/event.md) 关键字结合使用。 使用`event_receiver`可创建事件接收器。 使用 **__event**要这些方法指定为事件的事件源中的方法。
 
 > [!NOTE]
 > 模板类或结构不能包含事件。
@@ -80,7 +80,7 @@ ms.locfileid: "48790370"
 |**必需的特性**|**组件类**时 `type`=`com`|
 |**无效的特性**|无|
 
-有关详细信息，请参阅[特性上下文](cpp-attributes-com-net.md#contexts)。
+有关详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
 ## <a name="see-also"></a>请参阅
 
@@ -89,4 +89,4 @@ ms.locfileid: "48790370"
 [__event](../../cpp/event.md)<br/>
 [__hook](../../cpp/hook.md)<br/>
 [__unhook](../../cpp/unhook.md)<br/>
-[类特性](class-attributes.md)  
+[类特性](class-attributes.md)

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 949c641fa64e5b3b752f64496aa430f37dda6ec4
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: bbec69cc35d95ab42008dce19a432f28f847bd06
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43692638"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060685"
 ---
 # <a name="struct-masm"></a>STRUCT (MASM)
 
@@ -32,7 +32,6 @@ ms.locfileid: "43692638"
 > *名称*结构 [[*对齐*]] [[，唯一，则]]<br/>
 > *字段声明*<br/>
 > *名称*结束
-
 
 ## <a name="see-also"></a>请参阅
 

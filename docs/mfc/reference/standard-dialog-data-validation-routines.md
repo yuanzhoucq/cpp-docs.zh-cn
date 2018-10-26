@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 116cd9ee86ca29aac6da489916f78c3884ba8bdd
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3a37f79851df043a5473c82b514b7e85f418f1b6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46446539"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067912"
 ---
 # <a name="standard-dialog-data-validation-routines"></a>标准对话框数据验证例程
 
@@ -47,8 +47,6 @@ ms.locfileid: "46446539"
 |[DDV_MinMaxUInt](#ddv_minmaxuint)|验证给定的控件值不超过给定**UINT**范围。|
 |[DDV_MinMaxUnsigned](#ddv_minmaxuint)|验证给定的控件值介于两个指定值之间。|
 |[DDV_MinMaxULongLong](#ddv_minmaxulonglong)|验证给定的控件值不超过给定**ULONGLONG**范围。|
-
-
 
 ##  <a name="ddv_maxchars"></a>  DDV_MaxChars
 
@@ -552,6 +550,7 @@ DDV 有关详细信息，请参阅[对话框数据交换和验证](../../mfc/dia
        unsigned minVal,
        unsigned maxVal );
 ```
+
 ### <a name="parameters"></a>参数
 
 *pDX*<br/>
@@ -579,6 +578,4 @@ DDV 有关详细信息，请参阅[对话框数据交换和验证](../dialog-dat
 [宏和全局函数](mfc-macros-and-globals.md)<br/>
 [DDX_Slider](#ddx_slider)<br/>
 [DDX_FieldSlider](#ddx_fieldslider)
-
-
 

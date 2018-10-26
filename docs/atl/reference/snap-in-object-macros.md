@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d37c8c9d319495c3247bf98d9ed3c8f58063ae56
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f2c692f9055e0c2ca3657a6bba0d854209f786b8
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46050549"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068744"
 ---
 # <a name="snap-in-object-macros"></a>单元对象宏
 
@@ -41,7 +41,7 @@ ms.locfileid: "46050549"
 |[EXTENSION_SNAPIN_DATACLASS](#extension_snapin_dataclass)|创建管理单元中扩展的数据类的数据成员。|
 |[EXTENSION_SNAPIN_NODEINFO_ENTRY](#extension_snapin_nodeinfo_entry)|输入管理单元中对象的管理单元中扩展数据类映射一个管理单元中扩展的数据类。|
 |[SNAPINMENUID](#snapinmenuid)|声明上下文菜单中使用的管理单元中对象的 ID。|
-|[SNAPINTOOLBARID_ENTRY](#snapintoolbarid_entry)|输入管理单元中对象的工具栏映射一个工具栏。|  
+|[SNAPINTOOLBARID_ENTRY](#snapintoolbarid_entry)|输入管理单元中对象的工具栏映射一个工具栏。|
 
 ## <a name="requirements"></a>要求
 

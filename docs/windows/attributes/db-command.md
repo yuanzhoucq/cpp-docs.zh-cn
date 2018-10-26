@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0111dfc424a99d413a217149b3c5e579a3999f13
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 6cb9202d020aee86a4ebe3892fa8dd84ec4c4577
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790399"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50061623"
 ---
 # <a name="dbcommand"></a>db_command
 
@@ -31,7 +31,7 @@ ms.locfileid: "48790399"
 ## <a name="syntax"></a>语法
 
 ```cpp
-[ db_command(command, name, source_name, hresult, bindings, bulk_fetch)  
+[ db_command(command, name, source_name, hresult, bindings, bulk_fetch)
 ]
 ```
 
@@ -74,7 +74,7 @@ ms.locfileid: "48790399"
 
 如果命令字符串包含一个或多个说明符，如\[在]， \[out]，或\[in/out]， **db_command**生成参数映射。
 
-如果命令字符串包含一个或多个参数，如\[db_column] 或\[bindto]， **db_command**生成行集和取值函数映射以服务这些绑定的变量。 请参阅[db_accessor](db-accessor.md)有关详细信息。
+如果命令字符串包含一个或多个参数，如\[db_column] 或\[bindto]， **db_command**生成行集和取值函数映射以服务这些绑定的变量。 有关详细信息，请参阅 [db_accessor](db-accessor.md) 。
 
 > [!NOTE]
 > \[*bindtype*] 语法和*绑定*使用时，可能不是有效参数**db_command**在类级别。
@@ -88,7 +88,7 @@ TCHAR m_state[3] = 'CA';
 
 [db_command (command = "SELECT au_fname([bindto]m_au_fname), au_lname([bindto]m_au_lname) " \
    "FROM dbo.authors " \
-   "WHERE state = ?([in]m_state)")  
+   "WHERE state = ?([in]m_state)")
 ]
 ```
 
@@ -96,7 +96,7 @@ TCHAR m_state[3] = 'CA';
 （可选）用于处理行集的句柄的名称。 如果指定名称 ， **db_command** 会生成具有指定名称 的类，可以用它来遍历行集或执行多个操作查询。 如果未指定名称 ，则无法向用户返回多个行的结果。
 
 *source_name*<br/>
-（可选）`CSession`变量或具有的类的实例`db_source`特性应用于它执行命令。 请参阅[db_source](db-source.md)。
+（可选）`CSession`变量或具有的类的实例`db_source`特性应用于它执行命令。 请参阅 [db_source](db-source.md)。
 
 执行**db_command** 检查，确认用于 *source_name* 的变量有效，使指定的变量位于函数或全局范围内。
 
@@ -113,15 +113,15 @@ TCHAR m_state[3] = 'CA';
 *bulk_fetch*<br/>
 （可选）一个整数值，指定要提取的行数。
 
-默认值为 1，指定单行提取 (行集将为类型[CRowset](../../data/oledb/crowset-class.md))。
+默认值为 1，指定单行提取（行集将为 [CRowset](../../data/oledb/crowset-class.md)类型）。
 
-大于 1 的值指定批量取行。 批量取行指提取多个行句柄的大容量行集的能力 (行集将为类型[CBulkRowset](../../data/oledb/cbulkrowset-class.md) ，并将调用`SetRows`与指定的行数)。
+大于 1 的值指定批量取行。 批量取行指提取多个行句柄的批量行集功能（行集将为 [CBulkRowset](../../data/oledb/cbulkrowset-class.md) 类型，并将采用指定的行数调用 `SetRows` ）。
 
 如果 *bulk_fetch* 小于 1， `SetRows` 将返回零。
 
 ## <a name="remarks"></a>备注
 
-**db_command**创建[CCommand](../../data/oledb/ccommand-class.md)对象，OLE DB 使用者用于执行命令。
+**db_command** 创建 [CCommand](../../data/oledb/ccommand-class.md) 对象，OLE DB 使用者使用该对象来执行命令。
 
 可以将 **db_command** 与类或函数范围一起使用，主要差异在于 `CCommand` 对象的范围。 使用函数范围，绑定等数据终止于函数末端。 类和函数范围的用法涉及到 OLE DB 使用者模板类`CCommand<>`，但函数和类的情况下，模板参数不同。 在函数事例中，将对进行绑定`Accessor`包含本地变量，而类用法将推断`CAccessor`-派生的类作为参数。 用作类属性时， **db_command** 和 **db_column**配合使用。
 
@@ -131,7 +131,7 @@ TCHAR m_state[3] = 'CA';
 
 ## <a name="example"></a>示例
 
-本示例定义一个命令，该命令从状态列与“CA”匹配的表格中选择第一个和最后一个名称。 **db_command**创建并读取行集可以调用向导生成的函数如[OpenAll 和 CloseAll](../../data/oledb/consumer-wizard-generated-methods.md)，以及`CRowset`之类的函数成员[MoveNext](../../data/oledb/crowset-movenext.md)。
+本示例定义一个命令，该命令从状态列与“CA”匹配的表格中选择第一个和最后一个名称。 **db_command** 创建并读取行集，在行集上可以调用向导生成的函数（例如 [OpenAll 和 CloseAll](../../data/oledb/consumer-wizard-generated-methods.md)）和 `CRowset` 成员函数（例如 [MoveNext](../../data/oledb/crowset-movenext.md)）。
 
 请注意，此代码要求提供自己连接到 pubs 数据库的连接字符串。 有关如何执行此操作在开发环境中的信息，请参阅[如何： 连接到数据库并浏览现有对象](/sql/ssdt/how-to-connect-to-a-database-and-browse-existing-objects)并[添加新连接](/visualstudio/data-tools/add-new-connections)。
 
@@ -253,9 +253,9 @@ int main() {
 |**必需的特性**|无|
 |**无效的特性**|无|
 
-有关特性上下文的详细信息，请参阅[特性上下文](cpp-attributes-com-net.md#contexts)。
+有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
 ## <a name="see-also"></a>请参阅
 
 [OLE DB 使用者特性](ole-db-consumer-attributes.md)<br/>
-[独立特性](stand-alone-attributes.md)  
+[独立特性](stand-alone-attributes.md)

@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: e5dc30c7-405a-4ba4-8ae9-51937243fce8
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: b257628747dca488292cfdfff0ef783303bd1b88
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 2a20a5c8ad87428e66f90b8f04c3006e5f1c2e84
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46094417"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068862"
 ---
 # <a name="ccomsinglethreadmodel-class"></a>CComSingleThreadModel 类
 
@@ -58,9 +58,9 @@ class CComSingleThreadModel
 
 ## <a name="remarks"></a>备注
 
-`CComSingleThreadModel` 提供用于递增和递减变量的值的方法。 与不同[CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)并[CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md)，这些方法不是线程安全。  
+`CComSingleThreadModel` 提供用于递增和递减变量的值的方法。 与不同[CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)并[CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md)，这些方法不是线程安全。
 
-通常情况下，使用`CComSingleThreadModel`通过两个之一**typedef**名称，或者[CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel)或[CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)。 每个引用的类**typedef** ，所使用的线程处理模型取决于下表中所示：  
+通常情况下，使用`CComSingleThreadModel`通过两个之一**typedef**名称，或者[CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel)或[CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)。 每个引用的类**typedef** ，所使用的线程处理模型取决于下表中所示：
 
 |typedef|单线程模型|单元线程处理模型|自由线程处理模型|
 |-------------|----------------------------|-------------------------------|--------------------------|
