@@ -66,7 +66,7 @@
 ###### [将字符串读入 OLE DB 提供程序](reading-strings-into-the-ole-db-provider.md)
 ###### [将字符串存储在 OLE DB 提供程序中](storing-strings-in-the-ole-db-provider.md)
 ##### [增强简单的只读提供程序](enhancing-the-simple-read-only-provider.md)
-###### [修改 RMyProviderRowset 的继承](modifying-the-inheritance-of-rmyproviderrowset.md)
+###### [修改 RCustomRowset 的继承](modifying-the-inheritance-of-rmyproviderrowset.md)
 ###### [动态确定返回给使用者的列](dynamically-determining-columns-returned-to-the-consumer.md)
 ##### [测试只读提供程序](testing-the-read-only-provider.md)
 #### [创建可更新的提供程序](creating-an-updatable-provider.md)
