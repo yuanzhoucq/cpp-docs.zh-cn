@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 20291e1f824704ee94cb45f14c16d6f0e4960348
-ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
+ms.openlocfilehash: b7c28a8e67ef2731d26071262383e93d32be9583
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49410832"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50064103"
 ---
 # <a name="configure-a-linux-cmake-project"></a>配置 Linux CMake 项目
 
@@ -29,8 +29,8 @@ ms.locfileid: "49410832"
 
 本主题假定你基本了解 Visual Studio 中的 CMake 支持。 有关详细信息，请参阅 [Visual C++ 的 CMake 工具](../ide/cmake-tools-for-visual-cpp.md)。 有关 CMake 本身的详细信息，请参阅[使用 CMake 生成、测试并打包软件](https://cmake.org/)。
 
-> [!NOTE]  
-> 使用 Visual Studio 中的 CMake 支持需要 CMake 3.8 中引入的服务器模式支持。 对于 Microsoft 提供的 CMake 变体，请在 [https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases) 中下载最新的预生成二进制文件。 
+> [!NOTE]
+> 使用 Visual Studio 中的 CMake 支持需要 CMake 3.8 中引入的服务器模式支持。 对于 Microsoft 提供的 CMake 变体，请在 [https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases) 中下载最新的预生成二进制文件。
 
 ## <a name="open-a-folder"></a>打开文件夹
 
@@ -120,10 +120,9 @@ add_executable(hello-cmake hello.cpp)
 
 ## <a name="download-prebuilt-cmake-binaries"></a>下载预生成的 CMake 二进制文件
 
-你的 Linux 发行版可能具有更早版本的 CMake。 使用 Visual Studio 中的 CMake 支持需要 CMake 3.8 中引入的服务器模式支持。 对于 Microsoft 提供的 CMake 变体，请在 [https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases) 中下载最新的预生成二进制文件。 
-
+你的 Linux 发行版可能具有更早版本的 CMake。 使用 Visual Studio 中的 CMake 支持需要 CMake 3.8 中引入的服务器模式支持。 对于 Microsoft 提供的 CMake 变体，请在 [https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases) 中下载最新的预生成二进制文件。
 
 ## <a name="see-also"></a>请参阅
 
 [使用项目属性](../ide/working-with-project-properties.md)<br/>
-[Visual C++ 的 CMake 工具](../ide/cmake-tools-for-visual-cpp.md)  
+[Visual C++ 的 CMake 工具](../ide/cmake-tools-for-visual-cpp.md)

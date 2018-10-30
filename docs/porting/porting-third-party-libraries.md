@@ -15,16 +15,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e1edc9e4a6172b3ac55e7a8bc9b21cdc571774d
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 24056346520897988fe92587ab45aa7cbc754199
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42578490"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50074990"
 ---
 # <a name="porting-third-party-libraries"></a>移植第三方库
 
-将项目升级到当前版本的 Visual C++ 后，还必须升级项目使用的所有库，以便使用相同的编译器版本和风格构建库和项目。 有关详细信息，请参阅[潜在的升级问题概述](overview-of-potential-upgrade-issues-visual-cpp.md)。 
+将项目升级到当前版本的 Visual C++ 后，还必须升级项目使用的所有库，以便使用相同的编译器版本和风格构建库和项目。 有关详细信息，请参阅[潜在的升级问题概述](overview-of-potential-upgrade-issues-visual-cpp.md)。
 
 ## <a name="introducing-vcpkg"></a>vcpkg 简介
 
@@ -35,7 +35,7 @@ ms.locfileid: "42578490"
 如果你的库不在 vcpkg 目录中，则可在 [GitHub 存储库](https://github.com/Microsoft/vcpkg/issues)提出问题。社区人员和 Visual C++ 团队可在此处看到该问题，并可能创建适用于该库的端口文件。
 
 对于专有的第三方库（非开源），我们建议与该库的提供商联系。 但是，我们想了解你正在使用的所有专有库，以便为你分组，请告知我们你依赖哪个库（可以通过 vcupgrade@microsoft.com 与我们联系）。
-  
-## <a name="see-also"></a>请参阅  
+
+## <a name="see-also"></a>请参阅
 
 [Visual C++ 移植和升级指南](visual-cpp-porting-and-upgrading-guide.md)

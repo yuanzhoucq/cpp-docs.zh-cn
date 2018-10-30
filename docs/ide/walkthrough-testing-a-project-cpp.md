@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 133214cceebf5d43610207e446698341d7803b71
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 56614dc0829834e77cfdf10d8d88ed44492237e3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235537"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070135"
 ---
 # <a name="walkthrough-testing-a-project-c"></a>演练：测试项目 (C++)
 
@@ -41,7 +41,7 @@ ms.locfileid: "48235537"
 
 1. 选择此代码行：
 
-     `Cardgame.solitaire(1);`
+   `Cardgame.solitaire(1);`
 
 1. 要在该行上设置断点，请在菜单栏上选择“调试” > “切换断点”，或选择 F9 键。 行的左侧出现一个红色圆圈，它表示已设置断点。 要删除断点，可再次选择菜单命令或 F9 键。
 

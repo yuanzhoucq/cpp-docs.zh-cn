@@ -14,20 +14,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae68abc0768c0a06526af6439a8a881684ecdb15
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 8cb811ccd3291caa9b3da095310c74416fbd5799
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821269"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067938"
 ---
 # <a name="visual-c-in-visual-studio"></a>Visual Studio 中的 Visual C++
 
-> [!NOTE]  
-> 此开发人员文档适用于 Visual Studio 2015 和 Visual Studio 2017。 
+> [!NOTE]
+> 此开发人员文档适用于 Visual Studio 2015 和 Visual Studio 2017。
 
-> 如果要查找 Visual C++ 可再发行包以便运行程序，请转到 [Microsoft 下载中心](http://www.microsoft.com/download/) ，并在搜索框中输入“Visual C++”。  
-  
+> 如果要查找 Visual C++ 可再发行包以便运行程序，请转到 [Microsoft 下载中心](http://www.microsoft.com/download/) ，并在搜索框中输入“Visual C++”。
+
 
 Microsoft Visual C++（通常缩写为 Visual C++ 或 MSVC）是 Windows Visual Studio 的一部分，指 C++、C 和汇编语言开发的工具和库。 这些工具和库可用于创建通用 Windows 平台 (UWP) 应用、本机桌面和服务器应用程序、在 Windows、Linux、Android 和 iOS 上运行的跨平台库和应用以及使用 .NET Framework 的托管应用。 从 Windows 桌面的简单控制台应用到最复杂的应用，从移动设备的设备驱动程序和操作系统组件到跨平台游戏，再从 Azure 云中的最小 IoT 设备到多服务器的高性能计算等所有内容都可以使用 Visual C++ 编写。
 

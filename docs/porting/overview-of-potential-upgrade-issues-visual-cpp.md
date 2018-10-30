@@ -8,18 +8,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdfa82580ba61ab276d6d64a9424d7043c2822f1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 742d722033d0fb2e686861d0e09fc45c73540ade
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46393771"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075757"
 ---
 # <a name="overview-of-potential-upgrade-issues-visual-c"></a>潜在的升级问题概述 (Visual C++)
 
 多年来，Microsoft Visual C++ 编译器已历经多次更改，而 C++ 语言本身、C++ 标准库、C 运行时 (CRT) 以及其他库（如 MFC 和 ATL）亦然。 因此，在从 Visual Studio 的早期版本升级应用程序时，可能遇到编译器和链接器错误，以及先前已完全编译的代码中的警告。 原始基本代码越早，发生此类错误的可能性越大。 本概述总结了可能遇到的最常见类型的问题，并提供有关详细信息的链接。
 
-> [!NOTE] 
+> [!NOTE]
 > 在过去，我们建议要以增量方式执行跨多版本 Visual Studio 的升级，一次执行一个版本。 现在我们不再推荐这种方法。 我们发现，无论基本代码有多早，采用升级至最新版本 Visual Studio 的方法几乎总是更简单。
 
 可将有关升级过程的问题或评论发送至 vcupgrade@microsoft.com。
@@ -161,7 +161,7 @@ C++ 标准发展的方式并不总是后向兼容。 在 C++11 中引入移动�
 
 ### <a name="windows-version"></a>Windows 版本
 
-在升级直接或间接使用 Windows API 的程序时，需要决定要支持的 Windows 最低版本。 在大多数情况下，Windows 7 是一个不错的选择。 有关详细信息，请参阅[头文件问题](porting-guide-spy-increment.md#header_file_problems)。 `WINVER` 宏定义了设计用于运行程序的 Windows 旧版本。 若 MFC 程序将 WINVER 设置为 0x0501 (Windows XP)，用户将收到警告，因为虽然编译器本身具有 XP 模式，但 MFC 已不再支持 XP。  
+在升级直接或间接使用 Windows API 的程序时，需要决定要支持的 Windows 最低版本。 在大多数情况下，Windows 7 是一个不错的选择。 有关详细信息，请参阅[头文件问题](porting-guide-spy-increment.md#header_file_problems)。 `WINVER` 宏定义了设计用于运行程序的 Windows 旧版本。 若 MFC 程序将 WINVER 设置为 0x0501 (Windows XP)，用户将收到警告，因为虽然编译器本身具有 XP 模式，但 MFC 已不再支持 XP。
 
 有关详细信息，请参阅[更新目标 Windows 版本](porting-guide-spy-increment.md#updating_winver)和[更多过时的头文件](porting-guide-spy-increment.md#outdated_header_files)。
 
@@ -188,4 +188,4 @@ MFC 应用程序中可能发生此错误。 它指示 CRT 库和 MFC 库之间�
 ## <a name="see-also"></a>请参阅
 
 [从 Visual C++ 早期版本升级项目](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
-[Visual Studio 2017 中 C++ 的符合性改进](../cpp-conformance-improvements-2017.md)  
+[Visual Studio 2017 中 C++ 的符合性改进](../cpp-conformance-improvements-2017.md)

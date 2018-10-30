@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: d2ffd41fe224e492eb4b27a355f6df864e0dd066
-ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
+ms.openlocfilehash: 964da719da8d6f48131fc60f7e7fdfb247637fbf
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49410819"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069942"
 ---
 # <a name="deploy-run-and-debug-your-linux-project"></a>部署、运行和调试 Linux 项目
 
@@ -41,7 +41,7 @@ ms.locfileid: "49410819"
 
     - 在“gdb”模式中，Visual Studio 调试器驱动远程系统上的 GDB，如果 GDB 的本地版本与目标计算机上安装的版本不兼容，则远程系统上的 GDB 更易兼容。 |
 
-    > [!NOTE] 
+    > [!NOTE]
     > 如果不能在 gdbserver 调试模式中命中断点，请尝试 gdb 模式。 必须先将 gdb [安装](../linux/download-install-and-setup-the-linux-development-workload.md)在远程目标上。
 
 2. 使用 Visual Studio 中的标准“调试”工作栏，选择远程目标。
@@ -64,7 +64,7 @@ ms.locfileid: "49410819"
 
     如果没有错误，则应用将启动并且调试程序将在断点处暂停。
 
-    ![命中断点](media/hit_breakpoint.png)  
+    ![命中断点](media/hit_breakpoint.png)
 
     现在，可以通过按命令键（如 F10 或 F11），与处于当前状态的应用程序交互、查看变量以及逐行执行代码。
 
@@ -79,7 +79,7 @@ ms.locfileid: "49410819"
 ## <a name="configure-other-debugging-options"></a>配置其他调试选项
 
 * 可以使用项目“**调试**”属性页中的“**程序参数**”项将命令行参数传递给可执行文件。
-  
+
   ![程序参数](media/settings_programarguments.png)
 
 * 可使用“**其他调试程序命令**”条目将特定调试程序选项传递到 GDB。  例如，你可能需要忽略 SIGILL（非法指令）信号。  那么，可以使用“**句柄**”命令来实现此目的，方法是：  将以下命令添加到如上图中所示的“**其他调试程序命令**”条目：

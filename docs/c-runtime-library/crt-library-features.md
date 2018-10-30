@@ -28,12 +28,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a0864c87b33937fe18c3e4c3083e63bde23ac06
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 7562f6e5a8915f33b3f2c8bd23ce310e641984c6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46092227"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057033"
 ---
 # <a name="crt-library-features"></a>CRT 库功能
 
@@ -123,7 +123,6 @@ vcruntime 库包含 Visual C++ CRT 实现特定的代码，例如异常处理和
 如果进程中的所有映像全都使用相同的 CRT 动态加载版本，则也有可能避免这些问题。 若要确保所有组件都使用相同的 CRT 的 DLL 版本，请使用“/MD”选项，并使用相同的编译器工具集和属性设置进行构建。
 
 如果程序跨 DLL 边界传递某些 CRT 资源（如文件句柄、区域设置和环境变量），即便使用的是相同版本的 CRT，那也需要注意。 有关所涉及问题以及如何解决这些问题的详细信息，请参阅[跨 DLL 边界传递 CRT 对象时可能的错误](../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md)。
-
 
 ## <a name="see-also"></a>请参阅
 

@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62404de4012bcd49888da527ae93ed1b2137a48a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3c66fe63d97f623011b3dade46266a4a9d8d83b1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46374140"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50064416"
 ---
 # <a name="use-native-multi-targeting-in-visual-studio-to-build-old-projects"></a>使用 Visual Studio 中的本机多目标来生成旧项目
 
@@ -52,11 +52,11 @@ Visual Studio 会持续提示升级项目。 为避免在每次加载项目时�
 
 如果选择不升级，Visual Studio 不会对解决方案或项目文件进行更改。 生成项目时，生成的二进制文件与使用旧版本的 Visual Studio 生成的二进制文件完全兼容。 这是因为 Visual Studio 使用的 C++ 编译器和链接的库与旧版 IDE 所随附的相同。 这也是为什么如果选择“取消”，升级对话框会警告保留安装较旧的 Visual Studio 版本。
 
-## <a name="instructions-for-visual-studio-2008"></a>有关 Visual Studio 2008 的说明  
-  
+## <a name="instructions-for-visual-studio-2008"></a>有关 Visual Studio 2008 的说明
+
 Visual Studio 2008 具有自己的专用 C++ 生成系统 VCBuild。 从 Visual Studio 2010 开始，Visual C++ 项目改为使用 MSBuild。 这意味着必须通过更新步骤在最新版本的 Visual Studio 中生成 Visual Studio 2008项目。 更新的项目仍然会生成与使用 Visual Studio 2008 IDE 创建的二进制文件完全兼容的二进制文件。
 
-首先，除了当前版本的 Visual Studio 之外，还必须将 Visual Studio 2010 安装在安装 Visual Studio 2008 的计算机上。 只有 Visual Studio 2010 会安装面向 Visual Studio 2008 项目时所需的 MSBuild 脚本。 
+首先，除了当前版本的 Visual Studio 之外，还必须将 Visual Studio 2010 安装在安装 Visual Studio 2008 的计算机上。 只有 Visual Studio 2010 会安装面向 Visual Studio 2008 项目时所需的 MSBuild 脚本。
 
 接下来，必须将 Visual Studio 2008 解决方案和项目更新到当前版本的 Visual Studio。 建议在升级之前创建项目和解决方案文件的备份。 若要开始升级过程，请在当前版本的 Visual Studio 中打开解决方案。 获取升级提示时，请查看显示的信息，然后选择“确定”以开始升级。 如果解决方案中有多个项目，则必须更新，向导使用现有 .vcproj 文件并行创建新的 .vcxproj 项目文件。 只要你也有原始 .sln 文件的副本，升级对你现有的 Visual Studio 2008 项目就没有其他影响。
 
@@ -77,4 +77,4 @@ Visual Studio 2008 具有自己的专用 C++ 生成系统 VCBuild。 从 Visual 
 ## <a name="see-also"></a>请参阅
 
 [从 Visual C++ 早期版本升级项目](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
-[Visual Studio 2017 中 C++ 的符合性改进](../cpp-conformance-improvements-2017.md)  
+[Visual Studio 2017 中 C++ 的符合性改进](../cpp-conformance-improvements-2017.md)

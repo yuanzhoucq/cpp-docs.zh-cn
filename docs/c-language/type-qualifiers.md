@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ecac60a1b9cbd2758090e52d917c7a65259d62d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4dc0fd45887975c9b50cee141b0c6e8faca33513
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46094385"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083238"
 ---
 # <a name="type-qualifiers"></a>类型限定符
 
@@ -69,7 +69,7 @@ int volatile vint;     /* Volatile integer        */
 
 - 编译器假定可通过使用或修改 `volatile` 变量的值未知过程来访问该变量（在程序中的任意未知）。 因此，无论是否在命令行上指定优化，都必须为对 `volatile` 变量的每个分配或引用生成代码，即使它似乎不起作用。
 
-     如果单独使用 `volatile`，则假定 `int`。 `volatile` 类型说明符可用于提供对特定内存位置的可靠访问。 将 `volatile` 用于数据对象，这些对象可通过信号处理程序、并行执行程序或特定硬件（如内存映射的 I/O 控制寄存器）访问或更改。 可以为变量的生存期将变量声明为 `volatile`，也可以将单个引用强制转换为 `volatile`。
+   如果单独使用 `volatile`，则假定 `int`。 `volatile` 类型说明符可用于提供对特定内存位置的可靠访问。 将 `volatile` 用于数据对象，这些对象可通过信号处理程序、并行执行程序或特定硬件（如内存映射的 I/O 控制寄存器）访问或更改。 可以为变量的生存期将变量声明为 `volatile`，也可以将单个引用强制转换为 `volatile`。
 
 - 项可以同时为 const 和 `volatile`，在这种情况下，项无法通过其自己的程序进行合理修改，但可以通过某些异步进程进行修改。
 
