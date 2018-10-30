@@ -19,16 +19,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac4ed378640942dbe33490d618cec7289125b0c8
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a88fffbfc42dd6e7386ec43e55f2013f2548b6f5
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46418783"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204465"
 ---
 # <a name="mbcs-programming-tips"></a>MBCS 编程提示
 
-在新开发中，您应该为最终用户可能看到的所有字符串使用 Unicode 字符编码。 MBCS 是已经被 Unicode 取代的旧技术。 本节为必须维护使用 MBCS 的现有程序的开发人员提供了一些提示，以及有关不适合转换为 Unicode 的情况的提示。 建议适用于 MFC 应用程序和如果不使用 MFC 编写的应用程序。 包括以下主题：
+在新开发中，您应该为最终用户可能看到的所有字符串使用 Unicode 字符编码。 MBCS 是一项传统技术，已被 Unicode 取代。 本节为必须维护使用 MBCS 的现有程序的开发人员提供了一些提示，以及有关不适合转换为 Unicode 的情况的提示。 建议适用于 MFC 应用程序和如果不使用 MFC 编写的应用程序。 包括以下主题：
 
 - [常规 MBCS 编程建议](../text/general-mbcs-programming-advice.md)
 

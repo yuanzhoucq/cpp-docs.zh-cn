@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb9d21eee8e561e2caa8a7c4088774435d3ce273
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 0e3d6501e969b103146aa53311069e5fdd4d048e
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46080436"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204549"
 ---
 # <a name="scope-c"></a>范围 (C++)
 
@@ -41,7 +41,7 @@ ms.locfileid: "46080436"
 
 - **局部范围**声明函数或 lambda，包括参数名称中的名称具有局部范围。 它们通常被称为"局部变量"。 它们只是从其声明的点对函数或 lambda 体的结尾可见。 本地作用域是一种类型的块范围，这将在本文后面部分进行讨论。
 
-- **类范围内使用**类成员的名称具有类范围内，整个类定义，而不考虑声明点扩展。 类成员可访问性是由控制进一步**公共**，**专用**，并**受保护的**关键字。 公共或受保护的成员可以访问只能通过使用成员选择运算符 (**。** 或**->**) 或指向成员的指针运算符 (**。**<strong>\*</strong>或**->** <strong>\*</strong>)。
+- **类范围内使用**类成员的名称具有类范围内，整个类定义，而不考虑声明点扩展。 类成员可访问性进一步受**公共**，**专用**，并**保护**关键字。 公共或受保护的成员可以访问只能通过使用成员选择运算符 (**。** 或**->**) 或指向成员的指针运算符 (**。**<strong>\*</strong>或**->** <strong>\*</strong>)。
 
 - **语句作用域**中声明的名称**有关**，**如果**，**虽然**，或**切换**语句结束时才是可见语句块。
 

@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fa8434230081afe0ad104853e80ba5aa28ec280e
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 5fe5bf67df643f83d555d3f2d6fc9a0aadf84b01
+ms.sourcegitcommit: 68cd127a6606f0aed2eb1bc9a75cdfb95b9b6526
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50054132"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204885"
 ---
 # <a name="handle-to-object-operator---ccli-and-ccx"></a>对象句柄运算符 (^) (C + + /cli 和 C + + /cli CX)
 
@@ -44,7 +44,7 @@ ms.locfileid: "50054132"
 
 ## <a name="common-language-runtime"></a>公共语言运行时
 
-系统使用 CLR*垃圾回收器*机制来确定是否对象不再使用，并且可以删除。 公共语言运行时会维护一个用来分配对象的堆，并在程序中使用托管引用（变量）来指示对象在堆上的位置。 当不再使用某个对象时，会释放它在堆上占用的内存。 垃圾回收器会定期压缩该堆，已更好地利用释放的内存。 压缩堆可能会移动堆上的对象，这会使托管引用所引用的位置不再有效。 但是，垃圾回收器知道所有托管引用的位置，并会自动更新位置来指示对象在堆上的当前位置。
+系统使用 CLR*垃圾回收器*机制来确定是否对象不再使用，并且可以删除。 公共语言运行时会维护一个用来分配对象的堆，并在程序中使用托管引用（变量）来指示对象在堆上的位置。 当不再使用某个对象时，会释放它在堆上占用的内存。 垃圾回收器会定期压缩该堆，已更好地利用释放的内存。 压缩堆可以移动对象在堆上，这会使托管引用所引用的位置。 但是，垃圾回收器知道所有托管引用的位置，并会自动更新位置来指示对象在堆上的当前位置。
 
 因为本机 C++ 指针 (`*`) 和引用 (`&`) 都是托管引用，所以垃圾回收器不能更新它们指向的地址。 若要解决此问题，请使用句柄声明符指定一个变量，垃圾回收器能够知道这个变量的状态并会自动进行更新。
 

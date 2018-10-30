@@ -16,19 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e103e43f23746f8274ad00da4d043e3446dfc706
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 7967b63a14c296d7f0d73bb403aa5b74a6c3689b
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50053023"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204298"
 ---
 # <a name="mfc-activex-controls-adding-stock-methods"></a>MFC ActiveX 控件：添加常用方法
 
 常用的方法不同于自定义方法，它已经由类实现[COleControl](../mfc/reference/colecontrol-class.md)。 例如，`COleControl`包含支持为您的控件的 Refresh 方法的预定义的成员函数。 此常用的方法的调度映射项是 DISP_STOCKFUNC_REFRESH。
 
 >[!IMPORTANT]
-> ActiveX 是一项传统技术，不应使用新的开发。 本文将取代 ActiveX 的现代技术的详细信息，请参阅[ActiveX 控件](activex-controls.md)。
+> ActiveX 是一项传统技术，不应使用新的开发。 有关取代 ActiveX 的现代技术的详细信息，请参阅[ActiveX 控件](activex-controls.md)。
 
 `COleControl` 支持两种常用方法： DoClick 和刷新。 控件的用户，以立即更新控件的外观; 调用刷新DoClick 调用以引发该控件的 Click 事件。
 

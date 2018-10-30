@@ -15,19 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 652f09146ba0bb193efbf889995f6de5f53a9492
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 0973bb21771796f40a0464e2376101ee35a0d1a3
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50074470"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204543"
 ---
 # <a name="mfc-activex-controls-adding-custom-methods"></a>MFC ActiveX 控件：添加自定义方法
 
 自定义方法不同于常用方法，它们未已实现的`COleControl`。 必须提供每个添加到控件的自定义方法的实现。
 
 >[!IMPORTANT]
-> ActiveX 是一项传统技术，不应使用新的开发。 本文将取代 ActiveX 的现代技术的详细信息，请参阅[ActiveX 控件](activex-controls.md)。
+> ActiveX 是一项传统技术，不应使用新的开发。 有关取代 ActiveX 的现代技术的详细信息，请参阅[ActiveX 控件](activex-controls.md)。
 
 ActiveX 控件用户可以在任何时候执行特定于控件的操作调用的自定义方法。 自定义方法的调度映射条目的 DISP_FUNCTION 形式。
 

@@ -1,7 +1,7 @@
 ---
 title: OLE DB 提供程序模板 （c + +） |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/24/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0eef554fd6b7fbd16ff7c34434d08d917b5dcea9
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 4d4d93f656279cf5e5c548ef09bf809364c9d90e
+ms.sourcegitcommit: 840033ddcfab51543072604ccd5656fc6d4a5d3a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50080060"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50216404"
 ---
 # <a name="ole-db-provider-templates-c"></a>OLE DB 提供程序模板 (C++)
 
@@ -43,19 +43,19 @@ OLE DB 访问接口是为使用者对象的接口调用服务的 COM 对象的�
 
 ## <a name="ole-db-specification-level-support"></a>OLE DB 规范级别支持
 
-OLE DB 提供程序模板支持 OLE DB 版本 2.7 规范。 使用 OLE DB 提供程序模板，您可以实现兼容级别为 0 的访问接口。 提供程序示例中，例如，使用模板来实现执行 DOS DIR 命令来查询文件系统的 non-MS-DOS 命令服务器。 提供程序示例中的行集，它是用于返回表格数据的标准 OLE DB 机制返回目录信息。
+OLE DB 提供程序模板支持 OLE DB 版本 2.7 规范。 使用 OLE DB 提供程序模板，您可以实现兼容级别为 0 的访问接口。 `Provider`示例中，例如，使用模板来实现执行 DOS DIR 命令来查询文件系统的 non-MS-DOS 命令服务器。 `Provider`示例返回目录信息中的行集，它是用于返回表格数据的标准 OLE DB 机制。
 
 最简单的提供程序支持的 OLE DB 模板类型是具有任何命令的只读提供程序。 此外支持使用命令的提供程序，以及书签和读/写功能。 可以通过编写额外代码来实现读/写提供程序。 动态行集和事务不支持的最新版本，但如果您希望可以将其添加。
 
 ## <a name="when-do-you-need-to-create-an-ole-db-provider"></a>你需要时创建的 OLE DB 访问接口？
 
-您不始终需要创建自己的提供程序;Microsoft 提供了多个中的预打包、 标准提供商**数据链接属性**Visual c + + 中的对话框。 若要创建的 OLE DB 访问接口的主要原因是利用通用数据访问策略。 因此是一些这样做的优点：
+您始终不需要创建自己的提供程序;Microsoft 提供了多个中的预打包、 标准提供商**数据链接属性**Visual c + + 中的对话框。 若要创建的 OLE DB 访问接口的主要原因是利用通用数据访问策略。 因此是一些这样做的优点：
 
 - 通过任何语言如 c + +、 Basic 和 Visual Basic Scripting Edition 访问数据。 它允许你的组织中不同程序员访问相同的数据相同的方式，而不考虑它们使用何种语言。
 
-- 例如，SQL Server、 Excel 和 Access 规避用户数据的其他数据源。 这可能非常有用，如果你想要在不同的格式中间传输数据。
+- 打开到 SQL Server、 Excel 和 Access 等其他数据源数据。 这很有用，如果你想要在不同的格式中间传输数据。
 
-- 在参与跨数据源 （异类） 操作。 这可以是数据仓库的以非常高效的方式。 使用 OLE DB 访问接口，可以将数据保存在其本机格式，并仍将能够访问在一个简单的操作。
+- 在参与跨数据源 （异类） 操作。 这可以是数据仓库的有效方法。 使用 OLE DB 访问接口，可以将数据保存在其本机格式，并仍将能够访问在一个简单的操作。
 
 - 将其他功能添加到你的数据，如查询处理。
 
@@ -81,5 +81,5 @@ OLE DB 提供程序模板支持 OLE DB 版本 2.7 规范。 使用 OLE DB 提供
 ## <a name="see-also"></a>请参阅
 
 [数据访问](../data-access-in-cpp.md)<br/>
-[OLE DB SDK 文档](/previous-versions/windows/desktop/ms722784)
-[OLE DB 程序员参考](/previous-versions/windows/desktop/ms713643)
+[OLE DB SDK 文档](/previous-versions/windows/desktop/ms722784)<br/>
+[OLE DB 程序员参考](/previous-versions/windows/desktop/ms713643)<br/>

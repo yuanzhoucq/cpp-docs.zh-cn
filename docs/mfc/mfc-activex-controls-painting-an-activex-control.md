@@ -15,19 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b33097c6f6f747d99cf582c1553e25942f1bfcd
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 4e5b0f1b38e73523a476c83e19ab9bf812fdc2fa
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50056004"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204530"
 ---
 # <a name="mfc-activex-controls-painting-an-activex-control"></a>MFC ActiveX 控件：绘制 ActiveX 控件
 
 本文描述了 ActiveX 控件绘制进程，以及如何改变绘制代码来优化过程。 (请参阅[优化控件绘制](../mfc/optimizing-control-drawing.md)的技术如何优化绘制但不使控件单独还原以前选定的 GDI 对象。 绘制所有控件之后，容器可以自动还原原始对象。）
 
 >[!IMPORTANT]
-> ActiveX 是一项传统技术，不应使用新的开发。 本文将取代 ActiveX 的现代技术的详细信息，请参阅[ActiveX 控件](activex-controls.md)。
+> ActiveX 是一项传统技术，不应使用新的开发。 有关取代 ActiveX 的现代技术的详细信息，请参阅[ActiveX 控件](activex-controls.md)。
 
 本文中的示例来自 MFC ActiveX 控件向导利用默认设置创建的控件。 创建主干控件应用程序使用 MFC ActiveX 控件向导的详细信息，请参阅文章[MFC ActiveX 控件向导](../mfc/reference/mfc-activex-control-wizard.md)。
 
