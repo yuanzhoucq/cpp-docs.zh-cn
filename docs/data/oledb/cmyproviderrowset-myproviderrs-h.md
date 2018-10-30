@@ -22,26 +22,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4808f9165fa6f139b0d3b576620e9db80eb360d3
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 211c83ec63611c493f03e48b58619caca373ce65
+ms.sourcegitcommit: 840033ddcfab51543072604ccd5656fc6d4a5d3a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50076992"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50216352"
 ---
 # <a name="ccustomrowset-customrsh"></a>CCustomRowset (CustomRS.H)
 
-该向导生成的行集对象的项。 在此例中，它称为 `CCustomRowset`。 `CCustomRowset`类继承自调用一个 OLE DB 提供程序类`CRowsetImpl`，它可实现行集对象的所有必要的接口。 下面的代码演示的继承链`CRowsetImpl`:
+该向导生成的行集对象的项。 在这种情况下，名为`CCustomRowset`。 `CCustomRowset`类继承自调用一个 OLE DB 提供程序类`CRowsetImpl`，它可实现行集对象的所有必要的接口。 下面的代码演示的继承链`CRowsetImpl`:
 
 ```cpp
-template <class T, class Storage, class CreatorClass,
+template <class T, class Storage, class CreatorClass, 
    class ArrayType = CAtlArray<Storage>>
 class CMyRowsetImpl:
-   public CRowsetImpl<T, Storage, CreatorClass, ArrayType,
+   public CRowsetImpl<T, Storage, CreatorClass, ArrayType, 
       CSimpleRow, IRowsetLocateImpl< T >>
 ```
 
-`CRowsetImpl` 此外使用`IAccessor`和`IColumnsInfo`接口。 它使用这些接口在表中的输出字段。 类还提供一个实现`IRowsetIdentity`，它允许使用方以确定两个行是否相同。 `IRowsetInfo`接口实现行集对象的属性。 `IConvertType`接口允许提供商联系以解决请求的使用者的数据类型和所使用的提供程序之间的差异。
+`CRowsetImpl` 此外使用`IAccessor`和`IColumnsInfo`接口。 它使用这些接口在表中的输出字段。 类还提供一个实现`IRowsetIdentity`，它允许使用方以确定两个行都相同。 `IRowsetInfo`接口实现行集对象的属性。 `IConvertType`接口允许提供商联系以解决请求的使用者的数据类型和所使用的提供程序之间的差异。
 
 `IRowset`接口实际上处理数据检索。 使用者首先调用调用的方法`GetNextRows`若要返回的句柄到行中称为`HROW`。 然后，使用者调用`IRowset::GetData`考虑到这`HROW`来检索所请求的数据。
 
@@ -51,4 +51,4 @@ class CMyRowsetImpl:
 
 ## <a name="see-also"></a>请参阅
 
-[提供程序向导生成的文件](../../data/oledb/provider-wizard-generated-files.md)
+[提供程序向导生成的文件](../../data/oledb/provider-wizard-generated-files.md)<br/>

@@ -22,12 +22,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: bcabecde8f299e878ec6498dada503a894c406b4
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 3ad9a2c9ac2d7371cc1fb357e2ce6a9e35701607
+ms.sourcegitcommit: 840033ddcfab51543072604ccd5656fc6d4a5d3a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50081126"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50216378"
 ---
 # <a name="ccustomsource-customdsh"></a>CCustomSource (CustomDS.h)
 
@@ -37,6 +37,27 @@ ms.locfileid: "50081126"
 /////////////////////////////////////////////////////////////////////////
 // CCustomSource
 class ATL_NO_VTABLE CCustomSource :
+   public CComObjectRootEx<CComSingleThreadModel>,
+   public CComCoClass<CCustomSource, &CLSID_Custom>,
+   public IDBCreateSessionImpl<CCustomSource, CCustomSession>,
+   public IDBInitializeImpl<CCustomSource>,
+   public IDBPropertiesImpl<CCustomSource>,
+   public IPersistImpl<CCustomSource>,
+   public IInternalConnectionImpl<CCustomSource>
+```
+
+所有 COM 组件均都派生自`CComObjectRootEx`和`CComCoClass`。 `CComObjectRootEx` 提供所有实现`IUnknown`接口。 它可以处理任何线程模型。 `CComCoClass` 处理所需的任何错误支持。 如果你想要将更丰富的错误信息发送到客户端，则可以使用一些错误 Api 中`CComCoClass`。
+
+数据源对象还从多个 Impl 类继承。 每个类提供了一个接口的实现。 数据源对象实现`IPersist`， `IDBProperties`， `IDBInitialize`，和`IDBCreateSession`接口。 OLE DB 要求每个接口来实现数据源对象。 您可以选择支持或通过继承或不继承自其中一个 Impl 类的支持特定功能。 如果你想要支持`IDBDataSourceAdmin`从继承的接口，`IDBDataSourceAdminImpl`类，以获取所需的功能。
+
+## <a name="com-map"></a>COM 映射
+
+每当客户端调用`QueryInterface`对于数据源上的接口，它将经历以下 COM 映射：
+
+```cpp
+/////////////////////////////////////////////////////////////////////////
+// CCustomSource
+class ATL_NO_VTABLE CCustomSource : 
    public CComObjectRootEx<CComSingleThreadModel>,
    public CComCoClass<CCustomSource, &CLSID_Custom>,
    public IDBCreateSessionImpl<CCustomSource, CCustomSession>,
@@ -68,7 +89,7 @@ COM_INTERFACE_ENTRY 宏来自 ATL 和告诉的实现`QueryInterface`在`CComObje
 
 ## <a name="property-map"></a>属性映射
 
-属性映射指定提供程序指定的所有属性：
+属性映射指定提供程序分配的所有属性：
 
 ```cpp
 BEGIN_PROPSET_MAP(CCustomSource)
@@ -140,7 +161,7 @@ END_PROPSET_MAP()
 
 OLE DB 中的属性进行分组。 数据源对象具有两个组的属性： 一个用于 DBPROPSET_DATASOURCEINFO 设置，一个用于 DBPROPSET_DBINIT 设置。 DBPROPSET_DATASOURCEINFO 集对应于提供程序和其数据源有关的属性。 DBPROPSET_DBINIT 集对应于在初始化时使用的属性。 OLE DB 提供程序模板处理 PROPERTY_SET 宏与这些集。 宏还将创建包含的属性数组的块。 每当客户端调用`IDBProperties`接口，该提供程序使用的属性映射。
 
-不需要实现规范中的每个属性。 但是，必须支持所需的属性;请参阅详细信息的级别 0 符合性规范。 如果不想要支持的属性，您可以从映射中将其删除。 如果你想要支持的属性，将其添加到映射使用 PROPERTY_INFO_ENTRY 宏。 该宏对应于`UPROPINFO`结构，如下面的代码中所示：
+不需要以规范中实现每个属性。 但是，必须支持所需的属性;请参阅详细信息的级别 0 符合性规范。 如果不想要支持的属性，您可以从映射中将其删除。 如果你想要支持的属性，将其添加到映射使用 PROPERTY_INFO_ENTRY 宏。 该宏对应于`UPROPINFO`结构，如下面的代码中所示：
 
 ```cpp
 struct UPROPINFO
@@ -162,13 +183,13 @@ struct UPROPINFO
 
 如果你想要更改属性 （请注意，使用者可以在任何时候更改可写属性的值） 的默认值，可以使用 PROPERTY_INFO_ENTRY_VALUE 或 PROPERTY_INFO_ENTRY_EX 宏。 这些宏，可以指定相应属性的值。 PROPERTY_INFO_ENTRY_VALUE 宏是速记表示法，您可以更改的值。 PROPERTY_INFO_ENTRY_VALUE 宏将调用 PROPERTY_INFO_ENTRY_EX 宏。 此宏，可添加或更改的属性中的所有`UPROPINFO`结构。
 
-如果你想要定义您自己的属性集，可以添加一个额外的 BEGIN_PROPSET_MAP/END_PROPSET_MAP 组合，从而。 您需要定义属性集的 GUID，然后定义您自己的属性。 如果已将特定于提供程序的属性，则将它们添加到新的属性而不是使用一个现有设置。 这样可避免在更高版本的 OLE DB 中的问题。
+如果你想要定义您自己的属性集，可以添加一个额外的 BEGIN_PROPSET_MAP/END_PROPSET_MAP 组合，从而。 定义属性集的 GUID，然后定义您自己的属性。 如果已将特定于提供程序的属性，则将它们添加到新的属性而不是使用一个现有设置。 这样可避免在更高版本的 OLE DB 中的问题。
 
 ## <a name="user-defined-property-sets"></a>用户定义的属性集
 
 Visual c + + 支持用户定义的属性集。 无需重写`GetProperties`或`GetPropertyInfo`。 相反，模板会检测到任何用户定义的属性集，并将其添加到适当的对象。
 
-如果有需要在初始化时是可用的用户定义的属性集 (即，使用者调用之前`IDBInitialize::Initialize`)，可以使用 UPROPSET_USERINIT 标志结合 BEGIN_PROPERTY_SET_EX 宏指定这。 在属性集中必须是为实现此目的 （如 OLE DB 规范要求） 的数据源对象中。 例如：
+如果有需要在初始化时是可用的用户定义的属性集 (即，使用者调用之前`IDBInitialize::Initialize`)，可以使用 UPROPSET_USERINIT 标志以及 BEGIN_PROPERTY_SET_EX 宏指定这。 在属性集中必须是为实现此目的 （如 OLE DB 规范要求） 的数据源对象中。 例如：
 
 ```cpp
 BEGIN_PROPERTY_SET_EX(DBPROPSET_MYPROPSET, UPROPSET_USERINIT)
@@ -178,4 +199,4 @@ END_PROPERTY_SET_EX(DBPROPSET_MYPROPSET)
 
 ## <a name="see-also"></a>请参阅
 
-[提供程序向导生成的文件](../../data/oledb/provider-wizard-generated-files.md)
+[提供程序向导生成的文件](../../data/oledb/provider-wizard-generated-files.md)<br/>

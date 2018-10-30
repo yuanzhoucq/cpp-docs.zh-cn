@@ -20,19 +20,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 19dc08fc29de4affaea987025a2bc8b92bc56460
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 053a6dcf009fa65bbba9c864803db78866037196
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50079852"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204413"
 ---
 # <a name="mfc-activex-controls-property-pages"></a>MFC ActiveX 控件：属性页
 
 属性页允许 ActiveX 控件用户可以查看和更改 ActiveX 控件属性。 通过调用控件的属性对话框中，其中包含一个或多个属性页提供用于查看和编辑控件属性的自定义的图形界面访问这些属性。
 
 >[!IMPORTANT]
-> ActiveX 是一项传统技术，不应使用新的开发。 本文将取代 ActiveX 的现代技术的详细信息，请参阅[ActiveX 控件](activex-controls.md)。
+> ActiveX 是一项传统技术，不应使用新的开发。 有关取代 ActiveX 的现代技术的详细信息，请参阅[ActiveX 控件](activex-controls.md)。
 
 ActiveX 控件属性页会显示在两种方法：
 
@@ -112,7 +112,7 @@ ActiveX 控件属性页会显示在两种方法：
 
 ### <a name="property-page-functions"></a>属性页函数
 
-|功能名称|使用此函数将链接|
+|函数名|使用此函数将链接|
 |-------------------|-------------------------------|
 |`DDP_CBIndex`|与控件属性的组合框中的所选的字符串的索引。|
 |`DDP_CBString`|与控件属性的组合框中所选的字符串。 所选的字符串可以以属性的值相同的字母开头，但需要完全匹配它。|

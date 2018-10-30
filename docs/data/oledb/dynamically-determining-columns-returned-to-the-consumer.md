@@ -1,7 +1,7 @@
 ---
 title: 动态确定列返回给使用者 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/26/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: aa1e10c8b6a8f440cc74348ce06c44fdd9d24628
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: a2149c50f4dc8880e20bff2401adf0db46ad6588
+ms.sourcegitcommit: 840033ddcfab51543072604ccd5656fc6d4a5d3a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50064285"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50216495"
 ---
 # <a name="dynamically-determining-columns-returned-to-the-consumer"></a>动态确定返回给使用者的列
 
@@ -40,21 +40,20 @@ public:
    TCHAR szText[256];
    TCHAR szCommand2[256];
    TCHAR szText2[256];
-
+  
    static ATLCOLUMNINFO* GetColumnInfo(void* pThis, ULONG* pcCols);
    bool operator==(const CAgentMan& am)
    {
       return (lstrcmpi(szCommand, am.szCommand) == 0);
    }
-
 };
 ```
 
-接下来，实现`GetColumnInfo`函数中 CustomRS.cpp，如下面的代码中所示。
+接下来，实现`GetColumnInfo`函数，在*自定义*RS.cpp，如下面的代码中所示。
 
 `GetColumnInfo` 首先检查是否 OLE DB 属性`DBPROP_BOOKMARKS`设置。 要获取其属性`GetColumnInfo`使用指针 (`pRowset`) 到行集对象。 `pThis`指针表示创建了行集，这是存储的属性映射的类的类。 `GetColumnInfo` 类型强制转换`pThis`指针，指向`RCustomRowset`指针。
 
-若要检查`DBPROP_BOOKMARKS`属性，`GetColumnInfo`使用`IRowsetInfo`接口，你可以通过调用获取`QueryInterface`上`pRowset`接口。 作为替代方法，你可以使用 ATL [CComQIPtr](../../atl/reference/ccomqiptr-class.md)方法相反。
+若要检查`DBPROP_BOOKMARKS`属性，`GetColumnInfo`使用`IRowsetInfo`接口，可以通过调用获取`QueryInterface`上`pRowset`接口。 作为替代方法，你可以使用 ATL [CComQIPtr](../../atl/reference/ccomqiptr-class.md)方法相反。
 
 ```cpp
 ////////////////////////////////////////////////////////////////////
@@ -63,90 +62,59 @@ ATLCOLUMNINFO* CAgentMan::GetColumnInfo(void* pThis, ULONG* pcCols)
 {
    static ATLCOLUMNINFO _rgColumns[5];
    ULONG ulCols = 0;
-
-   // Check the property flag for bookmarks; if it is set, set the zero
+  
+   // Check the property flag for bookmarks; if it is set, set the zero 
    // ordinal entry in the column map with the bookmark information.
    CAgentRowset* pRowset = (CAgentRowset*) pThis;
    CComQIPtr<IRowsetInfo, &IID_IRowsetInfo> spRowsetProps = pRowset;
-
+  
    CDBPropIDSet set(DBPROPSET_ROWSET);
    set.AddPropertyID(DBPROP_BOOKMARKS);
    DBPROPSET* pPropSet = NULL;
    ULONG ulPropSet = 0;
    HRESULT hr;
-
+  
    if (spRowsetProps)
       hr = spRowsetProps->GetProperties(1, &set, &ulPropSet, &pPropSet);
-
+  
    if (pPropSet)
    {
       CComVariant var = pPropSet->rgProperties[0].vValue;
       CoTaskMemFree(pPropSet->rgProperties);
       CoTaskMemFree(pPropSet);
-
+  
       if (SUCCEEDED(hr) && (var.boolVal == VARIANT_TRUE))
       {
-         ADD_COLUMN_ENTRY_EX(ulCols, OLESTR("Bookmark"), 0, sizeof(DWORD),
-         DBTYPE_BYTES, 0, 0, GUID_NULL, CAgentMan, dwBookmark,
+         ADD_COLUMN_ENTRY_EX(ulCols, OLESTR("Bookmark"), 0, sizeof(DWORD), 
+         DBTYPE_BYTES, 0, 0, GUID_NULL, CAgentMan, dwBookmark, 
          DBCOLUMNFLAGS_ISBOOKMARK)
          ulCols++;
       }
    }
-
+  
    // Next, set the other columns up.
-   ADD_COLUMN_ENTRY(ulCols, OLESTR("Command"), 1, 256, DBTYPE_STR, 0xFF, 0xFF,
+   ADD_COLUMN_ENTRY(ulCols, OLESTR("Command"), 1, 256, DBTYPE_STR, 0xFF, 0xFF, 
       GUID_NULL, CAgentMan, szCommand)
    ulCols++;
-   ADD_COLUMN_ENTRY(ulCols, OLESTR("Text"), 2, 256, DBTYPE_STR, 0xFF, 0xFF,
+   ADD_COLUMN_ENTRY(ulCols, OLESTR("Text"), 2, 256, DBTYPE_STR, 0xFF, 0xFF, 
       GUID_NULL, CAgentMan, szText)
    ulCols++;
-
-   ADD_COLUMN_ENTRY(ulCols, OLESTR("Command2"), 3, 256, DBTYPE_STR, 0xFF, 0xFF,
+  
+   ADD_COLUMN_ENTRY(ulCols, OLESTR("Command2"), 3, 256, DBTYPE_STR, 0xFF, 0xFF, 
       GUID_NULL, CAgentMan, szCommand2)
    ulCols++;
-   ADD_COLUMN_ENTRY(ulCols, OLESTR("Text2"), 4, 256, DBTYPE_STR, 0xFF, 0xFF,
+   ADD_COLUMN_ENTRY(ulCols, OLESTR("Text2"), 4, 256, DBTYPE_STR, 0xFF, 0xFF, 
       GUID_NULL, CAgentMan, szText2)
    ulCols++;
-
+  
    if (pcCols != NULL)
       *pcCols = ulCols;
-
+  
    return _rgColumns;
 }
 ```
 
-此示例使用静态数组以包含的列信息。 如果使用者不希望在书签列，则不使用数组中的一个条目。 若要处理的信息，请创建两个数组宏： ADD_COLUMN_ENTRY 和 ADD_COLUMN_ENTRY_EX。 ADD_COLUMN_ENTRY_EX 采用了额外的参数， `flags`，也就是说，当你指定的书签列时才需要。
-
-```cpp
-////////////////////////////////////////////////////////////////////////
-// CustomRS.h
-
-#define ADD_COLUMN_ENTRY(ulCols, name, ordinal, colSize, type, precision, scale, guid, dataClass, member) \
-   _rgColumns[ulCols].pwszName = (LPOLESTR)name; \
-   _rgColumns[ulCols].pTypeInfo = (ITypeInfo*)NULL; \
-   _rgColumns[ulCols].iOrdinal = (ULONG)ordinal; \
-   _rgColumns[ulCols].dwFlags = 0; \
-   _rgColumns[ulCols].ulColumnSize = (ULONG)colSize; \
-   _rgColumns[ulCols].wType = (DBTYPE)type; \
-   _rgColumns[ulCols].bPrecision = (BYTE)precision; \
-   _rgColumns[ulCols].bScale = (BYTE)scale; \
-   _rgColumns[ulCols].cbOffset = offsetof(dataClass, member);
-
-#define ADD_COLUMN_ENTRY_EX(ulCols, name, ordinal, colSize, type, precision, scale, guid, dataClass, member, flags) \
-   _rgColumns[ulCols].pwszName = (LPOLESTR)name; \
-   _rgColumns[ulCols].pTypeInfo = (ITypeInfo*)NULL; \
-   _rgColumns[ulCols].iOrdinal = (ULONG)ordinal; \
-   _rgColumns[ulCols].dwFlags = flags; \
-   _rgColumns[ulCols].ulColumnSize = (ULONG)colSize; \
-   _rgColumns[ulCols].wType = (DBTYPE)type; \
-   _rgColumns[ulCols].bPrecision = (BYTE)precision; \
-   _rgColumns[ulCols].bScale = (BYTE)scale; \
-   _rgColumns[ulCols].cbOffset = offsetof(dataClass, member); \
-   memset(&(_rgColumns[ulCols].columnid), 0, sizeof(DBID)); \
-   _rgColumns[ulCols].columnid.uName.pwszName = (LPOLESTR)name;
-```
-
-在`GetColumnInfo`函数，书签宏用法如下：
+此示例使用静态数组来保存列信息。 如果使用者不想要书签列，则不使用数组中的一个条目。 若要处理的信息，请创建两个数组宏： ADD_COLUMN_ENTRY 和 ADD_COLUMN_ENTRY_EX。 ADD_COLUMN_ENTRY_EX 采用了额外的参数，*标志*，也就是说，当你指定的书签列时才需要。
 
 ```cpp
 ADD_COLUMN_ENTRY_EX(ulCols, OLESTR("Bookmark"), 0, sizeof(DWORD),
@@ -158,4 +126,4 @@ ADD_COLUMN_ENTRY_EX(ulCols, OLESTR("Bookmark"), 0, sizeof(DWORD),
 
 ## <a name="see-also"></a>请参阅
 
-[增强简单的只读提供程序](../../data/oledb/enhancing-the-simple-read-only-provider.md)
+[增强简单的只读提供程序](../../data/oledb/enhancing-the-simple-read-only-provider.md)<br/>

@@ -15,22 +15,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a2a580c5ae3d80349b74e6ce7606763c32201805
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: b1730c839ab2eb87511a241c28409646a999cfd6
+ms.sourcegitcommit: 840033ddcfab51543072604ccd5656fc6d4a5d3a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50063323"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50216248"
 ---
 # <a name="reading-strings-into-the-ole-db-provider"></a>将字符串读入 OLE DB 提供程序
 
 `RCustomRowset::Execute`函数打开的文件和读取字符串。 使用者将文件名传递给提供程序，通过调用[icommandtext:: Setcommandtext](/previous-versions/windows/desktop/ms709757)。 提供程序接收的文件的名称，并将其存储在成员变量`m_szCommandText`。 `Execute` 读取的文件名的`m_szCommandText`。 如果文件名无效或文件不可用，`Execute`返回错误。 否则，它会打开该文件并调用`fgets`检索字符串。 为每个集的字符串它读取`Execute`创建的用户记录实例 (`CAgentMan`) 并将其放到一个数组。
 
-如果无法打开该文件，`Execute`必须返回 DB_E_NOTABLE。 如果改为返回 E_FAIL，提供程序不会使用多个使用者和未通过 OLE DB[一致性测试](../../data/oledb/testing-your-provider.md)。
+如果无法打开该文件，`Execute`必须返回 DB_E_NOTABLE。 如果改为返回 E_FAIL，提供程序不会使用多个使用者并不会传递 OLE DB[一致性测试](../../data/oledb/testing-your-provider.md)。
 
 ## <a name="example"></a>示例
-
-已编辑`Execute`函数如下所示：
 
 ```cpp
 /////////////////////////////////////////////////////////////////////////
@@ -106,4 +104,4 @@ public:
 
 ## <a name="see-also"></a>请参阅
 
-[实现简单的只读提供程序](../../data/oledb/implementing-the-simple-read-only-provider.md)
+[实现简单的只读提供程序](../../data/oledb/implementing-the-simple-read-only-provider.md)<br/>

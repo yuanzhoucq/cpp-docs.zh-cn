@@ -20,19 +20,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ccf2da630c72962ee3e74badc250de5cce5f14e2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 09a4cdccf92df9681a85a03369ad0ba1792a6b25
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46407148"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204725"
 ---
 # <a name="mfc-activex-control-wizard"></a>MFC ActiveX 控件向导
 
 ActiveX 控件是特定类型的[自动化服务器](../../mfc/automation-servers.md); 它是可重用组件。 承载 ActiveX 控件的应用程序是[自动化客户端](../../mfc/automation-clients.md)该控件。 如果你的目标是创建此类可重用的组件，然后使用此向导创建您的控件。 请参阅[MFC ActiveX 控件](../../mfc/mfc-activex-controls.md)有关详细信息。
 
 >[!IMPORTANT]
-> ActiveX 是一项传统技术，不应使用新的开发。 本文将取代 ActiveX 的现代技术的详细信息，请参阅[ActiveX 控件](../activex-controls.md)。
+> ActiveX 是一项传统技术，不应使用新的开发。 有关取代 ActiveX 的现代技术的详细信息，请参阅[ActiveX 控件](../activex-controls.md)。
 
 另外，可以创建自动化服务器 MFC 应用程序中使用[MFC 应用程序向导](../../mfc/reference/mfc-application-wizard.md)。
 

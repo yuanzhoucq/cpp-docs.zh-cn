@@ -25,19 +25,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3be523feaacb403076f2c066943ca55ace958dce
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: cf2568561e3e79eaf7c2f56b0b571f5c9e74f268
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46401831"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204517"
 ---
 # <a name="mfc-activex-controls-serializing"></a>MFC ActiveX 控件：序列化
 
 本文介绍如何序列化的 ActiveX 控件。 序列化是从读取或写入到永久存储媒体，如磁盘文件的过程。 Microsoft 基础类 (MFC) 库中类进行序列化提供了内置支持`CObject`。 `COleControl` 扩展了此支持添加到通过属性交换机制使用的 ActiveX 控件。
 
 >[!IMPORTANT]
-> ActiveX 是一项传统技术，不应使用新的开发。 本文将取代 ActiveX 的现代技术的详细信息，请参阅[ActiveX 控件](activex-controls.md)。
+> ActiveX 是一项传统技术，不应使用新的开发。 有关取代 ActiveX 的现代技术的详细信息，请参阅[ActiveX 控件](activex-controls.md)。
 
 通过重写实现 ActiveX 控件的序列化[COleControl::DoPropExchange](../mfc/reference/colecontrol-class.md#dopropexchange)。 此函数中，在加载过程中调用，并保存的控件对象，将存储使用成员变量或更改通知的成员变量实现的所有属性。
 
@@ -62,7 +62,7 @@ ActiveX 控件向导用于生成控件项目，当多个默认处理程序函数
 
 下表列出了可能的属性交换函数可用于序列化该控件的属性：
 
-|属性交换函数|目标|
+|属性交换函数|目的|
 |---------------------------------|-------------|
 |**PX_Blob （)**|序列化为二进制大型对象 (BLOB) 数据属性的类型。|
 |**PX_Bool （)**|序列化类型的布尔值属性。|

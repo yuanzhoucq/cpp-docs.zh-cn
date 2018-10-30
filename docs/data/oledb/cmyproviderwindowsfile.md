@@ -20,22 +20,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 947efa181a6b632050c01c4f2b327cf11a113e3f
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: bbbde895c7c83264d0ad77bf50bfc14428cdb99f
+ms.sourcegitcommit: 840033ddcfab51543072604ccd5656fc6d4a5d3a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50070928"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50216261"
 ---
 # <a name="ccustomwindowsfile"></a>CCustomWindowsFile
 
-该向导创建一个类以包含一个行的数据;在这种情况下，名为`CCustomWindowsFile`。 下面的代码用于`CCustomWindowsFile`是向导生成和使用列出的目录中的所有文件`WIN32_FIND_DATA`结构。 `CCustomWindowsFile` 继承自`WIN32_FIND_DATA`结构：
+向导将创建具有一个行的数据; 的类在这种情况下，名为`CCustomWindowsFile`。 下面的代码用于`CCustomWindowsFile`是向导生成和使用列出的目录中的所有文件`WIN32_FIND_DATA`结构。 `CCustomWindowsFile` 继承自`WIN32_FIND_DATA`结构：
 
 ```cpp
 /////////////////////////////////////////////////////////////////////
 // CustomRS.H
 
-class CCustomWindowsFile:
+class CCustomWindowsFile: 
    public WIN32_FIND_DATA
 {
 public:
@@ -49,7 +49,7 @@ END_PROVIDER_COLUMN_MAP()
 };
 ```
 
-`CCustomWindowsFile` 称为[用户记录类](../../data/oledb/user-record.md)因为它还包含描述提供程序的行集中的列映射。 提供程序列映射包含每个字段使用 PROVIDER_COLUMN_ENTRY 宏的行集中的一个条目。 宏指定列名称，序号，和结构项的偏移量。 在上述代码中的提供程序列条目包含的偏移量`WIN32_FIND_DATA`结构。 当使用者调用`IRowset::GetData`，在一个连续的缓冲区中传输数据。 而不是让您执行指针算法，该映射，可指定数据成员。
+`CCustomWindowsFile` 称为[用户记录类](../../data/oledb/user-record.md)因为它也具有描述提供程序的行集中的列的映射。 提供程序列映射包含每个字段使用 PROVIDER_COLUMN_ENTRY 宏的行集中的一个条目。 宏指定列名称，序号，和结构项的偏移量。 在上述代码中的提供程序列条目包含的偏移量`WIN32_FIND_DATA`结构。 当使用者调用`IRowset::GetData`，在一个连续的缓冲区中传输数据。 而不是让您执行指针算法，该映射，可指定数据成员。
 
 `CCustomRowset`类还包含`Execute`方法。 `Execute` 是什么实际从本机源读取中的数据。 下面的代码显示了由向导生成`Execute`方法。 该函数使用 Win32`FindFirstFile`并`FindNextFile`Api 来检索有关目录中的文件的信息并将其放置在实例的`CCustomWindowsFile`类。
 
@@ -84,10 +84,10 @@ HRESULT Execute(DBPARAMS * pParams, LONG* pcRowsAffected)
 }
 ```
 
-表示要搜索的目录`m_strCommandText`; 其中包含所表示的文本`ICommandText`中命令对象接口。 如果未不指定任何目录，则使用当前目录。
+要搜索的目录所示`m_strCommandText`; 其中包含所表示的文本`ICommandText`中命令对象接口。 如果未不指定任何目录，则使用当前目录。
 
-此方法创建一个条目 （对应于一行） 每个文件，并将其放入`m_rgRowData`数据成员。 `CRowsetImpl`类定义`m_rgRowData`数据成员。 此数组中的数据表示整个表，并在整个模板。
+此方法创建一个条目 （对应于一行） 每个文件，并将其放入`m_rgRowData`数据成员。 `CRowsetImpl`类定义`m_rgRowData`数据成员。 此数组中的数据显示整个表，并在整个模板。
 
 ## <a name="see-also"></a>请参阅
 
-[提供程序向导生成的文件](../../data/oledb/provider-wizard-generated-files.md)
+[提供程序向导生成的文件](../../data/oledb/provider-wizard-generated-files.md)<br/>

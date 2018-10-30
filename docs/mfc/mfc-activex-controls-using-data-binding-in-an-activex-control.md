@@ -24,19 +24,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 397356f8144e3680f3b2d19824d19c0a3bbaddd1
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 5a02330d938e1952d3e6b547d49ddb551bf594a5
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50062608"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204582"
 ---
 # <a name="mfc-activex-controls-using-data-binding-in-an-activex-control"></a>MFC ActiveX 控件：在 ActiveX 控件中使用数据绑定
 
 ActiveX 控件的功能更强大的用途之一是数据绑定，它允许控件绑定在一起在数据库中的特定字段的属性。 当用户修改此绑定的属性中的数据时，该控件通知数据库和更新记录的字段的请求。 控制的成功或失败的请求，然后会通知数据库。
 
 >[!IMPORTANT]
-> ActiveX 是一项传统技术，不应使用新的开发。 本文将取代 ActiveX 的现代技术的详细信息，请参阅[ActiveX 控件](activex-controls.md)。
+> ActiveX 是一项传统技术，不应使用新的开发。 有关取代 ActiveX 的现代技术的详细信息，请参阅[ActiveX 控件](activex-controls.md)。
 
 本文介绍了您的任务在控件方面。 实现与数据库交互的数据绑定负责控制容器。 如何在容器中管理数据库交互已超出本文档讨论范围。 本文的其余部分介绍如何准备用于数据绑定控件。
 

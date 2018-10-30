@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dff9f3c988e7ffdf8f15b5502bb0326e2692a128
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 4ed220aad7dd90ff2b5ca97c4cf5160fd4d00ed4
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50079033"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204569"
 ---
 # <a name="compiler-warning-level-3-c4996"></a>编译器警告 （等级 3） C4996
 
@@ -35,7 +35,7 @@ ms.locfileid: "50079033"
 
 - [std::*function_name*::\_选中此项\_迭代器::\_Deprecate 调用到 std::*function_name*可能不安全的参数与此调用依靠调用方检查传递的值正确。若要禁用此警告，请使用 -D_SCL_SECURE_NO_WARNINGS。有关如何使用 Visual c + + Checked Iterators，请参阅文档](#unsafe-standard-library-functions)
 
-- [此函数或变量已被较新的库或操作系统功能取代。请考虑使用*new_item*相反。请参阅联机帮助了解详细信息。](#obsolete-crt-functions-and-variables)
+- [此函数或变量已被较新的库或操作系统功能。请考虑使用*new_item*相反。请参阅联机帮助了解详细信息。](#obsolete-crt-functions-and-variables)
 
 ## <a name="cause"></a>原因
 
@@ -256,7 +256,7 @@ int main() {
 
 ### <a name="obsolete-crt-functions-and-variables"></a>已过时的 CRT 函数和变量
 
-**此函数或变量已被较新的库或操作系统功能取代。请考虑使用** *new_item* **相反。请参阅联机帮助了解详细信息。**
+**此函数或变量已被较新的库或操作系统功能。请考虑使用** *new_item* **相反。请参阅联机帮助了解详细信息。**
 
 某些库函数和全局变量由于过时已弃用。 可能会在未来版本的库中删除这些函数和变量。 编译器会发出对这些项的弃用警告，并建议首选备用项。
 

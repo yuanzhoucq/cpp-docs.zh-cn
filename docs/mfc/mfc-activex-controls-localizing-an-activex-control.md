@@ -20,19 +20,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a970c7fd75eec2ea028f74220cbdb046e5d23bd
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: fb31eb15a61f1d4cbee7ba7402de508a84124461
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50053274"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204699"
 ---
 # <a name="mfc-activex-controls-localizing-an-activex-control"></a>MFC ActiveX 控件：本地化 ActiveX 控件
 
 本文讨论本地化 ActiveX 控件接口的过程。
 
 >[!IMPORTANT]
-> ActiveX 是一项传统技术，不应使用新的开发。 本文将取代 ActiveX 的现代技术的详细信息，请参阅[ActiveX 控件](activex-controls.md)。
+> ActiveX 是一项传统技术，不应使用新的开发。 有关取代 ActiveX 的现代技术的详细信息，请参阅[ActiveX 控件](activex-controls.md)。
 
 如果您要使 ActiveX 控件适应于国际市场，则可能需要本地化控件。 Windows 支持默认英语之外的许多语言，包括德语、法语和瑞典语。 如果控件的接口只显示英文，则这可能会给控件带来问题。
 

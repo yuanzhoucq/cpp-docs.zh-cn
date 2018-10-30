@@ -24,19 +24,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4864e0be8ef49541cc59474bdb24c2ef25840007
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a583b0b70473698963841a3bd9c84c79472eb529
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441195"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204439"
 ---
 # <a name="mfc-activex-controls-optimization"></a>MFC ActiveX 控件：优化
 
 本文介绍了可以用来优化更好的性能将 ActiveX 控件的方法。
 
 >[!IMPORTANT]
-> ActiveX 是一项传统技术，不应使用新的开发。 本文将取代 ActiveX 的现代技术的详细信息，请参阅[ActiveX 控件](activex-controls.md)。
+> ActiveX 是一项传统技术，不应使用新的开发。 有关取代 ActiveX 的现代技术的详细信息，请参阅[ActiveX 控件](activex-controls.md)。
 
 主题[启用关闭激活可见时选项](../mfc/turning-off-the-activate-when-visible-option.md)并[提供鼠标交互而处于非活动状态](../mfc/providing-mouse-interaction-while-inactive.md)讨论不创建窗口之前激活的控件。 本主题[提供无窗口激活](../mfc/providing-windowless-activation.md)讨论永远不会创建一个窗口，即使它们被激活的控件。
 
