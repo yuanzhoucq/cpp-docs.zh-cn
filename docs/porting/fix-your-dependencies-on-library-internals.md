@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18e72e6b5e3fdfdb352d908b2fb9d0609593e7c2
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 9dc9ef70eb2cf93ee92e32514681ae1a80810eb2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48820918"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069794"
 ---
 # <a name="fix-your-dependencies-on-library-internals"></a>在库的内部修复依赖项
 
@@ -88,4 +88,4 @@ inline size_t fnv1a_hash_bytes(const unsigned char * first, size_t count) {
 
 [从 Visual C++ 早期版本升级项目](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
 [潜在的升级问题概述 (Visual C++)](overview-of-potential-upgrade-issues-visual-cpp.md)<br/>
-[将代码升级到通用 CRT](upgrade-your-code-to-the-universal-crt.md)  
+[将代码升级到通用 CRT](upgrade-your-code-to-the-universal-crt.md)

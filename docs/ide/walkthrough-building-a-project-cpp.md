@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eca30330e721575443ba9d3f7b0b19c315427eb2
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 3071b779338150816cb1d52d16932ac0e3878538
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48234120"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50079308"
 ---
 # <a name="walkthrough-building-a-project-c"></a>演练：生成项目 (C++)
 
@@ -49,7 +49,7 @@ ms.locfileid: "48234120"
 
 1. 将分号重新添加到导致语法错误的行的末尾：
 
-     `return 0;`
+   `return 0;`
 
 1. 在菜单栏上，依次选择“生成” > “生成解决方案”。
 

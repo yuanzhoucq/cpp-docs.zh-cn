@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aefcd05f4187e22adf5f21c4beffa74ca8be39b3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5c7473cd7d6f2f07d81011eca0826b8066513d23
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46420551"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069251"
 ---
 # <a name="open-folder-projects-in-visual-c"></a>Visual C++ 中的“打开文件夹”项目
 
@@ -245,6 +245,7 @@ CppProperties.json 支持用于包含路径和其他属性值的系统环境变�
   ]
 }
 ```
+
 ### <a name="define-tasks-with-tasksvsjson"></a>使用 tasks.vs.json 定义任务
 
 可以通过直接在 IDE 中作为任务运行来自动执行生成脚本，或者对当前工作区中的现有文件自动执行任何其他外部操作。 可以通过右键单击文件或文件夹并选择“配置任务”来配置新任务。

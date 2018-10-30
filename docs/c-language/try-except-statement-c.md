@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f367bd5d9e61d44c24a876bf1d69ad24406d0630
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 957b76b6b39586016e9ed7b921b7bfa51a1fdf34
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46036210"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075133"
 ---
 # <a name="try-except-statement-c"></a>try-except 语句 (C)
 
@@ -49,11 +49,11 @@ ms.locfileid: "46036210"
 
 1. 如果在受保护节的执行过程中或受保护节调用的任何例程中发生异常，则会计算 `__except` 表达式，返回的值将确定该异常的处理方式。 有三个值：
 
-     `EXCEPTION_CONTINUE_SEARCH` 异常无法识别。 继续向上搜索堆栈查找处理程序，首先是所在的 **try-except** 语句，然后是具有下一个最高优先级的处理程序。
+   `EXCEPTION_CONTINUE_SEARCH` 异常无法识别。 继续向上搜索堆栈查找处理程序，首先是所在的 **try-except** 语句，然后是具有下一个最高优先级的处理程序。
 
-     `EXCEPTION_CONTINUE_EXECUTION` 异常可识别，但被关闭。 从出现异常的点继续执行。
+   `EXCEPTION_CONTINUE_EXECUTION` 异常可识别，但被关闭。 从出现异常的点继续执行。
 
-     `EXCEPTION_EXECUTE_HANDLER` 异常可识别。 通过执行 `__except` 复合语句来转移对异常处理程序的控制，然后在异常发生处继续执行。
+   `EXCEPTION_EXECUTE_HANDLER` 异常可识别。 通过执行 `__except` 复合语句来转移对异常处理程序的控制，然后在异常发生处继续执行。
 
 由于 `__except` 表达式将作为 C 表达式来计算，因此它被限制为单个值、条件表达式运算符或逗号运算符。 如果需要更大量的处理，表达式可调用返回上面列出的三个值之一的例程。
 

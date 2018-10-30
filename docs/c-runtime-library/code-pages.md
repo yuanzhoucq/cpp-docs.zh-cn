@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a81b358a89f3ed16747d27bc6401c01ad194680
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6eafdf3a140dd8a5976cf2fe8554b3b076111b74
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46113716"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060502"
 ---
 # <a name="code-pages"></a>代码页
 
@@ -43,7 +43,7 @@ Microsoft 运行库使用以下类型的代码页：
     setlocale ( LC_ALL, "" );
     ```
 
-     也可将区域设置设置为系统默认 ANSI 代码页。
+   也可将区域设置设置为系统默认 ANSI 代码页。
 
 - 区域设置代码页。 大量运行时例程的行为取决于当前的区域设置（包括区域设置代码页）。 （有关详细信息，请参阅[与区域设置相关的例程](../c-runtime-library/locale.md)。）默认情况下，Microsoft 运行库中的所有与区域设置相关的例程使用对应于“C”区域设置的代码页。 运行时可使用对 [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) 的调用来更改或查询所使用的区域设置代码页。
 

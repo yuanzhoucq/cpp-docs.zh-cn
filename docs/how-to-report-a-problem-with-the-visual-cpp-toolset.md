@@ -10,12 +10,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 279598c320131b163b936091560de45255c18a4d
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: e2ca0f4aa5f3965adc97e4cdaef09e01646e8809
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235004"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062114"
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset-or-documentation"></a>如何使用 Visual C++ 工具集或文档报告问题
 
@@ -381,7 +381,7 @@ Visual Studio 用户可使用 Visual Studio 中的“报告问题”工具报告
 
 默认情况下，报告中的所有信息、评论和回复都是公开可见的。 一般来说，这是有好处的，因为这样整个社区都能看到其他用户发现的问题、解决方案和解决方法。 但是，如果担心数据或身份公开后会出现隐私或知识产权问题，则可另作选择。
 
-如果担心身份泄露，请[创建一个新 Microsoft 帐户](https://signup.live.com/)，该帐户不会透露任何详细信息。 使用此帐户来创建报表。 
+如果担心身份泄露，请[创建一个新 Microsoft 帐户](https://signup.live.com/)，该帐户不会透露任何详细信息。 使用此帐户来创建报表。
 
 不要在初始报表标题或内容中添加任何想要保密的内容，因为这会被公开。 相反，请注意，将通过单独的评注以私密方式发送详细信息。 为确保报表发送给正确的人员，请在问题报表的主题列表中加入 cppcompiler。 创建问题报表后便可指定谁可以查看回复和附件。
 
