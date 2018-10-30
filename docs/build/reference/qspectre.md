@@ -80,7 +80,7 @@ Microsoft Visual c + + 库中也会提供与 Spectre 缓解版本。 可以在 V
 
 1. 选择**配置属性** > **C/c + +** > **命令行**属性页。
 
-1. 输入 **/Qspectre**中的编译器选项**其他选项**框。 选择**确定**以应用更改。
+1. 在**其他选项**框中输入 **/Qspectre** 编译器选项。选择**确定**以应用更改。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>以编程方式设置此编译器选项
 
