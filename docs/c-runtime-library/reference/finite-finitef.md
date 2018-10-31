@@ -1,10 +1,6 @@
 ---
-title: _finite、_finitef | Microsoft 文档
-ms.custom: ''
+title: _finite _finitef
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _finite
 - _finitef
@@ -28,23 +24,17 @@ f1_keywords:
 - math/_finite
 - math/_finitef
 - float/_finite
-dev_langs:
-- C++
 helpviewer_keywords:
 - finite function
 - _finite function
 - _finitef function
 ms.assetid: 5a7d7ca7-befb-4e1f-831d-28713c6eb805
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3367f13e68aa85e53d9f5f0ee83521ef465d3996
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7b1bce6f1b2da77ed9de255f49dd8d0160e33e31
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396636"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50431643"
 ---
 # <a name="finite-finitef"></a>_finite _finitef
 
@@ -69,11 +59,11 @@ int _finitef(
 
 ## <a name="return-value"></a>返回值
 
-同时 **_finite**和 **_finitef**返回非零值，如果自变量*x*是有限; 即，如果-INF < *x* < + INF。 如果该参数为无限值或为 NAN，则其返回 0。
+这两 **_finite**并 **_finitef**返回非零值，如果自变量*x*是有限; 即，如果-INF < *x* < + INF。 如果该参数为无限值或为 NAN，则其返回 0。
 
 ## <a name="remarks"></a>备注
 
-**_Finite**和 **_finitef**函数是 Microsoft 特定。 **_Finitef**函数才平台适用于 x86、 ARM、 或 ARM64 编译时可用。
+**_Finite**并 **_finitef**是 Microsoft 特定函数的函数。 **_Finitef**函数才时提供编译 x86、 ARM、 或 ARM64 平台。
 
 ## <a name="requirements"></a>要求
 

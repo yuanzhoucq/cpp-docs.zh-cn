@@ -1,15 +1,9 @@
 ---
-title: /Zc:referenceBinding （强制实施引用绑定规则） |Microsoft 文档
-ms.custom: ''
+title: '/Zc: referencebinding （强制引用绑定规则）'
 ms.date: 03/06/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - referenceBinding
 - /Zc:referenceBinding
-dev_langs:
-- C++
 helpviewer_keywords:
 - -Zc compiler options (C++)
 - referenceBinding
@@ -17,20 +11,16 @@ helpviewer_keywords:
 - /Zc compiler options (C++)
 - Zc compiler options (C++)
 ms.assetid: 0c6cfaac-9c2a-41a3-aa94-64ca8ef261fc
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 30038f6ff73eaa2d9536c3685927458a70209864
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: baf2106f015a4e8557cb8469d300709694e06d84
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32378875"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50428322"
 ---
-# <a name="zcreferencebinding-enforce-reference-binding-rules"></a>/Zc:referenceBinding （强制实施引用绑定规则）
+# <a name="zcreferencebinding-enforce-reference-binding-rules"></a>/Zc: referencebinding （强制引用绑定规则）
 
-当 **/Zc:referenceBinding**指定选项，编译器不允许将绑定到一个临时的非常量左值引用。
+当 **/zc: referencebinding**指定选项，编译器不允许将绑定到一个临时的非常量左值引用。
 
 ## <a name="syntax"></a>语法
 
@@ -38,13 +28,13 @@ ms.locfileid: "32378875"
 
 ## <a name="remarks"></a>备注
 
-如果 **/Zc:referenceBinding**指定，则编译器遵循 C + + 11 标准 8.5.3 部分，并且不允许将临时的用户定义的类型绑定到非 const 左值引用的表达式。 默认情况下，或者如果 **/Zc:referenceBinding-** 指定，编译器允许此类表达式作为 Microsoft 扩展，但发布的 4 级警告。 对于代码安全性、 可移植性和一致性，我们建议你使用 **/Zc:referenceBinding**。
+如果 **/zc: referencebinding**指定，则编译器遵循标准的 C + + 11 8.5.3 部分并且不允许将临时的用户定义类型绑定到非常数 lvalue 引用的表达式。 默认情况下，或者如果 **/Zc:referenceBinding-** 指定，编译器允许此类表达式作为 Microsoft 扩展，但不会产生 4 级警告。 代码安全性、 可移植性和符合性，我们建议你使用 **/zc: referencebinding**。
 
-**/Zc:referenceBinding**选项默认处于关闭状态。 [/ 宽松-](permissive-standards-conformance.md)编译器选项隐式设置此选项，但它可以通过重写 **/Zc:referenceBinding-**。
+**/Zc: referencebinding**选项默认情况下处于关闭状态。 [触发-](permissive-standards-conformance.md)编译器选项隐式设置此选项，但它可以通过重写 **/Zc:referenceBinding-**。
 
 ## <a name="example"></a>示例
 
-此示例演示 Microsoft 扩展，它允许用户定义类型的一个临时绑定到非 const 左值引用。
+此示例显示允许用户定义类型的临时绑定到的非常量左值引用的 Microsoft 扩展。
 
 ```cpp
 // zcreferencebinding.cpp
@@ -73,7 +63,7 @@ void main() {
 
 1. 选择**配置属性** > **C/c + +** > **命令行**属性页。
 
-1. 修改**其他选项**属性以包含 **/Zc:referenceBinding** ，然后选择**确定**。
+1. 修改**其他选项**属性以包含 **/zc: referencebinding** ，然后选择**确定**。
 
 ## <a name="see-also"></a>请参阅
 

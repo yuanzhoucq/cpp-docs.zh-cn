@@ -1,24 +1,16 @@
 ---
-title: 'Platform:: box 类 |Microsoft Docs'
-ms.custom: ''
+title: Platform::Box 类
 ms.date: 12/30/2016
-ms.technology: cpp-windows
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::Box
-dev_langs:
-- C++
 ms.assetid: b3d7ea37-e98a-4fbc-80b0-ad35e50250c6
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 133c8ebabe3e67526086661ab459bb6e96c4e727
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 387fa03caebed599d51292dd1b6d18ad4afd921c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44106504"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50429063"
 ---
 # <a name="platformbox-class"></a>Platform::Box 类
 
@@ -38,7 +30,7 @@ ref class Box abstract;
 **命名空间：** Platform
 |成员|描述|
 |------------|-----------------|
-|[Box](#ctor)|创建`Box`，它可封装指定类型的值。|
+|[Box](#ctor)|创建可以封装指定类型的值的 `Box`。|
 |[运算符框&lt;const T&gt;^](#box-const-t)|实现从 `const` 值类 `T` 或 `enum` 类 `T` 到 `Box<T>` 的装箱转换。|
 |[运算符框&lt;const 易失性 T&gt;^](#box-const-volatile-t)|启用从 `const volatile` 值类 `T` 或 `enum` 类型 `T` 到 `Box<T>` 的装箱转换。 |
 |[运算符框&lt;T&gt;^](#box-t)|实现从值类 `T` 到 `Box<T>` 的装箱转换。|
@@ -56,7 +48,7 @@ Box(T valueArg);
 ### <a name="parameters"></a>参数
 
 *valueArg*<br/>
-要将装箱值的类型，例如， `int`， `bool`， `float64`， `DateTime`。
+要进行装箱的值的类型（例如 `int`、`bool`、`float64`、`DateTime`）。
 
 ## <a name="box-const-t"></a> Box:: operator 框&lt;const T&gt;^ 运算符
 

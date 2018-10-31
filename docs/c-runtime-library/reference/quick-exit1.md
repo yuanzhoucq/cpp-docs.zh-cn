@@ -1,11 +1,6 @@
 ---
-title: quick_exit1 | Microsoft 文档
-ms.custom: ''
+title: quick_exit1
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - quick_exit
 apilocation:
@@ -25,21 +20,15 @@ f1_keywords:
 - quick_exit
 - process/quick_exit
 - stdlib/quick_exit
-dev_langs:
-- C++
 helpviewer_keywords:
 - quick_exit function
 ms.assetid: ecfbdae6-01c4-45fa-aaeb-b368e1de2a9c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: de3eb88093db0eea470a0c1d775516574c466ddd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 50f1ee72cce04c2bebc8f7396a2b6fad98301dd7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405726"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50429010"
 ---
 # <a name="quickexit"></a>quick_exit
 
@@ -60,19 +49,19 @@ __declspec(noreturn) void quick_exit(
 
 ## <a name="return-value"></a>返回值
 
-**Quick_exit**函数无法返回到其调用方。
+**Quick_exit**函数不能返回给调用方。
 
 ## <a name="remarks"></a>备注
 
-**Quick_exit**函数导致正常程序终止。 它调用注册的任何函数**atexit**， **_onexit**或信号处理程序注册的**信号**函数。 行为是不确定的如果**quick_exit**称为超过一次，或如果**退出**还调用函数。
+**Quick_exit**函数导致正常程序终止。 它将调用注册的任何函数**atexit**， **_onexit**或信号处理程序由注册**信号**函数。 行为是不确定，如果**quick_exit**称为超过一次，或如果**退出**还调用函数。
 
-**Quick_exit**函数调用，在最后一个单元中、 先进先出 (LIFO) 顺序、 注册的函数**at_quick_exit**，只是为时已调用这些函数注册的函数。  如果在调用已注册函数的过程中进行会终止该函数调用的 [longjmp](longjmp.md) 调用，则行为不确定。
+**Quick_exit**函数中最后一个单元中、 先进先出 (LIFO) 顺序、 已注册的函数调用**at_quick_exit**，但为时已调用这些函数注册的函数。  如果在已注册函数的调用过程中进行会终止该函数调用的 [longjmp](longjmp.md) 调用，则行为不确定。
 
-调用了已注册的函数之后， **quick_exit**时，将调用 **_Exit**使用*状态*控制权返回给主机环境的值。
+调用已注册的函数之后， **quick_exit**调用 **_Exit**通过*状态*控制权返回给主机环境的值。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**quick_exit**|\<process.h> 或 \<stdlib.h>|
 

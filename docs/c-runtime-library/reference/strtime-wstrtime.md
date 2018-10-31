@@ -1,10 +1,6 @@
 ---
-title: _strtime、_wstrtime | Microsoft 文档
-ms.custom: ''
+title: _strtime、_wstrtime
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wstrtime
 - _strtime
@@ -27,8 +23,6 @@ f1_keywords:
 - wstrtime
 - strtime
 - _tstrtime
-dev_langs:
-- C++
 helpviewer_keywords:
 - strtime function
 - _strtime function
@@ -39,16 +33,12 @@ helpviewer_keywords:
 - _tstrtime function
 - time, copying
 ms.assetid: 9e538161-cf49-44ec-bca5-c0ab0b9e4ca3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3b0ca776394b47f5209fbf034cbb10461c220634
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 9d874321418854a703886eb80ee23ac1cba57fa4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34450779"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50431110"
 ---
 # <a name="strtime-wstrtime"></a>_strtime、_wstrtime
 
@@ -80,13 +70,13 @@ wchar_t *_wstrtime(
 
 ## <a name="return-value"></a>返回值
 
-将指针返回到生成的字符字符串*timestr*。
+返回指向结果字符串的指针*timestr*。
 
 ## <a name="remarks"></a>备注
 
-**_Strtime**函数将当前的本地时间复制到缓冲区的指向*timestr*。 其时间格式为**hh: mm:** 其中**hh**是表示二十四小时制的小时数的两个数字**mm**是两个数字表示小时和分钟**ss**是两位数表示秒。 例如，在字符串**18:23:44**表示 23 分 44 秒过去 6 P.M. 缓冲区长度必须至少为 9 个字节。
+**_Strtime**函数将当前的本地时间复制到由指向的缓冲区*timestr*。 时间格式为**hh: mm:** 其中**hh**是两位数字，表示 24 小时制的小时**mm**是两位数表示小时，并且分钟**ss**是两位数表示秒。 例如，字符串**18:23:44**表示 23 分 44 秒下午 6 点 缓冲区长度必须至少为 9 个字节。
 
-**_wstrtime**是宽字符版本的 **_strtime**; 的自变量和返回值 **_wstrtime**是宽字符字符串。 否则这些函数具有相同行为。 如果*timestr*是**NULL**指针或如果*timestr*的格式错误，无效参数处理程序调用中所述，[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许异常若要继续，则这些函数将返回**NULL**并设置**errno**到**EINVAL**如果*timestr*已**NULL**或设置**errno**到**ERANGE**如果*timestr*的格式不正确。
+**_wstrtime**是宽字符版本 **_strtime**; 的自变量和返回值 **_wstrtime**都是宽字符字符串。 否则这些函数具有相同行为。 如果*timestr*是**NULL**指针或者如果*timestr*格式不正确，无效参数处理程序将调用，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许异常继续，这些函数将返回**NULL**并设置**errno**到**EINVAL**如果*timestr*已**NULL** ，或者设置**errno**到**ERANGE**如果*timestr*的格式不正确。
 
 在 C++ 中，这些函数具有模板重载，以调用这些函数的更新、更安全副本。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 
@@ -98,7 +88,7 @@ wchar_t *_wstrtime(
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_strtime**|\<time.h>|
 |**_wstrtime**|\<time.h> 或 \<wchar.h>|

@@ -1,10 +1,6 @@
 ---
-title: CMFCPropertyGridToolTipCtrl 类 |Microsoft Docs
-ms.custom: ''
+title: CMFCPropertyGridToolTipCtrl 类
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CMFCPropertyGridToolTipCtrl
 - AFXPROPERTYGRIDTOOLTIPCTRL/CMFCPropertyGridToolTipCtrl
@@ -15,8 +11,6 @@ f1_keywords:
 - AFXPROPERTYGRIDTOOLTIPCTRL/CMFCPropertyGridToolTipCtrl::Hide
 - AFXPROPERTYGRIDTOOLTIPCTRL/CMFCPropertyGridToolTipCtrl::SetTextMargin
 - AFXPROPERTYGRIDTOOLTIPCTRL/CMFCPropertyGridToolTipCtrl::Track
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMFCPropertyGridToolTipCtrl [MFC], CMFCPropertyGridToolTipCtrl
 - CMFCPropertyGridToolTipCtrl [MFC], Create
@@ -26,16 +20,12 @@ helpviewer_keywords:
 - CMFCPropertyGridToolTipCtrl [MFC], SetTextMargin
 - CMFCPropertyGridToolTipCtrl [MFC], Track
 ms.assetid: 84b436e5-6695-4da0-9569-1a875e087711
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ea84af41178316085a903d2663ded74ee57c99a1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a7262416fa3555993ea237dd2f6b82b73ed9949c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46389730"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50429089"
 ---
 # <a name="cmfcpropertygridtooltipctrl-class"></a>CMFCPropertyGridToolTipCtrl 类
 
@@ -66,7 +56,7 @@ class CMFCPropertyGridToolTipCtrl : public CWnd
 |[CMFCPropertyGridToolTipCtrl::Deactivate](#deactivate)|停用并隐藏工具提示控件。|
 |[CMFCPropertyGridToolTipCtrl::GetLastRect](#getlastrect)|返回工具提示控件的最后一个位置的坐标。|
 |[CMFCPropertyGridToolTipCtrl::Hide](#hide)|隐藏工具提示控件。|
-|`CMFCPropertyGridToolTipCtrl::PreTranslateMessage`|类使用[CWinApp](../../mfc/reference/cwinapp-class.md)窗口消息调度到之前转换[TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)并[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows 函数。 （重写 [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)。）|
+|`CMFCPropertyGridToolTipCtrl::PreTranslateMessage`|在将窗口消息发送到 [TranslateMessage](../../mfc/reference/cwinapp-class.md) 和 [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) Windows 函数之前，由 [CWinApp](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) 类用于对此消息进行转换。 （重写 [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)。）|
 |[CMFCPropertyGridToolTipCtrl::SetTextMargin](#settextmargin)|设置工具提示文本和工具提示窗口的边框之间的间距。|
 |[CMFCPropertyGridToolTipCtrl::Track](#track)|显示工具提示控件。|
 

@@ -1,10 +1,6 @@
 ---
-title: queue 类 | Microsoft Docs
-ms.custom: ''
+title: queue 类
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - queue/std::queue::container_type
 - queue/std::queue::size_type
@@ -15,8 +11,6 @@ f1_keywords:
 - queue/std::queue::pop
 - queue/std::queue::push
 - queue/std::queue::size
-dev_langs:
-- C++
 helpviewer_keywords:
 - std::queue [C++], container_type
 - std::queue [C++], size_type
@@ -28,16 +22,12 @@ helpviewer_keywords:
 - std::queue [C++], push
 - std::queue [C++], size
 ms.assetid: 28c20ab0-3a72-4185-9e0f-5a44eea0e204
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 20566e34200b5c0e89b532d7096821d58a5f564f
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 2b82e4237a525b09758323ae2483d8818fc938af
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44103685"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50429726"
 ---
 # <a name="queue-class"></a>queue 类
 
@@ -52,7 +42,7 @@ class queue
 
 ### <a name="parameters"></a>参数
 
-*类型*<br/>
+*Type*<br/>
 要存储在队列中的元素数据类型
 
 *容器*<br/>
@@ -123,7 +113,7 @@ Queue 的最后一个元素。 如果队列为空，则未定义返回值。
 
 如果将 `back` 的返回值分配给 `const_reference`，则无法修改队列对象。 如果返回值`back`分配给`reference`，可以修改队列对象。
 
-当使用定义为 1 或 2 的 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) 进行编译时，如果试图访问空队列中的元素，则将发生运行时错误。  有关详细信息，请参阅[经过检查的迭代器](../standard-library/checked-iterators.md)。
+当使用定义为 1 或 2 的 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) 进行编译时，如果试图访问空队列中的元素，则将发生运行时错误。  有关更多信息，请参见 [Checked Iterators](../standard-library/checked-iterators.md) 。
 
 ### <a name="example"></a>示例
 
@@ -235,7 +225,7 @@ Queue 的第一个元素。 如果队列为空，则未定义返回值。
 
 此成员函数返回`reference`到受控序列的第一个元素，其必须为非空。
 
-当使用定义为 1 或 2 的 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) 进行编译时，如果试图访问空队列中的元素，则将发生运行时错误。  有关详细信息，请参阅[经过检查的迭代器](../standard-library/checked-iterators.md)。
+当使用定义为 1 或 2 的 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) 进行编译时，如果试图访问空队列中的元素，则将发生运行时错误。  有关更多信息，请参见 [Checked Iterators](../standard-library/checked-iterators.md) 。
 
 ### <a name="example"></a>示例
 
