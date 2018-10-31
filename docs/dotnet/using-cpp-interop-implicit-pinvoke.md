@@ -1,12 +1,6 @@
 ---
-title: 使用 c + + 互操作 (隐式 PInvoke) |Microsoft 文档
-ms.custom: ''
+title: 使用 C++ 互操作（隐式 PInvoke）
 ms.date: 11/04/2016
-ms.technology:
-- cpp-cli
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - blittable types [C++]
 - platform invoke [C++], implicit
@@ -26,51 +20,46 @@ helpviewer_keywords:
 - C++ COM Interop
 - .NET [C++], porting C++ native to
 ms.assetid: 5f710bf1-88ae-4c4e-8326-b3f0b7c4c68a
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- dotnet
-ms.openlocfilehash: a095f252c4e46e212e42a7ab4cf3cb8d5ef6f53d
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: ffe4aaeecc3e0f65851a87840cd21f81c4806fb4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704287"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50464575"
 ---
 # <a name="using-c-interop-implicit-pinvoke"></a>使用 C++ 互操作（隐式 PInvoke）
 
-Visual c + + 不同于其他.NET 语言，具有在同一应用程序和甚至同一文件中允许存在托管和非托管代码的互操作性支持 (与[managed、 unmanaged](../preprocessor/managed-unmanaged.md)杂注)。 这允许 Visual c + + 开发人员将.NET 功能集成到现有 Visual c + + 应用程序，而不影响应用程序的其余部分。
+不同于其他.NET 语言，Visual c + + 具有在同一应用程序，即使在同一文件中允许存在的托管和非托管代码的互操作性支持 (与[managed、 unmanaged](../preprocessor/managed-unmanaged.md)杂注)。 这允许 Visual c + + 开发人员将.NET 功能集成到现有的 Visual c + + 应用程序，而不影响其他应用程序。
 
-你还可以调用非托管的函数从托管编译单位使用[dllexport、 dllimport](../cpp/dllexport-dllimport.md)。
+此外可以从托管的模块使用调用非托管的函数[dllexport、 dllimport](../cpp/dllexport-dllimport.md)。
 
-当您不需要指定如何将封送函数参数，或任何可在显式调用 DllImportAttribute 时指定的其他详细信息时，隐式 PInvoke 非常有用。
+不需要指定如何将封送函数参数，或任何显式调用 DllImportAttribute 时可以指定的其他详细信息时，隐式 PInvoke 很有用。
 
 Visual c + + 提供托管和非托管函数进行互操作的两种的方法：
 
 - [在 C++ 中使用显式 PInvoke（DllImport 特性）](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)
 
-显式 PInvoke 支持由.NET Framework，以及在大多数.NET 语言中可用。 但正如其名，c + + 互操作是特定于 Visual c + +。
+显式 PInvoke.NET Framework 中受支持，可在大多数与.NET 语言中。 但正如其名，c + + 互操作是特定于 Visual c + +。
 
 ## <a name="c-interop"></a>C++ 互操作
 
-C + + 互操作是通过显式 PInvoke 建议，因为它提供更好地类型安全单调乏味通常较低，来实现，是多 forgiving 如果非托管的 API 将修改，并使性能增强功能可能不适用于显式PInvoke。 但是，c + + 互操作不可能如果非托管的源代码不可用。
+C + + 互操作是通过显式 PInvoke 建议，因为它更好地提供类型安全性，是通常变得更加轻松实现，如果非托管的 API 被修改，并使性能增强功能可能不可能实现的显式，则更严格PInvoke。 但是，c + + 互操作不能如果非托管的源代码不可用。
 
 ## <a name="c-com-interop"></a>C++ COM 互操作
 
-当涉及到与 COM 组件进行互操作时，Visual c + + 支持的互操作性功能提供其他.NET 语言有特定的优势。 而不会限定的.NET framework 的限制[Tlbimp.exe （类型库导入程序）](/dotnet/framework/tools/tlbimp-exe-type-library-importer)，如对数据类型以及强制公开的每个 COM 接口的每个成员的有限支持，c + + 互操作允许 COM要访问在组件将和不需要单独的互操作程序集。 Visual c + + 可以与不同的 Visual Basic 和 C# 中，使用直接使用常用的 COM 机制的 COM 对象 (如**CoCreateInstance**和**QueryInterface**)。 这是可能由于会导致编译器自动插入转换代码以从托管到非托管函数移动并切换回的 c + + 互操作功能。
+与 COM 组件进行互操作时，支持 Visual c + + 的互操作性功能提供相比其他.NET 语言的特定优势。 而不是被限制为.NET Framework 的限制[Tlbimp.exe （类型库导入程序）](/dotnet/framework/tools/tlbimp-exe-type-library-importer)，c + + 互操作的数据类型和公开的每个 COM 接口的每个成员的行为必需的有限支持，如允许 COM要访问的组件将并不需要单独的互操作程序集。 与不同的是 Visual Basic 和C#，Visual c + + 可以使用 COM 对象直接使用常规的 COM 机制 (如**CoCreateInstance**并**QueryInterface**)。 这可能是由于会导致编译器自动插入转换代码来回移动从托管到非托管函数的 c + + 互操作功能。
 
-使用 c + + 互操作，COM 组件可用作通常用于或它们可以被包装到 c + + 类。 这些包装器类调用自定义运行时可调用包装器，或 Crcw，并且它们具有在应用程序代码中直接使用 COM 相比的两个优势：
+使用 c + + 互操作，COM 组件可用作通常使用或它们可以在 c + + 类中使用换行。 这些包装器类调用自定义运行时可调用包装器，或 Crcw，并且它们具有通过直接在应用程序代码中使用 COM 的两个优势：
 
 - 可以从 Visual c + + 之外的语言中使用生成的类。
 
-- 可以从托管客户端代码中隐藏的 COM 接口的详细信息。 .NET 数据类型可用于代替本机类型，并可以在 CRCW 内以透明方式执行数据封送处理的详细信息。
+- 可以从托管客户端代码隐藏的 COM 接口的详细信息。 .NET 数据类型来代替本机类型，并可以 CRCW 内部以透明方式执行数据封送处理的详细信息。
 
-无论是否直接或通过 CRCW 使用 COM，必须封送以外的简单，本机结构中类型的自变量类型。
+无论是否直接或通过 CRCW 使用 COM，必须封送不属于简单，可直接复制类型的参数类型。
 
-## <a name="blittable-types"></a>通用类型
+## <a name="blittable-types"></a>可直接复制类型
 
-有关使用简单、 内部函数的类型的非托管 Api (请参阅[本机结构中和非 Blittable 类型](/dotnet/framework/interop/blittable-and-non-blittable-types))，无需进行特殊编码是必需的因为这些数据类型具有相同的表示在内存中，但需要更复杂的数据类型显式数据封送处理。 有关示例，请参阅[如何： 从托管代码使用 PInvoke 调用本机 Dll](../dotnet/how-to-call-native-dlls-from-managed-code-using-pinvoke.md)。
+有关使用简单、 内部类型的非托管 Api (请参阅[Blittable 和非 Blittable 类型](/dotnet/framework/interop/blittable-and-non-blittable-types))，无需特殊编码，因为这些数据类型在内存中，具有相同的表示形式，但需要更复杂的数据类型显式数据封送处理。 有关示例，请参阅[如何： 从托管代码使用 PInvoke 调用本机 Dll](../dotnet/how-to-call-native-dlls-from-managed-code-using-pinvoke.md)。
 
 ## <a name="example"></a>示例
 
@@ -154,7 +143,7 @@ Done
 
 - [如何：包装本机类以供 C# 使用](../dotnet/how-to-wrap-native-class-for-use-by-csharp.md)
 
-有关在互操作方案中使用委托的信息，请参阅[委托 （c + + 组件扩展）](../windows/delegate-cpp-component-extensions.md)。
+在互操作方案中使用委托的信息，请参阅[委托 （c + + 组件扩展）](../windows/delegate-cpp-component-extensions.md)。
 
 ## <a name="see-also"></a>请参阅
 

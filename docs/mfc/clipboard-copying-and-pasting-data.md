@@ -1,26 +1,16 @@
 ---
-title: 剪贴板： 复制和粘贴数据 |Microsoft Docs
-ms.custom: ''
+title: 剪贴板：复制和粘贴数据
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Clipboard, copying data to
 - Clipboard, pasting
 ms.assetid: 580e10be-241f-4f9f-94cf-8302edc5beef
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8f4a3ba23fbf6e9465d78b04fcd79758c7cae525
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 7f22418b4006bcb9fac1d4430660c8721bc7e903
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50060221"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50437032"
 ---
 # <a name="clipboard-copying-and-pasting-data"></a>剪贴板：复制和粘贴数据
 

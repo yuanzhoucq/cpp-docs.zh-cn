@@ -1,20 +1,13 @@
 ---
-title: 命名空间和类型可见性 (C + + /cli CX) |Microsoft Docs
-ms.custom: ''
+title: 命名空间和类型可见性 (C++/CX)
 ms.date: 12/30/2016
-ms.technology: cpp-windows
-ms.topic: language-reference
 ms.assetid: cbc01a3a-3b69-4ded-9c42-ecbf0fd0a00e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 42457da3c85a73292b836c6da58b17f0341df1be
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: e9efc207fe0ed49fecf30366d265019e7a3ee009
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44102767"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50440516"
 ---
 # <a name="namespaces-and-type-visibility-ccx-"></a>命名空间和类型可见性 (C++/CX)
 
@@ -41,13 +34,13 @@ ms.locfileid: "44102767"
 |private|默认可访问性。 与在标准 C++ 中的含义一样。|否|
 |protected|与在标准 C++ 中的含义一样（在应用程序或组件中以及元数据中）。|是|
 |public|与在标准 C++ 中的含义一样。|是|
-|`public protected` -或者- `protected public`|元数据中的受保护的可访问性，应用程序或组件中的公共可访问性。|是|
+|`public protected` - 或 - `protected public`|元数据中的受保护的可访问性，应用程序或组件中的公共可访问性。|是|
 |`protected private` 或 `private protected`|在元数据中不可见；应用程序或组件中的受保护的可访问性。||
 |`internal` 或 `private public`|成员在应用程序或组件中是公共的，但在元数据中不可见。|否|
 
 ## <a name="windows-runtime-namespaces"></a>Windows 运行时命名空间
 
-Windows API 包含在 Windows 中声明的类型::\*命名空间。 这些命名空间为 Windows 所保留，因此，不能在其中添加类型。 在 **“对象浏览器”** 中，您可以在 windows.winmd 文件中查看这些命名空间。 有关这些命名空间的文档，请参阅[Windows API](https://msdn.microsoft.com/library/windows/apps/br211377)。
+Windows API 包含在 Windows 中声明的类型::\*命名空间。 这些命名空间为 Windows 所保留，因此，不能在其中添加类型。 在 **“对象浏览器”** 中，您可以在 windows.winmd 文件中查看这些命名空间。 有关这些命名空间的文档，请参见 [Windows API](https://msdn.microsoft.com/library/windows/apps/br211377)。
 
 ## <a name="ccx-namespaces"></a>C++/CX 命名空间
 

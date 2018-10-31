@@ -1,10 +1,6 @@
 ---
-title: _gcvt | Microsoft 文档
-ms.custom: ''
+title: _gcvt
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _gcvt
 apilocation:
@@ -22,8 +18,6 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _gcvt
-dev_langs:
-- C++
 helpviewer_keywords:
 - _gcvt function
 - _CVTBUFSIZE
@@ -34,16 +28,12 @@ helpviewer_keywords:
 - strings [C++], converting from floating point
 - CVTBUFSIZE
 ms.assetid: 5761411e-c06b-409a-912f-810fe7f4bcb5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d824d42a102aee68619d602044c39f398af177dc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9cf966b455af601d09b4444a5c590e305a6681c8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400975"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50430857"
 ---
 # <a name="gcvt"></a>_gcvt
 
@@ -72,19 +62,19 @@ char *_gcvt(
 
 ## <a name="return-value"></a>返回值
 
-**_gcvt**将指针返回到数字的字符串。
+**_gcvt**返回指向数字字符串的指针。
 
 ## <a name="remarks"></a>备注
 
-**_Gcvt**函数将转换浮点*值*为字符字符串 （其中包括小数点和可能的登录字节），并将存储中的字符串*缓冲区*。 *缓冲区*应足够大，以适应转换后的值加上会自动追加终止 null 字符。 如果缓冲区大小为*数字*+ 1 时，该函数将覆盖缓冲区末尾。 这是因为转换后的字符串包含小数点，并且可以包含符号和指数信息。 没有为溢出进行预配。 **_gcvt**尝试生成*数字*以十进制格式的数字。 如果无法实现，它会生成*数字*指数格式的数字。 在转换过程中，可以取消零结尾。
+**_Gcvt**函数将转换浮点*值*转换为字符串 （其中包括小数点和可能的登录字节），并将存储中的字符串*缓冲区*。 *缓冲区*应足够大以容纳转换后的值加上会自动追加终止 null 字符。 如果缓冲区大小为*位数*+ 1，则该函数将覆盖缓冲区的末尾。 这是因为转换后的字符串包含小数点，并且可以包含符号和指数信息。 没有为溢出进行预配。 **_gcvt**尝试生成*数字*以十进制格式的数字。 如果不能则会生成*位数*指数格式的数字。 在转换过程中，可以取消零结尾。
 
-A*缓冲区*的长度 **_CVTBUFSIZE**足以满足任何浮点值。
+一个*缓冲区*的长度 **_CVTBUFSIZE**足以满足任何浮点值。
 
-此函数验证其参数。 如果*缓冲区*是**NULL**，则调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，此函数将**errno**到**EINVAL**并返回**NULL**。
+此函数验证其参数。 如果*缓冲区*是**NULL**，将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，此函数可设置**errno**到**EINVAL** ，并返回**NULL**。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_gcvt**|\<stdlib.h>|
 

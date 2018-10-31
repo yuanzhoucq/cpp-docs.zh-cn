@@ -1,10 +1,6 @@
 ---
-title: _putch、_putwch | Microsoft 文档
-ms.custom: ''
+title: _putch、_putwch
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _putwch
 - _putch
@@ -25,8 +21,6 @@ f1_keywords:
 - _putch
 - putwch
 - _putwch
-dev_langs:
-- C++
 helpviewer_keywords:
 - _putch function
 - characters, writing
@@ -35,16 +29,12 @@ helpviewer_keywords:
 - putch function
 - console, writing characters to
 ms.assetid: 3babc7cf-e333-405d-8449-c788d61d51aa
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a0a6e50a4cd6794e28cc59bb2b080c57c0993986
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9abd27a926e641e72595360ed3951fad9e888676
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401800"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50434757"
 ---
 # <a name="putch-putwch"></a>_putch、_putwch
 
@@ -60,7 +50,7 @@ int _putch(
 int c
 );
 wint_t _putwch(
-   wchar_t c
+   wchar_t c
 );
 ```
 
@@ -71,11 +61,11 @@ wint_t _putwch(
 
 ## <a name="return-value"></a>返回值
 
-如果成功，则返回 *c*。 如果 **_putch**失败，它将返回**EOF**; 如果 **_putwch**失败，它将返回**WEOF**。
+如果成功，则返回 *c*。 如果 **_putch**失败，则返回**EOF**; 如果 **_putwch**失败，则返回**WEOF**。
 
 ## <a name="remarks"></a>备注
 
-这些函数将字符写入*c*直接，不向控制台进行缓冲。 在 Windows NT 中，**_putwch** 使用当前控制台区域设置写入 Unicode 字符。
+这些函数将字符写入*c*直接，无需缓冲到控制台。 在 Windows NT 中，**_putwch** 使用当前控制台区域设置写入 Unicode 字符。
 
 后缀为 **_nolock** 的版本是相同的，只不过它们可能会受到其他线程的影响。 有关详细信息，请参阅 **_putch_nolock**， **_putwch_nolock**。
 
@@ -87,7 +77,7 @@ wint_t _putwch(
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_putch**|\<conio.h>|
 |**_putwch**|\<conio.h>|
