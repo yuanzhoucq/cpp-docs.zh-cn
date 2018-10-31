@@ -1,4 +1,4 @@
----
+﻿---
 title: /Qspectre |Microsoft Docs
 ms.custom: ''
 ms.date: 10/12/2018
