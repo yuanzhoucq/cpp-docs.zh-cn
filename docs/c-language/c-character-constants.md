@@ -32,7 +32,7 @@ ms.locfileid: "46038576"
 
 *character-constant*: **'** *c-char-sequence* **'**
 
-L” c-char-sequence “
+**L'** *c-char-sequence* **'**
 
 *c-char-sequence*: *c-char*
 
