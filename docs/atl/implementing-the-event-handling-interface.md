@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2241080fda6aa58dc5e70f57c83afec69a57203
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 57e685ea9ac4b1efc76f7657421d825b83f4a9b7
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757333"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078617"
 ---
 # <a name="implementing-the-event-handling-interface"></a>实现事件处理接口
 
@@ -37,7 +37,7 @@ ATL 可以帮助您完成用于处理事件所需的所有三个元素： 实现
 
 - 派生自[IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md)对于调度接口未描述类型库中或你想要通过不加载在运行时类型信息来提高效率。
 
-如果要实现自定义或双接口，你应建议事件源通过调用[AtlAdvise](reference/connection-point-global-functions.md#atladvise)或[CComPtrBase::Advise](../atl/reference/ccomptrbase-class.md#advise)。 您需要跟踪的调用返回自己的 cookie。 调用[AtlUnadvise](reference/connection-point-global-functions.md#atlunadvise)断开连接。  
+如果要实现自定义或双接口，你应建议事件源通过调用[AtlAdvise](reference/connection-point-global-functions.md#atladvise)或[CComPtrBase::Advise](../atl/reference/ccomptrbase-class.md#advise)。 您需要跟踪的调用返回自己的 cookie。 调用[AtlUnadvise](reference/connection-point-global-functions.md#atlunadvise)断开连接。
 
 如果要实现调度接口使用`IDispEventImpl`或`IDispEventSimpleImpl`，你应建议事件源通过调用[IDispEventSimpleImpl::DispEventAdvise](../atl/reference/idispeventsimpleimpl-class.md#dispeventadvise)。 调用[IDispEventSimpleImpl::DispEventUnadvise](../atl/reference/idispeventsimpleimpl-class.md#dispeventunadvise)断开连接。
 
@@ -48,4 +48,3 @@ ATL 可以帮助您完成用于处理事件所需的所有三个元素： 实现
 ## <a name="see-also"></a>请参阅
 
 [事件处理](../atl/event-handling-and-atl.md)
-

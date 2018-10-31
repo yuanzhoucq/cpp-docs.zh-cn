@@ -43,12 +43,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f5b84020d9428066bdadfff53500d671233f07d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f4a184e0fee76f3aa5bb8f7729250c03b10b9dfc
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46386716"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163486"
 ---
 # <a name="sourceblock-class"></a>source_block 类
 
@@ -237,7 +237,7 @@ virtual message<_Target_type>* consume(
 
 该方法将引发[bad_target](bad-target-class.md)异常如果参数`_PTarget`不表示调用目标`reserve`。
 
-`consume`方法是类似于`accept`，但始终必须通过调用带`reserve`返回`true`。
+`consume`方法是类似于`accept`，但始终必须通过调用带`reserve`返回**true**。
 
 ##  <a name="consume_message"></a> consume_message
 
@@ -427,7 +427,7 @@ virtual bool reserve(
 
 ### <a name="return-value"></a>返回值
 
-`true` 如果消息已成功保留，`false`否则为。 预留可能因为众多原因失败，包括：消息已预留或已由另一目标接受，源可能拒绝预留等。
+**true**成功保留该消息，如果**false**否则为。 预留可能因为众多原因失败，包括：消息已预留或已由另一目标接受，源可能拒绝预留等。
 
 ### <a name="remarks"></a>备注
 
@@ -450,11 +450,11 @@ virtual bool reserve_message(runtime_object_identity _MsgId) = 0;
 
 ### <a name="return-value"></a>返回值
 
-`true` 如果消息已成功保留，`false`否则为。
+**true**成功保留该消息，如果**false**否则为。
 
 ### <a name="remarks"></a>备注
 
-之后`reserve`调用时，如果它将返回`true`、 任一`consume`或`release`必须调用以获取或释放消息的所有权。
+之后`reserve`调用时，如果它将返回**true**，而是`consume`或`release`必须调用以获取或释放消息的所有权。
 
 ##  <a name="resume_propagation"></a> resume_propagation
 

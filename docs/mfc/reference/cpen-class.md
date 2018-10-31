@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6e8f448d4b6bee4b301fc567cc8e8e857747a4e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1ec2e3253b4d26bc6773ffc4005100edfbec1bff
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46440285"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077518"
 ---
 # <a name="cpen-class"></a>CPen 类
 
@@ -92,12 +92,10 @@ class CPen : public CGdiObject
 ```
 CPen();
 
-
 CPen(
     int nPenStyle,
     int nWidth,
     COLORREF crColor);
-
 
 CPen(
     int nPenStyle,
@@ -132,13 +130,13 @@ CPen(
 
 - PS_COSMETIC 创建外观上的笔。
 
-     第二个版本`CPen`构造函数将添加以下笔样式*nPenStyle*:
+   第二个版本`CPen`构造函数将添加以下笔样式*nPenStyle*:
 
 - PS_ALTERNATE 创建设置的其他每个像素的钢笔。 （此样式。 仅适用于修饰笔）
 
 - PS_USERSTYLE 创建一个使用由用户提供的样式设置数组的笔。
 
-     结束帽可以是下列值之一：
+   结束帽可以是下列值之一：
 
 - Round PS_ENDCAP_ROUND 端帽。
 
@@ -146,7 +144,7 @@ CPen(
 
 - PS_ENDCAP_FLAT 端帽是固定的。
 
-     联接可以是下列值之一：
+   联接可以是下列值之一：
 
 - 被凸凹 PS_JOIN_BEVEL 联接。
 
@@ -192,7 +190,6 @@ BOOL CreatePen(
     int nPenStyle,
     int nWidth,
     COLORREF crColor);
-
 
 BOOL CreatePen(
     int nPenStyle,

@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f1fbe498c5c255ec95772c9e75b6ce588ae4a4c3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1255eb0fc00d1b134335807a1f20e6761c49ec90
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46401974"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50064467"
 ---
 # <a name="moving-a-string-from-one-resource-file-to-another-c"></a>将字符串从一个资源文件移动到另一个 （c + +）
 
@@ -43,7 +43,7 @@ ms.locfileid: "46401974"
    > [!NOTE]
    > 如果**ID**或**值**与某个现有的移动的字符串冲突**ID**或者**值**在目标文件中，任一**ID**或**值**的更改已移动的字符串。 如果存在具有相同的字符串**ID**，则**ID**的更改已移动的字符串。 如果存在具有相同的字符串**值**，则**值**的更改已移动的字符串。
 
-有关将资源添加到托管项目 （项目面向公共语言运行时） 的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发人员指南*。 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[演练： 本地化 Windows 窗体](/previous-versions/visualstudio/visual-studio-2010/y99d1cd3\(v=vs.100\))。
+有关将资源添加到托管项目 （项目面向公共语言运行时） 的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发人员指南*。 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[演练： 本地化 Windows 窗体](/previous-versions/visualstudio/visual-studio-2010/y99d1cd3)。
 
 ## <a name="requirements"></a>要求
 
@@ -53,4 +53,4 @@ Win32
 
 [字符串编辑器](../windows/string-editor.md)<br/>
 [资源文件](../windows/resource-files-visual-studio.md)<br/>
-[自定义窗口布局](/visualstudio/ide/customizing-window-layouts-in-visual-studio)  
+[自定义窗口布局](/visualstudio/ide/customizing-window-layouts-in-visual-studio)

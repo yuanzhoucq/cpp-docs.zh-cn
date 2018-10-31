@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2e9379dd15dbb0d814da1e617fb1f3f8408d1da0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0b180b1a92defb2c29d0e54b0ecf9700dd299170
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46388480"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163421"
 ---
 # <a name="asynchronous-message-blocks"></a>异步消息块
 
@@ -307,7 +307,7 @@ fib35 = 9227465fib37 = 24157817half_of_fib42 = 1.33957e+008
 
 `timer`类将其消息发送到一个目标。 如果您设置`_PTarget`将构造函数中的参数`NULL`，可以稍后通过调用指定目标[concurrency::ISource::link_target](reference/source-block-class.md#link_target)方法。
 
-一个`timer`可以重复或非重复对象。 若要创建重复的计时器，请将传递`true`为`_Repeating`时调用的构造函数的参数。 否则，将传递`false`为`_Repeating`参数来创建一个非重复的计时器。 如果重复的计时器，它发送同一条消息到其目标在每个时间间隔之后。
+一个`timer`可以重复或非重复对象。 若要创建重复的计时器，请将传递 **，则返回 true**为`_Repeating`时调用的构造函数的参数。 否则，将传递**false**为`_Repeating`参数来创建一个非重复的计时器。 如果重复的计时器，它发送同一条消息到其目标在每个时间间隔之后。
 
 代理库创建`timer`处于非启动状态的对象。 若要启动计时器对象，调用[concurrency::timer::start](reference/timer-class.md#start)方法。 若要停止`timer`对象，请销毁的对象或调用[concurrency::timer::stop](reference/timer-class.md#stop)方法。 若要暂停重复计时器，调用[concurrency::timer::pause](reference/timer-class.md#pause)方法。
 

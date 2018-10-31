@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb3f2ca2cfe094f4ea9da11786af6f90db7d2217
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 9fb13c8c4ce2705d3e7af8ca5b4cd0e4b97b13ca
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46136149"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059085"
 ---
 # <a name="type-conversions-and-type-safety-modern-c"></a>类型转换和类型安全（现代 C++）
 
@@ -70,7 +70,7 @@ int k = 7.7; // warning C4244:'initializing':conversion from 'double' to
 
 ```cpp
 using namespace std;
-unsigned short num = numeric_limits<unsigned short>::max(); // #include <limits>
+unsigned short num = numeric_limits<unsigned short>::max(); // #include <limits>
 short num2 = num;
 cout << "unsigned val = " << num << " signed val = " << num2 << endl;
 // Prints: unsigned val = 65535 signed val = -1
@@ -126,7 +126,7 @@ C 样式强制转换运算符与调用运算符 () 相同，因此在代码中�
     Derived* d2 = static_cast<Derived*>(b);
     ```
 
-     有关详细信息，请参阅[static_cast](../cpp/static-cast-operator.md)。
+   有关详细信息，请参阅[static_cast](../cpp/static-cast-operator.md)。
 
 - **dynamic_cast**，安全，运行时检查的指针到基类到派生指针的转换。 一个**dynamic_cast**是比更安全**static_cast**向下转换，而运行时检查会产生一些开销。
 
@@ -151,7 +151,7 @@ C 样式强制转换运算符与调用运算符 () 相同，因此在代码中�
     //Output: d3 is null;
     ```
 
-     有关详细信息，请参阅[dynamic_cast](../cpp/dynamic-cast-operator.md)。
+   有关详细信息，请参阅[dynamic_cast](../cpp/dynamic-cast-operator.md)。
 
 - **const_cast**，对于转换掉**const**状态的变量，或转换的非-**const**变量**const**。 转换掉**const**-使用此运算符的状态是只需为容易出错，因为正在使用 C 样式强制转换时，不同之处在于使用**常量强制转换**不太可能意外地执行强制转换。 有时您必须转换掉**const**的变量，例如，若要将传递性**const**变量的函数采用非**const**参数。 下面的示例演示如何执行此操作。
 
@@ -164,14 +164,14 @@ C 样式强制转换运算符与调用运算符 () 相同，因此在代码中�
     }
     ```
 
-     有关详细信息，请参阅[const_cast](../cpp/const-cast-operator.md)。
+   有关详细信息，请参阅[const_cast](../cpp/const-cast-operator.md)。
 
 - **reinterpret_cast**，对于之间的转换不相关类型，如**指针**到**int**。
 
     > [!NOTE]
     >  此强制转换运算符不像其他运算符一样常用，并且不能保证可将其移植到其它编译器。
 
-     下面的示例演示如何**reinterpret_cast**区别**static_cast**。
+   下面的示例演示如何**reinterpret_cast**区别**static_cast**。
 
     ```cpp
     const char* str = "hello";
@@ -183,7 +183,7 @@ C 样式强制转换运算符与调用运算符 () 相同，因此在代码中�
                                        // However, it is not 64-bit safe.
     ```
 
-     有关详细信息，请参阅[reinterpret_cast 运算符](../cpp/reinterpret-cast-operator.md)。
+   有关详细信息，请参阅[reinterpret_cast 运算符](../cpp/reinterpret-cast-operator.md)。
 
 ## <a name="see-also"></a>请参阅
 

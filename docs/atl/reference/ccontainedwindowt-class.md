@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c64db5a041845bbd068bab1a72ad461740170b8
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: fde79b2f96c815144b9cbdef1dcc7623e5a0eb60
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46040474"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50065208"
 ---
 # <a name="ccontainedwindowt-class"></a>CContainedWindowT 类
 
@@ -118,7 +118,7 @@ class CContainedWindowT : public TBase
 |创建控件|[ATL 教程](../../atl/active-template-library-atl-tutorial.md)|
 |使用 ATL 中的窗口|[ATL 窗口类](../../atl/atl-window-classes.md)|
 |ATL 项目向导|[创建 ATL 项目](../../atl/reference/creating-an-atl-project.md)|
-|Windows|[Windows](https://msdn.microsoft.com/library/windows/desktop/ms632595)和 Windows SDK 中的后续主题|
+|Windows|[Windows](/windows/desktop/winmsg/windows)和 Windows SDK 中的后续主题|
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -176,7 +176,7 @@ CContainedWindowT(
 调用[RegisterWndSuperclass](#registerwndsuperclass)若要注册的窗口类，基于现有类，但使用[CContainedWindowT::WindowProc](#windowproc)。
 
 ```
-HWND Create(  
+HWND Create(
     HWND hWndParent,
     _U_RECT rect,
     LPCTSTR szWindowName = NULL,
@@ -441,7 +441,7 @@ HWND UnsubclassWindow(BOOL bForce = FALSE);
 此静态方法实现的窗口过程。
 
 ```
-static LRESULT CALLBACK WindowProc(  
+static LRESULT CALLBACK WindowProc(
     HWND hWnd,
     UINT uMsg,
     WPARAM wParam,

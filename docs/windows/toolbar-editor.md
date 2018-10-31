@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0bb329b60b72aae268252ae3ddbcc2c63d4a18f6
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 273893f5164c4e89b3516c43b5414e5487af376e
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46389678"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063206"
 ---
 # <a name="toolbar-editor-c"></a>工具栏编辑器 （c + +）
 
@@ -43,8 +43,7 @@ ms.locfileid: "46389678"
 
 **工具栏**编辑器窗口中显示的按钮图像，图像编辑器窗口相同的两个视图。 拆分栏分隔两个窗格。 你可以将拆分条从一端拖动到另一端来更改窗格的相对大小。 活动窗格将显示选择边框。 主题工具栏位于两个图像视图的上方。
 
-![工具栏编辑器](../mfc/media/vctoolbareditor.gif "vcToolbarEditor")  
-工具栏编辑器
+![工具栏编辑器](../mfc/media/vctoolbareditor.gif "vcToolbarEditor")工具栏编辑器
 
 **工具栏**编辑器是类似于**映像**编辑器的功能。 菜单项、 图形工具和位图网格是中的那些相同**图像**编辑器。 上没有菜单命令**图像**菜单，以便您可以切换**工具栏**编辑器并**图像**编辑器。 有关使用的详细信息**图形**工具栏中，**颜色**面板中，或**图像**菜单中，请参阅[的图像编辑器](../windows/image-editor-for-icons.md)。
 

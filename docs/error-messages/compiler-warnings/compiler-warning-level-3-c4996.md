@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d618ace9d922daabecf908c76a319e89a9fdedcc
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4ed220aad7dd90ff2b5ca97c4cf5160fd4d00ed4
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46094177"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204569"
 ---
 # <a name="compiler-warning-level-3-c4996"></a>编译器警告 （等级 3） C4996
 
@@ -35,7 +35,7 @@ ms.locfileid: "46094177"
 
 - [std::*function_name*::\_选中此项\_迭代器::\_Deprecate 调用到 std::*function_name*可能不安全的参数与此调用依靠调用方检查传递的值正确。若要禁用此警告，请使用 -D_SCL_SECURE_NO_WARNINGS。有关如何使用 Visual c + + Checked Iterators，请参阅文档](#unsafe-standard-library-functions)
 
-- [此函数或变量已被较新的库或操作系统功能取代。请考虑使用*new_item*相反。请参阅联机帮助了解详细信息。](#obsolete-crt-functions-and-variables)
+- [此函数或变量已被较新的库或操作系统功能。请考虑使用*new_item*相反。请参阅联机帮助了解详细信息。](#obsolete-crt-functions-and-variables)
 
 ## <a name="cause"></a>原因
 
@@ -82,7 +82,6 @@ Microsoft 已重命名以符合 C99 和 c++03 规则的实现定义的全局函�
 若要解决此问题，我们通常建议更改代码以改为使用建议的函数名称。 但是，更新的名称是特定于 Microsoft 的。 如果您需要将现有的函数名称，用于可移植性原因，可以关闭这些警告。 在其原始名称下的库中的 POSIX 函数现在仍然有效。
 
 若要关闭这些函数的弃用警告，请定义预处理器宏 **\_CRT\_NONSTDC\_否\_警告**。 可以通过包括选项定义此宏在命令行`/D_CRT_NONSTDC_NO_WARNINGS`。
-
 
 ### <a name="unsafe-crt-library-functions"></a>不安全的 CRT 库函数
 
@@ -257,7 +256,7 @@ int main() {
 
 ### <a name="obsolete-crt-functions-and-variables"></a>已过时的 CRT 函数和变量
 
-**此函数或变量已被较新的库或操作系统功能取代。请考虑使用** *new_item* **相反。请参阅联机帮助了解详细信息。**
+**此函数或变量已被较新的库或操作系统功能。请考虑使用** *new_item* **相反。请参阅联机帮助了解详细信息。**
 
 某些库函数和全局变量由于过时已弃用。 可能会在未来版本的库中删除这些函数和变量。 编译器会发出对这些项的弃用警告，并建议首选备用项。
 

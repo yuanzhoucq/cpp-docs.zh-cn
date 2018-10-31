@@ -9,19 +9,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7d1381e511bc98b446e3f58be4d2a1c5ac15070
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 578df738d2c601c82f530ee32ae30284f6dac5ef
+ms.sourcegitcommit: e462e78a2dac06a0a539299facf34cdaeaf4d08c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44105693"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49401404"
 ---
 # <a name="visual-c-language-reference-ccx"></a>Visual C++ 语言参考 (C++/CX)
 
 C + + /cli CX 是一套用于 Windows 应用程序和 Windows 运行时组件中尽可能接近现代 c + + 惯用语法创建 c + + 语言扩展。 使用 C + + /cli CX 与 Visual C#、 Visual Basic 和 JavaScript，轻松地进行交互的本机代码和支持 Windows 运行时的其他语言中编写 Windows 应用程序和组件。 在这些少数情况下需要直接访问原始 COM 接口或非异常代码，你可以使用[Windows 运行时 c + + 模板库 (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)。
 
 > [!NOTE]
-> C + + / WinRT 是新的标准 C + + 17 语言投影的 Windows 运行时 Api。 它是从版本 1803年以后最新的 Windows 10 SDK 中提供。 C + + / WinRT 是完全在标头文件中实现，旨在提供对新式 Windows API 的优先访问权限。
+> **[C + + WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/index)是建议的替代项为 C + + /cli CX**。 它是新的标准 C + + 17 的语言投影 Windows 运行时 Api，从版本 1803年以后最新的 Windows 10 SDK 中提供。 C + + / WinRT 是完全在标头文件中实现，旨在提供对新式 Windows API 的优先访问权限。
 
 > 使用 C + + / WinRT，您可以使用和编写 Windows 运行时 Api 使用任何符合标准的 C + + 17 编译器。 C + + WinRT 通常更好地执行，并生成较小的二进制文件比 Windows 运行时的任何其他语言选项。 我们将继续支持 C + + /cli CX 和 WRL，但强烈建议新的应用程序使用 C + + WinRT。 有关详细信息，请参阅[C + + WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/index)。
 
@@ -29,7 +29,7 @@ C + + /cli CX 是一套用于 Windows 应用程序和 Windows 运行时组件中
 
 - C + + 通用 Windows 平台 (UWP) 应用程序使用 XAML 定义用户接口，并使用本机堆栈。 有关详细信息，请参阅[创建 c + + (UWP) 中的"你好 world"应用](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp)。
 
-- 可供基于 JavaScript 的 Windows 应用的 c + + Windows 运行时组件。 有关详细信息，请参阅[c + + 中创建 Windows 运行时组件](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)。
+- 可供基于 JavaScript 的 Windows 应用的 c + + Windows 运行时组件。 有关详细信息，请参阅 [Creating Windows Runtime Components in C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)。
 
 - Windows DirectX 游戏和图形密集型应用程序。 有关详细信息，请参阅[使用 DirectX 创建简单的 UWP 游戏](/windows/uwp/gaming/tutorial--create-your-first-metro-style-directx-game)。
 

@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 259bd5f5fd458d11c104aa3b9c141d049ad3fa96
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 0b43f7f8010129ca7e066b712633eadef083013c
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46016593"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082314"
 ---
 # <a name="obsolete-functions"></a>已过时的函数
 
@@ -52,14 +52,14 @@ ms.locfileid: "46016593"
 |已过时的函数|替代项|
 |-----------------------|-----------------|
 |`is_wctype`|[iswctype](../c-runtime-library/reference/isctype-iswctype-isctype-l-iswctype-l.md)|
-|`_loaddll`|[LoadLibrary](https://msdn.microsoft.com/library/windows/desktop/ms684175\(v=vs.85\).aspx)、[LoadLibraryEx](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibraryexa) 或 [LoadPackagedLibrary](/windows/desktop/api/winbase/nf-winbase-loadpackagedlibrary)|
-|`_unloaddll`|[FreeLibrary](https://msdn.microsoft.com/library/windows/desktop/ms683152\(v=vs.85\).aspx)|
+|`_loaddll`|[LoadLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya)、 [LoadLibraryEx](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibraryexa)或 [LoadPackagedLibrary](/windows/desktop/api/winbase/nf-winbase-loadpackagedlibrary)|
+|`_unloaddll`|[FreeLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-freelibrary)|
 |`_getdllprocaddr`|[GetProcAddress](../build/getprocaddress.md)|
-|`_seterrormode`|[SetErrorMode](https://msdn.microsoft.com/en-us/library/windows/desktop/ms680621\(v=vs.85\).aspx)|
-|`_beep`|[提示音](https://msdn.microsoft.com/library/windows/desktop/ms679277\(v=vs.85\).aspx)|
+|`_seterrormode`|[SetErrorMode](https://msdn.microsoft.com/library/windows/desktop/ms680621)|
+|`_beep`|[提示音](https://msdn.microsoft.com/library/windows/desktop/ms679277)|
 |`_sleep`|[休眠](/windows/desktop/api/synchapi/nf-synchapi-sleep)|
-|`_getsystime`|[GetLocalTime](https://msdn.microsoft.com/library/windows/desktop/ms724338\(v=vs.85\).aspx)|
-|`_setsystime`|[SetLocalTime](https://msdn.microsoft.com/library/windows/desktop/ms724936\(v=vs.85\).aspx)|
+|`_getsystime`|[GetLocalTime](/windows/desktop/api/sysinfoapi/nf-sysinfoapi-getlocaltime)|
+|`_setsystime`|[SetLocalTime](/windows/desktop/api/sysinfoapi/nf-sysinfoapi-setlocaltime)|
 
 ## <a name="removed-from-the-crt-in-visual-studio-2015"></a>已从 Visual Studio 2015 的 CRT 中删除
 

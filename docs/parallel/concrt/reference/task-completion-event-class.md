@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16778adeb898759a9c15d08175d9482f8411b44c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 867f94cd290e6b8ee5f9e50b266b0e4c9df63adf
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46413765"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163252"
 ---
 # <a name="taskcompletionevent-class"></a>task_completion_event 类
 
@@ -96,11 +96,11 @@ bool set() const ;
 
 ### <a name="return-value"></a>返回值
 
-该方法将返回`true`如果已成功设置该事件。 它将返回`false`如果已设置该事件。
+该方法返回 **，则返回 true**如果已成功设置该事件。 它将返回**false**如果已设置该事件。
 
 ### <a name="remarks"></a>备注
 
-出现多个的情况下调用或并发调用到`set`; 仅第一次调用将成功，但其结果 （如果有） 将存储在任务完成事件。 将忽略剩余的集，而该方法将返回 false。 如果设置任务完成事件时，所有任务从都创建的事件都会立即完成，并且其，如果有，将安排运行。 任务已完成对象`_ResultType`而不`void`将的值传递给它们的延续。
+出现多个的情况下调用或并发调用到`set`; 仅第一次调用将成功，但其结果 （如果有） 将存储在任务完成事件。 将忽略剩余的集，而该方法将返回 false。 如果设置任务完成事件时，所有任务从都创建的事件都会立即完成，并且其，如果有，将安排运行。 任务已完成对象`_ResultType`以外**void**将的值传递给它们的延续。
 
 ##  <a name="set_exception"></a> set_exception
 

@@ -1,7 +1,7 @@
 ---
-title: 如何： 通过泛型 （Visual c + +） 提高性能 |Microsoft Docs
+title: 如何： 通过泛型提高性能 (C + + CLI) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -18,16 +18,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9f946970f78b432774a5e4c7ba20fd15a00ae654
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 18228ab8f855f926e4600d6579baa2999f02f7e9
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318520"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50061724"
 ---
-# <a name="how-to-improve-performance-with-generics-visual-c"></a>如何：通过泛型提高性能 (Visual C++)
+# <a name="how-to-improve-performance-with-generics-ccli"></a>如何： 通过泛型提高性能 (C + + CLI)
 
-采用泛型可以根据类型参数创建可重用的代码。 类型参数的实际类型将推迟，直到由客户端代码调用。 有关泛型的详细信息，请参阅[泛型](../windows/generics-cpp-component-extensions.md)。
+采用泛型可以根据类型参数创建可重用的代码。 类型参数的实际类型将推迟，直到由客户端代码调用。 有关泛型的详细信息，请参阅 [Generics](../windows/generics-cpp-component-extensions.md)。
 
 本文讨论泛型如何有助于提高使用集合的应用程序的性能。
 
@@ -48,7 +48,7 @@ ms.locfileid: "44318520"
 using namespace System;
 using namespace System::Collections;
 
-int main()  
+int main()
 {
     // This Stack can contain any type.
     Stack ^s = gcnew Stack();
@@ -64,14 +64,14 @@ int main()
     // Pop the items off the Stack.
     // The item is returned as an Object, so a cast is
     // necessary to convert it to its proper type.
-    while (s->Count> 0)  
+    while (s->Count> 0)
     {
         Object ^o = s->Pop();
-        if (o->GetType() == Type::GetType("System.String"))  
+        if (o->GetType() == Type::GetType("System.String"))
         {
             Console::WriteLine("Popped a String: {0}", (String ^)o);
         }
-        else if (o->GetType() == Type::GetType("System.Int32"))  
+        else if (o->GetType() == Type::GetType("System.Int32"))
         {
             Console::WriteLine("Popped an int: {0}", (int)o);
         }
@@ -103,7 +103,7 @@ Popped an int: 7
 using namespace System;
 using namespace System::Collections::Generic;
 
-int main()  
+int main()
 {
     // This Stack can only contain integers.
     Stack<int> ^s = gcnew Stack<int>();

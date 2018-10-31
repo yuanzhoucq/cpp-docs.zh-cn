@@ -1,7 +1,7 @@
 ---
-title: 对象句柄运算符 (^) （c + + 组件扩展） |Microsoft Docs
+title: 对象句柄运算符 (^) (C + + /cli 和 C + + /cli CX) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -15,14 +15,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fa72b6ec2983c0d7b9850578e743d03b7e3946e3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5fe5bf67df643f83d555d3f2d6fc9a0aadf84b01
+ms.sourcegitcommit: 68cd127a6606f0aed2eb1bc9a75cdfb95b9b6526
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46410853"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204885"
 ---
-# <a name="handle-to-object-operator---c-component-extensions"></a>对象句柄运算符 (^)（C++ 组件扩展）
+# <a name="handle-to-object-operator---ccli-and-ccx"></a>对象句柄运算符 (^) (C + + /cli 和 C + + /cli CX)
 
 *句柄声明符*(`^`，发音为"hat")，修改类型[说明符](../cpp/overview-of-declarators.md)表示声明的对象将自动删除该系统确定该对象是无法再进行访问。
 
@@ -34,7 +34,7 @@ ms.locfileid: "46410853"
 
 编译器使用 COM*引用计数*机制来确定是否对象不再使用，并且可以删除。 因为从 Windows 运行时接口派生的对象实际上是 COM 对象，所以这是可行的。 在创建或复制对象时，引用计数会递增；当对象设置为 null 或超出范围时，引用计数会递减。 如果引用计数归零，将立即自动删除对象。
 
-句柄声明符的优点在于，在 COM 中，您必须以显式方式管理对象的引用计数，而这个过程单调乏味又容易出错。 也就是说，要递增或递减引用计数，必须调用对象的 AddRef() 和 Release() 方法。 但是，如果使用对象声明符声明一个对象，则 Visual C++ 编译器会生成自动调整引用计数的代码。
+句柄声明符的优点在于，在 COM 中，您必须以显式方式管理对象的引用计数，而这个过程单调乏味又容易出错。 也就是说，要递增或递减引用计数，必须调用对象的 AddRef() 和 Release() 方法。 但是，如果使用句柄声明符声明一个对象，编译器会生成自动调整引用计数的代码。
 
 有关如何实例化对象的信息，请参阅[ref 新](../windows/ref-new-gcnew-cpp-component-extensions.md)。
 
@@ -44,11 +44,9 @@ ms.locfileid: "46410853"
 
 ## <a name="common-language-runtime"></a>公共语言运行时
 
-系统使用 CLR*垃圾回收器*机制来确定是否对象不再使用，并且可以删除。 公共语言运行时会维护一个用来分配对象的堆，并在程序中使用托管引用（变量）来指示对象在堆上的位置。 当不再使用某个对象时，会释放它在堆上占用的内存。 垃圾回收器会定期压缩该堆，已更好地利用释放的内存。 压缩堆可能会移动堆上的对象，这会使托管引用所引用的位置不再有效。 但是，垃圾回收器知道所有托管引用的位置，并会自动更新位置来指示对象在堆上的当前位置。
+系统使用 CLR*垃圾回收器*机制来确定是否对象不再使用，并且可以删除。 公共语言运行时会维护一个用来分配对象的堆，并在程序中使用托管引用（变量）来指示对象在堆上的位置。 当不再使用某个对象时，会释放它在堆上占用的内存。 垃圾回收器会定期压缩该堆，已更好地利用释放的内存。 压缩堆可以移动对象在堆上，这会使托管引用所引用的位置。 但是，垃圾回收器知道所有托管引用的位置，并会自动更新位置来指示对象在堆上的当前位置。
 
 因为本机 C++ 指针 (`*`) 和引用 (`&`) 都是托管引用，所以垃圾回收器不能更新它们指向的地址。 若要解决此问题，请使用句柄声明符指定一个变量，垃圾回收器能够知道这个变量的状态并会自动进行更新。
-
-在 Visual C++ 2002 和 Visual C++ 2003 中，使用 `__gc *` 来声明托管堆上的对象。  在新的语法中，`^` 取代了 `__gc *`。
 
 有关详细信息，请参阅[如何： 在本机类型中声明处理](../dotnet/how-to-declare-handles-in-native-types.md)。
 
@@ -96,7 +94,7 @@ using namespace System;
 void Test(Object^ o) {
    Int32^ i = dynamic_cast<Int32^>(o);
 
-   if(i)  
+   if(i)
       Console::WriteLine(i);
    else
       Console::WriteLine("Not a boxed int");
@@ -175,12 +173,12 @@ private:
 public:
    DataCollection(int i) : Size(i) {
       x = gcnew array<String^>(Size);
-      for (int i = 0 ; i < Size ; i++)  
+      for (int i = 0 ; i < Size ; i++)
          x[i] = i.ToString();
    }
 
    void f(int Item) {
-      if (Item >= Size)  
+      if (Item >= Size)
       {
          System::Console::WriteLine("Cannot access array element {0}, size is {1}", Item, Size);
          return;
@@ -235,5 +233,5 @@ int main() {
 
 ## <a name="see-also"></a>请参阅
 
-[适用于运行时平台的组件扩展](../windows/component-extensions-for-runtime-platforms.md)<br/>
+[ .NET 和 UWP 的组件扩展](../windows/component-extensions-for-runtime-platforms.md)<br/>
 [跟踪引用运算符](../windows/tracking-reference-operator-cpp-component-extensions.md)

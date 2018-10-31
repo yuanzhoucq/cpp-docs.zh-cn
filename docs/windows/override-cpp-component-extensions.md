@@ -1,5 +1,5 @@
 ---
-title: 重写 （c + + 组件扩展） |Microsoft Docs
+title: 重写 (C + + /cli 和 C + + /cli CX) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6071cef3d5669fda86975bb0f27a2b9b87eeb011
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1d97558dc50adc0bac8758d0821badff14707c04
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46407265"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50056134"
 ---
-# <a name="override--c-component-extensions"></a>重写（C++ 组件扩展）
+# <a name="override--ccli-and-ccx"></a>重写 (C + + /cli 和 C + + /cli CX)
 
 **重写**上下文相关关键字表示一种类型的成员重写基类或基接口成员。
 
@@ -55,7 +55,7 @@ struct X : public I1 {
 
 下面的代码示例演示**重写**可以在 Windows 运行时编译中使用。
 
-```cpp 
+```cpp
 // override_keyword_2.cpp
 // compile with: /ZW /c
 ref struct I1 {

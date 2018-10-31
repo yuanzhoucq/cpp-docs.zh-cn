@@ -1,7 +1,7 @@
 ---
 title: 类型参数的泛型约束 (C + + CLI) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e0c6e860fa5d7633bd334d0c0a35d25936104636
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7b5a81f8e0472a9f30c8a29a94724063ddae4250
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46427701"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059995"
 ---
 # <a name="constraints-on-generic-type-parameters-ccli"></a>泛型类型参数的约束 (C++/CLI)
 
@@ -142,7 +142,7 @@ public:
    bool isSenior(ItemType item) {
       // Because of the constraint,
       // the Age method can be called on ItemType.
-      if (item->Age() >= 65)  
+      if (item->Age() >= 65)
          return true;
       else
          return false;
@@ -168,12 +168,12 @@ int main() {
    Adult^ parent = gcnew Adult();
    Senior^ grandfather = gcnew Senior();
 
-   if (ageGuess->isSenior<Adult^>(parent))  
+   if (ageGuess->isSenior<Adult^>(parent))
       Console::WriteLine("\"parent\" is a senior");
    else
       Console::WriteLine("\"parent\" is not a senior");
 
-   if (ageGuess->isSenior<Senior^>(grandfather))  
+   if (ageGuess->isSenior<Senior^>(grandfather))
       Console::WriteLine("\"grandfather\" is a senior");
    else
       Console::WriteLine("\"grandfather\" is not a senior");

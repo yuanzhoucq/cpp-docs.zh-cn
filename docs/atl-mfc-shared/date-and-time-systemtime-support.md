@@ -21,20 +21,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae20f0ea5697883f361a1933601c24095b74d733
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 57bd89cac53fa7092453b80e9f7e65bccf4f789f
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767905"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328150"
 ---
 # <a name="date-and-time-systemtime-support"></a>日期和时间： SYSTEMTIME 支持
 
 [CTime](../atl-mfc-shared/reference/ctime-class.md)类具有构造函数接受来自 Win32 的系统和文件时间。 如果你将 `CTime` 对象用于这些目的，你必须相应地修改它们的初始化，如本文所述。
 
-有关 SYSTEMTIME 结构的信息，请参阅[SYSTEMTIME](../mfc/reference/systemtime-structure1.md)。 有关 FILETIME 结构的信息，请参阅[FILETIME](../mfc/reference/filetime-structure.md)。
+有关 SYSTEMTIME 结构的信息，请参阅[SYSTEMTIME](../mfc/reference/systemtime-structure.md)。 有关 FILETIME 结构的信息，请参阅[FILETIME](../mfc/reference/filetime-structure.md)。
 
-MFC 仍然提供采用 MS-DOS 样式的时间参数的 `CTime` 构造函数，但是，从 MFC 版本 3.0 开始，`CTime` 类还支持采用 Win32 `SYSTEMTIME` 结构的构造函数和另一个采用 Win32 `FILETIME` 结构的构造函数。
+MFC 仍然提供采用 MS-DOS 样式的时间自变量的 `CTime` 构造函数，但是，从 MFC 版本 3.0 开始，`CTime` 类还支持采用 Win32 `SYSTEMTIME` 结构的构造函数和另一个采用 Win32 `FILETIME` 结构的构造函数。
 
 新的 `CTime` 构造函数是：
 
@@ -57,4 +57,3 @@ MFC 仍然提供采用 MS-DOS 样式的时间参数的 `CTime` 构造函数，�
 ## <a name="see-also"></a>请参阅
 
 [日期和时间](../atl-mfc-shared/date-and-time.md)
-

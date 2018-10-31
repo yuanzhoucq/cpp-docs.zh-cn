@@ -1,7 +1,7 @@
 ---
 title: __identifier (c + + CLI) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -18,25 +18,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 572767c2f85b07f201bef93578b14b731aa467e0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ee4aa1686980d2baecd0b261a615818fc5a6c0ee
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46415013"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082588"
 ---
 # <a name="identifier-ccli"></a>__identifier (C++/CLI)
 
-可以使用 Visual c + + 关键字用作标识符。
+可以使用 c + + 关键字用作标识符。
 
 ## <a name="all-platforms"></a>所有平台
 
 ### <a name="syntax"></a>语法
 
 ```cpp
-__identifier(
-Visual_C++_keyword
-)  
+__identifier(C++_keyword)
 ```
 
 ### <a name="remarks"></a>备注
@@ -53,7 +51,7 @@ Visual_C++_keyword
 
 **示例**
 
-在以下示例中，类名为**模板**是在 C# 中创建并分发作为 DLL。 使用 Visual c + + 程序中**模板**类， **_try**关键字对隐藏这一事实，**模板**是标准 c + + 关键字。
+在以下示例中，类名为**模板**是在 C# 中创建并分发作为 DLL。 在 C + + /cli CLI 程序，使用**模板**类， **_try**关键字对隐藏这一事实，**模板**是标准 c + + 关键字。
 
 ```cs
 // identifier_template.cs
@@ -85,7 +83,7 @@ int main() {
 
 ### <a name="examples"></a>示例
 
-在以下示例中，类名为**模板**是在 C# 中创建并分发作为 DLL。 使用 Visual c + + 程序中**模板**类， **_try**关键字对隐藏这一事实，**模板**是标准 c + + 关键字。
+在以下示例中，类名为**模板**是在 C# 中创建并分发作为 DLL。 在 C + + /cli CLI 程序，使用**模板**类， **_try**关键字对隐藏这一事实，**模板**是标准 c + + 关键字。
 
 ```cs
 // identifier_template.cs
@@ -108,5 +106,5 @@ int main() {
 
 ## <a name="see-also"></a>请参阅
 
-[适用于运行时平台的组件扩展](../windows/component-extensions-for-runtime-platforms.md)<br/>
-[适用于运行时平台的组件扩展](../windows/component-extensions-for-runtime-platforms.md)
+[ .NET 和 UWP 的组件扩展](../windows/component-extensions-for-runtime-platforms.md)<br/>
+[ .NET 和 UWP 的组件扩展](../windows/component-extensions-for-runtime-platforms.md)

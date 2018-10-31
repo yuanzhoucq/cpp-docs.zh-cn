@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 70ba26e5893b21393a3466ae7cf1c6cea43b81ef
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 68701e0cc79eac815ab56f99f41cc0f47bf3585f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46070153"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50065130"
 ---
 # <a name="ccomptrbase-class"></a>CComPtrBase 类
 
@@ -162,12 +162,12 @@ void Attach(T* p2) throw();
 调用此方法以创建与指定的类 ID 或计划 id。 关联的类的对象
 
 ```
-HRESULT CoCreateInstance(  
+HRESULT CoCreateInstance(
     LPCOLESTR szProgID,
     LPUNKNOWN pUnkOuter = NULL,
     DWORD dwClsContext = CLSCTX_ALL) throw();
 
-HRESULT CoCreateInstance(  
+HRESULT CoCreateInstance(
     REFCLSID rclsid,
     LPUNKNOWN pUnkOuter = NULL,
     DWORD dwClsContext = CLSCTX_ALL) throw();

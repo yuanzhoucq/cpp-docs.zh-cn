@@ -1,7 +1,7 @@
 ---
-title: 属性 （c + + 组件扩展） |Microsoft Docs
+title: 属性 (C + + /cli 和 C + + /cli CX) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -18,14 +18,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6f9c444861587e21724fe5f6aff545935fed6086
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 24028ac403092404ddf7fd279864273fcf6016ab
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46420499"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075861"
 ---
-# <a name="property--c-component-extensions"></a>属性（C++ 组件扩展）
+# <a name="property--ccli-and-ccx"></a>属性 (C + + /cli 和 C + + /cli CX)
 
 声明*属性*，它是一个成员函数，其行为和访问数据成员或数组元素等。
 
@@ -53,17 +53,17 @@ ms.locfileid: "46420499"
 ```cpp
 property type property_name;
 
-property type property_name { 
-   access-modifier type get() inheritance-modifier {property_body}; 
+property type property_name {
+   access-modifier type get() inheritance-modifier {property_body};
    access-modifier void set(type value) inheritance-modifier {property_body};
-} 
+}
 
-property type property_name[index_list] { 
-   access-modifier type get(index_list) inheritance-modifier {property_body}; 
+property type property_name[index_list] {
+   access-modifier type get(index_list) inheritance-modifier {property_body};
    access-modifier void set(index_list, value) inheritance-modifier {property_body};
-} 
+}
 
-property type default[index_list] { 
+property type default[index_list] {
    access-modifier type get(index_list) inheritance-modifier {property_body};
    access-modifier void set(index_list, value) inheritance-modifier {property_body};
 }
@@ -173,7 +173,6 @@ Get 和 set 方法的属性应达成**静态**修饰符。
 
 **属性**是上下文相关关键字。  有关详细信息，请参阅[上下文相关的关键字](../windows/context-sensitive-keywords-cpp-component-extensions.md)。
 
-
 ### <a name="requirements"></a>要求
 
 编译器选项：`/clr`
@@ -226,4 +225,4 @@ test
 
 ## <a name="see-also"></a>请参阅
 
-[适用于运行时平台的组件扩展](../windows/component-extensions-for-runtime-platforms.md)
+[ .NET 和 UWP 的组件扩展](../windows/component-extensions-for-runtime-platforms.md)

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f5254adbf533a30da65349f2f8aadd100b8776d7
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 4b86fa6444889f77b306e4ae543e7d2db41d721b
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755545"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860675"
 ---
 # <a name="do-while-statement-c"></a>do-while 语句 (C)
 
@@ -30,8 +30,7 @@ ms.locfileid: "43755545"
 
 ## <a name="syntax"></a>语法
 
-*iteration-statement*:  
-&nbsp;&nbsp;&nbsp;&nbsp;**do**  *statement*  **while (**  *expression*  **) ;**
+*iteration-statement*: &nbsp;&nbsp;&nbsp;&nbsp;**do**  *statement*  **while (**  *expression*  **) ;**
 
 在执行循环体后，将计算 do-while 语句中的 expression。 因此，总是至少执行一次循环体。
 
@@ -39,7 +38,7 @@ expression 必须具有算法或指针类型。 执行过程如下所示：
 
 1. 执行语句体。
 
-2. 接着，计算 expression。 如果 expression 为 false，则 do-while 语句将终止，控制权将传递到程序中的下一条语句。 如果 expression 为 true（非零），则将从第 1 步开始重复此过程。
+1. 接着，计算 expression。 如果 expression 为 false，则 do-while 语句将终止，控制权将传递到程序中的下一条语句。 如果 expression 为 true（非零），则将从第 1 步开始重复此过程。
 
 do-while 语句还可在语句体中执行 break、goto 或 return 语句时终止。
 
@@ -47,10 +46,10 @@ do-while 语句还可在语句体中执行 break、goto 或 return 语句时终�
 
 ```C
 do
-{  
-    y = f( x );  
-    x--;  
-} while ( x > 0 );  
+{
+    y = f( x );
+    x--;
+} while ( x > 0 );
 ```
 
 在此 do-while 语句中，无论 `x` 的初始值是什么，`y = f( x );` 和 `x--;` 这两个语句都会执行。 然后将计算 `x > 0`。 如果 `x` 大于 0，则会再次执行语句体并重新计算 `x > 0`。 只要 `x` 保持大于 0，语句主体就会重复执行。 当 `x` 变为 0 或负值时，do-while 语句的执行将终止。 将至少执行一次循环体。

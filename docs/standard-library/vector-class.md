@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2fdb8fea78d62202dd460f5dd219f2686bd99c6b
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 926a0f90f366f3644bfce33f15a0a85dd1792a85
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45710225"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076745"
 ---
 # <a name="vector-class"></a>vector 类
 
@@ -116,7 +116,7 @@ class vector
 
 ### <a name="parameters"></a>参数
 
-*类型*<br/>
+*Type*<br/>
 要存储在矢量中的元素数据类型
 
 *分配器*<br/>
@@ -370,7 +370,7 @@ const_reference back() const;
 
 如果将 `back` 的返回值分配给 `const_reference`，则无法修改矢量对象。 如果将 `back` 的返回值分配给 `reference`，则可以修改矢量对象。
 
-当使用定义为 1 或 2 的 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) 进行编译时，如果试图访问空矢量中的元素，将发生运行时错误。  有关详细信息，请参阅[经过检查的迭代器](../standard-library/checked-iterators.md)。
+当使用定义为 1 或 2 的 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) 进行编译时，如果试图访问空矢量中的元素，将发生运行时错误。  有关更多信息，请参见 [Checked Iterators](../standard-library/checked-iterators.md) 。
 
 ### <a name="example"></a>示例
 
@@ -402,7 +402,6 @@ int main() {
 
 ```cpp
 const_iterator begin() const;
-
 
 iterator begin();
 ```
@@ -443,7 +442,7 @@ int main()
 
     cout << "The vector c1 now contains elements:";
     c1_Iter = c1.begin();
- *c1_Iter = 20;
+    *c1_Iter = 20;
     for (; c1_Iter != c1.end(); c1_Iter++)
     {
         cout << " " << *c1_Iter;
@@ -789,7 +788,6 @@ int main( )
 ```cpp
 const_pointer data() const;
 
-
 pointer data();
 ```
 
@@ -825,7 +823,7 @@ int main()
 
     cout << "The vector c1 now contains elements:";
     c1 ptr = c1.data();
- *c1 ptr = 20;
+    *c1 ptr = 20;
     for (size_t n = c1.size(); 0 < n; --n, c1 ptr++)
     {
         cout << " " << *c1 ptr;
@@ -1165,7 +1163,7 @@ const_reference front() const;
 
 如果将 `front` 的返回值分配给 `const_reference`，则无法修改矢量对象。 如果将 `front` 的返回值分配给 **reference**，则可以修改矢量对象。
 
-当使用定义为 1 或 2 的 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) 进行编译时，如果试图访问空矢量中的元素，将发生运行时错误。  有关详细信息，请参阅[经过检查的迭代器](../standard-library/checked-iterators.md)。
+当使用定义为 1 或 2 的 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) 进行编译时，如果试图访问空矢量中的元素，将发生运行时错误。  有关更多信息，请参见 [Checked Iterators](../standard-library/checked-iterators.md) 。
 
 ### <a name="example"></a>示例
 
@@ -1410,7 +1408,7 @@ const_reference operator[](size_type Pos) const;
 
 如果将 `operator[]` 的返回值分配给 `const_reference`，则无法修改矢量对象。 如果将 `operator[]` 的返回值分配给引用，则可以修改矢量对象。
 
-当使用定义为 1 或 2 的 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) 进行编译时，如果试图访问矢量边界之外的元素，将发生运行时错误。  有关详细信息，请参阅[经过检查的迭代器](../standard-library/checked-iterators.md)。
+当使用定义为 1 或 2 的 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) 进行编译时，如果试图访问矢量边界之外的元素，将发生运行时错误。  有关更多信息，请参见 [Checked Iterators](../standard-library/checked-iterators.md) 。
 
 ### <a name="example"></a>示例
 
@@ -1516,17 +1514,17 @@ typedef typename Allocator::pointer pointer;
 
 int main( )
 {
-   using namespace std;
-   vector<int> v;
-   v.push_back( 11 );
-   v.push_back( 22 );
+    using namespace std;
+    vector<int> v;
+    v.push_back( 11 );
+    v.push_back( 22 );
 
-   vector<int>::pointer ptr = &v[0];
-   cout << *ptr << endl;
-   ptr++;
-   cout << *ptr << endl;
- *ptr = 44;
-   cout << *ptr << endl;
+    vector<int>::pointer ptr = &v[0];
+    cout << *ptr << endl;
+    ptr++;
+    cout << *ptr << endl;
+    *ptr = 44;
+    cout << *ptr << endl;
 }
 ```
 
@@ -1554,7 +1552,6 @@ void pop_back();
 
 ```cpp
 void push_back(const T& Val);
-
 
 void push_back(T&& Val);
 ```

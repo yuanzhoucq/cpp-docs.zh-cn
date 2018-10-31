@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 32a58d35a78fce6a0a6bb499df1363a80200de5a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: e0ac5ceda3b979454c5d37e513cbd77a4d3e3e20
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46017555"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063349"
 ---
 # <a name="member-access-control-c"></a>成员访问控制 (C++)
 
@@ -47,7 +47,7 @@ protected:      // Declare protected function for derived classes only.
 
 默认访问是**私有**在类中，并**公共**结构或联合中。 类中的访问说明符可按任何顺序使用任意次数。 类类型的对象的存储分配是取决于实现的，但成员一定能分配到访问说明符之间的依次升高的内存地址。
 
-### <a name="member-access-control"></a>成员访问控制
+## <a name="member-access-control"></a>成员访问控制
 
 |访问类型|含义|
 |--------------------|-------------|
@@ -247,7 +247,6 @@ int main()
 ![沿继承关系图的路径访问](../cpp/media/vc38v91.gif "vc38V91")访问沿路径的继承关系图
 
 在该图中，通过类 `VBase` 始终到达类 `RightPath` 中声明的名称。 右路径是更易于访问的，因为 `RightPath` 将 `VBase` 声明为公共基类，而 `LeftPath` 将 `VBase` 声明为私有基类。
-
 
 ## <a name="see-also"></a>请参阅
 

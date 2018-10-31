@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5a091a4301a107fb820f63c357c4e7f43c35948
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: ca1bae4e2ca45424fd7f9cff48d8ece1039d73f6
+ms.sourcegitcommit: 072e12d6b7a242765bdcc9afe4a14a284ade01fc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45721287"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50136167"
 ---
 # <a name="linker-options"></a>链接器选项
 
@@ -60,7 +60,7 @@ LINK.exe 将通用对象文件格式 (COFF) 对象文件和库链接起来，以
 |[/CLRIMAGETYPE](../../build/reference/clrimagetype-specify-type-of-clr-image.md)|设置 CLR 映像的类型（IJW、纯或安全）。|
 |[/CLRSUPPORTLASTERROR](../../build/reference/clrsupportlasterror-preserve-last-error-code-for-pinvoke-calls.md)|保留通过 P/Invoke 机制调用的函数的上一个错误代码。|
 |[/CLRTHREADATTRIBUTE](../../build/reference/clrthreadattribute-set-clr-thread-attribute.md)|指定要应用于 CLR 程序入口点的线程特性。|
-|[/CLRUNMANAGEDCODECHECK](../../build/reference/clrunmanagedcodecheck-add-supressunmanagedcodesecurityattribute.md)|指定链接器是否将 SuppressUnmanagedCodeSecurity 特性应用于链接器生成的、从托管代码调用到本机 DLL 中的 PInvoke 存根。|
+|[/CLRUNMANAGEDCODECHECK](../../build/reference/clrunmanagedcodecheck-add-suppressunmanagedcodesecurityattribute.md)|指定链接器是否将 SuppressUnmanagedCodeSecurity 特性应用于链接器生成的、从托管代码调用到本机 DLL 中的 PInvoke 存根。|
 |[/DEBUG](../../build/reference/debug-generate-debug-info.md)|创建调试信息。|
 |[/DEBUGTYPE](../../build/reference/debugtype-debug-info-options.md)|指定要包括在调试信息中的数据。|
 |[/DEF](../../build/reference/def-specify-module-definition-file.md)|将模块定义 (.def) 文件传递到链接器。|

@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67376497f3c0be84c0e24e403eaa3129ec38b255
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: a0aa56c511ac5f7b98ffdd75aebd7f71ef9f21ac
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44110774"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162017"
 ---
 # <a name="platformcollectionsinputiterator-class"></a>Platform::Collections::InputIterator 类
 
@@ -137,7 +137,7 @@ bool operator== (const InputIterator& other) const;
 
 ### <a name="return-value"></a>返回值
 
-如果当前 InputIterator 等于 `true`，则为 `other`；否则为 `false`。
+**true**当前 InputIterator 是否等于*其他*; 否则为**false**。
 
 ## <a name="operator-increment"></a>  Inputiterator:: Operator + + 运算符
 
@@ -177,7 +177,7 @@ bool operator!=(const InputIterator& other) const;
 
 ### <a name="return-value"></a>返回值
 
-如果当前 InputIterator 不等于 `true`，则为 `other`；否则为 `false`。
+**true**当前 InputIterator 是否不相等*其他*; 否则为**false**。
 
 ## <a name="see-also"></a>请参阅
 

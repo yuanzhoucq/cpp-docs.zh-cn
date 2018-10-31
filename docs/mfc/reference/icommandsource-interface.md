@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5071f2c6f00b3cc4aaf09974a01c4601d0078e42
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4908566a80fcad2350023f2306a952b2d97b2e62
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46377950"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060671"
 ---
 # <a name="icommandsource-interface"></a>ICommandSource 接口
 
@@ -103,6 +103,7 @@ void AddCommandRangeHandler(
     unsigned int cmdIDMax,
     CommandHandler^ cmdHandler);
 ```
+
 ### <a name="parameters"></a>参数
 
 *cmdIDMin*<br/>
@@ -124,6 +125,7 @@ void AddCommandRangeUIHandler(
     unsigned int cmdIDMax,
     CommandUIHandler^ cmdUIHandler);
 ```
+
 ### <a name="parameters"></a>参数
 
 *cmdIDMin*<br/>
@@ -145,6 +147,7 @@ void AddCommandUIHandler(
     unsigned int cmdID,
     CommandUIHandler^ cmdUIHandler);
 ```
+
 ### <a name="parameters"></a>参数
 
 *cmdID*<br/>
@@ -162,6 +165,7 @@ void AddCommandUIHandler(
 ```
 void PostCommand(unsigned int command);
 ```
+
 ### <a name="parameters"></a>参数
 
 *command*<br/>
@@ -170,13 +174,13 @@ void PostCommand(unsigned int command);
 
 此方法以异步方式发送的消息映射到指定的命令的 ID。 它调用 CWnd::PostMessage 窗口的消息队列中放置消息，然后返回而不等待相应的窗口来处理该消息。
 
-
 ## <a name="removecommandhandler"></a> ICommandSource::RemoveCommandHandler
 
 从命令源对象中删除命令处理程序。
 ```
 void RemoveCommandHandler(unsigned int cmdID);
 ```
+
 ### <a name="parameters"></a>参数
 
 *cmdID*<br/>
@@ -184,7 +188,6 @@ void RemoveCommandHandler(unsigned int cmdID);
 ### <a name="remarks"></a>备注
 
 此方法删除映射到 cmdID 命令源对象中的命令处理程序。
-
 
 ## <a name="removecommandrangecommandhandler"></a> ICommandSource::RemoveCommandRangeHandler
 
@@ -194,6 +197,7 @@ void RemoveCommandRangeUIHandler(
     unsigned int cmdIDMin,
     unsigned int cmdIDMax);
 ```
+
 ### <a name="parameters"></a>参数
 
 *cmdIDMin*<br/>
@@ -212,6 +216,7 @@ void RemoveCommandRangeUIHandler(
     unsigned int cmdIDMin,
     unsigned int cmdIDMax);
 ```
+
 ### <a name="parameters"></a>参数
 
 *cmdIDMin*<br/>
@@ -228,6 +233,7 @@ void RemoveCommandRangeUIHandler(
 ```
 void RemoveCommandUIHandler(unsigned int cmdID);
 ```
+
 ### <a name="parameters"></a>参数
 
 *cmdID*<br/>
@@ -242,6 +248,7 @@ void RemoveCommandUIHandler(unsigned int cmdID);
 ```
 void SendCommand(unsigned int command);
 ```
+
 ### <a name="parameters"></a>参数
 
 *command*<br/>

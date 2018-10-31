@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26f39b9fff9d5fad930123fc930afe1600cd259e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e53f8999b4559a221b335528ec20b6034de269d3
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46396461"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162199"
 ---
 # <a name="isource-class"></a>ISource 类
 
@@ -158,7 +158,7 @@ virtual message<T>* consume(
 
 ### <a name="remarks"></a>备注
 
-`consume`方法是类似于`accept`，但始终必须通过调用带`reserve`返回`true`。
+`consume`方法是类似于`accept`，但始终必须通过调用带`reserve`返回**true**。
 
 ##  <a name="dtor"></a> ~ ISource
 
@@ -236,7 +236,7 @@ virtual bool reserve(
 
 ### <a name="return-value"></a>返回值
 
-`true` 如果消息已成功保留，`false`否则为。 预留可能因为众多原因失败，包括：消息已预留或已由另一目标接受，源可能拒绝预留等。
+**true**成功保留该消息，如果**false**否则为。 预留可能因为众多原因失败，包括：消息已预留或已由另一目标接受，源可能拒绝预留等。
 
 ### <a name="remarks"></a>备注
 

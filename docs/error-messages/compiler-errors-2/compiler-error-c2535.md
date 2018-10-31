@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98e1920b2163a318fbdba3b64d56bf74a8cd809f
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 5d9bb276ded32d8b263e64a8ea70f2c1953ee24b
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46085889"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890291"
 ---
 # <a name="compiler-error-c2535"></a>编译器错误 C2535
 
@@ -30,8 +30,6 @@ identifier： 已经定义或声明成员函数
 通过使用多个定义或声明的重载函数中相同的形参列表可能导致此错误。
 
 如果由于 Dispose 函数而遇到 C2535，请参阅[析构函数和终结器](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)有关详细信息。
-
-如果您正在编译 ATL 项目，请参阅知识库文章 Q241852。
 
 下面的示例生成 C2535:
 

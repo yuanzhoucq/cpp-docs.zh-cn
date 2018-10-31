@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f1ebb5e2151fe770e6a59210ac564237155fafd4
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 643e758d063744c155ff3e03a2ff8d6bede78822
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46412075"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075146"
 ---
 # <a name="connecting-a-pop-up-menu-to-your-c-application"></a>将弹出菜单连接到 c + + 应用程序
 
@@ -51,4 +51,4 @@ MFC
 ## <a name="see-also"></a>请参阅
 
 [创建弹出菜单](../windows/creating-pop-up-menus.md)<br/>
-[菜单编辑器](../windows/menu-editor.md)  
+[菜单编辑器](../windows/menu-editor.md)

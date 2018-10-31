@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9961eaa6529773e8d21d9c953242d1656a6a443
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 4420bdac9e788f80142546d8b09781a8aa3ce06d
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43211658"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821382"
 ---
 # <a name="working-with-project-properties"></a>使用项目属性
 
@@ -141,11 +141,11 @@ v:<br/>
 
 ##### <a name="to-create-a-user-defined-macro"></a>创建用户定义的宏
 
-1.  在“属性管理器”窗口中（在菜单栏上，依次选择“视图”、“属性管理器”），打开属性表的快捷菜单（名称以 .user 结尾），然后选择“属性”。 此时将打开该属性表的“属性页”对话框。
+1. 在“属性管理器”窗口中（在菜单栏上，依次选择“视图”、“属性管理器”），打开属性表的快捷菜单（名称以 .user 结尾），然后选择“属性”。 此时将打开该属性表的“属性页”对话框。
 
-2.  在对话框的左窗格中，选择“用户宏”。 在右窗格中，选择“添加宏”按钮，打开“添加用户宏”对话框。
+1. 在对话框的左窗格中，选择“用户宏”。 在右窗格中，选择“添加宏”按钮，打开“添加用户宏”对话框。
 
-3.  在对话框中，指定宏的名称和值。 根据需要，选中“将此宏设置为生成环境中的环境变量”复选框。
+1. 在对话框中，指定宏的名称和值。 根据需要，选中“将此宏设置为生成环境中的环境变量”复选框。
 
 ## <a name="property-editor"></a>属性编辑器
 
@@ -250,7 +250,7 @@ Visual C++ 编译器 (cl.exe) 可识别某些环境变量，尤其是 LIB、LIBP
 
 ## <a name="modifying-properties-and-targets-without-changing-the-project-file"></a>修改属性和目标无需更改项目文件
 
-可以从 MSBuild 命令提示符处重写项目属性和目标而无需更改项目文件。 当你想要暂时或偶尔应用某些属性时，这非常有用。 它假定你对 MSBuild 有一定了解。 有关详细信息，请参阅 [MSBUild](https://docs.microsoft.com/en-us/visualstudio/msbuild/msbuild)。
+可以从 MSBuild 命令提示符处重写项目属性和目标而无需更改项目文件。 当你想要暂时或偶尔应用某些属性时，这非常有用。 它假定你对 MSBuild 有一定了解。 有关详细信息，请参阅 [MSBUild](https://docs.microsoft.com/visualstudio/msbuild/msbuild)。
 
 > [!IMPORTANT]
 > 可以使用 Visual Studio 中的 XML 编辑器或任何文本编辑器来创建 .props 或 .targets 文件。 不要在此情况下使用“属性管理器”，因为它会将属性添加到项目文件中。

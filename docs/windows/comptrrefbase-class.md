@@ -1,28 +1,34 @@
 ---
 title: ComPtrRefBase 类 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/03/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - client/Microsoft::WRL::Details::ComPtrRefBase
+- client/Microsoft::WRL::Details::ComPtrRefBase::operator IInspectable**
+- client/Microsoft::WRL::Details::ComPtrRefBase::operator IUnknown**
+- client/Microsoft::WRL::Details::ComPtrRefBase::ptr_
 dev_langs:
 - C++
 helpviewer_keywords:
-- ComPtrRefBase class
+- Microsoft::WRL::Details::ComPtrRefBase class
+- Microsoft::WRL::Details::ComPtrRefBase::operator IInspectable** operator
+- Microsoft::WRL::Details::ComPtrRefBase::operator IUnknown** operator
+- Microsoft::WRL::Details::ComPtrRefBase::ptr_ data member
 ms.assetid: 6d344c1a-cc13-4a3f-8a0d-f167ccb9348f
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3ca2cb8cdc748abcac61bd548491187095b71a3f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 79b7c3df2b6d3dc338ecda713b4ec406c8964cab
+ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46415312"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48789249"
 ---
 # <a name="comptrrefbase-class"></a>ComPtrRefBase 类
 
@@ -31,16 +37,14 @@ ms.locfileid: "46415312"
 ## <a name="syntax"></a>语法
 
 ```cpp
-template <
-   typename T
->
+template <typename T>
 class ComPtrRefBase;
 ```
 
 ### <a name="parameters"></a>参数
 
 *T*<br/>
-一个[ComPtr\<T >](../windows/comptr-class.md)类型派生自它，而不仅仅是所表示接口**ComPtr**。
+一个[ComPtr\<T >](../windows/comptr-class.md)类型派生自它，而不仅仅是所表示接口`ComPtr`。
 
 ## <a name="remarks"></a>备注
 
@@ -50,22 +54,22 @@ class ComPtrRefBase;
 
 ### <a name="public-typedefs"></a>公共 Typedef
 
-|名称|描述|
-|----------|-----------------|
-|`InterfaceType`|模板参数的类型的同义词*T*。|
+名称            | 描述
+--------------- | -------------------------------------------------
+`InterfaceType` | 模板参数的类型的同义词*T*。
 
 ### <a name="public-operators"></a>公共运算符
 
-|名称|描述|
-|----------|-----------------|
-|[ComPtrRefBase::operator IInspectable** 运算符](../windows/comptrrefbase-operator-iinspectable-star-star-operator.md)|将当前[ptr_](../windows/comptrrefbase-ptr-data-member.md)数据成员添加到指针-到-a-指针-到`IInspectable`接口。|
-|[ComPtrRefBase::operator IUnknown** 运算符](../windows/comptrrefbase-operator-iunknown-star-star-operator.md)|将当前[ptr_](../windows/comptrrefbase-ptr-data-member.md)数据成员添加到指针-到-a-指针-到`IUnknown`接口。|
+名称                                                                       | 描述
+-------------------------------------------------------------------------- | -----------------------------------------------------------------------------------------------------
+[Comptrrefbase:: Operator IInspectable * *](#operator-iinspectable-star-star) | 将当前[ptr_](#ptr)数据成员添加到指针-到-a-指针-到`IInspectable`接口。
+[Comptrrefbase:: Operator IUnknown * *](#operator-iunknown-star-star)         | 将当前[ptr_](#ptr)数据成员添加到指针-到-a-指针-到`IUnknown`接口。
 
 ### <a name="protected-data-members"></a>受保护的数据成员
 
-|name|描述|
-|----------|-----------------|
-|[ComPtrRefBase::ptr_ 数据成员](../windows/comptrrefbase-ptr-data-member.md)|为当前的模板参数指定的类型的指针。|
+name                        | 描述
+--------------------------- | ----------------------------------------------------------------
+[Comptrrefbase:: Ptr_](#ptr) | 为当前的模板参数指定的类型的指针。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -77,6 +81,44 @@ class ComPtrRefBase;
 
 **Namespace:** Microsoft::WRL::Details
 
-## <a name="see-also"></a>请参阅
+## <a name="operator-iinspectable-star-star"></a>Comptrrefbase:: Operator IInspectable\* \*运算符
 
-[Microsoft::WRL::Details 命名空间](../windows/microsoft-wrl-details-namespace.md)
+支持 WRL 基础结构，不应在代码中直接使用。
+
+```cpp
+operator IInspectable**() const;
+```
+
+### <a name="remarks"></a>备注
+
+将当前[ptr_](#ptr)数据成员添加到指针-到-a-指针-到`IInspectable`接口。
+
+如果发出错误当前`ComPtrRefBase`也不是派生`IInspectable`。
+
+此强制转换为可用才`__WRL_CLASSIC_COM__`定义。
+
+## <a name="operator-iunknown-star-star"></a>Comptrrefbase:: Operator IUnknown * * 运算符
+
+支持 WRL 基础结构，不应在代码中直接使用。
+
+```cpp
+operator IUnknown**() const;
+```
+
+### <a name="remarks"></a>备注
+
+将当前[ptr_](#ptr)数据成员添加到指针-到-a-指针-到`IUnknown`接口。
+
+如果发出错误当前`ComPtrRefBase`也不是派生`IUnknown`。
+
+## <a name="ptr"></a>Comptrrefbase:: Ptr_
+
+支持 WRL 基础结构，不应在代码中直接使用。
+
+```cpp
+T* ptr_;
+```
+
+### <a name="remarks"></a>备注
+
+为当前的模板参数指定的类型的指针。 `ptr_` 是受保护的数据成员。

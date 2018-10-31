@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58d0d250e17ddd8beaef2a9f5cff4d4e1046fdcb
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a7368e067e1324c3263440a7a6b165099c870735
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46380434"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078149"
 ---
 # <a name="how-to-make-a-type-safe-collection"></a>如何：创建类型安全集合
 
@@ -45,11 +45,11 @@ Microsoft 基础类库提供基于 C++ 模板的预定义类型安全集合。 �
 
 1. 声明集合类类型的变量。 例如：
 
-     [!code-cpp[NVC_MFCCollections#7](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_1.cpp)]
+   [!code-cpp[NVC_MFCCollections#7](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_1.cpp)]
 
 1. 调用集合对象的成员函数。 例如：
 
-     [!code-cpp[NVC_MFCCollections#8](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_2.cpp)]
+   [!code-cpp[NVC_MFCCollections#8](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_2.cpp)]
 
 1. 如有必要，实现[帮助器函数](../mfc/reference/collection-class-helpers.md)并[SerializeElements](../mfc/reference/collection-class-helpers.md#serializeelements)。 有关实现这些函数的信息，请参阅[实现帮助器函数](#_core_implementing_helper_functions)。
 
@@ -85,27 +85,27 @@ MFC 还支持 MFC 1.0 版引入的集合类。 这些类都不基于模板。 �
 
 1. 直接使用非模板类之一（如 `CWordArray`）。
 
-     例如，您可以创建一个 `CWordArray` 并为其添加任何 32 位值，然后检索这些值。 再无任何操作。 只需使用预定义函数。
+   例如，您可以创建一个 `CWordArray` 并为其添加任何 32 位值，然后检索这些值。 再无任何操作。 只需使用预定义函数。
 
-     您也可以使用预定义集合（如 `CObList`）保存派生自 `CObject` 的任何对象。 将定义 `CObList` 集合以保存指向 `CObject` 的指针。 从列表中检索对象时，您可能必须将结果转换为适当的类型，因为 `CObList` 函数将返回指向 `CObject` 的指针。 例如，如果您将 `CPerson` 对象存储在 `CObList` 集合中，则必须将检索的元素转换为指向 `CPerson` 对象的指针。 以下示例使用 `CObList` 集合保存 `CPerson` 对象：
+   您也可以使用预定义集合（如 `CObList`）保存派生自 `CObject` 的任何对象。 将定义 `CObList` 集合以保存指向 `CObject` 的指针。 从列表中检索对象时，您可能必须将结果转换为适当的类型，因为 `CObList` 函数将返回指向 `CObject` 的指针。 例如，如果您将 `CPerson` 对象存储在 `CObList` 集合中，则必须将检索的元素转换为指向 `CPerson` 对象的指针。 以下示例使用 `CObList` 集合保存 `CPerson` 对象：
 
-     [!code-cpp[NVC_MFCCollections#10](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_4.cpp)]
+   [!code-cpp[NVC_MFCCollections#10](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_4.cpp)]
 
-     使用预定义集合类型和根据需要进行转换的方法可能满足您集合的许多需求。 如果您需要更多函数或更多类型安全，请使用基于模板的类或执行下面的过程。
+   使用预定义集合类型和根据需要进行转换的方法可能满足您集合的许多需求。 如果您需要更多函数或更多类型安全，请使用基于模板的类或执行下面的过程。
 
 #### <a name="to-derive-and-extend-a-nontemplate-type-safe-collection"></a>派生和扩展非模板类型安全的集合
 
 1. 从预定义的非模板类派生您自己的集合类。
 
-     派生类时，您可以添加类型安全的包装器函数以为现有函数提供一个类型安全的接口。
+   派生类时，您可以添加类型安全的包装器函数以为现有函数提供一个类型安全的接口。
 
-     例如，如果要从 `CObList` 派生一个列表来保存 `CPerson` 对象，则您可能添加包装器函数 `AddHeadPerson` 和 `GetHeadPerson`，如下所示。
+   例如，如果要从 `CObList` 派生一个列表来保存 `CPerson` 对象，则您可能添加包装器函数 `AddHeadPerson` 和 `GetHeadPerson`，如下所示。
 
-     [!code-cpp[NVC_MFCCollections#11](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_5.h)]
+   [!code-cpp[NVC_MFCCollections#11](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_5.h)]
 
-     这些包装器函数为从派生列表添加和检索 `CPerson` 对象提供了一种类型安全的方法。 您可以看到，对于 `GetHeadPerson` 函数，您将封装类型转换。
+   这些包装器函数为从派生列表添加和检索 `CPerson` 对象提供了一种类型安全的方法。 您可以看到，对于 `GetHeadPerson` 函数，您将封装类型转换。
 
-     您还可通过定义扩展集合功能的新函数而不是将现有函数包装在类型安全的包装器中来添加新函数。 例如，文章[删除 CObject 集合中的所有对象](../mfc/deleting-all-objects-in-a-cobject-collection.md)描述函数用于删除列表中包含的所有对象。 此函数无法作为成员函数添加到派生类中。
+   您还可通过定义扩展集合功能的新函数而不是将现有函数包装在类型安全的包装器中来添加新函数。 例如，文章[删除 CObject 集合中的所有对象](../mfc/deleting-all-objects-in-a-cobject-collection.md)描述函数用于删除列表中包含的所有对象。 此函数无法作为成员函数添加到派生类中。
 
 ## <a name="see-also"></a>请参阅
 

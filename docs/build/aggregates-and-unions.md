@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f0ac55dce5d00f8931ee263be0fc5ab8a8a3a08
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: aac6da94a0786e5cdc2eee4d16f5927f66e0a8d5
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45710016"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861182"
 ---
 # <a name="aggregates-and-unions"></a>聚合和联合
 
@@ -29,7 +29,7 @@ ms.locfileid: "45710016"
 
    包含相邻的数据对象的有序的组。 每个对象调用一个元素。 一个数组中的所有元素都具有相同的大小和数据类型。
 
--  结构
+- 结构
 
    包含数据对象的有序的组。 与数组的元素，在结构中的数据对象可以具有不同的数据类型和大小。 在结构中的每个数据对象调用成员。
 

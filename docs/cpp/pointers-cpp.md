@@ -17,62 +17,52 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a39ee9c45084d03198157f427ca3edca13767e6c
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 7e896c1a00e45e5e7503837409903651ed2bdc3a
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46024107"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861234"
 ---
 # <a name="pointers-c"></a>指针 （C++）
 
 使用以下序列声明指针。
 
-```
-[storage-class-specifiers] [cv-qualifiers] type-specifiers 
-[ms-modifier] declarator ;
-```
+> \[*存储类说明符*] \[ *cv 限定符*]*类型说明符* \[ *ms 修饰符*] *声明符* **;**
 
-其中，任何有效指针声明符均可用于 `declarator`。 简单指针声明符的语法如下所示：
+其中可能会使用任何有效指针声明符*声明符*。 简单指针声明符的语法如下所示：
 
-```
-* [cv-qualifiers] identifier [= expression]
-```
+> __\*__ \[*cv 限定符*]*标识符* \[ **=** *表达式*]
 
 1. 声明说明符：
 
-    - 可选存储类说明符。 有关详细信息，请参阅[说明符](../cpp/specifiers.md)。
+   - 可选存储类说明符。 有关详细信息，请参阅[说明符](../cpp/specifiers.md)。
 
-    - 一个可选**const**或**易失性**关键字应用于要指向的对象的类型。
+   - 一个可选**const**或**易失性**关键字应用于要指向的对象的类型。
 
-    - 类型说明符：可表示要指向的对象的类型的类型名称。
+   - 类型说明符：可表示要指向的对象的类型的类型名称。
 
-2. 声明符：
+1. 声明符：
 
-    - 可选的 Microsoft 专用修饰符。 有关详细信息，请参阅[Microsoft 专用的修饰符](../cpp/microsoft-specific-modifiers.md)。
+   - 可选的 Microsoft 专用修饰符。 有关详细信息，请参阅[Microsoft 专用的修饰符](../cpp/microsoft-specific-modifiers.md)。
 
-    - `*` 运算符。
+   - __\*__ 运算符。
 
-    - 一个可选**const**或**易失性**关键字应用于指针本身。
+   - 一个可选**const**或**易失性**关键字应用于指针本身。
 
-    - 标识符。
+   - 标识符。
 
-    - 可选初始值设定项。
+   - 可选初始值设定项。
 
-     指向函数的指针的声明符类似于以下形式：
+指向函数的指针的声明符类似于以下形式：
 
-```
-(* [cv-qualifiers] identifier )( argument-list ) [cv-qualifers]
-[exception specification] [= expression];
-```
+> __(\*__  \[ *cv 限定符*]*标识符* **) (** *参数列表* **)** \[ *cv 限定符*] \[*异常规范*] \[ **=***表达式*] **;**
 
-- 对于指针数组，语法如下所示：
+对于指针数组，语法如下所示：
 
-```
-* identifier [ [ constant-expression ] ]
-```
+> __\*__ *标识符* **\[** \[*常量表达式*] **]**
 
-- 多个声明符及其初始值设定项可能同时出现在前面有声明说明符且以逗号分隔的列表中的一个声明中。
+多个声明符及其初始值设定项可能同时出现在前面有声明说明符且以逗号分隔的列表中的一个声明中。
 
 指针声明的简单示例如下：
 

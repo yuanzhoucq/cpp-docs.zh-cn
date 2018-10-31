@@ -8,17 +8,17 @@ ms.technology:
 ms.tgt_pltfrm: Linux
 ms.topic: conceptual
 ms.assetid: 5eeaa683-4e63-4c46-99ef-2d5f294040d4
-author: corob-msft
-ms.author: corob
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 9b3977c46e05ab0b175dad3658d1dcc390d33354
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 387550fa7d3e745038d0be8ee66574d4496132a0
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39207661"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50061283"
 ---
 # <a name="connect-to-your-remote-linux-computer"></a>连接到远程 Linux 计算机
 
@@ -29,7 +29,7 @@ ms.locfileid: "39207661"
    ![连接管理器](media/settings_connectionmanager.png)
 
    在任一方案中，均将显示“**连接到远程系统**”窗口。
-   
+
    ![连接到远程系统](media/connect.png)
 
 1. 输入以下信息：
@@ -41,7 +41,7 @@ ms.locfileid: "39207661"
    | **用户名**           | 要进行身份验证的用户
    | **身份验证类型** | 同时支持密码或私钥
    | **密码**            | 输入的用户名的密码
-   | **私钥文件**    | 为 ssh 连接创建的私钥
+   | **私钥文件**    | 为 ssh 连接创建的私钥文件
    | **密码**          | 与上面选择的私钥一起使用的密码
 
 1. 单击“**连接**”按钮，尝试连接到远程计算机。  如果连接失败，则需要更改的输入框将以红色标出。

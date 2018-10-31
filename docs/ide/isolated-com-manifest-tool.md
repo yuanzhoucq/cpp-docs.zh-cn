@@ -17,41 +17,44 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5439e04fdb2563748bc21fb494cc09fd7bd5c929
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: cdb472ce082809a48dd3e42afd4481149eff3a28
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45720091"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46407537"
 ---
 # <a name="isolated-com-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>“&lt;项目名&gt; 属性页”对话框 ->“配置属性”->“清单工具”->“独立 COM”
-使用此对话框指定 [Mt.exe](https://msdn.microsoft.com/library/aa375649) 的“独立 COM”选项。  
-  
-若要访问此属性页对话框，请打开项目或属性表的属性页。 展开“常用属性”下的“清单工具节点”，然后选择“独立 COM”。  
-  
-## <a name="task-list"></a>任务列表  
-  
--   [如何：生成独立应用程序以使用 COM 组件](../build/how-to-build-isolated-applications-to-consume-com-components.md)  
-  
-## <a name="uielement-list"></a>UIElement 列表  
+
+使用此对话框指定 [Mt.exe](https://msdn.microsoft.com/library/aa375649) 的“独立 COM”选项。
+
+若要访问此属性页对话框，请打开项目或属性表的属性页。 展开“常用属性”下的“清单工具节点”，然后选择“独立 COM”。
+
+## <a name="task-list"></a>任务列表
+
+- [如何：生成独立应用程序以使用 COM 组件](../build/how-to-build-isolated-applications-to-consume-com-components.md)
+
+## <a name="uielement-list"></a>UIElement 列表
+
 - **类型库文件**
 
-   使用 /tlb 选项指定类型库文件（.tlb 文件）的名称，清单工具将使用该文件来生成清单文件。  
-  
+   使用 /tlb 选项指定类型库文件（.tlb 文件）的名称，清单工具将使用该文件来生成清单文件。
+
 - **注册器脚本文件**
 
-   使用 /rgs 选项指定注册器脚本文件（.rgs 文件）的名称，清单工具将使用该文件来生成清单文件。  
-  
+   使用 /rgs 选项指定注册器脚本文件（.rgs 文件）的名称，清单工具将使用该文件来生成清单文件。
+
 - **组件文件名**
 
-   使用 /dll 选项指定清单工具将生成的资源的名称。 指定“类型库文件”或“注册器脚本文件”时，必须输入此属性的值。  
-  
+   使用 /dll 选项指定清单工具将生成的资源的名称。 指定“类型库文件”或“注册器脚本文件”时，必须输入此属性的值。
+
 - **替换文件**
 
-   使用 /replacements 选项，为包含 .rgs 文件中可替换字符串的值的文件指定完整路径。  
-  
-## <a name="see-also"></a>请参阅  
- [独立的应用程序](/windows/desktop/SbsCs/isolated-applications)   
- [ClickOnce 应用程序清单](/visualstudio/deployment/clickonce-application-manifest)   
- [清单工具属性页](../ide/manifest-tool-property-pages.md)   
- [使用项目属性](../ide/working-with-project-properties.md)   
+   使用 /replacements 选项，为包含 .rgs 文件中可替换字符串的值的文件指定完整路径。
+
+## <a name="see-also"></a>请参阅
+
+[独立的应用程序](/windows/desktop/SbsCs/isolated-applications)<br>
+[ClickOnce 应用程序清单](/visualstudio/deployment/clickonce-application-manifest)<br>
+[清单工具属性页](../ide/manifest-tool-property-pages.md)<br>
+[使用项目属性](../ide/working-with-project-properties.md)

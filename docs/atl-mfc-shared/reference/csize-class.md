@@ -1,7 +1,7 @@
 ---
 title: CSize 类 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -21,21 +21,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa840b2fd6e143715c924d0f7ac67e78eb8306a4
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6d9927712077f7d0d57d9ece5ae72489be291866
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46417535"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055213"
 ---
 # <a name="csize-class"></a>CSize 类
 
-类似于 Windows[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)结构，它实现相对坐标或位置。
+类似于实现相对坐标或位置的 Windows [SIZE](https://msdn.microsoft.com/library/windows/desktop/dd145106) 结构。
 
 ## <a name="syntax"></a>语法
 
 ```
-class CSize : public tagSIZE 
+class CSize : public tagSIZE
 ```
 
 ## <a name="members"></a>成员
@@ -64,7 +64,7 @@ class CSize : public tagSIZE
 `cx`并`cy`的成员`SIZE`(和`CSize`) 是公共的。 此外，`CSize`实现成员函数以操作`SIZE`结构。
 
 > [!NOTE]
->  有关详细信息共享实用程序类 (如`CSize`)，请参阅[共享类](../../atl-mfc-shared/atl-mfc-shared-classes.md)。
+> 有关详细信息共享实用程序类 (如`CSize`)，请参阅[共享类](../../atl-mfc-shared/atl-mfc-shared-classes.md)。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -85,24 +85,24 @@ CSize() throw();
 CSize( int initCX, int initCY) throw();
 CSize( SIZE initSize) throw();
 CSize( POINT initPt) throw();
-CSize( DWORD dwSize) throw(); 
+CSize( DWORD dwSize) throw();
 ```
 
 ### <a name="parameters"></a>参数
 
-*initCX*  
+*initCX*<br/>
 集`cx`成员为`CSize`。
 
-*initCY*  
+*initCY*<br/>
 集`cy`成员为`CSize`。
 
-*initSize*  
+*initSize*<br/>
 [大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)结构或`CSize`对象，用于初始化`CSize`。
 
-*initPt*  
-[点](../../mfc/reference/point-structure1.md)结构或`CPoint`对象，用于初始化`CSize`。
+*initPt*<br/>
+[点](../../mfc/reference/point-structure.md)结构或`CPoint`对象，用于初始化`CSize`。
 
-*dwSize*  
+*dwSize*<br/>
 用于初始化 DWORD `CSize`。 低序位字是`cx`成员和高序位字是`cy`成员。
 
 ### <a name="remarks"></a>备注
@@ -117,8 +117,8 @@ CSize( DWORD dwSize) throw();
 
 两个大小之间的相等性检查。
 
-``` 
-BOOL operator==(SIZE size) const throw(); 
+```
+BOOL operator==(SIZE size) const throw();
 ```
 
 ### <a name="remarks"></a>备注
@@ -133,8 +133,8 @@ BOOL operator==(SIZE size) const throw();
 
 检查两个大小相等的。
 
-``` 
-BOOL operator!=(SIZE size) const throw(); 
+```
+BOOL operator!=(SIZE size) const throw();
 ```
 
 ### <a name="remarks"></a>备注
@@ -149,8 +149,8 @@ BOOL operator!=(SIZE size) const throw();
 
 将大小添加到此`CSize`。
 
-``` 
-void operator+=(SIZE size) throw(); 
+```
+void operator+=(SIZE size) throw();
 ```
 
 ### <a name="example"></a>示例
@@ -161,8 +161,8 @@ void operator+=(SIZE size) throw();
 
 从该大小中减去`CSize`。
 
-``` 
-void operator-=(SIZE size) throw(); 
+```
+void operator-=(SIZE size) throw();
 ```
 
 ### <a name="example"></a>示例
@@ -173,10 +173,10 @@ void operator-=(SIZE size) throw();
 
 这些运算符添加此`CSize`值与参数的值。
 
-``` 
+```
 CSize operator+(SIZE size) const throw();
 CPoint operator+(POINT point) const throw();
-CRect operator+(const RECT* lpRect) const throw(); 
+CRect operator+(const RECT* lpRect) const throw();
 ```
 
 ### <a name="remarks"></a>备注
@@ -197,11 +197,11 @@ CRect operator+(const RECT* lpRect) const throw();
 
 这些运算符的前三个减去此`CSize`值与参数的值。
 
-``` 
+```
 CSize operator-(SIZE size) const throw();
 CPoint operator-(POINT point) const throw();
 CRect operator-(const RECT* lpRect) const throw();
-CSize operator-() const throw(); 
+CSize operator-() const throw();
 ```
 
 ### <a name="remarks"></a>备注

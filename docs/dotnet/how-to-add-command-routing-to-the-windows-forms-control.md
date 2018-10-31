@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 5161e23d17283ba1495baf6fcb201943f8b6ae12
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2af0148c386bc3b1ea8db60fdf84d080c38af857
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46422410"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080684"
 ---
 # <a name="how-to-add-command-routing-to-the-windows-forms-control"></a>如何：向 Windows 窗体控件添加命令传送
 
@@ -51,7 +51,7 @@ ms.locfileid: "46422410"
     partial class UserControl1
     ```
 
-     更改为：
+   更改为：
 
     ```
     partial class UserControl1 : System.Windows.Forms.UserControl, ICommandTarget
@@ -84,19 +84,19 @@ ms.locfileid: "46422410"
 
 1. 添加将调用一个菜单选项`singleMenuHandler`。
 
-     转到**资源视图**(Ctrl + Shift + E)，展开**菜单**文件夹，然后再双击**IDR_MFC02TYPE**。 这将显示在菜单编辑器。
+   转到**资源视图**(Ctrl + Shift + E)，展开**菜单**文件夹，然后再双击**IDR_MFC02TYPE**。 这将显示在菜单编辑器。
 
-     在底部添加一个菜单选项**视图**菜单。 请注意中的菜单选项的 ID**属性**窗口。 保存该文件。
+   在底部添加一个菜单选项**视图**菜单。 请注意中的菜单选项的 ID**属性**窗口。 保存该文件。
 
-     在中**解决方案资源管理器**、 打开 Resource.h 文件，复制刚添加的菜单选项的 ID 值并将该值粘贴到第一个参数`m_CmdSrc.AddCommandHandler`C# 项目中调用`Initialize`（替换方法`32771`如有必要)。
+   在中**解决方案资源管理器**、 打开 Resource.h 文件，复制刚添加的菜单选项的 ID 值并将该值粘贴到第一个参数`m_CmdSrc.AddCommandHandler`C# 项目中调用`Initialize`（替换方法`32771`如有必要)。
 
 9. 生成并运行该项目。
 
-     在 **“生成”** 菜单上，单击 **“生成解决方案”**。
+   在 **“生成”** 菜单上，单击 **“生成解决方案”**。
 
-     上**调试**菜单上，单击**启动但不调试**。
+   上**调试**菜单上，单击**启动但不调试**。
 
-     选择添加菜单选项。 请注意，调用.dll 文件中的方法。
+   选择添加菜单选项。 请注意，调用.dll 文件中的方法。
 
 ## <a name="see-also"></a>请参阅
 

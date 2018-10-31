@@ -172,12 +172,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f1294517a49687a2fc94b1bb696a111a9f55da7
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 79cc811464b4aa33ee11b480ec76c932b123f7da
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46403963"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50074366"
 ---
 # <a name="ctreectrl-class"></a>CTreeCtrl Class
 
@@ -292,8 +292,6 @@ class CTreeCtrl : public CWnd
 - [使用 CTreeCtrl](../../mfc/using-ctreectrl.md)
 
 - [树视图控件参考](/windows/desktop/Controls/tree-view-control-reference)Windows SDK 中。
-
-- 知识库文章 Q222905： 如何： 为 CTreeCtrl 显示上下文菜单
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -1404,7 +1402,6 @@ HTREEITEM HitTest(TVHITTESTINFO* pHitTestInfo) const;
 ```
 HTREEITEM InsertItem(LPTVINSERTSTRUCT lpInsertStruct);
 
-
 HTREEITEM InsertItem(
     UINT nMask,
     LPCTSTR lpszItem,
@@ -1416,12 +1413,10 @@ HTREEITEM InsertItem(
     HTREEITEM hParent,
     HTREEITEM hInsertAfter);
 
-
 HTREEITEM InsertItem(
     LPCTSTR lpszItem,
     HTREEITEM hParent = TVI_ROOT,
     HTREEITEM hInsertAfter = TVI_LAST);
-
 
 HTREEITEM InsertItem(
     LPCTSTR lpszItem,
@@ -1914,7 +1909,6 @@ COLORREF SetInsertMarkColor(COLORREF clrNew);
 
 ```
 BOOL SetItem(TVITEM* pItem);
-
 
 BOOL SetItem(
     HTREEITEM hItem,

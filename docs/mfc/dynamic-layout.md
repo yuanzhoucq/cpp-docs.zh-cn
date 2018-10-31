@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08fc6f6a5b93851468d412e34b3ee0a85ab534e5
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5e2fb7b2468946be29553f54fcedde98e43881d7
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46413245"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068822"
 ---
 # <a name="dynamic-layout"></a>动态布局
 
@@ -65,7 +65,7 @@ ms.locfileid: "46413245"
 
 1. 在自己对话框类的实现代码中查找或创建一个想要为该对话指定动态布局的位置。 例如，你可能希望在对话框中添加一个方法（如 `AdjustLayout`），并从不要更改布局的位置进行调用。 你可能会首先从构造函数中调用，也可能在对对话框进行更改之后调用。
 
-2. 对于对话框中，调用[GetDynamicLayout](../mfc/reference/cwnd-class.md#getdynamiclayout)，方法的`CWnd`类。 `GetDynamicLayout` 返回一个指向`CMFCDynamicLayout`对象。
+2. 对于对话框中，调用[GetDynamicLayout](../mfc/reference/cwnd-class.md#getdynamiclayout)，方法的`CWnd`类。 `GetDynamicLayout` 返回一个指向 `CMFCDynamicLayout` 对象的指针。
 
     ```cpp
     CMFCDynamicLayout* dynamicLayout = pDialog->GetDynamicLayout();
@@ -119,7 +119,7 @@ ms.locfileid: "46413245"
     dynamicLayout->LoadResource("IDD_DIALOG1");
     ```
 
-     已命名的资源必须引用包含中的窗体的布局信息的对话框**AFX_DIALOG_LAYOUT**中的资源文件，如以下示例所示的条目：
+   已命名的资源必须引用包含中的窗体的布局信息的对话框**AFX_DIALOG_LAYOUT**中的资源文件，如以下示例所示的条目：
 
     ```RC
     /////////////////////////////////////////////////////////////////////////////

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6613e38a19987abcc9f95288e9d1cb6957b076a2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: add9336165195ba4da0125c606eebd39f3fce298
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46427272"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062218"
 ---
 # <a name="windows-sockets-example-of-sockets-using-archives"></a>Windows 套接字：使用存档的套接字的示例
 
@@ -40,11 +40,11 @@ ms.locfileid: "46427272"
 
 - "标头"，它指定数据的性质 (在本例中为的值*bValue*变量，并将发送多少份副本)。
 
-     这两个项都是随机生成此示例。
+   这两个项都是随机生成此示例。
 
 - 指定的数据的副本数。
 
-     内部**有关**循环发送*bValue*指定的次数。
+   内部**有关**循环发送*bValue*指定的次数。
 
 - 一个字符串，调用*strText* ，接收方显示其用户。
 

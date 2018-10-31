@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a346cf75a0afebcfdcb31259a0ba72d3a8f6c22
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: fe5aa32a8d6cf0eecc1cc38e49643900bf34f9ae
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46397313"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50066989"
 ---
 # <a name="cmfctoolbareditboxbutton-class"></a>CMFCToolBarEditBoxButton 类
 
@@ -141,7 +141,7 @@ class CMFCToolBarEditBoxButton : public CMFCToolBarButton
 
 ## <a name="example"></a>示例
 
-下面的示例演示如何使用中的各种方法`CMFCToolBarEditBoxButton`类。 该示例演示如何指定用户可以自定义期间延伸按钮，指定在用户单击按钮时显示的按钮的边框，设置文本框控件中的文本，在应用中指定的编辑框按钮的平面样式外观验证，并指定工具栏样式的编辑框控件。
+下面的示例演示了如何使用 `CMFCToolBarEditBoxButton` 类中的各种方法。 该示例演示如何指定用户可以自定义期间延伸按钮，指定在用户单击按钮时显示的按钮的边框，设置文本框控件中的文本，在应用中指定的编辑框按钮的平面样式外观验证，并指定工具栏样式的编辑框控件。
 
 [!code-cpp[NVC_MFC_RibbonApp#40](../../mfc/reference/codesnippet/cpp/cmfctoolbareditboxbutton-class_1.cpp)]
 
@@ -703,6 +703,4 @@ virtual void SetStyle(UINT nStyle);
 [CEdit 类](../../mfc/reference/cedit-class.md)<br/>
 [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)<br/>
 [演练：将控件置于工具栏上](../../mfc/walkthrough-putting-controls-on-toolbars.md)
-
-
 

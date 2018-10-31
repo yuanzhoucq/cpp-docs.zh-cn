@@ -16,18 +16,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7e9541517852696073a3dbbff560bb6c44fd3264
-ms.sourcegitcommit: 92c568e9466ffd7346a4120c478c9bdea61c8756
+ms.openlocfilehash: 0b50234efa193adda081520667658f57e42de1b4
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "47029666"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235408"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>演练： 创建传统的 Windows 桌面应用程序 （c + +）
 
 本演练演示如何在 Visual Studio 中创建的传统 Windows 桌面应用程序。 示例应用程序将创建使用 Windows API 来显示"Hello，Windows 桌面 ！" 应用程序。 可以将本演练中开发的代码作为模式来创建其他 Windows 桌面应用程序。
 
-Windows API （也称为 Win32 API、 Windows 桌面 API 和 Windows 经典 API） 是一个基于 C 语言框架，用于创建 Windows 应用程序。 它已在上世纪 80 年代以来存在并已用于几十年来创建 Windows 应用程序。 此 API，如 MFC、 ATL 和.NET framework 之上构建了更高级和简单程序的框架。 即使最新式代码 UWP 和应用商店应用编写的 C + + WinRT 使用此 API 下方。 有关 Windows API 的详细信息，请参阅[Windows API 索引](/windows/desktop/apiindex/windows-api-list)。 有许多方法来创建 Windows 应用程序，但这是第一个。
+Windows API （也称为 Win32 API、 Windows 桌面 API 和 Windows 经典 API） 是基于 C 语言的框架，用于创建 Windows 应用程序。 它已在上世纪 80 年代以来存在并已用于几十年来创建 Windows 应用程序。 Windows API，如 MFC、 ATL 和.NET framework 之上构建了更高级和简单程序的框架。 即使最新式代码 UWP 和应用商店应用编写的 C + + WinRT 使用 Windows API 下方。 有关 Windows API 的详细信息，请参阅[Windows API 索引](/windows/desktop/apiindex/windows-api-list)。 有许多方法来创建 Windows 应用程序，但上述过程是第一个。
 
 > [!IMPORTANT]
 > 为了简洁起见，在文本中省略了某些代码语句。 [生成代码](#build-the-code)本文档末尾部分显示的完整代码。
@@ -140,13 +140,13 @@ Windows API （也称为 Win32 API、 Windows 桌面 API 和 Windows 经典 API�
    );
    ```
 
-   此函数中编写代码来处理*消息*从 Windows 应用程序接收时*事件*发生。 例如，如果用户在应用程序中选择确定按钮，Windows 将向您发送一条消息，可以编写代码在`WndProc`会执行任何工作所适用的函数。 这称为*处理*事件。 仅处理你的应用程序的相关的事件。
+   在此函数中，编写代码来处理*消息*从 Windows 应用程序接收时*事件*发生。 例如，如果用户在应用程序中选择确定按钮，Windows 将向您发送一条消息，可以编写代码在`WndProc`会执行任何工作所适用的函数。 它称为*处理*事件。 仅处理你的应用程序的相关的事件。
 
    有关详细信息，请参阅[窗口过程](https://msdn.microsoft.com/library/windows/desktop/ms632593)。
 
 ### <a name="to-add-functionality-to-the-winmain-function"></a>向 WinMain 函数添加功能
 
-1. 在中`WinMain`函数，填充类型的结构[WNDCLASSEX](https://msdn.microsoft.com/library/windows/desktop/ms633577)。 此结构包含有关窗口，例如，应用程序图标、 窗口中，要显示在标题栏中，并且非常重要的是，到你的窗口过程函数指针的名称的背景色的信息。 下面的示例演示一个典型 `WNDCLASSEX` 结构。
+1. 在中`WinMain`函数，填充类型的结构[WNDCLASSEX](https://msdn.microsoft.com/library/windows/desktop/ms633577)。 该结构包含有关窗口，例如，应用程序图标、 窗口中，要显示在标题栏中，和重要的是，到你的窗口过程函数指针的名称的背景色的信息。 下面的示例演示一个典型 `WNDCLASSEX` 结构。
 
    ```cpp
    WNDCLASSEX wcex;
@@ -165,9 +165,9 @@ Windows API （也称为 Win32 API、 Windows 桌面 API 和 Windows 经典 API�
    wcex.hIconSm        = LoadIcon(wcex.hInstance, IDI_APPLICATION);
    ```
 
-   此结构字段的信息，请参阅[WNDCLASSEX](https://msdn.microsoft.com/library/windows/desktop/ms633577)。
+   上述结构的字段的信息，请参阅[WNDCLASSEX](https://msdn.microsoft.com/library/windows/desktop/ms633577)。
 
-1. 必须注册`WNDCLASSEX`与 Windows 这样它就会知道有关您的窗口以及如何将消息发送到它。 使用[RegisterClassEx](https://msdn.microsoft.com/library/windows/desktop/ms633587)函数，并将窗口类结构作为参数传递。 `_T`使用宏，因为我们使用`TCHAR`类型。
+1. 注册`WNDCLASSEX`与 Windows 这样它就会知道有关您的窗口以及如何将消息发送到它。 使用[RegisterClassEx](https://msdn.microsoft.com/library/windows/desktop/ms633587)函数，并将窗口类结构作为参数传递。 `_T`使用宏，因为我们使用`TCHAR`类型。
 
    ```cpp
    if (!RegisterClassEx(&wcex))
@@ -221,7 +221,7 @@ Windows API （也称为 Win32 API、 Windows 桌面 API 和 Windows 经典 API�
 
    此函数将返回`HWND`，它是窗口的句柄。 句柄是某种程度上类似于 Windows 使用以跟踪打开的窗口的指针。 有关详细信息，请参阅[Windows 数据类型](/windows/desktop/WinProg/windows-data-types)。
 
-1. 此时已创建窗口，但我们仍需要告诉 Windows，使其可见。 这是此代码的作用：
+1. 此时，已创建窗口，但我们仍需要告诉 Windows，使其可见。 这是此代码的作用：
 
    ```cpp
    // The parameters to ShowWindow explained:
@@ -232,7 +232,7 @@ Windows API （也称为 Win32 API、 Windows 桌面 API 和 Windows 经典 API�
    UpdateWindow(hWnd);
    ```
 
-   所显示的窗口没有太多内容，因为尚未实现`WndProc`函数。 换而言之，应用程序尚不处理 Windows 现在将发送到它的消息。
+   所显示的窗口不会有太多内容，因为你尚未实现`WndProc`函数。 换而言之，应用程序尚不处理 Windows 现在将发送到它的消息。
 
 1. 若要处理的消息，我们首先添加一个消息循环来侦听 Windows 发送的消息。 当应用程序收到一条消息时，此循环将该消息调度到你`WndProc`函数以进行处理。 该消息循环类似于以下代码。
 
@@ -340,9 +340,9 @@ Windows API （也称为 Win32 API、 Windows 桌面 API 和 Windows 经典 API�
 
 1. 若要启用 `WndProc` 函数以处理应用程序收到的消息，请实现 switch 语句。
 
-   有一条重要的消息来处理[WM_PAINT](/windows/desktop/gdi/wm-paint)消息。 应用程序收到此消息，此时必须更新其显示窗口的一部分。 当用户将窗口移动您窗口的前面，然后将它重新移动消失时，会发生此事件。 你的应用程序不知道此类事件的发生时间;仅 Windows 知道，因此它会告诉您使用`WM_PAINT`。 当第一次显示窗口时，必须更新所有它。
+   有一条重要的消息来处理[WM_PAINT](/windows/desktop/gdi/wm-paint)消息。 应用程序收到`WM_PAINT`必须更新其显示窗口的一部分时的消息。 当用户将窗口移动您窗口的前面，然后将它再次移动消失，但你的应用程序不知道发生这些事件时，可能发生此事件。 仅 Windows 知道，因此它会告诉您使用`WM_PAINT`。 当第一次显示窗口时，必须更新所有它。
 
-   若要处理`WM_PAINT`消息，首先应调用[BeginPaint](/windows/desktop/api/winuser/nf-winuser-beginpaint)，然后处理所有的逻辑进行布局文本、 按钮和在窗口中，其他控件，然后调用[EndPaint](/windows/desktop/api/winuser/nf-winuser-endpaint)。 为此应用程序，开始调用和结束调用之间的逻辑是显示字符串"Hello，Windows 桌面 ！" “Hello，World!”。 在下面的代码，请注意[TextOut](/windows/desktop/api/wingdi/nf-wingdi-textouta)函数用于显示的字符串。
+   若要处理`WM_PAINT`消息，首先应调用[BeginPaint](/windows/desktop/api/winuser/nf-winuser-beginpaint)，然后处理所有的逻辑进行布局文本、 按钮和在窗口中，其他控件，然后调用[EndPaint](/windows/desktop/api/winuser/nf-winuser-endpaint)。 对于应用程序，开始调用和结束调用之间的逻辑是显示字符串"Hello，Windows 桌面 ！" “Hello，World!”。 在下面的代码，请注意[TextOut](/windows/desktop/api/wingdi/nf-wingdi-textouta)函数用于显示的字符串。
 
    ```cpp
    PAINTSTRUCT ps;
@@ -367,7 +367,7 @@ Windows API （也称为 Win32 API、 Windows 桌面 API 和 Windows 经典 API�
    }
    ```
 
-   `HDC` 在此代码是设备上下文，即 Windows 用来启用你的应用程序与图形子系统进行通信的数据结构的句柄。 `BeginPaint`和`EndPaint`函数确保你的应用程序的行为类似于一个好市民一样，但不超出其所需到更长时间使用的设备上下文。 这有助于确保图形子系统是可供其他应用程序。
+   `HDC` 在代码中是设备上下文，即 Windows 用来启用你的应用程序与图形子系统进行通信的数据结构的句柄。 `BeginPaint`和`EndPaint`函数使应用程序的行为类似于一个好市民一样，也不比需要更长时间使用的设备上下文。 函数帮助使图形子系统是可供其他应用程序。
 
 1. 应用程序通常会处理许多其他消息，例如[WM_CREATE](/windows/desktop/winmsg/wm-create)首先创建一个窗口，并[WM_DESTROY](/windows/desktop/winmsg/wm-destroy)窗口关闭时。 以下代码显示基本但完整的 `WndProc` 函数。
 

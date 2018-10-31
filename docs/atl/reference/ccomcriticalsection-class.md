@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4678acbe251086f3a42e3544e155a191a5847f11
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4ebabc2d200047acec458c4a29603cc6aee5a589
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46101392"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076823"
 ---
 # <a name="ccomcriticalsection-class"></a>CComCriticalSection 类
 
@@ -67,7 +67,7 @@ class CComCriticalSection
 
 `CComCriticalSection` 类似于类[CComAutoCriticalSection](../../atl/reference/ccomautocriticalsection-class.md)，只不过必须显式初始化并释放关键节。
 
-通常情况下，使用`CComCriticalSection`通过**typedef**名称[CriticalSection](ccommultithreadmodel-class.md#criticalsection)。 此名称引用`CComCriticalSection`时[CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)正在使用。  
+通常情况下，使用`CComCriticalSection`通过**typedef**名称[CriticalSection](ccommultithreadmodel-class.md#criticalsection)。 此名称引用`CComCriticalSection`时[CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)正在使用。
 
 请参阅[CComCritSecLock 类](../../atl/reference/ccomcritseclock-class.md)以使用相对于调用此类更安全的方式`Lock`和`Unlock`直接。
 

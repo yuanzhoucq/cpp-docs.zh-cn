@@ -14,19 +14,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69bfb29bdcc03f0373b5c5ab4916108b0705fc83
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b14359fa6bb602240f4cba173c41660c6863f939
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46434422"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204323"
 ---
 # <a name="containers-for-activex-controls"></a>ActiveX 控件的容器
 
 只要它们支持 ActiveX 控件包容，可以使用其他应用程序，在 Visual c + + 中开发的 ActiveX 控件。 大量的 Microsoft 应用程序，从列出，版本支持 ActiveX 控件包容。
 
 >[!IMPORTANT]
-> ActiveX 是一项传统技术，不应使用新的开发。 本文将取代 ActiveX 的现代技术的详细信息，请参阅[ActiveX 控件](activex-controls.md)。
+> ActiveX 是一项传统技术，不应使用新的开发。 有关取代 ActiveX 的现代技术的详细信息，请参阅[ActiveX 控件](activex-controls.md)。
 
 > [!NOTE]
 >  以下列表并不支持 ActiveX 控件，但表示一组测试中最常用的应用程序的完整列表：

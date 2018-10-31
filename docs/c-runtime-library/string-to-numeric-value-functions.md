@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b65ceb18eb6b8f24db0a85ba2ed13277b13f657
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 45428f1642b428640509978f29c0a36b60696cb0
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46117488"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235056"
 ---
 # <a name="string-to-numeric-value-functions"></a>字符串到数值函数
 
@@ -94,7 +94,7 @@ ms.locfileid: "46117488"
 |`_strtoui64`|溢出|**_UI64_MAX**|
 |`_strtoui64`|不进行转换|0|
 
- **_I64_MAX**、_**I64_MIN** 和 **_UI64_MAX** 在 LIMITS.H 中进行定义。
+**_I64_MAX**、_**I64_MIN** 和 **_UI64_MAX** 在 LIMITS.H 中进行定义。
 
 `wcstod`、`wcstol`、`wcstoul`、`_wcstoi64` 和 `_wcstoui64` 分别是 `strtod`、`strtol`、`strtoul`、`_strtoi64` 和 `_strtoui64` 的宽字符版本。指向每个宽字符函数的转换结束参数的指针都是一个宽字符串。 否则，每个宽字符函数将与其对应的单字节字符的行为相同。
 

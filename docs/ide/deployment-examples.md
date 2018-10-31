@@ -16,25 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 436b289c14110dd8f616112a309e757618b6f954
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eebcb272a07b225aaa249e986f8fac69d0c7edf8
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33327406"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46405523"
 ---
 # <a name="deployment-examples"></a>部署示例
-此部分包含演示如何部署 Visual C++ 应用程序的示例。  
-  
-## <a name="examples"></a>示例  
- [演练：使用安装项目部署 Visual C++ 应用程序](../ide/walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project.md)  
-  
- [演练：将 Visual C++ 应用程序部署到应用程序本地文件夹](../ide/walkthrough-deploying-a-visual-cpp-application-to-an-application-local-folder.md)  
-  
- [演练：使用 Visual C++ 可再发行组件包部署 Visual C++ 应用程序](../ide/deploying-visual-cpp-application-by-using-the-vcpp-redistributable-package.md)  
-  
- [准备用于运行调试可执行文件的测试计算机](../ide/preparing-a-test-machine-to-run-a-debug-executable.md)  
-  
-## <a name="see-also"></a>请参阅  
- [演练：手动部署 ClickOnce 应用程序](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)   
- [部署桌面应用程序](../ide/deploying-native-desktop-applications-visual-cpp.md)
+
+此部分包含演示如何部署 Visual C++ 应用程序的示例。
+
+## <a name="examples"></a>示例
+
+[演练：使用安装项目部署 Visual C++ 应用程序](../ide/walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project.md)
+
+[演练：将 Visual C++ 应用程序部署到应用程序本地文件夹](../ide/walkthrough-deploying-a-visual-cpp-application-to-an-application-local-folder.md)
+
+[演练：使用 Visual C++ 可再发行组件包部署 Visual C++ 应用程序](../ide/deploying-visual-cpp-application-by-using-the-vcpp-redistributable-package.md)
+
+[准备用于运行调试可执行文件的测试计算机](../ide/preparing-a-test-machine-to-run-a-debug-executable.md)
+
+## <a name="see-also"></a>请参阅
+
+[演练：手动部署 ClickOnce 应用程序](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)<br>
+[部署桌面应用程序](../ide/deploying-native-desktop-applications-visual-cpp.md)

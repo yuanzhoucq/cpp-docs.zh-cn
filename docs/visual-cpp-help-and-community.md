@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 172ead8aa67f042512a73b8c0d1ecdaa0723c5d1
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 1e74ed975cce0ac3a87716d9f7ad00da2d75d509
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43676540"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48820668"
 ---
 # <a name="visual-c-help-and-community"></a>Visual C++ 帮助和社区
 
@@ -34,7 +34,7 @@ ms.locfileid: "43676540"
 |标题|描述|
 |-----------|-----------------|
 |[Visual C++](visual-cpp-in-visual-studio.md)|包含有关 Visual C++ 的引用和概念文档。 MSDN 库的一部分。|
-|[Windows 开发人员中心](https://developer.microsoft.com/en-us/windows/)|介绍了如何使用 C++ 和其他语言来开发面向 Windows 8 的应用。 Windows 开发人员中心的一部分, C++ 内容在“文档 > 语言参考”节点下。|
+|[Windows 开发人员中心](https://developer.microsoft.com/windows/)|介绍了如何使用 C++ 和其他语言来开发面向 Windows 8 的应用。 Windows 开发人员中心的一部分, C++ 内容在“文档 > 语言参考”节点下。|
 
 ### <a name="online-and-offline-documentation"></a>联机和脱机文档
 

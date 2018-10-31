@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39cde8affc84ed879ad3731cb6c18449c60498f3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 097f6173faad4f99f64c5dac45e2a0d1292a07eb
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46430847"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076355"
 ---
 # <a name="cmultilock-class"></a>CMultiLock 类
 
@@ -148,19 +148,19 @@ DWORD Lock(
 
 - WAIT_OBJECT_0 和 WAIT_OBJECT_0 + （多个对象-1） 之间
 
-     如果*bWaitForAll*为 TRUE 时，所有对象都已都终止 （可用）。 如果*bWaitForAll*是 FALSE，则返回值-WAIT_OBJECT_0 是中的对象发出信号 （可用） 的对象的数组索引。
+   如果*bWaitForAll*为 TRUE 时，所有对象都已都终止 （可用）。 如果*bWaitForAll*是 FALSE，则返回值-WAIT_OBJECT_0 是中的对象发出信号 （可用） 的对象的数组索引。
 
 - WAIT_OBJECT_0 + （的对象数）
 
-     中指定的事件*dwWakeMask*是线程的输入队列中可用。
+   中指定的事件*dwWakeMask*是线程的输入队列中可用。
 
 - WAIT_ABANDONED_0 和 WAIT_ABANDONED_0 + （多个对象-1） 之间
 
-     如果*bWaitForAll*为 TRUE，所有对象都已都终止，并且至少一个对象是一个放弃的互斥体对象。 如果*bWaitForAll*是 FALSE，则返回值-WAIT_ABANDONED_0 是放弃的互斥体对象满足等待的对象的数组中的索引。
+   如果*bWaitForAll*为 TRUE，所有对象都已都终止，并且至少一个对象是一个放弃的互斥体对象。 如果*bWaitForAll*是 FALSE，则返回值-WAIT_ABANDONED_0 是放弃的互斥体对象满足等待的对象的数组中的索引。
 
 - WAIT_TIMEOUT
 
-     中指定的超时间隔*dwTimeOut*而无需等待之后过期。
+   中指定的超时间隔*dwTimeOut*而无需等待之后过期。
 
 ### <a name="remarks"></a>备注
 
@@ -174,7 +174,6 @@ DWORD Lock(
 
 ```
 BOOL Unlock();
-
 
 BOOL Unlock(
     LONG lCount,
@@ -202,6 +201,4 @@ BOOL Unlock(
 ## <a name="see-also"></a>请参阅
 
 [层次结构图](../../mfc/hierarchy-chart.md)
-
-
 

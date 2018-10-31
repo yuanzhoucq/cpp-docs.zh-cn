@@ -25,65 +25,65 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1431fb9b35ab83f6cb0fc167eff4ba4508f2e301
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 9a1b11450dd67e63927aeb20c54643a5980fa672
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46036184"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50058864"
 ---
 # <a name="irowsetidentityimpl-class"></a>IRowsetIdentityImpl 类
 
-实现 OLE DB [IRowsetIdentity](/previous-versions/windows/desktop/ms715913\(v=vs.85\))接口，可对行标识进行测试。  
-  
+实现 OLE DB [IRowsetIdentity](/previous-versions/windows/desktop/ms715913)接口，可对行标识进行测试。
+
 ## <a name="syntax"></a>语法
 
 ```cpp
-template <class T, class RowClass = CSimpleRow>  
-class ATL_NO_VTABLE IRowsetIdentityImpl   
-   : public IRowsetIdentity  
-```  
-  
-### <a name="parameters"></a>参数  
+template <class T, class RowClass = CSimpleRow>
+class ATL_NO_VTABLE IRowsetIdentityImpl
+   : public IRowsetIdentity
+```
+
+### <a name="parameters"></a>参数
 
 *T*<br/>
-一个类派生自`IRowsetIdentityImpl`。  
-  
+一个类派生自`IRowsetIdentityImpl`。
+
 *RowClass*<br/>
-为存储单元`HROW`。  
+为存储单元`HROW`。
 
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>要求
 
-**标头：** atldb.h  
-  
-## <a name="members"></a>成员  
-  
-### <a name="methods"></a>方法  
-  
-|||  
-|-|-|  
-|[IsSameRow](#issamerow)|比较两个行句柄，以了解它们是否引用同一行。|  
-  
+**标头：** atldb.h
+
+## <a name="members"></a>成员
+
+### <a name="methods"></a>方法
+
+|||
+|-|-|
+|[IsSameRow](#issamerow)|比较两个行句柄，以了解它们是否引用同一行。|
+
 ## <a name="issamerow"></a> Irowsetidentityimpl:: Issamerow
 
-比较两个行句柄，以了解它们是否引用同一行。  
-  
-### <a name="syntax"></a>语法  
-  
+比较两个行句柄，以了解它们是否引用同一行。
+
+### <a name="syntax"></a>语法
+
 ```cpp
-STDMETHOD(IsSameRow )(HROW hThisRow,  
-   HROW hThatRow);  
-```  
-  
-#### <a name="parameters"></a>参数  
+STDMETHOD(IsSameRow )(HROW hThisRow,
+   HROW hThatRow);
+```
 
-请参阅[IRowsetIdentity::IsSameRow](/previous-versions/windows/desktop/ms719629\(v=vs.85\))中*OLE DB 程序员参考*。  
-  
-### <a name="remarks"></a>备注  
+#### <a name="parameters"></a>参数
 
-若要比较的行句柄，此方法强制转换`HROW`句柄`RowClass`成员和调用`memcmp`指针。  
-  
-## <a name="see-also"></a>请参阅  
+请参阅[IRowsetIdentity::IsSameRow](/previous-versions/windows/desktop/ms719629)中*OLE DB 程序员参考*。
+
+### <a name="remarks"></a>备注
+
+若要比较的行句柄，此方法强制转换`HROW`句柄`RowClass`成员和调用`memcmp`指针。
+
+## <a name="see-also"></a>请参阅
 
 [OLE DB 提供程序模板](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [OLE DB 提供程序模板体系结构](../../data/oledb/ole-db-provider-template-architecture.md)

@@ -1,7 +1,7 @@
 ---
 title: map 类 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -98,12 +98,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ccab97a7ac1fd0ad073a3f507dfa6687f311efc4
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 96d0b6abc7ca9f82c3b9c1ce3e84b7fad99ea486
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45703919"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50066384"
 ---
 # <a name="map-class"></a>map 类
 
@@ -126,7 +126,7 @@ class map;
 *Key*<br/>
 要存储在映射中的键数据类型。
 
-*类型*<br/>
+*Type*<br/>
 要存储在映射中的元素数据类型。
 
 *特征*<br/>
@@ -1012,7 +1012,6 @@ The map m2 is empty.
 ```cpp
 const_iterator end() const;
 
-
 iterator end();
 ```
 
@@ -1083,7 +1082,7 @@ int main( )
 
    cout << "A direct call of upper_bound( 2 ) gives "
         << m1_RcIter -> second << "," << endl
-        << " matching the 2nd element of the pair"
+        << "matching the 2nd element of the pair"
         << " returned by equal_range( 2 )." << endl;
 
    p2 = m1.equal_range( 4 );
@@ -1103,7 +1102,7 @@ int main( )
 The lower bound of the element with a key of 2 in the map m1 is: 20.
 The upper bound of the element with a key of 2 in the map m1 is: 30.
 A direct call of upper_bound( 2 ) gives 30,
- matching the 2nd element of the pair returned by equal_range( 2 ).
+matching the 2nd element of the pair returned by equal_range( 2 ).
 The map m1 doesn't have an element with a key less than 40.
 ```
 
@@ -1115,11 +1114,9 @@ The map m1 doesn't have an element with a key less than 40.
 iterator erase(
     const_iterator Where);
 
-
 iterator erase(
     const_iterator First,
     const_iterator Last);
-
 
 size_type erase(
     const key_type& Key);
@@ -1232,7 +1229,6 @@ int main()
 
 ```cpp
 iterator find(const Key& key);
-
 
 const_iterator find(const Key& key) const;
 ```
@@ -1394,19 +1390,16 @@ int main( )
 pair<iterator, bool> insert(
     const value_type& Val);
 
-
 // (2) single element, perfect forwarded
 template <class ValTy>
 pair<iterator, bool>
 insert(
     ValTy&& Val);
 
-
 // (3) single element with hint
 iterator insert(
     const_iterator Where,
     const value_type& Val);
-
 
 // (4) single element, perfect forwarded, with hint
 template <class ValTy>
@@ -1414,13 +1407,11 @@ iterator insert(
     const_iterator Where,
     ValTy&& Val);
 
-
 // (5) range
 template <class InputIterator>
 void insert(
     InputIterator First,
     InputIterator Last);
-
 
 // (6) initializer list
 void insert(
@@ -1794,18 +1785,18 @@ map(
 
 template <class InputIterator>
 map(
- InputIterator First,
+    InputIterator First,
     InputIterator Last);
 
 template <class InputIterator>
 map(
- InputIterator First,
+    InputIterator First,
     InputIterator Last,
     const Traits& Comp);
 
 template <class InputIterator>
 map(
- InputIterator First,
+    InputIterator First,
     InputIterator Last,
     const Traits& Comp,
     const Allocator& Al);
@@ -2636,9 +2627,9 @@ value_compare value_comp() const;
 
 ### <a name="remarks"></a>备注
 
-对于 map *m*，如果 *e*1( *k*1, *d*1) 和 *e*2( *k*2, `d`2) 两个元素为类型 `value_type` 的对象，其中 *k*1 和 *k*2 为 `key_type` 类型的键，`d`1 和 `d`2 为 `mapped_type` 类型的数据，则 *m.*`value_comp`( *e*1, *e*2) 等同于 *m.*`key_comp`( *k*1, *k*2)。 存储对象会定义成员函数
+地图*m*，如果两个元素*e1*(*k1*， *d1*) 和*e2*(*k2*， *d2*) 的对象的类型`value_type`，其中*k1*并*版 k1*是其键的类型`key_type`和*d1*并*d2*是其数据类型`mapped_type`，然后`m.value_comp(e1, e2)`等效于`m.key_comp(k1, k2)`。 存储对象会定义成员函数
 
-**bool 运算符**( **value_type &**`left`， **value_type &**`right`);
+`bool operator( value_type& left, value_type& right);`
 
 如果 `left` 的键值在排序顺序中先于且不等于 `right` 的键值，则该函数会返回 **true**。
 

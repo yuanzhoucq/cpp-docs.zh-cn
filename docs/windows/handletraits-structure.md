@@ -1,28 +1,32 @@
 ---
 title: HANDLETraits 结构 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/27/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::HandleTraits::HANDLETraits
+- corewrappers/Microsoft::WRL::Wrappers::HandleTraits::HANDLETraits::Close
+- corewrappers/Microsoft::WRL::Wrappers::HandleTraits::HANDLETraits::GetInvalidValue
 dev_langs:
 - C++
 helpviewer_keywords:
-- HANDLETraits structure
+- Microsoft::WRL::Wrappers::HandleTraits::HANDLETraits structure
+- Microsoft::WRL::Wrappers::HandleTraits::HANDLETraits::Close method
+- Microsoft::WRL::Wrappers::HandleTraits::HANDLETraits::GetInvalidValue method
 ms.assetid: 22963e88-d857-4624-9182-7c986daff722
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c2193743da9e7b5667714650660cd8e1efdb5cf4
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 3e670dca205f07d1e13a93f8acd0df5965b45109
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42610976"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161705"
 ---
 # <a name="handletraits-structure"></a>HANDLETraits 结构
 
@@ -38,16 +42,16 @@ struct HANDLETraits;
 
 ### <a name="public-typedefs"></a>公共 Typedef
 
-|名称|描述|
-|----------|-----------------|
-|`Type`|句柄的同义词。|
+名称   | 描述
+------ | ---------------------
+`Type` | 句柄的同义词。
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
-|----------|-----------------|
-|[HANDLETraits::Close 方法](../windows/handletraits-close-method.md)|关闭指定的句柄。|
-|[HANDLETraits::GetInvalidValue 方法](../windows/handletraits-getinvalidvalue-method.md)|表示无效句柄。|
+名称                                              | 描述
+------------------------------------------------- | -----------------------------
+[Handletraits:: Close](#close)                     | 关闭指定的句柄。
+[Handletraits:: Getinvalidvalue](#getinvalidvalue) | 表示无效句柄。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -59,6 +63,33 @@ struct HANDLETraits;
 
 **Namespace:** Microsoft::WRL::Wrappers::HandleTraits
 
-## <a name="see-also"></a>请参阅
+## <a name="close"></a>Handletraits:: Close
 
-[Microsoft::WRL::Wrappers::HandleTraits 命名空间](../windows/microsoft-wrl-wrappers-handletraits-namespace.md)
+关闭指定的句柄。
+
+```cpp
+inline static bool Close(
+   _In_ Type h
+);
+```
+
+### <a name="parameters"></a>参数
+
+*h*<br/>
+要关闭的句柄。
+
+### <a name="return-value"></a>返回值
+
+**true**如果处理*h*关闭成功; 否则为**false**。
+
+## <a name="getinvalidvalue"></a>Handletraits:: Getinvalidvalue
+
+表示无效句柄。
+
+```cpp
+inline static HANDLE GetInvalidValue();
+```
+
+### <a name="return-value"></a>返回值
+
+始终返回 INVALID_HANDLE_VALUE。 （INVALID_HANDLE_VALUE 定义由 Windows 中）。

@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c5b5bb50c99efc2a7b18fbbbabba394ec5330661
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: fc151ae25df4cac2c6b5ed9ac5a523efda28dff2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46378197"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082705"
 ---
 # <a name="using-property-sheets-in-your-application"></a>在您的应用程序中使用属性表
 
@@ -34,9 +34,9 @@ ms.locfileid: "46378197"
 
 1. 为每个属性页创建对话框模板资源。 记住，用户可能从一页切换到另一页，因此，尽量让每页的布局一致。
 
-     所有页的对话框模板的大小不必相同。 框架将使用最大页的大小确定要在属性页的属性表中分配的空间。
+   所有页的对话框模板的大小不必相同。 框架将使用最大页的大小确定要在属性页的属性表中分配的空间。
 
-     当您为属性页创建对话框模板资源时，您必须在“对话框属性”属性表中指定下列样式：
+   当您为属性页创建对话框模板资源时，您必须在“对话框属性”属性表中指定下列样式：
 
    - 设置**标题**编辑框上**常规**到你想要在此页的选项卡中显示的文本页。
 
@@ -60,9 +60,9 @@ ms.locfileid: "46378197"
 
    - 调用[cpropertysheet:: Addpage](../mfc/reference/cpropertysheet-class.md#addpage)为每个页面。
 
-     通常，创建 `CPropertySheet` 的对象在该步骤中还将创建 `CPropertyPage` 对象。 但是，如果实现 `CPropertySheet` 派生类，则可将 `CPropertyPage` 对象嵌入 `CPropertySheet` 对象并从 `AddPage` 派生类构造函数为每页调用 `CPropertySheet`。 `AddPage` 会将 `CPropertyPage` 对象添加到属性表的页列表，但不会实际为该页创建窗口。 因此，无需等到创建属性表窗口后再调用 `AddPage`；您可通过属性表的构造函数调用 `AddPage`。
+   通常，创建 `CPropertySheet` 的对象在该步骤中还将创建 `CPropertyPage` 对象。 但是，如果实现 `CPropertySheet` 派生类，则可将 `CPropertyPage` 对象嵌入 `CPropertySheet` 对象并从 `AddPage` 派生类构造函数为每页调用 `CPropertySheet`。 `AddPage` 会将 `CPropertyPage` 对象添加到属性表的页列表，但不会实际为该页创建窗口。 因此，无需等到创建属性表窗口后再调用 `AddPage`；您可通过属性表的构造函数调用 `AddPage`。
 
-     默认情况下，如果属性表具有的选项卡在属性表的单个行中放不下，这些选项卡则会堆叠在多个行中。 若要禁用堆叠，调用[cpropertysheet:: Enablestackedtabs](../mfc/reference/cpropertysheet-class.md#enablestackedtabs)参数设置为**FALSE**。 您必须在创建属性表时调用 `EnableStackedTabs`。
+   默认情况下，如果属性表具有的选项卡在属性表的单个行中放不下，这些选项卡则会堆叠在多个行中。 若要禁用堆叠，调用[cpropertysheet:: Enablestackedtabs](../mfc/reference/cpropertysheet-class.md#enablestackedtabs)参数设置为**FALSE**。 您必须在创建属性表时调用 `EnableStackedTabs`。
 
 1. 调用[cpropertysheet:: Domodal](../mfc/reference/cpropertysheet-class.md#domodal)或[创建](../mfc/reference/cpropertysheet-class.md#create)以显示属性表。 调用 `DoModal` 以将属性表作为模式对话框创建。 调用**创建**创建属性表作为无模式对话框。
 

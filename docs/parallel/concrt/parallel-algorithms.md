@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23a4efb1412260ad71a610f53a7d1745157b3c53
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f1eb46754f80bca89419e6c3c85db94ec802df2f
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46434983"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163395"
 ---
 # <a name="parallel-algorithms"></a>并行算法
 
@@ -166,7 +166,7 @@ ms.locfileid: "46434983"
 > [!WARNING]
 >  本示例演示 `parallel_transform` 的基本用法。 由于工作函数不会执行大量工作，因此本示例中不会有显著的性能提升。
 
-`parallel_transform` 算法有两个重载。 第一个重载采用一个输入范围和一个一元函数。 该一元函数可以是采用一个参数的 lambda 表达式、一个函数对象或从 `unary_function` 派生的一个类型。 第二个重载采用两个输入范围和一个二元函数。 二元函数可以采用两个自变量、 函数对象或从派生的类型的 lambda 表达式[std:: binary_function](../../standard-library/binary-function-struct.md)。 下面的示例阐释了这些差异。
+`parallel_transform` 算法有两个重载。 第一个重载采用一个输入范围和一个一元函数。 该一元函数可以是采用一个自变量的 lambda 表达式、一个函数对象或从 `unary_function` 派生的一个类型。 第二个重载采用两个输入范围和一个二元函数。 二元函数可以采用两个自变量、 函数对象或从派生的类型的 lambda 表达式[std:: binary_function](../../standard-library/binary-function-struct.md)。 下面的示例阐释了这些差异。
 
 [!code-cpp[concrt-parallel-transform-vectors#2](../../parallel/concrt/codesnippet/cpp/parallel-algorithms_5.cpp)]
 
@@ -284,7 +284,7 @@ PPL 提供三种排序算法： [concurrency:: parallel_sort](reference/concurre
 
 [!code-cpp[concrt-parallel-sort-points#3](../../parallel/concrt/codesnippet/cpp/parallel-algorithms_14.cpp)]
 
-哈希函数必须返回整型 ([std::is_integral::value](../../standard-library/is-integral-class.md)必须是`true`)。 此整型必须可转换为类型 `size_t`。
+哈希函数必须返回整型 ([std::is_integral::value](../../standard-library/is-integral-class.md)必须是**true**)。 此整型必须可转换为类型 `size_t`。
 
 ###  <a name="choose_sort"></a> 选择排序算法
 
@@ -298,7 +298,7 @@ PPL 提供三种排序算法： [concurrency:: parallel_sort](reference/concurre
 
 - 数据集的特征。 例如，一种算法对已完成近似排序的数据可能执行效果很好，但对完全未排序的数据执行效果就不那么好了。
 
-- 区块的大小。 可选的 `_Chunk_size` 参数将指定算法在将整体排序细分成较小工作单元时何时从并行排序实现切换为串行排序实现。 例如，如果提供的是 512，算法会在工作单元包含 512 个或更少元素时切换到串行实现。 串行实现可以提高整体性能，因为它消除了并行处理数据所需的开销。
+- 区块的大小。 可选的 `_Chunk_size` 自变量将指定算法在将整体排序细分成较小工作单元时何时从并行排序实现切换为串行排序实现。 例如，如果提供的是 512，算法会在工作单元包含 512 个或更少元素时切换到串行实现。 串行实现可以提高整体性能，因为它消除了并行处理数据所需的开销。
 
 以并行方式对小型数据集排序可能不值得，即使是在您拥有大量的可用计算资源或您的比较函数或哈希函数执行相对大量的工作时。 可以使用[std:: sort](../../standard-library/algorithm-functions.md#sort)函数对小型数据集进行排序。 (`parallel_sort`并`parallel_buffered_sort`调用`sort`时指定的块区大小大于数据集; 但是，`parallel_buffered_sort`必须分配 o （n） 空间，这可能需要更多时间由于锁争用或内存分配。)
 

@@ -12,18 +12,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eefb2347cfe3a46dabbf72a46fd46fcb16f57d38
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 16fe66e6ba8ea3f6e4f88f434b58c61d46ce1edb
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42578331"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080645"
 ---
 # <a name="porting-to-the-universal-windows-platform-c"></a>移植到通用 Windows 平台 (C++)
 
 在本主题中，可以找到有关如何将现有的 C++ 代码移植到 Windows 10 应用平台（通用 Windows 平台）的信息。 术语 *“通用”* 的意思是代码可以在运行 Windows 10 的任何设备上运行，包括桌面、手机、平板电脑和运行 Windows 10 的未来设备。 可以创建单个项目和单个基于 XAML 的用户界面，可在运行 Windows 10 的任何设备上正常工作。 可以在 XAML 中使用动态布局功能，以允许应用的 UI 适应不同的显示大小。
 
-Windows 开发人员中心文档包含将 Windows 8.1 应用移植到通用 Windows 平台的指南。 请参阅[从 Windows 运行时 8 移动到 UWP](/windows/uwp/porting/w8x-to-uwp-root)。 尽管该指南主要侧重于 C# 代码，但指南的大部分内容都适用于 C++。 下面的过程包含更加详细的信息。
+Windows 开发人员中心文档包含将 Windows 8.1 应用移植到通用 Windows 平台的指南。 请参阅 [从 Windows Runtime 8 移动到 UWP](/windows/uwp/porting/w8x-to-uwp-root)。 尽管该指南主要侧重于 C# 代码，但指南的大部分内容都适用于 C++。 下面的过程包含更加详细的信息。
 
 本主题包含以下用于将代码移植到 UWP 的过程。
 
@@ -74,7 +74,7 @@ Windows 开发人员中心文档包含将 Windows 8.1 应用移植到通用 Wind
     #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
     ```
 
-     这些语句分别适用于 UWP 应用、Windows Phone 应用商店应用、都适用或都不适用（仅针对经典 Win32 桌面）。 这些宏仅在 Windows SDK 8.1 及更高版本中才可用，因此如果你的代码需要使用早期版本的 Windows SDK 或除 Windows 以外的其他平台进行编译，则还应考虑未定义它们中任何一个这种情况。
+   这些语句分别适用于 UWP 应用、Windows Phone 应用商店应用、都适用或都不适用（仅针对经典 Win32 桌面）。 这些宏仅在 Windows SDK 8.1 及更高版本中才可用，因此如果你的代码需要使用早期版本的 Windows SDK 或除 Windows 以外的其他平台进行编译，则还应考虑未定义它们中任何一个这种情况。
 
 11. 对应用支持的每种类型的设备，在仿真器或物理设备运行和调试应用。 若要运行仿真程序，则需在物理计算机上（而不是虚拟机上）运行 Visual Studio。
 
@@ -118,5 +118,5 @@ could not find assembly 'platform.winmd': please specify the assembly search pat
 
 ## <a name="see-also"></a>请参阅
 
-[Visual C++ 迁移指南](../porting/porting-to-the-universal-windows-platform-cpp.md)  
-[开发通用 Windows 平台 (UWP) 的应用](/visualstudio/cross-platform/develop-apps-for-the-universal-windows-platform-uwp)  
+[Visual C++ 迁移指南](../porting/porting-to-the-universal-windows-platform-cpp.md)<br/>
+[开发通用 Windows 平台 (UWP) 的应用](/visualstudio/cross-platform/develop-apps-for-the-universal-windows-platform-uwp)

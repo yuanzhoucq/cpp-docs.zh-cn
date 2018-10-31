@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 919cff46250d07876c9ca50acb21972fcfa75d4d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a734e51f298f7f092dde341479293bad3a2d9434
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46411400"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50072676"
 ---
 # <a name="mfc-activex-controls-using-pictures-in-an-activex-control"></a>MFC ActiveX 控件：在 ActiveX 控件中使用图片
 
@@ -47,15 +47,15 @@ ActiveX 控件类提供了若干组件，可用于在控件内实现图片属性
 
 - [CPictureHolder](../mfc/reference/cpictureholder-class.md) 类。
 
-     通过该类，可轻松访问自定义图片属性所显示项的图片对象和功能。
+   通过该类，可轻松访问自定义图片属性所显示项的图片对象和功能。
 
 - 支持 **LPPICTUREDISP**类型的属性，并通过 Get/Set 函数实现。
 
-     通过“类视图”，可以快速添加一个或多个支持图片类型的自定义属性。 有关如何通过“类视图”添加 ActiveX 控件属性的详细信息，请参阅 [MFC ActiveX 控件：属性](../mfc/mfc-activex-controls-properties.md)一文。
+   通过“类视图”，可以快速添加一个或多个支持图片类型的自定义属性。 有关如何通过“类视图”添加 ActiveX 控件属性的详细信息，请参阅 [MFC ActiveX 控件：属性](../mfc/mfc-activex-controls-properties.md)一文。
 
 - 属性页用于操作控件的一个或多个图片属性。
 
-     此属性页是 ActiveX 控件可以使用的一组常用属性页的一部分。 有关 ActiveX 控件属性页的详细信息，请参阅 [MFC ActiveX 控件：使用常用属性页](../mfc/mfc-activex-controls-using-stock-property-pages.md)一文
+   此属性页是 ActiveX 控件可以使用的一组常用属性页的一部分。 有关 ActiveX 控件属性页的详细信息，请参阅 [MFC ActiveX 控件：使用常用属性页](../mfc/mfc-activex-controls-using-stock-property-pages.md)一文
 
 ##  <a name="_core_implementing_a_custom_picture_property_in_your_activex_control"></a> 在 ActiveX 控件中实现自定义图片属性
 
@@ -67,11 +67,11 @@ ActiveX 控件类提供了若干组件，可用于在控件内实现图片属性
 
 - [向控件项目添加代码](#_core_additions_to_your_control_project)。
 
-     必须添加标准图片属性页 ID、 `CPictureHolder`类型的数据成员，以及包含 Get/Set 实现的 **LPPICTUREDISP** 类型的自定义属性。
+   必须添加标准图片属性页 ID、 `CPictureHolder`类型的数据成员，以及包含 Get/Set 实现的 **LPPICTUREDISP** 类型的自定义属性。
 
 - [修改控件类中的若干函数](#_core_modifications_to_your_control_project)。
 
-     对用于绘制 ActiveX 控件的若干函数进行修改。
+   对用于绘制 ActiveX 控件的若干函数进行修改。
 
 ##  <a name="_core_additions_to_your_control_project"></a> 向控件项目添加内容
 

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6fb3febbbaffc7c3a0de945fc9d30b544fd22188
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: c8a2935d5b1c32298215b0ebfcf7382dafd259b3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46023301"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052936"
 ---
 # <a name="server-registration-global-functions"></a>服务器注册全局函数
 
@@ -38,7 +38,7 @@ ms.locfileid: "46023301"
 |[AtlComModuleUnregisterServer](#atlcommoduleunregisterserver)|调用此函数可在对象映射中注销所有对象。|
 |[AtlComModuleRegisterClassObjects](#atlcommoduleregisterclassobjects)|调用此函数可注册类对象。|
 |[AtlComModuleRevokeClassObjects](#atlcommodulerevokeclassobjects)|若要吊销从 COM 模块类对象，调用此函数。|
-|[AtlComModuleGetClassObject](#atlcommodulegetclassobject)|此函数调用以获取类对象。|  
+|[AtlComModuleGetClassObject](#atlcommodulegetclassobject)|此函数调用以获取类对象。|
 
 ## <a name="requirements"></a>要求
 
@@ -125,7 +125,7 @@ ATLINLINE ATLAPI AtlComModuleRegisterClassObjects(
 对 COM 模块的指针。
 
 *dwClsContext*<br/>
-指定在其中运行的类对象的上下文。 可能的值为 CLSCTX_INPROC_SERVER、 CLSCTX_INPROC_HANDLER 或 CLSCTX_LOCAL_SERVER。 请参阅[CLSCTX](https://msdn.microsoft.com/library/windows/desktop/ms693716)的更多详细信息。
+指定在其中运行的类对象的上下文。 可能的值为 CLSCTX_INPROC_SERVER、 CLSCTX_INPROC_HANDLER 或 CLSCTX_LOCAL_SERVER。 请参阅[CLSCTX](/windows/desktop/api/wtypesbase/ne-wtypesbase-tagclsctx)的更多详细信息。
 
 *dwFlags*<br/>
 确定指向类对象的连接类型。 可能的值为 REGCLS_SINGLEUSE、 REGCLS_MULTIPLEUSE 或 REGCLS_MULTI_SEPARATE。 请参阅[结合](/windows/desktop/api/combaseapi/ne-combaseapi-tagregcls)的更多详细信息。

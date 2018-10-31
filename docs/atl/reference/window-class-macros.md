@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5650707f9c08c144d2f5832744117dfdd06acc08
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 0e151ba4fc2adbe6dab2397d68658b0cb1eb5ef1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46106902"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059072"
 ---
 # <a name="window-class-macros"></a>窗口类宏
 
@@ -32,7 +32,7 @@ ms.locfileid: "46106902"
 |[{2&AMP;GT;DECLARE_WND_CLASS&AMP;LT;2](#declare_wnd_class)|可以指定新的窗口类的名称。|
 |[DECLARE_WND_CLASS2](#declare_wnd_class2)|(Visual Studio 2017)可以指定新的窗口类和封闭类的新类将使用其窗口过程的名称。|
 |[DECLARE_WND_SUPERCLASS](#declare_wnd_superclass)|可以指定新的窗口类将基于现有窗口类的名称。|
-|[DECLARE_WND_CLASS_EX](#declare_wnd_class_ex)|允许您指定的类的参数。|  
+|[DECLARE_WND_CLASS_EX](#declare_wnd_class_ex)|允许您指定的类的参数。|
 
 ## <a name="requirements"></a>要求
 
@@ -69,9 +69,9 @@ DECLARE_WND_CLASS( WndClassName )
 
 {2&gt;declare_wnd_class&lt;2 还指定了默认窗口的背景色。 使用[DECLARE_WND_CLASS_EX](#declare_wnd_class_ex)宏，以提供您自己的样式和背景色。
 
-[CWindowImpl](cwindowimpl-class.md)使用 {2&gt;declare_wnd_class&lt;2 宏来创建基于新的窗口类的窗口。 若要重写此行为，请使用[DECLARE_WND_SUPERCLASS](#declare_wnd_superclass)宏，或提供自己的实现[GetWndClassInfo](cwindowimpl-class.md#getwndclassinfo)函数。  
+[CWindowImpl](cwindowimpl-class.md)使用 {2&gt;declare_wnd_class&lt;2 宏来创建基于新的窗口类的窗口。 若要重写此行为，请使用[DECLARE_WND_SUPERCLASS](#declare_wnd_superclass)宏，或提供自己的实现[GetWndClassInfo](cwindowimpl-class.md#getwndclassinfo)函数。
 
-有关使用 ATL 中的窗口的详细信息，请参阅文章[ATL 窗口类](../../atl/atl-window-classes.md)。  
+有关使用 ATL 中的窗口的详细信息，请参阅文章[ATL 窗口类](../../atl/atl-window-classes.md)。
 
 ##  <a name="declare_wnd_class2"></a>  DECLARE_WND_CLASS2
 
@@ -84,7 +84,7 @@ DECLARE_WND_CLASS2( WndClassName, EnclosingClass )
 ### <a name="parameters"></a>参数
 
 *WndClassName*<br/>
-[in]新的窗口类的名称。 如果为 NULL，ATL 将生成的窗口类名称。 
+[in]新的窗口类的名称。 如果为 NULL，ATL 将生成的窗口类名称。
 
 *EnclosingClass*<br/>
 [in]包含新的窗口类的窗口类的名称。 不能为 NULL。
@@ -120,7 +120,7 @@ DECLARE_WND_SUPERCLASS 实现以下静态函数：
 
 默认情况下[CWindowImpl](cwindowimpl-class.md)使用[{2&gt;declare_wnd_class&lt;2](#declare_wnd_class)宏来创建一个窗口，基于一个新的窗口类。 通过指定中的 DECLARE_WND_SUPERCLASS 宏`CWindowImpl`-派生的类，窗口类将基于现有类，但将使用在窗口过程。 这一技术称为创建超类。
 
-除了使用 {2&gt;declare_wnd_class&lt;2 和 DECLARE_WND_SUPERCLASS 宏，您可以重写[GetWndClassInfo](cwindowimpl-class.md#getwndclassinfo)函数与您自己的实现。  
+除了使用 {2&gt;declare_wnd_class&lt;2 和 DECLARE_WND_SUPERCLASS 宏，您可以重写[GetWndClassInfo](cwindowimpl-class.md#getwndclassinfo)函数与您自己的实现。
 
 有关使用 ATL 中的窗口的详细信息，请参阅文章[ATL 窗口类](../../atl/atl-window-classes.md)。
 

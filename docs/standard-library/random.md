@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 453c2eb186175b275defdc87dcfcdc79ff5f258a
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: b8704d0bc64734a9edd4f3bfca50c2d1b2ecc37b
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956500"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235615"
 ---
 # <a name="ltrandomgt"></a>&lt;random&gt;
 
@@ -241,34 +241,76 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
 适用于实例化引擎和引擎适配器。 有关详细信息，请参阅[引擎和分布](#engdist)。
 
 - `default_random_engine`默认引擎。
- `typedef mt19937 default_random_engine;`
+
+    ```cpp
+    typedef mt19937 default_random_engine;
+    ```
 
 - `knuth_b`Knuth 引擎。
- `typedef shuffle_order_engine<minstd_rand0, 256> knuth_b;`
+
+    ```cpp
+    typedef shuffle_order_engine<minstd_rand0, 256> knuth_b;
+    ```
 
 - `minstd_rand0`1988 最小标准引擎（Lewis、Goodman 和 Miller，1969）。
- `typedef linear_congruential_engine<unsigned int, 16807, 0, 2147483647> minstd_rand0;`
+
+    ```cpp
+    typedef linear_congruential_engine<unsigned int, 16807, 0, 2147483647> minstd_rand0;
+    ```
 
 - `minstd_rand`更新的最小标准引擎 `minstd_rand0`（Park、Miller 和 Stockmeyer，1993）。
- `typedef linear_congruential_engine<unsigned int, 48271, 0, 2147483647> minstd_rand;`
+
+    ```cpp
+    typedef linear_congruential_engine<unsigned int, 48271, 0, 2147483647> minstd_rand;
+    ```
 
 - `mt19937`32 位梅森旋转引擎（Matsumoto 和 Nishimura，1998）。
- `typedef mersenne_twister_engine<unsigned int, 32, 624, 397,      31, 0x9908b0df,      11, 0xffffffff,      7, 0x9d2c5680,      15, 0xefc60000,      18, 1812433253> mt19937;`
+
+    ```cpp
+    typedef mersenne_twister_engine<
+        unsigned int, 32, 624, 397,
+        31, 0x9908b0df,
+        11, 0xffffffff,
+        7, 0x9d2c5680,
+        15, 0xefc60000,
+        18, 1812433253> mt19937;
+    ```
 
 - `mt19937_64`64 位梅森旋转引擎（Matsumoto 和 Nishimura，2000）。
- `typedef mersenne_twister_engine<unsigned long long, 64, 312, 156,      31, 0xb5026f5aa96619e9ULL,      29, 0x5555555555555555ULL,      17, 0x71d67fffeda60000ULL,      37, 0xfff7eee000000000ULL,      43, 6364136223846793005ULL> mt19937_64;`
+
+    ```cpp
+    typedef mersenne_twister_engine<
+        unsigned long long, 64, 312, 156,
+        31, 0xb5026f5aa96619e9ULL,
+        29, 0x5555555555555555ULL,
+        17, 0x71d67fffeda60000ULL,
+        37, 0xfff7eee000000000ULL,
+        43, 6364136223846793005ULL> mt19937_64;
+    ```
 
 - `ranlux24` 24 位 RANLUX 引擎 （Martin Lüscher 和 Fred James，1994年）。
- `typedef discard_block_engine<ranlux24_base, 223, 23> ranlux24;`
+
+    ```cpp
+    typedef discard_block_engine<ranlux24_base, 223, 23> ranlux24;
+    ```
 
 - `ranlux24_base`用作 `ranlux24` 的基础。
- `typedef subtract_with_carry_engine<unsigned int, 24, 10, 24> ranlux24_base;`
+
+    ```cpp
+    typedef subtract_with_carry_engine<unsigned int, 24, 10, 24> ranlux24_base;
+    ```
 
 - `ranlux48` 48 位 RANLUX 引擎 （Martin Lüscher 和 Fred James，1994年）。
- `typedef discard_block_engine<ranlux48_base, 389, 11> ranlux48;`
+
+    ```cpp
+    typedef discard_block_engine<ranlux48_base, 389, 11> ranlux48;
+    ```
 
 - `ranlux48_base`用作 `ranlux48` 的基础。
- `typedef subtract_with_carry_engine<unsigned long long, 48, 5, 12> ranlux48_base;`
+
+    ```cpp
+    typedef subtract_with_carry_engine<unsigned long long, 48, 5, 12> ranlux48_base;
+    ```
 
 ####  <a name="eng"></a>引擎模板
 

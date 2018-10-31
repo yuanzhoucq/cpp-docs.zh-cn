@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d050f27688d97cd3ef0352eed00f4dadb1fe6d98
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 96bcaf768ece46c22422fb3d98b85def7c57ed6b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46403781"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50056589"
 ---
 # <a name="creating-stack-and-queue-collections"></a>创建堆栈和队列集合
 
@@ -40,9 +40,9 @@ ms.locfileid: "46403781"
 
 1. 从现有的一个 MFC 列表类派生一个新的列表类，然后添加更多成员函数来支持堆栈操作的功能。
 
-     以下示例显示如何添加成员函数以将元素推送到堆栈，查看堆栈的顶部元素并弹出堆栈中的顶部元素：
+   以下示例显示如何添加成员函数以将元素推送到堆栈，查看堆栈的顶部元素并弹出堆栈中的顶部元素：
 
-     [!code-cpp[NVC_MFCCollections#20](../mfc/codesnippet/cpp/creating-stack-and-queue-collections_1.h)]
+   [!code-cpp[NVC_MFCCollections#20](../mfc/codesnippet/cpp/creating-stack-and-queue-collections_1.h)]
 
 请注意，此方法将公开基础的 `CObList` 类。 用户可以调用任何 `CObList` 成员函数，无论它对堆栈是否有意义。
 
@@ -54,9 +54,9 @@ ms.locfileid: "46403781"
 
 1. 从 Microsoft 基础类库提供的一个预定义列表类派生一个新的列表类，并添加更多成员函数来支持队列操作的语义。
 
-     以下示例显示可如何追加成员函数以将元素添加到队列的结尾以及从队列的前面获取元素。
+   以下示例显示可如何追加成员函数以将元素添加到队列的结尾以及从队列的前面获取元素。
 
-     [!code-cpp[NVC_MFCCollections#21](../mfc/codesnippet/cpp/creating-stack-and-queue-collections_2.h)]
+   [!code-cpp[NVC_MFCCollections#21](../mfc/codesnippet/cpp/creating-stack-and-queue-collections_2.h)]
 
 ## <a name="see-also"></a>请参阅
 

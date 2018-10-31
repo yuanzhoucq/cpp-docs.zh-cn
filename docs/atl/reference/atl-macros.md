@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d99306fe806c29d224289d70ee7ea42555aa1e98
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: b78110e8b79b6d82089c69fecbedfa7842e98f31
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46105422"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067171"
 ---
 # <a name="atl-macros"></a>ATL 宏
 
@@ -89,5 +89,5 @@ ms.locfileid: "46105422"
 [函数](../../atl/reference/atl-functions.md)<br/>
 [全局变量](../../atl/reference/atl-global-variables.md)<br/>
 [类和结构](../../atl/reference/atl-classes.md)<br/>
-[Typedefs](../../atl/reference/atl-typedefs.md)   
+[Typedefs](../../atl/reference/atl-typedefs.md)
 

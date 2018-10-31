@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae9ab3c2e8f077d943b69b419694fbf686ffdf38
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 22b79454b71f4908d71e683d8bebe4611da7cb14
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45703854"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861847"
 ---
 # <a name="export-exports-a-function"></a>/EXPORT（导出函数）
 
@@ -70,9 +70,9 @@ BOOL CALLBACK PlainFuncName( Things * lpParams)
 
 1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置 Visual c + + 项目属性](../../ide/working-with-project-properties.md)。
 
-2. 选择**配置属性** > **链接器** > **命令行**属性页。
+1. 选择**配置属性** > **链接器** > **命令行**属性页。
 
-3. 该选项输入**其他选项**框。
+1. 该选项输入**其他选项**框。
 
 ### <a name="to-set-this-linker-option-programmatically"></a>以编程方式设置此链接器选项
 

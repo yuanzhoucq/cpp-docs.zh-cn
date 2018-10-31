@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88c8ee576af3c50317b86b7016ac198fefdcbaa9
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3211f87e2c692c587ee2df82497fc56662e4974d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46093436"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077278"
 ---
 # <a name="catlmodule-class"></a>CAtlModule 类
 
@@ -262,7 +262,7 @@ HRESULT WINAPI UpdateRegistryFromResourceD(
     BOOL bRegister,
     struct _ATL_REGMAP_ENTRY* pMapEntries = NULL) throw();
 
-HRESULT WINAPI UpdateRegistryFromResourceD(  
+HRESULT WINAPI UpdateRegistryFromResourceD(
     LPCTSTR lpszRes,
     BOOL bRegister,
     struct _ATL_REGMAP_ENTRY* pMapEntries = NULL) throw();
@@ -299,7 +299,7 @@ HRESULT WINAPI UpdateRegistryFromResourceD(
 调用此方法`UpdateRegistryFromResourceD`执行注册表更新。
 
 ```
-inline HRESULT WINAPI UpdateRegistryFromResourceDHelper(  
+inline HRESULT WINAPI UpdateRegistryFromResourceDHelper(
     LPCOLESTR lpszRes,
     BOOL bRegister,
     struct _ATL_REGMAP_ENTRY* pMapEntries = NULL) throw();
@@ -329,12 +329,12 @@ inline HRESULT WINAPI UpdateRegistryFromResourceDHelper(
 在运行注册或注销对象指定的资源中包含的脚本。 此方法以静态方式链接到 ATL 注册表组件。
 
 ```
-HRESULT WINAPI UpdateRegistryFromResourceS(  
+HRESULT WINAPI UpdateRegistryFromResourceS(
     UINT nResID,
     BOOL bRegister,
     struct _ATL_REGMAP_ENTRY* pMapEntries = NULL) throw();
 
-HRESULT WINAPI UpdateRegistryFromResourceS(  
+HRESULT WINAPI UpdateRegistryFromResourceS(
     LPCTSTR lpszRes,
     BOOL bRegister,
     struct _ATL_REGMAP_ENTRY* pMapEntries = NULL) throw();
@@ -367,4 +367,4 @@ HRESULT WINAPI UpdateRegistryFromResourceS(
 [_ATL_MODULE](atl-typedefs.md#_atl_module)<br/>
 [类概述](../../atl/atl-class-overview.md)<br/>
 [Module 类](../../atl/atl-module-classes.md)<br/>
-[注册表组件 （注册器）](../../atl/atl-registry-component-registrar.md)  
+[注册表组件 （注册器）](../../atl/atl-registry-component-registrar.md)

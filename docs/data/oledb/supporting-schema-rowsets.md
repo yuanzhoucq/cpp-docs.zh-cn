@@ -18,16 +18,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: cb1ea67a0b89a59ad8ee16ec3a3ee0993a0fdafc
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 79c02a36e0c19b0702a81281e626c60e016def32
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43208316"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083276"
 ---
 # <a name="supporting-schema-rowsets"></a>支持架构行集
 
-架构行集允许使用者获得有关数据存储的信息，而不必知道其基础结构或架构。 例如，数据存储区可能有组织到用户定义层次结构，因此会有没有办法确保通过阅读本文了解除架构表。 （作为另一个示例中，请注意，Visual c + + 向导使用架构行集来生成使用者的访问器。）若要允许使用者执行此操作，提供程序的会话对象公开的方法上[IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\))接口。 在 Visual c + + 应用程序，您使用[IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md)类，以实现`IDBSchemaRowset`。
+架构行集允许使用者获得有关数据存储的信息，而不必知道其基础结构或架构。 例如，数据存储区可能有组织到用户定义层次结构，因此会有没有办法确保通过阅读本文了解除架构表。 （作为另一个示例中，请注意，Visual c + + 向导使用架构行集来生成使用者的访问器。）若要允许使用者执行此操作，提供程序的会话对象公开的方法上[IDBSchemaRowset](/previous-versions/windows/desktop/ms713686)接口。 在 Visual c + + 应用程序，您使用[IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md)类，以实现`IDBSchemaRowset`。
 
 `IDBSchemaRowsetImpl` 支持以下方法：
 
@@ -97,7 +97,7 @@ class CUpdateSessionTRSchemaRowset :
 
 请注意，`CUpdateSession`继承`IDBSchemaRowsetImpl`，因此它处理方法的所有限制。 使用`CSchemaRowsetImpl`，声明 （在上面的架构映射中列出） 的三个子类： `CUpdateSessionTRSchemaRowset`， `CUpdateSessionColSchemaRowset`，和`CUpdateSessionPTSchemaRowset`。 每个这些子类别有`Execute`处理各自的限制 （搜索条件） 的一组方法。 每个`Execute`方法比较的值`cRestrictions`和`rgRestrictions`参数。 请参阅中的这些参数的说明[SetRestrictions](../../data/oledb/idbschemarowsetimpl-setrestrictions.md)。
 
-有关哪些限制对应于特定架构行集的详细信息，请查阅上表的架构行集 Guid 中[IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\))中*OLE DB 程序员参考*中Windows SDK。
+有关哪些限制对应于特定架构行集的详细信息，请查阅上表的架构行集 Guid 中[IDBSchemaRowset](/previous-versions/windows/desktop/ms713686)中*OLE DB 程序员参考*中Windows SDK。
 
 例如，如果您支持**TABLE_NAME**限制`DBSCHEMA_TABLES`，您将执行以下操作：
 
@@ -270,7 +270,7 @@ virtual DBSTATUS GetDBStatus(CSimpleRow* , ATLCOLUMNINFO* pColInfo)
 
 有关如何使用使用者信息`IDBSchemaRowset`方法，请参阅[用架构行集获取元数据](../../data/oledb/obtaining-metadata-with-schema-rowsets.md)。
 
-有关支持架构行集的提供程序的示例，请参阅[UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV)示例。
+有关支持架构行集的提供程序的示例，请参阅 [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV) 示例。
 
 ## <a name="see-also"></a>请参阅
 

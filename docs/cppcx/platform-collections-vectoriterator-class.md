@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 20da45d6161f76043c3d06f027192726c3520f44
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 6be436af0dc6954ff8bab71e598576f463bdcee2
+ms.sourcegitcommit: 3f3f1d687e109b63399e14e2c8f4404787bdfae7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44102546"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49336543"
 ---
 # <a name="platformcollectionsvectoriterator-class"></a>Platform::Collections::VectorIterator 类
 
@@ -124,7 +124,7 @@ VectorIterator operator--(int);
 
 第一个 VectorIterator 语法预先递减当前 VectorIterator。
 
-第二个语法后递减当前 VectorIterator。 `int`第二个语法中的类型指示后递减操作，而不是实际整数操作数。
+第二个语法后递减当前 VectorIterator。 第二个语法中的 `int` 类型指示后递减操作，而不是实际整数操作数。
 
 ## <a name="operator-dereference"></a>  Vectoriterator:: Operator\*运算符
 
@@ -157,7 +157,7 @@ bool operator==(const VectorIterator& other) const;
 
 ### <a name="return-value"></a>返回值
 
-如果当前 VectorIterator 等于 `true`，则为 `other`；否则为 `false`。
+**true**当前 VectorIterator 是否等于*其他*; 否则为**false**。
 
 ## <a name="operator-greater-than"></a>  Vectoriterator:: Operator&gt;运算符
 
@@ -176,7 +176,7 @@ bool operator>(const VectorIterator& other) const
 
 ### <a name="return-value"></a>返回值
 
-`true` 如果当前 VectorIterator 是否大于`other`; 否则为`false`。
+**true**当前 VectorIterator 是否大于*其他*; 否则为**false**。
 
 ## <a name="operator-greater-than-or-equals"></a>  Vectoriterator:: Operator&gt;= 运算符
 
@@ -195,7 +195,7 @@ bool operator>=(const VectorIterator& other) const
 
 ### <a name="return-value"></a>返回值
 
-如果当前 VectorIterator 大于或等于 `true`，则为 `other`；否则为 `false`。
+**true**当前 VectorIterator 是否大于或等于*其他*; 否则为**false**。
 
 ## <a name="operator-increment"></a>  Vectoriterator:: Operator + + 运算符
 
@@ -235,7 +235,7 @@ bool operator!=(const VectorIterator& other) const;
 
 ### <a name="return-value"></a>返回值
 
-`true` 如果当前 VectorIterator 是否不等于`other`; 否则为`false`。
+**true**当前 VectorIterator 是否不相等*其他*; 否则为**false**。
 
 ## <a name="operator-less-than"></a>  Vectoriterator:: Operator&lt;运算符
 
@@ -254,7 +254,7 @@ bool operator<(const VectorIterator& other) const
 
 ### <a name="return-value"></a>返回值
 
-如果当前 VectorIterator 小于 `true`，则为 `other`；否则为 `false`。
+**true**如果当前 VectorIterator 是否小于*其他*; 否则为**false**。
 
 ## <a name="operator-less-than-or-equals"></a>  Vectoriterator:: Operator&lt;= 运算符
 
@@ -273,7 +273,7 @@ bool operator<=(const VectorIterator& other) const
 
 ### <a name="return-value"></a>返回值
 
-`true` 如果当前 VectorIterator 是否小于或等于`other`; 否则为`false`。
+**true**当前 VectorIterator 是否小于或等于*其他*; 否则为**false**。
 
 ## <a name="operator-minus"></a>  Vectoriterator:: Operator-运算符
 
@@ -298,7 +298,7 @@ difference_type operator-(const VectorIterator& other) const;
 
 ### <a name="return-value"></a>返回值
 
-第一个运算符语法返回一个 VectorIterator 对象，它是`n`元素小于当前 VectorIterator。 第二个运算符语法返回介于当前之间的元素数和`other`VectorIterator。
+第一个运算符语法返回一个 VectorIterator 对象，该对象比当前 VectorIterator 少 `n` 个元素。 第二个运算符语法返回介于当前 VectorIterator 和 `other` VectorIterator 之间的元素数目。
 
 ## <a name="operator-plus-assign"></a>  Vectoriterator:: Operator + = 运算符
 
@@ -319,7 +319,7 @@ VectorIterator& operator+=(difference_type n);
 
 更新的 VectorIterator。
 
-## <a name="operator-plus"></a>  ectorIterator::operator + 运算符
+## <a name="operator-plus"></a>  Vectoriterator:: Operator + 运算符
 
 返回引用偏移指定 VectorIterator 指定偏移量处的元素的 VectorIterator。
 

@@ -24,19 +24,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ecd2cea655536ab12751a169793273c27b7d8f7
-ms.sourcegitcommit: 92c568e9466ffd7346a4120c478c9bdea61c8756
+ms.openlocfilehash: 5a02330d938e1952d3e6b547d49ddb551bf594a5
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "47029562"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204582"
 ---
 # <a name="mfc-activex-controls-using-data-binding-in-an-activex-control"></a>MFC ActiveX 控件：在 ActiveX 控件中使用数据绑定
 
 ActiveX 控件的功能更强大的用途之一是数据绑定，它允许控件绑定在一起在数据库中的特定字段的属性。 当用户修改此绑定的属性中的数据时，该控件通知数据库和更新记录的字段的请求。 控制的成功或失败的请求，然后会通知数据库。
 
 >[!IMPORTANT]
-> ActiveX 是一项传统技术，不应使用新的开发。 本文将取代 ActiveX 的现代技术的详细信息，请参阅[ActiveX 控件](activex-controls.md)。
+> ActiveX 是一项传统技术，不应使用新的开发。 有关取代 ActiveX 的现代技术的详细信息，请参阅[ActiveX 控件](activex-controls.md)。
 
 本文介绍了您的任务在控件方面。 实现与数据库交互的数据绑定负责控制容器。 如何在容器中管理数据库交互已超出本文档讨论范围。 本文的其余部分介绍如何准备用于数据绑定控件。
 
@@ -63,13 +63,13 @@ ActiveX 控件的功能更强大的用途之一是数据绑定，它允许控件
 
 1. 右键单击您的控件的接口节点。
 
-     这将打开快捷菜单。
+   这将打开快捷菜单。
 
 1. 从快捷菜单中，单击**外**，然后单击**添加属性**。
 
 1. 选择一个从条目**属性名称**下拉列表。 例如，可以选择**文本**。
 
-     因为**文本**一个常用属性**可绑定**并**requestedit**属性已选中。
+   因为**文本**一个常用属性**可绑定**并**requestedit**属性已选中。
 
 1. 选中以下复选框从**IDL 特性**选项卡： **displaybind**并**defaultbind**将属性添加到项目的属性定义。IDL 文件。 这些属性使控件对用户可见，并使常用属性的默认可绑定属性。
 
@@ -96,7 +96,7 @@ ActiveX 控件的功能更强大的用途之一是数据绑定，它允许控件
 
 1. 右键单击您的控件的接口节点。
 
-     这将打开快捷菜单。
+   这将打开快捷菜单。
 
 1. 从快捷菜单中，单击**外**，然后单击**添加属性**。
 
@@ -112,33 +112,33 @@ ActiveX 控件的功能更强大的用途之一是数据绑定，它允许控件
 
 11. 修改的正文`SetMyProp`函数，使其包含以下代码：
 
-     [!code-cpp[NVC_MFC_AxData#2](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_2.cpp)]
+   [!code-cpp[NVC_MFC_AxData#2](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_2.cpp)]
 
 12. 将参数传递给`BoundPropertyChanged`和`BoundPropertyRequestEdit`函数是属性，它是传递给 id （） 属性中的属性的参数的 dispid。IDL 文件。
 
 13. 修改[OnOcmCommand](../mfc/mfc-activex-controls-subclassing-a-windows-control.md)函数，它包含以下代码：
 
-     [!code-cpp[NVC_MFC_AxData#1](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_1.cpp)]
+   [!code-cpp[NVC_MFC_AxData#1](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_1.cpp)]
 
 14. 修改`OnDraw`函数，使其包含以下代码：
 
-     [!code-cpp[NVC_MFC_AxData#3](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_3.cpp)]
+   [!code-cpp[NVC_MFC_AxData#3](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_3.cpp)]
 
 15. 标头文件的头文件的控件类的公共部分，添加以下定义 （构造函数） 的成员变量：
 
-     [!code-cpp[NVC_MFC_AxData#4](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_4.h)]
+   [!code-cpp[NVC_MFC_AxData#4](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_4.h)]
 
 16. 使以下行中的最后一行`DoPropExchange`函数：
 
-     [!code-cpp[NVC_MFC_AxData#5](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_5.cpp)]
+   [!code-cpp[NVC_MFC_AxData#5](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_5.cpp)]
 
 17. 修改`OnResetState`函数，使其包含以下代码：
 
-     [!code-cpp[NVC_MFC_AxData#6](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_6.cpp)]
+   [!code-cpp[NVC_MFC_AxData#6](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_6.cpp)]
 
 18. 修改`GetMyProp`函数，使其包含以下代码：
 
-     [!code-cpp[NVC_MFC_AxData#7](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_7.cpp)]
+   [!code-cpp[NVC_MFC_AxData#7](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_7.cpp)]
 
 现在可以生成项目，将注册该控件。 当您在对话框中，插入控件**数据字段**并**数据源**属性将已添加并且你现在可以选择数据源和要在控件中显示字段。
 

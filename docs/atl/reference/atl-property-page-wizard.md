@@ -1,7 +1,7 @@
 ---
 title: ATL 属性页向导 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/03/2018
 ms.technology:
 - cpp-atl
 ms.topic: reference
@@ -17,16 +17,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b5a150a81ea26e34e05cbfb9199c734a1ccad9b7
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 206fe83407421a7aabfd920214590a86e4727714
+ms.sourcegitcommit: d1527eb2d50156bf923f2a32ec3af9efc7fc4304
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46094190"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48250414"
 ---
 # <a name="atl-property-page-wizard"></a>ATL 属性页向导
 
 此向导[将属性页添加到 ATL 项目](../../atl/reference/adding-an-atl-property-page.md)或向 MFC 项目与 ATL 支持。 ATL 属性页来设置属性提供的用户界面 （或调用的方法） 的一个或多个 COM 对象。
+
+> [!WARNING]
+> 在 Visual Studio 2017 版本 15.9 此代码向导已弃用，将 Visual Studio 的未来版本中删除。 很少使用此向导。 ATL 和 MFC 的常规支持不受此向导中删除。 如果你想要共享您对此不推荐使用的反馈，请先完成[这项调查](https://www.surveymonkey.com/r/QDWKKCN)。 你的反馈对我们很重要。
 
 ## <a name="remarks"></a>备注
 

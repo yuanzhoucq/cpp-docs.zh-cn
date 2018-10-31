@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46fa8b115dd01a9ee11442a0701cd719cc6d389e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 28c93e5d1331d7195b894fe88c3fe5fc11e7c31d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46394356"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50074067"
 ---
 # <a name="containers-implementing-a-container"></a>容器：实现容器
 
@@ -62,15 +62,15 @@ ms.locfileid: "46394356"
 
 - 在编辑嵌入项时就地激活。
 
-     有关详细信息，请参阅[激活](../mfc/activation-cpp.md)。
+   有关详细信息，请参阅[激活](../mfc/activation-cpp.md)。
 
 - 通过从服务器应用程序拖放选择来创建 OLE 项。
 
-     有关详细信息，请参阅[拖放 (OLE)](../mfc/drag-and-drop-ole.md)。
+   有关详细信息，请参阅[拖放 (OLE)](../mfc/drag-and-drop-ole.md)。
 
 - 链接到嵌入对象或组合容器/服务器应用程序。
 
-     有关详细信息，请参阅[容器： 高级功能](../mfc/containers-advanced-features.md)。
+   有关详细信息，请参阅[容器： 高级功能](../mfc/containers-advanced-features.md)。
 
 ## <a name="see-also"></a>请参阅
 

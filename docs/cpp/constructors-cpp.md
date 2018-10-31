@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08200320e30816ac45e6c91a14dc41508430cfae
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: ae2a08431a29e4140e3a9af86e68ccfc9bff388a
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46069113"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861383"
 ---
 # <a name="constructors-c"></a>构造函数 (C++)
 
@@ -388,11 +388,11 @@ explicit Box(int size): m_width(size), m_length(size), m_height(size){}
 
 1. 按声明顺序调用基类和成员构造函数。
 
-2. 如果类派生自虚拟基类，则会将对象的虚拟基指针初始化。
+1. 如果类派生自虚拟基类，则会将对象的虚拟基指针初始化。
 
-3. 如果类具有或继承了虚函数，则会将对象的虚函数指针初始化。 虚函数指针指向类中的虚函数表，确保虚函数正确地调用绑定代码。
+1. 如果类具有或继承了虚函数，则会将对象的虚函数指针初始化。 虚函数指针指向类中的虚函数表，确保虚函数正确地调用绑定代码。
 
-4. 它执行自己函数体中的所有代码。
+1. 它执行自己函数体中的所有代码。
 
 下面的示例显示，在派生类的构造函数中，基类和成员构造函数的调用顺序。 首先，调用基构造函数，然后按照基类成员在类声明中出现的顺序对这些成员进行初始化，然后，调用派生构造函数。
 
@@ -593,7 +593,6 @@ public:
     //... rest of class as before
 };
 ```
-
 
 所有构造函数完成后，完全初始化的构造函数将立即创建对象。 有关详细信息，请参阅[统一初始化和委托构造函数](../cpp/uniform-initialization-and-delegating-constructors.md)。
 

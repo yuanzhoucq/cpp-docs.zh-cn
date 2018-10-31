@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e6fb948efd63a8392661cc38a80393bc90d5e694
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5979fcb76dc688bffd9ad8076f123927439e3840
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46396438"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50064559"
 ---
 # <a name="run-time-object-model-services"></a>运行时对象模型服务
 
@@ -39,8 +39,6 @@ ms.locfileid: "46396438"
 
 ### <a name="run-time-object-model-services-macros"></a>运行时对象模型服务宏
 
-
-
 |||
 |-|-|
 |[DECLARE_DYNAMIC](#declare_dynamic)|支持访问运行时类信息（必须在类声明中使用）。|
@@ -51,19 +49,11 @@ ms.locfileid: "46396438"
 |[IMPLEMENT_SERIAL](#implement_serial)|允许序列化和访问运行时类信息（必须在类实现中使用）。|
 |[RUNTIME_CLASS](#runtime_class)|返回与命名类对应的 `CRuntimeClass` 结构。|
 
-
 OLE 通常要求在运行时动态创建对象。 例如，OLE 服务器应用程序必须能够动态创建 OLE 项以响应来自客户端的请求。 同样，自动化服务器必须能够创建项以响应来自自动化客户端的请求。
 
 Microsoft 基础类库提供了两个特定于 OLE 的宏。
 
 ### <a name="dynamic-creation-of-ole-objects"></a>OLE 对象的动态创建
-
-
-
-
-
-
-
 
 |||
 |-|-|
@@ -85,6 +75,7 @@ Microsoft 基础类库提供了两个特定于 OLE 的宏。
   ```
 AFX_COMCTL32_IF_EXISTS(  proc );
 ```
+
 ### <a name="parameters"></a>参数
 
 *进程内*<br/>
@@ -92,7 +83,7 @@ AFX_COMCTL32_IF_EXISTS(  proc );
 
 ### <a name="remarks"></a>备注
 
-使用此宏可确定公共控件库函数指定是否*proc* (而不是调用[GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212)。
+使用此宏可确定公共控件库函数指定是否*proc* (而不是调用[GetProcAddress](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress)。
 
 ### <a name="requirements"></a>要求
 
@@ -112,6 +103,7 @@ afxcomctl32.h，afxcomctl32.inl
 ```
 AFX_COMCTL32_IF_EXISTS2( proc );
 ```
+
 ### <a name="parameters"></a>参数
 
 *进程内*<br/>
@@ -119,7 +111,7 @@ AFX_COMCTL32_IF_EXISTS2( proc );
 
 ### <a name="remarks"></a>备注
 
-使用此宏可确定公共控件库函数指定是否*proc* (而不是调用[GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212)。 此宏是 AFX_COMCTL32_IF_EXISTS 的 Unicode 版本。
+使用此宏可确定公共控件库函数指定是否*proc* (而不是调用[GetProcAddress](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress)。 此宏是 AFX_COMCTL32_IF_EXISTS 的 Unicode 版本。
 
 ### <a name="requirements"></a>要求
 
@@ -129,8 +121,6 @@ afxcomctl32.h，afxcomctl32.inl
 
 [隔离 MFC 公用控件库](../isolation-of-the-mfc-common-controls-library.md)<br/>
 [AFX_COMCTL32_IF_EXISTS](#afx_comctl32_if_exists)
-
-
 
 ##  <a name="declare_dynamic"></a>  DECLARE_DYNAMIC
 
@@ -197,7 +187,6 @@ DECLARE_DYNCREATE 宏的详细信息，请参阅[CObject 类主题](../../mfc/us
 
 **标头：** afx.h
 
-
 ## <a name="declareolectltype"></a>DECLARE_OLECTLTYPE
 
 声明`GetUserTypeNameID`和`GetMiscStatus`控件类的成员函数。
@@ -207,6 +196,7 @@ DECLARE_DYNCREATE 宏的详细信息，请参阅[CObject 类主题](../../mfc/us
 ```
 DECLARE_OLECTLTYPE( class_name )
 ```
+
 ### <a name="parameters"></a>参数
 
 *class_name*<br/>
@@ -224,7 +214,6 @@ DECLARE_OLECTLTYPE( class_name )
 
 [IMPLEMENT_OLECTLTYPE](#implement_olectltype)
 
-
 ## <a name="declareproppageids"></a>DECLARE_PROPPAGEIDS
 
 声明 OLE 控件提供了一系列属性页以显示其属性。
@@ -234,6 +223,7 @@ DECLARE_OLECTLTYPE( class_name )
 ```
 DECLARE_PROPPAGEIDS( class_name )
 ```
+
 ### <a name="parameters"></a>参数
 
 *class_name*<br/>
@@ -370,6 +360,7 @@ IMPLEMENT_OLECREATE_FLAGS( class_name, external_name, nFlags,
     l, w1, w2, b1, b2, b3, b4, b5, b6, b7, b8)
 
 ```
+
 ### <a name="parameters"></a>参数
 
 *class_name*<br/>
@@ -408,7 +399,6 @@ OLE 类 ID 是对象的唯一 128 位标识符。 它包含一个**长**、 两�
 [DECLARE_OLECREATE](#declare_olecreate)<br/>
 [CLSID 项](/windows/desktop/com/clsid-key-hklm)
 
-
 ## <a name="implement_olecreate"></a> IMPLEMENT_OLECTLTYPE
 
 实现`GetUserTypeNameID`和`GetMiscStatus`控件类的成员函数。
@@ -418,6 +408,7 @@ OLE 类 ID 是对象的唯一 128 位标识符。 它包含一个**长**、 两�
 ```
 DECLARE_OLECTLTYPE( class_name, idsUserTypeName, dwOleMisc )
 ```
+
 ### <a name="parameters"></a>参数
 
 *class_name*<br/>

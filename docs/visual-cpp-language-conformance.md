@@ -11,12 +11,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 70fc4705b6e150978812563fcde9e0f4d6b3cea1
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: dd4848ae88d7bd66286ef13b3505a741d9b55c5c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34246230"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060880"
 ---
 # <a name="visual-c-language-conformance"></a>Visual C++ 语言一致性
 
@@ -93,8 +93,6 @@ ms.locfileid: "34246230"
 |&nbsp;&nbsp;[P0283R2 忽略无法识别的属性](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0283r2.html)|VS 2015 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[P0702R1 修复 initializer-list ctor 的类模板参数推导](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0702r1.html)|VS 2017 15.7 <sup>[17](#note_17)</sup>|
 
-  
-  
 |功能区域| |
 |----|---|
 |__C++17 核心语言功能（缺陷报告）__|__支持__|
@@ -105,8 +103,6 @@ ms.locfileid: "34246230"
 |&nbsp;&nbsp;[P0962R2 放宽 range-for 循环的自定义点查找规则](http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/p0962r1.html)|否|
 |&nbsp;&nbsp;[P0969R0 允许对可访问的成员进行结构化绑定](http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/p0969r0.pdf)|否|
 
-  
-  
 |功能区域| |
 |----|---|
 |__C++20 核心语言功能__|__支持__|
@@ -117,7 +113,6 @@ ms.locfileid: "34246230"
 |&nbsp;&nbsp;[P0683R1 位域的默认成员初始化表达式](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0683r1.html)|否|
 |&nbsp;&nbsp;[P0704R1 修复指向成员的 const 左值引用限定的指针](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0704r1.html)|否|
 |&nbsp;&nbsp;[P0734R0 概念](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0734r0.pdf)|否|
-
 
 ## <a name="standard-library-features"></a>标准库功能
 
@@ -258,38 +253,55 @@ ms.locfileid: "34246230"
 
 ### <a name="supported-values"></a>支持的值
 
-__否__表示尚未实现。  
-__部分支持__意味着尚未在 Visual Studio 2017 中完全实现。 有关详细信息，请参阅注释部分。  
-__N/A__ 表示建议文章未介绍功能。 这些文章虽然更改了标准的语言，但没有为实施者创建任何工作。 在此处将其列出是出于完整性的考虑。  
-__VS 2010__ 表示在 Visual Studio 2010 中支持的功能。  
-__VS 2013__ 表示在 Visual Studio 2013 中支持的功能。  
-__VS 2015__ 表示在 Visual Studio 2015 RTM 中支持的功能。  
-__VS 2015.2__ 和 __VS 2015.3__ 分别表示在 Visual Studio 2015 Update 2 和 Visual Studio 2015 Update 3 中支持的功能。  
-__VS 2017__ 表示在 Visual Studio 2017 RTM 中支持的功能。  
-__VS 2017 15.3__表示 Visual Studio 2017 版本 15.3 中支持的功能。  
-__VS 2017 15.5__ 表示 Visual Studio 2017 版本 15.5 中支持的功能。
-__VS 2017 15.7__ 表示 Visual Studio 2017 15.7 版中支持的功能。
+__否__表示尚未实现。<br/>
+__部分支持__意味着尚未在 Visual Studio 2017 中完全实现。 有关详细信息，请参阅注释部分。<br/>
+__N/A__ 表示建议文章未介绍功能。 这些文章虽然更改了标准的语言，但没有为实施者创建任何工作。 在此处将其列出是出于完整性的考虑。<br/>
+__VS 2010__ 表示在 Visual Studio 2010 中支持的功能。<br/>
+__VS 2013__ 表示在 Visual Studio 2013 中支持的功能。<br/>
+__VS 2015__ 表示在 Visual Studio 2015 RTM 中支持的功能。<br/>
+__VS 2015.2__ 和 __VS 2015.3__ 分别表示在 Visual Studio 2015 Update 2 和 Visual Studio 2015 Update 3 中支持的功能。<br/>
+__VS 2017__ 表示在 Visual Studio 2017 RTM 中支持的功能。<br/>
+__VS 2017 15.3__表示 Visual Studio 2017 版本 15.3 中支持的功能。<br/>
+__VS 2017 15.5__ 表示 Visual Studio 2017 版本 15.5 中支持的功能。<br/>
+__VS 2017 15.7__ 表示 Visual Studio 2017 15.7 版中支持的功能。<br/>
 
 ### <a name="notes"></a>说明
 
 <a name="note_A"></a>__A__ 在 /std:c++14 模式下，动态异常规范仍处于未实现状态，且 throw() 仍被视为 \_\_ declspec(nothrow) 的同义词。 在 C++17 中，动态异常规范大部分被 P0003R5 删除，留下了一个痕迹：throw() 被弃用，并被要求具有 noexcept 的同义词的行为。 在 /std:c++17 模式下，MSVC 现通过赋予 throw() 与 noexcept 相同的行为（即通过终止强制执行）来符合标准。
-编译器选项 /Zc:noexceptTypes- 请求 \_\_declspec(nothrow) 的旧行为。 throw() 很可能会从 C++20 删除。 为帮助迁移代码，以响应标准和实现中的这些更改，在 /std:c++17 和 /permissive- 下添加了异常规范问题的新编译器警告。  
-<a name="note_B"></a>__B__支持 Visual Studio 2017 15.7 版中的 /permissive- 模式。 有关详细信息，请参阅 [Two-phase name lookup support comes to MSVC](https://blogs.msdn.microsoft.com/vcblog/2017/09/11/two-phase-name-lookup-support-comes-to-msvc/)（MSVC 引入两阶段名称查找支持）。  
-<a name="note_C"></a>__C__ 自 Visual Studio 2015 Update 2 后，编译器对表达式 SFINAE 的支持足以满足标准库。 受 Visual Studio 2017 15.7 支持（无论是否设置 /permissive- 模式）。 某些 bug 仍处于待修复状态。 “唯一标签类型”解决方法不再是必需的，我们已从 STL 实现中将其删除。  
-<a name="note_D"></a>__D__ 编译器对 C99 预处理器规则的支持在 Visual Studio 2017 中不完整。 Variadic 宏受支持，但预处理器的行为存在很多 Bug。  我们正在修改预处理器，并且很快将在 /permissive- 模式下发布实验版的改进内容。  
-<a name="note_E"></a>__E__ 它被标记为“不适用”，因为允许但不要求编译器支持扩展的整数类型。  和 GCC 和 Clang 一样，我们选择不支持它们。  
-<a name="note_F"></a>__F__ 与此类似，它被标记为“不适用”，因为允许但不要求编译器实现此优化。  
-<a name="note_G"></a>__G__ 在 [/std:c++14](./build/reference/std-specify-language-standard-version.md) 下受支持，并且出现可禁止的警告。  
-<a name="note_J"></a>__J__ 在本表中的其他部分对 Visual Studio 2015 中不完整的功能进行了说明。  
-<a name="note_K"></a>__K__ 这是一个全新的实现，与之前的 std::experimental 版本不兼容，这对符号链接支持、bug 修复以及更改需符合标准的行为而言是必不可少的。 目前，包含 \< filesystem> 提供新 std::filesystem 和旧 std::experimental::filesystem，而包含 \<experimental/filesystem> 仅提供旧实验性实现。 在下一突破性 ABI 版本的库中，实验性实现将会被删除。  
-<a name="note_L"></a>__L__ 由编译器内部函数支持。   
-<a name="note_14"></a>__14__ 即使指定了 [/std:c++14](build/reference/std-specify-language-standard-version.md)（默认值），这些 C++17/20 功能也始终处于启用状态。 这是因为在引入 /std 选项之前实现了该功能，或者因为条件实现异常复杂。  
-<a name="note_17"></a>__17__ 这些功能由 [/std:c++17](./build/reference/std-specify-language-standard-version.md)（或 [/std:c++latest](./build/reference/std-specify-language-standard-version.md)）编译器选项启用。  
-<a name="note_byte"></a>__byte__ `std::byte` 由 [/std:c++17](./build/reference/std-specify-language-standard-version.md)（或 [/std:c++latest](./build/reference/std-specify-language-standard-version.md)）启用，但由于它在某些情况下可能会与 Windows SDK 标头冲突，因此它具有细化的选择退出宏。 可以通过将 `_HAS_STD_BYTE` 定义为 `0` 将其禁用。  
-<a name="note_C11"></a>__C11__ 通用 CRT 实现了 C++17 所需的部分 C11 标准库，不包括 C99 `strftime()` E/O 备用转换说明符、C11 `fopen()` 独占模式和 C11 `aligned_alloc()`。 后者不太可能实现，因为 C11 以与 `free()` 的 Microsoft 实现不兼容的方式指定了 `aligned_alloc()`，即 `free()` 必须能够处理高度一致的分配。  
-指定 [/std:c++17](./build/reference/std-specify-language-standard-version.md)（或 [/std:c++latest](./build/reference/std-specify-language-standard-version.md)）编译器选项后会删除 <a name="note_rem"></a>__rem__ 功能。 这些功能具有选择退出宏：`_HAS_AUTO_PTR_ETC`、`_HAS_FUNCTION_ALLOCATOR_SUPPORT`、`_HAS_OLD_IOSTREAMS_MEMBERS` 和 `_HAS_UNEXPECTED`。  
-<a name="note_charconv"></a>__charconv__ from_chars() 和 to_chars() 均可用于整数。 我们目前正在处理浮点 from_chars()，其后需接浮点 to_chars()。  
-<a name ="note_parallel"></a>__并行__ C++17 的并行算法库已完成。 请注意，这并不意味着各种情况中的各种算法都是并行执行的；我们已将最重要的算法并行执行，且即使算法未并行执行，我们也提供执行策略签名。 我们的 STL 实现的中心内部标头 yvals.h 中包含以下“并行算法注释”：C++ 允许实现将并行算法作为系列算法的调用实现。   此实现并行执行几个常见算法调用，但不是全部。  
+
+编译器选项 /Zc:noexceptTypes- 请求 \_\_declspec(nothrow) 的旧行为。 throw() 很可能会从 C++20 删除。 为帮助迁移代码，以响应标准和实现中的这些更改，在 /std:c++17 和 /permissive- 下添加了异常规范问题的新编译器警告。
+
+<a name="note_B"></a>__B__支持 Visual Studio 2017 15.7 版中的 /permissive- 模式。 有关详细信息，请参阅 [Two-phase name lookup support comes to MSVC](https://blogs.msdn.microsoft.com/vcblog/2017/09/11/two-phase-name-lookup-support-comes-to-msvc/)（MSVC 引入两阶段名称查找支持）。
+
+<a name="note_C"></a>__C__ 自 Visual Studio 2015 Update 2 后，编译器对表达式 SFINAE 的支持足以满足标准库。 受 Visual Studio 2017 15.7 支持（无论是否设置 /permissive- 模式）。 某些 bug 仍处于待修复状态。 “唯一标签类型”解决方法不再是必需的，我们已从 STL 实现中将其删除。
+
+<a name="note_D"></a>__D__ 编译器对 C99 预处理器规则的支持在 Visual Studio 2017 中不完整。 Variadic 宏受支持，但预处理器的行为存在很多 Bug。  我们正在修改预处理器，并且很快将在 /permissive- 模式下发布实验版的改进内容。
+
+<a name="note_E"></a>__E__ 它被标记为“不适用”，因为允许但不要求编译器支持扩展的整数类型。  和 GCC 和 Clang 一样，我们选择不支持它们。
+
+<a name="note_F"></a>__F__ 与此类似，它被标记为“不适用”，因为允许但不要求编译器实现此优化。
+
+<a name="note_G"></a>__G__ 在 [/std:c++14](./build/reference/std-specify-language-standard-version.md) 下受支持，并且出现可禁止的警告。
+
+<a name="note_J"></a>__J__ 在本表中的其他部分对 Visual Studio 2015 中不完整的功能进行了说明。
+
+<a name="note_K"></a>__K__ 这是一个全新的实现，与之前的 std::experimental 版本不兼容，这对符号链接支持、bug 修复以及更改需符合标准的行为而言是必不可少的。 目前，包含 \< filesystem> 提供新 std::filesystem 和旧 std::experimental::filesystem，而包含 \<experimental/filesystem> 仅提供旧实验性实现。 在下一突破性 ABI 版本的库中，实验性实现将会被删除。
+
+<a name="note_L"></a>__L__ 由编译器内部函数支持。
+
+<a name="note_14"></a>__14__ 即使指定了 [/std:c++14](build/reference/std-specify-language-standard-version.md)（默认值），这些 C++17/20 功能也始终处于启用状态。 这是因为在引入 /std 选项之前实现了该功能，或者因为条件实现异常复杂。
+
+<a name="note_17"></a>__17__ 这些功能由 [/std:c++17](./build/reference/std-specify-language-standard-version.md)（或 [/std:c++latest](./build/reference/std-specify-language-standard-version.md)）编译器选项启用。
+
+<a name="note_byte"></a>__byte__ `std::byte` 由 [/std:c++17](./build/reference/std-specify-language-standard-version.md)（或 [/std:c++latest](./build/reference/std-specify-language-standard-version.md)）启用，但由于它在某些情况下可能会与 Windows SDK 标头冲突，因此它具有细化的选择退出宏。 可以通过将 `_HAS_STD_BYTE` 定义为 `0` 将其禁用。
+
+<a name="note_C11"></a>__C11__ 通用 CRT 实现了 C++17 所需的部分 C11 标准库，不包括 C99 `strftime()` E/O 备用转换说明符、C11 `fopen()` 独占模式和 C11 `aligned_alloc()`。 后者不太可能实现，因为 C11 以与 `free()` 的 Microsoft 实现不兼容的方式指定了 `aligned_alloc()`，即 `free()` 必须能够处理高度一致的分配。
+
+指定 [/std:c++17](./build/reference/std-specify-language-standard-version.md)（或 [/std:c++latest](./build/reference/std-specify-language-standard-version.md)）编译器选项后会删除 <a name="note_rem"></a>__rem__ 功能。 这些功能具有选择退出宏：`_HAS_AUTO_PTR_ETC`、`_HAS_FUNCTION_ALLOCATOR_SUPPORT`、`_HAS_OLD_IOSTREAMS_MEMBERS` 和 `_HAS_UNEXPECTED`。
+
+<a name="note_charconv"></a>__charconv__ from_chars() 和 to_chars() 均可用于整数。 我们目前正在处理浮点 from_chars()，其后需接浮点 to_chars()。
+
+<a name ="note_parallel"></a>__并行__ C++17 的并行算法库已完成。 请注意，这并不意味着各种情况中的各种算法都是并行执行的；我们已将最重要的算法并行执行，且即使算法未并行执行，我们也提供执行策略签名。 我们的 STL 实现的中心内部标头 yvals.h 中包含以下“并行算法注释”：C++ 允许实现将并行算法作为系列算法的调用实现。   此实现并行执行几个常见算法调用，但不是全部。
 
 以下算法并行执行：
 
@@ -308,10 +320,10 @@ __VS 2017 15.7__ 表示 Visual Studio 2017 15.7 版中支持的功能。
 
 ## <a name="see-also"></a>请参阅
 
-[C++ 语言参考](cpp/cpp-language-reference.md)  
-[C++ 标准库](standard-library/cpp-standard-library-reference.md)  
-[Visual Studio 2017 中 C++ 的符合性改进](cpp-conformance-improvements-2017.md)  
-[Visual Studio 2017 中 Visual C++ 的新增功能](what-s-new-for-visual-cpp-in-visual-studio.md)  
-[Visual C++ 更改历史记录（2003 - 2015）](porting/visual-cpp-change-history-2003-2015.md)  
-[Visual C++ 新增功能（2003 - 2015）](porting/visual-cpp-what-s-new-2003-through-2015.md)  
-[Visual C++ 团队博客](https://blogs.msdn.microsoft.com/vcblog/)  
+[C++ 语言参考](cpp/cpp-language-reference.md)<br/>
+[C++ 标准库](standard-library/cpp-standard-library-reference.md)<br/>
+[Visual Studio 2017 中 C++ 的符合性改进](cpp-conformance-improvements-2017.md)<br/>
+[Visual Studio 2017 中 Visual C++ 的新增功能](what-s-new-for-visual-cpp-in-visual-studio.md)<br/>
+[Visual C++ 更改历史记录（2003 - 2015）](porting/visual-cpp-change-history-2003-2015.md)<br/>
+[Visual C++ 新增功能（2003 - 2015）](porting/visual-cpp-what-s-new-2003-through-2015.md)<br/>
+[Visual C++ 团队博客](https://blogs.msdn.microsoft.com/vcblog/)

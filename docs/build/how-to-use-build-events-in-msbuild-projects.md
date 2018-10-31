@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d875836cbfe9506d41a979a63d941d1ee5b467a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: fd35ff136c0145e1c76a04d15052d426a7c90dcc
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46444328"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161263"
 ---
 # <a name="how-to-use-build-events-in-msbuild-projects"></a>如何：在 MSBuild 项目中使用生成事件
 
@@ -29,7 +29,7 @@ ms.locfileid: "46444328"
 
 每个生成三个事件由命令元素表示在项定义组中 (`<Command>`)，它执行和消息元素 (`<Message>`)，它是显示时**MSBuild**执行生成事件。 每个元素是可选的并且如果多次指定同一个元素，最后一个匹配项优先。
 
-一个可选*在生成中使用*元素 (`<`*生成事件*`UseInBuild>`) 可以指定属性组，以指示是否执行生成事件中。 内容的价值*在生成中使用*元素是`true`或`false`。 默认情况下，除非执行生成事件其对应*在生成中使用*元素设置为`false`。
+一个可选*在生成中使用*元素 (`<`*生成事件*`UseInBuild>`) 可以指定属性组，以指示是否执行生成事件中。 内容的价值*在生成中使用*元素是**true**或**false**。 默认情况下，除非执行生成事件其对应*在生成中使用*元素设置为`false`。
 
 下表列出了每个生成事件 XML 元素：
 

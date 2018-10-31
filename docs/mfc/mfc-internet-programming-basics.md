@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7134ea1a822fa61ec0d82592145f1fd3c5ecc6aa
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b2be02e6cac5dac226f7b04cd627a292e3761980
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46418302"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082666"
 ---
 # <a name="mfc-internet-programming-basics"></a>MFC Internet 编程基础知识
 
@@ -91,6 +91,4 @@ MFC 提供了支持 Internet 编程的类。 可以使用[COleControl](../mfc/re
 Windows SDK 的 OLE 部分包含有关 OLE 编程的其他信息。 此信息提供了有关使用 Win32 WinInet 函数直接，而不是通过 MFC 类的详细信息。 它还包含有关 Internet 技术的概述信息。
 
 ## <a name="see-also"></a>请参阅
-
-
 

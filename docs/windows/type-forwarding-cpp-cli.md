@@ -1,7 +1,7 @@
 ---
 title: 类型转发 (C + + CLI) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -15,28 +15,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 806003e33e60b5146bdd722fa5248011cd4939c0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7fe70de2503134bf76f5e1c7099773737cc153f8
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46396541"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328332"
 ---
 # <a name="type-forwarding-ccli"></a>类型转发 (C++/CLI)
 
 *类型转发*，可将移动一个类型从一个程序集 （程序集 A） 到另一个程序集 （程序集 B），这样一来，不需要重新编译客户端使用程序集 a。
 
-## <a name="all-platforms"></a>所有平台
-
-在所有运行时中不支持此功能。
-
 ## <a name="windows-runtime"></a>Windows 运行时
 
 在 Windows 运行时中不支持此功能。
-
-### <a name="requirements"></a>要求
-
-编译器选项：`/ZW`
 
 ## <a name="common-language-runtime"></a>公共语言运行时
 
@@ -44,7 +36,7 @@ ms.locfileid: "46396541"
 
 ### <a name="syntax"></a>语法
 
-```
+```cpp
 #using "new.dll"
 [assembly:TypeForwardedTo(type::typeid)];
 ```
@@ -97,7 +89,7 @@ ms.locfileid: "46396541"
 
 3. 删除`MyClass`类型的源代码，用于生成 A.dll，并将其替换为以下定义：
 
-    ```
+    ```cpp
     #using "B.dll"
     [assembly:TypeForwardedTo(MyClass::typeid)];
     ```

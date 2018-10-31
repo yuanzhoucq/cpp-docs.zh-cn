@@ -13,18 +13,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d79888a58e5fc6d6911c4cc123877c1537f22cf1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c2d0cc85272eae4a5231872232dc259a9120a6bd
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441923"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059865"
 ---
 # <a name="key-wrl-apis-by-category"></a>按类别列出的关键 WRL API
+
 下表列出主类、 结构、 函数和 Windows 运行时 c + + 模板库中的宏。 省略中帮助程序命名空间和类的构造。 这些列表提供了 API 文档，从而按命名空间排列。
-  
-### <a name="classes"></a>类
-  
+
+## <a name="classes"></a>类
+
 |标题|描述|
 |-----------|-----------------|
 |[ActivationFactory 类](../windows/activationfactory-class.md)|启用 Windows 运行时将激活的一个或多个类。|
@@ -46,18 +47,18 @@ ms.locfileid: "46441923"
 |[SimpleActivationFactory 类](../windows/simpleactivationfactory-class.md)|提供创建 Windows 运行时或经典 COM 基类的基础机制。|
 |[SimpleClassFactory 类](../windows/simpleclassfactory-class.md)|提供创建基类的基本机制。|
 |[WeakRef 类](../windows/weakref-class.md)|表示只能由 Windows 运行时而不是经典 COM 使用的 *弱引用* 。 弱引用表示可能可访问或可能不可访问的对象。|
-  
-### <a name="structures"></a>结构
-  
+
+## <a name="structures"></a>结构
+
 |标题|描述|
 |-----------|-----------------|
 |[ChainInterfaces 结构](../windows/chaininterfaces-structure.md)|指定可应用于一组接口 ID 的验证和初始化函数。|
 |[CloakedIid 结构](../windows/cloakediid-structure.md)|指示对`RuntimeClass`，`Implements`和`ChainInterfaces`： 指定的接口是无法访问 IID 列表中的模板。|
 |[Implements 结构](../windows/implements-structure.md)|实现`QueryInterface`和`GetIid`指定接口。|
 |[MixIn 结构](../windows/mixin-structure.md)|确保运行时类先后派生自 Windows 运行时接口（如果有）和经典 COM 接口。|
-  
-### <a name="functions"></a>函数
-  
+
+## <a name="functions"></a>函数
+
 |标题|描述|
 |-----------|-----------------|
 |[ActivateInstance 函数](../windows/activateinstance-function.md)|注册并检索实例的指定类型定义中指定的类 id。|
@@ -67,14 +68,14 @@ ms.locfileid: "46441923"
 |[CreateClassFactory 函数](../windows/createclassfactory-function.md)|创建为指定类生成实例的工厂。|
 |[GetActivationFactory 函数](../windows/getactivationfactory-function.md)|检索指定模板参数的类型的激活工厂。|
 |[Make 函数](../windows/make-function.md)|初始化指定的 Windows 运行时类。|
-  
-### <a name="macros"></a>宏
-  
+
+## <a name="macros"></a>宏
+
 |标题|描述|
 |-----------|-----------------|
 |[ActivatableClass 宏](../windows/activatableclass-macros.md)|填充内部缓存，其中包含一个工厂，它可以创建指定类的实例。|
 |[InspectableClass 宏](../windows/inspectableclass-macro.md)|设置运行时类名称和信任级别。|
-  
+
 ## <a name="see-also"></a>请参阅
 
 [Windows 运行时 C++ 模板库 (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)

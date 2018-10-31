@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 086de927a6927087b8cbf3d1501ba6420e1027ed
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 61b9943488a9d6a720e8d86750b14ad044677112
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44110800"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861832"
 ---
 # <a name="compiler-and-linker-options-ccx"></a>编译器和链接器选项 (C++/CX)
 
@@ -28,7 +28,7 @@ ms.locfileid: "44110800"
 
 |选项|描述|
 |------------|-----------------|
-|[/ZW](../build/reference/zw-windows-runtime-compilation.md)<br /><br /> /ZW:nostdlib|启用 Windows 运行时语言扩展。<br /><br /> `nostdlib` 参数可阻止编译器使用标准的预定义搜索路径来查找程序集和 .winmd 文件。<br /><br /> **/ZW** 编译器选项隐式指定以下编译器选项：<br /><br /> -   **/FI** vccorlib.h，这会强制包含 vccorlib.h 头文件定义编译器所需的许多类型。<br />-   [/FU](../build/reference/fu-name-forced-hash-using-file.md) Windows.winmd，这会强制包含 Windows.winmd 元数据文件提供的操作系统，Windows 运行时中定义了许多类型。<br />-   **/FU** Platform.winmd，这会强制包含 Platform.winmd 元数据文件，该文件由编译器提供，定义命名空间的 Platform 系列中的大多数类型。|
+|[/ZW](../build/reference/zw-windows-runtime-compilation.md)<br /><br /> /ZW:nostdlib|启用 Windows 运行时语言扩展。<br /><br /> `nostdlib` 参数可阻止编译器使用标准的预定义搜索路径来查找程序集和 .winmd 文件。<br /><br /> **/ZW** 编译器选项隐式指定以下编译器选项：<br /><br />- **/FI** vccorlib.h，这会强制包含 vccorlib.h 头文件定义编译器所需的许多类型。<br />- [/FU](../build/reference/fu-name-forced-hash-using-file.md) Windows.winmd，这会强制包含 Windows.winmd 元数据文件提供的操作系统，Windows 运行时中定义了许多类型。<br />- **/FU** Platform.winmd，这会强制包含 Platform.winmd 元数据文件，由编译器提供，定义命名空间的 Platform 系列中的大多数类型。|
 |[/AI](../build/reference/ai-specify-metadata-directories.md) *dir*|向编译器用于查找程序集和 .winmd 文件的搜索路径添加目录（由 *dir* 参数指定）。|
 |**/FU**  *文件*|强制包含指定模块或 .winmd 文件。 即，不必在源代码中指定 `#using`*file* 。 编译器会自动强制包含自己的 Windows 元数据文件 Platform.winmd。|
 |/D "WINAPI_FAMILY=2"|创建允许使用与 Windows 运行时兼容的 Win32 sdk 子集的定义。|

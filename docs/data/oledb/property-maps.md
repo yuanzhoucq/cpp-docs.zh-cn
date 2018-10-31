@@ -1,7 +1,7 @@
 ---
 title: 属性映射 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/24/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -17,17 +17,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b3fb9c5a5c18925bfcd448bb2349379262b27361
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 2c6c3ddc4b19cd9b65203d8a5e675b9ed75720a1
+ms.sourcegitcommit: 840033ddcfab51543072604ccd5656fc6d4a5d3a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46080982"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50216456"
 ---
 # <a name="property-maps"></a>属性映射
 
-除了会话、 行集以及可选的命令对象，每个提供程序支持一个或多个属性。 由 OLE DB 提供程序向导创建的标头文件中包含的属性映射中定义了这些属性。 每个标头文件包含为该文件中定义的对象定义的 OLE DB 属性组中的属性映射。 包含数据源对象的标头文件还包含的属性映射[数据源属性](https://msdn.microsoft.com/library/ms724188\(v=vs.140\).aspx)。 Session.h 包含的属性映射[会话属性](/previous-versions/windows/desktop/ms714221\(v=vs.85\))。 行集和命令对象驻留在单个标头文件中，调用*projectname*RS.h。 这些属性属于[行集属性](/previous-versions/windows/desktop/ms711252\(v=vs.85\))组。  
-  
-## <a name="see-also"></a>请参阅  
+使用会话、 行集和可选的命令对象，每个提供程序支持一个或多个属性。 这些属性定义中创建的标头文件中存储的属性映射**OLE DB 提供程序向导**。 每个标头文件包含为该文件中定义的对象定义的 OLE DB 属性组中的属性映射。 包含数据源对象的标头文件还包含的属性映射[数据源属性](https://msdn.microsoft.com/library/ms724188)。 `Session.h` 包含的属性映射[会话属性](/previous-versions/windows/desktop/ms714221)。 行集和命令对象是在单个标头文件中，调用*projectname*RS.h。 这些属性属于[行集属性](/previous-versions/windows/desktop/ms711252)组。
 
-[OLE DB 提供程序模板体系结构](../../data/oledb/ole-db-provider-template-architecture.md)
+## <a name="see-also"></a>请参阅
+
+[OLE DB 提供程序模板体系结构](../../data/oledb/ole-db-provider-template-architecture.md)<br/>

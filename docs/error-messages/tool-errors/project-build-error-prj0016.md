@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6604bc0bf27b3d0192f602c4df88e5f01e4a161
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: ceb004cba243d6e2e9c44aadcaa40670ef7a0bbb
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46135949"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890252"
 ---
 # <a name="project-build-error-prj0016"></a>项目生成错误 PRJ0016
 
@@ -37,8 +37,4 @@ ms.locfileid: "46135949"
 
 此错误的另一个原因是，您的策略设置不包括 VCSpawn.exe HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\RestrictRun 的注册表项下为此用户帐户允许窗口程序。
 
-有关其他信息，请参阅：
-
-- 知识库文章 324153，可在找到[ http://support.microsoft.com/default.aspx?scid=kb; en-我们; 324153](http://support.microsoft.com/default.aspx?scid=kb;en-us;324153)。
-
-- [遵循系统策略设置](https://msdn.microsoft.com/library/aa372139)，针对"仅运行允许的 Windows 应用程序"部分。
+有关其他信息，请参阅[遵循系统策略设置](https://msdn.microsoft.com/library/aa372139)，针对"仅运行允许的 Windows 应用程序"部分中。

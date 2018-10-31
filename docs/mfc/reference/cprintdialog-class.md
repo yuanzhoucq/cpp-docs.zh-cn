@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f69c315f78c5ce1a587f48a873c9c2517f81537b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 61e2ea655c25b15982f3434437bc3bdc3eaf310f
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441429"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204647"
 ---
 # <a name="cprintdialog-class"></a>CPrintDialog 类
 
@@ -108,7 +108,7 @@ class CPrintDialog : public CCommonDialog
 > [!NOTE]
 >  `CPrintDialogEx`类封装由 Windows 打印属性表提供的服务。 有关详细信息请参阅[CPrintDialogEx](../../mfc/reference/cprintdialogex-class.md)概述。
 
-`CPrintDialog`功能被取代的[CPageSetupDialog](../../mfc/reference/cpagesetupdialog-class.md)，，旨在提供一个通用对话框，用于同时打印设置和页面设置。
+`CPrintDialog`功能已被的取代[CPageSetupDialog](../../mfc/reference/cpagesetupdialog-class.md)，，旨在提供一个通用对话框，用于同时打印设置和页面设置。
 
 您可以依赖于框架来处理你的应用程序的打印过程的许多方面。 在这种情况下，框架会自动显示 Windows 通用对话框进行打印。 您还可以使框架处理的应用程序打印，但重写常见的打印对话框，使用你自己的打印对话框。 有关使用框架来处理打印任务的详细信息，请参阅文章[打印](../../mfc/printing.md)。
 

@@ -1,7 +1,7 @@
 ---
-title: ref new、 gcnew （c + + 组件扩展） |Microsoft Docs
+title: ref new、 gcnew (C + + /cli 和 C + + /cli CX) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -20,14 +20,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1c31cda7c074b06025051661d27f00d2624721d0
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: c9553ac6bf1d2e8e8d92745456f1f52d1de1c9ba
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42596153"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057032"
 ---
-# <a name="ref-new-gcnew--c-component-extensions"></a>ref new、gcnew（C++ 组件扩展）
+# <a name="ref-new-gcnew--ccli-and-ccx"></a>ref new、 gcnew (C + + /cli 和 C + + /cli CX)
 
 **新的 ref**聚合关键字分配进行垃圾回收时，对象将变为不可访问，并返回一个句柄类型的实例 ([^](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)) 已分配对象。
 
@@ -84,7 +84,7 @@ value class Boxed {
     public:
         int i;
 };
-int main()  
+int main()
 {
     Boxed^ y = gcnew Boxed;
     y->i = 32;
@@ -99,4 +99,4 @@ int main()
 
 ## <a name="see-also"></a>请参阅
 
-[适用于运行时平台的组件扩展](../windows/component-extensions-for-runtime-platforms.md)
+[ .NET 和 UWP 的组件扩展](../windows/component-extensions-for-runtime-platforms.md)

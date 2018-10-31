@@ -1,7 +1,7 @@
 ---
 title: CMDIChildWndEx 类 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -122,19 +122,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f52ce513f0a0d96fe2454397417f2f7885e2c2f2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 64e8b62f79a6294810fc30b1796958c6ca4a153a
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441728"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50073859"
 ---
 # <a name="cmdichildwndex-class"></a>CMDIChildWndEx 类
 
 `CMDIChildWndEx`类提供的功能的 Windows 多文档界面 (MDI) 子窗口。 它扩展的功能[CMDIChildWnd 类](../../mfc/reference/cmdichildwnd-class.md)。 当 MDI 应用程序使用特定 MFC 类时，框架需要此类。
 
 有关更多详细信息，请参阅中的源代码**VC\\atlmfc\\src\\mfc**的 Visual Studio 安装文件夹。
-
 
 ## <a name="syntax"></a>语法
 
@@ -193,7 +192,7 @@ class CMDIChildWndEx : public CMDIChildWnd
 |[CMDIChildWndEx::OnTaskbarTabThumbnailStretch](#ontaskbartabthumbnailstretch)|需要拉伸的 MDI 子窗体的 Windows 7 任务栏选项卡缩略图预览的位图时由框架调用。|
 |[CMDIChildWndEx::OnUpdateFrameTitle](#onupdateframetitle)|由框架调用以更新框架标题。 （重写 `CMDIChildWnd::OnUpdateFrameTitle`。）|
 |[CMDIChildWndEx::PaneFromPoint](#panefrompoint)|返回包含给定的点的窗格。|
-|`CMDIChildWndEx::PreTranslateMessage`|类使用[CWinApp](../../mfc/reference/cwinapp-class.md)窗口消息调度到之前转换[TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)并[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows 函数。 （重写 [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)。）|
+|`CMDIChildWndEx::PreTranslateMessage`|在将窗口消息发送到 [TranslateMessage](../../mfc/reference/cwinapp-class.md) 和 [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) Windows 函数之前，由 [CWinApp](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) 类用于对此消息进行转换。 （重写 [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)。）|
 |[CMDIChildWndEx::RecalcLayout](#recalclayout)|重新计算窗口的布局。|
 |[CMDIChildWndEx::RegisterTaskbarTab](#registertaskbartab)|注册 Windows 7 任务栏选项卡的 MDI 子窗体。|
 |[CMDIChildWndEx::RemovePaneFromDockManager](#removepanefromdockmanager)|从到停靠管理器中删除一个窗格。|
@@ -283,7 +282,6 @@ virtual void AdjustDockingLayout(HDWP hdwp = NULL);
 [in]延迟的窗口位置结构的句柄。
 
 ##  <a name="canshowonmditabs"></a>  CMDIChildWndEx::CanShowOnMDITabs
-
 
 ```
 virtual BOOL CanShowOnMDITabs();
@@ -411,7 +409,6 @@ BOOL EnableDocking(DWORD dwDockStyle);
 
 ##  <a name="getdockingmanager"></a>  CMDIChildWndEx::GetDockingManager
 
-
 ```
 CDockingManager* GetDockingManager();
 ```
@@ -502,7 +499,6 @@ CBasePane* GetPane(UINT nID);
 到窗格中，如果找到，否则为 NULL 指针。
 
 ##  <a name="getrelatedtabgroup"></a>  CMDIChildWndEx::GetRelatedTabGroup
-
 
 ```
 CMFCTabCtrl* GetRelatedTabGroup();
@@ -770,19 +766,17 @@ void RemovePaneFromDockManager(
 
 ##  <a name="setrelatedtabgroup"></a>  CMDIChildWndEx::SetRelatedTabGroup
 
-
 ```
 void SetRelatedTabGroup(CMFCTabCtrl* p);
 ```
 
 ### <a name="parameters"></a>参数
 
-[in]*p*
+[in]*p*<br/>
 
 ### <a name="remarks"></a>备注
 
 ##  <a name="showpane"></a>  CMDIChildWndEx::ShowPane
-
 
 ```
 void ShowPane(
@@ -794,10 +788,13 @@ void ShowPane(
 
 ### <a name="parameters"></a>参数
 
-*pBar*<br/>
-[in][in]*bShow*
-*bDelay*<br/>
-[in][in]*bActivate*
+[in]*pBar*<br/>
+
+[in]*bShow*<br/>
+
+[in]*bDelay*<br/>
+
+[in]*bActivate*<br/>
 
 ### <a name="remarks"></a>备注
 

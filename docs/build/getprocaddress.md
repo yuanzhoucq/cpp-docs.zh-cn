@@ -18,16 +18,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce1a287a9fa608881a39f82a2b86cfc541674218
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: ef48157d1f4efb467fd33270ff05271bedd1a563
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45713710"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49081885"
 ---
 # <a name="getprocaddress"></a>GetProcAddress
 
-显式链接到 DLL 调用的进程[GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212)获取 DLL 中导出函数的地址。 使用返回的函数指针调用 DLL 函数。 **GetProcAddress** DLL 模块句柄将作为参数 (通过以下任一方法返回**LoadLibrary**， `AfxLoadLibrary`，或**GetModuleHandle**) 和采用的所需的函数名称到调用或函数的导出序号。
+显式链接到 DLL 调用的进程[GetProcAddress](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress)获取 DLL 中导出函数的地址。 使用返回的函数指针调用 DLL 函数。 **GetProcAddress** DLL 模块句柄将作为参数 (通过以下任一方法返回**LoadLibrary**， `AfxLoadLibrary`，或**GetModuleHandle**) 和采用的所需的函数名称到调用或函数的导出序号。
 
 因为调用 DLL 函数通过指针并且没有任何编译时类型检查，请确保函数的参数正确，以便不超出在堆栈上分配的内存，并导致访问冲突。 帮助提供类型安全的一种方法是查看导出的函数的函数原型，并创建函数指针的匹配 typedef。 例如：
 
@@ -73,7 +73,7 @@ if (hDLL != NULL)
 
 - [LoadLibrary 和 AfxLoadLibrary](../build/loadlibrary-and-afxloadlibrary.md)
 
-- [FreeLibrary](https://msdn.microsoft.com/library/windows/desktop/ms683152)
+- [FreeLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-freelibrary)
 
 - [使用 DEF 文件从 DLL 导出](../build/exporting-from-a-dll-using-def-files.md)
 

@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51754b2b777523593118b0b0a88dfa4ac8803b20
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 60f82332f9dd0fa6d6e64beb2a5d793784471a1f
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959802"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48234588"
 ---
 # <a name="using-insertion-operators-and-controlling-format"></a>使用插入运算符并控制格式
 
@@ -99,7 +99,7 @@ int main( )
    double values[] = { 1.23, 35.36, 653.7, 4358.24 };
    char *names[] = { "Zoot", "Jimmy", "Al", "Stan" };
    for( int i = 0; i < 4; i++ )
-      cout << setw( 6 )  << names[i]
+      cout << setw( 7 )  << names[i]
            << setw( 10 ) << values[i] << endl;
 }
 ```
@@ -107,10 +107,10 @@ int main( )
 `width`成员函数声明中\<iostream >。 如果使用 `setw` 或任何其他带参数的操控器，则必须包含 \<iomanip>。 在输出中，在宽度为 6 的字段中打印字符串，在宽度为 10 的字段中打印整数：
 
 ```Output
-  Zoot      1.23
- Jimmy     35.36
-    Al     653.7
-  Stan   4358.24
+   Zoot      1.23
+  Jimmy     35.36
+     Al     653.7
+   Stan   4358.24
 ```
 
 既不`setw`也不`width`截断值。 如果格式化输出超出宽度，则整个值受流的精度设置的约束进行打印。 这两`setw`和`width`影响以下字段。 已打印一个字段之后，字段宽度将恢复为其默认行为（必要宽度）。 但是，在更改之前，其他流格式选项保持有效。

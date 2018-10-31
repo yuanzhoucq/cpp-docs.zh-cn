@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e318687dfa3cc8e841643e5caf6fe1fbcc00d051
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 953473102a42792dc3ae3afa3b1a8caf507e5648
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46080761"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861494"
 ---
 # <a name="precedence-and-order-of-evaluation"></a>计算的优先级和顺序
 
@@ -53,7 +53,7 @@ C 运算符的优先级和结合性将影响表达式中操作数的分组和计
 
 1. 运算符按优先级的降序顺序列出。 如果多个运算符出现在同一行或一个组中，则它们具有相同的优先级。
 
-2. 所有简单的和复合的赋值运算符都有相同的优先级。
+1. 所有简单的和复合的赋值运算符都有相同的优先级。
 
 表达式可以包含优先级相同的多个运算符。 当多个具有相同级别的这类运算符出现在表达式中时，计算将根据该运算符的结合性按从右到左或从左至右的顺序来执行。 计算的方向不影响在相同级别包括多个乘法 (\*)、加法 (+) 或二进制按位（&、&#124; 或 ^）运算符的表达式的结果。 语言未定义运算的顺序。 如果编译器可以保证一致的结果，则编译器可以按任意顺序随意计算此类表达式。
 

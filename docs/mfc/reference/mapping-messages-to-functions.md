@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb37637cbfc2ec0af96ed339da6e71cf349797e2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b53175e46cfa858a73b581dfefc78047e96380d6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46402864"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50058943"
 ---
 # <a name="mapping-messages-to-functions"></a>将消息映射到函数
 
@@ -42,7 +42,7 @@ ms.locfileid: "46402864"
     > [!NOTE]
     >  **消息**在类视图或源窗口中单击时选择的类名称时，按钮才可用。
 
-     如果你的项目具有一条消息的处理程序，则会在消息旁的右侧列中显示处理程序的名称。
+   如果你的项目具有一条消息的处理程序，则会在消息旁的右侧列中显示处理程序的名称。
 
 1. 如果消息没有处理程序，然后单击属性窗口来作为处理程序的建议的名称显示在右侧的列中的单元格\<添加 >*HandlerName*。 (例如，WM_TIMER 消息处理程序建议\<添加 >`OnTimer`)。
 

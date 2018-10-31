@@ -28,12 +28,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5785d06a09c823140362fa4afc6a8b12954e5ac3
-ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
+ms.openlocfilehash: 7562f6e5a8915f33b3f2c8bd23ce310e641984c6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42578298"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057033"
 ---
 # <a name="crt-library-features"></a>CRT 库功能
 
@@ -65,7 +65,8 @@ vcruntime 库包含 Visual C++ CRT 实现特定的代码，例如异常处理和
 |vcruntime.lib|vcruntime\<version>.dll|vcruntime 的 DLL 导入库。|**/MD**|_MT, _DLL|
 |vcruntimed.lib|vcruntime\<version>d.dll|调试 vcruntime 的 DLL 导入库。 不可再发行。|**/MDd**|_DEBUG, _MT, _DLL|
 
-发生 UCRT 重构时，并发运行时函数会移到 C++ 可再发行包中的 concrt140.dll。 此 DLL 是 C++ 并行容器和算法（如 `concurrency::parallel_for`）所必需的。 此外，C++ 标准库需要 Windows XP 版的此 DLL 来支持同步基元，因为 Windows XP 不具有条件变量。
+> [!NOTE]
+> 发生 UCRT 重构时，并发运行时函数会移到已添加到 C++ 可再发行包中的 concrt140.dll。 此 DLL 是 C++ 并行容器和算法（如 `concurrency::parallel_for`）所必需的。 此外，C++ 标准库需要 Windows XP 版的此 DLL 来支持同步基元，因为 Windows XP 不具有条件变量。
 
 初始化 CRT 的代码是几个库中的一个，根据 CRT 库是采用静态或动态链接还是本机、托管或混合代码而定。 此代码处理 CRT 启动、内部逐线程数据初始化和终止。 它特定于所用编译器的版本。 此库始终采用动态链接，即使使用动态链接的 UCRT 也是如此。
 
@@ -122,7 +123,6 @@ vcruntime 库包含 Visual C++ CRT 实现特定的代码，例如异常处理和
 如果进程中的所有映像全都使用相同的 CRT 动态加载版本，则也有可能避免这些问题。 若要确保所有组件都使用相同的 CRT 的 DLL 版本，请使用“/MD”选项，并使用相同的编译器工具集和属性设置进行构建。
 
 如果程序跨 DLL 边界传递某些 CRT 资源（如文件句柄、区域设置和环境变量），即便使用的是相同版本的 CRT，那也需要注意。 有关所涉及问题以及如何解决这些问题的详细信息，请参阅[跨 DLL 边界传递 CRT 对象时可能的错误](../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md)。
-
 
 ## <a name="see-also"></a>请参阅
 

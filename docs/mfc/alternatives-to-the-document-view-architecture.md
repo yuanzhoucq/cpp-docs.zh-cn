@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07277e9b98186747415cf1bf6abed3e431e64fff
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b45b1a1f2903dfcdfa4a95adc161766f5bb3328c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46403469"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053040"
 ---
 # <a name="alternatives-to-the-documentview-architecture"></a>文档/视图结构的替换选项
 
@@ -56,7 +56,7 @@ Visual C++ 向导以及源编辑器和对话框编辑器与生成的应用程序
 
 - 如上面建议的，将文档视为未使用的附加物并在视图类中实现数据管理代码。 文档的开销相对较低。 将单个[CDocument](../mfc/reference/cdocument-class.md)对象会产生少量开销其本身而言，加上的少量开销`CDocument`的基类， [CCmdTarget](../mfc/reference/ccmdtarget-class.md)并[CObject](../mfc/reference/cobject-class.md)。 后面两个类都很小。
 
-     在中声明`CDocument`:
+   在中声明`CDocument`:
 
    - 两个 `CString` 对象。
 
@@ -66,7 +66,7 @@ Visual C++ 向导以及源编辑器和对话框编辑器与生成的应用程序
 
    - 一个 `CPtrList` 对象，该对象包含文档视图的列表。
 
-     此外，文档需要一定时间来创建文档对象、视图对象、框架窗口和文档模板对象。
+   此外，文档需要一定时间来创建文档对象、视图对象、框架窗口和文档模板对象。
 
 - 将文档和视图视为未使用的附加物。 将数据管理和绘图代码放置在框架窗口而不是视图中。 此方法更接近 C 语言编程模型。
 

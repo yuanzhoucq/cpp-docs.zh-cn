@@ -1,7 +1,7 @@
 ---
-title: 数组 （c + + 组件扩展） |Microsoft Docs
+title: 数组 (C + + /cli 和 C + + /cli CX) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -22,14 +22,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 836017dcec969db85a0725a49193d7b8e8a88875
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 29f84515bfa802af8d6463d34de9b6717c8df044
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46402845"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50061321"
 ---
-# <a name="arrays-c-component-extensions"></a>数组（C++ 组件扩展）
+# <a name="arrays-ccli-and-ccx"></a>数组 (C + + /cli 和 C + + /cli CX)
 
 `Platform::Array<T>`类型在 C + + /CX 中，或**数组**关键字在 C + + /cli CLI，声明数组的指定的类型和初始值。
 
@@ -55,10 +55,10 @@ ms.locfileid: "46402845"
 第一个语法的示例使用**ref 新**聚合关键字分配一个数组。 第二个示例声明本地数组。
 
 ```cpp
-[qualifiers] [Platform::]Array<[qualifiers] array-type [,rank]>^ identifier = 
+[qualifiers] [Platform::]Array<[qualifiers] array-type [,rank]>^ identifier =
     ref new[Platform::]Array<initialization-type> [{initialization-list [,...]}]
 
-[qualifiers] [Platform::]Array<[qualifiers] array-type [,rank]>^ identifier = 
+[qualifiers] [Platform::]Array<[qualifiers] array-type [,rank]>^ identifier =
     {initialization-list [,...]}
 ```
 
@@ -111,10 +111,10 @@ int main() {
 第一个语法的示例使用**gcnew**关键字来分配一个数组。 第二个示例声明本地数组。
 
 ```cpp
-[qualifiers] [cli::]array<[qualifiers] array-type [,rank]>^ identifier = 
+[qualifiers] [cli::]array<[qualifiers] array-type [,rank]>^ identifier =
     gcnew [cli::]array<initialization-type[,rank]>(rank-size-list[,...]) [{initialization-list [,...]}]
 
-[qualifiers] [cli::]array<[qualifiers] array-type [,rank]>^ identifier = 
+[qualifiers] [cli::]array<[qualifiers] array-type [,rank]>^ identifier =
     {initialization-list [,...]}
 ```
 
@@ -180,4 +180,4 @@ int main() {
 
 ## <a name="see-also"></a>请参阅
 
-[适用于运行时平台的组件扩展](../windows/component-extensions-for-runtime-platforms.md)
+[ .NET 和 UWP 的组件扩展](../windows/component-extensions-for-runtime-platforms.md)

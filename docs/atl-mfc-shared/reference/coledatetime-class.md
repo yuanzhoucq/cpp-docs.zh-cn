@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39329f4895060ff950f36c3d10dd5e4020f3b98a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b4490eef3427f66456ec79ae2f5429d309a82a54
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448423"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057396"
 ---
 # <a name="coledatetime-class"></a>COleDateTime 类
 
@@ -165,7 +165,7 @@ bool operator>=(const COleDateTime& date) const throw();
 
 ### <a name="parameters"></a>参数
 
-*日期*  
+*日期*<br/>
 要比较的 `COleDateTime` 对象。
 
 ### <a name="remarks"></a>备注
@@ -210,31 +210,31 @@ COleDateTime(const DBTIMESTAMP& dbts) throw();
 
 ### <a name="parameters"></a>参数
 
-*dateSrc*  
+*dateSrc*<br/>
 将现有`COleDateTime`对象复制到新`COleDateTime`对象。
 
-*varSrc*  
+*varSrc*<br/>
 将现有`VARIANT`数据结构 (可能`COleVariant`对象) 转换为日期/时间值 (VT_DATE) 并复制到新`COleDateTime`对象。
 
-*dtSrc*  
+*dtSrc*<br/>
 日期/时间 (`DATE`) 要复制到新值`COleDateTime`对象。
 
-*timeSrc*  
+*timeSrc*<br/>
 一个`time_t`或`__time64_t`值转换为日期/时间值并复制到新`COleDateTime`对象。
 
-*systimeSrc*  
+*systimeSrc*<br/>
 一个`SYSTEMTIME`结构转换为日期/时间值并复制到新`COleDateTime`对象。
 
-*filetimeSrc*  
+*filetimeSrc*<br/>
 一个`FILETIME`结构转换为日期/时间值并复制到新`COleDateTime`对象。 请注意，`FILETIME`使用协调世界时 (UTC)，因此如果结构中传递了本地时间，则结果将为不正确。 请参阅[文件时间](/windows/desktop/SysInfo/file-times)Windows SDK for 的详细信息中。
 
-*nYear*， *nMonth*，*第几日*，*几点*， *nMin*， *nSec*  
+*nYear*， *nMonth*，*第几日*，*几点*， *nMin*， *nSec*<br/>
 指示要复制到新的日期和时间值`COleDateTime`对象。
 
-*wDosDate*， *wDosTime*  
+*wDosDate*， *wDosTime*<br/>
 MS-DOS 日期和时间值转换为日期/时间值并复制到新`COleDateTime`对象。
 
-*dbts*  
+*dbts*<br/>
 对引用[DBTimeStamp](https://msdn.microsoft.com/library/system.data.oledb.oledbtype)结构，它包含当前本地时间。
 
 ### <a name="remarks"></a>备注
@@ -297,7 +297,7 @@ CString Format(UINT nFormatID) const;
 
 ### <a name="parameters"></a>参数
 
-*dwFlags*  
+*dwFlags*<br/>
 指示下列区域设置标志之一：
 
 - LOCALE_NOUSEROVERRIDE 使用系统默认区域设置，而不是自定义用户设置。
@@ -306,10 +306,10 @@ CString Format(UINT nFormatID) const;
 
 - VAR_DATEVALUEONLY 在分析过程中忽略时间部分。
 
-*lcid*  
+*lcid*<br/>
 指示要使用用于转换的区域设置 ID。 有关语言标识符的详细信息，请参阅[语言标识符](/windows/desktop/Intl/language-identifiers)。
 
-*lpszFormat*  
+*lpszFormat*<br/>
 格式设置字符串类似于`printf`格式设置字符串。 每个格式设置代码，注释按百分比 ( `%`) 登录，将替换为相应`COleDateTime`组件。 格式设置字符串中的其他字符被复制到返回的字符串不变。 请参阅运行时函数[strftime](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)有关详细信息。 值和格式设置代码的含义`Format`是：
 
 - `%H` 在当前的一天中的小时数
@@ -320,7 +320,7 @@ CString Format(UINT nFormatID) const;
 
 - `%%` 百分比符号
 
-*nFormatID*  
+*nFormatID*<br/>
 格式控制字符串资源 ID。
 
 ### <a name="return-value"></a>返回值
@@ -333,13 +333,13 @@ CString Format(UINT nFormatID) const;
 
 此函数的三种形式的简短说明如下所示：
 
-`Format`( *dwFlags*， *lcid*)  
+`Format`( *dwFlags*， *lcid*)<br/>
 此窗体的使用的语言规范 （区域设置 Id） 设置格式的日期和时间的值。 使用默认参数，此窗体将打印日期和时间，时间部分为 0 （午夜），这种情况下它将打印只是日期或日期部分为 0 (30 1899 年 12 月)，除非在这种情况下它将打印在的时间。 如果日期/时间值为 0 (30 1899 年 12 月，午夜)，此窗体具有默认参数将打印午夜。
 
-`Format`( *lpszFormat*)  
+`Format`( *lpszFormat*)<br/>
 此窗体中通过使用格式字符串包含特殊的格式化代码前面带有百分号 （%） 的设置值`printf`。 格式设置字符串作为参数传递给函数。 有关格式设置代码的详细信息，请参阅[strftime、 wcsftime](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)运行时库参考中。
 
-`Format`( *nFormatID*)  
+`Format`( *nFormatID*)<br/>
 此窗体中通过使用格式字符串包含特殊的格式化代码前面带有百分号 （%） 的设置值`printf`。 格式设置字符串是一个资源。 此字符串资源的 ID 作为参数进行传递。 有关格式设置代码的详细信息，请参阅[strftime、 wcsftime](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)中*运行时库参考*。
 
 ### <a name="example"></a>示例
@@ -356,7 +356,7 @@ bool GetAsDBTIMESTAMP(DBTIMESTAMP& dbts) const throw();
 
 ### <a name="parameters"></a>参数
 
-*dbts*  
+*dbts*<br/>
 对引用[DBTimeStamp](https://msdn.microsoft.com/library/system.data.oledb.oledbtype)结构。
 
 ### <a name="return-value"></a>返回值
@@ -381,7 +381,7 @@ bool GetAsSystemTime(SYSTEMTIME& sysTime) const throw();
 
 ### <a name="parameters"></a>参数
 
-*sysTime*  
+*sysTime*<br/>
 对引用[SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)接收从转换后的日期/时间值的结构`COleDateTime`对象。
 
 ### <a name="return-value"></a>返回值
@@ -404,7 +404,7 @@ bool GetAsUDATE(UDATE& udate) const throw();
 
 ### <a name="parameters"></a>参数
 
-*udate*  
+*udate*<br/>
 对引用`UDATE`结构，以接收转换后的日期/时间值从`COleDateTime`对象。
 
 ### <a name="return-value"></a>返回值
@@ -701,13 +701,13 @@ DateTimeStatus GetStatus() const throw();
 由定义的返回值`DateTimeStatus`枚举中定义的类型`COleDateTime`类。
 
 ```
-enum DateTimeStatus  
-{  
-   error = -1,  
-   valid = 0,  
-   invalid = 1,    // Invalid date (out of range, etc.)  
-   null = 2,       // Literally has no value  
-};  
+enum DateTimeStatus
+{
+   error = -1,
+   valid = 0,
+   invalid = 1,    // Invalid date (out of range, etc.)
+   null = 2,       // Literally has no value
+};
 ```
 
 有关这些状态的值的简要说明，请参阅下面的列表：
@@ -930,18 +930,18 @@ operator DATE() const throw();
 分析字符串中读取日期/时间值。
 
 ```
-bool ParseDateTime(  
-LPCTSTR lpszDate,
-DWORD dwFlags = 0,
-LCID lcid = LANG_USER_DEFAULT) throw();
+bool ParseDateTime(
+    LPCTSTR lpszDate,
+    DWORD dwFlags = 0,
+    LCID lcid = LANG_USER_DEFAULT) throw();
 ```
 
 ### <a name="parameters"></a>参数
 
-*lpszDate*  
+*lpszDate*<br/>
 指向以 null 结尾的字符串，这是要分析的指针。 有关详细信息，请参阅“备注”。
 
-*dwFlags*  
+*dwFlags*<br/>
 指示用于区域设置和分析的标志。 一个或多个下列标志：
 
 - LOCALE_NOUSEROVERRIDE 使用系统默认区域设置，而不是自定义用户设置。
@@ -950,7 +950,7 @@ LCID lcid = LANG_USER_DEFAULT) throw();
 
 - VAR_DATEVALUEONLY 在分析过程中忽略时间部分。
 
-*lcid*  
+*lcid*<br/>
 指示要使用用于转换的区域设置 ID。
 
 ### <a name="return-value"></a>返回值
@@ -991,15 +991,15 @@ LCID lcid = LANG_USER_DEFAULT) throw();
 设置此日期`COleDateTime`对象。
 
 ```
-int SetDate(  
-int nYear,
-int nMonth,
-int nDay) throw();
+int SetDate(
+    int nYear,
+    int nMonth,
+    int nDay) throw();
 ```
 
 ### <a name="parameters"></a>参数
 
-*nYear*， *nMonth*，*第几日*  
+*nYear*， *nMonth*，*第几日*<br/>
 指示日期组件复制到此`COleDateTime`对象。
 
 ### <a name="return-value"></a>返回值
@@ -1062,18 +1062,18 @@ int nDay) throw();
 设置日期和时间这`COleDateTime`对象。
 
 ```
-int SetDateTime(  
-int nYear,
-int nMonth,
-int nDay,
-int nHour,
-int nMin,
-int nSec) throw();
+int SetDateTime(
+    int nYear,
+    int nMonth,
+    int nDay,
+    int nHour,
+    int nMin,
+    int nSec) throw();
 ```
 
 ### <a name="parameters"></a>参数
 
-*nYear*， *nMonth*，*第几日*，*几点*， *nMin*， *nSec*  
+*nYear*， *nMonth*，*第几日*，*几点*， *nMin*， *nSec*<br/>
 指示要复制到此的日期和时间组件`COleDateTime`对象。
 
 ### <a name="return-value"></a>返回值
@@ -1151,7 +1151,7 @@ void SetStatus(DateTimeStatus status) throw();
 
 ### <a name="parameters"></a>参数
 
-*status*  
+*status*<br/>
 为此新的状态值`COleDateTime`对象。
 
 ### <a name="remarks"></a>备注
@@ -1170,15 +1170,15 @@ void SetStatus(DateTimeStatus status) throw();
 设置此时间`COleDateTime`对象。
 
 ```
-int SetTime(  
-int nHour,
-int nMin,
-int nSec) throw();
+int SetTime(
+    int nHour,
+    int nMin,
+    int nSec) throw();
 ```
 
 ### <a name="parameters"></a>参数
 
-*几点*， *nMin*， *nSec*  
+*几点*， *nMin*， *nSec*<br/>
 指示时间组件复制到此`COleDateTime`对象。
 
 ### <a name="return-value"></a>返回值

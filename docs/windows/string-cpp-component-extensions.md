@@ -1,7 +1,7 @@
 ---
-title: 字符串 （c + + 组件扩展） |Microsoft Docs
+title: 字符串 (C + + /cli 和 C + + /cli CX) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/08/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -16,24 +16,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2d6b6ce066c84056997ec9b54c9d74e782064df4
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: fd4caaf49bd72a85a6d81003926c4e556d0731e0
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46408396"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054236"
 ---
-# <a name="string--c-component-extensions"></a>String（C++ 组件扩展）
-
-Visual c + + 编译器支持*字符串*，这是对象，表示为一系列字符的文本。 Visual c + + 支持字符串变量，其值是隐式和原义字符，其值是显式带引号的字符串。
-
-## <a name="all-runtimes"></a>所有运行时
+# <a name="string--ccli-and-ccx"></a>字符串 (C + + /cli 和 C + + /cli CX)
 
 Windows 运行时和公共语言运行时表示为自动管理其已分配的内存对象的字符串。 也就是说，不需要显式放弃字符串的内存，字符串变量超出范围或你的应用程序结束时。 若要指示字符串对象的生存期是自动管理，声明类型字符串[句柄到对象 (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)修饰符。
 
 ## <a name="windows-runtime"></a>Windows 运行时
 
-Windows 运行时体系结构需要 Visual c + + 实现`String`中的数据类型`Platform`命名空间。 为方便起见，还提供 Visual c + +`string`数据类型，即的同义词`Platform::String`，请在`default`命名空间。
+Windows 运行时体系结构要求`String`数据类型位于`Platform`命名空间。 为方便起见，还提供 Visual c + +`string`数据类型，即的同义词`Platform::String`，请在`default`命名空间。
 
 ### <a name="syntax"></a>语法
 
@@ -51,8 +47,6 @@ using namespace default;
 编译器选项：`/ZW`
 
 ## <a name="common-language-runtime"></a>公共语言运行时
-
-本主题讨论使用运行时，Visual c + + 编译器如何处理字符串文本`/clr`编译器选项。 若要使用`/clr`，还必须使用公共语言运行时 (CLR) 中 C + + /cli 语法和托管对象。 有关详细信息`/clr`，请参阅[/clr （公共语言运行时编译）](../build/reference/clr-common-language-runtime-compilation.md)。
 
 使用编译时`/clr`，编译器会将字符串文字转换为字符串类型的<xref:System.String>。 若要保留与现有代码存在向后的兼容性是两个例外情况：
 
@@ -91,9 +85,9 @@ using namespace default;
 using namespace System;
 
 int main() {
-   String ^ a = gcnew String("abc");
-   String ^ b = "def";   // same as gcnew form
-   Object ^ c = gcnew String("ghi");
+   String^ a = gcnew String("abc");
+   String^ b = "def";   // same as gcnew form
+   Object^ c = gcnew String("ghi");
 
    char d[100] = "abc";
 
@@ -111,29 +105,29 @@ int main() {
    // concatenation of a System::String and string literal
    Console::WriteLine(a + "zzz");
 
-   // you can append to a System::String ^
+   // you can append to a System::String^
    Console::WriteLine(a + 1);
    Console::WriteLine(a + 'a');
    Console::WriteLine(a + 3.1);
 
-   // test System::String ^ for equality
+   // test System::String^ for equality
    a += b;
    Console::WriteLine(a);
    a = b;
-   if (a == b)  
+   if (a == b)
       Console::WriteLine("a and b are equal");
 
    a = "abc";
-   if (a != b)  
+   if (a != b)
       Console::WriteLine("a and b are not equal");
 
-   // System:String ^ and tracking reference
+   // System:String^ and tracking reference
    String^% rstr1 = a;
    Console::WriteLine(rstr1);
 
-   // testing an empty System::String ^
-   String ^ n;
-   if (n == nullptr)  
+   // testing an empty System::String^
+   String^ n;
+   if (n == nullptr)
       Console::WriteLine("n is empty");
 }
 ```
@@ -179,29 +173,29 @@ using namespace System;
 void Test_Overload(const char * a) {
    Console::WriteLine("const char * a");
 }
-void Test_Overload(String ^ a) {
-   Console::WriteLine("String ^ a");
+void Test_Overload(String^ a) {
+   Console::WriteLine("String^ a");
 }
 
 // overload will be called instead of compiler defined operator
-String ^ operator +(String ^ a, String ^ b) {
-   return ("overloaded +(String ^ a, String ^ b)");
+String^ operator +(String^ a, String^ b) {
+   return ("overloaded +(String^ a, String^ b)");
 }
 
 // overload will be called instead of compiler defined operator
-String ^ operator +(Object ^ a, String ^ b) {
-   return ("overloaded +(Object ^ a, String ^ b)");
+String^ operator +(Object^ a, String^ b) {
+   return ("overloaded +(Object^ a, String^ b)");
 }
 
 // overload will be called instead of compiler defined operator
-String ^ operator +(String ^ a, Object ^ b) {
-   return ("overloaded +(String ^ a, Object ^ b)");
+String^ operator +(String^ a, Object^ b) {
+   return ("overloaded +(String^ a, Object^ b)");
 }
 
 int main() {
-   String ^ a = gcnew String("abc");
-   String ^ b = "def";   // same as gcnew form
-   Object ^ c = gcnew String("ghi");
+   String^ a = gcnew String("abc");
+   String^ b = "def";   // same as gcnew form
+   Object^ c = gcnew String("ghi");
 
    char d[100] = "abc";
 
@@ -215,13 +209,13 @@ int main() {
 ```
 
 ```Output
-overloaded +(String ^ a, String ^ b)
+overloaded +(String^ a, String^ b)
 
-overloaded +(String ^ a, Object ^ b)
+overloaded +(String^ a, Object^ b)
 
-overloaded +(Object ^ a, String ^ b)
+overloaded +(Object^ a, String^ b)
 
-String ^ a
+String^ a
 
 const char * a
 ```
@@ -233,7 +227,7 @@ const char * a
 // compile with: /clr
 using namespace System;
 int func() {
-   throw "simple string";   // const char *  
+   throw "simple string";   // const char *
 };
 
 int func2() {
@@ -260,7 +254,7 @@ int main() {
       Console::WriteLine("String^ str");
    }
 
-   func3("string");   // const char *  
+   func3("string");   // const char *
    func3("string" + "string");   // returns System::String
 }
 ```
@@ -277,6 +271,6 @@ System.String
 
 ## <a name="see-also"></a>请参阅
 
-[适用于运行时平台的组件扩展](../windows/component-extensions-for-runtime-platforms.md)<br/>
+[ .NET 和 UWP 的组件扩展](../windows/component-extensions-for-runtime-platforms.md)<br/>
 [字符串和字符文本](../cpp/string-and-character-literals-cpp.md)<br/>
 [/cgthreads（公共语言运行时编译）](../build/reference/clr-common-language-runtime-compilation.md)

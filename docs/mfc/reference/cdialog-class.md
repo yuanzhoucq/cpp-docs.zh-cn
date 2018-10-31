@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bda3bcbd8686d985406842a4b7a64536616ae8ac
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 03cc6ab0708914f9283ac713e2a63dba02711db9
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46419541"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068341"
 ---
 # <a name="cdialog-class"></a>CDialog 类
 
@@ -133,11 +133,7 @@ class CDialog : public CWnd
 
 当实现无模式对话框时，始终重写`OnCancel`成员函数，并调用`DestroyWindow`从在其中。 不调用基类`CDialog::OnCancel`，因为它会调用`EndDialog`，这将以对话框中不可见，但不是会销毁它。 您还应该重写`PostNcDestroy`为要删除的无模式对话框**这**，因为无模式对话框通常分配带有**新**。 模式对话框通常构造帧上，而无需`PostNcDestroy`清理。
 
-有关详细信息`CDialog`，请参阅：
-
-- [对话框](../../mfc/dialog-boxes.md)
-
-- 知识库文章 Q262954： 如何： 创建具有滚动条可调整其大小的对话框
+有关详细信息`CDialog`，请参阅[对话框](../../mfc/dialog-boxes.md)。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -161,7 +157,6 @@ class CDialog : public CWnd
 explicit CDialog(
     LPCTSTR lpszTemplateName,
     CWnd* pParentWnd = NULL);
-
 
 explicit CDialog(
     UINT nIDTemplate,
@@ -199,7 +194,6 @@ CDialog();
 virtual BOOL Create(
     LPCTSTR lpszTemplateName,
     CWnd* pParentWnd = NULL);
-
 
 virtual BOOL Create(
     UINT nIDTemplate,
@@ -249,7 +243,6 @@ virtual BOOL CreateIndirect(
     CWnd* pParentWnd = NULL,
     void* lpDialogInit = NULL);
 
-
 virtual BOOL CreateIndirect(
     HGLOBAL hDialogTemplate,
     CWnd* pParentWnd = NULL);
@@ -281,7 +274,7 @@ virtual BOOL CreateIndirect(
 
 使用`CWnd::DestroyWindow`函数来销毁对话框中创建的`CreateIndirect`函数。
 
-包含 ActiveX 控件的对话框需要 DLGINIT 资源中提供的其他信息。 有关详细信息，请参阅知识库文章 Q231591，"如何： 使用对话框模板创建一个 MFC 对话框使用 ActiveX 控件。" 知识库文章位于[ http://support.microsoft.com ](http://support.microsoft.com/)。
+包含 ActiveX 控件的对话框需要 DLGINIT 资源中提供的其他信息。
 
 ##  <a name="domodal"></a>  CDialog::DoModal
 
@@ -382,7 +375,6 @@ BOOL InitModalIndirect(
     CWnd* pParentWnd = NULL,
     void* lpDialogInit = NULL);
 
-
     BOOL InitModalIndirect(
     HGLOBAL hDialogTemplate,
     CWnd* pParentWnd = NULL);
@@ -410,7 +402,7 @@ BOOL InitModalIndirect(
 
 若要间接创建模式对话框，请首先分配全局内存块，并填充对话框模板。 然后，调用空`CDialog`构造对话框对象的构造函数。 接下来，调用`InitModalIndirect`存储到内存中对话框模板在句柄。 创建并显示 Windows 对话框中更高版本，当[DoModal](#domodal)调用成员函数。
 
-包含 ActiveX 控件的对话框需要 DLGINIT 资源中提供的其他信息。 有关详细信息，请参阅知识库文章 Q231591，"如何： 使用对话框模板创建一个 MFC 对话框使用 ActiveX 控件。" 知识库文章位于[ http://support.microsoft.com ](http://support.microsoft.com/)。
+包含 ActiveX 控件的对话框需要 DLGINIT 资源中提供的其他信息。
 
 ##  <a name="mapdialogrect"></a>  CDialog::MapDialogRect
 

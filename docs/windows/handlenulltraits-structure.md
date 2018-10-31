@@ -1,28 +1,32 @@
 ---
 title: HANDLENullTraits 结构 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/27/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::HandleTraits::HANDLENullTraits
+- corewrappers/Microsoft::WRL::Wrappers::HandleTraits::HANDLENullTraits::Close
+- corewrappers/Microsoft::WRL::Wrappers::HandleTraits::HANDLENullTraits::GetInvalidValue
 dev_langs:
 - C++
 helpviewer_keywords:
-- HANDLENullTraits structure
+- Microsoft::WRL::Wrappers::HandleTraits::HANDLENullTraits structure
+- Microsoft::WRL::Wrappers::HandleTraits::HANDLENullTraits::Close method
+- Microsoft::WRL::Wrappers::HandleTraits::HANDLENullTraits::GetInvalidValue method
 ms.assetid: 88a29a14-c516-40cb-a0ca-ee897a668623
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3a49a1a1ac4495c7697fc041f8fcf217850f09d8
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 1060d28e35a52e2a8c5c550664d36d8272628526
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42609419"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161731"
 ---
 # <a name="handlenulltraits-structure"></a>HANDLENullTraits 结构
 
@@ -38,16 +42,16 @@ struct HANDLENullTraits;
 
 ### <a name="public-typedefs"></a>公共 Typedef
 
-|名称|描述|
-|----------|-----------------|
-|`Type`|句柄的同义词。|
+名称   | 描述
+------ | ---------------------
+`Type` | 句柄的同义词。
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
-|----------|-----------------|
-|[HANDLENullTraits::Close 方法](../windows/handlenulltraits-close-method.md)|关闭指定的句柄。|
-|[HANDLENullTraits::GetInvalidValue 方法](../windows/handlenulltraits-getinvalidvalue-method.md)|表示无效句柄。|
+名称                                                  | 描述
+----------------------------------------------------- | -----------------------------
+[Handlenulltraits:: Close](#close)                     | 关闭指定的句柄。
+[Handlenulltraits:: Getinvalidvalue](#getinvalidvalue) | 表示无效句柄。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -59,6 +63,33 @@ struct HANDLENullTraits;
 
 **Namespace:** Microsoft::WRL::Wrappers::HandleTraits
 
-## <a name="see-also"></a>请参阅
+## <a name="close"></a>Handlenulltraits:: Close
 
-[Microsoft::WRL::Wrappers::HandleTraits 命名空间](../windows/microsoft-wrl-wrappers-handletraits-namespace.md)
+关闭指定的句柄。
+
+```cpp
+inline static bool Close(
+   _In_ Type h
+);
+```
+
+### <a name="parameters"></a>参数
+
+*h*<br/>
+要关闭的句柄。
+
+### <a name="return-value"></a>返回值
+
+**true**如果处理*h*关闭成功; 否则为**false**。
+
+## <a name="getinvalidvalue"></a>Handlenulltraits:: Getinvalidvalue
+
+表示无效句柄。
+
+```cpp
+inline static Type GetInvalidValue();
+```
+
+### <a name="return-value"></a>返回值
+
+始终返回 `nullptr`。

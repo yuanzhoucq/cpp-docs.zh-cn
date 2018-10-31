@@ -13,20 +13,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0ddfd6de46d6d0700265f5308f06458b3cdd984a
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 6ea59ae2cb0c12a60a8463434105f1cc6af0a77d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43677822"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50073522"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>C++ 中 Windows 编程概述
 
 您可以使用 Visual c + + 编写多种 (x 86、 x64 或 ARM） 的 Windows PC 运行的程序在云中或 Xbox 上的 Windows 服务器上。 编写良好的 c + + 程序具有这些质量：
+
 - 有效内存要求
-- 节约功耗 
+- 节约功耗
 - 能够充分利用多核和众核设备
-- 能够执行图形处理单元 (GPU) 上的常规计算  
+- 能够执行图形处理单元 (GPU) 上的常规计算
 - 能够利用硬件中的其他最新进展。
 
 Windows 应用有好几大类别可以使用 Visual C ++ 进行开发。 这些类别具有不同的编程模型或应用程序模型，多年来引入了。 每个模型使用不同的库和 Api 来提供对平台的访问，并创建用户界面如窗口和对话框。 可在任何这些类别中，有几个限制适用于 UWP 的 c + + 标准库以及第三方库。
@@ -54,11 +55,11 @@ UWP 应用程序均可在所有 Windows 10 设备，例如平板电脑和移动�
 
 有关详细信息 UWP 一般情况下，请参阅[通用 Windows 平台 (UWP) 应用是什么？](/windows/uwp/get-started/whats-a-uwp)。
 
-所有这些概念的详细信息，请参阅[Windows 通用应用指南](http://go.microsoft.com/fwlink/p/?linkid=534605)。
+有关所有这些概念的详细信息，请参阅 [Windows 通用应用指南](http://go.microsoft.com/fwlink/p/?linkid=534605)。
 
 ##  <a name="BK_Native"></a> 桌面和服务器应用程序
 
-若要了解桌面 Windows 客户端应用程序的基础知识，请参阅[c + + 中开发 Windows 应用程序](https://msdn.microsoft.com/vstudio//hh304489)并[c + + 中 Windows 编程介绍](https://msdn.microsoft.com/library/windows/desktop/ff381398\(v=vs.85\).aspx)。
+若要了解桌面 Windows 客户端应用程序的基础知识，请参阅 [使用 C++ 开发 Windows 应用程序](https://msdn.microsoft.com/vstudio//hh304489) 和 [使用 C++ 的 Windows 编程介绍](https://msdn.microsoft.com/library/windows/desktop/ff381398)。
 
 在 Windows 10 中，您可以使用 Visual c + + 创建多种桌面程序：
 
@@ -68,7 +69,7 @@ UWP 应用程序均可在所有 Windows 10 设备，例如平板电脑和移动�
 
 - 在.NET Framework 运行企业和业务线应用程序。 大多数.NET Framework 应用程序是用 C# 或 Visual Basic。 您可以使用 C + + /cli CLI，若要创建启用.NET 代码，以使用本机 c + + 库的互操作层。 有关详细信息，请参阅[.NET 编程使用 C + + /cli （Visual c + +）](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)。
 
-- 在本机代码中运行的 SQL 数据库客户端。 有关详细信息，请参阅[SQL Server Native Client](/sql/relational-databases/native-client/odbc/sql-server-native-client-odbc)。
+- 在本机代码中运行的 SQL 数据库客户端。 有关详细信息，请参阅 [SQL Server Native Client](/sql/relational-databases/native-client/odbc/sql-server-native-client-odbc)。
 
 - Microsoft Office 应用程序的外接程序。 有关详细信息，请参阅 [为 Outlook 2010 构建 C++ 外接程序](http://go.microsoft.com/fwlink/p/?LinkId=256420)
 
@@ -76,7 +77,7 @@ UWP 应用程序均可在所有 Windows 10 设备，例如平板电脑和移动�
 
 - Windows 服务。 有关详细信息，请参阅 [Introduction to Windows Service Applications](/dotnet/framework/windows-services/introduction-to-windows-service-applications)。
 
-你可以使用 Visual C++ 在 Win32 DLL 或 COM DLL 中打包绝大多数自定义高性能功能，这些功能可供 C++ 应用或使用其他语言（例如，C# 或 Visual Basic）编写的应用使用。 有关 Win32 DLL 的详细信息，请参阅 [DLLs in Visual C++](../build/dlls-in-visual-cpp.md)。 有关 COM 开发的详细信息，请参阅[组件对象模型 (COM)](/windows/desktop/com/component-object-model--com--portal)。
+你可以使用 Visual C++ 在 Win32 DLL 或 COM DLL 中打包绝大多数自定义高性能功能，这些功能可供 C++ 应用或使用其他语言（例如，C# 或 Visual Basic）编写的应用使用。 有关 Win32 DLL 的详细信息，请参阅 [DLLs in Visual C++](../build/dlls-in-visual-cpp.md)。 有关 COM 开发的详细信息，请参阅 [Component Object Model (COM)](/windows/desktop/com/component-object-model--com--portal)。
 
 ## <a name="games"></a>游戏
 
@@ -98,7 +99,7 @@ Microsoft 库包括：
 
 - 并发运行时：一种可以简化多核和众核设备编程的并行和异步编程工作的库。 有关详细信息，请参阅 [Concurrency Runtime](../parallel/concrt/concurrency-runtime.md)。
 
-许多 Windows 编程方案还需要 Windows SDK，Windows SDK 包括可以实现对 Windows 操作系统组件访问的标头文件。 默认情况下，Visual Studio 安装 Windows SDK 的 c + + 桌面工作负载，从而使开发通用 Windows 应用的组件。 若要开发 UWP 应用，需要 Windows SDK 的 Windows 10 版本。 有关信息，请参阅[Windows 10 SDK](https://dev.windows.com/downloads/windows-10-sdk)。 (适用于 Windows 的早期版本的 Windows sdk 的详细信息，请参阅[Windows SDK 存档](https://developer.microsoft.com/windows/downloads/sdk-archive))。 
+许多 Windows 编程方案还需要 Windows SDK，Windows SDK 包括可以实现对 Windows 操作系统组件访问的标头文件。 默认情况下，Visual Studio 安装 Windows SDK 的 c + + 桌面工作负载，从而使开发通用 Windows 应用的组件。 若要开发 UWP 应用，需要 Windows SDK 的 Windows 10 版本。 有关信息，请参阅[Windows 10 SDK](https://dev.windows.com/downloads/windows-10-sdk)。 (适用于 Windows 的早期版本的 Windows sdk 的详细信息，请参阅[Windows SDK 存档](https://developer.microsoft.com/windows/downloads/sdk-archive))。
 
 **程序文件 (x86) \Windows 工具包**是已安装的 Windows sdk 的所有版本的默认位置。
 

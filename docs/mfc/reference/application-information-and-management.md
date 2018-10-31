@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b64e92eaca38743f0bc9de31f9be7684271c4674
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1867f044c143fc0e5fbb06705bf45b8fa729a5cc
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46374345"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068965"
 ---
 # <a name="application-information-and-management"></a>应用程序信息和管理
 
@@ -61,8 +61,6 @@ Microsoft 基础类库提供了以下全局函数，以帮助您完成这些任�
 |[AfxSocketInit](#afxsocketinit)|在中称为`CWinApp::InitInstance`替代，以便初始化 Windows 套接字。|
 |[AfxUserToolsManager](#afxusertoolsmanager)|指向全局[用户工具管理器](cusertoolsmanager-class.md)。|
 |[AfxWinInit](#afxwininit)|由 MFC 提供调用`WinMain`函数，作为的一部分[CWinApp](../../mfc/reference/cwinapp-class.md)的基于 GUI 的应用程序，以初始化 MFC 的初始化。 必须为使用 MFC 的控制台应用程序直接调用。|
-
-
 
 ##  <a name="afxbeginthread"></a>  AfxBeginThread
 
@@ -145,6 +143,7 @@ CWinThread* AfxBeginThread(
 ```
 CContextMenuManager* afxContextMenuManager;
 ```
+
 ### <a name="requirements"></a>要求
 
 **标头：** afxcontextmenumanager.h
@@ -152,7 +151,6 @@ CContextMenuManager* afxContextMenuManager;
 ### <a name="see-also"></a>请参阅
 
 [CContextMenuManager 类](ccontextmenumanager-class.md)
-
 
 ##  <a name="afxendthread"></a>  AfxEndThread
 
@@ -190,6 +188,7 @@ void AFXAPI AfxEndThread(
 ```
 HINSTANCE AFXAPI AfxFindResourceHandle( LPCTSTR lpszName,  LPCTSTR lpszType );
 ```
+
 ### <a name="parameters"></a>参数
 
 *lpszName*<br/>
@@ -471,6 +470,7 @@ BOOL AFXAPI AfxInitRichEdit2();
 ```
 BOOL AFXAPI AfxIsExtendedFrameClass( CWnd* pWnd );
 ```
+
 ### <a name="parameters"></a>参数
 
 *pWnd*<br/>
@@ -514,6 +514,7 @@ BOOL AFXAPI AfxIsExtendedFrameClass( CWnd* pWnd );
 ```
 BOOL AFXAPI AfxIsMFCToolBar(CWnd* pWnd);
 ```
+
 ### <a name="parameters"></a>参数
 
 *pWnd*<br/>
@@ -536,7 +537,6 @@ BOOL AFXAPI AfxIsMFCToolBar(CWnd* pWnd);
 [CWnd 类](cwnd-class.md)<br/>
 [CMFCToolBar 类](cmfctoolbar-class.md)
 
-
 ## <a name="afxkeyboardmanager"></a> AfxKeyboardManager
 
 指向全局[键盘管理器](ckeyboardmanager-class.md)。
@@ -546,6 +546,7 @@ BOOL AFXAPI AfxIsMFCToolBar(CWnd* pWnd);
 ```
 CKeyboardManager* afxKeyboardManager;
 ```
+
 ### <a name="requirements"></a>要求
 
 **标头：** afxkeyboardmanager.h
@@ -554,7 +555,6 @@ CKeyboardManager* afxKeyboardManager;
 
 [宏、 全局函数和全局变量](mfc-macros-and-globals.md)<br/>
 [CKeyboardManager 类](ckeyboardmanager-class.md)
-
 
 ##  <a name="afxloadlibrary"></a>  AfxLoadLibrary
 
@@ -591,7 +591,7 @@ HINSTANCE AFXAPI AfxLoadLibrary(LPCTSTR lpszModuleName);
 
 ### <a name="remarks"></a>备注
 
-它将返回一个句柄，可在[GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212)获取 DLL 函数的地址。 `AfxLoadLibrary` 此外可以用于映射其他可执行模块。
+它将返回一个句柄，可在[GetProcAddress](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress)获取 DLL 函数的地址。 `AfxLoadLibrary` 此外可以用于映射其他可执行模块。
 
 每个进程维护每个已加载的库模块引用的计数。 此引用计数会在每次递增`AfxLoadLibrary`称为，将减少每次`AfxFreeLibrary`调用。 当引用计数达到零时，将从调用进程的地址空间取消映射模块，并且句柄不再有效。
 
@@ -618,6 +618,7 @@ HINSTANCE AFXAPI AfxLoadLibrary(LPCTSTR lpszModuleName);
 ```
 CMenuTearOffManager* g_pTearOffMenuManager;
 ```
+
 ### <a name="requirements"></a>要求
 
 **标头：** afxmenutearoffmanager.h
@@ -635,6 +636,7 @@ CMenuTearOffManager* g_pTearOffMenuManager;
 ```
 CMouseManager* afxMouseManager;
 ```
+
 ### <a name="requirements"></a>要求
 
 **标头：** afxmousemanager.h
@@ -642,8 +644,6 @@ CMouseManager* afxMouseManager;
 ### <a name="see-also"></a>请参阅
 
 [CMouseManager 类](cmousemanager-class.md)
-
-
 
 ##  <a name="afxregisterclass"></a>  AfxRegisterClass
 
@@ -752,7 +752,7 @@ void AFXAPI AfxSetPerUserRegistration(BOOL bEnable);
 
 Windows Vista，访问注册表，通常可用的应用程序之前**HKEY_CLASSES_ROOT**节点。 但是，与 Windows Vista 或更高版本的操作系统，必须在提升模式下将 HKCR 写入运行应用程序。
 
-此方法使应用程序可以读取和写入注册表，而无需通过将从 HKCR 到 HKCU 注册表访问重定向在提升模式下运行。 有关详细信息，请参阅[Linker Property Pages](../../ide/linker-property-pages.md)。
+此方法使应用程序可以读取和写入注册表，而无需通过将从 HKCR 到 HKCU 注册表访问重定向在提升模式下运行。 有关详细信息，请参阅 [Linker Property Pages](../../ide/linker-property-pages.md)。
 
 如果启用注册表重定向，则框架会将访问从到的 HKCR **HKEY_CURRENT_USER\Software\Classes**。 仅 MFC 和 ATL 框架受重定向影响。
 
@@ -843,7 +843,6 @@ CUserToolsManager* afxUserToolsManager;
 ### <a name="see-also"></a>请参阅
 
 [CUserToolsManager 类](cusertoolsmanager-class.md)
-
 
 ##  <a name="afxwininit"></a>  AfxWinInit
 

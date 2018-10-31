@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b205be3c2417453faa54c9d24ac28216ee0af5cf
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 447a03cec8beba331aedc8077a44dc9090fccbc6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46060522"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078509"
 ---
 # <a name="new-and-delete-operators"></a>new 和 delete 运算符
 
@@ -45,7 +45,6 @@ char *pch = new char[BUFFER_SIZE];
 如果请求针对零字节存储，**运算符 new**不同的对象返回一个指针 (也就是说，重复调用**运算符 new**返回不同的指针)。 如果没有足够的内存分配请求**运算符 new**引发 std:: bad_alloc 异常或返回**nullptr**如果你已链接在非引发**运算符 new**支持。
 
 您可以编写尝试释放内存，然后重试分配; 的例程请参阅[_set_new_handler](../c-runtime-library/reference/set-new-handler.md)有关详细信息。 有关恢复方案的更多详细信息，请参阅本主题的处理没有足够的内存部分。
-
 
 两个范围**运算符 new**函数以下表所述。
 

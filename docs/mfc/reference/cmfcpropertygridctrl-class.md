@@ -160,12 +160,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47af9bf4a42f02ce16cc6f43e0689bfa2c5003b2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3516614809ffda8e0659379ebfc8566ea7aee942
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46411677"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075978"
 ---
 # <a name="cmfcpropertygridctrl-class"></a>CMFCPropertyGridCtrl 类
 
@@ -247,7 +247,7 @@ class CMFCPropertyGridCtrl : public CWnd
 |[CMFCPropertyGridCtrl::IsShowDragContext](#isshowdragcontext)|指示是否在 framework 重绘当前属性网格控件的名称和值列时用户调整列的大小。|
 |[CMFCPropertyGridCtrl::IsVSDotNetLook](#isvsdotnetlook)|指示属性网格控件的外观是否使用与.net 的样式。|
 |[CMFCPropertyGridCtrl::MarkModifiedProperties](#markmodifiedproperties)|指定如何显示修改后的属性。|
-|`CMFCPropertyGridCtrl::PreTranslateMessage`|类使用[CWinApp](../../mfc/reference/cwinapp-class.md)窗口消息调度到之前转换[TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)并[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows 函数。 （重写 [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)。）|
+|`CMFCPropertyGridCtrl::PreTranslateMessage`|在将窗口消息发送到 [TranslateMessage](../../mfc/reference/cwinapp-class.md) 和 [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) Windows 函数之前，由 [CWinApp](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) 类用于对此消息进行转换。 （重写 [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)。）|
 |[CMFCPropertyGridCtrl::RemoveAll](#removeall)|从属性网格控件中删除所有属性对象。|
 |[CMFCPropertyGridCtrl::ResetOriginalValues](#resetoriginalvalues)|还原所有属性的原始值。|
 |[CMFCPropertyGridCtrl::SetAlphabeticMode](#setalphabeticmode)|设置或重置字母顺序模式。|
@@ -331,7 +331,6 @@ class CMFCPropertyGridCtrl : public CWnd
 
 ##  <a name="accselect"></a>  CMFCPropertyGridCtrl::accSelect
 
-
 ```
 virtual HRESULT accSelect(
     long flagsSelect,
@@ -340,8 +339,8 @@ virtual HRESULT accSelect(
 
 ### <a name="parameters"></a>参数
 
-*flagsSelect*<br/>
-[in][in]*varChild*
+[in]*flagsSelect*<br/>
+[in]*varChild*<br/>
 
 ### <a name="return-value"></a>返回值
 
@@ -391,14 +390,13 @@ virtual void AdjustLayout();
 
 ##  <a name="alwaysshowusertooltip"></a>  CMFCPropertyGridCtrl::AlwaysShowUserToolTip
 
-
 ```
 void AlwaysShowUserToolTip(BOOL bShow = TRUE);
 ```
 
 ### <a name="parameters"></a>参数
 
-[in]*bShow*
+[in]*bShow*<br/>
 
 ### <a name="remarks"></a>备注
 
@@ -527,7 +525,6 @@ BOOL DeleteProperty(
 此方法用于从属性网格控件中删除某个属性和任何子项目。
 
 ##  <a name="drawcontrolbarcolors"></a>  CMFCPropertyGridCtrl::DrawControlBarColors
-
 
 ```
 BOOL DrawControlBarColors() const;
@@ -682,14 +679,13 @@ CMFCPropertyGridProperty* FindItemByData(
 
 ##  <a name="get_accchildcount"></a>  CMFCPropertyGridCtrl::get_accChildCount
 
-
 ```
 virtual HRESULT get_accChildCount(long* pcountChildren);
 ```
 
 ### <a name="parameters"></a>参数
 
-[in]*pcountChildren*
+[in]*pcountChildren*<br/>
 
 ### <a name="return-value"></a>返回值
 
@@ -697,21 +693,19 @@ virtual HRESULT get_accChildCount(long* pcountChildren);
 
 ##  <a name="get_accfocus"></a>  CMFCPropertyGridCtrl::get_accFocus
 
-
 ```
 virtual HRESULT get_accFocus(VARIANT* pvarChild);
 ```
 
 ### <a name="parameters"></a>参数
 
-[in]*pvarChild*
+[in]*pvarChild*<br/>
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
 ##  <a name="get_acchelp"></a>  CMFCPropertyGridCtrl::get_accHelp
-
 
 ```
 virtual HRESULT get_accHelp(
@@ -721,15 +715,14 @@ virtual HRESULT get_accHelp(
 
 ### <a name="parameters"></a>参数
 
-*varChild*<br/>
-[in][in]*pszHelp*
+[in]*varChild*<br/>
+[in]*pszHelp*<br/>
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
 ##  <a name="get_acchelptopic"></a>  CMFCPropertyGridCtrl::get_accHelpTopic
-
 
 ```
 virtual HRESULT get_accHelpTopic(
@@ -740,15 +733,15 @@ virtual HRESULT get_accHelpTopic(
 
 ### <a name="parameters"></a>参数
 
-*pszHelpFile*<br/>
-[in][in]*varChild* [in] *pidTopic*
+[in]*pszHelpFile*<br/>
+[in]*varChild*<br/>
+[in]*pidTopic*<br/>
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
 ##  <a name="get_acckeyboardshortcut"></a>  CMFCPropertyGridCtrl::get_accKeyboardShortcut
-
 
 ```
 virtual HRESULT get_accKeyboardShortcut(
@@ -758,8 +751,8 @@ virtual HRESULT get_accKeyboardShortcut(
 
 ### <a name="parameters"></a>参数
 
-*varChild*<br/>
-[in][in]*pszKeyboardShortcut*
+[in]*varChild*<br/>
+[in]*pszKeyboardShortcut*<br/>
 
 ### <a name="return-value"></a>返回值
 
@@ -767,14 +760,13 @@ virtual HRESULT get_accKeyboardShortcut(
 
 ##  <a name="get_accselection"></a>  CMFCPropertyGridCtrl::get_accSelection
 
-
 ```
 virtual HRESULT get_accSelection(VARIANT* pvarChildren);
 ```
 
 ### <a name="parameters"></a>参数
 
-[in]*pvarChildren*
+[in]*pvarChildren*<br/>
 
 ### <a name="return-value"></a>返回值
 
@@ -1078,7 +1070,7 @@ CMFCPropertyGridProperty* HitTest(
 [in、 out]一个指向`ClickArea`变量。 当此方法返回时，该变量指示*属性区域*，其中包含指定的点。 有关属性区域的详细信息，请参阅备注。
 
 *bPropsOnly*<br/>
-[in]为 TRUE，则测试仅属性区域;如果为 FALSE，测试*说明区域*如果指定的点不在的属性区域中。 默认值为 FALSE。 有关说明区域的详细信息，请参阅备注。
+[in]为 TRUE，则测试仅属性区域;如果为 FALSE，测试*说明区域*如果指定的点不在的属性区域中。 默认值是 FALSE。 有关说明区域的详细信息，请参阅备注。
 
 ### <a name="return-value"></a>返回值
 
@@ -1136,7 +1128,6 @@ BOOL IsAlphabeticMode() const;
 使用[CMFCPropertyGridCtrl::SetAlphabeticMode](#setalphabeticmode)方法启用或禁用按字母顺序模式。
 
 ##  <a name="isalwaysshowusertooltip"></a>  CMFCPropertyGridCtrl::IsAlwaysShowUserToolTip
-
 
 ```
 BOOL IsAlwaysShowUserToolTip() const;

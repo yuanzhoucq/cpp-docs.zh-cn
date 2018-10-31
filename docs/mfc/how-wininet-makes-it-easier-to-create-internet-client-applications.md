@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 356027e151dcc94891b9c4043e4f1af8b2f0b947
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 847ad295956cafa12e3793dc68d663f005da095a
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46430909"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50072832"
 ---
 # <a name="how-wininet-makes-it-easier-to-create-internet-client-applications"></a>WinInet 如何简化 Internet 客户端应用程序的创建
 
@@ -33,15 +33,15 @@ Visual c + + 提供了两种方法供你使用 WinInet。 可以直接调用 Win
 
 - 下载 HTML 页面。
 
-     HTTP 是用来将 HTML 页面从服务器传输到客户端浏览器的协议。
+   HTTP 是用来将 HTML 页面从服务器传输到客户端浏览器的协议。
 
 - 发送 FTP 请求，以将上传或下载文件或获取目录列表。
 
-     一个典型的请求是匿名登录，下载的文件。
+   一个典型的请求是匿名登录，下载的文件。
 
 - 用于访问 Internet 上的资源使用 gopher 的菜单系统。
 
-     菜单项可以是几种类型，包括其他菜单、 带索引的数据库，您可以搜索、 新闻组或文件。
+   菜单项可以是几种类型，包括其他菜单、 带索引的数据库，您可以搜索、 新闻组或文件。
 
 为所有三个协议建立的连接、 向服务器发送请求和关闭连接。
 
@@ -51,7 +51,7 @@ Visual c + + 提供了两种方法供你使用 WinInet。 可以直接调用 Win
 
 - 使用 HTTP、 FTP 和 gopher 协议而无需直接向 WinSock 或 TCP/IP 的编程。
 
-     使用 Win32 Internet 函数的开发人员不需要熟悉 TCP/IP 或 Windows 套接字。 您可以仍编程在套接字级别中，直接使用 WinSock 和 TCP/IP 协议，但更加方便地通过 Internet 使用 MFC WinInet 类访问 HTTP、 FTP 和 gopher 协议。 对于许多常见操作，开发人员不需要知道他们正在使用的特定协议的详细信息。
+   使用 Win32 Internet 函数的开发人员不需要熟悉 TCP/IP 或 Windows 套接字。 您可以仍编程在套接字级别中，直接使用 WinSock 和 TCP/IP 协议，但更加方便地通过 Internet 使用 MFC WinInet 类访问 HTTP、 FTP 和 gopher 协议。 对于许多常见操作，开发人员不需要知道他们正在使用的特定协议的详细信息。
 
 可以通过您的计算机到 Internet 上的其他计算机的客户端的许多操作可能需要长时间。 这些操作的速度通常会受到速度的网络连接，但它们可能也会受到其他网络流量和操作的复杂性。 例如，连接到远程 FTP 服务器上，需要您的计算机首次查找要查找其地址，该服务器的名称。 然后，你的应用程序将尝试连接到该地址的服务器。 一旦打开连接时，您的计算机和远程服务器将启动与文件传输协议的会话才能实际使用该连接以检索文件。
 

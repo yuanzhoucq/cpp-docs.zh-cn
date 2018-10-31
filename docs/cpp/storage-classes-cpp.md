@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b57e2c4e6631683afdabec983f155941b8cd2da
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 659b76a640a0dfaee75179f135fee9d1eeb5ba02
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46107452"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50058331"
 ---
 # <a name="storage-classes-c"></a>存储类 (C++)
 
@@ -35,7 +35,6 @@ A*存储类*在上下文中的 C++ 变量声明是控制对象的生存期、 �
 1. [可变](../cpp/mutable-data-members-cpp.md)关键字视为存储类说明符。 但是，它只存在于类定义的成员列表中。
 
 1. **Visual c + + 2010年及更高版本：** **自动**关键字不再是 c + + 存储类说明符，并**注册**关键字被弃用。 **Visual Studio 2017 版本 15.7 及更高版本：** (适用于[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)):**注册**从 c + + 语言中删除关键字。
-
 
 ```cpp
    register int val; // warning C5033: 'register' is no longer a supported storage class
@@ -220,13 +219,13 @@ void DoSomething()
 
 - Dll 中的动态初始化的线程本地变量可能不正确初始化的所有调用的线程上。 有关详细信息，请参阅[线程](thread.md)。
 
--  `thread_local`说明符可配合**静态**或**extern**。
+- `thread_local`说明符可配合**静态**或**extern**。
 
--  您可以将应用`thread_local`仅于数据声明和定义;`thread_local`不能用于函数声明或定义。
+- 您可以将应用`thread_local`仅于数据声明和定义;`thread_local`不能用于函数声明或定义。
 
--  只能在具有静态存储持续时间的数据项上指定 `thread_local`。 这包括全局数据对象 (同时**静态**并**extern**)，本地静态对象和类的静态数据成员。 声明的任何局部变量`thread_local`是隐式静态，如果未不提供任何其他存储类; 换而言之，在块范围内`thread_local`等效于`thread_local static`。
+- 只能在具有静态存储持续时间的数据项上指定 `thread_local`。 这包括全局数据对象 (同时**静态**并**extern**)，本地静态对象和类的静态数据成员。 声明的任何局部变量`thread_local`是隐式静态，如果未不提供任何其他存储类; 换而言之，在块范围内`thread_local`等效于`thread_local static`。
 
--  必须为线程本地对象的声明和定义指定 `thread_local`，无论声明和定义是在同一文件中发生还是在单独的文件中发生。
+- 必须为线程本地对象的声明和定义指定 `thread_local`，无论声明和定义是在同一文件中发生还是在单独的文件中发生。
 
 在 Windows 中，`thread_local`功能上等效于[__declspec （thread)](../cpp/thread.md)只不过 **__declspec （thread)** 可应用于类型定义和在 C 代码中有效。 请尽可能使用 `thread_local`，因为它是 C++ 标准的一部分，因此更易于移植。
 

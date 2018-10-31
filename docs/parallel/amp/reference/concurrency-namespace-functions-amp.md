@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 78cbd53baf9e9ade8c20f3b9f5fa419eeb2d1c80
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5bfb25ffeedaa11c6e610978c2d0a15cc3106d79
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441910"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50079449"
 ---
 # <a name="concurrency-namespace-functions-amp"></a>并发命名空间函数 (AMP)
 
@@ -92,7 +92,7 @@ inline bool atomic_compare_exchange(
 
 ### <a name="return-value"></a>返回值
 
-如果操作成功，则为 `true`；否则为 `false`。
+**true**如果操作成功; 否则为**false**。
 
 ##  <a name="atomic_exchange"></a>  atomic_exchange 函数 (c + + AMP)
 
@@ -386,7 +386,7 @@ void copy(
 template <typename OutputIterator, typename value_type, int _Rank>
 void copy(
     const array<value_type, _Rank>& _Src,
-     OutputIterator _DestIter);
+   OutputIterator _DestIter);
 
 template <typename value_type, int _Rank>
 void copy(
@@ -554,7 +554,7 @@ concurrency::completion_future copy_async(
 
 ##  <a name="direct3d_abort"></a>  direct3d_abort
 
-用 `restrict(amp)` 限制子句中止函数的执行。 当 AMP 运行时检测该调用时，将引发[runtime_exception](runtime-exception-class.md)异常并显示错误消息"参考光栅器： 着色器中止指令命中"。
+用 `restrict(amp)` 限制子句中止函数的执行。 当 AMP 运行时检测该调用时，将引发 [runtime_exception](runtime-exception-class.md) 异常并显示错误消息“参考光栅器: 命中着色器中止指令”。
 
 ```
 void direct3d_abort() restrict(amp);
@@ -606,7 +606,7 @@ void parallel_for_each(
 template <int _Dim0, int _Dim1, int _Dim2, typename _Kernel_type>
 void parallel_for_each(
     const tiled_extent<_Dim0, _Dim1, _Dim2>& _Compute_domain,
-     const _Kernel_type& _Kernel);
+   const _Kernel_type& _Kernel);
 
 template <int _Dim0, int _Dim1, typename _Kernel_type>
 void parallel_for_each(

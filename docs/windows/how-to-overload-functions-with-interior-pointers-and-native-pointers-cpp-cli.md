@@ -1,7 +1,7 @@
 ---
 title: 如何： 用内部指针和本机指针重载函数 (C + + CLI) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c019114726f696461de58d2dc4110a3150318c8f
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 6df6f84e8cb407fe960f639fd2cb9415df6d1082
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42597996"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50071909"
 ---
 # <a name="how-to-overload-functions-with-interior-pointers-and-native-pointers-ccli"></a>如何：用内部指针和本机指针重载函数 (C++/CLI)
 
@@ -68,9 +68,9 @@ int main() {
 };
 ```
 
-```Output 
-in f( int* pi )  
-in f( interior_ptr<int> pi )  
+```Output
+in f( int* pi )
+in f( interior_ptr<int> pi )
 ```
 
 ## <a name="see-also"></a>请参阅

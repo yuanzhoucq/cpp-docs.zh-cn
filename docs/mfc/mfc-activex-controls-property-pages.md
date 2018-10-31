@@ -20,19 +20,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04a533acecd837fd5bad51612ce7b7eced841178
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 053a6dcf009fa65bbba9c864803db78866037196
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46376481"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204413"
 ---
 # <a name="mfc-activex-controls-property-pages"></a>MFC ActiveX 控件：属性页
 
 属性页允许 ActiveX 控件用户可以查看和更改 ActiveX 控件属性。 通过调用控件的属性对话框中，其中包含一个或多个属性页提供用于查看和编辑控件属性的自定义的图形界面访问这些属性。
 
 >[!IMPORTANT]
-> ActiveX 是一项传统技术，不应使用新的开发。 本文将取代 ActiveX 的现代技术的详细信息，请参阅[ActiveX 控件](activex-controls.md)。
+> ActiveX 是一项传统技术，不应使用新的开发。 有关取代 ActiveX 的现代技术的详细信息，请参阅[ActiveX 控件](activex-controls.md)。
 
 ActiveX 控件属性页会显示在两种方法：
 
@@ -86,7 +86,7 @@ ActiveX 控件属性页会显示在两种方法：
 
 1. 打开 IDD_PROPPAGE_SAMPLE 对话框。
 
-     ActiveX 控件向导的对话框 ID，在这种情况下，示例末尾追加的项目的名称。
+   ActiveX 控件向导的对话框 ID，在这种情况下，示例末尾追加的项目的名称。
 
 1. 拖放所选的控件从工具箱拖动到对话框框区域。
 
@@ -112,7 +112,7 @@ ActiveX 控件属性页会显示在两种方法：
 
 ### <a name="property-page-functions"></a>属性页函数
 
-|功能名称|使用此函数将链接|
+|函数名|使用此函数将链接|
 |-------------------|-------------------------------|
 |`DDP_CBIndex`|与控件属性的组合框中的所选的字符串的索引。|
 |`DDP_CBString`|与控件属性的组合框中所选的字符串。 所选的字符串可以以属性的值相同的字母开头，但需要完全匹配它。|

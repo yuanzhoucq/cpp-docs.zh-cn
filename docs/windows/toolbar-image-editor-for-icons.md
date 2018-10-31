@@ -22,12 +22,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8dee099912b69d48b0ded4184dc68c14da1899fe
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ed6639bdf86a54689834c6eda03a3b6ec4dd171d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46391899"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063843"
 ---
 # <a name="toolbar-c-image-editor-for-icons"></a>工具栏 （图标的图像编辑器 c + +）
 
@@ -36,8 +36,7 @@ ms.locfileid: "46391899"
 > [!NOTE]
 > 中提供的所有工具**的图像编辑器**工具栏上，还提供从**映像**菜单 (在**工具**命令)。
 
-![图像编辑器工具栏](../mfc/media/vcimageeditortoolbar.gif "vcImageEditorToolbar")  
-“图像编辑器”工具栏
+![图像编辑器工具栏](../mfc/media/vcimageeditortoolbar.gif "vcImageEditorToolbar")的图像编辑器工具栏
 
 若要使用**的图像编辑器**工具栏和**选项**选择器中，单击该工具或所需选项。
 
@@ -46,8 +45,7 @@ ms.locfileid: "46391899"
 
 与**选项**选择器可以指定宽度的行、 画笔笔画，等等。上的图标**选项**选择器按钮更改您选择具体取决于哪种工具。
 
-![绘制&#45;的图像编辑器工具栏上的形状选择器](../mfc/media/vcimageeditortoolbaroptionselector.gif "vcImageEditorToolbarOptionSelector")  
-图像编辑器工具栏上的选项选择器
+![绘制&#45;的图像编辑器工具栏上的形状选择器](../mfc/media/vcimageeditortoolbaroptionselector.gif "vcImageEditorToolbarOptionSelector")的图像编辑器工具栏上的选项选择器
 
 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发人员指南*。 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[桌面应用中创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的托管应用中的资源的信息，请参阅[Globalizing and Localizing.NET Framework Applications](/dotnet/standard/globalization-localization/index)。
 

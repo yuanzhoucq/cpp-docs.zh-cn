@@ -41,12 +41,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: faf3080c6363ef0227b71e550ff658b1790d37b9
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 52a2d1387fd476cffa2027ffc136b4759b591e31
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46090693"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059189"
 ---
 # <a name="ccommodule-class"></a>CComModule 类
 
@@ -136,7 +136,7 @@ ATL COM 应用程序向导运行时，向导会自动生成`_Module`的全局实
 ATL 7.0 起`CComModule`已过时： 请参阅[ATL Module 类](../../atl/atl-module-classes.md)的更多详细信息。
 
 ```
-HRESULT GetClassObject(  
+HRESULT GetClassObject(
     REFCLSID rclsid,
     REFIID riid,
     LPVOID* ppv) throw();
@@ -340,7 +340,7 @@ _ATL_OBJMAP_ENTRY* m_pObjMap;
 ATL 7.0 起`CComModule`已过时： 请参阅[ATL Module 类](../../atl/atl-module-classes.md)的更多详细信息。
 
 ```
-ATL_DEPRECATED HRESULT RegisterClassHelper(  
+ATL_DEPRECATED HRESULT RegisterClassHelper(
     const CLSID& clsid,
     LPCTSTR lpszProgID,
     LPCTSTR lpszVerIndProgID,
@@ -386,7 +386,7 @@ HRESULT RegisterClassObjects(DWORD dwClsContext, DWORD dwFlags) throw();
 ### <a name="parameters"></a>参数
 
 *dwClsContext*<br/>
-[in]指定在其中运行的类对象的上下文。 可能的值为 CLSCTX_INPROC_SERVER、 CLSCTX_INPROC_HANDLER 或 CLSCTX_LOCAL_SERVER。 有关这些值的说明，请参阅[CLSCTX](https://msdn.microsoft.com/library/windows/desktop/ms693716) Windows SDK 中。
+[in]指定在其中运行的类对象的上下文。 可能的值为 CLSCTX_INPROC_SERVER、 CLSCTX_INPROC_HANDLER 或 CLSCTX_LOCAL_SERVER。 有关这些值的说明，请参阅[CLSCTX](/windows/desktop/api/wtypesbase/ne-wtypesbase-tagclsctx) Windows SDK 中。
 
 *dwFlags*<br/>
 [in]确定指向类对象的连接类型。 可能的值为 REGCLS_SINGLEUSE、 REGCLS_MULTIPLEUSE 或 REGCLS_MULTI_SEPARATE。 有关这些值的说明，请参阅[结合](/windows/desktop/api/combaseapi/ne-combaseapi-tagregcls)Windows SDK 中。
@@ -405,14 +405,14 @@ ATL 7.0 起`CComModule`已过时： 请参阅[ATL Module 类](../../atl/atl-modu
 
 ```
 HRESULT RegisterServer(
-    BOOL bRegTypeLib = FALSE,  
+    BOOL bRegTypeLib = FALSE,
     const CLSID* pCLSID = NULL) throw();
 ```
 
 ### <a name="parameters"></a>参数
 
 *bRegTypeLib*<br/>
-[in]指示是否将已注册类型库。 默认值为 FALSE。
+[in]指示是否将已注册类型库。 默认值是 FALSE。
 
 *pCLSID*<br/>
 [in]指向要注册的对象的 CLSID。 如果将注册为 NULL （默认值），在对象映射中的所有对象。
@@ -488,7 +488,7 @@ void Term() throw();
 ATL 7.0 起`CComModule`已过时： 请参阅[ATL Module 类](../../atl/atl-module-classes.md)的更多详细信息。
 
 ```
-ATL_DEPRECATED HRESULT UnregisterClassHelper(  
+ATL_DEPRECATED HRESULT UnregisterClassHelper(
     const CLSID& clsid,
     LPCTSTR lpszProgID,
     LPCTSTR lpszVerIndProgID);
@@ -549,7 +549,7 @@ inline HRESULT UnregisterServer(BOOL bUnRegTypeLib, const CLSID* pCLSID = NULL) 
 ATL 7.0 起`CComModule`已过时： 请参阅[ATL Module 类](../../atl/atl-module-classes.md)的更多详细信息。
 
 ```
-ATL_DEPRECATED HRESULT UpdateRegistryClass(  
+ATL_DEPRECATED HRESULT UpdateRegistryClass(
     const CLSID& clsid,
     LPCTSTR lpszProgID,
     LPCTSTR lpszVerIndProgID,
@@ -557,7 +557,7 @@ ATL_DEPRECATED HRESULT UpdateRegistryClass(
     DWORD dwFlags,
     BOOL bRegister);
 
-ATL_DEPRECATED HRESULT UpdateRegistryClass(  
+ATL_DEPRECATED HRESULT UpdateRegistryClass(
     const CLSID& clsid,
     LPCTSTR lpszProgID,
     LPCTSTR lpszVerIndProgID,
@@ -608,12 +608,12 @@ ATL_DEPRECATED HRESULT UpdateRegistryClass(
 ATL 7.0 起`CComModule`已过时： 请参阅[ATL Module 类](../../atl/atl-module-classes.md)的更多详细信息。
 
 ```
-virtual HRESULT UpdateRegistryFromResourceD(  
+virtual HRESULT UpdateRegistryFromResourceD(
     LPCTSTR lpszRes,
     BOOL bRegister,
     struct _ATL_REGMAP_ENTRY* pMapEntries = NULL) throw();
 
-virtual HRESULT UpdateRegistryFromResourceD(  
+virtual HRESULT UpdateRegistryFromResourceD(
     UINT nResID,
     BOOL bRegister,
     struct _ATL_REGMAP_ENTRY* pMapEntries = NULL) throw ();
@@ -658,12 +658,12 @@ virtual HRESULT UpdateRegistryFromResourceD(
 ATL 7.0 起`CComModule`已过时： 请参阅[ATL Module 类](../../atl/atl-module-classes.md)的更多详细信息。
 
 ```
-virtual HRESULT UpdateRegistryFromResourceS(  
+virtual HRESULT UpdateRegistryFromResourceS(
     LPCTSTR lpszRes,
     BOOL bRegister,
     struct _ATL_REGMAP_ENTRY* pMapEntries = NULL) throw();
 
-virtual HRESULT UpdateRegistryFromResourceS(  
+virtual HRESULT UpdateRegistryFromResourceS(
     UINT nResID,
     BOOL bRegister,
     struct _ATL_REGMAP_ENTRY* pMapEntries = NULL) throw();

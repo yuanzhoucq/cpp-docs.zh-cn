@@ -15,19 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b14f562bd93bf023d540bf362dd2f9a881c2e441
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4e5b0f1b38e73523a476c83e19ab9bf812fdc2fa
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46436788"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204530"
 ---
 # <a name="mfc-activex-controls-painting-an-activex-control"></a>MFC ActiveX 控件：绘制 ActiveX 控件
 
 本文描述了 ActiveX 控件绘制进程，以及如何改变绘制代码来优化过程。 (请参阅[优化控件绘制](../mfc/optimizing-control-drawing.md)的技术如何优化绘制但不使控件单独还原以前选定的 GDI 对象。 绘制所有控件之后，容器可以自动还原原始对象。）
 
 >[!IMPORTANT]
-> ActiveX 是一项传统技术，不应使用新的开发。 本文将取代 ActiveX 的现代技术的详细信息，请参阅[ActiveX 控件](activex-controls.md)。
+> ActiveX 是一项传统技术，不应使用新的开发。 有关取代 ActiveX 的现代技术的详细信息，请参阅[ActiveX 控件](activex-controls.md)。
 
 本文中的示例来自 MFC ActiveX 控件向导利用默认设置创建的控件。 创建主干控件应用程序使用 MFC ActiveX 控件向导的详细信息，请参阅文章[MFC ActiveX 控件向导](../mfc/reference/mfc-activex-control-wizard.md)。
 
@@ -47,7 +47,7 @@ ms.locfileid: "46436788"
 
 非活动控件绘制方式有所不同。 当控件处于不活动状态时，其窗口也是不可见或不存在的，因此它无法接收绘制消息。 相反，控件容器将直接调用控件的 `OnDraw` 函数。 这与活动控件的绘图过程的不同之处在于：绝不调用 `OnPaint` 成员函数。
 
-如上面几段中所述，ActiveX 控件的更新方式取决于控件的状态。 但是，由于在这两种情况下，框架都会调用 `OnDraw` 成员函数，因此您需要在此成员函数中添加您自己的大部分绘制代码。
+如上面几段中所述，ActiveX 控件的更新方式取决于控件的状态。 但是，由于在这两种情况下，框架都会调用 `OnDraw` 成员函数，因此你需要在此成员函数中添加你自己的大部分绘制代码。
 
 `OnDraw` 成员函数处理控件绘制。 当控件处于不活动状态时，控件容器调用 `OnDraw`，并传递控件容器的设备上下文以及控件占用的矩形区域的坐标。
 
@@ -112,11 +112,11 @@ ActiveX 控件绘制的默认实现将绘制整个控件区域。 这对于简�
 
 1. 在中**插入新控件**框中，选择的控件，然后单击**确定**。
 
-     控件将显示在测试容器中。
+   控件将显示在测试容器中。
 
 1. 上**控制**菜单上，单击**绘制图元文件**。
 
-     将出现一个单独的用于显示图元文件的窗口。 您可以更改此窗口的大小，以查看缩放会如何影响控件的图元文件。 您可以随时关闭此窗口。
+   将出现一个单独的用于显示图元文件的窗口。 您可以更改此窗口的大小，以查看缩放会如何影响控件的图元文件。 您可以随时关闭此窗口。
 
 ## <a name="see-also"></a>请参阅
 

@@ -16,25 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c176e77a1704e3311d8c814d1c1b530b9f94f1ec
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 420fd702aa97d07e8aadb16a90c0a6a6636f6aa9
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46070049"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860259"
 ---
 # <a name="c-runtime-error-r6025"></a>C 运行时错误 R6025
 
 纯虚函数调用
 
 > [!NOTE]
->  如果运行应用时遇到此错误消息，该应用已关闭，因为它具有内部问题。 此错误的最常见原因是应用程序中或已损坏的安装中的 bug。
+> 如果运行应用时遇到此错误消息，该应用已关闭，因为它具有内部问题。 此错误的最常见原因是应用程序中或已损坏的安装中的 bug。
 >
->  可以尝试以下步骤来修复此错误：
+> 可以尝试以下步骤来修复此错误：
 >
->  -   使用**应用程序和功能**或**程序和功能**页**控制面板**来修复或重新安装该程序。
-> -   检查**Windows Update**中**控制面板**的软件更新。
-> -   检查应用程序的更新版本。 如果问题仍然存在，请与应用供应商联系。
+> - 使用**应用程序和功能**或**程序和功能**页**控制面板**来修复或重新安装该程序。
+> - 检查**Windows Update**中**控制面板**的软件更新。
+> - 检查应用程序的更新版本。 如果问题仍然存在，请与应用供应商联系。
 
 **程序员提供的的信息**
 

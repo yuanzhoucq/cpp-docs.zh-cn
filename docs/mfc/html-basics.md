@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b25f957615d738d0608f911736bb42f8e3731dd
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: dbe2c743f04e8fc8dc67947b9bd9d5560dd35182
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46391614"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052689"
 ---
 # <a name="html-basics"></a>HTML 基础
 
@@ -47,9 +47,9 @@ ms.locfileid: "46391614"
 
 1. 切换到浏览器中，并从**文件**菜单中，选择**打开**，或类型*file://C:/webpages/first.htm*浏览器的 URL 编辑框中。 你应看到一个窗口标题为“顶级 HTML 标记”的空白页。
 
-     请注意，标记是成对的，并且包含在尖括号中。 标记不区分大小写，但通常使用大写突出标记。
+   请注意，标记是成对的，并且包含在尖括号中。 标记不区分大小写，但通常使用大写突出标记。
 
-     标记\<HTML > 启动文档和标记\</HTML > 结束它。 结束标记（不一定需要）与开始标记一样，但标记前具有一个正斜杠 (/)。 尖括号 (<) 与标记开头之间应没有空格。
+   标记\<HTML > 启动文档和标记\</HTML > 结束它。 结束标记（不一定需要）与开始标记一样，但标记前具有一个正斜杠 (/)。 尖括号 (<) 与标记开头之间应没有空格。
 
 1. 切换回记事本和之后\<头/> 行中，键入：
 
@@ -64,9 +64,9 @@ ms.locfileid: "46391614"
 
 1. 切换回浏览器，刷新页面。
 
-     浏览器窗口的工作区将显示字词。 请注意，将忽略回车符。 如果要包含换行符，则必须在第一行后包括一个 `<BR>` 标记。
+   浏览器窗口的工作区将显示字词。 请注意，将忽略回车符。 如果要包含换行符，则必须在第一行后包括一个 `<BR>` 标记。
 
-     有关所有步骤，请按照，插入任意位置之间的文本\<正文 > 和 \< /B o d > 若要添加到文档的正文。
+   有关所有步骤，请按照，插入任意位置之间的文本\<正文 > 和 \< /B o d > 若要添加到文档的正文。
 
 9. 添加标题：
 

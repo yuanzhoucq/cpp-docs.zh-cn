@@ -55,12 +55,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 430d9d297161a05f9158893454f00be2afbe7a47
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8fba2e8d949745f694973f2d7b29c5244ab30db4
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46408565"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50058903"
 ---
 # <a name="record-field-exchange-functions"></a>记录字段交换函数
 
@@ -440,7 +440,6 @@ void RFX_Single(
 
 **标头：** afxdb.h
 
-
 ## <a name="rfx_text"></a>  RFX_Text
 
 传输`CString`之间的字段数据成员的数据`CRecordset`SQL_LONGVARCHAR、 SQL_CHAR、 SQL_VARCHAR、 SQL_DECIMAL 或 SQL_NUMERIC 类型对象和列上的 ODBC 数据源的记录。
@@ -506,7 +505,6 @@ void CCustomer::DoFieldExchange(CFieldExchange* pFX)
 ### <a name="requirements"></a>要求
 
 **标头：** afxdb.h
-
 
 ## <a name="rfx_binary_bulk"></a>  RFX_Binary_Bulk
 
@@ -873,7 +871,6 @@ void RFX_Single_Bulk(
 
 **标头：** afxdb.h
 
-
 ## <a name="rfx_text_bulk"></a>  RFX_Text_Bulk
 
 将字符数据的多个行从 ODBC 数据源的列传输到中的相应数组`CRecordset`-派生的对象。
@@ -986,7 +983,6 @@ Framework 预先分配内存的量。 如果你的数据大小，该框架将分
 ### <a name="requirements"></a>要求
 
 **标头：** afxdao.h
-
 
 ## <a name="dfx_bool"></a>  DFX_Bool
 
@@ -1249,7 +1245,6 @@ void AFXAPI DFX_Long(
 
 **标头：** afxdao.h
 
-
 ## <a name="dfx_longbinary"></a>  DFX_LongBinary
 
 **重要**建议你使用[DFX_Binary](#dfx_binary)而不是此函数。
@@ -1342,7 +1337,6 @@ void AFXAPI DFX_Short(
 ### <a name="requirements"></a>要求
 
 **标头：** afxdao.h
-
 
 ## <a name="dfx_single"></a>  DFX_Single
 

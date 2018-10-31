@@ -1,7 +1,7 @@
 ---
 title: WeakRef 类 |Microsoft Docs
 ms.custom: ''
-ms.date: 09/07/2018
+ms.date: 10/03/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -29,12 +29,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 12fd66c7ff5a6f6fee7588aa7bd51ae2053ba7e8
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f40e0509f5e532ea85930052a6bda35d89e47ae1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46386972"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50071019"
 ---
 # <a name="weakref-class"></a>WeakRef 类
 
@@ -43,7 +43,7 @@ ms.locfileid: "46386972"
 ## <a name="syntax"></a>语法
 
 ```cpp
-class WeakRef : public ComPtr<IWeakReference>
+class WeakRef : public ComPtr<IWeakReference>;
 ```
 
 ## <a name="members"></a>成员
@@ -75,7 +75,7 @@ class WeakRef : public ComPtr<IWeakReference>
 
 一个`WeakRef`对象通常用于表示由外部线程或应用程序控制其存在性的对象。 例如，构造`WeakRef`中对文件对象的引用的对象。 文件打开时，强引用有效。 但文件关闭时，强引用无效。
 
-请注意，没有行为更改[作为](#as)， [AsIID](#asiid)并[CopyTo](#copyto) Windows 10 SDK 中的方法。 以前，在调用任何一种方法后，你可以检查`WeakRef`为`nullptr`以确定是否强引用已成功获得，如以下代码所示：
+请注意，Windows 10 SDK 中的 [As](#as)、 [AsIID](#asiid) 和 [CopyTo](#copyto) 方法中没有发生行为更改。 以前，在调用任何一种方法后，你可以检查`WeakRef`为`nullptr`以确定是否强引用已成功获得，如以下代码所示：
 
 ```cpp
 WeakRef wr;
@@ -88,7 +88,7 @@ HRESULT hr = wr.As(&strongRef);
 
 // This check won't work with the Windows 10 SDK version of the library.
 // Check the input pointer instead.
-if(wr == nullptr)  
+if(wr == nullptr)
 {
     wprintf(L"Couldn’t get strong ref!");
 }
@@ -97,7 +97,7 @@ if(wr == nullptr)
 使用 Windows 10 SDK（或更高版本）时以上代码无效。 相反，应检查传入的指针`nullptr`。
 
 ```cpp
-if (strongRef == nullptr)  
+if (strongRef == nullptr)
 {
     wprintf(L"Couldn't get strong ref!");
 }
@@ -244,7 +244,7 @@ HRESULT CopyTo(
 返回`ComPtrRef`对象，表示当前`WeakRef`对象。
 
 ```cpp
-Details::ComPtrRef<WeakRef> operator&() throw()  
+Details::ComPtrRef<WeakRef> operator&() throw()
 ```
 
 ### <a name="return-value"></a>返回值
@@ -262,7 +262,7 @@ Details::ComPtrRef<WeakRef> operator&() throw()
 ```cpp
 WeakRef();
 WeakRef(
-   decltype(__nullptr)  
+   decltype(__nullptr)
 );
 
 WeakRef(

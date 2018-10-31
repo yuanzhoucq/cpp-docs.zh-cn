@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a800fb8065fd3c613a2bc05975c15decb0145891
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 8a3dbb1d63e7d7c6f5e036fc0cde967277c91a40
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46028306"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890115"
 ---
 # <a name="linker-tools-error-lnk2005"></a>链接器工具错误 LNK2005
 
@@ -121,14 +121,3 @@ ms.locfileid: "46028306"
     ```
 
    若要解决此问题，请添加[/FORCE:MULTIPLE](../../build/reference/force-force-file-output.md)到链接器命令行选项，并确保 uuid.lib 是引用的第一个库。
-
-## <a name="additional-information"></a>其他信息
-
-如果使用的工具集的较旧版本，请参阅有关此错误的特定原因的详细信息这些知识库文章：
-
-- [出现 LNK2005 错误，则当在 Visual c + + 中的顺序不正确链接的 CRT 库和 MFC 库](https://support.microsoft.com/kb/148652)
-
-- [修复： 全局重载的删除运算符导致 LNK2005](https://support.microsoft.com/kb/140440)
-
-- [在编译 Visual c + + ATL 可执行文件 (.exe) 项目时收到 LNK2005 错误](https://support.microsoft.com/kb/184235)。
-

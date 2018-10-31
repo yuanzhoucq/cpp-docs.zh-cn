@@ -1,25 +1,28 @@
 ---
 title: 在 Visual Studio 中新建 C++ Linux 项目 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/20/2018
+ms.date: 09/12/2018
 ms.technology:
 - cpp-linux
 ms.tgt_pltfrm: Linux
 ms.topic: conceptual
 ms.assetid: 5d7c1d67-bc31-4f96-8622-2b4cf91372fd
-author: corob-msft
-ms.author: corob
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: f64f8eaf09e92df3dd776180db5904af039d6ad7
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 186789a94186621d2ec0103cb24dfdc17b0420cc
+ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39207965"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49410676"
 ---
 # <a name="create-a-new-linux-project"></a>新建 Linux 项目
+
+首先，请确保已安装用于 Visual Studio 的 Linux 开发工作负荷。 有关详细信息，请参阅[下载、安装和设置 Linux 工作负荷](download-install-and-setup-the-linux-development-workload.md)。
+
 在 Visual Studio 中使用 C++ 为 Linux 编码时，可以选择创建 Visual Studio 项目还是 CMake 项目。 本主题介绍如何创建 Visual Studio 项目。 有关 CMake 项目的信息，请参阅[配置 Linux CMake 项目](cmake-linux-project.md)。
 
 若要在 Visual Studio 中新建 Linux 项目，请执行以下操作：

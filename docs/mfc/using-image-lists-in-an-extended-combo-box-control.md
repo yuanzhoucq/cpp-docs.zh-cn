@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 080256f9a5de719e265009080036a3c0c2617118
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 15b069c1075a1b2b7db484da588684fca280ef29
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46412231"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083394"
 ---
 # <a name="using-image-lists-in-an-extended-combo-box-control"></a>在扩展组合框控件中使用图像列表
 
@@ -35,11 +35,11 @@ ms.locfileid: "46412231"
 
 1. 初始化新的图像列表对象通过调用[CImageList::Create](../mfc/reference/cimagelist-class.md#create)。 下面的代码是此调用的一个示例。
 
-     [!code-cpp[NVC_MFCControlLadenDialog#10](../mfc/codesnippet/cpp/using-image-lists-in-an-extended-combo-box-control_1.cpp)]
+   [!code-cpp[NVC_MFCControlLadenDialog#10](../mfc/codesnippet/cpp/using-image-lists-in-an-extended-combo-box-control_1.cpp)]
 
 1. 添加每个可能状态的可选图像： 所选或原样，和一个覆盖区。 以下代码添加三个预定义的映像。
 
-     [!code-cpp[NVC_MFCControlLadenDialog#11](../mfc/codesnippet/cpp/using-image-lists-in-an-extended-combo-box-control_2.cpp)]
+   [!code-cpp[NVC_MFCControlLadenDialog#11](../mfc/codesnippet/cpp/using-image-lists-in-an-extended-combo-box-control_2.cpp)]
 
 1. 将图像列表与通过调用控件相关联[CComboBoxEx::SetImageList](../mfc/reference/ccomboboxex-class.md#setimagelist)。
 

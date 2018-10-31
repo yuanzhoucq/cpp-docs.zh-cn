@@ -18,26 +18,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15491517ad95973d7eabf2998741dbcc89ca602b
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 8726499df30d26e35d4a554e7028af9ff2249549
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42540146"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080892"
 ---
 # <a name="omp"></a>omp
-将一个或多个 OpenMP 指令与任何可选指令子句一起使用。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-#pragma omp directive  
-```  
-  
-## <a name="remarks"></a>备注  
- 
-请参阅[OpenMP 指令](../parallel/openmp/reference/openmp-directives.md)有关详细信息。  
-  
-## <a name="see-also"></a>请参阅  
+将一个或多个 OpenMP 指令与任何可选指令子句一起使用。
+
+## <a name="syntax"></a>语法
+
+```
+#pragma omp directive
+```
+
+## <a name="remarks"></a>备注
+
+请参阅[OpenMP 指令](../parallel/openmp/reference/openmp-directives.md)有关详细信息。
+
+## <a name="see-also"></a>请参阅
 
 [Pragma 指令和 __Pragma 关键字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

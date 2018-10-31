@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 477ed175e6f8e81acdae5c873d1436e6c3dbbd60
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b12f3ff78f88029067d3b77296979a173dad494d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46423554"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50079644"
 ---
 # <a name="using-image-lists-with-header-controls"></a>对标题控件使用图像列表
 
@@ -35,17 +35,17 @@ ms.locfileid: "46423554"
 
 1. 初始化新的图像列表对象通过调用[CImageList::Create](../mfc/reference/cimagelist-class.md#create)。 下面的代码是此调用的一个示例。
 
-     [!code-cpp[NVC_MFCControlLadenDialog#15](../mfc/codesnippet/cpp/using-image-lists-with-header-controls_1.cpp)]
+   [!code-cpp[NVC_MFCControlLadenDialog#15](../mfc/codesnippet/cpp/using-image-lists-with-header-controls_1.cpp)]
 
 1. 添加为每个标头项的映像。 以下代码添加两个预定义的映像。
 
-     [!code-cpp[NVC_MFCControlLadenDialog#16](../mfc/codesnippet/cpp/using-image-lists-with-header-controls_2.cpp)]
+   [!code-cpp[NVC_MFCControlLadenDialog#16](../mfc/codesnippet/cpp/using-image-lists-with-header-controls_2.cpp)]
 
 1. 将图像列表与标头控件通过调用相关联[CHeaderCtrl::SetImageList](../mfc/reference/cheaderctrl-class.md#setimagelist)。
 
 1. 修改要显示来自关联的图像列表的图像的标头项。 以下示例将从分配的第一个图像`m_phdrImages`，与第一个标头项， `m_pHdrCtrl`。
 
-     [!code-cpp[NVC_MFCControlLadenDialog#17](../mfc/codesnippet/cpp/using-image-lists-with-header-controls_3.cpp)]
+   [!code-cpp[NVC_MFCControlLadenDialog#17](../mfc/codesnippet/cpp/using-image-lists-with-header-controls_3.cpp)]
 
 有关使用的参数值的详细信息，请查阅相关[CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)。
 

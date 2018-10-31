@@ -1,7 +1,7 @@
 ---
 title: 由编译器版本的编译器警告 |Microsoft Docs
 ms.custom: ''
-ms.date: 07/03/2018
+ms.date: 10/24/2018
 ms.technology:
 - devlang-cpp
 ms.topic: error-reference
@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6645bb81a1fd4a2b42eb7419a0d008b9ac7692ad
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 1c4d815ba1036a03042992d2715e49bbd8f74a28
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44319079"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990381"
 ---
 # <a name="compiler-warnings-by-compiler-version"></a>由编译器版本的编译器警告
 
@@ -45,10 +45,19 @@ ms.locfileid: "44319079"
 | Visual c + + 2017 版本 15.5 | 19.12.25830.0 |
 | Visual c + + 2017 版本 15.6 | 19.13.26128.0 |
 | Visual c + + 2017 版本 15.7 | 19.14.26428.0 |
+| Visual c + + 2017 版本 15.8 | 19.15.26726.0 |
 
 可以指定仅主版本号、 主要和次要数字或主要、 次要和生成到的数字 __/Wv__选项。 编译器会报告与开头，该指定数字的版本相匹配的所有警告并禁止显示的版本大于指定数目的所有警告。 例如， __/Wv:17__报告引入中或之前的 Visual Studio 2012 中，任何版本的所有警告并禁止显示由任何编译器从 Visual Studio 2013 （版本 18） 或更高版本引入的所有警告。 若要取消显示 Visual Studio 2015 中引入的警告更新 2 和更高版本，可以使用 __/Wv:19.00.23506__。 使用 __/Wv:19.11__来报告所有警告在 Visual Studio，Visual Studio 2017 版本 15.5 中，任何版本中引入的但取消显示 Visual Studio 2017 版本 15.5 和更高版本中引入的警告。
 
 以下部分列出了可通过使用取消的 Visual c + + 每个版本引入的警告 __/Wv__编译器选项。 __/Wv__选项不能禁止显示未列出，其中可以指定的版本的编译器的警告。
+
+## <a name="warnings-introduced-in-visual-c-2017-version-158-compiler-version-1915267260"></a>在 Visual c + + 2017 版本 15.8 （编译器版本 19.15.26726.0） 引入的警告
+
+通过使用编译器选项禁止显示这些警告和更高版本中的所有警告 __/Wv:19.14__。
+
+|||
+|-|-|
+C5046|'*函数*： 涉及带有内部链接未定义类型的符号|
 
 ## <a name="warnings-introduced-in-visual-c-2017-version-157-compiler-version-1914264280"></a>Visual c + + 2017 版本 15.7 （编译器版本 19.14.26428.0） 中引入的警告
 
@@ -382,15 +391,15 @@ C4572|在 /clr 下的 [ParamArray] 特性不推荐使用，请使用...改为
 C4580|[attribute] 已弃用;改为指定*指定*作为基类的属性
 C4581|已否决的行为:"*名称*"替换*名称*进程属性
 C4606|#pragma 警告: '*数*被忽略;代码分析警告与警告等级无关
-C4631|MSXML 或 XPath 不可用，将不会处理 XML 文档注释。 description
+C4631|MSXML 或 XPath 不可用，将不会处理 XML 文档注释。 *description*
 C4632|XML 文档注释：*描述*-访问被拒绝：*说明*
 C4633|XML 文档注释*描述*： 错误：*说明*
 C4634|XML 文档注释*描述*： 不能应用：*说明*
 C4635|XML 文档注释*描述*： 格式错误的 XML:*说明*
 C4636|XML 文档注释*描述*： 标记需要非空 '*说明*属性。
-C4637|XML 文档注释*描述*:\<包括 > 标记被丢弃。 description
+C4637|XML 文档注释*描述*:\<包括 > 标记被丢弃。 *description*
 C4638|XML 文档注释*描述*： 引用未知符号*说明*。
-C4639|MSXML 错误，不会处理注释的 XML 文档。 description
+C4639|MSXML 错误，不会处理注释的 XML 文档。 *description*
 C4641|XML 文档注释含有不明确的交叉引用：
 C4678|基本类的*声明*是可访问性低于*名称*
 C4679|'*说明*： 无法导入成员
@@ -497,7 +506,7 @@ C4096|'*类型*： 接口不是 COM 接口; 不会发送到 IDL
 C4097|杂注参数应是“restore”或者“off”
 C4165|HRESULT 正在转换为 bool;是否确定这是你想？
 C4183|'*名称*： 缺少返回类型; 假定为返回 int 的成员函数
-C4199|description
+C4199|*description*
 C4255|'*名称*： 未给出函数原型： 将转换为 (void)
 C4256|'*声明*： 带虚拟基的类构造函数有...; 调用可能不会与较旧版本的 Visual c + + 兼容
 C4258|'*名称*： 从定义忽略 for 循环; 使用封闭范围中的定义

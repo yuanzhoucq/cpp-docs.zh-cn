@@ -1,28 +1,34 @@
 ---
 title: 信号量类 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/03/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::Semaphore
+- corewrappers/Microsoft::WRL::Wrappers::Semaphore::Lock
+- corewrappers/Microsoft::WRL::Wrappers::Semaphore::operator=
+- corewrappers/Microsoft::WRL::Wrappers::Semaphore::Semaphore
 dev_langs:
 - C++
 helpviewer_keywords:
-- Semaphore class
+- Microsoft::WRL::Wrappers::Semaphore class
+- Microsoft::WRL::Wrappers::Semaphore::Lock method
+- Microsoft::WRL::Wrappers::Semaphore::operator= operator
+- Microsoft::WRL::Wrappers::Semaphore::Semaphore, constructor
 ms.assetid: ded53526-17b4-4381-9c60-ea5e77363db6
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bb0b3d5dff91bcb1fb1688c7b1a9314fe7ebf00c
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 78fa5b68bcb55f7d062c1732ab6c30fbe84c22d8
+ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42598410"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48789210"
 ---
 # <a name="semaphore-class"></a>Semaphore 类
 
@@ -31,40 +37,34 @@ ms.locfileid: "42598410"
 ## <a name="syntax"></a>语法
 
 ```cpp
-class Semaphore : public HandleT<HandleTraits::SemaphoreTraits>
+class Semaphore : public HandleT<HandleTraits::SemaphoreTraits>;
 ```
 
 ## <a name="members"></a>成员
 
 ### <a name="public-typedefs"></a>公共 Typedef
 
-|名称|描述|
-|----------|-----------------|
-|`SyncLock`|类支持同步锁的同义词。|
+名称       | 描述
+---------- | ------------------------------------------------------
+`SyncLock` | 类支持同步锁的同义词。
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
-|----------|-----------------|
-|[Semaphore::Semaphore 构造函数](../windows/semaphore-semaphore-constructor.md)|初始化的新实例**信号量**类。|
+名称                               | 描述
+---------------------------------- | ----------------------------------------------------
+[Semaphore:: semaphore](#semaphore) | 初始化 `Semaphore` 类的新实例。
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
-|----------|-----------------|
-|[InvokeHelper::Invoke 方法](../windows/invokehelper-invoke-method.md)|调用其签名包含指定的数量的参数的事件处理程序。|
-
-### <a name="public-data-members"></a>公共数据成员
-
-|名称|描述|
-|----------|-----------------|
-|[Semaphore::Lock 方法](../windows/semaphore-lock-method.md)|将等待，直到当前的对象或与指定句柄关联的对象处于已发出信号状态或指定的超时间隔已过。|
+名称                     | 描述
+------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------
+[Semaphore:: lock](#lock) | 将等待，直到当前的对象或与指定句柄关联的对象处于已发出信号状态或指定的超时间隔已过。
 
 ### <a name="public-operators"></a>公共运算符
 
-|名称|描述|
-|----------|-----------------|
-|[Semaphore::operator= 运算符](../windows/semaphore-operator-assign-operator.md)|将从指定句柄**信号量**对象与当前**信号量**对象。|
+名称                                     | 描述
+---------------------------------------- | ---------------------------------------------------------------------------------------
+[Semaphore:: operator =](#operator-assign) | 将从指定句柄`Semaphore`对象与当前`Semaphore`对象。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -76,6 +76,67 @@ class Semaphore : public HandleT<HandleTraits::SemaphoreTraits>
 
 **Namespace:** Microsoft::WRL::Wrappers
 
-## <a name="see-also"></a>请参阅
+## <a name="lock"></a>Semaphore:: lock
 
-[Microsoft::WRL::Wrappers 命名空间](../windows/microsoft-wrl-wrappers-namespace.md)
+等到当前对象，或`Semaphore`对象与指定句柄处于已发出信号状态或指定的超时间隔已过。
+
+```cpp
+SyncLock Lock(
+   DWORD milliseconds = INFINITE
+);
+
+static SyncLock Lock(
+   HANDLE h,
+   DWORD milliseconds = INFINITE
+);
+```
+
+### <a name="parameters"></a>参数
+
+*毫秒*<br/>
+超时间隔（以毫秒为单位）。 默认值为 INFINITE，其表示将无限期地等待。
+
+*h*<br/>
+句柄`Semaphore`对象。
+
+### <a name="return-value"></a>返回值
+
+一个 `Details::SyncLockWithStatusT<HandleTraits::SemaphoreTraits>`
+
+## <a name="operator-assign"></a>Semaphore:: operator =
+
+将从指定句柄`Semaphore`对象与当前`Semaphore`对象。
+
+```cpp
+Semaphore& operator=(
+   _Inout_ Semaphore&& h
+);
+```
+
+### <a name="parameters"></a>参数
+
+*h*<br/>
+对右值引用`Semaphore`对象。
+
+### <a name="return-value"></a>返回值
+
+对当前的引用`Semaphore`对象。
+
+## <a name="semaphore"></a>Semaphore:: semaphore
+
+初始化 `Semaphore` 类的新实例。
+
+```cpp
+explicit Semaphore(
+   HANDLE h
+);
+
+WRL_NOTHROW Semaphore(
+   _Inout_ Semaphore&& h
+);
+```
+
+### <a name="parameters"></a>参数
+
+*h*<br/>
+句柄或对右值引用`Semaphore`对象。

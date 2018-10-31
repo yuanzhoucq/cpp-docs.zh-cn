@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18d0a15b2fe1d61e1b7ba14d210b428f282bff4d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: defc160b2b45185031160e0ba3dd553f8896e372
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46386361"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204686"
 ---
 # <a name="mfc-activex-controls-advanced-topics"></a>MFC ActiveX 控件：高级主题
 
@@ -44,7 +44,7 @@ ms.locfileid: "46386361"
 - [访问在运行时是不可见对话框控件](#_core_accessing_dialog_controls_that_are_invisible_at_run_time)
 
 >[!IMPORTANT]
-> ActiveX 是一项传统技术，不应使用新的开发。 本文将取代 ActiveX 的现代技术的详细信息，请参阅[ActiveX 控件](activex-controls.md)。
+> ActiveX 是一项传统技术，不应使用新的开发。 有关取代 ActiveX 的现代技术的详细信息，请参阅[ActiveX 控件](activex-controls.md)。
 
 ##  <a name="_core_using_database_classes_in_activex_controls"></a> 在 ActiveX 控件中使用数据库类
 
@@ -117,7 +117,7 @@ MFC 数据库类的一般概述，请参阅[MFC 数据库类 （DAO 和 ODBC）]
 
 ### <a name="activex-control-error-codes"></a>ActiveX 控件错误代码
 
-|Error|描述|
+|错误|描述|
 |-----------|-----------------|
 |CTL_E_ILLEGALFUNCTIONCALL|非法的函数调用|
 |CTL_E_OVERFLOW|溢出|
@@ -184,11 +184,11 @@ MFC 数据库类的一般概述，请参阅[MFC 数据库类 （DAO 和 ODBC）]
 
 - 使用添加成员变量向导中，选择**控制变量**，然后选择该控件的 id。 输入一个成员变量名称并选择控件的包装器类，作为**控件类型**。
 
-     或
+     - 或 -
 
 - 为对话框项声明本地变量和子类。 插入如下所示的代码 (`CMyCtrl`是包装类，IDC_MYCTRL1 是控件的 ID):
 
-     [!code-cpp[NVC_MFC_AxCont#19](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-topics_6.cpp)]
+   [!code-cpp[NVC_MFC_AxCont#19](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-topics_6.cpp)]
 
 ## <a name="see-also"></a>请参阅
 

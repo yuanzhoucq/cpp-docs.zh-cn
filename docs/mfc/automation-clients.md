@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cca4818d0ace6270b986ddb9b99068ca9532f1b2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: cdc9b47bbd7b639850a13a77b81ef4802a301ba7
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46395499"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890057"
 ---
 # <a name="automation-clients"></a>自动化客户端
 
@@ -46,7 +46,7 @@ ms.locfileid: "46395499"
 
 ### <a name="handling-events-in-automation-clients"></a>在自动化客户端中处理事件
 
-如果你想要在你的自动化客户端中处理事件，您需要添加接收器接口。 MFC 提供了向导支持添加接收器接口的 ActiveX 控件，但不支持对其他 COM 服务器。 有关如何在源接口的 COM 服务器所述的 MFC 客户端中添加接收器接口的信息，请参阅如何： 在创建 MFC-Based COM 客户端 (KB 181845) 中的接收器接口[ http://support.microsoft.com/default.aspxscid=kb; en-我们; 181845](http://support.microsoft.com/default.aspxscid=kb;en-us;181845)。
+如果你想要在你的自动化客户端中处理事件，您需要添加接收器接口。 MFC 提供了向导支持添加接收器接口的 ActiveX 控件，但不支持对其他 COM 服务器。
 
 ## <a name="see-also"></a>请参阅
 

@@ -1,7 +1,7 @@
 ---
 title: 使用 SQL Server 可验证程序集 (C + + CLI) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/17/2019
 ms.technology:
 - cpp-cli
 ms.topic: conceptual
@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 2bb4adbb960f9d062cc8573c7ca0f7cd5dcd0426
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 109b0303eaf4c4352d4e9b426642f92e361051a4
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46382214"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063401"
 ---
 # <a name="using-verifiable-assemblies-with-sql-server-ccli"></a>结合使用 SQL Server 和可验证的程序集 (C++/CLI)
 
@@ -34,7 +34,8 @@ SQL Server transact-sql (T-SQL) 以允许你可验证程序集安装到 SQL Serv
 
 - 安全模式： 运行可验证类型安全代码;使用 /clr: safe 编译。
 
-安全模式下需要执行的程序集是可验证类型安全。
+> [!IMPORTANT]
+> 不推荐使用 visual Studio 2015 和 Visual Studio 2017 不支持 **/clr: pure**并 **/clr: safe**创建可验证项目。 如果需要可验证代码，我们建议将转换为 C# 代码。
 
 若要创建和可验证的程序集加载到 SQL Server，请使用 TRANSACT-SQL 命令创建程序集和删除程序集，如下所示：
 
@@ -88,5 +89,4 @@ sqlcmd -S MyServer -E -i myScript.sql -o myResult.txt
 
 ## <a name="see-also"></a>请参阅
 
-[如何： 将迁移到 /clr: safe (C + + CLI)](../dotnet/how-to-migrate-to-clr-safe-cpp-cli.md)<br/>
 [类和结构](../cpp/classes-and-structs-cpp.md)

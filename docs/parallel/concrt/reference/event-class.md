@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74e871255e3308450764e8f65cdb6acebe79df38
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ab586243df9b015c95f4a703744bfb02a54d064e
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46437737"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162186"
 ---
 # <a name="event-class"></a>event 类
 
@@ -167,7 +167,7 @@ static size_t __cdecl wait_for_multiple(
 中提供的数组中的事件计数`_PPEvents`参数。
 
 *_FWaitAll*<br/>
-如果设置为值`true`，该数组内的所有事件中都提供的参数指定`_PPEvents`参数必须为满足在等待收到信号。 如果设置为值`false`，它指定数组中的任何事件中提供`_PPEvents`参数成为发出信号将满足等待。
+如果设置为值 **，则返回 true**，该数组内的所有事件中都提供的参数指定`_PPEvents`参数必须为满足在等待收到信号。 如果设置为值**false**，它指定数组中的任何事件中提供`_PPEvents`参数成为发出信号将满足等待。
 
 *超时) (_t*<br/>
 表示毫秒的数之前等待超时。值`COOPERATIVE_TIMEOUT_INFINITE`表示无超时。
@@ -181,7 +181,7 @@ static size_t __cdecl wait_for_multiple(
 如果将参数`_FWaitAll`设置为值`true`若要指示所有事件必须发出都信号以满足等待，该函数返回的索引没有任何特殊意义，它不是值的事实之外`COOPERATIVE_WAIT_TIMEOUT`。
 
 > [!IMPORTANT]
->  在通用 Windows 平台 (UWP) 应用中，不要调用`wait_for_multiple`对 ASTA 线程因为此调用可能会阻止当前线程，并可能导致应用停止响应。
+> 在通用 Windows 平台 (UWP) 应用中，不要调用`wait_for_multiple`对 ASTA 线程因为此调用可能会阻止当前线程，并可能导致应用停止响应。
 
 ## <a name="see-also"></a>请参阅
 

@@ -1,7 +1,7 @@
 ---
 title: rename_namespace |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -16,37 +16,39 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7608255b5369443ce1045f896b776cb283fdb1cb
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 966c6dda7e5e0bd28e78f37967397c3b64e4e55c
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46411854"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808467"
 ---
 # <a name="renamenamespace"></a>rename_namespace
-**C + + 专用**  
-  
-重命名包含类型库内容的命名空间。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-rename_namespace("NewName")  
-```  
-  
-### <a name="parameters"></a>参数  
-*新名称*  
-命名空间的新名称。  
-  
-## <a name="remarks"></a>备注  
- 
-它采用一个参数， *NewName*，它指定命名空间的新名称。  
-  
-若要删除命名空间，请使用[no_namespace](../preprocessor/no-namespace.md)特性。  
-  
-**结束 c + + 专用**  
-  
-## <a name="see-also"></a>请参阅  
- 
+
+**C + + 专用**
+
+重命名包含类型库内容的命名空间。
+
+## <a name="syntax"></a>语法
+
+```
+rename_namespace("NewName")
+```
+
+### <a name="parameters"></a>参数
+
+*新名称*<br/>
+命名空间的新名称。
+
+## <a name="remarks"></a>备注
+
+它采用一个参数， *NewName*，它指定命名空间的新名称。
+
+若要删除命名空间，请使用[no_namespace](../preprocessor/no-namespace.md)特性。
+
+**结束 c + + 专用**
+
+## <a name="see-also"></a>请参阅
+
 [#import 属性](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [#import 指令](../preprocessor/hash-import-directive-cpp.md)

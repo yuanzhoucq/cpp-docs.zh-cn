@@ -1,7 +1,7 @@
 ---
-title: 文本 （c + + 组件扩展） |Microsoft Docs
+title: 文本 (C + + /cli 和 C + + /cli CX) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -18,14 +18,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 76a57261b28679c4f05b677dc7b49008535c921b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 626f05dff87bcff2d10d0726bcc10dfa767117d5
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42596441"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069916"
 ---
-# <a name="literal-c-component-extensions"></a>文本（C++ 组件扩展）
+# <a name="literal-ccli-and-ccx"></a>文本 (C + + /cli 和 C + + /cli CX)
 
 （数据成员） 的变量标记为**文字**中 **/clr**编译是等同的本机**静态常量**变量。
 
@@ -91,11 +91,11 @@ public ref struct A {
 注意 `sc` 和 `lit` 在元数据上的区别：`modopt` 指令应用于 `sc`，表示其他编译器会将其忽略。
 
 ```
-.field public static int32 modopt([mscorlib]System.Runtime.CompilerServices.IsConst) sc = int32(0x0000000A)  
+.field public static int32 modopt([mscorlib]System.Runtime.CompilerServices.IsConst) sc = int32(0x0000000A)
 ```
 
 ```
-.field public static literal int32 lit = int32(0x0000000A)  
+.field public static literal int32 lit = int32(0x0000000A)
 ```
 
 ## <a name="example"></a>示例
@@ -137,4 +137,4 @@ class B {
 
 ## <a name="see-also"></a>请参阅
 
-[适用于运行时平台的组件扩展](../windows/component-extensions-for-runtime-platforms.md)
+[ .NET 和 UWP 的组件扩展](../windows/component-extensions-for-runtime-platforms.md)

@@ -1,7 +1,7 @@
 ---
 title: 演练： 向应用程序添加 CTaskDialog |Microsoft Docs
 ms.custom: ''
-ms.date: 06/28/2018
+ms.date: 09/19/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f803af896c1bb2a0e5f58e45f4ef9f588f4e66d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 899ddba8ee72039702f05b0d369b79e347f7db7e
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46420474"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235602"
 ---
 # <a name="walkthrough-adding-a-ctaskdialog-to-an-application"></a>演练：向应用程序添加 CTaskDialog
 
@@ -43,17 +43,17 @@ ms.locfileid: "46420474"
 
 ## <a name="replacing-a-windows-message-box-with-a-ctaskdialog"></a>将 Windows 消息框替换为 CTaskDialog
 
-以下过程演示了将要替换 Windows 消息框的 `CTaskDialog`最基本的用法。 此示例还更改了与任务对话框关联的图标。 更改该图标会使 `CTaskDialog` 的外观与 Windows 消息框相同。
+以下过程演示了将要替换 Windows 消息框的 `CTaskDialog`最基本的用法。 此示例还更改了与任务对话框关联的图标。 更改图标使`CTaskDialog`显示给 Windows 消息框相同。
 
 ### <a name="to-replace-a-windows-message-box-with-a-ctaskdialog"></a>将 Windows 消息框替换为 CTaskDialog 的步骤
 
 1. 使用默认设置创建一个新的 MFC 应用程序项目。 调用它*MyProject*。
 
-2. 使用 **解决方案资源管理器** 打开文件 MyProject.cpp。
+1. 使用 **解决方案资源管理器** 打开文件 MyProject.cpp。
 
-3. 在包含列表后面添加 `#include "afxtaskdialog.h"` 。
+1. 在包含列表后面添加 `#include "afxtaskdialog.h"` 。
 
-4. 查找 `CMyProjectApp::InitInstance`方法。 在 `return TRUE;` 语句的前面插入以下代码行。 此代码将创建我们在 Windows 消息框或 `CTaskDialog`中使用的字符串。
+1. 查找 `CMyProjectApp::InitInstance`方法。 在 `return TRUE;` 语句的前面插入以下代码行。 此代码将创建我们在 Windows 消息框或 `CTaskDialog`中使用的字符串。
 
     ```cpp
     CString message("My message to the user");
@@ -61,7 +61,7 @@ ms.locfileid: "46420474"
     CString emptyString;
     ```
 
-5. 在步骤 4 中的代码的后面添加以下代码。 此代码可保证用户的计算机支持 `CTaskDialog`。 如果不支持该对话框，应用程序将改为显示 Windows 消息框。
+1. 在步骤 4 中的代码的后面添加以下代码。 此代码可保证用户的计算机支持 `CTaskDialog`。 如果对话框不受支持，该应用程序显示 Windows 消息框。
 
     ```cpp
     if (CTaskDialog::IsSupported())
@@ -74,25 +74,25 @@ ms.locfileid: "46420474"
     }
     ```
 
-6. 在步骤 5 中 `if` 语句后面的括号之间插入以下代码。 此代码将创建 `CTaskDialog`。
+1. 在步骤 5 中 `if` 语句后面的括号之间插入以下代码。 此代码将创建 `CTaskDialog`。
 
     ```cpp
     CTaskDialog taskDialog(message, emptyString, dialogTitle, TDCBF_OK_BUTTON);
     ```
 
-7. 在下一行上，添加以下代码。 此代码将设置警告图标。
+1. 在下一行上，添加以下代码。 此代码将设置警告图标。
 
     ```cpp
     taskDialog.SetMainIcon(TD_WARNING_ICON);
     ```
 
-8. 在下一行上，添加以下代码。 此代码将显示任务对话框。
+1. 在下一行上，添加以下代码。 此代码将显示任务对话框。
 
     ```cpp
     taskDialog.DoModal();
     ```
 
-如果不希望 `CTaskDialog` 显示与 Windows 消息框相同的图标，可以忽略步骤 7。 如果忽略该步骤，当应用程序显示 `CTaskDialog` 时，该对话框没有图标。
+如果不希望，可以避免第 7 步`CTaskDialog`为 Windows 消息框显示相同的图标。 如果您避免了该步骤`CTaskDialog`时应用程序将显示它具有无图标。
 
 编译并运行该应用程序。 在启动后，应用程序将显示任务对话框。
 
@@ -104,15 +104,15 @@ ms.locfileid: "46420474"
 
 1. 导航到**资源视图**。 如果无法看到**资源视图**，可以将其打开**视图**菜单。
 
-2. 展开**资源视图**直到可以选择**字符串表**文件夹。 展开它，然后双击**字符串表**条目。
+1. 展开**资源视图**直到可以选择**字符串表**文件夹。 展开它，然后双击**字符串表**条目。
 
-3. 滚动到字符串表的底部并添加一个新条目。 将 ID 更改为 `TEMP_LINE1`。 将标题设置为 **Command Line 1**。
+1. 滚动到字符串表的底部并添加一个新条目。 将 ID 更改为 `TEMP_LINE1`。 将标题设置为 **Command Line 1**。
 
-4. 再添加一个新条目。 将 ID 更改为 `TEMP_LINE2`。 将标题设置为 **Command Line 2**。
+1. 再添加一个新条目。 将 ID 更改为 `TEMP_LINE2`。 将标题设置为 **Command Line 2**。
 
-5. 导航回到 MyProject.cpp。
+1. 导航回到 MyProject.cpp。
 
-6. 在 `CString emptyString;`的后面添加以下代码：
+1. 在 `CString emptyString;`的后面添加以下代码：
 
     ```cpp
     CString expandedLabel("Hide extra information");
@@ -120,7 +120,7 @@ ms.locfileid: "46420474"
     CString expansionInfo("This is the additional information to the user,\nextended over two lines.");
     ```
 
-7. 找到 `taskDialog.DoModal()` 语句并替换为以下代码。 此代码将更新任务对话框并添加新控件：
+1. 找到 `taskDialog.DoModal()` 语句并替换为以下代码。 此代码将更新任务对话框并添加新控件：
 
     ```cpp
     taskDialog.SetMainInstruction(L"Warning");
@@ -133,13 +133,13 @@ ms.locfileid: "46420474"
     taskDialog.SetVerificationCheckboxText(L"Remember your selection");
     ```
 
-8. 添加以下代码行，该代码将向用户显示任务对话框并检索用户的选择：
+1. 添加以下代码行，该代码将向用户显示任务对话框并检索用户的选择：
 
     ```cpp
     INT_PTR result = taskDialog.DoModal();
     ```
 
-9. 在调用 `taskDialog.DoModal()`之后，插入以下代码。 此段代码将处理用户的输入：
+1. 在调用 `taskDialog.DoModal()`之后，插入以下代码。 此段代码将处理用户的输入：
 
     ```cpp
     if (taskDialog.GetVerificationCheckboxState())
@@ -171,7 +171,7 @@ ms.locfileid: "46420474"
     }
     ```
 
-在步骤 9 的代码中，将以 PROCESS IF 开头的注释替换为要在指定条件下执行的代码。
+在步骤 9 中的代码，将为开头的注释`PROCESS IF`与你想要在指定条件下执行的代码。
 
 编译并运行该应用程序。 应用程序将显示使用新控件和其他信息的任务对话框。
 
@@ -181,11 +181,11 @@ ms.locfileid: "46420474"
 
 ### <a name="to-display-a-ctaskdialog-without-creating-a-ctaskdialog-object"></a>显示 CTaskDialog 而不创建 CTaskDialog 对象的步骤
 
-1. 打开 MyProject.cpp 文件（如果尚未打开）。
+1. 如果尚未打开，请打开 MyProject.cpp 文件。
 
-2. 导航到 `if (CTaskDialog::IsSupported())` 语句的右括号处。
+1. 导航到 `if (CTaskDialog::IsSupported())` 语句的右括号处。
 
-3. 直接在 `if` 语句的右括号前面（ `else` 块的前面）插入以下代码：
+1. 直接在 `if` 语句的右括号前面（ `else` 块的前面）插入以下代码：
 
     ```cpp
     HRESULT result2 = CTaskDialog::ShowDialog(L"My error message",
@@ -195,9 +195,9 @@ ms.locfileid: "46420474"
         TEMP_LINE2);
     ```
 
-编译并运行该应用程序。 应用程序将显示两个任务对话框。 第一个对话框来自“向 CTaskDialog 添加功能的步骤”过程；第二个对话框来自上一个过程。
+编译并运行该应用程序。 应用程序将显示两个任务对话框。 第一个对话框是从**到向 CTaskDialog 添加功能**过程; 第二个对话框是从上一个过程。
 
-这些示例并未演示 `CTaskDialog`的所有可用选项，但是可以帮助你入门。 有关该类的完整描述，请参阅 [CTaskDialog Class](../mfc/reference/ctaskdialog-class.md) 。
+这些示例不演示所有可用的选项`CTaskDialog`，但是可以帮助你入门。 有关该类的完整描述，请参阅 [CTaskDialog Class](../mfc/reference/ctaskdialog-class.md) 。
 
 ## <a name="see-also"></a>请参阅
 

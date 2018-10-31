@@ -1,7 +1,7 @@
 ---
 title: 演练： 更新 MFC 随意画图应用程序 （第 2 部分） |Microsoft Docs
 ms.custom: ''
-ms.date: 06/28/2018
+ms.date: 09/20/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 351aea09376d6cba7f091828225fd337fa3f68e1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d3623eb594ff82660e97809eef609a33e74e74dc
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46423144"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235433"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-2"></a>演练：更新 MFC 随意画图应用程序（第 2 部分）
 
@@ -55,31 +55,29 @@ ms.locfileid: "46423144"
 
    1. 从**工具箱**，拖动**面板**到**主页**类别。 然后将两个**复选框**到面板。
 
-   2. 单击要修改其属性的面板。 更改**标题**到`View`。
+   1. 单击要修改其属性的面板。 更改**标题**到`View`。
 
-   3. 单击第一个的复选框，来修改其属性。 更改**ID**到`ID_VIEW_TOOLBAR`并**标题**到`Toolbar`。
+   1. 单击第一个的复选框，来修改其属性。 更改**ID**到`ID_VIEW_TOOLBAR`并**标题**到`Toolbar`。
 
-   4. 单击第二个的复选框，来修改其属性。 更改**ID**到`ID_VIEW_STATUS_BAR`并**标题**到`Status Bar`。
+   1. 单击第二个的复选框，来修改其属性。 更改**ID**到`ID_VIEW_STATUS_BAR`并**标题**到`Status Bar`。
 
-2. 创建名为一个面板`Window`具有拆分按钮。 当用户单击拆分按钮时，快捷菜单将显示已在随意画图应用程序中定义的三个命令。
+1. 创建名为一个面板`Window`具有拆分按钮。 当用户单击拆分按钮时，快捷菜单将显示已在随意画图应用程序中定义的三个命令。
 
    1. 从**工具箱**，拖动**面板**到**主页**类别。 然后将拖**按钮**到面板。
 
-   2. 单击要修改其属性的面板。 更改**标题**到`Window`。
+   1. 单击要修改其属性的面板。 更改**标题**到`Window`。
 
-   3. 单击按钮。 更改**标题**到`Windows`，**密钥**到`w`，**大图像索引**到`1`，并**拆分模式**到`False`。 然后单击省略号 (**...**) 旁边**菜单项**以打开**项编辑器**对话框。
+   1. 单击按钮。 更改**标题**到`Windows`，**密钥**到`w`，**大图像索引**到`1`，并**拆分模式**到`False`。 然后单击省略号 (**...**) 旁边**菜单项**以打开**项编辑器**对话框。
 
-   4. 单击**添加**三次以添加三个按钮。
+   1. 单击**添加**三次以添加三个按钮。
 
-   5. 单击第一个按钮，然后更改**标题**到`New Window`，和**ID**到`ID_WINDOW_NEW`。
+   1. 单击第一个按钮，然后更改**标题**到`New Window`，和**ID**到`ID_WINDOW_NEW`。
 
-   6. 单击第二个按钮，然后更改**标题**到`Cascade`，和**ID**到`ID_WINDOW_CASCADE`。
+   1. 单击第二个按钮，然后更改**标题**到`Cascade`，和**ID**到`ID_WINDOW_CASCADE`。
 
-   7. 单击第三个按钮，然后更改**标题**到`Tile`，和**ID**到`ID_WINDOW_TILE_HORZ`。
+   1. 单击第三个按钮，然后更改**标题**到`Tile`，和**ID**到`ID_WINDOW_TILE_HORZ`。
 
-3. 保存所做的更改，然后生成并运行应用程序。 **视图**并**窗口**应显示面板。 单击按钮来确认它们正常运行。
-
-[[各节](#top)]
+1. 保存所做的更改，然后生成并运行应用程序。 **视图**并**窗口**应显示面板。 单击按钮来确认它们正常运行。
 
 ##  <a name="addhelppanel"></a> 将帮助面板添加到功能区
 
@@ -89,18 +87,16 @@ ms.locfileid: "46423144"
 
 1. 从**工具箱**，拖动**面板**到**主页**类别。 然后将两个**按钮**到面板。
 
-2. 单击要修改其属性的面板。 更改**标题**到`Help`。
+1. 单击要修改其属性的面板。 更改**标题**到`Help`。
 
-3. 单击第一个按钮。 更改**标题**到`Help Topics`，和**ID**到`ID_HELP_FINDER`。
+1. 单击第一个按钮。 更改**标题**到`Help Topics`，和**ID**到`ID_HELP_FINDER`。
 
-4. 单击第二个按钮。 更改**标题**到`About Scribble...`，和**ID**到`ID_APP_ABOUT`。
+1. 单击第二个按钮。 更改**标题**到`About Scribble...`，和**ID**到`ID_APP_ABOUT`。
 
-5. 保存所做的更改，然后生成并运行应用程序。 一个**帮助**应显示面板，其中包含两个功能区按钮。
+1. 保存所做的更改，然后生成并运行应用程序。 一个**帮助**应显示面板，其中包含两个功能区按钮。
 
    > [!IMPORTANT]
    > 当您单击**帮助主题**按钮，随意画图应用程序会打开名为的压缩 (.chm) HTML 帮助文件*your_project_name*。 chm。 因此，如果你的项目不是随意画图，您必须重的帮助文件命名为你的项目名称。
-
-[[各节](#top)]
 
 ##  <a name="addpenpanel"></a> 将笔面板添加到功能区
 
@@ -112,27 +108,27 @@ ms.locfileid: "46423144"
 
 1. 从**工具箱**，拖动**面板**到**主页**类别。 然后将拖**复选框**并将两个**组合框**到面板。
 
-2. 单击要修改其属性的面板。 更改**标题**到`Pen`。
+1. 单击要修改其属性的面板。 更改**标题**到`Pen`。
 
-3. 单击复选框。 更改**标题**到`Use Thick`，和**ID**到`ID_PEN_THICK_OR_THIN`。
+1. 单击复选框。 更改**标题**到`Use Thick`，和**ID**到`ID_PEN_THICK_OR_THIN`。
 
-4. 单击第一个组合框。 更改**标题**到`Thin Pen`， **ID**到`ID_PEN_THIN_WIDTH`，**文本**到`2`，**类型**到`Drop List`，并**数据**到`1;2;3;4;5;6;7;8;9;`。
+1. 单击第一个组合框。 更改**标题**到`Thin Pen`， **ID**到`ID_PEN_THIN_WIDTH`，**类型**到`Drop List`，**数据**到`1;2;3;4;5;6;7;8;9;`，并**文本**到`2`。
 
-5. 单击第二个的组合框。 更改**标题**到`Thick Pen`， **ID**到`ID_PEN_THICK_WIDTH`，**文本**到`5`，**类型**到`Drop List`，并**数据**到`5;6;7;8;9;10;11;12;13;14;15;16;17;18;19;20;`。
+1. 单击第二个的组合框。 更改**标题**到`Thick Pen`， **ID**到`ID_PEN_THICK_WIDTH`，**类型**到`Drop List`，**数据**到`5;6;7;8;9;10;11;12;13;14;15;16;17;18;19;20;`，并**文本**到`5`。
 
-6. 新的组合框不对应于任何现有的菜单项。 因此，必须创建每笔选项的菜单项。
+1. 新的组合框不对应任何现有的菜单项，因此必须创建每笔选项的菜单项。
 
-   1. 在中**资源视图**窗口中，打开 IDR_SCRIBBTYPE 菜单资源。
+   1. 在中**资源视图**窗口中，打开**IDR_SCRIBBTYPE**菜单资源。
 
-   2. 单击**笔**以打开 p**en**菜单。 然后单击**请在此处输入**并键入`Thi&n Pen`。
+   1. 单击**笔**以打开钢笔菜单。 然后单击**请在此处输入**并键入`Thi&n Pen`。
 
-   3. 右键单击您只需键入要打开的文本**属性**窗口，然后更改 ID 属性设置为`ID_PEN_THIN_WIDTH`。
+   1. 右键单击刚才打开的文本**属性**窗口，然后更改 ID 属性设置为`ID_PEN_THIN_WIDTH`。
 
-   4. 此外必须创建每个笔菜单项的事件处理程序。 右键单击**此应用程序 & n 笔**菜单项，您刚刚创建，然后单击**添加事件处理程序**。 **事件处理程序向导**显示。
+   1. 创建每个笔菜单项的事件处理程序。 右键单击**此应用程序 & n 笔**菜单项，您创建，然后单击**添加事件处理程序**。 **事件处理程序向导**显示。
 
-   5. 在中**类列表**框中的向导中，选择**CScribbleDoc** ，然后单击**添加和编辑**。 这将创建名为一个事件处理程序`CScribbleDoc::OnPenThinWidth`。
+   1. 在中**类列表**框中的向导中，选择**CScribbleDoc** ，然后单击**添加和编辑**。 该命令创建名为一个事件处理程序`CScribbleDoc::OnPenThinWidth`。
 
-   6. 将下列代码添加到 `CScribbleDoc::OnPenThinWidth`。
+   1. 将下列代码添加到 `CScribbleDoc::OnPenThinWidth`。
 
     ```cpp
     // Get a pointer to the ribbon bar
@@ -147,26 +143,26 @@ ms.locfileid: "46423144"
     int nCurSel = pThinComboBox->GetCurSel();
     if (nCurSel>= 0)
     {
-        m_nThinWidth = atoi(pThinComboBox->GetItem(nCurSel));
+        m_nThinWidth = atoi(CStringA(pThinComboBox->GetItem(nCurSel)));
     }
 
     // Create a new pen using the selected width
     ReplacePen();
     ```
 
-7. 接下来，创建一个菜单项和事件处理程序粗笔。
+1. 接下来，创建一个菜单项和事件处理程序粗笔。
 
-   1. 在中**资源视图**窗口中，打开 IDR_SCRIBBTYPE 菜单资源。
+   1. 在中**资源视图**窗口中，打开**IDR_SCRIBBTYPE**菜单资源。
 
-   2. 单击**笔**以打开钢笔菜单。 然后单击**请在此处输入**并键入`Thic&k Pen`。
+   1. 单击**笔**以打开钢笔菜单。 然后单击**请在此处输入**并键入`Thic&k Pen`。
 
-   3. 右键单击您只需键入要显示的文本**属性**窗口。 将 ID 属性更改为`ID_PEN_THICK_WIDTH`。
+   1. 右键单击您键入要显示的文本**属性**窗口。 将 ID 属性更改为`ID_PEN_THICK_WIDTH`。
 
-   4. 右键单击**胖笔**菜单项，您刚刚创建，然后单击**添加事件处理程序**。 **事件处理程序向导**显示。
+   1. 右键单击**胖笔**菜单项，您创建，然后单击**添加事件处理程序**。 **事件处理程序向导**显示。
 
-   5. 在中**类列表**框中的向导中，选择**CScribbleDoc** ，然后单击**添加和编辑**。 这将创建名为一个事件处理程序`CScribbleDoc::OnPenThickWidth`。
+   1. 在中**类列表**框中的向导中，选择**CScribbleDoc** ，然后单击**添加和编辑**。 该命令创建名为一个事件处理程序`CScribbleDoc::OnPenThickWidth`。
 
-   6. 将下列代码添加到 `CScribbleDoc::OnPenThickWidth`。
+   1. 将下列代码添加到 `CScribbleDoc::OnPenThickWidth`。
 
       ```cpp
       // Get a pointer to the ribbon bar
@@ -179,16 +175,14 @@ ms.locfileid: "46423144"
       int nCurSel = pThickComboBox->GetCurSel();
       if (nCurSel>= 0)
       {
-          m_nThickWidth = atoi(pThickComboBox->GetItem(nCurSel));
+          m_nThickWidth = atoi(CStringA(pThickComboBox->GetItem(nCurSel)));
       }
 
       // Create a new pen using the selected width
       ReplacePen();
       ```
 
-8. 保存所做的更改，然后生成并运行应用程序。 应显示新的按钮和组合框。 请尝试使用其他笔宽度 scribble。
-
-[[各节](#top)]
+1. 保存所做的更改，然后生成并运行应用程序。 应显示新的按钮和组合框。 请尝试使用其他笔宽度 scribble。
 
 ##  <a name="addcolorbutton"></a> 将颜色按钮添加到笔面板
 
@@ -196,19 +190,17 @@ ms.locfileid: "46423144"
 
 ### <a name="to-add-a-color-button-to-the-pen-panel"></a>若要将颜色按钮添加到笔面板
 
-1. 添加颜色按钮之前，请为其创建菜单项。 在中**资源视图**窗口中，打开 IDR_SCRIBBTYPE 菜单资源。 单击**笔**菜单项以打开钢笔菜单。 然后单击**请在此处输入**并键入`&Color`。 右键单击您只需键入要显示的文本**属性**窗口。 更改为 ID `ID_PEN_COLOR`。
+1. 添加颜色按钮之前，请为其创建菜单项。 在中**资源视图**窗口中，打开**IDR_SCRIBBTYPE**菜单资源。 单击**笔**菜单项以打开钢笔菜单。 然后单击**请在此处输入**并键入`&Color`。 右键单击您键入要显示的文本**属性**窗口。 更改为 ID `ID_PEN_COLOR`。
 
-2. 现在，添加颜色按钮。 从**工具箱**，拖动**颜色按钮**到**笔**面板。
+1. 现在，添加颜色按钮。 从**工具箱**，拖动**颜色按钮**到**笔**面板。
 
-3. 单击颜色按钮。 更改**标题**到`Color`， **ID**到`ID_PEN_COLOR`， **SimpleLook**到`True`，**大图像索引**到`1`，并**拆分模式**到`False`。
+1. 单击颜色按钮。 更改**标题**到`Color`， **ID**到`ID_PEN_COLOR`，**简单介绍**到`True`，**大图像索引**到`1`，并**拆分模式**到`False`。
 
-4. 保存所做的更改，然后生成并运行应用程序。 新的颜色按钮应显示在**笔**面板。 但是，它不能使用因为它尚不具备的事件处理程序。 后续步骤演示如何添加颜色按钮的事件处理程序。
-
-[[各节](#top)]
+1. 保存所做的更改，然后生成并运行应用程序。 新的颜色按钮应显示在**笔**面板。 但是，它不能使用因为它尚不具有事件处理程序。 后续步骤演示如何添加颜色按钮的事件处理程序。
 
 ##  <a name="addcolormember"></a> 将颜色成员添加到文档类
 
-因为原始随意画图应用程序没有颜色的笔，则必须为它们编写实现。 若要存储文档的钢笔颜色，请将新成员添加到文档类， `CscribbleDoc.`
+由于原始随意画图应用程序没有颜色的笔，则必须为其编写实现。 若要存储的文档，笔颜色将新成员添加到文档类， `CscribbleDoc`。
 
 ### <a name="to-add-a-color-member-to-the-document-class"></a>若要将颜色成员添加到文档类
 
@@ -219,20 +211,20 @@ ms.locfileid: "46423144"
    COLORREF m_penColor;
    ```
 
-2. 每个文档包含一系列笔尖用户已绘制。 通过定义每个笔画`CStroke`对象。 `CStroke`类不包括有关钢笔颜色的信息。 因此，必须修改类。 在 scribdoc.h，在`CStroke`类中，添加以下代码行后的定义`m_nPenWidth`数据成员。
+1. 每个文档包含一系列笔尖用户已绘制。 通过定义每个笔画`CStroke`对象。 `CStroke`类不包括有关钢笔颜色的信息，因此必须修改类。 在 scribdoc.h，在`CStroke`类中，添加以下代码行后的定义`m_nPenWidth`数据成员。
 
    ```cpp
    // Pen color for the stroke
    COLORREF m_penColor;
    ```
 
-3. 在 scribdoc.h，添加一个新`CStroke`构造函数的参数指定宽度和颜色。 添加以下行后的代码`CStroke(UINT nPenWidth);`语句。
+1. 在 scribdoc.h，添加一个新`CStroke`构造函数的参数指定宽度和颜色。 添加以下行后的代码`CStroke(UINT nPenWidth);`语句。
 
    ```cpp
    CStroke(UINT nPenWidth, COLORREF penColor);
    ```
 
-4. 在 scribdoc.cpp，添加新的实现`CStroke`构造函数。 将以下代码添加的实施后`CStroke::CStroke(UINT nPenWidth)`构造函数。
+1. 在 scribdoc.cpp，添加新的实现`CStroke`构造函数。 将以下代码添加的实施后`CStroke::CStroke(UINT nPenWidth)`构造函数。
 
    ```cpp
    // Constructor that uses the document's current width and color
@@ -244,40 +236,40 @@ ms.locfileid: "46423144"
    }
    ```
 
-5. 更改的第二行`CStroke::DrawStroke`方法，如下所示。
+1. 更改的第二行`CStroke::DrawStroke`方法，如下所示。
 
    ```cpp
    if (!penStroke.CreatePen(PS_SOLID, m_nPenWidth, m_penColor))
    ```
 
-6. 设置文档类的默认笔颜色。 在 scribdoc.cpp，添加以下行`CScribbleDoc::InitDocument`后，`m_nThickWidth = 5;`语句。
+1. 设置文档类的默认笔颜色。 在 scribdoc.cpp，添加以下行`CScribbleDoc::InitDocument`后，`m_nThickWidth = 5;`语句。
 
    ```cpp
    // default pen color is black
    m_penColor = RGB(0, 0, 0);
    ```
 
-7. 在 scribdoc.cpp，更改的第一行`CScribbleDoc::NewStroke`所示的方法。
+1. 在 scribdoc.cpp，更改的第一行`CScribbleDoc::NewStroke`所示的方法。
 
    ```cpp
    CStroke* pStrokeItem = new CStroke(m_nPenWidth, m_penColor);
    ```
 
-8. 更改的最后一行`CScribbleDoc::ReplacePen`所示的方法。
+1. 更改的最后一行`CScribbleDoc::ReplacePen`所示的方法。
 
    ```cpp
    m_penCur.CreatePen(PS_SOLID, m_nPenWidth, m_penColor);
    ```
 
-9. 您添加`m_penColor`上一步中的成员。 现在，创建的事件处理程序设置的成员的颜色按钮。
+1. 您添加`m_penColor`上一步中的成员。 现在，创建的事件处理程序设置的成员的颜色按钮。
 
    1. 在中**资源视图**窗口中，打开 IDR_SCRIBBTYPE 菜单资源。
 
-   2. 右键单击**颜色**菜单项，并单击**添加事件处理程序**。 **事件处理程序向导**出现。
+   1. 右键单击**颜色**菜单项，并单击**添加事件处理程序**。 **事件处理程序向导**出现。
 
-   3. 在中**类列表**框中的向导中，选择**CScribbleDoc** ，然后单击**添加和编辑**按钮。 这将创建`CScribbleDoc::OnPenColor`事件处理程序存根 （stub)。
+   1. 在中**类列表**框中的向导中，选择**CScribbleDoc** ，然后单击**添加和编辑**按钮。 该命令将创建`CScribbleDoc::OnPenColor`事件处理程序存根 （stub)。
 
-10. 替换为存根`CScribbleDoc::OnPenColor`事件处理程序替换下面的代码。
+1. 替换为存根`CScribbleDoc::OnPenColor`事件处理程序替换下面的代码。
 
    ```cpp
    void CScribbleDoc::OnPenColor()
@@ -295,9 +287,7 @@ ms.locfileid: "46423144"
    }
    ```
 
-11. 保存所做的更改，然后生成并运行应用程序。 您应能够按颜色按钮并更改笔的颜色。
-
-[[各节](#top)]
+1. 保存所做的更改，然后生成并运行应用程序。 现在可以按颜色按钮，并更改笔的颜色。
 
 ##  <a name="initpensave"></a> 初始化笔和保存首选项
 
@@ -337,25 +327,23 @@ ms.locfileid: "46423144"
    pThickComboBox->SelectItem(0);
    ```
 
-2. 保存到文件中绘制的颜色。 在中添加到 scribdoc.cpp，下面的语句`CStroke::Serialize`方法后，`ar << (WORD)m_nPenWidth;`语句。
+1. 保存到文件中绘制的颜色。 在中添加到 scribdoc.cpp，下面的语句`CStroke::Serialize`方法后，`ar << (WORD)m_nPenWidth;`语句。
 
    ```cpp
    ar << (COLORREF)m_penColor;
-    ```
+   ```
 
-3. 最后，加载了颜色绘图从文件。 在中添加以下代码，行`CStroke::Serialize`方法后，`m_nPenWidth = w;`语句。
+1. 最后，加载了颜色绘图从文件。 在中添加以下代码，行`CStroke::Serialize`方法后，`m_nPenWidth = w;`语句。
 
    ```cpp
    ar >> m_penColor;
    ```
 
-4. 现在 scribble 颜色，并将绘图保存到一个文件。
-
-[[各节](#top)]
+1. 现在 scribble 颜色，并将绘图保存到一个文件。
 
 ## <a name="conclusion"></a>结束语
 
-您已更新 MFC 随意画图应用程序。 修改现有的应用程序时，本演练使用作为指南。
+已更新 MFC 随意画图应用程序。 修改现有的应用程序时，本演练使用作为指南。
 
 ## <a name="see-also"></a>请参阅
 

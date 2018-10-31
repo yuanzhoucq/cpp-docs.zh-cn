@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a14a45341645feeb0b85f92379702c9fc40c9d0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 010afb3939afcb392d38cda8dfb1ab1a37100d3b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46381698"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083368"
 ---
 # <a name="collection-class-helpers"></a>集合类帮助器
 
@@ -152,7 +152,6 @@ void  AFXAPI DumpElements(
 `CArray::Dump`， `CList::Dump`，和`CMap::Dump`函数调用此如果转储的深度大于 0。
 
 默认实现不执行任何操作。 如果在集合中的元素派生自`CObject`，重写将通常循环访问集合的元素，调用`Dump`中打开每个元素。
-
 
 ### <a name="requirements"></a>要求
 

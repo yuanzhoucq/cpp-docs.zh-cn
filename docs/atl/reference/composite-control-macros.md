@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 352f3e5ebd9606cc355ea9af65739c3e17894298
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 75e34fd4cfa53257f0e8a497cf8bc245c90f6732
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46136291"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077343"
 ---
 # <a name="composite-control-macros"></a>复合控件宏
 
@@ -41,7 +41,7 @@ ms.locfileid: "46136291"
 
 ## <a name="requirements"></a>要求
 
-**标头：** atlcom.h  
+**标头：** atlcom.h
 
 ##  <a name="begin_sink_map"></a>  BEGIN_SINK_MAP
 
@@ -122,7 +122,7 @@ SINK_ENTRY_EX_P( id, piid, dispid, fn ) // (Visual Studio 2017)
 [in]标识控件。
 
 *iid*<br/>
-[in]标识调度接口。  
+[in]标识调度接口。
 
 *piid*<br/>
 [in]指向调度接口指针。
@@ -156,7 +156,7 @@ SINK_ENTRY_INFO_P( id, piid, dispid, fn, info ) // (Visual Studio 2017)
 [in]标识事件源的无符号的整数。 此值必须匹配*nID*中的相关使用的模板参数[IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md)基类。
 
 *iid*<br/>
-[in]标识调度接口的 IID。  
+[in]标识调度接口的 IID。
 
 *piid*<br/>
 [in]指针，指向标识调度接口的 IID。
@@ -167,7 +167,7 @@ SINK_ENTRY_INFO_P( id, piid, dispid, fn, info ) // (Visual Studio 2017)
 *fn*<br/>
 [in]事件处理程序函数的名称。 此函数必须使用`_stdcall`调用约定和具有适当的调度接口风格的签名。
 
-*信息*<br/>
+info<br/>
 [in]类型的事件处理程序函数的信息。 指向的指针的形式提供此类型信息`_ATL_FUNC_INFO`结构。 CC_CDECL 是唯一的选项在 Windows CE 中支持的 CALLCONV 字段`_ATL_FUNC_INFO`结构。 任何其他值不受支持因此其行为未定义。
 
 ### <a name="remarks"></a>备注

@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3dd07ead0608657597a81b239732347f67455273
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f95eaa49db5e09bceaefafc16312250d823e5d5c
+ms.sourcegitcommit: d1527eb2d50156bf923f2a32ec3af9efc7fc4304
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46436879"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48250388"
 ---
 # <a name="microsoftwrldetails-namespace"></a>Microsoft::WRL::Details 命名空间
 
@@ -43,7 +43,7 @@ namespace Microsoft::WRL::Details;
 |[MakeAllocator 类](../windows/makeallocator-class.md)|可激活的类，带或不带弱引用支持，为分配内存。|
 |[ModuleBase 类](../windows/modulebase-class.md)|表示类的基类[模块](../windows/module-class.md)类。|
 |[RemoveIUnknown 类](../windows/removeiunknown-class.md)|创建类型的它等效于`IUnknown`-基于的类型，但具有非虚拟`QueryInterface`， `AddRef`，和`Release`方法。|
-|[WeakReference 类](../windows/weakreference-class1.md)|表示*弱引用*可以用于 Windows 运行时或经典 com。 弱引用表示可能可访问或可能不可访问的对象。|
+|[WeakReference 类](../windows/weakreference-class.md)|表示*弱引用*可以用于 Windows 运行时或经典 com。 弱引用表示可能可访问或可能不可访问的对象。|
 
 ### <a name="structures"></a>结构
 
@@ -84,7 +84,7 @@ namespace Microsoft::WRL::Details;
 |[ActivationFactoryCallback 函数](../windows/activationfactorycallback-function.md)|获取激活工厂指定的激活 id。|
 |[Move 函数](../windows/move-function.md)|将指定的参数从一个位置移动到另一个。|
 |[RaiseException 函数](../windows/raiseexception-function.md)|引发调用线程中的异常。|
-|[Swap 函数（Windows 运行时 C++ 模板库）](../windows/swap-function-windows-runtime-cpp-template-library.md)|交换两个指定参数的值。|
+|[Swap 函数 (WRL)](../windows/swap-function-wrl.md)|交换两个指定参数的值。|
 |[TerminateMap 函数](../windows/terminatemap-function.md)|关闭指定的模块中的类工厂。|
 
 ## <a name="requirements"></a>要求

@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14e2e646a2b05ba8514f22fb9ffb027aa0a570c1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0c3ab06de159722e4aae4e15d93e057b12dc8864
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46419641"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083289"
 ---
 # <a name="cdbvariant-class"></a>CDBVariant 类
 
@@ -226,7 +226,7 @@ void Clear();
 
 `m_pdate`属于联合数据成员。 在访问之前`m_pdate`，首先检查的值[CDBVariant::m_dwType](#m_dwtype)。 如果`m_dwType`设置为 DBVT_DATE，则`m_pdate`包含有效的指针; 否则为访问`m_pdate`将生成不可靠的结果。
 
-有关 TIMESTAMP_STRUCT 数据类型的详细信息，请参阅主题[C 数据类型](/previous-versions/windows/desktop/ms714556\(v=vs.85\))中的附录 D *ODBC 程序员参考*Windows SDK 中。
+有关 TIMESTAMP_STRUCT 数据类型的详细信息，请参阅主题[C 数据类型](/previous-versions/windows/desktop/ms714556)中的附录 D *ODBC 程序员参考*Windows SDK 中。
 
 ##  <a name="m_pstring"></a>  CDBVariant::m_pstring
 

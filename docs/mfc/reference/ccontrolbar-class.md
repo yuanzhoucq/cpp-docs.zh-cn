@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd69813251a96051f844051f27155e1d4ed404d6
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 27121334345556a744a6fc838c238352ccc36621
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46393409"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890526"
 ---
 # <a name="ccontrolbar-class"></a>CControlBar Class
 
@@ -118,8 +118,6 @@ class CControlBar : public CWnd
 - [控件条](../../mfc/control-bars.md)
 
 - [技术说明 31： 控件条](../../mfc/tn031-control-bars.md)。
-
-- 知识库文章 Q242577: PRB： 更新命令 UI 处理程序执行不工作的菜单附加到对话框
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -549,7 +547,7 @@ void SetInPlaceOwner(CWnd* pWnd);
 ### <a name="parameters"></a>参数
 
 *pWnd*<br/>
-一个指向`CWnd`对象。
+指向 `CWnd` 对象的指针。
 
 ### <a name="remarks"></a>备注
 

@@ -148,12 +148,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9082e4a8269e692bf9e1d9b8a27f61291b2707a9
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 4870228e37e79788e49b4a653d72e3d3f09e6620
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45726227"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075055"
 ---
 # <a name="unorderedmap-class"></a>unordered_map 类
 
@@ -1468,29 +1468,24 @@ hfn('b') == 1647086
 // (1) single element
 pair<iterator, bool> insert(    const value_type& Val);
 
-
 // (2) single element, perfect forwarded
 template <class ValTy>
 pair<iterator, bool>
 insert(    ValTy&& Val);
 
-
 // (3) single element with hint
 iterator insert(    const_iterator Where,
     const value_type& Val);
-
 
 // (4) single element, perfect forwarded, with hint
 template <class ValTy>
 iterator insert(    const_iterator Where,
     ValTy&& Val);
 
-
 // (5) range
 template <class InputIterator>
 void insert(InputIterator First,
     InputIterator Last);
-
 
 // (6) initializer list
 void insert(initializer_list<value_type>
@@ -2002,7 +1997,6 @@ max_load_factor() == 0.1
 
 ```cpp
 float max_load_factor() const;
-
 
 void max_load_factor(float factor);
 ```
@@ -2665,7 +2659,7 @@ unordered_map(
 
 template <class InIt>
 unordered_map(
-InputIterator First,
+    InputIterator First,
     InputIterator Last,
     size_type Bucket_count = N0,
     const Hash& Hash = Hash(),

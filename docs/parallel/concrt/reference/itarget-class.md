@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c4ada69fcd687d63022d0527ddf8da43906c483
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8fe26b202dbe9aabc1ccf98a59ead6c51c498fc1
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46412010"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163707"
 ---
 # <a name="itarget-class"></a>ITarget 类
 
@@ -67,7 +67,7 @@ class ITarget;
 |----------|-----------------|
 |[propagate](#propagate)|当在派生类中重写，以异步方式将消息传递从某一源块到此目标块。|
 |[发送](#send)|当在派生类中重写，以同步方式将一条消息传递到目标块。|
-|[supports_anonymous_source](#supports_anonymous_source)|在派生类中重写时，根据消息块是否接受未链接到它的源提供的消息返回 true 或 false。 如果重写的方法返回 `true`，则目标不能推迟所提供的消息，因为稍后被推迟消息的能耗要求源在其源链接注册表中已标识。|
+|[supports_anonymous_source](#supports_anonymous_source)|在派生类中重写时，根据消息块是否接受未链接到它的源提供的消息返回 true 或 false。 如果重写的方法返回 **，则返回 true**，目标不能推迟提供的消息，因为在更高版本时使用推迟的消息需要要在其源链接注册表中标识的源。|
 
 ### <a name="protected-methods"></a>受保护的方法
 
@@ -174,7 +174,7 @@ virtual message_status send(
 
 ##  <a name="supports_anonymous_source"></a> supports_anonymous_source
 
-在派生类中重写时，根据消息块是否接受未链接到它的源提供的消息返回 true 或 false。 如果重写的方法返回 `true`，则目标不能推迟所提供的消息，因为稍后被推迟消息的能耗要求源在其源链接注册表中已标识。
+在派生类中重写时，根据消息块是否接受未链接到它的源提供的消息返回 true 或 false。 如果重写的方法返回 **，则返回 true**，目标不能推迟提供的消息，因为在更高版本时使用推迟的消息需要要在其源链接注册表中标识的源。
 
 ```
 virtual bool supports_anonymous_source();
@@ -182,7 +182,7 @@ virtual bool supports_anonymous_source();
 
 ### <a name="return-value"></a>返回值
 
-如果块可以接受来自未链接到它的源的消息，则为 `true`，否则为 `false`。
+**true**如果块可以接受来自未链接到它的源消息**false**否则为。
 
 ##  <a name="unlink_source"></a> unlink_source
 

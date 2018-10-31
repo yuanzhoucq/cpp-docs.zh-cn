@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1fcaffc3eba3711accdfa13d311f5284e564b703
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 2555bdd9c1de130cd692131c12b7b2afc37537be
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46020428"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083036"
 ---
 # <a name="atl-ole-db-consumer-wizard"></a>ATL OLE DB 使用者向导
 
@@ -36,7 +36,7 @@ ms.locfileid: "46020428"
 
 - **数据源**
 
-   **数据源**按钮的使你可以设置使用指定的 OLE DB 访问接口的指定的数据源。 单击此按钮时**数据链接属性**对话框随即出现。 有关详细信息生成连接字符串和**数据链接属性**对话框中，请参阅[数据链接 API 概述](/previous-versions/windows/desktop/ms718102\(v=vs.85\))Windows SDK 文档中。
+   **数据源**按钮的使你可以设置使用指定的 OLE DB 访问接口的指定的数据源。 单击此按钮时**数据链接属性**对话框随即出现。 有关详细信息生成连接字符串和**数据链接属性**对话框中，请参阅[数据链接 API 概述](/previous-versions/windows/desktop/ms718102)Windows SDK 文档中。
 
    以下附加信息描述了中的选项卡**数据链接属性**对话框。
 
@@ -52,7 +52,7 @@ ms.locfileid: "46020428"
 
       1. **选择或输入服务器名称：** 单击要显示所有已注册的数据服务器在网络上的下拉列表菜单，然后选择一个。
 
-      2. **输入登录到服务器上的信息：** 输入用户名和密码登录到数据服务器上。
+      1. **输入登录到服务器上的信息：** 输入用户名和密码登录到数据服务器上。
 
          > [!NOTE]
          > 没有与数据链接属性对话框中的"允许保存密码"功能的安全问题。 在"输入信息以登录到服务器上，"有两个单选按钮：
@@ -63,7 +63,7 @@ ms.locfileid: "46020428"
          > 如果选择**使用特定用户名和密码**，可以选择保存密码 （使用"允许保存密码"复选框）; 但是，此选项是不安全。 我们建议您选择**使用 Windows NT 集成安全性**; 此选项不安全，因为它对密码进行加密。
          > 有时可能想要选择"允许保存密码"。 例如，如果发布具有专用的数据库解决方案的库，您应直接访问数据库而应该使用的中间层应用程序若要验证的用户 （通过选择任何身份验证方案），然后限制的数据排序可供用户使用。
 
-      3. **选择在服务器上的数据库：** 单击要显示所有已注册的数据库数据服务器上的下拉列表菜单，然后选择一个。
+      1. **选择在服务器上的数据库：** 单击要显示所有已注册的数据库数据服务器上的下拉列表菜单，然后选择一个。
 
          \- 或 -
 
@@ -80,13 +80,13 @@ ms.locfileid: "46020428"
          **使用连接字符串：** 输入连接字符串已获取，或单击**构建**按钮;**选择数据源**对话框随即出现。 选择文件或计算机的数据源，然后单击**确定**。
 
          > [!NOTE]
-         > 你可以通过服务器资源管理器中查看现有连接的属性获取的连接字符串也可以通过双击创建连接**添加连接**在服务器资源管理器中。
+         > 可以通过查看中的现有连接的属性获取的连接字符串**服务器资源管理器**，也可以通过双击创建连接**添加连接**中**服务器资源管理器**。
 
-      2. **输入登录到服务器上的信息：** 输入用户名和密码登录到数据服务器上。
+      1. **输入登录到服务器上的信息：** 输入用户名和密码登录到数据服务器上。
 
-      3. 输入要使用的初始目录。
+      1. 输入要使用的初始目录。
 
-      4. 单击**测试连接**; 如果测试成功，单击**确定**。 如果没有，检查您的登录信息，请尝试另一个数据库，或尝试另一个数据服务器。
+      1. 单击**测试连接**; 如果测试成功，单击**确定**。 如果没有，检查您的登录信息，请尝试另一个数据库，或尝试另一个数据服务器。
 
    - **高级**选项卡
 
@@ -177,13 +177,13 @@ ms.locfileid: "46020428"
 
 - **支持**
 
-   选中复选框以指定的更新，在使用者 （默认值为 none） 中支持的种类。 以下各项将设置[DBPROP_IRowsetChange](/previous-versions/windows/desktop/ms715892\(v=vs.85\))和的相应条目[DBPROP_UPDATABILITY](/previous-versions/windows/desktop/ms722676\(v=vs.85\))在属性集映射。
+   选中复选框以指定的更新，在使用者 （默认值为 none） 中支持的种类。 以下各项将设置[DBPROP_IRowsetChange](/previous-versions/windows/desktop/ms715892)和的相应条目[DBPROP_UPDATABILITY](/previous-versions/windows/desktop/ms722676)在属性集映射。
 
    - **更改**
 
       指定使用者在行集中支持的行数据的更新。
 
-   - 插入
+   - **插入**
 
       指定使用者支持到行集中插入行。
 
@@ -195,4 +195,4 @@ ms.locfileid: "46020428"
 
 [ATL OLE DB 使用者](../../atl/reference/adding-an-atl-ole-db-consumer.md)<br/>
 [用代码向导添加功能](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
-[连接字符串和数据链接 (OLE DB)](/previous-versions/windows/desktop/ms718376\(v=vs.85\))
+[连接字符串和数据链接 (OLE DB)](/previous-versions/windows/desktop/ms718376)

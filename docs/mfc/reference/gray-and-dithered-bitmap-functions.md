@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd0a0a25e1607b3b4318fdfca1f68f272cd02173
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 01bd722dad7e09e52990d46d1c7666cdb939118c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46380186"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50064117"
 ---
 # <a name="gray-and-dithered-bitmap-functions"></a>灰色和抖色位图函数
 
@@ -177,7 +177,6 @@ void AFXAPI AfxDrawDitheredBitmap(
 ### <a name="requirements"></a>要求
 
 **标头:** afxwin.h
-
 
 ##  <a name="afxgetditheredbitmap"></a>  AfxGetDitheredBitmap
 

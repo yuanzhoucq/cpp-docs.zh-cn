@@ -1,7 +1,7 @@
 ---
-title: 枚举类 （c + + 组件扩展） |Microsoft Docs
+title: 枚举类 (C + + /cli 和 C + + /cli CX) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -13,14 +13,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 993f0e190d87b140fba0008872d57f2a34b6a5cb
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7c63a043b8f1a91654c0b765632969b82725a3c0
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46377261"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50066157"
 ---
-# <a name="enum-class--c-component-extensions"></a>枚举类（C++ 组件扩展）
+# <a name="enum-class--ccli-and-ccx"></a>枚举类 (C + + /cli 和 C + + /cli CX)
 
 在命名空间范围内声明枚举，该枚举是用户定义的类型，其包含称为枚举数的一组命名常数。
 
@@ -65,7 +65,7 @@ accessenum structenumeration-identifier[:underlying-type] { enumerator-list } [v
 
 ### <a name="remarks"></a>备注
 
-有关详细信息和示例，请参阅[枚举](https://msdn.microsoft.com/%20library/windows/apps/hh755820.aspx)。
+有关详细信息和示例，请参阅 [枚举](https://msdn.microsoft.com/%20library/windows/apps/hh755820.aspx)。
 
 请注意，如果可定义枚举器的值的常数表达式不能由 *underlying-type*表示，则编译器将发出错误消息。  但是，编译器不会报告不适用于基础类型的值的错误。 例如：
 
@@ -146,13 +146,13 @@ static const int mon = 1;
 
 将标准枚举的枚举器强注入到封闭作用域。  即，如果存在名称与封闭作用域中的枚举器名称相同的另一个符号，则编译器将生成错误。
 
-在 Visual C ++ 2002 和 Visual C ++ 2003 中，很有可能注入了枚举器（在封闭作用域中可见，除非具有相同名称的另一个标识符）。
+在 Visual Studio 2002 和 Visual Studio 2003 中，枚举器可能注入 （可见封闭范围中除非出现另一个具有相同名称的标识符）。
 
-如果定义了标准 c + + 枚举 (无需**类**或**结构**)，编译`/clr`将导致枚举编译为托管枚举。  枚举仍然具有非托管枚举的语义。  注意：编译器插入 Visual C++ 编译器可识别的属性 `Microsoft::VisualC::NativeEnumAttribute`，以标识程序员想将枚举变为本机枚举。  其他编译器只会将标准枚举视为托管枚举。
+如果定义了标准 c + + 枚举 (无需**类**或**结构**)，编译`/clr`将导致枚举编译为托管枚举。  枚举仍然具有非托管枚举的语义。  请注意，编译器会插入一个特性，`Microsoft::VisualC::NativeEnumAttribute`以标识程序员想将枚举变为本机枚举。  其他编译器只会将标准枚举视为托管枚举。
 
 名为的与已编译的标准枚举`/clr`会显示在为托管枚举的程序集和可供任何其他托管编译器。   但是，未命名的标准枚举不会在程序集中公开可见。
 
-在 Visual C ++ 2002 和 Visual C ++ 2003 中，用作函数参数中的类型的标准枚举：
+在 Visual Studio 2002 和 Visual Studio 2003 中，用作函数参数中的类型的标准枚举：
 
 ```cpp
 // mcppv2_enum.cpp
@@ -175,7 +175,7 @@ void f(int32);
 但是，在当前版本的编译器中，标准枚举将作为属性为 [NativeEnumAttribute] 的托管枚举以及采用 MSIL 形式的以下内容发出，以用于函数签名：
 
 ```cpp
-void f(E)  
+void f(E)
 ```
 
 有关本机枚举的更多信息，请参见 [C++ 枚举声明](../cpp/enumerations-cpp.md)。
@@ -202,7 +202,7 @@ public enum n { c, d };
 // unnamed, standard enum
 public enum { e, f } o;
 
-int main()  
+int main()
 {
    // consume managed enum
    m mym = m::b;
@@ -231,4 +231,4 @@ convert to int: 1
 
 ## <a name="see-also"></a>请参阅
 
-[适用于运行时平台的组件扩展](../windows/component-extensions-for-runtime-platforms.md)
+[ .NET 和 UWP 的组件扩展](../windows/component-extensions-for-runtime-platforms.md)

@@ -1,12 +1,14 @@
 ---
 title: __stdcall |Microsoft Docs
 ms.custom: ''
-ms.date: 09/05/2018
+ms.date: 10/10/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
 f1_keywords:
 - __stdcall_cpp
+- __stdcall
+- _stdcall
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb65ff85346412587fab96934ca5438bb6a4dfe5
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 06eafcd4303e01be523554f2a164e6cb14f79a26
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46031374"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162251"
 ---
 # <a name="stdcall"></a>__stdcall
 
@@ -46,6 +48,8 @@ ms.locfileid: "46031374"
 |大小写转换约定|无|
 
 [/Gz](../build/reference/gd-gr-gv-gz-calling-convention.md)编译器选项指定 **__stdcall**适用于使用不同的调用约定不显式声明的所有功能。
+
+与以前版本的兼容性 **_stdcall**是的同义词 **__stdcall**除非编译器选项[/Za\(禁用语言扩展)](../build/reference/za-ze-disable-language-extensions.md)是指定。
 
 使用声明的函数 **__stdcall**修饰符返回值声明使用的函数一样[__cdecl](../cpp/cdecl.md)。
 

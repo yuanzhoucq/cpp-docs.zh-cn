@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb9d7b950e4c38ea53db6e459edfa1a179eb971d
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 3c66fe63d97f623011b3dade46266a4a9d8d83b1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42578418"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50064416"
 ---
 # <a name="use-native-multi-targeting-in-visual-studio-to-build-old-projects"></a>使用 Visual Studio 中的本机多目标来生成旧项目
 
@@ -52,11 +52,11 @@ Visual Studio 会持续提示升级项目。 为避免在每次加载项目时�
 
 如果选择不升级，Visual Studio 不会对解决方案或项目文件进行更改。 生成项目时，生成的二进制文件与使用旧版本的 Visual Studio 生成的二进制文件完全兼容。 这是因为 Visual Studio 使用的 C++ 编译器和链接的库与旧版 IDE 所随附的相同。 这也是为什么如果选择“取消”，升级对话框会警告保留安装较旧的 Visual Studio 版本。
 
-## <a name="instructions-for-visual-studio-2008"></a>有关 Visual Studio 2008 的说明  
-  
+## <a name="instructions-for-visual-studio-2008"></a>有关 Visual Studio 2008 的说明
+
 Visual Studio 2008 具有自己的专用 C++ 生成系统 VCBuild。 从 Visual Studio 2010 开始，Visual C++ 项目改为使用 MSBuild。 这意味着必须通过更新步骤在最新版本的 Visual Studio 中生成 Visual Studio 2008项目。 更新的项目仍然会生成与使用 Visual Studio 2008 IDE 创建的二进制文件完全兼容的二进制文件。
 
-首先，除了当前版本的 Visual Studio 之外，还必须将 Visual Studio 2010 安装在安装 Visual Studio 2008 的计算机上。 只有 Visual Studio 2010 会安装面向 Visual Studio 2008 项目时所需的 MSBuild 脚本。 
+首先，除了当前版本的 Visual Studio 之外，还必须将 Visual Studio 2010 安装在安装 Visual Studio 2008 的计算机上。 只有 Visual Studio 2010 会安装面向 Visual Studio 2008 项目时所需的 MSBuild 脚本。
 
 接下来，必须将 Visual Studio 2008 解决方案和项目更新到当前版本的 Visual Studio。 建议在升级之前创建项目和解决方案文件的备份。 若要开始升级过程，请在当前版本的 Visual Studio 中打开解决方案。 获取升级提示时，请查看显示的信息，然后选择“确定”以开始升级。 如果解决方案中有多个项目，则必须更新，向导使用现有 .vcproj 文件并行创建新的 .vcxproj 项目文件。 只要你也有原始 .sln 文件的副本，升级对你现有的 Visual Studio 2008 项目就没有其他影响。
 
@@ -70,19 +70,11 @@ Visual Studio 2008 具有自己的专用 C++ 生成系统 VCBuild。 从 Visual 
 
 可能有无法或不打算升级的旧版 Visual C++ 项目，而不是与项目匹配的平台工具集版本。 在这种情况下，为了获得工具集，可以安装所需版本的免费 Visual Studio 社区版或速成版。 从 Visual Studio 2008 开始，每个版本的 Visual Studio 都可以安装从当前 Visual Studio 面向该版本时所需的编译器、工具和库。 搜索 Microsoft 下载中心以查找和下载 Visual Studio 的特定版本。 请确保在安装过程中选择 C++ 安装选项。 安装完成后，运行该版本的 Visual Studio 以安装任何更新。 同时查找可能需要的任何 Windows 更新更改。 此更新检查过程可能需要重复多次以获取每个更新。
 
-下面是可能会需要的 Visual Studio 下载内容：
-
-  - [Microsoft Visual Studio Community 2015](https://www.microsoft.com/download/details.aspx?id=48146)  
-  - [Microsoft Visual Studio Express 2013 for Windows Desktop with Update 5](https://www.microsoft.com/download/details.aspx?id=48131)  
-  - [Microsoft Visual Studio Express 2012 for Windows Desktop](https://www.microsoft.com/download/details.aspx?id=34673)  
-  - [Visual Studio 2012 Update 5](https://www.microsoft.com/download/details.aspx?id=34673)  
-  - [Microsoft Visual C++ 2010 速成版（Web 安装程序）](https://download.microsoft.com/download/1/D/9/1D9A6C0E-FC89-43EE-9658-B9F0E3A76983/vc_web.exe)  
-  - [Microsoft Visual Studio 2010 Service Pack 1](https://www.microsoft.com/download/details.aspx?id=23691)  
-  - [Microsoft Visual C++ 2008 速成版 SP1（Web 安装程序）](https://go.microsoft.com/?linkid=7729279)  
+有关当前可用的下载，请参阅[下载较旧的 Visual Studio 软件](https://visualstudio.microsoft.com/vs/older-downloads/)。
 
 安装这些产品后，“属性页”对话框中的“平台工具集”属性下拉列表自动更新为显示可用工具集。 现在，可以使用最新版 Visual Studio 为这些较旧版本的工具集生成项目，而无需对这些旧版本进行转换或升级。
 
 ## <a name="see-also"></a>请参阅
 
-[从 Visual C++ 早期版本升级项目](upgrading-projects-from-earlier-versions-of-visual-cpp.md)  
-[Visual Studio 2017 中 C++ 的符合性改进](../cpp-conformance-improvements-2017.md)  
+[从 Visual C++ 早期版本升级项目](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
+[Visual Studio 2017 中 C++ 的符合性改进](../cpp-conformance-improvements-2017.md)

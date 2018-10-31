@@ -1,7 +1,7 @@
 ---
 title: ATL COM 桌面组件 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/19/2018
 ms.technology:
 - cpp-atl
 ms.topic: conceptual
@@ -15,16 +15,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eadbcd138bd9fc73835938b8ff59d694ede152b8
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: e5cce23d34c739ed6a3aca67e05b59c6cafd9191
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46065616"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062296"
 ---
 # <a name="atl-com-desktop-components"></a>ATL COM 桌面组件
 
-ATL 引用记录了活动模板库 (ATL)，一组基于模板的 c + + 类，用于简化组件对象模型 (COM) 对象的编程。 若要充分利用 ATL，强烈建议工作熟悉 COM。
+ATL 引用记录了活动模板库 (ATL)，一组基于模板的 c + + 类，用于简化组件对象模型 (COM) 对象的编程。 COM 是一个二进制规范，用于创建和使用 Windows 上的软件组件。 若要充分利用 ATL，强烈建议工作熟悉 COM。 有关 COM 的详细信息，请参阅[组件对象模型 (COM)](/windows/desktop/com/component-object-model--com--portal)。
 
 ## <a name="in-this-section"></a>本节内容
 
@@ -61,4 +61,4 @@ ATL 引用记录了活动模板库 (ATL)，一组基于模板的 c + + 类，用
 演示如何使用 ATL 编写 COM 对象的示例代码。
 
 [OLE DB 模板](../data/oledb/ole-db-templates.md)<br/>
-提供 OLE DB 使用者参考资料和提供程序模板，实现许多常用 OLE DB 接口的一组模板类。  
+提供 OLE DB 使用者参考资料和提供程序模板，实现许多常用 OLE DB 接口的一组模板类。

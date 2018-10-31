@@ -17,23 +17,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92bd843b24ee13b3d606ba8bb4f4f1cc265e8e5d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d036f7d46e0db84b8572b26c747947c929972517
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33323191"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48889927"
 ---
 # <a name="redistributing-web-client-applications"></a>重新发布 Web 客户端应用程序
-如果应用程序使用实现 WebBrowser 控件的 MFC 类（例如，`CHtmlView` 或 `CHtmlEditView`，则必须至少在目标计算机上精简地安装 Microsoft Internet Explorer 4.0 或更高版本。  
-  
- 安装最新版本的 Internet Explorer 还可确保目标计算机具有最新的通用控件文件。  
-  
- 以下知识库文章中提供了有关安装最少 Internet Explorer 组件的信息：  
-  
--   Q185375 - 如何：创建 Internet Explorer 的单一 EXE 安装 ([http://support.microsoft.com/support/kb/articles/q185/3/75.asp](http://support.microsoft.com/support/kb/articles/q185/3/75.asp))  
-  
- 可以在 MSDN Library 或 [http://support.microsoft.com](http://support.microsoft.com) 查找知识库文章。  
-  
-## <a name="see-also"></a>请参阅  
- [部署桌面应用程序](../ide/deploying-native-desktop-applications-visual-cpp.md)
+
+如果应用程序使用实现 WebBrowser 控件的 MFC 类（例如，`CHtmlView` 或 `CHtmlEditView`，则必须至少在目标计算机上精简地安装 Microsoft Internet Explorer 4.0 或更高版本。
+
+安装最新版本的 Internet Explorer 还可确保目标计算机具有最新的通用控件文件。 有关详细信息，请参阅[安装和配置 Internet Explorer 11](/internet-explorer/ie11-deploy-guide/install-and-deploy-ie11)
+
+## <a name="see-also"></a>请参阅
+
+[部署桌面应用程序](../ide/deploying-native-desktop-applications-visual-cpp.md)

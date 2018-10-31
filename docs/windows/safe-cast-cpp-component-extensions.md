@@ -1,7 +1,7 @@
 ---
-title: safe_cast （c + + 组件扩展） |Microsoft Docs
+title: safe_cast (C + + /cli 和 C + + /cli CX) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -19,14 +19,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8d5a4f92e16c2d758fa5e2b88575b12d5710dd08
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2b8f9b1e40deadbc23fe19f02bf2aaef899c52a6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46404199"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50056688"
 ---
-# <a name="safecast-c-component-extensions"></a>safe_cast（C++ 组件扩展）
+# <a name="safecast-ccli-and-ccx"></a>safe_cast (C + + /cli 和 C + + /cli CX)
 
 **Safe_cast**如果成功，则返回与指定的类型，指定的表达式; 否则，将引发操作`InvalidCastException`。
 
@@ -37,11 +37,7 @@ ms.locfileid: "46404199"
 ### <a name="syntax"></a>语法
 
 ```cpp
-[default]:: safe_cast<
-type-id
->(
-expression
-)  
+[default]:: safe_cast< type-id >( expression )
 ```
 
 ## <a name="windows-runtime"></a>Windows 运行时
@@ -51,11 +47,7 @@ expression
 ### <a name="syntax"></a>语法
 
 ```cpp
-[default]:: safe_cast<
-type-id
->(
-expression
-)  
+[default]:: safe_cast< type-id >( expression )
 ```
 
 ### <a name="parameters"></a>参数
@@ -115,11 +107,7 @@ Caught expected exception: InvalidCastException
 ### <a name="syntax"></a>语法
 
 ```cpp
-[cli]:: safe_cast<
-type-id
->(
-expression
-)  
+[cli]:: safe_cast< type-id >( expression )
 ```
 
 ### <a name="parameters"></a>参数
@@ -132,7 +120,7 @@ expression
 
 ### <a name="remarks"></a>备注
 
-表达式`safe_cast<`*类型 id*`>(`*表达式*`)`将操作数表达式转换为类型 type-id 的对象。
+表达式`safe_cast<`*类型 id*`>(`*表达式*`)`将转换该操作数*表达式*对象的类型*类型 id*。
 
 编译器会接受[static_cast](../cpp/static-cast-operator.md)中将接受的大多数地方**safe_cast**。  但是， **safe_cast**可保证生成可验证的 MSIL，而**static_cast**可能会生成无法验证的 MSIL。  请参阅[纯代码和可验证代码 (C + + CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md)并[Peverify.exe （PEVerify 工具）](/dotnet/framework/tools/peverify-exe-peverify-tool)的可验证代码的详细信息。
 
@@ -148,7 +136,7 @@ expression
 
 - [C 样式强制转换和 /clr (C + + CLI)](../windows/c-style-casts-with-clr-cpp-cli.md)
 
-- [如何：在 C++/CLI 中使用 safe_cast](../dotnet/how-to-use-safe-cast-in-cpp-cli.md)  
+- [如何：在 C++/CLI 中使用 safe_cast](../dotnet/how-to-use-safe-cast-in-cpp-cli.md)
 
 ### <a name="requirements"></a>要求
 
@@ -188,4 +176,4 @@ Caught expected exception
 
 ## <a name="see-also"></a>请参阅
 
-[适用于运行时平台的组件扩展](../windows/component-extensions-for-runtime-platforms.md)
+[ .NET 和 UWP 的组件扩展](../windows/component-extensions-for-runtime-platforms.md)

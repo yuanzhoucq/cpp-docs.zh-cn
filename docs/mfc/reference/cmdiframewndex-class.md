@@ -166,12 +166,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7c797cdb2b0950d0158e8a63294f1e2ea913512
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b238dedf9b4f638baf4ea2c9373e7658c90114cb
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46436892"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069329"
 ---
 # <a name="cmdiframewndex-class"></a>CMDIFrameWndEx 类
 
@@ -253,7 +253,7 @@ class CMDIFrameWndEx : public CMDIFrameWnd
 |[CMDIFrameWndEx::OnTearOffMenu](#ontearoffmenu)|当激活带有拖曳栏的菜单时由框架调用。|
 |[CMDIFrameWndEx::OnUpdateFrameMenu](#onupdateframemenu)|由框架调用以更新框架的菜单。 （重写 `CMDIFrameWnd::OnUpdateFrameMenu`。）|
 |[CMDIFrameWndEx::PaneFromPoint](#panefrompoint)|返回包含指定的点的停靠窗格。|
-|`CMDIFrameWndEx::PreTranslateMessage`|类使用[CWinApp](../../mfc/reference/cwinapp-class.md)窗口消息调度到之前转换[TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)并[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows 函数。  （重写 `CMDIFrameWnd::PreTranslateMessage`。）|
+|`CMDIFrameWndEx::PreTranslateMessage`|在将窗口消息发送到 [TranslateMessage](../../mfc/reference/cwinapp-class.md) 和 [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) Windows 函数之前，由 [CWinApp](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) 类用于对此消息进行转换。  （重写 `CMDIFrameWnd::PreTranslateMessage`。）|
 |[CMDIFrameWndEx::RecalcLayout](#recalclayout)|由框架调用以重新计算框架窗口的布局。 (重写[CFrameWnd::RecalcLayout](../../mfc/reference/cframewnd-class.md#recalclayout)。)|
 |[CMDIFrameWndEx::RemovePaneFromDockManager](#removepanefromdockmanager)|注销一个窗格，并将其从到停靠管理器中删除。|
 |[CMDIFrameWndEx::SaveMDIState](#savemdistate)|保存 MDI 选项卡式组的当前布局和以前打开的文档列表。|
@@ -831,7 +831,6 @@ void EnableWindowsDialog(
     LPCTSTR lpszMenuText,
     BOOL bShowAllways=FALSE,
     BOOL bShowHelpButton=FALSE);
-
 
 void EnableWindowsDialog(
     UINT uiMenuId,
@@ -2033,7 +2032,7 @@ virtual void WinHelp(
 
 ### <a name="remarks"></a>备注
 
-此方法重写[cwnd:: Winhelp](../../mfc/reference/cwnd-class.md#winhelp)。
+此方法重写 [CWnd::WinHelp](../../mfc/reference/cwnd-class.md#winhelp)。
 
 ## <a name="see-also"></a>请参阅
 

@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 471d6a273bfb4a446dbf5aba1c3b1bb31d988b24
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: e167d1a8d6b7faa161edb332f1041659c176b323
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46116095"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861780"
 ---
 # <a name="com-10-atl-com-10-component-wizard"></a>COM+ 1.0，ATL COM+ 1.0 组件向导
 
@@ -34,7 +34,7 @@ ATL 项目和 ATL COM 类的详细信息，请参阅[ATL COM 桌面组件](../..
    |选项|描述|
    |------------|-----------------|
    |**双**|指定对象支持双重接口 (其 vtable 具有自定义接口函数和后期绑定`IDispatch`方法)。 允许 COM 客户端和自动化控制器都能访问该对象。|
-   |**自定义**|指定的对象支持自定义界面 （其 vtable 具有自定义接口函数）。 尤其是跨进程边界，可以快于双重接口自定义界面。<br /><br /> -   **自动化兼容**将自动化的支持添加到自定义的接口。 对于特性化项目，设置**oleautomation**中组件类的属性。|
+   |**自定义**|指定的对象支持自定义界面 （其 vtable 具有自定义接口函数）。 尤其是跨进程边界，可以快于双重接口自定义界面。<br /><br /> - **自动化兼容**将自动化的支持添加到自定义的接口。 对于特性化项目，设置**oleautomation**中组件类的属性。|
 
 - **Queueable**
 

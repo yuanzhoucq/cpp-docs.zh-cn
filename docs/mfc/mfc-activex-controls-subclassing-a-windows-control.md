@@ -26,19 +26,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94b989594316f2eac3e65fad2cb5bf419e7ee2eb
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 893d388975bf224a1444a233899ae3898d41865a
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46407526"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204634"
 ---
 # <a name="mfc-activex-controls-subclassing-a-windows-control"></a>MFC ActiveX 控件：创建 Windows 控件的子类
 
 本文介绍了通过将常用的 Windows 控件子类化来创建 ActiveX 控件的过程。 将现有的 Windows 控件子类化是一种开发 ActiveX 控件的快速方法。 新的控件将具有已被子类化的 Windows 控件的能力，如绘制和响应鼠标单击。 MFC ActiveX 控件示例[按钮](../visual-cpp-samples.md)是子类化 Windows 控件的一个示例。
 
 >[!IMPORTANT]
-> ActiveX 是一项传统技术，不应使用新的开发。 本文将取代 ActiveX 的现代技术的详细信息，请参阅[ActiveX 控件](activex-controls.md)。
+> ActiveX 是一项传统技术，不应使用新的开发。 有关取代 ActiveX 的现代技术的详细信息，请参阅[ActiveX 控件](activex-controls.md)。
 
 若要将 Windows 控件子类化，请完成以下任务：
 
@@ -48,10 +48,8 @@ ms.locfileid: "46407526"
 
 - [处理反射给控件所有 ActiveX 控件消息 (OCM)](#_core_handling_reflected_window_messages)
 
-    > [!NOTE]
-    >  其中的大部分工作为您完成 ActiveX 控件向导如果您选择要使用子类化控件**选择父窗口类**上的下拉列表**控制设置**页。
-
-有关子类化控件的详细信息，请参阅知识库文章 Q243454。
+   > [!NOTE]
+   > 其中的大部分工作为您完成 ActiveX 控件向导如果您选择要使用子类化控件**选择父窗口类**上的下拉列表**控制设置**页。
 
 ##  <a name="_core_overriding_issubclassedcontrol_and_precreatewindow"></a> 重写 IsSubclassedControl 和 PreCreateWindow
 
@@ -65,7 +63,7 @@ ms.locfileid: "46407526"
 
 请注意，在此示例中，将在 `PreCreateWindow` 中指定 Windows 按钮控件。 但是，任何标准 Windows 控件都可以子类化。 有关标准 Windows 控件的详细信息，请参阅[控件](../mfc/controls-mfc.md)。
 
-当子类化 Windows 控件，您可能想要指定特定窗口样式 (WS_) 或要在创建控件的窗口中使用的扩展的窗口样式 (WS_EX_) 标志。 可以设置这些参数中的值`PreCreateWindow`成员函数通过修改`cs.style`和`cs.dwExStyle`结构字段。 应使用进行到这些字段的修改**或者**操作，用于保留由类设置的默认标志`COleControl`。 例如，如果控件将对 BUTTON 控件进行子类化，而您希望控件显示为复选框，则应在 `CSampleCtrl::PreCreateWindow` 的实现中，在返回语句之前插入以下代码行：
+当子类化 Windows 控件，您可能想要指定特定窗口样式 (WS_) 或要在创建控件的窗口中使用的扩展的窗口样式 (WS_EX_) 标志。 可以设置这些参数中的值`PreCreateWindow`成员函数通过修改`cs.style`和`cs.dwExStyle`结构字段。 应使用进行到这些字段的修改**或者**操作，用于保留由类设置的默认标志`COleControl`。 例如，如果控件将对 BUTTON 控件进行子类化，而你希望控件显示为复选框，则应在 `CSampleCtrl::PreCreateWindow` 的实现中，在返回语句之前插入以下代码行：
 
 [!code-cpp[NVC_MFC_AxSub#3](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_3.cpp)]
 
@@ -96,12 +94,12 @@ ActiveX 控件容器可以设计为自行执行消息反射，从而不必使用
 
 - 在控件类 .H 文件中，声明一个处理程序函数。 该函数应具有的返回类型**LRESULT**和类型的两个参数**WPARAM**并**LPARAM**分别。 例如：
 
-     [!code-cpp[NVC_MFC_AxSub#5](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_5.h)]
+   [!code-cpp[NVC_MFC_AxSub#5](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_5.h)]
     [!code-cpp[NVC_MFC_AxSub#6](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_6.h)]
 
 - 在控件类中。CPP 文件中，将一个 ON_MESSAGE 条目添加到消息映射。 此条目的参数应该是消息标识符和处理程序函数的名称。 例如：
 
-     [!code-cpp[NVC_MFC_AxSub#7](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_7.cpp)]
+   [!code-cpp[NVC_MFC_AxSub#7](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_7.cpp)]
 
 - 另外，请在。CPP 文件实现`OnOcmCommand`成员函数处理反射的消息。 *WParam*并*lParam*参数是不同于原始窗口消息。
 

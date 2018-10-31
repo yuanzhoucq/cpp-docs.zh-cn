@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c5ad67a806bae53234661c19d3f405a526ce5f87
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f266efa2fb6de580bc1af04bdee6f80e2244fa23
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46440766"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070044"
 ---
 # <a name="tiledindex-class"></a>tiled_index 类
 
@@ -178,7 +178,7 @@ extent<rank> get_tile_extent()restrict(amp,cpu);
 
 ## <a name="return-value"></a>返回值
 
-一个 `extent` 对象，具有 `tiled_index` 模板参数 `_Dim0`、`_Dim1` 和 `_Dim2` 的值。
+一个 `extent` 对象，具有 `tiled_index` 模板自变量 `_Dim0`、`_Dim1` 和 `_Dim2` 的值。
 
 ## <a name="tiled_index__barrier"></a>  barrier
 
@@ -249,6 +249,7 @@ static const int tile_dim0 = _Dim0;
 ```
 static const int tile_dim1 = _Dim1;
 ```
+
 ## <a name="tiled_index__tile_dim2"></a>  tile_dim2
 
 存储最低有效位维的长度。
@@ -258,6 +259,7 @@ static const int tile_dim1 = _Dim1;
 ```
 static const int tile_dim2 = _Dim2;
 ```
+
 ## <a name="tiled_index__tile_origin"></a>  tile_origin
 
 存储[索引](index-class.md)对象当前平铺中的起始级别 1、 2 或 3 表示全局坐标[tiled_extent](tiled-extent-class.md)对象。
@@ -267,6 +269,7 @@ static const int tile_dim2 = _Dim2;
 ```
 const index<rank> tile_origin
 ```
+
 ## <a name="tile_extent"></a>  tile_extent
   获取[程度](extent-class.md)对象，它具有的值`tiled_index`模板自变量`tiled_index`模板自变量`_Dim0`， `_Dim1`，和`_Dim2`。
 

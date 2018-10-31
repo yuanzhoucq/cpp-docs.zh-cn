@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2eaa6ce8a1ca566fd3d585b5c457e1fb2829b0b0
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 787c6c35b698b5dce57c4aaf3acb4eca496ead95
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46016736"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50072156"
 ---
 # <a name="linker-tools-error-lnk1181"></a>链接器工具错误 LNK1181
 
@@ -42,8 +42,6 @@ ms.locfileid: "46016736"
 Lnk1181 另一个可能的原因是没有具有嵌入的空格的长文件名括在引号中。  在这种情况下，链接器将仅识别第一个空格，文件名，然后假定的文件的扩展名。 目标这种情况下的解决方案是将括起来的长文件名 （路径和文件名） 引起来。
 
 使用编译[/P （预处理到文件）](../../build/reference/p-preprocess-to-a-file.md)选项可能导致 LNK1181，因为该选项将取消创建的.obj 文件。
-
-
 
 ## <a name="see-also"></a>请参阅
 

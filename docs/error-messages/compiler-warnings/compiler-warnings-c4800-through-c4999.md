@@ -1,6 +1,6 @@
 ---
 title: 编译器警告 C4800-通过 C5999 |Microsoft Docs
-ms.date: 05/30/2018
+ms.date: 10/24/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -99,18 +99,20 @@ f1_keywords:
 - C5042
 - C5043
 - C5044
+- C5045
+- C5046
 dev_langs:
 - C++
 author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0f8e2c5e3feea1c7607b8303bc42cef5b2f21e0
-ms.sourcegitcommit: 87d317ac62620c606464d860aaa9e375a91f4c99
+ms.openlocfilehash: 27f212865965883732e8bd956cafecf50e0a8de3
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45601608"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990342"
 ---
 # <a name="compiler-warnings-c4800-through-c5999"></a>编译器警告 C4800-通过 C5999
 
@@ -153,6 +155,7 @@ ms.locfileid: "45601608"
 |编译器警告 （等级 C4842|offsetof 应用于使用多重继承的类型的结果不能保证编译器版本之间保持一致|
 |编译器警告 C4843|'*type1*： 对数组或函数类型的引用是异常处理程序无法访问，请使用'*type2*改为|
 |编译器警告 C4844|导出模块*module_name*; 现在是声明模块接口的首选的语法|
+|[编译器警告 （等级 C4866](c4866.md)| 编译器不会强制从左到右计算顺序调用*operator_name*|
 |[编译器警告 （错误） C4867](compiler-warning-c4867.md)|'*函数*： 函数调用缺少参数列表; 使用'*调用*以创建指向成员的指针|
 |[编译器警告 （等级 C4868](compiler-warning-c4868.md)|'_文件_(*line_number*) 编译器不会强制在括号内的初始化列表中的从左到右计算顺序|
 |编译器警告 （等级 2） C4872|浮点编译在 concurrency:: parallel_for_each 的调用关系图时检测到的零除以: '*位置*|
@@ -250,3 +253,4 @@ ms.locfileid: "45601608"
 |编译器警告 （等级 2） C5043|'*规范*： 异常规范与前面的声明不匹配|
 |编译器警告 （等级 C5044|命令行选项的参数*选项*指向的路径*路径*不存在|
 |[编译器警告 C5045](c5045.md)|为内存负载如果 /Qspectre 开关指定，编译器将插入 Spectre 缓解措施|
+|[编译器警告 （等级 2） C5046](c5046.md)|'*函数*： 涉及带有内部链接未定义类型的符号|

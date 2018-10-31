@@ -116,12 +116,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e29583218feeff997d30bfa2b16d35be45b25249
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5963bdd004bfbd242e00e8adac274f33949b08ec
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46436294"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082406"
 ---
 # <a name="colecontrolsite-class"></a>COleControlSite 类
 
@@ -308,7 +308,6 @@ virtual HRESULT CreateControl(
     BOOL bStorage = FALSE,
     BSTR bstrLicKey = NULL);
 
-
 virtual HRESULT CreateControl(
     CWnd* pWndCtrl,
     REFCLSID clsid,
@@ -346,7 +345,7 @@ virtual HRESULT CreateControl(
 一个指向`CFile`包含控件的持久状态。 默认值为 NULL，指示该控件而不从任何持久性存储区中还原其状态初始化自身。 如果不为 NULL，它应该是一个指向`CFile`-派生对象，它包含控件的持久性数据的流或存储形式。 此数据可能已保存在客户端的上一个激活。 `CFile`可以包含其他数据，但必须在调用时将设置为持久性数据的第一个字节其读写指针`CreateControl`。
 
 *bStorage*<br/>
-指示是否在数据*pPersist*应解释为`IStorage`或`IStream`数据。 如果中的数据*pPersist*是存储*bStorage*应为 TRUE。 如果中的数据*pPersist*是一个流*bStorage*应为 FALSE。 默认值为 FALSE。
+指示是否在数据*pPersist*应解释为`IStorage`或`IStream`数据。 如果中的数据*pPersist*是存储*bStorage*应为 TRUE。 如果中的数据*pPersist*是一个流*bStorage*应为 FALSE。 默认值是 FALSE。
 
 *bstrLicKey*<br/>
 可选的许可证密钥数据。 仅用于创建控件需要运行时许可证密钥的情况下，需要此数据。 如果控件支持授权，则必须提供要成功完成的控件创建的许可证密钥。 默认值为 NULL。
@@ -573,7 +572,7 @@ virtual void GetProperty(
 标识控件的默认上找到的属性的调度 ID`IDispatch`接口，以检索。
 
 *vtProp*<br/>
-指定要检索的属性的类型。 有关可能的值，请参阅备注部分[coledispatchdriver:: Invokehelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)。
+指定要检索的属性的类型。 有关可能的值，请参阅备注部分 [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)。
 
 *pvProp*<br/>
 将接收属性值的变量的地址。 它必须匹配指定的类型*vtProp*。
@@ -637,13 +636,13 @@ virtual void AFX_CDECL InvokeHelper(
 描述对 idispatch:: Invoke 调用的上下文的标志。 有关可能*wFlags*值，请参阅`IDispatch::Invoke`Windows SDK 中。
 
 *vtRet*<br/>
-指定返回值的类型。 有关可能的值，请参阅备注部分[coledispatchdriver:: Invokehelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)。
+指定返回值的类型。 有关可能的值，请参阅备注部分 [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)。
 
 *pvRet*<br/>
 将接收属性值或返回值的变量的地址。 它必须匹配指定的类型*vtRet*。
 
 *pbParamInfo*<br/>
-指向以 null 结尾字节指定后面的参数的类型的字符串指针*pbParamInfo*。 有关可能的值，请参阅备注部分[coledispatchdriver:: Invokehelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)。
+指向以 null 结尾字节指定后面的参数的类型的字符串指针*pbParamInfo*。 有关可能的值，请参阅备注部分 [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)。
 
 *...*<br/>
 参数中指定的类型的变量列表*pbParamInfo*。
@@ -652,7 +651,7 @@ virtual void AFX_CDECL InvokeHelper(
 
 *PbParamInfo*参数指定的参数传递到方法或属性的类型。 变量参数列表是由表示...语法声明中。
 
-此函数将参数转换为 VARIANTARG 值，然后调用`IDispatch::Invoke`在控件上的方法。 如果在调用`IDispatch::Invoke`失败，此函数将引发异常。 如果返回状态代码`IDispatch::Invoke`是`DISP_E_EXCEPTION`，此函数将引发`COleDispatchException`对象中，否则为它会引发`COleException`。
+此函数将参数转换为 VARIANTARG 值，然后调用`IDispatch::Invoke`在控件上的方法。 如果 `IDispatch::Invoke` 调用失败，则此函数会引发异常。 如果返回状态代码`IDispatch::Invoke`是`DISP_E_EXCEPTION`，此函数将引发`COleDispatchException`对象中，否则为它会引发`COleException`。
 
 ##  <a name="invokehelperv"></a>  COleControlSite::InvokeHelperV
 
@@ -677,13 +676,13 @@ virtual void InvokeHelperV(
 描述对 idispatch:: Invoke 调用的上下文的标志。
 
 *vtRet*<br/>
-指定返回值的类型。 有关可能的值，请参阅备注部分[coledispatchdriver:: Invokehelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)。
+指定返回值的类型。 有关可能的值，请参阅备注部分 [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)。
 
 *pvRet*<br/>
 将接收属性值或返回值的变量的地址。 它必须匹配指定的类型*vtRet*。
 
 *pbParamInfo*<br/>
-指向以 null 结尾字节指定后面的参数的类型的字符串指针*pbParamInfo*。 有关可能的值，请参阅备注部分[coledispatchdriver:: Invokehelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)。
+指向以 null 结尾字节指定后面的参数的类型的字符串指针*pbParamInfo*。 有关可能的值，请参阅备注部分 [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)。
 
 *argList*<br/>
 到变量自变量列表的指针。
@@ -1010,7 +1009,7 @@ virtual BOOL AFX_CDECL SafeSetProperty(
 标识属性或方法，在控件上找到的调度 ID`IDispatch`接口，以设置。
 
 *vtProp*<br/>
-指定要设置属性的类型。 有关可能的值，请参阅备注部分[coledispatchdriver:: Invokehelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)。
+指定要设置属性的类型。 有关可能的值，请参阅备注部分 [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)。
 
 *...*<br/>
 指定的类型的单个参数*vtProp*。
@@ -1095,7 +1094,7 @@ virtual void AFX_CDECL SetProperty(
 标识属性或方法，在控件上找到的调度 ID`IDispatch`接口，以设置。
 
 *vtProp*<br/>
-指定要设置属性的类型。 有关可能的值，请参阅备注部分[coledispatchdriver:: Invokehelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)。
+指定要设置属性的类型。 有关可能的值，请参阅备注部分 [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)。
 
 *...*<br/>
 指定的类型的单个参数*vtProp*。
@@ -1123,7 +1122,7 @@ virtual void SetPropertyV(
 标识属性或方法，在控件上找到的调度 ID`IDispatch`接口，以设置。
 
 *vtProp*<br/>
-指定要设置属性的类型。 有关可能的值，请参阅备注部分[coledispatchdriver:: Invokehelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)。
+指定要设置属性的类型。 有关可能的值，请参阅备注部分 [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)。
 
 *argList*<br/>
 指向参数列表的指针。

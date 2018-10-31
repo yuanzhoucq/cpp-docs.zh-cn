@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f19d79b7946e3f2b4fda0b2651ce8d2099373d93
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3b66fa88a98f800c77e2b6b0a731bbd40df9eb9d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46433577"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054626"
 ---
 # <a name="tn020-id-naming-and-numbering-conventions"></a>TN020：ID 命名和编号约定
 
@@ -105,7 +105,7 @@ MFC 库还使用"IDW_"前缀，作为一种特殊形式的控件 Id （而不是
 
    - 16000 通过 18000 （请参阅 afxribbonres.h）
 
-     这些范围可能会更改在将来的 MFC 实现。
+   这些范围可能会更改在将来的 MFC 实现。
 
 - Windows 系统的多个命令使用 0xF000 到 0xFFFF 的范围。
 

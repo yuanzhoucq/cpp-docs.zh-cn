@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f24cf6cce5cdf268367f547e8a536dcdae7cc859
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 413485bc7675fbc68f2c224ceefdd0f552538eb9
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46098948"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076979"
 ---
 # <a name="ccomobjectrootex-class"></a>CComObjectRootEx 类
 
@@ -51,7 +51,7 @@ class CComObjectRootEx : public CComObjectRootBase
 #### <a name="parameters"></a>参数
 
 *ThreadModel*<br/>
-其方法实现所需的线程处理模型的类。 您可以通过设置显式选择的线程模型*ThreadModel*到[CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md)， [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)，或[CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md)。 你可以通过设置接受服务器的默认线程模型*ThreadModel*到[CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel)或[CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)。  
+其方法实现所需的线程处理模型的类。 您可以通过设置显式选择的线程模型*ThreadModel*到[CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md)， [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)，或[CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md)。 你可以通过设置接受服务器的默认线程模型*ThreadModel*到[CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel)或[CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)。
 
 ## <a name="members"></a>成员
 
@@ -139,9 +139,9 @@ HRESULT FinalConstruct();
 
 - 不能通过类的构造函数中的虚函数机制调用虚函数。 从类的构造函数调用虚函数会导致对函数的静态解析调用继承层次结构中定义在该点。 对于纯虚函数的调用导致链接器错误。
 
-     您的类不是继承层次结构中派生程度最高的类，它依赖于派生类提供由 ATL 提供其部分功能。 很可能你的初始化将需要使用的该类 （即是如此，当您的类的对象需要聚合的其他对象），提供的功能，但在您的类构造函数具有无法访问这些功能。 完全构造的派生程度最高的类之前，执行您的类的构造代码。
+   您的类不是继承层次结构中派生程度最高的类，它依赖于派生类提供由 ATL 提供其部分功能。 很可能你的初始化将需要使用的该类 （即是如此，当您的类的对象需要聚合的其他对象），提供的功能，但在您的类构造函数具有无法访问这些功能。 完全构造的派生程度最高的类之前，执行您的类的构造代码。
 
-     但是，`FinalConstruct`称为立即派生程度最高之后完全构造类使您可以调用虚函数和使用引用计数的实现提供的 atl。
+   但是，`FinalConstruct`称为立即派生程度最高之后完全构造类使您可以调用虚函数和使用引用计数的实现提供的 atl。
 
 ### <a name="example"></a>示例
 
@@ -265,7 +265,7 @@ long m_dwRef;
 
 ### <a name="remarks"></a>备注
 
-使用`m_pOuterUnknown`、 并集的一部分：  
+使用`m_pOuterUnknown`、 并集的一部分：
 
 ```
 union {

@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 177d0dea7859dc2093fb7a10f6fdb6ee4df013f0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e787eb7e638751fa369923f8f4059f40fae34104
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46386781"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50061243"
 ---
 # <a name="creating-an-mfc-dll-project"></a>创建 MFC DLL 项目
 
@@ -46,12 +46,11 @@ ms.locfileid: "46386781"
 
 1. 单击**完成**以关闭向导并打开新项目中的**解决方案资源管理器**。
 
-你的项目创建后，可以查看在解决方案资源管理器中创建的文件。 有关向导为项目创建的文件的更多信息，请参见项目生成的文件 ReadMe.txt。 有关文件类型的详细信息，请参阅[Visual c + + 项目创建的文件类型](../../ide/file-types-created-for-visual-cpp-projects.md)。
+你的项目创建后，可以查看中创建的文件**解决方案资源管理器**。 有关向导为项目创建的文件的更多信息，请参见项目生成的文件 ReadMe.txt。 有关文件类型的详细信息，请参阅[Visual c + + 项目创建的文件类型](../../ide/file-types-created-for-visual-cpp-projects.md)。
 
 ## <a name="see-also"></a>请参阅
 
 [Visual C++ 项目类型](/visualstudio/debugger/debugging-preparation-visual-cpp-project-types)<br/>
 [用代码向导添加功能](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
 [属性页](../../ide/property-pages-visual-cpp.md)
-
 

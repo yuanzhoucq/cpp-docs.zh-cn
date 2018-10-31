@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c9f1d205eff155b628081c5bc615570c44a88f08
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: eea3159bff6f2c69c94ef31d01b1d6a85104ef13
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46412803"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861846"
 ---
 # <a name="fa-fa-listing-file"></a>/FA、/Fa（列出文件）
 
@@ -87,9 +87,9 @@ ms.locfileid: "46412803"
 
 1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。
 
-2. 选择**配置属性** > **C/c + +** > **输出文件**属性页。
+1. 选择**配置属性** > **C/c + +** > **输出文件**属性页。
 
-3. 修改**汇编程序输出**属性来设置 **/FAc**并 **/FAs**组装器、 计算机和源代码的选项。 修改**使用 Unicode 对于组装器列出**属性来设置 **/fau 则**ANSI 或 utf-8 输出的选项。 修改**ASM 列表位置**若要设置 **/Fa**用于列出文件的名称和位置选项。
+1. 修改**汇编程序输出**属性来设置 **/FAc**并 **/FAs**组装器、 计算机和源代码的选项。 修改**使用 Unicode 对于组装器列出**属性来设置 **/fau 则**ANSI 或 utf-8 输出的选项。 修改**ASM 列表位置**若要设置 **/Fa**用于列出文件的名称和位置选项。
 
 请注意，将设置两者**汇编程序输出**并**使用 Unicode 对于组装器列出**属性可能会导致[命令行警告 D9025](../../error-messages/tool-errors/command-line-warning-d9025.md)。 若要组合在 IDE 中的这些选项，使用**其他选项**字段中**命令行**属性页相反。
 

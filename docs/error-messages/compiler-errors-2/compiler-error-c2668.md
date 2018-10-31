@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c3b318c663bb036629086d0bca9a67641e3c4c4e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 23bb1a6fcf64590670ede2eb6aca232a5a3b4f5c
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46093748"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48889982"
 ---
 # <a name="compiler-error-c2668"></a>编译器错误 C2668
 
@@ -31,15 +31,11 @@ function： 对重载函数的调用不明确
 
 此外可以通过模板使用收到此错误。 如果在同一类中，有的常规成员函数和具有相同签名的模板化的成员函数，模板化一个必须出现在最前面。 这是 Visual c + + 的当前实现的限制。
 
-在函数模板的部分排序，请参阅知识库文章 Q240869 了解详细信息。
-
-如果要构建包含 COM 对象支持 ATL 项目`ISupportErrorInfo`，请参阅知识库文章 Q243298。
-
 ## <a name="example"></a>示例
 
 下面的示例生成 C2668:
 
-```
+```cpp
 // C2668.cpp
 struct A {};
 struct B : A {};
@@ -59,7 +55,7 @@ int main() {
 
 若要解决此错误的另一种方法是使用[using 声明](../../cpp/using-declaration.md):
 
-```
+```cpp
 // C2668b.cpp
 // compile with: /EHsc /c
 // C2668 expected
@@ -104,7 +100,7 @@ class MyTestCase : public AppTestCase {
 
 由于 int 需要这两个到转换长时间和为 void *，强制转换使用常量 0 上的转换不明确。 若要解决此错误，转换到它要使用的以便执行 （此代码将在 Visual c + + 的 Visual Studio.NET 2003年和 Visual Studio.NET 版本中有效） 所需的任何转换的函数参数的确切类型 0。
 
-```
+```cpp
 // C2668c.cpp
 #include "stdio.h"
 void f(long) {
@@ -126,7 +122,7 @@ int main() {
 
 由于 CRT 现在具有 float 和 double 形式的所有数学函数，则可能出现此错误。
 
-```
+```cpp
 // C2668d.cpp
 #include <math.h>
 int main() {
@@ -141,7 +137,7 @@ int main() {
 
 由于 pow （int，int） 已从 CRT 中的 math.h 中删除，可能出现此错误。
 
-```
+```cpp
 // C2668e.cpp
 #include <math.h>
 int main() {
@@ -154,8 +150,7 @@ int main() {
 
 此代码在 Visual Studio 2015 中成功，但在 Visual Studio 2017 和更高版本与 C2668 将失败。 在 Visual Studio 2015 中，编译器以与常规复制初始化相同的方式错误地处理复制列表初始化；它只考虑将转换构造函数用于重载决策。
 
-```
-C++
+```cpp
 struct A {
     explicit A(int) {}
 };

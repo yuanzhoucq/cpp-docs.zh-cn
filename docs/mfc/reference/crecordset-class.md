@@ -140,12 +140,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6e1fb04de4097a2cdf1dd51dc12265bef8d6c0b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 086aaebcdc44439c45a219c7292da4aff9e13b06
+ms.sourcegitcommit: a88d228480d4bb5834e985d7b3ead2760be95572
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46423125"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50203087"
 ---
 # <a name="crecordset-class"></a>CRecordset 类
 
@@ -727,17 +727,14 @@ void GetFieldValue(
     CDBVariant& varValue,
     short nFieldType = DEFAULT_FIELD_TYPE);
 
-
 void GetFieldValue(
     short nIndex,
     CDBVariant& varValue,
     short nFieldType = DEFAULT_FIELD_TYPE);
 
-
 void GetFieldValue(
     short nIndex,
     CStringA& strValue);
-
 
 void GetFieldValue(
     short nIndex,
@@ -822,7 +819,6 @@ short GetODBCFieldCount() const;
 void GetODBCFieldInfo(
     LPCTSTR lpszName,
     CODBCFieldInfo& fieldinfo);
-
 
 void GetODBCFieldInfo(
     short nIndex,
@@ -1538,7 +1534,7 @@ virtual BOOL Open(
 
 - `CRecordset::forwardOnly` 而只向前滚动只读的记录集。
 
-     有关`CRecordset`，默认值是`CRecordset::snapshot`。 默认值机制允许 Visual c + + 向导以便与这两个 ODBC`CRecordset`和 DAO `CDaoRecordset`，它具有不同的默认值。
+   有关`CRecordset`，默认值是`CRecordset::snapshot`。 默认值机制允许 Visual c + + 向导以便与这两个 ODBC`CRecordset`和 DAO `CDaoRecordset`，它具有不同的默认值。
 
 有关这些记录集类型的详细信息，请参阅文章[记录集 (ODBC)](../../data/odbc/recordset-odbc.md)。 有关相关信息，请参阅文章"使用块游标和可滚动游标"Windows SDK 中。
 
@@ -1613,7 +1609,7 @@ virtual BOOL Open(
 
 常规步骤是将传递到 NULL `Open`; 在这种情况下，`Open`调用[GetDefaultSQL](#getdefaultsql)。 如果您使用的派生`CRecordset`类，`GetDefaultSQL`提供类向导中指定的表名称。 您可以指定中的其他信息`lpszSQL`参数。
 
-您传递的任何`Open`构造查询的最终 SQL 字符串 (字符串可能具有 SQL**其中**和**ORDER BY**子句追加到`lpszSQL`您传递的字符串)，然后再执行该查询。 可以通过调用检查构造的字符串[GetSQL](#getsql)之后调用 *`Open`。 有关如何记录集构造 SQL 语句，并选择记录，有关其他详细信息，请参阅文章[记录集： 如何选择记录 (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)。
+您传递的任何`Open`构造查询的最终 SQL 字符串 (字符串可能具有 SQL**其中**和**ORDER BY**子句追加到`lpszSQL`您传递的字符串)，然后再执行该查询。 可以通过调用检查构造的字符串[GetSQL](#getsql)之后调用`Open`。 有关如何记录集构造 SQL 语句，并选择记录，有关其他详细信息，请参阅文章[记录集： 如何选择记录 (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)。
 
 记录集类的字段数据成员绑定到所选的数据的列。 如果未返回任何记录，第一条记录将成为当前记录。
 

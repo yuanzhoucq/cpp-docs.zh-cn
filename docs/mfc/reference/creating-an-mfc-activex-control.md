@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b8345b99655cae3ea27b93e1742d8c07e8d80eb1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 68ad9b2627921024e5bd9477ee2aab62494b4912
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46408012"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053066"
 ---
 # <a name="creating-an-mfc-activex-control"></a>创建 MFC ActiveX 控件
 
@@ -54,5 +54,4 @@ ActiveX 控件程序是功能的模块化设计用于为特定类型提供到父
 
 [用代码向导添加功能](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
 [属性页](../../ide/property-pages-visual-cpp.md)
-
 

@@ -98,12 +98,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 809391ea93c3baacd510df7d81f2000e1d6309b7
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 7e9ec6724addeb8002eeb681f289f232520f31dc
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45702022"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060088"
 ---
 # <a name="hashmap-class"></a>hash_map 类
 
@@ -127,11 +127,11 @@ class hash_map
 *Key*<br/>
 要存储在 hash_map 中的键数据类型。
 
-*类型*<br/>
+*Type*<br/>
 要存储在 hash_map 中的元素数据类型。
 
 *特征*<br/>
-此类型包括两个函数对象，其中一个是类 compare，可与作为排序关键字的两个元素值进行比较以确定其相对顺序；另一个是哈希函数，这是一个一元谓词，用于将元素的关键字值映射到 `size_t` 类型的无符号整数。 此参数为可选参数，其默认值为 hash_compare<`Key`, less<`Key`> >。
+此类型包括两个函数对象，其中一个是类 compare，可与作为排序关键字的两个元素值进行比较以确定其相对顺序；另一个是哈希函数，这是一个一元谓词，用于将元素的关键字值映射到 `size_t` 类型的无符号整数。 此自变量为可选自变量，其默认值为 hash_compare<`Key`, less<`Key`> >。
 
 *分配器*<br/>
 一种表示存储的分配器对象的类型，该分配器对象封装有关 hash_map 的内存分配和解除分配的详细信息。 此参数为可选参数，其默认值为 allocator<pair <const `Key`, `Type`>>。
@@ -277,7 +277,6 @@ const Type& at(const Key& key) const;
 ### <a name="remarks"></a>备注
 
 如果找不到参数键值，函数将返回 [out_of_range 类](../standard-library/out-of-range-class.md)的一个对象。
-
 
 ### <a name="example"></a>示例
 
@@ -1650,7 +1649,7 @@ int main()
     hm1.insert(Int_Pair(3, 30));
     hm1.insert(Int_Pair(4, 40));
 
-    cout<< "The original elements (Key => Value) of hm1 are:";
+    cout << "The original elements (Key => Value) of hm1 are:";
     for (hm1_pIter = hm1.begin(); hm1_pIter != hm1.end(); hm1_pIter++)
         cout << endl << " " << hm1_pIter -> first << " => "
              << hm1_pIter->second;
@@ -1661,22 +1660,23 @@ int main()
 
     if (pr.second == true)
     {
-        cout<< "The element 10 was inserted in hm1 successfully."
+        cout << "The element 10 was inserted in hm1 successfully."
             << endl;
     }
     else
     {
-        cout<< "The element 10 already exists in hm1\n with a key value of"
-            << "((pr.first) -> first)= "<<(pr.first)-> first
-            << "."<< endl;
+        cout << "The element 10 already exists in hm1\n"
+            << "with a key value of "
+            << "((pr.first) -> first) = " << (pr.first)->first
+            << "." << endl;
     }
 
     // The hint version of insert
     hm1.insert(--hm1.end(), Int_Pair(5, 50));
 
-    cout<< "After the insertions, the elements of hm1 are:";
+    cout << "After the insertions, the elements of hm1 are:";
     for (hm1_pIter = hm1.begin(); hm1_pIter != hm1.end(); hm1_pIter++)
-        cout << endl << " " << hm1_pIter -> first << " => "
+        cout << endl << hm1_pIter -> first << " => "
              << hm1_pIter->second;
     cout << endl;
 
@@ -1685,9 +1685,9 @@ int main()
     // The templatized version inserting a range
     hm2.insert( ++hm1.begin(), --hm1.end() );
 
-    cout<< "After the insertions, the elements of hm2 are:";
+    cout << "After the insertions, the elements of hm2 are:";
     for (hm2_pIter = hm2.begin(); hm2_pIter != hm2.end(); hm2_pIter++)
-        cout << endl << " " << hm2_pIter -> first << " => "
+        cout << endl << hm2_pIter -> first << " => "
              << hm2_pIter->second;
     cout << endl;
 
@@ -1697,13 +1697,13 @@ int main()
 
     hm3.insert(move(is1));
     cout << "After the move insertion, hm3 contains:" << endl
-      << " " << hm3.begin()->first
+      << hm3.begin()->first
       << " => " << hm3.begin()->second
       << endl;
 
     hm4.insert(hm4.begin(), move(is2));
     cout << "After the move insertion, hm4 contains:" << endl
-      << " " << hm4.begin()->first
+      << hm4.begin()->first
       << " => " << hm4.begin()->second
       << endl;
 }
@@ -1711,27 +1711,27 @@ int main()
 
 ```Output
 The original elements (Key => Value) of hm1 are:
- 1 => 10
- 2 => 20
- 3 => 30
- 4 => 40
+1 => 10
+2 => 20
+3 => 30
+4 => 40
 The element 10 already exists in hm1
- with a key value of((pr.first) -> first)= 1.
+with a key value of ((pr.first) -> first) = 1.
 After the insertions, the elements of hm1 are:
- 1 => 10
- 2 => 20
- 3 => 30
- 4 => 40
- 5 => 50
+1 => 10
+2 => 20
+3 => 30
+4 => 40
+5 => 50
 After the insertions, the elements of hm2 are:
- 2 => 20
- 10 => 100
- 3 => 30
- 4 => 40
+2 => 20
+10 => 100
+3 => 30
+4 => 40
 After the move insertion, hm3 contains:
- 1 => a
+1 => a
 After the move insertion, hm4 contains:
- 2 => b
+2 => b
 ```
 
 ## <a name="iterator"></a>hash_map::iterator
@@ -2657,8 +2657,8 @@ int main( )
    // using a dereferenced iterator addressing the location
    hm1_AcIter = hm1.begin( );
    hm1_RcIter = hm1. upper_bound ( hm1_AcIter -> first );
-   cout << "The 1st element of hm1 with a key greater than "
-        << "that\n of the initial element of hm1 is: "
+   cout << "The 1st element of hm1 with a key greater than that\n"
+        << "of the initial element of hm1 is: "
         << hm1_RcIter -> second << "." << endl;
 }
 ```
@@ -2667,7 +2667,7 @@ int main( )
 The first element of hash_map hm1 with a key greater than 2 is: 30.
 The hash_map hm1 doesn't have an element with a key greater than 4.
 The 1st element of hm1 with a key greater than that
- of the initial element of hm1 is: 20.
+of the initial element of hm1 is: 20.
 ```
 
 ## <a name="value_comp"></a>hash_map::value_comp
@@ -2687,9 +2687,9 @@ value_compare value_comp() const;
 
 ### <a name="remarks"></a>备注
 
-对于 hash_map *m*，如果 *e*1 *(k*1 *, d*1 *)* 和 *e*2 *(k*2 *, d*2 *)* 两个元素为 [value_type](#value_type) 类型的对象，其中 *k*1 和 *k*2 为 [key_type](#key_type) 类型的键，`d`1 和 `d`2 为 [mapped_type](#mapped_type) 类型的数据，则 *m.*`value_comp`*( )(e*1 *, e*2 *)* 等同于 *m.*`key_comp`*( ) (k*1 *, k*2 *)*。 存储对象会定义成员函数
+有关 hash_map *m*，如果两个元素*e1* (*k1*， *d1*) 和*e2* (*k2*， *d2*) 的对象的类型[value_type](#value_type)，其中*版 k1*并*k2*是其键的类型[key_type](#key_type)并*d1*并*d2*是其数据类型[mapped_type](#mapped_type)，然后`m.value_comp()(e1, e2)`等效于`m.key_comp()(k1, k2)`. 存储对象会定义成员函数
 
-**bool operator**( **value_type&** `left`, **value_type&** `right`) **;**。
+`bool operator(value_type& left, value_type& right);`
 
 如果 `left` 的键值在排序顺序中先于且不等于 `right` 的键值，则该函数会返回 **true**。
 

@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 295749648dd54349c3fa735008ef8c04d51c8e04
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f4c2ad96674058ac57ccdc7cef9537f1cb413b92
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441897"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50079696"
 ---
 # <a name="coleobjectfactory-class"></a>COleObjectFactory 类
 
@@ -132,7 +132,6 @@ COleObjectFactory(
     BOOL bMultiInstance,
     LPCTSTR lpszProgID);
 
-
 COleObjectFactory(
     REFCLSID clsid,
     CRuntimeClass* pRuntimeClass,
@@ -163,7 +162,7 @@ COleObjectFactory(
 
 - `afxRegFreeThreading` ThreadingModel 注册表中设置线程模型 = 免费。
 
-     你可以组合两个标志`afxRegApartmentThreading`和`afxRegFreeThreading`设置 ThreadingModel = Both。 请参阅[InprocServer32](/windows/desktop/com/inprocserver32) Windows SDK for 线程处理模型注册的详细信息中。
+   你可以组合两个标志`afxRegApartmentThreading`和`afxRegFreeThreading`设置 ThreadingModel = Both。 请参阅[InprocServer32](/windows/desktop/com/inprocserver32) Windows SDK for 线程处理模型注册的详细信息中。
 
 *lpszProgID*<br/>
 指向包含口头程序标识符，例如"Microsoft Excel。"的字符串
@@ -349,7 +348,7 @@ virtual BOOL UpdateRegistry(BOOL bRegister);
 
 - **UpdateRegistry (** `bRegister` **)** 这种形式的函数是可重写。 如果*bRegister*为 TRUE，这函数将该控件类在系统注册表。 否则，取消注册类。
 
-     如果您使用 MFC ActiveX 控件向导创建您的项目，controlwizard 可提供此纯虚函数的重写。
+   如果您使用 MFC ActiveX 控件向导创建您的项目，controlwizard 可提供此纯虚函数的重写。
 
 ##  <a name="updateregistryall"></a>  COleObjectFactory::UpdateRegistryAll
 

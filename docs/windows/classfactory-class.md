@@ -1,7 +1,7 @@
 ---
 title: ClassFactory 类 |Microsoft Docs
 ms.custom: ''
-ms.date: 09/13/2018
+ms.date: 10/03/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -27,12 +27,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bfaf95a477917fc417cfe3c296822233eca77c09
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4facba4a35e28818f22ba17f6d835b781cd76061
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46413063"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163265"
 ---
 # <a name="classfactory-class"></a>ClassFactory 类
 
@@ -42,18 +42,22 @@ ms.locfileid: "46413063"
 
 ```cpp
 template <
-   typename I0 = Details::Nil,
-   typename I1 = Details::Nil,
-   typename I2 = Details::Nil
+    typename I0 = Details::Nil,
+    typename I1 = Details::Nil,
+    typename I2 = Details::Nil
 >
-class ClassFactory : public Details::RuntimeClass<
-   typename Details::InterfaceListHelper<IClassFactory,
-   I0,
-   I1,
-   I2,
-   Details::Nil>::TypeT,
-   RuntimeClassFlags<ClassicCom | InhibitWeakReference>,
-      false>;
+class ClassFactory :
+    public Details::RuntimeClass<
+        typename Details::InterfaceListHelper<
+            IClassFactory,
+            I0,
+            I1,
+            I2,
+            Details::Nil
+        >::TypeT,
+        RuntimeClassFlags<ClassicCom | InhibitWeakReference>,
+        false
+    >;
 ```
 
 ### <a name="parameters"></a>参数
@@ -154,7 +158,7 @@ STDMETHOD(
 ### <a name="parameters"></a>参数
 
 *纷纷采用*<br/>
-若要递增跟踪对象的数量，则为 `true`。 若要递减跟踪对象的数量，则为 `false`。
+**true**要递增跟踪对象的数量。 **false**要递减跟踪对象的数量。
 
 ### <a name="return-value"></a>返回值
 

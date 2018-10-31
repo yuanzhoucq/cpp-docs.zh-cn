@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 210cf8d3183e9fcd94cfa51d875a0b26e4a8fa07
-ms.sourcegitcommit: 92c568e9466ffd7346a4120c478c9bdea61c8756
+ms.openlocfilehash: f7ecf84317f8d88748e4a50a43c173a3fe41e0e2
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "47029653"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163733"
 ---
 # <a name="how-to-migrate-to-clr"></a>如何：迁移到 /clr
 
@@ -84,7 +84,7 @@ NewFunc2 = (MYPROC)GetProcAddress( hLib, "Func2" );
 
 C + + 还要求这些函数是原型或完全定义可以引用或调用之前。
 
-在 C 代码中使用恰好是 c + + 中的关键字的标识符 (如`virtual`， `new`， `delete`， `bool`， `true`，`false`等) 必须重命名。 这通常可以通过简单的搜索和替换操作。
+在 C 代码中使用恰好是 c + + 中的关键字的标识符 (如**虚拟**，**新**，**删除**， **bool**， **，则返回 true**， **false**等) 必须重命名。 这通常可以通过简单的搜索和替换操作。
 
 ```
 COMObj1->lpVtbl->Method(COMObj, args);  // C code
@@ -118,7 +118,7 @@ COMObj2->Method(args);  // C++ equivalent
 
 编译的项目编译某些模块的位置的最简单办法 **/clr**是完全禁用预编译标头。 （在项目属性页对话框中，打开 C/c + + 节点，并选择预编译标头。 然后创建/使用预编译标头属性更改为"不使用预编译标头"。）
 
-但是，特别是对于大型项目中，预编译标头提供更好的编译速度，因此禁用此功能不需要这样做。 在这种情况下最好配置 **/clr**和非 **/clr**文件以使用单独的预编译标头。 这可以通过一个步骤中选择多要编译的模块 **/clr**使用解决方案资源管理器中，右键单击组，并选择属性。 然后更改通过文件创建/使用 PCH 和预编译头文件的属性，以分别使用不同的标头文件的名称和 PCH 文件。
+但是，特别是对于大型项目中，预编译标头提供更好的编译速度，因此禁用此功能不需要这样做。 在这种情况下最好配置 **/clr**和非 **/clr**文件以使用单独的预编译标头。 这可以通过一个步骤中选择多要编译的模块 **/clr**使用**解决方案资源管理器**、 右键单击组，并选择属性。 然后更改通过文件创建/使用 PCH 和预编译头文件的属性，以分别使用不同的标头文件的名称和 PCH 文件。
 
 ## <a name="fixing-errors"></a>修复错误
 

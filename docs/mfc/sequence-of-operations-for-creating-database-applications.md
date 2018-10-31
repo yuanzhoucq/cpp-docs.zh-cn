@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef9c66324f886da27431a94a464554e2a8ddb00a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 483a36f62a147d9b71a489c2f611fc45c1b7fa54
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46391563"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860727"
 ---
 # <a name="sequence-of-operations-for-creating-database-applications"></a>用于创建数据库应用程序的操作顺序
 
@@ -36,7 +36,7 @@ ms.locfileid: "46391563"
 |任务|您执行的操作|框架执行的操作|
 |----------|------------|------------------------|
 |决定是否使用 MFC ODBC 或 DAO 类。|为新 MFC 项目中使用 ODBC。 使用 DAO 只是为了维护现有的应用程序。 有关常规信息，请参阅文章[数据访问编程](../data/data-access-programming-mfc-atl.md)。|框架提供了支持数据库访问权限的类。|
-|使用数据库选项创建主干应用程序。|运行 MFC 应用程序向导。 选择数据库支持页面上的选项。 如果您选择创建记录视图的选项，还指定：<br /><br /> 数据源和表名称或名称<br />-查询名称。|MFC 应用程序向导创建的文件，并指定所需包括。 根据你指定的选项，这些文件可以包括一个记录集类。|
+|使用数据库选项创建主干应用程序。|运行 MFC 应用程序向导。 选择数据库支持页面上的选项。 如果您选择创建记录视图的选项，还指定：<br /><br />数据源和表名称或名称<br />-查询名称。|MFC 应用程序向导创建的文件，并指定所需包括。 根据你指定的选项，这些文件可以包括一个记录集类。|
 |设计数据库窗体或窗体。|使用 Visual c + + 对话框编辑器将记录视图类的对话框模板资源上的控件。|MFC 应用程序向导创建你可填写空对话框模板资源。|
 |根据需要创建其他记录的视图和记录集类。|使用类视图创建的类和对话框编辑器设计视图。|类视图创建新类的其他的文件。|
 |根据需要在代码中创建记录集对象。 每个记录集用于处理记录...|在记录集都基于派生自的类[CRecordset](../mfc/reference/crecordset-class.md)使用向导。|ODBC 使用记录字段交换 (RFX) 数据库和记录集的字段数据成员之间交换数据。 如果使用记录视图，对话框数据交换 (DDX) 之间交换数据记录集和记录视图上的控件。|

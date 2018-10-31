@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2be9b63ddf6e93c6e0db2645634a4f7bd7ecf3b8
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 7342e8cfb95e8e443631563499a84fd7bd6579a1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42591656"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080697"
 ---
 # <a name="application-settings-win-32-project-wizard"></a>Win 32 项目向导的应用程序设置
 
@@ -38,7 +38,7 @@ ms.locfileid: "42591656"
 |**控制台应用程序**|创建控制台应用程序。 控制台程序开发与[控制台函数](https://msdn.microsoft.com/library/ms813137.aspx)，它提供的信息在控制台窗口中的字符模式支持。 Visual c + +[运行时库](../c-runtime-library/c-run-time-library-reference.md)还提供输出和输入从控制台窗口与标准 I/O 函数，如`printf_s()`和`scanf_s()`。 控制台应用程序没有图形用户界面。 它将编译为.exe 文件，并可作为独立的应用程序从命令行运行。<br /><br /> 您可以将 MFC 和 ATL 支持添加到控制台应用程序。|
 |**Windows 应用程序**|创建 Win32 程序。 Win32 程序是可执行文件编写的应用程序 (EXE) 在 C 或 c + +，使用对 Win32 API 的调用创建的图形用户界面中。<br /><br /> 不能添加 MFC 或 ATL 支持添加到 Windows 应用程序。|
 |**DLL**|创建 Win32 动态链接库 (DLL)。 Win32 DLL 是用 C 或 c + +，使用调用 Win32 API，而不是 MFC 类，以及作为共享库的多个应用程序可同时使用的函数中编写的二进制文件。<br /><br /> 不能添加 MFC 或 ATL 支持向 DLL 应用程序。 您可以指示 DLL 导出的符号。|
-|**静态库**|创建静态库。 静态库是一个包含对象及其函数和生成可执行文件时链接到你的程序的数据文件。 本主题说明如何创建的初学者文件和[项目属性](../ide/property-pages-visual-cpp.md)静态库。 静态库文件提供以下优势：<br /><br /> -A Win32 静态库是如果您正在使用的应用程序执行调用 Win32 API，而不是 MFC 类很有用。<br />-链接的过程是相同是否在 C 或 c + + 中编写 Windows 应用程序的其余部分。<br />-你可以将静态库链接到一个基于 MFC 的程序或非 MFC 程序。|
+|**静态库**|创建静态库。 静态库是一个包含对象及其函数和生成可执行文件时链接到你的程序的数据文件。 本主题说明如何创建的初学者文件和[项目属性](../ide/property-pages-visual-cpp.md)静态库。 静态库文件提供以下优势：<br /><br />-A Win32 静态库是如果您正在使用的应用程序执行调用 Win32 API，而不是 MFC 类很有用。<br />-链接的过程是相同是否在 C 或 c + + 中编写 Windows 应用程序的其余部分。<br />-你可以将静态库链接到一个基于 MFC 的程序或非 MFC 程序。|
 
 ## <a name="additional-options"></a>附加选项
 
@@ -62,4 +62,4 @@ ms.locfileid: "42591656"
 
 ## <a name="see-also"></a>请参阅
 
-[Win32 应用程序向导](../windows/win32-application-wizard.md)  
+[Win32 应用程序向导](../windows/win32-application-wizard.md)

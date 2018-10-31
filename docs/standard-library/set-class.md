@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3b697901ac564a88f48cdbc3154f29089c23acc
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: dc57c1667fd9cfd6d3236fbd1891dc1444912c3c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45706155"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077434"
 ---
 # <a name="set-class"></a>set 类
 
@@ -905,7 +905,6 @@ The set s2 is empty.
 ```cpp
 const_iterator end() const;
 
-
 iterator end();
 ```
 
@@ -1124,7 +1123,6 @@ int main()
 ```cpp
 iterator find(const Key& key);
 
-
 const_iterator find(const Key& key) const;
 ```
 
@@ -1288,19 +1286,16 @@ int main( )
 pair<iterator, bool> insert(
     const value_type& Val);
 
-
 // (2) single element, perfect forwarded
 template <class ValTy>
 pair<iterator, bool>
 insert(
     ValTy&& Val);
 
-
 // (3) single element with hint
 iterator insert(
     const_iterator Where,
     const value_type& Val);
-
 
 // (4) single element, perfect forwarded, with hint
 template <class ValTy>
@@ -1308,13 +1303,11 @@ iterator insert(
     const_iterator Where,
     ValTy&& Val);
 
-
 // (5) range
 template <class InputIterator>
 void insert(
     InputIterator First,
     InputIterator Last);
-
 
 // (6) initializer list
 void insert(
@@ -1988,21 +1981,20 @@ set(
     const Compare& Comp,
     const Allocator& Al);
 
-
 template <class InputIterator>
 set(
- InputIterator First,
+    InputIterator First,
     InputIterator Last);
 
 template <class InputIterator>
 set(
- InputIterator First,
+    InputIterator First,
     InputIterator Last,
     const Traits& Comp);
 
 template <class InputIterator>
 set(
- InputIterator First,
+    InputIterator First,
     InputIterator Last,
     const Traits& Comp,
     const Allocator& Al);

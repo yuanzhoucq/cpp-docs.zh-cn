@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1dc831dff6d1e3dbef4fc762712e8125a5b20e1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c24ed9328f77d26a8ad11a6ff6bdbf47bad9fbe3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339704"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46381408"
 ---
 # <a name="property-pages-visual-c"></a>属性页 (Visual C++)
 
@@ -143,5 +143,5 @@ ms.locfileid: "33339704"
 
 ## <a name="see-also"></a>请参阅
 
-[如何：创建和删除项目依赖项](/visualstudio/ide/how-to-create-and-remove-project-dependencies)  
-[如何：创建和编辑配置](/visualstudio/ide/how-to-create-and-edit-configurations)  
+[如何：创建和删除项目依赖项](/visualstudio/ide/how-to-create-and-remove-project-dependencies)<br>
+[如何：创建和编辑配置](/visualstudio/ide/how-to-create-and-edit-configurations)

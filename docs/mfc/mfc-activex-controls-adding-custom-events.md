@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9c4acd417dacadbe2667f63c70435b97353bafe1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4d5db33dda6abc141c9247c74c16624bef5f0fc8
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46384411"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076030"
 ---
 # <a name="mfc-activex-controls-adding-custom-events"></a>MFC ActiveX 控件：添加自定义事件
 
@@ -48,7 +48,7 @@ ms.locfileid: "46384411"
 
 1. 从快捷菜单中，单击**外**，然后单击**添加事件**。
 
-     这将打开添加事件向导。
+   这将打开添加事件向导。
 
 1. 在中**事件名称**框中，首先选择现有的任何事件，然后单击**自定义**单选按钮，然后键入*ClickIn*。
 
@@ -94,7 +94,7 @@ ms.locfileid: "46384411"
 
 1. 在属性窗口中，单击**消息**按钮。
 
-     属性窗口显示 ActiveX 控件可以处理的消息的列表。 已以粗体显示的任何消息有为其分配一个处理程序函数。
+   属性窗口显示 ActiveX 控件可以处理的消息的列表。 已以粗体显示的任何消息有为其分配一个处理程序函数。
 
 1. 从属性窗口中，选择你想要处理的消息。 对于此示例中，选择 WM_LBUTTONDOWN。
 
@@ -131,7 +131,7 @@ ms.locfileid: "46384411"
 
 1. 从快捷菜单中，单击**外**，然后单击**添加事件**。
 
-     这将打开添加事件向导。
+   这将打开添加事件向导。
 
 1. 在中**事件名称**下拉列表中，选择常用事件名称。 对于此示例中，选择**单击**。
 

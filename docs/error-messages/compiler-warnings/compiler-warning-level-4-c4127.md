@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 561173e2b451a0b736d97042667a2fb14b3a7eb7
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 80f831d527e918fce0551f6a1336fd2fe994917d
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46094892"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161276"
 ---
 # <a name="compiler-warning-level-4-c4127"></a>编译器警告（等级 4）C4127
 
@@ -29,9 +29,9 @@ ms.locfileid: "46094892"
 
 ## <a name="remarks"></a>备注
 
-某个 `if` 语句或 `while` 循环的控制表达式的计算结果为常量。 由于其常见的惯用使用情况，从 Visual Studio 2015 update 3，如 1 常用常数或`true`不触发此警告，除非它们是在表达式中操作的结果。
+控制表达式**如果**语句或**虽然**循环计算结果为常量。 由于其常见的惯用使用情况，从 Visual Studio 2015 update 3，如 1 常用常数或 **，则返回 true**不触发此警告，除非它们是在表达式中操作的结果。
 
-如果的控制表达式`while`循环是一个常量，因为在中间退出循环，请考虑更换`while`循环`for`循环。 可以省略初始化、 终止测试和循环增量`for`循环中，这会导致循环是无限的就像`while(1)`，并可以从正文中退出循环`for`语句。
+如果的控制表达式的**虽然**循环是一个常量，因为在中间退出循环，请考虑更换**虽然**循环，并**为**循环。 可以省略初始化、 终止测试和循环增量**有关**循环中，这会导致循环是无限的就像`while(1)`，并可以从正文中退出循环**为**语句。
 
 ## <a name="example"></a>示例
 

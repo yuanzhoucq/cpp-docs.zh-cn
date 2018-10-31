@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71a02b89e7b2098f8a125d1477cff2a0d1cda30a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 65113616b93917e46738a0d7f3bc39bdd79553f1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46429952"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060035"
 ---
 # <a name="extent-class-c-amp"></a>extent 类 (C++ AMP)
 
@@ -110,7 +110,7 @@ bool contains(const index<rank>& _Index) const restrict(amp,cpu);
 
 ### <a name="return-value"></a>返回值
 
-`true` 如果指定`index`值包含在`extent`对象; 否则为`false`。
+**true**如果指定*索引*值包含在`extent`对象; 否则为**false**。
 
 ##  <a name="ctor"></a> 范围
 
@@ -393,6 +393,7 @@ tiled_extent<_Dim0, _Dim1> tile() const ;
 template <int _Dim0, int _Dim1, int _Dim2>
 tiled_extent<_Dim0, _Dim1, _Dim2> tile() const ;
 ```
+
 ### <a name="parameters"></a>参数
 
 *_Dim0*<br/>

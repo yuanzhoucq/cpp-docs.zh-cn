@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26345a95559000815ed7d2e2cc336892d619969b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 104f9e0be67a350a1725dfbcd2bf234a8bc79553
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46413739"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052559"
 ---
 # <a name="defining-a-message-handler-for-a-reflected-message"></a>为反射消息定义消息处理程序
 
@@ -53,7 +53,7 @@ ms.locfileid: "46413739"
 
 1. 单击建议的名称以接受。 将处理程序添加到你的项目。
 
-     反射的消息窗口的右侧列中显示已添加的消息处理程序名称。
+   反射的消息窗口的右侧列中显示已添加的消息处理程序名称。
 
 9. 若要编辑或删除消息处理程序，请重复步骤 4 到 7。 单击包含要编辑或删除并单击相应的任务的处理程序名称的单元格。
 

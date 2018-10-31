@@ -1,7 +1,7 @@
 ---
 title: CStringT 类 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -90,12 +90,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 253282092bb71b6d4a5c520355ab4f8b51015c9f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: cf54f03ffd18c9f02920049fa60781a781865cc6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46445134"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082304"
 ---
 # <a name="cstringt-class"></a>CStringT 类
 
@@ -105,8 +105,8 @@ ms.locfileid: "46445134"
 
 ```
 
-template<typename BaseType, class StringTraits>  
-class CStringT :   
+template<typename BaseType, class StringTraits>
+class CStringT :
 public CSimpleStringT<BaseType,
                       _CSTRING_IMPL_::_MFCDLLTraitsCheck<BaseType, StringTraits>
                       ::c_bIsMFCDLLTraits>
@@ -115,7 +115,7 @@ public CSimpleStringT<BaseType,
 
 #### <a name="parameters"></a>参数
 
-*BaseType*  
+*BaseType*<br/>
 字符串类的字符类型。 可以是以下各项之一：
 
 - **char** （适用于 ANSI 字符串）。
@@ -124,7 +124,7 @@ public CSimpleStringT<BaseType,
 
 - TCHAR （针对 ANSI 和 Unicode 字符串）。
 
-*StringTraits*  
+*StringTraits*<br/>
 确定此字符串类是否需要 C 运行时 (CRT) 库支持和字符串资源的位置。 可以是以下各项之一：
 
 - **StrTraitATL < wchar_t** &#124; `char` &#124; **TCHAR、 ChTraitsCRT < wchar_t** &#124; `char` &#124; **TCHAR >>**
@@ -224,7 +224,7 @@ public CSimpleStringT<BaseType,
 `CString``CStringA`，和`CStringW`导出从 MFC DLL (MFC90。DLL)，永远不会从用户 Dll。 这样做是为了防止`CStringT`从被多次定义。
 
 > [!NOTE]
->  如果你的代码包含中所述的链接器错误的解决方法[Linking Errors When You Import CString-Derived 类"(Q309801)](https://support.microsoft.com/help/309801/you-may-receive-an-lnk2019-error-message-when-you-build-a-visual-c-200)，应删除该代码。 不再需要它。
+>  如果你的代码包含中所述的链接器错误的解决方法[使用 CStringT 导出字符串类](../../atl-mfc-shared/exporting-string-classes-using-cstringt.md)，应删除该代码。 不再需要它。
 
 下面的字符串类型可用于基于 MFC 的应用程序中：
 
@@ -294,7 +294,7 @@ public CSimpleStringT<BaseType,
 分配类型 BSTR 的自动化兼容字符串并将复制的内容`CStringT`对象到其中，包括终止 null 字符。
 
 ```
-BSTR AllocSysString() const;  
+BSTR AllocSysString() const;
 ```
 
 ### <a name="return-value"></a>返回值
@@ -307,8 +307,7 @@ BSTR AllocSysString() const;
 
 通常情况下，如果将此字符串传递给 COM 函数作为 [in] 参数，则这要求调用方释放字符串。 这可以通过使用[SysFreeString](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-sysfreestring)，如 Windows SDK 中所述。 有关详细信息，请参阅[Allocating 和释放内存为 BSTR](../../atl-mfc-shared/allocating-and-releasing-memory-for-a-bstr.md)。
 
-有关在 Windows 中的 OLE 分配函数的详细信息，请参阅[SysAllocString](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-sysallocstring) Windows SDK 中。  
-
+有关在 Windows 中的 OLE 分配函数的详细信息，请参阅[SysAllocString](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-sysallocstring) Windows SDK 中。
 
 ### <a name="example"></a>示例
 
@@ -343,13 +342,13 @@ void __cdecl AppendFormat(UINT nFormatID, [, argument] ...);
 
 ### <a name="parameters"></a>参数
 
-*pszFormat*  
+*pszFormat*<br/>
 格式控制字符串。
 
-*nFormatID*  
+*nFormatID*<br/>
 包含格式控件字符串的字符串资源标识符。
 
-*自变量*  
+*自变量*<br/>
 可选参数。
 
 ### <a name="remarks"></a>备注
@@ -370,7 +369,7 @@ int Collate(PCXSTR psz) const throw();
 
 ### <a name="parameters"></a>参数
 
-*psz*  
+*psz*<br/>
 用于比较的其他字符串。
 
 ### <a name="return-value"></a>返回值
@@ -391,7 +390,7 @@ int CollateNoCase(PCXSTR psz) const throw();
 
 ### <a name="parameters"></a>参数
 
-*psz*  
+*psz*<br/>
 用于比较的其他字符串。
 
 ### <a name="return-value"></a>返回值
@@ -411,12 +410,12 @@ int CollateNoCase(PCXSTR psz) const throw();
 比较两个字符串 （区分大小写）。
 
 ```
-int Compare(PCXSTR psz) const; 
+int Compare(PCXSTR psz) const;
 ```
 
 ### <a name="parameters"></a>参数
 
-*psz*  
+*psz*<br/>
 用于比较的其他字符串。
 
 ### <a name="return-value"></a>返回值
@@ -445,7 +444,7 @@ int CompareNoCase(PCXSTR psz) const throw();
 
 ### <a name="parameters"></a>参数
 
-*psz*  
+*psz*<br/>
 用于比较的其他字符串。
 
 ### <a name="return-value"></a>返回值
@@ -465,102 +464,102 @@ int CompareNoCase(PCXSTR psz) const throw();
 构造 `CStringT` 对象。
 
 ```
-CStringT() throw() :   
+CStringT() throw() :
     CThisSimpleString(StringTraits::GetDefaultManager());
 
-explicit CStringT(IAtlStringMgr* pStringMgr) throw() :   
-    CThisSimpleString( pStringMgr); 
+explicit CStringT(IAtlStringMgr* pStringMgr) throw() :
+    CThisSimpleString( pStringMgr);
 
 CStringT(const VARIANT& varSrc);
 
 CStringT(const VARIANT& varSrc, IAtlStringMgr* pStringMgr);
 
-CStringT(const CStringT& strSrc) :   
+CStringT(const CStringT& strSrc) :
     CThisSimpleString( strSrc);
 
 operator CSimpleStringT<
-                    BaseType, 
+                    BaseType,
                     !_CSTRING_IMPL_::_MFCDLLTraitsCheck<BaseType, StringTraits>
                     :: c_bIsMFCDLLTraits> &()
 
-template <bool bMFCDLL>  
-CStringT(const CSimpleStringT<BaseType, bMFCDLL>& strSrc) :   
+template <bool bMFCDLL>
+CStringT(const CSimpleStringT<BaseType, bMFCDLL>& strSrc) :
     CThisSimpleString( strSrc);
 
-template <class SystemString>  
-CStringT(SystemString^ pString) :   
+template <class SystemString>
+CStringT(SystemString^ pString) :
     CThisSimpleString( StringTraits::GetDefaultManager());
 
-CStringT(const XCHAR* pszSrc) :   
+CStringT(const XCHAR* pszSrc) :
     CThisSimpleString( StringTraits::GetDefaultManager());
 
-CSTRING_EXPLICIT CStringT(const YCHAR* pszSrc) :   
+CSTRING_EXPLICIT CStringT(const YCHAR* pszSrc) :
     CThisSimpleString( StringTraits::GetDefaultManager());
 
-CStringT(LPCSTR pszSrc, IAtlStringMgr* pStringMgr) :   
+CStringT(LPCSTR pszSrc, IAtlStringMgr* pStringMgr) :
     CThisSimpleString( pStringMgr);
 
-CStringT(LPCWSTR pszSrc, IAtlStringMgr* pStringMgr) :   
+CStringT(LPCWSTR pszSrc, IAtlStringMgr* pStringMgr) :
     CThisSimpleString( pStringMgr);
 
-CSTRING_EXPLICIT CStringT(const unsigned char* pszSrc) :   
+CSTRING_EXPLICIT CStringT(const unsigned char* pszSrc) :
     CThisSimpleString( StringTraits::GetDefaultManager());
 
-/*CSTRING_EXPLICIT*/ CStringT(char* pszSrc) :   
+/*CSTRING_EXPLICIT*/ CStringT(char* pszSrc) :
     CThisSimpleString( StringTraits::GetDefaultManager());
 
-CSTRING_EXPLICIT CStringT(unsigned char* pszSrc) :   
+CSTRING_EXPLICIT CStringT(unsigned char* pszSrc) :
     CThisSimpleString( StringTraits::GetDefaultManager());
 
-CSTRING_EXPLICIT CStringT(wchar_t* pszSrc) :   
+CSTRING_EXPLICIT CStringT(wchar_t* pszSrc) :
     CThisSimpleString( StringTraits::GetDefaultManager());
 
-CStringT(const unsigned char* pszSrc, IAtlStringMgr* pStringMgr) :   
+CStringT(const unsigned char* pszSrc, IAtlStringMgr* pStringMgr) :
     CThisSimpleString( pStringMgr);
 
-CSTRING_EXPLICIT CStringT(char ch, int nLength = 1) :   
+CSTRING_EXPLICIT CStringT(char ch, int nLength = 1) :
     CThisSimpleString( StringTraits::GetDefaultManager());
 
-CSTRING_EXPLICIT CStringT(wchar_t ch, int nLength = 1) :   
+CSTRING_EXPLICIT CStringT(wchar_t ch, int nLength = 1) :
     CThisSimpleString( StringTraits::GetDefaultManager());
 
-CStringT(const XCHAR* pch, int nLength) :   
+CStringT(const XCHAR* pch, int nLength) :
     CThisSimpleString( pch, nLength, StringTraits::GetDefaultManager());
 
-CStringT(const YCHAR* pch, int nLength) :   
+CStringT(const YCHAR* pch, int nLength) :
     CThisSimpleString( StringTraits::GetDefaultManager());
 
-CStringT(const XCHAR* pch, int nLength, AtlStringMgr* pStringMgr) :   
+CStringT(const XCHAR* pch, int nLength, AtlStringMgr* pStringMgr) :
     CThisSimpleString( pch, nLength, pStringMgr);
 
-CStringT(const YCHAR* pch, int nLength, IAtlStringMgr* pStringMgr) :   
+CStringT(const YCHAR* pch, int nLength, IAtlStringMgr* pStringMgr) :
     CThisSimpleString( pStringMgr);
 ```
 
 ### <a name="parameters"></a>参数
 
-*pch*  
+*pch*<br/>
 指向数组的长度的字符的指针*nLength*、 不以 null 结尾。
 
-*nLength*  
+*nLength*<br/>
 中的字符数的计数*pch*。
 
-*ch*  
+*ch*<br/>
 单个字符。
 
-*pszSrc*  
+*pszSrc*<br/>
 以 null 结尾的字符串复制到此`CStringT`对象。
 
-*pStringMgr*  
+*pStringMgr*<br/>
 指向的内存管理器的`CStringT`对象。 有关详细信息`IAtlStringMgr`和内存管理`CStringT`，请参阅[使用 CStringT 进行内存管理](../../atl-mfc-shared/memory-management-with-cstringt.md)。
 
-*strSrc*  
+*strSrc*<br/>
 将现有`CStringT`复制到此对象`CStringT`对象。 有关详细信息`CThisString`和`CThisSimpleString`，请参阅备注部分。
 
-*varSrc*  
+*varSrc*<br/>
 要复制到此变体对象`CStringT`对象。
 
-*BaseType*  
+*BaseType*<br/>
 字符串类的字符类型。 可以是以下各项之一：
 
 **char** （适用于 ANSI 字符串）。
@@ -569,13 +568,13 @@ CStringT(const YCHAR* pch, int nLength, IAtlStringMgr* pStringMgr) :
 
 TCHAR （针对 ANSI 和 Unicode 字符串）。
 
-*bMFCDLL*  
+*bMFCDLL*<br/>
 布尔值，指定项目是 MFC DLL (TRUE) 还是不 (FALSE)。
 
-*SystemString*  
+*SystemString*<br/>
 必须为`System::String`，并且必须使用 /clr 编译项目。
 
-*pString*  
+*pString*<br/>
 句柄`CStringT`对象。
 
 ### <a name="remarks"></a>备注
@@ -624,10 +623,10 @@ int Delete(int iIndex, int nCount = 1);
 
 ### <a name="parameters"></a>参数
 
-*iIndex*  
+*iIndex*<br/>
 中的第一个字符的从零开始的索引`CStringT`要删除对象。
 
-*nCount*  
+*nCount*<br/>
 要删除的字符数。
 
 ### <a name="return-value"></a>返回值
@@ -642,11 +641,11 @@ int Delete(int iIndex, int nCount = 1);
 
 [!code-cpp[NVC_ATLMFC_Utilities#113](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_8.cpp)]
 
-```Output  
+```Output
 Before: Soccer is best,
-    but hockey is quicker!  
+    but hockey is quicker!
 After: Soccer best,
-    but hockey is quicker!  
+    but hockey is quicker!
 ```
 
 ##  <a name="find"></a>  CStringT::Find
@@ -660,13 +659,13 @@ int Find(XCHAR ch, int iStart=0) const throw();
 
 ### <a name="parameters"></a>参数
 
-*pszSub*  
+*pszSub*<br/>
 要搜索的子字符串。
 
-*iStart*  
+*iStart*<br/>
 若要开始使用，搜索在字符串或 0，以从头开始的字符的索引。
 
-*ch*  
+*ch*<br/>
 要搜索的单个字符。
 
 ### <a name="return-value"></a>返回值
@@ -691,7 +690,7 @@ int FindOneOf(PCXSTR pszCharSet) const throw();
 
 ### <a name="parameters"></a>参数
 
-*pszCharSet*  
+*pszCharSet*<br/>
 包含用于匹配的字符的字符串。
 
 ### <a name="return-value"></a>返回值
@@ -717,13 +716,13 @@ void __cdecl Format(PCXSTR pszFormat,  [, argument] ...);
 
 ### <a name="parameters"></a>参数
 
-*nFormatID*  
+*nFormatID*<br/>
 包含格式控件字符串的字符串资源标识符。
 
-*pszFormat*  
+*pszFormat*<br/>
 格式控制字符串。
 
-*自变量*  
+*自变量*<br/>
 可选参数。
 
 ### <a name="remarks"></a>备注
@@ -751,13 +750,13 @@ void __cdecl FormatMessage(PCXSTR pszFormat, [, argument]...);
 
 ### <a name="parameters"></a>参数
 
-*nFormatID*  
+*nFormatID*<br/>
 包含未格式化的消息文本的字符串资源标识符。
 
-*pszFormat*  
+*pszFormat*<br/>
 指向格式控件字符串。 它将扫描插入并相应地设置格式。 格式字符串是类似于运行时函数*printf*-样式格式字符串，但它允许按任意顺序插入的参数。
 
-*自变量*  
+*自变量*<br/>
 可选参数。
 
 ### <a name="remarks"></a>备注
@@ -783,10 +782,10 @@ void FormatMessageV(PCXSTR pszFormat, va_list* pArgList);
 
 ### <a name="parameters"></a>参数
 
-*pszFormat*  
+*pszFormat*<br/>
 指向格式控件字符串。 它将扫描插入并相应地设置格式。 格式字符串是类似于运行时函数`printf`-样式格式字符串，但它允许按任意顺序插入的参数。
 
-*pArgList*  
+*pArgList*<br/>
 指向参数列表的指针。
 
 ### <a name="remarks"></a>备注
@@ -808,10 +807,10 @@ void FormatV(PCXSTR pszFormat, va_list args);
 
 ### <a name="parameters"></a>参数
 
-*pszFormat*  
+*pszFormat*<br/>
 指向格式控件字符串。 它将扫描插入并相应地设置格式。 格式字符串是类似于运行时函数`printf`-样式格式字符串，但它允许按任意顺序插入的参数。
 
-*参数*  
+*参数*<br/>
 指向参数列表的指针。
 
 ### <a name="remarks"></a>备注
@@ -834,7 +833,7 @@ BOOL GetEnvironmentVariable(PCXSTR pszVar);
 
 ### <a name="parameters"></a>参数
 
-*pszVar*  
+*pszVar*<br/>
 指定环境变量的以 null 结尾的字符串指针。
 
 ### <a name="return-value"></a>返回值
@@ -860,13 +859,13 @@ int Insert(int iIndex, XCHAR ch);
 
 ### <a name="parameters"></a>参数
 
-*iIndex*  
+*iIndex*<br/>
 要在其前面插入将发生的字符的索引。
 
-*psz*  
+*psz*<br/>
 指向要插入的子字符串的指针。
 
-*ch*  
+*ch*<br/>
 要插入的字符。
 
 ### <a name="return-value"></a>返回值
@@ -886,12 +885,12 @@ int Insert(int iIndex, XCHAR ch);
 提取最左侧*nCount*从此字符`CStringT`对象并返回提取的子字符串的副本。
 
 ```
-CStringT Left(int nCount) const; 
+CStringT Left(int nCount) const;
 ```
 
 ### <a name="parameters"></a>参数
 
-*nCount*  
+*nCount*<br/>
 从此 `CStringT` 对象中提取的字符的数量。
 
 ### <a name="return-value"></a>返回值
@@ -920,13 +919,13 @@ BOOL LoadString(UINT nID);
 
 ### <a name="parameters"></a>参数
 
-*hInstance*  
+*hInstance*<br/>
 该模块的实例句柄。
 
-*nID*  
+*nID*<br/>
 Windows 字符串资源 id。
 
-*wLanguageID*  
+*wLanguageID*<br/>
 字符串资源的语言。
 
 ### <a name="return-value"></a>返回值
@@ -997,15 +996,15 @@ CStringT& MakeUpper();
 
 ```
 CStringT Mid(int iFirst, int nCount) const;
-CStringT Mid(int iFirst) const; 
+CStringT Mid(int iFirst) const;
 ```
 
 ### <a name="parameters"></a>参数
 
-*iFirst*  
+*iFirst*<br/>
 在此第一个字符的从零开始的索引`CStringT`要提取的子字符串中包含的对象。
 
-*nCount*  
+*nCount*<br/>
 从此 `CStringT` 对象中提取的字符的数量。 如果未提供此参数，则提取字符串的其余部分。
 
 ### <a name="return-value"></a>返回值
@@ -1054,22 +1053,22 @@ friend CStringT operator+(wchar_t ch1, const CStringT& str2,);
 
 ### <a name="parameters"></a>参数
 
-*ch1*  
+*ch1*<br/>
 要与字符串串联 ANSI 或 Unicode 字符。
 
-*ch2*  
+*ch2*<br/>
 要与字符串串联 ANSI 或 Unicode 字符。
 
-*str1*  
+*str1*<br/>
 一个`CStringT`要串联字符串或字符开头。
 
-*str2*  
+*str2*<br/>
 一个`CStringT`要串联字符串或字符开头。
 
-*psz1*  
+*psz1*<br/>
 指向以 null 结尾的字符串串联字符串或字符开头的指针。
 
-*psz2*  
+*psz2*<br/>
 指向要串联字符串或字符开头的字符串的指针。
 
 ### <a name="remarks"></a>备注
@@ -1090,10 +1089,10 @@ friend CStringT operator+(wchar_t ch1, const CStringT& str2,);
 ```
 CStringT& operator+=(const CThisSimpleString& str);
 
-template<bool bMFCDLL>  
+template<bool bMFCDLL>
 CStringT& operator+=(const const CSimpleStringT<BaseType, bMFCDLL>& str);
 
-template<int t_nSize>  
+template<int t_nSize>
 CStringT& operator+=(const CStaticString<XCHAR, t_nSize>& strSrc);
 CStringT& operator+=(PCXSTR pszSrc);
 CStringT& operator+=(PCYSTR pszSrc);
@@ -1105,25 +1104,25 @@ CStringT& operator+=(const VARIANT& var);
 
 ### <a name="parameters"></a>参数
 
-str  
+*str*<br/>
 对 `CThisSimpleString` 对象的引用。
 
-*bMFCDLL*  
+*bMFCDLL*<br/>
 一个布尔值，指定项目是否非 MFC DLL。
 
-*BaseType*  
+*BaseType*<br/>
 字符串基类型。
 
-*var*  
+*var*<br/>
 要连接到此字符串变体对象。
 
-*ch*  
+*ch*<br/>
 要与字符串串联 ANSI 或 Unicode 字符。
 
-*pszSrc*  
+*pszSrc*<br/>
 指向要串联的原始字符串的指针。
 
-*strSrc*  
+*strSrc*<br/>
 一个`CStringT`要串联到此字符串。
 
 ### <a name="remarks"></a>备注
@@ -1155,22 +1154,22 @@ friend bool operator==(XCHAR ch1, const CStringT& str2,) throw();
 
 ### <a name="parameters"></a>参数
 
-*ch1*  
+*ch1*<br/>
 比较一个 ANSI 或 Unicode 字符。
 
-*ch2*  
+*ch2*<br/>
 比较一个 ANSI 或 Unicode 字符。
 
-*str1*  
+*str1*<br/>
 一个`CStringT`进行比较。
 
-*str2*  
+*str2*<br/>
 一个`CStringT`进行比较。
 
-*psz1*  
+*psz1*<br/>
 指向以 null 结尾的字符串进行比较的指针。
 
-*psz2*  
+*psz2*<br/>
 指向以 null 结尾的字符串进行比较的指针。
 
 ### <a name="remarks"></a>备注
@@ -1197,22 +1196,22 @@ friend bool operator!=(XCHAR ch1, const CStringT& str2,) throw();
 
 ### <a name="parameters"></a>参数
 
-*ch1*  
+*ch1*<br/>
 要与字符串串联 ANSI 或 Unicode 字符。
 
-*ch2*  
+*ch2*<br/>
 要与字符串串联 ANSI 或 Unicode 字符。
 
-*str1*  
+*str1*<br/>
 一个`CStringT`进行比较。
 
-*str2*  
+*str2*<br/>
 一个`CStringT`进行比较。
 
-*psz1*  
+*psz1*<br/>
 指向以 null 结尾的字符串进行比较的指针。
 
-*psz2*  
+*psz2*<br/>
 指向以 null 结尾的字符串进行比较的指针。
 
 ### <a name="remarks"></a>备注
@@ -1235,16 +1234,16 @@ friend bool operator<(PCXSTR psz1, const CStringT& str2) throw();
 
 ### <a name="parameters"></a>参数
 
-*str1*  
+*str1*<br/>
 一个`CStringT`进行比较。
 
-*str2*  
+*str2*<br/>
 一个`CStringT`进行比较。
 
-*psz1*  
+*psz1*<br/>
 指向以 null 结尾的字符串进行比较的指针。
 
-*psz2*  
+*psz2*<br/>
 指向以 null 结尾的字符串进行比较的指针。
 
 ### <a name="remarks"></a>备注
@@ -1273,16 +1272,16 @@ friend bool operator>(PCXSTR psz1, const CStringT& str2) throw();
 
 ### <a name="parameters"></a>参数
 
-*str1*  
+*str1*<br/>
 一个`CStringT`进行比较。
 
-*str2*  
+*str2*<br/>
 一个`CStringT`进行比较。
 
-*psz1*  
+*psz1*<br/>
 指向以 null 结尾的字符串进行比较的指针。
 
-*psz2*  
+*psz2*<br/>
 指向以 null 结尾的字符串进行比较的指针。
 
 ### <a name="remarks"></a>备注
@@ -1311,16 +1310,16 @@ friend bool operator<=(PCXSTR psz1, const CStringT& str2) throw();
 
 ### <a name="parameters"></a>参数
 
-*str1*  
+*str1*<br/>
 一个`CStringT`进行比较。
 
-*str2*  
+*str2*<br/>
 一个`CStringT`进行比较。
 
-*psz1*  
+*psz1*<br/>
 指向以 null 结尾的字符串进行比较的指针。
 
-*psz2*  
+*psz2*<br/>
 指向以 null 结尾的字符串进行比较的指针。
 
 ### <a name="remarks"></a>备注
@@ -1349,16 +1348,16 @@ friend bool operator>=(PCXSTR psz1, const CStringT& str2) throw();
 
 ### <a name="parameters"></a>参数
 
-*str1*  
+*str1*<br/>
 一个`CStringT`进行比较。
 
-*str2*  
+*str2*<br/>
 一个`CStringT`进行比较。
 
-*psz1*  
+*psz1*<br/>
 为用于比较的字符串指针。
 
-*psz2*  
+*psz2*<br/>
 为用于比较的字符串指针。
 
 ### <a name="remarks"></a>备注
@@ -1385,7 +1384,7 @@ int Remove(XCHAR chRemove);
 
 ### <a name="parameters"></a>参数
 
-*chRemove*  
+*chRemove*<br/>
 要从字符串中删除的字符。
 
 ### <a name="return-value"></a>返回值
@@ -1411,16 +1410,16 @@ int Replace(XCHAR chOld, XCHAR chNew);
 
 ### <a name="parameters"></a>参数
 
-*pszOld*  
+*pszOld*<br/>
 指向以 null 结尾的字符串替换为指针*pszNew*。
 
-*pszNew*  
+*pszNew*<br/>
 指向以 null 结尾的字符串，用于替换*pszOld*。
 
-*chOld*  
+*chOld*<br/>
 要被替换的字符*chNew*。
 
-*chNew*  
+*chNew*<br/>
 字符替换*chOld*。
 
 ### <a name="return-value"></a>返回值
@@ -1458,7 +1457,7 @@ int ReverseFind(XCHAR ch) const throw();
 
 ### <a name="parameters"></a>参数
 
-*ch*  
+*ch*<br/>
 要搜索的字符。
 
 ### <a name="return-value"></a>返回值
@@ -1478,12 +1477,12 @@ int ReverseFind(XCHAR ch) const throw();
 提取最后一个 (即，最右侧) *nCount*从此字符`CStringT`对象并返回提取的子字符串的副本。
 
 ```
-CStringT Right(int nCount) const; 
+CStringT Right(int nCount) const;
 ```
 
 ### <a name="parameters"></a>参数
 
-*nCount*  
+*nCount*<br/>
 从此 `CStringT` 对象中提取的字符的数量。
 
 ### <a name="return-value"></a>返回值
@@ -1505,12 +1504,12 @@ CStringT Right(int nCount) const;
 重新分配由指向 BSTR *pbstr* ，并将复制的内容`CStringT`对象到其中，包括 NULL 字符。
 
 ```
-BSTR SetSysString(BSTR* pbstr) const; 
+BSTR SetSysString(BSTR* pbstr) const;
 ```
 
 ### <a name="parameters"></a>参数
 
-*pbstr*  
+*pbstr*<br/>
 指向字符字符串的指针。
 
 ### <a name="return-value"></a>返回值
@@ -1532,12 +1531,12 @@ BSTR SetSysString(BSTR* pbstr) const;
 从开始不在由标识的字符集中的第一个字符的字符串中提取字符*pszCharSet*。
 
 ```
-CStringT SpanExcluding(PCXSTR pszCharSet) const; 
+CStringT SpanExcluding(PCXSTR pszCharSet) const;
 ```
 
 ### <a name="parameters"></a>参数
 
-*pszCharSet*  
+*pszCharSet*<br/>
 将字符串解释为一组字符。
 
 ### <a name="return-value"></a>返回值
@@ -1557,12 +1556,12 @@ CStringT SpanExcluding(PCXSTR pszCharSet) const;
 从开始使用由标识的字符集中的第一个字符的字符串中提取字符*pszCharSet*。
 
 ```
-CStringT SpanIncluding(PCXSTR pszCharSet) const; 
+CStringT SpanIncluding(PCXSTR pszCharSet) const;
 ```
 
 ### <a name="parameters"></a>参数
 
-*pszCharSet*  
+*pszCharSet*<br/>
 将字符串解释为一组字符。
 
 ### <a name="return-value"></a>返回值
@@ -1582,15 +1581,15 @@ CStringT SpanIncluding(PCXSTR pszCharSet) const;
 在目标字符串中查找下一个标记
 
 ```
-CStringT Tokenize(PCXSTR pszTokens, int& iStart) const; 
+CStringT Tokenize(PCXSTR pszTokens, int& iStart) const;
 ```
 
 ### <a name="parameters"></a>参数
 
-*pszTokens*  
+*pszTokens*<br/>
 包含标记分隔符的字符串。 这些分隔符的顺序并不重要。
 
-*iStart*  
+*iStart*<br/>
 要开始搜索的从零开始索引。
 
 ### <a name="return-value"></a>返回值
@@ -1629,10 +1628,10 @@ CStringT& Trim();
 
 ### <a name="parameters"></a>参数
 
-*chTarget*  
+*chTarget*<br/>
 要剪裁的目标字符。
 
-*pszTargets*  
+*pszTargets*<br/>
 指向包含要修整的目标字符的字符串的指针。 所有前导空格和尾随匹配项中的字符*pszTarget*将会截掉从`CStringT`对象。
 
 ### <a name="return-value"></a>返回值
@@ -1674,10 +1673,10 @@ CStringT& TrimLeft();
 
 ### <a name="parameters"></a>参数
 
-*chTarget*  
+*chTarget*<br/>
 要剪裁的目标字符。
 
-*pszTargets*  
+*pszTargets*<br/>
 指向包含要修整的目标字符的字符串的指针。 中的字符的所有前导匹配项*pszTarget*将会截掉从`CStringT`对象。
 
 ### <a name="return-value"></a>返回值
@@ -1710,10 +1709,10 @@ CStringT& TrimRight();
 
 ### <a name="parameters"></a>参数
 
-*chTarget*  
+*chTarget*<br/>
 要剪裁的目标字符。
 
-*pszTargets*  
+*pszTargets*<br/>
 指向包含要修整的目标字符的字符串的指针。 所有尾部中出现的字符*pszTarget*将会截掉从`CStringT`对象。
 
 ### <a name="return-value"></a>返回值

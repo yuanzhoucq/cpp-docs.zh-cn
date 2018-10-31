@@ -10,17 +10,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f913f0b3065b136f626ef15cc2a77dce8d0254f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0007cf50eafa7b61e48b550172eb2d316270c61f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33335086"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46448310"
 ---
 # <a name="change-signature"></a>更改签名
 功能：可让你修改函数的参数。
 
-时间：要重新排序、添加、删除或修改当前用于多个位置的函数参数时。  
+时间：要重新排序、添加、删除或修改当前用于多个位置的函数参数时。
 
 原因：可自行手动更改这些参数，然后查找对该函数的所有调用并逐个更改它们，但这可能会导致错误。  此重构工具可自动执行此任务。
 

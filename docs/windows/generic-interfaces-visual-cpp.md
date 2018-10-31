@@ -1,7 +1,7 @@
 ---
-title: 泛型接口 （Visual c + +） |Microsoft Docs
+title: 泛型接口 (C + + CLI) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -16,14 +16,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2065b96875f2c441b24eb69f8ca51b06fe5717f0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: cce40d1ae7dedbc9a8aee07bfeff5339a6692f1d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46444473"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080632"
 ---
-# <a name="generic-interfaces-visual-c"></a>泛型接口 (Visual C++)
+# <a name="generic-interfaces-ccli"></a>泛型接口 (C + + CLI)
 
 适用于对类类型参数的限制将与那些应用于类型参数在接口上的相同 (请参阅[泛型类 (C + + CLI)](../windows/generic-classes-cpp-cli.md))。
 
@@ -124,7 +124,7 @@ public ref class List1 : public IList<ItemType> {
 
    virtual ItemType MoveFirst() {
       current = first;
-      if (first != nullptr)  
+      if (first != nullptr)
         return first->get_Item();
       else
          return ItemType();
@@ -144,21 +144,21 @@ public ref class List1 : public IList<ItemType> {
    }
 
    virtual bool AtEnd() {
-      if (current == nullptr )  
+      if (current == nullptr )
         return true;
       else
         return false;
    }
 
    virtual ItemType Current() {
-       if (current != nullptr)  
+       if (current != nullptr)
          return current->get_Item();
        else
          throw gcnew ElementNotFoundException();
    }
 
    virtual void MoveNext() {
-      if (current != nullptr)  
+      if (current != nullptr)
        current = current->next;
       else
         throw gcnew ElementNotFoundException();
@@ -187,7 +187,7 @@ ref class List2 : public IList<ItemType> {
    }
 
    virtual bool Add(ItemType item) {
-      if (count < 256)  
+      if (count < 256)
          item_array[count++] = item;
       else
         return false;
@@ -195,21 +195,21 @@ ref class List2 : public IList<ItemType> {
    }
 
    virtual bool AtEnd() {
-      if (current >= count)  
+      if (current >= count)
         return true;
       else
         return false;
    }
 
    virtual ItemType Current() {
-      if (current < count)  
+      if (current < count)
         return item_array[current];
       else
         throw gcnew ElementNotFoundException();
    }
 
    virtual void MoveNext() {
-      if (current < count)  
+      if (current < count)
          ++current;
       else
          throw gcnew ElementNotFoundException();
@@ -221,7 +221,7 @@ generic <typename ItemType>
 void AddStringsAndDisplay(IList<ItemType>^ list, ItemType item1, ItemType item2) {
    list->Add(item1);
    list->Add(item2);
-   for (list->MoveFirst(); ! list->AtEnd(); list->MoveNext())  
+   for (list->MoveFirst(); ! list->AtEnd(); list->MoveNext())
    Console::WriteLine(list->Current());
 }
 
@@ -279,10 +279,10 @@ public:
 
    virtual void Display() {
       Console::WriteLine("The integer field contains: {0}", myField);
-   } 
+   }
 };
 
-public ref struct MyStringClass: IMySpecializedString { 
+public ref struct MyStringClass: IMySpecializedString {
    String^ myField;
 
 public:

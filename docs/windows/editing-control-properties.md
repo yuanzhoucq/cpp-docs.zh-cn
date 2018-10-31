@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7f136b742d743fb359c4bb38640bd449e0e336af
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: f0f387f536e5d1762f3c48a1955b5053e144e3bc
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44316908"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082847"
 ---
 # <a name="editing-control-properties"></a>编辑控件属性
 
@@ -44,7 +44,7 @@ ms.locfileid: "44316908"
 
 2. 选择**撤消**从**编辑**菜单 (如果焦点在控件上，而不是**撤消**命令将不可用)。
 
-将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发人员指南*。 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[演练： 本地化 Windows 窗体](/previous-versions/visualstudio/visual-studio-2010/y99d1cd3\(v=vs.100\))。
+将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发人员指南*。 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[演练： 本地化 Windows 窗体](/previous-versions/visualstudio/visual-studio-2010/y99d1cd3)。
 
 ## <a name="requirements"></a>要求
 

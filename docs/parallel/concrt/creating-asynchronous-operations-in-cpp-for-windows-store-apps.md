@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3461c4965dd40d0aecc7515185592a13f30c08c9
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4014d0d7cea999c105a5ee513d9dd1be410546f4
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46422996"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49084069"
 ---
 # <a name="creating-asynchronous-operations-in-c-for-uwp-apps"></a>在 c + + 为 UWP 应用创建异步操作
 
@@ -113,7 +113,7 @@ Windows 运行时是一个编程接口，可用于创建仅在特殊操作系统
 
 [!code-cpp[concrt-windowsstore-primes#2](../../parallel/concrt/codesnippet/cpp/creating-asynchronous-operations-in-cpp-for-windows-store-apps_3.cpp)]
 
-每个方法首先执行验证，以确保输入的参数为非负值。 如果输入的值为负，则该方法将引发[platform:: invalidargumentexception](https://msdn.microsoft.com/library/windows/apps/hh755794\(v=vs.110\).aspx)。 本节后面部分会对错误处理进行说明。
+每个方法首先执行验证，以确保输入的参数为非负值。 如果输入值为负，则方法会引发 [Platform::InvalidArgumentException](https://msdn.microsoft.com/library/windows/apps/hh755794.aspx)。 本节后面部分会对错误处理进行说明。
 
 若要使用这些方法从 UWP 应用，使用 Visual C#**空白应用 (XAML)** 模板将第二个项目添加到 Visual Studio 解决方案。 此示例将项目命名为 `Primes`。 然后，从 `Primes` 项目中将一个引用添加到 `PrimesLibrary` 项目中。
 
@@ -136,7 +136,7 @@ Windows 运行时是一个编程接口，可用于创建仅在特殊操作系统
 
 ![Windows 运行时 Primes 应用](../../parallel/concrt/media/concrt_windows_primes.png "concrt_windows_primes")
 
-有关示例，请使用`create_async`若要创建可供其他语言的异步任务，请参阅[使用 c + + 中的必应地图行程优化器示例](https://msdn.microsoft.com/library/windows/apps/hh699891\(v=vs.110\).aspx)和[使用 PPLc++中的Windows8异步操作](http://code.msdn.microsoft.com/windowsapps/windows-8-asynchronous-08009a0d).
+有关使用 `create_async` 创建可供其他语言使用的异步任务的示例，请参阅 [在 Bing 地图行程优化器示例中使用 C++](https://msdn.microsoft.com/library/windows/apps/hh699891.aspx) 和 [在 C++ 中使用 PPL 的 Windows 8 异步操作](http://code.msdn.microsoft.com/windowsapps/windows-8-asynchronous-08009a0d)。
 
 ##  <a name="exethread"></a> 控制执行线程
 
@@ -166,7 +166,7 @@ Windows 运行时使用的 COM 线程模型。 在此模型中，根据对象处
 
 ##  <a name="example-app"></a> 示例： 控制在使用 c + + 和 XAML 的 Windows 运行时应用的执行
 
-假设有一个 C++ XAML 应用程序，该应用程序从磁盘读取一个文件，在该文件中查找最常见的单词，然后在 UI 中显示结果。 若要创建此应用，首先，在 Visual Studio 中，创建**空白应用 (通用 Windows)** 项目并将其命名`CommonWords`。 在应用程序清单中，指定“文档库”  功能以使应用程序能够访问“文档”文件夹。 同时将文本 (.txt) 文件类型添加到应用程序清单的声明部分。 有关应用功能和声明的详细信息，请参阅[应用包和部署](https://msdn.microsoft.com/library/windows/apps/hh464929.aspx)。
+假设有一个 C++ XAML 应用程序，该应用程序从磁盘读取一个文件，在该文件中查找最常见的单词，然后在 UI 中显示结果。 若要创建此应用，首先，在 Visual Studio 中，创建**空白应用 (通用 Windows)** 项目并将其命名`CommonWords`。 在应用程序清单中，指定“文档库”  功能以使应用程序能够访问“文档”文件夹。 同时将文本 (.txt) 文件类型添加到应用程序清单的声明部分。 有关应用功能和声明的详细信息，请参阅 [应用包和部署](https://msdn.microsoft.com/library/windows/apps/hh464929.aspx)。
 
 更新 MainPage.xaml 中的 `Grid` 元素，以包含 `ProgressRing` 元素和 `TextBlock` 元素。 `ProgressRing` 指示操作正在进行， `TextBlock` 显示计算的结果。
 

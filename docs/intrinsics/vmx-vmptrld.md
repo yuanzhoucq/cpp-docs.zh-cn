@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7126dc3b6a0ece4a5b7627859d0b80abf962d88
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 16a61578b7512c1d9ce9d7ca217b29a3ea670657
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46429094"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068484"
 ---
 # <a name="vmxvmptrld"></a>__vmx_vmptrld
 
@@ -33,28 +33,32 @@ ms.locfileid: "46429094"
 ## <a name="syntax"></a>语法
 
 ```
-int __vmx_vmptrld( 
-   unsigned __int64 *VmcsPhysicalAddress 
+int __vmx_vmptrld( 
+   unsigned __int64 *VmcsPhysicalAddress 
 );
 ```
 
-#### <a name="parameters"></a>参数
+### <a name="parameters"></a>参数
 
-[in] *`VmcsPhysicalAddress` VMCS 指针的存储位置的地址。
+*VmcsPhysicalAddress*<br/>
+[in]在其中存储 VMCS 指针的地址。
 
 ## <a name="return-value"></a>返回值
 
-操作已成功为 0。
+0<br/>
+操作成功。
 
-1 中提供了扩展状态，操作失败`VM-instruction error field`，当前 vmcs。
+1<br/>
+操作失败，当前 VMCS 的 `VM-instruction error field` 中提供了扩展状态。
 
-2 无可用状态，，操作失败。
+2<br/>
+操作失败，无可用状态。
 
 ## <a name="remarks"></a>备注
 
 VMCS 指针是一个 64 位物理地址。
 
-`__vmx_vmptrld`函数等同于`VMPTRLD`计算机指令。 此函数支持主机的虚拟机监视器与来宾操作系统及其应用程序进行交互。 有关详细信息，搜索"Intel 虚拟化技术规范的 IA-32 Intel 体系结构，"文档在文档数字 C97063 002 [Intel Corporation](https://software.intel.com/en-us/articles/intel-sdm)站点。
+`__vmx_vmptrld` 函数等同于 `VMPTRLD` 计算机指令。 此函数支持主机的虚拟机监视器与来宾操作系统及其应用程序进行交互。 有关详细信息，搜索"Intel 虚拟化技术规范的 IA-32 Intel 体系结构，"文档在文档数字 C97063 002 [Intel Corporation](https://software.intel.com/articles/intel-sdm)站点。
 
 ## <a name="requirements"></a>要求
 

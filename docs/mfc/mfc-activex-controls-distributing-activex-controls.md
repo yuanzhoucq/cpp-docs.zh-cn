@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f067b1835c9ff70c7a7c91d401a83e7fa3e1cce
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d75f84a8cb5ca2cb5a867cc640410c7de978d4fc
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46382292"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204660"
 ---
 # <a name="mfc-activex-controls-distributing-activex-controls"></a>MFC ActiveX 控件：发行 ActiveX 控件
 
@@ -52,9 +52,8 @@ ms.locfileid: "46382292"
 
 - [注册控件](#_core_registering_controls)
 
-
 >[!IMPORTANT]
-> ActiveX 是一项传统技术，不应使用新的开发。 本文将取代 ActiveX 的现代技术的详细信息，请参阅[ActiveX 控件](activex-controls.md)。
+> ActiveX 是一项传统技术，不应使用新的开发。 有关取代 ActiveX 的现代技术的详细信息，请参阅[ActiveX 控件](activex-controls.md)。
 
 ##  <a name="_core_ansi_or_unicode_control_versions"></a> ANSI 或 Unicode 控制版本
 

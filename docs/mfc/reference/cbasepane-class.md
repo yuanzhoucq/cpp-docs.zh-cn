@@ -176,12 +176,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9351e363bfa0ca654837436a01bb36b4f2b51eb2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5099251f46d3446368c04a39d624fde8128ab2e4
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46378385"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076303"
 ---
 # <a name="cbasepane-class"></a>CBasePane 类
 
@@ -292,7 +292,7 @@ class CBasePane : public CWnd
 |[Cbasepane:: Onsetaccdata](#onsetaccdata)|`CBasePane` 不使用此方法。|
 |`CBasePane::OnUpdateCmdUI`|内部使用。|
 |[CBasePane::PaneFromPoint](#panefrompoint)|返回包含给定的点的窗格。|
-|`CBasePane::PreTranslateMessage`|类使用[CWinApp](../../mfc/reference/cwinapp-class.md)窗口消息调度到之前转换[TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)并[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows 函数。 （重写 [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)。）|
+|`CBasePane::PreTranslateMessage`|在将窗口消息发送到 [TranslateMessage](../../mfc/reference/cwinapp-class.md) 和 [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) Windows 函数之前，由 [CWinApp](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) 类用于对此消息进行转换。 （重写 [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)。）|
 |[CBasePane::RecalcLayout](#recalclayout)|`CBasePane` 不使用此方法。|
 |[CBasePane::RemovePaneFromDockManager](#removepanefromdockmanager)|注销一个窗格，并将其从列表中到停靠管理器删除。|
 |[CBasePane::SaveState](#savestate)|将窗格的状态保存到注册表。|
@@ -332,7 +332,7 @@ class CBasePane : public CWnd
 
     - AFX_CBRS_CLOSE 使窗格即将关闭 （隐藏）。
 
-     这些是您可以将与按位或运算结合的标志。
+   这些是您可以将与按位或运算结合的标志。
 
 `CBasePane` 实现以下虚拟布尔方法，以反映这些标志： [cbasepane:: Canbeclosed](#canbeclosed)， [CBasePane::CanAutoHide](#canautohide)， [CBasePane::CanFloat](#canfloat)。 可以在自定义其行为的派生类中替代它们。
 
@@ -352,7 +352,7 @@ class CBasePane : public CWnd
 
 ## <a name="example"></a>示例
 
-下面的示例演示如何使用中的各种方法`CBasePane`类。 该示例演示如何检索从窗格`CFrameWndEx`类以及如何设置停靠模式、 窗格对齐和窗格样式。 代码摘自[Word Pad 示例](../../visual-cpp-samples.md)。
+下面的示例演示了如何使用 `CBasePane` 类中的各种方法。 该示例演示如何检索从窗格`CFrameWndEx`类以及如何设置停靠模式、 窗格对齐和窗格样式。 代码摘自[Word Pad 示例](../../visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_WordPad#2](../../mfc/reference/codesnippet/cpp/cbasepane-class_1.cpp)]
 
@@ -1514,7 +1514,7 @@ virtual BOOL IsVisible() const;
 
 ### <a name="remarks"></a>备注
 
-使用此方法以确定一个窗格的可见性。 不要使用`::IsWindowVisible`。
+使用此方法以确定一个窗格的可见性。 请勿使用 `::IsWindowVisible`。
 
 如果不选项卡式窗格 (请参阅[CBasePane::IsTabbed](#istabbed))，此方法检查 WS_VISIBLE 样式。 如果选项卡式窗格中，此方法将检查父选项卡式窗口的可见性。 如果父窗口可见时，该函数检查窗格选项卡上使用的可见性[CMFCBaseTabCtrl::IsTabVisible](../../mfc/reference/cmfcbasetabctrl-class.md#istabvisible)。
 
@@ -1643,7 +1643,8 @@ virtual void OnMovePaneDivider(CPaneDivider*);
 
 ### <a name="parameters"></a>参数
 
-[in]*CPaneDivider\** 不使用。
+*CPaneDivider\**<br/>
+[in]不使用。
 
 ##  <a name="onpanecontextmenu"></a>  CBasePane::OnPaneContextMenu
 

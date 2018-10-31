@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b0029513b111143cc665a51cefd3c3e8e1a786aa
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0d9483dafd763112f31f5299a5e0e7e54c224459
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46380332"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821018"
 ---
 # <a name="vmxvmread"></a>__vmx_vmread
 
@@ -56,7 +56,7 @@ unsigned char __vmx_vmread(
 
 ## <a name="remarks"></a>备注
 
-`__vmx_vmread`函数等同于`VMREAD`计算机指令。 值`Field`参数是 Intel 文档中所述的编码的字段索引。 有关详细信息，搜索"Intel 虚拟化技术规范的 IA-32 Intel 体系结构，"文档在文档数字 C97063 002 [Intel Corporation](https://software.intel.com/en-us/articles/intel-sdm)站点，则请查阅该文档的附录 C.
+`__vmx_vmread`函数等同于`VMREAD`计算机指令。 值`Field`参数是 Intel 文档中所述的编码的字段索引。 有关详细信息，搜索"Intel 虚拟化技术规范的 IA-32 Intel 体系结构，"文档在文档数字 C97063 002 [Intel Corporation](https://software.intel.com/articles/intel-sdm)站点，则请查阅该文档的附录 C.
 
 ## <a name="requirements"></a>要求
 

@@ -1,12 +1,13 @@
 ---
 title: __asm |Microsoft Docs
 ms.custom: ''
-ms.date: 08/30/2018
+ms.date: 10/09/2018
 ms.technology:
 - cpp-masm
 ms.topic: conceptual
 f1_keywords:
 - __asm
+- _asm
 - __asm_cpp
 dev_langs:
 - C++
@@ -18,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bfe0cac0a35c821f3275ec323181f04c1ab982c4
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: dd279a6324aec6eba50c6c3b7ffe846200d45fe1
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43692998"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161718"
 ---
 # <a name="asm"></a>__asm
 
@@ -59,6 +60,8 @@ __asm int 3
 不会导致编译时使用生成本机代码 **/clr**; 编译器转换为 CLR 中断指令指令。
 
 `__asm int 3` 现在将导致为函数生成本机代码。 如果你想中断点导致你的代码，如果您希望将函数编译为 MSIL，使用的函数[__debugbreak](../../intrinsics/debugbreak.md)。
+
+与以前版本的兼容性 **_asm**是的同义词 **__asm**除非编译器选项[/Za\(禁用语言扩展)](../../build/reference/za-ze-disable-language-extensions.md)指定。
 
 ## <a name="example"></a>示例
 

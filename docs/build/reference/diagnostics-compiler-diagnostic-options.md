@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97b5e3ef2e5c14ae93d4fcc3b016f4dbc955edbd
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: f2d0e6567f8666df4ec170ad7911ef08f5a1d335
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45709158"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861624"
 ---
 # <a name="diagnostics-compiler-diagnostic-options"></a>/diagnostics （编译器诊断选项）
 
@@ -56,9 +56,9 @@ ms.locfileid: "45709158"
 
 1. 打开你的项目**属性页**对话框。
 
-2. 下**配置属性**，展开**C/c + +** 文件夹，然后选择**常规**属性页。
+1. 下**配置属性**，展开**C/c + +** 文件夹，然后选择**常规**属性页。
 
-3. 使用中的下拉列表控件**诊断格式**字段来选择诊断显示选项。 选择**确定**或**应用**以保存所做的更改。
+1. 使用中的下拉列表控件**诊断格式**字段来选择诊断显示选项。 选择**确定**或**应用**以保存所做的更改。
 
 ## <a name="see-also"></a>请参阅
 

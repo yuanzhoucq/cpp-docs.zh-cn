@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b1b8da6f6c1b94432d9cd4c91d88f6d844fbb27
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4184ca20188ccbc3eff0818e807911635292b668
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46433044"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50081373"
 ---
 # <a name="message-categories"></a>消息类别
 
@@ -33,17 +33,17 @@ ms.locfileid: "46433044"
 
 1. Windows 消息
 
-     这包括主要使用开头的消息**WM_** 前缀，但 WM_COMMAND 除外。 Windows 消息由窗口和视图处理。 这些消息通常具有用于确定如何处理消息的参数。
+   这包括主要使用开头的消息**WM_** 前缀，但 WM_COMMAND 除外。 Windows 消息由窗口和视图处理。 这些消息通常具有用于确定如何处理消息的参数。
 
 1. 控件通知
 
-     这包括来自控件和其他子窗口到其父窗口的 WM_COMMAND 通知消息。 例如，一个编辑控件向其父级发送 WM_COMMAND 消息来包含 EN_CHANGE 控件通知代码，当用户已经采取可能已更改文本编辑控件中的操作。 窗口的消息处理程序将以某种合适的方式响应通知消息，如检索控件中的文本。
+   这包括来自控件和其他子窗口到其父窗口的 WM_COMMAND 通知消息。 例如，一个编辑控件向其父级发送 WM_COMMAND 消息来包含 EN_CHANGE 控件通知代码，当用户已经采取可能已更改文本编辑控件中的操作。 窗口的消息处理程序将以某种合适的方式响应通知消息，如检索控件中的文本。
 
-     框架将传送控件通知消息与其他值一样**WM_** 消息。 一个例外，但是，是当用户单击这些按钮发送的 BN_CLICKED 控件通知消息。 此消息将专门作为命令消息处理，并像传送其他命令一样传送。
+   框架将传送控件通知消息与其他值一样**WM_** 消息。 一个例外，但是，是当用户单击这些按钮发送的 BN_CLICKED 控件通知消息。 此消息将专门作为命令消息处理，并像传送其他命令一样传送。
 
 1. 命令消息
 
-     这包括来自用户界面对象的 WM_COMMAND 通知消息： 菜单、 工具栏按钮和快捷键。 框架处理命令以不同的方式从其他消息，并且它们可以处理更多类型的对象，如中所述[命令目标](../mfc/command-targets.md)。
+   这包括来自用户界面对象的 WM_COMMAND 通知消息： 菜单、 工具栏按钮和快捷键。 框架处理命令以不同的方式从其他消息，并且它们可以处理更多类型的对象，如中所述[命令目标](../mfc/command-targets.md)。
 
 ##  <a name="_core_windows_messages_and_control.2d.notification_messages"></a> Windows 消息和控件通知消息
 

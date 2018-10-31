@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cfb885a5d29c26f4a40d5b93490a06652eff1ffc
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6253b52d322982efe8beafc45c9942fb3787818a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43216667"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082490"
 ---
 # <a name="format-specification-syntax-printf-and-wprintf-functions"></a>格式规范语法：printf 和 wprintf 函数
 
@@ -58,8 +58,7 @@ ms.locfileid: "43216667"
 将通过使用 **d**、**i**、**o**、**u**、**x** 和 **X** 指定整数类型（如 `short`、`int`、`long`、`long long`）及其 `unsigned` 变体。将通过使用 **a**、**A**、**e**、**E**、**f**、**F**、**g** 和 **G** 指定浮点类型（如 `float`、`double` 和 `long double`）。默认情况下，除非由大小前缀进行修改，否则整数参数将被强制为 `int` 类型，浮点参数将被强制为 `double`。 在 64 位系统上，`int` 是 32 位的值；因此，确定 64 位整数的输出格式时，将把它截断，除非使用 **ll** 或 **I64** 的大小前缀。 由 **p** 指定的指针类型使用平台的默认指针大小。
 
 > [!NOTE]
-> **Microsoft 专用**  
-> 与 `printf` 和 `wprintf` 函数一起使用时，**Z** 类型字符以及 **c**、**C**、**s** 和 **S** 类型字符的行为是 Microsoft 扩展。 在所有的格式设置函数中，ISO C 标准始终对窄字符和字符串使用 **c** 和 **s**，而对宽字符和字符串使用 **C** 和 **S**。
+> **Microsoft 专用** 与 `printf` 和 `wprintf` 函数一起使用时，Z 类型字符以及 c、C、s 和 S 类型字符的行为是 Microsoft 扩展。 在所有的格式设置函数中，ISO C 标准始终对窄字符和字符串使用 **c** 和 **s**，而对宽字符和字符串使用 **C** 和 **S**。
 
 ### <a name="type-field-characters"></a>类型字段字符
 
@@ -83,7 +82,7 @@ ms.locfileid: "43216667"
 |**A**|浮点|有符号的十六进制双精度浮点值，形式为 [-]0X*h.hhhh*__P±__*dd*，其中 *h.hhhh* 是尾数的十六进制数（使用大写字母），*dd* 是一位或多位指数。 精度指定此点后的数字位数。|
 |**n**|指向整数的指针|目前成功写入流或缓冲区的字符数。 此值存储在地址作为自变量的整数中。 可通过参数大小规范前缀控制指向的整数的大小。 **n** 说明符默认为禁用；请参阅重要的安全说明了解相关信息。|
 |**p**|指针类型|将自变量显示为十六进制数中的地址。|
-|**秒**|String|与 `printf` 函数一起使用时，指定单字节或多字节字符串；与 `wprintf` 函数一起使用时，指定宽字符字符串。 将于第一个空字符之前或达到精度值时显示字符。|
+|**s**|String|与 `printf` 函数一起使用时，指定单字节或多字节字符串；与 `wprintf` 函数一起使用时，指定宽字符字符串。 将于第一个空字符之前或达到精度值时显示字符。|
 |**S**|String|与 `printf` 函数一起使用时，指定宽字符字符串；与 `wprintf` 函数一起使用时，指定单字节或多字节字符串。 将于第一个空字符之前或达到精度值时显示字符。|
 |**Z**|`ANSI_STRING` 或 `UNICODE_STRING` 结构|将 [ANSI_STRING](/windows/desktop/api/ntdef/ns-ntdef-_string) 或 [UNICODE_STRING](https://msdn.microsoft.com/library/windows/hardware/ff564879.aspx) 结构的地址作为参数传递时，会显示包含在由结构的 `Buffer` 字段指向的缓冲区中的字符串。 使用 **w** 的大小修饰符前缀指定 `UNICODE_STRING` 参数，例如 `%wZ`。 结构的 `Length` 字段必须设置为字符串的长度（以字节为单位）。 结构的 `MaximumLength` 字段必须设置为缓冲区的长度（以字节为单位）。<br /><br /> 通常情况下，**Z** 类型字符仅在使用转换规范的驱动程序调试函数（如 `dbgPrint` 和 `kdPrint`）中使用。|
 
@@ -212,11 +211,10 @@ ms.locfileid: "43216667"
 **hc** 或 **hC** 类型说明符与 `printf` 函数中的 **c** 以及 `wprintf` 函数中的 **C** 是同义的。 **lc**、**lC**、**wc** 或 **wC** 类型说明符与 `printf` 函数中的 **C** 以及 `wprintf` 函数中的 **c** 是同义的。 **hs** 或 **hS** 类型说明符与 `printf` 函数中的 **s** 以及 `wprintf` 函数中的 **S** 是同义的。 **ls**、**lS**、**ws** 或 **wS** 类型说明符与 `printf` 函数中的 **S** 以及 `wprintf` 函数中的 **s** 是同义的。
 
 > [!NOTE]
-> **Microsoft 专用**  
-> **I**（大写的 i）、**I32**、**I64** 和 **w** 参数大小修饰符前缀是 Microsoft 扩展，且不符合 ISO C。 h 前缀（在与 `char` 类型的数据一起使用时）和 l（小写 L）前缀（在与 `double` 类型的数据一起使用时）是 Microsoft 扩展。
+> **Microsoft 专用** **I**（大写的 i）、**I32**、**I64** 和 **w** 参数大小修饰符前缀是 Microsoft 扩展，且不符合 ISO C 标准。 h 前缀（在与 `char` 类型的数据一起使用时）和 l（小写 L）前缀（在与 `double` 类型的数据一起使用时）是 Microsoft 扩展。
 
 ## <a name="see-also"></a>请参阅
 
-[printf、_printf_l、wprintf、_wprintf_l](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)  
-[printf_s、_printf_s_l、wprintf_s、_wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)  
-[printf_p 位置参数](../c-runtime-library/printf-p-positional-parameters.md)  
+[printf、_printf_l、wprintf、_wprintf_l](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)<br/>
+[printf_s、_printf_s_l、wprintf_s、_wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)<br/>
+[printf_p 位置参数](../c-runtime-library/printf-p-positional-parameters.md)

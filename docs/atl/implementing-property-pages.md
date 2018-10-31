@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f69dab9dfc9216d1c56ed54730d5f94cbb58b1db
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f00e95aee0f3e16a979f4969a33b90746b4082ea
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46088730"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062400"
 ---
 # <a name="implementing-property-pages"></a>属性页
 
@@ -43,11 +43,11 @@ ms.locfileid: "46088730"
 
 - 选择重写`IPropertyPageImpl`方法使用以下指导原则。
 
-   |IPropertyPageImpl 方法|重写时要...|说明|  
-   |------------------------------|----------------------------------|-----------|  
-   |[SetObjects](../atl/reference/ipropertypageimpl-class.md#setobjects)|执行基本的完整性检查的对象传递给您的页面和它们支持的接口数量。|在调用基类实现之前执行你自己的代码。 如果要设置的对象不符合预期，应尽可能快地失败调用。|  
-   |[激活](../atl/reference/ipropertypageimpl-class.md#activate)|初始化页面的用户界面 （例如，从对象中设置的当前属性值的对话框控件、 控件动态创建，或执行其他初始化）。|调用基类实现您的代码之前，因此，基本类有机会创建对话框窗口及其所有控件，然后再尝试将其更新。|  
-   |[应用](../atl/reference/ipropertypageimpl-class.md#apply)|验证属性设置和更新的对象。|没有无需调用基类实现，因为它执行任何只跟踪调用。|  
+   |IPropertyPageImpl 方法|重写时要...|说明|
+   |------------------------------|----------------------------------|-----------|
+   |[SetObjects](../atl/reference/ipropertypageimpl-class.md#setobjects)|执行基本的完整性检查的对象传递给您的页面和它们支持的接口数量。|在调用基类实现之前执行你自己的代码。 如果要设置的对象不符合预期，应尽可能快地失败调用。|
+   |[激活](../atl/reference/ipropertypageimpl-class.md#activate)|初始化页面的用户界面 （例如，从对象中设置的当前属性值的对话框控件、 控件动态创建，或执行其他初始化）。|调用基类实现您的代码之前，因此，基本类有机会创建对话框窗口及其所有控件，然后再尝试将其更新。|
+   |[应用](../atl/reference/ipropertypageimpl-class.md#apply)|验证属性设置和更新的对象。|没有无需调用基类实现，因为它执行任何只跟踪调用。|
    |[停用](../atl/reference/ipropertypageimpl-class.md#deactivate)|清除与窗口相关的项。|基类实现都会破坏表示的属性页对话框。 如果需要清理销毁对话框之前，应调用基类之前添加代码。|
 
 示例属性页的实现，请参阅[示例： 实现属性页](../atl/example-implementing-a-property-page.md)。

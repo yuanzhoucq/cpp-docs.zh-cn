@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8213ac8d45b2981a7b945fb0af0a590cf7974a8a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b6a70efc6fe4c717ccaa236ea46d73f9df206876
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46402351"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075070"
 ---
 # <a name="documents-views-and-the-framework"></a>文档、视图和框架
 
@@ -41,31 +41,31 @@ MFC 框架的核心是文档和视图的概念。 文档是用户在编辑会话
 
 - 一个文档或多个文档。
 
-     您的文档类 (派生自[CDocument](../mfc/reference/cdocument-class.md)) 指定应用程序的数据。
+   您的文档类 (派生自[CDocument](../mfc/reference/cdocument-class.md)) 指定应用程序的数据。
 
-     如果在应用程序中需要 OLE 功能，派生文档类从[COleDocument](../mfc/reference/coledocument-class.md)或其派生的类，具体取决于所需的功能的类型之一。
+   如果在应用程序中需要 OLE 功能，派生文档类从[COleDocument](../mfc/reference/coledocument-class.md)或其派生的类，具体取决于所需的功能的类型之一。
 
 - 一个视图或多个视图。
 
-     视图类 (派生自[CView](../mfc/reference/cview-class.md)) 是用户的"窗口的数据。" 视图类控制用户查看文档的数据并与之交互的方式。 在某些情况下，您可能希望一个文档拥有多个数据视图。
+   视图类 (派生自[CView](../mfc/reference/cview-class.md)) 是用户的"窗口的数据。" 视图类控制用户查看文档的数据并与之交互的方式。 在某些情况下，您可能希望一个文档拥有多个数据视图。
 
-     如果需要滚动，派生[CScrollView](../mfc/reference/cscrollview-class.md)。 如果您的视图具有对话框模板资源中布局的用户界面，派生[CFormView](../mfc/reference/cformview-class.md)。 对于简单的文本数据，使用或派生自[CEditView](../mfc/reference/ceditview-class.md)。 对于一个基于窗体的数据访问应用程序，如数据输入程序，请从派生[CRecordView](../mfc/reference/crecordview-class.md) （针对 ODBC)。 此外提供了类[CTreeView](../mfc/reference/ctreeview-class.md)， [CListView](../mfc/reference/clistview-class.md)，并[CRichEditView](../mfc/reference/cricheditview-class.md)。
+   如果需要滚动，派生[CScrollView](../mfc/reference/cscrollview-class.md)。 如果您的视图具有对话框模板资源中布局的用户界面，派生[CFormView](../mfc/reference/cformview-class.md)。 对于简单的文本数据，使用或派生自[CEditView](../mfc/reference/ceditview-class.md)。 对于一个基于窗体的数据访问应用程序，如数据输入程序，请从派生[CRecordView](../mfc/reference/crecordview-class.md) （针对 ODBC)。 此外提供了类[CTreeView](../mfc/reference/ctreeview-class.md)， [CListView](../mfc/reference/clistview-class.md)，并[CRichEditView](../mfc/reference/cricheditview-class.md)。
 
 - 框架窗口
 
-     视图显示在“文档框架窗口”中。 在 SDI 应用程序中，文档框架窗口也是应用程序的“主框架窗口”。 在 MDI 应用程序中，文档窗口是显示在主框架窗口中的子窗口。 派生的主框架窗口类指定包含您的视图的框架窗口的样式和其他特性。 如果需要自定义框架窗口，请从派生[CFrameWnd](../mfc/reference/cframewnd-class.md)自定义 SDI 应用程序的文档框架窗口。 派生自[CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md)以自定义 MDI 应用程序的主框架窗口。 此外从派生类[CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md)自定义每种不同的应用程序支持的 MDI 文档框架窗口。
+   视图显示在“文档框架窗口”中。 在 SDI 应用程序中，文档框架窗口也是应用程序的“主框架窗口”。 在 MDI 应用程序中，文档窗口是显示在主框架窗口中的子窗口。 派生的主框架窗口类指定包含您的视图的框架窗口的样式和其他特性。 如果需要自定义框架窗口，请从派生[CFrameWnd](../mfc/reference/cframewnd-class.md)自定义 SDI 应用程序的文档框架窗口。 派生自[CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md)以自定义 MDI 应用程序的主框架窗口。 此外从派生类[CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md)自定义每种不同的应用程序支持的 MDI 文档框架窗口。
 
 - 一个或多个文档模板
 
-     文档模板可协调文档、视图和框架窗口的创建。 一种特定的文档模板类，派生自类[CDocTemplate](../mfc/reference/cdoctemplate-class.md)、 创建和管理一种类型的所有打开的文档。 支持多种文档类型的应用程序具有多个文档模板。 使用类[CSingleDocTemplate](../mfc/reference/csingledoctemplate-class.md) SDI 应用程序，或使用类[CMultiDocTemplate](../mfc/reference/cmultidoctemplate-class.md)为 MDI 应用程序。
+   文档模板可协调文档、视图和框架窗口的创建。 一种特定的文档模板类，派生自类[CDocTemplate](../mfc/reference/cdoctemplate-class.md)、 创建和管理一种类型的所有打开的文档。 支持多种文档类型的应用程序具有多个文档模板。 使用类[CSingleDocTemplate](../mfc/reference/csingledoctemplate-class.md) SDI 应用程序，或使用类[CMultiDocTemplate](../mfc/reference/cmultidoctemplate-class.md)为 MDI 应用程序。
 
 - 应用程序对象
 
-     应用程序类 (派生自[CWinApp](../mfc/reference/cwinapp-class.md)) 控件的所有上述对象并指定应用程序的行为，例如初始化和清理。 应用程序仅有的一个应用程序对象为应用程序支持的任何文档类型创建和管理文档模板。
+   应用程序类 (派生自[CWinApp](../mfc/reference/cwinapp-class.md)) 控件的所有上述对象并指定应用程序的行为，例如初始化和清理。 应用程序仅有的一个应用程序对象为应用程序支持的任何文档类型创建和管理文档模板。
 
 - 线程对象
 
-     如果应用程序创建不同的执行线程 — 例如，若要在后台执行计算，将使用派生自类[CWinThread](../mfc/reference/cwinthread-class.md)。 [CWinApp](../mfc/reference/cwinapp-class.md)本身派生自`CWinThread`和应用程序中表示主线程的执行 （或主进程）。 还可以在辅助线程中使用 MFC。
+   如果应用程序创建不同的执行线程 — 例如，若要在后台执行计算，将使用派生自类[CWinThread](../mfc/reference/cwinthread-class.md)。 [CWinApp](../mfc/reference/cwinapp-class.md)本身派生自`CWinThread`和应用程序中表示主线程的执行 （或主进程）。 还可以在辅助线程中使用 MFC。
 
 在一个正在运行的应用程序中，这些对象以协作方式响应用户操作（由命令和其他消息绑定在一起）。 一个应用程序对象管理一个或多个文档模板。 每个文档模板创建并管理一个或多个文档（具体取决于应用程序是 SDI 还是 MDI）。 用户通过包含在框架窗口中的视图查看和操作文档。 下图演示了 SDI 应用程序的这些对象之间的关系。
 

@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1106ad878f4053cacae67d9d0e343e9469b1a1c1
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f4b3703d0bd4556090c08a874bce362120817397
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46061170"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161796"
 ---
 # <a name="inheritance-keywords"></a>继承关键字
 
@@ -83,6 +83,8 @@ int S::*p;
 
 > [!NOTE]
 >  类的指向成员的指针表示形式的同一向前声明应出现在声明指向该类的成员的指针的每个翻译单元中，并且声明应在声明指向成员的指针之前出现。
+
+与以前版本的兼容性 **_single_inheritance**， **_multiple_inheritance**，并 **_virtual_inheritance**是同义词的 **__单继承**， **__multiple_inheritance**，和 **__virtual_inheritance**除非编译器选项[/Za\(禁用语言扩展）](../build/reference/za-ze-disable-language-extensions.md)指定。
 
 **结束 Microsoft 专用**
 

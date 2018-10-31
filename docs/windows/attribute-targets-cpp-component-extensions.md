@@ -1,7 +1,7 @@
 ---
-title: 特性目标 （c + + 组件扩展） |Microsoft Docs
+title: 特性目标 (C + + /cli 和 C + + /cli CX) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -15,14 +15,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d7a4cc42a0913636b0b63057f0f265f3fb8a034c
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 3ffa13167de3de14e2338942cc9a41acf84b8aae
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42589411"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50058944"
 ---
-# <a name="attribute-targets-c-component-extensions"></a>特性目标（C++ 组件扩展）
+# <a name="attribute-targets-ccli-and-ccx"></a>特性目标 (C + + /cli 和 C + + /cli CX)
 
 特性用法说明符允许指定特性目标。  每个特性定义为应用于特定的语言元素。 例如，某个特征可能定义为仅应用于类和结构。  以下列表演示了自定义属性可以使用的语法元素。 可以结合使用这些值（使用逻辑或）。
 
@@ -230,8 +230,8 @@ ms.locfileid: "42589411"
 - 指定特性应用于属性的访问器，而不是属性：
 
     ```cpp
-    [method:MyAttr(123)] property int Property()  
-    [property:MyAttr(123)] property int Property()  
+    [method:MyAttr(123)] property int Property()
+    [property:MyAttr(123)] property int Property()
     [MyAttr(123)] property int get_MyPropy() // default: property
     ```
 

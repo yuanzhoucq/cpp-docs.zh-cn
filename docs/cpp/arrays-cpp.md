@@ -16,44 +16,41 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7c88c1d0f4096017b8ffc48a92143a63d229c5e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: b2423355aa53abe52fffcd81ec847b41337efcbf
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46017906"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861026"
 ---
 # <a name="arrays-c"></a>数组 (C++)
 
 数组是类似对象的集合。 数组最简单的用例是矢量，可以按以下序列声明矢量：
 
-```
-decl-specifier identifier [ constant-expression ]
-decl-specifier identifier []
-decl-specifier identifer [][ constant-expression] . . .
-decl-specifier identifier [ constant-expression ]
-[ constant-expression ] . . .
-```
+> *声明说明符**标识符* **\[** *常量表达式* **]**<br/>
+> *声明说明符**标识符*  **\[]**<br/>
+> *声明说明符**标识符* **\[]\[** *常量表达式* **]** 。 . .<br/>
+> *声明说明符**标识符* **\[** *常量表达式* **]**  **\[** *常数表达式* **]** 。 . .
 
 1. 声明说明符：
 
-- 可选存储类说明符。
+   - 可选存储类说明符。
 
-- 可选**const**和/或**易失性**说明符。
+   - 可选**const**和/或**易失性**说明符。
 
-- 数组元素的类型名称。
+   - 数组元素的类型名称。
 
-2. 声明符：
+1. 声明符：
 
-- 标识符。
+   - 标识符。
 
-- 括在方括号内，整型类型的常量表达式 **[]**。 如果使用额外方括号声明多个维度，在第一组括号可省略常量表达式。
+   - 括在方括号内，整型类型的常量表达式 **\[]**。 如果使用额外方括号声明多个维度，在第一组括号可省略常量表达式。
 
-- 包含常数表达式的可选附加方括号。
+   - 包含常数表达式的可选附加方括号。
 
-3. 可选初始值设定项。  请参阅[初始值设定项](../cpp/initializers.md)。
+1. 可选初始值设定项。 有关详细信息，请参阅[初始值设定项](../cpp/initializers.md)。
 
-数组中的元素数目由常数表达式给定。 数组中的第一个元素是 0th 元素，并最后一个元素是 (*n*-1) 元素，其中*n*是该数组可以包含的元素数目。 *常数表达式*必须为整型类型和必须大于 0。 仅当数组中的最后一个字段时，大小为零的数组是合法**struct**或**union**和启用 Microsoft 扩展 (/Ze) 时。
+由给定数组中元素的数目*常数表达式*。 数组中的第一个元素是 0th 元素，并最后一个元素是 (*n*-1) 元素，其中*n*是该数组可以包含的元素数目。 *常数表达式*必须为整型类型和必须大于 0。 仅当数组中的最后一个字段时，大小为零的数组是合法**struct**或**union**和启用 Microsoft 扩展 (/Ze) 时。
 
 以下示例说明如何在运行时定义数组：
 

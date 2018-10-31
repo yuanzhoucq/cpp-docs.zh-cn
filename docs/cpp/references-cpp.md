@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9bd01cf5c153fcd31bae1a73fead87fe480cdd2
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a3a93d434907a2a3ff13053ee4b932201de22f3a
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46030414"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861403"
 ---
 # <a name="references-c"></a>引用 (C++)
 
@@ -32,41 +32,35 @@ ms.locfileid: "46030414"
 
 可以通过以下语法声明引用：
 
-```
-[storage-class-specifiers] [cv-qualifiers] type-specifiers 
-[ms-modifier] declarator [= expression];
-```
+> \[*存储类说明符*] \[ *cv 限定符*]*类型说明符* \[ *ms 修饰符*] *声明符* \[ **=** *表达式*]**;**
 
 可以使用指定引用的任何有效声明符。 除非引用是对函数或数组类型的引用，否则应用以下简化语法：
 
-```
-[storage-class-specifiers] [cv-qualifiers] type-specifiers [& or &&] 
-[cv-qualifiers] identifier [= expression];
-```
+> \[*存储类说明符*] \[ *cv 限定符*]*类型说明符* \[ **&** 或**&&**] \[ *cv 限定符*]*标识符* \[ **=** *表达式*]**;**
 
 使用以下序列声明引用：
 
 1. 声明说明符：
 
-- 可选存储类说明符。
+   - 可选存储类说明符。
 
-- 可选**const**和/或**易失性**限定符。
+   - 可选**const**和/或**易失性**限定符。
 
-- 类型说明符：类型的名称。
+   - 类型说明符：类型的名称。
 
-- 2. 声明符：
+1. 声明符：
 
-- 可选的 Microsoft 专用修饰符。 有关详细信息，请参阅[Microsoft 专用的修饰符](../cpp/microsoft-specific-modifiers.md)。
+   - 可选的 Microsoft 专用修饰符。 有关详细信息，请参阅[Microsoft 专用的修饰符](../cpp/microsoft-specific-modifiers.md)。
 
-- & 运算符和 && 运算符。
+   - **&** 运算符或**&&** 运算符。
 
-- 可选**const**和/或**易失性**限定符。
+   - 可选**const**和/或**易失性**限定符。
 
-- 标识符。
+   - 标识符。
 
-3. 可选初始值设定项。
+1. 可选初始值设定项。
 
-更复杂的声明符形式为指向数组和函数的指针也适用于对数组和函数，请参阅[指针](../cpp/pointers-cpp.md)。
+指向数组和函数的更复杂声明符形式也适用于对数组和函数的引用。 有关详细信息，请参阅[指针](../cpp/pointers-cpp.md)。
 
 多个声明符和初始值设定项可能出现在一个声明说明符后面的逗号分隔的列表中。 例如：
 
@@ -83,7 +77,7 @@ int &ref, *ptr, k;
 
 引用保留对象的地址，但语法行为与对象一样。
 
-在下面的程序中，请注意对象的名称 `Today` 和对象的引用 `TodayRef` 可在程序中以相同的方式使用：
+在下面的程序中，请注意对象的名称 `s` 和对象的引用 `SRef` 可在程序中以相同的方式使用：
 
 ## <a name="example"></a>示例
 
@@ -120,4 +114,3 @@ int main() {
 [引用类型函数自变量](../cpp/reference-type-function-arguments.md)<br/>
 [引用类型函数返回](../cpp/reference-type-function-returns.md)<br/>
 [对指针的引用](../cpp/references-to-pointers.md)
-

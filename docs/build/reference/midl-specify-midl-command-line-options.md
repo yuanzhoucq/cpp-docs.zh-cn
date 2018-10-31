@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d9ecfada513e16ce10bab37bb38b6ce6d67f907
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d2fa03920f60d7da4730bc46b23605ccfa13f6d7
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46397619"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860376"
 ---
 # <a name="midl-specify-midl-command-line-options"></a>/MIDL（指定 MIDL 命令行选项）
 
@@ -51,9 +51,9 @@ ms.locfileid: "46397619"
 
 1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置 Visual c + + 项目属性](../../ide/working-with-project-properties.md)。
 
-2. 选择**配置属性** > **链接器** > **嵌入的 IDL**属性页。
+1. 选择**配置属性** > **链接器** > **嵌入的 IDL**属性页。
 
-3. 修改**MIDL 命令**属性。
+1. 修改**MIDL 命令**属性。
 
 ### <a name="to-set-this-linker-option-programmatically"></a>以编程方式设置此链接器选项
 

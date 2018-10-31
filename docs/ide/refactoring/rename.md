@@ -10,17 +10,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a064527f6afcbf91be3fb4e51180be647c1f506
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7a00eed341e0fc1ca8573e2f66744ea04055f259
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339808"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46399194"
 ---
 # <a name="rename"></a>重命名
 功能：重命名代码符号的标识符，例如字段、本地变量、方法、命名空间、属性和类型。
 
-时机：想要安全地进行重命名（无需查找所有实例）并复制/粘贴新名称。  
+时机：想要安全地进行重命名（无需查找所有实例）并复制/粘贴新名称。
 
 原因：复制和粘贴整个项目的新名称可能会导致错误。  此重构工具将准确地执行重命名操作。
 

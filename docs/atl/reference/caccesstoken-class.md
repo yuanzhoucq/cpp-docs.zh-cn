@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c3157db05d183ab9ada2ad53443ca5b20bcfbcba
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 881c86a75d9015117be4b51a8b7457bed4988fd3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46136317"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078539"
 ---
 # <a name="caccesstoken-class"></a>CAccessToken 类
 
@@ -185,7 +185,7 @@ virtual ~CAccessToken() throw();
 
 ```
 bool CheckTokenMembership(
-    const CSid& rSid, 
+    const CSid& rSid,
     bool* pbIsMember) const throw(...);
 ```
 
@@ -216,7 +216,7 @@ bool CheckTokenMembership(
 
 ```
 bool CreateImpersonationToken(
-    CAccessToken* pImp, 
+    CAccessToken* pImp,
     SECURITY_IMPERSONATION_LEVEL sil = SecurityImpersonation) const throw(...);
 ```
 
@@ -671,7 +671,7 @@ bool GetProcessToken(DWORD dwDesiredAccess, HANDLE hProcess = NULL) throw();
 
 ### <a name="remarks"></a>备注
 
-调用[OpenProcessToken](https://msdn.microsoft.com/library/aa379295\(vs.85\).aspx) Win32 函数。
+调用[OpenProcessToken](https://msdn.microsoft.com/library/aa379295) Win32 函数。
 
 ##  <a name="getprofile"></a>  CAccessToken::GetProfile
 
@@ -1086,7 +1086,7 @@ bool OpenThreadToken(
 ```
 bool PrivilegeCheck(
     PPRIVILEGE_SET RequiredPrivileges,
-     bool* pbResult) const throw();
+    bool* pbResult) const throw();
 ```
 
 ### <a name="parameters"></a>参数

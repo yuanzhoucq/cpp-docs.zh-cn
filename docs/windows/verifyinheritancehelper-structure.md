@@ -1,28 +1,30 @@
 ---
 title: VerifyInheritanceHelper 结构 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/03/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::Details::VerifyInheritanceHelper
+- implements/Microsoft::WRL::Details::VerifyInheritanceHelper::Verify
 dev_langs:
 - C++
 helpviewer_keywords:
-- VerifyInheritanceHelper structure
+- Microsoft::WRL::Details::VerifyInheritanceHelper structure
+- Microsoft::WRL::Details::VerifyInheritanceHelper::Verify method
 ms.assetid: 8a48a702-0f71-4807-935b-8311f0a7a8b6
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ddd358c3eb20439f87de8614d80af01537ae31e6
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2a011b0583d8221ec49d16236add978ac647acc3
+ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46396566"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48788924"
 ---
 # <a name="verifyinheritancehelper-structure"></a>VerifyInheritanceHelper 结构
 
@@ -31,14 +33,10 @@ ms.locfileid: "46396566"
 ## <a name="syntax"></a>语法
 
 ```cpp
-template <
-   typename I,
-   typename Base
->
+template <typename I, typename Base>
 struct VerifyInheritanceHelper;
-template <
-   typename I
->
+
+template <typename I>
 struct VerifyInheritanceHelper<I, Nil>;
 ```
 
@@ -58,9 +56,9 @@ struct VerifyInheritanceHelper<I, Nil>;
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
-|----------|-----------------|
-|[VerifyInheritanceHelper::Verify 方法](../windows/verifyinheritancehelper-verify-method.md)|测试当前的模板参数指定的两个接口，并确定是否派生自另一个接口。|
+名称                                       | 描述
+------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------
+[Verifyinheritancehelper:: Verify](#verify) | 测试当前的模板参数指定的两个接口，并确定是否派生自另一个接口。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -72,6 +70,16 @@ struct VerifyInheritanceHelper<I, Nil>;
 
 **Namespace:** Microsoft::WRL::Details
 
-## <a name="see-also"></a>请参阅
+## <a name="verify"></a>Verifyinheritancehelper:: Verify
 
-[Microsoft::WRL::Details 命名空间](../windows/microsoft-wrl-details-namespace.md)
+支持 WRL 基础结构，不应在代码中直接使用。
+
+```cpp
+static void Verify();
+```
+
+### <a name="remarks"></a>备注
+
+测试当前的模板参数指定的两个接口，并确定是否派生自另一个接口。
+
+如果不派生自另一个接口，则会发出错误。

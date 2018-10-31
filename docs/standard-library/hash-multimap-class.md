@@ -1,7 +1,7 @@
 ---
 title: hash_multimap 类 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca81fa18bb5f63f57c057eaa9e64c35df01e33f1
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 3796ba7b243305fbae75e64f44e14964a89a9805
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45726760"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075315"
 ---
 # <a name="hashmultimap-class"></a>hash_multimap 类
 
@@ -125,7 +125,7 @@ class hash_multimap
 *Key*<br/>
 要存储在 hash_multimap 中的键数据类型。
 
-*类型*<br/>
+*Type*<br/>
 要存储在 hash_multimap 中的元素数据类型。
 
 *特征*<br/>
@@ -1130,12 +1130,12 @@ int main( )
    pair <IntMMap::const_iterator, IntMMap::const_iterator> p1, p2;
    p1 = hm1.equal_range( 2 );
 
-   cout << "The lower bound of the element with "
-        << "a key of 2\n in the hash_multimap hm1 is: "
+   cout << "The lower bound of the element with a key of 2\n"
+        << "in the hash_multimap hm1 is: "
         << p1.first -> second << "." << endl;
 
-   cout << "The upper bound of the element with "
-        << "a key of 2\n in the hash_multimap hm1 is: "
+   cout << "The upper bound of the element with a key of 2\n"
+        << "in the hash_multimap hm1 is: "
         << p1.second -> second << "." << endl;
 
    // Compare the upper_bound called directly
@@ -1143,8 +1143,8 @@ int main( )
 
    cout << "A direct call of upper_bound( 2 ) gives "
         << hm1_RcIter -> second << "," << endl
-        << " matching the 2nd element of the pair"
-        << " returned by equal_range( 2 )." << endl;
+        << "matching the 2nd element of the pair "
+        << "returned by equal_range( 2 )." << endl;
 
    p2 = hm1.equal_range( 4 );
 
@@ -1161,11 +1161,11 @@ int main( )
 
 ```Output
 The lower bound of the element with a key of 2
- in the hash_multimap hm1 is: 20.
+in the hash_multimap hm1 is: 20.
 The upper bound of the element with a key of 2
- in the hash_multimap hm1 is: 30.
+in the hash_multimap hm1 is: 30.
 A direct call of upper_bound( 2 ) gives 30,
- matching the 2nd element of the pair returned by equal_range( 2 ).
+matching the 2nd element of the pair returned by equal_range( 2 ).
 The hash_multimap hm1 doesn't have an element with a key less than 4.
 ```
 
@@ -1262,7 +1262,7 @@ int main()
     n = hm3.erase(2);
 
     cout << "After the element with a key of 2 is deleted,\n"
-         << " the hash_multimap hm3 is:";
+         << "the hash_multimap hm3 is:";
     for (pIter = hm3.begin(); pIter != hm3.end(); pIter++)
         cout << " " << pIter -> second;
     cout << "." << endl;
@@ -1277,7 +1277,7 @@ int main()
 
     cout << "After another element with a key equal to that of the"
          << endl;
-    cout  << " 2nd element is deleted, "
+    cout  << "2nd element is deleted, "
           << "the hash_multimap hm3 is:";
     for (pIter = hm3.begin(); pIter != hm3.end(); pIter++)
         cout << " " << pIter -> second;
@@ -1289,10 +1289,10 @@ int main()
 After the 2nd element is deleted, the hash_multimap hm1 is: 1 3 4.
 After the middle two elements are deleted, the hash_multimap hm2 is: 1 16.
 After the element with a key of 2 is deleted,
- the hash_multimap hm3 is: 0 2 3.
+the hash_multimap hm3 is: 0 2 3.
 The number of elements removed from hm3 is: 2.
 After another element with a key equal to that of the
- 2nd element is deleted, the hash_multimap hm3 is: 0 3.
+2nd element is deleted, the hash_multimap hm3 is: 0 3.
 ```
 
 ## <a name="find"></a>hash_multimap::find
@@ -1497,7 +1497,6 @@ hash_multimap(
     initializer_list<Type> IList,
     const Compare& Comp);
 
-
 hash_multimap(
     initializer_list<Type> IList,
     const Compare& Comp,
@@ -1554,7 +1553,7 @@ hash_multimap(
 ## <a name="insert"></a>hash_multimap::insert
 
 > [!NOTE]
-> 此 API 已废弃不用。 替代项为 [unordered_multimap 类](../standard-library/unordered-multimap-class.md)。
+> 此 API 已废弃不用。 替代项为 [unordered_multimap Class](../standard-library/unordered-multimap-class.md)。
 
 将一个元素或元素范围插入到 hash_multimap 中。
 
@@ -1818,7 +1817,7 @@ int main( )
    hm1_AcIter--;
    hm1_RcIter = hm1.lower_bound( hm1_AcIter -> first );
    cout << "The first element of hm1 with a key matching"
-        << endl << " that of the last element is: "
+        << endl << "that of the last element is: "
         << hm1_RcIter -> second << "." << endl;
 
    // Note that the first element with a key equal to
@@ -1837,7 +1836,7 @@ The element of hash_multimap hm1 with a key of 2 is: 20.
 The first element of hash_multimap hm1 with a key of 3 is: 20.
 The hash_multimap hm1 doesn't have an element with a key of 4.
 The first element of hm1 with a key matching
- that of the last element is: 20.
+that of the last element is: 20.
 This is not the last element of hash_multimap hm1.
 ```
 
@@ -2049,8 +2048,8 @@ int main( )
    hm1.erase ( hm1_rIter -> first );
 
    hm1_rIter = hm1.rbegin( );
-   cout << "After the erasure, the first element"
-        << "\n in the reversed hash_multimap is "
+   cout << "After the erasure, the first element\n"
+        << "in the reversed hash_multimap is "
         << hm1_rIter -> first << "." << endl;
 }
 ```
@@ -2060,7 +2059,7 @@ The first element of the reversed hash_multimap hm1 is 3.
 The hash_multimap is: 1 2 3 .
 The reversed hash_multimap is: 3 2 1 .
 After the erasure, the first element
- in the reversed hash_multimap is 2.
+in the reversed hash_multimap is 2.
 ```
 
 ## <a name="reference"></a>hash_multimap::reference
@@ -2427,8 +2426,8 @@ int main( )
         << hm1_RcIter -> second << "." << endl;
 
    hm1_RcIter = hm1.upper_bound( 2 );
-   cout << "The first element of hash_multimap hm1\n with a key "
-        << " greater than 2 is: "
+   cout << "The first element of hash_multimap hm1\n"
+        << "with a key greater than 2 is: "
         << hm1_RcIter -> second << "." << endl;
 
    // If no match is found for the key, end( ) is returned
@@ -2446,7 +2445,7 @@ int main( )
    hm1_AcIter = hm1.begin( );
    hm1_RcIter = hm1.upper_bound( hm1_AcIter -> first );
    cout << "The first element of hm1 with a key greater than"
-        << endl << " that of the initial element of hm1 is: "
+        << endl << "that of the initial element of hm1 is: "
         << hm1_RcIter -> second << "." << endl;
 }
 ```
@@ -2454,10 +2453,10 @@ int main( )
 ```Output
 The 1st element of hash_multimap hm1 with a key greater than 1 is: 20.
 The first element of hash_multimap hm1
- with a key  greater than 2 is: 30.
+with a key  greater than 2 is: 30.
 The hash_multimap hm1 doesn't have an element with a key of 4.
 The first element of hm1 with a key greater than
- that of the initial element of hm1 is: 20.
+that of the initial element of hm1 is: 20.
 ```
 
 ## <a name="value_comp"></a>hash_multimap::value_comp
@@ -2477,9 +2476,9 @@ value_compare value_comp() const;
 
 ### <a name="remarks"></a>备注
 
-对于 hash_multimap *m*，如果 *e*1( *k*1 *, d*1) 和 *e*2( *k*2 *, d*2) 两个元素为 [value_type](#value_type) 类型的对象，其中 *k*1 和 *k*2 为 [key_type](#key_type) 类型的键，`d`1 和 `d`2 为 [mapped_type](#mapped_type) 类型的数据，则 *m.*`value_comp`( )( *e*1 *, e*2) 等同于 *m.*`key_comp`( ) ( *k*1 *, k*2)。 存储对象会定义成员函数
+有关 hash_multimap *m*，如果两个元素*e1* (*k1*， *d1*) 和*e2*(*k2*， *d2*) 的对象的类型[value_type](#value_type)，其中*版 k1*并*k2*是其键的类型[key_type](#key_type)并*d1*并*d2*是其数据类型[mapped_type](#mapped_type)，然后`m.value_comp()(e1, e2)`等效于`m.key_comp()(k1, k2)`. 存储对象会定义成员函数
 
-**bool operator**( **value_type&**`left`, **value_type&** `right`);
+`bool operator( value_type& left, value_type& right);`
 
 如果 `left` 的键值在排序顺序中先于且不等于 `right` 的键值，则该函数会返回 **true**。
 

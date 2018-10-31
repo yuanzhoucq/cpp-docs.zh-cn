@@ -74,12 +74,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc4c205ff7c68fbf778b8d300fbe98e6a3deca1d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a0cde2b5c62d4d4584330fe24000114b33ba957b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46413024"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067483"
 ---
 # <a name="cmfctoolbarcomboboxbutton-class"></a>CMFCToolBarComboBoxButton 类
 
@@ -146,7 +146,7 @@ class CMFCToolBarComboBoxButton : public CMFCToolBarButton
 
 ## <a name="example"></a>示例
 
-下面的示例演示如何使用中的各种方法`CMFCToolBarComboBoxButton`类。 该示例演示如何启用编辑和组合框、 在应用程序中设置的垂直位置的组合框按钮、 列表框的高度设置向下拖放、 应用程序中设置组合框按钮的平面样式外观并将文本设置在组合框的编辑框中框按钮。 此代码片段属于[Visual Studio 演示示例](../../visual-cpp-samples.md)。
+下面的示例演示了如何使用 `CMFCToolBarComboBoxButton` 类中的各种方法。 该示例演示如何启用编辑和组合框、 在应用程序中设置的垂直位置的组合框按钮、 列表框的高度设置向下拖放、 应用程序中设置组合框按钮的平面样式外观并将文本设置在组合框的编辑框中框按钮。 此代码片段属于[Visual Studio 演示示例](../../visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#36](../../mfc/codesnippet/cpp/cmfctoolbarcomboboxbutton-class_1.cpp)]
 [!code-cpp[NVC_MFC_VisualStudioDemo#37](../../mfc/codesnippet/cpp/cmfctoolbarcomboboxbutton-class_2.cpp)]
@@ -1176,11 +1176,9 @@ static BOOL SelectItemAll(
     UINT uiCmd,
     int iIndex);
 
-
 static BOOL SelectItemAll(
     UINT uiCmd,
     DWORD_PTR dwData);
-
 
 static BOOL SelectItemAll(
     UINT uiCmd,
@@ -1348,6 +1346,4 @@ void SetText(LPCTSTR lpszText);
 [CComboBox 类](../../mfc/reference/ccombobox-class.md)<br/>
 [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)<br/>
 [演练：将控件置于工具栏上](../../mfc/walkthrough-putting-controls-on-toolbars.md)
-
-
 

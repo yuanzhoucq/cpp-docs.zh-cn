@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdaf4cf8e1c2f6a062c133ab9e0427cab1d3d094
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 685f1b7d24e781dbee6d67b325b059f09ca9bf4c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43762543"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054210"
 ---
 # <a name="adding-connection-points-to-an-object"></a>将连接点添加到对象
 
@@ -38,15 +38,15 @@ ms.locfileid: "43762543"
 
 1. 定义.idl 文件的库块中的调度接口。 如果您启用了对连接点，使用 ATL 控件向导创建控件时，将已创建调度接口。 如果您不启用支持连接点的创建控件时，必须手动将调度接口添加到.idl 文件中。 下面是调度接口的示例。 传出接口不需要为调度接口，但许多脚本编写语言，如 VBScript 和 JScript 需要此操作，因此此示例使用两个调度接口：
 
-     [!code-cpp[NVC_ATL_Windowing#81](../atl/codesnippet/cpp/adding-connection-points-to-an-object_1.idl)]
+   [!code-cpp[NVC_ATL_Windowing#81](../atl/codesnippet/cpp/adding-connection-points-to-an-object_1.idl)]
 
-     使用 uuidgen.exe 或 guidgen.exe 实用程序生成的 GUID。
+   使用 uuidgen.exe 或 guidgen.exe 实用程序生成的 GUID。
 
 2. 添加作为调度接口`[default,source]`中项目的.idl 文件中的对象的组件类的接口。 同样，如果你在创建控件时启用对连接点的支持，ATL 控件向导将创建`[default,source`] 条目。 若要手动添加此项，添加以粗体显示的行：
 
-     [!code-cpp[NVC_ATL_Windowing#82](../atl/codesnippet/cpp/adding-connection-points-to-an-object_2.idl)]
+   [!code-cpp[NVC_ATL_Windowing#82](../atl/codesnippet/cpp/adding-connection-points-to-an-object_2.idl)]
 
-     请参阅中的.idl 文件[Circ](../visual-cpp-samples.md) ATL 示例有关的示例。
+   请参阅中的.idl 文件[Circ](../visual-cpp-samples.md) ATL 示例有关的示例。
 
 3. 使用类视图将方法和属性添加到事件接口。 右键单击类视图中的类，指向**外**快捷菜单，然后单击**添加连接点**。
 
@@ -56,7 +56,7 @@ ms.locfileid: "43762543"
 
    - 连接点映射到添加一个条目。
 
-     此外会在计算机上所有的类型库的列表。 仅应使用这些其他类型库之一来定义连接点，如果你想要实现在另一个类型库中找到的完全相同的输出接口。
+   此外会在计算机上所有的类型库的列表。 仅应使用这些其他类型库之一来定义连接点，如果你想要实现在另一个类型库中找到的完全相同的输出接口。
 
 ### <a name="to-reuse-a-connection-point-interface-defined-in-another-type-library"></a>若要重复使用连接点接口中定义另一个类型库
 

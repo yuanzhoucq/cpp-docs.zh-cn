@@ -1,7 +1,7 @@
 ---
 title: promise 类 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -30,12 +30,12 @@ helpviewer_keywords:
 - std::promise [C++], swap
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a56e188e581ea5d9dcafaa222ab4367e0b4b33fe
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 2b62f4b4be278fc3cc29e32c323c9a0936598d44
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44100295"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50058026"
 ---
 # <a name="promise-class"></a>promise 类
 
@@ -139,7 +139,7 @@ promise(promise&& Other) noexcept;
 
 ### <a name="remarks"></a>备注
 
-第一个构造函数构造一个*空*`promise`对象。
+第一个构造函数构造*空*`promise`对象。
 
 第二个构造函数构造一个空`promise`对象，并使用*Al*内存分配。
 

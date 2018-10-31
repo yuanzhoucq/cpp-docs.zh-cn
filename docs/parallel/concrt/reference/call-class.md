@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b4f993c357ef3d4f66f9b2f22c9fb37a4e10c77
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0a99de307ec64c3b6d4e49f4e0a6eef532314bf9
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46423892"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161861"
 ---
 # <a name="call-class"></a>call 类
 
@@ -55,7 +55,7 @@ class call : public target_block<multi_link_registry<ISource<T>>>;
 
 |名称|描述|
 |----------|-----------------|
-|[调用](#ctor)|已重载。 构造`call`消息块。|
+|[调用](#ctor)|已重载。 构造 `call` 消息块。|
 |[~ call 析构函数](#dtor)|销毁`call`消息块。|
 
 ### <a name="protected-methods"></a>受保护的方法
@@ -88,7 +88,7 @@ class call : public target_block<multi_link_registry<ISource<T>>>;
 
 ##  <a name="ctor"></a> 调用
 
-构造`call`消息块。
+构造 `call` 消息块。
 
 ```
 call(
@@ -126,10 +126,10 @@ call(
 确定是否应接受提供的消息的筛选器函数。
 
 *_PScheduler*<br/>
-`Scheduler`对象在其中的传播任务的`call`计划消息块。
+在其中计划了 `Scheduler` 消息块的传播任务的 `call` 对象。
 
 *_PScheduleGroup*<br/>
-`ScheduleGroup`对象在其中的传播任务的`call`计划消息块。 所用 `Scheduler` 对象由该计划组提示。
+在其中计划了 `ScheduleGroup` 消息块的传播任务的 `call` 对象。 所用 `Scheduler` 对象由该计划组提示。
 
 ### <a name="remarks"></a>备注
 
@@ -227,7 +227,7 @@ virtual bool supports_anonymous_source();
 
 ### <a name="return-value"></a>返回值
 
-`true` 因为该块没有推迟所提供的消息。
+**true**因为该块没有推迟提供的消息。
 
 ## <a name="see-also"></a>请参阅
 

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89ab41c396f8602d16e2b2d88c3d83aeb7cdf21a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: cdf77589ea39de4d17ccad1e3ef369cf4f0ca24d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46018374"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080879"
 ---
 # <a name="naked-c"></a>naked (C++)
 
@@ -39,7 +39,6 @@ __declspec(naked) declarator
 ## <a name="remarks"></a>备注
 
 因为**裸**特性仅与函数定义相关且不是类型修饰符，裸函数必须使用扩展的特性语法和[__declspec](../cpp/declspec.md)关键字。
-
 
 编译器无法生成使用 naked 特性标记的函数的内联函数，即使该函数还将标有[__forceinline](inline-functions-cpp.md)关键字。
 

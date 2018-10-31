@@ -19,16 +19,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e55788e280eb60f176a286cf9d1693e93447a077
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: aee04052a0088ff95a41ccb6083abc334287ea2b
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46031439"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48820641"
 ---
 # <a name="if-else-statement-c"></a>if-else 语句 (C++)
 
 控制条件分支。 中的语句*if 块*仅当执行*if 表达式*的计算结果为非零值 （或 TRUE）。 如果的值*表达式*为非零值，*语句 1*和块中的任何其他语句执行和其他的块，如果存在，则跳过。 如果的值*表达式*是零，则跳过 if 块，并且执行其他的块，（如果存在）。 表达式的计算结果为非零值。
+
 - true
 - 非 null 指针，
 - 任何非零值的算术值，或
@@ -36,7 +37,7 @@ ms.locfileid: "46031439"
 
 ## <a name="syntax"></a>语法
 
-```
+```cpp
 if ( expression )
 {
    statement1;
@@ -84,7 +85,7 @@ using namespace std;
 class C
 {
     public:
-    void do_somthing(){}
+    void do_something(){}
 };
 void init(C){}
 bool is_true() { return true; }
@@ -101,15 +102,14 @@ int main()
         cout << "b is false!\n";
     }
 
-  // no else statement
+    // no else statement
     if (x == 10)
     {
         x = 0;
     }
-    
 
     C* c;
-  init(c);
+    init(c);
     if (c)
     {
         c->do_something();
@@ -120,13 +120,14 @@ int main()
     }
 }
 ```
+
 ## <a name="if_with_init"></a> 如果语句具有初始值设定项
 
 **Visual Studio 2017 15.3 及更高版本**(适用于[/std:C++ 17](../build/reference/std-specify-language-standard-version.md)):**如果**语句还可能包含声明和初始化命名的变量的表达式。 该变量时，才需要 if 块的作用域内时，请使用这种形式的 if 语句。
 
-```cpp
-## Example
+## <a name="example"></a>示例
 
+```cpp
 #include <iostream>
 #include <mutex>
 #include <map>
@@ -180,18 +181,18 @@ int main()
 template <class T, class... Rest>
 void f(T&& t, Rest&&... r)
 {
-// handle t
-   do_something(t);
+    // handle t
+    do_something(t);
 
-   // handle r conditionally
-   if constexpr (sizeof...(r))
-   {
-      f(r...);
-   }
-   else
-   {
-       g(r...);
-   }
+    // handle r conditionally
+    if constexpr (sizeof...(r))
+    {
+        f(r...);
+    }
+    else
+    {
+        g(r...);
+    }
 }
 ```
 

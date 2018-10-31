@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc13285549543eeab07bed6372f8f7d529f90a32
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 40fdfa363da286952139248088c737b348873ec8
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46078694"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063674"
 ---
 # <a name="category-macros"></a>分类宏
 
@@ -51,11 +51,11 @@ ms.locfileid: "46078694"
 |[BEGIN_CATEGORY_MAP](#begin_category_map)|标记类别映射的开头。|
 |[END_CATEGORY_MAP](#end_category_map)|标记类别映射的末尾。|
 |[IMPLEMENTED_CATEGORY](#implemented_category)|指示由 COM 对象实现的类别。|
-|[REQUIRED_CATEGORY](#required_category)|指示所需的容器的 COM 对象的类别。|  
+|[REQUIRED_CATEGORY](#required_category)|指示所需的容器的 COM 对象的类别。|
 
 ## <a name="requirements"></a>要求
 
-**标头：** atlcom.h  
+**标头：** atlcom.h
 
 ##  <a name="begin_category_map"></a>  BEGIN_CATEGORY_MAP
 

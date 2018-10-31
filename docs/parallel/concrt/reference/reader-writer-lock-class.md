@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c319ba90a92ac534f4444960ff1e6e6d27acb180
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1f9eeea62e1872cbea737313192b3822c23bb433
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46390169"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50064480"
 ---
 # <a name="readerwriterlock-class"></a>reader_writer_lock 类
 
@@ -141,6 +141,7 @@ reader_writer_lock();
 ```
 class scoped_lock;
 ```
+
 ## <a name="scoped_lock_ctor"></a> scoped_lock::scoped_lock
 
 构造`scoped_lock`对象，并获取`reader_writer_lock`传入的对象`_Reader_writer_lock`参数用作编写器。 如果由另一个线程持有锁，此调用将阻塞。
@@ -203,7 +204,7 @@ bool try_lock();
 
 ### <a name="return-value"></a>返回值
 
-如果已获取锁，则这`true`; 否则为值`false`。
+如果已获取锁，则这 **，则返回 true**; 否则为值**false**。
 
 ##  <a name="try_lock_read"></a> try_lock_read
 
@@ -215,7 +216,7 @@ bool try_lock_read();
 
 ### <a name="return-value"></a>返回值
 
-如果已获取锁，则这`true`; 否则为值`false`。
+如果已获取锁，则这 **，则返回 true**; 否则为值**false**。
 
 ##  <a name="unlock"></a> 解锁
 

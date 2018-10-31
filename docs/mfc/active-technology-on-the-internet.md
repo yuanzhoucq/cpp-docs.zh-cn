@@ -14,19 +14,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db0c93070fe8373cdd4494419ce1b71bf4068b14
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 30aef153dc99c0cbdc4de537496e42ab2bb0459f
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46395111"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204504"
 ---
 # <a name="active-technology-on-the-internet"></a>Internet 上的 Active 技术
 
 Active 技术是一个开放式平台，用来让开发人员为全球性的 Internet 或公司的内部网络（也称为 Intranet）创建激动人心的动态内容和应用程序。 Microsoft 提供的用于 Internet 编程的主要技术如下所述。
 
 >[!IMPORTANT]
-> ActiveX 是一项传统技术，不应使用新的开发。 本文将取代 ActiveX 的现代技术的详细信息，请参阅[ActiveX 控件](activex-controls.md)。
+> ActiveX 是一项传统技术，不应使用新的开发。 有关取代 ActiveX 的现代技术的详细信息，请参阅[ActiveX 控件](activex-controls.md)。
 
 ## <a name="activex-controls"></a>ActiveX 控件
 

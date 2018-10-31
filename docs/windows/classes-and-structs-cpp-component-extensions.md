@@ -1,7 +1,7 @@
 ---
-title: 类和结构 （c + + 组件扩展） |Microsoft Docs
+title: ref 类和 ref 结构 (C + + /cli 和 C + + /cli CX) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -18,16 +18,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 60e388e18e6d3607dac1946c3fd9a511e948afd4
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f2d7ceea7dd3253b28eab5b5fad28381f115225f
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448371"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328061"
 ---
-# <a name="classes-and-structs--c-component-extensions"></a>类和结构（C++ 组件扩展）
+# <a name="ref-class-and-ref-struct--ccli-and-ccx"></a>ref 类和 ref 结构 (C + + /cli 和 C + + /cli CX)
 
-声明类或结构的*对象生存期*自动进行管理。 当对象不再可访问或超出范围时，Visual C++ 会自动放弃分配给对象的内存。
+**Ref 类**或**ref 结构**扩展声明类或结构其*对象生存期*自动进行管理。 当对象不再可访问或超出范围时，将释放的内存。
 
 ## <a name="all-runtimes"></a>所有运行时
 
@@ -61,7 +61,7 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
 *base_type*<br/>
 （可选）基类型中。 但是，值类型不能充当基类型。
 
-有关详细信息，请参阅中的 Windows 运行时和通用语言 Runtimesections 此参数的特定于语言的说明。
+有关详细信息，请参阅此参数的 Windows 运行时和公共语言运行时部分中的特定于语言的说明。
 
 ### <a name="remarks"></a>备注
 
@@ -129,4 +129,4 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
 
 ## <a name="see-also"></a>请参阅
 
-[适用于运行时平台的组件扩展](../windows/component-extensions-for-runtime-platforms.md)
+[适用于.NET 和 UWP 组件扩展](../windows/component-extensions-for-runtime-platforms.md)

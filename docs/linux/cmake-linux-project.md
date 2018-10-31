@@ -10,17 +10,17 @@ ms.technology:
 ms.tgt_pltfrm: Linux
 ms.topic: conceptual
 ms.assetid: f8707b32-f90d-494d-ae0b-1d44425fdc25
-author: corob-msft
-ms.author: corob
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 346e83461fd9dbfb7635b85e8765d241564d3157
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: b7c28a8e67ef2731d26071262383e93d32be9583
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45708001"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50064103"
 ---
 # <a name="configure-a-linux-cmake-project"></a>配置 Linux CMake 项目
 
@@ -29,8 +29,8 @@ ms.locfileid: "45708001"
 
 本主题假定你基本了解 Visual Studio 中的 CMake 支持。 有关详细信息，请参阅 [Visual C++ 的 CMake 工具](../ide/cmake-tools-for-visual-cpp.md)。 有关 CMake 本身的详细信息，请参阅[使用 CMake 生成、测试并打包软件](https://cmake.org/)。
 
-> [!NOTE]  
-> 使用 Visual Studio 中的 CMake 支持需要 CMake 3.8 中引入的服务器模式支持。 如需支持 Visual Studio 中 [CMake 目标视图](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/cmake-support-in-visual-studio-targets-view-single-file-compilation-and-cache-generation-settings/)窗格的，由 Microsoft 提供的 CMake 变体，请在 [https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases) 下载最新预生成二进制文件。 如果包管理器提供的版本低于 CMake 3.8，则可通过[基于源生成 CMake](#build-a-supported-cmake-release-from-source) 进行解决；如果更喜欢使用标准版 CMake，也可从官方 [CMake 下载页](https://cmake.org/download/)下载它。 
+> [!NOTE]
+> 使用 Visual Studio 中的 CMake 支持需要 CMake 3.8 中引入的服务器模式支持。 对于 Microsoft 提供的 CMake 变体，请在 [https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases) 中下载最新的预生成二进制文件。
 
 ## <a name="open-a-folder"></a>打开文件夹
 
@@ -72,7 +72,7 @@ add_executable(hello-cmake hello.cpp)
 
 若要在远程系统上调试代码，请设置断点，并在项目设置旁边的工具栏菜单中选择“CMake 目标”作为启动项，再选择工具栏中的“&#x23f5; 开始”，或按 F5。
 
-若要自定义程序的命令行参数，请右键单击解决方案资源管理器中的可执行文件，并选择“调试和启动设置”。 这会打开或创建 launch.vs.json 配置文件，其中包含程序信息。 若要指定其他参数，请以 `args` JSON 数组形式添加它们。 有关详细信息，请参阅 [Visual C++ 中的“打开文件夹”项目](https://docs.microsoft.com/en-us/cpp/ide/non-msbuild-projects)。
+若要自定义程序的命令行参数，请右键单击解决方案资源管理器中的可执行文件，并选择“调试和启动设置”。 这会打开或创建 launch.vs.json 配置文件，其中包含程序信息。 若要指定其他参数，请以 `args` JSON 数组形式添加它们。 有关详细信息，请参阅 [Visual C++ 中的“打开文件夹”项目](../ide/non-msbuild-projects.md)。
 
 ## <a name="configure-cmake-settings-for-linux"></a>配置适用于 Linux 的 CMake 设置
 
@@ -118,51 +118,11 @@ add_executable(hello-cmake hello.cpp)
 
 这些选项可用于生成前后以及 CMake 生成前在远程框中运行命令。 它们可以是远程框上的任何有效命令。 输出通过管道传递回 Visual Studio。
 
-## <a name="build-a-supported-cmake-release-from-source"></a>从源生成受支持的 CMake 版本
+## <a name="download-prebuilt-cmake-binaries"></a>下载预生成的 CMake 二进制文件
 
-Linux 计算机所需的最低 CMake 版本是 3.8，并它还必须支持服务器模式。 若要进行验证，请运行此命令：
-
-```cmd
-cmake --version
-```
-
-若要验证是否启用了该服务器模式，请运行：
-
-```cmd
-cmake -E capabilities
-```
-
-在输出中，查找“‘serverMode’:true”。 请注意，即使按如下所述从源编译 CMake，也应该在完成后检查各项功能。 Linux 系统可能存在限制，会阻止启用服务器模式。
-
-若要在 Linux 系统 shell 中开始从源生成 CMake，请确保包管理器为最新版，且 git 和 cmake 均可用。
-
-首先，从我们用于维护 Visual Studio CMake 支持分支的 [Microsoft CMake 存储库](https://github.com/Microsoft/CMake)中克隆 CMake 源：
-
-```cmd
-sudo apt-get update
-sudo apt-get install -y git cmake
-git clone https://github.com/Microsoft/CMake.git
-cd CMake
-```
-
-接下来，若要生成最新版 CMake，并将它安装到 /usr/local/bin，请运行下面这些命令：
-
-```cmd
-mkdir out
-cd out
-cmake ../
-make
-sudo make install
-```
-
-接下来，运行下面的命令，以验证版本是否不低于 3.8，且是否已启用服务器模式：
-
-```cmd
-/usr/local/bin/cmake –version
-cmake -E capabilities
-```
+你的 Linux 发行版可能具有更早版本的 CMake。 使用 Visual Studio 中的 CMake 支持需要 CMake 3.8 中引入的服务器模式支持。 对于 Microsoft 提供的 CMake 变体，请在 [https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases) 中下载最新的预生成二进制文件。
 
 ## <a name="see-also"></a>请参阅
 
-[使用项目属性](../ide/working-with-project-properties.md)  
-[Visual C++ 的 CMake 工具](../ide/cmake-tools-for-visual-cpp.md)  
+[使用项目属性](../ide/working-with-project-properties.md)<br/>
+[Visual C++ 的 CMake 工具](../ide/cmake-tools-for-visual-cpp.md)

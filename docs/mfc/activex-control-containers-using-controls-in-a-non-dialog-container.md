@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a20d069024fd424beeec41d3483f8e2c28432e00
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 62cb53dd65810132170d608e68661b64dc97d791
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46410723"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070226"
 ---
 # <a name="activex-control-containers-using-controls-in-a-non-dialog-container"></a>ActiveX 控件容器：使用非对话框容器中的控件
 
@@ -56,18 +56,18 @@ ms.locfileid: "46410723"
 
 1. 在 CMYVIEW.H 中插入 CIRC.H 并刚好放置在 `CMyView` 类定义的前面：
 
-     [!code-cpp[NVC_MFC_AxCont#12](../mfc/codesnippet/cpp/activex-control-containers-using-controls-in-a-non-dialog-container_1.h)]
+   [!code-cpp[NVC_MFC_AxCont#12](../mfc/codesnippet/cpp/activex-control-containers-using-controls-in-a-non-dialog-container_1.h)]
 
 1. 将一个成员变量（类型为 `CCirc`）添加到 CMYVIEW.H 中的 `CMyView` 类定义的受保护部分：
 
-     [!code-cpp[NVC_MFC_AxCont#13](../mfc/codesnippet/cpp/activex-control-containers-using-controls-in-a-non-dialog-container_2.h)]
+   [!code-cpp[NVC_MFC_AxCont#13](../mfc/codesnippet/cpp/activex-control-containers-using-controls-in-a-non-dialog-container_2.h)]
     [!code-cpp[NVC_MFC_AxCont#14](../mfc/codesnippet/cpp/activex-control-containers-using-controls-in-a-non-dialog-container_3.h)]
 
 1. 将 `WM_CREATE` 消息处理程序添加到 `CMyView` 类中。
 
 1. 在处理程序函数中， `CMyView::OnCreate`，该控件的调用`Create`函数使用**这**作为父窗口的指针：
 
-     [!code-cpp[NVC_MFC_AxCont#15](../mfc/codesnippet/cpp/activex-control-containers-using-controls-in-a-non-dialog-container_4.cpp)]
+   [!code-cpp[NVC_MFC_AxCont#15](../mfc/codesnippet/cpp/activex-control-containers-using-controls-in-a-non-dialog-container_4.cpp)]
 
 1. 重新生成项目。 每当创建应用程序的视图时，都会动态创建一个 Circ 控件。
 

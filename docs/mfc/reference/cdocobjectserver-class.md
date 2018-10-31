@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 067f31d837b4b83a477d6b919f2d5bbd5efa00f3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 552252c8826e167b4aaa21aa41e489bbc8179ec3
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46381070"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890370"
 ---
 # <a name="cdocobjectserver-class"></a>CDocObjectServer 类
 
@@ -74,10 +74,6 @@ DocObject 服务器文档可以包含[CDocObjectServerItem](../../mfc/reference/
 若要自定义 DocObject 服务器，派生您自己的类从`CDocObjectServer`并重写其查看安装程序函数， [OnActivateView](#onactivateview)， [OnApplyViewState](#onapplyviewstate)，并[OnSaveViewState](#onsaveviewstate). 需要提供你到框架将调用的响应中的类的新实例。
 
 DocObjects 的详细信息，请参阅[CDocObjectServerItem](../../mfc/reference/cdocobjectserveritem-class.md)并[COleCmdUI](../../mfc/reference/colecmdui-class.md)中*MFC 参考*。
-
-另请参阅以下知识库文章：
-
-- Q247382: PRB： 在 ActiveX 文档服务器中的控件的工具提示隐藏通过 ActiveX 文档容器
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 

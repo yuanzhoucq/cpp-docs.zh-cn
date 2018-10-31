@@ -321,12 +321,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b92acb477e6e15dfe933360dd6456db09d7f52a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d50d751028cc9e162f2a4bd903f35255a5ed3814
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46408735"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067808"
 ---
 # <a name="cmfctoolbar-class"></a>CMFCToolBar 类
 
@@ -535,7 +535,7 @@ class CMFCToolBar : public CMFCBaseToolBar
 
 ## <a name="example"></a>示例
 
-下面的示例演示如何使用中的各种方法`CMFCToolBar`类。 该示例演示如何设置工具条的窗口标签的文本、 设置边框、 窗格中，样式设置和启用**添加或删除按钮**工具栏在端上显示的按钮。 此代码片段属于[IE 演示示例](../../visual-cpp-samples.md)。
+下面的示例演示了如何使用 `CMFCToolBar` 类中的各种方法。 该示例演示如何设置工具条的窗口标签的文本、 设置边框、 窗格中，样式设置和启用**添加或删除按钮**工具栏在端上显示的按钮。 此代码片段属于[IE 演示示例](../../visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_IEDemo#6](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]
 [!code-cpp[NVC_MFC_IEDemo#8](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_2.cpp)]
@@ -724,7 +724,7 @@ BOOL AreTextLabels() const;
 
 ### <a name="remarks"></a>备注
 
-使用[CMFCToolBar::EnableTextLabels](#enabletextlabels)以指定是否显示文本。 默认值为 FALSE。 调用[CMFCToolBar::AllowChangeTextLabels](#allowchangetextlabels)来指定用户是否可以更改此设置中的自定义对话框。
+使用[CMFCToolBar::EnableTextLabels](#enabletextlabels)以指定是否显示文本。 默认值是 FALSE。 调用[CMFCToolBar::AllowChangeTextLabels](#allowchangetextlabels)来指定用户是否可以更改此设置中的自定义对话框。
 
 ##  <a name="autograyinactiveimages"></a>  CMFCToolBar::AutoGrayInactiveImages
 
@@ -1155,7 +1155,6 @@ void EnableCustomizeButton(
     int iCustomizeCmd,
     const CString& strCustomizeText,
     BOOL bQuickCustomize=TRUE);
-
 
 void EnableCustomizeButton(
     BOOL bEnable,
@@ -2173,7 +2172,6 @@ virtual int InsertButton(
     const CMFCToolBarButton& button,
     INT_PTR iInsertAt=-1);
 
-
 virtual int InsertButton(
     CMFCToolBarButton* pButton,
     int iInsertAt=-1);
@@ -2543,7 +2541,6 @@ BOOL IsOneRowWithSibling();
 
 ##  <a name="isresourcechanged"></a>  CMFCToolBar::IsResourceChanged
 
-
 ```
 virtual BOOL IsResourceChanged() const;
 ```
@@ -2553,7 +2550,6 @@ virtual BOOL IsResourceChanged() const;
 ### <a name="remarks"></a>备注
 
 ##  <a name="issibling"></a>  CMFCToolBar::IsSibling
-
 
 ```
 BOOL IsSibling();
@@ -2615,12 +2611,11 @@ virtual BOOL LoadBitmap(
 
 ### <a name="remarks"></a>备注
 
-[Cmfctoolbar:: Loadtoolbarex](#loadtoolbarex)方法调用此方法以加载与工具栏关联的图像。 重写此方法以执行图像资源的自定义加载。
+[CMFCToolBar::LoadToolBarEx](#loadtoolbarex) 方法调用此方法以加载与工具栏关联的图像。 重写此方法以执行图像资源的自定义加载。
 
 调用 `LoadBitmapEx` 方法以在创建工具栏后加载其他图像。
 
 ##  <a name="loadbitmapex"></a>  CMFCToolBar::LoadBitmapEx
-
 
 ```
 virtual BOOL LoadBitmapEx(
@@ -2630,8 +2625,8 @@ virtual BOOL LoadBitmapEx(
 
 ### <a name="parameters"></a>参数
 
-*params*<br/>
-[in][in]*阻止*
+[in]*params*<br/>
+[in]*阻止*<br/>
 
 ### <a name="return-value"></a>返回值
 
@@ -2639,14 +2634,13 @@ virtual BOOL LoadBitmapEx(
 
 ##  <a name="loadlargeiconsstate"></a>  CMFCToolBar::LoadLargeIconsState
 
-
 ```
 static BOOL __stdcall LoadLargeIconsState(LPCTSTR lpszProfileName = NULL);
 ```
 
 ### <a name="parameters"></a>参数
 
-[in]*lpszProfileName*
+[in]*lpszProfileName*<br/>
 
 ### <a name="return-value"></a>返回值
 
@@ -2804,7 +2798,6 @@ AFX_IMPORT_DATA static double m_dblLargeImageRatio;
 
 ##  <a name="nextmenu"></a>  CMFCToolBar::NextMenu
 
-
 ```
 virtual BOOL NextMenu();
 ```
@@ -2814,7 +2807,6 @@ virtual BOOL NextMenu();
 ### <a name="remarks"></a>备注
 
 ##  <a name="onbeforeremovebutton"></a>  CMFCToolBar::OnBeforeRemoveButton
-
 
 ```
 virtual BOOL OnBeforeRemoveButton(
@@ -2853,7 +2845,6 @@ virtual void OnChangeHot(int iHot);
 
 ##  <a name="onchangevisualmanager"></a>  CMFCToolBar::OnChangeVisualManager
 
-
 ```
 virtual void OnChangeVisualManager();
 ```
@@ -2881,7 +2872,6 @@ virtual void OnFillBackground(CDC* pDC);
 
 ##  <a name="onglobalfontschanged"></a>  CMFCToolBar::OnGlobalFontsChanged
 
-
 ```
 virtual void OnGlobalFontsChanged();
 ```
@@ -2904,14 +2894,13 @@ virtual void OnReset();
 
 ##  <a name="onsetaccdata"></a>  CMFCToolBar::OnSetAccData
 
-
 ```
 virtual BOOL OnSetAccData(long lVal);
 ```
 
 ### <a name="parameters"></a>参数
 
-[in]*lVal*
+[in]*lVal*<br/>
 
 ### <a name="return-value"></a>返回值
 
@@ -2969,7 +2958,6 @@ virtual BOOL OnUserToolTip(
 重写`OnUserToolTip`自定义工具栏按钮的工具提示。 默认实现调用[CMFCToolBar::OnUserToolTip](#onusertooltip)若要获取的工具提示文本。
 
 ##  <a name="prevmenu"></a>  CMFCToolBar::PrevMenu
-
 
 ```
 virtual BOOL PrevMenu();
@@ -3132,7 +3120,6 @@ static void __stdcall ResetAllImages();
 
 ##  <a name="resetimages"></a>  CMFCToolBar::ResetImages
 
-
 ```
 virtual void ResetImages();
 ```
@@ -3140,7 +3127,6 @@ virtual void ResetImages();
 ### <a name="remarks"></a>备注
 
 ##  <a name="restorefocus"></a>  CMFCToolBar::RestoreFocus
-
 
 ```
 virtual void RestoreFocus();
@@ -3168,14 +3154,13 @@ virtual BOOL RestoreOriginalState();
 
 ##  <a name="saveparameters"></a>  CMFCToolBar::SaveParameters
 
-
 ```
 static BOOL __stdcall SaveParameters(LPCTSTR lpszProfileName = NULL);
 ```
 
 ### <a name="parameters"></a>参数
 
-[in]*lpszProfileName*
+[in]*lpszProfileName*<br/>
 
 ### <a name="return-value"></a>返回值
 
@@ -3431,19 +3416,17 @@ void SetHeight(int cyHeight);
 
 ##  <a name="sethelpmode"></a>  CMFCToolBar::SetHelpMode
 
-
 ```
 static void __stdcall SetHelpMode(BOOL bOn = TRUE);
 ```
 
 ### <a name="parameters"></a>参数
 
-[in]*bOn*
+[in]*bOn*<br/>
 
 ### <a name="remarks"></a>备注
 
 ##  <a name="sethot"></a>  CMFCToolBar::SetHot
-
 
 ```
 BOOL SetHot(CMFCToolBarButton* pMenuButton);
@@ -3451,7 +3434,7 @@ BOOL SetHot(CMFCToolBarButton* pMenuButton);
 
 ### <a name="parameters"></a>参数
 
-[in]*pMenuButton*
+[in]*pMenuButton*<br/>
 
 ### <a name="return-value"></a>返回值
 
@@ -3495,14 +3478,13 @@ static void SetHotTextColor(COLORREF clrText);
 
 ##  <a name="setignoresettext"></a>  CMFCToolBar::SetIgnoreSetText
 
-
 ```
 void SetIgnoreSetText(BOOL bValue);
 ```
 
 ### <a name="parameters"></a>参数
 
-[in]*bValue*
+[in]*bValue*<br/>
 
 ### <a name="remarks"></a>备注
 
@@ -3557,14 +3539,13 @@ void SetLockedSizes(
 
 ##  <a name="setmaskmode"></a>  CMFCToolBar::SetMaskMode
 
-
 ```
 void SetMaskMode(BOOL bMasked);
 ```
 
 ### <a name="parameters"></a>参数
 
-[in]*bMasked*
+[in]*bMasked*<br/>
 
 ### <a name="remarks"></a>备注
 
@@ -3631,14 +3612,13 @@ void SetOneRowWithSibling();
 
 ##  <a name="setorigbuttons"></a>  CMFCToolBar::SetOrigButtons
 
-
 ```
 void SetOrigButtons(const CObList& lstOrigButtons);
 ```
 
 ### <a name="parameters"></a>参数
 
-[in]*lstOrigButtons*
+[in]*lstOrigButtons*<br/>
 
 ### <a name="remarks"></a>备注
 
@@ -3936,6 +3916,4 @@ AFX_IMPORT_DATA static BOOL m_bDontScaleImages;
 [CMFCPopupMenuBar 类](../../mfc/reference/cmfcpopupmenubar-class.md)<br/>
 [CMFCDropDownToolBar 类](../../mfc/reference/cmfcdropdowntoolbar-class.md)<br/>
 [演练：将控件置于工具栏上](../../mfc/walkthrough-putting-controls-on-toolbars.md)
-
-
 

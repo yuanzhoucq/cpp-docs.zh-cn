@@ -124,19 +124,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 664894fb99f02168d06cfc5d82b4225defe7fe38
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 46b7f613cdb67fa446c878ceda7dd9eca6eec7e3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46422215"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082575"
 ---
 # <a name="cmfcribbonpanel-class"></a>CMFCRibbonPanel 类
 
 实现包含一组功能区元素的面板。 在绘制面板时，系统将根据面板的大小显示尽可能多的元素。
 
 有关更多详细信息，请参阅中的源代码**VC\\atlmfc\\src\\mfc**的 Visual Studio 安装文件夹。
-
 
 ## <a name="syntax"></a>语法
 
@@ -540,7 +539,6 @@ LPCTSTR GetName() const;
 
 ##  <a name="getparentbutton"></a>  CMFCRibbonPanel::GetParentButton
 
-
 ```
 CMFCRibbonBaseElement* GetParentButton() const;
 ```
@@ -562,7 +560,6 @@ CMFCRibbonCategory* GetParentCategory() const;
 指向包含此功能区面板的功能区类别的指针。
 
 ##  <a name="getparentmenubar"></a>  CMFCRibbonPanel::GetParentMenuBar
-
 
 ```
 CMFCRibbonPanelMenuBar* GetParentMenuBar() const;
@@ -830,7 +827,6 @@ virtual BOOL IsMainPanel() const;
 
 ##  <a name="ismenumode"></a>  CMFCRibbonPanel::IsMenuMode
 
-
 ```
 BOOL IsMenuMode() const;
 ```
@@ -841,14 +837,13 @@ BOOL IsMenuMode() const;
 
 ##  <a name="onkey"></a>  CMFCRibbonPanel::OnKey
 
-
 ```
 virtual BOOL OnKey(UINT nChar);
 ```
 
 ### <a name="parameters"></a>参数
 
-[in]*nChar*
+[in]*nChar*<br/>
 
 ### <a name="return-value"></a>返回值
 
@@ -929,7 +924,8 @@ CMFCRibbonBaseElement* pElem);
 *nIndex*<br/>
 [in]指定要替换的元素的从零开始索引。
 
-[in][out]*pElem*指向替换原始元素的元素的有效指针。
+*pElem*<br/>
+[in、 out]指向替换原始元素的元素的有效指针。
 
 ### <a name="return-value"></a>返回值
 
@@ -954,7 +950,8 @@ CMFCRibbonBaseElement* pElem);
 *uiCmdID*<br/>
 [in]指定要替换元素的命令 ID。
 
-[in][out]*pElem*指向要替换的原始元素的元素的有效指针。
+*pElem*<br/>
+[in、 out]指向要替换的原始元素的元素的有效指针。
 
 ### <a name="return-value"></a>返回值
 
@@ -1007,7 +1004,6 @@ HMENU hMenu,
 BOOL bIsDefautCommand = FALSE,
 BOOL bRightAlign = FALSE);
 
-
 BOOL SetElementMenu(
 UINT uiCmdID,
 UINT uiMenuResID,
@@ -1055,7 +1051,8 @@ CRuntimeClass* pRTC);
 *nIndex*<br/>
 [in]指定要添加的功能区元素的从零开始索引。
 
-[in][out]*pRTC*指向功能区元素添加到功能区面板的运行时类信息的指针。
+*pRTC*<br/>
+[in、 out]指向功能区元素添加到功能区面板的运行时类信息的指针。
 
 ### <a name="return-value"></a>返回值
 
@@ -1080,7 +1077,8 @@ CRuntimeClass* pRTC);
 *uiCmdID*<br/>
 [in]指定要添加的功能区元素的命令 ID。
 
-[in][out]*pRTC*指向添加到功能区面板的功能区元素与关联的运行时类信息的指针。
+*pRTC*<br/>
+[in、 out]指向添加到功能区面板的功能区元素与关联的运行时类信息的指针。
 
 ### <a name="return-value"></a>返回值
 
@@ -1106,7 +1104,6 @@ CMFCRibbonColorButton* pColorButton =
 (CMFCRibbonColorButton*)pPanel->SetElementRTCByID(
 ID_CHAR_COLOR,
     RUNTIME_CLASS (CMFCRibbonColorButton));
-
 
 // SetElementRTCByID sets runtime class and returns a pointer
 // to the newly created custom button,

@@ -26,7 +26,7 @@ ms.locfileid: "46040643"
 
 根据一些循环终止条件，迭代语句会导致语句（或复合语句）被执行零次或多次。 当这些语句是复合语句时，它们的顺序执行，除非任一[中断](../cpp/break-statement-cpp.md)语句或[继续](../cpp/continue-statement-cpp.md)遇到语句。
 
-C++ 提供四个迭代语句-[时](../cpp/while-statement-cpp.md)，[执行](../cpp/do-while-statement-cpp.md)，[为](../cpp/for-statement-cpp.md)，和[基于范围的 for](../cpp/range-based-for-statement-cpp.md)。 每个迭代，直到其终止表达式的计算结果为零 (false)，或使用强制循环终止**中断**语句。 下表汇总了这些语句及其操作；后面各节详细讨论了它们。
+C++ 提供四个迭代语句-[while](../cpp/while-statement-cpp.md)，[do](../cpp/do-while-statement-cpp.md)，[for](../cpp/for-statement-cpp.md)，和[基于范围的 for](../cpp/range-based-for-statement-cpp.md)。 每个迭代，直到其终止表达式的计算结果为零 (false)，或使用强制循环终止**中断**语句。 下表汇总了这些语句及其操作；后面各节详细讨论了它们。
 
 ### <a name="iteration-statements"></a>迭代语句
 

@@ -13,19 +13,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8b220ecd69ce539c03339ac73048efb2750d2e32
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 541a9d5064e9bdf9c4ddb9b410ab4dc0277626b0
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46401792"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204608"
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Windows 运行时 C++ 模板库 (WRL)
 
 Windows 运行时 C++ 模板库 (WRL) 是一个提供低级别方式来创作和使用 Windows 运行时组件的模板库。
 
 > [!NOTE]
-> WRL 现在取代通过 C + + / WinRT，的 Windows 运行时 Api 的标准 C + + 17 语言投影。 C + + / WinRT 是 Windows 10 SDK 版本 1803年以后从中可用。 C + + / WinRT 是完全在标头文件中实现，旨在提供对新式 Windows API 的优先访问权限。
+> WRL 现已更名为 C + + / WinRT，的 Windows 运行时 Api 的标准 C + + 17 语言投影。 C + + / WinRT 是 Windows 10 SDK 版本 1803年以后从中可用。 C + + / WinRT 是完全在标头文件中实现，旨在提供对新式 Windows API 的优先访问权限。
 
 > 使用 C + + / WinRT，您可以使用和编写 Windows 运行时 Api 使用任何符合标准的 C + + 17 编译器。 C + + WinRT 通常更好地执行，并生成较小的二进制文件比 Windows 运行时的任何其他语言选项。 我们将继续支持 C + + /cli CX 和 WRL，但强烈建议新的应用程序使用 C + + WinRT。 有关详细信息，请参阅[C + + WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/index)。
 
@@ -50,7 +50,7 @@ Windows 运行时 c + + 模板库和 C + + /cli CX 提供不同的优点。 以�
 
 以下是一些可以帮助您立刻开始工作与 Windows 运行时 c + + 模板库的资源。
 
-[Windows 运行时库 (WRL)](http://channel9.msdn.com/Events/Windows-Camp/Developing-Windows-8-Metro-style-apps-in-Cpp/The-Windows-Runtime-Library-WRL-)<br/>
+[Windows 运行时库 (WRL)](https://channel9.msdn.com/Events/Windows-Camp/Developing-Windows-8-Metro-style-apps-in-Cpp/The-Windows-Runtime-Library-WRL-)<br/>
 在此第 9 频道视频中，详细了解 Windows 运行时 c + + 模板库的可帮助你编写通用 Windows 平台 (UWP) 应用以及如何编写和使用 Windows 运行时组件。
 
 [如何： 激活和使用 Windows 运行时组件](../windows/how-to-activate-and-use-a-windows-runtime-component-using-wrl.md)<br/>
@@ -69,7 +69,7 @@ Windows 运行时 c + + 模板库和 C + + /cli CX 提供不同的优点。 以�
 演示如何使用 Windows 运行时 c + + 模板库创建基本的 COM 组件和注册和使用 COM 组件从桌面应用程序的基本方法。
 
 [如何：直接实例化 WRL 组件](../windows/how-to-instantiate-wrl-components-directly.md)<br/>
-了解如何使用[Microsoft::WRL::Make](../windows/make-function.md)并[Microsoft::WRL::Details::MakeAndInitialize](../windows/makeandinitialize-function.md)函数来实例化其定义的模块中的组件。
+了解如何使用 [Microsoft::WRL::Make](../windows/make-function.md) 和 [Microsoft::WRL::Details::MakeAndInitialize](../windows/makeandinitialize-function.md) 函数从定义组件的模块实例化组件。
 
 [如何：使用 winmdidl.exe 和 midlrt.exe 通过窗口元数据创建 .h 文件](../windows/use-winmdidl-and-midlrt-to-create-h-files-from-windows-metadata.md)<br/>
 演示如何通过从 .winmd 元数据创建 IDL 文件，使用 WRL 中的自定义 Windows 运行时组件。
@@ -77,16 +77,16 @@ Windows 运行时 c + + 模板库和 C + + /cli CX 提供不同的优点。 以�
 [演练：使用任务和 XML HTTP 请求进行连接](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)<br/>
 演示如何使用[IXMLHTTPRequest2](/previous-versions/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2)并[IXMLHTTPRequest2Callback](/previous-versions/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2callback)接口与任务以将 HTTP GET 和 POST 请求发送到 UWP 应用中的 web 服务结合使用。
 
-[必应地图行程优化器示例](http://code.msdn.microsoft.com/Bing-Maps-trip-optimizer-c4e037f7)<br/>
+[必应地图行程优化器示例](https://code.msdn.microsoft.com/Bing-Maps-trip-optimizer-c4e037f7)<br/>
 使用`HttpRequest`中定义的类[演练： 使用任务和 XML HTTP 请求](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)完整的 UWP 应用的上下文中。
 
-[使用 c + + 示例创建 Windows 运行时 DLL 组件](http://code.msdn.microsoft.com/windowsapps/Creating-a-Windows-Runtime-6c399797)<br/>
+[使用 c + + 示例创建 Windows 运行时 DLL 组件](https://code.msdn.microsoft.com/windowsapps/Creating-a-Windows-Runtime-6c399797)<br/>
 演示如何使用 Windows 运行时 c + + 模板库创建进程内 DLL 组件和使用它从 C + + /cli CX、 JavaScript 和 C#。
 
-[DirectX 大理石迷宫游戏示例](http://code.msdn.microsoft.com/windowsapps/DirectX-Marble-Maze-Game-e4806345)<br/>
+[DirectX 大理石迷宫游戏示例](https://code.msdn.microsoft.com/windowsapps/DirectX-Marble-Maze-Game-e4806345)<br/>
 演示如何使用 Windows 运行时 c + + 模板库来管理 COM 组件，如 DirectX 和媒体基础的一个完整的三维游戏上下文中的生存期。
 
-[从桌面应用程序示例发送 toast 通知](http://code.msdn.microsoft.com/windowsdesktop/Sending-toast-notifications-71e230a2)<br/>
+[从桌面应用程序示例发送 toast 通知](https://code.msdn.microsoft.com/windowsdesktop/Sending-toast-notifications-71e230a2)<br/>
 演示如何使用 Windows 运行时 c + + 模板库以使用从桌面应用的 toast 通知。
 
 ## <a name="windows-runtime-c-template-library-compared-to-atl"></a>Windows 运行时 c + + 模板库与 ATL 比较
@@ -119,23 +119,23 @@ Windows 运行时 c + + 模板库提供表示了一些基本概念的类型。 �
 
 ### <a name="comptr"></a>ComPtr
 
-[ComPtr](../windows/comptr-class.md)是*智能指针*表示由模板参数指定的接口的类型。 使用 `ComPtr` 可以声明能够访问从接口派生的对象成员的变量。 `ComPtr` 会自动维护基础接口指针的引用计数，并在引用计数变为零时发布接口。
+[ComPtr](../windows/comptr-class.md) 是一种智能指针  类型，表示由模板参数指定的接口。 使用 `ComPtr` 可以声明能够访问从接口派生的对象成员的变量。 `ComPtr` 会自动维护基础接口指针的引用计数，并在引用计数变为零时发布接口。
 
 ### <a name="runtimeclass"></a>RuntimeClass
 
-[RuntimeClass](../windows/runtimeclass-class.md)表示继承一组指定接口的实例化的类。 一个`RuntimeClass`对象可以提供对一个或多个 Windows 运行时 COM 接口或对组件的弱引用支持的组合。
+[RuntimeClass](../windows/runtimeclass-class.md) 表示继承一组指定接口的实例化类。 一个`RuntimeClass`对象可以提供对一个或多个 Windows 运行时 COM 接口或对组件的弱引用支持的组合。
 
 ### <a name="module"></a>模块
 
-[模块](../windows/module-class.md)表示相关对象的集合。 `Module` 对象管理类工厂和注册。类工厂可以创建对象，注册则让其他应用程序能够使用对象。
+[模块](../windows/module-class.md) 表示一组相关的对象。 `Module` 对象管理类工厂和注册。类工厂可以创建对象，注册则让其他应用程序能够使用对象。
 
 ### <a name="callback"></a>回调
 
-[回调](../windows/callback-function-windows-runtime-cpp-template-library.md)函数创建一个对象，其成员函数为事件处理程序 （回调方法）。 使用 `Callback` 函数可以编写异步操作。
+[回调](../windows/callback-function-windows-runtime-cpp-template-library.md) 函数可以创建对象，该对象的成员函数为事件处理程序（回调方法）。 使用 `Callback` 函数可以编写异步操作。
 
 ### <a name="eventsource"></a>EventSource
 
-[EventSource](../windows/eventsource-class.md)用来管理*委托*事件处理程序。 使用 Windows 运行时 c + + 模板库实现委托，并使用`EventSource`添加、 删除和调用委托。
+[EventSource](../windows/eventsource-class.md) 用于管理委托  事件处理程序。 使用 Windows 运行时 c + + 模板库实现委托，并使用`EventSource`添加、 删除和调用委托。
 
 ### <a name="asyncbase"></a>AsyncBase
 
@@ -143,19 +143,19 @@ Windows 运行时 c + + 模板库提供表示了一些基本概念的类型。 �
 
 ### <a name="ftmbase"></a>FtmBase
 
-[FtmBase](../windows/ftmbase-class.md)表示自由线程封送处理程序对象。 `FtmBase` 可以创建全局接口表 (GIT)，并帮助管理封送处理和代理对象。
+[FtmBase](../windows/ftmbase-class.md) 表示自由线程封送拆收器对象。 `FtmBase` 可以创建全局接口表 (GIT)，并帮助管理封送处理和代理对象。
 
 ### <a name="weakref"></a>WeakRef
 
-[WeakRef](../windows/weakref-class.md)是智能指针类型，表示*弱引用*，可引用可能会或可能无法访问的对象。 一个`WeakRef`可以使用对象，由只有 Windows 运行时，而不是经典 com。
+[WeakRef](../windows/weakref-class.md) 是表示弱引用 的智能指针类型。弱引用可引用能够访问或者不能访问的对象。 一个`WeakRef`可以使用对象，由只有 Windows 运行时，而不是经典 com。
 
-`WeakRef` 对象通常表示由外部线程或应用程序控制其存在性的对象。 例如， `WeakRef` 对象可以引用文件对象。 当文件打开时， `WeakRef` 有效，并且引用的文件可以访问。 当文件关闭时， `WeakRef` 无效，并且文件不可访问。
+`WeakRef` 对象通常表示由外部线程或应用程序控制其存在性的对象。 例如，`WeakRef` 对象可以引用文件对象。 当文件打开时，`WeakRef` 有效，并且引用的文件可以访问。 当文件关闭时，`WeakRef` 无效，并且文件不可访问。
 
 ## <a name="related-topics"></a>相关主题
 
 |||
 |-|-|
 |[按类别列出的关键 Api](../windows/key-wrl-apis-by-category.md)|重点介绍主要的 Windows 运行时 c + + 模板库类型、 函数和宏。|
-|[参考](../windows/wrl-reference.md)|包含 Windows 运行时 c + + 模板库的参考信息。|
+|[引用](../windows/wrl-reference.md)|包含 Windows 运行时 c + + 模板库的参考信息。|
 |[快速参考 （Windows 运行时和 Visual c + +）](../cppcx/quick-reference-c-cx.md)|简要介绍了 C + + /cli CX 功能支持 Windows 运行时。|
 |[在 Visual c + + 中使用 Windows 运行时组件](/windows/uwp/winrt-components/walkthrough-creating-a-basic-windows-runtime-component-in-cpp-and-calling-it-from-javascript-or-csharp)|演示如何使用 C + + /cli CX 创建基本 Windows 运行时组件。|

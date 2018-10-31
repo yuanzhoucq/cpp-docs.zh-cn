@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9b438725a5a725597a81f0587936618a06cbb4b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 218451b0483e569bf4c944e139aff3446f5925e7
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46414298"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162069"
 ---
 # <a name="cancellationtoken-class"></a>cancellation_token 类
 
@@ -55,7 +55,7 @@ class cancellation_token;
 |----------|-----------------|
 |[deregister_callback](#deregister_callback)|通过 `register` 方法基于注册时返回的 `cancellation_token_registration` 对象移除之前注册的回调。|
 |[is_cancelable](#is_cancelable)|返回有关此标记是否可取消的指示。|
-|[is_canceled](#is_canceled)|如果标记已取消，则返回 `true`。|
+|[is_canceled](#is_canceled)|返回 **，则返回 true**如果令牌已被取消。|
 |[none](#none)|返回一个取消标记，此标记绝不会受到取消。|
 |[register_callback](#register_callback)|使用标记注册一个回调函数。 取消该标记时，将进行回调。 请注意，如果在调用此方法时已删除此标记，则将立即同步进行回调。|
 
@@ -123,7 +123,7 @@ bool is_cancelable() const;
 
 ##  <a name="is_canceled"></a> is_canceled
 
-如果标记已取消，则返回 `true`。
+返回 **，则返回 true**如果令牌已被取消。
 
 ```
 bool is_canceled() const;
@@ -131,7 +131,7 @@ bool is_canceled() const;
 
 ### <a name="return-value"></a>返回值
 
-如果标记已取消，则值为 `true`；否则值为 `false`。
+该值 **，则返回 true**如果标记已取消; 否则为值**false**。
 
 ##  <a name="none"></a> 无
 

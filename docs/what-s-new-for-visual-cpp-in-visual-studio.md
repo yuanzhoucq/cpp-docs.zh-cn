@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 996a891d62ee254fe2ce769483d34941ffb300b6
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 6f2b4dddd77b245de307173fbc2496181658be78
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43680534"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50066066"
 ---
 # <a name="whats-new-for-visual-c-in-visual-studio-2017"></a>Visual Studio 2017 中 Visual C++ 的新增功能
 
@@ -42,11 +42,11 @@ Visual Studio 2017 版本 15.7：Visual Studio 15.7 版中的 MSVC 编译器工�
 
 - Visual Studio 2017 允许结合使用 [/sdl](build/reference/sdl-enable-additional-security-checks.md) 和 [/await](build/reference/await-enable-coroutine-support.md)。 移除了针对协同程序的 [/RTC](build/reference/rtc-run-time-error-checks.md) 限制。
 
-   **Visual Studio 2017 版本15.3**：  
+   **Visual Studio 2017 版本15.3**：
+
 - [/std:c++14 和 /std:c++latest](build/reference/std-specify-language-standard-version.md)：通过这些编译器开关可选择在项目中加入特定版本的 ISO C++ 编程语言。 大多数新的草案标准功能由 **/std:c++latest** 开关保护。
 
 - 通过 [/std:c++17](build/reference/std-specify-language-standard-version.md) 可使用编译器实现一组 C++17 功能。 对于在 C++17 之后的工作草案版本及 C++ 标准版缺陷更新中更改或新增的功能，此选项会禁用编译器和标准库支持。 要启用这些功能，请使用 /std:c++latest。
-
 
 ### <a name="codegen-security-diagnostics-and-versioning"></a>Codegen、安全性、诊断和版本控制
 
@@ -65,7 +65,7 @@ Visual Studio 2017 版本 15.7：Visual Studio 15.7 版中的 MSVC 编译器工�
 
 **Visual Studio 2017 版本 15.5**：
 
-由于生成的代码质量更好，Visual C++ 运行时的性能进一步增强。 这意味着只需重新编译代码，即可加快应用的运行速度。 编译器的某些优化是前所未有的，例如条件标量存储的矢量化，将 `sin(x)` 和 `cos(x)` 调用合并到新的 `sincos(x)` 中，以及删减了 SSA 优化器中多余的说明。 其他编译器优化是对现有功能的改进，例如条件表达式的矢量器启发、更佳的循环优化和浮动最小/最大 codegen。 链接器具有一个新的运行速度更快的 /OPT:ICF 实现，可让链接时间最多缩短 9%；此外，还有针对增量链接的其他性能修复。 有关详细信息，请参阅 [/OPT（优化）](https://docs.microsoft.com/en-us/cpp/build/reference/opt-optimizations)和 [/INCREMENTAL（增量链接）](https://docs.microsoft.com/en-us/cpp/build/reference/incremental-link-incrementally)。
+由于生成的代码质量更好，Visual C++ 运行时的性能进一步增强。 这意味着只需重新编译代码，即可加快应用的运行速度。 编译器的某些优化是前所未有的，例如条件标量存储的矢量化，将 `sin(x)` 和 `cos(x)` 调用合并到新的 `sincos(x)` 中，以及删减了 SSA 优化器中多余的说明。 其他编译器优化是对现有功能的改进，例如条件表达式的矢量器启发、更佳的循环优化和浮动最小/最大 codegen。 链接器具有一个新的运行速度更快的 /OPT:ICF 实现，可让链接时间最多缩短 9%；此外，还有针对增量链接的其他性能修复。 有关详细信息，请参阅 [/OPT（优化）](build/reference/opt-optimizations.md)和 [/INCREMENTAL（增量链接）](build/reference/incremental-link-incrementally.md)。
 
 Visual C++ 支持 Intel AVX-512，包括将 AVX-512 中的新函数引入位宽为 128 和 256 的寄存器的向量长度说明。
 
@@ -342,9 +342,9 @@ Visual Studio 2017 支持在不转换为 MSBuild 项目文件 (.vcxproj) 的情�
 
   ![Cmake 打开文件夹](media/cmake_cpp.png "CMake 打开文件夹")
 
-**Visual Studio 2017 版本 15.3**：添加了对 CMake Ninja 生成器的支持。 
+**Visual Studio 2017 版本 15.3**：添加了对 CMake Ninja 生成器的支持。
 
-**Visual Studio 2017 版本 15.5**：添加了对导入现有 CMake 缓存的支持。 
+**Visual Studio 2017 版本 15.5**：添加了对导入现有 CMake 缓存的支持。
 
 **Visual Studio 2017 15.7 版**：添加了对CMake 3.11、CMake 项目中的代码分析、解决方案资源管理器中的“目标”视图、缓存生成选项以及单个文件编译的支持。 有关详细信息，请参阅 [Visual C++ 中的 CMake 项目](ide/cmake-tools-for-visual-cpp.md)和 [CMake Support in Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/cmake-support-in-visual-studio-targets-view-single-file-compilation-and-cache-generation-settings/)（Visual Studio 中的 CMake 支持）。
 
@@ -394,12 +394,11 @@ C++ 是通用 Windows 应用工作负荷的可选组件。  当前必须手动�
 ## <a name="new-options-for-c-on-universal-windows-platform-uwp"></a>通用 Windows 平台 (UWP) 上 C++ 的新选项
 现在，你拥有了为通用 Windows 平台和 Windows 应用商店编写和打包 C++ 应用程序的新选项：可使用桌面桥基础结构打包现有的桌面应用程序或 COM 对象，用于通过 Windows 应用商店部署或借助边载通过现有通道部署。 Windows 10 中的新功能使你能够以各种方式将 UWP 功能添加到桌面应用程序。 有关详细信息，请参阅[桌面桥](/windows/uwp/porting/desktop-to-uwp-root)。
 
-**Visual Studio 2017 版本 15.5**  
-添加了“Windows 应用程序打包项目”项目模板，极大地简化了使用桌面桥打包桌面应用程序的工作。 可在“文件| 新建 | 项目 | 已安装 | Visual C++ | 通用 Windows 平台”下获得此模板。 有关详细信息，请参阅[使用 Visual Studio（桌面桥）打包应用](/windows/uwp/porting/desktop-to-uwp-packaging-dot-net)。
+Visual Studio 2017 版本 15.5：添加了“Windows 应用程序打包项目”项目模板，极大地简化了使用桌面桥打包桌面应用程序的工作。 可在“文件| 新建 | 项目 | 已安装 | Visual C++ | 通用 Windows 平台”下获得此模板。 有关详细信息，请参阅[使用 Visual Studio（桌面桥）打包应用](/windows/uwp/porting/desktop-to-uwp-packaging-dot-net)。
 
 在编写新代码时可使用 C ++ / WinRT，它是 Windows 运行时的标准 C ++ 语言投影，仅在头文件中实现。 它使你可以使用任何符合兼容的 C++ 编译器创作和使用 Windows 运行时 API。 C++/WinRT 旨在为 C++ 开发人员提供对新式 Windows API 的优先访问权限。 有关详细信息，请参阅 [GitHub 上提供的 C++/WinR](https://moderncpp.com/)。
 
-自 [Windows SDK Insider Preview 的 内部版本 17025](https://blogs.windows.com/buildingapps/2017/11/01/windows-10-sdk-preview-build-17025/#ryPH3zAy6yk2cIRX.97) 起，C++/WinRT 包含在 Windows SDK 中。 有关详细信息，请参阅 [C++/WinRT is now included the Windows SDK](https://blogs.msdn.microsoft.com/vcblog/2017/11/01/cppwinrt-is-now-included-the-windows-sdk/)（C++/WinRT 现在包含在 Windows SDK 中）。
+自 Windows SDK Insider Preview 的内部版本 17025 起，C++/WinRT 包含在 Windows SDK 中。 有关详细信息，请参阅 [C++/WinRT is now included the Windows SDK](https://blogs.msdn.microsoft.com/vcblog/2017/11/01/cppwinrt-is-now-included-the-windows-sdk/)（C++/WinRT 现在包含在 Windows SDK 中）。
 
 ## <a name="clangc2-platform-toolset"></a>Clang/C2 平台工具集
 
@@ -417,10 +416,11 @@ Visual Studio 2017 附带的 Clang/C2 工具集现在支持 /bigobj 开关，这
 
 15.3 中可能存在的一些警告编号在 15.5 中不再可用。 这些警告被更具体的检查替换。
 
-**Visual Studio 2017 15.6 版**：  
-添加了对单个文件分析的支持，并改进了分析运行时性能。 有关详细信息，请参阅[C++ Static Analysis Improvements for Visual Studio 2017 15.6 Preview 2](https://blogs.msdn.microsoft.com/vcblog/2018/01/10/c-static-analysis-improvements-for-visual-studio-2017-15-6-preview-2/)（Visual Studio 2017 15.6 预览版 2 的 C++ 静态分析改进）
+**Visual Studio 2017 15.6 版**：
 
-**Visual Studio 2017 15.7 版**：  
+- 添加了对单个文件分析的支持，并改进了分析运行时性能。 有关详细信息，请参阅[C++ Static Analysis Improvements for Visual Studio 2017 15.6 Preview 2](https://blogs.msdn.microsoft.com/vcblog/2018/01/10/c-static-analysis-improvements-for-visual-studio-2017-15-6-preview-2/)（Visual Studio 2017 15.6 预览版 2 的 C++ 静态分析改进）
+
+**Visual Studio 2017 15.7 版**：
 
 - 添加了对 [/analyze:ruleset](build/reference/analyze-code-analysis.md) 的支持，它允许指定要运行的代码分析规则。
 - 添加了对其他 C++ Core Guidelines 规则的支持。  有关详细信息，请参阅[使用 C++ 核心准则检查器](/visualstudio/code-quality/using-the-cpp-core-guidelines-checkers)。
@@ -436,11 +436,11 @@ Google Test Adapter 和 Boost.Test Adapter 现在作为“使用 C++ 的桌面�
 - 添加了对 Boost.Test 动态库支持的支持。
 - IDE 中现提供 Boost.Test 项模板。
 
-有关详细信息，请参阅 [Boost.Test Unit Testing: Dynamic Library support and New Item Template](https://blogs.msdn.microsoft.com/vcblog/2018/01/10/boost-test-unit-testing-dynamic-library-support-and-new-item-template/)（Boost.Test 单元测试：动态库支持和新项模板）。 
+有关详细信息，请参阅 [Boost.Test Unit Testing: Dynamic Library support and New Item Template](https://blogs.msdn.microsoft.com/vcblog/2018/01/10/boost-test-unit-testing-dynamic-library-support-and-new-item-template/)（Boost.Test 单元测试：动态库支持和新项模板）。
 
 **Visual Studio 2017 15.7 版**：
 
-针对 C++ 单元测试项目添加了对 [CodeLens](https://docs.microsoft.com/en-us/visualstudio/ide/find-code-changes-and-other-history-with-codelens) 的支持。 有关详细信息，请参阅 [Announcing CodeLens for C++ Unit Testing](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/announcing-codelens-for-c-unit-testing/)（宣布推出用于 C++ 单元测试的 CodeLens）。
+针对 C++ 单元测试项目添加了对 [CodeLens](/visualstudio/ide/find-code-changes-and-other-history-with-codelens) 的支持。 有关详细信息，请参阅 [Announcing CodeLens for C++ Unit Testing](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/announcing-codelens-for-c-unit-testing/)（宣布推出用于 C++ 单元测试的 CodeLens）。
 
 ## <a name="visual-studio-graphics-diagnostics"></a>Visual Studio 图形诊断
 

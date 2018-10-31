@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 815a276cb07a91da73acb68a32cceef4b2138325
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 2419b4da0cad2662a246c167938d673429afbf26
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46093828"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060893"
 ---
 # <a name="idispeventimpl-class"></a>IDispEventImpl 类
 
@@ -44,7 +44,7 @@ template <UINT nID, class T,
     const IID* pdiid = &IID_NULL,
     const GUID* plibid = &GUID_NULL,
     WORD wMajor = 0,
-    WORD wMinor = 0, 
+    WORD wMinor = 0,
     class tihclass = CcomTypeInfoHolder>
 class ATL_NO_VTABLE IDispEventImpl : public IDispEventSimpleImpl<nID, T, pdiid>
 ```
@@ -102,7 +102,7 @@ class ATL_NO_VTABLE IDispEventImpl : public IDispEventSimpleImpl<nID, T, pdiid>
 
 `IDispEventImpl` 结合使用与事件路由到相应的处理程序函数在类中的事件接收器映射。 若要使用此类：
 
-添加[SINK_ENTRY](composite-control-macros.md#sink_entry)或[SINK_ENTRY_EX](composite-control-macros.md#sink_entry_ex)宏为你想要处理的每个对象的每个事件的事件接收器映射。 使用时`IDispEventImpl`作为复合控件的基类，可以调用[AtlAdviseSinkMap](connection-point-global-functions.md#atladvisesinkmap)建立和断开与事件源的连接的所有项在事件都接收器映射。 在其他情况下，或者对于更强的控制，调用[DispEventAdvise](idispeventsimpleimpl-class.md#dispeventadvise)之间建立连接的源对象和类的基类。 调用[DispEventUnadvise](idispeventsimpleimpl-class.md#dispeventunadvise)断开连接。  
+添加[SINK_ENTRY](composite-control-macros.md#sink_entry)或[SINK_ENTRY_EX](composite-control-macros.md#sink_entry_ex)宏为你想要处理的每个对象的每个事件的事件接收器映射。 使用时`IDispEventImpl`作为复合控件的基类，可以调用[AtlAdviseSinkMap](connection-point-global-functions.md#atladvisesinkmap)建立和断开与事件源的连接的所有项在事件都接收器映射。 在其他情况下，或者对于更强的控制，调用[DispEventAdvise](idispeventsimpleimpl-class.md#dispeventadvise)之间建立连接的源对象和类的基类。 调用[DispEventUnadvise](idispeventsimpleimpl-class.md#dispeventunadvise)断开连接。
 
 您必须派生自`IDispEventImpl`(使用的值是唯一*nID*) 为每个需要处理事件的对象。 通过对一个源对象对不同的源对象，然后告知取消通知，可以重用类的基类，但可以一次处理由单个对象的源对象的最大数目受数`IDispEventImpl`基类。
 
@@ -152,7 +152,7 @@ HRESULT GetFuncInfoFromId(
 *lcid*<br/>
 [in]区域设置上下文的函数 id。
 
-*信息*<br/>
+info<br/>
 [in]结构，该值指示如何调用该函数。
 
 ### <a name="return-value"></a>返回值

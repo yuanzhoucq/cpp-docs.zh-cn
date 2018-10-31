@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff655573f77b901725fe18c2346c46306c9b853a
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: bf5bca25f0e5b6a349544e24d0983d4d297be9ae
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45716802"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50065871"
 ---
 # <a name="ltfilesystemgt-enumerations"></a>&lt;filesystem&gt; 枚举
 
@@ -73,7 +73,6 @@ enum class copy_options {
 |`directories_only`|仅循环访问目录，忽略文件。|
 |`create_symlinks`|生成符号链接，而非复制文件。 必须将绝对路径用作源路径，除非目标是当前目录。|
 |`create_hard_links`|生成硬链接，而非复制文件。|
-
 
 ## <a name="directory_options"></a> directory_options
 

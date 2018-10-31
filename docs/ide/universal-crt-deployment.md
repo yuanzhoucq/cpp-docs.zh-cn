@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 20006118d4bf27c379b78b84dc8807a4fd6c5e6c
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: b7fe21753dc4310752c1081d17ddff942bcbd89f
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34256260"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48820992"
 ---
 # <a name="universal-crt-deployment"></a>通用 CRT 部署
 
@@ -29,7 +29,7 @@ ms.locfileid: "34256260"
 
 ## <a name="central-deployment"></a>集中部署
 
-集中安装通用 CRT 的首选方法是使用 Microsoft Windows 更新。 通用 CRT 是所有支持的 Microsoft Windows 操作系统的推荐更新，所以默认情况下，大多数计算机在常规更新过程中都会安装它。 通用 CRT 的初始版本为 [KB2999226](https://support.microsoft.com/en-us/kb/2999226)；后续更新包括 [KB3118401](https://support.microsoft.com/en-us/kb/3118401) 中进行的各种 Bug 修复，另外还有其他更新，其中包括更多 bug 修补程序和新功能。 有关最新更新，请搜索 [support.microsoft.com](https://support.microsoft.com) 以查找通用 C 运行时或通用 CRT。
+集中安装通用 CRT 的首选方法是使用 Microsoft Windows 更新。 通用 CRT 是所有支持的 Microsoft Windows 操作系统的推荐更新，所以默认情况下，大多数计算机在常规更新过程中都会安装它。 通用 CRT 的初始版本为 [KB2999226](https://support.microsoft.com/kb/2999226)；后续更新包括 [KB3118401](https://support.microsoft.com/kb/3118401) 中进行的各种 Bug 修复，另外还有其他更新，其中包括更多 bug 修补程序和新功能。 有关最新更新，请搜索 [support.microsoft.com](https://support.microsoft.com) 以查找通用 C 运行时或通用 CRT。
 
 并非所有 Microsoft Windows 计算机都使用 Windows 更新定期安装更新，有些计算机可能不会安装所有推荐的更新。 为支持在这些计算机上使用通过 Visual Studio 2015 及更高版本的 C++ 工具集生成的应用程序，通用 CRT 可再发行组件可用于脱机分发。 这些可再发行组件可从上述任一知识库链接下载。 请注意，通用 CRT 可再发行组件要求计算机已更新到当前服务包。 举个例子，Windows 7 的可再发行组件仅安装到 Windows 7 SP1 上，而不会安装到 Windows 7 RTM 上。
 

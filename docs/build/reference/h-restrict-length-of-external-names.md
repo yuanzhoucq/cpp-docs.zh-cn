@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61a931ac5f9793f800157ed02ffcb7ff5071f4df
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: c4881ba20e999b13e2a7841161a775eac69638f6
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45724394"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861013"
 ---
 # <a name="h-restrict-length-of-external-names"></a>/H（限制外部名称长度）
 
@@ -86,9 +86,9 @@ void func2(void) {}
 
 1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。
 
-2. 选择**配置属性** > **C/c + +** > **命令行**属性页。
+1. 选择**配置属性** > **C/c + +** > **命令行**属性页。
 
-3. 输入中的编译器选项**其他选项**框。
+1. 输入中的编译器选项**其他选项**框。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>以编程方式设置此编译器选项
 

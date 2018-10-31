@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa1803fb34ce1c9cf50b996efb9cc5467dd55996
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0bd1e6953d936106f272aa8bef4243728d742d8c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46387830"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078188"
 ---
 # <a name="colepropertiesdialog-class"></a>COlePropertiesDialog 类
 
@@ -138,15 +138,15 @@ COlePropertiesDialog(
 
 - 常规
 
-     此页包含所选的文档项表示的文件的系统信息。 从此页中，用户可以将选定的项转换为另一种类型。
+   此页包含所选的文档项表示的文件的系统信息。 从此页中，用户可以将选定的项转换为另一种类型。
 
 - 视图
 
-     此页包含用于显示项、 更改该图标，以及更改图像的缩放选项。
+   此页包含用于显示项、 更改该图标，以及更改图像的缩放选项。
 
 - 链接
 
-     此页包含用于更改链接的项的位置和更新链接的项的选项。 从此页中，用户可以断开选定项的链接。
+   此页包含用于更改链接的项的位置和更新链接的项的选项。 从此页中，用户可以断开选定项的链接。
 
 若要添加超出所提供的默认页，修改[m_psh](#m_psh)成员变量的构造函数在退出之前你`COlePropertiesDialog`-派生的类。 这是一个高级的实现`COlePropertiesDialog`构造函数。
 

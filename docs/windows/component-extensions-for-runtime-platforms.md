@@ -1,7 +1,7 @@
 ---
-title: 运行时平台的组件扩展 |Microsoft Docs
+title: 适用于.NET 和 UWP 组件扩展 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -19,28 +19,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0619585a0a5b59ffb6b8cfbe22e7930909369b23
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 45f83fbaaa867e2f58e329d8531259fa3751a521
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46386743"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328410"
 ---
-# <a name="component-extensions-for-runtime-platforms"></a>适用于运行时平台的组件扩展
+# <a name="component-extensions-for-net-and-uwp"></a>适用于.NET 和 UWP 组件扩展
 
-Visual C++ 提供多种语言扩展，可帮助你面向运行时平台编程。 通过使用 C + + /CX 中，您可以编写通用 Windows 平台应用程序和编译为本机代码的组件。 虽然可以通过对 Windows 运行时 COM 接口直接编程创建通用 Windows 平台应用，通过使用 C + + /CX 中，您可以使用构造函数、 异常和其他现代 c + + 编程惯例。 若要启用.NET 平台上的托管的执行环境中的 c + + 编程，可使用 C + + /cli CLI。
+C + + 标准允许编译器供应商提供语言的非标准扩展。 Microsoft 提供了扩展，可帮助你将本机 c + + 代码来代码.NET Framework 或通用 Windows 平台 (UWP) 上运行的连接。 .NET 扩展称为 C + + /cli CLI 和生成代码，它在.NET 中执行托管调用公共语言运行时 (CLR) 的执行环境。 UWP 扩展称为 C + + /cli CX 和它们生成本机代码。
+
+> [!NOTE]
+> 对于新应用程序，我们建议使用 C + + WinRT 而不是 C + + /cli CX。 C + + / WinRT 是新的标准 C + + 17 语言投影的 Windows 运行时 Api。 我们将继续支持 C + + /cli CX 和 WRL，但强烈建议新的应用程序使用 C + + WinRT。 有关详细信息，请参阅[C + + WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/index)。
 
 ### <a name="two-runtimes-one-set-of-extensions"></a>两个运行时，一组扩展
 
-C + + /cli CX 是子集 C + + /cli CLI。 扩展插件所共有的 C + + /CX 和 C + + /cli CLI，其语义取决您面向的公共语言运行时 (CLR) 或 Windows 运行时。 若要编译您的应用程序在 Windows 运行时上运行，请指定`/ZW`编译器选项。 要将其编译为在 CLR 上运行，请指定 `/clr` 编译器选项。 当使用 Visual Studio 创建项目时，将自动设置这些开关。
-
-有关如何在 c + + 中创建通用 Windows 平台应用的详细信息，请参阅[路线图的 Windows 运行时应用使用 c + +](https://msdn.microsoft.com/library/windows/apps/hh700360.aspx)。
-
 C + + /cli CLI 扩展了 ISO/ANSI c + + 标准，并且定义在 Ecma C + + /cli 标准 CLI。 有关详细信息，请参阅[.NET 编程使用 C + + /cli （Visual c + +）](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)。
+
+C + + /CX 扩展是一个子集的 C + + /cli CLI。 虽然扩展语法是在大多数情况下完全相同，但生成的代码取决于是否指定`/ZW`到目标 UWP，编译器选项或`/clr`到目标.NET 的选项。 当使用 Visual Studio 创建项目时，将自动设置这些开关。
 
 ## <a name="data-type-keywords"></a>数据类型关键字
 
-语言扩展包括*聚合关键字*，这类包含通过空白分隔的两个令牌的关键字。 标记单独使用时可能表示一种含义，一起使用时可能表示另一种含义。 例如，单词“ref”是一个普通的标识符，单词“class”是一个声明本机类的关键字。 但当两个单词组合到窗体**ref 类**，得到的聚合关键字声明名为的实体*运行时类*。
+语言扩展包括*聚合关键字*，其中包含通过空白分隔的两个令牌。 标记单独使用时可能表示一种含义，一起使用时可能表示另一种含义。 例如，单词“ref”是一个普通的标识符，单词“class”是一个声明本机类的关键字。 但当两个单词组合到窗体**ref 类**，得到的聚合关键字声明名为的实体*运行时类*。
 
 扩展还包括*上下文相关*关键字。 某个关键字被视为区分上下文，即表示其语义取决于包含它的语句类型及其在该语句中的位置。 例如，标记“property”既可以是标识符，也可以声明特殊类型的公共类成员。
 
@@ -53,7 +54,7 @@ C + + /cli CLI 扩展了 ISO/ANSI c + + 标准，并且定义在 Ecma C + + /cli
 |**接口类**<br /><br /> **接口结构**|否|声明接口。|[接口类](../windows/interface-class-cpp-component-extensions.md)|
 |**枚举类**<br /><br /> **enum 结构**|否|声明枚举。|[枚举类](../windows/enum-class-cpp-component-extensions.md)|
 |**属性**|是|声明属性。|[属性](../windows/property-cpp-component-extensions.md)|
-|**delegate**|是|声明委托。|[委托（C++ 组件扩展）](../windows/delegate-cpp-component-extensions.md)|
+|**delegate**|是|声明委托。|[委托 (C + + /cli 和 C + + /cli CX)](../windows/delegate-cpp-component-extensions.md)|
 |**event**|是|声明事件。|[event](../windows/event-cpp-component-extensions.md)|
 
 ## <a name="override-specifiers"></a>重写说明符
@@ -87,7 +88,7 @@ C++ 扩展中已添加下列关键字。
 |**gcnew**|否|分配垃圾回收堆上的类型。 而不是使用**新**并**删除**。|[ref new、 gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md)|
 |**新的 ref**|是|分配的 Windows 运行时类型。 而不是使用**新**并**删除**。|[ref new、 gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md)|
 |**initonly**|是|指示只能在声明时或在静态构造函数中初始化成员。|[initonly (C++/CLI)](../dotnet/initonly-cpp-cli.md)|
-|**文本**|是|创建文本变量。|[文本](../windows/literal-cpp-component-extensions.md)|
+|**名称**|是|创建文本变量。|[名称](../windows/literal-cpp-component-extensions.md)|
 |**nullptr**|否|指示图柄或指针不指向对象。|[nullptr](../windows/nullptr-cpp-component-extensions.md)|
 
 ## <a name="template-constructs"></a>模板构造

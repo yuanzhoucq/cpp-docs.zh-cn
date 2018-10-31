@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c8e2fc86d15472bd4ab63e472df99bb69393b386
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: ca9d1ea34aa8a2793f895a3c89f94994743570e5
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46060299"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082668"
 ---
 # <a name="data-access-in-visual-c"></a>Visual C++ 中的数据访问
 
@@ -52,13 +52,13 @@ Microsoft 基础类 (MFC) 库提供使用开放式数据库连接 (ODBC) 进行�
 [Azure 存储](/azure/storage/storage-introduction)是一种云存储解决方案，用于依赖于持久性、可用性和可扩展性来满足其客户需求的现代应用程序。 使用适用于 C++ 的 Azure 存储客户端库，从 C++ 连接到 Azure 存储。
 
 [ODBC 驱动程序 13.1 for SQL Server-Windows 发布](https://blogs.msdn.microsoft.com/sqlnativeclient/2016/08/01/announcing-the-odbc-driver-13-1-for-sql-server)<br/>
-最新的 ODBC 驱动程序为基于 C/C++ 的应用程序提供对 Microsoft SQL Server 2016 Microsoft Azure SQL 数据库的可靠数据访问。 提供始终加密功能，包括支持、 Azure Active Directory 和 AlwaysOn 可用性组。 此外，还可用于 MacOS 和 Linux。     
- 
+最新的 ODBC 驱动程序为基于 C/C++ 的应用程序提供对 Microsoft SQL Server 2016 Microsoft Azure SQL 数据库的可靠数据访问。 提供始终加密功能，包括支持、 Azure Active Directory 和 AlwaysOn 可用性组。 此外，还可用于 MacOS 和 Linux。
+
 [SQL Server 本机客户端](/sql/relational-databases/native-client/sql-server-native-client-programming)<br/>
 SQL Server Native Client 是可同时用于 OLE DB 和 ODBC 的独立数据访问应用程序编程接口 (API)，支持 SQL Server 2005 到 SQL Server 2014 的各个版本。 新的应用程序应使用适用于 SQL Server 的 ODBC 驱动程序 13.1。
 
 [Microsoft Azure C 和 c + + 开发人员中心](https://azure.microsoft.com/develop/cpp/)<br/>
-通过 Azure，用户可以使用喜欢的工具轻松生成更具灵活性、可扩展性和可靠性的 C++ 应用程序。    
+通过 Azure，用户可以使用喜欢的工具轻松生成更具灵活性、可扩展性和可靠性的 C++ 应用程序。
 
 [如何通过 c + + 使用 Blob 存储](https://docs.microsoft.com/azure/storage/storage-c-plus-plus-how-to-use-blobs)<br/>
 Azure Blob 存储是将非结构化数据作为对象/blob 存储在云中的服务。 Blob 存储可以存储任何类型的文本或二进制数据（如文档、媒体文件或应用程序安装程序）。 Blob 存储也称为对象存储。

@@ -1,13 +1,14 @@
 ---
 title: -Ox （启用最大速度优化） |Microsoft Docs
 ms.custom: ''
-ms.date: 09/25/2017
+ms.date: 10/18/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.ToolOptimization
-- /ox
+- /Ox
+- /Oxs
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e1da84c3a4ec481d3af2880a80f5923bf0c50cc
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f3f5a39201283567285b37a0901929022b688104
+ms.sourcegitcommit: 4cbde5d164d681204c4011dc95a921d75292f423
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46438075"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49459161"
 ---
 # <a name="ox-enable-most-speed-optimizations"></a>/Ox （启用最大速度优化）
 
@@ -33,7 +34,7 @@ ms.locfileid: "46438075"
 
 ## <a name="syntax"></a>语法
 
-> /Ox
+> **/Ox**
 
 ## <a name="remarks"></a>备注
 
@@ -59,7 +60,7 @@ ms.locfileid: "46438075"
 
 - [/Od（禁用（调试））](../../build/reference/od-disable-debug.md)
 
-可以取消的速度趋向偏差 **/Ox**编译器选项，如果指定 **/Oxs**，它结合 **/Ox**编译器选项与[/Os （优选小代码）](../../build/reference/os-ot-favor-small-code-favor-fast-code.md)。 组合的选项优选代码大小更小。
+可以取消的速度趋向偏差 **/Ox**编译器选项，如果指定 **/Oxs**，它结合 **/Ox**编译器选项与[/Os （优选小代码）](../../build/reference/os-ot-favor-small-code-favor-fast-code.md)。 组合的选项优选代码大小更小。  **/Oxs**选项是完全与指定相同 **/Ox** **/Os**的选项时的顺序显示。
 
 若要优化应用于所有可用文件级别的发布版本，我们建议您指定[/o2 （最大化速度）](../../build/reference/o1-o2-minimize-size-maximize-speed.md)而不是 **/Ox**，并[/o1 （最小化大小）](../../build/reference/o1-o2-minimize-size-maximize-speed.md)改为 **/Oxs**。 对于版本中的更多优化版本，还应考虑[/GL （全程序优化）](../../build/reference/gl-whole-program-optimization.md)编译器选项和[/LTCG （链接时间代码生成）](../../build/reference/ltcg-link-time-code-generation.md)链接器选项。
 

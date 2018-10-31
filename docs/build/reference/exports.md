@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62b49c20248ca4825bcf2c95b6c7adc956a39025
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: b650c2a20d18f3f638f924cce1e4b475f7e33a0d
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45714516"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49084056"
 ---
 # <a name="exports"></a>EXPORTS
 
@@ -67,7 +67,7 @@ EXPORTS
 
 可以使用\@*序号*指定一个数字，而不是函数名称，将进入 DLL 的导出表。 许多 Windows DLL 将导出序号以支持旧版代码。 通常使用采用 16 位 Windows 编码的序号，因为这有助于最大程度地减小 DLL 的大小。 除非 DLL 的客户端需要按序号导出函数以支持旧版，否则我们不建议你执行此操作。 由于 .LIB 文件将包含序号与函数之间的映射，因此你可以像通常在使用 DLL 的项目中那样使用函数名。
 
-通过使用可选**NONAME**关键字，可以只按序号导出并减小结果 DLL 中导出表的大小。 但是，如果你想要使用[GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212.aspx)上 DLL，您必须知道序号，因为名称将无效。
+通过使用可选**NONAME**关键字，可以只按序号导出并减小结果 DLL 中导出表的大小。 但是，如果你想要使用[GetProcAddress](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress)上 DLL，您必须知道序号，因为名称将无效。
 
 可选的关键字**私有**阻止*entryname*包括在由 LINK 生成的导入库中。 它不会影响同样是由 LINK 生成的映像中的导出。
 
@@ -82,11 +82,11 @@ EXPORTS
 
 1. [__Declspec （dllexport)](../../cpp/dllexport-dllimport.md)的源代码中的关键字
 
-2. .DEF 文件中的 `EXPORTS` 语句
+1. .DEF 文件中的 `EXPORTS` 语句
 
-3. [/Export](../../build/reference/export-exports-a-function.md) LINK 命令中的规范
+1. [/Export](../../build/reference/export-exports-a-function.md) LINK 命令中的规范
 
-4. 一个[注释](../../preprocessor/comment-c-cpp.md)指令中的源代码的窗体`#pragma comment(linker, "/export: definition ")`。 下面的示例演示一个 #pragma 注释指令之前函数声明中，其中`PlainFuncName`是未修饰的名称，和`_PlainFuncName@4`是该函数的修饰的名：
+1. 一个[注释](../../preprocessor/comment-c-cpp.md)指令中的源代码的窗体`#pragma comment(linker, "/export: definition ")`。 下面的示例演示一个 #pragma 注释指令之前函数声明中，其中`PlainFuncName`是未修饰的名称，和`_PlainFuncName@4`是该函数的修饰的名：
 
     ```cpp
     #pragma comment(linker, "/export:PlainFuncName=_PlainFuncName@4")

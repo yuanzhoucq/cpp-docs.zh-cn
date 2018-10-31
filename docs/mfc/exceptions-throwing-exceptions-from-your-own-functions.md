@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a6ef86f54442031b4383e6a0b8cc6f57e4e53d58
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a26bd11c2a37e3644333a95ed03d9182f7b32b87
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46418419"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50066105"
 ---
 # <a name="exceptions-throwing-exceptions-from-your-own-functions"></a>异常：从您自己的函数引发异常
 
@@ -33,19 +33,19 @@ ms.locfileid: "46418419"
 
 1. 使用 MFC 帮助程序函数之一，如 `AfxThrowMemoryException`。 这些函数引发适当类型的预分配异常对象。
 
-     在以下示例中，函数将尝试分配两个内存块，并在任一分配失败时引发异常：
+   在以下示例中，函数将尝试分配两个内存块，并在任一分配失败时引发异常：
 
-     [!code-cpp[NVC_MFCExceptions#17](../mfc/codesnippet/cpp/exceptions-throwing-exceptions-from-your-own-functions_1.cpp)]
+   [!code-cpp[NVC_MFCExceptions#17](../mfc/codesnippet/cpp/exceptions-throwing-exceptions-from-your-own-functions_1.cpp)]
 
-     如果第一个分配失败，您可以只引发内存异常。 如果第一个分配成功，但第二个分配失败，则必须在引发异常之前释放第一次分配的块。 如果两个分配都成功，您可以正常地继续，并在退出函数时释放这些块。
+   如果第一个分配失败，您可以只引发内存异常。 如果第一个分配成功，但第二个分配失败，则必须在引发异常之前释放第一次分配的块。 如果两个分配都成功，您可以正常地继续，并在退出函数时释放这些块。
 
      - 或 -
 
 1. 使用用户定义的异常指示问题情况。 您可以引发任何类型的项，甚至引发整个类作为您的异常。
 
-     以下示例尝试通过波形设备播放声音，并在失败时引发异常。
+   以下示例尝试通过波形设备播放声音，并在失败时引发异常。
 
-     [!code-cpp[NVC_MFCExceptions#18](../mfc/codesnippet/cpp/exceptions-throwing-exceptions-from-your-own-functions_2.cpp)]
+   [!code-cpp[NVC_MFCExceptions#18](../mfc/codesnippet/cpp/exceptions-throwing-exceptions-from-your-own-functions_2.cpp)]
 
 > [!NOTE]
 >  MFC 的默认异常处理仅适用于指向 `CException` 对象（和 `CException` 派生类的对象）的指针。 上面的例子将绕过 MFC 的异常机制。

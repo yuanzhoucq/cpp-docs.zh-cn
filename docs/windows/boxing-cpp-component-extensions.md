@@ -1,7 +1,7 @@
 ---
-title: 装箱 （c + + 组件扩展） |Microsoft Docs
+title: 装箱 (C + + /cli 和 C + + /cli CX) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -15,16 +15,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 92dc2032031fd0f3032db57b9eca8c723367da9e
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 566a29b31ea931970937cc97da02b90e409bf2dc
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44316713"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50072936"
 ---
-# <a name="boxing--c-component-extensions"></a>装箱（C++ 组件扩展）
+# <a name="boxing--ccli-and-ccx"></a>装箱 (C + + /cli 和 C + + /cli CX)
 
-Visual c + + 编译器可以将值类型转换为称为的过程中的对象*装箱*，并将对象转换为称为的过程中的值类型*取消装箱*。
+值类型转换到的对象称为*装箱*，并调用到值类型的对象转换*取消装箱*。
 
 ## <a name="all-runtimes"></a>所有运行时
 
@@ -51,7 +51,7 @@ value_variable = (value_type) object_variable;
 若要测试示例，创建`BlankApplication`项目中，替换`BlankPage::OnNavigatedTo()`方法，然后指定断点在右括号和对变量赋值`str1`。 当示例到达右括号时，检查`str1`。
 
 ```cpp
-void BlankPage::OnNavigatedTo(NavigationEventArgs^ e)  
+void BlankPage::OnNavigatedTo(NavigationEventArgs^ e)
 {
     using namespace Windows::Globalization::DateTimeFormatting;
 
@@ -86,7 +86,7 @@ void BlankPage::OnNavigatedTo(NavigationEventArgs^ e)
 
 ## <a name="common-language-runtime"></a>公共语言运行时
 
-Visual C++ 编译器现在将值类型装箱到 <xref:System.Object>。 这可能是因为存在将值类型转换为 <xref:System.Object> 的编译器定义的转换。
+值类型编译器装箱到<xref:System.Object>。 这可能是因为存在将值类型转换为 <xref:System.Object> 的编译器定义的转换。
 
 装箱和取消装箱使值类型能够被视为对象。 值类型（包括结构类型和内置类型，如 int）与 <xref:System.Object> 类型可相互转换。
 
@@ -174,7 +174,7 @@ int main() {
                 // Will call void func1(System::Object^);
 
    func2(v2);   // OK: Calls "static V2::operator System::Object^(V2 v2)"
-   func2((V2^)v2);   // Using explicit boxing: calls func2(System::ValueType^)  
+   func2((V2^)v2);   // Using explicit boxing: calls func2(System::ValueType^)
 }
 ```
 
@@ -195,9 +195,9 @@ in func1(V2^)
 
 in func2(System::ValueType^)
 
-in func2(System::ValueType^)  
+in func2(System::ValueType^)
 ```
 
 ## <a name="see-also"></a>请参阅
 
-[适用于运行时平台的组件扩展](../windows/component-extensions-for-runtime-platforms.md)
+[ .NET 和 UWP 的组件扩展](../windows/component-extensions-for-runtime-platforms.md)

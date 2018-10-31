@@ -21,19 +21,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 451cf4b404143ce8f9b94481dd27227f487874d0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d7f9c3eeda36c6894103c96f1031f6770daf0c71
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46381161"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204712"
 ---
 # <a name="mfc-activex-controls-licensing-an-activex-control"></a>MFC ActiveX 控件：许可 ActiveX 控件
 
 许可支持，ActiveX 控件的可选功能允许你控制能够使用或分发该控件。 (的许可问题的更多讨论，请参阅中的许可问题[升级现有 ActiveX 控件](../mfc/upgrading-an-existing-activex-control.md)。)
 
 >[!IMPORTANT]
-> ActiveX 是一项传统技术，不应使用新的开发。 本文将取代 ActiveX 的现代技术的详细信息，请参阅[ActiveX 控件](activex-controls.md)。
+> ActiveX 是一项传统技术，不应使用新的开发。 有关取代 ActiveX 的现代技术的详细信息，请参阅[ActiveX 控件](activex-controls.md)。
 
 本文讨论以下主题：
 
@@ -84,15 +84,15 @@ ActiveX 控件向导现在会生成一种 ActiveX 控件框架，包括基本授
 
 - [VerifyUserLicense](../mfc/reference/coleobjectfactory-class.md#verifyuserlicense)
 
-     验证控件，允许通过检查系统中存在控制许可证文件的设计时使用情况。 在处理过程由框架调用此函数`IClassFactory2::GetLicInfo`和`IClassFactory::CreateInstanceLic`。
+   验证控件，允许通过检查系统中存在控制许可证文件的设计时使用情况。 在处理过程由框架调用此函数`IClassFactory2::GetLicInfo`和`IClassFactory::CreateInstanceLic`。
 
 - [GetLicenseKey](../mfc/reference/coleobjectfactory-class.md#getlicensekey)
 
-     从控件 DLL 请求的唯一键。 此密钥是嵌入在容器应用程序中，与结合使用更高版本， `VerifyLicenseKey`，以创建控件的实例。 在处理过程由框架调用此函数`IClassFactory2::RequestLicKey`。
+   从控件 DLL 请求的唯一键。 此密钥是嵌入在容器应用程序中，与结合使用更高版本， `VerifyLicenseKey`，以创建控件的实例。 在处理过程由框架调用此函数`IClassFactory2::RequestLicKey`。
 
 - [VerifyLicenseKey](../mfc/reference/coleobjectfactory-class.md#verifylicensekey)
 
-     验证嵌入的键和控件的唯一键相同。 这样，要创建的供其使用的控件实例的容器。 在处理过程由框架调用此函数`IClassFactory2::CreateInstanceLic`，可以重写为自定义的验证的许可证密钥。 默认实现将执行字符串比较。 有关详细信息，请参阅[自定义 ActiveX 控件的许可](#_core_customizing_the_licensing_of_an_activex_control)，这篇文章中更高版本。
+   验证嵌入的键和控件的唯一键相同。 这样，要创建的供其使用的控件实例的容器。 在处理过程由框架调用此函数`IClassFactory2::CreateInstanceLic`，可以重写为自定义的验证的许可证密钥。 默认实现将执行字符串比较。 有关详细信息，请参阅[自定义 ActiveX 控件的许可](#_core_customizing_the_licensing_of_an_activex_control)，这篇文章中更高版本。
 
 ###  <a name="_core_header_file_modifications"></a> 标头文件修改
 

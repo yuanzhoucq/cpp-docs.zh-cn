@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 575ba3786e6639e5d6801ec9555c4a85f9732b20
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 13b71838bb4db152fb76fa1115a426e2711422ea
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46415728"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890577"
 ---
 # <a name="ccmdtarget-class"></a>CCmdTarget 类
 
@@ -223,7 +223,7 @@ void EnableTypeLib();
 
 ### <a name="remarks"></a>备注
 
-调用此成员函数的构造函数中你`CCmdTarget`-如果提供了类型信息派生的对象。 有关详细信息，请参阅知识库文章 Q185720，"如何： 从 MFC 自动化服务器提供类型信息。" 知识库文章位于[ http://support.microsoft.com ](http://support.microsoft.com/)。
+调用此成员函数的构造函数中你`CCmdTarget`-如果提供了类型信息派生的对象。
 
 ##  <a name="endwaitcursor"></a>  CCmdTarget::EndWaitCursor
 
@@ -303,8 +303,6 @@ virtual BOOL GetDispatchIID(IID* pIID);
 ### <a name="remarks"></a>备注
 
 派生的类应重写此成员函数 (如果未重写，`GetDispatchIID`返回 FALSE)。 请参阅[COleControl](../../mfc/reference/colecontrol-class.md)。
-
-有关详细信息，请参阅知识库文章 Q185720，"如何： 从 MFC 自动化服务器提供类型信息。" 知识库文章位于[ http://support.microsoft.com ](http://support.microsoft.com/)。
 
 ##  <a name="getidispatch"></a>  CCmdTarget::GetIDispatch
 
@@ -407,7 +405,7 @@ virtual CTypeLibCache* GetTypeLibCache();
 
 ### <a name="return-value"></a>返回值
 
-一个指向`CTypeLibCache`对象。
+指向 `CTypeLibCache` 对象的指针。
 
 ### <a name="remarks"></a>备注
 

@@ -113,12 +113,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f64fce16201a15936cb97b1961827865c7b917b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c9f17eea48e01d12df103382483b352e5dce46b7
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46446343"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080554"
 ---
 # <a name="canimationcontroller-class"></a>CAnimationController 类
 
@@ -334,7 +334,6 @@ void CleanUpGroup(CAnimationGroup* pGroup);
 CKeyFrame* CreateKeyframe(
     UINT32 nGroupID,
     CBaseTransition* pTransition);
-
 
 CKeyFrame* CreateKeyframe(
     UINT32 nGroupID,
@@ -882,7 +881,7 @@ virtual BOOL OnHasPriorityCancel(
 
 ### <a name="remarks"></a>备注
 
-如果你使用 CAnimationController::EnablePriorityComparisonHandler 启用优先级比较事件，并指定 UI_ANIMATION_PHT_CANCEL，则会调用此方法。 它可以在派生类中重写以便执行特定于应用程序的操作。 阅读 Windows 动画 API 文档，了解有关冲突管理的详细信息 (https://msdn.microsoft.com/library/dd371759(VS.85).aspx)。
+如果你使用 CAnimationController::EnablePriorityComparisonHandler 启用优先级比较事件，并指定 UI_ANIMATION_PHT_CANCEL，则会调用此方法。 它可以在派生类中重写以便执行特定于应用程序的操作。 有关详细信息的阅读 Windows 动画 API 文档[冲突管理](https://msdn.microsoft.com/library/dd371759)。
 
 ##  <a name="onhasprioritycompress"></a>  CAnimationController::OnHasPriorityCompress
 
@@ -912,7 +911,7 @@ virtual BOOL OnHasPriorityCompress(
 
 ### <a name="remarks"></a>备注
 
-如果你使用 CAnimationController::EnablePriorityComparisonHandler 启用优先级比较事件，并指定 UI_ANIMATION_PHT_COMPRESS，则会调用此方法。 它可以在派生类中重写以便执行特定于应用程序的操作。 阅读 Windows 动画 API 文档，了解有关冲突管理的详细信息 (https://msdn.microsoft.com/library/dd371759(VS.85).aspx)。
+如果你使用 CAnimationController::EnablePriorityComparisonHandler 启用优先级比较事件，并指定 UI_ANIMATION_PHT_COMPRESS，则会调用此方法。 它可以在派生类中重写以便执行特定于应用程序的操作。 有关详细信息的阅读 Windows 动画 API 文档[冲突管理](https://msdn.microsoft.com/library/dd371759)。
 
 ##  <a name="onhaspriorityconclude"></a>  CAnimationController::OnHasPriorityConclude
 
@@ -942,7 +941,7 @@ virtual BOOL OnHasPriorityConclude(
 
 ### <a name="remarks"></a>备注
 
-如果你使用 CAnimationController::EnablePriorityComparisonHandler 启用优先级比较事件，并指定 UI_ANIMATION_PHT_CONCLUDE，则会调用此方法。 它可以在派生类中重写以便执行特定于应用程序的操作。 阅读 Windows 动画 API 文档，了解有关冲突管理的详细信息 (https://msdn.microsoft.com/library/dd371759(VS.85).aspx)。
+如果你使用 CAnimationController::EnablePriorityComparisonHandler 启用优先级比较事件，并指定 UI_ANIMATION_PHT_CONCLUDE，则会调用此方法。 它可以在派生类中重写以便执行特定于应用程序的操作。 有关详细信息的阅读 Windows 动画 API 文档[冲突管理](https://msdn.microsoft.com/library/dd371759)。
 
 ##  <a name="onhasprioritytrim"></a>  CAnimationController::OnHasPriorityTrim
 
@@ -972,7 +971,7 @@ virtual BOOL OnHasPriorityTrim(
 
 ### <a name="remarks"></a>备注
 
-如果你使用 CAnimationController::EnablePriorityComparisonHandler 启用优先级比较事件，并指定 UI_ANIMATION_PHT_TRIM，则会调用此方法。 它可以在派生类中重写以便执行特定于应用程序的操作。 阅读 Windows 动画 API 文档，了解有关冲突管理的详细信息 (https://msdn.microsoft.com/library/dd371759(VS.85).aspx)。
+如果你使用 CAnimationController::EnablePriorityComparisonHandler 启用优先级比较事件，并指定 UI_ANIMATION_PHT_TRIM，则会调用此方法。 它可以在派生类中重写以便执行特定于应用程序的操作。 有关详细信息的阅读 Windows 动画 API 文档[冲突管理](https://msdn.microsoft.com/library/dd371759)。
 
 ##  <a name="onstoryboardstatuschanged"></a>  CAnimationController::OnStoryboardStatusChanged
 

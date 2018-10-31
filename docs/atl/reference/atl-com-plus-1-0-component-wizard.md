@@ -1,7 +1,7 @@
 ---
 title: ATL COM + 1.0 组件向导 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/03/2018
 ms.technology:
 - cpp-atl
 ms.topic: reference
@@ -17,18 +17,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dcf97c08680583dde686c68fb7e26f323e22716e
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 102ec4f85c8915cf6afb70f03d470cec4e9e807f
+ms.sourcegitcommit: d1527eb2d50156bf923f2a32ec3af9efc7fc4304
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45717895"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48250401"
 ---
 # <a name="atl-com-10-component-wizard"></a>ATL COM+ 1.0 组件向导
 
 使用此向导将对象添加到项目中，这些支持 COM + 1.0 服务，包括事务。
 
 您可以指定对象是否支持双重接口和自动化。 您还可以指示对错误的信息接口、 增强的对象控件、 事务和异步消息队列的支持。
+
+> [!WARNING]
+> 在 Visual Studio 2017 版本 15.9 此代码向导已弃用，将 Visual Studio 的未来版本中删除。 很少使用此向导。 ATL 和 MFC 的常规支持不受此向导中删除。 如果你想要共享您对此不推荐使用的反馈，请先完成[这项调查](https://www.surveymonkey.com/r/QDWKKCN)。 你的反馈对我们很重要。
 
 ## <a name="remarks"></a>备注
 

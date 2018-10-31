@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6fb0cfa6d3657c0cce01e91c94cb23bce8886a43
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1eea2e3158d980c77863640d0342f8b074bf7849
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46403137"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080242"
 ---
 # <a name="mfc-classes"></a>MFC 类
 
@@ -34,7 +34,7 @@ ms.locfileid: "46403137"
 
 ## <a name="in-this-section"></a>本节内容
 
-[Cacceleratedeceleratetransition 类类](../../mfc/reference/cacceleratedeceleratetransition-class1.md)<br/>
+[Cacceleratedeceleratetransition 类类](../../mfc/reference/cacceleratedeceleratetransition-class.md)<br/>
 实现加速-减速转换。
 
 [CAnimateCtrl 类](../../mfc/reference/canimatectrl-class.md)<br/>
@@ -137,7 +137,7 @@ ms.locfileid: "46403137"
 提供 Windows 检查表框功能。
 
 [CClientDC 类](../../mfc/reference/cclientdc-class.md)<br/>
-处理 Windows 函数调用[GetDC](/windows/desktop/api/winuser/nf-winuser-getdc)在构造时并[ReleaseDC](/windows/desktop/api/winuser/nf-winuser-releasedc)在析构时。
+处理 Windows 函数 [GetDC](/windows/desktop/api/winuser/nf-winuser-getdc) （在构造时）和 [ReleaseDC](/windows/desktop/api/winuser/nf-winuser-releasedc) （在析构时）的调用。
 
 [CCmdTarget 类](../../mfc/reference/ccmdtarget-class.md)<br/>
 用于 Microsoft 基础类库消息映射体系结构的基类。
@@ -863,7 +863,7 @@ Microsoft 基础类文件类的基类。
 表示通常在浮动工具条周围出现的半高框架窗口。
 
 [CMonikerFile 类](../../mfc/reference/cmonikerfile-class.md)<br/>
-表示数据的流 ([IStream](/windows/desktop/api/objidl/nn-objidl-istream)) 由命名[IMoniker](/windows/desktop/api/objidl/nn-objidl-imoniker)。
+表示由[IMoniker](/windows/desktop/api/objidl/nn-objidl-istream)命名的数据流 ( [IStream](/windows/desktop/api/objidl/nn-objidl-imoniker))。
 
 [CMonthCalCtrl 类](../../mfc/reference/cmonthcalctrl-class.md)<br/>
 封装月历控件的功能。
@@ -1022,7 +1022,7 @@ OLE 服务器文档的基类。
 用于 OLE“编辑链接”对话框的特例，当你只需要更新文档中现有的链接对象或嵌入对象时才可使用。
 
 [COleVariant 类](../../mfc/reference/colevariant-class.md)<br/>
-封装[变体](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant)数据类型。
+封装 [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) 数据类型。
 
 [CPagerCtrl 类](../../mfc/reference/cpagerctrl-class.md)<br/>
 `CPagerCtrl` 类用于包装 Windows 页导航控件，可以滚动此控件以查看所包含的不适合包含窗口的窗口。
@@ -1109,7 +1109,7 @@ MFC 实现的停靠模型的基本组件。 此类对象存储指向两个停靠
 显示控件中数据库记录的视图。
 
 [CRect 类](../../atl-mfc-shared/reference/crect-class.md)<br/>
-类似于 Windows [RECT 结构](https://www.microsoftonedoc.com/#/organizations/e6f6a65cf14f462597b64ac058dbe1d0/projects/3fedad16-eaf1-41a6-8f96-0c1949c68f32/containers/a3daf831-1c5f-4bbe-964d-503870caf874/tocpaths/18113766-3975-4369-bc07-92e34cba712e/locales/en-us)。
+类似于 Windows [RECT 结构](rect-structure.md)。
 
 [CRectTracker 类](../../mfc/reference/crecttracker-class.md)<br/>
 使项目以不同方式显示、移动和调整大小。
@@ -1175,7 +1175,7 @@ MFC 实现的停靠模型的基本组件。 此类对象存储指向两个停靠
 封装其幅度由动画变量的初始速度决定的正弦速度转换。
 
 [CSize 类](../../atl-mfc-shared/reference/csize-class.md)<br/>
-类似于 Windows[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)结构，它实现相对坐标或位置。
+类似于实现相对坐标或位置的 Windows [SIZE](https://msdn.microsoft.com/library/windows/desktop/dd145106) 结构。
 
 [CSliderCtrl 类](../../mfc/reference/csliderctrl-class.md)<br/>
 提供 Windows 公共滑块控件的功能。
@@ -1316,6 +1316,4 @@ MFC 实现的停靠模型的基本组件。 此类对象存储指向两个停靠
 
 [MFC 桌面应用程序](../../mfc/mfc-desktop-applications.md)<br/>
 包含与构成 MFC 库的类、全局函数、全局变量和宏相关的主题的链接。
-
-
 

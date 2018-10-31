@@ -163,12 +163,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46e3926f31ec7d12da539d868cacb37e18134e96
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 999e91f1f437077b90b2c8a0ea9f7ac8a4603080
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46109675"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054666"
 ---
 # <a name="cwindow-class"></a>CWindow 类
 
@@ -382,7 +382,7 @@ class CWindow
 
 [CDialogImpl](../../atl/reference/cdialogimpl-class.md)允许您创建一个模式或无模式对话框。
 
-有关 windows 的详细信息，请参阅[Windows](https://msdn.microsoft.com/library/windows/desktop/ms632595)和 Windows SDK 中的后续主题。 有关使用 ATL 中的窗口的详细信息，请参阅文章[ATL 窗口类](../../atl/atl-window-classes.md)。
+有关 windows 的详细信息，请参阅[Windows](/windows/desktop/winmsg/windows)和 Windows SDK 中的后续主题。 有关使用 ATL 中的窗口的详细信息，请参阅文章[ATL 窗口类](../../atl/atl-window-classes.md)。
 
 ## <a name="requirements"></a>要求
 
@@ -499,7 +499,7 @@ BOOL CheckDlgButton(int nIDButton, UINT nCheck) throw();
 检查指定的单选按钮。
 
 ```
-BOOL CheckRadioButton(  
+BOOL CheckRadioButton(
     int nIDFirstButton,
     int nIDLastButton,
     int nIDCheckButton) throw();
@@ -667,7 +667,7 @@ CWindow(HWND hWnd = NULL) throw();
 更新指定窗口的指定的窗口的多个位置结构。
 
 ```
-HDWP DeferWindowPos(  
+HDWP DeferWindowPos(
     HDWP hWinPosInfo,
     HWND hWndInsertAfter,
     int x,
@@ -720,7 +720,7 @@ HWND Detach() throw();
 用指定的路径或文件的名称匹配的所有文件的名称填充列表框。
 
 ```
-int DlgDirList(  
+int DlgDirList(
     LPTSTR lpPathSpec,
     int nIDListBox,
     int nIDStaticPath,
@@ -736,7 +736,7 @@ int DlgDirList(
 用指定的路径或文件的名称匹配的所有文件的名称填充组合框。
 
 ```
-int DlgDirListComboBox(  
+int DlgDirListComboBox(
     LPTSTR lpPathSpec,
     int nIDComboBox,
     int nIDStaticPath,
@@ -752,7 +752,7 @@ int DlgDirListComboBox(
 从列表框检索当前所选内容。
 
 ```
-BOOL DlgDirSelect(  
+BOOL DlgDirSelect(
     LPTSTR lpString,
     int nCount,
     int nIDListBox) throw();
@@ -767,7 +767,7 @@ BOOL DlgDirSelect(
 从组合框检索当前所选内容。
 
 ```
-BOOL DlgDirSelectComboBox(  
+BOOL DlgDirSelectComboBox(
     LPTSTR lpString,
     int nCount,
     int nIDComboBox) throw();
@@ -927,7 +927,7 @@ HWND GetDescendantWindow(int nID) const throw();
 调用此函数可获得到复合控件或控件宿主对话框承载的 ActiveX 控件的接口的指针。
 
 ```
-HRESULT GetDlgControl(  
+HRESULT GetDlgControl(
     int nID,
     REFIID iid,
     void** ppCtrl) throw();
@@ -969,7 +969,7 @@ int GetDlgCtrlID() const throw();
 检索指向 ATL 控件承载容器的接口的指针。
 
 ```
-HRESULT GetDlgHost(  
+HRESULT GetDlgHost(
     int nID,
     REFIID iid,
     void** ppHost) throw();
@@ -1011,7 +1011,7 @@ HWND GetDlgItem(int nID) const throw();
 将转换为整数的控件的文本。
 
 ```
-UINT GetDlgItemInt(  
+UINT GetDlgItemInt(
     int nID,
     BOOL* lpTrans = NULL,
     BOOL bSigned = TRUE) const throw();
@@ -1026,12 +1026,12 @@ UINT GetDlgItemInt(
 检索控件的文本。
 
 ```
-UINT GetDlgItemText(  
+UINT GetDlgItemText(
     int nID,
     LPTSTR lpStr,
     int nMaxCount) const throw();
 
-BOOL GetDlgItemText(  
+BOOL GetDlgItemText(
     int nID,
     BSTR& bstrText) const throw();
 ```
@@ -1202,7 +1202,7 @@ int GetScrollPos(int nBar) const throw();
 检索滚动条范围。
 
 ```
-BOOL GetScrollRange(  
+BOOL GetScrollRange(
     int nBar,
     LPINT lpMinPos,
     LPINT lpMaxPos) const throw();
@@ -1543,7 +1543,7 @@ BOOL HideCaret() throw();
 突出显示，或者从顶级菜单项移除突出显示。
 
 ```
-BOOL HiliteMenuItem(  
+BOOL HiliteMenuItem(
     HMENU hMenu,
     UINT uHiliteItem,
     UINT uHilite) throw();
@@ -1785,12 +1785,12 @@ HWND m_hWnd throw() throw();
 将一组点从窗口的坐标空间转换到另一个窗口的坐标空间。
 
 ```
-int MapWindowPoints(  
+int MapWindowPoints(
     HWND hWndTo,
     LPPOINT lpPoint,
     UINT nCount) const throw();
 
-int MapWindowPoints(  
+int MapWindowPoints(
     HWND hWndTo,
     LPRECT lpRect) const throw();
 ```
@@ -1806,7 +1806,7 @@ int MapWindowPoints(
 显示消息框。
 
 ```
-int MessageBox(  
+int MessageBox(
     LPCTSTR lpszText,
     LPCTSTR lpszCaption = NULL,
     UINT nType = MB_OK) throw();
@@ -1825,7 +1825,7 @@ int MessageBox(
 修改的窗口样式`CWindow`对象。
 
 ```
-BOOL ModifyStyle(  
+BOOL ModifyStyle(
     DWORD dwRemove,
     DWORD dwAdd,
     UINT nFlags = 0) throw();
@@ -1871,7 +1871,7 @@ BOOL ModifyStyle(
 修改的扩展的窗口样式`CWindow`对象。
 
 ```
-BOOL ModifyStyleEx(  
+BOOL ModifyStyleEx(
     DWORD dwRemove,
     DWORD dwAdd,
     UINT nFlags = 0) throw();
@@ -1917,14 +1917,14 @@ BOOL ModifyStyleEx(
 更改窗口的大小和位置。
 
 ```
-BOOL MoveWindow(  
+BOOL MoveWindow(
     int x,
     int y,
     int nWidth,
     int nHeight,
     BOOL bRepaint = TRUE) throw();
 
-BOOL MoveWindow(  
+BOOL MoveWindow(
     LPCRECT lpRect,
     BOOL bRepaint = TRUE) throw();
 ```
@@ -1980,7 +1980,7 @@ CWindow& operator= (HWND hWnd) throw();
 将消息放在与创建窗口的线程关联的消息队列中。
 
 ```
-BOOL PostMessage(  
+BOOL PostMessage(
     UINT message,
     WPARAM wParam = 0,
     LPARAM lParam = 0) throw();
@@ -2077,7 +2077,7 @@ static RECT rcDefault;
 更新指定的矩形或区域的工作区中。
 
 ```
-BOOL RedrawWindow(  
+BOOL RedrawWindow(
     LPCRECT lpRectUpdate = NULL,
     HRGN hRgnUpdate = NULL,
     UINT flags = RDW_INVALIDATE | RDW_UPDATENOW | RDW_ERASE);
@@ -2114,7 +2114,7 @@ int ReleaseDC(HDC hDC);
 调整为指定的客户端区域大小的窗口的大小。
 
 ```
-BOOL ResizeClient(  
+BOOL ResizeClient(
     int nWidth,
     int nHeight,
     BOOL bRedraw = FALSE) throw();
@@ -2151,7 +2151,7 @@ BOOL ScreenToClient(LPRECT lpRect) const throw();
 滚动指定的客户端区域。
 
 ```
-BOOL ScrollWindow(  
+BOOL ScrollWindow(
     int xAmount,
     int yAmount,
     LPCRECT lpRect = NULL,
@@ -2167,7 +2167,7 @@ BOOL ScrollWindow(
 滚动具有附加功能的指定的客户端区域。
 
 ```
-int ScrollWindowEx(  
+int ScrollWindowEx(
     int dx,
     int dy,
     LPCRECT lpRectScroll,
@@ -2186,7 +2186,7 @@ int ScrollWindowEx(
 向控件发送一条消息。
 
 ```
-LRESULT SendDlgItemMessage(  
+LRESULT SendDlgItemMessage(
     int nID,
     UINT message,
     WPARAM wParam = 0,
@@ -2202,12 +2202,12 @@ LRESULT SendDlgItemMessage(
 向窗口发送一条消息且不返回之前的窗口过程处理完该消息。
 
 ```
-LRESULT SendMessage(  
+LRESULT SendMessage(
     UINT message,
     WPARAM wParam = 0,
     LPARAM lParam = 0) throw();
 
-static LRESULT SendMessage(  
+static LRESULT SendMessage(
     HWND hWnd,
     UINT message,
     WPARAM wParam,
@@ -2227,7 +2227,7 @@ static LRESULT SendMessage(
 将指定的消息发送到的所有直接子级`CWindow`对象。
 
 ```
-void SendMessageToDescendants(  
+void SendMessageToDescendants(
     UINT message,
     WPARAM wParam = 0,
     LPARAM lParam = 0,
@@ -2257,7 +2257,7 @@ void SendMessageToDescendants(
 向窗口发送一条消息。
 
 ```
-BOOL SendNotifyMessage(  
+BOOL SendNotifyMessage(
     UINT message,
     WPARAM wParam = 0,
     LPARAM lParam = 0) throw();
@@ -2331,7 +2331,7 @@ int SetDlgCtrlID(int nID) throw();
 控件的文本更改为一个整数值的字符串表示形式。
 
 ```
-BOOL SetDlgItemInt(  
+BOOL SetDlgItemInt(
     int nID,
     UINT nValue,
     BOOL bSigned = TRUE) throw();
@@ -2483,7 +2483,7 @@ void SetRedraw(BOOL bRedraw = TRUE) throw();
 设置滚动条的参数。
 
 ```
-int SetScrollInfo(  
+int SetScrollInfo(
     int nBar,
     LPSCROLLINFO lpScrollInfo,
     BOOL bRedraw = TRUE) throw();
@@ -2498,7 +2498,7 @@ int SetScrollInfo(
 更改滚动框的位置。
 
 ```
-int SetScrollPos(  
+int SetScrollPos(
     int nBar,
     int nPos,
     BOOL bRedraw = TRUE) throw();
@@ -2513,7 +2513,7 @@ int SetScrollPos(
 更改滚动条范围。
 
 ```
-BOOL SetScrollRange(  
+BOOL SetScrollRange(
     int nBar,
     int nMinPos,
     int nMaxPos,
@@ -2529,7 +2529,7 @@ BOOL SetScrollRange(
 创建计时器事件。
 
 ```
-UINT SetTimer(  
+UINT SetTimer(
     UINT nIDEvent,
     UINT nElapse,
     void (CALLBACK* lpfnTimer)(HWND, UINT, UINT, DWORD) = NULL) throw();
@@ -2597,7 +2597,7 @@ BOOL SetWindowPlacement(const WINDOWPLACEMENT FAR* lpwndpl);
 设置大小、 位置和 Z 顺序。
 
 ```
-BOOL SetWindowPos(  
+BOOL SetWindowPos(
     HWND hWndInsertAfter,
     int x,
     int y,
@@ -2605,7 +2605,7 @@ BOOL SetWindowPos(
     int cy,
     UINT nFlags) throw();
 
-BOOL SetWindowPos(  
+BOOL SetWindowPos(
     HWND hWndInsertAfter,
     LPCRECT lpRect,
     UINT nFlags) throw();
@@ -2770,7 +2770,7 @@ BOOL ValidateRgn(HRGN hRgn) throw();
 启动 Windows 帮助。
 
 ```
-BOOL WinHelp(  
+BOOL WinHelp(
     LPCTSTR lpszHelp,
     UINT nCmd = HELP_CONTEXT,
     DWORD dwData = 0) throw();

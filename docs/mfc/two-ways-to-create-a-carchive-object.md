@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10b87f57daaf510252fe6f07dc3ba2d9d0a8650d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 630cdd1614aa19ec3a5a654d7dc4bfe7336ce027
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46409332"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080580"
 ---
 # <a name="two-ways-to-create-a-carchive-object"></a>创建 CArchive 对象的两种方法
 
@@ -66,9 +66,9 @@ ms.locfileid: "46409332"
 
 1. 传递`CFile`对象的构造函数与`CArchive`，如以下示例所示：
 
-     [!code-cpp[NVC_MFCSerialization#5](../mfc/codesnippet/cpp/two-ways-to-create-a-carchive-object_1.cpp)]
+   [!code-cpp[NVC_MFCSerialization#5](../mfc/codesnippet/cpp/two-ways-to-create-a-carchive-object_1.cpp)]
 
-     第二个参数`CArchive`构造函数是一个枚举的值，指定是否将用于从文件存储或加载数据或使用存档。 `Serialize`函数的对象通过调用检查此状态`IsStoring`存档对象函数。
+   第二个参数`CArchive`构造函数是一个枚举的值，指定是否将用于从文件存储或加载数据或使用存档。 `Serialize`函数的对象通过调用检查此状态`IsStoring`存档对象函数。
 
 完成后，存储或加载数据传入或传出`CArchive`对象，请关闭它。 尽管`CArchive`(和`CFile`) 存档 （和文件），会自动关闭对象，它是很好的做法显式执行操作，因为它可从错误中的恢复更轻松。 有关错误处理的详细信息，请参阅文章[异常： 捕捉和删除异常](../mfc/exceptions-catching-and-deleting-exceptions.md)。
 
@@ -76,7 +76,7 @@ ms.locfileid: "46409332"
 
 1. 下面的示例演示如何关闭`CArchive`对象：
 
-     [!code-cpp[NVC_MFCSerialization#6](../mfc/codesnippet/cpp/two-ways-to-create-a-carchive-object_2.cpp)]
+   [!code-cpp[NVC_MFCSerialization#6](../mfc/codesnippet/cpp/two-ways-to-create-a-carchive-object_2.cpp)]
 
 ## <a name="see-also"></a>请参阅
 

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 038c3475a6041dfb719bb2270a87ac2898f8b958
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 8eb494d3a8ba2e2569f68dbfd0164c7bf6a9ae29
+ms.sourcegitcommit: 072e12d6b7a242765bdcc9afe4a14a284ade01fc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46036748"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50136219"
 ---
 # <a name="compiler-error-c2872"></a>编译器错误 C2872
 
@@ -31,7 +31,11 @@ ms.locfileid: "46036748"
 
 如果标头文件包含，则会发生 C2872 [using 指令](../../cpp/namespaces-cpp.md#using_directives)，并且后续的标头文件包括，其中包含在中指定的命名空间中也是一种`using`指令。 指定`using`指令仅后所有标头文件用指定`#include`。
 
-有关 C2872 详细信息，请参阅知识库文章[PRB： 编译器错误时使用 #import Visual c + +.NET 中的 XML](http://support.microsoft.com/kb/316317)和["错误 C2872: 平台： 不明确的符号"使用时，错误消息在 Visual Studio 2013 Windows::Foundation::Metadata 命名空间](https://support.microsoft.com/kb/2890859)。
+C2872 可以导致在 Visual Studio 2013 之间的冲突`Windows::Foundation::Metadata::Platform`枚举类型，而 C + + /cli CX 定义`Platform`命名空间。 若要解决此问题，请执行以下步骤：
+
+- 从项目文件中删除的"using 命名空间 Windows::Foundation::Metadata"子句。
+
+- 指定包含此命名空间中任何类型的完全限定的名称。
 
 ## <a name="example"></a>示例
 

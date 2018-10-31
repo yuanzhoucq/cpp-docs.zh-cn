@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7a6f4f014d609e8b650951d459c23b07fd4a006
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 9fdd5bcf0bf3ac58cf056543b9dbe3c55b6fe1bd
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46085441"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50073236"
 ---
 # <a name="ccomobject-class"></a>CComObject 类
 
@@ -120,7 +120,7 @@ CComObject();
 
 ### <a name="remarks"></a>备注
 
-释放所有已分配的资源，调用[FinalRelease](ccomobjectrootex-class.md#finalrelease)，并减少模块锁计数。  
+释放所有已分配的资源，调用[FinalRelease](ccomobjectrootex-class.md#finalrelease)，并减少模块锁计数。
 
 ##  <a name="createinstance"></a>  CComObject::CreateInstance
 

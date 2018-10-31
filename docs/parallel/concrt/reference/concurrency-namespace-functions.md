@@ -41,12 +41,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e07c5b985552fcf30b2acb18030ab3288efb9be
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b89c1a3057e9753b99aaac837c903b6fd5f6d3ea
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46428143"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163343"
 ---
 # <a name="concurrency-namespace-functions"></a>并发命名空间函数
 
@@ -118,7 +118,7 @@ bool asend(
 
 ### <a name="return-value"></a>返回值
 
-`true` 如果消息已接受该方法返回时之前,`false`否则为。
+**true**接受该消息之前的方法返回时，如果**false**否则为。
 
 ### <a name="remarks"></a>备注
 
@@ -424,7 +424,7 @@ bool __cdecl is_current_task_group_canceling();
 
 ### <a name="return-value"></a>返回值
 
-`true` 如果要取消当前正在执行的任务组，`false`否则为。
+**true**取消当前正在执行的任务组，如果**false**否则为。
 
 ### <a name="remarks"></a>备注
 
@@ -687,7 +687,7 @@ C + + 标准库兼容的内存分配器的类型。
 C + + 标准库兼容的内存分配器的实例。
 
 *_Func*<br/>
-用户定义的谓词函数对象，定义排序中连续元素要满足的比较条件。 二元谓词采用两个参数，并且在满足时返回 `true`，未满足时返回 `false`。 该比较器函数必须对序列中的元素对进行严格弱排序。
+用户定义的谓词函数对象，定义排序中连续元素要满足的比较条件。 二元谓词采用两个参数并在条件满足时返回 **true** ，不满足时返回 **false**。 该比较器函数必须对序列中的元素对进行严格弱排序。
 
 *_Chunk_size*<br/>
 最小大小的区块将拆分为两个区块用于并行执行。
@@ -700,7 +700,7 @@ C + + 标准库兼容的内存分配器的实例。
 
 如果未提供的分配器类型或实例，c + + 标准库内存分配器`std::allocator<T>`用于分配的缓冲区。
 
-算法将输入范围分为两个区块，然后将每个区块分成两个以并行方式执行的子区块。 可选参数 `_Chunk_size` 可用于向算法指示它应按顺序处理区块的大小 <  `_Chunk_size`。
+算法将输入范围分为两个区块，然后将每个区块分成两个以并行方式执行的子区块。 可选自变量 `_Chunk_size` 可用于向算法指示它应按顺序处理区块的大小 < `_Chunk_size`。
 
 ##  <a name="parallel_for"></a>  parallel_for
 
@@ -783,7 +783,7 @@ void parallel_for(
 
 ##  <a name="parallel_for_each"></a>  parallel_for_each
 
-`parallel_for_each` 以并行方式将指定函数应用于某个范围内的每个元素。 除对元素并行执行迭代以及未指定迭代的顺序外，它在语义上等效于 `std` 命名空间中的 `for_each` 函数。 实际参数 `_Func` 必须支持窗体 `operator()(T)` 的函数调用运算符，其中形式参数 `T` 是正在被循环访问的容器的项类型。
+`parallel_for_each` 以并行方式将指定函数应用于某个范围内的每个元素。 除对元素并行执行迭代以及未指定迭代的顺序外，它在语义上等效于 `std` 命名空间中的 `for_each` 函数。 实际自变量 `_Func` 必须支持窗体 `operator()(T)` 的函数调用运算符，其中形式参数 `T` 是正在被循环访问的容器的项类型。
 
 ```
 template <typename _Iterator, typename _Function>
@@ -1109,7 +1109,7 @@ C + + 标准库兼容的内存分配器的实例。
 
 如果未提供的分配器类型或实例，c + + 标准库内存分配器`std::allocator<T>`用于分配的缓冲区。
 
-算法将输入范围分为两个区块，然后将每个区块分成两个以并行方式执行的子区块。 可选参数 `_Chunk_size` 可用于向算法指示它应按顺序处理区块的大小 <  `_Chunk_size`。
+算法将输入范围分为两个区块，然后将每个区块分成两个以并行方式执行的子区块。 可选自变量 `_Chunk_size` 可用于向算法指示它应按顺序处理区块的大小 < `_Chunk_size`。
 
 ##  <a name="parallel_reduce"></a>  parallel_reduce
 
@@ -1217,7 +1217,7 @@ inline void parallel_sort(
 一种随机访问迭代器，用于定址要排序的范围中最后元素之后下一个元素的位置。
 
 *_Func*<br/>
-用户定义的谓词函数对象，定义排序中连续元素要满足的比较条件。 二元谓词采用两个参数，并且在满足时返回 `true`，未满足时返回 `false`。 该比较器函数必须对序列中的元素对进行严格弱排序。
+用户定义的谓词函数对象，定义排序中连续元素要满足的比较条件。 二元谓词采用两个参数并在条件满足时返回 **true** ，不满足时返回 **false**。 该比较器函数必须对序列中的元素对进行严格弱排序。
 
 *_Chunk_size*<br/>
 最小大小的区块将拆分为两个区块用于并行执行。
@@ -1228,7 +1228,7 @@ inline void parallel_sort(
 
 第二个重载使用提供的应具有签名 `bool _Func(T, T)`（其中 `T` 是输入范围中元素的类型）的二进制比较器。
 
-算法将输入范围分为两个区块，然后将每个区块分成两个以并行方式执行的子区块。 可选参数 `_Chunk_size` 可用于向算法指示它应按顺序处理区块的大小 <  `_Chunk_size`。
+算法将输入范围分为两个区块，然后将每个区块分成两个以并行方式执行的子区块。 可选自变量 `_Chunk_size` 可用于向算法指示它应按顺序处理区块的大小 < `_Chunk_size`。
 
 ##  <a name="parallel_transform"></a>  parallel_transform
 
@@ -1351,7 +1351,7 @@ first2,
 
 有关迭代器不支持随机访问，仅[auto_partitioner](auto-partitioner-class.md)支持。
 
-采用参数 `_Unary_op` 的重载将一元函子应用于输入范围内的每个元素，从而将输入范围转换为输出范围。 `_Unary_op` 必须支持带有签名 `operator()(T)` 的函数调用运算符，签名中的 `T` 是要循环访问的范围的值类型。
+采用自变量 `_Unary_op` 的重载将一元函子应用于输入范围内的每个元素，从而将输入范围转换为输出范围。 `_Unary_op` 必须支持带有签名 `operator()(T)` 的函数调用运算符，签名中的 `T` 是要循环访问的范围的值类型。
 
 采用参数 `_Binary_op` 的重载将二元函子分别应用于第一个输入范围内的一个元素和第二个输入范围内的一个元素，从而将两个输入范围转换为输出范围。 `_Binary_op` 必须支持具有签名 `operator()(T, U)` 的函数调用运算符，签名中的 `T`, `U` 是两个输入迭代器的值类型。
 
@@ -1460,7 +1460,7 @@ bool send(ITarget<T>& _Trg, const T& _Data);
 
 ### <a name="return-value"></a>返回值
 
-`true` 如果接受该消息，`false`否则为。
+**true**接受该消息，如果**false**否则为。
 
 ### <a name="remarks"></a>备注
 
@@ -1613,7 +1613,7 @@ void Trace_agents_register_name(
 
 ##  <a name="try_receive"></a>  try_receive
 
-常规尝试-接收实现，允许上下文仅查找来自一个源的数据并筛选所接受的值。 如果数据未就绪，则方法将返回 false。
+常规尝试-接收实现，允许上下文仅查找来自一个源的数据并筛选所接受的值。 如果数据未准备就绪，该方法将返回**false**。
 
 ```
 template <class T>

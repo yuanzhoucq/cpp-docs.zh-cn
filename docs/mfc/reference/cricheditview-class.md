@@ -110,12 +110,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ca5b649ba5d09d0406658112b8067ed804f7e70
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 81ecc91d8c942a36920368bdb4054ffc2145478d
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46423931"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890720"
 ---
 # <a name="cricheditview-class"></a>CRichEditView 类
 
@@ -470,8 +470,6 @@ virtual HMENU GetContextMenu(
 默认实现返回 NULL。 这是一种高级可重写。
 
 有关详细信息，请参阅[IRichEditOleCallback::GetContextMenu](/windows/desktop/api/richole/nf-richole-iricheditolecallback-getcontextmenu)并[CHARRANGE](/windows/desktop/api/richedit/ns-richedit-_charrange) Windows SDK 中。
-
-有关详细信息`OLEOBJECT`类型，请参阅中的 OLE 数据结构和结构分配项目*OLE 知识文库*。
 
 ##  <a name="getdocument"></a>  CRichEditView::GetDocument
 

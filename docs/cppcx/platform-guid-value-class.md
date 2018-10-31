@@ -15,16 +15,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e115cf74eaac194c9e5b7154898cc23e10b220eb
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: b09fe303cb69cb36d04d696af2b83b30b8378f70
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44100426"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083445"
 ---
 # <a name="platformguid-value-class"></a>Platform::Guid 值类
 
-表示[GUID](https://msdn.microsoft.com/library/windows/desktop/aa373931\(v=vs.85\).aspx) Windows 运行时类型系统中的类型。
+代表 Windows 运行时类型系统中的 [GUID](https://msdn.microsoft.com/library/windows/desktop/aa373931) 类型。
 
 ## <a name="syntax"></a>语法
 
@@ -45,7 +45,7 @@ Guid 具有从 [Platform::Object Class](../cppcx/platform-object-class.md)派生
 
 ### <a name="remarks"></a>备注
 
-有关如何生成新的 platform:: guid 使用 Windows 函数的示例[CoCreateGuid](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateguid)，请参阅[WinRT 组件： 如何生成 GUID？](http://blogs.msdn.com/b/eternalcoding/archive/2013/03/25/winrt-component-how-to-generate-a-guid.aspx)
+有关如何使用 Windows 函数 [CoCreateGuid](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateguid)生成新的 Platform::Guid 的示例，请参阅 [WinRT 组件：如何生成 GUID？](http://blogs.msdn.com/b/eternalcoding/archive/2013/03/25/winrt-component-how-to-generate-a-guid.aspx)
 
 ### <a name="requirements"></a>要求
 
@@ -157,7 +157,7 @@ Platform::Guid::operator!=
 
 ## <a name="operator-call"></a> Guid::operator() 运算符
 
-将隐式转换[GUID 结构](https://msdn.microsoft.com/library/windows/desktop/aa373931\(v=vs.85\).aspx)platform:: guid 的 GUID。
+将隐式转换[GUID 结构](https://msdn.microsoft.com/library/windows/desktop/aa373931)platform:: guid 的 GUID。
 
 ### <a name="syntax"></a>语法
 

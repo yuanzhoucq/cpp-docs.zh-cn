@@ -162,12 +162,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ddefef4525e000002b6fb685887b666aa53fc87
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ccd409a99ccbcf80dc117d7c034d4b8a66b551ef
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46378045"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060463"
 ---
 # <a name="cricheditctrl-class"></a>CRichEditCtrl 类
 
@@ -278,8 +278,6 @@ class CRichEditCtrl : public CWnd
 - [控件](../../mfc/controls-mfc.md)
 
 - [使用 CRichEditCtrl](../../mfc/using-cricheditctrl.md)
-
-- 知识库文章 Q259949： 信息： SetCaretPos() 是不适合使用 CEdit 或 CRichEditCtrl 控件
 
 在 MFC 应用程序中使用格式文本编辑控件的示例，请参阅[写字板](../../visual-cpp-samples.md)示例应用程序。
 
@@ -1532,7 +1530,7 @@ void ReplaceSel(
 指向包含替换文本的以 null 结尾的字符串指针。
 
 *bCanUndo*<br/>
-若要指定此函数可撤消，设置此参数的值为 TRUE。 默认值为 FALSE。
+若要指定此函数可撤消，设置此参数的值为 TRUE。 默认值是 FALSE。
 
 ### <a name="remarks"></a>备注
 
@@ -1958,7 +1956,6 @@ BOOL SetSelectionCharFormat(CHARFORMAT2& cf);
 BOOL SetTargetDevice(
     HDC hDC,
     long lLineWidth);
-
 
 BOOL SetTargetDevice(
     CDC& dc,

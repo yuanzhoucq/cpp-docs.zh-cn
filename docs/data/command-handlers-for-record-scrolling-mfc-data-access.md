@@ -17,30 +17,30 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b51a6e9c9cf9516ed86066f712a17fea69c3cb50
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6733603ff95d4bf12b9eec142fff12b5ca0458a9
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46112234"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057759"
 ---
 # <a name="command-handlers-for-record-scrolling--mfc-data-access"></a>用于记录滚动的命令处理程序（MFC 数据访问）
 
-[CRecordView](../mfc/reference/crecordview-class.md)类提供了处理以下标准命令的默认命令：  
-  
-- ID_RECORD_MOVE_FIRST  
-  
-- ID_RECORD_MOVE_LAST  
-  
-- ID_RECORD_MOVE_NEXT  
-  
-- ID_RECORD_MOVE_PREV  
-  
-`OnMove`成员函数提供了默认命令处理的所有四个命令，记录之间移动。 发布这些命令后，RFX（或 DFX）将加载新记录到记录集字段，DDX 将移动值到记录窗体控件。 有关 RFX 的信息，请参阅[记录字段交换 (RFX)](../data/odbc/record-field-exchange-rfx.md)。  
-  
+[CRecordView](../mfc/reference/crecordview-class.md)类提供了处理以下标准命令的默认命令：
+
+- ID_RECORD_MOVE_FIRST
+
+- ID_RECORD_MOVE_LAST
+
+- ID_RECORD_MOVE_NEXT
+
+- ID_RECORD_MOVE_PREV
+
+`OnMove`成员函数提供了默认命令处理的所有四个命令，记录之间移动。 发布这些命令后，RFX（或 DFX）将加载新记录到记录集字段，DDX 将移动值到记录窗体控件。 有关 RFX 的信息，请参阅[记录字段交换 (RFX)](../data/odbc/record-field-exchange-rfx.md)。
+
 > [!NOTE]
->  确保将这些标准的命令 ID 用于任何与标准记录导航命令关联的用户界面对象。  
-  
-## <a name="see-also"></a>请参阅  
+>  确保将这些标准的命令 ID 用于任何与标准记录导航命令关联的用户界面对象。
+
+## <a name="see-also"></a>请参阅
 
 [支持在记录视图中导航](../data/supporting-navigation-in-a-record-view-mfc-data-access.md)

@@ -1,7 +1,7 @@
 ---
 title: 变量自变量列表 （...）(C + + CLI) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -16,16 +16,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e58b7ea2d8db0c3d36ad36aaccbf23957c449a77
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 183208d734fa5ad39151b171bd9c6889863c8d33
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42590458"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057163"
 ---
 # <a name="variable-argument-lists--ccli"></a>变量自变量列表 (...) (C++/CLI)
 
-此示例演示如何使用`...`中 Visual c + + 实现的参数数目可变的函数的语法。
+此示例演示如何使用`...`语法在 C + + /cli CLI 来实现的参数数目可变的函数。
 
 > [!NOTE]
 > 本主题适用于 C + + /cli CLI。 有关使用信息`...`在 ISO 标准 c + +，请参阅[省略号和可变参数模板](../cpp/ellipses-and-variadic-templates.md)和省略号和默认自变量中[后缀表达式](../cpp/postfix-expressions.md)。
@@ -44,7 +44,7 @@ double average( ... array<Int32>^ arr ) {
    int i = arr->GetLength(0);
    double answer = 0.0;
 
-   for (int j = 0 ; j < i ; j++)  
+   for (int j = 0 ; j < i ; j++)
       answer += arr[j];
 
    return answer / i;

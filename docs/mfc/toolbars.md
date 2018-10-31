@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bcd7e0a1b2786a92d7a0e64b85417ddb82c82871
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7fd8738c0dec9771a94ba94aefdcaf2af87fdb09
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46437789"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890539"
 ---
 # <a name="toolbars"></a>工具栏
 
@@ -38,10 +38,7 @@ ms.locfileid: "46437789"
 
 - [示例](../mfc/toolbar-sample-list.md)
 
-有关 MFC 工具栏的详细信息，请参阅文章 Q232017，"如何:: 添加文本到工具栏按钮，"Microsoft 知识库中在 http://support.microsoft.com。
-
 ## <a name="see-also"></a>请参阅
 
 [用户界面元素](../mfc/user-interface-elements-mfc.md)<br/>
 [工具栏编辑器](../windows/toolbar-editor.md)
-

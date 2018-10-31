@@ -1,7 +1,7 @@
 ---
 title: CSocketAddr 类 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/22/2018
 ms.technology:
 - cpp-atl
 ms.topic: reference
@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c39ca72136db7c11e925f28cc3413a5f7b77002
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 705cbd051f7c5761ae9a2aabfe919519681ef089
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46040851"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990212"
 ---
 # <a name="csocketaddr-class"></a>CSocketAddr 类
 
@@ -62,7 +62,7 @@ class CSocketAddr
 
 此类提供 API 函数和库中的套接字包装器，套接字不可知的方法，用于查找与 Windows 配合使用的网络地址的 IP 版本。
 
-用于查找网络地址的此类成员使用 Win32 API 函数[getaddrinfo](/windows/desktop/api/ws2tcpip/nf-ws2tcpip-getaddrinfo)。
+用于查找网络地址的此类成员使用 Win32 API 函数[getaddrinfo](/windows/desktop/api/ws2tcpip/nf-ws2tcpip-getaddrinfo)。 ANSI 或 UNICODE 版本的函数称为具体取决于是否为 ANSI 或 UNICODE 编译你的代码。
 
 此类支持这两个 IPv4 andIPv6 网络地址。
 
@@ -88,15 +88,15 @@ CSocketAddr();
 
 ```
 int FindAddr(
-    const char *szHost,
-    const char *szPortOrServiceName,
+    const TCHAR *szHost,
+    const TCHAR *szPortOrServiceName,
     int flags,
     int addr_family,
     int sock_type,
     int ai_proto);
 
 int FindAddr(
-    const char *szHost,
+    const TCHAR *szHost,
     int nPortNo,
     int flags,
     int addr_family,
@@ -141,10 +141,10 @@ int FindAddr(
 
 ```
 int FindINET4Addr(
-    const char *szHost,
+    const TCHAR *szHost,
     int nPortNo,
-    int flags,
-    int sock_type,);
+    int flags = 0,
+    int sock_type = SOCK_STREAM);
 ```
 
 ### <a name="parameters"></a>参数
@@ -175,10 +175,10 @@ int FindINET4Addr(
 
 ```
 int FindINET6Addr(
-    const char *szHost,
+    const TCHAR *szHost,
     int nPortNo,
-    int flags,
-    int sock_type,);
+    int flags = 0,
+    int sock_type = SOCK_STREAM);
 ```
 
 ### <a name="parameters"></a>参数
@@ -208,7 +208,7 @@ int FindINET6Addr(
 调用此方法以返回到中的特定元素的指针`addrinfo`列表。
 
 ```
-addrinfo* const GetAddrInfoint nIndex = 0) const;
+addrinfo* const GetAddrInfo(int nIndex = 0) const;
 ```
 
 ### <a name="parameters"></a>参数

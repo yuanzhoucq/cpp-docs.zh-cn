@@ -248,12 +248,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7adbc9d4634eee8401f34ac7247c858f1a4610a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f1ef6e0c0df01807d23b89bc8cf9f6a35035b6f2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46393381"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50056082"
 ---
 # <a name="cmfcbasetabctrl-class"></a>CMFCBaseTabCtrl Class
 
@@ -358,7 +358,7 @@ class CMFCBaseTabCtrl : public CWnd
 |[CMFCBaseTabCtrl::OnDragOver](#ondragover)||
 |[CMFCBaseTabCtrl::OnDrop](#ondrop)||
 |[CMFCBaseTabCtrl::OnRenameTab](#onrenametab)||
-|[CMFCBaseTabCtrl::PreTranslateMessage](#pretranslatemessage)|类使用[CWinApp](../../mfc/reference/cwinapp-class.md)窗口消息调度到之前转换[TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)并[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows 函数。 （重写 [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)。）|
+|[CMFCBaseTabCtrl::PreTranslateMessage](#pretranslatemessage)|在将窗口消息发送到 [TranslateMessage](../../mfc/reference/cwinapp-class.md) 和 [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) Windows 函数之前，由 [CWinApp](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) 类用于对此消息进行转换。 （重写 [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)。）|
 |[CMFCBaseTabCtrl::RecalcLayout](#recalclayout)|重新计算选项卡式窗口的内部布局。|
 |[CMFCBaseTabCtrl::RemoveAllTabs](#removealltabs)|从选项卡式窗口中移除所有选项卡。|
 |[CMFCBaseTabCtrl::RemoveTab](#removetab)|从选项卡式窗口中移除一个选项卡。|
@@ -462,7 +462,6 @@ virtual void AddTab(
     UINT uiImageId = (UINT)-1,,
     BOOL bDetachable = TRUE);
 
-
 virtual void AddTab(
     CWnd* pTabWnd,
     UINT uiResTabLabel,
@@ -493,19 +492,17 @@ virtual void AddTab(
 
 ##  <a name="applyrestoredtabinfo"></a>  CMFCBaseTabCtrl::ApplyRestoredTabInfo
 
-
 ```
 virtual void ApplyRestoredTabInfo(BOOL bUseTabIndexes = FALSE);
 ```
 
 ### <a name="parameters"></a>参数
 
-[in]*bUseTabIndexes*
+[in]*bUseTabIndexes*<br/>
 
 ### <a name="remarks"></a>备注
 
 ##  <a name="autodestroywindow"></a>  CMFCBaseTabCtrl::AutoDestroyWindow
-
 
 ```
 void AutoDestroyWindow(BOOL bAutoDestroy = TRUE);
@@ -513,12 +510,11 @@ void AutoDestroyWindow(BOOL bAutoDestroy = TRUE);
 
 ### <a name="parameters"></a>参数
 
-[in]*bAutoDestroy*
+[in]*bAutoDestroy*<br/>
 
 ### <a name="remarks"></a>备注
 
 ##  <a name="calcrectedit"></a>  CMFCBaseTabCtrl::CalcRectEdit
-
 
 ```
 virtual void CalcRectEdit(CRect& rectEdit);
@@ -526,12 +522,11 @@ virtual void CalcRectEdit(CRect& rectEdit);
 
 ### <a name="parameters"></a>参数
 
-[in]*rectEdit*
+[in]*rectEdit*<br/>
 
 ### <a name="remarks"></a>备注
 
 ##  <a name="cleanup"></a>  CMFCBaseTabCtrl::CleanUp
-
 
 ```
 virtual void CleanUp();
@@ -540,7 +535,6 @@ virtual void CleanUp();
 ### <a name="remarks"></a>备注
 
 ##  <a name="clearimagelist"></a>  CMFCBaseTabCtrl::ClearImageList
-
 
 ```
 virtual void ClearImageList();
@@ -614,14 +608,13 @@ virtual BOOL DetachTab(
 
 ##  <a name="enableactivatelastactive"></a>  CMFCBaseTabCtrl::EnableActivateLastActive
 
-
 ```
 void EnableActivateLastActive(BOOL bLastActive = TRUE);
 ```
 
 ### <a name="parameters"></a>参数
 
-[in]*bLastActive*
+[in]*bLastActive*<br/>
 
 ### <a name="remarks"></a>备注
 
@@ -750,7 +743,6 @@ virtual BOOL EnsureVisible(int iTab);
 
 ##  <a name="enterdragmode"></a>  CMFCBaseTabCtrl::EnterDragMode
 
-
 ```
 void EnterDragMode();
 ```
@@ -780,19 +772,17 @@ virtual CWnd* FindTargetWnd(const CPoint& pt) = 0;
 
 ##  <a name="firechangeactivetab"></a>  CMFCBaseTabCtrl::FireChangeActiveTab
 
-
 ```
 virtual void FireChangeActiveTab(int nNewTab);
 ```
 
 ### <a name="parameters"></a>参数
 
-[in]*nNewTab*
+[in]*nNewTab*<br/>
 
 ### <a name="remarks"></a>备注
 
 ##  <a name="firechangingactivetab"></a>  CMFCBaseTabCtrl::FireChangingActiveTab
-
 
 ```
 virtual BOOL FireChangingActiveTab(int nNewTab);
@@ -800,7 +790,7 @@ virtual BOOL FireChangingActiveTab(int nNewTab);
 
 ### <a name="parameters"></a>参数
 
-[in]*nNewTab*
+[in]*nNewTab*<br/>
 
 ### <a name="return-value"></a>返回值
 
@@ -885,7 +875,6 @@ const CArray<COLORREF,COLORREF>& GetAutoColors() const;
 ```
 virtual CWnd* GetFirstVisibleTab(int& iTabNum);
 
-
 virtual CWnd* GetFirstVisibleTab(
     int iStartFrom,
     int& iTabNum);
@@ -911,7 +900,6 @@ virtual CWnd* GetFirstVisibleTab(
 
 ##  <a name="getfirstvisibletabnum"></a>  CMFCBaseTabCtrl::GetFirstVisibleTabNum
 
-
 ```
 virtual int GetFirstVisibleTabNum() const;
 ```
@@ -934,7 +922,6 @@ int GetHighlightedTab() const;
 
 ##  <a name="getimagelist"></a>  CMFCBaseTabCtrl::GetImageList
 
-
 ```
 virtual const CImageList* GetImageList() const;
 ```
@@ -944,7 +931,6 @@ virtual const CImageList* GetImageList() const;
 ### <a name="remarks"></a>备注
 
 ##  <a name="getimagesize"></a>  CMFCBaseTabCtrl::GetImageSize
-
 
 ```
 virtual CSize GetImageSize() const;
@@ -956,14 +942,13 @@ virtual CSize GetImageSize() const;
 
 ##  <a name="getlastvisibletab"></a>  CMFCBaseTabCtrl::GetLastVisibleTab
 
-
 ```
 virtual CWnd* GetLastVisibleTab(int& iTabNum);
 ```
 
 ### <a name="parameters"></a>参数
 
-[in]*iTabNum*
+[in]*iTabNum*<br/>
 
 ### <a name="return-value"></a>返回值
 
@@ -986,7 +971,6 @@ Location GetLocation() const;
 可能的选项卡区域位置值为 LOCATION_BOTTOM 和 LOCATION_TOP。
 
 ##  <a name="getmaxwindowsize"></a>  CMFCBaseTabCtrl::GetMaxWindowSize
-
 
 ```
 virtual CSize GetMaxWindowSize() const;
@@ -1076,7 +1060,6 @@ virtual int GetTabByID(int id) const;
 
 ##  <a name="gettabclosebutton"></a>  CMFCBaseTabCtrl::GetTabCloseButton
 
-
 ```
 CRect GetTabCloseButton() const;
 ```
@@ -1121,14 +1104,13 @@ virtual int GetTabFromPoint(CPoint& pt) const;
 
 ##  <a name="gettabfullwidth"></a>  CMFCBaseTabCtrl::GetTabFullWidth
 
-
 ```
 virtual int GetTabFullWidth(int iTab) const;
 ```
 
 ### <a name="parameters"></a>参数
 
-[in]*iTab*
+[in]*iTab*<br/>
 
 ### <a name="return-value"></a>返回值
 
@@ -1241,7 +1223,6 @@ virtual BOOL GetTabRect(
 
 ##  <a name="gettabsheight"></a>  CMFCBaseTabCtrl::GetTabsHeight
 
-
 ```
 virtual int GetTabsHeight() const;
 ```
@@ -1264,14 +1245,13 @@ virtual int GetTabsNum() const;
 
 ##  <a name="gettabsrect"></a>  CMFCBaseTabCtrl::GetTabsRect
 
-
 ```
 virtual void GetTabsRect(CRect& rect) const;
 ```
 
 ### <a name="parameters"></a>参数
 
-[in]*rect*
+[in]*rect*<br/>
 
 ### <a name="remarks"></a>备注
 
@@ -1364,14 +1344,13 @@ virtual int GetVisibleTabsNum() const;
 
 ##  <a name="hasimage"></a>  CMFCBaseTabCtrl::HasImage
 
-
 ```
 virtual BOOL HasImage(int iTab) const;
 ```
 
 ### <a name="parameters"></a>参数
 
-[in]*iTab*
+[in]*iTab*<br/>
 
 ### <a name="return-value"></a>返回值
 
@@ -1405,7 +1384,6 @@ Virtual void InsertTab(
     int nInsertAt,
     UINT uiImageId = (UINT)-1,
     BOOL bDetachable = TRUE);
-
 
 virtual void InsertTab(
     CWnd* pNewWnd,
@@ -1441,19 +1419,17 @@ virtual void InsertTab(
 
 ##  <a name="invalidatetab"></a>  CMFCBaseTabCtrl::InvalidateTab
 
-
 ```
 void InvalidateTab(int iTab);
 ```
 
 ### <a name="parameters"></a>参数
 
-[in]*iTab*
+[in]*iTab*<br/>
 
 ### <a name="remarks"></a>备注
 
 ##  <a name="isactivetabclosebutton"></a>  CMFCBaseTabCtrl::IsActiveTabCloseButton
-
 
 ```
 virtual BOOL IsActiveTabCloseButton() const;
@@ -1481,7 +1457,6 @@ BOOL IsAutoColor() const;
 
 ##  <a name="isautodestroywindow"></a>  CMFCBaseTabCtrl::IsAutoDestroyWindow
 
-
 ```
 BOOL IsAutoDestroyWindow() const;
 ```
@@ -1491,7 +1466,6 @@ BOOL IsAutoDestroyWindow() const;
 ### <a name="remarks"></a>备注
 
 ##  <a name="iscolored"></a>  CMFCBaseTabCtrl::IsColored
-
 
 ```
 virtual BOOL IsColored() const;
@@ -1503,7 +1477,6 @@ virtual BOOL IsColored() const;
 
 ##  <a name="isdialogcontrol"></a>  CMFCBaseTabCtrl::IsDialogControl
 
-
 ```
 BOOL IsDialogControl() const;
 ```
@@ -1513,7 +1486,6 @@ BOOL IsDialogControl() const;
 ### <a name="remarks"></a>备注
 
 ##  <a name="isdrawnoprefix"></a>  CMFCBaseTabCtrl::IsDrawNoPrefix
-
 
 ```
 BOOL IsDrawNoPrefix() const;
@@ -1543,7 +1515,6 @@ virtual BOOL IsFlatFrame() const;
 
 ##  <a name="isflattab"></a>  CMFCBaseTabCtrl::IsFlatTab
 
-
 ```
 virtual BOOL IsFlatTab() const;
 ```
@@ -1570,7 +1541,6 @@ virtual BOOL IsHideSingleTab() const;
 
 ##  <a name="isiconadded"></a>  CMFCBaseTabCtrl::IsIconAdded
 
-
 ```
 BOOL IsIconAdded(
     HICON hIcon,
@@ -1579,8 +1549,9 @@ BOOL IsIconAdded(
 
 ### <a name="parameters"></a>参数
 
-*hIcon*<br/>
-[in][in]*图标*
+[in]*hIcon*<br/>
+
+[in]*图标*<br/>
 
 ### <a name="return-value"></a>返回值
 
@@ -1604,7 +1575,6 @@ virtual BOOL IsInPlaceEdit() const;
 
 ##  <a name="isleftrightrounded"></a>  CMFCBaseTabCtrl::IsLeftRightRounded
 
-
 ```
 virtual BOOL IsLeftRightRounded() const;
 ```
@@ -1614,7 +1584,6 @@ virtual BOOL IsLeftRightRounded() const;
 ### <a name="remarks"></a>备注
 
 ##  <a name="ismditab"></a>  CMFCBaseTabCtrl::IsMDITab
-
 
 ```
 BOOL IsMDITab() const;
@@ -1665,7 +1634,6 @@ virtual BOOL IsPtInTabArea(CPoint point) const = 0;
 
 ##  <a name="istabclosebuttonhighlighted"></a>  CMFCBaseTabCtrl::IsTabCloseButtonHighlighted
 
-
 ```
 BOOL IsTabCloseButtonHighlighted() const;
 ```
@@ -1675,7 +1643,6 @@ BOOL IsTabCloseButtonHighlighted() const;
 ### <a name="remarks"></a>备注
 
 ##  <a name="istabclosebuttonpressed"></a>  CMFCBaseTabCtrl::IsTabCloseButtonPressed
-
 
 ```
 BOOL IsTabCloseButtonPressed() const;
@@ -1762,7 +1729,6 @@ virtual BOOL IsTabVisible(int iTab) const;
 
 ##  <a name="isvs2005style"></a>  CMFCBaseTabCtrl::IsVS2005Style
 
-
 ```
 virtual BOOL IsVS2005Style() const;
 ```
@@ -1797,7 +1763,6 @@ BOOL m_bAutoDestroyWindow;
 
 ##  <a name="movetab"></a>  CMFCBaseTabCtrl::MoveTab
 
-
 ```
 virtual void MoveTab(
     int nSource,
@@ -1806,8 +1771,9 @@ virtual void MoveTab(
 
 ### <a name="parameters"></a>参数
 
-*n 源*<br/>
-[in][in]*nDest*
+[in]*n 源*<br/>
+
+[in]*nDest*<br/>
 
 ### <a name="remarks"></a>备注
 
@@ -1825,7 +1791,6 @@ virtual void OnChangeTabs();
 
 ##  <a name="ondrop"></a>  CMFCBaseTabCtrl::OnDrop
 
-
 ```
 virtual BOOL OnDrop(
     COleDataObject*,
@@ -1835,16 +1800,17 @@ virtual BOOL OnDrop(
 
 ### <a name="parameters"></a>参数
 
-[in]*COleDataObject**
-*DROPEFFECT*<br/>
-[in][in]*CPoint*
+[in]*COleDataObject\**<br/>
+
+[in]*DROPEFFECT*<br/>
+
+[in]*CPoint*<br/>
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
 ##  <a name="ondragover"></a>  CMFCBaseTabCtrl::OnDragOver
-
 
 ```
 virtual DROPEFFECT OnDragOver(
@@ -1855,16 +1821,17 @@ virtual DROPEFFECT OnDragOver(
 
 ### <a name="parameters"></a>参数
 
-[in]*COleDataObject**
-*DWORD*<br/>
-[in][in]*CPoint*
+[in]*COleDataObject\**<br/>
+
+[in]*DWORD*<br/>
+
+[in]*CPoint*<br/>
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
 ##  <a name="ondragleave"></a>  CMFCBaseTabCtrl::OnDragLeave
-
 
 ```
 virtual void OnDragLeave();
@@ -1873,7 +1840,6 @@ virtual void OnDragLeave();
 ### <a name="remarks"></a>备注
 
 ##  <a name="ondragenter"></a>  CMFCBaseTabCtrl::OnDragEnter
-
 
 ```
 virtual DROPEFFECT OnDragEnter(
@@ -1884,9 +1850,11 @@ virtual DROPEFFECT OnDragEnter(
 
 ### <a name="parameters"></a>参数
 
-[in]*COleDataObject**
-*DWORD*<br/>
-[in][in]*CPoint*
+[in]*COleDataObject\**<br/>
+
+[in]*DWORD*<br/>
+
+[in]*CPoint*<br/>
 
 ### <a name="return-value"></a>返回值
 
@@ -1894,15 +1862,15 @@ virtual DROPEFFECT OnDragEnter(
 
 ##  <a name="onrenametab"></a>  CMFCBaseTabCtrl::OnRenameTab
 
-
 ```
 virtual BOOL OnRenameTab(int, CString&);
 ```
 
 ### <a name="parameters"></a>参数
 
-*int*<br/>
-[in][in]*CString （& a)*
+[in]*int*<br/>
+
+[in]*CString （& a)*<br/>
 
 ### <a name="return-value"></a>返回值
 
@@ -1910,14 +1878,13 @@ virtual BOOL OnRenameTab(int, CString&);
 
 ##  <a name="pretranslatemessage"></a>  CMFCBaseTabCtrl::PreTranslateMessage
 
-
 ```
 virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```
 
 ### <a name="parameters"></a>参数
 
-[in]*pMsg*
+[in]*pMsg*<br/>
 
 ### <a name="return-value"></a>返回值
 
@@ -1975,7 +1942,6 @@ virtual BOOL RemoveTab(
 
 ##  <a name="renametab"></a>  CMFCBaseTabCtrl::RenameTab
 
-
 ```
 virtual BOOL RenameTab();
 ```
@@ -1994,14 +1960,13 @@ void ResetImageList();
 
 ##  <a name="serialize"></a>  CMFCBaseTabCtrl::Serialize
 
-
 ```
 virtual void Serialize(CArchive& ar);
 ```
 
 ### <a name="parameters"></a>参数
 
-[in]*ar*
+[in]*ar*<br/>
 
 ### <a name="remarks"></a>备注
 
@@ -2159,14 +2124,13 @@ virtual BOOL SetImageList(HIMAGELIST hImageList);
 
 ##  <a name="setlocation"></a>  CMFCBaseTabCtrl::SetLocation
 
-
 ```
 virtual void SetLocation(Location location);
 ```
 
 ### <a name="parameters"></a>参数
 
-[in]*位置*
+[in]*位置*<br/>
 
 ### <a name="remarks"></a>备注
 
@@ -2308,7 +2272,6 @@ virtual BOOL SetTabLabel(
 
 ##  <a name="settabsheight"></a>  CMFCBaseTabCtrl::SetTabsHeight
 
-
 ```
 virtual void SetTabsHeight();
 ```
@@ -2394,21 +2357,19 @@ virtual BOOL ShowTab(
 
 ##  <a name="startrenametab"></a>  CMFCBaseTabCtrl::StartRenameTab
 
-
 ```
 virtual BOOL StartRenameTab(int iTab);
 ```
 
 ### <a name="parameters"></a>参数
 
-[in]*iTab*
+[in]*iTab*<br/>
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
 ##  <a name="swaptabs"></a>  CMFCBaseTabCtrl::SwapTabs
-
 
 ```
 virtual void SwapTabs(
@@ -2418,8 +2379,9 @@ virtual void SwapTabs(
 
 ### <a name="parameters"></a>参数
 
-*nFisrtTabID*<br/>
-[in][in]*nSecondTabID*
+[in]*nFisrtTabID*<br/>
+
+[in]*nSecondTabID*<br/>
 
 ### <a name="remarks"></a>备注
 

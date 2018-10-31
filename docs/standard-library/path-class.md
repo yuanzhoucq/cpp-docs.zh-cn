@@ -1,7 +1,7 @@
 ---
 title: path 类 | Microsoft Docs
 ms.custom: ''
-ms.date: 09/10/2018
+ms.date: 09/27/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -14,16 +14,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd8fa524d0c41d437575a61ff4e4456fd9933404
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 7674f07c92f8a0c9d8a9070f3f99e00dfde39140
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45725304"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235459"
 ---
 # <a name="path-class"></a>path 类
 
-**路径**类存储类型的对象`string_type`称为`myname`此处出于阐述，适合用作路径名称。 `string_type` 是的同义词`basic_string<value_type>`，其中`value_type`是的同义词**char**在 Windows 或**wchar_t** Posix 下。
+**路径**类存储类型的对象`string_type`称为`myname`此处出于阐述，适合用作路径名称。 `string_type` 是的同义词`basic_string<value_type>`，其中`value_type`是的同义词**wchar_t**上 Windows 或**char** POSIX 上。
 
 有关详细信息和代码示例，请参阅[文件系统导航 (C++)](../standard-library/file-system-navigation.md)。
 

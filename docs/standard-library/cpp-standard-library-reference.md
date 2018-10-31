@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c38485e84f0b06e79e02ba780926b6e08378220
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 27981084c79b5bf1347715df8945598c1e6683e4
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46392913"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50071647"
 ---
 # <a name="c-standard-library-reference"></a>C++ 标准库参考
 
@@ -40,5 +40,4 @@ C++ 程序可以从符合标准的 C++ 标准库实现中调用大量函数。 �
 
 [头文件引用](../standard-library/cpp-standard-library-header-files.md)<br/>
 提供指向参考主题的链接，这些主题讨论了具有代码示例的 C++ 标准库头文件。
-
 

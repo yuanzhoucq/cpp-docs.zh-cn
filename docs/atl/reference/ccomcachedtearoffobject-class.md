@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40dddf2bb1619bd896ecf50008f80fca968ef8c9
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: ce642b6ed4017dba66d80325e7b9be8f18a7fb16
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46075704"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076082"
 ---
 # <a name="ccomcachedtearoffobject-class"></a>CComCachedTearOffObject 类
 
@@ -199,7 +199,7 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 
 ### <a name="remarks"></a>备注
 
-如果所请求的接口是`IUnknown`，返回一个指向`CComCachedTearOffObject`的自己`IUnknown`和递增引用计数。 否则，将查询的分离式类使用的接口[InternalQueryInterface](ccomobjectrootex-class.md#internalqueryinterface)方法继承自`CComObjectRootEx`。  
+如果所请求的接口是`IUnknown`，返回一个指向`CComCachedTearOffObject`的自己`IUnknown`和递增引用计数。 否则，将查询的分离式类使用的接口[InternalQueryInterface](ccomobjectrootex-class.md#internalqueryinterface)方法继承自`CComObjectRootEx`。
 
 ##  <a name="release"></a>  CComCachedTearOffObject::Release
 

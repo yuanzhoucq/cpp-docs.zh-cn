@@ -11,12 +11,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4acecf3697b793d52079d4f55176717e3f6f2d5c
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 4d4638bafdf512caf7eeff6b95e53f9f0b1adeea
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44109922"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163928"
 ---
 # <a name="platformcollectionsunorderedmapview-class"></a>Platform::Collections::UnorderedMapView 类
 
@@ -112,7 +112,7 @@ bool HasKey(K key);
 
 ### <a name="return-value"></a>返回值
 
-如果找到该键，则为 `true`；否则为 `false`。
+**true**如果该键; 否则为**false**。
 
 ## <a name="lookup"></a>  UnorderedMapView::Lookup 方法
 

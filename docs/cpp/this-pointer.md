@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee6c0b958fe27c04c116b4f82098f459c1f0f745
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: c6fddd337cb9c0bcd78df1bfa563d1f447131078
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46070582"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077330"
 ---
 # <a name="this-pointer"></a>this 指针
 
@@ -32,7 +32,7 @@ ms.locfileid: "46070582"
 ## <a name="syntax"></a>语法
 
 ```
-this 
+this 
 this->member-identifier
 ```
 
@@ -181,7 +181,7 @@ int main()
 
 类型**这**中成员函数描述的以下语法，其中*cv 限定符列表*从成员函数声明符中确定和可以为**const**或**易失性**（或两者），并*类类型*是类的名称：
 
-*[cv 限定符列表] 类类型***\* const 这**
+*[cv 限定符列表] 类类型***&#42; const 这**
 
 换而言之，**这**始终是 const 指针; 无法重新分配。  **Const**或**易失性**成员函数声明中使用的限定符应用于类实例，指向**这**该函数的作用域中。
 

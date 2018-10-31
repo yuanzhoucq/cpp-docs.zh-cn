@@ -1,32 +1,39 @@
 ---
 title: SafeIntException 类 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/22/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - SafeIntException Class
+- SafeIntException
+- SafeIntException.SafeIntException
+- SafeIntException::SafeIntException
 dev_langs:
 - C++
 helpviewer_keywords:
 - SafeIntException class
+- SafeIntException, constructor
 ms.assetid: 88bef958-1f48-4d55-ad4f-d1f9581a293a
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0a0eda94c370f978bd04d7c2de1dd3e06237e490
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2a1890bc20c0737007075656dcbefa20ad81a9bf
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46437699"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068055"
 ---
 # <a name="safeintexception-class"></a>SafeIntException 类
 
-`SafeInt`类使用**SafeIntException**以确定无法完成数学运算的原因。
+`SafeInt`类使用`SafeIntException`以确定无法完成数学运算的原因。
+
+> [!NOTE]
+> 此库的最新版本位于[ https://github.com/dcleblanc/SafeInt ](https://github.com/dcleblanc/SafeInt)。
 
 ## <a name="syntax"></a>语法
 
@@ -38,16 +45,17 @@ class SafeIntException;
 
 ### <a name="public-constructors"></a>公共构造函数
 
-[SafeIntException::SafeIntException](../windows/safeintexception-safeintexception.md)<br/>
-创建**SafeIntException**对象。
+名称                                                    | 描述
+------------------------------------------------------- | ------------------------------------
+[SafeIntException::SafeIntException](#safeintexception) | 创建一个 `SafeIntException` 对象。
 
 ## <a name="remarks"></a>备注
 
-[SafeInt 类](../windows/safeint-class.md)是唯一使用的类**SafeIntException**类。
+[SafeInt 类](../windows/safeint-class.md)是唯一使用的类`SafeIntException`类。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
-[SafeIntException 类](../windows/safeintexception-class.md)
+`SafeIntException`
 
 ## <a name="requirements"></a>要求
 
@@ -55,7 +63,27 @@ class SafeIntException;
 
 **Namespace:** msl:: utilities
 
-## <a name="see-also"></a>请参阅
+## <a name="safeintexception"></a>Safeintexception:: Safeintexception
 
-[SafeInt 库](../windows/safeint-library.md)<br/>
-[SafeInt 类](../windows/safeint-class.md)
+创建一个 `SafeIntException` 对象。
+
+```cpp
+SafeIntException();
+
+SafeIntException(
+   SafeIntError code
+);
+```
+
+### <a name="parameters"></a>参数
+
+*代码*<br/>
+[in]一个枚举的数据值，描述发生的错误。
+
+### <a name="remarks"></a>备注
+
+可能的值*代码*文件 Safeint.h 中定义。 为方便起见，还此处列出可能的值。
+
+- `SafeIntNoError`
+- `SafeIntArithmeticOverflow`
+- `SafeIntDivideByZero`

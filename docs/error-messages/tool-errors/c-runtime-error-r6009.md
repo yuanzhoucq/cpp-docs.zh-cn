@@ -16,26 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0deafa72a427543c0d885401a1d4192d61a6db65
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 42a5aed9f823b5d2c5425c4d7baae129c08e76e7
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46069035"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860922"
 ---
 # <a name="c-runtime-error-r6009"></a>C 运行时错误 R6009
 
 没有足够的空间的环境
 
 > [!NOTE]
->  如果运行应用时遇到此错误消息，该应用已关闭，因为它具有内部内存问题。 有多种原因引起此错误，但通常引起的极低内存条件，环境变量或该程序中的 bug 占用太多内存。
+> 如果运行应用时遇到此错误消息，该应用已关闭，因为它具有内部内存问题。 有多种原因引起此错误，但通常引起的极低内存条件，环境变量或该程序中的 bug 占用太多内存。
 >
->  可以尝试以下步骤来修复此错误：
+> 可以尝试以下步骤来修复此错误：
 >
->  -   关闭其他正在运行的应用程序或重新启动计算机以释放内存。
-> -   使用**应用程序和功能**或**程序和功能**页**控制面板**来修复或重新安装该程序。
-> -   检查**Windows Update**中**控制面板**的软件更新。
-> -   检查应用程序的更新版本。 如果问题仍然存在，请与应用供应商联系。
+> - 关闭其他正在运行的应用程序或重新启动计算机以释放内存。
+> - 使用**应用程序和功能**或**程序和功能**页**控制面板**来修复或重新安装该程序。
+> - 检查**Windows Update**中**控制面板**的软件更新。
+> - 检查应用程序的更新版本。 如果问题仍然存在，请与应用供应商联系。
 
 **程序员提供的的信息**
 

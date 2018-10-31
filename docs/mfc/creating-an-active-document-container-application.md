@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f01b15a226887216b45ba232437d9d20c4691b6
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f1b20dd592e180122e119b08ab59babfdaae8d54
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46388325"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052794"
 ---
 # <a name="creating-an-active-document-container-application"></a>创建活动文档容器应用程序
 
@@ -57,9 +57,9 @@ ms.locfileid: "46388325"
 
          [!code-cpp[NVC_MFCDocView#56](../mfc/codesnippet/cpp/creating-an-active-document-container-application_1.cpp)]
 
-     `OnPreparePrinting` 将提供打印支持。 此代码将替换 `DoPreparePrinting`，其是默认打印准备。
+   `OnPreparePrinting` 将提供打印支持。 此代码将替换 `DoPreparePrinting`，其是默认打印准备。
 
-     活动文档包容将提供改进的打印方案：
+   活动文档包容将提供改进的打印方案：
 
    - 您可以先调用活动文档通过其`IPrint`接口，并告诉它打印自身。 这是不同于以前的 OLE 包容，容器必须在其中呈现到打印机所含项的图像`CDC`对象。
 
@@ -67,7 +67,7 @@ ms.locfileid: "46388325"
 
    - 如果失败，自行呈现项目。
 
-     如之前的代码所实现的一样，`COleDocObjectItem::OnPrint` 和 `COleDocObjectItem::OnPreparePrinting` 将处理此改进的打印方案。
+   如之前的代码所实现的一样，`COleDocObjectItem::OnPrint` 和 `COleDocObjectItem::OnPreparePrinting` 将处理此改进的打印方案。
 
 11. 添加您自己的任何实现并生成应用程序。
 

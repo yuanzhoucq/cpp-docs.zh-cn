@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db0445e83bbcae6baa45d4a482489e6761fa945a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f80abd3b6270f105fecd7ef8b9988a379901b541
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46069425"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860207"
 ---
 # <a name="specifying-property-pages"></a>指定属性页
 
@@ -32,12 +32,12 @@ ms.locfileid: "46069425"
 
 1. 从类派生[ISpecifyPropertyPagesImpl](../atl/reference/ispecifypropertypagesimpl-class.md)。
 
-2. 为添加一个条目`ISpecifyPropertyPages`到您的类的 COM 映射。
+1. 为添加一个条目`ISpecifyPropertyPages`到您的类的 COM 映射。
 
-3. 添加[PROP_PAGE](reference/property-map-macros.md#prop_page)属性映射为每个页面与控件关联的条目。
+1. 添加[PROP_PAGE](reference/property-map-macros.md#prop_page)属性映射为每个页面与控件关联的条目。
 
 > [!NOTE]
->  生成标准控件使用时[ATL 控件向导](../atl/reference/atl-control-wizard.md)，只需将 PROP_PAGE 项添加到属性映射。 该向导生成所需的代码执行其他步骤。
+> 生成标准控件使用时[ATL 控件向导](../atl/reference/atl-control-wizard.md)，只需将 PROP_PAGE 项添加到属性映射。 该向导生成所需的代码执行其他步骤。
 
 功能良好的容器将显示指定的属性页，在属性映射中 PROP_PAGE 项的顺序相同。 通常情况下，则应将标准属性页项后项自定义属性映射中页，以便用户先看到特定于控件的页。
 
@@ -51,4 +51,3 @@ ms.locfileid: "46069425"
 
 [属性页](../atl/atl-com-property-pages.md)<br/>
 [ATLPages 示例](../visual-cpp-samples.md)
-

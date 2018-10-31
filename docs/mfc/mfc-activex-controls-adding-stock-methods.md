@@ -16,19 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b42907273423d69ed93df5700b33556047338fe2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7967b63a14c296d7f0d73bb403aa5b74a6c3689b
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46391421"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204298"
 ---
 # <a name="mfc-activex-controls-adding-stock-methods"></a>MFC ActiveX 控件：添加常用方法
 
 常用的方法不同于自定义方法，它已经由类实现[COleControl](../mfc/reference/colecontrol-class.md)。 例如，`COleControl`包含支持为您的控件的 Refresh 方法的预定义的成员函数。 此常用的方法的调度映射项是 DISP_STOCKFUNC_REFRESH。
 
 >[!IMPORTANT]
-> ActiveX 是一项传统技术，不应使用新的开发。 本文将取代 ActiveX 的现代技术的详细信息，请参阅[ActiveX 控件](activex-controls.md)。
+> ActiveX 是一项传统技术，不应使用新的开发。 有关取代 ActiveX 的现代技术的详细信息，请参阅[ActiveX 控件](activex-controls.md)。
 
 `COleControl` 支持两种常用方法： DoClick 和刷新。 控件的用户，以立即更新控件的外观; 调用刷新DoClick 调用以引发该控件的 Click 事件。
 
@@ -51,7 +51,7 @@ ms.locfileid: "46391421"
 
 1. 从快捷菜单中，单击**外**，然后单击**添加方法**。
 
-     这将打开添加方法向导。
+   这将打开添加方法向导。
 
 1. 在中**方法名称**框中，单击**刷新**。
 

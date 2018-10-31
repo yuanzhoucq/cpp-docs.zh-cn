@@ -16,19 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4aa1116384ac9fd5212046f9a0b3354a3aa70d88
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 084ef5e2a6173340d33baea94bd1e5c5f14bff9b
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46416079"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204478"
 ---
 # <a name="mfc-activex-controls-advanced-property-implementation"></a>MFC ActiveX 控件：高级属性实现
 
 本指南介绍了与实现高级中的 ActiveX 控件的属性相关的主题。
 
 >[!IMPORTANT]
-> ActiveX 是一项传统技术，不应使用新的开发。 本文将取代 ActiveX 的现代技术的详细信息，请参阅[ActiveX 控件](activex-controls.md)。
+> ActiveX 是一项传统技术，不应使用新的开发。 有关取代 ActiveX 的现代技术的详细信息，请参阅[ActiveX 控件](activex-controls.md)。
 
 - [只读和只写属性](#_core_read2donly_and_write2donly_properties)
 
@@ -48,7 +48,7 @@ ms.locfileid: "46416079"
 
 1. 从快捷菜单中，单击**外**，然后单击**添加属性**。
 
-     这将打开[添加属性向导](../ide/names-add-property-wizard.md)。
+   这将打开[添加属性向导](../ide/names-add-property-wizard.md)。
 
 1. 在中**属性名称**框中，键入您的属性的名称。
 

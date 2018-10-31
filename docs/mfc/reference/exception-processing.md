@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1711e634fca1b4350e8aca5f75f0de8a4b3a0e5f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 749dd92a7fb04696a4f9d173e6496e239dc3f6bd
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46417353"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50073131"
 ---
 # <a name="exception-processing"></a>异常处理
 
@@ -169,7 +169,7 @@ CATCH_ALL(exception_object_pointer_name)
 
 ### <a name="remarks"></a>备注
 
-适当时，异常处理代码可以询问异常对象以获取有关异常的具体原因的详细信息。 调用 `THROW_LAST` 宏以将处理移动到下一个外部帧。 如果您使用**CATCH_ALL**，最终**尝试**END_CATCH_ALL 宏块。
+适当时，异常处理代码可以询问异常对象以获取有关异常的具体原因的详细信息。 调用 `THROW_LAST` 宏以将处理移动到下一个外部异常帧。 如果您使用**CATCH_ALL**，最终**尝试**END_CATCH_ALL 宏块。
 
 > [!NOTE]
 >  **CATCH_ALL**块被定义为用大括号分隔的 c + + 作用域。 如果您在此范围中声明变量，则只能在该范围中访问它们。
@@ -388,7 +388,6 @@ void AfxThrowInvalidArgException( );
 [宏和全局函数](mfc-macros-and-globals.md)<br/>
 [CInvalidArgException 类](cinvalidargexception-class.md)<br/>
 [引发](#throw)
-
 
 ##  <a name="afxthrowmemoryexception"></a>  AfxThrowMemoryException
 

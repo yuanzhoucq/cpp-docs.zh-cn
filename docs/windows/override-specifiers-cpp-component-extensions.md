@@ -1,7 +1,7 @@
 ---
-title: 重写说明符 （c + + 组件扩展） |Microsoft Docs
+title: 重写说明符 (C + + /cli 和 C + + /cli CX) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -16,14 +16,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bcbc46ea12dd053c0c0cf5066173ea2a28857452
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 0620bc7045dcb312667cfdfe670e1f19b0545cf2
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44316115"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327459"
 ---
-# <a name="override-specifiers--c-component-extensions"></a>重写说明符（C++ 组件扩展）
+# <a name="override-specifiers--ccli-and-ccx"></a>重写说明符 (C + + /cli 和 C + + /cli CX)
 
 *重写说明符*修改如何继承的类型和继承类型成员在派生类型中的行为。
 
@@ -65,4 +65,4 @@ ms.locfileid: "44316115"
 
 ## <a name="see-also"></a>请参阅
 
-[适用于运行时平台的组件扩展](../windows/component-extensions-for-runtime-platforms.md)
+[适用于.NET 和 UWP 组件扩展](../windows/component-extensions-for-runtime-platforms.md)

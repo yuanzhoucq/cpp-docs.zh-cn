@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5fa8370bb02e71c457f7967d5cb6b508e743333e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e37e6183ca840067ceca47dd48f3b24d7b3b98c7
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46373930"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50074535"
 ---
 # <a name="mfc-activex-controls-creating-an-automation-server"></a>MFC ActiveX 控件：创建自动化服务器
 
@@ -33,7 +33,7 @@ ms.locfileid: "46373930"
 
 1. [将方法添加](../mfc/mfc-activex-controls-methods.md)。
 
-1. 重写[IsInvokeAllowed](../mfc/reference/colecontrol-class.md#isinvokeallowed)。 有关详细信息，请参阅知识库文章 Q146120。
+1. 重写[IsInvokeAllowed](../mfc/reference/colecontrol-class.md#isinvokeallowed)。
 
 1. 生成控件。
 
@@ -43,17 +43,17 @@ ms.locfileid: "46373930"
 
 1. 在开头`InitInstance`函数中，添加以下行：
 
-     [!code-cpp[NVC_MFC_AxCont#17](../mfc/codesnippet/cpp/mfc-activex-controls-creating-an-automation-server_1.cpp)]
+   [!code-cpp[NVC_MFC_AxCont#17](../mfc/codesnippet/cpp/mfc-activex-controls-creating-an-automation-server_1.cpp)]
 
 1. 在类视图中，右键单击项目节点并选择**从类型库添加类**导入类型库。
 
-     这将添加到项目的包含文件扩展名为.h 和.cpp 文件。
+   这将添加到项目的包含文件扩展名为.h 和.cpp 文件。
 
 1. 在其中你将调用 ActiveX 控件中的一个或多个方法的类标头文件，添加以下行： `#include filename.h`，其中文件名是导入类型库时已创建的标头文件的名称。
 
 1. 在函数调用将对 ActiveX 控件中的方法中，添加用于创建控件的包装器类的对象代码并创建 ActiveX 对象。 例如，下面的 MFC 代码实例化`CCirc`控件，获取 Caption 属性，并在对话框中单击确定按钮时显示结果：
 
-     [!code-cpp[NVC_MFC_AxCont#18](../mfc/codesnippet/cpp/mfc-activex-controls-creating-an-automation-server_2.cpp)]
+   [!code-cpp[NVC_MFC_AxCont#18](../mfc/codesnippet/cpp/mfc-activex-controls-creating-an-automation-server_2.cpp)]
 
 如果将方法添加到 ActiveX 控件使用的应用程序中后，可以开始通过删除文件导入类型库时创建的应用程序中使用该控件的最新版本。 然后再次导入类型库。
 

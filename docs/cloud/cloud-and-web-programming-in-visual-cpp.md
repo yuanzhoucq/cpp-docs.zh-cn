@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bcdbc8012edbe17ce9fcc8298da68f45acad4b8b
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 2553ac5cdc20f3d5d38a6bad77dc79fc7c1737d8
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43683360"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052864"
 ---
 # <a name="cloud-and-web-programming-in-visual-c"></a>Visual C++ 中的云和 Web 编程
 
@@ -27,7 +27,7 @@ C++ 中有多种选项可使你连接到 Web 和云。
 
 - [Microsoft Azure 移动服务](http://www.windowsazure.com/develop/mobile/)
 
-   提供的本机 Api，可以使用通用 Windows 平台 (UWP) 应用或 Windows 桌面应用中连接到 Windows Azure 移动服务。 虽然该网站上的大部分示例采用 C# 编写，但也可以使用 C++。 有关详细信息，请参阅[快速入门： 使用 c + + 的移动服务中添加](https://msdn.microsoft.com/library/windows/apps/dn263181.aspx)。
+   提供的本机 Api，可以使用通用 Windows 平台 (UWP) 应用或 Windows 桌面应用中连接到 Windows Azure 移动服务。 虽然该网站上的大部分示例采用 C# 编写，但也可以使用 C++。 有关详细信息，请参阅 [快速入门：使用 C++ 添加移动服务](https://msdn.microsoft.com/library/windows/apps/dn263181.aspx)。
 
 - [C + + 的 Microsoft Azure 存储客户端库](https://blogs.msdn.microsoft.com/windowsazurestorage/2015/04/29/microsoft-azure-storage-client-library-for-c-v1-0-0-general-availability/)
 
@@ -52,11 +52,11 @@ C++ 中有多种选项可使你连接到 Web 和云。
   - 建立 Websocket 连接针对远程服务
   - 完全异步任务基于 PPL，包括内置的线程池 API
 
-   支持 Windows 桌面 （7 +）、 Windows Server （2012年 +）、 通用 Windows 平台、 Linux、 OSX、 Android 和 iOS。 
+   支持 Windows 桌面 （7 +）、 Windows Server （2012年 +）、 通用 Windows 平台、 Linux、 OSX、 Android 和 iOS。
 
 - [Windows::Web::Http::HttpClient](https://msdn.microsoft.com/library/windows/apps/windows.web.http.httpclient.aspx)
 
-   Windows 运行时 HTTP 客户端类在 .NET Framework 类上建模，后者在 System.Web 命名空间中具有相同的名称。 `HttpClient` 完全支持通过 HTTP 异步上载和下载，还完全支持可将自定义 HTTP 处理程序插入到管道中的管道筛选器。 Windows SDK 包括用于按流量计费的网络和 OAuth 身份验证等的样本筛选器。 对于面向通用 Windows 平台的应用，我们建议你使用`Windows::Web:HttpClient`类。 
+   Windows 运行时 HTTP 客户端类在 .NET Framework 类上建模，后者在 System.Web 命名空间中具有相同的名称。 `HttpClient` 完全支持通过 HTTP 异步上载和下载，还完全支持可将自定义 HTTP 处理程序插入到管道中的管道筛选器。 Windows SDK 包括用于按流量计费的网络和 OAuth 身份验证等的样本筛选器。 对于面向通用 Windows 平台的应用，我们建议你使用`Windows::Web:HttpClient`类。
 
 - [IXMLHTTPRequest2 接口](/previous-versions/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2)
 

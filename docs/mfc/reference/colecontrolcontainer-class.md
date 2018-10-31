@@ -82,12 +82,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3f016773102b5989d5272ebb51931e00ff1972ce
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: cd45453dd4d70424b47f74e46d0bd5f948f75499
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46409099"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077694"
 ---
 # <a name="colecontrolcontainer-class"></a>COleControlContainer 类
 
@@ -176,7 +176,6 @@ virtual void AttachControlSite(
     CWnd* pWnd,
     UINT nIDC = 0);
 
-
 void AttachControlSite(
     CWnd* pWnd,
     UINT nIDC = 0);
@@ -185,7 +184,7 @@ void AttachControlSite(
 ### <a name="parameters"></a>参数
 
 *pWnd*<br/>
-一个指向`CWnd`对象。
+指向 `CWnd` 对象的指针。
 
 *nIDC*<br/>
 要附加的控件 ID。
@@ -294,7 +293,6 @@ BOOL CreateControl(
     BSTR bstrLicKey =NULL,
     COleControlSite** ppNewSite =NULL);
 
-
 BOOL CreateControl(
     CWnd* pWndCtrl,
     REFCLSID clsid,
@@ -333,7 +331,7 @@ BOOL CreateControl(
 一个指向`CFile`包含控件的持久状态。 默认值为 NULL，指示该控件而不从任何持久性存储区中还原其状态初始化自身。 如果不为 NULL，它应该是一个指向`CFile`-派生对象，它包含控件的持久性数据的流或存储形式。 此数据可能已保存在客户端的上一个激活。 `CFile`可以包含其他数据，但必须在调用时将设置为持久性数据的第一个字节其读写指针`CreateControl`。
 
 *bStorage*<br/>
-指示是否在数据*pPersist*应解释为`IStorage`或`IStream`数据。 如果中的数据*pPersist*是存储*bStorage*应为 TRUE。 如果中的数据*pPersist*是一个流*bStorage*应为 FALSE。 默认值为 FALSE。
+指示是否在数据*pPersist*应解释为`IStorage`或`IStream`数据。 如果中的数据*pPersist*是存储*bStorage*应为 TRUE。 如果中的数据*pPersist*是一个流*bStorage*应为 FALSE。 默认值是 FALSE。
 
 *bstrLicKey*<br/>
 可选的许可证密钥数据。 仅用于创建控件需要运行时许可证密钥的情况下，需要此数据。 如果控件支持授权，则必须提供要成功完成的控件创建的许可证密钥。 默认值为 NULL。

@@ -13,12 +13,12 @@ f1_keywords: []
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 7ab78284929de8e5991abb0d1a8c89ead500096a
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 78918acc70bddb25841b2bcaaf8f7cd7b627d63b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314698"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50061555"
 ---
 # <a name="cc-properties-linux-c"></a>C/C++ 属性 (Linux C++)
 
@@ -85,4 +85,4 @@ C++ 语言标准 | 确定 C++ 语言标准。 | **默认**<br/>C++03 - C++03 语
 编译为 | 选择 .c 和 .cpp 文件的编译语言选项。  “默认”将根据 .c 或 .cpp 扩展名执行检测。 （-x c、-x c++） | 默认 - 默认代码。<br/>编译为 C 代码 - 编译为 C 代码。<br/>编译为 C++ 代码 - 编译为 C++ 代码。<br/>
 强制包含文件 | 一个或多个强制包含文件 (-include [name])
 
-## <a name="additional-options"></a>附加选项 
+## <a name="additional-options"></a>附加选项

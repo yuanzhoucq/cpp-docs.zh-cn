@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b656af864f8a0dd7c5a69866976b4c1e624b87b9
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 30e843c6df70548257de1bf1af8c5f0e83555652
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764288"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48234054"
 ---
 # <a name="implementing-a-dialog-box"></a>实现对话框
 
@@ -30,7 +30,7 @@ ms.locfileid: "43764288"
 
 ## <a name="adding-a-dialog-box-with-the-atl-dialog-wizard"></a>添加 ATL 对话框向导对话框
 
-在中[添加类对话框](../ide/add-class-dialog-box.md)，选择要添加到 ATL 项目对话框中的 ATL 对话框对象。 ATL 对话框向导根据需要填充，然后单击**完成**。 该向导将添加一个类派生自[CAxDialogImpl](../atl/reference/caxdialogimpl-class.md)到你的项目。 打开从资源视图**视图**菜单中，找到您的对话框，然后双击它以在资源编辑器中打开它。
+在中[添加类对话框](../ide/add-class-dialog-box.md)，选择要添加到 ATL 项目对话框中的 ATL 对话框对象。 ATL 对话框向导根据需要填充，然后单击**完成**。 该向导将添加一个类派生自[CAxDialogImpl](../atl/reference/caxdialogimpl-class.md)到你的项目。 打开**资源视图**从**视图**菜单中，找到您的对话框，然后双击它以在资源编辑器中打开它。
 
 > [!NOTE]
 >  如果您的对话框派生自`CAxDialogImpl`、 它可以承载这两个 ActiveX 和 Windows 控制。 如果你不希望在对话框类中的 ActiveX 控件支持的系统开销，使用[CSimpleDialog](../atl/reference/csimpledialog-class.md)或[CDialogImpl](../atl/reference/cdialogimpl-class.md)相反。

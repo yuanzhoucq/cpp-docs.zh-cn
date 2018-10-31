@@ -1,7 +1,7 @@
 ---
-title: 上下文相关关键字 （c + + 组件扩展） |Microsoft Docs
+title: 上下文相关的关键字 (C + + /cli 和 C + + /cli CX) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -17,14 +17,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 785836f575c0dec3a0e08c32063116f01e16d4fe
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 5d02939e61da4a247b46da5637c38d01e7990c49
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42605234"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327929"
 ---
-# <a name="context-sensitive-keywords--c-component-extensions"></a>上下文相关的关键字（C++ 组件扩展）
+# <a name="context-sensitive-keywords--ccli-and-ccx"></a>上下文相关的关键字 (C + + /cli 和 C + + /cli CX)
 
 *上下文相关的关键字*是仅在特定上下文中识别的语言元素。 在特定的上下文以外，区分上下文关键字可以是用户定义的符号。
 
@@ -48,7 +48,7 @@ ms.locfileid: "42605234"
 
 - `internal`
 
-- [文本](../windows/literal-cpp-component-extensions.md)
+- [名称](../windows/literal-cpp-component-extensions.md)
 
 - [override](../windows/override-cpp-component-extensions.md)
 
@@ -111,4 +111,4 @@ int main() {
 
 ## <a name="see-also"></a>请参阅
 
-[适用于运行时平台的组件扩展](../windows/component-extensions-for-runtime-platforms.md)
+[适用于.NET 和 UWP 组件扩展](../windows/component-extensions-for-runtime-platforms.md)

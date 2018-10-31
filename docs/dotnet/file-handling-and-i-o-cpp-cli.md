@@ -35,12 +35,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 1ee17fe577f30735ca78661394c432519d0a4050
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f6fa8dcf1488b693b53cde591c548122767f1af7
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46396989"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075107"
 ---
 # <a name="file-handling-and-io-ccli"></a>文件处理和 I/O (C++/CLI)
 演示如何使用.NET Framework 的各种文件操作。
@@ -182,6 +182,7 @@ int main()
    return 0;
 }
 ```
+
 ## <a name="read_text"></a> 读取文本文件
 
 下面的代码示例演示如何打开和使用一次读取一行文本文件<xref:System.IO.StreamReader>类中定义的<xref:System.IO?displayProperty=fullName>命名空间。 此类的实例用于打开文本文件，然后<xref:System.IO.StreamReader.ReadLine%2A?displayProperty=fullName>方法用于检索每个行。

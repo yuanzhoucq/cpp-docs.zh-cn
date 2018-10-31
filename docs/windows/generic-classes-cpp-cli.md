@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3dbf6d861dd446745ba0cc3581c7e3e5511c01d3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f5d87663402081a06270f09547b2d61477d5ea3f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46409358"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50056901"
 ---
 # <a name="generic-classes-ccli"></a>泛型类 (C++/CLI)
 
@@ -58,7 +58,7 @@ class-body
 *约束子句*<br/>
 （不以逗号分隔） 的列表**其中**子句指定的类型参数约束。 采用格式：
 
-> **其中***类型参数标识符* **:** *约束列表***...** 
+> **其中***类型参数标识符* **:** *约束列表***...**
 
 *约束列表*<br/>
 *类或接口*[`,` *...*]
@@ -346,7 +346,7 @@ int main() {
 
 ```Output
 Name: Jeff Smith
-Amount: $123.00**  
+Amount: $123.00**
 ```
 
 ## <a name="generic-methods-in-generic-classes"></a>泛型类中的泛型方法

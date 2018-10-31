@@ -23,72 +23,72 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c6d8a07ded3da02c21c4ee8c528474efc6e52b6c
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 727d50025ce7fc4808444ac7ad73d828c6f0c545
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46021559"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053508"
 ---
 # <a name="idbcreatecommandimpl-class"></a>IDBCreateCommandImpl 类
 
-提供的实现[IDBCreateCommand](/previous-versions/windows/desktop/ms711625\(v=vs.85\))接口。  
-  
+提供的实现[IDBCreateCommand](/previous-versions/windows/desktop/ms711625)接口。
+
 ## <a name="syntax"></a>语法
 
 ```cpp
-template <class T, class CommandClass >  
-class ATL_NO_VTABLE IDBCreateCommandImpl   
-   : public IDBCreateCommand  
-```  
-  
-### <a name="parameters"></a>参数  
+template <class T, class CommandClass >
+class ATL_NO_VTABLE IDBCreateCommandImpl
+   : public IDBCreateCommand
+```
+
+### <a name="parameters"></a>参数
 
 *T*<br/>
-会话对象派生自`IDBCreateCommandImpl`。  
-  
+会话对象派生自`IDBCreateCommandImpl`。
+
 *CommandClass*<br/>
-命令类。  
+命令类。
 
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>要求
 
-**标头：** atldb.h  
-  
-## <a name="members"></a>成员  
-  
-### <a name="interface-methods"></a>接口方法  
-  
-|||  
-|-|-|  
-|[CreateCommand](#createcommand)|创建新的命令。|  
-  
-## <a name="remarks"></a>备注  
+**标头：** atldb.h
 
-要获取新的命令的会话对象上一可选接口。  
+## <a name="members"></a>成员
+
+### <a name="interface-methods"></a>接口方法
+
+|||
+|-|-|
+|[CreateCommand](#createcommand)|创建新的命令。|
+
+## <a name="remarks"></a>备注
+
+要获取新的命令的会话对象上一可选接口。
 
 ## <a name="createcommand"></a> Idbcreatecommandimpl:: Createcommand
 
-创建新的命令并返回所请求的接口。  
-  
-### <a name="syntax"></a>语法  
-  
-```cpp
-STDMETHOD(CreateCommand)(IUnknown * pUnkOuter,   
-   REFIID riid,   
-   IUnknown ** ppvCommand);  
-```  
-  
-#### <a name="parameters"></a>参数  
+创建新的命令并返回所请求的接口。
 
-请参阅[idbcreatecommand:: Createcommand](/previous-versions/windows/desktop/ms709772\(v=vs.85\))中*OLE DB 程序员参考*。  
-  
-某些参数对应于*OLE DB 程序员参考*中所述的不同名称的参数`IDBCreateCommand::CreateCommand`:  
-  
-|OLE DB 模板参数|*OLE DB 程序员参考*参数|  
-|--------------------------------|------------------------------------------------|  
-|*ppvCommand*|*ppCommand*|  
-  
-## <a name="see-also"></a>请参阅  
+### <a name="syntax"></a>语法
+
+```cpp
+STDMETHOD(CreateCommand)(IUnknown * pUnkOuter, 
+   REFIID riid, 
+   IUnknown ** ppvCommand);
+```
+
+#### <a name="parameters"></a>参数
+
+请参阅[idbcreatecommand:: Createcommand](/previous-versions/windows/desktop/ms709772)中*OLE DB 程序员参考*。
+
+某些参数对应于*OLE DB 程序员参考*中所述的不同名称的参数`IDBCreateCommand::CreateCommand`:
+
+|OLE DB 模板参数|*OLE DB 程序员参考*参数|
+|--------------------------------|------------------------------------------------|
+|*ppvCommand*|*ppCommand*|
+
+## <a name="see-also"></a>请参阅
 
 [OLE DB 提供程序模板](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [OLE DB 提供程序模板体系结构](../../data/oledb/ole-db-provider-template-architecture.md)

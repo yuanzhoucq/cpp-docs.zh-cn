@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2e91ade065c61bbec974653b0fbf6fdfe0ac44a7
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ae49db47905f38c4b614609a7a4b73c4597292e3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46372170"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075901"
 ---
 # <a name="ole-background-implementation-strategies"></a>OLE 后台：实现策略
 
@@ -29,19 +29,19 @@ ms.locfileid: "46372170"
 
 - 您要编写一个新应用程序。
 
-     这种情况下的工作量通常最小。 您运行 MFC 应用程序向导并选择高级功能或复合文档支持以创建主干应用程序。 有关这些选项及其作用的信息，请参阅文章[创建 MFC EXE 程序](../mfc/reference/mfc-application-wizard.md)。
+   这种情况下的工作量通常最小。 您运行 MFC 应用程序向导并选择高级功能或复合文档支持以创建主干应用程序。 有关这些选项及其作用的信息，请参阅文章[创建 MFC EXE 程序](../mfc/reference/mfc-application-wizard.md)。
 
 - 您有一个使用不支持 OLE 的 Microsoft 基础类库 2.0 版或更高版本编写的程序。
 
-     如前文所述使用 MFC 应用程序向导创建新应用程序，然后将新应用程序中的代码复制并粘贴到你的现有应用程序中。 这对服务器、容器或自动化应用程序都有效。 请参阅 MFC [SCRIBBLE](../visual-cpp-samples.md)示例有关此策略的示例。
+   如前文所述使用 MFC 应用程序向导创建新应用程序，然后将新应用程序中的代码复制并粘贴到你的现有应用程序中。 这对服务器、容器或自动化应用程序都有效。 请参阅 MFC [SCRIBBLE](../visual-cpp-samples.md)示例有关此策略的示例。
 
 - 您有一个实现 OLE 1.0 版支持的 Microsoft 基础类库程序。
 
-     请参阅[MFC 技术说明 41](../mfc/tn041-mfc-ole1-migration-to-mfc-ole-2.md)有关此转换策略。
+   请参阅[MFC 技术说明 41](../mfc/tn041-mfc-ole1-migration-to-mfc-ole-2.md)有关此转换策略。
 
 - 您有一个并非使用 Microsoft 基础类编写并且不一定实现了 OLE 支持的应用程序。
 
-     这种情况下的工作量最大。 一个方法是创建新应用程序（与在第一个策略中一样），然后将现有代码复制并粘贴到该应用程序中。 如果现有代码是在 C 中编写的，则可能需要修改它，以便让它能够编译为 C++ 代码。 如果 C 代码调用了 Windows API，则不必将其更改为使用 Microsoft 基础类。 此方法可能需要对您的程序进行一些重构以支持 Microsoft 基础类 2.0 版和更高版本使用的文档/视图体系结构。 此体系结构的详细信息，请参阅[技术说明 25](../mfc/tn025-document-view-and-frame-creation.md)。
+   这种情况下的工作量最大。 一个方法是创建新应用程序（与在第一个策略中一样），然后将现有代码复制并粘贴到该应用程序中。 如果现有代码是在 C 中编写的，则可能需要修改它，以便让它能够编译为 C++ 代码。 如果 C 代码调用了 Windows API，则不必将其更改为使用 Microsoft 基础类。 此方法可能需要对您的程序进行一些重构以支持 Microsoft 基础类 2.0 版和更高版本使用的文档/视图体系结构。 此体系结构的详细信息，请参阅[技术说明 25](../mfc/tn025-document-view-and-frame-creation.md)。
 
 一旦您已决定一个策略，您应该阅读[容器](../mfc/containers.md)或[服务器](../mfc/servers.md)（具体取决于你正在编写的应用程序的类型） 的文章或检查示例程序，或两者。 MFC OLE 示例[OCLIENT](../visual-cpp-samples.md)并[HIERSVR](../visual-cpp-samples.md)演示如何分别实现容器和服务器的各个方面。 在这些文章中的不同地方，将会提到这些示例中的某些函数作为要讨论的技术的示例。
 

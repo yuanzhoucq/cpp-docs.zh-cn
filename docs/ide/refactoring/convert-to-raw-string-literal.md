@@ -10,12 +10,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b98825719e7b3c0d8eb760a2ec50644b5eddd54e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 75037ea542a5bd2160d9a89138b12f82867002a5
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33328404"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46388441"
 ---
 # <a name="convert-to-raw-string-literal"></a>转换为原始字符串文本
 功能：可以将任何字符串转换为 C++ 原始字符串文本。
@@ -37,6 +37,6 @@ ms.locfileid: "33328404"
      * 右键单击代码，选择“快速操作和重构”菜单，然后从上下文菜单选择“转换为原始字符串文本”。
      * 单击左侧空白处显示的![灯泡](images/bulb.png)图标，然后从上下文菜单选择“转换为原始字符串文本”。
 
-1. 该字符串将立即转换为原始字符串文本。  
+1. 该字符串将立即转换为原始字符串文本。
 
    ![原始字符串文本结果](images/stringliteral_result.png)

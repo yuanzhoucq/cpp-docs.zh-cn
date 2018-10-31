@@ -1,7 +1,7 @@
 ---
-title: 密封 （c + + 组件扩展） |Microsoft Docs
+title: 密封 (C + + /cli 和 C + + /cli CX) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -18,19 +18,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 134ee819edc0698c4ffa067d38b715968f22590f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ee0ea65267320a4730c543cec978c2675ef1cc57
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46439557"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50071948"
 ---
-# <a name="sealed--c-component-extensions"></a>sealed（C++ 组件扩展）
+# <a name="sealed--ccli-and-ccx"></a>密封 (C + + /cli 和 C + + /cli CX)
 
 **密封**是 ref 类的上下文相关关键字，指示，则不能重写虚拟成员，或类型不能用作基类型。
 
 > [!NOTE]
-> ISO C + + 11 标准语言具有[最终](../cpp/final-specifier.md)关键字，这在 Visual Studio 中受支持。 使用**最终**标准类和**密封**ref 类上。
+> ISO C + + 11 标准语言引入[最终](../cpp/final-specifier.md)关键字。 使用**最终**标准类和**密封**ref 类上。
 
 ## <a name="all-runtimes"></a>所有运行时
 
@@ -53,7 +53,7 @@ virtual return-type identifier() sealed {...};
 
 在第一个语法示例中，密封了类。 在第二个示例中，密封了虚函数。
 
-**密封**关键字是有效的本机目标，以及用于 Windows 运行时和公共语言运行时 (CLR)。 有关详细信息，请参阅[重写说明符和本机编译](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md)。
+使用**密封**ref 类和其虚拟成员函数的关键字。 有关详细信息，请参阅[重写说明符和本机编译](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md)。
 
 您可以在编译时检测类型密封的使用是否`__is_sealed(type)`类型特征。 有关详细信息，请参阅[编译器支持类型特征](../windows/compiler-support-for-type-traits-cpp-component-extensions.md)。
 
@@ -104,11 +104,11 @@ public:
       System::Console::WriteLine("Y::f override of I1::f");
    }
 
-   /*  
+   /*
    // the following override generates a compiler error
    virtual void g() override {
       System::Console::WriteLine("Y::g override of I1::g");
-   } 
+   }
    */
 };
 
@@ -150,4 +150,4 @@ public:
 
 ## <a name="see-also"></a>请参阅
 
-[适用于运行时平台的组件扩展](../windows/component-extensions-for-runtime-platforms.md)
+[ .NET 和 UWP 的组件扩展](../windows/component-extensions-for-runtime-platforms.md)

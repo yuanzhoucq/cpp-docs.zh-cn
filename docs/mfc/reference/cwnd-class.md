@@ -828,12 +828,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6cbe2269bfe4a67ba4e8c6952980216fce92165f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f619eeba8f239b145ceb44485a9cc1eadd2cc82d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448605"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083602"
 ---
 # <a name="cwnd-class"></a>CWnd 类
 
@@ -1662,7 +1662,7 @@ void BringWindowToTop();
 
 此外，`BringWindowToTop` 将激活弹出的、顶层和 MDI 子窗口。 `BringWindowToTop` 成员函数应用于显露被任何重叠窗口部分或完全遮盖的任意窗口。
 
-此函数只调用 Win32 [BringWindowToTop](https://msdn.microsoft.com/library/windows/desktop/ms632673\(v=vs.85\).aspx)函数。 调用[SetWindowPos](#setwindowpos)函数来更改窗口的 Z 顺序中的位置。 `BringWindowToTop` 函数不更改窗口样式，即可使其成为顶层窗口。 有关详细信息，请参阅[HWND_TOP 与 HWND_TOPMOST 之间的区别是什么](http://blogs.msdn.com/b/oldnewthing/archive/2005/11/21/495246.aspx)
+此函数只调用 Win32 [BringWindowToTop](https://msdn.microsoft.com/library/windows/desktop/ms632673)函数。 调用[SetWindowPos](#setwindowpos)函数来更改窗口的 Z 顺序中的位置。 `BringWindowToTop` 函数不更改窗口样式，即可使其成为顶层窗口。 有关详细信息，请参阅[HWND_TOP 与 HWND_TOPMOST 之间的区别是什么](http://blogs.msdn.com/b/oldnewthing/archive/2005/11/21/495246.aspx)
 
 ### <a name="example"></a>示例
 
@@ -2035,7 +2035,6 @@ BOOL CreateControl(
     BOOL bStorage = FALSE,
     BSTR bstrLicKey = NULL);
 
-
 BOOL CreateControl(
     REFCLSID clsid,
     LPCTSTR pszWindowName,
@@ -2046,7 +2045,6 @@ BOOL CreateControl(
     CFile* pPersist = NULL,
     BOOL bStorage = FALSE,
     BSTR bstrLicKey = NULL);
-
 
 BOOL CreateControl(
     REFCLSID clsid,
@@ -2091,7 +2089,7 @@ BOOL CreateControl(
 一个指向[CFile](../../mfc/reference/cfile-class.md)包含控件的持久状态。 默认值为 NULL，指示该控件而不从任何持久性存储区中还原其状态初始化自身。 如果不为 NULL，它应该是一个指向`CFile`-派生的对象，其中包含控件的持久性数据的流或存储形式。 此数据可能已保存在客户端的上一个激活。 `CFile`可以包含其他数据，但必须在调用时将设置为持久性数据的第一个字节其读写指针`CreateControl`。
 
 *bStorage*<br/>
-指示是否在数据*pPersist*应解释为 IStorage 或 IStream 数据。 如果中的数据*pPersist*是存储*bStorage*应为 TRUE。 如果中的数据*pPersist*是一个流*bStorage*应为 FALSE。 默认值为 FALSE。
+指示是否在数据*pPersist*应解释为 IStorage 或 IStream 数据。 如果中的数据*pPersist*是存储*bStorage*应为 TRUE。 如果中的数据*pPersist*是一个流*bStorage*应为 FALSE。 默认值是 FALSE。
 
 *bstrLicKey*<br/>
 可选的许可证密钥数据。 仅用于创建控件需要运行时许可证密钥的情况下，需要此数据。 如果控件支持授权，则必须提供要成功完成的控件创建的许可证密钥。 默认值为 NULL。
@@ -2140,7 +2138,6 @@ virtual BOOL CreateEx(
     HWND hWndParent,
     HMENU nIDorHMenu,
     LPVOID lpParam = NULL);
-
 
 virtual BOOL CreateEx(
     DWORD dwExStyle,
@@ -3207,7 +3204,7 @@ Windows 窗口的 HWND。
 
 ### <a name="return-value"></a>返回值
 
-一个指向`CWnd`对象。
+指向 `CWnd` 对象的指针。
 
 ### <a name="remarks"></a>备注
 
@@ -4417,7 +4414,7 @@ CWnd* GetOwner() const;
 
 ### <a name="return-value"></a>返回值
 
-一个指向`CWnd`对象。
+指向 `CWnd` 对象的指针。
 
 ### <a name="remarks"></a>备注
 
@@ -4467,7 +4464,7 @@ CWnd* GetParentOwner() const;
 
 ### <a name="return-value"></a>返回值
 
-一个指向`CWnd`对象。 如果 `CWnd` 对象未附加到该句柄，则会创建并附加一个临时 `CWnd` 对象。 该指针可能是暂时的，不应存储起来供将来使用。
+指向 `CWnd` 对象的指针。 如果 `CWnd` 对象未附加到该句柄，则会创建并附加一个临时 `CWnd` 对象。 该指针可能是暂时的，不应存储起来供将来使用。
 
 ### <a name="remarks"></a>备注
 
@@ -4492,7 +4489,7 @@ void GetProperty(
 标识要检索的属性。
 
 *vtProp*<br/>
-指定要检索的属性的类型。 有关可能的值，请参阅备注部分[coledispatchdriver:: Invokehelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)。
+指定要检索的属性的类型。 有关可能的值，请参阅备注部分 [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)。
 
 *pvProp*<br/>
 将该变量的地址将接收属性值。 它必须匹配指定的类型*vtProp*。
@@ -5363,7 +5360,7 @@ void AFX_CDECL InvokeHelper(
 描述对调用上下文的标志`IDispatch::Invoke`。
 
 *vtRet*<br/>
-指定返回值的类型。 有关可能的值，请参阅备注部分[coledispatchdriver:: Invokehelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)。
+指定返回值的类型。 有关可能的值，请参阅备注部分 [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)。
 
 *pvRet*<br/>
 将该变量的地址将接收的属性值或返回值。 它必须匹配指定的类型*vtRet*。
@@ -5376,9 +5373,9 @@ void AFX_CDECL InvokeHelper(
 
 ### <a name="remarks"></a>备注
 
-*PbParamInfo*参数指定的参数传递到方法或属性的类型。 表示可变的参数列表 *...* 语法声明中。
+*PbParamInfo*参数指定的参数传递到方法或属性的类型。 参数的变量列表在语法声明中通过 *...* 进行表示。
 
-此函数将参数转换为 VARIANTARG 值，然后调用`IDispatch::Invoke`ActiveX 控件上的方法。 如果在调用`IDispatch::Invoke`失败，此函数将引发异常。 如果返回 SCODE （状态代码），那么`IDispatch::Invoke`是 DISP_E_EXCEPTION，此函数将引发[COleException](../../mfc/reference/coleexception-class.md)对象中，否则为它将引发[COleDispatchException](../../mfc/reference/coledispatchexception-class.md)。
+此函数将参数转换为 VARIANTARG 值，然后调用`IDispatch::Invoke`ActiveX 控件上的方法。 如果 `IDispatch::Invoke` 调用失败，则此函数会引发异常。 如果返回 SCODE （状态代码），那么`IDispatch::Invoke`是 DISP_E_EXCEPTION，此函数将引发[COleException](../../mfc/reference/coleexception-class.md)对象中，否则为它将引发[COleDispatchException](../../mfc/reference/coledispatchexception-class.md)。
 
 > [!NOTE]
 > 应仅在调用此函数`CWnd`对象，表示 ActiveX 控件。
@@ -5816,7 +5813,6 @@ void MoveWindow(
     int nWidth,
     int nHeight,
     BOOL bRepaint = TRUE);
-
 
 void MoveWindow(
     LPCRECT lpRect,
@@ -8805,7 +8801,7 @@ afx_msg void OnPaintClipboard(
 指定指向剪贴板应用程序窗口的指针。 该指针可能是暂时的，不应存储起来供将来使用。
 
 *hPaintStruct*<br/>
-标识[PAINTSTRUCT](../../mfc/reference/paintstruct-structure.md)数据结构，它定义要绘制的客户端区域的哪个部分。
+标识一个 [PAINTSTRUCT](../../mfc/reference/paintstruct-structure.md) 数据结构，该数据结构可定义要绘制的工作区部分。
 
 ### <a name="remarks"></a>备注
 
@@ -10602,7 +10598,7 @@ virtual void PreSubclassWindow();
 
 ##  <a name="pretranslatemessage"></a>  CWnd::PreTranslateMessage
 
-类使用[CWinApp](../../mfc/reference/cwinapp-class.md)窗口消息调度到之前转换[TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)并[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows 函数。
+在将窗口消息发送到 [TranslateMessage](../../mfc/reference/cwinapp-class.md) 和 [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) Windows 函数之前，由 [CWinApp](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) 类用于对此消息进行转换。
 
 ```
 virtual BOOL PreTranslateMessage(MSG* pMsg);
@@ -11592,7 +11588,7 @@ void AFX_CDECL SetProperty(
 标识要设置的属性。
 
 *vtProp*<br/>
-指定要设置的属性的类型。 有关可能的值，请参阅备注部分[coledispatchdriver:: Invokehelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)。
+指定要设置的属性的类型。 有关可能的值，请参阅备注部分 [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)。
 
 *...*<br/>
 指定的类型的单个参数*vtProp*。

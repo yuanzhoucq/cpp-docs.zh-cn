@@ -1,7 +1,7 @@
 ---
 title: 如何： 声明和使用内部指针及托管的数组 (C + + CLI) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 691b2606e6b479937394c2ba021934e8f98b0fe5
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: a18170d66ef2b2fe374085557d7fca4411c48ec6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42599077"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080619"
 ---
 # <a name="how-to-declare-and-use-interior-pointers-and-managed-arrays-ccli"></a>如何：声明和使用内部指针及托管数组 (C++/CLI)
 
@@ -44,7 +44,7 @@ int main() {
    array<int>^ arr = gcnew array<int>(SIZE);
 
    // initialize the array
-   for (int i = 0 ; i < SIZE ; i++)  
+   for (int i = 0 ; i < SIZE ; i++)
       arr[i] = i + 1;
 
    // create an interior pointer into the array

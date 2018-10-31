@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c60cf5d6f61f16aac18524e8b6e75638ec13d27e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9907424a583cc16f170890a739fa7ece8cc93ead
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46433330"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075120"
 ---
 # <a name="using-the-classes-to-write-applications-for-windows"></a>使用类编写 Windows 应用程序
 
@@ -66,17 +66,17 @@ ms.locfileid: "46433330"
 
 - [内存管理](../mfc/memory-management.md)
 
-     除了为您提供在编写应用程序的 Windows 操作系统的一个优点，MFC 还使得更容易编写专门使用 OLE 链接和嵌入技术的应用程序。 您可使你的应用程序 OLE 可视编辑容器、 OLE 可视编辑服务器，或两者，并可以添加自动化，以便其他应用程序可以使用你的应用程序中的对象或甚至远程驱动器。
+   除了为您提供在编写应用程序的 Windows 操作系统的一个优点，MFC 还使得更容易编写专门使用 OLE 链接和嵌入技术的应用程序。 您可使你的应用程序 OLE 可视编辑容器、 OLE 可视编辑服务器，或两者，并可以添加自动化，以便其他应用程序可以使用你的应用程序中的对象或甚至远程驱动器。
 
 - [MFC ActiveX 控件](../mfc/mfc-activex-controls.md)
 
-     OLE 控件开发工具包 (CDK) 现与框架完全集成。 本文章系列提供了使用 MFC ActiveX 控件开发的概述。 （ActiveX 控件是以前称为 OLE 控件。）
+   OLE 控件开发工具包 (CDK) 现与框架完全集成。 本文章系列提供了使用 MFC ActiveX 控件开发的概述。 （ActiveX 控件是以前称为 OLE 控件。）
 
 - [数据库编程](../data/data-access-programming-mfc-atl.md)
 
-     MFC 还提供了两个集的数据库类，用于简化编写数据访问应用程序。 使用 ODBC 数据库类，您可以通过开放式数据库连接 (ODBC) 驱动程序连接到数据库、 从表中选择记录和记录中显示信息屏幕上窗体。 使用的数据访问对象 (DAO) 类，您可以使用数据库通过 Microsoft Jet 数据库引擎或外部 (非 Jet) 数据源，包括 ODBC 数据源。
+   MFC 还提供了两个集的数据库类，用于简化编写数据访问应用程序。 使用 ODBC 数据库类，您可以通过开放式数据库连接 (ODBC) 驱动程序连接到数据库、 从表中选择记录和记录中显示信息屏幕上窗体。 使用的数据访问对象 (DAO) 类，您可以使用数据库通过 Microsoft Jet 数据库引擎或外部 (非 Jet) 数据源，包括 ODBC 数据源。
 
-     此外，MFC 完全启用了写入使用 Unicode 的应用程序和多字节字符集 (MBCS)，特别是双字节字符集 (DBCS)。
+   此外，MFC 完全启用了写入使用 Unicode 的应用程序和多字节字符集 (MBCS)，特别是双字节字符集 (DBCS)。
 
 MFC 文档的常规指南，请参阅[常规 MFC 主题](../mfc/general-mfc-topics.md)。
 

@@ -15,28 +15,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ebe324ce569077654db8d9462a9c32b570748bba
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: ecb6dc023b99964d5674e5f6f93cc21787de9af3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46092396"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083486"
 ---
 # <a name="advanced-provider-techniques"></a>高级提供程序技术
 
-有关高级提供程序技术的详细信息，请参阅以下主题：  
-  
-- [支持通知](../../data/oledb/supporting-notifications.md)  
-  
-- [支持架构行集](../../data/oledb/supporting-schema-rowsets.md)  
-  
-- [用于书签的提供程序支持](../../data/oledb/provider-support-for-bookmarks.md)  
-  
-- [通过 OLE DB 一致性测试](../../data/oledb/passing-ole-db-conformance-tests.md)  
-  
-- [OLE DB 资源池和服务](../../data/oledb/ole-db-resource-pooling-and-services.md)  
-  
-## <a name="see-also"></a>请参阅  
+有关高级提供程序技术的详细信息，请参阅以下主题：
+
+- [支持通知](../../data/oledb/supporting-notifications.md)
+
+- [支持架构行集](../../data/oledb/supporting-schema-rowsets.md)
+
+- [用于书签的提供程序支持](../../data/oledb/provider-support-for-bookmarks.md)
+
+- [通过 OLE DB 一致性测试](../../data/oledb/passing-ole-db-conformance-tests.md)
+
+- [OLE DB 资源池和服务](../../data/oledb/ole-db-resource-pooling-and-services.md)
+
+## <a name="see-also"></a>请参阅
 
 [OLE DB 提供程序模板参考](../../data/oledb/ole-db-provider-templates-reference.md)<br/>
 [OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)

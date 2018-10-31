@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6744fdd80e16e292399a261e10dc6b974af1dca4
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 18d9d2c1b3c633ba3399e93d34317c2360d45215
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46371922"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059839"
 ---
 # <a name="thread-local-storage-tls"></a>线程本地存储 (TLS)
 
@@ -100,7 +100,7 @@ __declspec( thread ) int tls_i = 1;
     int *p = &tls_i;       //This will generate an error in C.
     ```
 
-     此限制在 C++ 中不适用。 由于 C++ 允许所有对象的动态初始化，可以通过利用使用线程本地变量的地址的表达式将对象初始化。 就像完成线程本地对象的构造一样完成此操作。 例如，当编译成 C++ 源文件时，前面所示的代码不生成错误。 请注意，仅当从中获取地址的线程仍然存在时，线程本地变量的地址才有效。
+   此限制在 C++ 中不适用。 由于 C++ 允许所有对象的动态初始化，可以通过利用使用线程本地变量的地址的表达式将对象初始化。 就像完成线程本地对象的构造一样完成此操作。 例如，当编译成 C++ 源文件时，前面所示的代码不生成错误。 请注意，仅当从中获取地址的线程仍然存在时，线程本地变量的地址才有效。
 
 - 标准 C 允许使用涉及引用自身的表达式进行对象或变量的初始化，但只适用于非静态范围的对象。 虽然 C++ 通常允许使用涉及引用自身的表达式进行此类的对象动态初始化，但是不允许对线程本地对象进行这种初始化。 例如：
 
@@ -110,11 +110,11 @@ __declspec( thread ) int tls_i = 1;
     __declspec( thread )int tls_i = sizeof( tls_i )       // Legal in C and C++
     ```
 
-     请注意，包含正在初始化的对象的 `sizeof` 表达式，不表示对自身的引用，并在 C 和 C++ 中都启用。
+   请注意，包含正在初始化的对象的 `sizeof` 表达式，不表示对自身的引用，并在 C 和 C++ 中都启用。
 
-     因为将来可能要对线程本地存储功能进行增强，C++ 不允许对线程数据进行此类的动态初始化。
+   因为将来可能要对线程本地存储功能进行增强，C++ 不允许对线程数据进行此类的动态初始化。
 
-- Windows Vista 之前的 Windows 操作系统上`__declspec`（线程） 具有一些限制。 如果 DLL 将任何数据或对象声明为 `__declspec`（线程），可能会导致保护错误（如果动态加载）。 与加载 DLL 后[LoadLibrary](https://msdn.microsoft.com/library/windows/desktop/ms684175)，它会导致系统故障，只要代码引用`__declspec`（线程） 数据。 由于线程的全局变量空间在运行时进行分配，此空间的大小基于对应用程序的需求加静态链接的所有 DLL 的需求的计算。 使用 `LoadLibrary` 时，不能扩展此空间以允许用 `__declspec`（线程）声明的线程本地变量。 使用 TLS Api，如[TlsAlloc](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsalloc)，在您的 DLL 来分配 TLS，如果使用可能加载了 DLL `LoadLibrary`。
+- Windows Vista 之前的 Windows 操作系统上`__declspec`（线程） 具有一些限制。 如果 DLL 将任何数据或对象声明为 `__declspec`（线程），可能会导致保护错误（如果动态加载）。 与加载 DLL 后[LoadLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya)，它会导致系统故障，只要代码引用`__declspec`（线程） 数据。 由于线程的全局变量空间在运行时进行分配，此空间的大小基于对应用程序的需求加静态链接的所有 DLL 的需求的计算。 使用 `LoadLibrary` 时，不能扩展此空间以允许用 `__declspec`（线程）声明的线程本地变量。 使用 TLS Api，如[TlsAlloc](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsalloc)，在您的 DLL 来分配 TLS，如果使用可能加载了 DLL `LoadLibrary`。
 
 ## <a name="see-also"></a>请参阅
 

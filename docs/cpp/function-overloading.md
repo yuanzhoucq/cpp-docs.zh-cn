@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 600b72f4f01504a6e0ad81760d532bd3ac27b968
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3d942e2c5bca7d86e66cb579de1cbe946cb9f5f6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46039655"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50081490"
 ---
 # <a name="function-overloading"></a>函数重载
 
@@ -126,7 +126,6 @@ int print(double dvalue, int prec)
 默认自变量不被视为函数类型的一部分。 因此，它不用于选择重载函数。 仅在默认自变量上存在差异的两个函数被视为多个定义而不是重载函数。
 
 不能为重载运算符提供默认自变量。
-
 
 ## <a name="argument-matching"></a>自变量匹配
 
@@ -471,7 +470,7 @@ int main()
     void Print( PSTR szToPrint );
     ```
 
-     前面的两个函数具有相同的自变量列表。 `PSTR` 是类型的同义词`char *`。 在成员范围内，此代码生成错误。
+   前面的两个函数具有相同的自变量列表。 `PSTR` 是类型的同义词`char *`。 在成员范围内，此代码生成错误。
 
 - 枚举类型是不同的类型，并且可用于区分重载函数。
 
@@ -482,7 +481,7 @@ int main()
     void Print( char szToPrint[] );
     ```
 
-     对于多维数组，第二个和后续维度被视为类型的一部分。 因此，它们可用来区分重载函数：
+   对于多维数组，第二个和后续维度被视为类型的一部分。 因此，它们可用来区分重载函数：
 
     ```cpp
     void Print( char szToPrint[] );
