@@ -1,27 +1,17 @@
 ---
-title: 典型 Internet 客户端应用程序中的步骤 |Microsoft Docs
-ms.custom: ''
+title: 典型 Internet 客户端应用程序中的步骤
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Internet client applications [MFC], general table
 - WinInet classes [MFC], programming
 - Internet applications [MFC], client applications
 ms.assetid: 7aba135c-7c15-4e2f-8c34-bbaf792c89a6
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: dd3dde01d87fccd1d19d947a1069fa92675e6053
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1e95a704a9aeabf288f76558133065806b227bcf
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46390337"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50456194"
 ---
 # <a name="steps-in-a-typical-internet-client-application"></a>典型 Internet 客户端应用程序中的步骤
 

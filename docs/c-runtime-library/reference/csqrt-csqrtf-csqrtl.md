@@ -1,11 +1,6 @@
 ---
-title: csqrt、csqrtf、csqrtl | Microsoft 文档
-ms.custom: ''
+title: csqrt、csqrtf、csqrtl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - csqrt
 - csqrtf
@@ -30,23 +25,17 @@ f1_keywords:
 - complex/csqrt
 - complex/csqrtf
 - complex/csqrtl
-dev_langs:
-- C++
 helpviewer_keywords:
 - csqrt function
 - csqrtf function
 - csqrtl function
 ms.assetid: b65f086b-0f55-4622-a7a3-4e79d9c9c05c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 143bb55180b3394f8ac32b36f7641503dd346b76
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 00fe12d4f9c136278e56ceaf3fa62443092d0ec4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396305"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50449876"
 ---
 # <a name="csqrt-csqrtf-csqrtl"></a>csqrt、csqrtf、csqrtl
 
@@ -83,16 +72,16 @@ _Lcomplex csqrtl(
 
 |输入|SEH 异常|**_matherr**异常|
 |-----------|-------------------|--------------------------|
-|± QNAN、 IND|无|_DOMAIN|
+|为 QNAN IND|无|_DOMAIN|
 |- ∞|无|_DOMAIN|
 
 ## <a name="remarks"></a>备注
 
-由于 c + + 允许重载，你可以调用的重载**csqrt**采用并返回 **_Fcomplex**和 **_Lcomplex**值。 在 C 程序中， **csqrt**始终采用并返回 **_Dcomplex**值。
+由于 c + + 允许重载，可以调用的重载**csqrt**采用并返回 **_Fcomplex**并 **_Lcomplex**值。 在 C 程序中， **csqrt**始终采用并返回 **_Dcomplex**值。
 
 ## <a name="requirements"></a>要求
 
-|例程|C 标头|C++ 标头|
+|例程所返回的值|C 标头|C++ 标头|
 |-------------|--------------|------------------|
 |**csqrt**， **csqrtf**， **csqrtl**|\<complex.h>|\<ccomplex>|
 

@@ -1,10 +1,6 @@
 ---
-title: _ismbbkana、_ismbbkana_l | Microsoft 文档
-ms.custom: ''
+title: _ismbbkana、_ismbbkana_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ismbbkana_l
 - _ismbbkana
@@ -26,24 +22,18 @@ f1_keywords:
 - ismbbkana_l
 - ismbbkana
 - _ismbbkana
-dev_langs:
-- C++
 helpviewer_keywords:
 - _ismbbkana_l function
 - _ismbbkana function
 - ismbbkana function
 - ismbbkana_l function
 ms.assetid: 64d4eb4a-205a-40ef-be35-ff9d77fabbaf
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4e0d4f470a2d40540508a6701e587987df9b0df4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 723b914f5df92f20e4982bf6f7f04d1b251606f7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400020"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50440971"
 ---
 # <a name="ismbbkana-ismbbkanal"></a>_ismbbkana、_ismbbkana_l
 
@@ -71,11 +61,11 @@ int _ismbbkana_l(
 
 ## <a name="return-value"></a>返回值
 
-**_ismbbkana**返回非零值，如果整数*c*如果它不为片假名符号或 0。 **_ismbbkana**对区域设置相关的字符信息使用当前区域设置。 **_ismbbkana_l**是相同，只不过它使用传入的区域设置对象。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+**_ismbbkana**返回非零值，如果整数*c*为片假名符号或 0，如果不是。 **_ismbbkana**的区域设置相关的字符信息使用当前区域设置。 **_ismbbkana_l**是完全相同，只不过它使用传入的区域设置对象。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_ismbbkana**|\<mbctype.h>|
 |**_ismbbkana_l**|\<mbctype.h>|

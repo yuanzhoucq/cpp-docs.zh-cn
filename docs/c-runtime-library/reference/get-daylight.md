@@ -1,10 +1,6 @@
 ---
-title: _get_daylight | Microsoft 文档
-ms.custom: ''
+title: _get_daylight
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - __daylight
 - _get_daylight
@@ -24,23 +20,17 @@ apitype: DLLExport
 f1_keywords:
 - get_daylight
 - _get_daylight
-dev_langs:
-- C++
 helpviewer_keywords:
 - get_daylight function
 - daylight saving time offset
 - _get_daylight function
 ms.assetid: f85a6ba3-e187-4ca7-aed7-ffc694c8ac4c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0fbe7e36db2e5ca5365f43dc23281d9b5e79077d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 03c3386e59379f460d3c07dc310153d990c02b05
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398118"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50444637"
 ---
 # <a name="getdaylight"></a>_get_daylight
 
@@ -59,19 +49,19 @@ error_t _get_daylight( int* hours );
 
 ## <a name="return-value"></a>返回值
 
-如果成功，或者将为零**errno**如果发生错误，则值。
+如果成功，则将为零; **errno**如果发生错误，则值。
 
 ## <a name="remarks"></a>备注
 
-**_Get_daylight**函数将检索中作为整数夏时制的小时数。 如果夏令时有效，则默认偏移量为一小时（但是少数地区遵守两小时的偏移量）。
+**_Get_daylight**函数检索的夏时制为整数小时数。 如果夏令时有效，则默认偏移量为一小时（但是少数地区遵守两小时的偏移量）。
 
-如果*小时*是**NULL**中, 所述，将调用无效参数处理程序[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，此函数将**errno**到**EINVAL**并返回**EINVAL**。
+如果*小时*是**NULL**，如中所述，将调用无效的参数处理程序[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，此函数可设置**errno**到**EINVAL** ，并返回**EINVAL**。
 
-我们建议你使用此函数而不是宏 **_daylight**或已弃用的函数 **__daylight**。
+我们建议你使用此函数而不是宏 **_daylight**或不推荐使用的函数 **__daylight**。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_get_daylight**|\<time.h>|
 
