@@ -1,10 +1,6 @@
 ---
-title: imaxdiv | Microsoft 文档
-ms.custom: ''
+title: imaxdiv
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - imaxdiv
 apilocation:
@@ -22,21 +18,15 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - imaxdiv
-dev_langs:
-- C++
 helpviewer_keywords:
 - imaxdiv function
 ms.assetid: 7d90126f-fdc2-4986-9cdf-94e4c9123d26
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: db2a57e9b91672d39fbce5eaee061043604a0998
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 23067b2028fc11193fae707e25165fb0ce754515
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399691"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50434453"
 ---
 # <a name="imaxdiv"></a>imaxdiv
 
@@ -53,7 +43,7 @@ imaxdiv_t imaxdiv(
 
 ### <a name="parameters"></a>参数
 
-*两数值*<br/>
+*号码*<br/>
 分子。
 
 *denom*<br/>
@@ -61,15 +51,15 @@ imaxdiv_t imaxdiv(
 
 ## <a name="return-value"></a>返回值
 
-**imaxdiv**使用的类型自变量调用[intmax_t](../../c-runtime-library/standard-types.md)返回类型的结构[imaxdiv_t](../../c-runtime-library/standard-types.md)包括商和余数。
+**imaxdiv**类型的参数调用[intmax_t](../../c-runtime-library/standard-types.md)返回类型的结构[imaxdiv_t](../../c-runtime-library/standard-types.md) ，包含商和余数。
 
 ## <a name="remarks"></a>备注
 
-**Imaxdiv**函数会将其划分*两数值*通过*denom*并从而计算商和余数。 **Imaxdiv_t**结构包含商**intmax_t** **q u o t**，和其余部分中， **intmax_t** **rem**.商的符号与数学商的符号相同。 其绝对值是小于数学商的绝对值的最大整数。 如果分母为 0，程序将终止并显示错误消息。
+**Imaxdiv**函数划分*号码*由*denom* ，从而计算商和余数。 **Imaxdiv_t**结构包含商， **intmax_t** **q u o t**，，其余**intmax_t** **rem**.商的符号与数学商的符号相同。 其绝对值是小于数学商的绝对值的最大整数。 如果分母为 0，程序将终止并显示错误消息。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**imaxdiv**|\<inttypes.h>|
 

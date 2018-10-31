@@ -1,10 +1,6 @@
 ---
-title: sin、 sinf、 sinl |Microsoft 文档
-ms.custom: ''
+title: sin、 sinf、 sinl
 ms.date: 04/10/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - sinl
 - sinf
@@ -27,8 +23,6 @@ f1_keywords:
 - sinf
 - sinl
 - sin
-dev_langs:
-- C++
 helpviewer_keywords:
 - _sinl function
 - sinl function
@@ -37,20 +31,16 @@ helpviewer_keywords:
 - trigonometric functions
 - sinf function
 ms.assetid: 737de73e-3590-45f9-8257-dc1c0c489dfc
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f99e7792e177c6203d38a368f3dd4125fe848a76
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7006d7246837e5dc69733a007b3f7dab1c55280e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407572"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50430357"
 ---
 # <a name="sin-sinf-sinl"></a>sin、 sinf、 sinl
 
-计算浮点值的正弦值。
+计算正弦值的浮点值。
 
 ## <a name="syntax"></a>语法
 
@@ -72,22 +62,22 @@ long double sin(long double x);  // C++ only
 
 ## <a name="return-value"></a>返回值
 
-**Sin**函数返回的正弦值*x*。 如果*x*是大于或等于 263，或小于或等于-263，会丢失基数结果中。
+**Sin**函数返回的正弦*x*。 如果*x*是大于或等于 263，或小于或等于-263，会发生丢失结果中的基数。
 
 |输入|SEH 异常|Matherr 异常|
 |-----------|-------------------|-----------------------|
 |± QNAN,IND|无|_DOMAIN|
-|± ∞ （sin、 sinf、 sinl）|INVALID|_DOMAIN|
+|为 ∞ （sin、 sinf、 sinl）|INVALID|_DOMAIN|
 
 有关返回代码的详细信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>备注
 
-由于 c + + 允许重载，你可以调用的重载**sin**采用并返回**float**或**长** **double**值。 在 C 程序中， **sin**始终采用并返回**double**。
+由于 c + + 允许重载，可以调用的重载**sin**采用并返回**float**或**长** **double**值。 在 C 程序中， **sin**始终采用并返回**double**。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头 (C)|必需的标头 (C++)|
+|例程所返回的值|必需的标头 (C)|必需的标头 (C++)|
 |-|-|-|
 |**sin**， **sinf**， **sinl**|\<math.h>|\<cmath> 或 \<math.h>|
 

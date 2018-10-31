@@ -1,10 +1,6 @@
 ---
-title: terminate (CRT) | Microsoft 文档
-ms.custom: ''
+title: terminate (CRT)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - terminate
 apilocation:
@@ -22,26 +18,20 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - terminate
-dev_langs:
-- C++
 helpviewer_keywords:
 - terminate function
 - exception handling, termination
 ms.assetid: 90e67402-08e9-4b2a-962c-66a8afd3ccb4
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c743439b487f091b760e3747c47b471832e1ff3d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1f655d328b4d97a2989ad49005ed8a9f44fd9d79
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32408669"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50438632"
 ---
 # <a name="terminate-crt"></a>terminate (CRT)
 
-调用[中止](abort.md)或函数，您指定使用**set_terminate**。
+调用[中止](abort.md)或指定使用的函数**set_terminate**。
 
 ## <a name="syntax"></a>语法
 
@@ -51,7 +41,7 @@ void terminate( void );
 
 ## <a name="remarks"></a>备注
 
-**终止**函数用于 c + + 异常处理，并在以下情况下被调用：
+**终止**函数与 c + + 异常处理一起使用，并在以下情况下调用：
 
 - 无法为引发的 C++ 异常找到匹配的 catch 处理程序。
 
@@ -59,11 +49,11 @@ void terminate( void );
 
 - 在引发异常后，堆栈已损坏。
 
-**终止**调用[中止](abort.md)默认情况下。 你可以更改此默认设置编写你自己的终止函数并调用**set_terminate**与作为其自变量函数的名称。 **终止**调用的最后一个函数的自变量被当作**set_terminate**。 有关详细信息，请参阅 [未经处理的 C++ 异常](../../cpp/unhandled-cpp-exceptions.md)。
+**终止**调用[中止](abort.md)默认情况下。 您可以更改此默认设置编写你自己的终止函数并调用**set_terminate**与作为其参数函数的名称。 **终止**调用的最后一个函数的参数被当作**set_terminate**。 有关详细信息，请参阅 [未经处理的 C++ 异常](../../cpp/unhandled-cpp-exceptions.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**terminate**|\<eh.h>|
 

@@ -1,12 +1,7 @@
 ---
-title: 适用于.NET 和 UWP 组件扩展 |Microsoft Docs
-ms.custom: ''
+title: 适用于.NET 和 UWP 组件扩展
 ms.date: 10/12/2018
-ms.technology:
-- cpp-windows
 ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - what's new [C++], keywords
 - what's new [C++], language features
@@ -14,17 +9,12 @@ helpviewer_keywords:
 - keywords [C++]
 - Managed Extensions for C++, replacement syntax
 ms.assetid: 1e400ee6-3ac9-4910-a608-9d3d5993e423
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 45f83fbaaa867e2f58e329d8531259fa3751a521
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 3b29b2e8b00aa436d1687cdbbd5f299f4787c71b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328410"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50432352"
 ---
 # <a name="component-extensions-for-net-and-uwp"></a>适用于.NET 和 UWP 组件扩展
 
@@ -54,7 +44,7 @@ C + + /CX 扩展是一个子集的 C + + /cli CLI。 虽然扩展语法是在大
 |**接口类**<br /><br /> **接口结构**|否|声明接口。|[接口类](../windows/interface-class-cpp-component-extensions.md)|
 |**枚举类**<br /><br /> **enum 结构**|否|声明枚举。|[枚举类](../windows/enum-class-cpp-component-extensions.md)|
 |**属性**|是|声明属性。|[属性](../windows/property-cpp-component-extensions.md)|
-|**delegate**|是|声明委托。|[委托 (C + + /cli 和 C + + /cli CX)](../windows/delegate-cpp-component-extensions.md)|
+|**delegate**|是|声明委托。|[委托 (C++/CLI 和 C++/CX)](../windows/delegate-cpp-component-extensions.md)|
 |**event**|是|声明事件。|[event](../windows/event-cpp-component-extensions.md)|
 
 ## <a name="override-specifiers"></a>重写说明符

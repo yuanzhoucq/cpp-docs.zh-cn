@@ -1,10 +1,6 @@
 ---
-title: strtoul、_strtoul_l、wcstoul、_wcstoul_l | Microsoft 文档
-ms.custom: ''
+title: strtoul、_strtoul_l、wcstoul、_wcstoul_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wcstoul_l
 - _strtoul_l
@@ -27,8 +23,6 @@ f1_keywords:
 - strtoul
 - _tcstoul
 - wcstoul
-dev_langs:
-- C++
 helpviewer_keywords:
 - _wcstoul_l function
 - _tcstoul function
@@ -40,16 +34,12 @@ helpviewer_keywords:
 - strtoul_l function
 - tcstoul function
 ms.assetid: 38f2afe8-8178-4e0b-8bbe-d5c6ad66e3ab
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 341d331d7de675588524a20596b7ebcd27358b5a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c1ef17b7b5cf1dac2d10cd16889241c40f89a507
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32416893"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50436124"
 ---
 # <a name="strtoul-strtoull-wcstoul-wcstoull"></a>strtoul、_strtoul_l、wcstoul、_wcstoul_l
 
@@ -98,19 +88,19 @@ unsigned long _wcstoul_l(
 
 ## <a name="return-value"></a>返回值
 
-**strtoul**返回转换后的值，如果有，或**ULONG_MAX**上溢出。 **strtoul**如果可以不执行任何转换，则返回 0。 **wcstoul**类似地为返回值**strtoul**。 对于这两个函数， **errno**设置为**ERANGE**如果发生溢出或下溢。
+**strtoul**返回转换后的值，如果有，或**ULONG_MAX**在溢出。 **strtoul**如果可以不执行任何转换，则返回 0。 **wcstoul**类似于返回值**strtoul**。 对于这两个函数， **errno**设置为**ERANGE**如果出现溢出或下溢。
 
 关于此代码以及其他返回代码的详细信息，请参阅 [_doserrno, errno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 。
 
 ## <a name="remarks"></a>备注
 
-其中每个函数将转换输入的字符串*strSource*到**无符号****长**。
+每个函数将输入的字符串转换*strSource*到**无符号****长**。
 
-**strtoul**停止读取字符串*strSource*不能将其识别为一个数字部分的第一个字符。 这可能是终止 null 字符，也可能是第一个数字的字符大于或等于*基*。 **LC_NUMERIC**类别设置的区域设置确定基数字符在识别*strSource*; 有关详细信息，请参阅[setlocale](setlocale-wsetlocale.md)。 **strtoul**和**wcstoul**使用当前区域设置;**_strtoul_l**和 **_wcstoul_l**是相同，只不过它们使用传递的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+**strtoul**停止读取字符串*strSource*在它无法识别为数字一部分的第一个字符。 这可能是终止 null 字符，也可能会大于或等于第一个数字字符*基*。 **LC_NUMERIC**的区域设置的类别设置确定中基数字符的识别*strSource*; 有关详细信息，请参阅[setlocale](setlocale-wsetlocale.md)。 **strtoul**并**wcstoul**使用当前区域设置;**_strtoul_l**并 **_wcstoul_l**是完全相同，只不过它们改用传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
-如果*endptr*不**NULL**，停止扫描的字符的指针指向的位置存储*endptr*。 如果可以不执行任何转换 （未找到有效的数字或指定了无效的基本） 的值*strSource*指向的位置存储*endptr*。
+如果*endptr*不是**NULL**，指向的位置存储指向停止扫描的字符的指针*endptr*。 如果可以不执行任何转换 （未找到任何有效的数字或指定了无效的基数） 的值*strSource*指向的位置处存储*endptr*。
 
-**wcstoul**是宽字符版本的**strtoul**; 其*strSource*参数是宽字符字符串。 否则，这些函数具有相同行为。
+**wcstoul**是宽字符版本**strtoul**; 它*strSource*参数是宽字符字符串。 否则，这些函数具有相同行为。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -119,15 +109,15 @@ unsigned long _wcstoul_l(
 |**_tcstoul**|**strtoul**|**strtoul**|**wcstoul**|
 |**_tcstoul_l**|**strtoul_l**|**_strtoul_l**|**_wcstoul_l**|
 
-**strtoul**需要*strSource*以指向以下形式的字符串：
+**strtoul**预期*strSource*以指向以下形式的字符串：
 
-> [*空白*] [{**+** &#124; **-**}] [**0** [{ **x**&#124; **X** }]] [*数字*&#124; *字母*]  
+> [*空格*] [{**+** &#124; **-**}] [**0** [{ **x**&#124; **X** }]] [*数字*&#124; *字母*]  
 
-A*空白*可能包含空格和制表符字符，将被忽略。 *数字*是一个或多个十进制数字。 *字母*中的一个或多个字母 a 到 z （或 A 至 Z）。 不符合此形式的第一个字符停止扫描。 如果*基*为介于 2 和 36，之间，则它可作为数字的基数。 如果*基*为 0，通过指向的字符串的初始字符*strSource*用于确定基。 如果第一个字符为 0，且第二个字符不为“x”或“X”，则将该字符串视为八进制整数。 如果第一个字符为“0”，且第二个字符为“x”或“X”，则将该字符串视为十六进制整数。 如果第一个字符是“1”至“9”，则将该字符串视为十进制整数。 为字母“a”到“z”（或“A”到“Z”）分配了 10 到 35 的值；仅允许分配的值小于 *base* 的字母。 超出基数范围的第一个字符停止扫描。 例如，如果*基*为 0 和扫描的第一个字符是 '0'、 假定八进制整数和一个"8"或"9"的字符将停止扫描。 **strtoul**允许加号 (**+**) 或减号 (**-**) 登录前缀; 前导负号指示返回的值求反。
+一个*空格*可能包含的空格和制表符，被忽略。 *数字*是一个或多个十进制数字。 *字母*中的一个或多个字母 a 到 z （或 A 到 Z）。 不符合此形式的第一个字符停止扫描。 如果*基*则用作数字的基数是 2 和 36，之间。 如果*基*为 0，指向字符串的初始字符*strSource*用于确定基数。 如果第一个字符为 0，且第二个字符不为“x”或“X”，则将该字符串视为八进制整数。 如果第一个字符为“0”，且第二个字符为“x”或“X”，则将该字符串视为十六进制整数。 如果第一个字符是“1”至“9”，则将该字符串视为十进制整数。 为字母“a”到“z”（或“A”到“Z”）分配了 10 到 35 的值；仅允许分配的值小于 *base* 的字母。 超出基数范围的第一个字符停止扫描。 例如，如果*基*为 0 和扫描的第一个字符为"0"，则假定八进制整数，且"8"或"9"字符将停止扫描。 **strtoul**允许加号 (**+**) 或减号 (**-**) 符号前缀; 前导减号符号表示返回值不起作用。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**strtoul**|\<stdlib.h>|
 |**wcstoul**|\<stdlib.h> 或 \<wchar.h>|
