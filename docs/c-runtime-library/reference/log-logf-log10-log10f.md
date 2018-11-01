@@ -1,10 +1,6 @@
 ---
-title: 日志、 logf、 logl、 log10、 log10f、 log10l |Microsoft 文档
-ms.custom: ''
+title: 日志、 logf、 logl、 log10、 log10f、 log10l
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - log10f
 - logf
@@ -34,8 +30,6 @@ f1_keywords:
 - log10f
 - log10l
 - log10
-dev_langs:
-- C++
 helpviewer_keywords:
 - calculating logarithms
 - log10f function
@@ -46,16 +40,12 @@ helpviewer_keywords:
 - logf function
 - logarithms
 ms.assetid: 7adc77c2-04f7-4245-a980-21215563cfae
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 12f475cde27d4660f4b4936f3f7717a665b70e86
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c8e3f73e61fefa7a39a6d53d63739b094d78c499
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402837"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50543294"
 ---
 # <a name="log-logf-logl-log10-log10f-log10l"></a>日志、 logf、 logl、 log10、 log10f、 log10l
 
@@ -86,23 +76,23 @@ long double log10( long double x );  // C++ only
 
 ## <a name="return-value"></a>返回值
 
-**日志**函数返回自然对数 (基*e*) 的*x*如果成功。 **Log10**函数返回的以 10 为基数的对数。 如果*x*为负，则这些函数返回无限期 (IND)，默认情况下。 如果*x*为 0，它们将返回无穷大 (INF)。
+**日志**函数返回的自然对数 (基*e*) 的*x*如果成功。 **Log10**函数返回的以 10 为基数的对数。 如果*x*是负值，这些函数将返回无穷大 (IND)，默认情况下。 如果*x*为 0，则它们返回无穷大 (INF)。
 
 |输入|SEH 异常|Matherr 异常|
 |-----------|-------------------|-----------------------|
-|± QNAN、 IND|无|_DOMAIN|
+|为 QNAN IND|无|_DOMAIN|
 |± 0|ZERODIVIDE|_SING|
 |*x* < 0|INVALID|_DOMAIN|
 
-**日志**和**log10**使用流式处理 SIMD 扩展 2 (SSE2) 的实现。 有关使用 SSE2 实现的信息和限制，请参阅 [_set_SSE2_enable](set-sse2-enable.md)。
+**日志**并**log10**具有使用流式处理 SIMD 扩展 2 (SSE2) 的实现。 有关使用 SSE2 实现的信息和限制，请参阅 [_set_SSE2_enable](set-sse2-enable.md)。
 
 ## <a name="remarks"></a>备注
 
-C + + 允许重载，因此您可以调用的重载**日志**和**log10**采用并返回**float**或**长双精度**值。 在 C 程序中，**日志**和**log10**始终采用并返回**double**。
+C + + 允许重载，因此可以调用的重载**日志**并**log10**采用并返回**float**或者**长双精度型**值。 在 C 程序中，**日志**并**log10**始终采用并返回**double**。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**日志**， **logf**， **logl**， **log10**， **log10f**， **log10l**|\<math.h>|
 

@@ -1,25 +1,15 @@
 ---
-title: 如何： 自定义应用程序按钮 |Microsoft Docs
-ms.custom: ''
+title: 如何：自定义应用程序按钮
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - application button [MFC], customizing
 ms.assetid: ebb11180-ab20-43df-a234-801feca9eb38
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ef82904a5c84847f3f0064cba6dee171c960f135
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e556e9e6509179b692e4c86b67d59ff2e2ec0f02
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46401467"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50592785"
 ---
 # <a name="how-to-customize-the-application-button"></a>如何：自定义应用程序按钮
 
@@ -43,7 +33,7 @@ ms.locfileid: "46401467"
 
 |属性|定义|
 |--------------|----------------|
-|**按钮**|包含的应用程序菜单右下角出现的最多三个按钮的集合。|
+|**Button**|包含的应用程序菜单右下角出现的最多三个按钮的集合。|
 |**标题**|指定控件的文本。 与其他功能区元素，不同的应用程序按钮不显示标题文本。 相反，则文本用于可访问性。|
 |**HDPI Image**|指定的每英寸像素数 (HDPI) 应用程序按钮图标的标识符。 在高 DPI 显示器中，应用程序运行时**HDPI Image**而不是**映像**。|
 |**HDPI Large Images**|指定高 DPI 大型映像的标识符。 在高 DPI 显示器中，应用程序运行时**HDPI Large Images**而不是**Large Images**。|
