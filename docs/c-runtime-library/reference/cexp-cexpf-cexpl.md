@@ -1,11 +1,6 @@
 ---
-title: cexp、cexpf、cexpl | Microsoft 文档
-ms.custom: ''
+title: cexp、cexpf、cexpl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - cexp
 - cexpf
@@ -30,23 +25,17 @@ f1_keywords:
 - complex/cepx
 - complex/cexpf
 - complex/cexpl
-dev_langs:
-- C++
 helpviewer_keywords:
 - cexp function
 - cexpl function
 - cexpf function
 ms.assetid: f27fd5a9-70c7-4957-a7ee-5256d19bd1da
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3a54dc0c25fd0b476887914778278ec83c19fe8e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 401dd30b326fcd6caef7cae6f1ecbdc43ed5dd5a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393987"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50462928"
 ---
 # <a name="cexp-cexpf-cexpl"></a>cexp、cexpf、cexpl
 
@@ -72,15 +61,15 @@ _Lcomplex cexp( _Lcomplex z );  // C++ only
 
 ## <a name="return-value"></a>返回值
 
-值**e**的幂*z*。
+值**e**次的幂*z*。
 
 ## <a name="remarks"></a>备注
 
-由于 c + + 允许重载，你可以调用的重载**cexp**采用并返回 **_Fcomplex**和 **_Lcomplex**值。 在 C 程序中， **cexp**始终采用并返回 **_Dcomplex**值。
+由于 c + + 允许重载，可以调用的重载**cexp**采用并返回 **_Fcomplex**并 **_Lcomplex**值。 在 C 程序中， **cexp**始终采用并返回 **_Dcomplex**值。
 
 ## <a name="requirements"></a>要求
 
-|例程|C 标头|C++ 标头|
+|例程所返回的值|C 标头|C++ 标头|
 |-------------|--------------|------------------|
 |**cexp**， **cexpf**， **cexpl**|\<complex.h>|\<complex.h>|
 

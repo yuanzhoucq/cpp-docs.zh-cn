@@ -1,17 +1,15 @@
 ---
-title: '&lt;sstream&gt; 函数 | Microsoft Docs'
-ms.custom: ''
+title: '&lt;sstream&gt; 函数'
 ms.date: 11/04/2016
-ms.topic: reference
 f1_keywords:
 - sstream/std::swap
 ms.assetid: bc9607e8-7c6b-44ef-949b-19e917b450ad
-ms.openlocfilehash: 354632a3c001f2352821d9a1d0b493291c21a337
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: f22aec854b9a1d9b7b8360cacbb08760413fa22e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38953932"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50458300"
 ---
 # <a name="ltsstreamgt-functions"></a>&lt;sstream&gt; 函数
 
@@ -19,7 +17,7 @@ ms.locfileid: "38953932"
 |-|
 |[swap](#sstream_swap)|
 
-## <a name="sstream_swap"></a> swap
+## <a name="sstream_swap"></a>  swap
 
 交换两个 `sstream` 对象间的值。
 
