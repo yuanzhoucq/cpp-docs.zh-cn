@@ -1,12 +1,7 @@
 ---
-title: 关键字 （C++） |Microsoft 文档
+title: 关键字 （C++）
 ms.custom: index-page
 ms.date: 10/10/2018
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - Visual C++, keywords
 - keywords [C++]
@@ -14,16 +9,12 @@ helpviewer_keywords:
 - Microsoft-specific keywords
 - __identifer keyword [C++]
 ms.assetid: d7ca94a8-f785-41ce-9f73-d3c4fd508489
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 86912ad8dfa3e048b74c67b6936eb09f74db308a
-ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
+ms.openlocfilehash: 645a0edb053320499c3ecca1c9d2ffd639b15931
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49162446"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50659301"
 ---
 # <a name="keywords-c"></a>关键字 （C++）
 
@@ -85,7 +76,7 @@ ms.locfileid: "49162446"
 
 在 Microsoft C++ 中，保留带有两条前导下划线的标识符以供编译器实现使用。 因此，Microsoft 约定位于带双下划线的 Microsoft 特定关键字前面。 这些单词不能用作标识符名称。
 
-默认情况下将启用 Microsoft 扩展。 若要确保您的程序是完全可移植的可以禁用 Microsoft 扩展通过指定[/Za\(禁用语言扩展)](../build/reference/za-ze-disable-language-extensions.md)在编译过程的选项。 时执行此操作时，会禁用某些特定于 Microsoft 的关键字。
+默认情况下将启用 Microsoft 扩展。 若要确保你的程序是完全可移植的，可通过在编译期间指定 [/Za \(禁用语言扩展）](../build/reference/za-ze-disable-language-extensions.md)选项来禁用 Microsoft 扩展。 如果这样做，将禁用某些 Microsoft 专用关键字。
 
 启用 Microsoft 扩展后，你可以在程序中使用 Microsoft 特定关键字。 为了符合 ANSI，这些关键字的前面有一条双下划线。 对于向后兼容，支持许多双下划线关键字的单下划线版本。 此外， **__cdecl**提供了没有前导下划线。
 

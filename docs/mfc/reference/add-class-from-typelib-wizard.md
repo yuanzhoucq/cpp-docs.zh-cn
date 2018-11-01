@@ -1,35 +1,25 @@
 ---
-title: 从类型库向导添加类 |Microsoft Docs
-ms.custom: ''
+title: 从类型库添加类向导
 ms.date: 10/03/2018
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.typelib
-dev_langs:
-- C++
 helpviewer_keywords:
 - Add Class from TypeLib Wizard [MFC]
 - COM interfaces, adding classes
 ms.assetid: 96152afd-9374-4649-a6ab-b0fa2a5592a3
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0a54948fd98b5a5445aa1fdfafcf0fcd015bbf08
-ms.sourcegitcommit: d1527eb2d50156bf923f2a32ec3af9efc7fc4304
+ms.openlocfilehash: c0423ac06aa46b65c1fb0ffb3935d4bb54821ee9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48250375"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50654332"
 ---
 # <a name="add-class-from-typelib-wizard"></a>从类型库添加类向导
 
 使用此向导从可用的类型库添加 MFC 类。 该向导创建用于从所选的类型库中添加每个接口的类。
 
 > [!WARNING]
-> 在 Visual Studio 2017 版本 15.9 此代码向导已弃用，将 Visual Studio 的未来版本中删除。 很少使用此向导。 ATL 和 MFC 的常规支持不受此向导中删除。 如果你想要共享您对此不推荐使用的反馈，请先完成[这项调查](https://www.surveymonkey.com/r/QDWKKCN)。 你的反馈对我们很重要。
+> 在 Visual Studio 2017 版本 15.9 中，此代码向导已弃用，并将从 Visual Studio 的将来版本中删除。 很少用到此向导。 对 ATL 和 MFC 的常规支持不会受到删除此向导的影响。 如果你想要共享对此弃用的反馈，请完成[此调查](https://www.surveymonkey.com/r/QDWKKCN)。 你的反馈对我们很重要。
 
 - **添加类**
 
@@ -69,7 +59,7 @@ ms.locfileid: "48250375"
 
 - **类**
 
-   指定向导在你单击“完成”时添加的“生成的类”框中选择的类的名称。 您可以编辑该名称在**类**框。
+   指定向导在你单击“完成”时添加的“生成的类”框中选择的类的名称。 可以在“类”框中编辑该名称。
 
 - **文件**
 

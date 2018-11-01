@@ -1,10 +1,6 @@
 ---
-title: localtime、_localtime32、_localtime64 | Microsoft 文档
-ms.custom: ''
+title: localtime、_localtime32、_localtime64
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _localtime64
 - _localtime32
@@ -28,8 +24,6 @@ f1_keywords:
 - localtime32
 - localtime
 - _localtime32
-dev_langs:
-- C++
 helpviewer_keywords:
 - localtime32 function
 - _localtime32 function
@@ -38,16 +32,12 @@ helpviewer_keywords:
 - localtime function
 - time, converting values
 ms.assetid: 4260ec3d-43ee-4538-b998-402a282bb9b8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 778b2d214551c5848dd091e33dbbab1814544fb4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d34a45ff20cb74d61a8eb189282bfdce4d8954ae
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405505"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50629965"
 ---
 # <a name="localtime-localtime32-localtime64"></a>localtime、_localtime32、_localtime64
 
@@ -68,52 +58,52 @@ struct tm *_localtime64( const __time64_t *sourceTime );
 
 ## <a name="return-value"></a>返回值
 
-返回指向结构结果的指针或**NULL**如果日期传递给函数：
+返回指向结构结果的指针或**NULL**如果将日期传递给该函数是：
 
 - 1970 年 1 月 1 日午夜前。
 
-- 后 03:14:07，2038 年 1 月 19 日，UTC (使用 **_time32**和**time32_t**)。
+- 之后 03:14:07，2038 年 1 月 19 日，UTC (使用 **_time32**并**time32_t**)。
 
-- 23:59:59，3000 年 12 月 31 日，UTC 之后 (使用 **_time64**和 **__time64_t**)。
+- 23:59:59，3000 年 12 月 31 日，UTC 后 (使用 **_time64**并 **__time64_t**)。
 
-**_localtime64**，它使用 **__time64_t**结构，而允许的日期以通过 23:59:59，3000 年 12 月 31 日，协调世界时 (UTC) 表示向上 **_localtime32**表示到 23:59:59 2038 年 1 月 18 日，UTC 日期。
+**_localtime64**，使用该 **__time64_t**结构，允许日期最大表示为 23:59:59，3000 年 12 月 31 日协调世界时 (UTC)，而 **_localtime32**表示到 23:59:59 2038 年 1 月 18 日，UTC 日期。
 
-**localtime**是内联函数计算结果为 **_localtime64**，和**time_t**等效于 **__time64_t**。 如果需要强制编译器将解释**time_t**为旧的 32 位**time_t**，你可以定义 **_USE_32BIT_TIME_T**。 这将导致这样做**localtime**计算结果为 **_localtime32**。 不建议这样做，因为应用程序可能会在 2038 年 1 月 18 日后失效；且在 64 位平台上不允许使用它。
+**localtime**是一个内联函数，其计算结果 **_localtime64**，和**time_t**等效于 **__time64_t**。 如果您需要强制编译器将解释**time_t**为旧的 32 位**time_t**，可以定义 **_USE_32BIT_TIME_T**。 执行此操作将导致**localtime**计算结果为 **_localtime32**。 不建议这样做，因为应用程序可能会在 2038 年 1 月 18 日后失效；且在 64 位平台上不允许使用它。
 
-结构类型的字段[tm](../../c-runtime-library/standard-types.md)存储下面的值，其中每个**int**:
+结构类型的字段[tm](../../c-runtime-library/standard-types.md)存储以下值，其中每个**int**:
 
 |字段|描述|
 |-|-|
-|**tm_sec**|分钟之后的秒 (0-59)。|
-|**tm_min**|分钟后小时 (0-59)。|
-|**tm_hour**|小时，自午夜 (0-23)。|
-|**tm_mday**|某一天的月份 (1-31)。|
+|**tm_sec**|分钟后的秒数 (0-59)。|
+|**tm_min**|小时后的分钟数 (0-59)。|
+|**tm_hour**|午夜以后的小时数 (0-23)。|
+|**tm_mday**|月份 (1-31) 日期。|
 |**tm_mon**|月 (0-11;年 1 月 = 0）。|
 |**tm_year**|年（当前年份减去 1900）。|
-|**tm_wday**|星期几 (0-6;星期日 = 0）。|
-|**tm_yday**|年的某一天 (0-365;1 月 1 日 = 0)。|
+|**tm_wday**|星期几 (0-6;星期天 = 0）。|
+|**tm_yday**|某一日 (0-365;1 月 1 日 = 0)。|
 |**tm_isdst**|如果夏令时生效，则为正值；如果夏令时不生效，则为 0；如果夏令时状态未知，则为负值。|
 
-如果**TZ**设置环境变量，则 C 运行时库假定规则适用于美国境内用于实现夏令时 (DST) 的计算。
+如果**TZ**设置环境变量，C 运行时库假设规则适用于美国实现夏令时 (DST) 的计算。
 
 ## <a name="remarks"></a>备注
 
-**Localtime**函数将存储为时间为[time_t](../../c-runtime-library/standard-types.md)值并将结果存储在类型的结构[tm](../../c-runtime-library/standard-types.md)。 **长**值*sourceTime*表示自午夜以来经过的秒 (00: 00:00)、 1970 年 1 月 1 日，UTC。 此值通常从获取[时间](time-time32-time64.md)函数。
+**Localtime**函数将存储为时间转换[time_t](../../c-runtime-library/standard-types.md)值并将结果存储在类型的结构[tm](../../c-runtime-library/standard-types.md)。 **长**值*sourceTime*表示自午夜以来经过的秒 (00: 00:00) 自 1970 年 1 月 1 日，UTC。 此值通常从获取[时间](time-time32-time64.md)函数。
 
-这两个 32 位和 64 位版本的[gmtime](gmtime-gmtime32-gmtime64.md)， [mktime](mktime-mktime32-mktime64.md)， [mkgmtime](mkgmtime-mkgmtime32-mkgmtime64.md)，和**localtime**所有使用单个**tm**每个线程的转换结构。 每次调用这些例程都会破坏上一次调用的结果。
+32 位和 64 位版本[gmtime](gmtime-gmtime32-gmtime64.md)， [mktime](mktime-mktime32-mktime64.md)， [mkgmtime](mkgmtime-mkgmtime32-mkgmtime64.md)，以及**localtime**使用单个**tm**每个线程的转换的结构。 每次调用这些例程都会破坏上一次调用的结果。
 
-**localtime**更正为本地时区，如果用户先设置全局环境变量**TZ**。 当**TZ**设置，其他三个环境变量 (**_timezone**， **_daylight**，和 **_tzname**) 以及自动设置。 如果**TZ**未设置变量， **localtime**尝试使用控制面板中的日期/时间应用程序中指定的时区信息。 如果无法获取此信息，则它默认使用代表太平洋时区的 PST8PDT。 有关这些变量的说明，请参阅 [_tzset](tzset.md)。 **TZ**是 Microsoft 扩展和不属于的 ANSI 标准定义**localtime**。
+**localtime**如果用户首次设置全局环境变量更正本地时区**TZ**。 当**TZ**设置，其他三个环境变量 (**_timezone**， **_daylight**，并 **_tzname**) 也将自动设置。 如果**TZ**未设置变量，则**localtime**尝试使用控制面板中的日期/时间应用程序中指定的时区信息。 如果无法获取此信息，则它默认使用代表太平洋时区的 PST8PDT。 有关这些变量的说明，请参阅 [_tzset](tzset.md)。 **TZ**是 Microsoft 扩展并不是 ANSI 标准定义的一部分**localtime**。
 
 > [!NOTE]
 > 目标环境应尝试确定夏令时是否生效。
 
-这些函数验证其参数。 如果*sourceTime*是 null 指针，或如果*sourceTime*值为负，则这些函数调用无效参数处理程序中中, 所述[参数验证](../../c-runtime-library/parameter-validation.md). 如果允许执行继续，函数将返回**NULL**并设置**errno**到**EINVAL**。
+这些函数验证其参数。 如果*sourceTime*是空指针，或者如果*sourceTime*值为负，则这些函数将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md). 如果允许执行继续，这些函数返回**NULL**并设置**errno**到**EINVAL**。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的 C 标头|必需的 C++ 标头|
+|例程所返回的值|必需的 C 标头|必需的 C++ 标头|
 |-------------|---------------------|-|
-|**localtime**， **_localtime32**， **_localtime64**|\<time.h>|\<ctime > 或\<.h >|
+|**localtime**， **_localtime32**， **_localtime64**|\<time.h>|\<ctime > 或\<time.h >|
 
 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 
