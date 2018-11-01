@@ -1,26 +1,16 @@
 ---
-title: 实现列表控件中的工作区域 |Microsoft Docs
-ms.custom: ''
+title: 实现列表控件中的工作区域
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - list controls [MFC], working areas
 - working areas in list control [MFC]
 ms.assetid: fbbb356b-3359-4348-8603-f1cb114cadde
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fc245ef87343d9f33277e41c5c191ea713e21da0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: eac4c28497f4a00a333f5396fa71cdb2176106c5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46383410"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50525186"
 ---
 # <a name="implementing-working-areas-in-list-controls"></a>实现列表控件中的工作区域
 
