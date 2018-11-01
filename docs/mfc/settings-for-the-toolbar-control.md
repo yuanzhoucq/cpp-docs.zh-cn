@@ -1,26 +1,16 @@
 ---
-title: 工具栏控件的设置 |Microsoft Docs
-ms.custom: ''
+title: 工具栏控件的设置
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - toolbar controls [MFC], about toolbar controls
 - CToolBarCtrl class [MFC], settings
 ms.assetid: 025ba920-b3ee-4d82-9367-e652cd7875b9
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 81631ba25f898e3740b82c0fab9d5af5da930117
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5b5a91b4b78737866a0718865ae45fc62d1ca71a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46373344"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50489071"
 ---
 # <a name="settings-for-the-toolbar-control"></a>工具栏控件的设置
 
