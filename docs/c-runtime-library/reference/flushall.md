@@ -1,10 +1,6 @@
 ---
-title: _flushall | Microsoft 文档
-ms.custom: ''
+title: _flushall
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _flushall
 apilocation:
@@ -22,24 +18,18 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _flushall
-dev_langs:
-- C++
 helpviewer_keywords:
 - flushall function
 - flushing streams
 - streams, flushing
 - _flushall function
 ms.assetid: 2cd73562-6d00-4ca2-b13c-80d0ae7870b5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7fb094e2f99e0554320df69946470f42f461819d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: de8caf30568816f41441f5d9487293c346d2bff1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398017"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50466222"
 ---
 # <a name="flushall"></a>_flushall
 
@@ -57,11 +47,11 @@ int _flushall( void );
 
 ## <a name="remarks"></a>备注
 
-默认情况下， **_flushall**函数将写入相应的文件与打开的输出流关联的所有缓冲区的内容。 与打开的输入流关联的所有缓冲区的当前内容将被清除。 （这些缓冲区通常由操作系统维护，操作系统确定将数据自动写入磁盘的最佳时间：当缓冲区已满时、当流已关闭时或当程序在未关闭流的情况下正常终止时。）
+默认情况下 **_flushall**函数将写入到相应的文件与打开的输出流关联的所有缓冲区的内容。 与打开的输入流关联的所有缓冲区的当前内容将被清除。 （这些缓冲区通常由操作系统维护，操作系统确定将数据自动写入磁盘的最佳时间：当缓冲区已满时、当流已关闭时或当程序在未关闭流的情况下正常终止时。）
 
-如果读取遵循调用 **_flushall**，新的数据从输入文件读取到缓冲区。 所有流的调用后都保持打开 **_flushall**。
+如果读取到调用后面 **_flushall**，新的数据从输入文件读取到缓冲区。 所有流保持打开都状态调用后面 **_flushall**。
 
-利用运行库的提交到磁盘功能，您可以确保将关键数据直接写入磁盘而不是操作系统的缓冲区。 无需重写现有程序，可以通过将程序的对象文件与 Commode.obj 链接来启用此功能。在生成的可执行文件中，调用 **_flushall**将所有缓冲区的内容写入到磁盘。 仅 **_flushall**和[fflush](fflush.md)受 Commode.obj。
+利用运行库的提交到磁盘功能，您可以确保将关键数据直接写入磁盘而不是操作系统的缓冲区。 无需重写现有程序，可以通过将程序的对象文件与 Commode.obj 链接来启用此功能。在生成的可执行文件中，调用 **_flushall**将所有缓冲区的内容写入到磁盘。 仅 **_flushall**并[fflush](fflush.md)受 Commode.obj 的影响。
 
 有关控制提交到磁盘功能的信息，请参阅[流 I/O](../../c-runtime-library/stream-i-o.md)、[fopen](fopen-wfopen.md) 和 [_fdopen](fdopen-wfdopen.md)。
 

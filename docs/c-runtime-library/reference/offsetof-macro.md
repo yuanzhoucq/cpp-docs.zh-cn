@@ -1,10 +1,6 @@
 ---
-title: offsetof 宏 | Microsoft 文档
-ms.custom: ''
+title: offsetof 宏
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -19,22 +15,16 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - offsetof
-dev_langs:
-- C++
 helpviewer_keywords:
 - structure members, offset
 - offsetof macro
 ms.assetid: f3b4eb16-a882-4d38-afc9-eebd976a7352
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 308aac2493751cfe2147187ed9848347124a90d6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a0f367dbe6fa2681a7d413304f32b5699b8f7cee
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401459"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50458314"
 ---
 # <a name="offsetof-macro"></a>offsetof 宏
 
@@ -59,18 +49,18 @@ size_t offsetof(
 
 ## <a name="return-value"></a>返回值
 
-**offsetof**从其父数据结构的开头，以字节为单位指定成员返回的偏移量。 它对于位域是未定义的。
+**offsetof**从其父数据结构的开头，以字节为单位指定成员的返回的偏移量。 它对于位域是未定义的。
 
 ## <a name="remarks"></a>备注
 
-**Offsetof**宏返回以字节为单位的偏移量*memberName*从指定的结构的开头*structName*类型的值作为**size_t**。 你可以指定与类型**结构**关键字。
+**Offsetof**宏将返回以字节为单位的偏移量*memberName*从指定的结构开头*structName*类型的值作为**size_t**。 可以指定具有类型**结构**关键字。
 
 > [!NOTE]
 > **offsetof**不是函数和不能使用 C 原型描述。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**offsetof**|\<stddef.h>|
 

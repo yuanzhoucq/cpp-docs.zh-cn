@@ -1,12 +1,6 @@
 ---
-title: 混合、 纯代码和可验证功能比较 (C + + /cli CLI) |Microsoft 文档
-ms.custom: ''
+title: 混合、 纯代码和可验证功能比较 (C + + CLI)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-cli
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - safe assemblies [C++], vs. pure
 - mixed assemblies [C++], vs. pure
@@ -23,28 +17,23 @@ helpviewer_keywords:
 - safe assemblies [C++]
 - mixed assemblies [C++]
 ms.assetid: 3f7a82ba-0e69-4927-ba0c-fbc3160e4394
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- dotnet
-ms.openlocfilehash: 8cb1b2ba71277415fd1ba5124f6120cc2f2c995d
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 81fcf986ee68f5f8f64c8070bb992fa1cda1683b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704706"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50482064"
 ---
-# <a name="mixed-pure-and-verifiable-feature-comparison-ccli"></a>混合、 纯代码和可验证功能比较 (C + + /cli CLI)
+# <a name="mixed-pure-and-verifiable-feature-comparison-ccli"></a>混合、 纯代码和可验证功能比较 (C + + CLI)
 
 本主题将比较了不同的功能 **/clr**编译模式。 有关详细信息，请参阅 [/clr（公共语言运行时编译）](../build/reference/clr-common-language-runtime-compilation.md)。
 
 > [!IMPORTANT]
-> **/Clr: pure**和 **/clr: safe**编译器选项是在 Visual Studio 2015 中已过时，在 Visual Studio 2017 中不支持。
+> **/Clr: pure**并 **/clr: safe**编译器选项在 Visual Studio 2015 中弃用，在 Visual Studio 2017 中不受支持。
 
 ## <a name="feature-comparison"></a>功能比较
 
-|功能|混合 (/ clr)|纯 (/ clr： 纯)|安全 (/: safe)|相关的信息|
+|功能|混合 (/ clr)|纯 (/ clr: pure)|安全 (/: safe)|相关的信息|
 |-------------|---------------------|-------------------------|-------------------------|-------------------------|
 |CRT 库|支持|deprecated||[按类别分的通用 C 运行时例程](../c-runtime-library/run-time-routines-by-category.md)|
 |MFC/ATL|支持|||[MFC 桌面应用程序](../mfc/mfc-desktop-applications.md) &#124; [类概述](../atl/atl-class-overview.md)|

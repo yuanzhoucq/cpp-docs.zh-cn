@@ -1,41 +1,31 @@
 ---
-title: 编译器错误 C2653 |Microsoft 文档
-ms.custom: ''
+title: 编译器错误 C2653
 ms.date: 11/30/2017
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2653
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2653
 ms.assetid: 3f49e731-affd-43a0-a8d0-181db7650bc3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a8e1df7dd6337b1a3e363a5744181b12d94c879b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d4a3a8a74483317b87e16458f44016f0aeca1379
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33234962"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50471144"
 ---
 # <a name="compiler-error-c2653"></a>编译器错误 C2653
 
-> *标识符*： 不是类或命名空间名称
+> '*标识符*： 不是类或命名空间名称
 
-类、 结构、 联合或此处命名空间名称，将需要的语言语法。
+语言语法要求在类、 结构、 联合或此处命名空间名称。
 
-当你使用尚未声明为类、 结构、 联合或范围运算符的前面的命名空间的名称时，可以出现此错误。 若要解决此问题，将该名称声明，或包含的标头中声明的名称，然后使用它。
+使用尚未声明为类、 结构、 联合或范围运算符的前面的命名空间的名称时，可能出现此错误。 若要解决此问题，请声明名称或包括声明的名称，然后使用它的标头。
 
-C2653 也可能是如果你尝试定义*复合命名空间*，包含一个或多个作用域嵌套命名空间名称的命名空间。 复合不允许定义在 c + + 在 C + + 17 之前的命名空间。 支持从在 Visual Studio 2015 Update 3 开始，在你指定的复合的命名空间[/std:c + + 最新](../../build/reference/std-specify-language-standard-version.md)编译器选项。 从 Visual c + + 2017 版本 15.5 开始，编译器支持复合命名空间定义时[/std:c + + 17](../../build/reference/std-specify-language-standard-version.md)指定选项。
+C2653 也可能是如果你尝试定义*复合命名空间*，包含一个或多个作用域嵌套命名空间名称的命名空间。 复合命名空间定义中不允许使用 c + + 在 C + + 17 之前。 指定时，Visual Studio 2015 Update 3 开始支持复合的命名空间[/std: c + + 最新](../../build/reference/std-specify-language-standard-version.md)编译器选项。 从 Visual c + + 2017 版本 15.5 中，编译器支持复合命名空间定义时[/std: c + + 17](../../build/reference/std-specify-language-standard-version.md)指定选项。
 
 ## <a name="examples"></a>示例
 
-此示例生成 C2653，因为作用域名称是使用但不是声明。 编译器需要的类、 结构、 联合或之前的范围运算符 （:） 的命名空间名称。
+此示例生成 C2653，因为使用但未声明的范围名称。 编译器需要类、 结构、 联合或范围运算符 （:） 之前的命名空间名称。
 
 ```cpp
 // C2653.cpp
@@ -48,7 +38,7 @@ void xx::func1(int m) {}   // C2653, xx is not declared
 void yy::func1(int m) {}   // OK
 ```
 
-在代码中未编译 C + + 17 或更高版本的标准，嵌套的命名空间必须在每个嵌套级别使用显式命名空间声明：
+在代码中不编译为 C + + 17 或更高版本的标准，嵌套的命名空间必须在每个嵌套级别使用的显式命名空间声明：
 
 ```cpp
 // C2653b.cpp
