@@ -1,11 +1,6 @@
 ---
-title: fegetround、 fesetround |Microsoft 文档
-ms.custom: ''
+title: fegetround、fesetround
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - fegetround
 - fesetround
@@ -27,22 +22,16 @@ f1_keywords:
 - fesetround
 - fenv/fegetround
 - fenv/fesetround
-dev_langs:
-- C++
 helpviewer_keywords:
 - fegetround function
 - fesetround function
 ms.assetid: 596af00b-be2f-4f57-b2f5-460485f9ff0b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 137d886d557cbb1fee7db1dd60405b9557bf6bf2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 061f0c9563d284396e85c6de70a2fe0911218eb3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398079"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50666799"
 ---
 # <a name="fegetround-fesetround"></a>fegetround、fesetround
 
@@ -65,7 +54,7 @@ int fesetround(
 
 ## <a name="return-value"></a>返回值
 
-如果成功， **fegetround**作为其中一个浮点舍入宏值返回舍入模式。 如果无法确定当前的舍入模式，它返回一个负值。
+如果成功， **fegetround**返回作为其中一个浮点舍入宏值舍入模式。 如果无法确定当前的舍入模式，它返回一个负值。
 
 如果成功， **fesetround**返回 0。 否则，返回一个非零值。
 
@@ -88,13 +77,13 @@ FE_TONEAREST 的默认行为是要将结果从可表示值的中间向具有偶�
 
 - 常量表达式之外的浮点算术运算符的结果。
 
-- 库舍入函数，如**rint**和**nearbyint**。
+- 库舍入函数，如**rint**并**nearbyint**。
 
 - 从标准库的数学函数返回的值。
 
 当前舍入模式不影响以下操作：
 
-- **Trunc**， **ceil**， **floor**，和**lround**库函数。
+- **Trunc**， **ceil**， **floor**，以及**lround**库函数。
 
 - 浮点到整数隐式强制转换和转换，始终向零舍入。
 

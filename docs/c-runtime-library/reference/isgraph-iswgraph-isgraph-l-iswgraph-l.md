@@ -1,10 +1,6 @@
 ---
-title: isgraph、iswgraph、_isgraph_l、_iswgraph_l | Microsoft 文档
-ms.custom: ''
+title: isgraph、iswgraph、_isgraph_l、_iswgraph_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - isgraph
 - iswgraph
@@ -31,8 +27,6 @@ f1_keywords:
 - _istgraph_l
 - _istgraph
 - iswgraph
-dev_langs:
-- C++
 helpviewer_keywords:
 - isgraph function
 - _istgraph_l function
@@ -43,16 +37,12 @@ helpviewer_keywords:
 - _istgraph function
 - _ismbcgraph_l function
 ms.assetid: 531a5f34-4302-4d0a-8a4f-b7ea150ad941
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3b60e022471bdfa7cbbddb6b5263f757438572a2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: af3fae11536a869c0c3e3ebae285ebbaca5ea907
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401267"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50664797"
 ---
 # <a name="isgraph-iswgraph-isgraphl-iswgraphl"></a>isgraph、iswgraph、_isgraph_l、_iswgraph_l
 
@@ -84,11 +74,11 @@ int _iswgraph_l(
 
 ## <a name="return-value"></a>返回值
 
-每个这些例程返回非零如果*c*是的特定表示形式可打印字符的空间除外。 **isgraph**返回非零值，如果*c*是可打印字符的空间除外。 **iswgraph**返回非零值，如果*c*是可打印的宽字符的宽字符空间除外。 这些例程都返回 0 如果*c*不满足测试条件。
+这些例程返回非零值如果*c*是可打印字符而非空格的特定表示形式。 **isgraph**返回非零值，如果*c*是可打印字符而非空格。 **iswgraph**返回非零值，如果*c*是可打印宽字符而非宽字符空格。 每个例程将返回 0，如果*c*不满足测试条件。
 
-这些函数具有的版本 **_l**后缀其区域设置相关行为使用传入的区域设置而不是当前区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+具有这些函数的版本 **_l**后缀为其区域设置相关的行为使用传入的区域设置而不是当前区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
-行为**isgraph**和 **_isgraph_l**如果是未定义*c*不是 EOF 或在 0 到 0xFF，非独占的范围。 使用 CRT 调试库时和*c*是不是一种这些值，函数引发的断言。
+行为**isgraph**并 **_isgraph_l**未定义当*c*不是 EOF 或在范围 0 到 0xff 内，非独占。 使用调试 CRT 库时， *c*是不包含其中一个值，函数将引发断言。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -99,7 +89,7 @@ int _iswgraph_l(
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**isgraph**|\<ctype.h>|
 |**iswgraph**|\<ctype.h 1> 或 \<wchar.h 1>|

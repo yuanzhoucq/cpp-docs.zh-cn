@@ -1,11 +1,6 @@
 ---
-title: _Cmulcc，_FCmulcc，_LCmulcc |Microsoft 文档
-ms.custom: ''
+title: _Cmulcc、 _FCmulcc、 _LCmulcc
 ms.date: 03/30/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - _Cmulcc
 - _FCmulcc
@@ -30,26 +25,20 @@ f1_keywords:
 - complex/_Cmulcc
 - complex/_FCmulcc
 - complex/_LCmulcc
-dev_langs:
-- C++
 helpviewer_keywords:
 - _Cmulcc function
 - _FCmulcc function
 - _LCmulcc function
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f1c4290c7e1f7a1ec917f2b2a197f787d28b9cd9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f81ccb641a80ab264e8bc54ba1987e2c2c8469f1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394979"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50656763"
 ---
-# <a name="cmulcc-fcmulcc-lcmulcc"></a>_Cmulcc，_FCmulcc _LCmulcc
+# <a name="cmulcc-fcmulcc-lcmulcc"></a>_Cmulcc、 _FCmulcc、 _LCmulcc
 
-两个复数相乘。
+将两个复数相乘。
 
 ## <a name="syntax"></a>语法
 
@@ -69,19 +58,19 @@ _Lcomplex _LCmulcc( _Lcomplex x, _Lcomplex y );
 
 ## <a name="return-value"></a>返回值
 
-A **_Dcomplex**， **_Fcomplex**，或 **_Lcomplex**结构，它表示复杂数字的复杂产品*x*和*y*。
+一个 **_Dcomplex**， **_Fcomplex**，或 **_Lcomplex**结构，它表示复杂数字的复杂产品*x*和*y*。
 
 ## <a name="remarks"></a>备注
 
-内置算术运算符无法正常工作的 Microsoft 实现的复杂类型，因为 **_Cmulcc**， **_FCmulcc**，和 **_LCmulcc**函数简化乘法的复杂类型。
+内置算术运算符无法正常工作的 Microsoft 实现的复杂类型，因为 **_Cmulcc**， **_FCmulcc**，并 **_LCmulcc**函数简化复杂类型的乘法。
 
 ## <a name="requirements"></a>要求
 
-|例程|C 标头|C++ 标头|
+|例程所返回的值|C 标头|C++ 标头|
 |-------------|--------------|------------------|
 |**_Cmulcc**， **_FCmulcc**， **_LCmulcc**|\<complex.h>|\<complex.h>|
 
-这些函数是特定于 Microsoft 的。 类型 **_Dcomplex**， **_Fcomplex**，和 **_Lcomplex**到未实现的 C99 本机类型的特定于 Microsoft 的等效项**double _Complex**， **float _Complex**，和**长双精度 _Complex**分别。 有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+这些函数是特定于 Microsoft 的。 类型 **_Dcomplex**， **_Fcomplex**，并 **_Lcomplex**是未实现 C99 本机类型与特定于 Microsoft 的等效**double _Complex**， **float _Complex**，和**long double _Complex**分别。 有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="see-also"></a>请参阅
 
