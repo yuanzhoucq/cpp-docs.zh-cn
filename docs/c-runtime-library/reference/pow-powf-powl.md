@@ -1,10 +1,6 @@
 ---
-title: pow、powf、powl | Microsoft 文档
-ms.custom: ''
+title: pow、powf、powl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - powl
 - pow
@@ -27,8 +23,6 @@ f1_keywords:
 - pow
 - _powl
 - powf
-dev_langs:
-- C++
 helpviewer_keywords:
 - exponential calculations
 - powl function
@@ -39,20 +33,16 @@ helpviewer_keywords:
 - powf function
 - pow function
 ms.assetid: e75c33ed-2e59-48b1-be40-81da917324f1
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5daf7348198cb6f3ba0186eb4586b2486548f6f5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: edf6116413caba52f9311f03bdfcc1d87e68a011
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403825"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50451998"
 ---
 # <a name="pow-powf-powl"></a>pow、powf、powl
 
-计算*x*的幂*y*。
+计算*x*次的幂*y*。
 
 ## <a name="syntax"></a>语法
 
@@ -90,17 +80,17 @@ Exponent。
 
 ## <a name="remarks"></a>备注
 
-**pow**无法识别整数的浮点值大于 2<sup>64</sup> (例如，1.0E100)。
+**pow**不能识别大于 2 的整型浮点值<sup>64</sup> (例如，1.0E100)。
 
-**pow**具有使用流式处理 SIMD 扩展 2 (SSE2) 实现。 有关使用 SSE2 实现的信息和限制，请参阅 [_set_SSE2_enable](set-sse2-enable.md)。
+**pow**具有使用流式处理 SIMD 扩展 2 (SSE2) 的实现。 有关使用 SSE2 实现的信息和限制，请参阅 [_set_SSE2_enable](set-sse2-enable.md)。
 
 由于 c + + 允许重载，你可以调用任意的各种重载**pow**。 在 C 程序中， **pow**始终采用两个**double**值，并返回**double**值。
 
-`pow(int, int)` 将不再可用。 如果你使用此重载，可能会发出编译器[C2668](../../error-messages/compiler-errors-2/compiler-error-c2668.md)。 若要避免此问题，将转换的第一个参数**double**， **float**，或**长** **double**。
+`pow(int, int)` 将不再可用。 如果使用此重载，则编译器可以发出[C2668](../../error-messages/compiler-errors-2/compiler-error-c2668.md)。 若要避免此问题，强制转换的第一个参数**双**， **float**，或**长** **double**。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头 (C)|必需的标头 (C++)|
+|例程所返回的值|必需的标头 (C)|必需的标头 (C++)|
 |-|-|-|
 |**pow**， **powf**， **powl**|\<math.h>|\<math.h> 或 \<cmath>|
 
