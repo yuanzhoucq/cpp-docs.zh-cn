@@ -1,10 +1,6 @@
 ---
-title: ctime_s、_ctime32_s、_ctime64_s、_wctime_s、_wctime32_s、_wctime64_s | Microsoft 文档
-ms.custom: ''
+title: ctime_s、_ctime32_s、_ctime64_s、_wctime_s、_wctime32_s、_wctime64_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ctime64_s
 - _wctime32_s
@@ -35,8 +31,6 @@ f1_keywords:
 - _tctime64_s
 - ctime_s
 - ctime32_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - _wctime32_s function
 - ctime64_s function
@@ -57,16 +51,12 @@ helpviewer_keywords:
 - _ctime32_s function
 - _tctime32_s function
 ms.assetid: 36ac419a-8000-4389-9fd8-d78b747a009b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a3f9c5e6d9d6f0d910decae904cbbd75d995a6c4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0410aeda4bbec33738d01a9514181c19f351e2c4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404313"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50496364"
 ---
 # <a name="ctimes-ctime32s-ctime64s-wctimes-wctime32s-wctime64s"></a>ctime_s、_ctime32_s、_ctime64_s、_wctime_s、_wctime32_s、_wctime64_s
 
@@ -133,15 +123,15 @@ errno_t _wctime64_s(
 ### <a name="parameters"></a>参数
 
 *buffer*<br/>
-必须足以容纳 26 个字符。 指向字符字符串结果时，或**NULL**如果：
+必须足以容纳 26 个字符。 一个指向字符串结果，或**NULL**如果：
 
-- *sourceTime*表示日期早于 1970 年 1 月 1 日午夜 UTC。
+- *sourceTime*表示自 1970 年 1 月 1 日午夜 UTC 前的日期。
 
-- 如果你使用 **_ctime32_s**或 **_wctime32_s**和*sourceTime*表示 23:59:59 2038 年 1 月 18 日，UTC 之后的日期。
+- 如果您使用 **_ctime32_s**或 **_wctime32_s**并*sourceTime*表示 23:59:59 2038 年 1 月 18 日，UTC 之后的日期。
 
-- 如果你使用 **_ctime64_s**或 **_wctime64_s**和*sourceTime*表示 23:59:59，3000 年 12 月 31 日，UTC 之后的日期。
+- 如果您使用 **_ctime64_s**或 **_wctime64_s**并*sourceTime*表示 23:59:59，3000 年 12 月 31 日，UTC 之后的日期。
 
-- 如果你使用 **_ctime_s**或 **_wctime_s**，这些函数是包装到前面的函数。 请参见“备注”部分。
+- 如果您使用 **_ctime_s**或 **_wctime_s**，这些函数都是之前的函数的包装。 请参见“备注”部分。
 
 *numberOfElements*<br/>
 缓冲区的大小。
@@ -158,24 +148,24 @@ errno_t _wctime64_s(
 |*buffer*|*numberOfElements*|*sourceTime*|返回|中的值*缓冲区*|
 |--------------|------------------------|------------|------------|-----------------------|
 |**NULL**|任何|任何|**EINVAL**|未修改|
-|不**NULL** （指向有效的内存）|0|任何|**EINVAL**|未修改|
+|不**NULL** （指向有效内存）|0|任何|**EINVAL**|未修改|
 |不**NULL**|0< 大小 < 26|任何|**EINVAL**|空字符串|
 |不**NULL**|>= 26|NULL|**EINVAL**|空字符串|
 |不**NULL**|>= 26|< 0|**EINVAL**|空字符串|
 
 ## <a name="remarks"></a>备注
 
-**Ctime_s**函数将转换为存储的时间值[time_t](../../c-runtime-library/standard-types.md)转换为字符串的结构。 *SourceTime*值通常从调用中获取[时间](time-time32-time64.md)，它将返回自午夜以来经过的秒数 (00: 00:00)、 1970 年 1 月 1 日协调世界时 (UTC)。 返回值字符串正好包含 26 个字符，且格式为：
+**Ctime_s**函数将存储为时间值转换[time_t](../../c-runtime-library/standard-types.md)结构转换为字符串。 *SourceTime*值通常从调用获取[时间](time-time32-time64.md)，它将返回自午夜以来经过的秒数 (00: 00:00) 自 1970 年 1 月 1 日，协调世界时 (UTC)。 返回值字符串正好包含 26 个字符，且格式为：
 
 `Wed Jan 02 02:03:55 1980\n\0`
 
 使用 24 小时制。 所有字段都具有固定宽度。 新换行符 ('\n') 和空字符 ('\0') 占据字符串的最后两个位置。
 
-转换的字符串同时根据本地时区设置进行调整。 请参阅[时间](time-time32-time64.md)， [_ftime](ftime-ftime32-ftime64.md)，和[localtime32_s](localtime-s-localtime32-s-localtime64-s.md)函数以获取有关配置的本地时间的信息和[_tzset](tzset.md)有关定义时区环境和全局变量信息的函数。
+转换的字符串同时根据本地时区设置进行调整。 请参阅[时间](time-time32-time64.md)， [_ftime](ftime-ftime32-ftime64.md)，并[localtime32_s](localtime-s-localtime32-s-localtime64-s.md)函数以获取有关配置本地时间的信息和[_tzset](tzset.md)有关定义时区环境和全局变量的函数。
 
-**_wctime32_s**和 **_wctime64_s**是宽字符版本的 **_ctime32_s**和 **_ctime64_s**; 返回一个指向宽字符字符串。 否则为 **_ctime64_s**， **_wctime32_s**，和 **_wctime64_s**行为 **_ctime32_s**。
+**_wctime32_s**并 **_wctime64_s**是宽字符版本 **_ctime32_s**并 **_ctime64_s**; 返回一个指向宽字符字符串。 否则为 **_ctime64_s**， **_wctime32_s**，并 **_wctime64_s**行为 **_ctime32_s**。
 
-**ctime_s**是内联函数计算结果为 **_ctime64_s**和**time_t**等效于 **__time64_t**。 如果需要强制编译器将解释**time_t**为旧的 32 位**time_t**，你可以定义 **_USE_32BIT_TIME_T**。 这将导致这样做**ctime_s**计算结果为 **_ctime32_s**。 不建议这样做，因为应用程序可能会在 2038 年 1 月 18 日后失效；且在 64 位平台上不允许使用它。
+**ctime_s**是内联函数的计算结果为 **_ctime64_s**并**time_t**等效于 **__time64_t**。 如果您需要强制编译器将解释**time_t**为旧的 32 位**time_t**，可以定义 **_USE_32BIT_TIME_T**。 执行此操作将导致**ctime_s**计算结果为 **_ctime32_s**。 不建议这样做，因为应用程序可能会在 2038 年 1 月 18 日后失效；且在 64 位平台上不允许使用它。
 
 在 C++ 中，通过模板重载简化这些函数的使用；重载可以自动推导出缓冲区长度，不再需要指定大小参数。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 
@@ -189,7 +179,7 @@ errno_t _wctime64_s(
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**ctime_s**， **_ctime32_s**， **_ctime64_s**|\<time.h>|
 |**_wctime_s**， **_wctime32_s**， **_wctime64_s**|\<time.h> 或 \<wchar.h>|
