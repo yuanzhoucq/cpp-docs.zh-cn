@@ -1,8 +1,6 @@
 ---
-title: '&lt;utility&gt; 函数 | Microsoft Docs'
-ms.custom: ''
+title: '&lt;utility&gt; 函数'
 ms.date: 11/04/2016
-ms.topic: reference
 f1_keywords:
 - utility/std::exchange
 - utility/std::forward
@@ -16,12 +14,12 @@ helpviewer_keywords:
 - std::make_pair [C++]
 - std::move [C++]
 - std::swap [C++]
-ms.openlocfilehash: 12e8b2c4dfb0d7d36974fb2e5979d82b69c89316
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 7a061ede19c5c4c181b5fea912b9c6212c583267
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45718312"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50543905"
 ---
 # <a name="ltutilitygt-functions"></a>&lt;utility&gt; 函数
 
@@ -101,7 +99,7 @@ constexpr Type&& forward(typename remove_reference<Type>::type&& Arg) noexcept
 
 |参数|描述|
 |---------------|-----------------|
-|*类型*|传入的值的类型*Arg*，这可能是不同的类型*Arg*。 通常由转发函数的模板自变量决定。|
+|*Type*|传入的值的类型*Arg*，这可能是不同的类型*Arg*。 通常由转发函数的模板自变量决定。|
 |*arg*|要强制转换的自变量。|
 
 ### <a name="return-value"></a>返回值
@@ -277,7 +275,7 @@ constexpr typename remove_reference<Type>::type&& move(Type&& Arg) noexcept;
 
 |参数|描述|
 |---------------|-----------------|
-|*类型*|从自变量的类型推导的类型传入*Arg*一起引用折叠规则。|
+|*Type*|从自变量的类型推导的类型传入*Arg*一起引用折叠规则。|
 |*arg*|要强制转换的自变量。 尽管的类型*Arg*看起来指定为右值引用，`move`也接受左值自变量，因为可以将左值引用绑定到右值引用。|
 
 ### <a name="return-value"></a>返回值

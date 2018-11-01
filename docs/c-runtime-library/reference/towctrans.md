@@ -1,10 +1,6 @@
 ---
-title: towctrans | Microsoft 文档
-ms.custom: ''
+title: towctrans
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - towctrans
 apilocation:
@@ -22,21 +18,15 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - towctrans
-dev_langs:
-- C++
 helpviewer_keywords:
 - towctrans function
 ms.assetid: 1ed1e70d-7b31-490f-a7d9-42564b5924ca
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b9d70570339868feb62ee906a707cf16ca03d556
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b814c65d2f5d0bb18b19d97a539d79dd6df8a1c6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407624"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50561403"
 ---
 # <a name="towctrans"></a>towctrans
 
@@ -65,11 +55,11 @@ wint_t towctrans(
 
 ## <a name="remarks"></a>备注
 
-值*类别*必须通过前面成功调用返回[wctrans](wctrans.md)。
+值*类别*必须对之前成功调用返回[wctrans](wctrans.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**towctrans**|\<wctype.h>|
 
@@ -77,7 +67,7 @@ wint_t towctrans(
 
 ## <a name="example"></a>示例
 
-请参阅**wctrans**有关使用示例**towctrans**。
+请参阅**wctrans**有关的示例，使用**towctrans**。
 
 ## <a name="see-also"></a>请参阅
 

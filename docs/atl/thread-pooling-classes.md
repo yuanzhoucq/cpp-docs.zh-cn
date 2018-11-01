@@ -1,29 +1,20 @@
 ---
-title: 线程池类 (ATL) |Microsoft Docs
-ms.custom: ''
+title: 线程池类 (ATL)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
 ms.topic: reference
 f1_keywords:
 - vc.atl.threads.pooling
-dev_langs:
-- C++
 helpviewer_keywords:
 - thread pooling, classes
 - threading [ATL], pooling
 - pooling worker threads
 ms.assetid: 01fa2c1c-12ae-4781-b772-0a74b6365a8c
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d1039f93d28db118dafadd88b074d788a1b861de
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8d88b34f8834e1146b734379d2eba4a9c4a94cb9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752175"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50564536"
 ---
 # <a name="thread-pooling-classes"></a>线程池类
 

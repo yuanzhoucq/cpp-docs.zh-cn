@@ -1,10 +1,6 @@
 ---
-title: _isctype、iswctype、_isctype_l、_iswctype_l | Microsoft 文档
-ms.custom: ''
+title: _isctype、iswctype、_isctype_l、_iswctype_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _isctype_l
 - iswctype
@@ -32,8 +28,6 @@ f1_keywords:
 - iswctype_l
 - isctype_l
 - _iswctype_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - isctype_l function
 - iswctype_l function
@@ -44,20 +38,16 @@ helpviewer_keywords:
 - isctype function
 - _iswctype function
 ms.assetid: cf7509b7-12fc-4d95-8140-ad2eb98173d3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0a9ca4580ba19c4efc342186c0c3b348d76ce94e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c5eb0b51cf0371100ed884221ee04885dfbe9ad9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402543"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50563149"
 ---
 # <a name="isctype-iswctype-isctypel-iswctypel"></a>_isctype、iswctype、_isctype_l、_iswctype_l
 
-测试*c*由指定的 ctype 属性*desc*自变量。 为每个有效的值*desc*，没有等效的宽字符分类例程。
+测试*c* ctype 属性指定*desc*参数。 对于每个有效值都*desc*，还有一个等效的宽字符分类例程。
 
 ## <a name="syntax"></a>语法
 
@@ -95,9 +85,9 @@ int _iswctype_l(
 
 ## <a name="return-value"></a>返回值
 
-**_isctype**和**iswctype**返回非零值，如果*c*具有指定的属性*desc*中的当前区域设置或如果它不为 0。 使用这些函数的版本 **_l**后缀是相同，只不过它们使用传递区域设置而不是当前区域设置其区域设置相关的行为。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+**_isctype**并**iswctype**返回非零值，如果*c*具有指定的属性*desc*中当前区域设置或如果不为 0。 使用这些函数的版本 **_l**后缀完全相同，只不过它们使用为其区域设置相关的行为而不是当前区域设置传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
-行为 **_isctype**和 **_isctype_l**如果是未定义*c*不是 EOF 或在 0 到 0xFF，非独占的范围。 使用 CRT 调试库时和*c*是不是一种这些值，函数引发的断言。
+行为 **_isctype**并 **_isctype_l**未定义当*c*不是 EOF 或在范围 0 到 0xff 内，非独占。 使用调试 CRT 库时， *c*是不包含其中一个值，函数将引发断言。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -108,7 +98,7 @@ int _iswctype_l(
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_isctype**|\<ctype.h>|
 |**iswctype**|\<ctype.h 1> 或 \<wchar.h 1>|

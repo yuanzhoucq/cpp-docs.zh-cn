@@ -1,31 +1,24 @@
 ---
-title: 弃用的类型和成员 (C + + /cli CX) |Microsoft Docs
-ms.custom: ''
+title: 要弃用的类型和成员 (C++/CX)
 ms.date: 12/30/2016
-ms.technology: cpp-windows
-ms.topic: language-reference
 ms.assetid: b20b01c1-a439-4ff0-8cf3-d7280c492813
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 500b93f3a84ecb39706b5c1575887a7339d1fdd4
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 661445c8a365451d94f938cfe262623866b0fa5e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44102086"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50618629"
 ---
 # <a name="deprecating-types-and-members-ccx"></a>要弃用的类型和成员 (C++/CX)
 
 在 C + + /CX 中，生成者和使用者通过使用 Windows 运行时类型和成员的不推荐使用[已弃用](/uwp/api/windows.foundation.metadata.deprecatedattribute)支持属性。 如果你使用的 API 已应用此特性，将显示一条编译时警告消息，指示该 API 已弃用并建议使用其他 API。 在你自己的公共类型和方法中，可应用此特性并提供自己的自定义消息。
 
 > [!CAUTION]
-> [已弃用](/uwp/api/windows.foundation.metadata.deprecatedattribute)属性是只适用于 Windows 运行时类型。 对于标准 c + + 类和成员，请使用[__declspec （deprecated)](../cpp/deprecated-cpp.md)。
+> [已弃用](/uwp/api/windows.foundation.metadata.deprecatedattribute)属性是只适用于 Windows 运行时类型。 对于标准 C++ 类和成员，请使用 [__declspec(deprecated)](../cpp/deprecated-cpp.md)。
 
 ### <a name="example"></a>示例
 
-下面的示例演示如何弃用你自己的公共 API（例如 Windows 运行时组件中的公共 API）。 类型的第二个参数[Windows: Foundation:: metadata:: deprecationtype](/uwp/api/windows.foundation.metadata.deprecationtype)知否 API 弃用或移除。 目前仅支持 DeprecationType::Deprecated 值。 该属性中的第三个参数指定[Windows::Foundation::Metadata::Platform](/uwp/api/windows.foundation.metadata.platformattribute)应用特性。
+下面的示例演示如何弃用你自己的公共 API（例如 Windows 运行时组件中的公共 API）。 类型 [Windows:Foundation::Metadata::DeprecationType](/uwp/api/windows.foundation.metadata.deprecationtype) 的第二个参数知否弃用或移除该 API。 目前仅支持 DeprecationType::Deprecated 值。 该特性中的第三个参数指定要应用该特性的 [Windows::Foundation::Metadata::Platform](/uwp/api/windows.foundation.metadata.platformattribute) 。
 
 ```
 

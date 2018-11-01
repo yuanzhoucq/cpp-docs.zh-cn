@@ -1,10 +1,6 @@
 ---
-title: _putw | Microsoft 文档
-ms.custom: ''
+title: _putw
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _putw
 apilocation:
@@ -23,24 +19,18 @@ apitype: DLLExport
 f1_keywords:
 - _putw
 - putw
-dev_langs:
-- C++
 helpviewer_keywords:
 - integers, writing to streams
 - putw function
 - streams, writing integers to
 - _putw function
 ms.assetid: 83d63644-249d-4a39-87e5-3b7aa313968d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c5e33bc207fe83795c31f6c8b61d931985760e3a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3fd18c2a8869d6b09703547f50ee6e096bd72395
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404007"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50602678"
 ---
 # <a name="putw"></a>_putw
 
@@ -65,17 +55,17 @@ int _putw(
 
 ## <a name="return-value"></a>返回值
 
-返回写入的值。 返回值**EOF**可能表示存在错误。 因为**EOF**也是合法的整数值，请使用**ferror**来验证错误。 如果*流*是 null 指针，则调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，此函数将**errno**到**EINVAL**并返回**EOF**。
+返回写入的值。 返回值**EOF**可能表示存在错误。 因为**EOF**也是合法的整数值，请使用**ferror**来验证错误。 如果*流*是空指针，将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，此函数可设置**errno**到**EINVAL** ，并返回**EOF**。
 
 有关这些及其他错误代码的信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>备注
 
-**_Putw**函数会写入类型的二进制值**int**的当前位置到*流。* **_putw**不会影响流中的项的对齐方式，也不采用任何特殊的对齐方式。 **_putw**主要用于与以前的库的兼容性。 可能会出现可移植性问题 **_putw**因为的大小**int**和中的字节顺序**int**系统而异。
+**_Putw**函数的类型的二进制值写入**int**的当前位置到*流。* **_putw**不会影响流中的项的对齐方式也不会采用任何特殊的对齐方式。 **_putw**主要是为了与以前的库的兼容性。 可移植性问题可能会发生的 **_putw**因为的大小**int**和中的字节顺序**int**系统而异。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_putw**|\<stdio.h>|
 

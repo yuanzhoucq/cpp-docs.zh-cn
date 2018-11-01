@@ -1,30 +1,20 @@
 ---
-title: decltype （C++） |Microsoft 文档
-ms.custom: ''
+title: decltype （C++）
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
 f1_keywords:
 - decltype_cpp
-dev_langs:
-- C++
 helpviewer_keywords:
 - operators [C++], decltype
 - decltype operator
 - operators [C++], type of an expression
 - operators [C++], deduce expression type
 ms.assetid: 6dcf8888-8196-4f13-af50-51e3797255d4
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1c6cab68cd351c64d65eeed1eeffda7bf49385aa
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6c1c91aec7d974836b1ec031a1e8b38e8abb65ce
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46073997"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50527941"
 ---
 # <a name="decltype--c"></a>decltype （C++）
 
@@ -93,7 +83,7 @@ UNKNOWN func(T&& t, U&& u){ return t + u; };
 
 **自动** *function_name* **(** *参数*<sub>选择</sub> **)** **const**<sub>opt</sub> **易失性**<sub>opt</sub> **->** **decltype (***表达式* **)** **引发**<sub>选择</sub> **{** *function_body***};**
 
-在下面的代码示例中，`myFunc` 模板函数的后指定返回类型取决于 `t` 和 `u` 模板参数的类型。 作为最佳编码做法，此代码示例还使用右值引用和`forward`函数模板来支持*完美转发*。 有关详细信息，请参阅[右值引用声明符：&&](../cpp/rvalue-reference-declarator-amp-amp.md)。
+在下面的代码示例中，`myFunc` 模板函数的后指定返回类型取决于 `t` 和 `u` 模板自变量的类型。 作为最佳编码做法，此代码示例还使用右值引用和`forward`函数模板来支持*完美转发*。 有关详细信息，请参阅[右值引用声明符：&&](../cpp/rvalue-reference-declarator-amp-amp.md)。
 
 ```cpp
 //C++11
@@ -115,7 +105,7 @@ decltype(auto) myFunc(T&& t, U&& u)
 
 ## <a name="example"></a>示例
 
-下面的代码示例声明模板函数 `Plus()` 的后指定返回类型。 `Plus`函数将处理与两个操作数**operator +** 重载。 因此，对 `Plus` 函数的加运算符 (+) 和返回类型的解释取决于函数参数的类型。
+下面的代码示例声明模板函数 `Plus()` 的后指定返回类型。 `Plus`函数将处理与两个操作数**operator +** 重载。 因此，对 `Plus` 函数的加运算符 (+) 和返回类型的解释取决于函数自变量的类型。
 
 ```cpp
 // decltype_1.cpp

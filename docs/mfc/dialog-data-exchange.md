@@ -1,12 +1,6 @@
 ---
-title: 对话框数据交换 |Microsoft Docs
-ms.custom: ''
+title: 对话框数据交换
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - initializing dialog boxes
 - canceling data exchange
@@ -25,16 +19,12 @@ helpviewer_keywords:
 - UpdateData method [MFC]
 - retrieving dialog box data [MFC]
 ms.assetid: 4675f63b-41d2-45ed-b6c3-235ad8ab924b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ae80d7e74c44367b608329ee86633fef6cb510b6
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a72be4daf6c10a7d16b8558bfdddb8337ff1b1be
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46405711"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50566278"
 ---
 # <a name="dialog-data-exchange"></a>对话框数据交换
 
@@ -48,7 +38,7 @@ ms.locfileid: "46405711"
 
 `UpdateData` 在这两个方向上，指定的工作原理**BOOL**参数传递给它。 若要执行交换，`UpdateData` 将设置 `CDataExchange` 对象并调用对话框类的 `CDialog` 的 `DoDataExchange` 成员函数的重写。 `DoDataExchange` 采用 `CDataExchange` 类型的参数。 传递给 `CDataExchange` 的 `UpdateData` 对象表示交换的上下文，并将此类信息定义交换的方向。
 
-当您（或代码向导）重写 `DoDataExchange` 时，可以指定对每个数据成员（控件）调用一个 DDX 函数。 每个 DDX 函数都了解如何基于由 `CDataExchange` 传递给 `DoDataExchange` 的 `UpdateData` 参数提供的上下文双向交换数据。
+当你（或代码向导）重写 `DoDataExchange` 时，可以指定对每个数据成员（控件）调用一个 DDX 函数。 每个 DDX 函数都了解如何基于由 `CDataExchange` 传递给 `DoDataExchange` 的 `UpdateData` 参数提供的上下文双向交换数据。
 
 MFC 提供了许多用于不同类型交换的 DDX 函数。 以下示例演示了一个 `DoDataExchange` 重写，其中调用两个 DDX 函数和一个 DDV 函数：
 

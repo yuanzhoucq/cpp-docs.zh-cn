@@ -1,10 +1,6 @@
 ---
-title: strrchr、wcsrchr、_mbsrchr、_mbsrchr_l | Microsoft 文档
-ms.custom: ''
+title: strrchr、wcsrchr、_mbsrchr、_mbsrchr_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - strrchr
 - wcsrchr
@@ -30,8 +26,6 @@ f1_keywords:
 - strrchr
 - wcsrchr
 - _mbsrchr
-dev_langs:
-- C++
 helpviewer_keywords:
 - _mbsrchr function
 - tcsrchr function
@@ -47,16 +41,12 @@ helpviewer_keywords:
 - _ftcsrchr function
 - _mbsrchr_l function
 ms.assetid: 75cf2664-758e-49bb-bf6b-8a139cd474d2
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 03b0ce2c9bd205f9065c783a4ff4d7e50d0ff803
-ms.sourcegitcommit: 04d327940787df1297b72d534f388a035d472af0
+ms.openlocfilehash: d07930f5e77d76ae950af1058c55e58cb296011b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39181154"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50607696"
 ---
 # <a name="strrchr-wcsrchr-mbsrchr-mbsrchrl"></a>strrchr、wcsrchr、_mbsrchr、_mbsrchr_l
 
@@ -140,7 +130,7 @@ const unsigned char *_mbsrchr_l(
 
 `strrchr`函数查找字符串的最后一个匹配项*c* (转换为**char**) 中*str*。 搜索包括终止 null 字符。
 
-`wcsrchr` 和 `_mbsrchr` 分别是 `strrchr` 的宽字符及多字节字符版本。 `wcsrchr` 的参数和返回值是宽字符字符串；而 `_mbsrchr` 的则是多字节字符字符串。
+`wcsrchr` 和 `_mbsrchr` 分别是 `strrchr`的宽字符及多字节字符版本。 `wcsrchr` 的参数和返回值是宽字符字符串；而 `_mbsrchr` 的则是多字节字符字符串。
 
 在 C 中，这些函数采用**const**的第一个参数的指针。 在 C++ 中，有两个重载可用。 采用指向的重载**const**返回一个指向**const**; 将指针传递到非版本**const**返回一个指向非**常量**. 如果这两个定义宏 _CRT_CONST_CORRECT_OVERLOADS **const**和非-**const**提供了这些函数的版本。 如果需要非**const**行为对于这两个 c + + 重载，定义符号 _CONST_RETURN。
 
@@ -161,7 +151,7 @@ const unsigned char *_mbsrchr_l(
 |-------------|---------------------|
 |`strrchr`|\<string.h>|
 |`wcsrchr`|\<string.h> 或 \<wchar.h>|
-|`_mbsrchr`, `_mbsrchr_l`|\<mbstring.h>|
+|`_mbsrchr`， `_mbsrchr_l`|\<mbstring.h>|
 
 有关兼容性的更多信息，请参见 [兼容性](../../c-runtime-library/compatibility.md)。
 
