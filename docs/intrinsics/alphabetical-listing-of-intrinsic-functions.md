@@ -1,27 +1,17 @@
 ---
-title: 按字母顺序排列的内部函数的列表 |Microsoft Docs
-ms.custom: ''
+title: 按字母顺序列出的内部函数
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - cl.exe compiler intrinsics
 - intrinsics, alphabetical list
 - intrinsics
 ms.assetid: 178f88a2-7e8e-43ac-b55e-ef3298bef895
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4de558e36fb0605096387164d2c9529582ad3911
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 83b254b67cb2a7e09fbf57597996097a7afb5d76
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46396761"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50654762"
 ---
 # <a name="alphabetical-listing-of-intrinsic-functions"></a>按字母顺序列出的内部函数
 

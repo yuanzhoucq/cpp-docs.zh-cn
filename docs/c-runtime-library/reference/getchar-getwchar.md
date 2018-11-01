@@ -1,10 +1,6 @@
 ---
-title: getchar、getwchar | Microsoft 文档
-ms.custom: ''
+title: getchar、getwchar
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - getchar
 - getwchar
@@ -24,8 +20,6 @@ apitype: DLLExport
 f1_keywords:
 - getwchar
 - GetChar
-dev_langs:
-- C++
 helpviewer_keywords:
 - gettchar function
 - characters, reading
@@ -33,16 +27,12 @@ helpviewer_keywords:
 - _gettchar function
 - standard input, reading from
 ms.assetid: 19fda588-3e33-415c-bb60-dd73c028086a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7c05fca568c8d69d34aa1386030eef3f2cb09f11
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5f8d7dbeb35c8818706eb6070df613df8654feb6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399616"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50626598"
 ---
 # <a name="getchar-getwchar"></a>getchar、getwchar
 
@@ -57,11 +47,11 @@ wint_t getwchar();
 
 ## <a name="return-value"></a>返回值
 
-返回读取的字符。 若要指示读取的错误或文件尾条件**getchar**返回**EOF**，和**getwchar**返回**WEOF**。 有关**getchar**，使用**ferror**或**feof**来检查是否有错误或文件尾。
+返回读取的字符。 若要指示读取的错误或文件结尾条件**getchar**返回**EOF**，并**getwchar**返回**WEOF**。 有关**getchar**，使用**ferror**或**feof**来检查是否有错误或文件尾。
 
 ## <a name="remarks"></a>备注
 
-每个例程读取单个字符从**stdin**并递增关联的文件指针，用以指向下一个字符。 **getchar**相同[_fgetchar](fgetc-fgetwc.md)，但它实现为函数和宏。
+每个例程读取中的单个字符**stdin**并递增关联的文件指针以指向下一个字符。 **getchar**等同于[_fgetchar](fgetc-fgetwc.md)，但作为函数和宏实现。
 
 这些函数会锁定调用线程，因此是线程安全的。 有关非锁定版本，请参阅 [_getchar_nolock、_getwchar_nolock](getchar-nolock-getwchar-nolock.md)。
 
@@ -73,12 +63,12 @@ wint_t getwchar();
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**getchar**|\<stdio.h>|
 |**getwchar**|\<stdio.h> 或 \<wchar.h>|
 
-通用 Windows 平台 (UWP) 应用中不支持控制台。 控制台中，与关联的标准流句柄**stdin**， **stdout**，和**stderr**，必须将 C 运行时函数才能使用它们在 UWP 应用重定向. 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+通用 Windows 平台 (UWP) 应用中不支持控制台。 控制台中，与关联的标准流句柄**stdin**， **stdout**，并**stderr**，C 运行时函数可以在 UWP 应用中使用它们之前，必须重定向. 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 

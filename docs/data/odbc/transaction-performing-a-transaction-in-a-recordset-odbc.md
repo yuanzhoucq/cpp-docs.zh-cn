@@ -1,26 +1,15 @@
 ---
-title: 事务： 在记录集 (ODBC) 执行事务 |Microsoft Docs
-ms.custom: ''
+title: 事务：在记录集中执行事务 (ODBC)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-data
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - transactions, updating recordsets
 ms.assetid: cf1d6b48-7fb8-4903-84f7-a1822054534d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- data-storage
-ms.openlocfilehash: 9d8075cd0d2f339db255f669386b888a3f11dd6a
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: df7c28ebfbb68f3e0163368247b90ff69058726d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50073599"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50659573"
 ---
 # <a name="transaction-performing-a-transaction-in-a-recordset-odbc"></a>事务：在记录集中执行事务 (ODBC)
 
