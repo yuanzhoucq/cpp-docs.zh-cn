@@ -1,10 +1,6 @@
 ---
-title: fscanf_s、_fscanf_s_l、fwscanf_s、_fwscanf_s_l | Microsoft 文档
-ms.custom: ''
+title: fscanf_s、_fscanf_s_l、fwscanf_s、_fwscanf_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - fwscanf_s
 - _fscanf_s_l
@@ -29,8 +25,6 @@ f1_keywords:
 - _ftscanf_s_l
 - _ftscanf_s
 - fwscanf_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - formatted data [C++], reading from streams
 - _ftscanf_s_l function
@@ -46,16 +40,12 @@ helpviewer_keywords:
 - streams [C++], reading formatted data from
 - fscanf_s_l function
 ms.assetid: b6e88194-714b-4322-be82-1cc0b343fe01
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 62bca0d0d53871e507ce47eb878fed663443bd40
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f9c1686d7e42e0e885a65e153ee4e1ff2be01f27
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405375"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50454712"
 ---
 # <a name="fscanfs-fscanfsl-fwscanfs-fwscanfsl"></a>fscanf_s、_fscanf_s_l、fwscanf_s、_fwscanf_s_l
 
@@ -104,20 +94,20 @@ int _fwscanf_s_l(
 
 ## <a name="return-value"></a>返回值
 
-每个函数都将返回成功转换并分配的字段数；返回值不包括已读取但未分配的字段。 返回值为 0 表示没有分配任何字段。 如果发生错误，或如果文件流的末尾到达第一个转换，则返回值是**EOF**为**fscanf_s**和**fwscanf_s**。
+每个函数都将返回成功转换并分配的字段数；返回值不包括已读取但未分配的字段。 返回值为 0 表示没有分配任何字段。 如果发生错误，或如果在第一次转换前达到文件流的末尾，则返回值是**EOF**有关**fscanf_s**并**fwscanf_s**。
 
-这些函数验证其参数。 如果*流*是无效的文件指针，或*格式*是 null 指针，这些函数将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则这些函数将返回**EOF**并设置**errno**到**EINVAL**。
+这些函数验证其参数。 如果*流*是无效文件指针，或*格式*是 null 指针，这些函数将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，这些函数将返回**EOF**并设置**errno**到**EINVAL**。
 
 ## <a name="remarks"></a>备注
 
-**Fscanf_s**函数将从当前的位置读取数据*流*到提供的位置*参数*（如果有）。 每个*参数*必须是指向的变量的此类型中的类型说明符对应*格式*。 *格式*控件的输入解释字段，并具有相同形式和函数与*格式*参数**scanf_s**; 请参阅[格式规范字段：scanf 和 wscanf 函数](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md)有关的说明*格式*。  **fwscanf_s**是宽字符版本的**fscanf_s**; 的格式参数**fwscanf_s**是宽字符字符串。 如果在 ANSI 模式下打开流，则这些函数行为相同。 **fscanf_s**当前不支持 UNICODE 流中的输入。
+**Fscanf_s**函数将从当前的位置读取数据*流*到由给定的位置*参数*（如果有）。 每个*自变量*必须是指向类型中的类型说明符相对应的变量的指针*格式*。 *格式*控制字段输入的解释，并且具有相同格式和函数作为*格式*自变量**scanf_s**; 请参阅[格式规范字段：scanf 和 wscanf 函数](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md)有关的说明*格式*。  **fwscanf_s**是宽字符版本**fscanf_s**; 的格式参数**fwscanf_s**是宽字符字符串。 如果在 ANSI 模式下打开流，则这些函数行为相同。 **fscanf_s**当前不支持 UNICODE 流的输入。
 
-更安全的函数之间的主要差异 (具有 **_s**后缀) 和其他版本是更安全的函数，需要以字符为每个单位的大小**c**， **C**， **s**， **S**，和 **[** 类型字段以作为紧跟变量参数传递。 有关详细信息，请参阅 [scanf_s、_scanf_s_l、wscanf_s、_wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) 和 [scanf 宽度规范](../../c-runtime-library/scanf-width-specification.md)。
+更安全的函数之间的主要区别 (具有 **_s**后缀) 和其他版本是更安全的函数需要在每个字符的大小**c**， **C**， **s**， **S**，并且 **[** 类型字段以作为紧跟变量参数传递。 有关详细信息，请参阅 [scanf_s、_scanf_s_l、wscanf_s、_wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) 和 [scanf 宽度规范](../../c-runtime-library/scanf-width-specification.md)。
 
 > [!NOTE]
-> 大小参数属于类型**无符号**，而不**size_t**。
+> 大小参数的类型是**无符号**，而非**size_t**。
 
-这些函数具有的版本 **_l**后缀是相同，只不过它们使用传入的区域设置参数而不是当前线程区域设置。
+具有这些函数的版本 **_l**后缀完全相同，只不过它们使用传入的区域设置参数而不是当前线程区域设置。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 

@@ -1,29 +1,19 @@
 ---
-title: alloc_text | Microsoft Docs
-ms.custom: ''
+title: alloc_text
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - vc-pragma.alloc_text
 - alloc_text_CPP
-dev_langs:
-- C++
 helpviewer_keywords:
 - alloc_text pragma
 - pragmas, alloc_text
 ms.assetid: 1fd7be18-e4f7-4f70-b079-6326f72b871a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d131cee2194ba139fdb99d9c0fa7ae2c922fe84d
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 43f516830d0aa0fb8de6195c5958beadbeba9df6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50073807"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50450370"
 ---
 # <a name="alloctext"></a>alloc_text
 命名指定的函数定义驻留的代码部分。 杂注必须出现在函数声明符和命名函数的函数定义之间。

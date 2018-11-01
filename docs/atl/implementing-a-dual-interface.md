@@ -1,30 +1,20 @@
 ---
-title: 实现双重接口 (ATL) |Microsoft Docs
-ms.custom: ''
+title: 实现双重接口 (ATL)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - IDispatchImpl class, implementing dual interfaces
 - dual interfaces, implementing
 ms.assetid: d1da3633-b445-4dcd-8a0a-3efdafada3ea
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7a362ba60b1601e2b291201e10ac49cf9c0ec1ef
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 3b5363bb74a0db5b3cc5dad9bb0c0c6cb05edf15
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765978"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50441218"
 ---
 # <a name="implementing-a-dual-interface"></a>实现双重接口
 
-您可以实现双重接口使用[IDispatchImpl](../atl/reference/idispatchimpl-class.md)类，该类提供的默认实现`IDispatch`双重接口中的方法。 有关详细信息，请参阅[实现 IDispatch 接口](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)。
+您可以实现双重接口使用[IDispatchImpl](../atl/reference/idispatchimpl-class.md)类，该类提供的默认实现`IDispatch`双重接口中的方法。 有关更多信息，请参见 [Implementing the IDispatch Interface](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)。
 
 若要使用此类：
 

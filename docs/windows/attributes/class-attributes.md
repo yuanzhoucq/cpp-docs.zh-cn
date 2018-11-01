@@ -1,26 +1,15 @@
 ---
-title: 类特性 (c + + COM) |Microsoft Docs
-ms.custom: ''
+title: 类特性 (c + + COM)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - attributes [C++/CLI], class attributes
 ms.assetid: fad04ea1-d8ff-46d4-bb42-2b4500a6ab60
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: a727bcf53a11e98ffd7e037037452c6bbdc4fe8a
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: bdc689107eb973b9701e3f1fbe37a10aa6ae8d85
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790378"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50448862"
 ---
 # <a name="class-attributes"></a>类特性
 
@@ -49,18 +38,18 @@ ms.locfileid: "48790378"
 |[helpstringcontext](helpstringcontext.md)|在.hlp 或.chm 文件中指定的帮助主题的 ID。|
 |[helpstring](helpstring.md)|指定一个字符串，用于描述应用该字符串的元素。|
 |[hidden](hidden.md)|指示该项存在，但不是应在面向用户的浏览器中显示。|
-|[实现](implements-cpp.md)|指定强制 IDL 组件类的成员的调度接口。|
+|[implements](implements-cpp.md)|指定强制 IDL 组件类的成员的调度接口。|
 |[implements_category](implements-category.md)|指定类的实现的组件类别。|
-|[模块](module-cpp.md)|定义.Idl 文件中的库块。|
+|[module](module-cpp.md)|定义.Idl 文件中的库块。|
 |[noncreatable](noncreatable.md)|定义不能实例化本身的对象。|
 |[progid](progid.md)|定义控件的 ProgID。|
 |[registration_script](registration-script.md)|执行指定的注册脚本。|
 |[requestedit](requestedit.md)|指示该属性支持`OnRequestEdit`通知。|
 |[source](source-cpp.md)|指定连接点的控件的源接口的类上。 在属性或方法，`source`属性指示该成员返回的对象或`VARIANT`，它是事件的源。|
 |[support_error_info](support-error-info.md)|支持的错误报告目标对象。|
-|[线程处理](threading-cpp.md)|指定控件的线程模型。|
+|[threading](threading-cpp.md)|指定控件的线程模型。|
 |[uuid](uuid-cpp-attributes.md)|指定类或接口的唯一 ID。|
-|[version](version-cpp.md)|标识类的多个版本间的特定版本。|
+|[版本](version-cpp.md)|标识类的多个版本间的特定版本。|
 |[vi_progid](vi-progid.md)|指定独立于版本的窗体的 ProgID。|
 
 ## <a name="see-also"></a>请参阅
