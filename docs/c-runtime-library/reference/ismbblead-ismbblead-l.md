@@ -1,10 +1,6 @@
 ---
-title: _ismbblead、_ismbblead_l | Microsoft 文档
-ms.custom: ''
+title: _ismbblead、_ismbblead_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ismbblead_l
 - _ismbblead
@@ -28,8 +24,6 @@ f1_keywords:
 - _ismbblead_l
 - ismbblead
 - _istlead
-dev_langs:
-- C++
 helpviewer_keywords:
 - _ismbblead_l function
 - ismbblead function
@@ -38,16 +32,12 @@ helpviewer_keywords:
 - ismbblead_l function
 - _istlead function
 ms.assetid: 2abc6f75-ed5c-472e-bfd0-e905a1835ccf
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e2d85459f4addf0688acb5a82b0108ec6133b749
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7bf8e8c88153e2f22cfa08bb35ff8d4ba01a8804
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400588"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50452541"
 ---
 # <a name="ismbblead-ismbbleadl"></a>_ismbblead、_ismbblead_l
 
@@ -75,13 +65,13 @@ int _ismbblead_l(
 
 ## <a name="return-value"></a>返回值
 
-如果返回非零值整数*c*是多字节字符的第一个字节。
+如果返回非零值的整数*c*是多字节字符的第一个字节。
 
 ## <a name="remarks"></a>备注
 
 多字节字符由前导字节后跟尾随字节构成。 通过在给定字符集中的特定范围来辨别前导字节。 例如，在代码页 932 唯一，前导字节范围为 0x81-0x9F 和 0xE0-0xFC。
 
-**_ismbblead**对区域设置相关行为使用当前区域设置。 **_ismbblead_l**具有完全相同，只不过它改用已传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+**_ismbblead**区域设置相关的行为使用当前区域设置。 **_ismbblead_l**是完全相同，只不过它改用已传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -91,7 +81,7 @@ int _ismbblead_l(
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|可选标头|
+|例程所返回的值|必需的标头|可选标头|
 |-------------|---------------------|---------------------|
 |**_ismbblead**|\<mbctype.h 1> 或 \<mbstring.h 1>|\<ctype.h>、* \<limits.h 1>、\<stdlib.h 1>|
 |**_ismbblead_l**|\<mbctype.h 1> 或 \<mbstring.h 1>|\<ctype.h>、* \<limits.h 1>、\<stdlib.h 1>|

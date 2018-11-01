@@ -1,30 +1,20 @@
 ---
-title: PgoAutoSweep |Microsoft 文档
-ms.custom: ''
+title: PgoAutoSweep
 ms.date: 03/14/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 f1_keywords:
 - PgoAutoSweep
 - PogoAutoSweepA
 - PogoAutoSweepW
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 988a73dd8c4ad6929ef04691ad1959df7ea7bdd7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 356504da91a6778b5e873ca218df01944461d59c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379492"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50456636"
 ---
 # <a name="pgoautosweep"></a>PgoAutoSweep
 
-`PgoAutoSweep` 将当前的配置文件计数器信息保存到一个文件，然后并重置计数器。 在培训，以将所有配置文件数据从运行的程序写入到对应的.pgc 文件以便以后用于在优化生成的按配置优化过程中使用该函数。
+`PgoAutoSweep` 将当前的配置文件计数器信息保存到一个文件，然后将重置计数器。 在培训，以将所有配置文件数据从正在运行的程序写入到在优化生成中的更高版本使用的.pgc 文件按配置优化过程中使用该函数。
 
 ## <a name="syntax"></a>语法
 
@@ -40,27 +30,27 @@ void PgoAutoSweep(const wchar_t* name); // UNICODE
 
 ## <a name="remarks"></a>备注
 
-你可以调用`PgoAutoSweep`从你的应用程序，以保存并在应用程序执行期间重置配置文件数据在任何时间点。 中的被检测生成`PgoAutoSweep`捕获当前的分析数据、 将其保存在文件中，并将重置的配置文件计数器。 它等效于调用[pgosweep](pgosweep.md)命令可执行文件在某个特定点。 在优化版本中，`PgoAutoSweep`是不执行任何操作。
+您可以调用`PgoAutoSweep`从你的应用程序，以保存并在应用程序执行期间重置任何位置的配置文件数据。 中的被检测生成`PgoAutoSweep`捕获当前分析数据、 将其保存在文件中，并将配置文件计数器重置。 它相当于调用[pgosweep](pgosweep.md)命令时可执行文件中的特定点。 在优化的生成，`PgoAutoSweep`不是执行任何操作。
 
-保存的配置文件计数器数据放置在名为的文件*base_name*-*名称*！*值*.pgc，其中*base_name*是可执行文件的基文件名*名称*参数传递给`PgoAutoSweep`，和*值*是唯一的值，通常的单调递增的数字，以避免文件名称冲突。
+保存的配置文件计数器数据放置在名为的文件中*base_name*-*名称*！*值*.pgc，其中*base_name*是可执行文件的基名称*名称*参数传递给`PgoAutoSweep`，以及*值*是唯一的值，通常单调递增的数字，以避免文件名称冲突。
 
-创建的.pgc 文件`PgoAutoSweep`必须合并到要用于创建优化的可执行文件的.pgd 文件。 你可以使用[pgomgr](pgomgr.md)命令执行合并。
+创建的.pgc 文件`PgoAutoSweep`必须合并到要用于创建优化的可执行文件的.pgd 文件。 可以使用[pgomgr](pgomgr.md)命令来执行合并。
 
-你可以合并的.pgd 文件的名称到链接器优化生成期间使用传递**PGD =**_filename_参数[/USEPROFILE](useprofile.md)链接器选项，或通过使用不推荐使用 **/PGD**链接器选项。 如果你合并.pgc 文件到名为的文件*base_name*.pgd，你不必在命令行上指定文件名，因为链接器默认情况下选取此文件的名称。
+您可以合并的.pgd 文件的名称使用传递到链接器优化生成期间**PGD =**_filename_参数[/USEPROFILE](useprofile.md)链接器选项，或通过使用已弃用 **/PGD**链接器选项。 如果你合并的.pgc 文件到名为的文件*base_name*.pgd，您不必在命令行上指定文件名因为链接器默认情况下选取此文件的名称。
 
-`PgoAutoSweep`函数维护创建检测的生成时指定的线程安全性设置。 如果你使用默认设置或指定**NOEXACT**参数[/GENPROFILE 或 /FASTGENPROFILE]()链接器选项调用`PgoAutoSweep`不是线程安全。 **EXACT**自变量创建线程安全的且更准确，但更慢、 已插入检测点的可执行文件。
+`PgoAutoSweep`函数维护创建检测的生成时指定的线程安全设置。 如果使用默认设置或指定了**NOEXACT**自变量[/GENPROFILE 或 /FASTGENPROFILE]()链接器选项，调用`PgoAutoSweep`不是线程安全。 **EXACT**参数创建一个线程安全、 更准确，但速度较慢且经过检测的可执行文件。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |`PgoAutoSweep`|\<pgobootrun.h>|
 
-可执行文件必须将 pgobootrun.lib 文件包含在链接的库。 此文件包含在 Visual Studio 安装，每个受支持的体系结构的 VC 库目录中。
+可执行文件必须 pgobootrun.lib 文件包含链接的库。 此文件包含在 Visual Studio 安装，每个受支持的体系结构的 VC 库目录中。
 
 ## <a name="example"></a>示例
 
-下面的示例使用`PgoAutoSweep`创建两个。在执行期间不同点 PGC 文件。 第一个文件包含描述直到运行时行为的数据`count`等于 3，并且第二个包含在之前只是应用程序在终止之前此点后收集的数据。
+下面的示例使用`PgoAutoSweep`创建两个。在执行期间不同点的 PGC 文件。 第一个包含数据，用于描述直到运行时行为`count`等于 3，并且第二个包含之前只是应用程序终止前此点后收集的数据。
 
 ```cpp
 // pgoautosweep.cpp
@@ -107,15 +97,15 @@ int main()
 }
 ```
 
-在开发人员命令提示符下，通过使用此命令编译到的对象文件的代码：
+在开发人员命令提示符中，使用以下命令编译对象文件的代码：
 
 `cl /c /GL /W4 /EHsc /O2 pgoautosweep.cpp`
 
-通过使用此命令，然后生成用于训练的被检测的生成：
+然后使用以下命令，生成用于定型的被检测的生成：
 
 `link /LTCG /genprofile pgobootrun.lib pgoautosweep.obj`
 
-运行检测过的可执行文件，以捕获定型数据。 由调用的数据输出`PgoAutoSweep`保存在文件中名为 pgoautosweep func1 ！ 1.pgc 和 pgoautosweep func2 ！ 1.pgc。 节目的输出应如下所示运行：
+运行已检测的可执行文件，以捕获定型数据。 由调用的数据输出`PgoAutoSweep`保存在名为 pgoautosweep func1 文件 ！ 1.pgc 和 pgoautosweep func2 ！ 1.pgc。 程序的输出应如下所示运行：
 
 ```Output
 hello from func1 9
@@ -130,7 +120,7 @@ hello from func2 1
 hello from func2 0
 ```
 
-通过运行将已保存的数据合并到配置文件训练数据库**pgomgr**命令：
+通过运行已保存的数据合并到配置文件训练数据库**pgomgr**命令：
 
 `pgoautosweep-func1!1.pgc pgoautosweep-func2!1.pgc`
 
@@ -146,7 +136,7 @@ Merging pgoautosweep-func2!1.pgc
 pgoautosweep-func2!1.pgc: Used  3.8% (22424 / 589824) of total space reserved.  0.0% of the counts were dropped due to overflow.
 ```
 
-现在可以使用此训练数据来生成优化的版本。 使用此命令来生成优化的可执行文件：
+现在可以使用此训练数据来生成优化的生成。 使用以下命令来生成优化的可执行文件：
 
 `link /LTCG /useprofile pgobootrun.lib pgoautosweep.obj`
 
