@@ -1,8 +1,6 @@
 ---
-title: 'Platform:: stringreference 类 |Microsoft Docs'
-ms.custom: ''
+title: Platform::StringReference 类
 ms.date: 12/30/2016
-ms.technology: cpp-windows
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::StringReference::StringReference
@@ -10,19 +8,13 @@ f1_keywords:
 - VCCORLIB/Platform::StringReference::Length
 - VCCORLIB/Platform::StringReference::GetHSTRING
 - VCCORLIB/Platform::StringReference::GetString
-dev_langs:
-- C++
 ms.assetid: 2d09c7ec-0f16-458e-83ed-7225a1b9221e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1b177cf30b4eee49d144ddf3516a4bbf3da91c85
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 09b15a1530661ce537c9d2aab333a1a17fa52ff9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44105791"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50498379"
 ---
 # <a name="platformstringreference-class"></a>Platform::StringReference 类
 
@@ -72,7 +64,7 @@ class StringReference
 
 ## <a name="data"></a>  Stringreference:: Data 方法
 
-返回此内容`StringReference`char16 值数组形式。
+以 char16 值数组形式返回此 `StringReference` 的内容。
 
 ### <a name="syntax"></a>语法
 
@@ -199,7 +191,7 @@ StringReference(const ::default::char16* __strArg, size_t __lenArg);
 
 ### <a name="remarks"></a>备注
 
-此构造函数的第一个版本是默认构造函数。 第二个版本从 `StringReference` 参数指定的对象初始化新 `__fstrArg` 实例类。 第三个和第四个重载初始化新`StringReference`的 char16 值数组中的实例。 char16 表示 16 位 UNICODE 文本字符。
+此构造函数的第一个版本是默认构造函数。 第二个版本从 `StringReference` 参数指定的对象初始化新 `__fstrArg` 实例类。 第三和第四个重载从 char16 值数组初始化新 `StringReference` 实例。 char16 表示 16 位 UNICODE 文本字符。
 
 ## <a name="see-also"></a>请参阅
 
