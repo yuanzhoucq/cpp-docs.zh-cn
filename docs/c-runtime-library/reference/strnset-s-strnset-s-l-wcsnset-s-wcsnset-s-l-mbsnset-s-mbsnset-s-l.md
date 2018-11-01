@@ -1,10 +1,6 @@
 ---
-title: _strnset_s、_strnset_s_l、_wcsnset_s、_wcsnset_s_l、_mbsnset_s、_mbsnset_s_l | Microsoft 文档
-ms.custom: ''
+title: _strnset_s、_strnset_s_l、_wcsnset_s、_wcsnset_s_l、_mbsnset_s、_mbsnset_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbsnset_s_l
 - _strnset_s
@@ -41,8 +37,6 @@ f1_keywords:
 - mbsnset_s_l
 - mbsnset_s
 - wcsnset_s_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - tcsnset_s function
 - mbsnset_s_l function
@@ -60,23 +54,19 @@ helpviewer_keywords:
 - strnset_s function
 - _wcsnset_s function
 ms.assetid: 9cf1b321-b5cb-4469-b285-4c07cfbd8813
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 786f802a25964b118b997a2d5af7376932f8f74f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bb82e96c23e1554fb2ec5e2a36089823eaf55595
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32416016"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50459990"
 ---
 # <a name="strnsets-strnsetsl-wcsnsets-wcsnsetsl-mbsnsets-mbsnsetsl"></a>_strnset_s、_strnset_s_l、_wcsnset_s、_wcsnset_s_l、_mbsnset_s、_mbsnset_s_l
 
 将字符串的字符初始化为给定字符。 这些版本的 [_strnset、_strnset_l、_wcsnset、_wcsnset_l、_mbsnset、_mbsnset_l](strnset-strnset-l-wcsnset-wcsnset-l-mbsnset-mbsnset-l.md) 具有安全性增强功能，如 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述。
 
 > [!IMPORTANT]
-> **_mbsnset_s**和 **_mbsnset_s_l**不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
+> **_mbsnset_s**并 **_mbsnset_s_l**不能在 Windows 运行时中执行的应用程序中使用。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
 
 ## <a name="syntax"></a>语法
 
@@ -143,13 +133,13 @@ errno_t _mbsnset_s_l(
 
 如果成功，则为零；否则为错误代码。
 
-这些函数将验证其参数。 如果*str*不是有效的以 null 结尾的字符串或大小自变量为小于或等于 0，则调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则这些函数返回错误代码和集**errno**该错误代码。 默认错误代码是**EINVAL**如果更具体的值不适用。
+这些函数将验证其参数。 如果*str*不是有效的以 null 结尾的字符串或大小自变量是小于或等于 0，则调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则这些函数将返回错误代码并设置**errno**为该错误代码。 默认错误代码是**EINVAL**如果更具体的值不适用。
 
 ## <a name="remarks"></a>备注
 
-这些函数最多，设置第一个*计数*字符*str*到*c*。 如果*计数*大于的大小*str*，大小为*str*而不是使用*计数*。 如果发生错误*计数*大于*numberOfElements*这些两个参数都大于的大小和*str*。
+这些函数的最大设置第一个*计数*个字符*str*到*c*。 如果*计数*超过的大小*str*，则大小*str*而不是*计数*。 如果出错*计数*大于*numberOfElements*这两个参数的大小，并且*str*。
 
-**_wcsnset_s**和 **_mbsnset_s**宽字符及多字节字符版本的 **_strnset_s**。 字符串自变量 **_wcsnset_s**是宽字符字符串; 的 **_mbsnset_s**是 amultibyte 字符字符串。 否则这三个函数否则具有相同行为。
+**_wcsnset_s**并 **_mbsnset_s**宽字符及多字节字符版本的 **_strnset_s**。 字符串参数 **_wcsnset_s**是宽字符字符串; **_mbsnset_s**是一个多字节字符字符串。 否则这三个函数否则具有相同行为。
 
 输出值受区域设置的 LC_CTYPE 类别设置影响；有关详细信息，请参阅 [setlocale](setlocale-wsetlocale.md)。 这些不带 **_l** 后缀的函数版本使用此区域设置相关的行为的当前区域设置；带有 **_l** 后缀的版本相同，只不过它们使用传递的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
@@ -164,7 +154,7 @@ errno_t _mbsnset_s_l(
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_strnset_s**|\<string.h>|
 |**_strnset_s_l**|\<tchar.h>|

@@ -1,10 +1,6 @@
 ---
-title: _getw | Microsoft 文档
-ms.custom: ''
+title: _getw
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _getw
 apilocation:
@@ -22,23 +18,17 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _getw
-dev_langs:
-- C++
 helpviewer_keywords:
 - _getw function
 - integers, getting from streams
 - getw function
 ms.assetid: ef75facc-b84e-470f-9f5f-8746c90822a0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3caffb90252780b833b80e3e5d1cd6d5ef6b0fcb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 615d3ac9bdc73ad200368eaeabf7c84951bc91ae
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400537"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50487602"
 ---
 # <a name="getw"></a>_getw
 
@@ -59,15 +49,15 @@ int _getw(
 
 ## <a name="return-value"></a>返回值
 
-**_getw**返回读取的整数值。 返回值**EOF**指示存在错误或文件结尾。 但是，因为**EOF**值也是合法的整数值，请使用**feof**或**ferror**若要验证文件尾或错误条件。 如果*流*是**NULL**，则调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则**errno**设置为**EINVAL**和该函数将返回**EOF**。
+**_getw**返回读取的整数值。 返回值**EOF**指示存在错误或文件结尾。 但是，由于**EOF**值也是合法的整数值，请使用**feof**或**ferror**若要验证文件尾或错误条件。 如果*流*是**NULL**，将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则**errno**设置为**EINVAL**并且该函数返回**EOF**。
 
 ## <a name="remarks"></a>备注
 
-**_Getw**函数将读取的下一步的二进制值的类型**int**与关联的文件从*流*并递增关联的文件指针 （如果有） 以点为下一步的未读字符。 **_getw**不会采用任何特殊的对齐方式的流中的项。 移植问题可能会出现 **_getw**因为的大小**int**类型和中的字节顺序**int**类型因系统而异。
+**_Getw**函数将读取类型的下一个二进制值**int**与关联的文件从*流*并递增关联的文件指针 （如果有） 以点到下一个未读字符。 **_getw**不会假定任何特定的对齐方式的流中的项。 移植问题可能会出现 **_getw**因为的大小**int**类型和中的字节顺序**int**类型系统而异。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_getw**|\<stdio.h>|
 

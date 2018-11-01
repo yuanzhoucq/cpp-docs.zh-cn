@@ -1,28 +1,17 @@
 ---
-title: 命令处理程序用于记录滚动 （MFC 数据访问） |Microsoft Docs
-ms.custom: ''
+title: 用于记录滚动的命令处理程序（MFC 数据访问）
 ms.date: 11/04/2016
-ms.technology:
-- cpp-data
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - record views [C++], scrolling
 - record scrolling [C++]
 - scrolling records
 ms.assetid: f8b13477-2a37-459e-a30c-806fb78165ac
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- data-storage
-ms.openlocfilehash: 6733603ff95d4bf12b9eec142fff12b5ca0458a9
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 0e35baf561693b90b661ac1fe73844961570b29e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50057759"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50460770"
 ---
 # <a name="command-handlers-for-record-scrolling--mfc-data-access"></a>用于记录滚动的命令处理程序（MFC 数据访问）
 

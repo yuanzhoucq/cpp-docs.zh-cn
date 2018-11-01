@@ -1,28 +1,18 @@
 ---
-title: 格式化时间值： 通用类 |Microsoft Docs
-ms.custom: ''
+title: 格式化时间值： 通用类
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - dates, calculating intervals
 - elapsed time, string representation
 - time [C++], formatting
 - formatting [C++], time
 ms.assetid: 7fcfee24-f874-4a4d-95b3-adc19a0f2df0
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d8d61c845a059619e135dd07bc40a33ace046937
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 48290adbc3e0e7f3cbe9a5a8e0569a5b61833e8c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759556"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50478658"
 ---
 # <a name="formatting-time-values-general-purpose-classes"></a>格式化时间值： 通用类
 
