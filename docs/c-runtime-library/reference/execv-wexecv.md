@@ -1,10 +1,6 @@
 ---
-title: _execv、_wexecv | Microsoft 文档
-ms.custom: ''
+title: _execv，_wexecv
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wexecv
 - _execv
@@ -25,24 +21,18 @@ f1_keywords:
 - _execv
 - _wexecv
 - wexecv
-dev_langs:
-- C++
 helpviewer_keywords:
 - _wexecv function
 - _execv function
 - wexecv function
 - execv function
 ms.assetid: 8dbaf7bc-9040-4316-a0c1-db7e866b52af
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f8c6013e7d62b3738efe717c95e1464f31e2f0bc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fd0447e7863e25571a968a821b45614d5d76d1bd
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399077"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50523946"
 ---
 # <a name="execv-wexecv"></a>_execv，_wexecv
 
@@ -92,7 +82,7 @@ intptr_t _wexecv(
 
 所有这些函数将加载并执行一个新进程，同时将一个指针数组传递给命令行参数。
 
-**_Execv**函数验证其参数。 如果*cmdname*是 null 指针，或如果*argv*是 null 指针，指向空数组，或者，如果数组包含一个空字符串作为第一个参数， **_execv**函数将调用无效参数处理程序中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则这些函数将设置**errno**到**EINVAL**并返回-1。 不启动任何进程。
+**_Execv**函数验证其参数。 如果*cmdname*是空指针，或者如果*argv*是 null 指针，指向一个空数组或该数组包含一个空字符串作为第一个参数，如果 **_execv**函数将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许继续执行，这些函数将设置**errno**到**EINVAL**并返回-1。 不启动任何进程。
 
 ## <a name="requirements"></a>要求
 

@@ -1,10 +1,6 @@
 ---
-title: unexpected (CRT) | Microsoft 文档
-ms.custom: ''
+title: unexpected (CRT)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - unexpected
 apilocation:
@@ -21,21 +17,15 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - unexpected
-dev_langs:
-- C++
 helpviewer_keywords:
 - unexpected function
 ms.assetid: 2f873763-15ad-4556-a924-dcf28f2b52b4
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fd8dc51c41ebf938f59493cbd62fac3e0a491601
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 78538c0a10e183e72c742b041b297275c0859a03
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32408102"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50534013"
 ---
 # <a name="unexpected-crt"></a>unexpected (CRT)
 
@@ -49,11 +39,11 @@ void unexpected( void );
 
 ## <a name="remarks"></a>备注
 
-**意外**例程不与 c + + 异常处理的当前实现一起使用。 **意外**调用**终止**默认情况下。 你可以更改此默认行为： 编写自定义终止函数并调用**set_unexpected**与作为其自变量函数的名称。 **意外**调用的最后一个函数的自变量被当作**set_unexpected**。
+**意外**c + + 异常处理的当前实现中未使用例程。 **意外**调用**终止**默认情况下。 您可以更改此默认行为： 编写自定义终止函数并调用**set_unexpected**与作为其参数函数的名称。 **意外**调用的最后一个函数的参数被当作**set_unexpected**。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**unexpected**|\<eh.h>|
 

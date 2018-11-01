@@ -1,10 +1,6 @@
 ---
-title: strtok_s、_strtok_s_l、wcstok_s、_wcstok_s_l、_mbstok_s、_mbstok_s_l | Microsoft 文档
-ms.custom: ''
+title: strtok_s、_strtok_s_l、wcstok_s、_wcstok_s_l、_mbstok_s、_mbstok_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wcstok_s_l
 - _mbstok_s_l
@@ -35,8 +31,6 @@ f1_keywords:
 - wcstok_s
 - _mbstok_s
 - _strtok_s_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _strtok_s_l function
 - _mbstok_s_l function
@@ -53,23 +47,19 @@ helpviewer_keywords:
 - _mbstok_s function
 - strtok_s function
 ms.assetid: 7696c972-f83b-4617-8c82-95973e9fdb46
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 467184acd7ef78ee52f1605d23f2d3b80e6adb83
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: a8b87e0b2d4ecf9dc6fb1b52f512406a6df0622c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451961"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50517450"
 ---
 # <a name="strtoks-strtoksl-wcstoks-wcstoksl-mbstoks-mbstoksl"></a>strtok_s、_strtok_s_l、wcstok_s、_wcstok_s_l、_mbstok_s、_mbstok_s_l
 
 通过使用当前区域设置或传入的区域设置，查找字符串中的下一个标记。 这些版本的 [strtok、_strtok_l、wcstok、_wcstok_l、_mbstok、_mbstok_l](strtok-strtok-l-wcstok-wcstok-l-mbstok-mbstok-l.md) 具有安全增强功能，如 [CRT 中的安全功能](../../c-runtime-library/security-features-in-the-crt.md)中所述。
 
 > [!IMPORTANT]
-> **_mbstok_s**和 **_mbstok_s_l**不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
+> **_mbstok_s**并 **_mbstok_s_l**不能在 Windows 运行时中执行的应用程序中使用。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
 
 ## <a name="syntax"></a>语法
 
@@ -117,10 +107,10 @@ unsigned char* _mbstok_s(
 ### <a name="parameters"></a>参数
 
 *str*<br/>
-包含或多个令牌若要查找的字符串。
+包含或多个令牌，若要查找的字符串。
 
 *分隔符*<br/>
-若要使用的分隔符集。
+要使用的分隔符字符组。
 
 *context*<br/>
 用于存储对函数的调用之间的位置信息。
@@ -130,7 +120,7 @@ unsigned char* _mbstok_s(
 
 ## <a name="return-value"></a>返回值
 
-将指针返回到下一步中找到的令牌*str*。 返回**NULL**当找到没有更多的令牌时。 每个调用修改*str*通过用在返回的令牌之后的第一个分隔符 null 字符替换。
+返回一个指向下一个令牌中找到*str*。 返回**NULL**找到没有更多标记时。 每个调用都会修改*str* ，只需替换 null 字符在返回的令牌后发生的第一个分隔符。
 
 ### <a name="error-conditions"></a>错误条件
 
@@ -140,23 +130,23 @@ unsigned char* _mbstok_s(
 |任何|**NULL**|任何|**NULL**|**EINVAL**|
 |任何|任何|**NULL**|**NULL**|**EINVAL**|
 
-如果*str*是**NULL**但*上下文*是一个指针，到有效的上下文指针时，没有错误。
+如果*str*是**NULL**但*上下文*的指针到有效的上下文指针时，没有错误。
 
 ## <a name="remarks"></a>备注
 
-**Strtok_s**系列函数查找中的下一个标记*str*。 中的字符组*分隔符*指定可能要在中找到的标记分隔符*str*上当前的调用。 **wcstok_s**和 **_mbstok_s**宽字符及多字节字符版本的**strtok_s**。 自变量和返回值**wcstok_s**和 **_wcstok_s_l**是宽字符字符串; 而的 **_mbstok_s**和 **_mbstok_s_l**是多字节字符字符串。 否则这些函数具有相同行为。
+**Strtok_s**系列函数查找中的下一步标记*str*。 中的字符组*分隔符*指定的令牌中找到可能的分隔符*str*在当前调用上。 **wcstok_s**并 **_mbstok_s**宽字符及多字节字符版本的**strtok_s**。 参数和返回值**wcstok_s**并 **_wcstok_s_l**是宽字符字符串; **_mbstok_s**和 **_mbstok_s_l**都是多字节字符字符串。 否则这些函数具有相同行为。
 
-此函数验证其参数。 如果出现错误条件表中的错误条件，则调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数将设置**errno**到**EINVAL**并返回**NULL**。
+此函数验证其参数。 如果出现错误条件表中的错误条件，则调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许继续执行，这些函数将设置**errno**到**EINVAL**并返回**NULL**。
 
-在第一个调用**strtok_s**函数跳过前导分隔符，并将指针返回到中的第一个标记*str*，终止 null 字符的标记。 多个令牌的更改会损坏外的其余部分*str*对的调用一系列**strtok_s**。 每次调用**strtok_s**修改*str*的方法是在该调用返回的标记后插入 null 字符。 *上下文*正在读取的字符串和其中字符串中的下一个标记是要读取跟踪的指针。 若要读取下一个令牌以从*str*，调用**strtok_s**与**NULL**值*str*自变量，并将传递相同*上下文*参数。 **NULL** *str*参数可以使**strtok_s**搜索中修改后的下一个标记*str*。 *分隔符*自变量可以采用到下一次调用之间的任何值，以便分隔符集可能会有所不同。
+在首次调用**strtok_s**函数跳过前导分隔符并返回一个指针中的第一个标记*str*，终止空字符的标记。 更多标记可以分离出的余数*str*的调用的一系列**strtok_s**。 每次调用**strtok_s**修改*str*的方法是通过调用返回标记后插入空字符。 *上下文*所读取的字符串，其中在字符串中的下一个标记是要读取跟踪的指针。 若要读取的下一个令牌*str*，调用**strtok_s**与**NULL**值*str*参数，并传递同一*上下文*参数。 **NULL** *str*参数可以使**strtok_s**搜索中的修改后的下一个标记*str*。 *分隔符*参数可使用从到下一次调用的任何值，以使分隔符集可能会有所不同。
 
-由于*上下文*参数将取代中使用的静态缓冲区**strtok**和 **_strtok_l**，可以分析同时在同一线程中的两个字符串。
+由于*上下文*形参取代了使用中的静态缓冲区**strtok**并 **_strtok_l**，可以分析同时在同一线程中的两个字符串。
 
-输出值受区域设置的 LC_CTYPE 类别设置影响；有关详细信息，请参阅 [setlocale](setlocale-wsetlocale.md)。 版本的这些功能，而不必 **_l**后缀区域设置相关的行为使用当前线程区域设置。 版本与 **_l**后缀是相同，只不过它们改用*区域设置*参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+输出值受区域设置的 LC_CTYPE 类别设置影响；有关详细信息，请参阅 [setlocale](setlocale-wsetlocale.md)。 无需这些函数的版本 **_l**后缀的区域设置相关的行为使用当前线程区域设置。 与版本 **_l**后缀完全相同，只不过它们改用*区域设置*参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**strtok_s**|\<string.h>|
 |**_strtok_s_l**|\<string.h>|
@@ -167,7 +157,7 @@ unsigned char* _mbstok_s(
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
-|TCHAR.H 例程|\_UNICODE （& a) \_MBCS 未定义|\_MBCS 定义|已定义 _UNICODE|
+|TCHAR.H 例程|\_UNICODE & \_MBCS 未定义|\_MBCS 定义|已定义 _UNICODE|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcstok_s**|**strtok_s**|**_mbstok_s**|**wcstok_s**|
 |**_tcstok_s_l**|**_strtok_s_l**|**_mbstok_s_l**|**_wcstok_s_l**|
