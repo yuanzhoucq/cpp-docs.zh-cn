@@ -1,10 +1,6 @@
 ---
-title: CurrentScheduler 类 |Microsoft Docs
-ms.custom: ''
+title: CurrentScheduler 类
 ms.date: 11/04/2016
-ms.technology:
-- cpp-concrt
-ms.topic: reference
 f1_keywords:
 - CurrentScheduler
 - CONCRT/concurrency::CurrentScheduler
@@ -18,21 +14,15 @@ f1_keywords:
 - CONCRT/concurrency::CurrentScheduler::IsAvailableLocation
 - CONCRT/concurrency::CurrentScheduler::RegisterShutdownEvent
 - CONCRT/concurrency::CurrentScheduler::ScheduleTask
-dev_langs:
-- C++
 helpviewer_keywords:
 - CurrentScheduler class
 ms.assetid: 31c20e0e-4cdf-49b4-8220-d726130aad2b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 27c295f1cf8c6d02721a999c46ce02d961cc3702
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 46bd55c39e79ca01664c3800d10e4efa8cf7d042
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46419017"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50619175"
 ---
 # <a name="currentscheduler-class"></a>CurrentScheduler 类
 
@@ -222,7 +212,7 @@ static bool __cdecl IsAvailableLocation(const location& _Placement);
 
 ### <a name="return-value"></a>返回值
 
-有关 `_Placement` 参数指定的位置在当前计划程序中是否可用的指示。
+有关 `_Placement` 自变量指定的位置在当前计划程序中是否可用的指示。
 
 ### <a name="remarks"></a>备注
 
