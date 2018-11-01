@@ -1,11 +1,6 @@
 ---
-title: _Cmulcr，_FCmulcr，_LCmulcr |Microsoft 文档
-ms.custom: ''
+title: _Cmulcr、 _FCmulcr、 _LCmulcr
 ms.date: 03/30/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - _Cmulcr
 - _FCmulcr
@@ -30,24 +25,18 @@ f1_keywords:
 - complex/_Cmulcr
 - complex/_FCmulcr
 - complex/_LCmulcr
-dev_langs:
-- C++
 helpviewer_keywords:
 - _Cmulcr function
 - _FCmulcr function
 - _LCmulcr function
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bbd42e4c543d4bc42afa023d62b328a143c90374
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ce45b1b1081faba18d8532d3a55d1be877cf84e3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395020"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50507479"
 ---
-# <a name="cmulcr-fcmulcr-lcmulcr"></a>_Cmulcr，_FCmulcr _LCmulcr
+# <a name="cmulcr-fcmulcr-lcmulcr"></a>_Cmulcr、 _FCmulcr、 _LCmulcr
 
 将浮点数的复数相乘。
 
@@ -69,19 +58,19 @@ _Lcomplex _LCmulcr( _Lcomplex x, long double y );
 
 ## <a name="return-value"></a>返回值
 
-A **_Dcomplex**， **_Fcomplex**，或 **_Lcomplex**结构，它表示复数的复杂产品*x*和flaoting 点数*y*。
+一个 **_Dcomplex**， **_Fcomplex**，或 **_Lcomplex**结构，它表示复数的复杂产品*x*和flaoting 点数*y*。
 
 ## <a name="remarks"></a>备注
 
-内置算术运算符无法正常工作的 Microsoft 实现的复杂类型，因为 **_Cmulcr**， **_FCmulcr**，和 **_LCmulcr**函数简化乘法的浮点类型的复杂类型。
+内置算术运算符无法正常工作的 Microsoft 实现的复杂类型，因为 **_Cmulcr**， **_FCmulcr**，并 **_LCmulcr**函数简化复杂类型的浮点类型的乘法。
 
 ## <a name="requirements"></a>要求
 
-|例程|C 标头|C++ 标头|
+|例程所返回的值|C 标头|C++ 标头|
 |-------------|--------------|------------------|
 |**_Cmulcr**， **_FCmulcr**， **_LCmulcr**|\<complex.h>|\<complex.h>|
 
-这些函数是特定于 Microsoft 的。 类型 **_Dcomplex**， **_Fcomplex**，和 **_Lcomplex**到未实现的 C99 本机类型的特定于 Microsoft 的等效项**double _Complex**， **float _Complex**，和**长双精度 _Complex**分别。 有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+这些函数是特定于 Microsoft 的。 类型 **_Dcomplex**， **_Fcomplex**，并 **_Lcomplex**是未实现 C99 本机类型与特定于 Microsoft 的等效**double _Complex**， **float _Complex**，和**long double _Complex**分别。 有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="see-also"></a>请参阅
 

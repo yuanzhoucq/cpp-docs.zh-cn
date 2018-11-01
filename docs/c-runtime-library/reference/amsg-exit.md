@@ -1,10 +1,6 @@
 ---
-title: _amsg_exit | Microsoft 文档
-ms.custom: ''
+title: _amsg_exit
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _amsg_exit
 apilocation:
@@ -21,21 +17,15 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _amsg_exit
-dev_langs:
-- C++
 helpviewer_keywords:
 - _amsg_exit
 ms.assetid: 146d4faf-d763-43a4-b264-12711196456b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: dbb7f46bb4f3c942fd1c9e1a1d45c1ccf48739f7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 87cd08a6c60a1e29b8a8e15edbfdd69d338d875d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392791"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50534015"
 ---
 # <a name="amsgexit"></a>_amsg_exit
 
@@ -58,6 +48,6 @@ void _amsg_exit ( int rterrnum );
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |_amsg_exit|internal.h|
