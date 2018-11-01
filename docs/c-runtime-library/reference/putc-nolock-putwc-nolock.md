@@ -1,10 +1,6 @@
 ---
-title: _putc_nolock、_putwc_nolock | Microsoft 文档
-ms.custom: ''
+title: _putc_nolock、_putwc_nolock
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _putc_nolock
 - _putwc_nolock
@@ -28,8 +24,6 @@ f1_keywords:
 - _putwc_nolock
 - _putc_nolock
 - putc_nolock
-dev_langs:
-- C++
 helpviewer_keywords:
 - puttc_nolock function
 - putc_nolock function
@@ -40,16 +34,12 @@ helpviewer_keywords:
 - _puttc_nolock function
 - _putwc_nolock function
 ms.assetid: 3cfc7f21-c9e8-4b7f-b0fb-af0d4d85e7e1
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5975c25c015bb77c627eda3483566f358aedbedb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b2a30b83f0746b1b4f5ab03b4c3dfa0229656bb9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404459"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50510903"
 ---
 # <a name="putcnolock-putwcnolock"></a>_putc_nolock、_putwc_nolock
 
@@ -82,9 +72,9 @@ wint_t _putwc_nolock(
 
 ## <a name="remarks"></a>备注
 
-**_putc_nolock**和 **_putwc_nolock**不包含版本相同 **_nolock**后缀，只不过它们不受干扰其他线程。 它们可能更快，因为它们不会产生锁定其他线程的开销。 仅在线程安全的上下文中使用这些函数，如单线程应用程序或调用范围已经处理线程隔离。
+**_putc_nolock**并 **_putwc_nolock**相同的版本而无需 **_nolock**后缀，只不过它们不受干扰从其他线程。 它们可能更快，因为它们不会产生锁定其他线程的开销。 仅在线程安全的上下文中使用这些函数，如单线程应用程序或调用范围已经处理线程隔离。
 
-**_putwc_nolock**是宽字符版本的 **_putc_nolock**; 如果在 ANSI 模式下打开流，则两个函数的行为完全相同。 **_putc_nolock**当前不支持输出到 UNICODE 流。
+**_putwc_nolock**是宽字符版本 **_putc_nolock**; 如果在 ANSI 模式下打开流，则两个函数行为相同。 **_putc_nolock**当前不到 UNICODE 流支持输出。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -94,12 +84,12 @@ wint_t _putwc_nolock(
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_putc_nolock**|\<stdio.h>|
 |**_putwc_nolock**|\<stdio.h> 或 \<wchar.h>|
 
-通用 Windows 平台 (UWP) 应用中不支持控制台。 控制台中，与关联的标准流句柄**stdin**， **stdout**，和**stderr**，必须将 C 运行时函数才能使用它们在 UWP 应用重定向. 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+通用 Windows 平台 (UWP) 应用中不支持控制台。 控制台中，与关联的标准流句柄**stdin**， **stdout**，并**stderr**，C 运行时函数可以在 UWP 应用中使用它们之前，必须重定向. 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="libraries"></a>库
 

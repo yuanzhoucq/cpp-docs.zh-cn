@@ -1,28 +1,18 @@
 ---
-title: ATL COM + 1.0 组件向导 |Microsoft Docs
-ms.custom: ''
+title: ATL COM+ 1.0 组件向导
 ms.date: 10/03/2018
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.atl.mts.overview
-dev_langs:
-- C++
 helpviewer_keywords:
 - ATL projects, adding components
 - ATL COM+ 1.0 Component Wizard
 ms.assetid: 11670681-8671-4122-96a4-2e52f8dadce0
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 102ec4f85c8915cf6afb70f03d470cec4e9e807f
-ms.sourcegitcommit: d1527eb2d50156bf923f2a32ec3af9efc7fc4304
+ms.openlocfilehash: 227dda9518b67b410f52db8c6efb33bbc2c8f1b5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48250401"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50513771"
 ---
 # <a name="atl-com-10-component-wizard"></a>ATL COM+ 1.0 组件向导
 
@@ -31,7 +21,7 @@ ms.locfileid: "48250401"
 您可以指定对象是否支持双重接口和自动化。 您还可以指示对错误的信息接口、 增强的对象控件、 事务和异步消息队列的支持。
 
 > [!WARNING]
-> 在 Visual Studio 2017 版本 15.9 此代码向导已弃用，将 Visual Studio 的未来版本中删除。 很少使用此向导。 ATL 和 MFC 的常规支持不受此向导中删除。 如果你想要共享您对此不推荐使用的反馈，请先完成[这项调查](https://www.surveymonkey.com/r/QDWKKCN)。 你的反馈对我们很重要。
+> 在 Visual Studio 2017 版本 15.9 中，此代码向导已弃用，并将从 Visual Studio 的将来版本中删除。 很少用到此向导。 对 ATL 和 MFC 的常规支持不会受到删除此向导的影响。 如果你想要共享对此弃用的反馈，请完成[此调查](https://www.surveymonkey.com/r/QDWKKCN)。 你的反馈对我们很重要。
 
 ## <a name="remarks"></a>备注
 

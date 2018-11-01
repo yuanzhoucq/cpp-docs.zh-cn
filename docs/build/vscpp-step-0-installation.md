@@ -1,25 +1,17 @@
 ---
-title: 在 Visual Studio 2017 中安装 c + + 支持 |Microsoft Docs
+title: 在 Visual Studio 2017 中安装 c + + 支持
 description: 安装 Visual c + + 的 Visual Studio 支持
 ms.custom: mvc
 ms.date: 09/17/2018
 ms.topic: tutorial
-ms.technology:
-- cpp-tools
 ms.devlang: C++
-dev_langs:
-- C++
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 80e84bb7c81ccd9c3347989e68041125993ee73c
-ms.sourcegitcommit: 92c568e9466ffd7346a4120c478c9bdea61c8756
+ms.openlocfilehash: 019eadee35829bb546de0a69707520dc98f4077e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "47029627"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50507232"
 ---
 # <a name="install-c-support-in-visual-studio"></a>在 Visual Studio 中安装 c + + 支持
 

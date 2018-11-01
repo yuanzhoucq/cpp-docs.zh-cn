@@ -1,10 +1,6 @@
 ---
-title: COleTemplateServer 类 |Microsoft Docs
-ms.custom: ''
+title: COleTemplateServer 类
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - COleTemplateServer
 - AFXDISP/COleTemplateServer
@@ -12,24 +8,18 @@ f1_keywords:
 - AFXDISP/COleTemplateServer::ConnectTemplate
 - AFXDISP/COleTemplateServer::Unregister
 - AFXDISP/COleTemplateServer::UpdateRegistry
-dev_langs:
-- C++
 helpviewer_keywords:
 - COleTemplateServer [MFC], COleTemplateServer
 - COleTemplateServer [MFC], ConnectTemplate
 - COleTemplateServer [MFC], Unregister
 - COleTemplateServer [MFC], UpdateRegistry
 ms.assetid: 47a2887d-8162-4993-a842-a784177c7f5c
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: aef24acf61aae2d6690e5f302822ce52aaa4917a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f66936c597b8c595dc21ae6994d7af0477e8d2aa
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46427155"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50528643"
 ---
 # <a name="coletemplateserver-class"></a>COleTemplateServer 类
 
@@ -177,7 +167,7 @@ void UpdateRegistry(
 
 在参数中的信息*rglpszRegister*并*rglpszOverwrite*写入到通过调用注册表[AfxOleRegisterServerClass](application-control.md#afxoleregisterserverclass)。 默认信息，这两个参数都为空时在注册时，是适用于大多数应用程序。 有关这些自变量中的信息的结构的信息，请参阅`AfxOleRegisterServerClass`。
 
-有关详细信息，请参阅[实现 IDispatch 接口](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)。
+有关更多信息，请参见 [Implementing the IDispatch Interface](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)。
 
 ## <a name="see-also"></a>请参阅
 

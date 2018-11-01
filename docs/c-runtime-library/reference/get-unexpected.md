@@ -1,10 +1,6 @@
 ---
-title: _get_unexpected | Microsoft 文档
-ms.custom: ''
+title: _get_unexpected
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _get_unexpected
 apilocation:
@@ -23,27 +19,21 @@ f1_keywords:
 - __get_unexpected
 - _get_unexpected
 - get_unexpected
-dev_langs:
-- C++
 helpviewer_keywords:
 - __get_unexpected function
 - get_unexpected function
 - _get_unexpected function
 ms.assetid: a5f7a7a0-18e0-485e-953d-db291068a1e8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5e6f768d6f384e5b3b39e8d2884a7a7cb0362915
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 225158ecab60a5997ebedbad107eb43d82189234
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451649"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50519400"
 ---
 # <a name="getunexpected"></a>_get_unexpected
 
-返回由调用的终止例程**意外**。
+返回调用的终止例程**意外**。
 
 ## <a name="syntax"></a>语法
 
@@ -53,11 +43,11 @@ unexpected_function _get_unexpected( void );
 
 ## <a name="return-value"></a>返回值
 
-返回指向 [set_unexpected](set-unexpected-crt.md) 注册的函数的指针。 如果已设置函数，返回的值可能用于还原默认行为;此值可能为**NULL**。
+返回指向 [set_unexpected](set-unexpected-crt.md) 注册的函数的指针。 如果已设置函数，返回值可能用于还原默认行为;此值可能**NULL**。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_get_unexpected**|\<eh.h>|
 

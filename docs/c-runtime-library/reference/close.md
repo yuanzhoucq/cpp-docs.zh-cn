@@ -1,10 +1,6 @@
 ---
-title: _close | Microsoft 文档
-ms.custom: ''
+title: _close
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _close
 apilocation:
@@ -22,23 +18,17 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _close
-dev_langs:
-- C++
 helpviewer_keywords:
 - _close function
 - close function
 - files [C++], closing
 ms.assetid: 4708a329-8acf-4cd9-b7b0-a952e1897247
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: eabf084d2e4dd7e280c0ff730d1ec34d86f1ed98
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: faea008903136e8abdc39297672b31800ada796d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394192"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50528019"
 ---
 # <a name="close"></a>_close
 
@@ -59,19 +49,19 @@ int _close(
 
 ## <a name="return-value"></a>返回值
 
-**_close**如果该文件已成功关闭，则返回 0。 返回值-1 指示错误。
+**_close**如果已成功关闭文件，则返回 0。 返回值-1 指示错误。
 
 ## <a name="remarks"></a>备注
 
-**_Close**函数关闭与关联的文件*fd*。
+**_Close**函数将关闭与关联的文件*fd*。
 
-文件描述符和基础 OS 文件句柄已关闭。 因此，不需要调用**CloseHandle**如果最初使用 Win32 函数打开该文件**CreateFile**和转换为文件描述符使用 **_open_osfhandle**.
+文件描述符和基础 OS 文件句柄已关闭。 因此，不需要调用**CloseHandle**如果最初使用 Win32 函数打开该文件**CreateFile**并转换为文件描述符使用 **_open_osfhandle**.
 
-此函数验证其参数。 如果*fd*是错误的文件描述符，则调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，函数将返回-1 和**errno**设置为**EBADF**。
+此函数验证其参数。 如果*fd*是错误的文件描述符，将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许继续执行，该函数将返回-1 和**errno**设置为**EBADF**。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|可选标头|
+|例程所返回的值|必需的标头|可选标头|
 |-------------|---------------------|---------------------|
 |**_close**|\<io.h>|\<errno.h>|
 

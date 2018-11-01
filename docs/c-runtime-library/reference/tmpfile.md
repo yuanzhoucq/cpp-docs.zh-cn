@@ -1,10 +1,6 @@
 ---
-title: tmpfile | Microsoft 文档
-ms.custom: ''
+title: tmpfile
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - tmpfile
 apilocation:
@@ -22,23 +18,17 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - tmpfile
-dev_langs:
-- C++
 helpviewer_keywords:
 - temporary files
 - tmpfile function
 - temporary files, creating
 ms.assetid: c4a4dc24-70da-438d-ae4e-98352d88e375
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ebcad2a25af2f2acb0056d882c4191f1a51293d3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 98afcb7a3e04a96a1b08bc1b975634153e550839
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409064"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50530320"
 ---
 # <a name="tmpfile"></a>tmpfile
 
@@ -56,15 +46,15 @@ FILE *tmpfile( void );
 
 ## <a name="remarks"></a>备注
 
-**Tmpfile**函数将创建临时文件，将指针返回到该流。 在根目录中创建了临时文件。 若要在目录（而非根）中创建临时文件，请将 [tmpnam](tempnam-wtempnam-tmpnam-wtmpnam.md) 或 [tempnam](tempnam-wtempnam-tmpnam-wtmpnam.md) 与 [fopen](fopen-wfopen.md) 结合使用。
+**Tmpfile**函数创建临时文件，并返回一个指向该流。 在根目录中创建了临时文件。 若要在目录（而非根）中创建临时文件，请将 [tmpnam](tempnam-wtempnam-tmpnam-wtmpnam.md) 或 [tempnam](tempnam-wtempnam-tmpnam-wtmpnam.md) 与 [fopen](fopen-wfopen.md) 结合使用。
 
-如果无法打开该文件， **tmpfile**返回**NULL**指针。 时关闭该文件，则程序终止通常情况下，或当时，将自动删除此临时文件 **_rmtmp**称为，前提是当前工作目录不会更改。 在打开临时文件**w + b** （二进制读/写） 模式。
+如果无法打开该文件， **tmpfile**返回**NULL**指针。 通常情况下，或当终止时关闭该文件时，会自动删除此临时文件 **_rmtmp**调用，假定当前工作目录不会更改。 在打开临时文件时**w + b** （二进制读/写） 模式。
 
-如果多个 TMP_MAX 尝试，则可能发生失败 （请参阅 STDIO。H） 使用调用**tmpfile**。
+如果您尝试执行超过 TMP_MAX，可能会出现故障 （请参阅 STDIO。使用 H） 调用**tmpfile**。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**tmpfile**|\<stdio.h>|
 
