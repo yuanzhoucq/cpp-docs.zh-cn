@@ -1,26 +1,16 @@
 ---
-title: 生成文件中的长文件名 |Microsoft Docs
-ms.custom: ''
+title: 生成文件中的长文件名
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - NMAKE program, long filenames
 - long filenames
 ms.assetid: 626d56fc-8879-46ba-9c2d-dd386c78cccc
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9d69abd9fa67db7c1ec2e5dede0ebd5629d21e7b
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 0a0aa950b05d669a560490757ab84a839fc90be9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45714540"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50519374"
 ---
 # <a name="long-filenames-in-a-makefile"></a>生成文件中的长文件名
 

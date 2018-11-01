@@ -1,11 +1,6 @@
 ---
-title: c16rtomb、c32rtomb1 | Microsoft 文档
-ms.custom: ''
+title: c16rtomb、c32rtomb1
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - c16rtomb
 - c32rtomb
@@ -27,22 +22,16 @@ f1_keywords:
 - c32rtomb
 - uchar/c16rtomb
 - uchar/c32rtomb
-dev_langs:
-- C++
 helpviewer_keywords:
 - c16rtomb function
 - c32rtomb function
 ms.assetid: 7f5743ca-a90e-4e3f-a310-c73e16f4e14d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3282fb13e5b59ad3214c67410eef5186687114e9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0d735363bbb317b06c1ebc73a2b0678479a243ee
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394534"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50536582"
 ---
 # <a name="c16rtomb-c32rtomb"></a>c16rtomb, c32rtomb
 
@@ -72,23 +61,23 @@ size_t c32rtomb(
 要转换的宽字符。
 
 *state*<br/>
-指向的指针**mbstate_t**对象。
+一个指向**mbstate_t**对象。
 
 ## <a name="return-value"></a>返回值
 
-数组对象中存储的字节数*mbchar*，包括任何位移序列。 如果*wchar*不是有效的宽字符，值 (**size_t**返回)(-1)， **errno**设置为**EILSEQ**，和值*状态*未指定。
+数组对象中存储的字节数*mbchar*，包括任何位移序列。 如果*wchar*不是有效的宽字符，值 (**size_t**返回)(-1) **errno**设置为**EILSEQ**，和值*状态*未指定。
 
 ## <a name="remarks"></a>备注
 
-**C16rtomb**函数将转换的 utf-16 字符*wchar*到当前区域设置中的等效多字节窄字符序列。 如果*mbchar*不是 null 指针，指向转换后的序列的数组对象中的函数存储*mbchar*。 最多**MB_CUR_MAX**存储字节*mbchar*，和*状态*设置为生成的多字节位移状态。    如果*wchar*是 null 宽字符，则为所需的序列还原初始位移状态存储中，如果需要后跟 null 字符，和*状态*设置为初始转换状态。 **C32rtomb**函数完全相同，但将 utf-32 字符转换。
+**C16rtomb**函数将 utf-16 字符*wchar*到当前区域设置中的等效多字节窄字符序列。 如果*mbchar*不是 null 指针，指向已转换的序列数组对象中的函数存储*mbchar*。 最多**MB_CUR_MAX**中存储的字节*mbchar*，并*状态*设置为生成的多字节位移状态。    如果*wchar*是 null 宽字符，则为所需的序列还原初始位移状态存储中，如果需要后跟 null 字符，并且*状态*设置为初始转换状态。 **C32rtomb**函数完全相同，但将 UTF-32 字符转换。
 
-如果*mbchar*是 null 指针，该行为是等效于对替换内部缓冲区的函数的调用*mbchar*和宽 null 字符的*wchar*。
+如果*mbchar*是空指针，该行为相当于替换内部缓冲区的函数调用*mbchar*和宽 null 字符*wchar*。
 
-*状态*转换状态对象让你可以后续调用此函数和维持多字节输出字符的位移状态其他可重启函数。 如果混合使用可重启和非可重启函数，或如果对的调用，结果不确定**setlocale**可重启函数调用之间进行。
+*状态*转换状态对象，可对此函数和其他维护的多字节输出字符的移位状态的可重启函数执行后续调用。 如果混合使用可重启和非可重启函数，或如果调用，结果不确定**setlocale**可重启函数调用之间进行。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**c16rtomb**， **c32rtomb**|C, C++: \<uchar.h>|
 
