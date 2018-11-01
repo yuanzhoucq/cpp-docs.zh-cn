@@ -1,10 +1,6 @@
 ---
-title: __uncaught_exception | Microsoft 文档
-ms.custom: ''
+title: __uncaught_exception
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - __uncaught_exception
 apilocation:
@@ -21,25 +17,19 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - __uncaught_exception
-dev_langs:
-- C++
 helpviewer_keywords:
 - __uncaught_exception
 ms.assetid: 4d9b75c6-c9c7-4876-b761-ea9ab1925e96
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fcae75a5d25710866f781d766cfd77eceb977649
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 19d1e18af27722d6f9da39ebaaf6c9415c281849
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32408210"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50579629"
 ---
 # <a name="uncaughtexception"></a>__uncaught_exception
 
-指示是否一个或多个异常已抛出，但尚未处理相应**捕获**块[try catch](../../cpp/try-throw-and-catch-statements-cpp.md)语句。
+指示是否已抛出一个或多个异常，但未处理的相应**捕获**块[try catch](../../cpp/try-throw-and-catch-statements-cpp.md)语句。
 
 ## <a name="syntax"></a>语法
 
@@ -50,13 +40,13 @@ bool __uncaught_exception(
 
 ## <a name="return-value"></a>返回值
 
-**true**从时将引发异常**重**直到相匹配的块**捕获**块是初始化; 否则为**false**。
+**true**从时将引发异常**尝试**块，直到匹配**catch**块已初始化; 否则为**false**。
 
 ## <a name="remarks"></a>备注
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |__uncaught_exception|eh.h|
 

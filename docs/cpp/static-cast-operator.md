@@ -1,27 +1,17 @@
 ---
-title: static_cast 运算符 |Microsoft Docs
-ms.custom: ''
+title: static_cast 运算符
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
 f1_keywords:
 - static_cast_cpp
-dev_langs:
-- C++
 helpviewer_keywords:
 - static_cast keyword [C++]
 ms.assetid: 1f7c0c1c-b288-476c-89d6-0e2ceda5c293
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c60eee337ba565c43217bf6afbcf7d9344337695
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 8e39fe7eb0fb9b77a82b305fa2f8186ad4e855a1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46090019"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50601703"
 ---
 # <a name="staticcast-operator"></a>static_cast 运算符
 
@@ -35,7 +25,7 @@ static_cast <type-id> ( expression )
 
 ## <a name="remarks"></a>备注
 
-在标准 C++ 中，不进行运行时类型检查来帮助确保转换的安全。 在 C++/CX 中，将执行编译时和运行时检查。 有关详细信息，请参阅[强制转换](casting.md)。
+在标准 C++ 中，不进行运行时类型检查来帮助确保转换的安全。 在 C++/CX 中，将执行编译时和运行时检查。 有关更多信息，请参见 [强制转换](casting.md)中定义的接口的私有 C++ 特定实现。
 
 **Static_cast**运算符可用于操作，如指针转换为指向派生类的基类。 此类转换并非始终安全。
 

@@ -1,27 +1,17 @@
 ---
-title: 编译器警告 （等级 1） C4965 |Microsoft Docs
-ms.custom: ''
+title: 编译器警告（等级 1）C4965
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4965
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4965
 ms.assetid: 47f3f6dc-459b-4a25-9947-f394c8966cb5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d8613585d1f34060fb2e60f976f76c6801005aca
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 7d77df395d680b467d1a04a3f59c9822842f99f5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46036639"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50653097"
 ---
 # <a name="compiler-warning-level-1-c4965"></a>编译器警告（等级 1）C4965
 
@@ -29,7 +19,7 @@ ms.locfileid: "46036639"
 
 Visual c + + 功能值类型隐式的装箱。 现在使用的 c + + 托管扩展分配空值会导致指令将成为赋值为装箱的整数。
 
-有关详细信息，请参阅[装箱](../../windows/boxing-cpp-component-extensions.md)。
+有关更多信息，请参见 [装箱](../../windows/boxing-cpp-component-extensions.md)中定义的接口的私有 C++ 特定实现。
 
 ## <a name="example"></a>示例
 
