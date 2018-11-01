@@ -1,10 +1,6 @@
 ---
-title: fgetpos | Microsoft 文档
-ms.custom: ''
+title: fgetpos
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - fgetpos
 apilocation:
@@ -22,22 +18,16 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - fgetpos
-dev_langs:
-- C++
 helpviewer_keywords:
 - fgetpos function
 - streams, file position indicator
 ms.assetid: bfa05c38-1135-418c-bda1-d41be51acb62
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b111a911083354c8d9478b2c914a0a5f7dfe7725
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e213c9830ffe6edf04b12a80828f14cc48f77524
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397380"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50658414"
 ---
 # <a name="fgetpos"></a>fgetpos
 
@@ -62,11 +52,11 @@ int fgetpos(
 
 ## <a name="return-value"></a>返回值
 
-如果成功， **fgetpos**返回 0。 在失败时，它将返回一个非零值，并将设置**errno**下列其中一清单常量 （在 STDIO 中定义。H): **EBADF**，这意味着指定的流不是有效的文件指针或不可访问，或**EINVAL**，这意味着*流*值或的值*pos*是无效的如或者为 null 指针。 如果*流*或*pos*是**NULL**指针，函数将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md).
+如果成功， **fgetpos**返回 0。 在失败时，它返回非零值，并设置**errno**下列任一清单常量 （在 STDIO 中定义。H): **EBADF**，这意味着指定的流不是有效的文件指针或不可访问，或**EINVAL**，这意味着*流*值或值*pos*是无效的例如，如果可以为 null 指针。 如果*流*或*pos*是**NULL**指针，该函数将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md).
 
 ## <a name="remarks"></a>备注
 
-**Fgetpos**函数获取的当前值*流*自变量的文件位置指示器和存储它的对象中指向*pos*。**Fsetpos**函数更高版本可以使用信息存储在*pos*重置*流*时其位置的自变量的指向**fgetpos**调用。 *Pos*值存储在内部格式，用于使用只能由**fgetpos**和**fsetpos**。
+**Fgetpos**函数获取的当前值*流*参数的文件位置指示符和存储它的对象中指向*pos*。**Fsetpos**函数可以稍后使用信息存储在*pos*若要重置*流*参数的指针，指向其位置时**fgetpos**调用。 *Pos*值以内部格式存储，并适用于使用仅由**fgetpos**并**fsetpos**。
 
 ## <a name="requirements"></a>要求
 

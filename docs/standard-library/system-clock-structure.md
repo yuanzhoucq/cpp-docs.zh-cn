@@ -1,10 +1,6 @@
 ---
-title: system_clock 结构 | Microsoft Docs
-ms.custom: ''
+title: system_clock 结构
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - chrono/std::chrono::system_clock
 - chrono/std::chrono::system_clock::from_time_t
@@ -12,19 +8,13 @@ f1_keywords:
 - chrono/std::chrono::system_clock::to_time_t
 - chrono/std::chrono::system_clock::is_monotonic Constant
 - chrono/std::chrono::system_clock::is_steady Constant
-dev_langs:
-- C++
 ms.assetid: a97bd46e-267a-4836-9f7d-af1f664e99ae
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 146a764cd2b1fcc567a564a6995c191c4f838262
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 66710f94d96f069d6d388d6b49c76747c618a0d0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45722223"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50557980"
 ---
 # <a name="systemclock-structure"></a>system_clock 结构
 
@@ -42,7 +32,7 @@ struct system_clock;
 
 如果首次调用 `now()` 返回的值始终小于或等于后续调用 `now()` 返回的值，则为单调时钟。
 
-如果它是单调时钟并且时钟计时周期之间的时间是常量，则为稳定时钟。
+如果它是*单调*时钟并且时钟计时周期之间的时间是常量，则为稳定时钟。
 
 ## <a name="members"></a>成员
 

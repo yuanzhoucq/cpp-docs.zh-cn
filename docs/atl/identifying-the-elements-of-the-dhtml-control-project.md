@@ -1,26 +1,16 @@
 ---
-title: 标识 DHTML 控件项目的元素 |Microsoft Docs
-ms.custom: ''
+title: 标识 DHTML 控件项目的元素
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - HTML controls, ATL support
 - DHTML controls, ATL support
 ms.assetid: b627547a-3768-4346-9900-4b7a21fb8e27
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 868feab383c324962c05fc5e341092cf89f895f5
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: bb7fa67e6a3009922596c225895032bfb2f4fbb5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752828"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50533687"
 ---
 # <a name="identifying-the-elements-of-the-dhtml-control-project"></a>标识 DHTML 控件项目的元素
 

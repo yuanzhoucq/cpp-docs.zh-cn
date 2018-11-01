@@ -1,28 +1,18 @@
 ---
-title: __svm_clgi | Microsoft Docs
-ms.custom: ''
+title: __svm_clgi
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - __svm_clgi
-dev_langs:
-- C++
 helpviewer_keywords:
 - CLGI instruction
 - __svm_clgi intrinsic
 ms.assetid: 6640f5ab-9472-46f9-a042-e15c4f1ff858
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 378dd025b4db769645ca53a01504c195c1265ac6
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9f3484cc5cbffea1315d546ced317dfdfceee9e6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46410586"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50618844"
 ---
 # <a name="svmclgi"></a>__svm_clgi
 
@@ -38,7 +28,7 @@ void __svm_clgi( void );
 
 ## <a name="remarks"></a>备注
 
-`__svm_clgi`函数等同于`CLGI`计算机指令。 全局中断标志确定微处理器忽略、 推迟，或处理的 I/O 完成、 硬件温度警报或调试异常等事件中断。
+`__svm_clgi` 函数等同于 `CLGI` 计算机指令。 全局中断标志确定微处理器忽略、 推迟，或处理的 I/O 完成、 硬件温度警报或调试异常等事件中断。
 
 此函数支持主机的虚拟机监视器与来宾操作系统及其应用程序进行交互。 有关详细信息，搜索文档中，"AMD64 体系结构编程人员手动卷 2： 系统编程中，"文档数 24593，修订 3.11， [AMD corporation](https://developer.amd.com/resources/developer-guides-manuals/)站点。
 
