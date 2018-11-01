@@ -1,25 +1,15 @@
 ---
-title: 演练： 更新 MFC 随意画图应用程序 （第 2 部分） |Microsoft Docs
-ms.custom: ''
+title: 演练：更新 MFC 随意画图应用程序（第 2 部分）
 ms.date: 09/20/2018
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - walkthroughs [MFC]
 ms.assetid: 602df5c2-17d4-4cd9-8cf6-dff652c4cae5
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d3623eb594ff82660e97809eef609a33e74e74dc
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: d618d79c50892523b3e4a71be163b8778402e48e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235433"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50570334"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-2"></a>演练：更新 MFC 随意画图应用程序（第 2 部分）
 
@@ -190,7 +180,7 @@ ms.locfileid: "48235433"
 
 ### <a name="to-add-a-color-button-to-the-pen-panel"></a>若要将颜色按钮添加到笔面板
 
-1. 添加颜色按钮之前，请为其创建菜单项。 在中**资源视图**窗口中，打开**IDR_SCRIBBTYPE**菜单资源。 单击**笔**菜单项以打开钢笔菜单。 然后单击**请在此处输入**并键入`&Color`。 右键单击您键入要显示的文本**属性**窗口。 更改为 ID `ID_PEN_COLOR`。
+1. 添加颜色按钮之前，请为其创建菜单项。 在中**资源视图**窗口中，打开**IDR_SCRIBBTYPE**菜单资源。 单击**笔**菜单项以打开钢笔菜单。 然后单击**请在此处输入**并键入`&Color`。 右键单击您键入要显示的文本**属性**窗口。 将 ID 更改为 `ID_PEN_COLOR`。
 
 1. 现在，添加颜色按钮。 从**工具箱**，拖动**颜色按钮**到**笔**面板。
 

@@ -1,10 +1,6 @@
 ---
-title: CWinFormsDialog 类 |Microsoft Docs
-ms.custom: ''
+title: CWinFormsDialog 类
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CWinFormsDialog
 - AFXWINFORMS/CWinFormsDialog
@@ -12,24 +8,18 @@ f1_keywords:
 - AFXWINFORMS/CWinFormsDialog::GetControl
 - AFXWINFORMS/CWinFormsDialog::GetControlHandle
 - AFXWINFORMS/CWinFormsDialog::OnInitDialog
-dev_langs:
-- C++
 helpviewer_keywords:
 - CWinFormsDialog [MFC], CWinFormsDialog
 - CWinFormsDialog [MFC], GetControl
 - CWinFormsDialog [MFC], GetControlHandle
 - CWinFormsDialog [MFC], OnInitDialog
 ms.assetid: e3cec000-a578-448e-b06a-8af256312f61
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3865fe1e1bf3c8dff9861dba2ef12ce1a34fe22a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3baa9f99a5a1ecefc0ad9bc9f0c56f0f67dc2e80
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46428859"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50573483"
 ---
 # <a name="cwinformsdialog-class"></a>CWinFormsDialog 类
 

@@ -1,11 +1,6 @@
 ---
-title: _fread_nolock_s2 | Microsoft 文档
-ms.custom: ''
+title: _fread_nolock_s2
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - _fread_nolock_s
 apilocation:
@@ -24,19 +19,13 @@ apitype: DLLExport
 f1_keywords:
 - _fread_nolock_s
 - stdio/_fread_nolock_s
-dev_langs:
-- C++
 ms.assetid: 5badb9ab-11df-4e17-8162-30bda2a4572e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: db0cd82d251595be586b46fb66a0f0262484e2f8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1dccbd362577e524f0455a2248d4d0f209ea6295
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398245"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50580765"
 ---
 # <a name="freadnolocks"></a>_fread_nolock_s
 
@@ -77,7 +66,7 @@ size_t _fread_nolock_s(
 
 ## <a name="remarks"></a>备注
 
-此函数是的非锁定版本**fread_s**。 它等同于**fread_s** ，只不过它不受干扰其他线程。 它可能更快，因为它不会产生锁定其他线程的开销。 仅在线程安全的上下文中使用此函数，如单线程应用程序或调用范围已处理线程隔离的区域。
+此函数是的非锁定版本**fread_s**。 它等同于**fread_s** ，只不过它不受干扰从其他线程。 它可能更快，因为它不会产生锁定其他线程的开销。 仅在线程安全的上下文中使用此函数，如单线程应用程序或调用范围已处理线程隔离的区域。
 
 ## <a name="requirements"></a>要求
 

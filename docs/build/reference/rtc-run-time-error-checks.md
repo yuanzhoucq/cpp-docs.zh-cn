@@ -1,18 +1,12 @@
 ---
-title: -RTC （运行时错误检查） |Microsoft Docs
-ms.custom: ''
+title: /RTC（运行时错误检查）
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /rtc
 - VC.Project.VCCLCompilerTool.SmallerTypeCheck
 - VC.Project.VCCLCompilerTool.UninitializedVariableCheck
 - VC.Project.VCCLCompilerTool.StackFrameCheck
 - VC.Project.VCCLCompilerTool.BasicRuntimeChecks
-dev_langs:
-- C++
 helpviewer_keywords:
 - /RTCs compiler option [C++]
 - -RTC1 compiler option [C++]
@@ -31,16 +25,12 @@ helpviewer_keywords:
 - RTCc compiler option
 - -RTCc compiler option [C++]
 ms.assetid: 9702c558-412c-4004-acd5-80761f589368
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 29fd7e3ec71b38aec187f60548ce7cededd01c2b
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 77dc97ee07499b7df37a115dafafddd71acb7bb1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45709389"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50654995"
 ---
 # <a name="rtc-run-time-error-checks"></a>/RTC（运行时错误检查）
 
@@ -80,7 +70,7 @@ int main() {
 }
 ```
 
-**秒**<br/>
+**s**<br/>
 启用堆栈帧运行时错误检查，如下所示：
 
 - 为非零值的本地变量的初始化。 这有助于找出在调试模式下运行时不会出现的 bug。 没有堆栈变量仍将为在调试版本中相比发布版本由于堆栈中的变量的发布版本的编译器优化的零的可能性更大。 后一个程序已用完其堆栈的一个区域，它永远不会重置为 0 的编译器。 因此，碰巧使用相同的堆栈区域的后续、 未初始化堆栈变量可以返回先前使用此堆栈内存中剩余的值。

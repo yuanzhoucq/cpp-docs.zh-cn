@@ -1,10 +1,6 @@
 ---
-title: printf、_printf_l、wprintf、_wprintf_l | Microsoft 文档
-ms.custom: ''
+title: printf、_printf_l、wprintf、_wprintf_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _printf_l
 - wprintf
@@ -26,8 +22,6 @@ f1_keywords:
 - printf
 - _tprintf
 - wprintf
-dev_langs:
-- C++
 helpviewer_keywords:
 - printf function
 - printf_l function
@@ -44,16 +38,12 @@ helpviewer_keywords:
 - printf function, using
 - formatted text [C++]
 ms.assetid: 77a854ae-5b48-4865-89f4-f2dc5cf80f52
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e66c185a6ee56e4a82a98e62d8d2c7d8167399e5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1f3d439c12fa803bfe1af31a9a45d777b2e1caa2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405232"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50666890"
 ---
 # <a name="printf-printfl-wprintf-wprintfl"></a>printf、_printf_l、wprintf、_wprintf_l
 
@@ -95,17 +85,17 @@ int _wprintf_l(
 
 ## <a name="return-value"></a>返回值
 
-返回输出的字符数或负值（如果出错）。 如果*格式*是**NULL**，则调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，函数将返回-1 并设置**errno**到**EINVAL**。 如果**EOF** (0xFFFF) 中遇到*参数*，该函数将返回-1。
+返回输出的字符数或负值（如果出错）。 如果*格式*是**NULL**，将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，函数将返回-1 并设置**errno**到**EINVAL**。 如果**EOF** (0xFFFF) 中遇到*自变量*，该函数将返回-1。
 
-有关信息**errno**和错误代码，请参阅[_doserrno，errno，_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
+有关的信息**errno**和错误代码，请参阅[_doserrno、 errno、 _sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>备注
 
-**Printf**函数格式和输出的字符和值写入标准输出流中，一系列**stdout**。 如果自变量跟*格式*字符串，*格式*字符串必须包含确定输出格式的自变量的规范。 **printf**和[fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md)行为方式相同，只不过**printf**将输出写入**stdout**而不是类型的目标**文件**.
+**Printf**函数格式化并将一系列字符和值写入标准输出流**stdout**。 如果自变量遵循*格式*字符串，*格式*字符串必须包含确定自变量的输出格式的规范。 **printf**并[fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md)行为方式相同，只不过**printf**会将输出写入**stdout**而不是类型的目标**文件**.
 
-**wprintf**是宽字符版本的**printf**;*格式*是宽字符字符串。 **wprintf**和**printf**如果在 ANSI 模式下打开流，则具有相同的行为。 **printf**当前不支持输出到 UNICODE 流。
+**wprintf**是宽字符版本**printf**;*格式*是宽字符字符串。 **wprintf**并**printf**如果在 ANSI 模式下打开流，则行为相同。 **printf**目前不支持输出到 UNICODE 流。
 
-使用这些函数的版本 **_l**后缀是相同，只不过它们使用传递而不是当前线程区域设置的区域设置参数。
+使用这些函数的版本 **_l**后缀完全相同，只不过它们使用传递中而不是当前线程区域设置的区域设置参数。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -113,7 +103,7 @@ int _wprintf_l(
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tprintf**|**printf**|**printf**|**wprintf**|
 
-*格式*参数包括普通字符，转义序列和 (如果自变量跟*格式*) 的格式规范。 普通字符和转义序列复制到**stdout**按其出现的顺序。 例如，按行：
+*格式*参数包括普通字符，转义序列和 (如果自变量遵循*格式*) 格式规范。 普通字符和转义序列复制到**stdout**按其出现的顺序。 例如，按行：
 
 ```C
 printf("Line one\n\t\tLine two\n");
@@ -126,7 +116,7 @@ Line one
         Line two
 ```
 
-[格式规范](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)百分比符号始终开头 (**%**) 和左到右阅读。 当**printf**遇到第一个格式规范 （如果有），它将转换后的第一个参数的值*格式*并相应地输出。 第二个格式规范致使第二个自变量转换并输出，依此类推。 如果存在比格式规范更多的自变量，则多出的自变量将被忽略。 如果全部格式规范没有足够自变量，则结果不确定。
+[格式规范](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)始终以百分比符号开头 (**%**) 和左到右读取。 当**printf**遇到第一个格式规范 （如果有），它会将转换后的第一个参数的值*格式*并相应地将其输出。 第二个格式规范致使第二个自变量转换并输出，依此类推。 如果存在比格式规范更多的自变量，则多出的自变量将被忽略。 如果全部格式规范没有足够自变量，则结果不确定。
 
 > [!IMPORTANT]
 > 确保 format 不是用户定义的字符串。
@@ -140,12 +130,12 @@ Line one
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**printf**， **_printf_l**|\<stdio.h>|
 |**wprintf**， **_wprintf_l**|\<stdio.h> 或 \<wchar.h>|
 
-通用 Windows 平台 (UWP) 应用中不支持控制台。 控制台中，与关联的标准流句柄**stdin**， **stdout**，和**stderr**，必须将 C 运行时函数才能使用它们在 UWP 应用重定向. 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+通用 Windows 平台 (UWP) 应用中不支持控制台。 控制台中，与关联的标准流句柄**stdin**， **stdout**，并**stderr**，C 运行时函数可以在 UWP 应用中使用它们之前，必须重定向. 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 

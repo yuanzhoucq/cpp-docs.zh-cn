@@ -1,10 +1,6 @@
 ---
-title: CDocument 类 |Microsoft Docs
-ms.custom: ''
+title: CDocument 类
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CDocument
 - AFXWIN/CDocument
@@ -65,8 +61,6 @@ f1_keywords:
 - AFXWIN/CDocument::m_clrRichPreviewBackColor
 - AFXWIN/CDocument::m_clrRichPreviewTextColor
 - AFXWIN/CDocument::m_lfRichPreviewFont
-dev_langs:
-- C++
 helpviewer_keywords:
 - CDocument [MFC], CDocument
 - CDocument [MFC], AddView
@@ -126,16 +120,12 @@ helpviewer_keywords:
 - CDocument [MFC], m_clrRichPreviewTextColor
 - CDocument [MFC], m_lfRichPreviewFont
 ms.assetid: e5a2891d-e1e1-4599-8c7e-afa9b4945446
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1505eda03406e76ee02524788d51faec50a4a80e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e84ceb11ad789ef3bd6933292030ef2af6f1d817
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46402338"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50609308"
 ---
 # <a name="cdocument-class"></a>CDocument 类
 
@@ -448,7 +438,7 @@ virtual CFile* GetFile(
 
 ### <a name="return-value"></a>返回值
 
-一个指向`CFile`对象。
+指向 `CFile` 对象的指针。
 
 ##  <a name="getfirstviewposition"></a>  CDocument::GetFirstViewPosition
 

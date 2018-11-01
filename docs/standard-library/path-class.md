@@ -1,25 +1,15 @@
 ---
-title: path 类 | Microsoft Docs
-ms.custom: ''
+title: path 类
 ms.date: 09/27/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - filesystem/std::experimental::filesystem::path
-dev_langs:
-- C++
 ms.assetid: 8a1227ca-aeb2-4e0e-84aa-86e34e4f4fe8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7674f07c92f8a0c9d8a9070f3f99e00dfde39140
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 486245df3433f552c289786a0b20deb33c8fb6c0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235459"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50618213"
 ---
 # <a name="path-class"></a>path 类
 
@@ -63,10 +53,10 @@ class path;
 |[扩展](#extension)|返回的后缀`filename()`。|
 |[filename](#filename)|返回 myname 的根目录组件，尤其是 `empty() path() : *--end()`。 组件可能为空。|
 |[generic_string](#generic_string)|返回 `this->string<Elem, Traits, Alloc>(al)` ，其中（在 Windows 下）任何反斜杠均转换为正斜杠。|
-|[generic_u16string](#generic_u16string)|返回 `u16string()`，其中（在 Windows 下）任何反斜杠均转换为正斜杠。|
-|[generic_u32string](#generic_u32string)|返回 `u32string()`，其中（在 Windows 下）任何反斜杠均转换为正斜杠。|
-|[generic_u8string](#generic_u8string)|返回 `u8string()`，其中（在 Windows 下）任何反斜杠均转换为正斜杠。|
-|[generic_wstring](#generic_wstring)|返回 `wstring()`，其中（在 Windows 下）任何反斜杠均转换为正斜杠。|
+|[generic_u16string](#generic_u16string)|返回 `u16string()` ，其中（在 Windows 下）任何反斜杠均转换为正斜杠。|
+|[generic_u32string](#generic_u32string)|返回 `u32string()` ，其中（在 Windows 下）任何反斜杠均转换为正斜杠。|
+|[generic_u8string](#generic_u8string)|返回 `u8string()` ，其中（在 Windows 下）任何反斜杠均转换为正斜杠。|
+|[generic_wstring](#generic_wstring)|返回 `wstring()` ，其中（在 Windows 下）任何反斜杠均转换为正斜杠。|
 |[has_extension](#has_extension)|返回 `!extension().empty()`。|
 |[has_filename](#has_filename)|返回 `!filename().empty()`。|
 |[has_parent_path](#has_parent_path)|返回 `!parent_path().empty()`。|
@@ -290,7 +280,7 @@ string generic_string() const;
 
 ## <a name="generic_u16string"></a> path::generic_u16string
 
-返回 `u16string()`，其中（在 Windows 下）任何反斜杠均转换为正斜杠。
+返回 `u16string()` ，其中（在 Windows 下）任何反斜杠均转换为正斜杠。
 
 ```cpp
 u16string generic_u16string() const;
@@ -298,7 +288,7 @@ u16string generic_u16string() const;
 
 ## <a name="generic_u32string"></a> path::generic_u32string
 
-返回 `u32string()`，其中（在 Windows 下）任何反斜杠均转换为正斜杠。
+返回 `u32string()` ，其中（在 Windows 下）任何反斜杠均转换为正斜杠。
 
 ```cpp
 u32string generic_u32string() const;
@@ -306,7 +296,7 @@ u32string generic_u32string() const;
 
 ## <a name="generic_u8string"></a> path::generic_u8string
 
-返回 `u8string()`，其中（在 Windows 下）任何反斜杠均转换为正斜杠。
+返回 `u8string()` ，其中（在 Windows 下）任何反斜杠均转换为正斜杠。
 
 ```cpp
 string generic_u8string() const;
@@ -314,7 +304,7 @@ string generic_u8string() const;
 
 ## <a name="generic_wstring"></a> path::generic_wstring
 
-返回 `wstring()`，其中（在 Windows 下）任何反斜杠均转换为正斜杠。
+返回 `wstring()` ，其中（在 Windows 下）任何反斜杠均转换为正斜杠。
 
 ```cpp
 wstring generic_wstring() const;
@@ -775,13 +765,13 @@ string string() const;
 
 第一个 （模板） 成员函数将转换中存储的序列`mypath`一样：
 
-1. `string<char, Traits, Alloc>()` 的 `string()`
+1. `string()` 的 `string<char, Traits, Alloc>()`
 
-1. `string<wchar_t, Traits, Alloc>()` 的 `wstring()`
+1. `wstring()` 的 `string<wchar_t, Traits, Alloc>()`
 
-1. `string<char16_t, Traits, Alloc>()` 的 `u16string()`
+1. `u16string()` 的 `string<char16_t, Traits, Alloc>()`
 
-1. `string<char32_t, Traits, Alloc>()` 的 `u32string()`
+1. `u32string()` 的 `string<char32_t, Traits, Alloc>()`
 
 第二个成员函数将转换中存储的序列`mypath`到为主机系统偏好的编码**char**序列，并返回它存储在类型的对象`string`。
 

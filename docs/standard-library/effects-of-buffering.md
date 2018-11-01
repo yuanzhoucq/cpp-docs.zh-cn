@@ -1,26 +1,16 @@
 ---
-title: 缓冲效果 | Microsoft 文档
-ms.custom: ''
+title: 缓冲效果
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - buffers, effects of buffering
 - buffering, effects of
 ms.assetid: 5d544812-e95e-4f28-b15a-edef3f3414fd
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c28deb0f5e30d3ec28fac4805a86645bebf27f22
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e10b28edffdfe3411f86c031bfd12ea886410e20
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842373"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50631434"
 ---
 # <a name="effects-of-buffering"></a>缓冲效果
 
@@ -49,7 +39,7 @@ int main( )
 cout <<"Please wait..." <<flush;
 ```
 
-此步骤将刷新缓冲区，确保在等待之前输出消息。 你还可以使用`endl`操控器，其刷新缓冲区并输出回车换行符，或者是你可以使用`cin`对象。 此对象（与 `cerr` 或 `clog` 对象一起）通常绑定到 `cout` 对象。 因此，对 `cin` （或 `cerr` 或 `clog` 对象）的任何使用将刷新 `cout` 对象。
+此步骤将刷新缓冲区，确保在等待之前输出消息。 此外可以使用`endl`操控器，其中刷新缓冲区并输出回车-换行，或者是可以使用`cin`对象。 此对象（与 `cerr` 或 `clog` 对象一起）通常绑定到 `cout` 对象。 因此，对 `cin` （或 `cerr` 或 `clog` 对象）的任何使用将刷新 `cout` 对象。
 
 ## <a name="see-also"></a>请参阅
 

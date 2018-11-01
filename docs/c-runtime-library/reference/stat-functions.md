@@ -1,10 +1,6 @@
 ---
-title: _stat、_stat32、_stat64、_stati64、_stat32i64、_stat64i32、_wstat、_wstat32、_wstat64、_wstati64、_wstat32i64、_wstat64i32 | Microsoft 文档
-ms.custom: ''
+title: _stat、_stat32、_stat64、_stati64、_stat32i64、_stat64i32、_wstat、_wstat32、_wstat64、_wstati64、_wstat32i64、_wstat64i32
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wstat64
 - _stati64
@@ -78,8 +74,6 @@ f1_keywords:
 - stat/_wstati64
 - stat/_wstat32i64
 - stat/_wstat64i32
-dev_langs:
-- C++
 helpviewer_keywords:
 - files [C++], status information
 - _stat function
@@ -112,16 +106,12 @@ helpviewer_keywords:
 - _tstat64 function
 - files [C++], getting status information
 ms.assetid: 99a75ae6-ff26-47ad-af70-5ea7e17226a5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 13ce367bdee78be1610a36c887a04f2130375114
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 316012479ec374cc5f40061384475008fe04e331
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418008"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50637276"
 ---
 # <a name="stat-stat32-stat64-stati64-stat32i64-stat64i32-wstat-wstat32-wstat64-wstati64-wstat32i64-wstat64i32"></a>_stat、_stat32、_stat64、_stati64、_stat32i64、_stat64i32、_wstat、_wstat32、_wstat64、_wstati64、_wstat32i64、_wstat64i32
 
@@ -190,26 +180,26 @@ int _wstat64i32(
 
 ## <a name="return-value"></a>返回值
 
-如果获取到文件状态信息，则这些函数将返回 0。 返回值-1 指示错误，在这种情况下**errno**设置为**ENOENT**，，该值指示，该文件名或路径未找到。 返回值**EINVAL**指示参数无效;**errno**也设置为**EINVAL**在这种情况下。
+如果获取到文件状态信息，则这些函数将返回 0。 返回值-1 指示错误，在这种情况下**errno**设置为**ENOENT**，指示，文件名或路径未找到。 返回值**EINVAL**指示参数无效;**errno**也设置为**EINVAL**这种情况下。
 
 关于此代码以及其他返回代码的详细信息，请参阅 [_doserrno, errno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 。
 
-如果它是比 1970 年 1 月 1 日午夜和 23:59:59，3000 年 12 月 31 日，UTC 之前，更高版本的除非你使用可以表示文件上的日期戳 **_stat32**或 **_wstat32**，或已定义 **_USE_32BIT_TIME_T**，在这种情况下才 23:59:59 2038 年 1 月 18 日，UTC 表示的日期。
+如果它是比午夜，自 1970 年 1 月 1 日 23:59:59，3000 年 12 月 31 日，UTC，然后更高版本，除非你使用可表示的文件的日期戳 **_stat32**或 **_wstat32**，或已定义 **_USE_32BIT_TIME_T**，在这种情况下仅前 23:59:59 2038 年 1 月 18 日，UTC 表示的日期。
 
 ## <a name="remarks"></a>备注
 
-**_Stat**函数可获取有关文件或指定的目录信息*路径*并将它存储在通过指向的结构*缓冲区*。 **_stat**自动处理多字节字符字符串自变量，根据需要，根据当前正在使用的多字节代码页识别多字节字符序列。
+**_Stat**函数可获取有关指定目录的文件的信息*路径*并将其存储在由指向的结构*缓冲区*。 **_stat**自动处理多字节字符字符串参数，根据需要，根据当前正在使用的多字节代码页识别多字节字符序列。
 
-**_wstat**是宽字符版本的 **_stat**;*路径*参数 **_wstat**是宽字符字符串。 **_wstat**和 **_stat**行为方式相同，只不过 **_wstat**不处理多字节字符字符串。
+**_wstat**是宽字符版本 **_stat**;*路径*参数 **_wstat**是宽字符字符串。 **_wstat**并 **_stat**行为方式相同，只不过 **_wstat**不处理多字节字符字符串。
 
-这些函数的变体支持 32 位或 64 位时间类型以及 32 位或 64 位文件长度。 第一个数字后缀 (**32**或**64**) 指示时间的大小使用类型; 第二个后缀是**i32**或**i64**，指示是否将文件大小表示为一个 32 位或 64 位整数。
+这些函数的变体支持 32 位或 64 位时间类型以及 32 位或 64 位文件长度。 第一个数字后缀 (**32**或**64**) 指示的时间的大小使用的类型; 第二个后缀是**i32**或者**i64**，该值指示是否将文件大小表示为 32 位或 64 位整数。
 
-**_stat**等效于 **_stat64i32**，和**结构** **_stat**包含 64 位时间。 这是 true 除非 **_USE_32BIT_TIME_T**定义，在此情况下这一旧行为有效，则是 **_stat**使用 32 位时间和**结构** **_stat**包含 32 位时间。 同样适用于 **_stati64**。
+**_stat**等效于 **_stat64i32**，和**结构** **_stat**包含 64 位时间。 这是 true 除非 **_USE_32BIT_TIME_T**定义了，这种情况下旧行为有效;**_stat**使用 32 位时间，并**结构** **_stat**包含 32 位时间。 同样适用于 **_stati64**。
 
 > [!NOTE]
-> **_wstat**并不适用于 Windows Vista 符号链接。 在这些情况下， **_wstat**将始终报告文件大小为 0。 **_stat**适用于符号链接。
+> **_wstat**并不适用于 Windows Vista 的符号链接。 在这些情况下， **_wstat**将始终报告文件大小为 0。 **_stat**适用于符号链接。
 
-此函数验证其参数。 如果任一*路径*或*缓冲区*是**NULL**，则调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。
+此函数验证其参数。 如果任一*路径*或*缓冲区*是**NULL**，将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。
 
 ### <a name="time-type-and-file-length-type-variations-of-stat"></a>_stat 时间类型和文件长度类型变体
 
@@ -241,20 +231,20 @@ int _wstat64i32(
 **st_gid**|拥有此文件的组的数字标识符（针对 UNIX）。在 Windows 系统上此字段始终为 0。 重定向的文件分类为 Windows 文件。
 **st_atime**|上次访问文件的时间。 在 NTFS 上有效，但在 FAT 格式的磁盘驱动器上无效。
 **st_ctime**|文件的创建时间。 在 NTFS 上有效，但在 FAT 格式的磁盘驱动器上无效。
-**st_dev**|包含文件的磁盘的驱动器号 (与相同**st_rdev**)。
-**st_ino**|信息节点的数量 ( **inode**) 文件 (针对 unix)。 在 UNIX 文件系统上**inode**描述文件日期和时间戳、 权限和内容。 硬链接到另一个文件时，它们共享相同**inode**。 **Inode**，因此**st_ino**，FAT、 HPFS 或 NTFS 文件系统中没有任何意义。
+**st_dev**|驱动器的包含文件的磁盘数 (与相同**st_rdev**)。
+**st_ino**|信息节点号 ( **inode**) 文件 （针对 UNIX）。 在 UNIX 文件系统上**inode**描述文件日期和时间戳、 权限和内容。 硬链接到另一个文件时，它们共用同一个**inode**。 **Inode**，并因此**st_ino**，FAT、 HPFS 或 NTFS 文件系统中没有任何意义。
 **st_mode**|文件模式信息的位掩码。 **_S_IFDIR**如果设置位*路径*指定的目录; **_S_IFREG**如果设置位*路径*指定一个普通的文件或设备。 根据文件的权限模式设置用户读/写位；根据文件扩展名设置用户执行位。
 **st_mtime**|上次修改文件的时间。
 **st_nlink**|在非 NTFS 文件系统上始终为 1。
-**st_rdev**|包含文件的磁盘的驱动器号 (与相同**st_dev**)。
-**st_size**|以字节为单位; 文件的大小变体与 64 位整数**i64**后缀。
+**st_rdev**|驱动器的包含文件的磁盘数 (与相同**st_dev**)。
+**st_size**|以字节为单位; 文件的大小使用变体的 64 位整数**i64**后缀。
 **st_uid**|拥有文件的用户的数字标识符（针对 UNIX）。 此字段在 Windows 系统上始终为 0。 重定向的文件分类为 Windows 文件。
 
-如果*路径*指设备， **st_size**，各种时间字段、 **st_dev**，和**st_rdev**中的字段 **_stat**结构不是无意义。 因为 STAT.H 使用 TYPES.H 中定义的 [_dev_t](../../c-runtime-library/standard-types.md) 类型，所以必须在代码中的 STAT.H 之前包含 TYPES.H。
+如果*路径*设备，是指**st_size**，各种时间字段、 **st_dev**，以及**st_rdev**中的字段 **_stat**结构就变得意义。 因为 STAT.H 使用 TYPES.H 中定义的 [_dev_t](../../c-runtime-library/standard-types.md) 类型，所以必须在代码中的 STAT.H 之前包含 TYPES.H。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|可选标头|
+|例程所返回的值|必需的标头|可选标头|
 |-------------|---------------------|----------------------|
 |**_stat**， **_stat32**， **_stat64**， **_stati64**， **_stat32i64**， **_stat64i32**|\<sys/types.h> 后跟 \<sys/stat.h>|\<errno.h>|
 |**_wstat**， **_wstat32**， **_wstat64**， **_wstati64**， **_wstat32i64**， **_wstat64i32**|\<sys/types.h> 后跟 \<sys/stat.h> 或 \<wchar.h>|\<errno.h>|

@@ -1,10 +1,6 @@
 ---
-title: 并发 Namespace |Microsoft Docs
-ms.custom: ''
+title: concurrency 命名空间
 ms.date: 11/04/2016
-ms.technology:
-- cpp-concrt
-ms.topic: reference
 f1_keywords:
 - concurrent_priority_queue/concurrency
 - agents/concurrency
@@ -21,21 +17,15 @@ f1_keywords:
 - concurrent_unordered_set/concurrency
 - pplconcrt/concurrency
 - internal_concurrent_hash/concurrency
-dev_langs:
-- C++
 helpviewer_keywords:
 - Concurrency namespace
 ms.assetid: f1d33ca2-679b-4442-b140-22a9d9df61d1
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9d423d80606da9edcec2cb5f4da4d02e39213ba7
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ccfa168f811b2c357a3760097ca7bbaab4f5ed3a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46386023"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50629844"
 ---
 # <a name="concurrency-namespace"></a>concurrency 命名空间
 
@@ -208,7 +198,7 @@ namespace concurrency;
 |[make_task 函数](concurrency-namespace-functions.md#make_task)|用于创建 `task_handle` 对象的工厂方法。|
 |[parallel_buffered_sort 函数](concurrency-namespace-functions.md#parallel_buffered_sort)|已重载。 将指定范围中的元素按非降序顺序排列，或根据二元谓词指定的排序条件排列（以并行方式）。 此函数是基于比较、不稳定的就地排序，因此它与 `std::sort` 在语义上相似，但它需要 `O(n)` 附加空间，并需要待排序的元素进行默认初始化。|
 |[parallel_for 函数](concurrency-namespace-functions.md#parallel_for)|已重载。 `parallel_for` 循环访问某个索引范围，并在每次迭代时以并行方式执行用户提供的函数。|
-|[parallel_for_each 函数](concurrency-namespace-functions.md#parallel_for_each)|已重载。 `parallel_for_each` 以并行方式将指定函数应用于某个范围内的每个元素。 除对元素并行执行迭代以及未指定迭代的顺序外，它在语义上等效于 `std` 命名空间中的 `for_each` 函数。 实际参数 `_Func` 必须支持窗体 `operator()(T)` 的函数调用运算符，其中形式参数 `T` 是正在被循环访问的容器的项类型。|
+|[parallel_for_each 函数](concurrency-namespace-functions.md#parallel_for_each)|已重载。 `parallel_for_each` 以并行方式将指定函数应用于某个范围内的每个元素。 除对元素并行执行迭代以及未指定迭代的顺序外，它在语义上等效于 `std` 命名空间中的 `for_each` 函数。 实际自变量 `_Func` 必须支持窗体 `operator()(T)` 的函数调用运算符，其中形式参数 `T` 是正在被循环访问的容器的项类型。|
 |[parallel_invoke 函数](concurrency-namespace-functions.md#parallel_invoke)|已重载。 执行作为参数并行提供的函数对象，并在它们完成执行后进行阻止。 每个函数对象都可以是 lambda 表达式、函数指针或支持具有签名 `void operator()()` 的函数调用运算符的任何对象。|
 |[parallel_radixsort 函数](concurrency-namespace-functions.md#parallel_radixsort)|已重载。 使用基数排序算法将指定范围中的元素按非降序顺序排列。 这是一个稳定排序函数，它需要可以投影要按无符号整数键排序的元素的投影函数。 默认初始化对于待排序的元素是必须的。|
 |[parallel_reduce 函数](concurrency-namespace-functions.md#parallel_reduce)|已重载。 通过计算连续部分和来计算指定范围中所有元素的和，或计算类似的通过指定的二元运算（而不是求和运算）获得的连续部分结果的结果（以并行方式）。 `parallel_reduce` 与 `std::accumulate` 在语义上相似，但它需要二元运算是关联的，并需要标识值（而不是初始值）。|
@@ -270,5 +260,5 @@ namespace concurrency;
 
 ## <a name="see-also"></a>请参阅
 
-[参考](reference-concurrency-runtime.md)
+[引用](reference-concurrency-runtime.md)
 

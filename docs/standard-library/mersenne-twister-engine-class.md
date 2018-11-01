@@ -1,27 +1,17 @@
 ---
-title: mersenne_twister_engine 类 | Microsoft Docs
-ms.custom: ''
+title: mersenne_twister_engine 类
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - random/std::mersenne_twister_engine
-dev_langs:
-- C++
 helpviewer_keywords:
 - mersenne_twister_engine class
 ms.assetid: 7ee968fa-a1cc-450f-890f-7305de062685
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f868a6f2ec63e38573d49a1dc4b3b7a122f4d8f2
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: c0f30eacb308da61064a0383a6433b7127032a3e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44100217"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50607449"
 ---
 # <a name="mersennetwisterengine-class"></a>mersenne_twister_engine 类
 
@@ -83,7 +73,7 @@ class mersenne_twister_engine;
 
 生成器扭转较大值，它包含通过使用移位值定义的旋转生成的反馈移位寄存器*N*并*M*，旋转值*R*，和一个条件的 XOR 掩码*A*。此外，原始移位寄存器的位混合 （调和） 根据由值定义的位混合矩阵*U*， *D*， *S*， *B*， *T*， *C*，并且*L*。
 
-模板自变量 `UIntType` 必须大到足以保留最多 `2`<sup>W</sup> - `1` 个值。 其他模板参数的值必须满足以下要求：`2u < W, 0 < M, M ≤ N, R ≤ W, U ≤ W, S ≤ W, T ≤ W, L ≤ W, W ≤ numeric_limits<UIntType>::digits, A ≤ (1u<<W) - 1u, B ≤ (1u<<W) - 1u, C ≤ (1u<<W) - 1u, D ≤ (1u<<W) - 1u, and F ≤ (1u<<W) - 1u`。
+模板自变量 `UIntType` 必须大到足以保留最多 `2`<sup>W</sup> - `1` 个值。 其他模板自变量的值必须满足以下需求：`2u < W, 0 < M, M ≤ N, R ≤ W, U ≤ W, S ≤ W, T ≤ W, L ≤ W, W ≤ numeric_limits<UIntType>::digits, A ≤ (1u<<W) - 1u, B ≤ (1u<<W) - 1u, C ≤ (1u<<W) - 1u, D ≤ (1u<<W) - 1u, and F ≤ (1u<<W) - 1u`。
 
 虽然可以从此引擎直接构造生成器，但是建议使用以下预定义的 typedef 中的一个：
 
