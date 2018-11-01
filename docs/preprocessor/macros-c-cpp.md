@@ -1,27 +1,17 @@
 ---
-title: 宏 （C/c + +） |Microsoft Docs
-ms.custom: ''
+title: 宏 (C/C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - preprocessor
 - preprocessor, macros
 - Visual C++, preprocessor macros
 ms.assetid: a7bfc5d4-2537-4fe0-bef0-70cec0b43388
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cf97e61e68cd02891c738db5de8820924957fc56
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: eb576fae7a2a895b88aa958c61b3170e58fbb070
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50065468"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50656295"
 ---
 # <a name="macros-cc"></a>宏 (C/C++)
 预处理中展开宏不是预处理器指令的所有行 (不具有的行**#** 作为第一个非空白字符) 和中的指令的一部分不跳过的某些部分条件编译。 利用“条件编译”指令，您可以通过测试一个常量表达式或标识符取消对源文件的某些部分的编译，以确定将哪些文本块传递给编译器以及在预处理期间将从源文件中删除哪些文本块。

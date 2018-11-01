@@ -1,10 +1,6 @@
 ---
-title: CBitmap 类 |Microsoft Docs
-ms.custom: ''
+title: CBitmap 类
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CBitmap
 - AFXWIN/CBitmap
@@ -22,8 +18,6 @@ f1_keywords:
 - AFXWIN/CBitmap::LoadOEMBitmap
 - AFXWIN/CBitmap::SetBitmapBits
 - AFXWIN/CBitmap::SetBitmapDimension
-dev_langs:
-- C++
 helpviewer_keywords:
 - CBitmap [MFC], CBitmap
 - CBitmap [MFC], CreateBitmap
@@ -40,16 +34,12 @@ helpviewer_keywords:
 - CBitmap [MFC], SetBitmapBits
 - CBitmap [MFC], SetBitmapDimension
 ms.assetid: 3980616a-c59d-495a-86e6-62bd3889c84c
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 322b13ee62e61a836d6b0c66ab619a11348adeae
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 295f61ed120e957bc0d5ec1746e7d3bdfbb6d001
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46375636"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50624596"
 ---
 # <a name="cbitmap-class"></a>CBitmap 类
 
@@ -161,11 +151,11 @@ BOOL CreateBitmap(
 
 对于颜色位图，任一*nPlanes*或*nBitcount*参数应设置为 1。 如果这些参数均设为 1， `CreateBitmap` 则会创建一个单色位图。
 
-尽管不能为显示设备直接选择位图，但它可以选择作为"内存设备上下文"的当前位图使用[cdc:: selectobject](../../mfc/reference/cdc-class.md#selectobject)和复制到任何兼容的设备上下文的使用[Cdc:: bitblt](../../mfc/reference/cdc-class.md#bitblt)函数。
+尽管无法为显示设备直接选择位图，但可以使用 [CDC::SelectObject](../../mfc/reference/cdc-class.md#selectobject) 选择将它作为“内存设备上下文”的当前位图，并使用 [CDC::BitBlt](../../mfc/reference/cdc-class.md#bitblt) 函数将其复制到任何兼容的设备上下文中。
 
 完成通过 `CBitmap` 函数创建的 `CreateBitmap` 对象后，首先选择设备上下文中的位图，然后删除 `CBitmap` 对象。
 
-有关详细信息，请参阅的说明`bmBits`字段中`BITMAP`结构。 [位图](../../mfc/reference/bitmap-structure.md)结构做了介绍[CBitmap::CreateBitmapIndirect](#createbitmapindirect)成员函数。
+有关详细信息，请参阅的说明`bmBits`字段中`BITMAP`结构。 [BITMAP](../../mfc/reference/bitmap-structure.md) 结构根据 [CBitmap::CreateBitmapIndirect](#createbitmapindirect) 成员函数进行说明。
 
 ##  <a name="createbitmapindirect"></a>  CBitmap::CreateBitmapIndirect
 

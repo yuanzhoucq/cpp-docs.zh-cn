@@ -1,10 +1,6 @@
 ---
-title: _getdcwd、_wgetdcwd | Microsoft 文档
-ms.custom: ''
+title: _getdcwd、_wgetdcwd
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _getdcwd
 - _wgetdcwd
@@ -28,8 +24,6 @@ f1_keywords:
 - tgetdcwd
 - _wgetdcwd
 - _tgetdcwd
-dev_langs:
-- C++
 helpviewer_keywords:
 - wgetdcwd function
 - working directory
@@ -39,16 +33,12 @@ helpviewer_keywords:
 - current working directory
 - directories [C++], current working
 ms.assetid: 184152f5-c7b0-495b-918d-f9a6adc178bd
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 45c03ed2c057781c082988ac15e838249db0f28a
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 87cccec82ce648498c2bd3a7ac0ecbe436cb9baf
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43689710"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50677014"
 ---
 # <a name="getdcwd-wgetdcwd"></a>_getdcwd、_wgetdcwd
 
@@ -100,9 +90,9 @@ wchar_t *_wgetdcwd(
 
 此函数是线程安全的，即使它依赖于本身不是线程安全的 **GetFullPathName**。 但是，则可以违反线程安全性，如果在多线程应用程序调用此函数和[GetFullPathNameA](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea)。
 
-具有此函数的版本 **_nolock**后缀，对此函数上行为相同，只不过它不是线程安全且不受干扰从其他线程。 有关详细信息，请参阅 [_getdcwd_nolock、_wgetdcwd_nolock](getdcwd-nolock-wgetdcwd-nolock.md)。
+具有此函数的版本 **_nolock**后缀，对此函数上行为相同，只不过它不是线程安全且不受干扰从其他线程。 有关详细信息，请参阅 [_getdcwd_nolock, _wgetdcwd_nolock](getdcwd-nolock-wgetdcwd-nolock.md)。
 
-当 **_DEBUG**和 **_CRTDBG_MAP_ALLOC**定义，则调用 **_getdcwd**并 **_wgetdcwd** 对的调用替换为 **_getdcwd_dbg**并 **_wgetdcwd_dbg** ，以便能够调试内存分配。 有关详细信息，请参阅 [_getdcwd_dbg、_wgetdcwd_dbg](getdcwd-dbg-wgetdcwd-dbg.md)。
+当 **_DEBUG**和 **_CRTDBG_MAP_ALLOC**定义，则调用 **_getdcwd**并 **_wgetdcwd** 对的调用替换为 **_getdcwd_dbg**并 **_wgetdcwd_dbg** ，以便能够调试内存分配。 有关详细信息，请参阅[_getdcwd_dbg, _wgetdcwd_dbg](getdcwd-dbg-wgetdcwd-dbg.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -121,7 +111,7 @@ wchar_t *_wgetdcwd(
 
 ## <a name="example"></a>示例
 
-请参阅 [_getdrive](getdrive.md) 中的示例。
+请参见 [_getdrive](getdrive.md)中的示例。
 
 ## <a name="see-also"></a>请参阅
 

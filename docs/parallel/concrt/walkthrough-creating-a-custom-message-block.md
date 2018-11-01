@@ -1,26 +1,16 @@
 ---
-title: 演练： 创建自定义消息块 |Microsoft Docs
-ms.custom: ''
+title: 演练：创建自定义消息块
 ms.date: 11/04/2016
-ms.technology:
-- cpp-concrt
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - creating custom message blocks Concurrency Runtime]
 - custom message blocks, creating [Concurrency Runtime]
 ms.assetid: 4c6477ad-613c-4cac-8e94-2c9e63cd43a1
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6c4e2f27a6f123d870e56750180a5b7d4ee624fc
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: de44a2d01364070318f4d800fc6316c628177178
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50066404"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50607124"
 ---
 # <a name="walkthrough-creating-a-custom-message-block"></a>演练：创建自定义消息块
 

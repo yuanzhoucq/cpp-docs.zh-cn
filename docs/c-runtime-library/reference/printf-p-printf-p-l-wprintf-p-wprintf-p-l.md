@@ -1,10 +1,6 @@
 ---
-title: _printf_p、_printf_p_l、_wprintf_p、_wprintf_p_l | Microsoft 文档
-ms.custom: ''
+title: _printf_p、_printf_p_l、_wprintf_p、_wprintf_p_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _printf_p
 - _wprintf_p
@@ -31,8 +27,6 @@ f1_keywords:
 - _wprintf_p_l
 - _printf_p_l
 - wprintf_p_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - printf_p function
 - printf_p_l function
@@ -45,16 +39,12 @@ helpviewer_keywords:
 - tprintf_p_l function
 - _printf_p_l function
 ms.assetid: 1b7e9ef9-a069-45db-af9d-c2730168322e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 09a66fc0149b33d8fb5fe2d7eab411bf66e8dbdc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c7d798bde3ab68541bdcd64b768275b864694284
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404238"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50660352"
 ---
 # <a name="printfp-printfpl-wprintfp-wprintfpl"></a>_printf_p、_printf_p_l、_wprintf_p、_wprintf_p_l
 
@@ -100,18 +90,18 @@ int _wprintf_p_l(
 
 ## <a name="remarks"></a>备注
 
-**_Printf_p**函数格式和输出的字符和值写入标准输出流中，一系列**stdout**。 如果自变量跟*格式*字符串，*格式*字符串必须包含确定输出格式的自变量的规范 (请参阅[printf_p 位置参数](../../c-runtime-library/printf-p-positional-parameters.md)).
+**_Printf_p**函数格式化并将一系列字符和值写入标准输出流**stdout**。 如果自变量遵循*格式*字符串，*格式*字符串必须包含确定自变量的输出格式的规范 (请参阅[printf_p 位置参数](../../c-runtime-library/printf-p-positional-parameters.md)).
 
-之间的差异 **_printf_p**和**printf_s**在于 **_printf_p**支持位置参数，这允许指定的自变量是在其中的顺序格式字符串中使用。 有关详细信息，请参阅 [printf_p 位置参数](../../c-runtime-library/printf-p-positional-parameters.md)。
+之间的差异 **_printf_p**并**printf_s**在于 **_printf_p**支持位置参数，这允许指定的顺序参数为格式字符串中使用。 有关详细信息，请参阅 [printf_p 位置参数](../../c-runtime-library/printf-p-positional-parameters.md)。
 
-**_wprintf_p**是宽字符版本的 **_printf_p**; 它们行为完全相同，如果在 ANSI 模式下打开的流。 **_printf_p**当前不支持输出到 UNICODE 流。
+**_wprintf_p**是宽字符版本 **_printf_p**; 它们的行为相同如果在 ANSI 模式下打开流。 **_printf_p**当前不到 UNICODE 流支持输出。
 
-使用这些函数的版本 **_l**后缀是相同，只不过它们使用传递而不是当前线程区域设置的区域设置参数。
+使用这些函数的版本 **_l**后缀完全相同，只不过它们使用传递中而不是当前线程区域设置的区域设置参数。
 
 > [!IMPORTANT]
 > 确保 format 不是用户定义的字符串。
 
-如果*格式*或*参数*是**NULL**，或格式字符串包含无效的格式设置字符， **_printf_p**和 **_wprintf_p**函数调用无效参数处理程序中, 所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，函数将返回-1 并设置**errno**到**EINVAL**。
+如果*格式*或*自变量*是**NULL**，或者格式字符串包含无效格式字符 **_printf_p**和 **_wprintf_p**函数将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，函数将返回-1 并设置**errno**到**EINVAL**。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -122,12 +112,12 @@ int _wprintf_p_l(
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_printf_p**， **_printf_p_l**|\<stdio.h>|
 |**_wprintf_p**， **_wprintf_p_l**|\<stdio.h> 或 \<wchar.h>|
 
-通用 Windows 平台 (UWP) 应用中不支持控制台。 控制台中，与关联的标准流句柄**stdin**， **stdout**，和**stderr**，必须将 C 运行时函数才能使用它们在 UWP 应用重定向. 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+通用 Windows 平台 (UWP) 应用中不支持控制台。 控制台中，与关联的标准流句柄**stdin**， **stdout**，并**stderr**，C 运行时函数可以在 UWP 应用中使用它们之前，必须重定向. 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
