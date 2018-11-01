@@ -1,26 +1,16 @@
 ---
-title: 设计集合和枚举器接口 (ATL) |Microsoft Docs
-ms.custom: ''
+title: 设计集合和枚举器接口 (ATL)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - enumerator interfaces
 - collection interfaces
 ms.assetid: ea19a39e-6333-41a1-be62-5435c236640e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8ffe40b583a9dabeb14ce5347de6ae3d14dae724
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8c7f782f52391b162a8b32a97961269178999ee0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43751480"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50538198"
 ---
 # <a name="design-principles-for-collection-and-enumerator-interfaces"></a>集合和枚举器接口的设计原则
 
