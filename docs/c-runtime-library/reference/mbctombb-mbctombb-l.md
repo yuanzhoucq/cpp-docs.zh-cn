@@ -1,10 +1,6 @@
 ---
-title: _mbctombb、_mbctombb_l | Microsoft 文档
-ms.custom: ''
+title: _mbctombb、_mbctombb_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbctombb_l
 - _mbctombb
@@ -26,24 +22,18 @@ f1_keywords:
 - _mbctombb
 - mbctombb_l
 - mbctombb
-dev_langs:
-- C++
 helpviewer_keywords:
 - _mbctombb function
 - mbctombb_l function
 - mbctombb function
 - _mbctombb_l function
 ms.assetid: d90970b8-71ff-4586-b6a2-f9ceb811f776
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: adb233b489b5f4c190a4015805b07ab36770a283
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7395d94a6ec18f989d4a7153425b7af406a0bf45
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402899"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50519829"
 ---
 # <a name="mbctombb-mbctombbl"></a>_mbctombb、_mbctombb_l
 
@@ -74,19 +64,19 @@ unsigned int _mbctombb_l(
 
 ## <a name="return-value"></a>返回值
 
-如果成功， **_mbctombb**和 **_mbctombb_l**返回对应于的单字节字符*c*; 否则它将返回*c*.
+如果成功， **_mbctombb**并 **_mbctombb_l**返回对应的单字节字符*c*; 否则它将返回*c*.
 
 ## <a name="remarks"></a>备注
 
-**_Mbctombb**和 **_mbctombb_l**函数将给定的多字节字符转换为相应的单字节多字节字符。 要转换的 0xDF 字符必须对应于范围 0x20-0x7E 或 0xA1-内的单字节字符。
+**_Mbctombb**并 **_mbctombb_l**函数将给定的多字节字符转换为相应的单字节多字节字符。 字符必须对应于单字节字符中的范围 0x20-0x7E 或 0xA1-0xDF 转换。
 
-输出值受区域设置的 LC_CTYPE 类别设置影响；有关详细信息，请参阅 [setlocale](setlocale-wsetlocale.md)。 此函数而无需的版本 **_l**后缀使用当前区域设置区域设置相关的行为; 的版本与 **_l**后缀是相同，但它使用传递的区域设置参数在相反。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+输出值受区域设置的 LC_CTYPE 类别设置影响；有关详细信息，请参阅 [setlocale](setlocale-wsetlocale.md)。 无需此函数的版本 **_l**后缀的此区域设置相关的行为; 使用当前区域设置与版本 **_l**后缀是相同，但它使用传入的区域设置参数在相反。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
-在以前版本， **_mbctombb**调用**zentohan**。 使用 **_mbctombb**相反。
+在上一版本中， **_mbctombb**调用**zentohan**。 使用 **_mbctombb**相反。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_mbctombb**|\<mbstring.h>|
 |**_mbctombb_l**|\<mbstring.h>|

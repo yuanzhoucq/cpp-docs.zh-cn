@@ -1,27 +1,17 @@
 ---
-title: 编译器错误 C2272 |Microsoft Docs
-ms.custom: ''
+title: 编译器错误 C2272
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2272
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2272
 ms.assetid: 1517706a-9c27-452e-9b10-3424b3d232bc
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e17765ee0acbf20d76e631bf7fccfb3413c5dc1d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 1a5a1e47a721cb6edd795012cc45943e63708936
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46040305"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50537418"
 ---
 # <a name="compiler-error-c2272"></a>编译器错误 C2272
 

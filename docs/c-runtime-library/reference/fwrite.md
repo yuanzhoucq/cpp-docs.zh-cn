@@ -1,10 +1,6 @@
 ---
-title: fwrite | Microsoft 文档
-ms.custom: ''
+title: fwrite
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - fwrite
 apilocation:
@@ -22,22 +18,16 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - fwrite
-dev_langs:
-- C++
 helpviewer_keywords:
 - streams, writing data to
 - fwrite function
 ms.assetid: 7afacf3a-72d7-4a50-ba2e-bea1ab9f4124
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f1320bcc61830833f2b1a4a225dff30652df2d3a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b4d6b9ce4fb66ee545f52946e28e4984d9e4f924
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400575"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50506738"
 ---
 # <a name="fwrite"></a>fwrite
 
@@ -70,13 +60,13 @@ size_t fwrite(
 
 ## <a name="return-value"></a>返回值
 
-**fwrite**返回完整的数目实际写入的项，这可能会小于*计数*如果发生错误。 此外，如果发生错误，则无法确定文件位置指示器。 如果任一*流*或*缓冲区*是 null 指针，或如果在 Unicode 模式下指定了奇数个字节写入，则函数将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，此函数将**errno**到**EINVAL**并返回 0。
+**fwrite**返回完整的实际写入的项，这可能会少于*计数*如果发生错误。 此外，如果发生错误，则无法确定文件位置指示器。 如果任一*流*或*缓冲区*是 null 指针，或者如果在 Unicode 模式下指定要写入的字节数为奇数，则函数将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，此函数可设置**errno**到**EINVAL** ，并返回 0。
 
 ## <a name="remarks"></a>备注
 
-**Fwrite**函数最多写入*计数*项的*大小*长度每个，从*缓冲区*到输出*流*. 与关联的文件指针*流*（如果有） 就会递增的实际写入的字节数。 如果*流*打开在文本模式下，每个换行符替换为回车符-换行符对。 该替换不会影响返回值。
+**Fwrite**函数将最多写入*计数*项的*大小*长度，从*缓冲区*到输出*流*. 与关联的文件指针*流*实际写入的字节数递增 （如果有）。 如果*流*打开在文本模式下，每个换行符替换回车符-换行符对。 该替换不会影响返回值。
 
-当*流*在 Unicode 转换模式下打开 — 例如，如果*流*打开通过调用**fopen**和使用模式参数，其中包含**ccs= UNICODE**， **ccs = UTF 16LE**，或**ccs = utf-8**，或如果模式更改为 Unicode 转换模式使用 **_setmode**和模式参数，其中包含 **_O_WTEXT**， **_O_U16TEXT**，或 **_O_U8TEXT**-*缓冲区*解释为指向的指针数组**wchar_t**包含 utf-16 数据。 尝试在此模式下写入奇数个字节会导致参数验证错误。
+当*流*在 Unicode 转换模式下打开 — 例如，如果*流*打开通过调用**fopen**和使用模式参数，其中包含**ccs= UNICODE**， **ccs = UTF 16LE**，或**ccs = utf-8**，或如果将模式更改为 Unicode 转换模式使用 **_setmode**和模式参数包括 **_O_WTEXT**， **_O_U16TEXT**，或 **_O_U8TEXT**—*缓冲区*被解释为指向的指针数组**wchar_t** ，其中包含 utf-16 数据。 尝试在此模式下写入奇数个字节会导致参数验证错误。
 
 因为此函数会锁定调用线程，因此它是线程安全的。 有关非锁定版本，请参阅 **_fwrite_nolock**。
 

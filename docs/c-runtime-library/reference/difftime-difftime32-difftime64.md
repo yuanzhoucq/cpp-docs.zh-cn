@@ -1,10 +1,6 @@
 ---
-title: difftime、_difftime32、_difftime64 | Microsoft 文档
-ms.custom: ''
+title: difftime, _difftime32, _difftime64
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _difftime32
 - difftime
@@ -28,8 +24,6 @@ f1_keywords:
 - difftime64
 - _difftime32
 - difftime32
-dev_langs:
-- C++
 helpviewer_keywords:
 - _difftime32 function
 - difftime function
@@ -38,16 +32,12 @@ helpviewer_keywords:
 - _difftime64 function
 - difftime32 function
 ms.assetid: 4cc0ac2b-fc7b-42c0-8283-8c9d10c566d0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a972a8f7ee2cc5e97c22afeaa21f86e4b4d6d509
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: eefa946f0458f79950b443c0a84272866845df8d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398716"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50505945"
 ---
 # <a name="difftime-difftime32-difftime64"></a>difftime, _difftime32, _difftime64
 
@@ -75,17 +65,17 @@ double _difftime64( __time64_t timeEnd, __time64_t timeStart );
 
 ## <a name="remarks"></a>备注
 
-**Difftime**函数计算两个提供的时间值之间的差*timeStart*和*时间结束*。
+**Difftime**函数计算两个提供的时间值之间的差异*timeStart*并*时间结束*。
 
-提供的时间值的范围内必须能够容纳**time_t**。 **time_t**是 64 位值。 因此，范围的末尾已从 2038 年 1 月 18 日 23:59:59（UTC 时间）延至 3000 年 12 月 31 日 23:59:59。 范围的下限**time_t**仍为 1970 年 1 月 1 日午夜。
+提供的时间值必须在范围内的范围**time_t**。 **time_t**是 64 位值。 因此，范围的末尾已从 2038 年 1 月 18 日 23:59:59（UTC 时间）延至 3000 年 12 月 31 日 23:59:59。 范围的下限**time_t**仍为 1970 年 1 月 1 日午夜。
 
-**difftime**是内联函数计算结果为 **_difftime32**或 **_difftime64**具体取决于是否 **_USE_32BIT_TIME_T**定义。 _difftime32 和 _difftime64 可直接用于强制使用数据类型的特定大小。
+**difftime**是内联函数的计算结果为任一 **_difftime32**或 **_difftime64**具体取决于是否 **_USE_32BIT_TIME_T**定义。 _difftime32 和 _difftime64 可直接用于强制使用数据类型的特定大小。
 
-这些函数验证其参数。 如果参数为零或负值，则调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数将返回 0 并设置**errno**到**EINVAL**。
+这些函数验证其参数。 如果参数为零或负值，则调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，这些函数将返回 0 并设置**errno**到**EINVAL**。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**difftime**|\<time.h>|
 |**_difftime32**|\<time.h>|

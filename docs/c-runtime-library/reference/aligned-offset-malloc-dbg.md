@@ -1,10 +1,6 @@
 ---
-title: _aligned_offset_malloc_dbg | Microsoft 文档
-ms.custom: ''
+title: _aligned_offset_malloc_dbg
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _aligned_offset_malloc_dbg
 apilocation:
@@ -22,22 +18,16 @@ apitype: DLLExport
 f1_keywords:
 - _aligned_offset_malloc_dbg
 - aligned_offset_malloc_dbg
-dev_langs:
-- C++
 helpviewer_keywords:
 - _aligned_offset_malloc_dbg function
 - aligned_offset_malloc_dbg function
 ms.assetid: 6c242307-c59e-4d63-aae5-d8cbec8e021c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fd938b935ff5e69adf4d4e56cd70693cfd1a872d
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 481109a5ed7d137aa2d10c77955a2f460cba43c0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451506"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50507531"
 ---
 # <a name="alignedoffsetmallocdbg"></a>_aligned_offset_malloc_dbg
 
@@ -78,15 +68,15 @@ void * _aligned_offset_malloc_dbg(
 
 ## <a name="remarks"></a>备注
 
-**_aligned_offset_malloc_dbg**是的调试版本[_aligned_offset_malloc](aligned-offset-malloc.md)函数。 当[_DEBUG](../../c-runtime-library/debug.md)未定义，每次调用 **_aligned_offset_malloc_dbg**都会减少到对的调用 **_aligned_offset_malloc**。 同时 **_aligned_offset_malloc**和 **_aligned_offset_malloc_dbg**分配基堆中中的内存块，但 **_aligned_offset_malloc_dbg**提供多个调试功能： 用于测试泄漏，用于跟踪特定分配类型的块类型参数的块的用户部分两侧的缓冲区和*filename*/*linenumber*信息用于确定分配请求的源。
+**_aligned_offset_malloc_dbg**是调试版[_aligned_offset_malloc](aligned-offset-malloc.md)函数。 当[_DEBUG](../../c-runtime-library/debug.md)未定义，则每次调用 **_aligned_offset_malloc_dbg**缩减为调用 **_aligned_offset_malloc**。 这两 **_aligned_offset_malloc**并 **_aligned_offset_malloc_dbg**分配基堆中的内存块，但 **_aligned_offset_malloc_dbg**提供了多个调试功能： 用于测试泄漏，用于跟踪特定分配类型的块类型参数的块的用户部分两侧的缓冲区并*文件名*/*linenumber*的信息来确定分配请求的源。
 
 **_aligned_offset_malloc_dbg**分配稍多的空间比请求的内存块*大小*。 其他空间将由调试堆管理器用于链接调试内存块，以及提供具有调试标头信息的应用程序和覆盖缓冲区。 分配该块后，使用值 0xCD 填充该块的用户部分，使用值 0xFD 填充每个覆盖缓冲区。
 
-**_aligned_offset_malloc_dbg**在一个嵌套的元素; 需要对齐方式的位置的情况下有用的示例中，如果嵌套类上需要的对齐方式。
+**_aligned_offset_malloc_dbg**在一个嵌套的元素; 需要对齐方式的位置的情况下非常有用的示例中，如果嵌套类需要进行对齐的。
 
 **_aligned_offset_malloc_dbg**基于**malloc**; 有关详细信息，请参阅[malloc](malloc.md)。
 
-此函数将**errno**到**ENOMEM**如果内存分配失败或请求的大小大于 **_HEAP_MAXREQ**。 有关详细信息**errno**，请参阅[errno、 _doserrno、 _sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。 此外， **_aligned_offset_malloc**验证其参数。 如果*对齐*不是 2 的幂或如果*偏移量*大于或等于*大小*和非零值，此函数将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则此函数将返回**NULL**和设置**errno**到**EINVAL**。
+此函数将**errno**到**ENOMEM**如果内存分配失败或请求的大小是大于 **_HEAP_MAXREQ**。 有关详细信息**errno**，请参阅[errno、 _doserrno、 _sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。 此外， **_aligned_offset_malloc**验证其参数。 如果*对齐*不是 2 的幂或如果*偏移量*大于或等于*大小*且非零值，此函数调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，此函数返回**NULL** ，并设置**errno**到**EINVAL**。
 
 有关如何在基堆的调试版本中分配、初始化和管理内存块的信息，请参阅 [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details)。
 
@@ -94,7 +84,7 @@ void * _aligned_offset_malloc_dbg(
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_aligned_offset_malloc_dbg**|\<crtdbg.h>|
 

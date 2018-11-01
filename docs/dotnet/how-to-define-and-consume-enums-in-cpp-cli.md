@@ -1,26 +1,15 @@
 ---
-title: 如何： 定义和使用枚举在 C + + /cli CLI |Microsoft Docs
-ms.custom: ''
+title: 如何：在 C++/CLI 中定义和使用枚举
 ms.date: 11/04/2016
-ms.technology:
-- cpp-cli
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - enum class, specifying underlying types
 ms.assetid: df8f2b91-b9d2-4fab-9be4-b1d58b8bc570
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- dotnet
-ms.openlocfilehash: b1d7d7c98b7827f91102704e2fd3c1325a66d36b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6dc70da0e3888ffee11a6378da5ea82efe58112b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46431733"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50539654"
 ---
 # <a name="how-to-define-and-consume-enums-in-ccli"></a>如何：在 C++/CLI 中定义和使用枚举
 

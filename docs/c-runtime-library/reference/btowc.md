@@ -1,10 +1,6 @@
 ---
-title: btowc | Microsoft 文档
-ms.custom: ''
+title: btowc
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - btowc
 apilocation:
@@ -22,21 +18,15 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - btowc
-dev_langs:
-- C++
 helpviewer_keywords:
 - btowc function
 ms.assetid: 99a46e02-6f86-4569-af79-5feca012add8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4d0e56649218e6249550638af4e198cbd1284bc2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 399f56fe133a9f67ed457b435ae6c0496e1ecaa5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393311"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50514669"
 ---
 # <a name="btowc"></a>btowc
 
@@ -61,7 +51,7 @@ wint_t btowc(
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**btowc**|\<stdio.h> 或 \<wchar.h>|
 
