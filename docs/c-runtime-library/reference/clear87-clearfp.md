@@ -1,10 +1,6 @@
 ---
-title: _clear87、_clearfp | Microsoft 文档
-ms.custom: ''
+title: _clear87、_clearfp
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _clearfp
 - _clear87
@@ -26,8 +22,6 @@ f1_keywords:
 - _clearfp
 - _clear87
 - clear87
-dev_langs:
-- C++
 helpviewer_keywords:
 - clearing floating point status word
 - clearfp function
@@ -35,16 +29,12 @@ helpviewer_keywords:
 - _clearfp function
 - clear87 function
 ms.assetid: 72d24a70-7688-4793-ae09-c96d33fcca52
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 195bd9f78ed9edfa47ec9ebbd2babbee676e5644
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4148f85d82a4210033686455c73046081832e3c4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395612"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50477254"
 ---
 # <a name="clear87-clearfp"></a>_clear87、_clearfp
 
@@ -59,19 +49,19 @@ unsigned int _clearfp( void );
 
 ## <a name="return-value"></a>返回值
 
-返回的值中的位指示对的调用之前的浮点状态 **_clear87**或 **_clearfp**。 有关通过返回的位的完整定义 **_clear87**，请参阅 Float.h。 许多数学库函数修改了 8087/80287 状态字，结果不可预知。 返回值从 **_clear87**和 **_status87**就会根据浮点状态字的已知状态之间执行的更少的浮点运算越可靠。
+返回的值中的位表示调用之前的浮点状态 **_clear87**或 **_clearfp**。 有关通过返回的位的完整定义 **_clear87**，请参阅 Float.h。 许多数学库函数修改了 8087/80287 状态字，结果不可预知。 返回值从 **_clear87**并 **_status87**就会越浮点状态字的已知状态之间执行较少浮点运算越可靠。
 
 ## <a name="remarks"></a>备注
 
 **_Clear87**函数清除浮点状态字中的异常标记，将繁忙位设置为 0，并返回状态字。 浮点状态字是 8087/80287 状态字和通过 8087/80287 异常处理程序检测到的其他条件（如浮点堆栈上溢和下溢）组合而成。
 
-**_clearfp**是独立于平台的版本，并且可移植的 **_clear87**例程。 它等同于 **_clear87**在 Intel (x86) 平台和也受 x64 和 ARM 平台。 若要确保你的浮点代码可移植到 x64 和 ARM，使用 **_clearfp**。 如果你只面向 x86 平台，你可以使用 **_clear87**或 **_clearfp**。
+**_clearfp**是一个独立于平台的、 可移植的版本 **_clear87**例程。 它等同于 **_clear87** Intel (x86) 平台上和也受 x64 和 ARM 平台。 若要确保你的浮点代码可移植到 x64 和 ARM，使用 **_clearfp**。 如果你只面向 x86 平台，你可以使用 **_clear87**或 **_clearfp**。
 
-这些函数在编译时被弃用[/clr （公共语言运行时编译）](../../build/reference/clr-common-language-runtime-compilation.md)因为公共语言运行时仅支持默认的浮点精度。
+使用编译时，这些函数已弃用[/clr （公共语言运行时编译）](../../build/reference/clr-common-language-runtime-compilation.md)因为公共语言运行时仅支持默认浮点精度。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_clear87**|\<float.h>|
 |**_clearfp**|\<float.h>|

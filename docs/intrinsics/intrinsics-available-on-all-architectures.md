@@ -1,25 +1,15 @@
 ---
-title: 在所有体系结构上的可用内部函数 |Microsoft 文档
-ms.custom: ''
+title: 在所有体系结构上的可用内部函数
 ms.date: 04/11/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - cl.exe compiler, intrinsics
 ms.assetid: 1fe3958e-d2fe-4188-8e34-5896738246eb
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: dbe070c2bae69563d65344072a56003f808d1486
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0a1331f53cd8b44c8a7bfc903216cbdbaf5fec1f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340614"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50473276"
 ---
 # <a name="intrinsics-available-on-all-architectures"></a>在所有体系结构上的可用内部函数
 
