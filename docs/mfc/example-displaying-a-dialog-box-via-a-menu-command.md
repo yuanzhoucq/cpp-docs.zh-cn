@@ -1,12 +1,6 @@
 ---
-title: 示例： 显示一个对话框，通过菜单命令 |Microsoft Docs
-ms.custom: ''
+title: 示例：通过菜单命令显示对话框
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC dialog boxes [MFC], examples
 - MFC dialog boxes [MFC], displaying
@@ -16,16 +10,12 @@ helpviewer_keywords:
 - examples [MFC], dialog boxes
 - menu items [MFC], examples
 ms.assetid: e8692549-acd7-478f-9c5e-ba310ce8cccd
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a02bc21362c8f8acd71984f91d5528078d141eb4
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 830ba27945ce8da2abd52c7f29d786d098113151
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50060411"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50483481"
 ---
 # <a name="example-displaying-a-dialog-box-via-a-menu-command"></a>示例：通过菜单命令显示对话框
 

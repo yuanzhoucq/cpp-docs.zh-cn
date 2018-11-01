@@ -1,10 +1,6 @@
 ---
-title: _mbsnbcat_s、_mbsnbcat_s_l | Microsoft 文档
-ms.custom: ''
+title: _mbsnbcat_s、_mbsnbcat_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbsnbcat_s_l
 - _mbsnbcat_s
@@ -26,8 +22,6 @@ f1_keywords:
 - mbsnbcat_s
 - _mbsnbcat_s_l
 - mbsnbcat_s_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _tcsncat function
 - mbsnbcat_s function
@@ -38,20 +32,16 @@ helpviewer_keywords:
 - mbsnbcat_s_l function
 - tcsncat function
 ms.assetid: 2c9e9be7-d979-4a54-8ada-23428b6648a9
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cead47b21a066d7e55c22d6bc8fba63cb73a0224
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d7e7a9d121336486e590ca3bd9e3967b02a2df08
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405109"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50497326"
 ---
 # <a name="mbsnbcats-mbsnbcatsl"></a>_mbsnbcat_s、_mbsnbcat_s_l
 
-将追加到多字节字符字符串，最多，第一个**n**的另一个多字节字符字符串的字节。 这些版本的 [_mbsnbcat、_mbsnbcat_l](mbsnbcat-mbsnbcat-l.md) 具有安全增强功能，如 [CRT 中的安全功能](../../c-runtime-library/security-features-in-the-crt.md)中所述。
+将追加到多字节字符字符串，最多，第一个**n**的另一个多字节字符字符串的字节数。 这些版本的 [_mbsnbcat、_mbsnbcat_l](mbsnbcat-mbsnbcat-l.md) 具有安全增强功能，如 [CRT 中的安全功能](../../c-runtime-library/security-features-in-the-crt.md)中所述。
 
 > [!IMPORTANT]
 > 此 API 不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
@@ -99,7 +89,7 @@ errno_t _mbsnbcat_s_l(
 以 null 终止的多字节字符源字符串。
 
 *count*<br/>
-从的字节数*src*要追加到*dest*。
+中的字节数*src*要追加到*dest*。
 
 *locale*<br/>
 要使用的区域设置。
@@ -110,19 +100,19 @@ errno_t _mbsnbcat_s_l(
 
 ### <a name="error-conditions"></a>错误条件
 
-|**目标**|*sizeInBytes*|*src*|返回值|
+|**dest**|*sizeInBytes*|*src*|返回值|
 |------------|-------------------|-----------|------------------|
 |**NULL**|任何|任何|**EINVAL**|
 |任意|<= 0|任何|**EINVAL**|
 |任意|任何|**NULL**|**EINVAL**|
 
-如果出现任何一个错误状态，该函数生成无效参数错误，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果处理了错误，则该函数将返回**EINVAL**和设置**errno**到**EINVAL**。
+如果出现任何一个错误状态，该函数生成无效参数错误，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果处理错误，则该函数将返回**EINVAL** ，并设置**errno**到**EINVAL**。
 
 ## <a name="remarks"></a>备注
 
-**_Mbsnbcat_s**函数将追加到*dest*，最多，第一个*计数*字节的*src*。如果字节紧跟在 null 字符*dest*是前导字节，则将覆盖它的初始字节通过*src*。否则为的初始字节*src*覆盖的终止 null 字符*dest*。 如果 null 字节出现在*src*之前*计数*字节追加， **_mbsnbcat_s**追加从所有字节*src*，最多 null字符。 如果*计数*大于的长度*src*的长度*src*代替使用*计数*。 生成的字符串由 null 字符终止。 如果复制出现在重叠的字符串之间，则该行为不确定。
+**_Mbsnbcat_s**函数将追加到*dest*，最多，第一个*计数*字节*src*。如果字节紧跟在 null 字符*dest*是前导字节，它会覆盖的初始字节*src*。否则为的初始字节*src*覆盖的终止 null 字符*dest*。 如果 null 字节出现在*src*之前*计数*字节追加 **_mbsnbcat_s**追加从所有字节*src*，最多为 null字符。 如果*计数*大于的长度*src*，时长*src*用来代替*计数*。 生成的字符串由 null 字符终止。 如果复制出现在重叠的字符串之间，则该行为不确定。
 
-输出值受的设置**LC_CTYPE**的区域设置的类别设置影响; 请参阅[setlocale、 _wsetlocale](setlocale-wsetlocale.md)有关详细信息。 这些函数的版本是相同的只不过不是具有 **_l**后缀使用当前区域设置的以及是否有 **_l**后缀改为使用的区域设置参数的在中传递。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+输出值受的设置**LC_CTYPE**的区域设置的类别设置影响; 请参阅[setlocale、 _wsetlocale](setlocale-wsetlocale.md)有关详细信息。 这些函数的版本是相同的不同之处在于不具有 **_l**后缀使用当前区域设置以及是否有那些 **_l**后缀改为使用区域设置参数的传入。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
 在 C++ 中，使用这些函数由模板重载简化；重载可以自动推导出缓冲区长度，从而不再需要指定大小自变量，并且它们可以自动使用更新、更安全的函数替换较旧、不安全的函数。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 
@@ -137,7 +127,7 @@ errno_t _mbsnbcat_s_l(
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_mbsnbcat_s**|\<mbstring.h>|
 |**_mbsnbcat_s_l**|\<mbstring.h>|

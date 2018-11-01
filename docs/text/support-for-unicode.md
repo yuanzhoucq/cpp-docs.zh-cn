@@ -1,12 +1,6 @@
 ---
-title: 有关 Unicode 的支持 |Microsoft Docs
-ms.custom: ''
+title: 支持 Unicode
 ms.date: 1/09/2018
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - globalization [C++], character sets
 - portable data types [MFC]
@@ -15,16 +9,12 @@ helpviewer_keywords:
 - character sets [C++], Unicode
 - localization [C++], character sets
 - Unicode [C++], installing support
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a4ed04c30eb71086f57cc9a782c320c06a301485
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: fea49bff2a4563b8617e19636e27afbae1c55811
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46405029"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50501681"
 ---
 # <a name="support-for-unicode"></a>支持 Unicode
 
@@ -42,7 +32,7 @@ MFC 框架完全支持 Unicode，MFC 通过使用可移植的宏来实现对 Uni
 
 |不可移植的数据类型|替换为此宏|
 |-----------------------------|----------------------------|
-|`char`, `wchar_t`|`_TCHAR`|
+|`char`， `wchar_t`|`_TCHAR`|
 |`char*``LPSTR` （Win32 数据类型） `LPWSTR`|`LPTSTR`|
 |`const char*``LPCSTR` （Win32 数据类型） `LPCWSTR`|`LPCTSTR`|
 

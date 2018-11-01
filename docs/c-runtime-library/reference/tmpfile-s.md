@@ -1,10 +1,6 @@
 ---
-title: tmpfile_s | Microsoft 文档
-ms.custom: ''
+title: tmpfile_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - tmpfile_s
 apilocation:
@@ -22,23 +18,17 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - tmpfile_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - temporary files
 - tmpfile_s function
 - temporary files, creating
 ms.assetid: 50879c69-215e-425a-a2a3-8b5467121eae
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1cd7866a7135f04aa580910d5ac121311312c542
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 341e1c8ed6dd20ec7e6a3d71999fb365e45e614a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412145"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50488109"
 ---
 # <a name="tmpfiles"></a>tmpfile_s
 
@@ -71,15 +61,15 @@ errno_t tmpfile_s(
 
 ## <a name="remarks"></a>备注
 
-**Tmpfile_s**函数创建的临时文件，并将指针放到该流中*pFilePtr*自变量。 在根目录中创建了临时文件。 若要在目录（而非根）中创建临时文件，请将 [tmpnam_s](tmpnam-s-wtmpnam-s.md) 或 [tempnam](tempnam-wtempnam-tmpnam-wtmpnam.md) 与 [fopen](fopen-wfopen.md) 结合使用。
+**Tmpfile_s**函数创建临时文件，并将指针放在该流*pFilePtr*参数。 在根目录中创建了临时文件。 若要在目录（而非根）中创建临时文件，请将 [tmpnam_s](tmpnam-s-wtmpnam-s.md) 或 [tempnam](tempnam-wtempnam-tmpnam-wtmpnam.md) 与 [fopen](fopen-wfopen.md) 结合使用。
 
-如果无法打开该文件， **tmpfile_s**写入**NULL**到*pFilePtr*参数。 时关闭该文件，则程序终止通常情况下，或当时，将自动删除此临时文件 **_rmtmp**称为，前提是当前工作目录不会更改。 在打开临时文件**w + b** （二进制读/写） 模式。
+如果无法打开该文件， **tmpfile_s**写入**NULL**到*pFilePtr*参数。 通常情况下，或当终止时关闭该文件时，会自动删除此临时文件 **_rmtmp**调用，假定当前工作目录不会更改。 在打开临时文件时**w + b** （二进制读/写） 模式。
 
-如果你尝试，则可能发生失败多个**TMP_MAX_S** （请参阅 STDIO。H） 使用调用**tmpfile_s**。
+如果你尝试，则会发生故障超过**TMP_MAX_S** （请参阅 STDIO。使用 H） 调用**tmpfile_s**。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**tmpfile_s**|\<stdio.h>|
 
@@ -88,7 +78,7 @@ errno_t tmpfile_s(
 ## <a name="example"></a>示例
 
 > [!NOTE]
-> 此示例可能需要管理特权才能在 Windows 上运行。
+> 此示例中可能需要管理权限才能在 Windows 上运行。
 
 ```C
 // crt_tmpfile_s.c

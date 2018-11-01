@@ -1,10 +1,6 @@
 ---
-title: _execlpe、_wexeclpe | Microsoft 文档
-ms.custom: ''
+title: _execlpe，_wexeclpe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _execlpe
 - _wexeclpe
@@ -26,24 +22,18 @@ f1_keywords:
 - execlpe
 - wexeclpe
 - _execlpe
-dev_langs:
-- C++
 helpviewer_keywords:
 - wexeclpe function
 - _wexeclpe function
 - _execlpe function
 - execlpe function
 ms.assetid: 07b861da-3e7e-4f1d-bb80-ad69b55e5162
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6b0dd88ce15b3a74c491ae751d4f32196e914d09
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e3aa4189d2a384a0092c742909e97c5efc52b5ff
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402171"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50506839"
 ---
 # <a name="execlpe-wexeclpe"></a>_execlpe，_wexeclpe
 
@@ -102,7 +92,7 @@ intptr_t _wexeclpe(
 
 这些函数将加载并执行一个新进程，并将每个命令行自变量作为独立的参数传递，还将传递指向环境设置的指针的数组。 这些函数将使用**路径**环境变量查找要执行的文件。
 
-**_Execlpe**函数验证其参数。 如果任一*cmdname*或*arg0*为 null 指针或空字符串，这些函数将调用无效参数处理程序中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则这些函数将设置**errno**到**EINVAL**并返回-1。 将不启动新进程。
+**_Execlpe**函数验证其参数。 如果任一*cmdname*或*arg0*为 null 指针或空字符串，这些函数将调用无效参数处理程序中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许继续执行，这些函数将设置**errno**到**EINVAL**并返回-1。 将不启动新进程。
 
 ## <a name="requirements"></a>要求
 

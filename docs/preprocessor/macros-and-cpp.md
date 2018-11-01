@@ -1,26 +1,16 @@
 ---
-title: 宏和 c + + |Microsoft Docs
-ms.custom: ''
+title: 宏和 C++
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - macros, C++
 - macros
 ms.assetid: 83a344c1-73c9-4ace-8b93-cccfb62c6133
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 61984597d01f900faafd44352db76b2b41019809
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: cd5d1237bc025cceb25cc290509b929b595a215f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50083459"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50499887"
 ---
 # <a name="macros-and-c"></a>宏和 C++
 C++ 提供新功能，其中一些取代了 ANSI C 预处理器提供的功能。 这些新功能可增强语言的类型安全性和可预见性：
