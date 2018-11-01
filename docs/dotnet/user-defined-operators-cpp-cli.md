@@ -1,26 +1,15 @@
 ---
-title: 用户定义的运算符 (C + + CLI) |Microsoft Docs
-ms.custom: ''
+title: 用户定义的运算符 (C++/CLI)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-cli
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - user-defined operators under /clr
 ms.assetid: 42f93b4a-6de4-4e34-b07b-5a62ac014f2c
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- dotnet
-ms.openlocfilehash: 7f337051a2a4dab4a323e05d88a530d8f08f0e77
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 17f2f05ba6a8854a69fd2dd449a94d6b86a66d7b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46438439"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50480010"
 ---
 # <a name="user-defined-operators-ccli"></a>用户定义的运算符 (C++/CLI)
 
