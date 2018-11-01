@@ -1,10 +1,6 @@
 ---
-title: _configthreadlocale | Microsoft 文档
-ms.custom: ''
+title: _configthreadlocale
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _configthreadlocale
 apilocation:
@@ -23,8 +19,6 @@ apitype: DLLExport
 f1_keywords:
 - _configthreadlocale
 - configthreadlocale
-dev_langs:
-- C++
 helpviewer_keywords:
 - configthreadlocale function
 - locales, per-thread
@@ -32,16 +26,12 @@ helpviewer_keywords:
 - per-thread locale
 - thread locale
 ms.assetid: 10e4050e-b587-4f30-80bc-6c76b35fc770
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7531a5849bc1e86d469a12747b5c4648b76c9117
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 244ef9ce93e39bef23a9d5d6792a10ca25355f5a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395772"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50648378"
 ---
 # <a name="configthreadlocale"></a>_configthreadlocale
 
@@ -64,23 +54,23 @@ int _configthreadlocale( int per_thread_locale_type );
 
 ## <a name="remarks"></a>备注
 
-**_Configurethreadlocale**函数用于控制使用的特定于线程的区域设置。 使用以下方法之一*per_thread_locale_type*选项指定或确定每个线程区域设置状态：
+**_Configurethreadlocale**函数用于控制特定于线程的区域设置的使用。 使用其中一种*per_thread_locale_type*选项可以指定或确定每个线程区域设置状态：
 
 |||
 |-|-|
-**_ENABLE_PER_THREAD_LOCALE**|使当前线程使用特定于线程的区域设置。 后续调用**setlocale**此线程中会影响的线程的区域设置。
-**_DISABLE_PER_THREAD_LOCALE**|使当前线程使用全局区域设置。 后续调用**setlocale**此线程中会影响其他使用全局区域设置的线程。
+**_ENABLE_PER_THREAD_LOCALE**|使当前线程使用特定于线程的区域设置。 对后续调用**setlocale**此线程中影响的线程的区域设置。
+**_DISABLE_PER_THREAD_LOCALE**|使当前线程使用全局区域设置。 对后续调用**setlocale**此线程中会影响其他线程使用全局区域设置。
 **0**|检索此特定线程的当前设置。
 
-这些函数会影响的行为**setlocale**， **_tsetlocale**， **_wsetlocale**，和 **_setmbcp**。 每个线程区域设置时已禁用，因为在任何后续调用**setlocale**或 **_wsetlocale**更改使用全局区域设置的所有线程的区域设置。 启用每个线程区域设置后， **setlocale**或 **_wsetlocale**仅影响当前线程的区域设置。
+这些函数将影响的行为**setlocale**， **_tsetlocale**， **_wsetlocale**，以及 **_setmbcp**。 当每个线程区域设置是已禁用，任何后续调用**setlocale**或 **_wsetlocale**更改使用的全局区域设置的所有线程的区域设置。 启用每个线程区域设置后， **setlocale**或 **_wsetlocale**仅影响当前线程的区域设置。
 
-如果你使用 **_configurethreadlocale**若要启用每个线程区域设置，我们建议调用**setlocale**或 **_wsetlocale**在该线程中设置的首选区域设置此后立即。
+如果您使用 **_configurethreadlocale**若要启用的每个线程区域设置，我们建议您调用**setlocale**或 **_wsetlocale**该线程中设置的首选区域设置立即。
 
-如果*per_thread_locale_type*不是一个值表中列出，此函数调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，此函数将**errno**到**EINVAL**并返回-1。
+如果*per_thread_locale_type*不是值中的一个表中列出，此函数调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，此函数可设置**errno**到**EINVAL**并返回-1。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_configthreadlocale**|\<locale.h>|
 
