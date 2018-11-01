@@ -1,25 +1,15 @@
 ---
-title: Naked 函数的规则和限制 |Microsoft Docs
-ms.custom: ''
+title: 裸函数的规则和限制
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - naked functions [C++]
 ms.assetid: ff203858-2dd3-4a76-8a57-d0d06817adef
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 944945c8a5660ef65621e022130a63a02b46761a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: c813b97b85469165aae892b0a4cce888112e3dc5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46020467"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50605148"
 ---
 # <a name="rules-and-limitations-for-naked-functions"></a>裸函数的规则和限制
 

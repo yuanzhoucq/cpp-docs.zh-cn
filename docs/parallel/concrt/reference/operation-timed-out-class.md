@@ -1,29 +1,19 @@
 ---
-title: operation_timed_out 类 |Microsoft Docs
-ms.custom: ''
+title: operation_timed_out 类
 ms.date: 11/04/2016
-ms.technology:
-- cpp-concrt
-ms.topic: reference
 f1_keywords:
 - operation_timed_out
 - CONCRT/concurrency::operation_timed_out
 - CONCRT/concurrency::operation_timed_out::operation_timed_out
-dev_langs:
-- C++
 helpviewer_keywords:
 - operation_timed_out class
 ms.assetid: 963efe1d-a6e0-477c-9a70-d93d8412c897
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c2f81df9289824782ba241d9ddb16caaef08ff02
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8b25a35ac359fe052f9ae3c1cb15363acfbe93e5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46373969"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50561169"
 ---
 # <a name="operationtimedout-class"></a>operation_timed_out 类
 

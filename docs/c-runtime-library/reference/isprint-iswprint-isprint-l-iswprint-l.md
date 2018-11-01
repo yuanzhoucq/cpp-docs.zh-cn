@@ -1,10 +1,6 @@
 ---
-title: isprint、iswprint、_isprint_l、_iswprint_l | Microsoft 文档
-ms.custom: ''
+title: isprint、iswprint、_isprint_l、_iswprint_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - iswprint
 - isprint
@@ -27,8 +23,6 @@ f1_keywords:
 - iswprint
 - _istprint
 - isprint
-dev_langs:
-- C++
 helpviewer_keywords:
 - _istprint function
 - iswprint function
@@ -39,16 +33,12 @@ helpviewer_keywords:
 - iswprint_l function
 - _isprint_l function
 ms.assetid: a8bbcdb0-e8d0-4d8c-ae4e-56d3bdee6ca3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: af7cd775c22d4d34d7a6512938a0f612c3708940
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 826bc825824054a5a6716f8074690f18a2c3f016
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401511"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50556398"
 ---
 # <a name="isprint-iswprint-isprintl-iswprintl"></a>isprint、iswprint、_isprint_l、_iswprint_l
 
@@ -83,11 +73,11 @@ int _iswprint_l(
 
 ## <a name="return-value"></a>返回值
 
-每个这些例程返回非零如果*c*是可打印字符的特定表示。 **isprint**返回非零值，如果*c*是可打印字符-这包括空格字符 (0x20-0x7E)。 **iswprint**返回非零值，如果*c*是可打印的宽字符-这包括宽字符的空间。 这些例程都返回 0 如果*c*不满足测试条件。
+这些例程返回非零值如果*c*是可打印字符的特定表示形式。 **isprint**返回非零值，如果*c*是可打印字符，其中包括空格字符 (0x20-0x7E)。 **iswprint**返回非零值，如果*c*是可打印宽字符，这包括空格宽字符。 每个例程将返回 0，如果*c*不满足测试条件。
 
-这些函数的测试条件的结果取决于**LC_CTYPE**的区域设置的类别设置影响; 请参阅[setlocale、 _wsetlocale](setlocale-wsetlocale.md)有关详细信息。 不具有这些函数的版本 **_l**后缀使用当前区域设置为任何区域设置相关的行为; 的版本没有 **_l**后缀是相同，只不过它们使用改用已传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+这些函数的测试条件的结果取决于**LC_CTYPE**的区域设置的类别设置影响; 请参阅[setlocale、 _wsetlocale](setlocale-wsetlocale.md)有关详细信息。 不具有这些函数的版本 **_l**后缀，请使用当前区域设置的任何依赖于区域设置的行为; 具有的版本 **_l**后缀完全相同，只不过它们使用改用已传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
-行为**isprint**和 **_isprint_l**如果是未定义*c*不是 EOF 或在 0 到 0xFF，非独占的范围。 使用 CRT 调试库时和*c*是不是一种这些值，函数引发的断言。
+行为**isprint**并 **_isprint_l**未定义当*c*不是 EOF 或在范围 0 到 0xff 内，非独占。 使用调试 CRT 库时， *c*是不包含其中一个值，函数将引发断言。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -97,7 +87,7 @@ int _iswprint_l(
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**isprint**|\<ctype.h>|
 |**iswprint**|\<ctype.h 1> 或 \<wchar.h 1>|

@@ -1,10 +1,6 @@
 ---
-title: atol、_atol_l、_wtol、_wtol_l | Microsoft 文档
-ms.custom: ''
+title: ato，_atol_l，_wtol，_wtol_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - atol
 - _wtol_l
@@ -31,8 +27,6 @@ f1_keywords:
 - _wtol
 - _ttol
 - _wtol_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - tstol function
 - atol function
@@ -49,16 +43,12 @@ helpviewer_keywords:
 - wtol function
 - _wtol function
 ms.assetid: cedfc21c-2d64-4e9c-bd04-bdf60b12db46
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: deb23d856fc0ec5aecfdb726256394d5135a18d4
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 486b6dc3bdfbbaf4b7becadde76768a0bb1c7c00
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34450701"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50537184"
 ---
 # <a name="atol-atoll-wtol-wtoll"></a>ato，_atol_l，_wtol，_wtol_l
 
@@ -93,9 +83,9 @@ long _wtol_l(
 
 ## <a name="return-value"></a>返回值
 
-每个函数返回**长**值生成的输入的字符解释为数字。 返回值是 0 L 为**atol**如果输入不能转换为该类型的值。
+每个函数返回**长**产生的输入的字符解释为数字值。 返回值为 0l **atol**如果输入不能转换为该类型的值。
 
-对于大量正整数值，与溢出**atol**返回**LONG_MAX**; 对于大量负的整数值的溢出**LONG_MIN**是返回。 在所有范围外的情况下， **errno**设置为**ERANGE**。 如果传递的参数是**NULL**，则调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则这些函数将设置**errno**到**EINVAL**并返回 0。
+对于大量正整数值，溢出**atol**返回**LONG_MAX**; 对于大量负整数值的溢出**LONG_MIN**是返回。 在所有超出范围情况下， **errno**设置为**ERANGE**。 如果传入的参数是**NULL**，将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许继续执行，这些函数将设置**errno**到**EINVAL** ，返回 0。
 
 ## <a name="remarks"></a>备注
 
@@ -103,15 +93,15 @@ long _wtol_l(
 
 输入字符串是一系列字符，可以解释为指定类型的数值。 该函数在首个它无法无法识别为数字一部分的字符处停止读取输入字符串。 此字符可能是终止字符串的空字符（'\0' 或 L'\0'）。
 
-*Str*参数**atol**具有以下形式：
+*Str*自变量**atol**具有以下形式：
 
-> [*空白*] [*登录*] [*数字*]]
+> [*空格*] [*登录*] [*数字*]]
 
-A*空白*空格或制表符字符，将被忽略; 组成*登录*是加号 （+） 或减号 （-）; 和*数字*是一个或多个数字。
+一个*空格*包含的空格或制表符字符，将被忽略;*符号*可以是加号 （+） 或减号 （–）; 并且*数字*是一个或多个数字。
 
-**_wtol**等同于**atol** ，但前者将宽字符字符串。
+**_wtol**等同于**atol** ，只不过它采用一个宽字符字符串。
 
-使用这些函数的版本 **_l**后缀是相同，只不过它们使用传递而不是当前区域设置的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+使用这些函数的版本 **_l**后缀完全相同，只不过它们使用传递中而不是当前区域设置的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 

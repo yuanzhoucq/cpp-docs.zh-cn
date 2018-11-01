@@ -1,10 +1,6 @@
 ---
-title: _spawnl、_wspawnl | Microsoft 文档
-ms.custom: ''
+title: _spawnl、_wspawnl
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wspawnl
 - _spawnl
@@ -26,8 +22,6 @@ f1_keywords:
 - wspawnl
 - _wspawnl
 - _spawnl
-dev_langs:
-- C++
 helpviewer_keywords:
 - spawnl function
 - processes, creating
@@ -37,16 +31,12 @@ helpviewer_keywords:
 - wspawnl function
 - process creation
 ms.assetid: dd4584c9-7173-4fc5-b93a-6e7d3c2316d7
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: dcd276e59edd78942f14211845c615d7e4f7eb6d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4dbc8fab611d98f7f87529196b0e10e85196faa9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32410715"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50518074"
 ---
 # <a name="spawnl-wspawnl"></a>_spawnl、_wspawnl
 
@@ -85,11 +75,11 @@ intptr_t _wspawnl(
 要执行的文件的路径。
 
 *arg0*， *arg1*，...*argn*<br/>
-指向参数的指针的列表。 *Arg0*自变量通常是一个指向*cmdname*。 自变量*arg1*通过*argn*是指向构成新参数列表的字符字符串的指针。 以下*argn*，必须有**NULL**指针，用以标记自变量列表的末尾。
+指向参数的指针的列表。 *Arg0*参数通常是一个指向*cmdname*。 自变量*arg1*通过*argn*是指向构成新参数列表的字符串。 遵循*argn*，必须有**NULL**指针，用以标记参数列表的末尾。
 
 ## <a name="return-value"></a>返回值
 
-返回值从同步 **_spawnl**或 **_wspawnl** (**_P_WAIT**指定的*模式*) 是新进程的退出状态。 返回值从异步 **_spawnl**或 **_wspawnl** (**_P_NOWAIT**或 **_P_NOWAITO**指定的*模式*) 是进程句柄。 如果进程正常终止，则退出状态为 0。 则可以将退出状态设置为非零值，如果生成的进程专门调用**退出**例程具有非零参数。 如果更新过程没有显式设置正退出状态，则正退出状态指示因中止或中断而异常退出。 返回值-1 指示的错误 （不启动新过程）。 在这种情况下， **errno**设置为以下值之一。
+从同步的返回值 **_spawnl**或 **_wspawnl** (**_P_WAIT**指定为*模式*) 是新进程的退出状态。 异步的返回值 **_spawnl**或 **_wspawnl** (**_P_NOWAIT**或者 **_P_NOWAITO**指定为*模式*) 是进程句柄。 如果进程正常终止，则退出状态为 0。 如果生成的进程专门调用时将退出状态设置为非零值**退出**例程具有非零参数。 如果更新过程没有显式设置正退出状态，则正退出状态指示因中止或中断而异常退出。 返回值-1 指示的错误 （未启动新进程）。 在这种情况下， **errno**设置为以下值之一。
 
 |||
 |-|-|
@@ -101,7 +91,7 @@ intptr_t _wspawnl(
 
 有关这些属性和其他的更多信息返回代码示例，请参见 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
-这些函数验证其参数。 如果任一*cmdname*或*arg0*为空字符串或 null 指针，无效参数处理程序调用中所述，[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则这些函数将设置**errno**到**EINVAL**，并返回-1。 不生成任何新进程。
+这些函数验证其参数。 如果任一*cmdname*或*arg0*是一个空字符串或 null 指针，无效参数处理程序调用，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许继续执行，这些函数将设置**errno**到**EINVAL**，并返回-1。 不生成任何新进程。
 
 ## <a name="remarks"></a>备注
 
@@ -109,7 +99,7 @@ intptr_t _wspawnl(
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_spawnl**|\<process.h>|
 |**_wspawnl**|\<stdio.h> 或 \<wchar.h>|

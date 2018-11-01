@@ -1,10 +1,6 @@
 ---
-title: _cputs、_cputws | Microsoft 文档
-ms.custom: ''
+title: _cputs、_cputws
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _cputws
 - _cputs
@@ -25,8 +21,6 @@ f1_keywords:
 - cputws
 - _cputs
 - _cputws
-dev_langs:
-- C++
 helpviewer_keywords:
 - strings [C++], writing
 - _cputs function
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - console, sending strings to
 - cputws function
 ms.assetid: ec418484-0f8d-43ec-8d8b-198a556c659e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3c192adccb6fe0e0cee66f03b5d85d89fc2e446a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 81d2364cd1fc409ca3267bc416bd3cbd16c62a15
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399759"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50601170"
 ---
 # <a name="cputs-cputws"></a>_cputs、_cputws
 
@@ -76,9 +66,9 @@ int _cputws(
 
 ## <a name="remarks"></a>备注
 
-**_Cputs**函数会通过指向以 null 结尾的字符串写入*str*直接到控制台。 回车换行符 (CR-LF) 组合不会自动追加到字符串。
+**_Cputs**函数将所指向的以 null 结尾的字符串写入*str*直接到控制台。 回车换行符 (CR-LF) 组合不会自动追加到字符串。
 
-此函数验证其参数。 如果*str*是**NULL**，则调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则**errno**设置为**EINVAL**并返回-1。
+此函数验证其参数。 如果*str*是**NULL**，将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则**errno**设置为**EINVAL**并返回-1。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -88,7 +78,7 @@ int _cputws(
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|可选标头|
+|例程所返回的值|必需的标头|可选标头|
 |-------------|---------------------|---------------------|
 |**_cputs**|\<conio.h>|\<errno.h>|
 |**_cputws**|\<conio.h>|\<errno.h>|

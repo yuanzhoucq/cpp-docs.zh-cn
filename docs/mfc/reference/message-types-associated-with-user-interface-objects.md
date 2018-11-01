@@ -1,27 +1,17 @@
 ---
-title: 消息与用户界面对象关联的类型 |Microsoft Docs
-ms.custom: ''
+title: 与用户界面对象关联的消息类型
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - vc.codewiz.uiobject.msgs
-dev_langs:
-- C++
 helpviewer_keywords:
 - message types and user interface objects [MFC]
 ms.assetid: 681ee1a7-f6e6-4ea0-9fc6-1fb53a35516e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bd89f19547eef8ade9d23a6176ea74cb49586857
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 42584a6514a48e7c02d98e1b619c06a11a8f277b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48860285"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50641683"
 ---
 # <a name="message-types-associated-with-user-interface-objects"></a>与用户界面对象关联的消息类型
 

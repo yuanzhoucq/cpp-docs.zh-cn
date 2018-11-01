@@ -1,28 +1,18 @@
 ---
-title: -CLRSUPPORTLASTERROR （保留最后一个错误代码为 PInvoke 调用） |Microsoft Docs
-ms.custom: ''
+title: /CLRSUPPORTLASTERROR（为 PInvoke 调用保留上次的错误代码）
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /CLRSUPPORTLASTERROR
-dev_langs:
-- C++
 helpviewer_keywords:
 - /CLRSUPPORTLASTERROR linker option
 - -CLRSUPPORTLASTERROR linker option
 ms.assetid: b7057990-4154-4b1d-9fc9-6236f7be7575
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a80adfe34677c15a36af96ac412b7934747e68bc
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: e813966367b4349a95c174c59340204592b81b74
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45707442"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50660901"
 ---
 # <a name="clrsupportlasterror-preserve-last-error-code-for-pinvoke-calls"></a>/CLRSUPPORTLASTERROR（为 PInvoke 调用保留上次的错误代码）
 

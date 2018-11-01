@@ -1,12 +1,6 @@
 ---
-title: 应用程序域和 Visual c + + |Microsoft 文档
-ms.custom: ''
+title: 应用程序域和 Visual C++
 ms.date: 11/04/2016
-ms.technology:
-- cpp-cli
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - interop [C++], application domains
 - application domains [C++], C++
@@ -14,21 +8,16 @@ helpviewer_keywords:
 - interoperability [C++], application domains
 - mixed assemblies [C++], application domains
 ms.assetid: 75a08efc-9b02-40ba-99b7-dcbd71010bbf
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- dotnet
-ms.openlocfilehash: b935b9a5d1561fa1c8b961ee48b92f59b98e2bd2
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 2296654e6935bc40f301226b184cf34f77cb126d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704329"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50539264"
 ---
 # <a name="application-domains-and-visual-c"></a>应用程序域和 Visual c + +
 
-如果你有`__clrcall`虚拟函数，每个应用程序域 (appdomain) 将是 vtable。 如果在一个 appdomain 中创建的对象，只能调用在该 appdomain 中的虚拟函数。 在混合模式下 (**/clr**) 如果你的类型未包含任何将具有每个进程 vtable`__clrcall`虚函数。 **/Clr: pure**和 **/clr: safe**编译器选项是在 Visual Studio 2015 中已过时，在 Visual Studio 2017 中不支持。
+如果您有`__clrcall`虚函数，vtable 将为每个应用程序域 (appdomain)。 如果在一个 appdomain 中创建一个对象，只能调用从该 appdomain 中的虚拟函数。 在混合模式下 (**/clr**) 如果您的类型不具有将具有每个进程 vtable`__clrcall`虚函数。 **/Clr: pure**并 **/clr: safe**编译器选项在 Visual Studio 2015 中弃用，在 Visual Studio 2017 中不受支持。
 
 有关详细信息，请参见:
 

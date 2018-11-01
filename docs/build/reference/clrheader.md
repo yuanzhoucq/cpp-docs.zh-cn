@@ -1,29 +1,19 @@
 ---
-title: -CLRHEADER | Microsoft Docs
-ms.custom: ''
+title: /CLRHEADER
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /CLRHEADER
-dev_langs:
-- C++
 helpviewer_keywords:
 - -CLRHEADER dumpbin option
 - /CLRHEADER dumpbin option
 - CLRHEADER dumpbin option
 ms.assetid: cf73424f-4541-47e2-b94e-69b95266ef2a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f6cda2f03e8a0473d2c45f54c96ca97b043d80d5
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 864ecc0063716ce712e28b063714ce7c17fc294a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704436"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50627365"
 ---
 # <a name="clrheader"></a>/CLRHEADER
 
@@ -31,7 +21,7 @@ ms.locfileid: "34704436"
 
 ## <a name="syntax"></a>语法
 
-> / CLRHEADER*文件*
+> /CLRHEADER*文件*
 
 ### <a name="arguments"></a>自变量
 
@@ -41,17 +31,17 @@ ms.locfileid: "34704436"
 
 ## <a name="remarks"></a>备注
 
-**/ CLRHEADER**显示有关在任何托管程序中使用的.NET 标头信息。 该输出显示的位置和大小，以字节为单位，.NET 标头和标头中的部分。
+**/CLRHEADER**显示在任何托管程序中使用的.NET 标头有关的信息。 该输出显示的位置和大小，以字节为单位，.NET 标头和标头中的部分。
 
-仅[/HEADERS](../../build/reference/headers.md) DUMPBIN 选项是可供产生的文件的使用[/GL](../../build/reference/gl-whole-program-optimization.md)编译器选项。
+仅[/HEADERS](../../build/reference/headers.md) DUMPBIN 选项仅适用于使用产生的文件[/GL](../../build/reference/gl-whole-program-optimization.md)编译器选项。
 
-当 **/CLRHEADER**使用对使用 /clr 编译的文件，将有**clr 标头：** dumpbin 输出中的部分。 值**标志**指示使用哪个 /clr 选项：
+当 **/CLRHEADER**使用在使用 /clr 编译的文件上, 将存在**clr 标头：** dumpbin 输出中的部分。 值**标志**指示使用了哪个 /clr 选项：
 
 - 0-/clr （映像可能包含本机代码）。
 
-以编程方式还可以检查是否为公共语言运行时生成映像。  有关详细信息，请参阅[如何： 确定映像是否本机或 CLR](../../dotnet/how-to-determine-if-an-image-is-native-or-clr.md)。
+以编程方式还可以检查是否为公共语言运行时生成映像。  有关详细信息，请参阅[如何： 确定映像是本机模式或 CLR](../../dotnet/how-to-determine-if-an-image-is-native-or-clr.md)。
 
-**/Clr: pure**和 **/clr: safe**编译器选项是在 Visual Studio 2015 中已过时，在 Visual Studio 2017 中不支持。 必须为"纯"或"安全"的代码应移植到 C#。
+**/Clr: pure**并 **/clr: safe**编译器选项在 Visual Studio 2015 中弃用，在 Visual Studio 2017 中不受支持。 必须为"纯"或"安全"的代码应移植到C#。
 
 ## <a name="see-also"></a>请参阅
 

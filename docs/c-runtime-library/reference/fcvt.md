@@ -1,10 +1,6 @@
 ---
-title: _fcvt | Microsoft 文档
-ms.custom: ''
+title: _fcvt
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _fcvt
 apilocation:
@@ -22,8 +18,6 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _fcvt
-dev_langs:
-- C++
 helpviewer_keywords:
 - converting floating point, to strings
 - _fcvt function
@@ -31,16 +25,12 @@ helpviewer_keywords:
 - fcvt function
 - floating-point functions
 ms.assetid: 74584c88-f0dd-4907-8fca-52da5df583f5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 272b8e4ba5e57d71b4b785bceef7e5ea2f0ac7c2
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: ae9323e3bb629fd61b35a8c844b00bfcc73235bb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34450415"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50662054"
 ---
 # <a name="fcvt"></a>_fcvt
 
@@ -73,21 +63,21 @@ char *_fcvt(
 
 ## <a name="return-value"></a>返回值
 
-**_fcvt**将指针返回到的位数，字符串**NULL**错误。
+**_fcvt**返回指向数字的字符串的指针**NULL**出错。
 
 ## <a name="remarks"></a>备注
 
-**_Fcvt**函数将浮点数转换为以 null 结尾的字符串。 *值*参数是要转换的浮点数。 **_fcvt**存储的位数*值*作为字符串，并追加 null 字符 (\0)。 *计数*参数指定要存储在小数点之后的数字个数。 多余的数字被舍入为*计数*放置。 如果有数不能超过*计数*位精度，该字符串则用零填充。
+**_Fcvt**函数将浮点数转换为以 null 结尾的字符串。 *值*参数是要转换的浮点数。 **_fcvt**存储的位数*值*作为一个字符串，并追加 null 字符 (\0)。 *计数*参数指定要存储在小数点后的位数。 多余的位数被舍入到*计数*放置。 如果少于*计数*用零填充数字的精度，该字符串。
 
-通过返回的位数总数 **_fcvt**将不会超过 **_CVTBUFSIZE**。
+返回的总位数 **_fcvt**将不会超过 **_CVTBUFSIZE**。
 
-字符串中仅存储位数。 小数点和的符号的位置*值*可以从获取*dec*并在调用后的登录。 *Dec*参数指向的整数值; 此整数值使该字符串的开头相对小数点的位置。 零或负整数值表示小数点位于第一个数字的左侧。 参数*登录*指向一个整数，表示的符号*值*。 整数设置为 0，如果*值*为正数，并且设置为非零的数字如果*值*为负。
+字符串中仅存储位数。 小数点和的符号的位置*值*可从此*dec*并在调用后的登录。 *Dec*参数指向一个整数值; 此整数值指定相对于字符串开头的小数点的位置。 零或负整数值表示小数点位于第一个数字的左侧。 将参数*符号*指向一个整数，指示的符号*值*。 整数设置为 0，如果*值*为正，设置为非零数字*值*为负。
 
-之间的差异 **_ecvt**和 **_fcvt**处于的解释*计数*参数。 **_ecvt**解释*计数*作为的输出字符串中的位数总数而 **_fcvt**解释*计数*后的位数的数字的形式小数点。
+之间的差异 **_ecvt**并 **_fcvt**中的解释*计数*参数。 **_ecvt**解释*计数*输出字符串中的位数总数而 **_fcvt**解释*计数*后的位数小数点。
 
-**_ecvt**和 **_fcvt**使用单个静态分配的缓冲区执行该转换。 对每个例程的每次调用都会破坏上一次调用的结果。
+**_ecvt**并 **_fcvt**使用单个静态分配的缓冲区用于转换。 对每个例程的每次调用都会破坏上一次调用的结果。
 
-此函数验证其参数。 如果*dec*或*登录*是**NULL**，或*计数*为 0，则调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则**errno**设置为**EINVAL**和**NULL**返回。
+此函数验证其参数。 如果*dec*或*登录*是**NULL**，或者*计数*为 0，则调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则**errno**设置为**EINVAL**并**NULL**返回。
 
 ## <a name="requirements"></a>要求
 

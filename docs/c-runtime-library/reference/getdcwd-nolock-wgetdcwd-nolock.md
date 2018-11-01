@@ -1,10 +1,6 @@
 ---
-title: _getdcwd_nolock、_wgetdcwd_nolock | Microsoft 文档
-ms.custom: ''
+title: _getdcwd_nolock、_wgetdcwd_nolock
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wgetdcwd_nolock
 - _getdcwd_nolock
@@ -27,8 +23,6 @@ f1_keywords:
 - _getdcwd_nolock
 - _tgetdcwd_nolock
 - getdcwd_nolock
-dev_langs:
-- C++
 helpviewer_keywords:
 - getdcwd_nolock function
 - _tgetdcwd_nolock function
@@ -40,16 +34,12 @@ helpviewer_keywords:
 - _wgetdcwd_nolock function
 - directories [C++], current working
 ms.assetid: d9bdf712-43f8-4173-8f9a-844e82beaa97
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: aa969bb756754c1a6e1d28ac1b029ee443666ea0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 47938c387ba30d7bcba038145c2dff9c7b59b750
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401573"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50563679"
 ---
 # <a name="getdcwdnolock-wgetdcwdnolock"></a>_getdcwd_nolock、_wgetdcwd_nolock
 
@@ -82,7 +72,7 @@ wchar_t *_wgetdcwd_nolock(
 路径的存储位置。
 
 *maxlen*<br/>
-以字符为单位的路径的最大长度： **char**为 **_getdcwd**和**wchar_t**为 **_wgetdcwd**。
+以字符为单位的路径的最大长度： **char**有关 **_getdcwd**并**wchar_t**有关 **_wgetdcwd**。
 
 ## <a name="return-value"></a>返回值
 
@@ -90,7 +80,7 @@ wchar_t *_wgetdcwd_nolock(
 
 ## <a name="remarks"></a>备注
 
-**_getdcwd_nolock**和 **_wgetdcwd_nolock**相同 **_getdcwd**和 **_wgetdcwd**分别，只不过它们不从受保护由其他线程的干扰。 它们可能更快，因为它们不会产生锁定其他线程的开销。 仅在线程安全的上下文中使用这些函数，如单线程应用程序或调用范围已经处理线程隔离。
+**_getdcwd_nolock**和 **_wgetdcwd_nolock**等于 **_getdcwd**并 **_wgetdcwd**分别，只不过它们不从受保护由其他线程的干扰。 它们可能更快，因为它们不会产生锁定其他线程的开销。 仅在线程安全的上下文中使用这些函数，如单线程应用程序或调用范围已经处理线程隔离。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -100,7 +90,7 @@ wchar_t *_wgetdcwd_nolock(
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_getdcwd_nolock**|\<direct.h>|
 |**_wgetdcwd_nolock**|\<direct.h> 或 \<wchar.h>|

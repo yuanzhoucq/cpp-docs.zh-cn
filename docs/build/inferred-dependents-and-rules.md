@@ -1,28 +1,18 @@
 ---
-title: 推断出的依赖项和规则 |Microsoft Docs
-ms.custom: ''
+title: 推导出的依赖项和规则
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - rules, inferred
 - inferred dependents in NMAKE
 - inferred rules in NMAKE
 - dependents, inferred
 ms.assetid: 9381e74a-53d9-445c-836d-0ff7ef6112d9
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c13ae7784ff40b39642ce26fd062a1aab80f2d4c
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 6d2f439a0e936b06012045c62d55b6ad76e5817d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45707546"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50548897"
 ---
 # <a name="inferred-dependents-and-rules"></a>推导出的依赖项和规则
 

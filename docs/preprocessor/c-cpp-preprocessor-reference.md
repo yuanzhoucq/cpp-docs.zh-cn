@@ -1,26 +1,16 @@
 ---
-title: C/c + + 预处理器参考 |Microsoft Docs
-ms.custom: ''
+title: C/C++ 预处理器参考
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - preprocessor
 - preprocessor, reference overview
 ms.assetid: e4a52843-7016-4f6d-8b40-cb1ace18f805
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4c7c1b84c23ae16828e2d73cb1f45084dfd5806e
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 1ad46a1a3006cbca52336bf65bcfbafd37e59752
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50055328"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50607657"
 ---
 # <a name="cc-preprocessor-reference"></a>C/C++ 预处理器参考
 *C/c + + 预处理器参考 》* 介绍实现在 Microsoft C/c + + 预处理器。 在将 C 和 C++ 文件传递到编译器之前，预处理器将对这些文件执行预先操作。 可以使用预处理器有条件地编译代码、插入文件、指定编译时错误消息以及将计算机特定规则应用于代码节。

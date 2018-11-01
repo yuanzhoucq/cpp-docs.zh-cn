@@ -1,28 +1,18 @@
 ---
-title: ATL 类概述 |Microsoft Docs
-ms.custom: ''
+title: ATL 类概述
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: conceptual
 f1_keywords:
 - vc.atl.classes
-dev_langs:
-- C++
 helpviewer_keywords:
 - classes [C++], ATL
 - ATL, class reference
 ms.assetid: c38ac93d-c3a2-4ce7-8153-f1d34c0f0fa6
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: de241532763267f5d20d051121e501934da972cf
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: df5ae8da3bb8e192737a06396ab71ba138562b98
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46055151"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50529648"
 ---
 # <a name="atl-class-overview"></a>ATL 类概述
 
@@ -46,7 +36,7 @@ ms.locfileid: "46055151"
 |[错误的信息](../atl/error-information-classes.md)|[线程处理模型和关键节](../atl/threading-models-and-critical-sections-classes.md)|
 |[文件处理](../atl/file-handling-classes.md)|[UI 的支持](../atl/ui-support-classes.md)|
 |[接口指针](../atl/interface-pointers-classes.md)|[Windows 支持](../atl/windows-support-classes.md)|
-|[IUnknown 实现](../atl/iunknown-implementation-classes.md)|[实用程序](../atl/utility-classes.md)|
+|[IUnknown 实现](../atl/iunknown-implementation-classes.md)|实用工具[](../atl/utility-classes.md)|
 
 可以在 ATL 项目中使用的其他类，请参阅[共享类](../atl-mfc-shared/atl-mfc-shared-classes.md)。
 

@@ -1,27 +1,17 @@
 ---
-title: C 运行时错误 R6019 |Microsoft Docs
-ms.custom: ''
+title: C 运行时错误 R6019
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - R6019
-dev_langs:
-- C++
 helpviewer_keywords:
 - R6019
 ms.assetid: 8129923e-7db2-40ee-9602-def9365f8d28
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 13653f54551501d5e35bd1285dc3d3f1a74343f1
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 93d340b2a12a00420a9003429251387b2f04ad37
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861587"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50548065"
 ---
 # <a name="c-runtime-error-r6019"></a>C 运行时错误 R6019
 

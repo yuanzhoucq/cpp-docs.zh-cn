@@ -1,10 +1,6 @@
 ---
-title: _memicmp、_memicmp_l | Microsoft 文档
-ms.custom: ''
+title: _memicmp、_memicmp_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _memicmp_l
 - _memicmp
@@ -25,24 +21,18 @@ f1_keywords:
 - _memicmp
 - memicmp_l
 - _memicmp_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - memicmp function
 - _memicmp function
 - memicmp_l function
 - _memicmp_l function
 ms.assetid: 0a6eb945-4077-4f84-935d-1aaebe8db8cb
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a3ddd09fbfbfd4de095bfbc67bc669cf9c794dee
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8beb632c8bd2cfac486fc58fc930b94490bdecbc
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403048"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50636808"
 ---
 # <a name="memicmp-memicmpl"></a>_memicmp、_memicmp_l
 
@@ -84,22 +74,22 @@ int _memicmp_l(
 
 |返回值|buf1 和 buf2 的第一个计数字节的关系|
 |------------------|--------------------------------------------------------|
-|< 0|*buffer1*小于*buffer2*。|
+|< 0|*buffer1*少于*buffer2*。|
 |0|*buffer1*等于*buffer2*。|
 |> 0|*buffer1*大于*buffer2*。|
 |**_NLSCMPERROR**|出现了错误。|
 
 ## <a name="remarks"></a>备注
 
-**_Memicmp**函数将进行比较的第一个*计数*的两个缓冲区的字符*buffer1*和*buffer2*逐字节。 该比较不区分大小写。
+**_Memicmp**函数进行比较的第一个*计数*字符的两个缓冲区*buffer1*并*buffer2*逐字节。 该比较不区分大小写。
 
-如果任一*buffer1*或*buffer2*是 null 指针，此函数调用无效参数处理程序中, 所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，函数将返回 **_NLSCMPERROR**和设置**errno**到**EINVAL**。
+如果任一*buffer1*或*buffer2*是 null 指针，此函数将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，该函数返回 **_NLSCMPERROR** ，并设置**errno**到**EINVAL**。
 
-**_memicmp**的区域设置相关行为，则使用当前区域设置 **_memicmp_l**具有完全相同，只不过它改用已传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+**_memicmp**的区域设置相关的行为; 使用当前区域设置 **_memicmp_l**是完全相同，只不过它改用已传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_memicmp**|\<memory.h> 或 \<string.h>|
 |**_memicmp_l**|\<memory.h> 或 \<string.h>|

@@ -1,12 +1,6 @@
 ---
-title: .Obj 文件作为链接器输入 |Microsoft Docs
-ms.custom: ''
+title: 用作链接器输入的 .Obj 文件
 ms.date: 12/29/2017
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - linker [C++], OBJ files as input
 - object files, linker output
@@ -15,16 +9,12 @@ helpviewer_keywords:
 - COFF files
 - OBJ files as linker input
 - .obj files as linker input
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: decd015a184b66fa5867435177c07fdf23ad53ae
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 17a8ea51c41fb2c17d8feb223253cf9eed722675
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45704374"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50616146"
 ---
 # <a name="obj-files-as-linker-input"></a>用作链接器输入的 .Obj 文件
 

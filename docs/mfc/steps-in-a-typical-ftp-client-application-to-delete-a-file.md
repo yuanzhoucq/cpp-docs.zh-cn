@@ -1,28 +1,18 @@
 ---
-title: 若要删除的文件的典型 FTP 客户端应用程序中的步骤 |Microsoft Docs
-ms.custom: ''
+title: 在典型 FTP 客户端应用程序中用于删除文件的步骤
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Internet client applications [MFC], FTP delete
 - WinInet classes [MFC], FTP
 - FTP (File Transfer Protocol) [MFC], client applications
 - Internet applications [MFC], FTP client applications
 ms.assetid: 2c347a96-c0a4-4827-98fe-668406e552bc
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1d1db3418aa96fa779ac3341e12d90d66ba657c4
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5cd005908656f09028f95be38ee78c7887c2f223
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46384528"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50612441"
 ---
 # <a name="steps-in-a-typical-ftp-client-application-to-delete-a-file"></a>在典型 FTP 客户端应用程序中用于删除文件的步骤
 

@@ -1,23 +1,14 @@
 ---
-title: 用于编译时 （现代 C++） 封装的 Pimpl |Microsoft 文档
-ms.custom: ''
+title: 用于编译时封装的 Pimpl（现代 C++）
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
 ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: c3e8a90a-b328-4990-82bb-e1b147f76e07
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 83b01a58745185499ac02a254a207fac2779be26
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 9a73ea1df099003061081d108a3f3f6eef601fb9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46058999"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50594358"
 ---
 # <a name="pimpl-for-compile-time-encapsulation-modern-c"></a>用于编译时封装的 Pimpl（现代 C++）
 

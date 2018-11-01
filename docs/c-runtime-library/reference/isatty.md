@@ -1,10 +1,6 @@
 ---
-title: _isatty | Microsoft 文档
-ms.custom: ''
+title: _isatty
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _isatty
 apilocation:
@@ -22,24 +18,18 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _isatty
-dev_langs:
-- C++
 helpviewer_keywords:
 - isatty function
 - character device checking
 - _isatty function
 - checking character devices
 ms.assetid: 9f1b2e87-0cd7-4079-b187-f2b7ca15fcbe
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d4be35fce0a790751683a4bf8a0cceaf938fea82
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ef0df5f859779c081df47ef4bfe938ec2601d524
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402454"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50545582"
 ---
 # <a name="isatty"></a>_isatty
 
@@ -58,17 +48,17 @@ int _isatty( int fd );
 
 ## <a name="return-value"></a>返回值
 
-**_isatty**返回非零值，如果该描述符不与字符设备相关联。 否则为 **_isatty**返回 0。
+**_isatty**返回非零值，如果描述符与字符设备相关联。 否则为 **_isatty**返回 0。
 
 ## <a name="remarks"></a>备注
 
 **_Isatty**函数将确定是否*fd*与字符设备 （终端、 控制台、 打印机或串行端口） 相关联。
 
-此函数验证*fd*参数。 如果*fd*是错误的文件指针，则调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，函数将返回 0 并设置**errno**到**EBADF**。
+此函数验证*fd*参数。 如果*fd*是错误的文件指针，将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，函数将返回 0 并设置**errno**到**EBADF**。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_isatty**|\<io.h>|
 

@@ -1,10 +1,6 @@
 ---
-title: _expand | Microsoft 文档
-ms.custom: ''
+title: _expand
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _expand
 apilocation:
@@ -29,23 +25,17 @@ f1_keywords:
 - _nexpand
 - bexpand
 - _expand
-dev_langs:
-- C++
 helpviewer_keywords:
 - memory blocks, changing size
 - _expand function
 - expand function
 ms.assetid: 4ac55410-39c8-45c7-bccd-3f1042ae2ed3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f709df131ded856881dc171c2e1549d3d5d378e1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c1606bedbb1264bddb7674c829fe456f506d6584
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402346"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50665655"
 ---
 # <a name="expand"></a>_expand
 
@@ -70,24 +60,24 @@ void *_expand(
 
 ## <a name="return-value"></a>返回值
 
-**_expand**返回指向重新分配的内存块的 void 指针。 **_expand**与**realloc**，不能移动一个块，可以更改其大小。 因此，如果没有足够的内存可用于将块展开而无需移动它， *memblock*参数 **_expand**返回的值相同。
+**_expand**返回指向重新分配的内存块的 void 指针。 **_expand**，但不同于**realloc**，无法移动块以更改其大小。 因此，如果有足够的内存可用于将块扩展而无需移动它，则*memblock*参数 **_expand**作为返回值相同。
 
-**_expand**返回**NULL**其操作期间时检测到错误。 例如，如果 **_expand**是用来收缩的内存块，它可能检测损坏的小块堆集或无效的块指针，并返回**NULL**。
+**_expand**将返回**NULL**其操作过程时检测到错误。 例如，如果 **_expand**是用于收缩内存块，它可能会在小块堆或无效的块指针中检测到损坏并返回**NULL**。
 
-如果没有足够内存可用于将块展开到给定的大小，而无需移动它，该函数返回**NULL**。 **_expand**永远不会返回一个块展开为大小小于请求。 如果发生故障， **errno**指示故障的性质。 有关详细信息**errno**，请参阅[errno、 _doserrno、 _sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
+如果没有足够的内存将块扩展到给定大小，而无需移动它，则该函数返回**NULL**。 **_expand**永远不会返回块扩展到大小小于请求。 如果失败，则**errno**指示故障的性质。 有关详细信息**errno**，请参阅[errno、 _doserrno、 _sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
-返回值将指向保证适当对齐任何类型的对象的存储的存储空间。 若要检查的项的新大小，请使用 **_msize**。 若要获取指向类型而**void**，使用类型强制转换返回值上。
+返回值将指向保证适当对齐任何类型的对象的存储的存储空间。 若要检查的项的新大小，请使用 **_msize**。 若要获取指向类型以外**void**，使用类型强制转换返回值上。
 
 ## <a name="remarks"></a>备注
 
-**_Expand**函数尝试来展开或折叠而无需移动堆中的其位置的块中更改之前分配的内存块的大小。 *Memblock*参数指向的块的开头。 *大小*参数指定了新块大小，以字节为单位。 根据新大小和旧大小中的较短者，块内容保持不变。 *memblock*不应被释放的块。
+**_Expand**函数通过尝试扩展或收缩块不在堆中移动其位置的情况下更改以前分配的内存块的大小。 *Memblock*参数指向块的开头。 *大小*参数提供以字节为单位的块的新大小。 根据新大小和旧大小中的较短者，块内容保持不变。 *memblock*不应为已释放的块。
 
 > [!NOTE]
-> 在 64 位平台上 **_expand**可能不协定块，如果新的大小小于比当前的大小; 具体而言，如果块的大小小于 16 K，且在低碎片堆中，因此分配 **_expand**离开块保持不变并返回*memblock*。
+> 在 64 位平台上 **_expand**可能不收缩块，如果新大小小于当前大小; 具体而言，如果块的大小小于 16k，因此在低碎片堆中分配 **_expand**保持块保持不变并返回*memblock*。
 
 当与 C 运行时库的调试版本链接应用程序 **_expand**解析为[_expand_dbg](expand-dbg.md)。 有关在调试过程中如何托管堆的详细信息，请参阅 [CRT 调试堆](/visualstudio/debugger/crt-debug-heap-details)。
 
-此函数验证其参数。 如果*memblock*是 null 指针，此函数调用无效参数处理程序中, 所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则**errno**设置为**EINVAL**和该函数将返回**NULL**。 如果*大小*大于 **_HEAP_MAXREQ**， **errno**设置为**ENOMEM**和该函数将返回**NULL**.
+此函数验证其参数。 如果*memblock*是空指针，此函数将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则**errno**设置为**EINVAL**并且该函数返回**NULL**。 如果*大小*大于 **_HEAP_MAXREQ**， **errno**设置为**ENOMEM**并且该函数返回**NULL**.
 
 ## <a name="requirements"></a>要求
 

@@ -1,10 +1,6 @@
 ---
-title: _vsprintf_p、_vsprintf_p_l、_vswprintf_p、_vswprintf_p_l | Microsoft 文档
-ms.custom: ''
+title: _vsprintf_p、_vsprintf_p_l、_vswprintf_p、_vswprintf_p_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _vsprintf_p
 - _vswprintf_p
@@ -29,8 +25,6 @@ f1_keywords:
 - vswprintf_p
 - _vsprintf_p
 - vstprintf_p
-dev_langs:
-- C++
 helpviewer_keywords:
 - vstprintf_p_l function
 - _vsprintf_p_l function
@@ -46,16 +40,12 @@ helpviewer_keywords:
 - _vsprintf_p function
 - _vstprintf_p_l function
 ms.assetid: 00821c0d-9fee-4d8a-836c-0669cfb11317
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ab2c33301f5746065e46dcba9f166679a330c98f
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 15f368da84eb9cbf8c394a0e9b5eeec2611c3f7f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34450874"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50628366"
 ---
 # <a name="vsprintfp-vsprintfpl-vswprintfp-vswprintfpl"></a>_vsprintf_p、_vsprintf_p_l、_vswprintf_p、_vswprintf_p_l
 
@@ -114,17 +104,17 @@ int _vswprintf_p_l(
 
 ## <a name="return-value"></a>返回值
 
-**_vsprintf_p**和 **_vswprintf_p**返回写入的字符数，不包括终止 null 字符或为负值，如果发生输出错误。
+**_vsprintf_p**并 **_vswprintf_p**返回写入的字符，不包括终止 null 字符，则为负值，如果发生输出错误数。
 
 ## <a name="remarks"></a>备注
 
-其中每个函数采用指向自变量列表，然后设置格式和指向的内存中写入给定的数据*缓冲区*。
+每个函数采用一个指向参数列表，然后设置格式并将给定的数据写入到指向的内存*缓冲区*。
 
-这些函数与不同**vsprintf_s**和**vswprintf_s**仅在于后者支持位置参数。 有关详细信息，请参阅 [printf_p 位置参数](../../c-runtime-library/printf-p-positional-parameters.md)。
+这些函数与差异**vsprintf_s**并**vswprintf_s**仅在于它们支持位置参数。 有关详细信息，请参阅 [printf_p 位置参数](../../c-runtime-library/printf-p-positional-parameters.md)。
 
-使用这些函数的版本 **_l**后缀是相同，只不过它们使用传递而不是当前线程区域设置的区域设置参数。
+使用这些函数的版本 **_l**后缀完全相同，只不过它们使用传递中而不是当前线程区域设置的区域设置参数。
 
-如果*缓冲区*或*格式*参数**NULL**指针，如果计数为零，或如果格式字符串包含无效的格式设置字符，无效的参数调用处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，函数将返回-1 并设置**errno**到**EINVAL**。
+如果*缓冲区*或*格式*参数**NULL**指针，如果计数为零，或如果格式字符串包含无效格式字符，无效的参数调用处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，函数将返回-1 并设置**errno**到**EINVAL**。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -135,7 +125,7 @@ int _vswprintf_p_l(
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|可选标头|
+|例程所返回的值|必需的标头|可选标头|
 |-------------|---------------------|----------------------|
 |**_vsprintf_p**， **_vsprintf_p_l**|\<stdio.h> 和 \<stdarg.h>|\<varargs.h>*|
 |**_vswprintf_p**， **_vswprintf_p_l**|\<stdio.h> 或 \<wchar.h> 和 \<stdarg.h>|\<varargs.h>*|

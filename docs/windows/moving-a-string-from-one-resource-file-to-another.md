@@ -1,29 +1,18 @@
 ---
-title: 将字符串从一个资源文件移动到另一个 （c + +） |Microsoft Docs
-ms.custom: ''
+title: 将字符串从一个资源文件移动到另一个 （c + +）
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - strings [C++], moving between files
 - resource script files [C++], moving strings
 - string editing, moving strings between resources
 - String editor [C++], moving strings between files
 ms.assetid: 94f8ee81-9b4c-4788-ba95-68c58db38029
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 1255eb0fc00d1b134335807a1f20e6761c49ec90
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: e89a0d44dc824c72710f8a047a18771ba8da492b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50064467"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50649808"
 ---
 # <a name="moving-a-string-from-one-resource-file-to-another-c"></a>将字符串从一个资源文件移动到另一个 （c + +）
 

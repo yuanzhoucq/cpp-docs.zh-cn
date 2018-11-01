@@ -1,10 +1,6 @@
 ---
-title: _get_current_locale | Microsoft 文档
-ms.custom: ''
+title: _get_current_locale
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _get_current_locale
 apilocation:
@@ -24,24 +20,18 @@ f1_keywords:
 - get_current_locale
 - __get_current_locale
 - _get_current_locale
-dev_langs:
-- C++
 helpviewer_keywords:
 - get_current_locale function
 - _get_current_locale function
 - locales, getting information on
 - __get_current_locale function
 ms.assetid: 572217f2-a37a-4105-a293-a250b4fabd99
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c658d960953bea2890202bebe280d46dd3407d63
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 87c30ee701d8f7d3a89a0aa61ba18a7f854bc9b1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396935"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50511886"
 ---
 # <a name="getcurrentlocale"></a>_get_current_locale
 
@@ -61,11 +51,11 @@ _locale_t _get_current_locale(void);
 
 **_Get_current_locale**函数获取当前设置线程的区域设置，并返回一个表示该区域设置的区域设置对象。
 
-此函数的以前名称 **__get_current_locale** （带两个前导下划线） 已弃用。
+此函数的以前名称 **__get_current_locale** （带两个前导下划线） 已被弃用。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_get_current_locale**|\<locale.h>|
 

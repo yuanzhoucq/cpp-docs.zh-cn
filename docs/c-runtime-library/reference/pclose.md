@@ -1,10 +1,6 @@
 ---
-title: _pclose | Microsoft 文档
-ms.custom: ''
+title: _pclose
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _pclose
 apilocation:
@@ -23,23 +19,17 @@ apitype: DLLExport
 f1_keywords:
 - _pclose
 - pclose
-dev_langs:
-- C++
 helpviewer_keywords:
 - _pclose function
 - pclose function
 - pipes, closing
 ms.assetid: e2e31a9e-ba3a-4124-bcbb-c4040110b3d3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 01e58c23bc91e8819abb3cd24f1ed01ee161ff8f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: eb0f54ec27992cd0e62b11d8fec5bd54c3daea4b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401771"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50507713"
 ---
 # <a name="pclose"></a>_pclose
 
@@ -59,21 +49,21 @@ FILE *stream
 ### <a name="parameters"></a>参数
 
 *流*<br/>
-从调用返回值 **_popen**。
+以前调用的返回值 **_popen**。
 
 ## <a name="return-value"></a>返回值
 
-如果发生错误，则返回终止的命令处理器，则为-1 的退出状态。 返回值的格式是，对于相同 **_cwait**，只是交换的低序位和高序位字节。 如果流是**NULL**， **_pclose**设置**errno**到**EINVAL**并返回-1。
+如果发生错误，则返回终止命令处理器，则为-1 的退出状态。 返回值的格式是，对于相同 **_cwait**，只是交换的低顺序和高位字节。 如果流**NULL**， **_pclose**设置**errno**到**EINVAL**并返回-1。
 
 有关这些及其他错误代码的信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>备注
 
-**_Pclose**函数查找命令处理器 (Cmd.exe) 启动由关联的进程 ID **_popen**调用，将执行[_cwait](cwait.md)调用新的命令处理器，并关闭关联的管道流。
+**_Pclose**函数查找命令处理器 (Cmd.exe)，启动由关联的进程 ID **_popen**调用，将执行[_cwait](cwait.md)调用新的命令处理器，并关闭关联管道上的流。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_pclose**|\<stdio.h>|
 

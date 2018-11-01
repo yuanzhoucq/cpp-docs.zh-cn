@@ -1,27 +1,17 @@
 ---
-title: 逗号运算符:，|Microsoft Docs
-ms.custom: ''
+title: 逗号运算符：,
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
 f1_keywords:
 - '%2C'
-dev_langs:
-- C++
 helpviewer_keywords:
 - comma operator
 ms.assetid: 38e0238e-19da-42ba-ae62-277bfdab6090
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 626243da557362626b5d17ed01a8023e36704f54
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 8c6757f402cc7422824f1b701d3d1e4ae2566074
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46114782"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50609919"
 ---
 # <a name="comma-operator-"></a>逗号运算符：,
 
@@ -48,7 +38,7 @@ func_one( x, y + 2, z );
 func_two( (x--, y + 2), z );
 ```
 
-在上面的对 `func_one` 的函数调用中，会传递以逗号分隔的三个参数：`x`、`y + 2` 和 `z`。 在对 `func_two` 的函数调用中，圆括号强制编译器将第一个逗号解释为顺序计算运算符。 此函数调用将两个参数传递给 `func_two`。 第一个参数是顺序计算运算 `(x--, y + 2)` 的结果，具有表达式 `y + 2` 的值和类型；第二个参数为 `z`。
+在上面的对 `func_one` 的函数调用中，会传递以逗号分隔的三个自变量：`x`、`y + 2` 和 `z`。 在对 `func_two` 的函数调用中，圆括号强制编译器将第一个逗号解释为顺序计算运算符。 此函数调用将两个参数传递给 `func_two`。 第一个参数是顺序计算运算 `(x--, y + 2)` 的结果，具有表达式 `y + 2` 的值和类型；第二个参数为 `z`。
 
 ## <a name="example"></a>示例
 

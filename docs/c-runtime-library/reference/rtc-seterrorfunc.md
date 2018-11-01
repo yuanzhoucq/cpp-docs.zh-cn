@@ -1,10 +1,6 @@
 ---
-title: _RTC_SetErrorFunc | Microsoft 文档
-ms.custom: ''
+title: _RTC_SetErrorFunc
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _RTC_SetErrorFunc
 apilocation:
@@ -22,22 +18,16 @@ apitype: DLLExport
 f1_keywords:
 - RTC_SetErrorFunc
 - _RTC_SetErrorFunc
-dev_langs:
-- C++
 helpviewer_keywords:
 - RTC_SetErrorFunc function
 - _RTC_SetErrorFunc function
 ms.assetid: b2292722-0d83-4092-83df-3d5b19880666
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e146f699f9026260470b1c540c7567f074896a38
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 6b292d685eea8eccb9e9b2a3c3e6cd903d501005
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451610"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50514733"
 ---
 # <a name="rtcseterrorfunc"></a>_RTC_SetErrorFunc
 
@@ -58,15 +48,15 @@ _RTC_error_fn _RTC_SetErrorFunc(
 
 ## <a name="return-value"></a>返回值
 
-以前定义的错误函数。 如果没有以前定义的函数，返回**NULL**。
+以前定义的错误函数。 如果没有以前定义的函数，则返回**NULL**。
 
 ## <a name="remarks"></a>备注
 
-不要使用此功能;请改用 **_RTC_SetErrorFuncW**。 仅为后向兼容性保留使用此函数。
+不使用此函数;请改用 **_RTC_SetErrorFuncW**。 仅为后向兼容性保留使用此函数。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_RTC_SetErrorFunc**|\<rtcapi.h>|
 

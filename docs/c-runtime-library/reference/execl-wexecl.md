@@ -1,10 +1,6 @@
 ---
-title: _execl、_wexecl | Microsoft 文档
-ms.custom: ''
+title: _execl，_wexecl
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _execl
 - _wexecl
@@ -25,24 +21,18 @@ f1_keywords:
 - _execl
 - _wexecl
 - wexecl
-dev_langs:
-- C++
 helpviewer_keywords:
 - _execl function
 - wexecl function
 - _wexecl function
 - execl function
 ms.assetid: 81fefb8a-0a06-4221-b2bc-be18e38e89f4
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 32ec50c83a29f3c517955979c2df0de5203dc9a0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3d736849f90782425e6e1c1cff04536972318c91
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398498"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50530297"
 ---
 # <a name="execl-wexecl"></a>_execl，_wexecl
 
@@ -94,7 +84,7 @@ intptr_t _wexecl(
 
 这些函数将加载并执行一个新进程，并将每个命令行实参作为独立的形参传递。 第一个参数是命令或执行文件名称，而第二个参数应与第一个相同。 它将成为执行过程中的 `argv[0]`。 第三个参数是要执行过程的第一个参数 `argv[1]`。
 
-**_Execl**函数验证其参数。 如果任一*cmdname*或*arg0*是 null 指针或空字符串，这些函数将调用无效参数处理程序中所述[参数验证](../../c-runtime-library/parameter-validation.md)如果执行若要继续，这些函数将设置为允许**errno**到**EINVAL**并返回-1。 不执行任何新进程。
+**_Execl**函数验证其参数。 如果任一*cmdname*或*arg0*是空指针或空字符串，这些函数将调用无效参数处理程序中所述[参数验证](../../c-runtime-library/parameter-validation.md)如果执行若要继续，这些函数将设置为允许**errno**到**EINVAL**并返回-1。 不执行任何新进程。
 
 ## <a name="requirements"></a>要求
 

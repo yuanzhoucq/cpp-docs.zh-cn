@@ -1,27 +1,17 @@
 ---
-title: C++ 标准库中的线程安全 | Microsoft Docs
-ms.custom: ''
+title: C++ 标准库中的线程安全
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - thread safety
 - C++ Standard Library, thread safety
 - thread safety, C++ Standard Library
 ms.assetid: 9351c8fb-4539-4728-b0e9-226e2ac4284b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fc39fd944c035c0e8dfa5f5b66cc045a115185ed
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 27ac930e567521b12dfc35e2f8c4c389c35ae47d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855229"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50607631"
 ---
 # <a name="thread-safety-in-the-c-standard-library"></a>C++ 标准库中的线程安全
 

@@ -1,25 +1,15 @@
 ---
-title: 计划程序实例 |Microsoft Docs
-ms.custom: ''
+title: 计划程序实例
 ms.date: 11/04/2016
-ms.technology:
-- cpp-concrt
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - scheduler instances
 ms.assetid: 4819365f-ef99-49cc-963e-50a2a35a8d6b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fc11888c3f655572bbdf33a5238e07f8ef99ba90
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 370f8a3a8fdcc8e1daaee2d3424f939fb719a449
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46375649"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50570165"
 ---
 # <a name="scheduler-instances"></a>计划程序实例
 
@@ -117,7 +107,7 @@ ms.locfileid: "46375649"
 |------------|-----------------|
 |[创建](reference/scheduler-class.md#create)|创建`Scheduler`对象，它使用指定的策略。|
 |[附加](reference/scheduler-class.md#attach)|将相关联`Scheduler`对象与当前上下文。|
-|[参考](reference/scheduler-class.md#reference)|递增引用计数器的`Scheduler`对象。|
+|[引用](reference/scheduler-class.md#reference)|递增引用计数器的`Scheduler`对象。|
 |[发布](reference/scheduler-class.md#release)|递减的引用计数器`Scheduler`对象。|
 |[RegisterShutdownEvent](reference/scheduler-class.md#registershutdownevent)|注册一个运行时设置的事件`Scheduler`对象被销毁。|
 |[CreateScheduleGroup](reference/scheduler-class.md#createschedulegroup)|创建[concurrency:: schedulegroup](../../parallel/concrt/reference/schedulegroup-class.md)对象中`Scheduler`对象。|

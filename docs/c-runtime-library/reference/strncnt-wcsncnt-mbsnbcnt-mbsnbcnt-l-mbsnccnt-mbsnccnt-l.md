@@ -1,10 +1,6 @@
 ---
-title: _strncnt、_wcsncnt、_mbsnbcnt、_mbsnbcnt_l、_mbsnccnt、_mbsnccnt_l | Microsoft 文档
-ms.custom: ''
+title: _strncnt、_wcsncnt、_mbsnbcnt、_mbsnbcnt_l、_mbsnccnt、_mbsnccnt_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbsnbcnt_l
 - _mbsnccnt
@@ -38,8 +34,6 @@ f1_keywords:
 - mbsnccnt
 - _strncnt
 - _wcsncnt
-dev_langs:
-- C++
 helpviewer_keywords:
 - _strncnt function
 - _mbsnbcnt function
@@ -56,23 +50,19 @@ helpviewer_keywords:
 - _mbsnccnt function
 - _wcsncnt function
 ms.assetid: 2a022e9e-a307-4acb-a66b-e56e5357f848
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 066431205ecd7aa2b193350ccda4a83decac0458
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 6322f9511f0813eeaeb49383f49c73e361048cd9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451571"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50573417"
 ---
 # <a name="strncnt-wcsncnt-mbsnbcnt-mbsnbcntl-mbsnccnt-mbsnccntl"></a>_strncnt、_wcsncnt、_mbsnbcnt、_mbsnbcnt_l、_mbsnccnt、_mbsnccnt_l
 
 返回指定计数内的字符数或字节数。
 
 > [!IMPORTANT]
-> **_mbsnbcnt**， **_mbsnbcnt_l**， **_mbsnccnt**，和 **_mbsnccnt_l**不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
+> **_mbsnbcnt**， **_mbsnbcnt_l**， **_mbsnccnt**，并且 **_mbsnccnt_l**不能在 Windows 运行时中执行的应用程序中使用。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
 
 ## <a name="syntax"></a>语法
 
@@ -112,30 +102,30 @@ size_t _mbsnccnt_l(
 要检查的字符串。
 
 *count*<br/>
-字符数或字节中检查*str*。
+字符数或字节中要检查其*str*。
 
 *locale*<br/>
 要使用的区域设置。
 
 ## <a name="return-value"></a>返回值
 
-**_mbsnbcnt**和 **_mbsnbcnt_l**返回找到的字节数在第一个*计数*的多字节字符的*str*。 **_mbsnccnt**和 **_mbsnccnt_l**返回找到的字符数中第一个*计数*的字节数*str*。 如果之前的检查遇到 null 字符*str*已完成，它们返回的字节或找到的 null 字符之前的字符数。 如果*str*组成数不能超过*计数*字符或字节，它们在字符串中返回的字符或字节数。 如果*计数*小于零，它们将返回 0。 在早期版本中，这些函数必须返回值类型**int**而非**size_t**。
+**_mbsnbcnt**并 **_mbsnbcnt_l**返回找到的字节数在第一个*计数*的多字节字符*str*。 **_mbsnccnt**并 **_mbsnccnt_l**返回找到的字符数在第一个*计数*的字节数*str*。 如果的检查之前遇到 null 字符*str*已完成，它们返回的字节数或 null 字符之前找到的字符数。 如果*str*组成少于*计数*字符或字节数，它们在字符串中返回的字符或字节数。 如果*计数*小于零，则它们返回 0。 在早期版本中，这些函数必须返回值类型**int**而非**size_t**。
 
-**_strncnt**中第一个返回的字符数*计数*单字节字符串的字节*str*。 **_wcsncnt**中第一个返回的字符数*计数*的宽字符字符串的宽字符*str*。
+**_strncnt**在第一个返回的字符数*计数*单字节字符串的字节*str*。 **_wcsncnt**在第一个返回的字符数*计数*宽字符的宽字符字符串*str*。
 
 ## <a name="remarks"></a>备注
 
-**_mbsnbcnt**和 **_mbsnbcnt_l**计数找到的字节数在第一个*计数*的多字节字符的*str*。 **_mbsnbcnt**和 **_mbsnbcnt_l**替换**mtob** ，应使用代替了**mtob**。
+**_mbsnbcnt**并 **_mbsnbcnt_l**计数找到的字节数在第一个*计数*的多字节字符*str*。 **_mbsnbcnt**并 **_mbsnbcnt_l**替换为**mtob** ，应使用来代替**mtob**。
 
-**_mbsnccnt**和 **_mbsnccnt_l**计数找到的字符数中第一个*计数*的字节数*str*。 如果 **_mbsnccnt**和 **_mbsnccnt_l**遇到双字节字符的第二个字节中的 null 字符，则第一个字节也被视为为 null，并且不包括在返回的计数值。 **_mbsnccnt**和 **_mbsnccnt_l**替换**btom** ，应使用代替了**btom**。
+**_mbsnccnt**并 **_mbsnccnt_l**计数找到的字符数在第一个*计数*的字节数*str*。 如果 **_mbsnccnt**并 **_mbsnccnt_l**遇到双字节字符的第二个字节中的 null 字符，则第一个字节也被视为为 null，不包含在返回的计数值。 **_mbsnccnt**并 **_mbsnccnt_l**替换为**btom** ，应使用来代替**btom**。
 
-如果*str*是**NULL**指针或*计数*为 0，则这些函数调用无效参数处理程序中所述[参数验证](../../c-runtime-library/parameter-validation.md)， **errno**设置为**EINVAL**，并且该函数返回 0。
+如果*str*是**NULL**指针或是*计数*为 0，则这些函数将调用无效参数处理程序中所述[参数验证](../../c-runtime-library/parameter-validation.md)， **errno**设置为**EINVAL**，并且该函数返回 0。
 
 输出值受区域设置的 LC_CTYPE 类别设置影响；有关详细信息，请参阅 [setlocale](setlocale-wsetlocale.md)。 这些不带 **_l** 后缀的函数版本使用此区域设置相关的行为的当前区域设置；带有 **_l** 后缀的版本相同，只不过它们使用传递的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
-|例程|未定义 _UNICODE 和 _MBCS|已定义 _MBCS|已定义 _UNICODE|
+|例程所返回的值|未定义 _UNICODE 和 _MBCS|已定义 _MBCS|已定义 _UNICODE|
 |-------------|--------------------------------------|--------------------|-----------------------|
 |**_tcsnbcnt**|**_strncnt**|**_mbsnbcnt**|**_wcsncnt**|
 |**_tcsnccnt**|**_strncnt**|**_mbsnbcnt**|n/a|
@@ -145,7 +135,7 @@ size_t _mbsnccnt_l(
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_mbsnbcnt**|\<mbstring.h>|
 |**_mbsnbcnt_l**|\<mbstring.h>|

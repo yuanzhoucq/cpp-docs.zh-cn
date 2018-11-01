@@ -1,10 +1,6 @@
 ---
-title: _unlink、_wunlink | Microsoft 文档
-ms.custom: ''
+title: _unlink、_wunlink
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _unlink
 - _wunlink
@@ -26,8 +22,6 @@ f1_keywords:
 - _unlink
 - wunlink
 - _wunlink
-dev_langs:
-- C++
 helpviewer_keywords:
 - files [C++], deleting
 - _wunlink function
@@ -38,16 +32,12 @@ helpviewer_keywords:
 - files [C++], removing
 - _tunlink function
 ms.assetid: 5e4f5f1b-1e99-4391-9b18-9ac63c32fae8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ace694452467d6d559f8820216be71ecd85b54e0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7565679c58af83d64fd59419e8e841ee48133edf
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411004"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50544191"
 ---
 # <a name="unlink-wunlink"></a>_unlink、_wunlink
 
@@ -71,13 +61,13 @@ int _wunlink(
 
 ## <a name="return-value"></a>返回值
 
-如果成功，则这些函数均返回 0。 否则，该函数返回-1 并设置**errno**到**EACCES**，这意味着路径指定只读文件，或**ENOENT**，这意味着文件或路径找不到或路径指定了一个目录。
+如果成功，则这些函数均返回 0。 否则，该函数返回-1 并设置**errno**到**EACCES**，表示路径指定只读文件，或设置为**ENOENT**，这意味着，文件或路径找不到或指定一个目录的路径。
 
 有关这些代码以及其他返回代码的详细信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>备注
 
-**_Unlink**函数将删除指定的文件*filename*。 **_wunlink**是宽字符版本的 **_unlink**; *filename*参数 **_wunlink**是宽字符字符串。 否则这些函数具有相同行为。
+**_Unlink**函数将删除指定的文件*filename*。 **_wunlink**是宽字符版本 **_unlink**; *filename*参数 **_wunlink**是宽字符字符串。 否则这些函数具有相同行为。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -87,7 +77,7 @@ int _wunlink(
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_unlink**|\<io.h> 和 \<stdio.h>|
 |**_wunlink**|\<io.h> 或 \<wchar.h>|

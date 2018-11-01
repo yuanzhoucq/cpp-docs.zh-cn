@@ -1,10 +1,6 @@
 ---
-title: _cprintf_s、_cprintf_s_l、_cwprintf_s、_cwprintf_s_l | Microsoft 文档
-ms.custom: ''
+title: _cprintf_s、_cprintf_s_l、_cwprintf_s、_cwprintf_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _cwprintf_s_l
 - _cprintf_s_l
@@ -33,8 +29,6 @@ f1_keywords:
 - cprintf_s
 - _cwprintf_s
 - tcprintf_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - tcprintf_s_l function
 - _cprintf_s_l function
@@ -49,16 +43,12 @@ helpviewer_keywords:
 - cprintf_s_l function
 - cwprintf_s_l function
 ms.assetid: c28504fe-0d20-4f06-8f97-ee33225922ad
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a2d8a2f5f80b00eef47d09a8d505f31a42a0fab2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3652587c9622c2eb9fe316782d1b1c7c9644dc8f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401339"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50606514"
 ---
 # <a name="cprintfs-cprintfsl-cwprintfs-cwprintfsl"></a>_cprintf_s、_cprintf_s_l、_cwprintf_s、_cwprintf_s_l
 
@@ -107,16 +97,16 @@ int _cwprintf_s_l(
 
 ## <a name="remarks"></a>备注
 
-这些函数会格式化并打印一系列字符和值直接到控制台，使用 **_putch**函数 (**_putwch**为 **_cwprintf_s**) 到输出字符。 每个*参数*（如果有） 进行转换和输出中的相应格式规范根据*格式*。 该格式具有相同形式和函数与*格式*参数[printf_s](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)函数。 与不同**fprintf_s**， **printf_s**，和**sprintf_s**函数，两者 **_cprintf_s**也不 **_cwprintf_s**会换行字符将转换为回车换行符 (CR-LF) 组合输出时。
+这些函数会格式化并打印一系列字符和值直接向控制台中，使用 **_putch**函数 (**_putwch**有关 **_cwprintf_s**) 到输出字符。 每个*自变量*（如果有） 进行转换和输出中的相应格式规范根据*格式*。 格式具有相同的形式和函数与*格式*参数[printf_s](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)函数。 与不同**fprintf_s**， **printf_s**，并**sprintf_s**函数，既不 **_cprintf_s**也不 **_cwprintf_s**换行字符转换为回车符和换行符 (CR-LF) 组合时输出。
 
-一个重要区别在于， **_cwprintf_s**显示 Unicode 字符在 Windows NT 中使用时。 与不同 **_cprintf_s**， **_cwprintf_s**使用当前控制台区域设置
+一个重要的区别在于 **_cwprintf_s**显示 Unicode 字符时在 Windows NT 中使用。 与不同 **_cprintf_s**， **_cwprintf_s**使用当前控制台区域设置
 
-使用这些函数的版本 **_l**后缀是相同，只不过它们使用传递而不是当前区域设置的区域设置参数。
+使用这些函数的版本 **_l**后缀完全相同，只不过它们使用传递中而不是当前区域设置的区域设置参数。
 
 > [!IMPORTANT]
 > 确保 format 不是用户定义的字符串。
 
-如不安全版本 (请参阅[_cprintf、 _cprintf_l、 _cwprintf、 _cwprintf_l](cprintf-cprintf-l-cwprintf-cwprintf-l.md))，这些函数验证其参数和中所述将调用无效参数处理程序，[参数验证](../../c-runtime-library/parameter-validation.md)，如果*格式*是 null 指针。 这些函数与不安全版本的不同之处在于，格式字符串本身也需进行验证。 如果有任何未知或格式错误的格式化说明符，则这些函数将调用无效参数处理程序。 在所有情况下，如果允许执行继续，则函数返回-1 并设置**errno**到**EINVAL**。
+与不安全版本一样 (请参阅[_cprintf、 _cprintf_l、 _cwprintf、 _cwprintf_l](cprintf-cprintf-l-cwprintf-cwprintf-l.md))，这些函数验证其参数并调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)，如果*格式*是 null 指针。 这些函数与不安全版本的不同之处在于，格式字符串本身也需进行验证。 如果有任何未知或格式错误的格式化说明符，则这些函数将调用无效参数处理程序。 在所有情况下，如果允许执行继续，则这些函数返回-1 并设置**errno**到**EINVAL**。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -127,7 +117,7 @@ int _cwprintf_s_l(
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_cprintf_s**， **_cprintf_s_l**|\<conio.h>|
 |**_cwprintf_s**， **_cwprintf_s_l**|\<conio.h>|

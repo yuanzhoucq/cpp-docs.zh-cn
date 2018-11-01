@@ -1,11 +1,6 @@
 ---
-title: ilogb、ilogbf、ilogbl2 | Microsoft 文档
-ms.custom: ''
+title: ilogb、 ilogbf、 ilogbl2
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - ilogb
 - ilogbf
@@ -35,16 +30,12 @@ helpviewer_keywords:
 - ilogbf function
 - ilogbl function
 ms.assetid: 9ef19d57-1caa-41d5-8233-2faad3562fcb
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1436874e1ab35cc72dc40390adf5597529d3bf57
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 63e04246d29fde50c745a5f353829bd337a814ad
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398174"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50551978"
 ---
 # <a name="ilogb-ilogbf-ilogbl"></a>ilogb、ilogbf、ilogbl
 
@@ -82,26 +73,26 @@ int ilogbl(
 
 ## <a name="return-value"></a>返回值
 
-如果成功，返回 2 为底的指数*x*作为一个已签名**int**值。
+如果成功，则返回 2 为底的指数*x*以签名**int**值。
 
 否则将返回在 \<math.h> 中定义的以下值之一：
 
 |输入|结果|
 |-----------|------------|
 |±0|FP_ILOGB0|
-|±inf，±nan，无限期|FP_ILOGBNAN|
+|±inf，±nan，无限|FP_ILOGBNAN|
 
 按 [_matherr](matherr.md) 中指定的内容报告错误。
 
 ## <a name="remarks"></a>备注
 
-由于 c + + 允许重载，你可以调用的重载**ilogb**采用并返回**float**和**长** **double**类型。 在 C 程序中， **ilogb**始终采用并返回**double**。
+由于 c + + 允许重载，可以调用的重载**ilogb**采用并返回**float**并**长** **double**类型。 在 C 程序中， **ilogb**始终采用并返回**double**。
 
-调用此函数是类似于调用的等效方法**logb**函数，然后将返回值转换为**int**。
+调用此函数相当于调用等效项**logb**函数，然后将返回值转换为**int**。
 
 ## <a name="requirements"></a>要求
 
-|例程|C 标头|C++ 标头|
+|例程所返回的值|C 标头|C++ 标头|
 |-------------|--------------|------------------|
 |**ilogb**， **ilogbf**， **ilogbl**|\<math.h>|\<cmath>|
 

@@ -1,12 +1,6 @@
 ---
-title: 优化代码 |Microsoft Docs
-ms.custom: ''
+title: 优化代码
 ms.date: 12/28/2017
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - performance, optimizing code
 - optimization
@@ -14,16 +8,12 @@ helpviewer_keywords:
 - optimization, C++ code
 - code, optimizing
 - performance, compiler
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b715f3cc6bc505d9698484ad7c47b8262f2bc728
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d490bd704c53a160ee36dea0fd24a52211bfdc37
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46444406"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50525510"
 ---
 # <a name="optimizing-your-code"></a>优化代码
 

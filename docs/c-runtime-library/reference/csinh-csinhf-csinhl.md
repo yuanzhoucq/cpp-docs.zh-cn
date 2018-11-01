@@ -1,11 +1,6 @@
 ---
-title: csinh、csinhf、csinhl | Microsoft 文档
-ms.custom: ''
+title: csinh、csinhf、csinhl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - csinh
 - csinhf
@@ -30,23 +25,17 @@ f1_keywords:
 - complex/csinh
 - complex/csinhf
 - complex/csinhl
-dev_langs:
-- C++
 helpviewer_keywords:
 - csinh function
 - csinhf function
 - csinhl function
 ms.assetid: cc616e55-d14d-4cd3-91f0-fbee03ce5edf
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f620bdddb7bb86494b7981c84e12573a3ad89fa1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2ea6eaedc7eae7256310bf55b06fde0ecb2c64de
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395963"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50552004"
 ---
 # <a name="csinh-csinhf-csinhl"></a>csinh、csinhf、csinhl
 
@@ -83,11 +72,11 @@ _Lcomplex csinhl(
 
 ## <a name="remarks"></a>备注
 
-由于 c + + 允许重载，你可以调用的重载**csinh**采用并返回 **_Fcomplex**和 **_Lcomplex**值。 在 C 程序中， **csinh**始终采用并返回 **_Dcomplex**值。
+由于 c + + 允许重载，可以调用的重载**csinh**采用并返回 **_Fcomplex**并 **_Lcomplex**值。 在 C 程序中， **csinh**始终采用并返回 **_Dcomplex**值。
 
 ## <a name="requirements"></a>要求
 
-|例程|C 标头|C++ 标头|
+|例程所返回的值|C 标头|C++ 标头|
 |-------------|--------------|------------------|
 |**csinh**， **csinhf**， **csinhl**|\<complex.h>|\<ccomplex>|
 

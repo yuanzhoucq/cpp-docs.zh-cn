@@ -1,11 +1,6 @@
 ---
-title: lgamma、lgammaf、lgammal | Microsoft 文档
-ms.custom: ''
+title: lgamma、lgammaf、lgammal
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - lgamma
 - lgammaf
@@ -30,23 +25,17 @@ f1_keywords:
 - math/lgamma
 - math/lgammaf
 - math/lgammal
-dev_langs:
-- C++
 helpviewer_keywords:
 - lgamma function
 - lgammal function
 - lgammaf function
 ms.assetid: 6e326c58-7077-481a-a329-c82ae56ae9e6
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4fb668e1c24d3f24331e0892002530192afdaeb6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 43ce1599ab9161b9fadf5643ddd2ec739ab2d8b8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400247"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50533479"
 ---
 # <a name="lgamma-lgammaf-lgammal"></a>lgamma、lgammaf、lgammal
 
@@ -72,7 +61,7 @@ long double lgamma( long double x ); //C++ only
 
 ## <a name="return-value"></a>返回值
 
-如果成功，返回的伽玛函数的绝对值的自然对数*x*。
+如果成功，返回的值的伽玛函数绝对值的自然对数*x*。
 
 |问题|返回|
 |-----------|------------|
@@ -87,9 +76,9 @@ long double lgamma( long double x ); //C++ only
 
 ## <a name="remarks"></a>备注
 
-由于 c + + 允许重载，你可以调用的重载**lgamma**采用并返回**float**和**长** **double**类型。 在 C 程序中， **lgamma**始终采用并返回**double**。
+由于 c + + 允许重载，可以调用的重载**lgamma**采用并返回**float**并**长** **double**类型。 在 C 程序中， **lgamma**始终采用并返回**double**。
 
-如果 x 为有理数，此函数将返回的阶乘计算的 (x-1) 的对数。
+如果 x 是有理数，则此函数返回 (x-1) 的阶乘的对数。
 
 ## <a name="requirements"></a>要求
 

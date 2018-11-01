@@ -1,10 +1,6 @@
 ---
-title: 编译器错误 C999 到 C1999 |Microsoft 文档
-ms.custom: ''
+title: 编译器错误 C999 到 C1999
 ms.date: 11/17/2017
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C1012
 - C1013
@@ -165,23 +161,17 @@ helpviewer_keywords:
 - C1901
 - C1903
 - C1904
-dev_langs:
-- C++
 ms.assetid: 6c8df109-7594-48ed-987a-97d9fe2b04af
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bdd0949d2d76cad636f833a75ea1371246ee3ebf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: edf2227bd0a542ce9ca5e8a6a3f908347bd816e6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33237258"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50677326"
 ---
 # <a name="compiler-fatal-errors-c999-through-c1999"></a>编译器错误 C999 到 C1999
 
-本部分中的文档的文章说明由编译器生成的错误消息的子集。
+在本部分文档中的文章说明了由编译器生成的错误消息的子集。
 
 [!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]
 
@@ -224,7 +214,7 @@ ms.locfileid: "33237258"
 |错误 C1048|未知选项“*string*”（在“*option*”中）|
 |错误 C1049|无效的数值参数“*value*”|
 |[错误 C1051](../../error-messages/compiler-errors-1/fatal-error-c1051.md)|程序数据库文件“*file*”具有过时的格式，将其删除并重新编译|
-|[错误 C1052](fatal-error-c1052.md)|程序数据库文件*filename*，通过使用 /debug: fastlink; 链接器生成的编译器无法更新此类 PDB 文件; 请删除它或使用 /Fd 来指定不同的 PDB 文件名|
+|[错误 C1052](fatal-error-c1052.md)|程序数据库文件*文件名*，由带 /debug: fastlink; 链接器生成的编译器无法更新此类 PDB 文件; 请删除它或使用 /Fd 来指定不同的 PDB 文件名|
 |错误 C1053|“*function*”：函数太大|
 |[错误 C1054](../../error-messages/compiler-errors-1/fatal-error-c1054.md)|编译器限制: 初始值设定项嵌套太深|
 |[错误 C1055](../../error-messages/compiler-errors-1/fatal-error-c1055.md)|编译器限制: 超出键范围|

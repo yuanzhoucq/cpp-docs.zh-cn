@@ -1,11 +1,6 @@
 ---
-title: fma、fmaf、fmal | Microsoft 文档
-ms.custom: ''
+title: fma、fmaf、fmal
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - fma
 - fmaf
@@ -30,23 +25,17 @@ f1_keywords:
 - math/fma
 - math/fmaf
 - math/fmal
-dev_langs:
-- C++
 helpviewer_keywords:
 - fma function
 - fmaf function
 - fmal function
 ms.assetid: 584a6037-da1e-4e86-9f0c-97aae86de0c0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b28009a9c3cc4edceb9032660a0c2a71916dfb2f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a3b540a72c6f2fc2264d6366111831fbe2a02a6b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401472"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50529943"
 ---
 # <a name="fma-fmaf-fmal"></a>fma、fmaf、fmal
 
@@ -106,10 +95,10 @@ long double fmal(
 
 |问题|返回|
 |-----------|------------|
-|*x* = 无穷大， *y* = 0 或<br /><br /> *x* = 0， *y* = 无穷大|NaN|
-|*x*或*y* = 确切 ± 无穷大， *z*符号相反 = 无穷大|NaN|
+|*x* = 无穷大*y* = 0 或<br /><br /> *x* = 0 时， *y* = INFINITY|NaN|
+|*x*或*y* = 确切为无穷大*z*符号相反 = INFINITY|NaN|
 |*x*或*y* = NaN|NaN|
-|不 (*x* = 0， *y*= 无限期) 和*z* = NaN<br /><br /> 不 (*x*= 无限期， *y*= 0) 和*z* = NaN|NaN|
+|不 (*x* = 0， *y*= 不定值) 和*z* = NaN<br /><br /> 不 (*x*= 不定值， *y*= 0) 和*z* = NaN|NaN|
 |溢出范围错误|±HUGE_VAL、 ±HUGE_VALF 或 ±HUGE_VALL|
 |下溢范围错误|舍入后的正确值。|
 
@@ -117,7 +106,7 @@ long double fmal(
 
 ## <a name="remarks"></a>备注
 
-由于 c + + 允许重载，你可以调用的重载**fma**采用并返回**float**和**长** **double**类型。 在 C 程序中， **fma**始终采用并返回**double**。
+由于 c + + 允许重载，可以调用的重载**fma**采用并返回**float**并**长** **double**类型。 在 C 程序中， **fma**始终采用并返回**double**。
 
 此函数计算值就好像它采取了无限精度，然后将最终结果舍入。
 

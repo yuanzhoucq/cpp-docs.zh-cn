@@ -1,29 +1,19 @@
 ---
-title: 按类别列出的编译器选项 |Microsoft Docs
-ms.custom: ''
+title: 按类别列出的编译器选项
 ms.date: 08/20/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a255259af5f660a11007005fd71f85bff80a8e05
-ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
+ms.openlocfilehash: 20dab3e4ec1d0a409d591e2b470e127e20156a8a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42575467"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50532946"
 ---
 # <a name="compiler-options-listed-by-category"></a>按类别列出的编译器选项
 
-本文包含编译器选项的分类列表。 按字母顺序排列的列表，请参阅[Compiler Options Listed Alphabetically](compiler-options-listed-alphabetically.md)。
+本文包含编译器选项的分类列表。 有关按字母顺序排序的列表，请参见 [Compiler Options Listed Alphabetically](compiler-options-listed-alphabetically.md)。
 
 ### <a name="optimization"></a>优化
 
@@ -65,9 +55,9 @@ ms.locfileid: "42575467"
 |[/guard:cf](guard-enable-control-flow-guard.md)|添加控制流防护安全检查。|
 |[/Gv](gd-gr-gv-gz-calling-convention.md)|使用 `__vectorcall` 调用约定。 （仅限 x86 和 x64）|
 |[/Gw](gw-optimize-global-data.md)|启用全程序全局数据优化。|
-|[/GX](gx-enable-exception-handling.md)|已否决。 启用同步异常处理。 使用[/EH](eh-exception-handling-model.md)相反。|
+|[/GX](gx-enable-exception-handling.md)|已否决。 启用同步异常处理。 改为使用 [/EH](eh-exception-handling-model.md) 。|
 |[/Gy](gy-enable-function-level-linking.md)|启用函数级链接。|
-|[/GZ](gz-enable-stack-frame-run-time-error-checking.md)|已否决。 启用快速检查。 (与相同[/rtc1](rtc-run-time-error-checks.md))|
+|[/GZ](gz-enable-stack-frame-run-time-error-checking.md)|已否决。 启用快速检查。 （与 [/RTC1](rtc-run-time-error-checks.md)相同）|
 |[/Gz](gd-gr-gv-gz-calling-convention.md)|使用 `__stdcall` 调用约定。 (仅限 x86)|
 |[/homeparams](homeparams-copy-register-parameters-to-stack.md)|强制将传入寄存器的参数写入其在函数入口的堆栈上的位置。 此编译器选项是仅针对 x64 编译器 （本机编译和跨平台编译）。|
 |[/hotpatch](hotpatch-create-hotpatchable-image.md)|创建可热修补的映像。|
@@ -80,7 +70,7 @@ ms.locfileid: "42575467"
 |[/Qspectre](qspectre.md)|启用 CVE 2017-5753，针对一类 Spectre 攻击的缓解措施。|
 |[/Qvec-report](qvec-report-auto-vectorizer-reporting-level.md)|启用自动矢量化的报告级别。|
 |[/RTC](rtc-run-time-error-checks.md)|启用运行时错误检查。|
-|[/ 易失性](volatile-volatile-keyword-interpretation.md)|选择如何解释 volatile 关键字。|
+|[/volatile](volatile-volatile-keyword-interpretation.md)|选择如何解释 volatile 关键字。|
 
 ### <a name="output-files"></a>输出文件
 
@@ -129,7 +119,7 @@ ms.locfileid: "42575467"
 |[/vmv](vmm-vms-vmv-general-purpose-representation.md)|声明虚拟继承。|
 |[/Z7](z7-zi-zi-debug-information-format.md)|生成与 C 7.0 兼容的调试信息。|
 |[/Za](za-ze-disable-language-extensions.md)|禁用语言扩展。|
-|[/Zc](zc-conformance.md)|指定下的标准行为[/Ze](za-ze-disable-language-extensions.md)。|
+|[/Zc](zc-conformance.md)|指定在 [/Ze](za-ze-disable-language-extensions.md)下的标准行为。|
 |[/Ze](za-ze-disable-language-extensions.md)|已否决。 启用语言扩展。|
 |[/Zf](zf.md)|改进了 PDB 中并行生成的生成时间。|
 |[/ZI](z7-zi-zi-debug-information-format.md)|将调试信息包含在与“编辑并继续”兼容的程序数据库中。 (仅限 x86)|
@@ -159,7 +149,7 @@ ms.locfileid: "42575467"
 |------------|-------------|
 |[/?](help-compiler-command-line-help.md)|列出编译器选项。|
 |[@](at-specify-a-compiler-response-file.md)|指定响应文件。|
-|[/ 分析](analyze-code-analysis.md)|启用代码分析。|
+|[/analyze](analyze-code-analysis.md)|启用代码分析。|
 |[/bigobj](bigobj-increase-number-of-sections-in-dot-obj-file.md)|增加 .obj 文件中可寻址节的数目。|
 |[/c](c-compile-without-linking.md)|编译但不链接。|
 |[/cgthreads](cgthreads-code-generation-threads.md)|指定 cl.exe 线程数以用于优化和代码生成。|
@@ -181,8 +171,8 @@ ms.locfileid: "42575467"
 |[/TP](tc-tp-tc-tp-specify-source-file-type.md)|指定源的所有文件都的 c + +。|
 |[/V](v-version-number.md)|已否决。 设置版本字符串。|
 |[/w](compiler-option-warning-level.md)|禁用所有警告。|
-|[/W0, /W1, /W2, /W3, /W4](compiler-option-warning-level.md)|设置输出警告级别。|
-|[/w1、 /w2、 /w3、 /w4](compiler-option-warning-level.md)|针对指定的警告设置警告级别。|
+|[/W0、/W1、/W2、/W3、/W4](compiler-option-warning-level.md)|设置输出警告级别。|
+|[/W1、/W2、/W3、/W4](compiler-option-warning-level.md)|针对指定的警告设置警告级别。|
 |[/Wall](compiler-option-warning-level.md)|启用所有警告，包括默认情况下禁用的警告。|
 |[/wd](compiler-option-warning-level.md)|禁用指定的警告。|
 |[/we](compiler-option-warning-level.md)|将指定的警告视为错误。|
@@ -191,7 +181,7 @@ ms.locfileid: "42575467"
 |[/Wv](compiler-option-warning-level.md)|禁用更高版本的编译器引入的警告。|
 |[/WX](compiler-option-warning-level.md)|将警告视为错误。|
 |[/Yc](yc-create-precompiled-header-file.md)|创建。PCH 文件。|
-|[/Yd](yd-place-debug-information-in-object-file.md)|已否决。 将完整的调试信息放在所有对象文件中。 使用[/Zi](z7-zi-zi-debug-information-format.md)相反。|
+|[/Yd](yd-place-debug-information-in-object-file.md)|已否决。 将完整的调试信息放在所有对象文件中。 改为使用 [/Zi](z7-zi-zi-debug-information-format.md) 。|
 |[/Yl](yl-inject-pch-reference-for-debug-library.md)|创建调试库时插入 PCH 引用。|
 |[/Yu](yu-use-precompiled-header-file.md)|在生成期间使用预编译头文件。|
 |[/Y-](y-ignore-precompiled-header-options.md)|忽略当前生成中的所有其他预编译头编译器选项。|
@@ -209,17 +199,17 @@ ms.locfileid: "42575467"
 
 |选项|目标|
 |------------|-------------|
-|[/clr:noAssembly](clr-common-language-runtime-compilation.md)|已否决。 使用[/LN （创建 MSIL 模块）](ln-create-msil-module.md)相反。|
+|[/clr:noAssembly](clr-common-language-runtime-compilation.md)|已否决。 请改用 [/LN (Create MSIL Module)](ln-create-msil-module.md) 。|
 |[/Fr](fr-fr-create-dot-sbr-file.md)|已否决。 创建无局部变量的浏览信息文件。|
 |[/Ge](ge-enable-stack-probes.md)|已否决。 激活堆栈探测。 默认开启。|
-|[/GX](gx-enable-exception-handling.md)|已否决。 启用同步异常处理。 使用[/EH](eh-exception-handling-model.md)相反。|
-|[/GZ](gz-enable-stack-frame-run-time-error-checking.md)|已否决。 启用快速检查。 使用[/rtc1](rtc-run-time-error-checks.md)相反。|
+|[/GX](gx-enable-exception-handling.md)|已否决。 启用同步异常处理。 改为使用 [/EH](eh-exception-handling-model.md) 。|
+|[/GZ](gz-enable-stack-frame-run-time-error-checking.md)|已否决。 启用快速检查。 改为使用 [/RTC1](rtc-run-time-error-checks.md) 。|
 |[/H](h-restrict-length-of-external-names.md)|已否决。 限制外部（公共）名称的长度。|
 |[/Og](og-global-optimizations.md)|已否决。 使用全局优化。|
 |[QIfist](qifist-suppress-ftol.md)|已否决。 曾用来指定如何从浮点类型转换到整型类型。|
 |[/V](v-version-number.md)|已否决。 设置 .obj 文件版本字符串。|
 |[/Wp64](wp64-detect-64-bit-portability-issues.md)|已过时。 检测 64 位可移植性问题。|
-|[/Yd](yd-place-debug-information-in-object-file.md)|已否决。 将完整的调试信息放在所有对象文件中。 使用[/Zi](z7-zi-zi-debug-information-format.md)相反。|
+|[/Yd](yd-place-debug-information-in-object-file.md)|已否决。 将完整的调试信息放在所有对象文件中。 改为使用 [/Zi](z7-zi-zi-debug-information-format.md) 。|
 |[/Zc:forScope-](zc-forscope-force-conformance-in-for-loop-scope.md)|已否决。 在 for 循环范围中禁用一致性。|
 |[/Ze](za-ze-disable-language-extensions.md)|已否决。 启用语言扩展。|
 |[/Zg](zg-generate-function-prototypes.md)|已在 Visual C++ 2015 中删除。 生成函数原型。|

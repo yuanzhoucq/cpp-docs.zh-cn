@@ -1,17 +1,11 @@
 ---
-title: 生成文件预处理指令 |Microsoft 文档
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: conceptual
+title: 生成文件预处理指令
+ms.date: 06/14/2018
 f1_keywords:
 - '!UNDEF'
 - '!INCLUDE'
 - '!IFNDEF'
 - '!MESSAGE'
-dev_langs:
-- C++
 helpviewer_keywords:
 - ERROR directive
 - '!MESSAGE directive'
@@ -45,59 +39,71 @@ helpviewer_keywords:
 - ELSE directive
 - ELSEIFDEF directive
 ms.assetid: bcedeccb-d981-469d-b9e8-ab5d097fd8c2
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6a84557388f521fb6c70c33ce6814ce33a5f6a1d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: adc81e5c4ea3d0d4a80e7efad4eaab15a5048cd3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50593565"
 ---
 # <a name="makefile-preprocessing-directives"></a>生成文件预处理指令
-预处理指令不区分大小写。 初始感叹号 （！） 必须出现在行开头。 零个或多个空格或选项卡可以显示感叹号来缩进的后面。  
-  
- **!CMDSWITCHES**  
- {**+** &#124; **-**}*选项*...将每个*选项*列出打开或关闭。 空格或制表符必须之前出现 + 或-运算符;无运算符之间可能会出现与[选项字母](../build/nmake-options.md)。 字母不区分大小写，并且不用反斜杠 （/） 指定。 若要打开上的某些选项而关闭，另外一些选项使用的**！CMDSWITCHES**。  
-  
- 仅 /D，/ I、 /N 和 /S 都可以在生成文件中使用。 Tools.ini，在所有选项都允许 /F、 /HELP、 /NOLOGO，除/X，和 /？。 描述块中指定的更改直到下一步的描述块不会生效。 此指令更新**MAKEFLAGS**; 如果更改期间递归继承**MAKEFLAGS**指定。  
-  
- **!错误***文本*   
- 显示*文本*错误 U1050，然后暂停 NMAKE，即使 /K，/ I， **。忽略**， **！CMDSWITCHES**，或使用短划线 （-） 命令修饰符。 包含空格或制表符之前*文本*将被忽略。  
-  
- **!消息***文本*   
- 显示*文本*到标准输出。 包含空格或制表符之前*文本*将被忽略。  
-  
- **!包括**[ **\<**] *filename*[ **>**]  
- 读取*filename*作为生成文件，然后继续执行当前生成文件。 NMAKE 中搜索*filename*首先在指定或当前目录中，然后以递归方式通过目录的任何父生成文件，然后，如果*filename*用尖括号括 (\<>)，指定目录中**包括**宏，最初设置为 INCLUDE 环境变量。 对于将**。后缀**设置， **。宝贵**，和为递归生成文件的推理规则。  
-  
- **!如果**  `constantexpression`  
- 如果前面的**！如果**和下一页**！其他**或`!ENDIF`如果`constantexpression`计算结果为一个非零值。  
-  
- **!IFDEF***macroname*   
- 如果前面的`!IFDEF`和下一页**！其他**或`!ENDIF`如果*macroname*定义。 Null 宏被视为已定义。  
-  
- **!IFNDEF***macroname*   
- 如果前面的**！IFNDEF**和下一页**！其他**或`!ENDIF`如果*macroname*未定义。  
-  
- **!其他**[**如果***常数表达式* &#124; **IFDEF** *macroname* &#124; **IFNDEF** *macroname*]  
- 如果前面的**！其他**和下一页`!ENDIF`如果事先**！如果**， `!IFDEF`，或**！IFNDEF**计算结果为零的语句。 可选关键字提供了进一步的预处理的控件。  
-  
- **!ELSEIF**  
- 同义词**！ELSE IF**。  
-  
- **!ELSEIFDEF**  
- 同义词**！其他 IFDEF**。  
-  
- **!ELSEIFNDEF**  
- 同义词**！其他 IFNDEF**。  
-  
- `!ENDIF`  
- 标记的结束**！如果**， `!IFDEF`，或**！IFNDEF**块。 之后的任何文本`!ENDIF`同一行上将被忽略。  
-  
- **!UNDEF***macroname*   
- 取消定义*macroname*。  
-  
-## <a name="see-also"></a>请参阅  
- [生成文件预处理](../build/makefile-preprocessing.md)
+
+预处理指令不区分大小写。 初始惊叹号 （！） 必须位于一行的开头。 零个或多个空格或选项卡可以显示感叹号的缩进的后面。
+
+- **!CMDSWITCHES** {**+** &#124; **-**}*选项*...
+
+   将每个*选项*列出打开或关闭。 空格或制表符必须在其之前显示 + 或-运算符;无运算符之间会出现并[选项字母](../build/nmake-options.md)。 字母不区分大小写，不含斜杠 （/） 指定。 若要打开上的某些选项而关闭，另外一些使用 **！CMDSWITCHES**。
+
+   仅 /D，/ 生成文件中可以使用我、 /N 和 /S。 Tools.ini 中的所有选项都允许除 /F、 /HELP、 /NOLOGO，/，X 和 /？。 描述块中指定的更改直到下一步的描述块不会生效。 此指令更新**MAKEFLAGS**; 如果更改在递归期间继承**MAKEFLAGS**指定。
+
+- **!错误***文本* 
+
+   显示*文本*错误 U1050，然后中止程序 NMAKE，即使 /K，/ I， **。忽略**， **！CMDSWITCHES**，或使用短划线 （-） 命令修饰符。 包含空格或选项卡之前*文本*将被忽略。
+
+- **!消息***文本* 
+
+   显示*文本*到标准输出。 包含空格或选项卡之前*文本*将被忽略。
+
+- **!包括**[ **\<** ] *filename* [ **>** ]
+
+   读取*文件名*作为生成文件，然后继续执行当前生成文件。 NMAKE 中搜索*文件名*首先在指定或当前目录中，然后以递归方式通过目录的任何父生成文件，然后，如果*filename*都括在尖括号 (\<>)，指定目录中**INCLUDE**宏，最初设置为 INCLUDE 环境变量。 对于将 **。后缀**设置， **。宝贵**，和推理规则来递归生成文件。
+
+- **!如果** *constant_expression*
+
+   如果前面的 **！如果**和下一页 **！其他**或 **！ENDIF**如果*constant_expression*计算结果为非零值。
+
+- **!IFDEF***macroname* 
+
+   如果前面的 **！IFDEF**和下一页 **！其他**或 **！ENDIF**如果*macroname*定义。 Null 宏被视为已定义。
+
+- **!IFNDEF***macroname* 
+
+   如果前面的 **！IFNDEF**和下一页 **！其他**或 **！ENDIF**如果*macroname*未定义。
+
+- **!其他**[**IF** *constant_expression* &#124; **IFDEF** *macroname* &#124; **IFNDEF** *macroname*]
+
+   如果前面的 **！其他**和下一页 **！ENDIF**如果之前的 **！如果**， **！IFDEF**，或 **！IFNDEF**语句的计算结果为零。 可选关键字提供了进一步的预处理的控件。
+
+- **!ELSEIF**
+
+   同义词 **！ELSE IF**。
+
+- **!ELSEIFDEF**
+
+   同义词 **！其他 IFDEF**。
+
+- **!ELSEIFNDEF**
+
+   同义词 **！其他 IFNDEF**。
+
+- **!ENDIF**
+
+   标记的末尾 **！如果**， **！IFDEF**，或 **！IFNDEF**块。 后的任何文本 **！ENDIF**在同一行上被忽略。
+
+- **!UNDEF***macroname* 
+
+   取消定义*macroname*。
+
+## <a name="see-also"></a>请参阅
+
+- [生成文件预处理](../build/makefile-preprocessing.md)

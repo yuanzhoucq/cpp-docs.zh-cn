@@ -1,10 +1,6 @@
 ---
-title: cosh、 coshf、 coshl |Microsoft 文档
-ms.custom: ''
+title: cosh、 coshf、 coshl
 ms.date: 04/11/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - cosh
 - coshf
@@ -26,28 +22,22 @@ f1_keywords:
 - cosh
 - coshf
 - coshl
-dev_langs:
-- C++
 helpviewer_keywords:
 - cosh function
 - coshf function
 - coshl function
 - trigonometric functions
 - hyperbolic functions
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d77bb1d1b8f055bb4fe11d4c44c48fb3bf3be535
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0f55e084e760cb6d04dbe7ec4fefb5e2ac1d79fd
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395466"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50609529"
 ---
 # <a name="cosh-coshf-coshl"></a>cosh、 coshf、 coshl
 
-计算的双曲余弦值。
+计算双曲余弦值。
 
 ## <a name="syntax"></a>语法
 
@@ -71,20 +61,20 @@ long double cosh( long double x );  // C++ only
 
 双曲余弦值*x*。
 
-默认情况下，如果结果过大**cosh**， **coshf**，或**coshl**调用，该函数将返回**HUGE_VAL**和设置**errno**到**ERANGE**。
+默认情况下，如果结果太大中**cosh**， **coshf**，或**coshl**调用，该函数将返回**HUGE_VAL**并设置**errno**到**ERANGE**。
 
 |输入|SEH 异常|Matherr 异常|
 |-----------|-------------------|-----------------------|
-|± **QNAN**， **IND**|无|**_DOMAIN**|
-|*x* ≥ 7.104760e + 002|**准确**+**溢出**|**溢出**|
+|为**QNAN**， **IND**|无|**（_D)**|
+|*x* ≥ 7.104760e+002|**不精确**+**溢出**|**溢出**|
 
 ## <a name="remarks"></a>备注
 
-由于 c + + 允许重载，你可以调用的重载**cosh**采用并返回**float**或**长** **double**值。 在 C 程序中， **cosh**始终采用并返回**double**。
+由于 c + + 允许重载，可以调用的重载**cosh**采用并返回**float**或**长** **double**值。 在 C 程序中， **cosh**始终采用并返回**double**。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头 (C)|必需的标头 (C++)|
+|例程所返回的值|必需的标头 (C)|必需的标头 (C++)|
 |-------------|---------------------|-|
 |**coshf**， **cosl**， **coshl**|\<math.h>|\<cmath> 或 \<math.h>|
 

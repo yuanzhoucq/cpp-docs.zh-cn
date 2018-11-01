@@ -1,28 +1,18 @@
 ---
-title: __vmx_vmwrite |Microsoft Docs
-ms.custom: ''
+title: __vmx_vmwrite
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - __vmx_vmwrite
-dev_langs:
-- C++
 helpviewer_keywords:
 - __vmx_vmwrite intrinsic
 - VMWRITE instruction
 ms.assetid: 88139792-fd3f-4210-97ca-9d84f43a0252
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f333a37972a31b5815a05797bfabb603f5a26947
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: c5c6e0edcb3136986cfd8e05f3d5217b3d021fa7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48820669"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50529241"
 ---
 # <a name="vmxvmwrite"></a>__vmx_vmwrite
 
@@ -33,7 +23,7 @@ ms.locfileid: "48820669"
 ## <a name="syntax"></a>语法
 
 ```
-unsigned char __vmx_vmwrite( 
+unsigned char __vmx_vmwrite( 
    size_t Field,
    size_t FieldValue
 );
@@ -56,7 +46,7 @@ unsigned char __vmx_vmwrite(
 
 ## <a name="remarks"></a>备注
 
-`__vmx_vmwrite`函数等同于`VMWRITE`计算机指令。 值`Field`参数是 Intel 文档中所述的编码的字段索引。 有关详细信息，搜索"Intel 虚拟化技术规范的 IA-32 Intel 体系结构，"文档在文档数字 C97063 002 [Intel Corporation](https://software.intel.com/articles/intel-sdm)站点，并请查阅该附录 C文档。
+`__vmx_vmwrite` 函数等同于 `VMWRITE` 计算机指令。 值`Field`参数是 Intel 文档中所述的编码的字段索引。 有关详细信息，搜索"Intel 虚拟化技术规范的 IA-32 Intel 体系结构，"文档在文档数字 C97063 002 [Intel Corporation](https://software.intel.com/articles/intel-sdm)站点，并请查阅该附录 C文档。
 
 ## <a name="requirements"></a>要求
 

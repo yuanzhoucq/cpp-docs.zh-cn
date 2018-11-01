@@ -1,10 +1,6 @@
 ---
-title: _lfind | Microsoft 文档
-ms.custom: ''
+title: _lfind
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _lfind
 apilocation:
@@ -23,8 +19,6 @@ apitype: DLLExport
 f1_keywords:
 - lfind
 - _lfind
-dev_langs:
-- C++
 helpviewer_keywords:
 - linear searching
 - lfind function
@@ -33,16 +27,12 @@ helpviewer_keywords:
 - finding keys in arrays
 - _lfind function
 ms.assetid: a40ece70-1674-4b75-94bd-9f57cfff18f2
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0c3bfc7b6abe5f0d5902a02c88e7d5ba16cb24ab
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 1508d54d6b2f2566e4aee3afef02af45b28e4f48
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34450645"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50579161"
 ---
 # <a name="lfind"></a>_lfind
 
@@ -68,7 +58,7 @@ void *_lfind(
 *base*<br/>
 指向搜索数据的基项的指针。
 
-*数*<br/>
+*数量*<br/>
 数组元素的数目。
 
 *width*<br/>
@@ -79,17 +69,17 @@ void *_lfind(
 
 ## <a name="return-value"></a>返回值
 
-如果找到该键， **_lfind**将指针返回到在数组的元素*基*匹配*密钥*。 如果未找到键， **_lfind**返回**NULL**。
+如果找到该键，则 **_lfind**处的数组的元素返回指向*基*相匹配*密钥*。 如果未找到该键， **_lfind**返回**NULL**。
 
 ## <a name="remarks"></a>备注
 
-**_Lfind**函数执行值的线性搜索*密钥*数组中的*数*元素，每个*宽度*字节。 与不同**bsearch**， **_lfind**不需要要进行排序的数组。 *基*自变量是指向要搜索的数组的基类。 *比较*自变量是指向比较两个数组元素，然后返回一个值，指定其关系的用户提供例程。 **_lfind**调用*比较*搜索，将指针传递给两个数组元素，在每次调用例程的一个或多个期间。 *比较*例程必须比较元素，然后返回非零 （这意味着元素不同） 或 0 （这意味着元素相同的）。
+**_Lfind**函数执行值的线性搜索*密钥*数组中的*数*，每个元素*宽度*字节。 与不同**bsearch**， **_lfind**不需要要进行排序的数组。 *基*参数是指向待搜索数组基的指针。 *比较*参数是指向用户提供的比较两个数组元素，然后返回一个值，指定其关系的例程的指针。 **_lfind**调用*比较*期间搜索，将指针传递给两个数组元素，在每次调用例程的一个或多个时间。 *比较*例程必须比较这些元素，然后返回非零值 （表示元素不同） 或 0 （表示元素相同）。
 
-此函数验证其参数。 如果*比较*，*密钥*或*数*是**NULL**，或者如果*基*是**NULL**和*数*不为零，或者如果*宽度*小于零，无效参数处理程序调用时中, 所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则**errno**设置为**EINVAL**和该函数将返回**NULL**。
+此函数验证其参数。 如果*比较*，*密钥*或*数*是**NULL**，或者如果*基*是**NULL**并*数*不为零，或者如果*宽度*小于零，无效参数处理程序调用，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则**errno**设置为**EINVAL**并且该函数返回**NULL**。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_lfind**|\<search.h>|
 

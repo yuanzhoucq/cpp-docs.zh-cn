@@ -1,11 +1,6 @@
 ---
-title: feraiseexcept | Microsoft 文档
-ms.custom: ''
+title: feraiseexcept
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - feraiseexcept
 apilocation:
@@ -23,21 +18,15 @@ apitype: HeaderDef
 f1_keywords:
 - feraiseexcept
 - fenv/feraiseexcept
-dev_langs:
-- C++
 helpviewer_keywords:
 - feraiseexcept function
 ms.assetid: 87e89151-83c2-4563-9a9a-45666245d437
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: dfd60612c92f8e3ff542fd22bbf5b4a01f7b7365
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 581dd4026a20ce7221945c5815af3ae102f132fa
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398632"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50532244"
 ---
 # <a name="feraiseexcept"></a>feraiseexcept
 
@@ -53,7 +42,7 @@ int feraiseexcept(
 
 ### <a name="parameters"></a>参数
 
-*excepts*<br/>
+*除*<br/>
 要引发的浮点异常。
 
 ## <a name="return-value"></a>返回值
@@ -62,7 +51,7 @@ int feraiseexcept(
 
 ## <a name="remarks"></a>备注
 
-**Feraiseexcept**函数尝试引发由指定的浮点异常*excepts*。   **Feraiseexcept**函数支持中定义这些异常宏\<v.h >:
+**Feraiseexcept**函数尝试引发由指定的浮点异常*除*。   **Feraiseexcept**函数支持中定义的这些异常宏\<fenv.h >:
 
 |异常宏|描述|
 |---------------------|-----------------|
@@ -73,11 +62,11 @@ int feraiseexcept(
 |FE_UNDERFLOW|早期的浮点运算结果因为过小而无法以完整的精度表示；创建了非常规值。|
 |FE_ALLEXCEPT|所有受支持的浮点异常的按位 OR。|
 
-*Excepts*参数可能为零，一个异常宏的值，或按位或两个或多个受支持的异常宏。 如果一个指定的异常宏是 FE_OVERFLOW 或 FE_UNDERFLOW，FE_INEXACT 异常可能会引发副作用。
+*除*参数可能为零、 一个异常宏值，或按位 OR 的两个或多个受支持的异常宏。 如果一个指定的异常宏是 FE_OVERFLOW 或 FE_UNDERFLOW，FE_INEXACT 异常可能会引发副作用。
 
 若要使用此函数，必须在调用前先使用 `#pragma fenv_access(on)` 指令关闭可能会阻止访问的浮点优化。 有关详细信息，请参阅 [fenv_access](../../preprocessor/fenv-access.md)。
 
-**Microsoft 专用：** 中指定的异常*excepts* FE_INVALID，顺序引发 FE_DIVBYZERO、 FE_OVERFLOW、 FE_UNDERFLOW、 FE_INEXACT。 但是，FE_INEXACT 可能引发 FE_OVERFLOW 或 FE_UNDERFLOW 发出时，即使中未指定*excepts*。 **结束 Microsoft 专用**
+**Microsoft 专用：** 中指定的异常*除*引发顺序 FE_INVALID、 FE_DIVBYZERO、 FE_OVERFLOW、 FE_UNDERFLOW、 FE_INEXACT。 但是，可能引发 FE_INEXACT 当引发 FE_OVERFLOW 或 FE_UNDERFLOW 时，即使在未指定*除*。 **结束 Microsoft 专用**
 
 ## <a name="requirements"></a>要求
 

@@ -1,23 +1,13 @@
 ---
-title: ARM 汇编程序指令 |Microsoft Docs
-ms.custom: ''
+title: ARM 汇编程序指令
 ms.date: 08/30/2018
-ms.technology:
-- cpp-masm
-ms.topic: reference
-dev_langs:
-- C++
 ms.assetid: 9cfa8896-ec10-4e77-855a-3135c40d7d2a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5c37e010caa6c7cfb44ddaf2f7dd1e28bbb5c291
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 9124f893b3334e0893073332c9d5f5a1388373d9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45717699"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50592447"
 ---
 # <a name="arm-assembler-directives"></a>ARM 汇编程序指令
 
@@ -67,7 +57,7 @@ ms.locfileid: "45717699"
 
    > **导出**|**GLOBAL** <em>符号</em>{**[**<em>类型</em>**]**}
 
-   *符号*是要导出的符号。  [*类型*]，如果指定，可以是`[DATA]`以指示数据点符号或`[FUNC]`以指示符号是否指向代码。 `GLOBAL` 是的同义词`EXPORT`。
+   *符号*是要导出的符号。  [*类型*]，如果指定，可以是`[DATA]`以指示数据点符号或`[FUNC]`以指示符号是否指向代码。 `GLOBAL` 是 `EXPORT`的同义词。
 
 - EXPORTAS
 

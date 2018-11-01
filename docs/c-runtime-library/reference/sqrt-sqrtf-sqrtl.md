@@ -1,10 +1,6 @@
 ---
-title: sqrt、sqrtf、sqrtl | Microsoft 文档
-ms.custom: ''
+title: sqrt、sqrtf、sqrtl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - sqrtl
 - sqrtf
@@ -26,8 +22,6 @@ f1_keywords:
 - sqrt
 - sqrtf
 - _sqrtl
-dev_langs:
-- C++
 helpviewer_keywords:
 - sqrtf function
 - sqrt function
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - calculating square roots
 - square roots, calculating
 ms.assetid: 2ba9467b-f172-41dc-8f10-b86f68fa813c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a6eefbbf3269ad809cdf30dd3ea034f7ca6c8ad8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c44f8813812b2aeffc2680a0a666d968bb2b4da6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407296"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50560571"
 ---
 # <a name="sqrt-sqrtf-sqrtl"></a>sqrt、sqrtf、sqrtl
 
@@ -78,7 +68,7 @@ long double sqrtl(
 
 ## <a name="remarks"></a>备注
 
-由于 c + + 允许重载，你可以调用的重载**sqrt**采用**float**或**长** **double**类型。 在 C 程序中， **sqrt**始终采用并返回**double**。
+由于 c + + 允许重载，可以调用的重载**sqrt**采用**float**或**长** **double**类型。 在 C 程序中， **sqrt**始终采用并返回**double**。
 
 ## <a name="return-value"></a>返回值
 

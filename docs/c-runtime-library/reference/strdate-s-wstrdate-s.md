@@ -1,10 +1,6 @@
 ---
-title: _strdate_s、_wstrdate_s | Microsoft 文档
-ms.custom: ''
+title: _strdate_s、_wstrdate_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _strdate_s
 - _wstrdate_s
@@ -27,8 +23,6 @@ f1_keywords:
 - _wstrdate_s
 - strdate_s
 - _tstrdate_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - dates, copying
 - tstrdate_s function
@@ -39,16 +33,12 @@ helpviewer_keywords:
 - _strdate_s function
 - _wstrdate_s function
 ms.assetid: d41d8ea9-e5ce-40d4-864e-1ac29b455991
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8e4e9ff3783fc7a89e7af42ebf283209c034c0d6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 85c9ab7dcad68f3aa4832236461cd38b07d4ae44
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414306"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50629003"
 ---
 # <a name="strdates-wstrdates"></a>_strdate_s、_wstrdate_s
 
@@ -98,17 +88,17 @@ errno_t _wstrdate_s(
 
 ## <a name="security-issues"></a>安全性问题
 
-传递中的无效非**NULL**值缓冲区会导致访问冲突，如果*numberOfElements*参数大于 9。
+传入无效非**NULL**值的缓冲区将导致访问冲突，如果*numberOfElements*参数大于 9。
 
-传递大小的值大于的实际大小*缓冲区*将导致缓冲区溢出。
+将大小的值传递大于的实际大小*缓冲区*将导致缓冲区溢出。
 
 ## <a name="remarks"></a>备注
 
-这些函数提供更多安全版本 **_strdate**和 **_wstrdate**。 **_Strdate_s**函数将当前系统日期复制到通过指向的缓冲区*缓冲区*格式化**mm**/**dd** / **yy**，其中**mm**是两个数字表示的月**dd**是两个数字表示天，和**yy**是年份的最后两位数。 例如，在字符串**12/05/99**表示 1999 年 12 月 5 日。 缓冲区长度必须至少为 9 个字符。
+这些函数提供更多安全版本 **_strdate**并 **_wstrdate**。 **_Strdate_s**函数将当前系统日期复制到由指向的缓冲区*缓冲区*格式化**mm**/**dd** / **yy**，其中**mm**是两位数表示月**dd**是两位数表示日，和**yy**是一年中的最后两位数字。 例如，字符串**12/05/99**表示 1999 年 12 月 5 日。 缓冲区长度必须至少为 9 个字符。
 
-**_wstrdate_s**是宽字符版本的 **_strdate_s**; 的自变量和返回值 **_wstrdate_s**是宽字符字符串。 否则这些函数具有相同行为。
+**_wstrdate_s**是宽字符版本 **_strdate_s**; 的自变量和返回值 **_wstrdate_s**都是宽字符字符串。 否则这些函数具有相同行为。
 
-如果*缓冲区*是**NULL**指针，或如果*numberOfElements*小于 9 个字符，则调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则这些函数将返回-1 并设置**errno**到**EINVAL**如果缓冲区已**NULL**或如果*numberOfElements*小于或等于 0 或一组**errno**到**ERANGE**如果*numberOfElements*小于 9。
+如果*缓冲区*是**NULL**指针，或者，如果*numberOfElements*小于 9 个字符，将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，这些函数将返回-1 并设置**errno**到**EINVAL**如果缓冲区**NULL**或者如果*numberOfElements*是否小于或等于 0 或一组**errno**到**ERANGE**如果*numberOfElements*小于 9。
 
 在 C++ 中，使用这些函数由模板重载简化；重载可以自动推导出缓冲区长度 (不再需要指定大小自变量)，并且它们可以自动用以更新、更安全的对应物替换旧的、不安全的函数。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 
@@ -120,7 +110,7 @@ errno_t _wstrdate_s(
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_strdate**|\<time.h>|
 |**_wstrdate**|\<time.h> 或 \<wchar.h>|

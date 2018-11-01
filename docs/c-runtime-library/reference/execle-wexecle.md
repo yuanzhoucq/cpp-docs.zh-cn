@@ -1,10 +1,6 @@
 ---
-title: _execle、_wexecle | Microsoft 文档
-ms.custom: ''
+title: _execle，_wexecle
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _execle
 - _wexecle
@@ -25,24 +21,18 @@ f1_keywords:
 - wexecle
 - _execle
 - _wexecle
-dev_langs:
-- C++
 helpviewer_keywords:
 - wexecle function
 - execle function
 - _wexecle function
 - _execle function
 ms.assetid: 75efa9c5-96b7-4e23-acab-06258901f63a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 519cdb78132c50513ae3197985de7faaceff7c91
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: dbd84dd8d8e150a063dad4dc89a572c317bce544
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400637"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50530515"
 ---
 # <a name="execle-wexecle"></a>_execle，_wexecle
 
@@ -101,7 +91,7 @@ intptr_t _wexecle(
 
 其中每个函数都加载并执行一个新进程，将每个命令行自变量作为单独参数进行传递，并将一个数组指针传递给环境设置。
 
-**_Execle**函数验证其参数。 如果*cmdname*或*arg0*是 null 指针或空字符串，这些函数将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则这些函数将设置**errno**到**EINVAL**并返回-1。 将不启动新进程。
+**_Execle**函数验证其参数。 如果*cmdname*或*arg0*是空指针或空字符串，这些函数将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许继续执行，这些函数将设置**errno**到**EINVAL**并返回-1。 将不启动新进程。
 
 ## <a name="requirements"></a>要求
 

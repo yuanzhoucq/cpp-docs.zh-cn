@@ -1,29 +1,18 @@
 ---
-title: 编辑二进制数据 （c + +） |Microsoft Docs
-ms.custom: ''
+title: 编辑二进制数据 （c + +）
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.binary
-dev_langs:
-- C++
 helpviewer_keywords:
 - binary data, editing
 - binary data
 ms.assetid: 0fd429de-baf1-4871-b5e4-42bf868a3261
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 050f52dface260da77f7290f47a9cbb204caaafe
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 472bd18fe52f15f0578fd97f5cc0f270d88bd3fb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315453"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50514707"
 ---
 # <a name="editing-binary-data"></a>编辑二进制数据
 

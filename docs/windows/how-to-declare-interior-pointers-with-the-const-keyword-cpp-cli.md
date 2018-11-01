@@ -1,26 +1,16 @@
 ---
-title: 如何： 用 const 关键字声明内部指针 (C + + CLI) |Microsoft Docs
-ms.custom: ''
+title: 如何：用 const 关键字声明内部指针 (C++/CLI)
 ms.date: 10/12/2018
-ms.technology:
-- cpp-windows
 ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - pointers, interior
 ms.assetid: 64e08b0e-9396-4046-ab51-8f6588f32330
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 3781caf8d45037ae634ea4baccc8f297aa344609
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: f687ed3540512ee4e0a0e11b39fa22b867154d4e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49327500"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50587208"
 ---
 # <a name="how-to-declare-interior-pointers-with-the-const-keyword-ccli"></a>如何：用 const 关键字声明内部指针 (C++/CLI)
 

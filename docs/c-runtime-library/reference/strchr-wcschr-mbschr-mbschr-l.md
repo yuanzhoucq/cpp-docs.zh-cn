@@ -1,10 +1,6 @@
 ---
-title: strchr、wcschr、_mbschr、_mbschr_l | Microsoft 文档
-ms.custom: ''
+title: strchr、wcschr、_mbschr、_mbschr_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - strchr
 - wcschr
@@ -31,8 +27,6 @@ f1_keywords:
 - wcschr
 - _tcschr
 - _mbschr
-dev_langs:
-- C++
 helpviewer_keywords:
 - strings [C++], searching
 - mbschr function
@@ -47,16 +41,12 @@ helpviewer_keywords:
 - tcschr function
 - mbschr_l function
 ms.assetid: 2639905d-e983-43b7-b885-abef32cfac43
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f72bb476d50f9f8d382657ed3b9109bc6a399a09
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 8668c186a16dc3f3dc2c7223eb10c100fa6d72fa
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46020280"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50543069"
 ---
 # <a name="strchr-wcschr-mbschr-mbschrl"></a>strchr、wcschr、_mbschr、_mbschr_l
 
@@ -159,7 +149,7 @@ null 终止的源字符串。
 |-------------|---------------------|
 |`strchr`|\<string.h>|
 |`wcschr`|\<string.h> 或 \<wchar.h>|
-|`_mbschr`, `_mbschr_l`|\<mbstring.h>|
+|`_mbschr`， `_mbschr_l`|\<mbstring.h>|
 
 有关兼容性的更多信息，请参见 [兼容性](../../c-runtime-library/compatibility.md)。
 

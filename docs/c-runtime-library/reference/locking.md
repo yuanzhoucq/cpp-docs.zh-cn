@@ -1,10 +1,6 @@
 ---
-title: _locking | Microsoft 文档
-ms.custom: ''
+title: _locking
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _locking
 apilocation:
@@ -22,8 +18,6 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _locking
-dev_langs:
-- C++
 helpviewer_keywords:
 - locking function
 - bytes [C++], locking file
@@ -31,16 +25,12 @@ helpviewer_keywords:
 - files [C++], locking
 - _locking function
 ms.assetid: 099aaac1-d4ca-4827-aed6-24dff9844150
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1666f631d9bceccb8925b2002b797753e024ab9d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1309d99d8e7040626384e38324c1e910e4731295
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404141"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50523789"
 ---
 # <a name="locking"></a>_locking
 
@@ -69,14 +59,14 @@ int _locking(
 
 ## <a name="return-value"></a>返回值
 
-**_locking**如果成功，则返回 0。 返回值-1 指示失败，在这种情况下[errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)设置为以下值之一。
+**_locking**如果成功，则返回 0。 返回值-1 表示失败，在这种情况下[errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)设置为以下值之一。
 
 |errno 值|条件|
 |-|-|
 **EACCES**|锁定冲突（文件已锁定或已解锁）。
 **EBADF**|无效的文件描述符。
-**EDEADLOCK**|锁定冲突。 返回时 **_LK_LOCK**或 **_LK_RLCK**指定标志和尝试了 10 次后，不能锁定该文件。
-**EINVAL**|无效的自变量提供给 **_locking**。
+**EDEADLOCK**|锁定冲突。 时返回 **_LK_LOCK**或 **_LK_RLCK**指定标志，该文件不能在 10 次尝试后锁定。
+**EINVAL**|无效的参数将提供给 **_locking**。
 
 如果失败是由错误参数导致，如无效的文件描述符，则调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。
 
@@ -94,11 +84,11 @@ int _locking(
 **_LK_RLCK**|与相同 **_LK_LOCK**。
 **_LK_UNLCK**|要解锁的指定字节必须在之前锁定过。
 
-可以锁定文件中不重叠的多个区域。 正在解锁的区域必须在之前锁定过。 **_locking**不会合并相邻区域; 如果有两个锁定的区域相邻，每个区域必须解锁单独。 区域应只是暂时锁定，在关闭文件或退出程序前应进行解锁。
+可以锁定文件中不重叠的多个区域。 正在解锁的区域必须在之前锁定过。 **_locking**不会合并相邻区域; 如果有两种锁定的区域相邻，每个区域必须单独解锁。 区域应只是暂时锁定，在关闭文件或退出程序前应进行解锁。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|可选标头|
+|例程所返回的值|必需的标头|可选标头|
 |-------------|---------------------|---------------------|
 |**_locking**|\<io.h 1> 和 \<sys/locking.h 1>|\<errno.h>|
 

@@ -1,10 +1,6 @@
 ---
-title: _strlwr、_wcslwr、_mbslwr、_strlwr_l、_wcslwr_l、_mbslwr_l | Microsoft 文档
-ms.custom: ''
+title: _strlwr、_wcslwr、_mbslwr、_strlwr_l、_wcslwr_l、_mbslwr_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _strlwr_l
 - _strlwr
@@ -35,8 +31,6 @@ f1_keywords:
 - strlwr_l
 - _tcslwr
 - mbslwr
-dev_langs:
-- C++
 helpviewer_keywords:
 - tcslwr function
 - _strlwr function
@@ -61,23 +55,19 @@ helpviewer_keywords:
 - strings [C++], converting case
 - _mbslwr_l function
 ms.assetid: d279181d-2e7d-401f-ab44-6e7c2786a046
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3468795c1f99bd6e79f9b10aae2a220a1876f4c7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a442afd0ede8d9c6e892f50c12153b22f80733b0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413253"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50505685"
 ---
 # <a name="strlwr-wcslwr-mbslwr-strlwrl-wcslwrl-mbslwrl"></a>_strlwr、_wcslwr、_mbslwr、_strlwr_l、_wcslwr_l、_mbslwr_l
 
 将字符串转换成小写形式。 这些函数的更安全版本已经发布，请参阅 [_strlwr_s、_strlwr_s_l、_mbslwr_s、_mbslwr_s_l、_wcslwr_s、_wcslwr_s_l ](strlwr-s-strlwr-s-l-mbslwr-s-mbslwr-s-l-wcslwr-s-wcslwr-s-l.md)。
 
 > [!IMPORTANT]
-> **_mbslwr**和 **_mbslwr_l**不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
+> **_mbslwr**并 **_mbslwr_l**不能在 Windows 运行时中执行的应用程序中使用。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
 
 ## <a name="syntax"></a>语法
 
@@ -146,11 +136,11 @@ null 终止的字符串转换为小写。
 
 ## <a name="remarks"></a>备注
 
-**_Strlwr**函数将转换在中的使用任何大写字母*str*为小写所确定的那样**LC_CTYPE**类别设置的区域设置。 其他字符不受影响。 有关详细信息**LC_CTYPE**，请参阅[setlocale](setlocale-wsetlocale.md)。 版本的这些功能，而不必 **_l**后缀使用当前区域设置为其区域设置相关的行为; 的版本与 **_l**后缀是相同，只不过它们使用传递的区域设置相反。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+**_Strlwr**函数将转换中的任何大写字母*str*为小写，具体取决于**LC_CTYPE**类别设置的区域设置。 其他字符不受影响。 有关详细信息**LC_CTYPE**，请参阅[setlocale](setlocale-wsetlocale.md)。 无需这些函数的版本 **_l**后缀的当前区域设置用于其区域设置相关的行为; 的版本与 **_l**后缀完全相同，只不过它们使用传入的区域设置改为。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
-**_Wcslwr**和 **_mbslwr**函数是宽字符及多字节字符版本的 **_strlwr**。 自变量和返回值 **_wcslwr**是宽字符字符串; 而的 **_mbslwr**是多字节字符字符串。 否则这三个函数否则具有相同行为。
+**_Wcslwr**并 **_mbslwr**函数是宽字符及多字节字符版本的 **_strlwr**。 自变量和返回值 **_wcslwr**是宽字符字符串; **_mbslwr**是多字节字符字符串。 否则这三个函数否则具有相同行为。
 
-如果*str*是**NULL**指针，无效参数处理程序调用中所述，[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则这些函数返回的原始字符串和集**errno**到**EINVAL**。
+如果*str*是**NULL**调用指针，无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则这些函数将返回原始字符串并设置**errno**到**EINVAL**。
 
 在 C++ 中，这些函数具有模板重载，以调用这些函数的更新、更安全副本。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 
@@ -163,7 +153,7 @@ null 终止的字符串转换为小写。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_strlwr**， **_strlwr_l**|\<string.h>|
 |**_wcslwr**， **_wcslwr_l**|\<string.h> 或 \<wchar.h>|

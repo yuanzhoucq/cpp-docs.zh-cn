@@ -1,12 +1,6 @@
 ---
-title: 任务并行 （并发运行时） |Microsoft Docs
-ms.custom: ''
+title: 任务并行（并发运行时）
 ms.date: 11/04/2016
-ms.technology:
-- cpp-concrt
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - structured task groups [Concurrency Runtime]
 - structured tasks [Concurrency Runtime]
@@ -14,16 +8,12 @@ helpviewer_keywords:
 - task parallelism
 - tasks [Concurrency Runtime]
 ms.assetid: 42f05ac3-2098-494a-ba84-737fcdcad077
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7ec6e99b3e4f1e86d9f0ee42ca92a93a57b1a1fb
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 43af08f3be75bff7621cd2f57b9d50b658420f26
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46378080"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50630420"
 ---
 # <a name="task-parallelism-concurrency-runtime"></a>任务并行（并发运行时）
 

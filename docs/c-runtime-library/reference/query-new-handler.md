@@ -1,10 +1,6 @@
 ---
-title: _query_new_handler | Microsoft 文档
-ms.custom: ''
+title: _query_new_handler
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _query_new_handler
 apilocation:
@@ -23,24 +19,18 @@ apitype: DLLExport
 f1_keywords:
 - _query_new_handler
 - query_new_handler
-dev_langs:
-- C++
 helpviewer_keywords:
 - query_new_handler function
 - handler routines
 - error handling
 - _query_new_handler function
 ms.assetid: 9a84b5c3-fe33-4c01-83a0-be87dc3ec518
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 340574a57bf1e6309ac9a5e1aa59b7e28632ae59
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: febefbe46d95b7e5c8de026806a20d7eff74e7cc
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400994"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50515990"
 ---
 # <a name="querynewhandler"></a>_query_new_handler
 
@@ -56,15 +46,15 @@ _PNH _query_new_handler(
 
 ## <a name="return-value"></a>返回值
 
-返回当前新处理程序例程的地址，如所设置 **_set_new_handler**。
+以集的形式返回当前新处理程序例程的地址 **_set_new_handler**。
 
 ## <a name="remarks"></a>备注
 
-C + + **_query_new_handler**函数返回由 c + + 设置的当前异常处理函数的地址[_set_new_handler](set-new-handler.md)函数。 **_set_new_handler**用于指定是如果获取控制权的异常处理函数**新**运算符无法分配内存。 有关详细信息，请参阅“C++ 语言参考”中的 [new 和 delete 运算符](../../cpp/new-and-delete-operators.md)的讨论。
+C + + **_query_new_handler**函数返回由 c + + 设置的当前异常处理函数的地址[_set_new_handler](set-new-handler.md)函数。 **_set_new_handler**用于指定如果获取控制权的异常处理函数**新**运算符无法分配内存。 有关详细信息，请参阅“C++ 语言参考”中的 [new 和 delete 运算符](../../cpp/new-and-delete-operators.md)的讨论。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_query_new_handler**|\<new.h>|
 

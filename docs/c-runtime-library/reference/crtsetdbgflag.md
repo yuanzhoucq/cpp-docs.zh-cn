@@ -1,10 +1,6 @@
 ---
-title: _CrtSetDbgFlag | Microsoft 文档
-ms.custom: ''
+title: _CrtSetDbgFlag
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtSetDbgFlag
 apilocation:
@@ -32,8 +28,6 @@ f1_keywords:
 - _CRTDBG_CHECK_EVERY_1024_DF
 - _CrtSetDbgFlag
 - CRTDBG_REPORT_FLAG
-dev_langs:
-- C++
 helpviewer_keywords:
 - _CRTDBG_CHECK_EVERY_16_DF macro
 - CRTDBG_CHECK_EVERY_16_DF macro
@@ -56,16 +50,12 @@ helpviewer_keywords:
 - CRTDBG_CHECK_CRT_DF macro
 - _CRTDBG_CHECK_CRT_DF macro
 ms.assetid: b5657ffb-6178-4cbf-9886-1af904ede94c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 413504d8941aab1585ff03d361f8081fef4529a2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1113854f1b41081ddcf59444786109fb5eabc65d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404768"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50621086"
 ---
 # <a name="crtsetdbgflag"></a>_CrtSetDbgFlag
 
@@ -90,7 +80,7 @@ int _CrtSetDbgFlag(
 
 ## <a name="remarks"></a>备注
 
-**_CrtSetDbgFlag**函数允许应用程序控制调试堆管理器如何跟踪通过修改的位域的内存分配 **_crtDbgFlag**标志。 通过设置位（打开），该应用程序可指示调试堆管理器执行特殊的调试操作，包括在应用程序退出时检查内存泄露并报告是否找到任何内存泄露、通过指定已释放的内存块应保留在堆的链接列表中来模拟内存不足情况，以及通过在每次分配请求时检查每个内存块来验证该堆的完整性。 当[_DEBUG](../../c-runtime-library/debug.md)未定义，则调用 **_CrtSetDbgFlag**在预处理过程中删除。
+**_CrtSetDbgFlag**函数允许应用程序来控制调试堆管理器如何通过修改的位域跟踪内存分配 **_crtDbgFlag**标志。 通过设置位（打开），该应用程序可指示调试堆管理器执行特殊的调试操作，包括在应用程序退出时检查内存泄露并报告是否找到任何内存泄露、通过指定已释放的内存块应保留在堆的链接列表中来模拟内存不足情况，以及通过在每次分配请求时检查每个内存块来验证该堆的完整性。 当[_DEBUG](../../c-runtime-library/debug.md)未定义，则调用 **_CrtSetDbgFlag**在预处理过程中删除。
 
 下表列出了 **_crtDbgFlag** 的位域并描述了其行为。 因为设置位将导致诊断输出增加、程序执行速度减慢，因此在默认情况下不会设置这些位（已关闭）。 有关这些位域的详细信息，请参阅[堆状态报告函数](/visualstudio/debugger/crt-debug-heap-details)。
 
@@ -104,9 +94,9 @@ int _CrtSetDbgFlag(
 
 **堆频率检查宏**
 
-你可以指定 C 运行时库执行的调试堆的验证的频率 (**_CrtCheckMemory**) 基于对的调用数**malloc**， **realloc**， **免费**，和 **_msize**。
+您可以指定何种频率 C 运行时库执行调试堆的验证 (**_CrtCheckMemory**) 对的调用数根据**malloc**， **realloc**， **免费**，并 **_msize**。
 
-**_CrtSetDbgFlag**然后检查的 16 位*newFlag*参数的值。 指定的值是数**malloc**， **realloc**，**免费**，和 **_msize**之间调用 **_CrtCheckMemory**调用。 为此，将提供四个预定义的宏。
+**_CrtSetDbgFlag**然后会检查的 16 位*newFlag*参数的值。 指定的值是数**malloc**， **realloc**，**免费**，以及 **_msize**调用之间 **_CrtCheckMemory**调用。 为此，将提供四个预定义的宏。
 
 |宏|对 _CrtCheckMemory 的调用之间的 malloc、realloc、free 和 _msize 调用数|
 |-----------|------------------------------------------------------------------------------------------|
@@ -115,9 +105,9 @@ int _CrtSetDbgFlag(
 |_CRTDBG_CHECK_EVERY_1024_DF|1024|
 |_CRTDBG_CHECK_DEFAULT_DF|0（默认情况下，不存在堆检查）|
 
-默认情况下， **_CrtCheckMemory**一旦调用每个 1,024 时间称为**malloc**， **realloc**，**免费**，和 **_msize**。
+默认情况下 **_CrtCheckMemory**将调用一次调用每个 1,024 次**malloc**， **realloc**，**免费**，和 **_msize**。
 
-例如，可以指定 1 次堆检查每个 16 **malloc**， **realloc**，**免费**，和 **_msize**操作替换为以下代码：
+例如，可以指定堆检查每个 16 **malloc**， **realloc**，**免费**，以及 **_msize**操作使用以下代码：
 
 ```C
 #include <crtdbg.h>
@@ -136,13 +126,13 @@ int main( )
 }
 ```
 
-16 位*newFlag*指定 _CRTDBG_CHECK_ALWAYS_DF 时，将忽略参数。 在这种情况下， **_CrtCheckMemory**称为您每次调用**malloc**， **realloc**，**免费**，和 **_msize**.
+16 位*newFlag*指定 _CRTDBG_CHECK_ALWAYS_DF 时，将忽略参数。 在这种情况下， **_CrtCheckMemory**每次调用将调用**malloc**， **realloc**，**免费**，和 **_msize**.
 
-*newFlag*是要应用于的新状态 **_crtDbgFlag** ，适用于每个位字段的值的组合。
+*newFlag*是新的状态要应用于 **_crtDbgFlag**和是每位域的值的组合。
 
 ### <a name="to-change-one-or-more-of-these-bit-fields-and-create-a-new-state-for-the-flag"></a>更改一个或多个位域并创建标志的新状态
 
-1. 调用 **_CrtSetDbgFlag**与*newFlag*等于 **_CRTDBG_REPORT_FLAG**以获取当前 **_crtDbgFlag**状态和存储在临时变量中的返回的值。
+1. 调用 **_CrtSetDbgFlag**与*newFlag*等于 **_CRTDBG_REPORT_FLAG**获取当前 **_crtDbgFlag**状态，并存储在临时变量中返回的值。
 
 1. 打开任何位的按位**或**带相应位屏蔽 （在应用程序代码中由清单常量显示） 的临时变量。
 
@@ -150,7 +140,7 @@ int main( )
 
 1. 调用 **_CrtSetDbgFlag**与*newFlag*等于要设置的新状态的临时变量中存储的值 **_crtDbgFlag**。
 
-下面的代码演示如何模拟内存不足条件通过让释放在堆链接列表中的内存块，并防止 **_CrtCheckMemory**在每个分配请求调用：
+以下代码演示了如何模拟内存不足条件通过保留已释放在堆链接列表中的内存块，并防止 **_CrtCheckMemory**在每次分配请求被调用：
 
 ```C
 // Get the current state of the flag
@@ -171,13 +161,13 @@ _CrtSetDbgFlag( tmpFlag );
 
 有关内存管理和调试堆的概述，请参阅 [CRT 调试堆详细信息](/visualstudio/debugger/crt-debug-heap-details)。
 
-若要禁用标志 **_CrtSetDbgFlag**函数，你应该**AND**的变量进行的按位**不**的位掩码。
+若要禁用标志 **_CrtSetDbgFlag**函数，您应**AND**与按位变量**不**的位掩码。
 
-如果*newFlag*不是有效的值，此函数将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，此函数将**errno**到**EINVAL**并返回的前一状态 **_crtDbgFlag**。
+如果*newFlag*不是有效的值，此函数将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，此函数可设置**errno**到**EINVAL** ，并返回的前一状态 **_crtDbgFlag**。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_CrtSetDbgFlag**|\<crtdbg.h>|
 
@@ -254,5 +244,5 @@ int main( )
 ## <a name="see-also"></a>请参阅
 
 [调试例程](../../c-runtime-library/debug-routines.md)<br/>
-[_crtDbgFlag](../../c-runtime-library/crtdbgflag.md)<br/>
+[_CRTDBG_CHECK_CRT_DF](../../c-runtime-library/crtdbgflag.md)<br/>
 [_CrtCheckMemory](crtcheckmemory.md)<br/>

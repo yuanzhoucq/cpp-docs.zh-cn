@@ -1,27 +1,17 @@
 ---
-title: ctype_base 类 | Microsoft 文档
-ms.custom: ''
+title: ctype_base 类
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - locale/std::ctype_base
-dev_langs:
-- C++
 helpviewer_keywords:
 - ctype_base class
 ms.assetid: ccffe891-d7ab-4d22-baf8-8eb6d438a96d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3def685a8cd108666b3e1b8be9314fc7585a9837
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 83ef35f9fac438cfa217decf222abd365ff84269
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844889"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50531126"
 ---
 # <a name="ctypebase-class"></a>ctype_base 类
 
@@ -79,7 +69,7 @@ struct ctype_base : public locale::facet
 
 - **graph**（函数 [isgraph](../standard-library/locale-functions.md#isgraph)）
 
-通过实现或运算这些常量，可以确定分类组合的特征。 具体而言，它是始终为 true， **alnum** = = (**字母** &#124; **数字**\)和**graph** \=\= \( **alnum** &#124; **标点符号**)。
+通过实现或运算这些常量，可以确定分类组合的特征。 具体而言，它是始终为 true， **alnum** = = ( **alpha** &#124; **数字**\)并**图形** \=\= \( **alnum** &#124; **punct**)。
 
 ## <a name="requirements"></a>要求
 

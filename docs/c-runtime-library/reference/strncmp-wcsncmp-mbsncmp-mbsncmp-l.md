@@ -1,10 +1,6 @@
 ---
-title: strncmp、wcsncmp、_mbsncmp、_mbsncmp_l | Microsoft 文档
-ms.custom: ''
+title: strncmp、wcsncmp、_mbsncmp、_mbsncmp_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - strncmp
 - _mbsncmp
@@ -33,8 +29,6 @@ f1_keywords:
 - strncmp
 - _mbsncmp
 - wcsncmp
-dev_langs:
-- C++
 helpviewer_keywords:
 - _tcsnccmp function
 - ftcsncmp function
@@ -54,23 +48,19 @@ helpviewer_keywords:
 - characters [C++], comparing
 - _ftcsnccmp function
 ms.assetid: 2fdbf4e6-77da-4b59-9086-488f6066b8af
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a64d7248151287f4f2af38e666db62f9a15d833f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b8b5472289bacc940bb0cbea7876f246243660bf
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417348"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50523747"
 ---
 # <a name="strncmp-wcsncmp-mbsncmp-mbsncmpl"></a>strncmp、wcsncmp、_mbsncmp、_mbsncmp_l
 
 比较高达两个字符串指定数量的字符。
 
 > [!IMPORTANT]
-> **_mbsncmp**和 **_mbsncmp_l**不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
+> **_mbsncmp**并 **_mbsncmp_l**不能在 Windows 运行时中执行的应用程序中使用。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
 
 ## <a name="syntax"></a>语法
 
@@ -115,25 +105,25 @@ int _mbsncmp_l(
 
 ## <a name="return-value"></a>返回值
 
-返回值指示的子字符串的关系*string1*和*string2* ，如下所示。
+返回值表示的子字符串的关系*string1*并*string2* ，如下所示。
 
 |返回值|描述|
 |------------------|-----------------|
-|< 0|*string1*子字符串小于*string2*子字符串|
+|< 0|*string1*的子字符串小于*string2*子字符串|
 |0|*string1*子字符串等于*string2*子字符串|
 |> 0|*string1*子字符串大于*string2*子字符串|
 
-参数验证错误时， **_mbsncmp**和 **_mbsncmp_l**返回 **_NLSCMPERROR**中, 定义\<string.h > 和\<值 >。
+参数验证错误时， **_mbsncmp**并 **_mbsncmp_l**返回 **_NLSCMPERROR**，其定义中\<string.h > 和\<值 >。
 
 ## <a name="remarks"></a>备注
 
-**Strncmp**函数执行序号比较最多的第一个*计数*中的字符*string1*和*string2*和返回一个值，该值指示子字符串之间的关系。 **strncmp**是区分大小写版本 **_strnicmp**。 **wcsncmp**和 **_mbsncmp**的区分大小写版本 **_wcsnicmp**和 **_mbsnicmp**。
+**Strncmp**函数执行的最多前的序号比较*计数*中的字符*string1*并*string2*和返回一个值，该值指示子字符串之间的关系。 **strncmp**是区分大小写的版本 **_strnicmp**。 **wcsncmp**并 **_mbsncmp**区分大小写版本的 **_wcsnicmp**并 **_mbsnicmp**。
 
-**wcsncmp**和 **_mbsncmp**宽字符及多字节字符版本的**strncmp**。 自变量**wcsncmp**是宽字符字符串; 而的 **_mbsncmp**是多字节字符字符串。 **_mbsncmp**根据多字节代码页识别多字节字符序列，并返回 **_NLSCMPERROR**发生错误时。
+**wcsncmp**并 **_mbsncmp**宽字符及多字节字符版本的**strncmp**。 参数**wcsncmp**是宽字符字符串; **_mbsncmp**是多字节字符字符串。 **_mbsncmp**根据多字节代码页识别多字节字符序列，并返回 **_NLSCMPERROR**发生错误时。
 
-此外， **_mbsncmp**和 **_mbsncmp_l**验证参数。 如果*string1*或*string2*是 null 指针，则调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则 **_mbsncmp**和 **_mbsncmp_l**返回 **_NLSCMPERROR**并设置**errno**到**EINVAL**。 **strncmp**和**wcsncmp**不会验证其参数。 否则这些函数具有相同行为。
+此外， **_mbsncmp**并 **_mbsncmp_l**验证参数。 如果*string1*或*string2*是 null 指针，将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则 **_mbsncmp**并 **_mbsncmp_l**返回 **_NLSCMPERROR**并设置**errno**到**EINVAL**。 **strncmp**并**wcsncmp**不会验证其参数。 否则这些函数具有相同行为。
 
-比较行为 **_mbsncmp**和 **_mbsncmp_l**的设置会影响**LC_CTYPE**类别设置的区域设置。 这会控制对多字节字符的前导和尾随字节的检测。 有关详细信息，请参阅 [setlocale](setlocale-wsetlocale.md)。 **_Mbsncmp**函数依赖于区域设置的行为使用当前区域设置。 **_Mbsncmp_l**函数是相同，但它使用*区域设置*参数相反。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。 如果区域设置是单字节区域设置，则这些函数的行为等同于**strncmp**。
+比较行为 **_mbsncmp**并 **_mbsncmp_l**的设置影响**LC_CTYPE**类别设置的区域设置。 这会控制对多字节字符的前导和尾随字节的检测。 有关详细信息，请参阅 [setlocale](setlocale-wsetlocale.md)。 **_Mbsncmp**函数依赖于区域设置的行为使用当前区域设置。 **_Mbsncmp_l**函数是完全相同，只不过它使用*区域设置*参数相反。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。 如果区域设置是单字节，则这些函数的行为等同于**strncmp**。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -146,7 +136,7 @@ int _mbsncmp_l(
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**strncmp**|\<string.h>|
 |**wcsncmp**|\<string.h> 或 \<wchar.h>|

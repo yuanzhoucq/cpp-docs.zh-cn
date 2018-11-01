@@ -1,12 +1,6 @@
 ---
-title: 函数具有变量自变量列表 （C++） |Microsoft 文档
-ms.custom: ''
+title: 包含变量自变量列表的函数 （C++）
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - arguments [C++], variable number of
 - variable argument lists
@@ -15,16 +9,12 @@ helpviewer_keywords:
 - declaring functions [C++], variables
 - function calls, variable number of arguments
 ms.assetid: 27c2f83a-21dd-44c6-913c-2834cb944703
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e27d32ad117c7d202a9e6824ddbf7387647fd708
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 1f366af6f4058ffb8356017d59a7c176a978b860
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46118578"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50637292"
 ---
 # <a name="functions-with-variable-argument-lists--c"></a>包含变量自变量列表的函数 （C++）
 
@@ -124,9 +114,9 @@ void ShowVar( char *szTypes, ... ) {
 
 上一个示例演示以下重要概念：
 
-1. 在访问任何变量参数前，必须建立一个列表标记作为类型 `va_list` 的变量。 在前面的示例中，该标记称为 `vl`。
+1. 在访问任何变量自变量前，必须建立一个列表标记作为类型 `va_list` 的变量。 在前面的示例中，该标记称为 `vl`。
 
-1. 使用 `va_arg` 宏访问各个参数。 必须告知 `va_arg` 宏要检索的参数的类型，以便它可以从堆栈中传输正确的字节数。 如果为 `va_arg` 指定的大小的类型与通过调用程序提供的类型不同，则结果是不可预知的。
+1. 使用 `va_arg` 宏访问各个自变量。 必须告知 `va_arg` 宏要检索的自变量的类型，以便它可以从堆栈中传输正确的字节数。 如果为 `va_arg` 指定的大小的类型与通过调用程序提供的类型不同，则结果是不可预知的。
 
 1. 应将使用 `va_arg` 宏获取的结果显式强制转换为所需类型。
 

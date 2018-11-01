@@ -1,30 +1,20 @@
 ---
-title: -堆 |Microsoft Docs
-ms.custom: ''
+title: /HEAP
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /heap
-dev_langs:
-- C++
 helpviewer_keywords:
 - heap allocation, setting heap size
 - HEAP editbin option
 - -HEAP editbin option
 - /HEAP editbin option
 ms.assetid: 6ce759b5-75b7-44ff-a5fd-3a83a0ba9a48
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 22698760ba23dc60b64002f0f728bb7a036f6731
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 89f7b2449adc392c3ec254de9e9518be6fbecfa2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45699811"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50534207"
 ---
 # <a name="heap"></a>/HEAP
 
@@ -38,7 +28,7 @@ reserve[,commit]
 
 ## <a name="remarks"></a>备注
 
-`reserve` 参数指定虚拟内存中的初始堆分配总量。 默认情况下，堆大小为 1 MB。 [EDITBIN 参考](../../build/reference/editbin-reference.md)调高为指定的值为 4 个字节的最接近倍数。
+`reserve` 自变量指定虚拟内存中的初始堆分配总量。 默认情况下，堆大小为 1 MB。 [EDITBIN 参考](../../build/reference/editbin-reference.md)调高为指定的值为 4 个字节的最接近倍数。
 
 可选`commit`参数是取决于操作系统的解释。 在 Windows 操作系统中，它指定最初要分配的物理内存量和在展开堆时要分配的额外内存量。 提交的虚拟内存后，在分页文件为保留的空间。 当应用需要更多堆空间但又会增加内存需求和可能的应用启动持续时间时，提高 `commit` 值可减少系统分配的内存。 `commit` 值必须小于或等于 `reserve` 值。
 

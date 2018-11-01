@@ -1,10 +1,6 @@
 ---
-title: COleDispatchDriver 类 |Microsoft Docs
-ms.custom: ''
+title: COleDispatchDriver 类
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - COleDispatchDriver
 - AFXDISP/COleDispatchDriver
@@ -18,8 +14,6 @@ f1_keywords:
 - AFXDISP/COleDispatchDriver::SetProperty
 - AFXDISP/COleDispatchDriver::m_bAutoRelease
 - AFXDISP/COleDispatchDriver::m_lpDispatch
-dev_langs:
-- C++
 helpviewer_keywords:
 - COleDispatchDriver [MFC], COleDispatchDriver
 - COleDispatchDriver [MFC], AttachDispatch
@@ -32,16 +26,12 @@ helpviewer_keywords:
 - COleDispatchDriver [MFC], m_bAutoRelease
 - COleDispatchDriver [MFC], m_lpDispatch
 ms.assetid: 3ed98daf-cdc7-4374-8a0c-cf695a8d3657
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: da7093d25e8221ce3fc3ec8d0d13f8bbc5b420d2
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: f6e52d993619929666d61f019c1f6d5d28243ab1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821317"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50569204"
 ---
 # <a name="coledispatchdriver-class"></a>COleDispatchDriver 类
 
@@ -111,7 +101,7 @@ OLE 调度接口提供对对象的方法和属性访问。 成员函数`COleDisp
 
 ##  <a name="attachdispatch"></a>  COleDispatchDriver::AttachDispatch
 
-调用 `AttachDispatch` 成员函数以将 `IDispatch` 指针附加到 `COleDispatchDriver` 对象。 有关详细信息，请参阅[实现 IDispatch 接口](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)。
+调用 `AttachDispatch` 成员函数以将 `IDispatch` 指针附加到 `COleDispatchDriver` 对象。 有关更多信息，请参见 [Implementing the IDispatch Interface](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)。
 
 ```
 void AttachDispatch(
@@ -162,15 +152,15 @@ COleDispatchDriver(const COleDispatchDriver& dispatchSrc);
 
 在窗体`COleDispatchDriver`( **const**`COleDispatchDriver`& `dispatchSrc`) 将复制的现有`COleDispatchDriver`对象并递增引用计数。
 
-在窗体`COleDispatchDriver`（） 创建`COleDispatchDriver`对象，但不会连接`IDispatch`接口。 使用之前`COleDispatchDriver`（不带参数），则应在连接`IDispatch`与其使用[coledispatchdriver:: Createdispatch](#createdispatch)或[COleDispatchDriver::AttachDispatch](#attachdispatch)。 有关详细信息，请参阅[实现 IDispatch 接口](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)。
+在窗体`COleDispatchDriver`（） 创建`COleDispatchDriver`对象，但不会连接`IDispatch`接口。 使用之前`COleDispatchDriver`（不带参数），则应在连接`IDispatch`与其使用[coledispatchdriver:: Createdispatch](#createdispatch)或[COleDispatchDriver::AttachDispatch](#attachdispatch)。 有关更多信息，请参见 [Implementing the IDispatch Interface](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)。
 
 ### <a name="example"></a>示例
 
-  有关示例，请参阅[coledispatchdriver:: Createdispatch](#createdispatch)。
+  请参阅 [COleDispatchDriver::CreateDispatch](#createdispatch)的示例。
 
 ##  <a name="createdispatch"></a>  Coledispatchdriver:: Createdispatch
 
-创建[IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)接口对象并将其附加到`COleDispatchDriver`对象。
+创建一个 [IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface) 接口对象，并将其附加到 `COleDispatchDriver` 对象。
 
 ```
 BOOL CreateDispatch(
@@ -240,7 +230,7 @@ void GetProperty(
 标识要检索的属性。
 
 *vtProp*<br/>
-指定要检索的属性。 有关可能的值，请参阅备注部分[coledispatchdriver:: Invokehelper](#invokehelper)。
+指定要检索的属性。 有关可能的值，请参阅备注部分 [COleDispatchDriver::InvokeHelper](#invokehelper)。
 
 *pvProp*<br/>
 将接收属性值的变量的地址。 它必须匹配指定的类型*vtProp*。
@@ -304,7 +294,7 @@ void AFX_CDECL InvokeHelper(
 |VT_VARIANT|**变体**|
 |VT_UNKNOWN|LPUNKNOWN|
 
-*PbParamInfo*参数是以空格分隔的列表**VTS_** 常量。 其中一个或多个值（由空格（而不是逗号）分隔）指定函数的参数列表。 列出可能的值[EVENT_CUSTOM](event-maps.md#event_custom)宏。
+*PbParamInfo*参数是以空格分隔的列表**VTS_** 常量。 其中一个或多个值（由空格（而不是逗号）分隔）指定函数的参数列表。 可能值使用 [EVENT_CUSTOM](event-maps.md#event_custom) 宏来列出。
 
 此函数将参数转换为 VARIANTARG 值，然后调用[idispatch:: Invoke](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke)方法。 如果 `Invoke` 调用失败，则此函数会引发异常。 如果返回 SCODE （状态代码），那么`IDispatch::Invoke`是 DISP_E_EXCEPTION，此函数将引发[COleException](../../mfc/reference/coleexception-class.md)对象; 否则将引发[COleDispatchException](../../mfc/reference/coledispatchexception-class.md)。
 
@@ -312,7 +302,7 @@ void AFX_CDECL InvokeHelper(
 
 ### <a name="example"></a>示例
 
-  有关示例，请参阅[coledispatchdriver:: Createdispatch](#createdispatch)。
+  请参阅 [COleDispatchDriver::CreateDispatch](#createdispatch)的示例。
 
 ##  <a name="m_bautorelease"></a>  COleDispatchDriver::m_bAutoRelease
 
@@ -407,7 +397,7 @@ void AFX_CDECL SetProperty(
 标识要设置的属性。
 
 *vtProp*<br/>
-指定要设置的属性的类型。 有关可能的值，请参阅备注部分[coledispatchdriver:: Invokehelper](#invokehelper)。
+指定要设置的属性的类型。 有关可能的值，请参阅备注部分 [COleDispatchDriver::InvokeHelper](#invokehelper)。
 
 *...*<br/>
 指定的类型的单个参数*vtProp*。

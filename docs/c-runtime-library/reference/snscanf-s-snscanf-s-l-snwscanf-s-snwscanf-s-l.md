@@ -1,10 +1,6 @@
 ---
-title: _snscanf_s、_snscanf_s_l、_snwscanf_s、_snwscanf_s_l | Microsoft 文档
-ms.custom: ''
+title: _snscanf_s、_snscanf_s_l、_snwscanf_s、_snwscanf_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _snwscanf_s_l
 - _snwscanf_s
@@ -35,8 +31,6 @@ f1_keywords:
 - _sntscanf_s_l
 - _snscanf_s_l
 - sntscanf_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - _snscanf_s_l function
 - snwscanf_s function
@@ -54,16 +48,12 @@ helpviewer_keywords:
 - _sntscanf_s function
 - snwscanf_s_l function
 ms.assetid: 72356653-7362-461a-af73-597b9c0a8094
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 08c269d0139767f260c68d07d660ecc818b36cc4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b7f6fbbcdb6e3fa9d3137337992b2de0d81c1287
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411404"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50533323"
 ---
 # <a name="snscanfs-snscanfsl-snwscanfs-snwscanfsl"></a>_snscanf_s、_snscanf_s_l、_snwscanf_s、_snwscanf_s_l
 
@@ -102,7 +92,7 @@ int __cdecl _snwscanf_s_l(
 要检查的输入字符串。
 
 *length*<br/>
-要在中检查的字符数*输入*。
+要检查中的字符数*输入*。
 
 *format*<br/>
 一个或多个格式说明符。
@@ -111,26 +101,26 @@ int __cdecl _snwscanf_s_l(
 要使用的区域设置。
 
 *argument_list*<br/>
-要分配根据格式字符串的可选自变量。
+要分配根据格式字符串的可选参数。
 
 ## <a name="return-value"></a>返回值
 
-这两个函数都将返回已成功转换并分配的字段的数目；返回值不包括已读取但未分配的字段。 返回值为 0 表示没有分配任何字段。 返回值是**EOF**是否有错误或如果在第一次转换之前到达字符串的末尾。 有关详细信息，请参阅 [sscanf_s、_sscanf_s_l、swscanf_s、_swscanf_s_l](sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md)。
+这两个函数都将返回已成功转换并分配的字段的数目；返回值不包括已读取但未分配的字段。 返回值为 0 表示没有分配任何字段。 返回值是**EOF**错误或如果在第一个转换之前到达字符串的末尾。 有关详细信息，请参阅 [sscanf_s、_sscanf_s_l、swscanf_s、_swscanf_s_l](sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md)。
 
-如果*输入*或*格式*是**NULL**指针，无效参数处理程序调用中所述，[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则这些函数将返回**EOF**并设置**errno**到**EINVAL**。
+如果*输入*或*格式*是**NULL**调用指针，无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，这些函数将返回**EOF**并设置**errno**到**EINVAL**。
 
 有关这些及其他错误代码的信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>备注
 
-此函数相当**sscanf_s** ，只不过它提供了指定要在输入字符串检查的字符的固定的数量的能力。 有关详细信息，请参阅 [sscanf_s、_sscanf_s_l、swscanf_s、_swscanf_s_l](sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md)。
+此函数是像**sscanf_s** ，只不过它提供指定固定的数量的字符从输入字符串检查的功能。 有关详细信息，请参阅 [sscanf_s、_sscanf_s_l、swscanf_s、_swscanf_s_l](sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md)。
 
-缓冲区大小参数是必需的类型字段字符**c**， **C**， **s**， **S**，和 **[**. 有关详细信息，请参阅 [scanf 类型字段字符](../../c-runtime-library/scanf-type-field-characters.md)。
+缓冲区大小参数是必需的类型字段字符**c**， **C**， **s**， **S**，并 **[**. 有关详细信息，请参阅 [scanf 类型字段字符](../../c-runtime-library/scanf-type-field-characters.md)。
 
 > [!NOTE]
-> 大小参数属于类型**无符号**，而不**size_t**。
+> 大小参数的类型是**无符号**，而非**size_t**。
 
-使用这些函数的版本 **_l**后缀是相同，只不过它们使用传递而不是当前线程区域设置的区域设置参数。
+使用这些函数的版本 **_l**后缀完全相同，只不过它们使用传递中而不是当前线程区域设置的区域设置参数。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -141,7 +131,7 @@ int __cdecl _snwscanf_s_l(
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_snscanf_s**， **_snscanf_s_l**|\<stdio.h>|
 |**_snwscanf_s**， **_snwscanf_s_l**|\<stdio.h> 或 \<wchar.h>|

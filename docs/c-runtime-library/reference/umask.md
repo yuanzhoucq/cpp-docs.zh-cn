@@ -1,10 +1,6 @@
 ---
-title: _umask | Microsoft 文档
-ms.custom: ''
+title: _umask
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _umask
 apilocation:
@@ -22,8 +18,6 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _umask
-dev_langs:
-- C++
 helpviewer_keywords:
 - masks, file-permission-setting
 - _umask function
@@ -32,16 +26,12 @@ helpviewer_keywords:
 - file permissions [C++]
 - files [C++], permission settings for
 ms.assetid: 5e9a13ba-5321-4536-8721-6afb6f4c8483
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ce3053bfb19cc81dff15d41d1b5bc6d405da619f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f51e2c19933953eb4910cdeb5e1ec50b7387bd59
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412610"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50677157"
 ---
 # <a name="umask"></a>_umask
 
@@ -64,7 +54,7 @@ int _umask( int pmode );
 
 ## <a name="remarks"></a>备注
 
-**_Umask**函数将当前进程的文件权限掩码设置为所指定的模式*pmode*。 将文件权限掩码修改创建的新文件的权限设置 **_creat**， **_open**，或 **_sopen**。 如果掩码中的一位是 1，则将文件的请求权限值中相应的一位设置为 0 (不允许)。 如果掩码中的一位是 0，则相应的一位保留不变。 直至首次关闭新文件时才会设置新文件的权限设置。
+**_Umask**函数将当前进程的文件权限掩码设置为所指定的模式*pmode*。 文件权限掩码修改创建的新文件的权限设置 **_creat**， **_open**，或 **_sopen**。 如果掩码中的一位是 1，则将文件的请求权限值中相应的一位设置为 0 (不允许)。 如果掩码中的一位是 0，则相应的一位保留不变。 直至首次关闭新文件时才会设置新文件的权限设置。
 
 整数表达式*pmode*包含一个或两个 SYS\STAT 中定义的以下清单常量。H:
 
@@ -74,13 +64,13 @@ int _umask( int pmode );
 **_S_IREAD**|允许读取。
 **_S_IREAD** \| **_S_IWRITE**|允许读取和写入。
 
-当给定这两个常量时，它们是否联接使用按位 OR 运算符 ( **|** )。 如果*pmode*自变量是 **_S_IREAD**，不允许读取 （文件是只写）。 如果*pmode*自变量是 **_S_IWRITE**，不允许写入 （文件是只读的）。 例如，如果掩码中设置了写入位，则任何新文件都将为只读。 请注意在 MS-DOS 和 Windows 操作系统下，所有文件均可读；不可能提供只写权限。 因此，设置位与读取 **_umask**不起作用的文件的模式。
+当给定这两个常量时，它们使用按位 OR 运算符联接 ( **|** )。 如果*pmode*自变量是 **_S_IREAD**，则不允许读取 （此文件为只写）。 如果*pmode*自变量是 **_S_IWRITE**，则不允许写入 （文件是只读的）。 例如，如果掩码中设置了写入位，则任何新文件都将为只读。 请注意在 MS-DOS 和 Windows 操作系统下，所有文件均可读；不可能提供只写权限。 因此，设置读取位与 **_umask**不起作用的文件模式。
 
-如果*pmode*不是清单常量之一的组合或合并了一组备用的常量，该函数将仅忽略的那些。
+如果*pmode*不是清单常量之一的组合或合并了一组替代常量，该函数将会忽略这些。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_umask**|\<io.h>、\<sys/stat.h>、\<sys/types.h>|
 

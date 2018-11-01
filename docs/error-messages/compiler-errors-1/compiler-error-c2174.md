@@ -1,27 +1,17 @@
 ---
-title: 编译器错误 C2174 |Microsoft Docs
-ms.custom: ''
+title: 编译器错误 C2174
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2174
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2174
 ms.assetid: 161d563c-76e9-47e9-9142-7812e9ea169e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a8a7dc9cee6bf24f4605455818a32bd757bcd60c
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: c9634dea7a29df55612c2f20e70c94601881af57
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46052362"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50549963"
 ---
 # <a name="compiler-error-c2174"></a>编译器错误 C2174
 

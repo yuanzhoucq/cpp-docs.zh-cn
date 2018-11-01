@@ -1,10 +1,6 @@
 ---
-title: _get_printf_count_output | Microsoft 文档
-ms.custom: ''
+title: _get_printf_count_output
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _get_printf_count_output
 apilocation:
@@ -23,23 +19,17 @@ apitype: DLLExport
 f1_keywords:
 - get_printf_count_output
 - _get_printf_count_output
-dev_langs:
-- C++
 helpviewer_keywords:
 - '%n format'
 - get_printf_count_output function
 - _get_printf_count_output function
 ms.assetid: 850f9f33-8319-433e-98d8-6a694200d994
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 216df8d973f391db2b6114d9bbcb50dcf509c5b5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 477e4a9e987f27bd70b9707e91b9ea9d84b69993
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398359"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50610624"
 ---
 # <a name="getprintfcountoutput"></a>_get_printf_count_output
 
@@ -53,15 +43,15 @@ int _get_printf_count_output();
 
 ## <a name="return-value"></a>返回值
 
-非零值; 如果 **%n**支持，则 0 如果 **%n**不支持。
+非零值; 如果 **%n**支持，0 **%n**不受支持。
 
 ## <a name="remarks"></a>备注
 
-如果 **%n**不是支持 （默认值）、 遇到 **%n**任一的格式字符串中**printf**函数将调用无效参数处理程序中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果 **%n**启用支持 (请参阅[_set_printf_count_output](set-printf-count-output.md)) 然后 **%n**中所述的表现[格式规范语法： printf 和 wprintf函数](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)。
+如果 **%n**是不受支持 （默认值），遇到 **%n**中的任何格式字符串**printf**函数将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果 **%n**支持功能 (请参阅[_set_printf_count_output](set-printf-count-output.md)) 然后 **%n**中所述的行为[格式规范语法： printf 和 wprintf函数](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_get_printf_count_output**|\<stdio.h>|
 

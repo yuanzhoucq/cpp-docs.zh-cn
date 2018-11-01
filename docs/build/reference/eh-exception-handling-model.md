@@ -1,16 +1,10 @@
 ---
-title: -EH （异常处理模型） |Microsoft Docs
-ms.custom: ''
+title: /EH（异常处理模型）
 ms.date: 08/14/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLWCECompilerTool.ExceptionHandling
 - /eh
 - VC.Project.VCCLCompilerTool.ExceptionHandling
-dev_langs:
-- C++
 helpviewer_keywords:
 - exception handling, compiler model
 - cl.exe compiler, exception handling
@@ -18,16 +12,12 @@ helpviewer_keywords:
 - -EH compiler option [C++]
 - /EH compiler option [C++]
 ms.assetid: 754b916f-d206-4472-b55a-b6f1b0f2cb4d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e2c368ac8dfcb5a9d283f4b567e68d4a629c1ba4
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f118f55ddaa4a2dbc8a4a3ad1e596ec461a2b078
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46417418"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50615054"
 ---
 # <a name="eh-exception-handling-model"></a>/EH（异常处理模型）
 
@@ -42,7 +32,7 @@ ms.locfileid: "46417418"
 |||
 |-|-|
 **a**|异常处理模型同时捕获异步 （结构化） 和 c + + 的同步 （c + +） 异常情况下使用`catch(...)`语法。
-**秒**|异常处理模型的同步 （c + +） 仅捕获异常并通知编译器假定函数声明为**extern"C"** 可能会引发异常。
+**s**|异常处理模型的同步 （c + +） 仅捕获异常并通知编译器假定函数声明为**extern"C"** 可能会引发异常。
 **c**|如果用于**s** (**/EHsc**)、 c + + 仅捕获异常并通知编译器假定函数声明为**extern"C"** 从未引发 c + + 异常。 **/EHca** 与 **/EHa**相等。
 **r**|告知编译器始终生成运行时终止检查所有**noexcept**函数。 默认情况下，运行时检查**noexcept**可能被优化掉如果编译器确定该函数调用仅非引发函数。
 

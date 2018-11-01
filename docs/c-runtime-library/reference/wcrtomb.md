@@ -1,10 +1,6 @@
 ---
-title: wcrtomb | Microsoft 文档
-ms.custom: ''
+title: wcrtomb
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - wcrtomb
 apilocation:
@@ -22,24 +18,18 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - wcrtomb
-dev_langs:
-- C++
 helpviewer_keywords:
 - wide characters, converting
 - wcrtomb function
 - multibyte characters
 - characters, converting
 ms.assetid: 717f1b21-2705-4b7f-b6d0-82adc5224340
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: eca27e81cbb1df26d04059974cdc1ce5313bafa3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a5fad3f41c7ed459a1af3fae7c6a5a85c867d5ad
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412672"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50659246"
 ---
 # <a name="wcrtomb"></a>wcrtomb
 
@@ -70,7 +60,7 @@ size_t wcrtomb(
 要转换的宽字符。
 
 *mbstate*<br/>
-指向的指针**mbstate_t**对象。
+一个指向**mbstate_t**对象。
 
 ## <a name="return-value"></a>返回值
 
@@ -78,17 +68,17 @@ size_t wcrtomb(
 
 ## <a name="remarks"></a>备注
 
-**Wcrtomb**函数将宽字符，从开始中包含的指定的转换状态转换*mbstate*中, 包含的值从*wchar*，到地址由*mbchar*。 返回值是表示相应的多字节字符，所需的字节数，但它不会返回多个**MB_CUR_MAX**字节。
+**Wcrtomb**函数将转换的宽字符，包含在指定的转换状态开始*mbstate*，从中包含的值*wchar*，到地址由*mbchar*。 返回值是表示相应多字节字符，所需的字节数，但它不会返回多个**MB_CUR_MAX**字节。
 
-如果*mbstate*为 null，内部**mbstate_t**对象，其中包含的转换状态*mbchar*使用。 如果字符序列*wchar*没有相应的多字节字符表示形式，则返回-1 和**errno**设置为**EILSEQ**。
+如果*mbstate*为 null，内部**mbstate_t**对象，其中包含的转换状态*mbchar*使用。 如果字符序列*wchar*不具有相应的多字节字符表示形式，则返回-1 并**errno**设置为**EILSEQ**。
 
-**Wcrtomb**函数不同于[wctomb、 _wctomb_l](wctomb-wctomb-l.md)通过其可重启性。 转换状态存储在*mbstate*以便后续调用相同的或其他可重启函数。 混合使用可重启函数和不可重启函数时，结果不确定。 例如，应用程序将使用**wcsrlen**而非**wcsnlen**，如果的后续调用**wcsrtombs**而不是使用**wcstombs**.
+**Wcrtomb**函数不同于[wctomb、 _wctomb_l](wctomb-wctomb-l.md)通过其可重启性。 转换状态存储在*mbstate*以便后续调用相同或其他可重启函数。 混合使用可重启函数和不可重启函数时，结果不确定。 例如，使用应用程序**wcsrlen**而非**wcsnlen**，则随后调用**wcsrtombs**而不是使用了**wcstombs**.
 
 在 C++ 中，此函数具有一个调用此函数的更新、更安全副本的模板重载。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 
 ## <a name="exceptions"></a>异常
 
-**Wcrtomb**函数是多线程安全，前提是当前线程中的函数不调用**setlocale**执行此函数时，可以在时*mbstate*为 null。
+**Wcrtomb**函数是多线程安全，只要当前线程中的函数不调用**setlocale** ，此函数执行和 while *mbstate*为 null。
 
 ## <a name="example"></a>示例
 
@@ -135,7 +125,7 @@ The corresponding wide character "Q" was converted to the "Q" multibyte characte
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**wcrtomb**|\<wchar.h>|
 

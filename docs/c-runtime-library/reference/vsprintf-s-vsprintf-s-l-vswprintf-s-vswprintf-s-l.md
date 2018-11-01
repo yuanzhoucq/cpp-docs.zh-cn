@@ -1,10 +1,6 @@
 ---
-title: vsprintf_s、_vsprintf_s_l、vswprintf_s、_vswprintf_s_l | Microsoft 文档
-ms.custom: ''
+title: vsprintf_s、_vsprintf_s_l、vswprintf_s、_vswprintf_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _vswprintf_s_l
 - vsprintf_s
@@ -26,8 +22,6 @@ f1_keywords:
 - vswprintf_s
 - vsprintf_s
 - _vstprintf_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - _vstprintf_s_l function
 - vsprintf_s_l function
@@ -41,16 +35,12 @@ helpviewer_keywords:
 - formatted text [C++]
 - _vswprintf_s_l function
 ms.assetid: 60e90518-57f0-4f1b-b732-f62a69702833
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2f1ee1235b5fe6c3904c6dc201e7c8a183d95647
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8ef1d99caddfcff78bc41c24f7c132c307958db2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32416231"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50616487"
 ---
 # <a name="vsprintfs-vsprintfsl-vswprintfs-vswprintfsl"></a>vsprintf_s、_vsprintf_s_l、vswprintf_s、_vswprintf_s_l
 
@@ -118,19 +108,19 @@ int vswprintf_s(
 
 ## <a name="return-value"></a>返回值
 
-**vsprintf_s**和**vswprintf_s**返回写入的字符数，不包括终止 null 字符或为负值，如果发生输出错误。 如果*缓冲区*或*格式*是 null 指针，如果计数为零，或如果格式字符串包含无效格式字符，则调用无效参数处理程序中, 所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，函数将返回-1 并设置**errno**到**EINVAL**。
+**vsprintf_s**并**vswprintf_s**返回写入的字符，不包括终止 null 字符，则为负值，如果发生输出错误数。 如果*缓冲区*或*格式*是 null 指针，如果计数为零，或如果格式字符串包含无效格式字符，将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，函数将返回-1 并设置**errno**到**EINVAL**。
 
 有关这些代码及其他错误代码的信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>备注
 
-其中每个函数采用指向自变量列表，然后设置格式和指向的内存中写入给定的数据*缓冲区*。
+每个函数采用一个指向参数列表，然后设置格式并将给定的数据写入到指向的内存*缓冲区*。
 
-**vswprintf_s**符合 ISO C 标准，用于**vswprintf**，这要求第二个参数，*计数*，类型的**size_t**。
+**vswprintf_s**符合 ISO C 标准**vswprintf**，这要求第二个参数*计数*，类型的**size_t**。
 
 这些函数与不安全版本的差异仅在于安全版本支持位置参数。 有关详细信息，请参阅 [printf_p 位置参数](../../c-runtime-library/printf-p-positional-parameters.md)。
 
-使用这些函数的版本 **_l**后缀是相同，只不过它们使用传递而不是当前线程区域设置的区域设置参数。
+使用这些函数的版本 **_l**后缀完全相同，只不过它们使用传递中而不是当前线程区域设置的区域设置参数。
 
 在 C++ 中，使用这些函数由模板重载简化；重载可以自动推导出缓冲区长度 (不再需要指定大小自变量)，并且它们可以自动用以更新、更安全的对应物替换旧的、不安全的函数。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 
@@ -143,7 +133,7 @@ int vswprintf_s(
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|可选标头|
+|例程所返回的值|必需的标头|可选标头|
 |-------------|---------------------|----------------------|
 |**vsprintf_s**， **_vsprintf_s_l**|\<stdio.h> 和 \<stdarg.h>|\<varargs.h>*|
 |**vswprintf_s**， **_vswprintf_s_l**|\<stdio.h> 或 \<wchar.h> 和 \<stdarg.h>|\<varargs.h>*|

@@ -1,10 +1,6 @@
 ---
-title: CMFCRibbonBaseElement 类 |Microsoft Docs
-ms.custom: ''
+title: CMFCRibbonBaseElement 类
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CMFCRibbonBaseElement
 - AFXBASERIBBONELEMENT/CMFCRibbonBaseElement
@@ -121,8 +117,6 @@ f1_keywords:
 - AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::UpdateTooltipInfo
 - AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::OnProcessKey
 - AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::OnSetFocus
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMFCRibbonBaseElement [MFC], AddToKeyList
 - CMFCRibbonBaseElement [MFC], AddToListBox
@@ -238,16 +232,12 @@ helpviewer_keywords:
 - CMFCRibbonBaseElement [MFC], OnProcessKey
 - CMFCRibbonBaseElement [MFC], OnSetFocus
 ms.assetid: 419ea91b-5062-44cc-b0a3-f87d29566f62
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3ac668ab85b9a76a5cc0101d0a373fa310128801
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: dee5d8c57bfff99e1b558f09c8df53c73e844f3c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46403222"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50514356"
 ---
 # <a name="cmfcribbonbaseelement-class"></a>CMFCRibbonBaseElement 类
 
@@ -404,7 +394,7 @@ class CMFCRibbonBaseElement : public CObject
 
 ## <a name="example"></a>示例
 
-下面的示例演示如何使用中的各种方法`CMFCRibbonBaseElement`类。 该示例演示如何获取`CMFCRibbonBaseElement`对象从`CMFCRibbonStatusBar`类，将功能区元素的描述设置、 设置文本、 设置快捷键提示，并设置功能区元素的工具提示文本。 此代码片段属于 [Draw Client 示例](../../visual-cpp-samples.md)。
+下面的示例演示了如何使用 `CMFCRibbonBaseElement` 类中的各种方法。 该示例演示如何获取`CMFCRibbonBaseElement`对象从`CMFCRibbonStatusBar`类，将功能区元素的描述设置、 设置文本、 设置快捷键提示，并设置功能区元素的工具提示文本。 此代码片段属于 [Draw Client 示例](../../visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_DrawClient#8](../../mfc/reference/codesnippet/cpp/cmfcribbonbaseelement-class_1.cpp)]
 [!code-cpp[NVC_MFC_DrawClient#9](../../mfc/reference/codesnippet/cpp/cmfcribbonbaseelement-class_2.cpp)]

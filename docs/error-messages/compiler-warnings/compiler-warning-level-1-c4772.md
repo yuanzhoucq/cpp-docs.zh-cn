@@ -1,36 +1,27 @@
 ---
-title: 编译器警告 （等级 1） C4772 |Microsoft 文档
+title: 编译器警告（等级 1）C4772
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4772
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4772
 ms.assetid: dafe6fd8-9faf-41f5-9d66-a55838742c14
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cbdcfec8d36568c31c291a9de8f9af3aac821fc6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 95243ab66d5d0296e1c316ff8dde7add75a030cd
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33282267"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50540018"
 ---
 # <a name="compiler-warning-level-1-c4772"></a>编译器警告（等级 1）C4772
 
-> \#导入从缺少的类型库; 引用了类型*缺少类型*用作占位符
+> \#导入缺少的类型库; 从引用类型'*缺少类型*用作占位符
 
-类型库引用与[#import](../../preprocessor/hash-import-directive-cpp.md)指令。 但是，类型库包含对另一个使用未被引用的类型库的引用`#import`。 由编译器找不到此其他.tlb 文件。
+类型库引用与[#import](../../preprocessor/hash-import-directive-cpp.md)指令。 但是，类型库包含对使用未引用的另一个类型库的引用`#import`。 由编译器找不到此其他.tlb 文件。
 
-请注意，编译器将不到类型库的不同目录是否你使用[/I （附加包含目录）](../../build/reference/i-additional-include-directories.md)编译器选项来指定这些目录。 如果你想要在不同的目录中查找类型库编译器，则将这些目录添加到 PATH 环境变量。
+请注意，编译器将不到类型库在不同目录中是否你使用[/I （附加包含目录）](../../build/reference/i-additional-include-directories.md)编译器选项来指定这些目录。 如果你想要在不同的目录中查找类型库的编译器，将这些目录添加到 PATH 环境变量。
 
-默认情况下作为错误发出此警告。 C4772 不能用 /w0 取消显示被取消。
+默认情况下此警告作为错误发出。 不能与 /W0 抑制 C4772。
 
 ## <a name="example"></a>示例
 

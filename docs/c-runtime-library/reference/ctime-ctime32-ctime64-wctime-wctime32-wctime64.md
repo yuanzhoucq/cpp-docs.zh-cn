@@ -1,10 +1,6 @@
 ---
-title: ctime、_ctime32、_ctime64、_wctime、_wctime32、_wctime64 | Microsoft 文档
-ms.custom: ''
+title: ctime, _ctime32, _ctime64, _wctime, _wctime32, _wctime64
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ctime64
 - _wctime32
@@ -34,8 +30,6 @@ f1_keywords:
 - _tctime64
 - _ctime64
 - ctime
-dev_langs:
-- C++
 helpviewer_keywords:
 - tctime64 function
 - _ctime32 function
@@ -56,16 +50,12 @@ helpviewer_keywords:
 - wctime function
 - time, converting
 ms.assetid: 2423de37-a35c-4f0a-a378-3116bc120a9d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 30caa77fee7e15f91ff7c3f089f18fd51a34aa0b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d1858a36c68a2ca5cedf70a1d74d5f250cbac8df
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404904"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50580815"
 ---
 # <a name="ctime-ctime32-ctime64-wctime-wctime32-wctime64"></a>ctime, _ctime32, _ctime64, _wctime, _wctime32, _wctime64
 
@@ -85,23 +75,23 @@ wchar_t *_wctime64( const __time64_t *sourceTime );
 ### <a name="parameters"></a>参数
 
 *sourceTime*<br/>
-指向存储时间将转换的指针。
+指向要转换的存储时间。
 
 ## <a name="return-value"></a>返回值
 
 指向字符串结果的指针。 **NULL**时将返回：
 
-- *sourceTime*表示日期早于 1970 年 1 月 1 日午夜 UTC。
+- *sourceTime*表示自 1970 年 1 月 1 日午夜 UTC 前的日期。
 
-- 如果你使用 **_ctime32**或 **_wctime32**和*sourceTime*表示 23:59:59 2038 年 1 月 18 日，UTC 之后的日期。
+- 如果您使用 **_ctime32**或 **_wctime32**并*sourceTime*表示 23:59:59 2038 年 1 月 18 日，UTC 之后的日期。
 
-- 如果你使用 **_ctime64**或 **_wctime64**和*sourceTime*表示 23:59:59，3000 年 12 月 31 日，UTC 之后的日期。
+- 如果您使用 **_ctime64**或 **_wctime64**并*sourceTime*表示 23:59:59，3000 年 12 月 31 日，UTC 之后的日期。
 
-**ctime**是内联函数计算结果为 **_ctime64**和**time_t**等效于 **__time64_t**。 如果需要强制编译器将解释**time_t**为旧的 32 位**time_t**，你可以定义 **_USE_32BIT_TIME_T**。 这将导致这样做**ctime**计算结果为 **_ctime32**。 不建议这样做，因为应用程序可能会在 2038 年 1 月 18 日后失效；且在 64 位平台上不允许使用它。
+**ctime**是一个内联函数，其计算结果 **_ctime64**并**time_t**等效于 **__time64_t**。 如果您需要强制编译器将解释**time_t**为旧的 32 位**time_t**，可以定义 **_USE_32BIT_TIME_T**。 执行此操作将导致**ctime**计算结果为 **_ctime32**。 不建议这样做，因为应用程序可能会在 2038 年 1 月 18 日后失效；且在 64 位平台上不允许使用它。
 
 ## <a name="remarks"></a>备注
 
-**Ctime**函数将转换为存储的时间值[time_t](../../c-runtime-library/standard-types.md)转换为字符串的值。 *SourceTime*值通常从调用中获取[时间](time-time32-time64.md)，它将返回自午夜以来经过的秒数 (00: 00:00)、 1970 年 1 月 1 日协调世界时 (UTC)。 返回值字符串正好包含 26 个字符，且格式为：
+**Ctime**函数将存储为时间值转换[time_t](../../c-runtime-library/standard-types.md)转换为字符串值。 *SourceTime*值通常从调用获取[时间](time-time32-time64.md)，它将返回自午夜以来经过的秒数 (00: 00:00) 自 1970 年 1 月 1 日，协调世界时 (UTC)。 返回值字符串正好包含 26 个字符，且格式为：
 
 ```Output
 Wed Jan 02 02:03:55 1980\n\0
@@ -109,13 +99,13 @@ Wed Jan 02 02:03:55 1980\n\0
 
 使用 24 小时制。 所有字段都具有固定宽度。 换行符 ('\n') 和空字符 ('\0') 占据字符串的最后两个位置。
 
-转换的字符串同时根据本地时区设置进行调整。 请参阅[时间](time-time32-time64.md)， [_ftime](ftime-ftime32-ftime64.md)，和[localtime](localtime-localtime32-localtime64.md)有关如何配置本地时间的函数和[_tzset](tzset.md)函数有关定义时区环境和全局变量的详细信息。
+转换的字符串同时根据本地时区设置进行调整。 请参阅[时间](time-time32-time64.md)， [_ftime](ftime-ftime32-ftime64.md)，并[localtime](localtime-localtime32-localtime64.md)函数以获取有关配置本地时间的信息和[_tzset](tzset.md)函数有关定义时区环境和全局变量的详细信息。
 
-调用**ctime**修改使用的单个静态分配的缓冲区**gmtime**和**localtime**函数。 每次调用这些例程都会破坏上一次调用的结果。 **ctime**共享具有静态缓冲区**asctime**函数。 因此，调用**ctime**销毁任何以前调用的结果**asctime**， **localtime**，或**gmtime**。
+调用**ctime**修改使用的单个静态分配的缓冲区**gmtime**并**localtime**函数。 每次调用这些例程都会破坏上一次调用的结果。 **ctime**共享与静态缓冲区**asctime**函数。 因此，调用**ctime**销毁任何以前调用的结果**asctime**， **localtime**，或者**gmtime**。
 
-**_wctime**和 **_wctime64**是宽字符版本的**ctime**和 **_ctime64**; 返回一个指向宽字符字符串。 否则为 **_ctime64**， **_wctime**，和 **_wctime64**行为**ctime**。
+**_wctime**并 **_wctime64**是宽字符版本**ctime**并 **_ctime64**; 返回一个指向宽字符字符串。 否则为 **_ctime64**， **_wctime**，并 **_wctime64**行为**ctime**。
 
-这些函数验证其参数。 如果*sourceTime*是 null 指针，或如果*sourceTime*值为负中, 所述，这些函数将调用无效参数处理程序，[参数验证](../../c-runtime-library/parameter-validation.md). 如果允许执行继续，函数将返回**NULL**并设置**errno**到**EINVAL**。
+这些函数验证其参数。 如果*sourceTime*是空指针，或者如果*sourceTime*值为负，则这些函数将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md). 如果允许执行继续，这些函数返回**NULL**并设置**errno**到**EINVAL**。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -127,7 +117,7 @@ Wed Jan 02 02:03:55 1980\n\0
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**ctime**|\<time.h>|
 |**_ctime32**|\<time.h>|

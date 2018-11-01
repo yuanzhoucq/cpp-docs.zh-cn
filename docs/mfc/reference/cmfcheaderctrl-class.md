@@ -1,10 +1,6 @@
 ---
-title: CMFCHeaderCtrl 类 |Microsoft Docs
-ms.custom: ''
+title: CListCtrl
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CMFCHeaderCtrl
 - AFXHEADERCTRL/CMFCHeaderCtrl
@@ -20,8 +16,6 @@ f1_keywords:
 - AFXHEADERCTRL/CMFCHeaderCtrl::OnDrawItem
 - AFXHEADERCTRL/CMFCHeaderCtrl::OnDrawSortArrow
 - AFXHEADERCTRL/CMFCHeaderCtrl::OnFillBackground
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMFCHeaderCtrl [MFC], CMFCHeaderCtrl
 - CMFCHeaderCtrl [MFC], EnableMultipleSort
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - CMFCHeaderCtrl [MFC], OnDrawSortArrow
 - CMFCHeaderCtrl [MFC], OnFillBackground
 ms.assetid: 2f5fbf7b-5c75-42db-9216-640b1628f777
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 034796047b071ba2bba5d52ed5f092bd2f722d27
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 10d7dda39223e1d6206d2ede96874d9d546c8776
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46413167"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50538497"
 ---
 # <a name="cmfcheaderctrl-class"></a>CListCtrl
 
@@ -340,7 +330,7 @@ void SetSortColumn(
 
 如果未设置多个列排序模式和在调试模式下编译此方法，此方法断言。 如果未设置多个列排序模式，并且在零售模式下编译此方法，此方法首先从列表中的列进行排序，删除所有列，然后将指定的列添加到列表。
 
-如果为 FALSE，则首先从列表中的列进行排序，删除所有列，然后将指定的列添加到列表。 默认值为 FALSE。
+如果为 FALSE，则首先从列表中的列进行排序，删除所有列，然后将指定的列添加到列表。 默认值是 FALSE。
 
 ### <a name="remarks"></a>备注
 

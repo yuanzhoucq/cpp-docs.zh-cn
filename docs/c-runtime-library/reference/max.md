@@ -1,10 +1,6 @@
 ---
-title: __max | Microsoft 文档
-ms.custom: ''
+title: __max
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - __max
 apilocation:
@@ -22,23 +18,17 @@ apitype: DLLExport
 f1_keywords:
 - max
 - __max
-dev_langs:
-- C++
 helpviewer_keywords:
 - max macro
 - maximum macro
 - __max macro
 ms.assetid: 05c936f6-0e22-45d6-a58d-4bc102e9dae2
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d223f4288ccf40646e8f560cec7243b7e8f9f649
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 32e1207ea4bb030ac5303de32c0566f98e0596a3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398414"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50613754"
 ---
 # <a name="max"></a>__max
 
@@ -57,13 +47,13 @@ ms.locfileid: "32398414"
 
 ## <a name="return-value"></a>返回值
 
-**__max**返回其自变量的较大。
+**__max**返回其参数的较大。
 
 ## <a name="remarks"></a>备注
 
-**__Max**宏比较两个值，并返回较大一的值。 参数可以是任何数字数据类型，有符号或无符号均可。 两个自变量以及返回值必须是同一数据类型。
+**__Max**宏将两个值进行比较并返回其中的较大的值。 参数可以是任何数字数据类型，有符号或无符号均可。 两个自变量以及返回值必须是同一数据类型。
 
-返回自变量的计算两次由宏。 这可能导致意外结果，如果参数是一个表达式，它计算时，如更改其值`*p++`。
+返回参数的计算两次由宏。 这可能导致意外的结果，如果参数为一个表达式，它计算时，如来更改其值`*p++`。
 
 ## <a name="requirements"></a>要求
 

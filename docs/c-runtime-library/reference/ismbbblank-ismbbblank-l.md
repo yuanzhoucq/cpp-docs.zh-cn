@@ -1,10 +1,6 @@
 ---
-title: _ismbbblank、_ismbbblank_l | Microsoft 文档
-ms.custom: ''
+title: _ismbbblank、_ismbbblank_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ismbbblank_l
 - _ismbbblank
@@ -21,19 +17,13 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 apitype: DLLExport
-dev_langs:
-- C++
 ms.assetid: d21b2e41-7206-41f5-85bb-9c9ab4f3e21b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d4d2849eca58c7fa3d7fc8250ab3bad0d346e4a0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c6709d5a5870c44d200b704e4a34043ff9c37226
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399480"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50646259"
 ---
 # <a name="ismbbblank-ismbbblankl"></a>_ismbbblank、_ismbbblank_l
 
@@ -64,11 +54,11 @@ int _ismbbblank_l(
 
 ## <a name="return-value"></a>返回值
 
-**_ismbbblank**返回非零值，如果*c*表示空格 (0x20) 字符、 水平制表符 (为 0x09) 字符或用于分隔词的文本的某一行中的区域设置特定字符**isspace**为 true; 否则为返回 0。 **_ismbbblank**的任何区域设置相关行为使用当前区域设置。 **_ismbbblank_l**具有完全相同，只不过它改用已传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+**_ismbbblank**返回非零值，如果*c*表示空格 (0x20) 字符、 水平制表符 (0x09) 字符或用于哪些的文本行中分隔单词的区域设置特定字符**isspace**为 true; 否则为返回 0。 **_ismbbblank**的任何区域设置相关行为使用当前区域设置。 **_ismbbblank_l**具有完全相同，只不过它改用传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_ismbbblank**|\<mbctype.h>|
 |**_ismbbblank_l**|\<mbctype.h>|
