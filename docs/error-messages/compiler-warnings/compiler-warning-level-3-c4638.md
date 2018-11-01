@@ -1,27 +1,17 @@
 ---
-title: 编译器警告 （等级 3） C4638 |Microsoft Docs
-ms.custom: ''
+title: 编译器警告（等级 3）C4638
 ms.date: 08/27/2018
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4638
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4638
 ms.assetid: 2c07923a-e103-4e40-bd11-fdfed428a5ec
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 29febc17f041fee27064fc085896c892eecd5c56
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 1bdd7541e16f5c02756678ae78a777094b5fe588
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43198227"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50651524"
 ---
 # <a name="compiler-warning-level-3-c4638"></a>编译器警告（等级 3）C4638
 
@@ -29,7 +19,7 @@ ms.locfileid: "43198227"
 
 ## <a name="remarks"></a>备注
 
-编译器无法解析符号 (*符号*)。 该符号在编译中必须有效。
+编译器无法解析符号 (*symbol*)。 该符号在编译中必须有效。
 
 ## <a name="example"></a>示例
 

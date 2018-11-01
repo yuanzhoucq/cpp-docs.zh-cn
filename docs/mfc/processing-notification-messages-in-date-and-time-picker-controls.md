@@ -1,16 +1,10 @@
 ---
-title: 处理控件通知消息中的日期和时间选取器 |Microsoft Docs
-ms.custom: ''
+title: 处理日期和时间选取器控件中的通知消息
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
 f1_keywords:
 - DTN_CLOSEUP
 - DTN_DATETIMECHANGE
 - DTN_DROPDOWN
-dev_langs:
-- C++
 helpviewer_keywords:
 - DTN_DROPDOWN notification [MFC]
 - DTN_DATETIMECHANGE notification [MFC]
@@ -20,16 +14,12 @@ helpviewer_keywords:
 - DTN_FORMAT notification [MFC]
 - DateTimePicker control [MFC]
 ms.assetid: ffbe29ab-ff80-4609-89f7-260b404439c4
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4ae7773d46d93f0f2c5a237f833da4c81679084c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6a88e257fa44d16563d090df4f989286dbda0a51
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46414376"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50607345"
 ---
 # <a name="processing-notification-messages-in-date-and-time-picker-controls"></a>处理日期和时间选取器控件中的通知消息
 

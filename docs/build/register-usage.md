@@ -1,27 +1,17 @@
 ---
-title: 注册用量 |Microsoft 文档
-ms.custom: ''
+title: 注册使用情况
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: ce58e2cf-afd3-4068-980e-28a209298265
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4c77469a8cef03827101f4bf367c00a3bb440820
-ms.sourcegitcommit: 4fc6869067d533b175207befd2dc60346afee285
+ms.openlocfilehash: fa04318ad4af298f300fbbbad8c01d0df9500ec7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34225214"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50629978"
 ---
-# <a name="register-usage"></a>寄存器用法
+# <a name="register-usage"></a>注册使用情况
 
-X64 体系结构提供了 16 个通用寄存器 （以后称为整数寄存器），以及 16 XMM/YMM 寄存器可供浮点使用。 易失寄存器是由调用方假想的临时寄存器，并要在调用过程中销毁。 非易失寄存器需要在整个函数调用过程中保留其值，并且一旦使用，则必须由被调用方保存。
+X64 体系结构可提供 16 个通用寄存器 （以后称为整数寄存器），以及 16 XMM/YMM 寄存器可供浮点使用。 易失寄存器是由调用方假想的临时寄存器，并要在调用过程中销毁。 非易失寄存器需要在整个函数调用过程中保留其值，并且一旦使用，则必须由被调用方保存。
 
 ## <a name="register-volatility-and-preservation"></a>注册更新率和保留
 
@@ -50,7 +40,7 @@ X64 体系结构提供了 16 个通用寄存器 （以后称为整数寄存器�
 |XMM5、YMM5|易失的|必须根据需要由调用方保留；使用 `__vectorcall` 时的第六个矢量类型参数|
 |XMM6:XMM15、YMM6:YMM15|非易失的 (XMM)，易失的（YMM 的上半部分）|必须由被调用方保留。 YMM 寄存器必须根据需要由调用方保留。|
 
-在函数退出和函数进入的 C 运行库调用和 Windows 系统调用中 CPU, 的方向标志标志注册需要清除。
+在函数退出和函数进入到 C 运行库调用和 Windows 的系统调用、 CPU 中的方向标志标志注册应清除。
 
 ## <a name="see-also"></a>请参阅
 

@@ -1,10 +1,6 @@
 ---
-title: ceil、ceilf、ceill | Microsoft 文档
-ms.custom: ''
+title: ceil、ceilf、ceill
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - ceilf
 - ceil
@@ -27,24 +23,18 @@ f1_keywords:
 - ceil
 - ceilf
 - ceill
-dev_langs:
-- C++
 helpviewer_keywords:
 - calculating value ceilings
 - ceill function
 - ceil function
 - ceilf function
 ms.assetid: f4e5acab-5c8f-4b10-9ae2-9561e6453718
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fa68ff857db09d1426fbed6ea497624e13cc362a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b128f20593d41fff3c4c50f6d68f8643798c5b66
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394260"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50637185"
 ---
 # <a name="ceil-ceilf-ceill"></a>ceil、ceilf、ceill
 
@@ -81,17 +71,17 @@ long double ceill(
 
 |输入|SEH 异常|Matherr 异常|
 |-----------|-------------------|-----------------------|
-|± **QNAN**， **IND**|无|**_DOMAIN**|
+|为**QNAN**， **IND**|无|**（_D)**|
 
-**ceil**具有使用流式处理 SIMD 扩展 2 (SSE2) 实现。 有关使用 SSE2 实现的信息和限制，请参阅 [_set_SSE2_enable](set-sse2-enable.md)。
+**ceil**具有使用流式处理 SIMD 扩展 2 (SSE2) 的实现。 有关使用 SSE2 实现的信息和限制，请参阅 [_set_SSE2_enable](set-sse2-enable.md)。
 
 ## <a name="remarks"></a>备注
 
-由于 c + + 允许重载，你可以调用的重载**ceil**采用**float**或**长** **double**类型。 在 C 程序中， **ceil**始终采用并返回**double**。
+由于 c + + 允许重载，可以调用的重载**ceil**采用**float**或**长** **double**类型。 在 C 程序中， **ceil**始终采用并返回**double**。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**ceil**， **ceilf**， **ceill**|\<math.h>|
 

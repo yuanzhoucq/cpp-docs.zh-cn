@@ -1,26 +1,17 @@
 ---
-title: 演练： 创建和使用你自己动态链接库 （c + +） |Microsoft Docs
+title: 演练： 创建和使用你自己动态链接库 （c + +）
 ms.custom: conceptual
 ms.date: 09/24/2018
-ms.technology:
-- cpp-tools
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - libraries [C++], DLLs
 - DLLs [C++], walkthroughs
 ms.assetid: 3ae94848-44e7-4955-bbad-7d40f493e941
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9806a17bfb603ff54609f2d509c50d0a5d91e15d
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: d997cb37c6cadb03bd3d16c4b1d4e56874f00018
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821238"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50591004"
 ---
 # <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>演练： 创建和使用你自己动态链接库 （c + +）
 
@@ -64,7 +55,7 @@ ms.locfileid: "48821238"
 
 ### <a name="to-create-a-dll-project-in-visual-studio-2017-version-153-or-later"></a>若要在 Visual Studio 2017 版本中创建 DLL 项目，15.3 或更高版本
 
-1. 在菜单栏上依次选择**文件** > **新建** > **项目**打开**新建项目**对话框。
+1. 在菜单栏上，依次选择“文件” > “新建” > “项目”，打开“新建项目”对话框。
 
 1. 在左窗格中**新的项目**对话框框中，展开**已安装**并**Visual c + +** 如有必要，然后选择**Windows 桌面**. 在中心窗格中，选择**Windows 桌面向导**。 输入`MathLibrary`中**名称**框以指定项目的名称。
 
@@ -405,7 +396,7 @@ int main()
 
 现在，已创建一个 DLL 和客户端应用程序，您可以进行试验。 尝试在客户端应用的代码中设置断点并在调试器中运行应用程序。 请参阅单步执行库调用时，会发生什么情况。 将其他函数添加到库，或写入另一个使用您的 DLL 的客户端应用。
 
-在部署您的应用程序时，还必须部署它使用的 Dll。 若要将来自第三方的 Dll 生成或包含提供给您的应用程序的最简单方法是将其放在与您的应用程序相同的目录也称为*应用程序本地部署*。 有关部署的详细信息，请参阅[Visual c + + 中的部署](..\ide\deployment-in-visual-cpp.md)。
+在部署您的应用程序时，还必须部署它使用的 Dll。 若要将来自第三方的 Dll 生成或包含提供给您的应用程序的最简单方法是将其放在与您的应用程序相同的目录也称为*应用程序本地部署*。 有关部署的更多信息，请参阅 [Deployment in Visual C++](..\ide\deployment-in-visual-cpp.md)。
 
 ## <a name="see-also"></a>请参阅
 
