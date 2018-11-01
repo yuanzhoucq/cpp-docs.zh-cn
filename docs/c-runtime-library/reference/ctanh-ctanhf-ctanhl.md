@@ -1,11 +1,6 @@
 ---
-title: ctanh、ctanhf、ctanhl | Microsoft 文档
-ms.custom: ''
+title: ctanh、ctanhf、ctanhl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - ctanh
 - ctahf
@@ -30,23 +25,17 @@ f1_keywords:
 - complex/ctanh
 - complex/ctanhf
 - complex/ctanhl
-dev_langs:
-- C++
 helpviewer_keywords:
 - ctanh function
 - ctanhl function
 - ctanhf function
 ms.assetid: 807f2cd1-8740-4988-afff-5911c346385b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bf81e503405959686974a26ceb5d064c1ab84400
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e390aceaad2ee82e1fe2a865d3903f5062f52e9d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396077"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50470549"
 ---
 # <a name="ctanh-ctanhf-ctanhl"></a>ctanh、ctanhf、ctanhl
 
@@ -79,20 +68,20 @@ _Lcomplex ctanhl(
 
 ## <a name="return-value"></a>返回值
 
-复杂双曲正切值*z*。
+复数的双曲正切值*z*。
 
 |输入|SEH 异常|**_matherr**异常|
 |-----------|-------------------|--------------------------|
 |± ∞、QNAN、IND|无|_DOMAIN|
-|± ∞ （tan、 tanf）|INVALID|_DOMAIN|
+|为 ∞ （tan、 tanf）|INVALID|_DOMAIN|
 
 ## <a name="remarks"></a>备注
 
-由于 c + + 允许重载，你可以调用的重载**ctanh**采用并返回 **_Fcomplex**和 **_Lcomplex**值。 在 C 程序中， **ctanh**始终采用并返回 **_Dcomplex**值。
+由于 c + + 允许重载，可以调用的重载**ctanh**采用并返回 **_Fcomplex**并 **_Lcomplex**值。 在 C 程序中， **ctanh**始终采用并返回 **_Dcomplex**值。
 
 ## <a name="requirements"></a>要求
 
-|例程|C 标头|C++ 标头|
+|例程所返回的值|C 标头|C++ 标头|
 |-------------|--------------|------------------|
 |**ctanh**， **ctanhf**， **ctanhl**|\<complex.h>|\<ccomplex>|
 

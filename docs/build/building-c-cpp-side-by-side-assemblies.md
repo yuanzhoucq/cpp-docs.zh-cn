@@ -1,25 +1,15 @@
 ---
-title: 生成 C/c + +-并行程序集 |Microsoft Docs
-ms.custom: ''
+title: 生成 C/C++ 并行程序集
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - side-by-side applications [C++]
 ms.assetid: 7fa20b16-3737-4f76-a0b5-1dacea19a1e8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 93e02ee27fb8b5a1f4f4f7b2e435a737e1c637a2
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: cf3fb532e70e047938b9a575eefdcceadceeceda
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083835"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50476305"
 ---
 # <a name="building-cc-side-by-side-assemblies"></a>生成 C/C++ 并行程序集
 

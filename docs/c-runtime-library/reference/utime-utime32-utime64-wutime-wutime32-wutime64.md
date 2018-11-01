@@ -1,10 +1,6 @@
 ---
-title: _utime、_utime32、_utime64、_wutime、_wutime32、_wutime64 | Microsoft 文档
-ms.custom: ''
+title: _utime、_utime32、_utime64、_wutime、_wutime32、_wutime64
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _utime64
 - _utime
@@ -40,8 +36,6 @@ f1_keywords:
 - _utime32
 - _tutime64
 - _wutime32
-dev_langs:
-- C++
 helpviewer_keywords:
 - tutime function
 - utime32 function
@@ -64,16 +58,12 @@ helpviewer_keywords:
 - tutime64 function
 - tutime32 function
 ms.assetid: 8d482d40-19b9-4591-bfee-5d7f601d1a9e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cd8737d6391ea1effd50e967008520b2d77707e6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f1e9633784ad78a2b46701e6600ad1ddb6b3318e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417706"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50471082"
 ---
 # <a name="utime-utime32-utime64-wutime-wutime32-wutime64"></a>_utime、_utime32、_utime64、_wutime、_wutime32、_wutime64
 
@@ -118,35 +108,35 @@ int _wutime64(
 
 ## <a name="return-value"></a>返回值
 
-如果更改了文件修改时间，则这些函数均将返回 0。 返回值-1 指示错误。 如果传递的参数无效，则调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数将返回-1 和**errno**设置为以下值之一：
+如果更改了文件修改时间，则这些函数均将返回 0。 返回值-1 指示错误。 如果传递的参数无效，则调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，这些函数将返回-1 和**errno**设置为以下值之一：
 
 |errno 值|条件|
 |-|-|
 **EACCES**|路径指定目录或只读文件
-**EINVAL**|无效*时间*自变量
+**EINVAL**|无效*时间*参数
 **EMFILE**|打开的文件太多（必须打开文件以更改其修改时间）
 **ENOENT**|找不到路径或文件名
 
 有关这些代码以及其他返回代码的详细信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
-如果更改日期在 1970 年 1 月 1 日午夜之后且在所使用的函数的结束日期之前，则可以更改文件的日期。 **_utime**和 **_wutime**使用 64 位时间值，因此结束日期为 23:59:59，3000 年 12 月 31 日，UTC。 如果 **_USE_32BIT_TIME_T**定义若要强制旧行为，结束日期为 23:59:59 2038 年 1 月 18 日，UTC。 **_utime32**或 **_wutime32**使用 32 位时间类型，而不管是否 **_USE_32BIT_TIME_T**定义，并且始终具有较早的结束日期。 **_utime64**或 **_wutime64**始终使用 64 位时间类型，因此这些函数始终支持更高版本的结束日期。
+如果更改日期在 1970 年 1 月 1 日午夜之后且在所使用的函数的结束日期之前，则可以更改文件的日期。 **_utime**并 **_wutime**使用 64 位时间值，因此结束日期为 23:59:59，3000 年 12 月 31 日，UTC。 如果 **_USE_32BIT_TIME_T**定义若要强制旧行为，结束日期是 23:59:59 2038 年 1 月 18 日，UTC。 **_utime32**或 **_wutime32**使用 32 位时间类型，无论是否 **_USE_32BIT_TIME_T**定义，并且始终具有较早的结束日期。 **_utime64**或 **_wutime64**始终使用 64 位时间类型，因此这些函数始终支持更高版本的结束日期。
 
 ## <a name="remarks"></a>备注
 
-**_Utime**函数设置指定的文件的修改时间*filename * *。* 进程必须拥有文件的写入权限才能更改时间。 在 Windows 操作系统，你可以更改访问时间和修改时间 **_utimbuf**结构。 如果*时间*是**NULL**指针，修改时间设置为当前的本地时间。 否则为*时间*必须指向类型的结构 **_utimbuf**在 SYS\UTIME 中定义。H。
+**_Utime**函数设置指定的文件的修改时间*文件名 * *。* 进程必须拥有文件的写入权限才能更改时间。 在 Windows 操作系统，您可以更改访问时间和修改时间 **_utimbuf**结构。 如果*倍*是**NULL**指针，修改时间设置为当前的本地时间。 否则为*倍*必须指向类型的结构 **_utimbuf**SYS\UTIME 中定义。H.
 
-**_Utimbuf**结构存储文件的访问和修改时间，由 **_utime**用于更改文件修改日期。 则结构包含以下字段，它们将这两个类型**time_t**:
+**_Utimbuf**结构存储使用的文件访问和修改时间 **_utime**用于更改文件修改日期。 此结构中包含以下字段，其均为类型**time_t**:
 
 |字段||
 |-|-|
 **actime**|文件访问时间
 **modtime**|文件修改时间
 
-特定版本的 **_utimbuf**结构 (**_utimebuf32**和 **__utimbuf64**) 的使用时间类型的 32 位和 64 位版本定义。 这些是此函数的 32 位和 64 位特定版本中使用的内容。 **_utimbuf**本身默认情况下使用 64 位时间类型，除非 **_USE_32BIT_TIME_T**定义。
+特定版本的 **_utimbuf**结构 (**_utimebuf32**并 **__utimbuf64**) 使用 32 位和 64 位版本的时间类型定义。 这些是此函数的 32 位和 64 位特定版本中使用的内容。 **_utimbuf**本身默认情况下使用 64 位时间类型，除非 **_USE_32BIT_TIME_T**定义。
 
 **_utime**等同于 **_futime**只不过*filename*参数 **_utime**是文件名或文件，而不是文件描述符的路径打开文件。
 
-**_wutime**是宽字符版本的 **_utime**; *filename*参数 **_wutime**是宽字符字符串。 否则这些函数具有相同行为。
+**_wutime**是宽字符版本 **_utime**; *filename*参数 **_wutime**是宽字符字符串。 否则这些函数具有相同行为。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -158,7 +148,7 @@ int _wutime64(
 
 ## <a name="requirements"></a>要求
 
-|例程|必需标头|可选标头|
+|例程所返回的值|必需标头|可选标头|
 |-------------|----------------------|----------------------|
 |**_utime**， **_utime32**， **_utime64**|\<sys/utime.h>|\<errno.h>|
 |**_utime64**|\<sys/utime.h>|\<errno.h>|
@@ -168,7 +158,7 @@ int _wutime64(
 
 ## <a name="example"></a>示例
 
-此程序使用 **_utime**以将文件修改时间设置为当前时间。
+此程序使用 **_utime**要将文件修改时间设置为当前时间。
 
 ```C
 // crt_utime.c
