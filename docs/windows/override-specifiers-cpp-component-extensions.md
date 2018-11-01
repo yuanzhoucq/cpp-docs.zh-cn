@@ -1,27 +1,17 @@
 ---
-title: 重写说明符 (C + + /cli 和 C + + /cli CX) |Microsoft Docs
-ms.custom: ''
+title: 重写说明符 (C + + /cli 和 C + + /cli CX)
 ms.date: 10/12/2018
-ms.technology:
-- cpp-windows
 ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - override specifiers, C++
 - override specifiers
 ms.assetid: 155bbf6f-4722-4654-afb1-9cb52af799fb
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 0620bc7045dcb312667cfdfe670e1f19b0545cf2
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 9d839b9530cff144cda7897b0c96af48c14454a6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49327459"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50639848"
 ---
 # <a name="override-specifiers--ccli-and-ccx"></a>重写说明符 (C + + /cli 和 C + + /cli CX)
 
@@ -65,4 +55,4 @@ ms.locfileid: "49327459"
 
 ## <a name="see-also"></a>请参阅
 
-[适用于.NET 和 UWP 组件扩展](../windows/component-extensions-for-runtime-platforms.md)
+[ .NET 和 UWP 的组件扩展](../windows/component-extensions-for-runtime-platforms.md)
