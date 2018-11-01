@@ -1,10 +1,6 @@
 ---
-title: deque 类 | Microsoft 文档
-ms.custom: ''
+title: deque 类
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - deque/std::deque
 - deque/std::deque::allocator_type
@@ -48,8 +44,6 @@ f1_keywords:
 - deque/std::deque::shrink_to_fit
 - deque/std::deque::size
 - deque/std::deque::swap
-dev_langs:
-- C++
 helpviewer_keywords:
 - std::deque [C++]
 - std::deque [C++], allocator_type
@@ -94,16 +88,12 @@ helpviewer_keywords:
 - std::deque [C++], size
 - std::deque [C++], swap
 ms.assetid: 64842ee5-057a-4063-8c16-4267a0332584
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: afcf2528ba84edd90179ef6eb29d356466372633
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 0d411344e20c6ef42d8af32e9a1adc448b73584c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45713301"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50619877"
 ---
 # <a name="deque-class"></a>deque 类
 
@@ -118,7 +108,7 @@ class deque
 
 ### <a name="parameters"></a>参数
 
-*类型*<br/>
+*Type*<br/>
 要存储在 deque 中的元素数据类型。
 
 *分配器*<br/>
@@ -1613,7 +1603,7 @@ const_reference operator[](size_type pos) const;
 
 如果 `operator[]` 的返回值赋给了 `const_reference`，则无法修改 deque 对象。 如果 `operator[]` 的返回值赋给了 `reference`，则可以修改 deque 对象。
 
-通过使用定义为 1 或 2 的 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) 进行编译时，如果你尝试访问 deque 边界以外的元素，将发生运行时错误。  有关详细信息，请参阅[经过检查的迭代器](../standard-library/checked-iterators.md)。
+通过使用定义为 1 或 2 的 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) 进行编译时，如果你尝试访问 deque 边界以外的元素，将发生运行时错误。  有关更多信息，请参见 [Checked Iterators](../standard-library/checked-iterators.md) 。
 
 ### <a name="example"></a>示例
 

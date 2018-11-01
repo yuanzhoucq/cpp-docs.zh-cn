@@ -1,10 +1,6 @@
 ---
-title: _CrtMemCheckpoint | Microsoft 文档
-ms.custom: ''
+title: _CrtMemCheckpoint
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtMemCheckpoint
 apilocation:
@@ -23,22 +19,16 @@ f1_keywords:
 - CrtMemCheckpoint
 - _CrtMemCheckpoint
 - crtdbg/_CrtMemCheckpoint
-dev_langs:
-- C++
 helpviewer_keywords:
 - CrtMemCheckpoint function
 - _CrtMemCheckpoint function
 ms.assetid: f1bacbaa-5a0c-498a-ac7a-b6131d83dfbc
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e1418278f4b6756db4e747162f090545c3e9f3ae
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: ee435ba3e9e40795280dee0f97feaad32c8b0fc3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44107545"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50589505"
 ---
 # <a name="crtmemcheckpoint"></a>_CrtMemCheckpoint
 
@@ -59,7 +49,7 @@ void _CrtMemCheckpoint(
 
 ## <a name="remarks"></a>备注
 
-**_CrtMemCheckpoint**函数在任意给定时刻创建调试堆的当前状态的快照。 此快照可由其他堆状态函数（如 [_CrtMemDifference](crtmemdifference.md)）用来帮助检测内存泄漏和其他问题。 当[_DEBUG](../../c-runtime-library/debug.md)未定义，则调用 **_CrtMemState**在预处理过程中删除。
+**_CrtMemCheckpoint**函数在任意给定时刻创建调试堆的当前状态的快照。 此快照可由其他堆状态函数（如 [_CrtMemDifference](crtmemdifference.md) ）用来帮助检测内存泄漏和其他问题。 当[_DEBUG](../../c-runtime-library/debug.md)未定义，则调用 **_CrtMemState**在预处理过程中删除。
 
 应用程序必须将一个指针传递给先前分配的实例 **_CrtMemState**中按照 crtdbg.h 所定义的结构*状态*参数。 如果 **_CrtMemCheckpoint**遇到的错误检查点创建期间，该函数将生成 **_CRT_WARN**调试报表描述出现的问题。
 

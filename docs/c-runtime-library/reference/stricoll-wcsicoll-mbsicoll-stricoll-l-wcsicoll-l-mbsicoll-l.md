@@ -1,10 +1,6 @@
 ---
-title: _stricoll、_wcsicoll、_mbsicoll、_stricoll_l、_wcsicoll_l、_mbsicoll_l | Microsoft 文档
-ms.custom: ''
+title: _stricoll、_wcsicoll、_mbsicoll、_stricoll_l、_wcsicoll_l、_mbsicoll_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbsicoll_l
 - _stricoll_l
@@ -37,8 +33,6 @@ f1_keywords:
 - _tcsicoll
 - mbsicoll
 - stricoll_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - code pages, using for string comparisons
 - _ftcsicoll function
@@ -57,23 +51,19 @@ helpviewer_keywords:
 - strings [C++], comparing by code page
 - ftcsicoll function
 ms.assetid: 8ec93016-5a49-49d2-930f-721566661d82
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f90f6a25c6ecf6796ba3d4d94b6d2f5722eabf9d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bd2406751fd2855afd02743c98938e530398e7d1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32416367"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50579654"
 ---
 # <a name="stricoll-wcsicoll-mbsicoll-stricolll-wcsicolll-mbsicolll"></a>_stricoll、_wcsicoll、_mbsicoll、_stricoll_l、_wcsicoll_l、_mbsicoll_l
 
 使用特定于区域设置的信息比较字符串。
 
 > [!IMPORTANT]
-> **_mbsicoll**和 **_mbsicoll_l**不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
+> **_mbsicoll**并 **_mbsicoll_l**不能在 Windows 运行时中执行的应用程序中使用。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
 
 ## <a name="syntax"></a>语法
 
@@ -117,7 +107,7 @@ int _mbsicoll_l(
 
 ## <a name="return-value"></a>返回值
 
-其中每个函数返回一个值，该值的关系*string1*到*string2*、，如下所示。
+这些函数均返回一个值，该值的关系*string1*到*string2*，按如下所示。
 
 |返回值|string1 与 string2 的关系|
 |------------------|----------------------------------------|
@@ -126,15 +116,15 @@ int _mbsicoll_l(
 |> 0|*string1*大于*string2*|
 |**_NLSCMPERROR**|出现了错误。|
 
-其中每个函数返回 **_NLSCMPERROR**。 若要使用 **_NLSCMPERROR**，包括\<string.h > 或\<mbstring.h >。 **_wcsicoll**如果任一可能会失败*string1*或*string2*包含排序序列域外部的宽字符代码。 发生错误时， **_wcsicoll**可能设置**errno**到**EINVAL**。 若要在调用中的错误检查 **_wcsicoll**，将其设置**errno**为 0，然后检查**errno**之后调用 **_wcsicoll**。
+每个函数将返回 **_NLSCMPERROR**。 若要使用 **_NLSCMPERROR**，包括\<string.h > 或\<mbstring.h >。 **_wcsicoll**可能会失败，如果任一*string1*或*string2*包含排序序列域外部的宽字符代码。 出现错误时， **_wcsicoll**可能设置**errno**到**EINVAL**。 若要调用的错误检查 **_wcsicoll**，请设置**errno**为 0，然后选中**errno**后调用 **_wcsicoll**。
 
 ## <a name="remarks"></a>备注
 
-其中每个函数执行不区分大小写的比较*string1*和*string2*根据当前正在使用的代码页。 仅在当前代码页中的字符集顺序与字典字符顺序之间存在差异，并且此差异对于字符串比较有关系时，才应使用这些函数。
+每个函数执行不区分大小写的比较*string1*并*string2*根据当前正在使用的代码页。 仅在当前代码页中的字符集顺序与字典字符顺序之间存在差异，并且此差异对于字符串比较有关系时，才应使用这些函数。
 
-**_stricmp**区别 **_stricoll**在于 **_stricmp**比较受到**LC_CTYPE**，而 **_stricoll**比较根据**LC_CTYPE**和**LC_COLLATE**类别的区域设置。 有关详细信息**LC_COLLATE**类别，请参阅[setlocale](setlocale-wsetlocale.md)和[区域设置类别](../../c-runtime-library/locale-categories.md)。 版本的这些功能，而不必 **_l**后缀使用当前区域设置; 的版本与 **_l**后缀是相同，只不过它们使用传递的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+**_stricmp**不同于 **_stricoll**在于 **_stricmp**会影响比较**LC_CTYPE**，而 **_stricoll**比较根据**LC_CTYPE**并**LC_COLLATE**的区域设置的类别。 有关详细信息**LC_COLLATE**类别中，请参阅[setlocale](setlocale-wsetlocale.md)并[区域设置类别](../../c-runtime-library/locale-categories.md)。 无需这些函数的版本 **_l**后缀使用当前区域设置; 的版本与 **_l**后缀是相同，只不过它们改用传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
-所有这些函数都验证其参数。 如果任一*string1*或*string2*是**NULL**指针，无效参数处理程序调用中所述，[参数验证](../../c-runtime-library/parameter-validation.md). 如果允许执行继续，则这些函数将返回 **_NLSCMPERROR**并设置**errno**到**EINVAL**。
+所有这些函数都验证其参数。 如果任一*string1*或*string2*是**NULL**调用指针，无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md). 如果允许执行继续，这些函数将返回 **_NLSCMPERROR**并设置**errno**到**EINVAL**。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -144,7 +134,7 @@ int _mbsicoll_l(
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_stricoll**， **_stricoll_l**|\<string.h>|
 |**_wcsicoll**， **_wcsicoll_l**|\<wchar.h>、\<string.h>|

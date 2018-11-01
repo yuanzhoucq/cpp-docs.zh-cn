@@ -1,39 +1,29 @@
 ---
-title: 编译器警告 （等级 3） C4398 |Microsoft 文档
-ms.custom: ''
+title: 编译器警告（等级 3）C4398
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4398
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4398
 ms.assetid: b6221432-9fed-4272-a547-a73f587904e6
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c38ade6b75242fdd5144481e3415e914cb6773c5
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 4126a1267b41cdf9c0161c7e85a9057b2a301d77
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704609"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50578459"
 ---
 # <a name="compiler-warning-level-3-c4398"></a>编译器警告（等级 3）C4398
 
-> *变量*： 每个进程的全局对象可能无法与多个 appdomain 进行正常工作; 请考虑使用 __declspec(appdomain)
+> '*变量*： 每个进程的全局对象可能无法使用多个 appdomain 正常工作; 请考虑使用 __declspec
 
 ## <a name="remarks"></a>备注
 
-具有虚拟函数[__clrcall](../../cpp/clrcall.md)本机类型中调用约定将导致创建每个应用程序域 vtable。 在多个应用程序域中使用时，可能无法正确解决此类变量。
+使用虚函数[__clrcall](../../cpp/clrcall.md)本机类型中调用约定将导致创建每个应用程序域 vtable。 使用多个应用程序域中时，此类变量可能不正确地更正。
 
-通过显式标记变量就可以解决此警告`__declspec(appdomain)`。 在 Visual Studio 2017 之前的 Visual Studio 版本中，则可以通过使用进行编译解决此警告 **/clr: pure**，默认情况下生成每个 appdomain 的全局变量。 **/Clr: pure**编译器选项是在 Visual Studio 2015 中已过时，并在 Visual Studio 2017 中不支持。
+可以通过显式标记变量来解决此警告`__declspec(appdomain)`。 在 Visual Studio 2017 之前的 Visual Studio 版本中，可以通过使用进行编译解决此警告 **/clr: pure**，默认情况下生成每个 appdomain 的全局变量。 **/Clr: pure**编译器选项在 Visual Studio 2015 中弃用并在 Visual Studio 2017 中不受支持。
 
-有关详细信息，请参阅[appdomain](../../cpp/appdomain.md)和[应用程序域和 Visual c + +](../../dotnet/application-domains-and-visual-cpp.md)。
+有关详细信息，请参阅[appdomain](../../cpp/appdomain.md)并[应用程序域和 Visual c + +](../../dotnet/application-domains-and-visual-cpp.md)。
 
 ## <a name="example"></a>示例
 

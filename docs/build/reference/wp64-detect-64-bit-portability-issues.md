@@ -1,32 +1,22 @@
 ---
-title: -Wp64 （检测 64 位可移植性问题） |Microsoft Docs
-ms.custom: ''
+title: /Wp64（检测 64 位可迁移性问题）
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLWCECompilerTool.Detect64BitPortabilityProblems
 - VC.Project.VCCLCompilerTool.Detect64BitPortabilityProblems
 - /wp64
-dev_langs:
-- C++
 helpviewer_keywords:
 - 64-bit compiler [C++], detecting portability problems
 - /Wp64 compiler option [C++]
 - -Wp64 compiler option [C++]
 - Wp64 compiler option [C++]
 ms.assetid: 331ae5aa-e627-4d03-8f63-dd2c2d76dadd
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ac86fb6372db5aa88b4416dba07fd183f5f1df20
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 504d7594ab9c636fd3ce7415f3866fb4c0a5aadd
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45700734"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50601833"
 ---
 # <a name="wp64-detect-64-bit-portability-issues"></a>/Wp64（检测 64 位可迁移性问题）
 

@@ -1,10 +1,6 @@
 ---
-title: _mbsnbcmp、_mbsnbcmp_l | Microsoft 文档
-ms.custom: ''
+title: _mbsnbcmp、_mbsnbcmp_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbsnbcmp
 - _mbsnbcmp_l
@@ -27,8 +23,6 @@ f1_keywords:
 - _mbsnbcmp_l
 - mbsnbcmp_l
 - _mbsnbcmp
-dev_langs:
-- C++
 helpviewer_keywords:
 - mbsnbcmp_l function
 - mbsnbcmp function
@@ -37,20 +31,16 @@ helpviewer_keywords:
 - _tcsncmp function
 - _mbsnbcmp function
 ms.assetid: dbc99e50-cf85-4e57-a13f-067591f18ac8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0a21d19a3de6a047366497283f2e8515aca37794
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4b21fde122f9804633ac037efaf1f343b5cb9440
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404631"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50619995"
 ---
 # <a name="mbsnbcmp-mbsnbcmpl"></a>_mbsnbcmp、_mbsnbcmp_l
 
-将进行比较的第一个**n**的两个多字节字符字符串的字节。
+将第一个进行比较**n**两个多字节字符字符串的字节数。
 
 > [!IMPORTANT]
 > 此 API 不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
@@ -84,25 +74,25 @@ int _mbsnbcmp_l(
 
 ## <a name="return-value"></a>返回值
 
-返回值指示的子字符串之间的序号关系*string1*和*string2*。
+返回值指示的子字符串之间的序号关系*string1*并*string2*。
 
 |返回值|描述|
 |------------------|-----------------|
-|< 0|*string1*的子字符串将小于*string2*子字符串。|
+|< 0|*string1*子字符串小于*string2*子字符串。|
 |0|*string1*子字符串等于*string2*子字符串。|
-|> 0|*string1*子字符串大于*string2*子字符串。|
+|> 0|*string1*的子字符串大于*string2*子字符串。|
 
-参数验证错误时， **_mbsnbcmp**和 **_mbsnbcmp_l**返回 **_NLSCMPERROR**中, 定义\<string.h > 和\<值 >。
+参数验证错误时， **_mbsnbcmp**并 **_mbsnbcmp_l**返回 **_NLSCMPERROR**，其定义中\<string.h > 和\<值 >。
 
 ## <a name="remarks"></a>备注
 
-**_Mbsnbcmp**函数最多比较第一个*计数*中的字节数*string1*和*string2*并返回一个值，指示子字符串之间的关系。 **_mbsnbcmp**是区分大小写版本 **_mbsnbicmp**。 与不同 **_mbsnbcoll**， **_mbsnbcmp**不受区域设置的排序规则顺序。 **_mbsnbcmp**根据当前的多字节识别多字节字符序列[代码页](../../c-runtime-library/code-pages.md)。
+**_Mbsnbcmp**函数最多比较第一个*计数*中的字节*string1*并*string2*并返回一个值，指示子字符串之间的关系。 **_mbsnbcmp**是区分大小写的版本 **_mbsnbicmp**。 与不同 **_mbsnbcoll**， **_mbsnbcmp**不受区域设置的排序规则顺序。 **_mbsnbcmp**识别多字节字符序列根据当前的多字节[代码页](../../c-runtime-library/code-pages.md)。
 
-**_mbsnbcmp**类似于 **_mbsncmp**，只不过 **_mbsncmp**按字符而不是字节对字符串进行比较。
+**_mbsnbcmp**类似于 **_mbsncmp**，只不过 **_mbsncmp**由字符而不是字节对字符串进行比较。
 
-输出值受**LC_CTYPE**类别设置的区域设置时，它指定前导字节和尾随字节的多字节字符。 有关详细信息，请参阅 [setlocale](setlocale-wsetlocale.md)。 **_Mbsnbcmp**函数依赖于区域设置的行为使用当前区域设置。 **_Mbsnbcmp_l**函数是相同，但它使用*区域设置*参数相反。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+输出值受**LC_CTYPE**类别设置的区域设置，指定前导字节和尾随字节的多字节字符。 有关详细信息，请参阅 [setlocale](setlocale-wsetlocale.md)。 **_Mbsnbcmp**函数依赖于区域设置的行为使用当前区域设置。 **_Mbsnbcmp_l**函数是完全相同，只不过它使用*区域设置*参数相反。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
-如果任一*string1*或*string2*是 null 指针，这些函数将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，函数将返回 **_NLSCMPERROR**和**errno**设置为**EINVAL**。
+如果任一*string1*或*string2*是 null 指针，这些函数将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，这些函数返回 **_NLSCMPERROR**并**errno**设置为**EINVAL**。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -113,7 +103,7 @@ int _mbsnbcmp_l(
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_mbsnbcmp**|\<mbstring.h>|
 |**_mbsnbcmp_l**|\<mbstring.h>|

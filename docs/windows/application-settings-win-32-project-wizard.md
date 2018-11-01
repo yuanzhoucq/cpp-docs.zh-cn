@@ -1,29 +1,18 @@
 ---
-title: 应用程序设置 Win 32 项目向导 |Microsoft Docs
-ms.custom: ''
+title: Win 32 项目向导的应用程序设置
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.appwiz.win32.appset
-dev_langs:
-- C++
 helpviewer_keywords:
 - application settings [C++]
 - Win32 Project Wizard, application settings
 ms.assetid: d6b818f0-9b23-4793-a6c5-df1c8c594bad
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 7342e8cfb95e8e443631563499a84fd7bd6579a1
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: b9d9e8c0919429a961b4ef47507270534afacf75
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50080697"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50592668"
 ---
 # <a name="application-settings-win-32-project-wizard"></a>Win 32 项目向导的应用程序设置
 

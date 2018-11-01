@@ -1,10 +1,6 @@
 ---
-title: _cprintf_p、_cprintf_p_l、_cwprintf_p、_cwprintf_p_l | Microsoft 文档
-ms.custom: ''
+title: _cprintf_p、_cprintf_p_l、_cwprintf_p、_cwprintf_p_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _cprintf_p_l
 - _cwprintf_p_l
@@ -33,8 +29,6 @@ f1_keywords:
 - _cwprintf_p
 - _tcprintf_p
 - cprintf_p_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _cwprintf_p_l function
 - cwprintf_p function
@@ -49,16 +43,12 @@ helpviewer_keywords:
 - tcprintf_p function
 - cprintf_p function
 ms.assetid: 1f82fd7d-13c8-4c4a-a3e4-db0df3873564
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 328e6fba2854e2cee82bdb9b7ccfe2e62e7c1ddc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ef4ac6a89749c2784e4935fcf83810e81b61ae11
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402642"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50658453"
 ---
 # <a name="cprintfp-cprintfpl-cwprintfp-cwprintfpl"></a>_cprintf_p、_cprintf_p_l、_cwprintf_p、_cwprintf_p_l
 
@@ -107,16 +97,16 @@ int _cwprintf_p_l(
 
 ## <a name="remarks"></a>备注
 
-这些函数会格式化并打印一系列字符和值直接到控制台，使用 **_putch**和 **_putwch**函数输出字符。 每个*参数*（如果有） 进行转换和输出中的相应格式规范根据*格式*。 该格式具有相同形式和函数与*格式*参数[printf_p](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)函数。 之间的差异 **_cprintf_p**和**cprintf_s**在于 **_cprintf_p**支持位置参数，这允许指定的自变量是在其中的顺序格式字符串中使用。 有关详细信息，请参阅 [printf_p 位置参数](../../c-runtime-library/printf-p-positional-parameters.md)。
+这些函数会格式化并打印一系列字符和值直接向控制台中，使用 **_putch**并 **_putwch**函数输出字符。 每个*自变量*（如果有） 进行转换和输出中的相应格式规范根据*格式*。 格式具有相同的形式和函数与*格式*参数[printf_p](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)函数。 之间的差异 **_cprintf_p**并**cprintf_s**在于 **_cprintf_p**支持位置参数，这允许指定的顺序参数为格式字符串中使用。 有关详细信息，请参阅 [printf_p 位置参数](../../c-runtime-library/printf-p-positional-parameters.md)。
 
-与不同**fprintf_p**， **printf_p**，和**sprintf_p**函数，两者 **_cprintf_p**也不 **_cwprintf_p**会换行字符将转换为回车换行符 (CR-LF) 组合输出时。 一个重要区别在于， **_cwprintf_p**显示 Unicode 字符在 Windows NT 中使用时。 与不同 **_cprintf_p**， **_cwprintf_p**使用当前控制台区域设置。
+与不同**fprintf_p**， **printf_p**，并**sprintf_p**函数，既不 **_cprintf_p**也不 **_cwprintf_p**换行字符转换为回车符和换行符 (CR-LF) 组合时输出。 一个重要的区别在于 **_cwprintf_p**显示 Unicode 字符时在 Windows NT 中使用。 与不同 **_cprintf_p**， **_cwprintf_p**将使用当前控制台区域设置。
 
-使用这些函数的版本 **_l**后缀是相同，只不过它们使用传递而不是当前区域设置的区域设置参数。
+使用这些函数的版本 **_l**后缀完全相同，只不过它们使用传递中而不是当前区域设置的区域设置参数。
 
 > [!IMPORTANT]
 > 确保 format 不是用户定义的字符串。
 
-此外，如 **_cprintf_s**和 **_cwprintf_s**，它们将验证输出的指针和格式字符串。 如果*格式*或*参数*是**NULL**，或者格式字符串包含无效格式字符，这些函数将调用无效参数处理程序，为中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则这些函数将返回-1 并设置**errno**到**EINVAL**。
+此外，喜欢 **_cprintf_s**并 **_cwprintf_s**，它们将验证输入的指针和格式字符串。 如果*格式*或*自变量*是**NULL**，或者格式字符串包含无效格式字符，这些函数将调用无效参数处理程序，作为中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，这些函数将返回-1 并设置**errno**到**EINVAL**。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -127,7 +117,7 @@ int _cwprintf_p_l(
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_cprintf_p**， **_cprintf_p_l**|\<conio.h>|
 |**_cwprintf_p**， **_cwprintf_p_l**|\<conio.h>|

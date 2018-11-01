@@ -1,10 +1,6 @@
 ---
-title: system、_wsystem |Microsoft 文档
-ms.custom: ''
+title: system、_wsystem
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - system
 - _wsystem
@@ -24,8 +20,6 @@ apitype: DLLExport
 f1_keywords:
 - _tsystem
 - _wsystem
-dev_langs:
-- C++
 helpviewer_keywords:
 - _wsystem function
 - wsystem function
@@ -35,16 +29,12 @@ helpviewer_keywords:
 - commands, executing
 - command interpreter
 ms.assetid: 7d3df2b6-f742-49ce-bf52-012b0aee3df5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ca44648ed378d4484b8e4c32a38a6780b3eddd53
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fa034b164a188b1b5b7ccd8a4ca71ab7ac754fa1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414697"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50624661"
 ---
 # <a name="system-wsystem"></a>system、_wsystem
 
@@ -71,7 +61,7 @@ int _wsystem(
 
 ## <a name="return-value"></a>返回值
 
-如果*命令*是**NULL**并找到命令解释器，则返回一个非零值。 如果未找到命令解释器，返回 0 并设置**errno**到**ENOENT**。 如果*命令*不**NULL**，**系统**返回由命令解释器返回的值。 仅当命令解释器返回值 0 时，它才会返回值 0。 返回值-1 指示错误，和**errno**设置为以下值之一：
+如果*命令*是**NULL**并找到命令解释器，则返回一个非零值。 如果未找到命令解释器，返回 0 并设置**errno**到**ENOENT**。 如果*命令*不是**NULL**，**系统**返回由命令解释器返回的值。 仅当命令解释器返回值 0 时，它才会返回值 0。 返回值为-1 指示错误，并**errno**设置为以下值之一：
 
 |||
 |-|-|
@@ -84,11 +74,11 @@ int _wsystem(
 
 ## <a name="remarks"></a>备注
 
-**系统**函数传递*命令*到命令解释器，其中执行与操作系统命令字符串。 **系统**使用**COMSPEC**和**路径**环境变量来定位命令解释器文件 CMD.exe。 如果*命令*是**NULL**，该函数只检查命令解释器是否存在。
+**系统**函数传递*命令*到命令解释器，它将执行操作系统命令作为字符串。 **系统**使用**COMSPEC**并**路径**环境变量来定位命令解释器文件 CMD.exe。 如果*命令*是**NULL**，该函数只检查命令解释器是否存在。
 
-您必须显式刷新，通过使用[fflush](fflush.md)或[_flushall](flushall.md)，或关闭任何流，然后才能调用**系统**。
+您必须显式刷新，请使用[fflush](fflush.md)或[_flushall](flushall.md)，或在调用之前关闭任何流**系统**。
 
-**_wsystem**是宽字符版本的**系统**;*命令*参数 **_wsystem**是宽字符字符串。 否则这些函数具有相同行为。
+**_wsystem**是宽字符版本**系统**;*命令*参数 **_wsystem**是宽字符字符串。 否则这些函数具有相同行为。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -98,7 +88,7 @@ int _wsystem(
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**system**|\<process.h> 或 \<stdlib.h>|
 |**_wsystem**|\<process.h> 或 \<stdlib.h> 或 \<wchar.h>|
@@ -107,7 +97,7 @@ int _wsystem(
 
 ## <a name="example"></a>示例
 
-此示例使用**系统**以键入一个文本文件。
+此示例使用**系统**键入一个文本文件。
 
 ```C
 // crt_system.c

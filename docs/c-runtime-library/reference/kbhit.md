@@ -1,10 +1,6 @@
 ---
-title: _kbhit | Microsoft 文档
-ms.custom: ''
+title: _kbhit
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _kbhit
 apilocation:
@@ -24,8 +20,6 @@ f1_keywords:
 - _kbhit
 - kbhit
 - conio/_kbhit
-dev_langs:
-- C++
 helpviewer_keywords:
 - keyboard input
 - user input, checking for keyboard
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - _kbhit function
 - keyboards, checking input
 ms.assetid: e82a1cc9-bbec-4150-b678-a7e433220fe4
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f414403774a6f2dbd5e21b70d707ab8c8b20c63f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9133d73e92438327bb2381e3293fd37076dd27ee
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399044"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50667984"
 ---
 # <a name="kbhit"></a>_kbhit
 
@@ -63,7 +53,7 @@ int _kbhit( void );
 
 ## <a name="return-value"></a>返回值
 
-**_kbhit**返回非零值，如果按下某个键。 否则返回 0。
+**_kbhit**如果按下某个键，则返回一个非零值。 否则返回 0。
 
 ## <a name="remarks"></a>备注
 
@@ -71,7 +61,7 @@ int _kbhit( void );
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_kbhit**|\<conio.h>|
 

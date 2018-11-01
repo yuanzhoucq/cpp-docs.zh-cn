@@ -1,10 +1,6 @@
 ---
-title: _ismbbkprint、_ismbbkprint_l | Microsoft 文档
-ms.custom: ''
+title: _ismbbkprint、_ismbbkprint_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ismbbkprint
 - _ismbbkprint_l
@@ -26,24 +22,18 @@ f1_keywords:
 - ismbbkprint
 - _ismbbkprint
 - ismbbkprint_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _ismbbkprint function
 - ismbbkprint_l function
 - ismbbkprint function
 - _ismbbkprint_l function
 ms.assetid: 8d1d3258-1e34-4365-81ed-97c95de25475
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a1a6a215bac14f81d29d83a856313133fb4e88a2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9d30abb0bcb587aeb15087ceb80d60d54ac1bebe
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399496"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50645973"
 ---
 # <a name="ismbbkprint-ismbbkprintl"></a>_ismbbkprint、_ismbbkprint_l
 
@@ -71,11 +61,11 @@ int _ismbbkprint_l(
 
 ## <a name="return-value"></a>返回值
 
-**_ismbbkprint**返回非零值，如果整数*c*如果它不为非 ASCII 文本或非 ASCII 标点符号或 0。 例如，仅在代码页 932 中，_ismbbkprint 测试片假名字母数字或片假名标点（范围：0xA1 - 0xDF）。 **_ismbbkprint**的区域设置相关的字符设置使用当前区域。 **_ismbbkprint_l**是相同，只不过它使用传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+**_ismbbkprint**返回非零值，如果整数*c*如果它不为非 ASCII 文本或非 ASCII 标点符号或 0。 例如，仅在代码页 932 中，_ismbbkprint 测试片假名字母数字或片假名标点（范围：0xA1 - 0xDF）。 **_ismbbkprint**的区域设置相关的字符设置使用当前区域。 **_ismbbkprint_l**是完全相同，只不过它使用传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_ismbbkprint**|\<mbctype.h>|
 |**_ismbbkprint_l**|\<mbctype.h>|
