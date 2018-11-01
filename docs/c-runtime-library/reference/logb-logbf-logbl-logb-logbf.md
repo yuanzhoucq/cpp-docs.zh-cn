@@ -1,10 +1,6 @@
 ---
-title: logb、logbf、logbl、_logb、_logbf | Microsoft 文档
-ms.custom: ''
+title: logb、logbf、logbl、_logb、_logbf
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - logb
 - _logb
@@ -30,8 +26,6 @@ f1_keywords:
 - _logb
 - _logbf
 - logbf
-dev_langs:
-- C++
 helpviewer_keywords:
 - _logbf function
 - mantissas, floating-point variables
@@ -44,16 +38,12 @@ helpviewer_keywords:
 - floating-point functions, mantissa and exponent
 - exponents and mantissas
 ms.assetid: 780c4daa-6fe6-4fbc-9412-4c1ba1a1766f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f09a243994112c3ce19d72213391e09ba23c3c4c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9f598eedaf30b1f2a1858129e648a117355d112e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402769"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50466282"
 ---
 # <a name="logb-logbf-logbl-logb-logbf"></a>logb、logbf、logbl、_logb、_logbf
 
@@ -92,13 +82,13 @@ float _logbf(
 
 ## <a name="return-value"></a>返回值
 
-**logb**返回的无偏差指数值*x*表示为浮点值的有符号整数。
+**logb**返回的无偏差指数值*x*作为浮点值形式表示的有符号整数。
 
 ## <a name="remarks"></a>备注
 
-**Logb**函数提取浮点自变量的指数值*x*，就像*x*已表示具有无限范围。 如果自变量*x*为非规范化，它将被视为已规范化。
+**Logb**函数提取浮点型参数的指数值*x*，就好像*x*已使用无限范围表示。 如果自变量*x*是非规范化，它被视为已规范化。
 
-由于 c + + 允许重载，你可以调用的重载**logb**采用并返回**float**或**长** **double**值。 在 C 程序中， **logb**始终采用并返回**double**。
+由于 c + + 允许重载，可以调用的重载**logb**采用并返回**float**或**长** **double**值。 在 C 程序中， **logb**始终采用并返回**double**。
 
 |输入|SEH 异常|Matherr 异常|
 |-----------|-------------------|-----------------------|
@@ -107,7 +97,7 @@ float _logbf(
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_logb**|\<float.h>|
 |**logb**， **logbf**， **logbl**， **_logbf**|\<math.h>|

@@ -1,10 +1,6 @@
 ---
-title: isalnum, iswalnum, _isalnum_l, _iswalnum_l | Microsoft 文档
-ms.custom: ''
+title: isalnum、iswalnum、_isalnum_l、_iswalnum_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _iswalnum_l
 - _isalnum_l
@@ -30,8 +26,6 @@ f1_keywords:
 - _isalnum_l
 - isalnum
 - _istalnum
-dev_langs:
-- C++
 helpviewer_keywords:
 - _istalnum function
 - _ismbcalnum_l function
@@ -42,16 +36,12 @@ helpviewer_keywords:
 - _istalnum_l function
 - _iswalnum_l function
 ms.assetid: 0dc51306-ade8-4944-af27-e4176fc89093
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9c7c1156341d4c1b0b54d54f52a5a33eb6506e50
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 97ac18eb85c62861c701f1498da0b4851021ca74
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401537"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50456623"
 ---
 # <a name="isalnum-iswalnum-isalnuml-iswalnuml"></a>isalnum、iswalnum、_isalnum_l、_iswalnum_l
 
@@ -76,11 +66,11 @@ int _iswalnum_l( wint_t c, _locale_t locale );
 
 ## <a name="return-value"></a>返回值
 
-每个这些例程返回非零如果*c*是字母数字字符的特定表示。 **isalnum**返回非零值，如果任一**isalpha**或**isdigit**为非零， *c*，即，如果*c*位于范围 A-Z，a-z 或 0-9。 **iswalnum**返回非零值，如果任一**iswalpha**或**iswdigit**为非零， *c*。 这些例程都返回 0 如果*c*不满足测试条件。
+这些例程返回非零值如果*c*是以字母数字字符的特定表示形式。 **isalnum**返回非零值，如果任一**isalpha**或**isdigit**为非零*c*，即，如果*c*内范围 A-Z、 a-z 或 0-9。 **iswalnum**返回非零值，如果任一**iswalpha**或**iswdigit**为非零*c*。 每个例程将返回 0，如果*c*不满足测试条件。
 
-这些函数具有的版本 **_l**后缀使用传入的区域设置参数而不是当前区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+具有这些函数的版本 **_l**后缀使用传入的区域设置参数而不是当前区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
-行为**isalnum**和 **_isalnum_l**如果是未定义*c*不是 EOF 或在 0 到 0xFF，非独占的范围。 使用 CRT 调试库时和*c*是不是一种这些值，函数引发的断言。
+行为**isalnum**并 **_isalnum_l**未定义当*c*不是 EOF 或在范围 0 到 0xff 内，非独占。 使用调试 CRT 库时， *c*是不包含其中一个值，函数将引发断言。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -91,7 +81,7 @@ int _iswalnum_l( wint_t c, _locale_t locale );
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**isalnum**|\<ctype.h>|
 |**iswalnum**|\<ctype.h 1> 或 \<wchar.h 1>|

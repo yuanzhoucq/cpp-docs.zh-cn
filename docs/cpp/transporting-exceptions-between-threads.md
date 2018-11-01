@@ -1,12 +1,6 @@
 ---
-title: 线程之间传输异常 |Microsoft Docs
-ms.custom: ''
+title: 线程之间传输异常
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - std::current_exception
 - transporting exceptions between threads
@@ -20,16 +14,12 @@ helpviewer_keywords:
 - rethrow_exception
 - move exceptions between threads
 ms.assetid: 5c95d57b-acf5-491f-8122-57c5df0edd98
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 46cdf86d431b69704b5a67fea3024365470de945
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f403b1448855b60f323ed582794a00c3e6ae1b3a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46066357"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50464438"
 ---
 # <a name="transporting-exceptions-between-threads"></a>线程之间传输异常
 
@@ -150,7 +140,7 @@ namespace std
 
 ## <a name="makeexceptionptr-function"></a>make_exception_ptr 函数
 
-`make_exception_ptr` 函数采用类的实例作为其参数，然后返回引用该实例的 `exception_ptr`。 通常，指定[异常类](../standard-library/exception-class.md)对象作为参数传递给 `make_exception_ptr` 函数，但任意类对象都可以是参数。
+`make_exception_ptr` 函数采用类的实例作为其自变量，然后返回引用该实例的 `exception_ptr`。 通常，指定[异常类](../standard-library/exception-class.md)对象作为参数传递给 `make_exception_ptr` 函数，但任意类对象都可以是参数。
 
 调用`make_exception_ptr`函数是等效于引发 c + + 异常，即捕获该中**捕获**块中，并调用`current_exception`函数以返回`exception_ptr`引用异常的对象。 Microsoft 实现的 `make_exception_ptr` 函数比调用并捕获异常更高效。
 
