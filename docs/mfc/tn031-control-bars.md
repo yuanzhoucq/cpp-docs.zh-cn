@@ -1,14 +1,8 @@
 ---
-title: TN031： 控件条 |Microsoft Docs
-ms.custom: ''
+title: TN031：控件条
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
 f1_keywords:
 - vc.controls.bars
-dev_langs:
-- C++
 helpviewer_keywords:
 - control bars [MFC], styles
 - CStatusBar class [MFC], Tech Note 31 usage
@@ -20,16 +14,12 @@ helpviewer_keywords:
 - TN031
 - styles [MFC], control bars
 ms.assetid: 8cb895c0-40ea-40ef-90ee-1dd29f34cfd1
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 412dd9e0a4e81ee6152197634205401cbe71df2e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9029b8c0fb6aa20de62dbdf21aedeae6d8a15994
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46390605"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50463295"
 ---
 # <a name="tn031-control-bars"></a>TN031：控件条
 
@@ -74,7 +64,7 @@ ms.locfileid: "46390605"
 
 - 支持派生类的实现。
 
-C++ 控件条对象一般将作为 `CFrameWnd` 派生类的成员嵌入，并且将在销毁父 `HWND` 和对象时得到清理。 如果需要分配堆上的控件条对象，则可以只需设置*m_bAutoDestruct*成员添加到**TRUE**若要使控件条"**删除此**"时`HWND`销毁。
+C++ 控件条对象一般将作为 `CFrameWnd` 派生类的成员嵌入，并且将在销毁父 `HWND` 和对象时得到清理。 如果需要在堆上分配控件条对象，则可以将 *m_bAutoDestruct* 成员设置为 **TRUE** ，以便在销毁**时使控件条“删除此项”**`HWND` 。
 
 > [!NOTE]
 >  如果您创建您自己`CControlBar`的派生的类，而不是使用其中一个 MFC 的派生类，如`CStatusBar`， `CToolBar`，或`CDialogBar`，将需要设置*m_dwStyle*数据成员。 这可以重写`Create`:

@@ -1,10 +1,6 @@
 ---
-title: wcsrtombs_s | Microsoft 文档
-ms.custom: ''
+title: wcsrtombs_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - wcsrtombs_s
 apilocation:
@@ -22,23 +18,17 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - wcsrtombs_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - string conversion, wide characters
 - wcsrtombs_s function
 - wide characters, strings
 ms.assetid: 9dccb766-113c-44bb-9b04-07a634dddec8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 94e27965d1660f4c344d0026bbfce8685a935c7a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9ece21737b1e0b4d157b241286638ac376843fc6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417296"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50459054"
 ---
 # <a name="wcsrtombss"></a>wcsrtombs_s
 
@@ -80,10 +70,10 @@ errno_t wcsrtombs_s(
 指向要转换的宽字符字符串的指针。
 
 *count*<br/>
-最大存储中的字节数*mbstr*缓冲区，或[_TRUNCATE](../../c-runtime-library/truncate.md)。
+要存储在中的字节的最大数*mbstr*缓冲区，或[_TRUNCATE](../../c-runtime-library/truncate.md)。
 
 *mbstate*<br/>
-指向的指针**mbstate_t**转换状态对象。
+一个指向**mbstate_t**转换状态对象。
 
 ## <a name="return-value"></a>返回值
 
@@ -91,42 +81,42 @@ errno_t wcsrtombs_s(
 
 |错误条件|返回值和**errno**|
 |---------------------|------------------------------|
-|*mbstr*是**NULL**和*sizeInBytes* > 0|**EINVAL**|
+|*mbstr*是**NULL**并*sizeInBytes* > 0|**EINVAL**|
 |*wcstr*是**NULL**|**EINVAL**|
-|目标缓冲区是太小，无法包含转换的字符串 (除非*计数*是 **_TRUNCATE**; 请参阅下面的备注)|**ERANGE**|
+|目标缓冲区因过小，无法包含转换后的字符串 (除非*计数*是 **_TRUNCATE**; 请参阅下面的备注)|**ERANGE**|
 
-如果发生这些情况中的任何一个，都会调用无效参数异常，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，函数将返回错误代码和设置**errno**表中所示。
+如果发生这些情况中的任何一个，都会调用无效参数异常，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，函数将返回错误代码，并设置**errno**如下表所示。
 
 ## <a name="remarks"></a>备注
 
-**Wcsrtombs_s**函数将指向的宽字符字符串转换*wcstr*到存储指向的缓冲区中的多字节字符*mbstr*，使用中包含的转换状态*mbstate*。 在满足以下条件之一前，该转换将一直对每个字符执行：
+**Wcsrtombs_s**函数将转换的指向的宽字符字符串*wcstr*指向的缓冲区中存储的多字节字符*mbstr*，并使用中包含的转换状态*mbstate*。 在满足以下条件之一前，该转换将一直对每个字符执行：
 
 - 遇到 null 宽字符
 
 - 遇到无法转换的宽字符
 
-- 存储中的字节数*mbstr*缓冲等于*计数*。
+- 存储中的字节数*mbstr*缓冲 equals*计数*。
 
 目标字符串始终以 null 结尾（即使在出错时）。
 
-如果*计数*是特殊值[_TRUNCATE](../../c-runtime-library/truncate.md)，然后**wcsrtombs_s**将尽可能多的字符串作为将放入目标缓冲区中，同时仍保持 null 的空间终结器。
+如果*计数*是特殊值[_TRUNCATE](../../c-runtime-library/truncate.md)，然后**wcsrtombs_s**多地将字符串转换根据目标缓冲区，同时仍保留为空的空间终结器。
 
-如果**wcsrtombs_s**成功转换了源字符串，它会将大小，以字节为单位的转换的字符串，包括 null 终止符，更改为 *&#42;pReturnValue* (提供*pReturnValue*不**NULL**)。 发生这种情况即使*mbstr*自变量是**NULL** ，并提供了一种方法来确定所需的缓冲区大小。 请注意，如果*mbstr*是**NULL**，*计数*将被忽略。
+如果**wcsrtombs_s**成功转换了源字符串，它的大小放以字节为单位的转换后的字符串，包括 null 终止符 *&#42;pReturnValue* (提供*pReturnValue*不是**NULL**)。 发生这种情况即使*mbstr*自变量是**NULL** ，并提供了一种方法来确定所需的缓冲区大小。 请注意，如果*mbstr*是**NULL**，*计数*将被忽略。
 
-如果**wcsrtombs_s**遇到宽字符不能转换为多字节字符，它将为-1 放在 *\*pReturnValue*，将目标缓冲区设置为一个空字符串，设置**errno**到**EILSEQ**，并返回**EILSEQ**。
+如果**wcsrtombs_s**遇到无法转换为多字节字符的宽字符它将为-1 放在 *\*pReturnValue*，将目标缓冲区设置为空字符串，设置**errno**到**EILSEQ**，并返回**EILSEQ**。
 
-如果指向的序列*wcstr*和*mbstr*重叠的行为**wcsrtombs_s**是不确定的。 **wcsrtombs_s**受到当前区域设置中 LC_TYPE 类别。
+如果指向的序列*wcstr*并*mbstr*重叠的行为**wcsrtombs_s**是不确定的。 **wcsrtombs_s**受当前区域设置中 LC_TYPE 类别。
 
 > [!IMPORTANT]
-> 确保*wcstr*和*mbstr*未重叠，且*计数*正确地反映了要转换的宽字符数。
+> 絋粄*wcstr*和*mbstr*未重叠，并且*计数*是否正确反映了要转换的宽字符数。
 
-**Wcsrtombs_s**函数不同于[wcstombs_s、 _wcstombs_s_l](wcstombs-s-wcstombs-s-l.md)通过其可重启性。 转换状态存储在*mbstate*以便后续调用相同的或其他可重启函数。 混合使用可重启函数和不可重启函数时，结果不确定。 例如，应用程序将使用**wcsrlen**而非**wcslen**，如果的后续调用**wcsrtombs_s**而不是使用**wcstombs_s**.
+**Wcsrtombs_s**函数不同于[wcstombs_s、 _wcstombs_s_l](wcstombs-s-wcstombs-s-l.md)通过其可重启性。 转换状态存储在*mbstate*以便后续调用相同或其他可重启函数。 混合使用可重启函数和不可重启函数时，结果不确定。 例如，使用应用程序**wcsrlen**而非**wcslen**，则随后调用**wcsrtombs_s**而不是使用了**wcstombs_s**.
 
 在 C++ 中，使用这些函数由模板重载简化；重载可以自动推导出缓冲区长度 (不再需要指定大小自变量)，并且它们可以自动用以更新、更安全的对应物替换旧的、不安全的函数。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 
 ## <a name="exceptions"></a>异常
 
-**Wcsrtombs_s**函数是多线程安全，前提是当前线程中的函数不调用**setlocale**时执行此函数和*mbstate*为 null。
+**Wcsrtombs_s**函数是多线程安全，只要当前线程中的函数不调用**setlocale**执行此函数时， *mbstate*为 null。
 
 ## <a name="example"></a>示例
 
@@ -177,7 +167,7 @@ The string was successfully converted.
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**wcsrtombs_s**|\<wchar.h>|
 

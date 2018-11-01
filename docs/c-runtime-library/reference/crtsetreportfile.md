@@ -1,10 +1,6 @@
 ---
-title: _CrtSetReportFile | Microsoft 文档
-ms.custom: ''
+title: _CrtSetReportFile
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtSetReportFile
 apilocation:
@@ -22,26 +18,20 @@ apitype: DLLExport
 f1_keywords:
 - CrtSetReportFile
 - _CrtSetReportFile
-dev_langs:
-- C++
 helpviewer_keywords:
 - CrtSetReportFile function
 - _CrtSetReportFile function
 ms.assetid: 3126537e-511b-44af-9c1c-0605265eabc4
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a3df4f54ad8e191dac7110a914bdde1cec888ff9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 32a560e09c47468daf48c185e23d6e289c6d1d9b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402333"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50464241"
 ---
 # <a name="crtsetreportfile"></a>_CrtSetReportFile
 
-在使用后[_CrtSetReportMode](crtsetreportmode.md)指定 **_CRTDBG_MODE_FILE**，你可以指定要接收的消息文本的文件句柄。 **_CrtSetReportFile**也使用[_CrtDbgReport、 _CrtDbgReportW](crtdbgreport-crtdbgreportw.md)指定的文本 （仅限调试版本） 的目标位置。
+在使用后[_CrtSetReportMode](crtsetreportmode.md)来指定 **_CRTDBG_MODE_FILE**，可以指定要接收的消息文本的文件句柄。 **_CrtSetReportFile**也可由[_CrtDbgReport、 _CrtDbgReportW](crtdbgreport-crtdbgreportw.md)以指定文本 （仅限调试版本） 的目标。
 
 ## <a name="syntax"></a>语法
 
@@ -55,18 +45,18 @@ _HFILE _CrtSetReportFile(
 ### <a name="parameters"></a>参数
 
 *reportType*<br/>
-报告类型： **_CRT_WARN**， **_CRT_ERROR**，和 **_CRT_ASSERT**。
+报告类型： **_CRT_WARN**， **_CRT_ERROR**，并 **_CRT_ASSERT**。
 
 *reportFile*<br/>
 新的报表文件*reportType*。
 
 ## <a name="return-value"></a>返回值
 
-在成功完成， **_CrtSetReportFile**返回以前的报表文件中指定的报表类型为定义*reportType*。 如果在传递一个无效值*reportType*，此函数将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则**errno**设置为**EINVAL**和该函数将返回 **_CRTDBG_HFILE_ERROR**。 有关详细信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
+成功完成后， **_CrtSetReportFile**返回先前的报表文件中指定的报告类型定义*reportType*。 如果为传入的无效值*reportType*，此函数将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则**errno**设置为**EINVAL**并且该函数返回 **_CRTDBG_HFILE_ERROR**。 有关详细信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>备注
 
-**_CrtSetReportFile**用于[_CrtSetReportMode](crtsetreportmode.md)函数定义的目标或生成的特定报表类型的目标 **_CrtDbgReport**。 当 **_CrtSetReportMode**已调用将分配 **_CRTDBG_MODE_FILE** reporting 模式对于特定报表类型， **_CrtSetReportFile**然后应调用到定义的特定文件或流要用作目标。 当[_DEBUG](../../c-runtime-library/debug.md)未定义，则调用 **_CrtSetReportFile**在预处理过程中删除。
+**_CrtSetReportFile**用于[_CrtSetReportMode](crtsetreportmode.md)函数来定义的目标或目标的生成的特定报表类型 **_CrtDbgReport**。 当 **_CrtSetReportMode**已调用来分配 **_CRTDBG_MODE_FILE**报告模式的特定报表类型， **_CrtSetReportFile**然后应调用到定义特定文件或流要用作目标。 当[_DEBUG](../../c-runtime-library/debug.md)未定义，则调用 **_CrtSetReportFile**在预处理过程中删除。
 
 以下列表显示的可用选项*reportFile*和产生的行为 **_CrtDbgReport**。 在 Crtdbg.h 中将这些选项定义为位标志。
 
@@ -88,7 +78,7 @@ _HFILE _CrtSetReportFile(
 
 - **_CRTDBG_FILE_STDERR**
 
-   将消息写入**stderr**，其中，可以重定向，如下所示：
+   将消息写入**stderr**，可定向，如下所示：
 
    ```C
    freopen( "c:\\log2.txt", "w", stderr);
@@ -100,21 +90,21 @@ _HFILE _CrtSetReportFile(
 
 - **_CRTDBG_FILE_STDOUT**
 
-   将消息写入**stdout**，其中你可以重定向。
+   将消息写入**stdout**，可进行重定向。
 
 - **_CRTDBG_REPORT_FILE**
 
    返回当前报告模式。
 
-可以单独控制每种报告类型所使用的报表文件。 例如，很可能指定*reportType*的 **_CRT_ERROR**报告给**stderr**，虽然*reportType*的 **_CRT_ASSERT**报告给用户定义的文件句柄或流。
+可以单独控制每种报告类型所使用的报表文件。 例如，它是可以指定*reportType*的 **_CRT_ERROR**报告给**stderr**，而*reportType* 的 **_CRT_ASSERT**报告给用户定义的文件句柄或流。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|可选标头|
+|例程所返回的值|必需的标头|可选标头|
 |-------------|---------------------|---------------------|
 |**_CrtSetReportFile**|\<crtdbg.h>|\<errno.h>|
 
-通用 Windows 平台 (UWP) 应用中不支持控制台。 控制台中，与关联的标准流句柄**stdin**， **stdout**，和**stderr**，必须将 C 运行时函数才能使用它们在 UWP 应用重定向. 有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+通用 Windows 平台 (UWP) 应用中不支持控制台。 控制台中，与关联的标准流句柄**stdin**， **stdout**，并**stderr**，C 运行时函数可以在 UWP 应用中使用它们之前，必须重定向. 有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 
 **库：** 仅限 [CRT 库功能](../../c-runtime-library/crt-library-features.md)的调试版本。
 

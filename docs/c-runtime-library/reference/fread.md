@@ -1,10 +1,6 @@
 ---
-title: fread | Microsoft 文档
-ms.custom: ''
+title: fread
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - fread
 apilocation:
@@ -22,24 +18,18 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - fread
-dev_langs:
-- C++
 helpviewer_keywords:
 - reading data [C++], from input streams
 - fread function
 - data [C++], reading from input stream
 - streams [C++], reading data from
 ms.assetid: 9a3c1538-93dd-455e-ae48-77c1e23c53f0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 819ec0b494b6e800f858e2e5647164567531ab0b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d3516dc67047064b9293b1bb289888596736ed47
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400923"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50468830"
 ---
 # <a name="fread"></a>fread
 
@@ -72,15 +62,15 @@ size_t fread(
 
 ## <a name="return-value"></a>返回值
 
-**fread**返回实际读取完整的项的数目，它可能小于*计数*如果发生错误，或如果之前已到达遇到文件末尾，则*计数*。 使用**feof**或**ferror**函数将读取的错误的文件尾条件与区分开来。 如果*大小*或*计数*为 0， **fread**返回 0 和缓冲区内容不变。 如果*流*或*缓冲区*是 null 指针， **fread**中所述调用无效参数处理程序，[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，此函数将**errno**到**EINVAL**并返回 0。
+**fread**返回实际读取的完整项数，这可能是小于*计数*如果发生错误或到达之前遇到文件末尾*计数*。 使用**feof**或**ferror**函数以将读取的错误与文件结尾条件区分开来。 如果*大小*或*计数*为 0， **fread**返回 0 并且缓冲区内容保持不变。 如果*流*或*缓冲区*是 null 指针**fread**将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，此函数可设置**errno**到**EINVAL** ，并返回 0。
 
 有关这些代码以及其他错误代码的详细信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>备注
 
-**Fread**函数一直读取到*计数*的项*大小*字节从输入*流*并将它们存储在*缓冲区*. 与关联的文件指针*流*实际读取的字节数增加 （如果有）。 如果在文本模式下打开给定的流，则单一的换行字符替换回车换行符对。 该替换不会影响文件指针或返回值。 如果发生错误，文件指针位置不确定。 无法确定部分读取项的值。
+**Fread**函数最多读取*计数*的项*大小*字节从输入*流*将其存储在*缓冲区*. 与关联的文件指针*流*（如果有） 为增量递增实际读取的字节数。 如果在文本模式下打开给定的流时，回车-换行对替换为单一的换行字符。 该替换不会影响文件指针或返回值。 如果发生错误，文件指针位置不确定。 无法确定部分读取项的值。
 
-此函数将锁定其他线程。 如果你需要的非锁定版本，使用 **_fread_nolock**。
+此函数将锁定其他线程。 如果需要非锁定版本，使用 **_fread_nolock**。
 
 ## <a name="requirements"></a>要求
 

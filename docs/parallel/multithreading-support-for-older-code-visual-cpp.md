@@ -1,12 +1,6 @@
 ---
-title: 针对旧代码 （Visual c + +） 的多线程处理支持 |Microsoft Docs
-ms.custom: ''
+title: 针对旧代码的多线程支持 (Visual C++)
 ms.date: 08/27/2018
-ms.technology:
-- cpp-parallel
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - threading [C++]
 - multiple threads
@@ -16,16 +10,12 @@ helpviewer_keywords:
 - multiple concurrent threads
 - multithreading [C++]
 ms.assetid: 24425b1f-5031-4c6b-aac7-017115a40e7c
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 04767bfea727e32fb49d202358127685d9d5d2d0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 649e26c3f0704dfd6740b1a250613545e29316a3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46421123"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50457728"
 ---
 # <a name="multithreading-support-for-older-code-visual-c"></a>针对旧代码的多线程支持 (Visual C++)
 

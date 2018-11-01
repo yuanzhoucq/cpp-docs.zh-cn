@@ -1,10 +1,6 @@
 ---
-title: wctype | Microsoft 文档
-ms.custom: ''
+title: wctype
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - wctype
 apilocation:
@@ -21,22 +17,16 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - wctype
-dev_langs:
-- C++
 helpviewer_keywords:
 - wctype function
 - wide characters
 ms.assetid: 14aded12-4087-4123-bc48-db4e10999223
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0bb5003db02ed27c2906ebc3619313489e40e5fb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 81caf8e1ab04635d205d7b01af2d4c2896eec01c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411895"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50456896"
 ---
 # <a name="wctype"></a>wctype
 
@@ -57,7 +47,7 @@ wctype_t wctype(
 
 ## <a name="return-value"></a>返回值
 
-如果**LC_CTYPE**当前区域设置类别的未定义其名称与属性的字符串匹配的分类规则*属性*，函数将返回零。 否则，它将返回一个适合用作对 [towctrans](towctrans.md) 的后续调用的第二个参数的非零值。
+如果**LC_CTYPE**的当前区域设置类别未定义其名称与属性的字符串匹配的分类规则*属性*，该函数将返回零。 否则，它将返回一个适合用作对 [towctrans](towctrans.md) 的后续调用的第二个参数的非零值。
 
 ## <a name="remarks"></a>备注
 
@@ -69,17 +59,17 @@ wctype_t wctype(
 |iswalpha(c)|iswctype (c、 wctype ("alpha"))|
 |iswcntrl(c)|iswctype (c、 wctype （"控件"）)|
 |iswdigit(c)|iswctype (c、 wctype （"数字"）)|
-|iswgraph(c)|iswctype (c、 wctype （"图形"）)|
-|iswlower(c)|iswctype (c、 wctype （"低"）)|
-|iswprint(c)|iswctype (c、 wctype （"打印"）)|
-|iswpunct(c)|iswctype (c、 wctype （"标点符号"）)|
+|iswgraph(c)|iswctype (c、 wctype （"关系图"）)|
+|iswlower(c)|iswctype (c、 wctype （"较低"）)|
+|iswprint(c)|iswctype (c、 wctype ("print"))|
+|iswpunct(c)|iswctype (c、 wctype ("punct"))|
 |iswspace(c)|iswctype (c、 wctype （"空间"）)|
-|iswupper(c)|iswctype (c、 wctype （"上限"）)|
+|iswupper(c)|iswctype (c、 wctype （"大写"）)|
 |iswxdigit(c)|iswctype (c、 wctype ("xdigit"))|
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**wctype**|\<wctype.h>|
 
