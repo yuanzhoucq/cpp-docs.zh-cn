@@ -1,27 +1,17 @@
 ---
-title: 编译器错误 C2773 |Microsoft Docs
-ms.custom: ''
+title: 编译器错误 C2773
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2773
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2773
 ms.assetid: 8d564b26-1623-4d92-aabc-dff33f7b1145
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 861fe9b53352548c919e54c36a603eaeb4d23b39
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: dc4ff7174f6a801f0e1759ce8b4b306e74ec798a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46023431"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50663029"
 ---
 # <a name="compiler-error-c2773"></a>编译器错误 C2773
 
