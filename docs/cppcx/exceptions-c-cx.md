@@ -1,20 +1,13 @@
 ---
-title: 异常 (C + + /cli CX) |Microsoft Docs
-ms.custom: ''
+title: 异常 (C++/CX)
 ms.date: 01/18/2018
-ms.technology: cpp-windows
-ms.topic: language-reference
 ms.assetid: 6cbdc1f1-e4d7-4707-a670-86365146432f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7e7514fdfc07fcbb4a1fff42d80fd138ab7d6043
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 7134cbb9e90f0355a3b2a912330027cf73876443
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44100243"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50471696"
 ---
 # <a name="exceptions-ccx"></a>异常 (C++/CX)
 
@@ -22,7 +15,7 @@ ms.locfileid: "44100243"
 
 ## <a name="exceptions"></a>异常
 
-在 c + + 程序中，您可以引发和捕获来自 Windows 运行时操作的异常，异常派生自`std::exception`，或用户定义的类型。 必须仅当将跨越应用程序二进制接口 (ABI) 边界，例如，当以 JavaScript 编写的代码捕获你的异常时引发的 Windows 运行时异常。 当非-Windows 运行时 c + + 异常到达 ABI 边界时，将异常转换为`Platform::FailureException`异常，后者表示 E_FAIL HRESULT。 有关 ABI 的详细信息，请参阅[c + + 中创建 Windows 运行时组件](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)。
+在 c + + 程序中，您可以引发和捕获来自 Windows 运行时操作的异常，异常派生自`std::exception`，或用户定义的类型。 必须仅当将跨越应用程序二进制接口 (ABI) 边界，例如，当以 JavaScript 编写的代码捕获你的异常时引发的 Windows 运行时异常。 当非-Windows 运行时 c + + 异常到达 ABI 边界时，将异常转换为`Platform::FailureException`异常，后者表示 E_FAIL HRESULT。 有关 ABI 的更多信息，请参见 [Creating Windows Runtime Components in C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)。
 
 可以声明[platform:: exception](platform-exception-class.md)通过两个构造函数采用 HRESULT 参数或者 HRESULT 参数和一个[platform:: string](platform-string-class.md)^ 可跨传递的参数对其进行处理的任何 Windows 运行时应用的 ABI。 也可以使用两个 [Exception::CreateException 方法](platform-exception-class.md#createexception) 重载之一声明异常，这两个方法重载采用 HRESULT 参数或者 HRESULT 参数和 `Platform::String^` 参数。
 
@@ -66,11 +59,11 @@ C + + /CX 支持一组表示典型 HRESULT 错误的标准异常。 每个标准
 
 [!code-cpp[cx_exceptions#02](codesnippet/CPP/exceptiontest/class1.cpp#02)]
 
-若要捕捉异步操作期间引发的异常，请使用任务类并添加一个错误处理继续符。 错误处理延续将其他线程上引发的异常封送回调用线程，以便你可以在代码中一个地方处理所有潜在异常。 有关详细信息，请参阅[c + + 异步编程](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps)。
+若要捕捉异步操作期间引发的异常，请使用任务类并添加一个错误处理继续符。 错误处理延续将其他线程上引发的异常封送回调用线程，以便你可以在代码中一个地方处理所有潜在异常。 有关更多信息，请参见 [使用 C++ 异步编程](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps)。
 
 ## <a name="unhandlederrordetected-event"></a>UnhandledErrorDetected 事件
 
-在 Windows 8.1 可订阅[Windows::ApplicationModel::Core::CoreApplication::UnhandledErrorDetected](/uwp/api/windows.applicationmodel.core.icoreapplicationunhandlederror#Windows_ApplicationModel_Core_ICoreApplicationUnhandledError_UnhandledErrorDetected)静态事件，可访问即将关闭进程的未处理的错误事件。 无论错误源于何处，到达此处理程序作为[Windows::ApplicationModel::Core::UnhandledError](/uwp/api/windows.applicationmodel.core.unhandlederror)传递事件参数对象。 对该对象调用 `Propagate` 时，它根据错误代码创建并引发相应类型的 `Platform::*Exception` 。 在 catch 块内，可根据需要保存用户状态，然后通过调用 `throw`让进程终止，或者执行其他操作让程序返回已知的状态。 下面的示例演示了基本模式：
+在 Windows 8.1 可订阅[Windows::ApplicationModel::Core::CoreApplication::UnhandledErrorDetected](/uwp/api/windows.applicationmodel.core.icoreapplicationunhandlederror#Windows_ApplicationModel_Core_ICoreApplicationUnhandledError_UnhandledErrorDetected)静态事件，可访问即将关闭进程的未处理的错误事件。 无论错误源于何处，它都作为与事件参数一起传入的 [Windows::ApplicationModel::Core::UnhandledError](/uwp/api/windows.applicationmodel.core.unhandlederror) 对象到达此处理程序。 对该对象调用 `Propagate` 时，它根据错误代码创建并引发相应类型的 `Platform::*Exception` 。 在 catch 块内，可根据需要保存用户状态，然后通过调用 `throw`让进程终止，或者执行其他操作让程序返回已知的状态。 下面的示例演示了基本模式：
 
 在 app.xaml.h:
 
