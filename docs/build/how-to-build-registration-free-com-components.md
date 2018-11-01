@@ -1,25 +1,15 @@
 ---
-title: 如何： 生成免注册 COM 组件 |Microsoft Docs
-ms.custom: ''
+title: 如何：生成免注册 COM 组件
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - COM components, registration-free
 ms.assetid: 7e585d6a-0314-45b2-8f1b-cae9ac4df037
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e0a9e1769ff0ba9a0589f9d59c3d1f1ed2fc5bcb
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 4f4ebf121b761c37969fa3f9788bda52d913f340
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45699850"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50463526"
 ---
 # <a name="how-to-build-registration-free-com-components"></a>如何：生成免注册 COM 组件
 
@@ -39,6 +29,6 @@ ms.locfileid: "45699850"
 
 ## <a name="see-also"></a>请参阅
 
-[独立应用程序](/windows/desktop/SbsCs/isolated-applications)<br/>
+[独立的应用程序](/windows/desktop/SbsCs/isolated-applications)<br/>
 [有关通过并行程序集](/windows/desktop/SbsCs/about-side-by-side-assemblies-)<br/>
 [如何：生成独立应用程序以使用 COM 组件](../build/how-to-build-isolated-applications-to-consume-com-components.md)

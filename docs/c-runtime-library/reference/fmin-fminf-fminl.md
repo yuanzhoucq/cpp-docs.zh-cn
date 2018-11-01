@@ -1,11 +1,6 @@
 ---
-title: fmin，fminf，fminl |Microsoft 文档
-ms.custom: ''
+title: fmin、fminf、fminl
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - fmin
 - fminf
@@ -35,16 +30,12 @@ helpviewer_keywords:
 - fminf function
 - fminl function
 ms.assetid: 1916dfb5-99c1-4b0d-aefb-513525c3f2ac
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: abf16c4cc21d1dc396f0b81aadc8d495c6bdd4b9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f73853e18bd5d7f699cd2c3109fe5fb830859bf1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398940"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50464358"
 ---
 # <a name="fmin-fminf-fminl"></a>fmin、fminf、fminl
 
@@ -89,23 +80,23 @@ long double fminl(
 
 ## <a name="return-value"></a>返回值
 
-如果成功，将返回较小的*x*或*y*。
+如果成功，则返回的较小者*x*或*y*。
 
 |输入|结果|
 |-----------|------------|
 |*x*为 NaN|*y*|
 |*y*为 NaN|*x*|
-|*x*和*y*是 NaN|NaN|
+|*x*并*y*为 NaN|NaN|
 
-该函数不会导致[_matherr](matherr.md)要调用会导致任何浮点异常，或更改的值**errno**。
+该函数不会导致[_matherr](matherr.md)被调用，会导致任何浮点异常，或更改的值**errno**。
 
 ## <a name="remarks"></a>备注
 
-由于 c + + 允许重载，你可以调用的重载**fmin**采用并返回**float**和**长** **double**类型。 在 C 程序中， **fmin**始终采用并返回**double**。
+由于 c + + 允许重载，可以调用的重载**fmin**采用并返回**float**并**长** **double**类型。 在 C 程序中， **fmin**始终采用并返回**double**。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**fmin**， **fminf**， **fminl**|C：\<math.h><br />C++：\<math.h> 或 \<cmath>|
 

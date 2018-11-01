@@ -1,10 +1,6 @@
 ---
-title: _getdrive | Microsoft 文档
-ms.custom: ''
+title: _getdrive
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _getdrive
 apilocation:
@@ -23,24 +19,18 @@ apitype: DLLExport
 f1_keywords:
 - _getdrive
 - getdrive
-dev_langs:
-- C++
 helpviewer_keywords:
 - current disk drive
 - getdrive function
 - disk drives
 - _getdrive function
 ms.assetid: e40631a0-8f1a-4897-90ac-e1037ff30bca
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e99b95da8bec73475dcd1cbd71f6f5165a45d004
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d71f72c00cc384d5f4f69d8a58dbcfb7aa39332f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399847"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50470676"
 ---
 # <a name="getdrive"></a>_getdrive
 
@@ -61,7 +51,7 @@ int _getdrive( void );
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_getdrive**|\<direct.h>|
 
