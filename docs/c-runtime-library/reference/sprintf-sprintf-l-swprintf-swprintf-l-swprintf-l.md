@@ -1,10 +1,6 @@
 ---
-title: sprintf、_sprintf_l、swprintf、_swprintf_l、__swprintf_l | Microsoft 文档
-ms.custom: ''
+title: sprintf、_sprintf_l、swprintf、_swprintf_l、__swprintf_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - __swprintf_l
 - sprintf
@@ -33,8 +29,6 @@ f1_keywords:
 - sprintf
 - _stprintf
 - stprintf_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _swprintf_l function
 - _stprintf function
@@ -51,20 +45,16 @@ helpviewer_keywords:
 - sprintf_l function
 - formatted text [C++]
 ms.assetid: f6efe66f-3563-4c74-9455-5411ed939b81
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 02538d8c74de4f48cb4a3d6285e10c3c4e03c322
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d24ea0c83d934afe81368a9fe734c2a39d08c3d0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415931"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50451488"
 ---
 # <a name="sprintf-sprintfl-swprintf-swprintfl-swprintfl"></a>sprintf、_sprintf_l、swprintf、_swprintf_l、__swprintf_l
 
-将设置格式的数据写入字符串。 可提供某些函数的更多安全版本，请参阅 [sprintf_s、_sprintf_s_l、swprintf_s 和 _swprintf_s_l](sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)。 安全版本**swprintf**和 **_swprintf_l**不采用*计数*参数。
+将设置格式的数据写入字符串。 可提供某些函数的更多安全版本，请参阅 [sprintf_s、_sprintf_s_l、swprintf_s 和 _swprintf_s_l](sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)。 安全版本的**swprintf**并 **_swprintf_l**不会*计数*参数。
 
 ## <a name="syntax"></a>语法
 
@@ -136,20 +126,20 @@ int _sprintf_l(
 
 ## <a name="return-value"></a>返回值
 
-写入的字符数或-1，如果出现错误。 如果*缓冲区*或*格式*是 null 指针，则调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则这些函数将返回-1 并设置**errno**到**EINVAL**。
+写入的字符数或为-1 时出错。 如果*缓冲区*或*格式*是 null 指针，将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，这些函数将返回-1 并设置**errno**到**EINVAL**。
 
-**sprintf**返回存储中的字节数*缓冲区*，不包括终止 null 字符。 **swprintf**返回的存储中的宽字符数*缓冲区*，不包括终止 null 宽字符。
+**sprintf**返回存储中的字节数*缓冲区*，不包括终止 null 字符。 **swprintf**返回存储在中的宽字符数*缓冲区*，不包括终止 null 宽字符。
 
 ## <a name="remarks"></a>备注
 
-**Sprintf**函数格式并将存储中的字符和值的一系列*缓冲区*。 每个*参数*（如果有） 进行转换和输出中的相应格式规范根据*格式*。 该格式包括普通字符，其形式和函数与相同*格式*参数[printf](printf-printf-l-wprintf-wprintf-l.md)。 null 字符追加在写入的最后一个字符后。 如果在重叠的字符串之间发生复制，则此行为不确定。
+**Sprintf**函数设置的格式并将存储一系列字符和中的值*缓冲区*。 每个*自变量*（如果有） 进行转换和输出中的相应格式规范根据*格式*。 该格式包括普通字符，其形式和函数与相同*格式*参数[printf](printf-printf-l-wprintf-wprintf-l.md)。 null 字符追加在写入的最后一个字符后。 如果在重叠的字符串之间发生复制，则此行为不确定。
 
 > [!IMPORTANT]
-> 使用**sprintf**，没有方法来限制写入的字符数，这意味着，使用代码**sprintf**很容易受到缓冲区溢出。 请考虑使用 related 的函数[_snprintf](snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md)，它指定要写入的字符的最大数目*缓冲区*，或使用[_scprintf](scprintf-scprintf-l-scwprintf-scwprintf-l.md)来确定如何大缓冲区是必需的。 此外，确保*格式*不是用户定义的字符串。
+> 使用**sprintf**，没有方法来限制写入的字符数，这意味着，使用代码**sprintf**容易受到缓冲区溢出。 请考虑使用相关的函数[_snprintf](snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md)，它指定要写入的字符最大数目*缓冲区*，或使用[_scprintf](scprintf-scprintf-l-scwprintf-scwprintf-l.md)来确定大小缓冲区是必需的。 此外，确保*格式*不是用户定义的字符串。
 
-**swprintf**是宽字符版本的**sprintf**; 的指针参数**swprintf**是宽字符字符串。 编码错误检测**swprintf**可能不同于在**sprintf**。 **swprintf**和**fwprintf**行为方式相同，只不过**swprintf**将输出一个字符串，而不是类型的目标**文件**，和**swprintf**需要*计数*参数来指定要写入的字符的最大数。 使用这些函数的版本 **_l**后缀是相同，只不过它们使用传递而不是当前线程区域设置的区域设置参数。
+**swprintf**是宽字符版本**sprintf**; 的指针参数**swprintf**都是宽字符字符串。 检测到的编码中的错误**swprintf**可能有所不同，在**sprintf**。 **swprintf**并**fwprintf**行为方式相同，只不过**swprintf**将输出写入到一个字符串，而不是类型的目标**文件**，和**swprintf**要求*计数*参数来指定要写入的字符的最大数。 使用这些函数的版本 **_l**后缀完全相同，只不过它们使用传递中而不是当前线程区域设置的区域设置参数。
 
-**swprintf**符合 ISO C 标准，其需要第二个参数，*计数*，类型的**size_t**。 若要强制旧的非标准行为，定义 **_CRT_NON_CONFORMING_SWPRINTFS**。 在未来版本中，可能会删除旧行为，因此应将代码更改为使用新的符合标准行为。
+**swprintf**符合 ISO C 标准，这要求第二个参数，*计数*，类型的**size_t**。 若要强制旧的非标准行为，定义 **_CRT_NON_CONFORMING_SWPRINTFS**。 在未来版本中，可能会删除旧行为，因此应将代码更改为使用新的符合标准行为。
 
 在 C++ 中，这些函数具有模板重载，以调用这些函数的更新、更安全副本。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 
@@ -162,7 +152,7 @@ int _sprintf_l(
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**sprintf**， **_sprintf_l**|\<stdio.h>|
 |**swprintf**， **_swprintf_l**|\<stdio.h> 或 \<wchar.h>|
