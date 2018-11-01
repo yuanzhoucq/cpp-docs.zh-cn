@@ -1,26 +1,16 @@
 ---
-title: x64 (amd64) 内部函数列表 |Microsoft Docs
-ms.custom: ''
+title: x64 (amd64) 内部函数列表
 ms.date: 06/01/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - cl-exe compiler, intrinsics
 - intrinsics, x64
 - intrinsics, amd64
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 006b6ce67182b698a1f6d0bb5d87d8165fba9cde
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 28a1d01910fd996ea396d2fd3e845001fa208341
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46406862"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50491243"
 ---
 # <a name="x64-amd64-intrinsics-list"></a>x64 (amd64) 内部函数列表
 
@@ -34,7 +24,7 @@ ms.locfileid: "46406862"
 
 - [Intel 64 和 IA-32 体系结构软件开发人员手册](https://software.intel.com/articles/intel-sdm)
 
-- [Intel 体系架构指令集扩展编程参考](https://software.intel.com/isa-extensions)
+- [Intel 体系结构指令集扩展编程参考](https://software.intel.com/isa-extensions)
 
 - [Intel 高级矢量扩展简介](https://software.intel.com/articles/introduction-to-intel-advanced-vector-extensions)
 

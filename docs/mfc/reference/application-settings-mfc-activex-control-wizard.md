@@ -1,27 +1,17 @@
 ---
-title: 应用程序设置，MFC ActiveX 控件向导 |Microsoft Docs
-ms.custom: ''
+title: 应用程序设置, MFC ActiveX 控件向导
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - vc.appwiz.mfc.ctl.appset
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC ActiveX Control Wizard, application settings
 ms.assetid: 48475194-cc63-467f-8499-f142269a4c1c
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cfaebdabb9011fd76b18701c81c722671ff8fc3d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 17d8ad581640611a5b517edd15609aa8052ecae4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46433538"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50677131"
 ---
 # <a name="application-settings-mfc-activex-control-wizard"></a>应用程序设置, MFC ActiveX 控件向导
 
@@ -42,7 +32,7 @@ ms.locfileid: "46433538"
 
    - 文件 .vcxproj 包含代码以在创建项目时配置帮助文件。
 
-   - 该文件*projnamePropPage*.cpp 包含[SetHelpInfo](../../mfc/reference/colepropertypage-class.md#sethelpinfo)构造函数中的函数。
+   - 文件 *projnamePropPage*.cpp 包含构造函数中的 [SetHelpInfo](../../mfc/reference/colepropertypage-class.md#sethelpinfo) 函数。
 
    - 文件 projname.hpj 是帮助编译器使用的帮助项目文件，创建 ActiveX 控件的帮助文件。 .hpj 文件是包含有关生成帮助文件和帮助文件所含其他文件（如位图）路径信息的文本文件。
 

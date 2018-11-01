@@ -1,24 +1,17 @@
 ---
-title: 装箱 (C + + /cli CX) |Microsoft Docs
-ms.custom: ''
+title: 装箱 (C++/CX)
 ms.date: 12/30/2016
-ms.technology: cpp-windows
-ms.topic: language-reference
 ms.assetid: edfb12fa-2a9b-42f6-bdac-d4d76cb8274e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7e9ab84bf840f01fbb22ef3b2510056338d10c74
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: dd950e2463da7541ebad731e74275ce360a1c8a4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44108368"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50491034"
 ---
 # <a name="boxing-ccx"></a>装箱 (C++/CX)
 
-*装箱*正如包装值类型变量[Windows::Foundation::DateTime](https://msdn.microsoft.com/library/windows/apps/windows.foundation.datetime.aspx)— 或基础标量类型，如`int`— 在一个 ref 类变量传递给采用的方法时[Platform:: object ^](../cppcx/platform-object-class.md)作为其输入类型。
+ 装箱就是当一个值类型变量（如 [Windows::Foundation::DateTime](https://msdn.microsoft.com/library/windows/apps/windows.foundation.datetime.aspx)）或基础标量类型（如 `int`）传递给以 [Platform::Object^](../cppcx/platform-object-class.md) 作为其输入类型的方法时，将该变量或类型包装在一个 ref 类中的过程。
 
 ## <a name="passing-a-value-type-to-an-object-parameter"></a>将值类型传递给 Object^ 参数
 

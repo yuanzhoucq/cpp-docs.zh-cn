@@ -1,10 +1,6 @@
 ---
-title: isblank、iswblank、_isblank_l、_iswblank_l | Microsoft 文档
-ms.custom: ''
+title: isblank、iswblank、_isblank_l、_iswblank_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - isblank
 - _isblank_l
@@ -30,19 +26,13 @@ f1_keywords:
 - _istblank
 - _isblank_l
 - iswblank
-dev_langs:
-- C++
 ms.assetid: 33ce96c0-f387-411a-8283-c3d2a69e56bd
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d2787be85aa4e12bf22d1be14f90568891b83824
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: eb088c4056e2277e188d7f98a57dd36216d013ad
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403308"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50497313"
 ---
 # <a name="isblank-iswblank-isblankl-iswblankl"></a>isblank、iswblank、_isblank_l、_iswblank_l
 
@@ -77,11 +67,11 @@ int _iswblank_l(
 
 ## <a name="return-value"></a>返回值
 
-每个这些例程返回非零如果*c*是的特定表示形式的空间或水平制表符字符，或者是一组特定于区域设置用于分隔词的文本行中的字符之一。 **isblank**返回非零值，如果*c*空格字符 (0x20) 或水平制表符字符 (为 0x09)。 为测试条件的结果**isblank**函数依赖于**LC_CTYPE**类别设置的区域设置; 有关详细信息，请参阅[setlocale、 _wsetlocale](setlocale-wsetlocale.md). 不具有这些函数的版本 **_l**后缀使用当前区域设置为任何区域设置相关的行为; 的版本没有 **_l**后缀是相同，只不过它们使用改用已传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+这些例程返回非零值如果*c*是空格或水平制表符的特定表示形式，或者是特定于区域设置的一系列用于文本行中分隔单词字符之一。 **isblank**返回非零值，如果*c*是空格字符 (0x20) 或水平制表符 (0x09)。 测试条件的结果**isblank**取决于函数**LC_CTYPE**类别设置的区域设置; 有关详细信息，请参阅[setlocale、 _wsetlocale](setlocale-wsetlocale.md). 不具有这些函数的版本 **_l**后缀，请使用当前区域设置的任何依赖于区域设置的行为; 具有的版本 **_l**后缀完全相同，只不过它们使用改用已传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
-**iswblank**返回非零值，如果*c*是宽字符对应于标准空间或水平制表符字符。
+**iswblank**返回非零值，如果*c*是对应于标准空间的宽字符或水平制表符字符。
 
-行为**isblank**和 **_isblank_l**如果是未定义*c*不是 EOF 或在 0 到 0xFF，非独占的范围。 使用 CRT 调试库时和*c*是不是一种这些值，函数引发的断言。
+行为**isblank**并 **_isblank_l**未定义当*c*不是 EOF 或在范围 0 到 0xff 内，非独占。 使用调试 CRT 库时， *c*是不包含其中一个值，函数将引发断言。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -92,7 +82,7 @@ int _iswblank_l(
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**isblank**|\<ctype.h>|
 |**iswblank**|\<ctype.h 1> 或 \<wchar.h 1>|

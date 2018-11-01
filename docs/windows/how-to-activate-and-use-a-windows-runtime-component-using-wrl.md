@@ -1,24 +1,14 @@
 ---
-title: 如何： 激活和使用 Windows 运行时组件使用 WRL |Microsoft Docs
-ms.custom: ''
+title: 如何：使用 WRL 激活和使用 Windows 运行时组件
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
 ms.topic: reference
-dev_langs:
-- C++
 ms.assetid: 54828f02-6af3-45d1-b965-d0104442f8d5
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: ac5e03b7a9453b4b33c4a495842465b16a186543
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 908929767443b0fcbaa89ecbdf389fd63a469d00
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43219187"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50497335"
 ---
 # <a name="how-to-activate-and-use-a-windows-runtime-component-using-wrl"></a>如何：使用 WRL 激活和使用 Windows 运行时组件
 
@@ -44,7 +34,7 @@ ms.locfileid: "43219187"
 
    [!code-cpp[wrl-consume-component#2](../windows/codesnippet/CPP/how-to-activate-and-use-a-windows-runtime-component-using-wrl_1.cpp)]
 
-   我们建议您在 .cpp 文件中使用 `using namespace` 指令使代码更具可读性。
+   我们建议你在 .cpp 文件中使用 `using namespace` 指令使代码更具可读性。
 
 2. 初始化应用程序在其中执行的线程。 每个应用必须初始化其线程和线程模型。 此示例使用[Microsoft::WRL::Wrappers::RoInitializeWrapper](../windows/roinitializewrapper-class.md)类来初始化 Windows 运行时和指定[RO_INIT_MULTITHREADED](https://msdn.microsoft.com/library/windows/apps/br224661.aspx)作为线程模型。 `RoInitializeWrapper`类调用`Windows::Foundation::Initialize`在构建过程中和`Windows::Foundation::Uninitialize`时销毁。
 

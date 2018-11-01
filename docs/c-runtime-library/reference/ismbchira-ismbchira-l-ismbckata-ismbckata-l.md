@@ -1,10 +1,6 @@
 ---
-title: _ismbchira、_ismbchira_l、_ismbckata、_ismbckata_l | Microsoft 文档
-ms.custom: ''
+title: _ismbchira、_ismbchira_l、_ismbckata、_ismbckata_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ismbckata
 - _ismbchira_l
@@ -32,8 +28,6 @@ f1_keywords:
 - ismbchira_l
 - _ismbchira_l
 - _ismbchira
-dev_langs:
-- C++
 helpviewer_keywords:
 - _ismbckata function
 - _ismbchira function
@@ -46,16 +40,12 @@ helpviewer_keywords:
 - Hiragana
 - ismbckata function
 ms.assetid: 2db388a2-be31-489b-81c8-f6bf3f0582d3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0fe2b9c824fcc45eb2d0fda82cd350d3a9435b94
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d2a5d0336e5ed4ad8bbb19f8a259128ab33d004e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403724"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50506582"
 ---
 # <a name="ismbchira-ismbchiral-ismbckata-ismbckatal"></a>_ismbchira、_ismbchira_l、_ismbckata、_ismbckata_l
 
@@ -93,26 +83,26 @@ int _ismbckata_l(
 
 ## <a name="return-value"></a>返回值
 
-其中每个例程在字符满足测试条件时返回一个非零值，在不满足测试条件时回 0。 如果*c* < = 255，并且没有相应 **_ismbb**例程 (例如， **_ismbcalnum**对应于 **_ismbbalnum**)，则结果是相应的返回值 **_ismbb**例程。
+其中每个例程在字符满足测试条件时返回一个非零值，在不满足测试条件时回 0。 如果*c* < = 255 且存在相应 **_ismbb**例程 (例如， **_ismbcalnum**对应于 **_ismbbalnum**)，则结果是相应的返回值 **_ismbb**例程。
 
 ## <a name="remarks"></a>备注
 
 其中每个函数都针对给定的条件测试给定的多字节字符。
 
-使用这些函数的版本 **_l**后缀是相同，只不过它们使用传递区域设置而不是当前区域设置其区域设置相关的行为。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+使用这些函数的版本 **_l**后缀完全相同，只不过它们使用为其区域设置相关的行为而不是当前区域设置传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
-|例程|测试条件（仅代码页 932）|
+|例程所返回的值|测试条件（仅代码页 932）|
 |-------------|-------------------------------------------|
-|**_ismbchira**|双字节平假名： 0x829F < =*c*< = 0x82F1。|
-|**_ismbchira_l**|双字节平假名： 0x829F < =*c*< = 0x82F1。|
-|**_ismbckata**|双字节片假名： 0x8340 < =*c*< = 0x8396。|
-|**_ismbckata_l**|双字节片假名： 0x8340 < =*c*< = 0x8396。|
+|**_ismbchira**|双字节平假名： 0x829f< < =*c*< = 0x82F1。|
+|**_ismbchira_l**|双字节平假名： 0x829f< < =*c*< = 0x82F1。|
+|**_ismbckata**|双字节片假名： 0x8340< < =*c*< = 0x8396。|
+|**_ismbckata_l**|双字节片假名： 0x8340< < =*c*< = 0x8396。|
 
 **END 特定于代码页 932** 
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_ismbchira**|\<mbstring.h>|
 |**_ismbchira_l**|\<mbstring.h>|

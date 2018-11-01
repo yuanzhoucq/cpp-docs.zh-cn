@@ -1,11 +1,6 @@
 ---
-title: feholdexcept |Microsoft 文档
-ms.custom: ''
+title: feholdexcept
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - feholdexcept
 apilocation:
@@ -24,21 +19,15 @@ apitype: DLLExport
 f1_keywords:
 - feholdexcept
 - fenv/feholdexcept
-dev_langs:
-- C++
 helpviewer_keywords:
 - feholdexcept function
 ms.assetid: 88e512ae-b5d8-452c-afe9-c824cd3ef1d8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6250de98b2eb3f8cc8c475d341c1d63a79262362
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 26097398b9f9d498ab4c56690dc9c6cbb950bafb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397537"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50525731"
 ---
 # <a name="feholdexcept"></a>feholdexcept
 
@@ -59,13 +48,13 @@ int feholdexcept(
 
 ## <a name="return-value"></a>返回值
 
-当且仅当函数是能够成功启用非停止浮点异常处理，则返回零。
+当且仅当该函数是能够成功启用不间断的浮点异常处理，则返回零。
 
 ## <a name="remarks"></a>备注
 
-**Feholdexcept**函数用于存储中当前的浮点点环境的状态**fenv_t**指向对象*penv*，并将环境设置为不会中断执行上浮点异常。 这被称为不间断模式。  此模式将继续，直到使用 [fesetenv](fesetenv1.md) 或 [feupdateenv](feupdateenv.md) 恢复环境。
+**Feholdexcept**函数用于存储中的当前浮动点环境状态**fenv_t**指向对象*penv*，并将环境设置为不会中断浮点异常执行。 这被称为不间断模式。  此模式将继续，直到使用 [fesetenv](fesetenv1.md) 或 [feupdateenv](feupdateenv.md) 恢复环境。
 
-在需要隐藏来自调用方的一个或多个浮点异常的子例程的开头，可以使用此函数。 若要报告异常，你可以只需清除不需要的异常通过[feclearexcept，](feclearexcept1.md) ，然后结束通过调用的非停止模式**feupdateenv**。
+在需要隐藏来自调用方的一个或多个浮点异常的子例程的开头，可以使用此函数。 若要报告异常，您可以只需清除不需要的异常通过[feclearexcept](feclearexcept1.md) ，然后结束通过调用不间断模式**feupdateenv**。
 
 若要使用此函数，必须在调用前先使用 `#pragma fenv_access(on)` 指令关闭可能会阻止访问的浮点优化。 有关详细信息，请参阅 [fenv_access](../../preprocessor/fenv-access.md)。
 
