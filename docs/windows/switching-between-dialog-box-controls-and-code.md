@@ -1,12 +1,6 @@
 ---
-title: 对话框 （c + +） 控件和代码之间切换 |Microsoft Docs
-ms.custom: ''
+title: 对话框 （c + +） 控件和代码之间切换
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - events [C++], viewing for controls
 - Windows messages [C++], controls
@@ -16,17 +10,12 @@ helpviewer_keywords:
 - controls [C++], jumping to code
 - Dialog Editor [C++], switching between controls and code
 ms.assetid: 7da73815-b853-4203-ba45-bbe570695122
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 0ef2bcd7dc6bf70f4d0486334d71bd5f7798c83f
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 4d48386e93fcea6d30fee6c57c288944bbd8d9ed
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314386"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50644296"
 ---
 # <a name="switching-between-dialog-box-c-controls-and-code"></a>对话框 （c + +） 控件和代码之间切换
 

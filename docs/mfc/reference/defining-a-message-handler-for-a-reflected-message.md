@@ -1,28 +1,18 @@
 ---
-title: 为反射消息定义消息处理程序 |Microsoft Docs
-ms.custom: ''
+title: 为反射消息定义消息处理程序
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - vc.codewiz.defining.msg.msghandler
-dev_langs:
-- C++
 helpviewer_keywords:
 - messages [MFC], reflected
 - message handling [MFC], reflected messages
 ms.assetid: 5a403528-58c5-46e7-90d5-4a77f0ab9b9c
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 104f9e0be67a350a1725dfbcd2bf234a8bc79553
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 89cb1631be7b8588d02518eacbc93b466a275828
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50052559"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50531871"
 ---
 # <a name="defining-a-message-handler-for-a-reflected-message"></a>为反射消息定义消息处理程序
 

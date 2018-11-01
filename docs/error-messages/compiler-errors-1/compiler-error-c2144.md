@@ -1,43 +1,33 @@
 ---
-title: 编译器错误 C2144 |Microsoft 文档
-ms.custom: ''
+title: 编译器错误 C2144
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2144
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2144
 ms.assetid: 49f3959b-324f-4c06-9588-c0ecef5dc5b3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 60a6b0a6019ab6ddf1a403d2cbd4f6ef96b2a865
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f6472fc70ee4a86bed1422941e758127009f14cb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33171139"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50483325"
 ---
 # <a name="compiler-error-c2144"></a>编译器错误 C2144
 
-> 语法错误:*类型*前面应带有*令牌*
+> 语法错误: '*类型*之前应该是*令牌*
 
-编译器预期*令牌*和找到*类型*相反。
+编译器预期*令牌*并找到*类型*相反。
 
-缺少右大括号、 右括号或分号可能导致此错误。
+缺少右大括号、 右圆括号或分号可能导致此错误。
 
-尝试从包含一个空白字符的 CLR 关键字创建的宏时，也会发生 C2144。
+尝试从包含空白字符的 CLR 关键字创建宏时，也会发生 C2144。
 
-如果你尝试进行类型转发，还可能会看到 C2144。 请参阅[类型转发 (C + + /cli CLI)](../../windows/type-forwarding-cpp-cli.md)有关详细信息。
+如果你尝试进行类型转发，还可能会看到 C2144。 请参阅[类型转发 (C + + CLI)](../../windows/type-forwarding-cpp-cli.md)有关详细信息。
 
 ## <a name="examples"></a>示例
 
-下面的示例生成 C2144，并演示了如何修复此错误：
+下面的示例生成 C2144，并显示了如何修复此错误：
 
 ```cpp
 // C2144.cpp
@@ -50,7 +40,7 @@ REF struct MyStruct0;   // C2144
 REF1 MyStruct1;
 ```
 
-下面的示例生成 C2144，并演示了如何修复此错误：
+下面的示例生成 C2144，并显示了如何修复此错误：
 
 ```cpp
 // C2144_2.cpp

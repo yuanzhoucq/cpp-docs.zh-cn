@@ -1,10 +1,6 @@
 ---
-title: _rmdir、_wrmdir | Microsoft 文档
-ms.custom: ''
+title: _rmdir、_wrmdir
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wrmdir
 - _rmdir
@@ -27,8 +23,6 @@ f1_keywords:
 - wrmdir
 - _rmdir
 - _wrmdir
-dev_langs:
-- C++
 helpviewer_keywords:
 - _rmdir function
 - directories [C++], deleting
@@ -39,16 +33,12 @@ helpviewer_keywords:
 - _wrmdir function
 - wrmdir function
 ms.assetid: 652c2a5a-b0ac-4493-864e-1edf484333c5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 11e6521060932bd1273b6a3888332ac2c8b2bb7b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1169405ae2f03a1e6affe2fcc00d594912e08ae1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406984"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50511119"
 ---
 # <a name="rmdir-wrmdir"></a>_rmdir、_wrmdir
 
@@ -86,7 +76,7 @@ int _wrmdir(
 
 **_Rmdir**函数将删除指定的目录*dirname*。 该目录必须为空，且不能为当前工作目录或根目录。
 
-**_wrmdir**是宽字符版本的 **_rmdir**; *dirname*参数 **_wrmdir**是宽字符字符串。 **_wrmdir**和 **_rmdir**否则具有相同行为。
+**_wrmdir**是宽字符版本 **_rmdir**; *dirname*参数 **_wrmdir**是宽字符字符串。 **_wrmdir**并 **_rmdir**行为相同。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -96,7 +86,7 @@ int _wrmdir(
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_rmdir**|\<direct.h>|
 |**_wrmdir**|\<direct.h> 或 \<wchar.h>|

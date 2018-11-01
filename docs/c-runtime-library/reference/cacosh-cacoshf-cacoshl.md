@@ -1,11 +1,6 @@
 ---
-title: cacosh、cacoshf、cacoshl | Microsoft 文档
-ms.custom: ''
+title: cacosh、cacoshf、cacoshl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - cacosh
 - cacoshf
@@ -30,23 +25,17 @@ f1_keywords:
 - complex/cacosh
 - complex/cacoshf
 - complex/cacoshl
-dev_langs:
-- C++
 helpviewer_keywords:
 - cacosh function
 - cacoshf function
 - cacoshl function
 ms.assetid: 83fd05eb-3587-4741-9be6-589a830a1703
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c61130dbfcc0363ef020216389299634cfcd002f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: aa31dfa1b29eda18d34528fc8aa9544e58a5a082
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394150"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50668190"
 ---
 # <a name="cacosh-cacoshf-cacoshl"></a>cacosh、cacoshf、cacoshl
 
@@ -79,15 +68,15 @@ _Lcomplex cacoshl(
 
 ## <a name="return-value"></a>返回值
 
-反双曲余弦值*z*，以弧度为单位。 结果是不受限制，并且非负实际轴和间隔 [-iπ，+ iπ] 轴虚部的复数。
+反双曲余弦值*z*，以弧度为单位。 结果为无限且为非负沿实轴，并位于的间隔 [-i π，+ i π] 沿虚轴。
 
 ## <a name="remarks"></a>备注
 
-由于 c + + 允许重载，你可以调用的重载**cacosh**采用并返回 **_Fcomplex**和 **_Lcomplex**值。 在 C 程序中， **cacosh**始终采用并返回 **_Dcomplex**值。
+由于 c + + 允许重载，可以调用的重载**cacosh**采用并返回 **_Fcomplex**并 **_Lcomplex**值。 在 C 程序中， **cacosh**始终采用并返回 **_Dcomplex**值。
 
 ## <a name="requirements"></a>要求
 
-|例程|C 标头|C++ 标头|
+|例程所返回的值|C 标头|C++ 标头|
 |-------------|--------------|------------------|
 |**cacosh**， **cacoshf**， **cacoshl**|\<complex.h>|\<ccomplex>|
 

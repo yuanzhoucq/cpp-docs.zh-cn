@@ -1,10 +1,6 @@
 ---
-title: _CrtCheckMemory | Microsoft 文档
-ms.custom: ''
+title: _CrtCheckMemory
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtCheckMemory
 apilocation:
@@ -22,22 +18,16 @@ apitype: DLLExport
 f1_keywords:
 - CrtCheckMemory
 - _CrtCheckMemory
-dev_langs:
-- C++
 helpviewer_keywords:
 - _CrtCheckMemory function
 - CrtCheckMemory function
 ms.assetid: 457cc72e-60fd-4177-ab5c-6ae26a420765
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0b6d4b84fd717525e7206956964204794fe6b88c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cb39a76c140934dabdd1269c02aba6018691f917
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396659"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50537145"
 ---
 # <a name="crtcheckmemory"></a>_CrtCheckMemory
 
@@ -56,9 +46,9 @@ int _CrtCheckMemory( void );
 
 ## <a name="remarks"></a>备注
 
-**_CrtCheckMemory**函数验证通过验证基础基堆，并检查每个内存块由调试堆管理器分配的内存。 如果基础基堆、 调试标头信息或覆盖缓冲区中遇到的错误或内存不一致，则 **_CrtCheckMemory**描述错误条件的信息与生成调试报告。 当[_DEBUG](../../c-runtime-library/debug.md)未定义，则调用 **_CrtCheckMemory**在预处理过程中删除。
+**_CrtCheckMemory**函数验证由调试堆管理器通过验证基础基堆并检查每个内存块分配的内存。 如果基础基堆、 调试标头信息或覆盖缓冲区中遇到错误或内存不一致 **_CrtCheckMemory**使用描述错误条件的信息生成调试报告。 当[_DEBUG](../../c-runtime-library/debug.md)未定义，则调用 **_CrtCheckMemory**在预处理过程中删除。
 
-行为 **_CrtCheckMemory**可以通过设置的位域控制[_crtDbgFlag](../../c-runtime-library/crtdbgflag.md)标志使用[_CrtSetDbgFlag](crtsetdbgflag.md)函数。 打开 **_CRTDBG_CHECK_ALWAYS_DF**位字段 ON 导致 **_CrtCheckMemory**每次请求内存分配操作时调用。 尽管此方法减慢了执行速度，但它对快速捕获错误很有用。 打开 **_CRTDBG_ALLOC_MEM_DF**位字段 OFF 原因 **_CrtCheckMemory**不验证堆并立即返回**TRUE**。
+行为 **_CrtCheckMemory**可以通过设置的位域控制[_crtDbgFlag](../../c-runtime-library/crtdbgflag.md)使用的标志[_CrtSetDbgFlag](crtsetdbgflag.md)函数。 打开 **_CRTDBG_CHECK_ALWAYS_DF**位字段将导致 **_CrtCheckMemory**每次请求内存分配操作时调用。 尽管此方法减慢了执行速度，但它对快速捕获错误很有用。 打开 **_CRTDBG_ALLOC_MEM_DF**位字段会导致 **_CrtCheckMemory**不验证堆并立即返回**TRUE**。
 
 因为此函数返回 **TRUE** 或 **FALSE**，因此可将它传递到其中一个 [_ASSERT](assert-asserte-assert-expr-macros.md) 宏，以创建一种简单的调试错误处理机制。 在堆中检测到损坏时，下面的示例将导致断言失败：
 
@@ -70,7 +60,7 @@ _ASSERTE( _CrtCheckMemory( ) );
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_CrtCheckMemory**|\<crtdbg.h>|
 
@@ -87,5 +77,5 @@ _ASSERTE( _CrtCheckMemory( ) );
 ## <a name="see-also"></a>请参阅
 
 [调试例程](../../c-runtime-library/debug-routines.md)<br/>
-[_crtDbgFlag](../../c-runtime-library/crtdbgflag.md)<br/>
+[_CRTDBG_CHECK_CRT_DF](../../c-runtime-library/crtdbgflag.md)<br/>
 [_CrtSetDbgFlag](crtsetdbgflag.md)<br/>

@@ -1,10 +1,6 @@
 ---
-title: _heapmin | Microsoft 文档
-ms.custom: ''
+title: _heapmin
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _heapmin
 apilocation:
@@ -23,8 +19,6 @@ apitype: DLLExport
 f1_keywords:
 - _heapmin
 - heapmin
-dev_langs:
-- C++
 helpviewer_keywords:
 - heap memory
 - minimizing heaps
@@ -33,16 +27,12 @@ helpviewer_keywords:
 - _heapmin function
 - heapmin function
 ms.assetid: c0bccdf6-2d14-4d7b-a7ff-d6a17bdb410f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ec73905c6361d025b9f29c8cf4543ed200a4abbf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 130986894d1e2a68415e6ab9218641eff484ffd1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397978"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50455466"
 ---
 # <a name="heapmin"></a>_heapmin
 
@@ -56,17 +46,17 @@ int _heapmin( void );
 
 ## <a name="return-value"></a>返回值
 
-如果成功， **_heapmin**返回 0; 否则，该函数返回-1 并将设置**errno**到**ENOSYS**。
+如果成功， **_heapmin**返回 0; 否则，该函数返回-1，并设置**errno**到**ENOSYS**。
 
-有关此代码及其他返回代码的详细信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
+有关于此代码以及其他返回代码的详细信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>备注
 
-**_Heapmin**函数通过释放未使用的堆内存到操作系统降至最低堆。 如果操作系统不支持 **_heapmin**（例如，Windows 98），该函数将返回-1 并将设置**errno**到**ENOSYS**。
+**_Heapmin**函数释放到操作系统未使用的堆内存，最小化堆。 如果操作系统不支持 **_heapmin**（例如 Windows 98），该函数返回-1，并设置**errno**到**ENOSYS**。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|可选标头|
+|例程所返回的值|必需的标头|可选标头|
 |-------------|---------------------|---------------------|
 |**_heapmin**|\<malloc.h>|\<errno.h>|
 

@@ -1,10 +1,6 @@
 ---
-title: _cprintf、_cprintf_l、_cwprintf、_cwprintf_l | Microsoft 文档
-ms.custom: ''
+title: _cprintf、_cprintf_l、_cwprintf、_cwprintf_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _cwprintf_l
 - _cprintf_l
@@ -34,8 +30,6 @@ f1_keywords:
 - cprintf_l
 - _cprintf_l
 - _cwprintf_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _cprintf_l function
 - _cwprintf_l function
@@ -51,16 +45,12 @@ helpviewer_keywords:
 - cwprintf_l function
 - _cprintf function
 ms.assetid: 67ffefd4-45b3-4be0-9833-d8d26ac7c4e2
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 57eaced46b786352b794e68a1a11423ba13b0948
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ce1913012ee37b19e15602daaa4eea042a69a3de
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400868"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50534038"
 ---
 # <a name="cprintf-cprintfl-cwprintf-cwprintfl"></a>_cprintf、_cprintf_l、_cwprintf、_cwprintf_l
 
@@ -105,13 +95,13 @@ int _cwprintf_l(
 
 ## <a name="remarks"></a>备注
 
-这些函数会格式化并打印一系列字符和值直接到控制台，使用 **_putch**函数 (**_putwch**为 **_cwprintf**) 为输出字符. 在每个自变量*argument_list* （如果有） 进行转换和输出中的相应格式规范根据*格式*。 *格式*自变量使用[格式规范语法 printf 和 wprintf 函数](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)。 与不同**fprintf**， **printf**，和**sprintf**函数，两者 **_cprintf**也不 **_cwprintf**会换行字符将转换为回车换行符 (CR-LF) 组合输出时。
+这些函数会格式化并打印一系列字符和值直接向控制台中，使用 **_putch**函数 (**_putwch**有关 **_cwprintf**) 来输出字符. 在每个自变量*argument_list* （如果有） 进行转换和输出中的相应格式规范根据*格式*。 *格式*自变量使用[格式规范语法 printf 和 wprintf 函数](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)。 与不同**fprintf**， **printf**，并**sprintf**函数，既不 **_cprintf**也不 **_cwprintf**换行字符转换为回车符和换行符 (CR-LF) 组合时输出。
 
-一个重要区别在于， **_cwprintf**显示 Unicode 字符在 Windows 中使用时。 与不同 **_cprintf**， **_cwprintf**使用当前控制台区域设置。
+一个重要的区别在于 **_cwprintf**显示 Unicode 字符时在 Windows 中使用。 与不同 **_cprintf**， **_cwprintf**将使用当前控制台区域设置。
 
-使用这些函数的版本 **_l**后缀是相同，只不过它们使用传递而不是当前区域设置的区域设置参数。
+使用这些函数的版本 **_l**后缀完全相同，只不过它们使用传递中而不是当前区域设置的区域设置参数。
 
-**_cprintf**验证*格式*参数。 如果*格式*是 null 指针，函数将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，函数将返回-1 并设置**errno**到**EINVAL**。
+**_cprintf**验证*格式*参数。 如果*格式*是空指针，该函数将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，函数将返回-1 并设置**errno**到**EINVAL**。
 
 > [!IMPORTANT]
 > 确保 format 不是用户定义的字符串。
@@ -125,7 +115,7 @@ int _cwprintf_l(
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_cprintf**， **_cprintf_l**|\<conio.h>|
 |**_cwprintf**， **_cwprintf_l**|\<conio.h>|

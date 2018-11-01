@@ -1,10 +1,6 @@
 ---
-title: hypot, hypotf, hypotl, _hypot, _hypotf, _hypotl | Microsoft 文档
-ms.custom: ''
+title: hypot、hypotf、hypotl、_hypot、_hypotf、_hypotl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _hypotf
 - hypot
@@ -32,8 +28,6 @@ f1_keywords:
 - hypot
 - _hypot
 - _hypotf
-dev_langs:
-- C++
 helpviewer_keywords:
 - hypotenuse calculation
 - hypot function
@@ -43,16 +37,12 @@ helpviewer_keywords:
 - calculating hypotenuses
 - _hypot function
 ms.assetid: 6a13887f-bd53-43fc-9d77-5b42d6e49925
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3a8488b160c10eb29f0448127c44d3514f8debf3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ea25ea87a0ec23a0e98dbdc7bb92ce691fc2fa0f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400198"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50439528"
 ---
 # <a name="hypot-hypotf-hypotl-hypot-hypotf-hypotl"></a>hypot、hypotf、hypotl、_hypot、_hypotf、_hypotl
 
@@ -94,19 +84,19 @@ long double _hypotl(
 
 ## <a name="return-value"></a>返回值
 
-如果成功， **hypot**返回长度的斜边; 在溢出时， **hypot**返回 INF （无穷大） 和**errno**变量设置为**ERANGE**. 你可以使用 **_matherr**来修改错误处理。
+如果成功， **hypot**返回斜边的; 在溢出时，长度**hypot**返回 INF （无穷大） 和**errno**变量设置为**ERANGE**. 可以使用 **_matherr**来修改错误处理。
 
 有关返回代码的详细信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>备注
 
-**Hypot**函数计算直角三角形，给定两条边的长度的斜边长度*x*和*y* （换而言之，平方根*x*<sup>2</sup> + *y*<sup>2</sup>)。
+**Hypot**函数计算直角三角形而言，给定的两个方面的长度的斜边长度*x*并*y* （换而言之，平方根*x*<sup>2</sup> + *y*<sup>2</sup>)。
 
 提供的带有前导下划线的函数版本便于与早期的标准兼容。 它们的行为与没有前导下划线的版本相同。 我们建议将不带前导下划线的版本用于新代码。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**hypot**， **hypotf**， **hypotl**， **_hypot**， **_hypotf**， **_hypotl**|\<math.h>|
 

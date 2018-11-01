@@ -1,27 +1,17 @@
 ---
-title: 右值引用声明符： &amp; &amp; |Microsoft Docs
-ms.custom: ''
+title: 右值引用声明符： &amp;&amp;
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
 f1_keywords:
 - '&&'
-dev_langs:
-- C++
 helpviewer_keywords:
 - '&& rvalue reference declarator'
 ms.assetid: eab0ce3a-c5a3-4992-aa70-6a8ab1f7491d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 64a42a65e112930767aa27f94612d06b7fb2d34a
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: caec1ae10db273b6ed604af29b20a1908b1313cc
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821629"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50614638"
 ---
 # <a name="rvalue-reference-declarator-ampamp"></a>右值引用声明符： &amp;&amp;
 
@@ -197,7 +187,7 @@ In f(const MemoryBlock&). This version cannot modify the parameter.
 In f(MemoryBlock&&). This version can modify the parameter.
 ```
 
-在此示例中，对 `f` 的第一个调用将局部变量（左值）作为其参数传递。 对 `f` 的第二个调用将临时对象作为其参数传递。 由于无法在程序中的其他位置引用临时对象，因此调用将绑定到采用右值引用的重载版本的 `f`，该版本可以随意修改对象。
+在此示例中，对 `f` 的第一个调用将局部变量（左值）作为其自变量传递。 对 `f` 的第二个调用将临时对象作为其自变量传递。 由于无法在程序中的其他位置引用临时对象，因此调用将绑定到采用右值引用的重载版本的 `f`，该版本可以随意修改对象。
 
 **编译器将命名的右值引用视为左值和未命名的右值引用视为右值。**
 
@@ -293,7 +283,7 @@ In g(MemoryBlock&&).
 
 通常会编写将传递一个函数模板 (或*转发*) 到另一个函数及其参数。 了解模板类型推导如何对采用右值引用的函数模板起作用很重要。
 
-如果函数参数是右值，则编译器将参数推导为右值引用。 例如，如果将对 `X` 类型的对象的右值引用传递给采用类型 `T&&` 作为其参数的模板函数，则模板参数推导会将 `T` 推导为 `X`。 因此，参数具有类型 `X&&`。 如果函数自变量是左值或**const**左值，编译器可以推断其类型为左值引用或**const**该类型的左值引用。
+如果函数参数是右值，则编译器将参数推导为右值引用。 例如，如果将对 `X` 类型的对象的右值引用传递给采用类型 `T&&` 作为其参数的模板函数，则模板自变量推导会将 `T` 推导为 `X`。 因此，参数具有类型 `X&&`。 如果函数自变量是左值或**const**左值，编译器可以推断其类型为左值引用或**const**该类型的左值引用。
 
 以下示例声明了一个结构模板，然后针对不同引用类型对其进行了专用化。 `print_type_and_value` 函数采用右值引用作为其参数，并将它转发给适当专用版本的 `S::print` 方法。 `main` 函数演示了调用 `S::print` 方法的各种方式。
 
@@ -385,7 +375,7 @@ print<T&&>: third
 print<const T&&>: fourth
 ```
 
-为了解析对 `print_type_and_value` 函数的每个调用，编译器首先会执行模板参数推导。 然后，编译器在用推导出的模板参数替换参数类型时应用引用折叠规则。 例如，将局部变量 `s1` 传递给 `print_type_and_value` 函数将导致编译器生成以下函数签名：
+为了解析对 `print_type_and_value` 函数的每个调用，编译器首先会执行模板自变量推导。 然后，编译器在用推导出的模板参数替换参数类型时应用引用折叠规则。 例如，将局部变量 `s1` 传递给 `print_type_and_value` 函数将导致编译器生成以下函数签名：
 
 ```cpp
 print_type_and_value<string&>(string& && t)

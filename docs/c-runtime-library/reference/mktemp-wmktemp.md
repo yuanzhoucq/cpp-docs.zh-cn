@@ -1,10 +1,6 @@
 ---
-title: _mktemp、_wmktemp | Microsoft 文档
-ms.custom: ''
+title: _mktemp、_wmktemp
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wmktemp
 - _mktemp
@@ -27,8 +23,6 @@ f1_keywords:
 - tmktemp
 - _wmktemp
 - _mktemp
-dev_langs:
-- C++
 helpviewer_keywords:
 - _wmktemp function
 - _mktemp function
@@ -39,16 +33,12 @@ helpviewer_keywords:
 - mktemp function
 - temporary files [C++]
 ms.assetid: 055eb539-a8c2-4a7d-be54-f5b6d1eb5c85
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 087348b3cc59fb1b47699fc0e64f533c22d992b4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9dbaba9e4a68523c0d79762c6a7ff54c238e397d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404342"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50554152"
 ---
 # <a name="mktemp-wmktemp"></a>_mktemp、_wmktemp
 
@@ -80,11 +70,11 @@ wchar_t *_wmktemp(
 
 ## <a name="return-value"></a>返回值
 
-其中每个函数返回指向修改后的 nameTemplate 的指针。 该函数将返回**NULL**如果*nameTemplate*不正确或可以从给定 nameTemplate 创建没有更多的唯一名称。
+每个函数返回指向修改后的 nameTemplate 的指针。 该函数将返回**NULL**如果*nameTemplate*格式不正确，或者可以从给定 nameTemplate 创建没有更多的唯一名称。
 
 ## <a name="remarks"></a>备注
 
-**_Mktemp**函数通过修改创建唯一的文件名*nameTemplate*自变量。 **_mktemp**自动处理多字节字符字符串自变量，根据需要，识别运行时系统根据当前正在使用的多字节代码页的多字节字符序列。 **_wmktemp**是宽字符版本的 **_mktemp**; 的自变量和返回值 **_wmktemp**是宽字符字符串。 **_wmktemp**和 **_mktemp**行为方式相同，只不过 **_wmktemp**不处理多字节字符字符串。
+**_Mktemp**函数创建唯一的文件名通过修改*nameTemplate*参数。 **_mktemp**自动处理多字节字符字符串参数，根据需要，通过运行时系统识别根据当前正在使用的多字节代码页的多字节字符序列。 **_wmktemp**是宽字符版本 **_mktemp**; 的自变量和返回值 **_wmktemp**都是宽字符字符串。 **_wmktemp**并 **_mktemp**行为方式相同，不同之处在于 **_wmktemp**不处理多字节字符字符串。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -92,9 +82,9 @@ wchar_t *_wmktemp(
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tmktemp**|**_mktemp**|**_mktemp**|**_wmktemp**|
 
-*NameTemplate*自变量具有窗体*基 * * XXXXXX*，其中*基*是你提供的新文件名的部分，而每个 X 是一个占位符，供提供的字符 **_mktemp**。 中的每个占位符字符*nameTemplate*必须是大写 X **_mktemp**保留*基*，将第一个尾随 X 替换为字母字符。 **_mktemp**后面的尾随 X 替换为五位数值; 此值是标识调用进程，或在多线程程序中，调用线程的唯一编号。
+*NameTemplate*自变量具有窗体*基 * * XXXXXX*，其中*基*为您提供的新文件名称的一部分并且每个 X 为提供的字符的占位符 **_mktemp**。 中的每个占位符字符*nameTemplate*必须是大写 x。 **_mktemp**保留*基*并将第一个尾随 X 替换为字母字符。 **_mktemp**替换将后面的尾随 five 位数字值; 此值是标识调用进程中，或在多线程程序中，调用线程的唯一编号。
 
-每次成功调用 **_mktemp**修改*nameTemplate*。 中的相同进程或具有相同的线程从每个后续调用*nameTemplate*自变量， **_mktemp**检查返回的名称匹配的文件名称 **_mktemp**中以前的调用。 如果给定名称的文件不存在 **_mktemp**返回该名称。 如果文件存在之前返回的所有名称， **_mktemp**通过将它与下一个可用小写字母，按顺序，从 a 到 z 的之前返回名称中使用的字母字符创建一个新名称。 例如，如果*基*是：
+每次成功调用 **_mktemp**修改*nameTemplate*。 在每个后续调用中从同一个进程或线程具有相同*nameTemplate*自变量， **_mktemp**检查返回的名称匹配的文件名称 **_mktemp**中以前的调用。 如果给定名称的文件不存在 **_mktemp**返回该名称。 如果文件存在之前返回的所有名称， **_mktemp**通过将它与下一个可用小写字母，按顺序，从 a 到 z 的以前返回名称中使用的字母字符替换为创建的新名称。 例如，如果*基*是：
 
 > **fn**
 
@@ -102,7 +92,7 @@ wchar_t *_wmktemp(
 
 > **fna12345**
 
-如果此名称用于创建文件 FNA12345 并且此文件仍存在下, 一步的名称的调用返回的相同进程或具有相同的线程从*基*为*nameTemplate*是：
+如果此名称用于创建文件 FNA12345 并且此文件仍然存在，从相同进程或线程具有相同调用返回的下一个名称*基*有关*nameTemplate*是：
 
 > **fnb12345**
 
@@ -110,15 +100,15 @@ wchar_t *_wmktemp(
 
 > **fna12345**
 
-**_mktemp** 26 唯一的文件名的任意给定组合最多可以创建*基*和*nameTemplate*值。 因此，FNZ12345 是最后一个唯一文件名 **_mktemp**可以为创建*基*和*nameTemplate*此示例中使用的值。
+**_mktemp**可以创建最多 26 的唯一文件名的任意给定组合*基*并*nameTemplate*值。 因此，FNZ12345 是最后一个唯一的文件名 **_mktemp**可以为创建*基*并*nameTemplate*在此示例中使用的值。
 
-在失败时， **errno**设置。 如果*nameTemplate*格式无效 (例如，少于 6 个 X)， **errno**设置为**EINVAL**。 如果 **_mktemp**无法创建唯一的名称，因为所有 26 可能的文件名称已存在， **_mktemp** nameTemplate 设置为空字符串并返回**EEXIST**。
+在失败时， **errno**设置。 如果*nameTemplate*具有无效的格式 (例如，少于 6 个 X)， **errno**设置为**EINVAL**。 如果 **_mktemp**不能创建唯一的名称，因为所有 26 可能的文件名称已存在，所以 **_mktemp** nameTemplate 设置为空字符串并返回**EEXIST**。
 
 在 C++ 中，这些函数具有模板重载，以调用这些函数的更新、更安全副本。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_mktemp**|\<io.h>|
 |**_wmktemp**|\<io.h> 或 \<wchar.h>|

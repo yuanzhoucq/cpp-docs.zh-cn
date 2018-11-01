@@ -1,24 +1,14 @@
 ---
-title: 如何： 使用 Windows 10 SDK 中的 Windows 桌面应用程序 |Microsoft Docs
+title: 如何：在 Windows 桌面应用程序中使用 Windows 10 SDK
 ms.custom: get-started-article
 ms.date: 07/12/2018
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: eed6421e-9355-44a6-9582-3f1d453a6d44
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: afe678ca4ea381709b126168639df3f710867b9e
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ed860a229866991b01266093058b71cc2ae84986
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42611315"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50669113"
 ---
 # <a name="how-to-use-the-windows-10-sdk-in-a-windows-desktop-application"></a>如何：在 Windows 桌面应用程序中使用 Windows 10 SDK
 
@@ -26,7 +16,7 @@ ms.locfileid: "42611315"
 
 如果你想要面向早期版本的 sdk，则可以打开**项目 |属性**，然后选择从 Windows SDK 版本下拉列表中提供的其他 SDK 版本。
 
-从 Visual Studio 2015 和 Windows 10 SDK 开始，CRT 库分为两个部分，一个 (ucrtbase) 包含可接受要在通用 Windows 应用程序中使用的函数，其他所有内容 (vcruntime140) 包含的一个。 由于 Windows 10 SDK 包含新函数（如许多 C99 函数），因此需要按照以下步骤进行操作以便使用这些函数。 请参阅 [CRT 库的功能](../c-runtime-library/crt-library-features.md)。
+从 Visual Studio 2015 和 Windows 10 SDK 开始，CRT 库分为两个部分，一个 (ucrtbase) 包含可接受要在通用 Windows 应用程序中使用的函数，其他所有内容 (vcruntime140) 包含的一个。 由于 Windows 10 SDK 包含新函数（如许多 C99 函数），因此需要按照以下步骤进行操作以便使用这些函数。 请参阅 [CRT Library Features](../c-runtime-library/crt-library-features.md)。
 
 ### <a name="to-target-the-windows-10-sdk"></a>面向 Windows 10 SDK
 

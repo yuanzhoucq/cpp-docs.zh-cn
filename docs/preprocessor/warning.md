@@ -1,31 +1,21 @@
 ---
-title: 警告 |Microsoft Docs
-ms.custom: ''
+title: 警告
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - warning_CPP
 - vc-pragma.warning
-dev_langs:
-- C++
 helpviewer_keywords:
 - pragmas, warning
 - push pragma warning
 - pop warning pragma
 - warning pragma
 ms.assetid: 8e9a0dec-e223-4657-b21d-5417ebe29cc8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 90cb11a6e6ab0c088c0b2425856d61556e76564c
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 53f79061ded358c9cb895fd7e8e245c46ed99fd5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48234627"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50631711"
 ---
 # <a name="warning-pragma"></a>警告杂注
 启用编译器警告消息的行为的选择性修改。
@@ -46,7 +36,7 @@ ms.locfileid: "48234627"
 |警告说明符|含义|
 |------------------------|-------------|
 |*1、 2、 3、 4*|将给定级别应用于指定的警告。 这也会启用默认情况下处于关闭状态的指定警告。|
-|*default*|将警告行为重置为其默认值。 这也会启用默认情况下处于关闭状态的指定警告。 警告将在其默认存档级别生成。<br /><br /> 有关详细信息，请参阅[默认情况下处于关闭状态的编译器警告](../preprocessor/compiler-warnings-that-are-off-by-default.md)。|
+|*default*|将警告行为重置为其默认值。 这也会启用默认情况下处于关闭状态的指定警告。 警告将在其默认存档级别生成。<br /><br /> 有关详细信息，请参阅 [Compiler Warnings That Are Off by Default](../preprocessor/compiler-warnings-that-are-off-by-default.md)。|
 |*disable*|不发出指定的警告消息。|
 |*error*|将指定警告报告为错误。|
 |*once*|只显示指定消息一次。|

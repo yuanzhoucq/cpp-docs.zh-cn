@@ -1,10 +1,6 @@
 ---
-title: round、 roundf、 roundl | Microsoft 文档
-ms.custom: ''
+title: round、roundf、roundl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - round
 - roundl
@@ -26,23 +22,17 @@ f1_keywords:
 - roundf
 - roundl
 - round
-dev_langs:
-- C++
 helpviewer_keywords:
 - roundl function
 - round function
 - roundf function
 ms.assetid: 6be90877-193c-4b80-a32b-c3eca33f9c6f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 83c157793b80ec851f2c6159a5454f7101d2baed
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 126c6bace2b79123094a7f8bcc8f3d3378391d96
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407234"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50591761"
 ---
 # <a name="round-roundf-roundl"></a>round、roundf、roundl
 
@@ -75,19 +65,19 @@ long double roundl(
 
 ## <a name="return-value"></a>返回值
 
-**舍入**函数返回一个表示到最接近的整数的浮点值*x*。 中间值从零舍入，这与浮点舍入模式的设置无关。 无错误返回。
+**舍入**函数将返回一个表示到最接近的整数的浮点值*x*。 中间值从零舍入，这与浮点舍入模式的设置无关。 无错误返回。
 
 |输入|SEH 异常|Matherr 异常|
 |-----------|-------------------|-----------------------|
-|± **QNAN**， **IND**|无|**_DOMAIN**|
+|为**QNAN**， **IND**|无|**（_D)**|
 
 ## <a name="remarks"></a>备注
 
-由于 c + + 允许重载，你可以调用的重载**舍入**采用并返回**float**和**长** **double**值。 在 C 程序中，**舍入**始终采用并返回**double**。
+由于 c + + 允许重载，可以调用的重载**舍入**采用并返回**float**并**长** **double**值。 在 C 程序中，**舍入**始终采用并返回**double**。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**舍入**， **roundf**， **roundl**|\<math.h>|
 

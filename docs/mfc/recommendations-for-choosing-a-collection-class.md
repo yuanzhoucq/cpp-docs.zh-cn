@@ -1,12 +1,6 @@
 ---
-title: 关于选择集合类的建议 |Microsoft Docs
-ms.custom: ''
+title: 关于选择集合类的建议
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - type safety of collection classes [MFC]
 - collection classes [MFC], serialization
@@ -22,16 +16,12 @@ helpviewer_keywords:
 - collection classes [MFC], duplicates allowed
 - collection classes [MFC], shapes
 ms.assetid: a82188cd-443f-40d8-a244-edf292a53db4
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0bb6338d7a40059da5f4e351dfac0d8d879e8c21
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2c8cb323feb44618909895a4ee536ad3b7832173
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46404782"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50446730"
 ---
 # <a name="recommendations-for-choosing-a-collection-class"></a>关于选择集合类的建议
 
@@ -95,11 +85,11 @@ ms.locfileid: "46404782"
 |`CUIntArray`|No|否|是|是 3|
 |`CWordArray`|否|是|是|是 3|
 
-1. 若要序列化，必须显式调用集合对象的`Serialize`函数; 要转储，必须显式调用其`Dump`函数。 不能使用表单 `ar << collObj` 来进行序列化或使用表单 `dmp` `<< collObj` 来进行转储。
+1. 要序列化，你必须明确地调用集合对象的 `Serialize` 函数；要转储，你必须明确地调用其 `Dump` 函数。 不能使用表单 `ar << collObj` 来进行序列化或使用表单 `dmp` `<< collObj` 来进行转储。
 
 2. 可序列化性取决于基础集合类型。 例如，如果类型化指针数组基于 `CObArray`，则可序列化；如果基于 `CPtrArray`，则不可序列化。 一般情况下，“Ptr”类不能进行序列化。
 
-3. 如果在此列中标记为“是”，若你按要求使用它，则非模板集合类为类型安全。 例如，如果你在 `CByteArray`中存储字节，则数组为类型安全。 但如果你将其用于存储字符，则其类型安全性稍微不确定。
+3. 如果在此列中标记为“是”，若你按要求使用它，则非模板集合类为类型安全。 例如，如果你在 `CByteArray` 中存储字节，则数组为类型安全。 但如果你将其用于存储字符，则其类型安全性稍微不确定。
 
 ## <a name="see-also"></a>请参阅
 

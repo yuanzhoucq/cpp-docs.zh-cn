@@ -1,28 +1,18 @@
 ---
-title: 多个基类 |Microsoft Docs
-ms.custom: ''
+title: 多个基类
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - base classes [C++], multiple
 - derived classes [C++], multiple bases
 - multiple inheritance, class declaration
 - multiple base classes [C++]
 ms.assetid: a30c69fe-401c-4a87-96a0-e0da70c7c740
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1b0dd2da0da84b6705fc1fdef2858cd45f181910
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: fbbe6d6194b878b4851cbde84b55d71b9e4fc02c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46113937"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50483455"
 ---
 # <a name="multiple-base-classes"></a>多个基类
 
@@ -41,7 +31,7 @@ class CollectionOfBook : public Book, public Collection {
 
 指定基类的顺序并不重要，只不过在某些情况下，将调用构造函数和析构函数。 在这些情况下，指定基类的顺序将影响：
 
-- 构造函数进行初始化的顺序。 如果您的代码依赖要在 `Book` 部分之前初始化的 `CollectionOfBook` 的 `Collection` 部分，则规范的顺序很重要。 初始化发生在类中指定的顺序*基列表*。
+- 构造函数进行初始化的顺序。 如果你的代码依赖要在 `Book` 部分之前初始化的 `CollectionOfBook` 的 `Collection` 部分，则规范的顺序很重要。 初始化发生在类中指定的顺序*基列表*。
 
 - 调用析构函数以进行清理的顺序。 同样，如果在销毁另一部分时必须呈现类的特定“部分”，则顺序非常重要。 中指定的类的相反顺序调用析构函数*基列表*。
 

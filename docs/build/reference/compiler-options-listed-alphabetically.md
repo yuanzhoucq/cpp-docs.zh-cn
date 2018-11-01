@@ -1,35 +1,25 @@
 ---
-title: 按字母顺序列出的编译器选项 |Microsoft Docs
-ms.custom: ''
+title: 按字母顺序列出的编译器选项
 ms.date: 08/20/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - compiler options, C++
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f99df40d5718a450019fb7cd26aa0c00a59c0a48
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: fa5ae089e112c147fb5e18b13af2ef5b95a7fda3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45701853"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50646727"
 ---
 # <a name="compiler-options-listed-alphabetically"></a>按字母顺序列出的编译器选项
 
-下面是一个完整的按字母顺序的编译器选项列表。 有关排序的列表，请参阅[按类别列出的编译器选项](compiler-options-listed-by-category.md)。
+下面是一个完整的按字母顺序的编译器选项列表。 有关按类别排序的列表，请参见 [按类别列出的编译器选项](compiler-options-listed-by-category.md)。
 
 |选项|目标|
 |------------|-------------|
 |[@](at-specify-a-compiler-response-file.md)|指定响应文件。|
 |[/?](help-compiler-command-line-help.md)|列出编译器选项。|
 |[/AI](ai-specify-metadata-directories.md)|指定在解析传递到 [#using](../../preprocessor/hash-using-directive-cpp.md) 指令的文件引用时搜索的目录。|
-|[/ 分析](analyze-code-analysis.md)|启用代码分析。|
+|[/analyze](analyze-code-analysis.md)|启用代码分析。|
 |[/arch](arch-minimum-cpu-architecture.md)|为代码生成指定体系结构。|
 |[/await](await-enable-coroutine-support.md)|启用协同程序 （可恢复函数） 的扩展。|
 |[/bigobj](bigobj-increase-number-of-sections-in-dot-obj-file.md)|增加 .obj 文件中可寻址节的数目。|
@@ -79,9 +69,9 @@ ms.locfileid: "45701853"
 |[/guard:cf](guard-enable-control-flow-guard.md)|添加控制流防护安全检查。|
 |[/Gv](gd-gr-gv-gz-calling-convention.md)|使用 `__vectorcall` 调用约定。 （仅限 x86 和 x64）|
 |[/Gw](gw-optimize-global-data.md)|启用全程序全局数据优化。|
-|[/GX](gx-enable-exception-handling.md)|已否决。 启用同步异常处理。 使用[/EH](eh-exception-handling-model.md)相反。|
+|[/GX](gx-enable-exception-handling.md)|已否决。 启用同步异常处理。 改为使用 [/EH](eh-exception-handling-model.md) 。|
 |[/Gy](gy-enable-function-level-linking.md)|启用函数级链接。|
-|[/GZ](gz-enable-stack-frame-run-time-error-checking.md)|已否决。 与相同[/rtc1](rtc-run-time-error-checks.md)。|
+|[/GZ](gz-enable-stack-frame-run-time-error-checking.md)|已否决。 与 [/RTC1](rtc-run-time-error-checks.md)相同。|
 |[/Gz](gd-gr-gv-gz-calling-convention.md)|使用 `__stdcall` 调用约定（仅限 x86）。|
 |[/H](h-restrict-length-of-external-names.md)|已否决。 限制外部（公共）名称的长度。|
 |[/HELP](help-compiler-command-line-help.md)|列出编译器选项。|
@@ -140,10 +130,10 @@ ms.locfileid: "45701853"
 |[/vmm](vmm-vms-vmv-general-purpose-representation.md)|声明多重继承。|
 |[/vms](vmm-vms-vmv-general-purpose-representation.md)|声明单一继承。|
 |[/vmv](vmm-vms-vmv-general-purpose-representation.md)|声明虚拟继承。|
-|[/ 易失性](volatile-volatile-keyword-interpretation.md)|选择如何解释 volatile 关键字。|
+|[/volatile](volatile-volatile-keyword-interpretation.md)|选择如何解释 volatile 关键字。|
 |[/w](compiler-option-warning-level.md)|禁用所有警告。|
-|[/W0, /W1, /W2, /W3, /W4](compiler-option-warning-level.md)|设置要输出的警告级别。|
-|[/w1、 /w2、 /w3、 /w4](compiler-option-warning-level.md)|针对指定的警告设置警告级别。|
+|[/W0、/W1、/W2、/W3、/W4](compiler-option-warning-level.md)|设置要输出的警告级别。|
+|[/W1、/W2、/W3、/W4](compiler-option-warning-level.md)|针对指定的警告设置警告级别。|
 |[/Wall](compiler-option-warning-level.md)|启用所有警告，包括默认情况下禁用的警告。|
 |[/wd](compiler-option-warning-level.md)|禁用指定的警告。|
 |[/we](compiler-option-warning-level.md)|将指定的警告视为错误。|
@@ -155,7 +145,7 @@ ms.locfileid: "45701853"
 |[/X](x-ignore-standard-include-paths.md)|忽略标准包含目录。|
 |[/Y-](y-ignore-precompiled-header-options.md)|忽略当前生成中的所有其他预编译头编译器选项。|
 |[/Yc](yc-create-precompiled-header-file.md)|创建预编译头文件。|
-|[/Yd](yd-place-debug-information-in-object-file.md)|已否决。 将完整的调试信息放在所有对象文件中。 使用[/Zi](z7-zi-zi-debug-information-format.md)相反。|
+|[/Yd](yd-place-debug-information-in-object-file.md)|已否决。 将完整的调试信息放在所有对象文件中。 改为使用 [/Zi](z7-zi-zi-debug-information-format.md) 。|
 |[/Yl](yl-inject-pch-reference-for-debug-library.md)|创建调试库时插入 PCH 引用|
 |[/Yu](yu-use-precompiled-header-file.md)|在生成期间使用预编译头文件。|
 |[/Z7](z7-zi-zi-debug-information-format.md)|生成与 C 7.0 兼容的调试信息。|

@@ -1,10 +1,6 @@
 ---
-title: memcpy_s、wmemcpy_s | Microsoft 文档
-ms.custom: ''
+title: memcpy_s、wmemcpy_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - memcpy_s
 - wmemcpy_s
@@ -24,22 +20,16 @@ apitype: DLLExport
 f1_keywords:
 - wmemcpy_s
 - memcpy_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - memcpy_s function
 - wmemcpy_s function
 ms.assetid: 5504e20a-83d9-4063-91fc-3f55f7dabe99
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 12bf97e596a7cb4e3befa4c0633a8ef2df29a6d1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e7d6cc7abdd5f343bf1482f534f5112eabbc96b8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403789"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50607150"
 ---
 # <a name="memcpys-wmemcpys"></a>memcpy_s、wmemcpy_s
 
@@ -82,22 +72,22 @@ errno_t wmemcpy_s(
 
 ### <a name="error-conditions"></a>错误条件
 
-|*dest*|*destSize*|*src*|*count*|返回值|内容*目标*|
+|*dest*|*destSize*|*src*|*count*|返回值|内容*dest*|
 |------------|----------------|-----------|---|------------------|------------------------|
 |任何|任何|任何|0|0|未修改|
 |**NULL**|任何|任何|非零|**EINVAL**|未修改|
-|任何|任何|**NULL**|非零|**EINVAL**|*目标*归零|
-|任何|< *计数*|任何|非零|**ERANGE**|*目标*归零|
+|任何|任何|**NULL**|非零|**EINVAL**|*dest*已清零|
+|任何|< *计数*|任何|非零|**ERANGE**|*dest*已清零|
 
 ## <a name="remarks"></a>备注
 
 **memcpy_s**副本*计数*个字节从*src*到*dest*;**wmemcpy_s**副本*计数*宽字符 （两个字节为单位）。 如果源和目标重叠的行为**memcpy_s**是不确定的。 使用**memmove_s**处理重叠区域。
 
-这些函数验证其参数。 如果*计数*为非零和*dest*或*src*是 null 指针，或*destSize*小于*计数*中, 所述，这些函数将调用无效参数处理程序，[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则这些函数将返回**EINVAL**或**ERANGE**并设置**errno**到返回的值。
+这些函数验证其参数。 如果*计数*为非零和*dest*或*src*是 null 指针，或者*destSize*小于*计数*，这些函数将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，这些函数将返回**EINVAL**或**ERANGE**并设置**errno**的返回值。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**memcpy_s**|\<memory.h> 或 \<string.h>|
 |**wmemcpy_s**|\<wchar.h>|

@@ -1,25 +1,15 @@
 ---
-title: Container Class::end | Microsoft 文档
-ms.custom: ''
+title: Container Class::end
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - end method
 ms.assetid: 6fa38a20-3798-4387-9c6e-20fc3e90d813
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0062b63c839b7f7f5b3b4c16bf3779e44f7c983b
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 458f22e76f03322c1a67a9ec93b953ad82d71a35
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50083121"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50475411"
 ---
 # <a name="container-classend"></a>Container Class::end
 

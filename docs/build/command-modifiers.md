@@ -1,26 +1,16 @@
 ---
-title: 命令修饰符 |Microsoft Docs
-ms.custom: ''
+title: 命令修饰符
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - NMAKE program, command modifiers
 - command modifiers
 ms.assetid: b661c432-210f-4f05-bc56-744a46e0fc0b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fd86adc94de90222e0775d89543a4dc25486f74f
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: a9a79364880cf95adca6066b48f0d786391c8ba0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894494"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50431807"
 ---
 # <a name="command-modifiers"></a>命令修饰符
 
@@ -30,7 +20,7 @@ ms.locfileid: "43894494"
 |--------------|-------------|
 |\@*命令*|禁止显示该命令。 不取消显示由命令。 默认情况下，NMAKE 回显所有执行的命令。 使用 /S 取消显示整个生成文件;使用 **。无提示**取消生成文件的一部分显示。|
 |**-**\[*数字*]*命令*|关闭的错误检查*命令*。 默认情况下，当命令返回非零退出代码时，NMAKE 暂停。 如果-*数量*是使用，NMAKE 停止如果退出代码超过*数*。 空格或制表符不能出现之间短划线和*数。* 之间必须有至少一个空格或制表符`number`并*命令*。 使用 /I 关闭检查整个生成文件; 时出错使用 **。忽略**关闭检查生成文件的一部分时出错。|
-|**!** *command*|执行*命令*为每个依赖文件如果*命令*使用<strong>$ \* \*</strong> （在依赖项中的所有依赖文件） 或 **$?** （所有依赖文件中更高版本的时间戳比目标对象的依赖项）。|
+|**\!** *command*|执行*命令*为每个依赖文件如果*命令*使用<strong>$ \* \*</strong> （在依赖项中的所有依赖文件） 或 **$?** （所有依赖文件中更高版本的时间戳比目标对象的依赖项）。|
 
 ## <a name="see-also"></a>请参阅
 

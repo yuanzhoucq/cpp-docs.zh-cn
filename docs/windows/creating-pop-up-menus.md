@@ -1,12 +1,6 @@
 ---
-title: 创建弹出菜单 （c + +） |Microsoft Docs
-ms.custom: ''
+title: 创建弹出菜单 （c + +）
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - context menus [C++], Menu Editor
 - pop-up menus [C++], creating
@@ -15,23 +9,18 @@ helpviewer_keywords:
 - shortcut menus [C++], creating
 - pop-up menus [C++], displaying
 ms.assetid: dff4dddf-2e8d-4c34-b755-90baae426b58
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 6c66f7074269e99b35785299800665be48cebef9
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 243a2489918f74243ce3b2268ec44c4fe4c1b566
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46415715"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50506777"
 ---
 # <a name="creating-pop-up-menus-c"></a>创建弹出菜单 （c + +）
 
 [弹出菜单](../mfc/menus-mfc.md) 显示常用命令。 它们对指针的位置可以区分上下文。 在应用程序中使用弹出菜单需要先生成菜单，然后将菜单连接到应用程序代码。
 
-创建菜单资源后，应用程序代码需要加载该菜单资源并使用[TrackPopupMenu](/windows/desktop/api/winuser/nf-winuser-trackpopupmenu)才会显示该菜单。 用户通过单击弹出菜单之外的位置关闭弹出菜单后，或用户单击某个命令后，该函数将返回。 如果用户选择一个命令，该命令消息将被发送到传递了其句柄的窗口。
+创建菜单资源后，应用程序代码需要加载该菜单资源，并使用 [TrackPopupMenu](/windows/desktop/api/winuser/nf-winuser-trackpopupmenu) 显示该菜单。 用户通过单击弹出菜单之外的位置关闭弹出菜单后，或用户单击某个命令后，该函数将返回。 如果用户选择一个命令，该命令消息将被发送到传递了其句柄的窗口。
 
 ### <a name="to-create-a-pop-up-menu"></a>创建弹出菜单
 

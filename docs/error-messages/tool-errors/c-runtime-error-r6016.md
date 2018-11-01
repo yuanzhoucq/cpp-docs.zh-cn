@@ -1,27 +1,17 @@
 ---
-title: C 运行时错误 R6016 |Microsoft Docs
-ms.custom: ''
+title: C 运行时错误 R6016
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - R6016
-dev_langs:
-- C++
 helpviewer_keywords:
 - R6016
 ms.assetid: 7bd3f274-d9c4-4bc4-8252-80bf168c4c3a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b14d6e20f58ef5a9fbda6d640f5c8a596635d70c
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: b617e3cf6d48a24b01479ef7ef3fb6ac425b3996
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861702"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50556932"
 ---
 # <a name="c-runtime-error-r6016"></a>C 运行时错误 R6016
 

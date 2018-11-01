@@ -1,10 +1,6 @@
 ---
-title: _CrtDbgBreak | Microsoft 文档
-ms.custom: ''
+title: _CrtDbgBreak
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtDbgBreak
 apilocation:
@@ -22,22 +18,16 @@ apitype: DLLExport
 f1_keywords:
 - _CrtDbgBreak
 - CrtDbgBreak
-dev_langs:
-- C++
 helpviewer_keywords:
 - CrtDbgBreak function
 - _CrtDbgBreak function
 ms.assetid: 01f8b4a2-a2c7-4e1f-9f39-e573b4a7871f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2141b3c70755eb03e77c8f66feed482b5e86b529
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4cf64daaea3193f7cf6b3aaa0b1aab031f104704
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394046"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50478295"
 ---
 # <a name="crtdbgbreak"></a>_CrtDbgBreak
 
@@ -55,13 +45,13 @@ void _CrtDbgBreak( void );
 
 ## <a name="remarks"></a>备注
 
-**_CrtDbgBreak**函数调试断点上设置特定代码行以函数所在。 此函数在调试模式下使用，并依赖于 **_DEBUG**之前的定义。
+**_CrtDbgBreak**函数调试断点上设置特定的代码行函数所在的位置。 此函数在调试模式下使用以及什么依赖于 **_DEBUG**之前未定义的。
 
 有关使用其他具有挂钩功能的运行时函数和编写你自己的客户端定义挂钩函数的详细信息，请参阅[编写你自己的调试挂钩函数](/visualstudio/debugger/debug-hook-function-writing)。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_CrtDbgBreak**|\<CRTDBG.h>|
 

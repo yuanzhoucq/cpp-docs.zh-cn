@@ -1,10 +1,6 @@
 ---
-title: sprintf_s、_sprintf_s_l、swprintf_s、_swprintf_s_l | Microsoft 文档
-ms.custom: ''
+title: sprintf_s、_sprintf_s_l、swprintf_s、_swprintf_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _swprintf_s_l
 - _sprintf_s_l
@@ -31,8 +27,6 @@ f1_keywords:
 - stdio/_swprintf_s_l
 - _sprintf_s_l
 - _swprintf_s_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - stprintf_s function
 - stprintf_s_l function
@@ -46,16 +40,12 @@ helpviewer_keywords:
 - _sprintf_s_l function
 - formatted text [C++]
 ms.assetid: 424f0a29-22ef-40e8-b565-969f5f57782f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0200740df3b41e356bcf83f0756b8a5267b38166
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 51469ccec348545ff780d14d5f433099def3eb69
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417786"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50511938"
 ---
 # <a name="sprintfs-sprintfsl-swprintfs-swprintfsl"></a>sprintf_s、_sprintf_s_l、swprintf_s、_swprintf_s_l
 
@@ -125,23 +115,23 @@ int swprintf_s(
 
 ## <a name="return-value"></a>返回值
 
-写入的字符数或-1，如果出现错误。 如果*缓冲区*或*格式*是 null 指针， **sprintf_s**和**swprintf_s**返回-1 并设置**errno**到**EINVAL**。
+写入的字符数或为-1 时出错。 如果*缓冲区*或*格式*是 null 指针**sprintf_s**并**swprintf_s**返回-1，并设置**errno**到**EINVAL**。
 
-**sprintf_s**返回存储中的字节数*缓冲区*，不包括终止 null 字符。 **swprintf_s**返回的存储中的宽字符数*缓冲区*，不包括终止 null 宽字符。
+**sprintf_s**返回存储中的字节数*缓冲区*，不包括终止 null 字符。 **swprintf_s**返回存储在中的宽字符数*缓冲区*，不包括终止 null 宽字符。
 
 ## <a name="remarks"></a>备注
 
-**Sprintf_s**函数格式并将存储中的字符和值的一系列*缓冲区*。 每个*参数*（如果有） 进行转换和输出中的相应格式规范根据*格式*。 该格式包括普通字符，其形式和函数与相同*格式*参数[printf](printf-printf-l-wprintf-wprintf-l.md)。 null 字符追加在写入的最后一个字符后。 如果在重叠的字符串之间发生复制，则此行为不确定。
+**Sprintf_s**函数设置的格式并将存储一系列字符和中的值*缓冲区*。 每个*自变量*（如果有） 进行转换和输出中的相应格式规范根据*格式*。 该格式包括普通字符，其形式和函数与相同*格式*参数[printf](printf-printf-l-wprintf-wprintf-l.md)。 null 字符追加在写入的最后一个字符后。 如果在重叠的字符串之间发生复制，则此行为不确定。
 
-之间的一个主要区别**sprintf_s**和[sprintf](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)在于**sprintf_s**检查格式字符串中的有效格式设置字符，而[sprintf](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)仅检查格式字符串或缓冲区是否**NULL**指针。 如果任一检查失败，将调用无效参数处理程序，如 [Parameter Validation](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，函数将返回-1 并设置**errno**到**EINVAL**。
+之间的一个主要区别**sprintf_s**并[sprintf](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)在于**sprintf_s**检查格式字符串中的有效格式设置字符，而[sprintf](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)仅检查格式字符串或缓冲区是否**NULL**指针。 如果任一检查失败，将调用无效参数处理程序，如 [Parameter Validation](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，函数将返回-1 并设置**errno**到**EINVAL**。
 
-之间的另一主要区别**sprintf_s**和[sprintf](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)在于**sprintf_s**使用长度参数来指定字符中输出缓冲区的大小。 如果缓冲区太小，带格式的文本，包括终止 null，则由放置在 null 字符缓冲区设置为空字符串*缓冲区*[0]，并调用无效参数处理程序。 与不同 **_snprintf**， **sprintf_s**保证，缓冲区将以 null 终止除非缓冲区大小为零。
+之间的其他主要区别**sprintf_s**并[sprintf](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)在于**sprintf_s**使用长度参数来以字符为单位指定输出缓冲区的大小。 如果缓冲区太小，格式化文本，包括终止 null，则将缓冲区设置为空字符串由放置在 null 字符*缓冲区*[0]，并调用无效参数处理程序。 与不同 **_snprintf**， **sprintf_s**保证，缓冲区将以 null 终止除非缓冲区大小为零。
 
-**swprintf_s**是宽字符版本的**sprintf_s**; 的指针参数**swprintf_s**是宽字符字符串。 编码错误检测**swprintf_s**可能不同于在**sprintf_s**。 使用这些函数的版本 **_l**后缀是相同，只不过它们使用传递而不是当前线程区域设置的区域设置参数。
+**swprintf_s**是宽字符版本**sprintf_s**; 的指针参数**swprintf_s**都是宽字符字符串。 检测到的编码中的错误**swprintf_s**可能有所不同，在**sprintf_s**。 使用这些函数的版本 **_l**后缀完全相同，只不过它们使用传递中而不是当前线程区域设置的区域设置参数。
 
 在 C++ 中，使用这些函数由模板重载简化；重载可以自动推导出缓冲区长度（不再需要指定大小参数），并且它们可以自动用以更新、更安全的对应物替换旧的、不安全的函数。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 
-有版本**sprintf_s**提供其他控制如果缓冲区太小，将会发生什么情况。 有关更多信息，请参阅[_snprintf_s、_snprintf_s_l、_snwprintf_s、_snwprintf_s_l](snprintf-s-snprintf-s-l-snwprintf-s-snwprintf-s-l.md)。
+有新版**sprintf_s**提供更多控制权如果缓冲区太小，则会发生什么情况。 有关更多信息，请参见 [_snprintf_s, _snprintf_s_l, _snwprintf_s, _snwprintf_s_l](snprintf-s-snprintf-s-l-snwprintf-s-snwprintf-s-l.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -152,7 +142,7 @@ int swprintf_s(
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**sprintf_s**， **_sprintf_s_l**|C: \<stdio.h><br /><br /> C++: \<cstdio> 或 \<stdio.h>|
 |**swprintf_s**， **_swprintf_s_l**|C: \<stdio.h> 或 \<wchar.h><br /><br /> C++: \<cstdio>、\<cwchar>、\<stdio.h> 或 \<wchar.h>|

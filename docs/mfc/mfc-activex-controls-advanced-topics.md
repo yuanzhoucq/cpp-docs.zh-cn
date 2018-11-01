@@ -1,12 +1,6 @@
 ---
-title: MFC ActiveX 控件： 高级主题 |Microsoft Docs
-ms.custom: ''
+title: MFC ActiveX 控件：高级主题
 ms.date: 09/12/2018
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], error codes
 - MFC ActiveX controls [MFC], accessing invisible dialog controls
@@ -18,16 +12,12 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], parameterized property
 - ThrowError method [MFC]
 ms.assetid: e9e34abb-8e2d-461e-bb9c-a1aec5dcecbd
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: defc160b2b45185031160e0ba3dd553f8896e372
-ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
+ms.openlocfilehash: 607fd1c0ee5ae35f46ef26584f7f8e3ac2f1c32f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50204686"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50645583"
 ---
 # <a name="mfc-activex-controls-advanced-topics"></a>MFC ActiveX 控件：高级主题
 
@@ -117,7 +107,7 @@ MFC 数据库类的一般概述，请参阅[MFC 数据库类 （DAO 和 ODBC）]
 
 ### <a name="activex-control-error-codes"></a>ActiveX 控件错误代码
 
-|错误|描述|
+|Error|描述|
 |-----------|-----------------|
 |CTL_E_ILLEGALFUNCTIONCALL|非法的函数调用|
 |CTL_E_OVERFLOW|溢出|
@@ -184,7 +174,7 @@ MFC 数据库类的一般概述，请参阅[MFC 数据库类 （DAO 和 ODBC）]
 
 - 使用添加成员变量向导中，选择**控制变量**，然后选择该控件的 id。 输入一个成员变量名称并选择控件的包装器类，作为**控件类型**。
 
-     - 或 -
+     或
 
 - 为对话框项声明本地变量和子类。 插入如下所示的代码 (`CMyCtrl`是包装类，IDC_MYCTRL1 是控件的 ID):
 

@@ -1,10 +1,6 @@
 ---
-title: atanh、atanhf、atanhl | Microsoft 文档
-ms.custom: ''
+title: atanh、atanhf、atanhl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - atanhl
 - atanhf
@@ -26,23 +22,17 @@ f1_keywords:
 - atanhl
 - atanhf
 - atanh
-dev_langs:
-- C++
 helpviewer_keywords:
 - atanhf function
 - atanhl function
 - atanh funciton
 ms.assetid: 83a43b5b-2580-4461-854f-dc84236d9f32
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 90a24945a7d630fac909e097728ea4df61ae2b40
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6044c40427e407ee9746867e4b04104c1ca29c7c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393298"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50435355"
 ---
 # <a name="atanh-atanhf-atanhl"></a>atanh、atanhf、atanhl
 
@@ -68,7 +58,7 @@ long double atanh( long double x );  // C++ only
 
 ## <a name="return-value"></a>返回值
 
-**Atanh**函数返回的反双曲正切值 （圆弧双曲正切值） *x*。 如果*x*大于 1 或小于-1， **errno**设置为**EDOM**且结果是 quiet NaN。 如果*x*是等于 1 或-1，正整数或负无穷大，则分别返回，和**errno**设置为**ERANGE**。
+**Atanh**函数返回的反双曲正切值 （反双曲正切） *x*。 如果*x*大于 1 或小于-1 **errno**设置为**EDOM**和结果是 quiet NaN。 如果*x*是等于 1 或-1，正或负无穷大返回，则分别，并**errno**设置为**ERANGE**。
 
 |输入|SEH 异常|**Matherr**异常|
 |-----------|-------------------|-------------------------|
@@ -77,7 +67,7 @@ long double atanh( long double x );  // C++ only
 
 ## <a name="remarks"></a>备注
 
-由于 c + + 允许重载，你可以调用的重载**atanh**采用并返回**float**或**长** **double**值。 在 C 程序中， **atanh**始终采用并返回**double**。
+由于 c + + 允许重载，可以调用的重载**atanh**采用并返回**float**或**长** **double**值。 在 C 程序中， **atanh**始终采用并返回**double**。
 
 ## <a name="requirements"></a>要求
 

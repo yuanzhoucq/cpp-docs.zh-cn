@@ -1,11 +1,6 @@
 ---
-title: timespec_get、_timespec32_get、_timespec64_get1 | Microsoft 文档
-ms.custom: ''
+title: timespec_get，_timespec32_get _timespec64_get1
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - timespec_get
 - _timespec32_get
@@ -33,23 +28,17 @@ f1_keywords:
 - timespec
 - _timespec32
 - _timespec64
-dev_langs:
-- C++
 helpviewer_keywords:
 - timespec_get function
 - _timespec32_get function
 - _timespec64_get function
 ms.assetid: ed757258-b4f2-4c1d-a91b-22ea6ffce4ab
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f00a59f8b5813398b47562b106f3ec0eff3363b1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c1d0cbaf194060d816e31d397a9319ef47f75371
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412828"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50638446"
 ---
 # <a name="timespecget-timespec32get-timespec64get"></a>timespec_get、_timespec32_get、_timespec64_get
 
@@ -87,17 +76,17 @@ int _timespec64_get(
 
 ## <a name="remarks"></a>备注
 
-**Timespec_get**函数在通过指向的结构中设置的当前时间*time_spec*自变量。 此结构的所有版本都具有两个成员， **tv_sec**和**tv_nsec**。 **Tv_sec**值设置为整秒数和**tv_nsec**到整纳秒数，舍入到的系统时钟的分辨率所指定的时期开始以来*基*。
+**Timespec_get**函数将由指向该结构中设置的当前时间*time_spec*参数。 此结构的所有版本都具有两个成员**tv_sec**并**tv_nsec**。 **Tv_sec**值设置为整秒数和**tv_nsec**到整纳秒数，舍入到系统时钟的分辨率所指定的时期开始以来*基*。
 
 **Microsoft 专用**
 
-这些函数仅支持**TIME_UTC**作为*基*值。 这将设置*time_spec*到数秒和纳秒由于时期开始，午夜，1970 年 1 月 1 日协调世界时 (UTC) 的值。 在**结构** **_timespec32**， **tv_sec**是 **__time32_t**值。 在**结构** **_timespec64**， **tv_sec**是 **__time64_t**值。 在**结构** **timespec**， **tv_sec**是**time_t**类型，这是 32 位或 64 位的长度，具体取决于预处理器定义宏 _USE_32BIT_TIME_T。 **Timespec_get**函数是内联函数调用 **_timespec32_get**如果定义 _USE_32BIT_TIME_T，; 否则它会调用 **_timespec64_get**。
+这些函数仅支持**TIME_UTC**作为*基*值。 这将设置*time_spec*到数秒和纳秒由于时期开始，午夜，自 1970 年 1 月 1 日协调世界时 (UTC) 的值。 在中**struct** **_timespec32**， **tv_sec**是 **__time32_t**值。 在中**struct** **_timespec64**， **tv_sec**是 **__time64_t**值。 在中**struct** **timespec**， **tv_sec**是**time_t**类型，这是 32 位或 64 位的长度，具体取决于预处理器定义宏 _USE_32BIT_TIME_T。 **Timespec_get**函数是内联函数调用 **_timespec32_get**如果定义 _USE_32BIT_TIME_T; 否则它会调用 **_timespec64_get**。
 
 **结束 Microsoft 专用**
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**timespec_get**， **_timespec32_get**， **_timespec64_get**|C: \<time.h>、C++: \<ctime> 或 \<time.h>|
 

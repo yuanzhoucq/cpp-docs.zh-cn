@@ -1,10 +1,6 @@
 ---
-title: memmove_s、wmemmove_s | Microsoft 文档
-ms.custom: ''
+title: memmove_s、wmemmove_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - wmemmove_s
 - memmove_s
@@ -24,22 +20,16 @@ apitype: DLLExport
 f1_keywords:
 - wmemmove_s
 - memmove_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - wmemmove_s function
 - memmove_s function
 ms.assetid: a17619e4-1307-4bb0-98c6-77f8c68dab2d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 39fde456dd2e45d38bdd1b6ba8d9d7eb9811dd05
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7b60174c3a06e60301a3e9123434220227f4f426
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403890"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50561182"
 ---
 # <a name="memmoves-wmemmoves"></a>memmove_s、wmemmove_s
 
@@ -74,7 +64,7 @@ errno_t wmemmove_s(
 源对象。
 
 *count*<br/>
-字节数 (**memmove_s**) 或字符 (**wmemmove_s**) 来复制。
+字节数 (**memmove_s**) 或多个字符 (**wmemmove_s**) 复制。
 
 ## <a name="return-value"></a>返回值
 
@@ -82,7 +72,7 @@ errno_t wmemmove_s(
 
 ### <a name="error-conditions"></a>错误条件
 
-|*dest*|*numberOfElements*|*src*|返回值|内容*目标*|
+|*dest*|*numberOfElements*|*src*|返回值|内容*dest*|
 |------------|------------------------|-----------|------------------|------------------------|
 |**NULL**|任何|任何|**EINVAL**|未修改|
 |任何|任何|**NULL**|**EINVAL**|未修改|
@@ -90,13 +80,13 @@ errno_t wmemmove_s(
 
 ## <a name="remarks"></a>备注
 
-副本*计数*从的字符的字节*src*到*dest*。 如果某些区域的源区域和目标重叠， **memmove_s**可确保重叠区域中的原始源字节，将覆盖之前会复制。
+副本*计数*中的字符的字节*src*到*dest*。 如果源区域和目标的某些区域重叠时， **memmove_s**确保在重叠区域中的原始源字节被覆盖之前会复制。
 
-如果*dest*或如果*src*是 null 指针，或者如果目标字符串过小，这些函数将调用无效参数处理程序中中, 所述[参数验证](../../c-runtime-library/parameter-validation.md) . 如果允许执行继续，则这些函数将返回**EINVAL**并设置**errno**到**EINVAL**。
+如果*dest*或者如果*src*是 null 指针，或如果目标字符串过小，这些函数将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md) . 如果允许执行继续，这些函数将返回**EINVAL**并设置**errno**到**EINVAL**。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**memmove_s**|\<string.h>|
 |**wmemmove_s**|\<wchar.h>|

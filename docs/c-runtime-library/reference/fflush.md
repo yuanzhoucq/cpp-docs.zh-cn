@@ -1,10 +1,6 @@
 ---
-title: fflush | Microsoft 文档
-ms.custom: ''
+title: fflush
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - fflush
 apilocation:
@@ -22,23 +18,17 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - fflush
-dev_langs:
-- C++
 helpviewer_keywords:
 - streams, flushing
 - flushing
 - fflush function
 ms.assetid: 8bbc753f-dc74-4e77-b563-74da2835e92b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 72f0812e713d0d474363dcc5f79cc11eddb46020
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1d0e1b6f346481935b5b19736a8f9b41fede36e2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401160"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50527226"
 ---
 # <a name="fflush"></a>fflush
 
@@ -59,18 +49,18 @@ int fflush(
 
 ## <a name="return-value"></a>返回值
 
-**fflush**返回 0，如果已成功刷新缓冲区。 在指定流无缓冲区或处于打开状态以仅供读取的情况下，也会返回值 0。 返回值**EOF**指示错误。
+**fflush**如果已成功刷新缓冲区，则返回 0。 在指定流无缓冲区或处于打开状态以仅供读取的情况下，也会返回值 0。 返回值**EOF**指示错误。
 
 > [!NOTE]
-> 如果**fflush**返回**EOF**，数据可能已经由于写入故障而丢失。 设置时严重错误处理程序，它是最安全的做法是，若要关闭缓冲与**setvbuf**函数或使用低级别 I/O 例程如 **_open**， **_close**，和 **_write**而不是流 I/O 函数。
+> 如果**fflush**返回**EOF**，数据可能已经因写入失败而丢失。 设置时的严重错误处理程序，它是最安全来关闭缓冲与**setvbuf**函数或使用低级别 I/O 例程，如 **_open**， **_close**，和 **_write**而不是流 I/O 函数。
 
 ## <a name="remarks"></a>备注
 
-**Fflush**函数刷新流*流*。 如果以写入模式打开流，或者以更新模式打开并且最后一个操作是写入，则流缓冲区的内容会被写入到基础文件，否则设备和缓冲区将被丢弃。 如果在读取模式下，已打开的流或流并不具有缓冲区，对的调用**fflush**不起作用，并保留任何缓冲区。 调用**fflush**求反的任何调用的效果**ungetc**为流。 调用后，该流保持打开状态。
+**Fflush**函数刷新流*流*。 如果以写入模式打开流，或者以更新模式打开并且最后一个操作是写入，则流缓冲区的内容会被写入到基础文件，否则设备和缓冲区将被丢弃。 如果在读取模式下打开流或流并不具有缓冲区，在调用**fflush**无效，且不保留任何缓冲区。 调用**fflush**求反的任何调用之前效果**ungetc**流。 调用后，该流保持打开状态。
 
-如果*流*是**NULL**，行为是调用相同**fflush**有关每个打开的流。 最后一次操作是写入的所有以写入模式打开的流以及所有以更新模式打开的流都将被刷新。 调用对其他流无效。
+如果*流*是**NULL**的行为是调用相同**fflush**上每个打开的流。 最后一次操作是写入的所有以写入模式打开的流以及所有以更新模式打开的流都将被刷新。 调用对其他流无效。
 
-缓冲区通常由操作系统维护，操作系统确定将数据自动写入磁盘的最佳时间：当缓冲区已满时、当流已关闭时或当程序在未关闭流的情况下正常终止时。 利用运行时库的提交到磁盘功能，可以确保将关键数据直接写入磁盘而不是操作系统的缓冲区。 无需重写现有程序，可以通过将程序的对象文件与 COMMODE.OBJ 链接来启用此功能。 在生成的可执行文件中，调用 **_flushall**将所有缓冲区的内容写入到磁盘。 仅 **_flushall**和**fflush**受 COMMODE.OBJ。
+缓冲区通常由操作系统维护，操作系统确定将数据自动写入磁盘的最佳时间：当缓冲区已满时、当流已关闭时或当程序在未关闭流的情况下正常终止时。 利用运行时库的提交到磁盘功能，可以确保将关键数据直接写入磁盘而不是操作系统的缓冲区。 无需重写现有程序，可以通过将程序的对象文件与 COMMODE.OBJ 链接来启用此功能。 在生成的可执行文件中，调用 **_flushall**将所有缓冲区的内容写入到磁盘。 仅 **_flushall**并**fflush**受 COMMODE.OBJ 的影响。
 
 有关控制提交到磁盘功能的信息，请参阅[流 I/O](../../c-runtime-library/stream-i-o.md)、[fopen](fopen-wfopen.md) 和 [_fdopen](fdopen-wfdopen.md)。
 

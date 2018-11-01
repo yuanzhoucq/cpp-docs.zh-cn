@@ -1,26 +1,16 @@
 ---
-title: 值的分类： 左值和右值 （Visual C++） |Microsoft 文档
-ms.custom: ''
+title: 值的类别： Lvalues 和 Rvalues （Visual c + +）
 ms.date: 04/06/2018
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - R-values [C++]
 - L-values [C++]
 ms.assetid: a8843344-cccc-40be-b701-b71f7b5cdcaf
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4f19a06ac0583dd4cb911818787408aeca30b2ec
-ms.sourcegitcommit: 2f84d56b6ab19ba745b32ecd96b193c73cd62adf
+ms.openlocfilehash: 261453d5640c122f23491304b71e53e27c06eb7a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48866210"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50546345"
 ---
 # <a name="lvalues-and-rvalues-visual-c"></a>左值和右值 （Visual C++）
 
@@ -30,7 +20,7 @@ C++ 17 标准定义表达式值的分类，如下所示：
 
 - 一个*glvalue*是的表达式的求值结果确定标识的对象、 位域或函数。
 - 一个*prvalue*是的表达式的求值结果初始化对象或一个位字段，或在它所出现的上下文中的指定计算运算符的操作数的值。
-- *Xvalue*是 glvalue 表示的对象或位域可以重复使用的资源，（通常是因为它即将达到其生命周期结束）。 [示例： 特定类型的表达式涉及右值引用 (8.3.2) 产生 xvalues，如对其返回类型是右值引用的函数的调用或强制转换为右值引用类型。 ]
+- *Xvalue*是 glvalue 表示的对象或位域可以重复使用的资源，（通常是因为它即将达到其生命周期结束）。 [示例： 特定类型的表达式涉及右值引用 (8.3.2) 产生 xvalues，如对其返回类型是右值引用的函数的调用或强制转换为右值引用类型。 ]
 - *左值*是不是 xvalue glvalue。
 - *右值*prvalue 或 xvalue。
 

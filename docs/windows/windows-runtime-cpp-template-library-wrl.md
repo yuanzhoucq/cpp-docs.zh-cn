@@ -1,24 +1,14 @@
 ---
-title: Windows 运行时 c + + 模板库 (WRL) |Microsoft Docs
-ms.custom: ''
+title: Windows 运行时 C++ 模板库 (WRL)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
 ms.topic: reference
-dev_langs:
-- C++
 ms.assetid: b915afce-553b-44a7-b8dc-0ab601758eb0
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 541a9d5064e9bdf9c4ddb9b410ab4dc0277626b0
-ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
+ms.openlocfilehash: 777e8226a12b3e57c136ea54d301ff7c9eb890a5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50204608"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50641930"
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Windows 运行时 C++ 模板库 (WRL)
 
@@ -149,7 +139,7 @@ Windows 运行时 c + + 模板库提供表示了一些基本概念的类型。 �
 
 [WeakRef](../windows/weakref-class.md) 是表示弱引用 的智能指针类型。弱引用可引用能够访问或者不能访问的对象。 一个`WeakRef`可以使用对象，由只有 Windows 运行时，而不是经典 com。
 
-`WeakRef` 对象通常表示由外部线程或应用程序控制其存在性的对象。 例如，`WeakRef` 对象可以引用文件对象。 当文件打开时，`WeakRef` 有效，并且引用的文件可以访问。 当文件关闭时，`WeakRef` 无效，并且文件不可访问。
+`WeakRef` 对象通常表示由外部线程或应用程序控制其存在性的对象。 例如， `WeakRef` 对象可以引用文件对象。 当文件打开时， `WeakRef` 有效，并且引用的文件可以访问。 当文件关闭时， `WeakRef` 无效，并且文件不可访问。
 
 ## <a name="related-topics"></a>相关主题
 

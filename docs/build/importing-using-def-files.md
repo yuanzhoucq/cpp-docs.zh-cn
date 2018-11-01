@@ -1,12 +1,6 @@
 ---
-title: 使用 DEF 文件导入 |Microsoft Docs
-ms.custom: ''
+title: 使用 DEF 文件导入
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - importing DLLs [C++], DEF files
 - def files [C++], importing with
@@ -14,16 +8,12 @@ helpviewer_keywords:
 - dllimport attribute [C++], DEF files
 - DLLs [C++], DEF files
 ms.assetid: aefdbf50-f603-488a-b0d7-ed737bae311d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3e1562e14b20e4e1dd96764414978889d6205179
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: d393ce8b27a0f04527b912db5936534ebd9b2d5c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45710536"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50434368"
 ---
 # <a name="importing-using-def-files"></a>使用 DEF 文件导入
 
@@ -40,7 +30,7 @@ EXPORTS
 
 |关键字|发出中的导入库|导出|
 |-------------|---------------------------------|-------------|
-|`CONSTANT`|`_imp_ulDataInDll`, `_ulDataInDll`|`_ulDataInDll`|
+|`CONSTANT`|`_imp_ulDataInDll`， `_ulDataInDll`|`_ulDataInDll`|
 |`DATA`|`_imp_ulDataInDll`|`_ulDataInDll`|
 
 使用 **__declspec （dllimport)** 同时列出了常量和`imp`版本和.lib DLL 中的未修饰的名称导入创建以允许在显式链接的库。 使用 **__declspec （dllimport)** 和数据列表只是`imp`版本的名称。

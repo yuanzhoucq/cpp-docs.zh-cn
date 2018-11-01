@@ -1,10 +1,6 @@
 ---
-title: islower、iswlower、_islower_l、_iswlower_l | Microsoft 文档
-ms.custom: ''
+title: islower、iswlower、_islower_l、_iswlower_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - iswlower
 - _islower_l
@@ -33,8 +29,6 @@ f1_keywords:
 - _islower _l
 - _islower_l
 - iswlower
-dev_langs:
-- C++
 helpviewer_keywords:
 - _islower _l function
 - _ismbclower_l function
@@ -47,16 +41,12 @@ helpviewer_keywords:
 - iswlower function
 - _islower_l function
 ms.assetid: fcc3b70a-2b47-45fd-944d-e5c1942e6457
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 14fb6eae9e06e973413c21607f2ca2881f33aa38
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 14510d38f5bb4890f98c39b49ca17adc2be3ff41
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401826"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50594124"
 ---
 # <a name="islower-iswlower-islowerl-iswlowerl"></a>islower、iswlower、_islower_l、_iswlower_l
 
@@ -91,11 +81,11 @@ int _iswlower_l(
 
 ## <a name="return-value"></a>返回值
 
-每个这些例程返回非零如果*c*是小写字符的特定表示。 **islower**返回非零值，如果*c*是小写字符 (a-z)。 **iswlower**返回非零值，如果*c*是宽字符对应于一个小写字母，或者如果*c*哪些要么是实现定义的宽字符集之一**iswcntrl**， **iswdigit**， **iswpunct**，或**iswspace**为非零值。 这些例程都返回 0 如果*c*不满足测试条件。
+这些例程返回非零值如果*c*是小写字符的特定表示形式。 **islower**返回非零值，如果*c*是一个小写字符 (a-z)。 **iswlower**返回非零值，如果*c*是宽字符对应于一个小写字母，或者如果*c*是之一实现定义的宽字符，对于该宽**iswcntrl**， **iswdigit**， **iswpunct**，或者**iswspace**为非零值。 每个例程将返回 0，如果*c*不满足测试条件。
 
-这些函数具有的版本 **_l**后缀其区域设置相关行为使用传入的区域设置而不是当前区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+具有这些函数的版本 **_l**后缀为其区域设置相关的行为使用传入的区域设置而不是当前区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
-行为**islower**和 **_islower_l**如果是未定义*c*不是 EOF 或在 0 到 0xFF，非独占的范围。 使用 CRT 调试库时和*c*是不是一种这些值，函数引发的断言。
+行为**islower**并 **_islower_l**未定义当*c*不是 EOF 或在范围 0 到 0xff 内，非独占。 使用调试 CRT 库时， *c*是不包含其中一个值，函数将引发断言。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -106,7 +96,7 @@ int _iswlower_l(
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**islower**|\<ctype.h>|
 |**iswlower**|\<ctype.h 1> 或 \<wchar.h 1>|

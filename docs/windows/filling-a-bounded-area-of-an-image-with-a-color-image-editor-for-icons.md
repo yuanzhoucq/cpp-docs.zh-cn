@@ -1,29 +1,18 @@
 ---
-title: 填充颜色 （图标的图像编辑器） 的图像的封闭的区域 |Microsoft Docs
-ms.custom: ''
+title: 用某种颜色填充图像的封闭区域（图标的图像编辑器）
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - colors [C++], image
 - images [C++], colors
 - Image editor [C++], colors
 - Fill tool
 ms.assetid: e647ef83-421b-4818-855d-249b4c4cb5f2
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: ff816e1cb6706847caceecebeffd13a210b3e94d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 678d3275a41628b5ada28068a760ef60cc258776
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46403823"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50451709"
 ---
 # <a name="filling-a-bounded-area-of-an-image-with-a-color-image-editor-for-icons"></a>用某种颜色填充图像的封闭区域（图标的图像编辑器）
 

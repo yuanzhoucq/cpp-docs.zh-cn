@@ -1,31 +1,21 @@
 ---
-title: '&lt;typeinfo&gt; | Microsoft Docs'
-ms.custom: ''
+title: '&lt;typeinfo&gt;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - typeinfo
-dev_langs:
-- C++
 helpviewer_keywords:
 - typeinfo header
 ms.assetid: 97ebc4d0-0e0e-41c3-9787-fdef2e38e56f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cb353276892dfadbdfcea1c03816d6735481aeef
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cb793bdc4bacec5ad21d1cbbed21f871370cb40e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853422"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50647026"
 ---
 # <a name="lttypeinfogt"></a>&lt;typeinfo&gt;
 
-包括标准标头\<typeinfo > 来定义与类型标识运算符关联的几种类型[typeid 运算符](../cpp/typeid-operator.md)，因而产生有关静态和动态类型的信息。
+包括标准标头\<typeinfo > 来定义多个类型与类型标识运算符关联[typeid 运算符](../cpp/typeid-operator.md)，其结果为静态和动态类型的信息。
 
 ## <a name="syntax"></a>语法
 

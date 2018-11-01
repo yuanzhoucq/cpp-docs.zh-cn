@@ -1,10 +1,6 @@
 ---
-title: _CrtSetAllocHook | Microsoft 文档
-ms.custom: ''
+title: _CrtSetAllocHook
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtSetAllocHook
 apilocation:
@@ -22,22 +18,16 @@ apitype: DLLExport
 f1_keywords:
 - _CrtSetAllocHook
 - CrtSetAllocHook
-dev_langs:
-- C++
 helpviewer_keywords:
 - _CrtSetAllocHook function
 - CrtSetAllocHook function
 ms.assetid: 405df37b-2fd1-42c8-83bc-90887f17f29d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8d86072ceb41b966adfca298152b6209450aace3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cfa466ec4bce6034c15a627ccab4ee4bb0ef8f5b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402060"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50533674"
 ---
 # <a name="crtsetallochook"></a>_CrtSetAllocHook
 
@@ -58,13 +48,13 @@ _CRT_ALLOC_HOOK _CrtSetAllocHook(
 
 ## <a name="return-value"></a>返回值
 
-返回以前定义的分配挂钩函数，或**NULL**如果*allocHook*是**NULL**。
+返回之前定义的分配挂钩函数，或**NULL**如果*allocHook*是**NULL**。
 
 ## <a name="remarks"></a>备注
 
-**_CrtSetAllocHook**允许应用程序挂钩到 C 运行时调试库内存分配进程的其自己的分配函数。 因此，每次调用调试分配函数以分配、重新分配或释放内存块时都会触发对应用程序挂钩函数的调用。 **_CrtSetAllocHook**向应用程序提供了一个简单方法测试应用程序如何处理内存不足情况，可以检查分配模式，并有机会记录分配信息以更高版本分析。 当[_DEBUG](../../c-runtime-library/debug.md)未定义，则调用 **_CrtSetAllocHook**在预处理过程中删除。
+**_CrtSetAllocHook** ，应用程序可以将其自己的分配函数挂钩到 C 运行时调试库内存分配进程。 因此，每次调用调试分配函数以分配、重新分配或释放内存块时都会触发对应用程序挂钩函数的调用。 **_CrtSetAllocHook**应用程序提供了一种简单方法用于测试应用程序如何处理内存不足的情况下，检查分配模式，并使他们有记录分配信息以更高版本的功能分析。 当[_DEBUG](../../c-runtime-library/debug.md)未定义，则调用 **_CrtSetAllocHook**在预处理过程中删除。
 
-**_CrtSetAllocHook**函数安装中指定的新客户端定义的分配函数*allocHook*并返回以前定义的挂钩函数。 以下示例演示了客户端定义的分配挂钩如何构建原型：
+**_CrtSetAllocHook**函数安装中指定的新客户端定义的分配函数*allocHook*并返回之前定义的挂钩函数。 以下示例演示了客户端定义的分配挂钩如何构建原型：
 
 ```C
 int YourAllocHook( int allocType, void *userData, size_t size,
@@ -72,24 +62,24 @@ int YourAllocHook( int allocType, void *userData, size_t size,
                    const unsigned char *filename, int lineNumber);
 ```
 
-**AllocType**参数指定分配操作的类型 (**_HOOK_ALLOC**， **_HOOK_REALLOC**，和 **_HOOK_FREE**)，触发对分配挂钩函数的调用。 当触发的分配类型是 **_HOOK_FREE**， *userData*是指向要被释放的内存块的用户数据部分的指针。 但是，当触发的分配类型是 **_HOOK_ALLOC**或 **_HOOK_REALLOC**， *userData*是**NULL**因为内存块尚未分配尚未。
+**AllocType**参数指定的分配操作的类型 (**_HOOK_ALLOC**， **_HOOK_REALLOC**，以及 **_HOOK_FREE**)，触发对分配的挂钩函数的调用。 当触发分配类型是 **_HOOK_FREE**， *userData*是指向要释放的内存块的用户数据部分。 但是，当触发分配类型是 **_HOOK_ALLOC**或 **_HOOK_REALLOC**， *userData*是**NULL**因为内存块具有尚未分配。
 
-*大小*指定的内存的大小以字节为单位，阻止*blockType*指示的一种内存块， *requestNumber*是对象分配序号的内存块，并且，如果可用， *filename*和**lineNumber**指定的源文件名和行号初始化之前触发分配操作的位置。
+*大小*指定的内存大小以字节为单位，阻止*blockType*指示内存块的类型*requestNumber*是对象分配序号的内存块，并且如果可用，*文件名*并**lineNumber**指定的源文件名和行号初始化之前触发分配操作的位置。
 
-挂钩函数处理完成后，必须返回一个布尔值，该值将告诉主 C 运行时分配进程如何继续。 挂钩函数时想继续作为，如果从未被调用过挂钩函数，则应返回挂钩函数的主要分配过程**TRUE**。 这将导致执行原始触发分配操作。 使用该实现，挂钩函数可以收集和保存分配信息以用于以后分析，而不会干扰调试堆的当前分配操作或状态。
+挂钩函数处理完成后，必须返回一个布尔值，该值将告诉主 C 运行时分配进程如何继续。 当挂钩函数想要主分配进程按继续如果从未被调用过挂钩函数，那么挂钩函数应返回 **，则返回 TRUE**。 这将导致执行原始触发分配操作。 使用该实现，挂钩函数可以收集和保存分配信息以用于以后分析，而不会干扰调试堆的当前分配操作或状态。
 
-挂钩函数时想继续作为，如果已调用触发分配操作仍然失败，则挂钩函数应返回的主要分配过程**FALSE**。 使用这个实现，挂钩函数可以模拟大范围的内存条件和调试堆状态，以测试应用程序如何处理每种情况。
+当挂钩函数想要主分配进程按继续如果调用触发分配操作和失败，那么挂钩函数应返回**FALSE**。 使用这个实现，挂钩函数可以模拟大范围的内存条件和调试堆状态，以测试应用程序如何处理每种情况。
 
 若要清除挂钩函数，请将传递**NULL**到 **_CrtSetAllocHook**。
 
-详细了解如何 **_CrtSetAllocHook**可以与其他内存管理函数或编写你自己的客户端定义挂钩函数，请参阅使用[调试挂钩函数编写](/visualstudio/debugger/debug-hook-function-writing)。
+详细了解如何 **_CrtSetAllocHook**可以用于其他内存管理函数或如何编写您自己的客户端定义挂钩函数，请参阅[编写调试挂钩函数](/visualstudio/debugger/debug-hook-function-writing)。
 
 > [!NOTE]
-> **_CrtSetAllocHook**下不支持 **/clr: pure**。 **/Clr: pure**和 **/clr: safe** Visual Studio 2015 中弃用并删除在 Visual Studio 2017 编译器选项。
+> **_CrtSetAllocHook**下，不支持 **/clr: pure**。 **/Clr: pure**并 **/clr: safe**编译器选项是在 Visual Studio 2015 中弃用并从 Visual Studio 2017 中删除。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_CrtSetAllocHook**|\<crtdbg.h>|
 

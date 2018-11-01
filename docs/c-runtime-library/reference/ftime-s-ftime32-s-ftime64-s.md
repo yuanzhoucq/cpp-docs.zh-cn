@@ -1,10 +1,6 @@
 ---
-title: _ftime_s、_ftime32_s、_ftime64_s | Microsoft 文档
-ms.custom: ''
+title: _ftime_s、_ftime32_s、_ftime64_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ftime_s
 - _ftime64_s
@@ -29,8 +25,6 @@ f1_keywords:
 - _ftime32_s
 - ftime32_s
 - ftime64_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - ftime32_s function
 - ftime_s function
@@ -41,16 +35,12 @@ helpviewer_keywords:
 - _ftime_s function
 - _ftime32_s function
 ms.assetid: d03080d9-a520-45be-aa65-504bdb197e8b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1a23b31fb88b60b05e587bf62ab07ec7e72de869
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 696b461cdb6b8d58bb668b996a99c5d0bb774d6c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402983"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50435472"
 ---
 # <a name="ftimes-ftime32s-ftime64s"></a>_ftime_s、_ftime32_s、_ftime64_s
 
@@ -75,7 +65,7 @@ errno_t _ftime64_s( struct __timeb64 *timeptr );
 
 ## <a name="remarks"></a>备注
 
-**_Ftime_s**函数获取当前本地时间，并将其存储在通过指向的结构*timeptr*。 **_Timeb**， **__timeb32**，和 **__timeb64** SYS\Timeb.h 中定义结构。 它们包含下表中列出的四个字段。
+**_Ftime_s**函数获取当前本地时间，并将其存储在由指向的结构*timeptr*。 **_Timeb**， **__timeb32**，并 **__timeb64**结构在 SYS\Timeb.h 中定义。 它们包含下表中列出的四个字段。
 
 |字段|描述|
 |-|-|
@@ -84,11 +74,11 @@ errno_t _ftime64_s( struct __timeb64 *timeptr );
 |**time**|自 1970 年 1 月 1 日午夜 (00: 00:00) 以来的时间（以秒为单位），格式为协调世界时 (UTC)。|
 |**timezone**|从东向西，UTC 与本地时间之间的差值（以分钟为单位）。 值**时区**设置全局变量的值从 **_timezone** (请参阅 **_tzset**)。|
 
-**_Ftime64_s**函数，使用 **__timeb64**结构，请允许文件创建的日期以向上表示通过 23:59:59，3000 年 12 月 31 日，UTC; 而 **_ftime32_s**仅表示到 23:59:59 2038 年 1 月 18 日，UTC 日期。 1970 年 1 月 1 日午夜是所有这些函数的日期范围下限。
+**_Ftime64_s**函数，使用 **__timeb64**结构，允许文件创建日期最大表示为 23:59:59，3000 年 12 月 31 日，UTC; 而 **_ftime32_s**只能表示截至 23:59:59 2038 年 1 月 18 日，UTC。 1970 年 1 月 1 日午夜是所有这些函数的日期范围下限。
 
-**_Ftime_s**函数等同于 **_ftime64_s**，和 **_timeb**包含 64 位时间，除非 **_USE_32BIT_TIME_T**是定义，在这种情况下这一旧行为已生效;**_ftime_s**使用 32 位时间和 **_timeb**包含 32 位时间。
+**_Ftime_s**函数等同于 **_ftime64_s**，并 **_timeb**包含 64 位时间，除非 **_USE_32BIT_TIME_T**是定义，在这种情况下旧行为是有效;**_ftime_s**使用 32 位时间并且 **_timeb**包含 32 位时间。
 
-**_ftime_s**验证其参数。 如果传递 null 指针作为*timeptr*，函数将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，函数将设置**errno**到**EINVAL**。
+**_ftime_s**验证其参数。 如果传递 null 指针视为*timeptr*，该函数将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许继续执行，该函数将设置**errno**到**EINVAL**。
 
 ## <a name="requirements"></a>要求
 

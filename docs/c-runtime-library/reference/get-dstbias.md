@@ -1,10 +1,6 @@
 ---
-title: _get_dstbias | Microsoft 文档
-ms.custom: ''
+title: _get_dstbias
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _get_dstbias
 - __dstbias
@@ -25,24 +21,18 @@ f1_keywords:
 - __dstbias
 - _get_dstbias
 - get_dstbias
-dev_langs:
-- C++
 helpviewer_keywords:
 - __dstbias
 - daylight saving time offset
 - get_dstbias function
 - _get_dstbias function
 ms.assetid: e751358c-1ecc-411b-ae2c-81b2ec54ea45
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 82e334c6fcb282bebb003992219f6cf215ab7437
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 61807f854dc9c2f7de6f0acd5bbf4668987ce49e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397761"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50579097"
 ---
 # <a name="getdstbias"></a>_get_dstbias
 
@@ -61,19 +51,19 @@ error_t _get_dstbias( int* seconds );
 
 ## <a name="return-value"></a>返回值
 
-如果成功，或者将为零**errno**如果发生错误，则值。
+如果成功，则将为零; **errno**如果发生错误，则值。
 
 ## <a name="remarks"></a>备注
 
-**_Get_dstbias**函数将检索的整数形式的夏令时中的秒数。 如果夏令时有效，则默认偏移量为 3600 秒，这也是一个小时包含的秒数（但是少数地区遵守两小时的偏移量）。
+**_Get_dstbias**函数检索中夏时制整数形式的秒数。 如果夏令时有效，则默认偏移量为 3600 秒，这也是一个小时包含的秒数（但是少数地区遵守两小时的偏移量）。
 
-如果*秒*是**NULL**中, 所述，将调用无效参数处理程序[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，此函数将**errno**到**EINVAL**并返回**EINVAL**。
+如果*秒*是**NULL**，如中所述，将调用无效的参数处理程序[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，此函数可设置**errno**到**EINVAL** ，并返回**EINVAL**。
 
-我们建议你使用此函数而不是宏 **_dstbias**或已弃用的函数 **__dstbias**。
+我们建议你使用此函数而不是宏 **_dstbias**或不推荐使用的函数 **__dstbias**。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_get_dstbias**|\<time.h>|
 

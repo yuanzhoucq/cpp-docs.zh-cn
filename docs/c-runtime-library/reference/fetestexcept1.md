@@ -1,11 +1,6 @@
 ---
-title: fetestexcept |Microsoft 文档
-ms.custom: ''
+title: fetestexcept
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - fetestexcept
 apilocation:
@@ -24,21 +19,15 @@ apitype: DLLExport
 f1_keywords:
 - fetestexcept
 - fenv/fetestexcept
-dev_langs:
-- C++
 helpviewer_keywords:
 - fetestexept function
 ms.assetid: ca4dc43f-5573-440d-bc19-ead7571b13dc
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0450fcaddf8ca05484d0b2bd122ff006eb8355f1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ae170e4c5826e2053b330d81773b75f176303332
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397393"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50667436"
 ---
 # <a name="fetestexcept"></a>fetestexcept
 
@@ -55,7 +44,7 @@ int fetestexcept(
 
 ### <a name="parameters"></a>参数
 
-*excepts*<br/>
+*除*<br/>
 要测试的浮点     状态标志的按位 OR。
 
 ## <a name="return-value"></a>返回值
@@ -64,7 +53,7 @@ int fetestexcept(
 
 ## <a name="remarks"></a>备注
 
-使用 fetestexcept 函数来确定哪些异常由浮点运算引发。 使用*excepts*参数来指定哪些异常状态标志来测试。 **Fetestexcept**函数使用在中定义这些异常宏\<v.h > 中*excepts*和返回值：
+使用 fetestexcept 函数来确定哪些异常由浮点运算引发。 使用*除*参数来指定要测试的异常状态标志。 **Fetestexcept**函数将使用在中定义的这些异常宏\<fenv.h > 中*除*和返回值：
 
 |异常宏|描述|
 |---------------------|-----------------|
@@ -75,7 +64,7 @@ int fetestexcept(
 |FE_UNDERFLOW|早期的浮点运算结果因为过小而无法以完整的精度表示；创建了非常规值。|
 |FE_ALLEXCEPT|所有受支持的浮点异常的按位 OR。|
 
-指定*excepts*参数可能为 0，一个受支持的浮点异常宏，或按位或两个或多个宏。 任何其他的效果*excepts*未定义自变量值。
+指定*除*参数可能为 0，一个受支持的浮点异常宏，或按位 OR 的两个或多个宏。 任何其他影响*除*未定义参数值。
 
 若要使用此函数，必须在调用前先使用 `#pragma fenv_access(on)` 指令关闭可能会阻止访问的浮点优化。 有关详细信息，请参阅 [fenv_access](../../preprocessor/fenv-access.md)。
 

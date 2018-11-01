@@ -1,10 +1,6 @@
 ---
-title: _heapchk | Microsoft 文档
-ms.custom: ''
+title: _heapchk
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _heapchk
 apilocation:
@@ -23,8 +19,6 @@ apitype: DLLExport
 f1_keywords:
 - _heapchk
 - heapchk
-dev_langs:
-- C++
 helpviewer_keywords:
 - debugging [CRT], heap-related problems
 - consistency checking of heaps
@@ -32,16 +26,12 @@ helpviewer_keywords:
 - heaps, checking consistency
 - _heapchk function
 ms.assetid: 859619a5-1e35-4f02-9e09-11d9fa266ec0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b3fc500ee86bde40def0e1e2d3dd3edad3127daf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b34b4ea1bb2512628213cabb55e26e2dad6d445c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399629"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50580617"
 ---
 # <a name="heapchk"></a>_heapchk
 
@@ -65,15 +55,15 @@ int _heapchk( void );
 **_HEAPEMPTY**|尚未初始化堆。
 **_HEAPOK**|堆看起来一致。
 
-此外，如果发生错误， **_heapchk**设置**errno**到**ENOSYS**。
+此外，如果出错，则 **_heapchk**设置**errno**到**ENOSYS**。
 
 ## <a name="remarks"></a>备注
 
-**_Heapchk**函数可帮助调试堆的最小一致性检查的与堆有关的问题。 如果操作系统不支持 **_heapchk**（例如，Windows 98），该函数将返回 **_HEAPOK**和设置**errno**到**ENOSYS**.
+**_Heapchk**函数帮助通过检查堆的最小一致性来调试与堆有关的问题。 如果操作系统不支持 **_heapchk**（例如 Windows 98），该函数返回 **_HEAPOK**并设置**errno**到**ENOSYS**.
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|可选标头|
+|例程所返回的值|必需的标头|可选标头|
 |-------------|---------------------|---------------------|
 |**_heapchk**|\<malloc.h>|\<errno.h>|
 

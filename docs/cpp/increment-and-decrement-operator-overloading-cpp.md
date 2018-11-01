@@ -1,28 +1,18 @@
 ---
-title: 递增和递减运算符重载 （C++） |Microsoft 文档
-ms.custom: ''
+title: 递增和递减运算符重载 (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - increment operators [C++]
 - increment operators [C++], types of
 - decrement operators [C++]
 - decrement operators [C++], types of
 ms.assetid: 5423c6ce-3999-4a77-92f6-ad540add1b1d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1356860fa43cea322078550dd5a7d9de0fd9154c
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4413c2bba600d1118870faca9a15b20398ec4dd4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46037237"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50557259"
 ---
 # <a name="increment-and-decrement-operator-overloading-c"></a>递增和递减运算符重载 (C++)
 

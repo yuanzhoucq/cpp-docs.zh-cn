@@ -1,10 +1,6 @@
 ---
-title: iscntrl、iswcntrl、_iscntrl_l、_iswcntrl_l | Microsoft 文档
-ms.custom: ''
+title: iscntrl、iswcntrl、_iscntrl_l、_iswcntrl_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - iscntrl
 - _iswcntrl_l
@@ -30,8 +26,6 @@ f1_keywords:
 - _iscntrl_l
 - iscntrl
 - _istcntrl
-dev_langs:
-- C++
 helpviewer_keywords:
 - iscntrl function
 - _iscntrl_l function
@@ -41,16 +35,12 @@ helpviewer_keywords:
 - iswcntrl function
 - _istcntrl_l function
 ms.assetid: 616eebf9-aed4-49ba-ba2c-8677c8fe6fb5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c87745a4aa1c2e9d93f2c779e089e0bff6f66fcb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 150073e78426f5029dd46cbc6766fbd6a2a242e1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401524"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50506741"
 ---
 # <a name="iscntrl-iswcntrl-iscntrll-iswcntrll"></a>iscntrl、iswcntrl、_iscntrl_l、_iswcntrl_l
 
@@ -85,11 +75,11 @@ int _iswcntrl_l(
 
 ## <a name="return-value"></a>返回值
 
-每个这些例程返回非零如果*c*是控制字符的特定表示。 **iscntrl**返回非零值，如果*c*是控制字符 (0x00-0x1F 或 0x7F)。 **iswcntrl**返回非零值，如果*c*是一个控件，宽字符。 这些例程都返回 0 如果*c*不满足测试条件。
+这些例程返回非零值如果*c*是控制字符的特定表示形式。 **iscntrl**返回非零值，如果*c*是控制字符 (0x00-0x1F 或 0x7F)。 **iswcntrl**返回非零值，如果*c*是宽字符的控件。 每个例程将返回 0，如果*c*不满足测试条件。
 
-这些函数具有的版本 **_l**后缀使用传入的区域设置参数而不是当前区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+具有这些函数的版本 **_l**后缀使用传入的区域设置参数而不是当前区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
-行为**iscntrl**和 **_iscntrl_l**如果是未定义*c*不是 EOF 或在 0 到 0xFF，非独占的范围。 使用 CRT 调试库时和*c*是不是一种这些值，函数引发的断言。
+行为**iscntrl**并 **_iscntrl_l**未定义当*c*不是 EOF 或在范围 0 到 0xff 内，非独占。 使用调试 CRT 库时， *c*是不包含其中一个值，函数将引发断言。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -100,7 +90,7 @@ int _iswcntrl_l(
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**iscntrl**|\<ctype.h>|
 |**iswcntrl**|\<ctype.h 1> 或 \<wchar.h 1>|

@@ -1,10 +1,6 @@
 ---
-title: _purecall | Microsoft 文档
-ms.custom: ''
+title: _purecall
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _purecall
 apilocation:
@@ -23,22 +19,16 @@ apitype: DLLExport
 f1_keywords:
 - purecall
 - _purecall
-dev_langs:
-- C++
 helpviewer_keywords:
 - _purecall function
 - purecall function
 ms.assetid: 56135d9b-3403-4e22-822d-e714523801cc
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3095f6fee4458af5a12662886fdc6b9d81fe07f5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a7a6db42dc4b8d9b2962a66c7866aae9db55eb3b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403061"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50541178"
 ---
 # <a name="purecall"></a>_purecall
 
@@ -52,9 +42,9 @@ extern "C" int __cdecl _purecall();
 
 ## <a name="remarks"></a>备注
 
-**_Purecall**函数是 Microsoft Visual c + + 编译器的 Microsoft 专用实现详细信息。 此函数不可以直接通过代码调用，也没有任何公用标头声明。 之所以在这里讨论此函数，是因为它是 C 运行时库的公用导出。
+**_Purecall**函数是 Microsoft Visual c + + 编译器的 Microsoft 专用实现细节。 此函数不可以直接通过代码调用，也没有任何公用标头声明。 之所以在这里讨论此函数，是因为它是 C 运行时库的公用导出。
 
-对纯虚拟函数的调用出错，因为它没有实现。 编译器将生成代码来调用 **_purecall**调用纯虚函数时的错误处理程序函数。 默认情况下， **_purecall**终止程序。 前终止， **_purecall**函数时，将调用 **_purecall_handler 中**如果已设置了一个进程正常工作。 可以安装自己的错误处理程序进行纯虚拟函数调用，以捕获这些调用用于调试和报告目的。 若要使用错误处理程序，创建具有的函数 **_purecall_handler 中**签名，然后使用[_set_purecall_handler](get-purecall-handler-set-purecall-handler.md)以使其当前处理程序。
+对纯虚拟函数的调用出错，因为它没有实现。 编译器生成代码以调用 **_purecall**错误处理程序函数调用纯虚函数时。 默认情况下 **_purecall**终止程序。 在终止之前， **_purecall**函数将调用 **_purecall_handler 中**函数如果已设置了一个进程。 可以安装自己的错误处理程序进行纯虚拟函数调用，以捕获这些调用用于调试和报告目的。 若要使用错误处理程序，创建具有的函数 **_purecall_handler 中**签名，然后使用[_set_purecall_handler](get-purecall-handler-set-purecall-handler.md)使它成为当前处理程序。
 
 ## <a name="requirements"></a>要求
 

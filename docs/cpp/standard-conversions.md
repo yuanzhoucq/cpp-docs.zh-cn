@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7d895671efdec4649faf1f0611380d2065770ac
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
-ms.translationtype: MT
+ms.openlocfilehash: dec0456c880fea47219dc11c509bbecac025f5d3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861442"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070568"
 ---
 # <a name="standard-conversions"></a>标准转换
 
@@ -81,11 +81,11 @@ C++ 提升是“值保留”。 即，提升后的值一定与提升前的值相
 
 - 一个操作数**/**， `%`， `/=`， `%=`， **<**， **\< =**，**>**，或 **>=**
 
-     这些运算符依赖于用于确定结果的符号。 因此，当值保留和符号保留提升应用于这些操作数时，它们将生成不同的结果。
+   这些运算符依赖于用于确定结果的符号。 因此，当值保留和符号保留提升应用于这些操作数时，它们将生成不同的结果。
 
 - 左的操作数**>>** 或 **>>=**
 
-     当执行移位运算时，这些运算符会区别对待有符号的数量和无符号的数量。 对于有符号的数量，将数量右移会导致符号位传播到空出的位位置。 对于无符号的数量，空出的位位置将由零填充。
+   当执行移位运算时，这些运算符会区别对待有符号的数量和无符号的数量。 对于有符号的数量，将数量右移会导致符号位传播到空出的位位置。 对于无符号的数量，空出的位位置将由零填充。
 
 - 重载函数的参数，或重载运算符的操作数（取决于该操作数的用于参数匹配的类型的符号）。 (请参阅[重载运算符](../cpp/operator-overloading.md)的更多有关定义重载运算符。)
 
@@ -221,7 +221,7 @@ int main() {
 
 此类转换的结果是指向完全由基类描述的对象部分（即“子对象”）的指针。
 
-以下代码定义了两个类（即 `A` 和 `B`），其中 `B` 派生自 `A`。 (继承的详细信息，请参阅[派生的类](../cpp/inheritance-cpp.md)。)然后定义 `bObject`、类型 `B` 的对象和两个指向该对象的指针（`pA` 和 `pB`）。
+以下代码定义了两个类（即 `A` 和 `B`），其中 `B` 派生自 `A`。 (继承的详细信息，请参阅[派生的类](../cpp/inheritance-cpp.md)。)然后定义 、类型 `bObject` 的对象和两个指向该对象的指针（`B` 和 `pB`）。
 
 ```cpp
 // C2039 expected

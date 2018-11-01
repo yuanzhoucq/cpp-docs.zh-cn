@@ -1,12 +1,6 @@
 ---
-title: 命令传送 |Microsoft Docs
-ms.custom: ''
+title: 命令传送
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC, command routing
 - command handling [MFC], routing commands
@@ -14,16 +8,12 @@ helpviewer_keywords:
 - handlers, command [MFC]
 - command routing
 ms.assetid: 9393a956-bdd4-47c5-9013-dbd680433f93
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 543b9e34c881285c295fb7ab7ee2107e36c99a9c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: add047984f5a32e505e8a739922daa137b5e671d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46418315"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50541695"
 ---
 # <a name="command-routing"></a>命令传送
 
@@ -45,11 +35,11 @@ Windows 消息通常发送到主框架窗口中，但命令消息则传送到其
 
 |当此类型的对象收到命令时。 . .|它给自身和其他命令目标对象一个机会以此顺序处理命令：|
 |----------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
-|MDI 框架窗口 (`CMDIFrameWnd`)|1.活动 `CMDIChildWnd`<br />2.此框架窗口<br />3.应用程序 (`CWinApp`对象)|
-|文档框架窗口（`CFrameWnd`、 `CMDIChildWnd`）|1.活动视图<br />2.此框架窗口<br />3.应用程序 (`CWinApp`对象)|
+|MDI 框架窗口 (`CMDIFrameWnd`)|1.活动 `CMDIChildWnd`<br />2.此框架窗口<br />3.应用程序（`CWinApp` 对象）|
+|文档框架窗口（`CFrameWnd`、 `CMDIChildWnd`）|1.活动视图<br />2.此框架窗口<br />3.应用程序（`CWinApp` 对象）|
 |视图|1.此视图<br />2.附加到视图的文档|
 |Document|1.此文档<br />2.附加到文档的文档模板|
-|对话框|1.此对话框<br />2.拥有对话框的窗口<br />3.应用程序 (`CWinApp`对象)|
+|对话框|1.此对话框<br />2.拥有对话框的窗口<br />3.应用程序（`CWinApp` 对象）|
 
 如果前述表第二列中带编号的项提到其他对象（例如文档），请参见第一列中相应的项。 例如，当你在第二列中看到视图将命令转发到其文档，则参阅第一列中的“文档”项了解进一步的传送。
 

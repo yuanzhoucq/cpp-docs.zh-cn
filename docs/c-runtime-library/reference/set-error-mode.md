@@ -1,10 +1,6 @@
 ---
-title: _set_error_mode | Microsoft 文档
-ms.custom: ''
+title: _set_error_mode
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _set_error_mode
 apilocation:
@@ -23,26 +19,20 @@ apitype: DLLExport
 f1_keywords:
 - set_error_mode
 - _set_error_mode
-dev_langs:
-- C++
 helpviewer_keywords:
 - _set_error_mode function
 - set_error_mode function
 ms.assetid: f0807be5-73d1-4a32-a701-3c9bdd139c5c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 130e9fee13401c8b598a5d6eef7d1fab3ed80ae9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8c95ed45423b791a688f05ea30f48e188826a797
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406490"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50502305"
 ---
 # <a name="seterrormode"></a>_set_error_mode
 
-修改 **__error_mode**以确定 C 运行时编写可能终止程序的错误的错误消息的非默认位置。
+修改 **__error_mode**来确定非默认位置，其中 C 运行时写入错误的可能终止程序的错误消息。
 
 > [!IMPORTANT]
 > 此 API 不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
@@ -66,9 +56,9 @@ int _set_error_mode(
 
 ## <a name="remarks"></a>备注
 
-通过设置的值来控制错误输出接收器 **__error_mode**。 例如，你可以输出定向到标准错误，或使用**MessageBox** API。
+通过设置的值来控制错误输出接收器 **__error_mode**。 例如，可以将输出定向到标准错误或使用**MessageBox** API。
 
-*Mode_val*参数可以设置为下列值之一。
+*Mode_val*参数可以设置为以下值之一。
 
 |参数|描述|
 |---------------|-----------------|
@@ -79,11 +69,11 @@ int _set_error_mode(
 
 如果传入所列出的值之外的值，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则 **_set_error_mode**设置**errno**到**EINVAL**并返回-1。
 
-与一起使用时[断言](assert-macro-assert-wassert.md)， **_set_error_mode**在对话框中显示失败的语句，并可选择的选项**忽略**按钮，以便你可以继续运行程序。
+用于时[断言](assert-macro-assert-wassert.md)， **_set_error_mode**在对话框中显示失败的语句，并可选择的选项**忽略**按钮，以便你可以继续运行程序。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_set_error_mode**|\<stdlib.h>|
 

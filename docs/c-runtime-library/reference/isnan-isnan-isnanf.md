@@ -1,10 +1,6 @@
 ---
-title: isnan、_isnan、_isnanf | Microsoft 文档
-ms.custom: ''
+title: isnan、_isnan、_isnanf
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _isnan
 - _isnanf
@@ -29,8 +25,6 @@ f1_keywords:
 - math/_isnan
 - math/_isnanf
 - _isnanf
-dev_langs:
-- C++
 helpviewer_keywords:
 - NAN (not a number)
 - _isnan function
@@ -38,16 +32,12 @@ helpviewer_keywords:
 - Not a Number (NANs)
 - isnan function
 ms.assetid: 391fbc5b-89a4-4fba-997e-68f1131caf82
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: baf92397087ebbac27c7fea8cf5f524b33736b19
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ce111569b7caee9d0c7b8f35352c395571ad08b1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401147"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50650861"
 ---
 # <a name="isnan-isnan-isnanf"></a>isnan、_isnan、_isnanf
 
@@ -81,21 +71,21 @@ bool isnan(
 
 ## <a name="return-value"></a>返回值
 
-在 C 中， **isnan**宏和 **_isnan**和 **_isnanf**函数返回一个非零值，如果自变量*x*是 NAN; 否则为它们返回 0。
+在 C 中， **isnan**宏和 **_isnan**并 **_isnanf**函数返回一个非零值，如果自变量*x*是 NAN; 否则为它们返回 0。
 
-C + + 中**isnan**模板函数将返回**true**如果自变量*x*是 NAN; 否则它们会返回**false**。
+C + + **isnan**模板函数将返回**true**如果参数*x*是 NAN; 否则它们会返回**false**。
 
 ## <a name="remarks"></a>备注
 
-C **isnan**宏和 **_isnan**和 **_isnanf**函数测试浮点值*x*，返回一个非零值，如果*x*不是一个数字 (NAN) 值。 如果无法为指定类型以 IEEE 754 浮点格式表示浮点运算的结果，则会生成 NAN。 有关如何将 NAN 表示为输出的信息，请参阅 [printf](printf-printf-l-wprintf-wprintf-l.md)。
+C **isnan**宏和 **_isnan**并 **_isnanf**函数测试浮点值*x*，返回一个非零值，如果*x*不是数字 (NAN) 值。 如果无法为指定类型以 IEEE 754 浮点格式表示浮点运算的结果，则会生成 NAN。 有关如何将 NAN 表示为输出的信息，请参阅 [printf](printf-printf-l-wprintf-wprintf-l.md)。
 
-当编译为 c + +， **isnan**未定义宏，和**isnan**改为定义模板函数。 它将返回类型的值**bool**而不是整数。
+在作为 c + +，编译时**isnan**未定义宏，和一个**isnan**改为定义模板函数。 它将返回类型的值**bool**而不是整数。
 
-**_Isnan**和 **_isnanf**函数是 Microsoft 特定。 **_Isnanf**函数仅在针对 x64 编译时可用。
+**_Isnan**并 **_isnanf**是 Microsoft 特定函数的函数。 **_Isnanf**函数才编译 x64 时可用。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头 (C)|必需的标头 (C++)|
+|例程所返回的值|必需的标头 (C)|必需的标头 (C++)|
 |-------------|---------------------------|-------------------------------|
 |**isnan**， **_isnanf**|\<math.h>|\<math.h> 或 \<cmath>|
 |**_isnan**|\<float.h>|\<float.h> 或 \<cfloat>|

@@ -1,31 +1,21 @@
 ---
-title: '-FU (命名强制 #using 文件) |Microsoft Docs'
-ms.custom: ''
+title: '/FU（命名强制 #using 文件）'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.ForcedUsingFiles
 - /FU
 - VC.Project.VCNMakeTool.ForcedUsingAssemblies
-dev_langs:
-- C++
 helpviewer_keywords:
 - -FU compiler option [C++]
 - FU compiler option [C++]
 - /FU compiler option [C++]
 ms.assetid: 698f8603-457f-435a-baff-5ac9243d6ca1
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0e804aa48752d1f100e4c843fae9c0d5c70ae8b6
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ecd9290336cfd6efd183bdd701f1d447b7ddaf2b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46423141"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50492083"
 ---
 # <a name="fu-name-forced-using-file"></a>/FU（命名强制 #using 文件）
 
@@ -44,7 +34,7 @@ ms.locfileid: "46423141"
 
 /FU 开关只采用一个文件名。 若要指定多个文件，请对每个文件使用 /FU。
 
-如果使用的 C + + /cli CLI 并引用要使用元数据[友元程序集](../../dotnet/friend-assemblies-cpp.md)功能，不能使用 **/FU**。 您必须将 `#using` 与 `[as friend]` 特性一起使用，才能在代码中引用元数据。 友元程序集不支持在 Visual c + + 组件扩展 C + + /cli CX。
+如果使用的 C + + /cli CLI 并引用要使用元数据[友元程序集](../../dotnet/friend-assemblies-cpp.md)功能，不能使用 **/FU**。 你必须将 `#using` 与 `[as friend]` 特性一起使用，才能在代码中引用元数据。 友元程序集不支持在 Visual c + + 组件扩展 C + + /cli CX。
 
 有关如何创建程序集或模块的公共语言运行时 (CLR) 的信息，请参阅[/clr （公共语言运行时编译）](../../build/reference/clr-common-language-runtime-compilation.md)。 了解如何构建在 C + + /CX 中，请参阅[构建应用程序和库](../../cppcx/building-apps-and-libraries-c-cx.md)。
 

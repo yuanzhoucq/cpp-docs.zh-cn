@@ -1,10 +1,6 @@
 ---
-title: _mbsnbcpy_s、_mbsnbcpy_s_l | Microsoft 文档
-ms.custom: ''
+title: _mbsnbcpy_s、_mbsnbcpy_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbsnbcpy_s_l
 - _mbsnbcpy_s
@@ -26,8 +22,6 @@ f1_keywords:
 - _mbsnbcpy_s
 - mbsnbcpy_s
 - _mbsnbcpy_s_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _mbsnbcpy_s function
 - tcsncpy_s function
@@ -38,20 +32,16 @@ helpviewer_keywords:
 - _mbsnbcpy_s_l function
 - _tcsncpy_s function
 ms.assetid: dfff64ab-fe6f-49c4-99ba-75014e2b0cd6
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a9475609d304b6a3e49c2f71073c4d06c0380160
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 00f1fe7a6deb104a4f226e42858764f5649c52ae
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404112"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50493491"
 ---
 # <a name="mbsnbcpys-mbsnbcpysl"></a>_mbsnbcpy_s、_mbsnbcpy_s_l
 
-副本**n**将字符串与目标字符串的字节。 这些版本的 [_mbsnbcpy、_mbsnbcpy_l](mbsnbcpy-mbsnbcpy-l.md) 具有安全增强功能，如 [CRT 中的安全增强功能](../../c-runtime-library/security-features-in-the-crt.md)所述。
+副本**n**字节到目标字符串的字符串。 这些版本的 [_mbsnbcpy、_mbsnbcpy_l](mbsnbcpy-mbsnbcpy-l.md) 具有安全增强功能，如 [CRT 中的安全增强功能](../../c-runtime-library/security-features-in-the-crt.md)所述。
 
 > [!IMPORTANT]
 > 此 API 不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
@@ -106,16 +96,16 @@ errno_t _mbsnbcpy_s_l(
 
 ## <a name="return-value"></a>返回值
 
-如果成功，则为零**EINVAL**如果中传递的错误的参数。
+如果成功，则为零**EINVAL**如果传入的错误的参数。
 
 ## <a name="remarks"></a>备注
 
-**_Mbsnbcpy_s**函数副本*计数*个字节从*strSource*到*strDest*。 如果*计数*超过的大小*strDest*，输入字符串为 null 指针，或*sizeInBytes*或*计数*为 0，函数调用无效参数处理程序中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，函数将返回**EINVAL**。 如果源和目标字符串重叠的行为 **_mbsnbcpy_s**是不确定的。
+**_Mbsnbcpy_s**函数副本*计数*个字节从*strSource*到*strDest*。 如果*计数*超过的大小*strDest*，而是输入字符串为 null 指针，或*sizeInBytes*或者*计数*为 0，该函数调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，该函数返回**EINVAL**。 如果源和目标字符串重叠的行为 **_mbsnbcpy_s**是不确定的。
 
 输出值受区域设置的 LC_CTYPE 类别设置影响；有关详细信息，请参阅 [setlocale](setlocale-wsetlocale.md)。 这些不带 **_l** 后缀的函数版本使用此区域设置相关的行为的当前区域设置；带有 **_l** 后缀的版本相同，只不过它们使用传递的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
 > [!NOTE]
-> 与此函数的不安全版本不同 **_mbsnbcpy_s**不执行任何 null 填充，始终为 null 终止的字符串。
+> 与此函数的非安全版本不同 **_mbsnbcpy_s**不执行任何 null 填充并始终以 null 终止字符串。
 
 在 C++ 中，使用这些函数由模板重载简化；重载可以自动推导出缓冲区长度 (不再需要指定大小自变量)，并且它们可以自动用以更新、更安全的对应物替换旧的、不安全的函数。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 
@@ -130,7 +120,7 @@ errno_t _mbsnbcpy_s_l(
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_mbsnbcpy_s**|\<mbstring.h>|
 |**_mbsnbcpy_s_l**|\<mbstring.h>|

@@ -1,14 +1,8 @@
 ---
-title: 用户定义的类型转换 （C++） |Microsoft 文档
-ms.custom: ''
+title: 用户定义的类型转换 (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
 f1_keywords:
 - explicit_cpp
-dev_langs:
-- C++
 helpviewer_keywords:
 - constructors [C++], and constants
 - conversion functions [C++]
@@ -28,16 +22,12 @@ helpviewer_keywords:
 - conversions [C++], by constructors
 - data type conversion [C++], explicit
 ms.assetid: d40e4310-a190-4e95-a34c-22c5c20aa0b9
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5c0ad42083f6ee310295a401b722563579a6a78e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 2af30ad3d1244146f32bf2402ed7eccdc4785c1b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46071167"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50459886"
 ---
 # <a name="user-defined-type-conversions-c"></a>用户定义的类型转换 (C++)
 
@@ -114,7 +104,7 @@ int main(int argc, char* argv[])
 }
 ```
 
-请注意，对函数 `display_balance` 的首次调用（它将采用类型 `Money` 的参数）不需要转换，因为它的参数类型正确。 但是，在第二次调用`display_balance`，因为需要转换参数的类型**双**值为`49.95`，是不什么函数的需要。 函数不能直接使用此值，但因为没有从自变量的类型转换为 —**双**— 为匹配的参数类型 —`Money`— 类型的临时值`Money`从构造参数和用于完成函数调用。 第三个调用中`display_balance`，请注意，该参数不**双**，但却为**float**的值为`9.99`— 和尚未函数调用可以仍完成，因为编译器可以执行的标准转换 — 这种情况下，从**float**到**double**— 然后执行从用户定义的转换**double**到`Money`以完成必要的转换。
+请注意，对函数 `display_balance` 的首次调用（它将采用类型 `Money` 的自变量）不需要转换，因为它的自变量类型正确。 但是，在第二次调用`display_balance`，因为需要转换参数的类型**双**值为`49.95`，是不什么函数的需要。 函数不能直接使用此值，但因为没有从自变量的类型转换为 —**双**— 为匹配的参数类型 —`Money`— 类型的临时值`Money`从构造参数和用于完成函数调用。 第三个调用中`display_balance`，请注意，该参数不**双**，但却为**float**的值为`9.99`— 和尚未函数调用可以仍完成，因为编译器可以执行的标准转换 — 这种情况下，从**float**到**double**— 然后执行从用户定义的转换**double**到`Money`以完成必要的转换。
 
 ### <a name="declaring-conversion-constructors"></a>声明转换构造函数
 

@@ -1,12 +1,6 @@
 ---
-title: 窗口对象 |Microsoft Docs
-ms.custom: ''
+title: 窗口对象
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - objects [MFC], window
 - Windows window [MFC]
@@ -20,16 +14,12 @@ helpviewer_keywords:
 - Visual C++, window objects [MFC]
 - HWND, window objects [MFC]
 ms.assetid: 28b33ce2-af05-4617-9d03-1cb9a02be687
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 429ac52218af2e158df91c6c79f8ec67bcac3f5d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3e20ef1f3643b9e802c7cdc399d3436ceadeae79
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46395578"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50566694"
 ---
 # <a name="window-objects"></a>窗口对象
 
@@ -43,7 +33,7 @@ MFC 提供窗口的某些默认功能和管理，但是，可以从 `CWnd` 派�
 
 ## <a name="functions-for-operating-on-a-cwnd"></a>用于 CWnd 的函数
 
-`CWnd` 并将其[派生的窗口类](../mfc/derived-window-classes.md)提供构造函数、 析构函数和成员函数来初始化对象，创建基础 Windows 结构，并访问封装`HWND`。 `CWnd` 还提供了可封装 Windows API 的成员函数，以用于发送消息、访问窗口的状态、转换坐标、更新、滚动、访问剪贴板以及许多其他任务。 大多数采用 `HWND` 参数的 Windows 窗口管理 API 都封装为 `CWnd` 的成员函数。 函数的名称及其参数保留在 `CWnd` 成员函数中。 有关由封装 Windows Api 的详细信息`CWnd`，请参阅类[CWnd](../mfc/reference/cwnd-class.md)。
+`CWnd` 并将其[派生的窗口类](../mfc/derived-window-classes.md)提供构造函数、 析构函数和成员函数来初始化对象，创建基础 Windows 结构，并访问封装`HWND`。 `CWnd` 还提供了可封装 Windows API 的成员函数，以用于发送消息、访问窗口的状态、转换坐标、更新、滚动、访问剪贴板以及许多其他任务。 大多数采用 `HWND` 自变量的 Windows 窗口管理 API 都封装为 `CWnd` 的成员函数。 函数的名称及其参数保留在 `CWnd` 成员函数中。 有关由封装 Windows Api 的详细信息`CWnd`，请参阅类[CWnd](../mfc/reference/cwnd-class.md)。
 
 ## <a name="cwnd-and-windows-messages"></a>CWnd 和 Windows 消息
 

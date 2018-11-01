@@ -1,10 +1,6 @@
 ---
-title: wctrans | Microsoft 文档
-ms.custom: ''
+title: wctrans
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - wctrans
 apilocation:
@@ -22,24 +18,18 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - wctrans
-dev_langs:
-- C++
 helpviewer_keywords:
 - character codes, wctrans
 - characters, codes
 - characters, converting
 - wctrans function
 ms.assetid: 215404bf-6d60-489c-9ae9-880e6b586162
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 613c3c64885f10029a8b013504d84ffa8f35d664
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3c7aace7a93160d2e9a4c1523d49bcaf6ae4dc20
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32410484"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50656685"
 ---
 # <a name="wctrans"></a>wctrans
 
@@ -60,7 +50,7 @@ wctrans_t wctrans(
 
 ## <a name="return-value"></a>返回值
 
-如果**LC_CTYPE**当前区域设置类别的未定义其名称与属性的字符串匹配的映射*属性*，函数将返回零。 否则，它将返回一个适合用作对 [towctrans](towctrans.md) 的后续调用的第二个参数的非零值。
+如果**LC_CTYPE**的当前区域设置类别未定义其名称与属性字符串的映射*属性*，该函数将返回零。 否则，它将返回一个适合用作对 [towctrans](towctrans.md) 的后续调用的第二个参数的非零值。
 
 ## <a name="remarks"></a>备注
 

@@ -1,10 +1,6 @@
 ---
-title: _gcvt_s | Microsoft 文档
-ms.custom: ''
+title: _gcvt_s
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _gcvt_s
 apilocation:
@@ -23,8 +19,6 @@ apitype: DLLExport
 f1_keywords:
 - _gcvt_s
 - gcvt_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - _gcvt_s function
 - _CVTBUFSIZE
@@ -35,16 +29,12 @@ helpviewer_keywords:
 - strings [C++], converting from floating point
 - CVTBUFSIZE
 ms.assetid: 0a8d8a26-5940-4ae3-835e-0aa6ec1b0744
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0a2bd12a63db064bca0c880484f99a2df9d210f8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 168e0657150d072bbe41cd0ad6e914ca1f53e512
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403763"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50554955"
 ---
 # <a name="gcvts"></a>_gcvt_s
 
@@ -90,16 +80,16 @@ errno_t _gcvt_s(
 |*buffer*|*sizeInBytes*|*value*|*digits*|返回|中的值*缓冲区*|
 |--------------|-------------------|-------------|--------------|------------|-----------------------|
 |**NULL**|任何|任何|任何|**EINVAL**|未修改。|
-|不**NULL** （指向有效的内存）|零|任何|任何|**EINVAL**|未修改。|
-|不**NULL** （指向有效的内存）|任何|任何|>= *sizeInBytes*|**EINVAL**|未修改。|
+|不**NULL** （指向有效内存）|零|任何|任何|**EINVAL**|未修改。|
+|不**NULL** （指向有效内存）|任何|任何|>= *sizeInBytes*|**EINVAL**|未修改。|
 
 **安全问题**
 
-**_gcvt_s**可以生成访问冲突，如果*缓冲区*不指向有效内存并且不是**NULL**。
+**_gcvt_s**如果可以生成访问冲突*缓冲区*不指向有效内存且不**NULL**。
 
 ## <a name="remarks"></a>备注
 
-**_Gcvt_s**函数将转换浮点*值*为字符字符串 （其中包括小数点和可能的登录字节），并将存储中的字符串*缓冲区*. *缓冲区*应足够大，以适应转换后的值加上会自动追加终止 null 字符。 缓冲区的长度 **_CVTBUFSIZE**足以满足任何浮点值。 如果缓冲区大小为*数字*+ 则使用 1，该函数将不会覆盖末尾的缓冲区，因此请确保提供足够的缓冲区对于此操作。 **_gcvt_s**尝试生成*数字*以十进制格式的数字。 如果无法实现，它会生成*数字*指数格式的数字。 在转换过程中，可以取消零结尾。
+**_Gcvt_s**函数将转换浮点*值*转换为字符串 （其中包括小数点和可能的登录字节），并将存储中的字符串*缓冲区*. *缓冲区*应足够大以容纳转换后的值加上会自动追加终止 null 字符。 缓冲区长度 **_CVTBUFSIZE**足以满足任何浮点值。 如果缓冲区大小为*位数*+ 1，则该函数将不会覆盖结束时的缓冲区，因此请确保提供足够的缓冲区用于此操作。 **_gcvt_s**尝试生成*数字*以十进制格式的数字。 如果不能则会生成*位数*指数格式的数字。 在转换过程中，可以取消零结尾。
 
 在 C++ 中，通过模板重载简化此函数的使用；重载可以自动推导出缓冲区长度，不再需要指定大小参数。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 
@@ -107,7 +97,7 @@ errno_t _gcvt_s(
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|可选标头|
+|例程所返回的值|必需的标头|可选标头|
 |-------------|---------------------|---------------------|
 |**_gcvt_s**|\<stdlib.h>|\<error.h>|
 

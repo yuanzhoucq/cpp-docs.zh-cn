@@ -1,10 +1,6 @@
 ---
-title: _lsearch_s |Microsoft 文档
-ms.custom: ''
+title: _lsearch_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _lsearch_s
 apilocation:
@@ -23,8 +19,6 @@ apitype: DLLExport
 f1_keywords:
 - _lsearch_s
 - lsearch_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - linear searching
 - values, searching for
@@ -34,16 +28,12 @@ helpviewer_keywords:
 - _lsearch_s function
 - lsearch_s function
 ms.assetid: d2db0635-be7a-4799-8660-255f14450882
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 12315350b62673abb0a838f9d30830354c58da73
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f57a96622419e3f72fc2df5b260cbbbdd59666ae
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404193"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50677001"
 ---
 # <a name="lsearchs"></a>_lsearch_s
 
@@ -70,7 +60,7 @@ void *_lsearch_s(
 *base*<br/>
 指向要搜索的数组基的指针。
 
-*数*<br/>
+*数量*<br/>
 元素数量。
 
 *size*<br/>
@@ -84,13 +74,13 @@ void *_lsearch_s(
 
 ## <a name="return-value"></a>返回值
 
-如果*密钥*找到，则 **_lsearch_s**将指针返回到在数组的元素*基*匹配*密钥*。 如果*密钥*未找到， **_lsearch_s**将指针返回到数组末尾处新增的项。
+如果*键*找到，则 **_lsearch_s**处的数组的元素返回指向*基*匹配*密钥*。 如果*键*未找到，则 **_lsearch_s**返回指向数组末尾处的新添加项的指针。
 
-如果传递到此函数的参数无效，则将调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，然后**errno**设置为**EINVAL**和该函数将返回**NULL**。 有关详细信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
+如果传递到此函数的参数无效，则将调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，然后**errno**设置为**EINVAL**并且该函数返回**NULL**。 有关详细信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ### <a name="error-conditions"></a>错误条件
 
-|*key*|*base*|*compare*|*数*|*size*|**errno**|
+|*key*|*base*|*compare*|*数量*|*size*|**errno**|
 |-----------|------------|---------------|-----------|------------|-------------|
 |**NULL**|任何|任何|任何|任何|**EINVAL**|
 |任何|**NULL**|任何|!= 0|任何|**EINVAL**|
@@ -99,15 +89,15 @@ void *_lsearch_s(
 
 ## <a name="remarks"></a>备注
 
-**_Lsearch_s**函数执行值的线性搜索*密钥*数组中的*数*元素，每个*宽度*字节。 与不同**bsearch_s**， **_lsearch_s**不需要要进行排序的数组。 如果*密钥*找不到，然后 **_lsearch_s**将其添加到的数组和增量的末尾*数*。
+**_Lsearch_s**函数执行值的线性搜索*密钥*数组中的*数*，每个元素*宽度*字节。 与不同**bsearch_s**， **_lsearch_s**不需要要进行排序的数组。 如果*键*找不到，然后 **_lsearch_s**将其添加到末尾数组并增加*数*。
 
-*比较*函数是指向用户提供比较两个数组元素并返回一个值，指定其关系的例程的指针。 *比较*函数还采用指向作为第一个参数的上下文的指针。 **_lsearch_s**调用*比较*搜索，将指针传递给两个数组元素，在每次调用的一个或多个期间。 *比较*必须比较元素，然后返回任一非零 （这意味着元素不同） 或 0 （这意味着元素相同的）。
+*比较*函数是指向用户提供的例程，它比较两个数组元素并返回一个值，指定其关系。 *比较*函数还将上下文作为第一个参数指向的指针。 **_lsearch_s**调用*比较*搜索，将指针传递给两个数组元素，在每次调用过程的一个或多个时间。 *比较*必须比较这些元素，然后返回非零值 （表示元素不同） 或 0 （表示元素相同）。
 
-*上下文*指针会很有用的搜索的数据结构是对象的一部分和*比较*函数需要访问对象的成员。 例如，代码中*比较*函数可以将 void 指针转换该对象的合适的对象类型和访问成员。 添加*上下文*指针移至 **_lsearch_s**更为安全，因为其他上下文可用于避免重新进入 bug 与使用静态变量以使数据可供关联*比较*函数。
+*上下文*指针可能有用，如果搜索的数据结构是对象的一部分并*比较*函数需要访问对象的成员。 例如，代码中*比较*函数可将 void 指针转换该对象的适当的对象类型并访问成员。 添加了*上下文*指针移至 **_lsearch_s**更加安全，因为其他上下文可用于避免重新进入 bug 与使用静态变量以使数据可供关联*比较*函数。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_lsearch_s**|\<search.h>|
 

@@ -1,10 +1,6 @@
 ---
-title: tanh、 tanhf、 tanhl |Microsoft 文档
-ms.custom: ''
+title: tanh、 tanhf、 tanhl
 ms.date: 04/10/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - tanh
 - tanhf
@@ -27,8 +23,6 @@ f1_keywords:
 - tanhf
 - tanhl
 - _tanhl
-dev_langs:
-- C++
 helpviewer_keywords:
 - tanhl function
 - _tanhl function
@@ -36,20 +30,16 @@ helpviewer_keywords:
 - tanhf function
 - trigonometric functions
 - hyperbolic functions
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 438c587099edafedbb2cc3feb4b3a285aa155a0d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3b9c7269d3c945301106098fc944383bbc364e5a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32408515"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50432379"
 ---
 # <a name="tanh-tanhf-tanhl"></a>tanh、 tanhf、 tanhl
 
-计算的双曲正切值。
+计算双曲正切值。
 
 ## <a name="syntax"></a>语法
 
@@ -79,11 +69,11 @@ long double tanh( long double x );  // C++ only
 
 ## <a name="remarks"></a>备注
 
-由于 c + + 允许重载，你可以调用的重载**tanh**采用并返回**float**或**长** **double**值。 在 C 程序中， **tanh**始终采用并返回**double**。
+由于 c + + 允许重载，可以调用的重载**tanh**采用并返回**float**或**长** **double**值。 在 C 程序中， **tanh**始终采用并返回**double**。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头 (C)|必需的标头 (C)|
+|例程所返回的值|必需的标头 (C)|必需的标头 (C)|
 |-------------|---------------------|-|
 |**tanh**， **tanhf**， **tanhl**|\<math.h>|\<cmath> 或 \<math.h>|
 

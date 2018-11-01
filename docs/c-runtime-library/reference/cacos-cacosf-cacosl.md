@@ -1,11 +1,6 @@
 ---
-title: cacos、cacosf、cacosl | Microsoft 文档
-ms.custom: ''
+title: cacos、cacosf、cacosl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - cacos
 - cacosf
@@ -30,27 +25,21 @@ f1_keywords:
 - complex/cacos
 - complex/cacosf
 - complex/cacosl
-dev_langs:
-- C++
 helpviewer_keywords:
 - cacos function
 - cacosf function
 - cacosl function
 ms.assetid: 78118c00-0a07-49c1-8a13-4bf19ce3aea8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a6734080e8aff91d9276ef59203e2a3911ee9e7f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 18757ecd30f399ca3d1fdb77e8bff8213a265e74
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394452"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50543190"
 ---
 # <a name="cacos-cacosf-cacosl"></a>cacos、cacosf、cacosl
 
-检索复数，与实际轴间隔 [-1，+ 1] 外的分支刮痕反余弦的值。
+检索复数的分支切割超出间隔 [-1，+ 1] 沿实轴的反余弦值。
 
 ## <a name="syntax"></a>语法
 
@@ -76,11 +65,11 @@ _Lcomplex cacos( _Lcomplex z );  // C++ only
 
 ## <a name="remarks"></a>备注
 
-由于 c + + 允许重载，你可以调用的重载**cacos**采用并返回 **_Fcomplex**和 **_Lcomplex**值。 在 C 程序中， **cacos**始终采用并返回 **_Dcomplex**值。
+由于 c + + 允许重载，可以调用的重载**cacos**采用并返回 **_Fcomplex**并 **_Lcomplex**值。 在 C 程序中， **cacos**始终采用并返回 **_Dcomplex**值。
 
 ## <a name="requirements"></a>要求
 
-|例程|C 标头|C++ 标头|
+|例程所返回的值|C 标头|C++ 标头|
 |-------------|--------------|------------------|
 |**cacos**， **cacosf**， **cacosl**|\<complex.h>|\<ccomplex>|
 

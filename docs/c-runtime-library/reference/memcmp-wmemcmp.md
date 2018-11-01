@@ -1,10 +1,6 @@
 ---
-title: memcmp、wmemcmp | Microsoft 文档
-ms.custom: ''
+title: memcmp、wmemcmp
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - memcmp
 - wmemcmp
@@ -24,22 +20,16 @@ apitype: DLLExport
 f1_keywords:
 - memcmp
 - wmemcmp
-dev_langs:
-- C++
 helpviewer_keywords:
 - wmemcmp function
 - memcmp function
 ms.assetid: 0c21c3e3-8ee4-40e5-add1-eb26d225fd8d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1e40264c3ee7e48a545c88d7d48891126117ecc8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9504635a2a96c4579afc7a8d9caf1844504c05b8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404384"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50610451"
 ---
 # <a name="memcmp-wmemcmp"></a>memcmp、wmemcmp
 
@@ -69,7 +59,7 @@ int wmemcmp(
 第二个缓冲区。
 
 *count*<br/>
-要比较的字符数。 (将进行比较的字节数**memcmp**，宽字符为**wmemcmp**)。
+要比较的字符数。 (比较的字节数**memcmp**的宽字符**wmemcmp**)。
 
 ## <a name="return-value"></a>返回值
 
@@ -83,11 +73,11 @@ int wmemcmp(
 
 ## <a name="remarks"></a>备注
 
-将进行比较的第一个*计数*字符*buffer1*和*buffer2*并返回一个值，指示二者关系。 非零返回值的符号是缓冲区中的第一个不同值对之差的符号。 值解释为**无符号** **char**为**memcmp**，并将它作为**wchar_t**为**wmemcmp**。
+比较第一个*计数*个字符*buffer1*并*buffer2* ，并返回一个值，指示二者关系。 非零返回值的符号是缓冲区中的第一个不同值对之差的符号。 值解释为**无符号** **char**有关**memcmp**，以及**wchar_t**为**wmemcmp**。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**memcmp**|\<memory.h> 或 \<string.h>|
 |**wmemcmp**|\<wchar.h>|

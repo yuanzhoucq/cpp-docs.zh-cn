@@ -1,10 +1,6 @@
 ---
-title: _eof | Microsoft 文档
-ms.custom: ''
+title: _eof
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _eof
 apilocation:
@@ -22,8 +18,6 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _eof
-dev_langs:
-- C++
 helpviewer_keywords:
 - eof function
 - end of file, testing for
@@ -32,16 +26,12 @@ helpviewer_keywords:
 - testing, for end-of-file
 - end of file
 ms.assetid: 265703f4-d07e-4005-abf3-b1d0cdd9e0b0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: da7ccad98491762d30db2741f8c3d9fe0d784dc6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1da849c3721d4d83ff0b3166bc18f95728ebf124
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395119"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50522390"
 ---
 # <a name="eof"></a>_eof
 
@@ -62,11 +52,11 @@ int _eof(
 
 ## <a name="return-value"></a>返回值
 
-**_eof**如果当前位置为文件尾，则为 0，如果它不返回 1。 返回值-1 指示错误;在这种情况下，无效参数处理程序调用时中, 所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则**errno**设置为**EBADF**，指示无效文件描述符。
+**_eof**如果当前位置是文件尾，则为 0，如果不是，则返回 1。 返回值-1 指示错误;在这种情况下，无效参数处理程序调用时，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则**errno**设置为**EBADF**，指示无效文件说明符。
 
 ## <a name="remarks"></a>备注
 
-**_Eof**函数将确定是否与关联文件的末尾*fd*已达到。
+**_Eof**函数将确定是否与相关联的文件的末尾*fd*达到了。
 
 ## <a name="requirements"></a>要求
 

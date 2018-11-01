@@ -1,26 +1,15 @@
 ---
-title: 菜单命令属性 （c + +） |Microsoft Docs
-ms.custom: ''
+title: 菜单命令属性 （c + +）
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - menu items, properties
 ms.assetid: 6d308205-3c9e-42f2-ab42-45e656940e45
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: c846cecb415365db92e3097bbf04ab06cd4209d0
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: ddb33293d654944aa9390b9955388d6e3b01cddb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48860441"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50468973"
 ---
 # <a name="menu-command-properties-c"></a>菜单命令属性 （c + +）
 
@@ -28,7 +17,7 @@ ms.locfileid: "48860441"
 
 |属性|描述|
 |--------------|-----------------|
-|**中断**|可以是下列值之一：<br /><br />- **无**（默认值）： 不中断。<br />- **列**： 对于静态菜单，此值将菜单命令置于新行。 对于弹出菜单，此值将菜单命令放置在新列，列之间无分隔线。 设置此属性仅会影响运行时的菜单的外观，不会影响菜单编辑器中的外观。<br />- **栏**： 与相同**列**除外，对于弹出菜单，此值的新列与旧列分隔有一条垂直线。 设置此属性不是在将影响仅在运行时，菜单的外观**菜单**编辑器。|
+|**中断**|可以是下列值之一：<br /><br />- **无** （默认值）：不中断。<br />- **列**：对于静态菜单，此值将菜单命令置于新行。 对于弹出菜单，此值将菜单命令放置在新列，列之间无分隔线。 设置此属性仅会影响运行时的菜单的外观，不会影响菜单编辑器中的外观。<br />- **栏**： 与相同**列**除外，对于弹出菜单，此值的新列与旧列分隔有一条垂直线。 设置此属性不是在将影响仅在运行时，菜单的外观**菜单**编辑器。|
 |**标题**|标记菜单命令（菜单名）的文本。 若要使一个菜单命令的标题中的字母之一成为助记键，请在它前面加上 & 号 (&)。|
 |**已选中**|如果 **，则返回 True**，则最初检查菜单命令。 类型： **Bool**。 默认值： **False**。|
 |**启用**|如果为 **False**，则菜单项被禁用。|

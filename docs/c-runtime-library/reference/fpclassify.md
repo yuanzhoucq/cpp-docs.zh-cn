@@ -1,8 +1,6 @@
 ---
-title: fpclassify | Microsoft 文档
-ms.custom: ''
+title: fpclassify
 ms.date: 04/05/2018
-ms.topic: reference
 apiname:
 - fpclassify
 apilocation:
@@ -24,16 +22,12 @@ helpviewer_keywords:
 - fpclassify macro
 - fpclassify function
 ms.assetid: bf549499-7ff9-4a58-8692-f2d1cb6bab81
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: da55cb87804d178d5a305ed466aa498de4bc1ee5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 626e356cf61415e4f8212a8a12d90a72fe4576bf
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398427"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50613871"
 ---
 # <a name="fpclassify"></a>fpclassify
 
@@ -67,9 +61,9 @@ int fpclassify(
 
 ## <a name="return-value"></a>返回值
 
-**fpclassify**返回一个整数值，该值指示参数的浮点类*x*。 下表显示可能的值返回**fpclassify**在中定义\<h.h >。
+**fpclassify**返回一个整数值，该值指示参数的浮点类*x*。 此表显示了可能的值返回**fpclassify**中定义\<math.h >。
 
-|值|描述|
+|“值”|描述|
 |-----------|-----------------|
 |**FP_NAN**|静态、信令或不确定的 NaN|
 |**FP_INFINITE**|正或负无穷大|
@@ -79,7 +73,7 @@ int fpclassify(
 
 ## <a name="remarks"></a>备注
 
-在 C 中， **fpclassify**是宏; c + + 中**fpclassify**是重载使用的自变量类型的函数**float**， **double**，或**长** **double**。 在任一情况下，返回的值取决于参数表达式的有效类型，而不是任何中间表示形式。 例如，常规**double**或**长** **double**值可以成为无穷大、 不正常，或零值时转换为**float**。
+在 C 中， **fpclassify**是一个宏; 在 c + + **fpclassify**取决于重载使用的参数类型**float**， **double**，或**长** **double**。 在任一情况下，返回的值取决于参数表达式的有效类型，而不是任何中间表示形式。 例如，一个普通**双**或**长** **double**值可以成为无穷大、 非常规，或零值转换为时**float**。
 
 ## <a name="requirements"></a>要求
 
@@ -87,7 +81,7 @@ int fpclassify(
 |---------------------|---------------------------|-------------------------------|
 |**fpclassify**|\<math.h>|\<math.h> 或 \<cmath>|
 
-**Fpclassify**宏和**fpclassify**函数遵循 ISO C99 和 C + + 11 规范。 有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+**Fpclassify**宏和**fpclassify**函数符合 ISO C99 和 C + + 11 规范。 有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="see-also"></a>请参阅
 

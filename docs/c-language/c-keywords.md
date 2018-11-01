@@ -1,7 +1,7 @@
 ---
 title: C 关键字 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/09/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80c1f0d4ac5d843732771281202612e31a4073c2
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: d9a5255609c3abb4846ce08a2163407eee6f240c
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48860883"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161900"
 ---
 # <a name="c-keywords"></a>C 关键字
 
@@ -48,17 +48,19 @@ ANSI C 标准允许为了编译器实现保留带有两个前导下划线的标�
 
 |||||
 |-|-|-|-|
-|**__asm**|**dllimport**<sup>2</sup>|**__int8**|**naked**<sup>2</sup>|
-|**__based**<sup>1</sup>|**__except**|**__int16**|**__stdcall**|
-|**__cdecl**|**__fastcall**|**__int32**|**thread**<sup>2</sup>|
-|**__declspec**|**__finally**|**__int64**|**__try**|
-|**dllexport**<sup>2</sup>|**__inline**|**__leave**||
+|**__asm**<sup>3</sup>|**dllimport**<sup>2</sup>|**__int8**<sup>3</sup>|**naked**<sup>2</sup>|
+|**__based**<sup>1, 3</sup>|**__except**<sup>3</sup>|**__int16**<sup>3</sup>|**__stdcall**<sup>3</sup>|
+|**__cdecl**<sup>3</sup>|**__fastcall**|**__int32**<sup>3</sup>|**thread**<sup>2</sup>|
+|**__declspec**<sup>3</sup>|**__finally**<sup>3</sup>|**__int64**<sup>3</sup>|**__try**<sup>3</sup>|
+|**dllexport**<sup>2</sup>|**__inline**<sup>3</sup>|**__leave**<sup>3</sup>||
 
 <sup>1</sup> **__based** 关键字对于 32 位和 64 位目标编译的使用会受到限制。
 
 <sup>2</sup> 这些关键字在与 **__declspec** 一起使用时是特殊标识符；它们在其他上下文中的使用不受限制。
 
-默认情况下将启用 Microsoft 扩展。 若要确保您的程序是完全可移植的，可通过在编译期间指定 /Za 选项（针对 ANSI 兼容性编译）来禁用 Microsoft 扩展。 如果这样做，将禁用 Microsoft 专用关键字。
+<sup>3</sup> 为了与早期版本兼容，这些关键字在启用 Microsoft 扩展时可同时适用于两个前导下划线和单个前导下划线。
+
+默认情况下将启用 Microsoft 扩展。 若要确保你的程序是完全可移植的，可通过在编译期间指定 [/Za \(禁用语言扩展）](../build/reference/za-ze-disable-language-extensions.md)选项来禁用 Microsoft 扩展。 如果这样做，将禁用某些 Microsoft 专用关键字。
 
 启用 Microsoft 扩展时，您可在程序中使用上面列出的关键字。 为了兼容 ANSI，这其中大部分关键字以一个双下划线开头。 **dllexport**、**dllimport**、**naked** 和 **thread** 这 4 个关键字除外，它们仅与 **__declspec** 一起使用，因此无需前导双下划线。 为了向后兼容，支持其余的关键字的单下划线版本。
 

@@ -1,29 +1,19 @@
 ---
-title: 一旦 |Microsoft Docs
-ms.custom: ''
+title: once
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - vc-pragma.once
 - once_CPP
-dev_langs:
-- C++
 helpviewer_keywords:
 - once pragma
 - pragmas, once
 ms.assetid: c7517556-6403-4b16-8898-f2aa0a6f685f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 14b66b2305e90c0e36ed17d3c325f145ff850704
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 3adb7ab30b445ab3223246d247be006d24475afa
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50056017"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50534597"
 ---
 # <a name="once"></a>once
 指定该文件在编译源代码文件时仅由编译器包含（打开）一次。

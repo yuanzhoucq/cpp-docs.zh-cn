@@ -1,10 +1,6 @@
 ---
-title: strncpy_s、_strncpy_s_l、wcsncpy_s、_wcsncpy_s_l、_mbsncpy_s、_mbsncpy_s_l | Microsoft 文档
-ms.custom: ''
+title: strncpy_s、_strncpy_s_l、wcsncpy_s、_wcsncpy_s_l、_mbsncpy_s、_mbsncpy_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbsncpy_s_l
 - wcsncpy_s
@@ -33,8 +29,6 @@ f1_keywords:
 - _strncpy_s_l
 - wcsncpy_s
 - _tcsncpy_s_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _wcsncpy_s_l function
 - _mbsnbcpy_s function
@@ -51,23 +45,19 @@ helpviewer_keywords:
 - _tcsncpy_s function
 - wcsncpy_s_l function
 ms.assetid: a971c800-94d1-4d88-92f3-a2fe236a4546
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: add1f3ec75a3746d30e256ef32034b3d604f223a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8a6fc997ed874ba976e96f87df377e6fafd84a6b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418206"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50430064"
 ---
 # <a name="strncpys-strncpysl-wcsncpys-wcsncpysl-mbsncpys-mbsncpysl"></a>strncpy_s、_strncpy_s_l、wcsncpy_s、_wcsncpy_s_l、_mbsncpy_s、_mbsncpy_s_l
 
 将一个字符串的字符复制到另一个字符串。  这些版本的 [strncpy、_strncpy_l、wcsncpy、_wcsncpy_l、_mbsncpy、_mbsncpy_l](strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md) 具有安全性增强功能，如 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述。
 
 > [!IMPORTANT]
-> **_mbsncpy_s**和 **_mbsncpy_s_l**不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
+> **_mbsncpy_s**并 **_mbsncpy_s_l**不能在 Windows 运行时中执行的应用程序中使用。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
 
 ## <a name="syntax"></a>语法
 
@@ -171,7 +161,7 @@ errno_t _mbsncpy_s_l(
 
 ## <a name="return-value"></a>返回值
 
-如果成功，则为零**STRUNCATE**如果发生截断，否则错误代码。
+如果成功，则为零**STRUNCATE**如果发生截断，否则为错误代码。
 
 ### <a name="error-conditions"></a>错误条件
 
@@ -184,9 +174,9 @@ errno_t _mbsncpy_s_l(
 
 ## <a name="remarks"></a>备注
 
-这些函数尝试将复制第一个*D*字符*strSource*到*strDest*，其中*D*较小的*计数*和长度*strSource*。 如果这些*D*字符适合*strDest* (其大小指定为*numberOfElements*) 和仍为留出空间 null 终止符，则这些字符所复制并且追加终止 null;否则为*strDest*[0] 设置 null 字符，并使用无效参数处理程序将调用，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。
+这些函数尝试将第一个复制*D*个字符*strSource*到*strDest*，其中*D*是较小的*计数*和长度*strSource*。 如果这些*D*个字符将适合*strDest* (其大小给定为*numberOfElements*) 并且仍有空间为 null 终止符，则复制这些字符并追加终止 null;否则为*strDest*[0] 设置为 null 字符，并使用无效参数处理程序调用，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。
 
-在上段描述的内容中有一个例外。 如果*计数*是 **_TRUNCATE**，然后尽可能多的*strSource*作为可容纳*strDest*复制同时保留的空间终止始终追加的 null。
+在上段描述的内容中有一个例外。 如果*计数*是 **_TRUNCATE**，然后将大部分*strSource*一样可放入*strDest*仍保留空间时复制终止 null 追加。
 
 例如，应用于对象的
 
@@ -195,22 +185,22 @@ char dst[5];
 strncpy_s(dst, 5, "a long string", 5);
 ```
 
-我们会要求意味着**strncpy_s**复制五个字符到缓冲区五个字节长; 因此，这将使为 null 终止符，没有空间**strncpy_s**将归零，字符串并调用无效参数处理程序。
+意味着我们要求**strncpy_s**将五个字符到缓冲区中五个字节长; 这会不留有空间为 null 终止符，因此**strncpy_s**将字符串置零，并调用无效参数处理程序。
 
-如果需要截断行为，使用 **_TRUNCATE**或 (*大小*-1):
+如果需要截断行为，则使用 **_TRUNCATE**或 (*大小*-1):
 
 ```C
 strncpy_s(dst, 5, "a long string", _TRUNCATE);
 strncpy_s(dst, 5, "a long string", 4);
 ```
 
-请注意，与不同**strncpy**，如果*计数*大于的长度*strSource*，用最长度的null字符不填充目标字符串*计数*。
+请注意，与不同**strncpy**，则*计数*大于的长度*strSource*，目标字符串不填充用 null 字符长度*计数*。
 
-行为**strncpy_s**是不确定的如果源和目标字符串重叠。
+行为**strncpy_s**如果源和目标字符串重叠，则是未定义。
 
-如果*strDest*或*strSource*是**NULL**，或*numberOfElements*为 0，则调用无效参数处理程序。 如果允许执行继续，函数将返回**EINVAL**和设置**errno**到**EINVAL**。
+如果*strDest*或*strSource*是**NULL**，或者*numberOfElements*为 0，则调用无效参数处理程序。 如果允许执行继续，该函数返回**EINVAL** ，并设置**errno**到**EINVAL**。
 
-**wcsncpy_s**和 **_mbsncpy_s**宽字符及多字节字符版本的**strncpy_s**。 参数和返回值的**wcsncpy_s**和**mbsncpy_s**执行相应变化。 否则这六个函数具有相同行为。
+**wcsncpy_s**并 **_mbsncpy_s**宽字符及多字节字符版本的**strncpy_s**。 参数和返回值**wcsncpy_s**并**mbsncpy_s**相应变化。 否则这六个函数具有相同行为。
 
 输出值受区域设置的 LC_CTYPE 类别设置影响；有关详细信息，请参阅 [setlocale](setlocale-wsetlocale.md)。 这些不带 **_l** 后缀的函数版本使用此区域设置相关的行为的当前区域设置；带有 **_l** 后缀的版本相同，只不过它们使用传递的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
@@ -226,11 +216,11 @@ strncpy_s(dst, 5, "a long string", 4);
 |**_tcsncpy_s_l**|**_strncpy_s_l**|**_mbsnbcpy_s_l**|**_wcsncpy_s_l**|
 
 > [!NOTE]
-> **_strncpy_s_l**， **_wcsncpy_s_l**和 **_mbsncpy_s_l**了任何区域设置依赖项并且只是为了提供 **_tcsncpy_s_l**并且不应为直接调用。
+> **_strncpy_s_l**， **_wcsncpy_s_l**并 **_mbsncpy_s_l**没有区域设置相关性，只是为了提供 **_tcsncpy_s_l** ，不应为直接调用。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**strncpy_s**， **_strncpy_s_l**|\<string.h>|
 |**wcsncpy_s**， **_wcsncpy_s_l**|\<string.h> 或 \<wchar.h>|

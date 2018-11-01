@@ -1,10 +1,6 @@
 ---
-title: _mbbtombc、_mbbtombc_l | Microsoft 文档
-ms.custom: ''
+title: _mbbtombc、_mbbtombc_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbbtombc_l
 - _mbbtombc
@@ -26,24 +22,18 @@ f1_keywords:
 - _mbbtombc
 - mbbtombc_l
 - mbbtombc
-dev_langs:
-- C++
 helpviewer_keywords:
 - mbbtombc_l function
 - mbbtombc function
 - _mbbtombc_l function
 - _mbbtombc function
 ms.assetid: 78593389-b0fc-43b6-8c1f-2a6bf702d64e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 98053437d2e189c26b46b53ec34ef67740d62bce
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 63b5dd33399201cd6ead7dbd1f710c8bebe53c69
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401784"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50547987"
 ---
 # <a name="mbbtombc-mbbtombcl"></a>_mbbtombc、_mbbtombc_l
 
@@ -78,15 +68,15 @@ unsigned int _mbbtombc_l(
 
 ## <a name="remarks"></a>备注
 
-**_Mbbtombc**函数将给定的单字节多字节字符转换为相应的双字节多字节字符。 字符必须在范围 0x20-0x7E 或 0xA1-0xDF 要转换。
+**_Mbbtombc**函数将给定的单字节多字节字符转换为相应的双字节多字节字符。 字符必须在范围 0x20-0x7E 或 0xA1-0xDF 转换。
 
-输出值受的设置**LC_CTYPE**的区域设置的类别设置影响; 请参阅[setlocale、 _wsetlocale](setlocale-wsetlocale.md)有关详细信息。 此函数的版本都相同，只不过 **_mbbtombc**对该区域设置相关的行为使用当前区域设置和 **_mbbtombc_l**改为使用传入的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+输出值受的设置**LC_CTYPE**的区域设置的类别设置影响; 请参阅[setlocale、 _wsetlocale](setlocale-wsetlocale.md)有关详细信息。 此函数的版本都相同，只不过 **_mbbtombc**依赖于区域设置的行为使用当前区域设置和 **_mbbtombc_l**改为使用传入的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
-在早期版本， **_mbbtombc**名为**hantozen**。 对于新代码，请使用 **_mbbtombc**。
+在早期版本中， **_mbbtombc**名为**hantozen**。 对于新代码，请使用 **_mbbtombc**。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_mbbtombc**|\<mbstring.h>|
 |**_mbbtombc_l**|\<mbstring.h>|

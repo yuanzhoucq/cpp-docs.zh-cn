@@ -1,10 +1,6 @@
 ---
-title: _mkdir、_wmkdir | Microsoft 文档
-ms.custom: ''
+title: _mkdir、_wmkdir
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wmkdir
 - _mkdir
@@ -27,8 +23,6 @@ f1_keywords:
 - _tmkdir
 - wmkdir
 - _wmkdir
-dev_langs:
-- C++
 helpviewer_keywords:
 - _wmkdir function
 - folders [C++], creating
@@ -39,16 +33,12 @@ helpviewer_keywords:
 - _mkdir function
 - _tmkdir function
 ms.assetid: 7f22d01d-63a5-4712-a6e7-d34878b2d840
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 40641911af9c61285049a5943cdc8f5c21cba99b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0d89e1f0930cf9131156a4691069f1f17c15c124
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402135"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50496608"
 ---
 # <a name="mkdir-wmkdir"></a>_mkdir、_wmkdir
 
@@ -73,9 +63,9 @@ int _wmkdir(
 
 ## <a name="return-value"></a>返回值
 
-如果创建新目录，这些函数都将返回值 0。 在错误，函数将返回-1 并设置**errno** ，如下所示。
+如果创建新目录，这些函数都将返回值 0。 出现错误，函数将返回-1 和集**errno** ，如下所示。
 
-**EEXIST**未创建目录，因为*dirname*是现有文件、 目录或设备的名称。
+**EEXIST**不创建目录，因为*dirname*是现有文件、 目录或设备的名称。
 
 **ENOENT**找不到路径。
 
@@ -83,9 +73,9 @@ int _wmkdir(
 
 ## <a name="remarks"></a>备注
 
-**_Mkdir**函数创建一个新的目录具有指定*dirname。* **_mkdir**可以创建一个新目录，每次调用，以便只有最后一个组件的*dirname*可以命名新目录。 **_mkdir**不会转换路径分隔符。 在 Windows NT 中，反斜杠 (\\) 和正斜杠 (/) 在运行时例程中都是字符串的有效路径分隔符。
+**_Mkdir**函数创建一个新目录具有指定*dirname。* **_mkdir**可以创建一个新目录，每次调用，因此，只有最后一个组件的*dirname*可以命名新目录。 **_mkdir**不会转换路径分隔符。 在 Windows NT 中，反斜杠 (\\) 和正斜杠 (/) 在运行时例程中都是字符串的有效路径分隔符。
 
-**_wmkdir**是宽字符版本的 **_mkdir**; *dirname*参数 **_wmkdir**是宽字符字符串。 **_wmkdir**和 **_mkdir**否则具有相同行为。
+**_wmkdir**是宽字符版本 **_mkdir**; *dirname*参数 **_wmkdir**是宽字符字符串。 **_wmkdir**并 **_mkdir**行为相同。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -95,7 +85,7 @@ int _wmkdir(
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_mkdir**|\<direct.h>|
 |**_wmkdir**|\<direct.h> 或 \<wchar.h>|

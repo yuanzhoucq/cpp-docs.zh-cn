@@ -1,27 +1,18 @@
 ---
-title: 如何： 修改目标框架和平台工具集 |Microsoft Docs
+title: 如何：修改目标框架和平台工具集
 ms.custom: conceptual
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: conceptual
 f1_keywords:
 - msbuild.cpp.howto.modifytargetframeworkandplatformtoolset
-dev_langs:
-- C++
 helpviewer_keywords:
 - 'msbuild (c++), howto: modify target framework and platform toolset'
 ms.assetid: 031b1d54-e6e1-4da7-9868-3e75a87d9ffe
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 60fa9bd3d6db9d90e5d7f3bc94e7686e5cf9481e
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 7759cf13e95fab97ee5a7b77e22c690a69fde41a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45708443"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50523085"
 ---
 # <a name="how-to-modify-the-target-framework-and-platform-toolset"></a>如何：修改目标框架和平台工具集
 
@@ -35,7 +26,7 @@ ms.locfileid: "45708443"
 > [!NOTE]
 >  若要更改目标平台工具集，你必须安装相关版本的 Visual Studio 或 Windows Platform SDK。 例如，要面向具有“Windows7.1SDK”  平台工具集的 Itanium 平台，你必须安装 [适用于 Windows 7 的 Microsoft Windows SDK 和 .NET Framework 4 SP1](http://www.microsoft.com/download/details.aspx?id=8279) ；但是，只要面向正确的 Framework 版本和平台工具集，你就可以使用 Visual Studio 的其他兼容版本来完成开发工作。
 
-可以通过创建自定义平台工具集来扩展目标平台。 有关详细信息，请参阅[c + + 本机多目标](https://blogs.msdn.microsoft.com/vcblog/2009/12/08/c-native-multi-targeting/)Visual c + + 博客上。
+可以通过创建自定义平台工具集来扩展目标平台。 有关详细信息，请参见 Visual C++ 博客上的 [C++ 本机多目标](https://blogs.msdn.microsoft.com/vcblog/2009/12/08/c-native-multi-targeting/) 。
 
 ### <a name="to-change-the-target-framework"></a>更改目标框架
 

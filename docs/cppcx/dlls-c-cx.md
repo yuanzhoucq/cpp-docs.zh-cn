@@ -1,20 +1,13 @@
 ---
-title: Dll (C + + /cli CX) |Microsoft Docs
-ms.custom: ''
+title: DLL (C++/CX)
 ms.date: 02/06/2018
-ms.technology: cpp-windows
-ms.topic: language-reference
 ms.assetid: 5b8bcc57-64dd-4c54-9f24-26a25bd5dddd
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1ac06336e5ba80406157285ebe660080aff6e319
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1a72ecc5eb46abfbc7b9a52a168510ce0873ee04
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763628"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50445703"
 ---
 # <a name="dlls-ccx"></a>DLL (C++/CX)
 
@@ -24,7 +17,7 @@ ms.locfileid: "43763628"
 
 在几乎所有情况下，如果想要创建的 DLL 在 UWP 应用中使用，通过该名称的项目模板创建 Windows 运行时组件作为。 可以为具有公共或专用 Windows 运行时类型的 Dll 创建 Windows 运行时组件项目。 可以从任何 Windows 运行时兼容语言编写的应用程序访问的 Windows 运行时组件。 默认情况下，Windows 运行时组件的编译器设置项目使用 **/ZW**切换。 .winmd 文件必须具有和根命名空间相同的名称。 例如，名为 A.B.C.MyClass 的类只有在名为 A.winmd 或 A.B.winmd 或 A.B.C.winmd 的元数据文件中定义后才能实例化。 DLL 的名称不必与 .winmd 文件名匹配。
 
-有关详细信息，请参阅[c + + 中创建 Windows 运行时组件](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)。
+有关详细信息，请参阅 [Creating Windows Runtime Components in C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)。
 
 ### <a name="to-reference-a-third-party-windows-runtime-component-binary-in-your-project"></a>若要引用的二进制文件在项目中的第三方 Windows 运行时组件
 

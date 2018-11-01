@@ -1,11 +1,6 @@
 ---
-title: trunc、truncf、truncl | Microsoft 文档
-ms.custom: ''
+title: trunc、truncf、truncl
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - trunc
 - truncf
@@ -30,23 +25,17 @@ f1_keywords:
 - math/trunc
 - math/truncf
 - math/truncl
-dev_langs:
-- C++
 helpviewer_keywords:
 - trunc function
 - truncf function
 - truncl function
 ms.assetid: de2038ac-ac0b-483e-870c-e8992dcd4fd0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 67c179065a6b2c6fc10a4ba6ba87868c8306a2aa
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6e023b9d894ea1b40a0e056e73b7c32f1e3cbed7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409454"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50519855"
 ---
 # <a name="trunc-truncf-truncl"></a>trunc、truncf、truncl
 
@@ -72,7 +61,7 @@ float trunc( float x ); //C++ only
 
 ## <a name="return-value"></a>返回值
 
-如果成功，返回的一个整数值*x*，并向零舍入。
+如果成功，返回的整数值*x*向零舍入。
 
 否则，可能返回以下值之一：
 
@@ -86,7 +75,7 @@ float trunc( float x ); //C++ only
 
 ## <a name="remarks"></a>备注
 
-由于 c + + 允许重载，你可以调用的重载**trunc**采用并返回**float**和**长** **double**类型。 在 C 程序中， **trunc**始终采用并返回**double**。
+由于 c + + 允许重载，可以调用的重载**trunc**采用并返回**float**并**长** **double**类型。 在 C 程序中， **trunc**始终采用并返回**double**。
 
 由于最大的浮点值是精确的整数，因此该函数不会自行溢出。 但是，将值还原为整型时可能会导致此函数溢出。
 

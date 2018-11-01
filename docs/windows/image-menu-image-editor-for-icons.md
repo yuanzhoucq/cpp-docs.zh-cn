@@ -1,28 +1,17 @@
 ---
-title: 图像菜单 （图标的图像编辑器 c + +） |Microsoft Docs
-ms.custom: ''
+title: 图像菜单 （图标的图像编辑器 c + +）
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.bitmap
-dev_langs:
-- C++
 helpviewer_keywords:
 - Image menu
 ms.assetid: ac2b4d53-1919-4fd1-a0af-d3c085c45af2
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 07541c31b99959616320d0b4a9526eb2ec5493a2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e015e7d3e814ce4563abc3cc75d7799eb65bd86a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46425539"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50596581"
 ---
 # <a name="image-menu-c-image-editor-for-icons"></a>图像菜单 （图标的图像编辑器 c + +）
 

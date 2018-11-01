@@ -1,14 +1,8 @@
 ---
-title: -Yu （使用预编译标头文件） |Microsoft Docs
-ms.custom: ''
+title: /Yu（使用预编译标头文件）
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /yu
-dev_langs:
-- C++
 helpviewer_keywords:
 - Yu compiler option [C++]
 - /Yu compiler option [C++]
@@ -17,16 +11,12 @@ helpviewer_keywords:
 - .pch files, use existing
 - precompiled header files, use existing
 ms.assetid: 24f1bd0e-b624-4296-a17e-d4b53e374e1f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a0b2935c10b5d99f4fa97163310a3e2cba3006b3
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 8d2b02c378179ac2603ec095efe89ce78f9f1afa
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45707741"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50505335"
 ---
 # <a name="yu-use-precompiled-header-file"></a>/Yu（使用预编译标头文件）
 
@@ -83,7 +73,7 @@ ms.locfileid: "45707741"
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>以编程方式设置此编译器选项
 
-- 请参见<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.PrecompiledHeaderThrough%2A>和<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.UsePrecompiledHeader%2A>。
+- 请参见 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.PrecompiledHeaderThrough%2A> 和 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.UsePrecompiledHeader%2A>。
 
 ## <a name="examples"></a>示例
 

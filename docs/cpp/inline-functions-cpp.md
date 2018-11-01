@@ -1,10 +1,6 @@
 ---
-title: 内联函数 （C++） |Microsoft 文档
-ms.custom: ''
+title: 内联函数 (C++)
 ms.date: 10/09/2018
-ms.technology:
-- cpp-language
-ms.topic: language-reference
 f1_keywords:
 - __forceinline_cpp
 - __inline_cpp
@@ -13,21 +9,15 @@ f1_keywords:
 - _inline
 - __forceinline
 - _forceinline
-dev_langs:
-- C++
 helpviewer_keywords:
 - inline functions [C++], class members
 ms.assetid: 355f120c-2847-4608-ac04-8dda18ffe10c
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 21f3d74a7b640e203a8a5882710849c98ba5b40f
-ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
+ms.openlocfilehash: 55cf598877c2447e0f80e783b53b290699042b8b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49163580"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50607813"
 ---
 # <a name="inline-functions-c"></a>内联函数 (C++)
 

@@ -1,12 +1,6 @@
 ---
-title: 混合程序集的初始化 |Microsoft Docs
-ms.custom: ''
+title: 混合程序集的初始化
 ms.date: 03/09/2018
-ms.technology:
-- cpp-cli
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - mixed assemblies [C++], loader lock
 - loader lock [C++]
@@ -16,23 +10,18 @@ helpviewer_keywords:
 - custom locales [C++]
 - mixed assemblies [C++], initilizing
 ms.assetid: bfab7d9e-f323-4404-bcb8-712b15f831eb
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- dotnet
-ms.openlocfilehash: ba9f3143fb110b25f384e462e7dfcd69c0140802
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1f4ea7f5cfc6e99390c93ba9c2beadc46fce8584
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46439570"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50665005"
 ---
 # <a name="initialization-of-mixed-assemblies"></a>混合程序集的初始化
 
 Windows 开发人员必须始终为持谨慎态度的加载程序锁时运行过程中的代码`DllMain`。 但是，有一些其他注意事项的派上用场时面对的 C + + /cli clr 混合模式程序集。
 
-中的代码[DllMain](/windows/desktop/Dlls/dllmain)不能访问 CLR。 这意味着 `DllMain` 不应直接或间接调用托管函数；在 `DllMain`中不应声明或实现托管代码；并且在 `DllMain`中不应发生垃圾回收或自动库加载。
+[DllMain](/windows/desktop/Dlls/dllmain) 中的代码不能访问 CLR。 这意味着 `DllMain` 不应直接或间接调用托管函数；在 `DllMain`中不应声明或实现托管代码；并且在 `DllMain`中不应发生垃圾回收或自动库加载。
 
 ## <a name="causes-of-loader-lock"></a>加载程序锁定的原因
 

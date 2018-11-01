@@ -1,10 +1,6 @@
 ---
-title: 贝赛耳函数：_j0、_j1、_jn、_y0、_y1、_yn | Microsoft 文档
-ms.custom: ''
+title: 贝塞尔函数：_j0、_j1、_jn、_y0、_y1、_yn
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _j0
 - _j1
@@ -33,8 +29,6 @@ f1_keywords:
 - _y0
 - _y1
 - _yn
-dev_langs:
-- C++
 helpviewer_keywords:
 - Bessel functions
 - _j0 function
@@ -44,16 +38,12 @@ helpviewer_keywords:
 - _y1 function
 - _yn function
 ms.assetid: a21a8bf1-df9d-4ba0-a8c2-e7ef71921d96
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cf461a7737ee1f23650ff80f203524c427fb644d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 682eaa99d0be1b959152ff94cc10a86aa68d988d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393597"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50531858"
 ---
 # <a name="bessel-functions-j0-j1-jn-y0-y1-yn"></a>贝塞尔函数：_j0、_j1、_jn、_y0、_y1、_yn
 
@@ -94,27 +84,27 @@ Bessel 函数的整数顺序。
 
 ## <a name="return-value"></a>返回值
 
-这些例程都返回的 Bessel 函数*x*。 如果*x*中是负数 **_y0**， **_y1**，或 **_yn**函数，则例程会将**errno**到**EDOM**，打印 **_DOMAIN**发送给错误消息**stderr**，并返回 **_HUGE_VAL**。 你可以修改错误处理使用 **_matherr**。
+每个例程将返回的贝赛耳函数*x*。 如果*x*中是负数 **_y0**， **_y1**，或者 **_yn**函数、 例程集**errno**到**EDOM**，将打印 **（_d)** 发送给错误消息**stderr**，并返回 **_HUGE_VAL**。 您可以修改错误处理通过使用 **_matherr**。
 
 ## <a name="remarks"></a>备注
 
-**_J0**， **_j1**，和 **_jn**例程将返回 Bessel 函数的第一种： 顺序分别为 0、 1 和 n。
+**_J0**， **_j1**，并 **_jn**例程将返回贝赛耳的第一类函数： 顺序分别为 0、 1 和 n。
 
 |输入|SEH 异常|Matherr 异常|
 |-----------|-------------------|-----------------------|
-|± **QNAN**， **IND**|**无效**|**_DOMAIN**|
+|为**QNAN**， **IND**|**无效**|**（_D)**|
 
-**_Y0**， **_y1**，和 **_yn**例程将返回 Bessel 函数的第二种： 顺序分别为 0、 1 和 n。
+**_Y0**， **_y1**，并 **_yn**例程将返回贝赛耳函数的第二个类型： 顺序分别为 0、 1 和 n。
 
 |输入|SEH 异常|Matherr 异常|
 |-----------|-------------------|-----------------------|
-|± **QNAN**， **IND**|**无效**|**_DOMAIN**|
+|为**QNAN**， **IND**|**无效**|**（_D)**|
 |± 0|**ZERODIVIDE**|**_SING**|
-|&#124;x&#124; < 0.0|**无效**|**_DOMAIN**|
+|&#124;x&#124; < 0.0|**无效**|**（_D)**|
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_j0**， **_j1**， **_jn**， **_y0**， **_y1**， **_yn**|\<cmath> (C++), \<math.h> (C, C++)|
 

@@ -1,16 +1,10 @@
 ---
-title: '/Zc: wchar_t （wchar_t 是本机类型） |Microsoft 文档'
-ms.custom: ''
+title: /Zc:wchar_t（wchar_t 是本机类型）
 ms.date: 03/01/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLWCECompilerTool.TreatWChar_tAsBuiltInType
 - VC.Project.VCCLCompilerTool.TreatWChar_tAsBuiltInType
 - /Zc:wchar_t
-dev_langs:
-- C++
 helpviewer_keywords:
 - /Zc compiler options [C++]
 - -Zc compiler options [C++]
@@ -18,16 +12,12 @@ helpviewer_keywords:
 - Conformance compiler options
 - Zc compiler options [C++]
 ms.assetid: b0de5a84-da72-4e5a-9a4e-541099f939e0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 061aa4a70412a0b51450470e690bea5633b764ad
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 13d25a73a0c70789e8b860607e9f222e69ae6d36
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32381272"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50537925"
 ---
 # <a name="zcwchart-wchart-is-native-type"></a>/Zc:wchar_t（wchar_t 是本机类型）
 
@@ -39,21 +29,21 @@ ms.locfileid: "32381272"
 
 ## <a name="remarks"></a>备注
 
-如果 **/zc: wchar_t**处于打开状态，`wchar_t`是内置的整数类型在编译为 c + + 代码的关键字。 如果 **/Zc:wchar_t-** （带有一个减号） 指定，或在代码中作为 C 编译，`wchar_t`不是内置类型。 相反，`wchar_t`定义为`typedef`为`unsigned short`规范标头 stddef.h 中。 （Microsoft 实现其定义包含在 stddef.h 包含的另一个标头和其他标准标头中。）
+如果 **/zc: wchar_t**处于打开状态，`wchar_t`是编译为 c + + 代码中的内置整型类型的关键字。 如果 **/zc: wchar_t-** （带有一个减号） 指定，或在代码中作为 C 编译，`wchar_t`不是内置类型。 相反，`wchar_t`指`typedef`为`unsigned short`规范标头 stddef.h 中。 （Microsoft 实现将其定义中包含通过 stddef.h 的另一个标头和其他标准标头。）
 
-我们不建议 **/Zc:wchar_t-** 因为 c + + 标准要求`wchar_t`是内置类型。 使用 `typedef` 版本可能导致可移植性问题。 如果你从 Visual c + + 的早期版本升级并遇到编译器错误[C2664](../../error-messages/compiler-errors-2/compiler-error-c2664.md)因为代码尝试将隐式转换`wchar_t`到`unsigned short`，我们建议你更改代码以改为修复此错误，设置的 **/Zc:wchar_t-**。
+我们不建议 **/zc: wchar_t-** 因为 c + + 标准要求`wchar_t`是内置类型。 使用 `typedef` 版本可能导致可移植性问题。 如果从 Visual c + + 的早期版本升级并遇到编译器错误[C2664](../../error-messages/compiler-errors-2/compiler-error-c2664.md)因为代码尝试将隐式转换`wchar_t`到`unsigned short`，我们建议更改代码以修复此错误，而是设置的 **/zc: wchar_t-**。
 
-**/Zc: wchar_t**选项位于默认情况下，在 c + + 编译中，且在 C 编译中忽略。 [/ 宽松-](permissive-standards-conformance.md)选项不影响 **/zc: wchar_t**。
+**/Zc: wchar_t**选项在 c + + 编译中默认情况下，忽略 C 编译中。 [触发-](permissive-standards-conformance.md)选项不会影响 **/zc: wchar_t**。
 
-Microsoft 将 `wchar_t` 作为两位无符号值实现。 它映射到的 Microsoft 专用本机类型`__wchar_t`。 有关详细信息`wchar_t`，请参阅[数据类型范围](../../cpp/data-type-ranges.md)和[基本类型](../../cpp/fundamental-types-cpp.md)。
+Microsoft 将 `wchar_t` 作为两位无符号值实现。 它映射到特定于 Microsoft 的本机类型`__wchar_t`。 有关详细信息`wchar_t`，请参阅[数据类型范围](../../cpp/data-type-ranges.md)并[基本类型](../../cpp/fundamental-types-cpp.md)。
 
-如果你编写新代码具有与较旧仍将使用的代码进行互操作`typedef`版本`wchar_t`，你可以同时提供重载`unsigned short`和`__wchar_t`变体`wchar_t`，以便可以与链接你的代码使用代码编译 **/zc: wchar_t**或如果没有该编译的代码。 否则，你必须提供两个不同版本的库、 一个具有和没有 **/zc: wchar_t**启用。 即使在这种情况下，仍建议你使用用来编译新代码的同一编译器来生成旧代码。 不要将使用不同编译器编译的二进制文件混合。
+如果你编写新代码具有与仍使用较旧代码进行互操作`typedef`新版`wchar_t`，可以同时提供重载`unsigned short`和`__wchar_t`的变体`wchar_t`，以便你的代码可以与链接使用代码编译 **/zc: wchar_t**或如果没有该编译的代码。 否则，你必须提供两个不同版本的库、 一个具有和没有 **/zc: wchar_t**启用。 即使在这种情况下，仍建议你使用用来编译新代码的同一编译器来生成旧代码。 不要将使用不同编译器编译的二进制文件混合。
 
-当 **/zc: wchar_t**指定，则 **\_WCHAR\_T\_定义**和**\_本机\_WCHAR\_T\_定义**定义了符号。 有关更多信息，请参见 [Predefined Macros](../../preprocessor/predefined-macros.md)。
+当 **/zc: wchar_t**指定，则 **\_WCHAR\_T\_定义**并**\_本机\_WCHAR\_T\_定义**定义了符号。 有关更多信息，请参见 [Predefined Macros](../../preprocessor/predefined-macros.md)。
 
-如果你的代码使用编译器 COM 全局函数，因为 **/zc: wchar_t**现在在默认情况下，我们建议你更改对 comsupp.lib 的显式引用 (从[注释杂注](../../preprocessor/comment-c-cpp.md)或在命令行） 为对 comsuppw.lib 或 comsuppwd.lib。 (如果必须使用编译 **/Zc:wchar_t-**，使用 comsupp.lib。)如果你包含了 comdef.h 头文件，则会为你指定正确的库。 有关编译器 COM 支持的信息，请参阅[编译器 COM 支持](../../cpp/compiler-com-support.md)。
+如果你的代码使用编译器 COM 全局函数，因为 **/zc: wchar_t**现在在默认情况下，我们建议您更改对 comsupp.lib 的显式引用 (从[注释杂注](../../preprocessor/comment-c-cpp.md)或在命令行） 到 comsuppw.lib 或 comsuppwd.lib。 (如果必须使用进行编译 **/zc: wchar_t-**，使用 comsupp.lib。)如果你包含了 comdef.h 头文件，则会为你指定正确的库。 有关编译器 COM 支持的信息，请参阅[编译器 COM 支持](../../cpp/compiler-com-support.md)。
 
-`wchar_t`编译 C 代码时不支持内置类型。 有关使用 Visual c + + 一致性问题的详细信息，请参阅[非标准行为](../../cpp/nonstandard-behavior.md)。
+`wchar_t`编译 C 代码时不支持内置类型。 使用 Visual c + + 的一致性问题的详细信息，请参阅[非标准行为](../../cpp/nonstandard-behavior.md)。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
@@ -61,7 +51,7 @@ Microsoft 将 `wchar_t` 作为两位无符号值实现。 它映射到的 Micros
 
 1. 选择**配置属性** > **C/c + +** > **语言**页。
 
-1. 修改**wchar_t 视为内置类型**属性。
+1. 修改**将 wchar_t 视为内置类型**属性。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>以编程方式设置此编译器选项
 

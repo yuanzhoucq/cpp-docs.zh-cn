@@ -1,10 +1,6 @@
 ---
-title: strpbrk、wcspbrk、_mbspbrk、_mbspbrk_l | Microsoft 文档
-ms.custom: ''
+title: strpbrk、wcspbrk、_mbspbrk、_mbspbrk_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbspbrk
 - wcspbrk
@@ -31,8 +27,6 @@ f1_keywords:
 - _tcspbrk
 - _ftcspbrk
 - wcspbrk
-dev_langs:
-- C++
 helpviewer_keywords:
 - fstrpbrk function
 - _ftcspbrk function
@@ -50,16 +44,12 @@ helpviewer_keywords:
 - _mbspbrk function
 - mbspbrk_l function
 ms.assetid: 80b504f7-a167-4dde-97ad-4ae3000dc810
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: db26c60badceab6c1422146a32de3d6dd2ecb8bd
-ms.sourcegitcommit: 04d327940787df1297b72d534f388a035d472af0
+ms.openlocfilehash: 059b0659a8088783c6d169288de486b41a6e8d82
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39181128"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50468960"
 ---
 # <a name="strpbrk-wcspbrk-mbspbrk-mbspbrkl"></a>strpbrk、wcspbrk、_mbspbrk、_mbspbrk_l
 
@@ -143,7 +133,7 @@ null 终止的字符集。
 
 `strpbrk`函数中的字符的第一个匹配项返回一个指针*str*属于组中的字符*strCharSet*。 搜索不包括终止 null 字符。
 
-`wcspbrk` 和 `_mbspbrk` 分别是 `strpbrk` 的宽字符及多字节字符版本。 `wcspbrk` 的参数和返回值是宽字符字符串；而 `_mbspbrk` 的则是多字节字符字符串。
+`wcspbrk` 和 `_mbspbrk` 分别是 `strpbrk`的宽字符及多字节字符版本。 `wcspbrk` 的参数和返回值是宽字符字符串；而 `_mbspbrk` 的则是多字节字符字符串。
 
 `_mbspbrk` 会验证其参数。 如果*str*或*strCharSet*为 NULL，将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则`_mbspbrk`返回 NULL，并设置`errno`EINVAL 到。 `strpbrk` 和 `wcspbrk` 不会验证其参数。 否则这三个函数否则具有相同行为。
 
@@ -166,7 +156,7 @@ null 终止的字符集。
 |-------------|---------------------|
 |`strpbrk`|\<string.h>|
 |`wcspbrk`|\<string.h> 或 \<wchar.h>|
-|`_mbspbrk`, `_mbspbrk_l`|\<mbstring.h>|
+|`_mbspbrk`， `_mbspbrk_l`|\<mbstring.h>|
 
 有关兼容性的更多信息，请参见 [兼容性](../../c-runtime-library/compatibility.md)。
 

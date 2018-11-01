@@ -1,11 +1,6 @@
 ---
-title: log1p、log1pf、log1pl2 | Microsoft 文档
-ms.custom: ''
+title: log1p，log1pf log1pl2
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - log1p
 - log1pf
@@ -35,16 +30,12 @@ helpviewer_keywords:
 - log1pf function
 - log1pl function
 ms.assetid: a40d965d-b4f6-42f4-ba27-2395546f7c12
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 650fb8f7567b4f2f3b0b9032397c2b54a99013dd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e7984367aa4244a927bb9dabc5533a807d74ac1a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402743"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50524990"
 ---
 # <a name="log1p-log1pf-log1pl"></a>log1p、log1pf、log1pl
 
@@ -82,7 +73,7 @@ long double log1pl(
 
 ## <a name="return-value"></a>返回值
 
-如果成功，返回自然 (基-*e*) 日志中 (*x* + 1)。
+如果成功，则返回自然 (底*e*) 的日志 (*x* + 1)。
 
 否则，可能返回以下值之一：
 
@@ -95,17 +86,17 @@ long double log1pl(
 |< -1|nan|INVALID|EDOM|
 |-inf|nan|INVALID|EDOM|
 |±SNaN|与输入相同|INVALID||
-|±QNaN，无限期|与输入相同|||
+|±QNaN 无限|与输入相同|||
 
 **Errno**如果值设置为 ERANGE *x* =-1。 **Errno**值设置为**EDOM**如果*x* <-1。
 
 ## <a name="remarks"></a>备注
 
-**Log1p**函数可能比使用更准确`log(x + 1)`时*x*接近 0。
+**Log1p**函数可能会比使用更精确`log(x + 1)`时*x*接近 0。
 
-由于 c + + 允许重载，你可以调用的重载**log1p**采用并返回**float**和**长** **double**类型。 在 C 程序中， **log1p**始终采用并返回**double**。
+由于 c + + 允许重载，可以调用的重载**log1p**采用并返回**float**并**长** **double**类型。 在 C 程序中， **log1p**始终采用并返回**double**。
 
-如果*x*是一个自然数字，此函数将返回数值的阶乘计算的对数 (*x* -1)。
+如果*x*是自然数，此函数返回的阶乘的对数 (*x* -1)。
 
 ## <a name="requirements"></a>要求
 

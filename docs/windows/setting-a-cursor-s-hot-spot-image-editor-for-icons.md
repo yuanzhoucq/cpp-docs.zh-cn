@@ -1,29 +1,18 @@
 ---
-title: 设置游标&#39;s 作用点 （图标的图像编辑器） |Microsoft Docs
-ms.custom: ''
+title: 设置游标&#39;s 作用点 （图标的图像编辑器）
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.image.editing
-dev_langs:
-- C++
 helpviewer_keywords:
 - cursors [C++], hot spots
 - hot spots
 ms.assetid: a610388a-45c8-43cd-98a2-fd31f29238b8
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 9246d7a26c9764e31cca9c861ec0a15d4792c115
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b7e6e83f8c8ae4167114f0c09a1e63463f8fc753
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46389091"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50603250"
 ---
 # <a name="setting-a-cursor39s-hot-spot-image-editor-for-icons"></a>设置游标&#39;s 作用点 （图标的图像编辑器）
 

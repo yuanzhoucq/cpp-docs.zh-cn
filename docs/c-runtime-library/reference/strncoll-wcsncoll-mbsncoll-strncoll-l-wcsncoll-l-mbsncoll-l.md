@@ -1,10 +1,6 @@
 ---
-title: _strncoll、_wcsncoll、_mbsncoll、_strncoll_l、_wcsncoll_l、_mbsncoll_l | Microsoft 文档
-ms.custom: ''
+title: _strncoll、_wcsncoll、_mbsncoll、_strncoll_l、_wcsncoll_l、_mbsncoll_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _strncoll
 - _mbsncoll_l
@@ -40,8 +36,6 @@ f1_keywords:
 - _strncoll
 - _tcsncoll
 - mbsncoll
-dev_langs:
-- C++
 helpviewer_keywords:
 - _strncoll_l function
 - code pages, using for string comparisons
@@ -66,23 +60,19 @@ helpviewer_keywords:
 - ftcsnccoll function
 - _wcsncoll_l function
 ms.assetid: e659a5a4-8afe-4033-8e72-17ffd4bdd8e9
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 888484a80cc7c39921b973450afdaa361518432a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fe6c3283c9379b370911cc63184535e813b96d8c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415902"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50658531"
 ---
 # <a name="strncoll-wcsncoll-mbsncoll-strncolll-wcsncolll-mbsncolll"></a>_strncoll、_wcsncoll、_mbsncoll、_strncoll_l、_wcsncoll_l、_mbsncoll_l
 
 使用特定于区域设置的信息比较字符串。
 
 > [!IMPORTANT]
-> **_mbsncoll**和 **_mbsncoll_l**不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
+> **_mbsncoll**并 **_mbsncoll_l**不能在 Windows 运行时中执行的应用程序中使用。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
 
 ## <a name="syntax"></a>语法
 
@@ -135,7 +125,7 @@ int _mbsncoll_l(
 
 ## <a name="return-value"></a>返回值
 
-其中每个函数返回一个值，指示的子字符串的关系*string1*和*string2*、，如下所示。
+这些函数均返回一个值，指示的子字符串的关系*string1*并*string2*，按如下所示。
 
 |返回值|string1 与 string2 的关系|
 |------------------|----------------------------------------|
@@ -143,13 +133,13 @@ int _mbsncoll_l(
 |0|*string1*等同于*string2*。|
 |> 0|*string1*大于*string2*。|
 
-其中每个函数返回 **_NLSCMPERROR**。 若要使用 **_NLSCMPERROR**，包括 STRING.h 或 MBSTRING.h。 **_wcsncoll**如果任一可能会失败*string1*或*string2*包含排序序列域外部的宽字符代码。 发生错误时， **_wcsncoll**可能设置**errno**到**EINVAL**。 若要在调用中的错误检查 **_wcsncoll**，将其设置**errno**为 0，然后检查**errno**调用后 **_wcsncoll**。
+每个函数将返回 **_NLSCMPERROR**。 若要使用 **_NLSCMPERROR**，包括 STRING.h 或 MBSTRING.h。 **_wcsncoll**可能会失败，如果任一*string1*或*string2*包含排序序列域外部的宽字符代码。 出现错误时， **_wcsncoll**可能设置**errno**到**EINVAL**。 若要调用的错误检查 **_wcsncoll**，将**errno**为 0，然后选中**errno**调用之后 **_wcsncoll**。
 
 ## <a name="remarks"></a>备注
 
-其中每个函数执行区分大小写比较的第一个*计数*中的字符*string1*和*string2*，根据当前的代码页使用。 仅在以下情况下使用这些函数：代码页中的字符集顺序和字典字符顺序存在差异，以及此差异对于字符串比较很有用。 字符集顺序与区域设置相关。 没有这些函数的版本 **_l**后缀使用当前区域设置，但具有的版本 **_l**后缀使用传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+每个函数执行区分大小写比较的第一个*计数*中的字符*string1*并*string2*，根据在目前的代码页使用。 仅在以下情况下使用这些函数：代码页中的字符集顺序和字典字符顺序存在差异，以及此差异对于字符串比较很有用。 字符集顺序与区域设置相关。 没有这些函数的版本 **_l**后缀使用当前区域设置，但具有的版本 **_l**后缀使用传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
-所有这些函数都验证其参数。 如果任一*string1*或*string2*是 null 指针，或*计数*大于**INT_MAX**，则调用无效参数处理程序，中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则这些函数将返回 **_NLSCMPERROR**并设置**errno**到**EINVAL**。
+所有这些函数都验证其参数。 如果任一*string1*或*string2*是 null 指针，或*计数*大于**INT_MAX**，调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，这些函数将返回 **_NLSCMPERROR**并设置**errno**到**EINVAL**。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -160,7 +150,7 @@ int _mbsncoll_l(
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_strncoll**， **_strncoll_l**|\<string.h>|
 |**_wcsncoll**， **_wcsncoll_l**|\<wchar.h> 或 \<string.h>|

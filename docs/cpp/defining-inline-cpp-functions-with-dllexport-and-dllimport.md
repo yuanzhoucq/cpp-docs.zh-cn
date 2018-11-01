@@ -1,28 +1,18 @@
 ---
-title: 定义带有 dllexport 和 dllimport 的内联 C++ 函数 |Microsoft 文档
-ms.custom: ''
+title: 使用 dllexport 和 dllimport 定义内联 C++ 函数
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - inline functions [C++], defining
 - functions [C++], defining inline
 - dllimport attribute [C++], inline functions
 - dllexport attribute [C++], inline functions
 ms.assetid: 3b48678b-e7b8-4eda-bb46-b5d34dcf7817
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5299018f8c8e92cd4bfe45889f379c88064007e1
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 39c1787321a37601cd8777ddb6c8296936eb89e9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46037081"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50590809"
 ---
 # <a name="defining-inline-c-functions-with-dllexport-and-dllimport"></a>使用 dllexport 和 dllimport 定义内联 C++ 函数
 

@@ -1,10 +1,6 @@
 ---
-title: _get_wpgmptr | Microsoft 文档
-ms.custom: ''
+title: _get_wpgmptr
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _get_wpgmptr
 apilocation:
@@ -23,53 +19,47 @@ apitype: DLLExport
 f1_keywords:
 - get_wpgmptr
 - _get_wpgmptr
-dev_langs:
-- C++
 helpviewer_keywords:
 - _wpgmptr global variable
 - get_wpgmptr function
 - wpgmptr global variable
 - _get_wpgmptr function
 ms.assetid: a77cdd13-2303-4b7c-9a60-8debdbef2011
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9393351174477a4da43d0b3bd49e107430e68ece
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0e49bc35f43ed6ed5a5f86e6c76c51854ab71add
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398765"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50436330"
 ---
 # <a name="getwpgmptr"></a>_get_wpgmptr
 
-获取的当前值 **_wpgmptr**全局变量。
+获取当前值 **_wpgmptr**全局变量。
 
 ## <a name="syntax"></a>语法
 
 ```C
-errno_t _get_wpgmptr( 
-   wchar_t **pValue 
+errno_t _get_wpgmptr( 
+   wchar_t **pValue 
 );
 ```
 
 ### <a name="parameters"></a>参数
 
 *pValue*<br/>
-指向要使用的当前值填充的字符串的指针 **_wpgmptr**变量。
+若要使用的当前值填充的字符串指针 **_wpgmptr**变量。
 
 ## <a name="return-value"></a>返回值
 
-如果成功，则返回零；如果失败，则返回错误代码。 如果*pValue*是**NULL**中, 所述，将调用无效参数处理程序[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，此函数将**errno**到**EINVAL**并返回**EINVAL**。
+如果成功，则返回零；如果失败，则返回错误代码。 如果*pValue*是**NULL**，如中所述，将调用无效的参数处理程序[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，此函数可设置**errno**到**EINVAL** ，并返回**EINVAL**。
 
 ## <a name="remarks"></a>备注
 
-只能调用 **_get_wpgmptr**如果你的程序包含宽入口点，例如**wmain()** 或**wWinMain()**。 **_Wpgmptr**全局变量包含与宽字符字符串形式的进程关联的可执行文件的完整路径。 有关详细信息，请参阅 [_pgmptr、_wpgmptr](../../c-runtime-library/pgmptr-wpgmptr.md)。
+只能调用 **_get_wpgmptr**如果你的程序具有宽的入口点，例如**wmain()** 或**wWinMain()**。 **_Wpgmptr**全局变量包含与宽字符字符串与进程相关联的可执行文件的完整路径。 有关详细信息，请参阅 [_pgmptr、_wpgmptr](../../c-runtime-library/pgmptr-wpgmptr.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_get_wpgmptr**|\<stdlib.h>|
 

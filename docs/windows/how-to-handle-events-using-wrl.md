@@ -1,24 +1,14 @@
 ---
-title: 如何： 使用 WRL 处理事件 |Microsoft Docs
-ms.custom: ''
+title: 如何：使用 WRL 处理事件
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
 ms.topic: reference
-dev_langs:
-- C++
 ms.assetid: 1c77543f-7b0c-4a94-93bf-e3225885ed76
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 9eb1e1257513ff764e0666c3485e62204a2ac66c
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 362ae7f421e94605b182356984431210c72cf41f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42591292"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50591940"
 ---
 # <a name="how-to-handle-events-using-wrl"></a>如何：使用 WRL 处理事件
 
@@ -39,7 +29,7 @@ ms.locfileid: "42591292"
 
    `Windows.Devices.Enumeration.h` 声明枚举设备所需的类型。
 
-   我们建议您在 .cpp 文件中使用 `using namespace` 指令使代码更具可读性。
+   我们建议你在 .cpp 文件中使用 `using namespace` 指令使代码更具可读性。
 
 2. 声明应用程序的本地变量。 此示例中包含的枚举的设备和注册令牌，使其可以稍后取消订阅事件数的计数。
 

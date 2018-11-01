@@ -1,28 +1,18 @@
 ---
-title: 派生的 MFC 中可用的视图类 |Microsoft Docs
-ms.custom: ''
+title: MFC 中可用的派生视图类
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - CView class [MFC], classes derived from
 - classes [MFC], derived
 - derived classes [MFC], view classes
 - view classes [MFC], derived
 ms.assetid: dba42178-7459-4ccc-b025-f3d9b8a4b737
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0f8d058891b361b3747caafd9c4bd279c7626856
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9972586bd0cc4059e81d81be954a8cf0cada1f0d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46426908"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50594488"
 ---
 # <a name="derived-view-classes-available-in-mfc"></a>MFC 中可用的派生视图类
 
@@ -34,7 +24,7 @@ ms.locfileid: "46426908"
 |-----------|-----------------|
 |[CView](../mfc/reference/cview-class.md)|所有视图的基类。|
 |[CCtrlView](../mfc/reference/cctrlview-class.md)|基类的`CTreeView`， `CListView`， `CEditView`，和`CRichEditView`。 这些类使你可以使用文档/视图体系结构与所指示的 Windows 公共控件。|
-|[CEditView](../mfc/reference/ceditview-class.md)|基于 Windows 的简单视图编辑框控件。 允许输入和编辑文本，并可用作简单的文本编辑器应用程序的基础。 另请参见`CRichEditView`。|
+|[CEditView](../mfc/reference/ceditview-class.md)|基于 Windows 的简单视图编辑框控件。 允许输入和编辑文本，并可用作简单的文本编辑器应用程序的基础。 另请参阅 `CRichEditView`。|
 |[CRichEditView](../mfc/reference/cricheditview-class.md)|一个视图，其中包含[CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)对象。 此类是类似于`CEditView`，但不同于`CEditView`，`CRichEditView`句柄的格式化文本。|
 |[CListView](../mfc/reference/clistview-class.md)|一个视图，其中包含[CListCtrl](../mfc/reference/clistctrl-class.md)对象。|
 |[Ctreeview 类](../mfc/reference/ctreeview-class.md)|一个视图，其中包含[CTreeCtrl](../mfc/reference/ctreectrl-class.md)对象，类似于 Visual c + + 中的解决方案资源管理器窗口的视图。|

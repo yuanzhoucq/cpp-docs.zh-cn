@@ -1,25 +1,16 @@
 ---
-title: 默认情况下处于关闭状态的编译器警告 |Microsoft Docs
+title: 默认情况下处于关闭状态的编译器警告
 ms.date: 05/30/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - warnings, compiler
 - cl.exe compiler, setting options
 ms.assetid: 69809cfb-a38a-4035-b154-283a61938df8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c7b48b2382ee22cc5d11c1145dc494aca4e7997f
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 48c18ce5af758e1329f149bc49969dad733af88f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50083186"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50651368"
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>默认情况下处于关闭状态的编译器警告
 编译器包括默认情况下，关闭的警告，因为大多数开发人员不希望看到它们。 在某些情况下，它们表示一个样式的选择，或在较旧代码中，是常见的惯用语言或语言充分利用 Microsoft 扩展。 在其他情况下，它们指示程序员经常做出错误的假设，这可能会导致意外的或未定义行为的区域。 有些警告可能非常库标头中存在干扰。 C 运行时库以及 c + + 标准库设计用于不发出任何警告仅在警告等级[/w4](../build/reference/compiler-option-warning-level.md)。

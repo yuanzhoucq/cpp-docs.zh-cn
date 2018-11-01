@@ -1,10 +1,6 @@
 ---
-title: _chmod、_wchmod | Microsoft 文档
-ms.custom: ''
+title: _chmod、_wchmod
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _chmod
 - _wchmod
@@ -25,8 +21,6 @@ f1_keywords:
 - _chmod
 - _wchmod
 - wchmod
-dev_langs:
-- C++
 helpviewer_keywords:
 - _chmod function
 - wchmod function
@@ -35,16 +29,12 @@ helpviewer_keywords:
 - files [C++], changing permissions
 - _wchmod function
 ms.assetid: 92f7cb86-b3b0-4232-a599-b8c04a2f2c19
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0e4944f871195b276189014ed9d5d294b9b445fd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7f3133aac1548be5cb497fe32ae4f9f1c0e238d9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399940"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50595125"
 ---
 # <a name="chmod-wchmod"></a>_chmod、_wchmod
 
@@ -67,11 +57,11 @@ int _wchmod( const wchar_t *filename, int pmode );
 
 ## <a name="return-value"></a>返回值
 
-如果成功更改权限设置，这些函数将返回 0。 返回值-1 表示失败。 如果找不到指定的文件， **errno**设置为**ENOENT**; 如果参数是无效的**errno**设置为**EINVAL**。
+如果成功更改权限设置，这些函数将返回 0。 返回值-1 表示失败。 如果找不到指定的文件， **errno**设置为**ENOENT**; 如果参数无效**errno**设置为**EINVAL**。
 
 ## <a name="remarks"></a>备注
 
-**_Chmod**函数更改指定的文件的权限设置*filename*。 权限设置控制对文件的读取和写入访问权限。 整数表达式*pmode*包含一个或两个 SYS\Stat.h 中定义的以下清单常量。
+**_Chmod**函数将更改指定的文件的权限设置*filename*。 权限设置控制对文件的读取和写入访问权限。 整数表达式*pmode*包含一个或两个在 SYS\Stat.h 中定义的以下清单常量。
 
 |*pmode*|含义|
 |-|-|
@@ -79,11 +69,11 @@ int _wchmod( const wchar_t *filename, int pmode );
 **_S_IWRITE**|允许写入。 （实际上，允许读取和写入。）
 **_S_IREAD** &AMP;#124; **_S_IWRITE**|允许读取和写入。
 
-当给定这两个常量时，它们是否联接的按位与或运算符 (**|**)。 如果未授予写入权限，则该文件为只读。 注意，所有文件始终具有可读性；不能提供只写权限。 因此，模式 **_S_IWRITE**和 **_S_IREAD** | **_S_IWRITE**是等效的。
+当给定这两个常量时，它们联接与按位或运算符 (**|**)。 如果未授予写入权限，则该文件为只读。 注意，所有文件始终具有可读性；不能提供只写权限。 因此，模式 **_S_IWRITE**并 **_S_IREAD** | **_S_IWRITE**是等效的。
 
-**_wchmod**是宽字符版本的 **_chmod**; *filename*参数 **_wchmod**是宽字符字符串。 **_wchmod**和 **_chmod**否则具有相同行为。
+**_wchmod**是宽字符版本 **_chmod**; *filename*参数 **_wchmod**是宽字符字符串。 **_wchmod**并 **_chmod**行为相同。
 
-此函数验证其参数。 如果*pmode*不是清单常量之一的组合或合并了一组备用的常量，此函数只需将忽略那些。 如果*filename*是**NULL**，则调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则**errno**设置为**EINVAL**和该函数将返回-1。
+此函数验证其参数。 如果*pmode*不是清单常量之一的组合或合并了一组替代常量，该函数只需忽略这些。 如果*文件名*是**NULL**，将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则**errno**设置为**EINVAL**和该函数将返回-1。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -93,7 +83,7 @@ int _wchmod( const wchar_t *filename, int pmode );
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|可选标头|
+|例程所返回的值|必需的标头|可选标头|
 |-------------|---------------------|---------------------|
 |**_chmod**|\<io.h>|\<sys/types.h>、\<sys/stat.h>、\<errno.h>|
 |**_wchmod**|\<io.h> 或 \<wchar.h>|\<sys/types.h>、\<sys/stat.h>、\<errno.h>|

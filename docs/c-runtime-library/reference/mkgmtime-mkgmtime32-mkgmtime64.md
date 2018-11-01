@@ -1,10 +1,6 @@
 ---
-title: _mkgmtime、_mkgmtime32、_mkgmtime64 | Microsoft 文档
-ms.custom: ''
+title: _mkgmtime、_mkgmtime32、_mkgmtime64
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mkgmtime32
 - _mkgmtime64
@@ -29,8 +25,6 @@ f1_keywords:
 - mkgmtime
 - mkgmtime64
 - _mkgmtime
-dev_langs:
-- C++
 helpviewer_keywords:
 - mkgmtime32 function
 - time functions
@@ -42,20 +36,16 @@ helpviewer_keywords:
 - _mkgmtime32 function
 - time, converting
 ms.assetid: b4ca2b67-e198-4f43-b3e2-e8ad6bd01867
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bcb587cf5504f661512ccf88cf4f15d0555e2f18
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 65d96d79a45e05e4b371315c0612ed086f6ea2a0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405135"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50452255"
 ---
 # <a name="mkgmtime-mkgmtime32-mkgmtime64"></a>_mkgmtime、_mkgmtime32、_mkgmtime64
 
-将 UTC 时间表示为**结构** **tm**为 UTC 时间表示**time_t**类型。
+将所表示的 UTC 时间转换**struct** **tm**为 UTC 时间表示**time_t**类型。
 
 ## <a name="syntax"></a>语法
 
@@ -74,7 +64,7 @@ __time64_t _mkgmtime64(
 ### <a name="parameters"></a>参数
 
 *timeptr*<br/>
-指向在 UTC 时间的**结构** **tm**要转换。
+指向作为 UTC 时间的指针**struct** **tm**转换。
 
 ## <a name="return-value"></a>返回值
 
@@ -82,11 +72,11 @@ __time64_t _mkgmtime64(
 
 ## <a name="remarks"></a>备注
 
-**_Mkgmtime32**和 **_mkgmtime64**函数将转换为 UTC 时间 **__time32_t**或 **__time64_t**类型表示的时间UTC。 若要将本地时间转换为 UTC 时间，使用**mktime**， **_mktime32**，和 **_mktime64**相反。
+**_Mkgmtime32**并 **_mkgmtime64**函数将转换为 UTC 时间 **__time32_t**或者 **__time64_t**类型表示的时间UTC。 若要将本地时间转换为 UTC 时间，请使用**mktime**， **_mktime32**，并 **_mktime64**相反。
 
-**_mkgmtime**是内联函数计算结果为 **_mkgmtime64**，和**time_t**等效于 **__time64_t**。 如果需要强制编译器将解释**time_t**为旧的 32 位**time_t**，你可以定义 **_USE_32BIT_TIME_T**。 不建议使用此因为你的应用程序可能会失败后 2038 年 1 月 18 日 (32 位的最大范围**time_t**)，并且它不在任何允许在 64 位平台上。
+**_mkgmtime**是内联函数的计算结果为 **_mkgmtime64**，和**time_t**等效于 **__time64_t**。 如果您需要强制编译器将解释**time_t**为旧的 32 位**time_t**，可以定义 **_USE_32BIT_TIME_T**。 不建议，因为应用程序可能会在 2038 年 1 月 18 日 (最大范围为 32 位**time_t**)，并且不允许在所有 64 位平台上。
 
-结构中传递的时间将更改，如下所示，在相同的方式与发生更改时 **_mktime**函数： **tm_wday**和**tm_yday**字段设置为新基于值的值**tm_mday**和**tm_year**。 指定时**tm**结构时间时，请将设置**tm_isdst**字段：
+传入的时间结构中将更改，如下所示，在相同的方式与发生更改时 **_mktime**函数： **tm_wday**并**tm_yday**字段设置为新值的值基于**tm_mday**并**tm_year**。 指定时**tm**结构时，请设置**tm_isdst**字段：
 
 - 零 (0)，指示标准时间有效。
 
@@ -94,11 +84,11 @@ __time64_t _mkgmtime64(
 
 - 小于零的值，使用 C 运行时库代码计算有效的是标准时间还是夏令时。
 
-C 运行时库将使用 TZ 环境变量确定正确的夏令时。 如果未设置 TZ，将对操作系统进行查询以获取正确的区域夏令时行为。 **tm_isdst**是必填的字段。 如果未设置，未定义其值和返回值从**mktime**是不可预知的。
+C 运行时库将使用 TZ 环境变量确定正确的夏令时。 如果未设置 TZ，将对操作系统进行查询以获取正确的区域夏令时行为。 **tm_isdst**是必填的字段。 如果未设置，其值未定义和返回值从**mktime**是不可预知的。
 
-范围 **_mkgmtime32**函数为从 1970 年 1 月 1 日午夜到 23:59:59 2038 年 1 月 18 日，UTC UTC。 范围 **_mkgmtime64**为 1970 年 1 月 1 日午夜 UTC 至 23:59:59，3000 年 12 月 31 日，UTC。 超出范围日期将导致返回值-1。 范围 **_mkgmtime**取决于是否 **_USE_32BIT_TIME_T**定义。 如果未定义 （默认值） 的范围是的 **_mkgmtime64**; 否则为范围仅限于的 32 位范围 **_mkgmtime32**。
+范围 **_mkgmtime32**函数是从 1970 年 1 月 1 日午夜 UTC 到 23:59:59 2038 年 1 月 18 日，UTC。 范围 **_mkgmtime64**是午夜，自 1970 年 1 月 1 日，UTC 到 23:59:59，3000 年 12 月 31 日，UTC。 超出范围日期会导致返回值-1。 范围 **_mkgmtime**取决于是否 **_USE_32BIT_TIME_T**定义。 如果未定义 （默认值） 范围是 **_mkgmtime64**; 否则为范围仅限于的 32 位范围 **_mkgmtime32**。
 
-请注意， **gmtime**和**localtime**使用单个静态分配的缓冲区执行该转换。 如果提供此缓冲区**mkgmtime**，以前的内容会被销毁。
+请注意， **gmtime**并**localtime**使用单个静态分配的缓冲区用于转换。 如果提供此缓冲区**mkgmtime**，以前的内容会被销毁。
 
 ## <a name="example"></a>示例
 

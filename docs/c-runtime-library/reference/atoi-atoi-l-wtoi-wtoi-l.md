@@ -1,10 +1,6 @@
 ---
-title: atoi、_atoi_l、_wtoi、_wtoi_l | Microsoft 文档
-ms.custom: ''
+title: atoi、_atoi_l、_wtoi、_wtoi_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wtoi
 - _wtoi_l
@@ -30,8 +26,6 @@ f1_keywords:
 - atoi
 - _atoi_l
 - _wtoi_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _atoi_l function
 - ttoi function
@@ -46,16 +40,12 @@ helpviewer_keywords:
 - atoi function
 - wtoi function
 ms.assetid: ad7fda30-28ab-421f-aaad-ef0b8868663a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8ec426518aed278f98ca334ba4ed34830f5836a1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b54c0a58a070fa42218a7b048d9eb57b05040738
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397150"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50452235"
 ---
 # <a name="atoi-atoil-wtoi-wtoil"></a>atoi、_atoi_l、_wtoi、_wtoi_l
 
@@ -90,21 +80,21 @@ int _wtoi_l(
 
 ## <a name="return-value"></a>返回值
 
-每个函数返回**int**值生成的输入的字符解释为数字。 返回值为 0 **atoi**和 **_wtoi**，如果输入不能转换为该类型的值。
+每个函数返回**int**产生的输入的字符解释为数字值。 返回值为 0 **atoi**并 **_wtoi**，如果输入不能转换为该类型的值。
 
-对于大量负的整数值的溢出**LONG_MIN**返回。 **atoi**和 **_wtoi**返回**INT_MAX**和**INT_MIN**上这些条件。 在所有范围外的情况下， **errno**设置为**ERANGE**。 如果传递的参数是**NULL**，则调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则这些函数将设置**errno**到**EINVAL**并返回 0。
+对于大量负整数值的溢出**LONG_MIN**返回。 **atoi**并 **_wtoi**返回**INT_MAX**并**INT_MIN**在这些情况。 在所有超出范围情况下， **errno**设置为**ERANGE**。 如果传入的参数是**NULL**，将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许继续执行，这些函数将设置**errno**到**EINVAL** ，返回 0。
 
 ## <a name="remarks"></a>备注
 
-这些函数将字符串转换为整数值 (**atoi**和 **_wtoi**)。 输入字符串是一系列字符，可以解释为指定类型的数值。 该函数在首个它无法无法识别为数字一部分的字符处停止读取输入字符串。 此字符可能是终止字符串的空字符（'\0' 或 L'\0'）。
+这些函数将字符串转换为整数值 (**atoi**并 **_wtoi**)。 输入字符串是一系列字符，可以解释为指定类型的数值。 该函数在首个它无法无法识别为数字一部分的字符处停止读取输入字符串。 此字符可能是终止字符串的空字符（'\0' 或 L'\0'）。
 
-*Str*参数**atoi**和 **_wtoi**具有以下形式：
+*Str*自变量**atoi**并 **_wtoi**具有以下形式：
 
-> [*空白*] [*登录*] [*数字*]]
+> [*空格*] [*登录*] [*数字*]]
 
-A*空白*空格或制表符字符，将被忽略; 组成*登录*是加号 （+） 或减号 （-）; 和*数字*是一个或多个数字。
+一个*空格*包含的空格或制表符字符，将被忽略;*符号*可以是加号 （+） 或减号 （–）; 并且*数字*是一个或多个数字。
 
-使用这些函数的版本 **_l**后缀是相同，只不过它们使用传递而不是当前区域设置的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+使用这些函数的版本 **_l**后缀完全相同，只不过它们使用传递中而不是当前区域设置的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 

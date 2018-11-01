@@ -1,10 +1,6 @@
 ---
-title: CMDITabInfo 类 |Microsoft Docs
-ms.custom: ''
+title: CMDITabInfo 类
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CMDITabInfo
 - AFXMDICLIENTAREAWND/CMDITabInfo
@@ -19,8 +15,6 @@ f1_keywords:
 - AFXMDICLIENTAREAWND/CMDITabInfo::m_nTabBorderSize
 - AFXMDICLIENTAREAWND/CMDITabInfo::m_style
 - AFXMDICLIENTAREAWND/CMDITabInfo::m_tabLocation
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMDITabInfo [MFC], Serialize
 - CMDITabInfo [MFC], m_bAutoColor
@@ -34,16 +28,12 @@ helpviewer_keywords:
 - CMDITabInfo [MFC], m_style
 - CMDITabInfo [MFC], m_tabLocation
 ms.assetid: 988ae1b7-4f7f-4239-b88f-7e28b3291c5e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 615b38cdf60b8c7756d2e822b3afdb321b541d9f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b9b45142d0fb1d53ccecad31ace7ad1a6dd4ee40
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46418029"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50524704"
 ---
 # <a name="cmditabinfo-class"></a>CMDITabInfo 类
 
@@ -125,7 +115,7 @@ BOOL m_bAutoColor;
 
 ### <a name="remarks"></a>备注
 
-如果为 TRUE，每个选项卡将具有其自己的颜色。 由 MFC 库管理的一组颜色。 否则，选项卡中显示为空白。 默认值为 FALSE。
+如果为 TRUE，每个选项卡将具有其自己的颜色。 由 MFC 库管理的一组颜色。 否则，选项卡中显示为空白。 默认值是 FALSE。
 
 ##  <a name="m_bdocumentmenu"></a>  CMDITabInfo::m_bDocumentMenu
 
@@ -137,7 +127,7 @@ BOOL m_bDocumentMenu;
 
 ### <a name="remarks"></a>备注
 
-如果为 TRUE，每个选项卡 windows 将显示弹出菜单显示打开的文档选项卡区域; 的右边缘的列表否则，该选项卡窗口选项卡区域的右边缘显示滚动按钮。 默认值为 FALSE。
+如果为 TRUE，每个选项卡 windows 将显示弹出菜单显示打开的文档选项卡区域; 的右边缘的列表否则，该选项卡窗口选项卡区域的右边缘显示滚动按钮。 默认值是 FALSE。
 
 ##  <a name="m_benabletabswap"></a>  CMDITabInfo::m_bEnableTabSwap
 
@@ -193,7 +183,7 @@ BOOL m_bTabIcons;
 
 ### <a name="remarks"></a>备注
 
-如果为 TRUE，图标将显示在每个 MDI 选项卡。否则，不在选项卡上显示图标。 默认值为 FALSE。
+如果为 TRUE，图标将显示在每个 MDI 选项卡。否则，不在选项卡上显示图标。 默认值是 FALSE。
 
 ##  <a name="m_ntabbordersize"></a>  CMDITabInfo::m_nTabBorderSize
 

@@ -1,10 +1,6 @@
 ---
-title: _CrtSetBreakAlloc | Microsoft 文档
-ms.custom: ''
+title: _CrtSetBreakAlloc
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtSetBreakAlloc
 apilocation:
@@ -22,22 +18,16 @@ apitype: DLLExport
 f1_keywords:
 - CrtSetBreakAlloc
 - _CrtSetBreakAlloc
-dev_langs:
-- C++
 helpviewer_keywords:
 - CrtSetBreakAlloc function
 - _CrtSetBreakAlloc function
 ms.assetid: 33bfc6af-a9ea-405b-a29f-1c2d4d9880a1
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 32e8fedcd70d0e901c63cd5e794773451f436326
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bbc4b0de553533dde95f37675b3c9234569e3505
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395430"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50487823"
 ---
 # <a name="crtsetbreakalloc"></a>_CrtSetBreakAlloc
 
@@ -62,15 +52,15 @@ long _CrtSetBreakAlloc(
 
 ## <a name="remarks"></a>备注
 
-**_CrtSetBreakAlloc**允许应用程序的内存分配的特定点处中断并重新跟踪该请求的源执行内存泄露检测。 该函数使用在堆中分配它时分配到内存块的有序对象分配序号。 当[_DEBUG](../../c-runtime-library/debug.md)未定义，则调用 **_CrtSetBreakAlloc**在预处理过程中删除。
+**_CrtSetBreakAlloc**允许应用程序的内存分配的特定点处中断并重新跟踪请求的来源执行内存泄露检测。 该函数使用在堆中分配它时分配到内存块的有序对象分配序号。 当[_DEBUG](../../c-runtime-library/debug.md)未定义，则调用 **_CrtSetBreakAlloc**在预处理过程中删除。
 
 对象分配序号存储在 Crtdbg.h 中定义的 **_CrtMemBlockHeader** 结构的 *lRequest* 字段中。 当其中一个调试转储函数报告有关某个内存块的信息时，该编号将括在括号内，如{36}。
 
-详细了解如何 **_CrtSetBreakAlloc**可以用于其他内存管理函数，请参阅[跟踪堆分配请求](/visualstudio/debugger/crt-debug-heap-details)。 有关如何在基堆的调试版本中分配、初始化和管理内存块的详细信息，请参阅 [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details)。
+详细了解如何 **_CrtSetBreakAlloc**可以与其他内存管理函数一起使用，请参阅[跟踪堆分配请求](/visualstudio/debugger/crt-debug-heap-details)。 有关如何在基堆的调试版本中分配、初始化和管理内存块的详细信息，请参阅 [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details)。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_CrtSetBreakAlloc**|\<crtdbg.h>|
 

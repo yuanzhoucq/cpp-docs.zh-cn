@@ -1,10 +1,6 @@
 ---
-title: _execvp、_wexecvp | Microsoft 文档
-ms.custom: ''
+title: _execvp，_wexecvp
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _execvp
 - _wexecvp
@@ -25,24 +21,18 @@ f1_keywords:
 - _execvp
 - wexecvp
 - _wexecvp
-dev_langs:
-- C++
 helpviewer_keywords:
 - _execvp function
 - _wexecvp function
 - wexecvp function
 - execvp function
 ms.assetid: a4db15df-b204-4987-be7c-de84c3414380
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8c47154bd999b421c2170118236a899dcc4e2860
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 876ace62ac46b80d42f3ed0a3549757839e0b47a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402213"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50505304"
 ---
 # <a name="execvp-wexecvp"></a>_execvp，_wexecvp
 
@@ -90,9 +80,9 @@ intptr_t _wexecvp(
 
 ## <a name="remarks"></a>备注
 
-其中每个函数加载并执行一个新进程，将一个指针数组传递给命令行自变量和使用**路径**环境变量查找要执行的文件。
+所有这些函数将加载并执行新进程，将一个指针数组传递给命令行自变量和使用**路径**环境变量查找要执行的文件。
 
-**_Execvp**函数验证其参数。 如果*cmdname*是 null 指针，或*argv*是 null 指针，指向空数组，或如果数组包含一个空字符串作为第一个参数，这些函数将调用无效参数处理程序中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则这些函数将设置**errno**到**EINVAL**并返回-1。 不启动任何进程。
+**_Execvp**函数验证其参数。 如果*cmdname*是空指针，或*argv*是 null 指针，指向一个空数组，或如果数组包含一个空字符串作为第一个参数，这些函数将调用无效参数处理程序如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许继续执行，这些函数将设置**errno**到**EINVAL**并返回-1。 不启动任何进程。
 
 ## <a name="requirements"></a>要求
 

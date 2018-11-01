@@ -1,12 +1,6 @@
 ---
-title: 调用本机函数从托管代码 |Microsoft Docs
-ms.custom: ''
+title: 从托管代码调用本机函数
 ms.date: 11/04/2016
-ms.technology:
-- cpp-cli
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - native functions called from managed code [C++]
 - managed code [C++], interoperability
@@ -15,17 +9,12 @@ helpviewer_keywords:
 - calling native functions from managed code
 - interop [C++], calling native functions from managed code
 ms.assetid: 982cef18-20d9-42b4-8242-a77fa65f2e36
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- dotnet
-ms.openlocfilehash: 9b65fa8e201788811dbe41a8d4c3cb41bfbf5739
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 97b0221a4ec73be41bb5ba052607dfb5ced233c8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46408958"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50462033"
 ---
 # <a name="calling-native-functions-from-managed-code"></a>从托管代码调用本机函数
 

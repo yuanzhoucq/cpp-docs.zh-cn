@@ -1,10 +1,6 @@
 ---
-title: bsearch_s |Microsoft 文档
-ms.custom: ''
+title: bsearch_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - bsearch_s
 apilocation:
@@ -22,22 +18,16 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - bsearch_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - arrays [CRT], binary search
 - bsearch_s function
 ms.assetid: d5690d5e-6be3-4f1d-aa0b-5ca6dbded276
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c2600b77031967bec5d5dd549a7dd8f34fc5c5e3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cd621c1dae2cae847bbbf032dec7e6972c526203
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400611"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50430831"
 ---
 # <a name="bsearchs"></a>bsearch_s
 
@@ -64,29 +54,29 @@ void *bsearch_s(
 *base*<br/>
 指向搜索数据的基项的指针。
 
-*数*<br/>
+*数量*<br/>
 元素数量。
 
 *width*<br/>
 元素的宽度。
 
 *compare*<br/>
-比较两个元素的回调函数。 第一个参数是*上下文*指针。 第二个参数是一个指向*密钥*搜索。 第三个参数是指向要进行比较的数组元素的*密钥*。
+比较两个元素的回调函数。 第一个参数是*上下文*指针。 第二个参数是一个指向*密钥*搜索。 第三个参数是指向要与进行比较的数组元素的指针*密钥*。
 
 *context*<br/>
 指向可在比较函数中访问的对象的指针。
 
 ## <a name="return-value"></a>返回值
 
-**bsearch_s**将指针返回到的匹配项*密钥*指向数组中*基*。 如果*密钥*未找到，则该函数将返回**NULL**。 如果数组不是以升序排序的，或包含具有相同键的重复记录，则不可预知结果。
+**bsearch_s**的匹配项返回一个指针*密钥*指向的数组中*基*。 如果*键*未找到，则该函数将返回**NULL**。 如果数组不是以升序排序的，或包含具有相同键的重复记录，则不可预知结果。
 
-如果传递到此函数的参数无效，则将调用无效的参数处理程序，如 [Parameter Validation](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则**errno**设置为**EINVAL**和该函数将返回**NULL**。 有关详细信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
+如果传递到此函数的参数无效，则将调用无效的参数处理程序，如 [Parameter Validation](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则**errno**设置为**EINVAL**并且该函数返回**NULL**。 有关详细信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ### <a name="error-conditions"></a>错误条件
 
 |||||||
 |-|-|-|-|-|-|
-|*key*|*base*|*compare*|*数*|*width*|**errno**|
+|*key*|*base*|*compare*|*数量*|*width*|**errno**|
 |**NULL**|任何|任何|任何|任何|**EINVAL**|
 |任何|**NULL**|任何|!= 0|任何|**EINVAL**|
 |任何|任何|任何|任何|= 0|**EINVAL**|
@@ -94,7 +84,7 @@ void *bsearch_s(
 
 ## <a name="remarks"></a>备注
 
-**Bsearch_s**函数执行的已排序数组的二进制搜索*数*元素，每个*宽度*大小中的字节数。 *基*值是指向要搜索，该数组的基和*密钥*是正在查找的值。 *比较*参数是指向用户提供的例程将请求的键与数组元素进行比较并返回指定其关系的以下值之一：
+**Bsearch_s**函数执行的已排序数组的二进制搜索*数量*，每个元素*宽度*字节的大小。 *基*值是指向待搜索数组基的指针和*密钥*是要搜索的值。 *比较*参数是指向用户提供的例程，它比较所需的键的数组元素并返回指定其关系的以下值之一：
 
 |返回值*比较*例程|描述|
 |-----------------------------------------|-----------------|
@@ -102,11 +92,11 @@ void *bsearch_s(
 |0|键等于数组元素。|
 |> 0|键大于数组元素。|
 
-*上下文*指针可能有用，如果搜索的数据结构是一个对象，对象的一部分，比较函数需要访问对象的成员。 *比较*函数可能的 void 指针转换该对象的合适的对象类型和访问成员。 添加*上下文*参数将使得**bsearch_s**更安全，因为其他上下文可用于避免重新进入 bug 与使用静态变量以使数据可供关联*比较*函数。
+*上下文*指针可能有用，如果搜索的数据结构是一个对象的一部分，比较函数需要访问对象的成员。 *比较*函数可能会将 void 指针转换该对象的适当的对象类型并访问成员。 添加了*上下文*参数将使得**bsearch_s**更安全，因为其他上下文可用于避免重新进入 bug 与使用静态变量以使数据可供关联*比较*函数。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**bsearch_s**|\<stdlib.h> 和 \<search.h>|
 
@@ -114,7 +104,7 @@ void *bsearch_s(
 
 ## <a name="example"></a>示例
 
-此程序对具有 [qsort_s](qsort-s.md) 的字符串数组进行排序，然后使用 bsearch_s 查找单词“cat”。
+此程序对具有 [qsort_s](qsort-s.md)的字符串数组进行排序，然后使用 bsearch_s 查找单词“cat”。
 
 ```cpp
 // crt_bsearch_s.cpp

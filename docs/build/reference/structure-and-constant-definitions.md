@@ -1,23 +1,13 @@
 ---
-title: 结构和常量定义 |Microsoft Docs
-ms.custom: ''
+title: 结构和常量定义
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 ms.assetid: 1df7cf46-b853-4788-a257-100d5c37997f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2ecef10e8fd135e6d2d0899df65eaf2a992a9e20
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: c4cc5f08c8cbd0e7baea0f612063a6ebdbb56c1b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45717517"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50474293"
 ---
 # <a name="structure-and-constant-definitions"></a>结构和常量定义
 

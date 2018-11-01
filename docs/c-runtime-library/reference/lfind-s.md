@@ -1,10 +1,6 @@
 ---
-title: _lfind_s | Microsoft 文档
-ms.custom: ''
+title: _lfind_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _lfind_s
 apilocation:
@@ -23,8 +19,6 @@ apitype: DLLExport
 f1_keywords:
 - lfind_s
 - _lfind_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - linear searching
 - keys, finding in arrays
@@ -33,16 +27,12 @@ helpviewer_keywords:
 - searching, linear
 - _lfind_s function
 ms.assetid: f1d9581d-5c9d-4222-a31c-a6dfafefa40d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 963b657a009f7376a17706b4ac1e5fb4e8b69237
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 08c04d9d1ca69998d54304c96468298013907179
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404813"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50648431"
 ---
 # <a name="lfinds"></a>_lfind_s
 
@@ -69,7 +59,7 @@ void *_lfind_s(
 *base*<br/>
 指向搜索数据的基项的指针。
 
-*数*<br/>
+*数量*<br/>
 数组元素的数目。
 
 *size*<br/>
@@ -83,9 +73,9 @@ void *_lfind_s(
 
 ## <a name="return-value"></a>返回值
 
-如果找到该键， **_lfind_s**将指针返回到在数组的元素*基*匹配*密钥*。 如果未找到键， **_lfind_s**返回**NULL**。
+如果找到该键，则 **_lfind_s**处的数组的元素返回指向*基*相匹配*密钥*。 如果未找到该键， **_lfind_s**返回**NULL**。
 
-如果传递到此函数的参数无效，则将调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则**errno**设置为**EINVAL**和该函数将返回**NULL**。
+如果传递到此函数的参数无效，则将调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则**errno**设置为**EINVAL**并且该函数返回**NULL**。
 
 ### <a name="error-conditions"></a>错误条件
 
@@ -98,13 +88,13 @@ void *_lfind_s(
 
 ## <a name="remarks"></a>备注
 
-**_Lfind_s**函数执行值的线性搜索*密钥*数组中的*数*元素，每个*宽度*字节。 与不同**bsearch_s**， **_lfind_s**不需要要进行排序的数组。 *基*自变量是指向要搜索的数组的基类。 *比较*自变量是指向比较两个数组元素，然后返回一个值，指定其关系的用户提供例程。 **_lfind_s**调用*比较*搜索，传递例程的一个或多个期间*上下文*指针和在每次调用包含两个数组元素的指针。 *比较*例程必须比较元素，然后返回非零 （含义元素是不同的） 或 0 （这意味着元素相同的）。
+**_Lfind_s**函数执行值的线性搜索*密钥*数组中的*数*，每个元素*宽度*字节。 与不同**bsearch_s**， **_lfind_s**不需要要进行排序的数组。 *基*参数是指向待搜索数组基的指针。 *比较*参数是指向用户提供的比较两个数组元素，然后返回一个值，指定其关系的例程的指针。 **_lfind_s**调用*比较*例程的一个或多个时间搜索，并传递过程*上下文*指针和指向每个调用上的两个数组元素的指针。 *比较*例程必须比较这些元素，然后返回非零值 （表示元素是不同的） 或 0 （表示元素相同）。
 
-**_lfind_s**类似于 **_lfind**除外添加*上下文*指向指针的比较函数的自变量以及函数的参数列表。 *上下文*指针会很有用的搜索的数据结构是对象的一部分和*比较*函数需要访问对象的成员。 *比较*函数可以将 void 指针转换该对象的合适的对象类型和访问成员。 添加*上下文*参数将使得 **_lfind_s**更为安全，因为其他上下文可用于避免重新进入 bug 与使用静态变量以使数据可供关联*比较*函数。
+**_lfind_s**类似于 **_lfind**除了添加*上下文*指向比较函数的参数和函数的参数列表。 *上下文*指针可能有用，如果搜索的数据结构是对象的一部分并*比较*函数需要访问对象的成员。 *比较*函数可将 void 指针转换该对象的适当的对象类型并访问成员。 添加了*上下文*参数将使得 **_lfind_s**更加安全，因为其他上下文可用于避免重新进入 bug 与使用静态变量以使数据可供关联*比较*函数。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_lfind_s**|\<search.h>|
 

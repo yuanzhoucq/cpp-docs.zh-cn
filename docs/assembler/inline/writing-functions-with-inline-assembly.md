@@ -1,28 +1,18 @@
 ---
-title: 使用内联程序集编写函数 |Microsoft Docs
-ms.custom: ''
+title: 使用内联程序集编写函数
 ms.date: 08/30/2018
-ms.technology:
-- cpp-masm
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - functions [C++], inline assembly
 - inline assembly [C++], writing functions
 - assembler [C++], writing functions
 - __asm keyword [C++], in functions
 ms.assetid: b5df8a04-fdc7-4622-8c9e-e4b618927497
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c8b2694d2dc5781a6ef521abdc97e98c928be92c
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 7848a8f071f50f8d809a999a96a9c0f8193c480e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43680823"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50445183"
 ---
 # <a name="writing-functions-with-inline-assembly"></a>使用内联程序集编写函数
 
@@ -52,7 +42,7 @@ _TEXT   ENDS
         END
 ```
 
-由于此函数是为单独汇编程序编写的，因此它需要单独的源文件、程序集和链接步骤。 C 和 C++ 函数参数通常在堆栈上传递，因此该版本的 `power2` 函数通过其在堆栈上的位置访问其参数。 (请注意，**模型**指令，MASM 和一些其他汇编程序中还可以按名称访问堆栈参数和局部堆栈变量。)
+由于此函数是为单独汇编程序编写的，因此它需要单独的源文件、程序集和链接步骤。 C 和 C++ 函数自变量通常在堆栈上传递，因此该版本的 `power2` 函数通过其在堆栈上的位置访问其自变量。 (请注意，**模型**指令，MASM 和一些其他汇编程序中还可以按名称访问堆栈参数和局部堆栈变量。)
 
 ## <a name="example"></a>示例
 

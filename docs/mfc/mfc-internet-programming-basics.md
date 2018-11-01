@@ -1,12 +1,6 @@
 ---
-title: MFC Internet 编程基础知识 |Microsoft Docs
-ms.custom: ''
+title: MFC Internet 编程基础知识
 ms.date: 09/12/2018
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - ISAPI extensions, programming with ISAPI
 - Internet applications [MFC]
@@ -22,16 +16,12 @@ helpviewer_keywords:
 - Internet content [MFC]
 - WinInet classes [MFC]
 ms.assetid: 6df2dfd0-6e3f-4587-9d01-2a32f00f8a6f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b2be02e6cac5dac226f7b04cd627a292e3761980
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 9d44d78474ccb030184c6e79ed2f257ffb00a068
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50082666"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50509456"
 ---
 # <a name="mfc-internet-programming-basics"></a>MFC Internet 编程基础知识
 

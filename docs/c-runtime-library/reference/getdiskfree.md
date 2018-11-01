@@ -1,10 +1,6 @@
 ---
-title: _getdiskfree | Microsoft 文档
-ms.custom: ''
+title: _getdiskfree
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _getdiskfree
 apilocation:
@@ -23,8 +19,6 @@ apitype: DLLExport
 f1_keywords:
 - getdiskfree
 - _getdiskfree
-dev_langs:
-- C++
 helpviewer_keywords:
 - diskfree_t type
 - _getdiskfree function
@@ -32,16 +26,12 @@ helpviewer_keywords:
 - disk size
 - getdiskfree function
 ms.assetid: 47a3f6cf-4816-452a-8f3d-1c3ae02a0f2a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2fad5c67f247a40f1c8d65bec50ccf80f44b3d4d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 03c39802301406bc4250328983c8cf8bad94497f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401612"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50602275"
 ---
 # <a name="getdiskfree"></a>_getdiskfree
 
@@ -65,11 +55,11 @@ unsigned _getdiskfree(
 您需要了解其信息的磁盘驱动器。
 
 *driveinfo*<br/>
-A **_diskfree_t**将使用与驱动器有关的信息填充的结构。
+一个 **_diskfree_t**结构，它将使用与驱动器有关的信息进行填充。
 
 ## <a name="return-value"></a>返回值
 
-如果函数成功，则返回值为 0。 如果函数失败，则返回值为错误代码。 值**errno**设置由操作系统返回任何错误。 有关所指示的错误条件的详细信息**errno**，请参阅[errno 常量](../../c-runtime-library/errno-constants.md)。
+如果函数成功，则返回值为 0。 如果函数失败，则返回值为错误代码。 该值**errno**的任何错误，返回由操作系统设置。 有关所指示的错误条件的详细信息**errno**，请参阅[errno 常量](../../c-runtime-library/errno-constants.md)。
 
 ## <a name="remarks"></a>备注
 
@@ -84,11 +74,11 @@ struct _diskfree_t {
 };
 ```
 
-此函数验证其参数。 如果*driveinfo*指针**NULL**或*驱动器*指定了无效的驱动器，此函数调用无效参数处理程序中, 所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，函数将返回**EINVAL**和设置**errno**到**EINVAL**。 有效驱动器值范围为 0 到 26。 A*驱动器*值 0 指定当前的驱动器; 之后，数字映射到英语字母表此类中的字母，1 表示驱动器 A，3 表示驱动器 C，依此类推。
+此函数验证其参数。 如果*driveinfo*指针位于**NULL**或*驱动器*指定无效的驱动器，此函数将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，该函数返回**EINVAL** ，并设置**errno**到**EINVAL**。 有效驱动器值范围为 0 到 26。 一个*驱动器*值为 0 指定当前驱动器; 之后，数字映射到英语字母表此类中的字母，1 表示驱动器，3 表示驱动器 C，依此类推。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_getdiskfree**|\<direct.h>|
 

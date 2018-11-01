@@ -1,11 +1,6 @@
 ---
-title: log2、log2f、log2l | Microsoft 文档
-ms.custom: ''
+title: log2、log2f、log2l
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - log2
 - log2l
@@ -23,19 +18,13 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
 apitype: DLLExport
-dev_langs:
-- C++
 ms.assetid: 94d11b38-70b7-4d3a-94ac-523153c92b2e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 16fb56b1a3aef56e201d469974c5de434a08aa41
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5f1db48abdc7237dc46a0ea8a3ea5647a0fce62f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399522"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50579304"
 ---
 # <a name="log2-log2f-log2l"></a>log2、log2f、log2l
 
@@ -73,7 +62,7 @@ long double log2l(
 
 ## <a name="return-value"></a>返回值
 
-如果成功，返回值返回 log2 *x*。
+如果成功，则返回 log2 *x*。
 
 否则，可能返回以下值之一：
 
@@ -91,7 +80,7 @@ long double log2l(
 
 ## <a name="remarks"></a>备注
 
-如果 x 为整数，此函数将实质上是返回的最高有效 1 位的从零开始索引*x*。
+如果 x 是一个整数，此函数实质上是返回的最重要的 1 位的从零开始的索引*x*。
 
 ## <a name="requirements"></a>要求
 

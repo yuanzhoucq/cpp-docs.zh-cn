@@ -1,27 +1,16 @@
 ---
-title: 清单资源 （c + +） |Microsoft Docs
-ms.custom: ''
+title: 清单资源 （c + +）
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - manifest resources [C++]
 - resources [C++], manifest
 ms.assetid: 8615334c-22a0-44c0-93e0-5924528c9917
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 2da93d1baaf95799c7ef68d6cc854d554fbe6c47
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 081fd12a86c31973c7856ca7b9f3fcb129e2eb81
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46429560"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50578277"
 ---
 # <a name="manifest-resources-c"></a>清单资源 （c + +）
 
@@ -43,7 +32,7 @@ ms.locfileid: "46429560"
 </dependency>
 ```
 
-对于 Windows XP 或 Windows Vista 的应用程序，清单资源不仅指定应用程序使用的最新版本的 Windows 公共控件 (v6.0，如上图所示)，但它也支持[Syslink 控件](/windows/desktop/Controls/syslink-overview)。
+对于 Windows XP 或 Windows Vista 应用程序，清单资源不仅指定应用程序使用 Windows 公共控件的最新版本（v6.0，如上所示），还支持 [Syslink 控件](/windows/desktop/Controls/syslink-overview)。
 
 若要查看的版本和类型包含在清单资源的信息，可以在 XML 查看器或 Visual Studio 文本编辑器中打开该文件。 有关详细信息，请参阅 [在 Visual Studio 文本编辑器中打开清单资源](../windows/how-to-open-a-manifest-resource.md)。
 

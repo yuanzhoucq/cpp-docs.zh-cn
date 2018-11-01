@@ -1,10 +1,6 @@
 ---
-title: _set_fmode | Microsoft 文档
-ms.custom: ''
+title: _set_fmode
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _set_fmode
 apilocation:
@@ -23,24 +19,18 @@ apitype: DLLExport
 f1_keywords:
 - _set_fmode
 - set_fmode
-dev_langs:
-- C++
 helpviewer_keywords:
 - file translation [C++], default mode
 - _set_fmode function
 - file translation [C++], setting mode
 - set_fmode function
 ms.assetid: f80eb9c7-733b-4652-a9bc-6b3790a35f12
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 64b8be6d678a6907fc63018c99dd38d2fc8407ea
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: df6efcf3fd89ec87ad098200d1d9ba3d6b52c7e4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406389"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50500355"
 ---
 # <a name="setfmode"></a>_set_fmode
 
@@ -49,8 +39,8 @@ ms.locfileid: "32406389"
 ## <a name="syntax"></a>语法
 
 ```C
-errno_t _set_fmode( 
-   int mode 
+errno_t _set_fmode( 
+   int mode 
 );
 ```
 
@@ -61,17 +51,17 @@ errno_t _set_fmode(
 
 ## <a name="return-value"></a>返回值
 
-如果成功，则返回零；如果失败，则返回错误代码。 如果*模式*不 **_O_TEXT**或 **_O_BINARY**或 **_O_WTEXT**，则调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，此函数将**errno**到**EINVAL**并返回**EINVAL**。
+如果成功，则返回零；如果失败，则返回错误代码。 如果*模式下*不是 **_O_TEXT**或 **_O_BINARY**或者 **_O_WTEXT**，将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，此函数可设置**errno**到**EINVAL** ，并返回**EINVAL**。
 
 ## <a name="remarks"></a>备注
 
-该函数设置 [_fmode](../../c-runtime-library/fmode.md) 全局变量。 此变量指定的文件 I/O 操作的默认文件转换模式 **_open**和 **_pipe**。
+该函数设置 [_fmode](../../c-runtime-library/fmode.md) 全局变量。 此变量指定的文件 I/O 操作的默认文件转换模式 **_open**并 **_pipe**。
 
-**_O_TEXT**和 **_O_BINARY** Fcntl.h 中定义。 **EINVAL**在 Errno.h 中定义。
+**_O_TEXT**并 **_O_BINARY**在 Fcntl.h 中定义。 **EINVAL**在 Errno.h 中定义。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|可选标头|
+|例程所返回的值|必需的标头|可选标头|
 |-------------|---------------------|---------------------|
 |**_set_fmode**|\<stdlib.h>|\<fcntl.h>、\<errno.h>|
 

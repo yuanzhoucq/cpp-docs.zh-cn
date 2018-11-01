@@ -1,12 +1,6 @@
 ---
-title: 引用类型函数自变量 |Microsoft Docs
-ms.custom: ''
+title: 引用类型函数自变量
 ms.date: 08/27/2018
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - arguments [C++], function
 - functions [C++], paramters
@@ -14,16 +8,12 @@ helpviewer_keywords:
 - function arguments [C++], reference-type
 - passing parameters [C++], reference-type arguments
 ms.assetid: 0a70e831-9e76-46c0-821d-aeba13d73cc0
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 042f609988a87beb8a990405e0426405bc874128
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: cc5a65e9a6bd74e79856057cf7e7fea220c62d4b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43209746"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50536196"
 ---
 # <a name="reference-type-function-arguments"></a>引用类型函数自变量
 
@@ -85,7 +75,7 @@ int main()
 long DateOfYear( const Date& date );
 ```
 
-此原型将确保函数 `DateOfYear` 不会更改其参数。
+此原型将确保函数 `DateOfYear` 不会更改其自变量。
 
 原型采用引用类型的任何函数可以接受在其原位置相同的类型的对象，因为没有从标准转换*typename*到*typename*  <strong>&</strong>.
 

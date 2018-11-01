@@ -1,10 +1,6 @@
 ---
-title: _mbctolower、_mbctolower_l、_mbctoupper、_mbctoupper_l | Microsoft 文档
-ms.custom: ''
+title: _mbctolower、_mbctolower_l、_mbctoupper、_mbctoupper_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbctolower_l
 - _mbctoupper_l
@@ -32,8 +28,6 @@ f1_keywords:
 - mbctoupper
 - mbctolower
 - _mbctoupper_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _mbctolower function
 - mbctolower_l function
@@ -48,16 +42,12 @@ helpviewer_keywords:
 - _totlower function
 - mbctoupper function
 ms.assetid: 787fab71-3224-4ed7-bc93-4dcd8023fc54
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1af1ae33d9f3b752ed58aaa7bd3dd3e22f7de8c2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e620af526e5f0af02868bba4ba635e9ed6e34ff6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403656"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50539680"
 ---
 # <a name="mbctolower-mbctolowerl-mbctoupper-mbctoupperl"></a>_mbctolower、_mbctolower_l、_mbctoupper、_mbctoupper_l
 
@@ -95,20 +85,20 @@ unsigned int _mbctoupper_l(
 
 ## <a name="return-value"></a>返回值
 
-其中每个函数返回转换后的字符*c*如果可能。 否则它将返回字符*c*不变。
+每个函数返回转换的字符*c*如有可能。 否则它返回的字符*c*不变。
 
 ## <a name="remarks"></a>备注
 
-这些函数将测试一个字符*c*并且，如果可能，将应用以下转换之一。
+这些函数将测试一个字符*c*和，如果可能，请应用下列转换之一。
 
 |例程|转换|
 |--------------|--------------|
 |**_mbctolower**， **_mbctolower_l**|大写字符到小写字符。|
 |**_mbctoupper**， **_mbctoupper_l**|小写字符到大写字符。|
 
-输出值受区域设置的 LC_CTYPE 类别设置影响；有关详细信息，请参阅 [setlocale](setlocale-wsetlocale.md)。 此函数而无需的版本 **_l**后缀使用当前区域设置区域设置相关的行为; 的版本与 **_l**后缀是相同，但它使用的区域设置参数改用已传入。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+输出值受区域设置的 LC_CTYPE 类别设置影响；有关详细信息，请参阅 [setlocale](setlocale-wsetlocale.md)。 无需此函数的版本 **_l**后缀的此区域设置相关的行为; 使用当前区域设置与版本 **_l**后缀是完全相同，只不过它使用的区域设置参数改为传入。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
-在以前版本， **_mbctolower**调用**jtolower**，和 **_mbctoupper**调用**jtoupper**。 对于新代码，请改用新名称。
+在上一版本中， **_mbctolower**调用**jtolower**，并 **_mbctoupper**调用**jtoupper**。 对于新代码，请改用新名称。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 

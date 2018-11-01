@@ -1,25 +1,15 @@
 ---
-title: x86 内部函数列表 |Microsoft Docs
-ms.custom: ''
+title: x86 内部函数列表
 ms.date: 06/01/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - cl.exe compiler, intrinsics
 - intrinsics, x86
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d3ae21e0c7f39ef1f4b2ab5379c556b987fcf37b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 251e4741f069cf44376c2f6a7ed4e92aa949452b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448462"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50560584"
 ---
 # <a name="x86-intrinsics-list"></a>x86 内部函数列表
 
@@ -33,7 +23,7 @@ ms.locfileid: "46448462"
 
 - [Intel 64 和 IA-32 体系结构软件开发人员手册](https://software.intel.com/articles/intel-sdm)
 
-- [Intel 体系架构指令集扩展编程参考](https://software.intel.com/isa-extensions)
+- [Intel 体系结构指令集扩展编程参考](https://software.intel.com/isa-extensions)
 
 - [Intel 高级矢量扩展简介](https://software.intel.com/articles/introduction-to-intel-advanced-vector-extensions)
 

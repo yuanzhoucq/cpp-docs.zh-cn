@@ -1,10 +1,6 @@
 ---
-title: _snprintf_s、_snprintf_s_l、_snwprintf_s、_snwprintf_s_l | Microsoft 文档
-ms.custom: ''
+title: _snprintf_s、_snprintf_s_l、_snwprintf_s、_snwprintf_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _snprintf_s
 - _snprintf_s_l
@@ -35,8 +31,6 @@ f1_keywords:
 - snwprintf_s
 - sntprintf_s
 - sntprintf_s_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _snprintf_s_l function
 - _snwprintf_s_l function
@@ -52,16 +46,12 @@ helpviewer_keywords:
 - _snwprintf_s function
 - formatted text [C++]
 ms.assetid: 9336ab86-13e5-4a29-a3cd-074adfee6891
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f3744fc543cd5c478ffba01e3abca9b152145be6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5918ab1dd9b7108248e638f267ceb8757802231a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32416434"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50560025"
 ---
 # <a name="snprintfs-snprintfsl-snwprintfs-snwprintfsl"></a>_snprintf_s、_snprintf_s_l、_snwprintf_s、_snwprintf_s_l
 
@@ -122,7 +112,7 @@ int _snwprintf_s(
 输出的存储位置。
 
 *sizeOfBuffer*<br/>
-输出的存储位置大小。 大小中**字节**为 **_snprintf_s**或大小**单词**为 **_snwprintf_s**。
+输出的存储位置大小。 大小以**字节**有关 **_snprintf_s**或大小中**单词**有关 **_snwprintf_s**。
 
 *count*<br/>
 可存储的最大字符数，或 [_TRUNCATE](../../c-runtime-library/truncate.md)。
@@ -138,26 +128,26 @@ int _snwprintf_s(
 
 ## <a name="return-value"></a>返回值
 
-**_snprintf_s**返回存储中的字符数*缓冲区*，不包括终止 null 字符。 **_snwprintf_s**返回的存储中的宽字符数*缓冲区*，不包括终止 null 宽字符。
+**_snprintf_s**返回存储中的字符数*缓冲区*，不包括终止 null 字符。 **_snwprintf_s**返回存储在中的宽字符数*缓冲区*，不包括终止 null 宽字符。
 
-如果需要使用存储来存储数据和终止 null 超过*sizeOfBuffer*，则调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果在无效的参数处理程序后继续执行，这些函数将设置*缓冲区*为空字符串，设置**errno**到**ERANGE**，并返回-1。
+如果所需存储数据和终止 null 的存储超出*sizeOfBuffer*，将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果将无效参数处理程序后继续执行，这些函数将设置*缓冲区*为空字符串，设置**errno**到**ERANGE**，并返回-1。
 
-如果*缓冲区*或*格式*是**NULL**指针，或如果*计数*小于或等于 0，将调用无效参数处理程序。 如果允许执行继续，则这些函数将设置**errno**到**EINVAL**并返回-1。
+如果*缓冲区*或*格式*是**NULL**指针，或者如果*计数*小于或等于 0，将调用无效参数处理程序。 如果允许继续执行，这些函数将设置**errno**到**EINVAL**并返回-1。
 
 有关这些及其他错误代码的信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>备注
 
-**_Snprintf_s**函数格式和存储*计数*或更少字符中的*缓冲区*并追加终止 null。 每个自变量 （如果有） 进行转换和输出中的相应格式规范根据*格式*。 格式是与一致**printf**系列函数，请参阅[格式规范语法： printf 和 wprintf 函数](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)。 如果在重叠的字符串之间发生复制，则此行为不确定。
+**_Snprintf_s**函数格式化并存储*计数*或更少字符中的*缓冲区*并追加终止 null。 每个自变量 （如果有） 进行转换和输出根据中的相应格式规范*格式*。 格式设置是与一致**printf**系列函数，请参见[格式规范语法： printf 和 wprintf 函数](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)。 如果在重叠的字符串之间发生复制，则此行为不确定。
 
-如果*计数*是[_TRUNCATE](../../c-runtime-library/truncate.md)，然后 **_snprintf_s**尽可能多的字符串作为将写入中容纳不下*缓冲区*而保留的空间终止 null。 如果整个字符串 （具有终止 null) 所能容纳的*缓冲区*，然后 **_snprintf_s**返回写入字符数 （不包括终止 null）; 否则为 **_snprintf_s**将返回-1 以指示该截断发生。
+如果*计数*是[_TRUNCATE](../../c-runtime-library/truncate.md)，然后 **_snprintf_s**尽可能将字符串写入中容纳不下*缓冲区*保留空间时终止 null。 如果整个字符串 （具有终止 null) 适合*缓冲区*，然后 **_snprintf_s**返回写入字符数 （不包括终止 null）; 否则为 **_snprintf_s**返回-1 指示该截断出现。
 
 > [!IMPORTANT]
 > 确保 format 不是用户定义的字符串。
 
-**_snwprintf_s**是宽字符版本的 **_snprintf_s**; 的指针参数 **_snwprintf_s**是宽字符字符串。 编码错误检测 **_snwprintf_s**可能会与不同，在 **_snprintf_s**。 **_snwprintf_s**、 like **swprintf_s**，将输出一个字符串，而不是类型的目标**文件**。
+**_snwprintf_s**是宽字符版本 **_snprintf_s**; 的指针参数 **_snwprintf_s**都是宽字符字符串。 检测到的编码中的错误 **_snwprintf_s**可能不同于在 **_snprintf_s**。 **_snwprintf_s**，例如**swprintf_s**，将输出写入到一个字符串，而不是类型的目标**文件**。
 
-使用这些函数的版本 **_l**后缀是相同，只不过它们使用传递而不是当前线程区域设置的区域设置参数。
+使用这些函数的版本 **_l**后缀完全相同，只不过它们使用传递中而不是当前线程区域设置的区域设置参数。
 
 在 C++ 中，使用这些函数由模板重载简化；重载可以自动推导出缓冲区长度 (不再需要指定大小自变量)，并且它们可以自动用以更新、更安全的对应物替换旧的、不安全的函数。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 
@@ -170,7 +160,7 @@ int _snwprintf_s(
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_snprintf_s**， **_snprintf_s_l**|\<stdio.h>|
 |**_snwprintf_s**， **_snwprintf_s_l**|\<stdio.h> 或 \<wchar.h>|

@@ -1,10 +1,6 @@
 ---
-title: CAnimationGroup 类 |Microsoft Docs
-ms.custom: ''
+title: CAnimationGroup 类
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CAnimationGroup
 - AFXANIMATIONCONTROLLER/CAnimationGroup
@@ -28,8 +24,6 @@ f1_keywords:
 - AFXANIMATIONCONTROLLER/CAnimationGroup::m_pStoryboard
 - AFXANIMATIONCONTROLLER/CAnimationGroup::m_nGroupID
 - AFXANIMATIONCONTROLLER/CAnimationGroup::m_pParentController
-dev_langs:
-- C++
 helpviewer_keywords:
 - CAnimationGroup [MFC], CAnimationGroup
 - CAnimationGroup [MFC], Animate
@@ -52,16 +46,12 @@ helpviewer_keywords:
 - CAnimationGroup [MFC], m_nGroupID
 - CAnimationGroup [MFC], m_pParentController
 ms.assetid: 8bc18ceb-33a2-41d0-9731-71811adacab7
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 803df920e40683d3fd2f3920e2fb3471d7b4483d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b05de00697aa019382014402f7701a8341da5198
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46381344"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50512913"
 ---
 # <a name="canimationgroup-class"></a>CAnimationGroup 类
 
@@ -108,7 +98,7 @@ class CAnimationGroup;
 |名称|描述|
 |----------|-----------------|
 |[CAnimationGroup::m_bAutoclearTransitions](#m_bautocleartransitions)|指定如何清除从属于组的动画对象的转换。 如果此成员为 TRUE，则会自动删除转换时已安排动画。 否则，您需要手动删除转换。|
-|[CAnimationGroup::m_bAutodestroyAnimationObjects](#m_bautodestroyanimationobjects)|指定如何销毁动画对象。 如果此参数为 TRUE，则销毁组时，将自动销毁动画对象。 否则，必须手动销毁动画对象。 默认值为 FALSE。 仅当使用 new 运算符动态分配属于组的所有动画对象，请将此值设置为 TRUE。|
+|[CAnimationGroup::m_bAutodestroyAnimationObjects](#m_bautodestroyanimationobjects)|指定如何销毁动画对象。 如果此参数为 TRUE，则销毁组时，将自动销毁动画对象。 否则，必须手动销毁动画对象。 默认值是 FALSE。 仅当使用 new 运算符动态分配属于组的所有动画对象，请将此值设置为 TRUE。|
 |[CAnimationGroup::m_bAutodestroyKeyframes](#m_bautodestroykeyframes)|指定要销毁的关键帧的方式。 如果此值为 TRUE，删除并销毁; 所有关键帧否则会从列表中只中删除。 默认值为 TRUE。|
 |[CAnimationGroup::m_lstAnimationObjects](#m_lstanimationobjects)|包含的动画对象的列表。|
 |[CAnimationGroup::m_lstKeyFrames](#m_lstkeyframes)|包含一系列关键帧。|
@@ -278,7 +268,7 @@ BOOL m_bAutoclearTransitions;
 
 ##  <a name="m_bautodestroyanimationobjects"></a>  CAnimationGroup::m_bAutodestroyAnimationObjects
 
-指定如何销毁动画对象。 如果此参数为 TRUE，则销毁组时，将自动销毁动画对象。 否则，必须手动销毁动画对象。 默认值为 FALSE。 仅当使用 new 运算符动态分配属于组的所有动画对象，请将此值设置为 TRUE。
+指定如何销毁动画对象。 如果此参数为 TRUE，则销毁组时，将自动销毁动画对象。 否则，必须手动销毁动画对象。 默认值是 FALSE。 仅当使用 new 运算符动态分配属于组的所有动画对象，请将此值设置为 TRUE。
 
 ```
 BOOL m_bAutodestroyAnimationObjects;

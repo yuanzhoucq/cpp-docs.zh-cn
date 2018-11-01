@@ -1,11 +1,6 @@
 ---
-title: _Cbuild，_FCbuild，_LCbuild |Microsoft 文档
-ms.custom: ''
+title: _Cbuild、 _FCbuild、 _LCbuild
 ms.date: 03/30/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - _Cbuild
 - _FCbuild
@@ -30,26 +25,20 @@ f1_keywords:
 - complex/_Cbuild
 - complex/_FCbuild
 - complex/_LCbuild
-dev_langs:
-- C++
 helpviewer_keywords:
 - _Cbuild function
 - _FCbuild function
 - _LCbuild function
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c6d567dc02715b9e55644b755b6d7360f2fe3d37
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5565c87a3cccd1715a1357f417238587f3fba4d5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394382"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50511795"
 ---
-# <a name="cbuild-fcbuild-lcbuild"></a>_Cbuild，_FCbuild _LCbuild
+# <a name="cbuild-fcbuild-lcbuild"></a>_Cbuild、 _FCbuild、 _LCbuild
 
-构造从与实部和虚部的复数。
+构造从实部和虚部的复数。
 
 ## <a name="syntax"></a>语法
 
@@ -64,24 +53,24 @@ _Lcomplex _LCbuild( long double real, long double imaginary );
 *real*<br/>
 要构造的复数实部。
 
-*虚部*<br/>
+*虚数*<br/>
 要构造的复数的虚部。
 
 ## <a name="return-value"></a>返回值
 
-A **_Dcomplex**， **_Fcomplex**，或 **_Lcomplex**结构，它表示复数 (*实际*，*虚部* \*我) 为指定的浮点类型的值。
+一个 **_Dcomplex**， **_Fcomplex**，或 **_Lcomplex**结构，它表示复数 (*实际*，*虚部* \*我) 指定的浮点类型的值。
 
 ## <a name="remarks"></a>备注
 
-**_Cbuild**， **_FCbuild**，和 **_LCbuild**函数简化创建复杂类型。 使用[creal，crealf，creall](creal-crealf-creall.md)和[cimag，cimagf，cimagl](cimag-cimagf-cimagl.md)函数来检索表示复数的实部和虚部部分。
+**_Cbuild**， **_FCbuild**，并 **_LCbuild**函数简化复杂类型的创建。 使用[creal、 crealf、 creall](creal-crealf-creall.md)并[cimag、 cimagf、 cimagl](cimag-cimagf-cimagl.md)函数来检索表示复数的实部和虚部部分。
 
 ## <a name="requirements"></a>要求
 
-|例程|C 标头|C++ 标头|
+|例程所返回的值|C 标头|C++ 标头|
 |-------------|--------------|------------------|
 |**_Cbuild**， **_FCbuild**， **_LCbuild**|\<complex.h>|\<ccomplex>|
 
-这些函数是特定于 Microsoft 的。 类型 **_Dcomplex**， **_Fcomplex**，和 **_Lcomplex**到未实现的 C99 本机类型的特定于 Microsoft 的等效项**double _Complex**， **float _Complex**，和**长双精度 _Complex**分别。 有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+这些函数是特定于 Microsoft 的。 类型 **_Dcomplex**， **_Fcomplex**，并 **_Lcomplex**是未实现 C99 本机类型与特定于 Microsoft 的等效**double _Complex**， **float _Complex**，和**long double _Complex**分别。 有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="see-also"></a>请参阅
 

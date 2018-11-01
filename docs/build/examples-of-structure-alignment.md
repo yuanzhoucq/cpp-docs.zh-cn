@@ -1,30 +1,20 @@
 ---
-title: 结构对齐示例 |Microsoft 文档
-ms.custom: ''
+title: 结构对齐示例
 ms.date: 03/26/2018
-ms.technology:
-- cpp-tools
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - structure alignment
 - examples [C++], structure alignment
 ms.assetid: 03d137bf-5cc4-472e-9583-6498f2534199
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a9c4e8cb27d02777e40af56217bd82dec6e647b6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 27f7e89b1c7faec06347d8760247a76a33e0b91e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32367737"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50466233"
 ---
 # <a name="examples-of-structure-alignment"></a>结构对齐示例
 
-下面四个示例每个声明对齐的结构或联合和相应数字阐释该结构或联合在内存中的布局。 在图中每一列代表一字节的内存，并列中的数字指示该字节的偏移量。 第二行的每个图中的名称对应于中声明的变量的名称。 阴影的列指示填充，必须达到指定的对齐方式。
+以下四个示例每个声明对齐的结构或联合和相应的图形说明了该结构或联合在内存中的布局。 在图中每一列代表一字节的内存，并在列中的数字表示的字节偏移量。 第二行的每个图形中的名称对应于在声明变量的名称。 阴影的列指示填充的所需实现指定的对齐方式。
 
 ## <a name="example-1"></a>示例 1
 

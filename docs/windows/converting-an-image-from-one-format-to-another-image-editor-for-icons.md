@@ -1,29 +1,18 @@
 ---
-title: 将从一种格式图像转换到另一个 （图标的图像编辑器） |Microsoft Docs
-ms.custom: ''
+title: 将图像从一种格式转换为另一种格式（图标的图像编辑器）
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - images [C++], stand-alone editing
 - Image editor [C++], converting image formats
 - graphics [C++], converting formats
 - images [C++], converting formats
 ms.assetid: 0409c2bd-3bd8-4d72-9c71-c683b6cf51be
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 5b34b0a55f079962860bb0d9055f19780273d267
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b459e3c7d5bfd29b2d130933ea2f23c4ecd6616b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46406374"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50498327"
 ---
 # <a name="converting-an-image-from-one-format-to-another-image-editor-for-icons"></a>将图像从一种格式转换为另一种格式（图标的图像编辑器）
 

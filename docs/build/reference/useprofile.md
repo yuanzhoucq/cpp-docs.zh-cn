@@ -1,48 +1,38 @@
 ---
-title: / USEPROFILE （使用 PGO 数据与 LTCG） |Microsoft 文档
-ms.custom: ''
+title: /USEPROFILE （与 LTCG 使用 PGO 数据）
 ms.date: 03/14/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 f1_keywords:
 - USEPROFILE
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 156a571eaa3db31b8c5345f1550346503651665d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4b780bed3b92b874f2bf18fb0235e8e2baf95ae9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32377988"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50550626"
 ---
-# <a name="useprofile-run-pgo-in-thread-safe-mode"></a>/ USEPROFILE (在线程安全模式下的运行 PGO)
+# <a name="useprofile-run-pgo-in-thread-safe-mode"></a>/USEPROFILE (在线程安全模式下运行 PGO)
 
-此链接器选项一起使用[/LTCG (链接时间代码生成](ltcg-link-time-code-generation.md)通知链接器使用按配置优化 (PGO) 定型数据生成。
+此链接器选项一起使用[/LTCG (链接时间代码生成](ltcg-link-time-code-generation.md)通知链接器使用按配置优化 (PGO) 训练数据生成。
 
 ## <a name="syntax"></a>语法
 
-> **/ USEPROFILE**[**:**{**主动**|**PGD =**_filename_}]
+> **/USEPROFILE**[**:**{**过激**|**PGD =**_文件名_}]
 
 ### <a name="arguments"></a>自变量
 
-**主动**<br/>
-此可选参数指定应在优化的代码生成期间使用的主动速度优化。
+**积极**<br/>
+此可选参数指定在优化的代码生成过程中，应使用主动速度优化。
 
-**PGD**=*filename*<br/>
-指定 .pgd 文件的基文件名。 默认情况下，链接器使用带.pgd 扩展名的基的可执行文件名称。
+**PGD**=*文件名*<br/>
+指定 .pgd 文件的基文件名。 默认情况下，链接器使用带.pgd 扩展名基可执行文件名称。
 
 ## <a name="remarks"></a>备注
 
-**/USEPROFILE**链接器选项一起使用 **/LTCG**生成或更新基于 PGO 培训数据优化的版本。 它是已弃用的等效项 **/LTCG:PGUPDATE**和 **/ltcg: pgoptimize**选项。
+**/USEPROFILE**连同使用链接器选项 **/LTCG**生成或更新优化的生成基于 PGO 训练数据。 它是已弃用的等效 **/LTCG:PGUPDATE**并 **/ltcg: pgoptimize**选项。
 
-可选**主动**参数禁用大小相关试探法来尝试针对速度进行优化。 这可能会导致大大增加你可执行文件的大小和可能增加所生成的速度的优化功能。 你应配置文件，并比较使用和不使用的结果**主动**。 此参数必须指定显式;默认情况下不启用它。
+可选**过激**参数禁用大小相关试探法来尝试优化速度。 这可能会导致优化，显著增大到可执行文件，并可能会增加所生成的速度。 您应配置文件，并比较使用和不使用的结果**过激**。 必须显式; 指定此参数默认情况下未启用它。
 
-**PGD**参数指定要使用中的相同的定型数据.pgd 文件的可选名称[/GENPROFILE 或 /FASTGENPROFILE](genprofile-fastgenprofile-generate-profiling-instrumented-build.md)。 它是已弃用的等效项 **/PGD**切换。 默认情况下，或如果没有*filename*指定，如使用可执行文件具有相同的基名称的.pgd 文件。
+**PGD**参数指定要使用中的相同的定型数据.pgd 文件的可选名称[/GENPROFILE 或 /FASTGENPROFILE](genprofile-fastgenprofile-generate-profiling-instrumented-build.md)。 它是已弃用的等效 **/PGD**切换。 默认情况下，或如果没有*文件名*指定，则具有相同的基名称，如使用可执行文件的.pgd 文件。
 
 **/USEPROFILE**链接器选项是 Visual Studio 2015 中的新增功能。
 
@@ -52,11 +42,11 @@ ms.locfileid: "32377988"
 
 1. 选择**配置属性** > **链接器** > **优化**属性页。
 
-1. 在**链接时间代码生成**属性，选择**使用链接时间代码生成 (/ LTCG)**。
+1. 在中**链接时间代码生成**属性中，选择**使用链接时间代码生成 (/ LTCG)**。
 
 1. 选择**配置属性** > **链接器** > **命令行**属性页。
 
-1. 输入 **/USEPROFILE**选项和可选参数插入**其他选项**框。 选择**确定**以保存所做的更改。
+1. 输入 **/USEPROFILE**选项和可选参数置于**其他选项**框。 选择**确定**以保存所做的更改。
 
 ### <a name="to-set-this-linker-option-programmatically"></a>以编程方式设置此链接器选项
 

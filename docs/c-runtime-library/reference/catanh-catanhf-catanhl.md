@@ -1,11 +1,6 @@
 ---
-title: catanh、catanhf、catanhl | Microsoft 文档
-ms.custom: ''
+title: catanh、catanhf、catanhl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - catanh
 - catanhf
@@ -30,27 +25,21 @@ f1_keywords:
 - complex/catanh
 - complex/catanhf
 - complex/catanhl
-dev_langs:
-- C++
 helpviewer_keywords:
 - catanh function
 - catanhf function
 - catanhl function
 ms.assetid: 1b6021cb-647a-41b4-9d7f-919cc8b57b86
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cd74d00e7f5be5e7631bc33fb9b7ea13eb32a407
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8c71d4e44de72b54fd334fc2464ca221f36855a3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393945"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50646352"
 ---
 # <a name="catanh-catanhf-catanhl"></a>catanh、catanhf、catanhl
 
-检索实际轴间隔 [-1; + 1] 外的分支刮痕部为复数的反双曲正切。
+检索复数的分支切割超出间隔 [-1; + 1] 沿实轴的反双曲正切值。
 
 ## <a name="syntax"></a>语法
 
@@ -79,15 +68,15 @@ _Lcomplex catanhl(
 
 ## <a name="return-value"></a>返回值
 
-反双曲正切值*z*，以弧度为单位。 结果是实际轴和间隔中，不受限制 [-iπ/2; + iπ/2] 轴虚部的复数。 如果将发生域错误*z*超出间隔 [-1，+ 1]。 如果将发生极性错误*z*是-1 或 + 1。
+反双曲正切值*z*，以弧度为单位。 结果为无限沿实轴，并位于的间隔 [-i π/2; + i π/2] 沿虚轴。 如果将发生域错误*z*超出间隔 [-1，+ 1]。 如果将发生极点错误*z*为-1 或 + 1。
 
 ## <a name="remarks"></a>备注
 
-由于 c + + 允许重载，你可以调用的重载**catanh**采用并返回 **_Fcomplex**和 **_Lcomplex**值。 在 C 程序中， **catanh**始终采用并返回 **_Dcomplex**值。
+由于 c + + 允许重载，可以调用的重载**catanh**采用并返回 **_Fcomplex**并 **_Lcomplex**值。 在 C 程序中， **catanh**始终采用并返回 **_Dcomplex**值。
 
 ## <a name="requirements"></a>要求
 
-|例程|C 标头|C++ 标头|
+|例程所返回的值|C 标头|C++ 标头|
 |-------------|--------------|------------------|
 |**catanh**， **catanhf**， **catanhl**|\<complex.h>|\<ccomplex>|
 

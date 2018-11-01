@@ -1,11 +1,6 @@
 ---
-title: fdim、fdimf、fdiml | Microsoft 文档
-ms.custom: ''
+title: fdim、fdimf、fdiml
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - fdim
 - fdimf
@@ -30,23 +25,17 @@ f1_keywords:
 - math/fdim
 - math/fdimf
 - math/fdiml
-dev_langs:
-- C++
 helpviewer_keywords:
 - fdim function
 - fdimf function
 - fdiml function
 ms.assetid: 2d4ac639-51e9-462d-84ab-fb03b06971a0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cdcad02c94717715fdda1b3a9d2e820fc16d0bf4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d8cea831e333ebcd9677d830641c60e460ba5ed4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397501"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50515084"
 ---
 # <a name="fdim-fdimf-fdiml"></a>fdim、fdimf、fdiml
 
@@ -92,7 +81,7 @@ long double fdiml(
 
 ## <a name="return-value"></a>返回值
 
-返回正差额*x*和*y*:
+返回之间的正数差*x*并*y*:
 
 |返回值|方案|
 |------------------|--------------|
@@ -111,9 +100,9 @@ long double fdiml(
 
 ## <a name="remarks"></a>备注
 
-由于 c + + 允许重载，你可以调用的重载**fdim**采用并返回**float**和**长** **double**类型。 在 C 程序中， **fdim**始终采用并返回**double**。
+由于 c + + 允许重载，可以调用的重载**fdim**采用并返回**float**并**长** **double**类型。 在 C 程序中， **fdim**始终采用并返回**double**。
 
-除 NaN 处理中，此函数相当于`fmax(x - y, 0)`。
+除了 NaN 处理，此函数相当于`fmax(x - y, 0)`。
 
 ## <a name="requirements"></a>要求
 

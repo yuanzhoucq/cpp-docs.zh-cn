@@ -1,10 +1,6 @@
 ---
-title: _lrotl、_lrotr | Microsoft 文档
-ms.custom: ''
+title: _lrotl、_lrotr
 ms.date: 04/04/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _lrotl
 - _lrotr
@@ -26,8 +22,6 @@ f1_keywords:
 - lrotl
 - _lrotr
 - _lrotl
-dev_langs:
-- C++
 helpviewer_keywords:
 - lrotl function
 - bits
@@ -37,20 +31,16 @@ helpviewer_keywords:
 - _lrotl function
 - bits, rotating
 ms.assetid: d42f295b-35f9-49d2-9ee4-c66896ffe68e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0182256b06a3f04acbb941d02624e2b512b22a97
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 71ca61676e4551155f9f14e792c5c1cee65ddb7e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400624"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50518412"
 ---
 # <a name="lrotl-lrotr"></a>_lrotl、_lrotr
 
-旋转位向左 (**_lrotl**) 或向右 (**_lrotr**)。
+将位向左旋转 (**_lrotl**) 或向右 (**_lrotr**)。
 
 ## <a name="syntax"></a>语法
 
@@ -73,11 +63,11 @@ unsigned long _lrotr( unsigned long value, int shift );
 
 ## <a name="remarks"></a>备注
 
-**_Lrotl**和 **_lrotr**函数旋转*值*通过*shift* bits。 **_lrotl**旋转左、 右边更有效的位的值。 **_lrotr**旋转值右侧，向不太高有效位。 两个函数将旋转的位从 *value* 的一端移到另一端。
+**_Lrotl**并 **_lrotr**函数将旋转*值*通过*shift*位。 **_lrotl**旋转左、 向更有效的位的值。 **_lrotr**旋转值向右，向不太明显的位。 两个函数将旋转的位从 *value* 的一端移到另一端。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_lrotl**， **_lrotr**|\<stdlib.h>|
 

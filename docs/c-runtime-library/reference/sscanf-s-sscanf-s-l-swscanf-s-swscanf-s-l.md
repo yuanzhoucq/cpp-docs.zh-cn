@@ -1,10 +1,6 @@
 ---
-title: sscanf_s、_sscanf_s_l、swscanf_s、_swscanf_s_l | Microsoft 文档
-ms.custom: ''
+title: sscanf_s、_sscanf_s_l、swscanf_s、_swscanf_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _sscanf_s_l
 - sscanf_s
@@ -29,8 +25,6 @@ f1_keywords:
 - _swscanf_s_l
 - _stscanf_s_l
 - _sscanf_s_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - stscanf_s_l function
 - stscanf_s function
@@ -46,16 +40,12 @@ helpviewer_keywords:
 - strings [C++], reading
 - _sscanf_s_l function
 ms.assetid: 956e65c8-00a5-43e8-a2f2-0f547ac9e56c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 08cdc1b3fe2d190bdc4a6cbb3d505378e6dcf6ae
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: b1f535ad8a418fa3ce6492f9bdaa6e0299073504
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451818"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50538133"
 ---
 # <a name="sscanfs-sscanfsl-swscanfs-swscanfsl"></a>sscanf_s、_sscanf_s_l、swscanf_s、_swscanf_s_l
 
@@ -104,15 +94,15 @@ int _swscanf_s_l(
 
 ## <a name="return-value"></a>返回值
 
-每个函数都将返回成功转换并分配的字段数；返回值不包括已读取但未分配的字段。 返回值为 0 表示没有分配任何字段。 返回值是**EOF**是否有错误或如果在第一次转换之前到达字符串的末尾。
+每个函数都将返回成功转换并分配的字段数；返回值不包括已读取但未分配的字段。 返回值为 0 表示没有分配任何字段。 返回值是**EOF**错误或如果在第一个转换之前到达字符串的末尾。
 
-如果*缓冲区*或*格式*是**NULL**指针，无效参数处理程序调用中所述，[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则这些函数将返回-1 并设置**errno**到**EINVAL**
+如果*缓冲区*或*格式*是**NULL**调用指针，无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，这些函数将返回-1 并设置**errno**到**EINVAL**
 
 有关这些及其他错误代码的信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>备注
 
-**Sscanf_s**函数将读取从数据*缓冲区*到每个给定的位置*参数*。 格式字符串之后的自变量指定指向具有中的类型说明符对应的类型的变量的指针*格式*。 与不同安全级别较低版本[sscanf](sscanf-sscanf-l-swscanf-swscanf-l.md)，缓冲区大小参数是必需的当你使用类型字段字符**c**， **C**， **s**，**S**，或用括起来的字符串控件集 **[]**。 必须紧跟在需要缓冲区大小的缓冲区参数后提供缓冲区大小（以字符为单位）作为附加参数。 例如，如果你正在读入一个字符串，则将传递该字符串的缓冲区大小，如下所示：
+**Sscanf_s**函数读取来自数据*缓冲区*到每个给定的位置*参数*。 格式字符串之后的参数指定指向具有中的类型说明符相对应的类型的变量的指针*格式*。 与安全级别较低的版本不同[sscanf](sscanf-sscanf-l-swscanf-swscanf-l.md)，使用类型字段字符时，缓冲区大小参数是必需**c**， **C**， **s**，**S**，或字符串中包含的控件集 **[]**。 必须紧跟在需要缓冲区大小的缓冲区参数后提供缓冲区大小（以字符为单位）作为附加参数。 例如，如果你正在读入一个字符串，则将传递该字符串的缓冲区大小，如下所示：
 
 ```C
 wchar_t ws[10];
@@ -138,13 +128,13 @@ sscanf_s(input, "%4c", &c, (unsigned)_countof(c)); // not null terminated
 有关详细信息，请参阅 [scanf_s、_scanf_s_l、wscanf_s、_wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) 和 [scanf 类型字段字符](../../c-runtime-library/scanf-type-field-characters.md)。
 
 > [!NOTE]
-> 大小参数属于类型**无符号**，而不**size_t**。 在编译为 64 位目标时，使用静态强制转换来转换 **_countof**或**sizeof**到正确的大小的结果。
+> 大小参数的类型是**无符号**，而非**size_t**。 当针对 64 位目标进行编译，使用静态强制转换来转换 **_countof**或**sizeof**结果为正确的大小。
 
-*格式*参数控件的输入解释字段，并具有相同形式和函数与*格式*参数**scanf_s**函数。 如果在重叠的字符串之间发生复制，则此行为不确定。
+*格式*参数控制字段输入的解释，并且具有相同格式和函数作为*格式*参数**scanf_s**函数。 如果在重叠的字符串之间发生复制，则此行为不确定。
 
-**swscanf_s**是宽字符版本的**sscanf_s**; 的自变量**swscanf_s**是宽字符字符串。 **sscanf_s**不处理多字节的十六进制字符。 **swscanf_s**不处理 Unicode 全角十六进制或"兼容性区域"字符。 否则为**swscanf_s**和**sscanf_s**具有相同行为。
+**swscanf_s**是宽字符版本**sscanf_s**; 的自变量**swscanf_s**都是宽字符字符串。 **sscanf_s**不处理多字节十六进制字符。 **swscanf_s**不处理 Unicode 全角十六进制或"兼容区"字符。 否则为**swscanf_s**并**sscanf_s**行为方式相同。
 
-这些函数具有的版本 **_l**后缀是相同，只不过它们使用传入的区域设置参数而不是当前线程区域设置。
+具有这些函数的版本 **_l**后缀完全相同，只不过它们使用传入的区域设置参数而不是当前线程区域设置。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -155,7 +145,7 @@ sscanf_s(input, "%4c", &c, (unsigned)_countof(c)); // not null terminated
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**sscanf_s**， **_sscanf_s_l**|\<stdio.h>|
 |**swscanf_s**， **_swscanf_s_l**|\<stdio.h> 或 \<wchar.h>|

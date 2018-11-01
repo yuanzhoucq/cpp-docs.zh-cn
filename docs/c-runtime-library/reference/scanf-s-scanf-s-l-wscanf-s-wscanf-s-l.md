@@ -1,10 +1,6 @@
 ---
-title: scanf_s、_scanf_s_l、wscanf_s、_wscanf_s_l | Microsoft 文档
-ms.custom: ''
+title: scanf_s、_scanf_s_l、wscanf_s、_wscanf_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - wscanf_s
 - _wscanf_s_l
@@ -29,8 +25,6 @@ f1_keywords:
 - scanf_s
 - _tscanf_s
 - _scanf_s_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - reading data [C++], from input streams
 - buffers [C++], buffer overruns
@@ -48,16 +42,12 @@ helpviewer_keywords:
 - wscanf_s_l function
 - buffers [C++], avoiding overruns
 ms.assetid: 42cafcf7-52d6-404a-80e4-b056a7faf2e5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cd8abf72b67c060bd6016b7e784ded5a30801ca6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0fcf2a9f3ac8585e71caa9f2cc990c7e303a2f5f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415208"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50528604"
 ---
 # <a name="scanfs-scanfsl-wscanfs-wscanfsl"></a>scanf_s、_scanf_s_l、wscanf_s、_wscanf_s_l
 
@@ -99,19 +89,19 @@ int _wscanf_s_l(
 
 ## <a name="return-value"></a>返回值
 
-返回已成功转换和分配的字段数量；返回值不包括已读取但未分配的字段。 返回值为 0 表示没有分配任何字段。 返回值是**EOF**错误，或如果文件尾字符或字符串的结尾字符时遇到的第一次尝试读取一个字符。 如果*格式*是**NULL**指针，无效参数处理程序调用中所述，[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则**scanf_s**和**wscanf_s**返回**EOF**并设置**errno**到**EINVAL**.
+返回已成功转换和分配的字段数量；返回值不包括已读取但未分配的字段。 返回值为 0 表示没有分配任何字段。 返回值是**EOF**错误，或如果文件尾字符或字符串末尾字符时遇到的第一次尝试读取字符。 如果*格式*是**NULL**调用指针，无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则**scanf_s**并**wscanf_s**返回**EOF**并设置**errno**到**EINVAL**.
 
 有关这些及其他错误代码的信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>备注
 
-**Scanf_s**函数从标准输入流中读取数据**stdin**并将数据写入到由给出的位置*参数*。 每个*参数*必须是指向的变量的此类型中的类型说明符对应*格式*。 如果在重叠的字符串之间发生复制，则此行为不确定。
+**Scanf_s**函数从标准输入流中读取数据**stdin**并将数据写入到由给定的位置*参数*。 每个*自变量*必须是指向类型中的类型说明符相对应的变量的指针*格式*。 如果在重叠的字符串之间发生复制，则此行为不确定。
 
-**wscanf_s**是宽字符版本的**scanf_s**;*格式*参数**wscanf_s**是宽字符字符串。 **wscanf_s**和**scanf_s**如果在 ANSI 模式下打开流，则具有相同的行为。 **scanf_s**当前不支持 UNICODE 流中的输入。
+**wscanf_s**是宽字符版本**scanf_s**;*格式*参数**wscanf_s**是宽字符字符串。 **wscanf_s**并**scanf_s**如果在 ANSI 模式下打开流，则行为相同。 **scanf_s**当前不支持 UNICODE 流的输入。
 
-这些函数具有的版本 **_l**后缀是相同，只不过它们使用传入的区域设置参数而不是当前线程区域设置。
+具有这些函数的版本 **_l**后缀完全相同，只不过它们使用传入的区域设置参数而不是当前线程区域设置。
 
-与不同**scanf**和**wscanf**， **scanf_s**和**wscanf_s**需要要为所有输入的类型参数指定的缓冲区大小**c**， **C**， **s**， **S**，或用括起来的字符串控件集 **[]**。 字符形式的缓冲区大小作为额外参数，紧跟在指针后面传递到缓冲区或变量。 例如，如果您正在读取一个字符串，则将传递该字符串的缓冲区大小，如下所示：
+与不同**scanf**并**wscanf**， **scanf_s**并**wscanf_s**中需要的所有输入类型参数指定的缓冲区大小**c**， **C**， **s**， **S**，或字符串中包含的控件集 **[]**。 字符形式的缓冲区大小作为额外参数，紧跟在指针后面传递到缓冲区或变量。 例如，如果您正在读取一个字符串，则将传递该字符串的缓冲区大小，如下所示：
 
 ```C
 char s[10];
@@ -121,16 +111,16 @@ scanf_s("%9s", s, (unsigned)_countof(s)); // buffer size is 10, width specificat
 缓冲区大小包括终止 null 字符。 您可以使用宽度规范字段来确保读入的标记可放入缓冲区中。 如果未使用任何宽度规范字段，并且读取的标记太大以致缓冲区中无法容纳，则不会向该缓冲区写入任何内容。
 
 > [!NOTE]
-> 大小参数属于类型**无符号**，而不**size_t**。 使用静态强制转换来转换**size_t**值赋给**无符号**64 位的生成配置。
+> 大小参数的类型是**无符号**，而非**size_t**。 使用静态强制转换来转换**size_t**值设置为**无符号**64 位生成配置。
 
-以下示例说明缓冲区大小参数描述的是最大字符数而非最大字节数。 在调用**wscanf_s**，指示缓冲区类型的字符宽度与格式说明符指示的字符宽度不匹配。
+以下示例说明缓冲区大小参数描述的是最大字符数而非最大字节数。 在调用**wscanf_s**，指示缓冲区类型的字符宽度与所指示的格式说明符字符宽度不匹配。
 
 ```C
 wchar_t ws[10];
 wscanf_s(L"%9S", ws, (unsigned)_countof(ws));
 ```
 
-**S**格式说明符指明了字符宽度"相反的"与函数支持的默认宽度的用法。 该字符宽度是单字节的，而函数支持双字节字符。 此示例可读入最多 9 个单字节宽度字符的字符串，并将其放入一个双字节宽度字符缓冲区中。 这些字符被视为单字节值；头两个字符存储在 `ws[0]` 中，紧接着的两个字符存储在 `ws[1]` 中，依此类推。
+**S**格式说明符表示使用的字符宽度"相反"支持的函数的默认宽度。 该字符宽度是单字节的，而函数支持双字节字符。 此示例可读入最多 9 个单字节宽度字符的字符串，并将其放入一个双字节宽度字符缓冲区中。 这些字符被视为单字节值；头两个字符存储在 `ws[0]` 中，紧接着的两个字符存储在 `ws[1]` 中，依此类推。
 
 对于字符，可读取单个字符，如下所示：
 
@@ -159,12 +149,12 @@ scanf_s("%4c", &c, (unsigned)_countof(c)); // not null terminated
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**scanf_s**， **_scanf_s_l**|\<stdio.h>|
 |**wscanf_s**， **_wscanf_s_l**|\<stdio.h> 或 \<wchar.h>|
 
-通用 Windows 平台 (UWP) 应用中不支持控制台。 控制台中，与关联的标准流句柄**stdin**， **stdout**，和**stderr**，必须将 C 运行时函数才能使用它们在 UWP 应用重定向. 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+通用 Windows 平台 (UWP) 应用中不支持控制台。 控制台中，与关联的标准流句柄**stdin**， **stdout**，并**stderr**，C 运行时函数可以在 UWP 应用中使用它们之前，必须重定向. 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 

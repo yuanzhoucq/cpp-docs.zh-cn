@@ -1,12 +1,6 @@
 ---
-title: Unicode 和多字节字符设置 (MBCS) 支持 |Microsoft Docs
-ms.custom: ''
+title: Unicode 和多字节字符集 (MBCS) 支持
 ms.date: 1/09/2017
-ms.technology:
-- cpp-mfc
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC [C++], character set support
 - MBCS [C++], strings and MFC support
@@ -16,16 +10,12 @@ helpviewer_keywords:
 - Unicode [C++], string objects
 - strings [C++], Unicode
 - strings [C++], character set support
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cad3d8456d219918179b31acfb3c32818e445534
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 8a7f79f9a75c2be4ee855d89b47b6b8e59a67d15
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50062765"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50596646"
 ---
 # <a name="unicode-and-multibyte-character-set-mbcs-support"></a>Unicode 和多字节字符集 (MBCS) 支持
 

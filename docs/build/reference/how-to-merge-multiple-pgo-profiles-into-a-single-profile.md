@@ -1,39 +1,29 @@
 ---
-title: 如何： 将多个 PGO 配置文件合并成单个配置文件 |Microsoft 文档
-ms.custom: ''
+title: 如何：将多个 PGO 配置文件合并成一个配置文件
 ms.date: 03/14/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - merging profiles
 - profile-guided optimizations, merging profiles
 ms.assetid: aab686b5-59dd-40d1-a04b-5064690f65a6
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6ca8fd6ef94af290d568f3186747c659b918c0fd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 04730524fa756b0c6f1e505f3610609bdec6262a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32372277"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50476539"
 ---
 # <a name="how-to-merge-multiple-pgo-profiles-into-a-single-profile"></a>如何：将多个 PGO 配置文件合并成一个配置文件
 
-按配置优化 (PGO) 是一个用于创建优化的二进制文件根据分析的方案的极佳工具。 但是，如果有具有几个重要，但又不同方案的应用程序？ 如何从多种不同方案创建一个配置文件，可以使用 PGO？ 在 Visual Studio 中，PGO 管理器中， [pgomgr.exe](pgomgr.md)，会为您完成此作业。
+按配置优化 (PGO) 是用于创建优化的二进制文件基于分析的应用场景的出色工具。 但是，如果有具有几个重要的是，但又不同方案的应用程序？ 如何从多种不同方案创建单个配置文件，PGO 可以使用？ 在 Visual Studio 中，PGO 管理器中， [pgomgr.exe](pgomgr.md)，完成此作业。
 
 合并配置文件的语法是：
 
 `pgomgr /merge[:num] [.pgc_files] .pgd_files`
 
-其中`num`是要用于添加通过此合并的.pgc 文件的可选权重。 如果有更重要比其他一些方案或将要运行多次的情况下，通常使用权重。
+其中`num`是一个可选的权重，用于添加此合并的.pgc 文件。 如果有某些情况下比其他更重要的或将要运行多次的情况下，通常使用权重。
 
 > [!NOTE]
-> PGO Manager 并不适用于陈旧的配置文件数据。 若要合并到.pgd 文件对应的.pgc 文件，必须由可执行文件，这由生成.pgd 文件的相同链接调用生成的.pgc 文件。
+> PGO Manager 并不适用于过时的配置文件数据。 若要合并到一个.pgd 文件的.pgc 文件，必须由可执行文件的已生成了.pgd 文件的同一链接调用通过生成.pgc 文件。
 
 ## <a name="examples"></a>示例
 
@@ -41,11 +31,11 @@ ms.locfileid: "32372277"
 
 `pgomgr /merge:6 pgcFile.pgc pgdFile.pgd`
 
-在此示例中，PGO 管理器将 pgcFile1.pgc 和 pgcFile2.pgc 添加到 pgdFile.pgd，两次为每个对应的.pgc 文件：
+在此示例中，PGO Manager 向 pgcFile1.pgc 和 pgcFile2.pgc pgdFile.pgd，两次为每个.pgc 文件：
 
 `pgomgr /merge:2 pgcFile1.pgc pgcFile2.pgc pgdFile.pgd`
 
-如果不使用任何对应的.pgc 文件参数运行的 PGO 管理器，它将搜索与跟叹号 （！），然后一个或多个任意字符的.pgd 文件具有相同的基名称的所有对应的.pgc 文件的本地目录。 例如，如果本地目录文件 test.pgd、 test!1.pgc、 test2.pgc 和 test!hello.pgc，并且初始屏幕然后从本地目录中，运行以下命令，是**pgomgr**将 test!1.pgc 和 test!hello.pgc 合并到 test.pgd。
+如果任何.pgc 文件参数的情况下运行 PGO 管理器时，它将搜索所有具有相同的基名称为后跟一个感叹号 （！），然后一个或多个任意字符的.pgd 文件的.pgc 文件的本地目录。 例如，如果本地目录拥有文件 test.pgd、 test!1.pgc、 test2.pgc 和 test!hello.pgc，但以下命令运行从本地目录中，然后**pgomgr** test!1.pgc 和 test!hello.pgc 合并 test.pgd。
 
 `pgomgr /merge test.pgd`
 

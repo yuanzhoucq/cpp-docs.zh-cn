@@ -1,33 +1,23 @@
 ---
-title: /CLRIMAGETYPE （指定 CLR 映像的类型） |Microsoft 文档
-ms.custom: ''
+title: /CLRIMAGETYPE（指定 CLR 映像的类型）
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /CLRIMAGETYPE
 - VC.Project.VCLinkerTool.CLRImageType
-dev_langs:
-- C++
 helpviewer_keywords:
 - /CLRIMAGETYPE linker option
 - -CLRIMAGETYPE linker option
 ms.assetid: 04c60ee6-9dd7-4391-bc03-6926ad0fa116
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b5efb2e73e854591be7134753cec21a708fff3e5
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: c4cdb9a9ac3376762d6aa40fd4c13abbdc7b5487
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705005"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50461628"
 ---
 # <a name="clrimagetype-specify-type-of-clr-image"></a>/CLRIMAGETYPE（指定 CLR 映像的类型）
 
-在链接的图像中设置的 CLR 映像类型。
+链接的图像中设置的 CLR 映像类型。
 
 ## <a name="syntax"></a>语法
 
@@ -35,9 +25,9 @@ ms.locfileid: "34705005"
 
 ## <a name="remarks"></a>备注
 
-链接器接受本机对象以及 MSIL 对象编译的使用[/clr](../../build/reference/clr-common-language-runtime-compilation.md)。 **/Clr: pure**和 **/clr: safe**编译器选项已弃用 Visual Studio 2015 中，在 Visual Studio 2017 中不受支持。 同一版本中传递混合对象时，结果输出文件的可验证性级别默认等于输入模块的最低可验证性级别。 例如，如果传递本机映像和混合的模式映像 (使用编译的 **/clr**)，结果映像将为混合的模式映像。
+链接器接受本机对象以及 MSIL 对象编译的使用[/clr](../../build/reference/clr-common-language-runtime-compilation.md)。 **/Clr: pure**并 **/clr: safe**编译器选项已弃用 Visual Studio 2015 和 Visual Studio 2017 中不受支持。 同一版本中传递混合对象时，结果输出文件的可验证性级别默认等于输入模块的最低可验证性级别。 例如，如果传递本机映像和混合的模式映像 (使用编译的 **/clr**)，结果映像将为混合的模式映像。
 
-你可以使用 **/CLRIMAGETYPE**指定较低级别的可验证性，如果你的需要。
+可以使用 **/CLRIMAGETYPE**指定较低级别的可验证性，如果您的需要。
 
 有关如何确定文件的 CLR 映像类型的信息，请参阅 [/CLRHEADER](../../build/reference/clrheader.md)。
 

@@ -1,10 +1,6 @@
 ---
-title: remove、_wremove |Microsoft 文档
-ms.custom: ''
+title: remove、_wremove
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wremove
 - remove
@@ -25,8 +21,6 @@ f1_keywords:
 - remove
 - _wremove
 - _tremove
-dev_langs:
-- C++
 helpviewer_keywords:
 - tremove function
 - _wremove function
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - wremove function
 - remove function
 ms.assetid: b6345ec3-3289-4645-93a4-28b9e478cc19
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 36cdc09107a66067b358cb2fd72ec9bd1b2b30a1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d5636912ea36fd1b1412a556d516ac3e8184e0b4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406428"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50613962"
 ---
 # <a name="remove-wremove"></a>remove、_wremove
 
@@ -69,13 +59,13 @@ int _wremove(
 
 ## <a name="return-value"></a>返回值
 
-如果成功删除文件，则这些函数将返回 0。 否则，它将返回-1 并将设置**errno**到**EACCES**以指示路径指定只读文件或文件处于打开状态，或**ENOENT** ，则指示未找到文件名或路径或路径指定的目录。
+如果成功删除文件，则这些函数将返回 0。 否则，它将返回-1，并设置**errno**到**EACCES**以指示路径指定只读文件或文件已打开，或设置为**ENOENT**指示未找到文件名或路径或者路径指定一个目录。
 
 有关这些代码以及其他返回代码的详细信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>备注
 
-**remove** 函数删除由  *路径指定的文件。* **_wremove**是宽字符版本的 **_remove**;*路径*参数 **_wremove**是宽字符字符串。 **_wremove**和 **_remove**否则具有相同行为。 必须先结束对文件的所有处理，然后才能删除文件。
+**remove** 函数删除由  *路径指定的文件。* **_wremove**是宽字符版本**删除 （_r)**;*路径*参数 **_wremove**是宽字符字符串。 **_wremove**并**删除 （_r)** 行为相同。 必须先结束对文件的所有处理，然后才能删除文件。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -85,7 +75,7 @@ int _wremove(
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**remove**|\<stdio.h> 或 \<io.h>|
 |**_wremove**|\<stdio.h> 或 \<wchar.h>|

@@ -1,27 +1,17 @@
 ---
-title: 并发运行时 |Microsoft Docs
-ms.custom: ''
+title: 并发运行时
 ms.date: 07/20/2018
-ms.technology:
-- cpp-concrt
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Concurrency Runtime, getting started
 - ConcRT (see Concurrency Runtime)
 - Concurrency Runtime
 ms.assetid: 874bc58f-8dce-483e-a3a1-4dcc9e52ed2c
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ac7999919daa7dc028bd8e12e7d98b737afc4e36
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: bed1d7680d9bc6615476c7d5d4b700d729026c66
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46413804"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50495948"
 ---
 # <a name="concurrency-runtime"></a>并发运行时
 
@@ -108,13 +98,13 @@ ms.locfileid: "46413804"
 
 |||
 |-|-|
-|[异步编程模式和提示在 Hilo （使用 c + + 和 XAML 的 Windows 应用商店应用）](https://msdn.microsoft.com/library/windows/apps/jj160321.aspx)|了解我们如何使用并发运行时在 Hilo，使用 c + + 和 XAML 的 Windows 运行时应用程序中实现异步操作。|
-|[并发运行时和 Visual Studio 2010 中的并行模式库的代码示例](http://go.microsoft.com/fwlink/p/?linkid=183875)|提供演示并发运行时的示例应用程序和实用程序。|
-|[本机代码博客中的并行编程](http://go.microsoft.com/fwlink/p/?linkid=183873)|提供有关并发运行时中的并行编程的其他深度博客文章。|
-|[C + + 和本机代码论坛中的并行计算](http://go.microsoft.com/fwlink/p/?linkid=183874)|使你能够参与关于并发运行时的社区讨论。|
+|[Hilo（使用 C++ 和 XAML 的 Windows 应用商店应用）中的异步编程模式和提示](https://msdn.microsoft.com/library/windows/apps/jj160321.aspx)|了解我们如何使用并发运行时在 Hilo，使用 c + + 和 XAML 的 Windows 运行时应用程序中实现异步操作。|
+|[Visual Studio 2010 中的并发运行时和并行模式库的代码示例](http://go.microsoft.com/fwlink/p/?linkid=183875)|提供演示并发运行时的示例应用程序和实用程序。|
+|[本机代码中的并行编程博客](http://go.microsoft.com/fwlink/p/?linkid=183873)|提供有关并发运行时中的并行编程的其他深度博客文章。|
+|[C++ 和本机代码中的并行计算论坛](http://go.microsoft.com/fwlink/p/?linkid=183874)|使你能够参与关于并发运行时的社区讨论。|
 |[并行编程](/dotnet/standard/parallel-programming/index)|介绍了有关在.NET Framework 中可用的并行编程模型。|
 
 ## <a name="see-also"></a>请参阅
 
-[参考](../../parallel/concrt/reference/reference-concurrency-runtime.md)
+[引用](../../parallel/concrt/reference/reference-concurrency-runtime.md)
 

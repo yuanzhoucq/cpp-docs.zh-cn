@@ -1,11 +1,6 @@
 ---
-title: carg、cargf、cargl | Microsoft 文档
-ms.custom: ''
+title: carg、cargf、cargl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - carg
 - cargf
@@ -30,23 +25,17 @@ f1_keywords:
 - complex/carg
 - complex/cargf
 - complex/cargl
-dev_langs:
-- C++
 helpviewer_keywords:
 - carg function
 - cargf function
 - cargl function
 ms.assetid: 610d6a93-b929-46ab-a966-b77db0b804be
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 34a5e55b4261c68d90c3bcb28cf2f0e7be1a2c50
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 584732594cd9ca9579907986e3dc3b5f3dbf52c0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393467"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50665590"
 ---
 # <a name="carg-cargf-cargl"></a>carg、cargf、cargl
 
@@ -79,15 +68,15 @@ long double cargl(
 
 ## <a name="return-value"></a>返回值
 
-参数 （也称为阶段） *z*。 结果处于间隔 [-π，+ π]。
+参数 （也称为阶段） *z*。 结果是在间隔 [-π，+ π]。
 
 ## <a name="remarks"></a>备注
 
-由于 c + + 允许重载，你可以调用的重载**carg**采用 **_Fcomplex**或 **_Lcomplex**值，并返回**float**或**长** **double**值。 在 C 程序中， **carg**始终采用 **_Dcomplex**值并返回**double**值。
+由于 c + + 允许重载，可以调用的重载**carg**采用 **_Fcomplex**或 **_Lcomplex**的值，并返回**float**或**长** **double**值。 在 C 程序中， **carg**始终采用 **_Dcomplex**值并返回**double**值。
 
 ## <a name="requirements"></a>要求
 
-|例程|C 标头|C++ 标头|
+|例程所返回的值|C 标头|C++ 标头|
 |-------------|--------------|------------------|
 |**carg**， **cargf**， **cargl**|\<complex.h>|\<ccomplex>|
 

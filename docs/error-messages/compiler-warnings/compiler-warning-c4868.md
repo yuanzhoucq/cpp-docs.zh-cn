@@ -1,34 +1,29 @@
 ---
-title: 编译器警告 C4868 |Microsoft 文档
+title: 编译器警告 C4868
 ms.date: 10/26/2017
-ms.topic: error-reference
 f1_keywords:
 - C4868
 ms.assetid: fc6aa7e5-34dd-4ec2-88bd-16e430361dc7
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 922a1a8434da8449758b9d55ebe89ace2f262cd5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d0bc8716e53e71c52f6a31036a95d0b4cefedd79
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33275237"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50481312"
 ---
-# <a name="compiler-warning-level-4-c4868"></a>编译器警告 （等级 4） C4868
+# <a name="compiler-warning-level-4-c4868"></a>编译器警告 （等级 C4868
 
-> _文件_(*line_number*) 编译器可能会不强制实施大括号内的初始值设定项列表中从左到右计算顺序
+> '_文件_(*line_number*) 编译器不会强制在大括号内的初始值设定项列表中的从左到右计算顺序
 
-大括号内的初始值设定项列表中的元素是从左到右的顺序进行计算。 有两种情况下，编译器处于无法保证此顺序： 第一种是通过值; 传递的对象时的某些元素第二个是编译时`/clr`和的某些元素的对象的字段或数组元素。 当编译器无法保证从左到右评估它会发出警告 C4868。
+大括号内的初始值设定项列表的元素将按从左到右顺序计算。 有两种情况下，在其中，编译器不能以保证此顺序： 第一个是对象的值; 传递时的一些元素第二个是编译时`/clr`和的某些元素是字段的对象或数组元素。 当编译器无法保证从左到右评估时它会发出警告 C4868。
 
-于为 Visual c + + 2015 Update 2 执行的编译器一致性工作可以生成此警告。 Visual c + + 2015 Update 2 之前的版本编译的代码现在可以生成 C4868。
+已经为 Visual c + + 2015 Update 2 的编译器一致性工作可以生成此警告。 在 Visual c + + 2015 Update 2 之前已编译的代码现在可以生成 C4868。
 
 默认情况下，此警告处于关闭状态。 使用`/Wall`来激活此警告。
 
-若要解决此警告，首先考虑的初始值设定项列表元素的从左到右评估是否是必需的如元素的求值时可能会产生顺序相关的副作用。 在许多情况下，在其中计算元素的顺序没有明显的影响。
+若要解决此警告，首先要考虑的初始值设定项列表元素的从左到右评估是否是必需的例如当元素的评估可能会生成依赖于顺序的副作用。 在许多情况下，元素的计算顺序没有明显的影响。
 
-如果求值的顺序必须是从左到右，请考虑它是否可以传入元素`const`改为引用。 此更改消除了下面的代码示例中的警告。
+如果求值的顺序必须是从左到右，请考虑是否可以传递元素`const`改为引用。 此更改消除了下面的代码示例中的警告。
 
 ## <a name="example"></a>示例
 

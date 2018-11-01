@@ -1,10 +1,6 @@
 ---
-title: _heapwalk | Microsoft 文档
-ms.custom: ''
+title: _heapwalk
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _heapwalk
 apilocation:
@@ -23,23 +19,17 @@ apitype: DLLExport
 f1_keywords:
 - heapwalk
 - _heapwalk
-dev_langs:
-- C++
 helpviewer_keywords:
 - debugging [CRT], heap-related problems
 - heapwalk function
 - _heapwalk function
 ms.assetid: 2df67649-fb00-4570-a8b1-a4eca5738744
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3d98260ce281bc8773f597dae5897afe4beee0bc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cc2a49d9032746cc6c82c9dc401fc96baabbe2e1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403396"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50454894"
 ---
 # <a name="heapwalk"></a>_heapwalk
 
@@ -67,16 +57,16 @@ int _heapwalk( _HEAPINFO *entryinfo );
 |-|-|
 |**_HEAPBADBEGIN**| 初始标头信息无效或未找到。|
 |**_HEAPBADNODE**| 堆已损坏或找到错误节点。|
-|**_HEAPBADPTR**| **_Heapinfo**字段 **_HEAPINFO**结构不包含有效的指针到堆或*entryinfo*是 null 指针。|
+|**_HEAPBADPTR**| **_Heapinfo**字段 **_HEAPINFO**结构不包含有效指针包含在堆或*entryinfo*是 null 指针。|
 |**_HEAPEND**| 已成功到达堆结尾。|
 |**_HEAPEMPTY**| 堆未初始化。|
-|**_HEAPOK**| 到目前为止; 没有错误*entryinfo*更新了有关下一步的堆条目信息。|
+|**_HEAPOK**| 到目前为止; 没有错误*entryinfo*更新下一个堆条目有关的信息。|
 
-此外，如果发生错误， **_heapwalk**设置**errno**到**ENOSYS**。
+此外，如果出错，则 **_heapwalk**设置**errno**到**ENOSYS**。
 
 ## <a name="remarks"></a>备注
 
-**_Heapwalk**函数可帮助调试程序中与堆有关的问题。 函数演练堆，遍历每个调用，并返回指向类型的结构的指针 **_HEAPINFO**包含有关下一步的堆条目的信息。 **_HEAPINFO** Malloc.h 中, 定义的类型包含下列元素。
+**_Heapwalk**函数帮助调试程序中与堆有关的问题。 该函数遍历堆，遍历一个条目，每次调用，并返回指向类型的结构的指针 **_HEAPINFO** ，包含有关下一个堆条目的信息。 **_HEAPINFO** Malloc.h 中定义的类型包含下列元素。
 
 |字段|含义|
 |-|-|
@@ -84,13 +74,13 @@ int _heapwalk( _HEAPINFO *entryinfo );
 |`size_t _size`|堆条目大小。|
 |`int _useflag`|该标志指明堆条目是否正在使用中。|
 
-调用 **_heapwalk**返回 **_HEAPOK**存储中的项的大小 **_size**字段和集 **_heapinfo**为字段 **_FREEENTRY**或 **_USEDENTRY** （两者都是在 Malloc.h 中定义的常量）。 若要获取有关堆中的第一个输入此信息，请将传递 **_heapwalk**指向的指针 **_HEAPINFO**结构，它的 **_heapinfo**成员是**NULL**. 如果操作系统不支持 **_heapwalk**（例如，Windows 98），该函数将返回 **_HEAPEND**和设置**errno**到**ENOSYS**.
+调用 **_heapwalk** ，它返回 **_HEAPOK**存储中的条目的大小**大小) (_s**字段中并设置 **_heapinfo**字段为 **_FREEENTRY**或 **_USEDENTRY** （两者都是在 Malloc.h 中定义的常量）。 若要获取有关堆中的第一项的信息，请将传递 **_heapwalk**指向的指针 **_HEAPINFO**结构，其 **_heapinfo**成员是**NULL**. 如果操作系统不支持 **_heapwalk**（例如 Windows 98），该函数返回 **_HEAPEND**并设置**errno**到**ENOSYS**.
 
-此函数验证其参数。 如果*entryinfo*是 null 指针，则调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则**errno**设置为**EINVAL**和该函数将返回 **_HEAPBADPTR**。
+此函数验证其参数。 如果*entryinfo*是空指针，将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则**errno**设置为**EINVAL**并且该函数返回 **_HEAPBADPTR**。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|可选标头|
+|例程所返回的值|必需的标头|可选标头|
 |-------------|---------------------|---------------------|
 |**_heapwalk**|\<malloc.h>|\<errno.h>|
 

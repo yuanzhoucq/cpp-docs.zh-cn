@@ -1,12 +1,6 @@
 ---
-title: 有关编写 Prolog / Epilog 代码的注意事项 |Microsoft Docs
-ms.custom: ''
+title: 有关编写 Prolog / Epilog 代码的注意事项
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - stack frame layout
 - prolog code
@@ -14,16 +8,12 @@ helpviewer_keywords:
 - __LOCAL_SIZE constant
 - stack, stack frame layout
 ms.assetid: c7814de2-bb5c-4f5f-96d0-bcfd2ad3b182
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8cb66865d40e101f951b64aef07c0bb312f91611
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a70c444af9e1622b3f46837fcfa2d5e8856abf30
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46117564"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50660559"
 ---
 # <a name="considerations-for-writing-prologepilog-code"></a>有关编写 Prolog/Epilog 代码的注意事项
 

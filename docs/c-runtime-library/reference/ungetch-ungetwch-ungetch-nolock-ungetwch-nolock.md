@@ -1,10 +1,6 @@
 ---
-title: _ungetch、_ungetwch、_ungetch_nolock、_ungetwch_nolock | Microsoft 文档
-ms.custom: ''
+title: _ungetch、_ungetwch、_ungetch_nolock、_ungetwch_nolock
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ungetch_nolock
 - _ungetwch_nolock
@@ -34,8 +30,6 @@ f1_keywords:
 - _ungettch_nolock
 - _ungettch
 - _ungetwch_nolock
-dev_langs:
-- C++
 helpviewer_keywords:
 - _ungetch function
 - ungetwch function
@@ -50,16 +44,12 @@ helpviewer_keywords:
 - ungetwch_nolock function
 - _ungetwch function
 ms.assetid: 70ae71c6-228c-4883-a57d-de6d5f873825
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1c9c6f09c3bd6ce679662d9ea77f8a7b360521b9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7407d26606bd5242c430961faa4f60090b83f036
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411291"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50430298"
 ---
 # <a name="ungetch-ungetwch-ungetchnolock-ungetwchnolock"></a>_ungetch、_ungetwch、_ungetch_nolock、_ungetwch_nolock
 
@@ -92,11 +82,11 @@ wint_t _ungetwch_nolock(
 
 ## <a name="return-value"></a>返回值
 
-这两个函数返回的字符*c*如果成功。 如果没有错误， **_ungetch**返回的值**EOF**和 **_ungetwch**返回**WEOF**。
+这两个函数均返回字符*c*如果成功。 如果出现错误 **_ungetch**返回的值**EOF**并 **_ungetwch**返回**WEOF**。
 
 ## <a name="remarks"></a>备注
 
-这些函数将字符推送*c*回控制台中，从而导致*c*要读取的下一个字符 **_getch**或 **_getche** （或 **_getwch**或 **_getwche**)。 **_ungetch**和 **_ungetwch**如果它们之前下一次读取一次调用失败。 *C*参数可能不为**EOF** (或**WEOF**)。
+这些函数将字符推送*c*返回到控制台中，从而导致*c*要读取的下一个字符 **_getch**或者 **_getche** （或 **_getwch**或 **_getwche**)。 **_ungetch**并 **_ungetwch**如果它们之前下一次读取一次调用失败。 *C*参数可以不是**EOF** (或**WEOF**)。
 
 后缀为 **_nolock** 的版本是相同的，只不过它们可能会受到其他线程的影响。 它们可能更快，因为它们不会产生锁定其他线程的开销。 仅在线程安全的上下文中使用这些函数，如单线程应用程序或调用范围已经处理线程隔离。
 
@@ -109,7 +99,7 @@ wint_t _ungetwch_nolock(
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_ungetch**， **_ungetch_nolock**|\<conio.h>|
 |**_ungetwch**， **_ungetwch_nolock**|\<conio.h> 或 \<wchar.h>|

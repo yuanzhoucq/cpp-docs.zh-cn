@@ -1,10 +1,6 @@
 ---
-title: CMFCTabCtrl 类 |Microsoft Docs
-ms.custom: ''
+title: CMFCTabCtrl Class
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CMFCTabCtrl
 - AFXTABCTRL/CMFCTabCtrl
@@ -57,8 +53,6 @@ f1_keywords:
 - AFXTABCTRL/CMFCTabCtrl::StopResize
 - AFXTABCTRL/CMFCTabCtrl::SynchronizeScrollBar
 - AFXTABCTRL/CMFCTabCtrl::m_bEnableActivate
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMFCTabCtrl [MFC], ActivateMDITab
 - CMFCTabCtrl [MFC], AllowDestroyEmptyTabbedPane
@@ -110,16 +104,12 @@ helpviewer_keywords:
 - CMFCTabCtrl [MFC], SynchronizeScrollBar
 - CMFCTabCtrl [MFC], m_bEnableActivate
 ms.assetid: d441385d-2c72-4203-96fa-deae2273da35
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 36203486fbc7337ffc3d93278554b830bbc792ce
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8388a79bf7c85f3d603bd4ef234947e872534cba
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46392602"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50505114"
 ---
 # <a name="cmfctabctrl-class"></a>CMFCTabCtrl Class
 
@@ -336,7 +326,7 @@ BOOL Create(
 [in]选项卡的位置。 默认值为 LOCATION_BOTTOM。 有关更多信息，请参见“备注”。
 
 *bCloseBtn*<br/>
-[in]若要显示的选项卡; 上的关闭按钮，则返回 TRUE否则为 FALSE。 默认值为 FALSE。
+[in]若要显示的选项卡; 上的关闭按钮，则返回 TRUE否则为 FALSE。 默认值是 FALSE。
 
 ### <a name="return-value"></a>返回值
 

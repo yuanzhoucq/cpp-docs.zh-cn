@@ -1,10 +1,6 @@
 ---
-title: modf、modff、modfl | Microsoft 文档
-ms.custom: ''
+title: modf、modff、modfl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - modff
 - modf
@@ -30,23 +26,17 @@ f1_keywords:
 - math/modf
 - math/modff
 - math/modfl
-dev_langs:
-- C++
 helpviewer_keywords:
 - modf function
 - modff function
 - modfl function
 ms.assetid: b1c7abf5-d476-43ca-a03c-02072a86e32d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 87cddb8b565cdc369e6b1e9679583db64039bb49
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 59d6e2b9b02ad182c5630d6dc9a989c035e8fa92
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404826"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50478060"
 ---
 # <a name="modf-modff-modfl"></a>modf、modff、modfl
 
@@ -79,15 +69,15 @@ long double modf( long double x, long double * intptr );  // C++ only
 
 ## <a name="remarks"></a>备注
 
-**Modf**函数分解的浮点值*x*到小数和整数部分，其中每个具有相同的符号*x*。 有符号小数部分*x*返回。 在浮点值形式存储的整数部分*intptr*。
+**Modf**函数将浮点值分解*x*为小数部分和整数部分，其中每个具有相同的符号*x*。 有符号的小数部分的*x*返回。 在浮点值形式存储的整数部分*intptr*。
 
-**modf**具有使用流式处理 SIMD 扩展 2 (SSE2) 实现。 有关使用 SSE2 实现的信息和限制，请参阅 [_set_SSE2_enable](set-sse2-enable.md)。
+**modf**具有使用流式处理 SIMD 扩展 2 (SSE2) 的实现。 有关使用 SSE2 实现的信息和限制，请参阅 [_set_SSE2_enable](set-sse2-enable.md)。
 
-C + + 允许重载，因此您可以调用的重载**modf**采用并返回**float**或**长** **double**参数。 在 C 程序中， **modf**始终采用两个双精度值并返回一个双精度值。
+C + + 允许重载，因此可以调用的重载**modf**采用并返回**float**或**长** **double**参数。 在 C 程序中， **modf**始终采用两个双精度值并返回一个双精度值。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**modf**， **modff**， **modfl**|C：\<math.h><br /><br /> C++：\<cmath> 或 \<math.h>|
 

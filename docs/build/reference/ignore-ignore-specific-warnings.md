@@ -1,27 +1,17 @@
 ---
-title: -忽略 （忽略特定警告） |Microsoft Docs
-ms.custom: ''
+title: /IGNORE（忽略特定警告）
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /OVERWRITE
-dev_langs:
-- C++
 helpviewer_keywords:
 - /IGNORE linker option
 ms.assetid: 37e77387-8838-4697-898f-d376ac641124
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: aee498951c01c332dffe720dbd6e3b77c8121aa5
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 4826ecae1f16cd3834cb6d47850fc686b3682614
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45705856"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50479685"
 ---
 # <a name="ignore-ignore-specific-warnings"></a>/IGNORE（忽略特定警告）
 
@@ -46,9 +36,9 @@ ms.locfileid: "45705856"
 |[LNK4044](../../error-messages/tool-errors/linker-tools-warning-lnk4044.md)|无法识别的选项“`option`”；已忽略|
 |LNK4062|'`option`与不兼容`architecture`目标计算机; 已忽略选项|
 |[LNK4075](../../error-messages/tool-errors/linker-tools-warning-lnk4075.md)|由于“`option1`”规范而忽略“`option2`”|
-|[LNK4086](../../error-messages/tool-errors/linker-tools-warning-lnk4086.md)|入口点“`function`”不是带参数“`number`”字节的 __stdcall；图像可能无法运行|
+|[LNK4086](../../error-messages/tool-errors/linker-tools-warning-lnk4086.md)|入口点“`function`”不是带自变量“`number`”字节的 __stdcall；图像可能无法运行|
 |LNK4088|图像生成的原因是 /FORCE 选项；图像可能无法运行|
-|[LNK4105](../../error-messages/tool-errors/linker-tools-warning-lnk4105.md)|无使用选项“`option`”指定的参数；忽略转换|
+|[LNK4105](../../error-messages/tool-errors/linker-tools-warning-lnk4105.md)|无使用选项“`option`”指定的自变量；忽略转换|
 |LNK4203|读取项目数据库“`filename`”时出错；正在链接对象，如同没有调试信息一样|
 |[LNK4204](../../error-messages/tool-errors/linker-tools-warning-lnk4204.md)|`filename`缺少调试信息引用模块; 正在链接对象，如同没有调试信息一样|
 |[LNK4205](../../error-messages/tool-errors/linker-tools-warning-lnk4205.md)|`filename`缺少引用模块中; 当前调试信息正在链接对象，如同没有调试信息一样|

@@ -1,28 +1,17 @@
 ---
-title: OLE DB 提供程序模板体系结构 |Microsoft Docs
-ms.custom: ''
+title: OLE DB 提供程序模板体系结构
 ms.date: 10/24/2018
-ms.technology:
-- cpp-data
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - OLE DB [C++], object model
 - architecture [C++], OLE DB Provider
 - OLE DB provider templates, object model
 ms.assetid: 639304a3-f9e0-44dc-8d0c-0ebd2455b363
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- data-storage
-ms.openlocfilehash: f91ee551ca9319450f970be059317feb6f4f0157
-ms.sourcegitcommit: 840033ddcfab51543072604ccd5656fc6d4a5d3a
+ms.openlocfilehash: 3f12eb7c7da449715116e88c9f78ee2e32fc327f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50216482"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50596165"
 ---
 # <a name="ole-db-provider-template-architecture"></a>OLE DB 提供程序模板体系结构
 
@@ -60,7 +49,7 @@ OLE DB 提供程序模板不会实现的行和存储对象。
 |[命令](../../data/oledb/command-object-interfaces.md)([CCommand](ccommand-class.md))|[必需] `IAccessor`<br /><br /> [必需] `IColumnsInfo`<br /><br /> [必需] `ICommand`<br /><br /> [必需] `ICommandProperties`<br /><br /> [必需] `ICommandText`<br /><br /> [必需] `IConvertType`<br /><br /> [可选] `IColumnsRowset`<br /><br /> [可选] `ICommandPersist`<br /><br /> [可选] `ICommandPrepare`<br /><br /> [可选] `ICommandWithParameters`<br /><br /> [可选] `ISupportErrorInfo`<br /><br /> [可选] `ICommandStream`|命令对象处理数据，例如查询上的操作。 它可以处理参数化或非参数化语句。<br /><br /> 命令对象也是负责处理参数和输出列的绑定的。 绑定是包含有关应如何检索行集中的列信息的结构。 它包含如序号、 数据类型、 长度和状态信息。|
 |[事务](../../data/oledb/transaction-object-interfaces.md)（可选）|[必需] `IConnectionPointContainer`<br /><br /> [必需] `ITransaction`<br /><br /> [可选] `ISupportErrorInfo`|事务对象上的数据源定义原子工作单元，并确定每个这些工作单元之间的关系。 OLE DB 提供程序模板不直接支持此对象 （即，创建你自己的对象）。|
 
-有关更多信息，请参见下列主题：
+有关详细信息，请参阅下列主题：
 
 - [属性映射](../../data/oledb/property-maps.md)
 

@@ -1,10 +1,6 @@
 ---
-title: _fprintf_p、_fprintf_p_l、_fwprintf_p、_fwprintf_p_l | Microsoft 文档
-ms.custom: ''
+title: _fprintf_p、_fprintf_p_l、_fwprintf_p、_fwprintf_p_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _fwprintf_p
 - _fprintf_p_l
@@ -29,8 +25,6 @@ f1_keywords:
 - _fwprintf_p
 - fprintf_p
 - ftprintf_p
-dev_langs:
-- C++
 helpviewer_keywords:
 - fprintf_p_l function
 - fprintf_p function
@@ -47,16 +41,12 @@ helpviewer_keywords:
 - ftprintf_p_l function
 - fwprintf_p_l function
 ms.assetid: 46b082e1-45ba-4383-9ee4-97015aa50bc6
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ef748590f412afc10b5046691c982ed1d5ccabb8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: db9e9a746193c7bf35913d6792d87aa9ba85fa79
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404423"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50462772"
 ---
 # <a name="fprintfp-fprintfpl-fwprintfp-fwprintfpl"></a>_fprintf_p、_fprintf_p_l、_fwprintf_p、_fwprintf_p_l
 
@@ -105,20 +95,20 @@ int _fwprintf_p_l(
 
 ## <a name="return-value"></a>返回值
 
-**_fprintf_p**和 **_fwprintf_p**返回写入的字符数，或者发生输出错误时返回一个负值。
+**_fprintf_p**并 **_fwprintf_p**返回写入的字符数或发生输出错误时返回一个负值。
 
 ## <a name="remarks"></a>备注
 
-**_fprintf_p**格式和输出一系列字符和值输出到*流*。 每个函数*参数*（如果有） 进行转换和输出中的相应格式规范根据*格式*。 有关 **_fprintf_p**、*格式*自变量具有相同的语法和使用该中 **_printf_p**。 这些函数支持位置参数，即可以更改格式字符串所使用的参数顺序。 有关位置参数的详细信息，请参阅 [printf_p 位置参数](../../c-runtime-library/printf-p-positional-parameters.md)。
+**_fprintf_p**格式化并将一系列字符和值到输出*流*。 每个函数*自变量*（如果有） 进行转换和输出中的相应格式规范根据*格式*。 有关 **_fprintf_p**，则*格式*自变量具有相同的语法和使用在该 **_printf_p**。 这些函数支持位置参数，即可以更改格式字符串所使用的参数顺序。 有关位置参数的详细信息，请参阅 [printf_p 位置参数](../../c-runtime-library/printf-p-positional-parameters.md)。
 
-**_fwprintf_p**是宽字符版本的 **_fprintf_p**; 在 **_fwprintf_p**，*格式*是宽字符字符串。 如果在 ANSI 模式下打开流，则这些函数行为相同。 **_fprintf_p**当前不支持输出到 UNICODE 流。
+**_fwprintf_p**是宽字符版本 **_fprintf_p**; 在 **_fwprintf_p**，*格式*是宽字符字符串。 如果在 ANSI 模式下打开流，则这些函数行为相同。 **_fprintf_p**当前不到 UNICODE 流支持输出。
 
-使用这些函数的版本 **_l**后缀是相同，只不过它们使用传递而不是当前区域设置的区域设置参数。
+使用这些函数的版本 **_l**后缀完全相同，只不过它们使用传递中而不是当前区域设置的区域设置参数。
 
 > [!IMPORTANT]
 > 确保 format 不是用户定义的字符串。
 
-如不安全版本 (请参阅[fprintf、 _fprintf_l、 fwprintf、 _fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md))，这些函数验证其参数和中所述将调用无效参数处理程序，[参数验证](../../c-runtime-library/parameter-validation.md)，如果任一*流*或*格式*是 null 指针或如果有任何未知或格式不正确的格式设置说明符。 如果允许执行继续，函数将返回-1 并设置**errno**到**EINVAL**。
+与不安全版本一样 (请参阅[fprintf、 _fprintf_l、 fwprintf、 _fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md))，这些函数验证其参数并调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)，如果*流*或*格式*是 null 指针或者如果有任何未知或格式不正确的格式设置说明符。 如果允许执行继续，函数将返回-1 并设置**errno**到**EINVAL**。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 

@@ -1,10 +1,6 @@
 ---
-title: nextafter、nextafterf、nextafterl、_nextafter、_nextafterf、nexttoward、nexttowardf、nexttowardl | Microsoft 文档
-ms.custom: ''
+title: nextafter、nextafterf、nextafterl、_nextafter、_nextafterf、nexttoward、nexttowardf、nexttowardl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - nextafterf
 - _nextafterf
@@ -42,8 +38,6 @@ f1_keywords:
 - math/nexttoward
 - math/nexttowardf
 - math/nexttowardl
-dev_langs:
-- C++
 helpviewer_keywords:
 - _nextafter function
 - nextafter function
@@ -54,16 +48,12 @@ helpviewer_keywords:
 - nexttowardf function
 - nexttowardl function
 ms.assetid: 9785bfb9-de53-4bd0-9637-f05fa0c1f6ab
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9c68d039ff1318ea082d409078a55c8d337a48de
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0e0a60dc9f7c068d8c18c10f3c6b819b9e06d3b7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403711"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50444851"
 ---
 # <a name="nextafter-nextafterf-nextafterl-nextafter-nextafterf-nexttoward-nexttowardf-nexttowardl"></a>nextafter、nextafterf、nextafterl、_nextafter、_nextafterf、nexttoward、nexttowardf、nexttowardl
 
@@ -102,19 +92,19 @@ long double nexttoward( long double x, long double y ); /* C++ only, requires <c
 
 ## <a name="return-value"></a>返回值
 
-返回下一步后的返回类型可表示浮点值*x*的方向*y*。 如果*x*和*y*是否相等，则函数将返回*y*，转换为返回类型以及不会触发异常。 如果*x*是否不等于*y*，和 denormal 或零，则结果为**FE_UNDERFLOW**和**FE_INEXACT**浮点异常状态设置，并返回正确的结果。 如果任一*x*或*y*是 NAN，则返回值是一个输入 Nan。 如果*x*是有限的且结果为无限或无法在类型中表示，正确签名的无穷大或 NAN 则返回，则**FE_OVERFLOW**和**FE_INEXACT**设置浮点异常状态，和**errno**设置为**ERANGE**。
+返回之后的返回类型的下一步可表示浮点值*x*的方向*y*。 如果*x*并*y*相等，该函数将返回*y*，已转换为返回类型，且未触发异常。 如果*x*不等于*y*，并且结果为非正规或零， **FE_UNDERFLOW**并**FE_INEXACT**浮点异常状态设置，并返回正确的结果。 如果任一*x*或*y*是 NAN，则返回值为输入 Nan 之一。 如果*x*是有限的结果为无限或无法在类型中表示，正确的有符号无穷大或 NAN 返回的则**FE_OVERFLOW**并**FE_INEXACT**设置浮点异常状态，并**errno**设置为**ERANGE**。
 
 ## <a name="remarks"></a>备注
 
-**Nextafter**和**nexttoward**函数系列是相同的参数类型但*y*。 如果*x*和*y*相等，则返回该值*y*转换为返回类型。
+**Nextafter**并**nexttoward**函数系列是等同的只不过参数类型的*y*。 如果*x*并*y*相等，则返回该值*y*转换为返回类型。
 
-由于 c + + 允许重载，如果包含\<t h > 你可以调用的重载**nextafter**和**nexttoward** ，可返回**float**和**长** **double**类型。 在 C 程序中， **nextafter**和**nexttoward**始终返回**double**。
+由于 c + + 允许重载，如果包括\<cmath > 可以调用的重载**nextafter**并**nexttoward**返回**float**和**长****双**类型。 在 C 程序中， **nextafter**并**nexttoward**始终返回**double**。
 
-**_Nextafter**和 **_nextafterf**函数是 Microsoft 特定。 **_Nextafterf**函数在编译 x64 时才可用。
+**_Nextafter**并 **_nextafterf**是 Microsoft 特定函数的函数。 **_Nextafterf**编译 x64 时，函数才可用。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头 (C)|必需的标头 (C++)|
+|例程所返回的值|必需的标头 (C)|必需的标头 (C++)|
 |-------------|---------------------------|-------------------------------|
 |**nextafter**， **nextafterf**， **nextafterl**， **_nextafterf**， **nexttoward**， **nexttowardf**， **nexttowardl**|\<math.h>|\<math.h> 或 \<cmath>|
 |**_nextafter**|\<float.h>|\<float.h> 或 \<cfloat>|

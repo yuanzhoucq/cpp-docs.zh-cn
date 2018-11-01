@@ -1,11 +1,6 @@
 ---
-title: fesetenv |Microsoft 文档
-ms.custom: ''
+title: fesetenv
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - fesetenv
 apilocation:
@@ -24,21 +19,15 @@ apitype: DLLExport
 f1_keywords:
 - fesetenv
 - fenv/fesetenv
-dev_langs:
-- C++
 helpviewer_keywords:
 - fesetenv function
 ms.assetid: ffc64fff-8ea7-4d59-9e04-ff96ef8cd012
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bd761f505c602aad44c5e00df223d4a6c983e851
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8c91bfbb89df964fed0a632d5fb5ebac47ebe948
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397241"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50436129"
 ---
 # <a name="fesetenv"></a>fesetenv
 
@@ -55,7 +44,7 @@ int fesetenv(
 ### <a name="parameters"></a>参数
 
 *penv*<br/>
-指向**fenv_t**对象，其中包含浮点环境作为集通过调用[fegetenv](fegetenv1.md)或[feholdexcept](feholdexcept2.md)。 此外可以通过使用指定的默认启动浮点环境**FE_DFL_ENV**宏。
+指向**fenv_t**对象，其中包含作为组的浮点环境，通过调用[fegetenv](fegetenv1.md)或[feholdexcept](feholdexcept2.md)。 此外可以通过使用指定的默认启动浮点环境**FE_DFL_ENV**宏。
 
 ## <a name="return-value"></a>返回值
 
@@ -63,7 +52,7 @@ int fesetenv(
 
 ## <a name="remarks"></a>备注
 
-**Fesetenv**函数设置中存储的值从当前的浮点环境**fenv_t**指向对象*penv*。 浮点环境是一系列影响浮点计算的状态标志和控件模式。 这包括舍入模式和浮点异常的状态标志。  如果*penv*不**FE_DFL_ENV**或不是有效**fenv_t**对象，后续的行为是不确定。
+**Fesetenv**函数设置当前浮点环境中存储的值从**fenv_t**指向对象*penv*。 浮点环境是一系列影响浮点计算的状态标志和控件模式。 这包括舍入模式和浮点异常的状态标志。  如果*penv*不是**FE_DFL_ENV**或不指向有效**fenv_t**对象，则未定义后续行为。
 
 对此函数的调用设置的异常中的状态标志*penv*对象，但它不会引发这些异常。
 
