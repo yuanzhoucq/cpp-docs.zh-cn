@@ -1,10 +1,6 @@
 ---
-title: atexit | Microsoft 文档
-ms.custom: ''
+title: atexit
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - atexit
 apilocation:
@@ -21,22 +17,16 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - atexit
-dev_langs:
-- C++
 helpviewer_keywords:
 - processing, at exit
 - atexit function
 ms.assetid: 92c156d2-8052-4e58-96dc-00128baac6f9
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d66954348d5d812fac7eca0b231304267cc26157
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 48f0fbfa1f3350f73899fcdbb3bf7922f1c6174d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393129"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50556633"
 ---
 # <a name="atexit"></a>atexit
 
@@ -61,21 +51,21 @@ int atexit(
 
 ## <a name="remarks"></a>备注
 
-**Atexit**函数传递的函数地址*func*当程序正常终止时调用。 对连续调用**atexit**创建按后进先出 (LIFO) 顺序执行的函数的寄存器。 函数传递给**atexit**不能接受参数。 **atexit**和 **_onexit**使用堆保存的寄存器的函数。 因此，可以注册的函数的数量仅受堆内存限制。
+**Atexit**函数传递的函数地址*func*程序正常终止时要调用。 后续调用**atexit**创建按后进先出 (LIFO) 顺序执行的函数的一个函数注册表。 函数传递给**atexit**不能采用参数。 **atexit**并 **_onexit**使用堆保存函数注册表。 因此，可以注册的函数的数量仅受堆内存限制。
 
-中的代码**atexit**函数不应包含任何依赖于可能已卸载了时的任何 DLL **atexit**调用函数。
+中的代码**atexit**函数不应包含已被卸载时的任何 DLL 上的任何依赖项**atexit**调用函数。
 
-若要生成符合 ANSI 标准的应用程序，使用 ANSI 标准**atexit**函数 (而不是类似 **_onexit**函数)。
+若要生成符合 ANSI 的应用程序，请使用 ANSI 标准**atexit**函数 (而不是类似 **_onexit**函数)。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**atexit**|\<stdlib.h>|
 
 ## <a name="example"></a>示例
 
-到堆栈上的函数时要执行此程序推送四个函数**atexit**调用。 当程序退出时，这些程序以后进先出的方式执行。
+此程序四个函数推送到堆栈上时执行的函数**atexit**调用。 当程序退出时，这些程序以后进先出的方式执行。
 
 ```C
 // crt_atexit.c

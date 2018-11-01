@@ -1,10 +1,6 @@
 ---
-title: _fcvt_s | Microsoft 文档
-ms.custom: ''
+title: _fcvt_s
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _fcvt_s
 apilocation:
@@ -23,24 +19,18 @@ apitype: DLLExport
 f1_keywords:
 - fcvt_s
 - _fcvt_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - fcvt_s function
 - converting floating point, to strings
 - floating-point functions, converting number to string
 - _fcvt_s function
 ms.assetid: 48671197-1d29-4c2b-a5d8-d2368f5f68a1
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2897c199b1b7022de8d5735c4da5f02d7627a418
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 51ff3c675f1f53aee9beab629b17193164a2e7eb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404056"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50536839"
 ---
 # <a name="fcvts"></a>_fcvt_s
 
@@ -91,30 +81,30 @@ errno_t _fcvt_s(
 
 如果成功，则返回 0。 如果失败，则返回值为错误代码。 错误代码是在 ERRNO.h 中定义的。 有关这些错误的列表，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
-对于无效参数（如下表中所列），此函数调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，此函数将**errno**到**EINVAL**并返回**EINVAL**。
+对于无效参数（如下表中所列），此函数调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，此函数可设置**errno**到**EINVAL** ，并返回**EINVAL**。
 
 ### <a name="error-conditions"></a>错误条件
 
 |*buffer*|*sizeInBytes*|值|count|dec|Sign|返回|中的值*缓冲区*|
 |--------------|-------------------|-----------|-----------|---------|----------|------------|-----------------------|
 |**NULL**|任何|任何|任何|任何|任何|**EINVAL**|未修改。|
-|不**NULL** （指向有效的内存）|<=0|任何|任何|任何|任何|**EINVAL**|未修改。|
+|不**NULL** （指向有效内存）|<=0|任何|任何|任何|任何|**EINVAL**|未修改。|
 |任何|任何|任何|任何|**NULL**|任何|**EINVAL**|未修改。|
 |任何|任何|任何|任何|任何|**NULL**|**EINVAL**|未修改。|
 
 ## <a name="security-issues"></a>安全性问题
 
-**_fcvt_s**可能会产生访问冲突，如果*缓冲区*不指向有效内存并且不是**NULL**。
+**_fcvt_s**时，可能会产生访问冲突*缓冲区*不指向有效内存且不**NULL**。
 
 ## <a name="remarks"></a>备注
 
-**_Fcvt_s**函数将浮点数转换为以 null 结尾的字符串。 *值*参数是要转换的浮点数。 **_fcvt_s**存储的位数*值*作为字符串，并追加 null 字符 (\0)。 *计数*参数指定要存储在小数点之后的数字个数。 多余的数字被舍入为*计数*放置。 如果有数不能超过*计数*位精度，该字符串则用零填充。
+**_Fcvt_s**函数将浮点数转换为以 null 结尾的字符串。 *值*参数是要转换的浮点数。 **_fcvt_s**存储的位数*值*作为一个字符串，并追加 null 字符 (\0)。 *计数*参数指定要存储在小数点后的位数。 多余的位数被舍入到*计数*放置。 如果少于*计数*用零填充数字的精度，该字符串。
 
-字符串中仅存储位数。 小数点和的符号的位置*值*可以从获取*dec*和*登录*后调用。 *Dec*参数指向的整数值; 此整数值使该字符串的开头相对小数点的位置。 零或负整数值表示小数点位于第一个数字的左侧。 参数*登录*指向一个整数，表示的符号*值*。 整数设置为 0，如果*值*为正数，并且设置为非零的数字如果*值*为负。
+字符串中仅存储位数。 小数点和的符号的位置*值*可从此*dec*并*登录*后调用。 *Dec*参数指向一个整数值; 此整数值指定相对于字符串开头的小数点的位置。 零或负整数值表示小数点位于第一个数字的左侧。 将参数*符号*指向一个整数，指示的符号*值*。 整数设置为 0，如果*值*为正，设置为非零数字*值*为负。
 
-缓冲区的长度 **_CVTBUFSIZE**足以满足任何浮点值。
+缓冲区长度 **_CVTBUFSIZE**足以满足任何浮点值。
 
-之间的差异 **_ecvt_s**和 **_fcvt_s**处于的解释*计数*参数。 **_ecvt_s**解释*计数*作为的输出字符串中的位数总数和 **_fcvt_s**解释*计数*后的位数的数字的形式小数点。
+之间的差异 **_ecvt_s**并 **_fcvt_s**中的解释*计数*参数。 **_ecvt_s**解释*计数*输出字符串中的位数总数和 **_fcvt_s**解释*计数*后的位数小数点。
 
 在 C++ 中，通过模板重载简化此函数的使用；重载可以自动推导出缓冲区长度，不再需要指定大小参数。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 

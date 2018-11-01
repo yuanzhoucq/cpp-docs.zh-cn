@@ -1,10 +1,6 @@
 ---
-title: _getcwd_dbg、_wgetcwd_dbg | Microsoft 文档
-ms.custom: ''
+title: _getcwd_dbg、_wgetcwd_dbg
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wgetcwd_dbg
 - _getcwd_dbg
@@ -26,8 +22,6 @@ f1_keywords:
 - _wgetcwd_dbg
 - getcwd_dbg
 - wgetcwd_dbg
-dev_langs:
-- C++
 helpviewer_keywords:
 - wgetcwd_dbg function
 - working directory
@@ -37,16 +31,12 @@ helpviewer_keywords:
 - _wgetcwd_dbg function
 - directories [C++], current working
 ms.assetid: 8d5d151f-d844-4aa6-a28c-1c11a22dc00d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2b4124b5825f27ec26afdb40f0ccc9e4de4ed087
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9616c5f7e29b4f003d3943ba058d1f1a1d5adb5c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401550"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50521133"
 ---
 # <a name="getcwddbg-wgetcwddbg"></a>_getcwd_dbg、_wgetcwd_dbg
 
@@ -77,7 +67,7 @@ wchar_t *_wgetcwd_dbg(
 路径的存储位置。
 
 *maxlen*<br/>
-以字符为单位的路径的最大长度： **char**为 **_getcwd_dbg**和**wchar_t**为 **_wgetcwd_dbg**。
+以字符为单位的路径的最大长度： **char**有关 **_getcwd_dbg**并**wchar_t**有关 **_wgetcwd_dbg**。
 
 *blockType*<br/>
 内存块的请求类型： **_CLIENT_BLOCK**或 **_NORMAL_BLOCK**。
@@ -90,15 +80,15 @@ wchar_t *_wgetcwd_dbg(
 
 ## <a name="return-value"></a>返回值
 
-返回一个指向*缓冲区*。 A **NULL**返回值指示错误，和**errno**设置为**ENOMEM**，指示内存不足，无法分配*maxlen*字节 (当**NULL**参数给定为*缓冲区*)，或**ERANGE**，，该值指示路径的长度超过*maxlen*字符。
+返回一个指向*缓冲区*。 一个**NULL**返回值指示错误，并**errno**设置为**ENOMEM**，，该值指示是否有足够的内存来分配*maxlen*字节 (时**NULL**参数指定为*缓冲区*)，或设置为**ERANGE**，指示路径的长度超过*maxlen*字符。
 
 有关详细信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>备注
 
-**_Getcwd_dbg**和 **_wgetcwd_dbg**函数相等 **_getcwd**和 **_wgetcwd**只不过，当 **_调试**是定义，这些函数将使用的调试版本**malloc**和 **_malloc_dbg**分配内存，如果**NULL**作为传递第一个参数。 有关详细信息，请参阅 [_malloc_dbg](malloc-dbg.md)。
+**_Getcwd_dbg**并 **_wgetcwd_dbg**函数是相同 **_getcwd**并 **_wgetcwd**只不过，当 **_调试**是定义，这些函数将使用的调试版本**malloc**并 **_malloc_dbg**来分配内存，如果**NULL**作为传递第一个参数。 有关详细信息，请参阅 [_malloc_dbg](malloc-dbg.md)。
 
-在大多数情况下，无需显式调用这些函数。 相反，你可以定义 **_CRTDBG_MAP_ALLOC**标志。 当 **_CRTDBG_MAP_ALLOC**定义，则调用 **_getcwd**和 **_wgetcwd**重新映射到 **_getcwd_dbg**和 **_wgetcwd_dbg**分别与*blockType*设置为 **_NORMAL_BLOCK**。 因此，不需要显式调用这些函数，除非你希望将堆块作为标记 **_CLIENT_BLOCK**。 有关详细信息，请参阅[调试堆的块类型](/visualstudio/debugger/crt-debug-heap-details)。
+在大多数情况下，无需显式调用这些函数。 相反，您可以定义 **_CRTDBG_MAP_ALLOC**标志。 当 **_CRTDBG_MAP_ALLOC**定义，则调用 **_getcwd**并 **_wgetcwd**重新映射到 **_getcwd_dbg**和 **_wgetcwd_dbg**，分别与*blockType*设置为 **_NORMAL_BLOCK**。 因此，不需要显式调用这些函数，除非你想要将标记作为堆块 **_CLIENT_BLOCK**。 有关详细信息，请参阅[调试堆的块类型](/visualstudio/debugger/crt-debug-heap-details)。
 
 ## <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -108,7 +98,7 @@ wchar_t *_wgetcwd_dbg(
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_getcwd_dbg**|\<crtdbg.h>|
 |**_wgetcwd_dbg**|\<crtdbg.h>|
