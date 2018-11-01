@@ -1,28 +1,18 @@
 ---
-title: ATL 向导添加 ATL 支持的详细信息 |Microsoft Docs
-ms.custom: ''
+title: ATL 向导添加的 ATL 支持的详细信息
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - vc.codewiz.atl.support
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC, ATL support
 - ATL, MFC projects
 ms.assetid: aa66bad0-008f-4886-94c1-2a0a0d04bce4
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: efa96037139e61e16b752b45617bb8a3c54be993
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5684e1f53e9df120feca89cbb6b2ba70bd38d439
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46442144"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50564770"
 ---
 # <a name="details-of-atl-support-added-by-the-atl-wizard"></a>ATL 向导添加的 ATL 支持的详细信息
 

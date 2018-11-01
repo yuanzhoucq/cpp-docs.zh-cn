@@ -1,10 +1,6 @@
 ---
-title: __min | Microsoft 文档
-ms.custom: ''
+title: __min
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - __min
 apilocation:
@@ -23,28 +19,22 @@ f1_keywords:
 - __min
 - min
 - _min
-dev_langs:
-- C++
 helpviewer_keywords:
 - __min macro
 - min macro
 - minimum macro
 - _min macro
 ms.assetid: 2037f26c-b48a-4a69-8870-22519f052a3c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0cc69cb018cda6fc093c570dab86a8df4cf396b7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f9e867cd1f3e3519e440c91895e61e317d9688a3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399603"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50617810"
 ---
 # <a name="min"></a>__min
 
-返回两个值的较小者预处理器宏。
+返回两个值的较小的预处理器宏。
 
 ## <a name="syntax"></a>语法
 
@@ -55,7 +45,7 @@ ms.locfileid: "32399603"
 ### <a name="parameters"></a>参数
 
 ， *b*<br/>
-值的任何类型**<** 运算符适用于。
+任何值类型**<** 运算符工作。
 
 ## <a name="return-value"></a>返回值
 
@@ -63,13 +53,13 @@ ms.locfileid: "32399603"
 
 ## <a name="remarks"></a>备注
 
-**__Min**宏比较两个值，并返回较小的一个的值。 参数可以是任何数字数据类型，有符号或无符号均可。 两个自变量以及返回值必须是同一数据类型。
+**__Min**宏将两个值进行比较并返回其中的较小的值。 参数可以是任何数字数据类型，有符号或无符号均可。 两个自变量以及返回值必须是同一数据类型。
 
-返回自变量的计算两次由宏。 这可能导致意外结果，如果参数是一个表达式，它计算时，如更改其值`*p++`。
+返回参数的计算两次由宏。 这可能导致意外的结果，如果参数为一个表达式，它计算时，如来更改其值`*p++`。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**__min**|\<stdlib.h>|
 
