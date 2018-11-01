@@ -1,10 +1,6 @@
 ---
-title: CAnimationVariable 类 |Microsoft Docs
-ms.custom: ''
+title: CAnimationVariable 类
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CAnimationVariable
 - AFXANIMATIONCONTROLLER/CAnimationVariable
@@ -27,8 +23,6 @@ f1_keywords:
 - AFXANIMATIONCONTROLLER/CAnimationVariable::m_lstTransitions
 - AFXANIMATIONCONTROLLER/CAnimationVariable::m_pParentObject
 - AFXANIMATIONCONTROLLER/CAnimationVariable::m_variable
-dev_langs:
-- C++
 helpviewer_keywords:
 - CAnimationVariable [MFC], CAnimationVariable
 - CAnimationVariable [MFC], AddTransition
@@ -50,16 +44,12 @@ helpviewer_keywords:
 - CAnimationVariable [MFC], m_pParentObject
 - CAnimationVariable [MFC], m_variable
 ms.assetid: 506e697e-31a8-4033-a27e-292f4d7b42d9
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fdf35381efb5f6d017b3238f4630929fb1d9ebbe
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1ad14060c7607698cd647ae34fb35b6ea3ae547c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46447851"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50559557"
 ---
 # <a name="canimationvariable-class"></a>CAnimationVariable 类
 
@@ -386,7 +376,7 @@ BOOL m_bAutodestroyTransitions;
 
 ### <a name="remarks"></a>备注
 
-要从中转换的内部列表时，请设置此值设置为 true 以强制删除转换对象。 如果此值为 FALSE 则应通过调用应用程序删除转换。 已安排动画，始终会清除的转换列表。 默认值为 FALSE。
+要从中转换的内部列表时，请设置此值设置为 true 以强制删除转换对象。 如果此值为 FALSE 则应通过调用应用程序删除转换。 已安排动画，始终会清除的转换列表。 默认值是 FALSE。
 
 ##  <a name="m_dbldefaultvalue"></a>  CAnimationVariable::m_dblDefaultValue
 

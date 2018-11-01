@@ -1,10 +1,6 @@
 ---
-title: isleadbyte、_isleadbyte_l | Microsoft 文档
-ms.custom: ''
+title: isleadbyte、_isleadbyte_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _isleadbyte_l
 - isleadbyte
@@ -25,8 +21,6 @@ f1_keywords:
 - _istleadbyte
 - _isleadbyte_l
 - isleadbyte
-dev_langs:
-- C++
 helpviewer_keywords:
 - lead bytes
 - _isleadbyte_l function
@@ -34,16 +28,12 @@ helpviewer_keywords:
 - istleadbyte function
 - isleadbyte function
 ms.assetid: 3b2bcf09-d82b-4803-9e80-59d04942802a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 682cdde6983c5e590920c43418e510b9c275b34e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1a3f427e49e53bb553020da100b0e713350fab3f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401013"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50531884"
 ---
 # <a name="isleadbyte-isleadbytel"></a>isleadbyte、_isleadbyte_l
 
@@ -66,15 +56,15 @@ int _isleadbyte_l( int c );
 
 ## <a name="return-value"></a>返回值
 
-**isleadbyte**如果自变量满足测试条件或 0，如果它不返回非零值。 在"C"区域设置和单字节字符集 (SBCS) 区域设置中， **isleadbyte**始终返回 0。
+**isleadbyte**如果参数满足测试条件或 0，否则返回非零值。 在"C"区域设置和单字节字符集 (SBCS) 区域设置中， **isleadbyte**始终返回 0。
 
 ## <a name="remarks"></a>备注
 
-**Isleadbyte**宏返回非零值，如果该参数是多字节字符的第一个字节。 **isleadbyte**生成有意义的结果的任何整数自变量在-1 (**EOF**) 到**UCHAR_MAX** (0xFF) （含)。
+**Isleadbyte**宏返回非零值，如果其参数为多字节字符的第一个字节。 **isleadbyte**生成有意义的结果的任何整数参数从-1 (**EOF**) 对**UCHAR_MAX** (0xFF) （含)。
 
-预期自变量类型**isleadbyte**是**int**; 如果传递了带符号的字符，编译器可能将其转换为整数通过符号扩展，从而生成不可预知的结果。
+预期的参数类型**isleadbyte**是**int**; 如果传递的有符号的字符，则编译器可能将其转换为一个整数，符号扩展，产生不可预知的结果。
 
-使用此函数的版本 **_l**后缀是相同，但它使用传递区域设置而不是当前区域设置其区域设置相关的行为。
+使用此函数的版本 **_l**后缀是完全相同，只不过它使用其区域设置相关的行为，而不是当前区域设置传入的区域设置。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -84,7 +74,7 @@ int _isleadbyte_l( int c );
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**isleadbyte**|\<ctype.h>|
 |**_isleadbyte_l**|\<ctype.h>|

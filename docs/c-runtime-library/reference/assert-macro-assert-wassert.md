@@ -1,10 +1,6 @@
 ---
-title: assert 宏、_assert、_wassert | Microsoft 文档
-ms.custom: ''
+title: assert 宏、_assert、_wassert
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - assert
 - _assert
@@ -27,23 +23,17 @@ f1_keywords:
 - _assert
 - _wassert
 - assert/_wassert
-dev_langs:
-- C++
 helpviewer_keywords:
 - aborting programs
 - assert function
 - assert macro
 ms.assetid: a9ca031a-648b-47a6-bdf1-65fc7399dd40
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 67fef1231d4488b1714cc2f0f2f0e892737e627d
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 7ac299213ba3de878f7cf2dc99b44c45273bc3b2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44101932"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50590952"
 ---
 # <a name="assert-macro-assert-wassert"></a>assert 宏、_assert、_wassert
 
@@ -97,7 +87,7 @@ void _wassert(
 
 **_Assert**并 **_wassert**函数是内部 CRT 函数。 这两个函数可帮助最大程度地减少在对象文件中支持断言所需的代码。 建议不要直接调用这些函数。
 
-**断言**C 运行时库的发行版和调试版本中启用宏时**NDEBUG**未定义。 当**NDEBUG**是定义，该宏是可用，但不会评估其参数和不起作用。 启用后，**断言**宏调用 **_wassert**其实现。 其他断言宏 [_ASSERT](assert-asserte-assert-expr-macros.md)、[_ASSERTE](assert-asserte-assert-expr-macros.md) 和 [_ASSERT_EXPR](assert-asserte-assert-expr-macros.md) 也可用，但它们只有在已定义 [_DEBUG](../../c-runtime-library/debug.md) 宏的情况下以及存在于与 C 运行时库调试版本关联的代码中时才会计算传递给它们的表达式。
+**断言**C 运行时库的发行版和调试版本中启用宏时**NDEBUG**未定义。 当**NDEBUG**是定义，该宏是可用，但不会评估其参数和不起作用。 启用后，**断言**宏调用 **_wassert**其实现。 其他断言宏 [_ASSERT](assert-asserte-assert-expr-macros.md)、 [_ASSERTE](assert-asserte-assert-expr-macros.md) 和 [_ASSERT_EXPR](assert-asserte-assert-expr-macros.md)也可用，但它们只有在已定义 [_DEBUG](../../c-runtime-library/debug.md) 宏的情况下以及存在于与 C 运行时库调试版本关联的代码中时才会计算传递给它们的表达式。
 
 ## <a name="requirements"></a>要求
 

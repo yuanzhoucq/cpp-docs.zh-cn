@@ -1,11 +1,6 @@
 ---
-title: casin、casinf、casinl | Microsoft 文档
-ms.custom: ''
+title: casin、casinf、casinl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - casin
 - casinf
@@ -30,27 +25,21 @@ f1_keywords:
 - complex/casin
 - complex/casinf
 - complex/casinl
-dev_langs:
-- C++
 helpviewer_keywords:
 - casin function
 - casinf function
 - casinl function
 ms.assetid: b75d1455-7b1e-43b0-bd46-c530be190be9
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c977430528d8fa5834d3959cbf0645bf68165f0f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 209c3da6d6ed03cb5a5b129003c999b002a1a6b7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394572"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50539615"
 ---
 # <a name="casin-casinf-casinl"></a>casin、casinf、casinl
 
-检索实际轴间隔 [-1，+ 1] 外的分支刮痕部为复数的反正弦的值。
+检索复数的分支切割超出间隔 [-1，+ 1] 沿实轴的反正弦值。
 
 ## <a name="syntax"></a>语法
 
@@ -79,15 +68,15 @@ _Lcomplex casinl(
 
 ## <a name="return-value"></a>返回值
 
-反正弦*z*，以弧度为单位。 结果是虚部轴和间隔中，不受限制 [-π/2 + π/2] 实际轴。
+反正弦*z*，以弧度为单位。 结果为无限沿虚轴，并位于的间隔 [-π/2，+ π/2] 沿实轴。
 
 ## <a name="remarks"></a>备注
 
-由于 c + + 允许重载，你可以调用的重载**casin**采用并返回 **_Fcomplex**和 **_Lcomplex**值。 在 C 程序中， **casin**始终采用并返回 **_Dcomplex**值。
+由于 c + + 允许重载，可以调用的重载**casin**采用并返回 **_Fcomplex**并 **_Lcomplex**值。 在 C 程序中， **casin**始终采用并返回 **_Dcomplex**值。
 
 ## <a name="requirements"></a>要求
 
-|例程|C 标头|C++ 标头|
+|例程所返回的值|C 标头|C++ 标头|
 |-------------|--------------|------------------|
 |**casin**， **casinf**， **casinl**|\<complex.h>|\<ccomplex>|
 

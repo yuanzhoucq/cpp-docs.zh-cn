@@ -1,10 +1,6 @@
 ---
-title: _CrtGetReportHook | Microsoft 文档
-ms.custom: ''
+title: _CrtGetReportHook
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtGetReportHook
 apilocation:
@@ -22,22 +18,16 @@ apitype: DLLExport
 f1_keywords:
 - CrtGetReportHook
 - _CrtGetReportHook
-dev_langs:
-- C++
 helpviewer_keywords:
 - CrtGetReportHook function
 - _CrtGetReportHook function
 ms.assetid: 922758ed-7edd-4359-9c92-0535192dc11a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d78c176d5d4de54f4ae5eea84b0483b9e6bc3bec
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0b8b666093807c95312d4328ca9b3043ad1e09df
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395005"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50536755"
 ---
 # <a name="crtgetreporthook"></a>_CrtGetReportHook
 
@@ -55,13 +45,13 @@ _CRT_REPORT_HOOK _CrtGetReportHook( void );
 
 ## <a name="remarks"></a>备注
 
-**_CrtGetReportHook**允许应用程序在检索报告过程的 C 运行时调试库的当前报告功能。
+**_CrtGetReportHook** ，应用程序可以检索有关 C 运行时调试库报告进程当前报告函数。
 
 有关使用其他具有挂钩功能的运行时函数和编写你自己的客户端定义挂钩函数的详细信息，请参阅[编写调试挂钩函数](/visualstudio/debugger/debug-hook-function-writing)。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_CrtGetReportHook**|\<crtdbg.h>|
 

@@ -1,10 +1,6 @@
 ---
-title: _ismbcalnum、_ismbcalnum_l、_ismbcalpha、_ismbcalpha_l、_ismbcdigit、_ismbcdigit_l | Microsoft 文档
-ms.custom: ''
+title: _ismbcalnum、_ismbcalnum_l、_ismbcalpha、_ismbcalpha_l、_ismbcdigit、_ismbcdigit_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ismbcalpha
 - _ismbcalnum
@@ -36,8 +32,6 @@ f1_keywords:
 - _ismbcalnum_l
 - _ismbcalnum
 - ismbcdigit_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - ismbcalpha function
 - _ismbcalnum function
@@ -52,16 +46,12 @@ helpviewer_keywords:
 - ismbcalnum_l function
 - ismbcalpha_l function
 ms.assetid: 12d57925-aebe-46e0-80b0-82b84c4c31ec
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a90fe131ff216bd9f758f3312d366e0ec29d79ae
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1a2f928d826b70b788220130f69c53cc351b4910
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404264"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50532218"
 ---
 # <a name="ismbcalnum-ismbcalnuml-ismbcalpha-ismbcalphal-ismbcdigit-ismbcdigitl"></a>_ismbcalnum、_ismbcalnum_l、_ismbcalpha、_ismbcalpha_l、_ismbcdigit、_ismbcdigit_l
 
@@ -112,23 +102,23 @@ int _ismbcdigit_l
 
 ## <a name="return-value"></a>返回值
 
-其中每个例程在字符满足测试条件时返回一个非零值，在不满足测试条件时回 0。 如果*c*< = 255，并且没有相应 **_ismbb**例程 (例如， **_ismbcalnum**对应于 **_ismbbalnum**)，则结果是相应的返回值 **_ismbb**例程。
+其中每个例程在字符满足测试条件时返回一个非零值，在不满足测试条件时回 0。 如果*c*< = 255 且存在相应 **_ismbb**例程 (例如， **_ismbcalnum**对应于 **_ismbbalnum**)，则结果是相应的返回值 **_ismbb**例程。
 
 ## <a name="remarks"></a>备注
 
 其中每个例程都针对给定的条件测试给定的多字节字符。
 
-使用这些函数的版本 **_l**后缀是相同，只不过它们使用传递区域设置而不是当前区域设置其区域设置相关的行为。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+使用这些函数的版本 **_l**后缀完全相同，只不过它们使用为其区域设置相关的行为而不是当前区域设置传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
-|例程|测试条件|代码页 932 示例|
+|例程所返回的值|测试条件|代码页 932 示例|
 |-------------|--------------------|---------------------------|
-|**_ismbcalnum**， **_ismbcalnum_l**|字母数字|返回非零当且仅当*c*是 ASCII 英文字母的单字节表示： 请参阅示例 **_ismbcdigit**和 **_ismbcalpha**。|
-|**_ismbcalpha**， **_ismbcalpha_l**|Alphabetic|返回非零当且仅当*c*是 ASCII 英文字母的单字节表示： 0x41 向 < =*c*< = 0x5A 或 0x61 < =*c*< = 0x7A; 或片假名字母：0xA6 < =*c*< = 0xDF。|
-|**_ismbcdigit**， **_ismbcdigit**|数字|返回非零当且仅当*c*是 ASCII 数字的单字节表示： 0x30 < =*c*< = 0x39。|
+|**_ismbcalnum**， **_ismbcalnum_l**|字母数字|返回非零值，当且仅当*c*是 ASCII 英文字母的单字节表示形式： 请参阅示例 **_ismbcdigit**并 **_ismbcalpha**。|
+|**_ismbcalpha**， **_ismbcalpha_l**|Alphabetic|返回非零值，当且仅当*c*是 ASCII 英文字母的单字节表示形式： 0x41 < =*c*< = 0x5A 或 0x61 < =*c*< = 0x7A; 或是片假名字母：0xa6< < =*c*< = 0xDF。|
+|**_ismbcdigit**， **_ismbcdigit**|数字|返回非零值，当且仅当*c*是 ASCII 数字的单字节表示形式： 0x30 < =*c*< = 0x39。|
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_ismbcalnum**， **_ismbcalnum_l**|\<mbstring.h>|
 |**_ismbcalpha**， **_ismbcalpha_l**|\<mbstring.h>|

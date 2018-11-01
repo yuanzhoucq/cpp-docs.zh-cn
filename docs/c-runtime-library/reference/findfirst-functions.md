@@ -1,10 +1,6 @@
 ---
-title: _findfirst、_findfirst32、_findfirst32i64、_findfirst64、_findfirst64i32、_findfirsti64、_wfindfirst、_wfindfirst32、_wfindfirst32i64、_wfindfirst64、_wfindfirst64i32、_wfindfirsti64 | Microsoft 文档
-ms.custom: ''
+title: _findfirst、_findfirst32、_findfirst32i64、_findfirst64、_findfirst64i32、_findfirsti64、_wfindfirst、_wfindfirst32、_wfindfirst32i64、_wfindfirst64、_wfindfirst64i32、_wfindfirsti64
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _findfirst
 - _wfindfirst
@@ -56,8 +52,6 @@ f1_keywords:
 - tfindfirst32i64
 - _findfirst
 - _wfindfirst64
-dev_langs:
-- C++
 helpviewer_keywords:
 - _tfindfirst64 function
 - _wfindfirst64i32 function
@@ -96,20 +90,16 @@ helpviewer_keywords:
 - wfindfirst64i32 function
 - _wfindfirst64 function
 ms.assetid: 9bb46d1a-b946-47de-845a-a0b109a33ead
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2c57577208e9c2e8306f2c1c30f352e62c068c88
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: eaecf466617669e6abf156370854b88d16fc4086
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405635"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50542072"
 ---
 # <a name="findfirst-findfirst32-findfirst32i64-findfirst64-findfirst64i32-findfirsti64-wfindfirst-wfindfirst32-wfindfirst32i64-wfindfirst64-wfindfirst64i32-wfindfirsti64"></a>_findfirst、_findfirst32、_findfirst32i64、_findfirst64、_findfirst64i32、_findfirsti64、_wfindfirst、_wfindfirst32、_wfindfirst32i64、_wfindfirst64、_wfindfirst64i32、_wfindfirsti64
 
-提供有关文件名的匹配中指定的文件的第一个实例信息*filespec*自变量。
+提供有关匹配中指定的文件的文件名称的第一个实例的信息*filespec*参数。
 
 ## <a name="syntax"></a>语法
 
@@ -174,14 +164,14 @@ intptr_t _wfindfirst64i32(
 
 ## <a name="return-value"></a>返回值
 
-如果成功， **_findfirst**返回标识的文件或与匹配的文件组的唯一的搜索句柄*filespec*规范，可以在后续调用中使用[_findnext](findnext-functions.md)或[_findclose](findclose.md)。 否则为 **_findfirst**返回-1 并设置**errno**为以下值之一。
+如果成功， **_findfirst**返回标识的文件或与匹配的文件组的唯一搜索句柄*filespec*规范，可以对后续调用中使用[_findnext](findnext-functions.md)或设置为[_findclose](findclose.md)。 否则为 **_findfirst**将返回-1 并设置**errno**为以下值之一。
 
 |errno 值|条件|
 |-|-|
 **EINVAL**|无效的参数： *filespec*或*fileinfo*已**NULL**。 或者，操作系统返回了意外错误。
 **ENOENT**|无法匹配的文件规范。
 **ENOMEM**|内存不足。
-**EINVAL**|指定无效的文件名称 （或指定的文件名称） 不大于**MAX_PATH**。
+**EINVAL**|文件名规范无效或指定的文件名为大于**MAX_PATH**。
 
 有关这些属性和其他的更多信息返回代码示例，请参见 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
@@ -189,17 +179,17 @@ intptr_t _wfindfirst64i32(
 
 ## <a name="remarks"></a>备注
 
-必须调用[_findclose](findclose.md)在完成使用后 **_findfirst**或[_findnext](findnext-functions.md)函数 （或任何变体）。 这将释放应用程序中这些函数所使用的资源。
+必须调用[_findclose](findclose.md)在使用完成后 **_findfirst**或[_findnext](findnext-functions.md)函数 （或任何变体）。 这将释放应用程序中这些函数所使用的资源。
 
-这些函数具有的变体**w**前缀都是宽字符版本; 否则，它们为与相应的单字节函数相同。
+具有这些函数的变体**w**前缀都是宽字符版本; 否则，它们与相应的单字节函数完全相同。
 
-这些函数的变体支持 32 位或 64 位时间类型以及 32 位或 64 位文件大小。 第一个数字后缀 (**32**或**64**) 指示的大小的时间类型; 第二个后缀是**i32**或**i64**，并指示是否文件大小都表示为一个 32 位或 64 位整数。 有关支持 32 位和 64 位时间类型及文件大小的版本的信息，请参阅下表。 **I32**或**i64**它等同于大小时间类型，因此如果省略后缀 **_findfirst64**还支持 64 位文件长度和 **_findfirst32**支持仅 32 位文件长度。
+这些函数的变体支持 32 位或 64 位时间类型以及 32 位或 64 位文件大小。 第一个数字后缀 (**32**或**64**) 指示类型大小的时间; 第二个后缀是**i32**或**i64**，并指示是否作为 32 位或 64 位整数表示文件大小。 有关支持 32 位和 64 位时间类型及文件大小的版本的信息，请参阅下表。 **I32**或**i64**如果因此是时间类型的大小相同，则省略后缀 **_findfirst64**还支持 64 位文件长度和 **_findfirst32**支持仅 32 位文件长度。
 
 这些函数将使用各种形式的 **_finddata_t**结构*fileinfo*参数。 有关结构的详细信息，请参阅[文件名搜索函数](../../c-runtime-library/filename-search-functions.md)。
 
 使用 64 位时间类型的变体允许文件创建日期最大表示为 3000 年 12 月 31 日 23:59:59，UTC。 那些使用 32 位时间类型的变体只能表示截至 2038 年 1 月 18 日 23:59:59，UTC 之前的日期。 1970 年 1 月 1 日午夜是所有这些函数的日期范围下限。
 
-除非有特定原因要使用的版本显式指定的时间大小，请使用 **_findfirst**或 **_wfindfirst**或者，如果你需要支持文件大小大于 3 GB，则使用 **_findfirsti64**或 **_wfindfirsti64**。 所有这些函数均使用 64 位时间类型。 在早期版本中，这些函数使用 32 位时间类型。 如果这是一项重大更改为应用程序，你可以定义 **_USE_32BIT_TIME_T**还原为旧行为。 如果 **_USE_32BIT_TIME_T**定义， **_findfirst**， **_finfirsti64**，和其相应的 Unicode 版本使用 32 位时间。
+除非有特定原因要使用显式指定时间大小，请使用的版本 **_findfirst**或 **_wfindfirst**或者，如果需要支持大于 3 GB 的文件大小，使用 **_findfirsti64**或 **_wfindfirsti64**。 所有这些函数均使用 64 位时间类型。 在早期版本中，这些函数使用 32 位时间类型。 如果这是一项重大更改的应用程序，可以定义 **_USE_32BIT_TIME_T**若要还原到旧行为。 如果 **_USE_32BIT_TIME_T**定义，则 **_findfirst**， **_finfirsti64**，和其对应的 Unicode 版本使用 32 位时间。
 
 ### <a name="time-type-and-file-length-type-variations-of-findfirst"></a>_findfirst 的时间类型和文件长度类型变体
 

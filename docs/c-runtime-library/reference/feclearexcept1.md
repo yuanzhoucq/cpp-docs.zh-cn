@@ -1,11 +1,6 @@
 ---
-title: feclearexcept1 | Microsoft 文档
-ms.custom: ''
+title: feclearexcept1
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - feclearexcept
 apilocation:
@@ -24,21 +19,15 @@ apitype: DLLExport
 f1_keywords:
 - feclearexcept
 - fenv/feclearexcept
-dev_langs:
-- C++
 helpviewer_keywords:
 - feclearexcept function
 ms.assetid: ef419da3-c248-4432-b53c-8e7a475d9533
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: face2637f308a56d95baa7563a6409dd38870d73
-ms.sourcegitcommit: 2f571220e16f6c20e1fdb005f6cbc9e7ef5608f5
+ms.openlocfilehash: 3c2f037a5be903fc006debfa7319c483431fdd92
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37070072"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50551107"
 ---
 # <a name="feclearexcept"></a>feclearexcept
 
@@ -54,16 +43,16 @@ int feclearexcept(
 
 ### <a name="parameters"></a>参数
 
-*excepts*<br/>
+*除*<br/>
 要清除的异常状态标记。
 
 ## <a name="return-value"></a>返回值
 
-返回零如果*excepts*为零，或如果已成功清除所有指定的异常。 否则，返回一个非零值。
+返回为零*除*为零，或如果已成功清除了所有指定的异常。 否则，返回一个非零值。
 
 ## <a name="remarks"></a>备注
 
-**Feclearexcept**函数尝试清除浮点点指定的异常状态标志*excepts*。 此函数支持在 fenv.h 中定义的这些异常宏：
+**Feclearexcept**函数尝试清除浮点点指定的异常状态标志*除*。 此函数支持在 fenv.h 中定义的这些异常宏：
 
 |异常宏|描述|
 |---------------------|-----------------|
@@ -74,7 +63,7 @@ int feclearexcept(
 |FE_UNDERFLOW|早期的浮点运算结果因为过小而无法以完整的精度表示；创建了非常规值。|
 |FE_ALL_EXCEPT|所有受支持的浮点异常的按位 OR。|
 
-*Excepts*参数可能为零或一个或多个受支持的异常宏的按位或。 任何其他参数值的结果均未定义。
+*除*参数可能为零个或一个或多个受支持的异常宏的按位 OR。 任何其他参数值的结果均未定义。
 
 ## <a name="requirements"></a>要求
 

@@ -1,10 +1,6 @@
 ---
-title: cos、 cosf、 cosl |Microsoft 文档
-ms.custom: ''
+title: cos、 cosf、 cosl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - cos
 - cosf
@@ -26,8 +22,6 @@ f1_keywords:
 - cos
 - cosf
 - cosl
-dev_langs:
-- C++
 helpviewer_keywords:
 - cosines
 - cosl function
@@ -37,20 +31,16 @@ helpviewer_keywords:
 - trigonometric functions
 - cosines, calculating
 ms.assetid: ae90435e-6b68-4a47-a81f-be87d5c08f16
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0a49f8489d084b1f67bc46432970114350c56f09
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b050fd98a35028b121def8b665fce62ad58ec437
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395443"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50519883"
 ---
 # <a name="cos-cosf-cosl"></a>cos、 cosf、 cosl
 
-计算的余弦值。
+计算余弦值。
 
 ## <a name="syntax"></a>语法
 
@@ -72,20 +62,20 @@ long double cos( long double x );  // C++ only
 
 ## <a name="return-value"></a>返回值
 
-余弦值*x*。 如果*x*是大于或等于 263，或小于或等于-263，会丢失基数结果中。
+余弦*x*。 如果*x*是大于或等于 263，或小于或等于-263，会发生丢失结果中的基数。
 
 |输入|SEH 异常|Matherr 异常|
 |-----------|-------------------|-----------------------|
-|± QNAN、 IND|无|**_DOMAIN**|
-|± INF|**无效**|**_DOMAIN**|
+|为 QNAN IND|无|**（_D)**|
+|为 INF|**无效**|**（_D)**|
 
 ## <a name="remarks"></a>备注
 
-由于 c + + 允许重载，你可以调用的重载**cos**采用并返回**float**或**长** **double**值。 在 C 程序中， **cos**始终采用并返回**double**。
+由于 c + + 允许重载，可以调用的重载**cos**采用并返回**float**或**长** **double**值。 在 C 程序中， **cos**始终采用并返回**double**。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的 C 标头|必需的 C++ 标头|
+|例程所返回的值|必需的 C 标头|必需的 C++ 标头|
 |-------------|---------------------|-|
 |**cos**， **cosh**， **cosf**|\<math.h>|\<cmath> 或 \<math.h>|
 
