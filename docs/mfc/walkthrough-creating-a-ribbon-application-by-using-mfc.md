@@ -1,26 +1,16 @@
 ---
-title: 演练： 使用 MFC 创建功能区应用程序 |Microsoft Docs
-ms.custom: ''
+title: 演练：使用 MFC 创建功能区应用程序
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - ribbon application, creating (MFC)
 - creating a ribbon aplication (MFC)
 ms.assetid: e61393e2-1d6b-4594-a7ce-157d3d1b0d9f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 12070bd690cc2b6228ae5f86e69d9d698bd28348
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 16413b6027a36ec550ae2bf3e04604b32a8454c9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50056914"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50557479"
 ---
 # <a name="walkthrough-creating-a-ribbon-application-by-using-mfc"></a>演练：使用 MFC 创建功能区应用程序
 
