@@ -1,10 +1,6 @@
 ---
-title: _ftell_nolock、_ftelli64_nolock | Microsoft 文档
-ms.custom: ''
+title: _ftell_nolock、_ftelli64_nolock
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ftelli64_nolock
 - _ftell_nolock
@@ -26,8 +22,6 @@ f1_keywords:
 - ftelli64_nolock
 - ftell_nolock
 - _ftell_nolock
-dev_langs:
-- C++
 helpviewer_keywords:
 - ftelli64_nolock function
 - _ftelli64_nolock function
@@ -35,16 +29,12 @@ helpviewer_keywords:
 - ftell_nolock function
 - file pointers [C++], getting current position
 ms.assetid: 84e68b0a-32f8-4c4a-90ad-3f2387685ede
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 15d1001b1f0465273771649404de306153edf920
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 58bfc8c7a8b8e820fdec09d52e24dfcb07f328f8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398444"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50580838"
 ---
 # <a name="ftellnolock-ftelli64nolock"></a>_ftell_nolock、_ftelli64_nolock
 
@@ -68,11 +58,11 @@ __int64 _ftelli64_nolock(
 
 ## <a name="return-value"></a>返回值
 
-与相同**ftell**和 **_ftelli64**。 有关详细信息，请参阅[ftell、 _ftelli64](ftell-ftelli64.md)。
+与相同**ftell**并 **_ftelli64**。 有关详细信息，请参阅[ftell、_ftelli64](ftell-ftelli64.md)。
 
 ## <a name="remarks"></a>备注
 
-这些函数是非锁定版本**ftell**和 **_ftelli64**分别。 它们是相同**ftell**和 **_ftelli64** ，只不过它们不受干扰其他线程。 这些函数可能更快，因为它们不会产生锁定其他线程的开销。 仅在线程安全的上下文中使用这些函数，如单线程应用程序或调用范围已经处理线程隔离。
+这些函数是非锁定版本的**ftell**并 **_ftelli64**分别。 它们是相同**ftell**并 **_ftelli64** ，只不过它们不受干扰从其他线程。 这些函数可能更快，因为它们不会产生锁定其他线程的开销。 仅在线程安全的上下文中使用这些函数，如单线程应用程序或调用范围已经处理线程隔离。
 
 ## <a name="requirements"></a>要求
 

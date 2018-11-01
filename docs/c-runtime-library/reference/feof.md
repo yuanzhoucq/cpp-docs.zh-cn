@@ -1,10 +1,6 @@
 ---
-title: feof | Microsoft 文档
-ms.custom: ''
+title: feof
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - feof
 apilocation:
@@ -22,22 +18,16 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - feof
-dev_langs:
-- C++
 helpviewer_keywords:
 - end of file, testing for
 - feof function
 ms.assetid: 09081eee-7c4b-4189-861f-2fad95d3ec6d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c3162fd72acdfedc198764a92deec043cd681a10
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9c023290df601bfc48f9708af86d32d91cd52dc4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397010"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50580687"
 ---
 # <a name="feof"></a>feof
 
@@ -58,15 +48,15 @@ int feof(
 
 ## <a name="return-value"></a>返回值
 
-**Feof**如果读取的操作已尝试读取文件的末尾，函数将返回一个非零值; 否则，它返回 0。 如果流指针位于**NULL**，函数将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则**errno**设置为**EINVAL**和**feof**返回 0。
+**Feof**如果读取的操作已尝试读取文件的末尾，函数将返回一个非零值; 否则返回 0。 如果流指针为**NULL**，该函数将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则**errno**设置为**EINVAL**并**feof**返回 0。
 
 有关这些代码以及其他错误代码的详细信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>备注
 
-**Feof**例程 （同时作为函数和宏实现） 确定是否末尾*流*已传递。 当传递的文件结束时，读取操作返回文件尾指示器，直到流已关闭，或者直到[rewind](rewind.md)， **fsetpos**， [fseek](fseek-fseeki64.md)，或**clearerr**针对其调用。
+**Feof**例程 （同时作为函数和宏实现） 确定是否结束*流*已被传递。 当传递的文件结束时，读取操作将返回文件尾指示符，直到流已关闭，或者直到[rewind](rewind.md)， **fsetpos**， [fseek](fseek-fseeki64.md)，或**clearerr**针对其调用。
 
-例如，如果文件包含 10 个字节，并从文件读取 10 个字节**feof**将返回 0，因为即使文件指针是在文件末尾，已不尝试超出末尾。 仅尝试读取后将会第 11 个字节**feof**返回非零值。
+例如，如果文件包含 10 个字节，并且从该文件，读取 10 个字节**feof**将返回 0，因为即使文件指针位于文件结尾，也未尝试超出末尾。 仅尝试读取后将第 11 个字节**feof**返回非零值。
 
 ## <a name="requirements"></a>要求
 
