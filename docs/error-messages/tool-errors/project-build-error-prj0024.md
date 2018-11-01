@@ -1,27 +1,17 @@
 ---
-title: 项目生成错误 PRJ0024 |Microsoft Docs
-ms.custom: ''
+title: 项目生成错误 PRJ0024
 ms.date: 08/27/2018
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - PRJ0024
-dev_langs:
-- C++
 helpviewer_keywords:
 - PRJ0024
 ms.assetid: 8bde6368-6c1b-4e04-bc5e-3c6d0b8fa1d7
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: eb539a5f1ee5f1aa5f9d828d93fa6d0dc8690c22
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 645b898bdffcc6d7b397c25eb3c41cea25cb361f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43215593"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50589639"
 ---
 # <a name="project-build-error-prj0024"></a>项目生成错误 PRJ0024
 

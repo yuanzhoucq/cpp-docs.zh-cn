@@ -1,10 +1,6 @@
 ---
-title: ferror | Microsoft 文档
-ms.custom: ''
+title: ferror
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - ferror
 apilocation:
@@ -22,23 +18,17 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - ferror
-dev_langs:
-- C++
 helpviewer_keywords:
 - ferror function
 - streams, testing for errors
 - errors [C++], testing for stream
 ms.assetid: 528a34bc-f2aa-4c3f-b89a-5b148e6864f7
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 49aaff776a90dd687ee4dae1902903ed01b83e20
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2be90ffe8a135b4108abd9504099bd2f6c28f249
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397364"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50587884"
 ---
 # <a name="ferror"></a>ferror
 
@@ -59,13 +49,13 @@ int ferror(
 
 ## <a name="return-value"></a>返回值
 
-如果不发生任何错误*流*， **ferror**返回 0。 否则，返回一个非零值。 如果流是**NULL**， **ferror**中所述调用无效参数处理程序，[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，此函数将**errno**到**EINVAL**并返回 0。
+如果不发生任何错误*流*， **ferror**返回 0。 否则，返回一个非零值。 如果流**NULL**， **ferror**将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，此函数可设置**errno**到**EINVAL** ，并返回 0。
 
 有关这些代码以及其他错误代码的详细信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>备注
 
-**Ferror**的读取或写入错误，与关联的文件的例程 （同时作为函数和宏实现） 测试*流*。 如果出现错误，直到流已关闭或回退，或直到将保持设置为流的错误指示器**clearerr**针对其调用。
+**Ferror**例程 （同时作为函数和宏实现） 测试的读取或写入错误与关联的文件*流*。 如果出现错误，直到关闭或回退，流，或者直到将保持设置流的错误指示符**clearerr**针对其调用。
 
 ## <a name="requirements"></a>要求
 
