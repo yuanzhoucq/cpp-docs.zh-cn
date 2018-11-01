@@ -1,10 +1,6 @@
 ---
-title: _strnset、_strnset_l、_wcsnset、_wcsnset_l、_mbsnset、_mbsnset_l | Microsoft 文档
-ms.custom: ''
+title: _strnset、_strnset_l、_wcsnset、_wcsnset_l、_mbsnset、_mbsnset_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbsnset
 - _strnset
@@ -43,8 +39,6 @@ f1_keywords:
 - _mbsnset
 - _wcsnset
 - _tcsncset
-dev_langs:
-- C++
 helpviewer_keywords:
 - _wcsnset function
 - strnset_l function
@@ -71,23 +65,19 @@ helpviewer_keywords:
 - strings [C++], initializing
 - tcsnset_l function
 ms.assetid: 3f306489-5763-48e5-b939-aefee7c94ef5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9348b2797b137599e8c7f54e41e493003bc4fc58
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 7eefbe3a193157751a991bb069ebe94f48946e7d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451623"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50466686"
 ---
 # <a name="strnset-strnsetl-wcsnset-wcsnsetl-mbsnset-mbsnsetl"></a>_strnset、_strnset_l、_wcsnset、_wcsnset_l、_mbsnset、_mbsnset_l
 
 将字符串的字符初始化为给定字符。 这些函数的更安全版本已发布；请参阅 [_strnset_s、_strnset_s_l、_wcsnset_s、_wcsnset_s_l、_mbsnset_s、_mbsnset_s_l ](strnset-s-strnset-s-l-wcsnset-s-wcsnset-s-l-mbsnset-s-mbsnset-s-l.md)。
 
 > [!IMPORTANT]
-> **_mbsnset**和 **_mbsnset_l**不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
+> **_mbsnset**并 **_mbsnset_l**不能在 Windows 运行时中执行的应用程序中使用。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
 
 ## <a name="syntax"></a>语法
 
@@ -147,11 +137,11 @@ unsigned char *_mbsnset_l(
 
 ## <a name="remarks"></a>备注
 
-**_Strnset**函数设置，最多的第一个*计数*字符*str*到*c* (转换为**char**). 如果*计数*大于的长度*str*的长度*str*而不是使用*计数*。
+**_Strnset**函数设置的最大第一个*计数*字符*str*到*c* (转换为**char**). 如果*计数*大于的长度*str*，时长*str*而不是*计数*。
 
-**_wcsnset**和 **_mbsnset**宽字符及多字节字符版本的 **_strnset**。 字符串自变量和返回值 **_wcsnset**是宽字符字符串; 而的 **_mbsnset**是多字节字符字符串。 否则这三个函数否则具有相同行为。
+**_wcsnset**并 **_mbsnset**宽字符及多字节字符版本的 **_strnset**。 字符串参数和返回值 **_wcsnset**是宽字符字符串; **_mbsnset**是多字节字符字符串。 否则这三个函数否则具有相同行为。
 
-**_mbsnset**验证其参数中; 如果*str*是 null 指针，则调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则 **_mbsnset**返回**NULL**和设置**errno**到**EINVAL**。 **_strnset**和 **_wcsnset**不会验证其参数。
+**_mbsnset**验证其参数; 如果*str*为 null 指针，将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则 **_mbsnset**返回**NULL**并设置**errno**到**EINVAL**。 **_strnset**并 **_wcsnset**不会验证其参数。
 
 输出值受区域设置的 LC_CTYPE 类别设置影响；有关详细信息，请参阅 [setlocale](setlocale-wsetlocale.md)。 这些不带 **_l** 后缀的函数版本使用此区域设置相关的行为的当前区域设置；带有 **_l** 后缀的版本相同，只不过它们使用传递的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
@@ -164,7 +154,7 @@ unsigned char *_mbsnset_l(
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_strnset**|\<string.h>|
 |**_strnset_l**|\<tchar.h>|

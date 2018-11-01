@@ -1,8 +1,6 @@
 ---
-title: 'Platform:: agile 类 |Microsoft Docs'
-ms.custom: ''
+title: Platform::Agile 类
 ms.date: 12/30/2016
-ms.technology: cpp-windows
 ms.topic: reference
 f1_keywords:
 - AGILE/Platform::Platform
@@ -11,21 +9,15 @@ f1_keywords:
 - AGILE/Platform::Platform::Agile::GetAddressOf
 - AGILE/Platform::Platform::Agile::GetAddressOfForInOut
 - AGILE/Platform::Platform::Agile::Release
-dev_langs:
-- C++
 helpviewer_keywords:
 - Platform::Agile
 ms.assetid: e34459a9-c429-4c79-97fd-030c43ca4155
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3745ead4fec8466df3f164c415b21d98f68c0ef7
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 9350d94fdff615056fca193d654b2bb001d78d72
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44109776"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50471196"
 ---
 # <a name="platformagile-class"></a>Platform::Agile 类
 
@@ -162,11 +154,11 @@ T^* GetAddressOf() throw();
 
 ### <a name="return-value"></a>返回值
 
-类型的对象的句柄的地址`T`。
+`T` 类型的对象的句柄地址。
 
 ### <a name="remarks"></a>备注
 
-此操作释放类型的对象的当前表示形式`T`，如果任何; 重新初始化敏捷对象的数据成员; 获取当前线程上下文;，然后返回可以表示的句柄到对象变量的地址非敏捷对象。 若要使敏捷类实例表示的对象，请使用赋值运算符 ([agile:: operator =](#operator-assign)) 将对象分配给敏捷类实例。
+此操作释放类型为 `T` 的对象的当前表示形式（如果有）；重新初始化敏捷对象的数据成员；获取当前线程处理上下文；然后返回可以表示非敏捷对象的对象句柄变量的地址。 若要使敏捷类实例表示的对象，请使用赋值运算符 ([agile:: operator =](#operator-assign)) 将对象分配给敏捷类实例。
 
 ## <a name="getaddressofforinout"></a>  Agile:: getaddressofforinout 方法
 

@@ -1,10 +1,6 @@
 ---
-title: fread_s | Microsoft 文档
-ms.custom: ''
+title: fread_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - fread_s
 apilocation:
@@ -23,19 +19,13 @@ apitype: DLLExport
 f1_keywords:
 - fread_s
 - stdio/fread_s
-dev_langs:
-- C++
 ms.assetid: ce735de0-f005-435d-a8f2-6f4b80ac775e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: febfab21889afab773dd9a8405b1e07dc7798f5c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 898e813c19fd53cfdacd536c2e9819743a62a8da
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401888"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50519816"
 ---
 # <a name="freads"></a>fread_s
 
@@ -72,15 +62,15 @@ size_t fread_s(
 
 ## <a name="return-value"></a>返回值
 
-**fread_s**返回的 （整数） 的项的数量已读取到缓冲区中，这可能是小于*计数*如果之前遇到读取的错误或文件的末尾*计数*为止。 使用**feof**或**ferror**函数以将错误分开的文件尾条件。 如果*大小*或*计数*为 0， **fread_s**返回 0 和缓冲区内容不变。 如果*流*或*缓冲区*是 null 指针， **fread_s**中所述调用无效参数处理程序，[参数验证](../../c-runtime-library/parameter-validation.md). 如果允许执行继续，此函数将**errno**到**EINVAL**并返回 0。
+**fread_s**返回已读取到缓冲区，而这可能是数字 （整数） 的项少于*计数*如果之前遇到读取的错误或文件的末尾*计数*达到。 使用**feof**或**ferror**函数以将错误与文件结尾条件区分开来。 如果*大小*或*计数*为 0， **fread_s**返回 0 并且缓冲区内容保持不变。 如果*流*或*缓冲区*是 null 指针**fread_s**将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md). 如果允许执行继续，此函数可设置**errno**到**EINVAL** ，并返回 0。
 
 有关错误代码的详细信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>备注
 
-**Fread_s**函数一直读取到*计数*的项*elementSize*字节从输入*流*并将它们存储在*缓冲区*。  与关联的文件指针*流*实际读取的字节数增加 （如果有）。 如果在文本模式下打开给定的流，则单一的换行字符替换回车换行符对。 该替换不会影响文件指针或返回值。 如果发生错误，文件指针位置不确定。 无法确定部分读取项的值。
+**Fread_s**函数最多读取*计数*的项*elementSize*字节从输入*流*并将它们存储在*缓冲区*。  与之关联的文件指针*流*（如果有） 为增量递增实际读取的字节数。 如果在文本模式下打开给定的流时，回车-换行对替换为单一的换行字符。 该替换不会影响文件指针或返回值。 如果发生错误，文件指针位置不确定。 无法确定部分读取项的值。
 
-此函数将锁定其他线程。 如果你需要的非锁定版本，使用 **_fread_nolock**。
+此函数将锁定其他线程。 如果需要非锁定版本，请使用 **_fread_nolock**。
 
 ## <a name="requirements"></a>要求
 
