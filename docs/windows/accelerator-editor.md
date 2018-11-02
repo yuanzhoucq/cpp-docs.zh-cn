@@ -1,14 +1,8 @@
 ---
-title: 快捷键编辑器 （c + +） |Microsoft Docs
-ms.custom: ''
+title: 快捷键编辑器 （c + +）
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.accelerator.F1
-dev_langs:
-- C++
 helpviewer_keywords:
 - accelerator tables [C++], editing
 - tables [C++], accelerator key
@@ -16,17 +10,12 @@ helpviewer_keywords:
 - resource editors [C++], Accelerator editor
 - keyboard shortcuts [C++], Accelerator editor
 ms.assetid: 013c30b6-5d61-4f1c-acef-8bd15bed7060
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 42870002ff84b697599443da8ab9b9b88dbbd7ca
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: fdb2d9cf0954142da990a0a9f995cb482060345d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318782"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50621489"
 ---
 # <a name="accelerator-editor-c"></a>快捷键编辑器 （c + +）
 
@@ -34,7 +23,7 @@ ms.locfileid: "44318782"
 
 通常情况下，快捷键用作程序命令的键盘快捷键，也可用于菜单或工具栏。 但是，快捷键对应表可用于为没有关联用户界面对象的命令定义组合键。
 
-可以使用[类视图](/visualstudio/ide/viewing-the-structure-of-code)将快捷键命令与代码挂接。
+可以使用 [类视图](/visualstudio/ide/viewing-the-structure-of-code) 将快捷键命令与代码挂接。
 
 与**Accelerator**编辑器，你可以：
 
