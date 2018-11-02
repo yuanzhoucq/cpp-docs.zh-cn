@@ -1,10 +1,6 @@
 ---
-title: _tell、_telli64 | Microsoft 文档
-ms.custom: ''
+title: _tell、_telli64
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _telli64
 - _tell
@@ -26,8 +22,6 @@ f1_keywords:
 - telli64
 - _telli64
 - _tell
-dev_langs:
-- C++
 helpviewer_keywords:
 - tell function
 - file pointers [C++], getting
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - telli64 function
 - _telli64 function
 ms.assetid: 1500e8f9-8fec-4253-9eec-ec66125dfc9b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8c47958fdb3723c16f8f2dce03ace54c75ce6176
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 628f37d3b8a39a75fb2329a1b2805426f15e821f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409981"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50660143"
 ---
 # <a name="tell-telli64"></a>_tell、_telli64
 
@@ -71,17 +61,17 @@ __int64 _telli64(
 
 文件指针的当前位置。 在无法查找的设备上，返回值是未定义的。
 
-返回值-1l 指示错误。 如果*处理*不是无效的文件描述符，则调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则这些函数将设置**errno**到**EBADF**并返回-1l。
+返回值为-1l 指示一个错误。 如果*处理*是一个无效文件说明符，将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许继续执行，这些函数将设置**errno**到**EBADF**并返回-1l。
 
 关于此代码以及其他返回代码的详细信息，请参阅 [_doserrno, errno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 。
 
 ## <a name="remarks"></a>备注
 
-**_Tell**函数获取与关联的文件指针 （如果有） 的当前位置*处理*自变量。 位置将表示为自文件开头起的字节数。 有关 **_telli64**函数，此值表示为一个 64 位整数。
+**_Tell**函数获取与关联的文件指针 （如果有） 的当前位置*处理*参数。 位置将表示为自文件开头起的字节数。 有关 **_telli64**函数，此值表示为一个 64 位整数。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_tell**， **_telli64**|\<io.h>|
 

@@ -1,11 +1,6 @@
 ---
-title: casinh、casinhf、casinhl | Microsoft 文档
-ms.custom: ''
+title: casinh、casinhf、casinhl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - casinh
 - casinhl
@@ -30,27 +25,21 @@ f1_keywords:
 - complex/casinh
 - complex/casinhf
 - complex/casinhl
-dev_langs:
-- C++
 helpviewer_keywords:
 - casinh function
 - casinhf function
 - casinhl function
 ms.assetid: bd18340b-21dd-4c86-a14e-e8e15dd97e3b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 460c5cdd41d49b9448aa8d4b7fbd2454e8301e4b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c274f4dcdfb16317820ce5c39918fa6135210eea
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393961"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50580744"
 ---
 # <a name="casinh-casinhf-casinhl"></a>casinh、casinhf、casinhl
 
-检索在间隔外的分支刮痕部为复数的反双曲正弦 [-i，+ 我] 轴虚部的复数。
+检索复数的分支切割超出间隔的反双曲正弦值 [-i，+ i] 沿虚轴。
 
 ## <a name="syntax"></a>语法
 
@@ -79,15 +68,15 @@ _Lcomplex casinhl(
 
 ## <a name="return-value"></a>返回值
 
-反双曲正弦值*z*，以弧度为单位。 结果是未绑定该实际轴和间隔的 [-iπ/2 + iπ/2] 轴虚部的复数。
+反双曲正弦值*z*，以弧度为单位。 结果是未绑定，沿实轴，并位于的间隔 [-i π/2，+ i π/2] 沿虚轴。
 
 ## <a name="remarks"></a>备注
 
-由于 c + + 允许重载，你可以调用的重载**casinh**采用并返回 **_Fcomplex**和 **_Lcomplex**值。 在 C 程序中， **casinh**始终采用并返回 **_Dcomplex**值。
+由于 c + + 允许重载，可以调用的重载**casinh**采用并返回 **_Fcomplex**并 **_Lcomplex**值。 在 C 程序中， **casinh**始终采用并返回 **_Dcomplex**值。
 
 ## <a name="requirements"></a>要求
 
-|例程|C 标头|C++ 标头|
+|例程所返回的值|C 标头|C++ 标头|
 |-------------|--------------|------------------|
 |**casinh**， **casinhf**， **casinhl**|\<complex.h>|\<ccomplex>|
 

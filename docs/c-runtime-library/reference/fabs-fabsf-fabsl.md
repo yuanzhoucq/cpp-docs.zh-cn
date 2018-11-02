@@ -1,10 +1,6 @@
 ---
-title: fabs、fabsf、fabsl | Microsoft 文档
-ms.custom: ''
+title: fabs、fabsf、fabsl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - fabsf
 - fabs
@@ -29,8 +25,6 @@ f1_keywords:
 - "math\fabs"
 - "math\fabsf"
 - "math\fabsl"
-dev_langs:
-- C++
 helpviewer_keywords:
 - absolute values
 - fabsf function
@@ -38,16 +32,12 @@ helpviewer_keywords:
 - fabs function
 - fabsl function
 ms.assetid: 23bca210-f408-4f5e-b46b-0ccaaec31e36
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e97d8eef45c53c119fef663420ae70b4b4762e3e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8df36c06fb3ca9af9be4cf704998946b3eaf9a6c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395720"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50623556"
 ---
 # <a name="fabs-fabsf-fabsl"></a>fabs、fabsf、fabsl
 
@@ -80,7 +70,7 @@ long double fabsl(
 
 ## <a name="return-value"></a>返回值
 
-**Fabs**函数返回绝对值的数值自变量*x*。 无错误返回。
+**Fabs**函数返回参数的绝对值*x*。 无错误返回。
 
 |输入|SEH 异常|Matherr 异常|
 |-----------|-------------------|-----------------------|
@@ -88,7 +78,7 @@ long double fabsl(
 
 ## <a name="remarks"></a>备注
 
-C + + 允许重载，因此您可以调用的重载**fabs**如果包含\<t h > 标头。 在 C 程序中， **fabs**始终采用并返回**double**。
+C + + 允许重载，因此可以调用的重载**fabs**如果包括\<cmath > 标头。 在 C 程序中， **fabs**始终采用并返回**double**。
 
 ## <a name="requirements"></a>要求
 

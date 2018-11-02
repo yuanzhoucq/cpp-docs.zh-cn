@@ -1,10 +1,6 @@
 ---
-title: floor、floorf、floorl | Microsoft 文档
-ms.custom: ''
+title: floor、floorf、floorl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - floorf
 - floorl
@@ -27,24 +23,18 @@ f1_keywords:
 - floorl
 - _floorl
 - floorf
-dev_langs:
-- C++
 helpviewer_keywords:
 - floor function
 - floorf function
 - calculating floors of values
 - floorl function
 ms.assetid: e9955f70-d659-414f-8050-132e13c8ff36
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 83795c9388b3889f99c9283cbffd33755d63fcd8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 050b7ea0eedf07666fa52145eeaf43f8fde2e18b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399418"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50647718"
 ---
 # <a name="floor-floorf-floorl"></a>floor、floorf、floorl
 
@@ -77,17 +67,17 @@ long double floorl(
 
 ## <a name="return-value"></a>返回值
 
-**Floor**函数将返回表示小于或等于最大整数的浮点值*x*。 无错误返回。
+**Floor**函数返回浮点值，该值表示小于或等于最大整数*x*。 无错误返回。
 
 |输入|SEH 异常|Matherr 异常|
 |-----------|-------------------|-----------------------|
 |± QNAN,IND|无|_DOMAIN|
 
-**floor**具有使用流式处理 SIMD 扩展 2 (SSE2) 实现。 有关使用 SSE2 实现的信息和限制，请参阅 [_set_SSE2_enable](set-sse2-enable.md)。
+**floor**具有使用流式处理 SIMD 扩展 2 (SSE2) 的实现。 有关使用 SSE2 实现的信息和限制，请参阅 [_set_SSE2_enable](set-sse2-enable.md)。
 
 ## <a name="remarks"></a>备注
 
-C + + 允许重载，因此您可以调用的重载**floor**采用并返回**float**和**长** **double**值。 在 C 程序中， **floor**始终采用并返回**double**。
+C + + 允许重载，因此可以调用的重载**floor**采用并返回**float**并**长** **double**值。 在 C 程序中， **floor**始终采用并返回**double**。
 
 ## <a name="requirements"></a>要求
 
