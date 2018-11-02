@@ -1,25 +1,15 @@
 ---
-title: 如何： 生成独立应用程序以使用 COM 组件 |Microsoft Docs
-ms.custom: ''
+title: 如何：生成独立应用程序以使用 COM 组件
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - isolated applications [C++]
 ms.assetid: 04587547-1174-44ab-bd99-1292358fba20
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6d2acabb6a5e9c35029b346097a66eaf1311826c
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: ba35c016996604e2b433083c2de7b9ddc807d52c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45704023"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50587533"
 ---
 # <a name="how-to-build-isolated-applications-to-consume-com-components"></a>如何：生成独立应用程序以使用 COM 组件
 
@@ -49,5 +39,5 @@ ms.locfileid: "45704023"
 
 ## <a name="see-also"></a>请参阅
 
-[独立应用程序](/windows/desktop/SbsCs/isolated-applications)<br/>
+[独立的应用程序](/windows/desktop/SbsCs/isolated-applications)<br/>
 [有关通过并行程序集](/windows/desktop/SbsCs/about-side-by-side-assemblies-)

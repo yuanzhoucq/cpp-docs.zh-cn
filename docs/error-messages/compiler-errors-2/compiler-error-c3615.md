@@ -1,36 +1,27 @@
 ---
-title: 编译器错误 C3615 |Microsoft 文档
+title: 编译器错误 C3615
 ms.date: 10/24/2017
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3615
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3615
 ms.assetid: 5ce96ba9-3d31-49f3-9aa8-24e5cdf6dcfc
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ce1ab43f8e15535614cedf43dba42fef882bf87a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e966295b5ab63350828ddb73d6791a9e30bb5c59
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33253388"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50652213"
 ---
 # <a name="compiler-error-c3615"></a>编译器错误 C3615
 
-> constexpr 函数*函数*所得结果不能在常量表达式
+> constexpr 函数*函数*不会导致一个常量表达式
 
-该函数*函数*可能不会计算为`constexpr`在编译时。 要`constexpr`，函数只能调用其他`constexpr`函数。
+该函数*函数*可能不会计算为`constexpr`在编译时。 要`constexpr`，一个函数只能调用其他`constexpr`函数。
 
 ## <a name="example"></a>示例
 
-Visual Studio 2017 正确引发错误时有条件地评估操作的左侧操作数不是在中有效`constexpr`上下文。 下面的代码编译 Visual Studio 2015 中但不是在 Visual Studio 2017。
+Visual Studio 2017 正确引发错误，左操作数的条件性运算中无效时`constexpr`上下文。 下面的代码编译，Visual Studio 2015 中但在 Visual Studio 2017 中不编译。
 
 ```cpp
 // C3615.cpp

@@ -1,10 +1,6 @@
 ---
-title: isalpha、iswalpha、_isalpha_l、_iswalpha_l | Microsoft 文档
-ms.custom: ''
+title: isalpha、iswalpha、_isalpha_l、_iswalpha_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - iswalpha
 - _iswalpha_l
@@ -31,8 +27,6 @@ f1_keywords:
 - iswalpha
 - _istalpha_l
 - _iswalpha_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _iswalpha_l function
 - _isalpha_l function
@@ -44,16 +38,12 @@ helpviewer_keywords:
 - istalpha function
 - _istalpha function
 ms.assetid: ed6cc2be-c4b0-4475-87ac-bc06d8c23064
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 28d533a7865a49df7cc962e0f2cc392f5e56d95d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 47b7e43172884524e50e332dcb421e84a99b9806
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401989"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50591745"
 ---
 # <a name="isalpha-iswalpha-isalphal-iswalphal"></a>isalpha、iswalpha、_isalpha_l、_iswalpha_l
 
@@ -88,11 +78,11 @@ int _iswalpha_l(
 
 ## <a name="return-value"></a>返回值
 
-每个这些例程返回非零如果*c*是字母字符的特定表示。 **isalpha**返回非零值，如果*c*在 A-Z 或 a-z 范围内。 **iswalpha**为其返回非零值仅对宽字符[iswupper](isupper-isupper-l-iswupper-iswupper-l.md)或**iswlower**为非零值; 即为任何宽字符，它是一个为设置的实现定义的且没有**iswcntrl**， **iswdigit**， **iswpunct**，或**iswspace**为非零值。 这些例程都返回 0 如果*c*不满足测试条件。
+这些例程返回非零值如果*c*是字母字符的特定表示形式。 **isalpha**返回非零值，如果*c*在 A-Z 或 a-z 范围内。 **iswalpha**为其返回一个非零值仅对于宽字符[iswupper](isupper-isupper-l-iswupper-iswupper-l.md)或**iswlower**为非零值; 即，为任何宽字符，这是一个实现定义的集合该宽**iswcntrl**， **iswdigit**， **iswpunct**，或者**iswspace**为非零值。 每个例程将返回 0，如果*c*不满足测试条件。
 
-这些函数具有的版本 **_l**后缀使用传入的区域设置参数而不是当前区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+具有这些函数的版本 **_l**后缀使用传入的区域设置参数而不是当前区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
-行为**isalpha**和 **_isalpha_l**如果是未定义*c*不是 EOF 或在 0 到 0xFF，非独占的范围。 使用 CRT 调试库时和*c*是不是一种这些值，函数引发的断言。
+行为**isalpha**并 **_isalpha_l**未定义当*c*不是 EOF 或在范围 0 到 0xff 内，非独占。 使用调试 CRT 库时， *c*是不包含其中一个值，函数将引发断言。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -103,7 +93,7 @@ int _iswalpha_l(
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**isalpha**|\<ctype.h>|
 |**iswalpha**|\<ctype.h 1> 或 \<wchar.h 1>|

@@ -1,12 +1,6 @@
 ---
-title: 在 Internet 上的 ActiveX 控件 |Microsoft Docs
-ms.custom: ''
+title: Internet 上的 ActiveX 控件
 ms.date: 09/12/2018
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - ActiveX controls [MFC], creating
 - ActiveX controls [MFC], Internet
@@ -15,16 +9,12 @@ helpviewer_keywords:
 - Internet applications [MFC], ActiveX controls
 - networks [MFC], downloading with ActiveX controls
 ms.assetid: 7ab943c8-2022-41df-9065-d629b616eeec
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1bf8d43d9325ff6900cd1c5cd63629ead434acbc
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 7becf4d4f579fa4b9b954935f55a06b2fed78593
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50055510"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50603705"
 ---
 # <a name="activex-controls-on-the-internet"></a>Internet 上的 ActiveX 控件
 

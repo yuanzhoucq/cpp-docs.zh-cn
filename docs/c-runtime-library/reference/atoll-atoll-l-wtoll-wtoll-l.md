@@ -1,10 +1,6 @@
 ---
-title: atoll、_atoll_l、_wtoll、_wtoll_l | Microsoft 文档
-ms.custom: ''
+title: atoll、_atoll_l、_wtoll、_wtoll_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wtoll
 - _atoll_l
@@ -31,28 +27,22 @@ f1_keywords:
 - _tstoll
 - _wtoll_l
 - atoll
-dev_langs:
-- C++
 helpviewer_keywords:
 - atoll function
 - _wtoll_l function
 - _wtoll function
 - _atoll_l function
 ms.assetid: 5e85fcac-b351-4882-bff2-6e7c469b7fa8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 15a0753a487d969d3f75e1e41b6509ea40b9b19f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a857e0f04ff875a740a8a5d1401484cdaf9d3c75
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396110"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50613966"
 ---
 # <a name="atoll-atolll-wtoll-wtolll"></a>atoll、_atoll_l、_wtoll、_wtoll_l
 
-将字符串转换为**长****长**整数。
+字符串转换为**长****长**整数。
 
 ## <a name="syntax"></a>语法
 
@@ -85,9 +75,9 @@ long long _wtoll_l(
 
 每个函数返回**长****长**生成的输入的字符解释为数字的值。 返回值**atoll**如果输入不能转换为该类型的值为 0。
 
-对于大量正整数值，与溢出**atoll**返回**LLONG_MAX**，和对于大量负整数值的溢出，它返回**LLONG_MIN**。
+对于大量正整数值的溢出**atoll**返回**与 LLONG_MAX**，并对于大量负整数值的溢出，它将返回**LLONG_MIN**。
 
-在所有范围外的情况下， **errno**设置为**ERANGE**。 如果传入的参数是**NULL**，则调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则这些函数将设置**errno**到**EINVAL**并返回 0。
+在所有超出范围情况下， **errno**设置为**ERANGE**。 如果传递的参数是**NULL**，将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许继续执行，这些函数将设置**errno**到**EINVAL** ，返回 0。
 
 ## <a name="remarks"></a>备注
 
@@ -95,15 +85,15 @@ long long _wtoll_l(
 
 输入字符串是一系列字符，可以解释为指定类型的数值。 该函数在首个它无法无法识别为数字一部分的字符处停止读取输入字符串。 此字符可能是终止字符串的 null 字符（'\0' 或 L'\0'）。
 
-*Str*参数**atoll**具有以下形式：
+*Str*自变量**atoll**具有以下形式：
 
-> [*空白*] [*登录*] [*数字*]
+> [*空格*] [*登录*] [*数字*]
 
-A*空白*空格或制表符字符，将被忽略; 组成*登录*是加号 （+） 或减号 （-）; 和*数字*是一个或多个数字。
+一个*空格*包含的空格或制表符字符，将被忽略;*符号*可以是加号 （+） 或减号 （–）; 并且*数字*是一个或多个数字。
 
-**_wtoll**等同于**atoll** ，但前者将宽字符字符串作为参数。
+**_wtoll**等同于**atoll** ，但前者的宽字符字符串用作参数。
 
-这些函数具有的版本 **_l**后缀是没有它的版本相同，只不过它们使用传入的区域设置参数而不是当前区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+具有这些函数的版本 **_l**后缀是没有它的版本相同，只不过它们使用传入的区域设置参数而不是当前区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 

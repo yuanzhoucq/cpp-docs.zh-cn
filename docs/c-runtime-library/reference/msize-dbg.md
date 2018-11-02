@@ -1,10 +1,6 @@
 ---
-title: _msize_dbg | Microsoft 文档
-ms.custom: ''
+title: _msize_dbg
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _msize_dbg
 apilocation:
@@ -22,23 +18,17 @@ apitype: DLLExport
 f1_keywords:
 - _msize_dbg
 - msize_dbg
-dev_langs:
-- C++
 helpviewer_keywords:
 - memory blocks
 - _msize_dbg function
 - msize_dbg function
 ms.assetid: a333f4b6-f8a2-4e61-bb69-cb34063b8cef
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 80d3f3a7b2b0086df6cba9654dc4365697520776
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 3b6d08d44162d8263ca88147fe86166924d7d162
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451753"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50629120"
 ---
 # <a name="msizedbg"></a>_msize_dbg
 
@@ -55,7 +45,7 @@ size_t _msize_dbg(
 
 ### <a name="parameters"></a>参数
 
-*UserData*<br/>
+*userData*<br/>
 指向可确定大小的内存块的指针。
 
 *blockType*<br/>
@@ -63,19 +53,19 @@ size_t _msize_dbg(
 
 ## <a name="return-value"></a>返回值
 
-在成功完成， **_msize_dbg**返回的大小 （以字节为单位） 指定的内存块; 否则它将返回**NULL**。
+成功完成后， **_msize_dbg**返回的大小 （以字节为单位） 的指定的内存块，否则它将返回**NULL**。
 
 ## <a name="remarks"></a>备注
 
-**_msize_dbg**是 _ 的调试版本[msize](msize.md)函数。 当[_DEBUG](../../c-runtime-library/debug.md)未定义，每次调用 **_msize_dbg**都会减少到对的调用 **_msize**。 同时 **_msize**和 **_msize_dbg**计算在基堆中的内存块的大小但 **_msize_dbg**将添加两个调试功能： 它包括两侧的缓冲区用户在返回的大小和它的内存块部分允许特定的块类型的大小计算。
+**_msize_dbg**是调试版本的 _[msize](msize.md)函数。 当[_DEBUG](../../c-runtime-library/debug.md)未定义，则每次调用 **_msize_dbg**缩减为调用 **_msize**。 这两 **_msize**并 **_msize_dbg**计算基堆中的内存块的大小，但 **_msize_dbg**添加两个调试功能： 它包括两侧的缓冲区用户在返回的大小和它的内存块部分，以允许特定的块类型的大小计算。
 
 有关如何在基堆的调试版本中分配、初始化和管理内存块的信息，请参阅 [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details)。 有关分配块类型及其使用方式的信息，请参阅[调试堆上的块类型](/visualstudio/debugger/crt-debug-heap-details)。 有关在应用程序的调试版本中调用标准堆函数及其调试版本之间差异的信息，请参阅[堆分配函数的调试版本](/visualstudio/debugger/debug-versions-of-heap-allocation-functions)。
 
-此函数验证其参数。 如果*memblock*是 null 指针， **_msize**中所述调用无效参数处理程序，[参数验证](../../c-runtime-library/parameter-validation.md)。 如果处理该错误，该函数将设置**errno**到**EINVAL**并返回-1。
+此函数验证其参数。 如果*memblock*为 null 指针 **_msize**调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果处理了错误，该函数将设置**errno**到**EINVAL**并返回-1。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_msize_dbg**|\<crtdbg.h>|
 

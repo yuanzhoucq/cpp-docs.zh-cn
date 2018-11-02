@@ -1,10 +1,6 @@
 ---
-title: _strtime_s、_wstrtime_s | Microsoft 文档
-ms.custom: ''
+title: _strtime_s、_wstrtime_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wstrtime_s
 - _strtime_s
@@ -26,8 +22,6 @@ f1_keywords:
 - strtime_s
 - wstrtime_s
 - _strtime_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - wstrtime_s function
 - copying time to buffers
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - time, copying
 - _strtime_s function
 ms.assetid: 42acf013-c334-485d-b610-84c0af8a46ec
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e7f9814bb783c763eef6d94e9d1372316a2393a6
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 579c4a99b52c66bd14cea947eaa1f301cc1127e1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451242"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50642359"
 ---
 # <a name="strtimes-wstrtimes"></a>_strtime_s、_wstrtime_s
 
@@ -97,15 +87,15 @@ errno_t _wstrtime_s(
 
 ## <a name="security-issues"></a>安全性问题
 
-传递中无效的非**NULL**值缓冲区会导致访问冲突，如果*numberOfElements*参数大于 9。
+传入无效非**NULL**值的缓冲区将导致访问冲突，如果*numberOfElements*参数大于 9。
 
-将值传递*numberOfElements*即大于缓冲区的实际大小将导致缓冲区溢出。
+为传递值*numberOfElements*大于缓冲区的实际大小将导致缓冲区溢出。
 
 ## <a name="remarks"></a>备注
 
-这些函数提供更多安全版本[_strtime](strtime-wstrtime.md)和[_wstrtime](strtime-wstrtime.md)。 **_Strtime_s**函数将当前的本地时间复制到缓冲区的指向*timestr*。 其时间格式为**hh: mm:** 其中**hh**是表示二十四小时制的小时数的两个数字**mm**是两个数字表示小时和分钟**ss**是两位数表示秒。 例如，在字符串**18:23:44**表示 23 分 44 秒过去 6 P.M. 缓冲区必须至少为 9 个字节长；实际大小由第二个参数指定。
+这些函数提供更多安全版本[_strtime](strtime-wstrtime.md)并[_wstrtime](strtime-wstrtime.md)。 **_Strtime_s**函数将当前的本地时间复制到由指向的缓冲区*timestr*。 时间格式为**hh: mm:** 其中**hh**是两位数字，表示 24 小时制的小时**mm**是两位数表示小时，并且分钟**ss**是两位数表示秒。 例如，字符串**18:23:44**表示 23 分 44 秒下午 6 点 缓冲区必须至少为 9 个字节长；实际大小由第二个参数指定。
 
-**_wstrtime**是宽字符版本的 **_strtime**; 的自变量和返回值 **_wstrtime**是宽字符字符串。 否则这些函数具有相同行为。
+**_wstrtime**是宽字符版本 **_strtime**; 的自变量和返回值 **_wstrtime**都是宽字符字符串。 否则这些函数具有相同行为。
 
 在 C++ 中，使用这些函数由模板重载简化；重载可以自动推导出缓冲区长度 (不再需要指定大小自变量)，并且它们可以自动用以更新、更安全的对应物替换旧的、不安全的函数。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 
@@ -117,7 +107,7 @@ errno_t _wstrtime_s(
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_strtime_s**|\<time.h>|
 |**_wstrtime_s**|\<time.h> 或 \<wchar.h>|

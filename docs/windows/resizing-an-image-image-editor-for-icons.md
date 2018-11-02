@@ -1,31 +1,20 @@
 ---
-title: 调整图像 （图标的图像编辑器） 的大小 |Microsoft Docs
-ms.custom: ''
+title: 调整图像大小（图标的图像编辑器）
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.image.editing
-dev_langs:
-- C++
 helpviewer_keywords:
 - Image editor [C++], resizing images
 - graphics [C++], resizing
 - images [C++], resizing
 - resizing images
 ms.assetid: d83a02c4-4dfe-4586-a0df-51a50c2ba71d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: dc70d6cd5933608067a43cdb7dcca1e11dd22a2d
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 721a8f1de511c105df5d72bbe60685d210ad5a94
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50082282"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50576093"
 ---
 # <a name="resizing-an-image-image-editor-for-icons"></a>调整图像大小（图标的图像编辑器）
 

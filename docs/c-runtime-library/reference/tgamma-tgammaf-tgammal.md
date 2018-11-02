@@ -1,11 +1,6 @@
 ---
-title: tgamma、tgammaf、tgammal | Microsoft 文档
-ms.custom: ''
+title: tgamma、tgammaf、tgammal
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - tgamma
 - tgammaf
@@ -30,23 +25,17 @@ f1_keywords:
 - math/tgamma
 - math/tgammaf
 - math/tgammal
-dev_langs:
-- C++
 helpviewer_keywords:
 - tgamma function
 - tgammaf function
 - tgammal function
 ms.assetid: f1bd2681-8af2-48a9-919d-5358fd068acd
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7861b297646f4a704134e0d874fad8c924a7ebc8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6cfe455b0e9e83cd5283d36fed33ca168bc97d0a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409870"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50570659"
 ---
 # <a name="tgamma-tgammaf-tgammal"></a>tgamma、tgammaf、tgammal
 
@@ -84,9 +73,9 @@ long double tgammal(
 
 ## <a name="return-value"></a>返回值
 
-如果成功，返回的伽玛*x*。
+如果成功，则返回的伽玛*x*。
 
-如果可能发生范围错误的量*x*太大或太小，数据类型。 域范围错误可能会出现错误或如果*x* < = 0。
+如果出现范围错误的严重性*x*太大或太小，数据类型。 如果，可能会发生域错误或范围错误*x* < = 0。
 
 |问题|返回|
 |-----------|------------|
@@ -104,7 +93,7 @@ long double tgammal(
 
 ## <a name="remarks"></a>备注
 
-由于 c + + 允许重载，你可以调用的重载**tgamma**采用并返回**float**和**长** **double**类型。 在 C 程序中， **tgamma**始终采用并返回**double**。
+由于 c + + 允许重载，可以调用的重载**tgamma**采用并返回**float**并**长** **double**类型。 在 C 程序中， **tgamma**始终采用并返回**double**。
 
 如果 x 是自然数，则此函数返回 (x-1) 的阶乘。
 

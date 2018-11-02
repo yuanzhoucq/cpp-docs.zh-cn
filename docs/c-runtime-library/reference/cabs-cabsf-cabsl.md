@@ -1,11 +1,6 @@
 ---
-title: cabs、cabsf、cabsl | Microsoft 文档
-ms.custom: ''
+title: cabs、cabsf、cabsl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - cabs
 - cabsf
@@ -30,23 +25,17 @@ f1_keywords:
 - complex/cabs
 - complex/cabsf
 - complex/cabsl
-dev_langs:
-- C++
 helpviewer_keywords:
 - cabs function
 - cabsf function
 - cabsl function
 ms.assetid: 6b8eb453-cc8f-4972-bebf-351cbdfdfc15
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c14252e7857331482b0fe6f99dd56e49ab838dd0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cfa437a5d248a83568032d4c9ef8d4f938074dfe
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393558"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50623953"
 ---
 # <a name="cabs-cabsf-cabsl"></a>cabs、cabsf、cabsl
 
@@ -79,15 +68,15 @@ long double cabsl(
 
 ## <a name="return-value"></a>返回值
 
-绝对值的数值的*z*。
+值的绝对值*z*。
 
 ## <a name="remarks"></a>备注
 
-由于 c + + 允许重载，你可以调用的重载**cabs**采用 **_Fcomplex**或 **_Lcomplex**值，并返回**float**或**长** **double**值。 在 C 程序中， **cabs**始终采用 **_Dcomplex**值并返回**double**值。
+由于 c + + 允许重载，可以调用的重载**cabs**采用 **_Fcomplex**或 **_Lcomplex**的值，并返回**float**或**长** **double**值。 在 C 程序中， **cabs**始终采用 **_Dcomplex**值并返回**double**值。
 
 ## <a name="requirements"></a>要求
 
-|例程|C 标头|C++ 标头|
+|例程所返回的值|C 标头|C++ 标头|
 |-------------|--------------|------------------|
 |**cabs**， **cabsf**， **cabsl**|\<complex.h>|\<ccomplex>|
 

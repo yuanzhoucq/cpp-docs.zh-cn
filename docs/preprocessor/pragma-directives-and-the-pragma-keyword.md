@@ -1,14 +1,8 @@
 ---
-title: Pragma 指令和 __Pragma 关键字 |Microsoft Docs
-ms.custom: ''
+title: Pragma 指令和 __Pragma 关键字
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - '#pragma'
-dev_langs:
-- C++
 helpviewer_keywords:
 - '#pragma directives, C/C++'
 - __pragma keyword
@@ -19,16 +13,12 @@ helpviewer_keywords:
 - preprocessor, pragmas
 - pragma directives (#pragma)
 ms.assetid: 9867b438-ac64-4e10-973f-c3955209873f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e326bb10960153ac8f4367b2a5e66ff0083b1c2a
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 9e79ba7378e28fdea863af010decb7064df415cd
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48234146"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50660091"
 ---
 # <a name="pragma-directives-and-the-pragma-keyword"></a>Pragma 指令和 __Pragma 关键字
 
@@ -47,7 +37,7 @@ C 和 C++ 的每个实现均支持某些对其主机或操作系统唯一的功�
 
 根据定义，杂注是计算机或操作系统特定的，并且通常对于每个编译器而言都有所不同。 杂注可用于条件语句以提供新的预处理器功能，或为编译器提供实现所定义的信息。
 
-`token-string` 是一系列字符，这些字符提供了特定的编译器指令和参数（如果有）。 数字符号 (**#**) 必须是第一个非空白字符包含在行杂注; 空白字符可以分隔数字的符号和词"pragma"。 遵循 **#pragma**，编写转换器可分析为预处理标记的任何文本。 参数 **#pragma**受到宏扩展。
+`token-string` 是一系列字符，这些字符提供了特定的编译器指令和自变量（如果有）。 数字符号 (**#**) 必须是第一个非空白字符包含在行杂注; 空白字符可以分隔数字的符号和词"pragma"。 遵循 **#pragma**，编写转换器可分析为预处理标记的任何文本。 参数 **#pragma**受到宏扩展。
 
 如果编译器发现它无法识别的杂注，则它会发出警告并继续编译。
 

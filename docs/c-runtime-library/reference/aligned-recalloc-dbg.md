@@ -1,10 +1,6 @@
 ---
-title: _aligned_recalloc_dbg | Microsoft 文档
-ms.custom: ''
+title: _aligned_recalloc_dbg
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _aligned_recalloc_dbg
 apilocation:
@@ -22,22 +18,16 @@ apitype: DLLExport
 f1_keywords:
 - _aligned_recalloc_dbg
 - aligned_recalloc_dbg
-dev_langs:
-- C++
 helpviewer_keywords:
 - aligned_recalloc_dbg function
 - _aligned_recalloc_dbg function
 ms.assetid: 55c3c27e-561c-4d6b-9bf9-1e34cc556e4b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a73142a832f98caa673c014bad0a909749af3cd9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 85af821aaa873b6e71341823d47085996f697235
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399834"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50664693"
 ---
 # <a name="alignedrecallocdbg"></a>_aligned_recalloc_dbg
 
@@ -61,7 +51,7 @@ void * _aligned_recalloc_dbg(
 *memblock*<br/>
 当前的内存块指针。
 
-*数*<br/>
+*数量*<br/>
 元素数量。
 
 *size*<br/>
@@ -78,25 +68,25 @@ void * _aligned_recalloc_dbg(
 
 ## <a name="return-value"></a>返回值
 
-**_aligned_recalloc_dbg**返回指向重新分配的 （并且可能已移动的） 内存块的 void 指针。 返回值是**NULL**如果大小为零且缓冲区自变量不**NULL**，或如果没有内存不足以将块展开到给定的大小。 在第一种情况下，会释放原始块。 在第二种情况下，将不会更改原始块。 返回值将指向保证适当对齐任何类型的对象的存储的存储空间。 若要获取指向类型而非 void 的指针，请在返回值上使用类型转换。
+**_aligned_recalloc_dbg**返回指向重新分配的 （并且可能已移动的） 内存块的 void 指针。 返回值是**NULL**如果大小为零且缓冲区参数不是**NULL**，或如果没有足够的可用内存将块扩展到给定大小。 在第一种情况下，会释放原始块。 在第二种情况下，将不会更改原始块。 返回值将指向保证适当对齐任何类型的对象的存储的存储空间。 若要获取指向类型而非 void 的指针，请在返回值上使用类型转换。
 
 重新分配内存并更改块对齐是错误的。
 
 ## <a name="remarks"></a>备注
 
-**_aligned_recalloc_dbg**是的调试版本[_aligned_recalloc](aligned-recalloc.md)函数。 当[_DEBUG](../../c-runtime-library/debug.md)未定义，每次调用 **_aligned_recalloc_dbg**都会减少到对的调用 **_aligned_recalloc**。 同时 **_aligned_recalloc**和 **_aligned_recalloc_dbg**都可重新分配基堆中中的内存块，但 **_aligned_recalloc_dbg**还包含几个调试功能： 用于测试泄漏，用于跟踪特定分配类型的块类型参数的块的用户部分两侧的缓冲区和*filename*/*linenumber*用于确定分配请求的源的信息。
+**_aligned_recalloc_dbg**是调试版[_aligned_recalloc](aligned-recalloc.md)函数。 当[_DEBUG](../../c-runtime-library/debug.md)未定义，则每次调用 **_aligned_recalloc_dbg**缩减为调用 **_aligned_recalloc**。 这两 **_aligned_recalloc**并 **_aligned_recalloc_dbg**重新分配基堆中的内存块，但 **_aligned_recalloc_dbg**可容纳多个调试功能： 用于测试泄漏，用于跟踪特定分配类型的块类型参数的块的用户部分两侧的缓冲区并*文件名*/*linenumber*要确定分配请求的源的信息。
 
-**_aligned_recalloc_dbg**重新分配指定的内存块与稍多的空间比请求的大小 (*数* * *大小*) 可能高于或低于比最初分配的内存块的大小。 其他空间将由调试堆管理器用于链接调试内存块，以及提供具有调试标头信息的应用程序和覆盖缓冲区。 重新分配可能会导致将原始内存块移动到堆中的其他位置，也可能会导致内存块的大小发生更改。 使用值 0xCD 填充该块的用户部分，使用值 0xFD 填充覆盖缓冲区。
+**_aligned_recalloc_dbg**重新分配具有比请求的大小略有更多空间指定的内存块 (*数* * *大小*) 这可能会大于或小于比最初分配的内存块的大小。 其他空间将由调试堆管理器用于链接调试内存块，以及提供具有调试标头信息的应用程序和覆盖缓冲区。 重新分配可能会导致将原始内存块移动到堆中的其他位置，也可能会导致内存块的大小发生更改。 使用值 0xCD 填充该块的用户部分，使用值 0xFD 填充覆盖缓冲区。
 
-**_aligned_recalloc_dbg**设置**errno**到**ENOMEM**如果内存分配失败;**EINVAL**如果 （包括之前提到过的开销） 所需的内存量超过返回 **_HEAP_MAXREQ**。 有关此代码及其他错误代码的信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
+**_aligned_recalloc_dbg**设置**errno**到**ENOMEM**如果内存分配失败;**EINVAL**返回如果 （包括之前提到过的开销） 所需的内存量超出 **_HEAP_MAXREQ**。 有关此代码及其他错误代码的信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
-此外， **_aligned_recalloc_dbg**验证其参数。 如果*对齐*不是为 2，此函数将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则此函数将返回**NULL**和设置**errno**到**EINVAL**。
+此外， **_aligned_recalloc_dbg**验证其参数。 如果*对齐*不为 2，此函数将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，此函数返回**NULL** ，并设置**errno**到**EINVAL**。
 
 有关如何在基堆的调试版本中分配、初始化和管理内存块的信息，请参阅 [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details)。 有关分配块类型及其使用方式的信息，请参阅[调试堆上的块类型](/visualstudio/debugger/crt-debug-heap-details)。 有关在应用程序的调试版本中调用标准堆函数及其调试版本之间差异的信息，请参阅[堆分配函数的调试版本](/visualstudio/debugger/debug-versions-of-heap-allocation-functions)。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_aligned_recalloc_dbg**|\<crtdbg.h>|
 

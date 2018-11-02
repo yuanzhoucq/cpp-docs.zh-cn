@@ -1,10 +1,6 @@
 ---
-title: isupper、_isupper_l、iswupper、_iswupper_l | Microsoft 文档
-ms.custom: ''
+title: isupper、_isupper_l、iswupper、_iswupper_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - isupper
 - iswupper
@@ -27,8 +23,6 @@ f1_keywords:
 - isupper
 - _istupper
 - iswupper
-dev_langs:
-- C++
 helpviewer_keywords:
 - istupper function
 - iswupper function
@@ -39,16 +33,12 @@ helpviewer_keywords:
 - _iswupper_l function
 - isupper function
 ms.assetid: da2bcc9f-241c-48c0-9a0e-ad273827e16a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1d58fc8e10fbc533787fe0e7b99194e282bb906f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 498644fc2de8a687e2b9b63a88591385055db6c8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402096"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50588430"
 ---
 # <a name="isupper-isupperl-iswupper-iswupperl"></a>isupper、_isupper_l、iswupper、_iswupper_l
 
@@ -83,11 +73,11 @@ int _iwsupper_l(
 
 ## <a name="return-value"></a>返回值
 
-每个这些例程返回非零如果*c*是一个大写字母的特定表示。 **isupper**返回非零值，如果*c*是大写字符 (A-Z)。 **iswupper**返回非零值，如果*c*是宽字符对应于一个大写字母，或如果*c*哪些要么是实现定义的宽字符集之一**iswcntrl**， **iswdigit**， **iswpunct**，或**iswspace**为非零值。 这些例程都返回 0 如果*c*不满足测试条件。
+这些例程返回非零值如果*c*是一个大写字母的特定表示形式。 **isupper**返回非零值，如果*c*是大写字符 (A-Z)。 **iswupper**返回非零值，如果*c*是宽字符对应于一个大写字母，或者如果*c*是之一实现定义的宽字符，对于该宽**iswcntrl**， **iswdigit**， **iswpunct**，或者**iswspace**为非零值。 每个例程将返回 0，如果*c*不满足测试条件。
 
-这些函数具有的版本 **_l**后缀其区域设置相关行为使用传入的区域设置而不是当前区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+具有这些函数的版本 **_l**后缀为其区域设置相关的行为使用传入的区域设置而不是当前区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
-行为**isupper**和 **_isupper_l**如果是未定义*c*不是 EOF 或在 0 到 0xFF，非独占的范围。 使用 CRT 调试库时和*c*是不是一种这些值，函数引发的断言。
+行为**isupper**并 **_isupper_l**未定义当*c*不是 EOF 或在范围 0 到 0xff 内，非独占。 使用调试 CRT 库时， *c*是不包含其中一个值，函数将引发断言。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -98,7 +88,7 @@ int _iwsupper_l(
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**isupper**|\<ctype.h>|
 |**_isupper_l**|\<ctype.h>|

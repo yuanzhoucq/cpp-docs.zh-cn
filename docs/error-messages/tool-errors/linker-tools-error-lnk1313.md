@@ -1,27 +1,17 @@
 ---
-title: 链接器工具错误 LNK1313 |Microsoft 文档
-ms.custom: ''
+title: 链接器工具错误 LNK1313
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - LNK1313
-dev_langs:
-- C++
 helpviewer_keywords:
 - LNK1313
 ms.assetid: 5df0b72e-bb3f-428c-8d84-6084238f9827
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d6a896c8ba012c69755c5292475b2d155ad92066
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 380df2bff305acc47e423d69ea702d77c4eafdfd
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705083"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50604225"
 ---
 # <a name="linker-tools-error-lnk1313"></a>链接器工具错误 LNK1313
 
@@ -29,9 +19,9 @@ ms.locfileid: "34705083"
 
 ## <a name="remarks"></a>备注
 
-Visual c + + 的当前版本不支持将本机或混合托管/本机.obj 文件与编译的.obj 文件链接 **/clr: pure**。
+Visual c + + 的当前版本不支持本机或混合托管/本机.obj 文件与使用编译的.obj 文件链接 **/clr: pure**。
 
-**/Clr: pure**编译器选项是在 Visual Studio 2015 中已过时，并在 Visual Studio 2017 中不支持。
+**/Clr: pure**编译器选项在 Visual Studio 2015 中弃用并在 Visual Studio 2017 中不受支持。
 
 ## <a name="example"></a>示例
 

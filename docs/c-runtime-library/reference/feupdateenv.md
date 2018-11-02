@@ -1,11 +1,6 @@
 ---
-title: feupdateenv | Microsoft 文档
-ms.custom: ''
+title: feupdateenv
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - feupdateenv
 apilocation:
@@ -23,21 +18,15 @@ apitype: HeaderDef
 f1_keywords:
 - feupdateenv
 - fenv/feupdateenv
-dev_langs:
-- C++
 helpviewer_keywords:
 - feupdateenv function
 ms.assetid: 3d170042-dfd5-4e4f-a55f-038cf2296cc9
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1d88284717aec7a19c936d7ed8d87da96006d7ed
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6d553d6899f55f5bdfb3ff313e88abfcb56ab4ec
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397589"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50605088"
 ---
 # <a name="feupdateenv"></a>feupdateenv
 
@@ -54,7 +43,7 @@ int feupdateenv(
 ### <a name="parameters"></a>参数
 
 *penv*<br/>
-指向**fenv_t**对象，其中包含浮点环境作为集通过调用[fegetenv](fegetenv1.md)或[feholdexcept](feholdexcept2.md)。 此外，也可以通过使用 FE_DFL_ENV 宏指定默认启动浮点环境。
+指向**fenv_t**对象，其中包含作为组的浮点环境，通过调用[fegetenv](fegetenv1.md)或[feholdexcept](feholdexcept2.md)。 此外，也可以通过使用 FE_DFL_ENV 宏指定默认启动浮点环境。
 
 ## <a name="return-value"></a>返回值
 
@@ -62,7 +51,7 @@ int feupdateenv(
 
 ## <a name="remarks"></a>备注
 
-**Feupdateenv**函数执行多个操作。 首先，它在自动存储中存储当前引发的浮点异常状态标志。 然后，它将设置中存储的值从当前的浮点环境**fenv_t**指向对象*penv*。 如果*penv*不**FE_DFL_ENV**或不是有效**fenv_t**对象，后续的行为是不确定。 最后， **feupdateenv**引发本地存储的浮点异常。
+**Feupdateenv**函数执行多个操作。 首先，它在自动存储中存储当前引发的浮点异常状态标志。 然后，它设置当前浮点环境中存储的值从**fenv_t**指向对象*penv*。 如果*penv*不是**FE_DFL_ENV**或不指向有效**fenv_t**对象，则未定义后续行为。 最后， **feupdateenv**引发本地存储的浮点异常。
 
 若要使用此函数，必须在调用前先使用 `#pragma fenv_access(on)` 指令关闭可能会阻止访问的浮点优化。 有关详细信息，请参阅 [fenv_access](../../preprocessor/fenv-access.md)。
 

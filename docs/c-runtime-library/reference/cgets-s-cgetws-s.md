@@ -1,10 +1,6 @@
 ---
-title: _cgets_s、_cgetws_s | Microsoft 文档
-ms.custom: ''
+title: _cgets_s、_cgetws_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _cgetws_s
 - _cgets_s
@@ -26,8 +22,6 @@ f1_keywords:
 - cgets_s
 - cgetws_s
 - _cgetws_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - strings [C++], getting from console
 - console, getting strings from
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - _cgetws_s function
 - cgetws_s function
 ms.assetid: 38b74897-afe6-4dd9-a43f-36a3c0d72c5c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 48b00f9eee699b7e556c2fcc3f88abd8d783a261
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8341b775df3b9cbaececdfaa1f17e075d7c7416c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396792"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50588534"
 ---
 # <a name="cgetss-cgetwss"></a>_cgets_s、_cgetws_s
 
@@ -104,9 +94,9 @@ errno_t _cgetws_s(
 
 ## <a name="remarks"></a>备注
 
-**_cgets_s**和 **_cgetws_s**从控制台读取字符串并将字符串 （具有 null 结束符） 复制到*缓冲区*。 **_cgetws_s**是函数; 的宽字符版本之外的字符大小，这两个函数的行为相同。 要读取的字符串的最大大小作为传递*numberOfElements*参数。 此大小应包括用于终止 null 的额外字符。 实际读取的字符数置于*pSizeRead*。
+**_cgets_s**并 **_cgetws_s**从控制台读取一个字符串，并将字符串 （具有 null 结束符） 复制到*缓冲区*。 **_cgetws_s**是宽字符版本的函数; 除了字符大小，这两个函数的行为是相同。 要读取的字符串的最大大小作为传入*numberOfElements*参数。 此大小应包括用于终止 null 的额外字符。 实际读取的字符数置于*pSizeRead*。
 
-如果在操作期间或在参数验证中发生错误，则调用的参数处理程序无效，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则**errno**设置为**EINVAL**和**EINVAL**返回。
+如果在操作期间或在参数验证中发生错误，则调用的参数处理程序无效，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则**errno**设置为**EINVAL**并**EINVAL**返回。
 
 在 C++ 中，模板重载简化了这些函数的使用；重载可以自动推断缓冲区长度，从而无需指定大小自变量，并且它们可以自动将较旧、不安全的函数替换为更新、更安全的函数。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 
@@ -118,7 +108,7 @@ errno_t _cgetws_s(
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_cgets_s**|\<conio.h>|
 |**_cgetws_s**|\<conio.h> 或 \<wchar.h>|

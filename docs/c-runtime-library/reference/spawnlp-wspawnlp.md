@@ -1,10 +1,6 @@
 ---
-title: _spawnlp、_wspawnlp | Microsoft 文档
-ms.custom: ''
+title: _spawnlp、_wspawnlp
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wspawnlp
 - _spawnlp
@@ -25,8 +21,6 @@ f1_keywords:
 - _wspawnlp
 - wspawnlp
 - _spawnlp
-dev_langs:
-- C++
 helpviewer_keywords:
 - wspawnlp function
 - _spawnlp function
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - process creation
 - spawnlp function
 ms.assetid: 74fc6e7a-4f24-4103-9387-7177875875e6
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4f894fc32631052e275a78cd279f750628b3258f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5379d47fc6ecbc21b523764f3fd0fbb6ef727a9a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412779"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50590861"
 ---
 # <a name="spawnlp-wspawnlp"></a>_spawnlp、_wspawnlp
 
@@ -84,11 +74,11 @@ intptr_t _wspawnlp(
 要执行的文件的路径。
 
 *arg0*， *arg1*，...*argn*<br/>
-指向参数的指针的列表。 *Arg0*自变量通常是一个指向*cmdname*。 自变量*arg1*通过*argn*是指向构成新参数列表的字符字符串的指针。 以下*argn*，必须有**NULL**指针，用以标记自变量列表的末尾。
+指向参数的指针的列表。 *Arg0*参数通常是一个指向*cmdname*。 自变量*arg1*通过*argn*是指向构成新参数列表的字符串。 遵循*argn*，必须有**NULL**指针，用以标记参数列表的末尾。
 
 ## <a name="return-value"></a>返回值
 
-返回值从同步 **_spawnlp**或 **_wspawnlp** (**_P_WAIT**指定的*模式*) 是新进程的退出状态. 返回值从异步 **_spawnlp**或 **_wspawnlp** (**_P_NOWAIT**或 **_P_NOWAITO**指定的*模式*) 是进程句柄。 如果进程正常终止，则退出状态为 0。 则可以将退出状态设置为非零值，如果生成的进程专门调用**退出**例程具有非零参数。 如果更新过程没有显式设置正退出状态，则正退出状态指示因中止或中断而异常退出。 返回值-1 指示的错误 （不启动新过程）。 在这种情况下， **errno**设置为以下值之一。
+从同步的返回值 **_spawnlp**或 **_wspawnlp** (**_P_WAIT**指定为*模式*) 是新进程的退出状态. 异步的返回值 **_spawnlp**或 **_wspawnlp** (**_P_NOWAIT**或者 **_P_NOWAITO**指定为*模式*) 是进程句柄。 如果进程正常终止，则退出状态为 0。 如果生成的进程专门调用时将退出状态设置为非零值**退出**例程具有非零参数。 如果更新过程没有显式设置正退出状态，则正退出状态指示因中止或中断而异常退出。 返回值-1 指示的错误 （未启动新进程）。 在这种情况下， **errno**设置为以下值之一。
 
 |||
 |-|-|
@@ -102,13 +92,13 @@ intptr_t _wspawnlp(
 
 ## <a name="remarks"></a>备注
 
-其中每个函数将创建并执行一个新进程，将每个命令行自变量作为单独的参数传递和使用**路径**环境变量查找要执行的文件。
+每个函数创建和执行新进程，每个命令行实参作为独立的形参传递，并使用**路径**环境变量查找要执行的文件。
 
-这些函数验证其参数。 如果任一*cmdname*或*arg0*是空字符串或 null 指针，这些函数将生成无效的参数异常，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则这些函数将设置**errno**到**EINVAL**，并返回-1。 不生成任何新进程。
+这些函数验证其参数。 如果任一*cmdname*或*arg0*是一个空字符串或 null 指针，这些函数将生成无效的参数异常，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许继续执行，这些函数将设置**errno**到**EINVAL**，并返回-1。 不生成任何新进程。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_spawnlp**|\<process.h>|
 |**_wspawnlp**|\<stdio.h> 或 \<wchar.h>|

@@ -1,10 +1,6 @@
 ---
-title: 基本类型 （C++） |Microsoft 文档
-ms.custom: ''
+title: 基本类型 (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
 f1_keywords:
 - __int128_cpp
 - __wchar_t_cpp
@@ -19,8 +15,6 @@ f1_keywords:
 - unsigned_cpp
 - unsigned_int_cpp
 - wchar_t_cpp
-dev_langs:
-- C++
 helpviewer_keywords:
 - specifiers [C++], type
 - float keyword [C++]
@@ -49,16 +43,12 @@ helpviewer_keywords:
 - storing types [C++]
 - data types [C++], void
 ms.assetid: 58b0106a-0406-4b74-a430-7cbd315c0f89
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7abb1efa9ca7260648574299cde454a33f84b3f4
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f4af392ed559349b0e49fd26f3ecb4406a70b74b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46114886"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50601365"
 ---
 # <a name="fundamental-types--c"></a>基本类型 (C++)
 
@@ -70,7 +60,7 @@ C++ 中的基础类型分为三个类别：整数、浮点和 void。 整数类�
 
 - 逗号运算符的左操作数。 （有关详细信息，请参阅 [逗号运算符](../cpp/comma-operator.md) 。）
 
-- 条件运算符的第二个或第三个操作数 (`? :`)。 （有关详细信息，请参阅 [带条件运算符的表达式](../cpp/conditional-operator-q.md) 。）
+- 条件运算符 (`? :`) 的第二个或第三个操作数。 （有关详细信息，请参阅 [带条件运算符的表达式](../cpp/conditional-operator-q.md) 。）
 
 下表说明了类型大小的限制。 这些限制与 Microsoft 实现无关。
 

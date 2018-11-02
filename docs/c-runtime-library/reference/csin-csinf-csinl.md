@@ -1,11 +1,6 @@
 ---
-title: csin、csinf、csinl | Microsoft 文档
-ms.custom: ''
+title: csin、csinf、csinl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - csin
 - csinf
@@ -30,23 +25,17 @@ f1_keywords:
 - complex/csin
 - complex/csinf
 - complex/csinl
-dev_langs:
-- C++
 helpviewer_keywords:
 - csin function
 - csinf function
 - csinl function
 ms.assetid: 3ed475e8-9aae-42ba-a25c-7ae656a0fd4d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 572220af53fe937dd0d5306f0e0e7d287b1d41b8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 66483c9121750c3333850d6244704b89b8893cad
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397309"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50633488"
 ---
 # <a name="csin-csinf-csinl"></a>csin、csinf、csinl
 
@@ -79,15 +68,15 @@ _Lcomplex csinl(
 
 ## <a name="return-value"></a>返回值
 
-正弦值*z*，以弧度为单位。
+正弦*z*，以弧度为单位。
 
 ## <a name="remarks"></a>备注
 
-由于 c + + 允许重载，你可以调用的重载**csin**采用并返回 **_Fcomplex**和 **_Lcomplex**值。 在 C 程序中， **csin**始终采用并返回 **_Dcomplex**值。
+由于 c + + 允许重载，可以调用的重载**csin**采用并返回 **_Fcomplex**并 **_Lcomplex**值。 在 C 程序中， **csin**始终采用并返回 **_Dcomplex**值。
 
 ## <a name="requirements"></a>要求
 
-|例程|C 标头|C++ 标头|
+|例程所返回的值|C 标头|C++ 标头|
 |-------------|--------------|------------------|
 |**csin**， **csinf**， **csinl**|\<complex.h>|\<ccomplex>|
 

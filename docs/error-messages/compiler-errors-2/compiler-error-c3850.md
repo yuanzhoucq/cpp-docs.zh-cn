@@ -1,27 +1,17 @@
 ---
-title: 编译器错误 C3850 |Microsoft Docs
-ms.custom: ''
+title: 编译器错误 C3850
 ms.date: 09/05/2018
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3850
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3850
 ms.assetid: 028f3a37-f3ad-4ebc-9168-3cdea47524d4
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: daa4b6128672b47891c563acfd4399952a17e7e6
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 9cd0428726f92c7347b162f74b46035f99cc2d3c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894533"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50572661"
 ---
 # <a name="compiler-error-c3850"></a>编译器错误 C3850
 
@@ -33,7 +23,7 @@ ms.locfileid: "43894533"
 
 在作为 C 编译的代码中，通用字符名称可能不表示 0000-009F 的范围中的字符 （含 0024 （' $'） 的异常) 0040 (\@) 和 0060 (' ')。
 
-在编译为 C++ 的代码中，通用字符名称可以使用字符串或字符文本中的任意有效 Unicode 码位。 在文字之外，通用字符名称不能表示 0000-001F 或 007F-009F（均含）范围内的控制字符或基本源字符集成员。  有关详细信息，请参阅[字符集](../../cpp/character-sets.md)。
+在编译为 C++ 的代码中，通用字符名称可以使用字符串或字符文本中的任意有效 Unicode 码位。 在文字之外，通用字符名称不能表示 0000-001F 或 007F-009F（均含）范围内的控制字符或基本源字符集成员。  有关详细信息，请参阅 [Character Sets](../../cpp/character-sets.md)。
 
 ## <a name="example"></a>示例
 

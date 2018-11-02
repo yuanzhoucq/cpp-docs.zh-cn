@@ -1,10 +1,6 @@
 ---
-title: mbsinit | Microsoft 文档
-ms.custom: ''
+title: mbsinit
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - mbsinit
 apilocation:
@@ -21,21 +17,15 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - mbsinit
-dev_langs:
-- C++
 helpviewer_keywords:
 - mbsinit function
 ms.assetid: 4618555b-baaa-4d04-93fa-36abae411034
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 413592bcf3af01c898a72d0ca70239364ee432f9
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 8b467ae7f705fc2f4b2b38d3f76f3936f30ec15e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34450445"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50597231"
 ---
 # <a name="mbsinit"></a>mbsinit
 
@@ -56,11 +46,11 @@ int mbsinit(
 
 ## <a name="return-value"></a>返回值
 
-非零如果*ps*是**NULL**或者，如果不在转换的中间。
+如果非零*ps*是**NULL**或者，如果不在转换的中间。
 
 ## <a name="remarks"></a>备注
 
-当使用一个采用 ANSI 函数时**mbstate_t**指针，传递的地址你**mbstate_t**将返回有关是否转换缓冲区中的最后一个字节的信息。
+使用采用的 ANSI 函数之一时**mbstate_t**指针，将的地址传递您**mbstate_t**将返回有关缓冲区中的最后一个字节是否已转换的信息。
 
 需要安装适当的代码页来支持多字节字符。
 

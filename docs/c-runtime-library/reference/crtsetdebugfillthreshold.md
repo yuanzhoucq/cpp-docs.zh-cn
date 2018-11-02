@@ -1,10 +1,6 @@
 ---
-title: _CrtSetDebugFillThreshold | Microsoft 文档
-ms.custom: ''
+title: _CrtSetDebugFillThreshold
 ms.date: 03/21/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtSetDebugFillThreshold
 apilocation:
@@ -22,8 +18,6 @@ apitype: DLLExport
 f1_keywords:
 - _CrtSetDebugFillThreshold
 - CrtSetDebugFillThreshold
-dev_langs:
-- C++
 helpviewer_keywords:
 - debug, buffer-filling behavior
 - CrtSetDebugFillThreshold function
@@ -31,16 +25,12 @@ helpviewer_keywords:
 - buffer-filling behavior
 - 0xFD
 ms.assetid: 6cb360e8-56ae-4248-b17f-e28aee3e0ed7
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c0980331389a36fa123c6ee64989296f5afec5c8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ebe958ddc1c9a5c372f4ae68336e0dea3144e8b4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398654"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50602197"
 ---
 # <a name="crtsetdebugfillthreshold"></a>_CrtSetDebugFillThreshold
 
@@ -59,11 +49,11 @@ size_t _CrtSetDebugFillThreshold( size_t newThreshold );
 
 ## <a name="return-value"></a>返回值
 
-以前的阈值值。
+以前的阈值。
 
 ## <a name="remarks"></a>备注
 
-某些安全性增强的 CRT 函数的调试版本填充传递给它们使用特殊字符的缓冲区 (0xFE)。 这有助于查找为函数传递错误大小的情况。 遗憾的是，这样也会降低性能。 若要提高性能，使用 **_CrtSetDebugFillThreshold**禁用大于缓冲区的缓冲区填充*newThreshold*阈值。 A *newThreshold*值为 0 将禁用它为所有缓冲区。
+某些安全性已增强的 CRT 函数的调试版本填充传递给它们使用特殊字符的缓冲区 (0xFE)。 这有助于查找为函数传递错误大小的情况。 遗憾的是，这样也会降低性能。 若要提高性能，请使用 **_CrtSetDebugFillThreshold**若要禁用大于缓冲区的缓冲区填满*newThreshold*阈值。 一个*newThreshold*值为 0 将禁用它为所有缓冲区。
 
 默认阈值**SIZE_T_MAX**。
 
@@ -107,11 +97,11 @@ size_t _CrtSetDebugFillThreshold( size_t newThreshold );
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_CrtSetDebugFillThreshold**|\<crtdbg.h>|
 
-此函数是特定于 Microsoft 的。 有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+此函数是 Microsoft 特定的。 有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="libraries"></a>库
 

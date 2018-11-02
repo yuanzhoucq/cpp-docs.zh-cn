@@ -1,29 +1,18 @@
 ---
 title: 查找字符串资源 （c + +） |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.string
-dev_langs:
-- C++
 helpviewer_keywords:
 - strings [C++], searching
 - strings [C++]
 ms.assetid: c2497173-f356-4f77-97d6-f0ac41782510
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 23855fc0605992c7348fd4a8dd901abb4d629949
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 0e6d8ac8027028377e903a9e0a3c89238a9862a2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50057720"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50585911"
 ---
 # <a name="finding-a-string-resource-c"></a>查找字符串资源 （c + +）
 

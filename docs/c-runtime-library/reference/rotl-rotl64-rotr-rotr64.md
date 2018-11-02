@@ -1,10 +1,6 @@
 ---
-title: _rotl、_rotl64、_rotr、_rotr64 | Microsoft 文档
-ms.custom: ''
+title: _rotl、_rotl64、_rotr、_rotr64
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _rotr64
 - _rotl
@@ -32,8 +28,6 @@ f1_keywords:
 - _rotr
 - _rotl
 - rotl
-dev_langs:
-- C++
 helpviewer_keywords:
 - rotl64 function
 - _rotl function
@@ -46,20 +40,16 @@ helpviewer_keywords:
 - _rotr64 function
 - bits, rotating
 ms.assetid: cfce439b-366f-4584-8ab1-d527b13fcfc6
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a4ec4844c54bef09522191be62599ed79b97eb6c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c8cf61ecd8ffab9433f5c6ad077ddba39401c0e4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406649"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50567409"
 ---
 # <a name="rotl-rotl64-rotr-rotr64"></a>_rotl、_rotl64、_rotr、_rotr64
 
-旋转位向左 (**_rotl**) 或向右 (**_rotr**)。
+将位向左旋转 (**_rotl**) 或向右 (**_rotr**)。
 
 ## <a name="syntax"></a>语法
 
@@ -97,11 +87,11 @@ unsigned __int64 _rotr64(
 
 ## <a name="remarks"></a>备注
 
-**_Rotl**和 **_rotr**函数旋转无符号的*值*通过*shift* bits。 **_rotl**将值向旋转。 **_rotr**将值向右旋转。 两个函数将旋转的位从 *value* 的一端移到另一端。
+**_Rotl**并 **_rotr**函数旋转无符号*值*通过*shift*位。 **_rotl**旋转中保留的值。 **_rotr**将值向右旋转。 两个函数将旋转的位从 *value* 的一端移到另一端。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_rotl**， **_rotl64**|\<stdlib.h>|
 |**_rotr**， **_rotr64**|\<stdlib.h>|

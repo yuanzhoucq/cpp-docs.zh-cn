@@ -1,10 +1,6 @@
 ---
-title: _spawnvp、_wspawnvp | Microsoft 文档
-ms.custom: ''
+title: _spawnvp、_wspawnvp
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wspawnvp
 - _spawnvp
@@ -25,8 +21,6 @@ f1_keywords:
 - _wspawnvp
 - _spawnvp
 - wspawnvp
-dev_langs:
-- C++
 helpviewer_keywords:
 - wspawnvp function
 - processes, creating
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - process creation
 - _spawnvp function
 ms.assetid: 8d8774ec-6ad4-4680-a5aa-440cde1e0249
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e31cb0d21b6ac626dcf00c6a80e50b924adac285
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5470c88ea0c39c421f027d219af5d3465324b1ff
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411908"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50649535"
 ---
 # <a name="spawnvp-wspawnvp"></a>_spawnvp、_wspawnvp
 
@@ -78,11 +68,11 @@ intptr_t _wspawnvp(
 要执行的文件的路径。
 
 *argv*<br/>
-指向参数的指针的数组。 自变量*argv*[0] 通常是路径指向实际模式中或为程序名称在受保护模式下，和*argv*[1] 通过*argv*[**n**] 是指向构成新参数列表的字符串的指针。 自变量*argv*[**n** + 1] 必须是**NULL**指针，用以标记自变量列表的末尾。
+指向参数的指针的数组。 自变量*argv*[0] 通常是路径指向实际模式中或为程序名称在受保护模式下，并*argv*[1] 通过*argv*[**n**] 是指向构成新参数列表的字符串。 自变量*argv*[**n** + 1] 必须**NULL**指针，用以标记参数列表的末尾。
 
 ## <a name="return-value"></a>返回值
 
-返回值从同步 **_spawnvp**或 **_wspawnvp** (**_P_WAIT**指定的*模式*) 是新进程的退出状态. 返回值从异步 **_spawnvp**或 **_wspawnvp** (**_P_NOWAIT**或 **_P_NOWAITO**指定的*模式*) 是进程句柄。 如果进程正常终止，则退出状态为 0。 则可以将退出状态设置为非零值，如果生成的进程专门使用非零自变量调用**退出**例程。 如果更新过程没有显式设置正退出状态，则正退出状态指示因中止或中断而异常退出。 返回值-1 指示的错误 （不启动新过程）。 在这种情况下， **errno**设置为以下值之一：
+从同步的返回值 **_spawnvp**或 **_wspawnvp** (**_P_WAIT**指定为*模式*) 是新进程的退出状态. 异步的返回值 **_spawnvp**或 **_wspawnvp** (**_P_NOWAIT**或者 **_P_NOWAITO**指定为*模式*) 是进程句柄。 如果进程正常终止，则退出状态为 0。 如果生成的进程专门使用非零参数调用时将退出状态设置为非零值**退出**例程。 如果更新过程没有显式设置正退出状态，则正退出状态指示因中止或中断而异常退出。 返回值-1 指示的错误 （未启动新进程）。 在这种情况下， **errno**设置为以下值之一：
 
 |||
 |-|-|
@@ -96,13 +86,13 @@ intptr_t _wspawnvp(
 
 ## <a name="remarks"></a>备注
 
-其中每个函数创建一个新进程和执行它，并将一个指针数组传递给命令行自变量，并使用**路径**环境变量查找要执行的文件。
+每个函数创建一个新进程并执行它，并将一个指针数组传递给命令行参数，并使用**路径**环境变量查找要执行的文件。
 
-这些函数验证其参数。 如果任一*cmdname*或*argv*是 null 指针，或如果*argv*指向 null 指针，或*argv*[0] 为空字符串，无效调用的参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则这些函数将设置**errno**到**EINVAL**，并返回-1。 不生成任何新进程。
+这些函数验证其参数。 如果任一*cmdname*或*argv*是 null 指针，或者，如果*argv*指向 null 指针，或*argv*[0] 为空字符串，无效调用的参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许继续执行，这些函数将设置**errno**到**EINVAL**，并返回-1。 不生成任何新进程。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_spawnvp**|\<stdio.h> 或 \<process.h>|
 |**_wspawnvp**|\<stdio.h> 或 \<wchar.h>|

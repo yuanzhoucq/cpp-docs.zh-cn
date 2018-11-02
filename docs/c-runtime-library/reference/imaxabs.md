@@ -1,10 +1,6 @@
 ---
-title: imaxabs | Microsoft 文档
-ms.custom: ''
+title: imaxabs
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - imaxabs
 apilocation:
@@ -22,21 +18,15 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - imaxabs
-dev_langs:
-- C++
 helpviewer_keywords:
 - imaxabs function
 ms.assetid: de2566a3-1415-4e9a-91b5-7ac3a49ebf5e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e9476db108a4296811e1c88e820d12ddd24b1386
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a7492e08c3a078698292923ce395524ab5327ecf
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400484"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50666240"
 ---
 # <a name="imaxabs"></a>imaxabs
 
@@ -57,14 +47,14 @@ intmax_t imaxabs(
 
 ## <a name="return-value"></a>返回值
 
-**Imaxabs**函数返回自变量的绝对值。 无错误返回。
+**Imaxabs**函数返回参数的绝对值。 无错误返回。
 
 > [!NOTE]
-> 因为可以通过使用表示的负整数的范围**intmax_t**大于范围的可表示的正整数，就可以提供的自变量**imaxabs**无法转换的。 如果不能通过返回表示绝对值的数值自变量的类型、 的行为**imaxabs**是不确定的。
+> 因为可以通过使用表示负整数的范围**intmax_t**大于范围的可表示的正整数，则可以提供的参数**imaxabs**不能转换的。 如果自变量的绝对值无法由返回类型的行为**imaxabs**是不确定的。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**imaxabs**|\<inttypes.h>|
 

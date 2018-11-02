@@ -1,10 +1,6 @@
 ---
-title: _chgsign、_chgsignf、_chgsignl | Microsoft 文档
-ms.custom: ''
+title: _chgsign、_chgsignf、_chgsignl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _chgsignl
 - _chgsign
@@ -27,24 +23,18 @@ f1_keywords:
 - chgsign
 - _chgsignl
 - _chgsign
-dev_langs:
-- C++
 helpviewer_keywords:
 - _chgsignl function
 - _chgsignf function
 - chgsign function
 - _chgsign function
 ms.assetid: a6646f8e-213d-4564-8617-f43bc66f989f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 781359972b67b2634f8f762fac98bf9216ef5ab5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: dad60b1fec4d402d340eeb4c87028975ef09e3ad
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393438"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50652629"
 ---
 # <a name="chgsign-chgsignf-chgsignl"></a>_chgsign、_chgsignf、_chgsignl
 
@@ -71,11 +61,11 @@ long double _chgsignl(
 
 ## <a name="return-value"></a>返回值
 
-**_Chgsign**函数返回一个值，它等于浮点自变量*x*，但反转其符号。 无错误返回。
+**_Chgsign**函数返回一个值，它等于浮点型参数*x*，但符号颠倒。 无错误返回。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_chgsign**|\<float.h>|
 |**_chgsignf**， **_chgsignl**|\<math.h>|

@@ -1,10 +1,6 @@
 ---
-title: strcat_s、wcscat_s、_mbscat_s | Microsoft 文档
-ms.custom: ''
+title: strcat_s、wcscat_s、_mbscat_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - strcat_s
 - _mbscat_s
@@ -27,8 +23,6 @@ f1_keywords:
 - strcat_s
 - wcscat_s
 - _mbscat_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - wcscat_s function
 - strcat_s function
@@ -37,23 +31,19 @@ helpviewer_keywords:
 - _mbscat_s function
 - appending strings
 ms.assetid: 0f2f9901-c5c5-480b-98bc-f8f690792fc0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1f97152da60697edfcf337f8cceddfd77ed2704c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7b622fbefc690317a4b57e3fd1bb54712b84f2a0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414004"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50621307"
 ---
 # <a name="strcats-wcscats-mbscats"></a>strcat_s、wcscat_s、_mbscat_s
 
 追加字符串。 如 [CRT 中的安全性增强功能](../../c-runtime-library/security-features-in-the-crt.md)所述，这些版本的 [strcat、wcscat、_mbscat](strcat-wcscat-mbscat.md) 具有安全性增强功能。
 
 > [!IMPORTANT]
-> **_mbscat_s**不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
+> **_mbscat_s**不能在 Windows 运行时中执行的应用程序中使用。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
 
 ## <a name="syntax"></a>语法
 
@@ -115,7 +105,7 @@ Null 终止的目标字符串缓冲区。
 
 ## <a name="remarks"></a>备注
 
-**Strcat_s**函数追加*strSource*到*strDestination*并终止 null 字符与生成的字符串。 初始字符*strSource*覆盖的终止 null 字符*strDestination*。 行为**strcat_s**是不确定的如果源和目标字符串重叠。
+**Strcat_s**函数将追加*strSource*到*strDestination*和终止 null 字符生成的字符串。 初始字符*strSource*覆盖的终止 null 字符*strDestination*。 行为**strcat_s**如果源和目标字符串重叠，则是未定义。
 
 注意，第二个参数是缓冲区的总大小，而不是剩余大小：
 
@@ -126,9 +116,9 @@ strcat_s(buf, 16, " End");               // Correct
 strcat_s(buf, 16 - strlen(buf), " End"); // Incorrect
 ```
 
-**wcscat_s**和 **_mbscat_s**宽字符及多字节字符版本的**strcat_s**。 参数和返回值的**wcscat_s**是宽字符字符串; 而的 **_mbscat_s**是多字节字符字符串。 否则这三个函数否则具有相同行为。
+**wcscat_s**并 **_mbscat_s**宽字符及多字节字符版本的**strcat_s**。 参数和返回值**wcscat_s**是宽字符字符串; **_mbscat_s**是多字节字符字符串。 否则这三个函数否则具有相同行为。
 
-如果*strDestination*是 null 指针，或不是 null 终止，或者如果*strSource*是**NULL**指针，或如果目标字符串过小，无效的参数调用处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则这些函数将返回**EINVAL**并设置**errno**到**EINVAL**。
+如果*strDestination*是空指针，或不是以 null 结尾，或者如果*strSource*是**NULL**指针，或如果目标字符串过小，无效的参数调用处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，这些函数将返回**EINVAL**并设置**errno**到**EINVAL**。
 
 在 C++ 中，使用这些函数由模板重载简化；重载可以自动推导出缓冲区长度 (不再需要指定大小自变量)，并且它们可以自动用以更新、更安全的对应物替换旧的、不安全的函数。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 
@@ -142,7 +132,7 @@ strcat_s(buf, 16 - strlen(buf), " End"); // Incorrect
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**strcat_s**|\<string.h>|
 |**wcscat_s**|\<string.h> 或 \<wchar.h>|

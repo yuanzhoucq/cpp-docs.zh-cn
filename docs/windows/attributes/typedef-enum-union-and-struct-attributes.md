@@ -1,27 +1,16 @@
 ---
-title: Typedef、 Enum、 Union 和 Struct 特性 (c + + COM) |Microsoft Docs
-ms.custom: ''
+title: Typedef、 Enum、 Union 和 Struct 特性 (c + + COM)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - union attributes
 - attributes [C++/CLI], reference topics
 ms.assetid: f8a4fe94-dc02-4aed-bc31-3e500d42f4c7
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 89e1511df2aeabe7cbd63549a1dca6e53944fbe2
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 289935c3651535b5f935624dc33246fbe83a4ceb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790402"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50631057"
 ---
 # <a name="typedef-enum-union-and-struct-attributes"></a>Typedef、Enum、Union 和 Struct 特性
 
@@ -107,10 +96,10 @@ ms.locfileid: "48790402"
 |[requires_category](requires-category.md)|指定目标类的所需的组件类别。|
 |[size_is](size-is.md)|指定的内存大小为固定大小的指针分配、 调整大小的指针和单字节或多维数组的指针。|
 |[source](source-cpp.md)|在类上，指定连接点的 COM 对象的源接口。 在属性或方法，指示该成员返回的对象或为事件源的变体。|
-|[线程处理](threading-cpp.md)|指定 COM 对象的线程处理模型。|
+|[threading](threading-cpp.md)|指定 COM 对象的线程处理模型。|
 |[unique](unique-cpp.md)|指定一个唯一指针。|
 |[uuid](uuid-cpp-attributes.md)|指定类或接口的唯一 ID。|
-|[version](version-cpp.md)|标识类的多个版本间的特定版本。|
+|[版本](version-cpp.md)|标识类的多个版本间的特定版本。|
 |[vi_progid](vi-progid.md)|指定独立于版本的窗体的 ProgID。|
 
 ## <a name="see-also"></a>请参阅

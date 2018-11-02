@@ -1,10 +1,6 @@
 ---
-title: isspace、iswspace、_isspace_l、_iswspace_l | Microsoft 文档
-ms.custom: ''
+title: isspace、iswspace、_isspace_l、_iswspace_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - iswspace
 - _isspace_l
@@ -27,8 +23,6 @@ f1_keywords:
 - iswspace
 - _istspace
 - isspace
-dev_langs:
-- C++
 helpviewer_keywords:
 - iswspace function
 - isspace function
@@ -39,16 +33,12 @@ helpviewer_keywords:
 - _istspace function
 - istspace function
 ms.assetid: b851e0c0-36bb-4dac-a1a3-533540939035
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 404fee8d74cec18c277f6c076a7cc41065a8b242
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cd93b196c23be5e91852e8c02d75055c1051b912
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402242"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50590442"
 ---
 # <a name="isspace-iswspace-isspacel-iswspacel"></a>isspace、iswspace、_isspace_l、_iswspace_l
 
@@ -83,11 +73,11 @@ int _iswspace_l(
 
 ## <a name="return-value"></a>返回值
 
-每个这些例程返回非零如果*c*是空格字符的特定表示。 **isspace**返回非零值，如果*c*是空白字符 (为 0x09-0x0D 或 0x20)。 为测试条件的结果**isspace**函数依赖于**LC_CTYPE**的区域设置的类别设置影响; 请参阅[setlocale、 _wsetlocale](setlocale-wsetlocale.md)有关详细信息。 不具有这些函数的版本 **_l**后缀使用当前区域设置为任何区域设置相关的行为; 的版本没有 **_l**后缀是相同，只不过它们使用改用已传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+这些例程返回非零值如果*c*是空格字符的特定表示形式。 **isspace**返回非零值，如果*c*是空白字符 (0x09-0x0d 或 0x20)。 测试条件的结果**isspace**函数取决于**LC_CTYPE**区域设置类别设置影响; 请参阅[setlocale、 _wsetlocale](setlocale-wsetlocale.md)有关详细信息。 不具有这些函数的版本 **_l**后缀，请使用当前区域设置的任何依赖于区域设置的行为; 具有的版本 **_l**后缀完全相同，只不过它们使用改用已传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
-**iswspace**返回非零值，如果*c*是宽字符对应于标准的空白字符。
+**iswspace**返回非零值，如果*c*是对应于标准空白字符的宽字符。
 
-行为**isspace**和 **_isspace_l**如果是未定义*c*不是 EOF 或在 0 到 0xFF，非独占的范围。 使用 CRT 调试库时和*c*是不是一种这些值，函数引发的断言。
+行为**isspace**并 **_isspace_l**未定义当*c*不是 EOF 或在范围 0 到 0xff 内，非独占。 使用调试 CRT 库时， *c*是不包含其中一个值，函数将引发断言。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -97,7 +87,7 @@ int _iswspace_l(
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**isspace**|\<ctype.h>|
 |**iswspace**|\<ctype.h 1> 或 \<wchar.h 1>|

@@ -1,26 +1,15 @@
 ---
-title: 可以对默认代码 （MFC 数据访问） 做的更改 |Microsoft Docs
-ms.custom: ''
+title: 可以对默认代码做的更改（MFC 数据访问）
 ms.date: 11/04/2016
-ms.technology:
-- cpp-data
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - record views [C++], customizing default code
 ms.assetid: 9992ed37-a6bf-45a5-a572-5c14e42b6628
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- data-storage
-ms.openlocfilehash: cee9316e2bd526465b6eed735df0bb0c6d5d6593
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 5b8b118c5320e57f2bae5925d3df98650b0288c9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50072988"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50611388"
 ---
 # <a name="changes-you-might-make-to-the-default-code--mfc-data-access"></a>可以对默认代码做的更改（MFC 数据访问）
 
