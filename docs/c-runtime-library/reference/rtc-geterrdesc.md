@@ -1,10 +1,6 @@
 ---
-title: _RTC_GetErrDesc | Microsoft 文档
-ms.custom: ''
+title: _RTC_GetErrDesc
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _RTC_GetErrDesc
 apilocation:
@@ -22,23 +18,17 @@ apitype: DLLExport
 f1_keywords:
 - RTC_GetErrDesc
 - _RTC_GetErrDesc
-dev_langs:
-- C++
 helpviewer_keywords:
 - run-time errors
 - _RTC_GetErrDesc function
 - RTC_GetErrDesc function
 ms.assetid: 7994ec2b-5488-4fd4-806d-a166c9a9f927
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7154f6de192ee6b681ed0419126f3d4b682abb8c
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: d164626ea89bbe10f5b2ffe4224bf6381e40bab0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451340"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50590302"
 ---
 # <a name="rtcgeterrdesc"></a>_RTC_GetErrDesc
 
@@ -55,7 +45,7 @@ const char * _RTC_GetErrDesc(
 ### <a name="parameters"></a>参数
 
 *errnum*<br/>
-一个数字，介于 0 和 **_RTC_NumErrors** 返回的值减 1 所得的值之间。
+一个数字，介于 0 和 **_RTC_NumErrors**返回的值减 1 所得的值之间。
 
 ## <a name="return-value"></a>返回值
 
@@ -63,7 +53,7 @@ const char * _RTC_GetErrDesc(
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_RTC_GetErrDesc**|\<rtcapi.h>|
 

@@ -1,29 +1,19 @@
 ---
-title: -FC （诊断中源代码文件的完整路径） |Microsoft Docs
-ms.custom: ''
+title: /FC（所诊断源代码文件的完整路径）
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.UseFullPaths
 - /FC
-dev_langs:
-- C++
 helpviewer_keywords:
 - /FC compiler option [C++]
 - -FC compiler option [C++]
 ms.assetid: 1f11414e-cb42-421b-be68-9d369aab036b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4d34fe85354d218d2499dbece70964c2e55e2592
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 3629ec35f0be5ebfd384b949acb2910dcbea3318
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45702702"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50624904"
 ---
 # <a name="fc-full-path-of-source-code-file-in-diagnostics"></a>/FC（所诊断源代码文件的完整路径）
 

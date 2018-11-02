@@ -1,27 +1,17 @@
 ---
-title: 帮助菜单合并 |Microsoft Docs
-ms.custom: ''
+title: 帮助菜单合并
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - menus [MFC], merging
 - merging Help menus [MFC]
 - Help [MFC], for active document containers
 ms.assetid: 9d615999-79ba-471a-9288-718f0c903d49
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 379e67d00969518400826e1f82d8801391512ef4
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3db635cfdc39f9c4166bbf3d6958f52e535d91f1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46435618"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50578524"
 ---
 # <a name="help-menu-merging"></a>帮助菜单合并
 

@@ -1,28 +1,18 @@
 ---
-title: 派生消息映射 |Microsoft Docs
-ms.custom: ''
+title: 派生消息映射
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - message handling [MFC], derived message handlers
 - messages, routing
 - message maps [MFC], derived
 - derived message maps
 ms.assetid: 21829556-6e64-40c3-8279-fed85d99de77
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7a1bb9b05a6d3149e7bb6ac5e472652b499ff22c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1413290bc04af37a6d3204150dff5244e1dcb5c5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46416144"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50662522"
 ---
 # <a name="derived-message-maps"></a>派生消息映射
 
@@ -32,7 +22,7 @@ ms.locfileid: "46416144"
 
 ![视图层次结构](../mfc/media/vc38621.gif "vc38621")视图层次结构
 
-因此，如果消息无法在类 `CMyView` 的消息映射中匹配，则框架还将在其即时基类中搜索消息映射。 位于消息映射开头的 `BEGIN_MESSAGE_MAP` 宏将指定两个类名称作为其参数：
+因此，如果消息无法在类 `CMyView` 的消息映射中匹配，则框架还将在其即时基类中搜索消息映射。 位于消息映射开头的 `BEGIN_MESSAGE_MAP` 宏将指定两个类名称作为其自变量：
 
 [!code-cpp[NVC_MFCMessageHandling#2](../mfc/codesnippet/cpp/derived-message-maps_1.cpp)]
 

@@ -1,10 +1,6 @@
 ---
-title: allocator_base 类 | Microsoft 文档
-ms.custom: ''
+title: allocator_base 类
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - allocators/stdext::allocator_base
 - allocators/stdext::allocators::allocator_base
@@ -23,8 +19,6 @@ f1_keywords:
 - allocators/stdext::allocator_base::deallocate
 - allocators/stdext::allocator_base::destroy
 - allocators/stdext::allocator_base::max_size
-dev_langs:
-- C++
 helpviewer_keywords:
 - stdext::allocator_base [C++]
 - stdext::allocators [C++], allocator_base
@@ -44,16 +38,12 @@ helpviewer_keywords:
 - stdext::allocator_base [C++], destroy
 - stdext::allocator_base [C++], max_size
 ms.assetid: f920b45f-2a88-4bb0-8ead-b6126b426ed4
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f55a332032b081cba45d2235f263adafde7e10f8
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 59d5834b941791a659815ff0a03f1c68c8ce68bd
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44101764"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50591641"
 ---
 # <a name="allocatorbase-class"></a>allocator_base 类
 
@@ -70,7 +60,7 @@ class allocator_base
 
 |参数|描述|
 |---------------|-----------------|
-|*类型*|由分配器分配元素类型。|
+|*Type*|由分配器分配元素类型。|
 |*同步*|分配器的同步策略有 [sync_none 类](../standard-library/sync-none-class.md)、[sync_per_container 类](../standard-library/sync-per-container-class.md)、[sync_per_thread 类](../standard-library/sync-per-thread-class.md)或 [sync_shared 类](../standard-library/sync-shared-class.md)。|
 
 ### <a name="constructors"></a>构造函数

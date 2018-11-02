@@ -1,25 +1,15 @@
 ---
-title: Lambda 表达式的示例 |Microsoft Docs
-ms.custom: ''
+title: Lambda 表达式的示例
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - lambda expressions [C++], examples
 ms.assetid: 52506b15-0771-4190-a966-2f302049ca86
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b25d2914285e6ddab9e727f484823d40c9910d3b
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6854c5710d8a27093078c0f2013d691ac22c5870
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46061820"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50663942"
 ---
 # <a name="examples-of-lambda-expressions"></a>Lambda 表达式的示例
 
@@ -140,7 +130,7 @@ int main()
 
 ### <a name="example-2"></a>示例 2
 
-以下示例将 lambda 表达式作为参数传递给 `find_if` 函数。 Lambda 表达式将返回 **，则返回 true**在其参数为偶数。
+以下示例将 lambda 表达式作为自变量传递给 `find_if` 函数。 Lambda 表达式将返回 **，则返回 true**在其参数为偶数。
 
 ### <a name="code"></a>代码
 

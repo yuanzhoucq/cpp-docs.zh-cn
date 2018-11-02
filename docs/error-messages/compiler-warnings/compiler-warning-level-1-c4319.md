@@ -1,27 +1,17 @@
 ---
-title: 编译器警告 （等级 1） C4319 |Microsoft 文档
-ms.custom: ''
+title: 编译器警告（等级 1）C4319
 ms.date: 1/18/2018
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4319
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4319
 ms.assetid: 1fac8048-9bd6-4552-a21c-192c67772bb9
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c1b5fe896ae7d8f43708b60ee4dda486ef08f428
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 20b268bacd6e7e259e9b4fa1c9e98fa6fd353718
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33284740"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50599441"
 ---
 # <a name="compiler-warning-level-1-c4319"></a>编译器警告（等级 1）C4319
 
@@ -31,7 +21,7 @@ ms.locfileid: "33284740"
 
 ## <a name="example"></a>示例
 
-在下面的示例中，`~(a - 1)`是计算结果为 32 位无符号 long 表达式并且然后通过零扩展转换为 64 位。 这会导致意外的运算结果。
+在以下示例中，`~(a - 1)`是作为 32 位无符号 long 表达式计算，然后通过零扩展转换为 64 位。 这会导致意外的运算结果。
 
 ```cpp
 // C4319.cpp

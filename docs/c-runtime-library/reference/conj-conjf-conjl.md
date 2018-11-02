@@ -1,11 +1,6 @@
 ---
-title: conj、conjf、conjl | Microsoft 文档
-ms.custom: ''
+title: conj、conjf、conjl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - conj
 - conjf
@@ -30,23 +25,17 @@ f1_keywords:
 - complex/conj
 - complex/conjf
 - complex/conjl
-dev_langs:
-- C++
 helpviewer_keywords:
 - conj function
 - conjf function
 - conjl function
 ms.assetid: 792fccfa-19c6-4890-99f9-a3b89effccd6
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cb91b566c499ba9f34c7c67c9cdc24d67924601d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 57ed5e8570a3a2467bf7080524db9d1bef618091
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394316"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50579954"
 ---
 # <a name="conj-conjf-conjl"></a>conj、conjf、conjl
 
@@ -79,15 +68,15 @@ _Lcomplex conjl(
 
 ## <a name="return-value"></a>返回值
 
-复数的共轭*z*。  结果具有相同的实部和虚部一部分*z*，但符号相反。
+复数的共轭*z*。  结果具有相同的实部和虚部零件*z*，但符号相反。
 
 ## <a name="remarks"></a>备注
 
-由于 c + + 允许重载，你可以调用的重载**conj**采用并返回 **_Fcomplex**和 **_Lcomplex**值。 在 C 程序中， **conj**始终采用并返回 **_Dcomplex**值。
+由于 c + + 允许重载，可以调用的重载**conj**采用并返回 **_Fcomplex**并 **_Lcomplex**值。 在 C 程序中， **conj**始终采用并返回 **_Dcomplex**值。
 
 ## <a name="requirements"></a>要求
 
-|例程|C 标头|C++ 标头|
+|例程所返回的值|C 标头|C++ 标头|
 |-------------|--------------|------------------|
 |**conj**， **conjf**， **conjl**|\<complex.h>|\<ccomplex>|
 

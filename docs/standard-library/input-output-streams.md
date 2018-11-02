@@ -1,26 +1,16 @@
 ---
-title: 输入/输出流 | Microsoft Docs
-ms.custom: ''
+title: 输入 / 输出流
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - I/O [C++], stream
 - stream I/O
 ms.assetid: 21a97566-91a7-42d6-b2f8-a4c16bc926f1
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: dcb17eeaf09cec63392cb842f790504b28038487
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: d426baacb52095ab2d933263fdac8e312fc29558
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38955717"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50580197"
 ---
 # <a name="inputoutput-streams"></a>输入/输出流
 

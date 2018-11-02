@@ -1,27 +1,16 @@
 ---
-title: 方法特性 (c + + COM) |Microsoft Docs
-ms.custom: ''
+title: 方法特性 (c + + COM)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - method attributes
 - attributes [C++/CLI], reference topics
 ms.assetid: b2313352-480d-488b-8c35-6242ffd3a549
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 8f5f9af9e302b9346b2bd42acdf1e268a59113f7
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 96a3eab3e6d2761019a9f0855ff7cbb978445f68
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790388"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50667917"
 ---
 # <a name="method-attributes"></a>方法特性
 
@@ -55,7 +44,7 @@ ms.locfileid: "48790388"
 |[propput](propput.md)|指定的属性设置函数。|
 |[propputref](propputref.md)|指定使用引用而不是值的属性设置函数。|
 |[ptr](ptr.md)|将一个指针，指定为完整的指针。|
-|[范围](range-cpp.md)|指定参数或在运行时设置其值的字段的允许值的范围。|
+|[range](range-cpp.md)|指定参数或在运行时设置其值的字段的允许值的范围。|
 |[requestedit](requestedit.md)|指示该属性支持`OnRequestEdit`通知。|
 |[restricted](restricted.md)|指定不能任意调用模块、 接口或调度接口的成员。|
 |[satype](satype.md)|指定的数据类型`SAFEARRAY`结构。|

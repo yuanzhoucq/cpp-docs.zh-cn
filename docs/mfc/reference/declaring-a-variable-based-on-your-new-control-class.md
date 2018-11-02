@@ -1,29 +1,19 @@
 ---
-title: 声明一个变量基于新控件类 |Microsoft Docs
-ms.custom: ''
+title: 声明基于新控件类的变量
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - vc.codewiz.classes.control.variable
-dev_langs:
-- C++
 helpviewer_keywords:
 - variables [MFC], control classes
 - control classes [MFC], variables
 - classes [MFC], declaring variables based on
 ms.assetid: 5722dc38-c0eb-40bd-93da-67a808140d03
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6d2e5e91465df0c3e7608b949c6e1f4b8dfc80bc
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: f79ecb6edec58d26042818d647a0ea121dd41a55
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50064142"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50595684"
 ---
 # <a name="declaring-a-variable-based-on-your-new-control-class"></a>声明基于新控件类的变量
 

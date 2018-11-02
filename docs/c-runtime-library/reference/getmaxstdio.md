@@ -1,10 +1,6 @@
 ---
-title: _getmaxstdio | Microsoft 文档
-ms.custom: ''
+title: _getmaxstdio
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _getmaxstdio
 apilocation:
@@ -23,24 +19,18 @@ apitype: DLLExport
 f1_keywords:
 - _getmaxstdio
 - getmaxstdio
-dev_langs:
-- C++
 helpviewer_keywords:
 - files [C++], number open
 - _getmaxstdio function
 - getmaxstdio function
 - open files, getting number
 ms.assetid: 700ca8ce-4a8c-4e00-9467-dfa9d6b831a0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f2030937806eedbf1abe671032da75c531fdd5ca
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ea8e516b4c0806230376ea52e399c9fa1f9a858a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396779"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50618331"
 ---
 # <a name="getmaxstdio"></a>_getmaxstdio
 
@@ -58,11 +48,11 @@ int _getmaxstdio( void );
 
 ## <a name="remarks"></a>备注
 
-使用[_setmaxstdio](setmaxstdio.md)配置在允许同时打开的文件数量**stdio**级别。
+使用[_setmaxstdio](setmaxstdio.md)配置在允许同时打开的文件数**stdio**级别。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_getmaxstdio**|\<stdio.h>|
 

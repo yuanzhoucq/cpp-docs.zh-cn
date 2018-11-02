@@ -1,10 +1,6 @@
 ---
-title: _get_doserrno | Microsoft 文档
-ms.custom: ''
+title: _get_doserrno
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _get_doserrno
 apilocation:
@@ -23,32 +19,26 @@ apitype: DLLExport
 f1_keywords:
 - _get_doserrno
 - get_doserrno
-dev_langs:
-- C++
 helpviewer_keywords:
 - get_doserrno function
 - _get_doserrno function
 ms.assetid: 7fec7be3-6e39-4181-846b-8ef24489361c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f7cef2c068fad2f18cb1d11d33e551588800cb64
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d28b9ec47108f7051a908f874584bbfddf5d6a3d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399564"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50605161"
 ---
 # <a name="getdoserrno"></a>_get_doserrno
 
-获取之前它将转换为返回的操作系统的错误值**errno**值。
+获取之前将转换为返回的操作系统的错误值**errno**值。
 
 ## <a name="syntax"></a>语法
 
 ```C
-errno_t _get_doserrno( 
-   int * pValue 
+errno_t _get_doserrno( 
+   int * pValue 
 );
 ```
 
@@ -59,19 +49,19 @@ errno_t _get_doserrno(
 
 ## <a name="return-value"></a>返回值
 
-如果 **_get_doserrno**成功，它将返回零; 如果失败，则返回错误代码。 如果*pValue*是**NULL**，则调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，此函数将**errno**到**EINVAL**并返回**EINVAL**。
+如果 **_get_doserrno**成功，它将返回零; 如果失败，则返回错误代码。 如果*pValue*是**NULL**，将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，此函数可设置**errno**到**EINVAL** ，并返回**EINVAL**。
 
 ## <a name="remarks"></a>备注
 
-**_Doserrno**全局宏设置为零 CRT 初始化期间，在过程之前执行开始。 将它设置为由返回操作系统错误的任一系统级函数调用返回的操作系统错误值，而且在执行过程中永远不会将其重置为零。 当你编写代码以检查错误值返回的函数，始终清除 **_doserrno**使用[_set_doserrno](set-doserrno.md)函数调用之前。 因为另一个函数调用可能会覆盖 **_doserrno**，通过检查值 **_get_doserrno**紧跟函数调用。
+**_Doserrno**全局宏设置为零，在 CRT 初始化过程中，在过程之前开始执行。 将它设置为由返回操作系统错误的任一系统级函数调用返回的操作系统错误值，而且在执行过程中永远不会将其重置为零。 当你编写代码以检查错误值返回的函数，始终清楚 **_doserrno**通过使用[_set_doserrno](set-doserrno.md)函数调用之前。 因为另一个函数调用可能会覆盖 **_doserrno**，通过检查的值 **_get_doserrno**紧函数调用。
 
-我们建议[_get_errno](get-errno.md)而不是 **_get_doserrno**可移植的错误代码。
+我们建议[_get_errno](get-errno.md)而不是 **_get_doserrno**的可移植的错误代码。
 
-可能的值的 **_doserrno**中定义\<.h >。
+可能的值 **_doserrno**中定义\<errno.h >。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|可选标头|
+|例程所返回的值|必需的标头|可选标头|
 |-------------|---------------------|---------------------|
 |**_get_doserrno**|\<stdlib.h>、\<cstdlib> (C++)|\<errno.h>、\<cerrno> (C++)|
 

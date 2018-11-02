@@ -1,27 +1,16 @@
 ---
-title: 参数特性 (c + + COM) |Microsoft Docs
-ms.custom: ''
+title: 参数特性 (c + + COM)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - attributes [C++/CLI], parameter attributes
 - parameter attributes
 ms.assetid: 024c2dd5-49d7-4ced-a17a-c56c1bc485b6
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 160e71111a9080367390302a59c41a53580ffe0b
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 56c168975c9b8a6fcf7462c26eefd07b4499d149
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790351"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50619620"
 ---
 # <a name="parameter-attributes"></a>Parameter 特性
 
@@ -39,9 +28,9 @@ ms.locfileid: "48790351"
 |[lcid](lcid.md)|可以将区域设置标识符传递给函数。|
 |[length_is](length-is.md)|指定要传输的数组元素数。|
 |[max_is](max-is.md)|指定有效的数组索引的最大值。|
-|[可选](optional-cpp.md)|指定的成员函数的可选参数。|
+|[optional](optional-cpp.md)|指定的成员函数的可选参数。|
 |[out](out-cpp.md)|标识从被调用过程返回到调用过程（从服务器到客户端）的指针参数。|
-|[范围](range-cpp.md)|指定参数或在运行时设置其值的字段的允许值的范围。|
+|[range](range-cpp.md)|指定参数或在运行时设置其值的字段的允许值的范围。|
 |[ref](ref-cpp.md)|标识引用指针。|
 |[retval](retval.md)|指定接收该成员的返回值的参数。|
 |[satype](satype.md)|指定的数据类型`SAFEARRAY`结构。|

@@ -1,10 +1,6 @@
 ---
-title: _fpreset | Microsoft 文档
-ms.custom: ''
+title: _fpreset
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _fpreset
 apilocation:
@@ -23,23 +19,17 @@ apitype: DLLExport
 f1_keywords:
 - _fpreset
 - fpreset
-dev_langs:
-- C++
 helpviewer_keywords:
 - fpreset function
 - floating-point numbers, resetting math package
 - _fpreset function
 ms.assetid: f31c6a04-b464-4f07-a7c4-42133360e328
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8b550df3e43b56038ae6d1b2d6695c86d90c3499
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0b3ea4289cd0ff031fd2828e3c4183911459297c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398889"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50592603"
 ---
 # <a name="fpreset"></a>_fpreset
 
@@ -53,9 +43,9 @@ void _fpreset( void );
 
 ## <a name="remarks"></a>备注
 
-**_Fpreset**函数重新初始化浮点数学包。 **_fpreset**通常用于**信号**，**系统**，或 **_exec**或 **_spawn**函数。 如果程序捕获浮点错误信号 (**SIGFPE**) 与**信号**，它可以安全地从浮点错误恢复通过调用 **_fpreset**和使用**longjmp**。
+**_Fpreset**函数重新初始化浮点数学包。 **_fpreset**通常用于**信号**，**系统**，或 **_exec**或 **_spawn**函数。 如果某个程序捕获浮点错误信号 (**SIGFPE**) 与**信号**，它可以安全地从错误中恢复浮点通过调用 **_fpreset**和使用**longjmp**。
 
-使用编译时，此函数已弃用[/clr （公共语言运行时编译）](../../build/reference/clr-common-language-runtime-compilation.md)因为公共语言运行时仅支持默认的浮点精度。
+使用编译时，此函数已弃用[/clr （公共语言运行时编译）](../../build/reference/clr-common-language-runtime-compilation.md)因为公共语言运行时仅支持默认浮点精度。
 
 ## <a name="requirements"></a>要求
 

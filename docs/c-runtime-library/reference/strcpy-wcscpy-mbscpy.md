@@ -1,10 +1,6 @@
 ---
-title: strcpy、wcscpy、_mbscpy | Microsoft 文档
-ms.custom: ''
+title: strcpy、wcscpy、_mbscpy
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - strcpy
 - wcscpy
@@ -29,8 +25,6 @@ f1_keywords:
 - wcscpy
 - _tcscpy
 - strcpy
-dev_langs:
-- C++
 helpviewer_keywords:
 - strcpy function
 - tcscpy function
@@ -43,23 +37,19 @@ helpviewer_keywords:
 - _ftcscpy function
 - _mbscpy function
 ms.assetid: f97a4f81-e9ee-4f15-888a-0fa5d7094c5a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c996fc8ceb81d98d24e3c95330f2ed9c37097e7d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a6846123fedf48601d36ab8779d7c9868e5e9917
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413916"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50640058"
 ---
 # <a name="strcpy-wcscpy-mbscpy"></a>strcpy、wcscpy、_mbscpy
 
 复制字符串。 这些函数更安全的版本已发布，请参阅 [strcpy_s、wcscpy_s、_mbscpy_s](strcpy-s-wcscpy-s-mbscpy-s.md)。
 
 > [!IMPORTANT]
-> **_mbscpy**不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
+> **_mbscpy**不能在 Windows 运行时中执行的应用程序中使用。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
 
 ## <a name="syntax"></a>语法
 
@@ -107,12 +97,12 @@ null 终止的源字符串。
 
 ## <a name="remarks"></a>备注
 
-**Strcpy**函数副本*strSource*，包括终止 null 字符，由指定的位置*strDestination*。 行为**strcpy**是不确定的如果源和目标字符串重叠。
+**Strcpy**函数副本*strSource*，包括终止 null 字符，由指定的位置*strDestination*。 行为**strcpy**如果源和目标字符串重叠，则是未定义。
 
 > [!IMPORTANT]
-> 因为**strcpy**不会检查足够空间*strDestination*复制之前*strSource*，很可能会造成缓冲区溢出。 因此，我们建议你使用 [strcpy_s](strcpy-s-wcscpy-s-mbscpy-s.md)。
+> 因为**strcpy**不会检查有足够空间*strDestination* ，它会复制之前*strSource*，很可能会造成缓冲区溢出。 因此，我们建议你使用 [strcpy_s](strcpy-s-wcscpy-s-mbscpy-s.md)。
 
-**wcscpy**和 **_mbscpy**分别是宽字符及多字节字符版本的**strcpy**。 参数和返回值的**wcscpy**是宽字符字符串; 而的 **_mbscpy**是多字节字符字符串。 否则这三个函数否则具有相同行为。
+**wcscpy**并 **_mbscpy**分别是宽字符及多字节字符版本的**strcpy**。 参数和返回值**wcscpy**是宽字符字符串; **_mbscpy**是多字节字符字符串。 否则这三个函数否则具有相同行为。
 
 在 C++ 中，这些函数具有模板重载，以调用这些函数的更新、更安全副本。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 
@@ -124,7 +114,7 @@ null 终止的源字符串。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**strcpy**|\<string.h>|
 |**wcscpy**|\<string.h> 或 \<wchar.h>|

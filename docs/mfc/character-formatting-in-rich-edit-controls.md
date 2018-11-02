@@ -1,27 +1,17 @@
 ---
-title: Rich Edit 控件中的格式设置字符 |Microsoft Docs
-ms.custom: ''
+title: Rich Edit 控件中的字符格式设置
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - formatting [MFC], characters
 - rich edit controls [MFC], character formatting in
 - CRichEditCtrl class [MFC], character formatting in
 ms.assetid: c80f4305-75ad-45f9-8d17-d83d0fe79be5
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 75ac8637e5157434cd5729695b30a443bbd31cf5
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b502ae36e01c683063a04efc790e7bc503a7a5dd
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46403143"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50664043"
 ---
 # <a name="character-formatting-in-rich-edit-controls"></a>Rich Edit 控件中的字符格式设置
 

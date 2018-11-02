@@ -1,10 +1,6 @@
 ---
-title: _onexit、_onexit_m | Microsoft 文档
-ms.custom: ''
+title: _onexit、_onexit_m
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _onexit
 - _onexit_m
@@ -25,8 +21,6 @@ f1_keywords:
 - onexit_m
 - onexit
 - _onexit_m
-dev_langs:
-- C++
 helpviewer_keywords:
 - onexit function
 - registry, registering exit routines
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - registering exit routines
 - registering to be called on exit
 ms.assetid: 45743298-0e2f-46cf-966d-1ca44babb443
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8c190ce2c78135625a502d7509e56771fd670aa3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c190f777032904802f771bab9fc323ba305ff32e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401703"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50609595"
 ---
 # <a name="onexit-onexitm"></a>_onexit、_onexit_m
 
@@ -69,19 +59,19 @@ _onexit_t_m _onexit_m(
 
 ## <a name="return-value"></a>返回值
 
-**_onexit**将指针返回到该函数，如果成功或**NULL**如果没有任何空间来存储函数的指针。
+**_onexit**如果成功，则返回对函数的指针或**NULL**如果没有空间来存储函数指针。
 
 ## <a name="remarks"></a>备注
 
-**_Onexit**函数传递的函数地址 (*函数*) 在程序正常终止时调用。 对连续调用 **_onexit**创建按 LIFO （后进中第一个-出） 顺序执行的函数的寄存器。 函数传递给 **_onexit**不能接受参数。
+**_Onexit**函数被传入函数的地址 (*函数*) 程序正常终止时要调用。 后续调用 **_onexit**创建一个函数注册表的后进先出 （上一次中的先进先出） 顺序执行的函数。 函数传递给 **_onexit**不能采用参数。
 
-在这种情况时 **_onexit**从 DLL，注册的例程中调用 **_onexit**在 DLL 上的运行卸载后**DllMain**使用 DLL_PROCESS_DETACH 调用。
+在这种情况时 **_onexit**从 DLL 注册的例程中调用 **_onexit** DLL 上的运行的卸载后**DllMain**使用 DLL_PROCESS_DETACH 调用。
 
-**_onexit**是 Microsoft 扩展。 若要获得 ANSI 可移植性，请使用 [atexit](atexit.md)。 **_Onexit_m**该函数的版本为混合模式下使用。
+**_onexit**是 Microsoft 扩展。 若要获得 ANSI 可移植性，请使用 [atexit](atexit.md)。 **_Onexit_m**函数的版本是适用于混合的模式。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_onexit**|\<stdlib.h>|
 

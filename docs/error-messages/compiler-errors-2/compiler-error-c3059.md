@@ -1,33 +1,23 @@
 ---
-title: 编译器错误 C3059 |Microsoft Docs
-ms.custom: ''
+title: 编译器错误 C3059
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3059
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3059
 ms.assetid: 57220324-8286-4cab-a1ab-45385eb1eae0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d9f983485353f2f270160a1795bf29b027950cad
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: df1f65f231f72f2efa90458fe9b21339dda80080
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46107164"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50668424"
 ---
 # <a name="compiler-error-c3059"></a>编译器错误 C3059
 
 “var”：“threadprivate”符号不能用于“clause”子句中
 
-一个[threadprivate](../../parallel/openmp/reference/threadprivate.md)子句中使用符号。
+子句中使用了一个 [threadprivate](../../parallel/openmp/reference/threadprivate.md) 符号。
 
 下面的示例生成 C3059：
 

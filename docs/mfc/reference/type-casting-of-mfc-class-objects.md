@@ -1,14 +1,8 @@
 ---
-title: 类型的 MFC 类对象的显式转换 |Microsoft Docs
-ms.custom: ''
+title: MFC 类对象的类型强制转换
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - vc.mfc.macros.classes
-dev_langs:
-- C++
 helpviewer_keywords:
 - macros [MFC], type casting
 - pointers [MFC], type casting
@@ -16,16 +10,12 @@ helpviewer_keywords:
 - casting types [MFC]
 - macros [MFC], casting pointers
 ms.assetid: e138465e-c35f-4e84-b788-bd200ccf2f0e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2f459f1cad1b863f0c96e9c885fd2c54831d6b6e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 42b668287905fc5f6e05a09949d53acc51c79026
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46382435"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50584132"
 ---
 # <a name="type-casting-of-mfc-class-objects"></a>MFC 类对象的类型强制转换
 

@@ -1,28 +1,17 @@
 ---
-title: 如何： 在从 MSIL 引发的本机代码中捕捉异常 |Microsoft Docs
-ms.custom: ''
+title: 如何：在本机代码中捕捉从 MSIL 引发的异常
 ms.date: 11/04/2016
-ms.technology:
-- cpp-cli
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - exceptions, catching
 - catching exceptions, thrown from MSIL
 - MSIL, catching exceptions in native code
 ms.assetid: c15afd2b-8505-43bf-8a4a-f1d41532a124
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- dotnet
-ms.openlocfilehash: f7022bffa7dd5a8524c614760fa2a36b2884b973
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 73c9a9af66a6e292c76b96ec47a5853684e602f9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46379458"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50635579"
 ---
 # <a name="how-to-catch-exceptions-in-native-code-thrown-from-msil"></a>如何：在本机代码中捕捉从 MSIL 引发的异常
 

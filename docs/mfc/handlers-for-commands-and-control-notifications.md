@@ -1,12 +1,6 @@
 ---
-title: 命令和控件通知处理程序 |Microsoft Docs
-ms.custom: ''
+title: 命令和控件通知的处理程序
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - commands [MFC], handlers for
 - functions [MFC], handler
@@ -16,16 +10,12 @@ helpviewer_keywords:
 - notifications [MFC], handlers for control
 - handlers [MFC], command
 ms.assetid: 20f57f4a-f577-4c09-80a2-43faf32a1c2e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bda42393cd55b60ab787665b51957bb2f94c5df3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 28bed2937409cd1df5ee8d295e466609232e0e91
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46430051"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50622048"
 ---
 # <a name="handlers-for-commands-and-control-notifications"></a>命令和控件通知的处理程序
 

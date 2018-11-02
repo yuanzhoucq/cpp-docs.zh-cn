@@ -1,11 +1,6 @@
 ---
-title: fesetexceptflag |Microsoft 文档
-ms.custom: ''
+title: fesetexceptflag
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - fesetexceptflag
 apilocation:
@@ -24,21 +19,15 @@ apitype: DLLExport
 f1_keywords:
 - fesetexceptflag
 - fenv/fesetexceptflag
-dev_langs:
-- C++
 helpviewer_keywords:
 - fesetexceptflag function
 ms.assetid: 2f7dad77-9e54-4097-a3e3-35176ace4de5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: eef8ba1c91e6db4f0d620ef820a6487b3b17e649
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9ac79e790f0b1e7a89413a0d4974f6053c95616e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398603"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50615873"
 ---
 # <a name="fesetexceptflag"></a>fesetexceptflag
 
@@ -58,7 +47,7 @@ int fesetexceptflag(
 *pstatus*<br/>
 指向**fexcept_t**对象，其中包含要设置为异常状态标志的值。 可由以前对 [fegetexceptflag](fegetexceptflag2.md) 的调用设置该对象。
 
-*excepts*<br/>
+*除*<br/>
 要设置的浮点异常状态标志。
 
 ## <a name="return-value"></a>返回值
@@ -67,7 +56,7 @@ int fesetexceptflag(
 
 ## <a name="remarks"></a>备注
 
-**Fesetexceptflag**函数设置由指定的浮点异常状态标志的状态*excepts*中设置的相应值到**fexcept_t**指向对象*pstatus*。  它不会引发异常。 *Pstatus*指针必须指向有效**fexcept_t**对象或后续的行为是不确定。 **Fesetexceptflag**函数支持这些异常宏值*excepts*在中定义\<v.h >:
+**Fesetexceptflag**函数设置由指定的浮点异常状态标志的状态*除*中设置的相应值**fexcept_t**指向对象*pstatus*。  它不会引发异常。 *Pstatus*指针必须指向有效**fexcept_t**是不确定的对象或后续行为。 **Fesetexceptflag**函数支持在这些异常宏值*除*中定义\<fenv.h >:
 
 |异常宏|描述|
 |---------------------|-----------------|
@@ -78,7 +67,7 @@ int fesetexceptflag(
 |FE_UNDERFLOW|早期的浮点运算结果因为过小而无法以完整的精度表示；创建了非常规值。|
 |FE_ALLEXCEPT|所有受支持的浮点异常的按位 OR。|
 
-*Excepts*参数可能为零，一个受支持的浮点异常宏，或按位或两个或多个宏。 未定义任何其他参数值的效果。
+*除*参数可能为零、 一个受支持的浮点异常宏，或按位 OR 的两个或多个宏。 未定义任何其他参数值的效果。
 
 若要使用此函数，必须在调用前先使用 `#pragma fenv_access(on)` 指令关闭可能会阻止访问的浮点优化。 有关详细信息，请参阅 [fenv_access](../../preprocessor/fenv-access.md)。
 

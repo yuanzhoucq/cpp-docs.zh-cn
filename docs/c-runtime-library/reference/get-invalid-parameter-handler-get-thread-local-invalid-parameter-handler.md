@@ -1,10 +1,6 @@
 ---
-title: _get_invalid_parameter_handler、_get_thread_local_invalid_parameter_handler | Microsoft 文档
-ms.custom: ''
+title: _get_invalid_parameter_handler、_get_thread_local_invalid_parameter_handler
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _get_invalid_parameter_handler
 - _get_thread_local_invalid_parameter_handler
@@ -26,22 +22,16 @@ f1_keywords:
 - stdlib/_get_invalid_parameter_handler
 - _get_thread_local_invalid_parameter_handler
 - stdlib/_get_thread_local_invalid_parameter_handler
-dev_langs:
-- C++
 helpviewer_keywords:
 - _get_thread_local_invalid_parameter_handler function
 - _get_invalid_parameter_handler function
 ms.assetid: a176da0e-38ca-4d99-92bb-b0e2b8072f53
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0302f0ba8e7e34ca60ab73aa0193b48b8352bc77
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7d1a87f9ade0845994918d5a4d59dc56e190d2b6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399912"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50623971"
 ---
 # <a name="getinvalidparameterhandler-getthreadlocalinvalidparameterhandler"></a>_get_invalid_parameter_handler、_get_thread_local_invalid_parameter_handler
 
@@ -60,7 +50,7 @@ _invalid_parameter_handler _get_thread_local_invalid_parameter_handler(void);
 
 ## <a name="remarks"></a>备注
 
-**_Get_invalid_parameter_handler**函数获取当前设置全局无效参数处理程序。 如果未设置全局无效参数处理程序，则返回空指针。 同样， **_get_thread_local_invalid_parameter_handler**获取调用时，该线程或 null 指针的当前线程本地无效参数处理程序，如果没有处理程序已设置。 有关如何设置全局和线程本地无效参数处理程序的信息，请参阅 [_set_invalid_parameter_handler、_set_thread_local_invalid_parameter_handler](set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md)。
+**_Get_invalid_parameter_handler**函数获取当前设置全局无效参数处理程序。 如果未设置全局无效参数处理程序，则返回空指针。 同样， **_get_thread_local_invalid_parameter_handler**获取当前线程本地无效参数处理程序的线程调用或 null 指针，如果没有处理程序设置。 有关如何设置全局和线程本地无效参数处理程序的信息，请参阅 [_set_invalid_parameter_handler、_set_thread_local_invalid_parameter_handler](set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md)。
 
 返回的无效参数处理程序函数指针具有以下类型：
 
@@ -78,11 +68,11 @@ typedef void (__cdecl* _invalid_parameter_handler)(
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_get_invalid_parameter_handler**， **_get_thread_local_invalid_parameter_handler**|C: \<stdlib.h><br /><br /> C++: \<cstdlib> 或 \<stdlib.h>|
 
-**_Get_invalid_parameter_handler**和 **_get_thread_local_invalid_parameter_handler**函数是 Microsoft 特定。 有关兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+**_Get_invalid_parameter_handler**并 **_get_thread_local_invalid_parameter_handler**是 Microsoft 特定函数的函数。 有关兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="see-also"></a>请参阅
 

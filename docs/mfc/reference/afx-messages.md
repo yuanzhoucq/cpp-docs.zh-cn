@@ -1,10 +1,6 @@
 ---
-title: AFX 消息 |Microsoft Docs
-ms.custom: ''
+title: AFX 消息
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - SB_LINELEFT
 - SB_THUMBTRACK
@@ -65,21 +61,15 @@ f1_keywords:
 - AFX_WM_CREATETOOLBAR
 - SB_THUMBPOSITION
 - AFX_WM_POSTSETPREVIEWFRAME
-dev_langs:
-- C++
 helpviewer_keywords:
 - AFX messages [MFC]
 ms.assetid: 3d601f3c-af6d-47d3-8553-34f1318fa74f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 92f24c18de594cfe734b703ec13c3116b7b5d31b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 45c6a9174cbd39c4c0c24ffbdfdefb9d184a3cc1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46390979"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50594683"
 ---
 # <a name="afx-messages"></a>AFX 消息
 
@@ -100,7 +90,7 @@ ms.locfileid: "46390979"
 |AFX_WM_CHANGING_ACTIVE_TAB|发送到的父`CMFCTabCtrl`对象。  处理此消息，如果你想要接收来自通知`CMFCTabCtrl`对象时用户重置选项卡。|正在激活的选项卡的索引。|未使用。|非零值。|
 |AFX_WM_CHECKEMPTYMINIFRAME|仅限内部使用。|不适用。|不适用。|不适用。|
 |AFX_WM_CREATETOOLBAR|从发送`CMFCToolBarsListPropertyPage`如果用户可以在自定义过程中创建一个新的工具栏。 你可以处理此消息以实例化自定义 CMFCToolBar 派生对象。 如果您处理此消息，并创建您自己的工具栏，则忽略调用默认处理程序。|未使用。|指向包含工具栏的名称的字符串的指针。|指向新建工具栏上的指针。 NULL 指示工具栏创建已取消。|
-|AFX_WM_CUSTOMIZEHELP|从自定义属性表发送到主框架窗口`CMFCToolbarCustomize Dialog`当用户按**帮助**按钮或按 F1 键。|指定活动的自定义属性表页。|一个指向`CMFCToolbarCustomize Dialog`对象。|为零。|
+|AFX_WM_CUSTOMIZEHELP|从自定义属性表发送到主框架窗口`CMFCToolbarCustomize Dialog`当用户按**帮助**按钮或按 F1 键。|指定活动的自定义属性表页。|指向 `CMFCToolbarCustomize Dialog` 对象的指针。|为零。|
 |AFX_WM_CUSTOMIZETOOLBAR|`CMFCToolbarCustomize Dialog`发送此消息，通知父框架在用户创建一个新的工具栏。|自定义启动时，则返回 FALSE 时完成自定义项，则为 TRUE。|未使用。|为零。|
 |AFX_WM_DELETETOOLBAR|当用户要删除自定义模式中的工具栏时，发送到主框架窗口。<br /><br /> 处理此消息以采取其他操作，当用户删除自定义模式中的工具栏。 此外应调用默认处理程序 (`OnToolbarDelete`)，它将删除工具栏。 默认处理程序返回一个值，该值指示是否可以删除工具栏。|未使用。|指向`CMFCToolBar`要删除的对象。|如果不能删除一个工具栏，则非零值否则为 0。|
 |AFX_WM_GETDOCUMENTCOLORS|`CMFCColorMenuButton` 将此消息发送到主框架窗口来检索文档颜色。|未使用。|[in、 out]指向`CList<COLORREF, COLORREF>`对象。|为零。|
@@ -127,7 +117,7 @@ ms.locfileid: "46390979"
 |AFX_WM_RESETKEYBOARD|框架将此消息发送到主框架窗口，用户自定义期间重置所有键盘快捷键。|未使用。|未使用。|未使用。|
 |AFX_WM_RESETMENU|该框架将此消息发送到菜单所有者 （框架窗口） 时用户将重置应用程序框架菜单自定义期间|菜单资源 id。|未使用。|未使用。|
 |AFX_WM_RESETPROMPT|当一个工具栏，从工具栏中的用户重置自定义对话框时，框架将发送此消息。 默认处理程序会显示一个消息框，询问用户是否想要重置此工具栏。|未使用。|未使用。|未使用。|
-|AFX_WM_RESETTOOLBAR|一个`CMFCToolBar`对象将发送此消息，工具栏将还原到其原始状态，也就是说，从资源中加载时。 处理此消息以重新插入工具栏按钮的类派生自`CMFCToolbarButton`。 有关详细信息，请参阅`CMFCToolbarComboBoxButton`。|已还原其状态的工具栏资源 ID。|未使用。|为零。|
+|AFX_WM_RESETTOOLBAR|一个`CMFCToolBar`对象将发送此消息，工具栏将还原到其原始状态，也就是说，从资源中加载时。 处理此消息以重新插入工具栏按钮的类派生自`CMFCToolbarButton`。 有关详细信息，请参阅 `CMFCToolbarComboBoxButton` 。|已还原其状态的工具栏资源 ID。|未使用。|为零。|
 |AFX_WM_SHOWREGULARMENU|`CMFCToolbarMenuButton` 当用户单击常规菜单按钮时，对象会将此消息发送给其所有者。 处理此消息，则使用每次`CMFCToolbarMenuButton`用户单击按钮时显示弹出菜单。|将消息发送的按钮命令 ID。|光标的屏幕坐标。 低序位字指定的 x 坐标。 高序位字指定的 y 坐标。|未使用。|
 |AFX_WM_TOOLBARMENU|当用户释放鼠标右键，鼠标指针位于客户端或窗格的非工作区中，发送到主框架窗口。|未使用。|鼠标指针屏幕坐标。 低序位字指定的 x 坐标。 高序位字指定的 y 坐标。|如果应用程序处理此消息; 则为零否则为，为非零值。|
 |AFX_WM_UPDATETOOLTIPS|发送给所有工具提示所有者以指明其工具提示控件应重新创建。|应处理此消息的控件的类型。 请参阅后面本主题有关的可能值列表的表。|未使用。|未使用。|

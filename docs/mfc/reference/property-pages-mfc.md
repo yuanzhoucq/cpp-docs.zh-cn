@@ -1,28 +1,18 @@
 ---
-title: 属性页 (MFC) |Microsoft Docs
-ms.custom: ''
+title: 属性页 (MFC)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - vc.mfc.macros
-dev_langs:
-- C++
 helpviewer_keywords:
 - property page data transfer functions in MFC
 - property pages [MFC], global MFC functions
 ms.assetid: 734f88bc-c776-4136-9b0e-f45c761a45c1
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d6d72a6dbe8480e37751b760961f466db02c0c0d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4f8e56ed4be6bf4c7a5283894493ee46c4ed2ff4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46403068"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50620904"
 ---
 # <a name="property-pages-mfc"></a>属性页 (MFC)
 
@@ -77,7 +67,7 @@ void AFXAPI DDP_CBIndex(
 *id*<br/>
 资源 ID 的组合框控件与指定的控件属性相关联*pszPropName*。
 
-*成员*<br/>
+*member*<br/>
 与指定的属性页控件关联的成员变量*id*和指定的属性*pszPropName*。
 
 *pszPropName*<br/>
@@ -111,7 +101,7 @@ void AFXAPI DDP_CBString(
 *id*<br/>
 资源 ID 的组合框控件与指定的控件属性相关联*pszPropName*。
 
-*成员*<br/>
+*member*<br/>
 与指定的属性页控件关联的成员变量*id*和指定的属性*pszPropName*。
 
 *pszPropName*<br/>
@@ -145,7 +135,7 @@ void AFXAPI DDP_CBStringExact(
 *id*<br/>
 资源 ID 的组合框控件与指定的控件属性相关联*pszPropName*。
 
-*成员*<br/>
+*member*<br/>
 与指定的属性页控件关联的成员变量*id*和指定的属性*pszPropName*。
 
 *pszPropName*<br/>
@@ -179,7 +169,7 @@ void AFXAPI DDP_Check(
 *id*<br/>
 与指定的控件属性关联的复选框控件的资源 ID *pszPropName*。
 
-*成员*<br/>
+*member*<br/>
 与指定的属性页控件关联的成员变量*id*和指定的属性*pszPropName*。
 
 *pszPropName*<br/>
@@ -213,7 +203,7 @@ void AFXAPI DDP_LBIndex(
 *id*<br/>
 资源 ID 的列表框控件与指定的控件属性相关联*pszPropName*。
 
-*成员*<br/>
+*member*<br/>
 与指定的属性页控件关联的成员变量*id*和指定的属性*pszPropName*。
 
 *pszPropName*<br/>
@@ -247,7 +237,7 @@ void AFXAPI DDP_LBString(
 *id*<br/>
 资源 ID 的列表框控件与指定的控件属性相关联*pszPropName*。
 
-*成员*<br/>
+*member*<br/>
 与指定的属性页控件关联的成员变量*id*和指定的属性*pszPropName*。
 
 *pszPropName*<br/>
@@ -281,7 +271,7 @@ void AFXAPI DDP_LBStringExact(
 *id*<br/>
 资源 ID 的列表框控件与指定的控件属性相关联*pszPropName*。
 
-*成员*<br/>
+*member*<br/>
 与指定的属性页控件关联的成员变量*id*和指定的属性*pszPropName*。
 
 *pszPropName*<br/>
@@ -338,7 +328,7 @@ void AFXAPI DDP_Radio(
 *id*<br/>
 资源 ID 的单选按钮控件与指定的控件属性相关联*pszPropName*。
 
-*成员*<br/>
+*member*<br/>
 与指定的属性页控件关联的成员变量*id*和指定的属性*pszPropName*。
 
 *pszPropName*<br/>
@@ -414,7 +404,7 @@ void AFXAPI DDP_Text(
 *id*<br/>
 与指定的控件属性关联的控件的资源 ID *pszPropName*。
 
-*成员*<br/>
+*member*<br/>
 与指定的属性页控件关联的成员变量*id*和指定的属性*pszPropName*。
 
 *pszPropName*<br/>
