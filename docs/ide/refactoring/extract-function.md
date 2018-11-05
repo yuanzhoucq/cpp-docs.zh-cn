@@ -10,12 +10,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ca75ca3b69fb175bea160d7f2a35d36416ea2f5
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e032c2f1579294431b01d5a7695bf2c8a35aa421
+ms.sourcegitcommit: 072e12d6b7a242765bdcc9afe4a14a284ade01fc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441364"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50136115"
 ---
 # <a name="extract-function"></a>提取函数
 功能：将代码片段转换为独立的函数。
@@ -41,7 +41,7 @@ ms.locfileid: "46441364"
 
 1. 在“提取函数/方法(实验)”窗口中，输入新函数名称，选择要放置代码的位置，然后单击“确定”按钮。
 
-   ![提取函数函数](images/extractfunction_dialog.png)
+   ![提取函数对话框](images/extractfunction_dialog.png)
 
 1. 将在指定的位置创建新函数，在相应的头文件中创建函数原型，并更改原始代码以调用该函数。
 

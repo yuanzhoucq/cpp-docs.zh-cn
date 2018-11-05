@@ -1,7 +1,7 @@
 ---
 title: Visual C++ 中的 CMake 项目 | Microsoft Docs
 ms.custom: ''
-ms.date: 09/26/2018
+ms.date: 10/18/2018
 ms.reviewer: ''
 ms.suite: ''
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76877a0559fd954661fb3e38131796e89c41679f
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 93cfa14e943e277b5255eeb486491c831eba0da3
+ms.sourcegitcommit: 8c2de32e96c84d0147af3cce1e89e4f28707ff12
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235095"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50143726"
 ---
 # <a name="cmake-projects-in-visual-c"></a>Visual C++ 中的 CMake 项目
 
@@ -89,7 +89,7 @@ Visual Studio 2017 版本 15.7 及更高版本：可在“工具”|“选项”
 要生成 CMake 项目，可选择执行以下操作：
 
 1. 在“调试”下拉列表中选择目标，并按 F5 或单击“运行”（绿色三角形）按钮。 项目首先自动生成，就像 Visual Studio 解决方案一样。
-1. 右键单击 CMakeLists.txt，并从上下文菜单中选择“生成”。 如果在文件夹结构中有多个目标，可以选择生成所有目标或仅生成某个特定目标，或者
+1. 右键单击 CMakeLists.txt，并从上下文菜单中选择“生成”。 如果在文件夹结构中有多个目标，可以选择生成所有目标或仅生成某个特定目标。
 1. 从主菜单中选择“生成”|“生成解决方案”（F7 或 Ctrl+Shift+B）。 请确保已在“常规”工具栏的“启动项”下拉列表中选择了 CMake 目标。
 
 ![CMake 生成菜单命令](media/cmake-build-menu.png "CMake 生成命令菜单")
@@ -215,7 +215,7 @@ JSON IntelliSense 可帮助编辑 CMakeSettings.json 文件：
 
 1. **buildRoot**：映射到 -DCMAKE_BINARY_DIR 开关，并指定要创建 CMake 的位置。 如果文件夹不存在，则会创建一个。
 
-1. **variables**：包含将作为 -D_name_=_value_ 传递到 CMake 的 CMake 变量的名称/值对。 如果 CMake 项目生成指令指定将任何变量直接添加到 CMake 缓存文件，那么建议改为在这里添加它们。 下面的示例演示如何指定名称/值对：
+1. **variables**：包含将作为 -D name=value 传递到 CMake 的 CMake 变量的名称/值对。 如果 CMake 项目生成指令指定将任何变量直接添加到 CMake 缓存文件，那么建议改为在这里添加它们。 下面的示例演示如何指定名称/值对：
 
 ```json
 "variables": [
@@ -285,7 +285,7 @@ CMakeSettings.json 现在支持继承环境。 此功能支持：(1) 继承默�
 
 上面的示例与运行带有“-arch=amd64 -host_arch=amd64”参数的“适用于 VS 2017 的开发人员命令提示”一样。
 
-下表显示默认值及其命令行等效项：
+下表显示默认值：
 
 |上下文名称|描述|
 |-----------|-----------------|
