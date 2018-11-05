@@ -12,18 +12,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 186789a94186621d2ec0103cb24dfdc17b0420cc
-ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
+ms.openlocfilehash: 71faf00e5acb980b9ab6f5cafa6a81bb360e7ea2
+ms.sourcegitcommit: 8c2de32e96c84d0147af3cce1e89e4f28707ff12
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49410676"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50143635"
 ---
 # <a name="create-a-new-linux-project"></a>新建 Linux 项目
 
 首先，请确保已安装用于 Visual Studio 的 Linux 开发工作负荷。 有关详细信息，请参阅[下载、安装和设置 Linux 工作负荷](download-install-and-setup-the-linux-development-workload.md)。
 
-在 Visual Studio 中使用 C++ 为 Linux 编码时，可以选择创建 Visual Studio 项目还是 CMake 项目。 本主题介绍如何创建 Visual Studio 项目。 有关 CMake 项目的信息，请参阅[配置 Linux CMake 项目](cmake-linux-project.md)。
+在 Visual Studio for Linux 中创建新的 C++ 项目时，可以选择创建 Visual Studio 项目还是 CMake 项目。 本主题介绍如何创建 Visual Studio 项目。 有关创建和使用现有 CMake 项目的信息，请参阅[配置 Linux CMake 项目](cmake-linux-project.md)。
 
 若要在 Visual Studio 中新建 Linux 项目，请执行以下操作：
 

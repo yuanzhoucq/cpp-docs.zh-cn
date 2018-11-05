@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: a45d216f1d6ddcef704dba40ff97f6ed71f98240
-ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
+ms.openlocfilehash: 8ef0a8d3ecae6371603716ad31530776eed7ee86
+ms.sourcegitcommit: 8c2de32e96c84d0147af3cce1e89e4f28707ff12
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49410637"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50143687"
 ---
 # <a name="download-install-and-setup-the-linux-workload"></a>下载、安装和设置 Linux 工作负载
 
@@ -26,14 +26,14 @@ ms.locfileid: "49410637"
 
 ## <a name="visual-studio-setup"></a>Visual Studio 安装程序
 
-1. 在 Windows 搜索菜单中键入“Visual Studio 安装程序”；在“应用”结果下查找该安装程序并双击它。 打开该安装程序后，选择“修改”，然后单击“工作负荷”选项卡。向下滚动到“其他工具集”，然后选择“使用 C++ 的 Linux 开发”工作负荷。
+1. 在 Windows 搜索框中键入“Visual Studio 安装程序”：![Windows 搜索框](media/visual-studio-installer-search.png)
+2. 在“应用”结果下寻找安装程序并双击它。 打开该安装程序后，选择“修改”，然后单击“工作负荷”选项卡。向下滚动到“其他工具集”，然后选择“使用 C++ 的 Linux 开发”工作负荷。
 
    ![适用于 Linux 开发的 Visual C++ 工作负荷](media/linuxworkload.png)
 
-1. 如果使用 CMake 或目标是 IoT 或嵌入式平台，请转到“使用 C++ 的 Linux 开发”下右侧的“安装详细信息”窗格，展开“可选组件”，然后选择所需的组件。 
+1. 如果使用 CMake 或目标是 IoT 或嵌入式平台，请转到“使用 C++ 的 Linux 开发”下右侧的“安装详细信息”窗格，展开“可选组件”，然后选择所需的组件。
 
 1. 单击“修改”以继续进行安装。
-
 
 ## <a name="options-for-creating-a-linux-environment"></a>用于创建 Linux 环境的选项
 
