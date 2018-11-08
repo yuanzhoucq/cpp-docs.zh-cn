@@ -23,7 +23,7 @@ ms.locfileid: "50545078"
 
 ## <a name="remarks"></a>备注
 
-Visual Studio 和 Microsoft 宏汇编程序都不支持的所有处理器。
+Visual Studio 和 Microsoft 宏汇编程序都不支持所有的处理器。
 
 ## <a name="see-also"></a>请参阅
 
