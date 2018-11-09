@@ -1,16 +1,10 @@
 ---
-title: CRT 中的安全功能 | Microsoft Docs
-ms.custom: ''
+title: CRT 中的安全功能
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
 f1_keywords:
 - _CRT_SECURE_NO_DEPRECATE
 - _CRT_NONSTDC_NO_WARNINGS
 - _CRT_SECURE_NO_WARNINGS
-dev_langs:
-- C++
 helpviewer_keywords:
 - security deprecation warnings [C++]
 - CRT_NONSTDC_NO_DEPRECATE
@@ -30,16 +24,12 @@ helpviewer_keywords:
 - CRT, security enhancements
 - parameters [C++], validation
 ms.assetid: d9568b08-9514-49cd-b3dc-2454ded195a3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 99c449f9f96abbc335c58c6d46d81b55b5156c76
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a6ebbb09bc724fe1d3b2f06a27cb6708acb7566b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46023860"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50538354"
 ---
 # <a name="security-features-in-the-crt"></a>CRT 中的安全功能
 
@@ -66,7 +56,7 @@ strcpy(szBuf, "test"); // warning: deprecated
 
 对于那些不带安全模板重载的已弃用的函数，你应考虑手动更新代码以使用安全版本。
 
-弃用警告的另一个源（与安全性无关）为 POSIX 函数。 将 POSIX 函数名称替换为它们的标准等效项（例如，将 [access](../c-runtime-library/reference/access-crt.md) 更改为 [_access](../c-runtime-library/reference/access-waccess.md)），或通过定义 `_CRT_NONSTDC_NO_WARNINGS` 来禁用与 POSIX 相关的弃用警告。 有关详细信息，请参阅[兼容性](compatibility.md)。
+弃用警告的另一个源（与安全性无关）为 POSIX 函数。 将 POSIX 函数名称替换为它们的标准等效项（例如，将 [access](../c-runtime-library/reference/access-crt.md) 更改为 [_access](../c-runtime-library/reference/access-waccess.md)），或通过定义 `_CRT_NONSTDC_NO_WARNINGS` 来禁用与 POSIX 相关的弃用警告。 有关详细信息，请参阅 [兼容性](compatibility.md)。
 
 ## <a name="additional-security-features"></a>其他安全功能
 

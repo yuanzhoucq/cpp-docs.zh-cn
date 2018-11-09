@@ -1,21 +1,16 @@
 ---
-title: 如何使用 Visual C++ 工具集报告问题 | Microsoft Docs
+title: 如何使用 Visual C++ 工具集报告问题
 ms.date: 06/21/2018
 ms.technology:
 - cpp-ide
-ms.topic: conceptual
-dev_langs:
-- C++
 author: corob-msft
 ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e2ca0f4aa5f3965adc97e4cdaef09e01646e8809
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 34157063e9b19539fd22c24986193987cf41979b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50062114"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50586844"
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset-or-documentation"></a>如何使用 Visual C++ 工具集或文档报告问题
 

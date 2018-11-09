@@ -1,23 +1,13 @@
 ---
-title: 交互式设备 | Microsoft Docs
-ms.custom: ''
+title: 交互式设备
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 ms.assetid: a15ac95d-faf8-4fcf-80ab-0e346d1a5b5a
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5e68d64b32550dff1985870c827923cbccb39f7e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: ffd5baa4e64e31aca15e87405b695354b48b6783
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46027773"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50597127"
 ---
 # <a name="interactive-devices"></a>交互式设备
 

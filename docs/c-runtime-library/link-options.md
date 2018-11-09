@@ -1,12 +1,6 @@
 ---
-title: 链接选项 |Microsoft 文档
-ms.custom: ''
+title: 链接选项
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - nothrownew.obj
 - newmode.obj
@@ -35,16 +29,12 @@ helpviewer_keywords:
 - threadlocale.obj
 - pnoarg.obj
 ms.assetid: 05b5a77b-9dd1-494b-ae46-314598c770bb
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 91b97c653a5f035a767fbedcfcbfdfa7ca178327
-ms.sourcegitcommit: 038f1406b1172318f8832371ad14176f788c44fa
+ms.openlocfilehash: 8cd5513acd2617e784b2ec9fa203614b752e6076
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50132148"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50661820"
 ---
 # <a name="link-options"></a>链接选项
 

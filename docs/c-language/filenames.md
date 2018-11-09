@@ -1,23 +1,13 @@
 ---
-title: 文件名 | Microsoft Docs
-ms.custom: ''
+title: 文件名
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 ms.assetid: f08d2b81-4bfc-49bc-986c-bfb2face8138
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 48b9491db4e535966de946fb0285bbd72782dea4
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 903347791b2c156402b60dffc7bd42bcb3fbfbdd
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46051955"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50655962"
 ---
 # <a name="filenames"></a>文件名
 

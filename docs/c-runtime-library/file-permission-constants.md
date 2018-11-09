@@ -1,15 +1,9 @@
 ---
-title: 文件权限常量 | Microsoft Docs
-ms.custom: ''
+title: 文件权限常量
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
 f1_keywords:
 - _S_IWRITE
 - _S_IREAD
-dev_langs:
-- C++
 helpviewer_keywords:
 - S_IWRITE constant
 - constants [C++], file attributes
@@ -18,16 +12,12 @@ helpviewer_keywords:
 - _S_IWRITE constant
 - _S_IREAD constant
 ms.assetid: 593cad33-31d1-44d2-8941-8af7d210c88c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6ae2e7d669edda1ab3069cf3cdb30b79482047e5
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 7b9d99f8b0fc7daf8f7dc58db999c7f885a3dc8d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46026631"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50648599"
 ---
 # <a name="file-permission-constants"></a>文件权限常量
 

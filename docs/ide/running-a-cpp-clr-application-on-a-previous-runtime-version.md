@@ -1,12 +1,6 @@
 ---
-title: 在以前版本的运行时上运行 C++ -clr 应用程序 | Microsoft Docs
-ms.custom: ''
+title: 在以前版本的运行时上运行 C++ -clr 应用程序
 ms.date: 11/04/2016
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - applications [C++], runtime version specified
 - versions [C++]
@@ -17,16 +11,12 @@ helpviewer_keywords:
 - common language runtime [C++], version specified
 - deploying applications [C++], runtime version specified
 ms.assetid: 940171b7-6937-4b14-8e87-c199e23f4f2e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ee823d7b37428ea335d5d789a4fcfb4caa673dda
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: effcda9de1cb1005855f5752060dc61e28dcebf4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46378043"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50581514"
 ---
 # <a name="running-a-c-clr-application-on-a-previous-runtime-version"></a>在以前版本的运行时上运行 C++ /clr 应用程序
 
