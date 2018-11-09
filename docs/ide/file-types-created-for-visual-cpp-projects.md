@@ -1,12 +1,6 @@
 ---
-title: 为 Visual C++ 项目创建的文件类型 | Microsoft Docs
-ms.custom: ''
+title: 为 Visual C++ 项目创建的文件类型
 ms.date: 11/04/2016
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - header files [C++], Visual C++ projects
 - ActiveX controls [C++], Help files
@@ -20,16 +14,12 @@ helpviewer_keywords:
 - .def files
 - licensing ActiveX controls
 ms.assetid: 2b0ee2e0-ae81-4185-9bb9-11da3c99a283
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: dba47b8464c7fcdd170df1819b65aa448d8f8aeb
-ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
+ms.openlocfilehash: 78ba4afd8a7fad87f09c2a403d25d3c6d52cc0c6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49808416"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50573467"
 ---
 # <a name="file-types-created-for-visual-c-projects"></a>为 Visual C++ 项目创建的文件类型
 
@@ -57,7 +47,7 @@ ms.locfileid: "49808416"
 
 下表显示 Visual C++ 项目中的常见文件，并使用其文件扩展名标识它们。
 
-|文件扩展名|类型|目录|
+|文件扩展名|类型|内容|
 |--------------------|----------|--------------|
 |.asmx|源|部署文件。|
 |.asp|源|Active Server Page 文件。|

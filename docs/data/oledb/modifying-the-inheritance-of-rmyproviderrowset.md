@@ -6,18 +6,18 @@ helpviewer_keywords:
 - inheritance [C++]
 - RCustomRowset
 ms.assetid: 33089c90-98a4-43e7-8e67-d4bb137e267e
-ms.openlocfilehash: 51cca65b6b55de8b628cb5d233ab06f0101f466d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 34eb07611ebfff09918d62273d4ca4a8c9cf4f7b
+ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50637952"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51265147"
 ---
 # <a name="modifying-the-inheritance-of-rcustomrowset"></a>修改的 RCustomRowset
 
-若要添加`IRowsetLocate`接口与简单的只读提供程序的示例中，修改的继承`RCustomRowset`。 最初，`RCustomRowset`继承`CRowsetImpl`。 您需要修改它以继承`CRowsetBaseImpl`。
+若要添加`IRowsetLocate`接口与简单的只读提供程序的示例中，修改的继承`CCustomRowset`。 最初，`CCustomRowset`继承`CRowsetImpl`。 您需要修改它以继承`CRowsetBaseImpl`。
 
-若要执行此操作，创建一个新类， `CCustomRowsetImpl`，CustomRS.h 中：
+若要执行此操作，创建一个新类`CCustomRowsetImpl`，请在*自定义*RS.h:
 
 ```cpp
 ////////////////////////////////////////////////////////////////////////
@@ -42,13 +42,13 @@ END_COM_MAP()
 
 此代码将创建一个 COM 接口映射，以告知`CMyRowsetImpl`来调用`QueryInterface`同时`IRowset`和`IRowsetLocate`接口。 若要获取所有其他行集的实现类，映射链接`CMyRowsetImpl`类返回到`CRowsetBaseImpl`类定义由 OLE DB 模板; 该映射使用 COM_INTERFACE_ENTRY_CHAIN 宏，它指示要扫描的 COM 映射中的 OLE DB 模板`CRowsetBaseImpl`响应`QueryInterface`调用。
 
-最后，链接`RAgentRowset`到`CMyRowsetBaseImpl`通过修改`RAgentRowset`继承`CMyRowsetImpl`，按如下所示：
+最后，链接`CCustomRowset`到`CMyRowsetBaseImpl`通过修改`CCustomRowset`继承`CMyRowsetImpl`，按如下所示：
 
 ```cpp
-class RAgentRowset : public CMyRowsetImpl<RAgentRowset, CAgentMan, CCustomCommand>
+class CCustomRowset : public CMyRowsetImpl<CCustomRowset, CCustomWindowsFile, CCustomCommand>
 ```
 
-`RAgentRowset` 现在，可以使用`IRowsetLocate`接口，同时利用行集类的实现的其余部分。
+`CCustomRowset` 现在，可以使用`IRowsetLocate`接口，同时利用行集类的实现的其余部分。
 
 完成此操作后，你可以[动态确定返回给使用者的列](../../data/oledb/dynamically-determining-columns-returned-to-the-consumer.md)。
 

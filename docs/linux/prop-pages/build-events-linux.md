@@ -1,23 +1,13 @@
 ---
-title: 远程生成事件 (Linux c + +) | Microsoft Docs
-ms.custom: ''
+title: 远程生成事件 (Linux c + +)
 ms.date: 9/26/2017
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: Linux
-ms.topic: conceptual
 ms.assetid: 165d3690-5bd8-4b0b-bc66-8b699d85a61b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- linux
-ms.openlocfilehash: 2ea01c5d92cbdb6066dc87675221eae6865af354
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 87647948b641fff7370003a59775a5680c176fb3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50070970"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50653864"
 ---
 # <a name="build-event-properties-linux-c"></a>生成事件属性 (Linux C++)
 
