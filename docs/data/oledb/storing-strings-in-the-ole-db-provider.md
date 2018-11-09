@@ -4,47 +4,53 @@ ms.date: 10/26/2018
 helpviewer_keywords:
 - user records, editing
 ms.assetid: 36cb9635-067c-4cad-8f85-962f28026f6a
-ms.openlocfilehash: b1bc7ca74ce114f9d901fc5771a376df973f54a8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 54dfdb347c621cf6f8645feb6d13742f32503f9f
+ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50652330"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51264614"
 ---
 # <a name="storing-strings-in-the-ole-db-provider"></a>将字符串存储在 OLE DB 提供程序中
 
-MyProviderRS.h 中, **ATL OLE DB 提供程序向导**创建名为的默认用户记录`CWindowsFile`。 若要处理两个字符串，请修改`CWindowsFile`或添加您自己的用户记录，如下面的代码中所示：
+在中*自定义*RS.h， **ATL OLE DB 提供程序向导**创建默认的用户记录调用`CWindowsFile`。 若要处理两个字符串，修改`CWindowsFile`如下面的代码中所示：
 
 ```cpp
 ////////////////////////////////////////////////////////////////////////
-class CAgentMan: 
+class CCustomWindowsFile:
    public WIN32_FIND_DATA
-   DWORD dwBookmark;              // Add this
-   TCHAR szCommand[256];          // Add this
-   TCHAR szText[256];             // Add this
-   TCHAR szCommand2[256];         // Add this
-   TCHAR szText2[256];            // Add this
-  
 {
 public:
-BEGIN_PROVIDER_COLUMN_MAP()
-   PROVIDER_COLUMN_ENTRY_STR(OLESTR("Command"), 1, 256, GUID_NULL, CAgentMan, szCommand)
-   PROVIDER_COLUMN_ENTRY_STR(OLESTR("Text"), 2, 256, GUID_NULL, CAgentMan, szText) 
-   PROVIDER_COLUMN_ENTRY_STR(OLESTR("Command2"), 3, 256, GUID_NULL, CAgentMan, szCommand2)
-   PROVIDER_COLUMN_ENTRY_STR(OLESTR("Text2"),4, 256, GUID_NULL, CAgentMan, szText2)
+DWORD dwBookmark;
+static const int iSize = 256;    // Add this
+TCHAR szCommand[iSize];          // Add this
+TCHAR szText[iSize];             // Add this
+TCHAR szCommand2[iSize];         // Add this
+TCHAR szText2[iSize];            // Add this
+
+BEGIN_PROVIDER_COLUMN_MAP(CCustomWindowsFile)
+   PROVIDER_COLUMN_ENTRY("FileAttributes", 1, dwFileAttributes)
+   PROVIDER_COLUMN_ENTRY("FileSizeHigh", 2, nFileSizeHigh)
+   PROVIDER_COLUMN_ENTRY("FileSizeLow", 3, nFileSizeLow)
+   PROVIDER_COLUMN_ENTRY_STR("FileName", 4, cFileName)
+   PROVIDER_COLUMN_ENTRY_STR("AltFileName", 5, cAlternateFileName)
+
+   PROVIDER_COLUMN_ENTRY_STR("Command", 6, szCommand)    // Add this
+   PROVIDER_COLUMN_ENTRY_STR("Text", 7, szText)          // Add this
+   PROVIDER_COLUMN_ENTRY_STR("Command2", 8, szCommand2)  // Add this
+   PROVIDER_COLUMN_ENTRY_STR("Text2", 9, szText2)        // Add this
 END_PROVIDER_COLUMN_MAP()
-   bool operator==(const CAgentMan& am) // This is optional 
+
+   bool operator==(const CCustomWindowsFile& am) // This is optional
    {
-      return (lstrcmpi(cFileName, wf.cFileName) == 0);
+      return (lstrcmpi(cFileName, am.cFileName) == 0);
    }
 };
 ```
 
 数据成员`szCommand`并`szText`表示两个字符串，并将`szCommand2`和`szText2`具有必要的其他列。 数据成员`dwBookmark`的此简单的只读提供程序不需要但更高版本用于添加`IRowsetLocate`接口; 请参阅[增强简单读取仅提供程序](../../data/oledb/enhancing-the-simple-read-only-provider.md)。 `==`实例进行比较的运算符 （实现此运算符是可选的）。
 
-完成此操作后，您的提供程序应可以随时编译和运行。 若要测试的提供程序，需要具有匹配功能的使用者。 [实现简单使用者](../../data/oledb/implementing-a-simple-consumer.md)演示如何创建此类测试使用者。 使用提供程序运行测试使用者。 验证测试使用者从提供程序检索到正确的字符串时，单击**运行**按钮**测试使用者**对话框。
-
-当你已成功在测试您的提供程序时，你可能想要通过实现附加接口增强其功能。 一个示例所示[增强简单的只读提供程序](../../data/oledb/enhancing-the-simple-read-only-provider.md)。
+完成此操作后，您可以添加的功能[将字符串读入 OLE DB 访问接口](../../data/oledb/reading-strings-into-the-ole-db-provider.md)。
 
 ## <a name="see-also"></a>请参阅
 
