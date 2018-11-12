@@ -1,21 +1,13 @@
 ---
-title: 重命名 | Microsoft Docs
-ms.custom: ''
+title: 重命名
 ms.date: 11/16/2016
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
 ms.assetid: 64b42a88-3bd9-4399-8b96-75bceffc353b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7a00eed341e0fc1ca8573e2f66744ea04055f259
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b677d825675ebb0b60da8f43f778774e2e08695e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46399194"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50455505"
 ---
 # <a name="rename"></a>重命名
 功能：重命名代码符号的标识符，例如字段、本地变量、方法、命名空间、属性和类型。

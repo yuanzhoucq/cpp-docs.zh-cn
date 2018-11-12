@@ -1,25 +1,19 @@
 ---
-title: Visual Studio 中的 Visual C++ | Microsoft Docs
+title: Visual Studio 中的 Visual C++
 description: Visual C++ 是 Microsoft C++ 编译器、代码编辑器和 Visual Studio IDE 中相关工具的名称。 使用 Visual C++ 开发面向 Windows、Linux、Android 和 iOS 的程序。
-ms.custom: ''
 ms.date: 09/26/2018
 ms.technology:
 - cpp-ide
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Visual C++, home page
 author: mikeblome
 ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8cb811ccd3291caa9b3da095310c74416fbd5799
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: fbabb949fa0dae03cabfb6db1c98c2ebc1f1af12
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50067938"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50668333"
 ---
 # <a name="visual-c-in-visual-studio"></a>Visual Studio 中的 Visual C++
 

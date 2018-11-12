@@ -1,25 +1,15 @@
 ---
-title: 根据现有代码发布配置新建项目 | Microsoft Docs
-ms.custom: ''
+title: 根据现有代码发布配置新建项目
 ms.date: 11/04/2016
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
 f1_keywords:
 - vc.appwiz.importwiz.releasesettings
-dev_langs:
-- C++
 ms.assetid: 3e2fc73c-bdbd-4790-b2bd-d31731f0cece
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 414d50ad15ad9eb85760aac470421df39e250ad0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 10dec5e36531c9c0bf549b37bbfa892a624d0bf0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46390807"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50511809"
 ---
 # <a name="specify-release-configuration-settings-create-new-project-from-existing-code-files-wizard"></a>“从现有代码文件创建新项目”向导 ->“指定发布配置设置”
 

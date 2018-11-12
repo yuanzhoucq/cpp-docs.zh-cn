@@ -1,8 +1,6 @@
 ---
-title: _execute_onexit_table、_initialize_onexit_table、_register_onexit_function |Microsoft 文档
-ms.custom: ''
+title: _execute_onexit_table、_initialize_onexit_table、_register_onexit_function
 ms.date: 11/04/2016
-ms.topic: conceptual
 apiname:
 - _execute_onexit_table
 - _initialize_onexit_table
@@ -17,23 +15,17 @@ f1_keywords:
 - process/_initialize_onexit_table
 - _register_onexit_function
 - process/_register_onexit_function
-dev_langs:
-- C++
 helpviewer_keywords:
 - _execute_onexit_table function
 - _initialize_onexit_table function
 - _register_onexit_function function
 ms.assetid: ad9e4149-d4ad-4fdf-aaaf-cf786fcb4473
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e9a6ea61883e6ce94bc41f16e7139156c68c8059
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 1c9b0872f2a472b7fbb5bd83c9b0a0d9f21a6ab6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46082087"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50536697"
 ---
 # <a name="executeonexittable-initializeonexittable-registeronexitfunction"></a>_execute_onexit_table、_initialize_onexit_table、_register_onexit_function
 
@@ -84,7 +76,7 @@ int _execute_onexit_table(
 |-------------|---------------------|
 |`_initialize_onexit_table function`, `_register_onexit_function`, `_execute_onexit_table`|C, C++: \<process.h>|
 
-`_initialize_onexit_table`、`_register_onexit_function` 和 `_execute_onexit_table` 函数是 Microsoft 特定函数。 有关兼容性信息，请参阅[兼容性](../c-runtime-library/compatibility.md)。
+`_initialize_onexit_table`、`_register_onexit_function` 和 `_execute_onexit_table` 函数是 Microsoft 特定函数。 有关兼容性信息，请参阅 [兼容性](../c-runtime-library/compatibility.md)。
 
 ## <a name="see-also"></a>请参阅
 

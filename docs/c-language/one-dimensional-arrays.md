@@ -1,12 +1,6 @@
 ---
-title: 一维数组 | Microsoft Docs
-ms.custom: ''
+title: 一维数组
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - brackets [ ]
 - brackets [ ], arrays
@@ -16,16 +10,12 @@ helpviewer_keywords:
 - square brackets [ ], arrays
 - subscript expressions
 ms.assetid: e28536e5-3b77-46b5-97fd-9b938c771816
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cde6bfbdf7ec72a9c1db6a7cb77613163400d737
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 2e1d168cd3b6f3a5ca29cf9e6d981430d5bf671a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46087885"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50506257"
 ---
 # <a name="one-dimensional-arrays"></a>一维数组
 
