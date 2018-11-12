@@ -1,4 +1,4 @@
----
+﻿---
 title: 编译器警告 （等级 3） C4996
 ms.date: 11/17/2017
 f1_keywords:
@@ -81,7 +81,7 @@ Microsoft 已弃用某些 CRT 和 c + + 标准库函数和全局变量以支持�
 
 若要解决此问题，我们建议你使用的函数或变量*safe_version*相反。 如果已验证不能为缓冲区覆盖或 overread 出现在你的代码，并且您不能更改的代码可移植性原因，您可以关闭该警告。
 
-若要关闭 CRT 中的这些函数的弃用警告，定义 **\_CRT\_SECURE\_NO\_WARNINGS**。 若要关闭有关弃用的全局变量的警告，请定义 **\_CRT\_SECURE\_否\_警告\_GLOBALS**。 有关这些不推荐使用的函数和全局变量的详细信息，请参阅[CRT 中的安全功能](../../c-runtime-library/security-features-in-the-crt.md)并[安全库： c + + 标准库](../../standard-library/safe-libraries-cpp-standard-library.md)。
+若要关闭 CRT 中的这些函数的弃用警告，定义 **\_CRT\_SECURE\_NO\_WARNINGS**。 若要关闭有关弃用的全局变量的警告，请定义 **\_CRT\_SECURE\_NO\_WARNINGS\_GLOBALS**。 有关这些不推荐使用的函数和全局变量的详细信息，请参阅[CRT 中的安全功能](../../c-runtime-library/security-features-in-the-crt.md)并[安全库： c + + 标准库](../../standard-library/safe-libraries-cpp-standard-library.md)。
 
 ### <a name="unsafe-standard-library-functions"></a>不安全的标准库函数
 
