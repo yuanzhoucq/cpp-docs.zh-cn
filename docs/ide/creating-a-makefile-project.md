@@ -1,38 +1,28 @@
 ---
-title: 创建 C++ 生成文件项目 | Microsoft Docs
-ms.custom: ''
-ms.date: 09/12/2018
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
+title: 创建 C++ 生成文件项目
+ms.date: 10/19/2018
 f1_keywords:
 - vc.appwiz.makefile.project
-dev_langs:
-- C++
 helpviewer_keywords:
 - Makefile projects, creating
 - project files [C++], Makefile projects
 ms.assetid: dd077af3-97a8-48fb-baaa-cf7e07ddef61
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a3360d2ed86d220bc59d6f09f582c71b48f7d78c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0c64f6df342e82e3ea5409e2b07af1e591747d7c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46399478"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50494843"
 ---
 # <a name="creating-a-c-makefile-project"></a>创建 C++ 生成文件项目
 
-生成文件是一种说明如何编译和链接（或生成）一组 C++ 源代码文件的文本文件。 生成程序会读取生成文件并调用编译器、链接器和其他程序来生成可执行文件。 Microsoft 实现生成程序的过程被称为 NMAKE。 （Visual Studio 在默认情况下使用基于 .vcsproj 文件的 MSBuild 系统；这是通过“文件 | 新建 | 项目”创建的。）
+生成文件是一种说明如何编译和链接（或生成）一组 C++ 源代码文件的文本文件。 生成程序会读取生成文件并调用编译器、链接器和其他程序来生成可执行文件。 Microsoft 实现生成程序的过程被称为 NMAKE。 （Visual Studio 在默认情况下使用基于 .vcxproj 文件的 MSBuild 系统；这是通过“文件 | 新建 | 项目”创建的。）
 
 如果你有现有生成文件项目，则当你想要在 Visual Studio IDE 中编码和/或对其进行调试时，你有以下选择：
 
 - 在 Visual Studio 中创建这样的生成文件项目：它使用现有生成文件在 IDE 中生成代码。 （你将不会具有在本机 MSBuild 项目中获得的所有 IDE 功能。）请参阅下面的[创建生成文件项目](#create_a_makefile_project)。
 - 使用“从现有代码文件新建项目”向导来从源代码创建本机 MSBuild 项目。 有关详细信息，请参阅[如何：通过现有代码创建 C++ 项目](how-to-create-a-cpp-project-from-existing-code.md)。
-- Visual Studio 2017 和更高版本：使用打开文件夹功能打开生成文件。 有关详细信息，请参阅 [Visual C++ 中的“打开文件夹”项目](non-msbuild-projects.md)。
+- Visual Studio 2017 和更高版本：使用“打开文件夹”功能打开生成文件项目，但不将其转换为 MSBuild。 有关详细信息，请参阅 [Visual C++ 中的“打开文件夹”项目](non-msbuild-projects.md)。
 
 ## <a name="a-namecreateamakefileproject-to-create-a-makefile-project-with-the-makefile-project-template"></a><a name="create_a_makefile_project"> 使用生成文件项目模板创建生成文件项目
 

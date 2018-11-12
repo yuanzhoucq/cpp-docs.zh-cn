@@ -1,21 +1,13 @@
 ---
-title: 提取函数 | Microsoft Docs
-ms.custom: ''
+title: 提取函数
 ms.date: 11/16/2016
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
 ms.assetid: e31d1249-9705-4511-acbd-9f6fe73bdf2d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8ca75ca3b69fb175bea160d7f2a35d36416ea2f5
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 41a488b067bce750224f3785e311f91d43dc31ca
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441364"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50571023"
 ---
 # <a name="extract-function"></a>提取函数
 功能：将代码片段转换为独立的函数。
@@ -41,7 +33,7 @@ ms.locfileid: "46441364"
 
 1. 在“提取函数/方法(实验)”窗口中，输入新函数名称，选择要放置代码的位置，然后单击“确定”按钮。
 
-   ![提取函数函数](images/extractfunction_dialog.png)
+   ![提取函数对话框](images/extractfunction_dialog.png)
 
 1. 将在指定的位置创建新函数，在相应的头文件中创建函数原型，并更改原始代码以调用该函数。
 

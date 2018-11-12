@@ -1,24 +1,13 @@
 ---
-title: Visual C++ 新增功能（2003 - 2015）| Microsoft Docs
-ms.custom: ''
+title: Visual C++ 新增功能（2003 - 2015）
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: c4afde6f-3d75-40bf-986f-be57e3818e26
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 51921f8e55b9d4ce4e1875f5216984fe3257ca97
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 7066b5bd8ea0fcd7cc7cda34ca05588199cbaef5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49084108"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50499614"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Visual C++ 新增功能（2003 - 2015）
 
@@ -128,7 +117,7 @@ ms.locfileid: "49084108"
 
     struct S2
     {
-        template <class C, void (C::*Function)(int) const> void f() {}        
+        template <class C, void (C::*Function)(int) const> void f() {}
     };
 
     void f()
@@ -271,7 +260,7 @@ ms.locfileid: "49084108"
    例如，假设你的代码同时定义了 placement new 和 placement delete：
 
    ```cpp
-    void * operator new(std::size_t, std::size_t);
+    void * operator new(std::size_t, std::size_t);
     void operator delete(void*, std::size_t) noexcept;
    ```
 
@@ -318,14 +307,14 @@ ms.locfileid: "49084108"
 
    ```cpp
     struct S {
-      S();
-     };
+      S();
+     };
 
-     union {
-      struct {
-       S s;
-      };
-     } u; // C2280
+     union {
+      struct {
+       S s;
+      };
+     } u; // C2280
    ```
 
    前述代码在 Visual Studio 2015 中生成以下错误：
@@ -525,7 +514,7 @@ ms.locfileid: "49084108"
 
 - **私有虚拟基类和间接继承**
 
-   早期版本的编译器允许派生类调用 *间接派生*`private virtual` 基类的成员函数。 这种旧行为不正确，也不符合 C++ 标准。 编译器不再接受这种方式编写的代码，因此会发出编译器错误 C2280。
+   早期版本的编译器允许派生类调用间接派生 `private virtual` 基类的成员函数。 这种旧行为不正确，也不符合 C++ 标准。 编译器不再接受这种方式编写的代码，因此会发出编译器错误 C2280。
 
    ```Output
     error C2280: 'void *S3::__delDtor(unsigned int)': attempting to reference a deleted function
@@ -834,7 +823,7 @@ ms.locfileid: "49084108"
 
 - #include：在路径名中使用父目录说明符“..”（只影响 `/Wall` `/WX`）
 
-     早期版本的编译器没有检测到使用父目录说明符“..” （在  `#include` 指令的路径名中）。 以这种方式编写的代码通常用于包含因不正确使用项目相对路径而留在项目外的标头。 这一旧行为会引发风险，导致编译程序时包含了程序员不需要的源文件来，或这些相对路径不能移植到其他生成环境中。 编译器现在会检测以这种方式编写的代码并通知程序员，并发出可选编译器警告 C4464（如果已启用）。
+   早期版本的编译器没有检测到使用父目录说明符“..” （在  `#include` 指令的路径名中）。 以这种方式编写的代码通常用于包含因不正确使用项目相对路径而留在项目外的标头。 这一旧行为会引发风险，导致编译程序时包含了程序员不需要的源文件来，或这些相对路径不能移植到其他生成环境中。 编译器现在会检测以这种方式编写的代码并通知程序员，并发出可选编译器警告 C4464（如果已启用）。
 
    ```Output
     warning C4464: relative include path contains '..'
@@ -1465,7 +1454,7 @@ ms.locfileid: "49084108"
 
    示例（之前）：
 
-     X.cpp (-Ycc.h)
+   X.cpp (-Ycc.h)
 
    ```cpp
     #include "a.h"
@@ -1473,7 +1462,7 @@ ms.locfileid: "49084108"
     #include "c.h"
    ```
 
-     Z.cpp (-Yuc.h)
+   Z.cpp (-Yuc.h)
 
    ```cpp
     #include "b.h"
@@ -1483,7 +1472,7 @@ ms.locfileid: "49084108"
 
    示例（之后）
 
-     X.cpp (-Ycc.h)
+   X.cpp (-Ycc.h)
 
    ```cpp
     #include "a.h"
@@ -1491,7 +1480,7 @@ ms.locfileid: "49084108"
     #include "c.h"
    ```
 
-     Z.cpp (-Yuc.h)
+   Z.cpp (-Yuc.h)
 
    ```cpp
     #include "a.h"
@@ -1774,7 +1763,7 @@ Visual Studio 2012 的大部分版本都包含代码分析。 Professional 版�
 
 #### <a name="architecture-dependency-graphs"></a>体系结构依赖项关系图
 
-为了更好地理解代码，可以对二进制、类、命名空间和解决方案中的包含文件生成依赖项关系图。 在菜单栏上，选择“体系结构” > “生成依赖项关系图”，然后选择“针对解决方案”或“针对包含文件”，生成依赖项关系图。 生成关系图后，可展开各个节点进行浏览，可在节点间移动来了解依赖关系，也可在节点的快捷菜单上选择“查看内容”来浏览源代码。 要对包含文件生成依赖项关系图，请在 *.cpp 源代码文件或 *.h 头文件的快捷菜单上选择“生成包含文件的关系图”。
+为了更好地理解代码，可以对二进制、类、命名空间和解决方案中的包含文件生成依赖项关系图。 在菜单栏上，选择“体系结构” > “生成依赖项关系图”，然后选择“针对解决方案”或“针对包含文件”，生成依赖项关系图。 生成关系图后，可展开各个节点进行浏览，可在节点间移动来了解依赖关系，也可在节点的快捷菜单上选择“查看内容”来浏览源代码。 要对包含文件生成依赖项关系图，请在 \*.cpp 源代码文件或 \*.h 头文件的快捷菜单上选择“生成包含文件的关系图”。
 
 #### <a name="architecture-explorer"></a>体系结构资源管理器
 
@@ -2100,7 +2089,7 @@ __sptr、__uptr
 - 添加了 `/CLRIMAGETYPE`（指定 CLR 映像的类型）链接器选项。
 - 添加了 `/CLRSUPPORTLASTERROR`（为 PInvoke 调用保留上次的错误代码）链接器选项。
 - 添加了 `/CLRTHREADATTRIBUTE`（设置 CLR 线程属性）链接器选项。
-- 添加了 `/CLRUNMANAGEDCODECHECK`（添加 SupressUnmanagedCodeSecurityAttribute）链接器选项。
+- 添加了 `/CLRUNMANAGEDCODECHECK`（添加 SuppressUnmanagedCodeSecurityAttribute）链接器选项。
 - 添加了 `/ERRORREPORT`（报告内部链接器错误）链接器选项。
 - 删除了 `/EXETYPE` 链接器选项。 链接器不再支持创建 Windows 95 和 Windows 98 设备驱动程序。 使用适当的 DDK 来创建这些设备驱动程序。 EXETYPE 关键字不再对模块定义文件有效。
 - 添加了 `/FUNCTIONPADMIN`（创建可热修补的映像）链接器选项。

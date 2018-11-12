@@ -1,12 +1,6 @@
 ---
-title: 演练：部署程序 (C++) | Microsoft Docs
-ms.custom: ''
+title: 演练：部署程序 (C++)
 ms.date: 09/14/2018
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - deploying applications [C++], walkthroughs
 - setup projects [C++]
@@ -15,16 +9,12 @@ helpviewer_keywords:
 - projects [C++], deploying programs
 - application deployment [C++], walkthroughs
 ms.assetid: 79e6cc4e-dced-419d-aaf7-d62d1367603f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d795ea8678c04d5525e726017a2fa3a0760f3a87
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 43e6b9320fb52fc17f65b27b06e2c6f4d4851528
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235902"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50496425"
 ---
 # <a name="walkthrough-deploying-your-program-c"></a>演练：部署程序 (C++)
 

@@ -1,12 +1,6 @@
 ---
-title: 链接选项 |Microsoft 文档
-ms.custom: ''
+title: 链接选项
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - nothrownew.obj
 - newmode.obj
@@ -35,16 +29,12 @@ helpviewer_keywords:
 - threadlocale.obj
 - pnoarg.obj
 ms.assetid: 05b5a77b-9dd1-494b-ae46-314598c770bb
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 98965b94c83b69e15c38319d7bc5a6e4151b323e
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 8cd5513acd2617e784b2ec9fa203614b752e6076
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704881"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50661820"
 ---
 # <a name="link-options"></a>链接选项
 
@@ -57,6 +47,7 @@ CRT lib 目录中包括大量无需更改任何代码就能启用特定的 CRT �
 |binmode.obj|pbinmode.obj|为二进制设置默认文件转换模式。 请参阅 [_fmode](../c-runtime-library/fmode.md)。|
 |chkstk.obj|n/a|在未使用 CRT 时提供堆栈检查和分配支持。|
 |commode.obj|pcommode.obj|设置用于“提交”的全局提交标志。 请参阅 [fopen、_wfopen](../c-runtime-library/reference/fopen-wfopen.md) 和 [fopen_s、_wfopen_s](../c-runtime-library/reference/fopen-s-wfopen-s.md)。|
+|exe_initialize_mta.lib|n/a|在 EXE 启动期间初始化 MTA 单元，以便在全局智能指针中使用 COM 对象。 因为此选项在关闭期间会泄漏 MTA 单元引用，所以请不要将其用于 DLL。 链接到此选项等效于包括 combase.h 和定义 _EXE_INITIALIZE_MTA。 |
 |fp10.obj|n/a|将默认精度控制更改为 64 位。 请参阅[浮点支持](../c-runtime-library/floating-point-support.md)。|
 |invalidcontinue.obj|pinvalidcontinue.obj|设置不执行任何操作的默认无效参数处理程序，这意味着传递到 CRT 函数的无效参数将只会设置 errno 并返回一个错误结果。|
 |loosefpmath.obj|n/a|确保浮点代码容忍不正常的值。|

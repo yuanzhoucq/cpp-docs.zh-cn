@@ -1,25 +1,15 @@
 ---
-title: Visual C++ 更改历史记录（2003 - 2015）| Microsoft Docs
-ms.custom: ''
+title: Visual C++ 更改历史记录（2003 - 2015）
 ms.date: 08/30/2017
-ms.technology:
-- cpp-language
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - breaking changes [C++]
 ms.assetid: b38385a9-a483-4de9-99a6-797488bc5110
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bcf3ce1f0ddc5003886c367cfe5db8968a911ee9
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 1025b3469611ee1e880a2abd5a4e553a1317a0d4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083978"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50570711"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Visual C++ 更改历史记录（2003 - 2015）
 
@@ -37,7 +27,6 @@ ms.locfileid: "49083978"
 我们进一步建议，你在编写代码时永远不依赖除 COM 接口或 POD 对象以外的特定对象布局。 如果确实要编写此类代码，则必须在升级后确保其正常运行。 有关详细信息，请参阅 [ABI 边界处的可移植性](../cpp/portability-at-abi-boundaries-modern-cpp.md)。
 
 此外，对编译器符合性的不断改进有时会改变编译器理解现有源代码的方式。 发生这种情况时，可能会在生成过程中遇到新的或不同的错误，甚至以前生成且似乎运行正常的代码也可能出现行为差异。 虽然这些不是本文档中所讨论的中断性变更，但可能需要更改源代码来解决这些问题：
-
 
 - [C 运行时 (CRT) 库的重大更改](#BK_CRT)
 
@@ -183,7 +172,7 @@ ms.locfileid: "49083978"
     ```
 
     ```Output
-        Old:  1208925819614629200000000    New:  1208925819614629174706176
+        Old:  1208925819614629200000000    New:  1208925819614629174706176
     ```
 
    旧版本分析算法考虑的输入字符串中有效位数仅达 17，并将丢弃其余数位。 这不足以生成由字符串表示的近似值，结果通常是非常接近正确舍入的结果。 新版本的实现会考虑所有存在的数字，并生成所有输入（长度多达 768 位）的正确舍入的结果。 此外，这些函数现在遵循舍入模式（可通过 fesetround 控制）。  这可能是重大的行为更改，因为这些函数可能会输出不同的结果。 新版本的结果始终比旧版本的结果更准确。
@@ -652,7 +641,7 @@ ms.locfileid: "49083978"
    例如，假设你的代码同时定义了 placement new 和 placement delete：
 
     ```cpp
-    void * operator new(std::size_t, std::size_t);
+    void * operator new(std::size_t, std::size_t);
     void operator delete(void*, std::size_t) noexcept;
     ```
 
@@ -1705,7 +1694,7 @@ ms.locfileid: "49083978"
 
 - **私有虚拟基类和间接继承**
 
-   早期版本的编译器允许派生类调用 *间接派生*`private virtual` 基类的成员函数。 这种旧行为不正确，也不符合 C++ 标准。 编译器不再接受这种方式编写的代码，因此会发出编译器错误 C2280。
+   早期版本的编译器允许派生类调用间接派生 `private virtual` 基类的成员函数。 这种旧行为不正确，也不符合 C++ 标准。 编译器不再接受这种方式编写的代码，因此会发出编译器错误 C2280。
 
     ```Output
     error C2280: 'void *S3::__delDtor(unsigned int)': attempting to reference a deleted function
@@ -1743,7 +1732,7 @@ ms.locfileid: "49083978"
     }
     ```
 
-   - 或 -
+   \- 或 -
 
     ```cpp
     class base;  // as above

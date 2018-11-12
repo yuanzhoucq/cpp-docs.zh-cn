@@ -1,10 +1,6 @@
 ---
-title: _stat 结构 st_mode 字段常量 | Microsoft Docs
-ms.custom: ''
+title: _stat 结构 st_mode 字段常量
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
 f1_keywords:
 - S_IFCHR
 - S_IFDIR
@@ -20,8 +16,6 @@ f1_keywords:
 - S_IREAD
 - _S_IFCHR
 - _S_IFREG
-dev_langs:
-- C++
 helpviewer_keywords:
 - S_IFDIR constant
 - stat structure
@@ -41,16 +35,12 @@ helpviewer_keywords:
 - _S_IREAD constant
 - _S_IFCHR constant
 ms.assetid: fd462004-7563-4766-8443-30b0a86174b6
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fd7278d017002ff0d5aa716db61fdcdb54e24018
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 88b81ac5450d04a5a3e617af4658bb6e73fb4dd9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46051133"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50502214"
 ---
 # <a name="stat-structure-stmode-field-constants"></a>_stat 结构 st_mode 字段常量
 
@@ -64,7 +54,7 @@ ms.locfileid: "46051133"
 
 ## <a name="remarks"></a>备注
 
-这些常量用于指示 [_stat 结构](../c-runtime-library/standard-types.md)的 **st_mode** 字段中的文件类型。
+这些常量用于指示 [_stat 结构](../c-runtime-library/standard-types.md)的 st_mode 字段中的文件类型。
 
 下面描述了位掩码常量：
 

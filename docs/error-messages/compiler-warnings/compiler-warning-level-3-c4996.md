@@ -21,7 +21,7 @@ ms.locfileid: "50472171"
 
 - [此项的 POSIX 名称已弃用。请改用与 ISO C 和 c + + 一致的名称： *new_name*。请参阅联机帮助了解详细信息。](#posix-function-names)
 
-- [此函数或变量可能不安全。请考虑使用*safe_version*相反。若要禁用弃用，请使用\_CRT\_SECURE\_否\_警告。请参阅联机帮助了解详细信息。](#unsafe-crt-library-functions)
+- [此函数或变量可能不安全。请考虑使用*safe_version*相反。若要禁用弃用，请使用\_CRT\_SECURE\_NO\_WARNINGS。请参阅联机帮助了解详细信息。](#unsafe-crt-library-functions)
 
 - [std::*function_name*::\_选中此项\_迭代器::\_Deprecate 调用到 std::*function_name*可能不安全的参数与此调用依靠调用方检查传递的值正确。若要禁用此警告，请使用 -D_SCL_SECURE_NO_WARNINGS。有关如何使用 Visual c + + Checked Iterators，请参阅文档](#unsafe-standard-library-functions)
 
@@ -71,21 +71,21 @@ Microsoft 已重命名以符合 C99 和 c++03 规则的实现定义的全局函�
 
 若要解决此问题，我们通常建议更改代码以改为使用建议的函数名称。 但是，更新的名称是特定于 Microsoft 的。 如果您需要将现有的函数名称，用于可移植性原因，可以关闭这些警告。 在其原始名称下的库中的 POSIX 函数现在仍然有效。
 
-若要关闭这些函数的弃用警告，请定义预处理器宏 **\_CRT\_NONSTDC\_否\_警告**。 可以通过包括选项定义此宏在命令行`/D_CRT_NONSTDC_NO_WARNINGS`。
+若要关闭这些函数的弃用警告，请定义预处理器宏 **\_CRT\_NONSTDC\_NO\_WARNINGS**。 可以通过包括选项定义此宏在命令行`/D_CRT_NONSTDC_NO_WARNINGS`。
 
 ### <a name="unsafe-crt-library-functions"></a>不安全的 CRT 库函数
 
-**此函数或变量可能不安全。请考虑使用** *safe_version* **相反。若要禁用弃用，请使用\_CRT\_SECURE\_否\_警告。请参阅联机帮助了解详细信息。**
+**此函数或变量可能不安全。请考虑使用** *safe_version* **相反。若要禁用弃用，请使用\_CRT\_SECURE\_NO\_WARNINGS。请参阅联机帮助了解详细信息。**
 
 Microsoft 已弃用某些 CRT 和 c + + 标准库函数和全局变量以支持更多安全版本。 在大多数情况下，已弃用的函数允许未选中状态的读取或写入访问权限可能会导致严重的安全问题的缓冲区。 编译器会发出对这些函数的弃用警告，并建议首选函数。
 
 若要解决此问题，我们建议你使用的函数或变量*safe_version*相反。 如果已验证不能为缓冲区覆盖或 overread 出现在你的代码，并且您不能更改的代码可移植性原因，您可以关闭该警告。
 
-若要关闭 CRT 中的这些函数的弃用警告，定义 **\_CRT\_SECURE\_否\_警告**。 若要关闭有关弃用的全局变量的警告，请定义 **\_CRT\_SECURE\_否\_警告\_GLOBALS**。 有关这些不推荐使用的函数和全局变量的详细信息，请参阅[CRT 中的安全功能](../../c-runtime-library/security-features-in-the-crt.md)并[安全库： c + + 标准库](../../standard-library/safe-libraries-cpp-standard-library.md)。
+若要关闭 CRT 中的这些函数的弃用警告，定义 **\_CRT\_SECURE\_NO\_WARNINGS**。 若要关闭有关弃用的全局变量的警告，请定义 **\_CRT\_SECURE\_否\_警告\_GLOBALS**。 有关这些不推荐使用的函数和全局变量的详细信息，请参阅[CRT 中的安全功能](../../c-runtime-library/security-features-in-the-crt.md)并[安全库： c + + 标准库](../../standard-library/safe-libraries-cpp-standard-library.md)。
 
 ### <a name="unsafe-standard-library-functions"></a>不安全的标准库函数
 
-__std::__*function_name*__::\_选中此项\_迭代器::\_Deprecate 调用到 std::__*function_name***可能不安全的参数与此调用依靠调用方检查传递的值是否正确。若要禁用此警告，请使用-D\_SCL\_SECURE\_否\_警告。有关如何使用 Visual c + + Checked Iterators，请参阅文档**
+__std::__*function_name*__::\_选中此项\_迭代器::\_Deprecate 调用到 std::__*function_name***可能不安全的参数与此调用依靠调用方检查传递的值是否正确。若要禁用此警告，请使用-D\_SCL\_SECURE\_NO\_WARNINGS。有关如何使用 Visual c + + Checked Iterators，请参阅文档**
 
 因为某些 c + + 标准库模板函数不会检查参数正确，在调试版本中会出现此警告。 在大多数情况下，这是因为没有足够的信息可供要检查容器边界的函数或使用该函数可能会错误地使用迭代器。 此警告有助于标识这些函数用途，因为它们可能会在程序中的严重安全漏洞的源。 有关更多信息，请参见 [Checked Iterators](../../standard-library/checked-iterators.md)。
 
@@ -210,7 +210,7 @@ int main()
 }
 ```
 
-如果已验证您的代码不能具有缓冲区溢出错误在标准库函数，触发此警告，你可能想要关闭此警告。 若要关闭这些函数的警告，定义 **\_SCL\_SECURE\_否\_警告**。
+如果已验证您的代码不能具有缓冲区溢出错误在标准库函数，触发此警告，你可能想要关闭此警告。 若要关闭这些函数的警告，定义 **\_SCL\_SECURE\_NO\_WARNINGS**。
 
 ### <a name="checked-iterators-enabled"></a>检查迭代器启用
 
@@ -252,7 +252,7 @@ int main() {
 
 若要解决此问题，我们建议更改代码以使用建议的函数或变量。
 
-若要关闭这些项的弃用警告，定义 **\_CRT\_过时\_否\_警告**。 有关详细信息，请参阅弃用的函数或变量的文档。
+若要关闭这些项的弃用警告，定义 **\_CRT\_过时\_NO\_WARNINGS**。 有关详细信息，请参阅弃用的函数或变量的文档。
 
 ### <a name="marshalling-errors-in-clr-code"></a>CLR 代码中的封送处理错误
 

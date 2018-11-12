@@ -1,27 +1,17 @@
 ---
-title: “添加类”对话框 | Microsoft Docs
-ms.custom: ''
+title: “添加类”对话框
 ms.date: 11/04/2016
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
 f1_keywords:
 - vc.addclass
-dev_langs:
-- C++
 helpviewer_keywords:
 - Add Class dialog box
 ms.assetid: 916259b8-8e5f-4267-bd10-313483beba67
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f1eb848ae20ba9a587bfdf14881e1a3df3bbeb31
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 405f88f7f77ea75584ec3cfd76af1ea9a0457ed6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46420278"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50643191"
 ---
 # <a name="add-class-dialog-box"></a>“添加类”对话框
 
@@ -33,7 +23,7 @@ ms.locfileid: "46420278"
 
 - 通过向项目中添加相应的文件和源代码，自动创建新类。
 
-可以从“项目”菜单、“解决方案资源管理器”或[类视图](/visualstudio/ide/viewing-the-structure-of-code)访问“添加类”对话框。
+可以从“项目”  菜单、“解决方案资源管理器”  或 [类视图](/visualstudio/ide/viewing-the-structure-of-code)访问“添加类” 对话框。
 
 > [!NOTE]
 >  如果尝试将不适合的类添加到当前项目，则会收到错误信息。 单击“确定”  返回到“添加类”  对话框。

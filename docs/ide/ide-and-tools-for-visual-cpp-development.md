@@ -1,26 +1,16 @@
 ---
-title: 用于 Visual C++ 开发的 IDE 和工具 | Microsoft Docs
+title: 用于 Visual C++ 开发的 IDE 和工具
 description: Visual Studio IDE 支持在 Windows、Linux、Android 和 iOS 上通过代码编辑器、调试程序、测试框架、静态诊断分析器以及其他编程工具进行 C++ 开发。
-ms.custom: ''
 ms.date: 09/27/2018
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Visual C++, development tools
 ms.assetid: 56eabafb-1956-4f0f-bec5-29b887763559
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 31b9c0c8668ec16d84ad84627eb73a0f406eb21e
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: e24ba58cf0cf94f1505adaf056f64580b8f7829e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328371"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50473354"
 ---
 # <a name="ide-and-compiler-tools-for-visual-c-development"></a>用于 Visual C++ 开发的 IDE 和编译器工具
 
@@ -30,7 +20,7 @@ ms.locfileid: "49328371"
 
 ## <a name="create-projects"></a>创建项目
 
-一个项目基本上就是一组植入进可执行文件的源代码文件和资源（例如图像或数据文件）。 
+一个项目基本上就是一组植入进可执行文件的源代码文件和资源（例如图像或数据文件）。
 
 Visual Studio 2015 提供对 MSBuild 项目的支持。 可下载适用于其他生成系统（例如 Qt 或 CMake）的 Visual Studio 扩展。
 
@@ -51,7 +41,7 @@ Visual Studio 2017 可支持要使用的任何生成系统或自定义生成工�
 
 ![团队资源管理器](media/vs2017-team-explorer.png "Visual Studio 2017 团队资源管理器")
 
-有关 Azure 中 Git 与存储库集成的详细信息，请参阅[与 Visual Studio 2017 和 Azure Repos Git 共享代码](/azure/devops/repos/git/share-your-code-in-git-vs-2017)。 有关 Git 与 HubGit 集成的信息，请参阅[适用于 Visual Studio 的 GitHub 扩展](https://visualstudio.github.com/)。
+有关 Azure 中 Git 与存储库集成的详细信息，请参阅[与 Visual Studio 2017 和 Azure Repos Git 共享代码](/azure/devops/repos/git/share-your-code-in-git-vs-2017)。 有关 Git 与 GitHub 集成的信息，请参阅[适用于 Visual Studio 的 GitHub 扩展](https://visualstudio.github.com/)。
 
 ## <a name="create-user-interfaces-with-designers"></a>使用设计器创建用户界面
 
@@ -65,7 +55,7 @@ Visual Studio 2017 可支持要使用的任何生成系统或自定义生成工�
 
 ## <a name="write-code"></a>编写代码
 
-创建项目后，所有项目文件将都显示在“解决方案资源管理器”窗口中。 （解决方案是用于一个或多个相关项目的逻辑容器。）单击解决方案资源管理器中的 .h 或 .cpp 文件时，该文件将在代码编辑器中打开。 
+创建项目后，所有项目文件将都显示在“解决方案资源管理器”窗口中。 （解决方案是用于一个或多个相关项目的逻辑容器。）单击解决方案资源管理器中的 .h 或 .cpp 文件时，该文件将在代码编辑器中打开。
 
 ![解决方案资源管理器和代码编辑器](media/vs2017-solution-explorer-code-editor.png "Visual Studio 2017 解决方案资源管理器和代码编辑器")
 

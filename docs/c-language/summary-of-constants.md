@@ -1,25 +1,15 @@
 ---
-title: 常量摘要 | Microsoft Docs
-ms.custom: ''
+title: 常量摘要
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - constants, C
 ms.assetid: 4158234c-e189-4e25-970f-52a04bc6380a
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 33367c468d8e499382c30642dd55c4cd7fd1a59a
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1da2a7434ced7f38fa199e5911e01709983fda91
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760489"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50547857"
 ---
 # <a name="summary-of-constants"></a>常量摘要
 
@@ -27,7 +17,7 @@ ms.locfileid: "43760489"
 &nbsp;&nbsp;&nbsp;&nbsp;floating-point-constant<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;integer-constant<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;enumeration-constant<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;character-constant
+&nbsp;&nbsp;&nbsp;&nbsp;*character-constant*
 
 *floating-point-constant*：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;fractional-constant exponent-part<sub>opt</sub> floating-suffix<sub>opt</sub><br/>
@@ -45,7 +35,7 @@ ms.locfileid: "43760489"
 &nbsp;&nbsp;&nbsp;&nbsp;+ -
 
 *digit-sequence*：<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;digit<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*digit*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;digit-sequence digit
 
 *floating-suffix*: one of<br/>

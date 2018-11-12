@@ -6,18 +6,18 @@ helpviewer_keywords:
 - references, to properties in providers
 - referencing properties in providers
 ms.assetid: bfbb3851-5eed-467a-a179-4a97a9515525
-ms.openlocfilehash: 7fcd948fc093253c3565e7d4d35237d87ba4bdb0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d6a750d3c2c6c409a1b7d3ce40ef13566b522cff
+ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50571244"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51265160"
 ---
 # <a name="referencing-a-property-in-your-provider"></a>在提供程序中引用属性
 
-找到所需的属性的属性组和属性 ID。 有关详细信息，请参阅[OLE DB 属性](/previous-versions/windows/desktop/ms722734)中*OLE DB 程序员参考*。
+找到所需的属性的属性组和属性 ID。 有关详细信息，请参阅[OLE DB 属性](/previous-versions/windows/desktop/ms722734)中**OLE DB 程序员参考**。
 
-下面的示例假定你尝试从行集中获取的属性。 使用会话或命令的代码类似，但使用不同的接口。
+下面的示例假定你正在尝试获取从行集中的属性。 使用会话或命令的代码类似，但使用不同的接口。
 
 创建[CDBPropSet](../../data/oledb/cdbpropset-class.md)对象作为构造函数的参数中使用属性组。 例如：
 

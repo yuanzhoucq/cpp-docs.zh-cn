@@ -1,25 +1,18 @@
 ---
-title: vcpkg - 用于 Windows、Linux 和 MacOS 的 C++ 包管理器 | Microsoft Docs
+title: vcpkg-- 用于 Windows、Linux 和 MacOS 的 C++ 包管理器
 description: vcpkg 是一种命令行程序包管理器，可极大简化 Windows 上的开源 C++ 库的购置与安装。
-keywords: vcpkg
 author: mikeblome
 ms.author: mblome
 ms.date: 05/14/2018
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: windows
 ms.assetid: f50d459a-e18f-4b4e-814b-913e444cedd6
-ms.topic: conceptual
-dev_langs:
-- C++
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 70af45a860ff854faf244cf51ad7462262f183fe
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 03446a9b4e1ec3a0425104b9e755efb902f79219
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50072682"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50598791"
 ---
 # <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg：用于 Windows、Linux 和 MacOS 的 C++ 包管理器
 
@@ -35,7 +28,7 @@ vcpkg 是一种命令行包管理器，可极大简化 Windows、Linux 和 MacOS
 
 如果在端口集合中使用专用库创建 vcpkg 克隆，则可以添加一个端口来下载预生成二进制文件和标头，并编写一个 portfile.cmake 文件，轻松将上述文件复制到所需的地方。
 
-[1] 注意：某些专有库不具有这些源。在这些情况下，vcpkg 将下载可兼容预生成二进制文件。*
+[1] 注意：某些专有库不具有这些源。在这些情况下，vcpkg 将下载可兼容预生成二进制文件。
 
 ## <a name="installation"></a>安装
 

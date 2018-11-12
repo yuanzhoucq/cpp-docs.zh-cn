@@ -1,29 +1,19 @@
 ---
-title: “&lt;项目名&gt;属性页”对话框 ->“配置属性”->“清单工具”->“高级”| Microsoft Docs
-ms.custom: ''
+title: “&lt;项目名&gt;属性页”对话框 ->“配置属性”->“清单工具”->“高级”
 ms.date: 11/04/2016
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
 f1_keywords:
 - VC.Project.VCManifestTool.KeyFile
 - VC.Project.VCManifestTool.UpdateFileHashes
 - VC.Project.VCManifestTool.UpdateFileHashesSearchPath
 - VC.Project.VCManifestTool.ValidateSignature
 - VC.Project.VCManifestTool.KeyContainer
-dev_langs:
-- C++
 ms.assetid: 3d587366-05ea-4956-a978-313069660735
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1e44ba6065658c085777ada39f75bd5fa1cdc2fb
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 10da66c690106255d34c82b066f3450c5cc8a37a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46382935"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50530554"
 ---
 # <a name="advanced-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>“&lt;项目名&gt;属性页”对话框 ->“配置属性”->“清单工具”->“高级”
 
@@ -44,6 +34,6 @@ ms.locfileid: "46382935"
 ## <a name="see-also"></a>请参阅
 
 [\<file> 元素](/visualstudio/deployment/file-element-clickonce-application)<br>
-[ClickOnce 应用程序清单](/visualstudio/deployment/clickonce-application-manifest)<br>
+[ndptecclick](/visualstudio/deployment/clickonce-application-manifest)<br>
 [清单工具属性页](../ide/manifest-tool-property-pages.md)<br>
 [使用项目属性](../ide/working-with-project-properties.md)

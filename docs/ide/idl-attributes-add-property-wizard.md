@@ -1,25 +1,15 @@
 ---
-title: IDL 特性，添加属性向导 | Microsoft Docs
-ms.custom: ''
+title: “添加属性向导”->“IDL 特性”
 ms.date: 11/04/2016
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
 f1_keywords:
 - vc.codewiz.prop.idlattributes
-dev_langs:
-- C++
 ms.assetid: 356ed666-79d0-4bd9-a5e7-cda679cbadbd
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ce3597f656d46da85faee3f6ec51b89257d25d05
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d2a7448675be6a9d8cfc290d648413643aa4681c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46426349"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50514278"
 ---
 # <a name="idl-attributes-add-property-wizard"></a>“添加属性向导”->“IDL 特性”
 
