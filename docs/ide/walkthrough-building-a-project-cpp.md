@@ -6,12 +6,12 @@ helpviewer_keywords:
 - projects [C++], building
 - project building [C++]
 ms.assetid: d459bc03-88ef-48d0-9f9a-82d17f0b6a4d
-ms.openlocfilehash: 53f9d1ca823385c17bf2b235d844e40886092e44
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c12cd50dd92e728c88945cd83029f7e5e62816da
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618356"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524152"
 ---
 # <a name="walkthrough-building-a-project-c"></a>演练：生成项目 (C++)
 
@@ -27,15 +27,15 @@ ms.locfileid: "50618356"
 
 1. 在 Games.cpp 中，删除最后一行中的分号，使其类似于以下语句：
 
-    `return 0`
+   `return 0`
 
 1. 在菜单栏上，依次选择“生成” > “生成解决方案”。
 
 1. “错误列表”窗口中的消息指示生成项目过程中出现了错误。 该声明类似于以下错误消息：
 
-    `error C2143: syntax error: missing ';' before '}'`
+   `error C2143: syntax error: missing ';' before '}'`
 
-  若要查看有关此错误的帮助信息，请在“错误列表”窗口中将其突出显示，然后选择 F1 键。
+   若要查看有关此错误的帮助信息，请在“错误列表”窗口中将其突出显示，然后选择 F1 键。
 
 1. 将分号重新添加到导致语法错误的行的末尾：
 
@@ -43,7 +43,7 @@ ms.locfileid: "50618356"
 
 1. 在菜单栏上，依次选择“生成” > “生成解决方案”。
 
-  “输出”窗口中的消息指示项目已成功编译。
+   “输出”窗口中的消息指示项目已成功编译。
 
     ```Output
     1>------ Build started: Project: Game, Configuration: Debug Win32 ------

@@ -4,21 +4,22 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - XML documentation, delimiters
 ms.assetid: debfbdd9-63fa-4c58-a18e-a4d203d241d7
-ms.openlocfilehash: ecc6018ef22b9c6b0ac64e379365555fb6b3d12f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 709c17138032a98ec2f8ff978d9b8364241989b1
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50589431"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326473"
 ---
 # <a name="delimiters-for-visual-c-documentation-tags"></a>Visual C++ 文档标记的分隔符
 
 文档标记需要使用分隔符，用来向编译器指示文档注释开始和结束的位置。
 
 可以使用以下采用 XML 文档标记的分隔符：
-|||
+
+| | |
 |-|-|
-|`///`  | 这是在文档示例中显示的格式，由 Visual C++ 项目模板使用。  |
+| `///` | 这是在文档示例中显示的格式，由 Visual C++ 项目模板使用。  |
 | `/** */`  | 这些是多行分隔符。  |
 
 使用 `/** */` 分隔符时，需遵守一些格式设置规则：

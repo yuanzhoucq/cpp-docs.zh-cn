@@ -2,12 +2,12 @@
 title: 将代码升级到通用 CRT
 ms.date: 03/31/2017
 ms.assetid: eaf34c1b-da98-4058-a059-a10db693a5ce
-ms.openlocfilehash: 5e417df380ff2239b7c09ba32cc02b784e9343d2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 41b33698c1617cef02f1b98a654d3403843215d8
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668606"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51331745"
 ---
 # <a name="upgrade-your-code-to-the-universal-crt"></a>将代码升级到通用 CRT
 
@@ -37,7 +37,7 @@ C 和 C++ 编译器特定的运行时支持库 **vcruntime**，包含支持程�
 
 可以在 Visual Studio 2015 或 Visual Studio 2017 支持的任何 Windows 版本上使用 UCRT。 可以使用 vcredist 包重新分发它，以便支持 Windows 10 以外的 Windows 版本。 Vcredist 包包含 UCRT 组件，并自动将这些组件安装在默认情况下不安装它们的 Windows 操作系统上。 有关详细信息，请参阅[重新分发 Visual C++ 文件](../ide/redistributing-visual-cpp-files.md)。
 
-支持 UCRT 的本地应用部署（尽管由于性能和安全原因不推荐）。 用于本地应用部署的 DLL 作为 Windows SDK 的一部分包含在 **redist** 子目录下。 所需的 DLL 包括 ucrtbase.dll 和名为 api-ms-win-_subset_.dll. 的一组 **APISet forwarder** DLL。 每个操作系统所需的 DLL 集各不相同，因此建议在使用应用本地部署时包括所有 DLL。 有关应用本地部署的其他详细信息和注意事项，请参阅 [Visual C++ 中的部署](../ide/deployment-in-visual-cpp.md)。
+支持 UCRT 的本地应用部署（尽管由于性能和安全原因不推荐）。 用于本地应用部署的 DLL 作为 Windows SDK 的一部分包含在 **redist** 子目录下。 所需的 DLL 包括 ucrtbase.dll 和名为 api-ms-win-_subset_.dll. 的一组 **APISet forwarder** DLL。 每个操作系统所需的 DLL 集各不相同，因此建议在使用应用本地部署时包括所有 DLL。 有关应用本地部署的其他详细信息和注意事项，请参阅 [Visual C++ 中的部署](../ide/deployment-in-visual-cpp.md)。
 
 ## <a name="changes-to-the-universal-crt-functions-and-macros"></a>对通用 CRT 函数和宏的更改
 
