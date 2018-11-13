@@ -4,12 +4,12 @@ ms.date: 10/18/2018
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: 07c32e30aa36d6e59122340da0b1026e7025780d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a4f7b3931dc8ed8bd7206c7f30ce4b65633f08b6
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50612493"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51518979"
 ---
 # <a name="cmake-projects-in-visual-c"></a>Visual C++ 中的 CMake 项目
 
@@ -38,8 +38,11 @@ Visual Studio 2017 版本 15.7：添加了对禁用自动缓存生成、解决�
 选择“文件”|“打开”|“文件夹”，打开一个包含 CMakeLists.txt 文件的文件夹时，将发生以下情况：
 
 - Visual Studio 将“CMake”菜单项添加到主菜单，其中包含用于查看和编辑 CMake 脚本的命令。
+
 - 解决方案资源管理器显示文件夹结构和文件。
+
 - Visual Studio 运行 CMake.exe 并生成默认配置的 CMake 缓存，即 x86 调试。 输出窗口中显示 CMake 命令行以及 CMake 的其他输出。  Visual Studio 2017 版本 15.7 及更高版本：可在“工具”|“选项”|“CMake”|“常规”对话框中禁用自动缓存生成。
+
 - 在后台，Visual Studio 开始对源文件编制索引，以启用 IntelliSense、浏览信息和重构等等。 随着工作进行，Visual Studio 监视器在编辑器和磁盘中随之发生变化，以保持其索引与源同步。
 
 可以打开包含任意数量 CMake 项目的文件夹。 Visual Studio 检测并配置工作区中的所有“根”CMakeLists.txt 文件。 CMake 操作（配置、生成、调试）以及 C++ IntelliSense 和浏览可用于工作区中的所有 CMake 项目。
@@ -77,7 +80,9 @@ Visual Studio 2017 版本 15.7 及更高版本：可在“工具”|“选项”
 要生成 CMake 项目，可选择执行以下操作：
 
 1. 在“调试”下拉列表中选择目标，并按 F5 或单击“运行”（绿色三角形）按钮。 项目首先自动生成，就像 Visual Studio 解决方案一样。
+
 1. 右键单击 CMakeLists.txt，并从上下文菜单中选择“生成”。 如果在文件夹结构中有多个目标，可以选择生成所有目标或仅生成某个特定目标。
+
 1. 从主菜单中选择“生成”|“生成解决方案”（F7 或 Ctrl+Shift+B）。 请确保已在“常规”工具栏的“启动项”下拉列表中选择了 CMake 目标。
 
 ![CMake 生成菜单命令](media/cmake-build-menu.png "CMake 生成命令菜单")
@@ -182,20 +187,25 @@ JSON IntelliSense 可帮助编辑 CMakeSettings.json 文件：
       "buildCommandArgs": "-v",
       "ctestCommandArgs": ""
     },
-
 ```
 
 1. **name**：显示在 C++ 配置下拉列表中的配置名称。 此属性值也可用作宏 `${name}`，用于指定其他属性值。 有关示例，请参阅 CMakeSettings.json 中的 **buildRoot** 定义。
 
 1. **generator**：映射到 -G 开关并指定要使用的生成器。 此属性也可用作宏 `${generator}`，帮助指定其他属性值。 Visual Studio 当前支持下列 CMake 生成器：
 
-    - "Ninja"
-    - "Visual Studio 14 2015"
-    - "Visual Studio 14 2015 ARM"
-    - "Visual Studio 14 2015 Win64"
-    - "Visual Studio 15 2017"
-    - "Visual Studio 15 2017 ARM"
-    - "Visual Studio 15 2017 Win64"
+   - "Ninja"
+
+   - "Visual Studio 14 2015"
+
+   - "Visual Studio 14 2015 ARM"
+
+   - "Visual Studio 14 2015 Win64"
+
+   - "Visual Studio 15 2017"
+
+   - "Visual Studio 15 2017 ARM"
+
+   - "Visual Studio 15 2017 Win64"
 
 由于 Ninja 旨在加快生成速度，而不是为了提高灵活性和功能，因此它被设为默认生成器。 但是，某些 CMake 项目可能无法使用 Ninja 正确地进行生成。 如果发生这种情况，可以指示 CMake 改为生成 Visual Studio 项目。
 
@@ -232,11 +242,17 @@ CMakeSettings.json 还支持使用上述所有属性中的环境变量。 所使
 此外，还可以使用此文件中内置的宏：
 
 - `${workspaceRoot}`：提供工作区文件夹的完整路径
+
 - `${workspaceHash}`：工作区位置的哈希；可用于创建当前工作区的唯一标识符（例如用于文件路径）
+
 - `${projectFile}`：根 CMakeLists.txt 文件的完整路径
+
 - `${projectDir}`：根 CMakeLists.txt 文件的文件夹完整路径
+
 - `${thisFile}`：CMakeSettings.json 文件的完整路径
+
 - `${name}`：配置的名称
+
 - `${generator}`：配置中使用的 CMake 生成器的名称
 
 ### <a name="ninja-command-line-arguments"></a>Ninja 命令行参数
@@ -393,9 +409,11 @@ Visual Studio 2017 版本 15.7 及更高版本：要在 CMake 项目中编译单
 ![CMake 单个文件编译](media/cmake-single-file-compile.png)
 
 ## <a name="run-cmake-from-the-command-line"></a>从命令行运行 CMake
+
 如果已从 Visual Studio 安装程序安装 CMake，可以通过执行以下步骤从命令行运行它：
 
 1. 运行适当的 vsdevcmd.bat (x86/x64)。 有关详细信息，请参阅[基于命令行生成](../build/building-on-the-command-line.md)。
-1. 切换到输出文件夹。
-1. 运行 CMake 以生成/配置应用程序。
 
+1. 切换到输出文件夹。
+
+1. 运行 CMake 以生成/配置应用程序。
