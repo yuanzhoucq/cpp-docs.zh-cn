@@ -7,12 +7,12 @@ ms.date: 05/14/2018
 ms.technology:
 - cpp-ide
 ms.assetid: f50d459a-e18f-4b4e-814b-913e444cedd6
-ms.openlocfilehash: 03446a9b4e1ec3a0425104b9e755efb902f79219
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2f7dc6f1d9c78d894c5cf0e6ba20c8bdfc54e67a
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50598791"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51518679"
 ---
 # <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg：用于 Windows、Linux 和 MacOS 的 C++ 包管理器
 
@@ -28,7 +28,7 @@ vcpkg 是一种命令行包管理器，可极大简化 Windows、Linux 和 MacOS
 
 如果在端口集合中使用专用库创建 vcpkg 克隆，则可以添加一个端口来下载预生成二进制文件和标头，并编写一个 portfile.cmake 文件，轻松将上述文件复制到所需的地方。
 
-[1] 注意：某些专有库不具有这些源。在这些情况下，vcpkg 将下载可兼容预生成二进制文件。
+[1] 注意：某些专有库不具有这些源。在这些情况下，vcpkg 将下载可兼容预生成二进制文件。*
 
 ## <a name="installation"></a>安装
 
@@ -62,7 +62,6 @@ atk       2.24.0  GNOME Accessibility Toolkit
 botan       2.0.1      A cryptography library written in C++11
 portaudio   19.0.6.00  PortAudio Portable Cross-platform Audio I/O API P...
 taglib      1.11.1-2   TagLib Audio Meta-Data Library
-
 ```
 
 ### <a name="install-a-library-on-your-local-machine"></a>在本地计算机上安装库
@@ -81,7 +80,6 @@ The following packages will be built and installed:
   * bzip2:x86-windows
   * zlib:x86-windows
 Additional packages (*) will be installed to complete this operation.
-
 ```
 
 对于 CMAKE 项目，通过 CMAKE_TOOLCHAIN_FILE 来配合使用库和 `find_package()`。 例如:

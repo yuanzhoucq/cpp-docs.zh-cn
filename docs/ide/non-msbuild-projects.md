@@ -4,12 +4,12 @@ ms.date: 06/01/2018
 helpviewer_keywords:
 - Open Folder Projects in Visual C++
 ms.assetid: abd1985e-3717-4338-9e80-869db5435175
-ms.openlocfilehash: 396b1fe9f879e7adcdfe9a69fee5c9e1916ff545
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6354cc656d501d1611219378f72831cc2fa94389
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50542007"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51523989"
 ---
 # <a name="open-folder-projects-in-visual-c"></a>Visual C++ 中的“打开文件夹”项目
 
@@ -33,7 +33,8 @@ CMake 作为 Visual C++ 的 CMake 工具集成在 Visual Studio IDE 中，是 C+
 ## <a name="configuring-open-folder-projects"></a>配置“打开文件夹”项目
 
 可以通过三个 JSON 文件来自定义“打开文件夹”项目：
-|||
+
+| | |
 |-|-|
 |CppProperties.json|指定用于浏览的自定义配置信息。 如有需要，请在根项目文件夹中创建此文件。|
 |launch.vs.json|指定命令行参数。 通过“解决方案资源管理器”上下文菜单项“调试和启动设置”进行访问。|
@@ -58,6 +59,7 @@ IntelliSense 和浏览行为在一定程序上取决于活动的生成配置，�
   ]
 }
 ```
+
 一个配置可能会有以下列出的其中几个属性：
 
 |||
@@ -135,6 +137,7 @@ CppProperties.json 支持用于包含路径和其他属性值的系统环境变�
   ]
 }
 ```
+
 还可在某个配置内定义 environments 属性，让它只应用于该配置，并覆盖所有同名的全局变量。 在下面的示例中，x64 配置定义了一个会覆盖全局值的本地 INCLUDE 变量：
 
 ```json
@@ -186,6 +189,7 @@ CppProperties.json 支持用于包含路径和其他属性值的系统环境变�
 #### <a name="macros"></a>宏
 
 可访问 CppProperties.json 中的下列内置宏：
+
 |||
 |-|-|
 |`${workspaceRoot}`| 工作区文件夹的完整路径|
@@ -258,11 +262,13 @@ CppProperties.json 支持用于包含路径和其他属性值的系统环境变�
   ]
 }
 ```
+
 保存 tasks.vs.json 后，可以在文件夹中右键单击任一 .cpp 文件，选择上下文菜单中的“Echo 文件名”，并查看输出窗口中显示的文件名。
 
 #### <a name="appliesto"></a>appliesTo
 
 可通过在 `appliesTo` 字段中指定其名称来创建任何文件或文件夹任务，例如 `"appliesTo" : "hello.cpp"`。 以下文件掩码可用作值：
+
 |||
 |-|-|
 |`"*"`| 任务适用于工作区中的所有文件和文件夹|
@@ -340,4 +346,3 @@ CppProperties.json 支持用于包含路径和其他属性值的系统环境变�
 ## <a name="see-also"></a>请参阅
 
 [用于 Visual C++ 开发的 IDE 和工具](ide-and-tools-for-visual-cpp-development.md)
-

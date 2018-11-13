@@ -11,12 +11,12 @@ helpviewer_keywords:
 - environment control routines
 - process control routines
 ms.assetid: 7fde74c3-c2a6-4d15-84b8-092160d60c3e
-ms.openlocfilehash: 74194311eb33a23de5643b3cb956c2e3f752dea0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: df080d1ed8c5a00711468a159acb07159ad31930
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525614"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51329405"
 ---
 # <a name="process-and-environment-control"></a>进程和环境控制
 
@@ -46,7 +46,7 @@ ms.locfileid: "50525614"
 |[exit](../c-runtime-library/reference/exit-exit-exit.md)|调用通过 atexit 和 _onexit 注册的函数，刷新所有缓冲区，关闭所有打开的文件，然后终止进程|
 |[_exit](../c-runtime-library/reference/exit-exit-exit.md)|立即终止进程，无需调用 atexit 或 _onexit 或刷新缓冲区|
 |[getenv, _wgetenv](../c-runtime-library/reference/getenv-wgetenv.md)、[getenv_s, _wgetenv_s](../c-runtime-library/reference/getenv-s-wgetenv-s.md)|获取环境变量的值|
-|[_getpid](../c-runtime-library/reference/getpid.md)|获取进程 ID 号|[System::Diagnostics::Process::Id](https://msdn.microsoft.com/library/system.diagnostics.process.id.aspx)|
+|[_getpid](../c-runtime-library/reference/getpid.md)|获取进程 ID 号|
 |[longjmp](../c-runtime-library/reference/longjmp.md)|还原保存的堆栈环境；使用它来执行非本地 goto|
 |[_onexit](../c-runtime-library/reference/onexit-onexit-m.md)|在程序终止时执行的计划例程；用于与 Microsoft C/C++ 版本 7.0 和更早版本的兼容性|
 |[_pclose](../c-runtime-library/reference/pclose.md)|等待新命令处理器并关闭关联管道上的流|
