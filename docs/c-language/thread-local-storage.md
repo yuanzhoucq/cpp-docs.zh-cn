@@ -8,12 +8,12 @@ helpviewer_keywords:
 - thread-local storage
 - storage, thread local storage
 ms.assetid: a0f1b109-c953-4079-aa10-e47f5483173d
-ms.openlocfilehash: e13aa9600cd26fba47ce43a318fa7174995d58fe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8a20e337cddcc45701f20941ac5d7fea5e4324a5
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50572219"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51330302"
 ---
 # <a name="thread-local-storage"></a>线程本地存储
 
@@ -86,7 +86,7 @@ __declspec( thread ) int tls_i = 1;
 
    请注意，包含正在初始化的变量的 sizeof 表达式不构成对自身的引用，并且允许使用该表达式。
 
-- __declspec(thread) 的使用可能会影响 DLL 导入的[延迟加载](../build/reference/linker-support-for-delay-loaded-dlls.md)。
+- 使用 \_\_declspec(thread) 可能会干扰 DLL 导入的[延迟加载](../build/reference/linker-support-for-delay-loaded-dlls.md)。
 
 有关使用 thread 特性的详细信息，请参阅[多线程主题](../parallel/multithreading-support-for-older-code-visual-cpp.md)。
 
