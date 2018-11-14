@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CDockingManager [MFC], m_nTimeOutBeforeDockingBarDock
 - CDockingManager [MFC], m_nTimeOutBeforeToolBarDock
 ms.assetid: 98e69c43-55d8-4f43-b861-4fda80ec1e32
-ms.openlocfilehash: 6a920c92a0a3b3948ad89e31cfaf317f54ad6724
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e1cc4a4a0d6841523aaafcc1865173ba5402948c
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438036"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51519970"
 ---
 # <a name="cdockingmanager-class"></a>CDockingManager 类
 
@@ -280,13 +280,13 @@ class CDockingManager : public CObject
 
 - [CDockingManager 类](../../mfc/reference/cdockingmanager-class.md)支持这些停靠模式：
 
-    - `AFX_DOCK_TYPE::DT_IMMEDIATE`
+  - `AFX_DOCK_TYPE::DT_IMMEDIATE`
 
-    - `AFX_DOCK_TYPE::DT_STANDARD`
+  - `AFX_DOCK_TYPE::DT_STANDARD`
 
-    - `AFX_DOCK_TYPE::DT_SMART`
+  - `AFX_DOCK_TYPE::DT_SMART`
 
-   由定义这些停靠模式[CDockingManager::m_dockModeGlobal](#m_dockmodeglobal)并通过调用设置[CDockingManager::SetDockingMode](#setdockingmode)。
+  由定义这些停靠模式[CDockingManager::m_dockModeGlobal](#m_dockmodeglobal)并通过调用设置[CDockingManager::SetDockingMode](#setdockingmode)。
 
 - 如果你想要创建非浮动、 无法调整大小的窗格中，调用[CDockingManager::AddPane](#addpane)方法。 此方法注册到停靠管理器，它负责窗格的布局窗格。
 

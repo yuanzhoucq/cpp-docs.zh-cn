@@ -8,12 +8,12 @@ helpviewer_keywords:
 - TN028
 - resource identifiers, context-sensitive Help
 ms.assetid: 884f1c55-fa27-4d4c-984f-30907d477484
-ms.openlocfilehash: db20cb087d70284103cd02dcfa34b2089ae09821
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 580046810243593c17dbf7e1c3ca427b37bd14a8
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50533414"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51520151"
 ---
 # <a name="tn028-context-sensitive-help-support"></a>TN028：区分上下文的帮助支持
 
@@ -85,7 +85,6 @@ ID_HELP 命令的生成方式，无论它是作为标准命令路由，直到它
 ```
 
 afx_msg LRESULT CWnd::OnCommandHelp(WPARAM wParam, LPARAM lParam)
-
 ```
 
 WM_COMMANDHELP 是活动窗口在请求“帮助”时收到的私有 Windows MFC 消息。 当窗口收到此消息后，它可能使用与窗口的内部状态匹配的上下文调用 `CWinApp::WinHelp`。

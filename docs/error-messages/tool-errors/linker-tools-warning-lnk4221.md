@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4221
 ms.assetid: 8e2eb2de-9532-4b85-908a-8c9ff5c4cccb
-ms.openlocfilehash: b44ba8f0b88beda3e81d9baf59e5348ad4949b01
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: baea8643001c550aeb3cb35dc6fe414e4330c0c1
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50460965"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51523463"
 ---
 # <a name="linker-tools-warning-lnk4221"></a>链接器工具警告 LNK4221
 
@@ -31,7 +31,6 @@ int function()
 {
    return 0;
 }
-
 ```
 
 若要编译的文件并创建两个对象文件，运行**cl /c a.cpp b.cpp**在命令提示符。 如果通过运行链接对象文件**链接/lib /out:test.lib a.obj b.obj**，你将收到 LNK4221 警告。 如果将对象链接通过运行**链接/lib /out:test.lib b.obj a.obj**，您将不会收到一条警告。

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - function overloading
 - declaring functions [C++], overloading
 ms.assetid: 3c9884cb-1d5e-42e8-9a49-6f46141f929e
-ms.openlocfilehash: 47e77e1709322abaa2607677bf21c9cfe4a3e6ae
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f37a539c74b995b1dce5f68344c555a679a87991
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50580193"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51333366"
 ---
 # <a name="function-overloading"></a>函数重载
 
@@ -253,12 +253,12 @@ volatile Over&
 |-----------------------|---------------------|
 |*type-name*|*类型名称* **&**|
 |*类型名称* **&**|*type-name*|
-|*type-name* **[ ]**|*type-name\**|
-|*type-name* **(** *argument-list* **)**|**(** *\*类型名称* **) (** *自变量列表* **)**|
+|*type-name* **[ ]**|*类型名称* __\*__|
+|*type-name* **(** *argument-list* **)**|**(** __\*__ *类型名称* **) (** *自变量列表* **)**|
 |*type-name*|**const** *类型名称*|
 |*type-name*|**易失***类型名称*|
-|*type-name\**|**const** *类型名称\**|
-|*type-name\**|**易失***类型名称\**|
+|*类型名称* __\*__|**const** *类型名称* __\*__|
+|*类型名称* __\*__|**易失***类型名称* __\*__|
 
 在其中尝试转换的序列如下：
 

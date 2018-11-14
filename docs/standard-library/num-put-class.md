@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::num_put [C++], do_put
 - std::num_put [C++], put
 ms.assetid: 36c5bffc-8283-4201-8ed4-78c4d81f8a17
-ms.openlocfilehash: c6866358cde7d381ec8a703d50aeb3193bef9d5e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2ede0ccd85f116f300939c819ae8209435da72b7
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441855"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327325"
 ---
 # <a name="numput-class"></a>num_put 类
 
@@ -258,7 +258,7 @@ virtual iter_type do_put(iter_type next,
 
 行为与第一个相同，不同之处在于它生成从一个布尔输出字段*val*。
 
-布尔输出字段采用以下两种形式之一。 如果 **iosbase**. **flags** & `ios_base::`[boolalpha](../standard-library/ios-functions.md#boolalpha) 为 **false**，则该成员函数将返回 `do_put`(_ *Next*, \_ *Iosbase*, \_ *Fill*, ( **long**) `val`)，这通常将产生生成的序列 0（若为**false**）或 1（若为 **true**）。 否则，生成的序列为 **fac**. [falsename](../standard-library/numpunct-class.md#falsename)`)`（若为 **false**）或 **fac**. [truename](../standard-library/numpunct-class.md#truename)（若为**true**）。
+布尔输出字段采用以下两种形式之一。 如果`iosbase.flags & ios_base::` [boolalpha](../standard-library/ios-functions.md#boolalpha)是**false**，成员函数返回`do_put(_Next, _Iosbase, _Fill, (long)val)`，这通常会生成为 0 的生成的序列 (对于**false**)或 1 (对于 **，则返回 true**)。 否则，生成的序列为*fac*。[falsename](../standard-library/numpunct-class.md#falsename) (对于**false**)，或*fac*。[truename](../standard-library/numpunct-class.md#truename) (对于**true**)。
 
 第七个受保护的虚拟成员函数：
 

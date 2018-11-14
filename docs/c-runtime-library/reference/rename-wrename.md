@@ -34,12 +34,12 @@ helpviewer_keywords:
 - names [C++], changing directory
 - renaming files
 ms.assetid: 9f0a6103-26a2-4dda-b14b-79a48946266a
-ms.openlocfilehash: 70793dee54460b6372bfbe815115aa9211670c6f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3536bfb6c38c99a8d6d943102fb9303dd4d85b7b
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463981"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326129"
 ---
 # <a name="rename-wrename"></a>rename、_wrename
 
@@ -72,9 +72,9 @@ int _wrename(
 
 |errno 值|条件|
 |-|-|
-**EACCES**|由 *newname* 指定的文件或目录已存在或无法创建（路径无效）；或 *oldname* 是目录，但 *newname* 指定了不同路径。
-**ENOENT**|未找到由 *oldname* 指定的文件或路径。
-**EINVAL**|名称包含无效字符。
+| **EACCES** | 由 *newname* 指定的文件或目录已存在或无法创建（路径无效）；或 *oldname* 是目录，但 *newname* 指定了不同路径。 |
+| **ENOENT** | 未找到由 *oldname* 指定的文件或路径。 |
+| **EINVAL** | 名称包含无效字符。 |
 
 有关其他可能的返回值，请参阅 [_doserrno、_errno、syserrlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 

@@ -90,12 +90,12 @@ helpviewer_keywords:
 - wfindfirst64i32 function
 - _wfindfirst64 function
 ms.assetid: 9bb46d1a-b946-47de-845a-a0b109a33ead
-ms.openlocfilehash: eaecf466617669e6abf156370854b88d16fc4086
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ceaa8fea4414bab4bbb035aa4525b415ca7ac0b8
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50542072"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51331433"
 ---
 # <a name="findfirst-findfirst32-findfirst32i64-findfirst64-findfirst64i32-findfirsti64-wfindfirst-wfindfirst32-wfindfirst32i64-wfindfirst64-wfindfirst64i32-wfindfirsti64"></a>_findfirst、_findfirst32、_findfirst32i64、_findfirst64、_findfirst64i32、_findfirsti64、_wfindfirst、_wfindfirst32、_wfindfirst32i64、_wfindfirst64、_wfindfirst64i32、_wfindfirsti64
 
@@ -166,12 +166,12 @@ intptr_t _wfindfirst64i32(
 
 如果成功， **_findfirst**返回标识的文件或与匹配的文件组的唯一搜索句柄*filespec*规范，可以对后续调用中使用[_findnext](findnext-functions.md)或设置为[_findclose](findclose.md)。 否则为 **_findfirst**将返回-1 并设置**errno**为以下值之一。
 
-|errno 值|条件|
+| errno 值 | 条件 |
 |-|-|
-**EINVAL**|无效的参数： *filespec*或*fileinfo*已**NULL**。 或者，操作系统返回了意外错误。
-**ENOENT**|无法匹配的文件规范。
-**ENOMEM**|内存不足。
-**EINVAL**|文件名规范无效或指定的文件名为大于**MAX_PATH**。
+| **EINVAL** | 无效的参数： *filespec*或*fileinfo*已**NULL**。 或者，操作系统返回了意外错误。 |
+| **ENOENT** | 无法匹配的文件规范。 |
+| **ENOMEM** | 内存不足。 |
+| **EINVAL** | 文件名规范无效或指定的文件名为大于**MAX_PATH**。 |
 
 有关这些属性和其他的更多信息返回代码示例，请参见 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 

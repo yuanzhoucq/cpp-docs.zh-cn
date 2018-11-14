@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - RW2003
 ms.assetid: 9dc0ba70-6776-4aef-b316-5f1711d8e42e
-ms.openlocfilehash: 2e0a7d2d5b7e8fc4603b10450ba30dbf014e02cb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f359c1f71f03ce0d946579776230398fb31d046f
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50583160"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51520603"
 ---
 # <a name="resource-compiler-error-rw2003"></a>资源编译器错误 RW2003
 
@@ -51,10 +51,10 @@ ms.locfileid: "50583160"
 
    对于 Windows 3.1 资源不能超过大约 65000 个字节。 如果你的资源，你将无法使用 Visual c + + 或命令行资源编译器对其进行编译。 该限制不适用于游标、图标、位图或其他基于文件的资源。
 
-9. **资源文件不是 3.00 格式**
+1. **资源文件不是 3.00 格式**
 
    游标或图标使用早于版本 3.00 格式。 资源必须是已转换或重绘格式使用 3.00 版或更高版本。
 
-10. **无法打开临时文件**
+1. **无法打开临时文件**
 
    资源编译器/Visual C++ 无法打开临时文件。 可能的原因是没有目录的写权限或目录不存在。 资源编译器/Visual C++ 尝试在 **TMP** 环境变量指定的目录或当前目录（如果未指定任何目录）中使用这些文件。

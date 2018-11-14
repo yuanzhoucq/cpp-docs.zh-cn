@@ -8,12 +8,12 @@ helpviewer_keywords:
 - task parallelism
 - tasks [Concurrency Runtime]
 ms.assetid: 42f05ac3-2098-494a-ba84-737fcdcad077
-ms.openlocfilehash: 43af08f3be75bff7621cd2f57b9d50b658420f26
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c9f18dfd1498538ce3700fd73a27ce6f6088ee42
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630420"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51331212"
 ---
 # <a name="task-parallelism-concurrency-runtime"></a>任务并行（并发运行时）
 
@@ -22,8 +22,7 @@ ms.locfileid: "50630420"
 编写异步代码，并希望在异步操作完成之后进行某种操作时，可使用任务。 例如，可以使用一项任务以异步方式读取文件，然后使用另一个任务 —*延续任务*，稍后在本文档中进行了解释，它变得可用之后处理的数据。 相反，可以使用任务组将并行工作分解成较小的各部分。 例如，假设你有一个将剩余工作划分为两个分区的递归算法。 可以使用任务组并发运行这两个分区，然后等待划分的工作完成。
 
 > [!TIP]
-
->  当你想要应用于每个元素的并行中的集合的相同例程时，使用并行算法，如[concurrency:: parallel_for](reference/concurrency-namespace-functions.md#parallel_for)，而不是任务或任务组。 有关并行算法的详细信息，请参阅[并行算法](../../parallel/concrt/parallel-algorithms.md)。
+> 当你想要应用于每个元素的并行中的集合的相同例程时，使用并行算法，如[concurrency:: parallel_for](reference/concurrency-namespace-functions.md#parallel_for)，而不是任务或任务组。 有关并行算法的详细信息，请参阅[并行算法](../../parallel/concrt/parallel-algorithms.md)。
 
 ## <a name="key-points"></a>关键点
 
@@ -157,7 +156,7 @@ ms.locfileid: "50630420"
 
 ##  <a name="composing-tasks"></a> 组合任务
 
-本部分介绍[concurrency:: when_all](reference/concurrency-namespace-functions.md#when_all)并[concurrency:: when_any](reference/concurrency-namespace-functions.md#when_all)函数，它可帮助你组合多个任务以实现常见模式。
+This section describes the [concurrency::when_all](reference/concurrency-namespace-functions.md#when_all) and [concurrency::when_any](reference/concurrency-namespace-functions.md#when_all) functions, which can help you compose multiple tasks to implement common patterns.
 
 ###  <a name="when-all"></a> When_all 函数
 
@@ -205,7 +204,6 @@ ms.locfileid: "50630420"
 1. 在 MainPage.xaml.cpp 中，实现 `WriteFilesAsync`，如示例所示。
 
 > [!TIP]
-
 > `when_all` 是生成 `task` 作为其结果的的非阻止函数。 与不同[task:: wait](reference/task-class.md#wait)，则可以安全地在 ASTA (应用程序 STA) 线程上的 UWP 应用中调用此函数。
 
 ###  <a name="when-any"></a> When_any 函数
@@ -229,14 +227,14 @@ ms.locfileid: "50630420"
 在此示例中，还可以指定 `task<pair<int, size_t>>` 以生成基于任务的延续。
 
 > [!NOTE]
->  与 `when_all` 一样，传递给 `when_any` 的任务必须返回相同类型。
+> 与 `when_all` 一样，传递给 `when_any` 的任务必须返回相同类型。
 
 还可以使用 `||` 语法生成在任务集中的第一个任务完成之后完成的任务，如下面的示例所示。
 
 `auto t = t1 || t2; // same as when_any`
 
 > [!TIP]
->  如同`when_all`，`when_any`是非阻塞的可以安全地在 ASTA 线程上的 UWP 应用中调用。
+> 如同`when_all`，`when_any`是非阻塞的可以安全地在 ASTA 线程上的 UWP 应用中调用。
 
 ##  <a name="delayed-tasks"></a> 延迟的任务执行
 
@@ -252,13 +250,12 @@ ms.locfileid: "50630420"
 
 一个*任务组*将组织的任务的集合。 任务组会将任务推送到工作窃取队列。 计划程序从此队列中删除任务，然后在可用计算资源上执行它们。 将任务添加到任务组之后，可以等待所有任务完成或取消尚未开始的任务。
 
-使用 PPL [concurrency:: task_group](reference/task-group-class.md)并[concurrency:: structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md)类来表示任务组，并[concurrency:: task_handle](../../parallel/concrt/reference/task-handle-class.md)类来表示这些组中运行的任务。 `task_handle` 类封装执行工作的代码。 与 `task` 类一样，工作函数采用 lambda 函数、函数指针或函数对象的形式。 通常不需要直接使用 `task_handle` 对象。 而是将工作函数传递给任务组，然后任务组会创建和管理 `task_handle` 对象。
+使用 PPL [concurrency:: task_group](reference/task-group-class.md)并[concurrency:: structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md)类来表示任务组，并[concurrency:: task_handle](../../parallel/concrt/reference/task-handle-class.md)类to represent the tasks that run in these groups. `task_handle` 类封装执行工作的代码。 与 `task` 类一样，工作函数采用 lambda 函数、函数指针或函数对象的形式。 通常不需要直接使用 `task_handle` 对象。 而是将工作函数传递给任务组，然后任务组会创建和管理 `task_handle` 对象。
 
 PPL 将任务组划分为这两个类别：*非结构化的任务组*并*结构化任务组*。 PPL 使用 `task_group` 类表示非结构化任务组，使用 `structured_task_group` 类表示结构化任务组。
 
 > [!IMPORTANT]
-
->  PPL 还定义了[concurrency:: parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke)算法，使用`structured_task_group`类并行执行的一组任务。 因为 `parallel_invoke` 算法具有更简洁的语法，所以我们建议尽可能使用它而不是 `structured_task_group` 类。 本主题[并行算法](../../parallel/concrt/parallel-algorithms.md)描述`parallel_invoke`中更详细地介绍。
+> PPL 还定义了[concurrency:: parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke)算法，使用`structured_task_group`类并行执行的一组任务。 因为 `parallel_invoke` 算法具有更简洁的语法，所以我们建议尽可能使用它而不是 `structured_task_group` 类。 本主题[并行算法](../../parallel/concrt/parallel-algorithms.md)描述`parallel_invoke`中更详细地介绍。
 
 当你具有要同时执行的多个独立任务，并且你必须等待所有任务完成才能继续时，可使用 `parallel_invoke`。 此方法通常称为*分叉和联接*并行度。 当你具有要同时执行的多个独立任务，但是要在以后等待任务完成时，可使用 `task_group`。 例如，可以将任务添加到 `task_group` 对象，并在另一个函数中或从另一个线程等待任务完成。
 

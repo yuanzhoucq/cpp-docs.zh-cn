@@ -2,12 +2,12 @@
 title: C++ 中的属性
 ms.date: 06/01/2018
 ms.assetid: 748340d9-8abf-4940-b0a0-91b6156a3ff8
-ms.openlocfilehash: a4d24324165f3cce60d259adf6e3d21638296cf8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 444abf2ddf6d4563dcbeb5b683adc52f903bd97f
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471820"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51520785"
 ---
 # <a name="attributes-in-c"></a>C++ 中的属性
 
@@ -45,16 +45,16 @@ void Foo(int);
 
 - `[[nodiscard]]`**15.3 及更高版本的 visual Studio 2017:** (适用于[/std:C++ 17](../build/reference/std-specify-language-standard-version.md)) 指定函数的返回值不应被丢弃。 引发警告 C4834，在此示例中所示：
 
-   ```cpp
-   [[nodiscard]]
-   int foo(int i) { return i * i; }
+    ```cpp
+    [[nodiscard]]
+    int foo(int i) { return i * i; }
 
-   int main()
-   {
-       foo(42); //warning C4834: discarding return value of function with 'nodiscard' attribute
-       return 0;
-   }
-   ```
+    int main()
+    {
+        foo(42); //warning C4834: discarding return value of function with 'nodiscard' attribute
+        return 0;
+    }
+    ```
 
 - `[[maybe_unused]]`**15.3 及更高版本的 visual Studio 2017:** (适用于[/std:C++ 17](../build/reference/std-specify-language-standard-version.md)) 指定的变量，函数，类，typedef、 非静态数据成员、 枚举类型或模板专用化可能特意不使用。 实体标记时，编译器不会警告`[[maybe_unused]]`不使用。 如果没有属性声明的实体可以更高版本被重新声明具有属性，反之亦然。 实体被视为标记分析标记其第一个声明后，并在当前翻译单元的翻译的其余部分。
 
@@ -75,12 +75,12 @@ void Foo(int);
     }
     ```
 
-   该示例将引发这些警告：
+  该示例将引发这些警告：
 
-   - 26494 (类型规则 5： 始终初始化对象。)
+  - 26494 (类型规则 5： 始终初始化对象。)
 
-   - 26485 (边界规则 3： 组到指针的衰减。)
+  - 26485 (边界规则 3： 组到指针的衰减。)
 
-   - 26481 (边界规则 1： 请勿使用指针算法。 改为使用 span。）
+  - 26481 (边界规则 1： 请勿使用指针算法。 改为使用 span。）
 
-   当使用 CppCoreCheck 代码分析工具安装和激活编译此代码时，将触发前两个警告。 但第三条警告，因属性而不会激发。 你可以在不包括特定的规则数的情况下编写 [[gsl::suppress(bounds)]] 来取消显示整个边界配置文件。 C++ 核心准则旨在帮助你编写更好、 更安全的代码。 禁止显示属性，可以轻松若要关闭的警告，它们都并不需要时。
+  当使用 CppCoreCheck 代码分析工具安装和激活编译此代码时，将触发前两个警告。 但第三条警告，因属性而不会激发。 你可以在不包括特定的规则数的情况下编写 [[gsl::suppress(bounds)]] 来取消显示整个边界配置文件。 C++ 核心准则旨在帮助你编写更好、 更安全的代码。 禁止显示属性，可以轻松若要关闭的警告，它们都并不需要时。

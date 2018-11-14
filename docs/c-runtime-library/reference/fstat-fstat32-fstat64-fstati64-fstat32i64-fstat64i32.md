@@ -49,12 +49,12 @@ helpviewer_keywords:
 - _fstati64 function
 - fstat32i64 function
 ms.assetid: 088f5e7a-9636-4cf7-ab8e-e28d2aa4280a
-ms.openlocfilehash: 2cec64e408b326dccc7b950656d0aa699c084f83
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 36d8b0d6480266f86136119a470fb7af5859a5b8
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677781"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51331238"
 ---
 # <a name="fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32"></a>_fstat、_fstat32、_fstat64、_fstati64、_fstat32i64、_fstat64i32
 
@@ -107,14 +107,14 @@ int _fstat64i32(
 
 |字段|含义|
 |-|-|
-**st_atime**|上次文件访问的时间。
-**st_ctime**|文件的创建时间。
-**st_dev**|如果一台设备， *fd*; 否则为 0。
-**st_mode**|文件模式信息的位掩码。 **_S_IFCHR**如果设置位*fd*指设备。 **_S_IFREG**如果设置位*fd*指的是一个普通的文件。 将根据文件的权限模式设置读/写位。 **_S_IFCHR**和其他常量在 SYS\Stat.h 中定义。
-**st_mtime**|上次进行文件修改的时间。
-**st_nlink**|在非 NTFS 文件系统上始终为 1。
-**st_rdev**|如果一台设备， *fd*; 否则为 0。
-**st_size**|文件的大小（以字节为单位）。
+| **st_atime** | 上次文件访问的时间。 |
+| **st_ctime** | 文件的创建时间。 |
+| **st_dev** | 如果一台设备， *fd*; 否则为 0。 |
+| **st_mode** | 文件模式信息的位掩码。 **_S_IFCHR**如果设置位*fd*指设备。 **_S_IFREG**如果设置位*fd*指的是一个普通的文件。 将根据文件的权限模式设置读/写位。 **_S_IFCHR**和其他常量在 SYS\Stat.h 中定义。 |
+| **st_mtime** | 上次进行文件修改的时间。 |
+| **st_nlink** | 在非 NTFS 文件系统上始终为 1。 |
+| **st_rdev** | 如果一台设备， *fd*; 否则为 0。 |
+| **st_size** | 文件的大小（以字节为单位）。 |
 
 如果*fd*设备，是指**st_atime**， **st_ctime**， **st_mtime**，并**st_size**字段无意义。
 

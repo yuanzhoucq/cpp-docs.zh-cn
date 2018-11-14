@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2143
 ms.assetid: 1d8d1456-e031-4965-9240-09a6e33ba81c
-ms.openlocfilehash: 0a7cbad52697ccedac75af73012f6dc69eec5a25
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ed4bc7eea85e5263d59817082caed99bde3d75d5
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50582606"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51520109"
 ---
 # <a name="compiler-error-c2143"></a>编译器错误 C2143
 
@@ -33,7 +33,6 @@ class MyClass
     {
     };
 };
-
 ```
 
 默认情况下，C++ 会假定 `Ty::PutFuncType` 不是模板；因此，后面的 `<` 解释为小于号。  必须显式告知编译器 `PutFuncType` 是模板，以便其正确分析尖括号。 若要更正此错误，请在依赖类型的名称上使用 `template` 关键字，如下所示：
@@ -46,7 +45,6 @@ class MyClass
     {
     };
 };
-
 ```
 
 可能发生 C2143 时 **/clr**使用和`using`指令有语法错误：

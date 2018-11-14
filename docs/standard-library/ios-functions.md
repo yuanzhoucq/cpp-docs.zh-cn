@@ -50,12 +50,12 @@ helpviewer_keywords:
 - std::skipws [C++]
 - std::unitbuf [C++]
 - std::uppercase [C++]
-ms.openlocfilehash: bf22c0e4775ef93b1965a7c9d61f024441bea821
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 18f42f8e5bcd69872e4300d154eb72f489015e36
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509677"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51519673"
 ---
 # <a name="ltiosgt-functions"></a>&lt;ios&gt; 函数
 
@@ -213,7 +213,7 @@ ios_base& fixed(ios_base& str);
 
 `fixed` 是浮点数的默认显示表示法。 [scientific](../standard-library/ios-functions.md#scientific) 会导致使用科学记数法显示浮点数。
 
-此操控器有效调用 * str.*[setf](../standard-library/ios-base-class.md#setf)( `ios_base::fixed`， `ios_base::floatfield`)，然后返回*str*。
+此操控器有效调用*str*。[setf](../standard-library/ios-base-class.md#setf)( `ios_base::fixed`， `ios_base::floatfield` )，然后返回*str*。
 
 ### <a name="example"></a>示例
 
@@ -872,15 +872,13 @@ int main( )
 }
 ```
 
-```Output
-
+```Input
 1 2 3
-
 ```
 
 ```Output
-
-      1 2 3.1.
+Enter three characters: 1 2 3
+.1.
 .2.
 .3.
 ```

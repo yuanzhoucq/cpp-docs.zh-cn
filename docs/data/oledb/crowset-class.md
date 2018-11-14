@@ -238,12 +238,12 @@ helpviewer_keywords:
 - Update method
 - UpdateAll method
 ms.assetid: b0228a90-b8dd-47cc-b397-8d4c15c1e7f4
-ms.openlocfilehash: 6af7b30ef7055fbf5b3c998dba6f3b84d0129c31
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fb2f66474f9700ed7bfdc2e1063865734e4e991a
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543056"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51557006"
 ---
 # <a name="crowset-class"></a>CRowset 类
 
@@ -273,16 +273,16 @@ class CRowset
 |-|-|
 |[AddRefRows](#addrefrows)|递增与当前行相关联的引用计数。|
 |[关闭](#close)|释放行和当前`IRowset`接口。|
-|[Compare](#compare)|比较两个创建一个书签，使用[IRowsetLocate::Compare](/previous-versions/windows/desktop/ms709539)。|
+|[Compare](#compare)|比较两个创建一个书签，使用[IRowsetLocate::Compare](https://docs.microsoft.com/previous-versions/windows/desktop/ms709539(v=vs.85))。|
 |[CRowset](#crowset)|创建一个新`CRowset`对象，并 （可选） 将其与`IRowset`作为参数提供的接口。|
-|[删除](#delete)|从行集使用删除的行[IRowsetChange:DeleteRows](/previous-versions/windows/desktop/ms724362(v%3dvs.85))。|
+|[删除](#delete)|从行集使用删除的行[IRowsetChange:DeleteRows](https://docs.microsoft.com/previous-versions/windows/desktop/ms724362(v=vs.85)(v%3dvs.85))。|
 |[FindNextRow](#findnextrow)|后指定的书签查找下一个匹配行。|
 |[GetApproximatePosition](#getapproximateposition)|返回对应于一个书签的行的近似位置。|
 |[GetData](#getdata)|从行的行集的副本检索数据。|
 |[GetDataHere](#getdatahere)|从指定的缓冲区中检索数据。|
 |[GetOriginalData](#getoriginaldata)|检索最近从提取或传输到数据源，忽略挂起的更改的数据。|
 |[GetRowStatus](#getrowstatus)|返回的所有行的状态。|
-|[插入](#insert)|创建并将插入新行使用[IRowsetChange:InsertRow](/previous-versions/windows/desktop/ms716921)。|
+|[插入](#insert)|创建并将插入新行使用[IRowsetChange:InsertRow](https://docs.microsoft.com/previous-versions/windows/desktop/ms716921(v=vs.85))。|
 |[IsSameRow](#issamerow)|将指定的行与当前行进行比较。|
 |[MoveFirst](#movefirst)|将下一步提取位置重新定位到的初始位置。|
 |[MoveLast](#movelast)|将移动到最后一个记录。|
@@ -290,8 +290,8 @@ class CRowset
 |[MovePrev](#moveprev)|移动到上一条记录。|
 |[MoveToBookmark](#movetobookmark)|从该书签提取用书签标记的行或指定的偏移量处的行。|
 |[MoveToRatio](#movetoratio)|提取从行集中的小数位置开始的行。|
-|[ReleaseRows](#releaserows)|调用[irowset:: Releaserows](/previous-versions/windows/desktop/ms719771)释放当前的行句柄。|
-|[SetData](#setdata)|设置行使用的一个或多个列中数据值[IRowsetChange:SetData](/previous-versions/windows/desktop/ms721232)。|
+|[ReleaseRows](#releaserows)|调用[irowset:: Releaserows](https://docs.microsoft.com/previous-versions/windows/desktop/ms719771(v=vs.85))释放当前的行句柄。|
+|[SetData](#setdata)|设置行使用的一个或多个列中数据值[IRowsetChange:SetData](https://docs.microsoft.com/previous-versions/windows/desktop/ms721232(v=vs.85))。|
 |[撤消](#undo)|撤消自上次提取的行所做任何更改或[更新](../../data/oledb/crowset-update.md)。|
 |[更新](#update)|传输所有挂起的自上次提取或更新后对当前行所做的更改。|
 |[UpdateAll](#updateall)|将任何挂起的更改自上次提取或更新后对所有行进行传输。|
@@ -304,7 +304,7 @@ class CRowset
 
 ## <a name="addrefrows"></a> Crowset:: Addrefrows
 
-调用[irowset:: Addrefrows](/previous-versions/windows/desktop/ms719619)增加 （1) 的引用计数与相关联的当前行句柄。
+调用[irowset:: Addrefrows](https://docs.microsoft.com/previous-versions/windows/desktop/ms719619(v=vs.85))增加 （1) 的引用计数与相关联的当前行句柄。
 
 ### <a name="syntax"></a>语法
 
@@ -322,7 +322,7 @@ HRESULT AddRefRows() throw();
 
 ## <a name="close"></a> Crowset:: Close
 
-释放行和当前[IRowset](/previous-versions/windows/desktop/ms720986)接口。
+释放行和当前[IRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms720986(v=vs.85))接口。
 
 ### <a name="syntax"></a>语法
 
@@ -336,13 +336,13 @@ void Close() throw();
 
 ## <a name="compare"></a> Crowset:: Compare
 
-比较两个创建一个书签，使用[IRowsetLocate::Compare](/previous-versions/windows/desktop/ms709539)。
+比较两个创建一个书签，使用[IRowsetLocate::Compare](https://docs.microsoft.com/previous-versions/windows/desktop/ms709539(v=vs.85))。
 
 ### <a name="syntax"></a>语法
 
 ```cpp
-HRESULT Compare(const CBookmarkBase& bookmark1, 
-   const CBookmarkBase& bookmark2, 
+HRESULT Compare(const CBookmarkBase& bookmark1,
+   const CBookmarkBase& bookmark2,
    DBCOMPARE* pComparison) const throw();
 ```
 
@@ -369,12 +369,12 @@ HRESULT Compare(const CBookmarkBase& bookmark1, 
 
 ## <a name="crowset"></a> Crowset:: Crowset
 
-创建一个新`CRowset`对象，并 （可选） 将其与[IRowset](/previous-versions/windows/desktop/ms720986)作为参数提供的接口。
+创建一个新`CRowset`对象，并 （可选） 将其与[IRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms720986(v=vs.85))作为参数提供的接口。
 
 ### <a name="syntax"></a>语法
 
 ```cpp
-CRowset(); 
+CRowset();
 
 CRowset(IRowset* pRowset);
 ```
@@ -386,7 +386,7 @@ CRowset(IRowset* pRowset);
 
 ## <a name="delete"></a> Crowset:: Delete
 
-调用[IRowsetChange::DeleteRows](/previous-versions/windows/desktop/ms724362(v%3dvs.85))从行集中删除当前行。
+调用[IRowsetChange::DeleteRows](https://docs.microsoft.com/previous-versions/windows/desktop/ms724362(v=vs.85)(v%3dvs.85))从行集中删除当前行。
 
 ### <a name="syntax"></a>语法
 
@@ -405,35 +405,35 @@ HRESULT Delete() const throw();
 ### <a name="syntax"></a>语法
 
 ```cpp
-HRESULT FindNextRow(DBCOMPAREOP op, 
-   BYTE* pData, 
-   DBTYPE wType, 
-   DBLENGTH nLength, 
-   BYTE bPrecision, 
-   BYTE bScale, 
-   BOOL bSkipCurrent = TRUE, 
+HRESULT FindNextRow(DBCOMPAREOP op,
+   BYTE* pData,
+   DBTYPE wType,
+   DBLENGTH nLength,
+   BYTE bPrecision,
+   BYTE bScale,
+   BOOL bSkipCurrent = TRUE,
    CBookmarkBase* pBookmark = NULL) throw();
 ```
 
 #### <a name="parameters"></a>参数
 
 *操作*<br/>
-[in]要在比较行值中使用的操作。 值，请参阅[irowsetfind:: Findnextrow](/previous-versions/windows/desktop/ms723091)。
+[in]要在比较行值中使用的操作。 值，请参阅[irowsetfind:: Findnextrow](https://docs.microsoft.com/previous-versions/windows/desktop/ms723091(v=vs.85))。
 
 *pData*<br/>
 [in]指向要匹配的值的指针。
 
 *wType*<br/>
-[in]指示数据类型的缓冲区的值部分。 有关类型指示符的信息，请参阅[数据类型](/previous-versions/windows/desktop/ms723969)中*OLE DB 程序员参考*Windows SDK 中。
+[in]指示数据类型的缓冲区的值部分。 有关类型指示符的信息，请参阅[数据类型](https://docs.microsoft.com/previous-versions/windows/desktop/ms723969(v=vs.85))中*OLE DB 程序员参考*Windows SDK 中。
 
 *nLength*<br/>
-[in]使用者数据结构分配数据值的长度 （字节）。 有关详细信息，请参阅的说明`cbMaxLen`中[DBBINDING 结构](/previous-versions/windows/desktop/ms716845)中*OLE DB 程序员参考。*
+[in]使用者数据结构分配数据值的长度 （字节）。 有关详细信息，请参阅的说明`cbMaxLen`中[DBBINDING 结构](https://docs.microsoft.com/previous-versions/windows/desktop/ms716845(v=vs.85))中*OLE DB 程序员参考。*
 
 *bPrecision*<br/>
-[in]使用获取数据时的最大精度。 使用仅当*wType*是 DBTYPE_NUMERIC。 有关详细信息，请参阅[转换涉及 DBTYPE_NUMERIC 或 DBTYPE_DECIMAL](/previous-versions/windows/desktop/ms719714)中*OLE DB 程序员参考*。
+[in]使用获取数据时的最大精度。 使用仅当*wType*是 DBTYPE_NUMERIC。 有关详细信息，请参阅[转换涉及 DBTYPE_NUMERIC 或 DBTYPE_DECIMAL](https://docs.microsoft.com/previous-versions/windows/desktop/ms719714(v=vs.85))中*OLE DB 程序员参考*。
 
 *bScale*<br/>
-[in]获取数据时，使用小数位数。 使用仅当*wType* DBTYPE_NUMERIC 或 DBTYPE_DECIMAL。 有关详细信息，请参阅[转换涉及 DBTYPE_NUMERIC 或 DBTYPE_DECIMAL](/previous-versions/windows/desktop/ms719714)中*OLE DB 程序员参考*。
+[in]获取数据时，使用小数位数。 使用仅当*wType* DBTYPE_NUMERIC 或 DBTYPE_DECIMAL。 有关详细信息，请参阅[转换涉及 DBTYPE_NUMERIC 或 DBTYPE_DECIMAL](https://docs.microsoft.com/previous-versions/windows/desktop/ms719714(v=vs.85))中*OLE DB 程序员参考*。
 
 *bSkipCurrent*<br/>
 [in]从其开始搜索的书签的行数。
@@ -458,8 +458,8 @@ HRESULT FindNextRow(DBCOMPAREOP op, 
 ### <a name="syntax"></a>语法
 
 ```cpp
-HRESULT GetApproximatePosition(const CBookmarkBase* pBookmark, 
-   DBCOUNTITEM* pPosition, 
+HRESULT GetApproximatePosition(const CBookmarkBase* pBookmark,
+   DBCOUNTITEM* pPosition,
    DBCOUNTITEM* pcRows) throw();
 ```
 
@@ -491,7 +491,7 @@ HRESULT GetApproximatePosition(const CBookmarkBase* pBookmark, 
 ### <a name="syntax"></a>语法
 
 ```cpp
-HRESULT GetData() throw(); 
+HRESULT GetData() throw();
 
 HRESULT GetData(int nAccessor) throw();
 ```
@@ -516,7 +516,7 @@ HRESULT GetData(int nAccessor) throw();
 ### <a name="syntax"></a>语法
 
 ```cpp
-HRESULT GetDataHere(int nAccessor, 
+HRESULT GetDataHere(int nAccessor,
    void* pBuffer) throw();
 ```
 
@@ -586,7 +586,7 @@ HRESULT GetRowStatus(DBPENDINGSTATUS* pStatus) const throw();
 ### <a name="syntax"></a>语法
 
 ```cpp
-HRESULT Insert(int nAccessor = 0, 
+HRESULT Insert(int nAccessor = 0,
    bool bGetHRow = false) throw();
 ```
 
@@ -633,7 +633,7 @@ HRESULT IsSameRow(HROW hRow) const throw();
 
 ### <a name="return-value"></a>返回值
 
-标准的 HRESULT。 则为 S_OK，指示行相同。 其他值，请参阅[IRowsetIndentity::IsSameRow](/previous-versions/windows/desktop/ms719629)中*OLE DB 程序员参考*Windows SDK 中。
+标准的 HRESULT。 则为 S_OK，指示行相同。 其他值，请参阅[IRowsetIndentity::IsSameRow](https://docs.microsoft.com/previous-versions/windows/desktop/ms719629(v=vs.85))中*OLE DB 程序员参考*Windows SDK 中。
 
 ## <a name="movefirst"></a> Crowset:: Movefirst
 
@@ -651,7 +651,7 @@ HRESULT MoveFirst() throw();
 
 ### <a name="remarks"></a>备注
 
-调用[irowset:: Restartposition](/previous-versions/windows/desktop/ms712877)来重新定位的初始位置 （行集创建时的下一步提取位置的位置） 的下一步提取位置，并检索初始行。
+调用[irowset:: Restartposition](https://docs.microsoft.com/previous-versions/windows/desktop/ms712877(v=vs.85))来重新定位的初始位置 （行集创建时的下一步提取位置的位置） 的下一步提取位置，并检索初始行。
 
 ## <a name="movelast"></a> Crowset:: Movelast
 
@@ -669,7 +669,7 @@ HRESULT MoveLast() throw();
 
 ### <a name="remarks"></a>备注
 
-调用[irowset:: Restartposition](/previous-versions/windows/desktop/ms712877)若要重新定位的下一步提取位置到最后一个位置，并检索最后一行。
+调用[irowset:: Restartposition](https://docs.microsoft.com/previous-versions/windows/desktop/ms712877(v=vs.85))若要重新定位的下一步提取位置到最后一个位置，并检索最后一行。
 
 此方法要求您设置`DBPROP_CANSCROLLBACKWARDS`为 VARIANT_TRUE 之前调用`Open`命令，其中包含行集的表上。 (为提高性能，你可能还要设置`DBPROP_QUICKRESTART`为 VARIANT_TRUE。)
 
@@ -682,7 +682,7 @@ HRESULT MoveLast() throw();
 ```cpp
 HRESULT MoveNext() throw();
 
-HRESULT MoveNext(LONG lSkip, 
+HRESULT MoveNext(LONG lSkip,
    bool bForward= true) throw();
 ```
 
@@ -735,7 +735,7 @@ HRESULT MovePrev() throw();
 ### <a name="syntax"></a>语法
 
 ```cpp
-HRESULT MoveToBookmark(const CBookmarkBase& bookmark, 
+HRESULT MoveToBookmark(const CBookmarkBase& bookmark,
    LONG lSkip = 0) throw();
 ```
 
@@ -764,7 +764,7 @@ HRESULT MoveToBookmark(const CBookmarkBase& bookmark, 
 ### <a name="syntax"></a>语法
 
 ```cpp
-HRESULT MoveToRatio(DBCOUNTITEM nNumerator, 
+HRESULT MoveToRatio(DBCOUNTITEM nNumerator,
    DBCOUNTITEM nDenominator,bool bForward = true) throw();
 ```
 
@@ -789,13 +789,13 @@ HRESULT MoveToRatio(DBCOUNTITEM nNumerator, 
 
 `(nNumerator *  RowsetSize ) / nDenominator`
 
-其中`RowsetSize`是行集，以行为单位的大小。 此公式的准确性取决于特定的提供程序。 有关详细信息，请参阅[irowsetscroll::](/previous-versions/windows/desktop/ms709602)。
+其中`RowsetSize`是行集，以行为单位的大小。 此公式的准确性取决于特定的提供程序。 有关详细信息，请参阅[irowsetscroll::](https://docs.microsoft.com/previous-versions/windows/desktop/ms709602(v=vs.85))。
 
 此方法需要的可选接口`IRowsetScroll`，这可能不支持对所有提供程序; 如果这是这种情况，该方法将返回 E_NOINTERFACE。 您还必须设置`DBPROP_IRowsetScroll`为 VARIANT_TRUE 之前调用`Open`命令，其中包含行集的表上。
 
 ## <a name="releaserows"></a> Crowset:: Releaserows
 
-调用[irowset:: Releaserows](/previous-versions/windows/desktop/ms719771)释放当前的行句柄。
+调用[irowset:: Releaserows](https://docs.microsoft.com/previous-versions/windows/desktop/ms719771(v=vs.85))释放当前的行句柄。
 
 ### <a name="syntax"></a>语法
 
@@ -814,7 +814,7 @@ HRESULT ReleaseRows() throw();
 ### <a name="syntax"></a>语法
 
 ```cpp
-HRESULT SetData() const throw(); 
+HRESULT SetData() const throw();
 
 HRESULT SetData(int nAccessor) const throw();
 ```
@@ -843,8 +843,8 @@ HRESULT SetData(int nAccessor) const throw();
 ### <a name="syntax"></a>语法
 
 ```cpp
-HRESULT Undo(DBCOUNTITEM* pcRows = NULL, 
-   HROW* phRow = NULL, 
+HRESULT Undo(DBCOUNTITEM* pcRows = NULL,
+   HROW* phRow = NULL,
    DBROWSTATUS* pStatus = NULL) throw();
 ```
 
@@ -874,8 +874,8 @@ HRESULT Undo(DBCOUNTITEM* pcRows = NULL, 
 ### <a name="syntax"></a>语法
 
 ```cpp
-HRESULT Update(DBCOUNTITEM* pcRows = NULL, 
-   HROW* phRow = NULL, 
+HRESULT Update(DBCOUNTITEM* pcRows = NULL,
+   HROW* phRow = NULL,
    DBROWSTATUS* pStatus = NULL) throw();
 ```
 
@@ -907,8 +907,8 @@ HRESULT Update(DBCOUNTITEM* pcRows = NULL, 
 ### <a name="syntax"></a>语法
 
 ```cpp
-HRESULT UpdateAll(DBCOUNTITEM* pcRows = NULL, 
-   HROW** pphRow = NULL, 
+HRESULT UpdateAll(DBCOUNTITEM* pcRows = NULL,
+   HROW** pphRow = NULL,
    DBROWSTATUS** ppStatus = NULL) throw();
 ```
 

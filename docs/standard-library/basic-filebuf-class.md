@@ -40,12 +40,12 @@ helpviewer_keywords:
 - std::basic_filebuf [C++], uflow
 - std::basic_filebuf [C++], underflow
 ms.assetid: 3196ba5c-bf38-41bd-9a95-70323ddfca1a
-ms.openlocfilehash: fcf673d8e6d871a7920150b5f62fd3d62135b52c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 817e7fb2b434d06d6c0dfdfc100be8004f6fa4ef
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50500524"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51332642"
 ---
 # <a name="basicfilebuf-class"></a>basic_filebuf 类
 
@@ -504,11 +504,11 @@ virtual int_type pbackfail(int_type _Meta = traits_type::eof);
 
 ### <a name="return-value"></a>返回值
 
-如果该函数不成功，它将返回 `traits_type::eof`。 否则，它将返回 **traits_type::**[not_eof](../standard-library/char-traits-struct.md#not_eof)(_ *Meta*)。
+如果该函数不成功，它将返回 `traits_type::eof`。 否则，它将返回**traits_type::**[not_eof](../standard-library/char-traits-struct.md#not_eof)(*\_元*)。
 
 ### <a name="remarks"></a>备注
 
-受保护虚拟成员函数将元素放回到输入缓冲区中，随后使它成为当前元素（由下一个指针指向）。 如果 _*Meta* **== traits_type::**[eof](../standard-library/char-traits-struct.md#eof)，则要推送回的元素在当前元素之前实际上已是流中的一个元素了。 否则，则由 **ch = traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(\_ *Meta*) 替换该元素。 该函数可以用多种方法放回元素：
+受保护虚拟成员函数将元素放回到输入缓冲区中，随后使它成为当前元素（由下一个指针指向）。 如果 *\_Meta* **= = traits_type::**[eof](../standard-library/char-traits-struct.md#eof)，要推送回的元素实际上是已在当前元素之前的流中的一个。 否则，该元素将替换为**ch = traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(*\_元*)。 该函数可以用多种方法放回元素：
 
 - 如果放回位置可用，且存储在其中的元素进行比较等于`ch`，它可以递减输入缓冲区的下一个指针。
 

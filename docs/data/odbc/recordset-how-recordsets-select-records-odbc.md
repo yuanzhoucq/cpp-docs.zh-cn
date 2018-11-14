@@ -9,12 +9,12 @@ helpviewer_keywords:
 - recordsets, constructing SQL statements
 - ODBC recordsets, selecting records
 ms.assetid: 343a6a91-aa4c-4ef7-b21f-2f2bfd0d3787
-ms.openlocfilehash: 9e39929b4e669b6d7ed5662484ee71f762b4ea42
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7e7bbaad949b5f4456ce4c8aea60099792deb786
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618447"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51329459"
 ---
 # <a name="recordset-how-recordsets-select-records-odbc"></a>记录集：记录集如何选择记录 (ODBC)
 
@@ -61,9 +61,8 @@ ms.locfileid: "50618447"
 
 - [排序](../../data/odbc/recordset-sorting-records-odbc.md)排序记录集，如果任何，包含在[m_strSort](../../mfc/reference/crecordset-class.md#m_strsort)数据成员。 该框架使用此字符串来构造 SQL **ORDER BY**子句。
 
-
-    > [!TIP]
-    >  若要使用 SQL **GROUP BY**子句 (和可能**HAVING**子句)，将子句追加到筛选器字符串的末尾。
+   > [!TIP]
+   > 若要使用 SQL **GROUP BY**子句 (和可能**HAVING**子句)，将子句追加到筛选器字符串的末尾。
 
 - 值的任何[的参数数据成员](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)指定类。 只需在调用之前设置参数值`Open`或`Requery`。 框架将绑定到的参数值"？"中的 SQL 字符串的占位符。 在编译时，指定与占位符的字符串。 在运行时，框架自动填入基于传递的参数值的详细信息。
 

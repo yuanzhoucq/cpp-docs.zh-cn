@@ -1,17 +1,17 @@
 ---
 title: 测试已修改的 ATL DHTML 控件
-ms.date: 11/04/2016
+ms.date: 11/06/2018
 helpviewer_keywords:
 - HTML controls, testing
 - testing controls
 - DHTML controls, testing
 ms.assetid: 42316118-9433-410f-9d8a-0efcc1eff824
-ms.openlocfilehash: f0fec3e2430fd5956e3cc48cd64532efee30926d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 99f55807a7da647af0961f73c600ae0e31166cdc
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50501668"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51330965"
 ---
 # <a name="testing-the-modified-atl-dhtml-control"></a>测试已修改的 ATL DHTML 控件
 
@@ -31,13 +31,13 @@ ms.locfileid: "50501668"
 
 1. 突出显示该控件，因此激活边框。
 
-1. 上**控制**菜单上，单击**调用方法**。
+1. 上**控制**菜单中，选择**调用方法**。
 
-在列表中标记为方法**方法名称**是容器可以调用的方法：`MethodInvoked`和`GoToURL`。 通过用户界面控制所有其他方法。
+   在列表中标记为方法**方法名称**是容器可以调用的方法：`MethodInvoked`和`GoToURL`。 通过用户界面控制所有其他方法。
 
-1. 选择一种方法调用，单击`Invoke`显示方法的消息框，或导航到 www.microsoft.com。
+1. 选择一种方法来调用并选择**Invoke**显示方法的消息框，或导航到`www.microsoft.com`。
 
-1. 在中**调用方法**对话框中，单击**关闭**。
+1. 在中**调用方法**对话框框中，选择**关闭**。
 
 若要了解有关的各种元素和构成 ATL DHTML 控件文件的详细信息，请参阅[标识 DHTML 控件项目的元素](../atl/identifying-the-elements-of-the-dhtml-control-project.md)。
 

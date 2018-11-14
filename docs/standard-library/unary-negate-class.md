@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - unary_negate class
 ms.assetid: e3b86eec-3205-49b9-ab83-f55225af4e0c
-ms.openlocfilehash: acb0eaa446bf21a014d8be8c4dbeaedf0f282a1a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b43db182d9274281020d7ce92cfa1b3efe724197
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648183"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326012"
 ---
 # <a name="unarynegate-class"></a>unary_negate 类
 
@@ -44,7 +44,7 @@ public:
 
 ## <a name="remarks"></a>备注
 
-此模板类存储 _ Func 一元函数对象的副本。 它将其成员函数 `operator()` 定义为返回 **!**\_Func(left)。
+此模板类存储一元函数对象的副本 *\_Func*。 它定义其成员函数`operator()`为返回`!_Func(left)`。
 
 很少直接使用 `unary_negate` 的构造函数。 Helper 函数 [not1](../standard-library/functional-functions.md#not1) 可提供更简单的方法，用于声明和使用 **unary_negator** 适配器谓词。
 

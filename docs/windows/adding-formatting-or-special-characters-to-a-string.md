@@ -7,12 +7,12 @@ helpviewer_keywords:
 - strings [C++], formatting
 - strings [C++], special characters
 ms.assetid: c40f394a-8b2c-4896-ab30-6922863ddbb5
-ms.openlocfilehash: 740bf02d40dfcb236eef0dccbf55201dd79aec4c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b60f48983913f4dc146af1b4645710cd1393d072
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50493842"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51328326"
 ---
 # <a name="adding-formatting-or-special-characters-to-a-string-resource-c"></a>将格式设置或特殊字符添加到字符串资源 （c + +）
 
@@ -29,12 +29,12 @@ ms.locfileid: "50493842"
 
    |若要获取此信息|键入这|
    |-----------------|---------------|
-   |换行|\n|
-   |回车|\r|
-   |Tab|\t|
-   |反斜杠 (\\)|\\\|
-   |ASCII 字符|\ddd （八进制表示法）|
-   |警报 （响铃）|\a|
+   | 换行 | \\n |
+   | 回车 | \\R |
+   | Tab | \\t |
+   | 反斜杠 (\\) | \\\\ |
+   | ASCII 字符 | \\ddd （八进制表示法） |
+   | 警报 （响铃） | \\a |
 
 > [!NOTE]
 > **字符串**编辑器不支持转义 ASCI 字符的完整集。 您只能使用上面所列。

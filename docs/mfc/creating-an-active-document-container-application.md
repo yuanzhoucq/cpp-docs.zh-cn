@@ -8,12 +8,12 @@ helpviewer_keywords:
 - MFC COM, active document containment
 - applications [MFC], active document container
 ms.assetid: 14e2d022-a6c5-4249-8712-706b0f4433f7
-ms.openlocfilehash: ecce997c451b39600606550dd1198cddfd764334
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5cdd3de8f4efcc23f89b81cb61302b5950938800
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463327"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51520408"
 ---
 # <a name="creating-an-active-document-container-application"></a>创建活动文档容器应用程序
 
@@ -37,15 +37,15 @@ ms.locfileid: "50463327"
 
 1. 单击 **“完成”**。
 
-9. 当 MFC 应用程序向导完成应用程序生成时，使用解决方案资源管理器打开下列文件：
+1. 当 MFC 应用程序向导完成应用程序生成时，使用解决方案资源管理器打开下列文件：
 
    - *Myprojview.cpp 中*
 
-10. 在中*myprojview.cpp 中*，进行以下更改：
+1. 在中*myprojview.cpp 中*，进行以下更改：
 
    - 在 `CMyProjView::OnPreparePrinting` 中，将函数内容替换为下列代码：
 
-         [!code-cpp[NVC_MFCDocView#56](../mfc/codesnippet/cpp/creating-an-active-document-container-application_1.cpp)]
+     [!code-cpp[NVC_MFCDocView#56](../mfc/codesnippet/cpp/creating-an-active-document-container-application_1.cpp)]
 
    `OnPreparePrinting` 将提供打印支持。 此代码将替换 `DoPreparePrinting`，其是默认打印准备。
 
@@ -59,7 +59,7 @@ ms.locfileid: "50463327"
 
    如之前的代码所实现的一样，`COleDocObjectItem::OnPrint` 和 `COleDocObjectItem::OnPreparePrinting` 将处理此改进的打印方案。
 
-11. 添加您自己的任何实现并生成应用程序。
+1. 添加您自己的任何实现并生成应用程序。
 
 ## <a name="see-also"></a>请参阅
 

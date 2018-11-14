@@ -13,12 +13,12 @@ helpviewer_keywords:
 - CTable class
 - Open method
 ms.assetid: f13fdaa3-e198-4557-977d-54b0bbc3454d
-ms.openlocfilehash: 15081173edfae5ba0f881a6c1607a22e77a8a7c0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7605d78a140a0f5353a16b9e22d5d618d29ff327
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452164"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556674"
 ---
 # <a name="ctable-class"></a>CTable 类
 
@@ -95,10 +95,10 @@ HRESULT Open(const CSession& session,
 [in]`DBID`要打开的表。
 
 *pPropSet*<br/>
-[in]指向数组的指针[DBPROPSET](/previous-versions/windows/desktop/ms714367)结构包含要设置属性和值。 请参阅[属性设置和属性组](/previous-versions/windows/desktop/ms713696)中*OLE DB 程序员参考*Windows SDK 中。 默认值为 NULL 指定任何属性。
+[in]指向数组的指针[DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85))结构包含要设置属性和值。 请参阅[属性设置和属性组](https://docs.microsoft.com/previous-versions/windows/desktop/ms713696(v=vs.85))中*OLE DB 程序员参考*Windows SDK 中。 默认值为 NULL 指定任何属性。
 
 *ulPropSets*<br/>
-[in]数[DBPROPSET](/previous-versions/windows/desktop/ms714367)结构传入*pPropSet*参数。
+[in]数[DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85))结构传入*pPropSet*参数。
 
 ### <a name="return-value"></a>返回值
 
@@ -106,7 +106,7 @@ HRESULT Open(const CSession& session,
 
 ### <a name="remarks"></a>备注
 
-有关更多详细信息，请参阅[iopenrowset:: Openrowset](/previous-versions/windows/desktop/ms716724)中*OLE DB 程序员参考*。
+有关更多详细信息，请参阅[iopenrowset:: Openrowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms716724(v=vs.85))中*OLE DB 程序员参考*。
 
 ## <a name="see-also"></a>请参阅
 

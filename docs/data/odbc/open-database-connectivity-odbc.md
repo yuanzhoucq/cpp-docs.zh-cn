@@ -6,18 +6,18 @@ helpviewer_keywords:
 - databases [C++], ODBC
 - data access [C++], ODBC
 ms.assetid: 56b6067a-651e-4c10-a24d-d4a6a17ca5e4
-ms.openlocfilehash: 49955f12c5e9d4105d9fdbe0ec16bbd302672546
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8a4d6cad399b1773102dc0bc64e28049cca30d2d
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468726"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51523346"
 ---
 # <a name="open-database-connectivity-odbc"></a>开放式数据库连接 (ODBC)
 
 Microsoft 基础类 (MFC) 库提供使用开放式数据库连接 (ODBC) 进行编程时所需的类。 截至 Visual Studio 2015 和 SQL Server 2012 ODBC 是连接到 SQL 数据源的首选的方法。
 
-有关使用 ODBC API 而不使用 MFC 的详细信息，请参阅[开放式数据库连接 (ODBC)](/previous-versions/windows/desktop/ms710252) MSDN 中的 SDK。
+有关使用 ODBC API 而不使用 MFC 的详细信息，请参阅[开放式数据库连接 (ODBC)](/sql/odbc/microsoft-open-database-connectivity-odbc) MSDN 中的 SDK。
 
 
 ## <a name="in-this-section"></a>本节内容
@@ -58,7 +58,7 @@ Microsoft 基础类 (MFC) 库提供使用开放式数据库连接 (ODBC) 进行�
 
 ## <a name="odbc-database-tasks"></a>ODBC 数据库任务
 
-这些任务基于 MFC [ODBC](odbc-basics.md)类。 有关使用 ODBC API 而不使用 MFC 的详细信息，请参阅[开放式数据库连接 (ODBC)](/previous-versions/windows/desktop/ms710252) SDK。
+这些任务基于 MFC [ODBC](odbc-basics.md)类。 有关使用 ODBC API 而不使用 MFC 的详细信息，请参阅[开放式数据库连接 (ODBC)](/sql/odbc/microsoft-open-database-connectivity-odbc) SDK。
 
 - [安装并开始使用 ODBC](installing-and-getting-started-with-odbc.md)
 

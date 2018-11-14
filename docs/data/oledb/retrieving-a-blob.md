@@ -6,16 +6,16 @@ helpviewer_keywords:
 - BLOB (binary large object), retrieving
 - OLE DB, BLOBs (binary large objects)
 ms.assetid: 2893eb0a-5c05-4016-8914-1e40ccbaf0b3
-ms.openlocfilehash: 365b2e5636ecc65ea334730a92953070edd104ad
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 30551af0e74759d21cecae54714ca6eca1a37768
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50453204"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556538"
 ---
 # <a name="retrieving-a-blob"></a>检索 BLOB
 
-您可以检索各种方法中的二进制大型对象 (BLOB)。 可以使用`DBTYPE_BYTES`为一系列字节检索 BLOB 或使用类似的接口`ISequentialStream`。 有关详细信息，请参阅[BLOB 和 OLE 对象](/previous-versions/windows/desktop/ms711511)中**OLE DB 程序员参考**。
+您可以检索各种方法中的二进制大型对象 (BLOB)。 可以使用`DBTYPE_BYTES`为一系列字节检索 BLOB 或使用类似的接口`ISequentialStream`。 有关详细信息，请参阅[BLOB 和 OLE 对象](https://docs.microsoft.com/previous-versions/windows/desktop/ms711511(v=vs.85))中**OLE DB 程序员参考**。
 
 下面的代码演示如何检索 BLOB 使用`ISequentialStream`。 该宏[BLOB_ENTRY](../../data/oledb/blob-entry.md)允许您指定的接口和接口使用的标志。 打开后表，该代码调用`Read`重复在`ISequentialStream`从 BLOB 读取字节。 该代码调用`Release`释放之前调用的接口指针`MoveNext`获取下一条记录。
 

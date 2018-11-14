@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::auto_ptr [C++], release
 - std::auto_ptr [C++], reset
 ms.assetid: 7f9108b6-9eb3-4634-b615-cf7aa814f23b
-ms.openlocfilehash: 587168323b8af63d232b8df63e9dcac2f4601433
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f0c8e0c1f4dc2e1082d5df230c74efafcae24f29
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620943"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327117"
 ---
 # <a name="autoptr-class"></a>auto_ptr 类
 
@@ -282,11 +282,11 @@ auto_ptr<Type>& operator=(auto_ptr_ref<Type> right) throw();
 
 ### <a name="return-value"></a>返回值
 
-对类型为 `auto_ptr`\< **Type**>. 的对象的引用。
+对类型为 `auto_ptr<Type>` 的对象的引用。
 
 ### <a name="remarks"></a>备注
 
-赋值将对表达式`delete myptr`，但是只有当存储的指针`myptr`赋值后导致的更改。 然后，它通过存储 \_ *Right* 转移存储在 _ *Right* 中的指针的所有权。 [释放](#release)在`myptr`。 该函数返回 **\*this**。
+赋值将对表达式`delete myptr`，但是只有当存储的指针`myptr`赋值后导致的更改。 然后将传输中存储的指针的所有权*右*，通过将存储*右*。[释放](#release)在`myptr`。 该函数返回 __\*this__。
 
 ### <a name="example"></a>示例
 

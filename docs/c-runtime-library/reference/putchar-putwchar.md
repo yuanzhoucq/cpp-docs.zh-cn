@@ -28,12 +28,12 @@ helpviewer_keywords:
 - standard output, writing to
 - putwchar function
 ms.assetid: 93657c7f-cca1-4032-8e3a-cd6ab6193748
-ms.openlocfilehash: 69ae5d7a24d7cf440d1dfb5ad716ee106f91576c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: becee3d79f58ac018d1161c1af36e9a4646640bf
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50483341"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327052"
 ---
 # <a name="putchar-putwchar"></a>putchar、putwchar
 
@@ -57,7 +57,7 @@ wint_t putwchar(
 
 ## <a name="return-value"></a>返回值
 
-返回写入的字符。 若要指示错误或文件结尾条件**putc**并**putchar**返回 * * EOF`; **putwc`并**putwchar**返回**WEOF**。 对于所有四种例程，使用 [ferror](ferror.md) 或 [feof](feof.md) 来检查是否存在错误或文件结尾。 如果为传递 null 指针*流*，这些函数将生成无效的参数异常，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，它们将返回**EOF**或**WEOF**并设置**errno**到**EINVAL**。
+返回写入的字符。 若要指示错误或文件结尾条件**putc**并**putchar**返回**EOF**;**putwc**并**putwchar**返回**WEOF**。 对于所有四种例程，使用 [ferror](ferror.md) 或 [feof](feof.md) 来检查是否存在错误或文件结尾。 如果为传递 null 指针*流*，这些函数将生成无效的参数异常，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，它们将返回**EOF**或**WEOF**并设置**errno**到**EINVAL**。
 
 有关这些代码以及其他错误代码的详细信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 

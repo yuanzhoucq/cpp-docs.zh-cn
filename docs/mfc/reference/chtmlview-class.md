@@ -194,12 +194,12 @@ helpviewer_keywords:
 - CHtmlView [MFC], SetWidth
 - CHtmlView [MFC], Stop
 ms.assetid: 904976af-73de-4aba-84ac-cfae8e2be09a
-ms.openlocfilehash: f30194d552f8bafb4d52597aeb53dbe02a780213
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b37cff8bd3eb3bd05bc7030c4cc12b9b84568b1f
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438111"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51333636"
 ---
 # <a name="chtmlview-class"></a>CHtmlView 类
 
@@ -1194,7 +1194,7 @@ virtual void OnDocumentComplete(LPCTSTR lpszURL);
 
 不是每个帧将触发此事件，但将触发的每个帧[OnDownloadBegin](#ondownloadbegin)事件将激发相应`OnDocumentComplete`事件。
 
-URL 指示*lpszURL*可以不同于在浏览器被告知要导航到，因为此 URL 是规范化和限定的 URL 的 URL。 例如，如果应用程序指定"www.microsoft.com"的调用中到的 URL [Navigate](#navigate)或[Navigate2](#navigate2)，通过传递 URL`OnNavigateComplete2`将为"http://www.microsoft.com/"。 此外，如果服务器具有定向到不同的 URL 的浏览器，重定向的 URL 将会反映在此处。
+URL 指示*lpszURL*可以不同于在浏览器被告知要导航到，因为此 URL 是规范化和限定的 URL 的 URL。 例如，如果应用程序指定"www.microsoft.com"的调用中到的 URL [Navigate](#navigate)或[Navigate2](#navigate2)，通过传递 URL`OnNavigateComplete2`将为"<http://www.microsoft.com/>"。 此外，如果服务器具有定向到不同的 URL 的浏览器，重定向的 URL 将会反映在此处。
 
 ##  <a name="ondocwindowactivate"></a>  CHtmlView::OnDocWindowActivate
 
@@ -1458,7 +1458,7 @@ virtual void OnNavigateComplete2(LPCTSTR strURL);
 
 URL 参数可以是在没有任何 URL 表示形式的命令行程序名称空间实体的情况下 PIDL。
 
-请注意，在 URL 中包含*strURL*可以不同于在浏览器被告知要导航到，因为此 URL 是规范化和限定的 URL 的 URL。 例如，如果应用程序指定"www.microsoft.com"的调用中到的 URL [Navigate](#navigate)或[Navigate2](#navigate2)，通过传递 URL`OnNavigateComplete2`将为"http://www.microsoft.com/"。 此外，如果服务器具有定向到不同的 URL 的浏览器，重定向的 URL 将会反映在此处。
+请注意，在 URL 中包含*strURL*可以不同于在浏览器被告知要导航到，因为此 URL 是规范化和限定的 URL 的 URL。 例如，如果应用程序指定"www.microsoft.com"的调用中到的 URL [Navigate](#navigate)或[Navigate2](#navigate2)，通过传递 URL`OnNavigateComplete2`将为"<http://www.microsoft.com/>"。 此外，如果服务器具有定向到不同的 URL 的浏览器，重定向的 URL 将会反映在此处。
 
 ##  <a name="onnavigateerror"></a>  CHtmlView::OnNavigateError
 

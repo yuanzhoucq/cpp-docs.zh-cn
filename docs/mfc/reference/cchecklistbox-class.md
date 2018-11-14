@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CCheckListBox [MFC], SetCheck
 - CCheckListBox [MFC], SetCheckStyle
 ms.assetid: 1dd78438-00e8-441c-b36f-9c4f9ac0d019
-ms.openlocfilehash: 72038e119f7d4483dcd6c6b343d20fd3655856b8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b3bf93a876f9092d5615b75ca45fea71341d3557
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50533869"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327338"
 ---
 # <a name="cchecklistbox-class"></a>CCheckListBox 类
 
@@ -80,13 +80,13 @@ class CCheckListBox : public CListBox
 
 每个消息映射条目采用以下形式：
 
-**ON_** 通知 **(**`id`， `memberFxn` **)**
+**ON\_**_通知_ **(** _id_， _memberFxn_ **)**
 
 其中`id`指定将通知发送到该控件的子窗口 ID 和`memberFxn`是您编写以处理通知的父成员函数的名称。
 
 父项的函数原型如下所示：
 
-**afx_msg** `void` `memberFxn` **（);**
+`afx_msg void memberFxn();`
 
 仅具有一个专门针对相关的消息映射条目`CCheckListBox`(另请参阅有关的消息映射条目，但[CListBox](../../mfc/reference/clistbox-class.md)):
 

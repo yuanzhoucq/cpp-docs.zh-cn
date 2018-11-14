@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - declarators, about declarators
 ms.assetid: 0f2e2312-80bd-4154-8345-718bd9ed2173
-ms.openlocfilehash: 8279dcb7f3cbc137320e46dded48d140d1429f8a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 66f1068fd3f69d3e4546f159ec22b34024bd2057
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50583347"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326753"
 ---
 # <a name="overview-of-declarators"></a>声明符概述
 
@@ -155,11 +155,11 @@ int a, *b, c[5], **d, &e=a;
 
 - `declarator` 被定义为以下项之一：
 
-  - identifier 
-  - 限定名称 
+  - identifier
+  - 限定名称
   - 声明符 （参数列表） [cv-qualfiers] [异常 spec]
   - 声明符 [[常数表达式]]
-  - 指针运算符声明符 
+  - 指针运算符声明符
   - （声明符）
 
 - 并*指针运算符*是之一：

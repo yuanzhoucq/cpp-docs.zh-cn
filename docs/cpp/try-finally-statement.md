@@ -20,12 +20,12 @@ helpviewer_keywords:
 - __leave keyword [C++], try-finally statement
 - structured exception handling [C++], try-finally
 ms.assetid: 826e0347-ddfe-4f6e-a7bc-0398e0edc7c2
-ms.openlocfilehash: 6b0c0f018d5d66ea62b29b971e5390751a69e3c4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 55d22951c4203c582f7823fef033a0476f8c9a52
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631798"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326910"
 ---
 # <a name="try-finally-statement"></a>try-finally 语句
 
@@ -33,27 +33,26 @@ ms.locfileid: "50631798"
 
 下面的语法描述**的 try-finally**语句：
 
-```cpp
-__try {
-   // guarded code
-}
-__finally {
-   // termination code
-}
-```
+> **\_\_请尝试**<br/>
+> {<br/>
+> &nbsp;&nbsp;&nbsp;&nbsp;受保护的代码<br/>
+> }<br/>
+> **\_\_最后**<br/>
+> {<br/>
+> &nbsp;&nbsp;&nbsp;&nbsp;终止代码<br/>
+> }<br/>
 
 ## <a name="grammar"></a>语法
 
-*请尝试的最后的语句*: **__try** *复合语句*
-
-**__finally** *复合语句*
+try-finally-statement:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**\_\_请尝试***复合语句*  **\_\_最后***复合语句*
 
 **的 try-finally**语句是 C 和 c + + 语言的 Microsoft 扩展，使目标应用程序的代码块的执行被中断时保证清理代码的执行。 清理包括多个任务，如释放内存、关闭文件和释放文件句柄。 **的 try-finally**语句一点尤其适用于具有多个位置，则进行检查错误的可能会导致过早的例程将返回例程。
 
 有关相关的信息和代码示例，请参阅[试用-除非语句](../cpp/try-except-statement.md)。 一般情况下处理结构化异常的详细信息，请参阅[结构化异常处理](../cpp/structured-exception-handling-c-cpp.md)。 在托管应用程序中处理异常的详细信息，请参阅[/clr 下的异常处理](../windows/exception-handling-cpp-component-extensions.md)。
 
 > [!NOTE]
->  结构化异常处理适用于 Win32 中的 C 和 C++ 源文件。 但是，这不是专门为 C++ 设计的。 您可通过使用 C++ 异常处理来确保提高代码的可移植性。 此外，C++ 异常处理更为灵活，因此它可以处理任何类型的异常。 对于 C++ 程序，建议你使用 C++ 异常处理机制 ([try、 catch 和 throw](../cpp/try-throw-and-catch-statements-cpp.md)语句)。
+> 结构化异常处理适用于 Win32 中的 C 和 C++ 源文件。 但是，这不是专门为 C++ 设计的。 您可通过使用 C++ 异常处理来确保提高代码的可移植性。 此外，C++ 异常处理更为灵活，因此它可以处理任何类型的异常。 对于 C++ 程序，建议你使用 C++ 异常处理机制 ([try、 catch 和 throw](../cpp/try-throw-and-catch-statements-cpp.md)语句)。
 
 后的复合语句 **__try**子句是受保护的节。 后的复合语句 **__finally**子句是终止处理程序。 处理程序指定了在退出受保护部分时执行的一组操作，无论受保护部分是因异常（不正常终止）还是因标准失效（正常终止）导致退出。
 
@@ -72,7 +71,7 @@ __finally {
 ![终止的顺序&#45;处理程序执行](../cpp/media/vc38cx1.gif "vc38CX1")终止处理程序执行顺序
 
 > [!NOTE]
->  的 try-finally 的行为是不同于支持使用的其他一些语言**最后**，如 C#。  将单个 **__try**可能存在，但不是能同时的 **__finally**并 **__except**。  如果同时使用二者，则外部 try-except 语句必须包含内部 try-finally 语句。  指定何时执行每个块的规则也有所不同。
+> 的 try-finally 的行为是不同于支持使用的其他一些语言**最后**，如 C#。  将单个 **__try**可能存在，但不是能同时的 **__finally**并 **__except**。  如果同时使用二者，则外部 try-except 语句必须包含内部 try-finally 语句。  指定何时执行每个块的规则也有所不同。
 
 与以前版本的兼容性 **_finally**， **__identifier**，并 **_leave**是的同义词 **__try**， **__最后**，并 **__leave**除非编译器选项[/Za\(禁用语言扩展)](../build/reference/za-ze-disable-language-extensions.md)指定。
 

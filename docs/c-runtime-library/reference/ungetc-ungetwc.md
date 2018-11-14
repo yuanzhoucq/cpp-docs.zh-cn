@@ -28,12 +28,12 @@ helpviewer_keywords:
 - _ungettc function
 - ungetc function
 ms.assetid: e0754f3a-b4c6-408f-90c7-e6387b830d84
-ms.openlocfilehash: 95d2160ba4d008ab67f443d4e9dda7180d62b590
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c504540f8fbbe14961fa051bb93ebef350c2c1da
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50633575"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51332382"
 ---
 # <a name="ungetc-ungetwc"></a>ungetc、ungetwc
 
@@ -62,7 +62,7 @@ wint_t ungetwc(
 
 ## <a name="return-value"></a>返回值
 
-如果成功，这些函数将返回字符参数*c*。 如果*c*无法推送回或输入的流不读取的任何字符，如果保持不变并**ungetc**返回 * * EOF`; **ungetwc`返回**WEOF**。 如果*流*是**NULL**，将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则**EOF**或**WEOF**返回并**errno**设置为**EINVAL**。
+如果成功，这些函数将返回字符参数*c*。 如果*c*无法推送回或输入的流不读取的任何字符，如果保持不变并**ungetc**返回**EOF**;**ungetwc**返回**WEOF**。 如果*流*是**NULL**，将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则**EOF**或**WEOF**返回并**errno**设置为**EINVAL**。
 
 有关这些代码及其他错误代码的信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 

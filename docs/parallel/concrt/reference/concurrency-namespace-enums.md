@@ -12,12 +12,12 @@ f1_keywords:
 - CONCRT/concurrency::join_type
 - CONCRT/concurrency::message_status Enumeration
 ms.assetid: a40e3b2d-ad21-4229-9880-2cfa84f7ab8f
-ms.openlocfilehash: 97d2e9fd8e64475d9194bb8b2ab12fdee315e176
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 342655e290167315b7f10caba979804461e10658
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677339"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51521071"
 ---
 # <a name="concurrency-namespace-enums"></a>并发命名空间枚举
 
@@ -164,6 +164,7 @@ enum DynamicProgressFeedbackType;
 |----------|-----------------|
 |`ProgressFeedbackDisabled`|计划程序不会收集进度信息。 重新平衡是基于完成取决于基础硬件线程的订阅级别。 订阅级别的详细信息，请参阅[iexecutionresource:: Currentsubscriptionlevel](IExecutionResource-structure.md)。<br /><br /> 由运行时情况下，此值保留供使用。|
 |`ProgressFeedbackEnabled`|计划程序收集进度信息，并将其传递给资源管理器。 资源管理器将使用这些统计信息来重新平衡资源，代表基础硬件线程的订阅级别除了计划程序。 订阅级别的详细信息，请参阅[iexecutionresource:: Currentsubscriptionlevel](IExecutionResource-structure.md)。|
+
 ##  <a name="join_type"></a>  join_type 枚举
 
 `join` 消息块的类型。

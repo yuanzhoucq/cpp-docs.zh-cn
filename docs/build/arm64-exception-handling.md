@@ -1,12 +1,12 @@
 ---
 title: ARM64 异常处理
 ms.date: 07/11/2018
-ms.openlocfilehash: 82775a61adf8437565b5bb691716451b225e72e4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5189c399a4cbff071d2ec846008229ba76306882
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620592"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51333584"
 ---
 # <a name="arm64-exception-handling"></a>ARM64 异常处理
 
@@ -56,7 +56,7 @@ Windows 在 ARM64 上的使用相同的结构化的异常处理机制，用于�
 
 对于链接在一起的帧的函数，可以根据优化注意事项的本地变量区域中的任何位置保存 fp 和 lr 对。 目标是最大化的局部变量可以达到通过基于帧指针 (r29) 或堆栈指针 (sp) 的一个单个指令的数量。 但是对于`alloca`函数必须链接和 r29 必须指向堆栈的底部。 若要允许更多寄存器-对-寻址的模式下，非易失性注册的 aave 区域放置于本地区域堆栈的顶部。 下面是示例，展示了几个最有效的 prolog 序列。 为了明确和更好的缓存区域，便于在所有规范的 prolog 中存储被调用方保存的寄存器的顺序是按"增长设置"的顺序。 `#framesz` 下面表示整个堆栈 （不包括 alloca 区域） 的大小。 `#localsz` 并`#outsz`表示本地区域的大小 (包括保存区域\<r29，lr > 对) 和分别传出参数大小。
 
-1. 链接在一起，#localsz < = 512
+1. 链接在一起，#localsz \<= 512
 
     ```asm
         stp    r19,r20,[sp,-96]!        // pre-indexed, save in 1st FP/INT pair
@@ -95,7 +95,7 @@ Windows 在 ARM64 上的使用相同的结构化的异常处理机制，用于�
         sub    sp,#framesz-72           // allocate the remaining local area
     ```
 
-   所有局部变量访问基于 sp。 \<r29，lr > 指向上一帧。 帧大小 < = 512，"sub sp，..."可以被优化掉 regs 保存区域移到堆栈的底部。 缺点是范围的它不是范围的与更高版本，其他布局一致，并保存的 regs 采取对 regs 和前和后索引偏移量的寻址模式的一部分。
+   所有局部变量访问基于 sp。 \<r29，lr > 指向上一帧。 帧大小\<= 512，"sub sp，..."可以被优化掉 regs 保存区域移到堆栈的底部。 缺点是范围的它不是范围的与更高版本，其他布局一致，并保存的 regs 采取对 regs 和前和后索引偏移量的寻址模式的一部分。
 
 1. 非链接、 非叶函数 （lr 保存在保存 Int 区域）
 
@@ -131,7 +131,7 @@ Windows 在 ARM64 上的使用相同的结构化的异常处理机制，用于�
 
    所有局部变量访问基于 sp。 \<r29 > 指向上一帧。
 
-1. 链接在一起，#framesz < = 512，#outsz = 0
+1. 链接在一起，#framesz \<= 512，#outsz = 0
 
     ```asm
         stp    r29, lr, [sp, -#framesz]!    // pre-indexed, save <r29,lr>
@@ -283,40 +283,40 @@ ULONG ComputeXdataSize(PULONG *Xdata)
 
 展开代码是根据下表进行编码。 所有展开代码是一个单/双字节，只分配一个巨大的堆栈。 完全有 21 展开代码。 每个展开代码映射一个指令在 prolog/epilog 中以便为展开的部分执行的 prolog 和 epilog。
 
-展开代码|Bits 和解释
+|展开代码|Bits 和解释|
 |-|-|
-`alloc_s`|000xxxxx： 分配小型堆栈大小 < 512 (2 ^5 * 16)。
-`save_r19r20_x`|    001zzzzz： 保存\<r19，r20 > 对在 [sp #Z * 8] ！，预索引偏移量 > =-248
-`save_fplr`|        01zzzzzz： 保存\<r29，lr > 对在 [sp + #Z * 8]，偏移量 < = 504。
-`save_fplr_x`|        10zzzzzz： 保存\<r29，lr > 对在 [sp-（#Z + 1） * 8] ！，预索引偏移量 > =-512
-`alloc_m`|        11000xxx\|xxxxxxxx： 分配大堆栈大小 < 16k (2 ^11 * 16)。
-`save_regp`|        110010xx\|xxzzzzzz： 保存 r(19+#X) 对在 [sp + #Z * 8]，偏移量 < = 504
-`save_regp_x`|        110011xx\|xxzzzzzz： 保存对 r(19+#X) 在 [sp-（#Z + 1） * 8] ！，预索引偏移量 > =-512
-`save_reg`|        110100xx\|xxzzzzzz： 保存 reg r(19+#X) 在 [sp + #Z * 8]，偏移量 < = 504
-`save_reg_x`|        1101010 x\|xxxzzzzz： 保存 reg r(19+#X) 在 [sp-（#Z + 1） * 8] ！，预索引偏移量 > =-256
-`save_lrpair`|         1101011 x\|xxzzzzzz： 保存对\<r19 + 2 *#X，lr > 在 [sp + #Z*8]，偏移量 < = 504
-`save_fregp`|        1101100 x\|xxzzzzzz： 保存对 d(8+#X) 在 [sp + #Z * 8]，偏移量 < = 504
-`save_fregp_x`|        1101101 x\|xxzzzzzz： 在保存对 d(8+#X) [sp-（#Z + 1） * 8] ！，预索引偏移量 > =-512
-`save_freg`|        1101110 x\|xxzzzzzz： 保存 reg d(8+#X) 在 [sp + #Z * 8]，偏移量 < = 504
-`save_freg_x`|        11011110\|xxxzzzzz： 保存 reg d(8+#X) 在 [sp-（#Z + 1） * 8] ！，预索引偏移量 > =-256
-`alloc_l`|         11100000\|xxxxxxxx\|xxxxxxxx\|xxxxxxxx： 分配大堆栈大小 < 256 M (2 ^24 * 16)
-`set_fp`|        11100001： 设置 r29： 与： mov r29 sp
-`add_fp`|        11100010\|xxxxxxxx： 设置 r29 与： 添加 r29、 sp、 #x * 8
-`nop`|            11100011： 不展开操作是必需的。
-`end`|            11100100： 展开代码的末尾。 表示已在 epilog 中。
-`end_c`|        11100101： 当前链接作用域中的展开代码的末尾。
-`save_next`|        11100110： 保存下一个非易失性 Int 或 FP 注册对。
-`arithmetic(add)`|    11100111\| 000zxxxx： 将 cookie reg(z) 添加到 lr (0 = x28，1 = sp); 添加 lr，lr，reg(z)
-`arithmetic(sub)`|    11100111\| 001zxxxx: sub cookie reg(z) lr 从 (0 = x28，1 = sp); 子 lr，lr，reg(z)
-`arithmetic(eor)`|    11100111\| 010zxxxx： 使用 cookie reg(z) eor lr (0 = x28，1 = sp); eor lr，lr，reg(z)
-`arithmetic(rol)`|    11100111\| 0110xxxx： 使用 cookie reg (x28) lr 的模拟的 rol; xip0 = neg x28; ror lr，xip0
-`arithmetic(ror)`|    11100111\| 100zxxxx： 使用 cookie reg(z) ror lr (0 = x28，1 = sp); ror lr，lr，reg(z)
-||            11100111: xxxz---:-保留
-||              11101xxx： 对于自定义堆栈情况下才会生成 asm 例程的保留
-||              11101001: MSFT_OP_TRAP_FRAME 的自定义堆栈
-||              11101010: MSFT_OP_MACHINE_FRAME 的自定义堆栈
-||              11101011: MSFT_OP_CONTEXT 的自定义堆栈
-||              1111xxxx： 保留
+|`alloc_s`|000xxxxx： 分配大小的小型堆栈\<512 (2 ^5 * 16)。|
+|`save_r19r20_x`|    001zzzzz： 保存\<r19，r20 > 对在 [sp #Z * 8] ！，预索引偏移量 > =-248 |
+|`save_fplr`|        01zzzzzz： 保存\<r29，lr > 对在 [sp + #Z * 8]，偏移量\<= 504。 |
+|`save_fplr_x`|        10zzzzzz： 保存\<r29，lr > 对在 [sp-（#Z + 1） * 8] ！，预索引偏移量 > =-512 |
+|`alloc_m`|        11000xxx'xxxxxxxx： 分配大堆栈大小\<16k (2 ^11 * 16)。 |
+|`save_regp`|        110010xx xxzzzzzz： 保存 r(19+#X) 对在 [sp + #Z * 8]，偏移量\<= 504 |
+|`save_regp_x`|        110011xx xxzzzzzz： 保存对 r(19+#X) 在 [sp-（#Z + 1） * 8] ！，预索引偏移量 > =-512 |
+|`save_reg`|        110100xx xxzzzzzz： 保存 reg r(19+#X) 在 [sp + #Z * 8]，偏移量\<= 504 |
+|`save_reg_x`|        1101010 x'xxxzzzzz： 保存 reg r(19+#X) 在 [sp-（#Z + 1） * 8] ！，预索引偏移量 > =-256 |
+|`save_lrpair`|         1101011 x'xxzzzzzz： 保存对\<r19 + 2 *#X，lr > 在 [sp + #Z*8]，偏移量\<= 504 |
+|`save_fregp`|        1101100 x'xxzzzzzz： 保存对 d(8+#X) 在 [sp + #Z * 8]，偏移量\<= 504 |
+|`save_fregp_x`|        1101101 x'xxzzzzzz： 在保存对 d(8+#X) [sp-（#Z + 1） * 8] ！，预索引偏移量 > =-512 |
+|`save_freg`|        1101110 x'xxzzzzzz： 保存 reg d(8+#X) 在 [sp + #Z * 8]，偏移量\<= 504 |
+|`save_freg_x`|        11011110 xxxzzzzz： 保存 reg d(8+#X) 在 [sp-（#Z + 1） * 8] ！，预索引偏移量 > =-256 |
+|`alloc_l`|         11100000' xxxxxxxx 'xxxxxxxx' xxxxxxxx： 分配大堆栈大小\<256 M (2 ^24 * 16) |
+|`set_fp`|        11100001： 设置 r29： 与： mov r29 sp |
+|`add_fp`|        11100010' xxxxxxxx： 设置 r29 与： 添加 r29、 sp、 #x * 8 |
+|`nop`|            11100011： 不展开操作是必需的。 |
+|`end`|            11100100： 展开代码的末尾。 表示已在 epilog 中。 |
+|`end_c`|        11100101： 当前链接作用域中的展开代码的末尾。 |
+|`save_next`|        11100110： 保存下一个非易失性 Int 或 FP 注册对。 |
+|`arithmetic(add)`|    11100111"000zxxxx： 将 cookie reg(z) 添加到 lr (0 = x28，1 = sp);添加 lr，lr，reg(z) |
+|`arithmetic(sub)`|    11100111"001zxxxx: sub cookie reg(z) lr 从 (0 = x28，1 = sp);sub lr，lr，reg(z) |
+|`arithmetic(eor)`|    11100111"010zxxxx： 使用 cookie reg(z) eor lr (0 = x28，1 = sp);eor lr，lr，reg(z) |
+|`arithmetic(rol)`|    11100111"0110xxxx： 模拟的 rol 的 cookie reg (x28); 与 lrxip0 = neg x28;ror lr xip0 |
+|`arithmetic(ror)`|    11100111"100zxxxx： 使用 cookie reg(z) ror lr (0 = x28，1 = sp);ror lr，lr，reg(z) |
+| |            11100111: xxxz---:-保留 |
+| |              11101xxx： 对于自定义堆栈情况下才会生成 asm 例程的保留 |
+| |              11101001: MSFT_OP_TRAP_FRAME 的自定义堆栈 |
+| |              11101010: MSFT_OP_MACHINE_FRAME 的自定义堆栈 |
+| |              11101011: MSFT_OP_CONTEXT 的自定义堆栈 |
+| |              1111xxxx： 保留 |
 
 在具有涵盖多个字节的大值的说明，第一次存储最高有效位。 上面的展开代码经过专门设计，以便通过只需查找代码的第一个字节，就可以知道以字节为单位的展开代码的总大小。 考虑到每个展开代码完全映射到在 prolog/epilog 中的指令，来计算的大小 prolog 或 epilog 中，需要完成的是引导从序列的开始到结束时，使用查找表或类似的设备来确定多长时间 cor响应操作码。
 
@@ -382,7 +382,7 @@ ULONG ComputeXdataSize(PULONG *Xdata)
 5d|(**CR** = = 00 \| \| **CR**= = 01) &AMP; &AMP;<br/>#locsz < = 4088|1|`sub sp,sp, #locsz`|`alloc_s`/`alloc_m`
 5e|(**CR** = = 00 \| \| **CR**= = 01) &AMP; &AMP;<br/>#locsz > 4088|2|`sub sp,sp,4088`<br/>`sub sp,sp, (#locsz-4088)`|`alloc_m`<br/>`alloc_s`/`alloc_m`
 
-\*： 如果**CR** = = 01 和**RegI**数为奇数，步骤 2 和步骤 1 中的最后一个 save_rep 合并到一个 save_regp。
+\* 如果**CR** = = 01 和**RegI**数为奇数，步骤 2 和步骤 1 中的最后一个 save_rep 合并到一个 save_regp。
 
 \*\* 如果**RegI** == **CR** = = 0，并且**RegF** ！ = 0，第一个 stp 浮点不前置。
 

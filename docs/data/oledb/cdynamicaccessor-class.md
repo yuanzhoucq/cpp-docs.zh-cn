@@ -127,12 +127,12 @@ helpviewer_keywords:
 - SetStatus method
 - SetValue method
 ms.assetid: 374b13b7-1f09-457d-9e6b-df260ff4d178
-ms.openlocfilehash: ba456f11973a33eb3b65b8de940e5be76b821f89
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 12953da220016c7f66e9a2f01b4b8860d2e508b8
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50461462"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51557019"
 ---
 # <a name="cdynamicaccessor-class"></a>CDynamicAccessor 类
 
@@ -156,7 +156,7 @@ class CDynamicAccessor : public CAccessorBase
 |-|-|
 |[AddBindEntry](#addbindentry)|重写默认访问器时，请将绑定条目添加到输出列。|
 |[CDynamicAccessor](#cdynamicaccessor)|实例化并初始化`CDynamicAccessor`对象。|
-|[关闭](#close)|取消绑定所有列时，释放分配的内存，并释放[IAccessor](/previous-versions/windows/desktop/ms719672)类中的接口指针。|
+|[关闭](#close)|取消绑定所有列时，释放分配的内存，并释放[IAccessor](https://docs.microsoft.com/previous-versions/windows/desktop/ms719672(v=vs.85))类中的接口指针。|
 |[GetBlobHandling](#getblobhandling)|检索 BLOB 处理的当前行值。|
 |[GetBlobSizeLimit](#getblobsizelimit)|检索以字节为单位的最大 BLOB 大小。|
 |[GetBookmark](#getbookmark)|检索当前行的书签。|
@@ -196,7 +196,7 @@ HRESULT AddBindEntry(const DBCOLUMNINFO& info) throw();
 #### <a name="parameters"></a>参数
 
 info<br/>
-[in]一个`DBCOLUMNINFO`结构，它包含的列信息。 请参阅中的"DBCOLUMNINFO 结构" [icolumnsinfo:: Getcolumninfo](/previous-versions/windows/desktop/ms722704)中*OLE DB 程序员参考*。
+[in]一个`DBCOLUMNINFO`结构，它包含的列信息。 请参阅中的"DBCOLUMNINFO 结构" [icolumnsinfo:: Getcolumninfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms722704(v=vs.85))中*OLE DB 程序员参考*。
 
 ### <a name="return-value"></a>返回值
 
@@ -233,7 +233,7 @@ CDynamicAccessor(DBBLOBHANDLINGENUM eBlobHandling = DBBLOBHANDLING_DEFAULT,
 
 ## <a name="close"></a> Cdynamicaccessor:: Close
 
-取消绑定所有列时，释放分配的内存，并释放[IAccessor](/previous-versions/windows/desktop/ms719672)类中的接口指针。
+取消绑定所有列时，释放分配的内存，并释放[IAccessor](https://docs.microsoft.com/previous-versions/windows/desktop/ms719672(v=vs.85))类中的接口指针。
 
 ### <a name="syntax"></a>语法
 
@@ -313,7 +313,7 @@ DBORDINAL GetColumnCount() const throw();
 ### <a name="syntax"></a>语法
 
 ```cpp
-bool GetColumnFlags(DBORDINAL nColumn, 
+bool GetColumnFlags(DBORDINAL nColumn,
    DBCOLUMNFLAGS* pFlags) const throw();
 ```
 
@@ -323,7 +323,7 @@ bool GetColumnFlags(DBORDINAL nColumn, 
 [in] 列号。 列号从 1 开始。 值为 0 指书签列，如果有的话。
 
 *pFlags*<br/>
-[out]指向描述列特征的位掩码的指针。 请参阅中的"DBCOLUMNFLAGS 枚举类型" [icolumnsinfo:: Getcolumninfo](/previous-versions/windows/desktop/ms722704)中*OLE DB 程序员参考*。
+[out]指向描述列特征的位掩码的指针。 请参阅中的"DBCOLUMNFLAGS 枚举类型" [icolumnsinfo:: Getcolumninfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms722704(v=vs.85))中*OLE DB 程序员参考*。
 
 ### <a name="return-value"></a>返回值
 
@@ -340,22 +340,22 @@ bool GetColumnFlags(DBORDINAL nColumn, 
 ### <a name="syntax"></a>语法
 
 ```cpp
-HRESULT GetColumnInfo(IRowset* pRowset, 
-   DBORDINAL* pColumns, 
-   DBCOLUMNINFO** ppColumnInfo, 
+HRESULT GetColumnInfo(IRowset* pRowset,
+   DBORDINAL* pColumns,
+   DBCOLUMNINFO** ppColumnInfo,
    OLECHAR** ppStringsBuffer) throw();
 ```
 
 #### <a name="parameters"></a>参数
 
 *pRowset*<br/>
-[in]一个指向[IRowset](/previous-versions/windows/desktop/ms720986)接口。
+[in]一个指向[IRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms720986(v=vs.85))接口。
 
 *pColumns*<br/>
 [out]一个指向内存中要在行集中; 返回的列数此数字包括书签列，如果有的话。
 
 *ppColumnInfo*<br/>
-[out]指向内存中要返回的数组的指针`DBCOLUMNINFO`结构。 请参阅中的"DBCOLUMNINFO 结构" [icolumnsinfo:: Getcolumninfo](/previous-versions/windows/desktop/ms722704)中*OLE DB 程序员参考*。
+[out]指向内存中要返回的数组的指针`DBCOLUMNINFO`结构。 请参阅中的"DBCOLUMNINFO 结构" [icolumnsinfo:: Getcolumninfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms722704(v=vs.85))中*OLE DB 程序员参考*。
 
 *ppStringsBuffer*<br/>
 [out]指向在其中存储的所有字符串值返回一个指向内存的指针 (在使用名称*columnid* ; 二是*pwszName*) 单个分配块中。
@@ -366,7 +366,7 @@ HRESULT GetColumnInfo(IRowset* pRowset, 
 
 ### <a name="remarks"></a>备注
 
-请参阅[icolumnsinfo:: Getcolumninfo](/previous-versions/windows/desktop/ms722704)中*OLE DB 程序员参考*有关数据类型信息`DBORDINAL`， `DBCOLUMNINFO`，和`OLECHAR`。
+请参阅[icolumnsinfo:: Getcolumninfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms722704(v=vs.85))中*OLE DB 程序员参考*有关数据类型信息`DBORDINAL`， `DBCOLUMNINFO`，和`OLECHAR`。
 
 ## <a name="getcolumnname"></a> Cdynamicaccessor:: Getcolumnname
 
@@ -394,7 +394,7 @@ LPOLESTR GetColumnName(DBORDINAL nColumn) const throw();
 ### <a name="syntax"></a>语法
 
 ```cpp
-bool GetColumnType(DBORDINAL nColumn, 
+bool GetColumnType(DBORDINAL nColumn,
    DBTYPE* pType) const throw();
 ```
 
@@ -417,13 +417,13 @@ bool GetColumnType(DBORDINAL nColumn, 
 ### <a name="syntax"></a>语法
 
 ```cpp
-bool GetLength(DBORDINAL nColumn, 
+bool GetLength(DBORDINAL nColumn,
    DBLENGTH* pLength) const throw();
 
-bool GetLength(const CHAR* pColumnName, 
+bool GetLength(const CHAR* pColumnName,
    DBLENGTH* pLength) const throw();
 
-bool GetLength(const WCHAR* pColumnName, 
+bool GetLength(const WCHAR* pColumnName,
    DBLENGTH* pLength) const throw();
 ```
 
@@ -479,7 +479,7 @@ bool GetOrdinal(const WCHAR* pColumnName,
 ### <a name="syntax"></a>语法
 
 ```cpp
-bool GetStatus(DBORDINAL nColumn, 
+bool GetStatus(DBORDINAL nColumn,
    DBSTATUS* pStatus) const throw();
 
 bool GetStatus(const CHAR* pColumnName,
@@ -498,7 +498,7 @@ bool GetStatus(const WCHAR* pColumnName,
 [in] 指向包含列名的字符串的指针。
 
 *pStatus*<br/>
-[out]指向包含的列状态的变量的指针。 请参阅[DBSTATUS](/previous-versions/windows/desktop/ms722617)中*OLE DB 程序员参考*有关详细信息。
+[out]指向包含的列状态的变量的指针。 请参阅[DBSTATUS](https://docs.microsoft.com/previous-versions/windows/desktop/ms722617(v=vs.85))中*OLE DB 程序员参考*有关详细信息。
 
 ### <a name="return-value"></a>返回值
 
@@ -608,13 +608,13 @@ void SetBlobSizeLimit(DBLENGTH nBlobSize);
 ### <a name="syntax"></a>语法
 
 ```cpp
-bool SetLength(DBORDINAL nColumn, 
+bool SetLength(DBORDINAL nColumn,
    DBLENGTH nLength)throw();
 
-bool SetLength(const CHAR* pColumnName, 
+bool SetLength(const CHAR* pColumnName,
    DBLENGTH nLength) throw();
 
-bool SetLength(const WCHAR* pColumnName, 
+bool SetLength(const WCHAR* pColumnName,
    DBLENGTH nLength) throw();
 ```
 
@@ -640,13 +640,13 @@ bool SetLength(const WCHAR* pColumnName, 
 ### <a name="syntax"></a>语法
 
 ```cpp
-bool SetStatus(DBORDINAL nColumn, 
+bool SetStatus(DBORDINAL nColumn,
    DBSTATUS status)throw();
 
-bool SetStatus(const CHAR* pColumnName, 
+bool SetStatus(const CHAR* pColumnName,
    DBSTATUS status) throw();
 
-bool SetStatus(const WCHAR* pColumnName, 
+bool SetStatus(const WCHAR* pColumnName,
    DBSTATUS status) throw();
 ```
 
@@ -656,7 +656,7 @@ bool SetStatus(const WCHAR* pColumnName, 
 [in] 列号。 列号从 1 开始。 值为 0 指书签列，如果有的话。
 
 *status*<br/>
-[in]列状态。 请参阅[DBSTATUS](/previous-versions/windows/desktop/ms722617)中*OLE DB 程序员参考*有关详细信息。
+[in]列状态。 请参阅[DBSTATUS](https://docs.microsoft.com/previous-versions/windows/desktop/ms722617(v=vs.85))中*OLE DB 程序员参考*有关详细信息。
 
 *pColumnName*<br/>
 [in] 指向包含列名的字符串的指针。
@@ -673,16 +673,16 @@ bool SetStatus(const WCHAR* pColumnName, 
 
 ```cpp
 template <class ctype>
-bool SetValue( 
-   DBORDINAL nColumn, 
+bool SetValue(
+   DBORDINAL nColumn,
    constctype& data) throw( );
 
-template <class ctype>  
-bool SetValue( 
-   const CHAR * pColumnName, 
+template <class ctype> 
+bool SetValue(
+   const CHAR * pColumnName,
    const ctype& data) throw( );
 
-template <class ctype> 
+template <class ctype>
 bool SetValue(
    const WCHAR *pColumnName,
    const ctype& data) throw( );

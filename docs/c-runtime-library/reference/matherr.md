@@ -22,12 +22,12 @@ helpviewer_keywords:
 - _matherr function
 - matherr function
 ms.assetid: b600d66e-165a-4608-a856-8fb418d46760
-ms.openlocfilehash: 980bf8a14ceace82a76562cc47d353f78dbca582
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b830dc940fa2abb131f70130033d27b057412137
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445716"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51329626"
 ---
 # <a name="matherr"></a>_matherr
 
@@ -73,12 +73,12 @@ struct _exception
 
 |宏|含义|
 |-|-|
-**（_D)**|自变量域错误
-**_SING**|自变量奇点
-**_OVERFLOW**|溢出范围错误
-**_PLOSS**|基数部分丢失
-**_TLOSS**|基数全部丢失
-**_UNDERFLOW**|结果太小无法表示。 （目前不支持此条件。）
+| **（_D)** | 自变量域错误 |
+| **_SING** | 自变量奇点 |
+| **_OVERFLOW** | 溢出范围错误 |
+| **_PLOSS** | 基数部分丢失 |
+| **_TLOSS** | 基数全部丢失 |
+| **_UNDERFLOW** | 结果太小无法表示。 （目前不支持此条件。） |
 
 结构成员 **name** 是指针，指向包含导致错误的函数名称的以 null 结尾的字符串。 结构成员 **arg1** 和 **arg2** 指定导致错误的值。 如果只指定一个自变量，则将它存储在**arg1**。
 

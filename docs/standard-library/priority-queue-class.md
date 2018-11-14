@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::priority_queue [C++], size
 - std::priority_queue [C++], top
 ms.assetid: 69fca9cc-a449-4be4-97b7-02ca5db9cbb2
-ms.openlocfilehash: 1b276f427fc127fb04f4f8e09f0278033ef64754
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d8f2b4ab788c82e531d1121f04dd0d422efb17cd
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677170"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51333210"
 ---
 # <a name="priorityqueue-class"></a>priority_queue 类
 
@@ -224,9 +224,9 @@ After a pop, the element at the top of the priority_queue is 20.
 ```cpp
 priority_queue();
 
-explicit priority_queue(const Traits&_comp);
+explicit priority_queue(const Traits& _comp);
 
-priority_queue(const Traits&_comp, const container_type& _Cont);
+priority_queue(const Traits& _comp, const container_type& _Cont);
 
 priority_queue(const priority_queue& right);
 
@@ -234,15 +234,15 @@ template <class InputIterator>
 priority_queue(InputIterator first, InputIterator last);
 
 template <class InputIterator>
-priority_queue(InputIterator first, InputIterator last, const Traits&_comp);
+priority_queue(InputIterator first, InputIterator last, const Traits& _comp);
 
 template <class InputIterator>
-priority_queue(InputIterator first, InputIterator last, const Traits&_comp, const container_type& _Cont);
+priority_queue(InputIterator first, InputIterator last, const Traits& _comp, const container_type& _Cont);
 ```
 
 ### <a name="parameters"></a>参数
 
-*_ comp*<br/>
+*_comp*<br/>
 **constTraits** 类型的比较函数用于对 priority_queue 中的元素进行排序，它默认为基容器的比较函数。
 
 *_Cont*<br/>
@@ -263,7 +263,7 @@ priority_queue(InputIterator first, InputIterator last, const Traits&_comp, cons
 
 第四个构造函数指定 priority_queue 的副本*右*。
 
-最后三个构造函数复制范围 [* 第一个，最后一个 *) 的某个容器，使用的值来初始化 priority_queue，其指定的比较函数的类类型**特征**和`container_type`.
+最后三个构造函数复制范围\[*第一个*，*最后一个*) 的某个容器，使用的值来初始化 priority_queue，其指定的类型比较函数的类`Traits`和`container_type`。
 
 ### <a name="example"></a>示例
 

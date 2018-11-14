@@ -4,16 +4,16 @@ ms.date: 10/13/2018
 helpviewer_keywords:
 - OLE DB providers, reading strings into
 ms.assetid: 517f322c-f37e-4eed-bf5e-dd9a412c2f98
-ms.openlocfilehash: 50df9f13b814eb00b309460894d704238bc3e7dc
-ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
-ms.translationtype: HT
+ms.openlocfilehash: 6d8558cce3fc4818d3e6fc8d64a4c682f5ce5b26
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51264771"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556161"
 ---
 # <a name="reading-strings-into-the-ole-db-provider"></a>将字符串读入 OLE DB 提供程序
 
-`CCustomRowset::Execute`函数打开的文件和读取字符串。 使用者将文件名传递给提供程序，通过调用[icommandtext:: Setcommandtext](/previous-versions/windows/desktop/ms709757)。 提供程序接收的文件的名称，并将其存储在成员变量`m_strCommandText`。 `Execute` 读取的文件名的`m_strCommandText`。 如果文件名无效或文件不可用，`Execute`返回错误。 否则，它会打开该文件并调用`fgets`检索字符串。 为每个集的字符串它读取`Execute`创建的用户记录实例 (修改`CCustomWindowsFile`从[OLE DB 提供程序中存储字符串](../../data/oledb/storing-strings-in-the-ole-db-provider.md)) 并将其放到一个数组。
+`CCustomRowset::Execute`函数打开的文件和读取字符串。 使用者将文件名传递给提供程序，通过调用[icommandtext:: Setcommandtext](https://docs.microsoft.com/previous-versions/windows/desktop/ms709757(v=vs.85))。 提供程序接收的文件的名称，并将其存储在成员变量`m_strCommandText`。 `Execute` 读取的文件名的`m_strCommandText`。 如果文件名无效或文件不可用，`Execute`返回错误。 否则，它会打开该文件并调用`fgets`检索字符串。 为每个集的字符串它读取`Execute`创建的用户记录实例 (修改`CCustomWindowsFile`从[OLE DB 提供程序中存储字符串](../../data/oledb/storing-strings-in-the-ole-db-provider.md)) 并将其放到一个数组。
 
 如果无法打开该文件，`Execute`必须返回 DB_E_NOTABLE。 如果改为返回 E_FAIL，提供程序不会使用多个使用者并不会传递 OLE DB[一致性测试](../../data/oledb/testing-your-provider.md)。
 

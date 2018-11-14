@@ -30,12 +30,12 @@ helpviewer_keywords:
 - defining locales
 - _wsetlocale function
 ms.assetid: 3ffb684e-5990-4202-9553-b5339af9520d
-ms.openlocfilehash: 0f2c0478ba5898ab369a04362734891f6d45cf42
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6c9f44e9619b9c34c9424e0be78186d14f2d6a21
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548533"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327130"
 ---
 # <a name="setlocale-wsetlocale"></a>setlocale、_wsetlocale
 
@@ -96,12 +96,12 @@ en-US
 
 |*类别*标志|影响|
 |-|-|
-**LC_ALL**|以下列出了所有类别。
-LC_COLLATE|**Strcoll**， **_stricoll**， **wcscoll**， **_wcsicoll**， **strxfrm**， **_strncoll**， **_strnicoll**， **_wcsncoll**， **_wcsnicoll**，并且**wcsxfrm**函数。
-LC_CTYPE|字符处理函数 (除**isdigit**， **isxdigit**， **mbstowcs**，以及**mbtowc**，不受影响)。
-**LC_MONETARY**|返回的货币格式信息**localeconv**函数。
-LC_NUMERIC|小数点字符格式化的输出例程 (如**printf**)、 数据转换例程，以及返回的非货币格式设置信息**localeconv**。 除小数点字符之外**LC_NUMERIC**集千位分隔符和分组控制返回字符串[localeconv](localeconv.md)。
-LC_TIME|**Strftime**并**wcsftime**函数。
+| **LC_ALL** | 以下列出了所有类别。 |
+| LC_COLLATE | **Strcoll**， **_stricoll**， **wcscoll**， **_wcsicoll**， **strxfrm**， **_strncoll**， **_strnicoll**， **_wcsncoll**， **_wcsnicoll**，并且**wcsxfrm**函数。 |
+| LC_CTYPE | 字符处理函数 (除**isdigit**， **isxdigit**， **mbstowcs**，以及**mbtowc**，不受影响)。 |
+| **LC_MONETARY** | 返回的货币格式信息**localeconv**函数。 |
+| LC_NUMERIC | 小数点字符格式化的输出例程 (如**printf**)、 数据转换例程，以及返回的非货币格式设置信息**localeconv**。 除小数点字符之外**LC_NUMERIC**集千位分隔符和分组控制返回字符串[localeconv](localeconv.md)。 |
+| LC_TIME | **Strftime**并**wcsftime**函数。 |
 
 此函数验证类别参数。 如果类别参数不是上表中提供的值之一，则调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许继续执行，该函数将设置**errno**到**EINVAL** ，并返回**NULL**。
 

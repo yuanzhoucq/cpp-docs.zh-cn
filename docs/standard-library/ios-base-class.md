@@ -108,12 +108,12 @@ helpviewer_keywords:
 - std::ios_base [C++], width
 - std::ios_base [C++], xalloc
 ms.assetid: 0f9e0abc-f70f-49bc-aa1f-003859f56cfe
-ms.openlocfilehash: 3c9b1081a7e2ccd45c64c1cbcd833dcda9470f7a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8911c3763e6a0c861c162611e1b2617ec26f0cf9
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648664"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51333346"
 ---
 # <a name="iosbase-class"></a>ios_base 类
 
@@ -914,7 +914,7 @@ fmtflags setf(
 
 ### <a name="remarks"></a>备注
 
-第一个成员函数有效地调用[标志](#flags)(_*掩码* &#124; \_ *标志*) （将所选的位设置），然后返回以前的格式标志。 第二个成员函数有效地调用**标志**(\_ *掩码* **& fmtfl，标志 & ~**`_Mask`) （替换下一个掩码，所选的位）然后返回以前的格式标志。
+第一个成员函数有效地调用[标志](#flags)( *\_掩码* &#124; *\_标志*) （将所选的位设置），然后返回以前的格式标志。 第二个成员函数有效地调用`flags(_Mask & fmtfl, flags & ~_Mask)`（替换下一个掩码，所选的位），然后返回以前的格式标志。
 
 ### <a name="example"></a>示例
 

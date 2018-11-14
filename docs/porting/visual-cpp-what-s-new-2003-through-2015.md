@@ -2,12 +2,12 @@
 title: Visual C++ 新增功能（2003 - 2015）
 ms.date: 11/04/2016
 ms.assetid: c4afde6f-3d75-40bf-986f-be57e3818e26
-ms.openlocfilehash: 7066b5bd8ea0fcd7cc7cda34ca05588199cbaef5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6d79406e07b8839e196f15d9bc3aed96cbc3dca8
+ms.sourcegitcommit: 31a2a9845f5e1d35ab054906d8cdc6582a5220bd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50499614"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51520171"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Visual C++ 新增功能（2003 - 2015）
 
@@ -260,7 +260,7 @@ ms.locfileid: "50499614"
    例如，假设你的代码同时定义了 placement new 和 placement delete：
 
    ```cpp
-    void * operator new(std::size_t, std::size_t);
+    void * operator new(std::size_t, std::size_t);
     void operator delete(void*, std::size_t) noexcept;
    ```
 
@@ -306,15 +306,15 @@ ms.locfileid: "50499614"
    现在更符合标准。 早期版本的编译器生成了匿名联合的显式构造函数和析构函数。 Visual Studio 2015 中已将其删除。
 
    ```cpp
-    struct S {
-      S();
-     };
+   struct S {
+      S();
+   };
 
-     union {
-      struct {
-       S s;
-      };
-     } u; // C2280
+   union {
+      struct {
+         S s;
+      };
+   } u; // C2280
    ```
 
    前述代码在 Visual Studio 2015 中生成以下错误：
@@ -328,14 +328,14 @@ ms.locfileid: "50499614"
 
    ```cpp
     struct S {
-    // Provide a default constructor by adding an empty function body.
-    S() {}
+       // Provide a default constructor by adding an empty function body.
+       S() {}
     };
 
     union {
-    struct {
-    S s;
-    };
+       struct {
+          S s;
+       };
     } u;
    ```
 
@@ -552,7 +552,7 @@ ms.locfileid: "50499614"
     }
    ```
 
-  或
+  \- 或 -
 
    ```cpp
     class base;  // as above
@@ -586,7 +586,7 @@ ms.locfileid: "50499614"
     void * __cdecl operator new(size_t cb, const std::nothrow_t&)  // removed 'static inline'
    ```
 
-      Additionally, although the compiler doesn't give a specific diagnostic, inline operator new is considered ill-formed.
+   此外，尽管编译器不能进行具体诊断，但内联运算符 new 会被视为格式不正确。
 
 - **对非类类型调用“operator type()”（用户定义的转换）** 早期版本的编译器允许以无提示忽略的方式对非类类型调用“operator type()”。 这种旧行为会导致无提示代码生成错误风险，从而导致不可预知的运行时行为。 编译器不再接受这种方式编写的代码，因此会发出编译器错误 C2228。
 
@@ -1673,10 +1673,10 @@ Microsoft Visual C++ 编译器支持以下 ISO C++11 语言功能：
 - 区分范围的枚举支持。 现在支持 C++ 枚举类 enum-key。 下面的代码示范了现在的 enum-key 与以前的枚举行为的不同之处。
 
    ```cpp
-enum class Element { Hydrogen, Helium, Lithium, Beryllium };
-void func1(Element e);
-func1(Hydrogen); // error C2065: 'Hydrogen' : undeclared identifier
-func1(Element::Helium); // OK
+  enum class Element { Hydrogen, Helium, Lithium, Beryllium };
+  void func1(Element e);
+  func1(Hydrogen); // error C2065: 'Hydrogen' : undeclared identifier
+  func1(Element::Helium); // OK
    ```
 
 ### <a name="windows-runtime-app-development-support"></a>Windows 运行时应用开发支持

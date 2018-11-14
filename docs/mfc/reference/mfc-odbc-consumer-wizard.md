@@ -7,12 +7,12 @@ helpviewer_keywords:
 - MFC ODBC Consumer Wizard
 - wizards [MFC]
 ms.assetid: f64a890b-a252-4887-88a1-782a7cd4ff3d
-ms.openlocfilehash: f86eded7cc7c04a85b1bcd93e917bd5a2b5c9696
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8b2d554cb6b4eaeb7ee1ddd884aefb3ab6da0f2e
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50590874"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51523411"
 ---
 # <a name="mfc-odbc-consumer-wizard"></a>MFC ODBC 使用者向导
 
@@ -25,30 +25,30 @@ ms.locfileid: "50590874"
 
 - **数据源**
 
-   **数据源**按钮的使你可以设置使用指定的 ODBC 驱动程序指定的数据源。 有关数据源文件 (DSN) 的详细信息，请参阅[文件数据源](/previous-versions/windows/desktop/ms715401)ODBC SDK 中。
+  **数据源**按钮的使你可以设置使用指定的 ODBC 驱动程序指定的数据源。 有关数据源文件 (DSN) 的详细信息，请参阅[文件数据源](/previous-versions/windows/desktop/ms715401)ODBC SDK 中。
 
-   **选择数据源**对话框有两个选项卡：
+  **选择数据源**对话框有两个选项卡：
 
-   - **文件数据源**选项卡：
+  - **文件数据源**选项卡：
 
-      **查找**框指定在其中选择要用作数据源的文件的目录。 默认值为 \Program Files\Common Files\ODBC\Data 源。 在主列表框中显示现有的文件数据源 （.dsn 文件）。 你可以事先使用的数据源设置**文件 DSN**选项卡上[ODBC 数据源管理器](/previous-versions/windows/desktop/ms714024)，或使用此对话框创建新的。
+     **查找**框指定在其中选择要用作数据源的文件的目录。 默认值为 \Program Files\Common Files\ODBC\Data 源。 在主列表框中显示现有的文件数据源 （.dsn 文件）。 你可以事先使用的数据源设置**文件 DSN**选项卡上[ODBC 数据源管理器](/previous-versions/windows/desktop/ms714024)，或使用此对话框创建新的。
 
-      若要从该对话框中创建新的文件数据源，请单击`New`指定的 DSN 名称;**创建新的数据源**对话框随即出现。 在中**创建新的数据源**对话框中，选择相应的驱动程序，单击`Next`; 单击**浏览**，并选择要用作数据源 （你需要选择"所有文件"的文件的名称查看非 DSN 文件，如.xls 文件）;单击`Next`，然后单击**完成**。 （如果选择了非 DSN 文件，您将获取特定于驱动程序的对话框中，如"ODBC Microsoft Excel 安装程序，"这会将该文件转换为 DSN）。
+     若要从该对话框中创建新的文件数据源，请单击`New`指定的 DSN 名称;**创建新的数据源**对话框随即出现。 在中**创建新的数据源**对话框中，选择相应的驱动程序，单击`Next`; 单击**浏览**，并选择要用作数据源 （你需要选择"所有文件"的文件的名称查看非 DSN 文件，如.xls 文件）;单击`Next`，然后单击**完成**。 （如果选择了非 DSN 文件，您将获取特定于驱动程序的对话框中，如"ODBC Microsoft Excel 安装程序，"这会将该文件转换为 DSN）。
 
-      > [!NOTE]
-      > 此外可以创建新的文件数据源事先会使用 ODBC 数据源管理器。 从**启动**菜单中，选择**设置**，**控制面板**，**管理工具**，**数据源 (ODBC)**，然后**ODBC 数据源管理器**。
+     > [!NOTE]
+     > 此外可以创建新的文件数据源事先会使用 ODBC 数据源管理器。 从**启动**菜单中，选择**设置**，**控制面板**，**管理工具**，**数据源 (ODBC)**，然后**ODBC 数据源管理器**。
 
-      **DSN 名称**框允许您指定的文件数据源的名称。 您必须确保使用适当的文件扩展名，如 Excel 文件的.xls 或访问文件的.mdb 结束 DSN 名称。
+     **DSN 名称**框允许您指定的文件数据源的名称。 您必须确保使用适当的文件扩展名，如 Excel 文件的.xls 或访问文件的.mdb 结束 DSN 名称。
 
-      Dsn 的详细信息，请参阅[文件数据源](/previous-versions/windows/desktop/ms715401)ODBC SDK 中。
+     Dsn 的详细信息，请参阅[文件数据源](/previous-versions/windows/desktop/ms715401)ODBC SDK 中。
 
-   - **计算机数据源**选项卡：
+  - **计算机数据源**选项卡：
 
-      此选项卡列出了系统和用户数据源。 用户数据源是特定于此计算机上的用户。 可以在此计算机上或在系统范围内服务上的所有用户使用系统数据源。 请参阅[机器数据源](/previous-versions/windows/desktop/ms710952)ODBC SDK 中
+     此选项卡列出了系统和用户数据源。 用户数据源是特定于此计算机上的用户。 可以在此计算机上或在系统范围内服务上的所有用户使用系统数据源。 请参阅[机器数据源](/previous-versions/windows/desktop/ms710952)ODBC SDK 中
 
-      有关 ODBC 数据源的详细信息，请参阅[数据源](/previous-versions/windows/desktop/ms711688)ODBC SDK 中。
+     有关 ODBC 数据源的详细信息，请参阅[数据源](/previous-versions/windows/desktop/ms711688)ODBC SDK 中。
 
-   单击**确定**来完成。 **选择数据库对象**对话框随即出现。 此对话框，请从选择的表或查看使用者将使用。 请注意，您可以通过单击项时按住控制键选择多个视图和表。 单击**确定**来完成。
+  单击**确定**来完成。 **选择数据库对象**对话框随即出现。 此对话框，请从选择的表或查看使用者将使用。 请注意，您可以通过单击项时按住控制键选择多个视图和表。 单击**确定**来完成。
 
 - **类**
 

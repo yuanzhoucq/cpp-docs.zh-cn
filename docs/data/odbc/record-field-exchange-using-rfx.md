@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - RFX (ODBC), implementing
 ms.assetid: ada8f043-37e6-4d41-9db3-92c997a61957
-ms.openlocfilehash: e1ecb43226c9e21f3b13c2d5b7c2a0f93b72f3cc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8d8ba1e66c1ffc46429b5c0e987be833aef2e72f
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50469545"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51328521"
 ---
 # <a name="record-field-exchange-using-rfx"></a>记录字段交换：使用 RFX
 
@@ -30,10 +30,13 @@ ms.locfileid: "50469545"
 
 |你|框架|
 |---------|-------------------|
-
-|声明记录集类具有一个向导。 指定的字段数据成员的名称和数据类型。 |该向导派生`CRecordset`类并将事件写入[DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange)为你重写，其中包括 RFX 函数的每个字段数据成员的调用。 | | (可选） 手动添加任何所需的参数数据成员到类。 手动添加到的 RFX 函数调用`DoFieldExchange`对于每个参数的数据成员，请添加对的调用[CFieldExchange::SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype)组的参数，并指定中的参数的总数[m_nParams](../../mfc/reference/crecordset-class.md#m_nparams). 请参阅[记录集： 参数化记录集 (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)。 | | | (可选） 手动将其他列绑定到的字段数据成员。 手动递增[m_nFields](../../mfc/reference/crecordset-class.md#m_nfields)。 请参阅[记录集： 动态绑定数据列 (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)。 | |
-
-|构造记录集类的对象。 在之前使用的对象，设置其参数的值数据成员，如果有的话。 |为提高效率，框架预绑定参数，使用 ODBC。 当传递参数值时，框架会将它们传递到数据源。 只有参数值都发送用于再次查询，除非已更改的排序和/或筛选器字符串。 ||打开记录集对象使用[crecordset:: Open](../../mfc/reference/crecordset-class.md#open)。 |执行记录集的查询时，将列绑定到字段数据成员的记录集，并调用`DoFieldExchange`交换的第一个所选的记录和记录集的字段数据成员之间的数据。 | |在记录集使用滚动[CRecordset::Move](../../mfc/reference/crecordset-class.md#move)或菜单或工具栏命令。 |调用`DoFieldExchange`将数据传输到的字段数据成员，从新的当前记录。 | |添加、 更新和删除记录。 |调用`DoFieldExchange`将数据传输到数据源。 |
+|声明记录集类具有一个向导。 指定的字段数据成员的名称和数据类型。|该向导派生`CRecordset`类并将事件写入[DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange)为你重写，其中包括 RFX 函数的每个字段数据成员的调用。|
+|（可选）手动将任何所需的参数数据成员添加到类。 手动添加到的 RFX 函数调用`DoFieldExchange`对于每个参数的数据成员，请添加对的调用[CFieldExchange::SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype)组的参数，并指定中的参数的总数[m_nParams](../../mfc/reference/crecordset-class.md#m_nparams). 请参阅[记录集： 参数化记录集 (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)。||
+|（可选）手动将其他列绑定到的字段数据成员。 手动递增[m_nFields](../../mfc/reference/crecordset-class.md#m_nfields)。 请参阅[记录集： 动态绑定数据列 (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)。||
+|构造记录集类的对象。 在之前使用的对象，设置其参数的值数据成员，如果有的话。|为提高效率，框架预绑定参数，使用 ODBC。 当传递参数值时，框架会将它们传递到数据源。 只有参数值都发送用于再次查询，除非已更改的排序和/或筛选器字符串。|
+|打开记录集对象使用[crecordset:: Open](../../mfc/reference/crecordset-class.md#open)。|执行记录集的查询时，将列绑定到字段数据成员的记录集，并调用`DoFieldExchange`交换的第一个所选的记录和记录集的字段数据成员之间的数据。|
+|在记录集使用滚动[CRecordset::Move](../../mfc/reference/crecordset-class.md#move)或菜单或工具栏命令。|调用`DoFieldExchange`将从新的当前记录数据传输到的字段数据成员。|
+|添加、 更新和删除记录。|调用`DoFieldExchange`将数据传输到数据源。|
 
 ## <a name="see-also"></a>请参阅
 

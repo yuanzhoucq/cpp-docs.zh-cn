@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CComVariant class
 - VARIANT macro, ATL
 ms.assetid: 4d31149c-d005-44b5-a509-10f84afa2b61
-ms.openlocfilehash: dd53bdea211610b208516860b29c1b0094f5a4da
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6a6ad49533028dbcb8c45b63c55a51090533137e
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50523261"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51522477"
 ---
 # <a name="ccomvariant-class"></a>CComVariant 类
 
@@ -98,7 +98,7 @@ HRESULT Attach(VARIANT* pSrc);
 ### <a name="parameters"></a>参数
 
 *pSrc*<br/>
-[in]指向[变体](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant)要附加到对象。
+[in]指向[变体](/windows/desktop/api/oaidl/ns-oaidl-tagvariant)要附加到对象。
 
 ### <a name="return-value"></a>返回值
 
@@ -242,7 +242,7 @@ HRESULT Copy(const VARIANT* pSrc);
 ### <a name="parameters"></a>参数
 
 *pSrc*<br/>
-[in]一个指向[变体](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant)要复制。
+[in]一个指向[变体](/windows/desktop/api/oaidl/ns-oaidl-tagvariant)要复制。
 
 ### <a name="return-value"></a>返回值
 
@@ -342,7 +342,7 @@ CComVariant& operator=(char cSrc) throw();
 ### <a name="parameters"></a>参数
 
 *varSrc*<br/>
-[in]`CComVariant`或[变体](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant)要分配给`CComVariant`对象。 源变体的内容复制到目标而不进行转换。
+[in]`CComVariant`或[变体](/windows/desktop/api/oaidl/ns-oaidl-tagvariant)要分配给`CComVariant`对象。 源变体的内容复制到目标而不进行转换。
 
 *bstrSrc*<br/>
 [in]要分配给的 BSTR`CComVariant`对象。 类型`CComVariant`对象将成为 VT_BSTR。
