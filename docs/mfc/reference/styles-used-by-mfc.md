@@ -196,12 +196,12 @@ helpviewer_keywords:
 - WS_EX_TRANSPARENT constant [MFC]
 - WS_EX_WINDOWEDGE constant [MFC]
 ms.assetid: d3b9af37-31b5-4c97-a8ad-189fd724b04c
-ms.openlocfilehash: dc70059e2de054e4b1aac4800e1d61c58bc9b467
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a0aef399b734ad5b15a9a2d4028be3fde3f02505
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50642905"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51525297"
 ---
 # <a name="styles-used-by-mfc"></a>MFC 使用的样式
 
@@ -338,7 +338,7 @@ ms.locfileid: "50642905"
 |LBS_HASSTRINGS|指定一个所有者描述列表框，其中包含由字符串组成的项。 列表框保留字符串的内存和指针，以便应用程序可使用 `GetText` 成员函数检索特定项的文本。|
 |LBS_MULTICOLUMN|指定水平滚动的多列列表框。 `SetColumnWidth` 成员函数将设置列的宽度。|
 |LBS_MULTIPLESEL|每次用户单击或双击字符串切换字符串选择。 可以选择任意数量的字符串。|
-|LBS_NODATA|指定无数据列表框。 当列表框中的项数超出一千时，请指定此样式。 无数据列表框还必须具有 LBS_OWNERDRAWFIXED 样式，但不能有 LBS_SORT 或 LBS_HASSTRINGS 样式。 <br /></b / > 无数据列表框类似于所有者描述的列表框中，只不过它不包含字符串或位图数据的项。 用于添加、插入或删除项的命令始终会忽略任何给定的项数据；在列表框内查找字符串的请求始终会失败。 必须绘制某个项时，系统会将 WM_DRAWITEM 消息发送到所有者窗口。 ItemID 成员`DRAWITEMSTRUCT`WM_DRAWITEM 消息传递结构指定要绘制的项的行号。 无数据列表框不发送 WM_DELETEITEM 消息。|
+|LBS_NODATA|指定无数据列表框。 当列表框中的项数超出一千时，请指定此样式。 无数据列表框还必须具有 LBS_OWNERDRAWFIXED 样式，但不能有 LBS_SORT 或 LBS_HASSTRINGS 样式。<br/><br/> 无数据列表框类似于所有者描述的列表框，但它不包含项的字符串或位图数据。 用于添加、插入或删除项的命令始终会忽略任何给定的项数据；在列表框内查找字符串的请求始终会失败。 必须绘制某个项时，系统会将 WM_DRAWITEM 消息发送到所有者窗口。 ItemID 成员`DRAWITEMSTRUCT`WM_DRAWITEM 消息传递结构指定要绘制的项的行号。 无数据列表框不发送 WM_DELETEITEM 消息。|
 |LBS_NOINTEGRALHEIGHT|列表框的大小正是应用程序创建列表框时指定的大小。 通常，Windows 会调整列表框的大小，以使列表框不会只显示部分项。|
 |LBS_NOREDRAW|进行更改时，不会更新列表框中显示。 通过发送 WM_SETREDRAW 消息，可以随时更改此样式。|
 |LBS_NOSEL|指定列表框包含可以查看但未选择的项。|
@@ -350,7 +350,7 @@ ms.locfileid: "50642905"
 |LBS_USETABSTOPS|允许列表框，以识别并展开制表符，绘制其字符串时。 默认制表符位置是 32 个对话框单位。 （对话框单位是一个水平或垂直的距离。 一个水平对话框单位等于当前对话框基本宽度单位的四分之一。 对话框基本单位根据当前系统字体的高度和宽度计算。 `GetDialogBaseUnits` Windows 函数以像素为单位返回当前对话框基本单位。)此样式不应与 LBS_OWNERDRAWFIXED。|
 |LBS_WANTKEYBOARDINPUT|每当用户按下某个键，列表框具有输入焦点时，列表框的所有者收到 WM_VKEYTOITEM 或 WM_CHARTOITEM 消息。 这允许应用程序对键盘输入执行特殊处理。|
 
-##<a name="message-box-styles"></a>  消息框样式
+## <a name="message-box-styles"></a>  消息框样式
 
 消息框样式应用于[AfxMessageBox](../../mfc/reference/cstring-formatting-and-message-box-display.md#afxmessagebox)项。 指定中的样式的组合*n 类型*参数的`AfxMessageBox`。 有关在 Windows 中的消息框样式的详细信息，请参阅[MessageBox 函数 (Windows)](/windows/desktop/api/winuser/nf-winuser-messagebox)。
 
@@ -383,6 +383,7 @@ ms.locfileid: "50642905"
 |MB_ICONINFORMATION|在消息框中显示的"I"在圆圈中包含一个图标。|
 |MB_ICONQUESTION|在消息框中会显示一个问号图标。|
 |MB_ICONSTOP|在消息框中会显示一个停止符号图标。|
+
 ### <a name="message-box-default-buttons"></a>消息框默认按钮
 
 |样式|描述|

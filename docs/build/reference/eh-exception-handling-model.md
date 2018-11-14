@@ -12,12 +12,12 @@ helpviewer_keywords:
 - -EH compiler option [C++]
 - /EH compiler option [C++]
 ms.assetid: 754b916f-d206-4472-b55a-b6f1b0f2cb4d
-ms.openlocfilehash: f118f55ddaa4a2dbc8a4a3ad1e596ec461a2b078
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8707ac716a010ea1d3dc0fa51740e76a5822462
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50615054"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51329295"
 ---
 # <a name="eh-exception-handling-model"></a>/EH（异常处理模型）
 
@@ -29,12 +29,17 @@ ms.locfileid: "50615054"
 
 ## <a name="arguments"></a>自变量
 
-|||
-|-|-|
-**a**|异常处理模型同时捕获异步 （结构化） 和 c + + 的同步 （c + +） 异常情况下使用`catch(...)`语法。
-**s**|异常处理模型的同步 （c + +） 仅捕获异常并通知编译器假定函数声明为**extern"C"** 可能会引发异常。
-**c**|如果用于**s** (**/EHsc**)、 c + + 仅捕获异常并通知编译器假定函数声明为**extern"C"** 从未引发 c + + 异常。 **/EHca** 与 **/EHa**相等。
-**r**|告知编译器始终生成运行时终止检查所有**noexcept**函数。 默认情况下，运行时检查**noexcept**可能被优化掉如果编译器确定该函数调用仅非引发函数。
+**a**<br/>
+异常处理模型同时捕获异步 （结构化） 和 c + + 的同步 （c + +） 异常情况下使用`catch(...)`语法。
+
+**s**<br/>
+异常处理模型的同步 （c + +） 仅捕获异常并通知编译器假定函数声明为**extern"C"** 可能会引发异常。
+
+**c**<br/>
+如果用于**s** (**/EHsc**)、 c + + 仅捕获异常并通知编译器假定函数声明为**extern"C"** 从未引发 c + + 异常。 **/EHca** 与 **/EHa**相等。
+
+**r**<br/>
+告知编译器始终生成运行时终止检查所有**noexcept**函数。 默认情况下，运行时检查**noexcept**可能被优化掉如果编译器确定该函数调用仅非引发函数。
 
 ## <a name="remarks"></a>备注
 

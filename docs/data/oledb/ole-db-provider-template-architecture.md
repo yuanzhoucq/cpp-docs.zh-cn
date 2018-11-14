@@ -6,12 +6,12 @@ helpviewer_keywords:
 - architecture [C++], OLE DB Provider
 - OLE DB provider templates, object model
 ms.assetid: 639304a3-f9e0-44dc-8d0c-0ebd2455b363
-ms.openlocfilehash: 3f12eb7c7da449715116e88c9f78ee2e32fc327f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6256328caa11d188f3a50445f62df096b6f6acb3
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596165"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51557032"
 ---
 # <a name="ole-db-provider-template-architecture"></a>OLE DB 提供程序模板体系结构
 
@@ -39,7 +39,7 @@ OLE DB 提供程序模板提供预打包实现所有所需的接口。 通过 OL
 
 OLE DB 提供程序模板不会实现的行和存储对象。
 
-下表列出了必需和可选接口，上面列出的对象根据[OLE DB 2.6 SDK 文档](/previous-versions/windows/desktop/ms722784)。
+下表列出了必需和可选接口，上面列出的对象根据[OLE DB 2.6 SDK 文档](https://docs.microsoft.com/previous-versions/windows/desktop/ms722784(v=vs.85))。
 
 |组件|接口|注释|
 |---------------|---------------|-------------|
@@ -58,4 +58,4 @@ OLE DB 提供程序模板不会实现的行和存储对象。
 ## <a name="see-also"></a>请参阅
 
 [OLE DB 提供程序模板](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
-[OLE DB 接口](/previous-versions/windows/desktop/ms709709)<br/>
+[OLE DB 接口](https://docs.microsoft.com/previous-versions/windows/desktop/ms709709(v=vs.85))<br/>

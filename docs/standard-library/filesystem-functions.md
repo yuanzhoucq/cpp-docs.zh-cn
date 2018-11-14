@@ -84,16 +84,17 @@ helpviewer_keywords:
 - std::experimental::filesystem::system_complete
 - std::experimental::filesystem::temp_directory_path
 - std::experimental::filesystem::u8path
-ms.openlocfilehash: ff908ab57b1130f959e5e9818e4185a8b3cfd348
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 49a5b59234d92d2587abceff80382e477f66e762
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50473568"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51333301"
 ---
 # <a name="ltfilesystemgt-functions"></a>&lt;filesystem&gt; 函数
 
 [\<filesystem>](../standard-library/filesystem.md) 标头中的这些自由格式函数对路径、文件、符号链接、目录和卷执行修改和查询操作。 有关详细信息和代码示例，请参阅[文件系统导航 (C++)](../standard-library/file-system-navigation.md)。
+
 ||||
 |-|-|-|
 |[absolute](#absolute)|[begin](#begin)|[规范](#canonical)|

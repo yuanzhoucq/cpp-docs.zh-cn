@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Detach method [C++]
 - VARIANT object
 ms.assetid: c348ac08-62cf-4657-a16f-974a79c12158
-ms.openlocfilehash: 4b19e3c1615912550cdf1eb6a2b0b3f906ee4af9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 719852c4556291747b612d54c44d4bf82caa9188
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50522321"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51519001"
 ---
 # <a name="varianttdetach"></a>_variant_t::Detach
 
@@ -34,7 +34,7 @@ VARIANT Detach( );
 
 ## <a name="remarks"></a>备注
 
-提取并返回封装`VARIANT`，然后清除此`_variant_t`对象而不销毁它。 此成员函数将移除`VARIANT`从封装和集`VARTYPE`此`_variant_t`对象为 VT_EMPTY。 由您来释放返回`VARIANT`通过调用[VariantClear](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-variantclear)函数。
+提取并返回封装`VARIANT`，然后清除此`_variant_t`对象而不销毁它。 此成员函数将移除`VARIANT`从封装和集`VARTYPE`此`_variant_t`对象为 VT_EMPTY。 由您来释放返回`VARIANT`通过调用[VariantClear](/windows/desktop/api/oleauto/nf-oleauto-variantclear)函数。
 
 **结束 Microsoft 专用**
 

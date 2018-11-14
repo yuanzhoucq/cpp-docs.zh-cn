@@ -94,12 +94,12 @@ helpviewer_keywords:
 - std::basic_streambuf [C++], xsgetn
 - std::basic_streambuf [C++], xsputn
 ms.assetid: 136af6c3-13bf-4501-9288-b93da26efac7
-ms.openlocfilehash: d15e38c63e335dbd574ad2d1c1ee23e0d5a70a30
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 581652ea39d0729079666dc675b7214b4b3a4da3
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50565719"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524672"
 ---
 # <a name="basicstreambuf-class"></a>basic_streambuf 类
 
@@ -457,7 +457,7 @@ virtual int_type overflow(int_type _Meta = traits_type::eof());
 
 ### <a name="remarks"></a>备注
 
-如果 _ *Meta* 不等于 **traits_type::eof**，则受保护虚拟成员函数将尝试向输出流中插入元素 **traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(\_ *Meta*)。 它可以用多种方法执行此操作：
+如果 *\_Meta*不会比较等于**traits_type:: eof**，受保护虚拟成员函数尝试将元素插入**traits_type::** [to_char_type](../standard-library/char-traits-struct.md#to_char_type)(*\_元*) 到输出流中。 它可以用多种方法执行此操作：
 
 - 如果 `write position` 可用，它可将元素存储到写入位置并增加输出缓冲区的下一个指针。
 
@@ -492,7 +492,7 @@ virtual int_type pbackfail(int_type _Meta = traits_type::eof());
 
 ### <a name="remarks"></a>备注
 
-如果 _ *Meta* 等于 **traits_type::eof**，要推送回的元素在当前元素之前实际上已是流中的一个元素了。 否则，由 **traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(\_ *Meta*) 替换该元素。 该函数可以用多种方法放回元素：
+如果 *\_Meta*经比较等于**traits_type:: eof**，要推送回的元素实际上是已在当前元素之前的流中的一个。 否则，该元素将替换为**traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(*\_元*)。 该函数可以用多种方法放回元素：
 
 - 如果放回位置可用，它可将元素存储到放回位置并递减输入缓冲区的下一个指针。
 
@@ -689,15 +689,12 @@ int main( )
 }
 ```
 
-```Output
-
+```Input
 3
-
 ```
 
 ```Output
-
-      33
+33
 51
 ```
 
@@ -967,14 +964,11 @@ int main( )
 }
 ```
 
-```Output
-
+```Input
 aa
-
 ```
 
 ```Output
-
 aa97
 ```
 

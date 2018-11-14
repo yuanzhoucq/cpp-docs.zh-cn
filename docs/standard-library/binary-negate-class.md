@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - binary_negate class
 ms.assetid: 7b86f02c-af7e-4c7f-9df1-08addae4dd65
-ms.openlocfilehash: a2aa5e2521eafbdd5ab7be93ad133f118a8d9356
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6ac5ebc991174ca5f835d30571b4995bedb5dea2
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536624"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51329769"
 ---
 # <a name="binarynegate-class"></a>binary_negate 类
 
@@ -49,7 +49,7 @@ public:
 
 ## <a name="remarks"></a>备注
 
-此模板类存储 _ *Func* 二元函数对象的副本。 它将其成员函数 `operator()` 定义为返回 **!**\_*Func(left, right).*
+此模板类存储二元函数对象的副本*Func*。 它定义其成员函数`operator()`为返回`!Func(left, right)`。
 
 很少直接使用 `binary_negate` 的构造函数。 通常首选 Helper 函数 [not2](../standard-library/functional-functions.md#not2) 来声明和使用 **binary_negator** 适配器谓词。
 

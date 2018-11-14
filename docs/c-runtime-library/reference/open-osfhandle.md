@@ -24,12 +24,12 @@ helpviewer_keywords:
 - file handles [C++], associating
 - _open_osfhandle function
 ms.assetid: 30d94df4-7868-4667-a401-9eb67ecb7855
-ms.openlocfilehash: e8b7dc097c1af60894c627b8b660c4d9d81361db
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f45ca46cae459c8606f88a98d03b64c40e5d5f01
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519452"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327858"
 ---
 # <a name="openosfhandle"></a>_open_osfhandle
 
@@ -64,10 +64,10 @@ int _open_osfhandle (
 
 |||
 |-|-|
-**\_O\_追加**|在执行每个写入操作之前，将文件指针定位到文件结尾。
-**\_O\_RDONLY**|打开文件以供只读。
-**\_O\_TEXT**|在文本（转换）模式下打开文件。
-**\_O\_WTEXT**|在 Unicode（转换 UTF-16）模式下打开文件。
+| **\_O\_追加** | 在执行每个写入操作之前，将文件指针定位到文件结尾。 |
+| **\_O\_RDONLY** | 打开文件以供只读。 |
+| **\_O\_TEXT** | 在文本（转换）模式下打开文件。 |
+| **\_O\_WTEXT** | 在 Unicode（转换 UTF-16）模式下打开文件。 |
 
 **_Open_osfhandle**调用将 Win32 文件句柄的所有权转移到的文件描述符。 若要关闭与打开的文件 **_open_osfhandle**，调用[\_关闭](close.md)。 通过调用也关闭基础 OS 文件句柄 **_close**，因此不需要调用 Win32 函数**CloseHandle**对原始句柄。 如果文件描述符归**文件&#42;** 流，然后调用[fclose](fclose-fcloseall.md)上的**文件&#42;** 流也会关闭这两个文件描述符和基础句柄。 在这种情况下，不要调用 **_close**上的文件描述符。
 

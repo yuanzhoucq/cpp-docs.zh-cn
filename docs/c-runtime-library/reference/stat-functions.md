@@ -106,12 +106,12 @@ helpviewer_keywords:
 - _tstat64 function
 - files [C++], getting status information
 ms.assetid: 99a75ae6-ff26-47ad-af70-5ea7e17226a5
-ms.openlocfilehash: 316012479ec374cc5f40061384475008fe04e331
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d9272cd4596a54a38e1ba21ac92b038c2da0d207
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50637276"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51331199"
 ---
 # <a name="stat-stat32-stat64-stati64-stat32i64-stat64i32-wstat-wstat32-wstat64-wstati64-wstat32i64-wstat64i32"></a>_stat、_stat32、_stat64、_stati64、_stat32i64、_stat64i32、_wstat、_wstat32、_wstat64、_wstati64、_wstat32i64、_wstat64i32
 
@@ -228,17 +228,17 @@ int _wstat64i32(
 
 |字段||
 |-|-|
-**st_gid**|拥有此文件的组的数字标识符（针对 UNIX）。在 Windows 系统上此字段始终为 0。 重定向的文件分类为 Windows 文件。
-**st_atime**|上次访问文件的时间。 在 NTFS 上有效，但在 FAT 格式的磁盘驱动器上无效。
-**st_ctime**|文件的创建时间。 在 NTFS 上有效，但在 FAT 格式的磁盘驱动器上无效。
-**st_dev**|驱动器的包含文件的磁盘数 (与相同**st_rdev**)。
-**st_ino**|信息节点号 ( **inode**) 文件 （针对 UNIX）。 在 UNIX 文件系统上**inode**描述文件日期和时间戳、 权限和内容。 硬链接到另一个文件时，它们共用同一个**inode**。 **Inode**，并因此**st_ino**，FAT、 HPFS 或 NTFS 文件系统中没有任何意义。
-**st_mode**|文件模式信息的位掩码。 **_S_IFDIR**如果设置位*路径*指定的目录; **_S_IFREG**如果设置位*路径*指定一个普通的文件或设备。 根据文件的权限模式设置用户读/写位；根据文件扩展名设置用户执行位。
-**st_mtime**|上次修改文件的时间。
-**st_nlink**|在非 NTFS 文件系统上始终为 1。
-**st_rdev**|驱动器的包含文件的磁盘数 (与相同**st_dev**)。
-**st_size**|以字节为单位; 文件的大小使用变体的 64 位整数**i64**后缀。
-**st_uid**|拥有文件的用户的数字标识符（针对 UNIX）。 此字段在 Windows 系统上始终为 0。 重定向的文件分类为 Windows 文件。
+| **st_gid** | 拥有此文件的组的数字标识符（针对 UNIX）。在 Windows 系统上此字段始终为 0。 重定向的文件分类为 Windows 文件。 |
+| **st_atime** | 上次访问文件的时间。 在 NTFS 上有效，但在 FAT 格式的磁盘驱动器上无效。 |
+| **st_ctime** | 文件的创建时间。 在 NTFS 上有效，但在 FAT 格式的磁盘驱动器上无效。 |
+| **st_dev** | 驱动器的包含文件的磁盘数 (与相同**st_rdev**)。 |
+| **st_ino** | 信息节点号 ( **inode**) 文件 （针对 UNIX）。 在 UNIX 文件系统上**inode**描述文件日期和时间戳、 权限和内容。 硬链接到另一个文件时，它们共用同一个**inode**。 **Inode**，并因此**st_ino**，FAT、 HPFS 或 NTFS 文件系统中没有任何意义。 |
+| **st_mode** | 文件模式信息的位掩码。 **_S_IFDIR**如果设置位*路径*指定的目录; **_S_IFREG**如果设置位*路径*指定一个普通的文件或设备。 根据文件的权限模式设置用户读/写位；根据文件扩展名设置用户执行位。 |
+| **st_mtime** | 上次修改文件的时间。 |
+| **st_nlink** | 在非 NTFS 文件系统上始终为 1。 |
+| **st_rdev** | 驱动器的包含文件的磁盘数 (与相同**st_dev**)。 |
+| **st_size** | 以字节为单位; 文件的大小使用变体的 64 位整数**i64**后缀。 |
+| **st_uid** | 拥有文件的用户的数字标识符（针对 UNIX）。 此字段在 Windows 系统上始终为 0。 重定向的文件分类为 Windows 文件。 |
 
 如果*路径*设备，是指**st_size**，各种时间字段、 **st_dev**，以及**st_rdev**中的字段 **_stat**结构就变得意义。 因为 STAT.H 使用 TYPES.H 中定义的 [_dev_t](../../c-runtime-library/standard-types.md) 类型，所以必须在代码中的 STAT.H 之前包含 TYPES.H。
 

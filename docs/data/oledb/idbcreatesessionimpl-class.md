@@ -12,16 +12,16 @@ helpviewer_keywords:
 - IDBCreateSessionImpl class
 - CreateSession method
 ms.assetid: 48c02c5c-8362-45ac-af8e-bb119cf8c5c7
-ms.openlocfilehash: 0b15cd45ca63847e5489091226feba81a4040985
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ecc06bf5e3514ea87c86de17dbafd59b9da9f8b6
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50459418"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556417"
 ---
 # <a name="idbcreatesessionimpl-class"></a>IDBCreateSessionImpl 类
 
-提供一个实现[IDBCreateSession](/previous-versions/windows/desktop/ms724076)接口。
+提供一个实现[IDBCreateSession](https://docs.microsoft.com/previous-versions/windows/desktop/ms724076(v=vs.85))接口。
 
 ## <a name="syntax"></a>语法
 
@@ -62,14 +62,14 @@ class ATL_NO_VTABLE IDBCreateSessionImpl
 ### <a name="syntax"></a>语法
 
 ```cpp
-STDMETHOD(CreateSession)(IUnknown * pUnkOuter, 
-   REFIID riid, 
+STDMETHOD(CreateSession)(IUnknown * pUnkOuter,
+   REFIID riid,
    IUnknown ** ppDBSession);
 ```
 
 #### <a name="parameters"></a>参数
 
-请参阅[idbcreatesession:: Createsession](/previous-versions/windows/desktop/ms714942)中*OLE DB 程序员参考*。
+请参阅[idbcreatesession:: Createsession](https://docs.microsoft.com/previous-versions/windows/desktop/ms714942(v=vs.85))中*OLE DB 程序员参考*。
 
 ## <a name="see-also"></a>请参阅
 

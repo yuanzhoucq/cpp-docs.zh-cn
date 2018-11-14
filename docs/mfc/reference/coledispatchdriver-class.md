@@ -26,12 +26,12 @@ helpviewer_keywords:
 - COleDispatchDriver [MFC], m_bAutoRelease
 - COleDispatchDriver [MFC], m_lpDispatch
 ms.assetid: 3ed98daf-cdc7-4374-8a0c-cf695a8d3657
-ms.openlocfilehash: f6e52d993619929666d61f019c1f6d5d28243ab1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9d0ffba2e8b682a33dc435b0968c59844a858c72
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50569204"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524932"
 ---
 # <a name="coledispatchdriver-class"></a>COleDispatchDriver 类
 
@@ -258,7 +258,7 @@ void AFX_CDECL InvokeHelper(
 标识要调用的方法或属性。
 
 *wFlags*<br/>
-描述对调用上下文的标志`IDispatch::Invoke`。 . 有关可能的值的列表，请参阅*wFlags*中的参数[idispatch:: Invoke](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke) Windows SDK 中。
+描述对调用上下文的标志`IDispatch::Invoke`。 . 有关可能的值的列表，请参阅*wFlags*中的参数[idispatch:: Invoke](/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke) Windows SDK 中。
 
 *vtRet*<br/>
 指定返回值的类型。 有关可能值，请参阅“备注”部分。
@@ -296,9 +296,9 @@ void AFX_CDECL InvokeHelper(
 
 *PbParamInfo*参数是以空格分隔的列表**VTS_** 常量。 其中一个或多个值（由空格（而不是逗号）分隔）指定函数的参数列表。 可能值使用 [EVENT_CUSTOM](event-maps.md#event_custom) 宏来列出。
 
-此函数将参数转换为 VARIANTARG 值，然后调用[idispatch:: Invoke](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke)方法。 如果 `Invoke` 调用失败，则此函数会引发异常。 如果返回 SCODE （状态代码），那么`IDispatch::Invoke`是 DISP_E_EXCEPTION，此函数将引发[COleException](../../mfc/reference/coleexception-class.md)对象; 否则将引发[COleDispatchException](../../mfc/reference/coledispatchexception-class.md)。
+此函数将参数转换为 VARIANTARG 值，然后调用[idispatch:: Invoke](/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke)方法。 如果 `Invoke` 调用失败，则此函数会引发异常。 如果返回 SCODE （状态代码），那么`IDispatch::Invoke`是 DISP_E_EXCEPTION，此函数将引发[COleException](../../mfc/reference/coleexception-class.md)对象; 否则将引发[COleDispatchException](../../mfc/reference/coledispatchexception-class.md)。
 
-有关详细信息，请参阅[VARIANTARG](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant)，[实现 IDispatch 接口](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)， [idispatch:: Invoke](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke)，和[COM 错误代码的结构](/windows/desktop/com/structure-of-com-error-codes) Windows SDK 中。
+有关详细信息，请参阅[VARIANTARG](/windows/desktop/api/oaidl/ns-oaidl-tagvariant)，[实现 IDispatch 接口](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)， [idispatch:: Invoke](/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke)，和[COM 错误代码的结构](/windows/desktop/com/structure-of-com-error-codes) Windows SDK 中。
 
 ### <a name="example"></a>示例
 

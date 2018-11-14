@@ -1,21 +1,23 @@
 ---
 title: 编译器错误 C3409
-ms.date: 11/04/2016
+ms.date: 11/06/2018
 f1_keywords:
 - C3409
 helpviewer_keywords:
 - C3409
 ms.assetid: e372d9fa-230c-4b28-b6d3-6ad81ccf9dbb
-ms.openlocfilehash: 2a677da40b64a19c4d2a27436344eec7adb80c14
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b6ceb6f2e8700a5459dbd01db443ef90de314b5e
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50600884"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51330081"
 ---
 # <a name="compiler-error-c3409"></a>编译器错误 C3409
 
-不允许空特性块
+> 不允许空特性块
+
+## <a name="remarks"></a>备注
 
 括号被解释为编译器[特性](../../windows/cpp-attributes-reference.md)找到块，但没有属性。
 
@@ -29,19 +31,15 @@ ms.locfileid: "50600884"
 
    1. 删除特性块。
 
-1. 如果方括号是 lambda 表达式的一部分：
+1. 如果方括号是 lambda 表达式的一部分，请确保在 lambda 表达式遵循有效的语法规则。
 
-   1. 请确保在 lambda 表达式遵循有效的语法规则。
-
-         有关 lambda 表达式语法的详细信息，请参阅[Lambda 表达式语法](../../cpp/lambda-expression-syntax.md)。
-
-    2.
+   有关 lambda 表达式语法的详细信息，请参阅[Lambda 表达式语法](../../cpp/lambda-expression-syntax.md)。
 
 ## <a name="example"></a>示例
 
 下面的示例生成 C3409。
 
-```
+```cpp
 // C3409.cpp
 // compile with: /c
 #include <windows.h>
@@ -60,7 +58,7 @@ class b : public x {};
 
 下面的示例生成 C3409，因为 lambda 表达式使用`mutable`规范，但不提供的参数列表。 编译器无法确定是否方括号是定义的 lambda 表达式或特性块的一部分。
 
-```
+```cpp
 // C3409b.cpp
 
 int main()

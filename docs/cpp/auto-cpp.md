@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - auto keyword [C++]
 ms.assetid: e9d495d7-601c-4547-b897-998389a311f4
-ms.openlocfilehash: f396d95d08a435ac3d85e214226921ce468a2259
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f4d17069ed4e06a85b80d2027433ff87be6d1521
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447445"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51518562"
 ---
 # <a name="auto-c"></a>自动 （C++）
 
@@ -69,24 +69,23 @@ auto declarator initializer;
 请注意，使用**自动**删除引用、 const 限定符和 volatile 限定符。 请看下面的示例：
 
 ```cpp
-// cl.exe /analyze /EHsc /W4
-#include <iostream>
+// cl.exe /analyze /EHsc /W4
+#include <iostream>
 
-using namespace std;
+using namespace std;
 
-int main( )
+int main( )
 {
-    int count = 10;
-    int& countRef = count;
-    auto myAuto = countRef;
+    int count = 10;
+    int& countRef = count;
+    auto myAuto = countRef;
 
-    countRef = 11;
-    cout << count << " ";
+    countRef = 11;
+    cout << count << " ";
 
-    myAuto = 12;
-    cout << count << endl;
+    myAuto = 12;
+    cout << count << endl;
 }
-
 ```
 
 在上一示例中，myAuto 是 int，不是 int 引用，因此输出是`11 11`，而非`11 12`就会是这种情况，如果尚未删除引用限定符**自动**。

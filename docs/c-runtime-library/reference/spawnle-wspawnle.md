@@ -31,12 +31,12 @@ helpviewer_keywords:
 - wspawnle function
 - _spawnle function
 ms.assetid: 80308892-2815-49b1-8cca-53894c366f5a
-ms.openlocfilehash: 7da0cf4f7232ad7b8b1c5edb1240ee67fdf393e3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1caa949fab71a7ebc7731c91871e460869ca9f5b
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50632279"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51329250"
 ---
 # <a name="spawnle-wspawnle"></a>_spawnle、_wspawnle
 
@@ -88,11 +88,11 @@ intptr_t _wspawnle(
 
 |||
 |-|-|
-**E2BIG**|参数列表超过 1024 个字节。
-**EINVAL**|*模式*参数无效。
-**ENOENT**|未找到文件或路径。
-**ENOEXEC**|指定的文件不是可执行文件或者有无效的可执行文件格式。
-**ENOMEM**|没有足够的内存可用于执行新进程。
+| **E2BIG** | 参数列表超过 1024 个字节。 |
+| **EINVAL** | *模式*参数无效。 |
+| **ENOENT** | 未找到文件或路径。 |
+| **ENOEXEC** | 指定的文件不是可执行文件或者有无效的可执行文件格式。 |
+| **ENOMEM** | 没有足够的内存可用于执行新进程。 |
 
 有关这些属性和其他的更多信息返回代码示例，请参见 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 

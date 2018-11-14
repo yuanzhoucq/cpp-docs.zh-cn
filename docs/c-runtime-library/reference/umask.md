@@ -26,12 +26,12 @@ helpviewer_keywords:
 - file permissions [C++]
 - files [C++], permission settings for
 ms.assetid: 5e9a13ba-5321-4536-8721-6afb6f4c8483
-ms.openlocfilehash: f51e2c19933953eb4910cdeb5e1ec50b7387bd59
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 113bf97b0fe93204cd41de20bc36a8be080a88b6
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677157"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327663"
 ---
 # <a name="umask"></a>_umask
 
@@ -58,13 +58,13 @@ int _umask( int pmode );
 
 整数表达式*pmode*包含一个或两个 SYS\STAT 中定义的以下清单常量。H:
 
-|*pmode*||
+|*pmode*| |
 |-|-|
-**_S_IWRITE**|允许写入。
-**_S_IREAD**|允许读取。
-**_S_IREAD** \| **_S_IWRITE**|允许读取和写入。
+| **_S_IWRITE** | 允许写入。 |
+| **_S_IREAD** | 允许读取。 |
+| **_S_IREAD** &AMP;#124; **_S_IWRITE** | 允许读取和写入。 |
 
-当给定这两个常量时，它们使用按位 OR 运算符联接 ( **|** )。 如果*pmode*自变量是 **_S_IREAD**，则不允许读取 （此文件为只写）。 如果*pmode*自变量是 **_S_IWRITE**，则不允许写入 （文件是只读的）。 例如，如果掩码中设置了写入位，则任何新文件都将为只读。 请注意在 MS-DOS 和 Windows 操作系统下，所有文件均可读；不可能提供只写权限。 因此，设置读取位与 **_umask**不起作用的文件模式。
+当给定这两个常量时，它们使用按位 OR 运算符联接 ( **&#124;** )。 如果*pmode*自变量是 **_S_IREAD**，则不允许读取 （此文件为只写）。 如果*pmode*自变量是 **_S_IWRITE**，则不允许写入 （文件是只读的）。 例如，如果掩码中设置了写入位，则任何新文件都将为只读。 请注意在 MS-DOS 和 Windows 操作系统下，所有文件均可读；不可能提供只写权限。 因此，设置读取位与 **_umask**不起作用的文件模式。
 
 如果*pmode*不是清单常量之一的组合或合并了一组替代常量，该函数将会忽略这些。
 

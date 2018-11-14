@@ -29,12 +29,12 @@ helpviewer_keywords:
 - commands, executing
 - command interpreter
 ms.assetid: 7d3df2b6-f742-49ce-bf52-012b0aee3df5
-ms.openlocfilehash: fa034b164a188b1b5b7ccd8a4ca71ab7ac754fa1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 46c4949fcc8cfbe4a3477e66b57d8fc6fc97ed73
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624661"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51328651"
 ---
 # <a name="system-wsystem"></a>system、_wsystem
 
@@ -65,10 +65,10 @@ int _wsystem(
 
 |||
 |-|-|
-**E2BIG**|自变量列表（与系统相关）太大。
-**ENOENT**|无法找到命令解释器。
-**ENOEXEC**|由于格式无效，无法执行命令解释器文件。
-**ENOMEM**|没有足够的内存可用于执行命令；或可用内存已损坏；或存在无效块，这表明进行调用的进程未正确进行分配。
+| **E2BIG** | 自变量列表（与系统相关）太大。 |
+| **ENOENT** | 无法找到命令解释器。 |
+| **ENOEXEC** | 由于格式无效，无法执行命令解释器文件。 |
+| **ENOMEM** | 没有足够的内存可用于执行命令；或可用内存已损坏；或存在无效块，这表明进行调用的进程未正确进行分配。 |
 
 有关这些返回代码的详细信息，请参阅 [_doserrno、errno、_sys_errlis 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 

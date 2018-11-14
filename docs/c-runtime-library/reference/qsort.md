@@ -25,12 +25,12 @@ helpviewer_keywords:
 - sorting arrays
 - arrays [CRT], sorting
 ms.assetid: d6cb33eb-d209-485f-8d41-229eb743c027
-ms.openlocfilehash: e912a7a53619e9347cf2c0cd40adf0f9162b314b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dd2fc9cd789b02f1fa1e0b9969b597aa51aceedd
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618486"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327546"
 ---
 # <a name="qsort"></a>qsort
 
@@ -41,7 +41,7 @@ ms.locfileid: "50618486"
 ```C
 void qsort(
    void *base,
-   size_t num,
+   size_t number,
    size_t width,
    int (__cdecl *compare )(const void *, const void *)
 );
@@ -49,7 +49,7 @@ void qsort(
 
 ### <a name="parameters"></a>参数
 
-<br/>
+*base*<br/>
 目标数组的开头。
 
 *数量*<br/>
@@ -68,7 +68,7 @@ void qsort(
 **qsort**调用*比较*例程的一个或多个排序，次，将指针传递给两个数组元素，在每次调用。
 
 ```C
-compare( (void *) & elem1, (void *) & elem2 );
+compare( (void *) & elem1, (void *) & elem2 );
 ```
 
 该例程将比较元素，并返回下列值之一。
@@ -81,7 +81,7 @@ compare( (void *) & elem1, (void *) & elem2 );
 
 数组按比较函数中定义的升序进行排序。 若要以降序对数组进行排序，请反转比较函数中的“大于”和“小于”的意义。
 
-此函数验证其参数。 如果*比较*或*数量*是**NULL**，或者如果*基*是**NULL**和 **数*不为零，或者如果*宽度*小于零，无效参数处理程序调用，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，该函数返回并**errno**设置为**EINVAL**。
+此函数验证其参数。 如果*比较*或*数量*是**NULL**，或者如果*基*是**NULL**和*数*不为零，或者如果*宽度*小于零，无效参数处理程序调用，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，该函数返回并**errno**设置为**EINVAL**。
 
 ## <a name="requirements"></a>要求
 

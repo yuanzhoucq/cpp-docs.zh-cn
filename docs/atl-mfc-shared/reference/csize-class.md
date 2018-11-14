@@ -11,12 +11,12 @@ helpviewer_keywords:
 - dimensions
 - CSize class
 ms.assetid: fb2cf85a-0bc1-46f8-892b-309c108b52ae
-ms.openlocfilehash: a0245862fe90c108b8ffc038b723a8b5bb62a665
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7451b462087d6430c642ddbe3b7cf8141a792f2e
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50431900"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51329366"
 ---
 # <a name="csize-class"></a>CSize 类
 
@@ -173,11 +173,17 @@ CRect operator+(const RECT* lpRect) const throw();
 
 请参阅各个运算符的以下说明：
 
-- **运算符 + (** `size` **)** 此操作将添加两个`CSize`值。
+- **运算符 + (** *大小* **)**
 
-- **运算符 + (** `point` **)** 此操作的偏移量 （移动）[点](https://msdn.microsoft.com/library/windows/desktop/dd162805)(或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)) 值由此`CSize`值。 **Cx**并**cy**此成员`CSize`值添加到**x**并**y**的数据成员**点**值。 它相当于的新版[CPoint::operator +](../../atl-mfc-shared/reference/cpoint-class.md#operator_add)采用[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)参数。
+  此操作将添加两个`CSize`值。
 
-- **运算符 + (** `lpRect` **)** 此操作的偏移量 （移动） [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) (或[CRect](../../atl-mfc-shared/reference/crect-class.md)) 值由此`CSize`值。 **Cx**并**cy**此成员`CSize`值添加到**左**，**顶部**，**右**，并**底部**的数据成员`RECT`值。 它相当于的新版[CRect::operator +](../../atl-mfc-shared/reference/crect-class.md#operator_add)采用[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)参数。
+- **运算符 + (** *点* **)**
+
+  此操作的偏移量 （移动）[点](https://msdn.microsoft.com/library/windows/desktop/dd162805)(或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)) 值由此`CSize`值。 `cx`并`cy`此成员`CSize`值添加到`x`并`y`的数据成员`POINT`值。 它相当于的新版[CPoint::operator +](../../atl-mfc-shared/reference/cpoint-class.md#operator_add)采用[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)参数。
+
+- **运算符 + (** *lpRect* **)**
+
+   此操作的偏移量 （移动） [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) (或[CRect](../../atl-mfc-shared/reference/crect-class.md)) 值由此`CSize`值。 `cx`并`cy`此成员`CSize`值添加到`left`， `top`， `right`，以及`bottom`的数据成员`RECT`值。 它相当于的新版[CRect::operator +](../../atl-mfc-shared/reference/crect-class.md#operator_add)采用[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)参数。
 
 ### <a name="example"></a>示例
 
@@ -198,13 +204,21 @@ CSize operator-() const throw();
 
 第四个运算符，一元负，可更改的登录`CSize`值。 请参阅各个运算符的以下说明：
 
-- **运算符-(** `size` **)** 此操作中减去两个`CSize`值。
+- **运算符-(** *大小* **)**
 
-- **运算符-(** `point` **)** 此操作的偏移量 （移动）[点](https://msdn.microsoft.com/library/windows/desktop/dd162805)或者[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)值，从而此加法逆元`CSize`值。 **Cx**并**cy**此`CSize`减去值**x**并**y**的数据成员**点**值。 它相当于的新版[CPoint::operator-](../../atl-mfc-shared/reference/cpoint-class.md#operator_-)采用[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)参数。
+  此操作中减去两个`CSize`值。
 
-- **运算符-(** `lpRect` **)** 此操作的偏移量 （移动） [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)或者[CRect](../../atl-mfc-shared/reference/crect-class.md)值，从而此加法逆元`CSize`值。 **Cx**并**cy**此成员`CSize`减去值**左**，**顶部**，**右**，并**底部**的数据成员`RECT`值。 它相当于的新版[CRect::operator-](../../atl-mfc-shared/reference/crect-class.md#operator_-)采用[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)参数。
+- **运算符-(** *点* **)**
 
-- **运算符-（)** 此操作将返回此加法逆元`CSize`值。
+  此操作的偏移量 （移动）[点](https://msdn.microsoft.com/library/windows/desktop/dd162805)或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)值，从而此加法逆元`CSize`值。 `cx`并`cy`此`CSize`减去值`x`并`y`的数据成员`POINT`值。 它相当于的新版[CPoint::operator-](../../atl-mfc-shared/reference/cpoint-class.md#operator_-)采用[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)参数。
+
+- **运算符-(** *lpRect* **)**
+
+  此操作的偏移量 （移动） [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)或[CRect](../../atl-mfc-shared/reference/crect-class.md)值，从而此加法逆元`CSize`值。 `cx`并`cy`此成员`CSize`减去值`left`， `top`， `right`，以及`bottom`的数据成员`RECT`值。 它相当于的新版[CRect::operator-](../../atl-mfc-shared/reference/crect-class.md#operator_-)采用[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)参数。
+
+- **运算符-（)**
+
+  此操作将返回此加法逆元`CSize`值。
 
 ### <a name="example"></a>示例
 

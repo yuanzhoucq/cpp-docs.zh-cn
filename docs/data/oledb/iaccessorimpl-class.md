@@ -37,16 +37,16 @@ helpviewer_keywords:
 - GetBindings method
 - ReleaseAccessor method
 ms.assetid: 768606da-8b71-417c-a62c-88069ce7730d
-ms.openlocfilehash: 45e7f7e86344f1928bb007e5f2bde1c0eca1f745
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a01a090d4302983f7d53e051cf4d8a72bd739b4a
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50632227"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556733"
 ---
 # <a name="iaccessorimpl-class"></a>IAccessorImpl 类
 
-提供的实现[IAccessor](/previous-versions/windows/desktop/ms719672)接口。
+提供的实现[IAccessor](https://docs.microsoft.com/previous-versions/windows/desktop/ms719672(v=vs.85))接口。
 
 ## <a name="syntax"></a>语法
 
@@ -91,7 +91,7 @@ class ATL_NO_VTABLE IAccessorImpl : public IAccessorImplBase<BindType>
 
 ## <a name="remarks"></a>备注
 
-这是必需的对于行集和命令。 OLE DB 要求提供商实现 HACCESSOR，这是一种标记的数组[DBBINDING](/previous-versions/windows/desktop/ms716845)结构。 提供的 HACCESSORs`IAccessorImpl`是地址`BindType`结构。 默认情况下`BindType`指`ATLBINDINGS`中`IAccessorImpl`的模板定义。 `BindType` 提供使用的一种机制`IAccessorImpl`跟踪中的元素数及其`DBBINDING`数组以及引用计数和访问器标志。
+这是必需的对于行集和命令。 OLE DB 要求提供商实现 HACCESSOR，这是一种标记的数组[DBBINDING](https://docs.microsoft.com/previous-versions/windows/desktop/ms716845(v=vs.85))结构。 提供的 HACCESSORs`IAccessorImpl`是地址`BindType`结构。 默认情况下`BindType`指`ATLBINDINGS`中`IAccessorImpl`的模板定义。 `BindType` 提供使用的一种机制`IAccessorImpl`跟踪中的元素数及其`DBBINDING`数组以及引用计数和访问器标志。
 
 ## <a name="iaccessorimpl"></a> Iaccessorimpl:: Iaccessorimpl
 
@@ -116,7 +116,7 @@ STDMETHOD(AddRefAccessor)(HACCESSOR hAccessor,
 
 #### <a name="parameters"></a>参数
 
-请参阅[IAccessor::AddRefAccessor](/previous-versions/windows/desktop/ms714978)中*OLE DB 程序员参考*。
+请参阅[IAccessor::AddRefAccessor](https://docs.microsoft.com/previous-versions/windows/desktop/ms714978(v=vs.85))中*OLE DB 程序员参考*。
 
 ## <a name="createaccessor"></a> Iaccessorimpl:: Createaccessor
 
@@ -135,7 +135,7 @@ STDMETHOD(CreateAccessor)(DBACCESSORFLAGS dwAccessorFlags,
 
 #### <a name="parameters"></a>参数
 
-请参阅[iaccessor:: Createaccessor](/previous-versions/windows/desktop/ms720969)中*OLE DB 程序员参考*。
+请参阅[iaccessor:: Createaccessor](https://docs.microsoft.com/previous-versions/windows/desktop/ms720969(v=vs.85))中*OLE DB 程序员参考*。
 
 ## <a name="getbindings"></a> Iaccessorimpl:: Getbindings
 
@@ -152,7 +152,7 @@ STDMETHOD(GetBindings)(HACCESSOR hAccessor,
 
 #### <a name="parameters"></a>参数
 
-请参阅[IAccessor::GetBindings](/previous-versions/windows/desktop/ms721253)中*OLE DB 程序员参考*。
+请参阅[IAccessor::GetBindings](https://docs.microsoft.com/previous-versions/windows/desktop/ms721253(v=vs.85))中*OLE DB 程序员参考*。
 
 ## <a name="releaseaccessor"></a> Iaccessorimpl:: Releaseaccessor
 
@@ -167,7 +167,7 @@ STDMETHOD(ReleaseAccessor)(HACCESSOR hAccessor,
 
 #### <a name="parameters"></a>参数
 
-请参阅[iaccessor:: Releaseaccessor](/previous-versions/windows/desktop/ms719717)中*OLE DB 程序员参考*。
+请参阅[iaccessor:: Releaseaccessor](https://docs.microsoft.com/previous-versions/windows/desktop/ms719717(v=vs.85))中*OLE DB 程序员参考*。
 
 ## <a name="see-also"></a>请参阅
 

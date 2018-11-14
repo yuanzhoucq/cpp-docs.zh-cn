@@ -102,12 +102,12 @@ helpviewer_keywords:
 - ReleaseRows method
 - SetRows method
 ms.assetid: c6bde426-c543-4022-a98a-9519d9e2ae59
-ms.openlocfilehash: c62dd4ba7f4f91371378b7c1a6b0295edb3625e9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bb7f7ee0b4c190889daf661816a9e1c96575a052
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50431065"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51557084"
 ---
 # <a name="cbulkrowset-class"></a>CBulkRowset 类
 
@@ -154,7 +154,7 @@ class CBulkRowset : public CRowset<TAccessor>
 
 ## <a name="addrefrows"></a> Cbulkrowset:: Addrefrows
 
-调用[irowset:: Addrefrows](/previous-versions/windows/desktop/ms719619)来增加当前从 bulk 行集检索到的所有行的引用计数。
+调用[irowset:: Addrefrows](https://docs.microsoft.com/previous-versions/windows/desktop/ms719619(v=vs.85))来增加当前从 bulk 行集检索到的所有行的引用计数。
 
 ### <a name="syntax"></a>语法
 
@@ -253,7 +253,7 @@ HRESULT MoveToBookmark(const CBookmarkBase& bookmark,
 
 ### <a name="return-value"></a>返回值
 
-请参阅[irowset:: Getdata](/previous-versions/windows/desktop/ms716988)中*OLE DB 程序员参考*。
+请参阅[irowset:: Getdata](https://docs.microsoft.com/previous-versions/windows/desktop/ms716988(v=vs.85))中*OLE DB 程序员参考*。
 
 ## <a name="movetoratio"></a> Cbulkrowset:: Movetoratio
 
@@ -284,11 +284,11 @@ HRESULT MoveToRatio(DBCOUNTITEM nNumerator,
 
 `(nNumerator *  RowsetSize ) / nDenominator`
 
-其中`RowsetSize`是行集，以行为单位的大小。 此公式的准确性取决于特定的提供程序。 有关详细信息，请参阅[irowsetscroll:: Getrowsatratio](/previous-versions/windows/desktop/ms709602)中*OLE DB 程序员参考*。
+其中`RowsetSize`是行集，以行为单位的大小。 此公式的准确性取决于特定的提供程序。 有关详细信息，请参阅[irowsetscroll:: Getrowsatratio](https://docs.microsoft.com/previous-versions/windows/desktop/ms709602(v=vs.85))中*OLE DB 程序员参考*。
 
 ## <a name="releaserows"></a> Cbulkrowset:: Releaserows
 
-调用[irowset:: Releaserows](/previous-versions/windows/desktop/ms719771)要递减当前从 bulk 行集检索到的所有行的引用计数。
+调用[irowset:: Releaserows](https://docs.microsoft.com/previous-versions/windows/desktop/ms719771(v=vs.85))要递减当前从 bulk 行集检索到的所有行的引用计数。
 
 ### <a name="syntax"></a>语法
 

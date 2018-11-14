@@ -25,12 +25,12 @@ helpviewer_keywords:
 - files [C++], locking
 - _locking function
 ms.assetid: 099aaac1-d4ca-4827-aed6-24dff9844150
-ms.openlocfilehash: 1309d99d8e7040626384e38324c1e910e4731295
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 90327ed3388d4f18e0f64f92c33112c9ddd800f5
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50523789"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327039"
 ---
 # <a name="locking"></a>_locking
 
@@ -63,10 +63,10 @@ int _locking(
 
 |errno 值|条件|
 |-|-|
-**EACCES**|锁定冲突（文件已锁定或已解锁）。
-**EBADF**|无效的文件描述符。
-**EDEADLOCK**|锁定冲突。 时返回 **_LK_LOCK**或 **_LK_RLCK**指定标志，该文件不能在 10 次尝试后锁定。
-**EINVAL**|无效的参数将提供给 **_locking**。
+| **EACCES** | 锁定冲突（文件已锁定或已解锁）。 |
+| **EBADF** | 无效的文件描述符。 |
+| **EDEADLOCK** | 锁定冲突。 时返回 **_LK_LOCK**或 **_LK_RLCK**指定标志，该文件不能在 10 次尝试后锁定。 |
+| **EINVAL** | 无效的参数将提供给 **_locking**。 |
 
 如果失败是由错误参数导致，如无效的文件描述符，则调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。
 
@@ -78,11 +78,11 @@ int _locking(
 
 |*模式*值|效果|
 |-|-|
-**_LK_LOCK**|锁定指定字节。 如果无法锁定字节，该程序会立即在 1 秒后再次尝试。 如果在 10 次尝试后仍无法锁定字节，该常量将返回一个错误。
-**_LK_NBLCK**|锁定指定字节。 如果无法锁定字节，该常量将返回一个错误。
-**_LK_NBRLCK**|与相同 **_LK_NBLCK**。
-**_LK_RLCK**|与相同 **_LK_LOCK**。
-**_LK_UNLCK**|要解锁的指定字节必须在之前锁定过。
+| **_LK_LOCK** | 锁定指定字节。 如果无法锁定字节，该程序会立即在 1 秒后再次尝试。 如果在 10 次尝试后仍无法锁定字节，该常量将返回一个错误。 |
+| **_LK_NBLCK** | 锁定指定字节。 如果无法锁定字节，该常量将返回一个错误。 |
+| **_LK_NBRLCK** | 与相同 **_LK_NBLCK**。 |
+| **_LK_RLCK** | 与相同 **_LK_LOCK**。 |
+| **_LK_UNLCK** | 要解锁的指定字节必须在之前锁定过。 |
 
 可以锁定文件中不重叠的多个区域。 正在解锁的区域必须在之前锁定过。 **_locking**不会合并相邻区域; 如果有两种锁定的区域相邻，每个区域必须单独解锁。 区域应只是暂时锁定，在关闭文件或退出程序前应进行解锁。
 

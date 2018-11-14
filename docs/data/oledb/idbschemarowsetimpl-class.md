@@ -36,12 +36,12 @@ helpviewer_keywords:
 - GetRowset method
 - GetSchemas method
 ms.assetid: bd7bf0d7-a1c6-4afa-88e3-cfdbdf560703
-ms.openlocfilehash: 0469a41fce07dcd0a8a26fdc630a022399f9b455
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d9b0c5319c7eacbb2b5b4d40d5a936e680e82a89
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50535775"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556928"
 ---
 # <a name="idbschemarowsetimpl-class"></a>IDBSchemaRowsetImpl 类
 
@@ -82,15 +82,15 @@ class ATL_NO_VTABLE IDBSchemaRowsetImpl : public IDBSchemaRowset
 
 ## <a name="remarks"></a>备注
 
-此类实现 [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686) 接口和模板化创建程序函数 [CreateSchemaRowset](../../data/oledb/idbschemarowsetimpl-createschemarowset.md)。
+此类实现 [IDBSchemaRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms713686(v=vs.85)) 接口和模板化创建程序函数 [CreateSchemaRowset](../../data/oledb/idbschemarowsetimpl-createschemarowset.md)。
 
-OLE DB 使用架构行集返回与提供程序中的数据有关的数据。 此类数据通常称为“元数据”。 默认情况下，提供程序必须始终支持`DBSCHEMA_TABLES`， `DBSCHEMA_COLUMNS`，并`DBSCHEMA_PROVIDER_TYPES`，如中所述[IDBSchemaRowset](/previous-versions/windows/desktop/ms713686)中*OLE DB 程序员参考*。 架构行集在架构映射中指定。 有关架构映射项的信息，请参阅 [SCHEMA_ENTRY](../../data/oledb/schema-entry.md)。
+OLE DB 使用架构行集返回与提供程序中的数据有关的数据。 此类数据通常称为“元数据”。 默认情况下，提供程序必须始终支持`DBSCHEMA_TABLES`， `DBSCHEMA_COLUMNS`，并`DBSCHEMA_PROVIDER_TYPES`，如中所述[IDBSchemaRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms713686(v=vs.85))中*OLE DB 程序员参考*。 架构行集在架构映射中指定。 有关架构映射项的信息，请参阅 [SCHEMA_ENTRY](../../data/oledb/schema-entry.md)。
 
 ATL 对象向导中的 OLE DB 提供程序向导自动生成项目中的架构行集的代码。 （默认情况下，该向导支持前面提到的必需的架构行集。）当你使用 ATL 对象向导创建使用者时，该向导使用架构行集将正确数据绑定到提供程序。 如果未实现架构行集来提供正确的元数据，向导将不会绑定正确的数据。
 
 有关如何支持提供程序中的架构行集的信息，请参阅 [支持架构行集](../../data/oledb/supporting-schema-rowsets.md)。
 
-有关架构行集的详细信息，请参阅 [OLE DB 程序员参考](/previous-versions/windows/desktop/ms712921) 中的 *架构行集*。
+有关架构行集的详细信息，请参阅 [OLE DB 程序员参考](https://docs.microsoft.com/previous-versions/windows/desktop/ms712921(v=vs.85)) 中的 *架构行集*。
 
 ## <a name="checkrestrictions"></a> Idbschemarowsetimpl:: Checkrestrictions
 
@@ -100,7 +100,7 @@ ATL 对象向导中的 OLE DB 提供程序向导自动生成项目中的架构�
 
 ```cpp
 HRESULT CheckRestrictions(REFGUID rguidSchema,
-   ULONG cRestrictions,  const VARIANT rgRestrictions[]);
+   ULONG cRestrictions,  const VARIANT rgRestrictions[]);
 ```
 
 #### <a name="parameters"></a>参数
@@ -120,7 +120,7 @@ HRESULT CheckRestrictions(REFGUID rguidSchema,
 
 `CheckRestrictions` 确定是否调用使用者[GetRowset](../../data/oledb/idbschemarowsetimpl-getrowset.md)正确限制和正确限制类型 (例如，字符串 VT_BSTR) 提供程序支持。 它还确定是否支持正确的限制数目。 默认情况下， `CheckRestrictions` 将通过 [SetRestrictions](../../data/oledb/idbschemarowsetimpl-setrestrictions.md) 调用询问提供程序其在给定行集上支持的限制。 然后，它会将使用者提供的限制与提供程序支持的限制进行比较，并且要么成功要么失败。
 
-有关架构行集的详细信息，请参阅[IDBSchemaRowset](/previous-versions/windows/desktop/ms713686)中*OLE DB 程序员参考*Windows SDK 中。
+有关架构行集的详细信息，请参阅[IDBSchemaRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms713686(v=vs.85))中*OLE DB 程序员参考*Windows SDK 中。
 
 ## <a name="createschemarowset"></a> Idbschemarowsetimpl:: Createschemarowset
 
@@ -158,7 +158,7 @@ HRESULT CreateSchemaRowset(IUnknown *pUnkOuter,
 [in] 要设置的属性集数目。
 
 *rgPropertySets*<br/>
-[in] 指定要设置的属性的 [DBPROPSET](/previous-versions/windows/desktop/ms714367) 结构的数组。
+[in] 指定要设置的属性的 [DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85)) 结构的数组。
 
 *ppRowset*<br/>
 [out]传出`IUnknown`请求*riid*。 这`IUnknown`是架构行集对象上的接口。
@@ -195,7 +195,7 @@ void SetRestrictions(ULONG cRestrictions,
 [in] 要为其提取限制的架构行集的 GUID 数组。 每个数组元素均包含一个架构行集的 GUID（例如， `DBSCHEMA_TABLES`）。
 
 *rgRestrictions*<br/>
-[in] 要设置的限制值的长度 *cRestrictions* 数组。 各元素对应于由 GUID 标识的架构行集上的限制。 如果某个架构行集不受提供程序支持，则该元素设置为零。 否则， **ULONG** 值将包含一个表示该架构行集上支持的限制的位掩码。 有关相对应的限制为特定架构行集的详细信息，请查阅上表的架构行集 Guid 中[IDBSchemaRowset](/previous-versions/windows/desktop/ms713686)中*OLE DB 程序员参考*在 Windows 中SDK。
+[in] 要设置的限制值的长度 *cRestrictions* 数组。 各元素对应于由 GUID 标识的架构行集上的限制。 如果某个架构行集不受提供程序支持，则该元素设置为零。 否则， **ULONG** 值将包含一个表示该架构行集上支持的限制的位掩码。 有关相对应的限制为特定架构行集的详细信息，请查阅上表的架构行集 Guid 中[IDBSchemaRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms713686(v=vs.85))中*OLE DB 程序员参考*在 Windows 中SDK。
 
 ### <a name="remarks"></a>备注
 
@@ -207,7 +207,7 @@ void SetRestrictions(ULONG cRestrictions,
 
 有关支持架构行集的提供程序的示例，请参阅 [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV) 示例。
 
-有关架构行集的详细信息，请参阅[IDBSchemaRowset](/previous-versions/windows/desktop/ms713686)中*OLE DB 程序员参考*Windows SDK 中。
+有关架构行集的详细信息，请参阅[IDBSchemaRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms713686(v=vs.85))中*OLE DB 程序员参考*Windows SDK 中。
 
 ## <a name="getrowset"></a> Idbschemarowsetimpl:: Getrowset
 
@@ -247,7 +247,7 @@ STDMETHOD (GetRowset)(IUnknown *pUnkOuter,
 [in] 要设置的属性集数目。
 
 *rgPropertySets*<br/>
-[in/out] 要在新建架构行集上设置的 [DBPROPSET](/previous-versions/windows/desktop/ms714367) 结构数组。
+[in/out] 要在新建架构行集上设置的 [DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85)) 结构数组。
 
 *ppRowset*<br/>
 [out] 一个指针，指向新建架构行集上所请求的接口。
@@ -256,7 +256,7 @@ STDMETHOD (GetRowset)(IUnknown *pUnkOuter,
 
 此方法要求用户在会话类中有架构映射。 使用架构映射信息，`GetRowset`创建一个给定行集对象，如果*rguidSchema*参数等于其中一个映射条目 Guid。 有关映射条目的描述，请参阅 [SCHEMA_ENTRY](../../data/oledb/schema-entry.md) 。
 
-请参阅[idbschemarowset:: Getrowset](/previous-versions/windows/desktop/ms722634) Windows SDK 中。
+请参阅[idbschemarowset:: Getrowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms722634(v=vs.85)) Windows SDK 中。
 
 ## <a name="getschemas"></a> Idbschemarowsetimpl:: Getschemas
 
@@ -283,7 +283,7 @@ STDMETHOD (GetSchema s )(ULONG * pcSchemas,
 
 ### <a name="remarks"></a>备注
 
-此方法返回提供程序支持的所有架构行集的数组。 请参阅[idbschemarowset:: Getschemas](/previous-versions/windows/desktop/ms719605) Windows SDK 中。
+此方法返回提供程序支持的所有架构行集的数组。 请参阅[idbschemarowset:: Getschemas](https://docs.microsoft.com/previous-versions/windows/desktop/ms719605(v=vs.85)) Windows SDK 中。
 
 若要实现此函数，用户在会话类中必须有架构映射。 然后，该函数会利用架构映射信息，使用映射中架构的 GUID 数组进行响应。 这表示提供程序支持的架构。
 

@@ -33,12 +33,12 @@ helpviewer_keywords:
 - SetGUID method
 - AddProperty method
 ms.assetid: 54190149-c277-4679-b81a-ef484d4d1c00
-ms.openlocfilehash: c0bc8a0a43051b3b4bfb2a007806dc2147e24a7f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4b71fc43c3766f9a039d841b8872dee99210fe8c
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50446265"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556746"
 ---
 # <a name="cdbpropset-class"></a>CDBPropSet 类
 
@@ -81,8 +81,8 @@ OLE DB 提供程序和使用者使用`DBPROPSET`结构传递的数组`DBPROP`结
 ### <a name="syntax"></a>语法
 
 ```cpp
-bool AddProperty(DWORD dwPropertyID, 
-   constVARIANT& var, 
+bool AddProperty(DWORD dwPropertyID,
+   constVARIANT& var,
    DBPROPOPTIONS propoptions = DBPROPOPTIONS_REQUIRED) throw();bool AddProperty(DWORD dwPropertyID,
    LPCSTR szValue,  DBPROPOPTIONS propoptions = DBPROPOPTIONS_REQUIRED) throw();bool AddProperty(DWORD dwPropertyID,
    LPCWSTR szValue,DBPROPOPTIONS propoptions = DBPROPOPTIONS_REQUIRED) throw();bool AddProperty(DWORD dwPropertyID,
@@ -127,7 +127,7 @@ bool AddProperty(DWORD dwPropertyID, 
 
 ## <a name="cdbpropset"></a> Cdbpropset:: Cdbpropset
 
-构造函数。 初始化`rgProperties`， `cProperties`，并`guidPropertySet`的字段[DBPROPSET](/previous-versions/windows/desktop/ms714367)结构。
+构造函数。 初始化`rgProperties`， `cProperties`，并`guidPropertySet`的字段[DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85))结构。
 
 ### <a name="syntax"></a>语法
 
@@ -160,7 +160,7 @@ void SetGUID(const GUID& guid) throw();
 #### <a name="parameters"></a>参数
 
 *guid*<br/>
-[in]使用 GUID 来设置`guidPropertySet`字段[DBPROPSET](/previous-versions/windows/desktop/ms714367)结构。
+[in]使用 GUID 来设置`guidPropertySet`字段[DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85))结构。
 
 ### <a name="remarks"></a>备注
 
@@ -181,5 +181,5 @@ CDBPropSet& operator =(CDBPropSet& propset) throw();
 [OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [OLE DB 使用者模板参考](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [CDBPropIDSet 类](../../data/oledb/cdbpropidset-class.md)<br/>
-[DBPROPSET 结构](/previous-versions/windows/desktop/ms714367)
-[DBPROP 结构](/previous-versions/windows/desktop/ms717970)
+[DBPROPSET 结构](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85))
+[DBPROP 结构](https://docs.microsoft.com/previous-versions/windows/desktop/ms717970(v=vs.85))

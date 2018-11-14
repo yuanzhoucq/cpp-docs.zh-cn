@@ -31,12 +31,12 @@ helpviewer_keywords:
 - _sopen_s function
 - files [C++], sharing
 ms.assetid: 059a0084-d08c-4973-9174-55e391b72aa2
-ms.openlocfilehash: 0b26f8e15efe3e0a044de4c3b2d19f70510a91f6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1d5f35615aee058b51c0b14ff9ccd38894427b20
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50660353"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327078"
 ---
 # <a name="sopens-wsopens"></a>_sopen_s、_wsopen_s
 
@@ -84,11 +84,11 @@ errno_t _wsopen_s(
 
 |errno 值|条件|
 |-|-|
-**EACCES**| 给定路径是目录，或者文件是只读的，但是已尝试打开以供写入操作。
-**EEXIST**| **_Open**并 **_O_EXCL**标志已指定，但*filename*已存在。
-**EINVAL**| 无效*oflag*， *shflag*，或*pmode*自变量，或者*pfh*或*文件名*是空指针。
-**EMFILE**|没有更多可用的文件描述符。
-**ENOENT**|未找到文件或路径。
+| **EACCES** |  给定路径是目录，或者文件是只读的，但是已尝试打开以供写入操作。 |
+| **EEXIST** |  **_Open**并 **_O_EXCL**标志已指定，但*filename*已存在。 |
+| **EINVAL** |  无效*oflag*， *shflag*，或*pmode*自变量，或者*pfh*或*文件名*是空指针。 |
+| **EMFILE** | 没有更多可用的文件描述符。 |
+| **ENOENT** | 未找到文件或路径。 |
 
 如果将无效参数传递到该函数，则调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则**errno**设置为**EINVAL**并**EINVAL**返回。
 
@@ -110,23 +110,23 @@ errno_t _wsopen_s(
 
 |*oflag*常量|行为|
 |-|-|
-**_O_APPEND**|在执行每个写入操作之前，将文件指针移动到文件末尾。
-**_O_BINARY**|在二进制（未转换）模式下打开该文件。 （有关二进制模式的说明，请参阅 [fopen](fopen-wfopen.md)。）
-**_OPEN**|创建文件并打开它以供写入。 如果指定的文件不起作用*文件名*存在。 *Pmode*时，参数是必需 **_open**指定。
-**_OPEN** &AMP;#124; **_O_SHORT_LIVED**|创建一个文件作为临时文件，如果可能，请不要将它刷新到磁盘中。 *Pmode*时，参数是必需 **_open**指定。
-**_OPEN** &AMP;#124; **_O_TEMPORARY**|创建一个文件作为临时文件；在关闭最后一个文件描述符时，删除该文件。 *Pmode*时，参数是必需 **_open**指定。
-**_OPEN**&AMP;#124; ` _O_EXCL`|如果指定的文件，则返回一个错误值*文件名*存在。 仅当与一起使用时，才 **_open**。
-**_O_NOINHERIT**|阻止创建共享文件描述符。
-**_O_RANDOM**|指定缓存针对（但不限于）从磁盘的随机访问进行优化。
-**_O_RDONLY**|打开文件以供只读。 不能指定 **_O_RDWR**或 **_O_WRONLY**。
-**_O_RDWR**|打开文件以供读取和写入。 不能指定 **_O_RDONLY**或 **_O_WRONLY**。
-**_O_SEQUENTIAL**|指定缓存针对（但不限于）从磁盘的顺序访问进行优化。
-**_O_TEXT**|在文本（转换）模式下打开文件。 （有关详细信息，请参阅[文本和二进制模式文件 I/O](../../c-runtime-library/text-and-binary-mode-file-i-o.md) 和 [fopen](fopen-wfopen.md)。）
-**_O_TRUNC**|打开文件并将其长度截断为零；该文件必须具有写入权限。 不能指定 **_O_RDONLY**。 **_O_TRUNC**用于 **_open**打开一个现有文件或创建一个文件。 **注意：** **_O_TRUNC**标志会损坏指定文件的内容。
-**_O_WRONLY**|打开文件以供只写。 不能指定 **_O_RDONLY**或 **_O_RDWR**。
-**_O_U16TEXT**|在 Unicode UTF-16 模式下打开文件。
-**_O_U8TEXT**|在 Unicode UTF-8 模式下打开文件。
-**_O_WTEXT**|在 Unicode 模式下打开文件。
+| **_O_APPEND** | 在执行每个写入操作之前，将文件指针移动到文件末尾。 |
+| **_O_BINARY** | 在二进制（未转换）模式下打开该文件。 （有关二进制模式的说明，请参阅 [fopen](fopen-wfopen.md)。） |
+| **_OPEN** | 创建文件并打开它以供写入。 如果指定的文件不起作用*文件名*存在。 *Pmode*时，参数是必需 **_open**指定。 |
+| **_OPEN** &AMP;#124; **_O_SHORT_LIVED** | 创建一个文件作为临时文件，如果可能，请不要将它刷新到磁盘中。 *Pmode*时，参数是必需 **_open**指定。 |
+| **_OPEN** &AMP;#124; **_O_TEMPORARY** | 创建一个文件作为临时文件；在关闭最后一个文件描述符时，删除该文件。 *Pmode*时，参数是必需 **_open**指定。 |
+| **_OPEN**&AMP;#124; ` _O_EXCL` | 如果指定的文件，则返回一个错误值*文件名*存在。 仅当与一起使用时，才 **_open**。 |
+| **_O_NOINHERIT** | 阻止创建共享文件描述符。 |
+| **_O_RANDOM** | 指定缓存针对（但不限于）从磁盘的随机访问进行优化。 |
+| **_O_RDONLY** | 打开文件以供只读。 不能指定 **_O_RDWR**或 **_O_WRONLY**。 |
+| **_O_RDWR** | 打开文件以供读取和写入。 不能指定 **_O_RDONLY**或 **_O_WRONLY**。 |
+| **_O_SEQUENTIAL** | 指定缓存针对（但不限于）从磁盘的顺序访问进行优化。 |
+| **_O_TEXT** | 在文本（转换）模式下打开文件。 （有关详细信息，请参阅[文本和二进制模式文件 I/O](../../c-runtime-library/text-and-binary-mode-file-i-o.md) 和 [fopen](fopen-wfopen.md)。） |
+| **_O_TRUNC** | 打开文件并将其长度截断为零；该文件必须具有写入权限。 不能指定 **_O_RDONLY**。 **_O_TRUNC**用于 **_open**打开一个现有文件或创建一个文件。 **注意：** **_O_TRUNC**标志会损坏指定文件的内容。 |
+| **_O_WRONLY** | 打开文件以供只写。 不能指定 **_O_RDONLY**或 **_O_RDWR**。 |
+| **_O_U16TEXT** | 在 Unicode UTF-16 模式下打开文件。 |
+| **_O_U8TEXT** | 在 Unicode UTF-8 模式下打开文件。 |
+| **_O_WTEXT** | 在 Unicode 模式下打开文件。 |
 
 若要指定文件访问模式，您必须指定 **_O_RDONLY**， **_O_RDWR**，或 **_O_WRONLY**。 对于访问模式，不存在默认值。
 
@@ -138,18 +138,18 @@ errno_t _wsopen_s(
 
 |*shflag*常量|行为|
 |-|-|
-**_SH_DENYRW**|拒绝对文件的读取和写入访问。
-**_SH_DENYWR**|拒绝对文件的写入访问。
-**_SH_DENYRD**|拒绝对文件的读取访问。
-**_SH_DENYNO**|允许读取和写入访问。
+| **_SH_DENYRW** | 拒绝对文件的读取和写入访问。 |
+| **_SH_DENYWR** | 拒绝对文件的写入访问。 |
+| **_SH_DENYRD** | 拒绝对文件的读取访问。 |
+| **_SH_DENYNO** | 允许读取和写入访问。 |
 
 *Pmode*参数始终是必需的不同于在 **_sopen**。 当指定 **_open**，如果文件不存在，则*pmode*指定第一次关闭新文件时设置的文件的权限设置。 否则为*pmode*将被忽略。 *pmode*是一个整数表达式，包含一个或两个清单常量 **_S_IWRITE**并 **_S_IREAD**，其定义中\<sys\stat.h >。 当给定这两个常量时，将使用按位“或”运算符合并它们。 含义*pmode*如下所示。
 
 |*pmode*|含义|
 |-|-|
-**_S_IREAD**|只允许读取。
-**_S_IWRITE**|允许写入。 （实际上，允许读取和写入。）
-**_S_IREAD** &AMP;#124; **_S_IWRITE**|允许读取和写入。
+| **_S_IREAD** | 只允许读取。 |
+| **_S_IWRITE** | 允许写入。 （实际上，允许读取和写入。） |
+| **_S_IREAD** &AMP;#124; **_S_IWRITE** | 允许读取和写入。 |
 
 如果未授予写入权限，则该文件为只读。 在 Windows 操作系统中，所有文件均可读；不可能提供只写权限。 因此，模式 **_S_IWRITE**并 **_S_IREAD** | **_S_IWRITE**是等效的。
 

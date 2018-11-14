@@ -6,16 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - ATL Control Wizard, options
 ms.assetid: 4607c51a-992d-433e-9281-919c6f519a3d
-ms.openlocfilehash: 932661227daa216934c061a8b6807b05ca8270ec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e607e35b2b3970f329692ba8d2c612d7f6a6591b
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50443753"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51522306"
 ---
 # <a name="options-atl-control-wizard"></a>选项，ATL 控件向导
-
-在此处插入摘要的"搜索结果"。
 
 在向导的此页用于定义要创建的控件的类型和它包含的接口支持的级别。
 
@@ -29,17 +27,17 @@ ms.locfileid: "50443753"
 
 - **复合控件**: ActiveX 控件可以包含 （类似于一个对话框） 的其他 ActiveX 控件或 Windows 控件。 复合控件包括：
 
-   - 用于实现复合控件的对话框中的模板。
+  - 用于实现复合控件的对话框中的模板。
 
-   - 自定义资源，注册表，会自动注册复合控件时调用。
+  - 自定义资源，注册表，会自动注册复合控件时调用。
 
-   - 实现复合控件的 c + + 类。
+  - 实现复合控件的 c + + 类。
 
-   - 复合控件公开一个 COM 接口。
+  - 复合控件公开一个 COM 接口。
 
-   - 包含复合控件的 HTML 测试页。
+  - 包含复合控件的 HTML 测试页。
 
-   默认情况下，此控件设置[CComControlBase::m_bWindowOnly](../../atl/reference/ccomcontrolbase-class.md#m_bwindowonly)为 true，以指示这是有窗口的控件。 它实现了接收器映射。 有关详细信息，请参阅[支持 DHTML 控件](../../atl/atl-support-for-dhtml-controls.md)。
+    默认情况下，此控件设置[CComControlBase::m_bWindowOnly](../../atl/reference/ccomcontrolbase-class.md#m_bwindowonly)为 true，以指示这是有窗口的控件。 它实现了接收器映射。 有关详细信息，请参阅[支持 DHTML 控件](../../atl/atl-support-for-dhtml-controls.md)。
 
 - **DHTML 控件**: ATL DHTML 控件指定用户界面，使用 HTML。 DHTML UI 类包含 COM 映射。 默认情况下，此控件设置[CComControlBase::m_bWindowOnly](../../atl/reference/ccomcontrolbase-class.md#m_bwindowonly)为 true，以指示这是有窗口的控件。
 

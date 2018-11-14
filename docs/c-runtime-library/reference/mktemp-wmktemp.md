@@ -33,12 +33,12 @@ helpviewer_keywords:
 - mktemp function
 - temporary files [C++]
 ms.assetid: 055eb539-a8c2-4a7d-be54-f5b6d1eb5c85
-ms.openlocfilehash: 9dbaba9e4a68523c0d79762c6a7ff54c238e397d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c1c5f0ee12c9e07d76405014bb4a6a6ecc7d97e6
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50554152"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326259"
 ---
 # <a name="mktemp-wmktemp"></a>_mktemp、_wmktemp
 
@@ -82,7 +82,7 @@ wchar_t *_wmktemp(
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tmktemp**|**_mktemp**|**_mktemp**|**_wmktemp**|
 
-*NameTemplate*自变量具有窗体*基 * * XXXXXX*，其中*基*为您提供的新文件名称的一部分并且每个 X 为提供的字符的占位符 **_mktemp**。 中的每个占位符字符*nameTemplate*必须是大写 x。 **_mktemp**保留*基*并将第一个尾随 X 替换为字母字符。 **_mktemp**替换将后面的尾随 five 位数字值; 此值是标识调用进程中，或在多线程程序中，调用线程的唯一编号。
+*NameTemplate*自变量具有窗体*基*XXXXXX，其中*基*为您提供的新文件名称的一部分并且每个 X 为提供的字符的占位符 **_mktemp**。 中的每个占位符字符*nameTemplate*必须是大写 x。 **_mktemp**保留*基*并将第一个尾随 X 替换为字母字符。 **_mktemp**替换将后面的尾随 five 位数字值; 此值是标识调用进程中，或在多线程程序中，调用线程的唯一编号。
 
 每次成功调用 **_mktemp**修改*nameTemplate*。 在每个后续调用中从同一个进程或线程具有相同*nameTemplate*自变量， **_mktemp**检查返回的名称匹配的文件名称 **_mktemp**中以前的调用。 如果给定名称的文件不存在 **_mktemp**返回该名称。 如果文件存在之前返回的所有名称， **_mktemp**通过将它与下一个可用小写字母，按顺序，从 a 到 z 的以前返回名称中使用的字母字符替换为创建的新名称。 例如，如果*基*是：
 

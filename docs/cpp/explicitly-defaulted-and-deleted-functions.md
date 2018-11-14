@@ -2,12 +2,12 @@
 title: 显式默认设置的函数和已删除的函数
 ms.date: 11/04/2016
 ms.assetid: 5a588478-fda2-4b3f-a279-db3967f5e07e
-ms.openlocfilehash: a090bd1b1a60dd7a5a5350fcf81dec7f17e083c6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aa03ca826eebe467e45e2bb7e0bc47537d40f366
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50662600"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327013"
 ---
 # <a name="explicitly-defaulted-and-deleted-functions"></a>显式默认设置的函数和已删除的函数
 
@@ -36,12 +36,12 @@ ms.locfileid: "50662600"
    - 不自动生成移动赋值运算符。
 
 > [!NOTE]
->  此外，C++11 标准指定将以下附加规则：
+> 此外，C++11 标准指定将以下附加规则：
 >
 > - 如果显式声明了复制构造函数或析构函数，则弃用复制赋值运算符的自动生成。
 > - 如果显式声明了复制赋值运算符或析构函数，则弃用复制构造函数的自动生成。
 >
->  在这两种情况下，Visual Studio 将继续隐式自动生成所需的函数且不发出警告。
+> 在这两种情况下，Visual Studio 将继续隐式自动生成所需的函数且不发出警告。
 
 这些规则的结果也可能泄漏到对象层次结构中。 例如，如果出于任何原因基类不具有默认构造函数可从派生类调用 — 即，**公共**或**受保护的**不带参数的构造函数 — 然后类派生不能自动生成其自己的默认构造函数。
 

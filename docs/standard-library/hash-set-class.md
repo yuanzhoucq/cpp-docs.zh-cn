@@ -86,12 +86,12 @@ helpviewer_keywords:
 - stdext::hash_set::upper_bound
 - stdext::hash_set::value_comp
 ms.assetid: c765c06e-cbb6-48c2-93ca-d15468eb28d7
-ms.openlocfilehash: 12f177887552cb14edba6ae8cfeeab1abe24a45b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0668342468e30733f8257ccd2682bfe785551857
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50657504"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51333597"
 ---
 # <a name="hashset-class"></a>hash_set 类
 
@@ -565,7 +565,7 @@ size_type count(const Key& key) const;
 
 成员函数返回在以下范围内的元素数目：
 
-[ **lower_bound** (_ *Key* ), **upper_bound** (\_ *Key* ) )。
+\[ lower_bound (*键*)、 upper_bound (*密钥*))。
 
 ### <a name="example"></a>示例
 
@@ -1534,7 +1534,7 @@ key_compare key_comp() const;
 
 存储对象用于定义以下成员函数：
 
-**bool operator**( **const Key&** _ *xVal*, **const Key&** \_ `yVal`);
+`bool operator( const Key& _xVal, const Key& _yVal );`
 
 如果 `_xVal` 在排序顺序中先于且不等于 `_yVal`，则该函数会返回 **true**。
 
@@ -2296,7 +2296,7 @@ value_compare value_comp() const;
 
 存储对象用于定义以下成员函数：
 
-**bool operator**( **const Key&** _ *xVal*, **const Key&** \_ `yVal`);
+`bool operator( const Key& _xVal, const Key& _yVal );`
 
 如果 `_xVal` 在排序顺序中先于且不等于 `_yVal`，则该函数会返回 **true**。
 

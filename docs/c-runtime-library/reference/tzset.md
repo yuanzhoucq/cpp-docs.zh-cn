@@ -23,12 +23,12 @@ helpviewer_keywords:
 - time environment variables
 - environment variables, setting time
 ms.assetid: 3f6ed537-b414-444d-b272-5dd377481930
-ms.openlocfilehash: 33fd1cc0a618fccc4a59e5aff059d3f2cdeec8fe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6312297e6daa9b4790674bd26d21812d5bee34c6
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50661751"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51330250"
 ---
 # <a name="tzset"></a>_tzset
 
@@ -51,11 +51,11 @@ void _tzset( void );
 
 |参数|描述|
 |-|-|
-*tzn*|三个字母时区名称，如 PST。 必须指定从本地时间到 UTC 的正确偏移量。
-*hh*|UTC 和本地时间之间的差异（以小时为单位）。 (+) 号对于正值可选。
-*mm*|分钟。 分开*hh*冒号分隔 (**:**)。
-*ss*|秒。 分开*mm*冒号分隔 (**:**)。
-*dzn*|三字母夏令时区域，如 PDT。 如果夏时制为永远不会在区域中，设置**TZ**而无需为值*dzn*。 C 运行时库假设使用美国规则实现夏令时 (DST) 的计算。
+| *tzn* | 三个字母时区名称，如 PST。 必须指定从本地时间到 UTC 的正确偏移量。 |
+| *hh* | UTC 和本地时间之间的差异（以小时为单位）。 (+) 号对于正值可选。 |
+| *mm* | 分钟。 分开*hh*冒号分隔 (**:**)。 |
+| *ss* | 秒。 分开*mm*冒号分隔 (**:**)。 |
+| *dzn* | 三字母夏令时区域，如 PDT。 如果夏时制为永远不会在区域中，设置**TZ**而无需为值*dzn*。 C 运行时库假设使用美国规则实现夏令时 (DST) 的计算。 |
 
 > [!NOTE]
 > 在计算时间差异的符号时一定要小心。 由于时间差异是从本地时间到 UTC 间（不是相反）的偏移量，因此其符号可能会与你直觉上判断的符号相反。 对于早于 UTC 的时区，时间差异为负；对于晚于 UTC 的时区，时间差异为正。

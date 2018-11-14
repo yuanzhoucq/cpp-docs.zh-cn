@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::operator&lt; (string)
 - std::operator&lt;&lt; (string)
 - std::operator&lt;= (string), std::operator== (string)
-ms.openlocfilehash: a35188e0194a57ac399610f3130634132addf8f3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a3ca469058ba65f83b0df60a93c63895e34f916e
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644816"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51332213"
 ---
 # <a name="ltstringgt-operators"></a>&lt;string&gt; 运算符
 
@@ -115,7 +115,7 @@ basic_string<CharType, Traits, Allocator>&& operator+(
 
 ### <a name="remarks"></a>备注
 
-每个函数均重载 `operator+` 以连接模板类 [basic_string 类](../standard-library/basic-string-class.md)的两个对象。 全部都有效返回 `basic_string`\< **CharType**、**Traits**、**Allocator**>(_ *Left*). [append](../standard-library/basic-string-class.md#append)(\_ *Right*)。
+每个函数均重载 `operator+` 以连接模板类 [basic_string 类](../standard-library/basic-string-class.md)的两个对象。 全部都有效返回`basic_string< CharType, Traits, Allocator>(Left).append(right)`。 有关详细信息，请参阅[追加](../standard-library/basic-string-class.md#append)。
 
 ### <a name="example"></a>示例
 
@@ -575,7 +575,7 @@ basic_ostream<CharType, Traits>& operator<<(
 
 ### <a name="remarks"></a>备注
 
-模板函数重载 **operator<<** 以将对象 _ *Str* 模板类[basic_string](../standard-library/basic-string-class.md) 插入到流\_ *Ostr.* 实际上，该函数将返回 \_ *Ostr*. **write**( \_ *Str*. [c_str](../standard-library/basic-string-class.md#c_str), \_ *Str*. [size](../standard-library/basic-string-class.md#size))。
+模板函数重载**运算符 <<** 插入对象*str*模板类的[basic_string](../standard-library/basic-string-class.md)到流 *\_Ostr*。 实际上，该函数将返回`_Ostr.write( str.c_str, str.size )`。
 
 ## <a name="op_gt"></a>operator&gt;
 

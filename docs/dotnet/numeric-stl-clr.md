@@ -17,12 +17,12 @@ helpviewer_keywords:
 - inner_product function [STL/CLR]
 - partial_sum function [STL/CLR]
 ms.assetid: 1dc4d9a3-e734-459c-9678-5d9be0ef4c79
-ms.openlocfilehash: 95449937dda62d8ef127d41625553f0e4294cf77
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0311b36ec1190631e053eeade443939703e69103
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50574236"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51328898"
 ---
 # <a name="numeric-stlclr"></a>numeric (STL/CLR)
 
@@ -91,7 +91,7 @@ template<class _InIt, class _OutIt, class _Fn2> inline
 
 计算两个范围的逐元素集乘积的总和并将总和添加到指定初始值，或计算将求和与乘积二元运算替换为其他指定二元运算的一般化程序的结果。
 
-###<a name="syntax"></a>语法
+### <a name="syntax"></a>语法
 
 ```cpp
 template<class _InIt1, class _InIt2, class _Ty> inline

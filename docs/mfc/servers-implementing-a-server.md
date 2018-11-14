@@ -5,12 +5,12 @@ helpviewer_keywords:
 - servers, implementing
 - OLE server applications [MFC], implementing OLE servers
 ms.assetid: 5bd57e8e-3b23-4f23-9597-496fac2d24b5
-ms.openlocfilehash: bd5967fe07670bd4b3bd076ca23fda62b02b2177
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a5c89ff1256d557ef417b9e53ce76bbf1b5d6196
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566747"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51518951"
 ---
 # <a name="servers-implementing-a-server"></a>服务器：实现服务器
 
@@ -22,11 +22,11 @@ ms.locfileid: "50566747"
 
 - 定义服务器资源：
 
-   - 服务器在编辑嵌入的项在其自己的窗口中时使用的菜单资源。
+  - 服务器在编辑嵌入的项在其自己的窗口中时使用的菜单资源。
 
-   - 使用服务器处于就地活动状态时的菜单和工具栏资源。
+  - 使用服务器处于就地活动状态时的菜单和工具栏资源。
 
-   这些资源的详细信息，请参阅[菜单和资源： 服务器添加](../mfc/menus-and-resources-server-additions.md)。
+  这些资源的详细信息，请参阅[菜单和资源： 服务器添加](../mfc/menus-and-resources-server-additions.md)。
 
 - 定义项类派生自`COleServerItem`。 服务器项的更多详细信息，请参阅[服务器： 服务器项](../mfc/servers-server-items.md)。
 

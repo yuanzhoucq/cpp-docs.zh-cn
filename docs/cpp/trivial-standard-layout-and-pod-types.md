@@ -2,12 +2,12 @@
 title: 微不足道，标准布局、 POD 和文本类型
 ms.date: 04/05/2018
 ms.assetid: 2b23a7be-9bad-49fc-8298-31a9a7c556b0
-ms.openlocfilehash: a1ab49e9e2813d0debc77e6a2ff02ec85bb9aeb9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c742f4c84a1b2ba558b790d7eea7760902da7818
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568454"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51521695"
 ---
 # <a name="trivial-standard-layout-pod-and-literal-types"></a>微不足道，标准布局、 POD 和文本类型
 
@@ -94,7 +94,6 @@ struct Derived : public Base
    int x;
    int y;
 };
-
 ```
 
 在此示例中`Derived`是标准布局，因为`Base`没有非静态数据成员：

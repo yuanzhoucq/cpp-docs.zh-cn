@@ -28,12 +28,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComSafeArray class
 ms.assetid: ee349aef-33db-4c85-bd08-5d86a3c9d53a
-ms.openlocfilehash: 3cbe0ed66addab9ab4ff7a6175083730a8702a31
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 861fdefe19a0c5b78a7874be3386873d6c253a3c
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548689"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51521409"
 ---
 # <a name="ccomsafearray-class"></a>CComSafeArray 类
 
@@ -100,7 +100,7 @@ class CComSafeArray
 
 ## <a name="remarks"></a>备注
 
-`CComSafeArray` 为 [SAFEARRAY Data Type](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagsafearray) 类提供包装器，从而可以轻松地创建并管理几乎所有支持 VARIANT 的类型的一维数组和多维数组。
+`CComSafeArray` 为 [SAFEARRAY Data Type](/windows/desktop/api/oaidl/ns-oaidl-tagsafearray) 类提供包装器，从而可以轻松地创建并管理几乎所有支持 VARIANT 的类型的一维数组和多维数组。
 
 `CComSafeArray` 可简化数组在进程之间的传递，此外还可以对照上限和下限检查数组索引值，从而提供额外的安全性。
 
@@ -662,7 +662,7 @@ HRESULT SetAt(LONG lIndex, const T& t, BOOL bCopy = TRUE);
 
 ## <a name="see-also"></a>请参阅
 
-[SAFEARRAY 数据类型](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagsafearray)<br/>
+[SAFEARRAY 数据类型](/windows/desktop/api/oaidl/ns-oaidl-tagsafearray)<br/>
 [CComSafeArray::Create](#create)<br/>
 [CComSafeArray::Destroy](#destroy)<br/>
 [类概述](../../atl/atl-class-overview.md)

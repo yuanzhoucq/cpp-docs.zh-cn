@@ -23,12 +23,12 @@ helpviewer_keywords:
 - stream buffering
 - setvbuf function
 ms.assetid: 6aa5aa37-3408-4fa0-992f-87f9f9c4baea
-ms.openlocfilehash: b2a5cfc08da7812e32ad84940ab4c78288017720
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d4336c6cc478a035fcc0b9b059a7161d58bc4442
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445768"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51328092"
 ---
 # <a name="setvbuf"></a>setvbuf
 
@@ -75,9 +75,9 @@ int setvbuf(
 
 |*模式*值|含义|
 |-|-|
-**_IOFBF**|完全缓冲;即*缓冲区*用作缓冲区并*大小*用作缓冲区的大小。 如果*缓冲区*是**NULL**，自动分配的缓冲区*大小*使用个字节长。
-**_IOLBF**|对于某些系统，会提供行缓冲。 但是，对于 Win32，行为是相同 **_IOFBF** -完全缓冲。
-**_IONBF**|不会使用缓冲区，而不考虑*缓冲区*或*大小*。
+| **_IOFBF** | 完全缓冲;即*缓冲区*用作缓冲区并*大小*用作缓冲区的大小。 如果*缓冲区*是**NULL**，自动分配的缓冲区*大小*使用个字节长。 |
+| **_IOLBF** | 对于某些系统，会提供行缓冲。 但是，对于 Win32，行为是相同 **_IOFBF** -完全缓冲。 |
+| **_IONBF** | 不会使用缓冲区，而不考虑*缓冲区*或*大小*。 |
 
 ## <a name="requirements"></a>要求
 

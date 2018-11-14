@@ -2,12 +2,12 @@
 title: 要弃用的类型和成员 (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: b20b01c1-a439-4ff0-8cf3-d7280c492813
-ms.openlocfilehash: 661445c8a365451d94f938cfe262623866b0fa5e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1e29f2ff73d6fb6fd499052d9f9255f8b1a659c7
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618629"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51325843"
 ---
 # <a name="deprecating-types-and-members-ccx"></a>要弃用的类型和成员 (C++/CX)
 
@@ -39,7 +39,7 @@ public:
 
 下表列出了可应用 Deprecated 特性的构造：
 
-||
+| |
 |-|
 |XAML 控件|
 |委托|

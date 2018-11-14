@@ -8,12 +8,12 @@ f1_keywords:
 - PPLINTERFACE/concurrency::scheduler_ptr::scheduler_ptr::get
 - PPLINTERFACE/concurrency::scheduler_ptr::scheduler_ptr::operator bool
 ms.assetid: e88c84af-c306-476d-aef1-f42a0fa0a80f
-ms.openlocfilehash: 7fd81a1ccf6702c74a013c5772d59f01121b61a0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0da45fa18d12b3f1c93df6b8c8736ed1bfb58ade
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50479217"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524990"
 ---
 # <a name="schedulerptr-structure"></a>scheduler_ptr 结构
 
@@ -58,7 +58,7 @@ struct scheduler_ptr;
 
 ##  <a name="get"></a>  scheduler_ptr:: get 方法
 
-返回指向计划程序的原始指针
+返回到计划程序的原始指针。
 
 ```
 scheduler_interface* get() const;
@@ -68,39 +68,39 @@ scheduler_interface* get() const;
 
 ##  <a name="operator_bool"></a>  scheduler_ptr:: operator bool
 
-测试计划程序指针是否为非 null
-
-'' 运算符 bool （) const;
-```
-
-##  <a name="operator_ptr"></a>  scheduler_ptr::operator-&gt;
-
-Behave like a pointer
+测试计划程序指针是否不为 null。
 
 ```
-scheduler_interface * 运算符-> const; （)
+operator bool() const;
 ```
 
-### Return Value
+##  <a name="operator_ptr"></a>  scheduler_ptr:: operator-&gt;
 
-##  <a name="ctor"></a>  scheduler_ptr::scheduler_ptr Constructor
-
-Creates a scheduler pointer from shared_ptr to scheduler
+类似于指针的行为。
 
 ```
-显式 scheduler_ptr （std:: < scheduler_interface > 计划程序）;
-
-显式 scheduler_ptr (_In_opt_ scheduler_interface * pScheduler);
+scheduler_interface* operator->() const;
 ```
 
-### Parameters
+### <a name="return-value"></a>返回值
+
+##  <a name="ctor"></a>  scheduler_ptr:: scheduler_ptr 构造函数
+
+从 shared_ptr 到计划程序创建的计划程序指针。
+
+```
+explicit scheduler_ptr(std::shared_ptr<scheduler_interface> scheduler);
+explicit scheduler_ptr(_In_opt_ scheduler_interface* pScheduler);
+```
+
+### <a name="parameters"></a>参数
 
 *scheduler*<br/>
-The scheduler to convert.
+计划程序进行转换。
 
 *pScheduler*<br/>
-The scheduler pointer to convert.
+要转换的计划程序指针。
 
-## See Also
+## <a name="see-also"></a>请参阅
 
-[concurrency Namespace](concurrency-namespace.md)
+[并发命名空间](concurrency-namespace.md)

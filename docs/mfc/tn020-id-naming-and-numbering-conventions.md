@@ -8,12 +8,12 @@ helpviewer_keywords:
 - resource identifiers, naming and numbering
 - resource identifiers
 ms.assetid: aecbd2cf-68b3-47f6-ae21-b1f507917245
-ms.openlocfilehash: c5ae31303d87840017320f580632e567be79e6a9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9e575ee99b78b8efa75096cac4559eb9aea7fd21
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50464497"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51518666"
 ---
 # <a name="tn020-id-naming-and-numbering-conventions"></a>TN020：ID 命名和编号约定
 
@@ -89,13 +89,13 @@ MFC 库还使用"IDW_"前缀，作为一种特殊形式的控件 Id （而不是
 
 - MFC 的内部框架保留这些范围：
 
-   - 通过 0x7FFF 0x7000 （请参阅 afxres.h）
+  - 通过 0x7FFF 0x7000 （请参阅 afxres.h）
 
-   - 通过 0xEFFF 0xE000 （请参阅 afxres.h）
+  - 通过 0xEFFF 0xE000 （请参阅 afxres.h）
 
-   - 16000 通过 18000 （请参阅 afxribbonres.h）
+  - 16000 通过 18000 （请参阅 afxribbonres.h）
 
-   这些范围可能会更改在将来的 MFC 实现。
+  这些范围可能会更改在将来的 MFC 实现。
 
 - Windows 系统的多个命令使用 0xF000 到 0xFFFF 的范围。
 

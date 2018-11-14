@@ -52,16 +52,16 @@ helpviewer_keywords:
 - m_bCancelWhenExecuting
 - m_bIsExecuting
 ms.assetid: ef285fef-0d66-45e6-a762-b03357098e3b
-ms.openlocfilehash: a3520ed34f356c70163b9063178df48e4bc66a7a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c5e599b437f7660801a1eb40618eb49bee84a918
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50583581"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556811"
 ---
 # <a name="icommandimpl-class"></a>ICommandImpl 类
 
-提供用于实现[ICommand](/previous-versions/windows/desktop/ms709737)接口。
+提供用于实现[ICommand](https://docs.microsoft.com/previous-versions/windows/desktop/ms709737(v=vs.85))接口。
 
 ## <a name="syntax"></a>语法
 
@@ -119,7 +119,7 @@ STDMETHOD(Cancel)();
 
 ### <a name="remarks"></a>备注
 
-请参阅[ICommand::Cancel](/previous-versions/windows/desktop/ms714402)中*OLE DB 程序员参考*。
+请参阅[ICommand::Cancel](https://docs.microsoft.com/previous-versions/windows/desktop/ms714402(v=vs.85))中*OLE DB 程序员参考*。
 
 ## <a name="cancelexecution"></a> Icommandimpl:: Cancelexecution
 
@@ -178,7 +178,7 @@ HRESULT CreateRowset(IUnknown* pUnkOuter,
 
 若要创建多个行集，或提供你自己创建不同的行集的条件，将放到不同的调用`CreateRowset`从`Execute`。
 
-请参阅[icommand:: Execute](/previous-versions/windows/desktop/ms718095)中*OLE DB 程序员参考。*
+请参阅[icommand:: Execute](https://docs.microsoft.com/previous-versions/windows/desktop/ms718095(v=vs.85))中*OLE DB 程序员参考。*
 
 ## <a name="execute"></a> Icommandimpl:: Execute
 
@@ -196,7 +196,7 @@ HRESULT Execute(IUnknown* pUnkOuter,
 
 #### <a name="parameters"></a>参数
 
-请参阅[icommand:: Execute](/previous-versions/windows/desktop/ms718095)中*OLE DB 程序员参考*。
+请参阅[icommand:: Execute](https://docs.microsoft.com/previous-versions/windows/desktop/ms718095(v=vs.85))中*OLE DB 程序员参考*。
 
 ### <a name="remarks"></a>备注
 
@@ -217,7 +217,7 @@ STDMETHOD (GetDBSession) (REFIID riid,
 
 #### <a name="parameters"></a>参数
 
-请参阅[ICommand::GetDBSession](/previous-versions/windows/desktop/ms719622)中*OLE DB 程序员参考*。
+请参阅[ICommand::GetDBSession](https://docs.microsoft.com/previous-versions/windows/desktop/ms719622(v=vs.85))中*OLE DB 程序员参考*。
 
 ### <a name="remarks"></a>备注
 
