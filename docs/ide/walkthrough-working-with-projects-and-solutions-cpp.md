@@ -7,12 +7,12 @@ helpviewer_keywords:
 - projects [C++]
 - solutions [C++], about solutions
 ms.assetid: 93a3f290-e294-46e3-876e-e3084d9ae833
-ms.openlocfilehash: 6cbd4cf86e6828d637430c468afd1306665746a6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 968e4981a28d646b75335ee380635fd8f8e863e3
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50459730"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51519226"
 ---
 # <a name="walkthrough-working-with-projects-and-solutions-c"></a>演练：使用项目和解决方案 (C++)
 
@@ -70,7 +70,7 @@ ms.locfileid: "50459730"
 1. 编辑 Cardgame.h 文件，并进行以下更改：
 
    - 在类定义的左大括号之后添加两个私有数据成员。
-      <!--      [!code-cpp[NVC_Walkthrough_Working_With_Projects#100](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_1.h)] -->
+     <!--      [!code-cpp[NVC_Walkthrough_Working_With_Projects#100](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_1.h)] -->
 
       ```cpp
       int players;
@@ -92,18 +92,19 @@ ms.locfileid: "50459730"
    在你对 Cardgame.h 文件进行更改之后，该文件应类似于以下代码：
 
    <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#103](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_4.h)]-->
-   ```cpp
-   #pragma once
-   class Cardgame
-   {
-       int players;
-       static int totalParticipants;
-   public:
-       Cardgame(int players);
-       ~Cardgame();
-       static int GetParticipants() { return totalParticipants; }
-   };
-   ```
+
+    ```cpp
+    #pragma once
+    class Cardgame
+    {
+        int players;
+        static int totalParticipants;
+    public:
+        Cardgame(int players);
+        ~Cardgame();
+        static int GetParticipants() { return totalParticipants; }
+    };
+    ```
 
    `#pragma once` 行通知编译器仅包含一次头文件。 有关详细信息，请参阅 [once](../preprocessor/once.md)。 有关上述头文件中其他 C++ 关键字的信息，请参阅[类](../cpp/class-cpp.md)、[int](../cpp/fundamental-types-cpp.md)、[静态](../cpp/storage-classes-cpp.md)和[公共](../cpp/public-cpp.md)。
 
@@ -112,27 +113,28 @@ ms.locfileid: "50459730"
 1. 删除文件中的所有内容，并将其替换为以下代码：
 
    <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#111](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_5.cpp)]-->
-   ```cpp
-   #include "pch.h"
-   #include "Cardgame.h"
-   #include <iostream>
 
-   using namespace std;
+    ```cpp
+    #include "pch.h"
+    #include "Cardgame.h"
+    #include <iostream>
 
-   int Cardgame::totalParticipants = 0;
+    using namespace std;
 
-   Cardgame::Cardgame(int players)
-       : players(players)
-   {
-       totalParticipants += players;
-       cout << players << " players have started a new game.  There are now "
-            << totalParticipants << " players in total." << endl;
-   }
+    int Cardgame::totalParticipants = 0;
 
-   Cardgame::~Cardgame()
-   {
-   }
-   ```
+    Cardgame::Cardgame(int players)
+        : players(players)
+    {
+        totalParticipants += players;
+        cout << players << " players have started a new game.  There are now "
+             << totalParticipants << " players in total." << endl;
+    }
+
+    Cardgame::~Cardgame()
+    {
+    }
+    ```
 
    > [!NOTE]
    > 输入代码时，可以使用自动完成功能。 例如，如果使用键盘输入此代码，可以输入 pl 或 tot，然后按 Ctrl+空格键。 自动完成功能可为你输入 `players` 或 `totalParticipants`。
@@ -146,31 +148,33 @@ ms.locfileid: "50459730"
 1. 在 Game.cpp 编辑器窗口中，用下列代码替换现有代码：
 
    <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#120](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_6.cpp)]-->
-   ```cpp
-   // Game.cpp : Defines the entry point for the console application.
-   //
 
-   #include "pch.h"
-   #include "Cardgame.h"
-   #include <iostream>
+    ```cpp
+    // Game.cpp : Defines the entry point for the console application.
+    //
 
-   using namespace std;
+    #include "pch.h"
+    #include "Cardgame.h"
+    #include <iostream>
 
-   void PlayGames()
-   {
-       Cardgame bridge(4);
-       Cardgame blackjack(8);
-       Cardgame solitaire(1);
-       Cardgame poker(5);
-   }
+    using namespace std;
 
-   int main()
-   {
-       PlayGames();
-       return 0;
-   }
-   ```
-此代码会将测试函数 `PlayGames` 添加到源代码，并在 `main` 中调用。
+    void PlayGames()
+    {
+        Cardgame bridge(4);
+        Cardgame blackjack(8);
+        Cardgame solitaire(1);
+        Cardgame poker(5);
+    }
+
+    int main()
+    {
+        PlayGames();
+        return 0;
+    }
+    ```
+
+   此代码会将测试函数 `PlayGames` 添加到源代码，并在 `main` 中调用。
 
 ## <a name="build-and-run-your-app-project"></a>生成并运行应用项目
 
@@ -182,15 +186,15 @@ ms.locfileid: "50459730"
 
    来自生成的输出显示在“输出”窗口中。 如果生成成功，输出应类似于：
 
-   ```Output
-   1>------ Build started: Project: Game, Configuration: Debug Win32 ------
-   1>pch.cpp
-   1>Cardgame.cpp
-   1>Game.cpp
-   1>Generating Code...
-   1>Game.vcxproj -> C:\Users\<username>\source\repos\Game\Debug\Game.exe
-   ========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========
-   ```
+    ```Output
+    1>------ Build started: Project: Game, Configuration: Debug Win32 ------
+    1>pch.cpp
+    1>Cardgame.cpp
+    1>Game.cpp
+    1>Generating Code...
+    1>Game.vcxproj -> C:\Users\<username>\source\repos\Game\Debug\Game.exe
+    ========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========
+    ```
 
    “输出”窗口可以根据不同的生成配置显示不同步骤，但是如果项目生成成功，最后一行应类似于上面显示的输出。
 
@@ -198,13 +202,14 @@ ms.locfileid: "50459730"
 
 1. 要运行项目，请在菜单栏上选择“调试” > “开始执行(不调试)”。 应显示控制台窗口，并且其输出应类似于：
 
-   ```Output
-   4 players have started a new game.  There are now 4 players in total.
-   8 players have started a new game.  There are now 12 players in total.
-   1 players have started a new game.  There are now 13 players in total.
-   5 players have started a new game.  There are now 18 players in total.
-   ```
-按任意键关闭控制台窗口。
+    ```Output
+    4 players have started a new game.  There are now 4 players in total.
+    8 players have started a new game.  There are now 12 players in total.
+    1 players have started a new game.  There are now 13 players in total.
+    5 players have started a new game.  There are now 18 players in total.
+    ```
+
+   按任意键关闭控制台窗口。
 
 恭喜，你已成功生成应用项目和解决方案。 继续完成本演练，详细了解如何在 Visual Studio 中生成 C++ 代码项目。
 
