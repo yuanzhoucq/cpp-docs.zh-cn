@@ -5,12 +5,12 @@ helpviewer_keywords:
 - side-by-side assemblies [C++]
 - isolated assemblies [C++]
 ms.assetid: 945a885f-cb3e-4c8a-a0b9-2c2e3e02cc50
-ms.openlocfilehash: 6453e68b07013bc5f5799b7252ad9a88e73250f3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ac354ed34bc3ab849eecf9256b447308f449abfe
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532933"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693563"
 ---
 # <a name="concepts-of-isolated-applications-and-side-by-side-assemblies"></a>独立应用程序和并行程序集的概念
 
@@ -22,7 +22,7 @@ ms.locfileid: "50532933"
 
 ## <a name="manifests-and-search-order"></a>清单和搜索顺序
 
-独立应用程序和并行程序集均由 [清单](https://msdn.microsoft.com/library/aa375365)描述。 清单是一个 XML 文档，既可以是外部文件，也可以作为资源嵌入到应用程序或程序集内。 独立应用程序的清单文件用于管理共享的并行程序集的名称和版本，应用程序应当在运行时绑定到这些程序集。 并行程序集的清单用于指定并行程序集的名称、版本、资源和依赖程序集。 对于共享并行程序集，其清单安装在 %WINDIR%\WinSxS\Manifests\ 文件夹中。 对于私有程序集，建议将其清单作为 ID 为 1 的资源包含在 DLL 中。 还可以为私有程序集提供与 DLL 相同的名称。 有关详细信息，请参阅[有关专用程序集](/windows/desktop/SbsCs/about-private-assemblies-)。
+独立应用程序和并行程序集均由 [清单](/windows/desktop/sbscs/manifests)描述。 清单是一个 XML 文档，既可以是外部文件，也可以作为资源嵌入到应用程序或程序集内。 独立应用程序的清单文件用于管理共享的并行程序集的名称和版本，应用程序应当在运行时绑定到这些程序集。 并行程序集的清单用于指定并行程序集的名称、版本、资源和依赖程序集。 对于共享并行程序集，其清单安装在 %WINDIR%\WinSxS\Manifests\ 文件夹中。 对于私有程序集，建议将其清单作为 ID 为 1 的资源包含在 DLL 中。 还可以为私有程序集提供与 DLL 相同的名称。 有关详细信息，请参阅[有关专用程序集](/windows/desktop/SbsCs/about-private-assemblies-)。
 
 执行时，Windows 将使用应用程序清单中的程序集信息，以搜索并加载相应的并行程序集。 如果独立应用程序指定了程序集依赖项，则操作系统会首先在 %WINDIR%\WinSxS\ 文件夹中的本机程序集缓存中的共享程序集中搜索程序集。 如果未找到所需的程序集，则操作系统会在应用程序目录结构的文件夹中搜索私有程序集。 有关更多信息，请参见 [程序集搜索顺序](/windows/desktop/SbsCs/assembly-searching-sequence)。
 

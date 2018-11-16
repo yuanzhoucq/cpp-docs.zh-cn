@@ -36,12 +36,12 @@ helpviewer_keywords:
 - CComboBoxEx [MFC], SetItem
 - CComboBoxEx [MFC], SetWindowTheme
 ms.assetid: 33ca960a-2409-478c-84a4-a2ee8ecfe8f7
-ms.openlocfilehash: 92a81e318c74f1acd39fbfe870a7ad1277b25125
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 05545051b145f3beb11e4b48e8f93fd7908a783a
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50501629"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694239"
 ---
 # <a name="ccomboboxex-class"></a>CComboBoxEx 类
 
@@ -247,7 +247,7 @@ int DeleteItem(int iIndex);
 
 ### <a name="remarks"></a>备注
 
-此成员函数实现消息的功能[CBEM_DELETEITEM](/windows/desktop/Controls/cbem-deleteitem)，如 Windows SDK 中所述。 当调用 DeleteItem [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583) CBEN_DELETEITEM 通知消息将发送到父窗口。
+此成员函数实现消息的功能[CBEM_DELETEITEM](/windows/desktop/Controls/cbem-deleteitem)，如 Windows SDK 中所述。 当调用 DeleteItem [WM_NOTIFY](/windows/desktop/controls/wm-notify) CBEN_DELETEITEM 通知消息将发送到父窗口。
 
 ##  <a name="getcomboboxctrl"></a>  CComboBoxEx::GetComboBoxCtrl
 
@@ -373,7 +373,7 @@ int InsertItem(const COMBOBOXEXITEM* pCBItem);
 
 ### <a name="remarks"></a>备注
 
-当您调用`InsertItem`、 一个[WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583)消息[CBEN_INSERTITEM](/windows/desktop/Controls/cben-insertitem)将向父窗口发送通知。
+当您调用`InsertItem`、 一个[WM_NOTIFY](/windows/desktop/controls/wm-notify)消息[CBEN_INSERTITEM](/windows/desktop/Controls/cben-insertitem)将向父窗口发送通知。
 
 ##  <a name="setextendedstyle"></a>  CComboBoxEx::SetExtendedStyle
 

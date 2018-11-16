@@ -34,12 +34,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSecurityDesc class
 ms.assetid: 3767a327-378f-4690-ba40-4d9f6a1f5ee4
-ms.openlocfilehash: d06ec86b4a049daba945c347f4b424b5987010f9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 615c9a409b66ca0f515b15fbb55fd794102524fd
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605798"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694070"
 ---
 # <a name="csecuritydesc-class"></a>CSecurityDesc 类
 
@@ -186,7 +186,7 @@ bool GetControl(SECURITY_DESCRIPTOR_CONTROL* psdc) const throw();
 
 ### <a name="remarks"></a>备注
 
-此方法调用[GetSecurityDescriptorControl](https://msdn.microsoft.com/library/windows/desktop/aa446647)。
+此方法调用[GetSecurityDescriptorControl](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-getsecuritydescriptorcontrol)。
 
 ##  <a name="getdacl"></a>  CSecurityDesc::GetDacl
 
@@ -553,7 +553,7 @@ bool SetControl(
 ### <a name="parameters"></a>参数
 
 *ControlBitsOfInterest*<br/>
-指示要设置的控制位 SECURITY_DESCRIPTOR_CONTROL 掩码。 可以设置的标志的列表，请参阅[SetSecurityDescriptorControl](https://msdn.microsoft.com/library/windows/desktop/aa379582)。
+指示要设置的控制位 SECURITY_DESCRIPTOR_CONTROL 掩码。 可以设置的标志的列表，请参阅[SetSecurityDescriptorControl](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-setsecuritydescriptorcontrol)。
 
 *ControlBitsToSet*<br/>
 指示由指定的控制位的新值的 SECURITY_DESCRIPTOR_CONTROL 掩码*ControlBitsOfInterest*掩码。 此参数可以是为列出的标志的组合*ControlBitsOfInterest*参数。
@@ -564,7 +564,7 @@ bool SetControl(
 
 ### <a name="remarks"></a>备注
 
-此方法调用[SetSecurityDescriptorControl](https://msdn.microsoft.com/library/windows/desktop/aa379582)。
+此方法调用[SetSecurityDescriptorControl](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-setsecuritydescriptorcontrol)。
 
 ##  <a name="setdacl"></a>  CSecurityDesc::SetDacl
 

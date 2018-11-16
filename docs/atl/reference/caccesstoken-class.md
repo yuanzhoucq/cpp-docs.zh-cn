@@ -52,12 +52,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAccessToken class
 ms.assetid: bb5c5945-56a5-4083-b442-76573cee83ab
-ms.openlocfilehash: faa715e8f5333a717689d281ccb89bd2369e9929
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8fadb6825bbdc970e952d2ea6c26a27b4837dfc
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50661261"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694525"
 ---
 # <a name="caccesstoken-class"></a>CAccessToken 类
 
@@ -254,7 +254,7 @@ bool CreatePrimaryToken(
 
 ### <a name="remarks"></a>备注
 
-`CreatePrimaryToken` 调用[DuplicateTokenEx](https://msdn.microsoft.com/library/windows/desktop/aa446617)若要创建新的主令牌。
+`CreatePrimaryToken` 调用[DuplicateTokenEx](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-duplicatetokenex)若要创建新的主令牌。
 
 ##  <a name="createprocessasuser"></a>  CAccessToken::CreateProcessAsUser
 
@@ -289,7 +289,7 @@ bool CreateProcessAsUser(
 指向[STARTUPINFO](/windows/desktop/api/processthreadsapi/ns-processthreadsapi-_startupinfoa)结构，它指定新的进程的主窗口应如何显示。
 
 *dwCreationFlags*<br/>
-指定用于控制优先级类和过程的创建的其他标志。 请参阅 Win32 函数[CreateProcessAsUser](https://msdn.microsoft.com/library/windows/desktop/ms682429)标志的列表。
+指定用于控制优先级类和过程的创建的其他标志。 请参阅 Win32 函数[CreateProcessAsUser](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessasusera)标志的列表。
 
 *bLoadProfile*<br/>
 如果为 TRUE，加载用户的配置文件[LoadUserProfile](/windows/desktop/api/userenv/nf-userenv-loaduserprofilea)。
@@ -312,7 +312,7 @@ bool CreateProcessAsUser(
 
 ### <a name="remarks"></a>备注
 
-`CreateProcessAsUser` 使用`CreateProcessAsUser`Win32 函数来创建新的进程所表示的用户的安全上下文中运行`CAccessToken`对象。 请参阅的说明[CreateProcessAsUser](https://msdn.microsoft.com/library/windows/desktop/ms682429)函数所需的参数的完整讨论。
+`CreateProcessAsUser` 使用`CreateProcessAsUser`Win32 函数来创建新的进程所表示的用户的安全上下文中运行`CAccessToken`对象。 请参阅的说明[CreateProcessAsUser](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessasusera)函数所需的参数的完整讨论。
 
 此方法才能成功， `CAccessToken` （除非它是受限制的令牌），对象必须保留 AssignPrimaryToken 和 IncreaseQuota 特权。
 
@@ -348,7 +348,7 @@ bool CreateRestrictedToken(
 
 ### <a name="remarks"></a>备注
 
-`CreateRestrictedToken` 使用[CreateRestrictedToken](https://msdn.microsoft.com/library/windows/desktop/aa446583) Win32 函数来创建一个新`CAccessToken`具有限制的对象。
+`CreateRestrictedToken` 使用[CreateRestrictedToken](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-createrestrictedtoken) Win32 函数来创建一个新`CAccessToken`具有限制的对象。
 
 > [!IMPORTANT]
 >  使用时`CreateRestrictedToken`，确保满足以下： 现有令牌是否有效 （且不由用户输入） 和*SidsToDisable*并*PrivilegesToDelete*同时有效 （且不由用户输入）。 如果该方法返回 FALSE，则拒绝功能。

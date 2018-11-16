@@ -7,12 +7,12 @@ helpviewer_keywords:
 - window class names [MFC]
 - TN070 [MFC]
 ms.assetid: 90617912-dd58-4a7c-9082-ced71736d7cd
-ms.openlocfilehash: d59dc052cc253c8d036de0559018065e4ba7457d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 609cfade60b1b7b51fb2fd5597c4d491d3eb861c
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50533609"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51692654"
 ---
 # <a name="tn070-mfc-window-class-names"></a>TN070：MFC 窗口类名称
 
@@ -28,7 +28,7 @@ Afx:%x:%x
 Afx:%x:%x:%x:%x:%x
 ```
 
-替换为十六进制数字`%x`字符中的从的数据填充[WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576)结构。 MFC 使用此方法，以便需要相同的多个 c + + 类**WNDCLASS**结构可以共享相同的已注册的窗口类。 在大多数简单的 Win32 应用程序，MFC 应用程序只能有一个**WNDPROC**，因此可以轻松地共享**WNDCLASS**结构以节省时间和内存。 上面显示的 `%x` 字符的可替换值如下所示：
+替换为十六进制数字`%x`字符中的从的数据填充[WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa)结构。 MFC 使用此方法，以便需要相同的多个 c + + 类**WNDCLASS**结构可以共享相同的已注册的窗口类。 在大多数简单的 Win32 应用程序，MFC 应用程序只能有一个**WNDPROC**，因此可以轻松地共享**WNDCLASS**结构以节省时间和内存。 上面显示的 `%x` 字符的可替换值如下所示：
 
 - **WNDCLASS.hInstance**
 

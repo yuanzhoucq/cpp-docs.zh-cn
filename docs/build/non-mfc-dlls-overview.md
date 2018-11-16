@@ -5,18 +5,18 @@ helpviewer_keywords:
 - non-MFC DLLs [C++]
 - DLLs [C++], non-MFC
 ms.assetid: 1ed5d1ee-e20c-47d7-801d-87ea26a73842
-ms.openlocfilehash: 5646f346ad8ccc62b838962b677b7f1947783ea9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 15cceb80b0f771c0c304572e2263b1479d6b0db7
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50649778"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693017"
 ---
 # <a name="non-mfc-dlls-overview"></a>非 MFC DLL：概述
 
 非 MFC DLL 是在内部，不使用 MFC 的 DLL 和可由 MFC 或非 MFC 可执行文件调用 DLL 中导出的函数。 通常从非 MFC DLL 使用标准的 C 接口导出函数。
 
-有关非 MFC Dll 的详细信息，请参阅[动态链接库](https://msdn.microsoft.com/library/windows/desktop/ms682589)Windows SDK 中。
+有关非 MFC Dll 的详细信息，请参阅[动态链接库](/windows/desktop/dlls/dynamic-link-libraries)Windows SDK 中。
 
 ## <a name="what-do-you-want-to-do"></a>你希望做什么？
 

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - stopping threads
 - AfxEndThread method
 ms.assetid: 4c0a8c6d-c02f-456d-bd02-0a8c8d006ecb
-ms.openlocfilehash: c92d95bc2aa63d78c98d10e25de79344fe1ee0f0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 37a7a6fc443e172f80cc7c30c462ec4d69b3e8de
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50484010"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693290"
 ---
 # <a name="multithreading-terminating-threads-in-mfc"></a>多线程处理： 终止线程在 MFC 中
 
@@ -34,7 +34,7 @@ ms.locfileid: "50484010"
 
 对于辅助线程，正常线程终止很简单： 退出控制函数并返回一个值，表示终止的原因。 你可以使用[AfxEndThread](../mfc/reference/application-information-and-management.md#afxendthread)函数或**返回**语句。 通常情况下，0 表示成功完成，但这取决于您。
 
-对于用户界面线程，该过程也很简单： 从在用户界面线程中，调用[PostQuitMessage](https://msdn.microsoft.com/library/windows/desktop/ms644945) Windows SDK 中。 唯一的参数的`PostQuitMessage`采用是线程的退出代码。 对于辅助线程，0 通常表示成功完成。
+对于用户界面线程，该过程也很简单： 从在用户界面线程中，调用[PostQuitMessage](/windows/desktop/api/winuser/nf-winuser-postquitmessage) Windows SDK 中。 唯一的参数的`PostQuitMessage`采用是线程的退出代码。 对于辅助线程，0 通常表示成功完成。
 
 ##  <a name="_core_premature_thread_termination"></a> 过早的线程终止
 

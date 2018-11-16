@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::discrete_distribution [C++], param_type
 - std::discrete_distribution [C++], param_type
 ms.assetid: 8c8ba8f8-c06f-4f07-b354-f53950142fcf
-ms.openlocfilehash: 5bf5deec5820976c742efa490bf02d0c0d830a09
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7ad375c14e9034a55d280a2927d6ef00f098ddbc
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50464891"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693902"
 ---
 # <a name="discretedistribution-class"></a>discrete_distribution 类
 
@@ -230,7 +230,7 @@ explicit discrete_distribution(const param_type& parm);
 
 包含 *firstW* 和 *lastW* 参数的迭代器范围构造函数使用通过区间序列 [*firstW*, *lastW*) 的迭代器中获取的加权值构造分布对象。
 
-包含 *weightlist* 参数的初始化表达式列表构造函数使用初始化表达式列表 *weightlist* 中的加权值构造分步对象。
+具有初始值设定项列表构造函数*weightlist*参数构造分布对象初始值设定项列表中的权重*weightlist*。
 
 包含 *count*、*low*、*high*、和 *weightfunc* 参数的构造函数基于以下规则构造初始化的分布对象：
 

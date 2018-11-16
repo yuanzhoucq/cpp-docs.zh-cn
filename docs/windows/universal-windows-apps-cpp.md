@@ -2,12 +2,12 @@
 title: 通用 Windows 应用 (C++)
 ms.date: 03/30/2018
 ms.assetid: 357121cc-d390-4bae-b34a-39614861a9f4
-ms.openlocfilehash: e6e294b45e183e5e8baebcaad65cece846adb07e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3ffcc38dfd849c9cd5eaf9e6466d53731becdd9a
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481895"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693082"
 ---
 # <a name="universal-windows-apps-c"></a>通用 Windows 应用 (C++)
 
@@ -32,8 +32,9 @@ C + + / WinRT 是新的纯标头基于库的 c + + 语言投影为 Windows 运�
 
 ## <a name="uwp-apps-that-use-the-windows-runtime-c-template-library-wrl"></a>使用 Windows 运行时 c + + 模板库 (WRL) 的 UWP 应用
 
-Windows 运行时 C++ 模板库提供低级别的 COM 接口，让 ISO C++ 代码可以在无异常的环境中访问 Windows 运行时。 在大多数情况下，建议使用 C++/CX 而不是Windows 运行时 C++ 模板库来开发通用 Windows 平台应用程序。 有关 Windows 运行时 C++ 模板库的信息，请参阅 [Windows 运行时 C++ 模板库 (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)。
+Windows 运行时 C++ 模板库提供低级别的 COM 接口，让 ISO C++ 代码可以在无异常的环境中访问 Windows 运行时。 在大多数情况下，建议使用 C++/CX 而不是Windows 运行时 C++ 模板库来开发通用 Windows 平台应用程序。 有关 Windows 运行时 C++ 模板库的信息，请参阅 [Windows 运行时 C++ 模板库 (WRL)](windows-runtime-cpp-template-library-wrl.md)。
 
 ## <a name="see-also"></a>请参阅
 
 [Visual C++](../visual-cpp-in-visual-studio.md)<br/>
+[C++ 中 Windows 编程概述](overview-of-windows-programming-in-cpp.md)<br/>
