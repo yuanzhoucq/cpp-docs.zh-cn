@@ -6,12 +6,12 @@ helpviewer_keywords:
 - tree controls [MFC], image lists
 - CTreeCtrl class [MFC], image lists
 ms.assetid: f560c4f2-20d2-4d28-ac33-4017e65fb0a6
-ms.openlocfilehash: 2b680ece131df434b65f02501f78f0cdb6507f08
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e42e601fbf803f8ccfe359a10664149ac8f11086
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50551757"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693240"
 ---
 # <a name="tree-control-image-lists"></a>树控件图像列表
 
@@ -25,7 +25,7 @@ ms.locfileid: "50551757"
 
 通过指定**I_IMAGECALLBACK**值而不是图像的索引，您可以延迟直到项目将为要重新绘制指定的所选或原样映像。 **I_IMAGECALLBACK**指示树控件来查询索引的应用程序通过发送[TVN_GETDISPINFO](/windows/desktop/Controls/tvn-getdispinfo)通知消息。
 
-[GetImageList](../mfc/reference/ctreectrl-class.md#getimagelist)成员函数将检索树控件的图像列表的句柄。 此函数很有用，如果您需要将更多映像添加到列表。 有关图像列表的详细信息，请参阅[使用 CImageList](../mfc/using-cimagelist.md)， [CImageList](../mfc/reference/cimagelist-class.md)中*MFC 参考*，以及[图像列表](https://msdn.microsoft.com/library/windows/desktop/bb761389)中Windows SDK。
+[GetImageList](../mfc/reference/ctreectrl-class.md#getimagelist)成员函数将检索树控件的图像列表的句柄。 此函数很有用，如果您需要将更多映像添加到列表。 有关图像列表的详细信息，请参阅[使用 CImageList](../mfc/using-cimagelist.md)， [CImageList](../mfc/reference/cimagelist-class.md)中*MFC 参考*，以及[图像列表](/windows/desktop/controls/image-lists)中Windows SDK。
 
 ## <a name="see-also"></a>请参阅
 

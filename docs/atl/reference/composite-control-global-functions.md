@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - composite controls, global functions
 ms.assetid: 536884cd-e863-4c7a-ab0a-604dc60a0bbe
-ms.openlocfilehash: 6438b9d125cc2b44c6c4525dcfa5a2bd95763304
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 3b4abc1afc99a00d83c25574df06ebfb27141c65
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524425"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694174"
 ---
 # <a name="composite-control-global-functions"></a>复合控件全局函数
 
@@ -490,7 +490,7 @@ inline BOOL AtlAxWinTerm();
 
 ### <a name="remarks"></a>备注
 
-此函数将只需调用[UnregisterClass](https://msdn.microsoft.com/library/windows/desktop/ms644899) Windows SDK 中所述。
+此函数将只需调用[UnregisterClass](/windows/desktop/api/winuser/nf-winuser-unregisterclassa) Windows SDK 中所述。
 
 调用此函数已被销毁所有现有主机窗口，如果您调用之后进行清理[AtlAxWinInit](#atlaxwininit)和不再需要创建宿主窗口。 如果不调用此函数，窗口类将自动取消注册在进程终止时。
 

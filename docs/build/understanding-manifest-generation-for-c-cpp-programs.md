@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - manifests [C++]
 ms.assetid: a1f24221-5b09-4824-be48-92eae5644b53
-ms.openlocfilehash: d4dceec94a8868ed9b6d744a9f481825bf6af58a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a4391ffd3b7d293ed04a4852582444550570e577
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50660432"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693355"
 ---
 # <a name="understanding-manifest-generation-for-cc-programs"></a>了解 C/C++ 程序的清单生成
 
-一个[清单](https://msdn.microsoft.com/library/aa375365)嵌入到应用程序或程序集可以是外部 XML 文件或资源的 XML 文档。 清单[独立应用程序](/windows/desktop/SbsCs/isolated-applications)用于管理的名称和版本的应用程序应在运行时绑定到共享的并行程序集。 通过并行程序集清单指定名称、 版本、 资源和其他程序集及其依赖项。
+一个[清单](/windows/desktop/sbscs/manifests)嵌入到应用程序或程序集可以是外部 XML 文件或资源的 XML 文档。 清单[独立应用程序](/windows/desktop/SbsCs/isolated-applications)用于管理的名称和版本的应用程序应在运行时绑定到共享的并行程序集。 通过并行程序集清单指定名称、 版本、 资源和其他程序集及其依赖项。
 
 有两种方法来创建独立应用程序或通过并行程序集清单。 首先，该程序集的作者可以手动创建以下规则和命名要求的清单文件。 或者，如果某个程序仅依赖于 CRT、 MFC、 ATL 或其他人等的 Visual c + + 程序集，然后清单可以自动生成链接器。
 

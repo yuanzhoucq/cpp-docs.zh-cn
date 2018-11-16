@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - applications [MFC], managing
 ms.assetid: b72f4154-24db-4e75-bca3-6873e2459c15
-ms.openlocfilehash: 71b5eb9c97b8c6370a08281fdf4be7074a579f8f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9d5216cd399943cda67bc9387ea37c938e5cab48
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596659"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694330"
 ---
 # <a name="application-information-and-management"></a>应用程序信息和管理
 
@@ -646,7 +646,7 @@ BOOL AFXAPI AfxRegisterClass(WNDCLASS* lpWndClass);
 ### <a name="parameters"></a>参数
 
 *lpWndClass*<br/>
-指向[WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576)结构，它包含有关要注册的窗口类信息。 此结构的详细信息，请参阅 Windows SDK。
+指向[WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa)结构，它包含有关要注册的窗口类信息。 此结构的详细信息，请参阅 Windows SDK。
 
 ### <a name="return-value"></a>返回值
 
@@ -681,7 +681,7 @@ LPCTSTR AFXAPI AfxRegisterWndClass(
 ### <a name="parameters"></a>参数
 
 *nClassStyle*<br/>
-指定的 Windows 类样式或样式，使用按位或创建的组合 ( **&#124;**) 运算符，窗口类。 有关类样式的列表，请参阅[WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576) Windows SDK 中的结构。 如果为 NULL，则将按如下所示设置默认值：
+指定的 Windows 类样式或样式，使用按位或创建的组合 ( **&#124;**) 运算符，窗口类。 有关类样式的列表，请参阅[WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa) Windows SDK 中的结构。 如果为 NULL，则将按如下所示设置默认值：
 
 - 将鼠标样式设置为 CS_DBLCLKS，它会将双击消息到窗口过程当用户双击鼠标。
 

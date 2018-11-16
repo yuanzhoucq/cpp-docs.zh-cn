@@ -9,16 +9,16 @@ helpviewer_keywords:
 - side-by-side applications [C++]
 - builds [C++], side-by-side assemblies
 ms.assetid: 9465904e-76f7-48bd-bb3f-c55d8f1699b6
-ms.openlocfilehash: da8bd6d583d6f9d714853e545979d54ddcb79ce5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5d487e8a124d2edd7ce5a658d4965f1567756d5a
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429127"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694148"
 ---
 # <a name="building-cc-isolated-applications-and-side-by-side-assemblies"></a>生成 C/C++ 独立应用程序和并行程序集
 
-Visual C++ 支持 Windows 客户端应用程序的部署模型，其理论基础是 [独立应用程序](/windows/desktop/SbsCs/isolated-applications) 和 [并行程序集](/windows/desktop/SbsCs/about-side-by-side-assemblies-)。 默认情况下，Visual C++ 将所有本机 C/C++ 应用程序都作为独立应用程序来生成，这些应用程序使用 [清单](https://msdn.microsoft.com/library/aa375365) 来描述其在 Visual C++ 库上的依赖关系。
+Visual C++ 支持 Windows 客户端应用程序的部署模型，其理论基础是 [独立应用程序](/windows/desktop/SbsCs/isolated-applications) 和 [并行程序集](/windows/desktop/SbsCs/about-side-by-side-assemblies-)。 默认情况下，Visual C++ 将所有本机 C/C++ 应用程序都作为独立应用程序来生成，这些应用程序使用 [清单](/windows/desktop/sbscs/manifests) 来描述其在 Visual C++ 库上的依赖关系。
 
 将 C/C++ 程序生成为独立应用程序具有一系列的好处。 例如，当其他 C/C++ 应用程序安装或卸载 Visual C++ 库时，不会影响独立应用程序。 仍可将独立应用程序使用的 Visual C++ 库重新发布到应用程序的本地文件夹中或通过安装重新发布到本机程序集缓存 (WinSxS)；但是，通过使用 [发布者配置文件](/windows/desktop/SbsCs/publisher-configuration)，为已部署的应用程序提供 Visual C++ 库服务时会更加简单。 借助于独立应用程序部署模型，更加容易确保在特定计算机上运行的 C/C++ 应用程序使用 Visual C++ 库的最新版本，同时使系统管理员和应用程序的作者仍可以控制应用程序与其依赖 DLL 的显式版本绑定。
 

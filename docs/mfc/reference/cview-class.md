@@ -52,12 +52,12 @@ helpviewer_keywords:
 - CView [MFC], OnPrint
 - CView [MFC], OnUpdate
 ms.assetid: 9cff3c56-7564-416b-b9a4-71a9254ed755
-ms.openlocfilehash: f325423c940df46940d7074c599eb8e502e90586
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 679cdc5b5a0a85ade09fe1999e8de40300a8ae8e
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50669074"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694382"
 ---
 # <a name="cview-class"></a>CView 类
 
@@ -548,7 +548,7 @@ virtual DROPEFFECT OnDropEx(
 
 重写此函数可实现的鼠标右键拖放效果。 右侧的鼠标按钮拖放功能通常会释放鼠标右键时显示选择菜单。
 
-重写`OnDropEx`应该查询右侧的鼠标按钮。 您可以调用[GetKeyState](https://msdn.microsoft.com/library/windows/desktop/ms646301)或将从右侧的鼠标按钮状态存储在[OnDragEnter](#ondragenter)处理程序。
+重写`OnDropEx`应该查询右侧的鼠标按钮。 您可以调用[GetKeyState](/windows/desktop/api/winuser/nf-winuser-getkeystate)或将从右侧的鼠标按钮状态存储在[OnDragEnter](#ondragenter)处理程序。
 
 - 如果鼠标右键已关闭，重写应显示一个弹出菜单，其中提供了通过拖放源支持放置效果。
 

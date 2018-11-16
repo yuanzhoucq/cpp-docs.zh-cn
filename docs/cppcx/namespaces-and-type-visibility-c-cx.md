@@ -2,12 +2,12 @@
 title: 命名空间和类型可见性 (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: cbc01a3a-3b69-4ded-9c42-ecbf0fd0a00e
-ms.openlocfilehash: e9efc207fe0ed49fecf30366d265019e7a3ee009
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 02a73f84314d4406c5fb8e9b8635a307c30e4c3d
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50440516"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693889"
 ---
 # <a name="namespaces-and-type-visibility-ccx-"></a>命名空间和类型可见性 (C++/CX)
 
@@ -40,7 +40,7 @@ ms.locfileid: "50440516"
 
 ## <a name="windows-runtime-namespaces"></a>Windows 运行时命名空间
 
-Windows API 包含在 Windows 中声明的类型::\*命名空间。 这些命名空间为 Windows 所保留，因此，不能在其中添加类型。 在 **“对象浏览器”** 中，您可以在 windows.winmd 文件中查看这些命名空间。 有关这些命名空间的文档，请参见 [Windows API](https://msdn.microsoft.com/library/windows/apps/br211377)。
+Windows API 包含在 Windows 中声明的类型::\*命名空间。 这些命名空间为 Windows 所保留，因此，不能在其中添加类型。 在 **“对象浏览器”** 中，您可以在 windows.winmd 文件中查看这些命名空间。 有关这些命名空间的文档，请参见 [Windows API](/uwp/api/)。
 
 ## <a name="ccx-namespaces"></a>C++/CX 命名空间
 

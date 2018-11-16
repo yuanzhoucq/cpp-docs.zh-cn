@@ -106,12 +106,12 @@ helpviewer_keywords:
 - CMFCMenuBar [MFC], SetRecentlyUsedMenus
 - CMFCMenuBar [MFC], SetShowAllCommands
 ms.assetid: 8a3ce4c7-b012-4dc0-b4f8-53c10b4b86b8
-ms.openlocfilehash: cb1143b51dafd9711e058134a9338e28ffcb44b0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a15291b49127b6c5f1efd97d8102b272c126cc10
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50599883"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694356"
 ---
 # <a name="cmfcmenubar-class"></a>CMFCMenuBar 类
 
@@ -391,7 +391,7 @@ virtual BOOL CreateEx(
 
 应使用此函数，而不是[CMFCMenuBar::Create](#create)时想要指定除工具栏样式的样式。 一些常用的其他样式是 TBSTYLE_TRANSPARENT 和 CBRS_TOP。
 
-有关其他样式的列表，请参阅[工具栏控件和按钮样式](/windows/desktop/Controls/toolbar-control-and-button-styles)，[常见控件样式](/windows/desktop/Controls/common-control-styles)，并[常见窗口样式](https://msdn.microsoft.com/library/windows/desktop/ms632600)。
+有关其他样式的列表，请参阅[工具栏控件和按钮样式](/windows/desktop/Controls/toolbar-control-and-button-styles)，[常见控件样式](/windows/desktop/Controls/common-control-styles)，并[常见窗口样式](/windows/desktop/winmsg/window-styles)。
 
 ### <a name="example"></a>示例
 

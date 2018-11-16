@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CWinThread [MFC], m_pActiveWnd
 - CWinThread [MFC], m_pMainWnd
 ms.assetid: 10cdc294-4057-4e76-ac7c-a8967a89af0b
-ms.openlocfilehash: c1eeb649917e8457af5a3a27324ae65ae8259ac8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0f6c41b3675251df6b07e44003215fa67fb7e795
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477309"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694187"
 ---
 # <a name="cwinthread-class"></a>CWinThread 类
 
@@ -445,7 +445,7 @@ BOOL PostThreadMessage(
 已发布的消息通过消息映射宏 ON_THREAD_MESSAGE 映射到适当的消息处理程序。
 
 > [!NOTE]
-> 当您调用[PostThreadMessage](https://msdn.microsoft.com/library/windows/desktop/ms644946)，该消息放入线程的消息队列。 但是，由于消息发布这种方式不是与窗口关联，MFC 将不将其调度到消息或命令处理程序。 为了处理这些消息，请重写`PreTranslateMessage()`函数的 CWinApp 派生类，并手动处理消息。
+> 当您调用[PostThreadMessage](/windows/desktop/api/winuser/nf-winuser-postthreadmessagea)，该消息放入线程的消息队列。 但是，由于消息发布这种方式不是与窗口关联，MFC 将不将其调度到消息或命令处理程序。 为了处理这些消息，请重写`PreTranslateMessage()`函数的 CWinApp 派生类，并手动处理消息。
 
 ##  <a name="pretranslatemessage"></a>  CWinThread::PreTranslateMessage
 

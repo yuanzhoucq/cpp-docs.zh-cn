@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows applications [C++], Win32
 - Windows Desktop applications [C++]
 - Windows API [C++]
-ms.openlocfilehash: fc2080470e3292a459325679a6c5dc00c01d6b35
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: da95b1dac2f058de67719b4754d2df6dbeb6f7f0
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528370"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694044"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>演练： 创建传统的 Windows 桌面应用程序 （c + +）
 
@@ -132,7 +132,7 @@ Windows API （也称为 Win32 API、 Windows 桌面 API 和 Windows 经典 API�
 
    在此函数中，编写代码来处理*消息*从 Windows 应用程序接收时*事件*发生。 例如，如果用户在应用程序中选择确定按钮，Windows 将向您发送一条消息，可以编写代码在`WndProc`会执行任何工作所适用的函数。 它称为*处理*事件。 仅处理你的应用程序的相关的事件。
 
-   有关详细信息，请参阅 [窗口过程](https://msdn.microsoft.com/library/windows/desktop/ms632593)。
+   有关详细信息，请参阅 [窗口过程](/windows/desktop/winmsg/window-procedures)。
 
 ### <a name="to-add-functionality-to-the-winmain-function"></a>向 WinMain 函数添加功能
 
@@ -157,7 +157,7 @@ Windows API （也称为 Win32 API、 Windows 桌面 API 和 Windows 经典 API�
 
    上述结构的字段的信息，请参阅[WNDCLASSEX](https://msdn.microsoft.com/library/windows/desktop/ms633577)。
 
-1. 注册`WNDCLASSEX`与 Windows 这样它就会知道有关您的窗口以及如何将消息发送到它。 使用 [RegisterClassEx](https://msdn.microsoft.com/library/windows/desktop/ms633587) 函数，并将窗口类结构作为参数传递。 `_T`使用宏，因为我们使用`TCHAR`类型。
+1. 注册`WNDCLASSEX`与 Windows 这样它就会知道有关您的窗口以及如何将消息发送到它。 使用 [RegisterClassEx](/windows/desktop/api/winuser/nf-winuser-registerclassexa) 函数，并将窗口类结构作为参数传递。 `_T`使用宏，因为我们使用`TCHAR`类型。
 
    ```cpp
    if (!RegisterClassEx(&wcex))
@@ -237,7 +237,7 @@ Windows API （也称为 Win32 API、 Windows 桌面 API 和 Windows 经典 API�
    return (int) msg.wParam;
    ```
 
-   有关消息循环中的结构和函数的详细信息，请参阅 [MSG](https://msdn.microsoft.com/library/windows/desktop/ms644958)、 [GetMessage](https://msdn.microsoft.com/library/windows/desktop/ms644936)、 [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)和 [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage)。
+   有关消息循环中的结构和函数的详细信息，请参阅 [MSG](https://msdn.microsoft.com/library/windows/desktop/ms644958)、 [GetMessage](/windows/desktop/api/winuser/nf-winuser-getmessage)、 [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)和 [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage)。
 
    此时， `WinMain` 函数类似于以下代码。
 

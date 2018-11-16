@@ -132,12 +132,12 @@ helpviewer_keywords:
 - CFileDialog [MFC], OnTypeChange
 - CFileDialog [MFC], m_ofn
 ms.assetid: fda4fd3c-08b8-4ce0-8e9d-7bab23f8c6c0
-ms.openlocfilehash: 94530f17c801c62005e837055ce3608e2eaa512f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 87f99b4f037c8cc881b33e1d07b4f07596ee9a1b
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50499670"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694538"
 ---
 # <a name="cfiledialog-class"></a>CFileDialog 类
 
@@ -258,7 +258,7 @@ class CFileDialog : public CCommonDialog
 初始化对话框控件后，调用[CFileDialog::DoModal](#domodal)方法来显示对话框框，以便用户可以键入路径和文件名称。 `DoModal` 返回用户是否单击确定 (IDOK) 或取消 (IDCANCEL) 按钮。 如果`DoModal`返回 IDOK，您可以使用其中一个`CFileDialog`公共成员函数来检索该信息放入该用户。
 
 > [!NOTE]
-> Windows vista 或更高版本，多次调用[IFileDialog::SetFileTypes](https://msdn.microsoft.com/library/windows/desktop/bb775980)将导致错误。 第二次调用`SetFileTypes`的任何实例`CFileDialog`将返回 E_UNEXPECTED 在 Windows Vista 或更高版本。 某些`CFileDialog`方法函数会调用`SetFileTypes`。 例如，两次调用`CFileDialog::DoModal`的相同实例`CFileDialog`生成[ASSERT](diagnostic-services.md#assert)。
+> Windows vista 或更高版本，多次调用[IFileDialog::SetFileTypes](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ifiledialog-setfiletypes)将导致错误。 第二次调用`SetFileTypes`的任何实例`CFileDialog`将返回 E_UNEXPECTED 在 Windows Vista 或更高版本。 某些`CFileDialog`方法函数会调用`SetFileTypes`。 例如，两次调用`CFileDialog::DoModal`的相同实例`CFileDialog`生成[ASSERT](diagnostic-services.md#assert)。
 
 `CFileDialog` 包含使您能够执行共享冲突，文件名称验证和列表框中更改通知的自定义处理的多个受保护的成员。 这些受保护的成员都是大多数应用程序无需使用，因为默认处理自动执行的回调函数。 不需要这些函数的消息映射条目，因为它们是标准的虚拟函数。
 
@@ -851,7 +851,7 @@ IFileOpenDialog* GetIFileOpenDialog();
 
 使用此函数仅在 Windows Vista 或更高版本使用的对象具有*bVistaStyle*设置为 TRUE。 如果此函数将返回 NULL`CFileDialog`不是**开放**对话框的或者如果*bVistaStyle*设置为 FALSE。 在此最后一种情况下，此函数仅返回了 NULL 在发布模式下-在调试模式下，将引发断言。
 
-有关详细信息`IFileOpenDialog`接口，请参阅[IFileOpenDialog](https://msdn.microsoft.com/library/windows/desktop/bb775834)。
+有关详细信息`IFileOpenDialog`接口，请参阅[IFileOpenDialog](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ifileopendialog)。
 
 ### <a name="example"></a>示例
 

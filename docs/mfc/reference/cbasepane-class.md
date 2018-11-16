@@ -166,12 +166,12 @@ helpviewer_keywords:
 - CBasePane [MFC], UndockPane
 - CBasePane [MFC], DoPaint
 ms.assetid: 8163dd51-d7c7-4def-9c74-61f8ecdfad82
-ms.openlocfilehash: eef6c6e08fec3b0ee89046aae19db9c23849f91f
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 1de59e4404960ed99dedaadfa576168bc31da444
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525413"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694785"
 ---
 # <a name="cbasepane-class"></a>CBasePane 类
 
@@ -1566,7 +1566,7 @@ virtual HDWP MoveWindow(
 
 ### <a name="remarks"></a>备注
 
-如果传递 NULL 作为*hdwp*参数，此方法通常移动窗口。 如果传递的句柄，此方法将执行延迟的窗口移动。 可以通过调用获取句柄[BeginDeferWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms632672)或通过将存储以前调用此方法的返回值。
+如果传递 NULL 作为*hdwp*参数，此方法通常移动窗口。 如果传递的句柄，此方法将执行延迟的窗口移动。 可以通过调用获取句柄[BeginDeferWindowPos](/windows/desktop/api/winuser/nf-winuser-begindeferwindowpos)或通过将存储以前调用此方法的返回值。
 
 ##  <a name="onafterchangeparent"></a>  CBasePane::OnAfterChangeParent
 

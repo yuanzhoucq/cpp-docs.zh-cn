@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CHotKeyCtrl [MFC], SetHotKey
 - CHotKeyCtrl [MFC], SetRules
 ms.assetid: 896f9766-0718-4f58-aab2-20325e118ca6
-ms.openlocfilehash: 1ab89c860813996360cddbf0caf5d4ebc395603d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3ec5b734b23a27522fe430d24d2a65eebcca3dd3
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452710"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694720"
 ---
 # <a name="chotkeyctrl-class"></a>CHotKeyCtrl 类
 
@@ -67,7 +67,7 @@ class CHotKeyCtrl : public CWnd
 
 当用户已选择的组合键时，应用程序可以从控件检索指定的键组合，并使用 WM_SETHOTKEY 消息系统中设置热键。 每当用户按热键此后，在系统中，任何部分 WM_SETHOTKEY 消息中指定的窗口接收指定 SC_HOTKEY WM_SYSCOMMAND 消息。 此消息激活接收它的窗口。 热键之前调用 WM_SETHOTKEY 退出该应用程序将保持有效。
 
-此机制是依赖于 WM_HOTKEY 消息和 Windows 的热密钥支持不同[RegisterHotKey](https://msdn.microsoft.com/library/windows/desktop/ms646309)并[UnregisterHotKey](https://msdn.microsoft.com/library/windows/desktop/ms646327)函数。
+此机制是依赖于 WM_HOTKEY 消息和 Windows 的热密钥支持不同[RegisterHotKey](https://msdn.microsoft.com/library/windows/desktop/ms646309)并[UnregisterHotKey](/windows/desktop/api/winuser/nf-winuser-unregisterhotkey)函数。
 
 有关使用的详细信息`CHotKeyCtrl`，请参阅[控件](../../mfc/controls-mfc.md)并[使用 CHotKeyCtrl](../../mfc/using-chotkeyctrl.md)。
 

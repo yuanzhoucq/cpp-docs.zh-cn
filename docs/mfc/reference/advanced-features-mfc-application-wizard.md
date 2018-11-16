@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MFC Application Wizard, advanced features
 ms.assetid: 8a6681c5-6576-4b12-841a-6862beee76fa
-ms.openlocfilehash: 28850211fc43e162c227a8bb55da9cf92178ae41
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1af16f7009ceb97ea86d641f47cf56ea5a398c26
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50465528"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694286"
 ---
 # <a name="advanced-features-mfc-application-wizard"></a>MFC 应用程序向导的高级功能
 
@@ -57,7 +57,7 @@ ms.locfileid: "50465528"
 
 - **支持重新启动管理器**
 
-   添加了对支持[Windows 重新启动管理器](/windows/desktop/RstMgr/using-restart-manager)。 此视频介绍如何使用 MFC 中的重新启动管理器：[如何实现： 使用新的重新启动管理器](https://msdn.microsoft.com/vstudio/ee886407)。
+   添加了对支持[Windows 重新启动管理器](/windows/desktop/RstMgr/using-restart-manager)。 此视频介绍如何使用 MFC 中的重新启动管理器：[如何实现： 使用新的重新启动管理器](/previous-versions/visualstudio/visual-studio-2010/dd831853(v%3dvs.100))。
 
 - **高级的框架窗格**
 

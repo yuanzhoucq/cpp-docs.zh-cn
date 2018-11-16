@@ -1,7 +1,7 @@
 ---
 title: 预定义的宏
 ms.custom: update_every_version
-ms.date: 04/30/2018
+ms.date: 11/12/2018
 f1_keywords:
 - _ATL_VER
 - __ATOM__
@@ -143,12 +143,12 @@ helpviewer_keywords:
 - _WINRT_DLL macro
 - __func__ identifier
 ms.assetid: 1cc5f70a-a225-469c-aed0-fe766238e23f
-ms.openlocfilehash: 42b81431ca69de84a5d38cca3eaa088bb7255656
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9ebc23545817de0f249185700454237c66610c13
+ms.sourcegitcommit: d441305fb19131afbd7fc259d8cda63ea26f2343
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50660455"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51678349"
 ---
 # <a name="predefined-macros"></a>预定义的宏
 
@@ -378,6 +378,8 @@ Microsoft Visual c + + 支持这些其他预定义的宏。
    |Visual Studio 2017 版本 15.5|公历 1912 年|
    |Visual Studio 2017 版本 15.6|1913|
    |Visual Studio 2017 15.7 版|1914|
+   |Visual Studio 2017 版本 15.8|1915|
+   |Visual Studio 2017 版本 15.9|1916|
 
    若要测试的编译器版本或更新的 Visual Studio 或之后的给定版本中，使用**>=** （大于或等于） 运算符比较 **&#95;MSC&#95;VER**针对已知的版本。 如果有多个版本进行比较以互相排斥的方式，我们建议你进行排序以降序版本号比较。 例如，此代码检查为编译器发布 Visual Studio 2015 及更高版本，然后编译器发布中或之后 Visual Studio 2013 中，然后，将所有编译器 Visual Studio 2013 之前发布的一项操作：
 

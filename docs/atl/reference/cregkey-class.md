@@ -42,12 +42,12 @@ helpviewer_keywords:
 - registry, writing to
 - registry, deleting keys
 ms.assetid: 3afce82b-ba2c-4c1a-8404-dc969e1af74b
-ms.openlocfilehash: 33ca9e1c07dc350845104a6027166e511b3bbe4b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cf2f97c1c3b389d0ee2b3d4bcdd2d9da2dbb3c8d
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605071"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694850"
 ---
 # <a name="cregkey-class"></a>CRegKey 类
 
@@ -892,7 +892,7 @@ LONG SetKeySecurity(SECURITY_INFORMATION si, PSECURITY_DESCRIPTOR psd) throw();
 |DACL_SECURITY_INFORMATION|设置密钥的自由访问控制列表 (DACL)。 该密钥必须拥有 WRITE_DAC 访问权限，或调用进程必须是对象的所有者。|
 |GROUP_SECURITY_INFORMATION|设置密钥的主要组安全标识符 (SID)。 该密钥必须拥有 WRITE_OWNER 访问权限，或调用进程必须是对象的所有者。|
 |OWNER_SECURITY_INFORMATION|设置密钥的所有者的 SID。 该密钥必须拥有 WRITE_OWNER 访问权限，或调用进程必须是对象的所有者或具有启用了 SE_TAKE_OWNERSHIP_NAME 特权。|
-|SACL_SECURITY_INFORMATION|设置密钥的系统访问控制列表 (SACL)。 该密钥必须拥有 ACCESS_SYSTEM_SECURITY 访问。 若要获得此访问权限的正确方法是启用 SE_SECURITY_NAME[特权](https://msdn.microsoft.com/library/windows/desktop/aa379306)在调用方的当前访问令牌中，打开 ACCESS_SYSTEM_SECURITY 访问的句柄，然后又禁用特权。|
+|SACL_SECURITY_INFORMATION|设置密钥的系统访问控制列表 (SACL)。 该密钥必须拥有 ACCESS_SYSTEM_SECURITY 访问。 若要获得此访问权限的正确方法是启用 SE_SECURITY_NAME[特权](/windows/desktop/secauthz/privileges)在调用方的当前访问令牌中，打开 ACCESS_SYSTEM_SECURITY 访问的句柄，然后又禁用特权。|
 
 *psd*<br/>
 指向[SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-_security_descriptor)结构，它指定要为指定的键设置的安全属性。
