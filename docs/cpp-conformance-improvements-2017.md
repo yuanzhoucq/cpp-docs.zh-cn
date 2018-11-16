@@ -6,12 +6,12 @@ ms.technology:
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 7755e0f1cb2292fc88788ab1b75e19c00f144310
-ms.sourcegitcommit: 48d7d17820be7a95b793e2485b7223879ece5f08
+ms.openlocfilehash: ad34e2721723e113417b45cf7c1da0da4575837f
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51635160"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694395"
 ---
 # <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-157improvements157-158update158-159update159"></a>Visual Studio 2017 版本 15.0、[15.3](#improvements_153)、[15.5](#improvements_155)、[15.6](#improvements_156)、[15.7](#improvements_157)、[15.8](#update_158)、[15.9](#update_159) 中 C++ 的符合性改进
 
@@ -1865,9 +1865,9 @@ cl /EHsc /std:c++17 m.ixx /experimental:module
 cl /experimental:module /module:reference m.ifc main.cpp /std:c++14
 ```
 
-在这两种情况下，编译器都会引发 C5050：警告 C5050：导入模块“m”：不匹配的 C++ 模板时，可能出现不兼容的环境。当前版本为“201402”，模块版本为“201703”*。
+在这两种情况下，编译器都会引发 C5050：警告 C5050：导入模块“m”：不匹配的 C++ 模板时，可能出现不兼容的环境。当前版本为“201402”，模块版本为“201703”。
 
-除此之外，每当篡改 .ifc 文件时，编译器会引发 C7536。 模块接口的标头包含它下面内容的 SHA2 哈希。 导入时，ifc 文件以相同的方式进行哈希处理，然后对照标头中提供的哈希进行检查；如果它们不匹配，则会引发错误 C7536：ifc 未通过完整性检查。预期的 SHA2：“66d5c8154df0c71d4cab7665bab4a125c7ce5cb9a401a4d8b461b706ddd771c6”*。
+除此之外，每当篡改 .ifc 文件时，编译器会引发 C7536。 模块接口的标头包含它下面内容的 SHA2 哈希。 导入时，ifc 文件以相同的方式进行哈希处理，然后对照标头中提供的哈希进行检查；如果它们不匹配，则会引发错误 C7536：ifc 未通过完整性检查。预期的 SHA2：“66d5c8154df0c71d4cab7665bab4a125c7ce5cb9a401a4d8b461b706ddd771c6”。
 
 ### <a name="partial-ordering-involving-aliases-and-non-deduced-contexts"></a>部分排序涉及别名和非推导上下文
 
