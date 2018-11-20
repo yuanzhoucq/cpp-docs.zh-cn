@@ -4,7 +4,7 @@
 ## [2015 和 2017 之间的 C++ 二进制兼容性](binary-compat-2015-2017.md)
 ## [潜在的升级问题概述 (Visual C++)](overview-of-potential-upgrade-issues-visual-cpp.md)
 ## [移植第三方库](porting-third-party-libraries.md)
-## [移植数据应用程序](porting-data-applications.md)
+## [移植数据应用程序](../data/data-access-programming-mfc-atl.md)
 ## [移植和升级：示例和案例研究](porting-and-upgrading-examples-and-case-studies.md)
 ### [移植指南：MFC Scribble](porting-guide-mfc-scribble.md)
 ### [移植指南：COM Spy](porting-guide-com-spy.md)
