@@ -2,14 +2,15 @@
 title: 创建声明/定义
 ms.date: 10/19/2018
 ms.assetid: 6b1cdcb2-765e-4b93-8cef-92b861f64eba
-ms.openlocfilehash: 56f15ba040314b07450dc8730a913a18361e092f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 59ae3ebc23303554a35eea17c7e28850a4a1499a
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456961"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693121"
 ---
 # <a name="create-declaration--definition"></a>创建声明/定义
+
 功能：允许立即生成函数的声明或定义。
 
 时间：有需要声明的函数，反之亦然。

@@ -2,14 +2,15 @@
 title: 重命名
 ms.date: 11/16/2016
 ms.assetid: 64b42a88-3bd9-4399-8b96-75bceffc353b
-ms.openlocfilehash: b677d825675ebb0b60da8f43f778774e2e08695e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a747784f46341f130d1271fd0f15475b63d7b6d8
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50455505"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51692536"
 ---
 # <a name="rename"></a>重命名
+
 功能：重命名代码符号的标识符，例如字段、本地变量、方法、命名空间、属性和类型。
 
 时机：想要安全地进行重命名（无需查找所有实例）并复制/粘贴新名称。

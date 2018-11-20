@@ -1,6 +1,6 @@
 ---
 title: 强制转换
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - casting [C++]
 - coercion [C++]
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - polymorphic classes [C++]
 - classes [C++], polymorphism
 ms.assetid: 3dbeb06e-2f4b-4693-832d-624bc8ec95de
-ms.openlocfilehash: eb309319a4af6d604d8558552ce313ba1d0fb629
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 02ade663ee92d3a301fda95bb385c3ffa48ead12
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50560792"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175543"
 ---
 # <a name="casting"></a>强制转换
 
@@ -23,11 +23,13 @@ ms.locfileid: "50560792"
 
 由于派生类完全包含它派生自的所有基类的定义，因此在类层次结构上将指针转换至这些基类中的任何一个是安全的。 提供一个指向基类的指针，在层次结构中向下转换指针可能是安全的。 如果将指向的对象实际上是从基类派生的类型，则是安全的。 在这种情况下，实际对象称为“完整对象”。 指向基类的指针称为指向完整对象的“子对象”。 例如，考虑下图中显示的类层次结构。
 
-![类层次结构](../cpp/media/vc38zz1.gif "vc38ZZ1")类层次结构
+![类层次结构](../cpp/media/vc38zz1.gif "类层次结构") <br/>
+类层次结构
 
 如下图所示，可对类型为 `C` 的对象进行可视化。
 
-![C 类子&#45;对象 B 和 A](../cpp/media/vc38zz2.gif "vc38ZZ2") B 子对象和子对象的类 C
+![C 类子&#45;对象 B 和 A](../cpp/media/vc38zz2.gif "类 C 与 sub&#45;对象 B 和 A") <br/>
+具有子对象 B 和 A 的类 C
 
 给定 `C` 类的一个实例，存在 `B` 子对象和 `A` 子对象。 包括 `C` 和 `A` 子对象的 `B` 实例是“完整对象。”
 

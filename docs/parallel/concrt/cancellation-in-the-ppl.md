@@ -1,6 +1,6 @@
 ---
 title: PPL 中的取消操作
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - parallel algorithms, canceling [Concurrency Runtime]
 - canceling parallel algorithms [Concurrency Runtime]
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - parallel work trees [Concurrency Runtime]
 - canceling parallel tasks [Concurrency Runtime]
 ms.assetid: baaef417-b2f9-470e-b8bd-9ed890725b35
-ms.openlocfilehash: b1a762f97cf144c39043203dbf68d927b2cbd0e4
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 1cb5404ff8c18492b940f7396ab4c8f4154d69e6
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327416"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52177012"
 ---
 # <a name="cancellation-in-the-ppl"></a>PPL 中的取消操作
 
@@ -57,7 +57,7 @@ ms.locfileid: "51327416"
 
 PPL 使用任务和任务组来管理细化的任务和计算。 可以嵌套任务组，以形成*树*并行工作。 下图演示了并行工作树。 在该图中，`tg1` 和 `tg2` 表示任务组；`t1`、`t2`、`t3`、`t4` 和 `t5` 表示任务组执行的工作。
 
-![并行工作树](../../parallel/concrt/media/parallelwork_trees.png "parallelwork_trees")
+![并行工作树](../../parallel/concrt/media/parallelwork_trees.png "并行工作树")
 
 下面的示例演示了创建该图中的树所需的代码。 在此示例中，`tg1`并`tg2`都[concurrency:: structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md)对象;`t1`， `t2`， `t3`， `t4`，并`t5`是[concurrency:: task_handle](../../parallel/concrt/reference/task-handle-class.md)对象。
 

@@ -1,6 +1,6 @@
 ---
 title: CMFCTasksPane 类
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CMFCTasksPane
 - AFXTASKSPANE/CMFCTasksPane
@@ -194,12 +194,12 @@ helpviewer_keywords:
 - CMFCTasksPane [MFC], Update
 - CMFCTasksPane [MFC], OnActivateTasksPanePage
 ms.assetid: b456328e-2525-4642-b78b-9edd1a1a7d3f
-ms.openlocfilehash: e11d1f95cf44756a39ab52fcd4dfeb87addc6e17
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aaf0e68391dd1273c3f973315ac58fe0d6bd1c24
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50563652"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176804"
 ---
 # <a name="cmfctaskspane-class"></a>CMFCTasksPane 类
 
@@ -350,11 +350,11 @@ class CMFCTasksPane : public CDockablePane
 
 下图显示了一个典型的任务窗格控件。 第一个组是*特殊*组，其标题是较深的颜色。 第三组处于折叠状态。 最后一组与任务窗格的底部对齐且没有标题，而且组中的最后一个任务是一个简单的标签：
 
-![任务窗格示例](../../mfc/reference/media/nexttaskpane.png "nexttaskpane")
+![任务窗格示例](../../mfc/reference/media/nexttaskpane.png "的任务窗格示例")
 
 可以通过调整各种边距和偏移量来自定义任务窗格的外观。 下图阐明这些变量的含义：
 
-![自定义任务组](../../mfc/reference/media/nexttaskgrpcustom.png "nexttaskgrpcustom")
+![自定义任务组](../../mfc/reference/media/nexttaskgrpcustom.png "自定义任务组")
 
 ## <a name="example"></a>示例
 

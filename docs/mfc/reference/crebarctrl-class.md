@@ -1,6 +1,6 @@
 ---
 title: CReBarCtrl 类
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CReBarCtrl
 - AFXCMN/CReBarCtrl
@@ -98,12 +98,12 @@ helpviewer_keywords:
 - CReBarCtrl [MFC], ShowBand
 - CReBarCtrl [MFC], SizeToRect
 ms.assetid: 154570d7-e48c-425d-8c7e-c64542bcb4cc
-ms.openlocfilehash: ec3dcec2aa122f44c2b9aa6083f6faaa64157770
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 072fcec4944088ab087a6a39c7d8b916c3bc80e2
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50502526"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52177025"
 ---
 # <a name="crebarctrl-class"></a>CReBarCtrl 类
 
@@ -189,7 +189,7 @@ Rebar 控件可以指定的背景位图上显示的子窗口。 所有的 rebar 
 
 - 一个带区 2 包含组合框和四个标准按钮。
 
-     ![Rebar 菜单示例](../../mfc/reference/media/vc4scc1.gif "vc4scc1")
+   ![Rebar 菜单示例](../../mfc/reference/media/vc4scc1.gif "Rebar 菜单示例")
 
 ## <a name="rebar-control"></a>Rebar 控件
 

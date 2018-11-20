@@ -1,17 +1,17 @@
 ---
 title: 成员访问控制 (C++)
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - access control [C++]
 - member access [C++]
 - member-access control [C++]
 ms.assetid: 2d596bca-56ad-4277-94e1-ce3db45fa14a
-ms.openlocfilehash: ee4e9d89878aab4be2e4daf45525f9e951d214f2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 546b23b939078c723084bdfc659ff4fd3216b479
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50611414"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176220"
 ---
 # <a name="member-access-control-c"></a>成员访问控制 (C++)
 
@@ -234,7 +234,8 @@ int main()
 
 在涉及虚拟基类的多重继承方格中，可通过多个路径到达给定的名称。 由于可沿着这些不同的路径应用不同的访问控制，因此该编译器选择允许大多数访问的路径。 请参见下图。
 
-![沿继承关系图的路径访问](../cpp/media/vc38v91.gif "vc38V91")访问沿路径的继承关系图
+![沿继承关系图的路径访问](../cpp/media/vc38v91.gif "沿继承关系图的路径访问") <br/>
+沿继承图的路径访问
 
 在该图中，通过类 `VBase` 始终到达类 `RightPath` 中声明的名称。 右路径是更易于访问的，因为 `RightPath` 将 `VBase` 声明为公共基类，而 `LeftPath` 将 `VBase` 声明为私有基类。
 

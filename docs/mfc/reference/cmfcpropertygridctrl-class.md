@@ -1,6 +1,6 @@
 ---
 title: CMFCPropertyGridCtrl 类
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CMFCPropertyGridCtrl
 - AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl
@@ -150,12 +150,12 @@ helpviewer_keywords:
 - CMFCPropertyGridCtrl [MFC], OnSelectCombo
 - CMFCPropertyGridCtrl [MFC], ValidateItemData
 ms.assetid: 95877cae-2311-4a2a-9031-0c8c3cf0a5f9
-ms.openlocfilehash: 764a1fc33d91888c8c32111eca41666d9d0abbd7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8fe22924039cc0e2547df2cc07b0c4387ad908bd
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557321"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52177051"
 ---
 # <a name="cmfcpropertygridctrl-class"></a>CMFCPropertyGridCtrl 类
 
@@ -293,7 +293,7 @@ class CMFCPropertyGridCtrl : public CWnd
 
 下图描述了两种方式显示属性的属性网格控件。 第一张图显示的属性层次结构，第二个按字母顺序显示属性。
 
-![属性列表与属性表](../../mfc/reference/media/proplist.png "proplist")
+![属性列表与属性表](../../mfc/reference/media/proplist.png "属性列表与属性表")
 
 ## <a name="example"></a>示例
 

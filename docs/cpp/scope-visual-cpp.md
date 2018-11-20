@@ -1,6 +1,6 @@
 ---
 title: 范围 (C++)
-ms.date: 04/08/2018
+ms.date: 11/19/2018
 helpviewer_keywords:
 - classes [C++], scope
 - scope [C++]
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - functions [C++], scope
 - scope, C++ names
 ms.assetid: 81fecbb0-338b-4325-8332-49f33e716352
-ms.openlocfilehash: f44b75be7b2b1459e3ee9d0472f9a5ef6dac9025
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 534bb9711ff54e21ca091b399aa3d13ec5a7359d
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506608"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176752"
 ---
 # <a name="scope-c"></a>范围 (C++)
 
@@ -41,7 +41,8 @@ ms.locfileid: "50506608"
 
 可通过在封闭块中声明名称来隐藏该名称。 在下图中，在内部块中重新声明 `i`，从而隐藏与外部块范围中的 `i` 关联的变量。
 
-![块&#45;的范围名称隐藏](../cpp/media/vc38sf1.png "vc38SF1")块范围和名称隐藏
+![块&#45;的范围名称隐藏](../cpp/media/vc38sf1.png "块&#45;范围名称隐藏") <br/>
+块范围和名称隐藏
 
 来自图中显示的程序的输出为：
 

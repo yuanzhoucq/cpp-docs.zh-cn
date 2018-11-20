@@ -1,18 +1,18 @@
 ---
 title: 并发运行时的概述
-ms.date: 07/20/2018
+ms.date: 11/19/2018
 helpviewer_keywords:
 - Concurrency Runtime, requirements
 - Concurrency Runtime, architecture
 - Concurrency Runtime, overview
 - Concurrency Runtime, lambda expressions
 ms.assetid: 56237d96-10b0-494a-9cb4-f5c5090436c5
-ms.openlocfilehash: dab4860bcc69780fa6a6390e2ef111216642637a
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: ffaf560361da2fd54febb5e38af121ad5149f012
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693633"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176661"
 ---
 # <a name="overview-of-the-concurrency-runtime"></a>并发运行时的概述
 
@@ -60,10 +60,10 @@ ms.locfileid: "51693633"
 
 **并发运行时体系结构**
 
-![并发运行时体系结构](../../parallel/concrt/media/concurrencyrun.png "concurrencyrun")
+![并发运行时体系结构](../../parallel/concrt/media/concurrencyrun.png "并发运行时体系结构")
 
 > [!IMPORTANT]
->  任务计划程序和资源管理器组件不可用从通用 Windows 平台 (UWP) 应用程序或使用 ppltasks.h 中的任务类或其他类型。
+> 任务计划程序和资源管理器组件不可用从通用 Windows 平台 (UWP) 应用程序或使用 ppltasks.h 中的任务类或其他类型。
 
 并发运行时具有高度*可组合*，也就是说，可以合并现有功能来执行更多操作。 并发运行时从较低级别组件组合了许多功能，如并行算法。
 

@@ -1,6 +1,6 @@
 ---
 title: 单个继承
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - single inheritance
 - base classes [C++], indirect
@@ -10,18 +10,19 @@ helpviewer_keywords:
 - derived classes [C++], single base class
 - inheritance, single
 ms.assetid: 1cb946ed-8b1b-4cf1-bde0-d9cecbfdc622
-ms.openlocfilehash: a188780201c00451b125288b37c7c62fbe2322c4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 96af0c42a32f14280fd8c208a3e4eaec38a8ca3a
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50461849"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175617"
 ---
 # <a name="single-inheritance"></a>单个继承
 
 在“单继承”（继承的常见形式）中，类仅具有一个基类。 考虑下图中阐释的关系。
 
-![基本单一&#45;继承关系图](../cpp/media/vc38xj1.gif "vc38XJ1")简单单继承关系图
+![基本单一&#45;继承关系图](../cpp/media/vc38xj1.gif "基本单&#45;继承关系图") <br/>
+简单单继承关系图
 
 注意该图中从常规到特定的进度。 在大多数类层次结构的设计中发现的另一个常见特性是，派生类与基类具有“某种”关系。 在该图中，`Book` 是一种 `PrintedDocument`，而 `PaperbackBook` 是一种 `book`。
 
@@ -47,12 +48,13 @@ class PaperbackBook : public Book {};
 
 类可用作多个特定类的基类，如下图所示。
 
-![定向非循环图形](../cpp/media/vc38xj2.gif "vc38XJ2")示例的定向非循环图形
+![定向非循环图形](../cpp/media/vc38xj2.gif "定向无圈图") <br/>
+有向非循环图示例
 
 在上面显示的名为“有向非循环图”（或“DAG”）的关系图中，一些类是多个派生类的基类。 但反过来却行不通；任何给定的派生类只有一个直接基类。 该图中的关系图描述“单继承”结构。
 
 > [!NOTE]
->  有向非循环图对于单继承不是唯一的。 它们还用于表示多重继承关系图。
+> 有向非循环图对于单继承不是唯一的。 它们还用于表示多重继承关系图。
 
 在继承中，派生类包含基类的成员以及您添加的所有新成员。 因此，派生类可以引用基类的成员（除非在派生类中重新定义这些成员）。 当在派生类中重新定义了直接或间接基类的成员时，范围解析运算符 (`::`) 可用于引用这些成员。 请看以下示例：
 

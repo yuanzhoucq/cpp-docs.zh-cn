@@ -1,6 +1,6 @@
 ---
 title: 多页文档
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - pagination [MFC]
 - overriding [MFC], View class functions for printing
@@ -25,12 +25,12 @@ helpviewer_keywords:
 - printing [MFC], pagination
 - documents [MFC], paginating
 ms.assetid: 69626b86-73ac-4b74-b126-9955034835ef
-ms.openlocfilehash: 0c0363c1741b713ff24ec7ca7837f0f3c1b3eaf1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b4ec9f456443b9cd180f1558946829281bc10a36
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50587663"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176375"
 ---
 # <a name="multipage-documents"></a>多页文档
 
@@ -68,7 +68,8 @@ ms.locfileid: "50587663"
 
 下图演示了打印过程涉及的步骤，并显示了 `CView` 的每个打印成员函数的调用位置。 本文的其余部分将更详细地说明大部分这些步骤。 打印过程的其他部分的文章中所述[分配 GDI 资源](../mfc/allocating-gdi-resources.md)。
 
-![打印循环过程](../mfc/media/vc37c71.gif "vc37c71")打印循环
+![打印循环过程](../mfc/media/vc37c71.gif "打印循环过程") <br/>
+打印循环
 
 ##  <a name="_core_pagination"></a> 分页
 

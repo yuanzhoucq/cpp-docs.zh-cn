@@ -1,6 +1,6 @@
 ---
 title: 灰色和抖色位图函数
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - AFXWIN/AfxDrawGrayBitmap
 - AFXWIN/AfxGetGrayBitmap
@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - gray and dithered bitmap functions [MFC]
 ms.assetid: cb139a77-b85e-4504-9d93-24156ad77a41
-ms.openlocfilehash: 1134cde55fbe5addac34b9c0433ff11df4c9bdc7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7e1d4bd0e851a14680a46d7d6ae79dcf4bd190e4
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50490891"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176726"
 ---
 # <a name="gray-and-dithered-bitmap-functions"></a>灰色和抖色位图函数
 
@@ -22,7 +22,7 @@ ms.locfileid: "50490891"
 
 MFC 提供了两个函数为位图提供已禁用控件的外观。
 
-![灰色和原始图标版本的比较](../../mfc/reference/media/vcgraybitmap.gif "vcgraybitmap")
+![灰色和原始图标版本的比较](../../mfc/reference/media/vcgraybitmap.gif "的原始图标版本比较")
 
 |||
 |-|-|
@@ -33,7 +33,7 @@ MFC 提供了两个函数为位图提供已禁用控件的外观。
 
 MFC 还提供了两个函数以将位图背景替换为抖色样式。
 
-![抖色与原始图标版本的比较](../../mfc/reference/media/vcditheredbitmap.gif "vcditheredbitmap")
+![抖色与原始图标版本的比较](../../mfc/reference/media/vcditheredbitmap.gif "抖色与原始图标版本比较")
 
 |||
 |-|-|
@@ -74,7 +74,7 @@ void AFXAPI AfxDrawGrayBitmap(
 
 使用 `AfxDrawGrayBitmap` 绘制的位图将具有禁用控件的外观。
 
-![灰色和原始图标版本的比较](../../mfc/reference/media/vcgraybitmap.gif "vcgraybitmap")
+![灰色和原始图标版本的比较](../../mfc/reference/media/vcgraybitmap.gif "的原始图标版本比较")
 
 ### <a name="example"></a>示例
 
@@ -110,7 +110,7 @@ void AFXAPI AfxGetGrayBitmap(
 
 使用 `AfxGetGrayBitmap` 复制的位图将具有禁用控件的外观。
 
-![灰色和原始图标版本的比较](../../mfc/reference/media/vcgraybitmap.gif "vcgraybitmap")
+![灰色和原始图标版本的比较](../../mfc/reference/media/vcgraybitmap.gif "的原始图标版本比较")
 
 ### <a name="example"></a>示例
 
@@ -158,7 +158,7 @@ void AFXAPI AfxDrawDitheredBitmap(
 
 在两种颜色与目标 DC 上绘制的源位图 (*cr1*并*cr2*) 棋盘格的图案替换位图的背景。 根据定义，源位图的背景指的是指位图的白色像素以及与位图左上角的像素颜色匹配的所有像素。
 
-![抖色与原始图标版本的比较](../../mfc/reference/media/vcditheredbitmap.gif "vcditheredbitmap")
+![抖色与原始图标版本的比较](../../mfc/reference/media/vcditheredbitmap.gif "抖色与原始图标版本比较")
 
 ### <a name="example"></a>示例
 

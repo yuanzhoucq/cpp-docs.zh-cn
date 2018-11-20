@@ -1,17 +1,17 @@
 ---
 title: 演练：使用任务和 XML HTTP 请求进行连接
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - connecting to web services, UWP apps [C++]
 - IXMLHTTPRequest2 and tasks, example
 - IXHR2 and tasks, example
 ms.assetid: e8e12d46-604c-42a7-abfd-b1d1bb2ed6b3
-ms.openlocfilehash: 36769fa531decaee81c73a4751f5c6ed24008ffc
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: dfe4f111e130520f1c4948dc00fdf340e4d3113e
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525003"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175842"
 ---
 # <a name="walkthrough-connecting-using-tasks-and-xml-http-requests"></a>演练：使用任务和 XML HTTP 请求进行连接
 
@@ -100,7 +100,7 @@ ms.locfileid: "51525003"
 
 这是正在运行的应用程序：
 
-![正在运行的 Windows 运行时应用](../../parallel/concrt/media/concrt_usingixhr2.png "concrt_usingixhr2")
+![正在运行的 Windows 运行时应用](../../parallel/concrt/media/concrt_usingixhr2.png "正在运行的 Windows 运行时应用")
 
 ## <a name="next-steps"></a>后续步骤
 

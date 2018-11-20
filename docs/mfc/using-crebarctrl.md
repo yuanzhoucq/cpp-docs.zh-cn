@@ -1,6 +1,6 @@
 ---
 title: 使用 CReBarCtrl
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CReBarCtrl
 helpviewer_keywords:
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - combo boxes [MFC], in rebar controls
 - rebar controls
 ms.assetid: 2c0aeec2-ffc3-44b8-97b5-0f56e116a338
-ms.openlocfilehash: 0317ece49d3d5ee3c815df6f9716809ebb1fd27f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2749e4ec919e2014b3de50f1cd164ef66d2fa0ad
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562170"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175439"
 ---
 # <a name="using-crebarctrl"></a>使用 CReBarCtrl
 
@@ -21,7 +21,7 @@ Rebar 控件充当子窗口的容器。 这些子窗口（通常是其他控件�
 
 下图显示了具有两个带区的 Rebar 控件。 其中一个带区包含一个手柄栏、一个文本标签（“地址”）和一个组合框子窗口。 另一个带区包含一个手柄栏、一个文本标签和一个平面工具栏（使用子窗口实现）。
 
-![具有两个带区的 rebar 控件](../mfc/media/vc4ruz1.gif "vc4ruz1")
+![具有两个带区的 rebar 控件](../mfc/media/vc4ruz1.gif "具有两个带区的 Rebar 控件")
 
 ## <a name="what-do-you-want-to-know-more-about"></a>你想要了解更多信息
 

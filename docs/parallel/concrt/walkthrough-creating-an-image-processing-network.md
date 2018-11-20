@@ -1,16 +1,16 @@
 ---
 title: 演练：创建图像处理网络
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - image-processing networks, creating [Concurrency Runtime]
 - creating image-processing networks [Concurrency Runtime]
 ms.assetid: 78ccadc9-5ce2-46cc-bd62-ce0f99d356b8
-ms.openlocfilehash: 4eb1d6f9e5bc0055a1a4b4be5e18497b20c3a73a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 93a20ca9967c8730e1563a653c8f4546d94161fb
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643627"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176167"
 ---
 # <a name="walkthrough-creating-an-image-processing-network"></a>演练：创建图像处理网络
 
@@ -134,7 +134,7 @@ ms.locfileid: "50643627"
 
 下图显示了图像处理网络：
 
-![图像处理网络](../../parallel/concrt/media/concrt_imageproc.png "concrt_imageproc")
+![图像处理网络](../../parallel/concrt/media/concrt_imageproc.png "图像处理网络")
 
 `countdown_event`对象在此示例中，图像处理网络来通知主应用程序时已处理的所有映像。 `countdown_event`类使用[concurrency:: event](../../parallel/concrt/reference/event-class.md)对象时的计数器值达到零时发出信号通知。 主应用程序每次它发送到网络的文件名称时递增的计数器。 网络递减的终端节点处理的每个图像后的计数器。 主应用程序会遍历指定的目录后，它将等待`countdown_event`对象发出信号的计数器归零。
 
@@ -152,7 +152,7 @@ ms.locfileid: "50643627"
 
 下图显示了示例输出。 每个源映像高于其相应的修改后的映像。
 
-![该示例的输出示例](../../parallel/concrt/media/concrt_imageout.png "concrt_imageout")
+![该示例的输出示例](../../parallel/concrt/media/concrt_imageout.png "示例的示例输出")
 
 `Lighthouse` 通过 Tom Alphin 创作的因此将转换为灰度。 `Chrysanthemum``Desert`， `Koala`，和`Tulips`红色主流色因此删除了蓝色和绿色颜色组件并调暗。 `Hydrangeas``Jellyfish`，和`Penguins`与默认条件匹配，因此转换为棕褐色。
 

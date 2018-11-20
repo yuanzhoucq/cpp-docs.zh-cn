@@ -1,16 +1,16 @@
 ---
 title: 异步代理
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - asynchronous agents
 - agents [Concurrency Runtime]
 ms.assetid: 6cf6ccc6-87f1-4e14-af15-ea8ba58fef1a
-ms.openlocfilehash: 949074981d77702fd23ee3ff70f219c013fa6543
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a99400e4df49e36e1cddda7068f315485b976cde
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467595"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176531"
 ---
 # <a name="asynchronous-agents"></a>异步代理
 
@@ -22,7 +22,7 @@ ms.locfileid: "50467595"
 
 代理具有设定的生命周期。 [Concurrency:: agent_status](reference/concurrency-namespace-enums.md#agent_status)枚举定义代理的各种状态。 下图是显示了代理如何从一个状态到另一个状态图。 在此图中，实线表示从应用程序; 调用的方法点线表示从运行时调用的方法。
 
-![代理状态关系图](../../parallel/concrt/media/agentstate.png "agentstate")
+![代理状态关系图](../../parallel/concrt/media/agentstate.png "代理状态图")
 
 下表描述了中的每个状态`agent_status`枚举。
 

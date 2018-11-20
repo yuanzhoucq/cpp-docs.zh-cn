@@ -1,16 +1,16 @@
 ---
 title: 在 c + + 为 UWP 应用创建异步操作
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - Windows 8.x apps, creating C++ async operations
 - Creating C++ async operations
 ms.assetid: a57cecf4-394a-4391-a957-1d52ed2e5494
-ms.openlocfilehash: 4824180ec0ff9f7adb7c2d0a9b505a2abb58c20b
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 59630c7702dffc4b606943e174e44fdba6aecfe8
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51333325"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176947"
 ---
 # <a name="creating-asynchronous-operations-in-c-for-uwp-apps"></a>在 c + + 为 UWP 应用创建异步操作
 
@@ -124,7 +124,7 @@ Windows 运行时是一个编程接口，可用于创建仅在特殊操作系统
 
 下图显示了选定每个选项后的 `Primes` 应用。
 
-![Windows 运行时 Primes 应用](../../parallel/concrt/media/concrt_windows_primes.png "concrt_windows_primes")
+![Windows 运行时 Primes 应用程序](../../parallel/concrt/media/concrt_windows_primes.png "Windows 运行时 Primes 应用程序")
 
 有关使用 `create_async` 创建可供其他语言使用的异步任务的示例，请参阅 [在 Bing 地图行程优化器示例中使用 C++](https://msdn.microsoft.com/library/windows/apps/hh699891.aspx) 和 [在 C++ 中使用 PPL 的 Windows 8 异步操作](http://code.msdn.microsoft.com/windowsapps/windows-8-asynchronous-08009a0d)。
 
@@ -186,7 +186,7 @@ Windows 运行时使用的 COM 线程模型。 在此模型中，根据对象处
 
 下图显示 `CommonWords` 应用的结果。
 
-![Windows 运行时 CommonWords 应用程序](../../parallel/concrt/media/concrt_windows_common_words.png "concrt_windows_common_words")
+![Windows 运行时 CommonWords 应用程序](../../parallel/concrt/media/concrt_windows_common_words.png "Windows 运行时 CommonWords 应用程序")
 
 在此示例中，可以支持取消操作，因为支持 `task` 的 `create_async` 对象使用了隐式取消标记。 如果您的任务需要以协作方式响应取消，则请定义您的工作函数以采用 `cancellation_token` 对象。 有关 PPL 中取消操作的详细信息，请参阅 [Cancellation in the PPL](cancellation-in-the-ppl.md)
 

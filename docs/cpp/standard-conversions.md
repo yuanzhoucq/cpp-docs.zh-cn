@@ -1,17 +1,17 @@
 ---
 title: 标准转换
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - standard conversions, categories of
 - L-values [C++]
 - conversions, standard
 ms.assetid: ce7ac8d3-5c99-4674-8229-0672de05528d
-ms.openlocfilehash: 7a42a4f35a29489fe23327c6b34ed49197a64724
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aee100bdc7e8ba6dd7d06c6bca9ed39c09cf2d97
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575443"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176973"
 ---
 # <a name="standard-conversions"></a>标准转换
 
@@ -189,7 +189,8 @@ int main() {
 
 基类是否可访问取决于派生中使用的继承的类型。 考虑下图中阐释的继承。
 
-![显示基本的继承关系图&#45;类可访问性](../cpp/media/vc38xa1.gif "vc38XA1")可访问性图的基类的继承关系图
+![显示基本的继承关系图&#45;类可访问性](../cpp/media/vc38xa1.gif "继承关系图显示基&#45;类可访问性") <br/>
+阐明基类可访问性的继承关系图
 
 下表显示针对该图阐释的情况的基类可访问性。
 

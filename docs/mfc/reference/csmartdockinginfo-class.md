@@ -1,6 +1,6 @@
 ---
 title: CSmartDockingInfo 类
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CSmartDockingInfo
 - AFXDOCKINGMANAGER/CSmartDockingInfo
@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CSmartDockingInfo [MFC], m_uiMarkerBmpResID
 - CSmartDockingInfo [MFC], m_uiMarkerLightBmpResID
 ms.assetid: cab04f38-4bc1-4378-9337-c56fc87fbd68
-ms.openlocfilehash: 885af55987c2d1e78cd0145fcee5ca0f4ef67dc5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8931af856bc75bd499d8237278998adfcdb02a6
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50524652"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176765"
 ---
 # <a name="csmartdockinginfo-class"></a>CSmartDockingInfo 类
 
@@ -75,7 +75,7 @@ class CSmartDockingInfo : public CObject
 
 Framework 句柄在内部智能停靠标记。 下图显示了标准智能停靠标记：
 
-![标准智能停靠标记](../../mfc/reference/media/nextsdmarkers.png "nextsdmarkers")
+![标准智能停靠标记](../../mfc/reference/media/nextsdmarkers.png "标准智能停靠标记")
 
 在此图中，在左侧图显示了不具有停靠到已启用的选项卡的中心组智能停靠标记。 在中间图显示了右边缘智能停靠标记。 在右侧图显示了具有停靠到已启用的选项卡的中心组智能停靠标记。 中心组智能停靠标记具有主位图和五个智能停靠标记位图。
 
@@ -93,7 +93,7 @@ Framework 句柄在内部智能停靠标记。 下图显示了标准智能停靠
 
 下图显示了自定义的智能停靠标记的示例：
 
-![自定义智能停靠标记](../../mfc/reference/media/nextsdmarkerscustom.png "nextsdmarkerscustom")
+![自定义智能停靠标记](../../mfc/reference/media/nextsdmarkerscustom.png "自定义智能停靠标记")
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 

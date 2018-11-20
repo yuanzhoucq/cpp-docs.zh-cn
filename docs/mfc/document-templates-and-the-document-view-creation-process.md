@@ -1,6 +1,6 @@
 ---
 title: 文档模板和文档-视图创建过程
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - icons, for multiple document templates
 - document templates [MFC], and views
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - CDocTemplate class [MFC]
 - templates [MFC], document templates
 ms.assetid: 311ce4cd-fbdf-4ea1-a51b-5bb043abbcee
-ms.openlocfilehash: 544a9bf60ee2066688703faa7e430e2337454e66
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 29575166a188b0691465bef0a72810d2e3d97624
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50606344"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52174862"
 ---
 # <a name="document-templates-and-the-documentview-creation-process"></a>文档模板和文档/视图创建过程
 
@@ -24,7 +24,8 @@ ms.locfileid: "50606344"
 
 某些应用程序支持多种文档类型。 例如，一个应用程序可能支持文本文档和图形文档。 在此类应用程序中，当用户选择“文件”菜单上的“新建”命令时，一个对话框会显示可能要打开的新文档类型的列表。 对于每种受支持的文档类型，应用程序使用不同的文档模板对象。 下图阐释了支持两种文档类型和显示多个打开的文档的 MDI 应用程序的配置。
 
-![有两种文档类型的 MDI 应用程序](../mfc/media/vc387h1.gif "vc387h1")具有两种文档类型的 MDI 应用程序
+![有两种文档类型的 MDI 应用程序](../mfc/media/vc387h1.gif "具有两种文档类型的 MDI 应用程序") <br/>
+包含两个文档类型的 MDI 应用程序
 
 文档模板由应用程序对象创建和维护。 在应用程序的 `InitInstance` 函数中执行的一个关键任务是构造一个或多个适当类型的文档模板。 此功能中所述[文档模板创建](../mfc/document-template-creation.md)。 应用程序对象存储指向其模板列表中的每个文件模板的指针，并提供一个用于添加文件模板的接口。
 

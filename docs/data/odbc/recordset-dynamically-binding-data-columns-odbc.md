@@ -1,6 +1,6 @@
 ---
 title: 记录集：动态绑定数据列 (ODBC)
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - ODBC recordsets [C++], binding columns dynamically
 - data binding [C++], recordset columns
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data binding [C++], columns in recordsets
 - columns [C++], binding to recordsets
 ms.assetid: bff67254-d953-4ae4-9716-91c348cb840b
-ms.openlocfilehash: 0284fbeed23c5fdad47cafd29af7a47251b923a0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c2fc870ba08bbec0a886b3d77281f3c697ae09fe
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50469675"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175660"
 ---
 # <a name="recordset-dynamically-binding-data-columns-odbc"></a>记录集：动态绑定数据列 (ODBC)
 
@@ -78,7 +78,7 @@ ms.locfileid: "50469675"
 
    一种方法是生成一个或多个动态列表，一个用于新列的名称，另一个用于其结果值，并为其数据类型第三个 （如有必要）。 这些列表，特别是值列表中，提供的信息并绑定必要的存储。 下图演示如何生成列表。
 
-   ![生成要动态绑定列的列表](../../data/odbc/media/vc37w61.gif "vc37w61")<br/>
+   ![生成要动态绑定列的列表](../../data/odbc/media/vc37w61.gif "生成要动态绑定列的列表")<br/>
    生成要动态绑定的列列表
 
 1. 在主要记录集的添加 RFX 函数调用`DoFieldExchange`函数为每个已添加列。 这些 RFX 调用执行提取一条记录，包括其他列，以及它们将列绑定为到记录集数据成员或动态提供存储的工作。

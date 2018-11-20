@@ -1,18 +1,18 @@
 ---
 title: 用户帐户控制 (UAC) 如何影响应用程序
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - UAC [C++]
 - security [C++], User Account Control
 - user accounts [C++]
 - User Account Control [C++]
 ms.assetid: 0d001870-253e-4989-b689-f78035953799
-ms.openlocfilehash: 336260ddc1c9da795478d5541af73d9801633843
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 04bfc16f2d82863faca806d4cb8d5295104a0cc9
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50556957"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52177038"
 ---
 # <a name="how-user-account-control-uac-affects-your-application"></a>用户帐户控制 (UAC) 如何影响应用程序
 
@@ -34,7 +34,7 @@ ms.locfileid: "50556957"
 
 下面的流程图描述了应用程序的运行方式取决于是否启用了 UAC 和应用程序是否有 UAC 清单：
 
-![Windows Vista 加载程序行为](media/uacflowchart.png "UACflowchart")
+![Windows 加载程序行为](media/uacflowchart.png "Windows 加载程序行为")
 
 ## <a name="see-also"></a>请参阅
 

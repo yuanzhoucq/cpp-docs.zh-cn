@@ -1,6 +1,6 @@
 ---
 title: CMFCStatusBar 类
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CMFCStatusBar
 - AFXSTATUSBAR/CMFCStatusBar
@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CMFCStatusBar [MFC], SetTipText
 - CMFCStatusBar [MFC], OnDrawPane
 ms.assetid: f2960d1d-f4ed-41e8-bd99-0382b2f8d88e
-ms.openlocfilehash: bd63ee83412c3f89b6eea755c0b0a213b1dcc2e7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c4891c6bb66fe5e4b737ca9b128a01bcedcf39e7
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498041"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176570"
 ---
 # <a name="cmfcstatusbar-class"></a>CMFCStatusBar 类
 
@@ -140,7 +140,7 @@ class CMFCStatusBar : public CPane
 
 下图显示了从状态栏的图[状态栏演示示例](../../visual-cpp-samples.md)应用程序。
 
-![Cmfcstatusbar 示例](../../mfc/reference/media/cmfcstatusbar.png "cmfcstatusbar")
+![Cmfcstatusbar 示例](../../mfc/reference/media/cmfcstatusbar.png "cmfcstatusbar 示例")
 
 ## <a name="example"></a>示例
 

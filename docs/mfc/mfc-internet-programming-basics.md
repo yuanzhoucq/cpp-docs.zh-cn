@@ -1,6 +1,6 @@
 ---
 title: MFC Internet 编程基础知识
-ms.date: 09/12/2018
+ms.date: 11/19/2018
 helpviewer_keywords:
 - ISAPI extensions, programming with ISAPI
 - Internet applications [MFC]
@@ -16,12 +16,12 @@ helpviewer_keywords:
 - Internet content [MFC]
 - WinInet classes [MFC]
 ms.assetid: 6df2dfd0-6e3f-4587-9d01-2a32f00f8a6f
-ms.openlocfilehash: 9d44d78474ccb030184c6e79ed2f257ffb00a068
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5bb6a1d379ed754ed96637dfe5b3e4da983edb9f
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509456"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175582"
 ---
 # <a name="mfc-internet-programming-basics"></a>MFC Internet 编程基础知识
 
@@ -30,7 +30,7 @@ Microsoft 为客户端和服务器应用程序编程提供许多 Api。 Internet
 >[!IMPORTANT]
 > ActiveX 是一项传统技术，不应使用新的开发。 有关详细信息，请参阅[ActiveX 控件](activex-controls.md)。
 
-![客户端和服务器应用程序](../mfc/media/vc38bq1.gif "vc38bq1")
+![客户端和服务器应用程序](../mfc/media/vc38bq1.gif "客户端和服务器应用程序")
 
 MFC 提供了支持 Internet 编程的类。 可以使用[COleControl](../mfc/reference/colecontrol-class.md)并[CDocObjectServer](../mfc/reference/cdocobjectserver-class.md)和相关的 MFC 类编写的 ActiveX 控件和活动文档。 您可以使用 MFC 类，如[CInternetSession](../mfc/reference/cinternetsession-class.md)， [CFtpConnection](../mfc/reference/cftpconnection-class.md)，并[CAsyncMonikerFile](../mfc/reference/casyncmonikerfile-class.md)来检索文件和使用 FTP，如 Internet 协议的信息HTTP 和 gopher。
 

@@ -1,16 +1,16 @@
 ---
 title: 标识 DHTML 控件项目的元素
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - HTML controls, ATL support
 - DHTML controls, ATL support
 ms.assetid: b627547a-3768-4346-9900-4b7a21fb8e27
-ms.openlocfilehash: bb7fa67e6a3009922596c225895032bfb2f4fbb5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e38b94e200754ce9dd37df2bfb17dfaa32cafe49
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50533687"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175699"
 ---
 # <a name="identifying-the-elements-of-the-dhtml-control-project"></a>标识 DHTML 控件项目的元素
 
@@ -26,7 +26,7 @@ DHTML 控件是类似于任何 ATL 控件除外：
 
 下图说明了您的 DLL、 DHTML 控件、 Web 浏览器和 HTML 资源之间的关系。
 
-![DHTML 控件项目的元素](../atl/media/vc52en1.gif "vc52en1")
+![DHTML 控件项目的元素](../atl/media/vc52en1.gif "DHTML 控件项目的元素")
 
 > [!NOTE]
 >  上图的名称是占位符。 HTML 资源和您的控件上公开的接口的名称基于 ATL 控件向导中将其分配的名称。
@@ -47,7 +47,7 @@ DHTML 控件是类似于任何 ATL 控件除外：
 
 ATL 控件向导生成的 HTML 资源和.cpp 文件中，默认代码的控件。 可以编译和运行向导，生成的控件，然后在 Web 浏览器或 ActiveX 控件测试容器中查看该控件。 下图显示了三个按钮显示在测试容器的默认 ATL DHTML 控件：
 
-![ATL DHTML 控件](../atl/media/vc52en2.gif "vc52en2")
+![ATL DHTML 控件](../atl/media/vc52en2.gif "ATL DHTML 控件")
 
 请参阅[创建 ATL DHTML 控件](../atl/creating-an-atl-dhtml-control.md)若要开始构建 DHTML 控件。 请参阅[使用测试容器测试属性和事件](../mfc/testing-properties-and-events-with-test-container.md)有关如何访问测试容器的信息。
 
