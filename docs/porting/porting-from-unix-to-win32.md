@@ -10,12 +10,12 @@ helpviewer_keywords:
 - porting to Win32 [C++]
 - Win32 applications [C++], migrating from UNIX
 ms.assetid: 3837e4fe-3f96-4f24-b2a1-7be94718a881
-ms.openlocfilehash: ac1fb2304c6d06a6d3e1638fa7ded8a6903ee9fb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 70cbff207931ada378a89b978acf13fadb3a8744
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467769"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694083"
 ---
 # <a name="porting-from-unix-to-win32"></a>从 UNIX 到 Win32 的迁移
 
@@ -61,7 +61,7 @@ Microsoft Windows Services for UNIX (SFU) 提供了一系列完整的用于将 W
 
 另一种方法是将 UNIX 应用程序直接迁移到 Win32。 借助 ANSI C/C++ 库和商用 C 编译器库，Win32 应用程序中提供了很多 UNIX 应用程序依赖的传统系统调用。
 
-无需更改基于 **stdio** 的应用程序的输出模型，因为 Win32 控制台 API 会模拟 **stdio** 模型，而且存在使用 Win32 控制台 API 的 *curses* 版本。 有关详细信息，请参阅 [SetConsoleCursorPosition](https://msdn.microsoft.com/library/windows/desktop/ms686025)。
+无需更改基于 **stdio** 的应用程序的输出模型，因为 Win32 控制台 API 会模拟 **stdio** 模型，而且存在使用 Win32 控制台 API 的 *curses* 版本。 有关详细信息，请参阅 [SetConsoleCursorPosition](/windows/console/setconsolecursorposition)。
 
 基于 Berkeley 套接字的应用程序需要稍做更改，以便像 Win32 应用程序一样运行。 Windows 套接字接口旨在通过 WinSock 规范的介绍部分中所述稍作更改，实现与 BSD 套接字的可移植性。
 
@@ -69,7 +69,7 @@ Windows 支持符合 DCE 的 RPC，因此基于 RPC 的应用程序便于使用�
 
 其中的一个最大差异在于进程模型。 UNIX 具有 `fork`；Win32 却没有。 根据使用的 `fork` 和基本代码，Win32 可使用两种 API：`CreateProcess` 和 `CreateThread`。 可在 Win32 中修改其自行派生了多个副本的 UNIX 应用程序，使其拥有多个进程或一个具有多个线程的进程。 如果使用多个进程，则可使用多个 IPC 方法在进程之间进行通信（如果需要 `fork` 提供的功能，可能还可以将新进程的代码和数据更新为如父级一样）。 有关 IPC 的详细信息，请参阅[进程间通信](/windows/desktop/ipc/interprocess-communications)。
 
-Windows 和 UNIX 图形模型有很大差异。 UNIX 使用 X 窗口系统 GUI，而 Windows 使用 GDI。 尽管在概念上类似，但无法从 X API 简单映射到 GDI API。 但是，OpenGL 支持可用于迁移基于 UNIX OpenGL 的应用程序。 还有针对 Windows 的 X 客户端和 X 服务器。 请参阅[设备上下文](https://msdn.microsoft.com/library/windows/desktop/dd183553)以获取 GDI 的相关信息。
+Windows 和 UNIX 图形模型有很大差异。 UNIX 使用 X 窗口系统 GUI，而 Windows 使用 GDI。 尽管在概念上类似，但无法从 X API 简单映射到 GDI API。 但是，OpenGL 支持可用于迁移基于 UNIX OpenGL 的应用程序。 还有针对 Windows 的 X 客户端和 X 服务器。 请参阅[设备上下文](/windows/desktop/gdi/device-contexts)以获取 GDI 的相关信息。
 
 基本 UNIX 应用程序（包括许多 CGI 应用程序）应轻松地迁移到 Windows 上运行的 Visual C++。 诸如 `open`、`fopen`、`read`、`write` 等函数在 Visual C++ 运行时库中可用。 此外，C UNIX API 和 Win32 API 之间存在一对一映射：`open` 到 `CreateFile`、`read` 到 `ReadFile`、`write` 到 `WriteFile`、`ioctl` 到 `DeviceIOControl`、`close` 到 `CloseFile` 等。
 
