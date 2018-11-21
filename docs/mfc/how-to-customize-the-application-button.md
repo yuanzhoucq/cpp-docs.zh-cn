@@ -1,21 +1,21 @@
 ---
 title: 如何：自定义应用程序按钮
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - application button [MFC], customizing
 ms.assetid: ebb11180-ab20-43df-a234-801feca9eb38
-ms.openlocfilehash: e556e9e6509179b692e4c86b67d59ff2e2ec0f02
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ba29e9ad65e0bb1d2163e4051c7c7b53664d8817
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50592785"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175322"
 ---
 # <a name="how-to-customize-the-application-button"></a>如何：自定义应用程序按钮
 
 当单击应用程序按钮时，将显示一个菜单的命令。 通常情况下，菜单包含与文件相关的命令如**开放**，**保存**，**打印**，以及**退出**。
 
-![MFC 功能区应用程序按钮](../mfc/media/application_button.png "application_button")
+![MFC 功能区应用程序按钮](../mfc/media/application_button.png "MFC 功能区应用程序按钮")
 
 若要自定义应用程序按钮，打开在**属性**窗口中，修改其属性，然后预览功能区控件。
 
@@ -57,4 +57,3 @@ ms.locfileid: "50592785"
 ## <a name="see-also"></a>请参阅
 
 [功能区设计器 (MFC)](../mfc/ribbon-designer-mfc.md)
-

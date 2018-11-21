@@ -1,13 +1,13 @@
 ---
 title: 集合 (C++/CX)
-ms.date: 01/22/2017
+ms.date: 11/19/2018
 ms.assetid: 914da30b-aac5-4cd7-9da3-a5ac08cdd72c
-ms.openlocfilehash: d139bcfc6cdf61940a40ca069dd157c1805e2034
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d256e333ddf31bdb637680b70718af85e753a21d
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50531581"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176388"
 ---
 # <a name="collections-ccx"></a>集合 (C++/CX)
 
@@ -15,7 +15,7 @@ ms.locfileid: "50531581"
 
 Windows 运行时定义的接口集合和相关的类型和 C + + /cli CX 提供具体的 c + + 实现在 collection.h 标头文件中。 下图显示了各个集合类型之间的关系：
 
-![C&#43;&#43;&#47;CX 集合类型的继承树](../cppcx/media/cppcxcollectionsinheritancetree.png "CPPCXCollectionsInheritanceTree")
+![C&#43;&#43;&#47;CX 集合类型的继承树](../cppcx/media/cppcxcollectionsinheritancetree.png "C&#43;&#43;&#47;CX 集合类型的继承树")
 
 - [Platform::Collections::Vector 类](../cppcx/platform-collections-vector-class.md) 类似于 [std::vector 类](../standard-library/vector-class.md)。
 
@@ -63,7 +63,7 @@ Windows 运行时定义的接口集合和相关的类型和 C + + /cli CX 提供
 
 下图演示了针对 `range for` 的 `IVector<Person^>`循环。 请注意，执行操作在第 64 行的断点处停止。 **“快速监视”** 窗口显示迭代器变量 `p` 实际上是具有 `VectorProxy<Person^>` 和 `m_v` 成员变量的 `m_i` 。 不过，当调用 `GetType` 时，它将返回与 `Person` 实例 `p2`相同的类型。 要点在于，虽然 `VectorProxy` 和 `ArrowProxy` 可能显示在 **“快速监视”**、调试器的某些编译器错误或其他位置中，但通常不需要对它们进行显式编码。
 
-![范围中的 VectorProxy&#45;基于 for 循环](../cppcx/media/vectorproxy-1.png "VectorProxy_1")
+![范围中的 VectorProxy&#45;基于 for 循环](../cppcx/media/vectorproxy-1.png "范围中的 VectorProxy&#45;基于 for 循环")
 
 必须针对代理对象进行编码的一种情况是，你必须对元素执行 `dynamic_cast` ，例如你在 `UIElement` 元素集合中寻找特定类型的 XAML 对象。 在此情况下，必须先将元素强制转换为 [Platform::Object](../cppcx/platform-object-class.md)^，然后执行动态强制转换：
 

@@ -1,6 +1,6 @@
 ---
 title: 连接点
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - IConnectionPoint
 helpviewer_keywords:
@@ -15,12 +15,12 @@ helpviewer_keywords:
 - CCmdTarget class [MFC], and connection points
 - sinks, connection points
 ms.assetid: bc9fd7c7-8df6-4752-ac8c-0b177442c88d
-ms.openlocfilehash: cddbdb30cbc5f5ddb5fa98524ad067655f262be1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bf21e7bf591a5b1977784db1542053817a73e6cd
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50517632"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175478"
 ---
 # <a name="connection-points"></a>连接点
 
@@ -30,7 +30,8 @@ ms.locfileid: "50517632"
 
 一个连接的两个部分： 调用调用源，并实现接口，该对象的接口的对象调用了接收器。 连接点是由源公开的接口。 通过公开连接点，源允许接收器来建立连接到其自身 （源）。 通过连接点机制 (`IConnectionPoint`接口)，到接收器接口的指针传递到源对象。 此指针提供有权访问接收器的实现的一组的成员函数的源。 例如，若要激发事件接收器实现的源可以调用的接收器的实现适当的方法。 下图演示了连接刚刚介绍的点。
 
-![实现连接点](../mfc/media/vc37lh1.gif "vc37lh1")实现连接点
+![实现连接点](../mfc/media/vc37lh1.gif "实现连接点") <br/>
+已实现的连接点
 
 MFC 实现在此模型[CConnectionPoint](../mfc/reference/cconnectionpoint-class.md)并[CCmdTarget](../mfc/reference/ccmdtarget-class.md)类。 类派生自`CConnectionPoint`实现`IConnectionPoint`接口，用于公开与其他对象的连接点。 类派生自`CCmdTarget`实现`IConnectionPointContainer`接口，它可以枚举的所有对象的可用连接点或查找特定的连接点。
 
@@ -54,7 +55,8 @@ MFC 实现在此模型[CConnectionPoint](../mfc/reference/cconnectionpoint-class
 
 一旦已插入此代码，你`CCmdTarget`的派生的类公开的连接点`ISampleSink`接口。 下图演示了此示例。
 
-![使用 MFC 实现的连接点](../mfc/media/vc37lh2.gif "vc37lh2")使用 MFC 实现连接点
+![使用 MFC 实现的连接点](../mfc/media/vc37lh2.gif "使用 MFC 实现的连接点") <br/>
+使用 MFC 实现连接点
 
 通常情况下，连接点支持"多播"— 能够广播到多个接收器连接到相同的接口。 下面的示例片段演示如何通过迭代浏览每个接收器连接点上的多播：
 

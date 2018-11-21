@@ -1,16 +1,16 @@
 ---
 title: 结构对齐示例
-ms.date: 03/26/2018
+ms.date: 11/19/2018
 helpviewer_keywords:
 - structure alignment
 - examples [C++], structure alignment
 ms.assetid: 03d137bf-5cc4-472e-9583-6498f2534199
-ms.openlocfilehash: 27f7e89b1c7faec06347d8760247a76a33e0b91e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7c4b3ae29674e9c4fc27e8e175867339001b9a0d
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50466233"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175335"
 ---
 # <a name="examples-of-structure-alignment"></a>结构对齐示例
 
@@ -26,7 +26,7 @@ _declspec(align(2)) struct {
 }
 ```
 
-![AMD 转换示例](../build/media/vcamd_conv_ex_1_block.png "vcAmd_conv_ex_1")
+![AMD 转换示例 1 结构布局](../build/media/vcamd_conv_ex_1_block.png "AMD 转换示例 1 结构布局")
 
 ## <a name="example-2"></a>示例 2
 
@@ -40,7 +40,7 @@ _declspec(align(8)) struct {
 }
 ```
 
-![AMD 转换示例](../build/media/vcamd_conv_ex_2_block.png "vcAmd_conv_ex_2")
+![AMD 转换示例 2 结构布局](../build/media/vcamd_conv_ex_2_block.png "AMD 转换示例 2 结构布局")
 
 ## <a name="example-3"></a>示例 3
 
@@ -55,7 +55,7 @@ _declspec(align(4)) struct {
 }
 ```
 
-![AMD 转换示例](../build/media/vcamd_conv_ex_3_block.png "vcAmd_conv_ex_3")
+![AMD 转换示例 2 结构布局](../build/media/vcamd_conv_ex_3_block.png "AMD 转换示例 2 结构布局")
 
 ## <a name="example-4"></a>示例 4
 
@@ -69,7 +69,7 @@ _declspec(align(8)) union {
 }
 ```
 
-![AMD 转换示例](../build/media/vcamd_conv_ex_4_block.png "vcAmd_conv_ex_4")
+![AMD 转换示例 4 联合 layouit](../build/media/vcamd_conv_ex_4_block.png "AMD 转换示例 4 联合 layouit")
 
 ## <a name="see-also"></a>请参阅
 

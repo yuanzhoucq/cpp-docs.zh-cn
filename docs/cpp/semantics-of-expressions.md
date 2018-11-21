@@ -1,18 +1,18 @@
 ---
 title: 表达式的语义
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - grammar, expressions
 - expressions [C++], semantics
 - expression evaluation
 - expression evaluation, about expression evaluation
 ms.assetid: 4a792154-533b-48b9-8709-31bfc170f0a7
-ms.openlocfilehash: df86f73aa38ad9393adcbf193390cd785c934115
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d2ce510478bcf1574429c85f704552e6b73100ea
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50490956"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175773"
 ---
 # <a name="semantics-of-expressions"></a>表达式的语义
 
@@ -43,7 +43,8 @@ int main()
 54
 ```
 
-![在表达式中的计算顺序](../cpp/media/vc38zv1.gif "vc38ZV1")表达式计算顺序
+![在表达式中的计算顺序](../cpp/media/vc38zv1.gif "在表达式中的计算顺序") <br/>
+表达式计算顺序
 
 上图中显示的表达式的计算顺序取决于运算符的优先级和关联性：
 
@@ -55,7 +56,8 @@ int main()
 
 当使用括号为子表达式分组时，它们将更改表达式的计算优先级和顺序，如下图所示。
 
-![带括号表达式的计算顺序](../cpp/media/vc38zv2.gif "vc38ZV2")带括号的表达式计算顺序
+![带括号表达式的计算顺序](../cpp/media/vc38zv2.gif "带括号表达式的计算顺序") <br/>
+带括号的表达式计算顺序
 
 类似于上图的表达式的计算纯粹是为了展示副作用 - 在本例中是将信息转移到标准输出设备。
 
@@ -68,7 +70,7 @@ int main()
 |应为类型|允许的类型|
 |-------------------|-------------------|
 |*type*|`const` *类型*<br /> `volatile` *类型*<br /> *type*&<br /> `const` *类型*&<br /> `volatile` *类型*&<br /> `volatile const` *类型*<br /> `volatile const` *类型*&|
-|*type*\*|*type*\*<br /> `const` *类型*\*<br /> `volatile` *类型*\*<br /> `volatile const` *类型*\*|
+|*类型* \*|*类型* \*<br /> `const` *类型* \*<br /> `volatile` *类型* \*<br /> `volatile const` *类型* \*|
 |`const` *类型*|*type*<br /> `const` *类型*<br />`const` *类型*&|
 |`volatile` *类型*|*type*<br /> `volatile` *类型*<br /> `volatile` *类型*&|
 

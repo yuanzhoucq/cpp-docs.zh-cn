@@ -1,18 +1,18 @@
 ---
 title: 多个基类
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - base classes [C++], multiple
 - derived classes [C++], multiple bases
 - multiple inheritance, class declaration
 - multiple base classes [C++]
 ms.assetid: a30c69fe-401c-4a87-96a0-e0da70c7c740
-ms.openlocfilehash: fbbe6d6194b878b4851cbde84b55d71b9e4fc02c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b58c238da37fbbaf7c2c2913b652c26d98fbd96e
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50483455"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176350"
 ---
 # <a name="multiple-base-classes"></a>多个基类
 
@@ -52,11 +52,13 @@ class CollectionOfBook : public Book, public Collection {
 
 请考虑下图中的类层次结构，它演示了模拟的午餐排队。
 
-![关系图的模拟的午餐](../cpp/media/vc38xp1.gif "vc38XP1")模拟午餐排队图
+![关系图的模拟的午餐](../cpp/media/vc38xp1.gif "模拟的午餐的关系图") <br/>
+模拟的午餐排队图
 
 在该图中，`Queue` 是 `CashierQueue` 和 `LunchQueue` 的基类。 但是，当将这两个类组合成 `LunchCashierQueue` 时，会出现以下问题：新类包含类型 `Queue` 的两个子对象，一个来自 `CashierQueue`，另一个来自 `LunchQueue`。 下图显示了概念上的内存布局（实际物理内存布局可能会进行优化）。
 
-![模拟午餐&#45;行对象](../cpp/media/vc38xp2.gif "vc38XP2")模拟午餐排队对象
+![模拟午餐&#45;行对象](../cpp/media/vc38xp2.gif "模拟的午餐&#45;行对象") <br/>
+模拟的午餐排队对象
 
 请注意，`Queue` 对象中有两个 `LunchCashierQueue` 子对象。 以下代码将 `Queue` 声明为虚拟基类：
 
@@ -71,15 +73,18 @@ class LunchCashierQueue : public LunchQueue, public CashierQueue {};
 
 **虚拟**关键字可确保只有一个子对象的副本`Queue`包含 （请参阅下图）。
 
-![模拟午餐&#45;行对象、 虚拟基类](../cpp/media/vc38xp3.gif "vc38XP3")带虚拟基类模拟午餐排队对象
+![模拟午餐&#45;行对象、 虚拟基类](../cpp/media/vc38xp3.gif "模拟的午餐&#45;行对象、 虚拟基类") <br/>
+带虚拟基类模拟的午餐排队对象
 
 一个类可以同时具有一个给定类型的虚拟组件和非虚拟组件。 下图演示了这种情况。
 
-![虚拟和非虚拟组件的类](../cpp/media/vc38xp4.gif "vc38XP4")虚拟和非虚拟组件的同一个类
+![虚拟和非&#45;类的虚拟组件](../cpp/media/vc38xp4.gif "虚拟和非&#45;类的虚拟组件") <br/>
+同一个类的虚拟和非虚拟组件
 
 在图中，`CashierQueue` 和 `LunchQueue` 将 `Queue` 用作虚拟基类。 但是，`TakeoutQueue` 将 `Queue` 指定为基类而不是虚拟基类。 因此，`LunchTakeoutCashierQueue` 具有类型 `Queue` 的两个子对象：一个来自包含 `LunchCashierQueue` 的继承路径，另一个来自包含 `TakeoutQueue` 的路径。 下图对此进行了演示。
 
-![对象布局中的虚拟和非虚拟继承](../cpp/media/vc38xp5.gif "vc38XP5")带有虚拟和非虚拟继承的对象布局
+![虚拟和非&#45;中的对象布局的虚拟继承](../cpp/media/vc38xp5.gif "虚拟和非&#45;中的对象布局的虚拟继承") <br/>
+使用虚拟和非虚拟继承的对象布局
 
 > [!NOTE]
 >  与非虚拟继承相比较，虚拟继承提供了显著的大小优势。 但是，它可能会引入额外的处理开销。
@@ -187,7 +192,8 @@ public:
 
 - 将使用 address-of 运算符获取的指针显式转换为基类类型 `A` 的效果。 请注意，将该对象的地址强制转换为 `A*` 类型并不总是为编译器提供足够的信息，以供 `A` 类型的子对象进行选择；在这种情况下，将存在两个子对象。
 
-![指针到基类的不明确转换](../cpp/media/vc38xt1.gif "vc38XT1")不明确转换指针到基类
+![指针到基类的不明确转换](../cpp/media/vc38xt1.gif "指针到基类的不明确转换") <br/>
+指针到基类的不明确转换
 
 到类型 `A*`（指向 `A` 的指针）的转换是不明确的，因为无法辩明 `A` 类型的哪个子对象是正确的。 请注意，您可以通过显式指定要使用的子对象来避免多义性，如下所示：
 
@@ -202,7 +208,8 @@ public:
 
 下图显示如何使用虚拟和非虚拟继承构成对象。
 
-![虚拟派生与非虚拟派生](../cpp/media/vc38xr1.gif "vc38XR1")虚拟 vs。非虚拟派生
+![虚拟派生和非&#45;虚拟派生](../cpp/media/vc38xr1.gif "虚拟派生和非&#45;虚拟派生") <br/>
+虚拟和非虚拟派生
 
 在该图中，通过非虚拟基类访问类 `A` 的任何成员都将导致二义性；编译器没有解释是使用与 `B` 关联的子对象还是与 `C` 关联的子对象的信息。 但是，将 `A` 指定为虚拟基类时，访问哪一个子对象都不成问题。
 

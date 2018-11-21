@@ -1,13 +1,13 @@
 ---
 title: 使用平铺
-ms.date: 06/28/2018
+ms.date: 11/19/2018
 ms.assetid: acb86a86-2b7f-43f1-8fcf-bcc79b21d9a8
-ms.openlocfilehash: 02a6f35801c30ce5e25e79a4e736e6c08776a1da
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ede62c80a83b5f5fc1d691bf52dde67140e68246
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588508"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176089"
 ---
 # <a name="using-tiles"></a>使用平铺
 
@@ -27,7 +27,7 @@ ms.locfileid: "50588508"
 
 下图表示排列在 2x3 平铺中的数据的 8x9 矩阵。
 
-![8&#45;的&#45;9 矩阵划分为 2&#45;的&#45;3 个磁贴](../../parallel/amp/media/usingtilesmatrix.png "usingtilesmatrix")
+![8&#45;通过&#45;9 矩阵划分为 2&#45;的&#45;3 个磁贴](../../parallel/amp/media/usingtilesmatrix.png "8&#45;的&#45;9 矩阵划分为 2&#45;的&#45;3 个磁贴")
 
 下面的示例显示全局、 平铺和本地索引此平铺矩阵。 `array_view`通过使用类型的元素创建对象`Description`。 `Description`持有的全局、 平铺和本地索引矩阵中的元素。 在调用代码`parallel_for_each`设置的全局值、 磁贴和本地索引的每个元素。 该输出显示中的值`Description`结构。
 

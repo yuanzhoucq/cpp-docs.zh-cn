@@ -1,18 +1,18 @@
 ---
 title: 演练：使用 join 避免死锁
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - preventing deadlock with joins [Concurrency Runtime]
 - deadlock, preventing [Concurrency Runtime]
 - non-greedy joins, example
 - join class, example
 ms.assetid: d791f697-bb93-463e-84bd-5df1651b7446
-ms.openlocfilehash: b98c2deb158b9b9fc71caa7133aeaeb2acfd369c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b62f4007a79faaff479e4e8ff998a8b48e4d5dd1
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498808"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175907"
 ---
 # <a name="walkthrough-using-join-to-prevent-deadlock"></a>演练：使用 join 避免死锁
 
@@ -48,7 +48,7 @@ ms.locfileid: "50498808"
 
 哲学家就餐问题说明了如何在应用程序中发生死锁。 此问题，请在五个哲学家坐在圆桌。 每个哲学家思考并吃之间交替。 每个哲学家必须与邻居节点的左窗格和另一个共享筷子筷子与右侧相邻节点。 下图显示了此布局。
 
-![哲学家就餐问题](../../parallel/concrt/media/dining_philosophersproblem.png "dining_philosophersproblem")
+![哲学家就餐问题](../../parallel/concrt/media/dining_philosophersproblem.png "哲学家就餐问题")
 
 若要吃，哲学家必须保留两个筷子。 如果每个哲学家保存一个筷子并且正在等待另一个，然后无哲学家可能会消耗，所有影响。
 

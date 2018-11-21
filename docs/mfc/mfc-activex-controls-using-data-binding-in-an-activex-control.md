@@ -1,6 +1,6 @@
 ---
 title: MFC ActiveX 控件：在 ActiveX 控件中使用数据绑定
-ms.date: 09/12/2018
+ms.date: 11/19/2018
 f1_keywords:
 - bindable
 - requestedit
@@ -14,12 +14,12 @@ helpviewer_keywords:
 - controls [MFC], data binding
 - bound controls [MFC], MFC ActiveX
 ms.assetid: 476b590a-bf2a-498a-81b7-dd476bd346f1
-ms.openlocfilehash: 9efac8ba0889d648def622ca045b9398c8eeef11
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: a5cb73496cd6678e3f45500d9d53c2127b0fb17c
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518484"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175799"
 ---
 # <a name="mfc-activex-controls-using-data-binding-in-an-activex-control"></a>MFC ActiveX 控件：在 ActiveX 控件中使用数据绑定
 
@@ -30,7 +30,8 @@ ActiveX 控件的功能更强大的用途之一是数据绑定，它允许控件
 
 本文介绍了您的任务在控件方面。 实现与数据库交互的数据绑定负责控制容器。 如何在容器中管理数据库交互已超出本文档讨论范围。 本文的其余部分介绍如何准备用于数据绑定控件。
 
-![数据的概念图&#45;绑定控件](../mfc/media/vc374v1.gif "vc374v1")的数据绑定控件的概念图
+![数据的概念图&#45;绑定控件](../mfc/media/vc374v1.gif "的数据的概念图&#45;绑定控件") <br/>
+数据绑定控件的概念图
 
 `COleControl`类提供了两个成员函数，使数据绑定实现简单的过程。 第一个函数[BoundPropertyRequestEdit](../mfc/reference/colecontrol-class.md#boundpropertyrequestedit)，用于请求更改的属性值的权限。 [BoundPropertyChanged](../mfc/reference/colecontrol-class.md#boundpropertychanged)，第二个函数，称为已成功更改属性值之后。
 

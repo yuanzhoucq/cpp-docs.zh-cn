@@ -1,6 +1,6 @@
 ---
 title: 对话框数据交换
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - initializing dialog boxes
 - canceling data exchange
@@ -19,12 +19,12 @@ helpviewer_keywords:
 - UpdateData method [MFC]
 - retrieving dialog box data [MFC]
 ms.assetid: 4675f63b-41d2-45ed-b6c3-235ad8ab924b
-ms.openlocfilehash: a72be4daf6c10a7d16b8558bfdddb8337ff1b1be
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f80d80dc9e212dbe0d87da65ac92943ad1f0edad
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566278"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175491"
 ---
 # <a name="dialog-data-exchange"></a>对话框数据交换
 
@@ -34,7 +34,8 @@ ms.locfileid: "50566278"
 
 下图演示了对话框数据交换。
 
-![对话框数据交换](../mfc/media/vc379d1.gif "vc379d1")对话框数据交换
+![对话框数据交换](../mfc/media/vc379d1.gif "对话框数据交换") <br/>
+对话框数据交换
 
 `UpdateData` 在这两个方向上，指定的工作原理**BOOL**参数传递给它。 若要执行交换，`UpdateData` 将设置 `CDataExchange` 对象并调用对话框类的 `CDialog` 的 `DoDataExchange` 成员函数的重写。 `DoDataExchange` 采用 `CDataExchange` 类型的参数。 传递给 `CDataExchange` 的 `UpdateData` 对象表示交换的上下文，并将此类信息定义交换的方向。
 

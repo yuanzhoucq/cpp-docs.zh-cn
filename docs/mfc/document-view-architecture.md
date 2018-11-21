@@ -1,6 +1,6 @@
 ---
 title: 文档视图体系结构
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - CView class [MFC], view architecture
 - CDocument class [MFC]
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - documents [MFC], MFC document/view model
 - document objects [MFC], document/view architecture
 ms.assetid: 6127768a-553f-462a-b01b-a5ee6068c81e
-ms.openlocfilehash: 943199e2398bcb49c7dddf6b3a67f5556c9c81a3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f0886f364637c8844aceb5d5d7b6b2ed7175225d
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509274"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176843"
 ---
 # <a name="documentview-architecture"></a>文档/视图体系结构
 
@@ -47,7 +47,8 @@ MFC 框架同时向用户和程序员来说，最明显的组成部分是文档�
 
 下图显示了文档及其视图之间的关系。
 
-![视图是显示文档的一部分](../mfc/media/vc379n1.gif "vc379n1")文档和视图
+![视图是显示文档的一部分](../mfc/media/vc379n1.gif "视图是显示文档的一部分") <br/>
+文档和视图
 
 类库中的文档/视图实现该方法将数据本身从其显示和对数据的用户操作。 通过文档类，对数据的所有更改进行都管理。 视图将调用此接口来访问和更新的数据。
 

@@ -1,6 +1,6 @@
 ---
 title: MFC ActiveX 控件
-ms.date: 09/12/2018
+ms.date: 11/19/2018
 f1_keywords:
 - MFC ActiveX Controls (MFC)
 helpviewer_keywords:
@@ -15,12 +15,12 @@ helpviewer_keywords:
 - events [MFC], ActiveX controls
 - MFC ActiveX controls [MFC]
 ms.assetid: c911fb74-3afc-4bf3-a0f5-7922b14d9a1b
-ms.openlocfilehash: 95e1e1cc47d9c14448635fae5d6a9added8e15e9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 10ad0645e873a1a745168be9b839bbf97a1c05a6
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50553265"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52174857"
 ---
 # <a name="mfc-activex-controls"></a>MFC ActiveX 控件
 
@@ -39,7 +39,8 @@ ActiveX 控件可以自我绘制在其自己的窗口中，响应事件 （如�
 
 ActiveX 控件被实现为进程内服务器 （通常是一个小的对象），可在任何 OLE 容器中。 请注意，ActiveX 控件的完整功能仅在设计需要注意的 ActiveX 控件的 OLE 容器内使用时才可用。 请参阅[端口为其他应用程序的 ActiveX 控件](../mfc/containers-for-activex-controls.md)支持 ActiveX 控件的容器的列表。 这种容器类型，以下称为"控件容器"，可以使用控件的属性和方法，运行 ActiveX 控件，并接收来自事件的形式中的 ActiveX 控件的通知。 下图演示了这种交互。
 
-![ActiveX 控件容器与控件的交互作用](../mfc/media/vc37221.gif "vc37221")之间 ActiveX 控件容器的交互与有窗口的 ActiveX 控件
+![ActiveX 控件容器与控件的交互作用](../mfc/media/vc37221.gif "交互作用的 ActiveX 控件容器与控件") <br/>
+ActiveX 控件容器与有窗口的 ActiveX 控件之间的交互
 
 某些优化 ActiveX 控件的最新信息，请参阅[MFC ActiveX 控件： 优化](../mfc/mfc-activex-controls-optimization.md)。
 
@@ -69,7 +70,8 @@ ActiveX 控件使用多个编程元素与控件容器和用户高效地交互。
 
 当控件容器中使用控件时，它使用两种机制来进行通信： 它公开属性和方法，并激发的事件。 下图演示了如何实现这两种机制。
 
-![ActiveX 控件与其容器通信](../mfc/media/vc37222.gif "vc37222")之间 ActiveX 控件容器的通信和 ActiveX 控件
+![ActiveX 控件与其容器通信](../mfc/media/vc37222.gif "ActiveX 控件与其容器通信") <br/>
+ActiveX 控件容器与 ActiveX 控件之间的通信
 
 上图还说明了如何由控件处理其他 OLE 接口 （除了自动化和事件）。
 
@@ -83,7 +85,8 @@ ActiveX 控件使用多个编程元素与控件容器和用户高效地交互。
 
 当与窗口控件变为活动状态时，是能够完全与控件容器、 用户和 Windows 进行交互。 下图演示 ActiveX 控件，控件容器与操作系统之间的通信的路径。
 
-![活动窗口的 ActiveX 控件中的消息处理](../mfc/media/vc37223.gif "vc37223") （时活动） 有窗口 ActiveX 控件中的 Windows 消息处理
+![活动窗口的 ActiveX 控件中的消息处理](../mfc/media/vc37223.gif "活动窗口的 ActiveX 控件中的消息处理") <br/>
+有窗口的 ActiveX 控件中的 Windows 消息处理（活动时）
 
 ##  <a name="_core_serializing_activex_elements"></a> 序列化
 

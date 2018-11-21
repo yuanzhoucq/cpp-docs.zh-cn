@@ -45,12 +45,12 @@ helpviewer_keywords:
 - tspawnlpe function
 - _tspawnle function
 ms.assetid: bb47c703-5216-4e09-8023-8cf25bbf2cf9
-ms.openlocfilehash: 49a65680d330752679c86c47c4b142ee3153237c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: caaa3fb40a75292bd32e14ddec33b504e0c1296b
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50533791"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693709"
 ---
 # <a name="spawn-wspawn-functions"></a>_spawn, _wspawn 函数
 
@@ -139,7 +139,7 @@ ms.locfileid: "50533791"
 
 如果从 DLL 或 GUI 应用程序调用 `_spawn` 并希望将输出重定向至管道，则您具有两个选择：
 
-- 使用 Win32 API 创建管道，然后调用 [AllocConsole](https://msdn.microsoft.com/library/windows/desktop/ms681944)，在启动结构中设置句柄值，然后调用 [CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa)。
+- 使用 Win32 API 创建管道，然后调用 [AllocConsole](/windows/console/allocconsole)，在启动结构中设置句柄值，然后调用 [CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa)。
 
 - 调用 [_popen、_wpopen](../c-runtime-library/reference/popen-wpopen.md) 以创建管道，并使用 **cmd.exe /c**（或 **command.exe /c**）调用应用。
 

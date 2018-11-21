@@ -1,15 +1,15 @@
 ---
 title: 并行算法
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - parallel algorithms [Concurrency Runtime]
 ms.assetid: 045dca7b-4d73-4558-a44c-383b88a28473
-ms.openlocfilehash: 0ad7f67016dcb7d4638de0f159feb23cd1282b19
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b8a08919ce6792babb9b8b1b809e242465a200f9
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445586"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176440"
 ---
 # <a name="parallel-algorithms"></a>并行算法
 
@@ -247,7 +247,7 @@ PPL 提供三种排序算法： [concurrency:: parallel_sort](reference/concurre
 
 下图用图形更形象地说明了三种并行排序算法的重要属性。
 
-![排序算法比较](../../parallel/concrt/media/concrt_parallel_sorting.png "concrt_parallel_sorting")
+![排序算法比较](../../parallel/concrt/media/concrt_parallel_sorting.png "排序算法比较")
 
 这些并行排序算法遵循取消和异常处理的规则。 有关取消和异常处理在并发运行时的详细信息，请参阅[取消并行算法](../../parallel/concrt/cancellation-in-the-ppl.md#algorithms)并[异常处理](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)。
 

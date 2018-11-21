@@ -1,18 +1,18 @@
 ---
 title: 进度控件的样式
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - PBS_SMOOTH style
 - progress controls [MFC], styles
 - PBS_VERTICAL style
 - CProgressCtrl class [MFC], styles
 ms.assetid: 39eb8081-bc20-4552-91b9-e7cdd1b7d8ae
-ms.openlocfilehash: 494f5df03d15e1662f20aff644fb414a7254ad5f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5d33e9306c1d70bb58ad628297360bc6e34e6ce2
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50451722"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52174949"
 ---
 # <a name="styles-for-the-progress-control"></a>进度控件的样式
 
@@ -34,11 +34,11 @@ ms.locfileid: "50451722"
 
 而无需 PBS_SMOOTH 样式：
 
-![标准进度栏样式](../mfc/media/vc4ruw1.gif "vc4ruw1")
+![标准进度栏样式](../mfc/media/vc4ruw1.gif "标准进度栏样式")
 
 PBS_SMOOTH 和 PBS_VERTICAL 样式：
 
-![进度栏样式，平滑和垂直](../mfc/media/vc4ruw2.gif "vc4ruw2")
+![进度栏样式，平滑和垂直](../mfc/media/vc4ruw2.gif "进度栏样式，平滑和垂直")
 
 有关详细信息，请参阅[的窗口样式](../mfc/reference/styles-used-by-mfc.md#frame-window-styles-mfc)中*MFC 参考*。
 

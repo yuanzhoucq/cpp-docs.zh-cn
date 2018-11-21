@@ -1,17 +1,17 @@
 ---
 title: 函数重载
-ms.date: 1/25/2018
+ms.date: 11/19/2018
 helpviewer_keywords:
 - function overloading [C++], about function overloading
 - function overloading
 - declaring functions [C++], overloading
 ms.assetid: 3c9884cb-1d5e-42e8-9a49-6f46141f929e
-ms.openlocfilehash: f37a539c74b995b1dce5f68344c555a679a87991
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: c05e4b840a02b3d9bbcd4ed259509be4c35c22c2
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51333366"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176297"
 ---
 # <a name="function-overloading"></a>函数重载
 
@@ -280,7 +280,8 @@ volatile Over&
 
    - 从指向派生类的指针到指向基类的指针的转换会产生一个到直接基类的更好匹配。 假定类层次结构如下图所示。
 
-![首选转换](../cpp/media/vc391t1.gif "vc391T1")关系图演示首选转换
+![首选转换的图形](../cpp/media/vc391t1.gif "首选转换的关系图") <br/>
+该图表显示首选的转换
 
 从 `D*` 类型到 `C*` 类型的转换优于从 `D*` 类型到 `B*` 类型的转换。 同样，从 `D*` 类型到 `B*` 类型的转换优于从 `D*` 类型到 `A*` 类型的转换。
 
@@ -290,7 +291,8 @@ volatile Over&
 
 前面的规则仅沿派生的给定路径应用。 考虑下图中显示的关系图。
 
-![多&#45;显示首选的转换的继承](../cpp/media/vc391t2.gif "vc391T2")多重继承关系图演示首选转换
+![多个&#45;显示首选的转换的继承](../cpp/media/vc391t2.gif "多&#45;显示首选的转换的继承") <br/>
+显示首选的转换的多个继承关系图
 
 从 `C*` 类型到 `B*` 类型的转换优于从 `C*` 类型到 `A*` 类型的转换。 原因是它们位于同一个路径上，且 `B*` 更为接近。 但是，从 `C*` 类型到 `D*` 类型的转换不优于到 `A*` 类型的转换；没有首选项，因为这些转换遵循不同的路径。
 

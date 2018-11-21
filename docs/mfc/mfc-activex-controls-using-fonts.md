@@ -1,6 +1,6 @@
 ---
 title: MFC ActiveX 控件：使用字体
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - OnFontChanged
 - HeadingFont
@@ -19,12 +19,12 @@ helpviewer_keywords:
 - SelectStockFont method [MFC]
 - fonts [MFC], ActiveX controls
 ms.assetid: 7c51d602-3f5a-481d-84d1-a5d8a3a71761
-ms.openlocfilehash: 6a647f67849d84119d58186fc71ec1b412713734
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9fb7668f65b04372b87059034c3ec6cd20abc48d
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608869"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175816"
 ---
 # <a name="mfc-activex-controls-using-fonts"></a>MFC ActiveX 控件：使用字体
 
@@ -204,7 +204,8 @@ DISP_PROPERTY_EX 宏将相关联`HeadingFont`与其对应的属性名称`CSample
 
 如果该控件使用的堆栈 Font 属性，其通知由处理`OnFontChanged`成员函数的`COleControl`。 当你添加自定义字体属性时，可以让它们使用相同的实现。 在上一节中示例中，这通过传递 &*m_xFontNotification*初始化时*m_fontHeading*成员变量。
 
-![实现多个字体对象接口](../mfc/media/vc373q1.gif "vc373q1")实现多个字体对象接口
+![实现多个字体对象接口](../mfc/media/vc373q1.gif "实现多个字体对象接口") <br/>
+实现多个字体对象接口
 
 在上图中实线显示这两个字体对象使用的相同实现`IFontNotification`。 如果你想要区分哪些字体更改，这可能导致问题。
 

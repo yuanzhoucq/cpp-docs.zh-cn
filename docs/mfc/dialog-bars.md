@@ -1,6 +1,6 @@
 ---
 title: 对话栏
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - MFC, control bars
 - CDialogBar class [MFC], dialog bars
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - dialog bars
 - dialog bars [MFC], about dialog bars
 ms.assetid: 485c8055-6bb0-4051-8417-dd2971499321
-ms.openlocfilehash: 3a3276e9b5d0e1ab8d8e77fae983d24ff1e4b4e6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 800cc208df7299cf440508c2705b0b0ddb9ae665
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557388"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175348"
 ---
 # <a name="dialog-bars"></a>对话栏
 
@@ -21,7 +21,8 @@ ms.locfileid: "50557388"
 
 工具栏和 `CDialogBar` 对象之间有一些主要差异。 `CDialogBar` 对象是从可以借助 Visual C++ 对话框编辑器创建的、可包含各种 Windows 控件的对话框模板资源创建的。 用户可以在控件之间进行切换。 您可以指定对齐样式，以将对话栏与父框架窗口的任何部分对齐，甚至可以在调整父窗口大小时将其留在原来的位置。 下图演示了带有各种控件的对话栏。
 
-![VC 对话栏](../mfc/media/vc378t1.gif "vc378t1")对话栏
+![VC 对话栏](../mfc/media/vc378t1.gif "VC 对话栏") <br/>
+对话栏
 
 在其他方面，使用 `CDialogBar` 对象与使用无模式对话框类似。 使用对话框编辑器来设计和创建对话框资源。
 

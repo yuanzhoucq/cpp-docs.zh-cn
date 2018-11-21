@@ -1,6 +1,6 @@
 ---
 title: CMFCPropertySheet 类
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CMFCPropertySheet
 - AFXPROPERTYSHEET/CMFCPropertySheet
@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CMFCPropertySheet [MFC], SetIconsList
 - CMFCPropertySheet [MFC], SetLook
 ms.assetid: 01d93573-9698-440f-a6a4-5bebbee879dc
-ms.openlocfilehash: 8e643474d577c606e80f5f34c6166a59753610f2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1168375606ef86061269454aa361a076efa331a4
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50531607"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176401"
 ---
 # <a name="cmfcpropertysheet-class"></a>CMFCPropertySheet 类
 
@@ -112,15 +112,15 @@ class CMFCPropertySheet : public CPropertySheet
 
 下图描绘了一个采用嵌入式 Microsoft Outlook 工具栏样式的属性表。 该 Outlook 工具栏显示在属性表左侧。
 
-![CMFCPropertySheet 颜色控件](../../mfc/reference/media/cmfcpropertysheet_color.png "cmfcpropertysheet_color")
+![CMFCPropertySheet 颜色控件](../../mfc/reference/media/cmfcpropertysheet_color.png "CMFCPropertySheet 颜色控件")
 
 下图描绘了一个包含的属性表[CMFCPropertyGridCtrl 类](../../mfc/reference/cmfcpropertygridctrl-class.md)对象。 该对象是一个采用标准常用控件属性表样式的属性表。
 
-![CMFCPropertySheet 列表和属性控件](../../mfc/reference/media/cmfcpropertysheet_list.png "cmfcpropertysheet_list")
+![CMFCPropertySheet 列表和属性控件](../../mfc/reference/media/cmfcpropertysheet_list.png "CMFCPropertySheet 列表和属性控件")
 
 下图描绘了一个采用树控件样式的属性表。
 
-![属性树](../../mfc/reference/media/proptree.png "proptree")
+![属性树](../../mfc/reference/media/proptree.png "属性树")
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 

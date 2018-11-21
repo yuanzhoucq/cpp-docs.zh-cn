@@ -1,6 +1,6 @@
 ---
 title: 会话对象接口
-ms.date: 10/24/2018
+ms.date: 11/19/2018
 helpviewer_keywords:
 - session objects [OLE DB]
 - session objects [OLE DB], interfaces
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - interfaces, session object
 - interfaces, list of
 ms.assetid: ac01a958-6dde-4bd7-8b63-94459e488335
-ms.openlocfilehash: 6b4748b804572c72b75f63b8ea2473818bdac989
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 284f93d96b974a616e957a65ef0c8aa39b33a564
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556616"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176895"
 ---
 # <a name="session-object-interfaces"></a>会话对象接口
 
@@ -42,7 +42,7 @@ ms.locfileid: "51556616"
 
 会话对象创建行集对象。 如果提供程序支持的命令，该会话还会创建命令对象 (`CCommand`，实现 OLE DB `TCommand`)。 命令对象实现`ICommand`接口并使用`ICommand::Execute`方法以在行集上执行命令下, 图中所示。
 
-![提供程序概念图](../../data/oledb/media/vc4u551.gif "vc4u551")
+![提供程序概念图](../../data/oledb/media/vc4u551.gif "提供程序概念图")
 
 ## <a name="see-also"></a>请参阅
 

@@ -1,6 +1,6 @@
 ---
 title: C++ AMP 概述
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, requirements
 - C++ Accelerated Massive Parallelism, architecture
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, overview
 - C++ Accelerated Massive Parallelism
 ms.assetid: 9e593b06-6e3c-43e9-8bae-6d89efdd39fc
-ms.openlocfilehash: 070f0885f11f29413aca3028d4f747e0edfd2413
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 26f24e922769a565c88264032373662116eee290
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50663783"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176986"
 ---
 # <a name="c-amp-overview"></a>C++ AMP 概述
 
@@ -362,7 +362,7 @@ void AddArraysWithFunction() {
 
 下图表示排列磁贴中的数据采样的二维数组。
 
-![平铺范围中的值](../../parallel/amp/media/camptiledgridexample.png "camptiledgridexample")
+![平铺范围中的值](../../parallel/amp/media/camptiledgridexample.png "平铺范围中的值")
 
 下面的代码示例使用上面的关系图中的采样数据。 这段代码通过平铺中值的平均值替换平铺中的每个值。
 

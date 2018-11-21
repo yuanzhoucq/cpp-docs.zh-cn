@@ -1,6 +1,6 @@
 ---
 title: CRectTracker 类
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CRectTracker
 - AFXEXT/CRectTracker
@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CRectTracker [MFC], m_rect
 - CRectTracker [MFC], m_sizeMin
 ms.assetid: 99caa7f2-3c0d-4a42-bbee-e5d1d342d4ee
-ms.openlocfilehash: 519f88a3706812ae77d7dbd77e199b3e3ef4e97a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c82b06903f0705a79a15b263b1dbdfc6aee4c8ca
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50473367"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176505"
 ---
 # <a name="crecttracker-class"></a>CRectTracker 类
 
@@ -237,7 +237,7 @@ virtual UINT GetHandleMask() const;
 
 矩形具有 8 编号为 0 到 7 的调整大小图柄。 每个重设大小句柄由表示位掩码; 中该位的值为 2 ^ *n*，其中*n*是重设大小句柄数。 0-3 位对应于角调整大小图柄，从左上方移动顺时针旋转。 Bits 4-7 对应于在端调整大小图柄沿顺时针方向移动顶部开始。 下图显示矩形的调整手柄和及其相应的调整大小控点的数量和值：
 
-![大小调整句柄的数量](../../mfc/reference/media/vc35dp1.gif "vc35dp1")
+![大小调整句柄的数量](../../mfc/reference/media/vc35dp1.gif "调整大小控点的数量")
 
 默认实现`GetHandleMask`返回的位掩码，以便显示调整大小控点。 如果单个位是打开的将绘制相应的调整大小图柄。
 

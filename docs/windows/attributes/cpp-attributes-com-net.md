@@ -1,17 +1,17 @@
 ---
 title: 对于 COM 和.NET 的 c + + 特性
 ms.custom: index-page
-ms.date: 10/02/2018
+ms.date: 11/19/2018
 ms.topic: conceptual
 helpviewer_keywords:
 - attributes [C++/CLI], reference topics
 ms.assetid: 613a3611-b3eb-4347-aa38-99b654600e1c
-ms.openlocfilehash: bacfd4cb78c5bf65422fb4472a4563776041a87b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4a37542bd69926572e44322c406862117560affe
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50589275"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175764"
 ---
 # <a name="c-attributes-for-com-and-net"></a>对于 COM 和.NET 的 c + + 特性
 
@@ -55,7 +55,7 @@ class CMyReceiver
 
 下图演示了编译器和特性提供程序之间的关系。
 
-![组件特性通信](../media/vccompattrcomm.gif "vcCompAttrComm")
+![组件特性通信](../media/vccompattrcomm.gif "组件特性通信")
 
 > [!NOTE]
 > 特性用法不会更改源文件的内容。 在调试会话过程中是唯一一次生成的属性代码均可见。 此外，对于每个源项目文件中，可以生成显示属性替换结果的文本文件。 此过程的详细信息，请参阅[/Fx （合并插入的代码）](../../build/reference/fx-merge-injected-code.md)并[调试插入代码](/visualstudio/debugger/how-to-debug-injected-code)。
