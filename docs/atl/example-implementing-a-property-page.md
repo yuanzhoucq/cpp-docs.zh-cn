@@ -1,15 +1,15 @@
 ---
 title: 实现属性页 (ATL)
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - property pages, implementing
 ms.assetid: c30b67fe-ce08-4249-ae29-f3060fa8d61e
-ms.openlocfilehash: 6eb65ca3ddff79262c2f2b53d84d2f964f273c9a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a76a0f49e8b0ec7458b781785cd5030d2c523f0b
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50669087"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176466"
 ---
 # <a name="example-implementing-a-property-page"></a>示例： 实现属性页
 
@@ -58,7 +58,7 @@ ms.locfileid: "50669087"
 
 现在，已生成属性页，您需要将几个控件添加到对话框资源表示您的页面。 添加一个编辑框、 静态文本控件和一个复选框并设置它们的 Id，如下所示：
 
-![编辑对话框资源](../atl/media/ppgresourcelabeled.gif "ppgresourcelabeled")
+![编辑对话框资源](../atl/media/ppgresourcelabeled.gif "编辑对话框资源")
 
 这些控件将用于显示文档和其只读状态的文件名称。
 

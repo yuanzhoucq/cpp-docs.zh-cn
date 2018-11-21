@@ -1,21 +1,21 @@
 ---
 title: 如何：自定义快速访问工具栏
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - quick access toolbar [MFC], customization
 ms.assetid: 2554099b-0c89-4605-9249-31bf9cbcefe0
-ms.openlocfilehash: d9bdc523218c7fad217d066eabd518aaff011df3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aced2e732b68f838c679518ef67b1d6bdd361964
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50558478"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176323"
 ---
 # <a name="how-to-customize-the-quick-access-toolbar"></a>如何：自定义快速访问工具栏
 
 快速访问工具栏 (QAT) 是一个可自定义的工具栏，其中包含一组显示在“应用程序”按钮旁边或类别选项卡下面的命令。 下图显示了一个典型的快速访问工具栏。
 
-![MFC 功能区快速访问工具栏](../mfc/media/quick_access_toolbar.png "quick_access_toolbar")
+![MFC 功能区快速访问工具栏](../mfc/media/quick_access_toolbar.png "MFC 功能区快速访问工具栏")
 
 若要自定义快速访问工具栏，请打开它**属性**窗口中，修改其命令，然后预览功能区控件。
 
@@ -55,4 +55,3 @@ ms.locfileid: "50558478"
 ## <a name="see-also"></a>请参阅
 
 [功能区设计器 (MFC)](../mfc/ribbon-designer-mfc.md)
-

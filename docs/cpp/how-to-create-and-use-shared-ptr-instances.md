@@ -1,15 +1,15 @@
 ---
 title: 如何：创建和使用 shared_ptr 实例
 ms.custom: how-to
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 ms.topic: conceptual
 ms.assetid: 7d6ebb73-fa0d-4b0b-a528-bf05de96518e
-ms.openlocfilehash: f437ccb476456a8081fa3be293bf67adb4fb2d0e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 79d85de6859096bdff3e2bc17357b721e5ce5846
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50606643"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176271"
 ---
 # <a name="how-to-create-and-use-sharedptr-instances"></a>如何：创建和使用 shared_ptr 实例
 
@@ -17,33 +17,33 @@ ms.locfileid: "50606643"
 
 下图显示了指向一个内存位置的几个 `shared_ptr` 实例。
 
-[![共享指针](../cpp/media/shared_ptr.png "shared_ptr")]
+![共享指针关系图](../cpp/media/shared_ptr.png "共享指针关系图")
 
-## <a name="example"></a>示例
+## <a name="example-1"></a>示例 1
 
 只要可能，使用[make_shared](../standard-library/memory-functions.md#make_shared)函数来创建`shared_ptr`首次创建内存资源时。 `make_shared` 异常安全。 它使用同一调用为控制块和资源分配内存，从而减少构造开销。 如果您不使用 `make_shared`，则您在将此对象传递给 `shared_ptr` 构造函数之前，必须使用新的显式表达式创建它。 以下示例演示了同时声明和初始化 `shared_ptr` 和新对象的各种方式。
 
 [!code-cpp[stl_smart_pointers#1](../cpp/codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_1.cpp)]
 
-## <a name="example"></a>示例
+## <a name="example-2"></a>示例 2
 
 以下示例演示如何声明和初始化对其他 `shared_ptr` 已分配的对象具有共享所有权的 `shared_ptr` 实例。 假设 `sp2` 是已初始化的 `shared_ptr`。
 
 [!code-cpp[stl_smart_pointers#2](../cpp/codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_2.cpp)]
 
-## <a name="example"></a>示例
+## <a name="example-3"></a>示例 3
 
 `shared_ptr`也是有帮助 C++ 标准库容器中使用复制元素的算法时。 您可以将元素包装在 `shared_ptr` 中，然后将其复制到其他容器中（请记住，只要您需要，基础内存就会一直有效）。 以下示例演示如何在向量中对 `replace_copy_if` 实例使用 `shared_ptr` 算法。
 
 [!code-cpp[stl_smart_pointers#4](../cpp/codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_3.cpp)]
 
-## <a name="example"></a>示例
+## <a name="example-4"></a>示例 4
 
 您可以使用 `dynamic_pointer_cast`、`static_pointer_cast` 和 `const_pointer_cast` 来转换 `shared_ptr`。 这些函数类似于 `dynamic_cast`、`static_cast` 和 `const_cast` 运算符。 以下示例演示如何测试基类的 `shared_ptr` 向量中每个元素的派生类型，然后复制元素并显示有关它们的信息。
 
 [!code-cpp[stl_smart_pointers#5](../cpp/codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_4.cpp)]
 
-## <a name="example"></a>示例
+## <a name="example-5"></a>示例 5
 
 您可以通过下列方式将 `shared_ptr` 传递给其他函数：
 
@@ -59,7 +59,7 @@ ms.locfileid: "50606643"
 
 - 有时，例如，在一个 `std:vector<shared_ptr<T>>` 中，您可能必须将每个 `shared_ptr` 传递给 lambda 表达式主体或命名函数对象。 如果 lambda 或函数没有存储指针，则将按引用传递 `shared_ptr` 以避免调用每个元素的复制构造函数。
 
-## <a name="example"></a>示例
+## <a name="example-6"></a>示例 6
 
 以下示例演示 `shared_ptr` 如何重载各种比较运算符以在 `shared_ptr` 实例所有的内存上实现指针比较。
 

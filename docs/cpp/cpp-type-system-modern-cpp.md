@@ -1,14 +1,14 @@
 ---
 title: C++ 类型系统（现代 C++）
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 ms.topic: conceptual
 ms.assetid: 553c0ed6-77c4-43e9-87b1-c903eec53e80
-ms.openlocfilehash: ba24a4a739e4eb13d983202943ca046f857422d2
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 476ebabc4bfc19f995119649d6f012d4b39d8369
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521087"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176336"
 ---
 # <a name="c-type-system-modern-c"></a>C++ 类型系统（现代 C++）
 
@@ -59,7 +59,7 @@ int maxValue;                // Not recommended! maxValue contains
 
 下图显示了内置类型的相对大小：
 
-![大小 （字节） 生成&#45;类型中](../cpp/media/built-intypesizes.png "内置 inTYpeSizes")
+![大小 （字节） 生成&#45;类型中](../cpp/media/built-intypesizes.png "大小 （字节） 生成&#45;类型中")
 
 下表列出了最常用的基础类型：
 
@@ -70,13 +70,13 @@ int maxValue;                // Not recommended! maxValue contains
 |bool|1 个字节|表示可为 true 或 false 的值。|
 |char|1 个字节|用于早期 C 样式字符串或 std:: 字符串对象中无需转换为 UNICODE 的 ASCII 字符。|
 |wchar_t|2 个字节|表示可能以 UNICODE 格式进行编码的“宽”字符值（Windows 上为 UTF-16，其他操作系统上可能不同）。 这是用于 `std::wstring` 类型字符串的字符类型。|
-|unsigned char|1 个字节|C++ 无内置 `byte` 类型。  使用 unsigned char 表示字节值。|
+|无符号&nbsp;char|1 个字节|C++ 无内置 `byte` 类型。  使用 unsigned char 表示字节值。|
 |unsigned int|4 个字节|位标志的默认选项。|
 |long long|8 个字节|表示非常大的整数值。|
 
 ## <a name="the-void-type"></a>void 类型
 
-**Void**类型是一种特殊类型; 不能声明类型的变量**void**，但可以声明类型的变量`void *`(指向**void**)，这是有时当分配原始 （非类型化） 内存时才需要。 但是，指向**void**不是类型安全和它们的使用通常是强烈建议不要在现代 c + + 中使用。 在函数声明中， **void**返回值表示函数不返回值; 这是常见和可接受用法**void**。 尽管 C 语言所需函数具有零个参数来声明**void**在参数列表中，例如， `fou(void)`，这种做法是建议你不要在现代 c + +，应该声明为`fou()`。 有关详细信息，请参阅[类型转换和类型安全](../cpp/type-conversions-and-type-safety-modern-cpp.md)。
+**Void**类型是一种特殊类型; 不能声明类型的变量**void**，但可以声明类型的变量__void \*__  (指向**void**)，这有时是必要的分配原始 （非类型化） 内存时。 但是，指向**void**不是类型安全和它们的使用通常是强烈建议不要在现代 c + + 中使用。 在函数声明中， **void**返回值表示函数不返回值; 这是常见和可接受用法**void**。 尽管 C 语言所需函数具有零个参数来声明**void**在参数列表中，例如， `fou(void)`，这种做法是建议你不要在现代 c + +，应该声明为`fou()`。 有关详细信息，请参阅[类型转换和类型安全](../cpp/type-conversions-and-type-safety-modern-cpp.md)。
 
 ## <a name="const-type-qualifier"></a>const 类型限定符
 

@@ -1,6 +1,6 @@
 ---
 title: try-finally 语句
-ms.date: 10/09/2018
+ms.date: 11/19/2018
 f1_keywords:
 - __try
 - _try
@@ -20,12 +20,12 @@ helpviewer_keywords:
 - __leave keyword [C++], try-finally statement
 - structured exception handling [C++], try-finally
 ms.assetid: 826e0347-ddfe-4f6e-a7bc-0398e0edc7c2
-ms.openlocfilehash: 55d22951c4203c582f7823fef033a0476f8c9a52
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: d05e1d113f4fc661cb6e2e2905fbd8c9dcdd7e2d
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326910"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175912"
 ---
 # <a name="try-finally-statement"></a>try-finally 语句
 
@@ -68,7 +68,8 @@ try-finally-statement:<br/>
 
 例如，假设一个函数调用系列将函数 A 链接到函数 D，如下图所示。 每个函数均有一个终止处理程序。 如果异常在函数 D 中引发并在函数 A 中得到处理，则当系统展开堆栈时，按以下顺序调用终止处理程序：D、C、B。
 
-![终止的顺序&#45;处理程序执行](../cpp/media/vc38cx1.gif "vc38CX1")终止处理程序执行顺序
+![终止的顺序&#45;处理程序执行](../cpp/media/vc38cx1.gif "顺序终止&#45;处理程序执行") <br/>
+终止处理程序执行顺序
 
 > [!NOTE]
 > 的 try-finally 的行为是不同于支持使用的其他一些语言**最后**，如 C#。  将单个 **__try**可能存在，但不是能同时的 **__finally**并 **__except**。  如果同时使用二者，则外部 try-except 语句必须包含内部 try-finally 语句。  指定何时执行每个块的规则也有所不同。

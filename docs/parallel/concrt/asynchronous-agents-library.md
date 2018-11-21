@@ -1,16 +1,16 @@
 ---
 title: 异步代理库
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - Agents Library
 - Asynchronous Agents Library
 ms.assetid: d2a72a31-8ba6-4220-ad7a-e403a6acaa42
-ms.openlocfilehash: 9086734b22523d395022299fb75b7a130a8e7a16
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8b4e8e6489e98aadb6ea41d32d5a9ba14efe2668
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629276"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175855"
 ---
 # <a name="asynchronous-agents-library"></a>异步代理库
 
@@ -26,7 +26,7 @@ ms.locfileid: "50629276"
 
 下图显示了两个代理使用消息块和消息传递函数进行通信。 在此图中，`agent1`发送到消息`agent2`通过使用[concurrency:: send](reference/concurrency-namespace-functions.md#send)函数和一个[concurrency:: unbounded_buffer](reference/unbounded-buffer-class.md)对象。 `agent2` 使用[concurrency:: receive](reference/concurrency-namespace-functions.md#receive)函数来读取该消息。 `agent2` 使用相同的方法将消息发送到`agent1`。 虚线的箭头表示代理之间的数据流。 实线箭头将代理连接到它们写入或读取的消息块。
 
-![代理库的组件](../../parallel/concrt/media/agent_librarycomp.png "agent_librarycomp")
+![代理库的组件](../../parallel/concrt/media/agent_librarycomp.png "代理库的组件")
 
 实现此图中的代码示例是在本主题后面所示。
 

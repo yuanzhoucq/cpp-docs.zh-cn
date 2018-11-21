@@ -1,15 +1,15 @@
 ---
 title: 用户定义的工具
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - user-defined tools (MFC Extensions)
 ms.assetid: cb887421-78ce-4652-bc67-96a53984ccaa
-ms.openlocfilehash: 5c5773cdbbd641b30f39494b2d11c282d2d43954
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: df8ba98fa1986052bae82b2afbdf40725298bef7
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607068"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175721"
 ---
 # <a name="user-defined-tools"></a>用户定义的工具
 
@@ -17,7 +17,8 @@ MFC 支持用户定义的工具。 用户定义的工具是执行、 用户定�
 
 如果启用用户定义的工具支持，会自动包括自定义对话框**工具**选项卡。如下图所示**工具**页。
 
-![工具选项卡中自定义对话框](../mfc/media/custdialogboxtoolstab.png "custdialogboxtoolstab")自定义对话框工具选项卡
+![工具选项卡中自定义对话框](../mfc/media/custdialogboxtoolstab.png "自定义对话框中的工具选项卡") <br/>
+自定义对话框工具选项卡
 
 ## <a name="enabling-user-defined-tools-support"></a>启用用户定义工具支持
 
@@ -57,4 +58,3 @@ MFC 支持用户定义的工具。 用户定义的工具是执行、 用户定�
 [CUserTool 类](../mfc/reference/cusertool-class.md)<br/>
 [CUserToolsManager 类](../mfc/reference/cusertoolsmanager-class.md)<br/>
 [CWinAppEx 类](../mfc/reference/cwinappex-class.md)
-
