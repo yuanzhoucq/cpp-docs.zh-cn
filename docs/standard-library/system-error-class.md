@@ -43,7 +43,7 @@ const error_code& code() const throw();
 
 ## <a name="remarks"></a>备注
 
-由 [](../standard-library/exception-class.md) 类中的 `what` 返回的值根据 `_Message` 和 [error_code](../standard-library/error-code-class.md)（`code` 或 `error_code(_Errval, _Errcat)`）进行构造。
+返回的值`what`类中[异常](../standard-library/exception-class.md)从构造`_Message`和类型的存储的对象[error_code](../standard-library/error-code-class.md) (或者`code`或`error_code(_Errval, _Errcat)`)。
 
 成员函数 `code` 返回存储的 [error_code](../standard-library/error-code-class.md) 对象。
 

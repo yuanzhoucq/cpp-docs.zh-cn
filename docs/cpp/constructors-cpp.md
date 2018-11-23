@@ -585,7 +585,7 @@ public:
 
 所有构造函数完成后，完全初始化的构造函数将立即创建对象。 有关详细信息，请参阅[统一初始化和委托构造函数](../cpp/uniform-initialization-and-delegating-constructors.md)。
 
-## <a name="inheriting_constructors">继承构造函数 (C++ 11)</a>
+## <a name="inheriting_constructors"></a> 继承构造函数 (C++ 11)
 
 在派生的类可以通过使用从直接基类继承构造函数**使用**声明如下面的示例中所示：
 

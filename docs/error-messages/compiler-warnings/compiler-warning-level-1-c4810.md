@@ -17,7 +17,7 @@ ms.locfileid: "50508122"
 
 杂注 pack(show) 的值 == n
 
-当你使用 **pack** 杂注的“显示” [](../../preprocessor/pack.md) 选项时，将发出此警告。 *n* 是当前的 pack 值。
+当你使用时，将发出此警告**显示**的选项[pack](../../preprocessor/pack.md)杂注。 *n* 是当前的 pack 值。
 
 例如，下面的代码演示 C4810 警告如何处理 pack 杂注：
 
