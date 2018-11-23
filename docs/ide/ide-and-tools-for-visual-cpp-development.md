@@ -1,16 +1,16 @@
 ---
 title: 用于 Visual C++ 开发的 IDE 和工具
 description: Visual Studio IDE 支持在 Windows、Linux、Android 和 iOS 上通过代码编辑器、调试程序、测试框架、静态诊断分析器以及其他编程工具进行 C++ 开发。
-ms.date: 09/27/2018
+ms.date: 11/18/2018
 helpviewer_keywords:
 - Visual C++, development tools
 ms.assetid: 56eabafb-1956-4f0f-bec5-29b887763559
-ms.openlocfilehash: e24ba58cf0cf94f1505adaf056f64580b8f7829e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a5dd7f681d05d36215c4086165165122a05be23c
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50473354"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693953"
 ---
 # <a name="ide-and-compiler-tools-for-visual-c-development"></a>用于 Visual C++ 开发的 IDE 和编译器工具
 
@@ -105,14 +105,24 @@ Visual Studio 包含可以在源代码中检测潜在问题的静态代码分析
 
 有关部署 C++/CLI 程序的详细信息，请参阅[面向开发人员的部署指南](/dotnet/framework/deployment/deployment-guide-for-developers)。
 
+## <a name="in-this-section"></a>本节内容
+
+|||
+|-|-|
+|[编写和重构代码 (C++)](writing-and-refactoring-code-cpp.md)| 如何使用 C++ 代码编辑器编写、重构和导航代码。|
+|[Visual Studio 版本中的 Visual C++ 工具和功能](visual-cpp-tools-and-features-in-visual-studio-editions.md)|显示各种版本的 Visual Studio 中提供的功能。|
+|[Visual Studio 中的 C++“打开文件夹”项目](non-msbuild-projects.md)。|介绍如何使用 Visual Studio 中的任意 C++ 构建系统。|
+|[Visual C++ 中的 CMake 项目](cmake-tools-for-visual-cpp.md)。|介绍如何在 Visual Studio 中构建 CMake 项目。|
+|[创建和管理基于 MSBuild 的项目](creating-and-managing-visual-cpp-projects.md)|概述了 Visual Studio 中基于 MSBuild 的 C++ 项目和指向其他介绍如何创建和管理它们的文章的链接。|
+|[部署桌面应用程序](deploying-native-desktop-applications-visual-cpp.md)|对 C++ 应用的部署和指向其他详细介绍部署的文章的链接进行了概述。|
+|[用代码向导添加功能 (C++)](adding-functionality-with-code-wizards-cpp.md)| 使用向导作为指南，将类、文件或用户界面元素添加到项目中。|
+|[XML 文档 (Visual C++)](xml-documentation-visual-cpp.md)| 为 API 创建 XML 文档。|
+|[在 Visual Studio 中生成 C++ 项目](building-cpp-projects-in-visual-studio.md)|如何使用 Visual Studio IDE 构建项目。|
+
 ## <a name="related-articles"></a>相关文章
 
 |||
 |-|-|
-|[Visual Studio 版本中的 Visual C++ 工具和功能](visual-cpp-tools-and-features-in-visual-studio-editions.md)|显示各种版本的 Visual Studio 中提供的功能。|
-|[创建和管理基于 MSBuild 的项目](creating-and-managing-visual-cpp-projects.md)|概述了 Visual Studio 中基于 MSBuild 的 C++ 项目和指向其他介绍如何创建和管理它们的文章的链接。|
-|[Visual C++ 中的 CMake 项目](cmake-tools-for-visual-cpp.md)。|介绍如何生成 Visual C++ 中的 CMake 项目或其他非 MSBuild 项目。|
-|[生成 C/C++ 程序](../build/building-c-cpp-programs.md)|介绍如何生成 C++ 项目。|
-|[部署桌面应用程序](deploying-native-desktop-applications-visual-cpp.md)|对 C++ 应用的部署和指向其他详细介绍部署的文章的链接进行了概述。|
+|[生成 C/C++ 程序](../build/building-c-cpp-programs.md)|有关构建 C++ 项目的详细信息。|
 |[Visual C++ 移植和升级指南](../porting/visual-cpp-porting-and-upgrading-guide.md)|有关如何升级在早期版本的 Visual Studio 中创建的 C++ 应用程序，以及如何迁移使用 Visual Studio 以外的工具创建的应用程序的详细信息。|
 |[Visual C++](../visual-cpp-in-visual-studio.md)|描述 Visual C++ 在 Visual Studio 中的主要功能，并链接到 Visual C++ 文档的剩余部分。|
