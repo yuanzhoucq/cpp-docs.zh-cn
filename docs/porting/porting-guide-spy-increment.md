@@ -1,13 +1,13 @@
 ---
 title: 迁移指南：Spy++
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 ms.assetid: e558f759-3017-48a7-95a9-b5b779d5e51d
-ms.openlocfilehash: 9e36bbefb2ab851350e17c0561addb680593f457
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5bd69853b13d58ff79910eafcc601b0507d5a9ad
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50487810"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176999"
 ---
 # <a name="porting-guide-spy"></a>迁移指南：Spy++
 
@@ -25,7 +25,7 @@ Spy++ 是广泛使用的 GUI 诊断工具，适用于提供有关 Windows 桌面
 
 升级两个项目后，我们的解决方案如下所示：
 
-![Spy ++ 解决方案](../porting/media/spyxxsolution.PNG "SpyxxSolution")
+![Spy++ 解决方案](../porting/media/spyxxsolution.PNG "The Spy++ Solution")
 
 我们共有两个项目，一个具有大量的 C++ 文件，另一个是用 C 语言编写的 DLL。
 
