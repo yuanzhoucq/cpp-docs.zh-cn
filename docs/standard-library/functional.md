@@ -108,7 +108,7 @@ C++11/C++14 的 Visual C++ 实现中添加了以下功能：
 |[bind2nd](../standard-library/functional-functions.md#bind2nd)|一种帮助程序模板类，用于创建适配器，通过将二元函数的第二个自变量绑定到指定的值，将二元函数对象转换为一元函数对象。|
 |[bit_and](../standard-library/functional-functions.md#bit_and)|返回两个参数的按位逻辑 AND（二元运算符 &）。|
 |[bit_not](../standard-library/functional-functions.md#bit_not)|返回两个参数的按位逻辑求反（二元运算符 ~）。|
-|[bit_or](../standard-library/functional-functions.md#bit_or)|返回两个参数的按位逻辑 OR（运算符 |）。|
+|[bit_or](../standard-library/functional-functions.md#bit_or)|返回两个参数的按位逻辑 OR（运算符 &#124;）。|
 |[bit_xor](../standard-library/functional-functions.md#bit_xor)|返回两个参数的按位逻辑 XOR（二元运算符 ^）。|
 |[cref](../standard-library/functional-functions.md#cref)|从变量构造常量 `reference_wrapper`。|
 |[mem_fn](../standard-library/functional-functions.md#mem_fn)|生成一个简单的调用包装器。|

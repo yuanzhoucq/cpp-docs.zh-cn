@@ -17,7 +17,7 @@ ms.locfileid: "50503074"
 
 > '*内部函数*： 不允许并行区域内直接使用内部函数
 
-[](../../intrinsics/compiler-intrinsics.md) 区域内不允许使用 `omp parallel` 。 若要解决此问题，将内部函数移出该区域，或使用非内部函数的等效信息替换它们。
+一个[编译器内部函数](../../intrinsics/compiler-intrinsics.md)中不允许函数`omp parallel`区域。 若要解决此问题，将内部函数移出该区域，或使用非内部函数的等效信息替换它们。
 
 ## <a name="example"></a>示例
 
