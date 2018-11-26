@@ -101,7 +101,7 @@ class CByteArray : public CObject
 
 |名称|描述|
 |----------|-----------------|
-|[CObArray::operator]](../../mfc/reference/cobarray-class.md#operator_at)|设置或获取位于指定索引处的元素。|
+|[CObArray::operator [ ]](../../mfc/reference/cobarray-class.md#operator_at)|设置或获取位于指定索引处的元素。|
 
 ## <a name="remarks"></a>备注
 
