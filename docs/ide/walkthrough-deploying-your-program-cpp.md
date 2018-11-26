@@ -20,7 +20,7 @@ ms.locfileid: "50496425"
 
 现在已通过完成先前相关演练创建了应用程序，该演练在[使用 Visual Studio IDE 进行 C++ 桌面开发](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)中列出，最后一步是创建安装程序以便其他用户将程序安装到其计算机上。 对于安装程序，你需要将新项目添加到现有解决方案。 此新项目输出 setup.exe 文件，该文件将把你的应用程序安装到其他计算机上。
 
-本演练演示如何使用 Windows Installer 部署应用程序。 你还可以使用 ClickOnce 部署应用程序。 有关详细信息，请参阅 [ClickOnce Deployment for Visual C++ Applications](../ide/clickonce-deployment-for-visual-cpp-applications.md)。 有关一般部署的详细信息，请参阅[部署应用程序、服务和组件](/visualstudio/deployment/deploying-applications-services-and-components)。
+本演练演示如何使用 Windows Installer 部署应用程序。 你还可以使用 ClickOnce 部署应用程序。 有关详细信息，请参阅[Visual c + + 应用程序的 ClickOnce 部署](../ide/clickonce-deployment-for-visual-cpp-applications.md)。 有关一般部署的详细信息，请参阅[部署应用程序、服务和组件](/visualstudio/deployment/deploying-applications-services-and-components)。
 
 ## <a name="prerequisites"></a>系统必备
 
@@ -62,7 +62,7 @@ ms.locfileid: "50496425"
 
 1. 在“解决方案资源管理器”中，选择“游戏安装程序”项目，然后选择“视图” > “属性窗口”或点击 F4 以打开“属性”窗口。
 
-1. 指定希望它们显示在安装程序中，则指定其他详细信息。  例如，为“制造商”使用“Contoso”，为“产品名称”使用“游戏安装程序”，并为“SupportUrl”使用 http://www.contoso.com。
+1. 指定希望它们显示在安装程序中，则指定其他详细信息。  例如，为“制造商”使用“Contoso”，为“产品名称”使用“游戏安装程序”，并为“SupportUrl”使用 *http://www.contoso.com* 。
 
 1. 在菜单栏上，依次选择“生成” > “Configuration Manager”。 在“项目”表的“生成”列下，勾选“游戏安装程序”框。 单击 **“关闭”**。
 
