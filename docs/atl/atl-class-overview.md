@@ -36,7 +36,7 @@ ms.locfileid: "50529648"
 |[错误的信息](../atl/error-information-classes.md)|[线程处理模型和关键节](../atl/threading-models-and-critical-sections-classes.md)|
 |[文件处理](../atl/file-handling-classes.md)|[UI 的支持](../atl/ui-support-classes.md)|
 |[接口指针](../atl/interface-pointers-classes.md)|[Windows 支持](../atl/windows-support-classes.md)|
-|[IUnknown 实现](../atl/iunknown-implementation-classes.md)|实用工具[](../atl/utility-classes.md)|
+|[IUnknown 实现](../atl/iunknown-implementation-classes.md)|[实用工具](../atl/utility-classes.md)|
 
 可以在 ATL 项目中使用的其他类，请参阅[共享类](../atl-mfc-shared/atl-mfc-shared-classes.md)。
 
