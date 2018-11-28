@@ -1,15 +1,15 @@
 ---
 title: /sdl（启用附加安全检查）
-ms.date: 11/04/2016
+ms.date: 11/26/2018
 f1_keywords:
 - VC.Project.VCCLCompilerTool.SDLCheck
 ms.assetid: 3dcf86a0-3169-4240-9f29-e04a9f535826
-ms.openlocfilehash: 84e3b7b80727c359e711f182e2f06a7332989549
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 49ac57f81ef07eb2a9c1e11280e160f0c48fce73
+ms.sourcegitcommit: d04dfe95801bafcbd5371e40e626fe5c678343b8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50587455"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52389937"
 ---
 # <a name="sdl-enable-additional-security-checks"></a>/sdl（启用附加安全检查）
 
@@ -49,7 +49,17 @@ ms.locfileid: "50587455"
 
 - 执行有限的指针清理。 在不涉及取消引用的表达式中以及没有用户定义的析构函数的类型中，在调用 `delete` 后，指针引用将设置为无效的地址。 这有助于防止重复使用已过时的指针引用。
 
-- 执行类成员初始化。 在对象实例化时自动将所有类成员初始化为零（在构造函数运行前）。 这有助于防止使用与构造函数未显式初始化的类成员关联的未初始化的数据。
+- 执行类成员的指针初始化。 初始化类成员的指针类型设置为自动**nullptr**上 （在之前的构造函数运行） 的对象实例化。 这有助于防止使用未初始化构造函数不会显式初始化的指针。 调用编译器生成的成员的指针初始化为：
+
+  - 不使用自定义 （用户定义） 分配对象 `operator new`
+
+  - 作为数组的一部分不分配对象 (例如`new A[x]`)
+
+  - 类是未托管或导入
+
+  - 该类具有用户定义的默认构造函数。
+
+  若要初始化的编译器生成的类初始化函数，成员必须是指针，并不是属性或常量。
 
 ## <a name="remarks"></a>备注
 
