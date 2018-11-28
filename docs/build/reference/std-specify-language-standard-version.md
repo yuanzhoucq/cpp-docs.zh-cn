@@ -6,12 +6,12 @@ f1_keywords:
 - -std
 - VC.Project.VCCLCompilerTool.CppLanguageStandard
 ms.assetid: 0acb74ba-1aa8-4c05-b96c-682988dc19bd
-ms.openlocfilehash: 28796826a7c312b92b3ec0510513ad4804800ca1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7c91f02fe044b5e6afccfc075c5d73ec004b8222
+ms.sourcegitcommit: d04dfe95801bafcbd5371e40e626fe5c678343b8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476032"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52389950"
 ---
 # <a name="std-specify-language-standard-version"></a>/std （指定语言标准版本）
 
@@ -19,11 +19,11 @@ ms.locfileid: "50476032"
 
 ## <a name="syntax"></a>语法
 
-> /std: [c + + 14 | c + + 17 | 最新 c + +]
+> / std:\[c + + 14\|c + + 17\|最新 c + +]
 
 ## <a name="remarks"></a>备注
 
-**/Std**选项是可用在 Visual Studio 2017 及更高版本。 它用于控制特定于版本的 ISO c + + 编程语言标准功能在你的代码的编译过程中启用。 此选项可以禁用的某些新的语言和库功能可能会中断现有代码符合特定版本的语言标准的支持。 默认情况下 **/std: c + + 14**指定时，它表示禁用语言和标准库中提供功能更高版本的 c + + 语言标准。 使用 **/std: c + + 17**启用 C + + 17 标准特定功能和行为。 若要显式启用最新受支持的编译器和标准库功能，请使用 **/std: c + + 最新**。
+**/Std**选项是可用在 Visual Studio 2017 及更高版本。 它用于控制特定于版本的 ISO c + + 编程语言标准功能在你的代码的编译过程中启用。 此选项可以禁用的某些新的语言和库功能可能会中断现有代码符合特定版本的语言标准的支持。 默认情况下 **/std: c + + 14**指定时，它表示禁用语言和标准库中提供功能更高版本的 c + + 语言标准。 使用 **/std: c + + 17**启用 C + + 17 标准特定功能和行为。 若要显式启用的当前实现中编译器和标准库功能为下一步的标准草案建议，请使用 **/std: c + + 最新**。
 
 默认值 **/std: c + + 14**选项启用 C + + 14 功能由 Visual c + + 编译器实现的集。 此选项将禁用编译器和标准库支持的功能的更改或新的较新版本的标准，除了某些 c++17 功能已在以前版本的 Visual c + + 编译器中实现的语言中。 若要避免重大更改的用户已采用了从 Visual Studio 2015 Update 2 开始提供功能的依赖关系，这些功能保持启用状态时 **/std: c + + 14**指定选项：
 
@@ -41,7 +41,10 @@ ms.locfileid: "50476032"
 
 **/Std: c + + 17**选项启用完整的 C + + 17 功能集由 Visual c + + 编译器实现。 对于在 C++17 之后的工作草案版本及 C++ 标准版缺陷更新中更改或新增的功能，此选项会禁用编译器和标准库支持。
 
-**/Std: c + + 最新**选项使实现一组 c + + 语言和库功能由 Visual c + + 来跟踪最新 C + + 20 工作草案和缺陷更新的 c + + 标准不包括在 C + + 17 中。 使用此开关获取发布-支持的编译器和标准库的 C + + 17 语言功能。 有关受支持的语言和库功能的列表，请参阅[What's New for Visual c + +](../../what-s-new-for-visual-cpp-in-visual-studio.md)。 **/Std: c + + 最新**选项不会启用功能受 **/ 实验性**切换。
+**/Std: c + + 最新**选项启用 post-C + + 17 中编译器和库当前实现的语言和库功能。 其中可能包括中的 C + + 20 工作草案和缺陷更新的 c + + 标准 C + + 17，以及实验的征求建议书草稿标准中未包括的功能。 有关受支持的语言和库功能的列表，请参阅[What's New for Visual c + +](../../what-s-new-for-visual-cpp-in-visual-studio.md)。 **/Std: c + + 最新**选项不会启用功能受 **/ 实验性**开关，但可能需要启用它们。
+
+> [!IMPORTANT]
+> 启用的编译器和库功能 **/std: c + + 最新**作为提供的是并不支持。 它们可能进行重大更改或删除，恕不另行通知。 这些信息旨在以标准的下一版本中可能会显示的语言功能的预览版的形式，但标准是正在进行的工作。 使用 **/std: c + + 17**以使用最新的 ISO c + + 标准中的功能。
 
 **/Std**可以通过使用检测选项实际上在 c + + 编译期间[ \_MSVC\_LANG](../../preprocessor/predefined-macros.md)预处理器宏。 有关详细信息，请参阅[预处理器宏](../../preprocessor/predefined-macros.md)。
 
