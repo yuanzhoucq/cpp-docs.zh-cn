@@ -867,7 +867,7 @@ virtual BOOL OnHasPriorityCancel(
 
 ### <a name="return-value"></a>返回值
 
-如果 pGroupNew 所拥有的情节提要具有优先级，则应返回 TURE。 如果 pGroupScheduled 所拥有的情节提要具有优先级，则应返回 FALSE。
+如果 pGroupNew 所拥有的情节提要具有优先级，则应返回 TRUE。 如果 pGroupScheduled 所拥有的情节提要具有优先级，则应返回 FALSE。
 
 ### <a name="remarks"></a>备注
 
@@ -897,7 +897,7 @@ virtual BOOL OnHasPriorityCompress(
 
 ### <a name="return-value"></a>返回值
 
-如果 pGroupNew 所拥有的情节提要具有优先级，则应返回 TURE。 如果 pGroupScheduled 所拥有的情节提要具有优先级，则应返回 FALSE。
+如果 pGroupNew 所拥有的情节提要具有优先级，则应返回 TRUE。 如果 pGroupScheduled 所拥有的情节提要具有优先级，则应返回 FALSE。
 
 ### <a name="remarks"></a>备注
 
@@ -927,7 +927,7 @@ virtual BOOL OnHasPriorityConclude(
 
 ### <a name="return-value"></a>返回值
 
-如果 pGroupNew 所拥有的情节提要具有优先级，则应返回 TURE。 如果 pGroupScheduled 所拥有的情节提要具有优先级，则应返回 FALSE。
+如果 pGroupNew 所拥有的情节提要具有优先级，则应返回 TRUE。 如果 pGroupScheduled 所拥有的情节提要具有优先级，则应返回 FALSE。
 
 ### <a name="remarks"></a>备注
 
@@ -957,7 +957,7 @@ virtual BOOL OnHasPriorityTrim(
 
 ### <a name="return-value"></a>返回值
 
-如果 pGroupNew 所拥有的情节提要具有优先级，则应返回 TURE。 如果 pGroupScheduled 所拥有的情节提要具有优先级，则应返回 FALSE。
+如果 pGroupNew 所拥有的情节提要具有优先级，则应返回 TRUE。 如果 pGroupScheduled 所拥有的情节提要具有优先级，则应返回 FALSE。
 
 ### <a name="remarks"></a>备注
 
