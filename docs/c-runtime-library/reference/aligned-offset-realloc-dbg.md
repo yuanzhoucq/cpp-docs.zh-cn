@@ -22,12 +22,12 @@ helpviewer_keywords:
 - aligned_offset_realloc_dbg function
 - _aligned_offset_realloc_dbg function
 ms.assetid: 64e30a12-887e-453b-aea8-aed793fca9d8
-ms.openlocfilehash: e5ffb37227e1e20f32e065290056da05e7dcd065
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7684a752f489eb726b2105b1055b6da1e86e9cd1
+ms.sourcegitcommit: beeb77b2976e997debc55b1af35024cc62e62799
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50625857"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52977818"
 ---
 # <a name="alignedoffsetreallocdbg"></a>_aligned_offset_realloc_dbg
 
@@ -72,7 +72,7 @@ void * _aligned_offset_realloc_dbg(
 
 ## <a name="remarks"></a>备注
 
-**_aligned_offset_realloc_dbg**是调试版[_aligned_offset_realloc](aligned-offset-realloc.md)函数。 当[_DEBUG](../../c-runtime-library/debug.md)未定义，则每次调用 **_aligned_offset_realloc_dbg**缩减为调用 **_aligned_offset_realloc**。 这两 **_aligned_offset_realloc**并 **_aligned_offset_realloc_dbg**重新分配基堆中的内存块，但 **_aligned_offset_realloc_dbg**可容纳几种调试功能： 用于测试泄漏，用于跟踪特定分配类型的块类型参数的块的用户部分两侧的缓冲区并*文件名*/*linenumber*信息用于确定分配请求的源。
+**_aligned_offset_realloc_dbg**是调试版[_aligned_offset_realloc](aligned-offset-realloc.md)函数。 当[_DEBUG](../../c-runtime-library/debug.md)未定义，则每次调用 **_aligned_offset_realloc_dbg**缩减为调用 **_aligned_offset_realloc**。 这两 **_aligned_offset_realloc**并 **_aligned_offset_realloc_dbg**重新分配基堆中的内存块，但 **_aligned_offset_realloc_dbg**可容纳几种调试功能： 用于测试泄漏的块的用户部分两侧的缓冲区并*文件名*/*linenumber*的信息来确定的来源分配请求。 跟踪特定分配类型的块类型参数具有不一致的分配的受支持的调试功能。 一致的分配将显示为 _NORMAL_BLOCK 块类型。
 
 像[_aligned_offset_malloc](aligned-offset-malloc.md)， **_aligned_offset_realloc_dbg**允许在结构内的偏移量上对齐结构。
 
