@@ -8,7 +8,6 @@ Visual Basic 和 Visual C# 文档位于 [http://github.com/dotnet/core-docs](htt
 
 ## <a name="contributing-to-the-documentation"></a>参与文档
 
-我们欢迎你参与帮助我们改进 Visual C++ 文档。有关为 docs.microsoft.com 做贡献的综合指南，请参阅 [Microsoft Docs 贡献者指南概述](https://docs.microsoft.com/contribute)。 有关如何为 Visual C++ 文档做出贡献的详细信息，请参阅[贡献指南](CONTRIBUTING.md)。
 
 Visual C++ 的多个功能区域在此存储库中具有自己的文件夹，例如关于 C++ 标准库主题的 `standard-library`、关于特定于 C++ 的 Visual Studio 交互式开发环境 (IDE) 主题的 `ide` 等等。 每个文件夹中的 `/media` 子文件夹包含主题的剪贴画文件。 [参与指南](CONTRIBUTING.md)中有更多详细信息。
 
