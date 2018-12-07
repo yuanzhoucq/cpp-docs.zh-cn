@@ -22,12 +22,12 @@ helpviewer_keywords:
 - _aligned_realloc_dbg function
 - aligned_realloc_dbg function
 ms.assetid: 8aede920-991e-44cd-867f-83dc2165db47
-ms.openlocfilehash: 2a261b3e578bef5464bbfda8528ffd8b491acb23
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 136edf6b5c95149302920af0c8a8dc9c07458e3b
+ms.sourcegitcommit: beeb77b2976e997debc55b1af35024cc62e62799
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50545946"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52977766"
 ---
 # <a name="alignedreallocdbg"></a>_aligned_realloc_dbg
 
@@ -70,7 +70,7 @@ void * _aligned_realloc_dbg(
 
 ## <a name="remarks"></a>备注
 
-**_aligned_realloc_dbg**是调试版[_aligned_realloc](aligned-realloc.md)函数。 当[_DEBUG](../../c-runtime-library/debug.md)未定义，则每次调用 **_aligned_realloc_dbg**缩减为调用 **_aligned_realloc**。 这两 **_aligned_realloc**并 **_aligned_realloc_dbg**重新分配基堆中的内存块，但 **_aligned_realloc_dbg**还包含几种调试功能： 用于测试泄漏，用于跟踪特定分配类型的块类型参数的块的用户部分两侧的缓冲区并*文件名*/*linenumber*要确定分配请求的源的信息。
+**_aligned_realloc_dbg**是调试版[_aligned_realloc](aligned-realloc.md)函数。 当[_DEBUG](../../c-runtime-library/debug.md)未定义，则每次调用 **_aligned_realloc_dbg**缩减为调用 **_aligned_realloc**。 这两 **_aligned_realloc**并 **_aligned_realloc_dbg**重新分配基堆中的内存块，但 **_aligned_realloc_dbg**还包含几种调试功能： 用于测试泄漏的块的用户部分两侧的缓冲区并*文件名*/*linenumber*信息用于确定分配请求的源。 跟踪特定分配类型的块类型参数具有不一致的分配的受支持的调试功能。 一致的分配将显示为 _NORMAL_BLOCK 块类型。
 
 **_aligned_realloc_dbg**重新分配与稍多的空间比请求指定的内存块*newSize*。 *newSize*可能会大于或小于最初分配的内存块的大小。 其他空间将由调试堆管理器用于链接调试内存块，以及提供具有调试标头信息的应用程序和覆盖缓冲区。 重新分配可能会导致将原始内存块移动到堆中的其他位置，也可能会导致内存块的大小发生更改。 如果移动内存块，将覆盖原始块中的内容。
 

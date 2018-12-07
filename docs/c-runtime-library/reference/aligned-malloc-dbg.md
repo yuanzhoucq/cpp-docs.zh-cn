@@ -22,12 +22,12 @@ helpviewer_keywords:
 - aligned_malloc_dbg function
 - _aligned_malloc_dbg function
 ms.assetid: fb0429c3-685d-4826-9075-2515c5bdc5c6
-ms.openlocfilehash: 4fc6789e5fecda38678052c7e805728a49219bc9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: eb58313c892ffe13e9f8e34e98b7940022899d14
+ms.sourcegitcommit: beeb77b2976e997debc55b1af35024cc62e62799
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631863"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52977805"
 ---
 # <a name="alignedmallocdbg"></a>_aligned_malloc_dbg
 
@@ -64,7 +64,7 @@ void * _aligned_malloc_dbg(
 
 ## <a name="remarks"></a>备注
 
-**_aligned_malloc_dbg**是调试版[_aligned_malloc](aligned-malloc.md)函数。 当[_DEBUG](../../c-runtime-library/debug.md)未定义，则每次调用 **_aligned_malloc_dbg**缩减为调用`_aligned_malloc`。 这两`_aligned_malloc`并 **_aligned_malloc_dbg**分配基堆中的内存块，但 **_aligned_malloc_dbg**提供了几种调试功能： 的用户部分两侧的缓冲区块用于测试泄漏，并*文件名*/*linenumber*信息用于确定分配请求的源。
+**_aligned_malloc_dbg**是调试版[_aligned_malloc](aligned-malloc.md)函数。 当[_DEBUG](../../c-runtime-library/debug.md)未定义，则每次调用 **_aligned_malloc_dbg**缩减为调用`_aligned_malloc`。 这两`_aligned_malloc`并 **_aligned_malloc_dbg**分配基堆中的内存块，但 **_aligned_malloc_dbg**提供了几种调试功能： 的用户部分两侧的缓冲区块用于测试泄漏，并*文件名*/*linenumber*信息用于确定分配请求的源。 跟踪特定分配类型的块类型参数具有不一致的分配的受支持的调试功能。 一致的分配将显示为 _NORMAL_BLOCK 块类型。
 
 **_aligned_malloc_dbg**分配稍多的空间比请求的内存块*大小*。 其他空间将由调试堆管理器用于链接调试内存块，以及提供具有调试标头信息的应用程序和覆盖缓冲区。 分配该块后，使用值 0xCD 填充该块的用户部分，使用值 0xFD 填充每个覆盖缓冲区。
 

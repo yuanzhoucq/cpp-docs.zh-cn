@@ -22,12 +22,12 @@ helpviewer_keywords:
 - aligned_recalloc_dbg function
 - _aligned_recalloc_dbg function
 ms.assetid: 55c3c27e-561c-4d6b-9bf9-1e34cc556e4b
-ms.openlocfilehash: 85af821aaa873b6e71341823d47085996f697235
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c0f0cacc5efa5e63cbe05b481f922b35742e3924
+ms.sourcegitcommit: beeb77b2976e997debc55b1af35024cc62e62799
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50664693"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52977779"
 ---
 # <a name="alignedrecallocdbg"></a>_aligned_recalloc_dbg
 
@@ -74,7 +74,7 @@ void * _aligned_recalloc_dbg(
 
 ## <a name="remarks"></a>备注
 
-**_aligned_recalloc_dbg**是调试版[_aligned_recalloc](aligned-recalloc.md)函数。 当[_DEBUG](../../c-runtime-library/debug.md)未定义，则每次调用 **_aligned_recalloc_dbg**缩减为调用 **_aligned_recalloc**。 这两 **_aligned_recalloc**并 **_aligned_recalloc_dbg**重新分配基堆中的内存块，但 **_aligned_recalloc_dbg**可容纳多个调试功能： 用于测试泄漏，用于跟踪特定分配类型的块类型参数的块的用户部分两侧的缓冲区并*文件名*/*linenumber*要确定分配请求的源的信息。
+**_aligned_recalloc_dbg**是调试版[_aligned_recalloc](aligned-recalloc.md)函数。 当[_DEBUG](../../c-runtime-library/debug.md)未定义，则每次调用 **_aligned_recalloc_dbg**缩减为调用 **_aligned_recalloc**。 这两 **_aligned_recalloc**并 **_aligned_recalloc_dbg**重新分配基堆中的内存块，但 **_aligned_recalloc_dbg**可容纳多个调试功能： 用于测试泄漏的块的用户部分两侧的缓冲区并*文件名*/*linenumber*信息用于确定分配源请求数。 跟踪特定分配类型的块类型参数具有不一致的分配的受支持的调试功能。 一致的分配将显示为 _NORMAL_BLOCK 块类型。
 
 **_aligned_recalloc_dbg**重新分配具有比请求的大小略有更多空间指定的内存块 (*数* * *大小*) 这可能会大于或小于比最初分配的内存块的大小。 其他空间将由调试堆管理器用于链接调试内存块，以及提供具有调试标头信息的应用程序和覆盖缓冲区。 重新分配可能会导致将原始内存块移动到堆中的其他位置，也可能会导致内存块的大小发生更改。 使用值 0xCD 填充该块的用户部分，使用值 0xFD 填充覆盖缓冲区。
 
