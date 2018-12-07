@@ -86,12 +86,12 @@ helpviewer_keywords:
 - std::multimap [C++], upper_bound
 - std::multimap [C++], value_comp
 ms.assetid: 8796ae05-37c4-475a-9e61-75fde9d4a463
-ms.openlocfilehash: 11f7362689e8dcfcf8272786050439f850f81e10
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: caffa84052f774803b92730f7906bf53cb3c824a
+ms.sourcegitcommit: d441305fb19131afbd7fc259d8cda63ea26f2343
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50457990"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51678507"
 ---
 # <a name="multimap-class"></a>multimap 类
 
@@ -515,7 +515,7 @@ size_type count(const Key& key) const;
 
 成员函数返回在以下范围内的元素数量：
 
-[ `lower_bound` (_ *Key* ), `upper_bound` (\_ *Key* ) )
+\[ lower_bound (*键*)、 upper_bound (*密钥*))
 
 元素具有键值*密钥*。
 
@@ -790,7 +790,6 @@ int main()
     print(m1);
     cout << endl;
 }
-
 ```
 
 ## <a name="emplace_hint"></a>  multimap::emplace_hint
@@ -1098,7 +1097,6 @@ int main()
     findit(m1, 45);
     findit(m1, 6);
 }
-
 ```
 
 ## <a name="get_allocator"></a>  multimap::get_allocator
@@ -1331,7 +1329,6 @@ int main()
     print(m4);
     cout << endl;
 }
-
 ```
 
 ## <a name="iterator"></a>  multimap::iterator
@@ -1706,7 +1703,7 @@ int main()
     m1.insert(Int_Pair(4, 40));
 
     // Create an empty multimap m2 with the key comparison
-    // function of geater than, then insert 2 elements
+    // function of greater than, then insert 2 elements
     multimap <int, int, less<int> > m2;
     m2.insert(Int_Pair(1, 10));
     m2.insert(Int_Pair(2, 20));
@@ -1787,7 +1784,6 @@ int main()
     cout << endl;
 
 }
-
 ```
 
 ## <a name="op_eq"></a>multimap::operator=
@@ -1910,14 +1906,14 @@ int main( )
         << m1_rIter -> first << "." << endl;
 
    // begin can be used to start an iteration
-   // throught a multimap in a forward order
+   // through a multimap in a forward order
    cout << "The multimap is: ";
    for ( m1_Iter = m1.begin( ) ; m1_Iter != m1.end( ); m1_Iter++)
       cout << m1_Iter -> first << " ";
       cout << "." << endl;
 
    // rbegin can be used to start an iteration
-   // throught a multimap in a reverse order
+   // through a multimap in a reverse order
    cout << "The reversed multimap is: ";
    for ( m1_rIter = m1.rbegin( ) ; m1_rIter != m1.rend( ); m1_rIter++)
       cout << m1_rIter -> first << " ";
@@ -2050,14 +2046,14 @@ int main( )
         << m1_rIter -> first << "." << endl;
 
    // begin can be used to start an iteration
-   // throught a multimap in a forward order
+   // through a multimap in a forward order
    cout << "The multimap is: ";
    for ( m1_Iter = m1.begin( ) ; m1_Iter != m1.end( ); m1_Iter++)
       cout << m1_Iter -> first << " ";
       cout << "." << endl;
 
    // rbegin can be used to start an iteration
-   // throught a multimap in a reverse order
+   // through a multimap in a reverse order
    cout << "The reversed multimap is: ";
    for ( m1_rIter = m1.rbegin( ) ; m1_rIter != m1.rend( ); m1_rIter++)
       cout << m1_rIter -> first << " ";
@@ -2291,7 +2287,7 @@ int main( )
            << m1_RcIter -> second << "." << endl;
 
    // The element at a specific location in the multimap can be
-   // found using a derefenced iterator addressing the location
+   // found using a dereferenced iterator addressing the location
    m1_AcIter = m1.begin( );
    m1_RcIter = m1.upper_bound( m1_AcIter -> first );
    cout << "The first element of m1 with a key greater than\n"
@@ -2401,7 +2397,7 @@ int main( )
    multimap <int, int> :: iterator pIter;
 
    // value_type can be used to pass the correct type
-   // explicitely to avoid implicit type conversion
+   // explicitly to avoid implicit type conversion
    m1.insert ( multimap <int, int> :: value_type ( 1, 10 ) );
 
    // Compare another way to insert objects into a hash_multimap

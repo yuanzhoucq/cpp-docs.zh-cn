@@ -58,12 +58,12 @@ helpviewer_keywords:
 - tutime64 function
 - tutime32 function
 ms.assetid: 8d482d40-19b9-4591-bfee-5d7f601d1a9e
-ms.openlocfilehash: f1e9633784ad78a2b46701e6600ad1ddb6b3318e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8e52845a828e272ff3b8458b299c3757b8def748
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471082"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524626"
 ---
 # <a name="utime-utime32-utime64-wutime-wutime32-wutime64"></a>_utime、_utime32、_utime64、_wutime、_wutime32、_wutime64
 
@@ -112,10 +112,10 @@ int _wutime64(
 
 |errno 值|条件|
 |-|-|
-**EACCES**|路径指定目录或只读文件
-**EINVAL**|无效*时间*参数
-**EMFILE**|打开的文件太多（必须打开文件以更改其修改时间）
-**ENOENT**|找不到路径或文件名
+| **EACCES** | 路径指定目录或只读文件 |
+| **EINVAL** | 无效*时间*参数 |
+| **EMFILE** | 打开的文件太多（必须打开文件以更改其修改时间） |
+| **ENOENT** | 找不到路径或文件名 |
 
 有关这些代码以及其他返回代码的详细信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
@@ -123,14 +123,14 @@ int _wutime64(
 
 ## <a name="remarks"></a>备注
 
-**_Utime**函数设置指定的文件的修改时间*文件名 * *。* 进程必须拥有文件的写入权限才能更改时间。 在 Windows 操作系统，您可以更改访问时间和修改时间 **_utimbuf**结构。 如果*倍*是**NULL**指针，修改时间设置为当前的本地时间。 否则为*倍*必须指向类型的结构 **_utimbuf**SYS\UTIME 中定义。H.
+**_Utime**函数设置指定的文件的修改时间*filename*。 进程必须拥有文件的写入权限才能更改时间。 在 Windows 操作系统，您可以更改访问时间和修改时间 **_utimbuf**结构。 如果*倍*是**NULL**指针，修改时间设置为当前的本地时间。 否则为*倍*必须指向类型的结构 **_utimbuf**SYS\UTIME 中定义。H.
 
 **_Utimbuf**结构存储使用的文件访问和修改时间 **_utime**用于更改文件修改日期。 此结构中包含以下字段，其均为类型**time_t**:
 
-|字段||
-|-|-|
-**actime**|文件访问时间
-**modtime**|文件修改时间
+| 字段 |   |
+|-------|---|
+| **actime** | 文件访问时间 |
+| **modtime** | 文件修改时间 |
 
 特定版本的 **_utimbuf**结构 (**_utimebuf32**并 **__utimbuf64**) 使用 32 位和 64 位版本的时间类型定义。 这些是此函数的 32 位和 64 位特定版本中使用的内容。 **_utimbuf**本身默认情况下使用 64 位时间类型，除非 **_USE_32BIT_TIME_T**定义。
 

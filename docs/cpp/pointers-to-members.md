@@ -8,12 +8,12 @@ helpviewer_keywords:
 - members [C++], pointers to
 - pointers, declarations
 ms.assetid: f42ddb79-9721-4e39-95b1-c56b55591f68
-ms.openlocfilehash: ac8a1b43b3bf8bde8f910e72b601bf7d94e0d19d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a15e519be14d9a05cb30a8c9282baccc87a5f35e
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50480283"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326961"
 ---
 # <a name="pointers-to-members"></a>指向成员的指针
 
@@ -25,28 +25,40 @@ ms.locfileid: "50480283"
 ```
 
 1. 声明说明符：
-  - 可选存储类说明符。
 
-  - 可选**const**和/或**易失性**说明符。
+   - 可选存储类说明符。
 
-  - 类型说明符：类型的名称。  这是要指向的成员的类型，而不是类。
+   - 可选**const**和/或**易失性**说明符。
+
+   - 类型说明符：类型的名称。  这是要指向的成员的类型，而不是类。
 
 1. 声明符：
 
-  - 可选的 Microsoft 专用修饰符。 有关详细信息，请参阅[Microsoft 专用的修饰符](../cpp/microsoft-specific-modifiers.md)。
-1. 包含要指向的成员的类的限定名。
-  - :: 运算符。
-  - <strong>\*</strong>运算符。
-  - 可选**const**和/或**易失性**说明符。
-  - 命名指向成员的指针的标识符。
+   - 可选的 Microsoft 专用修饰符。 有关详细信息，请参阅[Microsoft 专用的修饰符](../cpp/microsoft-specific-modifiers.md)。
 
-  - 可选的初始值设定项：
-  - **=** 运算符。
-  - **&** 运算符。
-  - 类的限定名。
-  - `::` 运算符。
-  - 适当类型的类的非静态成员的名称。
-  - 像往常一样，允许在单个声明中使用多个声明符（以及任何关联的初始值设定项）。
+   - 包含要指向的成员的类的限定名。
+
+   - __::__ 运算符。
+
+   - __\*__ 运算符。
+
+   - 可选**const**和/或**易失性**说明符。
+
+   - 命名指向成员的指针的标识符。
+
+1. 可选的初始值设定项：
+
+   - **=** 运算符。
+
+   - **&** 运算符。
+
+   - 类的限定名。
+
+   - __::__ 运算符。
+
+   - 适当类型的类的非静态成员的名称。
+
+像往常一样，允许在单个声明中使用多个声明符（以及任何关联的初始值设定项）。
 
 指向类的成员的指针与普通指针不同，因为它有该成员的类型的类型信息和该成员所属的类的类型信息。 常规指针只标识内存中的一个对象或只具有其地址。 指向类的某个成员的指针标识类的所有实例中的该成员。 以下示例声明类、`Window` 和一些指向成员数据的指针。
 

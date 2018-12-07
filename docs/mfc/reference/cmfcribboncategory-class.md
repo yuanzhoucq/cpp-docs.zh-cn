@@ -1,6 +1,6 @@
 ---
 title: CMFCRibbonCategory 类
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CMFCRibbonCategory
 - AFXRIBBONCATEGORY/CMFCRibbonCategory
@@ -130,12 +130,12 @@ helpviewer_keywords:
 - CMFCRibbonCategory [MFC], SetName
 - CMFCRibbonCategory [MFC], SetTabColor
 ms.assetid: 99ba25b6-d060-4fdd-bfab-3c46c22981bb
-ms.openlocfilehash: b510befa8993337ce62b5bd3b00ea3f48091b0e2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 96a3351656807fa841661ec9f082bb4255d5136a
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50657331"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176609"
 ---
 # <a name="cmfcribboncategory-class"></a>CMFCRibbonCategory 类
 
@@ -244,7 +244,7 @@ CMFCRibbonPanel* pPanel = pCategory->AddPanel (
 
 下图显示了 RibbonApp 示例应用程序中的主页类别的图。
 
-![CMFCRibbonCategory 图像](../../mfc/reference/media/cmfcribboncategory.png "cmfcribboncategory")
+![从 RibbonApp 示例应用程序的主类别](../../mfc/reference/media/cmfcribboncategory.png "RibbonApp 示例应用程序的主页类别")
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 

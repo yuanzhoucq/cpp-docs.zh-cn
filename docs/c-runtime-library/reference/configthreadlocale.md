@@ -26,12 +26,12 @@ helpviewer_keywords:
 - per-thread locale
 - thread locale
 ms.assetid: 10e4050e-b587-4f30-80bc-6c76b35fc770
-ms.openlocfilehash: 244ef9ce93e39bef23a9d5d6792a10ca25355f5a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 99e10a0330ba4880ea181e9fe3d56f3fb6bd6493
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648378"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326038"
 ---
 # <a name="configthreadlocale"></a>_configthreadlocale
 
@@ -56,11 +56,11 @@ int _configthreadlocale( int per_thread_locale_type );
 
 **_Configurethreadlocale**函数用于控制特定于线程的区域设置的使用。 使用其中一种*per_thread_locale_type*选项可以指定或确定每个线程区域设置状态：
 
-|||
+| 选项 | 描述 |
 |-|-|
-**_ENABLE_PER_THREAD_LOCALE**|使当前线程使用特定于线程的区域设置。 对后续调用**setlocale**此线程中影响的线程的区域设置。
-**_DISABLE_PER_THREAD_LOCALE**|使当前线程使用全局区域设置。 对后续调用**setlocale**此线程中会影响其他线程使用全局区域设置。
-**0**|检索此特定线程的当前设置。
+| **_ENABLE_PER_THREAD_LOCALE** | 使当前线程使用特定于线程的区域设置。 对后续调用**setlocale**此线程中影响的线程的区域设置。 |
+| **_DISABLE_PER_THREAD_LOCALE** | 使当前线程使用全局区域设置。 对后续调用**setlocale**此线程中会影响其他线程使用全局区域设置。 |
+| **0** | 检索此特定线程的当前设置。 |
 
 这些函数将影响的行为**setlocale**， **_tsetlocale**， **_wsetlocale**，以及 **_setmbcp**。 当每个线程区域设置是已禁用，任何后续调用**setlocale**或 **_wsetlocale**更改使用的全局区域设置的所有线程的区域设置。 启用每个线程区域设置后， **setlocale**或 **_wsetlocale**仅影响当前线程的区域设置。
 

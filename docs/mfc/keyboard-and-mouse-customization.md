@@ -1,16 +1,16 @@
 ---
 title: 键盘和鼠标自定义
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - customizations [MFC], keyboard and mouse (MFC Extensions)
 - keyboard and mouse customizations (MFC Extensions)
 ms.assetid: 1f789f1b-5f2e-4b11-b974-e3e2a2e49d82
-ms.openlocfilehash: 8bb685974ed4020611ffe275ba504951d132afac
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0ccbe83185c48439273024a97c881f1c32a2ddc7
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50487381"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175673"
 ---
 # <a name="keyboard-and-mouse-customization"></a>键盘和鼠标自定义
 
@@ -22,7 +22,8 @@ MFC 允许应用程序用户自定义其处理键盘和鼠标输入的方式。 
 
 如下图所示**键盘**选项卡**自定义**对话框。
 
-![自定义对话框中的键盘选项卡](../mfc/media/mfcnextkeyboardtab.png "mfcnextkeyboardtab")键盘自定义选项卡
+![自定义对话框中的键盘选项卡](../mfc/media/mfcnextkeyboardtab.png "自定义对话框中的键盘选项卡") <br/>
+键盘自定义选项卡
 
 用户将与键盘选项卡交互以为命令分配一个或多个键盘快捷键。 可用命令将列在选项卡的左侧。用户可从菜单中选择任何可用命令。 仅菜单命令与键盘快捷键相关。 用户输入新的快捷方式之后,**分配**按钮将变为启用状态。 当用户单击此按钮时，应用程序会将选定命令与该快捷键关联。
 
@@ -36,7 +37,8 @@ MFC 允许应用程序用户自定义其处理键盘和鼠标输入的方式。 
 
 如下图所示**鼠标**选项卡**自定义**对话框。
 
-![自定义对话框中的鼠标选项卡](../mfc/media/mfcnextmousetab.png "mfcnextmousetab")鼠标自定义选项卡
+![自定义对话框中的鼠标选项卡](../mfc/media/mfcnextmousetab.png "自定义对话框中的鼠标选项卡") <br/>
+鼠标自定义选项
 
 用户将与此选项卡交互，以为鼠标双击操作分配菜单命令。 用户将从窗口左侧选择视图，然后使用右侧的控件将命令与双击操作关联。 之后用户可单击**关闭**，每当用户双击视图中的任意位置时，应用程序执行关联的命令。
 

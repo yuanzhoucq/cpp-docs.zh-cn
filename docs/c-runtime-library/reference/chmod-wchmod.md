@@ -29,12 +29,12 @@ helpviewer_keywords:
 - files [C++], changing permissions
 - _wchmod function
 ms.assetid: 92f7cb86-b3b0-4232-a599-b8c04a2f2c19
-ms.openlocfilehash: 7f3133aac1548be5cb497fe32ae4f9f1c0e238d9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 278ee1e6dda9e153b55676ce5c0ca389f383efd1
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50595125"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51518406"
 ---
 # <a name="chmod-wchmod"></a>_chmod、_wchmod
 
@@ -63,13 +63,13 @@ int _wchmod( const wchar_t *filename, int pmode );
 
 **_Chmod**函数将更改指定的文件的权限设置*filename*。 权限设置控制对文件的读取和写入访问权限。 整数表达式*pmode*包含一个或两个在 SYS\Stat.h 中定义的以下清单常量。
 
-|*pmode*|含义|
+| *pmode* | 含义 |
 |-|-|
-**_S_IREAD**|只允许读取。
-**_S_IWRITE**|允许写入。 （实际上，允许读取和写入。）
-**_S_IREAD** &AMP;#124; **_S_IWRITE**|允许读取和写入。
+| **\_S\_IREAD** | 只允许读取。 |
+| **\_S\_IWRITE** | 允许写入。 （实际上，允许读取和写入。） |
+| **\_S\_IREAD** &AMP;#124;  **\_S\_IWRITE** | 允许读取和写入。 |
 
-当给定这两个常量时，它们联接与按位或运算符 (**|**)。 如果未授予写入权限，则该文件为只读。 注意，所有文件始终具有可读性；不能提供只写权限。 因此，模式 **_S_IWRITE**并 **_S_IREAD** | **_S_IWRITE**是等效的。
+当给定这两个常量时，它们联接与按位或运算符 (**\|**)。 如果未授予写入权限，则该文件为只读。 注意，所有文件始终具有可读性；不能提供只写权限。 因此，模式 **_S_IWRITE**并 **_S_IREAD** \| **_S_IWRITE**是等效的。
 
 **_wchmod**是宽字符版本 **_chmod**; *filename*参数 **_wchmod**是宽字符字符串。 **_wchmod**并 **_chmod**行为相同。
 
@@ -157,7 +157,6 @@ int main( void )
 ```Output
 
 A line of text.
-
 ```
 
 ```Output

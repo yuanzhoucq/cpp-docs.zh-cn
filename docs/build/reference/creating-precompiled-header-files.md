@@ -1,6 +1,6 @@
 ---
 title: 创建预编译标头文件
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - pch
 helpviewer_keywords:
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - cl.exe compiler, precompiling code
 - .pch files, creating
 ms.assetid: e2cdb404-a517-4189-9771-c869c660cb1b
-ms.openlocfilehash: 3014b2da9f9d9e03e9ea791c9a97ff59f842e8ae
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b570b76328ee9824610aac495d97cede19189cf9
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50482610"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176427"
 ---
 # <a name="creating-precompiled-header-files"></a>创建预编译标头文件
 
@@ -42,8 +42,6 @@ Microsoft C 和 C++ 编译器提供预编译任何 C 或 C++ 代码（包括内�
 
 预编译标头与相关的编译器选项的参考信息，请参阅[/Y （预编译标头）](../../build/reference/y-precompiled-headers.md)。
 
-<a name="when-to-precompile-source-code"></a>
-
 ## <a name="when-to-precompile-source-code"></a>何时预编译源代码
 
 预编译的代码可在开发周期中减少编译时间，尤其是：
@@ -57,11 +55,9 @@ Microsoft C 和 C++ 编译器提供预编译任何 C 或 C++ 代码（包括内�
 您可以预编译 C 和 c + + 程序。 在 c + + 编程，它是常见的做法单独的头文件的类接口信息。 更高版本可以使用类的程序中包含这些标头文件。 通过预编译这些标头，可以减少程序编译所花费的时间。
 
 > [!NOTE]
->  虽然每个源代码文件，可以使用一个预编译标头 (.pch) 文件，可以使用在项目中的多个.pch 文件。
+> 虽然每个源代码文件，可以使用一个预编译标头 (.pch) 文件，可以使用在项目中的多个.pch 文件。
 
-<a name="two-choices-for-precompiling-code"></a>
-
-# <a name="two-choices-for-precompiling-code"></a>预编译代码的两种方法
+## <a name="two-choices-for-precompiling-code"></a>预编译代码的两种方法
 
 使用 Visual c + +，您可以预编译任何 C 或 c + + 代码;并不局限于预编译仅标头文件。
 
@@ -73,13 +69,9 @@ Microsoft C 和 C++ 编译器提供预编译任何 C 或 C++ 代码（包括内�
 
 编译器选项引用主题 **/Yu**并 **/Yc**讨论如何访问此功能的开发环境。
 
-<a name="precompiled-header-consistency-rules"></a>
-
 ## <a name="precompiled-header-consistency-rules"></a>预编译标头一致性规则
 
 由于 PCH 文件包含有关计算机环境的信息以及有关程序的内存地址信息，应仅使用创建它时所在的计算机上的 PCH 文件。
-
-<a name="consistency-rules-for-per-file-use-of-precompiled-headers"></a>
 
 ## <a name="consistency-rules-for-per-file-use-of-precompiled-headers"></a>按文件使用预编译标头的一致性规则
 
@@ -134,8 +126,6 @@ PCH 文件创建的过程通常处理的杂注会影响同随后使用 PCH 文�
 |`data_seg`|`intrinsic`|`warning`|
 |`function`|`optimize`||
 
-<a name="consistency-rules-for-yc-and-yu"></a>
-
 ## <a name="consistency-rules-for-yc-and-yu"></a>/Yc 和 /Yu 的一致性规则
 
 使用 /Yc 或 /Yu 创建预编译标头使用时，编译器将创建 PCH 文件时存在一个当前编译环境进行比较。 请确保指定与上一个 （使用一致的编译器选项、 杂注，等等） 的当前编译一致的环境。 如果编译器检测到不一致，它会发出警告，并标识不一致，在可能的情况。 此类警告不一定表示存在问题的 PCH 文件;它们只是警告您可能出现的冲突。 以下部分介绍预编译标头的一致性要求。
@@ -155,15 +145,11 @@ PCH 文件创建的过程通常处理的杂注会影响同随后使用 PCH 文�
 > [!NOTE]
 >  预编译标头功能用于仅在 C 和 c + + 源代码文件中。
 
-<a name="using-precompiled-headers-in-a-project"></a>
-
 ## <a name="using-precompiled-headers-in-a-project"></a>在项目中使用预编译标头
 
 前面几节将概括介绍预编译标头： /Yc 和 /Yu，/Fp 选项，并[hdrstop](../../preprocessor/hdrstop.md)杂注。 本部分介绍的项目; 使用手动预编译标头选项的方法它结尾的示例生成文件和它所管理的代码。
 
 在项目中使用手动预编译标头选项的另一个方法，研究 Visual c + + 的默认安装过程中创建 MFC\SRC 目录中的生成文件之一。 这些生成文件采用的本部分中介绍的一个类似方法，但更多地利用 Microsoft 程序维护实用工具 (NMAKE) 宏并提供更好地控制生成过程。
-
-<a name="pch-files-in-the-build-process"></a>
 
 ## <a name="pch-files-in-the-build-process"></a>生成过程中的 PCH 文件
 
@@ -171,8 +157,8 @@ PCH 文件创建的过程通常处理的杂注会影响同随后使用 PCH 文�
 
 图使用三个关系图的设备来显示生成过程的流。 名为矩形表示，每个文件或宏;三个宏表示一个或多个文件。 阴影的区域表示每个编译或链接的操作。 箭头显示编译或链接过程期间合并的文件和宏。
 
-![使用预编译的头文件的生成](../../build/reference/media/vc30ow1.gif "使用预编译标头文件的生成文件结构")
-##### <a name="structure-of-a-makefile-that-uses-a-precompiled-header-file"></a>使用预编译标头文件的生成文件结构
+![使用预编译标头文件的生成文件结构](../../build/reference/media/vc30ow1.gif "使用预编译标头文件的生成文件结构") <br/>
+使用预编译标头文件的生成文件结构
 
 从关系图的顶部，STABLEHDRS 和边界是 NMAKE 宏在其中列出不太可能需要重新编译的文件。 这些文件编译的命令字符串
 
@@ -187,8 +173,6 @@ APPLIB.obj 继续向下移动关系图，表示在最终应用程序中使用的
 MYAPP.obj 代表最终应用程序。 创建从 MYAPP.cpp，文件列入 UNSTABLEHDRS 宏和预编译预编译标头中的代码。
 
 最后，可执行文件 (MYAPP。通过链接 OBJ 宏 （APPLIB.obj 和 MYAPP.obj） 中列出的文件创建 EXE)。
-
-<a name="sample-makefile-for-pch"></a>
 
 ## <a name="sample-makefile-for-pch"></a>PCH 的示例生成文件
 
@@ -254,8 +238,6 @@ NMAKE DEBUG=0
 ```
 
 生成文件的详细信息，请参阅[NMAKE 参考](../../build/nmake-reference.md)。 另请参阅[编译器选项](../../build/reference/compiler-options.md)并[链接器选项](../../build/reference/linker-options.md)。
-
-<a name="example-code-for-pch"></a>
 
 ## <a name="example-code-for-pch"></a>PCH 的示例代码
 

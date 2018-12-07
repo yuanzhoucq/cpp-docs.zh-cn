@@ -88,12 +88,12 @@ helpviewer_keywords:
 - stdext::hash_map::upper_bound
 - stdext::hash_map::value_comp
 ms.assetid: 40879dfc-51ba-4a59-9f9e-26208de568a8
-ms.openlocfilehash: de000584ad0cb797886ac11d367940212aaa50e0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: da046a467333fba9aa106b97e21cf583c8cef75d
+ms.sourcegitcommit: d441305fb19131afbd7fc259d8cda63ea26f2343
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50495285"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51678556"
 ---
 # <a name="hashmap-class"></a>hash_map 类
 
@@ -648,7 +648,7 @@ size_type count(const Key& key) const;
 
 成员函数返回以下范围内的元素 *x* 的数量
 
-[ `lower_bound` (_ *Key* ), `upper_bound` (\_ *Key* ) )
+\[ lower_bound (*键*)、 upper_bound (*密钥*))
 
 对于唯一的关联容器 hash_map，数量为 0 或 1。
 
@@ -2092,7 +2092,7 @@ int main( )
       cout << " " << pIter -> second;
    cout << "." << endl;
 
-   // opperator[] will also insert by moving a key
+   // operator[] will also insert by moving a key
    hash_map <string, int> hm2;
    string str("a");
    hm2[move(str)] = 1;
@@ -2763,7 +2763,7 @@ int main( )
    hash_map <int, int> :: iterator pIter;
 
    // value_type can be used to pass the correct type
-   // explicitely to avoid implicit type conversion
+   // explicitly to avoid implicit type conversion
    hm1.insert ( hash_map <int, int> :: value_type ( 1, 10 ) );
 
    // Compare other ways to insert objects into a hash_map

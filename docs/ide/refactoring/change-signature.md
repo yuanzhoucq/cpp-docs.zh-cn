@@ -2,14 +2,15 @@
 title: 更改签名
 ms.date: 11/16/2016
 ms.assetid: 8daaa060-7305-4035-99d2-8b460b4f4454
-ms.openlocfilehash: 776f777eb64128e9914e6d087551930593a490fc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ec42fd00ecf48fb700042f02543e3fe194fe6975
+ms.sourcegitcommit: 7c05ebd2c75e9326fe774e95cbce7f150ba2eeba
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50584032"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "52281943"
 ---
 # <a name="change-signature"></a>更改签名
+
 功能：可让你修改函数的参数。
 
 时间：要重新排序、添加、删除或修改当前用于多个位置的函数参数时。

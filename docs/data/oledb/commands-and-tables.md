@@ -1,6 +1,6 @@
 ---
 title: 命令和表
-ms.date: 10/22/2018
+ms.date: 11/19/2018
 helpviewer_keywords:
 - OLE DB consumer templates, table support
 - CCommand class, OLE DB consumer templates
@@ -11,18 +11,18 @@ helpviewer_keywords:
 - tables [C++], OLE DB Consumer Templates
 - OLE DB consumer templates, command support
 ms.assetid: 4bd3787b-6d26-40a9-be0c-083080537c12
-ms.openlocfilehash: 0baa388fc1667769892c841a4cc5d68a1b9d0255
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 94581339353866d78faf7e20335c80250fb6027b
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543476"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175309"
 ---
 # <a name="commands-and-tables"></a>命令和表
 
 命令和表允许你访问行集;也就是说，打开行集、 执行命令，并将列绑定。 [CCommand](../../data/oledb/ccommand-class.md)并[CTable](../../data/oledb/ctable-class.md)类实例化的命令和表的对象，分别。 这些类派生自[CAccessorRowset](../../data/oledb/caccessorrowset-class.md)下图中所示。
 
-![CCommand 和 CTable](../../data/oledb/media/vccommandstables.gif "vccommandstables")<br/>
+![CCommand 和 CTable](../../data/oledb/media/vccommandstables.gif "CCommand 和 CTable")<br/>
 命令和表类
 
 上表中`TAccessor`可以中列出的任何取值函数类型[访问器类型](../../data/oledb/accessors-and-rowsets.md)。 `TRowset` 可以将任何行集类型列入[行集类型](../../data/oledb/accessors-and-rowsets.md)。 `TMultiple` 指定结果类型 （单个或多个结果集）。

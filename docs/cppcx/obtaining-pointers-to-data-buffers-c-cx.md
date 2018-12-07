@@ -1,13 +1,13 @@
 ---
 title: 获取数据缓冲区的指针 (C++/CX)
-ms.date: 12/30/2016
+ms.date: 11/19/2018
 ms.assetid: db4f9370-dd95-4896-b5b8-4b202284f579
-ms.openlocfilehash: 6fc136af4098659779b4b4ff7fb8878e1cea6590
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2cd99019d75272f4362518de78b729cd7a2549f3
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50514265"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175101"
 ---
 # <a name="obtaining-pointers-to-data-buffers-ccx"></a>获取数据缓冲区的指针 (C++/CX)
 
@@ -15,7 +15,7 @@ ms.locfileid: "50514265"
 
 下图显示了一个 XAML 图像元素，其源是一个 [Windows::UI::Xaml::Media::Imaging WriteableBitmap](https://msdn.microsoft.com/%20library/windows/apps/windows.ui.xaml.media.imaging.writeablebitmap.aspx)。 以任何语言编写的客户端应用程序均可将对 `WriteableBitmap` 的引用传递到 C++ 代码，随后 C++ 可使用该引用获取基础缓冲区。 在通用 Windows 平台应用中用 c + + 编写的可以在以下示例中的源代码中直接使用函数，而无需在 Windows 运行时组件打包。
 
-![C&#43; &#43;直接访问像素数据的代码](../cppcx/media/ibufferbyteaccessdiagram.png "IBufferByteAccessDiagram")
+![C&#43; &#43;直接访问像素数据的代码](../cppcx/media/ibufferbyteaccessdiagram.png "C&#43; &#43;直接访问像素数据的代码")
 
 ## <a name="getpointertopixeldata"></a>GetPointerToPixelData
 

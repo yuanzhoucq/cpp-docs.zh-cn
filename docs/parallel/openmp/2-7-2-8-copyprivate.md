@@ -2,12 +2,12 @@
 title: 2.7.2.8 copyprivate
 ms.date: 11/04/2016
 ms.assetid: c382348c-c785-45b2-8ee6-a66b76b97f3e
-ms.openlocfilehash: d4df1b4216014d3cd15be1480d2f83334fddb72d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f46b8ae1d42083c770bbc84c46d13b02d5227498
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50622906"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51521851"
 ---
 # <a name="2728-copyprivate"></a>2.7.2.8 copyprivate
 
@@ -20,7 +20,6 @@ ms.locfileid: "50622906"
 copyprivate(
 variable-list
 )
-
 ```
 
 效果**copyprivate**其变量列表中的变量上的子句与关联的结构化块执行后会发生**单个**构造，并在任何中的线程前团队已离开构造结束时的障碍。 然后，在团队中每个变量中的所有其他线程*变量列表*，该变量将成为使用相应的值定义 （像是通过赋值） 中执行构造的线程的变量的结构化块。

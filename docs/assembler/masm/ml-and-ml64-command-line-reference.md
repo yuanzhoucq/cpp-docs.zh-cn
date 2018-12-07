@@ -54,12 +54,12 @@ helpviewer_keywords:
 - command line, reference [ML]
 - /Ta MASM compiler option
 ms.assetid: 712623c6-f77e-47ea-a945-089e57c50b40
-ms.openlocfilehash: 64d56ea5eb29162e65782998e91fc1ff70cbf73b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a452bab03e31436ee5dde476117bce8b73c7571f
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50430220"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51331251"
 ---
 # <a name="ml-and-ml64-command-line-reference"></a>ML 和 ML64 命令行参考
 
@@ -69,9 +69,9 @@ Ml64.exe 的详细信息，请参阅[MASM 的 x64 (ml64.exe)](../../assembler/ma
 
 ## <a name="syntax"></a>语法
 
-> 机器学习 [[*选项*]] *filename* [[[[*选项*]]*文件名*]]
-
-> ML64 [[*选项*]] *filename* [[[[*选项*]]*文件名*]]...[[/link *linkoptions*]]
+> 机器学习\[*选项*] *filename* \[ \[*选项*]*文件名*]
+>
+> ML64 \[*选项*] *filename* \[ \[*选项*]*文件名*]...\[/link *linkoptions*]
 
 ### <a name="parameters"></a>参数
 

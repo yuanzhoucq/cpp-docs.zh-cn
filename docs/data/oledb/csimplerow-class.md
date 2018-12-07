@@ -35,12 +35,12 @@ helpviewer_keywords:
 - m_dwRef
 - m_iRowset
 ms.assetid: 06d9621d-60cc-4508-8b0c-528d1b1a809b
-ms.openlocfilehash: 478e988b350a4e52935838465004cf77f5c1e177
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dba86b310dcd9b89026d95732f9ca542e6995146
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539475"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556629"
 ---
 # <a name="csimplerow-class"></a>CSimpleRow 类
 
@@ -105,7 +105,7 @@ HRESULT Compare(CSimpleRow* pRow);
 
 ### <a name="return-value"></a>返回值
 
-HRESULT 值，通常为 S_OK，指示两个行是相同的行实例，或 S_FALSE，指示两个行都不同。 请参阅[IRowsetIdentity::IsSameRow](/previous-versions/windows/desktop/ms719629)中*OLE DB 程序员参考*有关其他可能的返回值。
+HRESULT 值，通常为 S_OK，指示两个行是相同的行实例，或 S_FALSE，指示两个行都不同。 请参阅[IRowsetIdentity::IsSameRow](https://docs.microsoft.com/previous-versions/windows/desktop/ms719629(v=vs.85))中*OLE DB 程序员参考*有关其他可能的返回值。
 
 ## <a name="csimplerow"></a> Csimplerow:: Csimplerow
 

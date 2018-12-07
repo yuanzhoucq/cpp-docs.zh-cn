@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - composite controls, global functions
 ms.assetid: 536884cd-e863-4c7a-ab0a-604dc60a0bbe
-ms.openlocfilehash: d86978c6bf8aba87828cdda91c3e849a2f755a90
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3b4abc1afc99a00d83c25574df06ebfb27141c65
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525263"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694174"
 ---
 # <a name="composite-control-global-functions"></a>复合控件全局函数
 
@@ -95,7 +95,7 @@ CONTROL    "{04FE35E9-ADBC-4f1d-83FE-8FA4D1F71C7F}", IDC_TEST,
     "AtlAxWin80", WS_GROUP | WS_TABSTOP, 0, 0, 100, 100
 ```
 
-编辑资源脚本的详细信息，请参阅[如何： 以文本格式打开资源脚本文件](../../windows/how-to-open-a-resource-script-file-in-text-format.md)。 控制资源定义语句的详细信息，请参阅[常见控制参数](/windows/desktop/menurc/common-control-parameters)在 Windows SDK *: SDK Tools*。
+编辑资源脚本的详细信息，请参阅[如何： 以文本格式打开资源脚本文件](../../windows/how-to-open-a-resource-script-file-in-text-format.md)。 控制资源定义语句的详细信息，请参阅[常见控制参数](/windows/desktop/menurc/common-control-parameters)下 Windows SDK: SDK Tools。
 
 有关常规中的对话框的详细信息，请参阅[DialogBox](/windows/desktop/api/winuser/nf-winuser-dialogboxa)并[CreateDialogParam](/windows/desktop/api/winuser/nf-winuser-createdialogparama) Windows SDK 中。
 
@@ -160,7 +160,7 @@ ATLAPI AtlAxCreateControl(
 
 - 例如"{8E27C92B-1264-101C-8A2F-040224009C02}"CLSID
 
-- URL，例如"http://www.microsoft.com"
+- URL，例如"<http://www.microsoft.com>"
 
 - 对等活动文档的引用"file://\\\Documents\MyDoc.doc"
 
@@ -212,7 +212,7 @@ ATLAPI AtlAxCreateControlEx(
 
 - 例如"{8E27C92B-1264-101C-8A2F-040224009C02}"CLSID
 
-- URL，例如"http://www.microsoft.com"
+- URL，例如"<http://www.microsoft.com>"
 
 - 对等活动文档的引用"file://\\\Documents\MyDoc.doc"
 
@@ -271,7 +271,7 @@ ATLAPI AtlAxCreateControlLic(
 
 - 例如"{8E27C92B-1264-101C-8A2F-040224009C02}"CLSID
 
-- URL，例如"http://www.microsoft.com"
+- URL，例如"<http://www.microsoft.com>"
 
 - 对等活动文档的引用"file://\\\Documents\MyDoc.doc"
 
@@ -325,7 +325,7 @@ ATLAPI AtlAxCreateControlLicEx(
 
 - 例如"{8E27C92B-1264-101C-8A2F-040224009C02}"CLSID
 
-- URL，例如"http://www.microsoft.com"
+- URL，例如"<http://www.microsoft.com>"
 
 - 对等活动文档的引用"file://\\\Documents\MyDoc.doc"
 
@@ -490,7 +490,7 @@ inline BOOL AtlAxWinTerm();
 
 ### <a name="remarks"></a>备注
 
-此函数将只需调用[UnregisterClass](https://msdn.microsoft.com/library/windows/desktop/ms644899) Windows SDK 中所述。
+此函数将只需调用[UnregisterClass](/windows/desktop/api/winuser/nf-winuser-unregisterclassa) Windows SDK 中所述。
 
 调用此函数已被销毁所有现有主机窗口，如果您调用之后进行清理[AtlAxWinInit](#atlaxwininit)和不再需要创建宿主窗口。 如果不调用此函数，窗口类将自动取消注册在进程终止时。
 

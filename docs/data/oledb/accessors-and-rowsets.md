@@ -1,6 +1,6 @@
 ---
 title: 访问器和行集合
-ms.date: 10/22/2018
+ms.date: 11/19/2018
 helpviewer_keywords:
 - accessors [C++]
 - OLE DB consumer templates, rowset support
@@ -17,12 +17,12 @@ helpviewer_keywords:
 - accessors [C++], rowsets
 - rowsets [C++], supported types
 ms.assetid: edc9c8b3-1a2d-4c2d-869f-7e058c631042
-ms.openlocfilehash: 74a839d36f96b115d1f4e0c35532bd76d998a4b5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d29c409f2ed410d9f697419e9a98b675eee7a69d
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50651251"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175702"
 ---
 # <a name="accessors-and-rowsets"></a>访问器和行集合
 
@@ -34,7 +34,7 @@ ms.locfileid: "50651251"
 
 下图显示了访问器类型。
 
-![访问器类型](../../data/oledb/media/vcaccessortypes.gif "vcaccessortypes")<br/>
+![访问器类型](../../data/oledb/media/vcaccessortypes.gif "访问器类型")<br/>
 访问器类
 
 - [CAccessor](../../data/oledb/caccessor-class.md)在设计时知道数据库源的结构时使用此访问器。 `CAccessor` 以静态方式将数据库记录，其中包含缓冲区，绑定到数据源。
@@ -63,7 +63,7 @@ OLE DB 模板支持三种类型的行集 （请参阅上图中）： 单一行�
 
 下图显示了行集类型。
 
-![RowsetType 图](../../data/oledb/media/vcrowsettypes.gif "vcrowsettypes")<br/>
+![RowsetType 图](../../data/oledb/media/vcrowsettypes.gif "RowsetType 图")<br/>
 行集类
 
 [架构行集](../../data/oledb/obtaining-metadata-with-schema-rowsets.md)不访问数据中的数据存储，但改为访问有关数据存储，称为元数据的信息。 在其中的数据库结构不在编译时已知，并且必须在运行时获取的情况下通常用于架构行集。

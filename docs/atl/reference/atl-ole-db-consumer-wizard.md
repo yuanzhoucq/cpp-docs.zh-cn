@@ -8,12 +8,12 @@ helpviewer_keywords:
 - connection strings [C++], OLE DB consumers
 - ATL OLE DB Consumer Wizard
 ms.assetid: dcb68ed1-2224-422f-9f7b-108a74864204
-ms.openlocfilehash: 835b3e6246741c3859f51e017686531f450db194
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 59ad635f62ab7a20a31de7255ec4522136e102ec
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50499562"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524126"
 ---
 # <a name="atl-ole-db-consumer-wizard"></a>ATL OLE DB 使用者向导
 
@@ -84,13 +84,13 @@ ms.locfileid: "50499562"
 
       **其他：** 中**连接超时**，指定发生超时之前允许的空闲时间的秒数。 在中**访问权限**，在数据连接上指定的访问权限。
 
-       有关高级的初始化属性的详细信息，请参阅每个特定的 OLE DB 访问接口提供的文档。
+      有关高级的初始化属性的详细信息，请参阅每个特定的 OLE DB 访问接口提供的文档。
 
    - **所有**选项卡
 
       此选项卡显示的数据源和具有指定的连接的初始化属性的摘要。 你可以编辑这些值。
 
-   单击**确定**来完成。 **选择数据库对象**对话框随即出现。 从该对话框中，选择表、 视图或使用者将使用的存储的过程。
+      单击**确定**来完成。 **选择数据库对象**对话框随即出现。 从该对话框中，选择表、 视图或使用者将使用的存储的过程。
 
 - **类**
 

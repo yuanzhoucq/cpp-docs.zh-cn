@@ -1,8 +1,6 @@
 ---
-title: '&lt;algorithm&gt; 函数 | Microsoft 文档'
-ms.custom: ''
+title: '&lt;algorithm&gt; 函数'
 ms.date: 11/04/2016
-ms.topic: reference
 f1_keywords:
 - algorithm/std::adjacent_find
 - algorithm/std::all_of
@@ -102,11 +100,7 @@ f1_keywords:
 - algorithm/std::count_if
 - algorithm/std::partition_copy
 - algorithm/std::swap
-dev_langs:
-- C++
 ms.assetid: c10b0c65-410c-4c83-abf8-8b7f61bba8d0
-author: corob-msft
-ms.author: corob
 helpviewer_keywords:
 - std::adjacent_find [C++]
 - std::all_of [C++]
@@ -206,14 +200,12 @@ helpviewer_keywords:
 - std::count_if [C++]
 - std::partition_copy [C++]
 - std::swap [C++]
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a21dc4e0687ece8583b2291b71ed55980127805c
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
-ms.translationtype: HT
+ms.openlocfilehash: 5fdb5a89bc475cf2d6a358768b84b8542da5e0e8
+ms.sourcegitcommit: d94714522428834a02ede6e6884572f0f6ca9824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50082744"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51597559"
 ---
 # <a name="ltalgorithmgt-functions"></a>&lt;algorithm&gt; 函数
 
@@ -430,7 +422,6 @@ bool binary_search(
     ForwardIterator last,
     const Type& value,
     BinaryPredicate comp);
-
 ```
 
 ### <a name="parameters"></a>参数
@@ -1020,27 +1011,26 @@ using namespace std;
 
 int main()
 {
-    vector<int> v1 { 0, 5, 10, 15, 20, 25 };
-    vector<int> v2 { 0, 5, 10, 15, 20, 25 };
-    vector<int> v3 { 0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50 };
+    vector<int> v1 { 0, 5, 10, 15, 20, 25 };
+    vector<int> v2 { 0, 5, 10, 15, 20, 25 };
+    vector<int> v3 { 0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50 };
 
-    // Using range-and-a-half equal:
-    bool b = equal(v1.begin(), v1.end(), v2.begin());
-    cout << "v1 and v2 are equal: "
-       << b << endl; // true, as expected
+    // Using range-and-a-half equal:
+    bool b = equal(v1.begin(), v1.end(), v2.begin());
+    cout << "v1 and v2 are equal: "
+       << b << endl; // true, as expected
 
-    b = equal(v1.begin(), v1.end(), v3.begin());
-    cout << "v1 and v3 are equal: "
-       << b << endl; // true, surprisingly
+    b = equal(v1.begin(), v1.end(), v3.begin());
+    cout << "v1 and v3 are equal: "
+       << b << endl; // true, surprisingly
 
-    // Using dual-range equal:
-    b = equal(v1.begin(), v1.end(), v3.begin(), v3.end());
-    cout << "v1 and v3 are equal with dual-range overload: "
-       << b << endl; // false
+    // Using dual-range equal:
+    b = equal(v1.begin(), v1.end(), v3.begin(), v3.end());
+    cout << "v1 and v3 are equal with dual-range overload: "
+       << b << endl; // false
 
-    return 0;
+    return 0;
 }
-
 ```
 
 ## <a name="equal_range"></a>  equal_range
@@ -1207,7 +1197,6 @@ int main()
     equal_range_demo<string>( v2, "fred" );
     equal_range_demo<string>( v2, "fred", shorter_than, "shorter_than" );
 }
-
 ```
 
 ## <a name="fill"></a>  fill
@@ -1355,7 +1344,6 @@ int main()
         cout << w << " ";
     cout << ")" << endl;
 }
-
 ```
 
 ## <a name="find"></a>  find
@@ -1796,7 +1784,6 @@ int main()
     find_if_print_result(v.begin(), v.end(), // lambda
         [](int i){ return ((i % 2) == 0); }, "even integer");
 }
-
 ```
 
 ## <a name="find_if_not"></a>  find_if_not
@@ -2126,7 +2113,6 @@ int main()
     generate_n(dq.begin(), elemcount, [&](){ return dist(engine); });
     print("deque dq is: ", dq);
 }
-
 ```
 
 ## <a name="includes"></a>  includes
@@ -2373,7 +2359,7 @@ void inplace_merge(
 
 必须按照 `inplace_merge` 算法对合并范围排序时要使用的相同顺序对已排序连续范围分别进行排列，作为应用该算法的前置条件。 该操作保持不变，因为每个范围内元素的相对顺序均已保留。 当两个源范围中有相等的元素时，在合并范围中，第一个范围中的元素优先于第二个范围中的元素。
 
-因为该算法会向临时缓冲区分配内存，所以复杂性取决于可用内存。 如果足够的内存可用，最好的情况是线性的 (* 姓氏-名字 *)-1 次比较; 如果没有辅助内存可用，最坏的情况是*N*日志 *(N)*，其中*N* = (* 姓氏-名字*)。
+因为该算法会向临时缓冲区分配内存，所以复杂性取决于可用内存。 如果有足够的内存可用，最好的情况是线性的 (*最后一个* - *第一个*)-1 次比较; 如果没有辅助内存可用，最坏的情况是*N*日志 (*N*)，其中*N* = (*最后一个* - *第一个*)。
 
 ### <a name="example"></a>示例
 
@@ -2713,7 +2699,6 @@ int main()
 
     return 0;
 }
-
 ```
 
 ## <a name="is_sorted"></a>  is_sorted
@@ -2796,7 +2781,6 @@ ForwardIterator is_sorted_until(
 ```cpp
 template<class ForwardIterator1, class ForwardIterator2>
 void iter_swap( ForwardIterator1 left, ForwardIterator2 right );
-
 ```
 
 ### <a name="parameters"></a>参数
@@ -2965,7 +2949,6 @@ bool lexicographical_compare(
     InputIterator2  first2,
     InputIterator2 Last2,
     BinaryPredicate  comp  );
-
 ```
 
 ### <a name="parameters"></a>参数
@@ -3111,7 +3094,6 @@ ForwardIterator lower_bound(
     ForwardIterator last,
     const Type& value,
     BinaryPredicate comp );
-
 ```
 
 ### <a name="parameters"></a>参数
@@ -3232,7 +3214,6 @@ int main()
     cout << "The lower_bound in v3 for the element with a value of 3 is: "
         << *Result << "." << endl;
 }
-
 ```
 
 ## <a name="make_heap"></a>  make_heap
@@ -3250,7 +3231,6 @@ void make_heap(
     RandomAccessIterator first,
     RandomAccessIterator last,
     BinaryPredicate comp );
-
 ```
 
 ### <a name="parameters"></a>参数
@@ -3541,7 +3521,6 @@ constexpr ForwardIterator max_element(ForwardIterator first, ForwardIterator las
 
 template<class ForwardIterator, class BinaryPredicate>
 constexpr ForwardIterator max_element(ForwardIterator first, ForwardIterator last, BinaryPredicate comp );
-
 ```
 
 ### <a name="parameters"></a>参数
@@ -3686,7 +3665,6 @@ OutputIterator merge(
     InputIterator2 last2,
     OutputIterator result,
     BinaryPredicate comp );
-
 ```
 
 ### <a name="parameters"></a>参数
@@ -3725,7 +3703,7 @@ OutputIterator merge(
 
 输入迭代器的值类型需小于比较元素才能进行排序；因此，给定两个元素，可以确定这两个元素相等（即两者均不小于对方）或其中一个小于另一个。 这将导致在非等效元素之间进行排序。 当两个源范围中有相等的元素时，在目标范围中，第一个范围中的元素优先于第二个源范围中的元素。
 
-算法的复杂性是线性的最多 (* last1-first1 *)-(* last2-first2*)-1 比较。
+算法的复杂性是线性的最多 (*last1* - *first1*)-(*last2* - *first2*)-1 比较。
 
 [list 类](../standard-library/list-class.md)提供成员函数“merge”来合并两个列表的元素。
 
@@ -3860,7 +3838,6 @@ template<class Type, class Pr>
 constexpr Type min(
     initializer_list<Type>,
     BinaryPredicate comp);
-
 ```
 
 ### <a name="parameters"></a>参数
@@ -4065,7 +4042,6 @@ constexpr ForwardIterator min_element(
     ForwardIterator first,
     ForwardIterator last,
     BinaryPredicate comp);
-
 ```
 
 ### <a name="parameters"></a>参数
@@ -4267,7 +4243,6 @@ template<class Type, class BinaryPredicate>
 constexpr pair<Type&, Type&> minmax(
     initializer_list<Type>,
     BinaryPredicate comp);
-
 ```
 
 ### <a name="parameters"></a>参数
@@ -4458,7 +4433,6 @@ C++14 vec_3 v. modified vec_4 with pred: mismatch. Left iterator at 60 right ite
 C++14: vec_1 and list_1 are a mismatch: false
 Press a key
 */
-
 ```
 
 ## <a name="alg_move"></a>  &lt;alg&gt; move
@@ -4498,7 +4472,6 @@ template<class BidirectionalIterator1, class BidirectionalIterator2>
        BidirectionalIterator1 first,
        BidirectionalIterator1 last,
        BidirectionalIterator2 destEnd);
-
 ```
 
 ### <a name="parameters"></a>参数
@@ -4528,7 +4501,6 @@ bool next_permutation(BidirectionalIterator first, BidirectionalIterator last);
 
 template<class BidirectionalIterator, class BinaryPredicate>
 bool next_permutation(BidirectionalIterator first, BidirectionalIterator last, BinaryPredicate comp);
-
 ```
 
 ### <a name="parameters"></a>参数
@@ -4703,7 +4675,6 @@ void nth_element( RandomAccessIterator first, RandomAccessIterator _Nth, RandomA
 
 template<class RandomAccessIterator, class BinaryPredicate>
 void nth_element( RandomAccessIterator first, RandomAccessIterator _Nth, RandomAccessIterator last, BinaryPredicate comp);
-
 ```
 
 ### <a name="parameters"></a>参数
@@ -4841,7 +4812,6 @@ void partial_sort(
     RandomAccessIterator sortEnd,
     RandomAccessIterator last
     BinaryPredicate comp);
-
 ```
 
 ### <a name="parameters"></a>参数
@@ -5073,7 +5043,6 @@ BidirectionalIterator partition(
     BidirectionalIterator first,
     BidirectionalIterator last,
     Predicate comp);
-
 ```
 
 ### <a name="parameters"></a>参数
@@ -5215,7 +5184,6 @@ void pop_heap( RandomAccessIterator first, RandomAccessIterator last);
 
 template<class RandomAccessIterator, class BinaryPredicate>
 void pop_heap(RandomAccessIterator first, RandomAccessIterator last, BinaryPredicate comp);
-
 ```
 
 ### <a name="parameters"></a>参数
@@ -5324,7 +5292,6 @@ bool prev_permutation(
     BidirectionalIterator first,
     BidirectionalIterator last,
     BinaryPredicate comp);
-
 ```
 
 ### <a name="parameters"></a>参数
@@ -5494,7 +5461,6 @@ void push_heap( RandomAccessIterator first, RandomAccessIterator last );
 
 template<class RandomAccessIterator, class BinaryPredicate>
 void push_heap( RandomAccessIterator first, RandomAccessIterator last, BinaryPredicate comp);
-
 ```
 
 ### <a name="parameters"></a>参数
@@ -5604,7 +5570,6 @@ Std::random_shuffle() 函数已弃用，替换为[std:: shuffle](../standard-lib
 ```cpp
 template<class ForwardIterator, class Type>
 ForwardIterator remove(ForwardIterator first, ForwardIterator last, const Type& val);
-
 ```
 
 ### <a name="parameters"></a>参数
@@ -5687,7 +5652,6 @@ int main() {
 ```cpp
 template<class InputIterator, class OutputIterator, class Type>
 OutputIterator remove_copy(InputIterator first, InputIterator last, OutputIterator result, const Type& val);
-
 ```
 
 ### <a name="parameters"></a>参数
@@ -5770,7 +5734,6 @@ int main() {
 ```cpp
 template<class InputIterator, class OutputIterator, class Predicate>
 OutputIterator remove_copy_if(InputIterator first, InputIterator Last, OutputIterator result, Predicate pred);
-
 ```
 
 ### <a name="parameters"></a>参数
@@ -5865,7 +5828,6 @@ ForwardIterator remove_if(
     ForwardIterator first,
     ForwardIterator last,
     Predicate pred);
-
 ```
 
 ### <a name="parameters"></a>参数
@@ -6134,7 +6096,6 @@ OutputIterator replace_copy_if(
     OutputIterator result,
     Predicate pred,
     const Type& val);
-
 ```
 
 ### <a name="parameters"></a>参数
@@ -6243,7 +6204,6 @@ void replace_if(
     ForwardIterator last,
     Predicate pred,
     const Type& val);
-
 ```
 
 ### <a name="parameters"></a>参数
@@ -6323,7 +6283,6 @@ int main() {
 ```cpp
 template<class BidirectionalIterator>
 void reverse(BidirectionalIterator first, BidirectionalIterator last);
-
 ```
 
 ### <a name="parameters"></a>参数
@@ -6390,7 +6349,6 @@ OutputIterator reverse_copy(
     BidirectionalIterator first,
     BidirectionalIterator Last,
     OutputIterator result);
-
 ```
 
 ### <a name="parameters"></a>参数
@@ -6462,7 +6420,6 @@ void rotate(
     ForwardIterator first,
     ForwardIterator middle,
     ForwardIterator last);
-
 ```
 
 ### <a name="parameters"></a>参数
@@ -6568,7 +6525,6 @@ OutputIterator rotate_copy(
     ForwardIterator middle,
     ForwardIterator last,
     OutputIterator result );
-
 ```
 
 ### <a name="parameters"></a>参数
@@ -6672,7 +6628,6 @@ ForwardIterator1 search(
     ForwardIterator2 first2,
     ForwardIterator2 last2
     Predicate comp);
-
 ```
 
 ### <a name="parameters"></a>参数
@@ -6821,7 +6776,6 @@ ForwardIterator1 search_n(
     Diff2 count,
     const Type& val,
     BinaryPredicate comp);
-
 ```
 
 ### <a name="parameters"></a>参数
@@ -7310,7 +7264,6 @@ OutputIterator set_symmetric_difference(
     InputIterator2 last2,
     OutputIterator result,
     BinaryPredicate comp );
-
 ```
 
 ### <a name="parameters"></a>参数
@@ -7648,7 +7601,7 @@ int main()
 }
 ```
 
-## <a name="shuffle"></a>  std::shuffle
+## <a name="shuffle"></a>  无序播放
 
 通过使用随机数生成器重新排列给定范围中的元素。
 
@@ -7689,7 +7642,6 @@ template<class RandomAccessIterator, class Predicate>
       RandomAccessIterator first,
       RandomAccessIterator last,
       Predicate comp);
-
 ```
 
 ### <a name="parameters"></a>参数
@@ -7885,7 +7837,6 @@ BidirectionalIterator stable_partition(
     BidirectionalIterator first,
     BidirectionalIterator last,
     Predicate pred );
-
 ```
 
 ### <a name="parameters"></a>参数
@@ -7967,7 +7918,6 @@ void stable_sort(
     BidirectionalIterator first,
     BidirectionalIterator last,
     BinaryPredicate comp );
-
 ```
 
 ### <a name="parameters"></a>参数
@@ -8069,7 +8019,6 @@ template<class Type, size_t N>
    void swap(
       Type (& left)[N],
       Type (& right)[N]);\r
-
 ```
 
 ### <a name="parameters"></a>参数
@@ -8150,7 +8099,6 @@ ForwardIterator2 swap_ranges(
    ForwardIterator1 first1,
    ForwardIterator1 last1,
    ForwardIterator2 first2 );
-
 ```
 
 ### <a name="parameters"></a>参数
@@ -8387,7 +8335,6 @@ template<class ForwardIterator, class Predicate>
       ForwardIterator first,
       ForwardIterator last,
       Predicate comp);
-
 ```
 
 ### <a name="parameters"></a>参数
@@ -8640,7 +8587,6 @@ template<class ForwardIterator, class Type, class Predicate>
       ForwardIterator last,
       const Type& value,
       Predicate comp);
-
 ```
 
 ### <a name="parameters"></a>参数
@@ -8761,7 +8707,6 @@ int main()
     cout << "The upper_bound in v3 for the element with a value of 3 is: "
         << *Result << "." << endl;
 }
-
 ```
 
 ## <a name="see-also"></a>请参阅

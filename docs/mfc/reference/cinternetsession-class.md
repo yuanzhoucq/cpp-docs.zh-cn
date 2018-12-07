@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CInternetSession [MFC], SetCookie
 - CInternetSession [MFC], SetOption
 ms.assetid: ef54feb4-9d0f-4e65-a45d-7a4cf6c40e51
-ms.openlocfilehash: a3acc035a1781bd67cfc3b5561eb6dbdef41de72
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3b820ea3687fd52947eff48e4814ab4173fd95c7
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50586310"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51519288"
 ---
 # <a name="cinternetsession-class"></a>CInternetSession 类
 
@@ -318,12 +318,12 @@ CFtpConnection* GetFtpConnection(
 *pstrPassword*<br/>
 一个指向一个以 null 结尾的字符串，指定要用于登录的密码。 如果这两个*pstrPassword*并*pstrUserName*为 NULL 时，默认匿名密码是用户的电子邮件名称。 如果*pstrPassword*为 NULL （或空字符串），但*pstrUserName*不为 NULL，则使用空密码。 下表描述了四个可能的设置的行为*pstrUserName*并*pstrPassword*:
 
-|*pstrUserName*|*pstrPassword*|发送到 FTP 服务器的用户名|发送到 FTP 服务器的密码|
-|--------------------|--------------------|---------------------------------|---------------------------------|
-|NULL 或""|NULL 或""|"匿名"|用户的电子邮件名称|
-|非 NULL 字符串|NULL 或""|*pstrUserName*|" "|
-|NULL|非 NULL 字符串|错误|错误||
-|非 NULL 字符串|非 NULL 字符串|*pstrUserName*|*pstrPassword*|
+| *pstrUserName*  | *pstrPassword*  | 发送到 FTP 服务器的用户名 | 发送到 FTP 服务器的密码 |
+|-----------------|-----------------|-----------------------------|-----------------------------|
+|   NULL 或""   |   NULL 或""   |         "匿名"         |      用户的电子邮件名称      |
+| 非 NULL 字符串 |   NULL 或""   |       *pstrUserName*        |             " "             |
+|      NULL       | 非 NULL 字符串 |            错误            |            错误            |
+| 非 NULL 字符串 | 非 NULL 字符串 |       *pstrUserName*        |       *pstrPassword*        |
 
 *nPort*<br/>
 标识要在服务器上使用的 TCP/IP 端口号。

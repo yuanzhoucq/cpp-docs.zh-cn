@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - IDispEventImpl class
 ms.assetid: a64b5288-35cb-4638-aad6-2d15b1c7cf7b
-ms.openlocfilehash: a07cf577ec6be2c6d2d895a85f49f44318596ded
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 75946005acc22874b17ee806cd89ec99095f9c35
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50497450"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524295"
 ---
 # <a name="idispeventimpl-class"></a>IDispEventImpl 类
 
@@ -151,7 +151,7 @@ info<br/>
 
 ##  <a name="getidsofnames"></a>  IDispEventImpl::GetIDsOfNames
 
-单个成员和一组可选的参数名称映射到一组对应的整数 Dispid，可以在后续调用使用[idispatch:: Invoke](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke)。
+单个成员和一组可选的参数名称映射到一组对应的整数 Dispid，可以在后续调用使用[idispatch:: Invoke](/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke)。
 
 ```
 STDMETHOD(GetIDsOfNames)(
@@ -164,7 +164,7 @@ STDMETHOD(GetIDsOfNames)(
 
 ### <a name="remarks"></a>备注
 
-请参阅[IDispatch::GetIDsOfNames](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-getidsofnames) Windows SDK 中。
+请参阅[IDispatch::GetIDsOfNames](/windows/desktop/api/oaidl/nf-oaidl-idispatch-getidsofnames) Windows SDK 中。
 
 ##  <a name="gettypeinfo"></a>  IDispEventImpl::GetTypeInfo
 
@@ -189,7 +189,7 @@ STDMETHOD(GetTypeInfoCount)(UINT* pctinfo);
 
 ### <a name="remarks"></a>备注
 
-请参阅[IDispatch::GetTypeInfoCount](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-gettypeinfocount) Windows SDK 中。
+请参阅[IDispatch::GetTypeInfoCount](/windows/desktop/api/oaidl/nf-oaidl-idispatch-gettypeinfocount) Windows SDK 中。
 
 ##  <a name="getuserdefinedtype"></a>  IDispEventImpl::GetUserDefinedType
 
@@ -204,7 +204,7 @@ VARTYPE GetUserDefinedType(
 ### <a name="parameters"></a>参数
 
 *PTI*<br/>
-[in]一个指向[ITypeInfo](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-itypeinfo)包含用户定义类型的接口。
+[in]一个指向[ITypeInfo](/windows/desktop/api/oaidl/nn-oaidl-itypeinfo)包含用户定义类型的接口。
 
 *hrt*<br/>
 [in]要检索的类型说明的句柄。
@@ -215,7 +215,7 @@ VARTYPE GetUserDefinedType(
 
 ### <a name="remarks"></a>备注
 
-请参阅[ITypeInfo::GetRefTypeInfo](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-itypeinfo-getreftypeinfo)。
+请参阅[ITypeInfo::GetRefTypeInfo](/windows/desktop/api/oaidl/nf-oaidl-itypeinfo-getreftypeinfo)。
 
 ##  <a name="idispeventimpl"></a>  IDispEventImpl::IDispEventImpl
 

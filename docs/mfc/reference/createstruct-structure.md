@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - CREATESTRUCT structure [MFC]
 ms.assetid: 028c7b5e-4fdc-48da-a550-d3e4f9e6cc85
-ms.openlocfilehash: 13f715dc914ccc052945790aeaff9c47bd34ed46
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1de42ba3e26f7a06918a69358083e68f142836cc
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619643"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694694"
 ---
 # <a name="createstruct-structure"></a>CREATESTRUCT 结构
 
@@ -69,7 +69,7 @@ typedef struct tagCREATESTRUCT {
 指向一个以 null 结尾的字符串，指定新窗口的名称。
 
 *lpszClass*<br/>
-指向一个以 null 结尾的字符串，指定新窗口的 Windows 类名称 ( [WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576)结构; 有关详细信息，请参阅 Windows SDK)。
+指向一个以 null 结尾的字符串，指定新窗口的 Windows 类名称 ( [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa)结构; 有关详细信息，请参阅 Windows SDK)。
 
 *dwExStyle*<br/>
 指定[扩展样式](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)新窗口。

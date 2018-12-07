@@ -3,38 +3,38 @@ title: 字符串和 I-O 格式化 （现代 c + +）
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 3954e8de-a59b-4175-89c9-4ee842ab89ed
-ms.openlocfilehash: 0cc0c84a6e4ffac3e6a80425039bfcc1db567911
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 816eb71dae011f853a6e7ade1a1a2a8144a457c5
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631837"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326181"
 ---
 # <a name="string-and-io-formatting-modern-c"></a>字符串和 I/O 格式化（现代 C++）
 
 C++ [iostreams](../standard-library/iostream.md)。 例如，下面的代码演示如何设置 cout 若要设置格式的整数输出以十六进制表示，第一次关闭的当前状态保存和重新之后，设置，因为后状态格式传递给 cout 时，它始终处于这种方式更改，而不仅仅是为一个行之前代码。 
 
 ```cpp
-#include <iostream>
-#include <iomanip>
+#include <iostream>
+#include <iomanip>
 
-using namespace std;
+using namespace std;
 
-int main() 
+int main()
 {
-    ios state(nullptr);
+    ios state(nullptr);
 
-    cout << "The answer in decimal is: " << 42 << endl;
+    cout << "The answer in decimal is: " << 42 << endl;
 
-    state.copyfmt(cout); // save current formatting
-    cout << "In hex: 0x" // now load up a bunch of formatting modifiers
-        << hex 
-        << uppercase 
-        << setw(8) 
-        << setfill('0') 
-        << 42            // the actual value we wanted to print out
-        << endl;
-    cout.copyfmt(state); // restore previous formatting
+    state.copyfmt(cout); // save current formatting
+    cout << "In hex: 0x" // now load up a bunch of formatting modifiers
+        << hex
+        << uppercase
+        << setw(8)
+        << setfill('0')
+        << 42            // the actual value we wanted to print out
+        << endl;
+    cout.copyfmt(state); // restore previous formatting
 }
 ```
 
@@ -53,13 +53,13 @@ Boost.Format 的一些优点包括：
 以下代码演示了某些 Boost 格式设置功能。
 
 ```cpp
-    string s = str( format("%2% %2% %1%\n") % "world" % "hello" );
-    // s contains "hello hello world"  
+    string s = str( format("%2% %2% %1%\n") % "world" % "hello" );
+    // s contains "hello hello world"
 
-    for( auto i = 0; i < names.size(); ++i )
-        cout << format("%1% %2% %|40t|%3%\n") % first[i] % last[i] % tel[i];
-    // Georges Benjamin Clemenceau             +33 (0) 123 456 789
-    // Jean de Lattre de Tassigny              +33 (0) 987 654 321
+    for( auto i = 0; i < names.size(); ++i )
+        cout << format("%1% %2% %|40t|%3%\n") % first[i] % last[i] % tel[i];
+    // Georges Benjamin Clemenceau             +33 (0) 123 456 789
+    // Jean de Lattre de Tassigny              +33 (0) 987 654 321
 ```
 
 ## <a name="see-also"></a>请参阅

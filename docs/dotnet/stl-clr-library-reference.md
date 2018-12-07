@@ -7,16 +7,16 @@ helpviewer_keywords:
 - STL/CLR, redistribution
 - cliext directory
 ms.assetid: a9d9ca00-7bf2-48c1-b205-3ae6f8c25f82
-ms.openlocfilehash: b1628ebc315dd0e94b54f6d0c7847d46e002351e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6914b61597e38c94a214089ecc3aeed17aec46d3
+ms.sourcegitcommit: 984fb4814a2dd9bcea5ec88c9528707f17a7cffa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539459"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "51949513"
 ---
 # <a name="stlclr-library-reference"></a>STL/CLR 库参考
 
-STL/CLR 库提供类似于 c + + 标准库容器的接口与 c + + 和.NET Framework 公共语言运行时 (CLR) 一起使用。 STL/CLR 是完全独立于 Microsoft 的 c + + 标准库实现。 STL/CLR 的旧版支持维持不变，但不是保持为最新的 c + + 标准。 我们强烈建议使用本机[c + + 标准库](../standard-library/cpp-standard-library-reference.md)而不是 STL/CLR 尽可能的容器。
+STL/CLR 库提供类似于 c + + 标准库容器的接口与 c + + 和.NET Framework 公共语言运行时 (CLR) 一起使用。 STL/CLR 是完全独立于 c + + 标准库的 Microsoft 实现。 STL/CLR 的旧版支持维持不变，但不是保持为最新的 c + + 标准。 我们强烈建议使用本机[c + + 标准库](../standard-library/cpp-standard-library-reference.md)而不是 STL/CLR 尽可能的容器。
 
 若要使用 STL/CLR:
 

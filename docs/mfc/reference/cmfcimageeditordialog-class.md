@@ -1,6 +1,6 @@
 ---
 title: CMFCImageEditorDialog 类
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CMFCImageEditorDialog
 - AFXIMAGEEDITORDIALOG/CMFCImageEditorDialog
@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCImageEditorDialog [MFC], CMFCImageEditorDialog
 ms.assetid: 6a7d08f3-1ec2-4062-9b79-a0c2776b58d1
-ms.openlocfilehash: 84bbe72abeedc03f19f06a1f8498023ff54be95e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 68cfa663f9be9f190a6d3425a2ebf6ceb73e2007
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50503058"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175065"
 ---
 # <a name="cmfcimageeditordialog-class"></a>CMFCImageEditorDialog 类
 
@@ -47,7 +47,7 @@ class CMFCImageEditorDialog : public CDialogEx
 
 下图显示的图像编辑器对话框。
 
-![CMFCImageEditorDialog 对话框](../../mfc/reference/media/imageedit.png "imageedit")
+![CMFCImageEditorDialog 对话框](../../mfc/reference/media/imageedit.png "CMFCImageEditorDialog 对话框")
 
 使用一种方式`CMFCImageEditorDialog`对象是将其传递`CBitmap`映像以进行编辑。 不要创建一个大图像，因为图像编辑区域存在大小限制和逻辑像素大小调整以适合区域。 调用`DoModal`方法以启动模式对话框。
 

@@ -4,12 +4,12 @@ ms.date: 08/30/2017
 helpviewer_keywords:
 - breaking changes [C++]
 ms.assetid: b38385a9-a483-4de9-99a6-797488bc5110
-ms.openlocfilehash: 1025b3469611ee1e880a2abd5a4e553a1317a0d4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b1070a330e40c0bf73f3713783b3f126d0848cbc
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50570711"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51525517"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Visual C++ 更改历史记录（2003 - 2015）
 
@@ -64,19 +64,19 @@ ms.locfileid: "50570711"
 
    移动的函数：
 
-   - 双精度型 abs(double) 和浮点型 abs(float)
+  - 双精度型 abs(double) 和浮点型 abs(float)
 
-   - 双精度型 pow(double, int)、浮点型 pow(float, float)、浮点型 pow(float, int)、长双精度型 pow(long double, long double)、长双精度型 pow(long double, int)
+  - 双精度型 pow(double, int)、浮点型 pow(float, float)、浮点型 pow(float, int)、长双精度型 pow(long double, long double)、长双精度型 pow(long double, int)
 
-   - 浮点型和长双精度型版本的浮点函数 acos、acosh、asin、asinh、atan、atanh、atan2、cbrt、ceil、copysign、cos、cosh、erf、erfc、exp、exp2、expm1、fabs、fdim、floor、fma、fmax、fmin、fmod、frexp、hypot、ilogb、ldexp、lgamma、llrint、llround、log、log10、log1p、log2、lrint、lround、modf、nearbyint、nextafter、nexttoward、remainder、remquo、rint、round、scalbln、scalbn、sin、sinh、sqrt、tan、tanh、tgamma、trunc
+  - 浮点型和长双精度型版本的浮点函数 acos、acosh、asin、asinh、atan、atanh、atan2、cbrt、ceil、copysign、cos、cosh、erf、erfc、exp、exp2、expm1、fabs、fdim、floor、fma、fmax、fmin、fmod、frexp、hypot、ilogb、ldexp、lgamma、llrint、llround、log、log10、log1p、log2、lrint、lround、modf、nearbyint、nextafter、nexttoward、remainder、remquo、rint、round、scalbln、scalbn、sin、sinh、sqrt、tan、tanh、tgamma、trunc
 
-   如果你的代码使用具有仅包含 math.h 标头的浮点型的 abs，则浮点版本将不再可用，因此调用（即使具有浮点参数）现在已解析为 abs(int)。 这将产生错误：
+  如果你的代码使用具有仅包含 math.h 标头的浮点型的 abs，则浮点版本将不再可用，因此调用（即使具有浮点参数）现在已解析为 abs(int)。 这将产生错误：
 
     ```Output
     warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
     ```
 
-   此警告的解决方法是将对 `abs` 的调用替换为浮点版本的 `abs`（例如双精度型参数的 `fabs` 或浮点型参数的 `fabsf`）或包含 cmath 标头并继续使用 `abs`。
+  此警告的解决方法是将对 `abs` 的调用替换为浮点版本的 `abs`（例如双精度型参数的 `fabs` 或浮点型参数的 `fabsf`）或包含 cmath 标头并继续使用 `abs`。
 
 - 浮点一致性
 
@@ -116,7 +116,7 @@ ms.locfileid: "50570711"
 
    若要将此库添加到 IDE 中的链接器输入，请打开项目节点的上下文菜单，选择“属性”，然后在“项目属性”对话框中选择“链接器”，编辑“链接器输入”以将 `legacy_stdio_definitions.lib` 添加到用分号隔开的列表。
 
-   如果项目链接的静态库是使用早于 2015 版本的 Visual Studio 编译的，则链接器可能会报告无法解析的外部符号。 这些错误可能会引用 _imp\_* 窗体中某些 stdio 函数的 _iob、_iob_func 或相关导入的内部 stdio 定义。 Microsoft 建议在升级项目时使用最新版本的 C++ 编译器和库编译所有静态库。 如果库是第三方库并且第三方库的源不可用，则应请求来自第三方更新后的二进制文件，或者将你对此库的用法封装到单独的 DLL（使用旧版编译器和库编译的）。
+   如果项目链接的静态库是使用早于 2015 版本的 Visual Studio 编译的，则链接器可能会报告无法解析的外部符号。 这些错误可能会以 imp\* 形式引用某些 stdio 函数的 `_iob`、`_iob_func` 或相关导入内容的内部 stdio 定义。 Microsoft 建议在升级项目时使用最新版本的 C++ 编译器和库编译所有静态库。 如果库是第三方库并且第三方库的源不可用，则应请求来自第三方更新后的二进制文件，或者将你对此库的用法封装到单独的 DLL（使用旧版编译器和库编译的）。
 
     > [!WARNING]
     > 如果你链接的是 Windows SDK 8.1 或更早版本，可能会遇到这些无法解析的外部符号错误。 在这种情况下，应通过将 legacy_stdio_definitions.lib 添加到链接器输入（如上文所述）来解决该错误。
@@ -139,27 +139,27 @@ ms.locfileid: "50570711"
 
    在早期版本中，可以使用 MSVC 特定的 sentinel 字符串集进行无穷大和 NaN 格式设置。
 
-   - 无穷大：1.#INF
+  - 无穷大：1.#INF
 
-   - 静默 NaN：1.#QNAN
+  - 静默 NaN：1.#QNAN
 
-   - 信号 NaN：1.#SNAN
+  - 信号 NaN：1.#SNAN
 
-   - 无穷大 NaN：1.#IND
+  - 无穷大 NaN：1.#IND
 
-   这些字符串的任何一种都可能已采用符号作为前缀并且格式设置也可能略有不同，具体取决于字段宽度和精度（有时会起到不寻常的作用，例如，`printf("%.2f\n", INFINITY)` 可以打印 1.#J，因为 #INF 会“四舍五入”为 2 位数的精度）。 C99 引入了有关如何设置无穷大和 NaN 格式的新要求。 现在，MSVC 实现符合这些要求。 新字符串如下所示：
+  这些字符串的任何一种都可能已采用符号作为前缀并且格式设置也可能略有不同，具体取决于字段宽度和精度（有时会起到不寻常的作用，例如，`printf("%.2f\n", INFINITY)` 可以打印 1.#J，因为 #INF 会“四舍五入”为 2 位数的精度）。 C99 引入了有关如何设置无穷大和 NaN 格式的新要求。 现在，MSVC 实现符合这些要求。 新字符串如下所示：
 
-   - 无穷大：inf
+  - 无穷大：inf
 
-   - 静默 NaN：nan
+  - 静默 NaN：nan
 
-   - 信号 NaN：nan(snan)
+  - 信号 NaN：nan(snan)
 
-   - 不定 NaN：nan(ind)
+  - 不定 NaN：nan(ind)
 
-   可能以符号作为其中任何一种字符串的前缀。 如果使用了大写格式说明符（%F 而不是 %f），则字符串将按要求以大写字母形式（INF 而不是 inf）打印。
+  可能以符号作为其中任何一种字符串的前缀。 如果使用了大写格式说明符（%F 而不是 %f），则字符串将按要求以大写字母形式（INF 而不是 inf）打印。
 
-   已修改 [scanf](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md) 函数以便分析这些新的字符串，因此这些字符串会通过 printf 和 scanf 往返。
+  已修改 [scanf](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md) 函数以便分析这些新的字符串，因此这些字符串会通过 printf 和 scanf 往返。
 
 - 浮点格式设置和分析
 
@@ -171,8 +171,16 @@ ms.locfileid: "50570711"
     printf("%.0f\n", pow(2.0, 80))
     ```
 
+   旧输出：
+
     ```Output
-        Old:  1208925819614629200000000    New:  1208925819614629174706176
+    1208925819614629200000000
+    ```
+
+   新输出：
+
+    ```Output
+    1208925819614629174706176
     ```
 
    旧版本分析算法考虑的输入字符串中有效位数仅达 17，并将丢弃其余数位。 这不足以生成由字符串表示的近似值，结果通常是非常接近正确舍入的结果。 新版本的实现会考虑所有存在的数字，并生成所有输入（长度多达 768 位）的正确舍入的结果。 此外，这些函数现在遵循舍入模式（可通过 fesetround 控制）。  这可能是重大的行为更改，因为这些函数可能会输出不同的结果。 新版本的结果始终比旧版本的结果更准确。
@@ -641,7 +649,7 @@ ms.locfileid: "50570711"
    例如，假设你的代码同时定义了 placement new 和 placement delete：
 
     ```cpp
-    void * operator new(std::size_t, std::size_t);
+    void * operator new(std::size_t, std::size_t);
     void operator delete(void*, std::size_t) noexcept;
     ```
 

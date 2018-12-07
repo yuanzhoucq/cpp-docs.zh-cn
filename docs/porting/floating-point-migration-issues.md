@@ -2,12 +2,12 @@
 title: 浮点迁移问题
 ms.date: 05/17/2017
 ms.assetid: 36a1b552-2f2b-4919-bc9d-c17f42434954
-ms.openlocfilehash: ea34f1eb8e8bd528273da5d7d18cd545cd22de37
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a259cf276c0347fda4954b46318cc79be88028ee
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50530866"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51332343"
 ---
 # <a name="floating-point-migration-issues"></a>浮点迁移问题
 

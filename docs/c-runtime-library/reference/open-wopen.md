@@ -31,12 +31,12 @@ helpviewer_keywords:
 - wopen function
 - open function
 ms.assetid: 13f6a0c3-d1aa-450d-a7aa-74abc91b163e
-ms.openlocfilehash: 2395b1aa48b7802a508ab0cb8be1ef35a1a81564
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7ef28d6cafa0b74b50ee2c50ec380b8bd3aed79f
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50612977"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327286"
 ---
 # <a name="open-wopen"></a>_open、_wopen
 
@@ -74,11 +74,11 @@ int _wopen(
 
 |errno 值|条件|
 |-|-|
-**EACCES**|尝试打开只读文件进行写入，文件的共享模式不允许指定的操作，或给定路径是目录。
-**EEXIST**|**_Open**并 **_O_EXCL**标志指定，但*filename*已存在。
-**EINVAL**|无效*oflag*或*pmode*参数。
-**EMFILE**|无法使用更多的文件描述符（打开的文件太多）。
-**ENOENT**|未找到文件或路径。
+| **EACCES** | 尝试打开只读文件进行写入，文件的共享模式不允许指定的操作，或给定路径是目录。 |
+| **EEXIST** | **_Open**并 **_O_EXCL**标志指定，但*filename*已存在。 |
+| **EINVAL** | 无效*oflag*或*pmode*参数。 |
+| **EMFILE** | 无法使用更多的文件描述符（打开的文件太多）。 |
+| **ENOENT** | 未找到文件或路径。 |
 
 有关这些代码及其他返回代码的详细信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
@@ -96,23 +96,23 @@ int _wopen(
 
 |*oflag*常量|行为|
 |-|-|
-**_O_APPEND**|在执行每个写入操作之前，将文件指针移动到文件末尾。
-**_O_BINARY**|在二进制（未转换）模式下打开该文件。 （有关二进制模式的说明，请参阅 [fopen](fopen-wfopen.md)。）
-**_OPEN**|创建文件并打开它以供写入。 如果指定的文件不起作用*文件名*存在。 *Pmode*时，参数是必需 **_open**指定。
-**_OPEN** &AMP;#124; **_O_SHORT_LIVED**|创建一个文件作为临时文件，如果可能，请不要将它刷新到磁盘中。 *Pmode*时，参数是必需 **_open**指定。
-**_OPEN** &AMP;#124; **_O_TEMPORARY**|创建一个文件作为临时文件；在关闭最后一个文件描述符时，删除该文件。 *Pmode*时，参数是必需 **_open**指定。
-**_OPEN**&AMP;#124; ` _O_EXCL`|如果指定的文件，则返回一个错误值*文件名*存在。 仅当与一起使用时，才 **_open**。
-**_O_NOINHERIT**|阻止创建共享文件描述符。
-**_O_RANDOM**|指定缓存针对（但不限于）从磁盘的随机访问进行优化。
-**_O_RDONLY**|打开文件以供只读。 不能指定 **_O_RDWR**或 **_O_WRONLY**。
-**_O_RDWR**|打开文件以供读取和写入。 不能指定 **_O_RDONLY**或 **_O_WRONLY**。
-**_O_SEQUENTIAL**|指定缓存针对（但不限于）从磁盘的顺序访问进行优化。
-**_O_TEXT**|在文本（转换）模式下打开文件。 （有关详细信息，请参阅[文本和二进制模式文件 I/O](../../c-runtime-library/text-and-binary-mode-file-i-o.md) 和 [fopen](fopen-wfopen.md)。）
-**_O_TRUNC**|打开文件并将其长度截断为零；该文件必须具有写入权限。 不能指定 **_O_RDONLY**。 **_O_TRUNC**用于 **_open**打开一个现有文件或创建一个文件。 **注意：** **_O_TRUNC**标志会损坏指定文件的内容。
-**_O_WRONLY**|打开文件以供只写。 不能指定 **_O_RDONLY**或 **_O_RDWR**。
-**_O_U16TEXT**|在 Unicode UTF-16 模式下打开文件。
-**_O_U8TEXT**|在 Unicode UTF-8 模式下打开文件。
-**_O_WTEXT**|在 Unicode 模式下打开文件。
+| **_O_APPEND** | 在执行每个写入操作之前，将文件指针移动到文件末尾。 |
+| **_O_BINARY** | 在二进制（未转换）模式下打开该文件。 （有关二进制模式的说明，请参阅 [fopen](fopen-wfopen.md)。） |
+| **_OPEN** | 创建文件并打开它以供写入。 如果指定的文件不起作用*文件名*存在。 *Pmode*时，参数是必需 **_open**指定。 |
+| **_OPEN** &AMP;#124; **_O_SHORT_LIVED** | 创建一个文件作为临时文件，如果可能，请不要将它刷新到磁盘中。 *Pmode*时，参数是必需 **_open**指定。 |
+| **_OPEN** &AMP;#124; **_O_TEMPORARY** | 创建一个文件作为临时文件；在关闭最后一个文件描述符时，删除该文件。 *Pmode*时，参数是必需 **_open**指定。 |
+| **_OPEN**&AMP;#124; ` _O_EXCL` | 如果指定的文件，则返回一个错误值*文件名*存在。 仅当与一起使用时，才 **_open**。 |
+| **_O_NOINHERIT** | 阻止创建共享文件描述符。 |
+| **_O_RANDOM** | 指定缓存针对（但不限于）从磁盘的随机访问进行优化。 |
+| **_O_RDONLY** | 打开文件以供只读。 不能指定 **_O_RDWR**或 **_O_WRONLY**。 |
+| **_O_RDWR** | 打开文件以供读取和写入。 不能指定 **_O_RDONLY**或 **_O_WRONLY**。 |
+| **_O_SEQUENTIAL** | 指定缓存针对（但不限于）从磁盘的顺序访问进行优化。 |
+| **_O_TEXT** | 在文本（转换）模式下打开文件。 （有关详细信息，请参阅[文本和二进制模式文件 I/O](../../c-runtime-library/text-and-binary-mode-file-i-o.md) 和 [fopen](fopen-wfopen.md)。） |
+| **_O_TRUNC** | 打开文件并将其长度截断为零；该文件必须具有写入权限。 不能指定 **_O_RDONLY**。 **_O_TRUNC**用于 **_open**打开一个现有文件或创建一个文件。 **注意：** **_O_TRUNC**标志会损坏指定文件的内容。 |
+| **_O_WRONLY** | 打开文件以供只写。 不能指定 **_O_RDONLY**或 **_O_RDWR**。 |
+| **_O_U16TEXT** | 在 Unicode UTF-16 模式下打开文件。 |
+| **_O_U8TEXT** | 在 Unicode UTF-8 模式下打开文件。 |
+| **_O_WTEXT** | 在 Unicode 模式下打开文件。 |
 
 若要指定文件访问模式，您必须指定 **_O_RDONLY**， **_O_RDWR**，或 **_O_WRONLY**。 对于访问模式，不存在默认值。
 
@@ -128,9 +128,9 @@ int _wopen(
 
 |*pmode*|含义|
 |-|-|
-**_S_IREAD**|只允许读取。
-**_S_IWRITE**|允许写入。 （实际上，允许读取和写入。）
-**_S_IREAD** &AMP;#124; **_S_IWRITE**|允许读取和写入。
+| **_S_IREAD** | 只允许读取。 |
+| **_S_IWRITE** | 允许写入。 （实际上，允许读取和写入。） |
+| **_S_IREAD** &AMP;#124; **_S_IWRITE** | 允许读取和写入。 |
 
 当给定这两个常量时，它们使用按位 OR 运算符联接 ( **&#124;** )。 在 Windows 中，所有文件均可读；不会提供只写权限。 因此，模式 **_S_IWRITE**并 **_S_IREAD** | **_S_IWRITE**是等效的。
 

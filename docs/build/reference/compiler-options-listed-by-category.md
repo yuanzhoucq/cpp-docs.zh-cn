@@ -1,15 +1,15 @@
 ---
 title: 按类别列出的编译器选项
-ms.date: 08/20/2018
+ms.date: 11/12/2018
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-ms.openlocfilehash: 20dab3e4ec1d0a409d591e2b470e127e20156a8a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aa93158e518950efa9d1f2f8092aeabbc3c7724c
+ms.sourcegitcommit: 99437d7da4528ce72cabe6b6a65a9be5dfd090f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532946"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51598816"
 ---
 # <a name="compiler-options-listed-by-category"></a>按类别列出的编译器选项
 
@@ -46,7 +46,7 @@ ms.locfileid: "50532946"
 |[/Gh](gh-enable-penter-hook-function.md)|调用挂钩函数 `_penter`。|
 |[/GH](gh-enable-pexit-hook-function.md)|调用挂钩函数 `_pexit`。|
 |[/GL](gl-whole-program-optimization.md)|启用全程序优化。|
-|[/Gm](gm-enable-minimal-rebuild.md)|启用最小重新生成。|
+|[/Gm](gm-enable-minimal-rebuild.md)|已否决。 启用最小重新生成。|
 |[/GR](gr-enable-run-time-type-information.md)|启用运行时类型信息 (RTTI)。|
 |[/Gr](gd-gr-gv-gz-calling-convention.md)|使用 `__fastcall` 调用约定。 (仅限 x86)|
 |[/GS](gs-buffer-security-check.md)|检查缓冲区安全性。|
@@ -202,6 +202,7 @@ ms.locfileid: "50532946"
 |[/clr:noAssembly](clr-common-language-runtime-compilation.md)|已否决。 请改用 [/LN (Create MSIL Module)](ln-create-msil-module.md) 。|
 |[/Fr](fr-fr-create-dot-sbr-file.md)|已否决。 创建无局部变量的浏览信息文件。|
 |[/Ge](ge-enable-stack-probes.md)|已否决。 激活堆栈探测。 默认开启。|
+|[/Gm](gm-enable-minimal-rebuild.md)|已否决。 启用最小重新生成。|
 |[/GX](gx-enable-exception-handling.md)|已否决。 启用同步异常处理。 改为使用 [/EH](eh-exception-handling-model.md) 。|
 |[/GZ](gz-enable-stack-frame-run-time-error-checking.md)|已否决。 启用快速检查。 改为使用 [/RTC1](rtc-run-time-error-checks.md) 。|
 |[/H](h-restrict-length-of-external-names.md)|已否决。 限制外部（公共）名称的长度。|

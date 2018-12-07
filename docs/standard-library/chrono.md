@@ -10,12 +10,12 @@ f1_keywords:
 - chrono/std::chrono::milliseconds
 - chrono/std::chrono::microseconds
 ms.assetid: 844de749-f306-482e-89bc-6f53c99c8324
-ms.openlocfilehash: 904e4df6b6c16b846ab4417d24a1d9836380d75b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1fcf87d84b2c99b89217b7f2e0fc7fecd55fff02
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544542"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51331472"
 ---
 # <a name="ltchronogt"></a>&lt;chrono&gt;
 
@@ -84,7 +84,7 @@ ms.locfileid: "50544542"
 
 ### <a name="literals"></a>文本
 
-**(C++11)** \<chrono> 标头定义了以下[用户定义的文本](../cpp/user-defined-literals-cpp.md)，利用这些文本，可更方便地使用代码、增大代码类型的安全性和提高代码的可维护性。 这些文本在 `literals::chrono_literals` 内联命名空间中定义，并且在 std::chrono 存在于作用域中时也存在于作用域中。
+**(C + + 11)** \<Chrono > 标头定义了以下[用户定义的文本](../cpp/user-defined-literals-cpp.md)可用于更方便、 类型安全和你的代码的可维护性。 这些文本在 `literals::chrono_literals` 内联命名空间中定义，并且在 std::chrono 存在于作用域中时也存在于作用域中。
 
 |Literal|描述|
 |-------------|-----------------|

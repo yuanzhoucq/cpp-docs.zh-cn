@@ -108,7 +108,7 @@ C++11/C++14 的 Visual C++ 实现中添加了以下功能：
 |[bind2nd](../standard-library/functional-functions.md#bind2nd)|一种帮助程序模板类，用于创建适配器，通过将二元函数的第二个自变量绑定到指定的值，将二元函数对象转换为一元函数对象。|
 |[bit_and](../standard-library/functional-functions.md#bit_and)|返回两个参数的按位逻辑 AND（二元运算符 &）。|
 |[bit_not](../standard-library/functional-functions.md#bit_not)|返回两个参数的按位逻辑求反（二元运算符 ~）。|
-|[bit_or](../standard-library/functional-functions.md#bit_or)|返回两个参数的按位逻辑 OR（运算符 |）。|
+|[bit_or](../standard-library/functional-functions.md#bit_or)|返回两个参数的按位逻辑 OR（运算符 &#124;）。|
 |[bit_xor](../standard-library/functional-functions.md#bit_xor)|返回两个参数的按位逻辑 XOR（二元运算符 ^）。|
 |[cref](../standard-library/functional-functions.md#cref)|从变量构造常量 `reference_wrapper`。|
 |[mem_fn](../standard-library/functional-functions.md#mem_fn)|生成一个简单的调用包装器。|
@@ -131,9 +131,9 @@ C++11/C++14 的 Visual C++ 实现中添加了以下功能：
 |[greater_equal](../standard-library/greater-equal-struct.md)|此二元谓词测试指定类型的一个值是否大于或等于该类型的另一个值。|
 |[less](../standard-library/less-struct.md)|此二元谓词测试指定类型的一个值是否小于该类型的另一个值。|
 |[less_equal](../standard-library/less-equal-struct.md)|此二元谓词测试指定类型的一个值是否小于或等于该类型的另一个值。|
-|[logical_and](../standard-library/logical-and-struct.md)|此类提供预定义的函数对象，后者对指定值类型的元素执行合取逻辑运算，并测试结果是 ture 还是 false。|
-|[logical_not](../standard-library/logical-not-struct.md)|此类提供预定义的函数对象，后者对指定值类型的元素执行求反逻辑运算，并测试结果是 ture 还是 false。|
-|[logical_or](../standard-library/logical-or-struct.md)|此类提供预定义的函数对象，后者对指定值类型的元素执行析取逻辑运算，并测试结果是 ture 还是 false。|
+|[logical_and](../standard-library/logical-and-struct.md)|此类提供预定义的函数对象，后者对指定值类型的元素执行合取逻辑运算，并测试结果是 true 还是 false。|
+|[logical_not](../standard-library/logical-not-struct.md)|此类提供预定义的函数对象，后者对指定值类型的元素执行求反逻辑运算，并测试结果是 true 还是 false。|
+|[logical_or](../standard-library/logical-or-struct.md)|此类提供预定义的函数对象，后者对指定值类型的元素执行析取逻辑运算，并测试结果是 true 还是 false。|
 |[minus](../standard-library/minus-struct.md)|此类提供预定义的函数对象，后者对指定值类型的元素执行减法算术运算。|
 |[modulus](../standard-library/modulus-struct.md)|此类提供预定义的函数对象，后者对指定值类型的元素执行取模算术运算。|
 |[multiplies](../standard-library/multiplies-struct.md)|此类提供预定义的函数对象，后者对指定值类型的元素执行乘法算术运算。|

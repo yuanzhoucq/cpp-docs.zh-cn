@@ -6,12 +6,12 @@ helpviewer_keywords:
 - objects [C++], creating
 - instance constructors
 ms.assetid: 3e9f7211-313a-4a92-9584-337452e061a9
-ms.openlocfilehash: 66edab2950a752e00767e10e7b8c36a3a01240ef
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e2027d967aebe68618e44e454ec268770b53ee4b
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50460874"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694057"
 ---
 # <a name="constructors-c"></a>构造函数 (C++)
 
@@ -25,7 +25,7 @@ public:
     // Default constructor
     Box() {}
 
-    // Initalize a Box with equal dimensions (i.e. a cube)
+    // Initialize a Box with equal dimensions (i.e. a cube)
     explicit Box(int i) : m_width(i), m_length(i), m_height(i) // member init list
     {}
 
@@ -127,7 +127,6 @@ int main() {
 ```cpp
     // Default constructor
     Box() = delete;
-
 ```
 
 将定义编译器生成的默认构造函数，为已删除，如果任何类成员不是默认可构造。 例如，默认构造函数和析构函数可访问的类类型的所有成员，必须都具有它们类类型的成员。 所有数据成员的引用都类型，也一样**const**成员都必须具有一个默认成员初始值设定项。
@@ -572,7 +571,7 @@ public:
     // Default constructor
     Box() {}
 
-    // Initalize a Box with equal dimensions (i.e. a cube)
+    // Initialize a Box with equal dimensions (i.e. a cube)
     Box(int i) :  Box(i, i, i);  // delegating constructor
     {}
 
@@ -586,7 +585,7 @@ public:
 
 所有构造函数完成后，完全初始化的构造函数将立即创建对象。 有关详细信息，请参阅[统一初始化和委托构造函数](../cpp/uniform-initialization-and-delegating-constructors.md)。
 
-## <a name="inheriting_constructors">继承构造函数 (C++ 11)</a>
+## <a name="inheriting_constructors"></a> 继承构造函数 (C++ 11)
 
 在派生的类可以通过使用从直接基类继承构造函数**使用**声明如下面的示例中所示：
 

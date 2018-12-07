@@ -25,12 +25,12 @@ helpviewer_keywords:
 - Clean Build option
 - output files, setting directory
 - Unicode, creating C++ build configuration
-ms.openlocfilehash: 5479b892a2cb97fb645dba4ffac70dd9ac4aeffe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6f7af0f3dd9ff373a458a6f93fb78fda443bd8e9
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50594500"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51520473"
 ---
 # <a name="general-property-page-project"></a>“常规”属性页（项目）
 
@@ -110,29 +110,29 @@ ms.locfileid: "50594500"
 
 - **配置类型**
 
-   有几种配置类型可供选择：
+  有几种配置类型可供选择：
 
-   - 应用程序(.exe)
+  - 应用程序(.exe)
 
-      显示链接器工具集（C/C++ 编译器、MIDL、资源编译器、链接器、BSCMake、XML Web 服务代理生成器、自定义生成、预生成、链接前、生成后事件）。
+     显示链接器工具集（C/C++ 编译器、MIDL、资源编译器、链接器、BSCMake、XML Web 服务代理生成器、自定义生成、预生成、链接前、生成后事件）。
 
-   - **动态库(.dll)**
+  - **动态库(.dll)**
 
-      显示链接器工具集，指定 /DLL 链接器选项并将 _WINDLL 定义添加到 CL。
+     显示链接器工具集，指定 /DLL 链接器选项并将 _WINDLL 定义添加到 CL。
 
-   - 生成文件
+  - 生成文件
 
-      显示生成文件工具集 (NMake)。
+     显示生成文件工具集 (NMake)。
 
-   - 静态库(.lib)
+  - 静态库(.lib)
 
-      显示库管理员工具集（除了链接器的替代库管理器外，其他与链接器工具集相同并且省略了 XML Web 服务代理生成器）。
+     显示库管理员工具集（除了链接器的替代库管理器外，其他与链接器工具集相同并且省略了 XML Web 服务代理生成器）。
 
-   - 实用工具
+  - 实用工具
 
-      显示实用工具集（MIDL、自定义生成、预生成、生成后事件）。
+     显示实用工具集（MIDL、自定义生成、预生成、生成后事件）。
 
-   若要以编程方式访问此属性，请参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCConfiguration.ConfigurationType%2A>。
+  若要以编程方式访问此属性，请参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCConfiguration.ConfigurationType%2A>。
 
 - **MFC 的使用**
 

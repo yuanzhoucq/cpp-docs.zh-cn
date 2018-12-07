@@ -1,17 +1,17 @@
 ---
 title: C++ 位域
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - bitfields [C++]
 - fields [C++], bit
 - bit fields
 ms.assetid: 6f4b62e3-cc1d-4e5d-bf34-05904104f71a
-ms.openlocfilehash: df4e5a068f76c35dc22b3915ad7e4ace421ca10b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 747920378472cc091928a080e303a0543e287aaa
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644953"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175088"
 ---
 # <a name="c-bit-fields"></a>C++ 位域
 
@@ -43,7 +43,8 @@ struct Date {
 
 `Date` 类型的对象的概念上的内存布局如下图所示。
 
-![Date 对象的内存布局](../cpp/media/vc38uq1.png "vc38UQ1")内存布局的 Date 对象
+![Date 对象的内存布局](../cpp/media/vc38uq1.png "date 对象的内存布局") <br/>
+数据对象的内容布局
 
 请注意，`nYear`长度为 8 位，并且会溢出声明类型的字边界**无符号****短**。 因此，开始一个新的开头**无符号****短**。 并不必使所有位域均适合基础类型的对象；根据声明中请求的位数来分配新的存储单元。
 
@@ -69,7 +70,8 @@ struct Date {
 
 则内存布局将如下图中所示：
 
-![带零日期对象的布局&#45;长度位域](../cpp/media/vc38uq2.png "vc38UQ2")布局的 Date 对象带有零长度位域
+![带零日期对象的布局&#45;长度位域](../cpp/media/vc38uq2.png "带零日期布局对象&#45;长度位域") <br/>
+带有零长度位域的数据对象的布局
 
 位域的基础类型必须是一种整型类型，如中所述[基本类型](../cpp/fundamental-types-cpp.md)。
 

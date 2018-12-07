@@ -33,12 +33,12 @@ helpviewer_keywords:
 - _wrmdir function
 - wrmdir function
 ms.assetid: 652c2a5a-b0ac-4493-864e-1edf484333c5
-ms.openlocfilehash: 1169405ae2f03a1e6affe2fcc00d594912e08ae1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0d0d9a25b70746174a66abbe088b297a5d9a0942
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50511119"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327989"
 ---
 # <a name="rmdir-wrmdir"></a>_rmdir、_wrmdir
 
@@ -66,9 +66,9 @@ int _wrmdir(
 
 |errno 值|条件|
 |-|-|
-**ENOTEMPTY**|给定路径不是目录、路径不为空，或目录为当前工作目录或根目录。
-**ENOENT**|路径无效。
-**EACCES**|程序有一个打开的目录句柄。
+| **ENOTEMPTY** | 给定路径不是目录、路径不为空，或目录为当前工作目录或根目录。 |
+| **ENOENT** | 路径无效。 |
+| **EACCES** | 程序有一个打开的目录句柄。 |
 
 有关这些属性和其他的更多信息返回代码示例，请参见 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 

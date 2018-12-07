@@ -1,6 +1,6 @@
 ---
 title: MFC ActiveX 控件：许可 ActiveX 控件
-ms.date: 09/12/2018
+ms.date: 11/19/2018
 f1_keywords:
 - COleObjectFactory
 helpviewer_keywords:
@@ -11,18 +11,18 @@ helpviewer_keywords:
 - GetLicenseKey method [MFC]
 - licensing ActiveX controls
 ms.assetid: cacd9e45-701a-4a1f-8f1f-b0b39f6ac303
-ms.openlocfilehash: 4001d49da8477ab9dd481d0eb3ee02cb10e1e18b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 35ca5d410f642f2557d9ee797eda2d9529f7f4d1
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50465619"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176352"
 ---
 # <a name="mfc-activex-controls-licensing-an-activex-control"></a>MFC ActiveX 控件：许可 ActiveX 控件
 
 许可支持，ActiveX 控件的可选功能允许你控制能够使用或分发该控件。 (的许可问题的更多讨论，请参阅中的许可问题[升级现有 ActiveX 控件](../mfc/upgrading-an-existing-activex-control.md)。)
 
->[!IMPORTANT]
+> [!IMPORTANT]
 > ActiveX 是一项传统技术，不应使用新的开发。 有关取代 ActiveX 的现代技术的详细信息，请参阅[ActiveX 控件](activex-controls.md)。
 
 本文讨论以下主题：
@@ -43,13 +43,15 @@ ms.locfileid: "50465619"
 
 下图演示将容器应用程序的开发期间使用的 ActiveX 控件的许可证验证。 正如前面提到，容器应用程序开发人员必须具有适当。若要创建的控件实例的开发计算机上安装的许可证文件。
 
-![授权 ActiveX 控件开发时验证了已](../mfc/media/vc374d1.gif "vc374d1")许可的 ActiveX 控件期间开发验证
+![授权 ActiveX 控件开发时验证了已](../mfc/media/vc374d1.gif "开发时验证了已获得许可的 ActiveX 控件") <br/>
+开发期间授权 ActiveX 控件的验证
 
 当最终用户运行容器应用程序时，将出现下图中所示的下一步过程。
 
 当启动应用程序时，控件的实例通常需要创建。 通过进行调用，容器就可以完成此`CreateInstanceLic`，将嵌入的许可证密钥作为参数传递。 然后嵌入的许可证密钥和许可证密钥的控件的副本之间进行字符串比较。 如果匹配成功，则创建控件的实例和应用程序将继续正常执行。 请注意，。许可证文件不需要控制用户的计算机上存在。
 
-![授权 ActiveX 控件时执行验证了已](../mfc/media/vc374d2.gif "vc374d2")许可的 ActiveX 控件期间执行的验证
+![授权 ActiveX 控件时执行验证了已](../mfc/media/vc374d2.gif "时执行验证了已获得许可的 ActiveX 控件") <br/>
+执行期间授权 ActiveX 控件的验证
 
 控件授权包含两个基本组件： 控件实现 DLL 中的特定代码和许可证文件。 代码组成两个 （或可能是三个） 函数调用和字符串，简称为"许可证"，包含字符串的版权声明。 控件实现中找到这些调用和许可字符串 (。CPP) 文件。 ActiveX 控件向导，生成的许可证文件是具有版权的语句的文本文件。 它名为使用与项目名称。公有扩展，例如示例。许可证。 授权的控件必须带有许可证文件根据需要设计时使用。
 

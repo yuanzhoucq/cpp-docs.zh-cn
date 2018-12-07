@@ -5,16 +5,16 @@ helpviewer_keywords:
 - service providers [OLE DB]
 - OLE DB services [OLE DB], overriding defaults
 ms.assetid: 08e366c0-74d8-463b-93a6-d58a8dc195f8
-ms.openlocfilehash: a9f8eb1c96c40336f39f14fe1a0ee29d60efd003
-ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
+ms.openlocfilehash: 9f845834b844c16bf2820a295768696e8f6a6526
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51265212"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556291"
 ---
 # <a name="overriding-provider-service-defaults"></a>重写提供程序服务默认值
 
-OLEDB_SERVICES 的提供程序的注册表值返回的默认值为[DBPROP_INIT_OLEDBSERVICES](/previous-versions/windows/desktop/ms716898)的数据源对象的初始化属性。
+OLEDB_SERVICES 的提供程序的注册表值返回的默认值为[DBPROP_INIT_OLEDBSERVICES](https://docs.microsoft.com/previous-versions/windows/desktop/ms716898(v=vs.85))的数据源对象的初始化属性。
 
 只要存在注册表项，聚合提供程序的对象。 用户可以重写提供程序的默认设置已启用的服务通过之前初始化 DBPROP_INIT_OLEDBSERVICES 属性设置。 若要启用或禁用特定服务，用户会获取 DBPROP_INIT_OLEDBSERVICES 属性的当前值、 设置或清除要启用或禁用、 特定属性的位和属性重置。 可以直接在 OLE DB 中或传递到 ADO 连接字符串中设置 DBPROP_INIT_OLEDBSERVICES 或`IDataInitialize::GetDatasource`。 下表中列出的相应值以启用/禁用各项服务。
 
@@ -30,7 +30,7 @@ OLEDB_SERVICES 的提供程序的注册表值返回的默认值为[DBPROP_INIT_O
 
 ## <a name="see-also"></a>请参阅
 
-[资源池](/previous-versions/windows/desktop/ms713655)<br/>
-[使用者如何使用资源池](/previous-versions/windows/desktop/ms715907)<br/>
-[提供程序如何有效地使用资源池](/previous-versions/windows/desktop/ms714906)<br/>
+[资源池](https://docs.microsoft.com/previous-versions/windows/desktop/ms713655(v=vs.85))<br/>
+[使用者如何使用资源池](https://docs.microsoft.com/previous-versions/windows/desktop/ms715907(v=vs.85))<br/>
+[提供程序如何有效地使用资源池](https://docs.microsoft.com/previous-versions/windows/desktop/ms714906(v=vs.85))<br/>
 [启用和禁用 OLE DB 服务](../../data/oledb/enabling-and-disabling-ole-db-services.md)<br/>

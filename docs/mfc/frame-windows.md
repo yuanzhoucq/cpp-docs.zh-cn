@@ -1,6 +1,6 @@
 ---
 title: 框架窗口
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - document frame windows [MFC]
 - windows [MFC], MDI
@@ -15,12 +15,12 @@ helpviewer_keywords:
 - MDI [MFC], frame windows
 - splitter windows [MFC], and frame windows
 ms.assetid: 40677339-8135-4f5e-aba6-3fced3078077
-ms.openlocfilehash: 09db7bab392778297f17c14f7bb807f91af4d896
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 76c2f303713644c5f78f20d2ea868bd67b9eae71
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619929"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175364"
 ---
 # <a name="frame-windows"></a>框架窗口
 
@@ -30,7 +30,8 @@ ms.locfileid: "50619929"
 
 MFC 框架使用框架窗口来包含视图。 两个组件-框架和内容 — 表示，并由 MFC 中的两个不同的类。 框架窗口类管理框架和视图类管理内容。 视图窗口是框架窗口的子级。 绘制和其他用户与文档交互发生在该视图的客户端区域中，不是框架窗口的工作区。 框架窗口提供了可见边框的视图，包含标题栏和标准窗口控件，如控件菜单中，按钮来最小化和最大化窗口，并控制调整窗口的大小。 完全占用的子窗口的窗口的客户端区域包含"内容"，该视图。 下图显示了一个框架窗口和视图之间的关系。
 
-![框架窗口视图](../mfc/media/vc37fx1.gif "vc37fx1")框架窗口和视图
+![框架窗口视图](../mfc/media/vc37fx1.gif "框架窗口视图") <br/>
+框架窗口和视图
 
 ## <a name="frame-windows-and-splitter-windows"></a>帧 Windows 和拆分器 Windows
 

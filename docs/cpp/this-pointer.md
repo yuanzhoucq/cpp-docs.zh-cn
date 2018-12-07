@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pointers, to class instance
 - this pointer
 ms.assetid: 92e3256a-4ad9-4d46-8be1-d77fad90791f
-ms.openlocfilehash: fb7198b22491a94eb2f00fecec83ec296ce03450
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c90a843ba978a98c1c61d9e096d62b85256ab0c4
+ms.sourcegitcommit: d441305fb19131afbd7fc259d8cda63ea26f2343
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50535000"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51678322"
 ---
 # <a name="this-pointer"></a>this 指针
 
@@ -21,8 +21,8 @@ ms.locfileid: "50535000"
 
 ## <a name="syntax"></a>语法
 
-```
-this 
+```cpp
+this
 this->member-identifier
 ```
 
@@ -126,7 +126,7 @@ int main()
     // Display 'my buffer'
     myBuf.Display();
 
-    // assignment opperator
+    // assignment operator
     myBuf = yourBuf;
 
     // Display 'your buffer'

@@ -10,16 +10,16 @@ helpviewer_keywords:
 - rowsets, event notifications
 - OLE DB providers, notifications
 ms.assetid: 305a1103-0c87-40c8-94bc-7fbbdd52ae32
-ms.openlocfilehash: 20572fa444f585d231bc5374bebac4dbb71166a1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 491da4d1735a32eba4e6e5bd8bee6604da4aeb73
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50647767"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556330"
 ---
 # <a name="receiving-notifications"></a>接收通知
 
-OLE DB 提供用于在事件发生时接收通知的接口。 中介绍了这些[OLE DB 对象通知](/previous-versions/windows/desktop/ms725406)中**OLE DB 程序员参考**。 这些事件的安装程序将使用标准的 COM 连接点机制。 例如，想要检索事件通过的 ATL 对象`IRowsetNotify`实现`IRowsetNotify`接口通过添加`IRowsetNotify`到派生类的列表并将其公开通过 COM_INTERFACE_ENTRY 宏。
+OLE DB 提供用于在事件发生时接收通知的接口。 中介绍了这些[OLE DB 对象通知](https://docs.microsoft.com/previous-versions/windows/desktop/ms725406(v=vs.85))中**OLE DB 程序员参考**。 这些事件的安装程序将使用标准的 COM 连接点机制。 例如，想要检索事件通过的 ATL 对象`IRowsetNotify`实现`IRowsetNotify`接口通过添加`IRowsetNotify`到派生类的列表并将其公开通过 COM_INTERFACE_ENTRY 宏。
 
 `IRowsetNotify` 有三个方法，可以在不同时间调用。 如果你想要响应的下列方法之一，则可以使用[IRowsetNotifyImpl](../../data/oledb/irowsetnotifyimpl-class.md)类，该类不感兴趣的方法返回 E_NOTIMPL。
 

@@ -28,12 +28,12 @@ helpviewer_keywords:
 - ranges, message map
 - message map ranges
 ms.assetid: 531b15ce-32b5-4ca0-a849-bb519616c731
-ms.openlocfilehash: 8d4caca4d5a0b5c12b0af5a948b17b7e2ad05221
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4012f1f0729ff0f46a8504c44f27a37cd55c77e5
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50474264"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327442"
 ---
 # <a name="message-map-macros-mfc"></a>消息映射宏 (MFC)
 
@@ -246,31 +246,12 @@ ON_COMMAND_EX(id, memberFxn);
 命令 ID。
 
 *memberFxn*<br/>
-该命令映射到的消息处理程序函数的名称。
-
-### <a name="remarks"></a>备注
-
-命令消息处理程序的扩展的形式是可用于高级用途。 ON_COMMAND_EX 宏用于此类消息处理程序，并提供 [ON_COMMAND] (#on_command) 功能的超集。  扩展的命令处理程序成员函数采用一个参数，其中包含的命令 ID，UINT，并返回一个布尔值。 返回值应为 TRUE 以
-
-此宏将命令消息映射到扩展的命令处理程序成员函数。
-
-### <a name="syntax"></a>语法
-
-```
-ON_COMMAND_EX(id,  memberFxn);
-```
-
-### <a name="parameters"></a>参数
-
-*id*<br/>
-命令 ID。
-
-*memberFxn*<br/>
 命令映射到的消息处理程序函数的名称。
 
 ### <a name="remarks"></a>备注
 
 命令消息处理程序的扩展的形式是可用于高级用途。 ON_COMMAND_EX 宏用于此类消息处理程序，并且它提供的超集[ON_COMMAND](message-map-macros-mfc.md#on_command)功能。 扩展的命令处理程序成员函数采用一个参数，其中包含的命令 ID，UINT，并返回一个布尔值。 返回值应为 TRUE 以指示已处理该命令;否则路由到其他命令目标对象将继续。
+
 有关详细信息，请参阅技术说明 [TN006： 消息映射] tm006 消息 maps.md)。
 
 ### <a name="requirements"></a>要求

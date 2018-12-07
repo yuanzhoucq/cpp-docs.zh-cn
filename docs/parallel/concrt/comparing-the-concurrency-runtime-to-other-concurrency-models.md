@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Concurrency Runtime, compared to other models
 ms.assetid: d8b9a1f4-f15f-43c3-a5b4-c0991edf9c86
-ms.openlocfilehash: 0b5c24761f176d9c256c1ef6aee85b25231cea2b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 82e1dca1345b909919320b911c4c107e965c9850
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50655840"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51332668"
 ---
 # <a name="comparing-the-concurrency-runtime-to-other-concurrency-models"></a>将并发运行时与其他并发模型进行比较
 
@@ -33,7 +33,7 @@ ms.locfileid: "50655840"
 
 ### <a name="preemptive-and-cooperative-scheduling"></a>抢先式和协作式计划
 
-*抢先式计划* 是一种基于优先级的轮循机制，它在给定时间内为每个任务提供单独访问计算资源的权限，并在之后切换到其他任务。 抢先式计划在多任务操作系统（例如 Windows）中很常见 *。协作式计划*是一种机制，它为每个任务授予单独访问计算资源的权限，直到任务结束或任务生成对资源的访问权限为止。 并发运行时将操作系统的抢先式计划程序与协作式计划配合使用，以达到处理资源的最大使用率。
+*抢先式计划* 是一种基于优先级的轮循机制，它在给定时间内为每个任务提供单独访问计算资源的权限，并在之后切换到其他任务。 抢先式计划是在 Windows 等多任务操作系统中常见的。 *协作式计划*是一种机制，为每个任务的独占访问权限提供计算资源，直到任务结束或任务生成对资源的访问权限。 并发运行时将操作系统的抢先式计划程序与协作式计划配合使用，以达到处理资源的最大使用率。
 
 ### <a name="differences-between-preemptive-and-cooperative-schedulers"></a>抢先式和协作式计划程序之间的差异
 

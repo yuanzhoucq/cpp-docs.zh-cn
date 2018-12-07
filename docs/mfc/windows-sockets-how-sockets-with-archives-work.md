@@ -1,6 +1,6 @@
 ---
 title: Windows 套接字：使用存档的套接字如何工作
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - Windows Sockets [MFC], synchronous
 - sockets [MFC], synchronous operation
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows Sockets [MFC], with archives
 - two-state socket object
 ms.assetid: d8ae4039-391d-44f0-a19b-558817affcbb
-ms.openlocfilehash: e87ee1467946003580ffa75e36e39b2c747892b7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f6101193c85e41fbf82681b0b2ae1e09e4162f87
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50510755"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52174907"
 ---
 # <a name="windows-sockets-how-sockets-with-archives-work"></a>Windows 套接字：使用存档的套接字如何工作
 
@@ -30,7 +30,8 @@ ms.locfileid: "50510755"
 
 下图显示通信的两面上的这些对象之间的关系。
 
-![CArchive、 CSocketFile 和 CSocket](../mfc/media/vc38ia1.gif "vc38ia1") CArchive、 CSocketFile 和 CSocket
+![CArchive、 CSocketFile 和 CSocket](../mfc/media/vc38ia1.gif "CArchive、 CSocketFile 和 CSocket") <br/>
+CArchive、CSocketFile 和 CSocket
 
 此明显的目的是复杂性的防止您的自行管理的套接字的详细信息。 创建套接字、 文件和存档，然后首先将其插入到存档或从存档中解压缩的发送或接收数据。 [CArchive](../mfc/reference/carchive-class.md)， [CSocketFile](../mfc/reference/csocketfile-class.md)，和[CSocket](../mfc/reference/csocket-class.md)管理在后台的详细信息。
 
@@ -41,7 +42,7 @@ ms.locfileid: "50510755"
 如果`CSocket`未实现为两个状态对象，它可以接收相同类型的事件的其他通知，而在处理前一次通知。 例如，可能会得到`OnReceive`通知处理时`OnReceive`。 在上述代码片段中，提取`str`从存档可能导致递归。 通过切换状态，`CSocket`可以阻止其他通知，从而防止递归。 一般规则是内部通知的任何通知。
 
 > [!NOTE]
->  一个`CSocketFile`还可用作 （受限） 文件，如果没有`CArchive`对象。 默认情况下`CSocketFile`构造函数的*bArchiveCompatible*参数是**TRUE**。 这指定为用于存档文件对象。 若要使用但未存档的文件对象，将传递**FALSE**中*bArchiveCompatible*参数。
+> 一个`CSocketFile`还可用作 （受限） 文件，如果没有`CArchive`对象。 默认情况下`CSocketFile`构造函数的*bArchiveCompatible*参数是**TRUE**。 这指定为用于存档文件对象。 若要使用但未存档的文件对象，将传递**FALSE**中*bArchiveCompatible*参数。
 
 在"存档兼容"模式下，`CSocketFile`对象提供了更好的性能并减少了危险"死锁"。 当这两个发送和接收套接字都等待对方，或等待常见资源发生死锁。 如果这种情况下可能会出现`CArchive`对象使用过`CSocketFile`的方式与其处理`CFile`对象。 使用`CFile`，存档可以假定，如果它收到较少的字节数比请求它时，文件结尾达到了。 使用`CSocketFile`，但是，数据是基于消息; 缓冲区中可以包含多条消息，因此接收请求的字节数少于并不表示文件结尾。 在此情况下不会阻止应用程序，因为它可能与`CFile`，并且可以继续从缓冲区读取消息，直到缓冲区为空。 [IsBufferEmpty](../mfc/reference/carchive-class.md#isbufferempty)函数，在`CArchive`用于监视在这种情况中的存档文件的缓冲区的状态。
 
@@ -51,4 +52,3 @@ ms.locfileid: "50510755"
 
 [MFC 中的 Windows 套接字](../mfc/windows-sockets-in-mfc.md)<br/>
 [Cobject:: Serialize](../mfc/reference/cobject-class.md#serialize)
-

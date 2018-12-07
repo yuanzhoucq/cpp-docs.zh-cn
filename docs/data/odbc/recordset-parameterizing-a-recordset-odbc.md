@@ -7,12 +7,12 @@ helpviewer_keywords:
 - recordsets, parameterizing
 - passing parameters, to queries at runtime
 ms.assetid: 7d1dfeb6-5ee0-45e2-aacc-63bc52a465cd
-ms.openlocfilehash: fdea70f8d87604ca0665baa64c8652c14295a670
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f58a33a0c43cb0d70d98f3f2ae33f766058b1c23
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506569"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51331264"
 ---
 # <a name="recordset-parameterizing-a-recordset-odbc"></a>记录集：参数化记录集 (ODBC)
 
@@ -54,7 +54,7 @@ ms.locfileid: "50506569"
 
    记录集的筛选器字符串，存储在`m_strFilter`，可能如下所示：
 
-    ```
+    ```cpp
     "StudentID = ?"
     ```
 
@@ -62,7 +62,7 @@ ms.locfileid: "50506569"
 
    分配参数值，如下所示：
 
-    ```
+    ```cpp
     strInputID = "100";
     ...
     m_strParam = strInputID;
@@ -70,7 +70,7 @@ ms.locfileid: "50506569"
 
    您不希望这种方式设置筛选器字符串：
 
-    ```
+    ```cpp
     m_strFilter = "StudentID = 100";   // 100 is incorrectly quoted
                                        // for some drivers
     ```
@@ -79,15 +79,15 @@ ms.locfileid: "50506569"
 
    参数值每次均不同您再次查询记录集是新学生 id。
 
-    > [!TIP]
-    >  使用一个参数是只使用筛选器比效率更高。 参数化记录集，数据库必须处理 SQL**选择**语句仅一次。 不带参数，筛选记录集**选择**必须处理语句每次`Requery`的新筛选器值。
+   > [!TIP]
+   > 使用一个参数是只使用筛选器比效率更高。 参数化记录集，数据库必须处理 SQL**选择**语句仅一次。 不带参数，筛选记录集**选择**必须处理语句每次`Requery`的新筛选器值。
 
 有关筛选器的详细信息，请参阅[记录集： 筛选记录 (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md)。
 
 ##  <a name="_core_parameterizing_your_recordset_class"></a> 参数化记录集类
 
 > [!NOTE]
->  本部分适用于对象派生自`CRecordset`中的批量行提取尚未实现。 如果您使用的批量行提取，则实现参数是一个类似的过程。 有关详细信息，请参阅[记录集： 提取记录 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
+> 本部分适用于对象派生自`CRecordset`中的批量行提取尚未实现。 如果您使用的批量行提取，则实现参数是一个类似的过程。 有关详细信息，请参阅[记录集： 提取记录 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
 
 创建记录集类之前，确定所需的参数、 其数据类型是什么，和记录集如何使用它们。
 
@@ -116,7 +116,7 @@ ms.locfileid: "50506569"
 
 1. 修改[DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) .cpp 文件中的成员函数定义。 添加 RFX 函数调用每个参数的数据成员添加到类。 有关编写 RFX 函数的信息，请参阅[记录字段交换： RFX 的工作机制](../../data/odbc/record-field-exchange-how-rfx-works.md)。 请在前面的单个调用 RFX 调用的参数：
 
-    ```
+    ```cpp
     pFX->SetFieldType( CFieldExchange::param );
     // RFX calls for parameter data members
     ```
@@ -130,11 +130,10 @@ ms.locfileid: "50506569"
    在运行时，"？"的占位符，按顺序填充，则通过通过参数值。 第一个参数的数据成员设置后[SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype)调用，将替换第一个"？"在 SQL 字符串，第二个参数的数据成员替换第二个"？"，依次类推。
 
 > [!NOTE]
->  参数顺序非常重要： RFX 的顺序调用中的参数在`DoFieldExchange`函数必须与你的 SQL 字符串中的参数占位符的顺序匹配。
+> 参数顺序非常重要： RFX 的顺序调用中的参数在`DoFieldExchange`函数必须与你的 SQL 字符串中的参数占位符的顺序匹配。
 
 > [!TIP]
-
->  要使用的最有可能字符串是所指定的字符串 （如果有） 的类[m_strFilter](../../mfc/reference/crecordset-class.md#m_strfilter)数据成员，但某些 ODBC 驱动程序可能会允许其他 SQL 子句中的参数。
+> 要使用的最有可能字符串是所指定的字符串 （如果有） 的类[m_strFilter](../../mfc/reference/crecordset-class.md#m_strfilter)数据成员，但某些 ODBC 驱动程序可能会允许其他 SQL 子句中的参数。
 
 ##  <a name="_core_passing_parameter_values_at_run_time"></a> 在运行时传递参数值
 

@@ -55,12 +55,12 @@ helpviewer_keywords:
 - AFX_GLOBAL_DATA structure [MFC]
 - AFX_GLOBAL_DATA constructor
 ms.assetid: c7abf2fb-ad5e-4336-a01d-260c29ed53a2
-ms.openlocfilehash: a6e75dfaab57fa0da534f0d9862b04e99f1f089a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9b6a462cf359bbd31958509c4fe7d0d71e490d11
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50603198"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694304"
 ---
 # <a name="afxglobaldata-structure"></a>AFX_GLOBAL_DATA 结构
 
@@ -259,10 +259,10 @@ BOOL DrawTextOnGlass(
 [in]指向设备上下文指针。
 
 *iPartId*<br/>
-[in]具有所需的文本外观的控件部件。 有关详细信息，请参阅 [部件和状态](https://msdn.microsoft.com/library/windows/desktop/bb773210)中表格的“部件”列。 如果此值为 0，则会使用默认字体或在设备上下文中选择的字体绘制文本。
+[in]具有所需的文本外观的控件部件。 有关详细信息，请参阅 [部件和状态](/windows/desktop/controls/parts-and-states)中表格的“部件”列。 如果此值为 0，则会使用默认字体或在设备上下文中选择的字体绘制文本。
 
 *iStateId*<br/>
-[in]具有所需的文本外观的控件状态。 有关详细信息，请参阅 [部件和状态](https://msdn.microsoft.com/library/windows/desktop/bb773210)中表格的“状态”列。
+[in]具有所需的文本外观的控件状态。 有关详细信息，请参阅 [部件和状态](/windows/desktop/controls/parts-and-states)中表格的“状态”列。
 
 *strText*<br/>
 [in]要绘制的文本。
@@ -293,7 +293,7 @@ BOOL DrawTextOnGlass(
 
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>
 [COLORREF](/windows/desktop/gdi/colorref)<br/>
-[部件和状态](https://msdn.microsoft.com/library/windows/desktop/bb773210)<br/>
+[部件和状态](/windows/desktop/controls/parts-and-states)<br/>
 [CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext)<br/>
 [DrawThemeTextEx](/windows/desktop/api/uxtheme/nf-uxtheme-drawthemetextex)<br/>
 [桌面窗口管理器](/windows/desktop/dwm/dwm-overview)<br/>
@@ -431,7 +431,7 @@ BOOL GetNonClientMetrics(NONCLIENTMETRICS& info);
 ### <a name="parameters"></a>参数
 
 info<br/>
-[in、 out]一个[NONCLIENTMETRICS](https://msdn.microsoft.com/library/windows/desktop/ff729175)结构，其中包含与非最小化窗口的非工作区相关联的可缩放度量值。
+[in、 out]一个[NONCLIENTMETRICS](/windows/desktop/api/winuser/ns-winuser-tagnonclientmetricsa)结构，其中包含与非最小化窗口的非工作区相关联的可缩放度量值。
 
 ### <a name="return-value"></a>返回值
 
@@ -439,7 +439,7 @@ info<br/>
 
 ### <a name="see-also"></a>请参阅
 
-[NONCLIENTMETRICS 结构](https://msdn.microsoft.com/library/windows/desktop/ff729175)
+[NONCLIENTMETRICS 结构](/windows/desktop/api/winuser/ns-winuser-tagnonclientmetricsa)
 
 ## <a name="gettextheight"></a> AFX_GLOBAL_DATA::GetTextHeight
 
@@ -510,7 +510,6 @@ BOOL InitD2D(
 
 ```
 BOOL Is32BitIcons() const;
-
 ```
 
 ### <a name="return-value"></a>返回值

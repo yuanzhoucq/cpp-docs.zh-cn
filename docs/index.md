@@ -4,12 +4,12 @@ title: Visual C++ 文档
 description: 了解如何使用 C++ 针对平台和设备开发应用程序、服务和工具。
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: b4e660af273fac320fcebed19c135d8e37d1a50f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9b5629adf14e1ba5caad4157a28db65b4198b904
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677859"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51328287"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -377,7 +377,7 @@ ms.locfileid: "50677859"
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>组件扩展</h3>
-                                                    <p>C++ 组件扩展：适用于 .NET 编程的 C++/CLI，以及适用于 UWP 编程的 C++/CX。</p>
+                                                    <p>C++ 的组件扩展：适用于 .NET 编程的 C++/CLI 和适用于 UWP 编程的 C++/CX。</p>
                                                 </div>
                                             </div>
                                         </div>

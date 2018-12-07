@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Parallel Diagnostic Tools [Concurrency Runtime]
 ms.assetid: b1a3f1d2-f5df-4f29-852e-906b3d8341fc
-ms.openlocfilehash: 44bb32f87379a05829816234ee8bc412de1f24b6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a9d6823a5f82e3d52f82f568d3e3c00b68236fef
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608567"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51329210"
 ---
 # <a name="parallel-diagnostic-tools-concurrency-runtime"></a>并行诊断工具（并发运行时）
 
@@ -35,8 +35,13 @@ Visual Studio 调试器包括**并行堆栈**窗口中，**并行任务**窗口�
 
 |事件|描述|“值”|
 |-----------|-----------------|-----------|
-
-|[concurrency::ConcRT_ProviderGuid](reference/concurrency-namespace-constants1.md#concrt_providerguid)|并发运行时的 ETW 提供程序标识符。 |`f7b697a3-4db5-4d3b-be71-c4d284e6592f`| |[concurrency::ContextEventGuid](reference/concurrency-namespace-constants1.md#contexteventguid)|将标记与上下文相关的事件。 |`5727a00f-50be-4519-8256-f7699871fecb`| |[concurrency::PPLParallelForEventGuid](reference/concurrency-namespace-constants1.md#pplparallelforeventguid)|将标记入口和出口调用[concurrency:: parallel_for](reference/concurrency-namespace-functions.md#parallel_for)算法。 |`31c8da6b-6165-4042-8b92-949e315f4d84`| |[concurrency::PPLParallelForeachEventGuid](reference/concurrency-namespace-constants1.md#pplparallelforeacheventguid)|将标记入口和出口调用[concurrency:: parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each)算法。 |`5cb7d785-9d66-465d-bae1-4611061b5434`| |[concurrency::PPLParallelInvokeEventGuid](reference/concurrency-namespace-constants1.md#pplparallelinvokeeventguid)|将标记入口和出口调用[concurrency:: parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke)算法。 |`d1b5b133-ec3d-49f4-98a3-464d1a9e4682`| |[concurrency::SchedulerEventGuid](reference/concurrency-namespace-constants1.md#schedulereventguid)|将标记与相关的事件[任务计划程序](../../parallel/concrt/task-scheduler-concurrency-runtime.md)。 |`e2091f8a-1e0a-4731-84a2-0dd57c8a5261`| |[concurrency::VirtualProcessorEventGuid](reference/concurrency-namespace-constants1.md#virtualprocessoreventguid)|将标记与虚拟处理器相关的事件。 |`2f27805f-1676-4ecc-96fa-7eb09d44302f`|
+|[concurrency::ConcRT_ProviderGuid](reference/concurrency-namespace-constants1.md#concrt_providerguid)|并发运行时的 ETW 提供程序标识符。|`f7b697a3-4db5-4d3b-be71-c4d284e6592f`|
+|[concurrency::ContextEventGuid](reference/concurrency-namespace-constants1.md#contexteventguid)|将标记与上下文相关的事件。|`5727a00f-50be-4519-8256-f7699871fecb`|
+|[concurrency::PPLParallelForEventGuid](reference/concurrency-namespace-constants1.md#pplparallelforeventguid)|将标记入口和出口调用[concurrency:: parallel_for](reference/concurrency-namespace-functions.md#parallel_for)算法。|`31c8da6b-6165-4042-8b92-949e315f4d84`|
+|[concurrency::PPLParallelForeachEventGuid](reference/concurrency-namespace-constants1.md#pplparallelforeacheventguid)|将标记入口和出口调用[concurrency:: parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each)算法。|`5cb7d785-9d66-465d-bae1-4611061b5434`|
+|[concurrency::PPLParallelInvokeEventGuid](reference/concurrency-namespace-constants1.md#pplparallelinvokeeventguid)|将标记入口和出口调用[concurrency:: parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke)算法。|`d1b5b133-ec3d-49f4-98a3-464d1a9e4682`|
+|[concurrency::SchedulerEventGuid](reference/concurrency-namespace-constants1.md#schedulereventguid)|将标记与相关的事件[任务计划程序](../../parallel/concrt/task-scheduler-concurrency-runtime.md)。|`e2091f8a-1e0a-4731-84a2-0dd57c8a5261`|
+|[concurrency::VirtualProcessorEventGuid](reference/concurrency-namespace-constants1.md#virtualprocessoreventguid)|将标记与虚拟处理器相关的事件。|`2f27805f-1676-4ecc-96fa-7eb09d44302f`|
 
 并发运行时定义，但目前不引发，以下事件。 在运行时保留供将来使用这些事件：
 

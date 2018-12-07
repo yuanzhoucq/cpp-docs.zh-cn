@@ -30,12 +30,12 @@ helpviewer_keywords:
 - std::basic_stringbuf [C++], str
 - std::basic_stringbuf [C++], underflow
 ms.assetid: 40c85f9e-42a5-4a65-af5c-23c8e3bf8113
-ms.openlocfilehash: 87ea8150e13076d176665bc3ddcc04482d639b79
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1ed9deee46f7c99750ee3260a6b2a8de1f0f3397
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462020"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51329639"
 ---
 # <a name="basicstringbuf-class"></a>basic_stringbuf 类
 
@@ -183,7 +183,7 @@ virtual int_type overflow(int_type _Meta = traits_type::eof());
 
 ### <a name="remarks"></a>备注
 
-如果 _ *Meta* 不等于 **traits_type::**[eof](../standard-library/char-traits-struct.md#eof)，则受保护虚拟成员函数尝试将元素 **traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(\_ *Meta*) 插入输出缓冲区。 它可以用多种方法执行此操作：
+如果 *\_Meta*不会比较等于**traits_type::**[eof](../standard-library/char-traits-struct.md#eof)，受保护虚拟成员函数尝试将元素**traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(*\_元*) 到输出缓冲区。 它可以用多种方法执行此操作：
 
 - 如果写入位置可用，它可将元素存储到写入位置并递增输出缓冲区的下一个指针。
 

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - vc.appwiz.mfc.exe.compdoc
 ms.assetid: 42e1af83-12c4-438d-92eb-13835afdb148
-ms.openlocfilehash: 572bb10d8aa2af38858bac50f795fb660d5476b1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 97443d4846141f4402e18bb19893fcac9b4f46da
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543026"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524048"
 ---
 # <a name="compound-document-support-mfc-application-wizard"></a>MFC 应用程序向导的复合文档支持
 
@@ -19,29 +19,29 @@ ms.locfileid: "50543026"
 
 - **复合文档支持**
 
-   确定你的应用程序提供了容器支持、 服务器支持，或两者。 有关这方面的详细信息，请参阅：
+  确定你的应用程序提供了容器支持、 服务器支持，或两者。 有关这方面的详细信息，请参阅：
 
-   - [容器：实现容器](../../mfc/containers-implementing-a-container.md)
+  - [容器：实现容器](../../mfc/containers-implementing-a-container.md)
 
-   - [服务器：实现服务器](../../mfc/servers-implementing-a-server.md)
+  - [服务器：实现服务器](../../mfc/servers-implementing-a-server.md)
 
-   |选项|描述|
-   |------------|-----------------|
-   |**无**|指示不支持对象链接和嵌入 (OLE)。 默认情况下，应用程序向导创建没有 ActiveX 支持的应用程序。|
-   |**容器**|包含链接和嵌入对象。|
-   |**袖珍服务器**|指示应用程序可以创建和管理复合文档对象。 请注意，不能运行袖珍服务器独立运行且只支持嵌入的项。|
-   |**完整的服务器**|指示应用程序可以创建和管理复合文档对象。 完整的服务器都能够运行独立和支持同时链接和嵌入的项。|
-   |**容器/完全服务器**|指示应用程序可以为容器和服务器。 容器是可以嵌入或链接项并入自己的文档的应用程序。 服务器是可以创建供容器应用程序使用的自动化项的应用程序。|
+  |选项|描述|
+  |------------|-----------------|
+  |**无**|指示不支持对象链接和嵌入 (OLE)。 默认情况下，应用程序向导创建没有 ActiveX 支持的应用程序。|
+  |**容器**|包含链接和嵌入对象。|
+  |**袖珍服务器**|指示应用程序可以创建和管理复合文档对象。 请注意，不能运行袖珍服务器独立运行且只支持嵌入的项。|
+  |**完整的服务器**|指示应用程序可以创建和管理复合文档对象。 完整的服务器都能够运行独立和支持同时链接和嵌入的项。|
+  |**容器/完全服务器**|指示应用程序可以为容器和服务器。 容器是可以嵌入或链接项并入自己的文档的应用程序。 服务器是可以创建供容器应用程序使用的自动化项的应用程序。|
 
 - **附加选项**
 
-   指示您的应用程序是否支持活动文档。 请参阅[活动文档](../../mfc/active-documents.md)有关此功能的详细信息。
+  指示您的应用程序是否支持活动文档。 请参阅[活动文档](../../mfc/active-documents.md)有关此功能的详细信息。
 
-   |选项|描述|
-   |------------|-----------------|
-   |**活动文档服务器**|指示应用程序可以创建和管理活动文档。 如果选择此选项，必须为活动文档服务器中指定的文件扩展名**文件扩展名**框中[文档模板字符串](../../mfc/reference/document-template-strings-mfc-application-wizard.md)向导页。 请参阅[活动文档服务器](../../mfc/active-document-servers.md)有关详细信息。|
-   |**活动文档容器**|指示应用程序可以包含其范围内的活动文档。 例如，Internet Explorer 文档或 Office 文档，如 Microsoft Word 文件或 Excel 电子表格，可能包括活动文档。 请参阅[活动文档包容](../../mfc/active-document-containment.md)有关详细信息。|
-   |**对复合文件的支持**|使用复合文件格式的容器应用程序的文档不会进行序列化。 此选项将强制加载到内存中包含的对象的整个文件。 为单个对象的增量存储不可用。 如果一个对象已更改，并且随后保存，然后保存该文件中的所有对象。|
+  |选项|描述|
+  |------------|-----------------|
+  |**活动文档服务器**|指示应用程序可以创建和管理活动文档。 如果选择此选项，必须为活动文档服务器中指定的文件扩展名**文件扩展名**框中[文档模板字符串](../../mfc/reference/document-template-strings-mfc-application-wizard.md)向导页。 请参阅[活动文档服务器](../../mfc/active-document-servers.md)有关详细信息。|
+  |**活动文档容器**|指示应用程序可以包含其范围内的活动文档。 例如，Internet Explorer 文档或 Office 文档，如 Microsoft Word 文件或 Excel 电子表格，可能包括活动文档。 请参阅[活动文档包容](../../mfc/active-document-containment.md)有关详细信息。|
+  |**对复合文件的支持**|使用复合文件格式的容器应用程序的文档不会进行序列化。 此选项将强制加载到内存中包含的对象的整个文件。 为单个对象的增量存储不可用。 如果一个对象已更改，并且随后保存，然后保存该文件中的所有对象。|
 
 ## <a name="see-also"></a>请参阅
 

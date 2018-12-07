@@ -1,17 +1,17 @@
 ---
 title: 数组 (C++)
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - declaring arrays [C++], about declaring arrays
 - multidimensional arrays [C++]
 - arrays [C++]
 ms.assetid: 3f5986aa-485c-4ba4-9502-67e2ef924238
-ms.openlocfilehash: 746a6b5a2122a7ccdd207d278d285af3e448d7ab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 176e358bd0217ac914eb4ee6079126d3f429b6dd
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50550665"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176874"
 ---
 # <a name="arrays-c"></a>数组 (C++)
 
@@ -75,7 +75,8 @@ int i2[5][7];
 
 指定类型的数组**int**、 从概念上讲排列在五个行和七列的二维矩阵中，如下图中所示：
 
-![一个多概念性布局&#45;维数组](../cpp/media/vc38rc1.gif "vc38RC1")概念布局的多维数组
+![一个多概念性布局&#45;维数组](../cpp/media/vc38rc1.gif "多的概念性布局&#45;维数组") <br/>
+多维数组的概念布局
 
 在声明中的多维数组的具有初始值设定项列表 (如中所述[初始值设定项](../cpp/initializers.md))，可以省略指定第一个维度的边界的常数表达式。 例如：
 

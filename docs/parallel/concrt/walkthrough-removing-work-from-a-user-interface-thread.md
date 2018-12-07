@@ -1,16 +1,16 @@
 ---
 title: 演练：从用户界面线程中移除工作
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - user-interface threads, removing work from [Concurrency Runtime]
 - removing work from user-interface threads [Concurrency Runtime]
 ms.assetid: a4a65cc2-b3bc-4216-8fa8-90529491de02
-ms.openlocfilehash: 85622b68f94342ece2c9fc666b9ff6d515cfe10b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1230cf2b3fa510aeca8516e41cf30f9665987d05
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50472432"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176310"
 ---
 # <a name="walkthrough-removing-work-from-a-user-interface-thread"></a>演练：从用户界面线程中移除工作
 
@@ -104,11 +104,11 @@ ms.locfileid: "50472432"
 
    [!code-cpp[concrt-mandelbrot#8](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_8.cpp)]
 
-9. 验证已成功更新应用程序通过生成并运行它。
+1. 验证已成功更新应用程序通过生成并运行它。
 
 下图显示了 Mandelbrot 应用程序的结果。
 
-![Mandelbrot 应用程序](../../parallel/concrt/media/mandelbrot.png "mandelbrot 集合")
+![Mandelbrot 应用程序](../../parallel/concrt/media/mandelbrot.png "Mandelbrot 应用程序")
 
 每个像素计算的计算成本高昂，因为 UI 线程无法处理其他消息，直到完成整体计算。 这可能会降低应用程序中的响应能力。 但是，您可以通过从 UI 线程中移除工作来缓解此问题。
 

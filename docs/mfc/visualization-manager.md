@@ -1,29 +1,34 @@
 ---
 title: 可视化管理器
-ms.date: 06/28/2018
+ms.date: 11/19/2018
 helpviewer_keywords:
 - Visualization Manager
 ms.assetid: c9dd1365-27ac-42e5-8caa-1004525b4129
-ms.openlocfilehash: befff860f50677f9c70c0fbb6b45ac528c36e773
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9c9dc19266d80d56f696953c5f5896eb9d99cc8b
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50521367"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175569"
 ---
 # <a name="visualization-manager"></a>可视化管理器
 
 视觉管理器是一个对象，用于控制整个应用程序的外观。 它充当一个类可以为应用程序放置所有绘图代码。 MFC 库包含多个视觉管理器。 如果你想要创建你的应用程序的自定义视图，还可以创建自己的可视化管理器。 下图显示相同的应用程序时启用不同的视觉管理器：
 
-![由 CMFCVisualManagerWindows 呈现的 MyApp](../mfc/media/vmwindows.png "vmwindows")使用 CMFCVisualManagerWindows 视觉管理器的 MyApp
+![由 CMFCVisualManagerWindows 呈现的 MyApp](../mfc/media/vmwindows.png "由 CMFCVisualManagerWindows 呈现的 MyApp") <br/>
+使用 CMFCVisualManagerWindows 视觉管理器的 MyApp
 
-![由 CMFCVisualManagerVS2005 呈现的 MyApp](../mfc/media/vmvs2005.png "vmvs2005")使用 CMFCVisualManagerVS2005 视觉管理器的 MyApp
+![由 CMFCVisualManagerVS2005 呈现的 MyApp](../mfc/media/vmvs2005.png "由 CMFCVisualManagerVS2005 呈现的 MyApp") <br/>
+使用 CMFCVisualManagerVS2005 视觉管理器的 MyApp
 
-![由 CMFCVisualManagerOfficeXP 呈现的 MyApp](../mfc/media/vmofficexp.png "vmofficexp")使用 CMFCVisualManagerOfficeXP 视觉管理器的 MyApp
+![由 CMFCVisualManagerOfficeXP 呈现的 MyApp](../mfc/media/vmofficexp.png "由 CMFCVisualManagerOfficeXP 呈现的 MyApp") <br/>
+使用 CMFCVisualManagerOfficeXP 视觉管理器的 MyApp
 
-![由 CMFCVisualManagerOffice2003 呈现的 MyApp](../mfc/media/vmoffice2003.png "vmoffice2003")使用 CMFCVisualManagerOffice2003 视觉管理器的 MyApp
+![由 CMFCVisualManagerOffice2003 呈现的 MyApp](../mfc/media/vmoffice2003.png "由 CMFCVisualManagerOffice2003 呈现的 MyApp") <br/>
+使用 CMFCVisualManagerOffice2003 视觉管理器的 MyApp
 
-![由 CMFCVisualManagerOffice2007 呈现的 MyApp](../mfc/media/msoffice2007.png "msoffice2007")使用 CMFCVisualManagerOffice2007 视觉管理器的 MyApp
+![由 CMFCVisualManagerOffice2007 呈现的 MyApp](../mfc/media/msoffice2007.png "由 CMFCVisualManagerOffice2007 呈现的 MyApp") <br/>
+使用 CMFCVisualManagerOffice2007 视觉管理器的 MyApp
 
 默认情况下，visual manager 会维护多个 GUI 元素的绘制代码。 若要提供自定义 UI 元素，您需要重写视觉管理器的相关绘图方法。 有关这些方法的列表，请参阅[CMFCVisualManager 类](../mfc/reference/cmfcvisualmanager-class.md)。 可以重写以提供自定义外观的方法是以开头的所有方法`OnDraw`。
 

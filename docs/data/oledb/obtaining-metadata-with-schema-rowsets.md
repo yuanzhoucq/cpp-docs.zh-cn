@@ -6,12 +6,12 @@ helpviewer_keywords:
 - OLE DB consumer templates, getting provider metadata
 - metadata, getting (OLE DB Templates)
 ms.assetid: 6b448461-82fb-4acf-816b-3cbb0ca1d186
-ms.openlocfilehash: cb0f7813a351f272d5417955fb98719d889a64ae
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a9717649c1bd4f956da8bc926e8f492f4eccff74
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50561204"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556837"
 ---
 # <a name="obtaining-metadata-with-schema-rowsets"></a>用架构行集合获取元数据
 
@@ -52,7 +52,7 @@ CRestrictions<CAccessor<CColumnsInfo>
 
 [CRestrictions](../../data/oledb/crestrictions-class.md)类提供了限制支持。 创建架构行集的实例后，调用[crestrictions:: Open](../../data/oledb/crestrictions-open.md)。 此方法返回基于所指定限制的结果集。
 
-若要指定限制，请参阅[附录 b： 架构行集](/previous-versions/windows/desktop/ms712921)并查找要使用的行集。 例如，`CColumns`对应于[COLUMNS 行集](/previous-versions/windows/desktop/ms723052\(v%3dvs.85\)); 该主题列出了 COLUMNS 行集中的限制列： TABLE_CATALOG、 TABLE_SCHEMA、 TABLE_NAME、 COLUMN_NAME。 必须遵循此顺序来指定你的限制。
+若要指定限制，请参阅[附录 b： 架构行集](https://docs.microsoft.com/previous-versions/windows/desktop/ms712921(v=vs.85))并查找要使用的行集。 例如，`CColumns`对应于[COLUMNS 行集](https://docs.microsoft.com/previous-versions/windows/desktop/ms723052(v=vs.85)\(v%3dvs.85\)); 该主题列出了 COLUMNS 行集中的限制列： TABLE_CATALOG、 TABLE_SCHEMA、 TABLE_NAME、 COLUMN_NAME。 必须遵循此顺序来指定你的限制。
 
 因此，例如，如果你想要限制的表名，TABLE_NAME 是第三个限制列，，然后调用`Open`，所需的表名指定为第三个限制参数，如以下示例所示。
 
@@ -82,7 +82,7 @@ CRestrictions<CAccessor<CColumnsInfo>
 
 有关架构行集的引用，typedef 类中提供的 OLE DB 模板 (请参阅[架构行集类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md))。
 
-有关 OLE DB 架构行集，包括限制列的详细信息请参阅[附录 b： 架构行集](/previous-versions/windows/desktop/ms712921)中**OLE DB 程序员参考**。
+有关 OLE DB 架构行集，包括限制列的详细信息请参阅[附录 b： 架构行集](https://docs.microsoft.com/previous-versions/windows/desktop/ms712921(v=vs.85))中**OLE DB 程序员参考**。
 
 有关如何使用架构行集类的更复杂的示例，请参阅[CatDB](https://github.com/Microsoft/VCSamples)并[DBViewer](https://github.com/Microsoft/VCSamples)示例。
 

@@ -106,7 +106,7 @@ bool operator<(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="remarks"></a>备注
 
-如果 `N` 大于 0，且 `tpl1` 中的第一个不同值小于 `tpl2` 中的相应值，则函数返回 ture，否则返回 false。
+如果 `N` 大于 0，且 `tpl1` 中的第一个不同值小于 `tpl2` 中的相应值，则函数返回 true，否则返回 false。
 
 ### <a name="example"></a>示例
 

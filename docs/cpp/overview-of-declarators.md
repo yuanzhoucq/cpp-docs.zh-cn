@@ -1,21 +1,22 @@
 ---
 title: 声明符概述
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - declarators, about declarators
 ms.assetid: 0f2e2312-80bd-4154-8345-718bd9ed2173
-ms.openlocfilehash: 8279dcb7f3cbc137320e46dded48d140d1429f8a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e651b4422a159bf947e364c82cc4aac1b888d30d
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50583347"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52177077"
 ---
 # <a name="overview-of-declarators"></a>声明符概述
 
 声明符是指定对象或函数名称的声明的组成部分。 声明符还指定是否命名对象是对象、指针、引用还是数组。  尽管声明符不指定基类型，但它们会修改基类型中的类型信息以指定派生类型，如指针、引用和数组。  声明符应用于函数，与类型说明符（用于完全指定函数的返回类型是对象、指针还是引用）的工作方式相同。 (中讨论的说明符[声明和定义](declarations-and-definitions-cpp.md)，如类型和存储类的属性传递。 在本部分中并在讨论的修饰符[Microsoft 专用的修饰符](../cpp/microsoft-specific-modifiers.md)，修改声明符。)下图显示 `MyFunction` 的完整声明，并对声明的各个组成部分进行了标注。
 
-![修饰符、 说明符和声明符](../cpp/media/vc38qy1.gif "vc38QY1")说明符、 修饰符和声明符
+![修饰符、 说明符和声明符](../cpp/media/vc38qy1.gif "修饰符、 说明符和声明符") <br/>
+说明符、 修饰符和声明符
 
 **Microsoft 专用**
 
@@ -155,11 +156,11 @@ int a, *b, c[5], **d, &e=a;
 
 - `declarator` 被定义为以下项之一：
 
-  - identifier 
-  - 限定名称 
+  - identifier
+  - 限定名称
   - 声明符 （参数列表） [cv-qualfiers] [异常 spec]
   - 声明符 [[常数表达式]]
-  - 指针运算符声明符 
+  - 指针运算符声明符
   - （声明符）
 
 - 并*指针运算符*是之一：

@@ -1,17 +1,17 @@
 ---
 title: dynamic_cast 运算符
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - dynamic_cast_cpp
 helpviewer_keywords:
 - dynamic_cast keyword [C++]
 ms.assetid: f380ada8-6a18-4547-93c9-63407f19856b
-ms.openlocfilehash: 75085fe6dd1478fee769e23938c55c6300429d86
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3b359885eb72f9272fb1efe14afe9a6cbe6ddb30
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50529150"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176960"
 ---
 # <a name="dynamiccast-operator"></a>dynamic_cast 运算符
 
@@ -121,7 +121,8 @@ int main() {
 }
 ```
 
-![类层次结构显示多重继承](../cpp/media/vc39011.gif "vc39011")类层次结构显示多重继承
+![类层次结构显示多重继承](../cpp/media/vc39011.gif "类显示多个继承层次结构") <br/>
+显示多重继承的类层次结构
 
 指向类型的对象的指针`D`可以安全地转换到`B`或`C`。 但是，如果`D`强制转换为指向`A`对象的哪些实例`A`将导致？ 这会导致不明确转换错误。 若要解决此问题，可以执行两个明确的强制转换。 例如：
 
@@ -141,13 +142,15 @@ void f() {
 
 使用虚拟基类时，可以引入进一步二义性。 请考虑下图中所示的类层次结构。
 
-![类层次结构显示虚拟基类的](../cpp/media/vc39012.gif "vc39012")类层次结构显示虚拟基类
+![类层次结构显示虚拟基类的](../cpp/media/vc39012.gif "类显示虚拟基类层次结构") <br/>
+显示虚拟基类的类层次结构
 
 此层次结构中`A`是虚拟基类。 给定类的实例`E`和指针`A`子对象**dynamic_cast**指向的`B`将因多义性而失败。 您必须首先强制转换为完整`E`对象，并明确的方式，来访问正确工作反向沿层次结构，`B`对象。
 
 请考虑下图中所示的类层次结构。
 
-![类层次结构显示重复基类的](../cpp/media/vc39013.gif "vc39013")类层次结构显示重复基类
+![类层次结构显示重复基类的](../cpp/media/vc39013.gif "类显示重复基类的层次结构") <br/>
+显示重复基类的类层次结构
 
 给定类型的对象`E`和指针`D`子对象，若要从导航`D`最左侧的子对象`A`子对象，可为三个转换。 你可以执行**dynamic_cast**从转换`D`指针，指向`E`指针，则转换 (任一**dynamic_cast**或隐式转换) 从`E`到`B`，并最后的隐式转换从`B`到`A`。 例如：
 

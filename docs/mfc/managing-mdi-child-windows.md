@@ -1,6 +1,6 @@
 ---
 title: 管理 MDI 子窗口
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - MDICLIENT
 helpviewer_keywords:
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - child windows [MFC]
 - MDI [MFC], frame windows
 ms.assetid: 1828d96e-a561-48ae-a661-ba9701de6bee
-ms.openlocfilehash: 2055c215392c6805791de729ff6ab8c6a9057308
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d4b6ccf8a75cc7679f78fba48314073bc53b66a5
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629406"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176791"
 ---
 # <a name="managing-mdi-child-windows"></a>管理 MDI 子窗口
 
@@ -25,7 +25,8 @@ MDI 主框架窗口 （每个应用程序一个） 包含名为 MDICLIENT 窗口
 
 在 MDI 框架窗口中，框架窗口管理 MDICLIENT 窗口中，其与控件条结合使用进行重新定位。 MDICLIENT 窗口中，反过来，管理所有 MDI 子框架窗口。 下图显示 MDI 框架窗口、 其 MDICLIENT 窗口与其子文档框架窗口之间的关系。
 
-![MDI 框架窗口中的子窗口](../mfc/media/vc37gb1.gif "vc37gb1") MDI 框架 Windows 和子级
+![MDI 框架窗口中的子窗口](../mfc/media/vc37gb1.gif "MDI 框架窗口中的子窗口") <br/>
+MDI 框架窗口和子窗口
 
 MDI 框架窗口还将与当前 MDI 子窗口（如果有一个）结合使用。 MDI 框架窗口在尝试处理命令消息之前，会将这些消息委派给 MDI 子窗口。
 

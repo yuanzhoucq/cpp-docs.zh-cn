@@ -1,24 +1,24 @@
 ---
 title: ATL COM 对象的基础知识
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - COM, and ATL
 - ATL, COM
 - ATL COM objects
 - COM objects, ATL
 ms.assetid: 0f9c9d98-cc28-45da-89ac-dc94cee422fe
-ms.openlocfilehash: 243b7f84fc20e1c002e866ae0720ab9521d24748
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6af732b381ab0c6c507d1d651b096e3976ab2d4b
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437218"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176492"
 ---
 # <a name="fundamentals-of-atl-com-objects"></a>ATL COM 对象的基础知识
 
 下图描绘了类和接口，用于定义 ATL COM 对象之间的关系。
 
-![ATL 结构](../atl/media/vc307y1.gif "vc307y1")
+![ATL 结构](../atl/media/vc307y1.gif "ATL 结构")
 
 > [!NOTE]
 >  此图`CComObject`派生自`CYourClass`而`CComAggObject`并`CComPolyObject`包括`CYourClass`作为成员变量。

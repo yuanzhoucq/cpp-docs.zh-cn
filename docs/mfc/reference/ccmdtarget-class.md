@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CCmdTarget [MFC], OnFinalRelease
 - CCmdTarget [MFC], RestoreWaitCursor
 ms.assetid: 8883b132-2057-4ce0-a5f2-88979f8f2b13
-ms.openlocfilehash: 4d69b0b262ec53460d655a19cd421051f7177636
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0415fb98cec6b1d92f6a5a43ff705f1b5a7cd348
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498834"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51523814"
 ---
 # <a name="ccmdtarget-class"></a>CCmdTarget 类
 
@@ -329,7 +329,7 @@ virtual UINT GetTypeInfoCount();
 
 ### <a name="remarks"></a>备注
 
-此成员函数基本上可实现[IDispatch::GetTypeInfoCount](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-gettypeinfocount)。
+此成员函数基本上可实现[IDispatch::GetTypeInfoCount](/windows/desktop/api/oaidl/nf-oaidl-idispatch-gettypeinfocount)。
 
 派生的类应重写此函数可返回提供 （0 或 1） 的类型信息接口的数量。 如果未重写，`GetTypeInfoCount`返回 0。 若要重写，请使用[IMPLEMENT_OLETYPELIB](../../mfc/reference/type-library-access.md#implement_oletypelib)宏，还可实现`GetTypeLib`和`GetTypeLibCache`。
 

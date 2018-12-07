@@ -31,12 +31,12 @@ helpviewer_keywords:
 - processes, executing new
 - process creation
 ms.assetid: e171ebfa-70e7-4c44-8331-2a291fc17bd6
-ms.openlocfilehash: 079841800befcb7196c6428eb58a943410b13987
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fa390c039a3d663cb79cb311667e568a6a053131
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525120"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327975"
 ---
 # <a name="spawnlpe-wspawnlpe"></a>_spawnlpe、_wspawnlpe
 
@@ -88,11 +88,11 @@ intptr_t _wspawnlpe(
 
 |||
 |-|-|
-**E2BIG**|参数列表超过 1024 个字节。
-**EINVAL**|*模式*参数无效。
-**ENOENT**|未找到文件或路径。
-**ENOEXEC**|指定的文件不是可执行文件或者有无效的可执行文件格式。
-**ENOMEM**|没有足够的内存可用于执行新进程。
+| **E2BIG** | 参数列表超过 1024 个字节。 |
+| **EINVAL** | *模式*参数无效。 |
+| **ENOENT** | 未找到文件或路径。 |
+| **ENOEXEC** | 指定的文件不是可执行文件或者有无效的可执行文件格式。 |
+| **ENOMEM** | 没有足够的内存可用于执行新进程。 |
 
 有关这些代码及其他返回代码的详细信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 

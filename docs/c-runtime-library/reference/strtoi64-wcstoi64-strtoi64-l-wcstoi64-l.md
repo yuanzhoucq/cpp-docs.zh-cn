@@ -39,12 +39,12 @@ helpviewer_keywords:
 - strtoi64 function
 - wcstoi64_l function
 ms.assetid: ea2abc50-7bfe-420e-a46b-703c3153593a
-ms.openlocfilehash: a8097a31ebbc56281008f14da58671d5b2e4e8b3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b5479448a4e3a3cedba3a62d9b12b0dbe4160f7c
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50490774"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51331693"
 ---
 # <a name="strtoi64-wcstoi64-strtoi64l-wcstoi64l"></a>_strtoi64、_wcstoi64、_strtoi64_l、_wcstoi64_l
 
@@ -112,7 +112,7 @@ __int64 _wcstoi64_l(
 |**_tcstoi64**|**_strtoi64**|**_strtoi64**|**_wcstoi64**|
 |**_tcstoi64_l**|**_strtoi64_l**|**_strtoi64_l**|**_wcstoi64_l**|
 
-区域设置的**LC_NUMERIC**类别设置确定中基数字符的识别*strSource * *;* 有关详细信息，请参阅[setlocale](setlocale-wsetlocale.md)。 不带 _l 后缀的函数使用当前区域设置;**_strtoi64_l**并 **_wcstoi64_l**而无需相应函数相同 **_l**后缀，只不过它们改用传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+区域设置的**LC_NUMERIC**类别设置确定中基数字符的识别*strSource*; 有关详细信息，请参阅[setlocale](setlocale-wsetlocale.md)。 不带 _l 后缀的函数使用当前区域设置;**_strtoi64_l**并 **_wcstoi64_l**而无需相应函数相同 **_l**后缀，只不过它们改用传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
 如果*endptr*不是**NULL**，指向的位置存储指向停止扫描的字符的指针*endptr*。 如果可以不执行任何转换 （未找到任何有效的数字或指定了无效的基数） 的值*strSource*指向的位置处存储*endptr*。
 

@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CButton [MFC], SetState
 - CButton [MFC], SetTextMargin
 ms.assetid: cdc76d5b-31da-43c5-bc43-fde4cb39de5b
-ms.openlocfilehash: ae1b444d424693a2372389fb27fcec90133b3a7d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 745b04751c96e79c6bfa332ebdde15b254578137
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50662847"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694798"
 ---
 # <a name="cbutton-class"></a>CButton 类
 
@@ -153,13 +153,13 @@ class CButton : public CWnd
 
 每个消息映射条目采用以下形式：
 
-**ON_** 通知 **(**`id`， `memberFxn` **)**
+**ON\_**_通知_ **(** _id_， _memberFxn_ **)**
 
-其中`id`指定将通知发送到该控件的子窗口 ID 和`memberFxn`是您编写以处理通知的父成员函数的名称。
+其中*id*指定将通知发送到该控件的子窗口 ID 并*memberFxn*是您编写以处理通知的父成员函数的名称。
 
 父项的函数原型如下所示：
 
-**afx_msg** `void` `memberFxn` **（);**
+`afx_msg void memberFxn();`
 
 潜在的消息映射条目如下所示：
 
@@ -384,7 +384,7 @@ BOOL GetIdealSize(SIZE* psize);
 
 ### <a name="remarks"></a>备注
 
-此成员函数模拟 BCM_GETIDEALSIZE 消息的功能，如中所述[按钮](https://msdn.microsoft.com/library/windows/desktop/bb775943)Windows SDK 的一部分。
+此成员函数模拟 BCM_GETIDEALSIZE 消息的功能，如中所述[按钮](/windows/desktop/controls/buttons)Windows SDK 的一部分。
 
 ##  <a name="getimagelist"></a>  CButton::GetImageList
 
@@ -405,7 +405,7 @@ BOOL GetImageList(PBUTTON_IMAGELIST pbuttonImagelist);
 
 ### <a name="remarks"></a>备注
 
-此成员函数模拟 BCM_GETIMAGELIST 消息的功能，如中所述[按钮](https://msdn.microsoft.com/library/windows/desktop/bb775943)Windows SDK 的一部分。
+此成员函数模拟 BCM_GETIMAGELIST 消息的功能，如中所述[按钮](/windows/desktop/controls/buttons)Windows SDK 的一部分。
 
 ##  <a name="getnote"></a>  CButton::GetNote
 
@@ -617,7 +617,7 @@ BOOL GetTextMargin(RECT* pmargin);
 
 ### <a name="remarks"></a>备注
 
-此成员函数模拟 BCM_GETTEXTMARGIN 消息的功能，如中所述[按钮](https://msdn.microsoft.com/library/windows/desktop/bb775943)Windows SDK 的一部分。
+此成员函数模拟 BCM_GETTEXTMARGIN 消息的功能，如中所述[按钮](/windows/desktop/controls/buttons)Windows SDK 的一部分。
 
 ##  <a name="setbitmap"></a>  CButton::SetBitmap
 
@@ -870,7 +870,7 @@ BOOL SetImageList(PBUTTON_IMAGELIST pbuttonImagelist);
 
 ### <a name="remarks"></a>备注
 
-此成员函数模拟 BCM_SETIMAGELIST 消息的功能，如中所述[按钮](https://msdn.microsoft.com/library/windows/desktop/bb775943)Windows SDK 的一部分。
+此成员函数模拟 BCM_SETIMAGELIST 消息的功能，如中所述[按钮](/windows/desktop/controls/buttons)Windows SDK 的一部分。
 
 ##  <a name="setnote"></a>  CButton::SetNote
 
@@ -1112,7 +1112,7 @@ BOOL SetTextMargin(RECT* pmargin);
 
 ### <a name="remarks"></a>备注
 
-此成员函数模拟 BCM_SETTEXTMARGIN 消息的功能，如中所述[按钮](https://msdn.microsoft.com/library/windows/desktop/bb775943)Windows SDK 的一部分。
+此成员函数模拟 BCM_SETTEXTMARGIN 消息的功能，如中所述[按钮](/windows/desktop/controls/buttons)Windows SDK 的一部分。
 
 ## <a name="see-also"></a>请参阅
 

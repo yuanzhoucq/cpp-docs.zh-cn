@@ -1,17 +1,17 @@
 ---
 title: OLE DB 提供程序模板体系结构
-ms.date: 10/24/2018
+ms.date: 11/19/2018
 helpviewer_keywords:
 - OLE DB [C++], object model
 - architecture [C++], OLE DB Provider
 - OLE DB provider templates, object model
 ms.assetid: 639304a3-f9e0-44dc-8d0c-0ebd2455b363
-ms.openlocfilehash: 3f12eb7c7da449715116e88c9f78ee2e32fc327f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 099c29e141d721645c416e60be240c22d22cd869
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596165"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175634"
 ---
 # <a name="ole-db-provider-template-architecture"></a>OLE DB 提供程序模板体系结构
 
@@ -19,7 +19,7 @@ ms.locfileid: "50596165"
 
 OLE DB 提供程序体系结构包括数据源对象和一个或多个会话。 数据源对象是每个提供程序必须实例化的初始对象。 当使用者应用程序需要数据时，它共同创建要启动该提供程序的数据源对象。 数据源对象创建一个会话对象 (使用`IDBCreateSession`接口) 通过它使用者连接到数据源对象。 ODBC 程序员可以将数据源对象视为等效于`HENV`和会话对象等效于`HDBC`。
 
-![提供程序体系结构](../../data/oledb/media/vc4twb1.gif "vc4twb1")
+![提供程序体系结构](../../data/oledb/media/vc4twb1.gif "提供程序体系结构")
 
 与创建的源文件一起**OLE DB 提供程序向导**，OLE DB 模板实现数据源对象。 会话是一个对象，对应于 OLE DB `TSession`。
 
@@ -39,7 +39,7 @@ OLE DB 提供程序模板提供预打包实现所有所需的接口。 通过 OL
 
 OLE DB 提供程序模板不会实现的行和存储对象。
 
-下表列出了必需和可选接口，上面列出的对象根据[OLE DB 2.6 SDK 文档](/previous-versions/windows/desktop/ms722784)。
+下表列出了必需和可选接口，上面列出的对象根据[OLE DB 2.6 SDK 文档](https://docs.microsoft.com/previous-versions/windows/desktop/ms722784(v=vs.85))。
 
 |组件|接口|注释|
 |---------------|---------------|-------------|
@@ -58,4 +58,4 @@ OLE DB 提供程序模板不会实现的行和存储对象。
 ## <a name="see-also"></a>请参阅
 
 [OLE DB 提供程序模板](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
-[OLE DB 接口](/previous-versions/windows/desktop/ms709709)<br/>
+[OLE DB 接口](https://docs.microsoft.com/previous-versions/windows/desktop/ms709709(v=vs.85))<br/>

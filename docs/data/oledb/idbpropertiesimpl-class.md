@@ -22,12 +22,12 @@ helpviewer_keywords:
 - GetPropertyInfo method
 - SetProperties method
 ms.assetid: a7f15a8b-95b2-4316-b944-d5d03f8d74ab
-ms.openlocfilehash: 77385fc8b2869cc59c7a0061951c76a431490efe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2ce9f3fa18d2a17d499b65258cfda52783ce46c5
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50638043"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556941"
 ---
 # <a name="idbpropertiesimpl-class"></a>IDBPropertiesImpl 类
 
@@ -62,7 +62,7 @@ class ATL_NO_VTABLE IDBPropertiesImpl
 
 ## <a name="remarks"></a>备注
 
-[IDBProperties](/previous-versions/windows/desktop/ms719607)是数据源对象的必需接口和枚举器的可选接口。 但是，如果一个枚举器公开[IDBInitialize](/previous-versions/windows/desktop/ms713706)，则它必须公开`IDBProperties`。 `IDBPropertiesImpl` 实现`IDBProperties`通过使用定义的一个静态函数[BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)。
+[IDBProperties](https://docs.microsoft.com/previous-versions/windows/desktop/ms719607(v=vs.85))是数据源对象的必需接口和枚举器的可选接口。 但是，如果一个枚举器公开[IDBInitialize](https://docs.microsoft.com/previous-versions/windows/desktop/ms713706(v=vs.85))，则它必须公开`IDBProperties`。 `IDBPropertiesImpl` 实现`IDBProperties`通过使用定义的一个静态函数[BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)。
 
 ## <a name="getproperties"></a> Idbpropertiesimpl:: Getproperties
 
@@ -71,15 +71,15 @@ class ATL_NO_VTABLE IDBPropertiesImpl
 ### <a name="syntax"></a>语法
 
 ```cpp
-STDMETHOD(GetProperties)(ULONG cPropertySets, 
-   const DBPROPIDSET rgPropertySets[], 
-   ULONG * pcProperties, 
+STDMETHOD(GetProperties)(ULONG cPropertySets,
+   const DBPROPIDSET rgPropertySets[],
+   ULONG * pcProperties,
    DBPROPSET ** prgProperties);
 ```
 
 #### <a name="parameters"></a>参数
 
-请参阅[idbproperties:: Getproperties](/previous-versions/windows/desktop/ms714344)中*OLE DB 程序员参考*。
+请参阅[idbproperties:: Getproperties](https://docs.microsoft.com/previous-versions/windows/desktop/ms714344(v=vs.85))中*OLE DB 程序员参考*。
 
 某些参数对应于*OLE DB 程序员参考*中所述的不同名称的参数`IDBProperties::GetProperties`:
 
@@ -101,16 +101,16 @@ STDMETHOD(GetProperties)(ULONG cPropertySets, 
 ### <a name="syntax"></a>语法
 
 ```cpp
-STDMETHOD(GetPropertyInfo)(ULONG cPropertySets, 
-   const DBPROPIDSET rgPropertySets[], 
-   ULONG * pcPropertyInfoSets, 
-   DBPROPINFOSET ** prgPropertyInfoSets, 
+STDMETHOD(GetPropertyInfo)(ULONG cPropertySets,
+   const DBPROPIDSET rgPropertySets[],
+   ULONG * pcPropertyInfoSets,
+   DBPROPINFOSET ** prgPropertyInfoSets,
    OLECHAR ** ppDescBuffer);
 ```
 
 #### <a name="parameters"></a>参数
 
-请参阅[idbproperties:: Getpropertyinfo](/previous-versions/windows/desktop/ms718175)中*OLE DB 程序员参考*。
+请参阅[idbproperties:: Getpropertyinfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms718175(v=vs.85))中*OLE DB 程序员参考*。
 
 某些参数对应于*OLE DB 程序员参考*中所述的不同名称的参数`IDBProperties::GetPropertyInfo`:
 
@@ -130,13 +130,13 @@ STDMETHOD(GetPropertyInfo)(ULONG cPropertySets, 
 ### <a name="syntax"></a>语法
 
 ```cpp
-STDMETHOD(SetProperties)(ULONG cPropertySets, 
+STDMETHOD(SetProperties)(ULONG cPropertySets,
    DBPROPSET rgPropertySets[]);
 ```
 
 #### <a name="parameters"></a>参数
 
-请参阅[idbproperties:: Setproperties](/previous-versions/windows/desktop/ms723049)中*OLE DB 程序员参考*。
+请参阅[idbproperties:: Setproperties](https://docs.microsoft.com/previous-versions/windows/desktop/ms723049(v=vs.85))中*OLE DB 程序员参考*。
 
 ### <a name="remarks"></a>备注
 

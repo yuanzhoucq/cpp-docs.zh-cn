@@ -16,18 +16,18 @@ helpviewer_keywords:
 - processing [MFC]
 - background processing [MFC]
 ms.assetid: 5c7c46c1-6107-4304-895f-480983bb1e44
-ms.openlocfilehash: 1eff76e2e5fd98e63dccb9110882656f69da6539
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 35078b944412142a07906791e74209fd5dab06d3
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50604255"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693433"
 ---
 # <a name="idle-loop-processing"></a>空闲循环处理
 
 很多应用程序“在后台”执行长时间的处理。 有时候，出于性能考虑，不得不对此类工作使用多线程处理。 线程会产生额外的开发开销，因此它们不建议用于简单任务，例如 MFC 中的空闲时间工作[OnIdle](../mfc/reference/cwinthread-class.md#onidle)函数。 本文将重点介绍空闲处理。 详细了解多线程处理，请参阅[多线程主题](../parallel/multithreading-support-for-older-code-visual-cpp.md)。
 
-某些类型的后台处理会在用户未以其他方式与应用程序交互的时间间隔内适当地完成。 在为 Microsoft Windows 操作系统开发的应用程序中，应用程序可通过将漫长的过程拆分为很多小片段来执行空闲处理。 在处理每个片段之后, 该应用程序将执行控制权让给 Windows 使用[PeekMessage](https://msdn.microsoft.com/library/windows/desktop/ms644943)循环。
+某些类型的后台处理会在用户未以其他方式与应用程序交互的时间间隔内适当地完成。 在为 Microsoft Windows 操作系统开发的应用程序中，应用程序可通过将漫长的过程拆分为很多小片段来执行空闲处理。 在处理每个片段之后, 该应用程序将执行控制权让给 Windows 使用[PeekMessage](/windows/desktop/api/winuser/nf-winuser-peekmessagea)循环。
 
 本文将介绍两种在应用程序中执行空闲处理的方法：
 
@@ -37,7 +37,7 @@ ms.locfileid: "50604255"
 
 ##  <a name="_core_peekmessage_in_the_mfc_message_loop"></a> MFC 消息循环中的 PeekMessage
 
-使用 MFC 开发的应用程序中的主消息循环中`CWinThread`类包含调用的消息循环[PeekMessage](https://msdn.microsoft.com/library/windows/desktop/ms644943) Win32 API。 此循环也称为消息之间的 `OnIdle` 的 `CWinThread` 成员函数。 应用程序可通过重写 `OnIdle` 函数处理此空闲时间中的消息。
+使用 MFC 开发的应用程序中的主消息循环中`CWinThread`类包含调用的消息循环[PeekMessage](/windows/desktop/api/winuser/nf-winuser-peekmessagea) Win32 API。 此循环也称为消息之间的 `OnIdle` 的 `CWinThread` 成员函数。 应用程序可通过重写 `OnIdle` 函数处理此空闲时间中的消息。
 
 > [!NOTE]
 >  `Run``OnIdle`，和某些其他成员函数现在是类的成员`CWinThread`而不是类`CWinApp`。 `CWinApp` 派生自 `CWinThread`。

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - valarray header
 ms.assetid: 30835415-21c1-4801-8f24-6bbef7dd8ecd
-ms.openlocfilehash: efd3e750abb68ad84eb8894ea6b53fe8e29e0e17
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8b8118722d7219e3b30e11ad67411595c3dc36ad
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447783"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51332629"
 ---
 # <a name="ltvalarraygt"></a>&lt;valarray&gt;
 
@@ -21,12 +21,11 @@ ms.locfileid: "50447783"
 
 ```cpp
 #include <valarray>
-
 ```
 
 ## <a name="remarks"></a>备注
 
-为了提高性能，允许这些模板类和函数有异常的纬度。 具体而言，任何返回类型 **valarray\<** T1**>** 的函数可能会返回某个其他类型 T2 的对象。 在这种情况下，任何接受类型 **valarray\<** T2**>** 的一个或多个参数的函数必须具有接受这些参数（每个替换为类型 T2 的参数）的任意组合的重载。
+为了提高性能，允许这些模板类和函数有异常的纬度。 具体而言，任何函数返回类型`valarray<T1>`可能返回其他类型 T2 的对象。 在这种情况下，任何接受类型的一个或多个自变量函数`valarray<T2>`必须具有接受这些参数，每个替换为类型 T2 的自变量的任意组合的重载。
 
 ### <a name="functions"></a>函数
 

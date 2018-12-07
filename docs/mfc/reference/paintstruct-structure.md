@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - PAINTSTRUCT structure [MFC]
 ms.assetid: 81ce4993-3e89-43b2-8c98-7946f1314d24
-ms.openlocfilehash: b5179a1bcba4a654ff235885ec2d0516e801fbb7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f1b901ef26c61adbedb3bbe56808cd94bdfad30d
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677118"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694642"
 ---
 # <a name="paintstruct-structure"></a>PAINTSTRUCT 结构
 
@@ -36,7 +36,7 @@ typedef struct tagPAINTSTRUCT {
 标识要用于绘制的显示上下文。
 
 *fErase*<br/>
-指定是否需要重新绘制背景。 它不是 0，如果应用程序应重绘后台。 应用程序负责绘制背景，如果没有背景画笔的情况下创建一个 Windows 窗口类 (请参阅的说明`hbrBackground`的成员[WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576) Windows SDK 中的结构)。
+指定是否需要重新绘制背景。 它不是 0，如果应用程序应重绘后台。 应用程序负责绘制背景，如果没有背景画笔的情况下创建一个 Windows 窗口类 (请参阅的说明`hbrBackground`的成员[WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa) Windows SDK 中的结构)。
 
 *rcPaint*<br/>
 指定右上角和右下角的绘制请求在其中的矩形。

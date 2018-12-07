@@ -42,12 +42,12 @@ helpviewer_keywords:
 - C2895
 - C2899
 ms.assetid: e5de1e92-746a-4315-a331-c5d9efb76dbb
-ms.openlocfilehash: 1c1b001e4d55c913cd2b9a50ee2e4bb4d2915523
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7c35cd91f836070ff45faa489e1c16c40909f922
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50601098"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51332070"
 ---
 # <a name="compiler-errors-c2800-through-c2899"></a>编译器错误 C2800-C2899
 
@@ -74,7 +74,7 @@ ms.locfileid: "50601098"
 |[编译器错误 C2812](compiler-error-c2812.md)|#import 不支持 /clr: pure 和 /clr: safe|
 |[编译器错误 C2813](compiler-error-c2813.md)|#import 不支持 /MP|
 |[编译器错误 C2814](compiler-error-c2814.md)|'*成员*： 本机类型不能嵌套在托管/WinRT 类型*类*|
-|[编译器错误 C2815](compiler-error-c2815.md)|operator delete： 第一个形参必须为 void *，但*类型 * 已使用|
+|[编译器错误 C2815](compiler-error-c2815.md)|operator delete： 第一个形参必须为 void \*，但*类型*已使用|
 |编译器错误 C2816|已过时。|
 |[编译器错误 C2817](compiler-error-c2817.md)|operator delete 的返回类型必须为 void|
 |[编译器错误 C2818](compiler-error-c2818.md)|应用程序的重载 operator-> 通过类型进行递归 '*类*|
@@ -83,7 +83,7 @@ ms.locfileid: "50601098"
 |[编译器错误 C2821](compiler-error-c2821.md)|operator new 的第一个形参必须为 size_t|
 |编译器错误 C2822|此平台上不支持局部回退|
 |[编译器错误 C2823](compiler-error-c2823.md)|typedef 模板/泛型是非法的|
-|[编译器错误 C2824](compiler-error-c2824.md)|operator new 必须是返回类型 void *|
+|[编译器错误 C2824](compiler-error-c2824.md)|operator new 必须是返回类型 void \*|
 |[编译器错误 C2825](compiler-error-c2825.md)|'*标识符*： 必须是类或命名空间时后跟::|
 |编译器错误 C2826|已过时。|
 |[编译器错误 C2827](compiler-error-c2827.md)|运算符*运算符*不能由全局重写一元窗体|

@@ -1,6 +1,6 @@
 ---
 title: 文档、视图和框架
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - document templates [MFC], template objects
 - applications [MFC]
@@ -16,12 +16,12 @@ helpviewer_keywords:
 - MFC object relationships
 - thread objects [MFC]
 ms.assetid: 409ddd9b-66ad-4625-84f7-bf55a41d697b
-ms.openlocfilehash: f9397c2a16d8411fe91cbf6c1c1de3ecdffbeae7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e59e8b69dcdf0bf3b22d4286ba4692558a11e096
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50662366"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175751"
 ---
 # <a name="documents-views-and-the-framework"></a>文档、视图和框架
 
@@ -59,7 +59,8 @@ MFC 框架的核心是文档和视图的概念。 文档是用户在编辑会话
 
 在一个正在运行的应用程序中，这些对象以协作方式响应用户操作（由命令和其他消息绑定在一起）。 一个应用程序对象管理一个或多个文档模板。 每个文档模板创建并管理一个或多个文档（具体取决于应用程序是 SDI 还是 MDI）。 用户通过包含在框架窗口中的视图查看和操作文档。 下图演示了 SDI 应用程序的这些对象之间的关系。
 
-![正在运行的 SDI 应用程序中的对象](../mfc/media/vc386v1.gif "vc386v1")中运行的 SDI 应用程序的对象
+![正在运行的 SDI 应用程序中的对象](../mfc/media/vc386v1.gif "中运行的 SDI 应用程序的对象") <br/>
+运行 SDI 应用程序中的对象
 
 本系列文章的其他部分介绍了框架工具、MFC 应用程序向导和资源编辑器如何创建这些对象，如何协同工作以及如何在编程中使用它们。 中更详细地讨论了文档、 视图和框架窗口[窗口对象](../mfc/window-objects.md)并[文档/视图体系结构](../mfc/document-view-architecture.md)。
 

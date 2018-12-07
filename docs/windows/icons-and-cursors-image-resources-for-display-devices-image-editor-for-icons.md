@@ -15,12 +15,12 @@ helpviewer_keywords:
 - cursors [C++], hot spots
 - icons [C++], types
 ms.assetid: 8f0809a8-0cf0-4da9-b23d-51f28bf15f5b
-ms.openlocfilehash: 5d5e252dd7841d923a6de42f06518838f4314563
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 91de1351b3e41701d302d290533b60d4fe791b80
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50586649"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693004"
 ---
 # <a name="icons-and-cursors-image-resources-for-display-devices-c-image-editor-for-icons"></a>图标和光标： 显示设备 （c + + 图标的图像编辑器） 的图像资源
 
@@ -74,5 +74,5 @@ ms.locfileid: "50586649"
 ## <a name="see-also"></a>请参阅
 
 [图标的图像编辑器](../windows/image-editor-for-icons.md)<br/>
-[图标](https://msdn.microsoft.com/library/windows/desktop/ms646973)<br/>
-[光标](https://msdn.microsoft.com/library/windows/desktop/ms646970)
+[图标](/windows/desktop/menurc/icons)<br/>
+[光标](/windows/desktop/menurc/cursors)

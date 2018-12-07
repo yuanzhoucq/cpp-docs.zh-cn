@@ -1,6 +1,6 @@
 ---
 title: CBasePane 类
-ms.date: 11/04/2016
+ms.date: 11/06/2018
 f1_keywords:
 - CBasePane
 - AFXBASEPANE/CBasePane
@@ -166,12 +166,12 @@ helpviewer_keywords:
 - CBasePane [MFC], UndockPane
 - CBasePane [MFC], DoPaint
 ms.assetid: 8163dd51-d7c7-4def-9c74-61f8ecdfad82
-ms.openlocfilehash: a04e60c3cbaecc018fb1d577770e70c2148efc3b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1de59e4404960ed99dedaadfa576168bc31da444
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50469363"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694785"
 ---
 # <a name="cbasepane-class"></a>CBasePane 类
 
@@ -316,13 +316,13 @@ class CBasePane : public CWnd
 
 - 当您创建一个窗格时，可以应用几种新样式：
 
-    - AFX_CBRS_FLOAT 使窗格 float。
+  - AFX_CBRS_FLOAT 使窗格 float。
 
-    - AFX_CBRS_AUTOHIDE 启用自动隐藏模式。
+  - AFX_CBRS_AUTOHIDE 启用自动隐藏模式。
 
-    - AFX_CBRS_CLOSE 使窗格即将关闭 （隐藏）。
+  - AFX_CBRS_CLOSE 使窗格即将关闭 （隐藏）。
 
-   这些是您可以将与按位或运算结合的标志。
+  这些是您可以将与按位或运算结合的标志。
 
 `CBasePane` 实现以下虚拟布尔方法，以反映这些标志： [cbasepane:: Canbeclosed](#canbeclosed)， [CBasePane::CanAutoHide](#canautohide)， [CBasePane::CanFloat](#canfloat)。 可以在自定义其行为的派生类中替代它们。
 
@@ -1566,7 +1566,7 @@ virtual HDWP MoveWindow(
 
 ### <a name="remarks"></a>备注
 
-如果传递 NULL 作为*hdwp*参数，此方法通常移动窗口。 如果传递的句柄，此方法将执行延迟的窗口移动。 可以通过调用获取句柄[BeginDeferWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms632672)或通过将存储以前调用此方法的返回值。
+如果传递 NULL 作为*hdwp*参数，此方法通常移动窗口。 如果传递的句柄，此方法将执行延迟的窗口移动。 可以通过调用获取句柄[BeginDeferWindowPos](/windows/desktop/api/winuser/nf-winuser-begindeferwindowpos)或通过将存储以前调用此方法的返回值。
 
 ##  <a name="onafterchangeparent"></a>  CBasePane::OnAfterChangeParent
 
@@ -1628,12 +1628,12 @@ virtual void OnDrawCaption();
 当前未使用此方法。
 
 ```
-virtual void OnMovePaneDivider(CPaneDivider*);
+virtual void OnMovePaneDivider(CPaneDivider* /* unused */);
 ```
 
 ### <a name="parameters"></a>参数
 
-*CPaneDivider\**<br/>
+*未使用*<br/>
 [in]不使用。
 
 ##  <a name="onpanecontextmenu"></a>  CBasePane::OnPaneContextMenu

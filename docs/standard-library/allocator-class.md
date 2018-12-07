@@ -34,12 +34,12 @@ helpviewer_keywords:
 - std::allocator [C++], max_size
 - std::allocator [C++], rebind
 ms.assetid: 3fd58076-56cc-43bb-ad58-b4b7c9c6b410
-ms.openlocfilehash: dbae9ef71927fd5b781488258bf801cf19f4fb90
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 40e99901d4d4105902010a9e5b71ed3edf7d00db
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50450669"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51518861"
 ---
 # <a name="allocator-class"></a>allocator 类
 
@@ -63,7 +63,7 @@ class allocator
 
 例如，分配器对象可能会在私有堆上或共享内存中分配存储，或者可能针对小型或大型对象大小进行优化。 它可能还会通过它提供的类型定义靠指定通过管理共享内存或执行自动垃圾回收的特殊访问器对象访问元素。 因此，使用分配器对象分配存储的类应使用这些类型来声明指针和引用对象，这与 C++ 标准库中的容器所执行的操作一样。
 
-**（仅适用于 C_++98/03）** 从allocator 类提取时，必须提供一个 [rebind](#rebind) 构造函数（你新提取类的 `_Other` typedef 引用）。
+<strong>(C + + 98/03 仅)</strong>从 allocator 类派生时, 必须提供[重新绑定](#rebind)结构，其`_Other`typedef 引用新派生的类。
 
 因此，分配器定义以下类型：
 

@@ -19,12 +19,12 @@ helpviewer_keywords:
 - ON_COMMAND_EX macro [MFC]
 - message maps [MFC], Windows messaging
 ms.assetid: af4b6794-4b40-4f1e-ad41-603c3b7409bb
-ms.openlocfilehash: 91d1793999c12951bd80e0f592772bbae1e2d679
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ab08476923f253d666e024d8944aec64ed0af8da
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463292"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693648"
 ---
 # <a name="tn006-message-maps"></a>TN006：消息映射
 
@@ -237,7 +237,7 @@ ON_CONTROL(wNotificationCode, id, memberFxn)
 > [!NOTE]
 > 类向导不支持在用户界面中创建一个 ON_CONTROL 或 ON_CONTROL_RANGE 处理程序。 您必须手动输入这些使用文本编辑器。 类向导将分析这些条目，并可以就像任何其他消息映射条目一样对其进行浏览。
 
-Windows 公共控件使用功能更强大[WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583)为复杂控件通知。 此版本的 MFC 通过使用和 ON_NOTIFY_RANGE 宏提供直接支持此新消息。 请参阅有关这些宏的详细信息的产品文档。
+Windows 公共控件使用功能更强大[WM_NOTIFY](/windows/desktop/controls/wm-notify)为复杂控件通知。 此版本的 MFC 通过使用和 ON_NOTIFY_RANGE 宏提供直接支持此新消息。 请参阅有关这些宏的详细信息的产品文档。
 
 ## <a name="see-also"></a>请参阅
 

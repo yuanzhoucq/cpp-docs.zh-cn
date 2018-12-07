@@ -24,14 +24,15 @@ helpviewer_keywords:
 - files [C++], text
 - text files, writing in C++
 ms.assetid: 3296fd59-a83a-40d4-bd4a-6096cc13101b
-ms.openlocfilehash: 697d193f2239d9d22e8d94d479bbf24784e2c6ff
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8f60ece05443393456693aba3bc674f52822432a
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585648"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693472"
 ---
 # <a name="file-handling-and-io-ccli"></a>文件处理和 I/O (C++/CLI)
+
 演示如何使用.NET Framework 的各种文件操作。
 
 以下主题演示中定义的类使用<xref:System.IO>命名空间执行各种文件操作。

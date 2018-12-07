@@ -1,6 +1,6 @@
 ---
 title: CVSListBox 类
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CVSListBox
 - AFXVSLISTBOX/CVSListBox
@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CVSListBox [MFC], SetItemData
 - CVSListBox [MFC], GetListHwnd
 ms.assetid: c79be7b4-46ed-4af8-a41e-68962782d8ef
-ms.openlocfilehash: e44fa868fc573efbf89bb00147f670298f633381
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fb12f17aec43653931343e80926d59560d879c3a
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50513758"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176207"
 ---
 # <a name="cvslistbox-class"></a>CVSListBox 类
 
@@ -81,7 +81,7 @@ class CVSListBox : public CVSListBoxBase
 
 以下是可编辑列表控件的图片。 标题为"Item2"的第二个列表项选择进行编辑。
 
-![CVSListBox 控件](../../mfc/reference/media/cvslistbox.png "cvslistbox")
+![CVSListBox 控件](../../mfc/reference/media/cvslistbox.png "CVSListBox 控件")
 
 如果使用资源编辑器将添加一个可编辑列表控件，请注意**工具箱**编辑器窗格中不提供预定义的可编辑列表控件。 相反，如添加静态控件**分组框**控件。 框架使用静态控件作为占位符，以指定的大小和可编辑列表控件的位置。
 

@@ -65,16 +65,16 @@ helpviewer_keywords:
 - GetRecordCount method
 - m_rgErrors
 ms.assetid: dea8e938-c5d8-45ab-86de-eb8fbf534ffb
-ms.openlocfilehash: a56649c0ca80b82e5fbeee9532b790226d1051bd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8a864e0da8b5e6c93a1cdccde93fcec4cd3b3e6c
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50541032"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556902"
 ---
 # <a name="ierrorrecordsimpl-class"></a>IErrorRecordsImpl 类
 
-实现 OLE DB [IErrorRecords](/previous-versions/windows/desktop/ms718112)添加到记录且记录检索的数据成员的接口 ([m_rgErrors](../../data/oledb/ierrorrecordsimpl-m-rgerrors.md)) 的类型**CAtlArray <** `RecordClass`**>**.
+实现 OLE DB [IErrorRecords](https://docs.microsoft.com/previous-versions/windows/desktop/ms718112(v=vs.85))添加到记录且记录检索的数据成员的接口 ([m_rgErrors](../../data/oledb/ierrorrecordsimpl-m-rgerrors.md)) 的类型**CAtlArray <** `RecordClass`**>**.
 
 ## <a name="syntax"></a>语法
 
@@ -114,7 +114,7 @@ class IErrorRecordsImpl : public IErrorRecords
 |[AddErrorRecord](#adderrorrecord)|将一条记录添加到 OLE DB 错误对象。|
 |[GetBasicErrorInfo](#getbasicerrorinfo)|返回有关该错误，如返回代码和特定于提供程序的错误号的基本信息。|
 |[GetCustomErrorObject](#getcustomerrorobject)|返回一个指向接口上的自定义错误对象。|
-|[GetErrorInfo](#geterrorinfo)|返回[IErrorInfo](/previous-versions/windows/desktop/ms718112)上指定的记录的接口指针。|
+|[GetErrorInfo](#geterrorinfo)|返回[IErrorInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms718112(v=vs.85))上指定的记录的接口指针。|
 |[GetErrorParameters](#geterrorparameters)|返回的错误参数。|
 |[GetRecordCount](#getrecordcount)|在 OLE DB 记录对象中返回记录的数。|
 
@@ -235,7 +235,7 @@ STDMETHOD(AddErrorRecord )(ERRORINFO *pErrorInfo,
 
 #### <a name="parameters"></a>参数
 
-请参阅[IErrorRecords::AddErrorRecord](/previous-versions/windows/desktop/ms725362)中*OLE DB 程序员参考*。
+请参阅[IErrorRecords::AddErrorRecord](https://docs.microsoft.com/previous-versions/windows/desktop/ms725362(v=vs.85))中*OLE DB 程序员参考*。
 
 ## <a name="getbasicerrorinfo"></a> Ierrorrecordsimpl:: Getbasicerrorinfo
 
@@ -250,7 +250,7 @@ STDMETHOD(GetBasicErrorInfo )(ULONG ulRecordNum,
 
 #### <a name="parameters"></a>参数
 
-请参阅[IErrorRecords::GetBasicErrorInfo](/previous-versions/windows/desktop/ms723907)中*OLE DB 程序员参考*。
+请参阅[IErrorRecords::GetBasicErrorInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms723907(v=vs.85))中*OLE DB 程序员参考*。
 
 ## <a name="getcustomerrorobject"></a> Ierrorrecordsimpl:: Getcustomerrorobject
 
@@ -266,11 +266,11 @@ STDMETHOD(GetCustomErrorObject )(ULONG ulRecordNum,
 
 #### <a name="parameters"></a>参数
 
-请参阅[IErrorRecords::GetCustomErrorObject](/previous-versions/windows/desktop/ms725417)中*OLE DB 程序员参考*。
+请参阅[IErrorRecords::GetCustomErrorObject](https://docs.microsoft.com/previous-versions/windows/desktop/ms725417(v=vs.85))中*OLE DB 程序员参考*。
 
 ## <a name="geterrorinfo"></a> Ierrorrecordsimpl:: Geterrorinfo
 
-返回[IErrorInfo](/previous-versions/windows/desktop/ms718112)上指定的记录的接口指针。
+返回[IErrorInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms718112(v=vs.85))上指定的记录的接口指针。
 
 ### <a name="syntax"></a>语法
 
@@ -282,7 +282,7 @@ STDMETHOD(GetErrorInfo )(ULONG ulRecordNum,
 
 #### <a name="parameters"></a>参数
 
-请参阅[ierrorrecords:: Geterrorinfo](/previous-versions/windows/desktop/ms711230)中*OLE DB 程序员参考*。
+请参阅[ierrorrecords:: Geterrorinfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms711230(v=vs.85))中*OLE DB 程序员参考*。
 
 ## <a name="geterrorparameters"></a> Ierrorrecordsimpl:: Geterrorparameters
 
@@ -297,7 +297,7 @@ STDMETHOD(GetErrorParameters )(ULONG ulRecordNum,
 
 #### <a name="parameters"></a>参数
 
-请参阅[IErrorRecords::GetErrorParameters](/previous-versions/windows/desktop/ms715793)中*OLE DB 程序员参考*。
+请参阅[IErrorRecords::GetErrorParameters](https://docs.microsoft.com/previous-versions/windows/desktop/ms715793(v=vs.85))中*OLE DB 程序员参考*。
 
 ## <a name="getrecordcount"></a> Ierrorrecordsimpl:: Getrecordcount
 
@@ -311,7 +311,7 @@ STDMETHOD(GetRecordCount )(ULONG *pcRecords);
 
 #### <a name="parameters"></a>参数
 
-请参阅[IErrorRecords::GetRecordCount](/previous-versions/windows/desktop/ms722724)中*OLE DB 程序员参考*。
+请参阅[IErrorRecords::GetRecordCount](https://docs.microsoft.com/previous-versions/windows/desktop/ms722724(v=vs.85))中*OLE DB 程序员参考*。
 
 ## <a name="rgerrors"></a> Ierrorrecordsimpl:: M_rgerrors
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - rowsets [C++], multiple accessors
 - accessors [C++], rowsets
 ms.assetid: 80d4dc5d-4940-4a28-a4ee-d8602f71d2a6
-ms.openlocfilehash: 2f88213fce0c5aa1d91f94d7fbeb26eab6432207
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ac2b7e323fff5d3baa80b509586178a48dbe1f8d
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50483286"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693615"
 ---
 # <a name="using-multiple-accessors-on-a-rowset"></a>在一个行集合上使用多个访问器
 
@@ -20,19 +20,19 @@ ms.locfileid: "50483286"
 
 - **多个读/写行集。** 在此方案中，必须具有主键的表。 你想要读取的行，其中包括主键中的所有列。 您还希望能够将数据写入除为主键的所有列 （因为无法都写入主键列）。 在这种情况下，你设置两个访问器：
 
-   - 访问器 0 包含的所有列。
+  - 访问器 0 包含的所有列。
 
-   - 访问器 1 包含除为主键的所有列。
+  - 访问器 1 包含除为主键的所有列。
 
 - **性能。** 在此方案中，一个或多个列具有大量的数据，例如，图形、 声音或视频文件。 每次移动到某一行时，可能不想要检索列与大型数据文件，因为这样做将会减慢应用程序的性能。
 
-   你可以设置单独的访问器中的第一个访问器包含除具有大型数据的所有列，并从这些列检索数据自动保存功能。第一个访问器是自动访问器。 第二个访问器检索仅保存大型数据的列，但它不会自动从该列检索数据。 您可以更新或按需获取大型数据的其他方法。
+  你可以设置单独的访问器中的第一个访问器包含除具有大型数据的所有列，并从这些列检索数据自动保存功能。第一个访问器是自动访问器。 第二个访问器检索仅保存大型数据的列，但它不会自动从该列检索数据。 您可以更新或按需获取大型数据的其他方法。
 
-   - 访问器 0 是一个自动访问器;它将检索除具有较大的数据的所有列。
+  - 访问器 0 是一个自动访问器;它将检索除具有较大的数据的所有列。
 
-   - 访问器 1 不是自动的访问器;它将检索大型数据的列。
+  - 访问器 1 不是自动的访问器;它将检索大型数据的列。
 
-   使用自动参数来指定访问器是否为自动访问器。
+  使用自动参数来指定访问器是否为自动访问器。
 
 - **多个 ISequentialStream 列。** 在此方案中，已多个列保存`ISequentialStream`数据。 但是，每个访问器仅限于一个`ISequentialStream`数据流。 若要解决此问题，设置多个取值函数，每个都拥有一个`ISequentialStream`指针。
 
@@ -84,7 +84,7 @@ END_ACCESSOR_MAP()
 ```cpp
 int main(int argc, char* argv[])
 {
-    // Initalize COM
+    // Initialize COM
     ::CoInitialize(NULL);
 
     // Create instances of the data source and session

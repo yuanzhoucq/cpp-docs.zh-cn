@@ -1,23 +1,19 @@
 ---
-title: C++ 的一致性改进 | Microsoft Docs
-ms.custom: ''
-ms.date: 08/15/2018
+title: C++ 的符合性改进
+ms.date: 10/31/2018
 ms.technology:
 - cpp-language
-ms.topic: conceptual
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
 author: mikeblome
 ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5661ff0debb3d06947e5b8ff686cc049ebe68fee
-ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
+ms.openlocfilehash: ad34e2721723e113417b45cf7c1da0da4575837f
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50204738"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694395"
 ---
-# <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-157improvements157-158update158"></a>Visual Studio 2017 版本 15.0、[15.3](#improvements_153)、[15.5](#improvements_155)、[15.6](#improvements_156)、[15.7](#improvements_157) 和 [15.8](#update_158) 中 C++ 的一致性改进
+# <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-157improvements157-158update158-159update159"></a>Visual Studio 2017 版本 15.0、[15.3](#improvements_153)、[15.5](#improvements_155)、[15.6](#improvements_156)、[15.7](#improvements_157)、[15.8](#update_158)、[15.9](#update_159) 中 C++ 的符合性改进
 
 Microsoft Visual C++ 编译器支持通用 constexpr 和用于聚合的 NSDMI，现具有 C++14 标准版中的全部新增功能。 请注意，编译器仍缺少 C++11 和 C++98 标准版中的一些功能。 请参阅 [Visual C++ 语言合规性](visual-cpp-language-conformance.md)中显示编译器当前状态的表。
 
@@ -227,9 +223,9 @@ B b(42L); // now calls B(int)
 struct Derived;
 
 struct Base {
-    friend struct Derived;
+    friend struct Derived;
 private:
-    Base() {}
+    Base() {}
 };
 
 struct Derived : Base {};
@@ -247,9 +243,9 @@ Derived d2 {}; // OK in C++14: Calls Derived::Derived()
 struct Derived;
 
 struct Base {
-    friend struct Derived;
+    friend struct Derived;
 private:
-    Base() {}
+    Base() {}
 };
 
 struct Derived : Base {
@@ -341,7 +337,7 @@ void bar(A<0> *p)
 
 [P0426R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0426r1.html) 对 `std::traits_type` 成员函数 `length`、`compare` 和 `find` 进行了更改，以便使 `std::string_view` 在常数表达式中可用。 （在 Visual Studio 2017 版本 15.6 中，仅支持 Clang/LLVM。 在版本 15.7 预览版 2 中，也几乎完全支持 ClXX。）
 
-## <a name="bug-fixes-in-visual-studio-versions-150-153update153-155update155-157update157-and-158update158"></a>Visual Studio 版本 15.0、[15.3](#update_153)、[15.5](#update_155)、[15.7](#update_157) 和 [15.8](#update_158) 中的 bug 修复
+## <a name="bug-fixes-in-visual-studio-versions-150-153update153-155update155-157update157-158update158-and-159update159"></a>Visual Studio 版本 15.0、[15.3](#update_153)、[15.5](#update_155)、[15.7](#update_157)、[15.8](#update_158) 和 [15.9](#update_159) 中的 bug 修复
 
 ### <a name="copy-list-initialization"></a>复制列表初始化
 
@@ -1375,7 +1371,7 @@ struct B : A {
 
 ```cpp
 struct X {
-    static constexpr int size = 3;
+    static constexpr int size = 3;
 };
 const int X::size; // C5041
 ```
@@ -1604,7 +1600,6 @@ int main() {
     };
     return 0;
 }
-
 ```
 
 在 Visual Studio 2017 版本 15.7 更新 3 及更高版本中，前面的示例现在引发“C2078 初始值设定项太多”。 以下示例演示了如何修复此代码。 在使用嵌套 brace-init-lists 初始化 `std::array` 时，给予内部数组一个自己的 braced-list：
@@ -1623,7 +1618,6 @@ int main() {
     }}; // note double braces
     return 0;
 }
-
 ```
 
 ## <a name="update_158"></a>Visual Studio 2017 版本 15.8 中的 bug 修复和行为更改
@@ -1679,7 +1673,6 @@ struct S : Base<T> {
         return base_value;
     }
 };
-
 ```
 
 要修复此错误，将 `return` 语句更改为 `return this->base_value;`。
@@ -1832,6 +1825,154 @@ struct X : Base<T>
         Base<T>::template foo<int>();
     }
 };
+```
+## <a name="update_159"></a>Visual Studio 2017 版本 15.9 中的 bug 修复和行为更改
+
+### <a name="identifiers-in-member-alias-templates"></a>成员别名模板中的标识符
+在成员别名模板定义中使用的标识符必须在使用前进行声明。 
+
+在以前版本的编译器中，允许以下代码：
+
+```cpp
+template <typename... Ts>
+struct A
+{
+  public:
+    template <typename U>
+    using from_template_t = decltype(from_template(A<U>{}));
+
+  private:
+    template <template <typename...> typename Type, typename... Args>
+    static constexpr A<Args...> from_template(A<Type<Args...>>);
+};
+
+A<>::from_template_t<A<int>> a;
+```
+
+在 Visual Studio 2017 版本 15.9 的 /permissive- 模式下，编译器引发 C3861：“来自模板”：找不到标识符。
+
+若要修复此错误，请在 `from_template_t` 之前声明 `from_template`。
+
+### <a name="modules-changes"></a>模块更改
+
+在 Visual Studio 2017 版本 15.9 中，每当模块的命令行选项在模块创建端和模块消耗端之间不一致时，编译器会引发 C5050。 以下示例中存在两个问题：
+
+- 消耗端 (main.cpp) 上未指定 /EHsc 选项。
+- 创建端上的 C++ 版本为 /std:c++17，而消耗端上的版本则为 /std:c++14。 
+
+```cmd
+cl /EHsc /std:c++17 m.ixx /experimental:module
+cl /experimental:module /module:reference m.ifc main.cpp /std:c++14
+```
+
+在这两种情况下，编译器都会引发 C5050：警告 C5050：导入模块“m”：不匹配的 C++ 模板时，可能出现不兼容的环境。当前版本为“201402”，模块版本为“201703”。
+
+除此之外，每当篡改 .ifc 文件时，编译器会引发 C7536。 模块接口的标头包含它下面内容的 SHA2 哈希。 导入时，ifc 文件以相同的方式进行哈希处理，然后对照标头中提供的哈希进行检查；如果它们不匹配，则会引发错误 C7536：ifc 未通过完整性检查。预期的 SHA2：“66d5c8154df0c71d4cab7665bab4a125c7ce5cb9a401a4d8b461b706ddd771c6”。
+
+### <a name="partial-ordering-involving-aliases-and-non-deduced-contexts"></a>部分排序涉及别名和非推导上下文
+
+涉及非推导上下文中别名的部分排序规则出现实现分歧。 下面的示例中，在 Clang 接受代码时，GCC 和 Microsoft C++ 编译器（在 /permissive- 模式下）引发错误。 
+
+```cpp
+#include <utility>
+using size_t = std::size_t;
+
+template <typename T>
+struct A {};
+template <size_t, size_t>
+struct AlignedBuffer {};
+template <size_t len>
+using AlignedStorage = AlignedBuffer<len, 4>;
+
+template <class T, class Alloc>
+int f(Alloc &alloc, const AlignedStorage<T::size> &buffer)
+{
+    return 1;
+}
+
+template <class T, class Alloc>
+int f(A<Alloc> &alloc, const AlignedStorage<T::size> &buffer)
+{
+    return 2;
+}
+
+struct Alloc
+{
+    static constexpr size_t size = 10;
+};
+
+int main()
+{
+    A<void> a;
+    AlignedStorage<Alloc::size> buf;
+    if (f<Alloc>(a, buf) != 2)
+    {
+        return 1;
+    }
+
+    return 0;
+}
+```
+
+上例中引发了 C2668：
+
+```Output
+partial_alias.cpp(32): error C2668: 'f': ambiguous call to overloaded function
+partial_alias.cpp(18): note: could be 'int f<Alloc,void>(A<void> &,const AlignedBuffer<10,4> &)'
+partial_alias.cpp(12): note: or       'int f<Alloc,A<void>>(Alloc &,const AlignedBuffer<10,4> &)'
+        with
+        [
+            Alloc=A<void>
+        ]
+partial_alias.cpp(32): note: while trying to match the argument list '(A<void>, AlignedBuffer<10,4>)'
+```
+
+实现分歧是由标准用词中的回归造成的，其中核心问题 2235 的解决方法删除了一些允许重新排列这些重载的文本。 当前的 C++ 标准未提供机制来对这些函数进行部分排序，因此它们被视为不明确。
+
+作为变通方法，建议不要依赖部分排序来解决此问题，而是改用 SFINAE 来删除特定重载。 在下面的示例中，当 `Alloc` 是 `A` 的专用形式时，我们使用帮助程序类 `IsA` 删除第一个重载：
+
+```cpp
+#include <utility>
+using size_t = std::size_t;
+
+template <typename T>
+struct A {};
+template <size_t, size_t>
+struct AlignedBuffer {};
+template <size_t len>
+using AlignedStorage = AlignedBuffer<len, 4>;
+
+template <typename T> struct IsA : std::false_type {};
+template <typename T> struct IsA<A<T>> : std::true_type {};
+
+template <class T, class Alloc, typename = std::enable_if_t<!IsA<Alloc>::value>>
+int f(Alloc &alloc, const AlignedStorage<T::size> &buffer)
+{
+    return 1;
+}
+
+template <class T, class Alloc>
+int f(A<Alloc> &alloc, const AlignedStorage<T::size> &buffer)
+{
+    return 2;
+}
+
+struct Alloc
+{
+    static constexpr size_t size = 10;
+};
+
+int main()
+{
+    A<void> a;
+    AlignedStorage<Alloc::size> buf;
+    if (f<Alloc>(a, buf) != 2)
+    {
+        return 1;
+    }
+
+    return 0;
+}
 ```
 
 ## <a name="see-also"></a>请参阅

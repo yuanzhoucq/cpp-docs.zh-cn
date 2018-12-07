@@ -2,12 +2,12 @@
 title: Visual C++ 移植和升级指南
 ms.date: 09/18/2018
 ms.assetid: f5fbcc3d-aa72-41a6-ad9a-a706af2166fb
-ms.openlocfilehash: c1f4114be236e5e3707113bc19779bb50f358ca8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 39b0e716ae6dbc1210130908b27cfa1d06f86ec6
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50478086"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556863"
 ---
 # <a name="visual-c-porting-and-upgrading-guide"></a>Visual C++ 移植和升级指南
 
@@ -63,7 +63,7 @@ Visual Studio 中的生成系统和项目文件格式从 Visual Studio 2008 及�
 
 3. 你可能想要更新一些代码以使用可简化代码的新语言功能、提高程序的性能，或更新代码以使用现代库并遵循现代标准和最佳做法。
 
-升级并测试项目后，可能需要考虑进一步改善代码或规划代码的未来方向，或甚至重新考虑项目的体系结构。 它是否会接收进行中的开发工作？ 代码可在其他平台上运行是否重要？  如果是，是哪些平台？  C++ 是充分考虑了可移植性和跨平台开发而设计的标准化语言，但许多 Windows 应用程序的代码在很大程度上依赖于 Windows 平台。 是否想重构代码以分隔出那些更依赖于 Windows 平台的那部分代码？
+升级并测试项目后，可能需要考虑进一步改善代码或规划代码的未来方向，或甚至重新考虑项目的体系结构。 它是否会接收进行中的开发工作？ 代码可在其他平台上运行是否重要？  如果是，是哪些平台？  C++ 是适用于可移植性和跨平台开发的标准化语言，但许多 Windows 应用程序的代码与 Windows 平台紧密关联。 是否想重构代码以分隔出那些更依赖于 Windows 平台的那部分代码？
 
 你的用户界面呢？ 如果你正在使用 MFC，可能会想要更新 UI。 你是否正在使用在 2008 年作为功能包引入的任何更新的 MFC 功能？ 如果只是想要让应用获得更新的外观和感觉，而不重写整个应用，则可以考虑使用 MFC 中的功能区 API 或使用 MFC 的一些新功能。
 

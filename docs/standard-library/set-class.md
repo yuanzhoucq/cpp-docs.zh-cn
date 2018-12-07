@@ -86,12 +86,12 @@ helpviewer_keywords:
 - std::set [C++], upper_bound
 - std::set [C++], value_comp
 ms.assetid: 8991f9aa-5509-4440-adc1-371512d32018
-ms.openlocfilehash: 694ef08582409117b898d173e7647d59effc30e2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8f4ad77c28b4643a979d7c3fb22e44e4aebd43dd
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605499"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694733"
 ---
 # <a name="set-class"></a>set 类
 
@@ -488,7 +488,7 @@ size_type count(const Key& key) const;
 
 成员函数返回在以下范围内的元素数目：
 
-[ `lower_bound` (_ *Key* ), `upper_bound` (\_ *Key* ) )。
+\[ lower_bound (*键*)、 upper_bound (*密钥*))。
 
 ### <a name="example"></a>示例
 
@@ -767,7 +767,6 @@ int main()
     }
     cout << endl;
 }
-
 ```
 
 ## <a name="emplace_hint"></a>  set::emplace_hint
@@ -842,7 +841,6 @@ int main()
     print(s1);
     cout << endl;
 }
-
 ```
 
 ## <a name="empty"></a>  set::empty
@@ -1066,7 +1064,7 @@ int main()
     cout << "After the 2nd element is deleted, the set s1 is:" << endl;
     printset(s1);
 
-    // Fill in some data to test with, one at a time, using an intializer list
+    // Fill in some data to test with, one at a time, using an initializer list
     myset s2{ "meow", "hiss", "purr", "growl", "yowl" };
 
     cout << "Starting data of set s2 is:" << endl;
@@ -1103,7 +1101,6 @@ int main()
     cout << "After the element with a key of \"E#\" is deleted, the set s3 is:" << endl;
     printset(s3);
 }
-
 ```
 
 ## <a name="find"></a>  set::find
@@ -1190,7 +1187,6 @@ int main()
     findit(s1, 45);
     findit(s1, 6);
 }
-
 ```
 
 ## <a name="get_allocator"></a>  set::get_allocator
@@ -1435,7 +1431,6 @@ int main()
     print(s4);
     cout << endl;
 }
-
 ```
 
 ## <a name="iterator"></a>  set::iterator
@@ -1786,14 +1781,14 @@ int main( )
         << *s1_rIter << "." << endl;
 
    // begin can be used to start an iteration
-   // throught a set in a forward order
+   // through a set in a forward order
    cout << "The set is:";
    for ( s1_Iter = s1.begin( ) ; s1_Iter != s1.end( ); s1_Iter++ )
       cout << " " << *s1_Iter;
    cout << endl;
 
    // rbegin can be used to start an iteration
-   // throught a set in a reverse order
+   // through a set in a reverse order
    cout << "The reversed set is:";
    for ( s1_rIter = s1.rbegin( ) ; s1_rIter != s1.rend( ); s1_rIter++ )
       cout << " " << *s1_rIter;
@@ -1899,14 +1894,14 @@ int main() {
         << *s1_rIter << "." << endl;
 
    // end can be used to terminate an iteration
-   // throught a set in a forward order
+   // through a set in a forward order
    cout << "The set is: ";
    for ( s1_Iter = s1.begin( ) ; s1_Iter != s1.end( ); s1_Iter++ )
       cout << *s1_Iter << " ";
    cout << "." << endl;
 
    // rend can be used to terminate an iteration
-   // throught a set in a reverse order
+   // through a set in a reverse order
    cout << "The reversed set is: ";
    for ( s1_rIter = s1.rbegin( ) ; s1_rIter != s1.rend( ); s1_rIter++ )
       cout << *s1_rIter << " ";
@@ -2125,7 +2120,6 @@ int main()
         cout << " " << i;
     cout << endl;
 }
-
 ```
 
 ```Output

@@ -25,7 +25,6 @@ f1_keywords:
 - async/Microsoft::WRL::AsyncBase::put_Id
 - async/Microsoft::WRL::AsyncBase::PutOnComplete
 - async/Microsoft::WRL::AsyncBase::PutOnProgress
-- async/Microsoft::WRL::AsyncBase::Start
 - async/Microsoft::WRL::AsyncBase::TryTransitionToCompleted
 - async/Microsoft::WRL::AsyncBase::TryTransitionToError
 helpviewer_keywords:
@@ -51,16 +50,15 @@ helpviewer_keywords:
 - Microsoft::WRL::AsyncBase::put_Id method
 - Microsoft::WRL::AsyncBase::PutOnComplete method
 - Microsoft::WRL::AsyncBase::PutOnProgress method
-- Microsoft::WRL::AsyncBase::Start method
 - Microsoft::WRL::AsyncBase::TryTransitionToCompleted method
 - Microsoft::WRL::AsyncBase::TryTransitionToError method
 ms.assetid: 64259b9b-f427-4ffd-a611-e7a2f82362b2
-ms.openlocfilehash: 71839fbea4300560dbf2b9617fe7b8d3864676b4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 19c4779dbd4d39260d5fe03967e8c0a530a75026
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50599662"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556915"
 ---
 # <a name="asyncbase-class"></a>AsyncBase 类
 
@@ -116,7 +114,7 @@ class AsyncBase<TComplete, Details::Nil, resultType> :
 [Asyncbase:: Put_id](#put-id)                 | 设置异步操作的句的柄。
 [Asyncbase:: Putoncomplete](#putoncomplete)   | 为指定的值设置完成事件处理程序的地址。
 [Asyncbase:: Putonprogress](#putonprogress)   | 为指定的值设置的进度事件处理程序的地址。
-[Asyncbase:: Start](#start)                   | 启动异步操作。
+
 
 ### <a name="protected-methods"></a>受保护的方法
 
@@ -130,6 +128,7 @@ class AsyncBase<TComplete, Details::Nil, resultType> :
 [Asyncbase:: Oncancel](#oncancel)                                             | 当在派生类中重写时取消异步操作。
 [Asyncbase:: Onclose](#onclose)                                               | 当在派生类中重写，会关闭一个异步操作。
 [Asyncbase:: Onstart](#onstart)                                               | 当在派生类中重写时启动的异步操作。
+[Asyncbase:: Start](#start)                                                   | 启动异步操作。
 [Asyncbase:: Trytransitiontocompleted](#trytransitiontocompleted)             | 指示当前的异步操作是否已完成。
 [Asyncbase:: Trytransitiontoerror](#trytransitiontoerror)                     | 指示指定的错误代码是否可以修改的内部错误状态。
 
@@ -504,7 +503,7 @@ STDMETHOD(
 
 ### <a name="remarks"></a>备注
 
-`Start()` 是的默认实现`IAsyncInfo::Start`，并不执行任何实际工作。 若要实际启动异步操作，重写`OnStart()`纯虚方法。
+`Start()` 是受保护的方法，因为异步操作"热开始"返回到调用方之前不外部可见的。
 
 ## <a name="trytransitiontocompleted"></a>Asyncbase:: Trytransitiontocompleted
 

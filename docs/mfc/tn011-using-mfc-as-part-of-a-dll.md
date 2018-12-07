@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DLLs [MFC], linking
 - MFC DLLs [MFC], linking regular MFC DLLs to MFC
 ms.assetid: 76753e9c-59dc-40f6-b6a7-f6bb9a7c4190
-ms.openlocfilehash: e709404ed6e0ba79159131de1cbff80905e9f216
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f1c98056d5a5e2565e57044b1fb551db4f354f34
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50517645"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326194"
 ---
 # <a name="tn011-using-mfc-as-part-of-a-dll"></a>TN011：将 MFC 作为 DLL 的一部分使用
 
@@ -33,7 +33,7 @@ MFC 的规则 Dll 有若干优点：
 
 - 静态链接到 MFC 的规则 MFC dll，DLL 的大小取决于仅 MFC 和 C 运行时例程的使用和链接。
 
-- 动态链接到 MFC 的规则 MFC dll，节省的内存使用共享的 MFC 版本可能很大。 但是，必须将分发共享的 Dll、 Mfc*\<版本 >*.dll 和 Msvvcrt*\<版本 >*.dll 与您的 DLL。
+- 动态链接到 MFC 的规则 MFC dll，节省的内存使用共享的 MFC 版本可能很大。 但是，必须将分发共享的 Dll、 Mfc\<*版本*>.dll 和 Msvvcrt\<*版本*>.dll 与您的 DLL。
 
 - DLL 设计独立于类的实现方式之外。 您的 DLL 设计仅导出到需要的 API。 因此，如果实现发生更改，规则 MFC Dll 是仍有效。
 

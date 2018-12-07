@@ -16,12 +16,12 @@ helpviewer_keywords:
 - ismbc routines
 - _ismbc routines
 ms.assetid: b8995391-7857-4ac3-9a1e-de946eb4464d
-ms.openlocfilehash: 707287ea7abe255409911f5388cd1f96d976802b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 97094c6773ee6b67655dacc557335ed222fed311
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50454624"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326727"
 ---
 # <a name="ismbc-routines"></a>_ismbc 例程
 
@@ -42,7 +42,7 @@ ms.locfileid: "50454624"
 |例程所返回的值|测试条件|代码页 932 示例|
 |-------------|--------------------|---------------------------|
 |[_ismbcalnum、_ismbcalnum_l](../c-runtime-library/reference/ismbcalnum-functions.md)|字母数字|当且仅当 `c` 是 ASCII 英文字母的单字节表示形式时返回非零值：请参见 `_ismbcdigit` 和 `_ismbcalpha` 的示例。|
-|[_ismbcalpha、_ismbcalpha\_](../c-runtime-library/reference/ismbcalnum-functions.md)|Alphabetic|当且仅当出现以下情况时返回非零值：`c` 是 ASCII 英文字母的单字节表示形式：查看 `_ismbcupper` 和 `_ismbclower` 的示例；或是片假名字母的单字节表示形式：0xA6<=`c`<=0xDF。|
+|[_ismbcalpha、_ismbcalpha_l](../c-runtime-library/reference/ismbcalnum-functions.md)|Alphabetic|当且仅当出现以下情况时返回非零值：`c` 是 ASCII 英文字母的单字节表示形式：查看 `_ismbcupper` 和 `_ismbclower` 的示例；或是片假名字母的单字节表示形式：0xA6<=`c`<=0xDF。|
 |[_ismbcdigit、_ismbcdigit_l](../c-runtime-library/reference/ismbcalnum-functions.md)|数字|当且仅当 `c` 是 ASCII 数字 0x30<=`c`<=0x39 的单字节表示形式时返回非零值。|
 |[_ismbcgraph、_ismbcgraph_l](../c-runtime-library/reference/ismbcgraph-functions.md)|图形|当且仅当 `c` 是除空格 () 之外的任何 ASCII 或片假名可打印字符的单字节表示形式时返回非零值。 请参阅 `_ismbcdigit`、`_ismbcalpha` 和 `_ismbcpunct` 的示例。|
 |[_ismbclegal、_ismbclegal_l](../c-runtime-library/reference/ismbclegal-ismbclegal-l-ismbcsymbol-ismbcsymbol-l.md)|有效的多字节字符|当且仅当 `c` 的第一个字节在 0x81 - 0x9F 或 0xE0 - 0xFC 范围内，同时第二个字节在 0x40 - 0x7E 或 0x80 - FC 范围内时返回非零值。|

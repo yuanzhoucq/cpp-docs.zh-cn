@@ -30,12 +30,12 @@ helpviewer_keywords:
 - process creation
 - spawnlp function
 ms.assetid: 74fc6e7a-4f24-4103-9387-7177875875e6
-ms.openlocfilehash: 5379d47fc6ecbc21b523764f3fd0fbb6ef727a9a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 44137aefcec8f6658a90117288a47696f4d31903
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50590861"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51328729"
 ---
 # <a name="spawnlp-wspawnlp"></a>_spawnlp、_wspawnlp
 
@@ -82,11 +82,11 @@ intptr_t _wspawnlp(
 
 |||
 |-|-|
-**E2BIG**|参数列表超过 1024 个字节。
-**EINVAL**|*模式*参数无效。
-**ENOENT**|未找到文件或路径。
-**ENOEXEC**|指定的文件不是可执行文件或者有无效的可执行文件格式。
-**ENOMEM**|没有足够的内存可用于执行新进程。
+| **E2BIG** | 参数列表超过 1024 个字节。 |
+| **EINVAL** | *模式*参数无效。 |
+| **ENOENT** | 未找到文件或路径。 |
+| **ENOEXEC** | 指定的文件不是可执行文件或者有无效的可执行文件格式。 |
+| **ENOMEM** | 没有足够的内存可用于执行新进程。 |
 
 有关这些属性和其他的更多信息返回代码示例，请参见 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 

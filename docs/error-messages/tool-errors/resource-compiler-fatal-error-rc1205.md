@@ -17,4 +17,4 @@ ms.locfileid: "50649041"
 
 无效的代码页
 
-指定代码页 (/c) 选项后无效的代码页。 有关详细信息，请参阅《运行时库参考》 [](../../c-runtime-library/code-pages.md) 中的 *代码页* 。
+指定代码页 (/c) 选项后无效的代码页。 有关详细信息，请参阅《运行时库参考》 中的 [代码页](../../c-runtime-library/code-pages.md) 。

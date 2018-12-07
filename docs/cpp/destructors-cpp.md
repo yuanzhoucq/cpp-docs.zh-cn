@@ -1,6 +1,6 @@
 ---
 title: 析构函数 (C++)
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - objects [C++], destroying
 - Visual C++, destructors
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - destructors, about destructors
 - destructors, C++
 ms.assetid: afa859b0-f3bc-4c4d-b250-c68b335b6004
-ms.openlocfilehash: 5c56a6ffc43f8fa00ffd540a5922d8ac279475ed
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f26f797da75f0d7d7aa6f6849c9484cea35fb125
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50586012"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175868"
 ---
 # <a name="destructors-c"></a>析构函数 (C++)
 
@@ -152,9 +152,8 @@ B1 dtor
 
 按照与虚拟基类在定向非循环图形中显示的顺序的相反顺序调用这些虚拟基类的析构函数（深度优先、从左到右、后序遍历）。 下图描述了继承关系图。
 
-![显示虚拟基类的继承关系图](../cpp/media/vc392j1.gif "vc392J1")
-
-演示虚拟基类的继承关系图
+![显示虚拟基类的继承关系图](../cpp/media/vc392j1.gif "显示虚拟基类的继承关系图") <br/>
+显示虚拟基类的继承图
 
 下面列出了图中显示的类的类头。
 

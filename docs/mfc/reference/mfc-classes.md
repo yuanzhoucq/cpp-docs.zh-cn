@@ -5,12 +5,12 @@ helpviewer_keywords:
 - MFC, classes
 - classes [MFC], MFC
 ms.assetid: 7b6db805-a572-43fd-9046-0fa6e3663e63
-ms.openlocfilehash: 40294e0d0af3f5181ffe295a2a6c625fa5223f5b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c35d7bf16b851fe9a96bdd896babfa450c726374
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463383"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51525271"
 ---
 # <a name="mfc-classes"></a>MFC 类
 
@@ -1012,7 +1012,7 @@ OLE 服务器文档的基类。
 用于 OLE“编辑链接”对话框的特例，当你只需要更新文档中现有的链接对象或嵌入对象时才可使用。
 
 [COleVariant 类](../../mfc/reference/colevariant-class.md)<br/>
-封装 [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) 数据类型。
+封装 [VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant) 数据类型。
 
 [CPagerCtrl 类](../../mfc/reference/cpagerctrl-class.md)<br/>
 `CPagerCtrl` 类用于包装 Windows 页导航控件，可以滚动此控件以查看所包含的不适合包含窗口的窗口。

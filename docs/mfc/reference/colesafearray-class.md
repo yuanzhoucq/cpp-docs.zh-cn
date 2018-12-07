@@ -60,12 +60,12 @@ helpviewer_keywords:
 - COleSafeArray [MFC], UnaccessData
 - COleSafeArray [MFC], Unlock
 ms.assetid: f45a5224-5f48-40ec-9ddd-287ef9740150
-ms.openlocfilehash: efffa6057f6322f3de3d9d0bfe050d6d2021d9b2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 07e507f0546849a64625ccd67a0f7463cd510841
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648092"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51525400"
 ---
 # <a name="colesafearray-class"></a>COleSafeArray 类
 
@@ -408,7 +408,7 @@ VARIANT Detach();
 
 ### <a name="remarks"></a>备注
 
-该函数通过将对象的 VARTYPE 设置为 VT_EMPTY 分离的安全数组中的数据。 它是调用方负责通过调用 Windows 函数来释放数组[VariantClear](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-variantclear)。
+该函数通过将对象的 VARTYPE 设置为 VT_EMPTY 分离的安全数组中的数据。 它是调用方负责通过调用 Windows 函数来释放数组[VariantClear](/windows/desktop/api/oleauto/nf-oleauto-variantclear)。
 
 出现错误时，该函数将引发[COleException](../../mfc/reference/coleexception-class.md)。
 
@@ -674,7 +674,7 @@ void PutElement(
 
 ### <a name="remarks"></a>备注
 
-此函数将自动调用 Windows 函数[SafeArrayLock](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-safearraylock)并[SafeArrayUnlock](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-safearrayunlock)之前和之后分配元素。 如果数据元素是字符串、对象或变量，则函数将正确复制它，而如果现有元素是字符串、对象或变量，则将正确清除它。
+此函数将自动调用 Windows 函数[SafeArrayLock](/windows/desktop/api/oleauto/nf-oleauto-safearraylock)并[SafeArrayUnlock](/windows/desktop/api/oleauto/nf-oleauto-safearrayunlock)之前和之后分配元素。 如果数据元素是字符串、对象或变量，则函数将正确复制它，而如果现有元素是字符串、对象或变量，则将正确清除它。
 
 请注意，你可以在一个数组上拥有多个锁，以便在数组被其他操作锁定时可以将元素放入该数组。
 

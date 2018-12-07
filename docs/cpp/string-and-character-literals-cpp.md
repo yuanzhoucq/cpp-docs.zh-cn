@@ -16,12 +16,12 @@ helpviewer_keywords:
 - NULL, character constant
 - wide characters, strings
 ms.assetid: 61de8f6f-2714-4e7b-86b6-a3f885d3b9df
-ms.openlocfilehash: 787756dd3e886afb6afa87ed3871158bddcbf3ae
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d3721f3624a64a24de0a5458d88de4836b07a9c1
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614586"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51329834"
 ---
 # <a name="string-and-character-literals--c"></a>字符串和字符文本 （C++）
 
@@ -49,7 +49,7 @@ int main()
 
     // Raw string literals containing unescaped \ and "
     auto R0 =   R"("Hello \ world")"; // const char*
-    auto R1 = u8R"("Hello \ world")"; // const char*, encoded as UTF-8
+    auto R1 = u8R"("Hello \ world")"; // const char*, encoded as UTF-8
     auto R2 =  LR"("Hello \ world")"; // const wchar_t*
     auto R3 =  uR"("Hello \ world")"; // const char16_t*, encoded as UTF-16
     auto R4 =  UR"("Hello \ world")"; // const char32_t*, encoded as UTF-32
@@ -106,15 +106,22 @@ int main()
 
 有三种类型的转义序列：简单、八进制和十六进制。 转义序列可以是以下任一项：
 
-|值|转义序列|“值”|转义序列|
-|-----------|---------------------|-----------|---------------------|
-|换行符|\n|反斜杠|\\\|
-|水平制表符|\t|问号|? 或 \\?|
-|垂直制表符|\v|单引号|\\'|
-|退格符|\b|双引号|\\"|
-|回车符|\r|null 字符|\0|
-|换页符|\f|八进制|\ooo|
-|警报（响铃）|\a|十六进制|\xhhh|
+|值|转义序列|
+|-----------|---------------------|
+| 换行符 | \\n |
+| 反斜杠 | \\\\ |
+| 水平制表符 | \\t |
+| 问号 | ? 或 \\? |
+| 垂直制表符 | \\V |
+| 单引号 | \\' |
+| 退格符 | \\B |
+| 双引号 | \\" |
+| 回车符 | \\R |
+| null 字符 | \\0 |
+| 换页符 | \\f |
+| 八进制 | \\ooo |
+| 警报（响铃） | \\a |
+| 十六进制 | \\xhhh |
 
 下面的代码显示了使用普通字符文本的转义字符的一些示例。 其他字符文本类型相同的转义序列语法无效。
 
@@ -253,7 +260,7 @@ auto s4 = U"hello"; // const char32_t*
 // represents the string: An unescaped \ character
 const char* raw_narrow = R"(An unescaped \ character)";
 const wchar_t* raw_wide = LR"(An unescaped \ character)";
-const char*       raw_utf8  = u8R"(An unescaped \ character)";
+const char*       raw_utf8  = u8R"(An unescaped \ character)";
 const char16_t* raw_utf16 = uR"(An unescaped \ character)";
 const char32_t* raw_utf32 = UR"(An unescaped \ character)";
 ```

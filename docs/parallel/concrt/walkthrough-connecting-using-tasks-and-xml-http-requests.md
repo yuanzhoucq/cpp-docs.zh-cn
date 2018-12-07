@@ -1,21 +1,21 @@
 ---
 title: 演练：使用任务和 XML HTTP 请求进行连接
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - connecting to web services, UWP apps [C++]
 - IXMLHTTPRequest2 and tasks, example
 - IXHR2 and tasks, example
 ms.assetid: e8e12d46-604c-42a7-abfd-b1d1bb2ed6b3
-ms.openlocfilehash: 69e365c0f0bbee7014b6d754c920bd6241064fdf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dfe4f111e130520f1c4948dc00fdf340e4d3113e
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50495544"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175842"
 ---
 # <a name="walkthrough-connecting-using-tasks-and-xml-http-requests"></a>演练：使用任务和 XML HTTP 请求进行连接
 
-此示例演示如何使用[IXMLHTTPRequest2](/previous-versions/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2)并[IXMLHTTPRequest2Callback](/previous-versions/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2callback)接口与任务以将 HTTP GET 和 POST 请求发送到通用 Windows 平台 (UWP 中的 web 服务结合使用) 应用。 通过将 `IXMLHTTPRequest2` 与任务组合在一起，你可以编写通过其他任务编写的代码。 例如，可以使用下载任务作为任务链的一部分。 工作取消时，下载任务也会响应。
+此示例演示如何使用[IXMLHTTPRequest2](/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2)并[IXMLHTTPRequest2Callback](/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2callback)接口与任务以将 HTTP GET 和 POST 请求发送到通用 Windows 平台 (UWP 中的 web 服务结合使用) 应用。 通过将 `IXMLHTTPRequest2` 与任务组合在一起，你可以编写通过其他任务编写的代码。 例如，可以使用下载任务作为任务链的一部分。 工作取消时，下载任务也会响应。
 
 > [!TIP]
 >  此外可以使用 c + + REST SDK 从使用 c + + 应用程序的 UWP 应用或桌面 c + + 应用程序执行 HTTP 请求。 有关详细信息，请参阅[c + + REST SDK (Codename"Casablanca")](https://github.com/Microsoft/cpprestsdk)。
@@ -69,39 +69,38 @@ ms.locfileid: "50495544"
 
    [!code-xml[concrt-using-ixhr2#A1](../../parallel/concrt/codesnippet/xaml/walkthrough-connecting-using-tasks-and-xml-http-requests_4.xaml)]
 
-1. 在 MainPage.xaml.h 中，添加此 `#include` 指令：
+2. 在 MainPage.xaml.h 中，添加此 `#include` 指令：
 
    [!code-cpp[concrt-using-ixhr2#A2](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_5.h)]
 
-1. 在 MainPage.xaml.h 中，将这些 `private` 成员变量添加到 `MainPage` 类中：
+3. 在 MainPage.xaml.h 中，将这些 `private` 成员变量添加到 `MainPage` 类中：
 
    [!code-cpp[concrt-using-ixhr2#A3](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_6.h)]
 
-1. 在 MainPage.xaml.h 中，声明 `private` 方法 `ProcessHttpRequest`：
+4. 在 MainPage.xaml.h 中，声明 `private` 方法 `ProcessHttpRequest`：
 
    [!code-cpp[concrt-using-ixhr2#A4](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_7.h)]
 
-1. 在 MainPage.xaml.cpp 中，添加这些 `using` 语句：
+5. 在 MainPage.xaml.cpp 中，添加这些 `using` 语句：
 
    [!code-cpp[concrt-using-ixhr2#A5](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_8.cpp)]
 
-1. 在 MainPage.xaml.cpp 中，实现 `GetButton_Click` 类的 `PostButton_Click`、`CancelButton_Click` 和 `MainPage` 方法。
+6. 在 MainPage.xaml.cpp 中，实现 `GetButton_Click` 类的 `PostButton_Click`、`CancelButton_Click` 和 `MainPage` 方法。
 
    [!code-cpp[concrt-using-ixhr2#A6](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_9.cpp)]
 
-    > [!TIP]
-
-    >  如果您的应用程序不需要取消支持，则传递[concurrency:: cancellation_token:: none](reference/cancellation-token-class.md#none)到`HttpRequest::GetAsync`和`HttpRequest::PostAsync`方法。
+   > [!TIP]
+   > 如果您的应用程序不需要取消支持，则传递[concurrency:: cancellation_token:: none](reference/cancellation-token-class.md#none)到`HttpRequest::GetAsync`和`HttpRequest::PostAsync`方法。
 
 1. 在 MainPage.xaml.cpp 中，实现 `MainPage::ProcessHttpRequest` 方法。
 
    [!code-cpp[concrt-using-ixhr2#A7](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_10.cpp)]
 
-1. 在项目属性下**链接器**，**输入**，指定`shcore.lib`和`msxml6.lib`。
+8. 在项目属性下**链接器**，**输入**，指定`shcore.lib`和`msxml6.lib`。
 
 这是正在运行的应用程序：
 
-![正在运行的 Windows 运行时应用](../../parallel/concrt/media/concrt_usingixhr2.png "concrt_usingixhr2")
+![正在运行的 Windows 运行时应用](../../parallel/concrt/media/concrt_usingixhr2.png "正在运行的 Windows 运行时应用")
 
 ## <a name="next-steps"></a>后续步骤
 

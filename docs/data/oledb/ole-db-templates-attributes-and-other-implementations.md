@@ -6,12 +6,12 @@ helpviewer_keywords:
 - OLE DB templates, about OLE DB templates
 - OLE DB templates
 ms.assetid: 0c780c1b-9bba-4788-8c33-8552d9f120ac
-ms.openlocfilehash: 97924110d6dd59e59eda9492713518dedf68af55
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 079ec68afe2e538a40920fb2c6524f8d5b8aae89
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596594"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51520630"
 ---
 # <a name="ole-db-templates-attributes-and-other-implementations"></a>OLE DB 模板、特性和其他实现
 
@@ -25,7 +25,7 @@ OLE DB 模板，都是 ATL （动态模板库） 的一部分，使高性能 OLE
 
 - **OLE DB 提供程序模板**用于实现 OLE DB 服务器 （提供程序） 应用程序。
 
-要使用 OLE DB 模板，应熟悉 C++ 模板、COM 和 OLE DB 接口。 如果您不熟悉 OLE DB，请参阅[OLE DB 程序员参考](/previous-versions/windows/desktop/ms713643)。
+要使用 OLE DB 模板，应熟悉 C++ 模板、COM 和 OLE DB 接口。 如果您不熟悉 OLE DB，请参阅[OLE DB 程序员参考](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming)。
 
 有关详细信息，你可以：
 
@@ -37,7 +37,7 @@ OLE DB 模板，都是 ATL （动态模板库） 的一部分，使高性能 OLE
 
 - 请参阅的列表[OLE DB 模板示例](https://github.com/Microsoft/VCSamples)。
 
-- 请参阅[OLE DB 程序员参考](/previous-versions/windows/desktop/ms713643)（在 Windows SDK 中)。
+- 请参阅[OLE DB 程序员参考](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming)（在 Windows SDK 中)。
 
 ## <a name="ole-db-attributes"></a>OLE DB 属性
 
@@ -49,7 +49,7 @@ MFC 库包含一个类， [COleDBRecordView](../../mfc/reference/coledbrecordvie
 
 ## <a name="ole-db-sdk-interfaces"></a>OLE DB SDK 接口
 
-在其中 OLE DB 模板不支持 OLE DB 功能的情况下，您需要使用 OLE DB 接口本身。 有关详细信息，请参阅[OLE DB 程序员参考](/previous-versions/windows/desktop/ms713643)Windows SDK 中。
+在其中 OLE DB 模板不支持 OLE DB 功能的情况下，您需要使用 OLE DB 接口本身。 有关详细信息，请参阅[OLE DB 程序员参考](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming)Windows SDK 中。
 
 ## <a name="see-also"></a>请参阅
 

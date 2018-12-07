@@ -88,12 +88,12 @@ helpviewer_keywords:
 - std::map [C++], upper_bound
 - std::map [C++], value_comp
 ms.assetid: 7876f4c9-ebb4-4878-af1e-09364c43af0a
-ms.openlocfilehash: 8694d554261468c4e828936f6a999f073e98849f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 52a24bb2372cc7f22797ae7122b6659724c47b55
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429687"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694863"
 ---
 # <a name="map-class"></a>map 类
 
@@ -577,7 +577,7 @@ size_type count(const Key& key) const;
 
 成员函数返回以下范围内的元素 *x* 的数量
 
-[ `lower_bound` (_ *Key* ), `upper_bound` (\_ *Key* ) )
+\[ lower_bound (*键*)、 upper_bound (*密钥*))
 
 对于 map（唯一的关联容器），数量为 0 或 1。
 
@@ -869,7 +869,6 @@ int main()
     }
     cout << endl;
 }
-
 ```
 
 ## <a name="emplace_hint"></a>map::emplace_hint
@@ -947,7 +946,6 @@ int main()
     print(m1);
     cout << endl;
 }
-
 ```
 
 ## <a name="empty"></a>map::empty
@@ -1172,7 +1170,7 @@ int main()
     cout << "After the 2nd element is deleted, the map m1 is:" << endl;
     printmap(m1);
 
-    // Fill in some data to test with, one at a time, using an intializer list
+    // Fill in some data to test with, one at a time, using an initializer list
     mymap m2
     {
         { 10, "Bob" },
@@ -1210,7 +1208,6 @@ int main()
     cout << "After the element with a key of 2 is deleted, the map m3 is:" << endl;
     printmap(m3);
 }
-
 ```
 
 ## <a name="find"></a>map::find
@@ -1298,7 +1295,6 @@ int main()
     findit(m1, 45);
     findit(m1, 6);
 }
-
 ```
 
 ## <a name="get_allocator"></a>map::get_allocator
@@ -1540,7 +1536,6 @@ int main()
     print(m4);
     cout << endl;
 }
-
 ```
 
 ## <a name="iterator"></a>map::iterator
@@ -1849,7 +1844,7 @@ int main()
     m1.insert(Int_Pair(4, 40));
 
     // Create an empty map m2 with the key comparison
-    // function of geater than, then insert 2 elements
+    // function of greater than, then insert 2 elements
     map <int, int, less<int> > m2;
     m2.insert(Int_Pair(1, 10));
     m2.insert(Int_Pair(2, 20));
@@ -1936,7 +1931,6 @@ int main()
         cout << i.first << " " << i.second << ", ";
     cout << endl;
 }
-
 ```
 
 ## <a name="mapped_type"></a>map::mapped_type

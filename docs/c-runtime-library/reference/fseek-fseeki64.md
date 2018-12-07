@@ -28,12 +28,12 @@ helpviewer_keywords:
 - file pointers [C++]
 - seek file pointers
 ms.assetid: f6bb1f8b-891c-426e-9e14-0e7e5c62df70
-ms.openlocfilehash: 15ff6e4a70069845369acdc3ffd153c48f228201
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e5f775eab370f8f4a3b6a5c1d7f0918ec7efa3ff
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447530"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51331082"
 ---
 # <a name="fseek-fseeki64"></a>fseek、_fseeki64
 
@@ -75,9 +75,9 @@ int _fseeki64(
 
 |原始值|含义|
 |-|-|
-**SEEK_CUR**|文件指针的当前位置。
-**SEEK_END**|文件结尾。
-**SEEK_SET**|文件开头。
+| **SEEK_CUR** | 文件指针的当前位置。 |
+| **SEEK_END** | 文件结尾。 |
+| **SEEK_SET** | 文件开头。 |
 
 可以使用**fseek**并 **_fseeki64**重新定位文件任何位置的指针。 此外还可以在文件结尾外放置指针。 **fseek**并 **_fseeki64**清除文件结尾指示器，并且不具备任何之前的效果[ungetc](ungetc-ungetwc.md)针对*流*。
 

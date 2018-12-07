@@ -1,15 +1,15 @@
 ---
 title: 创建简单使用者
-ms.date: 10/09/2018
+ms.date: 11/06/2018
 helpviewer_keywords:
 - OLE DB consumers, creating
 ms.assetid: ae32d657-72ea-4db8-9839-75cb5cff68ae
-ms.openlocfilehash: 2a10e4da743c1f867d801ffe6767ab6b5b6c0290
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4346bca99d3744657072a4940776934e3c03e9de
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608047"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326636"
 ---
 # <a name="creating-a-simple-consumer"></a>创建简单使用者
 
@@ -51,18 +51,18 @@ ms.locfileid: "50608047"
 
 1. 在中**数据链接属性**对话框框中，执行以下操作：
 
-    1. 上**提供程序**选项卡上，指定 OLE DB 访问接口。
+   1. 上**提供程序**选项卡上，指定 OLE DB 访问接口。
 
-    1. 上**连接**选项卡上，在服务器上指定所需的信息，例如服务器名称、 登录 ID 和数据源和数据库的密码。
+   1. 上**连接**选项卡上，在服务器上指定所需的信息，例如服务器名称、 登录 ID 和数据源和数据库的密码。
 
-       > [!NOTE]
-       > 安全问题**允许保存密码**的功能**数据链接属性**对话框。 在中**输入信息以登录到服务器上**，有两个单选按钮：**使用 Windows NT 集成安全性**并**使用特定用户名和密码**。
+      > [!NOTE]
+      > 安全问题**允许保存密码**的功能**数据链接属性**对话框。 在中**输入信息以登录到服务器上**，有两个单选按钮：**使用 Windows NT 集成安全性**并**使用特定用户名和密码**。
 
-       > [!NOTE]
-       > 如果选择**使用特定用户名和密码**，可以选择保存密码 (使用**允许保存密码**复选框); 但是，此选项是不安全。 我们建议您选择**使用 Windows NT 集成安全性**; 此选项使用 Windows NT 身份验证。
+      > [!NOTE]
+      > 如果选择**使用特定用户名和密码**，可以选择保存密码 (使用**允许保存密码**复选框); 但是，此选项是不安全。 我们建议您选择**使用 Windows NT 集成安全性**; 此选项使用 Windows NT 身份验证。
 
-       > [!NOTE]
-       > 如果无法使用 Windows NT 集成安全性，应使用的中间层应用程序提示用户输入密码或者与安全机制来帮助保护其将密码存储在一个位置 (而不是在源代码中)。
+      > [!NOTE]
+      > 如果无法使用 Windows NT 集成安全性，应使用的中间层应用程序提示用户输入密码或者与安全机制来帮助保护其将密码存储在一个位置 (而不是在源代码中)。
 
    1. 选择您的提供程序和其他设置后，单击**测试连接**验证在前面的对话框页上所做的选择。 如果**结果**框报表`Test connection succeeded`，单击**确定**若要创建数据链接。
 

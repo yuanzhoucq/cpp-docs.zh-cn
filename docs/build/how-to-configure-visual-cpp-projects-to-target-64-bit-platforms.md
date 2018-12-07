@@ -6,12 +6,12 @@ helpviewer_keywords:
 - 64-bit programming [C++], configuring projects
 - project configurations [C++]
 ms.assetid: 2b9ae001-df36-4750-83b2-982145d632ad
-ms.openlocfilehash: 3df2252e1879fbbcdf6cc950fa8dd637894ba3f5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c0c734648b084c3f58577cb56984e3ea003a6a8e
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50664550"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51523932"
 ---
 # <a name="how-to-configure-visual-c-projects-to-target-64-bit-x64-platforms"></a>如何： 配置 Visual c + + 项目以面向 64 位 x64 平台
 
@@ -43,18 +43,18 @@ ms.locfileid: "50664550"
 
 - 当设置面向 64 位平台的项目时，如果“新建解决方案平台”  对话框处于打开状态，请在“从此处复制设置”  下拉列表中选择“Win32” 。 在项目级别会自动更新这些项目设置：
 
-   - [/MACHINE](../build/reference/machine-specify-target-platform.md) 链接器选项设置为 **/MACHINE:X64**。
+  - [/MACHINE](../build/reference/machine-specify-target-platform.md) 链接器选项设置为 **/MACHINE:X64**。
 
-   - 关闭“注册输出” 。 有关详细信息，请参阅 [Linker Property Pages](../ide/linker-property-pages.md)。
+  - 关闭“注册输出” 。 有关详细信息，请参阅 [Linker Property Pages](../ide/linker-property-pages.md)。
 
-   - “目标环境” 设置为 **/env x64**。 有关详细信息，请参阅 [MIDL Property Pages: General](../ide/midl-property-pages-general.md)。
+  - “目标环境” 设置为 **/env x64**。 有关详细信息，请参阅 [MIDL Property Pages: General](../ide/midl-property-pages-general.md)。
 
-   - “验证参数” 被清除并且重置为默认值。 有关详细信息，请参阅 [MIDL Property Pages: Advanced](../ide/midl-property-pages-advanced.md)。
+  - “验证参数” 被清除并且重置为默认值。 有关详细信息，请参阅 [MIDL Property Pages: Advanced](../ide/midl-property-pages-advanced.md)。
 
-   - 如果在 Win32 项目配置中已将“调试信息格式”  设置为 **/ZI** ，则在 64 位项目配置中将设置为 **/Zi** 。 有关详细信息，请参阅 [/Z7、/Zi、/ZI（调试信息格式）](../build/reference/z7-zi-zi-debug-information-format.md)。
+  - 如果在 Win32 项目配置中已将“调试信息格式”  设置为 **/ZI** ，则在 64 位项目配置中将设置为 **/Zi** 。 有关详细信息，请参阅 [/Z7、/Zi、/ZI（调试信息格式）](../build/reference/z7-zi-zi-debug-information-format.md)。
 
-   > [!NOTE]
-   > 如果在文件级重写，则不会更改这些项目属性。
+  > [!NOTE]
+  > 如果在文件级重写，则不会更改这些项目属性。
 
 ## <a name="see-also"></a>请参阅
 

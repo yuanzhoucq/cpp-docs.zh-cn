@@ -28,12 +28,12 @@ helpviewer_keywords:
 - create_locale function
 - __create_locale function
 ms.assetid: ca362464-9f4a-4ec6-ab03-316c55c5be81
-ms.openlocfilehash: 0ede14d56dc093b83078bf28eb01f5b5c55d8949
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 109a1d93692d0c65269b40fd0559381907ce1cab
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50545920"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326558"
 ---
 # <a name="createlocale-wcreatelocale"></a>_create_locale、_wcreate_locale
 
@@ -70,16 +70,16 @@ _locale_t _wcreate_locale(
 
 **_wcreate_locale**是宽字符版本 **_create_locale**;*区域设置*参数 **_wcreate_locale**是宽字符字符串。 **_wcreate_locale**并 **_create_locale**行为相同。
 
-*类别*参数指定受影响的特定于区域设置的行为部分。 有关使用的标志*类别*和及其影响的程序的部分是下表中所示。
+*类别*参数指定受影响的特定于区域设置的行为部分。 有关使用的标志*类别*和及其影响的程序的部分是此表中所示：
 
-|*类别*标志|影响|
-|-|-|
-**LC_ALL**|以下列出了所有类别。
-LC_COLLATE|**Strcoll**， **_stricoll**， **wcscoll**， **_wcsicoll**， **strxfrm**， **_strncoll**， **_strnicoll**， **_wcsncoll**， **_wcsnicoll**，并且**wcsxfrm**函数。
-LC_CTYPE|字符处理函数 (除**isdigit**， **isxdigit**， **mbstowcs**，以及**mbtowc**，不受影响)。
-**LC_MONETARY**|返回的货币格式信息**localeconv**函数。
-LC_NUMERIC|小数点字符格式化的输出例程 (如**printf**)、 数据转换例程，以及返回的非货币格式设置信息**localeconv**。 除小数点字符之外**LC_NUMERIC**集千位分隔符和分组控制返回字符串[localeconv](localeconv.md)。
-LC_TIME|**Strftime**并**wcsftime**函数。
+| *类别*标志 | 影响 |
+|-----------------|---------|
+| **LC_ALL** |以下列出了所有类别。 |
+| LC_COLLATE |**Strcoll**， **_stricoll**， **wcscoll**， **_wcsicoll**， **strxfrm**， **_strncoll**， **_strnicoll**， **_wcsncoll**， **_wcsnicoll**，并且**wcsxfrm**函数。 |
+| LC_CTYPE | 字符处理函数 (除**isdigit**， **isxdigit**， **mbstowcs**，以及**mbtowc**，不受影响)。 |
+| **LC_MONETARY** | 返回的货币格式信息**localeconv**函数。 |
+| LC_NUMERIC | 小数点字符格式化的输出例程 (如**printf**)、 数据转换例程，以及返回的非货币格式设置信息**localeconv**。 除小数点字符之外**LC_NUMERIC**集千位分隔符和分组控制返回字符串[localeconv](localeconv.md)。 |
+| LC_TIME | **Strftime**并**wcsftime**函数。 |
 
 此函数验证*类别*并*区域设置*参数。 如果类别参数不是上表中给定的值之一，或如果*区域设置*是**NULL**，该函数将返回**NULL**。
 

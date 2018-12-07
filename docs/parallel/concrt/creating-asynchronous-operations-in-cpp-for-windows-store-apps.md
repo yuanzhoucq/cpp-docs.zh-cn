@@ -1,16 +1,16 @@
 ---
 title: 在 c + + 为 UWP 应用创建异步操作
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - Windows 8.x apps, creating C++ async operations
 - Creating C++ async operations
 ms.assetid: a57cecf4-394a-4391-a957-1d52ed2e5494
-ms.openlocfilehash: ecef168d2162adf3a478268ec08b0a61f35c6260
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 59630c7702dffc4b606943e174e44fdba6aecfe8
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50563197"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176947"
 ---
 # <a name="creating-asynchronous-operations-in-c-for-uwp-apps"></a>在 c + + 为 UWP 应用创建异步操作
 
@@ -124,7 +124,7 @@ Windows 运行时是一个编程接口，可用于创建仅在特殊操作系统
 
 下图显示了选定每个选项后的 `Primes` 应用。
 
-![Windows 运行时 Primes 应用](../../parallel/concrt/media/concrt_windows_primes.png "concrt_windows_primes")
+![Windows 运行时 Primes 应用程序](../../parallel/concrt/media/concrt_windows_primes.png "Windows 运行时 Primes 应用程序")
 
 有关使用 `create_async` 创建可供其他语言使用的异步任务的示例，请参阅 [在 Bing 地图行程优化器示例中使用 C++](https://msdn.microsoft.com/library/windows/apps/hh699891.aspx) 和 [在 C++ 中使用 PPL 的 Windows 8 异步操作](http://code.msdn.microsoft.com/windowsapps/windows-8-asynchronous-08009a0d)。
 
@@ -148,11 +148,10 @@ Windows 运行时使用的 COM 线程模型。 在此模型中，根据对象处
 下面一节介绍一种应用程序，该应用程序从磁盘读取一个文件，查找该文件中最常见的单词，然后在 UI 中显示结果。 最终操作（更新 UI）将在 UI 线程上发生。
 
 > [!IMPORTANT]
->  此行为是特定于 UWP 应用。 对于桌面应用程序，您无法控制延续的运行位置。 相反，计划程序会选择要运行每个延续的辅助线程。
+> 此行为是特定于 UWP 应用。 对于桌面应用程序，您无法控制延续的运行位置。 相反，计划程序会选择要运行每个延续的辅助线程。
 
 > [!IMPORTANT]
-
->  对于在 STA 中运行的延续的主体，请不要调用 [concurrency::task::wait](reference/task-class.md#wait) 。 否则，运行时会引发 [concurrency::invalid_operation](../../parallel/concrt/reference/invalid-operation-class.md) ，原因是此方法阻止当前线程并可能导致应用停止响应。 但是，你可以调用 [concurrency::task::get](reference/task-class.md#get) 方法来接收基于任务的延续中的先行任务的结果。
+> 对于在 STA 中运行的延续的主体，请不要调用 [concurrency::task::wait](reference/task-class.md#wait) 。 否则，运行时会引发 [concurrency::invalid_operation](../../parallel/concrt/reference/invalid-operation-class.md) ，原因是此方法阻止当前线程并可能导致应用停止响应。 但是，你可以调用 [concurrency::task::get](reference/task-class.md#get) 方法来接收基于任务的延续中的先行任务的结果。
 
 ##  <a name="example-app"></a> 示例： 控制在使用 c + + 和 XAML 的 Windows 运行时应用的执行
 
@@ -187,7 +186,7 @@ Windows 运行时使用的 COM 线程模型。 在此模型中，根据对象处
 
 下图显示 `CommonWords` 应用的结果。
 
-![Windows 运行时 CommonWords 应用程序](../../parallel/concrt/media/concrt_windows_common_words.png "concrt_windows_common_words")
+![Windows 运行时 CommonWords 应用程序](../../parallel/concrt/media/concrt_windows_common_words.png "Windows 运行时 CommonWords 应用程序")
 
 在此示例中，可以支持取消操作，因为支持 `task` 的 `create_async` 对象使用了隐式取消标记。 如果您的任务需要以协作方式响应取消，则请定义您的工作函数以采用 `cancellation_token` 对象。 有关 PPL 中取消操作的详细信息，请参阅 [Cancellation in the PPL](cancellation-in-the-ppl.md)
 

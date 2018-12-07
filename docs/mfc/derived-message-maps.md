@@ -1,18 +1,18 @@
 ---
 title: 派生消息映射
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - message handling [MFC], derived message handlers
 - messages, routing
 - message maps [MFC], derived
 - derived message maps
 ms.assetid: 21829556-6e64-40c3-8279-fed85d99de77
-ms.openlocfilehash: 1413290bc04af37a6d3204150dff5244e1dcb5c5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2ae536a53a43472a4fb81d30e685fbc3faaa603f
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50662522"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175595"
 ---
 # <a name="derived-message-maps"></a>派生消息映射
 
@@ -20,7 +20,8 @@ ms.locfileid: "50662522"
 
 记住，`CView`（`CMyView` 的基类）是依次从 `CWnd` 派生的。 从而`CMyView`*是*`CView`并*是* `CWnd`。 这些类都有其自己的消息映射。 下图“视图层次结构”显示了类的层次关系，但记住，`CMyView` 对象是具有所有树类的特征的单个对象。
 
-![视图层次结构](../mfc/media/vc38621.gif "vc38621")视图层次结构
+![视图层次结构](../mfc/media/vc38621.gif "视图层次结构") <br/>
+视图层次结构
 
 因此，如果消息无法在类 `CMyView` 的消息映射中匹配，则框架还将在其即时基类中搜索消息映射。 位于消息映射开头的 `BEGIN_MESSAGE_MAP` 宏将指定两个类名称作为其自变量：
 

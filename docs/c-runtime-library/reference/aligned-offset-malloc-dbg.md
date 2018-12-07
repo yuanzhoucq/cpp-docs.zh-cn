@@ -22,12 +22,12 @@ helpviewer_keywords:
 - _aligned_offset_malloc_dbg function
 - aligned_offset_malloc_dbg function
 ms.assetid: 6c242307-c59e-4d63-aae5-d8cbec8e021c
-ms.openlocfilehash: 481109a5ed7d137aa2d10c77955a2f460cba43c0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 96fe9e7fda0d0cdfdbfa5462e4f601e3649e2233
+ms.sourcegitcommit: beeb77b2976e997debc55b1af35024cc62e62799
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507531"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52977714"
 ---
 # <a name="alignedoffsetmallocdbg"></a>_aligned_offset_malloc_dbg
 
@@ -68,7 +68,7 @@ void * _aligned_offset_malloc_dbg(
 
 ## <a name="remarks"></a>备注
 
-**_aligned_offset_malloc_dbg**是调试版[_aligned_offset_malloc](aligned-offset-malloc.md)函数。 当[_DEBUG](../../c-runtime-library/debug.md)未定义，则每次调用 **_aligned_offset_malloc_dbg**缩减为调用 **_aligned_offset_malloc**。 这两 **_aligned_offset_malloc**并 **_aligned_offset_malloc_dbg**分配基堆中的内存块，但 **_aligned_offset_malloc_dbg**提供了多个调试功能： 用于测试泄漏，用于跟踪特定分配类型的块类型参数的块的用户部分两侧的缓冲区并*文件名*/*linenumber*的信息来确定分配请求的源。
+**_aligned_offset_malloc_dbg**是调试版[_aligned_offset_malloc](aligned-offset-malloc.md)函数。 当[_DEBUG](../../c-runtime-library/debug.md)未定义，则每次调用 **_aligned_offset_malloc_dbg**缩减为调用 **_aligned_offset_malloc**。 这两 **_aligned_offset_malloc**并 **_aligned_offset_malloc_dbg**分配基堆中的内存块，但 **_aligned_offset_malloc_dbg**提供了多个调试功能： 用于测试泄漏的块的用户部分两侧的缓冲区并*文件名*/*linenumber*的信息来确定的来源分配请求。 跟踪特定分配类型的块类型参数具有不一致的分配的受支持的调试功能。 一致的分配将显示为 _NORMAL_BLOCK 块类型。
 
 **_aligned_offset_malloc_dbg**分配稍多的空间比请求的内存块*大小*。 其他空间将由调试堆管理器用于链接调试内存块，以及提供具有调试标头信息的应用程序和覆盖缓冲区。 分配该块后，使用值 0xCD 填充该块的用户部分，使用值 0xFD 填充每个覆盖缓冲区。
 

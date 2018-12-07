@@ -12,19 +12,19 @@ helpviewer_keywords:
 - std::operator&amp; (bitset)
 - std::operator&gt;&gt; (bitset)
 - std::operator&lt;&lt; (bitset)
-ms.openlocfilehash: c51bc5ecf2bc3a74b25a06320f0ca8fd64749f5d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1c4c1b6f6c023514a1d3ae46f6670247e4bf99d4
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50531139"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51331727"
 ---
 # <a name="ltbitsetgt-operators"></a>&lt;bitset&gt; 运算符
 
 ||||
 |-|-|-|
 |[operator&amp;](#op_amp)|[operator&gt;&gt;](#op_gt_gt)|[operator&lt;&lt;](#op_lt_lt)|
-|[operator^](#op_xor)|[operator|](#op_or)|
+|[operator^](#op_xor)|[operator&#124;](#op_or)| |
 
 ## <a name="op_amp"></a>operator&amp;
 
@@ -83,7 +83,6 @@ bitset 3: 0001
 将位序列的文本表示形式插入到输出流中。
 
 ```
-
 template <class CharType, class Traits, size_t N>
 basic_ostream<CharType, Traits>& operator<<(
     basic_ostream<CharType, Traits>& ostr,
@@ -141,7 +140,6 @@ int main( )
 将位字符的字符串读入位组。
 
 ```
-
 template <class CharType, class Traits, size_t Bits>
 basic_istream<CharType, Traits>& operator>> (
     basic_istream<CharType, Traits>&
@@ -275,7 +273,7 @@ bitset 2: 0011
 bitset 3: 0110
 ```
 
-## <a name="op_or"></a>  运算符 |
+## <a name="op_or"></a>operator|
 
 执行两个位组间的按位 `OR`。
 
