@@ -1,6 +1,6 @@
 # [Visual Studio 2017 中的 Visual C++](visual-cpp-in-visual-studio.md)
 # [Visual Studio 2017 中 Visual C++ 的新增功能](what-s-new-for-visual-cpp-in-visual-studio.md)
-# [Visual C++ 教程](build/vscpp-step-0-installation.md)
+# Visual C++ 教程
 ## [在 Visual Studio 中安装 C++ 支持](build/vscpp-step-0-installation.md)
 ## [创建 C++ 控制台应用项目](build/vscpp-step-1-create.md)
 ## [生成并运行 C++ 控制台应用项目](build/vscpp-step-2-build.md)
