@@ -4,12 +4,12 @@ ms.date: 11/12/2018
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-ms.openlocfilehash: aa93158e518950efa9d1f2f8092aeabbc3c7724c
-ms.sourcegitcommit: 99437d7da4528ce72cabe6b6a65a9be5dfd090f8
+ms.openlocfilehash: ef61ebbfad62e6a7bf764bad35204247e47d8ddb
+ms.sourcegitcommit: 6990f842fefc27b522b15cf352f3517b319d78da
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51598816"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53248567"
 ---
 # <a name="compiler-options-listed-by-category"></a>按类别列出的编译器选项
 
@@ -62,7 +62,7 @@ ms.locfileid: "51598816"
 |[/homeparams](homeparams-copy-register-parameters-to-stack.md)|强制将传入寄存器的参数写入其在函数入口的堆栈上的位置。 此编译器选项是仅针对 x64 编译器 （本机编译和跨平台编译）。|
 |[/hotpatch](hotpatch-create-hotpatchable-image.md)|创建可热修补的映像。|
 |[/Qfast_transcendentals](qfast-transcendentals-force-fast-transcendentals.md)|生成快速先验。|
-|[QIfist](qifist-suppress-ftol.md)|已否决。 当需要从浮点型转换为整型时，取消调用 Helper 函数 `_ftol` 。 (仅限 x86)|
+|[/QIfist](qifist-suppress-ftol.md)|已否决。 当需要从浮点型转换为整型时，取消调用 Helper 函数 `_ftol` 。 (仅限 x86)|
 |[/Qimprecise_fwaits](qimprecise-fwaits-remove-fwaits-inside-try-blocks.md)|移除 `fwait` 块中的 `try` 命令。|
 |[/Qpar](qpar-auto-parallelizer.md)|启用循环的自动并行化。|
 |[/Qpar-report](qpar-report-auto-parallelizer-reporting-level.md)|启用自动并行化的报告级别。|
@@ -207,7 +207,7 @@ ms.locfileid: "51598816"
 |[/GZ](gz-enable-stack-frame-run-time-error-checking.md)|已否决。 启用快速检查。 改为使用 [/RTC1](rtc-run-time-error-checks.md) 。|
 |[/H](h-restrict-length-of-external-names.md)|已否决。 限制外部（公共）名称的长度。|
 |[/Og](og-global-optimizations.md)|已否决。 使用全局优化。|
-|[QIfist](qifist-suppress-ftol.md)|已否决。 曾用来指定如何从浮点类型转换到整型类型。|
+|[/QIfist](qifist-suppress-ftol.md)|已否决。 曾用来指定如何从浮点类型转换到整型类型。|
 |[/V](v-version-number.md)|已否决。 设置 .obj 文件版本字符串。|
 |[/Wp64](wp64-detect-64-bit-portability-issues.md)|已过时。 检测 64 位可移植性问题。|
 |[/Yd](yd-place-debug-information-in-object-file.md)|已否决。 将完整的调试信息放在所有对象文件中。 改为使用 [/Zi](z7-zi-zi-debug-information-format.md) 。|
