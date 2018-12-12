@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CWinFormsControl [MFC], GetControl
 - CWinFormsControl [MFC], GetControlHandle
 ms.assetid: 6406dd7b-fb89-4a18-ac3a-c010d6b6289a
-ms.openlocfilehash: c27bcfa88ec5ba8b330a62f6ecfbad7e10a54d6a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8728c876badcf6648740cc842a1f289789bf0f4
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50547480"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178234"
 ---
 # <a name="cwinformscontrol-class"></a>CWinFormsControl 类
 
@@ -111,10 +111,10 @@ inline BOOL CreateManagedControl(
 要创建的控件的数据类型。 必须是[类型](https://msdn.microsoft.com/library/system.type)数据类型。
 
 *dwStyle*<br/>
-要应用于控件的窗口样式。 指定的组合[的窗口样式](../../mfc/reference/styles-used-by-mfc.md#window-styles)。 目前，支持仅以下样式： WS_TABSTOP、 WS_VISIBLE、 WS_DISABLED 和 WS_GROUP。
+要应用于控件的窗口样式。 指定的组合[的窗口样式](../../mfc/reference/styles-used-by-mfc.md#window-styles)。 目前，支持仅以下样式：WS_TABSTOP、 WS_VISIBLE、 WS_DISABLED 和 WS_GROUP。
 
 *rect*<br/>
-一个[RECT 结构](../../mfc/reference/rect-structure1.md)，它定义控件的左上角和右下角的坐标 （仅第一个重载）。
+一个[RECT 结构](/windows/desktop/api/windef/ns-windef-tagrect)，它定义控件的左上角和右下角的坐标 （仅第一个重载）。
 
 *nPlaceHolderID*<br/>
 静态位置持有者控件的句柄放在资源编辑器中。 在新创建的 Windows 窗体控件取代了静态控件，假定其位置、 z 顺序和样式 （仅第二个重载）。

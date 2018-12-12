@@ -5,12 +5,12 @@ helpviewer_keywords:
 - MFC, classes
 - classes [MFC], MFC
 ms.assetid: 7b6db805-a572-43fd-9046-0fa6e3663e63
-ms.openlocfilehash: c35d7bf16b851fe9a96bdd896babfa450c726374
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: ee64ca259f2466bb02f7dd650a10dc18f8d8f8a1
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525271"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178949"
 ---
 # <a name="mfc-classes"></a>MFC 类
 
@@ -1099,7 +1099,7 @@ MFC 实现的停靠模型的基本组件。 此类对象存储指向两个停靠
 显示控件中数据库记录的视图。
 
 [CRect 类](../../atl-mfc-shared/reference/crect-class.md)<br/>
-类似于 Windows [RECT 结构](rect-structure.md)。
+类似于 Windows [RECT 结构](/windows/desktop/api/windef/ns-windef-tagrect)。
 
 [CRectTracker 类](../../mfc/reference/crecttracker-class.md)<br/>
 使项目以不同方式显示、移动和调整大小。
@@ -1165,7 +1165,7 @@ MFC 实现的停靠模型的基本组件。 此类对象存储指向两个停靠
 封装其幅度由动画变量的初始速度决定的正弦速度转换。
 
 [CSize 类](../../atl-mfc-shared/reference/csize-class.md)<br/>
-类似于实现相对坐标或位置的 Windows [SIZE](https://msdn.microsoft.com/library/windows/desktop/dd145106) 结构。
+类似于实现相对坐标或位置的 Windows [SIZE](/windows/desktop/api/windef/ns-windef-tagsize) 结构。
 
 [CSliderCtrl 类](../../mfc/reference/csliderctrl-class.md)<br/>
 提供 Windows 公共滑块控件的功能。

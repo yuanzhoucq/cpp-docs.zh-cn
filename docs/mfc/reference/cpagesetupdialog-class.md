@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CPageSetupDialog [MFC], PreDrawPage
 - CPageSetupDialog [MFC], m_psd
 ms.assetid: 049c0ac8-f254-4854-9414-7a8271d1447a
-ms.openlocfilehash: 136f172dcd406e323afddae87d6fb234b5d4b273
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d3fdcfa664de93f62b8b4dbcbc6184d08fdf591c
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544880"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178077"
 ---
 # <a name="cpagesetupdialog-class"></a>CPageSetupDialog 类
 
@@ -142,7 +142,7 @@ CPageSetupDialog(
 
 - PSD_DISABLEORIENTATION 禁用页面方向对话框控件。
 
-- PSD_RETURNDEFAULT 会导致`CPageSetupDialog`以返回[DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea)并[DEVNAMES](../../mfc/reference/devnames-structure.md)而不会显示一个对话框中的系统的默认打印机初始化的结构。 假定这两个`hDevNames`和`hDevMode`NULL; 否则，该函数将返回错误。 如果系统默认打印机支持的旧的打印机驱动程序 （早于 Windows 版本 3.0） 仅`hDevNames`返回;`hDevMode`为 NULL。
+- PSD_RETURNDEFAULT 会导致`CPageSetupDialog`以返回[DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea)并[DEVNAMES](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames)而不会显示一个对话框中的系统的默认打印机初始化的结构。 假定这两个`hDevNames`和`hDevMode`NULL; 否则，该函数将返回错误。 如果系统默认打印机支持的旧的打印机驱动程序 （早于 Windows 版本 3.0） 仅`hDevNames`返回;`hDevMode`为 NULL。
 
 - PSD_DISABLEPAPER 禁用纸张选择控件。
 
@@ -171,7 +171,7 @@ CPageSetupDialog(
 
 ##  <a name="createprinterdc"></a>  CPageSetupDialog::CreatePrinterDC
 
-创建打印机设备上下文中的从[DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea)并[DEVNAMES](../../mfc/reference/devnames-structure.md)结构。
+创建打印机设备上下文中的从[DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea)并[DEVNAMES](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames)结构。
 
 ```
 HDC CreatePrinterDC();
@@ -262,7 +262,7 @@ void GetMargins(
 ### <a name="parameters"></a>参数
 
 *lpRectMargins*<br/>
-指向[RECT](rect-structure.md)结构或[CRect](../../atl-mfc-shared/reference/crect-class.md)当前所选打印机的打印边距 （以 1/1000 个英寸或 1/100 mm） 描述的对象。 如果您不感兴趣此矩形，为此参数传递 NULL。
+指向[RECT](/windows/desktop/api/windef/ns-windef-tagrect)结构或[CRect](../../atl-mfc-shared/reference/crect-class.md)当前所选打印机的打印边距 （以 1/1000 个英寸或 1/100 mm） 描述的对象。 如果您不感兴趣此矩形，为此参数传递 NULL。
 
 *lpRectMinMargins*<br/>
 指向`RECT`结构或`CRect`当前所选打印机的最小打印边距 （以 1/1000 个英寸或 1/100 mm） 描述的对象。 如果您不感兴趣此矩形，为此参数传递 NULL。
@@ -341,7 +341,7 @@ virtual UINT OnDrawPage(
 - 寄信人地址表示形式的 WM_PSD_YAFULLPAGERECT 区域。 此区域将扩展到示例页面区域的边缘。
 
 *lpRect*<br/>
-指向[CRect](../../atl-mfc-shared/reference/crect-class.md)或[RECT](rect-structure.md)对象，包含在绘图区域的坐标。
+指向[CRect](../../atl-mfc-shared/reference/crect-class.md)或[RECT](/windows/desktop/api/windef/ns-windef-tagrect)对象，包含在绘图区域的坐标。
 
 ### <a name="return-value"></a>返回值
 

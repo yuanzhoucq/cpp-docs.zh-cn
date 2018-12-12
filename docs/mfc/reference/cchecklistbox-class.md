@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CCheckListBox [MFC], SetCheck
 - CCheckListBox [MFC], SetCheckStyle
 ms.assetid: 1dd78438-00e8-441c-b36f-9c4f9ac0d019
-ms.openlocfilehash: b3bf93a876f9092d5615b75ca45fea71341d3557
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: b1e64e947f798becef32fa4d99f21e61133cc8fc
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327338"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53177831"
 ---
 # <a name="cchecklistbox-class"></a>CCheckListBox 类
 
@@ -146,7 +146,7 @@ virtual BOOL Create(
 指定的检查表框的样式。 样式必须是 LBS_HASSTRINGS 和 LBS_OWNERDRAWFIXED （列表中的所有项都是高度相同） 或 LBS_OWNERDRAWVARIABLE （高度不都是列表中的项）。 此样式可以与其他组合[列表框样式](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)除外 LBS_USETABSTOPS。
 
 *rect*<br/>
-指定的检查表框大小和位置。 可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT](../../mfc/reference/rect-structure1.md)结构。
+指定的检查表框大小和位置。 可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT](/windows/desktop/api/windef/ns-windef-tagrect)结构。
 
 *pParentWnd*<br/>
 指定检查表框的父窗口 (通常`CDialog`对象)。 它不能为 NULL。
@@ -193,7 +193,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ### <a name="parameters"></a>参数
 
 *lpDrawItemStruct*<br/>
-指向的长指针[DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md)结构，其中包含有关绘图所需的类型的信息。
+指向的长指针[DRAWITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct)结构，其中包含有关绘图所需的类型的信息。
 
 ### <a name="remarks"></a>备注
 
@@ -240,7 +240,7 @@ int GetCheck(int nIndex);
 
 指定的复选框的状态。 下表列出了可能的值。
 
-|“值”|描述|
+|值|描述|
 |-----------|-----------------|
 |BST_CHECKED|选中复选框。|
 |BST_UNCHECKED|未选中该复选框。|
@@ -290,7 +290,7 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 ### <a name="parameters"></a>参数
 
 *lpMeasureItemStruct*<br/>
-指向的长指针[MEASUREITEMSTRUCT](../../mfc/reference/measureitemstruct-structure.md)结构。
+指向的长指针[MEASUREITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagmeasureitemstruct)结构。
 
 ### <a name="remarks"></a>备注
 
@@ -344,7 +344,7 @@ void SetCheck(
 
 下表列出了可能值*n 请查看*参数。
 
-|“值”|描述|
+|值|描述|
 |-----------|-----------------|
 |BST_CHECKED|选择指定复选框。|
 |BST_UNCHECKED|清除指定的复选框。|

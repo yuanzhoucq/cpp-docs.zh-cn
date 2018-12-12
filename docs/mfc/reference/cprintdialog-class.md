@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CPrintDialog [MFC], PrintSelection
 - CPrintDialog [MFC], m_pd
 ms.assetid: 5bdb2424-adf8-433d-a97c-df11a83bc4e4
-ms.openlocfilehash: 3e86ce3e0179ff7c7a47a7083b6c168fea91ccbc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d6d76ecb9042f299ce0c5e573870ee79954751c5
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50662431"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178761"
 ---
 # <a name="cprintdialog-class"></a>CPrintDialog 类
 
@@ -176,7 +176,7 @@ CPrintDialog(
 
 ##  <a name="createprinterdc"></a>  CPrintDialog::CreatePrinterDC
 
-从创建打印机设备上下文 (DC) [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea)并[DEVNAMES](../../mfc/reference/devnames-structure.md)结构。
+从创建打印机设备上下文 (DC) [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea)并[DEVNAMES](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames)结构。
 
 ```
 HDC CreatePrinterDC();

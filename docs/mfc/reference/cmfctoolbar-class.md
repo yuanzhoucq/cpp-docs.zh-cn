@@ -311,12 +311,12 @@ helpviewer_keywords:
 - CMFCToolBar [MFC], m_bDontScaleImages
 - CMFCToolBar [MFC], m_dblLargeImageRatio
 ms.assetid: e7679c01-fb94-44c0-98c6-3af955292fb5
-ms.openlocfilehash: d1677716db42f7f2e3b74e63562d00527291c144
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 98de92a9473d64a87b9b7a9f2891adf4263e1951
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50524655"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178962"
 ---
 # <a name="cmfctoolbar-class"></a>CMFCToolBar 类
 
@@ -519,7 +519,7 @@ class CMFCToolBar : public CMFCBaseToolBar
 
 1. 调用[CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking)指定停靠样式。
 
-若要插入的特殊按钮，如组合框或下拉工具栏中，保留在父资源中，虚拟按钮并通过使用来替换在运行时将虚拟按钮[CMFCToolBar::ReplaceButton](#replacebutton)。 有关详细信息，请参阅[演练： 将置于工具栏上的控件](../walkthrough-putting-controls-on-toolbars.md)。
+若要插入的特殊按钮，如组合框或下拉工具栏中，保留在父资源中，虚拟按钮并通过使用来替换在运行时将虚拟按钮[CMFCToolBar::ReplaceButton](#replacebutton)。 有关详细信息，请参阅[演练：将控件置于工具栏上](../walkthrough-putting-controls-on-toolbars.md)。
 
 `CMFCToolBar` 是的 MFC 库类的基类[CMFCMenuBar 类](../../mfc/reference/cmfcmenubar-class.md)， [CMFCPopupMenuBar 类](../../mfc/reference/cmfcpopupmenubar-class.md)，并[CMFCDropDownToolBar 类](../../mfc/reference/cmfcdropdowntoolbar-class.md)。
 
@@ -1242,7 +1242,7 @@ void EnableReflections(BOOL bEnable = TRUE);
 
 调用此方法以允许命令包含嵌入的控件，如组合框的工具栏按钮的反射。
 
-有关命令反射的详细信息，请参阅[TN062: Windows 控件消息反射](../../mfc/tn062-message-reflection-for-windows-controls.md)。
+有关命令反射的详细信息，请参阅[TN062:消息反射的 Windows 控件](../../mfc/tn062-message-reflection-for-windows-controls.md)。
 
 ##  <a name="enabletextlabels"></a>  CMFCToolBar::EnableTextLabels
 
@@ -2491,7 +2491,7 @@ static BOOL IsLastCommandFromButton(CMFCToolBarButton* pButton);
 
 ### <a name="remarks"></a>备注
 
-此方法获取指向的指针[MSG 结构](../../mfc/reference/msg-structure1.md)通过调用`CWnd::GetCurrentMessage`。 然后，它比较的按钮的 HWND`MSG::lParam`和`MSG::hwnd`成员以确定该按钮是否是命令源。
+此方法获取指向的指针[MSG 结构](/windows/desktop/api/winuser/ns-winuser-tagmsg)通过调用`CWnd::GetCurrentMessage`。 然后，它比较的按钮的 HWND`MSG::lParam`和`MSG::hwnd`成员以确定该按钮是否是命令源。
 
 ##  <a name="islocked"></a>  CMFCToolBar::IsLocked
 

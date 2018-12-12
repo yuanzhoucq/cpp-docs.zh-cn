@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CBitmap [MFC], SetBitmapBits
 - CBitmap [MFC], SetBitmapDimension
 ms.assetid: 3980616a-c59d-495a-86e6-62bd3889c84c
-ms.openlocfilehash: 295f61ed120e957bc0d5ec1746e7d3bdfbb6d001
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6722011bf343a391fcc7180558eead5c039afc59
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624596"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178169"
 ---
 # <a name="cbitmap-class"></a>CBitmap 类
 
@@ -155,7 +155,7 @@ BOOL CreateBitmap(
 
 完成通过 `CBitmap` 函数创建的 `CreateBitmap` 对象后，首先选择设备上下文中的位图，然后删除 `CBitmap` 对象。
 
-有关详细信息，请参阅的说明`bmBits`字段中`BITMAP`结构。 [BITMAP](../../mfc/reference/bitmap-structure.md) 结构根据 [CBitmap::CreateBitmapIndirect](#createbitmapindirect) 成员函数进行说明。
+有关详细信息，请参阅的说明`bmBits`字段中`BITMAP`结构。 [BITMAP](/windows/desktop/api/wingdi/ns-wingdi-tagbitmap) 结构根据 [CBitmap::CreateBitmapIndirect](#createbitmapindirect) 成员函数进行说明。
 
 ##  <a name="createbitmapindirect"></a>  CBitmap::CreateBitmapIndirect
 
@@ -168,7 +168,7 @@ BOOL CreateBitmapIndirect(LPBITMAP lpBitmap);
 ### <a name="parameters"></a>参数
 
 *lpBitmap*<br/>
-指向[位图](../../mfc/reference/bitmap-structure.md)结构，其中包含有关位图的信息。
+指向[位图](/windows/desktop/api/wingdi/ns-wingdi-tagbitmap)结构，其中包含有关位图的信息。
 
 ### <a name="return-value"></a>返回值
 
@@ -286,7 +286,7 @@ int GetBitmap(BITMAP* pBitMap);
 ### <a name="parameters"></a>参数
 
 *pBitMap*<br/>
-指向[位图结构](../../mfc/reference/bitmap-structure.md)结构，它将接收映像属性。 此参数不能为 NULL。
+指向[位图](/windows/desktop/api/wingdi/ns-wingdi-tagbitmap)结构，它将接收映像属性。 此参数不能为 NULL。
 
 ### <a name="return-value"></a>返回值
 

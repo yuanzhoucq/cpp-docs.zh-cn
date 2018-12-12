@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CToolBar [MFC], SetHeight
 - CToolBar [MFC], SetSizes
 ms.assetid: e868da26-5e07-4607-9651-e2f863ad9059
-ms.openlocfilehash: 4faa067f95f43939d6dbd05837f961b3baa7f17f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 938df6599ca3bfec3e08e77d7a60106133f54324
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50593240"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178533"
 ---
 # <a name="ctoolbar-class"></a>CToolBar 类
 
@@ -141,7 +141,7 @@ Visual c + + 提供了两个方法，以创建工具栏。 若要创建工具栏
 
 若要创建一个单选按钮，调用[CCmdUI](../../mfc/reference/ccmdui-class.md)对象的[SetRadio](../../mfc/reference/ccmdui-class.md#setradio) ON_UPDATE_COMMAND_UI 处理程序中的成员函数。 传递`SetRadio`未选中或签入的非零值为 0 的参数。 为了提供单选按钮组的互斥行为，必须在组中具有所有按钮 ON_UPDATE_COMMAND_UI 处理的程序。
 
-有关使用的详细信息`CToolBar`，请参阅文章[MFC 工具栏实现](../../mfc/mfc-toolbar-implementation.md)并[技术说明 31： 控件条](../../mfc/tn031-control-bars.md)。
+有关使用的详细信息`CToolBar`，请参阅文章[MFC 工具栏实现](../../mfc/mfc-toolbar-implementation.md)和[技术说明 31:控件条](../../mfc/tn031-control-bars.md)。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -406,7 +406,7 @@ virtual void GetItemRect(
 要从中检索其矩形坐标的项 （按钮或分隔符） 的索引。
 
 *lpRect*<br/>
-地址[RECT](../../mfc/reference/rect-structure1.md)结构，它将包含项目的坐标。
+地址[RECT](/windows/desktop/api/windef/ns-windef-tagrect)结构，它将包含项目的坐标。
 
 ### <a name="remarks"></a>备注
 
@@ -565,7 +565,7 @@ void SetButtonInfo(
 样式 TBBS_SEPARATOR 的分隔符为此函数设置分隔符的宽度 （像素） 中存储的值为*iImage*。
 
 > [!NOTE]
->  您还可以设置使用的按钮状态*nStyle*参数; 但是，因为按钮状态由控制[ON_UPDATE_COMMAND_UI](message-map-macros-mfc.md#on_update_command_ui)处理程序中，任何状态使用设置`SetButtonInfo`都将丢失在下一步的空闲处理。 请参阅[如何更新用户界面对象](../../mfc/how-to-update-user-interface-objects.md)并[TN031： 控件条](../../mfc/tn031-control-bars.md)有关详细信息。
+>  您还可以设置使用的按钮状态*nStyle*参数; 但是，因为按钮状态由控制[ON_UPDATE_COMMAND_UI](message-map-macros-mfc.md#on_update_command_ui)处理程序中，任何状态使用设置`SetButtonInfo`都将丢失在下一步的空闲处理。 请参阅[如何更新用户界面对象](../../mfc/how-to-update-user-interface-objects.md)和[TN031:控件条](../../mfc/tn031-control-bars.md)有关详细信息。
 
 位图图像和按钮的信息，请参阅[CToolBar](../../mfc/reference/ctoolbar-class.md)概述和[CToolBar::LoadBitmap](#loadbitmap)。
 
@@ -640,7 +640,7 @@ void SetButtonStyle(
 然后再调用`SetButtonStyle`，调用[GetButtonStyle](#getbuttonstyle)成员函数以检索按钮或分隔符样式。
 
 > [!NOTE]
->  您还可以设置使用的按钮状态*nStyle*参数; 但是，因为按钮状态由控制[ON_UPDATE_COMMAND_UI](message-map-macros-mfc.md#on_update_command_ui)处理程序中，任何状态使用设置`SetButtonStyle`都将丢失在下一步的空闲处理。 请参阅[如何更新用户界面对象](../../mfc/how-to-update-user-interface-objects.md)并[TN031： 控件条](../../mfc/tn031-control-bars.md)有关详细信息。
+>  您还可以设置使用的按钮状态*nStyle*参数; 但是，因为按钮状态由控制[ON_UPDATE_COMMAND_UI](message-map-macros-mfc.md#on_update_command_ui)处理程序中，任何状态使用设置`SetButtonStyle`都将丢失在下一步的空闲处理。 请参阅[如何更新用户界面对象](../../mfc/how-to-update-user-interface-objects.md)和[TN031:控件条](../../mfc/tn031-control-bars.md)有关详细信息。
 
 ##  <a name="setbuttontext"></a>  CToolBar::SetButtonText
 

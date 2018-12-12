@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CPaintDC [MFC], m_ps
 - CPaintDC [MFC], m_hWnd
 ms.assetid: 7e245baa-bf9b-403e-a637-7218adf28fab
-ms.openlocfilehash: 991ea39ccf03cd4f2921a759d3278576c7a1fd92
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e4e6ded945bac15b6584eadc21d8648f1a0f9ab3
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525740"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178325"
 ---
 # <a name="cpaintdc-class"></a>CPaintDC 类
 
@@ -41,7 +41,7 @@ class CPaintDC : public CDC
 
 |名称|描述|
 |----------|-----------------|
-|[CPaintDC::m_ps](#m_ps)|包含[PAINTSTRUCT](../../mfc/reference/paintstruct-structure.md)用于绘制的工作区。|
+|[CPaintDC::m_ps](#m_ps)|包含[PAINTSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagpaintstruct)用于绘制的工作区。|
 
 ### <a name="protected-data-members"></a>受保护的数据成员
 
@@ -71,7 +71,7 @@ class CPaintDC : public CDC
 
 ##  <a name="cpaintdc"></a>  CPaintDC::CPaintDC
 
-构造`CPaintDC`对象，用于绘制，准备应用程序窗口，并将存储[PAINTSTRUCT](../../mfc/reference/paintstruct-structure.md)结构[m_ps](#m_ps)成员变量。
+构造`CPaintDC`对象，用于绘制，准备应用程序窗口，并将存储[PAINTSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagpaintstruct)结构[m_ps](#m_ps)成员变量。
 
 ```
 explicit CPaintDC(CWnd* pWnd);
@@ -108,7 +108,7 @@ HWND m_hWnd;
 
 ##  <a name="m_ps"></a>  CPaintDC::m_ps
 
-`m_ps` 类型的公共成员变量[PAINTSTRUCT](../../mfc/reference/paintstruct-structure.md)。
+`m_ps` 类型的公共成员变量[PAINTSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagpaintstruct)。
 
 ```
 PAINTSTRUCT m_ps;

@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CButton [MFC], SetState
 - CButton [MFC], SetTextMargin
 ms.assetid: cdc76d5b-31da-43c5-bc43-fde4cb39de5b
-ms.openlocfilehash: 745b04751c96e79c6bfa332ebdde15b254578137
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 26dcf50cc3dc48fec5d6e4957ffd1ef340ad1dbf
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694798"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178638"
 ---
 # <a name="cbutton-class"></a>CButton 类
 
@@ -265,7 +265,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ### <a name="parameters"></a>参数
 
 *lpDrawItemStruct*<br/>
-指向的长指针[DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md)结构。 该结构包含有关要绘制的项和绘图所需的类型信息。
+指向的长指针[DRAWITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct)结构。 该结构包含有关要绘制的项和绘图所需的类型信息。
 
 ### <a name="remarks"></a>备注
 
@@ -321,7 +321,7 @@ int GetCheck() const;
 
 使用 BS_AUTOCHECKBOX、 BS_AUTORADIOBUTTON、 BS_AUTO3STATE、 BS_CHECKBOX、 BS_RADIOBUTTON，创建一个按钮控件的返回值或 BS_3STATE 样式是以下值之一：
 
-|“值”|含义|
+|值|含义|
 |-----------|-------------|
 |BST_UNCHECKED|按钮状态为未选中状态。|
 |BST_CHECKED|按钮状态进行检查。|
@@ -430,7 +430,7 @@ BOOL GetNote(
 
 在第一个重载[CString](../../atl-mfc-shared/using-cstring.md)对象，其中包含与当前命令链接控件相关联的注释文本。
 
-或
+- 或 -
 
 在第二个重载中，TRUE，如果此方法成功;否则为 FALSE。
 
@@ -532,7 +532,7 @@ BOOL GetSplitSize(LPSIZE pSize) const;
 
 |参数|描述|
 |---------------|-----------------|
-|*pSize*|[out]指向[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)结构，它接收的矩形的说明。|
+|*pSize*|[out]指向[大小](/windows/desktop/api/windef/ns-windef-tagsize)结构，它接收的矩形的说明。|
 
 ### <a name="return-value"></a>返回值
 
@@ -578,7 +578,7 @@ UINT GetState() const;
 
 一个位字段，包含指示按钮控件的当前状态的值的组合。 下表列出了可能的值。
 
-|按钮状态|“值”|描述|
+|按钮状态|值|描述|
 |------------------|-----------|-----------------|
 |BST_UNCHECKED|0x0000|初始状态。|
 |BST_CHECKED|0x0001|按钮控件处于选中状态。|
@@ -699,7 +699,7 @@ void SetCheck(int nCheck);
 *n 请查看*<br/>
 指定的检查状态。 此参数可以是以下值之一：
 
-|“值”|含义|
+|值|含义|
 |-----------|-------------|
 |BST_UNCHECKED|按钮状态设置为未选中状态。|
 |BST_CHECKED|设置按钮的状态检查。|
@@ -1006,7 +1006,7 @@ BOOL SetSplitSize(LPSIZE pSize);
 
 |参数|描述|
 |---------------|-----------------|
-|*pSize*|[in]指向[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)结构描述的绑定矩形。|
+|*pSize*|[in]指向[大小](/windows/desktop/api/windef/ns-windef-tagsize)结构描述的绑定矩形。|
 
 ### <a name="return-value"></a>返回值
 

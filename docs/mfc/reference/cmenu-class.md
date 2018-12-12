@@ -84,12 +84,12 @@ helpviewer_keywords:
 - CMenu [MFC], TrackPopupMenuEx
 - CMenu [MFC], m_hMenu
 ms.assetid: 40cacfdc-d45c-4ec7-bf28-991c72812499
-ms.openlocfilehash: bcaf24c14938bcf56eb083ad2dd79e4c245c7c84
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2834de457ce9e2a71537e706f0fdf84463b16a8d
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613676"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178912"
 ---
 # <a name="cmenu-class"></a>CMenu 类
 
@@ -322,7 +322,7 @@ UINT CheckMenuItem(
 
 ### <a name="return-value"></a>返回值
 
-项的前一状态： MF_CHECKED 或 MF_UNCHECKED，或 0xFFFFFFFF 如果菜单项不存在。
+项的以前的状态：MF_CHECKED 或 MF_UNCHECKED 或 0xFFFFFFFF 如果菜单项不存在。
 
 ### <a name="remarks"></a>备注
 
@@ -551,7 +551,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ### <a name="parameters"></a>参数
 
 *lpDrawItemStruct*<br/>
-一个指向[DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md)结构，其中包含有关绘图所需的类型的信息。
+一个指向[DRAWITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct)结构，其中包含有关绘图所需的类型的信息。
 
 ### <a name="remarks"></a>备注
 
@@ -651,7 +651,7 @@ UINT GetDefaultItem(
 *gmdiFlags*<br/>
 值，该值指定该函数搜索菜单项的方式。 此参数可以是 none、 一个，或以下值的组合：
 
-|“值”|含义|
+|值|含义|
 |-----------|-------------|
 |GMDI_GOINTOPOPUPS|指定，是否默认项是指打开子菜单，该函数将在相应的子菜单以递归方式搜索。 如果子菜单中没有默认项，则返回值标识用于打开子菜单项。<br /><br /> 默认情况下，该函数返回在指定的菜单中，而不管它是用于打开子菜单项的第一个默认项。|
 |GMDI_USEDISABLED|指定该函数将返回默认项，即使它处于禁用状态。<br /><br /> 默认情况下，该函数将跳过已禁用或灰项。|

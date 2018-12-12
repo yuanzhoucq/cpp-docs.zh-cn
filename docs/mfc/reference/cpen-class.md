@@ -18,12 +18,12 @@ helpviewer_keywords:
 - CPen [MFC], GetExtLogPen
 - CPen [MFC], GetLogPen
 ms.assetid: 93175a3a-d46c-4768-be8d-863254f97a5f
-ms.openlocfilehash: dc9216d10b620a79aa8e20e240791207f25a65c4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ba85a811e0ea8c6d1658be3403ca466bb6877914
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50531555"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178559"
 ---
 # <a name="cpen-class"></a>CPen 类
 
@@ -250,7 +250,7 @@ BOOL CreatePenIndirect(LPLOGPEN lpLogPen);
 ### <a name="parameters"></a>参数
 
 *lpLogPen*<br/>
-指向 Windows [LOGPEN](../../mfc/reference/logpen-structure.md)结构，其中包含有关笔的信息。
+指向 Windows [LOGPEN](/windows/desktop/api/Wingdi/ns-wingdi-taglogpen)结构，其中包含有关笔的信息。
 
 ### <a name="return-value"></a>返回值
 

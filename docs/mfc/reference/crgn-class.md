@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CRgn [MFC], RectInRegion
 - CRgn [MFC], SetRectRgn
 ms.assetid: d904da84-76aa-481e-8780-b09485f49e64
-ms.openlocfilehash: 9c08b679f1423b499a5b95b260fd0fac9ddeaf9d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 74ee046e81e0f55e5550220166c957317c2bf6cd
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467972"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178546"
 ---
 # <a name="crgn-class"></a>CRgn 类
 
@@ -78,13 +78,13 @@ class CRgn : public CGdiObject
 |[CRgn::CombineRgn](#combinergn)|集`CRgn`对象，以便它相当于两个指定的联合`CRgn`对象。|
 |[CRgn::CopyRgn](#copyrgn)|集`CRgn`对象，以便它是一份指定的`CRgn`对象。|
 |[CRgn::CreateEllipticRgn](#createellipticrgn)|初始化`CRgn`具有椭圆区域的对象。|
-|[CRgn::CreateEllipticRgnIndirect](#createellipticrgnindirect)|初始化`CRgn`对象具有定义的椭圆区域[RECT](../../mfc/reference/rect-structure1.md)结构。|
+|[CRgn::CreateEllipticRgnIndirect](#createellipticrgnindirect)|初始化`CRgn`对象具有定义的椭圆区域[RECT](/windows/desktop/api/windef/ns-windef-tagrect)结构。|
 |[CRgn::CreateFromData](#createfromdata)|从给定的区域和转换数据创建一个区域。|
 |[CRgn::CreateFromPath](#createfrompath)|从给定的设备上下文中所选的路径创建一个区域。|
 |[CRgn::CreatePolygonRgn](#createpolygonrgn)|初始化`CRgn`与多边形区域的对象。 系统多边形会自动关闭，如有必要，通过绘制一条从最后一个顶点与第一个。|
 |[CRgn::CreatePolyPolygonRgn](#createpolypolygonrgn)|初始化`CRgn`对象已关闭的多边形的一系列组成的区域。 多边形可能是连续的也可能会重叠。|
 |[CRgn::CreateRectRgn](#createrectrgn)|初始化`CRgn`对象的矩形区域。|
-|[CRgn::CreateRectRgnIndirect](#createrectrgnindirect)|初始化`CRgn`对象定义的矩形区域[RECT](../../mfc/reference/rect-structure1.md)结构。|
+|[CRgn::CreateRectRgnIndirect](#createrectrgnindirect)|初始化`CRgn`对象定义的矩形区域[RECT](/windows/desktop/api/windef/ns-windef-tagrect)结构。|
 |[CRgn::CreateRoundRectRgn](#createroundrectrgn)|初始化`CRgn`具有圆角的矩形区域的对象。|
 |[CRgn::EqualRgn](#equalrgn)|检查两个`CRgn`对象以确定它们是否等效。|
 |[CRgn::FromHandle](#fromhandle)|返回一个指向`CRgn`对象时提供给 Windows 区域的句柄。|
@@ -297,13 +297,13 @@ BOOL CreateFromData(
 ### <a name="parameters"></a>参数
 
 *lpXForm*<br/>
-指向[XFORM](../../mfc/reference/xform-structure.md)数据结构，它定义要在区域上执行的转换。 如果该指针为 NULL，则使用恒等转换。
+指向[XFORM](/windows/desktop/api/wingdi/ns-wingdi-tagxform)数据结构，它定义要在区域上执行的转换。 如果该指针为 NULL，则使用恒等转换。
 
 *nCount*<br/>
 指定指向的字节数*pRgnData*。
 
 *pRgnData*<br/>
-指向[RGNDATA](../../mfc/reference/rgndata-structure.md)数据结构，其中包含区域数据。
+指向[RGNDATA](/windows/desktop/api/wingdi/ns-wingdi-_rgndata)数据结构，其中包含区域数据。
 
 ### <a name="return-value"></a>返回值
 
@@ -631,7 +631,7 @@ int GetRegionData(
 ### <a name="parameters"></a>参数
 
 *lpRgnData*<br/>
-指向[RGNDATA](../../mfc/reference/rgndata-structure.md)数据结构，它接收的信息。 如果此参数为 NULL，返回值将包含所需的区域数据的字节数。
+指向[RGNDATA](/windows/desktop/api/wingdi/ns-wingdi-_rgndata)数据结构，它接收的信息。 如果此参数为 NULL，返回值将包含所需的区域数据的字节数。
 
 *nCount*<br/>
 指定的大小，以字节为单位， *lpRgnData*缓冲区。

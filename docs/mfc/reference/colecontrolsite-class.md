@@ -106,12 +106,12 @@ helpviewer_keywords:
 - COleControlSite [MFC], m_pWndCtrl
 - COleControlSite [MFC], m_rect
 ms.assetid: 43970644-5eab-434a-8ba6-56d144ff1e3f
-ms.openlocfilehash: c9aa5b57b2610dbe0528d99d1c8ad996e1fc4a60
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 26d0f5e875c4f3982705a2cf571b15cd5bfac985
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437799"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178911"
 ---
 # <a name="colecontrolsite-class"></a>COleControlSite 类
 
@@ -397,7 +397,7 @@ virtual HRESULT DoVerb(
 *nVerb*<br/>
 指定要执行的谓词。 它可以包括以下项之一：
 
-|“值”|含义|符号|
+|值|含义|符号|
 |-----------|-------------|------------|
 |0|主谓词|OLEIVERB_PRIMARY|
 |-1|辅助谓词|（无）|
@@ -444,7 +444,7 @@ virtual BOOL EnableWindow(BOOL bEnable);
 ### <a name="parameters"></a>参数
 
 *bEnable*<br/>
-指定是否启用或禁用窗口： 如果窗口输入，则为已启用，否则为 FALSE 则为 TRUE。
+指定是否启用或禁用窗口：如果窗口输入，则为已启用，否则为 FALSE，则为 TRUE。
 
 ### <a name="return-value"></a>返回值
 
@@ -1062,7 +1062,7 @@ virtual CWnd* SetFocus(LPMSG lpmsg);
 ### <a name="parameters"></a>参数
 
 *lpmsg*<br/>
-一个指向[MSG 结构](../../mfc/reference/msg-structure1.md)。 此结构包含的 Windows 消息触发`SetFocus`请求包含当前控件站点中的控件。
+一个指向[MSG 结构](/windows/desktop/api/winuser/ns-winuser-tagmsg)。 此结构包含的 Windows 消息触发`SetFocus`请求包含当前控件站点中的控件。
 
 ### <a name="return-value"></a>返回值
 

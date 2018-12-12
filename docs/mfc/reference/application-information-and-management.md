@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - applications [MFC], managing
 ms.assetid: b72f4154-24db-4e75-bca3-6873e2459c15
-ms.openlocfilehash: 9d5216cd399943cda67bc9387ea37c938e5cab48
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: c1e742d3320dae4140cc4886c47d34dbe9b6071f
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694330"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178338"
 ---
 # <a name="application-information-and-management"></a>应用程序信息和管理
 
@@ -114,7 +114,7 @@ CWinThread* AfxBeginThread(
 
 多线程处理必须启用该应用程序。否则，此函数将失败。 有关启用多线程处理的详细信息，请参阅[/MD、 /MT、 /LD （使用运行时库）](../../build/reference/md-mt-ld-use-run-time-library.md)下*Visual c + + 编译器选项*。
 
-有关详细信息`AfxBeginThread`，请参阅文章[多线程处理： 创建辅助线程](../../parallel/multithreading-creating-worker-threads.md)并[多线程处理： 创建用户界面线程](../../parallel/multithreading-creating-user-interface-threads.md)。
+有关详细信息`AfxBeginThread`，请参阅文章[多线程处理：创建辅助线程](../../parallel/multithreading-creating-worker-threads.md)和[多线程处理：创建用户界面线程](../../parallel/multithreading-creating-user-interface-threads.md)。
 
 ### <a name="example"></a>示例
 
@@ -164,7 +164,7 @@ void AFXAPI AfxEndThread(
 
 必须从调用的线程终止内。
 
-有关详细信息`AfxEndThread`，请参阅文章[多线程处理： 终止线程](../../parallel/multithreading-terminating-threads.md)。
+有关详细信息`AfxEndThread`，请参阅文章[多线程处理：终止线程](../../parallel/multithreading-terminating-threads.md)。
 
 ### <a name="requirements"></a>要求
 
@@ -569,7 +569,7 @@ HINSTANCE AFXAPI AfxLoadLibrary(LPCTSTR lpszModuleName);
 
 - **Windows 95/98:** Windows 系统目录。 **Windows NT:** 32 位 Windows 系统目录。 此目录的名称是 SYSTEM32。
 
-- **仅 Windows NT:** 16 位 Windows 系统目录。 获取此目录的路径没有 Win32 函数，但它会搜索。 此目录的名称是系统。
+- **Windows NT:** 16 位 Windows 系统目录。 获取此目录的路径没有 Win32 函数，但它会搜索。 此目录的名称是系统。
 
 - Windows 目录中。
 
@@ -715,7 +715,7 @@ Microsoft 基础类库将自动为您注册若干标准窗口类。 如果要注
 
 如果使用相同的参数为多个 CWnd 派生类调用 `AfxRegisterWndClass`，而不是为每个类获得单独的窗口类，则每个类都将共享同一窗口类。 如果使用 CS_CLASSDC 类样式，这会导致问题。 而不是多个 CS_CLASSDC 窗口类，您最终得到一个 CS_CLASSDC 窗口类，并使用该类共享同一个域控制器的所有 c + + 窗口。 若要避免此问题，请调用[AfxRegisterClass](#afxregisterclass)以注册类。
 
-请参阅技术说明[TN001： 窗口类注册](../../mfc/tn001-window-class-registration.md)有关详细信息窗口类注册和`AfxRegisterWndClass`函数。
+请参阅技术说明[TN001:窗口类注册](../../mfc/tn001-window-class-registration.md)有关详细信息窗口类注册和`AfxRegisterWndClass`函数。
 
 ### <a name="example"></a>示例
 
@@ -802,7 +802,7 @@ BOOL AfxSocketInit(WSADATA* lpwsaData = NULL);
 ### <a name="parameters"></a>参数
 
 *lpwsaData*<br/>
-一个指向[WSADATA](../../mfc/reference/wsadata-structure.md)结构。 如果*lpwsaData*不等于 NULL，然后的地址`WSADATA`结构填充通过调用`WSAStartup`。 此函数还确保在应用程序终止前为您调用 `WSACleanup`。
+一个指向[WSADATA](/windows/desktop/api/winsock2/ns-winsock2-wsadata)结构。 如果*lpwsaData*不等于 NULL，然后的地址`WSADATA`结构填充通过调用`WSAStartup`。 此函数还确保在应用程序终止前为您调用 `WSACleanup`。
 
 ### <a name="return-value"></a>返回值
 

@@ -178,12 +178,12 @@ helpviewer_keywords:
 - CFrameWndEx [MFC], UpdateCaption
 - CFrameWndEx [MFC], WinHelp
 ms.assetid: 5830aca8-4a21-4f31-91f1-dd5477ffcc8d
-ms.openlocfilehash: 9489e1a36eac89ccff510c3c0fae467c2bb2deab
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: a0e6861ecf3a6704ddb31c39f7bb2c44cb75ccd8
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694616"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53179001"
 ---
 # <a name="cframewndex-class"></a>CFrameWndEx 类
 
@@ -1062,7 +1062,7 @@ afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);
 ### <a name="parameters"></a>参数
 
 *lpCreateStruct*<br/>
-[in]一个指向[CREATESTRUCT 结构](../../mfc/reference/createstruct-structure.md)针对新帧。
+[in]一个指向[CREATESTRUCT 结构](/windows/desktop/api/winuser/ns-winuser-tagcreatestructa)针对新帧。
 
 ### <a name="return-value"></a>返回值
 
@@ -1704,7 +1704,7 @@ afx_msg void OnSizing(
 [in]移动的帧边缘。 请参阅参数*wParam*中[WM_SIZING 通知](/windows/desktop/winmsg/wm-sizing)。
 
 *pRect*<br/>
-[in、 out]指向[CRect](../../atl-mfc-shared/reference/crect-class.md)或[RECT](../../mfc/reference/rect-structure1.md)结构，其中包含框架的坐标。
+[in、 out]指向[CRect](../../atl-mfc-shared/reference/crect-class.md)或[RECT](/windows/desktop/api/windef/ns-windef-tagrect)结构，其中包含框架的坐标。
 
 ### <a name="remarks"></a>备注
 
@@ -1874,7 +1874,7 @@ afx_msg void OnWindowPosChanged(WINDOWPOS FAR* lpwndpos);
 ### <a name="parameters"></a>参数
 
 *lpwndpos*<br/>
-[in]指向[WINDOWPOS](../../mfc/reference/windowpos-structure1.md)结构，其中包含新的大小和位置。
+[in]指向[WINDOWPOS](/windows/desktop/api/winuser/ns-winuser-tagwindowpos)结构，其中包含新的大小和位置。
 
 ### <a name="remarks"></a>备注
 
@@ -1934,7 +1934,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ### <a name="parameters"></a>参数
 
 *pMsg*<br/>
-[in]一个指向[MSG](../../mfc/reference/msg-structure1.md)结构，其中包含要处理的消息。
+[in]一个指向[MSG](/windows/desktop/api/winuser/ns-winuser-tagmsg)结构，其中包含要处理的消息。
 
 ### <a name="return-value"></a>返回值
 
