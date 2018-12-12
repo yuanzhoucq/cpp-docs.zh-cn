@@ -192,12 +192,12 @@ helpviewer_keywords:
 - CWinApp [MFC], m_nAutosaveInterval
 - CWinApp [MFC], m_pDataRecoveryHandler
 ms.assetid: e426a3cd-0d15-40d6-bd55-beaa5feb2343
-ms.openlocfilehash: c25d79dc1fb201d10e090f512a5a96f649efbcfe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3f9afdf18fcaff0d3613b4204d8690f915079e7d
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50542358"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178936"
 ---
 # <a name="cwinapp-class"></a>CWinApp 类
 
@@ -347,7 +347,7 @@ class CWinApp : public CWinThread
 
 - [AfxGetAppName](application-information-and-management.md#afxgetappname)获取指向包含应用程序的名称的字符串的指针。 或者，如果有一个指针指向`CWinApp`对象，请使用`m_pszExeName`若要获取应用程序的名称。
 
-请参阅[CWinApp： 应用程序类](../../mfc/cwinapp-the-application-class.md)有关的详细信息`CWinApp`类，包括以下概述：
+请参阅[CWinApp:应用程序类](../../mfc/cwinapp-the-application-class.md)有关详细信息`CWinApp`类，包括以下概述：
 
 - `CWinApp`-派生应用程序向导编写的代码。
 
@@ -1060,7 +1060,7 @@ virtual BOOL InitInstance();
 
 应用程序初始化从概念上讲划分为两个部分： 首先执行的一次性应用程序初始化时间运行的程序，并在每个运行的实例初始化的时间运行的程序，包括第一次的副本。 框架的实现`WinMain`调用此函数。
 
-重写`InitInstance`初始化在 Windows 下运行的应用程序的每个新实例。 通常情况下，重写`InitInstance`来构造您的主窗口对象和设置`CWinThread::m_pMainWnd`数据成员，使其指向该窗口。 重写此成员函数的详细信息，请参阅[CWinApp： 应用程序类](../../mfc/cwinapp-the-application-class.md)。
+重写`InitInstance`初始化在 Windows 下运行的应用程序的每个新实例。 通常情况下，重写`InitInstance`来构造您的主窗口对象和设置`CWinThread::m_pMainWnd`数据成员，使其指向该窗口。 重写此成员函数的详细信息，请参阅[CWinApp:应用程序类](../../mfc/cwinapp-the-application-class.md)。
 
 > [!NOTE]
 > MFC 应用程序必须初始化为单线程单元 (STA)。 如果您调用[CoInitializeEx](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializeex)在你`InitInstance`重写中，指定 COINIT_APARTMENTTHREADED （而非 COINIT_MULTITHREADED）。
@@ -1508,7 +1508,7 @@ LPCTSTR m_pszRegistryKey;
 
 通常情况下，此数据成员将被处理为只读的。
 
-- 值存储到注册表项。 应用程序配置文件设置的名称追加到以下注册表项： HKEY_CURRENT_USER/软件/LocalAppWizard 生成 /。
+- 值存储到注册表项。 应用程序配置文件设置的名称追加到以下注册表项：HKEY_CURRENT_USER/软件/LocalAppWizard 生成 /。
 
 如果你将值赋给`m_pszRegistryKey`，它必须动态分配堆上。 `CWinApp`析构函数调用**免费**（与此指针)。 很多想要使用`_tcsdup`（） 运行时库函数来执行分配。 此外，释放分配新值之前将其与当前指针相关联的内存。 例如：
 
@@ -1793,7 +1793,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ### <a name="parameters"></a>参数
 
 *pMsg*<br/>
-一个指向[MSG](../../mfc/reference/msg-structure1.md)结构，其中包含要处理的消息。
+一个指向[MSG](/windows/desktop/api/winuser/ns-winuser-tagmsg)结构，其中包含要处理的消息。
 
 ### <a name="return-value"></a>返回值
 
@@ -1815,7 +1815,7 @@ virtual BOOL ProcessMessageFilter(
 指定挂钩代码。 此成员函数使用代码来确定如何处理*lpMsg。*
 
 *lpMsg*<br/>
-指向 Windows [MSG](../../mfc/reference/msg-structure1.md)结构。
+指向 Windows [MSG](/windows/desktop/api/winuser/ns-winuser-tagmsg)结构。
 
 ### <a name="return-value"></a>返回值
 
@@ -1886,7 +1886,7 @@ virtual LRESULT ProcessWndProcException(
 一个指向未捕获的异常。
 
 *pMsg*<br/>
-一个[MSG](../../mfc/reference/msg-structure1.md)结构，它包含导致引发异常的 framework 的 windows 消息有关的信息。
+一个[MSG](/windows/desktop/api/winuser/ns-winuser-tagmsg)结构，它包含导致引发异常的 framework 的 windows 消息有关的信息。
 
 ### <a name="return-value"></a>返回值
 
@@ -2086,7 +2086,7 @@ BOOL RunEmbedded();
 
 ### <a name="remarks"></a>备注
 
-如果存在，是从命令行删除的选项。 嵌入的详细信息，请参阅文章[服务器： 实现服务器](../../mfc/servers-implementing-a-server.md)。
+如果存在，是从命令行删除的选项。 嵌入的详细信息，请参阅文章[服务器：实现服务器](../../mfc/servers-implementing-a-server.md)。
 
 ##  <a name="saveallmodified"></a>  CWinApp::SaveAllModified
 
@@ -2118,7 +2118,7 @@ void SelectPrinter(
 ### <a name="parameters"></a>参数
 
 *hDevNames*<br/>
-句柄[DEVNAMES](../../mfc/reference/devnames-structure.md)标识驱动程序、 设备和特定打印机的输出端口名称的结构。
+句柄[DEVNAMES](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames)标识驱动程序、 设备和特定打印机的输出端口名称的结构。
 
 *hDevMode*<br/>
 句柄[DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea)结构，它指定有关设备初始化和环境的打印机信息。
@@ -2168,7 +2168,7 @@ void SetRegistryKey(UINT nIDRegistryKey);
 
 ### <a name="remarks"></a>备注
 
-此函数将*m_pszRegistryKey*，然后使用`GetProfileInt`， `GetProfileString`， `WriteProfileInt`，并且`WriteProfileString`的成员函数`CWinApp`。 如果已调用此函数，是也在注册表中存储的最近使用 (过的 MRU) 文件的列表。 注册表项通常是一家公司的名称。 它存储在以下形式的密钥： HKEY_CURRENT_USER\Software\\< 公司名称\>\\< 应用程序名称\>\\< 部分名称\>\\< 值名称\>。
+此函数将*m_pszRegistryKey*，然后使用`GetProfileInt`， `GetProfileString`， `WriteProfileInt`，并且`WriteProfileString`的成员函数`CWinApp`。 如果已调用此函数，是也在注册表中存储的最近使用 (过的 MRU) 文件的列表。 注册表项通常是一家公司的名称。 它存储在以下形式的密钥：HKEY_CURRENT_USER\Software\\< 公司名称\>\\< 应用程序名称\>\\< 部分名称\>\\< 值名称\>。
 
 ##  <a name="supportsapplicationrecovery"></a>  CWinApp::SupportsApplicationRecovery
 
@@ -2395,4 +2395,4 @@ void SetAppID(LPCTSTR lpcszAppID);
 
 [CWinThread 类](../../mfc/reference/cwinthread-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>
-[如何：添加重启管理器支持](../../mfc/how-to-add-restart-manager-support.md)
+[如何：添加重新启动管理器支持](../../mfc/how-to-add-restart-manager-support.md)

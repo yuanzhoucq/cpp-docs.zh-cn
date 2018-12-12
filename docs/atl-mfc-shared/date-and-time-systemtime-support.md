@@ -1,5 +1,5 @@
 ---
-title: 日期和时间： SYSTEMTIME 支持
+title: 日期和时间：SYSTEMTIME 支持
 ms.date: 11/04/2016
 f1_keywords:
 - SYSTEMTIME
@@ -11,18 +11,18 @@ helpviewer_keywords:
 - dates [C++], MFC
 - formatting [C++], time
 ms.assetid: 201528e4-2ffa-48fc-af8f-203aa86d942a
-ms.openlocfilehash: 6074eff2db45bfa69f83d7c45be1203dd19cc987
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: db19d236d0f0d8672f08c808237de471bf5bc64d
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50549911"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53177728"
 ---
-# <a name="date-and-time-systemtime-support"></a>日期和时间： SYSTEMTIME 支持
+# <a name="date-and-time-systemtime-support"></a>日期和时间：SYSTEMTIME 支持
 
 [CTime](../atl-mfc-shared/reference/ctime-class.md)类具有构造函数接受来自 Win32 的系统和文件时间。 如果你将 `CTime` 对象用于这些目的，你必须相应地修改它们的初始化，如本文所述。
 
-有关 SYSTEMTIME 结构的信息，请参阅[SYSTEMTIME](../mfc/reference/systemtime-structure.md)。 有关 FILETIME 结构的信息，请参阅[FILETIME](../mfc/reference/filetime-structure.md)。
+有关 SYSTEMTIME 结构的信息，请参阅[SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)。 有关 FILETIME 结构的信息，请参阅[FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284)。
 
 MFC 仍然提供采用 MS-DOS 样式的时间自变量的 `CTime` 构造函数，但是，从 MFC 版本 3.0 开始，`CTime` 类还支持采用 Win32 `SYSTEMTIME` 结构的构造函数和另一个采用 Win32 `FILETIME` 结构的构造函数。
 

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - POINT structure
 - CPoint class
 ms.assetid: a6d4db93-35cc-444d-9221-c3e160f6edaa
-ms.openlocfilehash: 5df8dbe03a59f899f2157eff842218e91e8f40dc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4f6ab15f80ac448b4e7383e2db92f22262c20d08
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50500615"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178064"
 ---
 # <a name="cpoint-class"></a>CPoint 类
 
@@ -55,9 +55,9 @@ class CPoint : public tagPOINT
 
 ## <a name="remarks"></a>备注
 
-它还包括成员函数来操纵`CPoint`并[点](../../mfc/reference/point-structure.md)结构。
+它还包括成员函数来操纵`CPoint`并[点](/windows/desktop/api/windef/ns-windef-tagpoint)结构。
 
-一个`CPoint`对象可以是任何位置使用`POINT`使用结构。 "大小"与之交互的此类运算符均接受[CSize](../../atl-mfc-shared/reference/csize-class.md)对象或[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)结构，因为这两个是可互换的。
+一个`CPoint`对象可以是任何位置使用`POINT`使用结构。 "大小"与之交互的此类运算符均接受[CSize](../../atl-mfc-shared/reference/csize-class.md)对象或[大小](/windows/desktop/api/windef/ns-windef-tagsize)结构，因为这两个是可互换的。
 
 > [!NOTE]
 >  此类派生自`tagPOINT`结构。 (名称`tagPOINT`是指不太常用的名称`POINT`结构。)这意味着，数据成员`POINT`结构，`x`并`y`，可访问的数据成员的`CPoint`。
@@ -96,10 +96,10 @@ CPoint(LPARAM dwPoint) throw();
 指定 `y` 的 `CPoint` 成员的值。
 
 *initPt*<br/>
-[点](../../mfc/reference/point-structure.md)结构或`CPoint`，指定用于初始化的值`CPoint`。
+[点](/windows/desktop/api/windef/ns-windef-tagpoint)结构或`CPoint`，指定用于初始化的值`CPoint`。
 
 *initSize*<br/>
-[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)结构或[CSize](../../atl-mfc-shared/reference/csize-class.md) ，指定用于初始化的值`CPoint`。
+[大小](/windows/desktop/api/windef/ns-windef-tagsize)结构或[CSize](../../atl-mfc-shared/reference/csize-class.md) ，指定用于初始化的值`CPoint`。
 
 *dwPoint*<br/>
 集`x`成员添加到的低序位字*dwPoint*并且`y`成员添加到的高序位字*dwPoint*。
@@ -154,10 +154,10 @@ void Offset(SIZE size) throw();
 指定的偏移量`y`的成员`CPoint`。
 
 *点*<br/>
-指定的量 ([点](../../mfc/reference/point-structure.md)或`CPoint`) 的偏移`CPoint`。
+指定的量 ([点](/windows/desktop/api/windef/ns-windef-tagpoint)或`CPoint`) 的偏移`CPoint`。
 
 *size*<br/>
-指定的量 ([大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)或[CSize](../../atl-mfc-shared/reference/csize-class.md)) 的偏移`CPoint`。
+指定的量 ([大小](/windows/desktop/api/windef/ns-windef-tagsize)或[CSize](../../atl-mfc-shared/reference/csize-class.md)) 的偏移`CPoint`。
 
 ### <a name="example"></a>示例
 
@@ -174,7 +174,7 @@ BOOL operator==(POINT point) const throw();
 ### <a name="parameters"></a>参数
 
 *点*<br/>
-包含[点](../../mfc/reference/point-structure.md)结构或`CPoint`对象。
+包含[点](/windows/desktop/api/windef/ns-windef-tagpoint)结构或`CPoint`对象。
 
 ### <a name="return-value"></a>返回值
 
@@ -195,7 +195,7 @@ BOOL operator!=(POINT point) const throw();
 ### <a name="parameters"></a>参数
 
 *点*<br/>
-包含[点](../../mfc/reference/point-structure.md)结构或`CPoint`对象。
+包含[点](/windows/desktop/api/windef/ns-windef-tagpoint)结构或`CPoint`对象。
 
 ### <a name="return-value"></a>返回值
 
@@ -217,10 +217,10 @@ void operator+=(POINT point) throw();
 ### <a name="parameters"></a>参数
 
 *size*<br/>
-包含[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)结构或[CSize](../../atl-mfc-shared/reference/csize-class.md)对象。
+包含[大小](/windows/desktop/api/windef/ns-windef-tagsize)结构或[CSize](../../atl-mfc-shared/reference/csize-class.md)对象。
 
 *点*<br/>
-包含[点](../../mfc/reference/point-structure.md)结构或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)对象。
+包含[点](/windows/desktop/api/windef/ns-windef-tagpoint)结构或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)对象。
 
 ### <a name="remarks"></a>备注
 
@@ -246,10 +246,10 @@ void operator-=(POINT point) throw();
 ### <a name="parameters"></a>参数
 
 *size*<br/>
-包含[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)结构或[CSize](../../atl-mfc-shared/reference/csize-class.md)对象。
+包含[大小](/windows/desktop/api/windef/ns-windef-tagsize)结构或[CSize](../../atl-mfc-shared/reference/csize-class.md)对象。
 
 *点*<br/>
-包含[点](../../mfc/reference/point-structure.md)结构或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)对象。
+包含[点](/windows/desktop/api/windef/ns-windef-tagpoint)结构或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)对象。
 
 ### <a name="remarks"></a>备注
 
@@ -276,13 +276,13 @@ CRect operator+(const RECT* lpRect) const throw();
 ### <a name="parameters"></a>参数
 
 *size*<br/>
-包含[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)结构或[CSize](../../atl-mfc-shared/reference/csize-class.md)对象。
+包含[大小](/windows/desktop/api/windef/ns-windef-tagsize)结构或[CSize](../../atl-mfc-shared/reference/csize-class.md)对象。
 
 *点*<br/>
-包含[点](../../mfc/reference/point-structure.md)结构或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)对象。
+包含[点](/windows/desktop/api/windef/ns-windef-tagpoint)结构或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)对象。
 
 *lpRect*<br/>
-包含一个指向[RECT](../../mfc/reference/rect-structure.md)结构或[CRect](../../atl-mfc-shared/reference/crect-class.md)对象。
+包含一个指向[RECT](/windows/desktop/api/windef/ns-windef-tagrect)结构或[CRect](../../atl-mfc-shared/reference/crect-class.md)对象。
 
 ### <a name="return-value"></a>返回值
 
@@ -312,13 +312,13 @@ CPoint operator-() const throw();
 ### <a name="parameters"></a>参数
 
 *点*<br/>
-一个[点](../../mfc/reference/point-structure.md)结构或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)对象。
+一个[点](/windows/desktop/api/windef/ns-windef-tagpoint)结构或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)对象。
 
 *size*<br/>
-一个[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)结构或[CSize](../../atl-mfc-shared/reference/csize-class.md)对象。
+一个[大小](/windows/desktop/api/windef/ns-windef-tagsize)结构或[CSize](../../atl-mfc-shared/reference/csize-class.md)对象。
 
 *lpRect*<br/>
-一个指向[RECT](../../mfc/reference/rect-structure.md)结构或[CRect](../../atl-mfc-shared/reference/crect-class.md)对象。
+一个指向[RECT](/windows/desktop/api/windef/ns-windef-tagrect)结构或[CRect](../../atl-mfc-shared/reference/crect-class.md)对象。
 
 ### <a name="return-value"></a>返回值
 
@@ -344,7 +344,7 @@ CPoint operator-() const throw();
 
 [MFC 示例 MDI](../../visual-cpp-samples.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>
-[POINT 结构](../../mfc/reference/point-structure.md)<br/>
+[POINT 结构](/windows/desktop/api/windef/ns-windef-tagpoint)<br/>
 [CRect 类](../../atl-mfc-shared/reference/crect-class.md)<br/>
 [CSize 类](../../atl-mfc-shared/reference/csize-class.md)
 

@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CLinkCtrl [MFC], SetItemState
 - CLinkCtrl [MFC], SetItemUrl
 ms.assetid: d1cd876a-ecca-42db-8ac4-9cd327df0cd4
-ms.openlocfilehash: 79c6aa9f0448ed399554d634d48f666aaaf60566
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b24b92006b73dff2ae9f091256ef8401efc64fe9
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50597556"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178040"
 ---
 # <a name="clinkctrl-class"></a>CLinkCtrl 类
 
@@ -134,7 +134,7 @@ virtual BOOL Create(DWORD dwStyle,
 指定链接控件的样式。 将应用控件样式的任意组合。 请参阅[常见控件样式](/windows/desktop/Controls/common-control-styles)中`Windows SDK`有关详细信息。
 
 *rect*<br/>
-指定链接控件的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT](../../mfc/reference/rect-structure1.md)结构。
+指定链接控件的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT](/windows/desktop/api/windef/ns-windef-tagrect)结构。
 
 *pParentWnd*<br/>
 指定链接控件的父窗口。 它不能为 NULL。
@@ -196,7 +196,7 @@ virtual BOOL CreateEx(DWORD  dwExStyle,
 指定链接控件的样式。 将应用控件样式的任意组合。 有关详细信息，请参阅[常见控件样式](/windows/desktop/Controls/common-control-styles)Windows SDK 中。
 
 *rect*<br/>
-指定链接控件的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT](../../mfc/reference/rect-structure1.md)结构。
+指定链接控件的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT](/windows/desktop/api/windef/ns-windef-tagrect)结构。
 
 *pParentWnd*<br/>
 指定链接控件的父窗口。 它不能为 NULL。
@@ -245,7 +245,7 @@ int GetIdealSize(
 |参数|描述|
 |---------------|-----------------|
 |*cxMaxWidth*|[in]该链接，以像素为单位的最大宽度。|
-|[out]\* *pSize*|指向 Windows[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)结构。 此方法返回时， *cy*的成员`SIZE`结构包含由指定的链接文本宽度的理想之选链接文本高度*cxMaxWidth*。 *Cx*结构中的成员包含实际需要的链接文本宽度。|
+|[out]\* *pSize*|指向 Windows[大小](/windows/desktop/api/windef/ns-windef-tagsize)结构。 此方法返回时， *cy*的成员`SIZE`结构包含由指定的链接文本宽度的理想之选链接文本高度*cxMaxWidth*。 *Cx*结构中的成员包含实际需要的链接文本宽度。|
 
 ### <a name="return-value"></a>返回值
 

@@ -80,12 +80,12 @@ helpviewer_keywords:
 - CMFCButton [MFC], m_nAlignStyle
 - CMFCButton [MFC], m_nFlatStyle
 ms.assetid: 4b32f57c-7a53-4734-afb9-d47e3359f62e
-ms.openlocfilehash: b33c4c89276b99b6b5f8a4129ef17f809f058ac5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a82793ce29765bf01e8c52c94257bd3150187505
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50547311"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178455"
 ---
 # <a name="cmfcbutton-class"></a>CMFCButton 类
 
@@ -503,7 +503,7 @@ AlignStyle m_nAlignStyle;
 
 使用下列任一`CMFCButton::AlignStyle`枚举值，以指定按钮文本的对齐方式：
 
-|“值”|描述|
+|值|描述|
 |-----------|-----------------|
 |ALIGN_CENTER|（默认值）对齐到按钮的中心的按钮文本。|
 |ALIGN_LEFT|对齐到左侧和右侧的按钮的按钮文本。|
@@ -531,7 +531,7 @@ FlatStyle  m_nFlatStyle;
 
 下表列出了`CMFCButton::m_nFlatStyle`指定按钮的外观的枚举值。
 
-|“值”|描述|
+|值|描述|
 |-----------|-----------------|
 |BUTTONSTYLE_3D|（默认值）该按钮显示为具有高的三维边。 单击该按钮，该按钮显示到有深度的缩进按下。|
 |BUTTONSTYLE_FLAT|当鼠标置于按钮上，但不暂停时，按钮将显示为二维，且不具有凸起的边。 当鼠标悬停在按钮上时，按钮将显示具有较低的三维边。 单击该按钮，该按钮显示为浅表缩进按下。|
@@ -567,7 +567,7 @@ virtual void OnDraw(
 [in]对限定按钮的矩形的引用。
 
 *uiState*<br/>
-[in]当前的按钮状态。 有关详细信息，请参阅`itemState`的成员[DRAWITEMSTRUCT 结构](../../mfc/reference/drawitemstruct-structure.md)主题。
+[in]当前的按钮状态。 有关详细信息，请参阅`itemState`的成员[DRAWITEMSTRUCT 结构](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct)主题。
 
 ### <a name="remarks"></a>备注
 
@@ -593,7 +593,7 @@ virtual void OnDrawBorder(
 [in]对限定按钮的矩形的引用。
 
 *uiState*<br/>
-[in]当前的按钮状态。 有关详细信息，请参阅`itemState`的成员[DRAWITEMSTRUCT 结构](../../mfc/reference/drawitemstruct-structure.md)主题。
+[in]当前的按钮状态。 有关详细信息，请参阅`itemState`的成员[DRAWITEMSTRUCT 结构](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct)主题。
 
 ### <a name="remarks"></a>备注
 

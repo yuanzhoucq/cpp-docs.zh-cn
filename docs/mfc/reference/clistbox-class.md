@@ -102,12 +102,12 @@ helpviewer_keywords:
 - CListBox [MFC], SetTopIndex
 - CListBox [MFC], VKeyToItem
 ms.assetid: 7ba3c699-c286-4cd9-9066-532c41ec05d1
-ms.openlocfilehash: 38463d5e7daf86c40cdef429cd80b18598e19025
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ad9f945a91a96c40afe614240a847a028ba5b5d9
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656087"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178611"
 ---
 # <a name="clistbox-class"></a>CListBox 类
 
@@ -339,9 +339,9 @@ virtual int CompareItem(LPCOMPAREITEMSTRUCT lpCompareItemStruct);
 
 ### <a name="return-value"></a>返回值
 
-指示中所述的两个项目的相对位置[COMPAREITEMSTRUCT](../../mfc/reference/compareitemstruct-structure.md)结构。 它可能是以下值之一：
+指示中所述的两个项目的相对位置[COMPAREITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcompareitemstruct)结构。 它可能是以下值之一：
 
-|“值”|含义|
+|值|含义|
 |-----------|-------------|
 |-1|第 1 项进行排序项 2 之前。|
 |0|第 1 项和项 2 排序相同。|
@@ -426,7 +426,7 @@ virtual void DeleteItem(LPDELETEITEMSTRUCT lpDeleteItemStruct);
 ### <a name="parameters"></a>参数
 
 *lpDeleteItemStruct*<br/>
-指向 Windows 的长指针[DELETEITEMSTRUCT](../../mfc/reference/deleteitemstruct-structure.md)结构，其中包含有关已删除的项的信息。
+指向 Windows 的长指针[DELETEITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdeleteitemstruct)结构，其中包含有关已删除的项的信息。
 
 ### <a name="remarks"></a>备注
 
@@ -478,7 +478,7 @@ int Dir(
 *attr*<br/>
 可以是任何组合**enum**值中所述`CFile::GetStatu` [s](../../mfc/reference/cfile-class.md#getstatus)，或以下值的任意组合：
 
-|“值”|含义|
+|值|含义|
 |-----------|-------------|
 |0x0000|可以读取或写入到文件。|
 |0x0001|可以从读取但不是会写入到文件。|
@@ -511,7 +511,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ### <a name="parameters"></a>参数
 
 *lpDrawItemStruct*<br/>
-指向的长指针[DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md)结构，其中包含有关绘图所需的类型的信息。
+指向的长指针[DRAWITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct)结构，其中包含有关绘图所需的类型的信息。
 
 ### <a name="remarks"></a>备注
 
@@ -770,7 +770,7 @@ int GetItemRect(
 指定项的从零开始的索引。
 
 *lpRect*<br/>
-指定指向的长指针[RECT 结构](../../mfc/reference/rect-structure1.md)接收项的列表框中客户端坐标。
+指定指向的长指针[RECT 结构](/windows/desktop/api/windef/ns-windef-tagrect)接收项的列表框中客户端坐标。
 
 ### <a name="return-value"></a>返回值
 
@@ -991,7 +991,7 @@ int InitStorage(
 
 此函数可帮助加快有大量的项 (超过 100) 的列表框中的初始化。 预先分配指定的数量的内存以便将后续[AddString](#addstring)， [InsertString](#insertstring)，并[Dir](#dir)函数采用最短的时间。 您可以对参数使用估计值。 如果您要估计得高一些，一些额外的内存分配;如果你低估，进行一般分配用于超过预先分配的量的项。
 
-仅 Windows 95/98: *nItems*参数最多为 16 位值。 这意味着列表框不能包含超过 32,767 个项。 项的数目受到限制，尽管列表框中的项的总大小仅受可用内存。
+Windows 95/98 仅：*NItems*参数最多为 16 位值。 这意味着列表框不能包含超过 32,767 个项。 项的数目受到限制，尽管列表框中的项的总大小仅受可用内存。
 
 ### <a name="example"></a>示例
 
@@ -1068,7 +1068,7 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 ### <a name="parameters"></a>参数
 
 *lpMeasureItemStruct*<br/>
-指向的长指针[MEASUREITEMSTRUCT](../../mfc/reference/measureitemstruct-structure.md)结构。
+指向的长指针[MEASUREITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagmeasureitemstruct)结构。
 
 ### <a name="remarks"></a>备注
 

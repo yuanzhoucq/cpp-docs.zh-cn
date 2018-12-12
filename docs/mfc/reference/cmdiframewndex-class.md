@@ -156,12 +156,12 @@ helpviewer_keywords:
 - CMDIFrameWndEx [MFC], m_bCanCovertControlBarToMDIChild
 - CMDIFrameWndEx [MFC], m_bDisableSetRedraw
 ms.assetid: dbcafcb3-9a7a-4f11-9dfe-ba57565c81d0
-ms.openlocfilehash: be9ecf2eaabb51f4c2dffd996bca76bd3f4c9128
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7ed2d1de2a91f90cd4e7efecac728e66f86d95a6
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512861"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178625"
 ---
 # <a name="cmdiframewndex-class"></a>CMDIFrameWndEx 类
 
@@ -270,7 +270,7 @@ class CMDIFrameWndEx : public CMDIFrameWnd
 
 ## <a name="example"></a>示例
 
-以下示例从一个类从`CMDIFrameWndEx`。 此代码片段来自[DrawClient 示例： MFC Ribbon-Based OLE 对象绘制应用程序](../../visual-cpp-samples.md)。
+以下示例从一个类从`CMDIFrameWndEx`。 此代码片段来自[DrawClient 示例：MFC 功能区基于 OLE 对象绘制应用程序](../../visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_DrawClient#1](../../mfc/reference/codesnippet/cpp/cmdiframewndex-class_1.h)]
 
@@ -364,11 +364,11 @@ BOOL AreMDITabs(int* pnMDITabsType=NULL) const;
 *pnMDITabsType*<br/>
 [out]一个指向整数变量，指示启用的功能：
 
-- 0： 禁用所有功能。
+- 0:将禁用所有功能。
 
-- 1： 启用 MDI 选项卡。
+- 1:启用 MDI 选项卡。
 
-- 2： 启用 MDI 选项卡式组。
+- 2:已启用 MDI 选项卡式组。
 
 ### <a name="return-value"></a>返回值
 
@@ -449,7 +449,7 @@ virtual CMDIChildWndEx* CreateDocumentWindow(
 
 ### <a name="example"></a>示例
 
-下面的示例演示如何`CreateDocumentWindow`中使用[VisualStudioDemo 示例： MFC Visual Studio 应用程序](../../visual-cpp-samples.md)。
+下面的示例演示如何`CreateDocumentWindow`中使用[VisualStudioDemo 示例：Visual Studio 的 MFC 应用程序](../../visual-cpp-samples.md)。
 
 在此示例中，`g_strStartViewName`可能是文档的名称，"虚拟"（例如，"起始页"），实际上不从磁盘文件加载。 因此我们需要特殊处理，以处理这种情况。
 
@@ -505,7 +505,7 @@ void DockPane(
 
 ### <a name="example"></a>示例
 
-下面的示例演示 `DockPane` 方法的用法。 此代码片段来自[VisualStudioDemo 示例： MFC Visual Studio 应用程序](../../visual-cpp-samples.md)。
+下面的示例演示 `DockPane` 方法的用法。 此代码片段来自[VisualStudioDemo 示例：Visual Studio 的 MFC 应用程序](../../visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#4](../../mfc/codesnippet/cpp/cmdiframewndex-class_3.cpp)]
 
@@ -537,7 +537,7 @@ BOOL DockPaneLeftOf(
 
 ### <a name="example"></a>示例
 
-下面的示例演示如何`DockPaneLeftOf`中使用方法[VisualStudioDemo 示例： MFC Visual Studio 应用程序](../../visual-cpp-samples.md)。
+下面的示例演示如何`DockPaneLeftOf`方法中使用[VisualStudioDemo 示例：Visual Studio 的 MFC 应用程序](../../visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#5](../../mfc/codesnippet/cpp/cmdiframewndex-class_4.cpp)]
 
@@ -568,7 +568,7 @@ BOOL EnableAutoHidePanes(DWORD dwDockStyle);
 
 ### <a name="example"></a>示例
 
-下面的示例演示如何`EnableAutoHidePanes`中使用方法[VisualStudioDemo 示例： MFC Visual Studio 应用程序](../../visual-cpp-samples.md)。
+下面的示例演示如何`EnableAutoHidePanes`方法中使用[VisualStudioDemo 示例：Visual Studio 的 MFC 应用程序](../../visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#6](../../mfc/codesnippet/cpp/cmdiframewndex-class_5.cpp)]
 
@@ -595,7 +595,7 @@ BOOL EnableDocking(DWORD dwDockStyle);
 
 ### <a name="example"></a>示例
 
-下面的示例演示如何`EnableDocking`中使用方法[VisualStudioDemo 示例： MFC Visual Studio 应用程序](../../visual-cpp-samples.md)。
+下面的示例演示如何`EnableDocking`方法中使用[VisualStudioDemo 示例：Visual Studio 的 MFC 应用程序](../../visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#7](../../mfc/codesnippet/cpp/cmdiframewndex-class_6.cpp)]
 
@@ -686,7 +686,7 @@ void EnableMDITabbedGroups(
 
 ### <a name="example"></a>示例
 
-下面的示例演示如何`EnableMDITabbedGroups`中使用[VisualStudioDemo 示例： MFC Visual Studio 应用程序](../../visual-cpp-samples.md)。
+下面的示例演示如何`EnableMDITabbedGroups`中使用[VisualStudioDemo 示例：Visual Studio 的 MFC 应用程序](../../visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#8](../../mfc/codesnippet/cpp/cmdiframewndex-class_7.cpp)]
 
@@ -738,7 +738,7 @@ void EnableMDITabs(
 
 ### <a name="example"></a>示例
 
-下面的示例演示如何`EnableMDITabs`中使用[MDITabsDemo 示例： MFC 选项卡式 MDI 应用程序](../../visual-cpp-samples.md)。
+下面的示例演示如何`EnableMDITabs`中使用[MDITabsDemo 示例：MFC 选项卡式 MDI 应用程序](../../visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_MDITabsDemo#3](../../mfc/reference/codesnippet/cpp/cmdiframewndex-class_8.cpp)]
 
@@ -807,7 +807,7 @@ void EnablePaneMenu(
 
 ### <a name="example"></a>示例
 
-下面的示例演示如何`EnablePaneMenu`中使用[VisualStudioDemo 示例： MFC Visual Studio 应用程序](../../visual-cpp-samples.md)。
+下面的示例演示如何`EnablePaneMenu`中使用[VisualStudioDemo 示例：Visual Studio 的 MFC 应用程序](../../visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#9](../../mfc/codesnippet/cpp/cmdiframewndex-class_9.cpp)]
 
@@ -849,7 +849,7 @@ void EnableWindowsDialog(
 
 ### <a name="example"></a>示例
 
-下面的示例演示如何`EnableWindowsDialog`中使用[VisualStudioDemo 示例： MFC Visual Studio 应用程序](../../visual-cpp-samples.md)。
+下面的示例演示如何`EnableWindowsDialog`中使用[VisualStudioDemo 示例：Visual Studio 的 MFC 应用程序](../../visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#10](../../mfc/codesnippet/cpp/cmdiframewndex-class_10.cpp)]
 
@@ -1224,7 +1224,7 @@ virtual BOOL LoadMDIState(LPCTSTR lpszProfileName);
 
 ### <a name="example"></a>示例
 
-下面的示例演示如何`LoadMDIState`中使用[VisualStudioDemo 示例： MFC Visual Studio 应用程序](../../visual-cpp-samples.md)。
+下面的示例演示如何`LoadMDIState`中使用[VisualStudioDemo 示例：Visual Studio 的 MFC 应用程序](../../visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#11](../../mfc/codesnippet/cpp/cmdiframewndex-class_11.cpp)]
 
@@ -1260,7 +1260,7 @@ void MDITabNewGroup(BOOL bVert=TRUE);
 
 ### <a name="example"></a>示例
 
-下面的示例演示如何`MDITabNewGroup`中使用[VisualStudioDemo 示例： MFC Visual Studio 应用程序](../../visual-cpp-samples.md)。
+下面的示例演示如何`MDITabNewGroup`中使用[VisualStudioDemo 示例：Visual Studio 的 MFC 应用程序](../../visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#12](../../mfc/codesnippet/cpp/cmdiframewndex-class_12.cpp)]
 
@@ -1280,7 +1280,7 @@ BOOL m_bCanCovertControlBarToMDIChild;
 
 ### <a name="example"></a>示例
 
-下面的示例演示如何`m_bCanCovertControlBarToMDIChild`中使用[VisualStudioDemo 示例： MFC Visual Studio 应用程序](../../visual-cpp-samples.md)。
+下面的示例演示如何`m_bCanCovertControlBarToMDIChild`中使用[VisualStudioDemo 示例：Visual Studio 的 MFC 应用程序](../../visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#13](../../mfc/codesnippet/cpp/cmdiframewndex-class_2.cpp)]
 
@@ -1322,7 +1322,7 @@ virtual BOOL NegotiateBorderSpace(
 - `borderSet` = 3
 
 *lpRectBorder*<br/>
-[in、 out]指向[RECT 结构](../../mfc/reference/rect-structure1.md)或[CRect 类](../../atl-mfc-shared/reference/crect-class.md)对象，它指定边框的坐标。
+[in、 out]指向[RECT 结构](/windows/desktop/api/windef/ns-windef-tagrect)或[CRect 类](../../atl-mfc-shared/reference/crect-class.md)对象，它指定边框的坐标。
 
 ### <a name="return-value"></a>返回值
 
@@ -1621,7 +1621,7 @@ virtual BOOL OnShowMDITabContextMenu(
 
 ### <a name="example"></a>示例
 
-下面的示例演示如何`OnShowMDITabContextMenu`中使用[VisualStudioDemo 示例： MFC Visual Studio 应用程序](../../visual-cpp-samples.md)。
+下面的示例演示如何`OnShowMDITabContextMenu`中使用[VisualStudioDemo 示例：Visual Studio 的 MFC 应用程序](../../visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#14](../../mfc/codesnippet/cpp/cmdiframewndex-class_13.cpp)]
 
@@ -1856,7 +1856,7 @@ virtual BOOL SaveMDIState(LPCTSTR lpszProfileName);
 
 ### <a name="example"></a>示例
 
-下面的示例演示如何`SaveMDIState`中使用[VisualStudioDemo 示例： MFC Visual Studio 应用程序](../../visual-cpp-samples.md)。
+下面的示例演示如何`SaveMDIState`中使用[VisualStudioDemo 示例：Visual Studio 的 MFC 应用程序](../../visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#15](../../mfc/codesnippet/cpp/cmdiframewndex-class_14.cpp)]
 
@@ -1939,7 +1939,7 @@ void ShowPane(
 
 ### <a name="example"></a>示例
 
-下面的示例演示如何`ShowPane`中使用[VisualStudioDemo 示例： MFC Visual Studio 应用程序](../../visual-cpp-samples.md)。
+下面的示例演示如何`ShowPane`中使用[VisualStudioDemo 示例：Visual Studio 的 MFC 应用程序](../../visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#16](../../mfc/codesnippet/cpp/cmdiframewndex-class_15.cpp)]
 
@@ -1953,7 +1953,7 @@ void ShowWindowsDialog();
 
 ### <a name="example"></a>示例
 
-下面的示例演示如何`ShowWindowsDialog`中使用[VisualStudioDemo 示例： MFC Visual Studio 应用程序](../../visual-cpp-samples.md)。
+下面的示例演示如何`ShowWindowsDialog`中使用[VisualStudioDemo 示例：Visual Studio 的 MFC 应用程序](../../visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#18](../../mfc/codesnippet/cpp/cmdiframewndex-class_16.cpp)]
 
@@ -1980,7 +1980,7 @@ virtual BOOL TabbedDocumentToControlBar(CMDIChildWndEx* pMDIChildWnd);
 
 ### <a name="example"></a>示例
 
-下面的示例演示如何`TabbedDocumentToControlBar`中使用[VisualStudioDemo 示例： MFC Visual Studio 应用程序](../../visual-cpp-samples.md)。
+下面的示例演示如何`TabbedDocumentToControlBar`中使用[VisualStudioDemo 示例：Visual Studio 的 MFC 应用程序](../../visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#19](../../mfc/codesnippet/cpp/cmdiframewndex-class_17.cpp)]
 

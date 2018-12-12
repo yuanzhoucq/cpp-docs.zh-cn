@@ -21,12 +21,12 @@ helpviewer_keywords:
 - CMainFrame class [MFC]
 - styles [MFC], windows
 ms.assetid: 77fa4f03-96b4-4687-9ade-41e46f7e4b0a
-ms.openlocfilehash: ebef671a34d2b50bd547a2fd9e484581df8ee3e8
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 19ff4e41f3b8c73e7ae62fbf264ea955b42bbc1a
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693213"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53177898"
 ---
 # <a name="changing-the-styles-of-a-window-created-by-mfc"></a>更改 MFC 创建的窗口的样式
 
@@ -46,7 +46,7 @@ ms.locfileid: "51693213"
 
 如果您要更改窗口特性中现有的应用程序，而是按照在本文的其余部分中的说明。
 
-若要更改使用的框架应用程序使用应用程序向导创建的默认窗口属性，请重写窗口的[PreCreateWindow](../mfc/reference/cwnd-class.md#precreatewindow)虚拟成员函数。 `PreCreateWindow` 允许应用程序访问通常由在内部管理的创建过程[CDocTemplate](../mfc/reference/cdoctemplate-class.md)类。 框架将调用`PreCreateWindow`之前创建窗口。 通过修改[CREATESTRUCT](../mfc/reference/createstruct-structure.md)结构传递给`PreCreateWindow`，你的应用程序可以更改用来创建窗口的属性。 例如，若要确保一个窗口不使用标题，请使用以下的按位运算：
+若要更改使用的框架应用程序使用应用程序向导创建的默认窗口属性，请重写窗口的[PreCreateWindow](../mfc/reference/cwnd-class.md#precreatewindow)虚拟成员函数。 `PreCreateWindow` 允许应用程序访问通常由在内部管理的创建过程[CDocTemplate](../mfc/reference/cdoctemplate-class.md)类。 框架将调用`PreCreateWindow`之前创建窗口。 通过修改[CREATESTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcreatestructa)结构传递给`PreCreateWindow`，你的应用程序可以更改用来创建窗口的属性。 例如，若要确保一个窗口不使用标题，请使用以下的按位运算：
 
 [!code-cpp[NVC_MFCDocView#15](../mfc/codesnippet/cpp/changing-the-styles-of-a-window-created-by-mfc_1.cpp)]
 

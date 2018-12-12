@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - shared classes, classes
 ms.assetid: ca8b4b6b-744d-430b-b31f-d5b2f17bf210
-ms.openlocfilehash: 6e63664020508252a61682c46439af85033cf068
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9943a9b56b660165f8ecfd46f0a69107ecaa632c
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50583867"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53177900"
 ---
 # <a name="classes-shared-by-mfc-and-atl"></a>由 MFC 和 ATL 共享的类
 
@@ -23,10 +23,10 @@ ms.locfileid: "50583867"
 |[中的 CImage](../../atl-mfc-shared/reference/cimage-class.md)|提供了增强的位图支持，包括加载和保存 JPEG、 GIF、 BMP、 和可移植网络图形 (PNG) 格式图像的能力。|atlimage.h|
 |[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)|封装 OLE 自动化中使用的日期数据类型。|atlcomtime.h|
 |[COleDateTimeSpan](../../atl-mfc-shared/reference/coledatetimespan-class.md)|表示相对时间，时间跨度。|atlcomtime.h|
-|[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)|类似于 Windows 的类[点](../../mfc/reference/point-structure.md)结构，它还包括成员函数以操作`CPoint`和`POINT`结构。|atltypes.h|
-|[CRect](../../atl-mfc-shared/reference/crect-class.md)|类似于 Windows 的类[RECT](../../mfc/reference/rect-structure.md)结构，它还包括成员函数以操作`CRect`对象和 Windows`RECT`结构。|atltypes.h|
+|[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)|类似于 Windows 的类[点](/windows/desktop/api/windef/ns-windef-tagpoint)结构，它还包括成员函数以操作`CPoint`和`POINT`结构。|atltypes.h|
+|[CRect](../../atl-mfc-shared/reference/crect-class.md)|类似于 Windows 的类[RECT](/windows/desktop/api/windef/ns-windef-tagrect)结构，它还包括成员函数以操作`CRect`对象和 Windows`RECT`结构。|atltypes.h|
 |[CSimpleStringT](../../atl-mfc-shared/reference/csimplestringt-class.md)|表示`CSimpleStringT`对象。|atlsimpstr.h|
-|[CSize](../../atl-mfc-shared/reference/csize-class.md)|一个类似于实现相对坐标或位置的 Windows 大小结构的类。|atltypes.h|
+|[CSize](../../atl-mfc-shared/reference/csize-class.md)|类似于 Windows 的类[大小](/windows/desktop/api/windef/ns-windef-tagsize)结构，它实现相对坐标或位置。|atltypes.h|
 |[CStrBufT](../../atl-mfc-shared/reference/cstrbuft-class.md)|提供的自动资源清除`GetBuffer`并`ReleaseBuffer`现有调用`CStringT`对象。|atlsimpstr.h|
 |[CStringData](../../atl-mfc-shared/reference/cstringdata-class.md)|表示字符串对象的数据。|atlsimpstr.h|
 |[CStringT](../../atl-mfc-shared/reference/cstringt-class.md)|表示`CStringT`对象。|cstringt.h （MFC 取决于） atlstr.h （独立于 MFC）|

@@ -334,12 +334,12 @@ helpviewer_keywords:
 - COleControl [MFC], IsInvokeAllowed
 - COleControl [MFC], SetInitialDataFormats
 ms.assetid: 53e95299-38e8-447b-9c5f-a381d27f5123
-ms.openlocfilehash: 176c076027a0b1b315fbcef3edd4104bad66ae34
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ef44c917411efefeb6719af95185ddf7993fbab1
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534129"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53179014"
 ---
 # <a name="colecontrol-class"></a>COleControl 类
 
@@ -556,7 +556,7 @@ OLE 控件可以是无窗口使用处于就地活动状态。 无窗口控件有
 
 仅当它们变为活动状态，但处于非活动状态处于活动状态转换所需的工作量将向上转和过渡的速度发生故障时，OLE 控件对象还可以创建一个窗口。 有些情况下这是一个问题： 作为示例，请考虑一个文本框中的网格。 当列通过向上和向下的指针，每个控件必须就地激活，然后停用。 非活动/活动过渡的速度会直接影响滚动速度。
 
-开发 OLE 控件框架的详细信息，请参阅文章[MFC ActiveX 控件](../../mfc/mfc-activex-controls.md)并[概述： 创建 MFC ActiveX 控件程序](../../mfc/reference/mfc-activex-control-wizard.md)。 有关优化 OLE 控件，包括无窗口并且无闪烁控件，请参阅[MFC ActiveX 控件： 优化](../../mfc/mfc-activex-controls-optimization.md)。
+开发 OLE 控件框架的详细信息，请参阅文章[MFC ActiveX 控件](../../mfc/mfc-activex-controls.md)和[概述：创建 MFC ActiveX 控件程序](../../mfc/reference/mfc-activex-control-wizard.md)。 有关优化 OLE 控件，包括无窗口并且无闪烁控件，请参阅[MFC ActiveX 控件：优化](../../mfc/mfc-activex-controls-optimization.md)。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -848,7 +848,7 @@ BOOL ClipCaretRect(LPRECT lpRect);
 ### <a name="parameters"></a>参数
 
 *lpRect*<br/>
-在输入一个指向[RECT](../../mfc/reference/rect-structure1.md)结构，其中包含要进行调整的插入点区域。 在输出中，调整后的插入符号的区域中，或如果脱字号矩形完全覆盖，则为 NULL。
+在输入一个指向[RECT](/windows/desktop/api/windef/ns-windef-tagrect)结构，其中包含要进行调整的插入点区域。 在输出中，调整后的插入符号的区域中，或如果脱字号矩形完全覆盖，则为 NULL。
 
 ### <a name="return-value"></a>返回值
 
@@ -902,7 +902,7 @@ virtual void DisplayError(
 ### <a name="parameters"></a>参数
 
 *scode*<br/>
-要报告的状态代码值。 可能的代码的完整列表，请参阅文章[ActiveX 控件： 高级主题](../../mfc/mfc-activex-controls-advanced-topics.md)。
+要报告的状态代码值。 可能的代码的完整列表，请参阅文章[ActiveX 控件：高级主题](../../mfc/mfc-activex-controls-advanced-topics.md)。
 
 *lpszDescription*<br/>
 正在报告的错误的说明。
@@ -934,7 +934,7 @@ void DoClick();
 
 可重写`COleControl::OnClick`将调用成员函数，和常用 Click 事件将触发，如果控件支持。
 
-支持此函数`COleControl`基类作为调用 DoClick 常用方法。 有关详细信息，请参阅文章[ActiveX 控件： 方法](../../mfc/mfc-activex-controls-methods.md)。
+支持此函数`COleControl`基类作为调用 DoClick 常用方法。 有关详细信息，请参阅文章[ActiveX 控件：方法](../../mfc/mfc-activex-controls-methods.md)。
 
 ##  <a name="dopropexchange"></a>  COleControl::DoPropExchange
 
@@ -953,7 +953,7 @@ virtual void DoPropExchange(CPropExchange* pPX);
 
 此函数通常会调用**PX_** 系列函数以加载或存储的 OLE 控件特定的用户定义的属性。
 
-如果控件向导用于创建 OLE 控件项目，此函数的重写的版本将序列化支持的常用属性`COleControl`通过调用基类函数， `COleControl::DoPropExchange`。 在您向 OLE 控件将需要修改此函数可序列化新属性添加用户定义的属性。 序列化的详细信息，请参阅文章[ActiveX 控件： 序列化](../../mfc/mfc-activex-controls-serializing.md)。
+如果控件向导用于创建 OLE 控件项目，此函数的重写的版本将序列化支持的常用属性`COleControl`通过调用基类函数， `COleControl::DoPropExchange`。 在您向 OLE 控件将需要修改此函数可序列化新属性添加用户定义的属性。 序列化的详细信息，请参阅文章[ActiveX 控件：序列化](../../mfc/mfc-activex-controls-serializing.md)。
 
 ##  <a name="dosuperclasspaint"></a>  COleControl::DoSuperclassPaint
 
@@ -977,7 +977,7 @@ void DoSuperclassPaint(
 
 调用此函数可正确处理的非活动的 OLE 控件绘制。 如果 OLE 控件的 Windows 控件的子类，应调用，仅应使用此函数`OnDraw`控件的函数。
 
-此函数和 Windows 控件子类化的详细信息，请参阅文章[ActiveX 控件： 子类化 Windows 控件](../../mfc/mfc-activex-controls-subclassing-a-windows-control.md)。
+此函数和 Windows 控件子类化的详细信息，请参阅文章[ActiveX 控件：Windows 控件子类化](../../mfc/mfc-activex-controls-subclassing-a-windows-control.md)。
 
 ##  <a name="drawcontent"></a>  COleControl::DrawContent
 
@@ -1099,7 +1099,7 @@ BOOL ExchangeVersion(
 
 通常，这将是第一个函数调用的控件的重写`COleControl::DoPropExchange`。 在加载时，此函数读取永久性数据的版本号，并设置的 version 属性[CPropExchange](../../mfc/reference/cpropexchange-class.md)相应对象。 保存时，此函数将写入持久性数据的版本号。
 
-持久性和版本控制的详细信息，请参阅文章[ActiveX 控件： 序列化](../../mfc/mfc-activex-controls-serializing.md)。
+持久性和版本控制的详细信息，请参阅文章[ActiveX 控件：序列化](../../mfc/mfc-activex-controls-serializing.md)。
 
 ##  <a name="fireclick"></a>  COleControl::FireClick
 
@@ -1143,7 +1143,7 @@ void FireError(
 ### <a name="parameters"></a>参数
 
 *scode*<br/>
-要报告的状态代码值。 可能的代码的完整列表，请参阅文章[ActiveX 控件： 高级主题](../../mfc/mfc-activex-controls-advanced-topics.md)。
+要报告的状态代码值。 可能的代码的完整列表，请参阅文章[ActiveX 控件：高级主题](../../mfc/mfc-activex-controls-advanced-topics.md)。
 
 *lpszDescription*<br/>
 正在报告的错误的说明。
@@ -1690,7 +1690,7 @@ enum ControlFlags {
 |`windowlessActivate`|如果设置，则表示您的控件使用无窗口激活。|
 |`canOptimizeDraw`|如果设置，则指示该控件将执行优化的绘图，如果该容器支持它。|
 
-有关详细信息`GetControlFlags`和其他优化 OLE 控件，请参阅[ActiveX 控件： 优化](../../mfc/mfc-activex-controls-optimization.md)。
+有关详细信息`GetControlFlags`和其他优化 OLE 控件，请参阅[ActiveX 控件：优化](../../mfc/mfc-activex-controls-optimization.md)。
 
 ##  <a name="getcontrolsize"></a>  COleControl::GetControlSize
 
@@ -1808,7 +1808,7 @@ LPFONTDISP GetFont();
 
 ### <a name="remarks"></a>备注
 
-请注意，调用方必须释放对象时完成。 在控件实现中，使用`InternalGetFont`访问控件的常用字体对象。 使用您的控件中的字体的详细信息，请参阅文章[ActiveX 控件： 在 ActiveX 控件中使用字体](../../mfc/mfc-activex-controls-using-fonts.md)。
+请注意，调用方必须释放对象时完成。 在控件实现中，使用`InternalGetFont`访问控件的常用字体对象。 使用您的控件中的字体的详细信息，请参阅文章[ActiveX 控件：使用 ActiveX 控件中的字体](../../mfc/mfc-activex-controls-using-fonts.md)。
 
 ##  <a name="getfonttextmetrics"></a>  COleControl::GetFontTextMetrics
 
@@ -3565,7 +3565,7 @@ void Refresh();
 
 ### <a name="remarks"></a>备注
 
-支持此函数`COleControl`基类作为一个名为刷新的常用方法。 这允许 OLE 控件的用户在特定的时间重新绘制控件。 此方法的详细信息，请参阅文章[ActiveX 控件： 方法](../../mfc/mfc-activex-controls-methods.md)。
+支持此函数`COleControl`基类作为一个名为刷新的常用方法。 这允许 OLE 控件的用户在特定的时间重新绘制控件。 此方法的详细信息，请参阅文章[ActiveX 控件：方法](../../mfc/mfc-activex-controls-methods.md)。
 
 ##  <a name="releasecapture"></a>  COleControl::ReleaseCapture
 
@@ -3636,9 +3636,9 @@ void ResetStockProps();
 
 ### <a name="remarks"></a>备注
 
-属性是： 外观、 背景色、 边框样式、 标题、 已启用、 字体、 前景色、 hWnd 和文本。 常用属性的说明，请参阅[ActiveX 控件： 添加常用属性](../../mfc/mfc-activex-controls-adding-stock-properties.md)。
+这些属性为：外观、 背景色、 边框样式、 标题、 已启用、 字体、 前景色、 hWnd 和文本。 常用属性的说明，请参阅[ActiveX 控件：添加常用属性](../../mfc/mfc-activex-controls-adding-stock-properties.md)。
 
-可以通过使用提高控件的二进制初始化性能`ResetStockProps`并`ResetVersion`重写`COleControl::OnResetState`。 请参见下面的示例。 有关优化初始化的详细信息，请参阅[ActiveX 控件： 优化](../../mfc/mfc-activex-controls-optimization.md)。
+可以通过使用提高控件的二进制初始化性能`ResetStockProps`并`ResetVersion`重写`COleControl::OnResetState`。 请参见下面的示例。 有关优化初始化的详细信息，请参阅[ActiveX 控件：优化](../../mfc/mfc-activex-controls-optimization.md)。
 
 ### <a name="example"></a>示例
 
@@ -3659,7 +3659,7 @@ void ResetVersion(DWORD dwVersionDefault);
 
 ### <a name="remarks"></a>备注
 
-可以通过使用提高控件的二进制初始化性能`ResetVersion`并`ResetStockProps`重写`COleControl::OnResetState`。 在示例，请参阅[ResetStockProps](#resetstockprops)。 有关优化初始化的详细信息，请参阅[ActiveX 控件： 优化](../../mfc/mfc-activex-controls-optimization.md)。
+可以通过使用提高控件的二进制初始化性能`ResetVersion`并`ResetStockProps`重写`COleControl::OnResetState`。 在示例，请参阅[ResetStockProps](#resetstockprops)。 有关优化初始化的详细信息，请参阅[ActiveX 控件：优化](../../mfc/mfc-activex-controls-optimization.md)。
 
 ##  <a name="scrollwindow"></a>  COleControl::ScrollWindow
 
@@ -3741,7 +3741,7 @@ void SerializeExtent(CArchive& ar);
 
 ### <a name="remarks"></a>备注
 
-可以通过使用提高控件的二进制暂留性能`SerializeExtent`， `SerializeStockProps`，并`SerializeVersion`重写`COleControl::Serialize`。 请参见下面的示例。 有关优化初始化的详细信息，请参阅[ActiveX 控件： 优化](../../mfc/mfc-activex-controls-optimization.md)。
+可以通过使用提高控件的二进制暂留性能`SerializeExtent`， `SerializeStockProps`，并`SerializeVersion`重写`COleControl::Serialize`。 请参见下面的示例。 有关优化初始化的详细信息，请参阅[ActiveX 控件：优化](../../mfc/mfc-activex-controls-optimization.md)。
 
 ### <a name="example"></a>示例
 
@@ -3749,7 +3749,7 @@ void SerializeExtent(CArchive& ar);
 
 ##  <a name="serializestockprops"></a>  COleControl::SerializeStockProps
 
-序列化或初始化的状态`COleControl`常用属性： 外观、 背景色、 边框样式、 标题、 已启用、 字体、 前景色和文本。
+序列化或初始化的状态`COleControl`常用属性：外观、 背景色、 边框样式、 标题，启用、 字体、 前景色和文本。
 
 ```
 void SerializeStockProps(CArchive& ar);
@@ -3762,9 +3762,9 @@ void SerializeStockProps(CArchive& ar);
 
 ### <a name="remarks"></a>备注
 
-常用属性的说明，请参阅[ActiveX 控件： 添加常用属性](../../mfc/mfc-activex-controls-adding-stock-properties.md)。
+常用属性的说明，请参阅[ActiveX 控件：添加常用属性](../../mfc/mfc-activex-controls-adding-stock-properties.md)。
 
-可以通过使用提高控件的二进制暂留性能`SerializeStockProps`， `SerializeExtent`，并`SerializeVersion`重写`COleControl::Serialize`。 有关示例，请参阅处的代码[SerializeExtent](#serializeextent)。 有关优化初始化的详细信息，请参阅[ActiveX 控件： 优化](../../mfc/mfc-activex-controls-optimization.md)。
+可以通过使用提高控件的二进制暂留性能`SerializeStockProps`， `SerializeExtent`，并`SerializeVersion`重写`COleControl::Serialize`。 有关示例，请参阅处的代码[SerializeExtent](#serializeextent)。 有关优化初始化的详细信息，请参阅[ActiveX 控件：优化](../../mfc/mfc-activex-controls-optimization.md)。
 
 ##  <a name="serializeversion"></a>  COleControl::SerializeVersion
 
@@ -3794,7 +3794,7 @@ DWORD SerializeVersion(
 
 ### <a name="remarks"></a>备注
 
-可以通过使用提高控件的二进制暂留性能`SerializeVersion`， `SerializeExtent`，并`SerializeStockProps`重写`COleControl::Serialize`。 有关示例，请参阅处的代码[SerializeExtent](#serializeextent)。 有关优化初始化的详细信息，请参阅[ActiveX 控件： 优化](../../mfc/mfc-activex-controls-optimization.md)。
+可以通过使用提高控件的二进制暂留性能`SerializeVersion`， `SerializeExtent`，并`SerializeStockProps`重写`COleControl::Serialize`。 有关示例，请参阅处的代码[SerializeExtent](#serializeextent)。 有关优化初始化的详细信息，请参阅[ActiveX 控件：优化](../../mfc/mfc-activex-controls-optimization.md)。
 
 ##  <a name="setappearance"></a>  COleControl::SetAppearance
 
@@ -3811,7 +3811,7 @@ void SetAppearance (short sAppearance);
 
 ### <a name="remarks"></a>备注
 
-有关常用属性的详细信息，请参阅[ActiveX 控件： 属性](../../mfc/mfc-activex-controls-properties.md)。
+有关常用属性的详细信息，请参阅[ActiveX 控件：属性](../../mfc/mfc-activex-controls-properties.md)。
 
 ##  <a name="setbackcolor"></a>  COleControl::SetBackColor
 
@@ -3828,7 +3828,7 @@ void SetBackColor(OLE_COLOR dwBackColor);
 
 ### <a name="remarks"></a>备注
 
-有关详细信息使用此属性和其他相关属性，请参阅文章[ActiveX 控件： 属性](../../mfc/mfc-activex-controls-properties.md)。
+有关详细信息使用此属性和其他相关属性，请参阅文章[ActiveX 控件：属性](../../mfc/mfc-activex-controls-properties.md)。
 
 ##  <a name="setborderstyle"></a>  COleControl::SetBorderStyle
 
@@ -3952,7 +3952,7 @@ void SetForeColor(OLE_COLOR dwForeColor);
 
 ### <a name="remarks"></a>备注
 
-有关详细信息使用此属性和其他相关属性，请参阅文章[ActiveX 控件： 属性](../../mfc/mfc-activex-controls-properties.md)。
+有关详细信息使用此属性和其他相关属性，请参阅文章[ActiveX 控件：属性](../../mfc/mfc-activex-controls-properties.md)。
 
 ##  <a name="setinitialdataformats"></a>  COleControl::SetInitialDataFormats
 
@@ -3964,7 +3964,7 @@ virtual void SetInitialDataFormats();
 
 ### <a name="remarks"></a>备注
 
-默认实现指定这两种格式： CF_METAFILEPICT 和持久性属性。
+默认实现指定这两种格式：设置 CF_METAFILEPICT 和持久的属性。
 
 ##  <a name="setinitialsize"></a>  COleControl::SetInitialSize
 
@@ -4086,7 +4086,7 @@ void ThrowError(
 ### <a name="parameters"></a>参数
 
 *sc*<br/>
-要报告的状态代码值。 可能的代码的完整列表，请参阅文章[ActiveX 控件： 高级主题](../../mfc/mfc-activex-controls-advanced-topics.md)。
+要报告的状态代码值。 可能的代码的完整列表，请参阅文章[ActiveX 控件：高级主题](../../mfc/mfc-activex-controls-advanced-topics.md)。
 
 *nDescriptionID*<br/>
 字符串资源 ID 的异常报告。

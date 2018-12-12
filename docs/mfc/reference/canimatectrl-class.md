@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CAnimateCtrl [MFC], Seek
 - CAnimateCtrl [MFC], Stop
 ms.assetid: 5e8eb1bd-96b7-47b8-8de2-6bcbb3cc299b
-ms.openlocfilehash: 5bbd59101815d18cae92b9996aff54f0cadaf9ab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6a22c88e1a19cd1aef1bbfacd7f255adc2b19d0e
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608424"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178248"
 ---
 # <a name="canimatectrl-class"></a>CAnimateCtrl 类
 
@@ -152,7 +152,7 @@ virtual BOOL Create(
 指定动画控件的样式。 应用的 windows 详见下面的备注部分和动画控件样式的样式中所述的任意组合[动画控件样式](/windows/desktop/Controls/animation-control-styles)Windows SDK 中。
 
 *rect*<br/>
-指定动画控件的位置和大小。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT](../../mfc/reference/rect-structure1.md)结构。
+指定动画控件的位置和大小。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT](/windows/desktop/api/windef/ns-windef-tagrect)结构。
 
 *pParentWnd*<br/>
 通常指定动画控件的父窗口， `CDialog`。 它不能为 NULL。
