@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Concurrency Runtime, migrating from OpenMP
 - OpenMP, migrating to the Concurrency Runtime
 ms.assetid: 9bab7bb1-e45d-44b2-8509-3b226be2c93b
-ms.openlocfilehash: 4b70aa57a6485fefe0dbb678e72ba127502c89e3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 78fa83c30bc55d82ffa5d2ba1e7d65472643f86b
+ms.sourcegitcommit: ee0103752884425843556a19cf418a504dc3cd02
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481921"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53737619"
 ---
 # <a name="migrating-from-openmp-to-the-concurrency-runtime"></a>从 OpenMP 迁移至并发运行时
 
@@ -34,7 +34,7 @@ OpenMP 编程模型由开放标准定义，具有与 Fortran 和 C/C++ 编程语
 |所需的异常处理支持。|PPL 可以捕获异常，内部和外部并行区域或循环。 在 OpenMP，必须处理并行区域或循环内的异常。|
 |需要取消机制。|PPL 使应用程序可以取消单个任务和并行工作树。 OpenMP 要求应用程序以实现其自身取消的机制。|
 |需要从其启动不同的上下文中完成的并行代码。|并发运行时，可以启动任务在一个上下文中，然后等待或取消该任务在另一个上下文中。 在 OpenMP 中，必须从其开始的上下文中完成所有的并行工作。|
-|需要增强的调试支持。|Visual Studio 提供了**并行堆栈**并**并行任务**windows，以便可以更轻松地调试多线程应用程序。<br /><br /> 有关调试的并发运行时支持的详细信息，请参阅[使用任务窗口](/visualstudio/debugger/using-the-tasks-window)，[使用并行堆栈窗口](/visualstudio/debugger/using-the-parallel-stacks-window)，和[演练： 调试并行应用程序](/visualstudio/debugger/walkthrough-debugging-a-parallel-application)。|
+|需要增强的调试支持。|Visual Studio 提供了**并行堆栈**并**并行任务**windows，以便可以更轻松地调试多线程应用程序。<br /><br /> 有关调试的并发运行时支持的详细信息，请参阅[使用任务窗口](/visualstudio/debugger/using-the-tasks-window)，[使用并行堆栈窗口](/visualstudio/debugger/using-the-parallel-stacks-window)，和[演练：调试并行应用程序](/visualstudio/debugger/walkthrough-debugging-a-parallel-application)。|
 
 ## <a name="when-not-to-migrate-from-openmp-to-the-concurrency-runtime"></a>何时不从 OpenMP 迁移到并发运行时
 
@@ -48,17 +48,17 @@ OpenMP 编程模型由开放标准定义，具有与 Fortran 和 C/C++ 编程语
 
 ## <a name="related-topics"></a>相关主题
 
-[如何：转换 OpenMP 并行 for 循环以使用并发运行时](../../parallel/concrt/how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime.md)
+[如何：转换 OpenMP parallel for 循环以使用并发运行时](../../parallel/concrt/how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime.md)
 
 提供一个基本循环使用 OpenMP[并行](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)并[有关](../../parallel/openmp/reference/for-openmp.md)指令，演示如何将其转换为使用并发运行时[concurrency:: parallel_for](reference/concurrency-namespace-functions.md#parallel_for)算法。
 
-[如何：转换使用取消的 OpenMP 循环以使用并发运行时](../../parallel/concrt/convert-an-openmp-loop-that-uses-cancellation.md)<br/>
+[如何：转换使用取消来使用并发运行时的 OpenMP 循环](../../parallel/concrt/convert-an-openmp-loop-that-uses-cancellation.md)<br/>
 给定 OpenMP[并行](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[为](../../parallel/openmp/reference/for-openmp.md)循环不需要所有迭代来运行，演示如何将其转换为使用并发运行时取消机制。
 
-[如何：转换使用异常处理的 OpenMP 循环以使用并发运行时](../../parallel/concrt/convert-an-openmp-loop-that uses-exception-handling.md)<br/>
+[如何：转换使用异常处理以使用并发运行时的 OpenMP 循环](../../parallel/concrt/convert-an-openmp-loop-that-uses-exception-handling.md)<br/>
 给定 OpenMP[并行](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[为](../../parallel/openmp/reference/for-openmp.md)循环执行异常处理，演示如何将其转换为使用并发运行时异常处理机制。
 
-[如何：转换使用缩减变量的 OpenMP 循环以使用并发运行时](../../parallel/concrt/convert-an-openmp-loop-that-uses-a-reduction-variable.md)<br/>
+[如何：转换使用缩减变量以使用并发运行时的 OpenMP 循环](../../parallel/concrt/convert-an-openmp-loop-that-uses-a-reduction-variable.md)<br/>
 给定 OpenMP[并行](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[有关](../../parallel/openmp/reference/for-openmp.md)使用循环[减少](../../parallel/openmp/reference/reduction.md)子句，演示如何将其转换为使用并发运行时。
 
 ## <a name="see-also"></a>请参阅

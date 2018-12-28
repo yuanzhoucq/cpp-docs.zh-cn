@@ -1,6 +1,6 @@
 ---
 title: 自变量传递和命名约定
-ms.date: 11/04/2016
+ms.date: 12/17/2018
 helpviewer_keywords:
 - argument passing [C++], conventions
 - arguments [C++], widening
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - passing arguments [C++], conventions
 - conventions [C++], argument names
 ms.assetid: de468979-eab8-4158-90c5-c198932f93b9
-ms.openlocfilehash: 735e703e3e7d3ddb55a04fb0d29b3899682fe24e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ca09d31d3d8d50ca94543c5e02262edd7b2deefc
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50473289"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53627236"
 ---
 # <a name="argument-passing-and-naming-conventions"></a>自变量传递和命名约定
 
@@ -31,11 +31,11 @@ ms.locfileid: "50473289"
 编译器将生成 prolog 和 epilog 代码来保存并还原 ESI、EDI、EBX 和 EBP 寄存器（如果在函数中使用了它们）。
 
 > [!NOTE]
->  当结构、联合或类由值从函数返回时，类型的所有定义需要相同，否则程序可能在运行时失败。
+> 当结构、联合或类由值从函数返回时，类型的所有定义需要相同，否则程序可能在运行时失败。
 
 有关如何定义自己的函数 prolog 和 epilog 代码的信息，请参阅[裸函数调用](../cpp/naked-function-calls.md)。
 
-默认值有关的信息面向 x64 平台，请参阅代码中调用约定[概述 x64 调用约定](../build/overview-of-x64-calling-conventions.md)。 有关在面向 ARM 平台的代码中调用约定问题的信息，请参阅[Visual C++ ARM 迁移的常见问题](../build/common-visual-cpp-arm-migration-issues.md)。
+默认值有关的信息面向 x64 平台，请参阅代码中调用约定[x64 调用约定](../build/x64-calling-convention.md)。 有关在面向 ARM 平台的代码中调用约定问题的信息，请参阅[Visual C++ ARM 迁移的常见问题](../build/common-visual-cpp-arm-migration-issues.md)。
 
 Visual C/C++ 编译器支持下列调用约定。
 

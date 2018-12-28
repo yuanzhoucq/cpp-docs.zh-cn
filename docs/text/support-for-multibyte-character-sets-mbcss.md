@@ -9,12 +9,12 @@ helpviewer_keywords:
 - multibyte characters [C++]
 - MBCS [C++]
 ms.assetid: b498733c-a1e1-45e3-8f26-d6da3cb5f2dd
-ms.openlocfilehash: b6c8dc5548eb1082866b7a069fb38fd329effc75
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9f309f6d7147b37691564d3d72c151da90055c6a
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437229"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53627340"
 ---
 # <a name="support-for-multibyte-character-sets-mbcss"></a>支持多字节字符集 (MBCS)
 
@@ -46,7 +46,7 @@ C 运行时库和 MFC 支持单字节、MBCS 和 Unicode 编程。 单字节字�
 
 ### <a name="mbcsunicode-portability"></a>MBCS/Unicode 可移植性
 
-使用 Tchar.h 头文件，可以从相同的源生成单字节、MBCS 和 Unicode 应用程序。 Tchar.h 定义具有前缀的宏 *_tcs* ，它们分别映射到`str`， `_mbs`，或`wcs`函数，根据需要。 若要生成 MBCS，请定义符号`_MBCS`。 若要生成 Unicode，请定义符号`_UNICODE`。 默认情况下，`_MBCS`为 MFC 应用程序定义。 有关详细信息，请参阅[Tchar.h 中的一般文本映射](../text/generic-text-mappings-in-tchar-h.md)。
+使用 tchar.h 头文件，可以构建单字节、 MBCS 和 Unicode 应用程序从相同的源。 Tchar.h 定义具有前缀的宏 *_tcs* ，它们分别映射到`str`， `_mbs`，或`wcs`函数，根据需要。 若要生成 MBCS，请定义符号`_MBCS`。 若要生成 Unicode，请定义符号`_UNICODE`。 默认情况下，`_UNICODE`为 MFC 应用程序定义。 有关详细信息，请参阅[tchar.h 中的一般文本映射](../text/generic-text-mappings-in-tchar-h.md)。
 
 > [!NOTE]
 >  如果同时定义行为是未定义`_UNICODE`和`_MBCS`。

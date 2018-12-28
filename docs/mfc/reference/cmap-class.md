@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CMap [MFC], RemoveKey
 - CMap [MFC], SetAt
 ms.assetid: 640a45ab-0993-4def-97ec-42cc78eb10b9
-ms.openlocfilehash: 3991ae4c7455aa8e6eb377112cb89c057e9567e0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 88ca218d4cb4e70dcc46ba04bbdfb7a9d12eb808
+ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50627313"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53657573"
 ---
 # <a name="cmap-class"></a>CMap 类
 
@@ -106,7 +106,7 @@ template<class KEY, class ARG_KEY, class VALUE, class ARG_VALUE>class CMap : pub
 
 |名称|描述|
 |----------|-----------------|
-|[CMap::operator]](#operator_at)|将元素插入到映射 — 运算符替换为`SetAt`。|
+|[CMap::operator \[ \]](#operator_at)|将元素插入到映射 — 运算符替换为`SetAt`。|
 
 ## <a name="remarks"></a>备注
 
@@ -116,7 +116,7 @@ template<class KEY, class ARG_KEY, class VALUE, class ARG_VALUE>class CMap : pub
 
 全局帮助器函数的此类调用的某些成员函数必须进行自定义的大部分使用`CMap`类。 请参阅[集合类帮助器](../../mfc/reference/collection-class-helpers.md)中的宏和全局函数部分**MFC 参考**。
 
-`CMap` 重写[cobject:: Serialize](../../mfc/reference/cobject-class.md#serialize)以支持序列化和转储的它的元素。 如果映射存储到存档使用`Serialize`，反过来序列化每个地图元素。 默认实现`SerializeElements`帮助程序函数执行按位写入。 有关指针集合项的序列化信息派生自`CObject`或其他用户定义的类型，请参阅[如何： 创建类型安全集合](../../mfc/how-to-make-a-type-safe-collection.md)。
+`CMap` 重写[cobject:: Serialize](../../mfc/reference/cobject-class.md#serialize)以支持序列化和转储的它的元素。 如果映射存储到存档使用`Serialize`，反过来序列化每个地图元素。 默认实现`SerializeElements`帮助程序函数执行按位写入。 有关指针集合项的序列化信息派生自`CObject`或其他用户定义的类型，请参阅[如何：创建类型安全集合](../../mfc/how-to-make-a-type-safe-collection.md)。
 
 如果您需要映射 （密钥和值） 中的各个元素的诊断转储，必须将转储上下文的深度设置为 1 或更高版本。
 

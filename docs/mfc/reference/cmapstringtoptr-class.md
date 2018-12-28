@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CMapStringToOb [MFC], RemoveKey
 - CMapStringToOb [MFC], SetAt
 ms.assetid: 1ac11143-eb0a-4511-a662-2df0d1d9005b
-ms.openlocfilehash: e162101b9e3169bc9fff11e0180bbd295403c357
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 09b6a41c5dd2a60821d3ca25f565f31de4c30dca
+ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50564705"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53657430"
 ---
 # <a name="cmapstringtoptr-class"></a>CMapStringToPtr 类
 
@@ -89,7 +89,7 @@ class CMapStringToPtr : public CObject
 
 |名称|描述|
 |----------|-----------------|
-|[CMapStringToOb::operator [ ]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|将元素插入到映射 — 运算符替换为`SetAt`。|
+|[CMapStringToOb::operator \[ \]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|将元素插入到映射 — 运算符替换为`SetAt`。|
 
 ## <a name="remarks"></a>备注
 

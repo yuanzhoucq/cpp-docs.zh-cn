@@ -8,12 +8,12 @@ helpviewer_keywords:
 - programming [C++], 64-bit
 - Visual C++, 64-bit hardware
 ms.assetid: cb99f72b-8c74-48f4-846a-8921b37b97e9
-ms.openlocfilehash: a72e6f1905bad81fc0d79c1f90e88e96fe8b110b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 85bfa6cb82b4b1825ae9b9a9a0f3a9f06e579499
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50487797"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626703"
 ---
 # <a name="configure-visual-c-for-64-bit-x64-targets"></a>配置 Visual c + + 64 位 x64 目标
 
@@ -21,9 +21,9 @@ ms.locfileid: "50487797"
 
 ## <a name="in-this-section"></a>本节内容
 
-- [如何：针对 64 位 x64 平台配置 Visual C++ 项目](../build/how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md)
+- [如何：配置 Visual c + + 项目以面向 64 位 x64 平台](../build/how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md)
 
-- [如何：在命令行上启用 64 位 Visual C++ 工具集](../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md)
+- [如何：启用 64 位 Visual c + + 工具集在命令行上](../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md)
 
 - [Visual C++ 64 位迁移的常见问题](../build/common-visual-cpp-64-bit-migration-issues.md)
 
