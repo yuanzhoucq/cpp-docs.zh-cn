@@ -367,7 +367,7 @@ IMPLEMENT_OLECREATE_FLAGS( class_name, external_name, nFlags,
 
          You can combine the two flags `afxRegApartmentThreading` and `afxRegFreeThreading` to set ThreadingModel=Both. See [InprocServer32](/windows/desktop/com/inprocserver32) in the Windows SDK for more information on threading model registration.
 
-*l*， *w1*， *w2*， *b1*， *b2*， *b3*， *b4**b5*， *b6*， *b7*， *b8*类的 CLSID 的组件。
+*l*， *w1*， *w2*， *b1*， *b2*， *b3*， *b4* *b5*， *b6*， *b7*， *b8*类的 CLSID 的组件。
 
 ### <a name="remarks"></a>备注
 
@@ -532,7 +532,7 @@ IMPLEMENT_OLECREATE(class_name, external_name, l, w1, w2, b1, b2, b3, b4, b5, b6
 *external_name*<br/>
 对其他应用程序 （用引号引起来） 公开的对象名称。
 
-*l*， *w1*， *w2*， *b1*， *b2*， *b3*， *b4**b5*， *b6*， *b7*， *b8*类的 CLSID 的组件。
+*l*， *w1*， *w2*， *b1*， *b2*， *b3*， *b4*， *b5*， *b6*， *b7*， *b8*类的 CLSID 的组件。
 
 ### <a name="remarks"></a>备注
 

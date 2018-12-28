@@ -85,7 +85,7 @@ Microsoft 已弃用某些 CRT 和 c + + 标准库函数和全局变量以支持�
 
 ### <a name="unsafe-standard-library-functions"></a>不安全的标准库函数
 
-__std::__*function_name*__::\_选中此项\_迭代器::\_Deprecate 调用到 std::__*function_name***可能不安全的参数与此调用依靠调用方检查传递的值是否正确。若要禁用此警告，请使用-D\_SCL\_SECURE\_NO\_WARNINGS。有关如何使用 Visual c + + Checked Iterators，请参阅文档**
+__std::__*function_name* __::\_选中此项\_迭代器::\_Deprecate 调用到 std::__ *function_name* **可能不安全的参数与此调用依靠调用方检查传递的值是否正确。若要禁用此警告，请使用-D\_SCL\_SECURE\_NO\_WARNINGS。有关如何使用 Visual c + + Checked Iterators，请参阅文档**
 
 因为某些 c + + 标准库模板函数不会检查参数正确，在调试版本中会出现此警告。 在大多数情况下，这是因为没有足够的信息可供要检查容器边界的函数或使用该函数可能会错误地使用迭代器。 此警告有助于标识这些函数用途，因为它们可能会在程序中的严重安全漏洞的源。 有关更多信息，请参见 [Checked Iterators](../../standard-library/checked-iterators.md)。
 

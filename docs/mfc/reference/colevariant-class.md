@@ -397,7 +397,7 @@ void SetString(LPCTSTR lpszSrc, VARTYPE vtSrc);
 
 将参数*vtSrc*必须为 VT_BSTR (UNICODE) 或 VT_BSTRT (ANSI)。 `SetString` 通常用于设置字符串为 ANSI，因为的默认值为[COleVariant::COleVariant](#colevariant)构造函数使用字符串或字符串指针参数和没有 VARTYPE 是 UNICODE。
 
-DAO 记录集在非 UNICODE 版本中的期望将 ANSI 字符串。 因此，对于 DAO 函数使用`COleVariant`对象，如果不创建 UNICODE 记录集，则必须使用**COleVariant::COleVariant (** *lpszSrc* **，***vtSrc* **)** 窗体的构造函数*vtSrc*设置为 VT_BSTRT (ANSI)，或者使用`SetString`与*vtSrc*设置为 VT_BSTRT 使 ANSI 字符串。 例如，`CDaoRecordset`函数[CDaoRecordset::Seek](../../mfc/reference/cdaorecordset-class.md#seek)并[CDaoRecordset::SetFieldValue](../../mfc/reference/cdaorecordset-class.md#setfieldvalue)使用`COleVariant`对象作为参数。 如果 DAO 记录集不是 UNICODE，这些对象必须是 ANSI。
+DAO 记录集在非 UNICODE 版本中的期望将 ANSI 字符串。 因此，对于 DAO 函数使用`COleVariant`对象，如果不创建 UNICODE 记录集，则必须使用 **COleVariant::COleVariant (** *lpszSrc* **，** *vtSrc* **)** 窗体的构造函数*vtSrc*设置为 VT_BSTRT (ANSI)，或者使用`SetString`与*vtSrc*设置为 VT_BSTRT 使 ANSI 字符串。 例如，`CDaoRecordset`函数[CDaoRecordset::Seek](../../mfc/reference/cdaorecordset-class.md#seek)并[CDaoRecordset::SetFieldValue](../../mfc/reference/cdaorecordset-class.md#setfieldvalue)使用`COleVariant`对象作为参数。 如果 DAO 记录集不是 UNICODE，这些对象必须是 ANSI。
 
 ## <a name="see-also"></a>请参阅
 
