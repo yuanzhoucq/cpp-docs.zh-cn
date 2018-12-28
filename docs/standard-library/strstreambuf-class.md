@@ -186,7 +186,7 @@ virtual int overflow(int _Meta = EOF);
 
 ### <a name="return-value"></a>返回值
 
-如果该函数不成功，它将返回 `EOF`。 否则为如果 *\_Meta* == `EOF`，它不是返回某个值`EOF`。 否则，它将返回*\_元*。
+如果该函数不成功，它将返回 `EOF`。 否则为如果 *\_Meta* == `EOF`，它不是返回某个值`EOF`。 否则，它将返回 *\_元*。
 
 ### <a name="remarks"></a>备注
 
@@ -211,7 +211,7 @@ virtual int pbackfail(int _Meta = EOF);
 
 ### <a name="return-value"></a>返回值
 
-如果该函数不成功，它将返回 `EOF`。 否则为如果 *\_Meta* == `EOF`，它不是返回某个值`EOF`。 否则，它将返回*\_元*。
+如果该函数不成功，它将返回 `EOF`。 否则为如果 *\_Meta* == `EOF`，它不是返回某个值`EOF`。 否则，它将返回 *\_元*。
 
 ### <a name="remarks"></a>备注
 

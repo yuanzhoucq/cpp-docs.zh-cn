@@ -241,7 +241,7 @@ enum event {
 
 - `copyfmt_event`标识调用末尾附近发生的回调[copyfmt](../standard-library/basic-ios-class.md#copyfmt)之前[异常掩码](../standard-library/ios-base-class.md)复制。
 
-- `erase_event`标识发生在调用开始时的回调[copyfmt](../standard-library/basic-ios-class.md#copyfmt)，或调用的析构函数的开头**\*这**。
+- `erase_event`标识发生在调用开始时的回调[copyfmt](../standard-library/basic-ios-class.md#copyfmt)，或调用的析构函数的开头 **\*这**。
 
 - `imbue_event`标识发生在结束对的调用的回调[imbue](#imbue)，该函数返回之前。
 
