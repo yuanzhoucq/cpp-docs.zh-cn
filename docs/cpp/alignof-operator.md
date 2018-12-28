@@ -1,6 +1,6 @@
 ---
 title: __alignof 运算符
-ms.date: 10/09/2018
+ms.date: 12/17/2018
 f1_keywords:
 - alignas_cpp
 - __alignof_cpp
@@ -14,12 +14,12 @@ helpviewer_keywords:
 - alignof [C++]
 - types [C++], alignment requirements
 ms.assetid: acb1eed7-6398-40bd-b0c5-684ceb64afbc
-ms.openlocfilehash: 391535d7d80b075149c797cbd00fa34d46ed677d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 96c85db83c133af6f1712baa8597ed3360277854
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50479490"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53627388"
 ---
 # <a name="alignof-operator"></a>__alignof 运算符
 
@@ -39,7 +39,7 @@ C + + 11 引入了**alignof**返回的对齐方式，以字节为单位指定类
 
 例如：
 
-|表达式|“值”|
+|表达式|值|
 |----------------|-----------|
 |**__alignof( char )**|1|
 |**__alignof （短）**|2|
@@ -86,11 +86,11 @@ S* p = (S*)aligned_malloc(n * sizeof(S), __alignof(S));
 
 - [/Zp（结构成员对齐）](../build/reference/zp-struct-member-alignment.md)
 
-- [结构对齐示例](../build/examples-of-structure-alignment.md)(特定于 x64)
+- [结构对齐示例](../build/x64-software-conventions.md#examples-of-structure-alignment)(特定于 x64)
 
 有关 x86 和 x64 代码中的对齐方式的差异的详细信息，请参阅：
 
-- [与 x86 编译器冲突](../build/conflicts-with-the-x86-compiler.md)
+- [与 x86 编译器冲突](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)
 
 **结束 Microsoft 专用**
 

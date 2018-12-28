@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CTypedPtrMap [MFC], RemoveKey
 - CTypedPtrMap [MFC], SetAt
 ms.assetid: 9f377385-c6e9-4471-8b40-8fe220c50164
-ms.openlocfilehash: f09b44c5b898ee0d583db45ca63ee67c3d1c5b47
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4c6d20279792788c1013df8540080b2715ade1f2
+ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50494856"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53657378"
 ---
 # <a name="ctypedptrmap-class"></a>CTypedPtrMap Class
 
@@ -58,7 +58,7 @@ class CTypedPtrMap : public BASE_CLASS
 
 |名称|描述|
 |----------|-----------------|
-|[CTypedPtrMap::operator]](#operator_at)|将元素插入到映射。|
+|[CTypedPtrMap::operator \[ \]](#operator_at)|将元素插入到映射。|
 
 ## <a name="remarks"></a>备注
 

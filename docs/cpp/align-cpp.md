@@ -1,18 +1,18 @@
 ---
 title: align (C++)
-ms.date: 11/04/2016
+ms.date: 12/17/2018
 f1_keywords:
 - align_cpp
 helpviewer_keywords:
 - align __declspec keyword
 - __declspec keyword [C++], align
 ms.assetid: 9cb63f58-658b-4425-ac47-af8eabfc5878
-ms.openlocfilehash: f5353354a334f6ee597bca3e49dfa2b4f98a0005
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1bfe6e7a4646be8cea622078b4d85f20f458e1c5
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50440438"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53627327"
 ---
 # <a name="align-c"></a>align (C++)
 
@@ -78,9 +78,9 @@ __declspec(align(32)) struct Str1{
 
 - [与数据打包配合的对齐方式](#vclrfhowalignworkswithdatapacking)
 
-- [结构对齐示例](../build/examples-of-structure-alignment.md)(特定于 x64)
+- [结构对齐示例](../build/x64-software-conventions.md#examples-of-structure-alignment)(特定于 x64)
 
-##  <a name="vclrfalignexamples"></a> 对齐示例
+## <a name="vclrfalignexamples"></a> 对齐示例
 
 以下示例说明 `__declspec(align(#))` 如何影响数据结构的大小和对齐方式。 这些示例假定下列定义：
 
@@ -171,7 +171,7 @@ void fn() {
 
 在堆上分配了内存时，对齐方式取决于所调用的分配函数。  例如，如果你使用 `malloc`，则该结果取决于操作数大小。 如果*arg* > = 8，返回的内存为 8 字节对齐。 如果*arg* < 8，返回的内存的对齐方式是 2 的第一个幂小于*arg*。 例如，如果你使用 malloc(7)，则对齐方式为 4 字节。
 
-##  <a name="vclrf_declspecaligntypedef"></a> 定义新的类型与 __declspec(align(#))
+## <a name="vclrf_declspecaligntypedef"></a> 定义新的类型与 __declspec(align(#))
 
 可以使用对齐特性定义类型。
 
@@ -184,7 +184,7 @@ typedef __declspec(align(32)) struct aType bType;
 
 现在，`aType`并`bType`是相同的大小 （8 个字节） 但类型的变量`bType`均为 32 字节对齐。
 
-##  <a name="vclrfthreadlocalstorageallocation"></a> 在线程本地存储区中对齐数据
+## <a name="vclrfthreadlocalstorageallocation"></a> 在线程本地存储区中对齐数据
 
 使用 `__declspec(thread)` 特性创建的置于映像中的 TLS 部分中的静态线程-本地存储 (TLS) 与常规静态数据一样适用于对齐。 若要创建 TLS 数据，操作系统需分配 TLS 部分大小的内存并遵循 TLS 部分对齐特性。
 
@@ -207,7 +207,7 @@ struct CACHE_ALIGN S9 {
 __declspec(thread) struct S9 a;
 ```
 
-##  <a name="vclrfhowalignworkswithdatapacking"></a> 与数据打包配合的对齐方式
+## <a name="vclrfhowalignworkswithdatapacking"></a> 与数据打包配合的对齐方式
 
 `/Zp`编译器选项和`pack`杂注影响的打包数据的结构和联合成员。此示例演示如何`/Zp`和`__declspec(align(#))`协同工作：
 
@@ -244,4 +244,4 @@ struct S {
 
 [__declspec](../cpp/declspec.md)<br/>
 [ARM ABI 约定概述](../build/overview-of-arm-abi-conventions.md)<br/>
-[x64 调用约定概述](../build/overview-of-x64-calling-conventions.md)
+[x64 软件约定](../build/x64-software-conventions.md)

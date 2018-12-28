@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Unicode [C++], programming with
 - Unicode [C++], MFC and C run-time functions
 ms.assetid: a4c9770f-6c9c-447c-996b-980920288bed
-ms.openlocfilehash: 01e5866866bfc9cf81b243c569e527ab5019b928
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: df9335fa2fc66ebba73b5c92ecd8007ca435f499
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437920"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53627262"
 ---
 # <a name="unicode-programming-summary"></a>Unicode 编程摘要
 
@@ -22,11 +22,11 @@ ms.locfileid: "50437920"
 
 - 指定入口点。
 
-   上**输出**页**链接器**中项目的文件夹[属性页](../ide/property-pages-visual-cpp.md)对话框中，将**入口点**为符号`wWinMainCRTStartup`.
+   上**高级**页**链接器**中项目的文件夹[属性页](../ide/property-pages-visual-cpp.md)对话框中，将**入口点**符号`wWinMainCRTStartup`.
 
 - 使用可移植运行时函数和类型。
 
-   使用适当的 C 运行时函数的 Unicode 字符串处理。 可以使用`wcs`系列函数，但你可能倾向于 （国际上已启用） 完全可移植`_TCHAR`宏。 这些宏都带有前缀`_tcs`; 来替代，一个用于其中一个，为`str`函数系列。 这些函数有详细介绍[国际化](../c-runtime-library/internationalization.md)一部分*运行时库参考*。 有关详细信息，请参阅[Tchar.h 中的一般文本映射](../text/generic-text-mappings-in-tchar-h.md)。
+   使用适当的 C 运行时函数的 Unicode 字符串处理。 可以使用`wcs`系列函数，但你可能倾向于 （国际上已启用） 完全可移植`_TCHAR`宏。 这些宏都带有前缀`_tcs`; 来替代，一个用于其中一个，为`str`函数系列。 这些函数有详细介绍[国际化](../c-runtime-library/internationalization.md)一部分*运行时库参考*。 有关详细信息，请参阅[tchar.h 中的一般文本映射](../text/generic-text-mappings-in-tchar-h.md)。
 
    使用`_TCHAR`和相关的可移植数据类型中所述[适用于 Unicode 支持](../text/support-for-unicode.md)。
 
@@ -87,7 +87,7 @@ ms.locfileid: "50437920"
 
 - 运行时库提供的所有字符串处理函数的 Unicode 版本。 （在运行时库还提供了合适的可移植版本为 Unicode 或 MBCS。 这些是`_tcs`宏。)
 
-- Tchar.h 提供可移植的数据类型和`_T`宏用于转换文本字符串和字符。 有关详细信息，请参阅[Tchar.h 中的一般文本映射](../text/generic-text-mappings-in-tchar-h.md)。
+- Tchar.h 提供可移植的数据类型和`_T`宏用于转换文本字符串和字符。 有关详细信息，请参阅[tchar.h 中的一般文本映射](../text/generic-text-mappings-in-tchar-h.md)。
 
 - 在运行时库提供的宽字符版本`main`。 使用`wmain`使能够识别 Unicode 应用程序。
 

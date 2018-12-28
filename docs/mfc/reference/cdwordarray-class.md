@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CObArray [MFC], SetAtGrow
 - CObArray [MFC], SetSize
 ms.assetid: 581be11e-ced6-47d1-8679-e0b8e7d99494
-ms.openlocfilehash: 8866c4c521c6f9f85f8fb6bb9e201e52bc76df8a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ffd4ddc94bbf35da1241b9c32069e80315e144d8
+ms.sourcegitcommit: 185b8ee6dd4e10045df730c5b957b9729813da2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429860"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53411931"
 ---
 # <a name="cdwordarray-class"></a>CDWordArray 类
 
@@ -101,7 +101,7 @@ class CDWordArray : public CObject
 
 |名称|描述|
 |----------|-----------------|
-|[CObArray::operator]](../../mfc/reference/cobarray-class.md#operator_at)|设置或获取位于指定索引处的元素。|
+|[CObArray::operator \[ \]](../../mfc/reference/cobarray-class.md#operator_at)|设置或获取位于指定索引处的元素。|
 
 ## <a name="remarks"></a>备注
 

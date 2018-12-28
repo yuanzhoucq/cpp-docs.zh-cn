@@ -11,12 +11,12 @@ helpviewer_keywords:
 - character sets [C++], international programming strategies
 - localization [C++], character sets
 ms.assetid: b09d9854-0709-4b9a-a00c-b0b8bc4199b1
-ms.openlocfilehash: 615ad42d5a1e4cb6076877e1d1b5de4bd11fdf83
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 91f4805152944202b7d3f7f45fce494f7e9d81af
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50501317"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626677"
 ---
 # <a name="internationalization-strategies"></a>国际化策略
 
@@ -30,7 +30,7 @@ ms.locfileid: "50501317"
 
    使用特定于 MBCS 的功能。 字符串可以包含单字节字符、 双字节字符，或两者。 C 运行时库提供用于仅使用 MBCS 编程函数、 宏和数据类型。 MFC 是完全启用 MBCS 的。
 
-- 为应用程序的源代码编写的完整可移植性 — 通过使用符号重新编译`_UNICODE`或符号`_MBCS`定义，您可以生成使用的版本。 有关详细信息，请参阅[Tchar.h 中的一般文本映射](../text/generic-text-mappings-in-tchar-h.md)。
+- 为应用程序的源代码编写的完整可移植性 — 通过使用符号重新编译`_UNICODE`或符号`_MBCS`定义，您可以生成使用的版本。 有关详细信息，请参阅[tchar.h 中的一般文本映射](../text/generic-text-mappings-in-tchar-h.md)。
 
    使用完全可移植的 C 运行时函数、 宏和数据类型。 MFC 的灵活性支持任何这些策略。
 

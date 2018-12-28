@@ -1,6 +1,6 @@
 ---
 title: include_alias
-ms.date: 11/04/2016
+ms.date: 12/16/2018
 f1_keywords:
 - vc-pragma.include_alias
 - include_alias_CPP
@@ -8,25 +8,25 @@ helpviewer_keywords:
 - pragmas, include_alias
 - include_alias pragma
 ms.assetid: 3256d589-12b3-4af0-a586-199e96eabacc
-ms.openlocfilehash: 616672d713a9f0ac6eab4be8bce9b178d2510723
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9d32cad2533b6044348651797d0278bcbebcafd6
+ms.sourcegitcommit: ae2f71fe0d64f1a90ef722759fe93c82abc064ab
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50573157"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53587871"
 ---
 # <a name="includealias"></a>include_alias
 
-指定的*short_filename*是要用作别名*long_filename*。
+指定当*alias_filename*中找到`#include`指令，编译器将替换*actual_filename*所在的位置。
 
 ## <a name="syntax"></a>语法
 
-> #<a name="pragma-includealiaslongfilename-shortfilename"></a>include_alias 杂注 ("*long_filename*"，"*short_filename*")
-> #<a name="pragma-includealiaslongfilename-shortfilename"></a>include_alias 杂注 (*long_filename*， *short_filename*)
+> #<a name="pragma-includealiasaliasfilename-actualfilename"></a>include_alias 杂注 ("*alias_filename*"，"*actual_filename*")
+> #<a name="pragma-includealiasaliasfilename-actualfilename"></a>include_alias 杂注 (\<*alias_filename*>， \< *actual_filename*>)
 
 ## <a name="remarks"></a>备注
 
-某些文件系统允许长度超过 8.3 FAT 文件系统限制的头文件名。 因为较长的头文件名的前八个字符可能不是唯一的，因此编译器无法简单地将较长的名称截断为 8.3。 每当编译器遇到*long_filename*字符串，它将替代*short_filename*，并查找标头文件*short_filename*相反。 此杂注必须在相应的 `#include` 指令之前出现。 例如：
+**Include_alias**杂注指令使你可以用具有不同的名称或路径包含的源文件的文件名的文件。 例如，某些文件系统允许长度超过 8.3 FAT 文件系统限制的标头文件名。 因为较长的头文件名的前八个字符可能不是唯一的，因此编译器无法简单地将较长的名称截断为 8.3。 每当编译器遇到*alias_filename*字符串，它将替代*actual_filename*，并查找标头文件*actual_filename*相反。 此杂注必须在相应的 `#include` 指令之前出现。 例如：
 
 ```cpp
 // First eight characters of these two files not unique.
@@ -83,8 +83,8 @@ ms.locfileid: "50573157"
 请注意，文件名报告错误消息中或作为预定义值`__FILE__`宏，在执行替换后的文件的名称。 例如，以下指令后看到输出：
 
 ```cpp
-#pragma include_alias( "VeryLongFileName.H", "myfile.h" )
-#include "VeryLongFileName.H"
+#pragma include_alias( "VERYLONGFILENAME.H", "myfile.h" )
+#include "VERYLONGFILENAME.H"
 ```
 
 VERYLONGFILENAME 中的错误。H 生成以下错误消息：
@@ -101,7 +101,7 @@ myfile.h(15) : error C2059 : syntax error
 #include "one.h"
 ```
 
-编译器将搜索文件 TWO.H 而不是 THREE.H。
+编译器搜索文件 two.h 而不是 three.h。
 
 ## <a name="see-also"></a>请参阅
 

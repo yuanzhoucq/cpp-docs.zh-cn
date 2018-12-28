@@ -8,12 +8,12 @@ helpviewer_keywords:
 - MBCS [C++], enabling
 - Unicode [C++], enabling
 ms.assetid: b077f4ca-5865-40ef-a46e-d9e4d686ef21
-ms.openlocfilehash: 4476b0805c8806d344a9290ba190aed7c7697a8f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 51d85991fdab273d1cdad4e99400d1ad8ed6324c
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50514629"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53627392"
 ---
 # <a name="international-enabling"></a>国际支持
 
@@ -27,7 +27,7 @@ ms.locfileid: "50514629"
 
    - 使用相同的可移植运行时函数，使 MFC 在这两种环境下可移植。
 
-   - 使文本字符串和字符在任一环境，可移植使用`_T`宏。 有关详细信息，请参阅[Tchar.h 中的一般文本映射](../text/generic-text-mappings-in-tchar-h.md)。
+   - 使文本字符串和字符在任一环境，可移植使用`_T`宏。 有关详细信息，请参阅[tchar.h 中的一般文本映射](../text/generic-text-mappings-in-tchar-h.md)。
 
    - 分析下 MBCS 字符串时，请采取预防措施。 在 Unicode 下不需要这些预防措施。 有关详细信息，请参阅[MBCS 编程提示](../text/mbcs-programming-tips.md)。
 

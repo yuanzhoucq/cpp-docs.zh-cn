@@ -33,12 +33,12 @@ f1_keywords:
 helpviewer_keywords:
 - concurrent_vector class
 ms.assetid: a217b4ac-af2b-4d41-94eb-09a75ee28622
-ms.openlocfilehash: 367a5ed6bf9d42730a309570c93afd1b315bae25
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8036b0942600e5d47254583e2675c525010a5c1
+ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50501746"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53657560"
 ---
 # <a name="concurrentvector-class"></a>concurrent_vector 类
 
@@ -121,7 +121,7 @@ private details::_Concurrent_vector_base_v4;
 
 |名称|描述|
 |----------|-----------------|
-|[operator[]](#operator_at)|已重载。 提供对并发向量中的给定索引处的元素的访问。 此方法是并发安全方法对于读取操作，并且还增加矢量，只要你确保值`_Index`小于并发向量的大小。|
+|[operator\[\]](#operator_at)|已重载。 提供对并发向量中的给定索引处的元素的访问。 此方法是并发安全方法对于读取操作，并且还增加矢量，只要你确保值`_Index`小于并发向量的大小。|
 |[operator=](#operator_eq)|已重载。 另一种内容分配`concurrent_vector`到此对象。 此方法不是并发安全的。|
 
 ## <a name="remarks"></a>备注

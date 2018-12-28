@@ -1,6 +1,6 @@
 ---
 title: __fastcall
-ms.date: 10/09/2018
+ms.date: 12/17/2018
 f1_keywords:
 - __fastcall_cpp
 - __fastcall
@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - __fastcall keyword [C++]
 ms.assetid: bb5b9c8a-dfad-450c-9119-0ac2bc59544f
-ms.openlocfilehash: 19cc8efb98660e8cdb3f6d9b03f0b7bd85a34949
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3e7cd4b1202ee717abf9a9767785ed8abe96bd69
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50480036"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53627359"
 ---
 # <a name="fastcall"></a>__fastcall
 
@@ -29,11 +29,11 @@ ms.locfileid: "50480036"
 |大小写转换约定|不执行任何大小写转换。|
 
 > [!NOTE]
->  将来版本的编译器可使用其他寄存器来存储参数。
+> 将来版本的编译器可使用其他寄存器来存储参数。
 
 使用[/Gr](../build/reference/gd-gr-gv-gz-calling-convention.md)编译器选项将导致每个函数中要作为编译的模块 **__fastcall**除非使用冲突特性声明函数或函数的名称为`main`.
 
-**__Fastcall**关键字是由接受和忽略编译器面向 ARM 和 x64 体系结构; 在 x64 芯片，按照约定前, 四个参数将传入寄存器在可能的情况下，并传递其他参数在堆栈中。 有关详细信息，请参阅[概述 x64 调用约定](../build/overview-of-x64-calling-conventions.md)。 在 ARM 芯片上，寄存器中可以传递最多四个整数自变量和八个浮点自变量，而其他自变量在堆栈上传递。
+**__Fastcall**关键字是由接受和忽略编译器面向 ARM 和 x64 体系结构; 在 x64 芯片，按照约定前, 四个参数将传入寄存器在可能的情况下，并传递其他参数在堆栈中。 有关详细信息，请参阅[x64 调用约定](../build/x64-calling-convention.md)。 在 ARM 芯片上，寄存器中可以传递最多四个整数自变量和八个浮点自变量，而其他自变量在堆栈上传递。
 
 对于非静态类函数，如果函数是超行定义的，则调用约定修饰符不必在超行定义中指定。 也就是说，对于类非静态成员方法，在定义时假定声明期间指定的调用约定。 给定此类定义：
 

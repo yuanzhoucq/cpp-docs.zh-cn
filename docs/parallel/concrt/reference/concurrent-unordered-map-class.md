@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - concurrent_unordered_map class
 ms.assetid: b2d879dd-87ef-4af9-a266-a5443fd538b8
-ms.openlocfilehash: 31eec71dd134a5c675f70070ce1457462d10b739
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 50868d020224e7bade9766f7307bfcc46ce4be47
+ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509365"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53657586"
 ---
 # <a name="concurrentunorderedmap-class"></a>concurrent_unordered_map 类
 
@@ -107,7 +107,7 @@ false>>;
 
 |名称|描述|
 |----------|-----------------|
-|[operator[]](#operator_at)|已重载。 查找或插入具有指定键的元素。 此方法是并发安全的。|
+|[operator\[\]](#operator_at)|已重载。 查找或插入具有指定键的元素。 此方法是并发安全的。|
 |[operator=](#operator_eq)|已重载。 另一种内容分配`concurrent_unordered_map`到此对象。 此方法不是并发安全的。|
 
 ## <a name="remarks"></a>备注
@@ -425,7 +425,7 @@ typename std::enable_if<!std::is_same<const_iterator,
 *V*<br/>
 插入到映射的值的类型。
 
-*value*<br/>
+*值*<br/>
 要插入的值。
 
 *_Where*<br/>
