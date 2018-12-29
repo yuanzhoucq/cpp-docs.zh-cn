@@ -29,7 +29,7 @@ ms.locfileid: "52977740"
 
 ## <a name="visual-studio-2015-installation"></a>Visual Studio 2015 安装
 
-若要安装 Visual Studio 2015，请转到[下载较旧版本的 Visual Studio](https://www.visualstudio.com/vs/older-downloads/)。 运行安装程序并选择“自定义安装”，然后选择 C++ 组件。 若要将 c + + 支持添加到现有 Visual Studio 2015 安装，单击 Windows 开始按钮并键入**添加或删除程序**。 从结果列表中打开的程序，然后在已安装的程序列表中找到 Visual Studio 2015 安装。 双击它，然后选择**修改**，然后选择要安装的 Visual c + + 组件。
+若要安装 Visual Studio 2015，请转到[下载较旧版本的 Visual Studio](https://www.visualstudio.com/vs/older-downloads/)。 运行安装程序并选择**自定义安装**，然后选择 C++ 组件。 要向现有 Visual Studio 2015 安装添加 C++ 支持，请单击 Windows 开始按钮，然后键入**添加或删除程序**。 从结果列表中打开该程序，然后在已安装的程序列表中找到你的 Visual Studio 2015 安装。 双击它，然后选择**修改**并选择要安装的 Visual C++ 组件。
 
 通常，即使需要使用 Visual Studio 2015 编译器编译代码，我们仍强烈建议使用 Visual Studio 2017。 有关更多信息，请参阅[使用 Visual Studio 中的本机多重目标生成旧项目](../porting/use-native-multi-targeting.md)。
 
@@ -43,7 +43,7 @@ ms.locfileid: "52977740"
    >[!Tip]
    > Community Edition 适用于个体开发者、课堂学习、学术研究和开放源代码开发。 对于其他用途，请安装 [Visual Studio 2017 Professional](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) 或 [Visual Studio 2017 Enterprise](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)。
 
-1. 找到你下载并运行它的安装程序文件。 它可能会显示在浏览器中，或在 Downloads 文件夹中可能会发现。 安装程序需要管理员特权才能运行。 你可能会看到**用户帐户控制**对话框，要求将由安装程序对您的系统进行更改; 选择权限授予**是**。 如果遇到问题，在文件资源管理器中查找下载的文件、 右键单击该安装程序图标，并选择**以管理员身份运行**从上下文菜单。
+1. 找到你下载的安装程序文件并运行。 它可能会在浏览器中显示，或者，可以在“下载”文件夹中找到它。 安装程序需要管理员权限才能运行。 可能会看到**用户帐户控制**对话框，要求授予安装程序对系统进行更改的权限; 请选择**是**。 如果遇到问题，请在文件资源管理器中找到下载的文件，右键单击安装程序图标，然后从上下文菜单中选择**以管理员身份运行**。
 
    ![下载并安装 Visual Studio 安装程序](../build/media/vscpp-concierge-run-installer.gif "下载并安装 Visual Studio 安装程序")
 
@@ -69,7 +69,7 @@ ms.locfileid: "52977740"
 
    ![Visual Studio 2017 通知标志](../build/media/vscpp-first-start-page-flag.png "Visual Studio 2017 通知标志")
 
-   如果突出显示，选择它以打开**通知**窗口。 如果有任何更新提供适用于 Visual Studio，我们建议立即安装。 安装完成后，重新启动 Visual Studio。
+   如果突出显示，则选中它以打开**通知**窗口。 如果有任何适用于 Visual Studio 的更新，建议立即安装。 安装完成后，请重启 Visual Studio。
 
 当运行 Visual Studio 时，已准备好继续下一步。
 
