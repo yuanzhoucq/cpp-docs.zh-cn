@@ -45,7 +45,7 @@ ms.locfileid: "52175912"
 ## <a name="grammar"></a>语法
 
 try-finally-statement:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**\_\_请尝试***复合语句*  **\_\_最后***复合语句*
+&nbsp;&nbsp;&nbsp;&nbsp; **\_\_请尝试** *复合语句* **\_\_最后** *复合语句*
 
 **的 try-finally**语句是 C 和 c + + 语言的 Microsoft 扩展，使目标应用程序的代码块的执行被中断时保证清理代码的执行。 清理包括多个任务，如释放内存、关闭文件和释放文件句柄。 **的 try-finally**语句一点尤其适用于具有多个位置，则进行检查错误的可能会导致过早的例程将返回例程。
 
