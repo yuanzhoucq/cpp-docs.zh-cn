@@ -20,11 +20,11 @@ ms.locfileid: "50583880"
 cl.exe 是一个控制 Microsoft Visual C ++（MSVC）C 和 C ++ 编译器和链接器的工具。 cl.exe 只能在支持 Microsoft Visual Studio for Windows 的操作系统上运行。
 
 > [!NOTE]
-> 可以仅从 Visual Studio 开发人员命令提示符启动此工具。 不能从系统命令提示符或从文件资源管理器启动此工具。 有关详细信息，请参阅[命令行上的生成 C/c + + 代码](../building-on-the-command-line.md)。
+> 只能从 Visual Studio 开发人员命令提示符启动此工具。 无法从系统命令提示符或文件资源管理器中启动它。有关详细信息，请参阅[在命令行上生成 C/C++ 代码](../building-on-the-command-line.md)。
 
 编译器生成通用对象文件格式（COFF）对象（.obj）文件。 链接器生成可执行（.exe）文件或动态链接库（DLL）。
 
-请注意，所有编译器选项区分大小写。 可以使用正斜杠 (`/`) 或短划线 (`-`) 来指定编译器选项。
+请注意，所有编译器选项都区分大小写。 可以使用正斜杠（`/`）或短划线（`-`）来指定编译器选项。
 
 要在不链接的情况下进行编译，请使用[/c](../../build/reference/c-compile-without-linking.md)选项。
 
