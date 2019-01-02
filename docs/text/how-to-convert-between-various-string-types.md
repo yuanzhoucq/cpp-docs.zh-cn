@@ -1,5 +1,5 @@
 ---
-title: 如何：在各种字符串类型之间进行转换
+title: 如何：各种字符串类型之间转换
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - string conversion [C++]
 - strings [C++], converting
 ms.assetid: e7e4f741-3c82-45f0-b8c0-1e1e343b0e77
-ms.openlocfilehash: 8ee8790e960c05827404d932a2305a7de79cbced
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 09b211f32ac2eac114245f8e9fcaeae6bebba5a3
+ms.sourcegitcommit: fe1e21df175cd004d21c6e4659082efceb649a8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50443346"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53978265"
 ---
-# <a name="how-to-convert-between-various-string-types"></a>如何：在各种字符串类型之间进行转换
+# <a name="how-to-convert-between-various-string-types"></a>如何：各种字符串类型之间转换
 
 本主题演示如何将各种 Visual c + + 字符串类型转换为其他字符串。 介绍了字符串类型包括`char *`， `wchar_t*`， [_bstr_t](../cpp/bstr-t-class.md)， [CComBSTR](../atl/reference/ccombstr-class.md)， [CString](../atl-mfc-shared/using-cstring.md)， [basic_string](../standard-library/basic-string-class.md)，和<xref:System.String?displayProperty=fullName>。 在所有情况下，转换为新类型时进行的字符串的副本。 为新字符串所做的任何更改将不会影响原始字符串，反之亦然。
 
@@ -83,7 +83,7 @@ int main()
         cout << printstr << endl;
     }
 
-    // Convert the C style string to a CstringA and display it.
+    // Convert the C style string to a CStringA and display it.
     CStringA cstringa(orig);
     cstringa += " (CStringA)";
     cout << cstringa << endl;
@@ -736,7 +736,7 @@ int main()
     // while we call native functions.
     pin_ptr<const wchar_t> wch = PtrToStringChars(orig);
 
-    // Make a copy of the system string as a multibyte
+    // Make a copy of the System::String as a multibyte
     // char* string. Allocate two bytes in the multibyte
     // output string for every wide character in the input
     // string, including space for a terminating null.
@@ -747,20 +747,20 @@ int main()
     wcstombs_s(&convertedChars, nstring, newsize, wch, _TRUNCATE);
     cout << nstring << " (char *)" << endl;
 
-    // Convert a wide character system string to a
+    // Convert a wide character System::String to a
     // wide character wchar_t* string.
     const size_t newsizew = origsize;
     wchar_t *wcstring = new wchar_t[newsizew];
     wcscpy_s(wcstring, newsizew, wch);
     wcout << wcstring << _T(" (wchar_t *)") << endl;
 
-    // Convert a wide character system string to a
+    // Convert a wide character System::String to a
     // wide character _bstr_t string.
     _bstr_t bstrt(wch);
     bstrt += " (_bstr_t)";
     cout << bstrt << endl;
 
-    // Convert a wide character system string
+    // Convert a wide character System::String
     // to a wide character CComBSTR string.
     CComBSTR ccombstr(wch);
     if (ccombstr.Append(_T(" (CComBSTR)")) == S_OK)
@@ -808,9 +808,9 @@ Hello, World! (basic_string)
 
 [ATL 和 MFC 字符串转换宏](../atl/reference/string-conversion-macros.md)<br/>
 [与 C 样式字符串相关的 CString 操作](../atl-mfc-shared/cstring-operations-relating-to-c-style-strings.md)<br/>
-[如何：将标准字符串转换为 System::String](../dotnet/how-to-convert-standard-string-to-system-string.md)<br/>
-[如何：将 System::String 转换为标准字符串](../dotnet/how-to-convert-system-string-to-standard-string.md)<br/>
-[如何： 将 system:: string 转换为 wchar_t * 或 char\*](../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md)<br/>
+[如何：将标准字符串转换为 system:: string](../dotnet/how-to-convert-standard-string-to-system-string.md)<br/>
+[如何：将 system:: string 转换为标准字符串](../dotnet/how-to-convert-system-string-to-standard-string.md)<br/>
+[如何：将 system:: string 转换为 wchar_t * 或 char\*](../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md)<br/>
 [使用 ccombstr 进行编程](../atl/programming-with-ccombstr-atl.md)<br/>
 [mbstowcs_s、_mbstowcs_s_l](../c-runtime-library/reference/mbstowcs-s-mbstowcs-s-l.md)<br/>
 [wcstombs_s、_wcstombs_s_l](../c-runtime-library/reference/wcstombs-s-wcstombs-s-l.md)<br/>
