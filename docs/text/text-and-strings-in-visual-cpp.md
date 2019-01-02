@@ -24,12 +24,12 @@ helpviewer_keywords:
 - portability [C++], character sets
 - MBCS [C++], international programming
 ms.assetid: a1bb27ac-abe5-4c6b-867d-f761d4b93205
-ms.openlocfilehash: bb658db157433aadce183e7fab437f15251ff54c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c6083fcf9db8236df15d1cb5e7de4cc15fe5916e
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631291"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626716"
 ---
 # <a name="text-and-strings-in-visual-c"></a>Visual C++ 中的文本和字符串
 
@@ -49,7 +49,7 @@ ms.locfileid: "50631291"
 [Tchar.h 中的一般文本映射](../text/generic-text-mappings-in-tchar-h.md)<br/>
 为多种数据类型、 例程和其他对象提供特定于 Microsoft 的一般文本映射。
 
-[如何：在各种字符串类型之间进行转换](../text/how-to-convert-between-various-string-types.md)<br/>
+[如何：各种字符串类型之间转换](../text/how-to-convert-between-various-string-types.md)<br/>
 演示如何将各种 Visual c + + 字符串类型转换为其他字符串。
 
 ## <a name="related-sections"></a>相关章节

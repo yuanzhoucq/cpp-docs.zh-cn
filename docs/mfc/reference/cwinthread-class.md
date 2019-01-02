@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CWinThread [MFC], m_pActiveWnd
 - CWinThread [MFC], m_pMainWnd
 ms.assetid: 10cdc294-4057-4e76-ac7c-a8967a89af0b
-ms.openlocfilehash: 0f6c41b3675251df6b07e44003215fa67fb7e795
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 9c2b393354f65195e0d0060a08b83e321e3d5b1d
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694187"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178416"
 ---
 # <a name="cwinthread-class"></a>CWinThread 类
 
@@ -126,7 +126,7 @@ class CWinThread : public CCmdTarget
 
 而不是调用`AfxBeginThread`，可以构造`CWinThread`-派生对象，然后调用`CreateThread`。 如果想要重用此两阶段构造方法非常有用`CWinThread`连续创建和终止的线程执行之间的对象。
 
-有关详细信息`CWinThread`，请参阅文章[使用 c + + 和 MFC 多线程处理](../../parallel/multithreading-with-cpp-and-mfc.md)，[多线程处理： 创建用户界面线程](../../parallel/multithreading-creating-user-interface-threads.md)，[多线程处理： 创建辅助角色线程](../../parallel/multithreading-creating-worker-threads.md)，并[多线程处理： 如何使用同步类](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)。
+有关详细信息`CWinThread`，请参阅文章[使用 c + + 和 MFC 多线程处理](../../parallel/multithreading-with-cpp-and-mfc.md)，[多线程处理：创建用户界面线程](../../parallel/multithreading-creating-user-interface-threads.md)，[多线程处理：创建辅助线程](../../parallel/multithreading-creating-worker-threads.md)，和[多线程处理：如何使用同步类](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -458,7 +458,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ### <a name="parameters"></a>参数
 
 *pMsg*<br/>
-指向[MSG 结构](../../mfc/reference/msg-structure1.md)包含要处理的消息。
+指向[MSG 结构](/windows/desktop/api/winuser/ns-winuser-tagmsg)包含要处理的消息。
 
 ### <a name="return-value"></a>返回值
 
@@ -484,7 +484,7 @@ virtual BOOL ProcessMessageFilter(
 指定挂钩代码。 此成员函数使用代码来确定如何处理*lpMsg。*
 
 *lpMsg*<br/>
-指向 Windows [MSG 结构](../../mfc/reference/msg-structure1.md)。
+指向 Windows [MSG 结构](/windows/desktop/api/winuser/ns-winuser-tagmsg)。
 
 ### <a name="return-value"></a>返回值
 
@@ -512,7 +512,7 @@ virtual LRESULT ProcessWndProcException(
 未处理的异常的点。
 
 *pMsg*<br/>
-指向[MSG 结构](../../mfc/reference/msg-structure1.md)包含导致引发异常的 framework 的 windows 消息有关的信息。
+指向[MSG 结构](/windows/desktop/api/winuser/ns-winuser-tagmsg)包含导致引发异常的 framework 的 windows 消息有关的信息。
 
 ### <a name="return-value"></a>返回值
 

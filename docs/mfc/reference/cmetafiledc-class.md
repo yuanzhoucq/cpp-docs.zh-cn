@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CMetaFileDC [MFC], Create
 - CMetaFileDC [MFC], CreateEnhanced
 ms.assetid: ffce60fa-4181-4d46-9832-25e46fad4db4
-ms.openlocfilehash: 343ab1a5d0c38ab0d17c609fbfc134b144502553
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bfbe03c5c81b2c7d6517dff7ce4e5f88b7c076bc
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471807"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178299"
 ---
 # <a name="cmetafiledc-class"></a>CMetaFileDC 类
 
@@ -186,7 +186,7 @@ BOOL CreateEnhanced(
 指向以 null 结尾的字符串。 指定要创建增强型图元文件的文件名。 如果此参数为 NULL，增强型图元文件为丢失或时销毁该对象及其内容的基于内存的 Win32`DeleteEnhMetaFile`调用函数。
 
 *lpBounds*<br/>
-指向[RECT](../../mfc/reference/rect-structure1.md)数据结构或[CRect](../../atl-mfc-shared/reference/crect-class.md)以 HIMETRIC 为单位 （以 0.1 毫米为增量） 的图片存储在增强型图元文件中指定的尺寸的对象。
+指向[RECT](/windows/desktop/api/windef/ns-windef-tagrect)数据结构或[CRect](../../atl-mfc-shared/reference/crect-class.md)以 HIMETRIC 为单位 （以 0.1 毫米为增量） 的图片存储在增强型图元文件中指定的尺寸的对象。
 
 *lpszDescription*<br/>
 指向以零结尾的字符串，指定创建图中，以及图片的标题的应用程序的名称。

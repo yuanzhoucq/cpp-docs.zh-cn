@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CDateTimeCtrl [MFC], SetRange
 - CDateTimeCtrl [MFC], SetTime
 ms.assetid: 7113993b-5d37-4148-939f-500a190c5bdc
-ms.openlocfilehash: cff81b7d260749d5be344edf3e0401a473b4f9e9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 36ef44534803e35d3544b53dbeeca75a7fb3f475
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50508818"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178520"
 ---
 # <a name="cdatetimectrl-class"></a>CDateTimeCtrl 类
 
@@ -381,7 +381,7 @@ BOOL GetIdealSize(LPSIZE psize) const;
 
 |参数|描述|
 |---------------|-----------------|
-|*psize*|[out]指向[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)结构，其中包含该控件的理想大小。|
+|*psize*|[out]指向[大小](/windows/desktop/api/windef/ns-windef-tagsize)结构，其中包含该控件的理想大小。|
 
 ### <a name="return-value"></a>返回值
 
@@ -446,7 +446,7 @@ COLORREF SetMonthCalColor(
 *iColor*<br/>
 **int**值，该值指定要设置的月份的日历控件的区域。 此值可以是以下值之一。
 
-|“值”|含义|
+|值|含义|
 |-----------|-------------|
 |MCSC_BACKGROUND|设置显示不同的月份的背景色。|
 |MCSC_MONTHBK|设置显示在一个月中的背景色。|

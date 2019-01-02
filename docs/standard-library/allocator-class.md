@@ -543,7 +543,7 @@ void deallocate(pointer ptr, size_type count);
 
 ### <a name="remarks"></a>备注
 
-成员函数释放存储类型的计数对象的数组`Type`开始*ptr*，通过调用`operator delete(ptr)`。 指针*ptr*必须较早返回通过调用[分配](#allocate)相等的分配器对象**\*这**，分配一个数组相同的大小和类型的对象。 `deallocate` 绝不会引发异常。
+成员函数释放存储类型的计数对象的数组`Type`开始*ptr*，通过调用`operator delete(ptr)`。 指针*ptr*必须较早返回通过调用[分配](#allocate)相等的分配器对象 **\*这** ，分配一个数组相同的大小和类型的对象。 `deallocate` 绝不会引发异常。
 
 ### <a name="example"></a>示例
 

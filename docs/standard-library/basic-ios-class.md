@@ -260,7 +260,7 @@ const basic_ios<Elem, Traits>& right);
 
 ### <a name="remarks"></a>备注
 
-成员函数将报告回调事件**擦除\_事件**。 然后将从复制*右*成**\*这**填充字符、 绑定指针和格式设置信息。 之前更改异常掩码，它会报告回调事件`copyfmt_event`。 复制完成后，如果 **state &**[exceptions](#exceptions) 为非零，则该函数将有效地调用带参数 [rdstate](#rdstate) 的 [clear](#clear)。 它将返回 **\*this**。
+成员函数将报告回调事件**擦除\_事件**。 然后将从复制*右* 成 **\*这** 填充字符、 绑定指针和格式设置信息。 之前更改异常掩码，它会报告回调事件`copyfmt_event`。 复制完成后，如果 **state &**[exceptions](#exceptions) 为非零，则该函数将有效地调用带参数 [rdstate](#rdstate) 的 [clear](#clear)。 它将返回 **\*this**。
 
 ### <a name="example"></a>示例
 

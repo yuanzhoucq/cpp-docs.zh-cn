@@ -108,12 +108,12 @@ helpviewer_keywords:
 - CComboBox [MFC], SetTopIndex
 - CComboBox [MFC], ShowDropDown
 ms.assetid: 4e73b5df-0d2e-4658-9706-38133fb10513
-ms.openlocfilehash: 91cf9b2035bf24c16007ed6021772c7d5344fc68
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: e7472b808d8b5d743d884d9e3806df7ffe499836
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51333262"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178774"
 ---
 # <a name="ccombobox-class"></a>CComboBox 类
 
@@ -331,13 +331,13 @@ virtual int CompareItem(LPCOMPAREITEMSTRUCT lpCompareItemStruct);
 ### <a name="parameters"></a>参数
 
 *lpCompareItemStruct*<br/>
-指向的长指针[COMPAREITEMSTRUCT](../../mfc/reference/compareitemstruct-structure.md)结构。
+指向的长指针[COMPAREITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcompareitemstruct)结构。
 
 ### <a name="return-value"></a>返回值
 
 指示中所述的两个项目的相对位置`COMPAREITEMSTRUCT`结构。 它可以是以下值之一：
 
-|“值”|含义|
+|值|含义|
 |-----------|-------------|
 |- 1|第 1 项进行排序项 2 之前。|
 |0|第 1 项和项 2 排序相同。|
@@ -383,7 +383,7 @@ virtual BOOL Create(
 指定组合框的样式。 应用的任意组合[组合框样式](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles)给数字显示框。
 
 *rect*<br/>
-指向的位置和大小的组合框。 可以是[RECT 结构](../../mfc/reference/rect-structure1.md)或`CRect`对象。
+指向的位置和大小的组合框。 可以是[RECT 结构](/windows/desktop/api/windef/ns-windef-tagrect)或`CRect`对象。
 
 *pParentWnd*<br/>
 指定组合框的父窗口 (通常`CDialog`)。 它不能为 NULL。
@@ -450,7 +450,7 @@ virtual void DeleteItem(LPDELETEITEMSTRUCT lpDeleteItemStruct);
 ### <a name="parameters"></a>参数
 
 *lpDeleteItemStruct*<br/>
-指向 Windows 的长指针[DELETEITEMSTRUCT](../../mfc/reference/deleteitemstruct-structure.md)结构，其中包含有关已删除的项的信息。 请参阅[CWnd::OnDeleteItem](../../mfc/reference/cwnd-class.md#ondeleteitem)有关此结构的说明。
+指向 Windows 的长指针[DELETEITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdeleteitemstruct)结构，其中包含有关已删除的项的信息。 请参阅[CWnd::OnDeleteItem](../../mfc/reference/cwnd-class.md#ondeleteitem)有关此结构的说明。
 
 ### <a name="remarks"></a>备注
 
@@ -542,7 +542,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ### <a name="parameters"></a>参数
 
 *lpDrawItemStruct*<br/>
-一个指向[DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md)结构，其中包含有关绘图所需的类型的信息。
+一个指向[DRAWITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct)结构，其中包含有关绘图所需的类型的信息。
 
 ### <a name="remarks"></a>备注
 
@@ -715,7 +715,7 @@ void GetDroppedControlRect(LPRECT lprect) const;
 ### <a name="parameters"></a>参数
 
 *lprect*<br/>
-指向[RECT 结构](../../mfc/reference/rect-structure1.md)，是否要接收坐标。
+指向[RECT 结构](/windows/desktop/api/windef/ns-windef-tagrect)，是否要接收坐标。
 
 ### <a name="example"></a>示例
 
@@ -1028,7 +1028,7 @@ int InitStorage(
 
 将大量的项添加到列表框部分之前调用此函数`CComboBox`。
 
-仅 Windows 95/98: *wParam*参数最多为 16 位值。 这意味着列表框不能包含超过 32,767 个项。 项的数目受到限制，尽管列表框中的项的总大小仅受可用内存。
+Windows 95/98 仅：*WParam*参数最多为 16 位值。 这意味着列表框不能包含超过 32,767 个项。 项的数目受到限制，尽管列表框中的项的总大小仅受可用内存。
 
 此函数可帮助加快有大量的项 (超过 100) 的列表框中的初始化。 预先分配指定的数量的内存以便将后续[AddString](#addstring)， [InsertString](#insertstring)，并[Dir](#dir)函数采用最短的时间。 您可以对参数使用估计值。 如果您要估计得高一些，一些额外的内存分配;如果你低估，进行一般分配用于超过预先分配的量的项。
 
@@ -1107,7 +1107,7 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 ### <a name="parameters"></a>参数
 
 *lpMeasureItemStruct*<br/>
-指向的长指针[MEASUREITEMSTRUCT](../../mfc/reference/measureitemstruct-structure.md)结构。
+指向的长指针[MEASUREITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagmeasureitemstruct)结构。
 
 ### <a name="remarks"></a>备注
 

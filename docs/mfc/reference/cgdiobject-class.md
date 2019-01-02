@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CGdiObject [MFC], UnrealizeObject
 - CGdiObject [MFC], m_hObject
 ms.assetid: 1cba3ba5-3d49-4e43-8293-209299f2f6f4
-ms.openlocfilehash: 451ae70745a3f8bcad3bb48cda0e1b731b4fd0ff
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 87545d67addb6a1f0931007d8912989968f7a74a
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50578615"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53177844"
 ---
 # <a name="cgdiobject-class"></a>CGdiObject 类
 
@@ -247,10 +247,10 @@ int GetObject(
 
 |对象|缓冲区类型|
 |------------|-----------------|
-|`CPen`|[LOGPEN](../../mfc/reference/logpen-structure.md)|
-|`CBrush`|[LOGBRUSH](../../mfc/reference/logbrush-structure.md)|
+|`CPen`|[LOGPEN](/windows/desktop/api/Wingdi/ns-wingdi-taglogpen)|
+|`CBrush`|[LOGBRUSH](/windows/desktop/api/wingdi/ns-wingdi-taglogbrush)|
 |`CFont`|[LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)|
-|`CBitmap`|[位图](../../mfc/reference/bitmap-structure.md)|
+|`CBitmap`|[位图](/windows/desktop/api/wingdi/ns-wingdi-tagbitmap)|
 |`CPalette`|WORD|
 |`CRgn`|不支持|
 

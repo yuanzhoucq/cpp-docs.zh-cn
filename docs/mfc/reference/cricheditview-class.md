@@ -100,12 +100,12 @@ helpviewer_keywords:
 - CRichEditView [MFC], m_nBulletIndent
 - CRichEditView [MFC], m_nWordWrap
 ms.assetid: bd576b10-4cc0-4050-8f76-e1a0548411e4
-ms.openlocfilehash: 2eebfe18275aa63ac26c0c898a5d796300860db8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8cfaef2c8b064cb9faa8c0f6bf65a8868eed7cc7
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476596"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178735"
 ---
 # <a name="cricheditview-class"></a>CRichEditView 类
 
@@ -787,7 +787,7 @@ virtual void OnFindNext(
 要查找的字符串。
 
 *bNext*<br/>
-要搜索的方向： TRUE 表示下;为 FALSE，最高。
+要搜索的方向：TRUE 表示下;为 FALSE，最高。
 
 *bCase*<br/>
 指示搜索是否区分大小写。
@@ -933,7 +933,7 @@ virtual void OnReplaceSel(
 要替换的文本。
 
 *bNext*<br/>
-指示搜索方向:，向下; 则为 TRUE为 FALSE，最高。
+指示搜索方向：TRUE 已关闭;为 FALSE，最高。
 
 *bCase*<br/>
 指示搜索是否区分大小写。
@@ -1050,7 +1050,7 @@ long PrintInsideRect(
 指向输出区的设备上下文指针。
 
 *rectLayout*<br/>
-[RECT](../../mfc/reference/rect-structure1.md)或[CRect](../../atl-mfc-shared/reference/crect-class.md)定义输出区域。
+[RECT](/windows/desktop/api/windef/ns-windef-tagrect)或[CRect](../../atl-mfc-shared/reference/crect-class.md)定义输出区域。
 
 *nIndexStart*<br/>
 要设置格式的第一个字符的从零开始索引。

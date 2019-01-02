@@ -1,5 +1,5 @@
 ---
-title: TN014：自定义控件
+title: TN014:自定义控件
 ms.date: 06/28/2018
 f1_keywords:
 - vc.controls
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - TN014
 - custom controls [MFC]
 ms.assetid: 1917a498-f643-457c-b570-9a0af7dbf7bb
-ms.openlocfilehash: e773d270c302ef71a6f6527061ba13c870fa4500
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1f04029e47ee7d262cdc5e2eab463799acd7d943
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557815"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178403"
 ---
-# <a name="tn014-custom-controls"></a>TN014：自定义控件
+# <a name="tn014-custom-controls"></a>TN014:自定义控件
 
 此说明描述 MFC 对自定义和自我绘制控件的支持。 它还介绍了动态子类化，并描述了之间的关系[CWnd](../mfc/reference/cwnd-class.md)对象和`HWND`s。
 
@@ -88,7 +88,7 @@ MFC 提供的默认实现 (在`CWnd`并[CMenu](../mfc/reference/cmenu-class.md)�
     // insert code to delete an item from this combo box
     ```
 
-有关所有者描述结构的详细信息 ([DRAWITEMSTRUCT](../mfc/reference/drawitemstruct-structure.md)， [MEASUREITEMSTRUCT](../mfc/reference/measureitemstruct-structure.md)， [COMPAREITEMSTRUCT](../mfc/reference/compareitemstruct-structure.md)，和[DELETEITEMSTRUCT](../mfc/reference/deleteitemstruct-structure.md))，请参阅 MFC 文档`CWnd::OnDrawItem`， `CWnd::OnMeasureItem`， `CWnd::OnCompareItem`，并`CWnd::OnDeleteItem`分别。
+有关所有者描述结构的详细信息 ([DRAWITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct)， [MEASUREITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagmeasureitemstruct)， [COMPAREITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcompareitemstruct)，和[DELETEITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdeleteitemstruct))，请参阅 MFC 文档`CWnd::OnDrawItem`， `CWnd::OnMeasureItem`， `CWnd::OnCompareItem`，并`CWnd::OnDeleteItem`分别。
 
 ## <a name="using-self-draw-controls-and-menus"></a>使用自我描述控件和菜单
 

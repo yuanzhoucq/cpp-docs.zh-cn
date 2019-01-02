@@ -155,7 +155,7 @@ LC_COLLATE=en-US;LC_CTYPE=en-US;LC_MONETARY=fr-FR;LC_NUMERIC=en-US;LC_TIME=en-US
 
 - `setlocale( LC_ALL, "<language>_<country>.<code_page>" );`
 
-   设置语言、 国家/地区和代码页的区域设置为由*\<语言 >*， *\<国家/地区 >*，以及 *\<code_page>* 字符串。 你可以使用语言、国家/地区和代码页的各种组合。 例如，此调用会将区域设置设定为“法语(加拿大)”并使用代码页 1252：
+   设置语言、 国家/地区和代码页的区域设置为由 *\<语言 >*， *\<国家/地区 >*，以及 *\<code_page>* 字符串。 你可以使用语言、国家/地区和代码页的各种组合。 例如，此调用会将区域设置设定为“法语(加拿大)”并使用代码页 1252：
 
    `setlocale( LC_ALL, "French_Canada.1252" );`
 

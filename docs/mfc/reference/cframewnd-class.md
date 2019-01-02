@@ -106,12 +106,12 @@ helpviewer_keywords:
 - CFrameWnd [MFC], m_bAutoMenuEnable
 - CFrameWnd [MFC], rectDefault
 ms.assetid: e2220aba-5bf4-4002-b960-fbcafcad01f1
-ms.openlocfilehash: 2294890ad18d88efaf4d5dd54cad319565a23e02
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3259780d73004c9d1654c26434b55627923cfe23
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481440"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178787"
 ---
 # <a name="cframewnd-class"></a>CFrameWnd 类
 
@@ -844,7 +844,7 @@ virtual BOOL NegotiateBorderSpace(
 - `borderSet` = 3
 
 *lpRectBorder*<br/>
-指向[RECT](../../mfc/reference/rect-structure1.md)结构或[CRect](../../atl-mfc-shared/reference/crect-class.md)对象，它指定边框的坐标。
+指向[RECT](/windows/desktop/api/windef/ns-windef-tagrect)结构或[CRect](../../atl-mfc-shared/reference/crect-class.md)对象，它指定边框的坐标。
 
 ### <a name="return-value"></a>返回值
 
@@ -902,7 +902,7 @@ virtual BOOL OnCreateClient(
 ### <a name="parameters"></a>参数
 
 *lpc*<br/>
-指向 Windows [CREATESTRUCT](../../mfc/reference/createstruct-structure.md)结构。
+指向 Windows [CREATESTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcreatestructa)结构。
 
 *pContext*<br/>
 一个指向[CCreateContext](../../mfc/reference/ccreatecontext-structure.md)结构。
@@ -1190,7 +1190,7 @@ void SetProgressBarState(TBPFLAG tbpFlags);
 ### <a name="parameters"></a>参数
 
 *tbpFlags*<br/>
-控制进度按钮的当前状态的标志。 指定以下任一标记由于所有状态互相都排斥： TBPF_NOPROGRESS、 TBPF_INDETERMINATE、 TBPF_NORMAL、 TBPF_ERROR、 TBPF_PAUSED。
+控制进度按钮的当前状态的标志。 指定下列标志之一，因为所有状态互相都排斥：TBPF_NOPROGRESS、 TBPF_INDETERMINATE、 TBPF_NORMAL、 TBPF_ERROR、 TBPF_PAUSED。
 
 ### <a name="remarks"></a>备注
 

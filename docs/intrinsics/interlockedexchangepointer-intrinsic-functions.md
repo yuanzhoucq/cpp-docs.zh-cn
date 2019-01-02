@@ -1,6 +1,6 @@
 ---
 title: _InterlockedExchangePointer 内部函数
-ms.date: 11/04/2016
+ms.date: 12/17/2018
 f1_keywords:
 - _InterlockedExchangePointer_cpp
 - _InterlockedExchangePointer_rel
@@ -20,12 +20,12 @@ helpviewer_keywords:
 - InterlockedExchangePointer_acq intrinsic
 - InterlockedExchangePointer intrinsic
 ms.assetid: 0eaca0b0-d79e-406b-892d-b3b462c50bbb
-ms.openlocfilehash: 7599d4221d7dbd0e08585b51982e839aa267a011
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 021c754436d6abe877e6b7dd372ba235869d8975
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512094"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53627408"
 ---
 # <a name="interlockedexchangepointer-intrinsic-functions"></a>_InterlockedExchangePointer 内部函数
 
@@ -99,4 +99,4 @@ ARM 平台上，如果需要（例如在临界区的起点和终点）获取和�
 ## <a name="see-also"></a>请参阅
 
 [编译器内部函数](../intrinsics/compiler-intrinsics.md)<br/>
-[与 x86 编译器冲突](../build/conflicts-with-the-x86-compiler.md)
+[与 x86 编译器冲突](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

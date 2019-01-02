@@ -2,12 +2,12 @@
 title: alignof 和 alignas (C++)
 ms.date: 11/04/2016
 ms.assetid: 1d18aa8a-9621-4fb5-86e5-4cc86d5187f4
-ms.openlocfilehash: e5d023d7969764bdd36030a508abdd94068e48b5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 825df25494497e13d29212f7f951be8247b6f136
+ms.sourcegitcommit: 185b8ee6dd4e10045df730c5b957b9729813da2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50493647"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53411918"
 ---
 # <a name="alignof-and-alignas-c"></a>alignof 和 alignas (C++)
 
@@ -15,7 +15,7 @@ ms.locfileid: "50493647"
 
 ## <a name="example"></a>示例
 
-可以使用**alignas**类，struck 或 union，或单个成员上。 当多个**alignas**遇到说明符时，编译器将选择最严格的一个 （即具有最大值）。
+可以使用**alignas**类、 结构或联合，或单个成员上。 当多个**alignas**遇到说明符时，编译器将选择最严格的一个 （即具有最大值）。
 
 ```cpp
 // alignas_alignof.cpp

@@ -17,12 +17,12 @@ helpviewer_keywords:
 - optimization, linker
 - /OPT linker option
 ms.assetid: 8f229863-5f53-48a8-9478-243a647093ac
-ms.openlocfilehash: ad89dfa29df6e4ef500e01e53f203fa3c401602b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1a6fa8b9c923ff697831c29b8004ce360baf7d77
+ms.sourcegitcommit: ae2f71fe0d64f1a90ef722759fe93c82abc064ab
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50638225"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53587884"
 ---
 # <a name="opt-optimizations"></a>/OPT（优化）
 
@@ -67,7 +67,7 @@ ms.locfileid: "50638225"
 
 ## <a name="remarks"></a>备注
 
-如果使用在命令行，链接器将默认为**ICF，/opt: ref LBR**。 如果 **/debug**指定，默认值为**NOICR，/opt: noref NOLBR**。
+如果使用在命令行，链接器将默认为**ICF，/opt: ref LBR**。 如果 **/debug**指定，默认值为**NOICF，/opt: noref NOLBR**。
 
 **/Opt**优化通常减少映像大小并加快程序速度。 这些改进可以在是很明显较大的程序，这就是为什么它们对于零售版本的默认情况下启用。
 

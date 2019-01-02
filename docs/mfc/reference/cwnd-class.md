@@ -818,12 +818,12 @@ helpviewer_keywords:
 - CWnd [MFC], WindowProc
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
-ms.openlocfilehash: f1d418cadd2739b840efd14874fd4bbd6afeb4c5
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 0a27b78d873b0a561b84b13cc16c67aef9ff2e8b
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52177103"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53179079"
 ---
 # <a name="cwnd-class"></a>CWnd 类
 
@@ -1554,7 +1554,7 @@ CDC* BeginPaint(LPPAINTSTRUCT lpPaint);
 ### <a name="parameters"></a>参数
 
 *lpPaint*<br/>
-指向[PAINTSTRUCT](../../mfc/reference/paintstruct-structure.md)结构，它是接收绘制信息。
+指向[PAINTSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagpaintstruct)结构，它是接收绘制信息。
 
 ### <a name="return-value"></a>返回值
 
@@ -1822,7 +1822,7 @@ CWnd* ChildWindowFromPoint(
 *nflags*<br/>
 指定要跳过的子窗口。 此参数可以是以下值的组合：
 
-|“值”|含义|
+|值|含义|
 |-----------|-------------|
 |CWP_ALL|请勿跳过任何子窗口|
 |CWP_SKIPINVISIBLE|跳过不可见的子窗口|
@@ -1854,10 +1854,10 @@ void ClientToScreen(LPPOINT lpPoint) const;  void ClientToScreen(LPRECT lpRect) 
 ### <a name="parameters"></a>参数
 
 *lpPoint*<br/>
-指向[POINT 结构](../../mfc/reference/point-structure1.md)或`CPoint`对象，它包含的客户端要转换的坐标。
+指向[POINT 结构](/windows/desktop/api/windef/ns-windef-tagpoint)或`CPoint`对象，它包含的客户端要转换的坐标。
 
 *lpRect*<br/>
-指向[RECT 结构](../../mfc/reference/rect-structure1.md)或`CRect`对象，它包含的客户端要转换的坐标。
+指向[RECT 结构](/windows/desktop/api/windef/ns-windef-tagrect)或`CRect`对象，它包含的客户端要转换的坐标。
 
 ### <a name="remarks"></a>备注
 
@@ -1970,7 +1970,7 @@ virtual HRESULT CreateAccessibleProxy(
 *wParam*<br/>
 标识由 Active Accessibility 代理服务器访问的对象。 可以是下列值之一
 
-|“值”|含义|
+|值|含义|
 |-----------|-------------|
 |OBJID_CLIENT|表示窗口的工作区。|
 
@@ -2061,13 +2061,13 @@ BOOL CreateControl(
 窗口样式。 在备注下，列出了可用样式。
 
 *rect*<br/>
-指定控件的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT 结构](../../mfc/reference/rect-structure1.md)。
+指定控件的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT 结构](/windows/desktop/api/windef/ns-windef-tagrect)。
 
 *ppt*<br/>
-指向[POINT 结构](../../mfc/reference/point-structure1.md)或`CPoint`对象，它包含控件的左上的角。
+指向[POINT 结构](/windows/desktop/api/windef/ns-windef-tagpoint)或`CPoint`对象，它包含控件的左上的角。
 
 *pSize*<br/>
-指向[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)结构或`CSize`对象，它包含控件的大小
+指向[大小](/windows/desktop/api/windef/ns-windef-tagsize)结构或`CSize`对象，它包含控件的大小
 
 *pParentWnd*<br/>
 指定控件的父窗口。 它不能为 NULL。
@@ -2977,7 +2977,7 @@ void EndPaint(LPPAINTSTRUCT lpPaint);
 ### <a name="parameters"></a>参数
 
 *lpPaint*<br/>
-指向[PAINTSTRUCT](../../mfc/reference/paintstruct-structure.md)结构，其中包含通过检索到的绘制信息[BeginPaint](#beginpaint)成员函数。
+指向[PAINTSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagpaintstruct)结构，其中包含通过检索到的绘制信息[BeginPaint](#beginpaint)成员函数。
 
 ### <a name="remarks"></a>备注
 
@@ -3710,7 +3710,7 @@ void GetClientRect(LPRECT lpRect) const;
 ### <a name="parameters"></a>参数
 
 *lpRect*<br/>
-指向[RECT 结构](../../mfc/reference/rect-structure1.md)或`CRect`对象以接收客户端坐标。 `left`和`top`成员将为 0。 `right`和`bottom`成员将包含的宽度和高度的窗口。
+指向[RECT 结构](/windows/desktop/api/windef/ns-windef-tagrect)或`CRect`对象以接收客户端坐标。 `left`和`top`成员将为 0。 `right`和`bottom`成员将包含的宽度和高度的窗口。
 
 ### <a name="remarks"></a>备注
 
@@ -3784,7 +3784,7 @@ static const MSG* PASCAL GetCurrentMessage();
 
 ### <a name="return-value"></a>返回值
 
-返回一个指向[MSG](../../mfc/reference/msg-structure1.md)当前正在处理包含窗口的消息的结构。 时，应只调用**上**<em>消息</em>处理程序。
+返回一个指向[MSG](/windows/desktop/api/winuser/ns-winuser-tagmsg)当前正在处理包含窗口的消息的结构。 时，应只调用**上**<em>消息</em>处理程序。
 
 ### <a name="example"></a>示例
 
@@ -4491,7 +4491,7 @@ void GetProperty(
 > [!NOTE]
 > 应仅在调用此函数`CWnd`对象，表示 ActiveX 控件。
 
-有关此成员函数中使用的 ActiveX 控件容器的详细信息，请参阅文章[ActiveX 控件容器： 将 ActiveX 控件编程在 ActiveX 控件容器中](../../mfc/programming-activex-controls-in-a-activex-control-container.md)。
+有关此成员函数中使用的 ActiveX 控件容器的详细信息，请参阅文章[ActiveX 控件容器：ActiveX 控件容器中的 ActiveX 控件编程](../../mfc/programming-activex-controls-in-a-activex-control-container.md)。
 
 ##  <a name="getrendertarget"></a>  CWnd::GetRenderTarget
 
@@ -4864,7 +4864,7 @@ BOOL GetUpdateRect(
 ### <a name="parameters"></a>参数
 
 *lpRect*<br/>
-指向`CRect`对象或[RECT 结构](../../mfc/reference/rect-structure1.md)，是否要接收包含更新区域的更新的客户端坐标。
+指向`CRect`对象或[RECT 结构](/windows/desktop/api/windef/ns-windef-tagrect)，是否要接收包含更新区域的更新的客户端坐标。
 
 将此参数设置为 NULL，以确定更新区域中是否存在`CWnd`。 如果*lpRect*为 NULL，`GetUpdateRect`如果更新区域存在并且不为 0，如果一个成员函数返回非零值。 这提供了一种方法来确定是否 WM_PAINT 消息时从无效的区域。 未设置此参数为 NULL，在 Windows 3.0 版及更早版本。
 
@@ -5050,7 +5050,7 @@ BOOL GetWindowPlacement(WINDOWPLACEMENT* lpwndpl) const;
 
 ### <a name="remarks"></a>备注
 
-`flags`的成员[WINDOWPLACEMENT](../../mfc/reference/windowplacement-structure.md)检索此函数的结构始终是 0。 如果`CWnd`已最大化`showCmd`的成员`WINDOWPLACEMENT`是 SW_SHOWMAXIMIZED。 最小化窗口时，它是 SW_SHOWMINIMIZED。 它在 SW_SHOWNORMAL 其他方面。
+`flags`的成员[WINDOWPLACEMENT](/windows/desktop/api/winuser/ns-winuser-tagwindowplacement)检索此函数的结构始终是 0。 如果`CWnd`已最大化`showCmd`的成员`WINDOWPLACEMENT`是 SW_SHOWMAXIMIZED。 最小化窗口时，它是 SW_SHOWMINIMIZED。 它在 SW_SHOWNORMAL 其他方面。
 
 ##  <a name="getwindowrect"></a>  CWnd::GetWindowRect
 
@@ -5063,7 +5063,7 @@ void GetWindowRect(LPRECT lpRect) const;
 ### <a name="parameters"></a>参数
 
 *lpRect*<br/>
-指向`CRect`对象或[RECT 结构](../../mfc/reference/rect-structure1.md)将接收的左上角和右下角的屏幕坐标。
+指向`CRect`对象或[RECT 结构](/windows/desktop/api/windef/ns-windef-tagrect)将接收的左上角和右下角的屏幕坐标。
 
 ### <a name="remarks"></a>备注
 
@@ -5286,7 +5286,7 @@ void InvalidateRect(
 ### <a name="parameters"></a>参数
 
 *lpRect*<br/>
-指向`CRect`对象或[RECT 结构](../../mfc/reference/rect-structure1.md)包含矩形 （在工作区坐标中） 添加到更新区域。 如果*lpRect*为 NULL，整个工作区添加到区域。
+指向`CRect`对象或[RECT 结构](/windows/desktop/api/windef/ns-windef-tagrect)包含矩形 （在工作区坐标中） 添加到更新区域。 如果*lpRect*为 NULL，整个工作区添加到区域。
 
 *bErase*<br/>
 指定是否要清除中更新区域的背景。
@@ -5370,7 +5370,7 @@ void AFX_CDECL InvokeHelper(
 > [!NOTE]
 > 应仅在调用此函数`CWnd`对象，表示 ActiveX 控件。
 
-有关此成员函数中使用的 ActiveX 控件容器的详细信息，请参阅文章[ActiveX 控件容器： 将 ActiveX 控件编程在 ActiveX 控件容器中](../../mfc/programming-activex-controls-in-a-activex-control-container.md)。
+有关此成员函数中使用的 ActiveX 控件容器的详细信息，请参阅文章[ActiveX 控件容器：ActiveX 控件容器中的 ActiveX 控件编程](../../mfc/programming-activex-controls-in-a-activex-control-container.md)。
 
 ##  <a name="ischild"></a>  CWnd::IsChild
 
@@ -5416,7 +5416,7 @@ BOOL IsDialogMessage(LPMSG lpMsg);
 ### <a name="parameters"></a>参数
 
 *lpMsg*<br/>
-指向[MSG](../../mfc/reference/msg-structure1.md)结构，其中包含要检查的消息。
+指向[MSG](/windows/desktop/api/winuser/ns-winuser-tagmsg)结构，其中包含要检查的消息。
 
 ### <a name="return-value"></a>返回值
 
@@ -5649,7 +5649,7 @@ void MapWindowPoints(
 指定的点是要转换的矩形。 仅对于 Windows 3.1 和更高版本，此函数的第一个版本是可用。
 
 *lpPoint*<br/>
-指向数组的指针[POINT 结构](../../mfc/reference/point-structure1.md)包含要转换的点集。
+指向数组的指针[POINT 结构](/windows/desktop/api/windef/ns-windef-tagpoint)包含要转换的点集。
 
 *nCount*<br/>
 指定的数量`POINT`指向数组中的结构*lpPoint*。
@@ -5827,7 +5827,7 @@ void MoveWindow(
 指定是否`CWnd`是进行重新绘制。 如果为 TRUE，`CWnd`接收[WM_PAINT](/windows/desktop/gdi/wm-paint)消息其[OnPaint](#onpaint)像往常一样消息处理程序。 如果此参数为 FALSE，没有任何类型的重新绘制时发生。 这适用于工作区、 非工作区 （包括标题和滚动条），和父窗口为发现的任何部分`CWnd`的移动。 当此参数为 FALSE 时，应用程序必须显式失效或重新绘制的任何部分`CWnd`和父窗口，必须重绘。
 
 *lpRect*<br/>
-[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT 结构](../../mfc/reference/rect-structure1.md)，它指定新的大小和位置。
+[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT 结构](/windows/desktop/api/windef/ns-windef-tagrect)，它指定新的大小和位置。
 
 ### <a name="remarks"></a>备注
 
@@ -6099,7 +6099,7 @@ afx_msg void OnChangeUIState(
 
 - UISF_HIDEFOCUS 焦点指示器。
 
-- UISF_ACTIVE Windows XP： 应在用于活动控件的样式绘制控件。
+- UISF_ACTIVE Windows XP:应在用于活动控件的样式绘制控件。
 
 ### <a name="remarks"></a>备注
 
@@ -6127,7 +6127,7 @@ afx_msg void OnChar(
 *nFlags*<br/>
 包含扫描代码、 密钥转换代码、 上一项状态和上下文的代码中，如下面的列表中所示：
 
-|“值”|含义|
+|值|含义|
 |-----------|-------------|
 |0-15|指定的重复计数。 值是由于用户按下键而重复击键次数。|
 |16-23|指定扫描代码。 值取决于原始设备制造商 (OEM)|
@@ -6338,13 +6338,13 @@ afx_msg int OnCompareItem(
 发送 WM_COMPAREITEM 消息的控件的标识符。
 
 *lpCompareItemStruct*<br/>
-包含的长指针[COMPAREITEMSTRUCT](../../mfc/reference/compareitemstruct-structure.md)数据结构，其中包含的标识符和应用程序提供两个项组合框或列表框中的数据。
+包含的长指针[COMPAREITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcompareitemstruct)数据结构，其中包含的标识符和应用程序提供两个项组合框或列表框中的数据。
 
 ### <a name="return-value"></a>返回值
 
 指示两个项的相对位置。 它可能是以下值之一：
 
-|“值”|含义|
+|值|含义|
 |-----------|-------------|
 |-1|第 1 项进行排序项 2 之前。|
 |0|第 1 项和项 2 排序相同。|
@@ -6446,7 +6446,7 @@ afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);
 ### <a name="parameters"></a>参数
 
 *lpCreateStruct*<br/>
-指向[CREATESTRUCT](../../mfc/reference/createstruct-structure.md)结构，其中包含有关的信息`CWnd`对象创建。
+指向[CREATESTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcreatestructa)结构，其中包含有关的信息`CWnd`对象创建。
 
 ### <a name="return-value"></a>返回值
 
@@ -6542,7 +6542,7 @@ afx_msg void OnDeadChar(
 *nFlags*<br/>
 指定扫描代码、 密钥转换代码、 上一项状态和上下文的代码中，如下面的列表中所示：
 
-|“值”|描述|
+|值|描述|
 |-----------|-----------------|
 |0-7|扫描代码 （依赖于 OEM 的值）。 高序位字低位字节。|
 |8|扩展的密钥，如功能键或 （如果它是扩展的键为 1; 否则为 0） 数字键盘上的密钥。|
@@ -6581,7 +6581,7 @@ afx_msg void OnDeleteItem(
 发送 WM_DELETEITEM 消息的控件的标识符。
 
 *lpDeleteItemStruct*<br/>
-指定指向的长指针[DELETEITEMSTRUCT](../../mfc/reference/deleteitemstruct-structure.md)数据结构，其中包含有关已删除的列表框项的信息。
+指定指向的长指针[DELETEITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdeleteitemstruct)数据结构，其中包含有关已删除的列表框项的信息。
 
 ### <a name="remarks"></a>备注
 
@@ -6749,7 +6749,7 @@ afx_msg void OnDrawItem(
 
 ### <a name="remarks"></a>备注
 
-`itemAction`的成员[DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md)结构定义要执行绘制操作。 此成员中的数据允许控件所有者才能确定绘图的操作是必需的。
+`itemAction`的成员[DRAWITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct)结构定义要执行绘制操作。 此成员中的数据允许控件所有者才能确定绘图的操作是必需的。
 
 在之前从处理此消息返回时，应用程序应确保通过标识的设备上下文*hDC*的成员`DRAWITEMSTRUCT`结构还原为默认状态。
 
@@ -7018,7 +7018,7 @@ afx_msg void OnGetMinMaxInfo(MINMAXINFO* lpMMI);
 ### <a name="parameters"></a>参数
 
 *lpMMI*<br/>
-指向`MINMAXINFO`结构，其中包含有关窗口的信息的最大化大小、 位置和其最小值和最大跟踪大小。 有关此结构的详细信息，请参阅[MINMAXINFO](../../mfc/reference/minmaxinfo-structure.md)结构。
+指向`MINMAXINFO`结构，其中包含有关窗口的信息的最大化大小、 位置和其最小值和最大跟踪大小。 有关此结构的详细信息，请参阅[MINMAXINFO](/windows/desktop/api/winuser/ns-winuser-tagminmaxinfo)结构。
 
 ### <a name="remarks"></a>备注
 
@@ -7386,7 +7386,7 @@ afx_msg void OnKeyDown(
 *nFlags*<br/>
 指定扫描代码、 密钥转换代码、 上一项状态和上下文的代码中，如下面的列表中所示：
 
-|“值”|描述|
+|值|描述|
 |-----------|-----------------|
 |0-7|扫描代码 （依赖于 OEM 的值）。|
 |8|扩展的密钥，如函数密钥或数字小键盘 (如果它是一个扩展的密钥，则为 1) 上的某个项。|
@@ -7431,7 +7431,7 @@ afx_msg void OnKeyUp(
 *nFlags*<br/>
 指定扫描代码、 密钥转换代码、 上一项状态和上下文的代码中，如下面的列表中所示：
 
-|“值”|描述|
+|值|描述|
 |-----------|-----------------|
 |0-7|扫描代码 （依赖于 OEM 的值）。 高序位字低位字节。|
 |8|扩展的密钥，如功能键或 （如果它是扩展的键为 1; 否则为 0） 数字键盘上的密钥。|
@@ -7502,7 +7502,7 @@ afx_msg void OnLButtonDblClk(
 
 ### <a name="remarks"></a>备注
 
-具有 CS_DBLCLKS 的 windows [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa)样式将收到`OnLButtonDblClk`调用。 这是 Microsoft 基础类 windows 的默认值。 Windows 调用`OnLButtonDblClk`当用户按下的、 释放，然后按下鼠标左键在系统中再次双击时间限制。 双击鼠标左键实际上会生成四个事件： [WM_LBUTTONDOWN](#onlbuttondown)， [WM_LBUTTONUP](#onlbuttonup)消息、 需知道 WM_LBUTTONDBLCLK 调用和该按钮时，另一个 WM_LBUTTONUP 消息发布。
+具有 CS_DBLCLKS 的 windows [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa)样式将收到`OnLButtonDblClk`调用。 这是 Microsoft 基础类 windows 的默认值。 Windows 调用`OnLButtonDblClk`当用户按下的、 释放，然后按下鼠标左键在系统中再次双击时间限制。 双击鼠标左键实际上会生成四个事件：[WM_LBUTTONDOWN](#onlbuttondown)， [WM_LBUTTONUP](#onlbuttonup)消息，需知道 WM_LBUTTONDBLCLK 调用时，并释放按钮时的另一个 WM_LBUTTONUP 消息。
 
 > [!NOTE]
 > 框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。
@@ -7601,7 +7601,7 @@ afx_msg void OnMButtonDblClk(
 
 ### <a name="remarks"></a>备注
 
-具有 CS_DBLCLKS 的 windows [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa)样式将收到`OnMButtonDblClk`调用。 这是所有 Microsoft 基础类窗口的默认值。 Windows 生成`OnMButtonDblClk`用户按下的版本中，然后按下鼠标按钮再次在系统中双击时间限制时调用。 双击鼠标中按钮实际上会生成四个事件： [WM_MBUTTONDOWN](#onmbuttondown)并[WM_MBUTTONUP](#onmbuttonup)消息、 WM_MBUTTONDBLCLK 调用，以及另一个 WM_MBUTTONUP 消息。
+具有 CS_DBLCLKS 的 windows [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa)样式将收到`OnMButtonDblClk`调用。 这是所有 Microsoft 基础类窗口的默认值。 Windows 生成`OnMButtonDblClk`用户按下的版本中，然后按下鼠标按钮再次在系统中双击时间限制时调用。 双击鼠标中按钮实际上会生成四个事件：[WM_MBUTTONDOWN](#onmbuttondown)并[WM_MBUTTONUP](#onmbuttonup)消息、 WM_MBUTTONDBLCLK 调用，以及另一个 WM_MBUTTONUP 消息。
 
 > [!NOTE]
 > 框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。
@@ -7714,7 +7714,7 @@ afx_msg void OnMeasureItem(
 控件的 ID。
 
 *lpMeasureItemStruct*<br/>
-指向[MEASUREITEMSTRUCT](../../mfc/reference/measureitemstruct-structure.md)数据结构，其中包含所有者描述控件的尺寸。
+指向[MEASUREITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagmeasureitemstruct)数据结构，其中包含所有者描述控件的尺寸。
 
 ### <a name="remarks"></a>备注
 
@@ -7757,7 +7757,7 @@ afx_msg LRESULT OnMenuChar(
 
 返回值的高序位字应包含以下命令代码之一：
 
-|“值”|描述|
+|值|描述|
 |-----------|-----------------|
 |0|告知 Windows 放弃用户按下并在系统扬声器上创建简短的提示音的字符。|
 |1|告知 Windows，若要关闭当前菜单。|
@@ -8149,7 +8149,7 @@ afx_msg void OnMoving(
 要移动的窗口边缘。
 
 *lpRect*<br/>
-地址[CRect](../../atl-mfc-shared/reference/crect-class.md)或[RECT 结构](../../mfc/reference/rect-structure1.md)，其中将包含项目的坐标。
+地址[CRect](../../atl-mfc-shared/reference/crect-class.md)或[RECT 结构](/windows/desktop/api/windef/ns-windef-tagrect)，其中将包含项目的坐标。
 
 ### <a name="remarks"></a>备注
 
@@ -8196,7 +8196,7 @@ afx_msg void OnNcCalcSize(
 指定应用程序应指定客户端区域的哪个部分包含有效的信息。 Windows 会将有效的信息复制到新的客户端区域内的指定区域。 如果此参数为 TRUE，该应用程序应指定有效的客户端区域的哪个部分。
 
 *lpncsp*<br/>
-指向[NCCALCSIZE_PARAMS](../../mfc/reference/nccalcsize-params-structure.md)数据结构，其中包含应用程序可用于计算的新大小和位置信息`CWnd`矩形 （包括工作区、 边框、 标题、 滚动条等）.
+指向[NCCALCSIZE_PARAMS](/windows/desktop/api/winuser/ns-winuser-tagnccalcsize_params)数据结构，其中包含应用程序可用于计算的新大小和位置信息`CWnd`矩形 （包括工作区、 边框、 标题、 滚动条等）.
 
 ### <a name="remarks"></a>备注
 
@@ -8222,7 +8222,7 @@ afx_msg BOOL OnNcCreate(LPCREATESTRUCT lpCreateStruct);
 ### <a name="parameters"></a>参数
 
 *lpCreateStruct*<br/>
-指向[CREATESTRUCT](../../mfc/reference/createstruct-structure.md)数据结构`CWnd`。
+指向[CREATESTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcreatestructa)数据结构`CWnd`。
 
 ### <a name="return-value"></a>返回值
 
@@ -8791,7 +8791,7 @@ afx_msg void OnPaintClipboard(
 指定指向剪贴板应用程序窗口的指针。 该指针可能是暂时的，不应存储起来供将来使用。
 
 *hPaintStruct*<br/>
-标识一个 [PAINTSTRUCT](../../mfc/reference/paintstruct-structure.md) 数据结构，该数据结构可定义要绘制的工作区部分。
+标识一个 [PAINTSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagpaintstruct) 数据结构，该数据结构可定义要绘制的工作区部分。
 
 ### <a name="remarks"></a>备注
 
@@ -8988,7 +8988,7 @@ afx_msg UINT OnQueryUIState();
 
 - UISF_HIDEACCEL 键盘加速器处于隐藏状态。
 
-- UISF_ACTIVE Windows XP： 应在用于活动控件的样式绘制控件。
+- UISF_ACTIVE Windows XP:应在用于活动控件的样式绘制控件。
 
 ### <a name="remarks"></a>备注
 
@@ -9048,7 +9048,7 @@ afx_msg void OnRButtonDblClk(
 
 ### <a name="remarks"></a>备注
 
-具有 CS_DBLCLKS 的 windows [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa)样式可以接收`OnRButtonDblClk`调用。 这是在 Microsoft 基础类库中的 windows 的默认值。 Windows 调用`OnRButtonDblClk`当用户按下的、 释放，然后再次按下鼠标右键在系统内的双击时间限制。 双击鼠标右键按钮实际上会生成四个事件： [WM_RBUTTONDOWN](#onrbuttondown)并[WM_RBUTTONUP](#onrbuttonup)消息，`OnRButtonDblClk`调用时，并该按钮时，另一个 WM_RBUTTONUP 消息发布。
+具有 CS_DBLCLKS 的 windows [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa)样式可以接收`OnRButtonDblClk`调用。 这是在 Microsoft 基础类库中的 windows 的默认值。 Windows 调用`OnRButtonDblClk`当用户按下的、 释放，然后再次按下鼠标右键在系统内的双击时间限制。 双击鼠标右键按钮实际上会生成四个事件：[WM_RBUTTONDOWN](#onrbuttondown)并[WM_RBUTTONUP](#onrbuttonup)消息，`OnRButtonDblClk`调用时，并释放按钮时的另一个 WM_RBUTTONUP 消息。
 
 > [!NOTE]
 > 框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。
@@ -9410,7 +9410,7 @@ afx_msg void OnSizing(
 要移动的窗口边缘。
 
 *lpRect*<br/>
-地址[CRect](../../atl-mfc-shared/reference/crect-class.md)或[RECT 结构](../../mfc/reference/rect-structure1.md)，其中将包含项目的坐标。
+地址[CRect](../../atl-mfc-shared/reference/crect-class.md)或[RECT 结构](/windows/desktop/api/windef/ns-windef-tagrect)，其中将包含项目的坐标。
 
 ### <a name="remarks"></a>备注
 
@@ -9524,7 +9524,7 @@ afx_msg void OnSysChar(
 *nFlags*<br/>
 *NFlags*参数可以为下列值：
 
-|“值”|含义|
+|值|含义|
 |-----------|-------------|
 |0-15|指定的重复计数。 值是由于用户按下键而重复击键次数...|
 |16-23|指定扫描代码。 值取决于原始设备制造商 (OEM)|
@@ -9648,7 +9648,7 @@ afx_msg void OnSysDeadChar(
 *nFlags*<br/>
 指定扫描代码、 密钥转换代码、 上一项状态和上下文的代码中，如下面的列表中所示：
 
-|“值”|含义|
+|值|含义|
 |-----------|-------------|
 |0-7|扫描代码 （依赖于 OEM 的值）。 高序位字低位字节。|
 |8|扩展的密钥，如功能键或 （如果它是扩展的键为 1; 否则为 0） 数字键盘上的密钥。|
@@ -9687,7 +9687,7 @@ afx_msg void OnSysKeyDown(
 *nFlags*<br/>
 指定扫描代码、 密钥转换代码、 上一项状态和上下文的代码中，如下面的列表中所示：
 
-|“值”|含义|
+|值|含义|
 |-----------|-------------|
 |0-7|扫描代码 （依赖于 OEM 的值）。 高序位字低位字节。|
 |8|扩展的密钥，如功能键或 （如果它是扩展的键为 1; 否则为 0） 数字键盘上的密钥。|
@@ -9734,7 +9734,7 @@ afx_msg void OnSysKeyUp(
 *nFlags*<br/>
 指定扫描代码、 密钥转换代码、 上一项状态和上下文的代码中，如下面的列表中所示：
 
-|“值”|含义|
+|值|含义|
 |-----------|-------------|
 |0-7|扫描代码 （依赖于 OEM 的值）。 高序位字低位字节。|
 |8|扩展的密钥，如功能键或 （如果它是扩展的键为 1; 否则为 0） 数字键盘上的密钥。|
@@ -9961,7 +9961,7 @@ afx_msg void OnUniChar(
 |---------------|-----------------|
 |*NChar*|[in]指定按下的键的字符代码。|
 |*nRepCnt*|[in]指定当前消息的重复次数。 值为击键是由于用户按下键而 autorepeated 次数。 如果击键会保留足够长的时间，将发送多条消息。 但是，重复次数不具有累积性。|
-|*nFlags*|[in]下表中所示指定扫描代码、 扩展的密钥、 上下文代码、 上一项状态和转换状态的标志：<br /><br /> **0-7:** 指定扫描代码。 值取决于原始设备制造商 (OEM)。<br /><br /> **8:** 指定扩展的密钥，例如增强的 101 或 102 键键盘显示的右侧 ALT 和 CTRL 键。 该标志为 1，如果密钥是扩展的密钥;否则，则为 0。<br /><br /> **9-12:** 由 Windows 在内部使用。<br /><br /> **13:** 指定上下文代码。 如果当按下了键; 并按住 ALT 键，该标志为 1否则，值为 0。<br /><br /> **14:** 指定以前的密钥状态。 如果该键处于松开，该标志是如果密钥已关闭之前发送消息，则为 1 或 0。<br /><br /> **15:** 指定转换状态。 如果按下了键，该标志是如果正在释放键，则为 1 或 0。|
+|*nFlags*|[in]下表中所示指定扫描代码、 扩展的密钥、 上下文代码、 上一项状态和转换状态的标志：<br /><br /> **0-7:** 指定扫描代码。 值取决于原始设备制造商 (OEM)。<br /><br /> **8:** 指定扩展的密钥，例如增强的 101 或 102 键键盘显示的右侧 ALT 和 CTRL 键。 该标志为 1，如果密钥是扩展的密钥;否则，则为 0。<br /><br /> **9-12:** 由 Windows 内部使用。<br /><br /> **13:** 指定的上下文代码。 如果当按下了键; 并按住 ALT 键，该标志为 1否则，值为 0。<br /><br /> **14:** 指定上一个键的状态。 如果该键处于松开，该标志是如果密钥已关闭之前发送消息，则为 1 或 0。<br /><br /> **15:** 指定转换状态。 如果按下了键，该标志是如果正在释放键，则为 1 或 0。|
 
 ### <a name="remarks"></a>备注
 
@@ -10022,7 +10022,7 @@ afx_msg void OnUpdateUIState(
 
 - UISF_HIDEFOCUS 焦点指示器。
 
-- UISF_ACTIVE Windows XP： 应在用于活动控件的样式绘制控件。
+- UISF_ACTIVE Windows XP:应在用于活动控件的样式绘制控件。
 
 ### <a name="remarks"></a>备注
 
@@ -10202,7 +10202,7 @@ afx_msg void OnWindowPosChanged(WINDOWPOS* lpwndpos);
 ### <a name="parameters"></a>参数
 
 *lpwndpos*<br/>
-指向[WINDOWPOS](../../mfc/reference/windowpos-structure1.md)数据结构，其中包含有关窗口的新大小和位置的信息。
+指向[WINDOWPOS](/windows/desktop/api/winuser/ns-winuser-tagwindowpos)数据结构，其中包含有关窗口的新大小和位置的信息。
 
 ### <a name="remarks"></a>备注
 
@@ -10226,7 +10226,7 @@ afx_msg void OnWindowPosChanging(WINDOWPOS* lpwndpos);
 
 ### <a name="remarks"></a>备注
 
-应用程序可以防止更改到窗口通过设置或清除中的相应位**标志**的成员[WINDOWPOS](../../mfc/reference/windowpos-structure1.md)结构。
+应用程序可以防止更改到窗口通过设置或清除中的相应位**标志**的成员[WINDOWPOS](/windows/desktop/api/winuser/ns-winuser-tagwindowpos)结构。
 
 使用窗口[WS_OVERLAPPED](styles-used-by-mfc.md#window-styles)或[WS_THICKFRAME](styles-used-by-mfc.md#window-styles)样式的默认实现将发送[WM_GETMINMAXINFO](/windows/desktop/winmsg/wm-getminmaxinfo)到窗口的消息。 这是验证新的大小和窗口的位置并实施 CS_BYTEALIGNCLIENT 和 CS_BYTEALIGN 客户端样式。 应用程序可以通过不调用它的基类重写此功能。
 
@@ -10549,7 +10549,7 @@ virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
 ### <a name="parameters"></a>参数
 
 *cs*<br/>
-一个[CREATESTRUCT](../../mfc/reference/createstruct-structure.md)结构。
+一个[CREATESTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcreatestructa)结构。
 
 ### <a name="return-value"></a>返回值
 
@@ -10597,7 +10597,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ### <a name="parameters"></a>参数
 
 *pMsg*<br/>
-指向[MSG](../../mfc/reference/msg-structure1.md)结构，其中包含要处理的消息。
+指向[MSG](/windows/desktop/api/winuser/ns-winuser-tagmsg)结构，其中包含要处理的消息。
 
 ### <a name="return-value"></a>返回值
 
@@ -10719,7 +10719,7 @@ BOOL RedrawWindow(
 ### <a name="parameters"></a>参数
 
 *lpRectUpdate*<br/>
-指向[RECT 结构](../../mfc/reference/rect-structure1.md)其中包含更新矩形的坐标。 如果忽略此参数*prgnUpdate*包含有效的区域句柄。
+指向[RECT 结构](/windows/desktop/api/windef/ns-windef-tagrect)其中包含更新矩形的坐标。 如果忽略此参数*prgnUpdate*包含有效的区域句柄。
 
 *prgnUpdate*<br/>
 标识更新区域。 如果这两个*prgnUpdate*并*lpRectUpdate*均为 NULL，则整个工作区添加到更新区域。
@@ -10889,10 +10889,10 @@ void RepositionBars(UINT nIDFirst,
 - `CWnd::reposExtra` 将的值相加*lpRectParam*的客户端区域*nIDLast*也能执行布局。
 
 *lpRectParam*<br/>
-指向[RECT 结构](../../mfc/reference/rect-structure1.md); 的使用情况取决于值*nFlag*。
+指向[RECT 结构](/windows/desktop/api/windef/ns-windef-tagrect); 的使用情况取决于值*nFlag*。
 
 *lpRectClient*<br/>
-指向[RECT 结构](../../mfc/reference/rect-structure1.md)包含可用的客户端区域。 如果为 NULL，则将使用窗口的工作区。
+指向[RECT 结构](/windows/desktop/api/windef/ns-windef-tagrect)包含可用的客户端区域。 如果为 NULL，则将使用窗口的工作区。
 
 *bStretch*<br/>
 指示是否应被栏拉伸到帧的大小。
@@ -10939,10 +10939,10 @@ void ScreenToClient(LPPOINT lpPoint) const;  void ScreenToClient(LPRECT lpRect) 
 ### <a name="parameters"></a>参数
 
 *lpPoint*<br/>
-指向[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)对象或[POINT 结构](../../mfc/reference/point-structure1.md)，其中包含要转换的屏幕坐标。
+指向[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)对象或[POINT 结构](/windows/desktop/api/windef/ns-windef-tagpoint)，其中包含要转换的屏幕坐标。
 
 *lpRect*<br/>
-指向[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT 结构](../../mfc/reference/rect-structure1.md)，其中包含要转换的屏幕坐标。
+指向[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT 结构](/windows/desktop/api/windef/ns-windef-tagrect)，其中包含要转换的屏幕坐标。
 
 ### <a name="remarks"></a>备注
 
@@ -10973,7 +10973,7 @@ void ScrollWindow(
 指定量，以设备为单位的垂直滚动。 此参数必须是负值将向上滚动。
 
 *lpRect*<br/>
-指向[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT 结构](../../mfc/reference/rect-structure1.md)，它指定要滚动的客户端区域的一部分。 如果*lpRect*为 NULL，滚动整个客户端区域。 如果游标矩形相交，滚动矩形，将插入符号是重新定位。
+指向[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT 结构](/windows/desktop/api/windef/ns-windef-tagrect)，它指定要滚动的客户端区域的一部分。 如果*lpRect*为 NULL，滚动整个客户端区域。 如果游标矩形相交，滚动矩形，将插入符号是重新定位。
 
 *lpClipRect*<br/>
 指向`CRect`对象或`RECT`结构，它指定要滚动的剪辑矩形。 滚动到只有此矩形内的位。 此矩形外的 bits 不会受到影响，即使它们位于*lpRect*矩形。 如果*lpClipRect*为 NULL，不存在修剪执行滚动矩形上。
@@ -11012,7 +11012,7 @@ int ScrollWindowEx(
 指定量，以设备为单位的垂直滚动。 此参数必须具有负值将向上滚动。
 
 *lpRectScroll*<br/>
-指向[RECT 结构](../../mfc/reference/rect-structure1.md)，它指定要滚动的客户端区域的一部分。 如果此参数为 NULL，滚动整个客户端区域。
+指向[RECT 结构](/windows/desktop/api/windef/ns-windef-tagrect)，它指定要滚动的客户端区域的一部分。 如果此参数为 NULL，滚动整个客户端区域。
 
 *lpRectClip*<br/>
 指向`RECT`结构，它指定要滚动的剪辑矩形。 此结构将优先于由指向该矩形*lpRectScroll*。 滚动到只有此矩形内的位。 此矩形外的 bits 不会受到影响，即使它们位于*lpRectScroll*矩形。 如果此参数为 NULL，不存在修剪对滚动矩形。
@@ -11588,7 +11588,7 @@ void AFX_CDECL SetProperty(
 > [!NOTE]
 > 应仅在调用此函数`CWnd`表示 OLE 控件的对象。
 
-有关此成员函数中使用的 OLE 控件容器的详细信息，请参阅文章[ActiveX 控件容器： 将 ActiveX 控件编程在 ActiveX 控件容器中](../../mfc/programming-activex-controls-in-a-activex-control-container.md)。
+有关此成员函数中使用的 OLE 控件容器的详细信息，请参阅文章[ActiveX 控件容器：ActiveX 控件容器中的 ActiveX 控件编程](../../mfc/programming-activex-controls-in-a-activex-control-container.md)。
 
 ##  <a name="setredraw"></a>  CWnd::SetRedraw
 
@@ -11811,7 +11811,7 @@ BOOL SetWindowPlacement(const WINDOWPLACEMENT* lpwndpl);
 ### <a name="parameters"></a>参数
 
 *lpwndpl*<br/>
-指向[WINDOWPLACEMENT](../../mfc/reference/windowplacement-structure.md)结构，它指定新的显示状态和位置。
+指向[WINDOWPLACEMENT](/windows/desktop/api/winuser/ns-winuser-tagwindowplacement)结构，它指定新的显示状态和位置。
 
 ### <a name="return-value"></a>返回值
 
@@ -12304,7 +12304,7 @@ void ValidateRect(LPCRECT lpRect);
 ### <a name="parameters"></a>参数
 
 *lpRect*<br/>
-指向[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT 结构](../../mfc/reference/rect-structure1.md)，其中包含矩形的客户端坐标从更新区域中删除。 如果*lpRect*为 NULL，整个窗口进行验证。
+指向[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT 结构](/windows/desktop/api/windef/ns-windef-tagrect)，其中包含矩形的客户端坐标从更新区域中删除。 如果*lpRect*为 NULL，整个窗口进行验证。
 
 ### <a name="remarks"></a>备注
 
@@ -12342,7 +12342,7 @@ static CWnd* PASCAL WindowFromPoint(POINT point);
 ### <a name="parameters"></a>参数
 
 *点*<br/>
-指定[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)对象或[点](../../mfc/reference/point-structure1.md)数据结构，它定义要检查的点。
+指定[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)对象或[点](/windows/desktop/api/windef/ns-windef-tagpoint)数据结构，它定义要检查的点。
 
 ### <a name="return-value"></a>返回值
 
@@ -12420,7 +12420,7 @@ BOOL RegisterTouchWindow(
 TRUE 表示注册 Windows 触控支持;FALSE 否则为。
 
 *ulFlags*<br/>
-一组位标志，用于指定可选的修改。 此字段可能包含 0 或以下值之一： TWF_FINETOUCH、 TWF_WANTPALM。
+一组位标志，用于指定可选的修改。 此字段可能包含 0 或以下值之一：TWF_FINETOUCH，TWF_WANTPALM。
 
 ### <a name="return-value"></a>返回值
 

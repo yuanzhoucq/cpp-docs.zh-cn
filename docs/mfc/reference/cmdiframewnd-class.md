@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CMDIFrameWnd [MFC], MDISetMenu
 - CMDIFrameWnd [MFC], MDITile
 ms.assetid: fa8736e6-511b-4c51-8b4d-eba78378aeb9
-ms.openlocfilehash: a565e1c9d9c9e4d3773763b0ee78c49f61696723
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9d9a2d33f61aa9033bb17c090989b4f08ee82bd7
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50617537"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178377"
 ---
 # <a name="cmdiframewnd-class"></a>CMDIFrameWnd 类
 
@@ -160,7 +160,7 @@ virtual BOOL CreateClient(
 ### <a name="parameters"></a>参数
 
 *lpCreateStruct*<br/>
-指向的长指针[CREATESTRUCT](../../mfc/reference/createstruct-structure.md)结构。
+指向的长指针[CREATESTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcreatestructa)结构。
 
 *pWindowMenu*<br/>
 指向窗口弹出菜单的指针。
@@ -276,7 +276,7 @@ void MDICascade(int nType);
 ### <a name="parameters"></a>参数
 
 *n 类型*<br/>
-指定级联标志。 可以指定仅以下标志： MDITILE_SKIPDISABLED，这样可防止已禁用的 MDI 子窗口正在级联。
+指定级联标志。 可以指定仅以下标记：MDITILE_SKIPDISABLED，这样可防止已禁用的 MDI 子窗口正在级联。
 
 ### <a name="remarks"></a>备注
 

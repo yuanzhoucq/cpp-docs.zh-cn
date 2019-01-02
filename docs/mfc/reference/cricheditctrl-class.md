@@ -152,12 +152,12 @@ helpviewer_keywords:
 - CRichEditCtrl [MFC], StreamOut
 - CRichEditCtrl [MFC], Undo
 ms.assetid: 2be52788-822c-4c27-aafd-2471231e74eb
-ms.openlocfilehash: 756f50afd9b67e4895d8d1b15652602630c24918
-ms.sourcegitcommit: 984fb4814a2dd9bcea5ec88c9528707f17a7cffa
+ms.openlocfilehash: c42f7b77c04b2c94923908fa8b9542bea313b154
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "51949539"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178988"
 ---
 # <a name="cricheditctrl-class"></a>CRichEditCtrl 类
 
@@ -427,7 +427,7 @@ virtual BOOL Create(
 指定编辑控件的样式。 应用中列出的窗口样式的组合**备注**以下部分，并[编辑控件样式](/windows/desktop/Controls/edit-control-styles)Windows SDK 中所述。
 
 *rect*<br/>
-指定编辑控件的大小和位置。 可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT](../../mfc/reference/rect-structure1.md)结构。
+指定编辑控件的大小和位置。 可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT](/windows/desktop/api/windef/ns-windef-tagrect)结构。
 
 *pParentWnd*<br/>
 指定编辑控件的父窗口 (通常[CDialog](../../mfc/reference/cdialog-class.md))。 它不能为 NULL。
@@ -552,7 +552,7 @@ BOOL DisplayBand(LPRECT pDisplayRect);
 ### <a name="parameters"></a>参数
 
 *pDisplayRect*<br/>
-指向[RECT](../../mfc/reference/rect-structure1.md)或[CRect](../../atl-mfc-shared/reference/crect-class.md)对象，它指定要显示的文本的设备的区域。
+指向[RECT](/windows/desktop/api/windef/ns-windef-tagrect)或[CRect](../../atl-mfc-shared/reference/crect-class.md)对象，它指定要显示的文本的设备的区域。
 
 ### <a name="return-value"></a>返回值
 
@@ -973,7 +973,7 @@ void GetRect(LPRECT lpRect) const;
 ### <a name="parameters"></a>参数
 
 *lpRect*<br/>
-[CRect](../../atl-mfc-shared/reference/crect-class.md)或指针，指向[RECT](../../mfc/reference/rect-structure1.md)若要接收的格式设置的矩形`CRichEditCtrl`对象。
+[CRect](../../atl-mfc-shared/reference/crect-class.md)或指针，指向[RECT](/windows/desktop/api/windef/ns-windef-tagrect)若要接收的格式设置的矩形`CRichEditCtrl`对象。
 
 ### <a name="remarks"></a>备注
 
@@ -1855,7 +1855,7 @@ void SetRect(LPCRECT lpRect);
 ### <a name="parameters"></a>参数
 
 *lpRect*<br/>
-[CRect](../../atl-mfc-shared/reference/crect-class.md)或指针，指向[RECT](../../mfc/reference/rect-structure1.md) ，该值指示格式化矩形的新边界。
+[CRect](../../atl-mfc-shared/reference/crect-class.md)或指针，指向[RECT](/windows/desktop/api/windef/ns-windef-tagrect) ，该值指示格式化矩形的新边界。
 
 ### <a name="remarks"></a>备注
 

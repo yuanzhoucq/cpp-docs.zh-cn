@@ -9,18 +9,18 @@ helpviewer_keywords:
 - MBCS [C++], programming
 - dialog boxes [C++], fonts
 ms.assetid: 7b541235-f3e5-4af0-b2c2-a0112cd5fbfb
-ms.openlocfilehash: 0ff15244f4e93ecd2913fa825e8b5c351c7ff84d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 800e94bfb8a52b806ad45368499f126fbf163389
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50501837"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626690"
 ---
 # <a name="general-mbcs-programming-advice"></a>常规 MBCS 编程建议
 
 使用以下提示：
 
-- 对于大的灵活性，如使用运行宏`_tcschr`和`_tcscpy`在可能的情况。 有关详细信息，请参阅[Tchar.h 中的一般文本映射](../text/generic-text-mappings-in-tchar-h.md)。
+- 对于大的灵活性，如使用运行宏`_tcschr`和`_tcscpy`在可能的情况。 有关详细信息，请参阅[tchar.h 中的一般文本映射](../text/generic-text-mappings-in-tchar-h.md)。
 
 - 使用 C 运行时`_getmbcp`函数以获取有关当前代码页的信息。
 

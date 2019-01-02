@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - calling conventions
 ms.assetid: 11b1e45c-8fd1-420b-bca0-a19e294c1d85
-ms.openlocfilehash: 9aa25598674aa52502d5d3619e5015eb13b6fff8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cc79a0636f900aa49e31f0dc35ee19657c3e1ccb
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532777"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626729"
 ---
 # <a name="calling-conventions"></a>调用约定
 
@@ -17,7 +17,7 @@ Visual C/C++ 编译器提供了用于调用内部函数和外部函数的几个�
 
 本主题中的各个主题说明了调用约定之间的差异、如何传递参数以及函数如何返回值。 它们也讨论了裸函数调用以及使你能够写入自己的 prolog 和 epilog 代码的高级功能。
 
-有关信息的 x64 调用约定的处理器，请参阅[调用约定](../build/calling-convention.md)。
+有关信息的 x64 调用约定的处理器，请参阅[调用约定](../build/x64-calling-convention.md)。
 
 ## <a name="topics-in-this-section"></a>本节中的主题
 

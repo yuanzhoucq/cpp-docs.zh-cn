@@ -1,6 +1,6 @@
 ---
 title: pack
-ms.date: 09/17/2018
+ms.date: 12/17/2018
 f1_keywords:
 - pack_CPP
 - vc-pragma.pack
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pragmas, pack
 - pack pragma
 ms.assetid: e4209cbb-5437-4b53-b3fe-ac264501d404
-ms.openlocfilehash: 0067b30c5c2eae9391defeea11c722d455ec8f1a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9b959c161a933cc76590cfbd65d295aad36f07d7
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507596"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53627410"
 ---
 # <a name="pack"></a>pack
 指定结构、联合和类成员的封装对齐。
@@ -57,7 +57,7 @@ ms.locfileid: "50507596"
 
 - [__unaligned](../cpp/unaligned.md)
 
-- [结构对齐示例](../build/examples-of-structure-alignment.md)(特定于 x64)
+- [结构对齐示例](../build/x64-software-conventions.md#examples-of-structure-alignment)(特定于 x64)
 
    > [!WARNING]
    > 请注意，在 Visual Studio 2015 和更高版本可使用标准的 alignas 和 alignof 运算符，这 不同于 `__alignof` 和 `declspec( align )`，它们是跨编译器可移植的。 C + + 标准不能解决封装，因此仍必须使用**pack** （或其他编译器上相应的扩展） 来指定小于目标体系结构的字大小的对齐方式。

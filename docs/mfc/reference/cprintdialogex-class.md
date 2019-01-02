@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CPrintDialogEx [MFC], PrintSelection
 - CPrintDialogEx [MFC], m_pdex
 ms.assetid: 1d506703-ee1c-44cc-b4ce-4e778fec26b8
-ms.openlocfilehash: 79d696f89ca7474220559abbf5464f32b6e684c6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fb88cc39ddaffe51b80484bbe8460507a1d0aecb
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543320"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178442"
 ---
 # <a name="cprintdialogex-class"></a>CPrintDialogEx 类
 
@@ -154,7 +154,7 @@ CPrintDialogEx(
 
 ##  <a name="createprinterdc"></a>  CPrintDialogEx::CreatePrinterDC
 
-从创建打印机设备上下文 (DC) [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea)并[DEVNAMES](../../mfc/reference/devnames-structure.md)结构。
+从创建打印机设备上下文 (DC) [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea)并[DEVNAMES](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames)结构。
 
 ```
 HDC CreatePrinterDC();
@@ -216,9 +216,9 @@ BOOL GetDefaults();
 
 ### <a name="remarks"></a>备注
 
-从创建打印机设备上下文 (DC) [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea)并[DEVNAMES](../../mfc/reference/devnames-structure.md)结构。
+从创建打印机设备上下文 (DC) [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea)并[DEVNAMES](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames)结构。
 
-`GetDefaults` 不显示打印属性表。 相反，它会设置`hDevNames`和`hDevMode`的成员[m_pdex](#m_pdex)到句柄[DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea)并[DEVNAMES](../../mfc/reference/devnames-structure.md)为初始化的结构系统默认打印机。 这两`hDevNames`并`hDevMode`必须为 NULL，或`GetDefaults`失败。
+`GetDefaults` 不显示打印属性表。 相反，它会设置`hDevNames`和`hDevMode`的成员[m_pdex](#m_pdex)到句柄[DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea)并[DEVNAMES](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames)为初始化的结构系统默认打印机。 这两`hDevNames`并`hDevMode`必须为 NULL，或`GetDefaults`失败。
 
 如果设置为 PD_RETURNDC 标志，此函数不会仅返回`hDevNames`和`hDevMode`(位于`m_pdex.hDevNames`并`m_pdex.hDevMode`) 给调用方，但也会返回打印机 DC 中的`m_pdex.hDC`。 它负责的调用方删除打印机 DC 并调用 Windows [GlobalFree](/windows/desktop/api/winbase/nf-winbase-globalfree)函数对句柄在您使用完`CPrintDialogEx`对象。
 

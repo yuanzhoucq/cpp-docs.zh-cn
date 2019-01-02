@@ -14,12 +14,12 @@ f1_keywords:
 - AMP_GRAPHICS/Concurrency::graphics::texture_view::set
 - AMP_GRAPHICS/Concurrency::graphics::texture_view::value_type
 ms.assetid: 6ec2e289-1626-4727-9592-07981cf1d27d
-ms.openlocfilehash: e7099c247a68823fbe5467f47c6afe1dc5a33abc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c76f1f9b00ea6e44f69f98286b83d4a84f12cac1
+ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544451"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53657495"
 ---
 # <a name="textureview-class"></a>texture_view 类
 
@@ -82,7 +82,7 @@ class texture_view<const value_type, _Rank>
 |名称|描述|
 |----------|-----------------|
 |[operator()](#operator_call)|已重载。 按索引获取此元素的值。|
-|[operator[]](#operator_at)|已重载。 按索引获取此元素的值。|
+|[operator\[\]](#operator_at)|已重载。 按索引获取此元素的值。|
 |[operator=](#operator_eq)|已重载。 赋值运算符。|
 
 ### <a name="public-data-members"></a>公共数据成员
@@ -473,7 +473,7 @@ void set(
 *_Index*<br/>
 若要设置，可能是多维的元素的索引。
 
-*value*<br/>
+*值*<br/>
 要将元素设置的值。
 
 ##  <a name="value_type"></a> value_type

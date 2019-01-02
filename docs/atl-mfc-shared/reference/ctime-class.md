@@ -25,12 +25,12 @@ helpviewer_keywords:
 - CTime class
 - shared classes, CTime
 ms.assetid: 0a299544-485b-48dc-9d3c-fdc30f57d612
-ms.openlocfilehash: bed403e4bc1cca1d31a394be7157de9e65abff95
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cedd1bfd4ea955f920e13b5d01beb3a478656b69
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519439"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178117"
 ---
 # <a name="ctime-class"></a>CTime 类
 
@@ -169,10 +169,10 @@ CTime(const DBTIMESTAMP& dbts, int nDST = -1) throw();
 MS-DOS 日期和时间值转换为日期/时间值并复制到新`CTime`对象。
 
 *st*<br/>
-一个[SYSTEMTIME](../../mfc/reference/systemtime-structure.md)结构转换为日期/时间值并复制到新`CTime`对象。
+一个[SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)结构转换为日期/时间值并复制到新`CTime`对象。
 
 *ft*<br/>
-一个[FILETIME](../../mfc/reference/filetime-structure.md)结构转换为日期/时间值并复制到新`CTime`对象。
+一个[FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284)结构转换为日期/时间值并复制到新`CTime`对象。
 
 *dbts*<br/>
 对包含当前本地时间的 DBTIMESTAMP 结构的引用。
