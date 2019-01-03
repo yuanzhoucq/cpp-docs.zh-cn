@@ -12,5 +12,6 @@
 ## [C/C++ 属性 (Linux)](prop-pages/c-cpp-linux.md)
 ## [链接器属性 (Linux)](prop-pages/linker-linux.md)
 ## [生成事件属性 (Linux)](prop-pages/build-events-linux.md)
-## [自定义生成步骤属性 (Linux)](prop-pages/custom-build-step-linux.md) 
+## [自定义生成步骤属性 (Linux)](prop-pages/custom-build-step-linux.md)
 ## [生成文件项目属性 (Linux)](prop-pages/makefile-linux.md)
+## [远程存档属性 (Linux)](prop-pages/remote-ar-linux.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - projects [C++], deploying programs
 - application deployment [C++], walkthroughs
 ms.assetid: 79e6cc4e-dced-419d-aaf7-d62d1367603f
-ms.openlocfilehash: 43e6b9320fb52fc17f65b27b06e2c6f4d4851528
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7170fe3ae058f832e452089021d9f863f1791f14
+ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496425"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53657508"
 ---
 # <a name="walkthrough-deploying-your-program-c"></a>演练：部署程序 (C++)
 
@@ -62,7 +62,7 @@ ms.locfileid: "50496425"
 
 1. 在“解决方案资源管理器”中，选择“游戏安装程序”项目，然后选择“视图” > “属性窗口”或点击 F4 以打开“属性”窗口。
 
-1. 指定希望它们显示在安装程序中，则指定其他详细信息。  例如，为“制造商”使用“Contoso”，为“产品名称”使用“游戏安装程序”，并为“SupportUrl”使用 *http://www.contoso.com* 。
+1. 指定希望它们显示在安装程序中，则指定其他详细信息。  例如，为“制造商”使用“Contoso”，为“产品名称”使用“游戏安装程序”，并为“SupportUrl”使用 http\://www.contoso.com。
 
 1. 在菜单栏上，依次选择“生成” > “Configuration Manager”。 在“项目”表的“生成”列下，勾选“游戏安装程序”框。 单击 **“关闭”**。
 
@@ -72,7 +72,7 @@ ms.locfileid: "50496425"
 
 ## <a name="next-steps"></a>后续步骤
 
-**上一步：**[演练：调试项目 (C++)](../ide/walkthrough-debugging-a-project-cpp.md)<br/>
+上一步：[演练：调试项目 (C++)](../ide/walkthrough-debugging-a-project-cpp.md)<br/>
 
 ## <a name="see-also"></a>请参阅
 
