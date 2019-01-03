@@ -6,12 +6,12 @@ helpviewer_keywords:
 - lambda expressions [C++], overview
 - lambda expressions [C++], vs. function objects
 ms.assetid: 713c7638-92be-4ade-ab22-fa33417073bf
-ms.openlocfilehash: 1b8568d69fea002e59925e1e9354407457954e42
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 9ebe4fec06996e908c619b6ac14af098b1c07a01
+ms.sourcegitcommit: fe1e21df175cd004d21c6e4659082efceb649a8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176258"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53978304"
 ---
 # <a name="lambda-expressions-in-c"></a>C++ 中的 Lambda 表达式
 
@@ -55,7 +55,7 @@ void abssort(float* x, unsigned n) {
 
 1. *尾随返回类型*可选。
 
-1. *lambda 体*)
+1. *lambda 体*。
 
 ### <a name="capture-clause"></a>Capture 子句
 
@@ -104,7 +104,7 @@ void f(Args... args) {
 
 **Visual Studio 2017 版本 15.3 及更高版本**(适用于[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)):**这**指针可能通过指定通过值捕获`*this`capture 子句中。 按值捕获表示整个*闭包*，这是该 encapulates lambda 表达式的匿名函数对象，会复制到调用 lambda 的每个调用站点。 按值捕获时，lambda 将执行中的并行或异步操作，尤其是在如 NUMA 某些硬件体系结构上。
 
-演示如何使用具有类方法的 lambda 表达式的示例，请参阅"示例： 使用 Lambda 表达式中方法"中[Lambda 表达式的示例](../cpp/examples-of-lambda-expressions.md)。
+有关演示如何使用具有类方法的 lambda 表达式的示例，请参阅"示例：在方法中的 Lambda 表达式中使用" [Lambda 表达式的示例](../cpp/examples-of-lambda-expressions.md)。
 
 在使用 capture 子句时，建议你记住以下几点（尤其是使用采取多线程的 lambda 时）：
 
@@ -324,7 +324,7 @@ vector v after 2nd call to fillVector(): 10 11 12 13 14 15 16 17 18
 
 ## <a name="constexpr-lambda-expressions"></a>constexpr lambda 表达式
 
-**Visual Studio 2017 15.3 及更高版本**(适用于[/std:C++ 17](../build/reference/std-specify-language-standard-version.md)): 可以将 lambda 表达式声明为`constexpr`或常量表达式中使用时的每个数据成员的初始化它捕获或引入的常量表达式内允许。
+**Visual Studio 2017 版本 15.3 及更高版本**(适用于[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)):Lambda 表达式可能会声明为`constexpr`或常量表达式中允许的它捕获或引入了每个数据成员初始化时使用的常量表达式中。
 
 ```cpp
     int y = 32;

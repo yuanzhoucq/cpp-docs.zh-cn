@@ -12,18 +12,18 @@ helpviewer_keywords:
 - TCHAR.H data types, mapping
 - mappings [C++], TCHAR.H
 ms.assetid: 01e1bb74-5a01-4093-8720-68b6c1fdda80
-ms.openlocfilehash: bf7c5e58b88da4f60d2e784692cb6d4a0ed84970
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: 59df523cc553881186921a878d131a109ae3cf27
+ms.sourcegitcommit: fe1e21df175cd004d21c6e4659082efceb649a8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627409"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53978291"
 ---
 # <a name="generic-text-mappings-in-tcharh"></a>Tchar.h 中的一般文本映射
 
 若要简化的全球范围内使用的代码的传输，Microsoft 运行库提供特定于 Microsoft 的一般文本映射的许多数据类型、 例程和其他对象。 可以使用这些映射，tchar.h，能够编写泛型可以为单字节，多字节，编译的代码中定义或设置的 Unicode 字符，具体取决于您通过使用定义的清单常量`#define`语句。 一般文本映射是与 ANSI 不兼容的 Microsoft 扩展。
 
-使用 tchar.h，可以生成单字节、 多字节字符集 (MBCS) 和 Unicode 应用程序从相同的源。 Tchar.h 定义宏 (其中包含前缀`_tcs`)，使用正确的预处理器定义的它将映射到`str`， `_mbs`，或`wcs`函数，根据需要。 若要生成 MBCS，请定义符号`_MBCS`。 若要生成 Unicode，请定义符号`_UNICODE`。 若要生成的单字节应用程序，定义都不 （默认值）。 默认情况下，`_MBCS`为 MFC 应用程序定义。
+使用 tchar.h，可以生成单字节、 多字节字符集 (MBCS) 和 Unicode 应用程序从相同的源。 Tchar.h 定义宏 (其中包含前缀`_tcs`)，使用正确的预处理器定义的它将映射到`str`， `_mbs`，或`wcs`函数，根据需要。 若要生成 MBCS，请定义符号`_MBCS`。 若要生成 Unicode，请定义符号`_UNICODE`。 若要生成的单字节应用程序，定义都不 （默认值）。 默认情况下，`_UNICODE`为 MFC 应用程序定义。
 
 `_TCHAR`有条件地在 tchar.h 中定义数据类型。 如果符号`_UNICODE`为您的生成定义`_TCHAR`指**wchar_t**; 否则为对于单字节和 MBCS 版本，它被定义为**char**。 (**wchar_t**，基本的 Unicode 宽字符数据类型，是为 8 位带符号的 16 位对应**char**。)针对国际性应用，使用`_tcs`系列函数，在操作`_TCHAR`单位，而非字节。 例如，`_tcsncpy`副本`n` `_TCHARs`，而不`n`字节。
 
