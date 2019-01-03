@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - /SOURCELINK linker option
 - /SOURCELINK
-ms.openlocfilehash: 5c742a37803f450aa6084c862800583f70bcedde
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a5a01ca56a49791a608c5c836312c7728e9328c3
+ms.sourcegitcommit: fe1e21df175cd004d21c6e4659082efceb649a8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50480985"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53978278"
 ---
-# <a name="sourcelink-include-sourcelink-file-in-pdb"></a>/ SOURCELINK （包括 Sourcelink PDB 文件）
+# <a name="sourcelink-include-source-link-file-in-pdb"></a>/ SOURCELINK （包括源链接 PDB 文件）
 
-指定要由链接器生成的 PDB 文件中包含的 SourceLink 配置文件。
+指定要包含在链接器生成的 PDB 文件中的源链接配置文件。
 
 ## <a name="syntax"></a>语法
 
@@ -28,7 +28,7 @@ ms.locfileid: "50480985"
 
 ## <a name="remarks"></a>备注
 
-SourceLink 是提供源调试二进制文件的语言和源代码管理不可知系统。 本机 c + + 二进制文件从 Visual Studio 2017 版本 15.8 支持 SourceLink。 SourceLink 的概述，请参阅[源链接](https://github.com/dotnet/designs/blob/master/accepted/diagnostics/source-link.md)。 有关如何在项目中使用 SourceLink 以及如何为你项目的一部分生成 SourceLink 文件的信息，请参阅[使用 SourceLink](https://github.com/dotnet/sourcelink#using-sourcelink)。
+源链接是提供源调试二进制文件的语言和源代码管理不可知系统。 源链接支持本机 c + + 二进制文件在 Visual Studio 2017 版本 15.8 中启动。 源链接的概述，请参阅[源链接](https://github.com/dotnet/designs/blob/master/accepted/diagnostics/source-link.md)。 有关如何在项目中使用源链接以及如何为你项目的一部分生成 SourceLink 文件的信息，请参阅[使用源链接](https://github.com/dotnet/sourcelink#using-source-link-in-c-projects)。
 
 ### <a name="to-set-the-sourcelink-linker-option-in-visual-studio"></a>在 Visual Studio 中设置 /SOURCELINK 链接器选项
 

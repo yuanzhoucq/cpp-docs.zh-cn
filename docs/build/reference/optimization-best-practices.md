@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Visual C++, optimization
 - optimization, best practices
 ms.assetid: f3433148-7255-4ca6-8a4f-7c31aac88508
-ms.openlocfilehash: 67a071ecd457495510b2015f05466e1aa9bfc989
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: da493ceb1a0b751e302d296a9840b668e446ff62
+ms.sourcegitcommit: fe1e21df175cd004d21c6e4659082efceb649a8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477345"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53978330"
 ---
 # <a name="optimization-best-practices"></a>优化最佳做法
 
@@ -123,7 +123,7 @@ int myFunc() {...}
 
 有关详细信息，请参阅[编译器内部函数](../../intrinsics/compiler-intrinsics.md)。
 
-## <a name="exceptions"></a>异常
+## <a name="exceptions"></a>Exceptions
 
 会对性能与使用异常相关联的命中。 使用禁止编译器执行某些优化的 try 块时，会引入一些限制。 在 x86 平台没有额外的性能下降 try 块由于必须在代码执行期间生成的其他状态信息。 在 64 位平台，try 块不会降低性能与很多，但一旦引发异常，查找处理程序，并展开堆栈的过程可能很昂贵。
 
