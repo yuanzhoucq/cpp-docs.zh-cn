@@ -32,12 +32,12 @@ helpviewer_keywords:
 - files [C++], opening
 - fopen function
 ms.assetid: e868993f-738c-4920-b5e4-d8f2f41f933d
-ms.openlocfilehash: 1397f3b3513fc9a3e93a69841a93b40c16e490cf
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: fb5f78411521dcbaddefda6c621b7fe44ce91736
+ms.sourcegitcommit: cce52b2232b94ce8fd8135155b86e2d38a4e4562
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51333223"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54031286"
 ---
 # <a name="fopen-wfopen"></a>fopen、_wfopen
 
@@ -97,7 +97,7 @@ FILE *_wfopen(
 
 ### <a name="encodings-used-based-on-ccs-flag-and-bom"></a>基于 ccs 标志和 BOM 使用的编码
 
-|ccs 标志|无 BOM（或新文件）|BOM：UTF-8|BOM：UTF-16|
+|ccs 标志|无 BOM（或新文件）|物料清单：UTF-8|物料清单：UTF-16|
 |----------------|----------------------------|-----------------|------------------|
 |**UNICODE**|**UTF 16LE**|**UTF-8**|**UTF 16LE**|
 |**UTF-8**|**UTF-8**|**UTF-8**|**UTF 16LE**|
@@ -160,25 +160,25 @@ FILE *_wfopen(
 
 有效字符*模式下*在中使用字符串**fopen**并 **_fdopen**对应于*oflag* 中使用的参数[_open](open-wopen.md)并[_sopen](sopen-wsopen.md)，按如下所示。
 
-|中的字符*模式下*字符串|等效*oflag* _open/_sopen 值|
+|中的字符*模式下*字符串|等效*oflag*值\_打开 /\_sopen|
 |-------------------------------|----------------------------------------------------|
-|**a**|**_O_WRONLY** &#124; **_O_APPEND** (通常 **_O_WRONLY** &#124; **_open** &#124;* * _O_APPEND * *)|
-|**+**|**_O_RDWR** &#124; **_O_APPEND** (通常 **_O_RDWR** &#124; **_O_APPEND** &#124; **_open** )|
-|**r**|**_O_RDONLY**|
-|**r +**|**_O_RDWR**|
-|**w**|**_O_WRONLY** (通常 **_O_WRONLY** &#124; **_open** &#124;* * _O_TRUNC * *)|
-|**w +**|**_O_RDWR** (通常 **_O_RDWR** &#124; **_open** &#124; **_O_TRUNC**)|
-|**b**|**_O_BINARY**|
-|**t**|**_O_TEXT**|
+|**a**|**\_O\_WRONLY** &#124;  **\_O\_追加**(通常 **\_O\_WRONLY** &#124; **\_O\_CREAT** &#124;  **\_O\_追加**)|
+|**+**|**\_O\_RDWR** &#124;  **\_O\_追加**(通常 **\_O\_RDWR** &#124;  **\_O\_追加** &#124;  **\_O\_创建**)|
+|**r**|**\_O\_RDONLY**|
+|**r +**|**\_O\_RDWR**|
+|**w**|**\_O\_WRONLY** (通常 **\_O\_WRONLY** &#124;  **\_O\_创建** &#124; **\_O\_TRUNC**)|
+|**w +**|**\_O\_RDWR** (通常 **\_O\_RDWR** &#124;  **\_O\_创建** &#124;  **\_O\_TRUNC**)|
+|**b**|**\_O\_BINARY**|
+|**t**|**\_O\_TEXT**|
 |**c**|无|
 |**n**|无|
-|**S**|**_O_SEQUENTIAL**|
-|**R**|**_O_RANDOM**|
-|**T**|**_O_SHORTLIVED**|
-|**D**|**_O_TEMPORARY**|
-|**ccs = UNICODE**|**_O_WTEXT**|
-|**ccs = utf-8**|**_O_TEXTW、_O_UTF8**|
-|**ccs = UTF 16LE**|**_O_UTF16**|
+|**S**|**\_O\_顺序**|
+|**R**|**\_O\_随机**|
+|**T**|**\_O\_SHORTLIVED**|
+|**D**|**\_O\_临时**|
+|**ccs = UNICODE**|**\_O\_WTEXT**|
+|**ccs = utf-8**|**\_O\_UTF8**|
+|**ccs = UTF 16LE**|**\_O\_UTF16**|
 
 如果使用的**rb**模式下，您无需移植代码，并且如果您希望读取大文件中的大多数或不关心网络性能，您还可以考虑是否使用内存映射的 Win32 文件作为一个选项。
 
