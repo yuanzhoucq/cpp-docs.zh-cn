@@ -7,12 +7,12 @@ helpviewer_keywords:
 - nop instruction
 - __nop intrinsic
 ms.assetid: 7a2a938b-87e0-476d-a348-03ea7635b6b9
-ms.openlocfilehash: 25ba27485990ceaae77e1827f0c74680914e2f40
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b0033b0e3a62a16c2856b0e25daeebdb5df0c81f
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50651719"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220382"
 ---
 # <a name="nop"></a>__nop
 
@@ -30,7 +30,7 @@ void __nop();
 
 |内部函数|体系结构|
 |---------------|------------------|
-|`__nop`|x86、x64|
+|`__nop`|x86、 ARM、 x64、 ARM64|
 
 **标头文件** \<intrin.h >
 
@@ -38,7 +38,7 @@ void __nop();
 
 ## <a name="remarks"></a>备注
 
-`__nop` 函数等同于 `NOP` 计算机指令。 有关详细信息，搜索文档中，"Intel 体系结构软件开发人员手册，2 卷： 指令集引用"在[Intel Corporation](https://software.intel.com/articles/intel-sdm)站点。
+`__nop` 函数等同于 `NOP` 计算机指令。 X86 和 x64 的详细信息，搜索文档中，"Intel 体系结构软件开发人员手册，卷 2:指令设置参考，"在[Intel Corporation](https://software.intel.com/articles/intel-sdm)站点。
 
 ## <a name="see-also"></a>请参阅
 

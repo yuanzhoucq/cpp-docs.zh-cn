@@ -4,12 +4,12 @@ ms.custom: how-to
 ms.date: 11/19/2018
 ms.topic: conceptual
 ms.assetid: 9a373030-e587-452f-b9a5-c5f9d58b7673
-ms.openlocfilehash: a3e5705b47a4cfdf17b9a4b4829f1e13565dd7ce
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 48e459b69592bf4c231407c2a378a7b7e01ff4ae
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52174859"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220577"
 ---
 # <a name="how-to-create-and-use-uniqueptr-instances"></a>如何：创建和使用 unique_ptr 实例
 
@@ -53,5 +53,5 @@ ms.locfileid: "52174859"
 
 ## <a name="see-also"></a>请参阅
 
-[智能指针](../cpp/smart-pointers-modern-cpp.md)<br/>
+[智能指针（现代 C++）](../cpp/smart-pointers-modern-cpp.md)<br/>
 [make_unique](../standard-library/memory-functions.md#make_unique)

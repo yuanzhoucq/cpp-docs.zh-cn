@@ -4,12 +4,12 @@ ms.custom: how-to
 ms.date: 11/19/2018
 ms.topic: conceptual
 ms.assetid: 7d6ebb73-fa0d-4b0b-a528-bf05de96518e
-ms.openlocfilehash: 79d85de6859096bdff3e2bc17357b721e5ce5846
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 8363139efddb2fa64057fdb995ab7bd5dfbcfd9b
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176271"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220590"
 ---
 # <a name="how-to-create-and-use-sharedptr-instances"></a>如何：创建和使用 shared_ptr 实例
 
@@ -67,4 +67,4 @@ ms.locfileid: "52176271"
 
 ## <a name="see-also"></a>请参阅
 
-[智能指针](../cpp/smart-pointers-modern-cpp.md)
+[智能指针（现代 C++）](../cpp/smart-pointers-modern-cpp.md)

@@ -4,12 +4,12 @@ ms.custom: how-to
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 19ecc5d4-297d-4c4e-b4f3-4fccab890b3d
-ms.openlocfilehash: f384da3eee0c7bca80d8d6c61f8d8cf0cfaece92
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 2dada25ea712b7bb6d48d80525c824a0457b18cf
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327000"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220540"
 ---
 # <a name="how-to-design-for-exception-safety"></a>如何：设计异常安全性
 
@@ -95,7 +95,7 @@ public:
 
 无故障（或“无引发”）保证是一个函数可提供的最有力的保证。 此保证声明，该函数将不会引发异常或允许异常传播。 但是，您无法可靠地提供此类包装，除非 (a) 您知道该函数调用的所有函数也是无故障的，或 (b) 您知道将在引发的所有异常到达该函数之前捕获这些异常，或者 (c) 您知道如何捕获和正确地处理可能到达该函数的所有异常。
 
-增强保证和基本保证均依赖析构函数无故障这一假定。 标准库中的所有容器和类型保证其析构函数不会引发。 还有一个相反的要求：标准库要求为其提供的用户定义的类型，例如，作为模板自变量，必须具有未引发的析构函数。
+增强保证和基本保证均依赖析构函数无故障这一假定。 标准库中的所有容器和类型保证其析构函数不会引发。 还有一个相反的要求：标准库要求，用户定义类型的被授予权限 — 例如，作为模板参数，必须具有非引发的析构函数。
 
 ### <a name="strong-guarantee"></a>增强保证
 
@@ -121,5 +121,5 @@ public:
 
 ## <a name="see-also"></a>请参阅
 
-[错误和异常处理](../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
-[如何：异常和非异常代码之间的接口](../cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md)
+[错误和异常处理（现代 C++）](../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
+[如何：异常和非异常代码之间建立连接](../cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md)
