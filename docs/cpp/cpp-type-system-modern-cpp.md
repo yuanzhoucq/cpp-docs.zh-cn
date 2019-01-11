@@ -3,12 +3,12 @@ title: C++ 类型系统（现代 C++）
 ms.date: 11/19/2018
 ms.topic: conceptual
 ms.assetid: 553c0ed6-77c4-43e9-87b1-c903eec53e80
-ms.openlocfilehash: 476ebabc4bfc19f995119649d6f012d4b39d8369
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: ea4d8da9af10df2fb930daaad8374d70b6704d28
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176336"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220668"
 ---
 # <a name="c-type-system-modern-c"></a>C++ 类型系统（现代 C++）
 
@@ -16,11 +16,11 @@ ms.locfileid: "52176336"
 
 ## <a name="terminology"></a>术语
 
-**变量**: 符号的数据量的名称，以便可以使用名称来访问它是指在范围内的代码定义它的数据。 C++ 中*变量*通常用于指标量数据类型的实例而其他类型的实例通常称为*对象*。
+**变量**:符号链接，以便可以使用名称来访问它是指在其中定义代码的范围内的数据的数据量的名称。 C++ 中*变量*通常用于指标量数据类型的实例而其他类型的实例通常称为*对象*。
 
-**对象**： 为了简易性和一致性，本文使用术语*对象*来引用任何实例的类或结构，并使用一般意义时包括所有类型甚至标量变量。
+**对象**:为保持简单性和一致性，本文使用术语*对象*来引用任何实例的类或结构，并使用一般意义时包括所有类型甚至标量变量。
 
-**POD 类型**（纯旧数据）： C++ 中的数据类型此非正式类别是指作为标量 （参见基础类型部分） 或*POD 类*。 POD 类没有不是 POD 的静态数据成员，没有用户定义的构造函数、用户定义的析构函数或用户定义的赋值运算符。 此外，POD 类无虚函数、基类、私有的或受保护的非静态数据成员。 POD 类型通常用于外部数据交换，例如与用 C 语言编写的模块（仅具有 POD 类型）进行的数据交换。
+**POD 类型**（纯旧数据）：C + + 中的数据类型的此非正式类别是指作为标量类型 （请参见基础类型部分） 或*POD 类*。 POD 类没有不是 POD 的静态数据成员，没有用户定义的构造函数、用户定义的析构函数或用户定义的赋值运算符。 此外，POD 类无虚函数、基类、私有的或受保护的非静态数据成员。 POD 类型通常用于外部数据交换，例如与用 C 语言编写的模块（仅具有 POD 类型）进行的数据交换。
 
 ## <a name="specifying-variable-and-function-types"></a>指定变量和函数类型
 
@@ -170,6 +170,6 @@ void someFunction() {
 
 ## <a name="see-also"></a>请参阅
 
-[欢迎回到 C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[欢迎回到 C++（现代 C++）](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [C++ 语言参考](../cpp/cpp-language-reference.md)<br/>
 [C++ 标准库](../standard-library/cpp-standard-library-reference.md)

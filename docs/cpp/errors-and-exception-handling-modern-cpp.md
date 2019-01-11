@@ -3,12 +3,12 @@ title: 错误和异常处理（现代 C++）
 ms.date: 09/17/2018
 ms.topic: conceptual
 ms.assetid: a6c111d0-24f9-4bbb-997d-3db4569761b7
-ms.openlocfilehash: d6192ab800667ceb35bf2e18dcbdc0be95ec70f5
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: c3def77d8b7a22be05259784e3b80562c8728c15
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523283"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220564"
 ---
 # <a name="errors-and-exception-handling-modern-c"></a>错误和异常处理（现代 C++）
 
@@ -60,7 +60,7 @@ int main()
 }
 ```
 
-在 C++ 异常类似于 C# 和 Java 等语言中。 中**尝试**例外情况是如果阻止*引发*它将是*捕获*通过第一个关联的**捕获**其类型与的块异常。 换而言之，执行将从跳**引发**到语句**捕获**语句。 如果找到没有任何可用的 catch 块，则`std::terminate`调用并退出程序。 C++ 中可能会引发任何类型;但是，我们建议您引发派生自的直接或间接类型`std::exception`。 在前面的示例中，异常类型， [invalid_argument](../standard-library/invalid-argument-class.md)，在中的标准库中定义[ \<stdexcept >](../standard-library/stdexcept.md)标头文件。 C + + 不提供，并不需要**最后**块来确保如果引发异常，释放所有资源。 资源获取即是初始化 (RAII) 惯用语法，后者使用智能指针，提供所需的功能的资源清理。 有关详细信息，请参阅[如何： 设计异常安全性](../cpp/how-to-design-for-exception-safety.md)。 有关 C++ 堆栈展开机制的信息，请参阅[异常和堆栈展开](../cpp/exceptions-and-stack-unwinding-in-cpp.md)。
+在 C++ 异常类似于 C# 和 Java 等语言中。 中**尝试**例外情况是如果阻止*引发*它将是*捕获*通过第一个关联的**捕获**其类型与的块异常。 换而言之，执行将从跳**引发**到语句**捕获**语句。 如果找到没有任何可用的 catch 块，则`std::terminate`调用并退出程序。 C++ 中可能会引发任何类型;但是，我们建议您引发派生自的直接或间接类型`std::exception`。 在前面的示例中，异常类型， [invalid_argument](../standard-library/invalid-argument-class.md)，在中的标准库中定义[ \<stdexcept >](../standard-library/stdexcept.md)标头文件。 C + + 不提供，并不需要**最后**块来确保如果引发异常，释放所有资源。 资源获取即是初始化 (RAII) 惯用语法，后者使用智能指针，提供所需的功能的资源清理。 有关更多信息，请参见[如何：设计异常安全性](../cpp/how-to-design-for-exception-safety.md)。 有关 C++ 堆栈展开机制的信息，请参阅[异常和堆栈展开](../cpp/exceptions-and-stack-unwinding-in-cpp.md)。
 
 ## <a name="basic-guidelines"></a>基本指导原则
 
@@ -70,7 +70,7 @@ int main()
 
 - 使用异常时处理该错误的代码可能会分开的一个或多个干扰函数调用中检测到错误的代码。 请考虑是否以处理该错误的代码紧密耦合到检测到它的代码时改为使用在性能关键循环中的错误代码。
 
-- 对于每个函数可能会引发或传播异常，提供三种异常保证之一： 增强保证、 基本保证或 nothrow (noexcept) 保证。 有关详细信息，请参阅[如何： 设计异常安全性](../cpp/how-to-design-for-exception-safety.md)。
+- 对于每个函数可能会引发或传播异常，提供三种异常保证之一： 增强保证、 基本保证或 nothrow (noexcept) 保证。 有关更多信息，请参见[如何：设计异常安全性](../cpp/how-to-design-for-exception-safety.md)。
 
 - 通过值引发异常，通过引用捕获它们。 请勿捕捉无法处理的内容。
 
@@ -100,7 +100,7 @@ C 和 C++ 程序可使用结构化的异常处理 (SEH) 机制在 Windows 操作
 
 ## <a name="see-also"></a>请参阅
 
-[如何：异常和非异常代码之间的接口](../cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md)<br/>
-[欢迎回到 C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[如何：异常和非异常代码之间建立连接](../cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md)<br/>
+[欢迎回到 C++（现代 C++）](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [C++ 语言参考](../cpp/cpp-language-reference.md)<br/>
 [C++ 标准库](../standard-library/cpp-standard-library-reference.md)

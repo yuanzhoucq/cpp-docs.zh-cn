@@ -16,12 +16,12 @@ helpviewer_keywords:
 - __addgsdword intrinsic
 - __addgsbyte intrinsic
 ms.assetid: 4fa03e69-d849-49ed-ba37-1d3aa23c2a21
-ms.openlocfilehash: 76d511b387ce52a6c5127b1e2b1f6051565f4cc6
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 9514c193468d526aa645ea7984691034feebc07a
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51331420"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220460"
 ---
 # <a name="addgsbyte-addgsword-addgsdword-addgsqword"></a>__addgsbyte, __addgsword, __addgsdword, __addgsqword
 
@@ -69,7 +69,7 @@ void __addgsqword(
 
 ## <a name="remarks"></a>备注
 
-这些内部函数可用于在内核模式下，并且这些例程仅用作内部函数。
+这些例程都仅可用作内部函数。
 
 **结束 Microsoft 专用**
 
