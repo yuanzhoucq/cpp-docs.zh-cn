@@ -41,19 +41,18 @@ helpviewer_keywords:
 - EXDEV constant
 - EILSEQ constant
 ms.assetid: 47089258-d5a5-4cd8-b193-223894dea0cf
-ms.openlocfilehash: c7c623b81d626b3d653dbd731521ffe2649671ab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2d092f9c1626f48dcdb006e18ece2a45bfeed36e
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50645596"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220603"
 ---
 # <a name="errno-constants"></a>errno 常量
 
 ## <a name="syntax"></a>语法
 
 ```
-
 #include <errno.h>
 ```
 
@@ -67,13 +66,13 @@ ERRNO.H 包含 errno 值的定义。 但是，并非 ERRNO.H 中给定的提供�
 
 下列 errno 值受支持：
 
-|返回的常量|描述|
+|返回的常量|说明|
 |-|-|
 |**ECHILD**|没有生成的进程。|
 |**EAGAIN**|没有其他进程。 尝试创建新进程失败，原因是没有更多的进程槽、没有足够的内存或者已到达最大嵌套级别。|
 |**E2BIG**|自变量列表太长。|
 |**EACCES**|权限被拒绝。 文件的权限设置不允许指定的访问权限。 此错误表示尝试通过与某个文件的特性不兼容的方式访问该文件（或者，在某些情况下为目录）。<br/><br/>例如，当尝试从未打开的文件读取、打开现有的只读文件进行写入或打开目录而不是文件时，将会发生错误。 在 MS-DOS 操作系统版本 3.0 以及更高版本下，EACCES 也可能表示锁定或共享冲突。<br/><br/>在尝试重命名文件或目录或者删除现有目录时也可能发生错误。|
-|**EBADF**|文件编号错误。 可能有两种原因：1) 指定的文件描述符不是有效值，或者未引用打开的文件。 2) 尝试写入到已打开进行只读访问的文件或设备。|
+|**EBADF**|文件编号错误。 可能由两种原因造成：1) 指定的文件描述符不是有效值，或者未引用打开的文件。 2) 尝试写入到已打开进行只读访问的文件或设备。|
 |**EDEADLOCK**|将会发生资源死锁。 数学函数的自变量未在函数域中。|
 |**EDOM**|数学自变量。|
 |**EEXIST**|文件存在。 尝试创建已存在的文件。 例如，在 _open 调用中指定 _O_CREAT 和 _O_EXCL 标志，但命名的文件已存在。|

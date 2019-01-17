@@ -21,19 +21,18 @@ helpviewer_keywords:
 - LC_NUMERIC constant
 - LC_COLLATE constant
 ms.assetid: 868f1493-fe5d-4722-acab-bfcd374a063a
-ms.openlocfilehash: 4c46f4803c7b6ff226fc41ddce7f8e4493b0db40
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 841ff5a31bfe9ee5513f76970d3b834f698b92cc
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521344"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220187"
 ---
 # <a name="locale-categories"></a>区域设置类别
 
 ## <a name="syntax"></a>语法
 
 ```
-
 #include <locale.h>
 ```
 
@@ -45,7 +44,7 @@ ms.locfileid: "51521344"
 |---------------------|-------------------------------|
 |`LC_ALL`|所有区域设置特定的行为（所有类别）|
 |`LC_COLLATE`|`strcoll` 和 `strxfrm` 函数的行为|
-|`LC_CTYPE`|字符处理函数的行为（不受影响的 isdigit、`isxdigit`、`mbstowcs` 和 `mbtowc` 除外）|
+|`LC_CTYPE`|字符处理函数的行为（不受影响的 isdigit`isdigit`、`isxdigit`、`mbstowcs` 和 `mbtowc` 除外）|
 |`LC_MAX`|与 `LC_TIME` 相同|
 |`LC_MIN`|与 `LC_ALL` 相同|
 |`LC_MONETARY`|`localeconv` 函数返回的货币格式信息|

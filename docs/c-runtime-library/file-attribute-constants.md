@@ -25,19 +25,18 @@ helpviewer_keywords:
 - _A_HIDDEN constant
 - _A_RDONLY constant
 ms.assetid: 8dc8ccb9-99f5-446b-876c-7ebecc2f764f
-ms.openlocfilehash: 9aceef7f9c28da3ed3d0d98f4fc579a3c17480e7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 90aacc1e1e8c45f739c1f6aec973f55e7fab67d9
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50660338"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220174"
 ---
 # <a name="file-attribute-constants"></a>文件特性常量
 
 ## <a name="syntax"></a>语法
 
 ```
-
 #include <io.h>
 ```
 
@@ -47,7 +46,7 @@ ms.locfileid: "50660338"
 
 特性可以通过以下清单常量表示：
 
-|返回的常量|描述|
+|返回的常量|说明|
 |-|-|
 |`_A_ARCH`| 存档。 每当通过 BACKUP 命令更改或清除文件时进行设置。 值：0x20|
 |`_A_HIDDEN`| 隐藏文件。 使用 DIR 命令时通常不可见，除非使用 /AH 选项。 返回常规文件和具有此特性的文件的相关信息。 值：0x02|
