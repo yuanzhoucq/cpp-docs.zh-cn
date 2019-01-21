@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -fp compiler option [C++]
 - /fp compiler option [C++]
 ms.assetid: 10469d6b-e68b-4268-8075-d073f4f5d57e
-ms.openlocfilehash: 78abe5e3b491ec0d658a40628dadc81e334c212f
-ms.sourcegitcommit: d94714522428834a02ede6e6884572f0f6ca9824
+ms.openlocfilehash: 77e6d0c97f1d0381fe32ae23f8d7e8bd02ddf219
+ms.sourcegitcommit: 22f7c4a9b4fc2158fb5283810f15275803cafe10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51597533"
+ms.lasthandoff: 01/21/2019
+ms.locfileid: "54417637"
 ---
 # <a name="fp-specify-floating-point-behavior"></a>/fp （指定浮点行为）
 
@@ -24,7 +24,7 @@ ms.locfileid: "51597533"
 
 ## <a name="syntax"></a>语法
 
-> **/fp:**[**精确** | **严格** | **快速** | **除**[**-**]]
+> **/fp:**[**precise** | **strict** | **fast** | **except**[**-**]]
 
 ### <a name="arguments"></a>自变量
 
@@ -71,13 +71,13 @@ ms.locfileid: "51597533"
 
 ### <a name="using-pragmas-to-control-floating-point-behavior"></a>使用杂注控制浮点行为
 
-编译器提供了三个杂注 directivess 重写命令行上指定的浮点行为： [float_control](../../preprocessor/float-control.md)， [fenv_access](../../preprocessor/fenv-access.md)，和[fp_contract](../../preprocessor/fp-contract.md). 这些杂注可用于控制在函数级别，不在函数的浮点行为。 请注意这些杂注不直接对应 **/fp**选项。 下表显示了如何 **/fp**选项和杂注将映射到对方。 有关详细信息，请参阅文档以了解各个选项和杂注。
+编译器提供了三个杂注指令来重写命令行上指定的浮点行为： [float_control](../../preprocessor/float-control.md)， [fenv_access](../../preprocessor/fenv-access.md)，和[fp_contract](../../preprocessor/fp-contract.md). 这些杂注可用于控制在函数级别，不在函数的浮点行为。 请注意这些杂注不直接对应 **/fp**选项。 下表显示了如何 **/fp**选项和杂注将映射到对方。 有关详细信息，请参阅文档以了解各个选项和杂注。
 
 ||float_control(precise)|float_control(except)|fenv_access|fp_contract|
 |-|-|-|-|-|
-|**/fp: fast**|关闭|关闭|关闭|on|
-|**/fp： 精确**|on|关闭|关闭|on|
-|**/fp： 除外**|on|on|on|关闭|
+|**/fp:fast**|关闭|关闭|关闭|on|
+|**/fp:precise**|on|关闭|关闭|on|
+|**/fp:except**|on|on|on|关闭|
 
 ### <a name="the-default-floating-point-environment"></a>默认的浮动点环境
 

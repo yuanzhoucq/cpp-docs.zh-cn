@@ -30,12 +30,12 @@ helpviewer_keywords:
 - wremove function
 - remove function
 ms.assetid: b6345ec3-3289-4645-93a4-28b9e478cc19
-ms.openlocfilehash: d5636912ea36fd1b1412a556d516ac3e8184e0b4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 05f1c5b6760520e5a982777faa903b3c5116ad05
+ms.sourcegitcommit: 22f7c4a9b4fc2158fb5283810f15275803cafe10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613962"
+ms.lasthandoff: 01/21/2019
+ms.locfileid: "54417598"
 ---
 # <a name="remove-wremove"></a>remove、_wremove
 
@@ -59,7 +59,7 @@ int _wremove(
 
 ## <a name="return-value"></a>返回值
 
-如果成功删除文件，则这些函数将返回 0。 否则，它将返回-1，并设置**errno**到**EACCES**以指示路径指定只读文件或文件已打开，或设置为**ENOENT**指示未找到文件名或路径或者路径指定一个目录。
+如果成功删除文件，则这些函数将返回 0。 否则，它将返回-1，并设置**errno**到**EACCES**以指示该路径指定只读文件中，指定一个目录，或该文件已打开，或设置为**ENOENT**若要指示未找到文件名或路径。
 
 有关这些代码以及其他返回代码的详细信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
