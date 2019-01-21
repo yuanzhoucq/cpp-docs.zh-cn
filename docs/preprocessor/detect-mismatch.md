@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pragmas, detect_mismatch
 - detect_mismatch pragma
 ms.assetid: ddb13ac9-0e2f-40ce-be69-7e44c04f5a12
-ms.openlocfilehash: 2973a4738aa54e9f454190b18bcabff92077b284
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fb6f147f1591f010298e84cb28f05b40dafaeb63
+ms.sourcegitcommit: 22f7c4a9b4fc2158fb5283810f15275803cafe10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50633319"
+ms.lasthandoff: 01/21/2019
+ms.locfileid: "54417624"
 ---
 # <a name="detectmismatch"></a>detect_mismatch
 将记录放在一个对象中。 链接器将检查这些记录中的潜在不匹配项。
@@ -21,7 +21,7 @@ ms.locfileid: "50633319"
 ## <a name="syntax"></a>语法
 
 ```
-#pragma detect_mismatch( "name", "value"))
+#pragma detect_mismatch("name", "value")
 ```
 
 ## <a name="remarks"></a>备注

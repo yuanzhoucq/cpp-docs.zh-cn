@@ -32,12 +32,12 @@ helpviewer_keywords:
 - files [C++], removing
 - _tunlink function
 ms.assetid: 5e4f5f1b-1e99-4391-9b18-9ac63c32fae8
-ms.openlocfilehash: 7565679c58af83d64fd59419e8e841ee48133edf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ec59a02f1302fe4a2149889cf1b48090d061d6b2
+ms.sourcegitcommit: 22f7c4a9b4fc2158fb5283810f15275803cafe10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544191"
+ms.lasthandoff: 01/21/2019
+ms.locfileid: "54417611"
 ---
 # <a name="unlink-wunlink"></a>_unlink、_wunlink
 
@@ -61,7 +61,7 @@ int _wunlink(
 
 ## <a name="return-value"></a>返回值
 
-如果成功，则这些函数均返回 0。 否则，该函数返回-1 并设置**errno**到**EACCES**，表示路径指定只读文件，或设置为**ENOENT**，这意味着，文件或路径找不到或指定一个目录的路径。
+如果成功，则这些函数均返回 0。 否则，该函数返回-1 并设置**errno**到**EACCES**，表示路径指定只读文件或目录，或设置为**ENOENT**，这意味着，文件或路径未找到。
 
 有关这些代码以及其他返回代码的详细信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
