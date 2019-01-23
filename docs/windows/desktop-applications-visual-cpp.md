@@ -11,19 +11,19 @@ ms.locfileid: "51694564"
 ---
 # <a name="desktop-applications-visual-c"></a>桌面应用程序 （Visual c + +）
 
-一个*桌面应用程序*c + + 中是可以访问 Windows Api 和是运行在窗口中或在系统控制台中的完整集的本机应用程序。 （尽管不再受正式支持 Windows XP，并且从那以后引入了许多 Windows api），在 c + + 的桌面应用程序可以在 Windows XP 到 Windows 10 上运行。
+c + + *桌面应用程序* 是可以访问完整的 Windows API 并且运行在窗口中或在系统控制台中的本机应用程序。 （尽管 Windows XP 不再受正式支持，并且从那以后引入了许多 Windows API），在 c + + 的桌面应用程序可以在 Windows XP 到 Windows 10 上运行。
 
-桌面应用程序与来自通用 Windows 平台 (UWP) 应用于运行 Windows 10 电脑以及 XBox、 Windows Phone、 Surface Hub 和其他设备上可以运行不同。 有关桌面 vs 的详细信息。UWP 应用程序，请参阅[选择你的技术](/windows/desktop/choose-your-technology)。
+桌面应用程序与来自通用 Windows 平台 (UWP) 应用于运行 Windows 10 电脑以及 XBox、 Windows Phone、 Surface Hub 和其他设备上可以运行不同。 有关桌面应用程序与 UWP 应用程序的详细比较，请参阅[选择平台(英语内容)](/windows/desktop/choose-your-technology)。
 
 ### <a name="desktop-bridge"></a>桌面桥
 
-在 Windows 10 可以打包你的现有桌面应用程序或作为 UWP 应用的 COM 对象和添加 UWP 功能，如触摸屏输入，或从现代 Windows API 集调用 Api。 您还可以向 Visual Studio 中，以及它们在单个包，并使用 Windows Api 它们之间通信的程序包的桌面解决方案添加 UWP 应用。
+在 Windows 10 中，可以将现有的桌面应用程序或者 COM 对象打包为为 UWP 应用并添加 UWP 功能，如触摸屏输入，或从现代 Windows API 集调用 API。 您还可以向 Visual Studio 的桌面解决方案中添加 UWP 应用，以及将其封装在单个包中，并使用 Windows API 以使应用之间通信。
 
-在 Visual Studio 2017 版本 15.4 和更高版本中，可以创建一个 Windows 应用程序程序包项目，从而大大简化了打包现有的桌面应用程序的工作。 有一些限制方面的注册表调用或桌面应用程序的 Api 使用，但在许多情况下，您可以创建替代代码路径来在应用包运行时实现类似功能。 有关详细信息，请参阅[桌面桥](/windows-uwp/porting/desktop-to-uwp-root)。
+在 Visual Studio 2017 版本 15.4 和更高版本中，可以创建一个 Windows 应用程序程序包项目，从而大大简化了打包现有的桌面应用程序的工作。 有一些限制方面的注册表调用或桌面应用程序的 API 使用，但在多数情况下，您可以创建替代代码路径来在应用包运行时实现类似功能。 有关详细信息，请参阅[桌面桥(该页面目前无法访问)](/windows-uwp/porting/desktop-to-uwp-root)。
 
 ### <a name="terminology"></a>术语
 
-- 一个*Win32*应用程序是在可以进行的 c + + 的桌面应用程序使用的本机 Windows [Windows C Api 和/或 COM Api](/windows/desktop/apiindex/windows-api-list) CRT 和标准库 Api 和第三方库。 在窗口中运行的 Win32 应用程序需要开发人员可以显式使用内部 Windows 过程函数的 Windows 消息。 不管名称如何，Win32 应用程序可以编译为 32 位 (x86) 或 64 位 (x64) 二进制。 在 Visual Studio IDE 中的条款 x86 和 Win32 是同义的。
+- *Win32*应用程序是在可以进行的 c + + 的桌面应用程序使用的本机 Windows [Windows C Api 和/或 COM Api](/windows/desktop/apiindex/windows-api-list) CRT 和标准库 Api 和第三方库。 在窗口中运行的 Win32 应用程序需要开发人员可以显式使用内部 Windows 过程函数的 Windows 消息。 不管名称如何，Win32 应用程序可以编译为 32 位 (x86) 或 64 位 (x64) 二进制。 在 Visual Studio IDE 中的条款 x86 和 Win32 是同义的。
 
 - [组件对象模型 (COM)](/windows/desktop/com/the-component-object-model)是一种规范，用来相互通信的不同语言编写的程序。 许多 Windows 组件作为 COM 对象实现，并且遵循标准 COM 规则对象的创建过程的接口发现和对象的析构。  使用 c + + 桌面应用程序的 COM 对象是相对简单，但更高级编写你自己的 COM 对象。 [活动模板库 (ATL)](../atl/atl-com-desktop-components.md)提供宏和 helper 函数，简化了 COM 开发。
 
