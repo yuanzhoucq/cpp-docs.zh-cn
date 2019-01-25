@@ -21,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSid class
 ms.assetid: be58b7ca-5958-49c3-a833-ca341aaaf753
-ms.openlocfilehash: 57edb46047021d0ede04164584e79748028e05b3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6fcff646a577500fd05b7c938b2c336ebe725957
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50465359"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894310"
 ---
 # <a name="csid-class"></a>CSid 类
 
@@ -85,11 +85,11 @@ class CSid
 |||
 |-|-|
 |[operator ==](#operator_eq_eq)|测试相等的两个安全描述符对象|
-|[运算符 ！ =](#operator_neq)|测试不相等的两个安全描述符对象|
+|[operator !=](#operator_neq)|测试不相等的两个安全描述符对象|
 |[运算符 \<](#operator_lt_)|比较两个安全描述符对象的相对值。|
-|[运算符 >](#operator_gt_)|比较两个安全描述符对象的相对值。|
-|[运算符 \<=](#operator_lt__eq)|比较两个安全描述符对象的相对值。|
-|[运算符 > =](#operator_gt__eq)|比较两个安全描述符对象的相对值。|
+|[operator >](#operator_gt_)|比较两个安全描述符对象的相对值。|
+|[operator \<=](#operator_lt__eq)|比较两个安全描述符对象的相对值。|
+|[operator >=](#operator_gt__eq)|比较两个安全描述符对象的相对值。|
 
 ## <a name="remarks"></a>备注
 
@@ -232,7 +232,7 @@ bool EqualPrefix(const CSid& rhs) const throw();
 
 ### <a name="remarks"></a>备注
 
-请参阅[EqualPrefixSid](https://msdn.microsoft.com/library/windows/desktop/aa446621)适用于更多详细信息的 Windows SDK 中。
+请参阅[EqualPrefixSid](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-equalprefixsid)适用于更多详细信息的 Windows SDK 中。
 
 ##  <a name="getlength"></a>  CSid::GetLength
 
@@ -556,7 +556,7 @@ SID_NAME_USE SidNameUse() const throw();
 
 返回存储一个值，该值描述的状态的数据成员的值`CSid`对象。
 
-|“值”|描述|
+|值|描述|
 |-----------|-----------------|
 |SidTypeUser|指示用户`SID`（安全标识符）。|
 |SidTypeGroup|指示组`SID`。|
