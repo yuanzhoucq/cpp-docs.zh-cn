@@ -52,12 +52,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAccessToken class
 ms.assetid: bb5c5945-56a5-4083-b442-76573cee83ab
-ms.openlocfilehash: e8fadb6825bbdc970e952d2ea6c26a27b4837dfc
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: e53160860211ba09114f2d4d101a2eaaf7de941f
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694525"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894233"
 ---
 # <a name="caccesstoken-class"></a>CAccessToken 类
 
@@ -224,7 +224,7 @@ bool CreateImpersonationToken(
 
 ### <a name="remarks"></a>备注
 
-`CreateImpersonationToken` 调用[DuplicateToken](https://msdn.microsoft.com/library/windows/desktop/aa446616)以创建新的模拟令牌。
+`CreateImpersonationToken` 调用[DuplicateToken](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-duplicatetoken)以创建新的模拟令牌。
 
 ##  <a name="createprimarytoken"></a>  CAccessToken::CreatePrimaryToken
 
@@ -661,7 +661,7 @@ bool GetProcessToken(DWORD dwDesiredAccess, HANDLE hProcess = NULL) throw();
 
 ### <a name="remarks"></a>备注
 
-调用[OpenProcessToken](https://msdn.microsoft.com/library/aa379295) Win32 函数。
+调用[OpenProcessToken](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-openprocesstoken) Win32 函数。
 
 ##  <a name="getprofile"></a>  CAccessToken::GetProfile
 
@@ -1093,7 +1093,7 @@ bool PrivilegeCheck(
 
 ### <a name="remarks"></a>备注
 
-当`PrivilegeCheck`返回时，`Attributes`的每个成员[LUID_AND_ATTRIBUTES](/windows/desktop/api/winnt/ns-winnt-_luid_and_attributes)结构设置为 SE_PRIVILEGE_USED_FOR_ACCESS，如果启用了相应的权限。 此方法调用[PrivilegeCheck](https://msdn.microsoft.com/library/windows/desktop/aa379304) Win32 函数。
+当`PrivilegeCheck`返回时，`Attributes`的每个成员[LUID_AND_ATTRIBUTES](/windows/desktop/api/winnt/ns-winnt-_luid_and_attributes)结构设置为 SE_PRIVILEGE_USED_FOR_ACCESS，如果启用了相应的权限。 此方法调用[PrivilegeCheck](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-privilegecheck) Win32 函数。
 
 ##  <a name="revert"></a>  CAccessToken::Revert
 

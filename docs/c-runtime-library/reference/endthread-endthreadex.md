@@ -30,12 +30,12 @@ helpviewer_keywords:
 - _endthreadex function
 - threading [C++], terminating threads
 ms.assetid: 18a91f2f-659e-40b4-b266-ec12dcf2abf5
-ms.openlocfilehash: 48a2ce90b6bc90d40f6071898e1e5182502e938f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2f54ca9c4cd5e863ca960f1d9c3634b85e7896dd
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50597478"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893296"
 ---
 # <a name="endthread-endthreadex"></a>_endthread、_endthreadex
 
@@ -62,7 +62,7 @@ void _endthreadex(
 > [!NOTE]
 > 对于与 Libcmt.lib 链接的可执行文件，请不要调用 Win32 [ExitThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-exitthread) API；这将阻止运行时系统回收已分配的资源。 **_endthread**并 **_endthreadex**回收分配的线程资源，然后调用**ExitThread**。
 
-**_endthread**会自动关闭线程句柄。 (此行为不同于 Win32 **ExitThread** API。)因此，当你使用 **_beginthread**并 **_endthread**，不要显式关闭线程句柄通过调用 Win32 [CloseHandle](https://msdn.microsoft.com/library/windows/desktop/ms724211.aspx) API。
+**_endthread**会自动关闭线程句柄。 (此行为不同于 Win32 **ExitThread** API。)因此，当你使用 **_beginthread**并 **_endthread**，不要显式关闭线程句柄通过调用 Win32 [CloseHandle](/windows/desktop/api/handleapi/nf-handleapi-closehandle) API。
 
 与 Win32 **ExitThread** API， **_endthreadex**不会关闭线程句柄。 因此，当你使用 **_beginthreadex**并 **_endthreadex**，您必须通过调用 Win32 关闭线程句柄**CloseHandle** API。
 

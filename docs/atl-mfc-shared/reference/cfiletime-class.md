@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CFileTime class
 - shared classes, CFileTime
 ms.assetid: 1a358a65-1383-4124-b0d4-59b026e6860f
-ms.openlocfilehash: 5d3c81a31d49a2817b4605f734d5348dc518076a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 42c89bcfa064bbb151f9d110cbd25763dbd44185
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614222"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893933"
 ---
 # <a name="cfiletime-class"></a>CFileTime 类
 
@@ -59,15 +59,15 @@ class CFileTime :  public FILETIME
 
 |名称|描述|
 |----------|-----------------|
-|[CFileTime::operator-](#operator_-)|此运算符用于对执行减法`CFileTime`或`CFileTimeSpan`对象。|
-|[CFileTime::operator ！ =](#operator_neq)|此运算符比较两个`CFileTime`对象是否不相等。|
+|[CFileTime::operator -](#operator_-)|此运算符用于对执行减法`CFileTime`或`CFileTimeSpan`对象。|
+|[CFileTime::operator !=](#operator_neq)|此运算符比较两个`CFileTime`对象是否不相等。|
 |[CFileTime::operator +](#operator_add)|此运算符用于对 `CFileTimeSpan` 对象执行加法。|
-|[CFileTime::operator + =](#operator_add_eq)|此运算符用于对 `CFileTimeSpan` 对象执行加法并对它赋予结果。|
+|[CFileTime::operator +=](#operator_add_eq)|此运算符用于对 `CFileTimeSpan` 对象执行加法并对它赋予结果。|
 |[CFileTime::operator &lt;](#operator_lt)|此运算符比较两个 `CFileTime` 对象以确定较小者。|
 |[CFileTime::operator &lt;=](#operator_lt_eq)|此运算符比较两个 `CFileTime` 对象以确定是否相等或较小者。|
 |[CFileTime::operator =](#operator_eq)|赋值运算符。|
-|[CFileTime::operator =](#operator_-_eq)|此运算符用于对执行减法`CFileTimeSpan`对象，并将结果分配给当前对象。|
-|[CFileTime::operator = =](#operator_eq_eq)|此运算符比较两个 `CFileTime` 对象是否相等。|
+|[CFileTime::operator -=](#operator_-_eq)|此运算符用于对执行减法`CFileTimeSpan`对象，并将结果分配给当前对象。|
+|[CFileTime::operator ==](#operator_eq_eq)|此运算符比较两个 `CFileTime` 对象是否相等。|
 |[CFileTime::operator &gt;](#operator_gt)|此运算符比较两个 `CFileTime` 对象以确定较大者。|
 |[CFileTime::operator &gt;=](#operator_gt_eq)|此运算符比较两个 `CFileTime` 对象以确定是否相等或较大者。|
 
@@ -124,7 +124,7 @@ CFileTime(ULONGLONG nTime) throw();
 ### <a name="parameters"></a>参数
 
 *ft*<br/>
-一个[FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284)结构。
+一个[FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime)结构。
 
 *nTime*<br/>
 日期和时间表示为一个 64 位值。
@@ -225,7 +225,7 @@ static const ULONGLONG Minute = Second* 60;
 
 有关示例，请参阅[CFileTime::Millisecond](#millisecond)。
 
-##  <a name="operator_-"></a>  CFileTime::operator-
+##  <a name="operator_-"></a>  CFileTime::operator -
 
 此运算符用于对执行减法`CFileTime`或`CFileTimeSpan`对象。
 
@@ -236,7 +236,7 @@ CFileTimeSpan operator-(CFileTime ft) const throw();
 
 ### <a name="parameters"></a>参数
 
-*s p a n*<br/>
+*span*<br/>
 一个 `CFileTimeSpan` 对象。
 
 *ft*<br/>
@@ -273,7 +273,7 @@ CFileTime operator+(CFileTimeSpan span) const throw();
 
 ### <a name="parameters"></a>参数
 
-*s p a n*<br/>
+*span*<br/>
 一个 `CFileTimeSpan` 对象。
 
 ### <a name="return-value"></a>返回值
@@ -290,7 +290,7 @@ CFileTime& operator+=(CFileTimeSpan span) throw();
 
 ### <a name="parameters"></a>参数
 
-*s p a n*<br/>
+*span*<br/>
 一个 `CFileTimeSpan` 对象。
 
 ### <a name="return-value"></a>返回值
@@ -352,7 +352,7 @@ CFileTime& operator=(const FILETIME& ft) throw();
 
 返回已更新`CFileTime`对象。
 
-##  <a name="operator_-_eq"></a>  CFileTime::operator =
+##  <a name="operator_-_eq"></a>  CFileTime::operator -=
 
 此运算符用于对执行减法`CFileTimeSpan`对象，并将结果分配给当前对象。
 
@@ -362,7 +362,7 @@ CFileTime& operator-=(CFileTimeSpan span) throw();
 
 ### <a name="parameters"></a>参数
 
-*s p a n*<br/>
+*span*<br/>
 一个`CFileTimeSpan`对象，其中包含要减去的相对时间。
 
 ### <a name="return-value"></a>返回值
@@ -475,7 +475,7 @@ static const ULONGLONG Week = Day* 7;
 
 ## <a name="see-also"></a>请参阅
 
-[FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284)<br/>
+[FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime)<br/>
 [CFileTimeSpan 类](../../atl-mfc-shared/reference/cfiletimespan-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>
 [ATL/MFC 共享类](../../atl-mfc-shared/atl-mfc-shared-classes.md)

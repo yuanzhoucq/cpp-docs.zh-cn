@@ -28,12 +28,12 @@ helpviewer_keywords:
 - ranges, message map
 - message map ranges
 ms.assetid: 531b15ce-32b5-4ca0-a849-bb519616c731
-ms.openlocfilehash: 4012f1f0729ff0f46a8504c44f27a37cd55c77e5
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 6c6364dcf5d558bcdd25a2957721df1863d1f73f
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327442"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893660"
 ---
 # <a name="message-map-macros-mfc"></a>消息映射宏 (MFC)
 
@@ -84,7 +84,7 @@ BEGIN_MESSAGE_MAP( theClass, baseClass )
 
 ### <a name="parameters"></a>参数
 
-*类*<br/>
+*theClass*<br/>
 指定的消息将此映射的类的名称。
 
 *baseClass*<br/>
@@ -120,7 +120,7 @@ BEGIN_TEMPLATE_MESSAGE_MAP( theClass, type_name, baseClass )
 
 ### <a name="parameters"></a>参数
 
-*类*<br/>
+*theClass*<br/>
 指定的消息将此映射的类的名称。
 
 type_name<br/>
@@ -135,7 +135,7 @@ type_name<br/>
 
 在您的类的方法实现部分，开始消息映射 BEGIN_TEMPLATE_MESSAGE_MAP 宏;然后为每个消息处理程序方法添加宏项，就像为标准的消息映射。 为与 BEGIN_MESSAGE_MAP 宏保持一致，已完成与在模板消息映射[END_MESSAGE_MAP](message-map-macros-mfc.md#end_message_map)宏。
 
-有关实现消息映射的模板类的详细信息，请参阅[如何： 为模板类创建消息映射](../how-to-create-a-message-map-for-a-template-class.md)。
+有关实现消息映射的模板类的详细信息，请参阅[如何：为模板类创建消息映射](../how-to-create-a-message-map-for-a-template-class.md)。
 
 ### <a name="requirements"></a>要求
 
@@ -252,7 +252,7 @@ ON_COMMAND_EX(id, memberFxn);
 
 命令消息处理程序的扩展的形式是可用于高级用途。 ON_COMMAND_EX 宏用于此类消息处理程序，并且它提供的超集[ON_COMMAND](message-map-macros-mfc.md#on_command)功能。 扩展的命令处理程序成员函数采用一个参数，其中包含的命令 ID，UINT，并返回一个布尔值。 返回值应为 TRUE 以指示已处理该命令;否则路由到其他命令目标对象将继续。
 
-有关详细信息，请参阅技术说明 [TN006： 消息映射] tm006 消息 maps.md)。
+有关详细信息，请参阅技术说明 [TN006:消息映射] tm006-消息-maps.md)。
 
 ### <a name="requirements"></a>要求
 
@@ -261,7 +261,7 @@ ON_COMMAND_EX(id, memberFxn);
 ### <a name="see-also"></a>请参阅
 
 [ON_COMMAND](message-map-macros-mfc.md#on_command)<br/>
-[TN006：消息映射](../tn006-message-maps.md)
+[TN006:消息映射](../tn006-message-maps.md)
 
 ## <a name="on_control"></a>  ON_CONTROL
 
@@ -383,97 +383,97 @@ OLE 命令的标识符。
 
 `IOleCommandTarget`标准菜单命令已实现 mfc 中的以下宏：
 
-**ON_OLECMD_CLEARSELECTION （)**
+**ON_OLECMD_CLEARSELECTION( )**
 
 将调度清除编辑命令。 实现为：
 
 `ON_OLECMD(NULL, OLECMDID_CLEARSELECTION, ID_EDIT_CLEAR)`
 
-**ON_OLECMD_COPY （)**
+**ON_OLECMD_COPY( )**
 
 将调度编辑复制命令。 实现为：
 
 `ON_OLECMD(NULL, OLECMDID_COPY, ID_EDIT_COPY)`
 
-**ON_OLECMD_CUT （)**
+**ON_OLECMD_CUT( )**
 
 将调度编辑剪切命令。 实现为：
 
 `ON_OLECMD(NULL, OLECMDID_CUT, ID_EDIT_CUT)`
 
-**ON_OLECMD_NEW （)**
+**ON_OLECMD_NEW( )**
 
 将调度文件新的命令。 实现为：
 
 `ON_OLECMD(NULL, OLECMDID_NEW, ID_FILE_NEW)`
 
-**ON_OLECMD_OPEN （)**
+**ON_OLECMD_OPEN( )**
 
 将调度文件已打开的命令。 实现为：
 
 `ON_OLECMD(NULL, OLECMDID_OPEN, ID_FILE_OPEN)`
 
-**ON_OLECMD_PAGESETUP （)**
+**ON_OLECMD_PAGESETUP( )**
 
 将调度文件页安装程序命令。 实现为：
 
 `ON_OLECMD(NULL, OLECMDID_PAGESETUP, ID_FILE_PAGE_SETUP)`
 
-**ON_OLECMD_PASTE （)**
+**ON_OLECMD_PASTE( )**
 
 将调度编辑粘贴命令。 实现为：
 
 `ON_OLECMD(NULL, OLECMDID_PASTE, ID_EDIT_PASTE)`
 
-**ON_OLECMD_PASTESPECIAL （)**
+**ON_OLECMD_PASTESPECIAL( )**
 
 将调度的编辑选择性粘贴命令。 实现为：
 
 `ON_OLECMD(NULL, OLECMDID_PASTESPECIAL, ID_EDIT_PASTE_SPECIAL)`
 
-**ON_OLECMD_PRINT （)**
+**ON_OLECMD_PRINT( )**
 
 将调度文件打印命令。 实现为：
 
 `ON_OLECMD(NULL, OLECMDID_PRINT, ID_FILE_PRINT)`
 
-**ON_OLECMD_PRINTPREVIEW （)**
+**ON_OLECMD_PRINTPREVIEW( )**
 
 将调度文件打印预览命令。 实现为：
 
 `ON_OLECMD(NULL, OLECMDID_PRINTPREVIEW, ID_FILE_PRINT_PREVIEW)`
 
-**ON_OLECMD_REDO （)**
+**ON_OLECMD_REDO( )**
 
 将调度编辑重做命令。 实现为：
 
 `ON_OLECMD(NULL, OLECMDID_REDO, ID_EDIT_REDO)`
 
-**ON_OLECMD_SAVE （)**
+**ON_OLECMD_SAVE( )**
 
 将调度文件将保存命令。 实现为：
 
 `ON_OLECMD(NULL, OLECMDID_SAVE, ID_FILE_SAVE)`
 
-**ON_OLECMD_SAVE_AS （)**
+**ON_OLECMD_SAVE_AS( )**
 
 将调度文件另存为命令。 实现为：
 
 `ON_OLECMD(NULL, OLECMDID_SAVEAS, ID_FILE_SAVE_AS)`
 
-**ON_OLECMD_SAVE_COPY_AS （)**
+**ON_OLECMD_SAVE_COPY_AS( )**
 
 将调度文件副本另存为命令。 实现为：
 
 `ON_OLECMD(NULL, OLECMDID_SAVECOPYAS, ID_FILE_SAVE_COPY_AS)`
 
-**ON_OLECMD_SELECTALL （)**
+**ON_OLECMD_SELECTALL( )**
 
 将调度编辑选择的所有命令。 实现为：
 
 `ON_OLECMD(NULL, OLECMDID_SELECTALL, ID_EDIT_SELECT_ALL)`
 
-**ON_OLECMD_UNDO （)**
+**ON_OLECMD_UNDO( )**
 
 将调度编辑撤消命令。 实现为：
 
@@ -528,7 +528,7 @@ END_MESSAGE_MAP()
 
 ### <a name="see-also"></a>请参阅
 
-[RegisterWindowMessage](https://msdn.microsoft.com/library/windows/desktop/ms644947)<br/>
+[RegisterWindowMessage](/windows/desktop/api/winuser/nf-winuser-registerwindowmessagea)<br/>
 [用户定义的处理程序](user-defined-handlers.md)
 
 ## <a name="on_registered_thread_message"></a>  ON_REGISTERED_THREAD_MESSAGE

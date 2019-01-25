@@ -2,78 +2,18 @@
 title: 内容
 ms.date: 11/04/2016
 ms.assetid: b7858099-7d7f-4cd9-9fa0-fba4832f2dd2
-ms.openlocfilehash: 13f2d0700f4200caee0b87e1923711fef5e7ae14
-ms.sourcegitcommit: 2ebbf8093fadb9a1b78a4381439bcd5c01a89267
+ms.openlocfilehash: 2cc9ff535939a3da623b99b769e520b739aabc8c
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54397285"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894375"
 ---
 # <a name="contents"></a>内容
 
 [1. 介绍](../../parallel/openmp/1-introduction.md)
 
 [2. 指令](../../parallel/openmp/2-directives.md)
-
-[2.1 指令格式](../../parallel/openmp/2-1-directive-format.md)
-
-[2.2 条件编译](../../parallel/openmp/2-2-conditional-compilation.md)
-
-[2.3 parallel 构造](../../parallel/openmp/2-3-parallel-construct.md)
-
-[2.4 工作共享构造](../../parallel/openmp/2-4-work-sharing-constructs.md)
-
-[2.4.1 for 构造](../../parallel/openmp/2-4-1-for-construct.md)
-
-[2.4.2 sections 构造](../../parallel/openmp/2-4-2-sections-construct.md)
-
-[2.4.3 single 构造](../../parallel/openmp/2-4-3-single-construct.md)
-
-[2.5 组合的并行工作共享构造](../../parallel/openmp/2-5-combined-parallel-work-sharing-constructs.md)
-
-[2.5.1 parallel for 构造](../../parallel/openmp/2-5-1-parallel-for-construct.md)
-
-[2.5.2 parallel sections 构造](../../parallel/openmp/2-5-2-parallel-sections-construct.md)
-
-[2.6 Master 和同步指令](../../parallel/openmp/2-6-master-and-synchronization-directives.md)
-
-[2.6.1 master 构造](../../parallel/openmp/2-6-1-master-construct.md)
-
-[2.6.2 critical 构造](../../parallel/openmp/2-6-2-critical-construct.md)
-
-[2.6.3 barrier 指令](../../parallel/openmp/2-6-3-barrier-directive.md)
-
-[2.6.4 atomic 构造](../../parallel/openmp/2-6-4-atomic-construct.md)
-
-[2.6.5 flush 指令](../../parallel/openmp/2-6-5-flush-directive.md)
-
-[2.6.6 ordered 构造](../../parallel/openmp/2-6-6-ordered-construct.md)
-
-[2.7 数据环境](../../parallel/openmp/2-7-data-environment.md)
-
-[2.7.1 threadprivate 指令](../../parallel/openmp/2-7-1-threadprivate-directive.md)
-
-[2.7.2 数据共享特性子句](../../parallel/openmp/2-7-2-data-sharing-attribute-clauses.md)
-
-[2.7.2.1 private](../../parallel/openmp/2-7-2-1-private.md)
-
-[2.7.2.2 firstprivate](../../parallel/openmp/2-7-2-2-firstprivate.md)
-
-[2.7.2.3 lastprivate](../../parallel/openmp/2-7-2-3-lastprivate.md)
-
-[2.7.2.4 shared](../../parallel/openmp/2-7-2-4-shared.md)
-
-[2.7.2.5 default](../../parallel/openmp/2-7-2-5-default.md)
-
-[2.7.2.6 reduction](../../parallel/openmp/2-7-2-6-reduction.md)
-
-[2.7.2.7 copyin](../../parallel/openmp/2-7-2-7-copyin.md)
-
-[2.7.2.8 copyprivate](../../parallel/openmp/2-7-2-8-copyprivate.md)
-
-[2.8 指令绑定](../../parallel/openmp/2-8-directive-binding.md)
-
-[2.9 指令嵌套](../../parallel/openmp/2-9-directive-nesting.md)
 
 [3. 运行时库函数](../../parallel/openmp/3-run-time-library-functions.md)
 

@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CGopherFileFind [MFC], GetScreenName
 - CGopherFileFind [MFC], IsDots
 ms.assetid: 8465a979-6323-496d-ab4b-e81383fb999d
-ms.openlocfilehash: 7d5c8ceeaeb87b2e0f099ac027bbacc744598e8e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dafa313d9d2c7aae13e83a891c79d437ac276e08
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50662405"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894492"
 ---
 # <a name="cgopherfilefind-class"></a>CGopherFileFind 类
 
@@ -123,7 +123,7 @@ explicit CGopherFileFind(
 
 ### <a name="remarks"></a>备注
 
-默认值为*dwContext*发送到 mfc`CGopherFileFind`对象从[CInternetSession](../../mfc/reference/cinternetsession-class.md)对象创建`CGopherFileFind`对象。 构造时`CGopherFileFind`对象，您可以覆盖默认值为所选的值设置上下文标识符。 上下文标识符就会归还[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)以提供与该标识的对象上的状态。 请参阅文章[Internet 前几个步骤： WinInet](../../mfc/wininet-basics.md)有关的上下文标识符的详细信息。
+默认值为*dwContext*发送到 mfc`CGopherFileFind`对象从[CInternetSession](../../mfc/reference/cinternetsession-class.md)对象创建`CGopherFileFind`对象。 构造时`CGopherFileFind`对象，您可以覆盖默认值为所选的值设置上下文标识符。 上下文标识符就会归还[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)以提供与该标识的对象上的状态。 请参阅文章[Internet 前几个步骤：WinInet](../../mfc/wininet-basics.md)有关的上下文标识符的详细信息。
 
 ##  <a name="findfile"></a>  CGopherFileFind::FindFile
 
@@ -191,7 +191,7 @@ virtual BOOL GetCreationTime(CTime& refTime) const;
 ### <a name="parameters"></a>参数
 
 *pTimeStamp*<br/>
-一个指向[FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284)结构，它包含该文件的创建的时间。
+一个指向[FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime)结构，它包含该文件的创建的时间。
 
 *refTime*<br/>
 对引用[CTime](../../atl-mfc-shared/reference/ctime-class.md)对象。
@@ -222,7 +222,7 @@ virtual BOOL GetLastAccessTime(FILETIME* pTimeStamp) const;
 对引用[CTime](../../atl-mfc-shared/reference/ctime-class.md)对象。
 
 *pTimeStamp*<br/>
-一个指向[FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284)结构，它包含上一次访问该文件的时间。
+一个指向[FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime)结构，它包含上一次访问该文件的时间。
 
 ### <a name="return-value"></a>返回值
 
@@ -247,7 +247,7 @@ virtual BOOL GetLastWriteTime(CTime& refTime) const;
 ### <a name="parameters"></a>参数
 
 *pTimeStamp*<br/>
-一个指向[FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284)结构，其中包含上次写入文件的时间。
+一个指向[FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime)结构，其中包含上次写入文件的时间。
 
 *refTime*<br/>
 对引用[CTime](../../atl-mfc-shared/reference/ctime-class.md)对象。

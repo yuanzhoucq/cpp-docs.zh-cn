@@ -35,12 +35,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlServiceModuleT class
 ms.assetid: 8fc753ce-4a50-402b-9b4a-0a4ce5dd496c
-ms.openlocfilehash: b577ee002e34fa051b6e1dd5ffca71f935d93433
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ad682980fbc885d79598b41a5dcc094bb65db8cf
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619136"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893530"
 ---
 # <a name="catlservicemodulet-class"></a>CAtlServiceModuleT 类
 
@@ -76,7 +76,7 @@ class ATL_NO_VTABLE CAtlServiceModuleT : public CAtlExeModuleT<T>
 
 |名称|描述|
 |----------|-----------------|
-|[Catlservicemodulet:: Handler](#handler)|该服务处理程序例程。|
+|[CAtlServiceModuleT::Handler](#handler)|该服务处理程序例程。|
 |[CAtlServiceModuleT::InitializeSecurity](#initializesecurity)|提供了默认的服务的安全设置。|
 |[CAtlServiceModuleT::Install](#install)|安装和创建服务。|
 |[CAtlServiceModuleT::IsInstalled](#isinstalled)|确认已安装了服务。|
@@ -90,10 +90,10 @@ class ATL_NO_VTABLE CAtlServiceModuleT : public CAtlExeModuleT<T>
 |[CAtlServiceModuleT::ParseCommandLine](#parsecommandline)|分析命令行，并根据需要执行注册。|
 |[CAtlServiceModuleT::PreMessageLoop](#premessageloop)|输入消息循环之前调用此方法。|
 |[CAtlServiceModuleT::RegisterAppId](#registerappid)|在注册表中注册该服务。|
-|[Catlservicemodulet:: Run](#run)|运行服务。|
-|[Catlservicemodulet:: Servicemain](#servicemain)|调用服务控制管理器的方法。|
+|[CAtlServiceModuleT::Run](#run)|运行服务。|
+|[CAtlServiceModuleT::ServiceMain](#servicemain)|调用服务控制管理器的方法。|
 |[CAtlServiceModuleT::SetServiceStatus](#setservicestatus)|更新服务状态。|
-|[Catlservicemodulet:: Start](#start)|由调用`CAtlServiceModuleT::WinMain`服务启动时。|
+|[CAtlServiceModuleT::Start](#start)|由调用`CAtlServiceModuleT::WinMain`服务启动时。|
 |[CAtlServiceModuleT::Uninstall](#uninstall)|停止并删除该服务。|
 |[CAtlServiceModuleT::Unlock](#unlock)|服务的锁计数递减。|
 |[CAtlServiceModuleT::UnregisterAppId](#unregisterappid)|从注册表中删除该服务。|
@@ -143,7 +143,7 @@ CAtlServiceModuleT() throw();
 
 初始化数据成员并设置初始服务状态。
 
-##  <a name="handler"></a>  Catlservicemodulet:: Handler
+##  <a name="handler"></a>  CAtlServiceModuleT::Handler
 
 该服务处理程序例程。
 
@@ -421,7 +421,7 @@ inline HRESULT RegisterAppId(bool bService = false) throw();
 
 返回成功，则为 S_OK 或失败时的错误 HRESULT。
 
-##  <a name="run"></a>  Catlservicemodulet:: Run
+##  <a name="run"></a>  CAtlServiceModuleT::Run
 
 运行服务。
 
@@ -432,7 +432,7 @@ HRESULT Run(int nShowCmd = SW_HIDE) throw();
 ### <a name="parameters"></a>参数
 
 *nShowCmd*<br/>
-指定窗口的显示方式。 此参数可以是讨论中的值之一[WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559)部分。 默认值为 SW_HIDE。
+指定窗口的显示方式。 此参数可以是讨论中的值之一[WinMain](/windows/desktop/api/winbase/nf-winbase-winmain)部分。 默认值为 SW_HIDE。
 
 ### <a name="return-value"></a>返回值
 
@@ -442,7 +442,7 @@ HRESULT Run(int nShowCmd = SW_HIDE) throw();
 
 被调用后`Run`调用[CAtlServiceModuleT::PreMessageLoop](#premessageloop)， [CAtlExeModuleT::RunMessageLoop](../../atl/reference/catlexemodulet-class.md#runmessageloop)，并[CAtlExeModuleT::PostMessageLoop](../../atl/reference/catlexemodulet-class.md#postmessageloop).
 
-##  <a name="servicemain"></a>  Catlservicemodulet:: Servicemain
+##  <a name="servicemain"></a>  CAtlServiceModuleT::ServiceMain
 
 此方法称为服务控制管理器。
 
@@ -481,7 +481,7 @@ void SetServiceStatus(DWORD dwState) throw();
 
 更新服务的服务控制管理器的状态信息。 调用[catlservicemodulet:: Run](#run)， [catlservicemodulet:: Servicemain](#servicemain)和其他处理程序方法。 状态也存储在成员变量[CAtlServiceModuleT::m_status](#m_status)。
 
-##  <a name="start"></a>  Catlservicemodulet:: Start
+##  <a name="start"></a>  CAtlServiceModuleT::Start
 
 由调用`CAtlServiceModuleT::WinMain`服务启动时。
 
@@ -492,7 +492,7 @@ HRESULT Start(int nShowCmd) throw();
 ### <a name="parameters"></a>参数
 
 *nShowCmd*<br/>
-指定窗口的显示方式。 此参数可以是讨论中的值之一[WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559)部分。
+指定窗口的显示方式。 此参数可以是讨论中的值之一[WinMain](/windows/desktop/api/winbase/nf-winbase-winmain)部分。
 
 ### <a name="return-value"></a>返回值
 
@@ -553,7 +553,7 @@ int WinMain(int nShowCmd) throw();
 ### <a name="parameters"></a>参数
 
 *nShowCmd*<br/>
-指定窗口的显示方式。 此参数可以是讨论中的值之一[WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559)部分。
+指定窗口的显示方式。 此参数可以是讨论中的值之一[WinMain](/windows/desktop/api/winbase/nf-winbase-winmain)部分。
 
 ### <a name="return-value"></a>返回值
 

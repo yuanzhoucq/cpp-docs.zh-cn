@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CFindReplaceDialog [MFC], SearchDown
 - CFindReplaceDialog [MFC], m_fr
 ms.assetid: 610f0b5d-b398-4ef6-8c05-e9d6641e50a8
-ms.openlocfilehash: e891a6694f0a85715a7d76d196865e3238695753
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: abf230f8c9e68365f8d1db8b654174ad3e152862
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50571179"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894401"
 ---
 # <a name="cfindreplacedialog-class"></a>CFindReplaceDialog 类
 
@@ -81,7 +81,7 @@ class CFindReplaceDialog : public CCommonDialog
 
 ## <a name="remarks"></a>备注
 
-与其他 Windows 公共对话框，不同`CFindReplaceDialog`对象是无模式，允许用户屏幕上，则与其他 windows 进行交互。 有两种类型的`CFindReplaceDialog`对象： 查找对话框和查找/替换对话框。 尽管该对话框允许用户输入的搜索和搜索/替换字符串，但它们不执行任何搜索或替换函数。 您必须将它们添加到应用程序。
+与其他 Windows 公共对话框，不同`CFindReplaceDialog`对象是无模式，允许用户屏幕上，则与其他 windows 进行交互。 有两种类型的`CFindReplaceDialog`对象：查找对话框和查找/替换对话框。 尽管该对话框允许用户输入的搜索和搜索/替换字符串，但它们不执行任何搜索或替换函数。 您必须将它们添加到应用程序。
 
 若要构造`CFindReplaceDialog`对象，请使用提供的构造函数 （它具有无参数）。 由于这是一个无模式对话框中，分配上堆使用的对象**新**运算符，而不是在堆栈上。
 
@@ -89,7 +89,7 @@ class CFindReplaceDialog : public CCommonDialog
 
 使用[m_fr](#m_fr)结构初始化之前，调用对话框`Create`。 `m_fr`结构属于类型[FINDREPLACE](/windows/desktop/api/commdlg/ns-commdlg-tagfindreplacea)。 此结构的详细信息，请参阅 Windows SDK。
 
-为了使父窗口的查找/替换请求通知，必须使用 Windows [RegisterWindowMessage](https://msdn.microsoft.com/library/windows/desktop/ms644947)函数，并使用[ON_REGISTERED_MESSAGE](message-map-macros-mfc.md#on_registered_message)在帧中的消息映射宏处理此已注册的消息的窗口。
+为了使父窗口的查找/替换请求通知，必须使用 Windows [RegisterWindowMessage](/windows/desktop/api/winuser/nf-winuser-registerwindowmessagea)函数，并使用[ON_REGISTERED_MESSAGE](message-map-macros-mfc.md#on_registered_message)在帧中的消息映射宏处理此已注册的消息的窗口。
 
 您可以确定用户是否已决定终止使用对话框`IsTerminating`成员函数。
 
@@ -175,7 +175,7 @@ virtual BOOL Create(
 
 ### <a name="remarks"></a>备注
 
-为了使父窗口的查找/替换请求通知，必须使用 Windows [RegisterWindowMessage](https://msdn.microsoft.com/library/windows/desktop/ms644947)函数的返回值是唯一的应用程序的实例的消息号。 框架窗口应具有一个声明回调函数的消息映射条目 (`OnFindReplace`后面的示例中) 用于处理此已注册的消息。 下面的代码片段示范了如何执行此操作的名为的框架窗口类`CMyRichEditView`:
+为了使父窗口的查找/替换请求通知，必须使用 Windows [RegisterWindowMessage](/windows/desktop/api/winuser/nf-winuser-registerwindowmessagea)函数的返回值是唯一的应用程序的实例的消息号。 框架窗口应具有一个声明回调函数的消息映射条目 (`OnFindReplace`后面的示例中) 用于处理此已注册的消息。 下面的代码片段示范了如何执行此操作的名为的框架窗口类`CMyRichEditView`:
 
 [!code-cpp[NVC_MFCDocView#171](../../mfc/codesnippet/cpp/cfindreplacedialog-class_2.h)]
 

@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CCmdTarget [MFC], OnFinalRelease
 - CCmdTarget [MFC], RestoreWaitCursor
 ms.assetid: 8883b132-2057-4ce0-a5f2-88979f8f2b13
-ms.openlocfilehash: 0415fb98cec6b1d92f6a5a43ff705f1b5a7cd348
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 4e93f167b9cb28a83c42220fa58b17d5c4845a75
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523814"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894284"
 ---
 # <a name="ccmdtarget-class"></a>CCmdTarget 类
 
@@ -92,7 +92,7 @@ class CCmdTarget : public CObject
 |[CCmdTarget::IsInvokeAllowed](#isinvokeallowed)|启用自动化方法调用。|
 |[CCmdTarget::IsResultExpected](#isresultexpected)|返回非零，如果自动化函数应返回一个值。|
 |[CCmdTarget::OnCmdMsg](#oncmdmsg)|路由和调度命令消息。|
-|[Ccmdtarget:: Onfinalrelease](#onfinalrelease)|发布的最后一个 OLE 引用后清理。|
+|[CCmdTarget::OnFinalRelease](#onfinalrelease)|发布的最后一个 OLE 引用后清理。|
 |[CCmdTarget::RestoreWaitCursor](#restorewaitcursor)|还原沙漏光标。|
 
 ## <a name="remarks"></a>备注
@@ -163,7 +163,7 @@ BOOL DoOleVerb(
 该谓词的数字标识符。
 
 *lpMsg*<br/>
-指向[MSG](https://msdn.microsoft.com/library/windows/desktop/ms644958)结构描述调用此谓词的事件 （如双击）。
+指向[MSG](/windows/desktop/api/winuser/ns-winuser-msg)结构描述调用此谓词的事件 （如双击）。
 
 *hWndParent*<br/>
 包含该对象的文档窗口的句柄。
@@ -484,7 +484,7 @@ virtual BOOL OnCmdMsg(
 
 如果重写`OnCmdMsg`，必须提供适当的值*nCode*，命令通知代码，并*pExtra*，这取决于值*nCode*. 下表列出了其对应的值：
 
-|*nCode*值|*pExtra*值|
+|*nCode* value|*pExtra* value|
 |-------------------|--------------------|
 |CN_COMMAND|[CCmdUI](../../mfc/reference/ccmdui-class.md)\*|
 |CN_EVENT|AFX_EVENT\*|
@@ -498,7 +498,7 @@ virtual BOOL OnCmdMsg(
 
 [!code-cpp[NVC_MFCDocView#45](../../mfc/codesnippet/cpp/ccmdtarget-class_3.cpp)]
 
-##  <a name="onfinalrelease"></a>  Ccmdtarget:: Onfinalrelease
+##  <a name="onfinalrelease"></a>  CCmdTarget::OnFinalRelease
 
 发布到或从该对象的最后一个 OLE 引用时，由框架调用。
 

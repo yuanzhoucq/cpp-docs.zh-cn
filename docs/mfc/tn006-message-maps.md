@@ -1,5 +1,5 @@
 ---
-title: TN006：消息映射
+title: TN006:消息映射
 ms.date: 06/25/2018
 f1_keywords:
 - vc.messages.maps
@@ -19,14 +19,14 @@ helpviewer_keywords:
 - ON_COMMAND_EX macro [MFC]
 - message maps [MFC], Windows messaging
 ms.assetid: af4b6794-4b40-4f1e-ad41-603c3b7409bb
-ms.openlocfilehash: ab08476923f253d666e024d8944aec64ed0af8da
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 3536cb215da04fb7114853d3fa5d764585cbb58e
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693648"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894076"
 ---
-# <a name="tn006-message-maps"></a>TN006：消息映射
+# <a name="tn006-message-maps"></a>TN006:消息映射
 
 此注释描述 MFC 消息映射工具。
 
@@ -121,7 +121,7 @@ pWnd->SendMessage(WM_MYMESSAGE);
 
 ## <a name="registered-windows-messages"></a>已注册的 Windows 消息
 
-[RegisterWindowMessage](https://msdn.microsoft.com/library/windows/desktop/ms644947)函数用于定义新的窗口消息来保证是唯一的在整个系统。 ON_REGISTERED_MESSAGE 宏用于处理这些消息。 此宏接受的名称*UINT 附近*变量，其中包含已注册的 windows 消息 id。 例如
+[RegisterWindowMessage](/windows/desktop/api/winuser/nf-winuser-registerwindowmessagea)函数用于定义新的窗口消息来保证是唯一的在整个系统。 ON_REGISTERED_MESSAGE 宏用于处理这些消息。 此宏接受的名称*UINT 附近*变量，其中包含已注册的 windows 消息 id。 例如
 
 ```cpp
 class CMyWnd : public CMyParentWndClass
@@ -213,7 +213,7 @@ ON_UPDATE_COMMAND_UI(id, memberFxn)
     }
     ```
 
-高级的用户可以通过使用单个命令处理程序处理一系列命令： [ON_COMMAND_RANGE](reference/message-map-macros-mfc.md#on_command_range)或 ON_COMMAND_RANGE_EX。 请参阅有关这些宏的详细信息的产品文档。
+高级的用户可以通过使用单个命令处理程序处理一系列命令：[ON_COMMAND_RANGE](reference/message-map-macros-mfc.md#on_command_range)或 ON_COMMAND_RANGE_EX。 请参阅有关这些宏的详细信息的产品文档。
 
 > [!NOTE]
 > 类向导支持创建 ON_COMMAND 和 ON_UPDATE_COMMAND_UI 处理程序，但它不支持创建 ON_COMMAND_EX 或 ON_COMMAND_RANGE 处理程序。 但是，类向导将分析，以便可以浏览所有四个命令处理程序变体。

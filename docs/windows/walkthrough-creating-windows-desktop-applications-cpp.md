@@ -1,19 +1,19 @@
 ---
-title: 演练： 创建传统的 Windows 桌面应用程序 （c + +）
+title: 演练：创建的传统 Windows 桌面应用程序 （c + +）
 ms.custom: get-started-article
 ms.date: 09/18/2018
 helpviewer_keywords:
 - Windows applications [C++], Win32
 - Windows Desktop applications [C++]
 - Windows API [C++]
-ms.openlocfilehash: da95b1dac2f058de67719b4754d2df6dbeb6f7f0
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 07da91ea092b4e7bee974b0387e72ea0cacaec8e
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694044"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893894"
 ---
-# <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>演练： 创建传统的 Windows 桌面应用程序 （c + +）
+# <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>演练：创建的传统 Windows 桌面应用程序 （c + +）
 
 本演练演示如何在 Visual Studio 中创建的传统 Windows 桌面应用程序。 示例应用程序将创建使用 Windows API 来显示"Hello，Windows 桌面 ！" 应用程序。 可以将本演练中开发的代码作为模式来创建其他 Windows 桌面应用程序。
 
@@ -24,7 +24,7 @@ Windows API （也称为 Win32 API、 Windows 桌面 API 和 Windows 经典 API�
 
 ## <a name="prerequisites"></a>系统必备
 
-- 运行 Microsoft Windows 7 或更高版本的计算机。 我们建议获取最佳开发体验的 Windows 10。
+- 运行 Microsoft Windows 7 或更高版本的计算机。 建议使用 Windows 10 以获得最佳开发体验。
 
 - Visual Studio 2017 的副本。 有关如何下载和安装 Visual Studio 的信息，请参阅[安装 Visual Studio](/visualstudio/install/install-visual-studio)。 当您运行安装程序时，请确保**使用 c + + 的桌面开发**检查工作负荷。 别担心，如果您未安装 Visual Studio 时安装此工作负荷。 可以再次运行安装程序并立即安装。
 
@@ -107,7 +107,7 @@ Windows API （也称为 Win32 API、 Windows 桌面 API 和 Windows 经典 API�
    );
    ```
 
-   有关参数和此函数的返回值的信息，请参阅[WinMain 入口点](https://msdn.microsoft.com/library/windows/desktop/ms633559)。
+   有关参数和此函数的返回值的信息，请参阅[WinMain 入口点](/windows/desktop/api/winbase/nf-winbase-winmain)。
 
    > [!NOTE]
    > 什么是所有这些多余的字词，如`CALLBACK`，或`HINSTANCE`，或`_In_`？ 传统的 Windows API 使用 typedef 和预处理器宏来全面抽象出的类型和特定于平台的详细信息的一些代码，调用约定，如 **__declspec**声明，以及编译器杂注。 在 Visual Studio 中，您可以使用 IntelliSense[快速信息](/visualstudio/ide/using-intellisense#quick-info)功能来查看这些 typedef 和宏的定义。 经过单词感兴趣，请将鼠标悬停或选中它，然后按**Ctrl**+**K**， **Ctrl**+**我**为包含定义的小弹出窗口。 有关详细信息，请参阅[使用 IntelliSense](/visualstudio/ide/using-intellisense)。 参数和返回类型通常使用*SAL 注释*来帮助你捕获编程错误。 有关详细信息，请参阅[使用 SAL 注释减少 C/c + + 代码缺陷](/visualstudio/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects)。
@@ -136,7 +136,7 @@ Windows API （也称为 Win32 API、 Windows 桌面 API 和 Windows 经典 API�
 
 ### <a name="to-add-functionality-to-the-winmain-function"></a>向 WinMain 函数添加功能
 
-1. 在中`WinMain`函数，填充类型的结构[WNDCLASSEX](https://msdn.microsoft.com/library/windows/desktop/ms633577)。 该结构包含有关窗口，例如，应用程序图标、 窗口中，要显示在标题栏中，和重要的是，到你的窗口过程函数指针的名称的背景色的信息。 下面的示例演示一个典型 `WNDCLASSEX` 结构。
+1. 在中`WinMain`函数，填充类型的结构[WNDCLASSEX](/windows/desktop/api/winuser/ns-winuser-tagwndclassexa)。 该结构包含有关窗口，例如，应用程序图标、 窗口中，要显示在标题栏中，和重要的是，到你的窗口过程函数指针的名称的背景色的信息。 下面的示例演示一个典型 `WNDCLASSEX` 结构。
 
    ```cpp
    WNDCLASSEX wcex;
@@ -155,7 +155,7 @@ Windows API （也称为 Win32 API、 Windows 桌面 API 和 Windows 经典 API�
    wcex.hIconSm        = LoadIcon(wcex.hInstance, IDI_APPLICATION);
    ```
 
-   上述结构的字段的信息，请参阅[WNDCLASSEX](https://msdn.microsoft.com/library/windows/desktop/ms633577)。
+   上述结构的字段的信息，请参阅[WNDCLASSEX](/windows/desktop/api/winuser/ns-winuser-tagwndclassexa)。
 
 1. 注册`WNDCLASSEX`与 Windows 这样它就会知道有关您的窗口以及如何将消息发送到它。 使用 [RegisterClassEx](/windows/desktop/api/winuser/nf-winuser-registerclassexa) 函数，并将窗口类结构作为参数传递。 `_T`使用宏，因为我们使用`TCHAR`类型。
 
@@ -237,7 +237,7 @@ Windows API （也称为 Win32 API、 Windows 桌面 API 和 Windows 经典 API�
    return (int) msg.wParam;
    ```
 
-   有关消息循环中的结构和函数的详细信息，请参阅 [MSG](https://msdn.microsoft.com/library/windows/desktop/ms644958)、 [GetMessage](/windows/desktop/api/winuser/nf-winuser-getmessage)、 [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)和 [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage)。
+   有关消息循环中的结构和函数的详细信息，请参阅 [MSG](/windows/desktop/api/winuser/ns-winuser-msg)、 [GetMessage](/windows/desktop/api/winuser/nf-winuser-getmessage)、 [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)和 [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage)。
 
    此时， `WinMain` 函数类似于以下代码。
 

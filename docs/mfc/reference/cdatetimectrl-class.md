@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CDateTimeCtrl [MFC], SetRange
 - CDateTimeCtrl [MFC], SetTime
 ms.assetid: 7113993b-5d37-4148-939f-500a190c5bdc
-ms.openlocfilehash: 36ef44534803e35d3544b53dbeeca75a7fb3f475
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 5acac454bd0b22b994b74a052bd3cf0b0eee2614
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178520"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894336"
 ---
 # <a name="cdatetimectrl-class"></a>CDateTimeCtrl 类
 
@@ -74,14 +74,14 @@ class CDateTimeCtrl : public CWnd
 |[CDateTimeCtrl::GetDateTimePickerInfo](#getdatetimepickerinfo)|检索当前日期和时间选取器控件有关的信息。|
 |[CDateTimeCtrl::GetIdealSize](#getidealsize)|返回显示的当前日期或时间所需的日期和时间选取器控件的理想大小。|
 |[CDateTimeCtrl::GetMonthCalColor](#getmonthcalcolor)|检索日期和时间选取器控件中的月日历的指定部分的颜色。|
-|[Cdatetimectrl:: Getmonthcalctrl](#getmonthcalctrl)|检索`CMonthCalCtrl`与日期和时间选取器控件相关联的对象。|
+|[CDateTimeCtrl::GetMonthCalCtrl](#getmonthcalctrl)|检索`CMonthCalCtrl`与日期和时间选取器控件相关联的对象。|
 |[CDateTimeCtrl::GetMonthCalFont](#getmonthcalfont)|检索当前使用的日期和时间选取器控件的子月历控件的字体。|
 |[CDateTimeCtrl::GetMonthCalStyle](#getmonthcalstyle)|获取当前日期和时间选取器控件的样式。|
 |[CDateTimeCtrl::GetRange](#getrange)|检索当前最小值和最大允许将日期和时间选取器控件的系统时间。|
 |[CDateTimeCtrl::GetTime](#gettime)|从日期和时间选取器控件检索当前所选的时间，并将其放入指定`SYSTEMTIME`结构。|
-|[Cdatetimectrl:: Setformat](#setformat)|将根据给定的格式字符串的日期和时间选取器控件的显示设置。|
+|[CDateTimeCtrl::SetFormat](#setformat)|将根据给定的格式字符串的日期和时间选取器控件的显示设置。|
 |[CDateTimeCtrl::SetMonthCalColor](#setmonthcalcolor)|设置日期和时间选取器控件中的月日历的指定部分的颜色。|
-|[Cdatetimectrl:: Setmonthcalfont](#setmonthcalfont)|设置日期和时间选取器控件的子月历控件将使用的字体。|
+|[CDateTimeCtrl::SetMonthCalFont](#setmonthcalfont)|设置日期和时间选取器控件的子月历控件将使用的字体。|
 |[CDateTimeCtrl::SetMonthCalStyle](#setmonthcalstyle)|将当前日期和时间选取器控件的样式设置。|
 |[CDateTimeCtrl::SetRange](#setrange)|设置日期和时间选取器控件的最小值和最大允许的系统时间。|
 |[CDateTimeCtrl::SetTime](#settime)|在日期和时间选取器控件中设置的时间。|
@@ -243,7 +243,7 @@ COLORREF GetMonthCalColor(int iColor) const;
 
 [!code-cpp[NVC_MFC_CDateTimeCtrl#2](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_5.cpp)]
 
-##  <a name="getmonthcalctrl"></a>  Cdatetimectrl:: Getmonthcalctrl
+##  <a name="getmonthcalctrl"></a>  CDateTimeCtrl::GetMonthCalCtrl
 
 检索`CMonthCalCtrl`与日期和时间选取器控件相关联的对象。
 
@@ -353,7 +353,7 @@ DWORD GetTime(LPSYSTEMTIME pTimeDest) const;
 在第一个版本中，对引用[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)将收到系统时间信息的对象。 在第二个版本中，对引用[CTime](../../atl-mfc-shared/reference/ctime-class.md)将收到系统时间信息的对象。
 
 *pTimeDest*<br/>
-一个指向[SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)结构，以接收系统时间信息。 不能为 NULL。
+一个指向[SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)结构，以接收系统时间信息。 不能为 NULL。
 
 ### <a name="return-value"></a>返回值
 
@@ -403,7 +403,7 @@ BOOL GetIdealSize(LPSIZE psize) const;
 
 [!code-cpp[NVC_MFC_CDateTimeCtrl_s1#2](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_9.cpp)]
 
-##  <a name="setformat"></a>  Cdatetimectrl:: Setformat
+##  <a name="setformat"></a>  CDateTimeCtrl::SetFormat
 
 将根据给定的格式字符串的日期和时间选取器控件的显示设置。
 
@@ -446,7 +446,7 @@ COLORREF SetMonthCalColor(
 *iColor*<br/>
 **int**值，该值指定要设置的月份的日历控件的区域。 此值可以是以下值之一。
 
-|值|含义|
+|“值”|含义|
 |-----------|-------------|
 |MCSC_BACKGROUND|设置显示不同的月份的背景色。|
 |MCSC_MONTHBK|设置显示在一个月中的背景色。|
@@ -470,7 +470,7 @@ COLORREF 值表示的指定部分的月历控件如果成功，则以前的颜�
 
   有关示例，请参阅[CDateTimeCtrl::GetMonthCalColor](#getmonthcalcolor)。
 
-##  <a name="setmonthcalfont"></a>  Cdatetimectrl:: Setmonthcalfont
+##  <a name="setmonthcalfont"></a>  CDateTimeCtrl::SetMonthCalFont
 
 设置日期和时间选取器控件的子月历控件将使用的字体。
 
@@ -583,7 +583,7 @@ BOOL SetTime(LPSYSTEMTIME pTimeNew = NULL);
 对引用[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)对象，其中包含为控件设置。
 
 *pTimeNew*<br/>
-在上面的指针的第二个版本[CTime](../../atl-mfc-shared/reference/ctime-class.md)对象，其中包含将控件设置的时间。 在上面的指针的第三个版本[SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)结构，它包含将控件设置的时间。
+在上面的指针的第二个版本[CTime](../../atl-mfc-shared/reference/ctime-class.md)对象，其中包含将控件设置的时间。 在上面的指针的第三个版本[SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)结构，它包含将控件设置的时间。
 
 ### <a name="return-value"></a>返回值
 
