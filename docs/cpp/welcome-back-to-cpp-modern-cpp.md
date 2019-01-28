@@ -36,7 +36,7 @@ C++ 最初的要求之一，就是要向后兼容 C 语言。 从那时起，C++
 
 - 使用内联的 [lambda 函数](../cpp/lambda-expressions-in-cpp.md)而不是单独实现的小函数。
 
-- 使用基于范围的 for 循环，可以编写更可靠的循环形式。即，使用`for ( for-range-declaration : expression )` 形式来遍历数组、 C++ 标准库容器和 Windows 运行时集合。 这是 Core 语言支持的一部分。 有关详细信息，请参阅[基于范围的 for 语句 (C++)](../cpp/range-based-for-statement-cpp.md)。
+- 使用基于范围的 for 循环来编写更可靠的循环形式。即，使用 `for ( for-range-declaration : expression )` 形式来遍历数组、 C++ 标准库容器和 Windows 运行时集合。 这是核心语言支持的一部分。 有关详细信息，请参阅[基于范围的 for 语句 (C++)](../cpp/range-based-for-statement-cpp.md)。
 
 C++ 语言本身也有所发展。 比较以下代码片段。 下面显示了过去 C++ 的代码片段：
 

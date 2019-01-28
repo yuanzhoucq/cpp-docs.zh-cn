@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CToolTipCtrl [MFC], Update
 - CToolTipCtrl [MFC], UpdateTipText
 ms.assetid: 8973f70c-b73a-46c7-908d-758f364b9a97
-ms.openlocfilehash: 808d8b5f023e88b67458c514e871692aac94ccd5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 177f6eeada942440c33f7dd0a0cbc6d9e59d867c
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50500407"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894141"
 ---
 # <a name="ctooltipctrl-class"></a>CToolTipCtrl Class
 
@@ -121,7 +121,7 @@ class CToolTipCtrl : public CWnd
 |[CToolTipCtrl::HitTest](#hittest)|测试以确定它是否位于给定工具的边框内的点。 如果是这样，检索有关工具的信息。|
 |[CToolTipCtrl::Pop](#pop)|从视图中删除显示的工具提示窗口。|
 |[CToolTipCtrl::Popup](#popup)|导致要显示的最后一个鼠标消息坐标处的当前工具提示控件。|
-|[Ctooltipctrl:: Relayevent](#relayevent)|将鼠标消息传递给处理工具提示控件。|
+|[CToolTipCtrl::RelayEvent](#relayevent)|将鼠标消息传递给处理工具提示控件。|
 |[CToolTipCtrl::SetDelayTime](#setdelaytime)|设置初始、 弹出窗口中，并重新显示工具提示控件的持续时间。|
 |[CToolTipCtrl::SetMargin](#setmargin)|设置上、 左、 下、 和工具提示窗口的右边距。|
 |[CToolTipCtrl::SetMaxTipWidth](#setmaxtipwidth)|设置工具提示窗口的最大宽度。|
@@ -287,7 +287,7 @@ virtual BOOL Create(CWnd* pParentWnd, DWORD dwStyle = 0);
 
 构造`CToolTipCtrl`中两个步骤。 首先，调用构造函数来构造`CToolTipCtrl`对象，，然后调用`Create`创建工具提示控件并将其附加到`CToolTipCtrl`对象。
 
-*DwStyle*参数可以是任何组合[窗口样式](../../mfc/reference/styles-used-by-mfc.md#window-styles)。 此外，工具提示控件具有两个特定于类的样式： TTS_ALWAYSTIP 和 TTS_NOPREFIX。
+*DwStyle*参数可以是任何组合[窗口样式](../../mfc/reference/styles-used-by-mfc.md#window-styles)。 此外，工具提示控件具有两个特定于类的样式：TTS_ALWAYSTIP 和 TTS_NOPREFIX。
 
 |样式|含义|
 |-----------|-------------|
@@ -682,7 +682,7 @@ void Popup();
 
 [!code-cpp[NVC_MFC_CToolBarCtrl_s1#7](../../mfc/reference/codesnippet/cpp/ctooltipctrl-class_3.cpp)]
 
-##  <a name="relayevent"></a>  Ctooltipctrl:: Relayevent
+##  <a name="relayevent"></a>  CToolTipCtrl::RelayEvent
 
 将鼠标消息传递给处理工具提示控件。
 
@@ -693,7 +693,7 @@ void RelayEvent(LPMSG lpMsg);
 ### <a name="parameters"></a>参数
 
 *lpMsg*<br/>
-指向[MSG](https://msdn.microsoft.com/library/windows/desktop/ms644958)包含到中继的消息的结构。
+指向[MSG](/windows/desktop/api/winuser/ns-winuser-msg)包含到中继的消息的结构。
 
 ### <a name="remarks"></a>备注
 

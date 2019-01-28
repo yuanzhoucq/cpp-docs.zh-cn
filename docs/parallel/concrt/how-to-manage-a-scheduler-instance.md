@@ -5,18 +5,18 @@ helpviewer_keywords:
 - managing a scheduler instance [Concurrency Runtime]
 - scheduler instances, managing [Concurrency Runtime]
 ms.assetid: 2cc804f0-5ff3-498b-97f1-a9f67a005448
-ms.openlocfilehash: 8c19eb801c7761b85580526e1ff8bed89112cc5e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d8e79f7c132abd8e43f661f4dc7c7bb758cb2a6d
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437812"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893985"
 ---
 # <a name="how-to-manage-a-scheduler-instance"></a>如何：管理计划程序实例
 
 计划程序实例，您可以将特定的计划策略与各种类型的工作负荷相关联。 本主题包含两个基本示例，演示如何创建和管理计划程序实例。
 
-这些示例将创建使用默认计划程序策略的计划程序。 创建一个计划程序的示例使用自定义策略，请参阅[如何： 指定特定的计划程序策略](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md)。
+这些示例将创建使用默认计划程序策略的计划程序。 创建一个计划程序的示例使用自定义策略，请参阅[如何：指定特定的计划程序策略](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md)。
 
 ### <a name="to-manage-a-scheduler-instance-in-your-application"></a>若要管理你的应用程序中的计划程序实例
 
@@ -38,7 +38,7 @@ ms.locfileid: "50437812"
 
 1. 将句柄传递给该事件[WaitForSingleObject](/windows/desktop/api/synchapi/nf-synchapi-waitforsingleobject)函数等待计划程序关闭。
 
-1. 调用[CloseHandle](https://msdn.microsoft.com/library/windows/desktop/ms724211)函数以关闭事件对象的句柄。
+1. 调用[CloseHandle](/windows/desktop/api/handleapi/nf-handleapi-closehandle)函数以关闭事件对象的句柄。
 
 ## <a name="example"></a>示例
 

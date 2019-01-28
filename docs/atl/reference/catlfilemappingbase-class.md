@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlFileMappingBase class
 ms.assetid: be555723-2790-4f57-a8fb-be4d68460775
-ms.openlocfilehash: 71b3b8621f4148f680337e9bce6ef469b90de746
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 12a8159cbf28c64efe36357761f4f404ccff9541
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614367"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894011"
 ---
 # <a name="catlfilemappingbase-class"></a>CAtlFileMappingBase 类
 
@@ -43,7 +43,7 @@ class CAtlFileMappingBase
 |名称|描述|
 |----------|-----------------|
 |[CAtlFileMappingBase::CAtlFileMappingBase](#catlfilemappingbase)|构造函数。|
-|[CAtlFileMappingBase:: ~ CAtlFileMappingBase](#dtor)|析构函数。|
+|[CAtlFileMappingBase::~CAtlFileMappingBase](#dtor)|析构函数。|
 
 ### <a name="public-methods"></a>公共方法
 
@@ -193,7 +193,7 @@ HRESULT MapFile(
 所需的文件视图的映射文件时保护。 请参阅*flProtect*中[CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga) Windows SDK 中。
 
 *dwViewDesiredAccess*<br/>
-指定在文件视图和映射文件的页保护，因此，对的访问类型。 请参阅*dwDesiredAccess*中[MapViewOfFileEx](https://msdn.microsoft.com/library/windows/desktop/aa366763) Windows SDK 中。
+指定在文件视图和映射文件的页保护，因此，对的访问类型。 请参阅*dwDesiredAccess*中[MapViewOfFileEx](/windows/desktop/api/memoryapi/nf-memoryapi-mapviewoffileex) Windows SDK 中。
 
 ### <a name="return-value"></a>返回值
 
@@ -201,7 +201,7 @@ HRESULT MapFile(
 
 ### <a name="remarks"></a>备注
 
-创建文件映射对象后，文件的大小不能超过文件映射对象中; 的大小如果是这样，并非所有文件的内容可供共享。 有关更多详细信息，请参阅[CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga)并[MapViewOfFileEx](https://msdn.microsoft.com/library/windows/desktop/aa366763) Windows SDK 中。
+创建文件映射对象后，文件的大小不能超过文件映射对象中; 的大小如果是这样，并非所有文件的内容可供共享。 有关更多详细信息，请参阅[CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga)并[MapViewOfFileEx](/windows/desktop/api/memoryapi/nf-memoryapi-mapviewoffileex) Windows SDK 中。
 
 ### <a name="example"></a>示例
 
@@ -239,7 +239,7 @@ HRESULT MapSharedMem(
 在文件视图中，映射文件时所需的保护。 请参阅*flProtect*中`CreateFileMapping`Windows SDK 中。
 
 *dwViewDesiredAccess*<br/>
-指定在文件视图和映射文件的页保护，因此，对的访问类型。 请参阅*dwDesiredAccess*中[MapViewOfFileEx](https://msdn.microsoft.com/library/windows/desktop/aa366763) Windows SDK 中。
+指定在文件视图和映射文件的页保护，因此，对的访问类型。 请参阅*dwDesiredAccess*中[MapViewOfFileEx](/windows/desktop/api/memoryapi/nf-memoryapi-mapviewoffileex) Windows SDK 中。
 
 ### <a name="return-value"></a>返回值
 
@@ -273,7 +273,7 @@ HRESULT OpenMapping(
 映射的开始位置的文件偏移量。 偏移量的值必须是系统的内存分配粒度的倍数。
 
 *dwViewDesiredAccess*<br/>
-指定在文件视图和映射文件的页保护，因此，对的访问类型。 请参阅*dwDesiredAccess*中[MapViewOfFileEx](https://msdn.microsoft.com/library/windows/desktop/aa366763) Windows SDK 中。
+指定在文件视图和映射文件的页保护，因此，对的访问类型。 请参阅*dwDesiredAccess*中[MapViewOfFileEx](/windows/desktop/api/memoryapi/nf-memoryapi-mapviewoffileex) Windows SDK 中。
 
 ### <a name="return-value"></a>返回值
 
@@ -314,7 +314,7 @@ HRESULT Unmap() throw();
 
 ### <a name="remarks"></a>备注
 
-请参阅[UnmapViewOfFile](https://msdn.microsoft.com/library/windows/desktop/aa366882)适用于更多详细信息的 Windows SDK 中。
+请参阅[UnmapViewOfFile](/windows/desktop/api/memoryapi/nf-memoryapi-unmapviewoffile)适用于更多详细信息的 Windows SDK 中。
 
 ## <a name="see-also"></a>请参阅
 

@@ -818,12 +818,12 @@ helpviewer_keywords:
 - CWnd [MFC], WindowProc
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
-ms.openlocfilehash: 0a27b78d873b0a561b84b13cc16c67aef9ff2e8b
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: ebb0d0abcff069deca4597ffb5a3a2d4e67cab9c
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53179079"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894531"
 ---
 # <a name="cwnd-class"></a>CWnd 类
 
@@ -870,7 +870,7 @@ class CWnd : public CCmdTarget
 |[CWnd::ClientToScreen](#clienttoscreen)|将显示中的给定点或矩形的客户端坐标转换为屏幕坐标。|
 |[CWnd::CloseWindow](#closewindow)|最小化窗口。|
 |[CWnd::ContinueModal](#continuemodal)|继续窗口的模式状态。|
-|[Cwnd:: Create](#create)|创建并初始化与 `CWnd` 对象关联的子窗口。|
+|[CWnd::Create](#create)|创建并初始化与 `CWnd` 对象关联的子窗口。|
 |[CWnd::CreateAccessibleProxy](#createaccessibleproxy)|为指定对象创建 Active Accessibility 代理服务器。|
 |[CWnd::CreateCaret](#createcaret)|为系统插入符号创建新形状并获取插入符号的所有权。|
 |[CWnd::CreateControl](#createcontrol)|创建在 MFC 程序中由 `CWnd` 对象表示的 ActiveX 控件。|
@@ -1262,8 +1262,8 @@ class CWnd : public CCmdTarget
 |名称|描述|
 |----------|-----------------|
 |[CWnd::operator HWND](#operator_hwnd)|调用以获取窗口的句柄。|
-|[CWnd::operator ！ =](#operator_neq)|确定窗口是否不相同的窗口的句柄[m_hWnd](#m_hwnd)。|
-|[CWnd::operator = =](#operator_eq_eq)|确定窗口是否是其句柄的窗口相同[m_hWnd](#m_hwnd)。|
+|[CWnd::operator !=](#operator_neq)|确定窗口是否不相同的窗口的句柄[m_hWnd](#m_hwnd)。|
+|[CWnd::operator ==](#operator_eq_eq)|确定窗口是否是其句柄的窗口相同[m_hWnd](#m_hwnd)。|
 
 ### <a name="public-data-members"></a>公共数据成员
 
@@ -1338,7 +1338,7 @@ virtual HRESULT accHitTest(
 *xLeft*<br/>
 X 坐标点的要进行命中测试 （以屏幕为单位）。
 
-*由*<br/>
+*yTop*<br/>
 Y 坐标点的要进行命中测试 （以屏幕为单位）。
 
 *pvarChild*<br/>
@@ -1761,7 +1761,7 @@ void CheckDlgButton(
 *nIDButton*<br/>
 指定要修改的按钮。
 
-*n 请查看*<br/>
+*nCheck*<br/>
 指定要执行的操作。 如果*n 请查看*不为零，`CheckDlgButton`成员函数将放置按钮旁边的选中标记; 如果为 0，则删除复选标记。 为三个状态的按钮，如果*n 请查看*为 2，按钮状态为不确定。
 
 ### <a name="remarks"></a>备注
@@ -1816,13 +1816,13 @@ CWnd* ChildWindowFromPoint(
 
 ### <a name="parameters"></a>参数
 
-*点*<br/>
+*point*<br/>
 指定要进行测试点的客户端坐标。
 
 *nflags*<br/>
 指定要跳过的子窗口。 此参数可以是以下值的组合：
 
-|值|含义|
+|“值”|含义|
 |-----------|-------------|
 |CWP_ALL|请勿跳过任何子窗口|
 |CWP_SKIPINVISIBLE|跳过不可见的子窗口|
@@ -2951,7 +2951,7 @@ virtual void EndModalLoop(int nResult);
 
 ### <a name="parameters"></a>参数
 
-*n 结果*<br/>
+*nResult*<br/>
 包含要返回给调用方的值[runmodalloop 调用](#runmodalloop)。
 
 ### <a name="remarks"></a>备注
@@ -3086,7 +3086,7 @@ static CWnd* FindWindowEx(
 子窗口的句柄。 搜索以开头的 Z 顺序中的下一步子窗口。 子窗口必须的直接子窗口*hwndParent*，而不仅仅是一个子代窗口。
 
 *lpszClass*<br/>
-指向一个以 null 结尾的字符串，指定的类名或创建的以前调用类 atom [RegisterClass](https://msdn.microsoft.com/library/windows/desktop/ms633586)或[RegisterClassEx](/windows/desktop/api/winuser/nf-winuser-registerclassexa)。
+指向一个以 null 结尾的字符串，指定的类名或创建的以前调用类 atom [RegisterClass](/windows/desktop/api/winuser/nf-winuser-registerclassa)或[RegisterClassEx](/windows/desktop/api/winuser/nf-winuser-registerclassexa)。
 
 *lpszWindow*<br/>
 指向一个以 null 结尾的字符串，指定窗口名称 （窗口的标题）。 如果此参数为 NULL，则所有的窗口名称匹配。
@@ -5673,7 +5673,7 @@ int MessageBox(
 *lpszCaption*<br/>
 指向`CString`对象或以 null 结尾的字符串要用于消息框标题。 如果*lpszCaption*为 NULL，使用"错误"的默认标题。
 
-*n 类型*<br/>
+*nType*<br/>
 指定的内容和消息框的行为。
 
 ### <a name="return-value"></a>返回值
@@ -6022,7 +6022,7 @@ afx_msg void OnCancelMode();
 
 如果`CWnd`对象具有焦点，其`OnCancelMode`时显示对话框或消息框中，调用成员函数。 这样，`CWnd`取消鼠标捕获等模式的机会。
 
-默认实现通过调用来响应[ReleaseCapture](https://msdn.microsoft.com/library/windows/desktop/ms646261) Windows 函数。 重写此成员函数在派生类来处理其他模式。
+默认实现通过调用来响应[ReleaseCapture](/windows/desktop/api/winuser/nf-winuser-releasecapture) Windows 函数。 重写此成员函数在派生类来处理其他模式。
 
 ##  <a name="oncapturechanged"></a>  CWnd::OnCaptureChanged
 
@@ -6039,7 +6039,7 @@ afx_msg void OnCaptureChanged(CWnd* pWnd);
 
 ### <a name="remarks"></a>备注
 
-窗口收到此消息，即使它会调用[ReleaseCapture](https://msdn.microsoft.com/library/windows/desktop/ms646261)本身。 应用程序不应尝试对此消息的响应设置鼠标捕获。 当它收到此消息时，窗口应重绘自己，如有必要，以反映新的鼠标捕获状态。
+窗口收到此消息，即使它会调用[ReleaseCapture](/windows/desktop/api/winuser/nf-winuser-releasecapture)本身。 应用程序不应尝试对此消息的响应设置鼠标捕获。 当它收到此消息时，窗口应重绘自己，如有必要，以反映新的鼠标捕获状态。
 
 请参阅适用于信息的 Windows SDK `ReleaseCapture` Windows 函数。
 
@@ -6083,7 +6083,7 @@ afx_msg void OnChangeUIState(
 
 ### <a name="parameters"></a>参数
 
-*4%n 操作*<br/>
+*nAction*<br/>
 指定要执行的操作。 可以是以下值之一：
 
 - UIS_CLEAR 的 UI 状态元素 (由指定*nUIElement*) 应隐藏。
@@ -6118,7 +6118,7 @@ afx_msg void OnChar(
 
 ### <a name="parameters"></a>参数
 
-*NChar*<br/>
+*nChar*<br/>
 包含键的字符代码值。
 
 *nRepCnt*<br/>
@@ -6127,7 +6127,7 @@ afx_msg void OnChar(
 *nFlags*<br/>
 包含扫描代码、 密钥转换代码、 上一项状态和上下文的代码中，如下面的列表中所示：
 
-|值|含义|
+|“值”|含义|
 |-----------|-------------|
 |0-15|指定的重复计数。 值是由于用户按下键而重复击键次数。|
 |16-23|指定扫描代码。 值取决于原始设备制造商 (OEM)|
@@ -6161,7 +6161,7 @@ afx_msg int OnCharToItem(
 
 ### <a name="parameters"></a>参数
 
-*NChar*<br/>
+*nChar*<br/>
 指定由用户按下的键的值。
 
 *pListBox*<br/>
@@ -6344,7 +6344,7 @@ afx_msg int OnCompareItem(
 
 指示两个项的相对位置。 它可能是以下值之一：
 
-|值|含义|
+|“值”|含义|
 |-----------|-------------|
 |-1|第 1 项进行排序项 2 之前。|
 |0|第 1 项和项 2 排序相同。|
@@ -6533,7 +6533,7 @@ afx_msg void OnDeadChar(
 
 ### <a name="parameters"></a>参数
 
-*NChar*<br/>
+*nChar*<br/>
 指定死键的字符值。
 
 *nRepCnt*<br/>
@@ -6808,7 +6808,7 @@ afx_msg void OnEndSession(BOOL bEnding);
 
 ### <a name="parameters"></a>参数
 
-*弯曲*<br/>
+*bEnding*<br/>
 指定要终止会话。 它，则会话正在结束; 如果为 TRUE否则为 FALSE。
 
 ### <a name="remarks"></a>备注
@@ -7119,7 +7119,7 @@ afx_msg void OnHotKey(
 
 ### <a name="remarks"></a>备注
 
-此方法接收[WM_HOTKEY](/windows/desktop/inputdev/wm-hotkey)通知，Windows SDK 中所述。 此消息会放在与已注册的热键的线程关联的消息队列的顶部。 使用[RegisterHotKey](https://msdn.microsoft.com/library/windows/desktop/ms646309)函数以注册系统范围热键。
+此方法接收[WM_HOTKEY](/windows/desktop/inputdev/wm-hotkey)通知，Windows SDK 中所述。 此消息会放在与已注册的热键的线程关联的消息队列的顶部。 使用[RegisterHotKey](/windows/desktop/api/winuser/nf-winuser-registerhotkey)函数以注册系统范围热键。
 
 > [!NOTE]
 > 框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。
@@ -7377,7 +7377,7 @@ afx_msg void OnKeyDown(
 
 ### <a name="parameters"></a>参数
 
-*NChar*<br/>
+*nChar*<br/>
 指定给定的键的虚拟键代码。 标准虚拟键代码的列表，请参见 Winuser.h
 
 *nRepCnt*<br/>
@@ -7422,7 +7422,7 @@ afx_msg void OnKeyUp(
 
 ### <a name="parameters"></a>参数
 
-*NChar*<br/>
+*nChar*<br/>
 指定给定的键的虚拟键代码。 标准虚拟键代码的列表，请参见 Winuser.h
 
 *nRepCnt*<br/>
@@ -7431,7 +7431,7 @@ afx_msg void OnKeyUp(
 *nFlags*<br/>
 指定扫描代码、 密钥转换代码、 上一项状态和上下文的代码中，如下面的列表中所示：
 
-|值|描述|
+|“值”|描述|
 |-----------|-----------------|
 |0-7|扫描代码 （依赖于 OEM 的值）。 高序位字低位字节。|
 |8|扩展的密钥，如功能键或 （如果它是扩展的键为 1; 否则为 0） 数字键盘上的密钥。|
@@ -7497,7 +7497,7 @@ afx_msg void OnLButtonDblClk(
 
 - 如果 SHIFT 键按下，设置 MK_SHIFT。
 
-*点*<br/>
+*point*<br/>
 指定游标 x 和 y 坐标。 这些坐标始终都相对于窗口的左上角。
 
 ### <a name="remarks"></a>备注
@@ -7532,7 +7532,7 @@ afx_msg void OnLButtonDown(
 
 - 如果 SHIFT 键按下，设置 MK_SHIFT。
 
-*点*<br/>
+*point*<br/>
 指定游标 x 和 y 坐标。 这些坐标始终都相对于窗口的左上角。
 
 ### <a name="remarks"></a>备注
@@ -7563,7 +7563,7 @@ afx_msg void OnLButtonUp(
 
 - 如果 SHIFT 键按下，设置 MK_SHIFT。
 
-*点*<br/>
+*point*<br/>
 指定游标 x 和 y 坐标。 这些坐标始终都相对于窗口的左上角。
 
 ### <a name="remarks"></a>备注
@@ -7596,7 +7596,7 @@ afx_msg void OnMButtonDblClk(
 
 - 如果 SHIFT 键按下，设置 MK_SHIFT。
 
-*点*<br/>
+*point*<br/>
 指定游标 x 和 y 坐标。 这些坐标始终都相对于窗口的左上角。
 
 ### <a name="remarks"></a>备注
@@ -7631,7 +7631,7 @@ afx_msg void OnMButtonDown(
 
 - 如果 SHIFT 键按下，设置 MK_SHIFT。
 
-*点*<br/>
+*point*<br/>
 指定游标 x 和 y 坐标。 这些坐标始终都相对于窗口的左上角。
 
 ### <a name="remarks"></a>备注
@@ -7662,7 +7662,7 @@ afx_msg void OnMButtonUp(
 
 - 如果 SHIFT 键按下，设置 MK_SHIFT。
 
-*点*<br/>
+*point*<br/>
 指定游标 x 和 y 坐标。 这些坐标始终都相对于窗口的左上角。
 
 ### <a name="remarks"></a>备注
@@ -7744,7 +7744,7 @@ afx_msg LRESULT OnMenuChar(
 
 ### <a name="parameters"></a>参数
 
-*NChar*<br/>
+*nChar*<br/>
 具体取决于生成设置中，指定与用户按下的 ANSI 或 Unicode 字符。
 
 *nFlags*<br/>
@@ -7964,7 +7964,7 @@ afx_msg void OnMouseHover(
 |参数|描述|
 |---------------|-----------------|
 |*nFlags*|[in]指示哪个修改键被按下标志的按位组合 (OR)。 例如，MK_CONTROL 标志指示按下了 CTRL 键。|
-|*点*|[in]一个[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)对象，它指定*x*并*y*光标相对于工作区的左上角的坐标。|
+|*point*|[in]一个[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)对象，它指定*x*并*y*光标相对于工作区的左上角的坐标。|
 
 ### <a name="remarks"></a>备注
 
@@ -8051,7 +8051,7 @@ afx_msg void OnMouseMove(
 
 - 如果 SHIFT 键按下，设置 MK_SHIFT。
 
-*点*<br/>
+*point*<br/>
 指定游标 x 和 y 坐标。 这些坐标始终都相对于窗口的左上角。
 
 ### <a name="remarks"></a>备注
@@ -8145,7 +8145,7 @@ afx_msg void OnMoving(
 
 ### <a name="parameters"></a>参数
 
-*深入剖析*<br/>
+*nSide*<br/>
 要移动的窗口边缘。
 
 *lpRect*<br/>
@@ -8257,7 +8257,7 @@ afx_msg LRESULT OnNcHitTest(CPoint point);
 
 ### <a name="parameters"></a>参数
 
-*点*<br/>
+*point*<br/>
 包含光标 x 和 y 坐标。 这些坐标始终是屏幕坐标。
 
 ### <a name="return-value"></a>返回值
@@ -8284,7 +8284,7 @@ afx_msg void OnNcLButtonDblClk(
 *nHitTest*<br/>
 指定[命中测试代码](#onnchittest)。 命中的测试是一个测试，以便确定光标的位置。
 
-*点*<br/>
+*point*<br/>
 指定`CPoint`对象，其中包含 x 和 y 屏幕坐标的光标位置。 这些坐标始终都相对于屏幕的左上角。
 
 ### <a name="remarks"></a>备注
@@ -8309,7 +8309,7 @@ afx_msg void OnNcLButtonDown(
 *nHitTest*<br/>
 指定[命中测试代码](#onnchittest)。 命中的测试是一个测试，以便确定光标的位置。
 
-*点*<br/>
+*point*<br/>
 指定`CPoint`对象，其中包含 x 和 y 屏幕坐标的光标位置。 这些坐标始终都相对于屏幕的左上角。
 
 ### <a name="remarks"></a>备注
@@ -8334,7 +8334,7 @@ afx_msg void OnNcLButtonUp(
 *nHitTest*<br/>
 指定[命中测试代码](#onnchittest)。 命中的测试是一个测试，以便确定光标的位置。
 
-*点*<br/>
+*point*<br/>
 指定`CPoint`对象，其中包含 x 和 y 屏幕坐标的光标位置。 这些坐标始终都相对于屏幕的左上角。
 
 ### <a name="remarks"></a>备注
@@ -8359,7 +8359,7 @@ afx_msg void OnNcMButtonDblClk(
 *nHitTest*<br/>
 指定[命中测试代码](#onnchittest)。 命中的测试是一个测试，以便确定光标的位置。
 
-*点*<br/>
+*point*<br/>
 指定`CPoint`对象，其中包含 x 和 y 屏幕坐标的光标位置。 这些坐标始终都相对于屏幕的左上角。
 
 ### <a name="remarks"></a>备注
@@ -8382,7 +8382,7 @@ afx_msg void OnNcMButtonDown(
 *nHitTest*<br/>
 指定[命中测试代码](#onnchittest)。 命中的测试是一个测试，以便确定光标的位置。
 
-*点*<br/>
+*point*<br/>
 指定`CPoint`对象，其中包含 x 和 y 屏幕坐标的光标位置。 这些坐标始终都相对于屏幕的左上角。
 
 ### <a name="remarks"></a>备注
@@ -8405,7 +8405,7 @@ afx_msg void OnNcMButtonUp(
 *nHitTest*<br/>
 指定[命中测试代码](#onnchittest)。 命中的测试是一个测试，以便确定光标的位置。
 
-*点*<br/>
+*point*<br/>
 指定`CPoint`对象，其中包含 x 和 y 屏幕坐标的光标位置。 这些坐标始终都相对于屏幕的左上角。
 
 ### <a name="remarks"></a>备注
@@ -8428,7 +8428,7 @@ afx_msg void OnNcMouseHover(
 |参数|描述|
 |---------------|-----------------|
 |*nHitTest*|[in]返回的命中测试值[CWnd::DefWindowProc](#defwindowproc)函数作为处理结果[WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest)消息。|
-|*点*|[in]一个[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)对象，它指定*x*并*y*光标相对于屏幕的左上角的坐标。|
+|*point*|[in]一个[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)对象，它指定*x*并*y*光标相对于屏幕的左上角的坐标。|
 
 ### <a name="remarks"></a>备注
 
@@ -8467,7 +8467,7 @@ afx_msg void OnNcMouseMove(
 *nHitTest*<br/>
 指定[命中测试代码](#onnchittest)。 命中的测试是一个测试，以便确定光标的位置。
 
-*点*<br/>
+*point*<br/>
 指定`CPoint`对象，其中包含 x 和 y 屏幕坐标的光标位置。 这些坐标始终都相对于屏幕的左上角。
 
 ### <a name="remarks"></a>备注
@@ -8506,7 +8506,7 @@ afx_msg void OnNcRButtonDblClk(
 *nHitTest*<br/>
 指定[命中测试代码](#onnchittest)。 命中的测试是一个测试，以便确定光标的位置。
 
-*点*<br/>
+*point*<br/>
 指定`CPoint`对象，其中包含 x 和 y 屏幕坐标的光标位置。 这些坐标始终都相对于屏幕的左上角。
 
 ### <a name="remarks"></a>备注
@@ -8529,7 +8529,7 @@ afx_msg void OnNcRButtonDown(
 *nHitTest*<br/>
 指定[命中测试代码](#onnchittest)。 命中的测试是一个测试，以便确定光标的位置。
 
-*点*<br/>
+*point*<br/>
 指定`CPoint`对象，其中包含 x 和 y 屏幕坐标的光标位置。 这些坐标始终都相对于屏幕的左上角。
 
 ### <a name="remarks"></a>备注
@@ -8552,7 +8552,7 @@ afx_msg void OnNcRButtonUp(
 *nHitTest*<br/>
 指定[命中测试代码](#onnchittest)。 命中的测试是一个测试，以便确定光标的位置。
 
-*点*<br/>
+*point*<br/>
 指定`CPoint`对象，其中包含 x 和 y 屏幕坐标的光标位置。 这些坐标始终都相对于屏幕的左上角。
 
 ### <a name="remarks"></a>备注
@@ -8597,8 +8597,8 @@ void OnNcXButtonDblClk(
 |参数|描述|
 |---------------|-----------------|
 |*nHitTest*|[in]返回的命中测试值[CWnd::DefWindowProc](#defwindowproc)函数作为处理结果[WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest)消息。|
-|*n 按钮*|[in]如果第一个 Microsoft 智能鼠标 X 按钮是双击 XBUTTON1 或 XBUTTON2 值如果第二个 X 按钮是双击。|
-|*点*|[in]一个[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)对象，它指定*x*并*y*光标相对于工作区的左上角的坐标。|
+|*nButton*|[in]如果第一个 Microsoft 智能鼠标 X 按钮是双击 XBUTTON1 或 XBUTTON2 值如果第二个 X 按钮是双击。|
+|*point*|[in]一个[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)对象，它指定*x*并*y*光标相对于工作区的左上角的坐标。|
 
 ### <a name="remarks"></a>备注
 
@@ -8623,8 +8623,8 @@ afx_msg void OnNcXButtonDown(
 |参数|描述|
 |---------------|-----------------|
 |*nHitTest*|[in]返回的命中测试值[CWnd::DefWindowProc](#defwindowproc)函数作为处理结果[WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest)消息。|
-|*n 按钮*|[in]值为按下第一个鼠标的 X 按钮时，如果 XBUTTON1 或 XBUTTON2 如果第二个 X 按钮被按下。|
-|*点*|[in]一个[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)对象，它指定*x*并*y*光标相对于屏幕的左上角的坐标。|
+|*nButton*|[in]值为按下第一个鼠标的 X 按钮时，如果 XBUTTON1 或 XBUTTON2 如果第二个 X 按钮被按下。|
+|*point*|[in]一个[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)对象，它指定*x*并*y*光标相对于屏幕的左上角的坐标。|
 
 ### <a name="remarks"></a>备注
 
@@ -8649,8 +8649,8 @@ afx_msg void OnNcXButtonUp(
 |参数|描述|
 |---------------|-----------------|
 |*nHitTest*|[in]返回的命中测试值[CWnd::DefWindowProc](#defwindowproc)函数作为处理结果[WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest)消息。|
-|*n 按钮*|[in]值为释放第一个鼠标的 X 按钮时，如果 XBUTTON1 或 XBUTTON2 如果第二个 X 按钮发布。|
-|*点*|[in]一个[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)对象，它指定*x*并*y*光标相对于屏幕的左上角的坐标。|
+|*nButton*|[in]值为释放第一个鼠标的 X 按钮时，如果 XBUTTON1 或 XBUTTON2 如果第二个 X 按钮发布。|
+|*point*|[in]一个[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)对象，它指定*x*并*y*光标相对于屏幕的左上角的坐标。|
 
 ### <a name="remarks"></a>备注
 
@@ -9043,7 +9043,7 @@ afx_msg void OnRButtonDblClk(
 
 - 如果 SHIFT 键按下，设置 MK_SHIFT。
 
-*点*<br/>
+*point*<br/>
 指定的 x 和 y 坐标的光标。 这些坐标始终都相对于窗口的左上角。
 
 ### <a name="remarks"></a>备注
@@ -9078,7 +9078,7 @@ afx_msg void OnRButtonDown(
 
 - 如果 SHIFT 键按下，设置 MK_SHIFT。
 
-*点*<br/>
+*point*<br/>
 指定的 x 和 y 坐标的光标。 这些坐标始终都相对于窗口的左上角。
 
 ### <a name="remarks"></a>备注
@@ -9108,7 +9108,7 @@ afx_msg void OnRButtonUp(
 
 - 如果 SHIFT 键按下，设置 MK_SHIFT。
 
-*点*<br/>
+*point*<br/>
 指定的 x 和 y 坐标的光标。 这些坐标始终都相对于窗口的左上角。
 
 ### <a name="remarks"></a>备注
@@ -9337,7 +9337,7 @@ afx_msg void OnSize(
 
 ### <a name="parameters"></a>参数
 
-*n 类型*<br/>
+*nType*<br/>
 指定调整大小请求的类型。 此参数可以是下列值之一：
 
 - SIZE_MAXIMIZED 窗口已最大化。
@@ -9406,7 +9406,7 @@ afx_msg void OnSizing(
 
 ### <a name="parameters"></a>参数
 
-*深入剖析*<br/>
+*nSide*<br/>
 要移动的窗口边缘。
 
 *lpRect*<br/>
@@ -9468,7 +9468,7 @@ afx_msg void OnStyleChanged(
 - GWL_STYLE 窗口 nonextended 的样式已更改。
 
 *lpStyleStruct*<br/>
-指向[STYLESTRUCT](https://msdn.microsoft.com/library/windows/desktop/ms632607)结构，它包含的新样式的窗口。 应用程序可以检查样式，但它可以对其进行更改。
+指向[STYLESTRUCT](/windows/desktop/api/winuser/ns-winuser-stylestruct)结构，它包含的新样式的窗口。 应用程序可以检查样式，但它可以对其进行更改。
 
 ### <a name="remarks"></a>备注
 
@@ -9495,7 +9495,7 @@ afx_msg void OnStyleChanging(
 - GWL_STYLE 窗口 nonextended 的样式已更改。
 
 *lpStyleStruct*<br/>
-指向[STYLESTRUCT](https://msdn.microsoft.com/library/windows/desktop/ms632607)结构，它包含的新样式的窗口。 应用程序可以检查样式并更改它们。
+指向[STYLESTRUCT](/windows/desktop/api/winuser/ns-winuser-stylestruct)结构，它包含的新样式的窗口。 应用程序可以检查样式并更改它们。
 
 ### <a name="remarks"></a>备注
 
@@ -9515,7 +9515,7 @@ afx_msg void OnSysChar(
 
 ### <a name="parameters"></a>参数
 
-*NChar*<br/>
+*nChar*<br/>
 指定控制菜单键的 ASCII 字符键代码。
 
 *nRepCnt*<br/>
@@ -9524,7 +9524,7 @@ afx_msg void OnSysChar(
 *nFlags*<br/>
 *NFlags*参数可以为下列值：
 
-|值|含义|
+|“值”|含义|
 |-----------|-------------|
 |0-15|指定的重复计数。 值是由于用户按下键而重复击键次数...|
 |16-23|指定扫描代码。 值取决于原始设备制造商 (OEM)|
@@ -9639,7 +9639,7 @@ afx_msg void OnSysDeadChar(
 
 ### <a name="parameters"></a>参数
 
-*NChar*<br/>
+*nChar*<br/>
 指定死键的字符值。
 
 *nRepCnt*<br/>
@@ -9678,7 +9678,7 @@ afx_msg void OnSysKeyDown(
 
 ### <a name="parameters"></a>参数
 
-*NChar*<br/>
+*nChar*<br/>
 指定要按下的键的虚拟键代码。 标准虚拟键代码的列表，请参见 Winuser.h
 
 *nRepCnt*<br/>
@@ -9725,7 +9725,7 @@ afx_msg void OnSysKeyUp(
 
 ### <a name="parameters"></a>参数
 
-*NChar*<br/>
+*nChar*<br/>
 指定要按下的键的虚拟键代码。 标准虚拟键代码的列表，请参见 Winuser.h
 
 *nRepCnt*<br/>
@@ -9860,10 +9860,10 @@ virtual INT_PTR OnToolHitTest(
 
 ### <a name="parameters"></a>参数
 
-*点*<br/>
+*point*<br/>
 指定游标 x 和 y 坐标。 这些坐标始终都相对于窗口的左上角
 
-*PTI*<br/>
+*pTI*<br/>
 一个指向[TOOLINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa)结构。 默认情况下设置以下结构值：
 
 - *hwnd*  =  `m_hWnd`窗口的句柄
@@ -9959,7 +9959,7 @@ afx_msg void OnUniChar(
 
 |参数|描述|
 |---------------|-----------------|
-|*NChar*|[in]指定按下的键的字符代码。|
+|*nChar*|[in]指定按下的键的字符代码。|
 |*nRepCnt*|[in]指定当前消息的重复次数。 值为击键是由于用户按下键而 autorepeated 次数。 如果击键会保留足够长的时间，将发送多条消息。 但是，重复次数不具有累积性。|
 |*nFlags*|[in]下表中所示指定扫描代码、 扩展的密钥、 上下文代码、 上一项状态和转换状态的标志：<br /><br /> **0-7:** 指定扫描代码。 值取决于原始设备制造商 (OEM)。<br /><br /> **8:** 指定扩展的密钥，例如增强的 101 或 102 键键盘显示的右侧 ALT 和 CTRL 键。 该标志为 1，如果密钥是扩展的密钥;否则，则为 0。<br /><br /> **9-12:** 由 Windows 内部使用。<br /><br /> **13:** 指定的上下文代码。 如果当按下了键; 并按住 ALT 键，该标志为 1否则，值为 0。<br /><br /> **14:** 指定上一个键的状态。 如果该键处于松开，该标志是如果密钥已关闭之前发送消息，则为 1 或 0。<br /><br /> **15:** 指定转换状态。 如果按下了键，该标志是如果正在释放键，则为 1 或 0。|
 
@@ -10006,7 +10006,7 @@ afx_msg void OnUpdateUIState(
 
 ### <a name="parameters"></a>参数
 
-*4%n 操作*<br/>
+*nAction*<br/>
 指定要执行的操作。 可以是以下值之一：
 
 - UIS_CLEAR 的 UI 状态元素 (由指定*nUIElement*) 应隐藏。
@@ -10311,8 +10311,8 @@ afx_msg void OnXButtonDblClk(
 |参数|描述|
 |---------------|-----------------|
 |*nFlags*|[in]指示哪个修改键被按下标志的按位组合 (OR)。 例如，MK_CONTROL 标志指示按下了 CTRL 键。|
-|*n 按钮*|[in]如果第一个 Microsoft 智能鼠标 X 按钮是双击 XBUTTON1 或 XBUTTON2 值如果第二个 X 按钮是双击。|
-|*点*|[in]一个[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)对象，它指定*x*并*y*光标相对于工作区的左上角的坐标。|
+|*nButton*|[in]如果第一个 Microsoft 智能鼠标 X 按钮是双击 XBUTTON1 或 XBUTTON2 值如果第二个 X 按钮是双击。|
+|*point*|[in]一个[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)对象，它指定*x*并*y*光标相对于工作区的左上角的坐标。|
 
 ### <a name="remarks"></a>备注
 
@@ -10349,8 +10349,8 @@ afx_msg void OnXButtonDown(
 |参数|描述|
 |---------------|-----------------|
 |*nFlags*|[in]指示哪个修改键被按下标志的按位组合 (OR)。 例如，MK_CONTROL 标志指示按下了 CTRL 键。|
-|*n 按钮*|[in]值为如果单击第一个 Microsoft 智能鼠标 X 按钮，XBUTTON1 或 XBUTTON2 如果第二个 X 按钮被单击。|
-|*点*|[in]一个[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)对象，它指定*x*并*y*光标相对于工作区的左上角的坐标。|
+|*nButton*|[in]值为如果单击第一个 Microsoft 智能鼠标 X 按钮，XBUTTON1 或 XBUTTON2 如果第二个 X 按钮被单击。|
+|*point*|[in]一个[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)对象，它指定*x*并*y*光标相对于工作区的左上角的坐标。|
 
 ### <a name="remarks"></a>备注
 
@@ -10387,8 +10387,8 @@ afx_msg void OnXButtonUp(
 |参数|描述|
 |---------------|-----------------|
 |*nFlags*|[in]指示哪个修改键被按下标志的按位组合 (OR)。 例如，MK_CONTROL 标志指示按下了 CTRL 键。|
-|*n 按钮*|[in]如果第一个 Microsoft 智能鼠标 X 按钮被单击，XBUTTON1 或 XBUTTON2 值如果第二个 X 按钮被单击。|
-|*点*|[in]一个[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)对象，它指定*x*并*y*光标相对于工作区的左上角的坐标。|
+|*nButton*|[in]如果第一个 Microsoft 智能鼠标 X 按钮被单击，XBUTTON1 或 XBUTTON2 值如果第二个 X 按钮被单击。|
+|*point*|[in]一个[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)对象，它指定*x*并*y*光标相对于工作区的左上角的坐标。|
 
 ### <a name="remarks"></a>备注
 
@@ -11044,7 +11044,7 @@ int ScrollWindowEx(
 
 如果窗口具有[WS_CLIPCHILDREN](/windows/desktop/api/winuser/nf-winuser-createwindowa)样式，返回由指定的区域*prgnUpdate*并*lpRectUpdate*表示必须滚动窗口的总区域更新，包括需要更新的子窗口中的任何区域。
 
-如果[SW_SCROLLCHILDREN](/windows/desktop/api/winuser/nf-winuser-scrollwindowex)指定标志时，Windows 不会正确更新屏幕如果滚动的子窗口的一部分。 位于源矩形外滚动的子窗口的一部分不会被删除，并将不会重绘正确地在其新的目标位置中。 使用[DeferWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms632681) Windows 函数来执行不包含同时位于完全内移动子窗口*lpRectScroll*矩形。 如果设置了 SW_SCROLLCHILDREN 标志和插入符号矩形相交滚动矩形，重新定位光标。
+如果[SW_SCROLLCHILDREN](/windows/desktop/api/winuser/nf-winuser-scrollwindowex)指定标志时，Windows 不会正确更新屏幕如果滚动的子窗口的一部分。 位于源矩形外滚动的子窗口的一部分不会被删除，并将不会重绘正确地在其新的目标位置中。 使用[DeferWindowPos](/windows/desktop/api/winuser/nf-winuser-deferwindowpos) Windows 函数来执行不包含同时位于完全内移动子窗口*lpRectScroll*矩形。 如果设置了 SW_SCROLLCHILDREN 标志和插入符号矩形相交滚动矩形，重新定位光标。
 
 所有输入和输出坐标 (对于*lpRectScroll*， *lpRectClip*， *lpRectUpdate*，并*prgnUpdate*) 被假定为中客户端坐标，而不考虑窗口是否具有 CS_OWNDC 或 CS_CLASSDC 类样式。 使用[LPtoDP](/windows/desktop/api/wingdi/nf-wingdi-lptodp)并[DPtoLP](/windows/desktop/api/wingdi/nf-wingdi-dptolp) Windows 函数要转换到和从逻辑坐标表示，如有必要。
 
@@ -11247,7 +11247,7 @@ CWnd* SetCapture();
 
 ### <a name="remarks"></a>备注
 
-当`CWnd`不再需要所有鼠标输入，该应用程序应调用[ReleaseCapture](https://msdn.microsoft.com/library/windows/desktop/ms646261)函数，以便其他窗口可以接收鼠标输入。
+当`CWnd`不再需要所有鼠标输入，该应用程序应调用[ReleaseCapture](/windows/desktop/api/winuser/nf-winuser-releasecapture)函数，以便其他窗口可以接收鼠标输入。
 
 捕获鼠标输入，而没有 WM_NCHITTEST 或 WM_SETCURSOR 消息发送到活动窗口。
 
@@ -11261,7 +11261,7 @@ static void PASCAL SetCaretPos(POINT point);
 
 ### <a name="parameters"></a>参数
 
-*点*<br/>
+*point*<br/>
 指定新的 x 和 y 坐标 （在工作区坐标中） 的脱字号。
 
 ### <a name="remarks"></a>备注
@@ -11331,7 +11331,7 @@ void SetDlgItemInt(
 *nID*<br/>
 指定要更改的控件的整数 ID。
 
-*n 值*<br/>
+*nValue*<br/>
 指定用于生成的项文本的整数值。
 
 *bSigned*<br/>
@@ -12341,7 +12341,7 @@ static CWnd* PASCAL WindowFromPoint(POINT point);
 
 ### <a name="parameters"></a>参数
 
-*点*<br/>
+*point*<br/>
 指定[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)对象或[点](/windows/desktop/api/windef/ns-windef-tagpoint)数据结构，它定义要检查的点。
 
 ### <a name="return-value"></a>返回值

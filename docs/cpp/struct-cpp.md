@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - struct constructors
 ms.assetid: 3c6ba273-e248-4ff1-8c69-d2abcf1263c6
-ms.openlocfilehash: 9b70a4caea2b9aa5d86c0e97b97eae784594ec87
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 78d3df4a96cb769cb31760c53c8486c86189e00c
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326103"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893335"
 ---
 # <a name="struct-c"></a>struct (C++)
 
@@ -20,7 +20,7 @@ ms.locfileid: "51326103"
 ## <a name="syntax"></a>语法
 
 ```
-[template-spec] struct[ms-decl-spec] [tag [: base-list ]]
+[template-spec] struct [ms-decl-spec] [tag [: base-list ]]
 {
    member-list
 } [declarators];
@@ -29,26 +29,26 @@ ms.locfileid: "51326103"
 
 #### <a name="parameters"></a>参数
 
-*模板规范*<br/>
+*template-spec*<br/>
 可选模板规范。 有关详细信息，请参阅[模板规范](templates-cpp.md)。
 
 *struct*<br/>
 **结构**关键字。
 
-*ms 声明规范*<br/>
+*ms-decl-spec*<br/>
 可选存储类规范。 有关详细信息，请参阅[__declspec](../cpp/declspec.md)关键字。
 
-*标记*<br/>
+*tag*<br/>
 为结构提供的类型名称。 标记将变成结构范围内的保留字。 标记是可选项。 如果省略，则定义匿名结构。 有关详细信息，请参阅[匿名类类型](../cpp/anonymous-class-types.md)。
 
-*基础列表*<br/>
+*base-list*<br/>
 此结构将从中派生其成员的类或结构的可选列表。 请参阅[基类](../cpp/base-classes.md)有关详细信息。 每个基的类或结构名称的前面可具有访问说明符 ([公共](../cpp/public-cpp.md)，[专用](../cpp/private-cpp.md)，[保护](../cpp/protected-cpp.md)) 和[虚拟](../cpp/virtual-cpp.md)关键字。 请参阅中的成员访问表[控制对类成员的访问](member-access-control-cpp.md)有关详细信息。
 
-*成员的列表*<br/>
+*member-list*<br/>
 结构成员列表。 请参阅[类成员概述](../cpp/class-member-overview.md)有关详细信息。 唯一的区别在于**struct**用来代替**类**。
 
-*声明符*<br/>
-指定类名称的声明符列表。 声明符列表声明了一个或多个结构类型实例。 如果类的所有数据成员声明符可以包含初始值设定项列表**公共**。 初始值设定项列表是常见的结构，因为数据成员是**公共**默认情况下。  请参阅[的声明符概述](../cpp/overview-of-declarators.md)有关详细信息。
+*declarators*<br/>
+指定结构的名称的声明符列表。 声明符列表声明了一个或多个结构类型实例。 如果结构的所有数据成员声明符可以包含初始值设定项列表**公共**。 初始值设定项列表是常见的结构，因为数据成员是**公共**默认情况下。  请参阅[的声明符概述](../cpp/overview-of-declarators.md)有关详细信息。
 
 ## <a name="remarks"></a>备注
 
