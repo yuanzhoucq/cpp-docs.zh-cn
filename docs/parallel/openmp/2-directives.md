@@ -2,12 +2,12 @@
 title: 2. 指令
 ms.date: 01/18/2019
 ms.assetid: d1a69374-6c03-45fb-8c86-e91cea8adae8
-ms.openlocfilehash: bf96d5ee6963a76c2b2462d5b3a0639c1141ea15
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: 125d2d83b277e62d007e3a208e426ea717d52790
+ms.sourcegitcommit: 382e247c0f1b4cb7c2dab837b8b6fdff24bff47a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54894234"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087335"
 ---
 # <a name="2-directives"></a>2.指令
 
@@ -111,12 +111,12 @@ iam = omp_get_thread_num() + index;
 ### <a name="cross-references"></a>交叉引用
 
 - `private``firstprivate`， `default`， `shared`， `copyin`，并`reduction`子句 ([部分 2.7.2](#272-data-sharing-attribute-clauses))
-- [OMP_NUM_THREADS](4-2-omp-num-threads.md)环境变量
-- [omp_set_dynamic](3-1-7-omp-set-dynamic-function.md)库函数
-- [OMP_DYNAMIC](4-3-omp-dynamic.md)环境变量
-- [omp_set_nested](3-1-9-omp-set-nested-function.md) function
-- [OMP_NESTED](4-4-omp-nested.md)环境变量
-- [omp_set_num_threads](3-1-1-omp-set-num-threads-function.md)库函数
+- [OMP_NUM_THREADS](4-environment-variables.md#42-omp_num_threads)环境变量
+- [omp_set_dynamic](3-run-time-library-functions.md#317-omp_set_dynamic-function)库函数
+- [OMP_DYNAMIC](4-environment-variables.md#43-omp_dynamic)环境变量
+- [omp_set_nested](3-run-time-library-functions.md#319-omp_set_nested-function) function
+- [OMP_NESTED](4-environment-variables.md#44-omp_nested)环境变量
+- [omp_set_num_threads](3-run-time-library-functions.md#311-omp_set_num_threads-function)库函数
 
 ## <a name="24-work-sharing-constructs"></a>2.4 工作共享构造
 
@@ -227,7 +227,7 @@ OpenMP 兼容的程序不应依赖于正确的执行的特定计划。 程序不
 #### <a name="cross-references"></a>交叉引用
 
 - `private``firstprivate`， `lastprivate`，并`reduction`子句 ([部分 2.7.2](#272-data-sharing-attribute-clauses))
-- [OMP_SCHEDULE](4-1-omp-schedule.md)环境变量
+- [OMP_SCHEDULE](4-environment-variables.md#41-omp_schedule)环境变量
 - [按序](#266-ordered-construct)构造
 - [计划](d-using-the-schedule-clause.md)子句
 
@@ -520,7 +520,7 @@ if (x!=0) {
 
 本节介绍指令和多个子句，用于控制数据环境的并行区域，在执行期间，如下所示：
 
-- 一个`threadprivate`指令 （请参阅以下部分） 提供了可使文件范围、 命名空间范围或静态的块范围变量为线程本地。
+- 一个[threadprivate](#271-threadprivate-directive)指令提供旨在使文件范围、 命名空间范围或静态的块范围变量为线程本地。
 
 - 要并行或工作共享构造的持续时间内控制变量的共享属性的指令只能指定子句中所述[部分 2.7.2](#272-data-sharing-attribute-clauses)。
 
@@ -582,8 +582,8 @@ void f(int n) {
 
 #### <a name="cross-references"></a>交叉引用
 
-- [动态线程](3-1-7-omp-set-dynamic-function.md)
-- [OMP_DYNAMIC](4-3-omp-dynamic.md)环境变量
+- [动态线程](3-run-time-library-functions.md#317-omp_set_dynamic-function)
+- [OMP_DYNAMIC](4-environment-variables.md#43-omp_dynamic)环境变量
 
 ### <a name="272-data-sharing-attribute-clauses"></a>2.7.2 数据共享特性子句
 

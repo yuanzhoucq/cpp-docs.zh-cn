@@ -2,12 +2,12 @@
 title: 3. 运行时库函数
 ms.date: 01/17/2019
 ms.assetid: b226e512-6822-4cbe-a2ca-74cc2bb7e880
-ms.openlocfilehash: 7d48338683037c06ca208bff32c5c2e9b546a9fe
-ms.sourcegitcommit: 774db6a005a85e2a1268ca34309b993792701819
+ms.openlocfilehash: 4e72d2d74bb26f8eeeb422881cabf92630cced43
+ms.sourcegitcommit: 382e247c0f1b4cb7c2dab837b8b6fdff24bff47a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55065017"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087309"
 ---
 # <a name="3-run-time-library-functions"></a>3.运行时库函数
 
@@ -49,7 +49,7 @@ ms.locfileid: "55065017"
 void omp_set_num_threads(int num_threads);
 ```
 
-参数的值*num_threads*必须为正整数。 其效果取决于是否启用了动态调整线程数。 获取完整的有关之间的交互的规则集`omp_set_num_threads`函数和动态调整线程，请参阅 2.3 节。
+参数的值*num_threads*必须为正整数。 其效果取决于是否启用了动态调整线程数。 获取完整的有关之间的交互的规则集`omp_set_num_threads`函数，并动态调整线程，请参阅[第 2.3 节](2-directives.md#23-parallel-construct)。
 
 此函数将产生影响时从该程序的一部分调用上述其中`omp_in_parallel`函数将返回零。 如果从该程序的一部分调用其中`omp_in_parallel`函数将返回一个非零值，此函数的行为是未定义。
 
@@ -60,7 +60,7 @@ void omp_set_num_threads(int num_threads);
 - [omp_set_dynamic](#317-omp_set_dynamic-function) function
 - [omp_get_dynamic](#318-omp_get_dynamic-function) function
 - [OMP_NUM_THREADS](4-environment-variables.md#42-omp_num_threads)环境变量
-- [num_threads](2-3-parallel-construct.md)子句
+- [num_threads](2-directives.md#23-parallel-construct)子句
 
 ### <a name="312-ompgetnumthreads-function"></a>3.1.2 omp_get_num_threads 函数
 
@@ -78,8 +78,8 @@ int omp_get_num_threads(void);
 #### <a name="cross-references"></a>交叉引用
 
 - [OMP_NUM_THREADS](4-environment-variables.md#42-omp_num_threads)
-- [num_threads](2-3-parallel-construct.md)
-- [parallel](2-3-parallel-construct.md)
+- [num_threads](2-directives.md#23-parallel-construct)
+- [parallel](2-directives.md#23-parallel-construct)
 
 ### <a name="313-ompgetmaxthreads-function"></a>3.1.3 omp_get_max_threads 函数
 
@@ -107,7 +107,7 @@ threads-used-for-next-team
 - [omp_get_num_threads](#312-omp_get_num_threads-function)
 - [omp_set_num_threads](#311-omp_set_num_threads-function)
 - [omp_set_dynamic](#317-omp_set_dynamic-function)
-- [num_threads](2-3-parallel-construct.md)
+- [num_threads](2-directives.md#23-parallel-construct)
 
 ### <a name="314-ompgetthreadnum-function"></a>3.1.4 omp_get_thread_num 函数
 
