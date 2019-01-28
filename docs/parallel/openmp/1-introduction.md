@@ -2,12 +2,12 @@
 title: 1. 介绍
 ms.date: 01/16/2019
 ms.assetid: c42e72bc-0e31-4b1c-b670-cd82673c0c5a
-ms.openlocfilehash: 99020e9cf8c38bcfaeefdf5c31663b3e66352556
-ms.sourcegitcommit: 2ebbf8093fadb9a1b78a4381439bcd5c01a89267
+ms.openlocfilehash: 8c735408bdf9f9a13693bd0ad25df185bb1db42a
+ms.sourcegitcommit: 382e247c0f1b4cb7c2dab837b8b6fdff24bff47a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54397298"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087270"
 ---
 # <a name="1-introduction"></a>1.介绍
 
@@ -134,4 +134,4 @@ OpenMP C/c + + API 指定特定的行为是*实现定义。* 需要定义并记�
 - [运行时库函数](3-run-time-library-functions.md)
 - [环境变量](4-environment-variables.md)
 - [实现定义的行为在 OpenMP C/c + +](e-implementation-defined-behaviors-in-openmp-c-cpp.md)
-- [OpenMP C/c + + 2.0 版中的新增功能](f-new-features-and-clarifications-in-version-2-0.md)
+- [在 OpenMP C/c + + 2.0 版的新功能](f-new-features-and-clarifications-in-version-2-0.md)
