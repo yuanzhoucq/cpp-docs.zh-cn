@@ -15,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - CWorkerThread class
 ms.assetid: be79a832-1345-4a36-a13e-a406cc65286f
-ms.openlocfilehash: 9469770dc0538b968cfaafa2de45f28bd864193c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5ecde92cbd9fb9e028e79c9a0ce75859ce85790a
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50531842"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893452"
 ---
 # <a name="cworkerthread-class"></a>CWorkerThread 类
 
@@ -248,7 +248,7 @@ HRESULT RemoveHandle(HANDLE hObject) throw();
 
 ### <a name="remarks"></a>备注
 
-删除句柄的时间[IWorkerThreadClient::CloseHandle](../../atl/reference/iworkerthreadclient-interface.md#closehandle)将传递到关联的对象上调用[AddHandle](#addhandle)。 如果此调用失败，`CWorkerThread`将调用 Windows [CloseHandle](https://msdn.microsoft.com/library/windows/desktop/ms724211)句柄上的函数。
+删除句柄的时间[IWorkerThreadClient::CloseHandle](../../atl/reference/iworkerthreadclient-interface.md#closehandle)将传递到关联的对象上调用[AddHandle](#addhandle)。 如果此调用失败，`CWorkerThread`将调用 Windows [CloseHandle](/windows/desktop/api/handleapi/nf-handleapi-closehandle)句柄上的函数。
 
 ##  <a name="shutdown"></a>  CWorkerThread::Shutdown
 

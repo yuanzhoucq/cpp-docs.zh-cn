@@ -34,12 +34,12 @@ helpviewer_keywords:
 - dates, handling in MFC
 - time, handling in MFC
 ms.assetid: e718f294-16ec-4649-88b6-a4dbae5178fb
-ms.openlocfilehash: 9791f1c59bb393f7de64ffb16ccb95e99928b04c
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: a49b886bcf9c25642b1f7b8e843be11baf2d2d00
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525335"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894102"
 ---
 # <a name="coledatetime-class"></a>COleDateTime 类
 
@@ -65,7 +65,7 @@ class COleDateTime
 |----------|-----------------|
 |[COleDateTime::Format](#format)|生成带格式的字符串表示形式的`COleDateTime`对象。|
 |[COleDateTime::GetAsDBTIMESTAMP](#getasdbtimestamp)|调用此方法以获取在时间`COleDateTime`对象作为`DBTIMESTAMP`数据结构。|
-|[COleDateTime::GetAsSystemTime](#getassystemtime)|调用此方法以获取在时间`COleDateTime`对象作为[SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)数据结构。|
+|[COleDateTime::GetAsSystemTime](#getassystemtime)|调用此方法以获取在时间`COleDateTime`对象作为[SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)数据结构。|
 |[COleDateTime::GetAsUDATE](#getasudate)|调用此方法以获取在时间`COleDateTime`作为`UDATE`数据结构。|
 |[COleDateTime::GetCurrentTime](#getcurrenttime)|创建`COleDateTime`对象，表示当前时间 （静态成员函数）。|
 |[COleDateTime::GetDay](#getday)|这将返回一天`COleDateTime`对象都表示 (1-31)。|
@@ -89,7 +89,7 @@ class COleDateTime
 |----------|-----------------|
 |[COleDateTime::operator = =、 COleDateTime::operator <，等等。](#coledatetime_relational_operators)|比较两个`COleDateTime`值。|
 |[COleDateTime::operator + COleDateTime::operator-](#operator_add_-)|加法和减法`COleDateTime`值。|
-|[COleDateTime::operator + =，COleDateTime::operator =](#operator_add_eq_-_eq)|加法和减法`COleDateTime`从此值`COleDateTime`对象。|
+|[COleDateTime::operator +=, COleDateTime::operator -=](#operator_add_eq_-_eq)|加法和减法`COleDateTime`从此值`COleDateTime`对象。|
 |[COleDateTime::operator =](#operator_eq)|副本`COleDateTime`值。|
 |[COleDateTime::operator 日期，COleDateTime::operator 日期 *](#operator_date)|将转换`COleDateTime`值到`DATE`或`DATE*`。|
 
@@ -108,7 +108,7 @@ class COleDateTime
 
 `DATE`类型作为浮点值。 天是从 1899 年 12 月 30 日，在午夜测量的。 下表显示了某些日期和相关联的值：
 
-|日期|“值”|
+|日期|值|
 |----------|-----------|
 |1899 年 12 月 29日日午夜|-1.0|
 |1899 年 12 月 29日日，6 点|-1.25|
@@ -119,7 +119,7 @@ class COleDateTime
 > [!CAUTION]
 > 请注意，在上面的表，尽管日的值变为负值 1899 年 12 月 30 日，午夜之前的时间值不这样做。 例如，上午 6:00 始终表示无论整数代表日是正值 （之后 1899 年 12 月 30 日） 或负值 （之前 1899 年 12 月 30 日） 的小数部分值 0.25。 这意味着，简单的浮动点比较会错误地进行排序`COleDateTime`表示为 12/29/1899年 6:00 AM**更高版本**个表示同一天上午 7:00。
 
-`COleDateTime`类处理 100 1 月 1 日，年 12 月 31 日的日期到 9999。 `COleDateTime`类使用公历; 它不支持对儒略历日期。 `COleDateTime` 将忽略夏时制。 (请参阅[日期和时间： 自动化支持](../../atl-mfc-shared/date-and-time-automation-support.md)。)
+`COleDateTime`类处理 100 1 月 1 日，年 12 月 31 日的日期到 9999。 `COleDateTime`类使用公历; 它不支持对儒略历日期。 `COleDateTime` 将忽略夏时制。 (请参阅[日期和时间：自动化支持](../../atl-mfc-shared/date-and-time-automation-support.md)。)
 
 > [!NOTE]
 > 可以使用`%y`要检索仅对从 1900年开始日期的两位数的年份格式。 如果使用`%y`上代码前 1900 年的日期的格式生成断言失败。
@@ -134,7 +134,7 @@ class COleDateTime
 
 有关基本算术运算`COleDateTime`值使用伴生类[COleDateTimeSpan](../../atl-mfc-shared/reference/coledatetimespan-class.md)。 `COleDateTimeSpan` 值定义的时间间隔。 这些类之间的关系非常类似于之间[CTime](../../atl-mfc-shared/reference/ctime-class.md)并[CTimeSpan](../../atl-mfc-shared/reference/ctimespan-class.md)。
 
-有关详细信息`COleDateTime`并`COleDateTimeSpan`类，请参阅文章[日期和时间： 自动化支持](../../atl-mfc-shared/date-and-time-automation-support.md)。
+有关详细信息`COleDateTime`并`COleDateTimeSpan`类，请参阅文章[日期和时间：自动化支持](../../atl-mfc-shared/date-and-time-automation-support.md)。
 
 ## <a name="requirements"></a>要求
 
@@ -155,7 +155,7 @@ bool operator>=(const COleDateTime& date) const throw();
 
 ### <a name="parameters"></a>参数
 
-*日期*<br/>
+*date*<br/>
 要比较的 `COleDateTime` 对象。
 
 ### <a name="remarks"></a>备注
@@ -264,9 +264,9 @@ MS-DOS 日期和时间值转换为日期/时间值并复制到新`COleDateTime`�
 
 有关详细信息`time_t`数据类型，请参阅[时间](../../c-runtime-library/reference/time-time32-time64.md)函数，在*运行时库参考*。
 
-有关详细信息，请参阅[SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)并[FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) Windows SDK 中的结构。
+有关详细信息，请参阅[SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)并[FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime) Windows SDK 中的结构。
 
-有关更多信息的边界`COleDateTime`值，请参阅文章[日期和时间： 自动化支持](../../atl-mfc-shared/date-and-time-automation-support.md)。
+有关更多信息的边界`COleDateTime`值，请参阅文章[日期和时间：自动化支持](../../atl-mfc-shared/date-and-time-automation-support.md)。
 
 > [!NOTE]
 > 构造函数使用`DBTIMESTAMP`参数包括 OLEDB.h 时才可用。
@@ -323,7 +323,7 @@ CString Format(UINT nFormatID) const;
 
 此函数的三种形式的简短说明如下所示：
 
-`Format`( *dwFlags*， *lcid*)<br/>
+`Format`( *dwFlags*, *lcid*)<br/>
 此窗体的使用的语言规范 （区域设置 Id） 设置格式的日期和时间的值。 使用默认参数，此窗体将打印日期和时间，时间部分为 0 （午夜），这种情况下它将打印只是日期或日期部分为 0 (30 1899 年 12 月)，除非在这种情况下它将打印在的时间。 如果日期/时间值为 0 (30 1899 年 12 月，午夜)，此窗体具有默认参数将打印午夜。
 
 `Format`( *lpszFormat*)<br/>
@@ -372,7 +372,7 @@ bool GetAsSystemTime(SYSTEMTIME& sysTime) const throw();
 ### <a name="parameters"></a>参数
 
 *sysTime*<br/>
-对引用[SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)接收从转换后的日期/时间值的结构`COleDateTime`对象。
+对引用[SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)接收从转换后的日期/时间值的结构`COleDateTime`对象。
 
 ### <a name="return-value"></a>返回值
 
@@ -652,7 +652,7 @@ int GetSecond() const throw();
 > [!NOTE]
 >  `COleDateTime`类不支持闰秒。
 
-有关的实现详细信息`COleDateTime`，请参阅文章[日期和时间： 自动化支持](../../atl-mfc-shared/date-and-time-automation-support.md)。
+有关的实现详细信息`COleDateTime`，请参阅文章[日期和时间：自动化支持](../../atl-mfc-shared/date-and-time-automation-support.md)。
 
 有关查询的此值的其他成员函数的信息`COleDateTime`对象，请参阅以下成员函数：
 
@@ -732,9 +732,9 @@ enum DateTimeStatus
 
 - [运算符 +、-](#operator_add_-)
 
-- [运算符 + =、 =](#operator_add_eq_-_eq)
+- [operator +=, -=](#operator_add_eq_-_eq)
 
-有关更多信息的边界`COleDateTime`值，请参阅文章[日期和时间： 自动化支持](../../atl-mfc-shared/date-and-time-automation-support.md)。
+有关更多信息的边界`COleDateTime`值，请参阅文章[日期和时间：自动化支持](../../atl-mfc-shared/date-and-time-automation-support.md)。
 
 ### <a name="example"></a>示例
 
@@ -772,7 +772,7 @@ int GetYear() const throw();
 
 - [GetDayOfYear](#getdayofyear)
 
-有关更多信息的边界`COleDateTime`值，请参阅文章[日期和时间： 自动化支持](../../atl-mfc-shared/date-and-time-automation-support.md)。
+有关更多信息的边界`COleDateTime`值，请参阅文章[日期和时间：自动化支持](../../atl-mfc-shared/date-and-time-automation-support.md)。
 
 ### <a name="example"></a>示例
 
@@ -791,7 +791,7 @@ DATE m_dt;
 > [!CAUTION]
 >  更改中的值`DATE`对象访问此函数返回的指针将更改此设置的值`COleDateTime`对象。 它不会更改此状态`COleDateTime`对象。
 
-有关实现的详细信息`DATE`对象，请参阅文章[日期和时间： 自动化支持](../../atl-mfc-shared/date-and-time-automation-support.md)。
+有关实现的详细信息`DATE`对象，请参阅文章[日期和时间：自动化支持](../../atl-mfc-shared/date-and-time-automation-support.md)。
 
 ##  <a name="m_status"></a>  COleDateTime::m_status
 
@@ -834,19 +834,19 @@ COleDateTime& operator=(const UDATE& udate) throw();
 
 - **运算符 = (** `timeSrc` **)** `time_t`或`__time64_t`值转换，并复制到此`COleDateTime`对象。 如果转换成功，该对象的状态设置为有效，则为如果不成功，它将设置为无效。
 
-- **运算符 = (** *systimeSrc* **)** [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)值转换，并复制到此`COleDateTime`对象。 如果转换成功，该对象的状态设置为有效，则为如果不成功，它将设置为无效。
+- **运算符 = (** *systimeSrc* **)** [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)值转换，并复制到此`COleDateTime`对象。 如果转换成功，该对象的状态设置为有效，则为如果不成功，它将设置为无效。
 
 - **运算符 = (** `udate` **)** `UDATE`值转换，并复制到此`COleDateTime`对象。 如果转换成功，该对象的状态设置为有效，则为如果不成功，它将设置为无效。 一个`UDATE`结构表示"已解包"的日期。 请参阅函数[VarDateFromUdate](/windows/desktop/api/oleauto/nf-oleauto-vardatefromudate)的更多详细信息。
 
-- **运算符 = (** `filetimeSrc` **)** [FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284)值转换，并复制到此`COleDateTime`对象。 如果转换成功，该对象的状态设置为有效，则为否则设置为无效。 `FILETIME` 使用协调世界时 (UTC)，因此，如果结构中传递 UTC 时间，结果将被转换从 UTC 时间为本地时间，并且将存储为变量时间。 此行为是与 Visual c + + 6.0 和 Visual c + +.NET 2003 SP2 中的相同。 请参阅[文件时间](/windows/desktop/SysInfo/file-times)Windows SDK for 的详细信息中。
+- **运算符 = (** `filetimeSrc` **)** [FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime)值转换，并复制到此`COleDateTime`对象。 如果转换成功，该对象的状态设置为有效，则为否则设置为无效。 `FILETIME` 使用协调世界时 (UTC)，因此，如果结构中传递 UTC 时间，结果将被转换从 UTC 时间为本地时间，并且将存储为变量时间。 此行为是与 Visual c + + 6.0 和 Visual c + +.NET 2003 SP2 中的相同。 请参阅[文件时间](/windows/desktop/SysInfo/file-times)Windows SDK for 的详细信息中。
 
 有关详细信息，请参阅[变体](/windows/desktop/api/oaidl/ns-oaidl-tagvariant)Windows SDK 中的条目。
 
 有关详细信息`time_t`数据类型，请参阅[时间](../../c-runtime-library/reference/time-time32-time64.md)函数，在*运行时库参考*。
 
-有关详细信息，请参阅[SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)并[FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) Windows SDK 中的结构。
+有关详细信息，请参阅[SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)并[FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime) Windows SDK 中的结构。
 
-有关更多信息的边界`COleDateTime`值，请参阅文章[日期和时间： 自动化支持](../../atl-mfc-shared/date-and-time-automation-support.md)。
+有关更多信息的边界`COleDateTime`值，请参阅文章[日期和时间：自动化支持](../../atl-mfc-shared/date-and-time-automation-support.md)。
 
 ##  <a name="operator_add_-"></a>  COleDateTime::operator +、-
 
@@ -872,7 +872,7 @@ COleDateTimeSpan operator-(const COleDateTime& date) const throw();
 
 有关有效、 无效和 null 的状态值的详细信息，请参阅[m_status](#m_status)成员变量。
 
-有关更多信息的边界`COleDateTime`值，请参阅文章[日期和时间： 自动化支持](../../atl-mfc-shared/date-and-time-automation-support.md)。
+有关更多信息的边界`COleDateTime`值，请参阅文章[日期和时间：自动化支持](../../atl-mfc-shared/date-and-time-automation-support.md)。
 
 ### <a name="example"></a>示例
 
@@ -899,7 +899,7 @@ COleDateTime& operator-=(COleDateTimeSpan dateSpan) throw();
 
 **+=** 并**-=** 运算符将断言如果`COleDateTime`对象设置为 null。 请参阅[COleDateTime 关系运算符](#coledatetime_relational_operators)有关的示例。
 
-有关更多信息的边界`COleDateTime`值，请参阅文章[日期和时间： 自动化支持](../../atl-mfc-shared/date-and-time-automation-support.md)。
+有关更多信息的边界`COleDateTime`值，请参阅文章[日期和时间：自动化支持](../../atl-mfc-shared/date-and-time-automation-support.md)。
 
 ##  <a name="operator_date"></a>  COleDateTime::operator 日期
 
@@ -911,7 +911,7 @@ operator DATE() const throw();
 
 ### <a name="remarks"></a>备注
 
-此运算符返回`DATE`对象，其值复制从此`COleDateTime`对象。 有关实现的详细信息`DATE`对象，请参阅文章[日期和时间： 自动化支持](../../atl-mfc-shared/date-and-time-automation-support.md)。
+此运算符返回`DATE`对象，其值复制从此`COleDateTime`对象。 有关实现的详细信息`DATE`对象，请参阅文章[日期和时间：自动化支持](../../atl-mfc-shared/date-and-time-automation-support.md)。
 
 `DATE`运算符将断言如果`COleDateTime`对象设置为 null。 请参阅[COleDateTime 关系运算符](#coledatetime_relational_operators)有关的示例。
 
@@ -974,7 +974,7 @@ bool ParseDateTime(
 
 如果无法为日期/时间值转换字符串或数值溢出，此状态时出现`COleDateTime`对象无效。
 
-有关边界和实现详细信息`COleDateTime`值，请参阅文章[日期和时间： 自动化支持](../../atl-mfc-shared/date-and-time-automation-support.md)。
+有关边界和实现详细信息`COleDateTime`值，请参阅文章[日期和时间：自动化支持](../../atl-mfc-shared/date-and-time-automation-support.md)。
 
 ##  <a name="setdate"></a>  COleDateTime::SetDate
 
@@ -1006,7 +1006,7 @@ int SetDate(
 |---------------|------------|
 |*nYear*|100 - 9999|
 |*nMonth*|1 - 12|
-|*第几日*|0 - 31|
+|*nDay*|0 - 31|
 
 如果每月天数溢出，它将转换为下个月和月份的正确天，和/或年就会相应地增加。 日期值为零指示上一个月份的最后一天。 行为等同于`SystemTimeToVariantTime`。
 
@@ -1014,7 +1014,7 @@ int SetDate(
 
 下面是日期值的一些示例：
 
-|*nYear*|*nMonth*|*第几日*|“值”|
+|*nYear*|*nMonth*|*nDay*|值|
 |-------------|--------------|------------|-----------|
 |2000|2|29|29 2000 年 2 月|
 |1776|7|4|4 年 7 月圣瓦伦丁节|
@@ -1041,7 +1041,7 @@ int SetDate(
 
 - [GetDayOfYear](#getdayofyear)
 
-有关更多信息的边界`COleDateTime`值，请参阅文章[日期和时间： 自动化支持](../../atl-mfc-shared/date-and-time-automation-support.md)。
+有关更多信息的边界`COleDateTime`值，请参阅文章[日期和时间：自动化支持](../../atl-mfc-shared/date-and-time-automation-support.md)。
 
 ### <a name="example"></a>示例
 
@@ -1078,8 +1078,8 @@ int SetDateTime(
 |---------------|------------|
 |*nYear*|100 - 9999|
 |*nMonth*|1 - 12|
-|*第几日*|0 - 31|
-|*几点*|0 - 23|
+|*nDay*|0 - 31|
+|*nHour*|0 - 23|
 |*nMin*|0 - 59|
 |*nSec*|0 - 59|
 
@@ -1089,7 +1089,7 @@ int SetDateTime(
 
 下面是时间值的一些示例：
 
-|*几点*|*nMin*|*nSec*|“值”|
+|*nHour*|*nMin*|*nSec*|“值”|
 |-------------|------------|------------|-----------|
 |1|3|3|01:03:03|
 |23|45|0|23:45:00|
@@ -1098,7 +1098,7 @@ int SetDateTime(
 
 下面是日期值的一些示例：
 
-|*nYear*|*nMonth*|*第几日*|“值”|
+|*nYear*|*nMonth*|*nDay*|值|
 |-------------|--------------|------------|-----------|
 |1995|4|15|1995 年 4 月 15日|
 |1789|7|14|17 年 7 月版|
@@ -1125,7 +1125,7 @@ int SetDateTime(
 
 - [GetDayOfYear](#getdayofyear)
 
-有关更多信息的边界`COleDateTime`值，请参阅文章[日期和时间： 自动化支持](../../atl-mfc-shared/date-and-time-automation-support.md)。
+有关更多信息的边界`COleDateTime`值，请参阅文章[日期和时间：自动化支持](../../atl-mfc-shared/date-and-time-automation-support.md)。
 
 ### <a name="example"></a>示例
 
@@ -1168,7 +1168,7 @@ int SetTime(
 
 ### <a name="parameters"></a>参数
 
-*几点*， *nMin*， *nSec*<br/>
+*nHour*, *nMin*, *nSec*<br/>
 指示时间组件复制到此`COleDateTime`对象。
 
 ### <a name="return-value"></a>返回值
@@ -1183,7 +1183,7 @@ int SetTime(
 
 |参数|边界|
 |---------------|------------|
-|*几点*|0 - 23|
+|*nHour*|0 - 23|
 |*nMin*|0 - 59|
 |*nSec*|0 - 59|
 
@@ -1191,7 +1191,7 @@ int SetTime(
 
 下面是时间值的一些示例：
 
-|*几点*|*nMin*|*nSec*|“值”|
+|*nHour*|*nMin*|*nSec*|值|
 |-------------|------------|------------|-----------|
 |1|3|3|01:03:03|
 |23|45|0|23:45:00|
@@ -1218,7 +1218,7 @@ int SetTime(
 
 - [GetDayOfYear](#getdayofyear)
 
-有关更多信息的边界`COleDateTime`值，请参阅文章[日期和时间： 自动化支持](../../atl-mfc-shared/date-and-time-automation-support.md)。
+有关更多信息的边界`COleDateTime`值，请参阅文章[日期和时间：自动化支持](../../atl-mfc-shared/date-and-time-automation-support.md)。
 
 ### <a name="example"></a>示例
 

@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CHttpFile [MFC], SendRequest
 - CHttpFile [MFC], SendRequestEx
 ms.assetid: 399e7c68-bbce-4374-8c55-206e9c7baac6
-ms.openlocfilehash: 1fa1b63ed045c176841565473476185bb15999e3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3ee92a6cb627cee701b9b98a8a32666a0877f62c
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50564448"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893647"
 ---
 # <a name="chttpfile-class"></a>CHttpFile 类
 
@@ -182,7 +182,7 @@ Internet 文件句柄。
 
 永远不会构造`CHttpFile`直接对象; 而是调用[cinternetsession:: Openurl](../../mfc/reference/cinternetsession-class.md#openurl)或[chttpconnection::](../../mfc/reference/chttpconnection-class.md#openrequest)相反。
 
-默认值为`dwContext`发送到 mfc`CHttpFile`对象从[CInternetSession](../../mfc/reference/cinternetsession-class.md)对象创建`CHttpFile`对象。 当您调用`CInternetSession::OpenURL`或`CHttpConnection`构造`CHttpFile`对象，您可以覆盖默认值为所选的值设置上下文标识符。 上下文标识符就会归还[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)以提供与该标识的对象上的状态。 请参阅文章[Internet 前几个步骤： WinInet](../../mfc/wininet-basics.md)有关的上下文标识符的详细信息。
+默认值为`dwContext`发送到 mfc`CHttpFile`对象从[CInternetSession](../../mfc/reference/cinternetsession-class.md)对象创建`CHttpFile`对象。 当您调用`CInternetSession::OpenURL`或`CHttpConnection`构造`CHttpFile`对象，您可以覆盖默认值为所选的值设置上下文标识符。 上下文标识符就会归还[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)以提供与该标识的对象上的状态。 请参阅文章[Internet 前几个步骤：WinInet](../../mfc/wininet-basics.md)有关的上下文标识符的详细信息。
 
 ##  <a name="endrequest"></a>  CHttpFile::EndRequest
 
@@ -212,7 +212,7 @@ BOOL EndRequest(
 
 ### <a name="remarks"></a>备注
 
-默认值为*dwContext*发送到 mfc`CHttpFile`对象从[CInternetSession](../../mfc/reference/cinternetsession-class.md)对象创建`CHttpFile`对象。 当您调用[cinternetsession:: Openurl](../../mfc/reference/cinternetsession-class.md#openurl)或[CHttpConnection](../../mfc/reference/chttpconnection-class.md)构造`CHttpFile`对象，您可以覆盖默认值为所选的值设置上下文标识符。 上下文标识符就会归还[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)以提供与该标识的对象上的状态。 请参阅文章[Internet 前几个步骤： WinInet](../../mfc/wininet-basics.md)有关的上下文标识符的详细信息。
+默认值为*dwContext*发送到 mfc`CHttpFile`对象从[CInternetSession](../../mfc/reference/cinternetsession-class.md)对象创建`CHttpFile`对象。 当您调用[cinternetsession:: Openurl](../../mfc/reference/cinternetsession-class.md#openurl)或[CHttpConnection](../../mfc/reference/chttpconnection-class.md)构造`CHttpFile`对象，您可以覆盖默认值为所选的值设置上下文标识符。 上下文标识符就会归还[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)以提供与该标识的对象上的状态。 请参阅文章[Internet 前几个步骤：WinInet](../../mfc/wininet-basics.md)有关的上下文标识符的详细信息。
 
 ##  <a name="getfileurl"></a>  CHttpFile::GetFileURL
 
@@ -293,7 +293,7 @@ BOOL QueryInfo(
 
 - HTTP_QUERY_FLAG_REQUEST_HEADERS 通常情况下，应用程序在查询响应标头，但应用程序可以通过使用此标志来查询请求标头。
 
-- 标头的值为日期/时间字符串，如"上次修改时间，"HTTP_QUERY_FLAG_SYSTEMTIME 此标志返回的标头值与标准 Win32 [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)不需要为应用程序的结构分析的数据。 如果使用此标志，你可能想要使用`SYSTEMTIME`函数的重写。
+- 标头的值为日期/时间字符串，如"上次修改时间，"HTTP_QUERY_FLAG_SYSTEMTIME 此标志返回的标头值与标准 Win32 [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)不需要为应用程序的结构分析的数据。 如果使用此标志，你可能想要使用`SYSTEMTIME`函数的重写。
 
 - 其值是一个数字，例如状态代码，这些标头的 HTTP_QUERY_FLAG_NUMBER 此标志为 32 位数字，返回的数据。
 
@@ -315,7 +315,7 @@ BOOL QueryInfo(
 一个索引值。 请参阅*lpdwIndex*。
 
 *pSysTime*<br/>
-一个指向 Win32 [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)结构。
+一个指向 Win32 [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)结构。
 
 ### <a name="return-value"></a>返回值
 
@@ -506,7 +506,7 @@ BOOL SendRequestEx(
 
 内容写入到文件后，调用[EndRequest](#endrequest)结束操作。
 
-默认值为*dwContext*发送到 mfc`CHttpFile`对象从[CInternetSession](../../mfc/reference/cinternetsession-class.md)对象创建`CHttpFile`对象。 当您调用[cinternetsession:: Openurl](../../mfc/reference/cinternetsession-class.md#openurl)或[CHttpConnection](../../mfc/reference/chttpconnection-class.md)构造`CHttpFile`对象，您可以覆盖默认值为所选的值设置上下文标识符。 上下文标识符就会归还[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)以提供与该标识的对象上的状态。 请参阅文章[Internet 前几个步骤： WinInet](../../mfc/wininet-basics.md)有关的上下文标识符的详细信息。
+默认值为*dwContext*发送到 mfc`CHttpFile`对象从[CInternetSession](../../mfc/reference/cinternetsession-class.md)对象创建`CHttpFile`对象。 当您调用[cinternetsession:: Openurl](../../mfc/reference/cinternetsession-class.md#openurl)或[CHttpConnection](../../mfc/reference/chttpconnection-class.md)构造`CHttpFile`对象，您可以覆盖默认值为所选的值设置上下文标识符。 上下文标识符就会归还[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)以提供与该标识的对象上的状态。 请参阅文章[Internet 前几个步骤：WinInet](../../mfc/wininet-basics.md)有关的上下文标识符的详细信息。
 
 ### <a name="example"></a>示例
 

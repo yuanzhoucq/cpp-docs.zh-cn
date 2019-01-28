@@ -2,12 +2,12 @@
 title: 内容
 ms.date: 11/04/2016
 ms.assetid: b7858099-7d7f-4cd9-9fa0-fba4832f2dd2
-ms.openlocfilehash: 13f2d0700f4200caee0b87e1923711fef5e7ae14
-ms.sourcegitcommit: 2ebbf8093fadb9a1b78a4381439bcd5c01a89267
+ms.openlocfilehash: ec387a0a4bd30905f27c11dfd66a511e1b0f1b71
+ms.sourcegitcommit: 774db6a005a85e2a1268ca34309b993792701819
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54397285"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55064978"
 ---
 # <a name="contents"></a>内容
 
@@ -15,107 +15,7 @@ ms.locfileid: "54397285"
 
 [2. 指令](../../parallel/openmp/2-directives.md)
 
-[2.1 指令格式](../../parallel/openmp/2-1-directive-format.md)
-
-[2.2 条件编译](../../parallel/openmp/2-2-conditional-compilation.md)
-
-[2.3 parallel 构造](../../parallel/openmp/2-3-parallel-construct.md)
-
-[2.4 工作共享构造](../../parallel/openmp/2-4-work-sharing-constructs.md)
-
-[2.4.1 for 构造](../../parallel/openmp/2-4-1-for-construct.md)
-
-[2.4.2 sections 构造](../../parallel/openmp/2-4-2-sections-construct.md)
-
-[2.4.3 single 构造](../../parallel/openmp/2-4-3-single-construct.md)
-
-[2.5 组合的并行工作共享构造](../../parallel/openmp/2-5-combined-parallel-work-sharing-constructs.md)
-
-[2.5.1 parallel for 构造](../../parallel/openmp/2-5-1-parallel-for-construct.md)
-
-[2.5.2 parallel sections 构造](../../parallel/openmp/2-5-2-parallel-sections-construct.md)
-
-[2.6 Master 和同步指令](../../parallel/openmp/2-6-master-and-synchronization-directives.md)
-
-[2.6.1 master 构造](../../parallel/openmp/2-6-1-master-construct.md)
-
-[2.6.2 critical 构造](../../parallel/openmp/2-6-2-critical-construct.md)
-
-[2.6.3 barrier 指令](../../parallel/openmp/2-6-3-barrier-directive.md)
-
-[2.6.4 atomic 构造](../../parallel/openmp/2-6-4-atomic-construct.md)
-
-[2.6.5 flush 指令](../../parallel/openmp/2-6-5-flush-directive.md)
-
-[2.6.6 ordered 构造](../../parallel/openmp/2-6-6-ordered-construct.md)
-
-[2.7 数据环境](../../parallel/openmp/2-7-data-environment.md)
-
-[2.7.1 threadprivate 指令](../../parallel/openmp/2-7-1-threadprivate-directive.md)
-
-[2.7.2 数据共享特性子句](../../parallel/openmp/2-7-2-data-sharing-attribute-clauses.md)
-
-[2.7.2.1 private](../../parallel/openmp/2-7-2-1-private.md)
-
-[2.7.2.2 firstprivate](../../parallel/openmp/2-7-2-2-firstprivate.md)
-
-[2.7.2.3 lastprivate](../../parallel/openmp/2-7-2-3-lastprivate.md)
-
-[2.7.2.4 shared](../../parallel/openmp/2-7-2-4-shared.md)
-
-[2.7.2.5 default](../../parallel/openmp/2-7-2-5-default.md)
-
-[2.7.2.6 reduction](../../parallel/openmp/2-7-2-6-reduction.md)
-
-[2.7.2.7 copyin](../../parallel/openmp/2-7-2-7-copyin.md)
-
-[2.7.2.8 copyprivate](../../parallel/openmp/2-7-2-8-copyprivate.md)
-
-[2.8 指令绑定](../../parallel/openmp/2-8-directive-binding.md)
-
-[2.9 指令嵌套](../../parallel/openmp/2-9-directive-nesting.md)
-
 [3. 运行时库函数](../../parallel/openmp/3-run-time-library-functions.md)
-
-[3.1 执行环境函数](../../parallel/openmp/3-1-execution-environment-functions.md)
-
-[3.1.1 omp_set_num_threads 函数](../../parallel/openmp/3-1-1-omp-set-num-threads-function.md)
-
-[3.1.2 omp_get_num_threads 函数](../../parallel/openmp/3-1-2-omp-get-num-threads-function.md)
-
-[3.1.3 omp_get_max_threads 函数](../../parallel/openmp/3-1-3-omp-get-max-threads-function.md)
-
-[3.1.4 omp_get_thread_num 函数](../../parallel/openmp/3-1-4-omp-get-thread-num-function.md)
-
-[3.1.5 omp_get_num_procs 函数](../../parallel/openmp/3-1-5-omp-get-num-procs-function.md)
-
-[3.1.6 omp_in_parallel 函数](../../parallel/openmp/3-1-6-omp-in-parallel-function.md)
-
-[3.1.7 omp_set_dynamic 函数](../../parallel/openmp/3-1-7-omp-set-dynamic-function.md)
-
-[3.1.8 omp_get_dynamic 函数](../../parallel/openmp/3-1-8-omp-get-dynamic-function.md)
-
-[3.1.9 omp_set_nested 函数](../../parallel/openmp/3-1-9-omp-set-nested-function.md)
-
-[3.1.10 omp_get_nested 函数](../../parallel/openmp/3-1-10-omp-get-nested-function.md)
-
-[3.2 锁函数](../../parallel/openmp/3-2-lock-functions.md)
-
-[3.2.1 omp_init_lock 和 omp_init_nest_lock 函数](../../parallel/openmp/3-2-1-omp-init-lock-and-omp-init-nest-lock-functions.md)
-
-[3.2.2 omp_destroy_lock 和 omp_destroy_nest_lock 函数](../../parallel/openmp/3-2-2-omp-destroy-lock-and-omp-destroy-nest-lock-functions.md)
-
-[3.2.3 omp_set_lock 和 omp_set_nest_lock 函数](../../parallel/openmp/3-2-3-omp-set-lock-and-omp-set-nest-lock-functions.md)
-
-[3.2.4 omp_unset_lock 和 omp_unset_nest_lock 函数](../../parallel/openmp/3-2-4-omp-unset-lock-and-omp-unset-nest-lock-functions.md)
-
-[3.2.5 omp_test_lock 和 omp_test_nest_lock 函数](../../parallel/openmp/3-2-5-omp-test-lock-and-omp-test-nest-lock-functions.md)
-
-[3.3 计时例程](../../parallel/openmp/3-3-timing-routines.md)
-
-[3.3.1 omp_get_wtime 函数](../../parallel/openmp/3-3-1-omp-get-wtime-function.md)
-
-[3.3.2 omp_get_wtick 函数](../../parallel/openmp/3-3-2-omp-get-wtick-function.md)
 
 [4. 环境变量](../../parallel/openmp/4-environment-variables.md)
 

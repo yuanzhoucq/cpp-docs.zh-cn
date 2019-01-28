@@ -153,12 +153,12 @@ f1_keywords:
 helpviewer_keywords:
 - CWindow class
 ms.assetid: fefa00c8-f053-4bcf-87bc-dc84f5386683
-ms.openlocfilehash: 4ce3c93c7cb8c26ae6008516c93faa8c8a5b37fb
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: f420715f0e90cbdf811d9a4f731885bd4f382d11
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694590"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894453"
 ---
 # <a name="cwindow-class"></a>CWindow 类
 
@@ -252,7 +252,7 @@ class CWindow
 |[CWindow::GetWindowRect](#getwindowrect)|检索窗口的边框尺寸。|
 |[CWindow::GetWindowRgn](#getwindowrgn)|获取一个窗口的窗口区域的副本。|
 |[CWindow::GetWindowText](#getwindowtext)|检索窗口的文本。|
-|[Cwindow:: Getwindowtextlength](#getwindowtextlength)|检索窗口的文本的长度。|
+|[CWindow::GetWindowTextLength](#getwindowtextlength)|检索窗口的文本的长度。|
 |[CWindow::GetWindowThreadID](#getwindowthreadid)|检索创建了指定的窗口的线程标识符。|
 |[CWindow::GetWindowWord](#getwindowword)|检索到的额外窗口内存中按指定偏移量为 16 位值。|
 |[CWindow::GotoDlgCtrl](#gotodlgctrl)|在对话框中，键盘焦点设置到控件。|
@@ -317,7 +317,7 @@ class CWindow
 |[CWindow::SetWindowPlacement](#setwindowplacement)|设置显示状态和位置。|
 |[CWindow::SetWindowPos](#setwindowpos)|设置大小、 位置和 Z 顺序。|
 |[CWindow::SetWindowRgn](#setwindowrgn)|设置窗口的窗口区域。|
-|[Cwindow:: Setwindowtext](#setwindowtext)|更改窗口的文本。|
+|[CWindow::SetWindowText](#setwindowtext)|更改窗口的文本。|
 |[CWindow::SetWindowWord](#setwindowword)|到额外的窗口内存指定的偏移量处设置一个 16 位值。|
 |[CWindow::ShowCaret](#showcaret)|显示系统插入符号。|
 |[CWindow::ShowOwnedPopups](#showownedpopups)|显示或隐藏窗口所拥有的弹出窗口。|
@@ -349,7 +349,7 @@ class CWindow
 
 |CWindow 方法|Win32 函数|
 |--------------------|--------------------|
-|**BOOL ShowWindow (int** `nCmdShow` **);**|**BOOL ShowWindow (HWND** `hWnd` **，int** `nCmdShow` **);**|
+|**BOOL ShowWindow( int** `nCmdShow` **);**|**BOOL ShowWindow( HWND** `hWnd` **, int** `nCmdShow` **);**|
 
 `CWindow::ShowWindow` 调用 Win32 函数`ShowWindow`表示通过`CWindow::m_hWnd`作为第一个参数。 每个`CWindow`直接包装的 Win32 函数的方法将传递给`m_hWnd`成员; 因此，大部分`CWindow`文档将引导您访问 Windows SDK。
 
@@ -521,7 +521,7 @@ HWND ChildWindowFromPoint(POINT point, UINT uFlags) const throw();
 
 ### <a name="remarks"></a>备注
 
-请参阅[ChildWindowFromPointEx](https://msdn.microsoft.com/library/windows/desktop/ms632677) Windows SDK 中。
+请参阅[ChildWindowFromPointEx](/windows/desktop/api/winuser/nf-winuser-childwindowfrompointex) Windows SDK 中。
 
 ##  <a name="clienttoscreen"></a>  CWindow::ClientToScreen
 
@@ -669,7 +669,7 @@ HDWP DeferWindowPos(
 
 ### <a name="remarks"></a>备注
 
-请参阅[DeferWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms632681) Windows SDK 中。
+请参阅[DeferWindowPos](/windows/desktop/api/winuser/nf-winuser-deferwindowpos) Windows SDK 中。
 
 ##  <a name="destroywindow"></a>  CWindow::DestroyWindow
 
@@ -1456,7 +1456,7 @@ int GetWindowText(CSimpleString& strText) const;
 
 ### <a name="remarks"></a>备注
 
-请参阅[GetWindowText](https://msdn.microsoft.com/library/windows/desktop/ms633520) Windows SDK 中。
+请参阅[GetWindowText](/windows/desktop/api/winuser/nf-winuser-getwindowtexta) Windows SDK 中。
 
 此方法的第二个版本，可将文本存储在 BSTR;第三个版本，可将结果存储在[CString](../../atl-mfc-shared/reference/cstringt-class.md)，因为`CSimpleString`是类的基类`CString`。
 
@@ -1751,7 +1751,7 @@ BOOL LockWindowUpdate(BOOL bLock = TRUE) throw();
 
 ### <a name="parameters"></a>参数
 
-*块*<br/>
+*bLock*<br/>
 [in]如果 TRUE （默认值），则将锁定该窗口。 否则，它将解除锁定。
 
 ### <a name="return-value"></a>返回值
@@ -2629,7 +2629,7 @@ BOOL SetWindowText(LPCTSTR lpszString) throw();
 
 ### <a name="remarks"></a>备注
 
-请参阅[SetWindowText](https://msdn.microsoft.com/library/windows/desktop/ms633546) Windows SDK 中。
+请参阅[SetWindowText](/windows/desktop/api/winuser/nf-winuser-setwindowtexta) Windows SDK 中。
 
 ### <a name="example"></a>示例
 

@@ -25,12 +25,12 @@ helpviewer_keywords:
 - CTime class
 - shared classes, CTime
 ms.assetid: 0a299544-485b-48dc-9d3c-fdc30f57d612
-ms.openlocfilehash: cedd1bfd4ea955f920e13b5d01beb3a478656b69
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: a73baab3e43467b76c1b4e3592314a4323d22ffb
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178117"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893972"
 ---
 # <a name="ctime-class"></a>CTime 类
 
@@ -57,7 +57,7 @@ class CTime
 |[CTime::Format](#format)|将转换`CTime`格式化的字符串对象 — 基于本地时区。|
 |[CTime::FormatGmt](#formatgmt)|将转换`CTime`格式化的字符串对象 — UTC 为基础。|
 |[CTime::GetAsDBTIMESTAMP](#getasdbtimestamp)|将时间信息存储在转换`CTime`对象与 Win32 兼容 DBTIMESTAMP 结构。|
-|[CTime::GetAsSystemTime](#getassystemtime)|将时间信息存储在转换`CTime`对象与 Win32 兼容[SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)结构。|
+|[CTime::GetAsSystemTime](#getassystemtime)|将时间信息存储在转换`CTime`对象与 Win32 兼容[SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)结构。|
 |[CTime::GetCurrentTime](#getcurrenttime)|创建`CTime`对象，表示当前时间 （静态成员函数）。|
 |[CTime::GetDay](#getday)|返回由一天表示`CTime`对象。|
 |[CTime::GetDayOfWeek](#getdayofweek)|返回表示星期几`CTime`对象。|
@@ -75,8 +75,8 @@ class CTime
 
 |||
 |-|-|
-|[运算符 +-](#operator_add_-)|这些运算符，加法和减法`CTimeSpan`和`CTime`对象。|
-|[运算符 + =、 =](#operator_add_eq_-_eq)|这些运算符，加法和减法`CTimeSpan`对象与此`CTime`对象。|
+|[operator + -](#operator_add_-)|这些运算符，加法和减法`CTimeSpan`和`CTime`对象。|
+|[operator +=, -=](#operator_add_eq_-_eq)|这些运算符，加法和减法`CTimeSpan`对象与此`CTime`对象。|
 |[operator =](#operator_eq)|赋值运算符。|
 |[运算符 = =、 <，等等。](#ctime_comparison_operators)|比较运算符。|
 
@@ -169,10 +169,10 @@ CTime(const DBTIMESTAMP& dbts, int nDST = -1) throw();
 MS-DOS 日期和时间值转换为日期/时间值并复制到新`CTime`对象。
 
 *st*<br/>
-一个[SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)结构转换为日期/时间值并复制到新`CTime`对象。
+一个[SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)结构转换为日期/时间值并复制到新`CTime`对象。
 
 *ft*<br/>
-一个[FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284)结构转换为日期/时间值并复制到新`CTime`对象。
+一个[FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime)结构转换为日期/时间值并复制到新`CTime`对象。
 
 *dbts*<br/>
 对包含当前本地时间的 DBTIMESTAMP 结构的引用。
@@ -193,8 +193,8 @@ MS-DOS 日期和时间值转换为日期/时间值并复制到新`CTime`对象�
    |---------------|-----------|
    |*nYear*|1970-3000|
    |*nMonth*|1-12|
-   |*第几日*|1-31|
-   |*几点*|0-23|
+   |*nDay*|1-31|
+   |*nHour*|0-23|
    |*nMin*|0-59|
    |*nSec*|0-59|
 
@@ -209,7 +209,7 @@ MS-DOS 日期和时间值转换为日期/时间值并复制到新`CTime`对象�
    > [!NOTE]
    > 构造函数使用`DBTIMESTAMP`参数包括 OLEDB.h 时才可用。
 
-有关详细信息，请参阅[SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)并[FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) Windows SDK 中的结构。 另请参阅[MS-DOS 日期和时间](/windows/desktop/SysInfo/ms-dos-date-and-time)Windows SDK 中的条目。
+有关详细信息，请参阅[SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)并[FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime) Windows SDK 中的结构。 另请参阅[MS-DOS 日期和时间](/windows/desktop/SysInfo/ms-dos-date-and-time)Windows SDK 中的条目。
 
 ### <a name="example"></a>示例
 
@@ -304,7 +304,7 @@ bool GetAsDBTIMESTAMP(DBTIMESTAMP& dbts) const throw();
 
 ##  <a name="getassystemtime"></a>  CTime::GetAsSystemTime
 
-调用此成员函数将转换中存储的时间信息`CTime`对象与 Win32 兼容[SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)结构。
+调用此成员函数将转换中存储的时间信息`CTime`对象与 Win32 兼容[SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)结构。
 
 ```
 bool GetAsSystemTime(SYSTEMTIME& st) const throw();
@@ -313,7 +313,7 @@ bool GetAsSystemTime(SYSTEMTIME& st) const throw();
 ### <a name="parameters"></a>参数
 
 *timeDest*<br/>
-对引用[SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)结构，它将保存转换后的日期/时间值的`CTime`对象。
+对引用[SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)结构，它将保存转换后的日期/时间值的`CTime`对象。
 
 ### <a name="return-value"></a>返回值
 
@@ -586,7 +586,7 @@ CTimeSpan operator-(CTime time) const throw();
 
 ### <a name="parameters"></a>参数
 
-*时间跨度*<br/>
+*timeSpan*<br/>
 `CTimeSpan`要添加或减去的对象。
 
 *time*<br/>
@@ -615,7 +615,7 @@ CTime& operator-=(CTimeSpan span) throw();
 
 ### <a name="parameters"></a>参数
 
-*s p a n*<br/>
+*span*<br/>
 `CTimeSpan`要添加或减去的对象。
 
 ### <a name="return-value"></a>返回值

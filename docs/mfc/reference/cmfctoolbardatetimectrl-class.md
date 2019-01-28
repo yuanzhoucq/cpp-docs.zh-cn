@@ -48,12 +48,12 @@ helpviewer_keywords:
 - CMFCToolBarDateTimeCtrl [MFC], SetTime
 - CMFCToolBarDateTimeCtrl [MFC], SetTimeAll
 ms.assetid: a3853cb9-8ebc-444f-a1e4-9cf905e24c18
-ms.openlocfilehash: 570611c335130039495b13624737b820144cb7f7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1252f97a93e67348a00c9809e3f216d4ed63c4d8
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50545829"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893673"
 ---
 # <a name="cmfctoolbardatetimectrl-class"></a>CMFCToolBarDateTimeCtrl 类
 
@@ -87,7 +87,7 @@ class CMFCToolBarDateTimeCtrl : public CMFCToolBarButton
 |[CMFCToolBarDateTimeCtrl::GetDateTimeCtrl](#getdatetimectrl)|返回一个指向日期和时间选取器控件。|
 |[CMFCToolBarDateTimeCtrl::GetHwnd](#gethwnd)|检索与工具栏按钮相关联的窗口句柄。 (重写[CMFCToolBarButton::GetHwnd](../../mfc/reference/cmfctoolbarbutton-class.md#gethwnd)。)|
 |`CMFCToolBarDateTimeCtrl::GetThisClass`|由框架用于获取一个指向[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)与此类类型相关联的对象。|
-|[CMFCToolBarDateTimeCtrl::GetTime](#gettime)|从日期和时间选取器控件中获取所选的时间，并将其放在指定的[SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)结构。|
+|[CMFCToolBarDateTimeCtrl::GetTime](#gettime)|从日期和时间选取器控件中获取所选的时间，并将其放在指定的[SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)结构。|
 |[CMFCToolBarDateTimeCtrl::GetTimeAll](#gettimeall)|从具有指定的命令 id。 时间选取器控件按钮返回所选的时间|
 |[CMFCToolBarDateTimeCtrl::HaveHotBorder](#havehotborder)|确定当用户选择按钮时是否显示按钮的边框。 (重写[CMFCToolBarButton::HaveHotBorder](../../mfc/reference/cmfctoolbarbutton-class.md#havehotborder)。)|
 |[CMFCToolBarDateTimeCtrl::NotifyCommand](#notifycommand)|指定是否处理按钮[WM_COMMAND](/windows/desktop/menurc/wm-command)消息。 (重写[CMFCToolBarButton::NotifyCommand](../../mfc/reference/cmfctoolbarbutton-class.md#notifycommand)。)|
@@ -110,7 +110,7 @@ class CMFCToolBarDateTimeCtrl : public CMFCToolBarButton
 
 ## <a name="remarks"></a>备注
 
-有关如何使用日期和时间选取器控件的示例，请参阅 ToolbarDateTimePicker 示例项目。 有关如何向工具栏添加控件按钮的信息，请参阅[演练： 将置于工具栏上的控件](../../mfc/walkthrough-putting-controls-on-toolbars.md)。
+有关如何使用日期和时间选取器控件的示例，请参阅 ToolbarDateTimePicker 示例项目。 有关如何向工具栏添加控件按钮的信息，请参阅[演练：将控件置于工具栏上](../../mfc/walkthrough-putting-controls-on-toolbars.md)。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -203,7 +203,7 @@ virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;
 
 ### <a name="parameters"></a>参数
 
-*MenuButton*<br/>
+*menuButton*<br/>
 [in]对目标菜单按钮的引用。
 
 ### <a name="return-value"></a>返回值
@@ -269,7 +269,7 @@ virtual HWND GetHwnd();
 
 ##  <a name="gettime"></a>  CMFCToolBarDateTimeCtrl::GetTime
 
-从关联的日期和时间选取器控件中获取所选的时间，并将其放在指定的[SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)结构
+从关联的日期和时间选取器控件中获取所选的时间，并将其放在指定的[SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)结构
 
 ```
 BOOL GetTime(COleDateTime& timeDest) const;
@@ -283,7 +283,7 @@ DWORD GetTime(LPSYSTEMTIME pTimeDest) const;
 [out]在第一个重载[COleDateTime 类](../../atl-mfc-shared/reference/coledatetime-class.md)将收到系统时间信息的对象。 在第二个重载中， [CTime](../../atl-mfc-shared/reference/ctime-class.md)将收到系统时间信息的对象。
 
 *pTimeDest*<br/>
-[out]一个指向[SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)结构，以接收系统时间信息。 不能为 NULL。
+[out]一个指向[SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)结构，以接收系统时间信息。 不能为 NULL。
 
 ### <a name="return-value"></a>返回值
 
@@ -320,7 +320,7 @@ static DWORD GetTimeAll(
 [out]在第一个重载[COleDateTime 类](../../atl-mfc-shared/reference/coledatetime-class.md)将收到系统时间信息的对象。 在第二个重载中， [CTime](../../atl-mfc-shared/reference/ctime-class.md)将收到系统时间信息的对象。
 
 *pTimeDest*<br/>
-[out]一个指向[SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)结构，以接收系统时间信息。 不能为 NULL。
+[out]一个指向[SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)结构，以接收系统时间信息。 不能为 NULL。
 
 ### <a name="return-value"></a>返回值
 
@@ -564,7 +564,7 @@ BOOL SetTime(LPSYSTEMTIME pTimeNew=NULL);
 [in]在第一个版本中，对引用[COleDateTime 类](../../atl-mfc-shared/reference/coledatetime-class.md)对象，其中包含将控件设置的时间。 在第二个版本中，一个指向[CTime](../../atl-mfc-shared/reference/ctime-class.md)对象，其中包含将控件设置的时间。
 
 *pTimeNew*<br/>
-[in]一个指向[SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)结构，其中包含将控件设置的时间。
+[in]一个指向[SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)结构，其中包含将控件设置的时间。
 
 ### <a name="return-value"></a>返回值
 
@@ -601,7 +601,7 @@ static BOOL SetTimeAll(
 [in]在第一个版本中， [COleDateTime 类](../../atl-mfc-shared/reference/coledatetime-class.md)对象，其中包含将控件设置的时间。 在第二个版本中，一个指向[CTime](../../atl-mfc-shared/reference/ctime-class.md)对象，其中包含将控件设置的时间。
 
 *pTimeNew*<br/>
-[in]一个指向[SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)结构，其中包含将控件设置的时间。
+[in]一个指向[SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)结构，其中包含将控件设置的时间。
 
 ### <a name="return-value"></a>返回值
 

@@ -90,12 +90,12 @@ helpviewer_keywords:
 - CMonthCalCtrl [MFC], SizeMinReq
 - CMonthCalCtrl [MFC], SizeRectToMin
 ms.assetid: a42f6bd6-ab5c-4335-82f8-839982fc64a2
-ms.openlocfilehash: 26a0feadfd6603f74ce222e4850f0da9cf71e7d1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 48b02843cc957994aa3f3109a82cb2188dd9acff
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509575"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894193"
 ---
 # <a name="cmonthcalctrl-class"></a>CMonthCalCtrl 类
 
@@ -148,7 +148,7 @@ class CMonthCalCtrl : public CWnd
 |[CMonthCalCtrl::SetColor](#setcolor)|设置月历控件的指定区域的颜色。|
 |[CMonthCalCtrl::SetCurrentView](#setcurrentview)|设置当前月份的日历控件，以显示指定的视图。|
 |[CMonthCalCtrl::SetCurSel](#setcursel)|设置月历控件的当前所选的日期。|
-|[Cmonthcalctrl:: Setdaystate](#setdaystate)|将天显示设置月历控件中。|
+|[CMonthCalCtrl::SetDayState](#setdaystate)|将天显示设置月历控件中。|
 |[CMonthCalCtrl::SetDecadeView](#setdecadeview)|设置当前的月历控件到十年视图。|
 |[CMonthCalCtrl::SetFirstDayOfWeek](#setfirstdayofweek)|设置要在日历的最左侧列中显示的每周的某一日。|
 |[CMonthCalCtrl::SetMaxSelCount](#setmaxselcount)|设置月历控件中可选择最大天数。|
@@ -373,7 +373,7 @@ DWORD GetCurrentView() const;
 
 当前视图，这将由以下值之一：
 
-|“值”|含义|
+|值|含义|
 |-----------|-------------|
 |MCMV_MONTH|每月视图|
 |MCMV_YEAR|每年的视图|
@@ -412,7 +412,7 @@ BOOL GetCurSel(LPSYSTEMTIME pDateTime) const;
 对引用[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)对象或[CTime](../../atl-mfc-shared/reference/ctime-class.md)对象。 接收当前时间。
 
 *pDateTime*<br/>
-一个指向[SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)结构，它将接收的当前所选日期信息。 此参数必须是有效的地址，并且不能为 NULL。
+一个指向[SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)结构，它将接收的当前所选日期信息。 此参数必须是有效的地址，并且不能为 NULL。
 
 ### <a name="return-value"></a>返回值
 
@@ -448,7 +448,7 @@ int GetFirstDayOfWeek(BOOL* pbLocal = NULL) const;
 
 此成员函数可实现 Win32 消息的行为[MCM_GETFIRSTDAYOFWEEK](/windows/desktop/Controls/mcm-getfirstdayofweek)，如 Windows SDK 中所述。 每周天数表示为整数，按如下所示。
 
-|“值”|日期是星期几|
+|值|日期是星期几|
 |-----------|---------------------|
 |0|星期一|
 |1|星期二|
@@ -579,7 +579,7 @@ int GetMonthRange(
 对引用`COleDateTime`或`CTime`对象，其中包含允许的最大日期。
 
 *pMinRange*<br/>
-一个指向[SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)结构，它包含最小范围的末尾处的日期。
+一个指向[SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)结构，它包含最小范围的末尾处的日期。
 
 *pMaxRange*<br/>
 一个指向`SYSTEMTIME`结构，它包含的日期范围的最高的末尾。
@@ -625,16 +625,16 @@ DWORD GetRange(
 ### <a name="parameters"></a>参数
 
 *pMinRange*<br/>
-一个指向`COleDateTime`对象，`CTime`对象，或[SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)结构，它包含最小范围的末尾处的日期。
+一个指向`COleDateTime`对象，`CTime`对象，或[SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)结构，它包含最小范围的末尾处的日期。
 
 *pMaxRange*<br/>
-一个指向`COleDateTime`对象，`CTime`对象，或[SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)结构，它包含的日期范围的最高的末尾。
+一个指向`COleDateTime`对象，`CTime`对象，或[SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)结构，它包含的日期范围的最高的末尾。
 
 ### <a name="return-value"></a>返回值
 
 可以为零的 DWORD （设置无限制） 或指定限制的信息的以下值的组合。
 
-|“值”|含义|
+|值|含义|
 |-----------|-------------|
 |GDTR_MAX|为控件; 设置最大限制*pMaxRange*有效，并且包含的适用日期信息。|
 |GDTR_MIN|为控件; 设置最小限制*pMinRange*有效，并且包含的适用日期信息。|
@@ -674,7 +674,7 @@ BOOL GetSelRange(
 对引用`COleDateTime`或`CTime`对象，其中包含允许的最大日期。
 
 *pMinRange*<br/>
-一个指向[SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)结构，它包含最小范围的末尾处的日期。
+一个指向[SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)结构，它包含最小范围的末尾处的日期。
 
 *pMaxRange*<br/>
 一个指向`SYSTEMTIME`结构，它包含的日期范围的最高的末尾。
@@ -705,7 +705,7 @@ BOOL GetToday(LPSYSTEMTIME pDateTime) const;
 对引用[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)或[CTime](../../atl-mfc-shared/reference/ctime-class.md)对象，该值指示当前的日期。
 
 *pDateTime*<br/>
-一个指向[SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)结构，它将接收的日期信息。 此参数必须是有效的地址，并且不能为 NULL。
+一个指向[SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)结构，它将接收的日期信息。 此参数必须是有效的地址，并且不能为 NULL。
 
 ### <a name="return-value"></a>返回值
 
@@ -953,7 +953,7 @@ BOOL SetCurrentView(DWORD dwNewView);
 
 |参数|描述|
 |---------------|-----------------|
-|*dwNewView*|[in]每月、 年、 十年中或世纪视图指定以下值之一。<br /><br /> MCMV_MONTH： 每月视图<br /><br /> MCMV_YEAR： 年度视图<br /><br /> MCMV_DECADE： 十年视图<br /><br /> MCMV_CENTURY： 世纪视图|
+|*dwNewView*|[in]每月、 年、 十年中或世纪视图指定以下值之一。<br /><br /> MCMV_MONTH:每月视图<br /><br /> MCMV_YEAR:每年的视图<br /><br /> MCMV_DECADE:十年视图<br /><br /> MCMV_CENTURY:世纪视图|
 
 ### <a name="return-value"></a>返回值
 
@@ -979,7 +979,7 @@ BOOL SetCurSel(const CTime& refDateTime);
 对引用[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)或[CTime](../../atl-mfc-shared/reference/ctime-class.md) ，该值指示当前所选月历控件的对象。
 
 *pDateTime*<br/>
-指向[SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)结构，其中包含要设置为当前所选内容的日期。
+指向[SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)结构，其中包含要设置为当前所选内容的日期。
 
 ### <a name="return-value"></a>返回值
 
@@ -993,7 +993,7 @@ BOOL SetCurSel(const CTime& refDateTime);
 
 [!code-cpp[NVC_MFC_CMonthCalCtrl#5](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_11.cpp)]
 
-##  <a name="setdaystate"></a>  Cmonthcalctrl:: Setdaystate
+##  <a name="setdaystate"></a>  CMonthCalCtrl::SetDayState
 
 将天显示设置月历控件中。
 
@@ -1079,7 +1079,7 @@ BOOL SetMaxSelCount(int nMax);
 
 ### <a name="parameters"></a>参数
 
-*最*<br/>
+*nMax*<br/>
 将设置用于表示最大天数可选择的值。
 
 ### <a name="return-value"></a>返回值
@@ -1164,7 +1164,7 @@ BOOL SetRange(
 ### <a name="parameters"></a>参数
 
 *pMinRange*<br/>
-一个指向`COleDateTime`对象，`CTime`对象，或[SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)结构，它包含最小范围的末尾处的日期。
+一个指向`COleDateTime`对象，`CTime`对象，或[SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)结构，它包含最小范围的末尾处的日期。
 
 *pMaxRange*<br/>
 一个指向`COleDateTime`对象，`CTime`对象，或`SYSTEMTIME`结构，它包含的日期范围的最高的末尾。
@@ -1202,7 +1202,7 @@ BOOL SetSelRange(
 ### <a name="parameters"></a>参数
 
 *pMinRange*<br/>
-一个指向`COleDateTime`对象，`CTime`对象，或[SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)结构，它包含最小范围的末尾处的日期。
+一个指向`COleDateTime`对象，`CTime`对象，或[SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)结构，它包含最小范围的末尾处的日期。
 
 *pMaxRange*<br/>
 一个指向`COleDateTime`对象，`CTime`对象，或`SYSTEMTIME`结构，它包含的日期范围的最高的末尾。
@@ -1231,7 +1231,7 @@ void SetToday(const CTime* pDateTime);
 对引用[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)对象，其中包含当前日期。
 
 *pDateTime*<br/>
-在第二个版本中，一个指向[CTime](../../atl-mfc-shared/reference/ctime-class.md)对象，其中包含当前日期信息。 在第三个版本中，一个指向[SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)结构，其中包含当前日期信息。
+在第二个版本中，一个指向[CTime](../../atl-mfc-shared/reference/ctime-class.md)对象，其中包含当前日期信息。 在第三个版本中，一个指向[SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)结构，其中包含当前日期信息。
 
 ### <a name="remarks"></a>备注
 

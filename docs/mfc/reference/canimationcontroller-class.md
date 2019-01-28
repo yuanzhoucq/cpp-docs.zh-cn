@@ -103,12 +103,12 @@ helpviewer_keywords:
 - CAnimationController [MFC], m_pTransitionFactory
 - CAnimationController [MFC], m_pTransitionLibrary
 ms.assetid: ed294c98-695e-40a6-b940-33ef1d40aa6b
-ms.openlocfilehash: bd0bdd1a3f423257b2f73745d7260d1fac12a0d8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 93189c5c9301e513cfbdf110cf7753e211420fef
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50556658"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894128"
 ---
 # <a name="canimationcontroller-class"></a>CAnimationController 类
 
@@ -127,7 +127,7 @@ class CAnimationController : public CObject;
 |名称|描述|
 |----------|-----------------|
 |[CAnimationController::CAnimationController](#canimationcontroller)|构造一个动画控制器。|
-|[CAnimationController:: ~ CAnimationController](#canimationcontroller__~canimationcontroller)|析构函数。 当动画控制器对象被销毁时调用。|
+|[CAnimationController::~CAnimationController](#canimationcontroller__~canimationcontroller)|析构函数。 当动画控制器对象被销毁时调用。|
 
 ### <a name="public-methods"></a>公共方法
 
@@ -419,7 +419,7 @@ UI_ANIMATION_PHT_ 组合标志 （请参阅备注），它指定要设置或释�
 
 ### <a name="remarks"></a>备注
 
-Windows 动画时设置 （已启用） 的处理程序调用以下虚拟方法具体取决于 dwHandlerType: OnHasPriorityCancel、 OnHasPriorityConclude、 OnHasPriorityTrim、 OnHasPriorityCompress。 dwHandler 可以是下列标志的组合： UI_ANIMATION_PHT_NONE-发布所有处理程序 ui_animation_pht_cancel，则-设置取消设置结束比较处理程序 ui_animation_pht_compress，则比较处理程序 ui_animation_pht_conclude，则--设置Compress 比较处理程序-设置剪裁比较处理程序 UI_ANIMATION_PHT_CANCEL_REMOVE-删除取消比较处理程序 UI_ANIMATION_PHT_CONCLUDE_REMOVE-ui_animation_pht_trim，则删除结束比较处理程序 UI_ANIMATION_PHT_COMPRESS_删除-删除压缩比较处理程序 UI_ANIMATION_PHT_TRIM_REMOVE-删除剪裁比较处理程序
+当一个处理程序为集 （已启用） Windows 动画会调用具体取决于 dwHandlerType 以下虚拟方法：OnHasPriorityCancel，OnHasPriorityConclude，OnHasPriorityTrim，OnHasPriorityCompress。 dwHandler 可以是下列标志的组合：UI_ANIMATION_PHT_NONE-发布所有处理程序 ui_animation_pht_cancel，则-设置取消处理程序比较 ui_animation_pht_conclude，则-设置结束设置压缩比较处理程序 ui_animation_pht_trim，则比较处理程序 ui_animation_pht_compress，则--设置剪裁比较处理程序 UI_ANIMATION_PHT_CANCEL_REMOVE-删除取消比较处理程序 UI_ANIMATION_PHT_CONCLUDE_REMOVE-删除结束比较处理程序 UI_ANIMATION_PHT_COMPRESS_REMOVE-删除压缩比较处理程序 UI_ANIMATION_PHT_TRIM_REMOVE-删除剪裁比较处理程序
 
 ##  <a name="enablestoryboardeventhandler"></a>  CAnimationController::EnableStoryboardEventHandler
 
@@ -716,7 +716,7 @@ virtual void OnAnimationIntegerValueChanged(
 *pObject*<br/>
 指向一个动画对象，包含其值已更改的动画变量的指针。
 
-*变量*<br/>
+*variable*<br/>
 指向一个动画变量的指针。
 
 *newValue*<br/>
@@ -785,7 +785,7 @@ virtual void OnAnimationTimerRenderingTooSlow(UINT32 fps);
 
 ### <a name="parameters"></a>参数
 
-*每秒帧数*<br/>
+*fps*<br/>
 每秒帧数中的当前帧速率。
 
 ### <a name="remarks"></a>备注
@@ -813,7 +813,7 @@ virtual void OnAnimationValueChanged(
 *pObject*<br/>
 指向一个动画对象，包含其值已更改的动画变量的指针。
 
-*变量*<br/>
+*variable*<br/>
 指向一个动画变量的指针。
 
 *newValue*<br/>
@@ -856,7 +856,7 @@ virtual BOOL OnHasPriorityCancel(
 
 ### <a name="parameters"></a>参数
 
-*pgroupscheduled 所*<br/>
+*pGroupScheduled*<br/>
 拥有当前已计划的情节提要的组。
 
 *pGroupNew*<br/>
@@ -871,7 +871,7 @@ virtual BOOL OnHasPriorityCancel(
 
 ### <a name="remarks"></a>备注
 
-如果你使用 CAnimationController::EnablePriorityComparisonHandler 启用优先级比较事件，并指定 UI_ANIMATION_PHT_CANCEL，则会调用此方法。 它可以在派生类中重写以便执行特定于应用程序的操作。 有关详细信息的阅读 Windows 动画 API 文档[冲突管理](https://msdn.microsoft.com/library/dd371759)。
+如果你使用 CAnimationController::EnablePriorityComparisonHandler 启用优先级比较事件，并指定 UI_ANIMATION_PHT_CANCEL，则会调用此方法。 它可以在派生类中重写以便执行特定于应用程序的操作。 有关详细信息的阅读 Windows 动画 API 文档[冲突管理](/windows/desktop/api/uianimation/nf-uianimation-iuianimationprioritycomparison-haspriority)。
 
 ##  <a name="onhasprioritycompress"></a>  CAnimationController::OnHasPriorityCompress
 
@@ -886,7 +886,7 @@ virtual BOOL OnHasPriorityCompress(
 
 ### <a name="parameters"></a>参数
 
-*pgroupscheduled 所*<br/>
+*pGroupScheduled*<br/>
 拥有当前已计划的情节提要的组。
 
 *pGroupNew*<br/>
@@ -901,7 +901,7 @@ virtual BOOL OnHasPriorityCompress(
 
 ### <a name="remarks"></a>备注
 
-如果你使用 CAnimationController::EnablePriorityComparisonHandler 启用优先级比较事件，并指定 UI_ANIMATION_PHT_COMPRESS，则会调用此方法。 它可以在派生类中重写以便执行特定于应用程序的操作。 有关详细信息的阅读 Windows 动画 API 文档[冲突管理](https://msdn.microsoft.com/library/dd371759)。
+如果你使用 CAnimationController::EnablePriorityComparisonHandler 启用优先级比较事件，并指定 UI_ANIMATION_PHT_COMPRESS，则会调用此方法。 它可以在派生类中重写以便执行特定于应用程序的操作。 有关详细信息的阅读 Windows 动画 API 文档[冲突管理](/windows/desktop/api/uianimation/nf-uianimation-iuianimationprioritycomparison-haspriority)。
 
 ##  <a name="onhaspriorityconclude"></a>  CAnimationController::OnHasPriorityConclude
 
@@ -916,7 +916,7 @@ virtual BOOL OnHasPriorityConclude(
 
 ### <a name="parameters"></a>参数
 
-*pgroupscheduled 所*<br/>
+*pGroupScheduled*<br/>
 拥有当前已计划的情节提要的组。
 
 *pGroupNew*<br/>
@@ -931,7 +931,7 @@ virtual BOOL OnHasPriorityConclude(
 
 ### <a name="remarks"></a>备注
 
-如果你使用 CAnimationController::EnablePriorityComparisonHandler 启用优先级比较事件，并指定 UI_ANIMATION_PHT_CONCLUDE，则会调用此方法。 它可以在派生类中重写以便执行特定于应用程序的操作。 有关详细信息的阅读 Windows 动画 API 文档[冲突管理](https://msdn.microsoft.com/library/dd371759)。
+如果你使用 CAnimationController::EnablePriorityComparisonHandler 启用优先级比较事件，并指定 UI_ANIMATION_PHT_CONCLUDE，则会调用此方法。 它可以在派生类中重写以便执行特定于应用程序的操作。 有关详细信息的阅读 Windows 动画 API 文档[冲突管理](/windows/desktop/api/uianimation/nf-uianimation-iuianimationprioritycomparison-haspriority)。
 
 ##  <a name="onhasprioritytrim"></a>  CAnimationController::OnHasPriorityTrim
 
@@ -946,7 +946,7 @@ virtual BOOL OnHasPriorityTrim(
 
 ### <a name="parameters"></a>参数
 
-*pgroupscheduled 所*<br/>
+*pGroupScheduled*<br/>
 拥有当前已计划的情节提要的组。
 
 *pGroupNew*<br/>
@@ -961,7 +961,7 @@ virtual BOOL OnHasPriorityTrim(
 
 ### <a name="remarks"></a>备注
 
-如果你使用 CAnimationController::EnablePriorityComparisonHandler 启用优先级比较事件，并指定 UI_ANIMATION_PHT_TRIM，则会调用此方法。 它可以在派生类中重写以便执行特定于应用程序的操作。 有关详细信息的阅读 Windows 动画 API 文档[冲突管理](https://msdn.microsoft.com/library/dd371759)。
+如果你使用 CAnimationController::EnablePriorityComparisonHandler 启用优先级比较事件，并指定 UI_ANIMATION_PHT_TRIM，则会调用此方法。 它可以在派生类中重写以便执行特定于应用程序的操作。 有关详细信息的阅读 Windows 动画 API 文档[冲突管理](/windows/desktop/api/uianimation/nf-uianimation-iuianimationprioritycomparison-haspriority)。
 
 ##  <a name="onstoryboardstatuschanged"></a>  CAnimationController::OnStoryboardStatusChanged
 

@@ -7,19 +7,19 @@ f1_keywords:
 helpviewer_keywords:
 - IID_PPV_ARGS_Helper function
 ms.assetid: afee9b23-8df1-4575-903f-e9ba748418f0
-ms.openlocfilehash: cae29c70c551701a351cdcf404342ed1634a0e3b
-ms.sourcegitcommit: 360b55e89e5954f494e52b1cf989fbaceda06f1c
+ms.openlocfilehash: 5ef4dd6c9db2d19e0c8a4143c5b4ed3f0ac75f6a
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54335555"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894115"
 ---
 # <a name="iidppvargshelper-function"></a>IID_PPV_ARGS_Helper 函数
 
 验证指定的参数的类型派生`IUnknown`接口。
 
 > [!IMPORTANT]
-> 此模板专用化支持 WRL 基础结构，不应在代码中直接使用。 使用[IID_PPV_ARGS](https://msdn.microsoft.com/library/windows/desktop/ee330727.aspx)相反。
+> 此模板专用化支持 WRL 基础结构，不应在代码中直接使用。 使用[IID_PPV_ARGS](/windows/desktop/api/combaseapi/nf-combaseapi-iid_ppv_args)相反。
 
 ## <a name="syntax"></a>语法
 

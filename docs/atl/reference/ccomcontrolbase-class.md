@@ -80,12 +80,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComControlBase class
 ms.assetid: 3d1bf022-acf2-4092-8283-ff8cee6332f3
-ms.openlocfilehash: def8334cf0ed9b6b2ee821e1e0f1a717d90f2163
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 67d2be23aa6209c36b1a72eca3322efd1e977447
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694577"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894427"
 ---
 # <a name="ccomcontrolbase-class"></a>CComControlBase 类
 
@@ -113,7 +113,7 @@ class ATL_NO_VTABLE CComControlBase
 |名称|描述|
 |----------|-----------------|
 |[CComControlBase::CComControlBase](#ccomcontrolbase)|构造函数。|
-|[CComControlBase:: ~ CComControlBase](#dtor)|析构函数。|
+|[CComControlBase::~CComControlBase](#dtor)|析构函数。|
 
 ### <a name="public-methods"></a>公共方法
 
@@ -124,7 +124,7 @@ class ATL_NO_VTABLE CComControlBase
 |[CComControlBase::DoesVerbUIActivate](#doesverbuiactivate)|检查两个*iVerb*使用的参数`IOleObjectImpl::DoVerb`会导致控件的用户界面激活，则返回 TRUE。|
 |[CComControlBase::DoVerbProperties](#doverbproperties)|显示控件的属性页。|
 |[CComControlBase::FireViewChange](#fireviewchange)|调用此方法以通知容器重绘该控件，或通知控件的视图已更改的已注册的通知接收器。|
-|[CComControlBase::GetAmbientAppearance](#getambientappearance)|检索 DISPID_AMBIENT_APPEARANCE，设置控件的当前外观： 0 表示平面，1 表示 3D。|
+|[CComControlBase::GetAmbientAppearance](#getambientappearance)|检索 DISPID_AMBIENT_APPEARANCE，设置控件的当前外观：表示平面，1 表示 3D 为 0。|
 |[CComControlBase::GetAmbientAutoClip](#getambientautoclip)|检索 DISPID_AMBIENT_AUTOCLIP，一个标志，指示容器是否支持自动的控件显示区域的剪辑。|
 |[CComControlBase::GetAmbientBackColor](#getambientbackcolor)|检索 DISPID_AMBIENT_BACKCOLOR，由容器定义的所有控件的环境背景色。|
 |[CComControlBase::GetAmbientCharSet](#getambientcharset)|检索 DISPID_AMBIENT_CHARSET，对于所有控件，由容器定义的环境的字符集。|
@@ -143,7 +143,7 @@ class ATL_NO_VTABLE CComControlBase
 |[CComControlBase::GetAmbientShowGrabHandles](#getambientshowgrabhandles)|检索 DISPID_AMBIENT_SHOWGRABHANDLES，一个标志，指示容器是否允许要为其自身活动时显示握柄的控件。|
 |[CComControlBase::GetAmbientShowHatching](#getambientshowhatching)|检索 DISPID_AMBIENT_SHOWHATCHING，一个标志，指示容器是否允许该控件以将它显示用阴影图案 UI 处于活动状态时。|
 |[CComControlBase::GetAmbientSupportsMnemonics](#getambientsupportsmnemonics)|检索 DISPID_AMBIENT_SUPPORTSMNEMONICS，一个标志，指示容器是否支持键盘助记键。|
-|[CComControlBase::GetAmbientTextAlign](#getambienttextalign)|检索 DISPID_AMBIENT_TEXTALIGN，首选的容器的文本对齐方式： 常规对齐 （左数字右，文本） 为 0、 1 表示左对齐、 居中对齐的 2 和 3 为右对齐。|
+|[CComControlBase::GetAmbientTextAlign](#getambienttextalign)|检索 DISPID_AMBIENT_TEXTALIGN，首选的容器的文本对齐方式：常规的对齐方式 （左数字右，文本） 为 0、 1 表示左对齐、 居中对齐的 2 和 3 为右对齐。|
 |[CComControlBase::GetAmbientTopToBottom](#getambienttoptobottom)|检索 DISPID_AMBIENT_TOPTOBOTTOM，内容由容器的方向。|
 |[CComControlBase::GetAmbientUIDead](#getambientuidead)|检索 DISPID_AMBIENT_UIDEAD，一个标志，指示容器是否想要响应用户界面操作的控件。|
 |[CComControlBase::GetAmbientUserMode](#getambientusermode)|检索 DISPID_AMBIENT_USERMODE，一个标志，指示容器是否处于运行模式 (TRUE) 或设计模式 (FALSE)。|
@@ -358,7 +358,7 @@ HRESULT FireViewChange();
 
 ##  <a name="getambientappearance"></a>  CComControlBase::GetAmbientAppearance
 
-检索 DISPID_AMBIENT_APPEARANCE，设置控件的当前外观： 0 表示平面，1 表示 3D。
+检索 DISPID_AMBIENT_APPEARANCE，设置控件的当前外观：表示平面，1 表示 3D 为 0。
 
 ```
 HRESULT GetAmbientAppearance(short& nAppearance);
@@ -404,7 +404,7 @@ HRESULT GetAmbientBackColor(OLE_COLOR& BackColor);
 
 ### <a name="parameters"></a>参数
 
-*背景色*<br/>
+*BackColor*<br/>
 DISPID_AMBIENT_BACKCOLOR 属性。
 
 ### <a name="return-value"></a>返回值
@@ -511,7 +511,7 @@ HRESULT GetAmbientFontDisp(IFontDisp** ppFont);
 ### <a name="parameters"></a>参数
 
 *ppFont*<br/>
-指向容器的环境[IFontDisp](https://msdn.microsoft.com/library/windows/desktop/ms692695)调度接口。
+指向容器的环境[IFontDisp](/windows/desktop/api/ocidl/nn-ocidl-ifontdisp)调度接口。
 
 ### <a name="return-value"></a>返回值
 
@@ -531,7 +531,7 @@ HRESULT GetAmbientForeColor(OLE_COLOR& ForeColor);
 
 ### <a name="parameters"></a>参数
 
-*前景色*<br/>
+*ForeColor*<br/>
 DISPID_AMBIENT_FORECOLOR 属性。
 
 ### <a name="return-value"></a>返回值
@@ -704,7 +704,7 @@ DISPID_AMBIENT_SUPPORTSMNEMONICS 属性。
 
 ##  <a name="getambienttextalign"></a>  CComControlBase::GetAmbientTextAlign
 
-检索 DISPID_AMBIENT_TEXTALIGN，首选的容器的文本对齐方式： 常规对齐 （左数字右，文本） 为 0、 1 表示左对齐、 居中对齐的 2 和 3 为右对齐。
+检索 DISPID_AMBIENT_TEXTALIGN，首选的容器的文本对齐方式：常规的对齐方式 （左数字右，文本） 为 0、 1 表示左对齐、 居中对齐的 2 和 3 为右对齐。
 
 ```
 HRESULT GetAmbientTextAlign(short& nTextAlign);
@@ -1217,7 +1217,7 @@ CComPtr<IOleInPlaceSiteWindowless>
 
 下表显示如何`m_spInPlaceSite`取决于指针类型[m_bWndLess](#m_bwndless)并[m_bInPlaceSiteEx](#m_binplacesiteex)数据成员标志：
 
-|m_spInPlaceSite 类型|m_bWndLess 值|m_bInPlaceSiteEx 值|
+|m_spInPlaceSite Type|m_bWndLess Value|m_bInPlaceSiteEx Value|
 |---------------------------|-----------------------|-----------------------------|
 |`IOleInPlaceSiteWindowless`|true|TRUE 或 FALSE|
 |`IOleInPlaceSiteEx`|false|true|
@@ -1460,7 +1460,7 @@ HRESULT SendOnDataChange(DWORD advf = 0);
 
 ### <a name="parameters"></a>参数
 
-*一个指针*<br/>
+*advf*<br/>
 建议标志，用于指定如何在调用[IAdviseSink::OnDataChange](/windows/desktop/api/objidl/nf-objidl-iadvisesink-ondatachange)进行。 值取自[一个指针](/windows/desktop/api/objidl/ne-objidl-tagadvf)枚举。
 
 ### <a name="return-value"></a>返回值
