@@ -11,9 +11,9 @@ ms.locfileid: "51694564"
 ---
 # <a name="desktop-applications-visual-c"></a>桌面应用程序 （Visual c + +）
 
-一个*桌面应用程序*c + + 中是可以访问 Windows Api 和是运行在窗口中或在系统控制台中的完整集的本机应用程序。 （尽管不再受正式支持 Windows XP，并且从那以后引入了许多 Windows api），在 c + + 的桌面应用程序可以在 Windows XP 到 Windows 10 上运行。
+C++ 桌面应用程序是可以访问完整的 Windows API 集并在窗口或系统控制台中运行的本机应用程序。 C++ 桌面应用程序可以在 Windows XP 到 Windows 10 这一系列平台上运行（虽然 Windows XP 不再受正式支持，并且从那以后引入了许多 Windows API）。
 
-桌面应用程序与来自通用 Windows 平台 (UWP) 应用于运行 Windows 10 电脑以及 XBox、 Windows Phone、 Surface Hub 和其他设备上可以运行不同。 有关桌面 vs 的详细信息。UWP 应用程序，请参阅[选择你的技术](/windows/desktop/choose-your-technology)。
+桌面应用程序不同于通用 Windows 平台 (UWP) 应用，后者可以在运行 Windows 10 的电脑上运行，也可以在 XBox、Windows Phone、Surface Hub 和其他设备上运行。 有关桌面 vs 的详细信息。UWP 应用程序，请参阅[选择你的技术](/windows/desktop/choose-your-technology)。
 
 ### <a name="desktop-bridge"></a>桌面桥
 
