@@ -2,12 +2,12 @@
 title: Visual C++ 新增功能（2003 - 2015）
 ms.date: 11/04/2016
 ms.assetid: c4afde6f-3d75-40bf-986f-be57e3818e26
-ms.openlocfilehash: 6d79406e07b8839e196f15d9bc3aed96cbc3dca8
-ms.sourcegitcommit: 31a2a9845f5e1d35ab054906d8cdc6582a5220bd
+ms.openlocfilehash: bc0092aeb8910f960befc174c1f71ce05c4eb131
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51520171"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894349"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Visual C++ 新增功能（2003 - 2015）
 
@@ -648,7 +648,7 @@ ms.locfileid: "51520171"
     error C2668: 'function' : ambiguous call to overloaded function.
    ```
 
-   示例 1： 对重载函数的调用不明确（之前）
+   示例 1：对重载函数的调用不明确（之前）
 
    ```cpp
     // In previous versions of the compiler, code written in this way would unambiguously call f(int, Args...)
@@ -1797,7 +1797,7 @@ Microsoft 特定的 __nullptr 关键字与 nullptr 的含义相同，但前者�
 
 **新的公共语言运行时 (CLR) 选项/clr:nostdlib。** 为 `/clr`（公共语言运行时编译）新增了一个选项。 如果包含同一库的不同版本，则会发出编译器错误。 使用该新选项可以排除默认的 CLR 库，以便程序可以使用指定版本。
 
-**新的杂注指令 detect_mistmatch。** 杂注指令 detect_mismatch 能够在文件中放置一个要与其他具有相同名称的标记进行比较的标记。 如果同一个名称存在多个值，则链接器将发出错误。
+**新的杂注指令 detect_mismatch。** 杂注指令 detect_mismatch 能够在文件中放置一个要与其他具有相同名称的标记进行比较的标记。 如果同一个名称存在多个值，则链接器将发出错误。
 
 **XOP 内部函数、FMA4 内部函数和 LWP 内部函数。** 添加了新的内部函数来支持针对 Visual Studio 2010 SP1 添加的 XOP 内部函数、针对 Visual Studio 2010 SP1 添加的 FMA4 内部函数和针对 Visual Studio 2010 SP1 处理器技术添加的 LWP 内部函数。 使用 __cpuid、__cpuidex 可确定特定计算机上支持的处理器技术。
 
@@ -1836,7 +1836,7 @@ Microsoft 特定的 __nullptr 关键字与 nullptr 的含义相同，但前者�
 
 **高 DPI 识别。** 默认情况下，MFC 应用程序现在可以识别高 DPI。 如果应用程序可以识别高 DPI（每英寸像素数），则操作系统可将窗口、文本和其他 UI 元素缩放至当前屏幕分辨率。 这意味着，缩放的图像更可能是经过正确布局的，而不是经过剪切或像素化的。
 
-**重启管理器。** 重新启动管理器会在应用程序意外关闭或重新启动时，自动保存文档并重新启动该应用程序。 例如，在自动更新关闭了某个应用程序后，可以使用重新启动管理器来启动该应用程序。 要详细了解如何将应用程序配置为使用重启管理器，请参阅“如何：添加重启管理器支持”。
+**重启管理器。** 重新启动管理器会在应用程序意外关闭或重新启动时，自动保存文档并重新启动该应用程序。 例如，在自动更新关闭了某个应用程序后，可以使用重新启动管理器来启动该应用程序。 要详细了解如何将应用程序配置为使用重启管理器，请参阅**如何：添加重启管理器支持**。
 
 **CTaskDialog。** `CTaskDialog` 类可用来替代标准的 `AfxMessageBox` 消息框。 `CTaskDialog` 类显示和收集的信息与标准消息框的多。
 
@@ -1854,7 +1854,7 @@ Microsoft 特定的 __nullptr 关键字与 nullptr 的含义相同，但前者�
 
 #### <a name="animation-and-d2d-support"></a>动画和 D2D 支持
 
-MFC 现在支持动画和 Direct2D 图形。 MFC 库中新增了一些 MFC 类和函数来支持此功能。 此外还新增了两个演练来分别演示如何将 D2D 对象和动画对象添加到项目中。 这两个演练分别为“演练：向 MFC 项目添加 D2D 对象”和“演练：向 MFC 项目添加动画”。
+MFC 现在支持动画和 Direct2D 图形。 MFC 库中新增了一些 MFC 类和函数来支持此功能。 此外还新增了两个演练来分别演示如何将 D2D 对象和动画对象添加到项目中。 这两个演练分别是**演练：向 MFC 项目添加 D2D 对象 (MFC)** 和**演练：向 MFC 项目添加动画**。
 
 ### <a name="ide"></a>IDE
 
@@ -2197,7 +2197,7 @@ __sptr、__uptr
 
 - 介绍如何在早期版本的运行时上运行用当前版本的编译器生成的 Managed Extensions for C++ 应用程序。
 - Managed Extensions for C++ 的常见问题解答。
-- 添加了一个演练，演示如何移植现有本机应用程序以使用 Managed Extensions for C++：“演练：移植现有本机 C++ 应用程序，使其能与 .NET Framework 组件进行交互”。
+- 添加了一个演练，演示如何移植现有本机应用程序以使用 Managed Extensions for C++：演练：移植现有本机 C++ 应用程序以与 .NET Framework 组件互操作。
 - 现在可以在值类型的方法上创建委托。
 - Visual C++ .NET 2003 已极大地增强了编译器与 C++ 标准的符合性。
 - 添加了 `/arch` 编译器选项。
