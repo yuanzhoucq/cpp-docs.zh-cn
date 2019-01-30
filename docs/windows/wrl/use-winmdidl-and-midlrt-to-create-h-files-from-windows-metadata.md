@@ -42,7 +42,7 @@ Winmdidl.exe [/nologo] [/suppressversioncheck] [/time] [/outdir:dir] [/banner:fi
 在控制台输出中显示总执行时间。
 
 **/outdir:**<em>dir</em><br/>
-指定输出目录。 如果路径包含空格，请使用引号。 默认输出目录是*\<驱动器 >*: \Users\\*\<用户名 >* \AppData\Local\VirtualStore\Program 文件 (x86) \Microsoft VisualStudio 12.0\\。
+指定输出目录。 如果路径包含空格，请使用引号。 默认输出目录是 *\<驱动器 >*: \Users\\ *\<用户名 >* \AppData\Local\VirtualStore\Program 文件 (x86) \Microsoft VisualStudio 12.0\\。
 
 **/banner:**<em>file</em><br/>
 指定一个文件，其中包含要在生成的 .idl 文件顶部追加到默认版权消息和 winmdidl 版本号前面的自定义文本。 如果路径包含空格，请使用引号。
