@@ -20,7 +20,7 @@ ms.locfileid: "54220148"
 
 - **排序**， **lower_bound**，和其他默认排序和搜索算法。
 
-若要写入比较运算符，使用严格**<** 并用*命名的 lambda*时可以。
+若要写入比较运算符，使用严格 **<** 并用*命名的 lambda*时可以。
 
 ```cpp
 auto comp = [](const widget& w1, const widget& w2)
