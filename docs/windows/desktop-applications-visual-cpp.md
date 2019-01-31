@@ -13,7 +13,7 @@ ms.locfileid: "51694564"
 
 C++ 桌面应用程序是可以访问完整的 Windows API 集并在窗口或系统控制台中运行的本机应用程序。 C++ 桌面应用程序可以在 Windows XP 到 Windows 10 这一系列平台上运行（虽然 Windows XP 不再受正式支持，并且从那以后引入了许多 Windows API）。
 
-桌面应用程序不同于通用 Windows 平台 (UWP) 应用，后者可以在运行 Windows 10 的电脑上运行，也可以在 XBox、Windows Phone、Surface Hub 和其他设备上运行。 有关桌面 vs 的详细信息。UWP 应用程序，请参阅[选择你的技术](/windows/desktop/choose-your-technology)。
+桌面应用程序不同于通用 Windows 平台 (UWP) 应用，后者可以在运行 Windows 10 的电脑上运行，也可以在 XBox、Windows Phone、Surface Hub 和其他设备上运行。 有关桌面应用程序与 UWP 应用程序的详细比较，请参阅[Choose Your Platform](/windows/desktop/choose-your-technology)（选择平台）。
 
 ### <a name="desktop-bridge"></a>桌面桥
 
