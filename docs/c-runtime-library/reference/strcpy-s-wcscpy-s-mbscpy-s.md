@@ -1,9 +1,10 @@
 ---
-title: strcpy_s、wcscpy_s、_mbscpy_s
-ms.date: 03/22/2086
+title: strcpy_s、 wcscpy_s、 _mbscpy_s、 _mbscpy_s_l
+ms.date: 01/22/2019
 apiname:
 - wcscpy_s
 - _mbscpy_s
+- _mbscpy_s_l
 - strcpy_s
 apilocation:
 - msvcrt.dll
@@ -22,30 +23,32 @@ apitype: DLLExport
 f1_keywords:
 - strcpy_s
 - _mbscpy_s
+- _mbscpy_s_l
 - _tcscpy_s
 - wcscpy_s
 helpviewer_keywords:
 - strcpy_s function
 - _tcscpy_s function
 - _mbscpy_s function
+- _mbscpy_s_l function
 - copying strings
 - strings [C++], copying
 - tcscpy_s function
 - wcscpy_s function
 ms.assetid: 611326f3-7929-4a5d-a465-a4683af3b053
-ms.openlocfilehash: d7deeb2d3286ca20518527df26c4765197f8a087
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5dec0c44519b78a3c4a98c51f8b8ca9bc3f54a7c
+ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50616601"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55702708"
 ---
-# <a name="strcpys-wcscpys-mbscpys"></a>strcpy_s、wcscpy_s、_mbscpy_s
+# <a name="strcpys-wcscpys-mbscpys-mbscpysl"></a>strcpy_s、 wcscpy_s、 _mbscpy_s、 _mbscpy_s_l
 
 复制字符串。 如 [CRT 中的安全性增强功能](../../c-runtime-library/security-features-in-the-crt.md)所述，这些版本的 [strcpy、wcscpy、_mbscpy](strcpy-wcscpy-mbscpy.md) 具有安全性增强功能。
 
 > [!IMPORTANT]
-> **_mbscpy_s**不能在 Windows 运行时中执行的应用程序中使用。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
+> **_mbscpy_s**并 **_mbscpy_s_l**不能在 Windows 运行时中执行的应用程序中使用。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
 
 ## <a name="syntax"></a>语法
 
@@ -64,6 +67,12 @@ errno_t _mbscpy_s(
    unsigned char *dest,
    rsize_t dest_size,
    const unsigned char *src
+);
+errno_t _mbscpy_s_l(
+   unsigned char *dest,
+   rsize_t dest_size,
+   const unsigned char *src,
+   _locale_t locale
 );
 ```
 
@@ -84,6 +93,12 @@ errno_t _mbscpy_s(
    unsigned char (&dest)[size],
    const unsigned char *src
 ); // C++ only
+template <size_t size>
+errno_t _mbscpy_s_l(
+   unsigned char (&dest)[size],
+   const unsigned char *src,
+   _locale_t locale
+); // C++ only
 ```
 
 ### <a name="parameters"></a>参数
@@ -96,6 +111,9 @@ errno_t _mbscpy_s(
 
 *src*<br/>
 以 null 结尾的源字符串缓冲区。
+
+*locale*<br/>
+要使用的区域设置。
 
 ## <a name="return-value"></a>返回值
 
@@ -113,7 +131,7 @@ errno_t _mbscpy_s(
 
 **Strcpy_s**函数将内容复制的地址*src*，包括终止 null 字符，由指定的位置*dest*。 目标字符串必须足够大以保存源字符串及其结尾的 null 字符。 行为**strcpy_s**如果源和目标字符串重叠，则是未定义。
 
-**wcscpy_s**是宽字符版本**strcpy_s**，和 **_mbscpy_s**是多字节字符版本。 参数**wcscpy_s**是宽字符字符串; **_mbscpy_s**是多字节字符字符串。 否则这三个函数否则具有相同行为。
+**wcscpy_s**是宽字符版本**strcpy_s**，和 **_mbscpy_s**是多字节字符版本。 参数**wcscpy_s**是宽字符字符串; **_mbscpy_s**并 **_mbscpy_s_l**是多字节字符字符串。 否则这些函数具有相同行为。 **_mbscpy_s_l**等同于 **_mbscpy_s** ，只不过前者使用传入而不是当前区域设置的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
 如果*dest*或*src*是 null 指针，或者如果目标字符串大小*dest_size*是太小，调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，这些函数将返回**EINVAL**并设置**errno**到**EINVAL**时*dest*或*src*是 null 指针，并且它们返回**ERANGE**并设置**errno**到**ERANGE**目标字符串时太小。
 
@@ -205,8 +223,8 @@ String = Hello world from wcscpy_s and wcscat_s!
 ## <a name="see-also"></a>请参阅
 
 [字符串操作](../../c-runtime-library/string-manipulation-crt.md) <br/>
-[strcat、wcscat、_mbscat](strcat-wcscat-mbscat.md) <br/>
-[strcmp、wcscmp、_mbscmp](strcmp-wcscmp-mbscmp.md) <br/>
+[strcat、 wcscat、 _mbscat、 _mbscat_l](strcat-wcscat-mbscat.md) <br/>
+[strcmp、 wcscmp、 _mbscmp、 _mbscmp_l](strcmp-wcscmp-mbscmp.md) <br/>
 [strncat_s、_strncat_s_l、wcsncat_s、_wcsncat_s_l、_mbsncat_s、_mbsncat_s_l](strncat-s-strncat-s-l-wcsncat-s-wcsncat-s-l-mbsncat-s-mbsncat-s-l.md) <br/>
 [strncmp、wcsncmp、_mbsncmp、_mbsncmp_l](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md) <br/>
 [strncpy_s、_strncpy_s_l、wcsncpy_s、_wcsncpy_s_l、_mbsncpy_s、_mbsncpy_s_l](strncpy-s-strncpy-s-l-wcsncpy-s-wcsncpy-s-l-mbsncpy-s-mbsncpy-s-l.md) <br/>
