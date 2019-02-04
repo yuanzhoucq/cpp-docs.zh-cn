@@ -1,6 +1,6 @@
 ---
-title: _finite _finitef
-ms.date: 04/05/2018
+title: isfinite，_finite、 _finitef
+ms.date: 01/31/2019
 apiname:
 - _finite
 - _finitef
@@ -18,9 +18,11 @@ apilocation:
 - api-ms-win-crt-math-l1-1-0.dll
 apitype: DLLExport
 f1_keywords:
+- isfinite
 - finite
 - _finite
 - _finitef
+- math/isfinite
 - math/_finite
 - math/_finitef
 - float/_finite
@@ -29,20 +31,29 @@ helpviewer_keywords:
 - _finite function
 - _finitef function
 ms.assetid: 5a7d7ca7-befb-4e1f-831d-28713c6eb805
-ms.openlocfilehash: 7b1bce6f1b2da77ed9de255f49dd8d0160e33e31
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1be5aa204a7db3054a49c2e05a8fd77b12ae8a3d
+ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50431643"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55702747"
 ---
-# <a name="finite-finitef"></a>_finite _finitef
+# <a name="isfinite-finite-finitef"></a>isfinite，_finite、 _finitef
 
 确定浮点值是否是有限的。
 
 ## <a name="syntax"></a>语法
 
 ```C
+int isfinite(
+   /* floating-point */ x
+); /* C-only macro */
+
+template <class FloatingType>
+inline bool isfinite(
+   FloatingType x
+) throw(); /* C++-only template function */
+
 int _finite(
    double x
 );
@@ -59,23 +70,26 @@ int _finitef(
 
 ## <a name="return-value"></a>返回值
 
-这两 **_finite**并 **_finitef**返回非零值，如果自变量*x*是有限; 即，如果-INF < *x* < + INF。 如果该参数为无限值或为 NAN，则其返回 0。
+`isfinite`宏并`_finite`并`_finitef`函数返回一个非零值，如果*x*可以正常或次正常有限值。 它们将返回 0，如果参数为无限或为 NaN。 C + + 内联模板函数`isfinite`行为方式相同，但会返回**true**或**false**。
 
 ## <a name="remarks"></a>备注
 
-**_Finite**并 **_finitef**是 Microsoft 特定函数的函数。 **_Finitef**函数才时提供编译 x86、 ARM、 或 ARM64 平台。
+`isfinite` 是一个宏时编译为 C 和内联模板函数在作为 c + + 编译时。 `_finite`和`_finitef`函数是特定于 Microsoft 的。 `_finitef` 函数仅在编译 x86、ARM、或 ARM64 平台时可用。
 
 ## <a name="requirements"></a>要求
 
 |函数|必需的标头 (C)|必需的标头 (C++)|
 |--------------|---------------------------|-------------------------------|
-|**_finite**|\<float.h 1> 或 \<math.h 1>|\<float.h 1>、\<math.h 1>、\<cfloat 1> 或 \<cmath 1>|
-|**_finitef**|\<math.h>|\<math.h> 或 \<cmath>|
+|`_finite`|\<float.h 1> 或 \<math.h 1>|\<float.h 1>、\<math.h 1>、\<cfloat 1> 或 \<cmath 1>|
+|`isfinite`， `_finitef`|\<math.h>|\<math.h> 或 \<cmath>|
 
 有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="see-also"></a>请参阅
 
 [浮点支持](../../c-runtime-library/floating-point-support.md)<br/>
-[isnan、_isnan、_isnanf](isnan-isnan-isnanf.md)<br/>
+[fpclassify](fpclassify.md)<br/>
 [_fpclass、_fpclassf](fpclass-fpclassf.md)<br/>
+[isinf](isinf.md)<br/>
+[isnan、_isnan、_isnanf](isnan-isnan-isnanf.md)<br/>
+[isnormal](isnormal.md)<br/>

@@ -1,6 +1,6 @@
 ---
 title: isnan、_isnan、_isnanf
-ms.date: 04/05/2018
+ms.date: 01/31/2019
 apiname:
 - _isnan
 - _isnanf
@@ -32,12 +32,12 @@ helpviewer_keywords:
 - Not a Number (NANs)
 - isnan function
 ms.assetid: 391fbc5b-89a4-4fba-997e-68f1131caf82
-ms.openlocfilehash: ce111569b7caee9d0c7b8f35352c395571ad08b1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8a907dd33803cebd7bc5d71789834d115333b6a0
+ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50650861"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55703085"
 ---
 # <a name="isnan-isnan-isnanf"></a>isnan、_isnan、_isnanf
 
@@ -73,15 +73,15 @@ bool isnan(
 
 在 C 中， **isnan**宏和 **_isnan**并 **_isnanf**函数返回一个非零值，如果自变量*x*是 NAN; 否则为它们返回 0。
 
-C + + **isnan**模板函数将返回**true**如果参数*x*是 NAN; 否则它们会返回**false**。
+C + + **isnan**模板函数返回**true**如果参数*x*是 NaN; 否则它将返回**false**。
 
 ## <a name="remarks"></a>备注
 
-C **isnan**宏和 **_isnan**并 **_isnanf**函数测试浮点值*x*，返回一个非零值，如果*x*不是数字 (NAN) 值。 如果无法为指定类型以 IEEE 754 浮点格式表示浮点运算的结果，则会生成 NAN。 有关如何将 NAN 表示为输出的信息，请参阅 [printf](printf-printf-l-wprintf-wprintf-l.md)。
+由于 NaN 值不相等，为任何其他 NaN 值，必须使用下列某个函数或宏来检测一个。 不能指定类型的 IEEE 754 浮点格式表示浮点运算的结果，则会生成 NaN。 有关如何表示用于输出的 NaN 的信息，请参阅[printf](printf-printf-l-wprintf-wprintf-l.md)。
 
-在作为 c + +，编译时**isnan**未定义宏，和一个**isnan**改为定义模板函数。 它将返回类型的值**bool**而不是整数。
+在作为 c + +，编译时**isnan**未定义宏，和一个**isnan**改为定义模板函数。 它的行为是相同的宏，但返回类型的值**bool**而不是整数。
 
-**_Isnan**并 **_isnanf**是 Microsoft 特定函数的函数。 **_Isnanf**函数才编译 x64 时可用。
+**_Isnan**并 **_isnanf**函数是特定于 Microsoft 的。 **_Isnanf**函数才编译 x64 时可用。
 
 ## <a name="requirements"></a>要求
 
@@ -95,5 +95,8 @@ C **isnan**宏和 **_isnan**并 **_isnanf**函数测试浮点值*x*，返回一�
 ## <a name="see-also"></a>请参阅
 
 [浮点支持](../../c-runtime-library/floating-point-support.md)<br/>
-[_finite、_finitef](finite-finitef.md)<br/>
+[fpclassify](fpclassify.md)<br/>
 [_fpclass、_fpclassf](fpclass-fpclassf.md)<br/>
+[isfinite，_finite、 _finitef](finite-finitef.md)<br/>
+[isinf](isinf.md)<br/>
+[isnormal](isnormal.md)<br/>
