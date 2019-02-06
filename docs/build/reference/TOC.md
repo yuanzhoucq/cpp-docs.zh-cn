@@ -193,6 +193,7 @@
 ### [/ASSEMBLYMODULE（向程序集添加 MSIL 模块）](assemblymodule-add-a-msil-module-to-the-assembly.md)
 ### [/ASSEMBLYRESOURCE（嵌入托管资源）](assemblyresource-embed-a-managed-resource.md)
 ### [/BASE（基址）](base-base-address.md)
+### [/CETCOMPAT（控制流强制技术兼容）](cetcompat.md)
 ### [/CGTHREADS（编译器线程）](cgthreads-compiler-threads.md)
 ### [/CLRIMAGETYPE（指定 CLR 映像的类型）](clrimagetype-specify-type-of-clr-image.md)
 ### [/CLRSUPPORTLASTERROR（为 PInvoke 调用保留上次的错误代码）](clrsupportlasterror-preserve-last-error-code-for-pinvoke-calls.md)
