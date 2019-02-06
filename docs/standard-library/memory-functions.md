@@ -1,6 +1,6 @@
 ---
 title: '&lt;memory&gt; 函数'
-ms.date: 11/04/2016
+ms.date: 02/06/2019
 f1_keywords:
 - memory/std::addressof
 - memory/std::align
@@ -74,12 +74,12 @@ helpviewer_keywords:
 - std::uninitialized_copy_n [C++]
 - std::uninitialized_fill [C++]
 - std::uninitialized_fill_n [C++]
-ms.openlocfilehash: e0a62b7afd215a9cad62ba1d0469f68459e6f403
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 71cae7bfbb8bfc0bef79a087d4450505c2880e5c
+ms.sourcegitcommit: 63c072f5e941989636f5a2b13800b68bb7129931
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519173"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55763929"
 ---
 # <a name="ltmemorygt-functions"></a>&lt;memory&gt; 函数
 
@@ -105,7 +105,7 @@ T* addressof(T& Val);
 
 ### <a name="parameters"></a>参数
 
-*val*<br/>
+*Val*<br/>
 要获取其实际地址的对象或函数。
 
 ### <a name="return-value"></a>返回值
@@ -135,7 +135,7 @@ void* align(
 *Size*<br/>
 对齐存储的大小（以字节为单位）。
 
-*ptr*<br/>
+*Ptr*<br/>
 要使用的可用连续存储池的起始地址。 此参数还是输出参数，并设置为包含新的起始地址，如果对齐成功。 如果 `align()` 不成功，则不修改此参数。
 
 空格键<br/>
@@ -186,7 +186,7 @@ allocate_shared(Allocator Alloc, Types&&... Args);
 
 ### <a name="parameters"></a>参数
 
-*分配*<br/>
+*Alloc*<br/>
 用于创建对象的分配器。
 
 *参数*<br/>
@@ -261,7 +261,7 @@ void declare_no_pointers(
 |参数|描述|
 |---------------|-----------------|
 |*ptr*|第一个字符的地址，该字符不再包含可跟踪的指针。|
-|*大小) (_s*|开始块的大小*ptr* ，其中包含任何可跟踪的指针。|
+|*_Size*|开始块的大小*ptr* ，其中包含任何可跟踪的指针。|
 
 ### <a name="remarks"></a>备注
 
@@ -299,7 +299,7 @@ struct default_delete {
 
 ### <a name="parameters"></a>参数
 
-*ptr*<br/>
+*Ptr*<br/>
 指向要删除的对象的指针。
 
 *其他*<br/>
@@ -647,13 +647,13 @@ make_unique(Types&&...) = delete;
 
 ### <a name="remarks"></a>备注
 
-第一个重载用于单个对象，第二个重载针对数组进行调用，第三个重载防止用户指定类型参数中的数组大小 (make_unique\<T[N]>)；当前标准不支持此构造。 当使用 `make_unique` 将 `unique_ptr` 创建到数组时，必须分别初始化数组元素。 如果你正在考虑此重载，也许使用 [std::vector](../standard-library/vector-class.md) 会是更好的选择。
+第一个重载用于单个对象，第二个重载针对数组进行调用第三个重载防止你从类型参数中指定的数组大小 (make_unique\<T [N] >); 当前不支持此构造标准。 当使用 `make_unique` 将 `unique_ptr` 创建到数组时，必须分别初始化数组元素。 如果你正在考虑此重载，也许使用 [std::vector](../standard-library/vector-class.md) 会是更好的选择。
 
 由于谨慎实现 `make_unique` 以获得异常安全，因此建议您使用 `make_unique` 而不是直接调用 `unique_ptr` 构造函数。
 
 ### <a name="example"></a>示例
 
-下面的示例说明如何使用 `make_unique`。 有关更多示例，请参阅[如何：创建和使用 unique_ptr 实例](../cpp/how-to-create-and-use-unique-ptr-instances.md)。
+下面的示例说明如何使用 `make_unique`。 有关更多示例，请参见[如何：创建和使用 unique_ptr 实例](../cpp/how-to-create-and-use-unique-ptr-instances.md)。
 
 [!code-cpp[stl_smart_pointers#214](../cpp/codesnippet/CPP/memory-functions_1.cpp)]
 
@@ -700,7 +700,7 @@ struct owner_less<weak_ptr<Type>>
 
 ### <a name="parameters"></a>参数
 
-*_ 左*<br/>
+*_left*<br/>
 共享指针或弱指针。
 
 *right*<br/>
@@ -956,7 +956,7 @@ ForwardIterator uninitialized_copy(InputIterator first, InputIterator last, Forw
 *first*<br/>
 确定源范围中第一个元素的地址的输入迭代器。
 
-*最后一个*<br/>
+*last*<br/>
 确定源范围中最后一个元素的地址的输入迭代器。
 
 *dest*<br/>
@@ -1101,7 +1101,7 @@ void uninitialized_fill(ForwardIterator first, ForwardIterator last, const Type&
 *first*<br/>
 一个向前迭代器，用于在要启动的目标范围中发现第一个元素。
 
-*最后一个*<br/>
+*last*<br/>
 一个向前迭代器，用于在要启动的目标范围中发现最后一个元素。
 
 *val*<br/>
