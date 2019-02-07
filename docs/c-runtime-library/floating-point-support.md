@@ -1,6 +1,6 @@
 ---
 title: 数学和浮点支持
-ms.date: 04/06/2018
+ms.date: 01/31/2019
 f1_keywords:
 - c.math
 helpviewer_keywords:
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - math routines
 - floating-point numbers
 ms.assetid: e4fcaf69-5c8e-4854-a9bb-1f412042131e
-ms.openlocfilehash: 9e1baeb7236e5b1144b52df0bd83cc0f4a4b7796
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1d03333dee12989af5897c34ba96484930a39673
+ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50558231"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55703124"
 ---
 # <a name="math-and-floating-point-support"></a>数学和浮点支持
 
@@ -69,7 +69,6 @@ ms.locfileid: "50558231"
 [fesetround](../c-runtime-library/reference/fegetround-fesetround2.md)|设置指定的浮点舍入标志
 [fetestexcept](../c-runtime-library/reference/fetestexcept1.md)|确定要设置的浮点异常状态标志
 [feupdateenv](../c-runtime-library/reference/feupdateenv.md)|还原浮点环境，然后引发以前的异常
-[_finite、_finitef](../c-runtime-library/reference/finite-finitef.md)|确定某值是否有限
 [floor、floorf、floorl](../c-runtime-library/reference/floor-floorf-floorl.md)|计算下限
 [fma、fmaf、fmal](../c-runtime-library/reference/fma-fmaf-fmal.md)|计算浮点混合乘加运算
 [fmax、fmaxf、fmaxl](../c-runtime-library/reference/fmax-fmaxf-fmaxl.md)|计算参数的最大值
@@ -87,7 +86,11 @@ ms.locfileid: "50558231"
 [ilogb、ilogbf、ilogbl](../c-runtime-library/reference/ilogb-ilogbf-ilogbl2.md)|计算以整数 2 为底的指数
 [imaxabs](../c-runtime-library/reference/imaxabs.md)|计算整数类型的绝对值
 [imaxdiv](../c-runtime-library/reference/imaxdiv.md)|计算两个整数值的商和余数
+[isfinite、_finite、_finitef](../c-runtime-library/reference/finite-finitef.md)|确定某值是否有限
+[isgreater、isgreaterequal、isless、islessequal、islessgreater、isunordered](../c-runtime-library/reference/floating-point-ordering.md)|比较两个浮点值的顺序
+[isinf](../c-runtime-library/reference/isinf.md)|确定浮点值是否为无穷大
 [isnan、_isnan、_isnanf](../c-runtime-library/reference/isnan-isnan-isnanf.md)|测试 NaN 的浮点值
+[isnormal](../c-runtime-library/reference/isnormal.md)|测试浮点值是否既有限又不低于正常值
 [_j0、_j1、_jn](../c-runtime-library/reference/bessel-functions-j0-j1-jn-y0-y1-yn.md)|计算贝塞尔函数
 [ldexp、ldexpf、ldexpl](../c-runtime-library/reference/ldexp.md)|计算 x*2<sup>n</sup>
 [lgamma、lgammaf、lgammal](../c-runtime-library/reference/lgamma-lgammaf-lgammal.md)|计算 gamma 函数的绝对值的自然对数
@@ -118,6 +121,7 @@ ms.locfileid: "50558231"
 [scalbn、scalbnf、scalbnl、scalbln、scalblnf、scalblnl](../c-runtime-library/reference/scalbn-scalbnf-scalbnl-scalbln-scalblnf-scalblnl.md)|将浮点数乘以 FLT_RADIX 的整数幂
 [_set_controlfp](../c-runtime-library/reference/set-controlfp.md)|设置浮点控制字
 [_set_SSE2_enable](../c-runtime-library/reference/set-sse2-enable.md)|启用或禁用 SSE2 指令
+[signbit](../c-runtime-library/reference/signbit.md)|测试浮点值的符号位
 [sin、sinf、sinl](../c-runtime-library/reference/sin-sinf-sinl.md)|计算正弦值
 [sinh、sinhf、sinhl](../c-runtime-library/reference/sinh-sinhf-sinhl.md)|计算双曲正弦值
 [sqrt、sqrtf、sqrtl](../c-runtime-library/reference/sqrt-sqrtf-sqrtl.md)|计算平方根
@@ -134,3 +138,4 @@ ms.locfileid: "50558231"
 ## <a name="see-also"></a>请参阅
 
 [按类别分的通用 C 运行时例程](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[浮点基元](../c-runtime-library/reference/floating-point-primitives.md)<br/>
