@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - run-time object model services macros
 ms.assetid: 4a3e79df-2ee3-43a4-8193-20298828de85
-ms.openlocfilehash: fb5d35782e70924605fd344e2c330e18d611f44c
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: fce6fb938b501da7bc9251de51c71714e4613fd5
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519199"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850280"
 ---
 # <a name="run-time-object-model-services"></a>运行时对象模型服务
 
@@ -25,7 +25,7 @@ ms.locfileid: "51519199"
 
 下表列出了支持运行时类信息、序列化和动态创建的 MFC 宏。
 
-这些运行时对象服务和序列化的详细信息，请参阅文章[CObject 类： 访问运行时类信息](../../mfc/accessing-run-time-class-information.md)。
+这些运行时对象服务和序列化的详细信息，请参阅文章[CObject 类：访问运行时类信息](../../mfc/accessing-run-time-class-information.md)。
 
 ### <a name="run-time-object-model-services-macros"></a>运行时对象模型服务宏
 
@@ -68,7 +68,7 @@ AFX_COMCTL32_IF_EXISTS(  proc );
 
 ### <a name="parameters"></a>参数
 
-*进程内*<br/>
+*proc*<br/>
 指向包含函数名的以 null 结尾的字符串的指针，或者指定函数的序号值。 如果此参数是序号值，则它必须在低序位字中；高序位字必须为零。 此参数必须采用 Unicode。
 
 ### <a name="remarks"></a>备注
@@ -78,11 +78,6 @@ AFX_COMCTL32_IF_EXISTS(  proc );
 ### <a name="requirements"></a>要求
 
 afxcomctl32.h，afxcomctl32.inl
-
-### <a name="see-also"></a>请参阅
-
-[隔离 MFC 公用控件库](../isolation-of-the-mfc-common-controls-library.md)<br/>
-[AFX_COMCTL32_IF_EXISTS2](#afx_comctl32_if_exists2)
 
 ## <a name="afx_comctl32_if_exists2"></a>  AFX_COMCTL32_IF_EXISTS2
 
@@ -96,7 +91,7 @@ AFX_COMCTL32_IF_EXISTS2( proc );
 
 ### <a name="parameters"></a>参数
 
-*进程内*<br/>
+*proc*<br/>
 指向包含函数名的以 null 结尾的字符串的指针，或者指定函数的序号值。 如果此参数是序号值，则它必须在低序位字中；高序位字必须为零。 此参数必须采用 Unicode。
 
 ### <a name="remarks"></a>备注
@@ -106,11 +101,6 @@ AFX_COMCTL32_IF_EXISTS2( proc );
 ### <a name="requirements"></a>要求
 
 afxcomctl32.h，afxcomctl32.inl
-
-### <a name="see-also"></a>请参阅
-
-[隔离 MFC 公用控件库](../isolation-of-the-mfc-common-controls-library.md)<br/>
-[AFX_COMCTL32_IF_EXISTS](#afx_comctl32_if_exists)
 
 ##  <a name="declare_dynamic"></a>  DECLARE_DYNAMIC
 
@@ -200,10 +190,6 @@ DECLARE_OLECTLTYPE( class_name )
 
 **标头：** afxctl.h
 
-### <a name="see-also"></a>请参阅
-
-[IMPLEMENT_OLECTLTYPE](#implement_olectltype)
-
 ## <a name="declareproppageids"></a>DECLARE_PROPPAGEIDS
 
 声明 OLE 控件提供了一系列属性页以显示其属性。
@@ -223,16 +209,11 @@ DECLARE_PROPPAGEIDS( class_name )
 
 使用`DECLARE_PROPPAGEIDS`宏在类声明的末尾。 然后，在.cpp 文件中定义类的成员函数，使用`BEGIN_PROPPAGEIDS`宏，宏项为每个控件的属性页和`END_PROPPAGEIDS`宏声明属性页列表的末尾。
 
-属性页的详细信息，请参阅文章[ActiveX 控件： 属性页](../mfc-activex-controls-property-pages.md)。
+属性页的详细信息，请参阅文章[ActiveX 控件：属性页](../mfc-activex-controls-property-pages.md)。
 
 ### <a name="requirements"></a>要求
 
 **标头：** afxctl.h
-
-### <a name="see-also"></a>请参阅
-
-[BEGIN_PROPPAGEIDS](#begin_proppageids)<br/>
-[END_PROPPAGEIDS](#end_proppageids)
 
 ##  <a name="declare_serial"></a>  DECLARE_SERIAL
 
@@ -382,12 +363,6 @@ OLE 类 ID 是对象的唯一 128 位标识符。 它包含一个**长**、 两�
 
 **标头：** afxdisp.h
 
-### <a name="see-also"></a>请参阅
-
-[宏和全局函数](mfc-macros-and-globals.md)<br/>
-[DECLARE_OLECREATE](#declare_olecreate)<br/>
-[CLSID 项](/windows/desktop/com/clsid-key-hklm)
-
 ## <a name="implement_olecreate"></a> IMPLEMENT_OLECTLTYPE
 
 实现`GetUserTypeNameID`和`GetMiscStatus`控件类的成员函数。
@@ -416,16 +391,11 @@ DECLARE_OLECTLTYPE( class_name, idsUserTypeName, dwOleMisc )
 `GetUserTypeNameID`成员函数将返回用于标识你的控件类的资源字符串。 `GetMiscStatus` 返回控件的 OLEMISC 位。 此枚举指定描述控件的其他特征的设置的集合。 OLEMISC 设置的完整说明，请参阅[OLEMISC](/windows/desktop/api/oleidl/ne-oleidl-tagolemisc) Windows SDK 中。
 
 > [!NOTE]
->  使用 ActiveX 控件向导的默认设置是： OLEMISC_ACTIVATEWHENVISIBLE、 OLEMISC_SETCLIENTSITEFIRST、 OLEMISC_INSIDEOUT、 OLEMISC_CANTLINKINSIDE 和 OLEMISC_RECOMPOSEONRESIZE。
+>  使用 ActiveX 控件向导的默认设置是：OLEMISC_ACTIVATEWHENVISIBLE、 OLEMISC_SETCLIENTSITEFIRST、 OLEMISC_INSIDEOUT、 OLEMISC_CANTLINKINSIDE 和 OLEMISC_RECOMPOSEONRESIZE。
 
 ### <a name="requirements"></a>要求
 
 **标头：** afxctl.h
-
-### <a name="see-also"></a>请参阅
-
-[宏和全局函数](mfc-macros-and-globals.md)<br/>
-[DECLARE_OLECTLTYPE](#declare_olectltype)
 
 ##  <a name="implement_serial"></a>  IMPLEMENT_SERIAL
 
@@ -549,5 +519,7 @@ OLE 类 ID 是对象的唯一 128 位标识符。 它包含一个**长**、 两�
 
 ## <a name="see-also"></a>请参阅
 
-[宏和全局函数](../../mfc/reference/mfc-macros-and-globals.md)
+[宏和全局函数](mfc-macros-and-globals.md)<br/>
+[隔离 MFC 公用控件库](../isolation-of-the-mfc-common-controls-library.md)<br/>
+[CLSID 项](/windows/desktop/com/clsid-key-hklm)
 

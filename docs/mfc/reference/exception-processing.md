@@ -13,12 +13,12 @@ helpviewer_keywords:
 - MFC, exceptions
 - exceptions [MFC], MFC throwing functions
 ms.assetid: 26d4457c-8350-48f5-916e-78f919787c30
-ms.openlocfilehash: d44928d9fda20082496df1c475d8b3ab05ba4fc4
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 8b40afbfcc453a4908b434dc53b7b86959673453
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51522067"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55851677"
 ---
 # <a name="exception-processing"></a>异常处理
 
@@ -40,8 +40,8 @@ Microsoft 基础类库中包含的几个宏将设置异常处理程序。 多个
 
 |||
 |-|-|
-|[请尝试](#try)|将指定异常处理的代码的块。|
-|[捕获](#catch)|将指定的捕获的异常从前面的代码块**尝试**块。|
+|[TRY](#try)|将指定异常处理的代码的块。|
+|[CATCH](#catch)|将指定的捕获的异常从前面的代码块**尝试**块。|
 |[CATCH_ALL](#catch_all)|将指定的用于捕获所有异常从前面的代码块**尝试**块。|
 |[AND_CATCH](#and_catch)|将指定的用于捕获从前面的其他异常类型的代码块**尝试**块。|
 |[AND_CATCH_ALL](#and_catch_all)|将指定的用于捕获前面中引发的其他所有其他异常类型的代码块**尝试**块。|
@@ -88,7 +88,7 @@ MFC 提供了以下的终止函数：
 |-|-|
 |[AfxAbort](#afxabort)|调用要终止的应用程序时出现错误时发生。|
 
-##  <a name="try"></a>  请尝试
+##  <a name="try"></a>  TRY
 
 设置了**尝试**块。
 
@@ -110,7 +110,7 @@ TRY
 
 标头：afx.h
 
-##  <a name="catch"></a>  捕获
+##  <a name="catch"></a>  CATCH
 
 定义的捕获引发在前面的第一个异常类型的代码块**尝试**块。
 
@@ -314,7 +314,7 @@ void  AfxThrowArchiveException(int cause, LPCTSTR lpszArchiveName);
 
 ### <a name="parameters"></a>参数
 
-*原因*<br/>
+*cause*<br/>
 指定一个整数，指示该异常的原因。 有关可能的值的列表，请参阅[CArchiveException::m_cause](../../mfc/reference/carchiveexception-class.md#m_cause)。
 
 *lpszArchiveName*<br/>
@@ -337,7 +337,7 @@ void AfxThrowFileException(
 
 ### <a name="parameters"></a>参数
 
-*原因*<br/>
+*cause*<br/>
 指定一个整数，指示该异常的原因。 有关可能的值的列表，请参阅[CFileException::m_cause](../../mfc/reference/cfileexception-class.md#m_cause)。
 
 *lOsError*<br/>
@@ -371,12 +371,6 @@ void AfxThrowInvalidArgException( );
 ### <a name="requirements"></a>要求
 
 **标头：** afx.h
-
-### <a name="see-also"></a>请参阅
-
-[宏和全局函数](mfc-macros-and-globals.md)<br/>
-[CInvalidArgException 类](cinvalidargexception-class.md)<br/>
-[引发](#throw)
 
 ##  <a name="afxthrowmemoryexception"></a>  AfxThrowMemoryException
 
@@ -456,7 +450,7 @@ void AFXAPI AfxThrowOleDispatchException(
 
 ### <a name="parameters"></a>参数
 
-*WCode*<br/>
+*wCode*<br/>
 特定于应用程序的错误代码。
 
 *lpszDescription*<br/>
@@ -527,7 +521,7 @@ void AFXAPI AfxThrowDaoException(
 
 框架还调用`AfxThrowDaoException`。 在您调用中，可以传递的参数之一或两者。 例如，如果你想要引发一个错误中定义**CDaoException::nAfxDaoError**但你不关心*scode*参数，传递有效的代码中*nAfxDaoError*参数并接受的默认值为*scode*。
 
-与 MFC DAO 类相关的异常有关的信息，请参阅类`CDaoException`在此书和文章[异常： 数据库异常](../../mfc/exceptions-database-exceptions.md)。
+与 MFC DAO 类相关的异常有关的信息，请参阅类`CDaoException`在此书和文章[异常：数据库异常](../../mfc/exceptions-database-exceptions.md)。
 
 ### <a name="requirements"></a>要求
 
@@ -587,5 +581,6 @@ void  AfxAbort();
 
 ## <a name="see-also"></a>请参阅
 
-[宏和全局函数](../../mfc/reference/mfc-macros-and-globals.md)<br/>
-[CException 类](../../mfc/reference/cexception-class.md)
+[宏和全局函数](mfc-macros-and-globals.md)<br/>
+[CException 类](cexception-class.md)<br/>
+[CInvalidArgException 类](cinvalidargexception-class.md)

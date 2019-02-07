@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - applications [MFC], managing
 ms.assetid: b72f4154-24db-4e75-bca3-6873e2459c15
-ms.openlocfilehash: c1e742d3320dae4140cc4886c47d34dbe9b6071f
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 6bdcf97c921dc45939ab9ddf18f1d624c2fd83b8
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178338"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850293"
 ---
 # <a name="application-information-and-management"></a>应用程序信息和管理
 
@@ -138,10 +138,6 @@ CContextMenuManager* afxContextMenuManager;
 
 **标头：** afxcontextmenumanager.h
 
-### <a name="see-also"></a>请参阅
-
-[CContextMenuManager 类](ccontextmenumanager-class.md)
-
 ##  <a name="afxendthread"></a>  AfxEndThread
 
 调用此函数可终止当前正在执行的线程。
@@ -209,10 +205,6 @@ HINSTANCE AFXAPI AfxFindResourceHandle( LPCTSTR lpszName,  LPCTSTR lpszType );
 ### <a name="requirements"></a>要求
 
 **标头:** afxwin.h
-
-### <a name="see-also"></a>请参阅
-
-[宏和全局函数](mfc-macros-and-globals.md)
 
 ##  <a name="afxfreelibrary"></a>  AfxFreeLibrary
 
@@ -490,11 +482,6 @@ BOOL AFXAPI AfxIsExtendedFrameClass( CWnd* pWnd );
 
 **标头：** afxpriv.h
 
-### <a name="see-also"></a>请参阅
-
-[CWnd 类](cwnd-class.md)<br/>
-[CFrameWndEx 类](cframewndex-class.md)
-
 ## <a name="afxismfctoolbar"></a> AfxIsMFCToolBar
 
 确定给定窗口是否为工具栏对象。
@@ -522,11 +509,6 @@ BOOL AFXAPI AfxIsMFCToolBar(CWnd* pWnd);
 
 **标头：** afxpriv.h
 
-### <a name="see-also"></a>请参阅
-
-[CWnd 类](cwnd-class.md)<br/>
-[CMFCToolBar 类](cmfctoolbar-class.md)
-
 ## <a name="afxkeyboardmanager"></a> AfxKeyboardManager
 
 指向全局[键盘管理器](ckeyboardmanager-class.md)。
@@ -540,11 +522,6 @@ CKeyboardManager* afxKeyboardManager;
 ### <a name="requirements"></a>要求
 
 **标头：** afxkeyboardmanager.h
-
-### <a name="see-also"></a>请参阅
-
-[宏、 全局函数和全局变量](mfc-macros-and-globals.md)<br/>
-[CKeyboardManager 类](ckeyboardmanager-class.md)
 
 ##  <a name="afxloadlibrary"></a>  AfxLoadLibrary
 
@@ -613,10 +590,6 @@ CMenuTearOffManager* g_pTearOffMenuManager;
 
 **标头：** afxmenutearoffmanager.h
 
-### <a name="see-also"></a>请参阅
-
-[CMenuTearOffManager 类](cmenutearoffmanager-class.md)
-
 ## <a name="afxmousemanager"></a>  AfxMouseManager
 
 指向全局[鼠标管理器](cmousemanager-class.md)。
@@ -630,10 +603,6 @@ CMouseManager* afxMouseManager;
 ### <a name="requirements"></a>要求
 
 **标头：** afxmousemanager.h
-
-### <a name="see-also"></a>请参阅
-
-[CMouseManager 类](cmousemanager-class.md)
 
 ##  <a name="afxregisterclass"></a>  AfxRegisterClass
 
@@ -787,10 +756,6 @@ CShellManager* afxShellManager;
 
 **标头：** afxshellmanager.h
 
-### <a name="see-also"></a>请参阅
-
-[CShellManager 类](cshellmanager-class.md)
-
 ##  <a name="afxsocketinit"></a>  AfxSocketInit
 
 在 `CWinApp::InitInstance` 重写中调用此函数可初始化 Windows 套接字。
@@ -829,10 +794,6 @@ CUserToolsManager* afxUserToolsManager;
 ### <a name="requirements"></a>要求
 
 **标头：** afxusertoolsmanager.h
-
-### <a name="see-also"></a>请参阅
-
-[CUserToolsManager 类](cusertoolsmanager-class.md)
 
 ##  <a name="afxwininit"></a>  AfxWinInit
 
@@ -879,5 +840,14 @@ BOOL AFXAPI AfxWinInit(
 
 ## <a name="see-also"></a>请参阅
 
-[宏和全局函数](../../mfc/reference/mfc-macros-and-globals.md)<br/>
-[CWinApp 类](../../mfc/reference/cwinapp-class.md)
+[宏和全局函数](mfc-macros-and-globals.md)<br/>
+[CWinApp 类](cwinapp-class.md)<br/>
+[CContextMenuManager 类](ccontextmenumanager-class.md)<br/>
+[CWnd 类](cwnd-class.md)<br/>
+[CFrameWndEx 类](cframewndex-class.md)<br/>
+[CMFCToolBar 类](cmfctoolbar-class.md)<br/>
+[CKeyboardManager 类](ckeyboardmanager-class.md)<br/>
+[CMenuTearOffManager 类](cmenutearoffmanager-class.md)<br/>
+[CMouseManager 类](cmousemanager-class.md)<br/>
+[CShellManager 类](cshellmanager-class.md)<br/>
+[CUserToolsManager 类](cusertoolsmanager-class.md)

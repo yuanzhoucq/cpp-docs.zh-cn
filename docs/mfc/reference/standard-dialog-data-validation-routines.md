@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - standard dialog, data validation routines
 ms.assetid: 44dbc222-a897-4949-925e-7660e8964ccd
-ms.openlocfilehash: b5813600bbf8eb2a7b25992b3e1b020fcf8dfa02
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dce982f76e25da424c02d621c1b760ec29e88918
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50513940"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850159"
 ---
 # <a name="standard-dialog-data-validation-routines"></a>标准对话框数据验证例程
 
@@ -54,7 +54,7 @@ void AFXAPI DDV_MaxChars(
 *pDX*<br/>
 指向 `CDataExchange` 对象的指针。 框架提供了此对象以建立数据交换的上下文，包括其方向。
 
-*value*<br/>
+*值*<br/>
 对对话框、 窗体视图或控件视图对象与其数据进行验证的成员变量的引用。
 
 *nChars*<br/>
@@ -85,7 +85,7 @@ void AFXAPI DDV_MinMaxByte(
 *pDX*<br/>
 指向 `CDataExchange` 对象的指针。 框架提供了此对象以建立数据交换的上下文，包括其方向。
 
-*value*<br/>
+*值*<br/>
 对对话框、 窗体视图或控件视图对象与其数据进行验证的成员变量的引用。
 
 *minVal*<br/>
@@ -159,7 +159,7 @@ void AFXAPI DDV_MinMaxDouble(
 *pDX*<br/>
 指向 `CDataExchange` 对象的指针。 框架提供了此对象以建立数据交换的上下文，包括其方向。
 
-*value*<br/>
+*值*<br/>
 对对话框、 窗体视图或控件视图对象与其数据进行验证的成员变量的引用。
 
 *minVal*<br/>
@@ -193,7 +193,7 @@ void AFXAPI DDV_MinMaxDWord(
 *pDX*<br/>
 指向 `CDataExchange` 对象的指针。 框架提供了此对象以建立数据交换的上下文，包括其方向。
 
-*value*<br/>
+*值*<br/>
 对对话框、 窗体视图或控件视图对象与其数据进行验证的成员变量的引用。
 
 *minVal*<br/>
@@ -227,7 +227,7 @@ void AFXAPI DDV_MinMaxFloat(
 *pDX*<br/>
 指向 `CDataExchange` 对象的指针。 框架提供了此对象以建立数据交换的上下文，包括其方向。
 
-*value*<br/>
+*值*<br/>
 对对话框、 窗体视图或控件视图对象与其数据进行验证的成员变量的引用。
 
 *minVal*<br/>
@@ -261,7 +261,7 @@ void AFXAPI DDV_MinMaxInt(
 *pDX*<br/>
 指向 `CDataExchange` 对象的指针。 框架提供了此对象以建立数据交换的上下文，包括其方向。
 
-*value*<br/>
+*值*<br/>
 对对话框、 窗体视图或控件视图对象与其数据进行验证的成员变量的引用。
 
 *minVal*<br/>
@@ -295,7 +295,7 @@ void AFXAPI DDV_MinMaxLong(
 *pDX*<br/>
 指向 `CDataExchange` 对象的指针。 框架提供了此对象以建立数据交换的上下文，包括其方向。
 
-*value*<br/>
+*值*<br/>
 对对话框、 窗体视图或控件视图对象与其数据进行验证的成员变量的引用。
 
 *minVal*<br/>
@@ -329,7 +329,7 @@ void AFXAPI DDV_MinMaxLongLong(
 *pDX*<br/>
 指向 `CDataExchange` 对象的指针。 框架提供了此对象以建立数据交换的上下文，包括其方向。
 
-*value*<br/>
+*值*<br/>
 对对话框、 窗体视图或控件视图对象与其数据进行验证的成员变量的引用。
 
 *minVal*<br/>
@@ -403,7 +403,7 @@ void AFXAPI DDV_MinMaxShort(
 *pDX*<br/>
 指向 `CDataExchange` 对象的指针。 框架提供了此对象以建立数据交换的上下文，包括其方向。
 
-*value*<br/>
+*值*<br/>
 对对话框、 窗体视图或控件视图对象与其数据进行验证的成员变量的引用。
 
 *minVal*<br/>
@@ -437,7 +437,7 @@ void AFXAPI DDV_MinMaxSlider(
 *pDX*<br/>
 一个指向[CDataExchange](../../mfc/reference/cdataexchange-class.md)对象。 框架提供了此对象以建立数据交换的上下文，包括其方向。
 
-*value*<br/>
+*值*<br/>
 要验证的值对的引用。 此参数保留或设置滑块控件的滚动块的当前位置。
 
 *minVal*<br/>
@@ -471,7 +471,7 @@ void AFXAPI DDV_MinMaxUInt(
 *pDX*<br/>
 指向 `CDataExchange` 对象的指针。 框架提供了此对象以建立数据交换的上下文，包括其方向。
 
-*value*<br/>
+*值*<br/>
 对对话框、 窗体视图或控件视图对象与其数据进行验证的成员变量的引用。
 
 *minVal*<br/>
@@ -505,7 +505,7 @@ void AFXAPI DDV_MinMaxULongLong(
 *pDX*<br/>
 指向 `CDataExchange` 对象的指针。 框架提供了此对象以建立数据交换的上下文，包括其方向。
 
-*value*<br/>
+*值*<br/>
 对对话框、 窗体视图或控件视图对象与其数据进行验证的成员变量的引用。
 
 *minVal*<br/>
@@ -521,11 +521,6 @@ DDV 有关详细信息，请参阅[对话框数据交换和验证](../../mfc/dia
 ### <a name="requirements"></a>要求
 
   **标头**afxdd_.h
-
-## <a name="see-also"></a>请参阅
-
-[标准对话框数据交换例程](../../mfc/reference/standard-dialog-data-exchange-routines.md)<br/>
-[宏和全局函数](../../mfc/reference/mfc-macros-and-globals.md)
 
 ## <a name="ddvminmaxunsigned"></a>DDV_MinMaxUnsigned
 
@@ -546,7 +541,7 @@ DDV 有关详细信息，请参阅[对话框数据交换和验证](../../mfc/dia
 *pDX*<br/>
 指向 `CDataExchange` 对象的指针。 框架提供了此对象以建立数据交换的上下文，包括其方向。
 
-*value*<br/>
+*值*<br/>
 对对话框、 窗体视图或控件视图对象与其数据进行验证的成员变量的引用。
 
 *minVal*<br/>
@@ -563,9 +558,10 @@ DDV 有关详细信息，请参阅[对话框数据交换和验证](../dialog-dat
 
 **标头：** afxdd_.h
 
-### <a name="see-also"></a>请参阅
+## <a name="see-also"></a>请参阅
 
+[标准对话框数据交换例程](standard-dialog-data-exchange-routines.md)<br/>
 [宏和全局函数](mfc-macros-and-globals.md)<br/>
-[DDX_Slider](#ddx_slider)<br/>
-[DDX_FieldSlider](#ddx_fieldslider)
+[DDX_Slider](standard-dialog-data-exchange-routines.md#ddx_slider)<br/>
+[DDX_FieldSlider](dialog-data-exchange-functions-for-crecordview-and-cdaorecordview.md#ddx_fieldslider)
 

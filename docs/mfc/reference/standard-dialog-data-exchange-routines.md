@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - standard dialog, data exchange routines
 ms.assetid: c6adb7f3-f9af-4cc5-a9ea-315c5b60ad1a
-ms.openlocfilehash: 06153a72ce6ed6e5422022255eec333110709778
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 374618aba297fb2c055ce02f93d0c7c93b38dc06
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618304"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850172"
 ---
 # <a name="standard-dialog-data-exchange-routines"></a>标准对话框数据交换例程
 
@@ -90,7 +90,7 @@ void AFXAPI DDX_CBString(
 *nIDC*<br/>
 组合框控件与控件属性关联的资源 ID。
 
-*value*<br/>
+*值*<br/>
 对对话框、 窗体视图或控件视图对象与其交换数据的成员变量的引用。
 
 ### <a name="remarks"></a>备注
@@ -125,7 +125,7 @@ void AFXAPI DDX_CBStringExact(
 *nIDC*<br/>
 组合框控件与控件属性关联的资源 ID。
 
-*value*<br/>
+*值*<br/>
 对对话框、 窗体视图或控件视图对象与其交换数据的成员变量的引用。
 
 ### <a name="remarks"></a>备注
@@ -160,7 +160,7 @@ void AFXAPI DDX_Check(
 *nIDC*<br/>
 与控件属性关联的复选框控件的资源 ID。
 
-*value*<br/>
+*值*<br/>
 对对话框、 窗体视图或控件视图对象与其交换数据的成员变量的引用。
 
 ### <a name="remarks"></a>备注
@@ -234,7 +234,7 @@ void AFXAPI DDX_DateTimeCtrl(
 *nIDC*<br/>
 与成员变量关联的日期和时间选取器控件的资源 ID。
 
-*value*<br/>
+*值*<br/>
 在前两个版本中，对引用`CTime`或`COleDateTime`成员变量、 对话框、 窗体视图或控件视图对象与其交换数据。 在第三个版本中，对引用`CString`数据成员控件视图对象。
 
 ### <a name="remarks"></a>备注
@@ -278,16 +278,11 @@ void DDX_ManagedControl(
 
 `DDX_ManagedControl` 调用[CWinFormsControl::CreateManagedControl](cwinformscontrol-class.md#createmanagedcontrol)创建控件匹配资源控件 id。 使用`DDX_ManagedControl`若要从资源 Id 创建控件[CDialog::OnInitDialog](cdialog-class.md#oninitdialog)。 数据交换，不需要将 DDX/DDV 函数与 Windows 窗体控件。
 
-有关详细信息，请参阅[如何： 使用 Windows 窗体执行 DDX/DDV 数据绑定](../../dotnet/how-to-do-ddx-ddv-data-binding-with-windows-forms.md)。
+有关详细信息，请参阅[如何：使用 Windows 窗体执行 DDX/DDV 数据绑定](../../dotnet/how-to-do-ddx-ddv-data-binding-with-windows-forms.md)。
 
 ### <a name="requirements"></a>要求
 
 **标头：** afxwinforms.h
-
-### <a name="see-also"></a>请参阅
-
-[CWinFormsControl::CreateManagedControl](cwinformscontrol-class.md#createmanagedcontrol)<br/>
-[CDialog::OnInitDialog](cdialog-class.md#oninitdialog)
 
 ##  <a name="ddx_ipaddress"></a>  DDX_IPAddress
 
@@ -308,7 +303,7 @@ void AFXAPI DDX_IPAddress(
 *nIDC*<br/>
 与控件属性关联的 IP 地址控件的资源 ID。
 
-*value*<br/>
+*值*<br/>
 对包含四个字段的值的 IP 地址控件的 dword 值的引用。 字段填充或读取，如下所示。
 
 |字段|包含字段值的位|
@@ -381,7 +376,7 @@ void AFXAPI DDX_LBString(
 *nIDC*<br/>
 与控件属性关联的列表框控件的资源 ID。
 
-*value*<br/>
+*值*<br/>
 对对话框、 窗体视图或控件视图对象与其交换数据的成员变量的引用。
 
 ### <a name="remarks"></a>备注
@@ -418,7 +413,7 @@ void AFXAPI DDX_LBStringExact(
 *nIDC*<br/>
 与控件属性关联的列表框控件的资源 ID。
 
-*value*<br/>
+*值*<br/>
 对对话框、 窗体视图或控件视图对象与其交换数据的成员变量的引用。
 
 ### <a name="remarks"></a>备注
@@ -460,7 +455,7 @@ void AFXAPI DDX_MonthCalCtrl(
 *nIDC*<br/>
 月历控件的资源 ID 与成员变量相关联。
 
-*value*<br/>
+*值*<br/>
 对引用`CTime`或`COleDateTime`对话框、 窗体视图或控件视图对象与其交换数据的成员变量。
 
 ### <a name="remarks"></a>备注
@@ -495,7 +490,7 @@ void AFXAPI DDX_Radio(
 *nIDC*<br/>
 资源组中的第一个单选控件的 ID。
 
-*value*<br/>
+*值*<br/>
 对对话框、 窗体视图或控件视图对象与其交换数据的成员变量的引用。
 
 ### <a name="remarks"></a>备注
@@ -529,7 +524,7 @@ void AFXAPI DDX_Scroll(
 *nIDC*<br/>
 与控件属性关联的滚动条控件的资源 ID。
 
-*value*<br/>
+*值*<br/>
 对与其交换数据的对话框、窗体视图或控件视图对象的成员变量的引用。
 
 ### <a name="remarks"></a>备注
@@ -561,7 +556,7 @@ void AFXAPI DDX_Slider(
 *nIDC*<br/>
 滑块控件的资源 ID。
 
-*value*<br/>
+*值*<br/>
 对值进行交换的引用。 此参数保留或设置滑块控件的当前位置。
 
 ### <a name="remarks"></a>备注
@@ -643,7 +638,7 @@ void AFXAPI DDX_Text(
 *nIDC*<br/>
 在对话框、 窗体视图或控件视图对象中的编辑控件的 ID。
 
-*value*<br/>
+*值*<br/>
 对对话框、 窗体视图或控件视图对象中的数据成员的引用。 数据类型*值*取决于其的重载版本`DDX_Text`你使用。
 
 ### <a name="remarks"></a>备注
@@ -656,5 +651,7 @@ void AFXAPI DDX_Text(
 
 ## <a name="see-also"></a>请参阅
 
-[标准对话框数据验证例程](../../mfc/reference/standard-dialog-data-validation-routines.md)<br/>
-[宏和全局函数](../../mfc/reference/mfc-macros-and-globals.md)
+[标准对话框数据验证例程](standard-dialog-data-validation-routines.md)<br/>
+[宏和全局函数](mfc-macros-and-globals.md)<br/>
+[CWinFormsControl::CreateManagedControl](cwinformscontrol-class.md#createmanagedcontrol)<br/>
+[CDialog::OnInitDialog](cdialog-class.md#oninitdialog)

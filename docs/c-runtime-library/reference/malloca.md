@@ -23,12 +23,12 @@ helpviewer_keywords:
 - malloca function
 - _malloca function
 ms.assetid: 293992df-cfca-4bc9-b313-0a733a6bb936
-ms.openlocfilehash: 8c8ce8bdf8ab40cae45ecec9c4b182bdf3d6bc82
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 22a63002c900d69e8a7706a54acedf0b4b4f6376
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50563977"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850405"
 ---
 # <a name="malloca"></a>_malloca
 
@@ -51,13 +51,13 @@ void *_malloca(
 
 **_Malloca**例程返回**void**指向保证适当对齐任何类型的对象的存储的已分配空间。 如果*大小*为 0， **_malloca**分配零长度的项并向该项返回有效的指针。
 
-如果无法分配空间，将生成堆栈溢出异常。 堆栈溢出异常不是 C++ 异常，它是结构化异常。 必须使用[结构化异常处理](../../cpp/structured-exception-handling-c-cpp.md) (SEH)，而使用 C++ 异常处理。
+如果*大小*大于 **_ALLOCA_S_THRESHOLD**，然后 **_malloca**尝试在堆上分配和返回一个空指针，如果不能分配的空间。 如果*大小*小于或等于 **_ALLOCA_S_THRESHOLD**，然后 **_malloca**如果空间不能则会生成尝试堆栈和堆栈溢出异常上要分配给分配。 堆栈溢出异常不是 c + + 异常;这是结构化的异常。 而不是使用 c + + 异常处理，则必须使用[结构化异常处理](../../cpp/structured-exception-handling-c-cpp.md)(SEH) 来捕获该异常。
 
 ## <a name="remarks"></a>备注
 
 **_malloca**分配*大小*从程序堆栈或堆如果请求超过某个大小以字节为单位指定的字节 **_ALLOCA_S_THRESHOLD**。 之间的差异 **_malloca**并 **_alloca**在于 **_alloca**始终在堆栈上，而不考虑大小分配。 与不同 **_alloca**，这并不要求或允许调用**免费**可释放的内存分配， **_malloca**需要使用[_freea](freea.md)来释放内存。 在调试模式下 **_malloca**始终从堆中分配内存。
 
-存在一些限制显式调用 **_malloca**异常处理程序 (EH) 中。 在 x86 类处理器上运行的 EH 例程在自己的内存框架中工作：它们在未基于封闭函数堆栈指针当前位置的内存空间中执行其任务。 最常见的实现包括 Windows NT 结构化异常处理 (SEH) 和 C++ catch 子句表达式。 因此，显式调用 **_malloca**中任何以下方案结果在返回至调用 EH 例程时程序失败：
+存在一些限制显式调用 **_malloca**异常处理程序 (EH) 中。 在 x86 类处理器运行的 EH 例程在自己的内存框架操作：他们未基于封闭函数的堆栈指针的当前位置的内存空间中执行其任务。 最常见的实现包括 Windows NT 结构化异常处理 (SEH) 和 C++ catch 子句表达式。 因此，显式调用 **_malloca**中任何以下方案结果在返回至调用 EH 例程时程序失败：
 
 - Windows NT SEH 异常筛选器表达式： **__except** (`_malloca ()` )
 

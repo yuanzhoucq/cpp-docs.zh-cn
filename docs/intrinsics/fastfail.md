@@ -2,12 +2,12 @@
 title: __fastfail
 ms.date: 11/04/2016
 ms.assetid: 9cd32639-e395-4c75-9f3a-ac3ba7f49921
-ms.openlocfilehash: b05c86148014a4a34d852d1a00caeb71ee136548
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e96d981be5c5186d6cc472cc8f4dffcbf1c2b7bf
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50521380"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55849471"
 ---
 # <a name="fastfail"></a>__fastfail
 
@@ -41,6 +41,7 @@ void __fastfail(unsigned int code);
 |x86|int 0x29|ecx|
 |X64|int 0x29|rcx|
 |ARM|操作码 0xDEFB|r0|
+|ARM64|操作码 0xF003|x0|
 
 快速失败请求是独立的请求，通常只需执行两个指令。 一旦执行快速失败请求后，内核就会采取相应的行动。 在用户模式代码中，引发速快速失败事件时，除指令指针本身外不存在任何内存依赖项。 即使存在严重的内存破坏，也可最大限度地提高其可靠性。
 
@@ -56,7 +57,7 @@ Windows 8 开始支持本机快速失败机制。 不支持本机快速失败指
 
 |内部函数|体系结构|
 |---------------|------------------|
-|`__fastfail`|x86、 x64、 ARM|
+|`__fastfail`|x86、 x64、 ARM，ARM64|
 
 **标头文件** \<intrin.h >
 

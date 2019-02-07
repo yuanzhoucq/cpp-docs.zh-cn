@@ -2,12 +2,12 @@
 title: ATL HTTP 效用函数
 ms.date: 11/04/2016
 ms.assetid: 4db57ef2-31fa-4696-bbeb-79a9035033ed
-ms.openlocfilehash: 43813d91daf572ad6094a5a9fe070234e5086593
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: be38dc8b8547574ea47021f8b14f21060a0755f0
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481703"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55849643"
 ---
 # <a name="atl-http-utility-functions"></a>ATL HTTP 效用函数
 
@@ -75,10 +75,6 @@ ATL_URL 标志控制此函数的行为。
 ### <a name="remarks"></a>备注
 
 行为类似于最新版[InternetCanonicalizeUrl](/windows/desktop/api/wininet/nf-wininet-internetcanonicalizeurla) ，但不需要 WinInet 或 Internet Explorer 安装。
-
-### <a name="see-also"></a>请参阅
-
-[InternetCanonicalizeUrl](/windows/desktop/api/wininet/nf-wininet-internetcanonicalizeurla)
 
 ## <a name="atlcombineurl"></a> AtlCombineUrl
 
@@ -186,7 +182,7 @@ inline BOOL AtlIsUnsafeUrlChar(char chIn) throw();
 
 ### <a name="parameters"></a>参数
 
-*下巴*<br/>
+*chIn*<br/>
 要进行测试以确保安全的字符。
 
 ### <a name="return-value"></a>返回值
@@ -250,7 +246,7 @@ bool inline RGBToHtml(
 
 ### <a name="parameters"></a>参数
 
-*颜色*<br/>
+*color*<br/>
 RGB 颜色值。
 
 *pbOut*<br/>
@@ -287,5 +283,6 @@ inline void SystemTimeToHttpDate(
 
 ## <a name="see-also"></a>请参阅
 
-[概念](../../atl/active-template-library-atl-concepts.md)<br/>
-[ATL COM 桌面组件](../../atl/atl-com-desktop-components.md)
+[概念](../active-template-library-atl-concepts.md)<br/>
+[ATL COM 桌面组件](../atl-com-desktop-components.md)<br/>
+[InternetCanonicalizeUrl](/windows/desktop/api/wininet/nf-wininet-internetcanonicalizeurla)
