@@ -1,6 +1,6 @@
 ---
 title: 内部 CRT 全局和函数
-ms.date: 11/04/2016
+ms.date: 01/22/2019
 apiname:
 - __acrt_iob_func
 - __AdjustPointer
@@ -44,6 +44,7 @@ apiname:
 - __crtCreateEventExW
 - __crtCreateSemaphoreExW
 - __crtCreateSymbolicLinkW
+- _crt_debugger_hook
 - __crtEnumSystemLocalesEx
 - __crtFlsAlloc
 - __crtFlsFree
@@ -208,6 +209,7 @@ apiname:
 - _pwctype
 - __pwctype_func
 - __pxcptinfoptrs
+- _query_app_type
 - _realloc_base
 - _register_thread_local_exe_atexit_callback
 - __report_gsfailure
@@ -335,6 +337,7 @@ f1_keywords:
 - __crtCreateEventExW
 - __crtCreateSemaphoreExW
 - __crtCreateSymbolicLinkW
+- _crt_debugger_hook
 - __crtEnumSystemLocalesEx
 - __crtFlsAlloc
 - __crtFlsFree
@@ -499,6 +502,7 @@ f1_keywords:
 - _pwctype
 - __pwctype_func
 - __pxcptinfoptrs
+- _query_app_type
 - _realloc_base
 - _register_thread_local_exe_atexit_callback
 - __report_gsfailure
@@ -609,6 +613,7 @@ helpviewer_keywords:
 - __crtCreateEventExW
 - __crtCreateSemaphoreExW
 - __crtCreateSymbolicLinkW
+- _crt_debugger_hook
 - __crtEnumSystemLocalesEx
 - __crtFlsAlloc
 - __crtFlsFree
@@ -773,6 +778,7 @@ helpviewer_keywords:
 - _pwctype
 - __pwctype_func
 - __pxcptinfoptrs
+- _query_app_type
 - _realloc_base
 - _register_thread_local_exe_atexit_callback
 - __report_gsfailure
@@ -841,12 +847,12 @@ helpviewer_keywords:
 - _Xbad_alloc
 - _Xlength_error
 ms.assetid: 99a27f11-fa5a-449e-bfbb-aab578d1cc4f
-ms.openlocfilehash: 64288cec680c1c10b6ee3f8b0f046fb22d25ab7c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 70b6036befb1f5da012375475a00d4f771c0e5cb
+ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50485603"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55703163"
 ---
 # <a name="internal-crt-globals-and-functions"></a>内部 CRT 全局和函数
 
@@ -856,7 +862,7 @@ C 运行时 (CRT) 库包含仅用于支持公用库接口的函数和全局变�
 
 这些全局变量和宏定义用于实现 CRT。
 
-|name|
+|名称​​|
 |----------|
 |__badioinfo|
 |[_acmdln](../c-runtime-library/acmdln-tcmdln-wcmdln.md)|
@@ -875,7 +881,7 @@ C 运行时 (CRT) 库包含仅用于支持公用库接口的函数和全局变�
 
 这些函数和函数宏用于实现 CRT 和 C++ 标准库。
 
-|name|
+|名称​​|
 |----------|
 |__acrt_iob_func|
 |__AdjustPointer|
@@ -926,6 +932,7 @@ C 运行时 (CRT) 库包含仅用于支持公用库接口的函数和全局变�
 |__crtCreateEventExW|
 |__crtCreateSemaphoreExW|
 |__crtCreateSymbolicLinkW|
+|_crt_debugger_hook|
 |__crtEnumSystemLocalesEx|
 |__crtFlsAlloc|
 |__crtFlsFree|
@@ -1104,6 +1111,7 @@ C 运行时 (CRT) 库包含仅用于支持公用库接口的函数和全局变�
 |_pwctype|
 |__pwctype_func|
 |__pxcptinfoptrs|
+|_query_app_type|
 |_realloc_base|
 |[_register_onexit_function](../c-runtime-library/execute-onexit-table-initialize-onexit-table-register-onexit-function.md)|
 |_register_thread_local_exe_atexit_callback|
