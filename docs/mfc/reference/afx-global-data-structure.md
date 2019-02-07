@@ -55,12 +55,12 @@ helpviewer_keywords:
 - AFX_GLOBAL_DATA structure [MFC]
 - AFX_GLOBAL_DATA constructor
 ms.assetid: c7abf2fb-ad5e-4336-a01d-260c29ed53a2
-ms.openlocfilehash: 9b6a462cf359bbd31958509c4fe7d0d71e490d11
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 0fd8143564beecccd8943f3ceba531e8697151d1
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694304"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850319"
 ---
 # <a name="afxglobaldata-structure"></a>AFX_GLOBAL_DATA 结构
 
@@ -121,7 +121,7 @@ struct AFX_GLOBAL_DATA
 |----------|-----------------|
 |[AFX_GLOBAL_DATA::EnableAccessibilitySupport](#enableaccessibilitysupport)|启用或禁用 Microsoft Active Accessibility 支持。 Active Accessibility 提供了可靠的方式来公开与用户界面元素有关的信息。|
 |[AFX_GLOBAL_DATA::IsAccessibilitySupport](#isaccessibilitysupport)|指示是否启用了 Microsoft Active Accessibility 支持。|
-|[Afx_global_data:: iswindowslayersupportavailable](#iswindowslayersupportavailable)|指示操作系统是否支持分层的窗口。|
+|[AFX_GLOBAL_DATA::IsWindowsLayerSupportAvailable](#iswindowslayersupportavailable)|指示操作系统是否支持分层的窗口。|
 
 ### <a name="data-members"></a>数据成员
 
@@ -153,11 +153,6 @@ struct AFX_GLOBAL_DATA
 ### <a name="requirements"></a>要求
 
 **标头：** afxglobals.h
-
-### <a name="see-also"></a>请参阅
-
-[层次结构图](../../mfc/hierarchy-chart.md)<br/>
-[结构、样式、回调和消息映射](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)
 
 ## <a name="bisosalphablendingsupport"></a> AFX_GLOBAL_DATA::bIsOSAlphaBlendingSupport
 
@@ -192,13 +187,13 @@ HRESULT D2D1MakeRotateMatrix(
 
 ### <a name="parameters"></a>参数
 
-*角度*<br/>
+*angle*<br/>
 顺时针旋转角度，以度为单位。
 
-*中心*<br/>
+*center*<br/>
 要围绕其旋转点。
 
-*矩阵*<br/>
+*matrix*<br/>
 此方法返回时，包含新的旋转转换。 为此参数，必须分配存储空间。
 
 ### <a name="return-value"></a>返回值
@@ -289,16 +284,6 @@ BOOL DrawTextOnGlass(
 
 主题定义应用程序的视觉样式。 主题不用于绘制文本，如果*hTheme*参数为 NULL，或者如果[DrawThemeTextEx](/windows/desktop/api/uxtheme/nf-uxtheme-drawthemetextex)不支持方法，或者，如果[桌面窗口管理器](/windows/desktop/dwm/dwm-overview)(DWM) 组合已禁用。
 
-### <a name="see-also"></a>请参阅
-
-[层次结构图](../../mfc/hierarchy-chart.md)<br/>
-[COLORREF](/windows/desktop/gdi/colorref)<br/>
-[部件和状态](/windows/desktop/controls/parts-and-states)<br/>
-[CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext)<br/>
-[DrawThemeTextEx](/windows/desktop/api/uxtheme/nf-uxtheme-drawthemetextex)<br/>
-[桌面窗口管理器](/windows/desktop/dwm/dwm-overview)<br/>
-[启用和控制 DWM 组合](/windows/desktop/dwm/composition-ovw)
-
 ## <a name="enableaccessibilitysupport"></a> AFX_GLOBAL_DATA::EnableAccessibilitySupport
 
 启用或禁用 Microsoft Active Accessibility 支持。
@@ -317,11 +302,6 @@ void EnableAccessibilitySupport(BOOL bEnable=TRUE);
 Active Accessibility 是基于 COM 的技术，其使用辅助技术产品改进了程序和 Windows 操作系统一起工作的方式。 它提供了可靠的方式来公开与用户界面元素有关的信息。 但是，称为 Microsoft UI 自动化的更新辅助功能现已可用。 这两种技术的比较，请参阅[UI 自动化和 Microsoft Active Accessibility](/dotnet/framework/ui-automation/ui-automation-and-microsoft-active-accessibility)。
 
 使用[AFX_GLOBAL_DATA::IsAccessibilitySupport](#isaccessibilitysupport)方法，以确定是否启用 Microsoft Active Accessibility 支持。
-
-### <a name="see-also"></a>请参阅
-
-[UI 自动化和 Microsoft Active Accessibility](/dotnet/framework/ui-automation/ui-automation-and-microsoft-active-accessibility)<br/>
-[AFX_GLOBAL_DATA::IsAccessibilitySupport](#isaccessibilitysupport)
 
 ## <a name="excludetag"></a> AFX_GLOBAL_DATA::ExcludeTag
 
@@ -361,13 +341,13 @@ XML 标记对包含名为打开和关闭来表示的开始和结束指定的缓�
 
 |符号|转义符|
 |------------|----------------------|
-|_T ("\\\t")|_T("\t")|
-|_T ("\\\n")|_T("\n")|
-|_T ("\\\r")|_T("\r")|
-|_T ("\\\b")|_T("\b")|
-|_T("LT")|_T ("\<")|
-|_T("GT")|_T("&GT;")|
-|_T("AMP")|_T("&AMP;")|
+|_T("\\\t")|_T("\t")|
+|_T("\\\n")|_T("\n")|
+|_T("\\\r")|_T("\r")|
+|_T("\\\b")|_T("\b")|
+|_T("LT")|_T("\<")|
+|_T("GT")|_T(">")|
+|_T("AMP")|_T("&")|
 
 ## <a name="getcolor"></a> AFX_GLOBAL_DATA::GetColor
 
@@ -389,12 +369,6 @@ COLORREF GetColor(int nColor);
 ### <a name="remarks"></a>备注
 
 如果*nColor*参数的值超出范围，返回值为零。 由于零也是有效的 RGB 值，因此您不能使用此方法来确定当前操作系统是否支持系统颜色。 请改用[GetSysColorBrush](/windows/desktop/api/winuser/nf-winuser-getsyscolorbrush)方法，如果颜色不受支持，则返回 NULL。
-
-### <a name="see-also"></a>请参阅
-
-[GetSysColor 函数](/windows/desktop/api/winuser/nf-winuser-getsyscolor)<br/>
-[COLORREF](/windows/desktop/gdi/colorref)<br/>
-[GetSysColorBrush](/windows/desktop/api/winuser/nf-winuser-getsyscolorbrush)
 
 ## <a name="getdirect2dfactory"></a> AFX_GLOBAL_DATA::GetDirect2dFactory
 
@@ -436,10 +410,6 @@ info<br/>
 ### <a name="return-value"></a>返回值
 
 如果此方法成功，则为 TRUE否则为 FALSE。
-
-### <a name="see-also"></a>请参阅
-
-[NONCLIENTMETRICS 结构](/windows/desktop/api/winuser/ns-winuser-tagnonclientmetricsa)
 
 ## <a name="gettextheight"></a> AFX_GLOBAL_DATA::GetTextHeight
 
@@ -538,10 +508,6 @@ Microsoft Active Accessibility 是使应用程序可访问的早期解决方案�
 
 使用[AFX_GLOBAL_DATA::EnableAccessibilitySupport](#enableaccessibilitysupport)方法启用或禁用 Active Accessibility 支持。
 
-### <a name="see-also"></a>请参阅
-
-[UI 自动化和 Microsoft Active Accessibility](/dotnet/framework/ui-automation/ui-automation-and-microsoft-active-accessibility)
-
 ## <a name="isd2dinitialized"></a> AFX_GLOBAL_DATA::IsD2DInitialized
 
 确定是否已初始化 D2D
@@ -565,11 +531,6 @@ BOOL IsDwmCompositionEnabled();
 ### <a name="return-value"></a>返回值
 
 则为 TRUE[桌面窗口管理器](/windows/desktop/dwm/dwm-overview)(DWM) 组合，则启用; 否则为 FALSE。
-
-### <a name="see-also"></a>请参阅
-
-[桌面窗口管理器](/windows/desktop/dwm/dwm-overview)<br/>
-[启用和控制 DWM 组合](/windows/desktop/dwm/composition-ovw)
 
 ## <a name="ishighcontrastmode"></a> AFX_GLOBAL_DATA::IsHighContrastMode
 
@@ -743,11 +704,6 @@ CString RegisterWindowClass(LPCTSTR lpszClassNamePrefix);
 
 返回值是冒号分隔的列表*lpszClassNamePrefix*参数字符串和十六进制文本表示形式的句柄的当前的应用程序实例; 应用程序光标，它是箭头其标识符为 IDC_ARROW 的游标和背景画笔。 有关注册 MFC 窗口类的详细信息，请参阅[AfxRegisterClass](../../mfc/reference/application-information-and-management.md#afxregisterclass)。
 
-### <a name="see-also"></a>请参阅
-
-[AfxRegisterClass](../../mfc/reference/application-information-and-management.md#afxregisterclass)<br/>
-[AfxThrowResourceException](../../mfc/reference/exception-processing.md#afxthrowresourceexception)
-
 ## <a name="resume"></a> AFX_GLOBAL_DATA::Resume
 
 重新初始化访问支持 Windows 主题和视觉样式的方法的内部函数指针。
@@ -793,11 +749,6 @@ BOOL SetLayeredAttrib(
 ### <a name="return-value"></a>返回值
 
 如果此方法成功，则为 TRUE否则为 FALSE。
-
-### <a name="see-also"></a>请参阅
-
-[COLORREF](/windows/desktop/gdi/colorref)<br/>
-[SetLayeredWindowAttributes](/windows/desktop/api/winuser/nf-winuser-setlayeredwindowattributes)
 
 ## <a name="setmenufont"></a> AFX_GLOBAL_DATA::SetMenuFont
 
@@ -903,7 +854,7 @@ int GetShellAutohideBars();
 
 ### <a name="return-value"></a>返回值
 
-一个整数值与编码的标志，用于指定位置的自动隐藏栏。 它可以结合以下值： AFX_AUTOHIDE_BOTTOM、 AFX_AUTOHIDE_TOP、 AFX_AUTOHIDE_LEFT、 AFX_AUTOHIDE_RIGHT。
+一个整数值与编码的标志，用于指定位置的自动隐藏栏。 它可以结合以下值：AFX_AUTOHIDE_BOTTOM，AFX_AUTOHIDE_TOP，AFX_AUTOHIDE_LEFT，AFX_AUTOHIDE_RIGHT。
 
 ## <a name="releasetaskbarrefs"></a> AFX_GLOBAL_DATA::ReleaseTaskBarRefs
 
@@ -943,3 +894,20 @@ HRESULT ShellCreateItemFromParsingName(
 
 如果成功，则为 S_OK 返回否则为错误值。
 
+## <a name="see-also"></a>请参阅
+
+[层次结构图](../hierarchy-chart.md)<br/>
+[结构、样式、回调和消息映射](structures-styles-callbacks-and-message-maps.md)<br/>
+[COLORREF](/windows/desktop/gdi/colorref)<br/>
+[部件和状态](/windows/desktop/controls/parts-and-states)<br/>
+[CDC::DrawText](cdc-class.md#drawtext)<br/>
+[DrawThemeTextEx](/windows/desktop/api/uxtheme/nf-uxtheme-drawthemetextex)<br/>
+[桌面窗口管理器](/windows/desktop/dwm/dwm-overview)<br/>
+[启用和控制 DWM 组合](/windows/desktop/dwm/composition-ovw)<br/>
+[UI 自动化和 Microsoft Active Accessibility](/dotnet/framework/ui-automation/ui-automation-and-microsoft-active-accessibility)<br/>
+[GetSysColor 函数](/windows/desktop/api/winuser/nf-winuser-getsyscolor)<br/>
+[GetSysColorBrush](/windows/desktop/api/winuser/nf-winuser-getsyscolorbrush)<br/>
+[NONCLIENTMETRICS 结构](/windows/desktop/api/winuser/ns-winuser-tagnonclientmetricsa)<br/>
+[AfxRegisterClass](application-information-and-management.md#afxregisterclass)<br/>
+[AfxThrowResourceException](exception-processing.md#afxthrowresourceexception)<br/>
+[SetLayeredWindowAttributes](/windows/desktop/api/winuser/nf-winuser-setlayeredwindowattributes)

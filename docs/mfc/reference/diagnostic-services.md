@@ -20,12 +20,12 @@ helpviewer_keywords:
 - diagnostics [MFC], diagnostic services
 - diagnostic functions and variables [MFC]
 ms.assetid: 8d78454f-9fae-49c2-88c9-d3fabd5393e8
-ms.openlocfilehash: dbb243453b6d869082a4232b12b27f5510d84aa5
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: a4979ab7bbc0e396de5629fba1b86f3bfb602dcf
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657625"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850435"
 ---
 # <a name="diagnostic-services"></a>诊断服务
 
@@ -91,7 +91,7 @@ Microsoft 基础类库提供了很多简化调试程序的诊断服务。 这些
 
 |||
 |-|-|
-|[_AFX_SECURE_NO_WARNINGS，则](#afx_secure_no_warnings)|取消显示有关对已弃用的 MFC 函数的使用的编译器警告。|
+|[_AFX_SECURE_NO_WARNINGS](#afx_secure_no_warnings)|取消显示有关对已弃用的 MFC 函数的使用的编译器警告。|
 
 ## <a name="afx_secure_no_warnings"></a> _AFX_SECURE_NO_WARNINGS，则
 
@@ -147,7 +147,7 @@ ASSERT(booleanExpression)
 
 ### <a name="parameters"></a>参数
 
-*布尔表达式*<br/>
+*booleanExpression*<br/>
 指定一个表达式 （包括指针值） 的计算结果为非零值则为 0。
 
 ### <a name="remarks"></a>备注
@@ -302,7 +302,7 @@ ENSURE_VALID( booleanExpression  )
 
 ### <a name="parameters"></a>参数
 
-*布尔表达式*<br/>
+*booleanExpression*<br/>
 指定要测试的布尔表达式。
 
 ### <a name="remarks"></a>备注
@@ -319,12 +319,6 @@ ENSURE_VALID 调用 ASSERT_VALID 宏 （这仅在调试版本中具有某种效�
 ### <a name="requirements"></a>要求
 
 **标头：** afx.h
-
-### <a name="see-also"></a>请参阅
-
-[宏和全局函数](mfc-macros-and-globals.md)<br/>
-[VERIFY](#verify)<br/>
-[ATLENSURE](#altensure)
 
 ## <a name="this_file"></a> THIS_FILE
 
@@ -355,12 +349,6 @@ static char THIS_FILE[] = __FILE__;
 ### <a name="requirements"></a>要求
 
 **标头：** afx.h
-
-### <a name="see-also"></a>请参阅
-
-[宏和全局函数](mfc-macros-and-globals.md)<br/>
-[ASSERT](#assert)<br/>
-[VERIFY](#verify)
 
 ##  <a name="trace"></a>  TRACE
 
@@ -393,7 +381,7 @@ VERIFY(booleanExpression)
 
 ### <a name="parameters"></a>参数
 
-*布尔表达式*<br/>
+*booleanExpression*<br/>
 指定一个表达式 （包括指针值） 的计算结果为非零值则为 0。
 
 ### <a name="remarks"></a>备注
@@ -452,7 +440,7 @@ void AfxDump(const CObject* pOb);
 
 ### <a name="parameters"></a>参数
 
-*邮政信箱*<br/>
+*pOb*<br/>
 指向类的对象派生自`CObject`。
 
 ### <a name="remarks"></a>备注
@@ -464,10 +452,6 @@ void AfxDump(const CObject* pOb);
 ### <a name="requirements"></a>要求
 
 **标头：** afx.h
-
-### <a name="see-also"></a>请参阅
-
-[CObject::Dump](cobject-class.md#dump)
 
 ##  <a name="afxmemdf"></a>  afxMemDF
 
@@ -569,7 +553,7 @@ void AfxDump(const CObject* pOb);
 
 ### <a name="parameters"></a>参数
 
-*邮政信箱*<br/>
+*pOb*<br/>
 指向类的对象派生自`CObject`。
 
 ### <a name="remarks"></a>备注
@@ -581,10 +565,6 @@ void AfxDump(const CObject* pOb);
 ### <a name="requirements"></a>要求
 
 **标头：** afx.h
-
-### <a name="see-also"></a>请参阅
-
-[CObject::Dump](cobject-class.md#dump)
 
 ##  <a name="afxdumpstack"></a>  AfxDumpStack
 
@@ -856,7 +836,7 @@ AFX_ALLOC_HOOK AfxSetAllocHook(AFX_ALLOC_HOOK pfnAllocHook);
 
 Microsoft 基础类库调试内存分配器可以调用用户定义的挂钩函数，以允许用户监视内存分配并控制是否允许分配。 分配挂钩函数原型如下所示：
 
-**BOOL AFXAPI AllocHook (size_t** `nSize` **，BOOL** `bObject`**很长** `lRequestNumber` **);**
+**BOOL AFXAPI AllocHook( size_t** `nSize`**, BOOL** `bObject`**, LONG** `lRequestNumber` **);**
 
 *nSize*<br/>
 建议的内存分配的大小。
@@ -942,4 +922,5 @@ void AfxDoForAllObjects(
 
 ## <a name="see-also"></a>请参阅
 
-[宏和全局函数](../../mfc/reference/mfc-macros-and-globals.md)
+[宏和全局函数](mfc-macros-and-globals.md)<br/>
+[CObject::Dump](cobject-class.md#dump)

@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - Object class
 ms.assetid: 709e84a8-0bff-471b-bc14-63e424080b5a
-ms.openlocfilehash: 6d5f3e21e14c34ffbeb335bc1ec4feebd5148c7f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 00f2b57bdf63f9f8bcfd9e544bebab2805ff7f65
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50493608"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850086"
 ---
 # <a name="platformobject-class"></a>Platform::Object 类
 
@@ -41,9 +41,9 @@ public ref class Object : Object
 
 |名称|描述|
 |----------|-----------------|
-|[Object:: equals](#equals)|确定指定的对象是否等于当前对象。|
+|[Object::Equals](#equals)|确定指定的对象是否等于当前对象。|
 |[Object::GetHashCode](#gethashcode)|返回此实例的哈希代码。|
-|[Object:: referenceequals](#referenceequals)|确定指定对象实例是否为同一实例。|
+|[Object::ReferenceEquals](#referenceequals)|确定指定对象实例是否为同一实例。|
 |[ToString](#tostring)|返回表示当前对象的字符串。 可重写。|
 |[GetType](#gettype)|获取描述当前实例的 [Platform::Type](../cppcx/platform-type-class.md) 。|
 
@@ -57,7 +57,7 @@ public ref class Object : Object
 
 **标头：** vccorlib.h
 
-**命名空间：** Platform
+**命名空间：** 平台
 
 ## <a name="equals"></a> Object:: equals 方法
 
@@ -124,12 +124,6 @@ Object::GetType();
 rootFrame->Navigate(TypeName(MainPage::typeid), e->Arguments);
 ```
 
-## <a name="see-also"></a>请参阅
-
-[Platform::Type 类](../cppcx/platform-type-class.md)<br/>
-[平台命名空间](../cppcx/platform-namespace-c-cx.md)<br/>
-[类型系统](../cppcx/type-system-c-cx.md
-
 ## <a name="ctor"></a>  Object:: object 构造函数
 
 初始化该对象类的新实例。
@@ -191,4 +185,6 @@ public:
 
 ## <a name="see-also"></a>请参阅
 
-[平台 Namespace](platform-namespace-c-cx.md)
+[平台 Namespace](platform-namespace-c-cx.md)<br/>
+[Platform::Type 类](platform-type-class.md)<br/>
+[类型系统](type-system-c-cx.md)

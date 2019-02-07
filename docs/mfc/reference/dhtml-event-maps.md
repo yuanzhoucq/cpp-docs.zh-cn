@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DHTML events [MFC], event map
 - DHTML events [MFC]
 ms.assetid: 9a2c8ae7-7216-4a5e-bc60-6b98695be0c6
-ms.openlocfilehash: 75ceaf3d0532a557f5227e64edece2155aacb72f
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 306fb718e7c333e6ff603b7c6c88c10f03f567b5
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519863"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850332"
 ---
 # <a name="dhtml-event-maps"></a>DHTML 事件映射
 
@@ -93,7 +93,7 @@ BEGIN_DHTML_EVENT_MAP(className)
 
 ### <a name="parameters"></a>参数
 
-*类名*<br/>
+*className*<br/>
 包含 DHTML 事件映射的类的名称。 此类应直接或间接派生[CDHtmlDialog](../../mfc/reference/cdhtmldialog-class.md)和包含[DECLARE_DHTML_EVENT_MAP](#declare_dhtml_event_map)其类定义中的宏。
 
 ### <a name="remarks"></a>备注
@@ -118,7 +118,7 @@ BEGIN_DHTML_EVENT_MAP_INLINE(className)
 
 ### <a name="parameters"></a>参数
 
-*类名*<br/>
+*className*<br/>
 包含 DHTML 事件映射的类的名称。 此类应直接或间接派生[CDHtmlDialog](../../mfc/reference/cdhtmldialog-class.md)和包含[DECLARE_DHTML_EVENT_MAP](#declare_dhtml_event_map)其类定义中的宏。
 
 ### <a name="remarks"></a>备注
@@ -195,7 +195,7 @@ DHTML_EVENT_AXCONTROL(dispid, controlName,  memberFxn)
 *dispid*<br/>
 要处理的事件的调度 ID。
 
-*控件名称*<br/>
+*controlName*<br/>
 保存触发此事件的控件的 HTML ID LPCWSTR。
 
 *memberFxn*<br/>
@@ -979,10 +979,10 @@ BEGIN_EMBED_DHTML_EVENT_MAP(className, mapName)
 
 ### <a name="parameters"></a>参数
 
-*类名*<br/>
+*className*<br/>
 包含事件映射的类的名称。 此类应直接或间接派生[CMultiPageDHtmlDialog](../../mfc/reference/cmultipagedhtmldialog-class.md)。 嵌入的 DHTML 事件映射必须位于[DHTML 和 URL 事件映射](#begin_dhtml_url_event_map))。
 
-*映射名称*<br/>
+*mapName*<br/>
 指定其事件将此映射的页。 这与匹配*mapName*中[URL_EVENT_ENTRY](#url_event_entry)宏实际上定义 URL 或 HTML 资源。
 
 ### <a name="remarks"></a>备注
@@ -1011,7 +1011,7 @@ BEGIN_URL_ENTRIES(className)
 
 ### <a name="parameters"></a>参数
 
-*类名*<br/>
+*className*<br/>
 包含 URL 事件映射的类的名称。 此类应直接或间接派生[CMultiPageDHtmlDialog](../../mfc/reference/cmultipagedhtmldialog-class.md)。 URL 事件输入映射必须位于[DHTML 和 URL 事件映射](#begin_dhtml_url_event_map))。
 
 ### <a name="remarks"></a>备注
@@ -1054,7 +1054,7 @@ END_DHTML_URL_EVENT_MAP(className)
 
 ### <a name="parameters"></a>参数
 
-*类名*<br/>
+*className*<br/>
 包含事件映射的类的名称。 此类应直接或间接派生[CMultiPageDHtmlDialog](../../mfc/reference/cmultipagedhtmldialog-class.md)。 这应与匹配*className*中的相应[BEGIN_DHTML_URL_EVENT_MAP](#begin_dhtml_url_event_map)宏。
 
 ### <a name="example"></a>示例
@@ -1107,13 +1107,13 @@ URL_EVENT_ENTRY(className, url,  mapName)
 
 ### <a name="parameters"></a>参数
 
-*类名*<br/>
+*className*<br/>
 包含 URL 事件映射的类的名称。 此类应直接或间接派生[CMultiPageDHtmlDialog](../../mfc/reference/cmultipagedhtmldialog-class.md)。 URL 事件输入映射必须位于[DHTML 和 URL 事件映射](#begin_dhtml_url_event_map))。
 
-*Url*<br/>
+*url*<br/>
 页面 URL 或 HTML 资源。
 
-*映射名称*<br/>
+*mapName*<br/>
 指定其 URL 的页面*url*。 这与匹配*mapName*中[BEGIN_EMBED_DHTML_EVENT_MAP](#begin_embed_dhtml_event_map)宏映射此页中的事件。
 
 ### <a name="remarks"></a>备注
@@ -1148,6 +1148,6 @@ END_DHTML_EVENT_MAP_INLINE( )
 
 **标头：** afxdhtml.h
 
-### <a name="see-also"></a>请参阅
+## <a name="see-also"></a>请参阅
 
 [宏和全局函数](mfc-macros-and-globals.md)

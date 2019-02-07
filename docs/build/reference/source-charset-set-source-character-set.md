@@ -1,18 +1,18 @@
 ---
 title: /source-charset （设置源字符集）
-ms.date: 11/04/2016
+ms.date: 02/06/2019
 f1_keywords:
 - source-charset
 - /source-charset
 helpviewer_keywords:
 - /execution-charset compiler option
 ms.assetid: d3c5bf7f-526d-4ee4-acc5-c1a02a4fc481
-ms.openlocfilehash: 6927c6e54a89f619182916c561dcbe7d1c92a25b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2a204000be6e4e434b6ef4aabf6bbc0db1593fb0
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50663822"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55849712"
 ---
 # <a name="source-charset-set-source-character-set"></a>/source-charset （设置源字符集）
 
@@ -48,9 +48,9 @@ IANA 定义字符集名称。
 
 1. 展开**配置属性**， **C/c + +**，**命令行**文件夹。
 
-1. 在中**高级选项**，添加 **/source-charset**选项，并指定你的首选编码。
+1. 在中**其他选项**，添加 **/source-charset**选项，并指定你的首选编码。
 
-1. 选择**确定**以保存所做的更改。
+1. 选择“确定”以保存更改。
 
 ## <a name="see-also"></a>请参阅
 

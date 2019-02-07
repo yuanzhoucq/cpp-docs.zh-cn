@@ -1,5 +1,5 @@
 ---
-title: MFC：结合文档和视图使用数据库类
+title: MFC:结合文档和视图使用数据库类
 ms.date: 11/04/2016
 helpviewer_keywords:
 - documents [C++], database applications
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - ODBC recordsets [C++], documents and views
 - ODBC [C++], forms
 ms.assetid: 83979974-fc63-46ac-b162-e8403a572e2c
-ms.openlocfilehash: 5e4610af199f1fd19c1edd71a8fd67bd82ab9a8b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f8bb3be7cdc253f53b50898cfc3ee840e70b2d68
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624830"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55849738"
 ---
-# <a name="mfc-using-database-classes-with-documents-and-views"></a>MFC：结合文档和视图使用数据库类
+# <a name="mfc-using-database-classes-with-documents-and-views"></a>MFC:结合文档和视图使用数据库类
 
 使用或不使用文档/视图体系结构，可以使用 MFC 数据库类。 本主题重点介绍使用结合文档和视图的数据库。 说明：
 
@@ -31,7 +31,7 @@ ms.locfileid: "50624830"
 
 - [其他注意事项](#_core_other_factors)。
 
-有关其他信息，请参阅[MFC： 使用数据库类不结合文档和视图](../data/mfc-using-database-classes-without-documents-and-views.md)。
+有关其他信息，请参阅[MFC:使用不含文档和视图的类](../data/mfc-using-database-classes-without-documents-and-views.md)。
 
 ##  <a name="_core_writing_a_form.2d.based_application"></a> 编写基于窗体的应用程序
 
@@ -63,14 +63,14 @@ ms.locfileid: "50624830"
 
 ##  <a name="_core_other_factors"></a> 其他因素
 
-基于窗体的应用程序通常不具有任何使用框架的文档序列化机制，因此你可能想要删除、 禁用或替换**新建**并**打开**上的命令**文件**菜单。 请参阅文章[序列化： 序列化 vs。数据库输入/输出](../mfc/serialization-serialization-vs-database-input-output.md)。
+基于窗体的应用程序通常不具有任何使用框架的文档序列化机制，因此你可能想要删除、 禁用或替换**新建**并**打开**上的命令**文件**菜单。 请参阅文章[序列化：序列化与数据库输入/输出](../mfc/serialization-serialization-vs-database-input-output.md)。
 
 您可能还想要使用的框架可以支持的许多用户界面可能方式。 例如，可以使用多个`CRecordView`在拆分器窗口中，对象在不同打开多个记录集，多文档界面 (MDI) 子窗口，依次类推。
 
 你可能想要实现您的视图中的所有内容的打印，无论它是一个窗体实现与`CRecordView`还是其他内容。 类派生自`CFormView`，`CRecordView`不支持打印，但您可以重写`OnPrint`成员函数以允许进行打印。 有关详细信息，请参阅类[CFormView](../mfc/reference/cformview-class.md)。
 
-可能不想要在所有使用文档和视图。 在这种情况下，请参阅[MFC： 使用数据库类不结合文档和视图](../data/mfc-using-database-classes-without-documents-and-views.md)。
+可能不想要在所有使用文档和视图。 在这种情况下，请参阅[MFC:使用不含文档和视图的类](../data/mfc-using-database-classes-without-documents-and-views.md)。
 
 ## <a name="see-also"></a>请参阅
 
-[MFC 数据库类 (.../ data/mfc-database-classes-odbc-and-dao.md）
+[MFC 数据库类](../data/mfc-database-classes-odbc-and-dao.md)
