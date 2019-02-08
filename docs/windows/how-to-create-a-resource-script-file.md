@@ -3,6 +3,7 @@ title: 如何：创建一个资源脚本文件 （c + +）
 ms.date: 11/04/2016
 f1_keywords:
 - vc.editors.resource
+- vc.resvw.add.MFC
 helpviewer_keywords:
 - rc files [C++], creating
 - .rc files [C++], creating
@@ -14,20 +15,24 @@ helpviewer_keywords:
 - resource script files [C++], opening in text format
 - .rc files [C++], opening in text format
 - rc files [C++], opening in text format
+- rc files [C++], adding MFC support
+- .rc files [C++], adding MFC support
+- MFC, adding support to resource scripts files
+- resource script files [C++], adding MFC support
 ms.assetid: 82be732a-cdcd-4a58-8de7-976d1418f86b
-ms.openlocfilehash: f3f0adff256742c98a672e40e6b31de9bd7a84ed
-ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
+ms.openlocfilehash: 9055e0f787c238276d3134c2fa6a8afae0102433
+ms.sourcegitcommit: 5a7dbd640376e13379f5d5b2cf66c4842e5e737b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55849953"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55905675"
 ---
 # <a name="how-to-create-a-resource-script-file-c"></a>如何：创建一个资源脚本文件 （c + +）
 
 > [!NOTE]
 > **资源编辑器**在 Express 版本中不可用。
 >
-> 本材料适用于 Windows 桌面应用程序。 .NET 语言的项目不使用资源脚本文件。 有关详细信息，请参阅[资源文件](../windows/resource-files-visual-studio.md)，有关详细信息。
+> 本材料适用于 Windows 桌面应用程序。 .NET 语言的项目不使用资源脚本文件。 有关详细信息，请参阅[资源文件](../windows/resource-files-visual-studio.md)。
 
 ## <a name="to-create-a-new-resource-script-rc-file"></a>创建新资源脚本 (.rc) 文件
 
@@ -119,6 +124,34 @@ ms.locfileid: "55849953"
 1. 在中**解决方案资源管理器**，右键单击.rc 文件。
 
 1. 从快捷菜单中，选择**打开方式...**，然后选择**源代码 （文本） 编辑器**。
+
+## <a name="to-add-mfc-support-to-resource-script-files"></a>若要向资源脚本文件添加 MFC 支持
+
+通常情况下，生成用于 Windows 使用的 MFC 应用程序[MFC 应用程序向导](../mfc/reference/mfc-application-wizard.md)，向导将生成一组基本的文件 （包括资源脚本 (.rc) 文件），其中包含 Microsoft 基础的核心功能类 (MFC)。 但是，如果编辑不基于 MFC 的 Windows 应用程序的.rc 文件时，特定于 MFC 框架的以下功能不可用：
+
+- MFC 代码向导
+
+- 菜单提示字符串
+
+- 组合框控件的列表内容
+
+- ActiveX 控件承载
+
+但是，您可以向没有它的现有.rc 文件添加 MFC 支持。
+
+> [!NOTE]
+> 这些步骤需要 MFC。
+
+### <a name="to-add-mfc-support-to-rc-files"></a>向 .rc 文件添加 MFC 支持
+
+1. 打开资源脚本文件。
+
+1. 在中[资源视图](../windows/resource-view-window.md)，突出显示资源文件夹 (例如，MFC.rc)。
+
+1. 在中[属性窗口](/visualstudio/ide/reference/properties-window)，请设置**MFC Mode**属性设置为**True**。
+
+   > [!NOTE]
+   > 除了设置此标志之后，.rc 文件还必须是 MFC 项目的一部分。 例如，只需设置**MFC Mode**到**True**在 Win32 中的.rc 文件上项目不会为你提供任何 MFC 功能。
 
 ## <a name="requirements"></a>要求
 
