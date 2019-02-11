@@ -2,12 +2,12 @@
 title: 4. 环境变量
 ms.date: 01/16/2019
 ms.assetid: 4ec7ed81-e9ca-46a1-84f8-8f9ce4587346
-ms.openlocfilehash: 558b835c36253fb67339fba9b46cb0170dd6d1d0
-ms.sourcegitcommit: 382e247c0f1b4cb7c2dab837b8b6fdff24bff47a
+ms.openlocfilehash: b41829fd9cf2f90312f669ef991f56dda02947f7
+ms.sourcegitcommit: 966e4466f10c93fc12faf33d28e03b39489423fc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087192"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "55987051"
 ---
 # <a name="4-environment-variables"></a>4.环境变量
 
@@ -31,7 +31,7 @@ ksh:
 DOS:  
 `set OMP_SCHEDULE="dynamic"`
 
-## <a name="41-ompschedule"></a>4.1 OMP_SCHEDULE
+## <a name="41-omp_schedule"></a>4.1 OMP_SCHEDULE
 
 `OMP_SCHEDULE` 仅适用于`for`并`parallel for`具有计划类型的指令`runtime`。 可以在运行时设置此类循环的计划类型和块区大小。 设置此环境变量，为任何已识别的计划类型和一个可选*使用 chunk_size*。
 
@@ -49,7 +49,7 @@ setenv OMP_SCHEDULE "dynamic"
 - [有关](2-directives.md#241-for-construct)指令
 - [有关并行](2-directives.md#251-parallel-for-construct)指令
 
-## <a name="42-ompnumthreads"></a>4.2 OMP_NUM_THREADS
+## <a name="42-omp_num_threads"></a>4.2 OMP_NUM_THREADS
 
 `OMP_NUM_THREADS`环境变量设置线程在执行期间使用的默认值数。 `OMP_NUM_THREADS` 如果通过调用显式更改该数字，则忽略`omp_set_num_threads`库例程。 如果没有显式还忽略`num_threads`上的子句`parallel`指令。
 
@@ -73,7 +73,7 @@ setenv OMP_NUM_THREADS 16
 - [omp_set_num_threads](3-run-time-library-functions.md#311-omp_set_num_threads-function)函数
 - [omp_set_dynamic](3-run-time-library-functions.md#317-omp_set_dynamic-function) function
 
-## <a name="43-ompdynamic"></a>4.3 OMP_DYNAMIC
+## <a name="43-omp_dynamic"></a>4.3 OMP_DYNAMIC
 
 `OMP_DYNAMIC`环境变量启用或禁用动态调整的可用于并行区域执行的线程数。 `OMP_DYNAMIC` 动态调整是显式启用或禁用通过调用时，将忽略`omp_set_dynamic`库例程。 其值必须是`TRUE`或`FALSE`。
 
@@ -90,7 +90,7 @@ setenv OMP_DYNAMIC TRUE
 - [并行区域](2-directives.md#23-parallel-construct)
 - [omp_set_dynamic](3-run-time-library-functions.md#317-omp_set_dynamic-function) function
 
-## <a name="44-ompnested"></a>4.4 OMP_NESTED
+## <a name="44-omp_nested"></a>4.4 OMP_NESTED
 
 `OMP_NESTED`环境变量启用或禁用嵌套并行度，除非启用或禁用通过调用嵌套并行度`omp_set_nested`库例程。 如果`OMP_NESTED`设置为`TRUE`，启用了嵌套并行机制。 如果`OMP_NESTED`设置为`FALSE`、 嵌套禁用并行度。 默认值为 `FALSE`。
 
