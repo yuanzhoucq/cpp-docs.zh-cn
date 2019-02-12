@@ -11,12 +11,12 @@ helpviewer_keywords:
 - __popcnt64
 - __popcnt
 ms.assetid: e525b236-adc8-42df-9b9b-8b7d8c245d3b
-ms.openlocfilehash: a0a5a51bfcb5265f7b415433c3f6b64423840ebe
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: a6424f3414d9da17e52c0a9f78290497f5e5e01e
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51522454"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56146887"
 ---
 # <a name="popcnt16-popcnt-popcnt64"></a>__popcnt16, __popcnt, __popcnt64
 
@@ -40,7 +40,7 @@ unsigned __int64 __popcnt64(
 
 #### <a name="parameters"></a>参数
 
-*value*<br/>
+*值*<br/>
 [in]16 位、 32 或 64 位无符号的整数，我们需要填充计数。
 
 ## <a name="return-value"></a>返回值
@@ -59,7 +59,7 @@ unsigned __int64 __popcnt64(
 
 ## <a name="remarks"></a>备注
 
-每个这些内部函数生成`popcnt`指令。  值的大小，`popcnt`指令返回为其自变量的大小相同。  在 32 位模式下有任何 64 位的通用寄存器，因此不是 64 位`popcnt`。
+每个这些内部函数生成`popcnt`指令。 在 32 位模式下有任何 64 位的通用寄存器，因此不是 64 位`popcnt`。
 
 若要确定的硬件支持`popcnt`指令，调用`__cpuid`与内部`InfoType=0x00000001`并检查位 23 的`CPUInfo[2] (ECX)`。 此位为否则如果支持该指令，则为 1 和 0。 如果你运行代码，使用此内部函数不支持的硬件上`popcnt`指令，则结果不可预知。
 

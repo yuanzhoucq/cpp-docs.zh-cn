@@ -1,6 +1,6 @@
 ---
 title: OLE DB 使用者模板的宏和全局函数
-ms.date: 11/04/2016
+ms.date: 02/11/2019
 f1_keywords:
 - vc.templates.ole
 - ATL.AtlTraceErrorRecords
@@ -100,12 +100,12 @@ helpviewer_keywords:
 - END_PARAM_MAP macro
 - SET_PARAM_TYPE macro
 ms.assetid: 8765eb7b-32dd-407c-bacf-8890ef959837
-ms.openlocfilehash: 4254c2637c4ed937a3196310ffa83c48504911af
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 1826f674e219b850e62fdae07b3a97e8b8cf2d48
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51557110"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56148993"
 ---
 # <a name="macros-and-global-functions-for-ole-db-consumer-templates"></a>OLE DB 使用者模板的宏和全局函数
 
@@ -198,11 +198,7 @@ inline void AtlTraceErrorRecords(HRESULT hrErr = S_OK);
 
 #### <a name="remarks"></a>备注
 
-如果*hErr*不是，则为 S_OK，`AtlTraceErrorRecords`转储到转储设备的 OLE DB 错误记录信息 (**调试**选项卡的输出窗口或文件)。 错误记录信息，可从提供程序获取，对于每个错误记录条目包括行号、 源、 说明、 帮助文件、 上下文和 GUID。 `AtlTraceErrorRecords` 转储仅在调试生成此信息。 在发布版本，它是空的存根进行了优化掉。
-
-#### <a name="see-also"></a>请参阅
-
-[CDBErrorInfo 类](../../data/oledb/cdberrorinfo-class.md)
+如果*hErr*不是，则为 S_OK，`AtlTraceErrorRecords`转储到转储设备的 OLE DB 错误记录信息 (**调试**选项卡的输出窗口或文件)。 错误记录信息，可从提供程序获取，对于每个错误记录条目包括行号、 源、 说明、 帮助文件、 上下文和 GUID。 `AtlTraceErrorRecords` 转储仅在调试生成此信息。 在发布版本，它是空的存根进行了优化掉。有关详细信息，请参阅[CDBErrorInfo 类](../../data/oledb/cdberrorinfo-class.md)。
 
 ### <a name="begin_accessor"></a> BEGIN_ACCESSOR
 
@@ -618,7 +614,7 @@ BOOKMARK_ENTRY(variable)
 
 #### <a name="parameters"></a>参数
 
-*变量*<br/>
+*variable*<br/>
 [in]要绑定到书签列的变量。
 
 #### <a name="example"></a>示例
@@ -669,10 +665,7 @@ END_COLUMN_MAP()
 };
 ```
 
-#### <a name="see-also"></a>请参阅
-
-[CBookmark 类](../../data/oledb/cbookmark-class.md)<br/>
-[DBPROP_BOOKMARKS](https://docs.microsoft.com/previous-versions/windows/desktop/ms709728(v=vs.85))
+有关详细信息，请参阅[使用书签](using-bookmarks.md)并[CBookmark 类](../../data/oledb/cbookmark-class.md)。
 
 ### <a name="column_entry"></a> COLUMN_ENTRY
 

@@ -1,6 +1,6 @@
 ---
 title: OLE DB 提供程序模板宏
-ms.date: 11/04/2016
+ms.date: 02/11/2019
 f1_keywords:
 - vc.templates.ole
 - BEGIN_PROPERTY_SET
@@ -51,12 +51,12 @@ helpviewer_keywords:
 - END_SCHEMA_MAP macro
 - SCHEMA_ENTRY macro
 ms.assetid: 909482c5-64ab-4e52-84a9-1c07091db183
-ms.openlocfilehash: 8fbad23d49490f42416dd7e7234776ff1c5ac7bf
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: a2a5bf14da1a39439db67a4fb062fd06763754fc
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51557046"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56151112"
 ---
 # <a name="macros-for-ole-db-provider-templates"></a>OLE DB 提供程序模板宏
 
@@ -298,7 +298,7 @@ PROPERTY_INFO_ENTRY_VALUE(dwPropID, value)
 *dwPropID*<br/>
 [in] 一个 [DBPROPID](https://docs.microsoft.com/previous-versions/windows/desktop/ms723882(v=vs.85)) 值，该值可与属性集 GUID 一起使用以标识属性。
 
-*value*<br/>
+*值*<br/>
 [in] `DWORD`类型的属性值。
 
 #### <a name="remarks"></a>备注
@@ -321,7 +321,7 @@ BEGIN_PROVIDER_COLUMN_MAP(theClass)
 
 #### <a name="parameters"></a>参数
 
-*类*<br/>
+*theClass*<br/>
 [in]此映射所属的类的名称。
 
 #### <a name="example"></a>示例
@@ -359,7 +359,7 @@ PROVIDER_COLUMN_ENTRY (name, ordinal, member)
 *name*<br/>
 [in]列名称。
 
-*序号*<br/>
+*ordinal*<br/>
 [in] 列号。 除非列为书签列，列数必须不为 0。
 
 *member*<br/>
@@ -380,7 +380,7 @@ PROVIDER_COLUMN_ENTRY_FIXED(name, ordinal, dbtype, member)
 *name*<br/>
 [in]列名称。
 
-*序号*<br/>
+*ordinal*<br/>
 [in] 列号。 除非列为书签列，列数必须不为 0。
 
 *dbtype*<br/>
@@ -412,7 +412,7 @@ PROVIDER_COLUMN_ENTRY_GN (name, ordinal, flags, colSize, dbtype, precision, scal
 *name*<br/>
 [in]列名称。
 
-*序号*<br/>
+*ordinal*<br/>
 [in] 列号。 除非列为书签列，列数必须不为 0。
 
 *flags*<br/>
@@ -427,7 +427,7 @@ PROVIDER_COLUMN_ENTRY_GN (name, ordinal, flags, colSize, dbtype, precision, scal
 *precision*<br/>
 [in]指示如果获取数据时要使用的精度*dbType* DBTYPE_NUMERIC 或 DBTYPE_DECIMAL。 请参阅`bPrecision`中的说明[DBBINDING 结构](https://docs.microsoft.com/previous-versions/windows/desktop/ms716845(v=vs.85))。
 
-*缩放*<br/>
+*scale*<br/>
 [in]指示要使用 dbType 是否 DBTYPE_NUMERIC 或 DBTYPE_DECIMAL 获取数据时的比例。 请参阅`bScale`中的说明[DBBINDING 结构](https://docs.microsoft.com/previous-versions/windows/desktop/ms716845(v=vs.85))。
 
 *guid*<br/>
@@ -452,7 +452,7 @@ PROVIDER_COLUMN_ENTRY_LENGTH(name, ordinal, size, member)
 *name*<br/>
 [in]列名称。
 
-*序号*<br/>
+*ordinal*<br/>
 [in] 列号。 除非列为书签列，列数必须不为 0。
 
 *size*<br/>
@@ -484,7 +484,7 @@ PROVIDER_COLUMN_ENTRY_STR(name, ordinal, member)
 *name*<br/>
 [in]列名称。
 
-*序号*<br/>
+*ordinal*<br/>
 [in] 列号。 除非列为书签列，列数必须不为 0。
 
 *member*<br/>
@@ -513,7 +513,7 @@ PROVIDER_COLUMN_ENTRY_TYPE_LENGTH(name, ordinal, dbtype, size, member)
 *name*<br/>
 [in]列名称。
 
-*序号*<br/>
+*ordinal*<br/>
 [in] 列号。 除非列为书签列，列数必须不为 0。
 
 *dbtype*<br/>
@@ -544,7 +544,7 @@ PROVIDER_COLUMN_ENTRY_WSTR(name, ordinal, member)
 *name*<br/>
 [in]列名称。
 
-*序号*<br/>
+*ordinal*<br/>
 [in] 列号。 除非列为书签列，列数必须不为 0。
 
 *member*<br/>
@@ -583,9 +583,9 @@ BEGIN_SCHEMA_MAP(SchemaClass);
 END_SCHEMA_MAP()
 ```
 
-#### <a name="see-also"></a>请参阅
+#### <a name="remarks"></a>备注
 
-[IDBSchemaRowsetImpl 类](../../data/oledb/idbschemarowsetimpl-class.md)
+有关详细信息，请参阅[IDBSchemaRowsetImpl 类](../../data/oledb/idbschemarowsetimpl-class.md)。
 
 ### <a name="schema_entry"></a> SCHEMA_ENTRY
 
