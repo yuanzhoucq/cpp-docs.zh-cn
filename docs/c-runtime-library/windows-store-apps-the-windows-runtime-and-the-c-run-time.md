@@ -1,13 +1,13 @@
 ---
 title: UWP 应用、Windows 运行时和 C 运行时
-ms.date: 11/04/2016
+ms.date: 02/02/2019
 ms.assetid: 356d6d8d-76ee-4181-9ad0-6f24b2fede38
-ms.openlocfilehash: ea6e3e5017fcbef997a1e844e9f84e9c385bd31d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ae57390dc916116b8d799b9f937ff882abaef970
+ms.sourcegitcommit: 63c072f5e941989636f5a2b13800b68bb7129931
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441127"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55763880"
 ---
 # <a name="uwp-apps-the-windows-runtime-and-the-c-run-time"></a>UWP 应用、Windows 运行时和 C 运行时
 
@@ -24,10 +24,6 @@ Windows 运行时不支持以下 CRT 功能：
 - 大多数多字节字符和字符串函数。
 
    但是，支持 Unicode 和 ANSI 文本。
-
-- 控制台应用和命令行参数。
-
-   但是，传统桌面应用仍支持控制台和命令行参数。
 
 - 环境变量。
 
@@ -48,3 +44,4 @@ Windows 运行时不支持以下 CRT 功能：
 [兼容性](../c-runtime-library/compatibility.md)<br/>
 [Windows 运行时不支持的 CRT 函数](../c-runtime-library/windows-runtime-unsupported-crt-functions.md)<br/>
 [按类别分的通用 C 运行时例程](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[创建通用 Windows 平台控制台应用](/windows/uwp/launch-resume/console-uwp)
