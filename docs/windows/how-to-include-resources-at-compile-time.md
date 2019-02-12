@@ -20,15 +20,17 @@ helpviewer_keywords:
 - directories [C++], specifying include paths for resources
 - include files [C++], specifying for resources
 - resources [C++], including in projects
+- symbols [C++], finding
+- resources [C++], searching for symbols
 ms.assetid: 357e93c2-0a29-42f9-806f-882f688b8924
-ms.openlocfilehash: 52145d2a656a7cac0d07a43ceaf298fbebb5ad40
-ms.sourcegitcommit: 63c072f5e941989636f5a2b13800b68bb7129931
+ms.openlocfilehash: 8df5a8ee6583b1e9f5c50a428b69babb0d56961b
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55764072"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56152373"
 ---
-# <a name="how-to-include-resources-at-compile-time"></a>如何：在编译时包含资源
+# <a name="how-to-include-resources-at-compile-time-c"></a>如何：将资源包括在编译时 （c + +）
 
 通常很简单且方便地使用一个资源脚本 (.rc) 文件中的所有资源的默认安排。 但是，您可以将资源添加其他文件中向当前项目在编译时列出相关**编译时指令**框中**资源包括**对话框。
 
@@ -42,7 +44,7 @@ ms.locfileid: "55764072"
 
 - 若要包括的正在使用的多个不同项目或，是属于源代码版本控制系统，并因此必须在一个中心位置修改会影响所有项目中存在的资源。
 
-- 包括采用自定义格式的资源（如 RCDATA 资源）。 RCDATA 资源可能具有特殊要求。 例如，不能使用表达式作为 nameID 字段的值。 请参阅 Windows SDK 文档了解详细信息。
+- 包括采用自定义格式的资源（如 RCDATA 资源）。 RCDATA 资源可能具有特殊要求。 例如，您不能使用表达式作为一个值 nameID 字段。 有关详细信息，请参阅 Windows SDK 文档。
 
 如果满足下列任一条件的现有.rc 文件中有一些部分，应将部分放在一个或多个单独的.rc 文件并将其包含在你的项目使用**资源包括**对话框。 *Projectname*.rc2 文件创建一个新的项目的 \res 子目录中用于此目的。
 
@@ -59,7 +61,7 @@ ms.locfileid: "55764072"
 > [!NOTE]
 > 由标记.rc 文件中显示这些文本框中的项`TEXTINCLUDE 1`， `TEXTINCLUDE 2`，和`TEXTINCLUDE 3`分别。 有关详细信息，请参阅[TN035:Visual c + + 中使用多个资源文件和头文件](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md)。
 
-对资源文件使用进行了更改后**资源包括**对话框中，你需要关闭.rc 文件并重新打开它以使更改生效。 有关详细信息，请参阅[编译时包含资源](../windows/how-to-include-resources-at-compile-time.md)。
+对资源文件使用进行了更改后**资源包括**对话框中，你需要关闭.rc 文件并重新打开它以使更改生效。
 
 将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index).NET Framework 开发人员指南中。
 
@@ -73,11 +75,27 @@ ms.locfileid: "55764072"
 
    采用这种方式包含的文件中的资源会在编译时成为可执行文件的一部分。 在处理项目的主.rc 文件时，他们不是直接可用于编辑或修改。 单独打开包含的.rc 文件。 包含在内但没有.rc 扩展名的任何文件不会通过资源编辑器可编辑。
 
-## <a name="to-specify-include-directories-for-a-specific-resource-rc-file-c"></a>若要指定包含对特定资源 （.rc 文件） 的目录 （c + +）
+## <a name="to-specify-include-directories-for-a-specific-resource-rc-file"></a>若要指定包含对特定资源 （.rc 文件） 的目录
 
 1. 右键单击解决方案资源管理器中的.rc 文件并选择**属性**从快捷菜单。
 
 1. 在中**属性页**对话框中，选择**资源**节点，在左窗格中，然后指定附加的包含目录**附加包含目录**属性。
+
+## <a name="to-find-symbols-in-resources"></a>在资源中查找符号
+
+1. 从**编辑**菜单中，选择**查找符号**。
+
+1. 在中[查找符号对话框](/visualstudio/ide/go-to)，在**查找内容**框中，从下拉列表中选择以前的搜索字符串或键入想要查找 （例如 ID_ACCEL1） 的加速键。
+
+   > [!TIP]
+   > 若要使用[正则表达式](/visualstudio/ide/using-regular-expressions-in-visual-studio)为你的搜索，必须使用[在文件中查找](/visualstudio/ide/reference/find-command)从**编辑**而不是菜单**查找符号**命令。 若要启用正则表达式，必须具有**使用：正则表达式**中所选的复选框[查找对话框](/visualstudio/ide/finding-and-replacing-text)。 然后，可以选中右侧的向右箭头按钮**查找内容**框，以显示搜索正则表达式的列表。 当从此列表中选择一个表达式时，它将替换中的搜索文本**查找内容**框。
+
+1. 选择任一**查找**选项。
+
+1. 选择“查找下一个”。
+
+> [!NOTE]
+> 无法搜索字符串、快捷键或二进制资源中的符号。
 
 ## <a name="requirements"></a>要求
 
@@ -87,5 +105,4 @@ Win32
 
 [资源文件](../windows/resource-files-visual-studio.md)<br/>
 [资源编辑器](../windows/resource-editors.md)<br/>
-[TN035:Visual c + + 中使用多个资源文件和头文件](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md)<br/>
 [符号：资源标识符](../windows/symbols-resource-identifiers.md)<br/>
