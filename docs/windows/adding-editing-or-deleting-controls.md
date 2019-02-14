@@ -36,13 +36,19 @@ helpviewer_keywords:
 - variables, dialog box control member variables
 - controls [C++], member variables
 - Dialog Editor [C++], defining member variables for controls
+- controls [C++], troubleshooting
+- Dialog Editor [C++], troubleshooting
+- dialog boxes [C++], troubleshooting
+- InitCommonControls
+- RichEdit 1.0 control
+- rich edit controls [C++], RichEdit 1.0
 ms.assetid: 73cef03f-5c8c-456a-87d1-1458dff185cf
-ms.openlocfilehash: b4edb5b7a51e4f6d368759ebc2e05a1cc585f19a
-ms.sourcegitcommit: 52c05e10b503e834c443ef11e7ca1987e332f876
+ms.openlocfilehash: 648ac3329409ba221881f75eaa51e1779091b0f0
+ms.sourcegitcommit: eb2b34a24e6edafb727e87b138499fa8945f981e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55742747"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56264863"
 ---
 # <a name="adding-editing-or-deleting-controls"></a>添加、编辑或删除控件
 
@@ -51,44 +57,6 @@ ms.locfileid: "55742747"
 **对话框编辑器**选项卡中将显示[工具箱窗口](/visualstudio/ide/reference/toolbox)工作时**对话框**编辑器。 此外可以自定义**工具箱**窗口以方便使用。 有关详细信息，请参阅[使用工具箱](/visualstudio/ide/using-the-toolbox)并[显示或隐藏工具箱窗口](showing-or-hiding-the-dialog-editor-toolbar.md)。
 
 可以使用中的快捷菜单**对话框中**编辑器来快速添加注册 ActiveX 控件到对话框中，并且可以添加到 ActiveX 控件**工具箱**以便快速访问。
-
-提供的标准控件**工具箱**事件是默认值：
-
-|控件名称|默认事件|
-|---|---|
-|[按钮控件](../mfc/reference/cbutton-class.md)|BN_CLICKED|
-|[复选框控件](../mfc/reference/styles-used-by-mfc.md#button-styles)|BN_CLICKED|
-|[组合框控件](../mfc/reference/ccombobox-class.md)|CBN_SELCHANGE|
-|[编辑控件](../mfc/reference/cedit-class.md)|EN_CHANGE|
-|分组框|（不适用于）|
-|[列表框控件](../mfc/reference/clistbox-class.md)|LBN_SELCHANGE|
-|[单选按钮控件](../mfc/reference/styles-used-by-mfc.md#button-styles)|BN_CLICKED|
-|[静态文本控件](../mfc/reference/cstatic-class.md)|（不适用于）|
-|[图片控件](../mfc/reference/cpictureholder-class.md)|（不适用于）|
-|[Rich Edit 2.0 控件](../mfc/using-cricheditctrl.md)|EN_CHANGE|
-|[滚动条控件](../mfc/reference/cscrollbar-class.md)|NM_THEMECHANGED|
-
-有关使用的详细信息**RichEdit 1.0**控件使用 MFC，请参阅[RichEdit 1.0 控件使用 MFC](../windows/using-the-richedit-1-0-control-with-mfc.md)并[丰富编辑控件示例](../mfc/rich-edit-control-examples.md)。
-
-[Windows 公共控件](../mfc/controls-mfc.md)推出**工具箱**提供应用程序中的增强的功能。 它们包括：
-
-|控件名称|默认事件|
-|---|---|
-|[滑块控件](../mfc/slider-control-styles.md)|NM_CUSTOMDRAW|
-|[数值调节钮控件](../mfc/using-cspinbuttonctrl.md)|UDN_DELTAPOS|
-|[进度控件](../mfc/styles-for-the-progress-control.md)|NM_CUSTOMDRAW|
-|[热键控件](../mfc/using-a-hot-key-control.md)|NM_OUTOFMEMORY|
-|[列表控件](../mfc/list-control-and-list-view.md)|LVN_ITEMCHANGE|
-|[树控件](../mfc/tree-control-styles.md)|TVN_SELCHANGE|
-|[选项卡控件](../mfc/tab-controls-and-property-sheets.md)|TCN_SELCHANGE|
-|[动画控件](../mfc/using-an-animation-control.md)|ACN_START|
-|[日期时间选取器控件](../mfc/creating-the-date-and-time-picker-control.md)|DTN_DATETIMECHANGE|
-|[月历控件](../mfc/month-calendar-control-examples.md)|MCN_SELCHANGE|
-|[IP 地址控件](../mfc/reference/cipaddressctrl-class.md)|IPN_FIELDCHANGED|
-|[扩展的组合框控件](../mfc/creating-an-extended-combo-box-control.md)||
-|[自定义控件](custom-controls-in-the-dialog-editor.md)|TTN_GETDISPINFO|
-
-有关详细信息，请参阅[控件类](../mfc/control-classes.md)，[对话框类](../mfc/dialog-box-classes.md)，并[滚动条样式](../mfc/reference/styles-used-by-mfc.md#scroll-bar-styles)。
 
 将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发人员指南*。 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[桌面应用中创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的托管应用中的资源的信息，请参阅[Globalizing and Localizing.NET Framework Applications](/dotnet/standard/globalization-localization/index)。
 
@@ -239,14 +207,53 @@ ActiveX 控件，具体取决于为 ActiveX 控件的一部分的属性表的属
    > [!TIP]
    > 使用时**对话框**编辑器中的，在许多情况下，您可以单击鼠标右键以显示常用命令的快捷菜单。
 
+## <a name="known-issue"></a>已知问题
+
+将公共控件或 rich edit 控件添加到对话框中之后, 它不会出现时测试对话框的或对话框中本身不会显示。
+
+若要查看问题的一个示例：
+
+1. 创建 Win32 项目，修改应用程序设置，因此创建 Windows 应用程序 （不是一个控制台应用程序）。
+
+1. 在中[资源视图](../windows/resource-view-window.md)，双击.rc 文件。
+
+1. 在下，对话框选项中，双击**有关**框。
+
+1. 添加**IP 地址控件**到对话框。
+
+1. 保存并**全部重新生成**。
+
+1. 执行该程序。
+
+1. 在对话框中**帮助**菜单上，单击**有关**命令; 没有对话框框中显示。
+
+目前，**对话框**编辑器不会自动将代码添加到你的项目时将下列公共控件或 rich edit 控件拖放到对话框。 也不会 Visual Studio 提供的错误或警告时出现此问题。 若要修复，请手动添加控件的代码。
+
+||||
+|-|-|-|
+|滑块控件|树控件|日期时间选取器|
+|数值调节钮控件|选项卡控件|月历|
+|进度控件|动画控件|IP 地址控件|
+|热键|Rich Edit 控件|扩展的组合框|
+|列表控件|Rich Edit 2.0 控件|自定义控件|
+
+若要使用公共控件出现在对话框中，您需要调用[InitCommonControlsEx](/windows/desktop/api/commctrl/nf-commctrl-initcommoncontrolsex)或`AFXInitCommonControls`创建对话框的之前。
+
+若要使用 RichEdit 控件，必须调用`LoadLibrary`。 有关详细信息，请参阅[有关 Rich Edit 控件](/windows/desktop/Controls/about-rich-edit-controls)Windows SDK 中并[的格式文本编辑控件概述](../mfc/overview-of-the-rich-edit-control.md)。
+
+> [!NOTE]
+> 若要使用 MFC 使用 RichEdit 控件，必须首先调用[AfxInitRichEdit2](../mfc/reference/application-information-and-management.md#afxinitrichedit2)加载 RichEdit 2.0 控件 (RICHED20。DLL)，或调用[AfxInitRichEdit](../mfc/reference/application-information-and-management.md#afxinitrichedit)加载较旧的 RichEdit 1.0 控件 (RICHED32。DLL)。
+>
+> 可以使用当前[CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)类与较旧的 RichEdit 1.0 控件，但`CRichEditCtrl`不仅旨在支持 RichEdit 2.0 控件。 RichEdit 1.0 和 RichEdit 2.0 很相似，因为大多数方法起作用。 但请注意有一些差异的 1.0 和 2.0 的控件，因此，某些方法可能工作不正常或根本不起作用。
+
 ## <a name="requirements"></a>要求
 
 Win32
 
 ## <a name="see-also"></a>请参阅
 
+[对话框编辑器](../windows/dialog-editor.md)<br/>
 [对话框中的控件](controls-in-dialog-boxes.md)<br/>
-[对话框控件和变量类型](../ide/dialog-box-controls-and-variable-types.md)<br/>
 [资源文件](../windows/resource-files-visual-studio.md)<br/>
 
 <!-- excluded links
