@@ -1,17 +1,17 @@
 ---
 title: 调用约定、参数和返回类型
-ms.date: 11/04/2016
+ms.date: 02/13/2019
 helpviewer_keywords:
 - calling conventions, helper functions
 - helper functions, calling conventions
 - helper functions, return types
 ms.assetid: 0ffa4558-6005-4803-be95-7a8ec8837660
-ms.openlocfilehash: 8343c17828040ca36b042cb99e0c51c37548d3b3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 15631b305246cbfd7dcd8081cb1ee488bf225fec
+ms.sourcegitcommit: eb2b34a24e6edafb727e87b138499fa8945f981e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654423"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56264798"
 ---
 # <a name="calling-conventions-parameters-and-return-type"></a>调用约定、参数和返回类型
 
@@ -27,12 +27,12 @@ FARPROC WINAPI __delayLoadHelper2(
 ### <a name="parameters"></a>参数
 
 *pidd*<br/>
-指向 `const`（请参阅 delayimp.h）的 `ImgDelayDescr` 指针，其中包含与导入相关的各种数据的偏移量、绑定信息的时间戳和提供有关描述符内容的进一步信息的特性集。 当前只有一个特性，即 `dlattrRva`，它指示描述符中的地址是相对虚拟地址（相对于虚拟地址）。
+一个`const`指针，指向`ImgDelayDescr`，其中包含各种与导入相关的数据、 绑定信息时的时间戳和一组提供有关描述符内容的详细信息的属性的偏移量。 目前只有一个特性， `dlattrRva`，这表示描述符中的地址是相对虚拟地址。 有关详细信息，请参阅中的声明*delayimp.h*。
 
 定义`PCImgDelayDescr`结构，请参阅[结构和常量定义](../../build/reference/structure-and-constant-definitions.md)。
 
 *ppfnIATEntry*<br/>
-指向延迟加载导入地址表 (IAT) 中的槽的指针，该地址表将用导入函数的地址更新。 Helper 例程需要存储它将要返回到该位置的同一值。
+指向延迟加载导入地址表 (IAT) 导入的函数的地址使用更新中的槽的指针。 帮助器例程需要存储它返回到此位置的相同值。
 
 ## <a name="expected-return-values"></a>预期的返回值
 
@@ -44,13 +44,14 @@ FARPROC WINAPI __delayLoadHelper2(
 
 - `LoadLibrary` 在指定的 DLL 上失败。
 
-- `GetProcAddress` 失败。
+- 
+  `GetProcAddress` 失败。
 
-由你负责处理这些异常。
+它由你负责处理这些异常。
 
 ## <a name="remarks"></a>备注
 
-Helper 函数的调用约定是 `__stdcall`。 返回值的类型不相关，所以使用 FARPROC。 该函数具有 C 链接。
+Helper 函数的调用约定是 `__stdcall`。 返回值的类型无关，所以使用 FARPROC。 该函数具有 C 链接。
 
 除非要将 Helper 例程用作通知挂钩，否则延迟加载 Helper 的返回值需要存储在已传入函数指针的位置。 在这种情况下，由你的代码负责查找要返回的适当函数指针。 然后，链接器生成的 thunk 代码可将该返回值用作导入的实际目标并直接跳转到该目标。
 
@@ -131,7 +132,7 @@ FARPROC WINAPI delayHook(unsigned dliNotify, PDelayLoadInfo pdli)
 
 /*
 and then at global scope somewhere
-PfnDliHook __pfnDliNotifyHook2 = delayHook;
+const PfnDliHook __pfnDliNotifyHook2 = delayHook;
 */
 ```
 
