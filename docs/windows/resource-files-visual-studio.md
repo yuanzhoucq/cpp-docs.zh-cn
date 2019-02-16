@@ -1,6 +1,6 @@
 ---
 title: 资源文件 (C++)
-ms.date: 11/04/2016
+ms.date: 02/14/2019
 f1_keywords:
 - vc.editors.resource
 helpviewer_keywords:
@@ -24,20 +24,16 @@ helpviewer_keywords:
 - files [C++], editable types
 - resource editing
 ms.assetid: 4d2b6fcc-07cf-4289-be87-83a60f69533c
-ms.openlocfilehash: 65500644b70841f372edcc6911edefc6c7b9f432
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.openlocfilehash: 4d56a62dfa350b3113a28355433130563464c6be
+ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152685"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56320531"
 ---
 # <a name="resource-files-c"></a>资源文件 (C++)
 
 > [!NOTE]
-> 本材料适用于 Windows 桌面应用程序。 有关通用 Windows 平台应用中的资源的信息，请参阅[定义应用的资源](/windows/uwp/app-resources/)。
->
-> 将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发人员指南*。 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[桌面应用中创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的托管应用中的资源的信息，请参阅[Globalizing and Localizing.NET Framework Applications](/dotnet/standard/globalization-localization/index)。
->
 > 由于.NET 编程语言中的项目不使用资源脚本文件，则必须打开你的资源**解决方案资源管理器**。 可以使用[的图像编辑器](../windows/image-editor-for-icons.md)并[二进制编辑器](binary-editor.md)来处理托管项目中的资源文件。 你要编辑的任何托管资源都必须是链接的资源。 Visual Studio 资源编辑器不支持编辑嵌入的资源。
 
 术语“资源文件”可以指多个文件类型，包括：
@@ -50,7 +46,7 @@ ms.locfileid: "56152685"
 
 - 由开发环境生成、通过.rc 文件引用的标头文件，如 Resource.h。
 
-在中也发现资源[其他文件类型](../windows/editable-file-types-for-resources.md)如.exe、.dll 和.res 文件。 您可以使用资源和资源文件从你的项目和那些不属于当前项目中。 此外可以使用 Visual Studio 在开发环境中创建的资源文件。 例如，你可以：
+此外在其他文件类型，如.exe、.dll 和.res 文件中找到资源。 您可以使用资源和资源文件从你的项目和那些不属于当前项目中。 此外可以使用 Visual Studio 在开发环境中创建的资源文件。 例如，你可以：
 
 - 使用嵌套的条件包含资源文件。
 
@@ -64,26 +60,6 @@ ms.locfileid: "56152685"
 
 - 包含开发环境不支持的资源类型。
 
-您可以打开以下类型的文件和编辑它们包含的资源：
-
-|文件名|描述|
-|---------------|-----------------|
-|.rc|资源脚本文件。|
-|.rct|资源模板文件。|
-|.res|资源文件。|
-|.resx|托管资源文件。|
-|.exe|可执行文件。|
-|.dll|动态链接库文件。|
-|.bmp、.ico、.dib 和 .cur|位图、图标、工具栏和光标文件。|
-
-在 Visual Studio 环境处理，并且会影响在资源编辑会话期间下, 表中所示的文件：
-
-|文件名|描述|
-|---------------|-----------------|
-|Resource.h|由开发环境生成的头文件；包含符号定义。 （在源代码管理中包括此文件。）|
-|Filename.aps|当前资源脚本文件的二进制版本；用于快速加载。<br /><br /> 资源编辑器不直接读取.rc 或 resource.h 文件。 资源编译器将它们编译成由资源编辑器使用的 .aps 文件。 该文件是一个编译步骤，只存储符号数据。 与普通编译过程，因为不是符号 （例如注释） 的信息将在编译过程中被放弃。 每当 .aps 文件与 .rc 文件不同步时，就会重新生成 .rc 文件（例如，当你进行“保存”时，资源编辑器将覆盖 .rc 文件和 resource.h 文件）。 对资源本身所做的任何更改依然包含在 .rc 文件中，但一旦覆盖 .rc 文件就总会丢失注释。 有关如何保留注释的信息，请参阅[编译时包含资源](../windows/how-to-include-resources-at-compile-time.md)。 （通常情况下，您不应包括.aps 文件在源代码管理中。）|
-|.rc|包含当前项目中的资源脚本的资源脚本文件。 每当进行保存时，.aps 文件就会覆盖此文件。 （在源代码管理中包括此文件。）|
-
 本部分介绍了如何：
 
 - [创建资源](../windows/how-to-create-a-resource-script-file.md)
@@ -91,6 +67,28 @@ ms.locfileid: "56152685"
 - [管理资源](../windows/how-to-copy-resources.md)
 
 - [在编译时包含资源](../windows/how-to-include-resources-at-compile-time.md)
+
+## <a name="editable-resource-file-types"></a>可编辑的资源文件类型
+
+以下类型的文件可以打开以便编辑及其包含的资源：
+
+|文件名|描述|
+|---------|-----------------|
+|.rc|资源脚本文件|
+|.rct|资源模板文件|
+|.res|资源文件|
+|.resx|托管的资源文件|
+|.exe|可执行文件|
+|.dll|动态链接库文件|
+|.bmp、.ico、.dib 和 .cur|位图、图标、工具栏和光标文件。|
+
+在 Visual Studio 环境处理，并且会在资源编辑会话期间影响以下文件：
+
+|文件名|描述|
+|---------------|-----------------|
+|Resource.h|由开发环境生成的头文件；包含符号定义。 （在源代码管理中包括此文件。）|
+|Filename.aps|当前资源脚本文件的二进制版本；用于快速加载。<br /><br /> 资源编辑器不直接读取.rc 或 resource.h 文件。 资源编译器将它们编译成由资源编辑器使用的 .aps 文件。 该文件是一个编译步骤，只存储符号数据。 与普通编译过程，因为不是符号 （例如注释） 的信息将在编译过程中被放弃。 每当 .aps 文件与 .rc 文件不同步时，就会重新生成 .rc 文件（例如，当你进行“保存”时，资源编辑器将覆盖 .rc 文件和 resource.h 文件）。 对资源本身所做的任何更改依然包含在 .rc 文件中，但一旦覆盖 .rc 文件就总会丢失注释。 有关如何保留注释的信息，请参阅[编译时包含资源](../windows/how-to-include-resources-at-compile-time.md)。 （通常情况下，您不应包括.aps 文件在源代码管理中。）|
+|.rc|包含当前项目中的资源脚本的资源脚本文件。 每当进行保存时，.aps 文件就会覆盖此文件。 （在源代码管理中包括此文件。）|
 
 ## <a name="manifest-resources"></a>清单资源
 
@@ -116,11 +114,15 @@ ms.locfileid: "56152685"
 
 若要查看的版本和类型包含在清单资源的信息，可以在 XML 查看器或 Visual Studio 文本编辑器中打开该文件。 如果从 [资源视图](../windows/resource-view-window.md)打开清单资源，则资源将以二进制格式打开。 若要以可视效果更好的格式查看清单资源的内容，必须打开的资源**解决方案资源管理器**。
 
-若要打开清单资源，请选择从以下步骤：
+### <a name="to-open-a-manifest-resource"></a>若要打开清单资源
 
-- 有关文本编辑器中打开项目**解决方案资源管理器**，展开**资源文件**文件夹，然后双击.manifest 文件。
+1. 在 Visual Studio 中打开项目。
 
-- 另一个编辑器中**解决方案资源管理器**，右键单击该.manifest 文件，然后选择**打开方式...** 从快捷菜单。 在中**打开**对话框框中，指定想要使用选择的编辑器**打开**。
+1. 导航到**解决方案资源管理器**展开**资源文件**文件夹。
+
+   - 有关文本编辑器中，双击.manifest 文件。
+
+   - 对于其他编辑器中，右击.manifest 文件，并选择**打开方式...**，然后指定要使用和选择的编辑器**打开**。
 
 > [!NOTE]
 > 每个模块只能有一个清单资源。
@@ -131,7 +133,6 @@ Win32
 
 ## <a name="see-also"></a>请参阅
 
-[资源编辑器](../windows/resource-editors.md)<br/>
 [使用资源文件](../windows/working-with-resource-files.md)<br/>
-[菜单和其他资源](https://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)<br/>
-[控件](../mfc/controls-mfc.md)<br/>
+[资源标识符 （符号）](../windows/symbols-resource-identifiers.md)<br/>
+[资源编辑器](../windows/resource-editors.md)<br/>

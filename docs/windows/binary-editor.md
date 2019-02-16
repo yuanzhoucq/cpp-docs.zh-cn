@@ -1,6 +1,6 @@
 ---
 title: 二进制编辑器 （c + +）
-ms.date: 11/04/2016
+ms.date: 02/14/2019
 f1_keywords:
 - vc.editors.binary.F1
 - vc.editors.binary
@@ -21,12 +21,12 @@ helpviewer_keywords:
 - data resources [C++]
 - resources [C++], creating
 ms.assetid: 2483c48b-1252-4dbc-826b-82e6c1a0e9cb
-ms.openlocfilehash: 06c4a224b745f5aba8c9105d32489f8ca3109e1c
-ms.sourcegitcommit: b488462a6e035131121e6f32d8f3b108cc798b5e
+ms.openlocfilehash: 2a3ff3d89c809f57ea3ddbd70d5664fc8d13cec4
+ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55293593"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56320817"
 ---
 # <a name="binary-editor-c"></a>二进制编辑器 （c + +）
 
@@ -35,33 +35,33 @@ ms.locfileid: "55293593"
 
 使用二进制编辑器，可在二进制级别编辑十六进制或 ASCII 格式的所有资源。 还可以使用 [查找命令](/visualstudio/ide/reference/find-command) 来搜索 ASCII 字符串或十六进制字节。 应使用**二进制**编辑器仅当您需要查看或进行次要更改为自定义资源或资源类型不受 Visual Studio 环境。
 
-若要打开**二进制编辑器**，首先选择**文件** > **新建** > **文件**从主菜单中，选择你想要编辑，然后单击下拉箭头旁的文件**开放**按钮，然后选择**打开** > **二进制编辑器**。
+若要打开**二进制编辑器**，首先选择**文件** > **新建** > **文件**从主菜单中，选择你想要编辑，然后选择下拉箭头旁的文件**开放**按钮，然后选择**打开** > **二进制编辑器**。
 
 > [!CAUTION]
 > 编辑对话框、图像或二进制编辑器中的菜单等资源是很危险的。 不正确的编辑可能会损坏资源，导致其在其本机编辑器中无法读取。
 
+![二进制编辑器](../mfc/media/vcbinaryeditor2.gif "vcBinaryEditor2")<br/>
+二进制编辑器中显示的对话框的二进制数据
+
+只有特定 ASCII 值才会二进制编辑器中进行表示（0x20 到 0x7E）。 扩展字符在二进制编辑器的 ASCII 值部分（右面板）中显示为句点。 “可打印”字符是 ASCII 值 32 到 126。
+
 > [!TIP]
 > 使用时**二进制**编辑器中的，在许多情况下，你可以右击以显示特定于资源的命令的快捷菜单。 可用命令取决于所指向的光标。 例如，如果单击指向**二进制**时选择了十六进制值编辑器中的，快捷菜单会显示**剪切**，**复制**，和**粘贴**命令。
 
-## <a name="binary-editor-how-to"></a>二进制编辑器操作方法
+## <a name="how-to"></a>操作说明
 
-与**二进制**编辑器中，请参阅以下操作：
+**二进制**编辑器，可以：
 
-### <a name="to-open-a-resource-for-binary-editing"></a>若要打开资源进行二进制编辑
-
-#### <a name="to-open-a-windows-desktop-resource"></a>若要打开 Windows 桌面资源
+### <a name="to-open-a-windows-desktop-resource-for-binary-editing"></a>打开 Windows 桌面资源进行二进制编辑
 
 1. 在 [资源视图](../windows/resource-view-window.md)中，选择要编辑的特定资源文件。
-
-   > [!NOTE]
-   > 如果你的项目尚未包含 .rc 文件，请参阅 [创建新的资源脚本文件](../windows/how-to-create-a-resource-script-file.md)。
 
 1. 右键单击该资源，然后在快捷菜单中单击“打开二进制数据”  。
 
    > [!NOTE]
    > 如果您使用[资源视图](../windows/resource-view-window.md)中自动打开窗口，Visual Studio 无法识别 （如 RCDATA 或自定义资源），该资源的格式打开资源**二进制**编辑器。
 
-#### <a name="to-open-a-managed-resource"></a>若要打开托管的资源
+### <a name="to-open-a-managed-resource-for-binary-editing"></a>打开托管资源进行二进制编辑
 
 1. 在中**解决方案资源管理器**，选择你想要编辑的特定资源文件。
 
@@ -72,15 +72,10 @@ ms.locfileid: "55293593"
    > [!NOTE]
    > 可以使用[的图像编辑器](../windows/image-editor-for-icons.md)并[二进制编辑器](binary-editor.md)来处理托管项目中的资源文件。 你要编辑的任何托管资源都必须是链接的资源。 Visual Studio 资源编辑器不支持编辑嵌入的资源。
 
-![二进制编辑器](../mfc/media/vcbinaryeditor2.gif "vcBinaryEditor2")<br/>
-二进制编辑器中显示的对话框的二进制数据
-
-只有特定 ASCII 值才会二进制编辑器中进行表示（0x20 到 0x7E）。 扩展字符在二进制编辑器的 ASCII 值部分（右面板）中显示为句点。 “可打印”字符是 ASCII 值 32 到 126。
-
 > [!NOTE]
 > 如果你想要使用**二进制**上已在另一个编辑器窗口中，编辑的资源编辑器先关闭其他编辑器窗口。
 
-### <a name="to-edit-a-resource-in-the-binary-editor"></a>若要编辑的二进制编辑器中的资源
+### <a name="to-edit-a-resource"></a>编辑资源的步骤
 
 1. 选择你想要编辑的字节。
 
@@ -101,9 +96,7 @@ ms.locfileid: "55293593"
 
 1. 在中**查找内容**框中，从下拉列表中选择以前的搜索字符串或键入想要查找的数据。
 
-1. 选择任一**查找**选项。
-
-1. 选择**查找下一个**。
+1. 选择任一**查找**选项，然后选择**查找下一个**。
 
 ### <a name="to-create-a-new-custom-or-data-resource"></a>创建新的自定义资源或数据资源
 
@@ -129,12 +122,6 @@ ms.locfileid: "55293593"
 
 > [!NOTE]
 > 创建新的自定义资源或数据资源需要 Win32。
-
-## <a name="managed-resources"></a>托管资源
-
-可以使用[的图像编辑器](../windows/image-editor-for-icons.md)并**二进制**托管项目的编辑器来处理资源文件。 你要编辑的任何托管资源都必须是链接的资源。 Visual Studio 资源编辑器不支持编辑嵌入的资源。
-
-有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发人员指南*。 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[桌面应用中创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的托管应用中的资源的信息，请参阅[Globalizing and Localizing.NET Framework Applications](/dotnet/standard/globalization-localization/index)。
 
 ## <a name="requirements"></a>要求
 

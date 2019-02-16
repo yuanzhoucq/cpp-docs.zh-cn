@@ -1,6 +1,6 @@
 ---
 title: 工具栏编辑器 （c + +）
-ms.date: 11/04/2016
+ms.date: 02/14/2019
 f1_keywords:
 - vc.editors.toolbar.F1
 - vc.editors.toolbar
@@ -50,12 +50,12 @@ helpviewer_keywords:
 - buttons [C++], tool tips
 - Toolbar editor [C++], creating tool tips
 ms.assetid: aa9f0adf-60f6-4f79-ab05-bc330f15ec43
-ms.openlocfilehash: 61b4d3ba6fc70e78c6f794528822eb66fb94de7e
-ms.sourcegitcommit: 5a7dbd640376e13379f5d5b2cf66c4842e5e737b
+ms.openlocfilehash: 7ef08551960c9308a84b9838249a3d9ff4950d98
+ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55905779"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56320609"
 ---
 # <a name="toolbar-editor-c"></a>工具栏编辑器 （c + +）
 
@@ -66,23 +66,6 @@ ms.locfileid: "55905779"
 ![工具栏编辑器](../mfc/media/vctoolbareditor.gif "vcToolbarEditor")工具栏编辑器
 
 **工具栏**编辑器是类似于**映像**编辑器的功能。 菜单项、 图形工具和位图网格是中的那些相同**图像**编辑器。 上没有菜单命令**图像**菜单，以便您可以切换**工具栏**编辑器并**图像**编辑器。 有关使用的详细信息**图形**工具栏中，**颜色**面板中，或**图像**菜单中，请参阅[的图像编辑器](../windows/image-editor-for-icons.md)。
-
-将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发人员指南*。 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[桌面应用中创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的托管应用中的资源的信息，请参阅[Globalizing and Localizing.NET Framework Applications](/dotnet/standard/globalization-localization/index)。
-
-与**工具栏**编辑器，你可以：
-
-## <a name="create-new-toolbars"></a>创建新工具栏
-
-1. 在中**资源**查看，右键单击.rc 文件，然后选择**添加资源**从快捷菜单。 (如果你的.rc 文件中有一个现有工具栏，只需可以右击**工具栏**文件夹，然后选择**插入工具栏**从快捷菜单。)
-
-   > [!NOTE]
-   > 如果你的项目尚未包含 .rc 文件，请参阅 [创建新的资源脚本文件](../windows/how-to-create-a-resource-script-file.md)。
-
-1. 在中**添加资源**对话框中，选择**工具栏**中**资源类型**列表，然后选择**新建**。
-
-   如果一个加号 (**+**) 的旁边将出现**工具栏**资源类型，这意味着工具栏模板都可用。 选择加号以展开模板列表中的，选择一个模板，然后选择**新建**。
-
-## <a name="convert-bitmaps-to-toolbar-resources"></a>将位图转换为工具栏资源
 
 通过将位图转换，可以在 c + + 项目中创建一个新的工具栏。 从位图图将转换为工具栏按钮图像。 通常，位图包含在单个位图中，使用每个按钮的一个映像的多个按钮映像。 默认为 16 像素宽和图像的高度，映像可以是任何大小。 可以指定中的按钮图像的大小**新建工具栏资源**对话框中选择时**工具栏编辑器**从**图像**与图像编辑器中的菜单。
 
@@ -97,7 +80,32 @@ ms.locfileid: "55905779"
 |**按钮宽度**|提供空间以输入你要从位图资源转换为工具栏资源的工具栏按钮的宽度。 图像裁剪为的宽度和高度指定，和颜色调整为使用标准工具栏颜色 （16 种颜色）。|
 |**按钮高度**|提供空间以输入你要从位图资源转换为工具栏资源的工具栏按钮的高度。 图像裁剪为的宽度和高度指定，和颜色调整为使用标准工具栏颜色 （16 种颜色）。|
 
-### <a name="to-convert-bitmaps-to-a-toolbar"></a>若要将位图转换为工具栏
+默认情况下，新的或空白按钮显示工具栏的右侧。 您可以在编辑前移动此按钮。 当创建一个新按钮时，另一个空白按钮将出现编辑按钮右侧。 当您保存一个工具栏时，不会保存空白的按钮。
+
+工具栏按钮的属性包括：
+
+|属性|描述|
+|--------------|-----------------|
+|**ID**|定义按钮的 ID。 下拉列表提供了常见**ID**名称。|
+|**Width**|设置按钮的宽度。 建议使用 16 个像素。|
+|**Height**|设置按钮的高度。 一个按钮的高度更改工具栏上的所有按钮的高度。 建议将 15 个像素。|
+|**提示**|定义在状态栏中显示的消息。 添加 \n 和名称将工具提示添加到该工具栏按钮。 有关详细信息，请参阅[创建工具提示](../windows/creating-a-tool-tip-for-a-toolbar-button.md)。|
+
+**宽度**并**高度**应用于所有按钮。 用于创建工具栏位图有 2048年的最大宽度。 因此如果将按钮宽度设置为 512，只能有四个按钮，如果将宽度设置为 513，只能有三个按钮。
+
+## <a name="how-to"></a>操作说明
+
+**工具栏**编辑器，可以：
+
+### <a name="to-create-new-toolbars"></a>若要创建新工具栏
+
+1. 在中**资源**查看，右键单击.rc 文件，然后选择**添加资源**从快捷菜单。 (如果你的.rc 文件中有一个现有工具栏，只需可以右击**工具栏**文件夹，然后选择**插入工具栏**从快捷菜单。)
+
+1. 在中**添加资源**对话框中，选择**工具栏**中**资源类型**列表，然后选择**新建**。
+
+   如果一个加号 (**+**) 的旁边将出现**工具栏**资源类型，这意味着工具栏模板都可用。 选择加号以展开模板列表中的，选择一个模板，然后选择**新建**。
+
+### <a name="to-convert-bitmaps-to-toolbar-resources"></a>若要将位图转换为工具栏资源
 
 1. 打开现有的位图资源中[的图像编辑器](../windows/image-editor-for-icons.md)。 (如果位图不是在你的.rc 文件中，右键单击.rc 文件中，选择**导入**从快捷菜单中，导航到你想要添加到你的.rc 文件，该位图，然后选择**打开**。)
 
@@ -112,31 +120,13 @@ ms.locfileid: "55905779"
 
 此外可以通过更改新的工具栏上的按钮的命令 Id[属性窗口](/visualstudio/ide/reference/properties-window)。
 
-## <a name="create-move-and-edit-toolbar-buttons"></a>创建、移动和编辑工具栏按钮
+### <a name="to-create-move-and-edit-toolbar-buttons"></a>若要创建、 移动和编辑工具栏按钮
 
-您可以轻松地创建、 移动、 复制和编辑工具栏按钮。
+您可以轻松地创建、 移动、 复制和编辑工具栏按钮：
 
-默认情况下，新的或空白按钮显示工具栏的右侧。 您可以在编辑前移动此按钮。 当创建一个新按钮时，另一个空白按钮将出现编辑按钮右侧。 当您保存一个工具栏时，不会保存空白的按钮。
-
-工具栏按钮的属性包括：
-
-|属性|描述|
-|--------------|-----------------|
-|**ID**|定义按钮的 ID。 下拉列表提供了常见**ID**名称。|
-|**Width**|设置按钮的宽度。 建议使用 16 个像素。|
-|**Height**|设置按钮的高度。 一个按钮的高度更改工具栏上的所有按钮的高度。 建议将 15 个像素。|
-|**提示**|定义在状态栏中显示的消息。 添加 \n 和名称将工具提示添加到该工具栏按钮。 有关详细信息，请参阅[创建工具提示](../windows/creating-a-tool-tip-for-a-toolbar-button.md)。|
-
-**宽度**并**高度**应用于所有按钮。 用于创建工具栏位图有 2048年的最大宽度。 因此如果将按钮宽度设置为 512，只能有四个按钮，如果将宽度设置为 513，只能有三个按钮。
-
-请参阅以下操作：
-
-### <a name="to-create-a-new-toolbar-button"></a>若要创建新的工具栏按钮
+#### <a name="to-create-a-new-toolbar-button"></a>若要创建新的工具栏按钮
 
 1. 在中[资源视图](../windows/resource-view-window.md)展开资源文件夹 (例如， *Project1.rc*)。
-
-   > [!NOTE]
-   > 如果你的项目尚未包含 .rc 文件，请参阅 [创建新的资源脚本文件](../windows/how-to-create-a-resource-script-file.md)。
 
 1. 展开**工具栏**文件夹，然后选择要编辑的工具栏。
 
@@ -148,7 +138,7 @@ ms.locfileid: "55905779"
 
 您还可以复制并粘贴到为新按钮的工具栏上的图像。
 
-### <a name="to-add-an-image-to-a-toolbar-as-a-button"></a>若要将图像添加到工具栏中，为的按钮
+#### <a name="to-add-an-image-to-a-toolbar-as-a-button"></a>若要将图像添加到工具栏中，为的按钮
 
 1. 在中[资源视图](../windows/resource-view-window.md)，通过双击它打开工具栏。
 
@@ -165,21 +155,21 @@ ms.locfileid: "55905779"
 
    图像将显示在工具栏上，为新按钮。
 
-### <a name="to-move-a-toolbar-button"></a>移动工具栏按钮
+#### <a name="to-move-a-toolbar-button"></a>移动工具栏按钮
 
 在中**工具栏视图**窗格中，将你想要将移动到其新位置上工具栏按钮。
 
-### <a name="to-copy-buttons-from-a-toolbar"></a>若要从工具栏中复制按钮
+#### <a name="to-copy-buttons-from-a-toolbar"></a>若要从工具栏中复制按钮
 
 1. 按住**Ctrl**密钥。
 
 1. 在中**工具栏视图**窗格中，将按钮拖到其新位置的工具栏上或某个位置上另一个工具栏。
 
-### <a name="to-delete-a-toolbar-button"></a>若要删除的工具栏按钮
+#### <a name="to-delete-a-toolbar-button"></a>若要删除的工具栏按钮
 
 选择工具栏按钮，然后将其拖出工具栏。
 
-### <a name="to-insert-or-remove-space-between-buttons-on-a-toolbar"></a>若要插入或删除上一个工具栏按钮之间的空间
+#### <a name="to-insert-or-remove-space-between-buttons-on-a-toolbar"></a>若要插入或删除上一个工具栏按钮之间的空间
 
 一般情况下，若要插入按钮之间有空格，它们将彼此拖开工具栏上。 若要删除空间，请将它们拖向彼此。
 
@@ -193,13 +183,13 @@ ms.locfileid: "55905779"
 > [!NOTE]
 > 如果离开，所拖动的按钮的一侧没有空间并拖动按钮与相邻的按钮，多个中间**工具栏**编辑器还将插入您的按钮在相反一侧的空间拖动。
 
-### <a name="to-change-the-properties-of-a-toolbar-button"></a>若要更改工具栏按钮的属性
+#### <a name="to-change-the-properties-of-a-toolbar-button"></a>若要更改工具栏按钮的属性
 
 1. 在 c + + 项目中，选择工具栏上的按钮。
 
 1. 键入中的新 ID **ID**属性中的[属性窗口](/visualstudio/ide/reference/properties-window)，或使用下拉列表选择一个新**ID**。
 
-### <a name="to-create-a-tool-tip-for-a-toolbar-button"></a>若要创建的工具栏按钮的工具提示
+#### <a name="to-create-a-tool-tip-for-a-toolbar-button"></a>若要创建的工具栏按钮的工具提示
 
 1. 选择工具栏上的按钮。
 

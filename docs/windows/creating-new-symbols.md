@@ -1,6 +1,6 @@
 ---
 title: 如何：创建符号 （c + +）
-ms.date: 11/04/2016
+ms.date: 02/14/2019
 f1_keywords:
 - vc.editors.symbol.creating
 - vc.editors.symbol.managing
@@ -19,12 +19,12 @@ helpviewer_keywords:
 - View Use button
 - resource editors [C++], resource symbols
 ms.assetid: 35168d31-3af6-4ecd-9362-3707d47b53f3
-ms.openlocfilehash: 49860f2277dbb462c7e1cd8cb59b86a3edbd3cc9
-ms.sourcegitcommit: bec1480a03e7b4070b469a6c131a69f516bbac70
+ms.openlocfilehash: 01b810d162da4d59c2044fe02a1da5c0929d41b9
+ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56226327"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56320596"
 ---
 # <a name="how-to-create-symbols-c"></a>如何：创建符号 （c + +）
 
@@ -35,7 +35,7 @@ ms.locfileid: "56226327"
 对话框包含以下属性：
 
 |属性|描述|
-|---|---|
+|--------------------------|------------------------------------------|
 |**名称**|显示符号的名称。 有关详细信息，请参阅[符号名限制](../windows/symbol-name-restrictions.md)。|
 |**值**|显示符号的数值。 有关详细信息，请参阅[符号值限制](../windows/symbol-value-restrictions.md)。|
 |**在使用中**|选中后，指定符号正由一个或多个资源使用。 “使用者”框中列出一个或多个资源。|
@@ -45,9 +45,9 @@ ms.locfileid: "56226327"
 |**更改**|此时将打开**更改符号**对话框中，以便您可以更改名称或符号值。 如果符号针对的是使用中的控件或资源，则仅可从相应的资源编辑器更改此符号。 有关详细信息，请参阅[更改未赋值符号](../windows/changing-unassigned-symbols.md)。|
 |**查看使用**|打开包含相应资源编辑器中的符号的资源。|
 
-将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发人员指南*。
+## <a name="create-symbols"></a>创建符号
 
-## <a name="to-create-a-new-symbol"></a>若要创建新符号
+### <a name="to-create-a-new-symbol"></a>若要创建新符号
 
 1. 在中**资源符号**对话框框中，选择**新建**。
 
@@ -60,7 +60,7 @@ ms.locfileid: "56226327"
 > [!NOTE]
 > 如果输入的符号名已存在，则会出现一个消息框，表明已定义具有该名称的符号。 无法定义具有相同名称的两个或多个符号，但是可以定义具有相同数值的不同符号。 有关详细信息，请参阅[符号名限制](../windows/symbol-name-restrictions.md)并[符号值限制](../windows/symbol-value-restrictions.md)。
 
-## <a name="to-view-resource-symbols"></a>查看资源符号
+### <a name="to-view-resource-symbols"></a>查看资源符号
 
 1. 在中[资源视图](../windows/resource-view-window.md)，右键单击.rc 文件。
 
@@ -72,11 +72,11 @@ ms.locfileid: "56226327"
    > [!NOTE]
    > 若要查看预定义的符号，请**显示只读符号**复选框。
 
-## <a name="to-open-the-resource-editor-for-a-given-symbol"></a>若要打开给定符号的资源编辑器
+### <a name="to-open-the-resource-editor-for-a-given-symbol"></a>若要打开给定符号的资源编辑器
 
 当您在浏览中的符号**资源符号**，您可以如何使用特定符号的详细信息。 **查看使用**按钮提供的快速方法来获取此信息。
 
-### <a name="to-move-to-the-resource-editor-where-a-symbol-is-being-used"></a>移动使用符号的资源编辑器
+#### <a name="to-move-to-the-resource-editor-where-a-symbol-is-being-used"></a>移动使用符号的资源编辑器
 
 1. 选择中的符号**名称**的框**资源符号**对话框。
 
@@ -92,5 +92,6 @@ Win32
 
 ## <a name="see-also"></a>请参阅
 
-[符号：资源标识符](../windows/symbols-resource-identifiers.md)<br/>
-[预定义的符号 ID](../windows/predefined-symbol-ids.md)
+[资源标识符 （符号）](../windows/symbols-resource-identifiers.md)<br/>
+[管理符号](../windows/changing-a-symbol-or-symbol-name-id.md)<br/>
+[预定义的符号 ID](../windows/predefined-symbol-ids.md)<br/>
