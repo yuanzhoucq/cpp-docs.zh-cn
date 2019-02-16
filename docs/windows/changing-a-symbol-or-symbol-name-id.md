@@ -1,6 +1,6 @@
 ---
 title: 如何：管理符号
-ms.date: 11/04/2016
+ms.date: 02/14/2019
 f1_keywords:
 - vc.editors.symbol.changing
 - vc.editors.symbol.restrictions.name
@@ -35,12 +35,12 @@ helpviewer_keywords:
 - calculated symbols
 - shared symbols
 ms.assetid: 26541832-8dba-4177-b642-e08f94502ea7
-ms.openlocfilehash: 4bc0376b6b5ff402f0cc9f40093e000763ad6656
-ms.sourcegitcommit: bec1480a03e7b4070b469a6c131a69f516bbac70
+ms.openlocfilehash: 4f1c44e8fc2ae34ddcb65ec23ca8d98e11d50ec0
+ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56226366"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56320583"
 ---
 # <a name="how-to-manage-symbols"></a>如何：管理符号
 
@@ -49,8 +49,6 @@ ms.locfileid: "56226366"
 对于关联的符号与单个资源，还可以使用**属性**窗口来更改符号值。 可以使用[资源符号对话框](../windows/resource-symbols-dialog-box.md)若要更改的当前未分配给资源的符号的值。
 
 通常情况下所有符号定义都保存在`Resource.h`。 但是，你可能需要更改此包含文件名，以便可以在同一个目录下使用多个资源文件。
-
-将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发人员指南*。
 
 > [!NOTE]
 > 如果你的项目尚未包含.rc 文件，请参阅[创建新的资源脚本文件](../windows/how-to-create-a-resource-script-file.md)。
@@ -142,7 +140,7 @@ ms.locfileid: "56226366"
 
 下次保存项目时，新值会存储在符号头文件中。 中的 ID 框中; 只有符号名保持可见它们验证之后，不显示的等号和值。
 
-## <a name="change-or-delete-unassigned-symbols"></a>更改或删除未赋值的符号
+## <a name="change-or-delete-symbols"></a>更改或删除符号
 
 在处于[资源符号对话框](../windows/resource-symbols-dialog-box.md)，可以编辑或删除现有不已分配给资源或对象的符号。
 
@@ -162,7 +160,7 @@ ms.locfileid: "56226366"
    > [!NOTE]
    > 在资源文件中删除未使用的符号之前，请确保它未在程序中的其他位置使用，也未由编译时包含的资源文件使用。
 
-## <a name="include-shared-read-only-or-calculated-symbols"></a>包含共享 （只读） 或计算符号
+## <a name="include-symbols"></a>包含符号
 
 开发环境首次读取由其他应用程序创建的资源文件时，会将所有包含的头文件都标记为只读。 尽管可以使用[资源包括对话框的](../windows/resource-includes-dialog-box.md)添加其他只读符号头文件。
 
@@ -217,6 +215,6 @@ Win32
 
 ## <a name="see-also"></a>请参阅
 
-[符号：资源标识符](../windows/symbols-resource-identifiers.md)<br/>
+[资源标识符 （符号）](../windows/symbols-resource-identifiers.md)<br/>
+[创建符号](../windows/creating-new-symbols.md)<br/>
 [预定义的符号 ID](../windows/predefined-symbol-ids.md)<br/>
-[查看资源符号](../windows/viewing-resource-symbols.md)<br/>

@@ -1,6 +1,6 @@
 ---
 title: 如何：管理资源 （c + +）
-ms.date: 11/04/2016
+ms.date: 02/14/2019
 f1_keywords:
 - vc.resvw.resource.copying
 - vs.resvw.resource.copying
@@ -30,18 +30,16 @@ helpviewer_keywords:
 - cursors [C++], importing and exporting
 - images [C++], exporting
 ms.assetid: 65f523e8-017f-4fc6-82d1-083c56d9131f
-ms.openlocfilehash: e8b976f974e397b8012ebf59ede08ee64f4f7191
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.openlocfilehash: 1f176b3fa19374b402039ecca60e690ade5c0cef
+ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56150787"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56320622"
 ---
 # <a name="how-to-manage-resources-c"></a>如何：管理资源 （c + +）
 
-将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发人员指南*。 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[桌面应用中创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的托管应用中的资源的信息，请参阅[Globalizing and Localizing.NET Framework Applications](/dotnet/standard/globalization-localization/index)。
-
-## <a name="to-copy-resources"></a>若要将资源复制
+## <a name="copy-resources"></a>复制资源
 
 您可以复制资源从一个文件到另一个而不更改它们或者您可以将其复制时更改语言或资源的条件。
 
@@ -77,7 +75,7 @@ ms.locfileid: "56150787"
    > [!NOTE]
    > 若要避免使用符号名称或现有文件中的值冲突，Visual c + + 可能会更改传输的资源的符号值或符号名称和值时将其复制到新文件。
 
-### <a name="to-change-the-language-or-condition-of-a-resource-while-copying"></a>若要复制时更改语言或资源的条件
+### <a name="change-the-language-or-condition-of-a-resource-while-copying"></a>复制时更改语言或资源的条件
 
 在资源中进行复制时，你可以更改其语言属性和/或条件属性。
 
@@ -91,23 +89,21 @@ ms.locfileid: "56150787"
 IDD_AboutBox (Finnish - XX33)
 ```
 
-若要复制的现有资源，并更改其语言或条件：
+#### <a name="to-copy-an-existing-resource-and-change-its-language-or-condition"></a>复制的现有资源并更改其语言或条件
 
 1. 在.rc 文件中或在[资源视图](../windows/resource-view-window.md)窗口中，右键单击你想要复制的资源。
 
-1. 选择**插入副本**从快捷菜单。
-
-1. 在中**插入资源副本**对话框：
+1. 选择**插入副本**快捷菜单设置下列中：
 
    - 有关**语言**列表框中，选择的语言。
 
    - 在中**条件**框中，键入条件。
 
-## <a name="to-edit-managed-resource-files"></a>若要编辑托管的资源文件
+## <a name="edit-resources"></a>编辑资源
 
 托管的资源 (.resx) 文件是 XML 文件。 当将托管的资源文件添加到你的项目从**添加新项**对话框中，**托管资源编辑器**默认情况下打开。
 
-## <a name="to-import-and-export-resources"></a>若要导入和导出资源
+## <a name="import-and-export-resources"></a>导入和导出资源
 
 可以导入图形资源（位图、图标、光标和工具栏）、HTML 文件和自定义资源以便在 Visual C++ 中使用。 可以从 Visual C++ 项目导出相同类型的文件以分隔可以在开发环境外部使用的文件。
 
@@ -131,9 +127,7 @@ IDD_AboutBox (Finnish - XX33)
 
 1. 在中**资源**视图中，右键单击你想要导出的资源。
 
-1. 选择**导出**快捷菜单上。
-
-1. 在中**导出资源**对话框框中，接受当前文件的名称或键入一个新。
+1. 选择**导出**快捷菜单上，接受当前文件的名称或键入一个新。
 
 1. 导航到要保存该文件，并选择的文件夹**导出**。
 
@@ -144,4 +138,5 @@ Win32
 ## <a name="see-also"></a>请参阅
 
 [资源文件](../windows/resource-files-visual-studio.md)<br/>
-[资源编辑器](../windows/resource-editors.md)
+[创建资源](../windows/how-to-create-a-resource-script-file.md)<br/>
+[在编译时包含资源](../windows/how-to-include-resources-at-compile-time.md)<br/>

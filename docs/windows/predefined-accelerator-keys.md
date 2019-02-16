@@ -1,6 +1,6 @@
 ---
 title: 加速键 （c + +）
-ms.date: 11/04/2016
+ms.date: 02/14/2019
 f1_keywords:
 - vc.editors.accelerator
 helpviewer_keywords:
@@ -10,16 +10,14 @@ helpviewer_keywords:
 - menus [C++], shortcut keys
 - keyboard shortcuts [C++], menu association
 ms.assetid: f234c5f2-4ec3-4c9e-834a-b5dd297625b9
-ms.openlocfilehash: 1e87d80b8995760eecda34334dab702480bd9669
-ms.sourcegitcommit: 5beace7dcc6bf0e8b8cc96a930e7424f9daa05cb
+ms.openlocfilehash: 6ef8f84564d6fd1957452971cb1e88dc99aa27e9
+ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55232118"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56320505"
 ---
 # <a name="accelerator-keys-c"></a>加速键 （c + +）
-
-将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发人员指南*。
 
 ## <a name="predefined-accelerator-keys"></a>预定义快捷键
 
@@ -79,7 +77,7 @@ ms.locfileid: "55232118"
 |VK_XBUTTON1|Windows：X1 鼠标按钮|
 |VK_XBUTTON2|Windows：X2 鼠标按钮|
 
-## <a name="associating-an-accelerator-key-with-a-menu-item"></a>将快捷键与菜单项关联
+## <a name="accelerator-key-association"></a>加速器键关联
 
 很多时候，你希望某一菜单项和某一键盘组合可以发出相同的程序命令。 你可以为该菜单项和应用程序的快捷键对应表中的条目分配相同的资源标识符 (ID)，来达到这个目的。 接着你可以编辑该菜单项的标题，以显示快捷键的名称。 菜单项和快捷键的详细信息，请参阅[将菜单项与快捷键相关联](../windows/associating-a-menu-command-with-an-accelerator-key.md)。
 
@@ -90,4 +88,3 @@ Win32
 ## <a name="see-also"></a>请参阅
 
 [快捷键编辑器](../windows/accelerator-editor.md)<br/>
-[资源编辑器](../windows/resource-editors.md)

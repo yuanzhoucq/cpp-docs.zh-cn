@@ -1,6 +1,6 @@
 ---
 title: 快捷键编辑器 （c + +）
-ms.date: 11/04/2016
+ms.date: 02/14/2019
 f1_keywords:
 - vc.editors.accelerator.F1
 - vc.editors.accelerator
@@ -33,12 +33,12 @@ helpviewer_keywords:
 - keyboard shortcuts [C++], property changing
 - accelerator tables [C++], changing properties
 ms.assetid: 013c30b6-5d61-4f1c-acef-8bd15bed7060
-ms.openlocfilehash: 5ece5c7e85a3ef59b728474746e9553a751d43c6
-ms.sourcegitcommit: bec1480a03e7b4070b469a6c131a69f516bbac70
+ms.openlocfilehash: 90ef142336cf88c5e40f78f6cc651b2bb35a0f6c
+ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56226340"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56320635"
 ---
 # <a name="accelerator-editor-c"></a>快捷键编辑器 （c + +）
 
@@ -55,8 +55,6 @@ ms.locfileid: "56226340"
 
    > [!NOTE]
    > Windows 不允许创建空快捷键对应表。 如果创建的快捷键对应表中没有任何条目，在保存表时会被自动删除。
-
-将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发人员指南*。 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[桌面应用中创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的托管应用中的资源的信息，请参阅[Globalizing and Localizing.NET Framework Applications](/dotnet/standard/globalization-localization/index)。
 
 ## <a name="accelerator-properties"></a>快捷键属性
 
@@ -123,9 +121,6 @@ ms.locfileid: "56226340"
 在 c + + 项目中，可以直接使用就地编辑中编辑快捷键对应表**Accelerator**编辑器。
 
 下面的过程涉及到使用标准属性页，但是，就地编辑和属性页面方法都具有相同的结果。 所做的更改使用属性页或使用就地编辑将立即反映在快捷键对应表中。
-
-> [!NOTE]
-> 如果你的项目尚未包含 .rc 文件，请参阅 [创建新的资源脚本文件](../windows/how-to-create-a-resource-script-file.md)。
 
 ### <a name="to-edit-in-an-accelerator-table"></a>在快捷键对应表中编辑
 
@@ -211,7 +206,5 @@ Win32
 
 ## <a name="see-also"></a>请参阅
 
-[资源编辑器](../windows/resource-editors.md)
-
-[在快捷键对应表中编辑](../windows/editing-in-an-accelerator-table.md)<br/>
+[资源编辑器](../windows/resource-editors.md)<br/>
 [预定义快捷键](../windows/predefined-accelerator-keys.md)<br/>

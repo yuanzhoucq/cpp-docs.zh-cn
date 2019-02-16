@@ -1,6 +1,6 @@
 ---
-title: 符号： 资源标识符 （c + +）
-ms.date: 11/04/2016
+title: 资源标识符 （符号） （c + +）
+ms.date: 02/14/2019
 f1_keywords:
 - vc.editors.symbol.identifiers
 helpviewer_keywords:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - symbols [C++], editing
 - resource editors [C++], resource symbols
 ms.assetid: 8fccc09a-0237-4a65-b9c4-57d60c59e324
-ms.openlocfilehash: abe6297d74df4941328d3e606fb3b0f646d36265
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7359fdfd1007cb49025908ffea51093622943052
+ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50529995"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56320492"
 ---
-# <a name="symbols-resource-identifiers-c"></a>符号： 资源标识符 （c + +）
+# <a name="resource-identifiers-symbols-c"></a>资源标识符 （符号） （c + +）
 
 符号是由两部分组成的资源标识符 (ID)：一个文本字符串（符号名）与一个整数值（符号值）映射。 例如：
 
@@ -36,27 +36,11 @@ IDC_EDITNAME = 5100
 
 随着应用程序大小和复杂度的增长，资源和符号的数量也随之增加。 跟踪分散在多个文件中的大量符号就变得尤为困难。 [资源符号对话框](../windows/resource-symbols-dialog-box.md) 可通过提供一个中心工具来简化符号管理，使用该工具可执行以下操作：
 
-- [查看资源符号](../windows/viewing-resource-symbols.md)
+- [创建符号](../windows/creating-new-symbols.md)
 
-- [创建新符号](../windows/creating-new-symbols.md)
-
-- [更改未赋值符号](../windows/changing-unassigned-symbols.md)
-
-- [删除未赋值符号](../windows/deleting-unassigned-symbols.md)
-
-- [打开给定符号的资源编辑器](../windows/opening-the-resource-editor-for-a-given-symbol.md)
-
-- [更改符号或符号名 (ID)](../windows/changing-a-symbol-or-symbol-name-id.md)
-
-- [更改符号的数字值](../windows/changing-a-symbol-s-numeric-value.md)
-
-- [更改符号头文件的名称](../windows/changing-the-names-of-symbol-header-files.md)
-
-- [包含共享（只读）或计算符号](../windows/including-shared-read-only-or-calculated-symbols.md)
+- [管理符号](../windows/changing-a-symbol-or-symbol-name-id.md)
 
 - [查看预定义的符号 ID](../windows/predefined-symbol-ids.md)
-
-有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发人员指南*。 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[桌面应用中创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的托管应用中的资源的信息，请参阅[Globalizing and Localizing.NET Framework Applications](/dotnet/standard/globalization-localization/index)。
 
 ## <a name="requirements"></a>要求
 
@@ -64,6 +48,6 @@ Win32
 
 ## <a name="see-also"></a>请参阅
 
-[如何：在资源中搜索符号](../windows/how-to-search-for-symbols-in-resources.md)<br/>
+[使用资源文件](../windows/working-with-resource-files.md)<br/>
+[资源文件](../windows/resource-files-visual-studio.md)<br/>
 [资源编辑器](../windows/resource-editors.md)<br/>
-[资源文件](../windows/resource-files-visual-studio.md)

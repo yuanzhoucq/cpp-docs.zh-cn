@@ -23,13 +23,23 @@ helpviewer_keywords:
 - context menus [C++], connecting to applications
 - shortcut menus [C++], connecting to applications
 - pop-up menus
+- menu commands [C++], selecting
+- menus [C++], selecting
+- commands [C++], menu commands
+- commands [C++], copying on menus
+- menu items, moving
+- commands [C++], moving on menus
+- menu items, copying
+- menu items, deleting
+- commands [C++], deleting from menus
+- menus [C++], deleting
 ms.assetid: 66f94448-9b97-4b73-bf97-10d4bf87cc65
-ms.openlocfilehash: e3b3cc58b82f68c55ac98601fd11775422c901e5
-ms.sourcegitcommit: 5a7dbd640376e13379f5d5b2cf66c4842e5e737b
+ms.openlocfilehash: da5fc355ae11ee5efb1c58be9e33bd4fb8bff02d
+ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55905766"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56320518"
 ---
 # <a name="creating-menus-c"></a>创建菜单 （c + +）
 
@@ -38,7 +48,7 @@ ms.locfileid: "55905766"
 
 将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发人员指南*。 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[桌面应用中创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的托管应用中的资源的信息，请参阅[Globalizing and Localizing.NET Framework Applications](/dotnet/standard/globalization-localization/index)。
 
-## <a name="to-create-a-standard-menu"></a>创建标准菜单
+## <a name="create-a-standard-menu"></a>创建标准菜单
 
 1. 从**视图**菜单中，选择**资源视图**，然后右键单击**菜单**标题并选择**添加资源**。 选择 **“菜单”**。
 
@@ -59,7 +69,7 @@ ms.locfileid: "55905766"
    > [!NOTE]
    > 若要在菜单栏上创建单项菜单，请设置**Popup**属性设置为**False**。
 
-## <a name="to-create-a-submenu"></a>创建子菜单
+## <a name="create-a-submenu"></a>创建子菜单
 
 1. 选择你想要创建子菜单的菜单命令。
 
@@ -75,7 +85,7 @@ ms.locfileid: "55905766"
 
 在菜单栏上右键单击并选择**插入新**从快捷菜单。
 
-## <a name="to-add-commands-to-a-menu"></a>将命令添加到菜单
+## <a name="add-commands-to-a-menu"></a>将命令添加到菜单
 
 1. 创建菜单。
 
@@ -104,7 +114,7 @@ ms.locfileid: "55905766"
 
    将选定新项框，让你可以创建其他菜单命令。
 
-## <a name="to-create-pop-up-menus"></a>若要创建弹出菜单
+## <a name="create-pop-up-menus"></a>创建弹出菜单
 
 [弹出菜单](../mfc/menus-mfc.md) 显示常用命令。 它们对指针的位置可以区分上下文。 在应用程序中使用弹出菜单需要先生成菜单，然后将菜单连接到应用程序代码。
 
@@ -150,6 +160,52 @@ ms.locfileid: "55905766"
 
    > [!NOTE]
    > 若要改回菜单栏视图，请单击**以弹出方式查看**再次 （它将删除复选标记，并返回菜单栏视图）。
+
+## <a name="edit-multiple-menus-or-menu-commands"></a>编辑多个菜单或菜单命令
+
+### <a name="to-select-multiple-menu-commands"></a>选择多个菜单命令
+
+可以选择多个菜单名称或要运行大容量操作，如删除或更改属性的菜单命令。
+
+在按下**Ctrl**密钥，请选择菜单或所需的子菜单命令。
+
+### <a name="to-move-and-copy-menus-and-menu-commands"></a>若要移动和复制菜单和菜单命令
+
+可以使用拖放方法或使用快捷菜单（右击菜单）上的命令来移动或复制菜单和菜单命令。
+
+#### <a name="to-move-or-copy-menus-or-menu-commands-using-the-drag-and-drop-method"></a>使用拖放方法移动或复制菜单或菜单命令
+
+1. 拖动或复制要移到下列位置的项：
+
+   - 当前菜单上的新位置。
+
+   - 不同的菜单。 （可以通过在其他菜单上拖动鼠标指针来导航到这些菜单。）
+
+1. 当插入参考线显示所需位置时放下菜单命令。
+
+#### <a name="to-move-or-copy-menus-or-menu-commands-using-shortcut-menu-commands"></a>使用快捷菜单命令移动或复制菜单或菜单命令
+
+1. 右键单击一个或多个菜单或菜单命令。
+
+1. 从快捷菜单中选择 **“剪切”** （移动）或 **“复制”**。
+
+1. 如果要将项移动到另一个菜单资源或资源脚本文件，[在另一个窗口中打开它](/visualstudio/ide/customizing-window-layouts-in-visual-studio)。
+
+1. 选择要将菜单或菜单命令移动或复制到的位置。
+
+1. 从快捷菜单中选择 **“粘贴”**。 被移动或复制的项放在选定项的前面。
+
+   > [!NOTE]
+   > 还可以拖动、复制和粘贴到其他菜单窗口中的其他菜单中。
+
+### <a name="to-delete-a-menu-or-menu-command"></a>若要删除菜单或菜单命令
+
+1. 右键单击菜单名称或命令。
+
+1. 从快捷菜单选择 **“删除”** 。
+
+   > [!NOTE]
+   > 同样，可以使用快捷菜单来执行其他操作，例如，复制、剪切、粘贴、插入新项、插入分隔符、编辑 ID、以弹出方式查看、检查助记键等。
 
 ## <a name="requirements"></a>要求
 
