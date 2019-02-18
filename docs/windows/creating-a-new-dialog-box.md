@@ -1,6 +1,6 @@
 ---
-title: 创建一个对话框 （c + +）
-ms.date: 11/04/2016
+title: 如何：创建一个对话框 （c + +）
+ms.date: 02/15/2019
 f1_keywords:
 - vc.editors.dialog
 helpviewer_keywords:
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - dialog boxes [C++], size
 - dialog boxes [C++], positioning
 ms.assetid: 303de801-c4f8-42e1-b622-353f6423f688
-ms.openlocfilehash: a3b8143d3a70906f910a445816a188913a593e5d
-ms.sourcegitcommit: eb2b34a24e6edafb727e87b138499fa8945f981e
+ms.openlocfilehash: c757c82978a5107374e6de2f8cff24319ed64f9c
+ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56264811"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56336470"
 ---
-# <a name="creating-a-dialog-box-c"></a>创建一个对话框 （c + +）
+# <a name="how-to-create-a-dialog-box-c"></a>如何：创建一个对话框 （c + +）
 
 位置和大小的 c + + 对话框中，和位置中，控件的大小以对话框单元为单位测量。 当选择 Visual Studio 状态栏的右下角显示各个控件和对话框中的值。
 
@@ -39,8 +39,6 @@ ms.locfileid: "56264811"
    > 与使用向导生成的对话框代码的连接不包括在此模拟中。
 
 当测试对话框时，它通常显示在与主程序窗口相对的位置。 如果你已设置对话框的**Absolute Align**属性设置为**True**，对话框会显示在相对于屏幕的左上角的位置。
-
-将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发人员指南*。 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[桌面应用中创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的托管应用中的资源的信息，请参阅[Globalizing and Localizing.NET Framework Applications](/dotnet/standard/globalization-localization/index)。
 
 ## <a name="to-create-a-new-dialog-box"></a>若要创建新的对话框
 
@@ -82,7 +80,7 @@ ms.locfileid: "56264811"
 
 1. 当**对话框中**编辑器为活动窗口时，在菜单栏上的，选择**格式** > **测试对话框**。
 
-1. 若要结束此模拟，按**Esc**，或只需选择**关闭**要测试的对话框中的按钮。
+1. 若要结束此模拟，按**Esc**或选择**关闭**要测试的对话框中的按钮。
 
 ## <a name="requirements"></a>要求
 

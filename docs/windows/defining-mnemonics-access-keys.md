@@ -1,6 +1,6 @@
 ---
 title: 定义控制访问权限和值
-ms.date: 11/04/2016
+ms.date: 02/15/2019
 f1_keywords:
 - vc.editors.dialog.combo
 helpviewer_keywords:
@@ -22,16 +22,14 @@ helpviewer_keywords:
 - Data property
 - combo boxes [C++], testing values
 ms.assetid: 60a85435-aa30-4c5c-98b6-42fb045b9eb2
-ms.openlocfilehash: 3a885ad57ba05304d51cb45d0b498d81ad37a148
-ms.sourcegitcommit: eb2b34a24e6edafb727e87b138499fa8945f981e
+ms.openlocfilehash: 20319cd08d6d1e77faef1275e63bf3ffd354356b
+ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56264850"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56336483"
 ---
 # <a name="defining-control-access-and-values"></a>定义控制访问权限和值
-
-将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发人员指南*。 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[桌面应用中创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的托管应用中的资源的信息，请参阅[Globalizing and Localizing.NET Framework Applications](/dotnet/standard/globalization-localization/index)。
 
 ## <a name="change-the-tab-order-of-controls"></a>更改控件的 tab 键顺序
 
@@ -48,11 +46,7 @@ Tab 键顺序为依据的顺序**选项卡**键将输入的焦点从一个控件
 
 ### <a name="to-view-the-current-tab-order-for-all-controls-in-a-dialog-box"></a>若要在对话框中查看当前的所有控件的 tab 键顺序
 
-上**格式**菜单中，选择**tab 键顺序**。
-
-\- 或 -
-
-- 按**Ctrl** + **D**。
+转到**格式**菜单，然后选择**tab 键顺序**，或按**Ctrl** + **D**。
 
 ### <a name="to-change-the-tab-order-for-all-controls-in-a-dialog-box"></a>若要更改的对话框中的所有控件的 tab 键顺序
 
@@ -60,7 +54,7 @@ Tab 键顺序为依据的顺序**选项卡**键将输入的焦点从一个控件
 
    每个控件的左上角的数字的当前选项卡顺序显示其位置。
 
-1. 通过单击所需的顺序在每个控件设置 tab 键顺序**选项卡**键遵循。
+1. 通过选择所需的顺序中的每个控件设置 tab 键顺序**选项卡**键遵循。
 
 1. 按**Enter**退出**tab 键顺序**模式。
 
@@ -90,9 +84,9 @@ Tab 键顺序为依据的顺序**选项卡**键将输入的焦点从一个控件
 
 1. 选择对话框的上的控件。
 
-2. 中[属性窗口](/visualstudio/ide/reference/properties-window)，在**标题**属性中，键入新名称进行控制，键入 & 符 (`&`) 要将该控件的访问密钥作为字母前。 例如 `&Radio1`。
+1. 中[属性窗口](/visualstudio/ide/reference/properties-window)，在**标题**属性中，键入新名称进行控制，键入 & 符 (`&`) 要将该控件的访问密钥作为字母前。 例如 `&Radio1`。
 
-3. 按 **Enter**。
+1. 按 **Enter**。
 
    在显示的标题以指示访问密钥，例如，会出现下划线**R**adio1。
 
@@ -100,17 +94,14 @@ Tab 键顺序为依据的顺序**选项卡**键将输入的焦点从一个控件
 
 1. 通过使用使控件的标题**静态文本**控制[工具箱](/visualstudio/ide/reference/toolbox)。
 
-2. 在静态文本标题中，输入与号 (`&`) 所需的访问密钥作为字母前。
+1. 在静态文本标题中，输入与号 (`&`) 所需的访问密钥作为字母前。
 
-3. 请确保静态文本控件紧跟其 tab 键顺序标记的控件。
+1. 请确保静态文本控件紧跟其 tab 键顺序标记的控件。
 
-对话框中的所有访问键应都是唯一的。
+> [!NOTE]
+> 对话框中的所有访问键应都是唯一的。 若要检查重复的访问密钥，请转到**格式**菜单，然后选择**检查助记键**。
 
-### <a name="to-check-for-duplicate-access-keys"></a>若要检查重复的访问键
-
-1. 上**格式**菜单上，单击**检查助记键**。
-
-## <a name="add-values-to-a-combo-box-control"></a>将值添加到组合框控件
+## <a name="combo-box-values"></a>组合框值
 
 可以将值添加到组合框控件中，只要您具有**对话框**编辑器中，打开。
 
@@ -119,7 +110,7 @@ Tab 键顺序为依据的顺序**选项卡**键将输入的焦点从一个控件
 
 ### <a name="to-enter-values-into-a-combo-box-control"></a>若要在组合框控件中输入值
 
-1. 通过单击选择组合框控件。
+1. 通过选择它来选择组合框控件。
 
 1. 在中[属性窗口](/visualstudio/ide/reference/properties-window)，向下滚动到**数据**属性。
 
@@ -129,7 +120,7 @@ Tab 键顺序为依据的顺序**选项卡**键将输入的焦点从一个控件
 1. 选择的值域**数据**属性并键入你的数据值，用分号分隔。
 
    > [!NOTE]
-   > 不要将值之间的空间，因为空格会按字母顺序排列在下拉列表中。
+   > 请勿放入值之间的空间，因为空格会按字母顺序排列在下拉列表中。
 
 1. 按**Enter**完后添加值。
 
@@ -145,6 +136,40 @@ Tab 键顺序为依据的顺序**选项卡**键将输入的焦点从一个控件
    请重试整个值列表中向下滚动。 显示的值中键入与完全**数据**属性中的**属性**窗口。 不不存在任何拼写或大小写检查。
 
    按**Esc**回到**对话框的**编辑器。
+
+   现在可以通过修改代码来指定哪个单选按钮为选中状态。 例如，`m_radioBox1 = 0;`选择第一个单选按钮组中。
+现在可以通过修改代码来指定哪个单选按钮为选中状态。 例如，`m_radioBox1 = 0;`选择第一个单选按钮组中。
+
+## <a name="radio-button-values"></a>单选按钮值
+
+当向对话框添加单选按钮时，将它们视为一组通过设置**组**属性中的**属性**组中的第一个按钮的窗口。 然后该单选按钮的控件 ID 出现在 [添加成员变量向导](../ide/add-member-variable-wizard.md)中，让你可以添加单选按钮组的成员变量。
+
+出现在对话框中，可以具有多个组单选按钮。 添加每个组，请使用以下过程。
+
+### <a name="to-add-a-group-of-radio-buttons-to-a-dialog-box"></a>向对话框添加一组单选按钮
+
+1. 选择单选按钮控件中的[工具箱窗口](/visualstudio/ide/reference/toolbox)和放置控件的位置在对话框中选择的位置。
+
+1. 重复上述步骤以添加所需的任意多个单选按钮。 请确保组中的单选按钮是连续的 tab 键顺序。
+
+1. 在 [属性窗口](/visualstudio/ide/reference/properties-window)中，请将按照 Tab 键顺序排列的第一个单选按钮的 **组** 属性  设置为 **True**。
+
+   更改**组**属性设置为**True**将 WS_GROUP 样式添加到资源脚本的对话框对象中的按钮条目并阻止用户可以在中的一次选择多个单选按钮按钮组 （如果用户选择一个单选按钮，组中其他都被清除）。
+
+   > [!NOTE]
+   > 只有组中第一个单选按钮的 **组** 属性应设置为 **True**。 如果你的不是按钮组的一部分的其他控件，设置**组**的第一个控件的属性 *，则将组外*到**True**以及。 你可以快速确定使用的组之外的第一个控件**Ctrl**+**D**若要查看的 tab 键顺序。
+
+### <a name="to-add-a-member-variable-for-the-radio-button-group"></a>添加单选按钮组的成员变量
+
+1. 右键单击 tab 键顺序中的第一个单选按钮控件 (主导控件和一个**组**属性设置为**True**)，然后选择**添加变量**从快捷菜单。
+
+1. 在 [添加成员变量向导](../ide/add-member-variable-wizard.md)中，选择 **“控制变量”** 复选框，然后选择 **“值”** 单选按钮。
+
+1. 在 **“变量名称”** 框中键入新成员变量的名称。
+
+1. 在**变量类型**列表框中，选择**int**或类型*int*。
+
+   现在可以通过修改代码来指定哪个单选按钮为选中状态。 例如，`m_radioBox1 = 0;`选择第一个单选按钮组中。
 
 ## <a name="requirements"></a>要求
 

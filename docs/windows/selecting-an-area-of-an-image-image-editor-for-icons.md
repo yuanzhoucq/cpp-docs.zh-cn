@@ -1,6 +1,6 @@
 ---
-title: 编辑图像
-ms.date: 11/04/2016
+title: 如何：编辑图像
+ms.date: 02/15/2019
 f1_keywords:
 - vc.editors.image.editing
 - vc.editors.image.editing
@@ -40,14 +40,14 @@ helpviewer_keywords:
 - Image editor [C++], Properties window
 - Properties window, image editor
 ms.assetid: 8b6ce4ad-eba1-4ece-86ba-cea92c3edff2
-ms.openlocfilehash: 928a37d1b85378c3c50f41dba441259ace2d3af9
-ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
+ms.openlocfilehash: 906244b692253a8423af55eb91d46622087713e3
+ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56320674"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56336522"
 ---
-# <a name="editing-an-image"></a>编辑图像
+# <a name="how-to-edit-an-image"></a>如何：编辑图像
 
 选择工具可用于定义你想要剪切、 复制、 清除、 重设大小、 反转，或移动的图像的区域。 与**矩形选择**工具可以定义并选择图像的矩形区域。 与**不规则选择**工具可以绘制需选择它以执行剪切、 复制或其他操作的区域的徒手画的轮廓。
 
@@ -56,9 +56,7 @@ ms.locfileid: "56320674"
 
 此外可以从选定项创建自定义画笔。 有关详细信息，请参阅[创建自定义画笔](../windows/creating-a-custom-brush-image-editor-for-icons.md)。
 
-将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发人员指南*。 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[桌面应用中创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的托管应用中的资源的信息，请参阅[Globalizing and Localizing.NET Framework Applications](/dotnet/standard/globalization-localization/index)。
-
-## <a name="selecting-an-image"></a>选择图像
+## <a name="select-an-image"></a>选择一个映像
 
 1. 上**的图像编辑器**工具栏 (或从**映像**菜单中，**工具**命令)，选择你想选择工具。
 
@@ -72,7 +70,7 @@ ms.locfileid: "56320674"
 
 1. 选择当前所选内容之外的映像。 选择边框焦点更改，然后再一次包含整个图像。
 
-## <a name="editing-parts-of-an-image"></a>编辑图像的各个部分
+## <a name="edit-parts-of-an-image"></a>编辑图像的部分
 
 您可以执行标准的编辑操作 — 剪切、 复制、 清除和移动 — 上[选择](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)、 所选内容是否整个图像或它的其中一部分。 因为**图像**编辑器使用**Windows 剪贴板**，可以传输之间的映像**图像**编辑器和其他用于 Windows 应用程序。
 
@@ -119,7 +117,7 @@ ms.locfileid: "56320674"
 
 通过选择绘图的详细信息，请参阅[创建自定义画笔](../windows/creating-a-custom-brush-image-editor-for-icons.md)。
 
-## <a name="flipping-an-image"></a>翻转图像
+## <a name="flip-an-image"></a>翻转图像
 
 可以翻转或旋转图像来创建原始镜像映像、 将图像上下颠倒，或将右侧图像旋转 90 度，一次。
 
@@ -132,7 +130,7 @@ ms.locfileid: "56320674"
    > [!NOTE]
    > 此外可以使用[加速 （快捷） 键](../windows/accelerator-keys-image-editor-for-icons.md)这些命令或从快捷菜单 （外部图像与图像编辑器中单击） 访问这些命令。
 
-## <a name="resizing-an-image"></a>调整图像的大小
+## <a name="resize-an-image"></a>调整图像大小
 
 行为**图像**编辑器时调整图像的大小取决于是否已[选](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)整个图像或只是它的一部分。
 
@@ -185,7 +183,7 @@ ms.locfileid: "56320674"
 
 1. 拖动调整大小控点之一，直到所选内容是适当的大小。
 
-## <a name="editing-an-image-outside-of-a-project"></a>在项目外部编辑图像
+## <a name="edit-an-image-outside-of-a-project"></a>编辑在项目外部图像
 
 您可以打开并编辑开发环境中的映像，只需像在任何图形应用程序中。 您使用的映像不需要独立编辑的 Visual Studio 项目的一部分。
 
@@ -197,7 +195,7 @@ ms.locfileid: "56320674"
 
 1. 找到并打开你想要编辑的图像。
 
-## <a name="changing-image-properties"></a>更改图像属性
+## <a name="change-image-properties"></a>更改图像属性
 
 可以设置或修改映像使用的属性[属性窗口](/visualstudio/ide/reference/properties-window)。
 

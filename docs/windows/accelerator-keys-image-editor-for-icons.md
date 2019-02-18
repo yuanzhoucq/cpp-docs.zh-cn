@@ -1,6 +1,6 @@
 ---
 title: 快捷键 （图标的图像编辑器 c + +）
-ms.date: 11/04/2016
+ms.date: 02/15/2019
 f1_keywords:
 - vc.editors.bitmap
 - vc.editors.icon
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - accelerator keys
 - Image editor [C++], accelerator keys
 ms.assetid: add37861-3e17-4a6f-89e8-46df12e74a90
-ms.openlocfilehash: 062b860849d968e18657afb66b568a1bf6f2b6d6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 604f97edc8e4e49bad477d76e0e46334b8cf726b
+ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505100"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56336529"
 ---
 # <a name="accelerator-keys-c-image-editor-for-icons"></a>快捷键 （图标的图像编辑器 c + +）
 
@@ -61,8 +61,6 @@ ms.locfileid: "50505100"
 |Image.UseSelectionAsBrush|**Ctrl** + **U**|将当前所选内容用作画笔来绘制。|
 |图像.放大|**Ctrl** + **Shift** + **。** （句点）<br /><br /> - 或 -<br /><br /> **Ctrl** + **向上键**|增加当前视图的放大倍数。|
 |图像.缩小|**Ctrl** + **，** （逗号）<br /><br /> - 或 -<br /><br /> **Ctrl** + **向下箭头**|减小当前视图的放大倍数。|
-
-有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发人员指南*。 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[桌面应用中创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的托管应用中的资源的信息，请参阅[Globalizing and Localizing.NET Framework Applications](/dotnet/standard/globalization-localization/index)。
 
 ## <a name="requirements"></a>要求
 

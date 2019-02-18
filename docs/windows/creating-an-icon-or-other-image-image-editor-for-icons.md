@@ -1,6 +1,6 @@
 ---
-title: 创建图标或其他图像
-ms.date: 11/04/2016
+title: 如何：创建图标或其他图像
+ms.date: 02/15/2019
 f1_keywords:
 - vc.editors.bitmap
 - vc.editors.icon
@@ -87,14 +87,14 @@ helpviewer_keywords:
 - graphics [C++], converting formats
 - images [C++], converting formats
 ms.assetid: 66db3fb2-cfc1-48a2-9bdd-53f61eb7ee30
-ms.openlocfilehash: 3ce4d10c9ab085973f1ab00dba205c22ff17f42f
-ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
+ms.openlocfilehash: 69fffc71a7b5dfad12e70a9132fc61b11a0914cc
+ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56320726"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56336587"
 ---
-# <a name="creating-an-icon-or-other-image"></a>创建图标或其他图像
+# <a name="how-to-create-an-icon-or-other-image"></a>如何：创建图标或其他图像
 
 可以创建新的映像 （位图、 图标、 游标或工具栏），然后使用图像编辑器自定义其外观。 此外可以创建新的位图采用[模板](../windows/how-to-use-resource-templates.md)。
 
@@ -133,13 +133,9 @@ ms.locfileid: "56320726"
 
 当你打开中的图标或光标资源[的图像编辑器](../windows/image-editor-for-icons.md)，默认情况下将打开大多数紧密匹配当前的显示设备的图像。
 
-#### <a name="new-ltdevicegt-image-type-dialog-box"></a>新&lt;设备&gt;映像类型对话框
-
 **新建&lt;设备&gt;映像类型**对话框中，可创建指定类型的新设备图像。 若要打开**新建\<设备 > 图像**对话框中，选择**新建图像类型**上**映像**菜单。 包含的以下属性是**目标图像类型**并**自定义**。
 
-##### <a name="target-image-type"></a>目标图像类型
-
-列出了可用的图像类型。 选择想要打开的映像类型：
+**目标图像类型**属性列出了可用的图像类型。 选择想要打开的映像类型：
 
 ||||
 |-|-|-|
@@ -153,9 +149,7 @@ ms.locfileid: "56320726"
 > [!NOTE]
 > 任何现有的映像将不显示在此列表中。
 
-##### <a name="custom"></a>自定义
-
-此时将打开**自定义映像**对话框可以创建新的映像使用自定义的大小和颜色数。
+**自定义**属性将打开**自定义映像**对话框可以创建新的映像使用自定义的大小和颜色数。
 
 **自定义映像**对话框中，可创建新的映像使用自定义的大小和颜色数。 是包含的以下属性：
 
@@ -164,8 +158,6 @@ ms.locfileid: "56320726"
 |**Width**|提供空间以输入自定义图像的宽度以像素为单位 （1-512，限制 2048年）。|
 |**Height**|提供空间以输入自定义映像以像素为单位 （1-512，限制 2048年） 的高度。|
 |**颜色**|提供空间以选择自定义图像的颜色数：2、 16 或 256。|
-
-#### <a name="open-ltdevicegt-image-dialog-box"></a>打开&lt;设备&gt;图像对话框
 
 使用**打开&lt;设备&gt;映像**对话框可以在 c + + 项目中打开设备图像。 它列出了当前资源 （属于当前资源的映像） 中的现有设备图像。 是包含以下属性：
 
@@ -184,13 +176,13 @@ ms.locfileid: "56320726"
 
    如果一个加号 (**+**) 中的图像资源类型旁边会显示**插入资源**对话框中，这意味着工具栏模板都可用。 选择加号以展开模板列表中的，选择一个模板，然后选择**新建**。
 
-### <a name="add-an-image-for-a-different-display-device"></a>添加不同的显示设备的图像
+### <a name="to-add-an-image-for-a-different-display-device"></a>若要添加不同的显示设备的图像
 
 1. 上**图像**菜单中，选择**新设备图像**(或右键单击**的图像编辑器**窗格中，然后选择**新设备图像**从快捷菜单）。
 
 1. 选择你想要添加的图像的类型。 您还可以选择**自定义**以创建其大小不可用的默认列表中的图标。
 
-### <a name="copy-a-device-image"></a>复制设备图像
+### <a name="to-copy-a-device-image"></a>复制设备图像
 
 1. 上**图像**菜单中，选择**打开设备图像**和从当前的图像列表中选择映像。 例如，选择 32 × 32，16 色版本的图标。
 
@@ -200,14 +192,14 @@ ms.locfileid: "56320726"
 
 1. 粘贴图标图像 (**Ctrl**+**V**) 从一个**图像编辑器**到其他窗口。 如果您要粘贴到较小的大小更大的大小，可以使用图标句柄来调整图像的大小。
 
-### <a name="delete-a-device-image"></a>删除设备图像
+### <a name="to-delete-a-device-image"></a>若要删除设备图像
 
 在显示的图标图像同时**图像**编辑器中，选择**删除设备图像**从**图像**菜单。 当您删除的资源中的最后一个图标图像时，也会删除该资源。
 
    > [!NOTE]
    > 当您按下**Del**键、 图像和颜色绘制图标会删除，但是图标将保持; 现在可以重新设计它。 如果按下**Del**错误地，可以按**Ctrl**+**Z**要撤消的操作。
 
-### <a name="create-transparent-or-inverse-regions-in-device-images"></a>在设备图像中创建透明或反转区域
+### <a name="to-create-transparent-or-inverse-regions-in-device-images"></a>若要在设备图像中创建透明或反转区域
 
 在中[的图像编辑器](../windows/image-editor-for-icons.md)，初始的图标或光标图像有透明特性。 尽管图标和光标图像矩形，但许多没有出现，因为图像的部分是透明的;通过图标或光标显示在屏幕上的基础映像。 当您拖动的图标图像的部分可能会出现在倒排的颜色。 通过设置屏幕颜色和中的反转颜色创建这种效果[颜色窗口](../windows/colors-window-image-editor-for-icons.md)。
 
@@ -343,8 +335,6 @@ ms.locfileid: "56320726"
 
    > [!NOTE]
    > 你要编辑的任何托管资源都必须是链接的资源。 Visual Studio 资源编辑器不支持编辑嵌入的资源。 有关详细信息，请参阅[创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)中 *.NET Framework 开发人员指南*。
-
-将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发人员指南*。 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[桌面应用中创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的托管应用中的资源的信息，请参阅[Globalizing and Localizing.NET Framework Applications](/dotnet/standard/globalization-localization/index)。
 
 ## <a name="requirements"></a>要求
 

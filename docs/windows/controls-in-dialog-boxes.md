@@ -1,6 +1,6 @@
 ---
 title: 控件在对话框 （c + +） |Microsoft Docs
-ms.date: 11/04/2016
+ms.date: 02/15/2019
 f1_keywords:
 - Custom Control
 helpviewer_keywords:
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - dialog box controls [C++], custom (user) controls
 - Dialog Editor [C++], custom controls
 ms.assetid: e216c4f9-2fd4-429d-889a-8ebce7bad177
-ms.openlocfilehash: 1f231a376b335d7fb711ef2039c13f49624e6bfb
-ms.sourcegitcommit: eb2b34a24e6edafb727e87b138499fa8945f981e
+ms.openlocfilehash: 6360491ebb4478ee4ce22115eced7ed672866565
+ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56264837"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56336509"
 ---
 # <a name="controls-in-dialog-boxes-c"></a>控件在对话框 （c + +）
 
@@ -30,25 +30,11 @@ ms.locfileid: "56264837"
 
 向对话框添加控件后，可以更改属性，例如其标题[属性窗口](/visualstudio/ide/reference/properties-window)。 可以选择多个控件，并一次性更改它们的属性。
 
-- [添加、编辑或删除控件](adding-editing-or-deleting-controls.md)
+- [如何：添加、 编辑或删除控件](adding-editing-or-deleting-controls.md)
 
-- [“选择”控件](../windows/selecting-controls.md)
+- [如何：排列控件](../windows/arrangement-of-controls-on-dialog-boxes.md)
 
-- [调整单个控件的大小](../windows/sizing-individual-controls.md)
-
-- [使控件具有相同的宽度、高度或大小](../windows/making-controls-the-same-width-height-or-size.md)
-
-- [设置组合框及其下拉列表的大小](setting-the-size-of-the-combo-box-and-its-drop-down-list.md)
-
-- [向组合框控件添加值](../windows/adding-values-to-a-combo-box-control.md)
-
-- [设置水平滚动条的宽度](../windows/setting-the-width-of-a-horizontal-scroll-bar.md)
-
-- [对话框上的控件排列](../windows/arrangement-of-controls-on-dialog-boxes.md)
-
-- [定义助记键（访问键）](../windows/defining-mnemonics-access-keys.md)
-
-- [指定对话框的位置和大小](../windows/specifying-the-location-and-size-of-a-dialog-box.md)
+- [如何：定义控制访问权限和值](../windows/defining-mnemonics-access-keys.md)
 
 提供的标准控件**工具箱**事件是默认值：
 
@@ -110,8 +96,6 @@ ms.locfileid: "56264837"
 - 键入一个 32 位十六进制值，该值设置控件的样式。
 
 - 设置扩展的样式。
-
-将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发人员指南*。 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[桌面应用中创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的托管应用中的资源的信息，请参阅[Globalizing and Localizing.NET Framework Applications](/dotnet/standard/globalization-localization/index)。
 
 ## <a name="requirements"></a>要求
 
