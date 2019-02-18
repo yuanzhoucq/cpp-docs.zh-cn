@@ -1,6 +1,6 @@
 ---
-title: 图标的图像编辑器
-ms.date: 10/17/2018
+title: （c + +） 图标的图像编辑器
+ms.date: 02/15/2019
 f1_keywords:
 - vc.editors.cursor.F1
 - vc.editors.icon.F1
@@ -42,14 +42,14 @@ helpviewer_keywords:
 - Image editor [C++], grid settings
 - grid settings, Image editor
 ms.assetid: 586d2b8b-0348-4883-a85d-1ff0ddbf14dd
-ms.openlocfilehash: 48b363b7b9021042fe6242be70c74f0daeade0c2
-ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
+ms.openlocfilehash: 782462a4aeba72252c4d6043bd192f6892a3966f
+ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56320700"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56336574"
 ---
-# <a name="image-editor-for-icons"></a>图标的图像编辑器
+# <a name="image-editor-for-icons-c"></a>（c + +） 图标的图像编辑器
 
 单击解决方案资源管理器的图像文件 （如.ico、.bmp、.png），图像将图像编辑器中打开方式在代码编辑器中打开代码文件完全相同。 图像编辑器选项卡处于活动状态，可以看到与用于创建和编辑映像的许多工具工具栏。 以及位图、 图标和光标，你可以编辑 GIF 或 JPEG 格式上使用命令的图像**图像**菜单和上的工具**图像编辑器**工具栏。
 
@@ -231,8 +231,6 @@ ms.locfileid: "56320700"
 ## <a name="managed-resources"></a>托管资源
 
 可以使用**图像**编辑器并[二进制编辑器](binary-editor.md)来处理托管项目中的资源文件。 你要编辑的任何托管资源都必须是链接的资源。 Visual Studio 资源编辑器不支持编辑嵌入的资源。
-
-将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发人员指南*。 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[桌面应用中创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的托管应用中的资源的信息，请参阅[Globalizing and Localizing.NET Framework Applications](/dotnet/standard/globalization-localization/index)。
 
 ## <a name="requirements"></a>要求
 

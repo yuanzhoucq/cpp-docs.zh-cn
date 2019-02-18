@@ -1,6 +1,6 @@
 ---
 title: 对话框编辑器 （c + +）
-ms.date: 11/04/2016
+ms.date: 02/15/2019
 f1_keywords:
 - vc.editors.dialog.dialog
 - vc.editors.dialog.F1
@@ -23,12 +23,12 @@ helpviewer_keywords:
 - Dialog Editor [C++], switching between controls and code
 - Dialog Editor [C++], shortcut keys
 ms.assetid: d94884ef-2cca-49d8-9b58-775f34848134
-ms.openlocfilehash: 827a7610aa919d5349313346ac0bfa80bd0647b0
-ms.sourcegitcommit: eb2b34a24e6edafb727e87b138499fa8945f981e
+ms.openlocfilehash: fef4a7f0d4c785a40ea946127d8e3c84c797e1aa
+ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56264889"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56336691"
 ---
 # <a name="dialog-editor-c"></a>对话框编辑器 （c + +）
 
@@ -38,28 +38,18 @@ ms.locfileid: "56264889"
 
 可将对话框存储为模板以便重复使用。 也可在设计对话框和编辑实现它的代码之间进行轻松切换。
 
-还可在对话框编辑器中编辑单个或多个控件的属性。 您可以更改 tab 键顺序，即，的顺序控件获得焦点**选项卡**按下键，也可以定义允许用户选择使用键盘控制的访问键 （组合键）。 有关预设的访问键列表，请参阅 [对话框编辑器的快捷键](../windows/accelerator-keys-for-the-dialog-editor.md)。
+还可在对话框编辑器中编辑单个或多个控件的属性。 您可以更改 tab 键顺序，即，的顺序控件获得焦点**选项卡**按下键，也可以定义允许用户选择使用键盘控制的访问键 （组合键）。
 
 **对话框**编辑器还允许你使用自定义控件，包括 ActiveX 控件。 此外，可以编辑 [窗体视图](../mfc/reference/cformview-class.md)、 [记录视图](../data/record-views-mfc-data-access.md)或 [对话栏](../mfc/dialog-bars.md)。
 
 从 Visual Studio 2015 开始，你可以使用对话框编辑器定义动态布局，指定控件如何移动和调整用户调整对话框大小时。 有关详细信息，请参阅 [Dynamic Layout](../mfc/dynamic-layout.md)。
 
-- [创建新对话框](../windows/creating-a-new-dialog-box.md)
-
-- [创建用户在运行时无法退出的对话框](../windows/creating-a-dialog-box-that-users-cannot-exit.md)
+- [如何：创建对话框](../windows/creating-a-new-dialog-box.md)
 
 - [对话框中的控件](../windows/controls-in-dialog-boxes.md)
 
-- [添加对话框控件的事件处理程序](../windows/adding-event-handlers-for-dialog-box-controls.md)
-
-- [测试对话框](../windows/testing-a-dialog-box.md)
-
-- [对话框编辑器疑难解答](../windows/troubleshooting-the-dialog-editor.md)
-
    > [!TIP]
-   > 使用时**对话框**编辑器中的，在许多情况下，您可以单击鼠标右键以显示常用命令的快捷菜单。
-
-将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发人员指南*。 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[桌面应用中创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的托管应用中的资源的信息，请参阅[Globalizing and Localizing.NET Framework Applications](/dotnet/standard/globalization-localization/index)。
+   > 使用时**对话框**编辑器中，在许多情况下，您可以选择以显示常用命令的快捷菜单的鼠标右键按钮。
 
 ## <a name="dialog-editor-toolbar"></a>对话框编辑器工具栏
 

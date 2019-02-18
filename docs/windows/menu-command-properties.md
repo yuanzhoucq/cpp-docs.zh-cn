@@ -1,6 +1,6 @@
 ---
-title: 菜单命令属性 （c + +）
-ms.date: 11/04/2016
+title: 菜单命令 （c + +）
+ms.date: 02/15/2019
 helpviewer_keywords:
 - menu items, properties
 - keyboard shortcuts [C++], menu association
@@ -17,14 +17,14 @@ helpviewer_keywords:
 - mnemonics [C++], uniqueness checking
 - Check Mnemonics command
 ms.assetid: 6d308205-3c9e-42f2-ab42-45e656940e45
-ms.openlocfilehash: 8989b96640bbb64eb5dcba09d60363dd0989263f
-ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
+ms.openlocfilehash: 9f91973fdf2d5a45c631f24d3eed41482a91a834
+ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56320570"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56336600"
 ---
-# <a name="menu-command-properties-c"></a>菜单命令属性 （c + +）
+# <a name="menu-commands-c"></a>菜单命令 （c + +）
 
 根据组织以下信息**菜单**中显示的属性[属性窗口](/visualstudio/ide/reference/properties-window)选择菜单命令时。 这些字母顺序列出，尽管**属性**窗口还可以按类别查看这些属性。
 
@@ -47,8 +47,6 @@ ms.locfileid: "56320570"
 
 你经常希望某一菜单命令和某一键盘组合可以发出相同的程序命令。 通过使用在发出相同的命令**菜单**编辑器将为该菜单命令和应用程序的快捷键对应表中的条目分配相同的资源标识符。 接着你可以编辑该菜单命令的 [标题](../windows/menu-command-properties.md) ，以显示快捷键的名称。
 
-将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发人员指南*。 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[桌面应用中创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的托管应用中的资源的信息，请参阅[Globalizing and Localizing.NET Framework Applications](/dotnet/standard/globalization-localization/index)。
-
 ### <a name="to-associate-a-menu-command-with-an-accelerator-key"></a>将菜单命令与快捷键关联
 
 1. 在 **“菜单”** 编辑器中，选择所需菜单命令。
@@ -59,13 +57,13 @@ ms.locfileid: "56320570"
 
    - 键入的修改键名称 (**Ctrl**， **Alt**，或**Shift**) 后跟一个加号 (**+**) 和名称、 字母，或其他键的符号。
 
-       例如，若要将分配**Ctrl**+**O**到**打开**命令**文件**菜单中，修改的菜单命令**标题**，使其类似于以下文本：
+   例如，若要将分配**Ctrl**+**O**到**打开**命令**文件**菜单中，修改的菜单命令**标题**，使其类似于以下文本：
 
-        ```
-        &Open...\tCtrl+O
-        ```
+   ```
+   &Open...\tCtrl+O
+   ```
 
-       中的菜单命令**菜单**编辑器更新以反映新的标题，并在您键入。
+   中的菜单命令**菜单**编辑器更新以反映新的标题，并在您键入。
 
 1. 在[“快捷键”](../windows/adding-an-entry-to-an-accelerator-table.md) 编辑器中 **创建快捷键对应表条目** 并向它分配与菜单命令相同的标识符。 使用你认为易于记住的组合键。
 
@@ -98,5 +96,4 @@ Win32
 ## <a name="see-also"></a>请参阅
 
 [菜单编辑器](../windows/menu-editor.md)<br/>
-[将命令添加到菜单](../windows/adding-commands-to-a-menu.md)<br/>
 [字符串 (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)<br/>
