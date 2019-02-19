@@ -27,12 +27,12 @@ helpviewer_keywords:
 - CSnapInItemImpl class
 - snap-ins
 ms.assetid: 52caefbd-9eae-49b0-add2-d55524271aa7
-ms.openlocfilehash: 19c957ae80267efda89a3b151f57c453ecb935bc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ff7336d393ca4680b4d448b9c775888063125b86
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50609395"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893608"
 ---
 # <a name="csnapinitemimpl-class"></a>CSnapInItemImpl 类
 
@@ -106,7 +106,7 @@ class ATL_NO_VTABLE CSnapInItemImpl : public CSnapInItem
 
 ##  <a name="addmenuitems"></a>  CSnapInItemImpl::AddMenuItems
 
-此方法实现的 Win32 函数[IExtendContextMenu::AddMenuItems](https://msdn.microsoft.com/library/aa814841)。
+此方法实现的 Win32 函数[IExtendContextMenu::AddMenuItems](/windows/desktop/api/mmc/nf-mmc-iextendcontextmenu-addmenuitems)。
 
 ```
 AddMenuItems(
@@ -144,7 +144,7 @@ AddMenuItems(
 
 ##  <a name="command"></a>  CSnapInItemImpl::Command
 
-此方法实现的 Win32 函数[IExtendContextMenu::Command](https://msdn.microsoft.com/library/aa814842)。
+此方法实现的 Win32 函数[IExtendContextMenu::Command](/windows/desktop/api/mmc/nf-mmc-iextendcontextmenu-command)。
 
 ```
 Command(long lCommandID, DATA_OBJECT_TYPES type);
@@ -168,7 +168,7 @@ Command(long lCommandID, DATA_OBJECT_TYPES type);
 
 ##  <a name="createpropertypages"></a>  CSnapInItemImpl::CreatePropertyPages
 
-此方法实现的 Win32 函数[IExtendPropertySheet::CreatePropertyPages](https://msdn.microsoft.com/library/aa814846)。
+此方法实现的 Win32 函数[IExtendPropertySheet::CreatePropertyPages](/windows/desktop/api/mmc/nn-mmc-iextendpropertysheet2)。
 
 ```
 CreatePropertyPages(
@@ -183,7 +183,7 @@ CreatePropertyPages(
 *lpProvider*<br/>
 [in]指向`IPropertySheetCallback`接口。
 
-*句柄*<br/>
+*handle*<br/>
 [in]指定用于 MMCN_PROPERTY_CHANGE 通知消息路由到相应的数据类的句柄。
 
 *pUnk*<br/>
@@ -240,7 +240,7 @@ GetResultViewType(
 
 ### <a name="parameters"></a>参数
 
-*读*<br/>
+*ppViewType*<br/>
 [out]指向返回的视图类型的地址。
 
 *pViewOptions*<br/>
@@ -294,7 +294,7 @@ SCOPEDATAITEM m_scopeDataItem;
 
 ##  <a name="m_resultdataitem"></a>  CSnapInItemImpl::m_resultDataItem
 
-[RESULTDATAITEM](https://msdn.microsoft.com/library/aa815165)管理单元中的数据对象的结构。
+[RESULTDATAITEM](/windows/desktop/api/mmc/ns-mmc-resultdataitem)管理单元中的数据对象的结构。
 
 ```
 RESULTDATAITEM m_resultDataItem;

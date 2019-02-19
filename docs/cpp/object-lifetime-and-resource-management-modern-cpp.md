@@ -3,12 +3,12 @@ title: 对象生存期和资源管理（现代 C++）
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 8aa0e1a1-e04d-46b1-acca-1d548490700f
-ms.openlocfilehash: d7bf45881ef82ecf0d11892e5ddf3d3c16a437cf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5964078960a5b241cb5af369aeddba45a06e48ad
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50609932"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220618"
 ---
 # <a name="object-lifetime-and-resource-management-modern-c"></a>对象生存期和资源管理（现代 C++）
 
@@ -22,7 +22,7 @@ C++ 没有 GC 的主要原因是它不会处理非内存资源。 仅类似 C++ 
 
 生存期管理中另一个重要概念：析构函数。 析构函数封装资源释放。  （常用的助记键是 RRID，资源释放是析构。）资源是您从“系统”中获取并且之后必须归还的内容。  内存是最常见的资源，但还有文件、套接字、纹理和其他非内存资源。 “拥有”资源意味着您可以在需要时使用资源，但还必须在用完时释放。  销毁对象时，其析构函数将释放它拥有的资源。
 
-最终概念是 DAG（定向非循环图形）。  程序的所有权结构构成 DAG。 无对象能拥有自身 - 不仅不可能而且本质上无意义。 但是两个对象可以共享第三个对象的所有权。  DAG 中可能存在的许多链接类型与下类似：A 是 B 的成员（B 拥有 A），C 存储 `vector<D>`（C 拥有每个 D 元素），E 存储 `shared_ptr<F>`（E 可能与其他对象一起共享 F 的所有权），以此类推。  只要没有循环，DAG 中的每个链接就将由具有析构函数（而不是原始指针、句柄或其他机制）的对象表示，然后不可能出现资源泄漏，因为此语言阻止泄漏。 在没有垃圾回收器运行的情况下，在不再需要资源后立即将其释放。 堆栈范围、基项、成员和相关案例的生存期跟踪无开销，而 `shared_ptr` 的生存期跟踪很便宜。
+最终概念是 DAG（定向非循环图形）。  程序的所有权结构构成 DAG。 无对象能拥有自身 - 不仅不可能而且本质上无意义。 但是两个对象可以共享第三个对象的所有权。  此类 DAG 中可能会几种类型的链接：A 是 B 的成员 （B 拥有 A），C 存储`vector<D>`（C 拥有每个 D 元素），E 存储`shared_ptr<F>`（E 共享 F 的所有权，可能与其他对象），依次类推。  只要没有循环，DAG 中的每个链接就将由具有析构函数（而不是原始指针、句柄或其他机制）的对象表示，然后不可能出现资源泄漏，因为此语言阻止泄漏。 在没有垃圾回收器运行的情况下，在不再需要资源后立即将其释放。 堆栈范围、基项、成员和相关案例的生存期跟踪无开销，而 `shared_ptr` 的生存期跟踪很便宜。
 
 ### <a name="heap-based-lifetime"></a>基于堆的生存期
 
@@ -85,6 +85,6 @@ void functionUsingWidget () {
 
 ## <a name="see-also"></a>请参阅
 
-[欢迎回到 C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[欢迎回到 C++（现代 C++）](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [C++ 语言参考](../cpp/cpp-language-reference.md)<br/>
 [C++ 标准库](../standard-library/cpp-standard-library-reference.md)

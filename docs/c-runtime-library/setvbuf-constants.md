@@ -13,19 +13,18 @@ helpviewer_keywords:
 - IOLBF constant
 - _IONBF constant
 ms.assetid: a6ec4dd5-1f24-498c-871a-e874cd28d33c
-ms.openlocfilehash: 661cf64c71e06c222503388df198d47429566602
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 8936789f4e3c9349e9d79616c8506c044dc79f70
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523801"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220395"
 ---
 # <a name="setvbuf-constants"></a>setvbuf 常量
 
 ## <a name="syntax"></a>语法
 
 ```
-
 #include <stdio.h>
 ```
 
@@ -37,7 +36,7 @@ ms.locfileid: "51523801"
 
 |返回的常量|含义|
 |--------------|-------------|
-|`_IOFBF`|完全缓冲：将使用调用 `setvbuf` 时指定的缓冲区，其大小如 `setvbuf` 调用中所指定。 如果缓冲区指针为 NULL，则将使用自动分配的指定大小的缓冲区。|
+|`_IOFBF`|完全缓冲：使用调用 `setvbuf` 时指定的缓冲区，其大小如 `setvbuf` 调用中所指定。 如果缓冲区指针为 NULL，则将使用自动分配的指定大小的缓冲区。|
 |`_IOLBF`|与 `_IOFBF` 相同。|
 |`_IONBF`|将不会使用缓冲区，无论调用 `setvbuf` 的参数如何。|
 

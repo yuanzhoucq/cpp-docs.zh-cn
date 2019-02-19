@@ -5,12 +5,12 @@ helpviewer_keywords:
 - lifetime, and visibility
 - visibility, identifiers
 ms.assetid: ea05a253-7658-482c-9a6b-abd71169c42d
-ms.openlocfilehash: 5bb53db4d6bcb9b4694fddd9abd5471c6c6197c7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 438dd855fbbfec01a31a8d4a1a53078e3c44658c
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50474797"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56151775"
 ---
 # <a name="summary-of-lifetime-and-visibility"></a>生存期和可见性的摘要
 
@@ -30,7 +30,7 @@ ms.locfileid: "50474797"
 
 ## <a name="example"></a>示例
 
-### <a name="description"></a>描述
+### <a name="description"></a>说明​​
 
 以下示例演示了变量的块、嵌套和可见性：
 

@@ -1,6 +1,6 @@
 ---
 title: _read
-ms.date: 11/04/2016
+ms.date: 02/13/2019
 apiname:
 - _read
 apilocation:
@@ -26,12 +26,12 @@ helpviewer_keywords:
 - reading data [C++]
 - files [C++], reading
 ms.assetid: 2ce9c433-57ad-47fe-9ac1-4a7d4c883d30
-ms.openlocfilehash: 8c43cbbc2681433bda02038ae73a827fad904835
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 40f52ea37ae5419fe986aa505aad4fddfe8403ff
+ms.sourcegitcommit: eb2b34a24e6edafb727e87b138499fa8945f981e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658433"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56264785"
 ---
 # <a name="read"></a>_read
 
@@ -41,9 +41,9 @@ ms.locfileid: "50658433"
 
 ```C
 int _read(
-   int fd,
-   void *buffer,
-   unsigned int count
+   int const fd,
+   void * const buffer,
+   unsigned const buffer_size
 );
 ```
 
@@ -55,22 +55,22 @@ int _read(
 *buffer*<br/>
 数据的存储位置。
 
-*count*<br/>
-最大字节数。
+*buffer_size*<br/>
+要读取的字节的最大数目。
 
 ## <a name="return-value"></a>返回值
 
-**_read**返回读取，这可能会更少的字节数比*计数*如果少于*计数*中文件的剩余字节数，或如果文件已在文本模式下打开，在此情况下每个回车符换行符的对 '\r\n' 替换为单一的换行符 \n。 在返回值中仅计算单个换行符。 此替换不影响文件指针。
+**_read**返回读取，这可能会更少的字节数比*buffer_size*如果少于*buffer_size*字节留在文件中，或如果在文本模式下打开文件。 在文本模式下，每个回车符-换行符对`\r\n`使用单一的换行的字符替换`\n`。 在返回值中仅计算单个换行符。 此替换不影响文件指针。
 
 如果函数尝试在文件末尾进行读取，则返回 0。 如果*fd*是无效，该文件未打开供读取，或文件被锁定，将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，函数将返回-1 并设置**errno**到**EBADF**。
 
-如果 *buffer* 为 **NULL**，则将调用无效的参数处理程序。 如果允许继续执行，该函数返回-1 和**errno**设置为**EINVAL**。
+如果*缓冲区*是**NULL**，或者，如果*buffer_size* > **INT_MAX**，将调用无效参数处理程序。 如果允许继续执行，该函数返回-1 和**errno**设置为**EINVAL**。
 
 有关于此代码以及其他返回代码的详细信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>备注
 
-**_Read**函数中读取的最大*计数*字节*缓冲区*从与关联的文件*fd*。 读取操作从与给定文件相关联的文件指针的当前位置开始执行。 读取操作完成后，文件指针将指向下一个未读取的字符。
+**_Read**函数中读取的最大*buffer_size*字节*缓冲区*从与关联的文件*fd*。 读取操作从与给定文件相关联的文件指针的当前位置开始执行。 读取操作完成后，文件指针将指向下一个未读取的字符。
 
 如果文件已在文本模式下打开，读取将终止时 **_read**遇到 CTRL + Z 字符，被视为文件尾指示符。 使用 [_lseek](lseek-lseeki64.md) 可清除文件尾指示符。
 
@@ -106,18 +106,18 @@ char buffer[60000];
 
 int main( void )
 {
-   int fh;
-   unsigned int nbytes = 60000, bytesread;
+   int fh, bytesread;
+   unsigned int nbytes = 60000;
 
    /* Open file for input: */
-   if( _sopen_s( &fh, "crt_read.txt", _O_RDONLY, _SH_DENYNO, 0 ) )
+   if ( _sopen_s( &fh, "crt_read.txt", _O_RDONLY, _SH_DENYNO, 0 ))
    {
       perror( "open failed on input file" );
       exit( 1 );
    }
 
    /* Read in input: */
-   if( ( bytesread = _read( fh, buffer, nbytes ) ) <= 0 )
+   if (( bytesread = _read( fh, buffer, nbytes )) <= 0 )
       perror( "Problem reading file" );
    else
       printf( "Read %u bytes from file\n", bytesread );

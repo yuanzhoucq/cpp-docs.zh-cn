@@ -3,12 +3,12 @@ title: 欢迎回到 C++（现代 C++）
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 1cb1b849-ed9c-4721-a972-fd8f3dab42e2
-ms.openlocfilehash: a7d82a65141e402e779a428ba32d15ddd70016c8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 08563f6a67ec7105da688d566d71d8ea15cb8cec
+ms.sourcegitcommit: 360b55e89e5954f494e52b1cf989fbaceda06f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50454621"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54334620"
 ---
 # <a name="welcome-back-to-c-modern-c"></a>欢迎回到 C++（现代 C++）
 
@@ -36,7 +36,7 @@ C++ 最初的要求之一，就是要向后兼容 C 语言。 从那时起，C++
 
 - 使用内联的 [lambda 函数](../cpp/lambda-expressions-in-cpp.md)而不是单独实现的小函数。
 
-- 使用基于范围的 for 循环，可以编写更可靠的循环形式。即，使用`for ( for-range-declaration : expression )` 形式来遍历数组、 C++ 标准库容器和 Windows 运行时集合。 这是 Core 语言支持的一部分。 有关详细信息，请参阅[基于范围的 for 语句 (C++)](../cpp/range-based-for-statement-cpp.md)。
+- 使用基于范围的 for 循环来编写更可靠的循环形式。即，使用 `for ( for-range-declaration : expression )` 形式来遍历数组、 C++ 标准库容器和 Windows 运行时集合。 这是核心语言支持的一部分。 有关详细信息，请参阅[基于范围的 for 语句 (C++)](../cpp/range-based-for-statement-cpp.md)。
 
 C++ 语言本身也有所发展。 比较以下代码片段。 下面显示了过去 C++ 的代码片段：
 
@@ -126,7 +126,7 @@ C++ 正在复兴，因为功能再次占据首要位置。 当程序员的工作
 
 - [ABI 边界处的可移植性](../cpp/portability-at-abi-boundaries-modern-cpp.md)
 
-有关详细信息，请参阅 StackOverflow 文章[哪些 c + + 惯例在 C + + 11 中已弃用](https://stackoverflow.com/questions/9299101/which-c-idioms-are-deprecated-in-c11)。
+有关详细信息，请参阅堆栈溢出文章[C + + 11 中已弃用的 c + + 惯例](https://stackoverflow.com/questions/9299101/which-c-idioms-are-deprecated-in-c11)。
 
 ## <a name="see-also"></a>请参阅
 

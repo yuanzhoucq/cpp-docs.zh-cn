@@ -4,12 +4,12 @@ ms.date: 04/03/2017
 helpviewer_keywords:
 - module macros in MFC
 ms.assetid: 303f4161-cb5e-4099-81ad-acdb11aa60fb
-ms.openlocfilehash: 66c3477c7f2901cd9986a8b52e3d9287191e7b4b
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 1d0cbd1f702a1d26dd2eaafd88efcfd61f52ff78
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329587"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850211"
 ---
 # <a name="macros-and-functions-for-managing-dlls"></a>宏和用于管理 Dll 函数
 
@@ -60,7 +60,7 @@ AFX_MANAGE_STATE(AFX_MODULE_STATE* pModuleState )
 
 ### <a name="parameters"></a>参数
 
-*pmodulestate 设置*<br/>
+*pModuleState*<br/>
 一个指向`AFX_MODULE_STATE`结构。
 
 ### <a name="remarks"></a>备注
@@ -85,10 +85,6 @@ AFX_MANAGE_STATE(AfxGetStaticModuleState( ));
 
 **标头：** afxstat_.h
 
-### <a name="see-also"></a>请参阅
-
-[AfxGetStaticModuleState](#afxgetstaticmodulestate)
-
 ## <a name="a-nameafxoleinitmodulea-afxoleinitmodule"></a><a name="afxoleinitmodule"><a/> AfxOleInitModule
 
 有关 OLE 支持从动态链接到 MFC 的规则 MFC DLL，调用此函数在规则 MFC DLL 的`CWinApp::InitInstance`函数以初始化 MFC OLE DLL。
@@ -109,11 +105,6 @@ MFC OLE DLL 是 MFC 扩展 DLL;MFC 扩展 DLL 才能连接到`CDynLinkLibrary`�
 
 **标头**: \<afxdll_.h >
 
-### <a name="see-also"></a>请参阅
-
-[宏和全局函数](mfc-macros-and-globals.md)<br/>
-[AfxMessageBox](cstring-formatting-and-message-box-display.md#afxmessagebox)
-
 ## <a name="afxnetinitmodule"></a>  AfxNetInitModule
 
 有关 MFC 套接字支持从动态链接到 MFC 的规则 MFC DLL，添加对此函数的调用在规则 MFC DLL 的`CWinApp::InitInstance`函数以初始化 MFC 套接字 DLL。
@@ -131,11 +122,6 @@ MFC 套接字 DLL 是 MFC 扩展 DLL;MFC 扩展 DLL 才能连接到`CDynLinkLibr
 ### <a name="requirements"></a>要求
 
 **标头：** \<afxdll_.h >
-
-### <a name="see-also"></a>请参阅
-
-[宏和全局函数](mfc-macros-and-globals.md)<br/>
-[AfxMessageBox](cstring-formatting-and-message-box-display.md#afxmessagebox)
 
 ## <a name="afxgetambientactctx"></a> AfxGetAmbientActCtx
 
@@ -162,13 +148,6 @@ BOOL AFXAPI AfxGetAmbientActCtx();
 ### <a name="requirements"></a>要求
 
 **标头：** afxcomctl32.h
-
-### <a name="see-also"></a>请参阅
-
-[宏和全局函数](mfc-macros-and-globals.md)<br/>
-[AFX_MANAGE_STATE](#afx_manage_state)<br/>
-[管理 MFC 模块的状态数据](../managing-the-state-data-of-mfc-modules.md)<br/>
-[AfxSetAmbientActCtx](#setambientactctx)
 
 ## <a name="afxgetstaticmodulestate"></a> AfxGetStaticModuleState
 
@@ -259,11 +238,6 @@ MFC 扩展 Dll 需要做两件事中的其`DllMain`函数：
 
 **标头：** afxdll_.h
 
-### <a name="see-also"></a>请参阅
-
-[宏和全局函数](mfc-macros-and-globals.md)<br/>
-[AfxTermExtensionModule](#afxtermextensionmodule)
-
 ## <a name="afxsetambientactctx"></a>  AfxSetAmbientActCtx
 
 使用以下函数可设置每个模块的状态标志，该标志影响 MFC 的 WinSxS 行为。
@@ -299,13 +273,6 @@ BOOL CMFCListViewApp::InitInstance()
 
 **标头：** afxcomctl32.h
 
-### <a name="see-also"></a>请参阅
-
-[宏和全局函数](mfc-macros-and-globals.md)<br/>
-[AfxGetAmbientActCtx](#afxgetambientactctx)<br/>
-[AFX_MANAGE_STATE](#afx_manage_state)<br/>
-[管理 MFC 模块的状态数据](../managing-the-state-data-of-mfc-modules.md)
-
 ## <a name="afxtermextensionmodule"></a>  AfxTermExtensionModule
 
 调用此函数以允许在 MFC 清理 MFC 扩展 DLL 时从 DLL 分离的每个进程 (时在进程退出，或为卸载 DLL 时，会发生该情况`AfxFreeLibrary`调用)。
@@ -321,7 +288,7 @@ void AFXAPI AfxTermExtensionModule(  AFX_EXTENSION_MODULE& state,  BOOL bAll  = 
 *state*<br/>
 对引用[AFX_EXTENSION_MODULE](afx-extension-module-structure.md)结构，其中包含 MFC 扩展 DLL 模块的状态。
 
-*球*<br/>
+*bAll*<br/>
 如果为 TRUE，清除所有 MFC 扩展 DLL 模块。 否则为清除仅当前的 DLL 模块。
 
 ### <a name="remarks"></a>备注
@@ -366,7 +333,8 @@ MFC 扩展 Dll 需要调用[AfxInitExtensionModule](#afxinitextensionmodule)在�
 
 **标头：** afxdll_.h
 
-### <a name="see-also"></a>请参阅
+## <a name="see-also"></a>请参阅
 
 [宏和全局函数](mfc-macros-and-globals.md)<br/>
-[AfxInitExtensionModule](#afxinitextensionmodule)
+[AfxMessageBox](cstring-formatting-and-message-box-display.md#afxmessagebox)<br/>
+[管理 MFC 模块的状态数据](../managing-the-state-data-of-mfc-modules.md)<br/>

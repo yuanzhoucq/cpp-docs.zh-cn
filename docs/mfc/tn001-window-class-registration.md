@@ -1,5 +1,5 @@
 ---
-title: TN001：窗口类注册
+title: TN001:窗口类注册
 ms.date: 11/04/2016
 f1_keywords:
 - vc.registration
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - WNDCLASS [MFC]
 - AfxRegisterClass function
 ms.assetid: 1abf678e-f220-4606-85e0-03df32f64c54
-ms.openlocfilehash: 8f16480d238ca2a3e683219984c54d67159f806d
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 4ae94d1c9c57f6c315ae482e44576ae25194c00f
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693850"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894258"
 ---
-# <a name="tn001-window-class-registration"></a>TN001：窗口类注册
+# <a name="tn001-window-class-registration"></a>TN001:窗口类注册
 
 此注释描述 MFC 例程，注册这两个特殊[WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa)es 所需的 Microsoft Windows。 特定`WNDCLASS`讨论 MFC 和 Windows 使用的属性。
 
@@ -31,7 +31,7 @@ ms.locfileid: "51693850"
 
 - 通过调用 MFC 显式[AfxRegisterWndClass](../mfc/reference/application-information-and-management.md#afxregisterwndclass)或[AfxRegisterClass](../mfc/reference/application-information-and-management.md#afxregisterclass)。
 
-- 显式通过调用 Windows 例程[RegisterClass](https://msdn.microsoft.com/library/windows/desktop/ms633586)。
+- 显式通过调用 Windows 例程[RegisterClass](/windows/desktop/api/winuser/nf-winuser-registerclassa)。
 
 ## <a name="wndclass-fields"></a>WNDCLASS 字段
 
@@ -39,7 +39,7 @@ ms.locfileid: "51693850"
 
 |字段|描述|
 |-----------|-----------------|
-|*用*|窗口进程必须是 `AfxWndProc`|
+|*lpfnWndProc*|窗口进程必须是 `AfxWndProc`|
 |*cbClsExtra*|未使用 （应为零）|
 |*cbWndExtra*|未使用 （应为零）|
 |*hInstance*|自动填充[AfxGetInstanceHandle](../mfc/reference/application-information-and-management.md#afxgetinstancehandle)|
@@ -59,9 +59,9 @@ ms.locfileid: "51693850"
 
 `CFrameWnd::LoadFrame` 将注册`WNDCLASS`使用图标 ID 指定为第一个参数，以下标准属性：
 
-- 类样式： CS_DBLCLKS &#124; CS_HREDRAW &#124; CS_VREDRAW;
+- 类样式：CS_DBLCLKS &#124; CS_HREDRAW &#124; CS_VREDRAW;
 
-- 图标 AFX_IDI_STD_FRAME
+- icon AFX_IDI_STD_FRAME
 
 - 箭头光标
 

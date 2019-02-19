@@ -13,12 +13,12 @@ helpviewer_keywords:
 - global functions [MFC], database functions
 - macros [MFC], MFC database
 ms.assetid: 5b9b9e61-1cf9-4345-9f29-3807dd466488
-ms.openlocfilehash: d3df96c92c39b9fdc05a019ed1ada033dc36d05e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a546c821690bcbe1afedd4909810317553e3b283
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536547"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55849744"
 ---
 # <a name="database-macros-and-globals"></a>数据库宏和全局函数
 
@@ -58,10 +58,6 @@ void AFXAPI AfxDbInitModule( );
 ### <a name="requirements"></a>要求
 
 **标头：** \<afxdll_.h >
-
-### <a name="see-also"></a>请参阅
-
-[宏和全局函数](mfc-macros-and-globals.md)
 
 ##  <a name="afx_odbc_call"></a>  AFX_ODBC_CALL
 
@@ -104,7 +100,7 @@ AFX_SQL_ASYNC(prs, SQLFunc)
 
 ### <a name="parameters"></a>参数
 
-*pr*<br/>
+*prs*<br/>
 指向 `CRecordset` 对象或 `CDatabase` 对象的指针。 从 MFC 4.2 开始，将忽略此参数值。
 
 *SQLFunc*<br/>

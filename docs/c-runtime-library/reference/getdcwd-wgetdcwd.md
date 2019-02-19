@@ -16,6 +16,7 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-environment-l1-1-0.dll
 apitype: DLLExport
 f1_keywords:
 - wgetdcwd
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - current working directory
 - directories [C++], current working
 ms.assetid: 184152f5-c7b0-495b-918d-f9a6adc178bd
-ms.openlocfilehash: 87cccec82ce648498c2bd3a7ac0ecbe436cb9baf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 464a254775d9a1d2488247d6dafb4b85cd763f10
+ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677014"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55702929"
 ---
 # <a name="getdcwd-wgetdcwd"></a>_getdcwd、_wgetdcwd
 
@@ -61,10 +62,10 @@ wchar_t *_wgetdcwd(
 
 ### <a name="parameters"></a>参数
 
-*驱动器*<br/>
+*drive*<br/>
 一个指定驱动器的非负整数（0 = 默认驱动器，1 = A，2 = B，依此类推）。
 
-如果指定的驱动器不可用，或者无法确定驱动器的类型（例如，可移动的、固定的、CD-ROM、RAM 磁盘或网络驱动器），则会调用 [Parameter Validation](../../c-runtime-library/parameter-validation.md)中介绍的无效参数处理程序。
+如果指定的驱动器不可用，或类型的驱动器 （例如，可移动的、 固定的、 CD-ROM、 RAM 磁盘或网络驱动器） 不能确定，将调用无效参数处理程序。 有关详细信息，请参阅[参数验证](../../c-runtime-library/parameter-validation.md)。
 
 *buffer*<br/>
 路径的存储位置，或为 **NULL**。
@@ -74,13 +75,13 @@ wchar_t *_wgetdcwd(
 *maxlen*<br/>
 一个非零正整数，指定字符相对路径的最大长度： **char**有关 **_getdcwd**并**wchar_t**为 **_wgetdcwd**.
 
-如果*maxlen*不是大于零中, 所述的无效参数处理程序[参数验证](../../c-runtime-library/parameter-validation.md)，调用。
+如果*maxlen*小于或等于 0，将调用无效参数处理程序。 有关详细信息，请参阅[参数验证](../../c-runtime-library/parameter-validation.md)。
 
 ## <a name="return-value"></a>返回值
 
 表示指定的驱动器上的当前工作目录的完整路径的字符串指针或**NULL**，指示错误。
 
-如果*缓冲区*指定为**NULL** ，并且没有足够的内存来分配*maxlen*字符，就会出错并且**errno**是设置为**ENOMEM**。 如果路径，其中包括终止 null 字符，长度超过*maxlen*，就会出错并**errno**设置为**ERANGE**。 有关这些错误代码的详细信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
+如果*缓冲区*指定为**NULL** ，并且没有足够的内存来分配*maxlen*字符，就会出错并且**errno**是设置为**ENOMEM**。 如果路径包括终止 null 字符的长度超出*maxlen*，出现错误，并**errno**设置为**ERANGE**。 有关这些错误代码的详细信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>备注
 

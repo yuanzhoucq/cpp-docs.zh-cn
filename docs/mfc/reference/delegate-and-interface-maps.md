@@ -6,12 +6,12 @@ helpviewer_keywords:
 - event map macros [MFC]
 - interface map macros [MFC]
 ms.assetid: 3840e642-ff7d-4bdc-998b-c7d8fc50890e
-ms.openlocfilehash: cd1f38236baf2caca9f2a2a426f28f797291fb13
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 8f48b916f7130551fc8d4da5bb2ebc75d8d728d5
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524646"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850198"
 ---
 # <a name="delegate-and-interface-map-macros"></a>委托和接口映射宏
 
@@ -21,7 +21,7 @@ MFC 支持委托和接口映射这些宏：
 |-|-|
 |[BEGIN_DELEGATE_MAP](#begin_delegate_map)|开始委托映射。|
 |[BEGIN_INTERFACE_MAP](#begin_interface_map)|开始 interfaced 映射的定义。|
-|[CommandHandler 委托](#commandhandler)|向命令源注册回调方法。  |
+|[CommandHandler Delegate](#commandhandler)|向命令源注册回调方法。  |
 |[END_DELEGATE_MAP](#end_delegate_map)|结束委托映射。|
 |[END_INTERFACE_MAP](#end_interface_map)|终止实现文件中的接口映射。 |
 |[EVENT_DELEGATE_ENTRY](#event_delegate_entry)|在委托映射中创建条目。|
@@ -40,7 +40,7 @@ BEGIN_DELEGATE_MAP(  CLASS );
 
 ### <a name="parameters"></a>参数
 
-*类*<br/>
+*CLASS*<br/>
 在其中承载托管的控件的类。
 
 ### <a name="remarks"></a>备注
@@ -50,10 +50,6 @@ BEGIN_DELEGATE_MAP(  CLASS );
 ### <a name="requirements"></a>要求
 
 **标头：** msclr\event.h
-
-### <a name="see-also"></a>请参阅
-
-[如何：接收来自本机 C++ 类的 Windows 窗体事件](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)
 
 ##  <a name="begin_interface_map"></a>BEGIN_INTERFACE_MAP
 
@@ -67,7 +63,7 @@ BEGIN_INTERFACE_MAP( theClass, baseClass )
 
 ### <a name="parameters"></a>参数
 
-*类*<br/>
+*theClass*<br/>
 要在其中定义接口映射的类
 
 *baseClass*<br/>
@@ -102,17 +98,13 @@ delegate void CommandHandler(  UINT^ cmdID  );
 
 此委托将向命令源注册回调方法。 当您将一个委托添加到命令源对象时，回调方法将成为来自指定源的命令的处理程序。
 
-有关详细信息，请参阅[如何： 向 Windows 窗体控件添加命令传送](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)。
+有关详细信息，请参阅[如何：添加命令路由到 Windows 窗体控件](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)。
 
 有关使用 Windows 窗体的详细信息，请参阅[在 MFC 中使用 Windows 窗体用户控件](../../dotnet/using-a-windows-form-user-control-in-mfc.md)。
 
 ### <a name="requirements"></a>要求
 
 **标头：** afxwinforms.h （在程序集 atlmfc\lib\mfcmifc80.dll 中定义）
-
-### <a name="see-also"></a>请参阅
-
-[如何：向 Windows 窗体控件添加命令传送](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)
 
 ##  <a name="commanduihandler"></a>CommandUIHandler
 
@@ -142,11 +134,6 @@ delegate void CommandUIHandler(  unsigned int cmdID, ICommandUI^ cmdUI);
 
 **标头：** afxwinforms.h （在程序集 atlmfc\lib\mfcmifc80.dll 中定义）
 
-### <a name="see-also"></a>请参阅
-
-[如何：向 Windows 窗体控件添加命令传送](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)<br/>
-[CommandHandler](#commandhandler)
-
 ##  <a name="end_delegate_map"></a>END_DELEGATE_MAP
 
 结束委托映射。
@@ -164,10 +151,6 @@ END_DELEGATE_MAP();
 ### <a name="requirements"></a>要求
 
 **标头：** msclr\event.h
-
-### <a name="see-also"></a>请参阅
-
-[如何：接收来自本机 C++ 类的 Windows 窗体事件](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)
 
 ##  <a name="end_interface_map"></a>END_INTERFACE_MAP
 
@@ -187,11 +170,6 @@ END_INTERFACE_MAP( )
 
 **标头:** afxwin.h
 
-### <a name="see-also"></a>请参阅
-
-[宏和全局函数](mfc-macros-and-globals.md)<br/>
-[BEGIN_INTERFACE_MAP](#begin_interface_map)
-
 ##  <a name="event_delegate_entry"></a>EVENT_DELEGATE_ENTRY
 
 在委托映射中创建条目。
@@ -204,7 +182,7 @@ EVENT_DELEGATE_ENTRY(MEMBER, ARG0, ARG1);
 
 ### <a name="parameters"></a>参数
 
-*成员*<br/>
+*MEMBER*<br/>
 要附加到控件的事件处理程序方法。
 
 *ARG0*<br/>
@@ -219,7 +197,7 @@ EVENT_DELEGATE_ENTRY(MEMBER, ARG0, ARG1);
 
 ### <a name="example"></a>示例
 
-下面的代码示例演示如何使用 EVENT_DELEGATE_ENTRY 在委托映射中创建一个条目`OnClick`事件处理程序; 还 MAKE_DELEGATE 中的代码示例，请参阅。 有关详细信息，请参阅[如何： 从本机 c + + 类接收器 Windows 窗体事件](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)。
+下面的代码示例演示如何使用 EVENT_DELEGATE_ENTRY 在委托映射中创建一个条目`OnClick`事件处理程序; 还 MAKE_DELEGATE 中的代码示例，请参阅。 有关详细信息，请参阅[如何：接收来自本机 c + + 类的 Windows 窗体事件](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)。
 
 ```cpp
 BEGIN_DELEGATE_MAP(CMyView)
@@ -230,12 +208,6 @@ END_DELEGATE_MAP()
 ### <a name="requirements"></a>要求
 
 **标头：** msclr\event.h
-
-### <a name="see-also"></a>请参阅
-
-[MAKE_DELEGATE](#make_delegate)<br/>
-[BEGIN_DELEGATE_MAP](#begin_delegate_map)<br/>
-[END_DELEGATE_MAP](#end_delegate_map)
 
 ##  <a name="interface_part"></a>INTERFACE_PART
 
@@ -249,7 +221,7 @@ INTERFACE_PART( theClass, iid, localClass)
 
 ### <a name="parameters"></a>参数
 
-*类*<br/>
+*theClass*<br/>
 包含接口映射的类的名称。
 *iid*<br/>
 要映射到嵌入类的 IID。
@@ -278,10 +250,10 @@ MAKE_DELEGATE( DELEGATE,  MEMBER) ;
 
 ### <a name="parameters"></a>参数
 
-*委托*<br/>
+*DELEGATE*<br/>
 托管的事件处理程序的委托类型，如[EventHandler](assetId:///T:System.EventHandler?qualifyHint=False&autoUpgrade=True)。
 
-*成员*<br/>
+*MEMBER*<br/>
 若要附加到控件的事件处理程序方法的名称。
 
 ### <a name="remarks"></a>备注
@@ -290,7 +262,7 @@ MAKE_DELEGATE( DELEGATE,  MEMBER) ;
 
 ### <a name="example"></a>示例
 
-下面的代码示例演示如何调用`MAKE_DELEGATE`附加`OnClick`事件处理程序到 MFC 控件`MyControl`。 此宏的 MFC 应用程序中的工作原理的更广泛的说明，请参阅[如何： 从本机 c + + 类接收器 Windows 窗体事件](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)。
+下面的代码示例演示如何调用`MAKE_DELEGATE`附加`OnClick`事件处理程序到 MFC 控件`MyControl`。 此宏的 MFC 应用程序中的工作原理的更广泛的说明，请参阅[如何：接收来自本机 c + + 类的 Windows 窗体事件](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)。
 
 ```cpp
 // CMyView derives from CWinFormsView.
@@ -306,9 +278,8 @@ void CMyView::OnInitialUpdate()
 
 **标头：** msclr\event.h
 
-### <a name="see-also"></a>请参阅
+## <a name="see-also"></a>请参阅
 
-[BEGIN_DELEGATE_MAP](#begin_delegate_map)<br/>
-[END_DELEGATE_MAP](#end_delegate_map)<br/>
-[EVENT_DELEGATE_ENTRY](#event_delegate_entry)
-
+[如何：接收来自本机 C++ 类的 Windows 窗体事件](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)<br/>
+[如何：向 Windows 窗体控件添加命令路由](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)<br/>
+[宏和全局函数](mfc-macros-and-globals.md)<br/>

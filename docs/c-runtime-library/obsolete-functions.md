@@ -1,6 +1,31 @@
 ---
 title: 已过时的函数
-ms.date: 11/04/2016
+ms.date: 01/22/2019
+apiname:
+- _beep
+- _sleep
+- _loaddll
+- _getdllprocaddr
+- _seterrormode
+- is_wctype
+- _getsystime
+- _setsystime
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-process-l1-1-0.dll
+- api-ms-win-crt-runtime-l1-1-0.dll
+- api-ms-win-crt-string-l1-1-0.dll
+- api-ms-win-crt-time-l1-1-0.dll
+apitype: DLLExport
 f1_keywords:
 - is_wctype
 - _loaddll
@@ -25,12 +50,12 @@ helpviewer_keywords:
 - _sleep function
 - _seterrormode function
 ms.assetid: 8e14c2d4-1481-4240-8586-47eb43db02b0
-ms.openlocfilehash: 76c7a710b577d0fef4fe2a74dbee2a722c7f98b4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: edac8fde530752c911058acdaccccea6d0318b8c
+ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677417"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55702669"
 ---
 # <a name="obsolete-functions"></a>已过时的函数
 
@@ -45,7 +70,7 @@ ms.locfileid: "50677417"
 |`_unloaddll`|[FreeLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-freelibrary)|
 |`_getdllprocaddr`|[GetProcAddress](../build/getprocaddress.md)|
 |`_seterrormode`|[SetErrorMode](https://msdn.microsoft.com/library/windows/desktop/ms680621)|
-|`_beep`|[提示音](https://msdn.microsoft.com/library/windows/desktop/ms679277)|
+|`_beep`|[提示音](/windows/desktop/api/utilapiset/nf-utilapiset-beep)|
 |`_sleep`|[休眠](/windows/desktop/api/synchapi/nf-synchapi-sleep)|
 |`_getsystime`|[GetLocalTime](/windows/desktop/api/sysinfoapi/nf-sysinfoapi-getlocaltime)|
 |`_setsystime`|[SetLocalTime](/windows/desktop/api/sysinfoapi/nf-sysinfoapi-setlocaltime)|

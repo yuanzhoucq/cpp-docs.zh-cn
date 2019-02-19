@@ -3,12 +3,12 @@ title: 在 Visual Studio 中配置 Linux CMake 项目
 description: 如何在 Visual Studio 中配置 Linux CMake 项目
 ms.date: 07/20/2018
 ms.assetid: f8707b32-f90d-494d-ae0b-1d44425fdc25
-ms.openlocfilehash: 32d69e28c0991adc6117b7f9496eeb1022943ef2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 28902f0a2938fe653eb4dfbb6e512367b1052b8c
+ms.sourcegitcommit: fe1e21df175cd004d21c6e4659082efceb649a8b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585037"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53978317"
 ---
 # <a name="configure-a-linux-cmake-project"></a>配置 Linux CMake 项目
 
@@ -18,7 +18,7 @@ ms.locfileid: "50585037"
 本主题假定你基本了解 Visual Studio 中的 CMake 支持。 有关详细信息，请参阅 [Visual C++ 的 CMake 工具](../ide/cmake-tools-for-visual-cpp.md)。 有关 CMake 本身的详细信息，请参阅[使用 CMake 生成、测试并打包软件](https://cmake.org/)。
 
 > [!NOTE]
-> 使用 Visual Studio 中的 CMake 支持需要 CMake 3.8 中引入的服务器模式支持。 对于 Microsoft 提供的 CMake 变体，请在 [https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases) 中下载最新的预生成二进制文件。
+> 使用 Visual Studio 中的 CMake 支持需要 CMake 3.8 中引入的服务器模式支持。 对于 Microsoft 提供的 CMake 变体，请在 [https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases) 中下载最新的预生成二进制文件。 在 Visual Studio 2019 中，可以自动部署预生成二进制文件（请参阅[下载预生成 CMake 二进制文件](#download-prebuilt-cmake-binaries)）。
 
 ## <a name="open-a-folder"></a>打开文件夹
 
@@ -109,6 +109,9 @@ add_executable(hello-cmake hello.cpp)
 ## <a name="download-prebuilt-cmake-binaries"></a>下载预生成的 CMake 二进制文件
 
 你的 Linux 发行版可能具有更早版本的 CMake。 使用 Visual Studio 中的 CMake 支持需要 CMake 3.8 中引入的服务器模式支持。 对于 Microsoft 提供的 CMake 变体，请在 [https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases) 中下载最新的预生成二进制文件。
+
+**Visual Studio 2019**<br/>
+如果在远程计算机上找不到有效的 CMake，则将显示信息栏，并提供自动部署预生成 CMake 二进制文件的选项。 二进制文件将安装到 `~/.vs/cmake`。 部署二进制文件后，项目将自动再生成。 请注意，如果由 `CMakeSettings.json` 中的 `cmakeExecutable` 字段指定的 CMake 无效（不存在或是不受支持的版本）且预生成二进制文件存在，则 Visual Studio 将忽略 `cmakeExecutable` 并使用预生成二进制文件。
 
 ## <a name="see-also"></a>请参阅
 

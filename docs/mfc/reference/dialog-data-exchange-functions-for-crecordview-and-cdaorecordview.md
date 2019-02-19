@@ -20,12 +20,12 @@ helpviewer_keywords:
 - databases [MFC], dialog data exchange (DDX) support
 - DAO [MFC], dialog data exchange (DDX) support
 ms.assetid: 0d8cde38-3a2c-4100-9589-ac80a7b1ce91
-ms.openlocfilehash: 6a4320b1f2c5d0c47dac64c486e7fb70ea5991bb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 36341a1b122e6dcb1c475f2f95e03d384c3a034f
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481817"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850030"
 ---
 # <a name="dialog-data-exchange-functions-for-crecordview-and-cdaorecordview"></a>CRecordView 和 CDaoRecordView 的对话框数据交换函数
 
@@ -124,7 +124,7 @@ void AFXAPI DDX_FieldCBString(
 *nIDC*<br/>
 中的控件的 ID [CRecordView](../../mfc/reference/crecordview-class.md)或[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)对象。
 
-*value*<br/>
+*值*<br/>
 对关联的字段数据成员的引用`CRecordset`或`CDaoRecordset`对象。
 
 *pRecordset*<br/>
@@ -172,7 +172,7 @@ void AFXAPI DDX_FieldCBStringExact(
 *nIDC*<br/>
 中的控件的 ID [CRecordView](../../mfc/reference/crecordview-class.md)或[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)对象。
 
-*value*<br/>
+*值*<br/>
 对关联的字段数据成员的引用`CRecordset`或`CDaoRecordset`对象。
 
 *pRecordset*<br/>
@@ -220,7 +220,7 @@ void AFXAPI DDX_FieldCheck(
 *nIDC*<br/>
 与控件属性关联的复选框控件的资源 ID。
 
-*value*<br/>
+*值*<br/>
 对对话框、 窗体视图或控件视图对象与其交换数据的成员变量的引用。
 
 *pRecordset*<br/>
@@ -310,7 +310,7 @@ void AFXAPI DDX_FieldLBString(
 *nIDC*<br/>
 中的控件的 ID [CRecordView](../../mfc/reference/crecordview-class.md)或[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)对象。
 
-*value*<br/>
+*值*<br/>
 对关联的字段数据成员的引用`CRecordset`或`CDaoRecordset`对象。
 
 *pRecordset*<br/>
@@ -358,7 +358,7 @@ void AFXAPI DDX_FieldLBStringExact(
 *nIDC*<br/>
 中的控件的 ID [CRecordView](../../mfc/reference/crecordview-class.md)或[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)对象。
 
-*value*<br/>
+*值*<br/>
 对关联的字段数据成员的引用`CRecordset`或`CDaoRecordset`对象。
 
 *pRecordset*<br/>
@@ -406,7 +406,7 @@ void AFXAPI DDX_FieldRadio(
 *nIDC*<br/>
 第一个的 ID （具有样式 WS_GROUP） 中的相邻的单选按钮控件的组中[CRecordView](../../mfc/reference/crecordview-class.md)或[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)对象。
 
-*value*<br/>
+*值*<br/>
 对关联的字段数据成员的引用`CRecordset`或`CDaoRecordset`对象。
 
 *pRecordset*<br/>
@@ -454,7 +454,7 @@ void AFXAPI DDX_FieldScroll(
 *nIDC*<br/>
 第一个的 ID （具有样式 WS_GROUP） 中的相邻的单选按钮控件的组中[CRecordView](../../mfc/reference/crecordview-class.md)或[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)对象。
 
-*value*<br/>
+*值*<br/>
 对关联的字段数据成员的引用`CRecordset`或`CDaoRecordset`对象。
 
 *pRecordset*<br/>
@@ -476,7 +476,7 @@ void AFXAPI DDX_FieldScroll(
 
   **标头**afxdao.h
 
-  ## <a name="nameddxfieldslidera--ddxfieldslider"></a>name="ddx_fieldslider"></a>  DDX_FieldSlider
+  ## <a name="ddx_fieldslider"></a>  DDX_FieldSlider
 `DDX_FieldSlider`函数将同步缩略图的滑块控件中的记录视图位置和一个**int**的记录集与记录视图 （或您选择将其映射到任何整数变量） 关联的字段数据成员。
 
 ### <a name="syntax"></a>语法
@@ -503,7 +503,7 @@ void AFXAPI DDX_FieldSlider(
 *nIDC*<br/>
 滑块控件的资源 ID。
 
-*value*<br/>
+*值*<br/>
 对值进行交换的引用。 此参数保留或将用于设置滑块控件的滚动块的当前位置。
 
 *pRecordset*<br/>
@@ -526,10 +526,6 @@ void AFXAPI DDX_FieldSlider(
 ### <a name="requirements"></a>要求
 
 **标头：** afxdao.h
-
-### <a name="see-also"></a>请参阅
-
-[宏和全局函数](mfc-macros-and-globals.md)
 
 ##  <a name="ddx_fieldtext"></a>  DDX_FieldText
 
@@ -653,7 +649,7 @@ void AFXAPI DDX_FieldText(
 *nIDC*<br/>
 中的控件的 ID [CRecordView](../../mfc/reference/crecordview-class.md)或[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)对象。
 
-*value*<br/>
+*值*<br/>
 对关联的字段数据成员的引用`CRecordset`或`CDaoRecordset`对象。 值的数据类型取决于其的重载版本`DDX_FieldText`你使用。
 
 *pRecordset*<br/>
@@ -679,4 +675,4 @@ void AFXAPI DDX_FieldText(
 
 ## <a name="see-also"></a>请参阅
 
-[宏和全局函数](../../mfc/reference/mfc-macros-and-globals.md)
+[宏和全局函数](mfc-macros-and-globals.md)

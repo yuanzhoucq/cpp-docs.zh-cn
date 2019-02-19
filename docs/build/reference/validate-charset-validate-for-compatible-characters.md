@@ -1,18 +1,18 @@
 ---
 title: /validate-charset （验证兼容的字符）
-ms.date: 11/04/2016
+ms.date: 02/06/2019
 f1_keywords:
 - /validate-charset
 - validate-charset
 helpviewer_keywords:
 - /validate-charset compiler option
 ms.assetid: 50360fd0-4d32-4a4f-95d0-53d38c12ad4c
-ms.openlocfilehash: 243d225f5acde0c6099050539687726ea082c898
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 69b43b603ef4711e1acc0bd612e0e1c949722dc9
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50590484"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850073"
 ---
 # <a name="validate-charset-validate-for-compatible-characters"></a>/validate-charset （验证兼容的字符）
 
@@ -38,9 +38,9 @@ Visual Studio 使用的源字符集和执行字符集之间的转换过程的内
 
 1. 展开**配置属性**， **C/c + +**，**命令行**文件夹。
 
-1. 在中**高级选项**，添加 **/validate-charset**选项，并指定你的首选编码。
+1. 在中**其他选项**，添加 **/validate-charset**选项，并指定你的首选编码。
 
-1. 选择**确定**以保存所做的更改。
+1. 选择“确定”以保存更改。
 
 ## <a name="see-also"></a>请参阅
 

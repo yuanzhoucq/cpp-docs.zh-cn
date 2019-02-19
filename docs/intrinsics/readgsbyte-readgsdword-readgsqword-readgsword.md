@@ -12,12 +12,12 @@ helpviewer_keywords:
 - __readgsqword intrinsic
 - __readgsbyte intrinsic
 ms.assetid: f822632d-854c-4558-a71b-cdfc3eea2236
-ms.openlocfilehash: 1bc6a3b2ef2d78e5b30ea36149ea691468c9b0ec
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: fee7101ab72b9a0aecffb8ab8365dda1ec52d170
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327507"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220408"
 ---
 # <a name="readgsbyte-readgsdword-readgsqword-readgsword"></a>__readgsbyte、__readgsdword、__readgsqword、__readgsword
 
@@ -64,7 +64,7 @@ unsigned __int64 __readgsqword(
 
 ## <a name="remarks"></a>备注
 
-这些内部函数只有在内核模式下可用，例程都仅可用作内部函数。
+这些例程都仅可用作内部函数。
 
 **结束 Microsoft 专用**
 

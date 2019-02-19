@@ -11,12 +11,12 @@ helpviewer_keywords:
 - external linkage, function declarations
 - declaring functions
 ms.assetid: 43fd98eb-7441-4473-a5d9-fc88c75577f7
-ms.openlocfilehash: 1f533bad308a9bc892bfe928b581c4b7197cf6f3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fafec2379f2eb06331ed4db112e924a7d1f9849b
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624024"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56152217"
 ---
 # <a name="function-declarations-and-definitions"></a>函数声明和定义
 

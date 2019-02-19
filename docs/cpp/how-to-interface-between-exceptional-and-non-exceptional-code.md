@@ -1,17 +1,17 @@
 ---
-title: 如何：异常和非异常代码之间的接口
+title: 如何：异常和非异常代码之间建立连接
 ms.custom: how-to
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: fd5bb4af-5665-46a1-a321-614b48d4061e
-ms.openlocfilehash: b6da1142ee04668033a516f2c20c4a2354ff5598
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8ff92f965f48faa7954ae0364ec7877428e519c
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50576678"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220617"
 ---
-# <a name="how-to-interface-between-exceptional-and-non-exceptional-code"></a>如何：异常和非异常代码之间的接口
+# <a name="how-to-interface-between-exceptional-and-non-exceptional-code"></a>如何：异常和非异常代码之间建立连接
 
 本文介绍如何在 C++ 模块中实现一致的异常处理，以及如何在异常边界将异常和错误代码进行互相转换。
 
@@ -19,7 +19,7 @@ ms.locfileid: "50576678"
 
 ## <a name="calling-non-exceptional-functions-from-c"></a>从 C++ 调用非异常函数
 
-当您从 C++ 调用非异常函数时，您的想法是将该函数包装在检测任何错误的 C++函数中，然后可能引发异常。 当设计此类包装器函数时，首先应确定提供的异常保证的类型：no-throw、strong 或 basic。 其次，设计函数以使得异常引发时能够正确发布所有资源（例如文件句柄）。 通常，这意味着您可使用智能指针或类似的资源管理器来拥有资源。 有关设计注意事项的详细信息，请参阅[如何： 设计异常安全性](../cpp/how-to-design-for-exception-safety.md)。
+当您从 C++ 调用非异常函数时，您的想法是将该函数包装在检测任何错误的 C++函数中，然后可能引发异常。 当设计此类包装器函数时，首先应确定提供的异常保证的类型：no-throw、strong 或 basic。 其次，设计函数以使得异常引发时能够正确发布所有资源（例如文件句柄）。 通常，这意味着您可使用智能指针或类似的资源管理器来拥有资源。 有关设计注意事项的详细信息，请参阅[如何：设计异常安全性](../cpp/how-to-design-for-exception-safety.md)。
 
 ### <a name="example"></a>示例
 
@@ -236,5 +236,5 @@ bool DiffFiles3(const string& file1, const string& file2)
 
 ## <a name="see-also"></a>请参阅
 
-[错误和异常处理](../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
+[错误和异常处理（现代 C++）](../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
 [如何：设计异常安全性](../cpp/how-to-design-for-exception-safety.md)<br/>

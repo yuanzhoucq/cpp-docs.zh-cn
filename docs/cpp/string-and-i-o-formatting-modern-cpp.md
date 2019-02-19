@@ -3,12 +3,12 @@ title: 字符串和 I-O 格式化 （现代 c + +）
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 3954e8de-a59b-4175-89c9-4ee842ab89ed
-ms.openlocfilehash: 816eb71dae011f853a6e7ade1a1a2a8144a457c5
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: c051a7d70042456d30bee0ebb2b362c5d05b8e37
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326181"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220499"
 ---
 # <a name="string-and-io-formatting-modern-c"></a>字符串和 I/O 格式化（现代 C++）
 
@@ -42,11 +42,11 @@ int main()
 
 Boost.Format 的一些优点包括：
 
-- 安全： 类型安全的则会引发异常的错误 — 例如，太少或过多项规范。
+- 安全：类型安全的则会引发异常的错误 — 例如，太少或过多项规范。
 
-- 可扩展： 适用于可进行流处理任何类型。
+- 可扩展：适用于可进行流处理任何类型。
 
-- 便利： 标准 Posix 以及类似的格式字符串。
+- 方便：标准 Posix 以及类似的格式字符串。
 
 虽然 C++ 生成 Boost.Format [iostreams](../standard-library/iostream-programming.md)，它们是安全且可扩展，它们不性能优化。 当需要性能优化时，请考虑 C [printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)和[sprintf](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)，这是快速且易于使用。  但是，它们不是扩展，也不安全漏洞。 （安全的版本存在，但它们会产生导致性能略微下降。  有关详细信息，请参阅[printf_s、 _printf_s_l、 wprintf_s、 _wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)和[sprintf_s、 _sprintf_s_l、 swprintf_s、 _swprintf_s_l](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)。
 
@@ -64,7 +64,7 @@ Boost.Format 的一些优点包括：
 
 ## <a name="see-also"></a>请参阅
 
-[欢迎回到 C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[欢迎回到 C++（现代 C++）](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [C++ 语言参考](../cpp/cpp-language-reference.md)<br/>
 [C++ 标准库](../standard-library/cpp-standard-library-reference.md)<br/>
 [\<iostream>](../standard-library/iostream.md)<br/>

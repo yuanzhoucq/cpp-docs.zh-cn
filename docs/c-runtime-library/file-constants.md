@@ -25,19 +25,18 @@ helpviewer_keywords:
 - O_RDONLY constant
 - _O_WRONLY constant
 ms.assetid: c8fa5548-9ac2-4217-801d-eb45e86f2fa4
-ms.openlocfilehash: 672297b2a1d6466f28a7addf74b8d88e2460b15e
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 2dc473db50b1835d4e1495ce255c0a826563b70a
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51517575"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220434"
 ---
 # <a name="file-constants"></a>文件常量
 
 ## <a name="syntax"></a>语法
 
 ```
-
 #include <fcntl.h>
 ```
 
@@ -47,7 +46,7 @@ ms.locfileid: "51517575"
 
 文件常量如下所示：
 
-|返回的常量|描述|
+|返回的常量|说明|
 |-|-|
 | `_O_APPEND`  | 在每次执行写入操作前，将文件指针重新定位到文件尾。  |
 | `_O_CREAT`  | 创建一个文件并打开该文件以进行写入；如果有由 filename 指定的文件存在，则此操作不起作用。  |

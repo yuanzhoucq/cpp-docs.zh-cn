@@ -9,12 +9,12 @@ helpviewer_keywords:
 - floating-point constants, about floating-point constants
 - double data type, floating-point constants
 ms.assetid: e1bd9b44-d6ab-470c-93e5-07142c7a2062
-ms.openlocfilehash: d7879f3382016e098db0c8073322b99d596e8f83
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5e17490926ee328c3a4ca03b1de9cb6e752959a0
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50664914"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56148694"
 ---
 # <a name="c-floating-point-constants"></a>C 浮点常量
 
@@ -48,7 +48,7 @@ ms.locfileid: "50664914"
 
 以下示例阐释了某些形式的浮点常量和表达式：
 
-```
+```C
 15.75
 1.575E1   /* = 15.75   */
 1575e-2   /* = 15.75   */
@@ -60,16 +60,16 @@ ms.locfileid: "50664914"
 
 浮点常量没有 **f**、**F** 或 **l**，或者 **L** 后缀类型为 `double`。 如果后缀是字母 **f** 或 **F**，则该常量类型为 `float`。 如果后缀是字母 **l** 或 **L**，则该常量类型为 `long double`。 例如:
 
-```
-100L  /* Has type long double  */
-100F  /* Has type float        */
+```C
+10.0L  /* Has type long double  */
+10.0F  /* Has type float        */
 ```
 
 请注意，与 `double` 类型相同，Microsoft C 编译器在内部表示 `long double`。 请参阅[基本类型的存储](../c-language/storage-of-basic-types.md)，了解有关类型 `double`、`float` 和 `long double` 的信息。
 
 如下例所示，可以省略浮点常量的整数部分。 可以通过包括下列方式在内的多种方式表达 .75：
 
-```
+```C
 .0075e2
 0.075e1
 .075e1

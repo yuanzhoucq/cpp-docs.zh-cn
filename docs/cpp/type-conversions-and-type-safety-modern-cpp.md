@@ -3,12 +3,12 @@ title: 类型转换和类型安全（现代 C++）
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 629b361a-2ce1-4700-8b5d-ab4f57b245d5
-ms.openlocfilehash: 201f09cc9ac17f76634103c9c9b6c0259c8a8637
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 79285e4870b73ff01ed3b230a0162f87c0400aa8
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51332616"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220642"
 ---
 # <a name="type-conversions-and-type-safety-modern-c"></a>类型转换和类型安全（现代 C++）
 
@@ -178,7 +178,7 @@ C 样式强制转换运算符与调用运算符 () 相同，因此在代码中�
 
 ## <a name="see-also"></a>请参阅
 
-[C++ 类型系统](../cpp/cpp-type-system-modern-cpp.md)<br/>
-[欢迎回到 C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[C++ 类型系统（现代 C++）](../cpp/cpp-type-system-modern-cpp.md)<br/>
+[欢迎回到 C++（现代 C++）](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [C++ 语言参考](../cpp/cpp-language-reference.md)<br/>
 [C++ 标准库](../standard-library/cpp-standard-library-reference.md)

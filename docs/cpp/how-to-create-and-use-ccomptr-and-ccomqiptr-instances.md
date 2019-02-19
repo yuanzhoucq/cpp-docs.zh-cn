@@ -4,12 +4,12 @@ ms.custom: how-to
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: b0356cfb-12cc-4ee8-b988-8311ed1ab5e0
-ms.openlocfilehash: 8065e0b8782c1c28d83aa6fc9690150793fe51ee
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2bcabfe80185939b899c84fc44f71b98608fc3c7
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50518698"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220539"
 ---
 # <a name="how-to-create-and-use-ccomptr-and-ccomqiptr-instances"></a>如何：创建和使用 CComPtr 和 CComQIPtr 实例
 
@@ -39,4 +39,4 @@ ATL 还提供了 `CComQIPtr`，它具有用于查询 COM 对象以检索额外�
 
 ## <a name="see-also"></a>请参阅
 
-[智能指针](../cpp/smart-pointers-modern-cpp.md)
+[智能指针（现代 C++）](../cpp/smart-pointers-modern-cpp.md)

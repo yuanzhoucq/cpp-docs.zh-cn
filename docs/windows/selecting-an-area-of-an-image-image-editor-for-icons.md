@@ -1,22 +1,53 @@
 ---
-title: 选择图像的区域（图标的图像编辑器）
-ms.date: 11/04/2016
+title: 如何：编辑图像
+ms.date: 02/15/2019
 f1_keywords:
+- vc.editors.image.editing
 - vc.editors.image.editing
 helpviewer_keywords:
 - Image editor [C++], image selection
 - Image editor [C++], selecting images
 - images [C++], selecting
 - cursors [C++], selecting areas of
+- Image editor [C++], editing images
+- Clipboard [C++], pasting
+- images [C++], editing
+- images [C++], deleting selected parts
+- images [C++], copying selected parts
+- images [C++], moving selected parts
+- images [C++], dragging and replicating selected parts
+- images [C++], pasting into
+- graphics [C++], editing
+- Image editor [C++], flipping and rotating images
+- images [C++], flipping
+- images [C++], rotating
+- Image editor [C++], resizing images
+- graphics [C++], resizing
+- images [C++], resizing
+- resizing images
+- size [C++], images
+- images [C++], cropping
+- images [C++], extending
+- Image editor [C++], cropping or extending images
+- Image editor [C++], shrinking and stretching images
+- images [C++], stretching
+- images [C++], shrinking
+- bitmaps [C++], shrinking
+- bitmaps [C++], stretching
+- Image editor [C++], editing images
+- images [C++], editing
+- images [C++], properties
+- Image editor [C++], Properties window
+- Properties window, image editor
 ms.assetid: 8b6ce4ad-eba1-4ece-86ba-cea92c3edff2
-ms.openlocfilehash: 5e2522d23b30a91639e887a8761871e3df8139f4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 906244b692253a8423af55eb91d46622087713e3
+ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50565108"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56336522"
 ---
-# <a name="selecting-an-area-of-an-image-image-editor-for-icons"></a>选择图像的区域（图标的图像编辑器）
+# <a name="how-to-edit-an-image"></a>如何：编辑图像
 
 选择工具可用于定义你想要剪切、 复制、 清除、 重设大小、 反转，或移动的图像的区域。 与**矩形选择**工具可以定义并选择图像的矩形区域。 与**不规则选择**工具可以绘制需选择它以执行剪切、 复制或其他操作的区域的徒手画的轮廓。
 
@@ -25,21 +56,164 @@ ms.locfileid: "50565108"
 
 此外可以从选定项创建自定义画笔。 有关详细信息，请参阅[创建自定义画笔](../windows/creating-a-custom-brush-image-editor-for-icons.md)。
 
-### <a name="to-select-an-area-of-an-image"></a>若要选择的图像的区域
+## <a name="select-an-image"></a>选择一个映像
 
-1. 上**的图像编辑器**工具栏 (或从**映像**菜单中，**工具**命令)，单击你想选择的工具。
+1. 上**的图像编辑器**工具栏 (或从**映像**菜单中，**工具**命令)，选择你想选择工具。
 
-2. 将插入点移动到你想要选择的图像区域的一角。 插入点位于图像上方时，会显示十字线。
+1. 将插入点移动到你想要选择的图像区域的一角。 插入点位于图像上方时，会显示十字线。
 
-3. 到你想要选择的区域的对角拖动该插入点。 一个矩形显示了将选择的像素为单位。 所选内容中包含的矩形，包括那些在该矩形内的所有像素。
+1. 到你想要选择的区域的对角拖动该插入点。 一个矩形显示了将选择的像素为单位。 所选内容中包含的矩形，包括那些在该矩形内的所有像素。
 
-4. 释放鼠标按钮。 选择边框环绕选定的区域。
+1. 释放鼠标按钮。 选择边框环绕选定的区域。
 
 ### <a name="to-select-an-entire-image"></a>若要选择整个图像
 
-1. 单击当前所选内容之外的图像。 选择边框焦点更改，然后再一次包含整个图像。
+1. 选择当前所选内容之外的映像。 选择边框焦点更改，然后再一次包含整个图像。
 
-有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发人员指南*。 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[桌面应用中创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的托管应用中的资源的信息，请参阅[Globalizing and Localizing.NET Framework Applications](/dotnet/standard/globalization-localization/index)。
+## <a name="edit-parts-of-an-image"></a>编辑图像的部分
+
+您可以执行标准的编辑操作 — 剪切、 复制、 清除和移动 — 上[选择](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)、 所选内容是否整个图像或它的其中一部分。 因为**图像**编辑器使用**Windows 剪贴板**，可以传输之间的映像**图像**编辑器和其他用于 Windows 应用程序。
+
+此外，它包括整个图像或其一部分是否可以调整大小所选内容。
+
+### <a name="to-cut-the-current-selection-and-move-it-to-the-clipboard"></a>若要剪切当前所选内容并将其移动到剪贴板
+
+选择**剪切**上**编辑**菜单。
+
+### <a name="to-copy-the-selection"></a>若要复制所选内容
+
+1. 除调整大小控点在其上放置内部选择边框或任意位置的指针。
+
+1. 按住**Ctrl**键将所选内容拖动到新位置。 原选定内容的区域保持不变。
+
+1. 若要将所选内容复制到其当前位置的图像，单击外部选择光标。
+
+### <a name="to-paste-the-clipboard-contents-into-an-image"></a>若要将剪贴板内容粘贴到映像中
+
+1. 从**编辑**菜单中，选择**粘贴**。
+
+   在窗格的左上角显示剪贴板内容，通过选择边框，括起来。
+
+1. 选择边框内指针定位并将图像拖到所需位置，在映像上。
+
+1. 若要定位到其新位置的映像，选择选择边框之外。
+
+### <a name="to-delete-the-current-selection-without-moving-it-to-the-clipboard"></a>若要删除当前所选内容，而不将其移动到剪贴板
+
+从**编辑**菜单中，选择**删除**。
+
+   使用当前的背景色填充所选内容的原始区域。
+
+   > [!NOTE]
+   > 可以访问**剪切**，**副本**，**粘贴**，以及**删除**命令通过右键单击在**资源视图**窗口。
+
+### <a name="to-move-the-selection"></a>若要移动选定内容
+
+1. 除调整大小控点在其上放置内部选择边框或任意位置的指针。
+
+1. 将所选内容拖动到其新位置。
+
+1. 若要定位到其新位置的映像中的选择，选择选择边框之外。
+
+通过选择绘图的详细信息，请参阅[创建自定义画笔](../windows/creating-a-custom-brush-image-editor-for-icons.md)。
+
+## <a name="flip-an-image"></a>翻转图像
+
+可以翻转或旋转图像来创建原始镜像映像、 将图像上下颠倒，或将右侧图像旋转 90 度，一次。
+
+- 若要水平翻转图像 （镜像），从**图像**菜单中，选择**水平翻转**。
+
+- 若要垂直翻转图像 （将颠倒），从**图像**菜单中，选择**垂直翻转**。
+
+- 若要从 90 度旋转图像**图像**菜单中，选择**旋转 90 度**。
+
+   > [!NOTE]
+   > 此外可以使用[加速 （快捷） 键](../windows/accelerator-keys-image-editor-for-icons.md)这些命令或从快捷菜单 （外部图像与图像编辑器中单击） 访问这些命令。
+
+## <a name="resize-an-image"></a>调整图像大小
+
+行为**图像**编辑器时调整图像的大小取决于是否已[选](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)整个图像或只是它的一部分。
+
+所选内容包含仅的映像的一部分时**图像**编辑器通过删除行或列的像素为单位，并使用当前的背景色填充空出的区域缩小选定内容。 通过复制行或列的像素为单位，它也可以延迟所选内容。
+
+当所选内容包括整个图像**图像**编辑器是收缩和拉伸图像，或可裁剪，并对其进行扩展。
+
+有两种方式调整图像大小： 调整大小控点和[属性窗口](/visualstudio/ide/reference/properties-window)。 拖动调整大小控点，若要更改的所有大小或映像的一部分。 可以拖动调整大小控点都是可靠的。 您不能拖动空心的句柄。 使用**属性**窗口来调整大小整个仅，图像不是所选的一部分。
+
+![大小调整控点上位图](../mfc/media/vcimageeditorsizinghandles.gif "vcImageEditorSizingHandles")<br/>
+大小调整控点
+
+> [!NOTE]
+> 如果有**磁贴网格**中选择选项[网格设置对话框](../windows/grid-settings-dialog-box-image-editor-for-icons.md)，然后调整大小将下一步的平铺网格线对齐。 如果只有**像素网格**选项是选择 （默认设置），调整大小将对齐到下一个可用的像素。
+
+### <a name="to-resize-an-entire-image-using-the-properties-window"></a>若要调整整个图像使用属性窗口的大小
+
+1. 打开你想要更改其属性的图像。
+
+1. 在中**宽度**并**高度**框[属性窗口](/visualstudio/ide/reference/properties-window)，键入所需的尺寸。
+
+   如果要增加映像的大小**图像**编辑器扩展和 / 或右侧，向下，映像，并使用当前的背景色填充新的区域。 图像未被拉伸。
+
+   如果缩短图像的大小**图像**编辑器右边缘或下边缘，或这两者图像进行裁剪。
+
+   > [!NOTE]
+   > 可以使用**宽度**并**高度**属性，以仅整个调整图像的大小，无法调整部分选定内容的大小。
+
+### <a name="to-crop-or-extend-an-entire-image"></a>若要裁剪或扩展整个图像
+
+1. 选择整个图像。
+
+   如果当前选择的映像的一部分，并且你想要选择整个图像，选择任意位置上当前选定内容边框外部图像。
+
+1. 拖动调整大小控点，直到该图像是适当的大小。
+
+通常情况下，**图像**编辑器裁剪或增大图像时调整其大小通过移动调整大小控点。 如果您按住**Shift**键移动大小调整句柄**映像**编辑器缩小或拉伸图像。
+
+### <a name="to-shrink-or-stretch-an-entire-image"></a>若要缩小或拉伸整个图像
+
+1. 选择整个图像。
+
+   如果当前所选映像的一部分，并且你想要选择整个图像，选择任意位置上当前选定内容边框外部图像。
+
+1. 按住**Shift**键并拖动调整大小控点，直到该图像是适当的大小。
+
+### <a name="to-shrink-or-stretch-part-of-an-image"></a>若要缩小或拉伸图像的一部分
+
+1. 选择要重设大小的图像的一部分。 有关详细信息，请参阅[选择的图像区域](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)。
+
+1. 拖动调整大小控点之一，直到所选内容是适当的大小。
+
+## <a name="edit-an-image-outside-of-a-project"></a>编辑在项目外部图像
+
+您可以打开并编辑开发环境中的映像，只需像在任何图形应用程序中。 您使用的映像不需要独立编辑的 Visual Studio 项目的一部分。
+
+### <a name="to-open-a-bitmap-for-stand-alone-editing"></a>若要打开独立编辑的位图
+
+1. 从**文件**菜单中，选择**打开**。
+
+1. 在中**Files of Type**框中，选择**的所有文件**。
+
+1. 找到并打开你想要编辑的图像。
+
+## <a name="change-image-properties"></a>更改图像属性
+
+可以设置或修改映像使用的属性[属性窗口](/visualstudio/ide/reference/properties-window)。
+
+### <a name="to-change-an-images-properties"></a>若要更改映像的属性
+
+1. 打开中的图像**图像**编辑器。
+
+1. 在中**属性**窗口中，更改你的映像的任何或所有属性。
+
+   |属性|描述|
+   |--------------|-----------------|
+   |**颜色**|指定图像的颜色方案。 选择**单色**， **16**，或**256**，或者**True 颜色**。 如果已绘制具有 16 调色板的图像，则选择**单色**图像会导致的黑色和白色的颜色的替换项。 对比度并不总是保持： 例如，红色和绿色的相邻区域均会转换为黑色。|
+   |**文件名**|指定图像文件的名称。 默认情况下，Visual Studio 中的默认资源标识符 (IDB_BITMAP1) 并添加相应的扩展分配给通过删除前四个字符 ("IDB_") 创建的基文件名。 在此示例中的图像文件名称将为`BITMAP1.bmp`。 你可以重命名它`MYBITMAP1.bmp`。|
+   |**Height**|设置图像的高度 （以像素为单位）。 默认值为 48。 裁剪图像或以下现有映像添加空格。|
+   |**ID**|设置资源的标识符。 对于一个映像，Microsoft Visual Studio 中，默认情况下，将分配一系列中的下一步提供标识符：IDB_BITMAP1、 IDB_BITMAP2，等等。 类似的名称用于图标和光标。|
+   |**Palette**|更改颜色属性。 双击以选择一种颜色，并显示[自定义颜色选择器对话框](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md)。 通过在相应的文本框中键入 RGB 或 HSL 值定义颜色。|
+   |**SaveCompressed**|指示图像是否以压缩格式。 此属性是只读的。 Visual Studio 不允许您保存图像以压缩格式，因此，对于 Visual Studio 中创建任何图像，此属性将**False**。 如果在 Visual Studio 中打开 （在另一个程序中创建） 的压缩的映像，请将此属性 **，则返回 True**。 如果你保存压缩的映像使用 Visual Studio 中，将未压缩，并且此属性将返回到**False**。|
+   |**Width**|设置图像的宽度 （以像素为单位）。 位图的默认值为 48。 裁剪图像或空白区域添加到现有的图像的右侧。|
 
 ## <a name="requirements"></a>要求
 
@@ -47,6 +221,6 @@ ms.locfileid: "50565108"
 
 ## <a name="see-also"></a>请参阅
 
-[加速键](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
+[快捷键](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
 [编辑图形资源](../windows/editing-graphical-resources-image-editor-for-icons.md)<br/>
 [图标的图像编辑器](../windows/image-editor-for-icons.md)

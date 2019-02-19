@@ -26,12 +26,12 @@ helpviewer_keywords:
 - files [C++], translation
 - setmode function
 ms.assetid: 996ff7cb-11d1-43f4-9810-f6097182642a
-ms.openlocfilehash: 887936299dce0a13738f9dd891a168785d17c979
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 67cca27ba03a99d7e192d438a98f1bb3a93845ee
+ms.sourcegitcommit: cce52b2232b94ce8fd8135155b86e2d38a4e4562
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50617433"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54031273"
 ---
 # <a name="setmode"></a>_setmode
 
@@ -66,7 +66,12 @@ int _setmode (
 
 **_Setmode**函数设置为*模式*由给定的文件的转换模式*fd*。 传递 **_O_TEXT**作为*模式*设置文本 （即转换） 模式。 回车符-源 (CR-LF) 组合将转换为单个行上输入源字符。 输出时换行符将转换为 CR-LF 组合。 传递 **_O_BINARY**集二进制 （未转换） 模式下，会禁止这些转换。
 
-你还可以传递 **_O_U16TEXT**， **_O_U8TEXT**，或 **_O_WTEXT**启用 Unicode 模式下，在本文档后面的第二个示例中所示。 **_setmode**通常用于修改的默认转换模式**stdin**并**stdout**，但可以对任何文件使用它。 如果将应用 **_setmode**到流的文件描述符，调用 **_setmode**执行流上的执行任何输入或输出操作之前。
+你还可以传递 **_O_U16TEXT**， **_O_U8TEXT**，或 **_O_WTEXT**启用 Unicode 模式下，在本文档后面的第二个示例中所示。
+
+> [!CAUTION]
+> Unicode 模式下是用于宽打印功能 (例如， `wprintf`) 和不支持用于窄的打印功能。 使用有限的打印功能在 Unicode 模式下流触发 assert。
+
+**_setmode**通常用于修改的默认转换模式**stdin**并**stdout**，但可以对任何文件使用它。 如果将应用 **_setmode**到流的文件描述符，调用 **_setmode**执行流上的执行任何输入或输出操作之前。
 
 > [!CAUTION]
 > 如果将数据写入文件流，显式刷新代码通过使用[fflush](fflush.md)在使用之前 **_setmode**更改的模式。 如果不刷新代码，可能会导致意外行为。 如果尚未将数据写入流，则不必刷新代码。

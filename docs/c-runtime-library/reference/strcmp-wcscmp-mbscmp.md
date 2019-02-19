@@ -1,9 +1,10 @@
 ---
-title: strcmp、wcscmp、_mbscmp
-ms.date: 11/04/2016
+title: strcmp、 wcscmp、 _mbscmp、 _mbscmp_l
+ms.date: 01/22/2019
 apiname:
 - wcscmp
 - _mbscmp
+- _mbscmp_l
 - strcmp
 apilocation:
 - msvcrt.dll
@@ -23,6 +24,7 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _mbscmp
+- _mbscmp_l
 - wcscmp
 - strcmp
 - _tcscmp
@@ -34,24 +36,25 @@ helpviewer_keywords:
 - mbscmp function
 - string comparison [C++]
 - _mbscmp function
+- _mbscmp_l function
 - wcscmp function
 - _tcscmp function
 - _ftcscmp function
 - ftcscmp function
 ms.assetid: 5d216b57-7a5c-4cb3-abf0-0f4facf4396d
-ms.openlocfilehash: b7d8614fffc96a600c0d1f92b85503259cfc5cbb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dae5e04809ac7312097cb418ab5ffd561fdbd1d1
+ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50600520"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55703150"
 ---
-# <a name="strcmp-wcscmp-mbscmp"></a>strcmp、wcscmp、_mbscmp
+# <a name="strcmp-wcscmp-mbscmp-mbscmpl"></a>strcmp、 wcscmp、 _mbscmp、 _mbscmp_l
 
 比较字符串。
 
 > [!IMPORTANT]
-> **_mbscmp**不能在 Windows 运行时中执行的应用程序中使用。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
+> **_mbscmp**并 **_mbscmp_l**不能在 Windows 运行时中执行的应用程序中使用。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
 
 ## <a name="syntax"></a>语法
 
@@ -68,12 +71,20 @@ int _mbscmp(
    const unsigned char *string1,
    const unsigned char *string2
 );
+int _mbscmp_l(
+   const unsigned char *string1,
+   const unsigned char *string2,
+   _locale_t locale
+);
 ```
 
 ### <a name="parameters"></a>参数
 
 *string1*， *string2*<br/>
 要比较的 null 终止的字符串。
+
+*locale*<br/>
+要使用的区域设置。
 
 ## <a name="return-value"></a>返回值
 
@@ -85,11 +96,11 @@ int _mbscmp(
 |0|*string1*等同于*string2*|
 |> 0|*string1*大于*string2*|
 
-参数验证错误时， **_mbscmp**返回 **_NLSCMPERROR**，其定义中\<string.h > 和\<mbstring.h >。
+参数验证错误时， **_mbscmp**并 **_mbscmp_l**返回 **_NLSCMPERROR**，其定义中\<string.h > 和\<值 >。
 
 ## <a name="remarks"></a>备注
 
-**Strcmp**函数执行序号比较*string1*并*string2* ，并返回一个值，指示二者关系。 **wcscmp**并 **_mbscmp**分别是宽字符及多字节字符版本的**strcmp**。 **_mbscmp**根据当前的多字节代码页识别多字节字符序列，并返回 **_NLSCMPERROR**发生错误时。 有关详细信息，请参阅[代码页](../../c-runtime-library/code-pages.md)。 此外，如果*string1*或*string2*是 null 指针 **_mbscmp**将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md). 如果允许执行继续，则 **_mbscmp**返回 **_NLSCMPERROR**并设置**errno**到**EINVAL**。 **strcmp**并**wcscmp**不会验证其参数。 否则这三个函数否则具有相同行为。
+**Strcmp**函数执行序号比较*string1*并*string2* ，并返回一个值，指示二者关系。 **wcscmp**并 **_mbscmp**分别是宽字符及多字节字符版本的**strcmp**。 **_mbscmp**根据当前的多字节代码页识别多字节字符序列，并返回 **_NLSCMPERROR**发生错误时。 **_mbscmp_l**具有相同的行为，但使用传入的区域设置参数而不是当前区域设置。 有关详细信息，请参阅[代码页](../../c-runtime-library/code-pages.md)。 此外，如果*string1*或*string2*是 null 指针 **_mbscmp**将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md). 如果允许执行继续，则 **_mbscmp**并 **_mbscmp_l**返回 **_NLSCMPERROR**并设置**errno**到**EINVAL**. **strcmp**并**wcscmp**不会验证其参数。 否则这些函数具有相同行为。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -103,7 +114,7 @@ int _mbscmp(
 
 在为其的字符集和字典字符顺序不同的区域设置，你可以使用**strcoll**而不是**strcmp**按字典顺序比较的字符串。 或者，可以使用**strxfrm**上原始字符串，然后使用**strcmp**对结果字符串。
 
-**Strcmp**函数是区分大小写。 **_stricmp**， **_wcsicmp**，和 **_mbsicmp**比较字符串之前会首先将它们转换成小写形式。 两个包含位于 Z 之间的字符的字符串和 a ASCII 表中 (['，'\\，]，^，_ 和\`) 的比较方式，具体取决于其大小写。 例如，两个字符串"ABCDE"和"ABCD ^"进行比较的一种方法，如果比较采用小写形式 ("abcde">"abcd ^") 和另一种方法 ("ABCDE"<"ABCD ^") 如果比较采用大写形式。
+**Strcmp**函数是区分大小写。 **\_stricmp**，  **\_wcsicmp**，并 **\_mbsicmp**比较字符串之前会首先将它们转换成小写形式。 两个包含位于 Z 之间的字符的字符串和 a ASCII 表中 (['，'\\，]，^，_ 和\`) 的比较方式，具体取决于其大小写。 例如，两个字符串"ABCDE"和"ABCD ^"进行比较的一种方法，如果比较采用小写形式 ("abcde">"abcd ^") 和另一种方法 ("ABCDE"<"ABCD ^") 如果比较采用大写形式。
 
 ## <a name="requirements"></a>要求
 

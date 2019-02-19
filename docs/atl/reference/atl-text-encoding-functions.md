@@ -25,12 +25,12 @@ f1_keywords:
 - atlenc/ATL::UUEncode
 - atlenc/ATL::UUEncodeGetRequiredLength
 ms.assetid: 2ae1648b-2b87-4112-92aa-0069fcfd23da
-ms.openlocfilehash: a97f914905c2f98bc948b76e1d79d4af0f5dbadd
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 2a076b666577920c940413fba4951f7de5f24fc6
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327494"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850254"
 ---
 # <a name="atl-text-encoding-functions"></a>ATL 文本编码函数
 
@@ -57,7 +57,7 @@ ms.locfileid: "51327494"
 |[QPDecodeGetRequiredLength](#qpdecodegetrequiredlength)|调用此函数可获取某个缓冲区的大小（以字节为单位），该缓冲区可包含从指定长度的 Quoted Printable 编码字符串解码而来的数据。|
 |[QPEncode](#qpencode)|调用此函数可对某些 Quoted Printable 格式的数据进行编码。|
 |[QPEncodeGetRequiredLength](#qpencodegetrequiredlength)|调用此函数可获取某个缓冲区的大小（以字符为单位），该缓冲区可包含从指定大小的数据编码而来的字符串。|
-|[取消解码](#uudecode)|对已进行 uuencode 如通过以前调用的数据的字符串解码[UUEncode](#uuencode)。|
+|[UUDecode](#uudecode)|对已进行 uuencode 如通过以前调用的数据的字符串解码[UUEncode](#uuencode)。|
 |[UUDecodeGetRequiredLength](#uudecodegetrequiredlength)|调用此函数可获取某个缓冲区的大小（以字节为单位），该缓冲区可包含从指定长度的已进行 uuencode 的字符串解码而来的数据。|
 |[UUEncode](#uuencode)|调用此函数可对某些数据进行 uuencode。 |
 |[UUEncodeGetRequiredLength](#uuencodegetrequiredlength)|调用此函数可获取某个缓冲区的大小（以字符为单位），该缓冲区可包含从指定大小的数据编码而来的字符串。|
@@ -76,7 +76,7 @@ inline char AtlGetHexValue(char chIn) throw();
 
 ### <a name="parameters"></a>参数
 
-*下巴*<br/>
+*chIn*<br/>
 十六进制字符"0"-"9"、 A-F 或 a-f。
 
 ### <a name="return-value"></a>返回值
@@ -93,7 +93,7 @@ ATLAPI_(DWORD) AtlGetVersion(void* pReserved);
 
 ### <a name="parameters"></a>参数
 
-*保留*<br/>
+*pReserved*<br/>
 保留的指针。
 
 ### <a name="return-value"></a>返回值
@@ -218,7 +218,7 @@ inline short AtlHexValue(char chIn) throw();
 
 ### <a name="parameters"></a>参数
 
-*下巴*<br/>
+*chIn*<br/>
 十六进制字符"0"-"9"、 A-F 或 a-f。
 
 ### <a name="return-value"></a>返回值
@@ -721,7 +721,7 @@ inline int UUEncodeGetRequiredLength(int nSrcLen) throw ();
 
 此 uuencoding 实现遵循 POSIX P1003.2b/D11 规范。
 
-### <a name="see-also"></a>请参阅
+## <a name="see-also"></a>请参阅
 
-[概念](../../atl/active-template-library-atl-concepts.md)<br/>
-[ATL COM 桌面组件](../../atl/atl-com-desktop-components.md)
+[概念](../active-template-library-atl-concepts.md)<br/>
+[ATL COM 桌面组件](../atl-com-desktop-components.md)
