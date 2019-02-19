@@ -1,17 +1,17 @@
 ---
 title: / CETCOMPAT （控制流强制技术兼容）
-ms.date: 02/01/2019
+ms.date: 02/19/2019
 f1_keywords:
 - /CETCOMPAT
 helpviewer_keywords:
 - /CETCOMPAT linker option
 - /CETCOMPAT
-ms.openlocfilehash: 3adb147804674b52a5d77030c48567ec04da6aa6
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.openlocfilehash: 48eb1e2369e54d855bd19bb1d26ad057c903b9d0
+ms.sourcegitcommit: 7cd712176e5bc341b9d8f899d41ad49f02f85e5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55703403"
+ms.lasthandoff: 02/19/2019
+ms.locfileid: "56418687"
 ---
 # <a name="cetcompat-control-flow-enforcement-technology-compatible"></a>/ CETCOMPAT （控制流强制技术兼容）
 
@@ -24,7 +24,7 @@ ms.locfileid: "55703403"
 ## <a name="arguments"></a>自变量
 
 **NO**<br/>
-指定的 executalbe 不应标记与 CET 兼容。
+指定的可执行文件不应标记与 CET 兼容。
 
 ## <a name="remarks"></a>备注
 
@@ -44,7 +44,7 @@ ms.locfileid: "55703403"
 
 ### <a name="to-set-this-linker-option-programmatically"></a>以编程方式设置此链接器选项
 
-- 此选项不具有编程等效项。
+此选项不具有编程等效项。
 
 ## <a name="see-also"></a>请参阅
 
