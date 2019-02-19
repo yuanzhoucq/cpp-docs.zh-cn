@@ -11,18 +11,18 @@ helpviewer_keywords:
 - cpp.stop
 - Class View, hint file
 ms.assetid: 17194f66-cf62-4523-abec-77db0675ab65
-ms.openlocfilehash: 0b3ca7c6b09d85cddb519242e63af0b8097e3fec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 44566408a3afcfee7a15299a5845b5af385aeef8
+ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50558777"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56320687"
 ---
 # <a name="hint-files"></a>提示文件
 
 提示文件可帮助 Visual Studio 集成开发环境 (IDE) 解释 Visual C++ 标识符，例如函数和宏的名称。 打开 Visual C++ 项目时，IDE 的分析系统会分析项目中每个源文件中的代码，并收集每个标识符的相关信息。 然后，IDE 使用该信息来支持诸如“类视图”浏览器和“导航栏”等功能。
 
-Visual C++ 2010 中引入的分析系统可识别 C/C++ 语法，但可能会错误解释包含宏的语句。 如果宏导致写入源代码时语法不正确，则可能会错误解释该语句。 编译源代码且预处理器用其定义替换[宏标识符](../preprocessor/hash-define-directive-c-cpp.md)时，语句的语法可能是正确的。 分析系统无需生成项目即可运行，因为它使用提示文件来解释宏。 因此，“类视图”等浏览功能立即可用。
+Visual C++ 2010 中引入的分析系统可识别 C/C++ 语法，但可能会错误解释包含宏的语句。 如果宏导致写入源代码时语法不正确，则可能会错误解释该语句。 如果源代码已编译，且预处理器使用它的定义替换[宏标识符](../preprocessor/hash-define-directive-c-cpp.md)，语句的语法可能是正确的。 分析系统无需生成项目即可运行，因为它使用提示文件来解释宏。 因此，“类视图”等浏览功能立即可用。
 
 提示文件包含用户自定义的提示，其语法与 C/C++ 宏定义相同。 Visual C++ 包含一个内置提示文件，足以满足大多数项目的需求，但可自行创建提示文件来改进 Visual Studio 处理标识符的方式。
 
@@ -123,7 +123,7 @@ STDMETHOD(myMethod)(int parameter1);
 static void FormatWindowClassName(_Pre_notnull__Post_z_ PXSTR szBuffer)
 ```
 
-**策略：** Null 定义
+**策略：** NULL 定义
 
 在此情况下，策略将 SAL 注释视为不存在。 为此，请指定替换字符串为 NULL 的提示。 因此，分析系统忽略注释，且“类视图”浏览器不显示注释。 （Visual C++ 包含隐藏 SAL 注释的内置提示文件。）
 

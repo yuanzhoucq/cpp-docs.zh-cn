@@ -7,12 +7,12 @@ helpviewer_keywords:
 - portability [C++], type double
 - double data type
 ms.assetid: 17c85b24-1475-4d41-a03c-ddf2d6561d34
-ms.openlocfilehash: 42f8ed943fd9d034d5cae8cb057e094363b27d8e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 43e6cc444f4d6a973fc58b5ce550e468066aca1b
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532257"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56151853"
 ---
 # <a name="type-double"></a>类型 double
 
@@ -20,7 +20,7 @@ ms.locfileid: "50532257"
 
 **Microsoft 专用**
 
-双精度类型包含 64 位：其中 1 表示符号、11 表示指数、52 表示尾数。 其范围为精度至少为 15 个数字的 +/-1.7E308。
+double 类型包含 64 位：1 位用于符号、11 位用于指数、52 表位用于尾数。 其范围为精度至少为 15 个数字的 +/-1.7E308。
 
 **结束 Microsoft 专用**
 
