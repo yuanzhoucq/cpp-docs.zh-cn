@@ -1,4 +1,4 @@
----
+﻿---
 title: 欢迎回到 C++（现代 C++）
 ms.date: 11/04/2016
 ms.topic: conceptual
