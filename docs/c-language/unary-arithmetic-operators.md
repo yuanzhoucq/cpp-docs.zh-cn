@@ -13,18 +13,18 @@ helpviewer_keywords:
 - logical negation
 - '! operator, unary arithmetic operators'
 ms.assetid: 78c91415-d469-499e-9dfe-4435350fd333
-ms.openlocfilehash: fb10bac4a7c0299bccd98249e08a6e270c2c5ffe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f64bc5107cf0df55fd445d04d557e952702deaee
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624989"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56150826"
 ---
 # <a name="unary-arithmetic-operators"></a>一元算术运算符
 
 下面的列表中讨论了 C 一元加、算术求反、求补和逻辑求反运算符：
 
-|运算符|描述|
+|运算符|说明​​|
 |--------------|-----------------|
 |**+**|括号内的表达式前面的一元加运算符强制对包含的运算进行分组。 它用于涉及多个结合的或可交换的二元运算符的表达式。 操作数必须具有算法类型。 结果为操作数的值。 整型操作数将进行整型提升。 结果的类型为提升后的操作数的类型。|
 |**-**|算术求反运算符生成其操作数的负值（2 的补数）。 操作数必须是整型值或浮点值。 此运算符执行常用算术转换。|

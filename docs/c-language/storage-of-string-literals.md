@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - string literals, storage
 ms.assetid: ba5e4d2c-d456-44b3-a8ca-354af547ac50
-ms.openlocfilehash: b6c266c1381cc7f4e505916a916f5a924a626792
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0d505479f0844122826a2f07b57eaa69f33932e8
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481219"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56148122"
 ---
 # <a name="storage-of-string-literals"></a>字符串文本的存储
 
