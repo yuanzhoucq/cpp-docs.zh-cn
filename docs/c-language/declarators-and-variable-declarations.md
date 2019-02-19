@@ -6,18 +6,18 @@ helpviewer_keywords:
 - declarators, definition
 - declaring variables, declaration statements
 ms.assetid: 5fd67a6a-3a6a-4ec9-b257-3f7390a48d40
-ms.openlocfilehash: 711c0eb4e0b652f86de74803d5725c5dc3054b31
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 928de4b1724577a9fdb282f5109b4b5d0b31c4e6
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562781"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56147485"
 ---
 # <a name="declarators-and-variable-declarations"></a>声明符和变量声明
 
 本节的其余部分描述了该列表中汇总的变量类型的声明的形式和含义。 具体来说，其余各节说明如何声明以下内容：
 
-|变量类型|描述|
+|变量类型|说明​​|
 |----------------------|-----------------|
 |[简单变量](../c-language/simple-variable-declarations.md)|带整型或浮点型的单值变量|
 |[数组](../c-language/array-declarations.md)|由类型相同的一系列元素构成的变量|

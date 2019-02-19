@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - nonterminals definition
 ms.assetid: f9b3cf5f-6a7c-4a10-9b18-9d4a43efdaeb
-ms.openlocfilehash: 60806286ff8bbe64440c8b2f3e7af57b4390e2cb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0ff3f8b447e29f0da59405a7c0286d7a696b4613
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50571439"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56152464"
 ---
 # <a name="definitions-and-conventions"></a>定义和约定
 
@@ -25,7 +25,7 @@ ms.locfileid: "50571439"
 
 语法约定对语法的不同组件使用不同的字体特性。 符号和字体如下所示：
 
-|特性|描述|
+|特性|说明​​|
 |---------------|-----------------|
 |nonterminal|斜体类型指示非终止符。|
 |**const**|粗体类型的终止符是必须按所示方式输入的文本保留字和符号。 此上下文中的字符始终区分大小写。|

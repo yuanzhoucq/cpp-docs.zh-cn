@@ -11,12 +11,12 @@ helpviewer_keywords:
 - slash (/) operator
 - multiplication operator [C++], multiplicative operators
 ms.assetid: 495471c9-319b-4eb4-bd97-039a025fd3a9
-ms.openlocfilehash: debda69d693286aef03363eafd450b5aa531e987
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fdf208ffba3e3d63d8672b84af8cf6168b34dc3f
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506920"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56147746"
 ---
 # <a name="c-multiplicative-operators"></a>C 乘法运算符
 
@@ -35,7 +35,7 @@ ms.locfileid: "50506920"
 
 C 乘法运算符的描述如下：
 
-|运算符|描述|
+|运算符|说明​​|
 |--------------|-----------------|
 |<strong>\*</strong>|乘法运算符使其两个操作数相乘。|
 |**/**|除法运算符使第一个操作数除以第二个操作数。 如果两个整数操作数相除，结果不是整数，则根据下列规则截断它：<br/><br/>- 根据 ANSI C 标准，被 0 除的结果是不确定的。 Microsoft C 编译器将在编译时或运行时生成错误。<br/><br/>- 如果两个操作数都为正或无符号，则结果将截断到 0。<br/><br/>- 如果其中一个操作数为负，则不管操作结果是小于或等于代数商的最大整数还是大于或等于代数商的最小整数，结果均为定义的实现。 （请参阅下面的 Microsoft 专用部分。）|
