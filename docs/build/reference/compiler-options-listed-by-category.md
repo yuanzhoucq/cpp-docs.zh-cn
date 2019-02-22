@@ -4,18 +4,18 @@ ms.date: 11/12/2018
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-ms.openlocfilehash: ef61ebbfad62e6a7bf764bad35204247e47d8ddb
-ms.sourcegitcommit: 6990f842fefc27b522b15cf352f3517b319d78da
+ms.openlocfilehash: 63b621bf99a1aeada10706badfe19cde417d7233
+ms.sourcegitcommit: e540706f4e2675e7f597cfc5b4f8dde648b007bb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53248567"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56676495"
 ---
 # <a name="compiler-options-listed-by-category"></a>按类别列出的编译器选项
 
 本文包含编译器选项的分类列表。 有关按字母顺序排序的列表，请参见 [Compiler Options Listed Alphabetically](compiler-options-listed-alphabetically.md)。
 
-### <a name="optimization"></a>优化
+## <a name="optimization"></a>优化
 
 |选项|目标|
 |------------|-------------|
@@ -31,7 +31,7 @@ ms.locfileid: "53248567"
 |[/Oy](oy-frame-pointer-omission.md)|省略帧指针。 (仅限 x86)|
 |[/favor](favor-optimize-for-architecture-specifics.md)|生成针对一个指定体系结构或一系列体系结构进行优化的代码。|
 
-### <a name="code-generation"></a>代码生成
+## <a name="code-generation"></a>代码生成
 
 |选项|目标|
 |------------|-------------|
@@ -72,7 +72,7 @@ ms.locfileid: "53248567"
 |[/RTC](rtc-run-time-error-checks.md)|启用运行时错误检查。|
 |[/volatile](volatile-volatile-keyword-interpretation.md)|选择如何解释 volatile 关键字。|
 
-### <a name="output-files"></a>输出文件
+## <a name="output-files"></a>输出文件
 
 |选项|用途|
 |------------|-------------|
@@ -87,7 +87,7 @@ ms.locfileid: "53248567"
 |[/Fp](fp-name-dot-pch-file.md)|指定预编译头文件名。|
 |[/FR, /Fr](fr-fr-create-dot-sbr-file.md)|生成浏览器的.sbr 文件的名称。|
 
-### <a name="preprocessor"></a>预处理器
+## <a name="preprocessor"></a>预处理器
 
 |选项|目标|
 |------------|-------------|
@@ -105,7 +105,7 @@ ms.locfileid: "53248567"
 |[/u](u-u-undefine-symbols.md)|移除所有的预定义宏。|
 |[/X](x-ignore-standard-include-paths.md)|忽略标准包含目录。|
 
-### <a name="language"></a>语言
+## <a name="language"></a>语言
 
 |选项|目标|
 |------------|-------------|
@@ -129,7 +129,7 @@ ms.locfileid: "53248567"
 |[/Zs](zs-syntax-check-only.md)|只检查语法。|
 |[/ZW](zw-windows-runtime-compilation.md)|生成要在 Windows 运行时上运行的输出文件。|
 
-### <a name="linking"></a>链接
+## <a name="linking"></a>链接
 
 |选项|目标|
 |------------|-------------|
@@ -143,7 +143,7 @@ ms.locfileid: "53248567"
 |[/MT](md-mt-ld-use-run-time-library.md)|使用 LIBCMT.lib 编译以创建多线程可执行文件。|
 |[/MTd](md-mt-ld-use-run-time-library.md)|使用 LIBCMTD.lib 编译以创建调试多线程可执行文件。|
 
-### <a name="miscellaneous"></a>杂项
+## <a name="miscellaneous"></a>杂项
 
 |选项|目标|
 |------------|-------------|
@@ -159,7 +159,7 @@ ms.locfileid: "53248567"
 |[/H](h-restrict-length-of-external-names.md)|已否决。 限制外部（公共）名称的长度。|
 |[/HELP](help-compiler-command-line-help.md)|列出编译器选项。|
 |[/J](j-default-char-type-is-unsigned.md)|更改默认的 `char` 类型。|
-|[/ JMC](jmc.md)|支持本机 c + + ' 仅我的代码进行调试。|
+|[/JMC](jmc.md)|支持本机 c + + ' 仅我的代码进行调试。|
 |[/kernel](kernel-create-kernel-mode-binary.md)|编译器和链接器将创建可在 Windows 内核中执行的二进制文件。|
 |[/MP](mp-build-with-multiple-processes.md)|同时生成多个源文件。|
 |[/nologo](nologo-suppress-startup-banner-c-cpp.md)|取消显示登录版权标志。|
@@ -195,7 +195,7 @@ ms.locfileid: "53248567"
 |[/permissive-](permissive-standards-conformance.md)|将标准符合性模式设置。|
 |[/std](std-specify-language-standard-version.md)|C + + 标准的版本兼容性选择器。|
 
-### <a name="deprecated-and-removed-compiler-options"></a>已弃用并删除编译器选项
+## <a name="deprecated-and-removed-compiler-options"></a>已弃用并删除编译器选项
 
 |选项|目标|
 |------------|-------------|
