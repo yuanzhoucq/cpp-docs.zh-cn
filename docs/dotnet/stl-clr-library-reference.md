@@ -1,18 +1,18 @@
 ---
 title: STL/CLR 库参考
-ms.date: 09/18/2018"
+ms.date: 09/18/2018
 ms.topic: reference
 helpviewer_keywords:
 - STL/CLR Library
 - STL/CLR, redistribution
 - cliext directory
 ms.assetid: a9d9ca00-7bf2-48c1-b205-3ae6f8c25f82
-ms.openlocfilehash: 6914b61597e38c94a214089ecc3aeed17aec46d3
-ms.sourcegitcommit: 984fb4814a2dd9bcea5ec88c9528707f17a7cffa
+ms.openlocfilehash: d5a2f3f9ceb62cf127d63c15131bf99646ebae4a
+ms.sourcegitcommit: fbc05d8581913bca6eff664e5ecfcda8e471b8b1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "51949513"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56809609"
 ---
 # <a name="stlclr-library-reference"></a>STL/CLR 库参考
 
@@ -43,7 +43,7 @@ STL/CLR 库适用于 c + + 和.NET Framework 公共语言运行时 (CLR) 提供�
 [如何：从 STL/CLR 容器转换为 .NET 集合](../dotnet/how-to-convert-from-a-stl-clr-container-to-a-dotnet-collection.md)<br/>
 介绍如何将 STL/CLR 容器转换为.NET 集合。
 
-[如何：公开程序集中的 STL/CLR 容器](../dotnet/how-to-expose-an-stl-clr-container-from-an-assembly.md)<br/>
+[如何：从程序集公开 STL/CLR 容器](../dotnet/how-to-expose-an-stl-clr-container-from-an-assembly.md)<br/>
 演示如何显示编写的 c + + 程序集的几个 STL/CLR 容器元素。
 
 此外，本部分还介绍 STL/CLR 的以下组件：
