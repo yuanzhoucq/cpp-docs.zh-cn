@@ -1,17 +1,16 @@
 ---
-title: Visual Studio 中 Visual C++ 的新增功能
+title: Visual Studio 2017 中 Visual C++ 的新增功能
 ms.date: 11/15/2017
-ms.technology:
-- cpp-ide
+ms.technology: cpp-ide
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 5a9bbf86d6febfdec5ab5cbd9969cd5076672c52
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 062052faf85b342629506a41c39b99a1b59502b9
+ms.sourcegitcommit: fbc05d8581913bca6eff664e5ecfcda8e471b8b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620137"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56809784"
 ---
 # <a name="whats-new-for-visual-c-in-visual-studio-2017"></a>Visual Studio 2017 中 Visual C++ 的新增功能
 
@@ -25,9 +24,9 @@ Visual Studio 2017 向 Visual C++ 环境引入了许多更新和修补程序。 
 
 在此版本中，我们更新了 C++ 编译器和标准库，不仅增强了对 C++11 和 C++14 功能的支持，还初步提出了对预期推出的特定 C++17 标准功能的支持。 有关详细信息，请参阅 [Visual Studio 2017 中 C++ 的符合性改进](cpp-conformance-improvements-2017.md)。
 
-Visual Studio 2017 版本 15.5：编译器支持 C++17 中约 75% 的新增功能，包括结构化绑定、`constexpr` lambdas、`if constexpr`、内联变量、fold 表达式以及将 `noexcept` 添加到类型系统的功能。 这些功能可在 /std:c++17 功能下使用。 有关详细信息，请参阅 [Visual Studio 2017 中 C++ 的符合性改进](cpp-conformance-improvements-2017.md)
+**Visual Studio 2017 版本 15.5**：编译器支持 C++17 中约 75% 的新增功能，包括结构化绑定、`constexpr` lambdas、`if constexpr`、内联变量、fold 表达式以及将 `noexcept` 添加到类型系统的功能。 这些功能可在 /std:c++17 功能下使用。 有关详细信息，请参阅 [Visual Studio 2017 中 C++ 的符合性改进](cpp-conformance-improvements-2017.md)
 
-Visual Studio 2017 版本 15.7：Visual Studio 15.7 版中的 MSVC 编译器工具集现符合 C++ 标准。 有关详细信息，请参阅[公告：MSVC 符合 C++ 标准](https://blogs.msdn.microsoft.com/vcblog/2018/05/07/announcing-msvc-conforms-to-the-c-standard/)和 [Visual C++ 语言一致性](visual-cpp-language-conformance.md)。
+**Visual Studio 2017 15.7 版**：Visual Studio 15.7 版中的 MSVC 编译器工具集现符合 C++ 标准。 有关详细信息，请参阅[公告：MSVC 符合 C++ 标准](https://blogs.msdn.microsoft.com/vcblog/2018/05/07/announcing-msvc-conforms-to-the-c-standard/)和 [Visual C++ 语言一致性](visual-cpp-language-conformance.md)。
 
 ### <a name="new-compiler-options"></a>新的编译器选项
 
@@ -246,7 +245,7 @@ Visual C++ 支持 Intel AVX-512，包括将 AVX-512 中的新函数引入位宽�
 
 ### <a name="open-source-library-support"></a>开源库支持
 
-Vcpkg 是一款开源命令行工具，能极大简化在 Visual Studio 中获取和生成开源 C++ 静态库和 DLLS 的过程。 有关详细信息，请参阅 [vcpkg：用于 C++ 的程序包管理器 ](vcpkg.md)。
+Vcpkg 是一款开源命令行工具，能极大简化在 Visual Studio 中获取和生成开源 C++ 静态库和 DLLS 的过程。 有关详细信息，请参阅[vcpkg：适用于 C++ 的包管理器](vcpkg.md)。
 
 **Visual Studio 2017 版本 15.5**：
 
@@ -339,7 +338,7 @@ Visual Studio 2017 支持在不转换为 MSBuild 项目文件 (.vcxproj) 的情�
 
   ![Cmake 打开文件夹](media/cmake_cpp.png "CMake 打开文件夹")
 
-**Visual Studio 2017 版本 15.3**：添加了对 CMake Ninja 生成器的支持。
+**Visual Studio 2017 版本15.3**：添加了对 CMake Ninja 生成器的支持。
 
 **Visual Studio 2017 版本 15.5**：添加了对导入现有 CMake 缓存的支持。
 
@@ -389,9 +388,9 @@ Visual C++ 生成工具（以前作为单独的产品提供）现在作为工作
 C++ 是通用 Windows 应用工作负荷的可选组件。  当前必须手动完成 C++ 项目的升级。 如果在 Visual Studio 2017 中打开面向 v140 的 UWP 项目，且如果没有安装 Visual Studio 2015，则需要在项目属性页中选择 v141 平台工具集。
 
 ## <a name="new-options-for-c-on-universal-windows-platform-uwp"></a>通用 Windows 平台 (UWP) 上 C++ 的新选项
-现在，你拥有了为通用 Windows 平台和 Windows 应用商店编写和打包 C++ 应用程序的新选项：可使用桌面桥基础结构打包现有的桌面应用程序或 COM 对象，用于通过 Windows 应用商店部署或借助边载通过现有通道部署。 Windows 10 中的新功能使你能够以各种方式将 UWP 功能添加到桌面应用程序。 有关详细信息，请参阅[桌面桥](/windows/uwp/porting/desktop-to-uwp-root)。
+现可使用新选项编写和打包面向通用 Windows 平台和 Microsoft Store 的 C++ 应用程序：可使用桌面桥基础结构打包现有的桌面应用程序或 COM 对象，用于通过 Microsoft Store 部署或借助边载通过现有通道部署。 Windows 10 中的新功能使你能够以各种方式将 UWP 功能添加到桌面应用程序。 有关详细信息，请参阅[桌面桥](/windows/uwp/porting/desktop-to-uwp-root)。
 
-Visual Studio 2017 版本 15.5：添加了“Windows 应用程序打包项目”项目模板，极大地简化了使用桌面桥打包桌面应用程序的工作。 可在“文件| 新建 | 项目 | 已安装 | Visual C++ | 通用 Windows 平台”下获得此模板。 有关详细信息，请参阅[使用 Visual Studio（桌面桥）打包应用](/windows/uwp/porting/desktop-to-uwp-packaging-dot-net)。
+**Visual Studio 2017 版本 15.5**：添加了“Windows 应用程序打包项目”项目模板，极大地简化了使用桌面桥打包桌面应用程序的工作。 可在“文件| 新建 | 项目 | 已安装 | Visual C++ | 通用 Windows 平台”下获得此模板。 有关详细信息，请参阅[使用 Visual Studio（桌面桥）打包应用](/windows/uwp/porting/desktop-to-uwp-packaging-dot-net)。
 
 在编写新代码时可使用 C ++ / WinRT，它是 Windows 运行时的标准 C ++ 语言投影，仅在头文件中实现。 它使你可以使用任何符合兼容的 C++ 编译器创作和使用 Windows 运行时 API。 C++/WinRT 旨在为 C++ 开发人员提供对新式 Windows API 的优先访问权限。 有关详细信息，请参阅 [GitHub 上提供的 C++/WinR](https://moderncpp.com/)。
 
@@ -407,7 +406,7 @@ Visual Studio 2017 附带的 Clang/C2 工具集现在支持 /bigobj 开关，这
 
 ![CppCoreCheck](media/CppCoreCheck.png "CppCoreCheck 属性页")
 
-**Visual Studio 2017 版本 15.3**：添加了对与资源管理相关的规则的支持。
+**Visual Studio 2017 版本15.3**：添加了对与资源管理相关的规则的支持。
 
 **Visual Studio 2017 版本 15.5**：新的 C++ Core Guidelines 检查包含智能指针正确性、全局初始化表达式的正确使用和标记构造（如 `goto` 和错误转换）的使用。
 
@@ -433,7 +432,7 @@ Google Test Adapter 和 Boost.Test Adapter 现在作为“使用 C++ 的桌面�
 - 添加了对 Boost.Test 动态库支持的支持。
 - IDE 中现提供 Boost.Test 项模板。
 
-有关详细信息，请参阅 [Boost.Test Unit Testing: Dynamic Library support and New Item Template](https://blogs.msdn.microsoft.com/vcblog/2018/01/10/boost-test-unit-testing-dynamic-library-support-and-new-item-template/)（Boost.Test 单元测试：动态库支持和新项模板）。
+有关详细信息，请参阅[Boost.Test 单元测试：动态库支持和新的项模板](https://blogs.msdn.microsoft.com/vcblog/2018/01/10/boost-test-unit-testing-dynamic-library-support-and-new-item-template/)。
 
 **Visual Studio 2017 15.7 版**：
 
@@ -473,7 +472,7 @@ Visual Studio 图形诊断是一套工具，用于记录、分析 Direct3D 应�
 
   ![帧验证](media/frame-validation.png)
 
-- **对 D3D12 的帧分析：** 使用帧分析来分析具有定向“假设”试验的绘图调用性能。 切换至“帧分析”选项卡，然后运行分析以查看报告。 有关详细信息，请观看 [GoingNative 25: Visual Studio Graphics Frame Analysis](https://channel9.msdn.com/Shows/C9-GoingNative/GoingNative-25-Offline-Analysis-Graphics-Tool)（GoingNative 25：Visual Studio 图形帧分析）视频。
+- **对 D3D12 的帧分析：** 使用帧分析来分析具有定向“假设”试验的绘图调用性能。 切换至“帧分析”选项卡，然后运行分析以查看报告。 有关详细信息，请观看[GoingNative 25：Visual Studio 图形帧分析](https://channel9.msdn.com/Shows/C9-GoingNative/GoingNative-25-Offline-Analysis-Graphics-Tool)视频。
 
   ![帧分析](media/frame-analysis.png)
 
