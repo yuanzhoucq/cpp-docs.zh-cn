@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - _set_com_error_handler function
 ms.assetid: 49fe4fca-5e37-4d83-abaf-15be5ce37f94
-ms.openlocfilehash: 7c7c9d572dcb8e1323df003e15e44adc8491c058
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 864236e86b4aeb6ce7b3315df57af1b577693c26
+ms.sourcegitcommit: f127b08f114b8d6cab6b684febcb6f2ae0e055ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50567786"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56954934"
 ---
 # <a name="setcomerrorhandler"></a>_set_com_error_handler
 
@@ -90,7 +90,7 @@ Exception raised: Unable to establish the connection!
 
 **标头：** \<comdef.h >
 
-**Lib:** 如果**wchar_t 是本机类型**编译器选项已打开，请使用 comsuppw.lib 或 comsuppwd.lib。 如果**wchar_t 是本机类型**未启用，请使用 comsupp.lib。 有关详细信息，请参阅 [/Zc:wchar_t（wchar_t 是本机类型）](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)。
+**Lib:** 如果 **/zc: wchar_t**指定编译器选项 （默认值），使用 comsuppw.lib 或 comsuppwd.lib。 如果 **/zc: wchar_t-** 指定编译器选项，请使用 comsupp.lib。 有关详细信息，包括如何设置此选项在 IDE 中，请参阅[/zc: wchar_t （wchar_t 是本机类型）](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)。
 
 ## <a name="see-also"></a>请参阅
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - databases [C++], MFC programming model
 - Windows programming MFC symbols [C++]
 ms.assetid: c1e689c4-45d7-40a3-8ee9-f47676cc3bbb
-ms.openlocfilehash: 2f36f42ce24c2cdf1f3ac4c93248d430ec75f30a
-ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
+ms.openlocfilehash: 329d56f4a8e0e9992cb78987c559f74c7349f681
+ms.sourcegitcommit: f127b08f114b8d6cab6b684febcb6f2ae0e055ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56320856"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56954947"
 ---
 # <a name="mfc-predefined-symbols"></a>MFC 预定义的符号
 
@@ -23,12 +23,12 @@ MFC 项目始终包含支持 windows 的多个标头文件。 通过添加这些
 ```cpp
 #include <afxwin.h>      //MFC core and standard components
 #include <afxext.h>      //MFC extensions
-#include <afxdisp.h      //MFC automation classes
+#include <afxdisp.h>      //MFC automation classes
 #include <afxdtctl.h>   //MFC support for Internet Explorer common controls
 #include <afxcmn.h>      //MFC support for Windows common controls.
 ```
 
-标头文件包括 MFC 常见值的符号 ID 值。 MFC 项目中工作时，这些符号才可用。 AFX_ 前缀后跟标准符号名前缀。
+标头文件包括 MFC 常见值的符号 ID 值。 MFC 项目中工作时，这些符号才可用。 `AFX_`前缀后面跟标准符号名前缀。
 
 |||
 |-|-|
@@ -211,7 +211,7 @@ MFC 项目始终包含支持 windows 的多个标头文件。 通过添加这些
 |AFX_IDS_UPDATING_ITEMS|AFX_IDS_USER_EXCEPTION|
 |AFX_IDS_VERB_EDIT|AFX_IDS_VERB_PROPERTIES|
 
-## <a name="mfc-database-programming-symbols"></a>MFC 数据库编程符号
+## <a name="mfc-database-programming"></a>MFC 数据库编程
 
 添加了数据库的支持，此表中的符号只能出现在 MFC 项目中。 它们支持与 SQL 服务器和数据库编程的 MFC 连接。
 
@@ -232,9 +232,11 @@ MFC 项目始终包含支持 windows 的多个标头文件。 通过添加这些
 |AFX_IDP_SQL_SNAPSHOT_ NOT_SUPPORTED|AFX_IDP_SQL_SQL_CONFORMANCE|
 |AFX_IDP_SQL_SQL_NO_TOTAL|AFX_IDP_SQL_UPDATE_DELETE_FAILED|
 
-## <a name="mfc-windows-programming-symbols"></a>MFC Windows 编程符号
+## <a name="mfc-windows-programming"></a>MFC Windows 编程
 
-这些符号也是 MFC 支持文件的一部分，但它们支持标准的 Windows 应用程序功能和操作。 这些符号用于菜单。 当你正在使用中的菜单**菜单编辑器**，这些符号将出现在**属性窗口**与常见的菜单命令相关联。 例如，如果你的应用程序具有**文件**菜单，其中包含**退出**命令，命令将与相关联的符号 ID_APP_EXIT 中[属性窗口](/visualstudio/ide/reference/properties-window)。
+这些符号也是 MFC 支持文件的一部分，但它们支持标准的 Windows 应用程序功能和操作。 这些符号用于菜单。
+
+当您正在使用中的菜单**菜单编辑器**，这些符号将出现在**属性窗口**与常见的菜单命令相关联。 例如，如果你的应用程序具有**文件**菜单，其中包含**退出**命令，命令将与相关联的符号 ID_APP_EXIT 中[属性窗口](/visualstudio/ide/reference/properties-window)。
 
 ||||
 |-|-|-|
