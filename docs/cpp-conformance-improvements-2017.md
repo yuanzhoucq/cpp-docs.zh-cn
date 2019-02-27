@@ -1,17 +1,16 @@
 ---
 title: C++ 的符合性改进
 ms.date: 10/31/2018
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: ad34e2721723e113417b45cf7c1da0da4575837f
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 855322f09c9c8f5292c6e299f946c3cec5d9949a
+ms.sourcegitcommit: fbc05d8581913bca6eff664e5ecfcda8e471b8b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694395"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56809745"
 ---
 # <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-157improvements157-158update158-159update159"></a>Visual Studio 2017 版本 15.0、[15.3](#improvements_153)、[15.5](#improvements_155)、[15.6](#improvements_156)、[15.7](#improvements_157)、[15.8](#update_158)、[15.9](#update_159) 中 C++ 的符合性改进
 
@@ -790,7 +789,7 @@ void f()
 
 不允许对模板类中成员函数的外部定义使用默认参数。编译器将在 /permissive 下发出警告，并在 /permissive- 下发出硬错误。
 
-在以前版本的 Visual Studio 中，以下格式错误的代码可能会导致发生运行时故障。 Visual Studio 2017 版本 15.3 生成警告 C5034: "A\<T>::f": 类模板成员的外部定义不能包含默认参数：
+在以前版本的 Visual Studio 中，以下格式错误的代码可能会导致发生运行时故障。 Visual Studio 2017 版本 15.3 发出警告 C5034：“A\<T>::f”：类模板的成员的外部定义不得具有默认参数：
 
 ```cpp
 template <typename T>
@@ -865,7 +864,7 @@ extern "C" __declspec(noinline) HRESULT __stdcall
 
 ### <a name="decltype-and-calls-to-deleted-destructors"></a>decltype 和调用的析构函数已遭删除
 
-在旧版 Visual Studio 中，在“decltype”相关表达式的上下文中，编译器无法检测对已删除析构函数的调用。 在 Visual Studio 2017 版本 15.3 中，下面的代码生成“错误 C2280: "A\<T>::~A(void)": 正在尝试引用已删除的函数”：
+在旧版 Visual Studio 中，在“decltype”相关表达式的上下文中，编译器无法检测对已删除析构函数的调用。 Visual Studio 2017 版本 15.3 中，以下代码生成错误“C2280：'A\<T>::~A(void)'：尝试引用已删除的函数”：
 
 ```cpp
 template<typename T>
@@ -888,7 +887,7 @@ void h()
 
 ### <a name="uninitialized-const-variables"></a>未初始化的 const 变量
 
-Visual Studio 2017 RTW 版本包含一个回归，即如果未初始化“const”变量，C++ 编译器不会发出诊断提醒。 Visual Studio 2017 版本 15.3 修复了此回归。 下面的代码现在生成警告 C4132：“值”:应初始化 const 对象。
+Visual Studio 2017 RTW 版本包含一个回归，即如果未初始化“const”变量，C++ 编译器不会发出诊断提醒。 Visual Studio 2017 版本 15.3 修复了此回归。 下面的代码现在生成“警告 C4132：'Value'：应初始化 const 对象”：
 
 ```cpp
 const int Value; //C4132
@@ -961,7 +960,7 @@ static_assert(std::is_constructible<PrivateDtor, int>::value);
 
 此调用表示一个析构函数调用。
 
-### <a name="c2668-ambiguous-overload-resolution"></a>C2668：重载决策不明确
+### <a name="c2668-ambiguous-overload-resolution"></a>C2668:重载决策不明确
 
 当发现多个候选项（都使用声明和参数依赖查找）时，早期版本的编译器有时无法检测到多义性。 这可能导致选择错误的重载并出现异常的运行时行为。 在以下示例中，Visual Studio 2017 版本 15.3 正确引发 C2668“f”：对重载函数的调用不确定：
 
@@ -1532,7 +1531,7 @@ struct D : B<T*> {
 };
 ```
 
-处于 /std:c++17 模式的 Visual Studio 2017 版本 15.7 需要 D 中 `using` 语句中的 `typename` 关键字。若没有 `typename`，编译器会引发警告 C4346：'B<T\*>::type': 依赖名称不是类型，以及错误 C2061：语法错误 - 标识符 'type'：
+Visual Studio 2017 版本 15.7 为 /std:c++17 模式，需要 D 中 `using` 语句中的 `typename` 关键字。如果没有 `typename`编译器会引发警告 C4346（B<T>::type”：依赖项名称不是类型）和错误 C2061（语法错误：标识符“type”）*\**：
 
 ```cpp
 template<typename T>
@@ -1563,7 +1562,7 @@ int main() {
 
 旧版 Visual Studio 错误地允许使用缺少模板参数的变参模板构造函数基类初始化列表，而未生成任何错误消息。 Visual Studio 2017 版本 15.7 抛出了编译器错误。
 
-下面的代码示例在 Visual Studio 2017 版本 15.7 中抛出错误 C2614：D\<int>:成员初始化非法: ”B” 不是基类或成员
+下面的代码示例在 Visual Studio 2017 版本 15.7 中引发*错误 C2614：D\<int>：不合法的成员初始化：B 不是基或成员*
 
 ```cpp
 template<typename T>
@@ -1677,7 +1676,7 @@ struct S : Base<T> {
 
 要修复此错误，将 `return` 语句更改为 `return this->base_value;`。
 
-注意：在 Boost python 库中，针对 [unwind_type.hpp](https://github.com/boostorg/python/blame/develop/include/boost/python/detail/unwind_type.hpp) 中的模板前向声明，一直存在特定于 MVSV 的解决方法。 从 Visual Studio 2017 版本 15.8 (_MSC_VER=1915) 开始，在 [/permissive-](build/reference/permissive-standards-conformance.md) 模式下，MSVC 编译器正确执行依赖于参数的名称查找 (ADL) 并与其他编译器保持一致，不再需要此解决方法保护功能。 为避免出现此错误 C3861：“unwind_type”：找不到标识符，请参阅 Boostorg 存储库中的 [PR 229](https://github.com/boostorg/python/pull/229) 以更新标头文件。 我们已经修补了 [vcpkg](vcpkg.md) Boost 包，所以，如果你从 vcpkg 获取或升级你的 Boost 源，则无需单独应用此修补。
+**注意：** 在 Boost python 库中，针对 [unwind_type.hpp](https://github.com/boostorg/python/blame/develop/include/boost/python/detail/unwind_type.hpp) 中的模板前向声明，一直存在特定于 MVSV 的解决方法。 从 Visual Studio 2017 版本 15.8 (_MSC_VER=1915) 开始，在 [/permissive-](build/reference/permissive-standards-conformance.md) 模式下，MSVC 编译器正确执行依赖于参数的名称查找 (ADL) 并与其他编译器保持一致，不再需要此解决方法保护功能。 为避免出现此错误 C3861：“unwind_type”：找不到标识符，请参阅 Boostorg 存储库中的 [PR 229](https://github.com/boostorg/python/pull/229) 以更新标头文件。 我们已经修补了 [vcpkg](vcpkg.md) Boost 包，所以，如果你从 vcpkg 获取或升级你的 Boost 源，则无需单独应用此修补。
 
 ### <a name="forward-declarations-and-definitions-in-namespace-std"></a>命名空间 std 中的转发声明和定义
 
@@ -1685,7 +1684,7 @@ C++ 标准不允许用户将转发声明或定义添加到命名空间 `std`。 
 
 未来的某个时间，Microsoft 将移动定义一些 STL 类型的位置。 在此情况下，它会破坏将转发声明添加到命名空间 `std` 的现有代码。 新警告 C4643 有助于识别此类源问题。 **/default** 模式下启用此警告，默认关闭此警告。 它会影响使用 /Wall 或 /WX 编译的程序。
 
-现在，以下代码引发 C4643：C++ Standard 不允许命名空间 std 中的转发声明“vector”。
+现在，以下代码引发 C4643：C++ 标准不允许转发命名空间中的声明“vector”。
 
 ```cpp
 namespace std {
@@ -1701,7 +1700,7 @@ namespace std {
 
 ### <a name="constructors-that-delegate-to-themselves"></a>对自身进行委托的构造函数
 
-C++ Standard 建议当委托构造函数对自身进行委托时，编译器应发出诊断。 在 [/std:c++17](build/reference/std-specify-language-standard-version.md) 和 [/std:c++latest](build/reference/std-specify-language-standard-version.md) 模式下，Microsoft C++  编译器现在引发 C7535：“X::X”委托构造函数调用自己。
+C++ Standard 建议当委托构造函数对自身进行委托时，编译器应发出诊断。 [/std:c++17](build/reference/std-specify-language-standard-version.md) 和 [/std:c++latest](build/reference/std-specify-language-standard-version.md) 模式的 Microsoft C++ 编译器现引发 C7535：X::X”：委托构造函数调用自身。
 
 如果不出现此错误，以下程序将编译，但会生成无限循环：
 
@@ -1865,9 +1864,9 @@ cl /EHsc /std:c++17 m.ixx /experimental:module
 cl /experimental:module /module:reference m.ifc main.cpp /std:c++14
 ```
 
-在这两种情况下，编译器都会引发 C5050：警告 C5050：导入模块“m”：不匹配的 C++ 模板时，可能出现不兼容的环境。当前版本为“201402”，模块版本为“201703”。
+在这两种情况下编译器均引发 C5050。警告 C5050：导入模块“m”时可能不兼容的环境：C++ 版本不匹配。当前版本为“201402”，模块版本为“201703”。
 
-除此之外，每当篡改 .ifc 文件时，编译器会引发 C7536。 模块接口的标头包含它下面内容的 SHA2 哈希。 导入时，ifc 文件以相同的方式进行哈希处理，然后对照标头中提供的哈希进行检查；如果它们不匹配，则会引发错误 C7536：ifc 未通过完整性检查。预期的 SHA2：“66d5c8154df0c71d4cab7665bab4a125c7ce5cb9a401a4d8b461b706ddd771c6”。
+除此之外，每当篡改 .ifc 文件时，编译器会引发 C7536。 模块接口的标头包含它下面内容的 SHA2 哈希。 导入时，ifc 文件以相同的方式进行哈希处理，然后对照标头中提供的哈希进行检查；如果它们不匹配，则会引发错误 C7536：ifc 未通过完整性检查。预期为 SHA2：“66d5c8154df0c71d4cab7665bab4a125c7ce5cb9a401a4d8b461b706ddd771c6”。
 
 ### <a name="partial-ordering-involving-aliases-and-non-deduced-contexts"></a>部分排序涉及别名和非推导上下文
 
