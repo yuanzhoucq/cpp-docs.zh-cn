@@ -340,11 +340,11 @@ short __cdecl _fdnorm(unsigned short* ps);
 ### <a name="parameters"></a>参数
 
 *ps*<br/>
-指向数组的形式表示的浮点值的按位表示形式**无符号****短**。
+指向数组的形式表示的浮点值的按位表示形式**无符号** **短**。
 
 ### <a name="remarks"></a>备注
 
-这些浮点基元规范化 underflowed 的浮点值的小数部分和调整*特征*，或有偏差的指数，以匹配。 值作为的按位表示浮点类型转换为数组的形式传递**无符号****短**通过`_double_val`， `_ldouble_val`，或`_float_val`类型punning 联合声明在 math.h 中。 返回值是结果**fpclassify**和上的输入的浮点值，如果它是 NaN 或无穷大，否则为输出值。
+这些浮点基元规范化 underflowed 的浮点值的小数部分和调整*特征*，或有偏差的指数，以匹配。 值作为的按位表示浮点类型转换为数组的形式传递**无符号** **短**通过`_double_val`， `_ldouble_val`，或`_float_val`类型punning 联合声明在 math.h 中。 返回值是结果**fpclassify**和上的输入的浮点值，如果它是 NaN 或无穷大，否则为输出值。
 
 ## <a name="dpoly-ldpoly-fdpoly"></a>_dpoly，_ldpoly _fdpoly
 
