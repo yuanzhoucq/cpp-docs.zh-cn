@@ -1,21 +1,21 @@
 ---
 title: const_mem_fun_t 类
-ms.date: 11/04/2016
+ms.date: 02/21/2019
 f1_keywords:
-- xfunctional/std::const_mem_fun_t
+- functional/std::const_mem_fun_t
 helpviewer_keywords:
 - const_mem_fun_t class
 ms.assetid: f169d381-019b-4a0e-a9a3-54da6d948270
-ms.openlocfilehash: 16169c094e74178f5a2dd67f70bf75c1f3ee8d87
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 10a39d4b7871e08a5bf3ec56f6d11df5ad8b646c
+ms.sourcegitcommit: 4299caac2dc9e806c74ac833d856a3838b0f52a1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50563587"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57006456"
 ---
 # <a name="constmemfunt-class"></a>const_mem_fun_t 类
 
-一种适配器类，在使用引用自变量进行初始化的情况下，该类允许将不带任何自变量的 const 成员函数作为一元函数对象调用。
+一种适配器类，在使用引用自变量进行初始化的情况下，该类允许将不带任何自变量的 const 成员函数作为一元函数对象调用。 在 C + + 11 中，在 C + + 17 中删除不推荐使用。
 
 ## <a name="syntax"></a>语法
 

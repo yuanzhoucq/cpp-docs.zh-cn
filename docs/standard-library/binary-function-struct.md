@@ -1,21 +1,21 @@
 ---
 title: binary_function 结构
-ms.date: 11/04/2016
+ms.date: 02/21/2019
 f1_keywords:
-- functional/std::binary
+- functional/std::binary_function
 helpviewer_keywords:
 - binary_function class
 ms.assetid: 79b6d53d-644c-4add-b0ba-3a5f40f69c60
-ms.openlocfilehash: 5a153d85f9f6dcb93a074725ee9582ccfc1a66ad
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2a6735ab558480039a0d2fa0e83ee4c5de02c5f2
+ms.sourcegitcommit: 4299caac2dc9e806c74ac833d856a3838b0f52a1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50466763"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57006261"
 ---
 # <a name="binaryfunction-struct"></a>binary_function 结构
 
-空基结构，定义可能由提供二元函数对象的派生类继承的类型。
+空基结构，定义可能由提供二元函数对象的派生类继承的类型。 在 C + + 11 中，在 C + + 17 中删除不推荐使用。
 
 ## <a name="syntax"></a>语法
 
@@ -31,7 +31,7 @@ struct binary_function {
 
 模板结构可作为一些类的基础，这些类可定义以下窗体的成员函数：
 
-> *result_type* * * operator （) (const * * <em>first_argument_type</em>**&、 const** <em>second_argument_type</em>**&) 常量**
+> *result_type* ** operator()( const** <em>first_argument_type</em>**&, const** <em>second_argument_type</em>**& ) const**
 
 所有的此类二元函数都可将其第一个参数类型引用为 *first_argument_type*，将其第二个参数类型引用为 *second_argument_type*，并将其返回类型引用为 *result_type*。
 
