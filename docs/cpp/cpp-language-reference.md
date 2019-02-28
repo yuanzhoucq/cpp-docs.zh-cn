@@ -93,7 +93,7 @@ Microsoft 的 C++ 扩展。
 有关 Visual C++ 编译器的非标准行为的信息。
 
 [欢迎回到 C++](welcome-back-to-cpp-modern-cpp.md)<br/>
-现代 c + + 编程做法编写安全、 正确、 有效的程序的概述。
+现代 C++ 编程做法编写安全、 正确、 有效的程序的概述。
 
 ## <a name="related-sections"></a>相关章节
 
