@@ -1,22 +1,22 @@
 ---
 title: pointer_to_binary_function 类
-ms.date: 11/04/2016
+ms.date: 02/21/2019
 f1_keywords:
-- xfunctional/std::pointer_to_binary
+- functional/std::pointer_to_binary
 helpviewer_keywords:
 - pointer_to_binary_function function
 - pointer_to_binary_function class
 ms.assetid: fb50599f-bcb3-4076-a669-6dcc3eb189a5
-ms.openlocfilehash: dd96aa1bf7f1f19b84e2e83e3ab5b33c4a0c5bfc
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 88d38be258c6ceb1054e0d31cc52e4d8d25186ec
+ms.sourcegitcommit: 4299caac2dc9e806c74ac833d856a3838b0f52a1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51332096"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57006794"
 ---
 # <a name="pointertobinaryfunction-class"></a>pointer_to_binary_function 类
 
-将二元函数指针转换为自适应二元函数。
+将二元函数指针转换为自适应二元函数。 在 C + + 11 中，在 C + + 17 中删除不推荐使用。
 
 ## <a name="syntax"></a>语法
 

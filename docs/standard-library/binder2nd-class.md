@@ -1,21 +1,21 @@
 ---
 title: binder2nd 类
-ms.date: 11/04/2016
+ms.date: 02/21/2019
 f1_keywords:
-- xfunctional/std::binder2nd
+- functional/std::binder2nd
 helpviewer_keywords:
 - binder2nd class
 ms.assetid: b2a9c1d1-dfc4-4ca9-a10e-ae84e195a62d
-ms.openlocfilehash: bb7b867be4ef7ff0f5bcd9ad54538bf449ccd071
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8c1ed74da939c5f5cc83a2a109d32b43b5ac7f41
+ms.sourcegitcommit: 4299caac2dc9e806c74ac833d856a3838b0f52a1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50464657"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57006482"
 ---
 # <a name="binder2nd-class"></a>binder2nd 类
 
-一种模板类，用于提供构造函数，通过将二元函数的第二个自变量绑定到指定的值，将二元函数对象转换为一元函数对象。
+一种模板类，用于提供构造函数，通过将二元函数的第二个自变量绑定到指定的值，将二元函数对象转换为一元函数对象。 在 C + + 11 中，在 C + + 17 中删除不推荐使用。
 
 ## <a name="syntax"></a>语法
 
