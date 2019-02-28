@@ -81,7 +81,7 @@ C++ 异常处理、结构化异常处理 (SEH)、编写异常处理语句所使�
 Microsoft C++ 专用修饰符。 内存寻址、 调用约定、**裸**函数，扩展的存储类特性 (**__declspec**)， **__w64**。
 
 [内联汇编程序](../assembler/inline/inline-assembler.md)<br/>
-使用程序集语言和 c + + 中的 **__asm**块。
+使用程序集语言和 C++ 中的 **__asm**块。
 
 [编译器 COM 支持](../cpp/compiler-com-support.md)<br/>
 有关用于支持 COM 类型的 Microsoft 专用类和全局函数的参考。
