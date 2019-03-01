@@ -15,6 +15,7 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - bsearch
@@ -22,12 +23,12 @@ helpviewer_keywords:
 - arrays [CRT], binary search
 - bsearch function
 ms.assetid: e0ad2f47-e7dd-49ed-8288-870457a14a2c
-ms.openlocfilehash: a5f4542623dfa503d7ec43dff0cf0de9e69ccec4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e170ce67d22c0d97825a7eb754546a29daac6d89
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50464839"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210453"
 ---
 # <a name="bsearch"></a>bsearch
 
@@ -53,7 +54,7 @@ void *bsearch(
 *base*<br/>
 指向搜索数据的基项的指针。
 
-*数量*<br/>
+*number*<br/>
 元素数量。
 
 *width*<br/>
