@@ -16,6 +16,7 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - _wmakepath_s
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - _wmakepath_s function
 - makepath_s function
 ms.assetid: 4405e43c-3d63-4697-bb80-9b8dcd21d027
-ms.openlocfilehash: 6914299dd7ede97c9004dcc95e01b1a35188f5c8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3536569fd3e77a353003e1372d5dc4ee6e4ee3fb
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471911"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210648"
 ---
 # <a name="makepaths-wmakepaths"></a>_makepath_s、_wmakepath_s
 
@@ -88,7 +89,7 @@ errno_t _wmakepath_s(
 *sizeInBytes*<br/>
 缓冲区的大小（以字节为单位）。
 
-*驱动器*<br/>
+*drive*<br/>
 包含一个与所需的驱动器对应的字母（A、B 等）和可选的尾随冒号。 **_makepath_s**缺少时自动插入复合路径中的冒号。 如果*驱动器*是**NULL**或指向空字符串，无驱动器号出现在复合*路径*字符串。
 
 *dir*<br/>

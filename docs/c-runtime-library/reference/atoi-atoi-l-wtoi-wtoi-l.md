@@ -18,6 +18,7 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - _tstoi
@@ -40,12 +41,12 @@ helpviewer_keywords:
 - atoi function
 - wtoi function
 ms.assetid: ad7fda30-28ab-421f-aaad-ef0b8868663a
-ms.openlocfilehash: 5c03f2766701f7e360ad0bf4f0fc701d2a7e983c
-ms.sourcegitcommit: b401a05c5c0f5cc4b32893d7382c05a51e4ab783
+ms.openlocfilehash: b6a1f52e6c83f53230c736db3a506aed4b52e434
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "50999981"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210687"
 ---
 # <a name="atoi-atoil-wtoi-wtoil"></a>atoi、_atoi_l、_wtoi、_wtoi_l
 
@@ -90,7 +91,7 @@ int _wtoi_l(
 
 *Str*自变量**atoi**并 **_wtoi**具有以下形式：
 
-> [*空格*] [*登录*] [*数字*]]
+> [*whitespace*] [*sign*] [*digits*]]
 
 一个*空格*包含的空格或制表符字符，将被忽略;*符号*可以是加号 （+） 或减号 （–）; 并且*数字*是一个或多个数字。
 
