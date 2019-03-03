@@ -21,16 +21,16 @@ helpviewer_keywords:
 - properties [C++], resources
 - resources [C++], properties
 ms.assetid: e20a29ec-d6fb-4ead-98f3-431a0e23aaaf
-ms.openlocfilehash: aeeca87ceb5b2c5e54da7087b5020ccbc1c39039
-ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
+ms.openlocfilehash: 118744f70242b511930399c5786035493e9b7cf0
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56320804"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210739"
 ---
 # <a name="resource-editors-c"></a>资源编辑器 （c + +）
 
-一个**资源**编辑器是用于创建或修改 Visual Studio 项目中包含的资源的专用的环境。 Visual Studio 资源编辑器共享技术和接口，以帮助你快速、轻松地创建和修改应用程序资源。 资源编辑器，你可以查看和编辑相应的编辑器和预览资源中的资源。
+一个**资源编辑器**是专用的环境，用于创建或修改 Visual Studio 项目中包含的资源。 Visual Studio 资源编辑器共享技术和接口，以帮助你快速、轻松地创建和修改应用程序资源。 资源编辑器，你可以查看和编辑相应的编辑器和预览资源中的资源。
 
 创建或打开某个资源时，将自动打开相应的编辑器。
 
@@ -50,36 +50,28 @@ ms.locfileid: "56320804"
 |[版本信息编辑器](../windows/version-information-editor.md)|Visual C++ 项目中的版本信息。|
 
 > [!NOTE]
-> 如果你的项目尚未包含 .rc 文件，请参阅 [创建新的资源脚本文件](../windows/how-to-create-a-resource-script-file.md)。
+> 如果你的项目尚未包含.rc 文件，请参阅[如何：创建资源](../windows/how-to-create-a-resource-script-file.md)。
 
 ## <a name="view-and-edit-resources"></a>查看和编辑资源
 
-每种资源类型具有**资源**特定于该资源类型的编辑器。 可以重新排列、 调整大小、 添加控件和功能，或以其他方式修改资源使用相关联的编辑器的方面。 此外可以编辑中的资源[文本格式](../windows/how-to-open-a-resource-script-file-in-text-format.md)并[二进制格式](../windows/opening-a-resource-for-binary-editing.md)。
+每种资源类型具有**资源编辑器**特定于该资源类型。 可以重新排列、 调整大小、 添加控件和功能，或以其他方式修改资源使用相关联的编辑器的方面。 此外可以编辑中的资源[文本格式](../windows/how-to-open-a-resource-script-file-in-text-format.md)并[二进制格式](../windows/opening-a-resource-for-binary-editing.md)。
 
 某些资源类型是单个文件可以导入和使用各种方式;其中包括位图、 图标、 光标、 工具栏和 html 文件。 此类资源具有文件的名称和[资源标识符](../windows/symbols-resource-identifiers.md)。 其他人，例如对话框、 菜单和在 Win32 项目中，字符串表仅作为的一部分存在的资源脚本 (.rc) 文件或资源模板 (.rct) 文件。
 
-资源还可以在项目外部编辑，请参阅[如何：打开资源脚本文件 （独立版） 在项目外部](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)。
+资源也可以在项目外部编辑而无需打开该项目，请参阅[如何：创建资源](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)。
 
 > [!NOTE]
-> 资源的属性[可以使用属性窗口修改](../windows/changing-the-properties-of-a-resource.md)。
+> 可以使用修改资源的属性**属性**窗口。
 
-### <a name="to-edit-the-properties-of-a-resource"></a>编辑资源的属性
+- 若要编辑的资源，属性在[资源视图](../windows/resource-view-window.md)，右键单击你想要编辑，并选择的资源**属性**。  然后，在[属性窗口](/visualstudio/ide/reference/properties-window)，更改所需的资源的属性。
 
-1. 在中[资源视图](../windows/resource-view-window.md)，右键单击你想要编辑，并选择的资源**属性**从快捷菜单。
-
-1. 在中[属性窗口](/visualstudio/ide/reference/properties-window)，更改所需的资源的属性。
-
-### <a name="to-undo-a-change-made-to-the-properties-of-a-resource"></a>若要撤消的对资源的属性所做的更改
-
-1. 请确保所需的资源具有焦点**资源视图**。
-
-1. 选择**撤消**从**编辑**菜单。
+- 若要撤消的对资源的属性所做的更改，请确保所需的资源具有焦点**资源视图**，然后选择**撤消**从**编辑**菜单。
 
 ### <a name="win32-resources"></a>Win32 资源
 
 您可以访问中的 Win32 资源[资源视图](../windows/resource-view-window.md)窗格。
 
-#### <a name="to-view-a-win32-resource-in-a-resource-editor"></a>若要在资源编辑器中查看 Win32 资源
+若要在资源编辑器中查看 Win32 资源：
 
 1. 选择**资源视图**从**视图**菜单。
 
@@ -91,48 +83,44 @@ ms.locfileid: "56320804"
 
    资源将在适当的编辑器中打开。 例如，对于对话框资源，资源将打开内**对话框**编辑器。
 
-   此外可以[.rc （资源脚本） 文件中查看资源，而无需打开一个项目](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)。
-
-#### <a name="to-delete-an-existing-win-32-resource"></a>若要删除现有 Win 32 资源
+若要删除现有的 Win32 资源：
 
 1. 在中**资源视图**，展开资源类型的节点。
 
-1. 右键单击你想要删除选择的资源**删除**从快捷菜单。
+1. 右键单击你想要删除选择的资源**删除**。
 
-   > [!NOTE]
-   > 可以删除您已在文档窗口中在项目外部打开.rc 文件时使用相同的快捷菜单命令的资源。
+   > [!TIP]
+   > 当您已在文档窗口中在项目外部打开.rc 文件时，还可以使用此方法。
 
 ### <a name="managed-project-resources"></a>托管的项目资源
 
-由于托管的项目不使用资源脚本文件，则必须打开你的资源**解决方案资源管理器**。 可以使用[的图像编辑器](../windows/image-editor-for-icons.md)并[二进制编辑器](binary-editor.md)来处理托管项目中的资源文件。 你要编辑的任何托管资源都必须是链接的资源。 Visual Studio 资源编辑器不支持编辑嵌入的资源。
+由于托管的项目不使用资源脚本文件，则必须打开你的资源**解决方案资源管理器**。 使用[的图像编辑器](../windows/image-editor-for-icons.md)并[二进制编辑器](binary-editor.md)来处理托管项目中的资源文件。 你想要编辑的任何托管的资源必须是链接的资源，Visual Studio 资源编辑器不支持编辑嵌入的资源。
 
-- 若要查看在资源编辑器中，托管的资源中**解决方案资源管理器**，双击该资源，例如， *Bitmap1.bmp*。
+- 若要查看在资源编辑器中，托管的资源中**解决方案资源管理器**，双击该资源，例如， *Bitmap1.bmp*。 资源将在适当的编辑器中打开。
 
-   资源将在适当的编辑器中打开。
-
-- 若要删除现有的托管的资源，在**解决方案资源管理器**，右键单击你想要删除选择的资源**删除**从快捷菜单。
+- 若要删除现有的托管的资源，在**解决方案资源管理器**，右键单击你想要删除选择的资源**删除**。
 
 ## <a name="preview-resources"></a>预览资源
 
-预览对资源进行，可以查看图形资源，而无需打开它们。 预览功能也很有用的可执行文件后，已编译它们，因为资源标识符更改为数字。 这些数字标识符通常不提供足够的信息，因为预览资源可帮助快速识别它们。
+预览对资源进行，可以查看图形资源，而无需打开它们。 预览功能也很有用的可执行文件后已编译，因为这样的资源标识符更改为数字。 这些数字标识符通常不提供足够的信息，因为预览资源可帮助快速识别它们。
 
-您可以预览的可视布局部分的以下资源类型：位图、 对话框、 图标、 菜单、 光标和工具栏
+以下资源类型提供可视布局预览：位图、 对话框、 图标、 菜单、 光标和工具栏
 
-Visual 预览版函数不能应用于资源：Accelerator、 清单、 字符串表和版本信息
+以下资源不提供 visual 预览版：Accelerator，清单中，字符串表中，版本信息
 
 > [!NOTE]
 > 若要预览资源需要 Win32。
 
-### <a name="to-preview-resources"></a>若要预览资源
+若要预览资源：
 
-1. 在中[资源视图](../windows/resource-view-window.md)或文档窗口中，选择你的资源，例如， `IDD_ABOUTBOX`。
+1. 在中[资源视图](../windows/resource-view-window.md)或文档窗口中，选择你的资源，例如， **IDD_ABOUTBOX**。
 
 1. 在中[属性窗口](/visualstudio/ide/reference/properties-window)，选择**属性页**按钮。
 
    > [!TIP]
-   > 一个快捷方式，在**视图**菜单中，选择**属性页**。
+   > 使用快捷方式，请转到菜单**视图** > **属性页**。
 
-   **属性页**资源将打开，显示该资源的预览。 然后，可以使用**向上**并**向下**箭头键可浏览树控件中**资源视图**或文档窗口。 **属性页**将保持打开状态并显示具有焦点并且可预览的任何资源。
+   **属性页**资源将打开，显示该资源的预览。 可以使用**向上**并**向下**箭头键可浏览树控件中**资源视图**或文档窗口。 **属性页**将保持打开状态并显示具有焦点并且可预览的任何资源。
 
 ## <a name="requirements"></a>要求
 
@@ -142,4 +130,4 @@ Visual 预览版函数不能应用于资源：Accelerator、 清单、 字符串
 
 [使用资源文件](../windows/working-with-resource-files.md)<br/>
 [资源文件](../windows/resource-files-visual-studio.md)<br/>
-[资源标识符 （符号）](../windows/symbols-resource-identifiers.md)<br/>
+[资源标识符（符号）](../windows/symbols-resource-identifiers.md)<br/>
