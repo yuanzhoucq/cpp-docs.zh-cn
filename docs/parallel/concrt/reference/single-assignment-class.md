@@ -19,16 +19,17 @@ f1_keywords:
 helpviewer_keywords:
 - single_assignment class
 ms.assetid: ccc34728-8de9-4e07-b83d-a36a58d9d2b9
-ms.openlocfilehash: 5a27fb6cdc13fbbd3ceb8a85adacf5491ddc3ce1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 436d0d4cc16ee18449178782b775a25bb1d8592a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50593471"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268950"
 ---
 # <a name="singleassignment-class"></a>single_assignment 类
 
-`single_assignment` 消息块是多目标、多源、有序的 `propagator_block`，能够存储单个一次写入的 `message`。
+
+  `single_assignment` 消息块是多目标、多源、有序的 `propagator_block`，能够存储单个一次写入的 `message`。
 
 ## <a name="syntax"></a>语法
 
@@ -56,7 +57,7 @@ class single_assignment : public propagator_block<multi_link_registry<ITarget<T>
 |名称|描述|
 |----------|-----------------|
 |[has_value](#has_value)|检查是否这`single_assignment`消息块具有尚未初始化的值。|
-|[value](#value)|获取对存储在消息的当前负载`single_assignment`消息块。|
+|[值](#value)|获取对存储在消息的当前负载`single_assignment`消息块。|
 
 ### <a name="protected-methods"></a>受保护的方法
 
@@ -289,7 +290,7 @@ single_assignment(
 
 ### <a name="parameters"></a>参数
 
-*筛选 （_f)*<br/>
+*_Filter*<br/>
 确定是否应接受提供的消息的筛选器函数。
 
 *_PScheduler*<br/>
@@ -304,7 +305,7 @@ single_assignment(
 
 类型`filter_method`是具有签名的伪函数`bool (T const &)`调用此`single_assignment`消息块，以确定它是否应接受提供的消息。
 
-##  <a name="dtor"></a> ~ single_assignment
+##  <a name="dtor"></a> ~single_assignment
 
 销毁`single_assignment`消息块。
 
@@ -333,4 +334,3 @@ T const& value();
 [并发命名空间](concurrency-namespace.md)<br/>
 [overwrite_buffer 类](overwrite-buffer-class.md)<br/>
 [unbounded_buffer 类](unbounded-buffer-class.md)
-

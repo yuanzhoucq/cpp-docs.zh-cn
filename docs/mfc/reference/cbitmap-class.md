@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CBitmap [MFC], SetBitmapBits
 - CBitmap [MFC], SetBitmapDimension
 ms.assetid: 3980616a-c59d-495a-86e6-62bd3889c84c
-ms.openlocfilehash: 6722011bf343a391fcc7180558eead5c039afc59
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 97d4561da12492c158673c4cc79c2baefd973c75
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178169"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296717"
 ---
 # <a name="cbitmap-class"></a>CBitmap 类
 
@@ -71,7 +71,7 @@ class CBitmap : public CGdiObject
 |[CBitmap::GetBitmap](#getbitmap)|填充`BITMAP`位图有关的信息的结构。|
 |[CBitmap::GetBitmapBits](#getbitmapbits)|将指定的位图的位复制到指定的缓冲区。|
 |[CBitmap::GetBitmapDimension](#getbitmapdimension)|返回的宽度和位图的高度。 被假定已由以前设置的高度和宽度[SetBitmapDimension](#setbitmapdimension)成员函数。|
-|[Cbitmap:: Loadbitmap](#loadbitmap)|从应用程序的可执行文件加载命名的位图资源并附加到对象的位图初始化的对象。|
+|[CBitmap::LoadBitmap](#loadbitmap)|从应用程序的可执行文件加载命名的位图资源并附加到对象的位图初始化的对象。|
 |[CBitmap::LoadMappedBitmap](#loadmappedbitmap)|加载位图并映射到当前的系统颜色的颜色。|
 |[CBitmap::LoadOEMBitmap](#loadoembitmap)|正在加载预定义的 Windows 位图将位图附加到对象来初始化对象。|
 |[CBitmap::SetBitmapBits](#setbitmapbits)|将位图的位设置为指定的位值。|
@@ -336,7 +336,7 @@ CSize GetBitmapDimension() const;
 
 被假定已通过使用以前设置的高度和宽度[SetBitmapDimension](#setbitmapdimension)成员函数。
 
-##  <a name="loadbitmap"></a>  Cbitmap:: Loadbitmap
+##  <a name="loadbitmap"></a>  CBitmap::LoadBitmap
 
 加载命名的位图资源*lpszResourceName*或者识别出的 ID 号*nIDResource*从应用程序的可执行文件。
 
@@ -524,4 +524,3 @@ GDI 不使用这些值，但若要返回其应用程序调用时除外[GetBitmap
 [MFC 示例 MDI](../../visual-cpp-samples.md)<br/>
 [CGdiObject 类](../../mfc/reference/cgdiobject-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)
-

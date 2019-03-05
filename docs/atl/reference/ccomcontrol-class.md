@@ -19,12 +19,12 @@ helpviewer_keywords:
 - ambient properties
 - controls [ATL], properties
 ms.assetid: 55368c27-bd16-45a7-b701-edb36157c8e8
-ms.openlocfilehash: 3fe01128fc5f0a9d3058df2d6f95a6c038b28062
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 29eeb31c0823a0614fa1404cf7efc1c281bab3a4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644192"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261578"
 ---
 # <a name="ccomcontrol-class"></a>CComControl 类
 
@@ -220,7 +220,7 @@ int MessageBox(
 *lpszCaption*<br/>
 对话框的标题。 如果为 NULL （默认值），使用"错误"的标题。
 
-*n 类型*<br/>
+*nType*<br/>
 指定的内容和对话框中的行为。 请参阅[MessageBox](/windows/desktop/api/winuser/nf-winuser-messagebox)可用的不同的消息框的列表的 Windows SDK 文档中的条目。 默认值提供了一个简单**确定**按钮。
 
 ### <a name="return-value"></a>返回值

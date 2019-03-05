@@ -46,12 +46,12 @@ f1_keywords:
 - amp_math/Concurrency::fast_math::tanhf
 - amp_math/Concurrency::fast_math::trunc
 ms.assetid: f5763d62-795b-4de6-a7a5-c7115f158708
-ms.openlocfilehash: fa024c781804d404870a0362a027e1bc436902ef
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 96178ee72073e5063fc009f17ab21565f3cf1ab5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667631"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259855"
 ---
 # <a name="concurrencyfastmath-namespace-functions"></a>Concurrency:: fast_math 命名空间函数
 
@@ -95,7 +95,7 @@ inline float acos(float _X) restrict(amp);
 
 ### <a name="return-value"></a>返回值
 
-返回自变量的反余弦值
+返回参数的反余弦值
 
 ##  <a name="acosf"></a>  acosf
 
@@ -112,7 +112,7 @@ inline float acosf(float _X) restrict(amp);
 
 ### <a name="return-value"></a>返回值
 
-返回自变量的反余弦值
+返回参数的反余弦值
 
 ##  <a name="asin"></a>  asin
 
@@ -275,7 +275,7 @@ inline float cosf(float _X) restrict(amp);
 
 ### <a name="return-value"></a>返回值
 
-返回自变量的余弦值
+返回参数的余弦值
 
 ##  <a name="coshf"></a>  coshf
 
@@ -309,7 +309,7 @@ inline float cos(float _X) restrict(amp);
 
 ### <a name="return-value"></a>返回值
 
-返回自变量的余弦值
+返回参数的余弦值
 
 ##  <a name="cosh"></a>  cosh
 
@@ -611,7 +611,7 @@ inline float frexp(
 *_X*<br/>
 浮点值
 
-*2^_exp*<br/>
+*_Exp*<br/>
 以浮点值形式返回 _X 的整数指数。
 
 ### <a name="return-value"></a>返回值
@@ -633,7 +633,7 @@ inline float frexpf(
 *_X*<br/>
 浮点值
 
-*2^_exp*<br/>
+*_Exp*<br/>
 以浮点值形式返回 _X 的整数指数。
 
 ### <a name="return-value"></a>返回值
@@ -706,7 +706,7 @@ inline float ldexp(
 *_X*<br/>
 浮点值，尾数
 
-*2^_exp*<br/>
+*_Exp*<br/>
 整数指数
 
 ### <a name="return-value"></a>返回值
@@ -728,7 +728,7 @@ inline float ldexpf(
 *_X*<br/>
 浮点值，尾数
 
-*2^_exp*<br/>
+*_Exp*<br/>
 整数指数
 
 ### <a name="return-value"></a>返回值
@@ -852,7 +852,7 @@ inline float modf(
 *_X*<br/>
 浮点值
 
-*（_i)*<br/>
+*_Ip*<br/>
 接收的值的整数部分
 
 ### <a name="return-value"></a>返回值
@@ -874,7 +874,7 @@ inline float modff(
 *_X*<br/>
 浮点值
 
-*（_i)*<br/>
+*_Ip*<br/>
 接收的值的整数部分
 
 ### <a name="return-value"></a>返回值
@@ -1040,7 +1040,7 @@ inline float sin(float _X) restrict(amp);
 
 ### <a name="return-value"></a>返回值
 
-返回自变量的正弦值
+返回参数的正弦值
 
 ##  <a name="sinf"></a>  sinf
 
@@ -1057,7 +1057,7 @@ inline float sinf(float _X) restrict(amp);
 
 ### <a name="return-value"></a>返回值
 
-返回自变量的正弦值
+返回参数的正弦值
 
 ##  <a name="sincos"></a>  sincos
 
@@ -1118,7 +1118,7 @@ inline float sinh(float _X) restrict(amp);
 
 ### <a name="return-value"></a>返回值
 
-返回自变量的双曲正弦值
+返回参数的双曲正弦值
 
 ##  <a name="sinhf"></a>  sinhf
 
@@ -1135,11 +1135,11 @@ inline float sinhf(float _X) restrict(amp);
 
 ### <a name="return-value"></a>返回值
 
-返回自变量的双曲正弦值
+返回参数的双曲正弦值
 
 ##  <a name="sqrt"></a>  sqrt
 
-计算自变量的平方根
+计算参数的平方根
 
 ```
 inline float sqrt(float _X) restrict(amp);
@@ -1156,7 +1156,7 @@ inline float sqrt(float _X) restrict(amp);
 
 ##  <a name="sqrtf"></a>  sqrtf
 
-计算自变量的平方根
+计算参数的平方根
 
 ```
 inline float sqrtf(float _X) restrict(amp);
@@ -1186,7 +1186,7 @@ inline float tan(float _X) restrict(amp);
 
 ### <a name="return-value"></a>返回值
 
-返回自变量的正切值
+返回参数的正切值
 
 ##  <a name="tanf"></a>  tanf
 
@@ -1203,7 +1203,7 @@ inline float tanf(float _X) restrict(amp);
 
 ### <a name="return-value"></a>返回值
 
-返回自变量的正切值
+返回参数的正切值
 
 ##  <a name="tanh"></a>  tanh
 
@@ -1220,7 +1220,7 @@ inline float tanh(float _X) restrict(amp);
 
 ### <a name="return-value"></a>返回值
 
-返回自变量的双曲正切值
+返回参数的双曲正切值
 
 ##  <a name="tanhf"></a>  tanhf
 
@@ -1237,7 +1237,7 @@ inline float tanhf(float _X) restrict(amp);
 
 ### <a name="return-value"></a>返回值
 
-返回自变量的双曲正切值
+返回参数的双曲正切值
 
 ##  <a name="trunc"></a>  trunc
 
@@ -1275,7 +1275,7 @@ inline float truncf(float _X) restrict(amp);
 
 ## <a name="requirements"></a>要求
 
-**标头：** amp_math.h **Namespace:** concurrency:: fast_math
+**标头：** amp_math.h **Namespace:** Concurrency::fast_math
 
 ## <a name="see-also"></a>请参阅
 

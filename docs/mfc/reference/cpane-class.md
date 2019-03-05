@@ -133,12 +133,12 @@ helpviewer_keywords:
 - CPane [MFC], m_bHandleMinSize
 - CPane [MFC], m_recentDockInfo
 ms.assetid: 5c651a64-3c79-4d94-9676-45f6402a6bc5
-ms.openlocfilehash: 1c485d1b6f2b0557243973774bf9dfb382c2595b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b660d181aada8abeb61b397fb30b097897e74f65
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50550431"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326772"
 ---
 # <a name="cpane-class"></a>CPane Class
 
@@ -173,9 +173,9 @@ class CPane : public CBasePane
 |[CPane::CanBeTabbedDocument](#canbetabbeddocument)|确定是否可将窗格转换选项卡式文档。|
 |[CPane::ConvertToTabbedDocument](#converttotabbeddocument)|将选项卡式文档转换为可停靠窗格。|
 |[CPane::CopyState](#copystate)|将复制一个窗格的状态。 (重写[CBasePane::CopyState](../../mfc/reference/cbasepane-class.md#copystate)。)|
-|[Cpane:: Create](#create)|创建控件条，并将其附加到`CPane`对象。|
-|[Cpane:: Createdefaultminiframe](#createdefaultminiframe)|创建浮动窗格的微型框架窗口。|
-|[Cpane:: Createex](#createex)|创建控件条，并将其附加到`CPane`对象。|
+|[CPane::Create](#create)|创建控件条，并将其附加到`CPane`对象。|
+|[CPane::CreateDefaultMiniframe](#createdefaultminiframe)|创建浮动窗格的微型框架窗口。|
+|[CPane::CreateEx](#createex)|创建控件条，并将其附加到`CPane`对象。|
 |`CPane::CreateObject`|由框架用于创建此类类型的动态实例。|
 |[CPane::DockByMouse](#dockbymouse)|将窗格停靠使用鼠标停靠方法。|
 |[CPane::DockPane](#dockpane)|将浮动窗格停靠到基窗格。|
@@ -208,12 +208,12 @@ class CPane : public CBasePane
 |[CPane::OnBeforeChangeParent](#onbeforechangeparent)|在窗格的父即将更改时由框架调用。|
 |[CPane::OnPressCloseButton](#onpressclosebutton)|在用户选择上窗格的标题的关闭按钮时由框架调用。|
 |`CPane::OnProcessDblClk`|内部使用。|
-|[Cpane:: Onshowcontrolbarmenu](#onshowcontrolbarmenu)|当即将显示特殊窗格菜单时由框架调用。|
-|[Cpane:: Onshowcontrolbarmenu](#onshowcontrolbarmenu)|当即将显示特殊窗格菜单时由框架调用。|
+|[CPane::OnShowControlBarMenu](#onshowcontrolbarmenu)|当即将显示特殊窗格菜单时由框架调用。|
+|[CPane::OnShowControlBarMenu](#onshowcontrolbarmenu)|当即将显示特殊窗格菜单时由框架调用。|
 |`CPane::PrepareToDock`|内部使用。|
-|[Cpane:: Recalclayout](#recalclayout)|重新计算在窗格的布局信息。 (重写[CBasePane::RecalcLayout](../../mfc/reference/cbasepane-class.md#recalclayout)。)|
+|[CPane::RecalcLayout](#recalclayout)|重新计算在窗格的布局信息。 (重写[CBasePane::RecalcLayout](../../mfc/reference/cbasepane-class.md#recalclayout)。)|
 |[CPane::SaveState](#savestate)|将窗格的状态保存到注册表。 (重写[CBasePane::SaveState](../../mfc/reference/cbasepane-class.md#savestate)。)|
-|[Cpane:: Setactiveingroup](#setactiveingroup)|标记为活动状态的窗格。|
+|[CPane::SetActiveInGroup](#setactiveingroup)|标记为活动状态的窗格。|
 |[CPane::SetBorders](#setborders)|设置窗格的边框值。|
 |[CPane::SetClientHotSpot](#setclienthotspot)|设置作用点窗格。|
 |[CPane::SetDockState](#setdockstate)|还原停靠窗格的状态信息。|
@@ -240,7 +240,7 @@ class CPane : public CBasePane
 |name|描述|
 |----------|-----------------|
 |[CPane::m_bHandleMinSize](#m_bhandleminsize)|启用窗格的最小大小一致的处理。|
-|[Cpane:: M_recentdockinfo](#m_recentdockinfo)|包含新的停靠信息。|
+|[CPane::m_recentDockInfo](#m_recentdockinfo)|包含新的停靠信息。|
 
 ## <a name="remarks"></a>备注
 
@@ -512,7 +512,7 @@ virtual BOOL Create(
 
 如果显式未初始化[cpane:: M_recentdockinfo](#m_recentdockinfo)在调用之前`Create`，该参数*rect*将用作浮动或停靠窗格时的矩形。
 
-##  <a name="createdefaultminiframe"></a>  Cpane:: Createdefaultminiframe
+##  <a name="createdefaultminiframe"></a>  CPane::CreateDefaultMiniframe
 
 创建浮动窗格的微型框架窗口。
 
@@ -1070,7 +1070,7 @@ AFX_IMPORT_DATA static BOOL m_bHandleMinSize;
 
 如果此值设置为 TRUE，将剪切不拉伸的所有窗格应如下其最小大小减小其大小。 由于框架窗格大小调整用于使用窗口区域，不要更改为停靠窗格，如果此值设置为 TRUE 的窗口区域的大小。
 
-##  <a name="m_recentdockinfo"></a>  Cpane:: M_recentdockinfo
+##  <a name="m_recentdockinfo"></a>  CPane::m_recentDockInfo
 
 包含新的停靠信息。
 
@@ -1106,7 +1106,7 @@ BOOL MoveByAlignment(
 
 *dwAlignment*可以是任何以下值：
 
-|“值”|描述|
+|值|描述|
 |-----------|-----------------|
 |CBRS_ALIGN_TOP|使窗格停靠到框架窗口的工作区的顶部。|
 |CBRS_ALIGN_BOTTOM|使窗格停靠到框架窗口的工作区的底部。|
@@ -1289,7 +1289,7 @@ virtual void OnPressCloseButton();
 
 由框架调用此方法，当用户按下**关闭**上窗格的标题按钮。 若要接收通知有关**关闭**事件，可以重写此方法在派生类中的。
 
-##  <a name="onshowcontrolbarmenu"></a>  Cpane:: Onshowcontrolbarmenu
+##  <a name="onshowcontrolbarmenu"></a>  CPane::OnShowControlBarMenu
 
 当即将显示特殊窗格菜单时由框架调用。
 
@@ -1299,7 +1299,7 @@ virtual BOOL OnShowControlBarMenu(CPoint point);
 
 ### <a name="parameters"></a>参数
 
-*点*<br/>
+*point*<br/>
 [in]指定菜单位置。
 
 ### <a name="return-value"></a>返回值
@@ -1308,9 +1308,9 @@ virtual BOOL OnShowControlBarMenu(CPoint point);
 
 ### <a name="remarks"></a>备注
 
-菜单包含多个项，您可以指定该窗格的行为，即：**浮动**，**停靠**，**自动隐藏**，和**隐藏**. 可以通过调用来启用此菜单中的所有窗格[CDockingManager::EnableDockSiteMenu](../../mfc/reference/cdockingmanager-class.md#enabledocksitemenu)。
+菜单包含多个项，您可以指定该窗格的行为，即：**浮动**，**停靠**，**自动隐藏**，并且**隐藏**。 可以通过调用来启用此菜单中的所有窗格[CDockingManager::EnableDockSiteMenu](../../mfc/reference/cdockingmanager-class.md#enabledocksitemenu)。
 
-##  <a name="recalclayout"></a>  Cpane:: Recalclayout
+##  <a name="recalclayout"></a>  CPane::RecalcLayout
 
 重新计算在窗格的布局信息。
 
@@ -1356,7 +1356,7 @@ virtual BOOL SaveState(
 
 当重写此方法时，还调用基方法，并返回 FALSE 的基方法返回 FALSE。
 
-##  <a name="setactiveingroup"></a>  Cpane:: Setactiveingroup
+##  <a name="setactiveingroup"></a>  CPane::SetActiveInGroup
 
 标记为活动状态的窗格。
 
@@ -1593,7 +1593,7 @@ void UpdateVirtualRect(CPoint ptOffset);
 *ptOffset*<br/>
 [in]一个`CPoint`对象，它指定按其轮换窗格中的偏移量。
 
-*大小*<br/>
+*sizeNew*<br/>
 [in]一个`CSize`对象，它指定窗格中的新大小。
 
 ### <a name="remarks"></a>备注

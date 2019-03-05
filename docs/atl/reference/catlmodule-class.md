@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlModule class
 ms.assetid: 63fe02f1-4c4b-4e7c-ae97-7ad7b4252415
-ms.openlocfilehash: 4d1c8dbfc7606efda50637ba17790ecafc80a976
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f01734d4ec9de323325dc793756f421388542ef2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456818"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302008"
 ---
 # <a name="catlmodule-class"></a>CAtlModule 类
 
@@ -44,7 +44,7 @@ class ATL_NO_VTABLE CAtlModule : public _ATL_MODULE
 |名称|描述|
 |----------|-----------------|
 |[CAtlModule::CAtlModule](#catlmodule)|构造函数。|
-|[CAtlModule:: ~ CAtlModule](#dtor)|析构函数。|
+|[CAtlModule::~CAtlModule](#dtor)|析构函数。|
 
 ### <a name="public-methods"></a>公共方法
 
@@ -122,7 +122,7 @@ HRESULT AddTermFunc(_ATL_TERMFUNC* pFunc, DWORD_PTR dw) throw();
 *pFunc*<br/>
 若要添加的函数指针。
 
-*数据仓库*<br/>
+*dw*<br/>
 用户定义数据传递给函数。
 
 ### <a name="return-value"></a>返回值

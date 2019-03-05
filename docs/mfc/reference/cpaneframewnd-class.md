@@ -132,12 +132,12 @@ helpviewer_keywords:
 - CPaneFrameWnd [MFC], OnDrawBorder
 - CPaneFrameWnd [MFC], m_bUseSaveBits
 ms.assetid: ea3423a3-2763-482e-b763-817036ded10d
-ms.openlocfilehash: e31b390d9464b3cbe6babd744e987ce7222e58bf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3172556b3b12141aaae45992dee36061aebf2a15
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50450162"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278816"
 ---
 # <a name="cpaneframewnd-class"></a>CPaneFrameWnd 类
 
@@ -285,7 +285,7 @@ static BOOL __stdcall AddRemovePaneFromGlobalList(
 *pWnd*<br/>
 [in]若要添加或删除窗格。
 
-*b 将*<br/>
+*bAdd*<br/>
 [in]如果非零，则添加窗格。 如果为 0，则删除窗格。
 
 ### <a name="return-value"></a>返回值
@@ -731,7 +731,7 @@ virtual LRESULT HitTest(
 
 ### <a name="parameters"></a>参数
 
-*点*<br/>
+*point*<br/>
 [in]要测试的点。
 
 *bDetectCaption*<br/>
@@ -741,7 +741,7 @@ virtual LRESULT HitTest(
 
 以下值之一：
 
-|“值”|含义|
+|值|含义|
 |-----------|-------------|
 |HTNOWHERE|关键是微型框架窗口外。|
 |HTCLIENT|关键是工作区中。|
@@ -982,7 +982,7 @@ void Pin(BOOL bPin = TRUE);
 
 ### <a name="parameters"></a>参数
 
-[in]*bPin*<br/>
+[in] *bPin*<br/>
 
 ### <a name="remarks"></a>备注
 
@@ -999,7 +999,7 @@ virtual CBasePane* PaneFromPoint(
 
 ### <a name="parameters"></a>参数
 
-*点*<br/>
+*point*<br/>
 [in]点用户单击以屏幕坐标表示。
 
 *nSensitivity*<br/>
@@ -1131,7 +1131,7 @@ void SetDelayShow(BOOL bDelayShow);
 
 ### <a name="parameters"></a>参数
 
-[in]*bDelayShow*<br/>
+[in] *bDelayShow*<br/>
 
 ### <a name="remarks"></a>备注
 
@@ -1143,7 +1143,7 @@ void SetDockingManager(CDockingManager* pManager);
 
 ### <a name="parameters"></a>参数
 
-[in]*pManager*<br/>
+[in] *pManager*<br/>
 
 ### <a name="remarks"></a>备注
 
@@ -1181,7 +1181,7 @@ void SetHotPoint(CPoint& ptNew);
 
 ### <a name="parameters"></a>参数
 
-[in]*ptNew*<br/>
+[in] *ptNew*<br/>
 
 ### <a name="remarks"></a>备注
 
@@ -1203,7 +1203,7 @@ virtual BOOL SetPreDockState(
 
 - PDS_NOTHING，
 
-- PDS_DOCK_REGULAR，
+- PDS_DOCK_REGULAR,
 
 - PDS_DOCK_TO_TAB
 
@@ -1254,7 +1254,7 @@ virtual void StoreRecentDockSiteInfo(CPane* pBar);
 
 ### <a name="parameters"></a>参数
 
-[in]*pBar*<br/>
+[in] *pBar*<br/>
 
 ### <a name="remarks"></a>备注
 
@@ -1268,8 +1268,8 @@ virtual void StoreRecentTabRelatedInfo(
 
 ### <a name="parameters"></a>参数
 
-[in]*pDockingBar*<br/>
-[in]*pTabbedBar*<br/>
+[in] *pDockingBar*<br/>
+[in] *pTabbedBar*<br/>
 
 ### <a name="remarks"></a>备注
 

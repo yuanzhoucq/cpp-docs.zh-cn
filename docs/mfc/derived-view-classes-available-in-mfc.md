@@ -7,12 +7,12 @@ helpviewer_keywords:
 - derived classes [MFC], view classes
 - view classes [MFC], derived
 ms.assetid: dba42178-7459-4ccc-b025-f3d9b8a4b737
-ms.openlocfilehash: 9972586bd0cc4059e81d81be954a8cf0cada1f0d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 61b38f6147a8bde4f6eb42cd144f9f64dac8dbd8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50594488"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269287"
 ---
 # <a name="derived-view-classes-available-in-mfc"></a>MFC 中可用的派生视图类
 
@@ -27,7 +27,7 @@ ms.locfileid: "50594488"
 |[CEditView](../mfc/reference/ceditview-class.md)|基于 Windows 的简单视图编辑框控件。 允许输入和编辑文本，并可用作简单的文本编辑器应用程序的基础。 另请参阅 `CRichEditView`。|
 |[CRichEditView](../mfc/reference/cricheditview-class.md)|一个视图，其中包含[CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)对象。 此类是类似于`CEditView`，但不同于`CEditView`，`CRichEditView`句柄的格式化文本。|
 |[CListView](../mfc/reference/clistview-class.md)|一个视图，其中包含[CListCtrl](../mfc/reference/clistctrl-class.md)对象。|
-|[Ctreeview 类](../mfc/reference/ctreeview-class.md)|一个视图，其中包含[CTreeCtrl](../mfc/reference/ctreectrl-class.md)对象，类似于 Visual c + + 中的解决方案资源管理器窗口的视图。|
+|[CTreeView](../mfc/reference/ctreeview-class.md)|一个视图，其中包含[CTreeCtrl](../mfc/reference/ctreectrl-class.md)对象，类似于 Visual c + + 中的解决方案资源管理器窗口的视图。|
 |[CScrollView](../mfc/reference/cscrollview-class.md)|基类的`CFormView`， `CRecordView`，和`CDaoRecordView`。 实现滚动视图的内容。|
 |[CFormView](../mfc/reference/cformview-class.md)|窗体视图中，包含控件的视图。 基于窗体的应用程序提供了一个或多个此类窗体接口。|
 |[CHtmlView](../mfc/reference/chtmlview-class.md)|Web 浏览器视图与其应用程序的用户可以浏览万维网，以及文件夹上的站点本地文件系统中和在网络上。 在 Web 浏览器视图还可以为活动文档容器。|
@@ -38,9 +38,8 @@ ms.locfileid: "50594488"
 > [!NOTE]
 >  从 MFC 版本 4.0 中，开始`CEditView`派生自`CCtrlView`。
 
-若要在应用程序中使用这些类，请从它们派生应用程序的视图类。 有关相关信息，请参阅[滚动和缩放视图](../mfc/scrolling-and-scaling-views.md)。 数据库类的详细信息，请参阅[概述： 数据库编程](../data/data-access-programming-mfc-atl.md)。
+若要在应用程序中使用这些类，请从它们派生应用程序的视图类。 有关相关信息，请参阅[滚动和缩放视图](../mfc/scrolling-and-scaling-views.md)。 数据库类的详细信息，请参阅[概述：数据库编程](../data/data-access-programming-mfc-atl.md)。
 
 ## <a name="see-also"></a>请参阅
 
 [使用视图](../mfc/using-views.md)
-

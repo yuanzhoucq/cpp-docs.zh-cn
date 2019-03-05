@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - CW2WEX class
 ms.assetid: 46262e56-e0d2-41fe-855b-0b67ecc8fcd7
-ms.openlocfilehash: 647d233f25f27c96eeb3281272c1542057cabd4d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d6d68f4f5c0f3532c39fee3f513e7b3102ec075d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468089"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299473"
 ---
 # <a name="cw2wex-class"></a>CW2WEX 类
 
@@ -43,7 +43,7 @@ class CW2WEX
 |名称|描述|
 |----------|-----------------|
 |[CW2WEX::CW2WEX](#cw2wex)|构造函数。|
-|[CW2WEX:: ~ CW2WEX](#dtor)|析构函数。|
+|[CW2WEX::~CW2WEX](#dtor)|析构函数。|
 
 ### <a name="public-operators"></a>公共运算符
 
@@ -109,7 +109,7 @@ CW2WEX( LPCWSTR  psz) throw(...);
 
 创建所需的翻译的缓冲区。
 
-##  <a name="dtor"></a>  CW2WEX:: ~ CW2WEX
+##  <a name="dtor"></a>  CW2WEX::~CW2WEX
 
 析构函数...
 

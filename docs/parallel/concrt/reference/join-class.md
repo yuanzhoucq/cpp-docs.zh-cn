@@ -16,16 +16,17 @@ f1_keywords:
 helpviewer_keywords:
 - join class
 ms.assetid: d2217119-70a1-40b6-809f-c1c13a571c3f
-ms.openlocfilehash: 23fc005a0c679576507c3a39ae37ce6c4545036b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d04ef90750c609d77fc8bf963bb996a90444f079
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668244"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281585"
 ---
 # <a name="join-class"></a>join 类
 
-`join` 消息块是单目标、多源、有序的 `propagator_block`，它可以合并来自其每个源的 `T` 类型消息。
+
+  `join` 消息块是单目标、多源、有序的 `propagator_block`，它可以合并来自其每个源的 `T` 类型消息。
 
 ## <a name="syntax"></a>语法
 
@@ -126,7 +127,7 @@ virtual message<_OutputType>* consume_message(runtime_object_identity _MsgId);
 
 类似于`accept`，但通过调用前面始终有`reserve`。
 
-##  <a name="ctor"></a> 联接
+##  <a name="ctor"></a> join
 
 构造 `join` 消息块。
 
@@ -162,7 +163,7 @@ join(
 *_NumInputs*<br/>
 数输入这`join`块均可用。
 
-*筛选 （_f)*<br/>
+*_Filter*<br/>
 确定是否应接受提供的消息的筛选器函数。
 
 *_PScheduler*<br/>
@@ -177,7 +178,7 @@ join(
 
 类型`filter_method`是具有签名的伪函数`bool (T const &)`调用此`join`消息块，以确定它是否应接受提供的消息。
 
-##  <a name="dtor"></a> ~ 联接
+##  <a name="dtor"></a> ~join
 
 销毁`join`块。
 

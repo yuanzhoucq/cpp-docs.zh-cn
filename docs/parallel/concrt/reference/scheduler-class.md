@@ -21,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - Scheduler class
 ms.assetid: 34cf7961-048d-4852-8a5c-a32f823e3506
-ms.openlocfilehash: 1b2b4de2a0aa844f9450af9d853b11ea6f485274
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f27dace61b0764962a78695c2a4c6b180b09d7a3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50638264"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57287891"
 ---
 # <a name="scheduler-class"></a>Scheduler 类
 
@@ -81,7 +81,7 @@ class Scheduler;
 
 **命名空间：** 并发
 
-##  <a name="attach"></a> 附加
+##  <a name="attach"></a> Attach
 
 将计划程序附加到调用上下文。 此方法返回后，调用的上下文由计划程序，计划程序将成为当前计划程序。
 
@@ -109,7 +109,7 @@ static Scheduler* __cdecl Create(const SchedulerPolicy& _Policy);
 
 ### <a name="parameters"></a>参数
 
-*策略 （_p)*<br/>
+*_Policy*<br/>
 计划程序策略，用于描述新创建的计划程序的行为。
 
 ### <a name="return-value"></a>返回值
@@ -136,7 +136,7 @@ virtual ScheduleGroup* CreateScheduleGroup(location& _Placement) = 0;
 
 ### <a name="parameters"></a>参数
 
-*放置 （_p)*<br/>
+*_Placement*<br/>
 对其中的计划组中的任务将偏向执行处的位置的引用。
 
 ### <a name="return-value"></a>返回值
@@ -195,7 +195,7 @@ virtual bool IsAvailableLocation(const location& _Placement) const = 0;
 
 ### <a name="parameters"></a>参数
 
-*放置 （_p)*<br/>
+*_Placement*<br/>
 对有关查询计划程序的位置的引用。
 
 ### <a name="return-value"></a>返回值
@@ -234,7 +234,7 @@ virtual void RegisterShutdownEvent(HANDLE _Event) = 0;
 
 ### <a name="parameters"></a>参数
 
-*（_e)*<br/>
+*_Event*<br/>
 Windows 事件对象时计划程序关闭并销毁本身由运行时信号的句柄。
 
 ##  <a name="release"></a> 版本
@@ -279,7 +279,7 @@ Scheduler();
 
 您还可以创建一个计划程序通过显式`CurrentScheduler::Create`方法或`Scheduler::Create`方法。
 
-##  <a name="dtor"></a> ~ 计划程序
+##  <a name="dtor"></a> ~Scheduler
 
 对象`Scheduler`类会隐式销毁时对它的所有外部引用不再存在。
 
@@ -307,10 +307,10 @@ virtual void ScheduleTask(
 *_Proc*<br/>
 指向要执行要执行的轻量任务正文的函数的指针。
 
-*数据 （_d)*<br/>
+*_Data*<br/>
 指向将作为参数传递给任务的正文数据的 void 指针。
 
-*放置 （_p)*<br/>
+*_Placement*<br/>
 对偏向执行轻量任务的位置的引用。
 
 ##  <a name="setdefaultschedulerpolicy"></a> SetDefaultSchedulerPolicy
@@ -323,7 +323,7 @@ static void __cdecl SetDefaultSchedulerPolicy(const SchedulerPolicy& _Policy);
 
 ### <a name="parameters"></a>参数
 
-*策略 （_p)*<br/>
+*_Policy*<br/>
 要设置为默认计划程序策略的策略。
 
 ### <a name="remarks"></a>备注
@@ -336,4 +336,3 @@ static void __cdecl SetDefaultSchedulerPolicy(const SchedulerPolicy& _Policy);
 [Scheduler 类](scheduler-class.md)<br/>
 [PolicyElementKey](concurrency-namespace-enums.md)<br/>
 [任务计划程序](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)
-

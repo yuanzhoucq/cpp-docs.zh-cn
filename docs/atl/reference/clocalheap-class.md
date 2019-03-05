@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - CLocalHeap class
 ms.assetid: 1ffa87a5-5fc8-4f8d-8809-58e87e963bd2
-ms.openlocfilehash: 7f4fa6b6035b9f0dda35a8e989192505ccf126d8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 53288bea8a50f62437eab4dd81d5d816abf78f44
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50515461"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283080"
 ---
 # <a name="clocalheap-class"></a>CLocalHeap 类
 
@@ -37,10 +37,10 @@ class CLocalHeap : public IAtlMemMgr
 
 |名称|描述|
 |----------|-----------------|
-|[Clocalheap:: Allocate](#allocate)|调用此方法来分配内存块。|
-|[Clocalheap:: Free](#free)|调用此方法来释放此内存管理器分配的内存块。|
+|[CLocalHeap::Allocate](#allocate)|调用此方法来分配内存块。|
+|[CLocalHeap::Free](#free)|调用此方法来释放此内存管理器分配的内存块。|
 |[CLocalHeap::GetSize](#getsize)|调用此方法以获取此内存管理器分配的内存块的分配的大小。|
-|[Clocalheap:: Reallocate](#reallocate)|调用此方法以重新分配由该内存管理器分配的内存。|
+|[CLocalHeap::Reallocate](#reallocate)|调用此方法以重新分配由该内存管理器分配的内存。|
 
 ## <a name="remarks"></a>备注
 
@@ -63,7 +63,7 @@ class CLocalHeap : public IAtlMemMgr
 
 **标头：** atlmem.h
 
-##  <a name="allocate"></a>  Clocalheap:: Allocate
+##  <a name="allocate"></a>  CLocalHeap::Allocate
 
 调用此方法来分配内存块。
 
@@ -124,7 +124,7 @@ virtual size_t GetSize(void* p) throw();
 
 使用实现[LocalSize](/windows/desktop/api/winbase/nf-winbase-localsize)。
 
-##  <a name="reallocate"></a>  Clocalheap:: Reallocate
+##  <a name="reallocate"></a>  CLocalHeap::Reallocate
 
 调用此方法以重新分配由该内存管理器分配的内存。
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - AFX_EXTENSION_MODULE structure [MFC]
 ms.assetid: b85a989c-d0c5-4b28-b53c-dad45b75704e
-ms.openlocfilehash: ee39fcec3083145dbc23c7739897bf89d47578a6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e1bdc9d744424ab0ad59be3bd7b815b5122bcd10
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539030"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57292830"
 ---
 # <a name="afxextensionmodule-structure"></a>AFX_EXTENSION_MODULE 结构
 
@@ -72,4 +72,3 @@ MFC 扩展 Dll 需要做两件事中的其`DllMain`函数：
 [结构、样式、回调和消息映射](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)<br/>
 [AfxInitExtensionModule](extension-dll-macros.md#afxinitextensionmodule)<br/>
 [AfxTermExtensionModule](extension-dll-macros.md#afxtermextensionmodule)
-

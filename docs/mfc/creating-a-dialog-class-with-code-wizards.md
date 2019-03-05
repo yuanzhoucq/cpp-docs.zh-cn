@@ -7,16 +7,16 @@ helpviewer_keywords:
 - code wizards
 - dialog classes [MFC], creating
 ms.assetid: a7157b9d-f1a8-4381-a4cf-180cd2c7f1b2
-ms.openlocfilehash: 6fb1b941e4c813d13a14f4c8870d9013d3987f74
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d99188a3a70965f33a8038eb904f606e74c1591b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50578537"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258211"
 ---
 # <a name="creating-a-dialog-class-with-code-wizards"></a>使用代码向导创建对话框类
 
-下表列出了代码向导帮助你管理的对话框相关任务。
+下表列出了代码向导帮助您管理的对话框相关任务。
 
 ### <a name="dialog-related-tasks"></a>对话框相关任务
 
@@ -40,4 +40,3 @@ ms.locfileid: "50578537"
 
 [对话框](../mfc/dialog-boxes.md)<br/>
 [对话框的生命周期](../mfc/life-cycle-of-a-dialog-box.md)
-

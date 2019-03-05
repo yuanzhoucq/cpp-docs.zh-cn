@@ -5,12 +5,12 @@ helpviewer_keywords:
 - MFC, ATL support
 - ATL, vs. MFC
 ms.assetid: 269325bb-11a8-4330-ad2b-a14a2458679e
-ms.openlocfilehash: b3c01a54c1250ae97d5377cb0b1ff49a17c3f7c3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e4e51f81bbdc54ff09980acfba22037df77abac9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468245"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259771"
 ---
 # <a name="recommendations-for-choosing-between-atl-and-mfc"></a>关于选择 ATL 和 MFC 的建议
 
@@ -31,4 +31,3 @@ MFC 允许您创建完整的应用程序、 ActiveX 控件和活动文档。 如
 ## <a name="see-also"></a>请参阅
 
 [ATL 简介](../atl/introduction-to-atl.md)
-

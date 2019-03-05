@@ -2,12 +2,12 @@
 title: MFC 向导和对话框
 ms.date: 11/04/2016
 ms.assetid: 2fae0a2c-d147-4468-a547-f7b85df767a1
-ms.openlocfilehash: a9574b270fdbffc0026d49452adf092fdf87d7cd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4a82ee0b8eccde65aeffacb05695eed4b1f14cdc
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50493890"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267467"
 ---
 # <a name="mfc-wizards-and-dialog-boxes"></a>MFC 向导和对话框
 
@@ -28,4 +28,3 @@ Microsoft 基础类 (MFC) 向导为各种组件和对象生成样板代码。 �
 |[MFC 项目中的 ATL 支持](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)|创建活动模板库 (ATL) 所需的标头和宏。|
 |[MFC 类向导](../../mfc/reference/mfc-class-wizard.md)|创建一个 .h 文件和一个 .cpp 文件。|
 |[MFC 桌面应用程序](../../mfc/mfc-desktop-applications.md)|链接到 MFC 文档。|
-

@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CScrollView [MFC], SetScaleToFitSize
 - CScrollView [MFC], SetScrollSizes
 ms.assetid: 4ba16dac-1acb-4be0-bb55-5fb695b6948d
-ms.openlocfilehash: 9ec6177b1f2cb071a6aa284c2936f3af4dbe4634
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ea95de2bceab290f94bb7c0e7bbc94a90048ee13
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468271"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259251"
 ---
 # <a name="cscrollview-class"></a>CScrollView 类
 
@@ -214,7 +214,7 @@ void GetDeviceScrollSizes(
 *sizeTotal*<br/>
 设备为单位返回滚动视图的当前总大小。
 
-*页面*<br/>
+*sizePage*<br/>
 返回当前的水平和垂直量，以响应鼠标的每个方向滚动单击滚动条轴中。 `cx`成员包含水平的量。 `cy`成员包含垂直量。
 
 *sizeLine*<br/>
@@ -340,7 +340,7 @@ void SetScrollSizes(
 |MM_HIMETRIC|0.01 毫米|向上|
 |MM_TWIPS|中的 1/1440|向上|
 |MM_HIENGLISH|0.001 英寸|向上|
-|MM_LOMETRIC|0.1 毫米|向上|
+|MM_LOMETRIC|0.1 mm|向上|
 |MM_LOENGLISH|0.01 英寸|向上|
 
 所有这些模式都由 Windows 定义。 两种标准的映射模式，MM_ISOTROPIC 和 MM_ANISOTROPIC，不能提供`CScrollView`。 类库提供了`SetScaleToFitSize`缩放到窗口大小的视图的成员函数。 上表中的第三列描述的坐标的方向。
@@ -348,7 +348,7 @@ void SetScrollSizes(
 *sizeTotal*<br/>
 滚动视图的总大小。 `cx`成员包含的水平范围。 `cy`成员包含垂直扩展盘区。 大小为逻辑单元。 这两`cx`和`cy`必须大于或等于 0。
 
-*页面*<br/>
+*sizePage*<br/>
 水平和垂直量，以响应鼠标的每个方向滚动单击滚动条轴中。 `cx`成员包含水平的量。 `cy`成员包含垂直量。
 
 *sizeLine*<br/>

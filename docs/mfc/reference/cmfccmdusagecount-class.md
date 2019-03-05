@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CMFCCmdUsageCount [MFC], Serialize
 - CMFCCmdUsageCount [MFC], SetOptions
 ms.assetid: 9c33b783-37c0-43ea-9f31-3c75e246c841
-ms.openlocfilehash: af48451bcba9bf0d5f07cd96da99be4c2a6ae99b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b4ad9a60831feb6fa1147ea3f8bcfd5c6badd06c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50549391"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275358"
 ---
 # <a name="cmfccmdusagecount-class"></a>CMFCCmdUsageCount 类
 
@@ -55,7 +55,7 @@ class CMFCCmdUsageCount : public CObject
 |[CMFCCmdUsageCount::AddCmd](#addcmd)|一个与给定命令关联的计数器递增。|
 |[CMFCCmdUsageCount::GetCount](#getcount)|检索与给定的命令 ID 相关联的使用情况计数|
 |[CMFCCmdUsageCount::HasEnoughInformation](#hasenoughinformation)|确定此对象是否具有收集跟踪数据的最小数量。|
-|[将 Cmfccmdusagecount](#isfreqeuntlyusedcmd)|确定是否频繁使用给定的命令。|
+|[CMFCCmdUsageCount::IsFreqeuntlyUsedCmd](#isfreqeuntlyusedcmd)|确定是否频繁使用给定的命令。|
 |[CMFCCmdUsageCount::Reset](#reset)|清除所有命令的使用计数。|
 |[CMFCCmdUsageCount::Serialize](#serialize)|从存档读取此对象或将其写入到存档。 （重写 [CObject::Serialize](../../mfc/reference/cobject-class.md#serialize)。）|
 |[CMFCCmdUsageCount::SetOptions](#setoptions)|集的值共享`CMFCCmdUsageCount`类数据成员。|
@@ -150,7 +150,7 @@ BOOL HasEnoughInformation() const;
 
 此方法可供[CMFCMenuBar::IsShowAllCommands](../../mfc/reference/cmfcmenubar-class.md#isshowallcommands)以确定是否显示所有可用的菜单命令。
 
-##  <a name="isfreqeuntlyusedcmd"></a>  将 Cmfccmdusagecount
+##  <a name="isfreqeuntlyusedcmd"></a>  CMFCCmdUsageCount::IsFreqeuntlyUsedCmd
 
 确定是否频繁使用给定的命令。
 
@@ -206,7 +206,7 @@ virtual void Serialize(CArchive& ar);
 
 此方法序列化的命令计数映射结构`m_CmdUsage`，并总命令的用法， `m_nTotalUsage`、 计数器或指定的存档。
 
-有关序列化示例，请参阅[序列化： 序列化对象](../../mfc/serialization-serializing-an-object.md)。
+有关序列化示例，请参阅[序列化：将对象序列化为](../../mfc/serialization-serializing-an-object.md)。
 
 ##  <a name="setoptions"></a>  CMFCCmdUsageCount::SetOptions
 

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - objects [C++], adding to ATL projects
 - ATL Control Wizard
 ms.assetid: c0adcbd0-07fe-4c55-a8fd-8c2c65ecdaad
-ms.openlocfilehash: 0577788e4ab28139943da4b3bd14914799341213
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b442db405ed04c4ebf697089adf3529cd590753a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506127"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57325992"
 ---
 # <a name="adding-objects-and-controls-to-an-atl-project"></a>将对象和控件添加到 ATL 项目
 
@@ -37,7 +37,7 @@ ms.locfileid: "50506127"
 
    [添加类](../../ide/add-class-dialog-box.md)对话框随即出现。
 
-1. 与**ATL**中所选文件夹**类别**窗格中，选择一个要插入从对象**模板**窗格。 单击**打开**。 将显示所选对象代码向导。
+1. 与**ATL**中所选文件夹**类别**窗格中，选择一个要插入从对象**模板**窗格。 单击“打开”。 将显示所选对象代码向导。
 
    > [!NOTE]
    > 如果你想要向 MFC 项目添加 ATL 对象，您必须向现有项目添加 ATL 支持。 可以为此中的说明[向 MFC 项目添加 ATL 支持](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)。

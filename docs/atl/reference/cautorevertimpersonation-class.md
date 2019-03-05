@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAutoRevertImpersonation class
 ms.assetid: 43732849-1940-4bd4-9d52-7a5698bb8838
-ms.openlocfilehash: 799ec11fd8542a8b30ef3aa95f1a20700c5c9796
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c8ab7fed8f1560054eb023cbd4e47c43c4c6f0cc
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50444910"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299096"
 ---
 # <a name="cautorevertimpersonation-class"></a>CAutoRevertImpersonation 类
 
@@ -35,7 +35,7 @@ class CAutoRevertImpersonation
 |名称|描述|
 |----------|-----------------|
 |[CAutoRevertImpersonation::CAutoRevertImpersonation](#cautorevertimpersonation)|构造`CAutoRevertImpersonation`对象|
-|[CAutoRevertImpersonation:: ~ CAutoRevertImpersonation](#dtor)|销毁该对象并将恢复访问令牌模拟。|
+|[CAutoRevertImpersonation::~CAutoRevertImpersonation](#dtor)|销毁该对象并将恢复访问令牌模拟。|
 
 ### <a name="public-methods"></a>公共方法
 
@@ -67,7 +67,7 @@ void Attach(const CAccessToken* pAT) throw();
 
 ### <a name="parameters"></a>参数
 
-*PAT*<br/>
+*pAT*<br/>
 地址[CAccessToken](../../atl/reference/caccesstoken-class.md)对象会自动恢复
 
 ### <a name="remarks"></a>备注
@@ -84,7 +84,7 @@ CAutoRevertImpersonation(const CAccessToken* pAT) throw();
 
 ### <a name="parameters"></a>参数
 
-*PAT*<br/>
+*pAT*<br/>
 地址[CAccessToken](../../atl/reference/caccesstoken-class.md)对象会自动恢复。
 
 ### <a name="remarks"></a>备注

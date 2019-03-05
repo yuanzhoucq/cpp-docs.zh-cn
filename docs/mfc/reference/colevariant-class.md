@@ -20,12 +20,12 @@ helpviewer_keywords:
 - COleVariant [MFC], GetByteArrayFromVariantArray
 - COleVariant [MFC], SetString
 ms.assetid: e1b5cd4a-b066-4b9b-b48b-6215ed52d998
-ms.openlocfilehash: b37105cf1afdcf966176a2e2615f9c141022088d
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 2b2d0935380caed8ad9d6741b9107a5f879f7903
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51520513"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268054"
 ---
 # <a name="colevariant-class"></a>COleVariant 类
 
@@ -63,7 +63,7 @@ class COleVariant : public tagVARIANT
 |[COleVariant::operator LPCVARIANT](#operator_lpcvariant)|将转换`COleVariant`值到`LPCVARIANT`。|
 |[COleVariant::operator LPVARIANT](#operator_lpvariant)|将转换`COleVariant`对象插入`LPVARIANT`。|
 |[COleVariant::operator =](#operator_eq)|副本`COleVariant`值。|
-|[COleVariant::operator = =](#operator_eq_eq)|比较两个`COleVariant`值。|
+|[COleVariant::operator ==](#operator_eq_eq)|比较两个`COleVariant`值。|
 |[COleVariant::operator &lt; &lt;， &gt;&gt;](#operator_lt_lt__gt_gt)|输出`COleVariant`值设为`CArchive`或`CDumpContext`并将输入`COleVariant`对象从`CArchive`。|
 
 ## <a name="remarks"></a>备注
@@ -157,7 +157,7 @@ COleVariant(LPCITEMIDLIST pidl);
 *curSrc*<br/>
 一个[COleCurrency](../../mfc/reference/colecurrency-class.md)要复制到新对象`COleVariant`对象。
 
-*fltSrc*， *dblSrc*<br/>
+*fltSrc*, *dblSrc*<br/>
 要复制到新的 `COleVariant` 对象中的数值。
 
 *timeSrc*<br/>
@@ -269,7 +269,7 @@ void GetByteArrayFromVariantArray(CByteArray& bytes);
 
 ### <a name="parameters"></a>参数
 
-*字节数*<br/>
+*bytes*<br/>
 向现有的引用[CByteArray](../../mfc/reference/cbytearray-class.md)对象。
 
 ##  <a name="operator_lpcvariant"></a>  COleVariant::operator LPCVARIANT
@@ -355,7 +355,7 @@ BOOL operator==(const VARIANT& varSrc) const;
 BOOL operator==(LPCVARIANT pSrc) const;
 ```
 
-##  <a name="operator_lt_lt__gt_gt"></a>  COleVariant::operator &lt; &lt;， &gt;&gt;
+##  <a name="operator_lt_lt__gt_gt"></a>  COleVariant::operator &lt;&lt;, &gt;&gt;
 
 输出`COleVariant`值设为`CArchive`或`CdumpContext`并将输入`COleVariant`对象从`CArchive`。
 
@@ -390,7 +390,7 @@ void SetString(LPCTSTR lpszSrc, VARTYPE vtSrc);
 *lpszSrc*<br/>
 要复制到新的以 null 结尾的字符串`COleVariant`对象。
 
-*vtSrc*<br/>
+*VtSrc*<br/>
 新的 VARTYPE`COleVariant`对象。
 
 ### <a name="remarks"></a>备注

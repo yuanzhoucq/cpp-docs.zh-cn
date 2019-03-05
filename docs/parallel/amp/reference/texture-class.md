@@ -17,12 +17,12 @@ f1_keywords:
 - AMP_GRAPHICS/concurrency::graphics::texture::depth_pitch
 - AMP_GRAPHICS/concurrency::graphics::texture::row_pitch
 ms.assetid: 16e85d4d-e80a-474a-995d-8bf63fbdf34c
-ms.openlocfilehash: 8e427206379f1e7d094362411f074ad9cafb43fd
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: cfcb65fa23fe4593e7dcf11da3b5da4b1785ce71
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657534"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279739"
 ---
 # <a name="texture-class"></a>texture 类
 
@@ -103,9 +103,9 @@ class texture;
 
 **标头：** amp_graphics.h
 
-**Namespace:** Concurrency:: graphics
+**命名空间：** Concurrency:: graphics
 
-##  <a name="dtor"></a> ~ 纹理
+##  <a name="dtor"></a> ~texture
 
 销毁`texture`对象。
 
@@ -141,7 +141,7 @@ void copy_to(writeonly_texture_view<value_type, _Rank>& _Dest) const;
 *value_type*<br/>
 纹理中元素的类型。
 
-##  <a name="data"></a> 数据
+##  <a name="data"></a> data
 
 返回 CPU 指针到该纹理的原始数据。
 
@@ -216,7 +216,7 @@ unsigned int get_row_pitch() const restrict(cpu);
 
 二维暂存纹理中每行之间或三维暂存纹理中深度切片每行之间的字节数。
 
-##  <a name="operator_call"></a> operator （)
+##  <a name="operator_call"></a> operator()
 
 返回由参数指定的元素值。
 
@@ -258,7 +258,7 @@ const value_type operator() (
 
 由参数指定的元素值。
 
-##  <a name="operator_at"></a> operator]
+##  <a name="operator_at"></a> operator[]
 
 返回位于指定索引处的元素。
 

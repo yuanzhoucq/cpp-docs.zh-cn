@@ -150,12 +150,12 @@ helpviewer_keywords:
 - CMFCPropertyGridCtrl [MFC], OnSelectCombo
 - CMFCPropertyGridCtrl [MFC], ValidateItemData
 ms.assetid: 95877cae-2311-4a2a-9031-0c8c3cf0a5f9
-ms.openlocfilehash: 8fe22924039cc0e2547df2cc07b0c4387ad908bd
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: f194879cf4a1388fc156fa4e92f4f9bea5056191
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52177051"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296002"
 ---
 # <a name="cmfcpropertygridctrl-class"></a>CMFCPropertyGridCtrl 类
 
@@ -329,8 +329,8 @@ virtual HRESULT accSelect(
 
 ### <a name="parameters"></a>参数
 
-[in]*flagsSelect*<br/>
-[in]*varChild*<br/>
+[in] *flagsSelect*<br/>
+[in] *varChild*<br/>
 
 ### <a name="return-value"></a>返回值
 
@@ -386,7 +386,7 @@ void AlwaysShowUserToolTip(BOOL bShow = TRUE);
 
 ### <a name="parameters"></a>参数
 
-[in]*bShow*<br/>
+[in] *bShow*<br/>
 
 ### <a name="remarks"></a>备注
 
@@ -675,7 +675,7 @@ virtual HRESULT get_accChildCount(long* pcountChildren);
 
 ### <a name="parameters"></a>参数
 
-[in]*pcountChildren*<br/>
+[in] *pcountChildren*<br/>
 
 ### <a name="return-value"></a>返回值
 
@@ -689,7 +689,7 @@ virtual HRESULT get_accFocus(VARIANT* pvarChild);
 
 ### <a name="parameters"></a>参数
 
-[in]*pvarChild*<br/>
+[in] *pvarChild*<br/>
 
 ### <a name="return-value"></a>返回值
 
@@ -705,8 +705,8 @@ virtual HRESULT get_accHelp(
 
 ### <a name="parameters"></a>参数
 
-[in]*varChild*<br/>
-[in]*pszHelp*<br/>
+[in] *varChild*<br/>
+[in] *pszHelp*<br/>
 
 ### <a name="return-value"></a>返回值
 
@@ -723,9 +723,9 @@ virtual HRESULT get_accHelpTopic(
 
 ### <a name="parameters"></a>参数
 
-[in]*pszHelpFile*<br/>
-[in]*varChild*<br/>
-[in]*pidTopic*<br/>
+[in] *pszHelpFile*<br/>
+[in] *varChild*<br/>
+[in] *pidTopic*<br/>
 
 ### <a name="return-value"></a>返回值
 
@@ -741,8 +741,8 @@ virtual HRESULT get_accKeyboardShortcut(
 
 ### <a name="parameters"></a>参数
 
-[in]*varChild*<br/>
-[in]*pszKeyboardShortcut*<br/>
+[in] *varChild*<br/>
+[in] *pszKeyboardShortcut*<br/>
 
 ### <a name="return-value"></a>返回值
 
@@ -756,7 +756,7 @@ virtual HRESULT get_accSelection(VARIANT* pvarChildren);
 
 ### <a name="parameters"></a>参数
 
-[in]*pvarChildren*<br/>
+[in] *pvarChildren*<br/>
 
 ### <a name="return-value"></a>返回值
 
@@ -1074,7 +1074,7 @@ CMFCPropertyGridProperty* HitTest(
 
 此方法设置的变量的值*pnArea*参数指向。 下表列出了可能的值和相应的区域。
 
-|“值”|区域|
+|值|区域|
 |-----------|----------|
 |`ClickArea::ClickExpandBox`|属性展开框控件。|
 |`ClickArea::ClickName`|属性名称。|
@@ -1272,7 +1272,7 @@ virtual void OnClickButton(CPoint point);
 
 ### <a name="parameters"></a>参数
 
-*点*<br/>
+*point*<br/>
 [in]客户端坐标中的点。
 
 ### <a name="remarks"></a>备注
@@ -1608,7 +1608,7 @@ virtual void UpdateColor(COLORREF color);
 
 ### <a name="parameters"></a>参数
 
-*颜色*<br/>
+*color*<br/>
 [in]RGB 颜色值。
 
 ### <a name="remarks"></a>备注

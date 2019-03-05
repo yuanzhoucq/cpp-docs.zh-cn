@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - CLongBinary class [MFC]
 ms.assetid: f4320059-aeb4-4ee5-bc2b-25f19d898ef5
-ms.openlocfilehash: a7dbb7e38ec01743d994dafd6c7945e306de51ed
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ed3a153ec89785a9c9da43037d20f7d88b5661ff
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656024"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260707"
 ---
 # <a name="clongbinary-class"></a>CLongBinary 类
 
@@ -53,7 +53,7 @@ class CLongBinary : public CObject
 
 当销毁记录集，嵌入`CLongBinary`还销毁对象时，和它的析构函数释放`HGLOBAL`数据句柄。
 
-有关大型对象和使用的详细信息`CLongBinary`，请参阅文章[记录集 (ODBC)](../../data/odbc/recordset-odbc.md)并[记录集： 处理大数据的项 (ODBC)](../../data/odbc/recordset-working-with-large-data-items-odbc.md)。
+有关大型对象和使用的详细信息`CLongBinary`，请参阅文章[记录集 (ODBC)](../../data/odbc/recordset-odbc.md)和[记录集：处理大数据项 (ODBC)](../../data/odbc/recordset-working-with-large-data-items-odbc.md)。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 

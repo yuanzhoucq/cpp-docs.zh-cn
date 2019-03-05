@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - ATL services, security
 ms.assetid: 42c010f0-e60e-459c-a63b-a53a24cda93b
-ms.openlocfilehash: 91b6465dd975a1e3227d1416f2b78a8abbd441ad
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 448a955f2e72e8c523bbf74d6ee7e122828915ad
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694317"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264412"
 ---
 # <a name="catlservicemoduletrun-function"></a>Catlservicemodulet:: Run 函数
 
@@ -31,5 +31,4 @@ ms.locfileid: "51694317"
 [CSecurityDesc 类](../atl/reference/csecuritydesc-class.md)<br/>
 [CSid 类](../atl/reference/csid-class.md)<br/>
 [CDacl 类](../atl/reference/cdacl-class.md)<br/>
-[Catlservicemodulet:: Run](../atl/reference/catlservicemodulet-class.md#run)
-
+[CAtlServiceModuleT::Run](../atl/reference/catlservicemodulet-class.md#run)

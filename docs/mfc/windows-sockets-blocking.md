@@ -1,5 +1,5 @@
 ---
-title: Windows 套接字：阻止
+title: Windows 套接字：锁定
 ms.date: 11/04/2016
 helpviewer_keywords:
 - sockets [MFC], blocking mode
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - sockets [MFC], behavior on different Windows platforms
 - blocking mode sockets
 ms.assetid: 10aca9b1-bfba-41a8-9c55-ea8082181e63
-ms.openlocfilehash: 7b41f034e08570e418bf24d9d720795eafc37932
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 26a361bc63da5f6e75144cc91fe837498a7f656b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50610569"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272342"
 ---
-# <a name="windows-sockets-blocking"></a>Windows 套接字：阻止
+# <a name="windows-sockets-blocking"></a>Windows 套接字：锁定
 
-本文和两篇配套文章介绍了 Windows 套接字编程中的若干问题。 本文包含锁定。 文章中介绍了其他问题： [Windows 套接字： 字节排序](../mfc/windows-sockets-byte-ordering.md)并[Windows 套接字： 转换字符串](../mfc/windows-sockets-converting-strings.md)。
+本文和两篇配套文章介绍了 Windows 套接字编程中的若干问题。 本文包含锁定。 其他问题的文章中介绍：[Windows 套接字：字节排序](../mfc/windows-sockets-byte-ordering.md)和[Windows 套接字：将字符串转换](../mfc/windows-sockets-converting-strings.md)。
 
 如果使用或派生自类[CAsyncSocket](../mfc/reference/casyncsocket-class.md)，将需要自行管理这些问题。 如果使用或派生自类[CSocket](../mfc/reference/csocket-class.md)，MFC 将为您管理它们。
 
@@ -28,7 +28,7 @@ ms.locfileid: "50610569"
 套接字的行为在 32 位和 64 位操作系统下不同（如 Windows 95 或 Windows 98）于在 16 位操作系统下（如 Windows 3.1）。 不同于 16 位操作系统，32 位和 64 位操作系统使用强占式多任务并提供多线程处理。 在 32 位和 64 位操作系统下，您可在单独的辅助线程中放置套接字。 线程中的套接字可在不影响应用程序中其他活动的情况下锁定，并且锁定时不会占用计算机时间。 有关多线程编程的信息，请参阅文章[多线程处理](../parallel/multithreading-support-for-older-code-visual-cpp.md)。
 
 > [!NOTE]
->  在多线程应用程序中，您可以使用 `CSocket` 的锁定特性简化程序的设计，而不影响用户界面的响应能力。 通过在主线程处理用户交互并在备用线程中处理 `CSocket`，您可以分隔这些逻辑操作。 在不是多线程的应用程序中，这两个活动必须组合并作为单个线程处理，这通常意味着使用 `CAsyncSocket` 以便您可按需处理通信请求，或重写 `CSocket::OnMessagePending` 以在同步活动期间处理用户操作。
+>  在多线程应用程序中，您可以使用 `CSocket` 的锁定特性简化程序的设计，而不影响用户界面的响应能力。 通过在主线程处理用户交互并在备用线程中处理 `CSocket`，您可以分隔这些逻辑操作。 在不是多线程的应用程序中，这两个活动必须组合并作为单个线程处理，这通常意味着使用 `CAsyncSocket` 以便你可按需处理通信请求，或重写 `CSocket::OnMessagePending` 以在同步活动期间处理用户操作。
 
 余下的讨论适用于面向 16 位操作系统的程序员：
 
@@ -36,17 +36,17 @@ ms.locfileid: "50610569"
 
 在 Windows 下，锁定调用被视为不良实践。 默认情况下[CAsyncSocket](../mfc/reference/casyncsocket-class.md)支持异步调用，并且您必须管理自己使用回调通知锁定。 类[CSocket](../mfc/reference/csocket-class.md)后，就是同步。 它将为您推送 Windows 消息和管理锁定。
 
-有关锁定的详细信息，请参阅 Windows 套接字规范。 "On"函数的详细信息，请参阅[Windows 套接字： 套接字通知](../mfc/windows-sockets-socket-notifications.md)并[Windows 套接字： 从套接字类派生](../mfc/windows-sockets-deriving-from-socket-classes.md)。
+有关锁定的详细信息，请参阅 Windows 套接字规范。 "On"函数的详细信息，请参阅[Windows 套接字：套接字通知](../mfc/windows-sockets-socket-notifications.md)和[Windows 套接字：从套接字类派生](../mfc/windows-sockets-deriving-from-socket-classes.md)。
 
 有关详细信息，请参见:
 
-- [Windows 套接字：使用 CAsyncSocket 类](../mfc/windows-sockets-using-class-casyncsocket.md)
+- [Windows 套接字：使用类 CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
 
 - [Windows 套接字：对存档使用套接字](../mfc/windows-sockets-using-sockets-with-archives.md)
 
 - [Windows 套接字：背景](../mfc/windows-sockets-background.md)
 
-- [Windows 套接字：流套接字](../mfc/windows-sockets-stream-sockets.md)
+- [Windows 套接字：Stream 套接字](../mfc/windows-sockets-stream-sockets.md)
 
 - [Windows 套接字：数据报套接字](../mfc/windows-sockets-datagram-sockets.md)
 
@@ -54,4 +54,3 @@ ms.locfileid: "50610569"
 
 [MFC 中的 Windows 套接字](../mfc/windows-sockets-in-mfc.md)<br/>
 [CAsyncSocket::OnSend](../mfc/reference/casyncsocket-class.md#onsend)
-

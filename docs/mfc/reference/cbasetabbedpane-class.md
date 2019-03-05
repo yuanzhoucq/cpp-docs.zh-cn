@@ -62,12 +62,12 @@ helpviewer_keywords:
 - CBaseTabbedPane [MFC], SetAutoHideMode
 - CBaseTabbedPane [MFC], ShowTab
 ms.assetid: f22c0080-5b29-4a0a-8f74-8f0a4cd2dbcf
-ms.openlocfilehash: 51344a8cd0e5671f81e608b74363ed06c9200324
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d7ffaa7274a8ed12944cdbc5dcbbdcb8fd3fd2b9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50640890"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259290"
 ---
 # <a name="cbasetabbedpane-class"></a>CBaseTabbedPane 类
 
@@ -91,19 +91,19 @@ class CBaseTabbedPane : public CDockablePane
 
 |名称|描述|
 |----------|-----------------|
-|[Cbasetabbedpane:: Addtab](#addtab)|将一个新选项卡添加到选项卡式窗格。|
+|[CBaseTabbedPane::AddTab](#addtab)|将一个新选项卡添加到选项卡式窗格。|
 |[CBaseTabbedPane::AllowDestroyEmptyTabbedPane](#allowdestroyemptytabbedpane)|指定空的选项卡式的窗格是否可被销毁。|
 |[CBaseTabbedPane::ApplyRestoredTabInfo](#applyrestoredtabinfo)|应用从注册表加载到选项卡式窗格的选项卡设置。|
 |[CBaseTabbedPane::CanFloat](#canfloat)|确定是否可以浮动窗格。 (重写[CBasePane::CanFloat](../../mfc/reference/cbasepane-class.md#canfloat)。)|
 |[CBaseTabbedPane::CanSetCaptionTextToTabName](#cansetcaptiontexttotabname)|确定选项卡式窗格的标题是否应作为活动选项卡显示相同的文本。|
 |[CBaseTabbedPane::ConvertToTabbedDocument](#converttotabbeddocument)|(重写[CDockablePane::ConvertToTabbedDocument](../../mfc/reference/cdockablepane-class.md#converttotabbeddocument)。)|
-|[Cbasetabbedpane:: Detachpane](#detachpane)|将一个或多个可停靠窗格转换为 MDI 选项卡式文档。|
+|[CBaseTabbedPane::DetachPane](#detachpane)|将一个或多个可停靠窗格转换为 MDI 选项卡式文档。|
 |[CBaseTabbedPane::EnableSetCaptionTextToTabName](#enablesetcaptiontexttotabname)|启用或禁用同步的能力选项卡式窗格的标题文本活动选项卡上的标签文本。|
 |[CBaseTabbedPane::FillDefaultTabsOrderArray](#filldefaulttabsorderarray)|将内部的 tab 键顺序还原到默认状态。|
 |[CBaseTabbedPane::FindBarByTabNumber](#findbarbytabnumber)|返回时选项卡由一个从零开始的选项卡索引驻留在选项卡中的窗格。|
 |||
 |[CBaseTabbedPane::FindPaneByID](#findpanebyid)|返回由窗格 ID 标识的窗格|
-|[Cbasetabbedpane:: Floattab](#floattab)|仅当窗格中当前驻留在拆离的选项卡中时浮动窗格。|
+|[CBaseTabbedPane::FloatTab](#floattab)|仅当窗格中当前驻留在拆离的选项卡中时浮动窗格。|
 |[CBaseTabbedPane::GetDefaultTabsOrder](#getdefaulttabsorder)|在窗格中返回选项卡的默认顺序。|
 |[CBaseTabbedPane::GetFirstVisibleTab](#getfirstvisibletab)|检索指向第一个显示的选项卡。|
 |[CBaseTabbedPane::GetMinSize](#getminsize)|检索的最小允许大小的窗格。 (重写[CPane::GetMinSize](../../mfc/reference/cpane-class.md#getminsize)。)|
@@ -113,7 +113,7 @@ class CBaseTabbedPane : public CDockablePane
 |[CBaseTabbedPane::GetTabsNum](#gettabsnum)|在选项卡窗口中返回选项卡的计数。|
 |[CBaseTabbedPane::GetUnderlyingWindow](#getunderlyingwindow)|获取基础 （包装） 选项卡窗口。|
 |[CBaseTabbedPane::GetVisibleTabsNum](#getvisibletabsnum)|返回显示选项卡的计数。|
-|[Cbasetabbedpane:: Hasautohidemode](#hasautohidemode)|确定是否可以切换到自动隐藏模式，选项卡式的窗格。|
+|[CBaseTabbedPane::HasAutoHideMode](#hasautohidemode)|确定是否可以切换到自动隐藏模式，选项卡式的窗格。|
 |[CBaseTabbedPane::IsHideSingleTab](#ishidesingletab)|确定如果只显示一个选项卡是否隐藏选项卡式的窗格。|
 |`CBaseTabbedPane::LoadSiblingPaneIDs`|在序列化期间在内部使用。|
 |[CBaseTabbedPane::RecalcLayout](#recalclayout)|重新计算在窗格的布局信息。 (重写[cpane:: Recalclayout](../../mfc/reference/cpane-class.md#recalclayout)。)|
@@ -129,7 +129,7 @@ class CBaseTabbedPane : public CDockablePane
 
 此类是一个抽象类，并不能实例化。 它实现的服务的通用于所有类型的选项卡式窗格。
 
-目前，库包括两个选项卡式的窗格中派生的类： [CTabbedPane 类](../../mfc/reference/ctabbedpane-class.md)并[CMFCOutlookBar 类](../../mfc/reference/cmfcoutlookbar-class.md)。
+目前，库包含两个选项卡式的窗格中派生的类：[CTabbedPane 类](../../mfc/reference/ctabbedpane-class.md)并[CMFCOutlookBar 类](../../mfc/reference/cmfcoutlookbar-class.md)。
 
 一个`CBaseTabbedPane`对象包装到指针[CMFCBaseTabCtrl 类](../../mfc/reference/cmfcbasetabctrl-class.md)对象。 [CMFCBaseTabCtrl 类](../../mfc/reference/cmfcbasetabctrl-class.md)随后将成为子窗口的选项卡式窗格。
 
@@ -155,7 +155,7 @@ class CBaseTabbedPane : public CDockablePane
 
 **标头：** afxBaseTabbedPane.h
 
-##  <a name="addtab"></a>  Cbasetabbedpane:: Addtab
+##  <a name="addtab"></a>  CBaseTabbedPane::AddTab
 
 将一个新选项卡添加到选项卡式窗格。
 
@@ -263,7 +263,7 @@ virtual void ConvertToTabbedDocument(BOOL bActiveTabOnly = TRUE);
 *bActiveTabOnly*<br/>
 [in]在转换选项卡式窗格中，指定为 TRUE，则转换仅活动选项卡。指定为 FALSE，则将在窗格中的所有制表符都转换。
 
-##  <a name="detachpane"></a>  Cbasetabbedpane:: Detachpane
+##  <a name="detachpane"></a>  CBaseTabbedPane::DetachPane
 
 分离窗格从选项卡式窗格。
 
@@ -361,7 +361,7 @@ virtual CWnd* FindBarByTabNumber(
 
 调用此方法以检索驻留在由指定的选项卡中的窗格*nTabNum*参数。
 
-##  <a name="floattab"></a>  Cbasetabbedpane:: Floattab
+##  <a name="floattab"></a>  CBaseTabbedPane::FloatTab
 
 仅当窗格中当前驻留在拆离的选项卡中时浮动窗格。
 

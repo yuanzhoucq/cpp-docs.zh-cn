@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CList [MFC], RemoveTail
 - CList [MFC], SetAt
 ms.assetid: 6f6273c3-c8f6-47f5-ac2a-0a950379ae5d
-ms.openlocfilehash: 10991745fb5ccdac145f4b1d589e7d59c6ed6f4e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 722c38de100f2f1ff00e6589573a76bcdd9f3e84
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50513953"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297380"
 ---
 # <a name="clist-class"></a>CList 类
 
@@ -291,7 +291,7 @@ const TYPE& GetAt(POSITION position) const;
 *类型*<br/>
 模板参数列表中的指定对象的类型。
 
-*位置*<br/>
+*position*<br/>
 要获取的元素的列表中的位置。
 
 ### <a name="return-value"></a>返回值
@@ -515,7 +515,7 @@ POSITION InsertAfter(POSITION position, ARG_TYPE newElement);
 
 ### <a name="parameters"></a>参数
 
-*位置*<br/>
+*position*<br/>
 返回先前的位置值`GetNext`， `GetPrev`，或`Find`成员函数调用。
 
 *ARG_TYPE*<br/>
@@ -542,7 +542,7 @@ POSITION InsertBefore(POSITION position, ARG_TYPE newElement);
 
 ### <a name="parameters"></a>参数
 
-*位置*<br/>
+*position*<br/>
 返回先前的位置值`GetNext`， `GetPrev`，或`Find`成员函数调用。
 
 *ARG_TYPE*<br/>
@@ -605,7 +605,7 @@ void RemoveAt(POSITION position);
 
 ### <a name="parameters"></a>参数
 
-*位置*<br/>
+*position*<br/>
 若要从列表中移除的元素的位置。
 
 ### <a name="remarks"></a>备注
