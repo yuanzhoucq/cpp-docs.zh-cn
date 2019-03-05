@@ -73,12 +73,12 @@ helpviewer_keywords:
 - CMFCRibbonEdit [MFC], SetTextAlign
 - CMFCRibbonEdit [MFC], SetWidth
 ms.assetid: 9b85f1f2-446b-454e-9af9-104fdad8a897
-ms.openlocfilehash: 094b91bb730f125ee3a159c80626a8724c10f93e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e1a8f601c9f5798494ee34d3c3987222c14ecfa7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50578901"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57292182"
 ---
 # <a name="cmfcribbonedit-class"></a>CMFCRibbonEdit 类
 
@@ -286,7 +286,7 @@ void EnableSpinButtons(
 *nMin*<br/>
 [in]调节按钮最小值。
 
-*最*<br/>
+*nMax*<br/>
 [in]数值调节钮的最大值。
 
 ### <a name="remarks"></a>备注
@@ -604,7 +604,7 @@ virtual void OnLButtonDown(CPoint point);
 
 ### <a name="parameters"></a>参数
 
-*点*<br/>
+*point*<br/>
 [in]未使用此参数。
 
 ### <a name="remarks"></a>备注
@@ -619,7 +619,7 @@ virtual void OnLButtonUp(CPoint point);
 
 ### <a name="parameters"></a>参数
 
-*点*<br/>
+*point*<br/>
 [in]未使用此参数。
 
 ### <a name="remarks"></a>备注
