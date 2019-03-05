@@ -1,5 +1,5 @@
 ---
-title: IProvideClassInfo2Impl 类
+title: IProvideClassInfo2Impl Class
 ms.date: 11/04/2016
 f1_keywords:
 - IProvideClassInfo2Impl
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - IProvideClassInfo2 ATL implementation
 - class information, ATL
 ms.assetid: d74956e8-9c69-4cba-b99d-ca1ac031bb9d
-ms.openlocfilehash: a270efa5daac8c8b608f05bdb752195f806b7935
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 41a0756250e749a07d48ad4f090c2f1c322aa558
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539641"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289931"
 ---
-# <a name="iprovideclassinfo2impl-class"></a>IProvideClassInfo2Impl 类
+# <a name="iprovideclassinfo2impl-class"></a>IProvideClassInfo2Impl Class
 
 此类提供的默认实现[IProvideClassInfo](/windows/desktop/api/ocidl/nn-ocidl-iprovideclassinfo)并[IProvideClassInfo2](/windows/desktop/api/ocidl/nn-ocidl-iprovideclassinfo2)方法。
 

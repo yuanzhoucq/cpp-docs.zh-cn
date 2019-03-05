@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CPictureHolder [MFC], SetPictureDispatch
 - CPictureHolder [MFC], m_pPict
 ms.assetid: a4f59775-704a-41dd-b5bd-2e531c95127a
-ms.openlocfilehash: 14ffcbc043d80bfd296bcf52d125d288039f0501
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5386240114550826e4bf557b63310a91590afb55
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509554"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284211"
 ---
 # <a name="cpictureholder-class"></a>CPictureHolder 类
 
@@ -64,7 +64,7 @@ class CPictureHolder
 |[CPictureHolder::GetDisplayString](#getdisplaystring)|检索控件容器的属性浏览器中显示的字符串。|
 |[CPictureHolder::GetPictureDispatch](#getpicturedispatch)|返回`CPictureHolder`对象的`IDispatch`接口。|
 |[CPictureHolder::GetType](#gettype)|指示是否`CPictureHolder`对象是一个位图、 图元文件，还是一个图标。|
-|[Cpictureholder:: Render](#render)|呈现图片。|
+|[CPictureHolder::Render](#render)|呈现图片。|
 |[CPictureHolder::SetPictureDispatch](#setpicturedispatch)|集`CPictureHolder`对象的`IDispatch`接口。|
 
 ### <a name="public-data-members"></a>公共数据成员
@@ -79,7 +79,7 @@ class CPictureHolder
 
 使用常用图片属性，开发人员可以指定位图、 图标或显示图元文件。
 
-有关创建自定义图片属性的信息，请参阅文章[MFC ActiveX 控件： 在 ActiveX 控件中使用图片](../../mfc/mfc-activex-controls-using-pictures-in-an-activex-control.md)。
+有关创建自定义图片属性的信息，请参阅文章[MFC ActiveX 控件：在 ActiveX 控件中使用图片](../../mfc/mfc-activex-controls-using-pictures-in-an-activex-control.md)。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -267,7 +267,7 @@ short GetType();
 
 一个值，该值的类型的图片。 可能的值及其含义如下所示：
 
-|“值”|含义|
+|值|含义|
 |-----------|-------------|
 |PICTYPE_UNINITIALIZED|`CPictureHolder` unititialized 对象。|
 |PICTYPE_NONE|`CPictureHolder` 对象为空。|
@@ -283,7 +283,7 @@ short GetType();
 LPPICTURE m_pPict;
 ```
 
-##  <a name="render"></a>  Cpictureholder:: Render
+##  <a name="render"></a>  CPictureHolder::Render
 
 呈现的图片中引用的矩形*rcRender*。
 

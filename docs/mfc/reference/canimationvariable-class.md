@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CAnimationVariable [MFC], m_pParentObject
 - CAnimationVariable [MFC], m_variable
 ms.assetid: 506e697e-31a8-4033-a27e-292f4d7b42d9
-ms.openlocfilehash: 1ad14060c7607698cd647ae34fb35b6ea3ae547c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 335d29e1e2e8e5b54ec1434a4c072ff3909b3823
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559557"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269027"
 ---
 # <a name="canimationvariable-class"></a>CAnimationVariable 类
 
@@ -68,7 +68,7 @@ class CAnimationVariable;
 |名称|描述|
 |----------|-----------------|
 |[CAnimationVariable::CAnimationVariable](#canimationvariable)|构造一个动画变量对象。|
-|[CAnimationVariable:: ~ CAnimationVariable](#canimationvariable__~canimationvariable)|析构函数。 CAnimationVariable 对象被销毁时调用。|
+|[CAnimationVariable::~CAnimationVariable](#canimationvariable__~canimationvariable)|析构函数。 CAnimationVariable 对象被销毁时调用。|
 
 ### <a name="public-methods"></a>公共方法
 
@@ -339,7 +339,7 @@ HRESULT GetValue(INT32& nValue);
 *dblValue*<br/>
 动画变量的当前值。
 
-*n 值*<br/>
+*nValue*<br/>
 动画变量的当前值。
 
 ### <a name="return-value"></a>返回值

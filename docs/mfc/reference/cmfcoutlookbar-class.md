@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CMFCOutlookBar [MFC], SetButtonsFont
 - CMFCOutlookBar [MFC], SetMode2003
 ms.assetid: 2b335f71-ce99-4efd-b103-e65ba43ffc36
-ms.openlocfilehash: fd865d888a4ebe4504f19282d3c98ce8d7514e2c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: be11bcd4cdbcd8448cc54f688d7dab9b61f49a57
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50622620"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304075"
 ---
 # <a name="cmfcoutlookbar-class"></a>CMFCOutlookBar 类
 
@@ -89,7 +89,7 @@ class CMFCOutlookBar : public CBaseTabbedPane
 
 ## <a name="remarks"></a>备注
 
-Outlook 栏的示例，请参阅[OutlookDemo 示例： MFC OutlookDemo 应用程序](../../visual-cpp-samples.md)。
+Outlook 栏的示例，请参阅[OutlookDemo 示例：MFC OutlookDemo 应用程序](../../visual-cpp-samples.md)。
 
 ## <a name="implementing-the-outlook-bar"></a>实现 Outlook 栏
 
@@ -458,7 +458,7 @@ virtual void OnAfterAnimation(int nPage);
 
 ### <a name="parameters"></a>参数
 
-*n 页面*<br/>
+*nPage*<br/>
 [in]进行活动选项卡页的从零开始的索引。
 
 ### <a name="remarks"></a>备注
@@ -475,7 +475,7 @@ virtual BOOL OnBeforeAnimation(int nPage);
 
 ### <a name="parameters"></a>参数
 
-*n 页面*<br/>
+*nPage*<br/>
 [in]要设置活动选项卡页的从零开始的索引。
 
 ### <a name="return-value"></a>返回值

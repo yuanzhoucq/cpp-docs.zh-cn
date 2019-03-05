@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CReBar [MFC], Create
 - CReBar [MFC], GetReBarCtrl
 ms.assetid: c1ad2720-1d33-4106-8e4e-80aa84f93559
-ms.openlocfilehash: 344886ca4af45d55b85cc7471c1e558d73cbebf6
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 4216898e85ebbec748598e10ebb31ce5510f7908
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175881"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267779"
 ---
 # <a name="crebar-class"></a>CReBar 类
 
@@ -37,7 +37,7 @@ class CReBar : public CControlBar
 |----------|-----------------|
 |[CReBar::AddBar](#addbar)|向 rebar 带区。|
 |[CReBar::Create](#create)|创建 rebar 控件，并将其附加到`CReBar`对象。|
-|[Crebar:: Getrebarctrl](#getrebarctrl)|允许直接访问基础公共控件。|
+|[CReBar::GetReBarCtrl](#getrebarctrl)|允许直接访问基础公共控件。|
 
 ## <a name="remarks"></a>备注
 
@@ -151,7 +151,7 @@ Rebar 的子窗口 id。
 
   有关示例，请参阅[CReBar::AddBar](#addbar)。
 
-##  <a name="getrebarctrl"></a>  Crebar:: Getrebarctrl
+##  <a name="getrebarctrl"></a>  CReBar::GetReBarCtrl
 
 此成员函数允许直接访问基础公共控件。
 
@@ -178,4 +178,3 @@ CReBarCtrl& GetReBarCtrl() const;
 [MFC 示例 MFCIE](../../visual-cpp-samples.md)<br/>
 [CControlBar 类](../../mfc/reference/ccontrolbar-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)
-

@@ -24,12 +24,12 @@ helpviewer_keywords:
 - views [MFC], overriding default behavior
 - initializing views [MFC]
 ms.assetid: 88aa1f5f-2078-4603-b16b-a2b4c7b4a2a3
-ms.openlocfilehash: 57e558848ce76a7c74b5715529661ad24c9cbb8e
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 3d4ca55a9bff6ec42643db745896a2cea96dcefb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175387"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297797"
 ---
 # <a name="creating-new-documents-windows-and-views"></a>创建新文档、窗口和视图
 
@@ -50,7 +50,8 @@ ms.locfileid: "52175387"
 
 ##  <a name="_core_initializing_your_own_additions_to_these_classes"></a> 初始化到这些类添加
 
-上面各图还建议了您可重写成员函数以初始化应用程序对象的位置。 视图类中 `OnInitialUpdate` 的重写是最适合初始化视图的位置。 `OnInitialUpdate` 调用将在创建框架窗口并且框架窗口中的视图附加到其文档之后立即出现。 例如，如果您的视图是滚动视图（派生自 `CScrollView` 而不是 `CView`），则您应基于 `OnInitialUpdate` 重写中的文档大小设置视图大小。 (此过程所述的类说明[CScrollView](../mfc/reference/cscrollview-class.md)。)您可以重写`CDocument`成员函数`OnNewDocument`和`OnOpenDocument`提供文档的特定于应用程序的初始化。 通常，您必须重写二者，因为文档可通过两种方式创建。
+上面各图还建议了您可重写成员函数以初始化应用程序对象的位置。 视图类中 `OnInitialUpdate` 的重写是最适合初始化视图的位置。 
+  `OnInitialUpdate` 调用将在创建框架窗口并且框架窗口中的视图附加到其文档之后立即出现。 例如，如果您的视图是滚动视图（派生自 `CScrollView` 而不是 `CView`），则您应基于 `OnInitialUpdate` 重写中的文档大小设置视图大小。 (此过程所述的类说明[CScrollView](../mfc/reference/cscrollview-class.md)。)您可以重写`CDocument`成员函数`OnNewDocument`和`OnOpenDocument`提供文档的特定于应用程序的初始化。 通常，您必须重写二者，因为文档可通过两种方式创建。
 
 在大多数情况下，您的重写应调用基类版本。 有关详细信息，请参阅类的命名的成员函数[CDocument](../mfc/reference/cdocument-class.md)， [CView](../mfc/reference/cview-class.md)， [CFrameWnd](../mfc/reference/cframewnd-class.md)，以及[CWinApp](../mfc/reference/cwinapp-class.md) MFC 中库的引用。
 
@@ -60,4 +61,3 @@ ms.locfileid: "52175387"
 [文档模板创建](../mfc/document-template-creation.md)<br/>
 [文档/视图创建](../mfc/document-view-creation.md)<br/>
 [MFC 对象之间的关系](../mfc/relationships-among-mfc-objects.md)
-

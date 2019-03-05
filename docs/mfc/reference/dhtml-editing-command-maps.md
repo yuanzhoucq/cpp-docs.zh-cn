@@ -2,12 +2,12 @@
 title: DHTML 编辑命令映射
 ms.date: 11/04/2016
 ms.assetid: c1b49876-039e-4a26-bb24-ea98ccf254a1
-ms.openlocfilehash: 6c03e8e4a7d84776c3657994c57a72a906046f37
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1f84a56876f1108e9b02d44f6ef0dec50f065c57
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50558452"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278257"
 ---
 # <a name="dhtml-editing-command-maps"></a>DHTML 编辑命令映射
 
@@ -35,7 +35,7 @@ DECLARE_DHTMLEDITING_CMDMAP(className)
 
 ### <a name="parameters"></a>参数
 
-*类名*<br/>
+*className*<br/>
 类的名称。
 
 ### <a name="remarks"></a>备注
@@ -62,7 +62,7 @@ BEGIN_DHTMLEDITING_CMDMAP(className)
 
 ### <a name="parameters"></a>参数
 
-*类名*<br/>
+*className*<br/>
 包含 DHTML 编辑命令映射的类的名称。 此类应直接或间接派生[CHtmlEditView](../../mfc/reference/chtmleditview-class.md)和包含[DECLARE_DHTMLEDITING_CMDMAP](#declare_dhtmlediting_cmdmap)其类定义中的宏。
 
 ### <a name="remarks"></a>备注

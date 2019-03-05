@@ -10,12 +10,12 @@ helpviewer_keywords:
 - scripts, Registrar scripts
 - registry, Registrar
 ms.assetid: 106752ae-4cfc-4030-8cb2-d36a1d635a2e
-ms.openlocfilehash: 70e3a5334730b75100cc4084344c46d73399f4f5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c64d47be6df515a0bd4a8d2cfef51f8d56311f4a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467252"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258965"
 ---
 # <a name="atl-registry-component-registrar"></a>ATL 注册表组件（注册器）
 
@@ -36,4 +36,3 @@ ATL 注册器提供了通过自定义界面在系统注册表的优化的访问�
 
 [ATL](../atl/active-template-library-atl-concepts.md)<br/>
 提供了关于如何使用 Active Template Library 进行编程的概念性主题的链接。
-

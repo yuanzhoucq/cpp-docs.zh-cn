@@ -334,12 +334,12 @@ helpviewer_keywords:
 - COleControl [MFC], IsInvokeAllowed
 - COleControl [MFC], SetInitialDataFormats
 ms.assetid: 53e95299-38e8-447b-9c5f-a381d27f5123
-ms.openlocfilehash: ef44c917411efefeb6719af95185ddf7993fbab1
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 8587eb76f38c07d54234c810dfd6ab79f487e740
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53179014"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283418"
 ---
 # <a name="colecontrol-class"></a>COleControl 类
 
@@ -1192,7 +1192,7 @@ void AFX_CDECL FireEvent(
 |VTS_FONT|`IFontDisp*`|
 |VTS_HANDLE|HWND|
 |VTS_PICTURE|`IPictureDisp*`|
-|VTS_OPTEXCLUSIVE|OLE_OPTEXCLUSIVE *|
+|VTS_OPTEXCLUSIVE|OLE_OPTEXCLUSIVE*|
 |VTS_TRISTATE|OLE_TRISTATE|
 |VTS_XPOS_HIMETRIC|OLE_XPOS_HIMETRIC|
 |VTS_YPOS_HIMETRIC|OLE_YPOS_HIMETRIC|
@@ -1301,7 +1301,7 @@ void FireMouseDown(
 
 ### <a name="parameters"></a>参数
 
-*n 按钮*<br/>
+*nButton*<br/>
 按下鼠标按钮的数值。 它可以包含以下值之一：
 
 - LEFT_BUTTON 鼠标左键已按下。
@@ -1345,7 +1345,7 @@ void FireMouseMove(
 
 ### <a name="parameters"></a>参数
 
-*n 按钮*<br/>
+*nButton*<br/>
 按下鼠标按钮的数值。 包含以下值的组合：
 
 - 在操作期间按下鼠标左键了 LEFT_BUTTON。
@@ -1389,7 +1389,7 @@ void FireMouseUp(
 
 ### <a name="parameters"></a>参数
 
-*n 按钮*<br/>
+*nButton*<br/>
 释放鼠标按钮的数值。 它可以具有以下值之一：
 
 - LEFT_BUTTON 鼠标左键已释放。
@@ -2166,7 +2166,7 @@ BOOL IsModified();
 
 当属性值更改时，则修改控件的状态。
 
-##  <a name="isoptimizeddraw"></a>  Colecontrol:: Isoptimizeddraw
+##  <a name="isoptimizeddraw"></a>  COleControl::IsOptimizedDraw
 
 确定容器是否为当前的绘制操作支持优化的绘图。
 
@@ -2211,7 +2211,7 @@ void Load(LPCTSTR strNewPath, CDataPathProperty& prop);
 *strNewPath*<br/>
 指向包含引用异步控件属性的绝对位置路径的字符串的指针。
 
-*属性*<br/>
+*prop*<br/>
 一个[CDataPathProperty](../../mfc/reference/cdatapathproperty-class.md)实现异步控件属性的对象。
 
 ##  <a name="lockinplaceactive"></a>  COleControl::LockInPlaceActive
@@ -2224,7 +2224,7 @@ BOOL LockInPlaceActive(BOOL bLock);
 
 ### <a name="parameters"></a>参数
 
-*块*<br/>
+*bLock*<br/>
 如果该控件的就地活动状态将被锁定; 则为 TRUE如果它是将其解锁，则为 FALSE。
 
 ### <a name="return-value"></a>返回值
@@ -2936,7 +2936,7 @@ virtual void OnKeyDownEvent(
 
 ### <a name="parameters"></a>参数
 
-*NChar*<br/>
+*nChar*<br/>
 按下的键虚拟键代码值。 标准虚拟键代码的列表，请参见 Winuser.h
 
 *nShiftState*<br/>
@@ -2962,7 +2962,7 @@ virtual void OnKeyPressEvent(USHORT nChar);
 
 ### <a name="parameters"></a>参数
 
-*NChar*<br/>
+*nChar*<br/>
 包含虚拟键代码值的按下的键。 标准虚拟键代码的列表，请参见 Winuser.h
 
 ### <a name="remarks"></a>备注
@@ -2983,7 +2983,7 @@ virtual void OnKeyUpEvent(
 
 ### <a name="parameters"></a>参数
 
-*NChar*<br/>
+*nChar*<br/>
 按下的键虚拟键代码值。 标准虚拟键代码的列表，请参见 Winuser.h
 
 *nShiftState*<br/>
@@ -3409,7 +3409,7 @@ virtual BOOL OnWindowlessMessage(
 
 ### <a name="parameters"></a>参数
 
-*消息*<br/>
+*msg*<br/>
 所传递的 Windows 消息标识符。
 
 *wParam*<br/>
@@ -4067,7 +4067,7 @@ void SetText(LPCTSTR pszText);
 
 请注意，常用的标题和文本属性映射到相同的值。 这意味着对这两个属性所做的任何更改将自动更改这两个属性。 一般情况下，控件应支持股票标题或文本属性，但不可同时使用两者。
 
-##  <a name="throwerror"></a>  Colecontrol:: Throwerror
+##  <a name="throwerror"></a>  COleControl::ThrowError
 
 发出信号的匹配项在控件中的错误。
 

@@ -19,12 +19,12 @@ f1_keywords:
 helpviewer_keywords:
 - tiled_index class
 ms.assetid: 0ce2ae26-f1bb-4436-b473-a9e1b619bb38
-ms.openlocfilehash: 11faec19160ccc6028bdb294f37a51d7fe26dc15
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cea1ac1d500a9cf3bcbdc1f5dde33a0002cbd363
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619825"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57257899"
 ---
 # <a name="tiledindex-class"></a>tiled_index 类
 
@@ -133,7 +133,7 @@ tiled_index(
 *_Global*<br/>
 全局[索引](index-class.md)构造的`tiled_index`。
 
-*（_l)*<br/>
+*_Local*<br/>
 本地[索引](index-class.md)的构造 `tiled_index`
 
 *_Tile*<br/>
@@ -180,7 +180,7 @@ extent<rank> get_tile_extent()restrict(amp,cpu);
 const tile_barrier barrier;
 ```
 
-## <a name="tiled_index__global"></a>  全局
+## <a name="tiled_index__global"></a>  global
 
 存储[索引](index-class.md)表示对象的全局索引的级别 1、 2 或 3 的对象。
 
@@ -190,7 +190,7 @@ const tile_barrier barrier;
 const index<rank> global;
 ```
 
-## <a name="tiled_index__local"></a>  本地
+## <a name="tiled_index__local"></a>  local
 
 存储[索引](index-class.md)对象的当前磁贴中的索引，级别 1、 2 或 3，表示相对[tiled_extent](tiled-extent-class.md)对象。
 
@@ -210,7 +210,7 @@ const index<rank> local;
 static const int rank = _Rank;
 ```
 
-## <a name="tiled_index__tile"></a>  磁贴
+## <a name="tiled_index__tile"></a>  tile
 
 存储[索引](index-class.md)对象的秩为 1、 2 或 3 表示当前 tile 的坐标[tiled_extent](tiled-extent-class.md)对象。
 

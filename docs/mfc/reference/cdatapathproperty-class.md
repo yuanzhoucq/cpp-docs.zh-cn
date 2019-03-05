@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CDataPathProperty [MFC], SetControl
 - CDataPathProperty [MFC], SetPath
 ms.assetid: 1f96efdb-54e4-460b-862c-eba5d4103488
-ms.openlocfilehash: 1d17b121854623e9919f434a44b6ab40c2db2691
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 61c8dfa85363509ee09eaaccdb6d45d70390c344
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608177"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262761"
 ---
 # <a name="cdatapathproperty-class"></a>CDataPathProperty 类
 
@@ -64,9 +64,9 @@ class CDataPathProperty : public CAsyncMonikerFile
 
 有关如何在 Internet 应用程序中使用异步名字对象和 ActiveX 控件的详细信息，请参阅以下文章：
 
-- [Internet 前几个步骤： ActiveX 控件](../../mfc/activex-controls-on-the-internet.md)
+- [Internet 前几个步骤：ActiveX 控件](../../mfc/activex-controls-on-the-internet.md)
 
-- [异步名字对象 Internet 前几个步骤：](../../mfc/asynchronous-monikers-on-the-internet.md)
+- [Internet 前几个步骤：异步名字对象](../../mfc/asynchronous-monikers-on-the-internet.md)
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 

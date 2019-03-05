@@ -18,12 +18,12 @@ helpviewer_keywords:
 - CStdioFile [MFC], WriteString
 - CStdioFile [MFC], m_pStream
 ms.assetid: 88c2274c-4f0e-4327-882a-557ba4b3ae15
-ms.openlocfilehash: dd1a13e7cef066350f8409782b0efeba11b9d11e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fd42934107591905a1bbc273ee9eec4b37e58ea7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456207"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258783"
 ---
 # <a name="cstdiofile-class"></a>CStdioFile 类
 
@@ -199,7 +199,7 @@ virtual BOOL ReadString(CString& rString);
 *lpsz*<br/>
 指定指向将接收的以 null 结尾的文本字符串的用户提供的缓冲区的指针。
 
-*最*<br/>
+*nMax*<br/>
 指定要读取的字符最大数目不包括终止 null 字符。
 
 *rString*<br/>
@@ -240,11 +240,11 @@ virtual ULONGLONG Seek(
 *nFrom*<br/>
 指针移动模式。 必须是以下值之一：
 
-- `CFile::begin`： 将文件指针移*lOff*转发从文件开头的字节数。
+- `CFile::begin`：将文件指针移*lOff*转发从文件开头的字节数。
 
-- `CFile::current`： 将文件指针移*lOff*个字节从文件中的当前位置。
+- `CFile::current`：将文件指针移*lOff*个字节从文件中的当前位置。
 
-- `CFile::end`： 将文件指针移*lOff*从文件末尾的字节数。 请注意， *lOff*必须是负值以查找现有文件; 正值将查找文件的末尾。
+- `CFile::end`：将文件指针移*lOff*从文件末尾的字节数。 请注意， *lOff*必须是负值以查找现有文件; 正值将查找文件的末尾。
 
 ### <a name="return-value"></a>返回值
 

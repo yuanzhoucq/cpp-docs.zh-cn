@@ -7,12 +7,12 @@ helpviewer_keywords:
 - ODBC [MFC], data source information
 - CODBCFieldInfo structure [MFC]
 ms.assetid: 92598b4f-facc-4108-b282-63a179ff79ab
-ms.openlocfilehash: 5ad7d8f710c763b25771e3d1fa8839b5b64802ad
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bc2ad0c8319a60b773211dbd6b52b57bb2dbcafb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50655268"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272758"
 ---
 # <a name="codbcfieldinfo-structure"></a>CODBCFieldInfo 结构
 
@@ -46,7 +46,7 @@ SQL 数据类型的字段。 这可以是 ODBC SQL 数据类型或特定于驱�
 字段的小数位数。 有关详细信息，请参阅 Windows SDK 中的"精度、 小数位数、 长度和显示大小"。
 
 *m_nNullability*<br/>
-是否字段接受 Null 值。 这可以是两个值之一： SQL_NULLABLE 如果字段接受 Null 值，或 SQL_NO_NULLS 如果字段不接受 Null 值。
+是否字段接受 Null 值。 这可以是两个值之一：SQL_NULLABLE 如果字段接受 Null 值，或 SQL_NO_NULLS 如果字段不接受 Null 值。
 
 ## <a name="remarks"></a>备注
 
@@ -61,4 +61,3 @@ SQL 数据类型的字段。 这可以是 ODBC SQL 数据类型或特定于驱�
 [结构、样式、回调和消息映射](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)<br/>
 [CRecordset::GetODBCFieldInfo](../../mfc/reference/crecordset-class.md#getodbcfieldinfo)<br/>
 [CRecordset::GetFieldValue](../../mfc/reference/crecordset-class.md#getfieldvalue)
-

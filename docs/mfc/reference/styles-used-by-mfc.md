@@ -196,12 +196,12 @@ helpviewer_keywords:
 - WS_EX_TRANSPARENT constant [MFC]
 - WS_EX_WINDOWEDGE constant [MFC]
 ms.assetid: d3b9af37-31b5-4c97-a8ad-189fd724b04c
-ms.openlocfilehash: b47fa90fff6753b805d7fd0495050e45bc915d5d
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: eb5123c347fdb847cade54f15764f175ee0ab799
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694772"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304894"
 ---
 # <a name="styles-used-by-mfc"></a>MFC 使用的样式
 
@@ -217,11 +217,11 @@ ms.locfileid: "51694772"
 
 |类型|描述|
 |----------|-----------------|
-|BS_3STATE|创建具有三种状态的复选框按钮： BST_CHECKED、 BST_INDETERMINATE 和 BST_UNCHECKED。 单击该按钮将 BN_CLICKED 通知发送到所有者窗口，但不会更改按钮的状态。 默认情况下，关联的文本显示右侧的复选框。 若要显示文本，左侧的复选框，请使用 BS_LEFTTEXT 或 BS_RIGHTBUTTON 样式。|
-|BS_AUTO3STATE|创建具有三种状态的复选框按钮： BST_CHECKED、 BST_INDETERMINATE 和 BST_UNCHECKED。 单击该按钮将 BN_CLICKED 通知发送到所有者窗口，并更改按钮的状态。 按钮的状态按 BST_CHECKED、 BST_INDETERMINATE，BST_UNCHECKED 顺序的周期。 默认情况下，关联的文本显示右侧的复选框。 若要显示文本，左侧的复选框，请使用 BS_LEFTTEXT 或 BS_RIGHTBUTTON 样式。|
-|BS_AUTOCHECKBOX|创建具有两个状态的复选框按钮： BST_CHECKED 和 BST_UNCHECKED。 单击该按钮将 BN_CLICKED 通知发送到所有者窗口，并更改按钮的状态。 默认情况下，关联的文本显示右侧的复选框。 若要显示文本，左侧的复选框，请使用 BS_LEFTTEXT 或 BS_RIGHTBUTTON 样式。|
-|BS_AUTORADIOBUTTON|创建具有两个状态的单选按钮： BST_CHECKED 和 BST_UNCHECKED。 在组中使用一个选中项一次最多可以拥有每个组通常用于单选按钮。 单击该按钮将 BN_CLICKED 通知发送到所有者窗口、 选中的单选按钮的状态设置为 BST_CHECKED，和所有其他单选按钮的状态设置为 BST_UNCHECKED 按钮组中。 默认情况下，关联的文本显示右侧的单选按钮。 若要显示左侧的单选按钮的文本，请使用 BS_LEFTTEXT 或 BS_RIGHTBUTTON 样式。|
-|BS_CHECKBOX|创建具有两个状态的复选框按钮： BST_CHECKED 和 BST_UNCHECKED。 单击该按钮将 BN_CLICKED 通知发送到所有者窗口，但不会更改按钮的状态。 默认情况下，关联的文本显示右侧的复选框。 若要显示文本，左侧的复选框，请使用 BS_LEFTTEXT 或 BS_RIGHTBUTTON 样式。|
+|BS_3STATE|创建具有三个状态的复选框按钮：BST_CHECKED、 BST_INDETERMINATE 和 BST_UNCHECKED。 单击该按钮将 BN_CLICKED 通知发送到所有者窗口，但不会更改按钮的状态。 默认情况下，关联的文本显示右侧的复选框。 若要显示文本，左侧的复选框，请使用 BS_LEFTTEXT 或 BS_RIGHTBUTTON 样式。|
+|BS_AUTO3STATE|创建具有三个状态的复选框按钮：BST_CHECKED、 BST_INDETERMINATE 和 BST_UNCHECKED。 单击该按钮将 BN_CLICKED 通知发送到所有者窗口，并更改按钮的状态。 按钮的状态按 BST_CHECKED、 BST_INDETERMINATE，BST_UNCHECKED 顺序的周期。 默认情况下，关联的文本显示右侧的复选框。 若要显示文本，左侧的复选框，请使用 BS_LEFTTEXT 或 BS_RIGHTBUTTON 样式。|
+|BS_AUTOCHECKBOX|创建具有两个状态的复选框按钮：BST_CHECKED 和 BST_UNCHECKED。 单击该按钮将 BN_CLICKED 通知发送到所有者窗口，并更改按钮的状态。 默认情况下，关联的文本显示右侧的复选框。 若要显示文本，左侧的复选框，请使用 BS_LEFTTEXT 或 BS_RIGHTBUTTON 样式。|
+|BS_AUTORADIOBUTTON|创建具有两个状态的单选按钮：BST_CHECKED 和 BST_UNCHECKED。 在组中使用一个选中项一次最多可以拥有每个组通常用于单选按钮。 单击该按钮将 BN_CLICKED 通知发送到所有者窗口、 选中的单选按钮的状态设置为 BST_CHECKED，和所有其他单选按钮的状态设置为 BST_UNCHECKED 按钮组中。 默认情况下，关联的文本显示右侧的单选按钮。 若要显示左侧的单选按钮的文本，请使用 BS_LEFTTEXT 或 BS_RIGHTBUTTON 样式。|
+|BS_CHECKBOX|创建具有两个状态的复选框按钮：BST_CHECKED 和 BST_UNCHECKED。 单击该按钮将 BN_CLICKED 通知发送到所有者窗口，但不会更改按钮的状态。 默认情况下，关联的文本显示右侧的复选框。 若要显示文本，左侧的复选框，请使用 BS_LEFTTEXT 或 BS_RIGHTBUTTON 样式。|
 |BS_COMMANDLINK|创建命令链接按钮。 命令链接按钮是特定于 Windows Vista 的主要文本以及一条注释，主文本下方左侧显示一个绿色箭头的命令按钮。 您可以设置说明文本使用[CButton::SetNote](../../mfc/reference/cbutton-class.md#setnote)。|
 |BS_DEFCOMMANDLINK|创建命令链接按钮。 命令链接按钮是特定于 Windows Vista 的主要文本以及一条注释，主文本下方左侧显示一个绿色箭头的命令按钮。 您可以设置说明文本使用[CButton::SetNote](../../mfc/reference/cbutton-class.md#setnote)。 如果按钮在对话框中，按 ENTER 键 BN_CLICKED 时发送通知对话框的到即使按钮没有输入的焦点。|
 |BS_DEFPUSHBUTTON|创建具有深黑色边框的命令按钮。 如果按钮在对话框中，按 ENTER 键 BN_CLICKED 时发送通知对话框的到即使按钮没有输入的焦点。|
@@ -229,7 +229,7 @@ ms.locfileid: "51694772"
 |BS_GROUPBOX|创建可以在其中分组其他按钮的矩形。 在矩形的左上角显示该样式的文本。|
 |BS_OWNERDRAW|创建所有者描述的按钮。 框架将调用`DrawItem`方法时该按钮的可视方面已更改。 当你使用时，必须设置此样式`CBitmapButton`类。|
 |BS_PUSHBUTTON|创建将 BN_CLICKED 通知发送到所有者窗口，当用户单击按钮的命令按钮。|
-|BS_RADIOBUTTON|创建具有两个状态的单选按钮： BST_CHECKED 和 BST_UNCHECKED。 在组中使用一个选中项一次最多可以拥有每个组通常用于单选按钮。 单击该按钮将 BN_CLICKED 通知发送到所有者窗口，但不会自动更改组中任何按钮的状态。 默认情况下，关联的文本显示右侧的单选按钮。 若要显示左侧的单选按钮的文本，请使用 BS_LEFTTEXT 或 BS_RIGHTBUTTON 样式。|
+|BS_RADIOBUTTON|创建具有两个状态的单选按钮：BST_CHECKED 和 BST_UNCHECKED。 在组中使用一个选中项一次最多可以拥有每个组通常用于单选按钮。 单击该按钮将 BN_CLICKED 通知发送到所有者窗口，但不会自动更改组中任何按钮的状态。 默认情况下，关联的文本显示右侧的单选按钮。 若要显示左侧的单选按钮的文本，请使用 BS_LEFTTEXT 或 BS_RIGHTBUTTON 样式。|
 |BS_SPLITBUTTON|创建拆分按钮。 拆分按钮是特定于 Windows Vista 包含旁的下拉箭头的按钮的命令按钮。 当单击按钮时，会执行默认命令。 当单击下拉箭头时，将显示其他命令的菜单。|
 |BS_USERBUTTON|已弃用，但提供的 16 位版本的 Windows 兼容性。 基于 Win32 的应用程序应改用 BS_OWNERDRAW。|
 
@@ -336,7 +336,8 @@ ms.locfileid: "51694772"
 |LBS_DISABLENOSCROLL|列表框中显示一个禁用的垂直滚动条当列表框未包含足够的项滚动。 如果不使用此样式，则当列表框未包含足够的项时，将会隐藏滚动条。|
 |LBS_EXTENDEDSEL|用户可以选择使用 SHIFT 键和鼠标或特定组合键的多个项。|
 |LBS_HASSTRINGS|指定一个所有者描述列表框，其中包含由字符串组成的项。 列表框保留字符串的内存和指针，以便应用程序可使用 `GetText` 成员函数检索特定项的文本。|
-|LBS_MULTICOLUMN|指定水平滚动的多列列表框。 `SetColumnWidth` 成员函数将设置列的宽度。|
+|LBS_MULTICOLUMN|指定水平滚动的多列列表框。 
+  `SetColumnWidth` 成员函数将设置列的宽度。|
 |LBS_MULTIPLESEL|每次用户单击或双击字符串切换字符串选择。 可以选择任意数量的字符串。|
 |LBS_NODATA|指定无数据列表框。 当列表框中的项数超出一千时，请指定此样式。 无数据列表框还必须具有 LBS_OWNERDRAWFIXED 样式，但不能有 LBS_SORT 或 LBS_HASSTRINGS 样式。<br/><br/> 无数据列表框类似于所有者描述的列表框，但它不包含项的字符串或位图数据。 用于添加、插入或删除项的命令始终会忽略任何给定的项数据；在列表框内查找字符串的请求始终会失败。 必须绘制某个项时，系统会将 WM_DRAWITEM 消息发送到所有者窗口。 ItemID 成员`DRAWITEMSTRUCT`WM_DRAWITEM 消息传递结构指定要绘制的项的行号。 无数据列表框不发送 WM_DELETEITEM 消息。|
 |LBS_NOINTEGRALHEIGHT|列表框的大小正是应用程序创建列表框时指定的大小。 通常，Windows 会调整列表框的大小，以使列表框不会只显示部分项。|
@@ -360,12 +361,12 @@ ms.locfileid: "51694772"
 
 |样式|描述|
 |-----------|-----------------|
-|MB_ABORTRETRYIGNORE|消息框包含三个按键： 中止，重试，并忽略。|
-|MB_OK|消息框包含一个可通过按钮: 确定。|
-|MB_OKCANCEL|消息框包含两个按键: 确定和取消。|
-|MB_RETRYCANCEL|消息框包含两个按键： 重试和取消。|
-|MB_YESNO|消息框包含两个按键: 是和不可以。|
-|MB_YESNOCANCEL|消息框包含三个按键: 是、 否和取消。|
+|MB_ABORTRETRYIGNORE|消息框包含三个按键：中止、 重试，并忽略。|
+|MB_OK|消息框包含一个可通过按钮：“确定”。|
+|MB_OKCANCEL|消息框包含两个普通按钮：确定和取消。|
+|MB_RETRYCANCEL|消息框包含两个普通按钮：重试和取消。|
+|MB_YESNO|消息框包含两个普通按钮：是和不可以。|
+|MB_YESNOCANCEL|消息框包含三个按键：是、 否和取消。|
 
 ### <a name="message-box-modality"></a>消息框模式
 
@@ -431,7 +432,7 @@ ms.locfileid: "51694772"
 |SS_LEFT|指定一个简单的矩形，其中显示给定的文本的矩形中刷新左。 文本是显示的格式设置。 将会扩展行末尾的单词自动换到下一步刷新左侧行的开头。|
 |SS_LEFTNOWORDWRAP|指定一个简单的矩形，其中显示给定的文本的矩形中刷新左。 已展开的选项卡，但不是包装单词。 行的末尾的文本被截断。|
 |SS_NOPREFIX|除非指定此样式，则 Windows 会将解释，任何与号 (&) 中控件的文本为加速器前缀字符的字符。 在这种情况下，删除 & 符和字符串中的下一个字符带下划线。 如果静态控件是包含文本还不需要此功能，可能会添加 SS_NOPREFIX。 此静态控件样式可以包含与任何定义的静态控件。 通过使用按位 OR 运算符，可以具有其他样式组合 SS_NOPREFIX。 这是最常用于时需要在对话框中的静态控件中显示的文件名或其他可能包含 and 符的字符串。|
-|调用 SS_NOTIFY|将父窗口发送 STN_CLICKED、 STN_DBLCLK、 STN_DISABLE 和 STN_ENABLE 通知消息，当用户单击或双击该控件。|
+|SS_NOTIFY|将父窗口发送 STN_CLICKED、 STN_DBLCLK、 STN_DISABLE 和 STN_ENABLE 通知消息，当用户单击或双击该控件。|
 |SS_OWNERDRAW|指定静态控件的所有者负责绘制控件。 所有者窗口接收 WM_DRAWITEM 消息时该控件需要绘制。|
 |SS_REALSIZEIMAGE|防止在正调整大小，因为它加载或绘制静态图标或位图控件 （即，静态控件具有 SS_ICON 或 SS_BITMAP 样式）。 如果图标或位图值大于目标区域，则剪裁图像。|
 |SS_RIGHT|指定一个简单的矩形，其中显示给定的文本的矩形中刷新右。 文本是显示的格式设置。 将会扩展行末尾的单词自动换到下一步刷新右侧行的开头。|
@@ -509,7 +510,7 @@ ms.locfileid: "51694772"
 ## <a name="see-also"></a>请参阅
 
 [MFC 类概述](../../mfc/class-library-overview.md)<br/>
-[Cwnd:: Create](../../mfc/reference/cwnd-class.md#create)<br/>
+[CWnd::Create](../../mfc/reference/cwnd-class.md#create)<br/>
 [CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex)<br/>
 [CEdit::Create](../../mfc/reference/cedit-class.md#create)<br/>
 [CScrollBar::Create](../../mfc/reference/cscrollbar-class.md#create)<br/>

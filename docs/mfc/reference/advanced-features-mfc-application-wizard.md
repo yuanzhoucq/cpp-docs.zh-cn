@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MFC Application Wizard, advanced features
 ms.assetid: 8a6681c5-6576-4b12-841a-6862beee76fa
-ms.openlocfilehash: 1af16f7009ceb97ea86d641f47cf56ea5a398c26
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 5643e1e9f4f558163c1c2a3b65070f90afdc7dba
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694286"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278218"
 ---
 # <a name="advanced-features-mfc-application-wizard"></a>MFC 应用程序向导的高级功能
 
@@ -21,7 +21,7 @@ ms.locfileid: "51694286"
 
    生成一组帮助文件的上下文相关帮助，可通过使用 F1 和帮助菜单或通过单击**帮助**出现在对话框中的按钮。 帮助支持需要帮助编译器。 如果没有帮助编译器，可以通过运行安装程序来安装它。
 
-   请参阅[HTML 帮助： 程序的上下文相关帮助](../../mfc/html-help-context-sensitive-help-for-your-programs.md)并[帮助文件 （HTML 帮助）](../../ide/help-files-html-help.md)有关详细信息。
+   请参阅[HTML 帮助：为程序的上下文相关帮助](../../mfc/html-help-context-sensitive-help-for-your-programs.md)并[帮助文件 （HTML 帮助）](../../ide/help-files-html-help.md)有关详细信息。
 
 - **打印和打印预览**
 
@@ -57,7 +57,7 @@ ms.locfileid: "51694286"
 
 - **支持重新启动管理器**
 
-   添加了对支持[Windows 重新启动管理器](/windows/desktop/RstMgr/using-restart-manager)。 此视频介绍如何使用 MFC 中的重新启动管理器：[如何实现： 使用新的重新启动管理器](/previous-versions/visualstudio/visual-studio-2010/dd831853(v%3dvs.100))。
+   添加了对支持[Windows 重新启动管理器](/windows/desktop/RstMgr/using-restart-manager)。 此视频介绍如何使用 MFC 中的重新启动管理器：[如何实现:使用新的重新启动管理器](/previous-versions/visualstudio/visual-studio-2010/dd831853(v%3dvs.100))。
 
 - **高级的框架窗格**
 
@@ -76,4 +76,3 @@ ms.locfileid: "51694286"
 ## <a name="see-also"></a>请参阅
 
 [MFC 应用程序向导](../../mfc/reference/mfc-application-wizard.md)
-

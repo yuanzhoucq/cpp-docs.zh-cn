@@ -10,12 +10,12 @@ helpviewer_keywords:
 - merging toolbar and status bar [MFC]
 - menus [MFC], OLE document applications
 ms.assetid: 80b6bb17-d830-4122-83f0-651fc112d4d1
-ms.openlocfilehash: 30663afae0bfd30b42f99daf95cb8ff35979ee50
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e00464e59de5e20627fd2423c101c23629d7c4d2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438436"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300344"
 ---
 # <a name="menus-and-resources-menu-merging"></a>菜单和资源：菜单合并
 
@@ -105,7 +105,7 @@ END
 
 服务器应用程序应创建一个新的工具栏并将其位图存储在一个单独的文件。 应用程序向导生成应用程序将此位图存储在名为 ITOOLBAR 的文件。BMP。 在你的服务器的项到位，请激活并应包含相同项作为正常的工具栏中，但删除代表文件和窗口菜单上的项的图标时，新工具栏替换容器应用程序的工具栏。
 
-此工具栏中加载你`COleIPFrameWnd`-派生的类，为你创建的应用程序向导。 由容器应用程序处理状态栏。 有关就地框架窗口的实现的详细信息，请参阅[服务器： 实现服务器](../mfc/servers-implementing-a-server.md)。
+此工具栏中加载你`COleIPFrameWnd`-派生的类，为你创建的应用程序向导。 由容器应用程序处理状态栏。 有关就地框架窗口的实现的详细信息，请参阅[服务器：实现服务器](../mfc/servers-implementing-a-server.md)。
 
 ## <a name="see-also"></a>请参阅
 
@@ -113,4 +113,3 @@ END
 [激活](../mfc/activation-cpp.md)<br/>
 [服务器](../mfc/servers.md)<br/>
 [容器](../mfc/containers.md)
-

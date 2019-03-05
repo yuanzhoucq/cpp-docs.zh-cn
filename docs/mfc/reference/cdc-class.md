@@ -402,12 +402,12 @@ helpviewer_keywords:
 - CDC [MFC], m_hAttribDC
 - CDC [MFC], m_hDC
 ms.assetid: 715b3334-cb2b-4c9c-8067-02eb7c66c8b2
-ms.openlocfilehash: 0c8944846e249e4f752183b057bf8d2857022ab5
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: fc5d41221ab0f9679e7d38a399464efc1a38dd52
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53179053"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305076"
 ---
 # <a name="cdc-class"></a>CDC 类
 
@@ -1580,7 +1580,7 @@ BOOL DrawFrameControl(
 *lpRect*<br/>
 一个指向`RECT`结构，其中包含矩形的逻辑坐标。
 
-*n 类型*<br/>
+*nType*<br/>
 指定要绘制的帧控件的类型。 请参阅*uType*中的参数[DrawFrameControl](/windows/desktop/api/winuser/nf-winuser-drawframecontrol) Windows SDK for 此参数的可能值的列表中。
 
 *nState*<br/>
@@ -1674,7 +1674,7 @@ BOOL DrawIcon(
 *hIcon*<br/>
 标识要绘制的图标的句柄。
 
-*点*<br/>
+*point*<br/>
 指定逻辑 x 坐标和 y 坐标的左上角的图标。 可以将传递[点](/windows/desktop/api/windef/ns-windef-tagpoint)结构或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)为此参数的对象。
 
 ### <a name="return-value"></a>返回值
@@ -3171,13 +3171,13 @@ DWORD GetGlyphOutline(
 
 ### <a name="parameters"></a>参数
 
-*NChar*<br/>
+*nChar*<br/>
 指定为其信息是要返回的字符。
 
 *nFormat*<br/>
 指定该函数将返回信息的格式。 它可以是下列值之一或 0:
 
-|值|含义|
+|“值”|含义|
 |-----------|-------------|
 |GGO_BITMAP|返回标志符号位图。 当该函数返回时，通过指向的缓冲区*lpBuffer*包含双字边界启动其中的行的每像素 1 位位图。|
 |GGO_NATIVE|返回在光栅化程序的本机格式，使用设备单位中数据点的曲线。 中时指定此值，指定任何转换*lpmat2*将被忽略。|
@@ -3187,7 +3187,7 @@ DWORD GetGlyphOutline(
 *lpgm*<br/>
 指向描述中的字符单元格的标志符号的位置的 GLYPHMETRICS 结构。
 
-*cbbuffer:*<br/>
+*cbBuffer*<br/>
 指定该函数将大纲字符的信息复制到其中的缓冲区的大小。 如果此值为 0， *nFormat*参数是 GGO_BITMAP 或 GGO_NATIVE 值，该函数将返回所需的缓冲区大小。
 
 *lpBuffer*<br/>
@@ -3565,7 +3565,7 @@ COLORREF GetPixel(POINT point) const;
 *y*<br/>
 指定要检查的点的逻辑 y 坐标。
 
-*点*<br/>
+*point*<br/>
 指定逻辑 x 坐标和 y 坐标要检查的点。
 
 ### <a name="return-value"></a>返回值
@@ -4278,7 +4278,7 @@ BOOL LineTo(POINT point);
 *y*<br/>
 指定行的终结点的逻辑 y 坐标。
 
-*点*<br/>
+*point*<br/>
 指定线条的端点。 您可以传递`POINT`结构或`CPoint`为此参数的对象。
 
 ### <a name="return-value"></a>返回值
@@ -4485,7 +4485,7 @@ CPoint MoveTo(POINT point);
 *y*<br/>
 指定新位置的逻辑 y 坐标。
 
-*点*<br/>
+*point*<br/>
 指定新位置。 您可以传递`POINT`结构或`CPoint`为此参数的对象。
 
 ### <a name="return-value"></a>返回值
@@ -5115,7 +5115,7 @@ BOOL PtVisible(POINT point) const;
 *y*<br/>
 指定点的逻辑 y 坐标。
 
-*点*<br/>
+*point*<br/>
 指定要检查以逻辑坐标表示的点。 您可以传递`POINT`结构或`CPoint`为此参数的对象。
 
 ### <a name="return-value"></a>返回值
@@ -5331,7 +5331,7 @@ BOOL RoundRect(
 *lpRect*<br/>
 逻辑单元中指定的边框。 您可以传递`CRect`对象或一个指向`RECT`结构为此参数。
 
-*点*<br/>
+*point*<br/>
 X 坐标*点*指定的宽度 （以逻辑单位） 绘制圆的角的椭圆。 Y 坐标*点*指定要绘制圆角的半径 （以逻辑单位） 的椭圆的高度。 您可以传递`POINT`结构或`CPoint`为此参数的对象。
 
 ### <a name="return-value"></a>返回值
@@ -5610,7 +5610,7 @@ CGdiObject* SelectObject(CGdiObject* pObject);
 
 ### <a name="return-value"></a>返回值
 
-指向要替换的对象的指针。 这是指向派生自的类之一的对象的指针`CGdiObject`，如`CPen`，取决于使用哪一版本的函数。 如果出现错误，则返回值为 NULL。 此函数可返回到临时对象的指针。 此临时对象在一个 Windows 消息的处理过程才有效。 有关详细信息，请参阅 `CGdiObject::FromHandle` 。
+指向要替换的对象的指针。 这是指向派生自的类之一的对象的指针`CGdiObject`，如`CPen`，取决于使用哪一版本的函数。 如果出现错误，则返回值为 NULL。 此函数可返回到临时对象的指针。 此临时对象在一个 Windows 消息的处理过程才有效。 有关详细信息，请参阅 `CGdiObject::FromHandle`。
 
 使用区域参数的成员函数的版本执行相同的任务`SelectClipRgn`成员函数。 它的返回值可以是以下任一项：
 
@@ -5908,7 +5908,7 @@ CPoint SetBrushOrg(POINT point);
 *y*<br/>
 指定的 y 坐标 （以设备为单位） 的新的源。 此值必须在范围 0 到 7。
 
-*点*<br/>
+*point*<br/>
 指定新的原点 x 和 y 坐标。 每个值必须在范围 0 到 7。 您可以传递`POINT`结构或`CPoint`为此参数的对象。
 
 ### <a name="return-value"></a>返回值
@@ -6179,7 +6179,7 @@ COLORREF SetPixel(
 *crColor*<br/>
 一个 COLORREF RGB 值，该值指定用来绘制点的颜色。 请参阅[COLORREF](/windows/desktop/gdi/colorref)适用于此值的说明的 Windows SDK 中。
 
-*点*<br/>
+*point*<br/>
 指定逻辑 x 坐标和 y 坐标点设置。 您可以传递`POINT`结构或`CPoint`为此参数的对象。
 
 ### <a name="return-value"></a>返回值
@@ -6218,7 +6218,7 @@ BOOL SetPixelV(
 *crColor*<br/>
 指定要用来绘制点的颜色。
 
-*点*<br/>
+*point*<br/>
 指定逻辑 x 坐标和 y 坐标点设置。 您可以传递[点](/windows/desktop/api/windef/ns-windef-tagpoint)数据结构或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)为此参数的对象。
 
 ### <a name="return-value"></a>返回值
@@ -6322,7 +6322,7 @@ int SetStretchBltMode(int nStretchMode);
 *nStretchMode*<br/>
 指定的拉伸模式。 它可以是以下值之一：
 
-|值|描述|
+|“值”|描述|
 |-----------|-----------------|
 |BLACKONWHITE|执行布尔 AND 操作使用为已清除的和现有像素的颜色值。 如果位图是单色位图，此模式会保留代价白色像素是黑色像素。|
 |COLORONCOLOR|删除的像素为单位。 此模式下不尝试保留其信息的情况下删除所有消除的像素行数。|
@@ -6537,7 +6537,7 @@ CPoint SetViewportOrg(POINT point);
 *y*<br/>
 指定的 y 坐标 （以设备为单位） 的视区原点。 值必须在设备坐标系统的范围内。
 
-*点*<br/>
+*point*<br/>
 指定的视区原点。 值必须在设备坐标系统的范围内。 您可以传递`POINT`结构或`CPoint`为此参数的对象。
 
 ### <a name="return-value"></a>返回值
@@ -6625,7 +6625,7 @@ CPoint SetWindowOrg(POINT point);
 *y*<br/>
 指定窗口的新的源的逻辑 y 坐标。
 
-*点*<br/>
+*point*<br/>
 指定窗口的新的源的逻辑坐标。 您可以传递`POINT`结构或`CPoint`为此参数的对象。
 
 ### <a name="return-value"></a>返回值
@@ -6816,7 +6816,8 @@ BOOL StretchBlt(
 
 `StretchBlt`函数创建的位图的镜像，如果的迹象*nSrcWidth*并*nWidth*或*nSrcHeight*和*nHeight*参数不同。 如果*nSrcWidth*并*nWidth*符号不同，该函数将创建的沿 x 轴的位图的镜像。 如果*nSrcHeight*并*nHeight*符号不同，该函数将创建的沿 y 轴的位图的镜像。
 
-`StretchBlt` 函数将在内存中拉伸或压缩源位图，然后将结果复制到目标。 如果一个模式将与该结果合并，则合并操作会等到拉伸的源位图复制到目标后执行。 如果使用画笔，则为在目标设备上下文中选择的画笔。 目标坐标将根据目标设备上下文进行转换；源坐标将根据源设备上下文进行转换。
+
+  `StretchBlt` 函数将在内存中拉伸或压缩源位图，然后将结果复制到目标。 如果一个模式将与该结果合并，则合并操作会等到拉伸的源位图复制到目标后执行。 如果使用画笔，则为在目标设备上下文中选择的画笔。 目标坐标将根据目标设备上下文进行转换；源坐标将根据源设备上下文进行转换。
 
 如果目标位图、源位图和模式位图没有相同的颜色格式，`StretchBlt` 将转换源位图和模式位图，以与目标位图匹配。 在转换中将使用目标设备上下文的前景色和背景色。
 

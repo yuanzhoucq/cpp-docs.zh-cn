@@ -13,12 +13,12 @@ helpviewer_keywords:
 - threading [MFC]
 - user interface threads [C++]
 ms.assetid: 979605f8-3988-44b5-ac9c-b8cce7fcce14
-ms.openlocfilehash: c707c1c117bbc0005b2b3da4ed39f083ae407b27
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bcffc2964d8e15fd47f437366863748175e12622
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643412"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258341"
 ---
 # <a name="multithreading-with-c-and-mfc"></a>使用 C++ 和 MFC 进行多线程编程
 
@@ -32,7 +32,7 @@ Microsoft 基础类 (MFC) 库提供多线程应用程序的支持。 本主题�
 
 MFC 区分两种类型的线程： 用户界面线程和工作线程。 用户界面线程通常用于处理用户输入和响应事件和用户生成的消息。 工作线程通常用于完成任务，如重新计算，不需要用户输入的。 Win32 API 不区分类型的线程;它只需知道线程的起始地址，因此它可以开始执行线程。 MFC 专门通过提供用户界面中的事件消息泵处理用户界面线程。 `CWinApp` 是一种用户界面线程对象，因为它派生`CWinThread`和处理事件和用户生成的消息。
 
-其中多个线程可能会要求对同一对象的访问的情况下，应给予特别关注。 [多线程处理： 编程提示](multithreading-programming-tips.md)介绍可用于在这些情况下可能出现的问题的解决方法。 [多线程处理： 如何使用同步类](multithreading-how-to-use-the-synchronization-classes.md)介绍如何使用可用于同步对单个对象从多个线程访问的类。
+其中多个线程可能会要求对同一对象的访问的情况下，应给予特别关注。 [多线程处理：编程提示](multithreading-programming-tips.md)介绍可用于在这些情况下可能出现的问题的解决方法。 [多线程处理：如何使用同步类](multithreading-how-to-use-the-synchronization-classes.md)介绍如何使用可用于同步对单个对象从多个线程访问的类。
 
 编写和调试多线程的编程本质上是一项复杂棘手的任务，因为您必须确保一次多个线程访问对象。 多线程处理主题没有讲述多线程编程，只是说明了如何在多线程程序中使用 MFC 的基础知识。 Visual c + + 中包含的多线程的 MFC 示例阐释了一些多线程添加功能和 Win32 Api 通过 MFC; 不包含但是，它们仅用于为起始点。
 

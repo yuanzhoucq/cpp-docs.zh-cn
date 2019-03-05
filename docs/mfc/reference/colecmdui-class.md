@@ -14,12 +14,12 @@ helpviewer_keywords:
 - COleCmdUI [MFC], SetCheck
 - COleCmdUI [MFC], SetText
 ms.assetid: a2d5ce08-6657-45d3-8673-2a9f32d50eec
-ms.openlocfilehash: 30caf7b42cf570a5dcd92d48817ef3743cf63811
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5dc4e9504805146a9eff0f5ab937868226e4516e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677430"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270849"
 ---
 # <a name="colecmdui-class"></a>COleCmdUI 类
 
@@ -114,10 +114,10 @@ virtual void SetCheck(int nCheck);
 
 ### <a name="parameters"></a>参数
 
-*n 请查看*<br/>
+*nCheck*<br/>
 一个值用于确定要设置打开/关闭切换的状态命令。 值为：
 
-|“值”|描述|
+|值|Description|
 |-----------|-----------------|
 |**1**|将该命令设置为 on。|
 |**2**|将该命令设置为不确定的;无法确定状态，因为此命令的属性是在同时打开和关闭相关的所选内容中的状态。|
@@ -140,4 +140,3 @@ virtual void SetText(LPCTSTR lpszText);
 
 [CCmdUI 类](../../mfc/reference/ccmdui-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)
-

@@ -268,12 +268,12 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::int_4::bg
 - amp_short_vectors/Concurrency::graphics::int_4::yxz
 ms.assetid: 01768c28-23a8-4965-8267-96834864f4eb
-ms.openlocfilehash: aa1874dee72f7734c690ce9e86998a5120b2974b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7bcdd005ab5f530e08fc6e5326404d19f85faf4b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643698"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273421"
 ---
 # <a name="int4-class"></a>int_4 类
 
@@ -607,7 +607,7 @@ class int_4;
 
 **标头：** amp_short_vectors.h
 
-**Namespace:** concurrency:: graphics
+**命名空间：** Concurrency:: graphics
 
 ##  <a name="ctor"></a> int_4
 
@@ -667,7 +667,7 @@ explicit inline int_4(
 *_V3*<br/>
 要初始化元素 3 的值。
 
-*（_V)*<br/>
+*_V*<br/>
 用于初始化值。
 
 *_Other*<br/>

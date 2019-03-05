@@ -9,12 +9,12 @@ helpviewer_keywords:
 - containers [MFC], creating
 - OLE controls [MFC], containers
 ms.assetid: ec70e137-7c14-4940-bd0e-fd4edcc63ea5
-ms.openlocfilehash: 04c271db18bc8d8ba273f16f7493bbbb1da96421
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f0d5fe419375535ab8c52378b9005df88634e99a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544984"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275891"
 ---
 # <a name="creating-an-mfc-activex-control-container"></a>创建 MFC ActiveX 控件容器
 
@@ -27,7 +27,7 @@ ActiveX 控件容器是一个父程序，提供 ActiveX (以前称为 OLE) 控�
 
 - **新的 MFC 应用程序**。 若要创建新的 MFC 程序，包括自动化，可视化编辑复合文件，或控制支持、 使用 MFC 应用程序向导并选择相应的自动化选项。
 
-- **现有 MFC 应用程序**。 如果将控件包含添加到现有 MFC 应用程序，请参阅[OLE 控件容器： 手动启用 OLE 控件包容](../../mfc/activex-control-containers-manually-enabling-activex-control-containment.md)。
+- **现有 MFC 应用程序**。 如果将控件包含添加到现有 MFC 应用程序，请参阅[OLE 控件容器：手动启用 OLE 控件包含](../../mfc/activex-control-containers-manually-enabling-activex-control-containment.md)。
 
 ### <a name="to-create-an-activex-container-for-any-of-the-following-types-of-applications"></a>若要创建以下类型的应用程序的任何一个 ActiveX 容器
 
@@ -40,4 +40,3 @@ ActiveX 控件容器是一个父程序，提供 ActiveX (以前称为 OLE) 控�
 ## <a name="see-also"></a>请参阅
 
 [Visual C++ 项目类型](../../ide/visual-cpp-project-types.md)
-

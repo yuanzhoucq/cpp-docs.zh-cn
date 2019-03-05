@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CMFCColorPopupMenu [MFC], GetMenuBar
 - CMFCColorPopupMenu [MFC], SetPropList
 ms.assetid: 0bf9efe8-aed5-4ab7-b23b-eb284b4668be
-ms.openlocfilehash: a3bb6f4d2926f07f61891656613c06e5690c9099
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0c2fed4aa239faa96abf692a46a27102ce9820a1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50491450"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283392"
 ---
 # <a name="cmfccolorpopupmenu-class"></a>CMFCColorPopupMenu 类
 
@@ -127,10 +127,10 @@ CMFCColorPopupMenu(
 
 ### <a name="parameters"></a>参数
 
-*颜色*<br/>
+*colors*<br/>
 [in]框架显示弹出菜单的颜色的数组。
 
-*颜色*<br/>
+*color*<br/>
 [in]默认选择的颜色。
 
 *lpszAutoColor*<br/>

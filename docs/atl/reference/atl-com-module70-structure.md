@@ -9,12 +9,12 @@ helpviewer_keywords:
 - _ATL_COM_MODULE70 structure
 - ATL_COM_MODULE70 structure
 ms.assetid: 5b0b2fd0-bdeb-4c7e-8870-78fa69ace6e6
-ms.openlocfilehash: 4a5c464fd6449653517f0994ab8dac1ef7bbdd18
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c6361fc5374ed732cd9ccbfbbd1d3d1c2fc8f1f0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50590201"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261279"
 ---
 # <a name="atlcommodule70-structure"></a>_ATL_COM_MODULE70 结构
 
@@ -60,4 +60,3 @@ struct _ATL_COM_MODULE70 {
 ## <a name="see-also"></a>请参阅
 
 [类和结构](../../atl/reference/atl-classes.md)
-

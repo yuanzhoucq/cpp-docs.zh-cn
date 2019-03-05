@@ -22,12 +22,12 @@ helpviewer_keywords:
 - contained windows
 - CContainedWindowT class
 ms.assetid: cde0ca36-9347-4068-995a-d294dae57ca9
-ms.openlocfilehash: 96e279e8ab3080c0239f1e41895142ba23c5a7c9
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 7fd9a941210407edc3424454b3375040717a05a2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693968"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261656"
 ---
 # <a name="ccontainedwindowt-class"></a>CContainedWindowT 类
 
@@ -90,7 +90,9 @@ class CContainedWindowT : public TBase
 
 `CContainedWindowT` 可以通过创建超类现有的窗口类创建一个新的窗口。 `Create`方法首先注册窗口类，基于现有类，但使用`CContainedWindowT::WindowProc`。 `Create` 然后，创建基于此新的窗口类的窗口。 每个实例`CContainedWindowT`可以不同的窗口类的超类。
 
-`CContainedWindowT` 还支持窗口子类化。 `SubclassWindow` 方法将现有的窗口附加到 `CContainedWindowT` 对象并将窗口过程更改为 `CContainedWindowT::WindowProc`。 `CContainedWindowT` 的每个实例可以子类化其他窗口。
+`CContainedWindowT` 还支持窗口子类化。 
+  `SubclassWindow` 方法将现有的窗口附加到 `CContainedWindowT` 对象并将窗口过程更改为 `CContainedWindowT::WindowProc`。 
+  `CContainedWindowT` 的每个实例可以子类化其他窗口。
 
 > [!NOTE]
 >  对于任何给定`CContainedWindowT`对象，请调用`Create`或`SubclassWindow`。 不应调用这两种方法对同一对象。

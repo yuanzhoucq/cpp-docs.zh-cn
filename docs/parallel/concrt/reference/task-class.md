@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - task class
 ms.assetid: cdc3a8c0-5cbe-45a0-b5d5-e9f81d94df1a
-ms.openlocfilehash: c2ac1df322a2778356ce8acca90392fc9f6a17f1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c1dc146f03b4ed5c0d9d82736959df3097f41199
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50482067"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289291"
 ---
 # <a name="task-class-concurrency-runtime"></a>task 类（并发运行时）
 
@@ -69,7 +69,7 @@ class task;
 |[is_done](#is_done)|确定任务是否已完成。|
 |[scheduler](#scheduler)|返回此任务的计划程序|
 |[then](#then)|已重载。 向此任务添加延续任务。|
-|[等待](#wait)|等待此任务到达终止状态。 `wait` 可执行内联任务，前提是所有任务依赖项得到满足并且后台辅助线程没有选取它执行。|
+|[wait](#wait)|等待此任务到达终止状态。 `wait` 可执行内联任务，前提是所有任务依赖项得到满足并且后台辅助线程没有选取它执行。|
 
 ### <a name="public-operators"></a>公共运算符
 
@@ -180,7 +180,8 @@ task& operator= (task&& _Other);
 
 ### <a name="remarks"></a>备注
 
-`task` 的行为方式与智能指针的类似，在分配副本之后，此 `task` 对象与 `_Other` 表示相同的实际任务。
+
+  `task` 的行为方式与智能指针的类似，在分配副本之后，此 `task` 对象与 `_Other` 表示相同的实际任务。
 
 ##  <a name="operator_eq_eq"></a> 运算符 = =
 
@@ -251,7 +252,8 @@ task(
 
 ### <a name="remarks"></a>备注
 
-`task` 的默认构造函数仅用于允许在容器中使用任务。 只有在分配有效任务后才能使用默认的构造任务。 等方法`get`，`wait`或`then`将引发[invalid_argument](../../../standard-library/invalid-argument-class.md)调用默认构造任务时的异常。
+
+  `task` 的默认构造函数仅用于允许在容器中使用任务。 只有在分配有效任务后才能使用默认的构造任务。 等方法`get`，`wait`或`then`将引发[invalid_argument](../../../standard-library/invalid-argument-class.md)调用默认构造任务时的异常。
 
 通过 `task_completion_event` 创建的任务将在设置任务完成事件后完成（并安排好其延续）。
 
@@ -331,7 +333,8 @@ __declspec(
 
 ##  <a name="wait"></a> 等待
 
-等待此任务到达终止状态。 `wait` 可执行内联任务，前提是所有任务依赖项得到满足并且后台辅助线程没有选取它执行。
+等待此任务到达终止状态。 
+  `wait` 可执行内联任务，前提是所有任务依赖项得到满足并且后台辅助线程没有选取它执行。
 
 ```
 task_status wait() const;

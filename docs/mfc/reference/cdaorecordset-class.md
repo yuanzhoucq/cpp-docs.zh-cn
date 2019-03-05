@@ -166,12 +166,12 @@ helpviewer_keywords:
 - CDaoRecordset [MFC], m_strFilter
 - CDaoRecordset [MFC], m_strSort
 ms.assetid: 2322067f-1027-4662-a5d7-aa2fc7488630
-ms.openlocfilehash: 6b3e3fac575d6a1308a9f61b3bf827d76785e94d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 96118645aa656e97fcb93a0fd223045208ab03a3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50639317"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273889"
 ---
 # <a name="cdaorecordset-class"></a>CDaoRecordset 类
 
@@ -250,7 +250,7 @@ class CDaoRecordset : public CObject
 |[CDaoRecordset::MoveLast](#movelast)|定位在记录集中的最后一个记录的当前记录。|
 |[CDaoRecordset::MoveNext](#movenext)|定位在记录集中的下一个记录的当前记录。|
 |[CDaoRecordset::MovePrev](#moveprev)|定位记录集的上一个记录的当前记录。|
-|[Cdaorecordset:: Open](#open)|从表、 动态集或快照创建新的记录集。|
+|[CDaoRecordset::Open](#open)|从表、 动态集或快照创建新的记录集。|
 |[CDaoRecordset::Requery](#requery)|运行以刷新所选的记录的记录集的查询。|
 |[CDaoRecordset::Seek](#seek)|查找满足指定的条件的当前索引并将该记录的当前记录的索引的表类型记录集对象中的记录。|
 |[CDaoRecordset::SetAbsolutePosition](#setabsoluteposition)|设置记录集对象的当前记录的记录数。|
@@ -272,7 +272,7 @@ class CDaoRecordset : public CObject
 
 |名称|描述|
 |----------|-----------------|
-|[Cdaorecordset:: M_bcheckcachefordirtyfields](#m_bcheckcachefordirtyfields)|包含一个标志，指示是否字段将自动标记为已更改。|
+|[CDaoRecordset::m_bCheckCacheForDirtyFields](#m_bcheckcachefordirtyfields)|包含一个标志，指示是否字段将自动标记为已更改。|
 |[CDaoRecordset::m_nFields](#m_nfields)|包含记录集类中的字段数据成员的数目和选定数据源的记录集的列数。|
 |[CDaoRecordset::m_nParams](#m_nparams)|包含记录集类中的参数数据成员的数目，使用记录集的查询传递的参数的数目|
 |[CDaoRecordset::m_pDAORecordset](#m_pdaorecordset)|指向基础的记录集对象的 DAO 接口的指针。|
@@ -1077,7 +1077,7 @@ short GetEditMode();
 
 ### <a name="remarks"></a>备注
 
-|“值”|描述|
+|值|描述|
 |-----------|-----------------|
 |`dbEditNone`|不正在编辑的任何操作。|
 |`dbEditInProgress`|`Edit` 已调用。|
@@ -1130,9 +1130,9 @@ void GetFieldInfo(
 
 - `AFX_DAO_PRIMARY_INFO` （默认值）名称、 类型、 大小、 属性
 
-- `AFX_DAO_SECONDARY_INFO` 主要信息加上： 序号位置，必需的允许为零长度，排序规则顺序外名称、 源字段中，源表
+- `AFX_DAO_SECONDARY_INFO` 主要信息加上：序号位置，必需的允许长度为零，排序规则顺序、 外名称、 源字段、 源表
 
-- `AFX_DAO_ALL_INFO` 主要和次要信息加上： 默认值，验证规则验证文本
+- `AFX_DAO_ALL_INFO` 主要和次要信息加上：默认值，验证规则验证文本
 
 *lpszName*<br/>
 字段的名称。
@@ -1237,9 +1237,9 @@ void GetIndexInfo(
 
 - `AFX_DAO_PRIMARY_INFO` （默认值）名称字段信息字段
 
-- `AFX_DAO_SECONDARY_INFO` 主要信息加上： 主、 Unique、 聚集、 IgnoreNulls，必需的外部
+- `AFX_DAO_SECONDARY_INFO` 主要信息加上：主数据库，唯一的聚集，IgnoreNulls，所需外
 
-- `AFX_DAO_ALL_INFO` 主要和次要信息加上： 非重复计数
+- `AFX_DAO_ALL_INFO` 主要和次要信息加上：非重复计数
 
 *lpszName*<br/>
 一个指向按名称查找索引对象的名称。
@@ -1498,10 +1498,10 @@ BOOL IsBOF() const;
 
 此表显示了使用不同的组合允许哪些移动操作`IsBOF` /  `IsEOF`。
 
-||MoveFirst、 MoveLast|MovePrev，<br /><br /> 移动 < 0|移动 0|MoveNext，<br /><br /> 移动 > 0|
+||MoveFirst、 MoveLast|MovePrev,<br /><br /> 移动 < 0|移动 0|MoveNext，<br /><br /> 移动 > 0|
 |------|-------------------------|-----------------------------|------------|-----------------------------|
-|`IsBOF`= 非零值，<br /><br /> `IsEOF`=0|Allowed|例外|例外|Allowed|
-|`IsBOF`=0,<br /><br /> `IsEOF`= 非零值|Allowed|Allowed|例外|例外|
+|`IsBOF`=nonzero,<br /><br /> `IsEOF`=0|Allowed|例外|例外|Allowed|
+|`IsBOF`=0,<br /><br /> `IsEOF`=nonzero|Allowed|Allowed|例外|例外|
 |非零值都|例外|例外|例外|例外|
 |这两个 0|Allowed|Allowed|Allowed|Allowed|
 
@@ -1513,8 +1513,8 @@ BOOL IsBOF() const;
 |------|-----------|-----------|
 |`MoveFirst`， `MoveLast`|非零值|非零值|
 |`Move` 0|无更改|无更改|
-|`MovePrev``Move` < 0|非零值|无更改|
-|`MoveNext``Move` > 0|无更改|非零值|
+|`MovePrev`, `Move` < 0|非零值|无更改|
+|`MoveNext`, `Move` > 0|无更改|非零值|
 
 有关相关信息，请参阅主题"BOF、 EOF 属性"DAO 帮助中。
 
@@ -1571,10 +1571,10 @@ BOOL IsEOF() const;
 
 此表显示了使用不同的组合允许哪些移动操作`IsBOF` /  `IsEOF`。
 
-||MoveFirst、 MoveLast|MovePrev，<br /><br /> 移动 < 0|移动 0|MoveNext，<br /><br /> 移动 > 0|
+||MoveFirst、 MoveLast|MovePrev,<br /><br /> 移动 < 0|移动 0|MoveNext，<br /><br /> 移动 > 0|
 |------|-------------------------|-----------------------------|------------|-----------------------------|
-|`IsBOF`= 非零值，<br /><br /> `IsEOF`=0|Allowed|例外|例外|Allowed|
-|`IsBOF`=0,<br /><br /> `IsEOF`= 非零值|Allowed|Allowed|例外|例外|
+|`IsBOF`=nonzero,<br /><br /> `IsEOF`=0|Allowed|例外|例外|Allowed|
+|`IsBOF`=0,<br /><br /> `IsEOF`=nonzero|Allowed|Allowed|例外|例外|
 |非零值都|例外|例外|例外|例外|
 |这两个 0|Allowed|Allowed|Allowed|Allowed|
 
@@ -1586,8 +1586,8 @@ BOOL IsEOF() const;
 |------|-----------|-----------|
 |`MoveFirst`， `MoveLast`|非零值|非零值|
 |`Move` 0|无更改|无更改|
-|`MovePrev``Move` < 0|非零值|无更改|
-|`MoveNext``Move` > 0|无更改|非零值|
+|`MovePrev`, `Move` < 0|非零值|无更改|
+|`MoveNext`, `Move` > 0|无更改|非零值|
 
 有关相关信息，请参阅主题"BOF、 EOF 属性"DAO 帮助中。
 
@@ -1678,7 +1678,7 @@ BOOL IsOpen() const;
 
 ### <a name="remarks"></a>备注
 
-##  <a name="m_bcheckcachefordirtyfields"></a>  Cdaorecordset:: M_bcheckcachefordirtyfields
+##  <a name="m_bcheckcachefordirtyfields"></a>  CDaoRecordset::m_bCheckCacheForDirtyFields
 
 包含一个标志，指示是否缓存的字段自动标记为脏 （已更改） 和 Null。
 
@@ -1908,7 +1908,7 @@ void MovePrev();
 
 有关相关信息，请参阅主题的"移动方法"和"MoveFirst、 MoveLast、 MoveNext、 MovePrevious 方法"DAO 帮助中。
 
-##  <a name="open"></a>  Cdaorecordset:: Open
+##  <a name="open"></a>  CDaoRecordset::Open
 
 必须调用此成员函数以检索记录集的记录。
 
@@ -2006,7 +2006,8 @@ virtual void Open(
 
 第一个版本的`Open`，它使用`lpszSQL`参数，记录的所选基于的条件下表中所示。
 
-|`lpszSQL` 参数的值|取决于选择的记录|示例|
+|
+  `lpszSQL` 参数的值|取决于选择的记录|示例|
 |--------------------------------------|----------------------------------------|-------------|
 |NULL|返回的字符串`GetDefaultSQL`。||
 |以逗号分隔的一个或多个 tabledefs 和/或 querydef 名称列表。|所有列中都表示`DoFieldExchange`。|`"Customer"`|
@@ -2084,7 +2085,7 @@ BOOL Seek(
 以下字符串表达式之一:"<"、"\<="，"="、"> ="，或">"。
 
 *pKey1*<br/>
-一个指向[COleVariant](../../mfc/reference/colevariant-class.md)其值对应于在索引中的第一个字段。 必须的。
+一个指向[COleVariant](../../mfc/reference/colevariant-class.md)其值对应于在索引中的第一个字段。 必需。
 
 *pKey2*<br/>
 一个指向`COleVariant`其值对应于第二个字段在索引中，如果有的话。 默认值为 NULL。
