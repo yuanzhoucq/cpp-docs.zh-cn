@@ -25,16 +25,17 @@ f1_keywords:
 helpviewer_keywords:
 - target_block class
 ms.assetid: 3ce181b4-b94a-4894-bf7b-64fc09821f9f
-ms.openlocfilehash: cb8880b66ebeef12018ef7449c9c383b99ec396c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6033da1347e116b4b68cf719a461a1cf6ff5d04f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656881"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269443"
 ---
 # <a name="targetblock-class"></a>target_block 类
 
-`target_block` 类是抽象基类，它提供基本链接管理功能和针对仅限于目标的块的错误检查。
+
+  `target_block` 类是抽象基类，它提供基本链接管理功能和针对仅限于目标的块的错误检查。
 
 ## <a name="syntax"></a>语法
 
@@ -252,7 +253,7 @@ void register_filter(filter_method const& _Filter);
 
 ### <a name="parameters"></a>参数
 
-*筛选 （_f)*<br/>
+*_Filter*<br/>
 筛选器方法。
 
 ##  <a name="remove_sources"></a> remove_sources
@@ -336,7 +337,7 @@ void sync_send(_Inout_opt_ message<_Source_type>* _PMessage);
 target_block();
 ```
 
-##  <a name="dtor"></a> ~ target_block
+##  <a name="dtor"></a> ~target_block
 
 销毁`target_block`对象。
 

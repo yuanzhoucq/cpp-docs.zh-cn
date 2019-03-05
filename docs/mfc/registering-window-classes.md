@@ -14,12 +14,12 @@ helpviewer_keywords:
 - WinMain method [MFC]
 - registering window classes [MFC]
 ms.assetid: 30994bc4-a362-43da-bcc5-1bf67a3fc929
-ms.openlocfilehash: c1fc6628b2b5e8e6fa657f4cf99be2256377a5b1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7c459b909a60fff2b7aeded9ea8d79a39ced24e4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50540577"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258419"
 ---
 # <a name="registering-window-classes"></a>注册窗口类
 
@@ -38,4 +38,3 @@ Windows 传统编程中的窗口“类”定义了可在其中创建任何数量
 ## <a name="see-also"></a>请参阅
 
 [创建窗口](../mfc/creating-windows.md)
-

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - control views [MFC]
 - view classes [MFC], architecture
 ms.assetid: 8894579a-1436-441e-b985-83711061e495
-ms.openlocfilehash: 7855f152e340b488d64f01dbf290034e1bdbc9b3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 15b120f0354c483480351b8d3abf995334779411
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50647288"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299408"
 ---
 # <a name="view-classes-architecture"></a>视图类（体系结构）
 
@@ -65,10 +65,9 @@ ms.locfileid: "50647288"
 [CListView](../mfc/reference/clistview-class.md)<br/>
 包含 Windows 列表控件的视图 (请参阅[CListCtrl](../mfc/reference/clistctrl-class.md))。 列表控件中的文件资源管理器的方式类似于右窗格中显示的图标和字符串。
 
-[Ctreeview 类](../mfc/reference/ctreeview-class.md)<br/>
+[CTreeView](../mfc/reference/ctreeview-class.md)<br/>
 包含 Windows 树控件的视图 (请参阅[CTreeCtrl](../mfc/reference/ctreectrl-class.md))。 树控件显示的图标和排列在文件资源管理器的方式类似于左窗格中的层次结构中的字符串。
 
 ## <a name="see-also"></a>请参阅
 
 [类概述](../mfc/class-library-overview.md)
-

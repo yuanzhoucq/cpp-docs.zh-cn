@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CDaoTableDef [MFC], m_pDAOTableDef
 - CDaoTableDef [MFC], m_pDatabase
 ms.assetid: 7c5d2254-8475-43c4-8a6c-2d32ead194c9
-ms.openlocfilehash: b2f431b250da4b791c06a629315d59bbc7935802
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 485fe3533916e5e59bc87084f58acfb37368ac32
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579224"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270223"
 ---
 # <a name="cdaotabledef-class"></a>CDaoTableDef 类
 
@@ -315,7 +315,7 @@ void CreateField(CDaoFieldInfo& fieldinfo);
 *lpszName*<br/>
 一个指向指定此字段的名称的字符串表达式。
 
-*n 类型*<br/>
+*nType*<br/>
 指示该字段的数据类型的值。 该设置可以是下列值之一：
 
 |类型|大小（字节）|描述|
@@ -582,9 +582,9 @@ void GetFieldInfo(
 
 - `AFX_DAO_PRIMARY_INFO` （默认值）名称、 类型、 大小属性。 使用此选项的最快的性能。
 
-- `AFX_DAO_SECONDARY_INFO` 主要信息加上： 序号位置，必需的允许为零长度，排序规则顺序外名称、 源字段中，源表
+- `AFX_DAO_SECONDARY_INFO` 主要信息加上：序号位置，必需的允许长度为零，排序规则顺序、 外名称、 源字段、 源表
 
-- `AFX_DAO_ALL_INFO` 主要和次要信息加上： 验证规则，验证文本，默认值
+- `AFX_DAO_ALL_INFO` 主要和次要信息加上：验证规则，验证文本，默认值
 
 *lpszName*<br/>
 一个指向按名称查找字段对象的名称。 名称是唯一的名称字段包含最多 64 个字符的字符串。
@@ -644,9 +644,9 @@ void GetIndexInfo(
 
 - `AFX_DAO_PRIMARY_INFO` 名称字段信息的字段。 使用此选项的最快的性能。
 
-- `AFX_DAO_SECONDARY_INFO` 主要信息加上： 主数据库、 Unique、 聚集、 忽略 null 值，所需，外部
+- `AFX_DAO_SECONDARY_INFO` 主要信息加上：主键、 唯一的聚集索引，忽略 null 值，需要、 外
 
-- `AFX_DAO_ALL_INFO` 主要和次要信息加上： 非重复计数
+- `AFX_DAO_ALL_INFO` 主要和次要信息加上：非重复计数
 
 *lpszName*<br/>
 一个指向按名称查找索引对象的名称。
@@ -877,7 +877,7 @@ void SetConnect(LPCTSTR lpszConnect);
 |HTML 导出|"HTML 导出;"|" `drive`:\\\ *路径*"|
 |Text|"Text";|"驱动器：\\\path"|
 |ODBC|"ODBC;数据库 = `database`;UID =*用户*;PWD =*密码*;DSN = *datasourcename;* LOGINTIMEOUT =*秒;*"（这可能不是所有服务器的完整连接字符串; 它只是一个示例。 它是非常重要，不以参数之间有空格。）|无|
-|Exchange|"被 Exchange;<br /><br /> MAPILEVEL = *folderpath*;<br /><br /> [TABLETYPE = {0 &AMP;#124; 1};]<br /><br /> [配置文件 =*配置文件*;]<br /><br /> [PWD =*密码*;]<br /><br /> [数据库 = `database`;]"|*"驱动器*:\\\ *路径*\\\ *filename*。MDB"|
+|Exchange|"被 Exchange;<br /><br /> MAPILEVEL = *folderpath*;<br /><br /> [TABLETYPE={ 0 &#124; 1 };]<br /><br /> [PROFILE= *profile*;]<br /><br /> [PWD= *password*;]<br /><br /> [DATABASE= `database`;]"|*"驱动器*:\\\ *路径*\\\ *filename*。MDB"|
 
 > [!NOTE]
 >  Btrieve 从 DAO 3.5 起不再受支持。

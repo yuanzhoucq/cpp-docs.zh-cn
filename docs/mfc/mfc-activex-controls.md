@@ -15,12 +15,12 @@ helpviewer_keywords:
 - events [MFC], ActiveX controls
 - MFC ActiveX controls [MFC]
 ms.assetid: c911fb74-3afc-4bf3-a0f5-7922b14d9a1b
-ms.openlocfilehash: 10ad0645e873a1a745168be9b839bbf97a1c05a6
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: a33273c46562e8beba12910702d9ddc1a092575d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52174857"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262605"
 ---
 # <a name="mfc-activex-controls"></a>MFC ActiveX 控件
 
@@ -42,7 +42,7 @@ ActiveX 控件被实现为进程内服务器 （通常是一个小的对象）�
 ![ActiveX 控件容器与控件的交互作用](../mfc/media/vc37221.gif "交互作用的 ActiveX 控件容器与控件") <br/>
 ActiveX 控件容器与有窗口的 ActiveX 控件之间的交互
 
-某些优化 ActiveX 控件的最新信息，请参阅[MFC ActiveX 控件： 优化](../mfc/mfc-activex-controls-optimization.md)。
+某些优化 ActiveX 控件的最新信息，请参阅[MFC ActiveX 控件：优化](../mfc/mfc-activex-controls-optimization.md)。
 
 若要创建 MFC ActiveX 控件，请参阅[创建 ActiveX 控件项目](../mfc/reference/mfc-activex-control-wizard.md)。
 
@@ -62,9 +62,9 @@ ActiveX 控件使用多个编程元素与控件容器和用户高效地交互。
 
 您开发的每个 ActiveX 控件对象从其 MFC 基类继承一组强大的功能`COleControl`。 这些功能包括就地激活，以及自动化逻辑。 `COleControl` 可以向控件对象提供与 MFC 窗口对象，并且能够激发事件相同的功能。 `COleControl` 此外可以提供[无窗口控件](../mfc/providing-windowless-activation.md)，这依赖于其容器有关的某些功能的帮助窗口提供 (鼠标捕获、 键盘焦点时，滚动)，但提供要快得多的显示。
 
-由于控件类派生`COleControl`，它将继承的功能，若要发送，或"fire，"消息，名为事件，向控件容器满足某些条件时。 这些事件用于通知控件容器一些重要的活动时，会在控件中发生情况。 通过将参数附加到该事件，可以将有关事件的其他信息发送到控件容器。 有关 ActiveX 控件事件的详细信息，请参阅文章[MFC ActiveX 控件： 事件](../mfc/mfc-activex-controls-events.md)。
+由于控件类派生`COleControl`，它将继承的功能，若要发送，或"fire，"消息，名为事件，向控件容器满足某些条件时。 这些事件用于通知控件容器一些重要的活动时，会在控件中发生情况。 通过将参数附加到该事件，可以将有关事件的其他信息发送到控件容器。 有关 ActiveX 控件事件的详细信息，请参阅文章[MFC ActiveX 控件：事件](../mfc/mfc-activex-controls-events.md)。
 
-最后一个元素是调度映射，用于公开一组函数 （称为方法） 和控制用户属性 （称为属性）。 属性允许控制容器或控制用户用来处理各种方法中的控件。 用户可以更改控件的外观、 更改该控件的某些值或发出请求的控件，例如访问一个特定的控件保持的数据。 此接口由控件开发人员，并且使用定义**类视图**。 ActiveX 控件方法和属性的详细信息，请参阅文章[MFC ActiveX 控件： 方法](../mfc/mfc-activex-controls-methods.md)并[属性](../mfc/mfc-activex-controls-properties.md)。
+最后一个元素是调度映射，用于公开一组函数 （称为方法） 和控制用户属性 （称为属性）。 属性允许控制容器或控制用户用来处理各种方法中的控件。 用户可以更改控件的外观、 更改该控件的某些值或发出请求的控件，例如访问一个特定的控件保持的数据。 此接口由控件开发人员，并且使用定义**类视图**。 ActiveX 控件方法和属性的详细信息，请参阅文章[MFC ActiveX 控件：方法](../mfc/mfc-activex-controls-methods.md)并[属性](../mfc/mfc-activex-controls-properties.md)。
 
 ##  <a name="_core_interaction_between_controls_with_windows_and_activex_control_containers"></a> 使用 Windows 控件和 ActiveX 控件容器之间的交互
 
@@ -92,7 +92,7 @@ ActiveX 控件容器与 ActiveX 控件之间的通信
 
 序列化数据，有时称为持久性的能力使控件可以将其属性的值写入到持久存储。 从存储读取对象的状态可以重新创建的控件。
 
-请注意，控件不负责获取到存储介质的访问权限。 相反，控件的容器负责为控件提供存储介质中以使用在适当的时间。 序列化的详细信息，请参阅文章[MFC ActiveX 控件： 序列化](../mfc/mfc-activex-controls-serializing.md)。 有关优化序列化的信息，请参阅[优化持久性和初始化](../mfc/optimizing-persistence-and-initialization.md)在 ActiveX 控件： 优化。
+请注意，控件不负责获取到存储介质的访问权限。 相反，控件的容器负责为控件提供存储介质中以使用在适当的时间。 序列化的详细信息，请参阅文章[MFC ActiveX 控件：序列化](../mfc/mfc-activex-controls-serializing.md)。 有关优化序列化的信息，请参阅[优化持久性和初始化](../mfc/optimizing-persistence-and-initialization.md)ActiveX 控件中：优化。
 
 ##  <a name="_core_installing_activex_control_classes_and_tools"></a> 安装 ActiveX 控件类和工具
 
@@ -116,7 +116,7 @@ ActiveX 控件容器与 ActiveX 控件之间的通信
 
    包含开发与 MFC 的 ActiveX 控件所需的库
 
-也有适用于 MFC ActiveX 控件示例。 有关这些示例的详细信息，请参阅[控件示例： MFC-Based ActiveX 控件](../visual-cpp-samples.md)
+也有适用于 MFC ActiveX 控件示例。 有关这些示例的详细信息，请参阅[控件示例：基于 MFC 的 ActiveX 控件](../visual-cpp-samples.md)
 
 ## <a name="see-also"></a>请参阅
 

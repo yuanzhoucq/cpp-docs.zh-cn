@@ -13,16 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - single_link_registry class
 ms.assetid: 09540a4e-c34e-4ff9-af49-21b8612b6ab3
-ms.openlocfilehash: 4f706b4551d71c77e136e4d65d2d6a3183293d8d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 20032f393964c8919d2c1a49ec8545400cd9e392
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50454491"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290126"
 ---
 # <a name="singlelinkregistry-class"></a>single_link_registry 类
 
-`single_link_registry` 对象是仅管理单个源块或目标块的 `network_link_registry`。
+
+  `single_link_registry` 对象是仅管理单个源块或目标块的 `network_link_registry`。
 
 ## <a name="syntax"></a>语法
 
@@ -33,7 +34,7 @@ class single_link_registry : public network_link_registry<_Block>;
 
 #### <a name="parameters"></a>参数
 
-*（_b)*<br/>
+*_Block*<br/>
 块数据类型存储在`single_link_registry`对象。
 
 ## <a name="members"></a>成员
@@ -51,7 +52,7 @@ class single_link_registry : public network_link_registry<_Block>;
 |----------|-----------------|
 |[add](#add)|将添加一个指向`single_link_registry`对象。 (重写[network_link_registry:: add](network-link-registry-class.md#add)。)|
 |[begin](#begin)|返回一个迭代器中的第一个元素到`single_link_registry`对象。 (重写[network_link_registry:: begin](network-link-registry-class.md#begin)。)|
-|[包含](#contains)|搜索`single_link_registry`指定块的对象。 (重写[network_link_registry:: contains](network-link-registry-class.md#contains)。)|
+|[contains](#contains)|搜索`single_link_registry`指定块的对象。 (重写[network_link_registry:: contains](network-link-registry-class.md#contains)。)|
 |[count](#count)|中的项的计数`single_link_registry`对象。 (重写[network_link_registry:: count](network-link-registry-class.md#count)。)|
 |[remove](#remove)|移除从链接`single_link_registry`对象。 (重写[network_link_registry:: remove](network-link-registry-class.md#remove)。)|
 
@@ -67,7 +68,7 @@ class single_link_registry : public network_link_registry<_Block>;
 
 **命名空间：** 并发
 
-##  <a name="add"></a> 添加
+##  <a name="add"></a> add
 
 将添加一个指向`single_link_registry`对象。
 
@@ -77,14 +78,14 @@ virtual void add(_EType _Link);
 
 ### <a name="parameters"></a>参数
 
-*链接 （_l)*<br/>
+*_Link*<br/>
 指向要添加的块的指针。
 
 ### <a name="remarks"></a>备注
 
 该方法将引发[invalid_link_target](invalid-link-target-class.md)异常，如果此注册表中已存在一个链接。
 
-##  <a name="begin"></a> 开始
+##  <a name="begin"></a> begin
 
 返回一个迭代器中的第一个元素到`single_link_registry`对象。
 
@@ -110,14 +111,14 @@ virtual bool contains(_EType _Link);
 
 ### <a name="parameters"></a>参数
 
-*链接 （_l)*<br/>
+*_Link*<br/>
 指向要在其中搜索中的块的指针`single_link_registry`对象。
 
 ### <a name="return-value"></a>返回值
 
 **true**找到了指定链接，如果**false**否则为。
 
-##  <a name="count"></a> 计数
+##  <a name="count"></a> count
 
 中的项的计数`single_link_registry`对象。
 
@@ -139,7 +140,7 @@ virtual bool remove(_EType _Link);
 
 ### <a name="parameters"></a>参数
 
-*链接 （_l)*<br/>
+*_Link*<br/>
 指向块被删除，如果找到。
 
 ### <a name="return-value"></a>返回值
@@ -154,7 +155,7 @@ virtual bool remove(_EType _Link);
 single_link_registry();
 ```
 
-##  <a name="dtor"></a> ~ single_link_registry
+##  <a name="dtor"></a> ~single_link_registry
 
 销毁`single_link_registry`对象。
 

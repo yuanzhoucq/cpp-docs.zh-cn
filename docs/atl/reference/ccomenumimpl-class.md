@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComEnumImpl class
 ms.assetid: cc0d8e76-e608-46db-87cd-4c7161fe32d2
-ms.openlocfilehash: 2104d98cbc068eb5d8f1408cdda0898fd55c9473
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ccd083f3bfd9ae694c97e466fcb40b348fec0c27
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467140"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273763"
 ---
 # <a name="ccomenumimpl-class"></a>CComEnumImpl 类
 
@@ -58,7 +58,7 @@ COM 枚举器接口。 请参阅[IEnumString](/windows/desktop/api/objidl/nn-obj
 |名称|描述|
 |----------|-----------------|
 |[CComEnumImpl::CComEnumImpl](#ccomenumimpl)|构造函数。|
-|[CComEnumImpl:: ~ CComEnumImpl](#dtor)|析构函数。|
+|[CComEnumImpl::~CComEnumImpl](#dtor)|析构函数。|
 
 ### <a name="public-methods"></a>公共方法
 

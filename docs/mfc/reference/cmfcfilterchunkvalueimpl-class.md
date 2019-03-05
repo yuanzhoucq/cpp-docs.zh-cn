@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CMFCFilterChunkValueImpl [MFC], SetTextValue
 - CMFCFilterChunkValueImpl [MFC], SetChunk
 ms.assetid: 3c833f23-5b88-4d08-9e09-ca6a8aec88bf
-ms.openlocfilehash: a59cf087a52bd7b6a2eaa00d3091047e93e14d4d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b883d442342dd9fbbd074d9f8fcab76f81ef9864
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50666838"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264438"
 ---
 # <a name="cmfcfilterchunkvalueimpl-class"></a>CMFCFilterChunkValueImpl 类
 
@@ -69,7 +69,7 @@ class CMFCFilterChunkValueImpl : public ATL::IFilterChunkValue;
 
 |名称|描述|
 |----------|-----------------|
-|[CMFCFilterChunkValueImpl:: ~ CMFCFilterChunkValueImpl](#_dtorcmfcfilterchunkvalueimpl)|Destructs 对象。|
+|[CMFCFilterChunkValueImpl::~CMFCFilterChunkValueImpl](#_dtorcmfcfilterchunkvalueimpl)|Destructs 对象。|
 |[CMFCFilterChunkValueImpl::CMFCFilterChunkValueImpl](#cmfcfilterchunkvalueimpl)|构造对象。|
 
 ### <a name="public-methods"></a>公共方法
@@ -109,11 +109,11 @@ class CMFCFilterChunkValueImpl : public ATL::IFilterChunkValue;
 
 CMFCFilterChunkValueImpl 区块;
 
-hr = 区块。SetBoolValue(PKEY_IsAttachment, true);
+hr = chunk.SetBoolValue(PKEY_IsAttachment, true);
 
 或
 
-hr = 区块。SetFileTimeValue (PKEY_ItemDate，ftLastModified);
+hr = chunk.SetFileTimeValue(PKEY_ItemDate, ftLastModified);
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -145,7 +145,7 @@ CMFCFilterChunkValueImpl();
 
 ### <a name="remarks"></a>备注
 
-##  <a name="_dtorcmfcfilterchunkvalueimpl"></a>  CMFCFilterChunkValueImpl:: ~ CMFCFilterChunkValueImpl
+##  <a name="_dtorcmfcfilterchunkvalueimpl"></a>  CMFCFilterChunkValueImpl::~CMFCFilterChunkValueImpl
 
 Destructs 对象。
 
@@ -318,7 +318,7 @@ HRESULT SetBoolValue(
 
 ### <a name="parameters"></a>参数
 
-*主键*<br/>
+*pkey*<br/>
 指定一个属性键。
 
 *bVal*<br/>
@@ -361,7 +361,7 @@ HRESULT SetChunk(
 
 ### <a name="parameters"></a>参数
 
-*主键*<br/>
+*pkey*<br/>
 指定一个属性键。
 
 *chunkType*<br/>
@@ -402,7 +402,7 @@ HRESULT SetDwordValue(
 
 ### <a name="parameters"></a>参数
 
-*主键*<br/>
+*pkey*<br/>
 指定一个属性键。
 
 *dwVal*<br/>
@@ -446,7 +446,7 @@ HRESULT SetFileTimeValue(
 
 ### <a name="parameters"></a>参数
 
-*主键*<br/>
+*pkey*<br/>
 指定一个属性键。
 
 *dtVal*<br/>
@@ -490,7 +490,7 @@ HRESULT SetInt64Value(
 
 ### <a name="parameters"></a>参数
 
-*主键*<br/>
+*pkey*<br/>
 指定一个属性键。
 
 *nVal*<br/>
@@ -534,7 +534,7 @@ HRESULT SetIntValue(
 
 ### <a name="parameters"></a>参数
 
-*主键*<br/>
+*pkey*<br/>
 指定一个属性键。
 
 *nVal*<br/>
@@ -578,7 +578,7 @@ HRESULT SetLongValue(
 
 ### <a name="parameters"></a>参数
 
-*主键*<br/>
+*pkey*<br/>
 指定一个属性键。
 
 *lVal*<br/>
@@ -622,7 +622,7 @@ HRESULT SetSystemTimeValue(
 
 ### <a name="parameters"></a>参数
 
-*主键*<br/>
+*pkey*<br/>
 指定一个属性键。
 
 *systemTime*<br/>
@@ -666,7 +666,7 @@ HRESULT SetTextValue(
 
 ### <a name="parameters"></a>参数
 
-*主键*<br/>
+*pkey*<br/>
 指定一个属性键。
 
 *pszValue*<br/>

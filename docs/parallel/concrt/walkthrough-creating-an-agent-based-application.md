@@ -5,12 +5,12 @@ helpviewer_keywords:
 - asynchronous agents, creating
 - agent class, example
 ms.assetid: 730f42ce-6d58-4753-b948-fd9c9ef2ce6c
-ms.openlocfilehash: 1d5e7ed085481b714423760cebf2984084626645
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1d55c9879a3dd90bb4a40b61a3bf958dbe960bc3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509339"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290054"
 ---
 # <a name="walkthrough-creating-an-agent-based-application"></a>演练：创建基于代理的应用程序
 
@@ -180,7 +180,7 @@ Adler-32 sum is fefb0d75
 
 ## <a name="next-steps"></a>后续步骤
 
-基于代理的应用程序的另一个示例，请参阅[演练： 使用 join 避免死锁](../../parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md)。
+基于代理的应用程序的另一个示例，请参阅[演练：使用 join 避免死锁](../../parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md)。
 
 ## <a name="see-also"></a>请参阅
 
@@ -188,5 +188,4 @@ Adler-32 sum is fefb0d75
 [异步消息块](../../parallel/concrt/asynchronous-message-blocks.md)<br/>
 [消息传递函数](../../parallel/concrt/message-passing-functions.md)<br/>
 [同步数据结构](../../parallel/concrt/synchronization-data-structures.md)<br/>
-[演练：使用 join 避免死锁](../../parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md)
-
+[演练：使用 Join 防止死锁](../../parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md)

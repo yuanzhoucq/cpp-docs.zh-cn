@@ -7,12 +7,12 @@ helpviewer_keywords:
 - applications [MFC], forms-based
 - forms-based applications [MFC]
 ms.assetid: 048d2f7d-b60d-4386-ad8e-71d49af9c05e
-ms.openlocfilehash: d95a5ddd5b8504bedc8136ae553b62b3ee6740f7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6810a6c7fce91865a92d048129da29305e22abc1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50518594"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291244"
 ---
 # <a name="creating-a-forms-based-mfc-application"></a>创建基于窗体的 MFC 应用程序
 
@@ -63,4 +63,3 @@ SDI、 MDI 和多个顶级文档应用程序是基于所有窗体，并且使用
 [窗体视图](../../mfc/form-views-mfc.md)<br/>
 [创建文件资源管理器样式的 MFC 应用程序](../../mfc/reference/creating-a-file-explorer-style-mfc-application.md)<br/>
 [创建 Web 浏览器样式的 MFC 应用程序](../../mfc/reference/creating-a-web-browser-style-mfc-application.md)
-

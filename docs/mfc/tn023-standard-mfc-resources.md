@@ -1,5 +1,5 @@
 ---
-title: TN023：标准 MFC 资源
+title: TN023:标准 MFC 资源
 ms.date: 11/04/2016
 f1_keywords:
 - vc.mfc.resources
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - TN023
 - standard resources
 ms.assetid: 60af8415-c576-4c2f-a711-ca5da0b9a1f2
-ms.openlocfilehash: 04789ba85a9f7c193a88ba1a0d097b3671808e9b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b4edc00f77152b8d677f3113e0ed6386569b0988
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559908"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277672"
 ---
-# <a name="tn023-standard-mfc-resources"></a>TN023：标准 MFC 资源
+# <a name="tn023-standard-mfc-resources"></a>TN023:标准 MFC 资源
 
 此注释将介绍 MFC 库随附的和需要的标准资源。
 
@@ -25,7 +25,7 @@ MFC 提供了可在应用程序中使用的两种预定义资源：剪贴画资�
 
 剪贴画资源是框架并不依赖的、但您可能希望添加到应用程序的用户界面的附加资源。 以下剪贴画资源包含在 MFC 常规示例[剪贴画](../visual-cpp-samples.md):
 
-- Common.rc：包含以下内容的单个资源文件：
+- Common.rc:包含单个文件的资源：
 
    - 代表各种业务和数据处理任务的图标的大型集合。
 
@@ -35,23 +35,23 @@ MFC 提供了可在应用程序中使用的两种预定义资源：剪贴画资�
 
    - Commdlg.dll 使用的位图和图标资源。
 
-- Indicate.rc：包含状态栏键状态指示符（如用于大写锁定的“CAP”）的字符串资源。
+- Indicate.rc:包含状态栏键状态指示符，如用于大写锁定的"CAP"的字符串资源。
 
-- Prompts.rc： 包含 ID_FILE_NEW 菜单提示字符串资源的每个预定义的命令，如"创建新的文档"。
+- Prompts.rc:包含 ID_FILE_NEW 菜单提示字符串资源的每个预定义的命令，如"创建新的文档"。
 
-- Commdlg.rc：包含标准 COMMDLG 对话框模板的与 Visual C++ 兼容的 .rc 文件。
+- Commdlg.rc:包含标准 COMMDLG 对话框模板的 Visual c + + 兼容的.rc 文件。
 
 标准框架资源是带有框架所依赖的由 AFX 定义的 ID 的资源，用于内部实现。 您很少需要更改这些 AFX 定义的资源。 如果您确实要更改，则应遵循本主题后面所述的过程。
 
 以下框架资源包含在 MFC\INCLUDE 目录中：
 
-- Afxres.rc：框架使用的公共资源。
+- Afxres.rc:由框架使用的公共资源。
 
-- Afxprint.rc：专用于打印的资源。
+- Afxprint.rc:特定于打印的资源。
 
-- Afxolecl.rc：特定于的 OLE 客户端应用程序的资源。
+- Afxolecl.rc:特定于 OLE 客户端应用程序的资源。
 
-- Afxolev.rc：特定于完整的 OLE 服务器应用程序的资源。
+- Afxolev.rc:特定于完整的 OLE 服务器应用程序的资源。
 
 ## <a name="using-clip-art-resources"></a>使用剪贴画资源
 
@@ -88,7 +88,7 @@ MFC 提供了可在应用程序中使用的两种预定义资源：剪贴画资�
 
 1. 在 Visual C++ 中打开资源文件。
 
-1. 使用“资源”->“设置包含文件”命令，为要自定义的标准 .rc 文件删除 `#include`。 例如，若要自定义打印预览工具栏，删除 `#include "afxprint.rc"` 行。
+1. 使用“资源”-&gt;“设置包含文件”命令，为要自定义的标准 .rc 文件删除 `#include`。 例如，若要自定义打印预览工具栏，删除 `#include "afxprint.rc"` 行。
 
 1. 在 MFC\INCLUDE 中打开相应的标准资源文件。 根据本主题前面的示例，相应的文件是 MFC\Include\Aafxprint.rc
 
@@ -103,4 +103,3 @@ MFC 提供了可在应用程序中使用的两种预定义资源：剪贴画资�
 
 [按编号列出的技术说明](../mfc/technical-notes-by-number.md)<br/>
 [按类别列出的技术说明](../mfc/technical-notes-by-category.md)
-

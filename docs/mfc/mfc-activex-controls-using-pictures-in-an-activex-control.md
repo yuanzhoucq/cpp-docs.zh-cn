@@ -10,12 +10,12 @@ helpviewer_keywords:
 - OnResetState method [MFC]
 - CLSID_CPicturePropPage [MFC]
 ms.assetid: 2e49735c-21b9-4442-bb3d-c82ef258eec9
-ms.openlocfilehash: fe239f864f4b7730d28372ee3fc9d298131d28d9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 86e9bd220d06e714030f7d44888b210ba35fd345
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462096"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264555"
 ---
 # <a name="mfc-activex-controls-using-pictures-in-an-activex-control"></a>MFC ActiveX 控件：在 ActiveX 控件中使用图片
 
@@ -31,7 +31,7 @@ ms.locfileid: "50462096"
 
 图片类型是部分 ActiveX 控件常见的一组类型中的一种。 图片类型处理元文件、位图或图标，并允许用户指定要在 ActiveX 控件中显示的图片。 自定义图片属性使用图片对象以及允许控制用户访问图片属性的 Get/Set 函数实现。 控制用户可通过常用图片属性页访问自定义图片属性。
 
-除标准图片类型外，还提供字体和颜色类型。 有关如何在 ActiveX 控件中使用标准字体类型的详细信息，请参阅 [MFC ActiveX 控件：使用字体](../mfc/mfc-activex-controls-using-fonts.md)一文。
+除标准图片类型外，还提供字体和颜色类型。 在 ActiveX 控件中使用标准字体类型的详细信息，请参阅文章[MFC ActiveX 控件：使用字体](../mfc/mfc-activex-controls-using-fonts.md)。
 
 ActiveX 控件类提供了若干组件，可用于在控件内实现图片属性。 这些组件包括：
 
@@ -41,11 +41,11 @@ ActiveX 控件类提供了若干组件，可用于在控件内实现图片属性
 
 - 支持 **LPPICTUREDISP**类型的属性，并通过 Get/Set 函数实现。
 
-   通过“类视图”，可以快速添加一个或多个支持图片类型的自定义属性。 有关如何通过“类视图”添加 ActiveX 控件属性的详细信息，请参阅 [MFC ActiveX 控件：属性](../mfc/mfc-activex-controls-properties.md)一文。
+   通过“类视图”，可以快速添加一个或多个支持图片类型的自定义属性。 添加 ActiveX 控件属性的使用类视图的详细信息，请参阅文章[MFC ActiveX 控件：属性](../mfc/mfc-activex-controls-properties.md)。
 
 - 属性页用于操作控件的一个或多个图片属性。
 
-   此属性页是 ActiveX 控件可以使用的一组常用属性页的一部分。 有关 ActiveX 控件属性页的详细信息，请参阅 [MFC ActiveX 控件：使用常用属性页](../mfc/mfc-activex-controls-using-stock-property-pages.md)一文
+   此属性页是 ActiveX 控件可以使用的一组常用属性页的一部分。 ActiveX 控件属性页的详细信息，请参阅文章[MFC ActiveX 控件：使用常用属性页](../mfc/mfc-activex-controls-using-stock-property-pages.md)
 
 ##  <a name="_core_implementing_a_custom_picture_property_in_your_activex_control"></a> 在 ActiveX 控件中实现自定义图片属性
 
@@ -152,4 +152,3 @@ ActiveX 控件类提供了若干组件，可用于在控件内实现图片属性
 [MFC ActiveX 控件](../mfc/mfc-activex-controls.md)<br/>
 [MFC ActiveX 控件：使用字体](../mfc/mfc-activex-controls-using-fonts.md)<br/>
 [MFC ActiveX 控件：属性页](../mfc/mfc-activex-controls-property-pages.md)
-

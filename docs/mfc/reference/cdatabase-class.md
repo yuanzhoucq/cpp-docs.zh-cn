@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CDatabase [MFC], SetQueryTimeout
 - CDatabase [MFC], m_hdbc
 ms.assetid: bd0de70a-e3c3-4441-bcaa-bbf434426ca8
-ms.openlocfilehash: d152153ac4e379f4159c4ade5dfc044288f69720
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0e523b2a145254cd9b7adf2b066605a679349f6c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50541396"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273437"
 ---
 # <a name="cdatabase-class"></a>CDatabase 类
 
@@ -88,14 +88,14 @@ class CDatabase : public CObject
 |[CDatabase::CommitTrans](#committrans)|完成开始的事务`BeginTrans`。 在事务中更改数据源的命令都将执行。|
 |[CDatabase::ExecuteSQL](#executesql)|执行 SQL 语句。 返回没有数据记录。|
 |[CDatabase::GetBookmarkPersistence](#getbookmarkpersistence)|标识通过该书签保存记录集对象的操作。|
-|[Cdatabase:: Getconnect](#getconnect)|返回用于连接的 ODBC 连接字符串`CDatabase`到数据源的对象。|
+|[CDatabase::GetConnect](#getconnect)|返回用于连接的 ODBC 连接字符串`CDatabase`到数据源的对象。|
 |[CDatabase::GetCursorCommitBehavior](#getcursorcommitbehavior)|标识提交打开记录集对象上的事务的效果。|
 |[CDatabase::GetCursorRollbackBehavior](#getcursorrollbackbehavior)|标识在打开记录集对象上回滚事务的效果。|
 |[CDatabase::GetDatabaseName](#getdatabasename)|返回当前所用的数据库的名称。|
 |[CDatabase::IsOpen](#isopen)|返回非零值如果`CDatabase`对象当前连接到数据源。|
 |[CDatabase::OnSetOptions](#onsetoptions)|由框架调用以设置标准连接选项。 默认实现将设置查询超时值。 可以通过调用建立这些选项提前`SetQueryTimeout`。|
 |[CDatabase::Open](#open)|建立与数据源 （通过 ODBC 驱动程序） 的连接。|
-|[不同](#openex)|建立与数据源 （通过 ODBC 驱动程序） 的连接。|
+|[CDatabase::OpenEx](#openex)|建立与数据源 （通过 ODBC 驱动程序） 的连接。|
 |[CDatabase::Rollback](#rollback)|反转当前事务期间所做的更改。 数据源返回到以前的状态，如中所定义`BeginTrans`调用时，不变。|
 |[CDatabase::SetLoginTimeout](#setlogintimeout)|设置数据源连接尝试后将超时时间的秒数。|
 |[CDatabase::SetQueryTimeout](#setquerytimeout)|集多少秒后的数据库查询操作将超时。影响所有后续的记录集`Open`， `AddNew`， `Edit`，和`Delete`调用。|
@@ -111,11 +111,11 @@ class CDatabase : public CObject
 数据源是托管的某些数据库管理系统 (DBMS) 数据的特定实例。 示例包括 Microsoft SQL Server、 Microsoft Access、 Borland dBASE 和 xBASE。 可以有一个或多个`CDatabase`活动一次在应用程序中的对象。
 
 > [!NOTE]
->  如果您正在使用的数据访问对象 (DAO) 类而不是开放式数据库连接 (ODBC) 类，使用类[CDaoDatabase](../../mfc/reference/cdaodatabase-class.md)相反。 有关详细信息，请参阅文章[概述： 数据库编程](../../data/data-access-programming-mfc-atl.md)。
+>  如果您正在使用的数据访问对象 (DAO) 类而不是开放式数据库连接 (ODBC) 类，使用类[CDaoDatabase](../../mfc/reference/cdaodatabase-class.md)相反。 有关详细信息，请参阅文章[概述：数据库编程](../../data/data-access-programming-mfc-atl.md)。
 
 若要使用`CDatabase`，构造`CDatabase`对象，并调用其`OpenEx`成员函数。 这将打开一个连接。 然后构造时`CRecordset`在连接的数据源上的对象记录集构造函数将指针传递到你`CDatabase`对象。 当你完成使用的连接时，请调用`Close`成员函数，并销毁`CDatabase`对象。 `Close` 关闭以前关闭的任何记录集。
 
-有关详细信息`CDatabase`，请参阅文章[数据源 (ODBC)](../../data/odbc/data-source-odbc.md)并[概述： 数据库编程](../../data/data-access-programming-mfc-atl.md)。
+有关详细信息`CDatabase`，请参阅文章[数据源 (ODBC)](../../data/odbc/data-source-odbc.md)和[概述：数据库编程](../../data/data-access-programming-mfc-atl.md)。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -146,7 +146,7 @@ BOOL BeginTrans();
 > [!CAUTION]
 >  具体取决于 ODBC 驱动程序，打开之前调用的记录集`BeginTrans`调用时可能会导致问题`Rollback`。 应检查正在使用的特定驱动程序。 例如，当使用 Microsoft ODBC Desktop Driver Pack 3.0 中包含的 Microsoft Access 驱动程序，必须考虑应开始在已打开的游标的任何数据库上事务的 Jet 数据库引擎的要求。 在 MFC 数据库类中，打开的游标意味着打开`CRecordset`对象。 有关详细信息，请参阅[技术注意 68](../../mfc/tn068-performing-transactions-with-the-microsoft-access-7-odbc-driver.md)。
 
-`BeginTrans` 在服务器上，具体取决于请求的并发性和数据源的功能也可能会锁定数据记录。 有关锁定的数据的信息，请参阅文章[记录集： 锁定记录 (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)。
+`BeginTrans` 在服务器上，具体取决于请求的并发性和数据源的功能也可能会锁定数据记录。 有关锁定的数据的信息，请参阅文章[记录集：锁定记录 (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)。
 
 一文中介绍了用户定义的事务[事务 (ODBC)](../../data/odbc/transaction-odbc.md)。
 
@@ -161,7 +161,7 @@ BOOL BeginTrans();
 
 ### <a name="example"></a>示例
 
-  请参阅文章[事务： 在记录集 (ODBC) 执行的事务](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)。
+  请参阅文章[事务：在记录集 (ODBC) 执行事务](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)。
 
 ##  <a name="bindparameters"></a>  CDatabase::BindParameters
 
@@ -288,7 +288,7 @@ BOOL CommitTrans();
 
 ### <a name="example"></a>示例
 
-  请参阅文章[事务： 在记录集 (ODBC) 执行的事务](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)。
+  请参阅文章[事务：在记录集 (ODBC) 执行事务](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)。
 
 ##  <a name="executesql"></a>  CDatabase::ExecuteSQL
 
@@ -341,9 +341,9 @@ DWORD GetBookmarkPersistence() const;
 |SQL_BP_UPDATE|行的书签将变为无效后`Update`该行上的操作。|
 |SQL_BP_OTHER_HSTMT|与某个记录集对象关联的书签在另一个记录集上有效。|
 
-有关此返回值的详细信息，请参阅 ODBC API 函数`SQLGetInfo`Windows SDK 中。 有关书签的详细信息，请参阅文章[记录集： 书签和绝对位置 (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md)。
+有关此返回值的详细信息，请参阅 ODBC API 函数`SQLGetInfo`Windows SDK 中。 有关书签的详细信息，请参阅文章[记录集：书签和绝对位置 (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md)。
 
-##  <a name="getconnect"></a>  Cdatabase:: Getconnect
+##  <a name="getconnect"></a>  CDatabase::GetConnect
 
 调用此成员函数以检索到调用过程中使用的连接字符串`OpenEx`或`Open`连接`CDatabase`到数据源的对象。
 
@@ -600,7 +600,7 @@ BOOL Rollback();
 
 ### <a name="example"></a>示例
 
-  请参阅文章[事务： 在记录集 (ODBC) 执行的事务](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)。
+  请参阅文章[事务：在记录集 (ODBC) 执行事务](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)。
 
 ##  <a name="setlogintimeout"></a>  CDatabase::SetLoginTimeout
 

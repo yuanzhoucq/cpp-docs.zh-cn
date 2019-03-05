@@ -80,12 +80,12 @@ helpviewer_keywords:
 - CMFCButton [MFC], m_nAlignStyle
 - CMFCButton [MFC], m_nFlatStyle
 ms.assetid: 4b32f57c-7a53-4734-afb9-d47e3359f62e
-ms.openlocfilehash: a82793ce29765bf01e8c52c94257bd3150187505
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 804c3219356d36f6a0a733937c5e354822a4be83
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178455"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269807"
 ---
 # <a name="cmfcbutton-class"></a>CMFCButton 类
 
@@ -511,7 +511,7 @@ AlignStyle m_nAlignStyle;
 
 `CMFCButton`构造函数初始化到 ALIGN_CENTER 此成员。
 
-##  <a name="m_bWasDblClk"></a>  CMFCButton::m_bWasDblClk](#m_bWasDblClk) |
+##  <a name="m_bWasDblClk"></a>  CMFCButton::m_bWasDblClk](#m_bWasDblClk)|
 
 指示最后一个单击事件是一次双击。 |
 

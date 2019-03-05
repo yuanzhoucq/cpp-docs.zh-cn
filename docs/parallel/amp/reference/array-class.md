@@ -22,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - array class
 ms.assetid: 0832b6c1-40f0-421d-9104-6b1baa0c63a7
-ms.openlocfilehash: 93ef654bb71a342a6215ce5cd60786f36cadedf7
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: 16d18d23c370a8a603ab6150fcee18455ae47c48
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657547"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259017"
 ---
 # <a name="array-class"></a>array 类
 
@@ -121,9 +121,9 @@ friend class array;
 
 **标头：** amp.h
 
-**Namespace:** 并发
+**命名空间：** 并发
 
-##  <a name="dtor"></a> ~ 数组
+##  <a name="dtor"></a> ~array
 
 销毁`array`对象。
 
@@ -475,7 +475,7 @@ void copy_to(
 __declspec(property(get= get_cpu_access_type)) access_type cpu_access_type;
 ```
 
-##  <a name="data"></a> 数据
+##  <a name="data"></a> data
 
 返回一个指针指向原始数据的`array`。
 
@@ -543,7 +543,7 @@ Concurrency::extent<_Rank> get_extent() const restrict(amp,cpu);
 
 `extent`对象的`array`。
 
-##  <a name="operator_vec"></a> 运算符 std:: vector&lt;value_type&gt;
+##  <a name="operator_vec"></a> operator std::vector&lt;value_type&gt;
 
 使用`copy(*this, vector)`将隐式转换为 std:: vector 对象的数组。
 
@@ -560,7 +560,7 @@ operator std::vector<value_type>() const restrict(cpu);
 
 类型的对象`vector<T>`，其中包含数组中包含的数据的副本。
 
-##  <a name="operator_call"></a> operator （)
+##  <a name="operator_call"></a> operator()
 
 返回由参数指定的元素值。
 
@@ -603,7 +603,7 @@ typename details::_Projection_result_type<value_type,_Rank>::_Const_result_type 
 
 由参数指定的元素值。
 
-##  <a name="operator_at"></a> operator]
+##  <a name="operator_at"></a> operator[]
 
 返回位于指定索引处的元素。
 
@@ -778,7 +778,7 @@ array_view<const value_type,3> section(
 *_Ext*<br/>
 [程度](extent-class.md)指定区域范围的对象。 原始是 0。
 
-*上 _Idx*<br/>
+*_Idx*<br/>
 [索引](index-class.md)对象，它指定原点的位置。 子节是范围的其余部分。
 
 *_I0*<br/>

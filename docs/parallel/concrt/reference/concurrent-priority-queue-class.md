@@ -15,16 +15,17 @@ f1_keywords:
 helpviewer_keywords:
 - concurrent_priority_queue class
 ms.assetid: 3e740381-0f4e-41fc-8b66-ad0bb55f17a3
-ms.openlocfilehash: a75d413874056d57f0d474f44e514cf93f273626
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5804675ffdaf6de2e73327103398316566b41627
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492272"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304777"
 ---
 # <a name="concurrentpriorityqueue-class"></a>concurrent_priority_queue 类
 
-`concurrent_priority_queue` 类是允许多个线程并发推送和弹出项的容器。 项按优先级顺序弹出，其中优先级由作为模板自变量提供的涵子确定。
+
+  `concurrent_priority_queue` 类是允许多个线程并发推送和弹出项的容器。 项按优先级顺序弹出，其中优先级由作为模板参数提供的涵子确定。
 
 ## <a name="syntax"></a>语法
 
@@ -41,7 +42,7 @@ template <typename T,
 *T*<br/>
 要存储在优先级队列中的元素的数据类型。
 
-*_C*<br/>
+*_Compare*<br/>
 可将两个元素的值作为排序键进行比较以确定其在优先级队列中相对顺序的函数对象的类型。 此参数为可选自变量，默认值是二元谓词 `less<T>`。
 
 *_Ax*<br/>
@@ -150,12 +151,13 @@ concurrent_priority_queue(
 要用于此对象的分配器类。
 
 *_Init_capacity*<br/>
-`concurrent_priority_queue` 对象的初始容量。
 
-*（_b)*<br/>
+  `concurrent_priority_queue` 对象的初始容量。
+
+*_Begin*<br/>
 要复制的范围元素中的第一个元素的位置。
 
-*（_e)*<br/>
+*_End*<br/>
 要复制的元素范围以外的第一个元素的位置。
 
 *_Src*<br/>
@@ -175,7 +177,7 @@ concurrent_priority_queue(
 
 第六个和第七个构造函数指定的优先级队列移动`_Src`。
 
-##  <a name="empty"></a> 为空
+##  <a name="empty"></a> empty
 
 测试在调用此方法时并发优先级队列是否为空。 此方法是并发安全的。
 
@@ -218,7 +220,7 @@ concurrent_priority_queue& operator= (concurrent_priority_queue&& _Src);
 
 对此引用`concurrent_priority_queue`对象。
 
-##  <a name="push"></a> 推送
+##  <a name="push"></a> push
 
 在并发优先级队列中添加一个元素。 此方法是并发安全的。
 
@@ -249,7 +251,7 @@ size_type size() const;
 
 保证返回的大小将由对函数的调用添加的所有元素都包含`push`。 但是，它可能不反映等待并发操作的结果。
 
-##  <a name="swap"></a> 交换
+##  <a name="swap"></a> swap
 
 交换两个并发优先级队列中的内容。 此方法不是并发安全的。
 
@@ -259,7 +261,7 @@ void swap(concurrent_priority_queue& _Queue);
 
 ### <a name="parameters"></a>参数
 
-*（_q)*<br/>
+*_Queue*<br/>
 `concurrent_priority_queue`对象要与其交换内容。
 
 ##  <a name="try_pop"></a> try_pop
@@ -283,4 +285,3 @@ bool try_pop(reference _Elem);
 
 [并发命名空间](concurrency-namespace.md)<br/>
 [并行容器和对象](../../../parallel/concrt/parallel-containers-and-objects.md)
-

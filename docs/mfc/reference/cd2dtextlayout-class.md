@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CD2DTextLayout [MFC], SetLocaleName
 - CD2DTextLayout [MFC], m_pTextLayout
 ms.assetid: 724bd13c-f2ef-4e55-a775-8cb04b7b7908
-ms.openlocfilehash: 378c96622144a4acac27785cef844f0c1d21b98b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aa51b050543b6a027e354afa18b5e9c002c6bca1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630940"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283964"
 ---
 # <a name="cd2dtextlayout-class"></a>CD2DTextLayout 类
 
@@ -52,7 +52,7 @@ class CD2DTextLayout : public CD2DResource;
 |名称|描述|
 |----------|-----------------|
 |[CD2DTextLayout::CD2DTextLayout](#cd2dtextlayout)|构造一个 CD2DTextLayout 对象。|
-|[CD2DTextLayout:: ~ CD2DTextLayout](#cd2dtextlayout__~cd2dtextlayout)|析构函数。 当 D2D 文本布局对象被销毁时调用。|
+|[CD2DTextLayout::~CD2DTextLayout](#cd2dtextlayout__~cd2dtextlayout)|析构函数。 当 D2D 文本布局对象被销毁时调用。|
 
 ### <a name="public-methods"></a>公共方法
 
@@ -72,7 +72,7 @@ class CD2DTextLayout : public CD2DResource;
 
 |名称|描述|
 |----------|-----------------|
-|[CD2DTextLayout::operator IDWriteTextLayout *](#operator_idwritetextlayout_star)|返回 IDWriteTextLayout 接口|
+|[CD2DTextLayout::operator IDWriteTextLayout*](#operator_idwritetextlayout_star)|返回 IDWriteTextLayout 接口|
 
 ### <a name="protected-data-members"></a>受保护的数据成员
 
@@ -121,7 +121,7 @@ CD2DTextLayout(
 *strText*<br/>
 CString 对象包含要创建从新的 CD2DTextLayout 对象的字符串。
 
-*TextFormat*<br/>
+*textFormat*<br/>
 CString 对象包含要应用于字符串的格式。
 
 *sizeMax*<br/>
@@ -174,10 +174,10 @@ CString GetFontFamilyName(
 
 ### <a name="parameters"></a>参数
 
-*currentposition 的字段*<br/>
+*currentPosition*<br/>
 要检查的文本的位置。
 
-*TextRange*<br/>
+*textRange*<br/>
 具有相同的文本范围格式设置为指定 currentposition 的字段的位置处的文本。 这意味着运行都有指定，包括但不是限于字体系列名称的位置的准确格式。
 
 ### <a name="return-value"></a>返回值
@@ -196,10 +196,10 @@ CString GetLocaleName(
 
 ### <a name="parameters"></a>参数
 
-*currentposition 的字段*<br/>
+*currentPosition*<br/>
 要检查的文本的位置。
 
-*TextRange*<br/>
+*textRange*<br/>
 具有相同的文本范围格式设置为指定 currentposition 的字段的位置处的文本。 这意味着运行都有指定，包括但不是限于对区域设置名称的位置的准确格式。
 
 ### <a name="return-value"></a>返回值
@@ -226,7 +226,7 @@ virtual BOOL IsValid() const;
 IDWriteTextLayout* m_pTextLayout;
 ```
 
-##  <a name="operator_idwritetextlayout_star"></a>  CD2DTextLayout::operator IDWriteTextLayout *
+##  <a name="operator_idwritetextlayout_star"></a>  CD2DTextLayout::operator IDWriteTextLayout*
 
 返回 IDWriteTextLayout 接口
 
@@ -265,7 +265,7 @@ BOOL SetFontFamilyName(
 *pwzFontFamilyName*<br/>
 适用于整个文本字符串中指定 textRange 的范围的字体系列名称
 
-*TextRange*<br/>
+*textRange*<br/>
 此更改适用的文本范围
 
 ### <a name="return-value"></a>返回值
@@ -287,7 +287,7 @@ BOOL SetLocaleName(
 *pwzLocaleName*<br/>
 以 null 结尾的区域设置名称字符串
 
-*TextRange*<br/>
+*textRange*<br/>
 此更改适用的文本范围
 
 ### <a name="return-value"></a>返回值

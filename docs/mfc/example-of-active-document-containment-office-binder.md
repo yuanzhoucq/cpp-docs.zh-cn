@@ -1,5 +1,5 @@
 ---
-title: 活动文档包含示例：Office 活页夹
+title: 活动文档包容示例：Office Binder
 ms.date: 11/04/2016
 helpviewer_keywords:
 - active documents [MFC], containers
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - Office Binder [MFC]
 - MFC COM, active document containment
 ms.assetid: 70dd8568-e8bc-44ac-bf5e-678767efe8e3
-ms.openlocfilehash: 032b2cb39d75c108239d882039f7c797a357a6bc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b06bc0f22ee71c8afbbc8feadca68895fc24a50b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50616645"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279180"
 ---
-# <a name="example-of-active-document-containment-office-binder"></a>活动文档包含示例：Office 活页夹
+# <a name="example-of-active-document-containment-office-binder"></a>活动文档包容示例：Office Binder
 
 Microsoft Office 活页夹是活动文档容器的示例。 Office 活页夹包含两个主窗格，就像容器通常一样。 左窗格包含与将活页夹中的活动文档对应的图标。 名为每个文档*部分*内联编程序。 例如，活页夹可能包含 Word 文档、PowerPoint 文件、Excel 电子表格等。
 
@@ -31,4 +31,3 @@ Microsoft Office 活页夹是活动文档容器的示例。 Office 活页夹包�
 ## <a name="see-also"></a>请参阅
 
 [活动文档包容](../mfc/active-document-containment.md)
-

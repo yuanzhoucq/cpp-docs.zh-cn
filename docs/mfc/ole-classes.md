@@ -9,12 +9,12 @@ helpviewer_keywords:
 - OLE classes [MFC]
 - OLE [MFC], classes
 ms.assetid: 4c2b2bca-fafb-4d2d-8498-9ed1e04011d2
-ms.openlocfilehash: ff7ae74472c7857ce89ecf839c15cfa2ec4128f8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 69eb604b3a343fd135c76a4bb3c17245ece62092
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50622529"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264945"
 ---
 # <a name="ole-classes"></a>OLE 类
 
@@ -53,4 +53,3 @@ OLE 类可与其他应用程序框架类一起使用来方便对 ActiveX API 的
 ## <a name="see-also"></a>请参阅
 
 [类概述](../mfc/class-library-overview.md)
-

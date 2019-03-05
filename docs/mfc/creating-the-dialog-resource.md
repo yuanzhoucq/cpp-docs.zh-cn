@@ -9,12 +9,12 @@ helpviewer_keywords:
 - resources [MFC], creating dialog boxes
 - MFC dialog boxes [MFC], dialog resource
 ms.assetid: 0b83bd33-14d3-4611-8129-fccdae18053e
-ms.openlocfilehash: 8f9371ebfe352f0ab7dbed2e201ce212387b85a5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d0df76c506d4e6f2267e3a7628825e7b47a56c8c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50517697"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303035"
 ---
 # <a name="creating-the-dialog-resource"></a>创建对话框资源
 
@@ -26,7 +26,7 @@ ms.locfileid: "50517697"
 
 - 使用工具栏上的对齐按钮确定控件的位置。
 
-- 通过模拟对话框将在你的程序中具有的外观和行为来测试对话框。 在“测试”模式中，你可以通过在文本框中键入文本、单击按键等来操作对话框的控件。
+- 通过模拟对话框将在你的程序中具有的外观和行为来测试对话框。 在“测试”模式中，您可以通过在文本框中键入文本、单击按键等来操作对话框的控件。
 
 完成后，对话框模板资源将存储在应用程序的资源脚本文件中。 如果需要，之后可以编辑它。 有关如何创建和编辑对话框资源的完整说明，请参阅[对话框编辑器](../windows/dialog-editor.md)主题。 此方法还用于创建的对话框模板资源[CFormView](../mfc/reference/cformview-class.md)并[CRecordView](../mfc/reference/crecordview-class.md)类。
 
@@ -36,4 +36,3 @@ ms.locfileid: "50517697"
 
 [对话框](../mfc/dialog-boxes.md)<br/>
 [对话框的生命周期](../mfc/life-cycle-of-a-dialog-box.md)
-

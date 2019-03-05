@@ -9,12 +9,12 @@ helpviewer_keywords:
 - tutorials [ATL]
 - ATL, tutorials
 ms.assetid: f921a121-09c8-4812-9317-e15b2f1471fa
-ms.openlocfilehash: b4a47cd22026663acb1cade6f2b4c098c4887965
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 716818306c751a8d774a8fc6c311694a7932be2c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50570568"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270106"
 ---
 # <a name="active-template-library-atl-tutorial"></a>活动模板库 (ATL) 教程
 
@@ -24,21 +24,20 @@ ATL 旨在简化创建高效、 灵活、 轻量的控件的过程。 本教程�
 
 本教程分为七个步骤。 你应按顺序执行每个步骤，因为后面的步骤依赖于以前已完成的任务。 在开始之前，您应确认您有注册在特定计算机上的 ActiveX 组件所需的权限。 这通常是只需考虑，如果您正在 Visual Studio.NET 通过终端服务连接。
 
-- [步骤 1： 创建项目](../atl/creating-the-project-atl-tutorial-part-1.md)
+- [步骤 1：创建项目](../atl/creating-the-project-atl-tutorial-part-1.md)
 
-- [步骤 2： 将控件添加到你的项目](../atl/adding-a-control-atl-tutorial-part-2.md)
+- [步骤 2：将控件添加到你的项目](../atl/adding-a-control-atl-tutorial-part-2.md)
 
 - [第 3 步。将属性添加到您的控件](../atl/adding-a-property-to-the-control-atl-tutorial-part-3.md)
 
-- [步骤 4： 更改控件的绘制代码](../atl/changing-the-drawing-code-atl-tutorial-part-4.md)
+- [步骤 4：更改控件的绘制代码](../atl/changing-the-drawing-code-atl-tutorial-part-4.md)
 
-- [步骤 5： 添加事件](../atl/adding-an-event-atl-tutorial-part-5.md)
+- [步骤 5：添加事件](../atl/adding-an-event-atl-tutorial-part-5.md)
 
-- [步骤 6： 添加属性页](../atl/adding-a-property-page-atl-tutorial-part-6.md)
+- [步骤 6：添加属性页](../atl/adding-a-property-page-atl-tutorial-part-6.md)
 
-- [步骤 7： 将置于网页上的控件](../atl/putting-the-control-on-a-web-page-atl-tutorial-part-7.md)
+- [步骤 7：将置于网页上的控件](../atl/putting-the-control-on-a-web-page-atl-tutorial-part-7.md)
 
 ## <a name="see-also"></a>请参阅
 
 [概念](../atl/active-template-library-atl-concepts.md)
-

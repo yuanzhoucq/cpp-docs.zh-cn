@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CAsyncSocket [MFC], OnSend
 - CAsyncSocket [MFC], m_hSocket
 ms.assetid: cca4d5a1-aa0f-48bd-843e-ef0e2d7fc00b
-ms.openlocfilehash: b138c4f84a10823d9c340218baefd530c016027a
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: ef486e653eaf78914ea25663e0c1ab744ab30cd4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53179027"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260005"
 ---
 # <a name="casyncsocket-class"></a>CAsyncSocket 类
 
@@ -146,7 +146,7 @@ class CAsyncSocket : public CObject
 |名称|描述|
 |----------|-----------------|
 |[CAsyncSocket::operator =](#operator_eq)|将一个新值赋给`CAsyncSocket`对象。|
-|[CAsyncSocket::operator 套接字](#operator_socket)|使用此运算符将检索的套接字句柄`CAsyncSocket`对象。|
+|[CAsyncSocket::operator SOCKET](#operator_socket)|使用此运算符将检索的套接字句柄`CAsyncSocket`对象。|
 
 ### <a name="public-data-members"></a>公共数据成员
 
@@ -808,7 +808,7 @@ BOOL GetSockOpt(
 
 支持以下选项`GetSockOpt`。 类型标识的数据所处理的类型*lpOptionValue*。 TCP_NODELAY 选项使用级别 IPPROTO_TCP;所有其他选项使用级别 SOL_SOCKET。
 
-|值|类型|含义|
+|“值”|类型|含义|
 |-----------|----------|-------------|
 |SO_ACCEPTCONN|BOOL|正在侦听套接字。|
 |SO_BROADCAST|BOOL|套接字用于广播消息的传输配置。|
@@ -827,7 +827,7 @@ BOOL GetSockOpt(
 
 不支持的 Berkeley Software Distribution (BSD) 选项`GetSockOpt`是：
 
-|值|类型|含义|
+|“值”|类型|含义|
 |-----------|----------|-------------|
 |SO_RCVLOWAT|**int**|收到的低水印。|
 |SO_RCVTIMEO|**int**|接收超时。|
@@ -872,7 +872,7 @@ BOOL IOCtl(
 
 ### <a name="remarks"></a>备注
 
-可以在任何状态的任何套接字上使用此例程。 它用于获取或检索与套接字，独立于协议和通信子系统关联的操作参数。 支持以下命令：
+可以在任何状态的任何套接字上使用此例程。 它用于获取或检索与套接字，独立于协议和通信子系统关联的操作参数。 支持下列命令：
 
 - FIONBIO 启用或禁用非阻止模式套接字上。 *LpArgument*参数指向`DWORD`，这是如果非阻止模式下将启用，非零值为零，则禁用。 如果`AsyncSelect`发出套接字，则如果尝试使用`IOCtl`设置套接字回到阻止模式下的将失败并 WSAEINVAL。 若要设置回阻止模式套接字并防止出现 WSAEINVAL 错误，应用程序必须首先禁用`AsyncSelect`通过调用`AsyncSelect`与*lEvent*参数等于 0，然后调用`IOCtl`。
 
@@ -1125,7 +1125,7 @@ void operator=(const CAsyncSocket& rSrc);
 
 调用此函数可将复制的现有`CAsyncSocket`对象和另一个`CAsyncSocket`对象。
 
-##  <a name="operator_socket"></a>  CAsyncSocket::operator 套接字
+##  <a name="operator_socket"></a>  CAsyncSocket::operator SOCKET
 
 使用此运算符将检索的套接字句柄`CAsyncSocket`对象。
 
@@ -1715,7 +1715,7 @@ TCP_NODELAY 选项将禁用 Nagle 算法。 使用 Nagle 算法来减少的小�
 
 支持以下选项`SetSockOpt`。 类型标识的数据所处理的类型*lpOptionValue*。
 
-|值|类型|含义|
+|“值”|类型|含义|
 |-----------|----------|-------------|
 |SO_BROADCAST|BOOL|允许在套接字上的广播消息的传输。|
 |SO_DEBUG|BOOL|记录调试信息。|
@@ -1731,7 +1731,7 @@ TCP_NODELAY 选项将禁用 Nagle 算法。 使用 Nagle 算法来减少的小�
 
 不支持的 Berkeley Software Distribution (BSD) 选项`SetSockOpt`是：
 
-|值|类型|含义|
+|“值”|类型|含义|
 |-----------|----------|-------------|
 |SO_ACCEPTCONN|BOOL|套接字侦听|
 |SO_ERROR|**int**|获取错误状态并清除。|
@@ -1755,11 +1755,11 @@ BOOL ShutDown(int nHow = sends);
 *nHow*<br/>
 一个标志，介绍哪些类型的操作将不再允许，请使用下列枚举的值：
 
-- **接收 = 0**
+- **receives = 0**
 
-- **将发送 = 1**
+- **sends = 1**
 
-- **同时 = 2**
+- **both = 2**
 
 ### <a name="return-value"></a>返回值
 

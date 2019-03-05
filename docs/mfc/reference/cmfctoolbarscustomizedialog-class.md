@@ -24,18 +24,18 @@ helpviewer_keywords:
 - CMFCToolBarsCustomizeDialog [MFC], OnInitDialog
 - CMFCToolBarsCustomizeDialog [MFC], PostNcDestroy
 ms.assetid: 78e2cddd-4f13-4097-afc3-1ad646a113f1
-ms.openlocfilehash: 026c7392c3eb93b37a712059939683e3e0ab852c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e4aaede3eb2d5c922c196e2bdfbbe533c4e65e47
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50628990"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295027"
 ---
 # <a name="cmfctoolbarscustomizedialog-class"></a>CMFCToolBarsCustomizeDialog 类
 
 无模式选项卡对话框 ( [CPropertySheet 类](../../mfc/reference/cpropertysheet-class.md))，使用户能够自定义工具栏、 菜单、 键盘快捷方式、 用户定义的工具和应用程序中的视觉样式。 通常，用户可从 **“工具”** 菜单中选择 **“自定义”** 来访问此对话框。
 
-**自定义**对话框中有六个选项卡：**命令**，**工具栏**，**工具**，**键盘**， **菜单**，并**选项**。
+**自定义**对话框有六个选项卡：**命令**，**工具栏**，**工具**，**键盘**，**菜单**，并**选项**。
 
 ## <a name="syntax"></a>语法
 
@@ -137,7 +137,7 @@ void AddButton(
 *uiCategoryId*<br/>
 [in]指定要将按钮插入到其中的类别 ID。
 
-*按钮*<br/>
+*button*<br/>
 [in]指定要插入的按钮。
 
 *iInsertBefore*<br/>
@@ -586,7 +586,7 @@ virtual BOOL OnEditToolbarMenuImage(
 *pWndParent*<br/>
 [in]指向父窗口的指针。
 
-*位图*<br/>
+*bitmap*<br/>
 [in]对要编辑的位图对象的引用。
 
 *nBitsPerPixel*<br/>
@@ -716,7 +716,7 @@ void ReplaceButton(
 *uiCmd*<br/>
 [in]指定要替换为按钮的命令。
 
-*按钮*<br/>
+*button*<br/>
 [in]一个**const**替换旧的按钮的工具栏按钮对象的引用。
 
 ### <a name="remarks"></a>备注

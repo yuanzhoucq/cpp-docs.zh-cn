@@ -72,12 +72,12 @@ helpviewer_keywords:
 - COleControlContainer [MFC], m_pWnd
 - COleControlContainer [MFC], m_siteMap
 ms.assetid: f7ce9246-0fb7-4f07-a83a-6c2390d0fdf8
-ms.openlocfilehash: e89096b553814285f61093af81e31b294e3ad2bb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6e97f7ceafb92098d701cba64b4ec01d26d3991a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50603003"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274981"
 ---
 # <a name="colecontrolcontainer-class"></a>COleControlContainer 类
 
@@ -218,7 +218,7 @@ virtual void CheckDlgButton(
 *nIDButton*<br/>
 若要修改的按钮的 ID。
 
-*n 请查看*<br/>
+*nCheck*<br/>
 指定按钮的状态。 可以是以下各项之一：
 
 - BST_CHECKED 集的按钮状态检查。
@@ -785,7 +785,7 @@ virtual void SetDlgItemInt(
 *nID*<br/>
 控件的标识符。
 
-*n 值*<br/>
+*nValue*<br/>
 要显示的整数值。
 
 *bSigned*<br/>

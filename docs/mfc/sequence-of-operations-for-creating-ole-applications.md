@@ -7,12 +7,12 @@ helpviewer_keywords:
 - applications [OLE], creating
 - applications [OLE]
 ms.assetid: 84b0f606-36c1-4253-9cea-44427f0074b9
-ms.openlocfilehash: b281cbeb4670af0efd232152010fdc90795af103
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b7fa989d1a3b799cf6b427e27142d4479be900bf
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437344"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263567"
 ---
 # <a name="sequence-of-operations-for-creating-ole-applications"></a>用于创建 OLE 应用程序的操作顺序
 
@@ -32,4 +32,3 @@ ms.locfileid: "50437344"
 [MFC 应用程序的构建操作顺序](../mfc/sequence-of-operations-for-building-mfc-applications.md)<br/>
 [ActiveX 控件的创建操作顺序](../mfc/sequence-of-operations-for-creating-activex-controls.md)<br/>
 [数据库应用程序的创建操作顺序](../mfc/sequence-of-operations-for-creating-database-applications.md)
-

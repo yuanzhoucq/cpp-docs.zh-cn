@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlPreviewCtrlImpl class
 ms.assetid: 39b3299e-07e4-4abc-9b6e-b54bfa3b0802
-ms.openlocfilehash: ffa2613909145bffaf901b2d5bae4129e6d434c6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 71c50771889381ad2288637c23930103b5925a2c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505048"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283264"
 ---
 # <a name="catlpreviewctrlimpl-class"></a>CAtlPreviewCtrlImpl 类
 
@@ -46,7 +46,7 @@ class CAtlPreviewCtrlImpl : public CWindowImpl<CAtlPreviewCtrlImpl>, public IPre
 
 |名称|描述|
 |----------|-----------------|
-|[CAtlPreviewCtrlImpl:: ~ CAtlPreviewCtrlImpl](#dtor)|Destructs 预览控件对象。|
+|[CAtlPreviewCtrlImpl::~CAtlPreviewCtrlImpl](#dtor)|Destructs 预览控件对象。|
 |[CAtlPreviewCtrlImpl::CAtlPreviewCtrlImpl](#catlpreviewctrlimpl)|构造一个预览控件对象。|
 
 ### <a name="public-methods"></a>公共方法
@@ -93,7 +93,7 @@ class CAtlPreviewCtrlImpl : public CWindowImpl<CAtlPreviewCtrlImpl>, public IPre
 
 `ATL::CWindowImplBaseT<TBase,TWinTraits>`
 
-[ATL::CWindowImpl\<CAtlPreviewCtrlImpl >](../../atl/reference/cwindowimpl-class.md)
+[ATL::CWindowImpl\<CAtlPreviewCtrlImpl>](../../atl/reference/cwindowimpl-class.md)
 
 `IPreviewCtrl`
 
@@ -114,7 +114,7 @@ CAtlPreviewCtrlImpl(void) : m_clrText(0),
 
 ### <a name="remarks"></a>备注
 
-##  <a name="dtor"></a>  CAtlPreviewCtrlImpl:: ~ CAtlPreviewCtrlImpl
+##  <a name="dtor"></a>  CAtlPreviewCtrlImpl::~CAtlPreviewCtrlImpl
 
 Destructs 预览控件对象。
 
@@ -137,7 +137,7 @@ virtual BOOL Create(HWND hWndParent, const RECT* prc);
 *hWndParent*<br/>
 用于丰富预览提供 shell 主机窗口的句柄。
 
-*中华人民共和国*<br/>
+*prc*<br/>
 指定的初始大小和窗口的位置。
 
 ### <a name="return-value"></a>返回值
@@ -302,7 +302,7 @@ virtual void SetRect(const RECT* prc, BOOL bRedraw);
 
 ### <a name="parameters"></a>参数
 
-*中华人民共和国*<br/>
+*prc*<br/>
 指定新的大小和预览控件的位置。
 
 *bRedraw*<br/>

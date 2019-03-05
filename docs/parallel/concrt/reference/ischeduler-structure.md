@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - IScheduler structure
 ms.assetid: 471de85a-2b1a-4b6d-ab81-2eff2737161e
-ms.openlocfilehash: dd280884ab106bcf878b06c94e2ea3d0d99be2e8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 54db5d664a48f95a952eb1b409839d8ac3421e30
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50603211"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274071"
 ---
 # <a name="ischeduler-structure"></a>IScheduler 结构
 
@@ -37,13 +37,13 @@ struct IScheduler;
 
 |名称|描述|
 |----------|-----------------|
-|[Ischeduler:: Addvirtualprocessors](#addvirtualprocessors)|供其使用计划程序提供一组虚拟处理器根。 每个`IVirtualProcessorRoot`接口表示执行可执行工作计划程序代表的单线程的权限。|
+|[IScheduler::AddVirtualProcessors](#addvirtualprocessors)|供其使用计划程序提供一组虚拟处理器根。 每个`IVirtualProcessorRoot`接口表示执行可执行工作计划程序代表的单线程的权限。|
 |[IScheduler::GetId](#getid)|返回计划程序的唯一标识符。|
 |[IScheduler::GetPolicy](#getpolicy)|返回计划程序的策略的一个副本。 计划程序策略的详细信息，请参阅[SchedulerPolicy](schedulerpolicy-class.md)。|
 |[IScheduler::NotifyResourcesExternallyBusy](#notifyresourcesexternallybusy)|通知此计划程序的数组中的虚拟处理器根集所表示的硬件线程`ppVirtualProcessorRoots`现在正在使用的其他计划程序。|
 |[IScheduler::NotifyResourcesExternallyIdle](#notifyresourcesexternallyidle)|通知此计划程序的数组中的虚拟处理器根集所表示的硬件线程`ppVirtualProcessorRoots`未正在使用的其他计划程序。|
 |[IScheduler::RemoveVirtualProcessors](#removevirtualprocessors)|启动删除的以前分配给此计划程序的虚拟处理器根。|
-|[Ischeduler:: Statistics](#statistics)|提供了与任务到达和完成费用，以及适用于计划程序队列长度的变化相关的信息。|
+|[IScheduler::Statistics](#statistics)|提供了与任务到达和完成费用，以及适用于计划程序队列长度的变化相关的信息。|
 
 ## <a name="remarks"></a>备注
 

@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - extent structure
 ms.assetid: edb5de3d-3935-4dbb-8365-4cc6c4fb0269
-ms.openlocfilehash: 3b6803b0ddfe09feb37a6e0d3072d8afa422de8d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2236b1a1b72f307dae1efa0cfe197e222820c460
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476641"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270184"
 ---
 # <a name="extent-class-c-amp"></a>extent 类 (C++ AMP)
 
@@ -53,7 +53,7 @@ class extent;
 
 |名称|描述|
 |----------|-----------------|
-|[包含](#contains)|验证指定`extent`对象具有指定的级别。|
+|[contains](#contains)|验证指定`extent`对象具有指定的级别。|
 |[size](#size)|返回 （以元素单位） 范围的总线性大小。|
 |[tile](#tile)|生成`tiled_extent`指定维度与给定的平铺范围的对象。|
 
@@ -162,7 +162,7 @@ extent<_Rank>& operator%=(int _Rhs) restrict(cpu, direct3d);
 
 `extent` 对象。
 
-##  <a name="operator_star_eq"></a> 运算符 * =
+##  <a name="operator_star_eq"></a> operator*=
 
 将指定的数字的范围对象中的每个元素相乘。
 
@@ -270,7 +270,7 @@ extent<_Rank> operator--(int)restrict(amp,cpu);
 
 针对前缀运算符`extent`对象 (`*this`)。 针对后缀运算符，新`extent`对象。
 
-##  <a name="operator_div_eq"></a> / = 运算符
+##  <a name="operator_div_eq"></a> operator/=
 
 在扩展对象中的每个元素除以指定的数目。
 
@@ -289,7 +289,7 @@ extent<_Rank>& operator/=(int _Rhs) restrict(amp,cpu);
 
 `extent` 对象。
 
-##  <a name="operator_min_eq"></a> 运算符 =
+##  <a name="operator_min_eq"></a> operator-=
 
 减去从扩展对象的每个元素指定的数字。
 
@@ -329,7 +329,7 @@ extent<_Rank>& operator=(const extent<_Rank>& _Other) restrict(amp,cpu);
 
 对此引用`extent`对象。
 
-##  <a name="operator_at"></a> extent:: operator \[\]
+##  <a name="operator_at"></a> extent::operator \[\]
 
 返回位于指定索引处的元素。
 

@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CRectTracker [MFC], m_rect
 - CRectTracker [MFC], m_sizeMin
 ms.assetid: 99caa7f2-3c0d-4a42-bbee-e5d1d342d4ee
-ms.openlocfilehash: c82b06903f0705a79a15b263b1dbdfc6aee4c8ca
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 1834c378246835314002cdf05fe9a294b609c4e4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176505"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259576"
 ---
 # <a name="crecttracker-class"></a>CRectTracker 类
 
@@ -77,7 +77,7 @@ class CRectTracker
 |[CRectTracker::OnChangedRect](#onchangedrect)|当已调整大小或移动矩形时调用。|
 |[CRectTracker::SetCursor](#setcursor)|设置光标，具体取决于它对矩形的位置。|
 |[CRectTracker::Track](#track)|允许用户用来处理该矩形。|
-|[Crecttracker:: Trackrubberband](#trackrubberband)|允许用户向"橡皮筋"选择。|
+|[CRectTracker::TrackRubberBand](#trackrubberband)|允许用户向"橡皮筋"选择。|
 
 ### <a name="public-data-members"></a>公共数据成员
 
@@ -85,7 +85,7 @@ class CRectTracker
 |----------|-----------------|
 |[CRectTracker::m_nHandleSize](#m_nhandlesize)|确定大小的调整大小图柄。|
 |[CRectTracker::m_nStyle](#m_nstyle)|跟踪器的当前 style(s)。|
-|[Crecttracker::](#m_rect)|（以像素为单位） 的矩形的当前位置。|
+|[CRectTracker::m_rect](#m_rect)|（以像素为单位） 的矩形的当前位置。|
 |[CRectTracker::m_sizeMin](#m_sizemin)|确定最小矩形宽度和高度。|
 
 ## <a name="remarks"></a>备注
@@ -270,7 +270,7 @@ int HitTest(CPoint point) const;
 
 ### <a name="parameters"></a>参数
 
-*点*<br/>
+*point*<br/>
 以设备坐标，若要测试的点。
 
 ### <a name="return-value"></a>返回值
@@ -309,7 +309,7 @@ int m_nHandleSize;
 
 使用默认系统值进行初始化。
 
-##  <a name="m_rect"></a>  Crecttracker::
+##  <a name="m_rect"></a>  CRectTracker::m_rect
 
 在工作区坐标 （像素） 的矩形的当前位置。
 
@@ -424,7 +424,7 @@ BOOL Track(
 *pWnd*<br/>
 包含矩形的窗口对象。
 
-*点*<br/>
+*point*<br/>
 设备的当前鼠标位置相对于客户端区域的坐标。
 
 *bAllowInvert*<br/>
@@ -445,7 +445,7 @@ BOOL Track(
 
 如果*bAllowInvert*为 TRUE 时，跟踪矩形可以反转 x 轴或 y 轴上。
 
-##  <a name="trackrubberband"></a>  Crecttracker:: Trackrubberband
+##  <a name="trackrubberband"></a>  CRectTracker::TrackRubberBand
 
 调用此函数可执行橡皮筋选择。
 
@@ -461,7 +461,7 @@ BOOL TrackRubberBand(
 *pWnd*<br/>
 包含矩形的窗口对象。
 
-*点*<br/>
+*point*<br/>
 设备的当前鼠标位置相对于客户端区域的坐标。
 
 *bAllowInvert*<br/>

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - BNF notation
 - Backus Nauer Form (BNF) syntax
 ms.assetid: 994bbef0-9077-4aa8-bdfe-b7e830af9acc
-ms.openlocfilehash: b14e2a4f1c29860b9a624b09805959a9f6b550f4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0b48e0b4abc8601b5173c3c7d2748c726646fbc5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596724"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267103"
 ---
 # <a name="understanding-backus-nauer-form-bnf-syntax"></a>了解巴科斯-诺尔范式 (BNF) 语法
 
@@ -20,7 +20,7 @@ ms.locfileid: "50596724"
 |------------------------|-------------|
 |::=|等效|
 |&#124;|或|
-|X +|一个或多个 Xs。|
+|X+|一个或多个 Xs。|
 |[X]|X 是可选的。 由表示可选分隔符\[]。|
 |任何**粗体**文本|字符串文字。|
 |任何*斜体*文本|如何构造的字符串文字。|
@@ -101,4 +101,3 @@ val 'testhex' = d '&H55'
 ## <a name="see-also"></a>请参阅
 
 [创建注册器脚本](../atl/creating-registrar-scripts.md)
-

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - server applications [MFC], vs. client applications on Internet
 - client applications [MFC], vs. server applications on Internet
 ms.assetid: 9b96172c-b4d4-4c69-bfb2-226ce0de6d08
-ms.openlocfilehash: b9b794070d1c4ff4f05f33895a7af5532a524ad1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cdb294e4ab808a7e4cbcec457f6e744eff9f12cb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50602925"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302802"
 ---
 # <a name="application-design-choices"></a>应用程序设计选择
 
@@ -52,7 +52,7 @@ ms.locfileid: "50602925"
 
 客户端计算机上或服务器计算机上可能运行你的应用程序。 你的应用程序可能还会存储在服务器上，通过 Internet 下载并运行客户端计算机上。 MFC WinInet 类用于客户端应用程序来下载文件。 MFC 和异步名字对象类用于下载文件，并控制属性。 客户端应用程序和从客户端上运行的服务器下载的应用程序使用的 ActiveX 控件和活动文档类。
 
-##  <a name="_core_the_web_page"></a> 网页： HTML，活动文档中，ActiveX 控件
+##  <a name="_core_the_web_page"></a> 网页：HTML 中，活动文档中，ActiveX 控件
 
 Microsoft 提供了几种方法在网页上提供的内容。 网页可使用标准 HTML 或 HTML 扩展，如对象标记，以提供动态内容，例如 ActiveX 控件。
 
@@ -84,7 +84,7 @@ ActiveX 控件在 Internet 站点上提供对文档和页面的动态内容。 �
 |-----------------------|----------------------------|-------------------------|
 |[Internet 下载使用异步名字对象](../mfc/asynchronous-monikers-on-the-internet.md)|有关使用 COM，ActiveX 控件的异步传输和任何 Internet 协议。|[CAsyncMonikerFile](../mfc/reference/casyncmonikerfile-class.md)， [CDataPathProperty](../mfc/reference/cdatapathproperty-class.md)|
 |[WinInet](../mfc/win32-internet-extensions-wininet.md)|为 HTTP、 FTP 和 gopher 的 Internet 协议。 数据可以同步或异步方式传输和存储在系统范围的缓存。|[CInternetSession](../mfc/reference/cinternetsession-class.md)， [CFtpFileFind](../mfc/reference/cftpfilefind-class.md)， [CGopherFileFind](../mfc/reference/cgopherfilefind-class.md)，等等。|
-|[WinSock](../mfc/windows-sockets-in-mfc.md)|以最大的效率和控制。 需要了解套接字和 TCP/IP 协议。|[CSocket](../mfc/reference/csocket-class.md)， [CAsyncSocket](../mfc/reference/casyncsocket-class.md)|
+|[WinSock](../mfc/windows-sockets-in-mfc.md)|以最大的效率和控制。 需要了解套接字和 TCP/IP 协议。|[CSocket](../mfc/reference/csocket-class.md), [CAsyncSocket](../mfc/reference/casyncsocket-class.md)|
 
 ## <a name="see-also"></a>请参阅
 
@@ -92,4 +92,3 @@ ActiveX 控件在 Internet 站点上提供对文档和页面的动态内容。 �
 [MFC Internet 编程基础知识](../mfc/mfc-internet-programming-basics.md)<br/>
 [Win32 Internet 扩展 (WinInet)](../mfc/win32-internet-extensions-wininet.md)<br/>
 [Internet 上的异步名字对象](../mfc/asynchronous-monikers-on-the-internet.md)
-

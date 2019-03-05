@@ -5,16 +5,17 @@ helpviewer_keywords:
 - CToolTipCtrl class [MFC], manipulating tool tip attributes
 - tool tips [MFC], attributes
 ms.assetid: 3600afe5-712a-4b56-8456-96e85fe879af
-ms.openlocfilehash: 2624f6c1da0e771b34d590d787c00e53ee6ff62e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d8c994748239871f17b878dd8ea7505a2a8a0b65
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50625913"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279193"
 ---
 # <a name="manipulating-the-tool-tip-control"></a>操作工具提示控件
 
-`CToolTipCtrl` 类提供一组控制 `CToolTipCtrl` 对象的各种特性和工具提示窗口的成员函数。
+
+  `CToolTipCtrl` 类提供一组控制 `CToolTipCtrl` 对象的各种特性和工具提示窗口的成员函数。
 
 初始、 弹出窗口中，并重新显示持续时间可以设置工具提示窗口并通过调用检索[GetDelayTime](../mfc/reference/ctooltipctrl-class.md#getdelaytime)并[SetDelayTime](../mfc/reference/ctooltipctrl-class.md#setdelaytime)。
 
@@ -38,4 +39,3 @@ ms.locfileid: "50625913"
 
 [使用 CToolTipCtrl](../mfc/using-ctooltipctrl.md)<br/>
 [控件](../mfc/controls-mfc.md)
-

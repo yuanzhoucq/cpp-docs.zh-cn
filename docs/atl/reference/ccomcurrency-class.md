@@ -15,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComCurrency class
 ms.assetid: a1c3d10a-bba6-40cc-8bcf-aed9023c8a9e
-ms.openlocfilehash: 5a619eef33a60dc1a34d31c3d51614de20fc8f28
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b2c07bc9c0b1e96f34798b20207dc0eb0362e534
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50451150"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277712"
 ---
 # <a name="ccomcurrency-class"></a>CComCurrency 类
 
@@ -38,7 +38,8 @@ class CComCurrency
 
 |名称|描述|
 |----------|-----------------|
-|[CComCurrency::CComCurrency](#ccomcurrency)|`CComCurrency` 对象的构造函数。|
+|[CComCurrency::CComCurrency](#ccomcurrency)|
+  `CComCurrency` 对象的构造函数。|
 
 ### <a name="public-methods"></a>公共方法
 
@@ -55,21 +56,21 @@ class CComCurrency
 
 |名称|描述|
 |----------|-----------------|
-|[Ccomcurrency:: Operator-](#operator_-)|此运算符用于对 `CComCurrency` 对象执行减法。|
-|[Ccomcurrency:: Operator ！ =](#operator_neq)|比较两个 `CComCurrency` 对象是否相等。|
+|[CComCurrency::operator -](#operator_-)|此运算符用于对 `CComCurrency` 对象执行减法。|
+|[CComCurrency::operator !=](#operator_neq)|比较两个 `CComCurrency` 对象是否相等。|
 |[Ccomcurrency:: Operator *](#operator_star)|此运算符用于对 `CComCurrency` 对象执行乘法。|
-|[Ccomcurrency:: Operator * =](#operator_star_eq)|此运算符用于对 `CComCurrency` 对象执行乘法并对它赋予结果。|
-|[Ccomcurrency:: Operator /](#operator_div)|此运算符用于对 `CComCurrency` 对象执行除法。|
-|[Ccomcurrency:: Operator / =](#operator_div_eq)|此运算符用于对 `CComCurrency` 对象执行除法并对它赋予结果。|
+|[CComCurrency::operator *=](#operator_star_eq)|此运算符用于对 `CComCurrency` 对象执行乘法并对它赋予结果。|
+|[CComCurrency::operator /](#operator_div)|此运算符用于对 `CComCurrency` 对象执行除法。|
+|[CComCurrency::operator /=](#operator_div_eq)|此运算符用于对 `CComCurrency` 对象执行除法并对它赋予结果。|
 |[Ccomcurrency:: Operator +](#operator_add)|此运算符用于对 `CComCurrency` 对象执行加法。|
-|[Ccomcurrency:: Operator + =](#operator_add_eq)|此运算符用于对 `CComCurrency` 对象执行加法并对它赋予结果。|
+|[CComCurrency::operator +=](#operator_add_eq)|此运算符用于对 `CComCurrency` 对象执行加法并对它赋予结果。|
 |[Ccomcurrency:: Operator <](#operator_lt)|此运算符比较两个 `CComCurrency` 对象以确定较小者。|
-|[Ccomcurrency:: Operator < =](#operator_lt_eq)|此运算符比较两个 `CComCurrency` 对象以确定是否相等或较小者。|
-|[Ccomcurrency:: Operator =](#operator_eq)|此运算符向 `CComCurrency` 对象赋予新值。|
-|[Ccomcurrency:: Operator =](#operator_-_eq)|此运算符用于对 `CComCurrency` 对象执行减法并对它赋予结果。|
-|[Ccomcurrency:: Operator = =](#operator_eq_eq)|此运算符比较两个 `CComCurrency` 对象是否相等。|
+|[CComCurrency::operator <=](#operator_lt_eq)|此运算符比较两个 `CComCurrency` 对象以确定是否相等或较小者。|
+|[CComCurrency::operator =](#operator_eq)|此运算符向 `CComCurrency` 对象赋予新值。|
+|[CComCurrency::operator -=](#operator_-_eq)|此运算符用于对 `CComCurrency` 对象执行减法并对它赋予结果。|
+|[CComCurrency::operator ==](#operator_eq_eq)|此运算符比较两个 `CComCurrency` 对象是否相等。|
 |[Ccomcurrency:: Operator >](#operator_gt)|此运算符比较两个 `CComCurrency` 对象以确定较大者。|
-|[Ccomcurrency:: Operator > =](#operator_gt_eq)|此运算符比较两个 `CComCurrency` 对象以确定是否相等或较大者。|
+|[CComCurrency::operator >=](#operator_gt_eq)|此运算符比较两个 `CComCurrency` 对象以确定是否相等或较大者。|
 |[Ccomcurrency:: Operator 货币](#operator_currency)|将转换为货币对象。|
 
 ### <a name="public-data-members"></a>公共数据成员
@@ -84,14 +85,15 @@ class CComCurrency
 
 `CComCurrency`包装实现此定点类型的算术、 赋值和比较操作。 已选中受支持的应用程序，以控制定点计算过程中可能出现的舍入误差。
 
-`CComCurrency` 对象以两个组件的形式提供对小数点两侧的数字的访问权限：一个整数组件，它存储小数点左侧的值；一个小数组件，它存储小数点右侧的值。 小数部分在内部存储为一个介于-9999 (CY_MIN_FRACTION) 和 + 9999 (CY_MAX_FRACTION) 之间的整数值。 该方法[CComCurrency::GetFraction](#getfraction)返回一个按 10000 (CY_SCALE) 进行缩放的值。
+
+  `CComCurrency` 对象以两个组件的形式提供对小数点两侧的数字的访问权限：一个整数组件，它存储小数点左侧的值；一个小数组件，它存储小数点右侧的值。 小数部分在内部存储为一个介于-9999 (CY_MIN_FRACTION) 和 + 9999 (CY_MAX_FRACTION) 之间的整数值。 该方法[CComCurrency::GetFraction](#getfraction)返回一个按 10000 (CY_SCALE) 进行缩放的值。
 
 指定整数和小数部分时`CComCurrency`对象，请记住小数部分是 0 到 9999 范围内的数字。 在处理美元等在小数点后仅采用两个有效位数来表示金额的货币时，这一点非常有用。 即使不显示最后两位数字，也必须将它们考虑在内。
 
 |“值”|可能的 CComCurrency 赋值|
 |-----------|---------------------------------------|
-|$10.50|CComCurrency(10,5000)*或*CComCurrency(10.50)|
-|$10.05|CComCurrency(10,500)*或*CComCurrency(10.05)|
+|$10.50|CComCurrency(10,5000) *or* CComCurrency(10.50)|
+|$10.05|CComCurrency(10,500) *or* CComCurrency(10.05)|
 
 值 CY_MIN_FRACTION、 CY_MAX_FRACTION 和 CY_SCALE atlcur.h 中定义。
 
@@ -217,7 +219,7 @@ CURRENCY m_currency;
 
 此成员保留访问和操作的此类方法的货币。
 
-##  <a name="operator_-"></a>  Ccomcurrency:: Operator-
+##  <a name="operator_-"></a>  CComCurrency::operator -
 
 此运算符用于对 `CComCurrency` 对象执行减法。
 
@@ -285,7 +287,7 @@ CComCurrency operator*(const CComCurrency& cur) const;
 
 [!code-cpp[NVC_ATL_Utilities#57](../../atl/codesnippet/cpp/ccomcurrency-class_5.cpp)]
 
-##  <a name="operator_star_eq"></a>  Ccomcurrency:: Operator \*=
+##  <a name="operator_star_eq"></a>  CComCurrency::operator \*=
 
 此运算符用于对 `CComCurrency` 对象执行乘法并对它赋予结果。
 
@@ -310,7 +312,7 @@ const CComCurrency& operator*= (const CComCurrency& cur);
 
 [!code-cpp[NVC_ATL_Utilities#58](../../atl/codesnippet/cpp/ccomcurrency-class_6.cpp)]
 
-##  <a name="operator_div"></a>  Ccomcurrency:: Operator /
+##  <a name="operator_div"></a>  CComCurrency::operator /
 
 此运算符用于对 `CComCurrency` 对象执行除法。
 
@@ -331,7 +333,7 @@ CComCurrency operator/(long nOperand) const;
 
 [!code-cpp[NVC_ATL_Utilities#59](../../atl/codesnippet/cpp/ccomcurrency-class_7.cpp)]
 
-##  <a name="operator_div_eq"></a>  Ccomcurrency:: Operator / =
+##  <a name="operator_div_eq"></a>  CComCurrency::operator /=
 
 此运算符用于对 `CComCurrency` 对象执行除法并对它赋予结果。
 
@@ -394,7 +396,7 @@ const CComCurrency& operator+= (const CComCurrency& cur);
 
 [!code-cpp[NVC_ATL_Utilities#62](../../atl/codesnippet/cpp/ccomcurrency-class_10.cpp)]
 
-##  <a name="operator_lt"></a>  Ccomcurrency:: Operator &lt;
+##  <a name="operator_lt"></a>  CComCurrency::operator &lt;
 
 此运算符比较两个 `CComCurrency` 对象以确定较小者。
 
@@ -415,7 +417,7 @@ bool operator<(const CComCurrency& cur) const;
 
 [!code-cpp[NVC_ATL_Utilities#63](../../atl/codesnippet/cpp/ccomcurrency-class_11.cpp)]
 
-##  <a name="operator_lt_eq"></a>  Ccomcurrency:: Operator &lt;=
+##  <a name="operator_lt_eq"></a>  CComCurrency::operator &lt;=
 
 此运算符比较两个 `CComCurrency` 对象以确定是否相等或较小者。
 
@@ -436,7 +438,7 @@ bool operator<= (const CComCurrency& cur) const;
 
 [!code-cpp[NVC_ATL_Utilities#64](../../atl/codesnippet/cpp/ccomcurrency-class_12.cpp)]
 
-##  <a name="operator_eq"></a>  Ccomcurrency:: Operator =
+##  <a name="operator_eq"></a>  CComCurrency::operator =
 
 此运算符向 `CComCurrency` 对象赋予新值。
 
@@ -462,7 +464,7 @@ const CComCurrency& operator= (DECIMAL dSrc);
 *cySrc*<br/>
 货币类型的变量。
 
-*sSrc*， *fSrc*， *lSrc*， *bSrc*， *usSrc*， *dSrc*， *cSrc*， *ulSrc*， *dSrc*<br/>
+*sSrc*, *fSrc*, *lSrc*, *bSrc*, *usSrc*, *dSrc*, *cSrc*, *ulSrc*, *dSrc*<br/>
 要分配到的数字值`CComCurrency`对象。
 
 ### <a name="return-value"></a>返回值
@@ -473,7 +475,7 @@ const CComCurrency& operator= (DECIMAL dSrc);
 
 [!code-cpp[NVC_ATL_Utilities#65](../../atl/codesnippet/cpp/ccomcurrency-class_13.cpp)]
 
-##  <a name="operator_-_eq"></a>  Ccomcurrency:: Operator =
+##  <a name="operator_-_eq"></a>  CComCurrency::operator -=
 
 此运算符用于对 `CComCurrency` 对象执行减法并对它赋予结果。
 
@@ -515,7 +517,7 @@ bool operator== (const CComCurrency& cur) const;
 
 [!code-cpp[NVC_ATL_Utilities#67](../../atl/codesnippet/cpp/ccomcurrency-class_15.cpp)]
 
-##  <a name="operator_gt"></a>  Ccomcurrency:: Operator &gt;
+##  <a name="operator_gt"></a>  CComCurrency::operator &gt;
 
 此运算符比较两个 `CComCurrency` 对象以确定较大者。
 
@@ -536,7 +538,7 @@ bool operator>(const CComCurrency& cur) const;
 
 [!code-cpp[NVC_ATL_Utilities#68](../../atl/codesnippet/cpp/ccomcurrency-class_16.cpp)]
 
-##  <a name="operator_gt_eq"></a>  Ccomcurrency:: Operator &gt;=
+##  <a name="operator_gt_eq"></a>  CComCurrency::operator &gt;=
 
 此运算符比较两个 `CComCurrency` 对象以确定是否相等或较大者。
 

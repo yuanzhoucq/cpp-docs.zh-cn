@@ -13,16 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - concurrent_unordered_multimap class
 ms.assetid: 4dada5d7-15df-4382-b9c9-348e75b2f3c1
-ms.openlocfilehash: e1a477e278de2e8ba0f1af43dfdb6081206d86e7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 446060656a79380f85d3faac560bd48910bfb2db
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50450903"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294351"
 ---
 # <a name="concurrentunorderedmultimap-class"></a>concurrent_unordered_multimap 类
 
-`concurrent_unordered_multimap` 类是控制 `std::pair<const K, _Element_type>` 类型元素的长短不一序列的并发安全容器。 序列以支持并发安全追加、元素访问、迭代器访问和迭代器遍历操作的方式表示。
+
+  `concurrent_unordered_multimap` 类是控制 `std::pair<const K, _Element_type>` 类型元素的长短不一序列的并发安全容器。 序列以支持并发安全追加、元素访问、迭代器访问和迭代器遍历操作的方式表示。
 
 ## <a name="syntax"></a>语法
 
@@ -125,7 +126,7 @@ true>>;
 
 **命名空间：** 并发
 
-##  <a name="begin"></a> 开始
+##  <a name="begin"></a> begin
 
 返回一个迭代器，指向并发容器中的第一个元素。 此方法是并发安全。
 
@@ -221,10 +222,10 @@ concurrent_unordered_multimap(
 *_Allocator*<br/>
 此无序多重映射的分配器。
 
-*（_b)*<br/>
+*_Begin*<br/>
 要复制的范围元素中的第一个元素的位置。
 
-*（_e)*<br/>
+*_End*<br/>
 要复制的元素范围以外的第一个元素的位置。
 
 *_Umap*<br/>
@@ -244,7 +245,7 @@ concurrent_unordered_multimap(
 
 最后一个构造函数指定并发无序多重映射 `_Umap` 的移动。
 
-##  <a name="count"></a> 计数
+##  <a name="count"></a> count
 
 计算指定的键相匹配的元素的数目。 此函数是并发安全。
 
@@ -261,7 +262,7 @@ size_type count(const key_type& KVal) const;
 
 密钥容器中的出现次数的次数。
 
-##  <a name="empty"></a> 为空
+##  <a name="empty"></a> empty
 
 测试元素是否存在。 此方法是并发安全。
 
@@ -318,7 +319,7 @@ std::pair<const_iterator,
 
 很可能并发插入操作会导致其他密钥，从而在插入之后开始迭代器和之前末尾迭代器。
 
-##  <a name="find"></a> 查找
+##  <a name="find"></a> find
 
 查找与指定键匹配的元素。 此函数是并发安全。
 
@@ -361,7 +362,7 @@ hasher hash_function() const;
 
 存储的哈希函数对象。
 
-##  <a name="insert"></a> 插入
+##  <a name="insert"></a> insert
 
 将元素添加到`concurrent_unordered_multimap`对象。
 
@@ -397,7 +398,7 @@ typename std::enable_if<!std::is_same<const_iterator,
 *V*<br/>
 插入到映射的值的类型。
 
-*value*<br/>
+*值*<br/>
 要插入的值。
 
 *_Where*<br/>
@@ -406,7 +407,7 @@ typename std::enable_if<!std::is_same<const_iterator,
 *first*<br/>
 要插入的范围的开始处。
 
-*最后一个*<br/>
+*last*<br/>
 要插入的范围的结尾处。
 
 ### <a name="return-value"></a>返回值
@@ -504,7 +505,7 @@ concurrent_unordered_multimap& operator= (concurrent_unordered_multimap&& _Umap)
 
 在清除并发无序多重映射中的所有现有元素后，`operator=` 会将 `_Umap` 的内容复制或移动到并发无序多重映射中。
 
-##  <a name="rehash"></a> 回顾
+##  <a name="rehash"></a> rehash
 
 重新生成哈希表。
 
@@ -539,7 +540,7 @@ size_type size() const;
 
 在存在并发插入时，并发容器中的元素数量可能会在调用此函数后立即更改，甚至会在读取返回值之前。
 
-##  <a name="swap"></a> 交换
+##  <a name="swap"></a> swap
 
 交换两个内容`concurrent_unordered_multimap`对象。 此方法不是并发安全的。
 
@@ -564,7 +565,7 @@ const_local_iterator unsafe_begin(size_type _Bucket) const;
 
 ### <a name="parameters"></a>参数
 
-*（_b)*<br/>
+*_Bucket*<br/>
 存储桶的索引。
 
 ### <a name="return-value"></a>返回值
@@ -610,7 +611,7 @@ size_type unsafe_bucket_size(size_type _Bucket);
 
 ### <a name="parameters"></a>参数
 
-*（_b)*<br/>
+*_Bucket*<br/>
 若要搜索的存储桶。
 
 ### <a name="return-value"></a>返回值
@@ -627,7 +628,7 @@ const_local_iterator unsafe_cbegin(size_type _Bucket) const;
 
 ### <a name="parameters"></a>参数
 
-*（_b)*<br/>
+*_Bucket*<br/>
 存储桶的索引。
 
 ### <a name="return-value"></a>返回值
@@ -644,7 +645,7 @@ const_local_iterator unsafe_cend(size_type _Bucket) const;
 
 ### <a name="parameters"></a>参数
 
-*（_b)*<br/>
+*_Bucket*<br/>
 存储桶的索引。
 
 ### <a name="return-value"></a>返回值
@@ -663,7 +664,7 @@ const_local_iterator unsafe_end(size_type _Bucket) const;
 
 ### <a name="parameters"></a>参数
 
-*（_b)*<br/>
+*_Bucket*<br/>
 存储桶的索引。
 
 ### <a name="return-value"></a>返回值
@@ -695,7 +696,7 @@ iterator unsafe_erase(
 要清除的键值。
 
 *first*<br/>
-*最后一个*<br/>
+*last*<br/>
 迭代器。
 
 ### <a name="return-value"></a>返回值
@@ -724,4 +725,3 @@ size_type unsafe_max_bucket_count() const;
 
 [并发命名空间](concurrency-namespace.md)<br/>
 [并行容器和对象](../../../parallel/concrt/parallel-containers-and-objects.md)
-

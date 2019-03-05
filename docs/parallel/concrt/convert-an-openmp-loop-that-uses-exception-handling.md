@@ -5,12 +5,12 @@ helpviewer_keywords:
 - exception handling, converting from OpenMP to the Concurrency Runtime
 - converting from OpenMP to the Concurrency Runtime, exception handling
 ms.assetid: 03c28196-21ba-439e-8641-afab1c283e1a
-ms.openlocfilehash: 9fa5ff2bcdfa6680dde6e9316d143089bf586671
-ms.sourcegitcommit: ee0103752884425843556a19cf418a504dc3cd02
+ms.openlocfilehash: 118cf3e485fa78ae3eaa5efe34708924b89d6588
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53740493"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285147"
 ---
 # <a name="how-to-convert-an-openmp-loop-that-uses-exception-handling-to-use-the-concurrency-runtime"></a>如何：转换使用异常处理以使用并发运行时的 OpenMP 循环
 
@@ -63,4 +63,3 @@ An error of type 'class std::bad_alloc' occurred.
 [从 OpenMP 迁移至并发运行时](../../parallel/concrt/migrating-from-openmp-to-the-concurrency-runtime.md)<br/>
 [异常处理](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)<br/>
 [并行算法](../../parallel/concrt/parallel-algorithms.md)
-

@@ -25,12 +25,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlArray class
 ms.assetid: 0b503aa8-2357-40af-a326-6654bf1da098
-ms.openlocfilehash: c6a4d522a05885468a0dfec3889fb950b16b847f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ca4b0f4c8ffc3382984660caec7ae04107c8797a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50442674"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301841"
 ---
 # <a name="catlarray-class"></a>CAtlArray 类
 
@@ -58,10 +58,10 @@ class CAtlArray
 |||
 |-|-|
 |[添加](#add)|调用此方法以将元素添加到数组对象。|
-|[追加](#append)|调用此方法以将一个数组的内容添加到另一个末尾。|
+|[Append](#append)|调用此方法以将一个数组的内容添加到另一个末尾。|
 |[AssertValid](#assertvalid)|调用此方法用于确认数组对象有效。|
 |[CAtlArray](#catlarray)|构造函数。|
-|[~ CAtlArray](#dtor)|析构函数。|
+|[~CAtlArray](#dtor)|析构函数。|
 |[复制](#copy)|调用此方法将一个数组的元素复制到另一个。|
 |[FreeExtra](#freeextra)|调用此方法以从数组中移除任何空元素。|
 |[GetAt](#getat)|调用此方法从数组对象中检索单个元素。|
@@ -80,7 +80,7 @@ class CAtlArray
 
 |||
 |-|-|
-|[运算符&#91;&#93;](#operator_at)|调用此运算符可返回数组中的元素的引用。|
+|[operator &#91;&#93;](#operator_at)|调用此运算符可返回数组中的元素的引用。|
 
 ### <a name="typedefs"></a>Typedef
 
@@ -114,7 +114,7 @@ size_t Add();
 
 ### <a name="parameters"></a>参数
 
-*元素*<br/>
+*element*<br/>
 要添加到数组的元素。
 
 ### <a name="return-value"></a>返回值
@@ -190,7 +190,7 @@ CAtlArray() throw();
 
 [!code-cpp[NVC_ATL_Utilities#4](../../atl/codesnippet/cpp/catlarray-class_4.cpp)]
 
-##  <a name="dtor"></a>  CAtlArray:: ~ CAtlArray
+##  <a name="dtor"></a>  CAtlArray::~CAtlArray
 
 析构函数。
 
@@ -357,7 +357,7 @@ void InsertAt(size_t iElement, INARGTYPE element, size_t nCount = 1);
 *iElement*<br/>
 元素的位置插入索引。
 
-*元素*<br/>
+*element*<br/>
 要插入的元素的值。
 
 *nCount*<br/>
@@ -393,7 +393,7 @@ bool IsEmpty() const throw();
 
 [!code-cpp[NVC_ATL_Utilities#10](../../atl/codesnippet/cpp/catlarray-class_10.cpp)]
 
-##  <a name="operator_at"></a>  CAtlArray::operator]
+##  <a name="operator_at"></a>  CAtlArray::operator []
 
 调用此运算符可返回数组中的元素的引用。
 
@@ -482,7 +482,7 @@ void SetAt(size_t iElement, INARGTYPE element);
 *iElement*<br/>
 指向要设置的数组元素的索引。
 
-*元素*<br/>
+*element*<br/>
 指定元素的新值。
 
 ### <a name="remarks"></a>备注
@@ -536,7 +536,7 @@ void SetAtGrow(size_t iElement, INARGTYPE element);
 *iElement*<br/>
 指向要设置的数组元素的索引。
 
-*元素*<br/>
+*element*<br/>
 指定元素的新值。
 
 ### <a name="remarks"></a>备注

@@ -48,12 +48,12 @@ helpviewer_keywords:
 - CPagerCtrl [MFC], SetChild
 - CPagerCtrl [MFC], SetScrollPos
 ms.assetid: 65ac58dd-4f5e-4b7e-b15c-e0d435a7e884
-ms.openlocfilehash: cd3eed89753031de64d35a2b3602b1fb42356123
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c782d5761323129eccf7ee129d877128c400d93a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613533"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270715"
 ---
 # <a name="cpagerctrl-class"></a>CPagerCtrl 类
 
@@ -617,4 +617,3 @@ void SetScrollPos(int iPos);
 [CPagerCtrl 类](../../mfc/reference/cpagerctrl-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>
 [页导航控件](/windows/desktop/Controls/pager-controls)
-

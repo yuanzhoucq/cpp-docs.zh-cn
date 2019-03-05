@@ -1,5 +1,5 @@
 ---
-title: MFC ActiveX 控件：创建 Windows 控件的子类
+title: MFC ActiveX 控件：子类化 Windows 控件
 ms.date: 09/12/2018
 f1_keywords:
 - precreatewindow
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], creating
 - IsSubclassed method [MFC]
 ms.assetid: 3236d4de-401f-49b7-918d-c84559ecc426
-ms.openlocfilehash: 24284af7766f0fd968ca08724440509bc171fba6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 08cdb90537dd50855a5bf223fbe54d58dfd6c365
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50576639"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277048"
 ---
-# <a name="mfc-activex-controls-subclassing-a-windows-control"></a>MFC ActiveX 控件：创建 Windows 控件的子类
+# <a name="mfc-activex-controls-subclassing-a-windows-control"></a>MFC ActiveX 控件：子类化 Windows 控件
 
 本文介绍了通过将常用的 Windows 控件子类化来创建 ActiveX 控件的过程。 将现有的 Windows 控件子类化是一种开发 ActiveX 控件的快速方法。 新的控件将具有已被子类化的 Windows 控件的能力，如绘制和响应鼠标单击。 MFC ActiveX 控件示例[按钮](../visual-cpp-samples.md)是子类化 Windows 控件的一个示例。
 
@@ -98,4 +98,3 @@ ActiveX 控件容器可以设计为自行执行消息反射，从而不必使用
 ## <a name="see-also"></a>请参阅
 
 [MFC ActiveX 控件](../mfc/mfc-activex-controls.md)
-

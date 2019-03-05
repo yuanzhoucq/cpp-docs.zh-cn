@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CInternetSession [MFC], SetCookie
 - CInternetSession [MFC], SetOption
 ms.assetid: ef54feb4-9d0f-4e65-a45d-7a4cf6c40e51
-ms.openlocfilehash: 216f3bf0ce62eb6e69ad0650289c4c2d91f95159
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 5ad1a1a0dde32358828d58a8f237337c4f62f3e5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178156"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261292"
 ---
 # <a name="cinternetsession-class"></a>CInternetSession 类
 
@@ -66,11 +66,11 @@ class CInternetSession : public CObject
 |[CInternetSession::GetContext](#getcontext)|当 Internet 会话终止时，请关闭 Internet 连接。|
 |[CInternetSession::GetCookie](#getcookie)|返回指定的 URL 和所有父 Url 的 cookie。|
 |[CInternetSession::GetCookieLength](#getcookielength)|检索指定的长度存储在缓冲区中的 cookie 的变量。|
-|[Cinternetsession:: Getftpconnection](#getftpconnection)|打开与服务器的 FTP 会话。 登录用户。|
-|[Cinternetsession:: Getgopherconnection](#getgopherconnection)|将打开 gopher 服务器的应用程序尝试打开的连接。|
-|[Cinternetsession:: Gethttpconnection](#gethttpconnection)|将打开用于尝试打开的连接的应用程序的 HTTP 服务器。|
+|[CInternetSession::GetFtpConnection](#getftpconnection)|打开与服务器的 FTP 会话。 登录用户。|
+|[CInternetSession::GetGopherConnection](#getgopherconnection)|将打开 gopher 服务器的应用程序尝试打开的连接。|
+|[CInternetSession::GetHttpConnection](#gethttpconnection)|将打开用于尝试打开的连接的应用程序的 HTTP 服务器。|
 |[CInternetSession::OnStatusCallback](#onstatuscallback)|启用状态回调时更新操作的状态。|
-|[Cinternetsession:: Openurl](#openurl)|分析并打开一个 URL。|
+|[CInternetSession::OpenURL](#openurl)|分析并打开一个 URL。|
 |[CInternetSession::SetCookie](#setcookie)|为指定的 URL 设置 cookie。|
 |[CInternetSession::SetOption](#setoption)|设置 Internet 会话选项。|
 
@@ -294,7 +294,7 @@ static DWORD GetCookieLength(
 
 此值可供[GetCookie](#getcookie)。
 
-## <a name="getftpconnection"></a>  Cinternetsession:: Getftpconnection
+## <a name="getftpconnection"></a>  CInternetSession::GetFtpConnection
 
 调用此成员函数以建立 FTP 连接并获取一个指向`CFtpConnection`对象。
 
@@ -343,7 +343,7 @@ CFtpConnection* GetFtpConnection(
 
 有关示例，请参阅[CFtpFileFind](../../mfc/reference/cftpfilefind-class.md)。
 
-## <a name="getgopherconnection"></a>  Cinternetsession:: Getgopherconnection
+## <a name="getgopherconnection"></a>  CInternetSession::GetGopherConnection
 
 调用此成员函数建立新的 gopher 连接，获取一个指向`CGopherConnection`对象。
 
@@ -377,7 +377,7 @@ CGopherConnection* GetGopherConnection(
 
 `GetGopherConnection` 连接到 gopher 服务器，并创建并返回一个指向`CGopherConnection`对象。 它不执行任何服务器上的特定操作。 如果想要读取或写入数据，例如，必须执行这些操作作为单独的步骤。 请参见类[CGopherConnection](../../mfc/reference/cgopherconnection-class.md)， [CGopherFile](../../mfc/reference/cgopherfile-class.md)，并[CGopherFileFind](../../mfc/reference/cgopherfilefind-class.md)有关搜索文件，打开文件，并读取或写入文件。 有关浏览 FTP 站点的信息，请参阅成员函数[OpenURL](#openurl)。 请参阅文章[Internet 编程与 WinInet](../../mfc/win32-internet-extensions-wininet.md)中执行常见 gopher 连接任务的步骤。
 
-## <a name="gethttpconnection"></a>  Cinternetsession:: Gethttpconnection
+## <a name="gethttpconnection"></a>  CInternetSession::GetHttpConnection
 
 调用此成员函数以建立 HTTP 连接，并获取一个指向`CHttpConnection`对象。
 
@@ -453,7 +453,7 @@ virtual void OnStatusCallback(
 
 *DwInternetStatus*参数指示正在执行的操作，并确定的内容*lpvStatusInformation*将为。 *dwStatusInformationLength*指示中包含的数据的长度*lpvStatusInformation*。 以下状态的值*dwInternetStatus*定义，如下所示：
 
-|值|含义|
+|“值”|含义|
 |-----------|-------------|
 |INTERNET_STATUS_RESOLVING_NAME|查找名称中包含的 IP 地址*lpvStatusInformation*。|
 |INTERNET_STATUS_NAME_RESOLVED|已成功找到名称中包含的 IP 地址*lpvStatusInformation*。|
@@ -477,7 +477,7 @@ virtual void OnStatusCallback(
 
 有关异步操作的详细信息，请参阅文章[Internet 前几个步骤：WinInet](../../mfc/wininet-basics.md)。
 
-## <a name="openurl"></a>  Cinternetsession:: Openurl
+## <a name="openurl"></a>  CInternetSession::OpenURL
 
 调用此成员函数将指定的请求发送到 HTTP 服务器，并允许客户端可以指定其他 RFC822 MIME 或要连同请求一起发送 HTTP 标头。
 
@@ -532,7 +532,7 @@ CStdioFile* OpenURL(
 |file://|`CStdioFile*`|
 |http://|`CHttpFile*`|
 |gopher://|`CGopherFile*`|
-|ftp: / /|`CInternetFile*`|
+|ftp://|`CInternetFile*`|
 
 ### <a name="remarks"></a>备注
 

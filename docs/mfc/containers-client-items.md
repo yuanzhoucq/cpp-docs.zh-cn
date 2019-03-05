@@ -5,12 +5,12 @@ helpviewer_keywords:
 - OLE containers [MFC], client items
 - client items and OLE containers
 ms.assetid: 231528b5-0744-4f83-8897-083bf55ed087
-ms.openlocfilehash: e0d56d4a8f25828de954a78e9bafd8df150c7ff9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0c7f4a63cb9a31b52be2d3574ddad29313df6a4d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437006"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298277"
 ---
 # <a name="containers-client-items"></a>容器：客户端项
 
@@ -29,6 +29,6 @@ OLE 应用程序中的文档类派生自类[COleDocument](../mfc/reference/coled
 [容器](../mfc/containers.md)<br/>
 [容器：复合文件](../mfc/containers-compound-files.md)<br/>
 [容器：用户界面问题](../mfc/containers-user-interface-issues.md)<br/>
-[容器：高级功能](../mfc/containers-advanced-features.md)<br/>
+[容器：高级的功能](../mfc/containers-advanced-features.md)<br/>
 [COleClientItem 类](../mfc/reference/coleclientitem-class.md)<br/>
 [COleServerItem 类](../mfc/reference/coleserveritem-class.md)

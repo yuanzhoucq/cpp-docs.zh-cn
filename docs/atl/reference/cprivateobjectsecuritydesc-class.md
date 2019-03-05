@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - CPrivateObjectSecurityDesc class
 ms.assetid: 2c4bbb13-bf99-4833-912a-197f6815bb5d
-ms.openlocfilehash: 2617113f2805f8d1c56e7fa6cbebfe669709c100
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 99b47c15af4cdb87fb35d5c7342ea2719d341868
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694031"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284380"
 ---
 # <a name="cprivateobjectsecuritydesc-class"></a>CPrivateObjectSecurityDesc 类
 
@@ -86,7 +86,7 @@ bool ConvertToAutoInherit(
 *pParent*<br/>
 指向[CSecurityDesc](../../atl/reference/csecuritydesc-class.md)对象，用于引用该对象的父容器。 如果没有父容器，此参数为 NULL。
 
-*对象类型*<br/>
+*ObjectType*<br/>
 指向`GUID`结构，它标识与当前对象相关联的对象的类型。 设置*ObjectType*到; 如果对象不具有一个 GUID 为 NULL。
 
 *bIsDirectoryObject*<br/>
@@ -160,13 +160,13 @@ bool Create(
 *bIsDirectoryObject*<br/>
 指定新的对象是否可以包含其他对象。 值为 true 指示新对象是一个容器。 如果值为 false 指示新的对象不是容器。
 
-*令牌*<br/>
+*Token*<br/>
 引用[CAccessToken](../../atl/reference/caccesstoken-class.md)以其名义创建对象的客户端进程的对象。
 
 *GenericMapping*<br/>
 指向[GENERIC_MAPPING](/windows/desktop/api/winnt/ns-winnt-_generic_mapping)结构，它指定从每个通用的权限对象的特定权限的映射。
 
-*对象类型*<br/>
+*ObjectType*<br/>
 指向`GUID`结构，它标识与当前对象相关联的对象的类型。 设置*ObjectType*到; 如果对象不具有一个 GUID 为 NULL。
 
 *bIsContainerObject*<br/>
@@ -261,7 +261,7 @@ bool Set(
 *GenericMapping*<br/>
 指向[GENERIC_MAPPING](/windows/desktop/api/winnt/ns-winnt-_generic_mapping)结构，它指定从每个通用的权限对象的特定权限的映射。
 
-*令牌*<br/>
+*Token*<br/>
 引用[CAccessToken](../../atl/reference/caccesstoken-class.md)以其名义创建对象的客户端进程的对象。
 
 *AutoInheritFlags*<br/>

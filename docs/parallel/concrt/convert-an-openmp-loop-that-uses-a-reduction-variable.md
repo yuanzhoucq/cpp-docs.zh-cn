@@ -1,18 +1,18 @@
 ---
-title: 如何：将使用缩减变量的 OpenMP 循环转换为使用并发运行时
+title: 如何：转换使用缩减变量以使用并发运行时的 OpenMP 循环
 ms.date: 11/04/2016
 helpviewer_keywords:
 - converting from OpenMP to the Concurrency Runtime, reduction variables
 - reduction variables, converting from OpenMP to the Concurrency Runtime
 ms.assetid: 96623f36-5e57-4d3f-8c13-669e6cd535b1
-ms.openlocfilehash: b58f6025c41091b39375c566d2c1d4b4798437b2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d75e115bdb1d13c9e8f45ed67d0f3993eac1b387
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50633072"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57257314"
 ---
-# <a name="how-to-convert-an-openmp-loop-that-uses-a-reduction-variable-to-use-the-concurrency-runtime"></a>如何：将使用缩减变量的 OpenMP 循环转换为使用并发运行时
+# <a name="how-to-convert-an-openmp-loop-that-uses-a-reduction-variable-to-use-the-concurrency-runtime"></a>如何：转换使用缩减变量以使用并发运行时的 OpenMP 循环
 
 此示例演示如何将转换 OpenMP[并行](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[有关](../../parallel/openmp/reference/for-openmp.md)使用循环[减少](../../parallel/openmp/reference/reduction.md)子句，以使用并发运行时。
 
@@ -41,10 +41,9 @@ The sum of the first 35 Fibonacci numbers is 14930351.
 
 复制示例代码并将其粘贴到 Visual Studio 项目中，或将其粘贴在文件中名为`concrt-omp-fibonacci-reduction.cpp`然后在 Visual Studio 命令提示符窗口中运行以下命令。
 
-**cl.exe /EHsc /openmp concrt-omp-斐波那契-reduction.cpp**
+**cl.exe /EHsc /openmp concrt-omp-fibonacci-reduction.cpp**
 
 ## <a name="see-also"></a>请参阅
 
 [从 OpenMP 迁移至并发运行时](../../parallel/concrt/migrating-from-openmp-to-the-concurrency-runtime.md)<br/>
 [并行容器和对象](../../parallel/concrt/parallel-containers-and-objects.md)
-

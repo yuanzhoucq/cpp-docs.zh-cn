@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - CCRTHeap class
 ms.assetid: 321bd6c5-1856-4ff7-8590-95044a1209f7
-ms.openlocfilehash: b761fc3d9d9874e676fad8c74a82f1f08d714d61
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3c5030b9cfbfd636a783d27bcc8f9469f8348acb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50647304"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276268"
 ---
 # <a name="ccrtheap-class"></a>CCRTHeap 类
 
@@ -34,10 +34,10 @@ class CCRTHeap : public IAtlMemMgr
 
 |名称|描述|
 |----------|-----------------|
-|[Ccrtheap:: Allocate](#allocate)|调用此方法来分配内存块。|
-|[Ccrtheap:: Free](#free)|调用此方法来释放此内存管理器分配的内存块。|
+|[CCRTHeap::Allocate](#allocate)|调用此方法来分配内存块。|
+|[CCRTHeap::Free](#free)|调用此方法来释放此内存管理器分配的内存块。|
 |[CCRTHeap::GetSize](#getsize)|调用此方法以获取此内存管理器分配的内存块的分配的大小。|
-|[Ccrtheap:: Allocate](#reallocate)|调用此方法以重新分配由该内存管理器分配的内存。|
+|[CCRTHeap::Reallocate](#reallocate)|调用此方法以重新分配由该内存管理器分配的内存。|
 
 ## <a name="remarks"></a>备注
 

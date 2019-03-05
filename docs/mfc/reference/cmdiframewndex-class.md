@@ -156,12 +156,12 @@ helpviewer_keywords:
 - CMDIFrameWndEx [MFC], m_bCanCovertControlBarToMDIChild
 - CMDIFrameWndEx [MFC], m_bDisableSetRedraw
 ms.assetid: dbcafcb3-9a7a-4f11-9dfe-ba57565c81d0
-ms.openlocfilehash: 7ed2d1de2a91f90cd4e7efecac728e66f86d95a6
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 81d227c241adf0ce72ccd4a554134d7d858b4a6d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178625"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275423"
 ---
 # <a name="cmdiframewndex-class"></a>CMDIFrameWndEx 类
 
@@ -197,7 +197,7 @@ class CMDIFrameWndEx : public CMDIFrameWnd
 |[CMDIFrameWndEx::EnableFullScreenMainMenu](#enablefullscreenmainmenu)|显示或隐藏在全屏幕模式下的主菜单。|
 |[CMDIFrameWndEx::EnableFullScreenMode](#enablefullscreenmode)|启用框架窗口的全屏幕模式。|
 |[CMDIFrameWndEx::EnableLoadDockState](#enableloaddockstate)|启用或禁用的插接状态的加载。|
-|[Cmdiframewndex:: Enablemditabbedgroups](#enablemditabbedgroups)|启用或禁用 MDI 选项卡式组功能。|
+|[CMDIFrameWndEx::EnableMDITabbedGroups](#enablemditabbedgroups)|启用或禁用 MDI 选项卡式组功能。|
 |[CMDIFrameWndEx::EnableMDITabs](#enablemditabs)|启用或禁用 MDI 选项卡功能。 启用时，框架窗口将显示每个 MDI 子窗口的选项卡。|
 |[CMDIFrameWndEx::EnableMDITabsLastActiveActivation](#enablemditabslastactiveactivation)|指定当用户关闭当前选项卡是否应激活的最后一个活动选项卡。|
 |[CMDIFrameWndEx::EnablePaneMenu](#enablepanemenu)|启用或禁用自动创建和管理的弹出窗口窗格菜单中，显示的应用程序窗格的列表。  .|
@@ -221,7 +221,7 @@ class CMDIFrameWndEx : public CMDIFrameWnd
 |[CMDIFrameWndEx::IsPointNearDockSite](#ispointneardocksite)|确定指定的点是否在停靠站点附近。|
 |[CMDIFrameWndEx::IsPrintPreview](#isprintpreview)|确定框架窗口是否在打印预览模式下。|
 |[CMDIFrameWndEx::LoadFrame](#loadframe)|创建框架窗口中的资源信息。 （重写 `CMDIFrameWnd::LoadFrame`。）|
-|[Cmdiframewndex:: Loadmdistate](#loadmdistate)|加载 MDI 选项卡式组的指定的布局和以前打开的文档列表。|
+|[CMDIFrameWndEx::LoadMDIState](#loadmdistate)|加载 MDI 选项卡式组的指定的布局和以前打开的文档列表。|
 |[CMDIFrameWndEx::MDITabMoveToNextGroup](#mditabmovetonextgroup)|将从当前处于活动状态的选项卡式窗口的活动选项卡移动到下一步或上一个选项卡式组。|
 |[CMDIFrameWndEx::MDITabNewGroup](#mditabnewgroup)|创建具有单个窗口的新选项卡式的组。|
 |[CMDIFrameWndEx::NegotiateBorderSpace](#negotiateborderspace)|在 OLE 就地激活过程协商在框架窗口的边框空间。|
@@ -1132,7 +1132,7 @@ BOOL IsPointNearDockSite(
 
 ### <a name="parameters"></a>参数
 
-*点*<br/>
+*point*<br/>
 [in]屏幕坐标中指定的点。
 
 *dwBarAlignment*<br/>
@@ -1193,7 +1193,7 @@ virtual BOOL LoadFrame(
 
 如果该方法成功，否则为 FALSE，则为 TRUE。
 
-##  <a name="loadmdistate"></a>  Cmdiframewndex:: Loadmdistate
+##  <a name="loadmdistate"></a>  CMDIFrameWndEx::LoadMDIState
 
 加载 MDI 选项卡式组的指定的布局和以前打开的文档列表。
 
@@ -1501,7 +1501,7 @@ virtual BOOL OnMenuButtonToolHitTest(
 *pButton*<br/>
 [in]工具栏按钮。
 
-*PTI*<br/>
+*pTI*<br/>
 [out]指向[TOOLINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa)结构。
 
 ### <a name="return-value"></a>返回值
@@ -1592,7 +1592,7 @@ virtual BOOL OnShowMDITabContextMenu(
 
 ### <a name="parameters"></a>参数
 
-*点*<br/>
+*point*<br/>
 [in]以屏幕坐标表示菜单的位置。
 
 *dwAllowedItems*<br/>
@@ -1745,7 +1745,7 @@ CBasePane* PaneFromPoint(
 
 ### <a name="parameters"></a>参数
 
-*点*<br/>
+*point*<br/>
 [in]在点 （用屏幕坐标表示）。
 
 *nSensitivity*<br/>
@@ -1888,7 +1888,7 @@ void SetupToolbarMenu(
 
 ### <a name="parameters"></a>参数
 
-*菜单*<br/>
+*menu*<br/>
 [in]对引用[CMenu 类](../../mfc/reference/cmenu-class.md)要修改对象。
 
 *uiViewUserToolbarCmdFirst*<br/>

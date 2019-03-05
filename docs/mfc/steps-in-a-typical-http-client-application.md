@@ -9,18 +9,18 @@ helpviewer_keywords:
 - Internet client applications [MFC], HTTP table
 - WinInet classes [MFC], HTTP
 ms.assetid: f86552e8-8acd-4b23-bdc5-0c3a247ebd74
-ms.openlocfilehash: a73d220f4ab7f58960ccfe4b09f98f0cd0956406
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 59b585d3e6b8c9f13c585f5a712d33abd6123f67
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630784"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296470"
 ---
 # <a name="steps-in-a-typical-http-client-application"></a>典型 HTTP 客户端应用程序中的步骤
 
 下表显示了可能会执行典型 HTTP 客户端应用程序中的步骤：
 
-|您的目标|采取的操作|效果|
+|您的目标|采取的操作|Effects|
 |---------------|----------------------|-------------|
 |开始 HTTP 会话。|创建[CInternetSession](../mfc/reference/cinternetsession-class.md)对象。|初始化 WinInet 并连接到服务器。|
 |连接到 HTTP 服务器。|使用[cinternetsession:: Gethttpconnection](../mfc/reference/cinternetsession-class.md#gethttpconnection)。|返回[CHttpConnection](../mfc/reference/chttpconnection-class.md)对象。|

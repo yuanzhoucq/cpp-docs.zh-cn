@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CFontHolder [MFC], SetFont
 - CFontHolder [MFC], m_pFont
 ms.assetid: 728ab472-0c97-440d-889f-1324c6e1b6b8
-ms.openlocfilehash: 24a33aafa279f47bcfabd1ac3f3ee8d4abd4c731
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 623ce5da46716e3f9a562862fc0375fb8704bb21
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50659636"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297874"
 ---
 # <a name="cfontholder-class"></a>CFontHolder 类
 
@@ -74,7 +74,7 @@ class CFontHolder
 
 `CFontHolder` 没有基类。
 
-此类用于实现您的控件的自定义字体属性。 有关创建此类属性的信息，请参阅文章[ActiveX 控件： 使用字体](../../mfc/mfc-activex-controls-using-fonts.md)。
+此类用于实现您的控件的自定义字体属性。 有关创建此类属性的信息，请参阅文章[ActiveX 控件：使用字体](../../mfc/mfc-activex-controls-using-fonts.md)。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 

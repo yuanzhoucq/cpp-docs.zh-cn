@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CD2DLayer [MFC], IsValid
 - CD2DLayer [MFC], m_pLayer
 ms.assetid: 2f96378e-66bb-40d1-9661-6afe324de3c1
-ms.openlocfilehash: cd4452eeb9e600aeabaec1b54fd40217514e02eb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 28ebe19b0f28692116a0b95721ff2e5490ad7e68
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50531711"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270855"
 ---
 # <a name="cd2dlayer-class"></a>CD2DLayer 类
 
@@ -48,7 +48,7 @@ class CD2DLayer : public CD2DResource;
 |名称|描述|
 |----------|-----------------|
 |[CD2DLayer::CD2DLayer](#cd2dlayer)|构造一个 CD2DLayer 对象。|
-|[CD2DLayer:: ~ CD2DLayer](#_dtorcd2dlayer)|析构函数。 当 D2D 层对象被销毁时调用。|
+|[CD2DLayer::~CD2DLayer](#_dtorcd2dlayer)|析构函数。 当 D2D 层对象被销毁时调用。|
 
 ### <a name="public-methods"></a>公共方法
 

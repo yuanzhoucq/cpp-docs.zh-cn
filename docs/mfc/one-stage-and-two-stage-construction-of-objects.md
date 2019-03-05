@@ -7,20 +7,20 @@ helpviewer_keywords:
 - objects [MFC], graphic objects
 - one-stage and two-stage construction of objects [MFC]
 ms.assetid: 5a1c410c-4a4b-4dd9-a2ec-ced831aa7f21
-ms.openlocfilehash: bdfb7879bc926435bdcd72d6776646c449ffef80
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 871db7abd2682d557bf2e80e9cb97624f0dc53a6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50623309"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263632"
 ---
 # <a name="one-stage-and-two-stage-construction-of-objects"></a>对象的一阶段和两阶段构建
 
 您可以选择两种技术可用于创建图形对象，如钢笔和画笔：
 
-- *一阶段构造*： 构造并初始化该对象在一个阶段，所有这些都有构造函数中的。
+- *一阶段构造*:构造并在一个阶段中，所有与构造函数中初始化对象。
 
-- *两阶段构造*： 构造并初始化该对象在两个单独的阶段。 构造函数创建对象并初始化函数对其进行初始化。
+- *两阶段构造*:构造并在两个单独的阶段中初始化对象。 构造函数创建对象并初始化函数对其进行初始化。
 
 两阶段构造始终是更安全的。 一阶段构造中构造函数可能会引发异常，如果提供不正确的参数或内存分配失败。 尽管您需要检查失败，将通过两阶段构造，避免该问题。 在任一情况下，销毁的对象是相同的过程。
 
@@ -46,4 +46,3 @@ ms.locfileid: "50623309"
 ## <a name="see-also"></a>请参阅
 
 [图形对象](../mfc/graphic-objects.md)
-

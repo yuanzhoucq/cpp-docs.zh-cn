@@ -5,12 +5,12 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], properties
 - properties [MFC], custom
 ms.assetid: 85af5167-74c7-427b-b8f3-e0d7b73942e5
-ms.openlocfilehash: 2cc9cfa1886c6ba8e714736e0192b56bf3b154f2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e02d5523b894f89aa93c8d2765a128920afa2353
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496416"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284198"
 ---
 # <a name="mfc-activex-controls-adding-custom-properties"></a>MFC ActiveX 控件：添加自定义属性
 
@@ -22,7 +22,7 @@ ms.locfileid: "50496416"
 
 - [添加属性向导正在更改用于自定义属性](#_core_classwizard_changes_for_custom_properties)
 
-自定义属性有四种实现的： 成员变量、 通知、 Get/Set 方法与参数化成员变量。
+自定义属性有四种实现的：成员变量，并发出通知，Get/Set 方法的成员变量和参数化。
 
 - 成员变量实现
 
@@ -38,7 +38,7 @@ ms.locfileid: "50496416"
 
 - 参数化的实现
 
-   添加属性向导支持参数化的实现。 （有时称为属性数组） 的参数化的属性可以用于通过您的控件的单个属性访问的一组值。 此实现的调度映射项宏是 DISP_PROPERTY_PARAM。 有关实现此类型的详细信息，请参阅[实现参数化属性](../mfc/mfc-activex-controls-advanced-topics.md)在文章的 ActiveX 控件： 高级主题。
+   添加属性向导支持参数化的实现。 （有时称为属性数组） 的参数化的属性可以用于通过您的控件的单个属性访问的一组值。 此实现的调度映射项宏是 DISP_PROPERTY_PARAM。 有关实现此类型的详细信息，请参阅[实现参数化属性](../mfc/mfc-activex-controls-advanced-topics.md)文章 ActiveX 控件中：高级的主题。
 
 ##  <a name="_core_using_classwizard_to_add_a_custom_property"></a> 使用添加属性向导添加自定义属性
 

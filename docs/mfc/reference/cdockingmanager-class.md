@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CDockingManager [MFC], m_nTimeOutBeforeDockingBarDock
 - CDockingManager [MFC], m_nTimeOutBeforeToolBarDock
 ms.assetid: 98e69c43-55d8-4f43-b861-4fda80ec1e32
-ms.openlocfilehash: e1cc4a4a0d6841523aaafcc1865173ba5402948c
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 268a46e1bdecc1ea468c152fd0ed480873c36591
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519970"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260382"
 ---
 # <a name="cdockingmanager-class"></a>CDockingManager 类
 
@@ -521,7 +521,7 @@ void BuildPanesMenu(
 
 ### <a name="parameters"></a>参数
 
-*菜单*<br/>
+*menu*<br/>
 [in]要添加的停靠窗格和工具栏和名称的菜单。
 
 *bToolbarsOnly*<br/>
@@ -1170,7 +1170,7 @@ BOOL IsPointNearDockSite(
 
 ### <a name="parameters"></a>参数
 
-*点*<br/>
+*point*<br/>
 [in]指定的点。
 
 *dwBarAlignment*<br/>
@@ -1227,7 +1227,7 @@ void LockUpdate(BOOL bLock);
 
 ### <a name="parameters"></a>参数
 
-*块*<br/>
+*bLock*<br/>
 [in]如果窗口被锁定，则为 TRUEFALSE 否则为。
 
 ### <a name="remarks"></a>备注
@@ -1346,7 +1346,7 @@ void OnPaneContextMenu(CPoint point);
 
 ### <a name="parameters"></a>参数
 
-*点*<br/>
+*point*<br/>
 [in]指定菜单的位置。
 
 ##  <a name="panefrompoint"></a>  CDockingManager::PaneFromPoint
@@ -1372,7 +1372,7 @@ virtual CBasePane* PaneFromPoint(
 
 ### <a name="parameters"></a>参数
 
-*点*<br/>
+*point*<br/>
 [in]指定以屏幕坐标，以检查点。
 
 *nSensitivity*<br/>
@@ -1639,8 +1639,8 @@ static void SetDockingMode(
 *dockMode*<br/>
 指定新的停靠模式。 有关详细信息，请参阅“备注”部分。
 
-*主题*<br/>
-指定要用于智能停靠标记的主题。 它可以是下列枚举值之一： AFX_SDT_DEFAULT，AFX_SDT_VS2005，AFX_SDT_VS2008。
+*theme*<br/>
+指定要用于智能停靠标记的主题。 它可以是下列枚举值之一：AFX_SDT_DEFAULT, AFX_SDT_VS2005, AFX_SDT_VS2008.
 
 ### <a name="remarks"></a>备注
 
@@ -1760,7 +1760,7 @@ static AFX_SMARTDOCK_THEME __stdcall GetSmartDockingTheme();
 
 ### <a name="return-value"></a>返回值
 
-返回下列枚举值之一： AFX_SDT_DEFAULT，AFX_SDT_VS2005，AFX_SDT_VS2008。
+返回下列枚举值之一：AFX_SDT_DEFAULT, AFX_SDT_VS2005, AFX_SDT_VS2008.
 
 ### <a name="remarks"></a>备注
 
