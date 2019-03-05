@@ -12,12 +12,12 @@ helpviewer_keywords:
 - rich edit controls [MFC], and CRichEditDoc
 - CRichEditView class [MFC], and CRichEditCtrl
 ms.assetid: 4b31c2cc-6ea1-4146-b7c5-b0b5b419f14d
-ms.openlocfilehash: 92134d0bd4d02bff7aeadd5e9ca7438c61de3bec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 349a8b5c26b7260c9af496d0f4a3a997ee753020
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50586155"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258094"
 ---
 # <a name="classes-related-to-rich-edit-controls"></a>与 Rich Edit 控件相关的类
 
@@ -27,4 +27,3 @@ ms.locfileid: "50586155"
 
 [使用 CRichEditCtrl](../mfc/using-cricheditctrl.md)<br/>
 [控件](../mfc/controls-mfc.md)
-

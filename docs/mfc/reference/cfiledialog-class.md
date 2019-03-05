@@ -132,12 +132,12 @@ helpviewer_keywords:
 - CFileDialog [MFC], OnTypeChange
 - CFileDialog [MFC], m_ofn
 ms.assetid: fda4fd3c-08b8-4ce0-8e9d-7bab23f8c6c0
-ms.openlocfilehash: 87f99b4f037c8cc881b33e1d07b4f07596ee9a1b
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: aaa05fc3e97fe690e8d6a0cd9eba826c482b410d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694538"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262098"
 ---
 # <a name="cfiledialog-class"></a>CFileDialog 类
 
@@ -204,7 +204,7 @@ class CFileDialog : public CCommonDialog
 |[CFileDialog::SetControlLabel](#setcontrollabel)|设置按钮文本或编辑框标签等控件，与关联的文本。|
 |[CFileDialog::SetControlState](#setcontrolstate)|设置当前可见性，并已启用的给定控件的状态。|
 |[CFileDialog::SetControlText](#setcontroltext)|在资源管理器样式设置为指定的控件的文本**开放**或**另存为**公共对话框。|
-|[Cfiledialog:: Setdefext](#setdefext)|设置资源管理器样式的默认文件扩展名**开放**或**另存为**公共对话框。|
+|[CFileDialog::SetDefExt](#setdefext)|设置资源管理器样式的默认文件扩展名**开放**或**另存为**公共对话框。|
 |[CFileDialog::SetEditBoxText](#seteditboxtext)|在编辑框控件中设置的当前文本。|
 |[CFileDialog::SetProperties](#setproperties)|提供一个属性存储，它定义将默认值用于正在保存的项。|
 |[CFileDialog::SetSelectedControlItem](#setselectedcontrolitem)|选项按钮组或在对话框中找到一个组合框中设置特定项的选定的状态。|
@@ -251,7 +251,7 @@ class CFileDialog : public CCommonDialog
 
 - [CDialog::OnSetFont](../../mfc/reference/cdialog-class.md#onsetfont)
 
-为 windows 消息`CFileDialog`类差异取决于正在使用什么操作系统。 例如，Windows XP 不支持[CDialog::OnCancel](../../mfc/reference/cdialog-class.md#oncancel)并[CDialog::OnOK](../../mfc/reference/cdialog-class.md#onok)为`CFileDialog`类。 但是，Windows Vista 和更高版本操作系统支持它们。 有关生成的不同消息和接收它们的顺序的详细信息，请参阅[CFileDialog 示例： 日志记录事件的顺序](../../visual-cpp-samples.md)。
+为 windows 消息`CFileDialog`类差异取决于正在使用什么操作系统。 例如，Windows XP 不支持[CDialog::OnCancel](../../mfc/reference/cdialog-class.md#oncancel)并[CDialog::OnOK](../../mfc/reference/cdialog-class.md#onok)为`CFileDialog`类。 但是，Windows Vista 和更高版本操作系统支持它们。 有关生成的不同消息和接收它们的顺序的详细信息，请参阅[CFileDialog 示例：日志记录事件的顺序](../../visual-cpp-samples.md)。
 
 若要使用`CFileDialog`对象，请首先创建该对象使用`CFileDialog`构造函数。 已构造对话框的后，可以设置或修改中的任何值[CFileDialog::m_ofn](#m_ofn)结构初始化的值或对话框控件的状态。 `m_ofn`类型的结构是`OPENFILENAME`。 有关详细信息，请参阅[OPENFILENAME](/windows/desktop/api/commdlg/ns-commdlg-tagofna) Windows SDK 中的结构。
 
@@ -1489,7 +1489,7 @@ void SetControlText(
 
 若要使用此方法，必须使用 OFN_EXPLORER 样式创建对话框。 否则，该函数将失败并断言。
 
-##  <a name="setdefext"></a>  Cfiledialog:: Setdefext
+##  <a name="setdefext"></a>  CFileDialog::SetDefExt
 
 调用此函数可设置样式资源管理器中打开或另存为的通用对话框的默认文件扩展名。
 
@@ -1642,4 +1642,3 @@ void UpdateOFNFromShellDialog();
 
 [CCommonDialog 类](../../mfc/reference/ccommondialog-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)
-

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - optimization, ActiveX controls
 - optimizing performance, ActiveX controls
 ms.assetid: e821e19e-b9eb-49ab-b719-0743420ba80b
-ms.openlocfilehash: 6f0d888f49cf27505882e89e3cdbb469ea9e8684
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 294d9c43f5f767329c04932c574485d7dca704e9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50472691"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261933"
 ---
 # <a name="optimizing-persistence-and-initialization"></a>优化持久性和初始化
 
@@ -47,4 +47,3 @@ ms.locfileid: "50472691"
 ## <a name="see-also"></a>请参阅
 
 [MFC ActiveX 控件：优化](../mfc/mfc-activex-controls-optimization.md)
-

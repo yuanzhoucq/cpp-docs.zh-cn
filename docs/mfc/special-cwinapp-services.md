@@ -30,12 +30,12 @@ helpviewer_keywords:
 - MFC, file operations
 - registration [MFC], shell
 ms.assetid: 0480cd01-f629-4249-b221-93432d95b431
-ms.openlocfilehash: 8dd69538cc322fe8518a33444b71171a936a02aa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 910660253c9d306b13294a710021a6bbd36c1952
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50487524"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258081"
 ---
 # <a name="special-cwinapp-services"></a>特殊 CWinApp 服务
 
@@ -49,7 +49,8 @@ ms.locfileid: "50487524"
 
 `EnableShellOpen` 通过以下方式完成这个过程：允许您的应用程序从文件资源管理器或文件管理器接收用来打开用户选择的文件的 DDE 命令。
 
-`CWinApp` 中的此自动支持使您无需将 .reg 文件附加到您的应用程序或完成特殊安装工作。
+
+  `CWinApp` 中的此自动支持使您无需将 .reg 文件附加到您的应用程序或完成特殊安装工作。
 
 如果你想要为你的应用程序初始化 GDI + (通过调用[GdiplusStartup](/windows/desktop/api/gdiplusinit/nf-gdiplusinit-gdiplusstartup)在你[InitInstance](../mfc/reference/cwinapp-class.md#initinstance)函数)，您必须禁止 GDI + 后台线程。
 
@@ -82,4 +83,4 @@ ms.locfileid: "50487524"
 
 ## <a name="see-also"></a>请参阅
 
-[CWinApp：应用程序类](../mfc/cwinapp-the-application-class.md)
+[CWinApp:应用程序类](../mfc/cwinapp-the-application-class.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - serialization [MFC], MFC
 - serialization [MFC], bypassing
 ms.assetid: fb596a18-4522-47e0-96e0-192732d24c12
-ms.openlocfilehash: d439f5e13148d4359394739ec56048f00ceb35ba
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5c7dec140635b6d83bdae936d1bb0cef144f825b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462759"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262137"
 ---
 # <a name="serialization-in-mfc"></a>MFC 中的序列化
 
@@ -27,7 +27,7 @@ MFC 提供了对序列化的类中的内置支持`CObject`。 因此，所有类
 
 MFC 使用的对象`CArchive`类作为要进行序列化的对象与该存储介质之间的中介。 此对象始终是与相关联`CFile`对象从其获取所需的信息进行序列化，包括文件名称和请求的操作是读取或写入。 执行序列化操作的对象可以使用`CArchive`对象而不考虑对存储介质的性质。
 
-一个`CArchive`对象使用重载的插入 (**<\<**) 和提取 (**>>**) 运算符来执行写入和读取操作。 有关详细信息，请参阅[存储和加载 Cobject 通过存档](../mfc/storing-and-loading-cobjects-via-an-archive.md)文章序列化： 序列化对象。
+一个`CArchive`对象使用重载的插入 (**<\<**) 和提取 (**>>**) 运算符来执行写入和读取操作。 有关详细信息，请参阅[存储和加载 Cobject 通过存档](../mfc/storing-and-loading-cobjects-via-an-archive.md)中序列化的文章：序列化对象。
 
 > [!NOTE]
 >  不要混淆`CArchive`类与常规用途 iostream 类，用于设置纯文本格式。 `CArchive`类是二进制格式序列化对象。
@@ -40,7 +40,7 @@ MFC 使用的对象`CArchive`类作为要进行序列化的对象与该存储介
 
 - [序列化：对象的序列化](../mfc/serialization-serializing-an-object.md)
 
-文章[序列化： 序列化 vs。数据库输入/输出](../mfc/serialization-serialization-vs-database-input-output.md)描述序列化时在数据库应用程序中适当的输入/输出方法。
+文章[序列化：序列化与数据库输入/输出](../mfc/serialization-serialization-vs-database-input-output.md)描述序列化时在数据库应用程序中适当的输入/输出方法。
 
 ## <a name="see-also"></a>请参阅
 
