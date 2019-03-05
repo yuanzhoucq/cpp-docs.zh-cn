@@ -194,18 +194,19 @@ helpviewer_keywords:
 - CMFCTasksPane [MFC], Update
 - CMFCTasksPane [MFC], OnActivateTasksPanePage
 ms.assetid: b456328e-2525-4642-b78b-9edd1a1a7d3f
-ms.openlocfilehash: aaf0e68391dd1273c3f973315ac58fe0d6bd1c24
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 137f30262ce01ad82c075302b6e85bf67ae7b9be
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176804"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293766"
 ---
 # <a name="cmfctaskspane-class"></a>CMFCTasksPane 类
 
 有关更多详细信息，请参阅中的源代码**VC\\atlmfc\\src\\mfc**的 Visual Studio 安装文件夹。
 
-`CMFCTasksPane` 类实现可点击项（任务）的列表。
+
+  `CMFCTasksPane` 类实现可点击项（任务）的列表。
 
 ## <a name="syntax"></a>语法
 
@@ -225,19 +226,19 @@ class CMFCTasksPane : public CDockablePane
 
 |名称|描述|
 |----------|-----------------|
-|[Cmfctaskspane:: Addgroup](#addgroup)|将新任务组添加到任务窗格控件。|
-|[Cmfctaskspane:: Addlabel](#addlabel)|将新的静态标签添加到指定任务组中。|
-|[Cmfctaskspane:: Addmrufileslist](#addmrufileslist)|将由最近使用的 (MRU) 文件列表指定的任务添加到一个组中。|
+|[CMFCTasksPane::AddGroup](#addgroup)|将新任务组添加到任务窗格控件。|
+|[CMFCTasksPane::AddLabel](#addlabel)|将新的静态标签添加到指定任务组中。|
+|[CMFCTasksPane::AddMRUFilesList](#addmrufileslist)|将由最近使用的 (MRU) 文件列表指定的任务添加到一个组中。|
 |[CMFCTasksPane::AddPage](#addpage)|将新页面添加到任务窗格。|
 |[CMFCTasksPane::AddSeparator](#addseparator)||
-|[Cmfctaskspane:: Addtask](#addtask)|将新任务添加到指定的任务组。|
+|[CMFCTasksPane::AddTask](#addtask)|将新任务添加到指定的任务组。|
 |[CMFCTasksPane::AddWindow](#addwindow)|将子窗口添加到任务窗格。|
 |[CMFCTasksPane::CollapseAllGroups](#collapseallgroups)||
 |[CMFCTasksPane::CollapseGroup](#collapsegroup)|以编程方式折叠组。|
 |[CMFCTasksPane::CreateDefaultMiniframe](#createdefaultminiframe)|(重写[cpane:: Createdefaultminiframe](../../mfc/reference/cpane-class.md#createdefaultminiframe)。)|
 |[CMFCTasksPane::CreateMenu](#createmenu)|由框架调用以创建菜单**其他任务窗格**菜单按钮。|
 |[CMFCTasksPane::EnableAnimation](#enableanimation)|启用或禁用折叠或展开任务组时的动画。|
-|[Cmfctaskspane:: Enablegroupcollapse](#enablegroupcollapse)|指定是否可以折叠任务组。|
+|[CMFCTasksPane::EnableGroupCollapse](#enablegroupcollapse)|指定是否可以折叠任务组。|
 |[CMFCTasksPane::EnableHistoryMenuButtons](#enablehistorymenubuttons)|启用或禁用在下拉列表菜单**下一步**并**上一步**导航按钮。|
 |[CMFCTasksPane::EnableNavigationToolbar](#enablenavigationtoolbar)|启用或禁用导航工具栏。|
 |[CMFCTasksPane::EnableOffsetCustomControls](#enableoffsetcustomcontrols)||
@@ -326,7 +327,8 @@ class CMFCTasksPane : public CDockablePane
 
 ## <a name="remarks"></a>备注
 
-`CMFCTasksPane` 类实现下列功能：
+
+  `CMFCTasksPane` 类实现下列功能：
 
 - 可以对项进行分组，并且每个项分组均可具有关联的标题。
 
@@ -340,7 +342,7 @@ class CMFCTasksPane : public CDockablePane
 
 1. 将 `CMFCTasksPane` 对象嵌入主框架窗口类。
 
-1. 在处理 WM_CREATE 消息时，调用`Create`方法。 可以使用常规[CControlBar](../../mfc/reference/ccontrolbar-class.md)样式。 有关详细信息，请参阅 `CControlBar::Create` 。
+1. 在处理 WM_CREATE 消息时，调用`Create`方法。 可以使用常规[CControlBar](../../mfc/reference/ccontrolbar-class.md)样式。 有关详细信息，请参阅 `CControlBar::Create`。
 
 1. 调用[cmfctaskspane:: Addgroup](#addgroup)方法来添加不同的组。
 
@@ -420,7 +422,7 @@ int AddGroup(
 
 在任务窗格控件的顶部或底部，框架将显示任务组。 该框架可以显示在底部; 只有一个组此组必须添加最后一个。
 
-##  <a name="addlabel"></a>  Cmfctaskspane:: Addlabel
+##  <a name="addlabel"></a>  CMFCTasksPane::AddLabel
 
 将标签添加到指定的任务组。
 
@@ -434,7 +436,7 @@ int AddLabel(
 
 ### <a name="parameters"></a>参数
 
-*n 组*<br/>
+*nGroup*<br/>
 [in]指定在其中添加标签的组的索引。
 
 *lpszLabelName*<br/>
@@ -466,7 +468,7 @@ int AddMRUFilesList(
 
 ### <a name="parameters"></a>参数
 
-*n 组*<br/>
+*nGroup*<br/>
 [in]指定组的索引。 此方法将 MRU 文件列表添加到此参数指定的组。
 
 *nMaxFiles*<br/>
@@ -501,7 +503,7 @@ int AddSeparator(int nGroup);
 
 ### <a name="parameters"></a>参数
 
-[in]*n 组*<br/>
+[in] *nGroup*<br/>
 
 ### <a name="return-value"></a>返回值
 
@@ -522,7 +524,7 @@ int AddTask(
 
 ### <a name="parameters"></a>参数
 
-*n 组*<br/>
+*nGroup*<br/>
 [in]指定在其中添加任务的组索引。
 
 *lpszTaskName*<br/>
@@ -556,7 +558,7 @@ int AddWindow(
 
 ### <a name="parameters"></a>参数
 
-*n 组*<br/>
+*nGroup*<br/>
 [in]指定在其中添加在窗口的组索引。
 
 *hwndTask*<br/>
@@ -599,8 +601,8 @@ void CollapseAllGroups(
 
 ### <a name="parameters"></a>参数
 
-[in]*bCollapse*<br/>
-[in]*nPageIdx*<br/>
+[in] *bCollapse*<br/>
+[in] *nPageIdx*<br/>
 
 ### <a name="remarks"></a>备注
 
@@ -626,7 +628,7 @@ BOOL CollapseGroup(
 *bCollapse*<br/>
 [in]为 TRUE，则折叠组;为 FALSE，则相应的组。
 
-*n 组*<br/>
+*nGroup*<br/>
 [in]指定要折叠组的内部列表中的组的从零开始的索引。
 
 ### <a name="return-value"></a>返回值
@@ -645,7 +647,7 @@ virtual CPaneFrameWnd* CreateDefaultMiniframe(CRect rectInitial);
 
 ### <a name="parameters"></a>参数
 
-[in]*rectInitial*<br/>
+[in] *rectInitial*<br/>
 
 ### <a name="return-value"></a>返回值
 
@@ -686,7 +688,7 @@ void EnableAnimation(BOOL bEnable = TRUE);
 
 默认情况下被启用任务组展开或折叠时，会发生的动画。
 
-##  <a name="enablegroupcollapse"></a>  Cmfctaskspane:: Enablegroupcollapse
+##  <a name="enablegroupcollapse"></a>  CMFCTasksPane::EnableGroupCollapse
 
 指定用户是否可以折叠任务组。
 
@@ -764,7 +766,7 @@ void EnableOffsetCustomControls(BOOL bEnable);
 
 ### <a name="parameters"></a>参数
 
-[in]*bEnable*<br/>
+[in] *bEnable*<br/>
 
 ### <a name="remarks"></a>备注
 
@@ -898,7 +900,7 @@ BOOL GetGroupLocation(
 *pGroup*<br/>
 [in]指定检索其位置的任务组。
 
-*n 组*<br/>
+*nGroup*<br/>
 [out]包含任务组的从零开始的索引。
 
 ### <a name="return-value"></a>返回值
@@ -941,7 +943,7 @@ void GetNextPages(CStringList& lstNextPages) const;
 
 ### <a name="parameters"></a>参数
 
-[in]*lstNextPages*<br/>
+[in] *lstNextPages*<br/>
 
 ### <a name="remarks"></a>备注
 
@@ -957,10 +959,10 @@ BOOL GetPageByGroup(
 
 ### <a name="parameters"></a>参数
 
-*n 组*<br/>
+*nGroup*<br/>
 [in]指定任务组的从零开始的索引。
 
-*n 页面*<br/>
+*nPage*<br/>
 [out]包含指定的组的页索引。 如果任务组仅包含默认页，则返回的值为 0。
 
 ### <a name="return-value"></a>返回值
@@ -987,7 +989,7 @@ void GetPreviousPages(CStringList& lstPrevPages) const;
 
 ### <a name="parameters"></a>参数
 
-[in]*lstPrevPages*<br/>
+[in] *lstPrevPages*<br/>
 
 ### <a name="remarks"></a>备注
 
@@ -999,7 +1001,7 @@ virtual CScrollBar* GetScrollBarCtrl(int nBar) const;
 
 ### <a name="parameters"></a>参数
 
-[in]*nBar*<br/>
+[in] *nBar*<br/>
 
 ### <a name="return-value"></a>返回值
 
@@ -1017,7 +1019,7 @@ CMFCTasksPaneTask* GetTask(
 
 ### <a name="parameters"></a>参数
 
-*n 组*<br/>
+*nGroup*<br/>
 [in]指定包含任务的组的从零开始索引。
 
 *nTask*<br/>
@@ -1037,7 +1039,7 @@ int GetTaskCount(int nGroup) const;
 
 ### <a name="parameters"></a>参数
 
-*n 组*<br/>
+*nGroup*<br/>
 [in]指定任务组的索引。
 
 ### <a name="return-value"></a>返回值
@@ -1054,7 +1056,7 @@ CMFCTasksPaneTaskGroup* GetTaskGroup(int nGroup) const;
 
 ### <a name="parameters"></a>参数
 
-*n 组*<br/>
+*nGroup*<br/>
 [in]指定要检索的组的从零开始索引。
 
 ### <a name="return-value"></a>返回值
@@ -1087,7 +1089,7 @@ BOOL GetTaskLocation(
 *uiCommandID*<br/>
 [in]指定要查找任务的命令 ID。
 
-*n 组*<br/>
+*nGroup*<br/>
 [out]包含任务组的索引。
 
 *nTask*<br/>
@@ -1296,9 +1298,9 @@ virtual BOOL LoadState(
 
 ### <a name="parameters"></a>参数
 
-[in]*lpszProfileName*<br/>
-[in]*nIndex*<br/>
-[in]*uiID*<br/>
+[in] *lpszProfileName*<br/>
+[in] *nIndex*<br/>
+[in] *uiID*<br/>
 
 ### <a name="return-value"></a>返回值
 
@@ -1416,8 +1418,8 @@ virtual void OnPressOtherButton(
 
 ### <a name="parameters"></a>参数
 
-[in]*pbtn*<br/>
-[in]*pWndOwner*<br/>
+[in] *pbtn*<br/>
+[in] *pWndOwner*<br/>
 
 ### <a name="remarks"></a>备注
 
@@ -1429,7 +1431,7 @@ virtual BOOL OnSetAccData(long lVal);
 
 ### <a name="parameters"></a>参数
 
-[in]*lVal*<br/>
+[in] *lVal*<br/>
 
 ### <a name="return-value"></a>返回值
 
@@ -1445,8 +1447,8 @@ virtual void OnUpdateCmdUI(
 
 ### <a name="parameters"></a>参数
 
-[in]*pTarget*<br/>
-[in]*bDisableIfNoHndler*<br/>
+[in] *pTarget*<br/>
+[in] *bDisableIfNoHndler*<br/>
 
 ### <a name="remarks"></a>备注
 
@@ -1458,7 +1460,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 
 ### <a name="parameters"></a>参数
 
-[in]*pMsg*<br/>
+[in] *pMsg*<br/>
 
 ### <a name="return-value"></a>返回值
 
@@ -1472,7 +1474,7 @@ void RecalcLayout(BOOL bRedraw = TRUE);
 
 ### <a name="parameters"></a>参数
 
-[in]*bRedraw*<br/>
+[in] *bRedraw*<br/>
 
 ### <a name="remarks"></a>备注
 
@@ -1511,7 +1513,7 @@ void RemoveAllTasks(int nGroup);
 
 ### <a name="parameters"></a>参数
 
-*n 组*<br/>
+*nGroup*<br/>
 [in]指定的组的从零开始的索引。
 
 ##  <a name="removegroup"></a>  CMFCTasksPane::RemoveGroup
@@ -1524,7 +1526,7 @@ void RemoveGroup(int nGroup);
 
 ### <a name="parameters"></a>参数
 
-*n 组*<br/>
+*nGroup*<br/>
 [in]指定要删除的组的从零开始索引。
 
 ### <a name="remarks"></a>备注
@@ -1559,7 +1561,7 @@ BOOL RemoveTask(
 
 ### <a name="parameters"></a>参数
 
-*n 组*<br/>
+*nGroup*<br/>
 [in]指定包含要删除的任务的任务组的从零开始索引。
 
 *nTask*<br/>
@@ -1583,9 +1585,9 @@ virtual BOOL SaveState(
 
 ### <a name="parameters"></a>参数
 
-[in]*lpszProfileName*<br/>
-[in]*nIndex*<br/>
-[in]*uiID*<br/>
+[in] *lpszProfileName*<br/>
+[in] *nIndex*<br/>
+[in] *uiID*<br/>
 
 ### <a name="return-value"></a>返回值
 
@@ -1599,7 +1601,7 @@ virtual void Serialize(CArchive& ar);
 
 ### <a name="parameters"></a>参数
 
-[in]*ar*<br/>
+[in] *ar*<br/>
 
 ### <a name="remarks"></a>备注
 
@@ -1694,7 +1696,7 @@ BOOL SetGroupName(
 
 ### <a name="parameters"></a>参数
 
-*n 组*<br/>
+*nGroup*<br/>
 [in]指定的组的从零开始的索引。
 
 *lpszGroupName*<br/>
@@ -1717,10 +1719,10 @@ BOOL SetGroupTextColor(
 
 ### <a name="parameters"></a>参数
 
-*n 组*<br/>
+*nGroup*<br/>
 [in]指定的组的从零开始的索引。
 
-*颜色*<br/>
+*color*<br/>
 [in]指定的文本颜色。
 
 *colorHot*<br/>
@@ -1836,7 +1838,7 @@ BOOL SetTaskName(
 
 ### <a name="parameters"></a>参数
 
-*n 组*<br/>
+*nGroup*<br/>
 [in]指定任务组的从零开始的索引。
 
 *nTask*<br/>
@@ -1878,7 +1880,7 @@ void SetTasksIconHorzOffset(int n = -1);
 
 ### <a name="parameters"></a>参数
 
-[in]*n*<br/>
+[in] *n*<br/>
 
 ### <a name="remarks"></a>备注
 
@@ -1890,7 +1892,7 @@ void SetTasksIconVertOffset(int n = -1);
 
 ### <a name="parameters"></a>参数
 
-[in]*n*<br/>
+[in] *n*<br/>
 
 ### <a name="remarks"></a>备注
 
@@ -1908,13 +1910,13 @@ BOOL SetTaskTextColor(
 
 ### <a name="parameters"></a>参数
 
-*n 组*<br/>
+*nGroup*<br/>
 [in]指定包含任务的任务组的从零开始索引。
 
 *nTask*<br/>
 [in]指定任务的从零开始的索引。
 
-*颜色*<br/>
+*color*<br/>
 [in]指定该任务的文本颜色。
 
 *colorHot*<br/>
@@ -1960,7 +1962,7 @@ BOOL SetWindowHeight(
 
 ### <a name="parameters"></a>参数
 
-*n 组*<br/>
+*nGroup*<br/>
 [in]指定包含窗口控件的组的从零开始索引。
 
 *hwndTask*<br/>
@@ -1985,7 +1987,7 @@ virtual void ShowCommandMessageString(UINT uiCmdId);
 
 ### <a name="parameters"></a>参数
 
-[in]*uiCmdId*<br/>
+[in] *uiCmdId*<br/>
 
 ### <a name="remarks"></a>备注
 
@@ -2003,7 +2005,7 @@ BOOL ShowTask(
 
 ### <a name="parameters"></a>参数
 
-*n 组*<br/>
+*nGroup*<br/>
 [in]指定的组的从零开始的索引。
 
 *nTask*<br/>

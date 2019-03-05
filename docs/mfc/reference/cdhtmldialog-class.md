@@ -116,12 +116,12 @@ helpviewer_keywords:
 - CDHtmlDialog [MFC], m_strCurrentUrl
 - CDHtmlDialog [MFC], m_szHtmlResID
 ms.assetid: 3f941c85-87e1-4f0f-9cc5-ffee8498b312
-ms.openlocfilehash: 08db42929fb3c6a7feb79abae5110bd88169f11b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9cf01f16fe21d0c5bea34bf168c6ea6bff04c195
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50594956"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263606"
 ---
 # <a name="cdhtmldialog-class"></a>CDHtmlDialog 类
 
@@ -140,7 +140,7 @@ class CDHtmlDialog : public CDialog, public CDHtmlEventSink
 |名称|描述|
 |----------|-----------------|
 |[CDHtmlDialog::CDHtmlDialog](#cdhtmldialog)|构造一个 CDHtmlDialog 对象。|
-|[CDHtmlDialog:: ~ CDHtmlDialog](#cdhtmldialog__~cdhtmldialog)|销毁 CDHtmlDialog 对象。|
+|[CDHtmlDialog::~CDHtmlDialog](#cdhtmldialog__~cdhtmldialog)|销毁 CDHtmlDialog 对象。|
 
 ### <a name="public-methods"></a>公共方法
 
@@ -402,7 +402,7 @@ void DDX_DHtml_CheckBox(
 *szId*<br/>
 为 HTML 控件的 ID 参数指定值。
 
-*value*<br/>
+*值*<br/>
 正在交换值。
 
 ### <a name="example"></a>示例
@@ -468,7 +468,7 @@ void DDX_DHtml_ElementText(
 *dispid*<br/>
 想要交换数据的 HTML 元素的调度 ID。
 
-*value*<br/>
+*值*<br/>
 正在交换值。
 
 ##  <a name="ddx_dhtml_radio"></a>  CDHtmlDialog::DDX_DHtml_Radio
@@ -490,7 +490,7 @@ void DDX_DHtml_Radio(
 *szId*<br/>
 为 HTML 控件的 ID 参数指定值。
 
-*value*<br/>
+*值*<br/>
 正在交换值。
 
 ##  <a name="ddx_dhtml_selectindex"></a>  CDHtmlDialog::DDX_DHtml_SelectIndex
@@ -512,7 +512,7 @@ void DDX_DHtml_SelectIndex(
 *szId*<br/>
 为 HTML 控件的 id 参数指定值。
 
-*value*<br/>
+*值*<br/>
 正在交换值。
 
 ##  <a name="ddx_dhtml_selectstring"></a>  CDHtmlDialog::DDX_DHtml_SelectString
@@ -534,7 +534,7 @@ void DDX_DHtml_SelectString(
 *szId*<br/>
 为 HTML 控件的 ID 参数指定值。
 
-*value*<br/>
+*值*<br/>
 正在交换值。
 
 ##  <a name="ddx_dhtml_selectvalue"></a>  CDHtmlDialog::DDX_DHtml_SelectValue
@@ -556,7 +556,7 @@ void DDX_DHtml_SelectValue(
 *szId*<br/>
 为 HTML 控件的 ID 参数指定值。
 
-*value*<br/>
+*值*<br/>
 正在交换值。
 
 ### <a name="example"></a>示例
@@ -942,7 +942,7 @@ STDMETHOD(GetOptionKeyPath)(
 *pchKey*<br/>
 请参阅*pchKey*中[IDocHostUIHandler::GetOptionKeyPath](https://msdn.microsoft.com/library/aa753258.aspx) Windows SDK 中。
 
-*数据仓库*<br/>
+*dw*<br/>
 请参阅*dw*中`IDocHostUIHandler::GetOptionKeyPath`Windows SDK 中。
 
 ### <a name="return-value"></a>返回值
@@ -1296,7 +1296,8 @@ void SetElementHtml(
 HTML 元素的 ID。
 
 *bstrText*<br/>
-`innerHTML` 属性的新值。
+
+  `innerHTML` 属性的新值。
 
 *punkElem*<br/>
 `IUnknown` HTML 元素的指针。
@@ -1343,7 +1344,8 @@ void SetElementText(
 HTML 元素的 ID。
 
 *bstrText*<br/>
-`innerText` 属性的新值。
+
+  `innerText` 属性的新值。
 
 *punkElem*<br/>
 `IUnknown` HTML 元素的指针。
@@ -1435,7 +1437,7 @@ STDMETHOD(ShowUI)(
 *pFrame*<br/>
 请参阅*pFrame*中`IDocHostUIHandler::ShowUI`Windows SDK 中。
 
-*来写*<br/>
+*pDoc*<br/>
 请参阅*pDoc*中`IDocHostUIHandler::ShowUI`Windows SDK 中。
 
 ### <a name="return-value"></a>返回值
@@ -1527,4 +1529,3 @@ STDMETHOD(UpdateUI)(void);
 [MFC 示例 DHtmlExplore](../../visual-cpp-samples.md)<br/>
 [DDX_DHtml 帮助器宏](#ddx_dhtml_helper_macros)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)
-

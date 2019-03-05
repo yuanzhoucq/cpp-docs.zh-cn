@@ -12,12 +12,12 @@ helpviewer_keywords:
 - '& operator, address-of operator'
 - CAdapt class
 ms.assetid: 0bb695a5-72fe-43d1-8f39-7e4da6e34765
-ms.openlocfilehash: ec42ab7a9dd36648b1405859cf02bc194f75a73c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 39184e952475fa0f05a6fc25c433191ea22b5c16
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614729"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269820"
 ---
 # <a name="cadapt-class"></a>CAdapt 类
 
@@ -48,10 +48,10 @@ class CAdapt
 |名称|描述|
 |----------|-----------------|
 |[CAdapt::operator const T （& a)](#operator_const_t_amp)|返回**const**引用`m_T`。|
-|[CAdapt::operator T （& a)](#operator_t_amp)|返回对 `m_T` 的引用。|
+|[CAdapt::operator T&](#operator_t_amp)|返回对 `m_T` 的引用。|
 |[CAdapt::operator <](#operator_lt)|将已适配类型的对象与 `m_T` 作比较。|
 |[CAdapt::operator =](#operator_eq)|将已适配类型的对象分配给 `m_T`。|
-|[CAdapt::operator = =](#operator_eq_eq)|将已适配类型的对象与 `m_T` 作比较。|
+|[CAdapt::operator ==](#operator_eq_eq)|将已适配类型的对象与 `m_T` 作比较。|
 
 ### <a name="public-data-members"></a>公共数据成员
 
@@ -65,7 +65,7 @@ class CAdapt
 
 `CAdapt`主要作用是隐藏由类定义 address-of 运算符*T*，但仍保留已适配的类的特征。 `CAdapt` 通过保留的公共成员，实现了这个作用[m_T](#m_t)，类型的*T*，以及通过定义转换运算符、 比较运算符和复制构造函数，以允许的专用化`CAdapt`为它们被类型的对象视作*T*。
 
-适配器类 `CAdapt` 很有用，因为某些容器样式类期望能够使用 address-of 运算符获取其包含的对象的地址。 重新定义 address-of 运算符可能使此要求无法得到满足，而且通常会导致编译错误并阻止将非适配类型用于期望它“正常工作”的类。 `CAdapt` 围绕这些问题提供了一种方法。
+适配器类 `CAdapt` 很有用，因为某些容器样式类期望能够使用 address-of 运算符获取其包含的对象的地址。 重新定义 address-of 运算符可能使此需求无法得到满足，而且通常会导致编译错误并阻止将非适配类型用于期望它“正常工作”的类。 `CAdapt` 围绕这些问题提供了一种方法。
 
 通常，当你要将 `CAdapt`、`CComBSTR`、`CComPtr` 或 `CComQIPtr` 对象存储在容器样式类中时，你将使用 `_com_ptr_t`。 在大多数情况下，若要支持 C++ 标准，这对于 C++11 标准库容器必需的，但 C++11 标准库容器会自动处理已重载 `operator&()` 的类型。 标准库通过在内部使用，从而实现这[std::addressof](../../standard-library/memory-functions.md#addressof)获取对象的真实地址。
 

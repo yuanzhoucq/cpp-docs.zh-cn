@@ -11,16 +11,17 @@ f1_keywords:
 helpviewer_keywords:
 - message_processor class
 ms.assetid: 23afb052-daa7-44ed-bf24-d2513db748da
-ms.openlocfilehash: d6e45613e0b412b6b94dba3c4a435115e32c7d6a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: be6cb1c614a41919663a4cc063da66679556e498
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438215"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295235"
 ---
 # <a name="messageprocessor-class"></a>message_processor 类
 
-`message_processor` 类是用于处理 `message` 对象的抽象基类。 不能保证消息的排序。
+
+  `message_processor` 类是用于处理 `message` 对象的抽象基类。 不能保证消息的排序。
 
 ## <a name="syntax"></a>语法
 
@@ -48,7 +49,7 @@ class message_processor;
 |----------|-----------------|
 |[async_send](#async_send)|当在派生类中重写，以异步方式将消息放入块中。|
 |[sync_send](#sync_send)|当在派生类中重写，以同步方式将消息放入块中。|
-|[等待](#wait)|当在派生类中重写，等待所有异步操作完成。|
+|[wait](#wait)|当在派生类中重写，等待所有异步操作完成。|
 
 ### <a name="protected-methods"></a>受保护的方法
 

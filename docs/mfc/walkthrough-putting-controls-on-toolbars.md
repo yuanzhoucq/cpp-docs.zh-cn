@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Customize dialog box, adding controls
 - toolbars [MFC], adding controls
 ms.assetid: 8fc94bdf-0da7-45d9-8bc4-52b7b1edf205
-ms.openlocfilehash: 3e0cc066e39cc71833e2061a1964619d04a80be3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0b5b8685b3062bf63187a765b7e90e26f8c65681
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50580292"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291383"
 ---
 # <a name="walkthrough-putting-controls-on-toolbars"></a>演练：将控件置于工具栏上
 
@@ -39,7 +39,7 @@ ms.locfileid: "50580292"
 
 启用自定义，当您创建**自定义**自定义处理程序中的对话框中`OnViewCustomize`通过[CMFCToolBarsCustomizeDialog 类](../mfc/reference/cmfctoolbarscustomizedialog-class.md)类。 在显示前**自定义**对话框中，通过调用[CMFCToolBarsCustomizeDialog::Create](../mfc/reference/cmfctoolbarscustomizedialog-class.md#create)，调用[CMFCToolBarsCustomizeDialog::ReplaceButton](../mfc/reference/cmfctoolbarscustomizedialog-class.md#replacebutton)替换带有新控件的标准按钮。
 
-## <a name="example-creating-a-find-combo-box"></a>示例：创建一个 Find 组合框
+## <a name="example-creating-a-find-combo-box"></a>示例:创建一个 Find 组合框
 
 本部分介绍如何创建**查找**出现在工具栏上，其中包含使用最新的搜索字符串的组合框控件。 用户可在控件中键入一个字符串，然后按 Enter 键来搜索文档，或按 Esc 键将焦点返回主框架。 此示例假定文档穦 [CEditView 类](../mfc/reference/ceditview-class.md)-派生的视图。
 
@@ -64,7 +64,8 @@ ms.locfileid: "50580292"
 
 1. 为创建一个类**查找**组合框按钮，派生自[CMFCToolBarComboBoxButton 类](../mfc/reference/cmfctoolbarcomboboxbutton-class.md)。 在此示例中，名为`CFindComboButton`。
 
-1. `CMFCToolbarComboBoxButton` 的构造函数具有三个参数：按钮的命令 ID、按钮图像索引和组合框的样式。 按以下方式设置这些参数：
+1. 
+  `CMFCToolbarComboBoxButton` 的构造函数具有三个参数：按钮的命令 ID、按钮图像索引和组合框的样式。 按以下方式设置这些参数：
 
    1. 将 `ID_EDIT_FIND_COMBO` 作为命令 ID 传递。
 

@@ -33,16 +33,17 @@ f1_keywords:
 helpviewer_keywords:
 - source_block class
 ms.assetid: fbdd4146-e8d0-42e8-b714-fe633f69ffbf
-ms.openlocfilehash: 609c7d78bdf2f16be4d82add454ef9546ea22588
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5ddfd5e139171c7097a793f12ac82767b8773107
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468687"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277360"
 ---
 # <a name="sourceblock-class"></a>source_block 类
 
-`source_block` 是仅限于源的块的抽象基类。 该类提供基本链接管理功能和常见错误检查。
+
+  `source_block` 是仅限于源的块的抽象基类。 该类提供基本链接管理功能和常见错误检查。
 
 ## <a name="syntax"></a>语法
 
@@ -462,7 +463,7 @@ virtual void resume_propagation() = 0;
 source_block();
 ```
 
-##  <a name="dtor"></a> ~ source_block
+##  <a name="dtor"></a> ~source_block
 
 销毁`source_block`对象。
 

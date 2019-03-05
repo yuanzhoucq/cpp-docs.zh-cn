@@ -6,12 +6,12 @@ helpviewer_keywords:
 - IPropertyPage class
 - property pages, implementing
 ms.assetid: 62f29440-33a7-40eb-a1ef-3634c95f640c
-ms.openlocfilehash: 415dae4a54b71a901a7976bda92361690c150e5d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0e335c20464d8ea71fd75ce2e67f67ca14edacb0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543307"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299317"
 ---
 # <a name="implementing-property-pages"></a>属性页
 
@@ -36,11 +36,11 @@ ms.locfileid: "50543307"
    |IPropertyPageImpl 方法|重写时要...|说明|
    |------------------------------|----------------------------------|-----------|
    |[SetObjects](../atl/reference/ipropertypageimpl-class.md#setobjects)|执行基本的完整性检查的对象传递给您的页面和它们支持的接口数量。|在调用基类实现之前执行你自己的代码。 如果要设置的对象不符合预期，应尽可能快地失败调用。|
-   |[激活](../atl/reference/ipropertypageimpl-class.md#activate)|初始化页面的用户界面 （例如，从对象中设置的当前属性值的对话框控件、 控件动态创建，或执行其他初始化）。|调用基类实现您的代码之前，因此，基本类有机会创建对话框窗口及其所有控件，然后再尝试将其更新。|
-   |[应用](../atl/reference/ipropertypageimpl-class.md#apply)|验证属性设置和更新的对象。|没有无需调用基类实现，因为它执行任何只跟踪调用。|
+   |[Activate](../atl/reference/ipropertypageimpl-class.md#activate)|初始化页面的用户界面 （例如，从对象中设置的当前属性值的对话框控件、 控件动态创建，或执行其他初始化）。|调用基类实现您的代码之前，因此，基本类有机会创建对话框窗口及其所有控件，然后再尝试将其更新。|
+   |[Apply](../atl/reference/ipropertypageimpl-class.md#apply)|验证属性设置和更新的对象。|没有无需调用基类实现，因为它执行任何只跟踪调用。|
    |[停用](../atl/reference/ipropertypageimpl-class.md#deactivate)|清除与窗口相关的项。|基类实现都会破坏表示的属性页对话框。 如果需要清理销毁对话框之前，应调用基类之前添加代码。|
 
-示例属性页的实现，请参阅[示例： 实现属性页](../atl/example-implementing-a-property-page.md)。
+示例属性页的实现，请参阅[示例：实现属性页](../atl/example-implementing-a-property-page.md)。
 
 > [!NOTE]
 > 如果想要承载 ActiveX 控件属性页中，您需要更改您向导生成的类的派生。 替换**CDialogImpl\<CYourClass >** 与**CAxDialogImpl\<CYourClass >** 在基类列表中。

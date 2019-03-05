@@ -7,12 +7,12 @@ helpviewer_keywords:
 - archives [MFC], and Windows Sockets
 - CSocket class [MFC], programming model
 ms.assetid: 17e71a99-a09e-4e1a-9fda-13d62805c824
-ms.openlocfilehash: 64c5c058404b977254ca54d5595193654b3f4479
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 71a7ed1f1b67bed157805328679a18ceabf201d3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50615379"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261500"
 ---
 # <a name="windows-sockets-using-sockets-with-archives"></a>Windows 套接字：对存档使用套接字
 
@@ -21,10 +21,10 @@ ms.locfileid: "50615379"
 > [!TIP]
 >  您可以单独使用类 `CSocket` 作为 `CAsyncSocket` 的更方便的版本，但最简单的编程模型是使用具有 `CSocket` 对象的 `CArchive`。
 
-有关使用存档的套接字的实现的工作原理的详细信息，请参阅[Windows 套接字： 使用存档的工作方式套接字](../mfc/windows-sockets-how-sockets-with-archives-work.md)。 有关示例代码，请参阅[Windows 套接字： 操作序列](../mfc/windows-sockets-sequence-of-operations.md)并[Windows 套接字： 套接字的使用存档示例](../mfc/windows-sockets-example-of-sockets-using-archives.md)。 您可以通过从套接字类派生您自己的类来获得有关的某些功能信息，请参阅[Windows 套接字： 从套接字类派生](../mfc/windows-sockets-deriving-from-socket-classes.md)。
+有关使用存档的套接字的实现的工作原理的详细信息，请参阅[Windows 套接字：使用存档的套接字如何工作](../mfc/windows-sockets-how-sockets-with-archives-work.md)。 有关示例代码，请参阅[Windows 套接字：操作顺序](../mfc/windows-sockets-sequence-of-operations.md)和[Windows 套接字：使用存档的套接字的示例](../mfc/windows-sockets-example-of-sockets-using-archives.md)。 您可以通过从套接字类派生您自己的类来获得有关的某些功能信息，请参阅[Windows 套接字：从套接字类派生](../mfc/windows-sockets-deriving-from-socket-classes.md)。
 
 > [!NOTE]
->  如果您要编写 MFC 客户端程序来与建立的（非 MFC）服务器通信，则请勿通过存档发送 C++ 对象。 除非服务器是知道您要发送的对象类型的 MFC 应用程序，否则它无法接收和反序列化对象。 有关与非 MFC 应用程序进行通信的使用者的相关资料，还请参阅文章[Windows 套接字： 字节排序](../mfc/windows-sockets-byte-ordering.md)。
+>  如果您要编写 MFC 客户端程序来与建立的（非 MFC）服务器通信，则请勿通过存档发送 C++ 对象。 除非服务器是知道您要发送的对象类型的 MFC 应用程序，否则它无法接收和反序列化对象。 有关与非 MFC 应用程序进行通信的使用者的相关资料，还请参阅文章[Windows 套接字：字节排序](../mfc/windows-sockets-byte-ordering.md)。
 
 ##  <a name="_core_the_csocket_programming_model"></a> CSocket 编程模型
 
@@ -63,18 +63,18 @@ ms.locfileid: "50615379"
 
    记住，给定 `CArchive` 对象将仅按一个方向移动数据：进行加载（接收）或存储（发送）。 在某些情况下，您将使用两个 `CArchive` 对象：一个用于发送数据，另一个用于接收确认。
 
-   在接受连接并设置存档之后，您可以执行类似验证密码的任务。
+   在接受连接并设置存档之后，你可以执行类似验证密码的任务。
 
 1. 销毁存档、套接字文件和套接字对象。
 
     > [!NOTE]
     >  类 `CArchive` 提供专门用于类 `IsBufferEmpty` 的 `CSocket` 成员函数。 例如，如果缓冲区包含多条数据消息，则您需要循环至读取所有这些消息并清除缓冲区。 否则，可能无限期延迟指示有数据要接收的下一条通知。 使用 `IsBufferEmpty` 确保检索所有数据。
 
-文章[Windows 套接字： 操作序列](../mfc/windows-sockets-sequence-of-operations.md)说明了此过程以及代码示例的两面。
+文章[Windows 套接字：操作顺序](../mfc/windows-sockets-sequence-of-operations.md)说明了此过程以及代码示例的两面。
 
 有关详细信息，请参见:
 
-- [Windows 套接字：流套接字](../mfc/windows-sockets-stream-sockets.md)
+- [Windows 套接字：Stream 套接字](../mfc/windows-sockets-stream-sockets.md)
 
 - [Windows 套接字：数据报套接字](../mfc/windows-sockets-datagram-sockets.md)
 
@@ -82,4 +82,3 @@ ms.locfileid: "50615379"
 
 [MFC 中的 Windows 套接字](../mfc/windows-sockets-in-mfc.md)<br/>
 [CSocket::Create](../mfc/reference/csocket-class.md#create)
-

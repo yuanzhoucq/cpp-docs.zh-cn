@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MFC Application Wizard, database support
 ms.assetid: 9ddf4558-fd41-4ac7-8d9b-c93d9c68ab59
-ms.openlocfilehash: 9635b7e045812cc90c5d6e9662b8475e411a0b48
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a1e0519e1351a48bbd969168d62f163c9dde7e7e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654202"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259953"
 ---
 # <a name="database-support-mfc-application-wizard"></a>MFC 应用程序向导的数据库支持
 
@@ -24,7 +24,7 @@ ms.locfileid: "50654202"
    |选项|描述|
    |------------|-----------------|
    |**无**|提供了不支持数据库。 这是默认选项。|
-   |**仅头文件**|为应用程序提供基本级别的数据库支持。 如果选择下的 ODBC 支持**客户端类型**，MFC 应用程序向导包括在项目中的标头文件 AFXDB。H. 添加链接库，但它不会创建任何数据库特定的类。 您可以更高版本创建记录集，并使用它们来检查和更新记录。 如果选择 OLE DB 支持下的**客户端类型**，将包含以下标头文件： ATLBASE。H AFXOLEDB。H ATLPLUS。H|
+   |**仅头文件**|为应用程序提供基本级别的数据库支持。 如果选择下的 ODBC 支持**客户端类型**，MFC 应用程序向导包括在项目中的标头文件 AFXDB。H. 添加链接库，但它不会创建任何数据库特定的类。 您可以更高版本创建记录集，并使用它们来检查和更新记录。 如果选择 OLE DB 支持下的**客户端类型**，将包含以下标头文件：ATLBASE。H AFXOLEDB。H ATLPLUS。H|
    |**不支持文件的数据库视图**|包括数据库标头文件、 链接库、 记录集和记录集。 (仅适用于应用程序与**文档/视图体系结构支持**中选择选项[应用程序类型](../../mfc/reference/application-type-mfc-application-wizard.md)页。)此选项将包括文档支持，但没有序列化支持。 如果您选择包含的数据库视图，必须指定数据源。|
    |**提供文件支持的数据库视图**|包括数据库标头文件、 链接库、 记录集和记录集。 (仅适用于应用程序与**文档/视图体系结构支持**中选择选项**应用程序类型**页。)此选项支持文档序列化，您可以使用，例如，若要更新用户配置文件。 数据库应用程序通常运行在每个记录的基础上而不是每个文件中的基础，因此不需要序列化。 但是，可以序列化的特殊用法。 如果您选择包含的数据库视图，必须指定数据源。|
 

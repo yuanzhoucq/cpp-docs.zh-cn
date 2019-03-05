@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CCustomTransition [MFC], m_initialVelocity
 - CCustomTransition [MFC], m_pInterpolator
 ms.assetid: 5bd3f492-940f-4290-a38b-fa68eb8f8401
-ms.openlocfilehash: af600704f82a0cad402948286fa0d4b11dca0c71
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e0e5250b27ce6b902939ebcbfa03bf022a202788
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50578368"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304010"
 ---
 # <a name="ccustomtransition-class"></a>CCustomTransition 类
 
@@ -69,7 +69,7 @@ class CCustomTransition : public CBaseTransition;
 
 ## <a name="remarks"></a>备注
 
-CCustomTransitions 类允许开发人员实现自定义转换。 它已创建并用作一个标准转换，但其构造函数将作为参数接受指向自定义内插器的指针。 执行以下步骤以使用自定义的转换： 1。 从 CCustomInterpolator 派生一个类并实现至少 InterpolateValue 方法。 2. 请确保不能少于动画的持续时间使用该自定义内插器对象的生存期。 3. 实例化 （使用 new 运算符） CCustomTransition 对象并将指针传递到构造函数中的自定义内插器。 4. 如果这些参数所需的自定义内插，调用 CCustomTransition::SetInitialValue 和 CCustomTransition::SetInitialVelocity。 5. 将指针传递给自定义转换到下方法的动画对象，其值应使用自定义算法进行动画处理。 6. 当动画对象的值应更改 Windows 动画 API 将在 CCustomInterpolator 调用 InterpolateValue （和其他相关的方法）。
+CCustomTransitions 类允许开发人员实现自定义转换。 它已创建并用作一个标准转换，但其构造函数将作为参数接受指向自定义内插器的指针。 执行以下步骤以使用自定义的转换：1. 从 CCustomInterpolator 派生一个类并实现至少 InterpolateValue 方法。 2. 请确保不能少于动画的持续时间使用该自定义内插器对象的生存期。 3. 实例化 （使用 new 运算符） CCustomTransition 对象并将指针传递到构造函数中的自定义内插器。 4. 如果这些参数所需的自定义内插，调用 CCustomTransition::SetInitialValue 和 CCustomTransition::SetInitialVelocity。 5. 将指针传递给自定义转换到下方法的动画对象，其值应使用自定义算法进行动画处理。 6. 当动画对象的值应更改 Windows 动画 API 将在 CCustomInterpolator 调用 InterpolateValue （和其他相关的方法）。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 

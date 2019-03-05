@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CSplitterWnd [MFC], OnDrawSplitter
 - CSplitterWnd [MFC], OnInvertTracker
 ms.assetid: fd0de258-6dbe-4552-9e47-a39de0471d51
-ms.openlocfilehash: 450699d001ee7246742fe23d9bf89d03c2d61cb8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 42913ddea7818636dce8d630ed2d79d13c19ce81
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50600500"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302099"
 ---
 # <a name="csplitterwnd-class"></a>CSplitterWnd 类
 
@@ -388,10 +388,10 @@ virtual BOOL CreateView(
 
 ### <a name="parameters"></a>参数
 
-*行*<br/>
+*row*<br/>
 指定要在其中放置新视图的拆分器窗口一行。
 
-*列号*<br/>
+*col*<br/>
 指定要在其中放置新视图的拆分器窗口中列。
 
 *pViewClass*<br/>
@@ -456,7 +456,7 @@ virtual void DeleteRow(int rowDelete);
 
 ### <a name="parameters"></a>参数
 
-*行删除*<br/>
+*rowDelete*<br/>
 指定要删除的行。
 
 ### <a name="remarks"></a>备注
@@ -475,10 +475,10 @@ virtual void DeleteView(
 
 ### <a name="parameters"></a>参数
 
-*行*<br/>
+*row*<br/>
 指定要删除的视图的拆分器窗口一行。
 
-*列号*<br/>
+*col*<br/>
 指定要删除的视图的拆分器窗口中列。
 
 ### <a name="remarks"></a>备注
@@ -628,7 +628,7 @@ void GetColumnInfo(
 
 ### <a name="parameters"></a>参数
 
-*列号*<br/>
+*col*<br/>
 指定的列。
 
 *cxCur*<br/>
@@ -649,10 +649,10 @@ CWnd* GetPane(
 
 ### <a name="parameters"></a>参数
 
-*行*<br/>
+*row*<br/>
 指定的行。
 
-*列号*<br/>
+*col*<br/>
 指定的列。
 
 ### <a name="return-value"></a>返回值
@@ -684,7 +684,7 @@ void GetRowInfo(
 
 ### <a name="parameters"></a>参数
 
-*行*<br/>
+*row*<br/>
 指定的行。
 
 *cyCur*<br/>
@@ -727,10 +727,10 @@ int IdFromRowCol(
 
 ### <a name="parameters"></a>参数
 
-*行*<br/>
+*row*<br/>
 指定的拆分器窗口中的一行。
 
-*列号*<br/>
+*col*<br/>
 指定的拆分器窗口中列。
 
 ### <a name="return-value"></a>返回值
@@ -807,7 +807,7 @@ virtual void OnDrawSplitter(
 *pDC*<br/>
 指向要在其中绘制的设备上下文的指针。 如果*pDC*为 NULL，则[CWnd::RedrawWindow](../../mfc/reference/cwnd-class.md#redrawwindow)称为窗口中绘制的框架和任何拆分。
 
-*n 类型*<br/>
+*nType*<br/>
 值为`enum ESplitType`，可以是以下值之一：
 
     - `splitBox` 拆分器拖动框。
@@ -877,10 +877,10 @@ virtual void SetActivePane(
 
 ### <a name="parameters"></a>参数
 
-*行*<br/>
+*row*<br/>
 如果*pWnd*为 NULL，在将处于活动状态的窗格中指定的一行。
 
-*列号*<br/>
+*col*<br/>
 如果*pWnd*为 NULL，指定将处于活动状态的窗格中的列。
 
 *pWnd*<br/>
@@ -905,7 +905,7 @@ void SetColumnInfo(
 
 ### <a name="parameters"></a>参数
 
-*列号*<br/>
+*col*<br/>
 指定拆分器窗口中列。
 
 *cxIdeal*<br/>
@@ -937,7 +937,7 @@ void SetRowInfo(
 
 ### <a name="parameters"></a>参数
 
-*行*<br/>
+*row*<br/>
 指定拆分器窗口行。
 
 *cyIdeal*<br/>

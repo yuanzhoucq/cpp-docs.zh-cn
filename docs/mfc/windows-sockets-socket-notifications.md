@@ -6,26 +6,26 @@ helpviewer_keywords:
 - notifications [MFC], socket
 - sockets [MFC], notifications
 ms.assetid: 87d5bf70-6e77-49a9-9a64-aaadee2ad018
-ms.openlocfilehash: e49001e9693872d23162284df49f128097e68784
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c08305b8aeeca00eaf41e4f1c24b51a46a8c4254
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476474"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289905"
 ---
 # <a name="windows-sockets-socket-notifications"></a>Windows 套接字：套接字通知
 
 本文介绍在套接字类中的通知函数。 这些成员函数都是框架调用以通知套接字对象的重要事件的回调函数。 通知函数包括：
 
-- [OnReceive](../mfc/reference/casyncsocket-class.md#onreceive)： 向此套接字通知，以便通过调用检索缓冲区中没有数据[接收](../mfc/reference/casyncsocket-class.md#receive)。
+- [OnReceive](../mfc/reference/casyncsocket-class.md#onreceive):它通过调用来检索的缓冲区中已有数据通知此套接字[接收](../mfc/reference/casyncsocket-class.md#receive)。
 
-- [OnSend](../mfc/reference/casyncsocket-class.md#onsend)： 通知，它现在可通过调用来发送数据的此套接字[发送](../mfc/reference/casyncsocket-class.md#send)。
+- [OnSend](../mfc/reference/casyncsocket-class.md#onsend):它现在可通过调用来发送数据通知此套接字[发送](../mfc/reference/casyncsocket-class.md#send)。
 
-- [OnAccept](../mfc/reference/casyncsocket-class.md#onaccept)： 通知它可以通过调用接受挂起的连接请求此侦听套接字[接受](../mfc/reference/casyncsocket-class.md#accept)。
+- [OnAccept](../mfc/reference/casyncsocket-class.md#onaccept):通知可通过调用接受挂起的连接请求此侦听套接字[接受](../mfc/reference/casyncsocket-class.md#accept)。
 
-- [OnConnect](../mfc/reference/casyncsocket-class.md#onconnect)： 通知其连接尝试完成此连接套接字： 可能成功或错误。
+- [OnConnect](../mfc/reference/casyncsocket-class.md#onconnect):通知其连接尝试完成此连接套接字： 可能成功或错误。
 
-- [OnClose](../mfc/reference/casyncsocket-class.md#onclose)： 通知套接字连接到已关闭此套接字。
+- [OnClose](../mfc/reference/casyncsocket-class.md#onclose):通知已关闭套接字连接到此套接字。
 
     > [!NOTE]
     >  其他通知函数是[OnOutOfBandData](../mfc/reference/casyncsocket-class.md#onoutofbanddata)。 此通知告诉接收套接字发送的套接字有要发送的"带外"数据。 带外数据是与每对已连接的流套接字关联的逻辑上独立于通道。 带外通道通常用于发送"紧急"的数据。 MFC 支持带外数据。 高级用户使用的类[CAsyncSocket](../mfc/reference/casyncsocket-class.md)可能需要使用带外通道，但类的用户[CSocket](../mfc/reference/csocket-class.md)我们建议您不要使用它。 更简单的方法是创建用于传递此类数据的第二个套接字。 有关带外数据的详细信息，请参阅 Windows SDK 中提供的 Windows 套接字规范。
@@ -47,7 +47,7 @@ MFC 调用通知函数，以便你可以在收到通知时自定义套接字的�
 
 有关详细信息，请参见:
 
-- [Windows 套接字：使用 CAsyncSocket 类](../mfc/windows-sockets-using-class-casyncsocket.md)
+- [Windows 套接字：使用类 CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
 
 - [Windows 套接字：从套接字类派生](../mfc/windows-sockets-deriving-from-socket-classes.md)
 
@@ -57,9 +57,8 @@ MFC 调用通知函数，以便你可以在收到通知时自定义套接字的�
 
 - [Windows 套接字：字节排序](../mfc/windows-sockets-byte-ordering.md)
 
-- [Windows 套接字：转换字符串](../mfc/windows-sockets-converting-strings.md)
+- [Windows 套接字：将字符串转换](../mfc/windows-sockets-converting-strings.md)
 
 ## <a name="see-also"></a>请参阅
 
 [MFC 中的 Windows 套接字](../mfc/windows-sockets-in-mfc.md)
-

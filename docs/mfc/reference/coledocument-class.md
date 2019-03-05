@@ -52,12 +52,12 @@ helpviewer_keywords:
 - COleDocument [MFC], OnUpdatePasteLinkMenu
 - COleDocument [MFC], OnUpdatePasteMenu
 ms.assetid: dc2ecb99-03e1-44c7-bb69-48056dd1b672
-ms.openlocfilehash: 2f28178240f7d17e124970d91ec7eb338ef110e6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7f36557a4a993e8abd3004dc59372cc5a089e044
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452136"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259745"
 ---
 # <a name="coledocument-class"></a>COleDocument 类
 
@@ -117,7 +117,7 @@ class COleDocument : public CDocument
 
 如果你正在编写一个简单的容器应用程序，派生从您的文档类`COleDocument`。 如果你正在编写支持将链接到包含其文档的嵌入项的容器应用程序，派生文档类从[COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md)。 如果你正在编写服务器应用程序或组合容器/服务器，派生文档类从[COleServerDoc](../../mfc/reference/coleserverdoc-class.md)。 `COleLinkingDoc` 并`COleServerDoc`派生自`COleDocument`，因此，这些类继承所有中可用的服务`COleDocument`和`CDocument`。
 
-若要使用`COleDocument`，从它派生一个类并添加管理应用程序的非 OLE 数据以及嵌入或链接项的功能。 如果定义了`CDocItem`的派生类，以存储应用程序的本机数据，可以使用由定义的默认实现`COleDocument`将 OLE 和非 OLE 数据存储。 此外可以设计自己用于存储非 OLE 数据独立于 OLE 项的数据结构。 有关详细信息，请参阅文章[容器： 复合文件](../../mfc/containers-compound-files.md)...
+若要使用`COleDocument`，从它派生一个类并添加管理应用程序的非 OLE 数据以及嵌入或链接项的功能。 如果定义了`CDocItem`的派生类，以存储应用程序的本机数据，可以使用由定义的默认实现`COleDocument`将 OLE 和非 OLE 数据存储。 此外可以设计自己用于存储非 OLE 数据独立于 OLE 项的数据结构。 有关详细信息，请参阅文章[容器：复合文件](../../mfc/containers-compound-files.md)...
 
 `CDocument` 支持发送你的文档通过邮件，邮件支持 (MAPI) 是否存在。 `COleDocument` 已更新[OnFileSendMail](#onfilesendmail)可正确处理复合文档。 有关详细信息，请参阅文章[MAPI](../../mfc/mapi.md)并[MFC 中的 MAPI 支持](../../mfc/mapi-support-in-mfc.md)...
 
@@ -206,7 +206,7 @@ void EnableCompoundFile(BOOL bEnable = TRUE);
 
 ### <a name="remarks"></a>备注
 
-这也称为结构化的存储。 通常从的构造函数调用此函数在`COleDocument`-派生的类。 有关复合文档的详细信息，请参阅文章[容器： 复合文件](../../mfc/containers-compound-files.md)...
+这也称为结构化的存储。 通常从的构造函数调用此函数在`COleDocument`-派生的类。 有关复合文档的详细信息，请参阅文章[容器：复合文件](../../mfc/containers-compound-files.md)...
 
 如果不调用此成员函数，则文档将存储在非结构化 （"平面"） 文件格式。
 
@@ -548,4 +548,3 @@ virtual void UpdateModifiedFlag();
 [MFC 示例 MFCBIND](../../visual-cpp-samples.md)<br/>
 [CDocument 类](../../mfc/reference/cdocument-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)
-

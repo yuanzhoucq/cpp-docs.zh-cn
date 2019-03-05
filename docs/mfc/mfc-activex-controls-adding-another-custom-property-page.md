@@ -1,5 +1,5 @@
 ---
-title: MFC ActiveX 控件：添加另一自定义属性页
+title: MFC ActiveX 控件：添加另一个自定义属性页
 ms.date: 11/04/2016
 helpviewer_keywords:
 - property pages [MFC], MFC ActiveX controls
@@ -7,18 +7,18 @@ helpviewer_keywords:
 - ActiveX controls [MFC], property pages
 - MFC ActiveX controls [MFC], property pages
 ms.assetid: fcf7e119-9f29-41a9-908d-e9b1607e08af
-ms.openlocfilehash: ac72258e881d10723a02b5103c602ac5cec6a1f5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 87b71fdddc5b52f66c34cdbcdb234c83616d0850
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50465307"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289541"
 ---
-# <a name="mfc-activex-controls-adding-another-custom-property-page"></a>MFC ActiveX 控件：添加另一自定义属性页
+# <a name="mfc-activex-controls-adding-another-custom-property-page"></a>MFC ActiveX 控件：添加另一个自定义属性页
 
 有时，ActiveX 控件将具有多个属性比正常可以容纳的一个属性页。 在这种情况下，可以将属性页添加到 ActiveX 控件以显示这些属性。
 
-本文介绍将新的属性页添加到已具有至少一个属性页的 ActiveX 控件。 添加常用属性的详细信息页 （字体、 图片或颜色），请参阅文章[MFC ActiveX 控件： 使用常用属性页](../mfc/mfc-activex-controls-using-stock-property-pages.md)。
+本文介绍将新的属性页添加到已具有至少一个属性页的 ActiveX 控件。 添加常用属性的详细信息页 （字体、 图片或颜色），请参阅文章[MFC ActiveX 控件：使用常用属性页](../mfc/mfc-activex-controls-using-stock-property-pages.md)。
 
 以下过程使用 ActiveX 控件向导创建的一个示例 ActiveX 控件框架。 因此，类名称和标识符是唯一的此示例。
 
@@ -110,4 +110,3 @@ ms.locfileid: "50465307"
 ## <a name="see-also"></a>请参阅
 
 [MFC ActiveX 控件](../mfc/mfc-activex-controls.md)
-

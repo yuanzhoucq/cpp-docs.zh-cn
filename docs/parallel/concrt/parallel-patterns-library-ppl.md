@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Parallel Patterns Library (PPL)
 ms.assetid: 40fd86b2-69fa-45e5-93d8-98a75636c242
-ms.openlocfilehash: deeede132a919084399be54d5559605b99c4e4fc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 11440d56b9618d4763e1b7e47a21b365bbdc0c15
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50459405"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290711"
 ---
 # <a name="parallel-patterns-library-ppl"></a>并行模式库 (PPL)
 
@@ -27,7 +27,8 @@ PPL 提供以下功能：
 
 PPL 提供类似于 c + + 标准库的编程模型。 下面的示例展示 PPL 的多种功能。 串行和并行计算若干 Fibonacci 数字。 这两种计算都作用于[std:: array](../../standard-library/array-class-stl.md)对象。 示例还控制台输出了进行两种计算所需的时间。
 
-串行版本使用 c + + 标准库[std:: for_each](../../standard-library/algorithm-functions.md#for_each)算法来遍历该数组，并将存储中的结果[std:: vector](../../standard-library/vector-class.md)对象。 并行版本执行相同的任务，但使用的是 PPL [concurrency:: parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each)算法，并将存储中的结果[concurrency:: concurrent_vector](../../parallel/concrt/reference/concurrent-vector-class.md)对象。 `concurrent_vector` 类可以使每个循环迭代并发添加元素，而无需同步对容器的写访问。
+串行版本使用 c + + 标准库[std:: for_each](../../standard-library/algorithm-functions.md#for_each)算法来遍历该数组，并将存储中的结果[std:: vector](../../standard-library/vector-class.md)对象。 并行版本执行相同的任务，但使用的是 PPL [concurrency:: parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each)算法，并将存储中的结果[concurrency:: concurrent_vector](../../parallel/concrt/reference/concurrent-vector-class.md)对象。 
+  `concurrent_vector` 类可以使每个循环迭代并发添加元素，而无需同步对容器的写访问。
 
 由于 `parallel_for_each` 并发操作，因此本示例的并行版本必须排列 `concurrent_vector` 对象的顺序才能生成与串行版本相同的结果。
 
@@ -58,4 +59,3 @@ fib(42): 267914296
 |[并行容器和对象](../../parallel/concrt/parallel-containers-and-objects.md)|描述 PPL 提供的各种并行容器和对象。|
 |[PPL 中的取消操作](cancellation-in-the-ppl.md)|说明如何取消并行算法当前正在执行的工作。|
 |[并发运行时](../../parallel/concrt/concurrency-runtime.md)|描述可以简化并发编程并包含相关主题链接的并发运行时。|
-

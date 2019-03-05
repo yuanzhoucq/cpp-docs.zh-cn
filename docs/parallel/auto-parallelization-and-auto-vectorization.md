@@ -2,12 +2,12 @@
 title: 自动并行化和自动矢量化
 ms.date: 11/04/2016
 ms.assetid: ec71583a-287b-4599-8767-1d255e080fe3
-ms.openlocfilehash: 06ab255e7769bfa56d5a8d22cdbe19d415ce6b31
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 018289bc9499aee8d1739ebeed0c1cb847769a08
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618333"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276619"
 ---
 # <a name="auto-parallelization-and-auto-vectorization"></a>自动并行化和自动矢量化
 
@@ -15,7 +15,7 @@ ms.locfileid: "50618333"
 
 ## <a name="auto-parallelizer"></a>自动并行化程序
 
-[/Qpar](../build/reference/qpar-auto-parallelizer.md)编译器开关可以启用*自动并行化*的代码中的循环。 当你指定此标志而未更改现有代码时，编译器将评估代码以查找可能受益于并行化的循环。 因为它可能会发现循环未做大量的工作，因此不会受益于并行化，而且因为每个不必要的并行化可能导致线程池、额外的同步的增强，或其他处理往往会降低而不是改进性能，因此编译器将保守地选择它进行并行化的循环。 例如，考虑下面的示例，它们的循环上限在编译时未知：
+[/Qpar](../build/reference/qpar-auto-parallelizer.md)编译器开关可以启用*自动并行化*的代码中的循环。 当您指定此标志而未更改现有代码时，编译器将评估代码以查找可能受益于并行化的循环。 因为它可能会发现循环未做大量的工作，因此不会受益于并行化，而且因为每个不必要的并行化可能导致线程池、额外的同步的增强，或其他处理往往会降低而不是改进性能，因此编译器将保守地选择它进行并行化的循环。 例如，考虑下面的示例，它们的循环上限在编译时未知：
 
 ```cpp
 void loop_test(int u) {
@@ -107,7 +107,7 @@ for (int i = 0; i < 1000; ++i)
 
 有关原因代码和消息的详细信息，请参阅[矢量化程序和并行化程序消息](../error-messages/tool-errors/vectorizer-and-parallelizer-messages.md)。
 
-有关演示如何向量化程序的实际工作原理的示例，请参阅[项目 Austin 6 的第 2 部分： 翻页](http://blogs.msdn.com/b/vcblog/archive/2012/09/27/10348494.aspx)
+有关演示如何向量化程序的实际工作原理的示例，请参阅[项目 Austin 6 的第 2 部分：运行页](http://blogs.msdn.com/b/vcblog/archive/2012/09/27/10348494.aspx)
 
 ## <a name="see-also"></a>请参阅
 

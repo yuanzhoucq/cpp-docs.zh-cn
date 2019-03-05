@@ -8,12 +8,12 @@ helpviewer_keywords:
 - class factories
 - class factories, ATL classes
 ms.assetid: 1d8c2ae2-2c37-452c-a02d-1ecbdd309f84
-ms.openlocfilehash: 4865a938f4387c55609db144b02ebdbb92b378ba
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ebabb8c58c4ac1c2e7203cdd7e554e75cc937df6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631823"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271835"
 ---
 # <a name="class-factories-classes"></a>类工厂类
 
@@ -33,4 +33,3 @@ ms.locfileid: "50631823"
 
 [类概述](../atl/atl-class-overview.md)<br/>
 [聚合和类工厂宏](../atl/reference/aggregation-and-class-factory-macros.md)
-

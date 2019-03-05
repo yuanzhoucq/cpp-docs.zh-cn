@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CD2DRadialGradientBrush [MFC], m_pRadialGradientBrush
 - CD2DRadialGradientBrush [MFC], m_RadialGradientBrushProperties
 ms.assetid: 6c76d84a-d831-4ee2-96f1-82c1f5b0d6a9
-ms.openlocfilehash: fbdc6e6b9e7ffff1f14da79ed207644b518910fd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 22029ebcf8cf519571e81e11c84de146c9d54b26
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50564328"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277269"
 ---
 # <a name="cd2dradialgradientbrush-class"></a>CD2DRadialGradientBrush 类
 
@@ -62,7 +62,7 @@ class CD2DRadialGradientBrush : public CD2DGradientBrush;
 |名称|描述|
 |----------|-----------------|
 |[CD2DRadialGradientBrush::CD2DRadialGradientBrush](#cd2dradialgradientbrush)|构造一个 CD2DLinearGradientBrush 对象。|
-|[CD2DRadialGradientBrush:: ~ CD2DRadialGradientBrush](#_dtorcd2dradialgradientbrush)|析构函数。 当 D2D 径向渐变画笔对象被销毁时调用。|
+|[CD2DRadialGradientBrush::~CD2DRadialGradientBrush](#_dtorcd2dradialgradientbrush)|析构函数。 当 D2D 径向渐变画笔对象被销毁时调用。|
 
 ### <a name="public-methods"></a>公共方法
 
@@ -86,7 +86,7 @@ class CD2DRadialGradientBrush : public CD2DGradientBrush;
 
 |名称|描述|
 |----------|-----------------|
-|[CD2DRadialGradientBrush::operator ID2D1RadialGradientBrush *](#operator_id2d1radialgradientbrush_star)|返回 ID2D1RadialGradientBrush 接口|
+|[CD2DRadialGradientBrush::operator ID2D1RadialGradientBrush*](#operator_id2d1radialgradientbrush_star)|返回 ID2D1RadialGradientBrush 接口|
 
 ### <a name="protected-data-members"></a>受保护的数据成员
 
@@ -287,7 +287,7 @@ Center、 渐变原点偏移量和 x 轴半径和 y 轴半径的画笔的渐变�
 D2D1_RADIAL_GRADIENT_BRUSH_PROPERTIES m_RadialGradientBrushProperties;
 ```
 
-##  <a name="operator_id2d1radialgradientbrush_star"></a>  CD2DRadialGradientBrush::operator ID2D1RadialGradientBrush *
+##  <a name="operator_id2d1radialgradientbrush_star"></a>  CD2DRadialGradientBrush::operator ID2D1RadialGradientBrush*
 
 返回 ID2D1RadialGradientBrush 接口
 
@@ -309,7 +309,7 @@ void SetCenter(CD2DPointF point);
 
 ### <a name="parameters"></a>参数
 
-*点*<br/>
+*point*<br/>
 画笔的坐标空间中的渐变椭圆的中心
 
 ##  <a name="setgradientoriginoffset"></a>  CD2DRadialGradientBrush::SetGradientOriginOffset

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - serialization [MFC], collection classes
 - collection classes [MFC], deriving from nontemplate
 ms.assetid: 7230b2db-4283-4083-b098-eb231bf5b89e
-ms.openlocfilehash: 12ecec7562a9241fab30b859727a22e467e6eeb0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d4241a77184458f5253b6d8987c310604310683c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50581787"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295183"
 ---
 # <a name="how-to-make-a-type-safe-collection"></a>如何：创建类型安全集合
 
@@ -51,9 +51,11 @@ Microsoft 基础类库提供基于 C++ 模板的预定义类型安全集合。 �
 
 ###  <a name="_core_serializing_elements"></a> 序列化元素
 
-`CArray`、`CList` 和 `CMap` 类将调用 `SerializeElements` 以将集合元素存储到存档中或从存档中读取集合元素。
 
-`SerializeElements` 帮助器函数的默认实现将执行从对象到存档的位写入，或从存档到对象的位读取，具体取决于是将对象存储在存档中还是从存档中检索对象。 如果此操作不合适，则请重写 `SerializeElements`。
+  `CArray`、`CList` 和 `CMap` 类将调用 `SerializeElements` 以将集合元素存储到存档中或从存档中读取集合元素。
+
+
+  `SerializeElements` 帮助器函数的默认实现将执行从对象到存档的位写入，或从存档到对象的位读取，具体取决于是将对象存储在存档中还是从存档中检索对象。 如果此操作不合适，则请重写 `SerializeElements`。
 
 如果您的集合存储派生自 `CObject` 的对象并且您在集合元素类的实现中使用 `IMPLEMENT_SERIAL` 宏，则可以使用内置于 `CArchive` 和 `CObject` 的序列化功能：
 
@@ -100,4 +102,3 @@ MFC 还支持 MFC 1.0 版引入的集合类。 这些类都不基于模板。 �
 ## <a name="see-also"></a>请参阅
 
 [集合](../mfc/collections.md)
-

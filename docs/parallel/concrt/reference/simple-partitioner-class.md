@@ -8,16 +8,17 @@ f1_keywords:
 helpviewer_keywords:
 - simple_partitioner class
 ms.assetid: d7e997af-54d1-43f5-abe0-def72df6edb3
-ms.openlocfilehash: f3c5792a13d9e63a05ce6710dea77828f2510f0d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 372773926903da32f1690904b34cd143a04940dd
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50522442"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301267"
 ---
 # <a name="simplepartitioner-class"></a>simple_partitioner 类
 
-`simple_partitioner` 类表示由 `parallel_for` 循环访问的范围的静态分区。 分区程序将该范围分成区块，以便每个区块都至少具有区块大小指定的迭代数量。
+
+  `simple_partitioner` 类表示由 `parallel_for` 循环访问的范围的静态分区。 分区程序将该范围分成区块，以便每个区块都至少具有区块大小指定的迭代数量。
 
 ## <a name="syntax"></a>语法
 

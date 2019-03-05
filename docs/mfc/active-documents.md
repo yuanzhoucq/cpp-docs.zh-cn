@@ -9,12 +9,12 @@ helpviewer_keywords:
 - views [MFC], active documents
 - active documents [MFC], views
 ms.assetid: 1378f18e-aaa6-420b-8501-4b974905baa0
-ms.openlocfilehash: e6f8161432cc951b5e224ec28142429efbdf0726
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 519dd51ab9b46adf862999104e97c6e478ccd86b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50639655"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269235"
 ---
 # <a name="active-documents"></a>活动文档
 
@@ -101,4 +101,3 @@ interface IOleDocumentView : IUnknown
 ## <a name="see-also"></a>请参阅
 
 [活动文档包容](../mfc/active-document-containment.md)
-

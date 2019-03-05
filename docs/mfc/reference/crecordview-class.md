@@ -17,12 +17,12 @@ helpviewer_keywords:
 - CRecordView [MFC], OnMove
 - CRecordView [MFC], OnMove
 ms.assetid: 9b4b0897-bd50-4d48-a0b4-f3323f5ccc55
-ms.openlocfilehash: c7013fb53562fd76744bff19d1d37ce972a52d52
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a91a9e320b4221b04bbcf996ffa60f1de4b35ec5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643855"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262462"
 ---
 # <a name="crecordview-class"></a>CRecordView 类
 
@@ -62,7 +62,7 @@ class AFX_NOVTABLE CRecordView : public CFormView
 该视图是直接连接到的窗体视图`CRecordset`对象。 该视图通过对话框模板资源创建和显示字段的`CRecordset`对话框模板的控件中的对象。 `CRecordView`对象使用对话框数据交换 (DDX) 和记录字段交换 (RFX) 自动执行窗体上的控件和记录集的字段之间的数据移动。 `CRecordView` 此外提供了一个默认实现来移动到第一个下, 一步上, 一个，或最后一个记录和更新当前在视图上的记录的接口。
 
 > [!NOTE]
->  如果您正在使用的数据访问对象 (DAO) 类而不是开放式数据库连接 (ODBC) 类，使用类[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)相反。 有关详细信息，请参阅文章[概述： 数据库编程](../../data/data-access-programming-mfc-atl.md)。
+>  如果您正在使用的数据访问对象 (DAO) 类而不是开放式数据库连接 (ODBC) 类，使用类[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)相反。 有关详细信息，请参阅文章[概述：数据库编程](../../data/data-access-programming-mfc-atl.md)。
 
 若要创建记录视图的最常见方法是使用应用程序向导。 Tge 应用程序向导创建记录视图类和其关联的记录集类主干初学者应用程序的一部分。 如果不使用应用程序向导创建记录视图类，您可以创建它更高版本使用类向导。 如果您只需单个窗体，则应用程序向导方法是更容易。 类向导允许您决定更高版本在开发过程中使用记录视图。 使用类向导单独创建记录视图和记录集，并连接它们是最灵活的方法，因为这样可以更好的控制命名记录集类并将其。H /。CPP 文件。 此方法还可以有相同的记录集类上的多个记录视图。
 
@@ -180,7 +180,7 @@ virtual CRecordset* OnGetRecordset() = 0;
 
 必须重写构造或获取记录集对象并返回一个指向此成员函数。 如果声明 ClassWizard 在记录视图类，该向导为您编写是默认的重写。 类向导的默认实现返回存储在记录视图中，如果存在的记录集指针。 如果不是，它构造类型的记录集对象指定与 ClassWizard 和调用其`Open`成员函数打开的表或运行查询，然后返回一个指向该对象。
 
-有关详细信息和示例，请参阅文章[记录视图： 使用记录视图](../../data/using-a-record-view-mfc-data-access.md)。
+有关详细信息和示例，请参阅文章[记录视图：使用记录视图](../../data/using-a-record-view-mfc-data-access.md)。
 
 ##  <a name="onmove"></a>  CRecordView::OnMove
 

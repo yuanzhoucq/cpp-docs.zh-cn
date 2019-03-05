@@ -1,5 +1,5 @@
 ---
-title: TN053：DAO 数据库类的自定义 DFX 例程
+title: TN053:DAO 数据库类的自定义 DFX 例程
 ms.date: 11/04/2016
 f1_keywords:
 - vc.mfc.dfx
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - DFX (DAO record field exchange) [MFC]
 - custom DFX routines [MFC]
 ms.assetid: fdcf3c51-4fa8-4517-9222-58aaa4f25cac
-ms.openlocfilehash: 81529dd1e34d06dd3e5d541d39dbe91bb5eda1b7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b610604c1b7a68128dc9eb6fb5515225ed22b16e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50517762"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57282404"
 ---
-# <a name="tn053-custom-dfx-routines-for-dao-database-classes"></a>TN053：DAO 数据库类的自定义 DFX 例程
+# <a name="tn053-custom-dfx-routines-for-dao-database-classes"></a>TN053:DAO 数据库类的自定义 DFX 例程
 
 > [!NOTE]
 >  Visual c + + 环境和向导不支持 DAO （尽管 DAO 类包含并且仍可以使用它们）。 Microsoft 建议您使用[OLE DB 模板](../data/oledb/ole-db-templates.md)或[ODBC 和 MFC](../data/odbc/odbc-and-mfc.md)为新项目。 仅应在维护现有应用程序使用 DAO。
@@ -220,4 +220,3 @@ DAO`GetRows`可通过多种方式在工作。
 
 [按编号列出的技术说明](../mfc/technical-notes-by-number.md)<br/>
 [按类别列出的技术说明](../mfc/technical-notes-by-category.md)
-

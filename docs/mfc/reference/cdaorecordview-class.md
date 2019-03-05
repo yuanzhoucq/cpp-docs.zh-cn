@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CDaoRecordView [MFC], OnGetRecordset
 - CDaoRecordView [MFC], OnMove
 ms.assetid: 5aa7d0e2-bd05-413e-b216-80c404ce18ac
-ms.openlocfilehash: db1636bebd0cc29124018b5fad2c0535079706d3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f63aa8ed17619a9eef36e36bcc9243a3b973889a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50541201"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277764"
 ---
 # <a name="cdaorecordview-class"></a>CDaoRecordView 类
 
@@ -173,7 +173,7 @@ virtual CDaoRecordset* OnGetRecordset() = 0;
 
 必须重写构造或获取记录集对象并返回一个指向此成员函数。 如果声明 ClassWizard 在记录视图类，该向导为您编写是默认的重写。 类向导的默认实现返回存储在记录视图中，如果存在的记录集指针。 如果不是，它构造类型的记录集对象指定与 ClassWizard 和调用其`Open`成员函数打开的表或运行查询，然后返回一个指向该对象。
 
-有关详细信息和示例，请参阅文章[记录视图： 使用记录视图](../../data/using-a-record-view-mfc-data-access.md)。
+有关详细信息和示例，请参阅文章[记录视图：使用记录视图](../../data/using-a-record-view-mfc-data-access.md)。
 
 ##  <a name="onmove"></a>  CDaoRecordView::OnMove
 

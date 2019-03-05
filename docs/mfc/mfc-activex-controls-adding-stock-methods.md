@@ -6,12 +6,12 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], methods
 - DoClick method [MFC]
 ms.assetid: bc4fad78-cabd-4cc0-a798-464b1a682f0b
-ms.openlocfilehash: 1e47e45efe27c9562cf8500f8941bcf0e259448a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 29cb0d6f53d4e8fbbce12a83b2eecb8658c82697
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585024"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305206"
 ---
 # <a name="mfc-activex-controls-adding-stock-methods"></a>MFC ActiveX 控件：添加常用方法
 
@@ -20,12 +20,12 @@ ms.locfileid: "50585024"
 >[!IMPORTANT]
 > ActiveX 是一项传统技术，不应使用新的开发。 有关取代 ActiveX 的现代技术的详细信息，请参阅[ActiveX 控件](activex-controls.md)。
 
-`COleControl` 支持两种常用方法： DoClick 和刷新。 控件的用户，以立即更新控件的外观; 调用刷新DoClick 调用以引发该控件的 Click 事件。
+`COleControl` 支持两种常用方法：DoClick 和刷新。 控件的用户，以立即更新控件的外观; 调用刷新DoClick 调用以引发该控件的 Click 事件。
 
 |方法|调度映射条目|注释|
 |------------|------------------------|-------------|
-|`DoClick`|**DISP_STOCKPROP_DOCLICK （)**|触发 Click 事件。|
-|`Refresh`|**DISP_STOCKPROP_REFRESH （)**|将立即更新控件的外观。|
+|`DoClick`|**DISP_STOCKPROP_DOCLICK( )**|触发 Click 事件。|
+|`Refresh`|**DISP_STOCKPROP_REFRESH( )**|将立即更新控件的外观。|
 
 ##  <a name="_core_adding_a_stock_method_using_classwizard"></a> 添加常用方法使用添加方法向导
 
@@ -64,4 +64,3 @@ ms.locfileid: "50585024"
 ## <a name="see-also"></a>请参阅
 
 [MFC ActiveX 控件](../mfc/mfc-activex-controls.md)
-

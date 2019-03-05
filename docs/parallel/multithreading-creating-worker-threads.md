@@ -1,5 +1,5 @@
 ---
-title: 多线程处理： 在 MFC 中创建工作线程数
+title: 多线程处理：在 MFC 中创建工作线程数
 ms.date: 11/04/2016
 helpviewer_keywords:
 - multithreading [C++], worker threads
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - threading [MFC], worker threads
 - threading [C++], user input not required
 ms.assetid: 670adbfe-041c-4450-a3ed-be14aab15234
-ms.openlocfilehash: 54bea7b42018637bf868dfdd923b94dd75aa2307
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f36e02d1ba6074a7ec8203bea761b3528a120162
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559479"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293233"
 ---
-# <a name="multithreading-creating-worker-threads-in-mfc"></a>多线程处理： 在 MFC 中创建工作线程数
+# <a name="multithreading-creating-worker-threads-in-mfc"></a>多线程处理：在 MFC 中创建工作线程数
 
 工作线程通常用于处理后台任务，用户不必等待即可继续使用你的应用程序。 重新计算和后台打印等任务，这样工作线程。 本主题详细介绍创建工作线程所需的步骤。 包括以下主题：
 
@@ -55,11 +55,11 @@ ms.locfileid: "50559479"
 UINT MyControllingFunction( LPVOID pParam );
 ```
 
-参数是单个值。 在函数收到此参数中的值是时创建线程对象传递给构造函数的值。 控制函数可以将此值还选择能以任何方式解释。 它可以视为标量值或指向包含多个参数的结构的指针，或可以忽略。 如果参数引用结构，不仅可以将数据从调用方传递到线程，而且还将数据从线程传递到调用方可以使用该结构。 如果使用此类结构将数据传递回调用方，线程需要结果已准备就绪时通知调用方。 有关从工作线程到调用方进行通信的信息，请参阅[多线程处理： 编程提示](multithreading-programming-tips.md)。
+参数是单个值。 在函数收到此参数中的值是时创建线程对象传递给构造函数的值。 控制函数可以将此值还选择能以任何方式解释。 它可以视为标量值或指向包含多个参数的结构的指针，或可以忽略。 如果参数引用结构，不仅可以将数据从调用方传递到线程，而且还将数据从线程传递到调用方可以使用该结构。 如果使用此类结构将数据传递回调用方，线程需要结果已准备就绪时通知调用方。 有关从工作线程到调用方进行通信的信息，请参阅[多线程处理：编程提示](multithreading-programming-tips.md)。
 
-该函数在终止时，它应返回一个 UINT 值，该值终止的原因。 通常情况下，此退出代码为 0 以指示成功的其他值，该值指示不同类型的错误。 这是只依赖于实现。 某些线程可能会维护对象的使用计数，并返回当前使用该对象的次数。 若要查看应用程序如何检索此值，请参阅[多线程处理： 终止线程](multithreading-terminating-threads.md)。
+该函数在终止时，它应返回一个 UINT 值，该值终止的原因。 通常情况下，此退出代码为 0 以指示成功的其他值，该值指示不同类型的错误。 这是只依赖于实现。 某些线程可能会维护对象的使用计数，并返回当前使用该对象的次数。 若要查看应用程序如何检索此值，请参阅[多线程处理：终止线程](multithreading-terminating-threads.md)。
 
-有一些限制，可以编写与 MFC 库的多线程程序中执行的操作。 有关这些限制和使用线程的其他提示的说明，请参阅[多线程处理： 编程提示](multithreading-programming-tips.md)。
+有一些限制，可以编写与 MFC 库的多线程程序中执行的操作。 有关这些限制和使用线程的其他提示的说明，请参阅[多线程处理：编程提示](multithreading-programming-tips.md)。
 
 ##  <a name="_core_controlling_function_example"></a> 控制函数示例
 

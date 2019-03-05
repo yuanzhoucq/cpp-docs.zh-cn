@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CPropertyPageDialog class [MFC]
 - MFC ActiveX controls [MFC], property pages
 ms.assetid: 1506f87a-9fd6-4505-8380-0dbc9636230e
-ms.openlocfilehash: 7027a58960e07903c9d774e07379c8050bc489b8
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 3fe092e412cf11f7bf8600e8d0d7d43abb0e11c7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176453"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303893"
 ---
 # <a name="mfc-activex-controls-property-pages"></a>MFC ActiveX 控件：属性页
 
@@ -35,7 +35,7 @@ ActiveX 控件属性页会显示在两种方法：
 ![Circ3 属性对话框](../mfc/media/vc373i1.gif "Circ3 属性对话框") <br/>
 属性对话框
 
-本文介绍如何与 ActiveX 控件中使用属性页相关的主题。 这些方法包括：
+本文介绍如何与 ActiveX 控件中使用属性页相关的主题。 这些问题包括：
 
 - [实现 ActiveX 控件的默认属性页](#_core_implementing_the_default_property_page)
 
@@ -45,7 +45,7 @@ ActiveX 控件属性页会显示在两种方法：
 
 使用 ActiveX 控件中的属性页面的详细信息，请参阅以下文章：
 
-- [MFC ActiveX 控件：添加另一自定义属性页](../mfc/mfc-activex-controls-adding-another-custom-property-page.md)
+- [MFC ActiveX 控件：添加另一个自定义属性页](../mfc/mfc-activex-controls-adding-another-custom-property-page.md)
 
 - [MFC ActiveX 控件：使用常用属性页](../mfc/mfc-activex-controls-using-stock-property-pages.md)
 
@@ -53,7 +53,7 @@ ActiveX 控件属性页会显示在两种方法：
 
 ##  <a name="_core_implementing_the_default_property_page"></a> 实现默认属性页
 
-如果使用 ActiveX 控件向导创建控件项目，ActiveX 控件向导提供默认属性页类，该控件派生自[COlePropertyPage 类](../mfc/reference/colepropertypage-class.md)。 最初，此属性页为空，但您可以向其中添加任何对话框控件或一组控件。 因为 ActiveX 控件向导默认情况下，附加属性页类将创建只有一个属性页类 (也派生自`COlePropertyPage`) 必须使用类视图创建。 此过程的详细信息，请参阅[MFC ActiveX 控件： 添加另一个自定义属性页](../mfc/mfc-activex-controls-adding-another-custom-property-page.md)。
+如果使用 ActiveX 控件向导创建控件项目，ActiveX 控件向导提供默认属性页类，该控件派生自[COlePropertyPage 类](../mfc/reference/colepropertypage-class.md)。 最初，此属性页为空，但您可以向其中添加任何对话框控件或一组控件。 因为 ActiveX 控件向导默认情况下，附加属性页类将创建只有一个属性页类 (也派生自`COlePropertyPage`) 必须使用类视图创建。 此过程的详细信息，请参阅[MFC ActiveX 控件：添加另一个自定义属性页](../mfc/mfc-activex-controls-adding-another-custom-property-page.md)。
 
 实现属性页 （在此情况下，默认值） 是一个三步骤过程：
 

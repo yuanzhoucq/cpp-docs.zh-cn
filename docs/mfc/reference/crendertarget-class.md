@@ -114,12 +114,12 @@ helpviewer_keywords:
 - CRenderTarget [MFC], m_pRenderTarget
 - CRenderTarget [MFC], m_pTextFormatDefault
 ms.assetid: 30d1607d-68d3-4d14-ac36-fdbd0ef903a1
-ms.openlocfilehash: 3066f3308d0c7e5c9a04f7746585be9a9dd5bc9b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 112bd4422a1fa6b9b97239228dc586a0555ddc96
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588633"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259875"
 ---
 # <a name="crendertarget-class"></a>CRenderTarget 类
 
@@ -138,7 +138,7 @@ class CRenderTarget : public CObject;
 |名称|描述|
 |----------|-----------------|
 |[CRenderTarget::CRenderTarget](#crendertarget)|构造一个 CRenderTarget 对象。|
-|[CRenderTarget:: ~ CRenderTarget](#crendertarget__~crendertarget)|析构函数。 当呈现器目标对象被销毁时调用。|
+|[CRenderTarget::~CRenderTarget](#crendertarget__~crendertarget)|析构函数。 当呈现器目标对象被销毁时调用。|
 
 ### <a name="public-methods"></a>公共方法
 
@@ -204,7 +204,7 @@ class CRenderTarget : public CObject;
 
 |名称|描述|
 |----------|-----------------|
-|[CRenderTarget::operator ID2D1RenderTarget *](#operator_id2d1rendertarget_star)|返回 ID2D1RenderTarget 接口|
+|[CRenderTarget::operator ID2D1RenderTarget*](#operator_id2d1rendertarget_star)|返回 ID2D1RenderTarget 接口|
 
 ### <a name="protected-data-members"></a>受保护的数据成员
 
@@ -224,7 +224,7 @@ class CRenderTarget : public CObject;
 
 **标头：** afxrendertarget.h
 
-##  <a name="_dtorcrendertarget"></a>  CRenderTarget:: ~ CRenderTarget
+##  <a name="_dtorcrendertarget"></a>  CRenderTarget::~CRenderTarget
 
 析构函数。 当呈现器目标对象被销毁时调用。
 
@@ -263,7 +263,7 @@ void Clear(D2D1_COLOR_F color);
 
 ### <a name="parameters"></a>参数
 
-*颜色*<br/>
+*color*<br/>
 向其清除绘图区域的颜色。
 
 ##  <a name="colorref_to_d2dcolor"></a>  CRenderTarget::COLORREF_TO_D2DCOLOR
@@ -278,7 +278,7 @@ static D2D1_COLOR_F COLORREF_TO_D2DCOLOR(
 
 ### <a name="parameters"></a>参数
 
-*颜色*<br/>
+*color*<br/>
 RGB 值。
 
 *nAlpha*
@@ -402,7 +402,7 @@ void DrawEllipse(
 
 ### <a name="parameters"></a>参数
 
-*椭圆*<br/>
+*ellipse*<br/>
 位置和要绘制，以独立于设备的像素为单位的椭圆半径。
 
 *pBrush*<br/>
@@ -573,7 +573,7 @@ void DrawText(
 *pForegroundBrush*<br/>
 用于绘制文本的画笔。
 
-*TextFormat*<br/>
+*textFormat*<br/>
 对象用于描述要绘制的文本，如字体、 字体大小和流方向的详细信息的格式。
 
 *options*<br/>
@@ -632,7 +632,7 @@ void FillEllipse(
 
 ### <a name="parameters"></a>参数
 
-*椭圆*<br/>
+*ellipse*<br/>
 位置和半径，以独立于设备的像素为单位，要绘制的椭圆。
 
 *pBrush*<br/>
@@ -756,10 +756,10 @@ void Flush(
 
 ### <a name="parameters"></a>参数
 
-*标记 1*<br/>
+*tag1*<br/>
 包含绘制操作导致错误或 0，如果没有出现错误的标记。 此参数未经初始化即被传递。
 
-*标记 2*<br/>
+*tag2*<br/>
 包含绘制操作导致错误或 0，如果没有出现错误的标记。 此参数未经初始化即被传递。
 
 ##  <a name="getantialiasmode"></a>  CRenderTarget::GetAntialiasMode
@@ -858,10 +858,10 @@ void GetTags(
 
 ### <a name="parameters"></a>参数
 
-*标记 1*<br/>
+*tag1*<br/>
 包含用于后续的绘图操作的第一个标签。 此参数未经初始化即被传递。 如果指定 NULL，则此参数不检索任何值。
 
-*标记 2*<br/>
+*tag2*<br/>
 包含用于后续的绘图操作的第二个标签。 此参数未经初始化即被传递。 如果指定 NULL，则此参数不检索任何值。
 
 ##  <a name="gettextantialiasmode"></a>  CRenderTarget::GetTextAntialiasMode
@@ -955,7 +955,7 @@ ID2D1RenderTarget* m_pRenderTarget;
 CD2DTextFormat* m_pTextFormatDefault;
 ```
 
-##  <a name="operator_id2d1rendertarget_star"></a>  CRenderTarget::operator ID2D1RenderTarget *
+##  <a name="operator_id2d1rendertarget_star"></a>  CRenderTarget::operator ID2D1RenderTarget*
 
 返回 ID2D1RenderTarget 接口
 
@@ -1016,7 +1016,7 @@ void PushLayer(
 *layerParameters*<br/>
 的内容边界、 几何掩模、 不透明度、 不透明蒙板和层的抗锯齿选项。
 
-*层*<br/>
+*layer*<br/>
 接收后续的绘图操作层。
 
 ##  <a name="restoredrawingstate"></a>  CRenderTarget::RestoreDrawingState
@@ -1083,10 +1083,10 @@ void SetTags(
 
 ### <a name="parameters"></a>参数
 
-*标记 1*<br/>
+*tag1*<br/>
 标签以应用于后续绘图操作。
 
-*标记 2*<br/>
+*tag2*<br/>
 标签以应用于后续绘图操作。
 
 ##  <a name="settextantialiasmode"></a>  CRenderTarget::SetTextAntialiasMode

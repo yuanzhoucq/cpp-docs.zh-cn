@@ -16,12 +16,12 @@ helpviewer_keywords:
 - collection classes [MFC], duplicates allowed
 - collection classes [MFC], shapes
 ms.assetid: a82188cd-443f-40d8-a244-edf292a53db4
-ms.openlocfilehash: 2c8cb323feb44618909895a4ee536ad3b7832173
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c72a57385b0036d98629d1ee24111500b9d2f8ad
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50446730"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288033"
 ---
 # <a name="recommendations-for-choosing-a-collection-class"></a>关于选择集合类的建议
 
@@ -89,7 +89,7 @@ ms.locfileid: "50446730"
 
 2. 可序列化性取决于基础集合类型。 例如，如果类型化指针数组基于 `CObArray`，则可序列化；如果基于 `CPtrArray`，则不可序列化。 一般情况下，“Ptr”类不能进行序列化。
 
-3. 如果在此列中标记为“是”，若你按要求使用它，则非模板集合类为类型安全。 例如，如果你在 `CByteArray` 中存储字节，则数组为类型安全。 但如果你将其用于存储字符，则其类型安全性稍微不确定。
+3. 如果在此列中标记为“是”，若你按要求使用它，则非模板集合类为类型安全。 例如，如果你在 `CByteArray`中存储字节，则数组为类型安全。 但如果你将其用于存储字符，则其类型安全性稍微不确定。
 
 ## <a name="see-also"></a>请参阅
 
@@ -97,4 +97,3 @@ ms.locfileid: "50446730"
 [基于模板的类](../mfc/template-based-classes.md)<br/>
 [如何：创建类型安全集合](../mfc/how-to-make-a-type-safe-collection.md)<br/>
 [访问集合的所有成员](../mfc/accessing-all-members-of-a-collection.md)
-

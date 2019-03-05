@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMutex [MFC], CMutex
 ms.assetid: 6330c050-4f01-4195-a099-2029b92f8cf1
-ms.openlocfilehash: 823f38a6292152774f72c97963b9add5d429d2f7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f85e562af9d048503be20d1ab5d219fe8d2d039f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50508779"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273291"
 ---
 # <a name="cmutex-class"></a>CMutex 类
 
@@ -43,7 +43,7 @@ class CMutex : public CSyncObject
 
 由控制访问资源`CMutex`对象以这种方式，首先创建任一类型的变量[CSingleLock](../../mfc/reference/csinglelock-class.md)或类型[CMultiLock](../../mfc/reference/cmultilock-class.md)中资源的访问成员函数。 然后，调用的锁对象`Lock`成员函数 (例如， [CSingleLock::Lock](../../mfc/reference/csinglelock-class.md#lock))。 此时，你的线程将获取对资源的访问权限，等待资源释放并获取访问权限，或等待资源释放和超时，无法获取对资源的访问权限。 在任何情况下，以线程安全的方式访问所需的资源。 若要释放资源，使用的锁对象`Unlock`成员函数 (例如， [CSingleLock::Unlock](../../mfc/reference/csinglelock-class.md#unlock))，或允许离开作用域的锁对象。
 
-有关使用的详细信息`CMutex`对象，请参阅文章[多线程处理： 如何使用同步类](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)。
+有关使用的详细信息`CMutex`对象，请参阅文章[多线程处理：如何使用同步类](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -74,7 +74,8 @@ CMutex(
 指定如果线程创建`CMutex`对象最初有权访问由 mutex 控制的资源。
 
 *lpszName*<br/>
-`CMutex` 对象的名称。 如果存在具有相同名称的另一个互斥体，则*lpszName*如果跨进程边界，将使用的对象必须提供。 如果**NULL**，将是未命名的互斥体。 如果名称匹配现有 mutex，构造函数将生成新`CMutex`对象引用该名称的互斥体。 如果名称匹配一个现有的同步对象，它不 mutex，构造将失败。
+
+  `CMutex` 对象的名称。 如果存在具有相同名称的另一个互斥体，则*lpszName*如果跨进程边界，将使用的对象必须提供。 如果**NULL**，将是未命名的互斥体。 如果名称匹配现有 mutex，构造函数将生成新`CMutex`对象引用该名称的互斥体。 如果名称匹配一个现有的同步对象，它不 mutex，构造将失败。
 
 *lpsaAttribute*<br/>
 Mutex 对象的安全特性。 此结构的完整说明，请参阅[SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) Windows SDK 中。
@@ -90,4 +91,3 @@ Mutex 对象的安全特性。 此结构的完整说明，请参阅[SECURITY_ATT
 
 [CSyncObject 类](../../mfc/reference/csyncobject-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)
-

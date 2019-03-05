@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CDCRenderTarget [MFC], GetDCRenderTarget
 - CDCRenderTarget [MFC], m_pDCRenderTarget
 ms.assetid: aa8059c9-08e6-49e4-9b8c-00fa54077a61
-ms.openlocfilehash: e172d175bba5b4c379f7cd29451d7ad4215d9c68
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 70169d2b89d9ea657898f7a96dea27556023d4e2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50541708"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268273"
 ---
 # <a name="cdcrendertarget-class"></a>CDCRenderTarget 类
 
@@ -59,7 +59,7 @@ class CDCRenderTarget : public CRenderTarget;
 
 |名称|描述|
 |----------|-----------------|
-|[CDCRenderTarget::operator ID2D1DCRenderTarget *](#operator_id2d1dcrendertarget_star)|返回 ID2D1DCRenderTarget 接口|
+|[CDCRenderTarget::operator ID2D1DCRenderTarget*](#operator_id2d1dcrendertarget_star)|返回 ID2D1DCRenderTarget 接口|
 
 ### <a name="protected-data-members"></a>受保护的数据成员
 
@@ -132,7 +132,7 @@ BOOL Create(const D2D1_RENDER_TARGET_PROPERTIES& props);
 
 ### <a name="parameters"></a>参数
 
-*属性*<br/>
+*props*<br/>
 呈现模式、 像素格式、 远程处理选项、 DPI 信息和硬件呈现时所需的最小的 DirectX 支持。
 
 ### <a name="return-value"></a>返回值
@@ -171,7 +171,7 @@ ID2D1DCRenderTarget* GetDCRenderTarget();
 ID2D1DCRenderTarget* m_pDCRenderTarget;
 ```
 
-##  <a name="operator_id2d1dcrendertarget_star"></a>  CDCRenderTarget::operator ID2D1DCRenderTarget *
+##  <a name="operator_id2d1dcrendertarget_star"></a>  CDCRenderTarget::operator ID2D1DCRenderTarget*
 
 返回 ID2D1DCRenderTarget 接口
 

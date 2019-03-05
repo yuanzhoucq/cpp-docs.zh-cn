@@ -7,12 +7,12 @@ helpviewer_keywords:
 - MFC ODBC Consumer Wizard
 - wizards [MFC]
 ms.assetid: f64a890b-a252-4887-88a1-782a7cd4ff3d
-ms.openlocfilehash: 8b2d554cb6b4eaeb7ee1ddd884aefb3ab6da0f2e
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 75d62eb5ce3d24322d7af5030fb8d723ffa8fedb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523411"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259927"
 ---
 # <a name="mfc-odbc-consumer-wizard"></a>MFC ODBC 使用者向导
 
@@ -66,9 +66,9 @@ ms.locfileid: "51523411"
 
    指定记录集是动态集 （默认值） 或快照。
 
-   - **动态集**： 指定记录集是动态集。 动态集是查询的提供了为查询的数据库的数据的索引的视图的结果。 动态集缓存仅的原始数据的整数索引并提供了一个性能因此获得通过快照。 直接向每个记录的索引点找到作为查询结果，并指示是否删除一条记录。 查询记录中还有权访问更新的信息。 这是默认设置。
+   - **动态集**:指定记录集是动态集。 动态集是查询的提供了为查询的数据库的数据的索引的视图的结果。 动态集缓存仅的原始数据的整数索引并提供了一个性能因此获得通过快照。 直接向每个记录的索引点找到作为查询结果，并指示是否删除一条记录。 查询记录中还有权访问更新的信息。 这是默认设置。
 
-   - **快照**： 指定记录集是快照。 快照是将查询的结果，并且是时间点上的数据库。 作为查询结果中找到的所有记录会都缓存，因此你看不到对原始记录的任何更改。
+   - **快照**:指定记录集是快照。 快照是将查询的结果，并且是时间点上的数据库。 作为查询结果中找到的所有记录会都缓存，因此你看不到对原始记录的任何更改。
 
 - **绑定所有列**
 
@@ -78,4 +78,3 @@ ms.locfileid: "51523411"
 
 [MFC ODBC 使用](../../mfc/reference/adding-an-mfc-odbc-consumer.md)<br/>
 [用代码向导添加功能](../../ide/adding-functionality-with-code-wizards-cpp.md)
-

@@ -1,5 +1,5 @@
 ---
-title: 多线程处理： 如何使用 MFC 同步类
+title: 多线程处理：如何使用 MFC 同步类
 ms.date: 08/27/2018
 helpviewer_keywords:
 - MFC [C++], multithreading
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - multithreading [C++], synchronization classes
 - threading [C++], thread-safe class design
 ms.assetid: f266d4c6-0454-4bda-9758-26157ef74cc5
-ms.openlocfilehash: 0f8304c3b45f87dadc2317de95a0b30b54baffa0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6115d942abc61fbfc9d60ca1ccf97d4b423ff7c1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50604160"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304647"
 ---
-# <a name="multithreading-how-to-use-the-mfc-synchronization-classes"></a>多线程处理： 如何使用 MFC 同步类
+# <a name="multithreading-how-to-use-the-mfc-synchronization-classes"></a>多线程处理：如何使用 MFC 同步类
 
 编写多线程应用程序时，同步在线程之间的资源访问权限是一个常见问题。 具有两个或多个线程同时访问相同的数据可能会导致不必要和不可预知的结果。 例如，一个线程可能正在更新结构的内容而另一个线程正在读取相同的结构的内容。 不知道哪些数据读取线程将收到： 旧的数据、 新写入的数据，或可能是两者的混合。 MFC 提供了多个同步和同步访问类，以帮助解决此问题。 本主题介绍可用的类以及如何使用它们在典型的多线程应用程序创建线程安全类。
 
@@ -54,7 +54,7 @@ singleLock.Unlock();
 
 此方法的缺点是，该类将比同一类稍慢而无需添加的同步对象。 此外，如果有多个线程可能会删除该对象的机会，合并的方法不始终有效。 在这种情况下，它是更好的做法维护单独的同步对象。
 
-有关确定要在不同情况下使用哪些同步类的信息，请参阅[多线程处理： 何时使用同步类](multithreading-when-to-use-the-synchronization-classes.md)。 有关同步的详细信息，请参阅[同步](/windows/desktop/Sync/synchronization)Windows SDK 中。 有关在 MFC 中的多线程支持的详细信息，请参阅[使用 c + + 和 MFC 多线程处理](multithreading-with-cpp-and-mfc.md)。
+有关确定要在不同情况下使用哪些同步类的信息，请参阅[多线程处理：何时使用同步类](multithreading-when-to-use-the-synchronization-classes.md)。 有关同步的详细信息，请参阅[同步](/windows/desktop/Sync/synchronization)Windows SDK 中。 有关在 MFC 中的多线程支持的详细信息，请参阅[使用 c + + 和 MFC 多线程处理](multithreading-with-cpp-and-mfc.md)。
 
 ## <a name="see-also"></a>请参阅
 

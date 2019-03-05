@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CCachedDataPathProperty [MFC], CCachedDataPathProperty
 - CCachedDataPathProperty [MFC], m_Cache
 ms.assetid: 0d81356b-4fe5-43f6-aed2-2eb5a5485706
-ms.openlocfilehash: 1605d5fe1549ba5172f61583cce586a353c2ab56
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e7394250c93bcc718d50f2ea9b3522256df7c820
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50485652"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296704"
 ---
 # <a name="ccacheddatapathproperty-class"></a>CCachedDataPathProperty 类
 
@@ -51,9 +51,9 @@ class CCachedDataPathProperty : public CDataPathProperty
 
 有关如何在 Internet 应用程序中使用异步名字对象和 ActiveX 控件的详细信息，请参阅以下主题：
 
-- [Internet 前几个步骤： ActiveX 控件](../../mfc/activex-controls-on-the-internet.md)
+- [Internet 前几个步骤：ActiveX 控件](../../mfc/activex-controls-on-the-internet.md)
 
-- [异步名字对象 Internet 前几个步骤：](../../mfc/asynchronous-monikers-on-the-internet.md)
+- [Internet 前几个步骤：异步名字对象](../../mfc/asynchronous-monikers-on-the-internet.md)
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 

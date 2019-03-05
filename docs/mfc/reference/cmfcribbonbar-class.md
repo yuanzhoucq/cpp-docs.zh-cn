@@ -188,16 +188,17 @@ helpviewer_keywords:
 - CMFCRibbonBar [MFC], ToggleMimimizeState
 - CMFCRibbonBar [MFC], TranslateChar
 ms.assetid: a65d06fa-1a28-4cc0-8971-bc9d7c9198fe
-ms.openlocfilehash: 78566eaa15eb695d892471925a9dadcad9655c5f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3656b6a135757a4658f2ef08b80a54efffe89012
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50640240"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288410"
 ---
 # <a name="cmfcribbonbar-class"></a>CMFCRibbonBar 类
 
-`CMFCRibbonBar` 类实现与 Office 2007 中所使用的类似功能区栏。
+
+  `CMFCRibbonBar` 类实现与 Office 2007 中所使用的类似功能区栏。
 
 有关更多详细信息，请参阅中的源代码**VC\\atlmfc\\src\\mfc**的 Visual Studio 安装文件夹。
 
@@ -221,7 +222,7 @@ class CMFCRibbonBar : public CPane
 |----------|-----------------|
 |[CMFCRibbonBar::ActivateContextCategory](#activatecontextcategory)|激活已经可见的上下文类别。|
 |[CMFCRibbonBar::AddCategory](#addcategory)|向功能区添加新的功能区类别。|
-|[Cmfcribbonbar:: Addcontextcategory](#addcontextcategory)|添加上下文类别。|
+|[CMFCRibbonBar::AddContextCategory](#addcontextcategory)|添加上下文类别。|
 |[CMFCRibbonBar::AddMainCategory](#addmaincategory)|添加新的主功能区类别。|
 |[CMFCRibbonBar::AddPrintPreviewCategory](#addprintpreviewcategory)||
 |[CMFCRibbonBar::AddQATOnlyCategory](#addqatonlycategory)||
@@ -277,7 +278,7 @@ class CMFCRibbonBar : public CPane
 |[CMFCRibbonBar::IsToolTipEnabled](#istooltipenabled)|确定是否禁用工具提示说明。|
 |[CMFCRibbonBar::IsTransparentCaption](#istransparentcaption)||
 |[CMFCRibbonBar::IsWindows7Look](#iswindows7look)|指示功能区是否具有 Windows 7 样式的外观（小型矩形应用程序按钮）。|
-|[Cmfcribbonbar:: Loadfromresource](#loadfromresource)|已重载。 从应用程序资源加载功能区栏。|
+|[CMFCRibbonBar::LoadFromResource](#loadfromresource)|已重载。 从应用程序资源加载功能区栏。|
 |[CMFCRibbonBar::OnClickButton](#onclickbutton)||
 |[CMFCRibbonBar::OnEditContextMenu](#oneditcontextmenu)||
 |[CMFCRibbonBar::OnRTLChanged](#onrtlchanged)|（重写 `CPane::OnRTLChanged`。）|
@@ -319,7 +320,7 @@ Microsoft 在发布 Microsoft Office 2007 时同时引入了 Office Fluent 功�
 
 你可以使用 `CMFCRibbonStatusBar` 类来实现一个类似于 Office 2007 中所用的状态栏。 功能区类别包含 （并显示） 的一组[功能区面板](../../mfc/reference/cmfcribbonpanel-class.md)。 每个功能区面板包含一个或多个功能区元素，派生自[CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)。
 
-有关如何将功能区栏添加到现有 MFC 应用程序的信息，请参阅[演练： 更新 MFC 自由曲线应用程序](../../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md)。
+有关如何将功能区栏添加到现有 MFC 应用程序的信息，请参阅[演练：正在更新 MFC 随意画图应用程序](../../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md)。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -410,7 +411,7 @@ CMFCRibbonCategory* AddCategory(
 
 [!code-cpp[NVC_MFC_RibbonApp#5](../../mfc/reference/codesnippet/cpp/cmfcribbonbar-class_1.cpp)]
 
-##  <a name="addcontextcategory"></a>  Cmfcribbonbar:: Addcontextcategory
+##  <a name="addcontextcategory"></a>  CMFCRibbonBar::AddContextCategory
 
 创建并初始化新的上下文类别的功能区栏。
 
@@ -1305,7 +1306,7 @@ virtual CMFCRibbonBaseElement* HitTest(
 
 ### <a name="parameters"></a>参数
 
-*点*<br/>
+*point*<br/>
 [in]在功能区栏坐标点的位置。
 
 *bCheckActiveCategory*<br/>
@@ -1478,7 +1479,7 @@ virtual void OnClickButton(
 *pButton*<br/>
 [in]指向被单击的按钮。
 
-*点*<br/>
+*point*<br/>
 [in]未使用此参数。
 
 ### <a name="remarks"></a>备注
@@ -1493,8 +1494,8 @@ virtual void OnEditContextMenu(
 
 ### <a name="parameters"></a>参数
 
-[in]*pEdit*<br/>
-[in]*点*<br/>
+[in] *pEdit*<br/>
+[in] *point*<br/>
 
 ### <a name="remarks"></a>备注
 
@@ -1545,10 +1546,10 @@ virtual BOOL OnShowRibbonContextMenu(
 
 ### <a name="parameters"></a>参数
 
-[in]*pWnd*<br/>
-[in]*x*<br/>
-[in]*y*<br/>
-[in]*pHit*<br/>
+[in] *pWnd*<br/>
+[in] *x*<br/>
+[in] *y*<br/>
+[in] *pHit*<br/>
 
 ### <a name="return-value"></a>返回值
 
@@ -1566,10 +1567,10 @@ virtual BOOL OnShowRibbonQATMenu(
 
 ### <a name="parameters"></a>参数
 
-[in]*pWnd*<br/>
-[in]*x*<br/>
-[in]*y*<br/>
-[in]*pHit*<br/>
+[in] *pWnd*<br/>
+[in] *x*<br/>
+[in] *y*<br/>
+[in] *pHit*<br/>
 
 ### <a name="return-value"></a>返回值
 
@@ -2014,7 +2015,7 @@ virtual BOOL TranslateChar(UINT nChar);
 
 ### <a name="parameters"></a>参数
 
-*NChar*<br/>
+*nChar*<br/>
 [in]用户击键字符代码。
 
 ### <a name="return-value"></a>返回值
@@ -2053,7 +2054,7 @@ BOOL IsWindows7Look() const;
 
 ### <a name="remarks"></a>备注
 
-##  <a name="loadfromresource"></a>  Cmfcribbonbar:: Loadfromresource
+##  <a name="loadfromresource"></a>  CMFCRibbonBar::LoadFromResource
 
 已重载。 从应用程序资源加载功能区栏。
 
@@ -2155,5 +2156,4 @@ TRUE 重新计算功能区布局;FALSE 否则为。
 [CMFCRibbonCategory 类](../../mfc/reference/cmfcribboncategory-class.md)<br/>
 [CMFCRibbonPanel 类](../../mfc/reference/cmfcribbonpanel-class.md)<br/>
 [CMFCRibbonBaseElement 类](../../mfc/reference/cmfcribbonbaseelement-class.md)<br/>
-[演练： 更新 MFC 随意画图应用程序](../../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md)
-
+[演练：正在更新 MFC 随意画图应用程序](../../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - sockets [MFC], operations
 - stream sockets [MFC]
 ms.assetid: 43ce76f5-aad3-4247-b8a6-16cc7d012796
-ms.openlocfilehash: 98d06e005a09825d53f22330d6b0b58ccb2069fd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0f9fd339fdbdfee9381ea693568f40473c2397e9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50578629"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265543"
 ---
 # <a name="windows-sockets-sequence-of-operations"></a>Windows 套接字：操作顺序
 
@@ -36,7 +36,7 @@ ms.locfileid: "50578629"
 |`// construct an archive`<br /><br /> `CArchive arIn(&file, CArchive::load);`<br /><br /> 或<br /><br /> `CArchive arOut(&file, CArchive::store);`<br /><br /> -或这两个-|`// construct an archive`<br /><br /> `CArchive arIn(&file, CArchive::load);`<br /><br /> 或<br /><br /> `CArchive arOut(&file, CArchive::store);`<br /><br /> -或这两个-|
 |`// use the archive to pass data:`<br /><br /> `arIn >> dwValue;`<br /><br /> 或<br /><br /> `arOut << dwValue;`6|`// use the archive to pass data:`<br /><br /> `arIn >> dwValue;`<br /><br /> 或<br /><br /> `arOut << dwValue;`6|
 
-1. 其中*nPort*是端口号。 请参阅[Windows 套接字： 端口和套接字地址](../mfc/windows-sockets-ports-and-socket-addresses.md)有关端口的详细信息。
+1. 其中*nPort*是端口号。 请参阅[Windows 套接字：端口和套接字地址](../mfc/windows-sockets-ports-and-socket-addresses.md)有关端口的详细信息。
 
 2. 服务器必须始终指定一个端口，以便客户端可以连接。 `Create`调用有时也指定一个地址。 在客户端上使用的默认参数，要求 MFC 使用的任何可用端口。
 
@@ -58,11 +58,11 @@ ms.locfileid: "50578629"
 
 - [Windows 套接字：对存档使用套接字](../mfc/windows-sockets-using-sockets-with-archives.md)
 
-- [Windows 套接字：使用 CAsyncSocket 类](../mfc/windows-sockets-using-class-casyncsocket.md)
+- [Windows 套接字：使用类 CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
 
 - [Windows 套接字：端口和套接字地址](../mfc/windows-sockets-ports-and-socket-addresses.md)
 
-- [Windows 套接字：流套接字](../mfc/windows-sockets-stream-sockets.md)
+- [Windows 套接字：Stream 套接字](../mfc/windows-sockets-stream-sockets.md)
 
 - [Windows 套接字：数据报套接字](../mfc/windows-sockets-datagram-sockets.md)
 
@@ -72,4 +72,3 @@ ms.locfileid: "50578629"
 [CSocket 类](../mfc/reference/csocket-class.md)<br/>
 [CAsyncSocket::Create](../mfc/reference/casyncsocket-class.md#create)<br/>
 [CAsyncSocket::Close](../mfc/reference/casyncsocket-class.md#close)
-

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - _Copy class
 - _CopyInterface class
 ms.assetid: 06704b68-d318-4c5d-a65b-71457fe9d00d
-ms.openlocfilehash: 535bd1a3129bab15f546f6a82d77cf4e152fc605
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 24d81506f1518f980576899a4a104bbfdc0a1438
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452749"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296340"
 ---
 # <a name="atl-copy-policy-classes"></a>ATL 复制策略类
 
@@ -64,7 +64,7 @@ ATL 提供了两个复制策略类中的窗体`_Copy`和`_CopyInterface`模板�
 
 通常情况下，你将需要定义您自己的异类复制 （即，数据类型之间的转换） 的复制策略类。 有关自定义复制策略类的一些示例，看看 VCUE_Copy.h 和 VCUE_CopyString.h 中的文件[ATLCollections](../visual-cpp-samples.md)示例。 这些文件包含两个模板复制策略类，`GenericCopy`并`MapCopy`，以及数目的专用化`GenericCopy`不同数据类型。
 
-### <a name="genericcopy"></a>Genericcopy 专用化
+### <a name="genericcopy"></a>GenericCopy
 
 `GenericCopy` 允许您指定*SourceType*和`DestinationType`作为模板参数。 下面是常见的形式的`GenericCopy`VCUE_Copy.h 类：
 
@@ -82,4 +82,3 @@ VCUE_Copy.h 还包含此类的以下专用化： `GenericCopy<BSTR>`， `Generic
 
 [实现基于 C++ 标准库的集合](../atl/implementing-an-stl-based-collection.md)<br/>
 [ATLCollections 示例](../visual-cpp-samples.md)
-

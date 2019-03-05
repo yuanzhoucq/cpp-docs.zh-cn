@@ -4,18 +4,20 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - CListCtrl class [MFC], adding items
 ms.assetid: 715994bd-340d-4ad2-9882-411654137830
-ms.openlocfilehash: 90a722405b7954b3d6e0e9f13b3f51a5e902a4af
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 88e008f06fb669db1c13872b1a58555eeb357d86
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50602574"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304595"
 ---
 # <a name="adding-items-to-the-control"></a>向控件添加项
 
 若要将项添加到列表控件 ([CListCtrl](../mfc/reference/clistctrl-class.md))，调用多个版本之一[InsertItem](../mfc/reference/clistctrl-class.md#insertitem)成员函数，具体取决于您所了解哪些信息。 一个版本采用[LV_ITEM](/windows/desktop/api/commctrl/ns-commctrl-taglvitema)您准备的结构。 因为 `LV_ITEM` 结构包含很多成员，所以您更容易控制列表控件项的特性。
 
-`LV_ITEM` 结构的两个重要成员（与报表视图有关）是 `iItem` 和 `iSubItem` 成员。 `iItem` 成员是结构正在引用的项的从零开始的索引，而 `iSubItem` 成员是子项的从零开始的索引或为零（如果结构包含有关项的信息）。 利用这两个成员，您可以为每个项确定在列表控件位于报表视图中时显示的子项信息的类型和值。 有关详细信息，请参阅[clistctrl:: Setitem](../mfc/reference/clistctrl-class.md#setitem)。
+
+  `LV_ITEM` 结构的两个重要成员（与报表视图有关）是 `iItem` 和 `iSubItem` 成员。 
+  `iItem` 成员是结构正在引用的项的从零开始的索引，而 `iSubItem` 成员是子项的从零开始的索引或为零（如果结构包含有关项的信息）。 利用这两个成员，您可以为每个项确定在列表控件位于报表视图中时显示的子项信息的类型和值。 有关详细信息，请参阅[clistctrl:: Setitem](../mfc/reference/clistctrl-class.md#setitem)。
 
 其他成员指定项的文本、图标、状态和项数据。 “项数据”是应用程序定义与列表视图项关联的值。 有关详细信息`LV_ITEM`结构，请参阅[clistctrl:: Getitem](../mfc/reference/clistctrl-class.md#getitem)。
 
@@ -27,4 +29,3 @@ ms.locfileid: "50602574"
 
 [使用 CListCtrl](../mfc/using-clistctrl.md)<br/>
 [控件](../mfc/controls-mfc.md)
-

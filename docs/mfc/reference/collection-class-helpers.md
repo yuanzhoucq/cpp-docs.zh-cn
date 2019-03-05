@@ -10,16 +10,16 @@ helpviewer_keywords:
 - collection classes [MFC], helper functions
 - helper functions collection class [MFC]
 ms.assetid: bc3a2368-9edd-4748-9e6a-13cba79517ca
-ms.openlocfilehash: 639c4f7952abcf18c29aa3cb0d9fee45b50430af
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3992e6c0cf25925e01858016e4bac93d5552fe8b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50567461"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266141"
 ---
 # <a name="collection-class-helpers"></a>集合类帮助器
 
-集合类`CMap`， `CList`，和`CArray`模板化的全局帮助器函数用于比较、 复制和序列化元素作为此类目的。 作为基于类的实现的一部分`CMap`， `CList`，和`CArray`，必须使用版本适用于地图、 列表或数组中存储的数据类型重写这些函数根据需要。 有关信息，如重写帮助器函数`SerializeElements`，请参阅文章[集合： 如何创建类型安全集合](../../mfc/how-to-make-a-type-safe-collection.md)。 请注意，`ConstructElements`和`DestructElements`已弃用。
+集合类`CMap`， `CList`，和`CArray`模板化的全局帮助器函数用于比较、 复制和序列化元素作为此类目的。 作为基于类的实现的一部分`CMap`， `CList`，和`CArray`，必须使用版本适用于地图、 列表或数组中存储的数据类型重写这些函数根据需要。 有关信息，如重写帮助器函数`SerializeElements`，请参阅文章[集合：如何创建类型安全集合](../../mfc/how-to-make-a-type-safe-collection.md)。 请注意，`ConstructElements`和`DestructElements`已弃用。
 
 Microsoft 基础类库提供了 afxtempl.h 以帮助您自定义集合类中的以下全局函数：
 
@@ -105,7 +105,7 @@ void AFXAPI CopyElements(
 
 默认实现使用简单的赋值运算符 ( **=** ) 执行复制操作。 如果复制类型没有重载操作符 =，则默认实现将执行按位复制。
 
-有关实现此函数及其他帮助器函数的信息，请参阅文章[集合： 如何创建类型安全集合](../how-to-make-a-type-safe-collection.md)。
+有关实现此函数及其他帮助器函数的信息，请参阅文章[集合：如何创建类型安全集合](../how-to-make-a-type-safe-collection.md)。
 
 ### <a name="requirements"></a>要求
 
@@ -216,11 +216,11 @@ void AFXAPI SerializeElements(CArchive& ar, TYPE* pElements, INT_PTR nCount);
 
 默认实现 does 的按位读取或写入。
 
-有关实现此函数及其他帮助器函数的信息，请参阅文章[集合： 如何创建类型安全集合](../how-to-make-a-type-safe-collection.md)。
+有关实现此函数及其他帮助器函数的信息，请参阅文章[集合：如何创建类型安全集合](../how-to-make-a-type-safe-collection.md)。
 
 ### <a name="example"></a>示例
 
-请参阅文章中的示例[集合： 如何创建类型安全集合](../how-to-make-a-type-safe-collection.md)。
+请参阅文章中的示例[集合：如何创建类型安全集合](../how-to-make-a-type-safe-collection.md)。
 
 ### <a name="requirements"></a>要求
 

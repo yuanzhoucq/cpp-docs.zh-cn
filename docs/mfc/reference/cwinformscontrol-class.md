@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CWinFormsControl [MFC], GetControl
 - CWinFormsControl [MFC], GetControlHandle
 ms.assetid: 6406dd7b-fb89-4a18-ac3a-c010d6b6289a
-ms.openlocfilehash: e8728c876badcf6648740cc842a1f289789bf0f4
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 91691203f88f07f597aaad6a5db32b03e7ad11c4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178234"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289307"
 ---
 # <a name="cwinformscontrol-class"></a>CWinFormsControl 类
 
@@ -190,7 +190,7 @@ inline HWND GetControlHandle() const;
 
 `GetControlHandle` 是返回存储在.NET Framework 控件属性中的窗口句柄的帮助器方法。 窗口句柄值复制到[CWnd::m_hWnd](../../mfc/reference/cwnd-class.md#m_hwnd)在调用[CWnd::Attach](../../mfc/reference/cwnd-class.md#attach)。
 
-##  <a name="operator_-_gt"></a>  CWinFormsControl::operator-&gt;
+##  <a name="operator_-_gt"></a>  CWinFormsControl::operator -&gt;
 
 将替换[CWinFormsControl::GetControl](#getcontrol)在表达式中。
 
@@ -204,7 +204,7 @@ inline TManagedControl^  operator->() const;
 
 在 Windows 窗体上的详细信息，请参阅[在 MFC 中使用 Windows 窗体用户控件](../../dotnet/using-a-windows-form-user-control-in-mfc.md)。
 
-##  <a name="operator_tmanagedcontrol"></a>  CWinFormsControl::operator TManagedControl ^
+##  <a name="operator_tmanagedcontrol"></a>  CWinFormsControl::operator TManagedControl^
 
 将一种类型强制转换为指向的 Windows 窗体控件的指针。
 

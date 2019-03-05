@@ -6,12 +6,12 @@ helpviewer_keywords:
 - OLE containers [MFC], client-item notifications
 - client items and OLE containers
 ms.assetid: e1f1c427-01f5-45f2-b496-c5bce3d76340
-ms.openlocfilehash: b59ba84c27d9ed4c964bd308cf69f9f729eb3c39
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 583c438820c002a4c192d15358ca98424d02889a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528890"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291049"
 ---
 # <a name="containers-client-item-notifications"></a>容器：客户端项通知
 
@@ -40,7 +40,7 @@ ms.locfileid: "50528890"
 |**OLE_CHANGED**|指定的 OLE 项的已更改的方面。|
 |**OLE_CHANGED_STATE**|描述要进入的状态 (*emptyState*， *loadedState*， *openState*， *activeState*，或*activeUIState*)。|
 
-有关可以假定客户端项状态的详细信息，请参阅[容器： 客户端项状态](../mfc/containers-client-item-states.md)。
+有关可以假定客户端项状态的详细信息，请参阅[容器：客户端项状态](../mfc/containers-client-item-states.md)。
 
 框架将调用`COleClientItem::OnGetItemPosition`项以进行就地编辑激活的时。 需要支持进行就地编辑的应用程序实现。 MFC 应用程序向导提供了一个基本实现，将分配到的项目的坐标`CRect`作为参数传递的对象`OnGetItemPosition`。
 
@@ -51,4 +51,3 @@ ms.locfileid: "50528890"
 [容器](../mfc/containers.md)<br/>
 [容器：客户端项状态](../mfc/containers-client-item-states.md)<br/>
 [COleClientItem::OnChangeItemPosition](../mfc/reference/coleclientitem-class.md#onchangeitemposition)
-

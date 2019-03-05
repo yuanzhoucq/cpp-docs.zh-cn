@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ATL projects, compiler optimization
 - ATL_NO_VTABLE macro
 ms.assetid: 7f379318-66d5-43dd-a53d-530758d3a228
-ms.openlocfilehash: 18c1f404576a7e011698f0b553a2436bab8089a3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6e6fe09aaa0726a39aae8b85cb6581c5d0cd24e1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50522287"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280012"
 ---
 # <a name="specifying-compiler-optimization-for-an-atl-project"></a>指定 ATL 项目的编译器优化
 
@@ -60,4 +60,3 @@ ATL 然后定义 _ATL_NO_VTABLE，如下所示：
 [ATL COM 对象基础知识](../../atl/fundamentals-of-atl-com-objects.md)<br/>
 [novtable](../../cpp/novtable.md)<br/>
 [默认 ATL 项目配置](../../atl/reference/default-atl-project-configurations.md)
-

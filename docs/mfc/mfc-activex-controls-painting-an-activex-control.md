@@ -5,12 +5,12 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], painting
 - MFC ActiveX controls [MFC], optimizing
 ms.assetid: 25fff9c0-4dab-4704-aaae-8dfb1065dee3
-ms.openlocfilehash: 4a7cff57213cf9ba234ead9880207fd93592614f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b90aa331c289caf827785af2eeba037e70f686ab
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50549521"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281925"
 ---
 # <a name="mfc-activex-controls-painting-an-activex-control"></a>MFC ActiveX 控件：绘制 ActiveX 控件
 
@@ -31,7 +31,7 @@ ms.locfileid: "50549521"
 
 ##  <a name="_core_the_painting_process_of_an_activex_control"></a> ActiveX 控件绘制进程
 
-在最初显示或重新绘制 ActiveX 控件时，它们遵循与其他使用 MFC 开发的应用程序一样的绘制过程，但有一个重要区别：ActiveX 控件可以处于活动或非活动状态。
+在 ActiveX 控件最初显示或重新绘制，它们应遵循类似于开发使用 MFC，有一个重要区别的其他应用程序的绘制过程：ActiveX 控件可以处于活动或非活动状态。
 
 活动控件在 ActiveX 控件容器中通过一个子窗口表示。 与其他窗口一样是负责绘制自身时收到 WM_PAINT 消息。 控件的基类[COleControl](../mfc/reference/colecontrol-class.md)，来处理此消息在其`OnPaint`函数。 此默认实现调用您的控件的 `OnDraw` 函数。
 
@@ -39,7 +39,8 @@ ms.locfileid: "50549521"
 
 如上面几段中所述，ActiveX 控件的更新方式取决于控件的状态。 但是，由于在这两种情况下，框架都会调用 `OnDraw` 成员函数，因此你需要在此成员函数中添加你自己的大部分绘制代码。
 
-`OnDraw` 成员函数处理控件绘制。 当控件处于不活动状态时，控件容器调用 `OnDraw`，并传递控件容器的设备上下文以及控件占用的矩形区域的坐标。
+
+  `OnDraw` 成员函数处理控件绘制。 当控件处于不活动状态时，控件容器调用 `OnDraw`，并传递控件容器的设备上下文以及控件占用的矩形区域的坐标。
 
 框架传递给 `OnDraw` 成员函数的矩形包含控件占用的区域。 如果控件处于活动状态，则左上角的坐标为 (0，0)，且传递的设备上下文是针对包含控件的子窗口的。 如果控件处于不活动状态，则左上角的坐标不一定为 (0，0)，且传递的设备上下文是针对包含控件的控件容器的。
 
@@ -88,9 +89,9 @@ ActiveX 控件绘制的默认实现将绘制整个控件区域。 这对于简�
 |`SetViewportOrg`|`SetWindowExt`|`SetWindowORg`|
 |`StretchBlt`|`TextOut`||
 
-除了 `CDC` 成员函数之外，还有一些在图元文件 DC 中兼容的其他函数。 其中包括[cpalette:: Animatepalette](../mfc/reference/cpalette-class.md#animatepalette)， [cfont:: Createfontindirect](../mfc/reference/cfont-class.md#createfontindirect)，和的三个成员函数`CBrush`: [CreateBrushIndirect](../mfc/reference/cbrush-class.md#createbrushindirect)， [CreateDIBPatternBrush](../mfc/reference/cbrush-class.md#createdibpatternbrush)，并[CreatePatternBrush](../mfc/reference/cbrush-class.md#createpatternbrush)。
+除了 `CDC` 成员函数之外，还有一些在图元文件 DC 中兼容的其他函数。 其中包括[cpalette:: Animatepalette](../mfc/reference/cpalette-class.md#animatepalette)， [cfont:: Createfontindirect](../mfc/reference/cfont-class.md#createfontindirect)，和三个成员函数的`CBrush`:[CreateBrushIndirect](../mfc/reference/cbrush-class.md#createbrushindirect)， [CreateDIBPatternBrush](../mfc/reference/cbrush-class.md#createdibpatternbrush)，和[CreatePatternBrush](../mfc/reference/cbrush-class.md#createpatternbrush)。
 
-不在图元文件中记录的函数是： [DrawFocusRect](../mfc/reference/cdc-class.md#drawfocusrect)， [DrawIcon](../mfc/reference/cdc-class.md#drawicon)， [DrawText](../mfc/reference/cdc-class.md#drawtext)， [ExcludeUpdateRgn](../mfc/reference/cdc-class.md#excludeupdatergn)， [FillRect](../mfc/reference/cdc-class.md#fillrect)， [FrameRect](../mfc/reference/cdc-class.md#framerect)， [GrayString](../mfc/reference/cdc-class.md#graystring)， [InvertRect](../mfc/reference/cdc-class.md#invertrect)， [ScrollDC](../mfc/reference/cdc-class.md#scrolldc)，和[TabbedTextOut](../mfc/reference/cdc-class.md#tabbedtextout)。 由于图元文件 DC 实际上与设备无关，因此您不能将 SetDIBits、GetDIBits 和 CreateDIBitmap 用于图元文件 DC。 您可以将 SetDIBitsToDevice 和 StretchDIBits 与用作目标的图元文件 DC 一起使用。 [CreateCompatibleDC](../mfc/reference/cdc-class.md#createcompatibledc)， [CreateCompatibleBitmap](../mfc/reference/cbitmap-class.md#createcompatiblebitmap)，和[CreateDiscardableBitmap](../mfc/reference/cbitmap-class.md#creatediscardablebitmap)没有意义，使用图元文件 DC。
+不在图元文件中记录的功能如下：[DrawFocusRect](../mfc/reference/cdc-class.md#drawfocusrect)， [DrawIcon](../mfc/reference/cdc-class.md#drawicon)， [DrawText](../mfc/reference/cdc-class.md#drawtext)， [ExcludeUpdateRgn](../mfc/reference/cdc-class.md#excludeupdatergn)， [FillRect](../mfc/reference/cdc-class.md#fillrect)， [FrameRect](../mfc/reference/cdc-class.md#framerect)， [GrayString](../mfc/reference/cdc-class.md#graystring)， [InvertRect](../mfc/reference/cdc-class.md#invertrect)， [ScrollDC](../mfc/reference/cdc-class.md#scrolldc)，并且[TabbedTextOut](../mfc/reference/cdc-class.md#tabbedtextout)。 由于图元文件 DC 实际上与设备无关，因此您不能将 SetDIBits、GetDIBits 和 CreateDIBitmap 用于图元文件 DC。 您可以将 SetDIBitsToDevice 和 StretchDIBits 与用作目标的图元文件 DC 一起使用。 [CreateCompatibleDC](../mfc/reference/cdc-class.md#createcompatibledc)， [CreateCompatibleBitmap](../mfc/reference/cbitmap-class.md#createcompatiblebitmap)，和[CreateDiscardableBitmap](../mfc/reference/cbitmap-class.md#creatediscardablebitmap)没有意义，使用图元文件 DC。
 
 在使用图元文件 DC 时要考虑的另一点是坐标系不能以像素为单位测量。 出于此原因，所有绘制代码应进行调整以适合的矩形中传递给`OnDraw`中*rcBounds*参数。 这可以防止在控件外部意外绘制，因为*rcBounds*表示控件的窗口的大小。
 
@@ -111,4 +112,3 @@ ActiveX 控件绘制的默认实现将绘制整个控件区域。 这对于简�
 ## <a name="see-also"></a>请参阅
 
 [MFC ActiveX 控件](../mfc/mfc-activex-controls.md)
-

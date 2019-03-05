@@ -238,12 +238,12 @@ helpviewer_keywords:
 - CMFCBaseTabCtrl [MFC], m_bActivateTabOnRightClick
 - CMFCBaseTabCtrl [MFC], m_bAutoDestroyWindow
 ms.assetid: 7270c55f-6f6e-4dd2-b0d2-291afeac3882
-ms.openlocfilehash: d12c7a8c9363e93baf56d53ad7b8d81401984228
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 889bb9c48899691554a22435ffee71d6f68a6409
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51330393"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261851"
 ---
 # <a name="cmfcbasetabctrl-class"></a>CMFCBaseTabCtrl Class
 
@@ -317,7 +317,7 @@ class CMFCBaseTabCtrl : public CWnd
 |[CMFCBaseTabCtrl::GetVisibleTabsNum](#getvisibletabsnum)|返回可见选项卡的数目。|
 |[CMFCBaseTabCtrl::HasImage](#hasimage)||
 |[CMFCBaseTabCtrl::HideSingleTab](#hidesingletab)|设置隐藏窗口选项卡的选项，但仅当选项卡式窗口只显示一个可见选项卡时设置。|
-|[Cmfcbasetabctrl:: Inserttab](#inserttab)|插入新选项卡。|
+|[CMFCBaseTabCtrl::InsertTab](#inserttab)|插入新选项卡。|
 |[CMFCBaseTabCtrl::InvalidateTab](#invalidatetab)||
 |[CMFCBaseTabCtrl::IsActiveTabCloseButton](#isactivetabclosebutton)||
 |[CMFCBaseTabCtrl::IsAutoColor](#isautocolor)|返回一个值，用于指示选项卡式窗口是否处于自动配色模式。|
@@ -436,7 +436,7 @@ void AddIcon(
 *hIcon*<br/>
 [in]要添加的图标的句柄。
 
-*图标*<br/>
+*iIcon*<br/>
 [in]在受保护的图标的从零开始索引`CImageList m_Images`成员。
 
 ### <a name="remarks"></a>备注
@@ -488,7 +488,7 @@ virtual void ApplyRestoredTabInfo(BOOL bUseTabIndexes = FALSE);
 
 ### <a name="parameters"></a>参数
 
-[in]*bUseTabIndexes*<br/>
+[in] *bUseTabIndexes*<br/>
 
 ### <a name="remarks"></a>备注
 
@@ -500,7 +500,7 @@ void AutoDestroyWindow(BOOL bAutoDestroy = TRUE);
 
 ### <a name="parameters"></a>参数
 
-[in]*bAutoDestroy*<br/>
+[in] *bAutoDestroy*<br/>
 
 ### <a name="remarks"></a>备注
 
@@ -512,7 +512,7 @@ virtual void CalcRectEdit(CRect& rectEdit);
 
 ### <a name="parameters"></a>参数
 
-[in]*rectEdit*<br/>
+[in] *rectEdit*<br/>
 
 ### <a name="remarks"></a>备注
 
@@ -604,7 +604,7 @@ void EnableActivateLastActive(BOOL bLastActive = TRUE);
 
 ### <a name="parameters"></a>参数
 
-[in]*bLastActive*<br/>
+[in] *bLastActive*<br/>
 
 ### <a name="remarks"></a>备注
 
@@ -768,7 +768,7 @@ virtual void FireChangeActiveTab(int nNewTab);
 
 ### <a name="parameters"></a>参数
 
-[in]*nNewTab*<br/>
+[in] *nNewTab*<br/>
 
 ### <a name="remarks"></a>备注
 
@@ -780,7 +780,7 @@ virtual BOOL FireChangingActiveTab(int nNewTab);
 
 ### <a name="parameters"></a>参数
 
-[in]*nNewTab*<br/>
+[in] *nNewTab*<br/>
 
 ### <a name="return-value"></a>返回值
 
@@ -938,7 +938,7 @@ virtual CWnd* GetLastVisibleTab(int& iTabNum);
 
 ### <a name="parameters"></a>参数
 
-[in]*iTabNum*<br/>
+[in] *iTabNum*<br/>
 
 ### <a name="return-value"></a>返回值
 
@@ -1100,7 +1100,7 @@ virtual int GetTabFullWidth(int iTab) const;
 
 ### <a name="parameters"></a>参数
 
-[in]*iTab*<br/>
+[in] *iTab*<br/>
 
 ### <a name="return-value"></a>返回值
 
@@ -1241,7 +1241,7 @@ virtual void GetTabsRect(CRect& rect) const;
 
 ### <a name="parameters"></a>参数
 
-[in]*rect*<br/>
+[in] *rect*<br/>
 
 ### <a name="remarks"></a>备注
 
@@ -1340,7 +1340,7 @@ virtual BOOL HasImage(int iTab) const;
 
 ### <a name="parameters"></a>参数
 
-[in]*iTab*<br/>
+[in] *iTab*<br/>
 
 ### <a name="return-value"></a>返回值
 
@@ -1363,7 +1363,7 @@ virtual void HideSingleTab(BOOL bHide = TRUE);
 
 你的应用程序配置为隐藏单个选项卡，该框架将自动显示选项卡，第二个选项卡添加到选项卡控件时。
 
-##  <a name="inserttab"></a>  Cmfcbasetabctrl:: Inserttab
+##  <a name="inserttab"></a>  CMFCBaseTabCtrl::InsertTab
 
 将一个选项卡插入到选项卡控件。
 
@@ -1415,7 +1415,7 @@ void InvalidateTab(int iTab);
 
 ### <a name="parameters"></a>参数
 
-[in]*iTab*<br/>
+[in] *iTab*<br/>
 
 ### <a name="remarks"></a>备注
 
@@ -1539,9 +1539,9 @@ BOOL IsIconAdded(
 
 ### <a name="parameters"></a>参数
 
-[in]*hIcon*<br/>
+[in] *hIcon*<br/>
 
-[in]*图标*<br/>
+[in] *iIcon*<br/>
 
 ### <a name="return-value"></a>返回值
 
@@ -1611,7 +1611,7 @@ virtual BOOL IsPtInTabArea(CPoint point) const = 0;
 
 ### <a name="parameters"></a>参数
 
-*点*<br/>
+*point*<br/>
 [in]要测试的点。
 
 ### <a name="return-value"></a>返回值
@@ -1761,9 +1761,9 @@ virtual void MoveTab(
 
 ### <a name="parameters"></a>参数
 
-[in]*n 源*<br/>
+[in] *nSource*<br/>
 
-[in]*nDest*<br/>
+[in] *nDest*<br/>
 
 ### <a name="remarks"></a>备注
 
@@ -1790,7 +1790,7 @@ virtual BOOL OnDrop(
 
 ### <a name="parameters"></a>参数
 
-[in]_COleDataObject\*_<br/>
+[in] _COleDataObject\*_<br/>
 
 [in]*DROPEFFECT*<br/>
 
@@ -1811,9 +1811,9 @@ virtual DROPEFFECT OnDragOver(
 
 ### <a name="parameters"></a>参数
 
-[in]_COleDataObject\*_<br/>
+[in] _COleDataObject\*_<br/>
 
-[in]*DWORD*<br/>
+[in] *DWORD*<br/>
 
 [in]*CPoint*<br/>
 
@@ -1840,9 +1840,9 @@ virtual DROPEFFECT OnDragEnter(
 
 ### <a name="parameters"></a>参数
 
-[in]_COleDataObject\*_<br/>
+[in] _COleDataObject\*_<br/>
 
-[in]*DWORD*<br/>
+[in] *DWORD*<br/>
 
 [in]*CPoint*<br/>
 
@@ -1858,7 +1858,7 @@ virtual BOOL OnRenameTab(int, CString&);
 
 ### <a name="parameters"></a>参数
 
-[in]*int*<br/>
+[in] *int*<br/>
 
 [in]*CString （& a)*<br/>
 
@@ -1874,7 +1874,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 
 ### <a name="parameters"></a>参数
 
-[in]*pMsg*<br/>
+[in] *pMsg*<br/>
 
 ### <a name="return-value"></a>返回值
 
@@ -1956,7 +1956,7 @@ virtual void Serialize(CArchive& ar);
 
 ### <a name="parameters"></a>参数
 
-[in]*ar*<br/>
+[in] *ar*<br/>
 
 ### <a name="remarks"></a>备注
 
@@ -2120,7 +2120,7 @@ virtual void SetLocation(Location location);
 
 ### <a name="parameters"></a>参数
 
-[in]*位置*<br/>
+[in] *location*<br/>
 
 ### <a name="remarks"></a>备注
 
@@ -2139,7 +2139,7 @@ virtual BOOL SetTabBkColor(
 *iTab*<br/>
 [in]该选项卡的从零开始的索引。
 
-*颜色*<br/>
+*color*<br/>
 [in]要设置的颜色。
 
 ### <a name="return-value"></a>返回值
@@ -2304,7 +2304,7 @@ virtual BOOL SetTabTextColor(
 *iTab*<br/>
 [in]该选项卡的从零开始的索引。
 
-*颜色*<br/>
+*color*<br/>
 [in]一个[COLORREF](/windows/desktop/gdi/colorref)参数，用于指示新的文本颜色。
 
 ### <a name="return-value"></a>返回值
@@ -2353,7 +2353,7 @@ virtual BOOL StartRenameTab(int iTab);
 
 ### <a name="parameters"></a>参数
 
-[in]*iTab*<br/>
+[in] *iTab*<br/>
 
 ### <a name="return-value"></a>返回值
 
@@ -2369,9 +2369,9 @@ virtual void SwapTabs(
 
 ### <a name="parameters"></a>参数
 
-[in]*nFisrtTabID*<br/>
+[in] *nFisrtTabID*<br/>
 
-[in]*nSecondTabID*<br/>
+[in] *nSecondTabID*<br/>
 
 ### <a name="remarks"></a>备注
 

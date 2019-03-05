@@ -24,12 +24,12 @@ helpviewer_keywords:
 - COleDropTarget [MFC], Register
 - COleDropTarget [MFC], Revoke
 ms.assetid: a58c9a48-6a93-4357-b078-4594df258311
-ms.openlocfilehash: f4294bbbf9563b55f2047f297eac1a33ca55141f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 127245385ebd89e51a1cc77d1efaa16729d73fe7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50502890"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300112"
 ---
 # <a name="coledroptarget-class"></a>COleDropTarget 类
 
@@ -115,9 +115,9 @@ virtual DROPEFFECT OnDragEnter(
 指向包含要删除的数据的数据对象。
 
 *dwKeyState*<br/>
-包含修改键的状态。 这是以下任意数量的组合： MK_CONTROL、 MK_SHIFT、 MK_ALT、 MK_LBUTTON、 MK_MBUTTON 和 MK_RBUTTON。
+包含修改键的状态。 这是以下任意数量的组合：MK_CONTROL、 MK_SHIFT、 MK_ALT、 MK_LBUTTON、 MK_MBUTTON 和 MK_RBUTTON。
 
-*点*<br/>
+*point*<br/>
 包含当前工作区坐标中的光标位置。
 
 ### <a name="return-value"></a>返回值
@@ -180,9 +180,9 @@ virtual DROPEFFECT OnDragOver(
 指向包含要删除的数据的数据对象。
 
 *dwKeyState*<br/>
-包含修改键的状态。 这是以下任意数量的组合： MK_CONTROL、 MK_SHIFT、 MK_ALT、 MK_LBUTTON、 MK_MBUTTON 和 MK_RBUTTON。
+包含修改键的状态。 这是以下任意数量的组合：MK_CONTROL、 MK_SHIFT、 MK_ALT、 MK_LBUTTON、 MK_MBUTTON 和 MK_RBUTTON。
 
-*点*<br/>
+*point*<br/>
 包含当前工作区坐标中的光标位置。
 
 ### <a name="return-value"></a>返回值
@@ -226,9 +226,9 @@ virtual DROPEFFECT OnDragScroll(
 光标位于当前窗口的点。
 
 *dwKeyState*<br/>
-包含修改键的状态。 这是以下任意数量的组合： MK_CONTROL、 MK_SHIFT、 MK_ALT、 MK_LBUTTON、 MK_MBUTTON 和 MK_RBUTTON。
+包含修改键的状态。 这是以下任意数量的组合：MK_CONTROL、 MK_SHIFT、 MK_ALT、 MK_LBUTTON、 MK_MBUTTON 和 MK_RBUTTON。
 
-*点*<br/>
+*point*<br/>
 包含以像素为单位，相对于屏幕光标的位置。
 
 ### <a name="return-value"></a>返回值
@@ -278,7 +278,7 @@ virtual BOOL OnDrop(
 
 - 将建立 DROPEFFECT_LINK 链接放置的数据从原始数据。
 
-*点*<br/>
+*point*<br/>
 包含以像素为单位，相对于屏幕光标的位置。
 
 ### <a name="return-value"></a>返回值
@@ -317,10 +317,10 @@ virtual DROPEFFECT OnDropEx(
 *dropDefault*<br/>
 用户选择基于当前的关键状态的默认拖放操作效果。 它可以是 DROPEFFECT_NONE。 放置效果备注部分所述。
 
-*下拉列表*<br/>
+*dropList*<br/>
 放置源支持拖放效果的列表。 可以使用的按位 OR 组合放置效果值 (**&#124;**) 操作。 放置效果备注部分所述。
 
-*点*<br/>
+*point*<br/>
 包含以像素为单位，相对于屏幕光标的位置。
 
 ### <a name="return-value"></a>返回值

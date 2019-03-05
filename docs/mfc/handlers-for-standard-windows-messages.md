@@ -10,12 +10,12 @@ helpviewer_keywords:
 - functions [MFC], handler
 - messages [MFC], Windows
 ms.assetid: 19412a8b-2c38-4502-81da-13c823c7e36c
-ms.openlocfilehash: 84e12a8f4ca0ce6384bc60b2fa01bfaf7824c864
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d60ae52225ddd993c1768d0b5ce1989ab0192e45
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585414"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275384"
 ---
 # <a name="handlers-for-standard-windows-messages"></a>标准 Windows 消息的处理程序
 
@@ -30,7 +30,7 @@ ms.locfileid: "50585414"
 在某些情况下，您的处理程序应当调用基类中的已重写处理程序，以便基类和 Windows 可处理消息。 在重写中调用基类处理程序的位置取决于环境。 有时您必须首先调用基类，有时最后调用。 有时如果您选择不处理消息，则将有条件地调用基类处理程序。 有时你应调用基类处理程序，然后根据基类处理程序返回的值或状态有条件地执行你自己的处理程序代码。
 
 > [!CAUTION]
->  如果你打算将传入处理程序的自变量传递到基类处理程序，则修改这些自变量不安全。 例如，你可能想要修改*nChar*自变量的`OnChar`处理程序 (要转换为大写，例如)。 此行为非常含糊，但如果您需要实现此效果，使用`CWnd`成员函数`SendMessage`相反。
+>  如果您打算将传入处理程序的参数传递到基类处理程序，则修改这些参数不安全。 例如，你可能想要修改*nChar*自变量的`OnChar`处理程序 (要转换为大写，例如)。 此行为非常含糊，但如果您需要实现此效果，使用`CWnd`成员函数`SendMessage`相反。
 
 如何确定正确的方法属性窗口将写入给定消息的处理程序函数的框架时重写给定的消息 —`OnCreate`处理程序**WM_CREATE**，例如，它概述中的窗体建议重写的成员函数中。 下面的示例建议处理程序首先调用基类处理程序并继续仅前提是它不会返回-1。
 

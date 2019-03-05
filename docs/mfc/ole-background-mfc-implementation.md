@@ -14,12 +14,12 @@ helpviewer_keywords:
 - OLE IMoniker interface
 - OLE IUnknown
 ms.assetid: 2b67016a-d78e-4d60-925f-c28ec8fb6180
-ms.openlocfilehash: 6372f28c78be99af9e329ff83ef531d18ad2480f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f793c7d7303a49057e46c32eb658ea7eea8e9ccc
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476669"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267268"
 ---
 # <a name="ole-background-mfc-implementation"></a>OLE 后台：MFC 实现
 
@@ -35,7 +35,7 @@ MFC 未直接提供 OLE 的一些接口和功能。 如果您要使用这些功�
 
 IUnknown 和 IMarshal 接口`IUnknown`接口由类库实现，但不是向程序员公开。 `IMarshal`接口未由类库实现，但在内部使用。 使用类库生成的自动化服务器已内置了封送功能。
 
-Docfiles （复合文件） 复合文件由类库部分支持。 任何直接操作复合文件的函数（创建复合文件的函数除外）都不受支持。 MFC 使用类`COleFileStream`以支持使用标准文件函数的流。 有关详细信息，请参阅文章[容器： 复合文件](../mfc/containers-compound-files.md)。
+Docfiles （复合文件） 复合文件由类库部分支持。 任何直接操作复合文件的函数（创建复合文件的函数除外）都不受支持。 MFC 使用类`COleFileStream`以支持使用标准文件函数的流。 有关详细信息，请参阅文章[容器：复合文件](../mfc/containers-compound-files.md)。
 
 进程内服务器和对象处理程序的进程内服务器和对象处理程序允许实现可视编辑数据或动态链接库 (DLL) 中的完整组件对象模型 (COM) 对象。 为此，可以通过直接调用 OLE API 实现 DLL。 但是，如果您正在编写自动化服务器而且该服务器没有用户界面，则可使用 AppWizard 使该服务器成为进程内服务器并将其完全置于 DLL 中。 有关这些主题的详细信息，请参阅[自动化服务器](../mfc/automation-servers.md)。
 
@@ -48,4 +48,3 @@ Docfiles （复合文件） 复合文件由类库部分支持。 任何直接操
 
 [OLE 后台](../mfc/ole-background.md)<br/>
 [OLE 后台：实现策略](../mfc/ole-background-implementation-strategies.md)
-

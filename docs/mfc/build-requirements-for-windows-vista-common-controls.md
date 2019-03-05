@@ -1,22 +1,22 @@
 ---
-title: Windows Vista 公共控件的生成需求
+title: Windows Vista 公共控件的生成要求
 ms.date: 11/04/2016
 helpviewer_keywords:
 - common controls (MFC), build requirements
 - common controls (MFC)
 ms.assetid: 025f7d55-55a2-4dcd-8f62-02424e3dcc04
-ms.openlocfilehash: c9a01665339c28b58a5d528cbb9dfaa235e7f1ee
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1a2e79d91a41ea178eeb6f74ec7fa7b22588b277
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50637068"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276892"
 ---
-# <a name="build-requirements-for-windows-vista-common-controls"></a>Windows Vista 公共控件的生成需求
+# <a name="build-requirements-for-windows-vista-common-controls"></a>Windows Vista 公共控件的生成要求
 
 Microsoft 基础类 (MFC) 库支持 Windows 公共控件版本 6.1。 公共控件包含在 Windows Vista 中，库包含在 Visual Studio SDK。 库提供了增强现有类和新的类的新方法和支持 Windows Vista 公共控件的方法。 在生成应用程序时，应该遵循后续章节中所述的编译和迁移需求。
 
-## <a name="compilation-requirements"></a>编译要求
+## <a name="compilation-requirements"></a>编译需求
 
 ### <a name="supported-versions"></a>支持的版本
 
@@ -59,4 +59,3 @@ Microsoft 基础类 (MFC) 库支持 Windows 公共控件版本 6.1。 公共控�
 [常规 MFC 主题](../mfc/general-mfc-topics.md)<br/>
 [层次结构图](../mfc/hierarchy-chart.md)<br/>
 [弃用的 ANSI API](../mfc/deprecated-ansi-apis.md)
-

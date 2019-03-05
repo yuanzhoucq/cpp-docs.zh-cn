@@ -114,16 +114,17 @@ helpviewer_keywords:
 - CMFCRibbonButton [MFC], SetText
 - CMFCRibbonButton [MFC], OnClick
 ms.assetid: 732e941c-9504-4b83-a691-d18075965d53
-ms.openlocfilehash: 743390955c583a130b53b9e80acd2b01d9742e1e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9d0d16062f6808cbeb2d3e73fac9f4bbdfd7e69c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50550369"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278153"
 ---
 # <a name="cmfcribbonbutton-class"></a>CMFCRibbonButton 类
 
-`CMFCRibbonButton` 类实现可放置在功能区栏元素（例如面板、快速访问工具栏和弹出菜单）上的按钮。
+
+  `CMFCRibbonButton` 类实现可放置在功能区栏元素（例如面板、快速访问工具栏和弹出菜单）上的按钮。
 
 有关更多详细信息，请参阅中的源代码**VC\\atlmfc\\src\\mfc**的 Visual Studio 安装文件夹。
 
@@ -154,17 +155,17 @@ class CMFCRibbonButton : public CMFCRibbonBaseElement
 |[CMFCRibbonButton::DrawRibbonText](#drawribbontext)||
 |[CMFCRibbonButton::FindSubItemIndexByID](#findsubitemindexbyid)|返回与指定的命令 ID 相关联的弹出菜单项的索引。|
 |[CMFCRibbonButton::GetCommandRect](#getcommandrect)||
-|[Cmfcribbonbutton:: Getcompactsize](#getcompactsize)|返回功能区元素的压缩大小。 (重写[cmfcribbonbaseelement:: Getcompactsize](../../mfc/reference/cmfcribbonbaseelement-class.md#getcompactsize)。)|
+|[CMFCRibbonButton::GetCompactSize](#getcompactsize)|返回功能区元素的压缩大小。 (重写[cmfcribbonbaseelement:: Getcompactsize](../../mfc/reference/cmfcribbonbaseelement-class.md#getcompactsize)。)|
 |[CMFCRibbonButton::GetIcon](#geticon)||
 |[CMFCRibbonButton::GetImageIndex](#getimageindex)|返回与按钮相关联的图像的索引。|
 |[CMFCRibbonButton::GetImageSize](#getimagesize)|返回功能区元素的图像大小。 (重写[cmfcribbonbaseelement:: Getimagesize](../../mfc/reference/cmfcribbonbaseelement-class.md#getimagesize)。)|
-|[Cmfcribbonbutton:: Getintermediatesize](#getintermediatesize)|返回处于中间状态的功能区元素的大小。 (重写[cmfcribbonbaseelement:: Getintermediatesize](../../mfc/reference/cmfcribbonbaseelement-class.md#getintermediatesize)。)|
+|[CMFCRibbonButton::GetIntermediateSize](#getintermediatesize)|返回处于中间状态的功能区元素的大小。 (重写[cmfcribbonbaseelement:: Getintermediatesize](../../mfc/reference/cmfcribbonbaseelement-class.md#getintermediatesize)。)|
 |[CMFCRibbonButton::GetMenu](#getmenu)|将一个句柄返回给一个分配给功能区按钮的 Windows 菜单。|
 |[CMFCRibbonButton::GetMenuRect](#getmenurect)||
-|[Cmfcribbonbutton:: Getregularsize](#getregularsize)|返回功能区元素的常规大小。 (重写[cmfcribbonbaseelement:: Getregularsize](../../mfc/reference/cmfcribbonbaseelement-class.md#getregularsize)。)|
+|[CMFCRibbonButton::GetRegularSize](#getregularsize)|返回功能区元素的常规大小。 (重写[cmfcribbonbaseelement:: Getregularsize](../../mfc/reference/cmfcribbonbaseelement-class.md#getregularsize)。)|
 |[CMFCRibbonButton::GetSubItems](#getsubitems)||
 |[CMFCRibbonButton::GetTextRowHeight](#gettextrowheight)||
-|[Cmfcribbonbutton:: Gettooltiptext](#gettooltiptext)|返回功能区元素的工具提示文本。 (重写[cmfcribbonbaseelement:: Gettooltiptext](../../mfc/reference/cmfcribbonbaseelement-class.md#gettooltiptext)。)|
+|[CMFCRibbonButton::GetToolTipText](#gettooltiptext)|返回功能区元素的工具提示文本。 (重写[cmfcribbonbaseelement:: Gettooltiptext](../../mfc/reference/cmfcribbonbaseelement-class.md#gettooltiptext)。)|
 |[CMFCRibbonButton::HasCompactMode](#hascompactmode)|指定功能区元素是否有压缩模式。 (重写[cmfcribbonbaseelement:: Hascompactmode](../../mfc/reference/cmfcribbonbaseelement-class.md#hascompactmode)。)|
 |[CMFCRibbonButton::HasIntermediateMode](#hasintermediatemode)|指定功能区元素是否有中间模式。 (重写[cmfcribbonbaseelement:: Hasintermediatemode](../../mfc/reference/cmfcribbonbaseelement-class.md#hasintermediatemode)。)|
 |[CMFCRibbonButton::HasLargeMode](#haslargemode)|确定功能区元素是否有大型模式。 (重写[cmfcribbonbaseelement:: Haslargemode](../../mfc/reference/cmfcribbonbaseelement-class.md#haslargemode)。)|
@@ -184,11 +185,11 @@ class CMFCRibbonButton : public CMFCRibbonBaseElement
 |[CMFCRibbonButton::IsSingleLineText](#issinglelinetext)||
 |[CMFCRibbonButton::OnCalcTextSize](#oncalctextsize)|(重写[cmfcribbonbaseelement:: Oncalctextsize](../../mfc/reference/cmfcribbonbaseelement-class.md#oncalctextsize)。)|
 |[CMFCRibbonButton::OnDrawBorder](#ondrawborder)||
-|[Cmfcribbonbutton:: Ondraw](#ondraw)|由框架调用以绘制功能区元素。 (重写[cmfcribbonbaseelement:: Ondraw](../../mfc/reference/cmfcribbonbaseelement-class.md#ondraw)。)|
+|[CMFCRibbonButton::OnDraw](#ondraw)|由框架调用以绘制功能区元素。 (重写[cmfcribbonbaseelement:: Ondraw](../../mfc/reference/cmfcribbonbaseelement-class.md#ondraw)。)|
 |[CMFCRibbonButton::OnFillBackground](#onfillbackground)||
 |[CMFCRibbonButton::RemoveAllSubItems](#removeallsubitems)|从弹出菜单中删除所有菜单项。|
 |[CMFCRibbonButton::RemoveSubItem](#removesubitem)|从弹出菜单中删除一个菜单项。|
-|[Cmfcribbonbutton:: Setaccdata](#setaccdata)|(重写[cmfcribbonbaseelement:: Setaccdata](../../mfc/reference/cmfcribbonbaseelement-class.md#setaccdata)。)|
+|[CMFCRibbonButton::SetACCData](#setaccdata)|(重写[cmfcribbonbaseelement:: Setaccdata](../../mfc/reference/cmfcribbonbaseelement-class.md#setaccdata)。)|
 |[CMFCRibbonButton::SetAlwaysLargeImage](#setalwayslargeimage)|指定当用户折叠按钮时，按钮显示大图像还是小图像。|
 |[CMFCRibbonButton::SetDefaultCommand](#setdefaultcommand)|启用功能区按钮的默认命令。|
 |[CMFCRibbonButton::SetDescription](#setdescription)|设置功能区元素的说明。 (重写[cmfcribbonbaseelement:: Setdescription](../../mfc/reference/cmfcribbonbaseelement-class.md#setdescription)。)|
@@ -345,8 +346,8 @@ CSize DrawBottomText(
 
 ### <a name="parameters"></a>参数
 
-[in]*pDC*<br/>
-[in]*bCalcOnly*<br/>
+[in] *pDC*<br/>
+[in] *bCalcOnly*<br/>
 
 ### <a name="return-value"></a>返回值
 
@@ -363,9 +364,9 @@ virtual void DrawImage(
 
 ### <a name="parameters"></a>参数
 
-[in]*pDC*<br/>
-[in]*类型*<br/>
-[in]*rectImage*<br/>
+[in] *pDC*<br/>
+[in] *type*<br/>
+[in] *rectImage*<br/>
 
 ### <a name="remarks"></a>备注
 
@@ -382,11 +383,11 @@ virtual int DrawRibbonText(
 
 ### <a name="parameters"></a>参数
 
-[in]*pDC*<br/>
-[in]*strText*<br/>
-[in]*rectText*<br/>
-[in]*uiDTFlags*<br/>
-[in]*clrText*<br/>
+[in] *pDC*<br/>
+[in] *strText*<br/>
+[in] *rectText*<br/>
+[in] *uiDTFlags*<br/>
+[in] *clrText*<br/>
 
 ### <a name="return-value"></a>返回值
 
@@ -419,7 +420,7 @@ CRect GetCommandRect() const;
 
 ### <a name="remarks"></a>备注
 
-##  <a name="getcompactsize"></a>  Cmfcribbonbutton:: Getcompactsize
+##  <a name="getcompactsize"></a>  CMFCRibbonButton::GetCompactSize
 
 ```
 virtual CSize GetCompactSize(CDC* pDC);
@@ -427,7 +428,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 
 ### <a name="parameters"></a>参数
 
-[in]*pDC*<br/>
+[in] *pDC*<br/>
 
 ### <a name="return-value"></a>返回值
 
@@ -441,7 +442,7 @@ HICON GetIcon(BOOL bLargeIcon = TRUE) const;
 
 ### <a name="parameters"></a>参数
 
-[in]*bLargeIcon*<br/>
+[in] *bLargeIcon*<br/>
 
 ### <a name="return-value"></a>返回值
 
@@ -472,13 +473,13 @@ virtual CSize GetImageSize(RibbonImageType type) const;
 
 ### <a name="parameters"></a>参数
 
-[in]*类型*<br/>
+[in] *type*<br/>
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
-##  <a name="getintermediatesize"></a>  Cmfcribbonbutton:: Getintermediatesize
+##  <a name="getintermediatesize"></a>  CMFCRibbonButton::GetIntermediateSize
 
 ```
 virtual CSize GetIntermediateSize(CDC* pDC);
@@ -486,7 +487,7 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 
 ### <a name="parameters"></a>参数
 
-[in]*pDC*<br/>
+[in] *pDC*<br/>
 
 ### <a name="return-value"></a>返回值
 
@@ -514,7 +515,7 @@ CRect GetMenuRect() const;
 
 ### <a name="remarks"></a>备注
 
-##  <a name="getregularsize"></a>  Cmfcribbonbutton:: Getregularsize
+##  <a name="getregularsize"></a>  CMFCRibbonButton::GetRegularSize
 
 ```
 virtual CSize GetRegularSize(CDC* pDC);
@@ -522,7 +523,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 
 ### <a name="parameters"></a>参数
 
-[in]*pDC*<br/>
+[in] *pDC*<br/>
 
 ### <a name="return-value"></a>返回值
 
@@ -548,7 +549,7 @@ int GetTextRowHeight() const;
 
 ### <a name="remarks"></a>备注
 
-##  <a name="gettooltiptext"></a>  Cmfcribbonbutton:: Gettooltiptext
+##  <a name="gettooltiptext"></a>  CMFCRibbonButton::GetToolTipText
 
 ```
 virtual CString GetToolTipText() const;
@@ -740,7 +741,7 @@ virtual void OnCalcTextSize(CDC* pDC);
 
 ### <a name="parameters"></a>参数
 
-[in]*pDC*<br/>
+[in] *pDC*<br/>
 
 ### <a name="remarks"></a>备注
 
@@ -754,14 +755,14 @@ virtual void OnClick(CPoint point);
 
 ### <a name="parameters"></a>参数
 
-*点*<br/>
+*point*<br/>
 [in]指定的鼠标单击的位置。
 
 ### <a name="remarks"></a>备注
 
 重写此方法在派生类中的，如果你想要处理此事件。
 
-##  <a name="ondraw"></a>  Cmfcribbonbutton:: Ondraw
+##  <a name="ondraw"></a>  CMFCRibbonButton::OnDraw
 
 ```
 virtual void OnDraw(CDC* pDC);
@@ -769,7 +770,7 @@ virtual void OnDraw(CDC* pDC);
 
 ### <a name="parameters"></a>参数
 
-[in]*pDC*<br/>
+[in] *pDC*<br/>
 
 ### <a name="remarks"></a>备注
 
@@ -781,7 +782,7 @@ virtual void OnDrawBorder(CDC* pDC);
 
 ### <a name="parameters"></a>参数
 
-[in]*pDC*<br/>
+[in] *pDC*<br/>
 
 ### <a name="remarks"></a>备注
 
@@ -793,7 +794,7 @@ virtual COLORREF OnFillBackground(CDC* pDC);
 
 ### <a name="parameters"></a>参数
 
-[in]*pDC*<br/>
+[in] *pDC*<br/>
 
 ### <a name="return-value"></a>返回值
 
@@ -824,7 +825,7 @@ BOOL RemoveSubItem(int nIndex);
 
 如果成功，则删除指定的项，则返回 TRUE如果; 否则为 FALSE *nIndex*为负或超过弹出菜单中的菜单项的数目。
 
-##  <a name="setaccdata"></a>  Cmfcribbonbutton:: Setaccdata
+##  <a name="setaccdata"></a>  CMFCRibbonButton::SetACCData
 
 设置功能区按钮的辅助功能数据。
 
@@ -886,7 +887,7 @@ virtual void SetDescription(LPCTSTR lpszText);
 
 ### <a name="parameters"></a>参数
 
-[in]*lpszText*<br/>
+[in] *lpszText*<br/>
 
 ### <a name="remarks"></a>备注
 
@@ -950,7 +951,7 @@ virtual void SetParentCategory(CMFCRibbonCategory* pParent);
 
 ### <a name="parameters"></a>参数
 
-[in]*pParent*<br/>
+[in] *pParent*<br/>
 
 ### <a name="remarks"></a>备注
 
@@ -975,7 +976,7 @@ virtual void SetText(LPCTSTR lpszText);
 
 ### <a name="parameters"></a>参数
 
-[in]*lpszText*<br/>
+[in] *lpszText*<br/>
 
 ### <a name="remarks"></a>备注
 

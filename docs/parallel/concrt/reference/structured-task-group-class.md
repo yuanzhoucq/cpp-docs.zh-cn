@@ -13,16 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - structured_task_group class
 ms.assetid: 742afa8c-c7b6-482c-b0ba-04c809927b22
-ms.openlocfilehash: 486829b7d990aab7860059feed78b26207d0074d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 27610539ab500a113ea41021744c55425fe9cd9b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50600663"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299287"
 ---
 # <a name="structuredtaskgroup-class"></a>structured_task_group 类
 
-`structured_task_group` 类表示并行工作的高度结构化集合。 可以使用 `task_handle` 对象将各个并行任务排队到 `structured_task_group` 并等待它们完成，或在它们完成执行之前取消任务组，这将中止尚未开始执行的所有任务。
+
+  `structured_task_group` 类表示并行工作的高度结构化集合。 可以使用 `task_handle` 对象将各个并行任务排队到 `structured_task_group` 并等待它们完成，或在它们完成执行之前取消任务组，这将中止尚未开始执行的所有任务。
 
 ## <a name="syntax"></a>语法
 
@@ -43,11 +44,11 @@ class structured_task_group;
 
 |名称|描述|
 |----------|-----------------|
-|[取消](#cancel)|可以最大努力尝试取消的子树的根节点的此任务组的工作。 对任务组计划每个任务都将获取取消间接在可能的情况。|
+|[cancel](#cancel)|可以最大努力尝试取消的子树的根节点的此任务组的工作。 对任务组计划每个任务都将获取取消间接在可能的情况。|
 |[is_canceling](#is_canceling)|通知调用方任务组当前正在取消操作。 这不一定表示的`cancel`上调用了方法`structured_task_group`对象 (尽管这样肯定会让此方法返回**true**)。 它可能发生此情况的`structured_task_group`对象正在执行内联和任务组进一步向上工作树中已取消。 在这些位置等的情况下运行时可以确定取消将流过提前`structured_task_group`对象， **true**也将返回。|
 |[run](#run)|已重载。 在计划任务`structured_task_group`对象。 调用方管理的生存期`task_handle`传入的对象`_Task_handle`参数。 采用参数 `_Placement` 的版本会导致任务偏向在该参数指定的位置执行。|
 |[run_and_wait](#run_and_wait)|已重载。 计划任务以运行内联将在调用上下文的帮助下`structured_task_group`完整的取消支持的对象。 如果`task_handle`对象作为参数传递`run_and_wait`，调用方负责管理的生存期`task_handle`对象。 然后函数等待直到上的所有工作`structured_task_group`对象已完成或已取消。|
-|[等待](#wait)|等待，直到上的所有工作`structured_task_group`已完成或已取消。|
+|[wait](#wait)|等待，直到上的所有工作`structured_task_group`已完成或已取消。|
 
 ## <a name="remarks"></a>备注
 
@@ -124,7 +125,7 @@ void run(
 *_Task_handle*<br/>
 句柄正在计划的工作。 请注意，调用方负责此对象的生存期。 在运行时将继续期望其存留，直至`wait`或`run_and_wait`对此调用方法`structured_task_group`对象。
 
-*放置 （_p)*<br/>
+*_Placement*<br/>
 对应执行 `_Task_handle` 参数所表示任务的位置的引用。
 
 ### <a name="remarks"></a>备注

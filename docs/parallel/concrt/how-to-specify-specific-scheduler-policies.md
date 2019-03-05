@@ -5,18 +5,18 @@ helpviewer_keywords:
 - specifying scheduler policies [Concurrency Runtime]
 - scheduler policies, specifying [Concurrency Runtime]
 ms.assetid: 9c5149f9-ac34-4ff3-9e79-0bad103e4e6b
-ms.openlocfilehash: 1334b8dcf8b6615120d4be8db8530af60df9d668
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3c03ef6661ebefe0bfe9fab62938ce9987a4bca1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50520024"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277854"
 ---
 # <a name="how-to-specify-specific-scheduler-policies"></a>如何：指定特定的计划程序策略
 
 计划程序策略让你控制管理任务时，计划程序使用的策略。 本主题演示如何使用计划程序策略来提高打印到控制台的进度指示器的任务的线程优先级别。
 
-自定义计划程序策略与异步代理一起使用的示例，请参阅[如何： 创建该使用特定计划程序策略的代理](../../parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md)。
+自定义计划程序策略与异步代理一起使用的示例，请参阅[如何：创建使用特定计划程序策略的代理](../../parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md)。
 
 ## <a name="example"></a>示例
 
@@ -24,7 +24,7 @@ ms.locfileid: "50520024"
 
 第一个任务使用递归分解来计算斐波纳契数。 也就是说，每个任务以递归方式创建子任务计算的整体结果。 使用递归分解的任务可能会使用所有可用资源，从而影响其他任务。 在此示例中，输出进度指示器的任务可能无法收到及时访问计算资源。
 
-若要提供打印进度消息公平访问计算资源的任务，此示例使用中所述的步骤[如何： 管理计划程序实例](../../parallel/concrt/how-to-manage-a-scheduler-instance.md)来创建具有自定义策略的计划程序实例。 自定义策略指定的线程优先级别是最高的优先级类。
+若要提供打印进度消息公平访问计算资源的任务，此示例使用中所述的步骤[如何：管理计划程序实例](../../parallel/concrt/how-to-manage-a-scheduler-instance.md)来创建具有自定义策略的计划程序实例。 自定义策略指定的线程优先级别是最高的优先级类。
 
 此示例使用[concurrency:: call](../../parallel/concrt/reference/call-class.md)并[concurrency:: timer](../../parallel/concrt/reference/timer-class.md)类，以打印进度指示器。 这些类具有引用其构造函数的版本[concurrency:: scheduler](../../parallel/concrt/reference/scheduler-class.md)对象，该计划，方便其对象。 该示例使用默认计划程序来计划任务，用于计算斐波纳契数以及要计划的任务的输出进度指示器的计划程序实例。
 
@@ -54,4 +54,3 @@ Scheduler that has a custom policy:
 [计划程序策略](../../parallel/concrt/scheduler-policies.md)<br/>
 [如何：管理计划程序实例](../../parallel/concrt/how-to-manage-a-scheduler-instance.md)<br/>
 [如何：创建使用特定计划程序策略的代理](../../parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md)
-

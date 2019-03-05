@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - CCRTAllocator class
 ms.assetid: 3e1b8cb0-859a-41ab-8e93-6f0b5ceca49d
-ms.openlocfilehash: 5d9ab804478dbf72ec51265a851f62d025ebfba5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c08d594e1c0f4d532f46961e266bf6ced98c51b2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50428062"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57287357"
 ---
 # <a name="ccrtallocator-class"></a>CCRTAllocator 类
 
@@ -33,9 +33,9 @@ class ATL::CCRTAllocator
 
 |名称|描述|
 |----------|-----------------|
-|[Ccrtallocator:: Allocate](#allocate)|（静态）调用此方法来分配内存。|
-|[Ccrtallocator:: Free](#free)|（静态）调用此方法来释放内存。|
-|[Ccrtallocator:: Reallocate](#reallocate)|（静态）调用此方法以重新分配内存。|
+|[CCRTAllocator::Allocate](#allocate)|（静态）调用此方法来分配内存。|
+|[CCRTAllocator::Free](#free)|（静态）调用此方法来释放内存。|
+|[CCRTAllocator::Reallocate](#reallocate)|（静态）调用此方法以重新分配内存。|
 
 ## <a name="remarks"></a>备注
 
@@ -45,7 +45,7 @@ class ATL::CCRTAllocator
 
 **标头：** atlcore.h
 
-##  <a name="allocate"></a>  Ccrtallocator:: Allocate
+##  <a name="allocate"></a>  CCRTAllocator::Allocate
 
 调用此静态函数以分配内存。
 
@@ -66,7 +66,7 @@ static __declspec(allocator) void* Allocate(size_t nBytes) throw();
 
 分配内存。 请参阅[malloc](../../c-runtime-library/reference/malloc.md)的更多详细信息。
 
-##  <a name="free"></a>  Ccrtallocator:: Free
+##  <a name="free"></a>  CCRTAllocator::Free
 
 调用此静态函数以释放内存。
 
@@ -83,7 +83,7 @@ static void Free(void* p) throw();
 
 释放已分配的内存。 请参阅[免费](../../c-runtime-library/reference/free.md)的更多详细信息。
 
-##  <a name="reallocate"></a>  Ccrtallocator:: Reallocate
+##  <a name="reallocate"></a>  CCRTAllocator::Reallocate
 
 调用此静态函数以重新分配内存。
 

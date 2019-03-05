@@ -1,5 +1,5 @@
 ---
-title: TN045： 针对长型 Varchar-varbinary 的 MFC 数据库支持
+title: TN045:为长型 Varchar-varbinary 的 MFC 数据库支持
 ms.date: 11/04/2016
 f1_keywords:
 - vc.mfc.data
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - Varbinary data type
 - Varchar data type
 ms.assetid: cf572c35-5275-45b5-83df-5f0e36114f40
-ms.openlocfilehash: 286ef403ec4bd51b035945f3ca268b59fee4d9d0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d356f094759775f709838de149769b1671fdf9ba
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50567032"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260109"
 ---
-# <a name="tn045-mfcdatabase-support-for-long-varcharvarbinary"></a>TN045：针对长型 Varchar/Varbinary 的 MFC/数据库支持
+# <a name="tn045-mfcdatabase-support-for-long-varcharvarbinary"></a>TN045:长 Varchar/Varbinary 的 MFC/数据库支持
 
 > [!NOTE]
 >  以下技术说明在首次包括在联机文档中后未更新。 因此，某些过程和主题可能已过时或不正确。 要获得最新信息，建议你在联机文档索引中搜索热点话题。
@@ -101,7 +101,7 @@ void AFXAPI RFX_Binary(CFieldExchange* pFX,
 
 更新时`CLongBinary`字段中，数据库类使用 ODBC 的**DATA_AT_EXEC**机制 (请参阅 ODBC 文档`SQLSetPos`的 rgbValue 参数)。 当该框架准备的 insert 或 update 语句，而不是指向`HGLOBAL`包含的数据*地址*的`CLongBinary`设置为*值*的列相反，并且长度指示器设置为**SQL_DATA_AT_EXEC**。 随后，在 update 语句发送到数据源`SQLExecDirect`将返回**SQL_NEED_DATA**。 这会提醒框架，此列的参数的值是实际的地址`CLongBinary`。 框架将调用`SQLGetData`一次用小缓冲区应为驱动程序返回数据的实际长度。 如果该驱动程序返回二进制大型对象 (BLOB) 的实际长度，MFC 将一样多的空间重新分配所需提取 BLOB。 如果数据源返回**SQL_NO_TOTAL**，指示它无法确定 BLOB 的大小，MFC 将创建较小的块。 默认初始大小为 64 K 和后续块将大小增加一倍;例如，第二个将为 128k，第三个为 256k，依此类推。 初始大小进行配置。
 
-## <a name="not-binding-retrievingsending-data-directly-from-odbc-with-sqlgetdata"></a>而不 Binding： 检索/将数据直接从发送使用 SQLGetData ODBC
+## <a name="not-binding-retrievingsending-data-directly-from-odbc-with-sqlgetdata"></a>未绑定：直接从 ODBC 使用 SQLGetData 检索/发送数据
 
 使用此方法完全绕过数据库类中，并且自己处理的长整型数据列。
 
@@ -122,4 +122,3 @@ void AFXAPI RFX_Binary(CFieldExchange* pFX,
 
 [按编号列出的技术说明](../mfc/technical-notes-by-number.md)<br/>
 [按类别列出的技术说明](../mfc/technical-notes-by-category.md)
-

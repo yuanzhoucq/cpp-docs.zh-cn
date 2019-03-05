@@ -5,18 +5,18 @@ helpviewer_keywords:
 - Apply button in property sheet
 - property sheets, Apply button
 ms.assetid: 7e977015-59b8-406f-b545-aad0bfd8d55b
-ms.openlocfilehash: 7402f99148f20be4ce56c44b5ce7f66f0c24bd36
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: eb438351d273c872def8c98a67b7010cec0b4d76
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50591253"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279440"
 ---
 # <a name="handling-the-apply-button"></a>处理应用按钮
 
-属性表具有标准对话框没有的功能：它们使用户能够在关闭属性表之前应用进行的更改。 这是通过“应用”按钮完成的。 本文讨论您可以用于正确实现此功能的方法。
+属性表具有标准对话框没有的功能：它们允许用户以应用关闭属性表之前进行的更改。 这是通过“应用”按钮完成的。 本文讨论您可以用于正确实现此功能的方法。
 
-模式对话框一般将在用户单击“确定”关闭对话框时将设置应用于外部对象。 上述情况同样适用于属性表：当用户单击“确定”，属性表中的新设置将生效。
+模式对话框一般将在用户单击“确定”关闭对话框时将设置应用于外部对象。 同样适用于属性表：当用户单击确定时，属性表中的新设置生效。
 
 但是，您可能想让用户能够在不必关闭属性表对话框的情况下保存设置。 这是“应用”按钮的功能。 相对于仅应用当前活动页的当前设置，“应用”按钮会将所有属性页中的当前设置应用于外部对象。
 
@@ -35,4 +35,3 @@ ms.locfileid: "50591253"
 ## <a name="see-also"></a>请参阅
 
 [属性表](../mfc/property-sheets-mfc.md)
-

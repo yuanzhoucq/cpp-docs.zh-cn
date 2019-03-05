@@ -6,16 +6,16 @@ helpviewer_keywords:
 - data pipelines, using transformer [Concurrency Runtime]
 - using transformer in data pipelines [Concurrency Runtime]
 ms.assetid: ca49cb3f-4dab-4b09-a9c9-d3a109ae4c29
-ms.openlocfilehash: b94cf3fb7554ba32c03a404fa6616ef1b187e008
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 59c4854eea985b3c91fad6e7dc6c47ca9b07d333
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50461420"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291465"
 ---
 # <a name="how-to-use-transformer-in-a-data-pipeline"></a>如何：在数据管道中使用转换器
 
-本主题包含演示如何使用一个基本示例[concurrency:: transformer](../../parallel/concrt/reference/transformer-class.md)数据管道中的类。 使用数据管道来执行图像处理的更完整示例，请参阅[演练： 创建图像处理网络](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)。
+本主题包含演示如何使用一个基本示例[concurrency:: transformer](../../parallel/concrt/reference/transformer-class.md)数据管道中的类。 使用数据管道来执行图像处理的更完整示例，请参阅[演练：创建图像处理网络](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)。
 
 *数据管道*是并发编程中的常见模式。 数据管道由一系列的阶段，其中每个阶段执行工作，然后将该工作的结果传递给下一个阶段组成。 `transformer`类数据中的关键组件管道，因为它接收输入的值，该值，对执行工作，然后生成另一个组件使用的结果。
 
@@ -59,4 +59,3 @@ The result is -42.
 [异步代理库](../../parallel/concrt/asynchronous-agents-library.md)<br/>
 [异步消息块](../../parallel/concrt/asynchronous-message-blocks.md)<br/>
 [演练：创建图像处理网络](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)
-

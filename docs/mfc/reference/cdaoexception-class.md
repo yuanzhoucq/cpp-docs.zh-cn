@@ -18,12 +18,12 @@ helpviewer_keywords:
 - CDaoException [MFC], m_pErrorInfo
 - CDaoException [MFC], m_scode
 ms.assetid: b2b01fa9-7ce2-42a1-842e-40f13dc50da4
-ms.openlocfilehash: 224ce79094b174d0bd011bd89afbcfe6fb7735d7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8d49291c51f66ee837f9b31a2ade390cec48c51a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585908"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288995"
 ---
 # <a name="cdaoexception-class"></a>CDaoException 类
 
@@ -71,7 +71,7 @@ class CDaoException : public CException
 
 DAO 错误代码，请参阅 DAOERR 的文件。H. 有关相关信息，请参阅主题"可捕获中的数据访问错误"DAO 帮助。
 
-有关常规，或有关中的异常处理的详细信息`CDaoException`对象，请参阅文章[异常处理 (MFC)](../../mfc/exception-handling-in-mfc.md)并[异常： 数据库异常](../../mfc/exceptions-database-exceptions.md)。 第二篇文章包含演示在 DAO 中的异常处理的示例代码。
+有关常规，或有关中的异常处理的详细信息`CDaoException`对象，请参阅文章[异常处理 (MFC)](../../mfc/exception-handling-in-mfc.md)和[异常：数据库异常](../../mfc/exceptions-database-exceptions.md)。 第二篇文章包含演示在 DAO 中的异常处理的示例代码。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -113,7 +113,7 @@ CDaoException();
 
 1. 如果构造在堆上的异常对象，将其与删除**删除**运算符时完成。
 
-有关在 MFC DAO 类中处理错误的详细信息，请参阅文章[异常： 数据库异常](../../mfc/exceptions-database-exceptions.md)。
+有关在 MFC DAO 类中处理错误的详细信息，请参阅文章[异常：数据库异常](../../mfc/exceptions-database-exceptions.md)。
 
 ##  <a name="geterrorcount"></a>  CDaoException::GetErrorCount
 
@@ -163,7 +163,7 @@ void GetErrorInfo(int nIndex);
 
 `GetErrorInfo` 异常对象中存储信息`m_pErrorInfo`数据成员。 有关返回的信息的简要说明，请参阅[m_pErrorInfo](#m_perrorinfo)。 如果你捕获类型的异常`CDaoException`引发的 MFC，`m_pErrorInfo`成员将已经填充了。 如果您选择直接调用 DAO，则必须调用异常对象的`GetErrorInfo`成员函数自己来填充`m_pErrorInfo`。 有关更详细的说明，请参阅[CDaoErrorInfo](../../mfc/reference/cdaoerrorinfo-structure.md)结构。
 
-DAO 异常和示例代码的信息，请参阅文章[异常： 数据库异常](../../mfc/exceptions-database-exceptions.md)。
+DAO 异常和示例代码的信息，请参阅文章[异常：数据库异常](../../mfc/exceptions-database-exceptions.md)。
 
 ##  <a name="m_nafxdaoerror"></a>  CDaoException::m_nAfxDaoError
 

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - message-block filters, using [Concurrency Runtime]
 - using message-block filters [Concurrency Runtime]
 ms.assetid: db6b99fb-288d-4477-96dc-b9751772ebb2
-ms.openlocfilehash: 512dda6503d5980dbdcc20a55ca0ee836d4d08e3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1bfa11953d27dc7e013e715b3f58111f124caeaf
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50660130"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284289"
 ---
 # <a name="how-to-use-a-message-block-filter"></a>如何：使用消息块筛选器
 
@@ -20,7 +20,7 @@ ms.locfileid: "50660130"
 
 筛选器函数非常重要，因为它们使您能够连接消息块来形成*数据流网络*。 在数据流网络中，消息块控制通过处理符合特定条件的那些消息的数据流。 这与控制流模型，其中使用控制结构，如条件语句、 循环、 受监管的数据流，依此类推。
 
-本文档提供了如何使用消息筛选器的基本示例。 使用消息筛选器和数据流模型连接消息块的其他示例，请参阅[演练： 创建数据流代理](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md)并[演练： 创建图像处理网络](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md).
+本文档提供了如何使用消息筛选器的基本示例。 使用消息筛选器和数据流模型连接消息块的其他示例，请参阅[演练：创建数据流代理](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md)和[演练：创建图像处理网络](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)。
 
 ## <a name="example"></a>示例
 

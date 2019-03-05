@@ -28,12 +28,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComSafeArray class
 ms.assetid: ee349aef-33db-4c85-bd08-5d86a3c9d53a
-ms.openlocfilehash: 861fdefe19a0c5b78a7874be3386873d6c253a3c
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 0262764c950b01acdb610873a995a9a6fd912997
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521409"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280675"
 ---
 # <a name="ccomsafearray-class"></a>CComSafeArray 类
 
@@ -58,20 +58,20 @@ class CComSafeArray
 |名称|描述|
 |----------|-----------------|
 |[CComSafeArray::CComSafeArray](#ccomsafearray)|构造函数。|
-|[CComSafeArray:: ~ CComSafeArray](#dtor)|析构函数。|
+|[CComSafeArray::~CComSafeArray](#dtor)|析构函数。|
 
 ### <a name="public-methods"></a>公共方法
 
 |名称|描述|
 |----------|-----------------|
-|[Ccomsafearray:: Add](#add)|添加一个或多个元素或`SAFEARRAY`结构，为`CComSafeArray`。|
+|[CComSafeArray::Add](#add)|添加一个或多个元素或`SAFEARRAY`结构，为`CComSafeArray`。|
 |[CComSafeArray::Attach](#attach)|将附加`SAFEARRAY`结构`CComSafeArray`对象。|
 |[CComSafeArray::CopyFrom](#copyfrom)|将复制的内容`SAFEARRAY`结构转换`CComSafeArray`对象。|
 |[CComSafeArray::CopyTo](#copyto)|创建 `CComSafeArray` 对象的副本。|
 |[CComSafeArray::Create](#create)|创建一个 `CComSafeArray` 对象。|
 |[CComSafeArray::Destroy](#destroy)|销毁 `CComSafeArray` 对象。|
-|[Ccomsafearray:: Detach](#detach)|分离`SAFEARRAY`从`CComSafeArray`对象。|
-|[Ccomsafearray:: Getat](#getat)|从一维数组中检索单个元素。|
+|[CComSafeArray::Detach](#detach)|分离`SAFEARRAY`从`CComSafeArray`对象。|
+|[CComSafeArray::GetAt](#getat)|从一维数组中检索单个元素。|
 |[CComSafeArray::GetCount](#getcount)|返回数组中的元素数目。|
 |[CComSafeArray::GetDimensions](#getdimensions)|返回数组中的维数。|
 |[CComSafeArray::GetLowerBound](#getlowerbound)|返回数组给定维度的下限。|
@@ -210,8 +210,9 @@ CComSafeArray(const SAFEARRAY* psaSrc);
 
 ### <a name="parameters"></a>参数
 
-*绑定*<br/>
-`SAFEARRAYBOUND` 结构。
+*bound*<br/>
+
+  `SAFEARRAYBOUND` 结构。
 
 *ulCount*<br/>
 数组中的元素数。
@@ -336,7 +337,7 @@ HRESULT Destroy();
 
 销毁现有`CComSafeArray`对象及其所有其包含的数据。
 
-##  <a name="detach"></a>  Ccomsafearray:: Detach
+##  <a name="detach"></a>  CComSafeArray::Detach
 
 分离`SAFEARRAY`从`CComSafeArray`对象。
 
@@ -352,7 +353,7 @@ LPSAFEARRAY Detach();
 
 此方法分离`SAFEARRAY`对象从`CComSafeArray`对象。
 
-##  <a name="getat"></a>  Ccomsafearray:: Getat
+##  <a name="getat"></a>  CComSafeArray::GetAt
 
 从一维数组中检索单个元素。
 
@@ -362,7 +363,7 @@ T& GetAt(LONG lIndex) const;
 
 ### <a name="parameters"></a>参数
 
-*索引*<br/>
+*lIndex*<br/>
 要返回的数组中的值的索引号。
 
 ### <a name="return-value"></a>返回值
@@ -561,7 +562,7 @@ T& operator[]int nindex) const;
 
 ### <a name="parameters"></a>参数
 
-*索引 nIndex*<br/>
+*lIndex, nIndex*<br/>
 数组中所需元素的索引号。
 
 ### <a name="return-value"></a>返回值
@@ -643,7 +644,7 @@ HRESULT SetAt(LONG lIndex, const T& t, BOOL bCopy = TRUE);
 
 ### <a name="parameters"></a>参数
 
-*索引*<br/>
+*lIndex*<br/>
 若要设置的数组元素的索引号。
 
 *t*<br/>

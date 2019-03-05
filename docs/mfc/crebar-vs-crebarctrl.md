@@ -9,16 +9,16 @@ helpviewer_keywords:
 - rebar controls [MFC], CReBarCtrl class [MFC]
 - GetReBarCtrl class [MFC]
 ms.assetid: 7f9c1d7e-5d5f-4956-843c-69ed3df688d0
-ms.openlocfilehash: 49a1528e52d140a673d4035c55394ded3656652f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a1b5cda729e760246449bf197fdc9b32752b96e8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50641401"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279206"
 ---
 # <a name="crebar-vs-crebarctrl"></a>CReBar 与CReBarCtrl
 
-MFC 提供了两个类来创建 rebar: [CReBar](../mfc/reference/crebar-class.md)并[CReBarCtrl](../mfc/reference/crebarctrl-class.md) （其包装 Windows 公共控件 API）。 `CReBar` 提供的所有 rebar 常用控制，功能，还可以为您处理许多必需的常用控制设置和结构。
+MFC 提供了两个类来创建 rebar:[CReBar](../mfc/reference/crebar-class.md)并[CReBarCtrl](../mfc/reference/crebarctrl-class.md) （其包装 Windows 公共控件 API）。 `CReBar` 提供的所有 rebar 常用控制，功能，还可以为您处理许多必需的常用控制设置和结构。
 
 `CReBarCtrl` 是 Win32 rebar 控制的包装器类，因此如果您不打算将 rebar 集成到 MFC 体系结构中，则这可能更易于实现。 如果您计划使用 `CReBarCtrl` 并计划将 rebar 集成到 MFC 体系结构中，则必须额外注意将 rebar 控制操作传送到 MFC。 此通信并不困难;但是，它是在使用时是不需要的额外工作`CReBar`。
 
@@ -37,4 +37,3 @@ Visual C++ 提供了两种利用 rebar 常用控制的方式。
 
 [使用 CReBarCtrl](../mfc/using-crebarctrl.md)<br/>
 [控件](../mfc/controls-mfc.md)
-

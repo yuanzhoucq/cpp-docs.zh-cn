@@ -818,12 +818,12 @@ helpviewer_keywords:
 - CWnd [MFC], WindowProc
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
-ms.openlocfilehash: ebb0d0abcff069deca4597ffb5a3a2d4e67cab9c
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: 7427d8b50dadd9694112ad27c2892ee228a93864
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54894531"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276541"
 ---
 # <a name="cwnd-class"></a>CWnd 类
 
@@ -1273,7 +1273,9 @@ class CWnd : public CCmdTarget
 
 ## <a name="remarks"></a>备注
 
-`CWnd` 对象与 Windows 窗口不同，但这两者紧密相关。 `CWnd` 对象由 `CWnd` 构造函数和析构函数进行创建或销毁。 Windows 窗口中后，就是一种数据结构创建的 Windows 的内部`Create`成员函数由和销毁`CWnd`虚拟析构函数。 [DestroyWindow](#destroywindow)函数销毁 Windows 窗口而不销毁对象。
+
+  `CWnd` 对象与 Windows 窗口不同，但这两者紧密相关。 
+  `CWnd` 对象由 `CWnd` 构造函数和析构函数进行创建或销毁。 Windows 窗口中后，就是一种数据结构创建的 Windows 的内部`Create`成员函数由和销毁`CWnd`虚拟析构函数。 [DestroyWindow](#destroywindow)函数销毁 Windows 窗口而不销毁对象。
 
 `CWnd`类和消息映射机制会隐藏`WndProc`函数。 传入的 Windows 通知消息会自动路由到正确的消息映射通过**上**<em>消息</em>`CWnd`成员函数。 重写**上**<em>消息</em>成员函数以处理在派生类中成员的特定消息。
 
@@ -1650,9 +1652,11 @@ void BringWindowToTop();
 
 ### <a name="remarks"></a>备注
 
-此外，`BringWindowToTop` 将激活弹出的、顶层和 MDI 子窗口。 `BringWindowToTop` 成员函数应用于显露被任何重叠窗口部分或完全遮盖的任意窗口。
+此外，`BringWindowToTop` 将激活弹出的、顶层和 MDI 子窗口。 
+  `BringWindowToTop` 成员函数应用于显露被任何重叠窗口部分或完全遮盖的任意窗口。
 
-此函数只调用 Win32 [BringWindowToTop](/windows/desktop/api/winuser/nf-winuser-bringwindowtotop)函数。 调用[SetWindowPos](#setwindowpos)函数来更改窗口的 Z 顺序中的位置。 `BringWindowToTop` 函数不更改窗口样式，即可使其成为顶层窗口。 有关详细信息，请参阅[HWND_TOP 与 HWND_TOPMOST 之间的区别是什么](http://blogs.msdn.com/b/oldnewthing/archive/2005/11/21/495246.aspx)
+此函数只调用 Win32 [BringWindowToTop](/windows/desktop/api/winuser/nf-winuser-bringwindowtotop)函数。 调用[SetWindowPos](#setwindowpos)函数来更改窗口的 Z 顺序中的位置。 
+  `BringWindowToTop` 函数不更改窗口样式，即可使其成为顶层窗口。 有关详细信息，请参阅[HWND_TOP 与 HWND_TOPMOST 之间的区别是什么](http://blogs.msdn.com/b/oldnewthing/archive/2005/11/21/495246.aspx)
 
 ### <a name="example"></a>示例
 
@@ -6127,7 +6131,7 @@ afx_msg void OnChar(
 *nFlags*<br/>
 包含扫描代码、 密钥转换代码、 上一项状态和上下文的代码中，如下面的列表中所示：
 
-|“值”|含义|
+|值|含义|
 |-----------|-------------|
 |0-15|指定的重复计数。 值是由于用户按下键而重复击键次数。|
 |16-23|指定扫描代码。 值取决于原始设备制造商 (OEM)|
@@ -6344,7 +6348,7 @@ afx_msg int OnCompareItem(
 
 指示两个项的相对位置。 它可能是以下值之一：
 
-|“值”|含义|
+|值|含义|
 |-----------|-------------|
 |-1|第 1 项进行排序项 2 之前。|
 |0|第 1 项和项 2 排序相同。|
@@ -6542,7 +6546,7 @@ afx_msg void OnDeadChar(
 *nFlags*<br/>
 指定扫描代码、 密钥转换代码、 上一项状态和上下文的代码中，如下面的列表中所示：
 
-|值|描述|
+|“值”|描述|
 |-----------|-----------------|
 |0-7|扫描代码 （依赖于 OEM 的值）。 高序位字低位字节。|
 |8|扩展的密钥，如功能键或 （如果它是扩展的键为 1; 否则为 0） 数字键盘上的密钥。|
@@ -9524,7 +9528,7 @@ afx_msg void OnSysChar(
 *nFlags*<br/>
 *NFlags*参数可以为下列值：
 
-|“值”|含义|
+|值|含义|
 |-----------|-------------|
 |0-15|指定的重复计数。 值是由于用户按下键而重复击键次数...|
 |16-23|指定扫描代码。 值取决于原始设备制造商 (OEM)|

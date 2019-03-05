@@ -1,5 +1,5 @@
 ---
-title: TN028：区分上下文的帮助支持
+title: TN028:上下文相关帮助支持
 ms.date: 11/04/2016
 f1_keywords:
 - vc.help
@@ -8,19 +8,19 @@ helpviewer_keywords:
 - TN028
 - resource identifiers, context-sensitive Help
 ms.assetid: 884f1c55-fa27-4d4c-984f-30907d477484
-ms.openlocfilehash: 580046810243593c17dbf7e1c3ca427b37bd14a8
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: e3ac2742f2c57c01c645c72c933234a96ece773a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51520151"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288280"
 ---
-# <a name="tn028-context-sensitive-help-support"></a>TN028：区分上下文的帮助支持
+# <a name="tn028-context-sensitive-help-support"></a>TN028:上下文相关帮助支持
 
 此注释描述在 MFC 中分配帮助上下文 ID 和其他帮助问题的规则。 上下文相关帮助支持需要 Visual C++ 中提供的帮助编译器。
 
 > [!NOTE]
->  除实现使用 WinHelp 的上下文相关帮助之外，MFC 还支持使用 HTML 帮助。 此支持和使用 HTML 帮助编程的详细信息，请参阅[HTML 帮助： 程序的上下文相关帮助](../mfc/html-help-context-sensitive-help-for-your-programs.md)。
+>  除实现使用 WinHelp 的上下文相关帮助之外，MFC 还支持使用 HTML 帮助。 此支持和使用 HTML 帮助编程的详细信息，请参阅[HTML 帮助：为程序的上下文相关帮助](../mfc/html-help-context-sensitive-help-for-your-programs.md)。
 
 ## <a name="types-of-help-supported"></a>支持的帮助类型
 
@@ -126,7 +126,7 @@ HIWORD(lParam) 包含 y 轴坐标。
 *wParam*<br/>
 未使用，将为零。 如果返回值不为零，则将使用相应上下文调用 WinHelp。 如果返回值为零，则将在父窗口中查询帮助。
 
-在许多情况下，你可以利用你可能已具有的命中测试代码。 请参阅的实现`CToolBar::OnHelpHitTest`WM_HELPHITTEST 消息处理的示例 (代码将利用使用按钮和工具提示中的命中测试代码`CControlBar`)。
+在许多情况下，您可以利用您可能已具有的命中测试代码。 请参阅的实现`CToolBar::OnHelpHitTest`WM_HELPHITTEST 消息处理的示例 (代码将利用使用按钮和工具提示中的命中测试代码`CControlBar`)。
 
 ## <a name="mfc-application-wizard-support-and-makehm"></a>MFC 应用程序向导支持和 MAKEHM
 
@@ -158,7 +158,8 @@ MAKEHM 的源代码现已推出 MFC 编程实用工具示例[MAKEHM](../visual-c
 
 通过 `AfxMessageBox` 函数（`MessageBox` Windows API 的包装器）支持消息框上的“帮助”（有时称为“警报”）。
 
-`AfxMessageBox` 有两种形式，一种与字符串 ID 一起使用，另一种与指向字符串 (`LPCSTR`) 的指针一起使用：
+
+  `AfxMessageBox` 有两种形式，一种与字符串 ID 一起使用，另一种与指向字符串 (`LPCSTR`) 的指针一起使用：
 
 ```
 int AFXAPI AfxMessageBox(LPCSTR lpszText,
@@ -180,4 +181,3 @@ int AFXAPI AfxMessageBox(UINT nIDPrompt,
 
 [按编号列出的技术说明](../mfc/technical-notes-by-number.md)<br/>
 [按类别列出的技术说明](../mfc/technical-notes-by-category.md)
-

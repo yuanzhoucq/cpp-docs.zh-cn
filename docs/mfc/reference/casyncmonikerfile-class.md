@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CAsyncMonikerFile [MFC], OnStartBinding
 - CAsyncMonikerFile [MFC], OnStopBinding
 ms.assetid: 17378b66-a49a-4b67-88e3-7756ad26a2fc
-ms.openlocfilehash: 107f791505bc41b8dbf9c0374c5e3821abbc0fe3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 48d7c3b5dd1b43c7a1639c6d5c56979b422d7017
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50669061"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262618"
 ---
 # <a name="casyncmonikerfile-class"></a>CAsyncMonikerFile 类
 
@@ -87,9 +87,9 @@ class CAsyncMonikerFile : public CMonikerFile
 
 有关如何在 Internet 应用程序中使用异步名字对象和 ActiveX 控件的详细信息，请参阅以下文章：
 
-- [异步名字对象 Internet 前几个步骤：](../../mfc/asynchronous-monikers-on-the-internet.md)
+- [Internet 前几个步骤：异步名字对象](../../mfc/asynchronous-monikers-on-the-internet.md)
 
-- [Internet 前几个步骤： ActiveX 控件](../../mfc/activex-controls-on-the-internet.md)
+- [Internet 前几个步骤：ActiveX 控件](../../mfc/activex-controls-on-the-internet.md)
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -218,7 +218,7 @@ virtual LONG GetPriority() const;
 
 ### <a name="return-value"></a>返回值
 
-异步传输会发生的优先级。 一个标准的线程优先级标志： THREAD_PRIORITY_ABOVE_NORMAL、 THREAD_PRIORITY_BELOW_NORMAL、 THREAD_PRIORITY_HIGHEST、 THREAD_PRIORITY_IDLE、 THREAD_PRIORITY_LOWEST、 THREAD_PRIORITY_NORMAL 和 THREAD_PRIORITY_TIME_CRITICAL。 请参阅 Windows 函数[SetThreadPriority](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-setthreadpriority)有关这些值的说明。
+异步传输会发生的优先级。 标准线程优先级标志之一：THREAD_PRIORITY_ABOVE_NORMAL、 THREAD_PRIORITY_BELOW_NORMAL、 THREAD_PRIORITY_HIGHEST、 THREAD_PRIORITY_IDLE、 THREAD_PRIORITY_LOWEST、 THREAD_PRIORITY_NORMAL 和 THREAD_PRIORITY_TIME_CRITICAL。 请参阅 Windows 函数[SetThreadPriority](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-setthreadpriority)有关这些值的说明。
 
 ### <a name="remarks"></a>备注
 

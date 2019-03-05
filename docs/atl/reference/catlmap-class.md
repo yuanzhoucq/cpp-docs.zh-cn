@@ -37,12 +37,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlMap class
 ms.assetid: 5e2fe028-8e6d-4686-93df-1433d2080ec3
-ms.openlocfilehash: 83ac810538bf189d026c0cb9b2a76ded49fdd86c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 80975047b300f270c0ac58c8b8abfc59ff2b17ef
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50499667"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293779"
 ---
 # <a name="catlmap-class"></a>CAtlMap 类
 
@@ -101,7 +101,7 @@ Key 元素类型。
 |名称|描述|
 |----------|-----------------|
 |[CAtlMap::CAtlMap](#catlmap)|构造函数。|
-|[CAtlMap:: ~ CAtlMap](#dtor)|析构函数。|
+|[CAtlMap::~CAtlMap](#dtor)|析构函数。|
 
 ### <a name="public-methods"></a>公共方法
 
@@ -221,7 +221,7 @@ CAtlMap(
 
 [!code-cpp[NVC_ATL_Utilities#72](../../atl/codesnippet/cpp/catlmap-class_1.cpp)]
 
-##  <a name="dtor"></a>  CAtlMap:: ~ CAtlMap
+##  <a name="dtor"></a>  CAtlMap::~CAtlMap
 
 析构函数。
 
@@ -294,7 +294,7 @@ CPair* GetAt(POSITION& pos) throw();
 *key*<br/>
 指定地图的键的类型的模板参数。
 
-*value*<br/>
+*值*<br/>
 指定地图的值的类型的模板参数。
 
 ### <a name="return-value"></a>返回值
@@ -391,7 +391,7 @@ void GetNextAssoc(
 *key*<br/>
 指定地图的键的类型的模板参数。
 
-*value*<br/>
+*值*<br/>
 指定地图的值的类型的模板参数。
 
 ### <a name="remarks"></a>备注
@@ -561,7 +561,7 @@ CPair* Lookup(KINARGTYPE key) throw();
 *key*<br/>
 指定用于标识要查找的元素的键。
 
-*value*<br/>
+*值*<br/>
 未接收到查找值的变量。
 
 ### <a name="return-value"></a>返回值
@@ -675,7 +675,7 @@ POSITION SetAt(
 *key*<br/>
 要添加到密钥值`CAtlMap`对象。
 
-*value*<br/>
+*值*<br/>
 要添加到值`CAtlMap`对象。
 
 ### <a name="return-value"></a>返回值
@@ -731,7 +731,7 @@ void SetValueAt(
 *pos*<br/>
 通过以前调用返回的位置计数器[CAtlMap::GetNextAssoc](#getnextassoc)或[CAtlMap::GetStartPosition](#getstartposition)。
 
-*value*<br/>
+*值*<br/>
 要添加到值`CAtlMap`对象。
 
 ### <a name="remarks"></a>备注

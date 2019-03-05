@@ -1,5 +1,5 @@
 ---
-title: IOleInPlaceActiveObjectImpl 类
+title: IOleInPlaceActiveObjectImpl Class
 ms.date: 11/04/2016
 f1_keywords:
 - IOleInPlaceActiveObjectImpl
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - ActiveX controls [C++], communication between container and control
 - IOleInPlaceActiveObject, ATL implementation
 ms.assetid: 44e6cc6d-a2dc-4187-98e3-73cf0320dea9
-ms.openlocfilehash: 785972af55cdf594bb45b0257e626aa5344af60a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fd0bcb7bb20967128ef3b3cc62722c3b68e728d8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447458"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285043"
 ---
-# <a name="ioleinplaceactiveobjectimpl-class"></a>IOleInPlaceActiveObjectImpl 类
+# <a name="ioleinplaceactiveobjectimpl-class"></a>IOleInPlaceActiveObjectImpl Class
 
 此类提供方法，可帮助在就地控件与其容器之间的通信。
 

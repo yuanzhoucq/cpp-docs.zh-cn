@@ -1,5 +1,5 @@
 ---
-title: 菜单和资源：容器添加
+title: 菜单和资源：添加容器
 ms.date: 11/04/2016
 f1_keywords:
 - IDP_OLE_INIT_FAILED
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - CONTAIN tutorial [MFC]
 - Links menu item [MFC]
 ms.assetid: 425448be-8ca0-412e-909a-a3a9ce845288
-ms.openlocfilehash: ea4159f8eb60f43f60eacd5831ce148c81aeb572
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ad3431f78d3637bcdfdb0266c8abdb43047ca28d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50546609"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279328"
 ---
-# <a name="menus-and-resources-container-additions"></a>菜单和资源：容器添加
+# <a name="menus-and-resources-container-additions"></a>菜单和资源：添加容器
 
 本文介绍了对菜单和可视化编辑容器应用程序中的其他资源进行更改。
 
@@ -47,12 +47,12 @@ ms.locfileid: "50546609"
 |----------|-------------|
 |**插入新对象**|将打开 OLE 插入对象对话框中要插入到文档的链接或嵌入的项。|
 |**粘贴链接**|将剪贴板上的项的链接粘贴到文档中。|
-|**OLE 谓词**|调用选定的项的主谓词。 此菜单项发生更改以反映所选的项的主谓词的文本。|
+|**OLE Verb**|调用选定的项的主谓词。 此菜单项发生更改以反映所选的项的主谓词的文本。|
 |**Links**|将打开 OLE 编辑链接对话框中，若要更改现有链接的项。|
 
 除了本文中列出的更改，源文件必须包括 AFXOLECL。RC 中，这是 Microsoft 基础类库实现所必需的。 插入新对象是唯一的所需的菜单添加。 可以添加其他项，但此处列出的内容是最常见的。
 
-如果你想要支持就地激活的包含的项，必须为容器应用程序中创建一个新的菜单。 此菜单包含相同的文件菜单和窗口弹出菜单时文件处于打开状态，但它具有两个分隔符置于它们之间的使用。 这些分隔条用于指示服务器 （组件） 项 （应用程序） 应在其中放置时就地激活，其菜单。 此菜单合并技术的详细信息，请参阅[菜单和资源： 菜单合并](../mfc/menus-and-resources-menu-merging.md)。
+如果你想要支持就地激活的包含的项，必须为容器应用程序中创建一个新的菜单。 此菜单包含相同的文件菜单和窗口弹出菜单时文件处于打开状态，但它具有两个分隔符置于它们之间的使用。 这些分隔条用于指示服务器 （组件） 项 （应用程序） 应在其中放置时就地激活，其菜单。 此菜单合并技术的详细信息，请参阅[菜单和资源：菜单合并](../mfc/menus-and-resources-menu-merging.md)。
 
 ##  <a name="_core_container_application_accelerator_table_additions"></a> 添加容器应用程序快捷键对应表
 
@@ -71,7 +71,7 @@ ms.locfileid: "50546609"
 |ID_FILE_SAVE|Ctrl+S|**VIRTKEY**|
 |ID_FILE_PRINT|Ctrl+P|**VIRTKEY**|
 |ID_NEXT_PANE|VK_F6|**VIRTKEY**|
-|ID_PREV_PANE|SHIFT + VK_F6|**VIRTKEY**|
+|ID_PREV_PANE|SHIFT+VK_F6|**VIRTKEY**|
 |ID_CANCEL_EDIT_CNTR|VK_ESCAPE|**VIRTKEY**|
 
 ##  <a name="_core_string_table_additions_for_container_applications"></a> 添加容器应用程序的字符串表
@@ -86,5 +86,4 @@ ms.locfileid: "50546609"
 ## <a name="see-also"></a>请参阅
 
 [菜单和资源 (OLE)](../mfc/menus-and-resources-ole.md)<br/>
-[菜单和资源：服务器添加](../mfc/menus-and-resources-server-additions.md)
-
+[菜单和资源：添加服务器](../mfc/menus-and-resources-server-additions.md)

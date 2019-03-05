@@ -8,12 +8,12 @@ helpviewer_keywords:
 - threading [ATL], models
 - _ATL_SINGLE_THREADED macro
 ms.assetid: 6b571078-521c-4f3e-9f08-482aa235a822
-ms.openlocfilehash: 419c9880573c2058b3bb60b9c77e4f3ca065fab7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 69c1c80bba0b09ce69e0b9b9b27296ef2508e60b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50569879"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326057"
 ---
 # <a name="specifying-the-threading-model-for-a-project-atl"></a>指定项目的线程模型 (ATL)
 
@@ -40,4 +40,3 @@ ms.locfileid: "50569879"
 ## <a name="see-also"></a>请参阅
 
 [概念](../atl/active-template-library-atl-concepts.md)
-

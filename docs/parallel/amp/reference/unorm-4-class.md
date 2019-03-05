@@ -268,12 +268,12 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::unorm_4::rb
 - amp_short_vectors/Concurrency::graphics::unorm_4::get_wzyx
 ms.assetid: dd216a9d-95f7-4978-8e78-6cb9c781a7e9
-ms.openlocfilehash: f8a76e09adf606d9f366e8ed5657791fae497a2a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e4996f65f4b7f707f6b86e05571cacd6987c83a4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619357"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302500"
 ---
 # <a name="unorm4-class"></a>unorm_4 类
 
@@ -600,7 +600,7 @@ class unorm_4;
 
 **标头：** amp_short_vectors.h
 
-**Namespace:** concurrency:: graphics
+**命名空间：** Concurrency:: graphics
 
 ##  <a name="ctor"></a> unorm_4
 
@@ -671,7 +671,7 @@ explicit inline unorm_4(
 *_V3*<br/>
 要初始化元素 3 的值。
 
-*（_V)*<br/>
+*_V*<br/>
 用于初始化值。
 
 *_Other*<br/>

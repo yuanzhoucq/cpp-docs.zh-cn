@@ -10,12 +10,12 @@ helpviewer_keywords:
 - SCODE, MFC ActiveX controls
 - ThrowError method [MFC]
 ms.assetid: 771fb9c9-2413-4dcc-b386-7bc4c4adeafd
-ms.openlocfilehash: 8c5fe88cf952337a7d070eae7a5da149a8e905bd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0800c1827c636dd81e2928e33c0ee2afde4c94ac
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50676481"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259134"
 ---
 # <a name="mfc-activex-controls-returning-error-codes-from-a-method"></a>MFC ActiveX 控件：从方法返回错误代码
 
@@ -28,11 +28,10 @@ ms.locfileid: "50676481"
 
 最常见的预定义 SCODEs，例如，存在帮助器函数[colecontrol:: Setnotsupported](../mfc/reference/colecontrol-class.md#setnotsupported)， [colecontrol:: Getnotsupported](../mfc/reference/colecontrol-class.md#getnotsupported)，和[COleControl::SetNotPermitted](../mfc/reference/colecontrol-class.md#setnotpermitted).
 
-预定义 SCODEs 和定义自定义 SCODEs 的说明的列表，请参阅的部分[ActiveX 控件中处理错误](../mfc/mfc-activex-controls-advanced-topics.md)在 ActiveX 控件： 高级主题。
+预定义 SCODEs 和定义自定义 SCODEs 的说明的列表，请参阅的部分[ActiveX 控件中处理错误](../mfc/mfc-activex-controls-advanced-topics.md)ActiveX 控件中：高级的主题。
 
-报告代码的其他几个方面的异常的详细信息，请参阅[COleControl::FireError](../mfc/reference/colecontrol-class.md#fireerror)和部分[ActiveX 控件中处理错误](../mfc/mfc-activex-controls-advanced-topics.md)在 ActiveX 控件： 高级主题。
+有关报告代码的其他几个方面的异常的详细信息，请参阅[COleControl::FireError](../mfc/reference/colecontrol-class.md#fireerror)和部分[ActiveX 控件中处理错误](../mfc/mfc-activex-controls-advanced-topics.md)ActiveX 控件中：高级的主题。
 
 ## <a name="see-also"></a>请参阅
 
 [MFC ActiveX 控件](../mfc/mfc-activex-controls.md)
-

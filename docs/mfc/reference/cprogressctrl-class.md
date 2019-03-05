@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CProgressCtrl [MFC], SetStep
 - CProgressCtrl [MFC], StepIt
 ms.assetid: 222630f4-1598-4026-8198-51649b1192ab
-ms.openlocfilehash: ba97dd27fbf70c34461d45755fd008e6ad9099b0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a6d5d3becfd1c1ee4a032c74eb116ede82c42bc4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585895"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260265"
 ---
 # <a name="cprogressctrl-class"></a>CProgressCtrl 类
 
@@ -71,13 +71,13 @@ class CProgressCtrl : public CWnd
 
 |名称|描述|
 |----------|-----------------|
-|[Cprogressctrl:: Create](#create)|创建进度栏控件，并将其附加到`CProgressCtrl`对象。|
+|[CProgressCtrl::Create](#create)|创建进度栏控件，并将其附加到`CProgressCtrl`对象。|
 |[CProgressCtrl::CreateEx](#createex)|使用指定的 Windows 扩展样式创建进度控件，并将其附加到`CProgressCtrl`对象。|
 |[CProgressCtrl::GetBarColor](#getbarcolor)|获取当前进度栏控件进度指示符栏的颜色。|
 |[CProgressCtrl::GetBkColor](#getbkcolor)|获取当前进度栏的背景色。|
 |[CProgressCtrl::GetPos](#getpos)|获取进度栏的当前位置。|
 |[CProgressCtrl::GetRange](#getrange)|获取进度栏控件的范围的下限和上限限制。|
-|[Cprogressctrl:: Getstate](#getstate)|获取当前进度栏控件的状态。|
+|[CProgressCtrl::GetState](#getstate)|获取当前进度栏控件的状态。|
 |[CProgressCtrl::GetStep](#getstep)|检索当前进度栏控件的进度栏的步骤增量。|
 |[CProgressCtrl::OffsetPos](#offsetpos)|进度栏控件的当前位置提升以指定的增量并重绘条以反映新的位置。|
 |[CProgressCtrl::SetBarColor](#setbarcolor)|设置当前进度栏控件中的进度指示符栏的颜色。|
@@ -127,7 +127,7 @@ CProgressCtrl();
 
 [!code-cpp[NVC_MFC_CProgressCtrl#1](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_1.cpp)]
 
-##  <a name="create"></a>  Cprogressctrl:: Create
+##  <a name="create"></a>  CProgressCtrl::Create
 
 创建进度栏控件，并将其附加到`CProgressCtrl`对象。
 
@@ -285,7 +285,7 @@ void GetRange(
 
 [!code-cpp[NVC_MFC_CProgressCtrl#4](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_4.cpp)]
 
-##  <a name="getstate"></a>  Cprogressctrl:: Getstate
+##  <a name="getstate"></a>  CProgressCtrl::GetState
 
 获取当前进度栏控件的状态。
 
@@ -297,7 +297,7 @@ int GetState() const;
 
 当前的进度栏控件，这是以下值之一的状态：
 
-|“值”|状态|
+|值|状态|
 |-----------|-----------|
 |PBST_NORMAL|正在进行|
 |PBST_ERROR|Error|
@@ -442,7 +442,7 @@ BOOL SetMarquee(
 |参数|描述|
 |---------------|-----------------|
 |*fMarqueeMode*|[in]设置为 True 或 FALSE 可以关闭字幕模式打开字幕模式。|
-|*n 间隔*|[in]以毫秒为单位的字幕动画的更新之间的时间。|
+|*nInterval*|[in]以毫秒为单位的字幕动画的更新之间的时间。|
 
 ### <a name="return-value"></a>返回值
 
@@ -533,7 +533,7 @@ int SetState(int iState);
 
 |参数|描述|
 |---------------|-----------------|
-|*iState*|[in]要设置进度栏的状态。 使用下列值之一：<br /><br /> -PBST_NORMAL-正在进行中<br />-PBST_ERROR-错误<br />-PBST_PAUSED-暂停|
+|*iState*|[in]要设置进度栏的状态。 使用下列值之一：<br /><br /> -PBST_NORMAL-正在进行中<br />- PBST_ERROR - Error<br />-PBST_PAUSED-暂停|
 
 ### <a name="return-value"></a>返回值
 
@@ -607,4 +607,3 @@ int StepIt();
 [MFC 示例 CMNCTRL2](../../visual-cpp-samples.md)<br/>
 [CWnd 类](../../mfc/reference/cwnd-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)
-

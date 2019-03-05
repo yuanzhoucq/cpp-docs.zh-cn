@@ -14,12 +14,12 @@ helpviewer_keywords:
 - files [MFC], manipulating
 - binary access [MFC]
 ms.assetid: ae25e2c5-2859-4679-ab97-438824e93ce1
-ms.openlocfilehash: 815239b0d4de1938a810153cb98f39b2642b6e2d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cf53c498e61bdf0a233d7638649b30e498e27cc5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50459327"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297926"
 ---
 # <a name="files-in-mfc"></a>MFC 中的文件
 
@@ -28,7 +28,8 @@ ms.locfileid: "50459327"
 > [!NOTE]
 >  当你使用 MFC`CDocument`对象，该框架为您完成大部分的序列化工作。 具体而言，框架将创建和使用 `CFile` 对象。 只需编写代码中的重写`Serialize`类的成员函数`CDocument`。
 
-`CFile` 类为通用二进制文件操作提供了一个接口。 派生自 `CStdioFile` 的 `CMemFile` 和 `CFile` 类以及派生自 `CSharedFile` 的 `CMemFile` 类提供了更专业的文件服务。
+
+  `CFile` 类为通用二进制文件操作提供了一个接口。 派生自 `CStdioFile` 的 `CMemFile` 和 `CFile` 类以及派生自 `CSharedFile` 的 `CMemFile` 类提供了更专业的文件服务。
 
 有关 MFC 文件处理的替代方法的详细信息，请参阅[文件处理](../c-runtime-library/file-handling.md)中*运行时库参考*。
 

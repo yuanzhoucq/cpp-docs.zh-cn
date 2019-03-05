@@ -1,5 +1,5 @@
 ---
-title: 多线程处理： MFC 编程提示
+title: 多线程处理：MFC 编程提示
 ms.date: 08/27/2018
 helpviewer_keywords:
 - multithreading [C++], programming tips
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - troubleshooting [C++], multithreading
 - Windows handle maps [C++]
 ms.assetid: ad14cc70-c91c-4c24-942f-13a75e58bf8a
-ms.openlocfilehash: 0fbee2e836c2e898488da348e4dec9ea00ac4370
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e89d0d534638f7216f142bc3f86633a59b8b0ff7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50494273"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290790"
 ---
-# <a name="multithreading-mfc-programming-tips"></a>多线程处理： MFC 编程提示
+# <a name="multithreading-mfc-programming-tips"></a>多线程处理：MFC 编程提示
 
 多线程应用程序要比单线程应用程序以确保操作会以预期顺序，并且未损坏的多个线程访问任何数据的更加小心。 本主题介绍使用 Microsoft 基础类 (MFC) 库的多线程应用程序进行编程时避免潜在问题的技术。
 
@@ -43,7 +43,7 @@ MFC 对象不是单独线程安全。 两个单独的线程无法处理同一对
 
 ##  <a name="_core_accessing_mfc_objects_from_non.2d.mfc_threads"></a> 从非 MFC 线程访问 MFC 对象
 
-如果已创建的线程，而不是使用一种方法中的多线程应用程序[CWinThread](../mfc/reference/cwinthread-class.md)对象，不能从该线程访问其他 MFC 对象。 换而言之，如果你想要从辅助线程访问任何 MFC 对象，则必须创建该线程中所述的方法之一[多线程处理： 创建用户界面线程](multithreading-creating-user-interface-threads.md)或[多线程处理：创建辅助线程](multithreading-creating-worker-threads.md)。 这些方法是允许类库，用于初始化内部变量处理多线程应用程序的需要是唯一的。
+如果已创建的线程，而不是使用一种方法中的多线程应用程序[CWinThread](../mfc/reference/cwinthread-class.md)对象，不能从该线程访问其他 MFC 对象。 换而言之，如果你想要从辅助线程访问任何 MFC 对象，则必须创建该线程中所述的方法之一[多线程处理：创建用户界面线程](multithreading-creating-user-interface-threads.md)或[多线程处理：创建辅助线程](multithreading-creating-worker-threads.md)。 这些方法是允许类库，用于初始化内部变量处理多线程应用程序的需要是唯一的。
 
 ##  <a name="_core_windows_handle_maps"></a> Windows 句柄映射
 
@@ -57,7 +57,7 @@ MFC 对象不是单独线程安全。 两个单独的线程无法处理同一对
 
 ##  <a name="_core_communicating_between_threads"></a> 在线程之间进行通信
 
-MFC 提供了多个类，使线程可以同步对对象以维护线程安全的访问。 中描述了这些类的用法[多线程处理： 如何使用同步类](multithreading-how-to-use-the-synchronization-classes.md)并[多线程处理： 何时使用同步类](multithreading-when-to-use-the-synchronization-classes.md)。 有关这些对象的详细信息，请参阅[同步](/windows/desktop/Sync/synchronization)Windows SDK 中。
+MFC 提供了多个类，使线程可以同步对对象以维护线程安全的访问。 中描述了这些类的用法[多线程处理：如何使用同步类](multithreading-how-to-use-the-synchronization-classes.md)和[多线程处理：何时使用同步类](multithreading-when-to-use-the-synchronization-classes.md)。 有关这些对象的详细信息，请参阅[同步](/windows/desktop/Sync/synchronization)Windows SDK 中。
 
 ## <a name="see-also"></a>请参阅
 

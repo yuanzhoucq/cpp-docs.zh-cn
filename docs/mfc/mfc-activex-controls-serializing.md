@@ -15,12 +15,12 @@ helpviewer_keywords:
 - versioning ActiveX controls
 - wVerMajor global constant
 ms.assetid: 9d57c290-dd8c-4853-b552-6f17f15ebedd
-ms.openlocfilehash: fddd09ad7a3dc7d9211480bb21ac434419a48758
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0c1c845640be2dfaa6aeda2defb478afb650b83b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50522208"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303334"
 ---
 # <a name="mfc-activex-controls-serializing"></a>MFC ActiveX 控件：序列化
 
@@ -54,20 +54,20 @@ ActiveX 控件向导用于生成控件项目，当多个默认处理程序函数
 
 |属性交换函数|目标|
 |---------------------------------|-------------|
-|**PX_Blob （)**|序列化为二进制大型对象 (BLOB) 数据属性的类型。|
-|**PX_Bool （)**|序列化类型的布尔值属性。|
-|**PX_Color （)**|序列化的类型颜色属性。|
-|**PX_Currency （)**|将类型序列化为**CY** （货币） 属性。|
-|**PX_Double （)**|将类型序列化为**double**属性。|
-|**PX_Font （)**|序列化的字体类型属性。|
-|**PX_Float （)**|将类型序列化为**float**属性。|
-|**PX_IUnknown （)**|序列化类型的属性`LPUNKNOWN`。|
-|**PX_Long （)**|将类型序列化为**长**属性。|
-|**PX_Picture （)**|序列化类型图片属性。|
-|**PX_Short （)**|将类型序列化为**短**属性。|
-|**PXstring （)**|序列化类型`CString`属性。|
-|**PX_ULong （)**|将类型序列化为**ULONG**属性。|
-|**PX_UShort （)**|将类型序列化为**USHORT**属性。|
+|**PX_Blob( )**|序列化为二进制大型对象 (BLOB) 数据属性的类型。|
+|**PX_Bool( )**|序列化类型的布尔值属性。|
+|**PX_Color( )**|序列化的类型颜色属性。|
+|**PX_Currency( )**|将类型序列化为**CY** （货币） 属性。|
+|**PX_Double( )**|将类型序列化为**double**属性。|
+|**PX_Font( )**|序列化的字体类型属性。|
+|**PX_Float( )**|将类型序列化为**float**属性。|
+|**PX_IUnknown( )**|序列化类型的属性`LPUNKNOWN`。|
+|**PX_Long( )**|将类型序列化为**长**属性。|
+|**PX_Picture( )**|序列化类型图片属性。|
+|**PX_Short( )**|将类型序列化为**短**属性。|
+|**PXstring( )**|序列化类型`CString`属性。|
+|**PX_ULong( )**|将类型序列化为**ULONG**属性。|
+|**PX_UShort( )**|将类型序列化为**USHORT**属性。|
 
 有关这些属性交换函数的详细信息，请参阅[暂留的 OLE 控件](../mfc/reference/persistence-of-ole-controls.md)中*MFC 参考*。
 
@@ -96,4 +96,3 @@ ActiveX 控件向导用于生成控件项目，当多个默认处理程序函数
 ## <a name="see-also"></a>请参阅
 
 [MFC ActiveX 控件](../mfc/mfc-activex-controls.md)
-

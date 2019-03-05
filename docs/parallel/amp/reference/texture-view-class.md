@@ -14,12 +14,12 @@ f1_keywords:
 - AMP_GRAPHICS/Concurrency::graphics::texture_view::set
 - AMP_GRAPHICS/Concurrency::graphics::texture_view::value_type
 ms.assetid: 6ec2e289-1626-4727-9592-07981cf1d27d
-ms.openlocfilehash: c76f1f9b00ea6e44f69f98286b83d4a84f12cac1
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: 0f2b627afa216f03592fe913afece1a80f5bd5a6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657495"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275657"
 ---
 # <a name="textureview-class"></a>texture_view 类
 
@@ -74,7 +74,7 @@ class texture_view<const value_type, _Rank>
 |[gather_green](#gather_green)|已重载。 通过使用特定的采样配置采样指定坐标处的纹理，并返回四个采样纹理的绿色 (y) 组件。|
 |[gather_red](#gather_red)|已重载。 通过使用特定的采样配置采样指定坐标处的纹理，并返回四个采样纹理的红色 (x) 组件。|
 |[get](#get)|已重载。 按索引获取此元素的值。|
-|[示例](#sample)|已重载。 通过使用特定的采样配置采样指定的坐标和详细级别的纹理。|
+|[sample](#sample)|已重载。 通过使用特定的采样配置采样指定的坐标和详细级别的纹理。|
 |[set](#set)|按索引设置元素的值。|
 
 ### <a name="public-operators"></a>公共运算符
@@ -103,7 +103,7 @@ class texture_view<const value_type, _Rank>
 
 **Namespace:** concurrency:: graphics
 
-##  <a name="dtor"></a> ~ texture_view
+##  <a name="dtor"></a> ~texture_view
 
 销毁`texture_view`实例。
 
@@ -339,7 +339,7 @@ texture_view<const value_type, _Rank>& operator= (// [3] copy constructor
 
 对此引用`texture_view`实例。
 
-##  <a name="operator_at"></a> operator]
+##  <a name="operator_at"></a> operator[]
 
 按索引返回元素值。
 
@@ -365,7 +365,7 @@ value_type operator[] (int _I0) const restrict(amp);
 
 按索引元素值`_Index`。
 
-##  <a name="operator_call"></a> operator （)
+##  <a name="operator_call"></a> operator()
 
 按索引返回元素值。
 

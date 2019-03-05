@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - CHeapPtr class
 ms.assetid: e5c5bfd4-9bf1-4164-8a83-8155fe253454
-ms.openlocfilehash: 8373d7ee0fc32b89891281e0fbd4b685ce40f0e6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8cb35139e707d81a53edb762a2b7fc2ab41ff247
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50632370"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296054"
 ---
 # <a name="cheapptr-class"></a>CHeapPtr 类
 
@@ -36,7 +36,7 @@ class CHeapPtr : public CHeapPtrBase<T, Allocator>
 *T*<br/>
 要存储在堆上的对象类型。
 
-*分配器*<br/>
+*Allocator*<br/>
 要使用的内存分配类。
 
 ## <a name="members"></a>成员

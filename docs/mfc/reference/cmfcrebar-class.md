@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CMFCReBar [MFC], OnUpdateCmdUI
 - CMFCReBar [MFC], SetPaneAlignment
 ms.assetid: 02a60e29-6224-49c1-9e74-e0a7d9f8d023
-ms.openlocfilehash: f722268cbba2e63227836188c26d8c3d1b0b5c2e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b221abf772df06541ecde247a9db9401c0ed3c3a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631011"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278010"
 ---
 # <a name="cmfcrebar-class"></a>CMFCReBar 类
 
@@ -187,8 +187,8 @@ virtual CSize CalcFixedLayout(
 
 ### <a name="parameters"></a>参数
 
-[in]*bStretch*<br/>
-[in]*bHorz*<br/>
+[in] *bStretch*<br/>
+[in] *bHorz*<br/>
 
 ### <a name="return-value"></a>返回值
 
@@ -212,7 +212,7 @@ void EnableDocking(DWORD dwDockStyle);
 
 ### <a name="parameters"></a>参数
 
-[in]*dwDockStyle*<br/>
+[in] *dwDockStyle*<br/>
 
 ### <a name="remarks"></a>备注
 
@@ -250,8 +250,8 @@ virtual INT_PTR OnToolHitTest(
 
 ### <a name="parameters"></a>参数
 
-[in]*点*<br/>
-[in]*pTI*<br/>
+[in] *point*<br/>
+[in] *pTI*<br/>
 
 ### <a name="return-value"></a>返回值
 
@@ -267,8 +267,8 @@ virtual void OnUpdateCmdUI(
 
 ### <a name="parameters"></a>参数
 
-[in]*pTarget*<br/>
-[in]*bDisableIfNoHndler*<br/>
+[in] *pTarget*<br/>
+[in] *bDisableIfNoHndler*<br/>
 
 ### <a name="remarks"></a>备注
 
@@ -280,7 +280,7 @@ virtual void SetPaneAlignment(DWORD dwAlignment);
 
 ### <a name="parameters"></a>参数
 
-[in]*dwAlignment*<br/>
+[in] *dwAlignment*<br/>
 
 ### <a name="remarks"></a>备注
 

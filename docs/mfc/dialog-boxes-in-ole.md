@@ -10,12 +10,12 @@ helpviewer_keywords:
 - dialog boxes [MFC], OLE
 - Insert object
 ms.assetid: 73c41eb8-738a-4d02-9212-d3395bb09a3a
-ms.openlocfilehash: 53e802e973ca78619252fcc4100a7cc50009f2ef
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1081a831cc2b9fc0ab22e2c80a4f657466534d86
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618499"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270886"
 ---
 # <a name="dialog-boxes-in-ole"></a>OLE 中的对话框
 
@@ -30,7 +30,7 @@ ms.locfileid: "50618499"
 *更改图标*<br/>
 此对话框允许用户选择显示哪些图标来表示链接或嵌入项。 在用户从编辑菜单中选择更改图标或选择性粘贴或转换对话框中选择更改图标按钮时显示此对话框。 此外显示它时用户将打开插入对象对话框中，并选择显示为图标。 使用[COleChangeIconDialog](../mfc/reference/colechangeicondialog-class.md)类，以显示此对话框。
 
-*将转换*<br/>
+*Convert*<br/>
 此对话框允许用户更改的嵌入或链接项的类型。 例如，如果您有嵌入复合文档中的图元文件，稍后又想使用另一个应用程序来修改嵌入的图元文件，可以使用转换对话框。 通常通过单击显示此对话框*项类型*对象在编辑菜单上，然后在级联菜单上，单击转换。 使用[COleConvertDialog](../mfc/reference/coleconvertdialog-class.md)类，以显示此对话框。 例如，运行 MFC OLE 示例[OCLIENT](../visual-cpp-samples.md)。
 
 *编辑链接或更新链接*<br/>
@@ -44,4 +44,3 @@ ms.locfileid: "50618499"
 [对话框](../mfc/dialog-boxes.md)<br/>
 [对话框的生命周期](../mfc/life-cycle-of-a-dialog-box.md)<br/>
 [OLE](../mfc/ole-in-mfc.md)
-

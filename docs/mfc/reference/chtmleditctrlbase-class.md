@@ -220,12 +220,12 @@ helpviewer_keywords:
 - CHtmlEditCtrlBase [MFC], Unlink
 - CHtmlEditCtrlBase [MFC], UnorderList
 ms.assetid: e0cc74b4-8320-4570-b673-16c03d2ae266
-ms.openlocfilehash: 11bfa8304b51ed25b934a97109db7da7bb39f49a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ebc296c66ee818e5c72207e0ca7b436f386fb68d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50590133"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293935"
 ---
 # <a name="chtmleditctrlbase-class"></a>CHtmlEditCtrlBase 类
 
@@ -395,10 +395,10 @@ HRESULT AddToGlyphTable(
 图像 URL。
 
 *nTagType*<br/>
-标记类型： 0 表示映像适用于的开始标记。 1 表示映像适用于的结束标记。 2 表示图像的开始和结束标记。 标记类型设置为 0，必须添加 b 和注释等的单个标记。
+标记类型：0 表示映像适用于的开始标记。 1 表示映像适用于的结束标记。 2 表示图像的开始和结束标记。 标记类型设置为 0，必须添加 b 和注释等的单个标记。
 
 *nAlignment*<br/>
-对齐方式 （仅限矩形元素）： 此参数指示该图像是为具有对齐特性的元素。 左 = 0 时，中心 = 1，右 = 2，和未定义 = 3。 左、 向右或居中属性必须显式设置的元素上。
+对齐方式 （仅限矩形元素）：此参数指示该图像是为具有对齐特性的元素。 左 = 0 时，中心 = 1，右 = 2，和未定义 = 3。 左、 向右或居中属性必须显式设置的元素上。
 
 *nPosInfo*<br/>
 定位信息。 确定哪些级联样式表 (CSS) 定位值标志符号所适用的静态定位 = 0 时，绝对定位 = 1，相对定位 = 2，以及所有 = 3。 此字段，可指定一个标记时它不定位字形和另一个标志符号，以定位标记时显示一个定位点。
@@ -790,7 +790,7 @@ HRESULT GetDocumentTitle(CString& szTitle) const;
 
 ### <a name="parameters"></a>参数
 
-*sztitle 所*<br/>
+*szTitle*<br/>
 文档的标题。
 
 ### <a name="return-value"></a>返回值
@@ -1417,7 +1417,7 @@ HRESULT Is1DElement(bool& bValue) const;
 
 ### <a name="parameters"></a>参数
 
-*其中 bValue*<br/>
+*bValue*<br/>
 如果该元素以静态方式定位，则返回 FALSE 否则，则为 TRUE。
 
 ### <a name="return-value"></a>返回值
@@ -1438,7 +1438,7 @@ HRESULT Is2DElement(bool& bValue) const;
 
 ### <a name="parameters"></a>参数
 
-*其中 bValue*<br/>
+*bValue*<br/>
 如果该元素绝对定位，则返回 FALSE 否则，则为 TRUE。
 
 ### <a name="return-value"></a>返回值
@@ -2566,4 +2566,3 @@ HRESULT UnorderList(LPCTSTR szId = NULL) const;
 
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>
 [HTMLEdit 示例](../../visual-cpp-samples.md)
-

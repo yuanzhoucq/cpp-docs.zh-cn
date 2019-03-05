@@ -33,18 +33,18 @@ f1_keywords:
 - ppltasks/concurrency::when_all
 - ppltasks/concurrency::when_any
 ms.assetid: 520a6dff-9324-4df2-990d-302e3050af6a
-ms.openlocfilehash: 7550e6f0ef44abd19b3fab89127ff898c72738f2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9cb726ccc475d6d08e036229d0d06089e3fac31c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50436174"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278205"
 ---
 # <a name="concurrency-namespace-functions"></a>并发命名空间函数
 
 ||||
 |-|-|-|
-|[分配](#alloc)|[CreateResourceManager](#createresourcemanager)|[DisableTracing](#disabletracing)|
+|[Alloc](#alloc)|[CreateResourceManager](#createresourcemanager)|[DisableTracing](#disabletracing)|
 |[EnableTracing](#enabletracing)|[免费](#free)|[GetExecutionContextId](#getexecutioncontextid)|
 |[GetOSVersion](#getosversion)|[GetProcessorCount](#getprocessorcount)|[GetProcessorNodeCount](#getprocessornodecount)|
 |[GetSchedulerId](#getschedulerid)|[Trace_agents_register_name](#trace_agents_register_name)|[asend](#asend)|
@@ -57,10 +57,10 @@ ms.locfileid: "50436174"
 |[parallel_sort](#parallel_sort)|[parallel_transform](#parallel_transform)|[receive](#receive)|
 |[run_with_cancellation_token](#run_with_cancellation_token)|[发送](#send)|[set_ambient_scheduler](#set_ambient_scheduler)|
 |[set_task_execution_resources](#set_task_execution_resources)|[swap](#swap)|[task_from_exception](#task_from_exception)|
-|[task_from_result](#task_from_result)|[try_receive](#try_receive)|[等待](#wait)|
+|[task_from_result](#task_from_result)|[try_receive](#try_receive)|[wait](#wait)|
 |[when_all](#when_all)|[when_any](#when_any)|
 
-##  <a name="alloc"></a>  分配
+##  <a name="alloc"></a>  Alloc
 
 通过并发运行时缓存子分配器分配具有指定大小的内存块。
 
@@ -105,7 +105,7 @@ bool asend(
 *_Trg*<br/>
 指针或向其发送数据的目标引用。
 
-*数据 （_d)*<br/>
+*_Data*<br/>
 对要发送的数据的引用。
 
 ### <a name="return-value"></a>返回值
@@ -126,7 +126,7 @@ bool asend(
 inline __declspec(noreturn) void __cdecl cancel_current_task();
 ```
 
-##  <a name="clear"></a>  清除
+##  <a name="clear"></a>  clear
 
 清除并发队列，销毁所有当前排入队列的元素。 此方法不是并发安全的。
 
@@ -173,7 +173,8 @@ lambda 可能还返回 `task<TResult>`（在自身中封装异步工作或是表
 
 lambda 可采用零个、一个或两个自变量。 有效的参数是 `progress_reporter<TProgress>` 和 `cancellation_token`（此顺序为同时使用两个参数的顺序）。 无自变量的 lambda 将导致创建一个缺少进度报告功能的异步构造。 Lambda 采用 progress_reporter\<TProgress > 将导致`create_async`要返回的异步构造将报告 TProgress 类型的进度每次`report`调用 progress_reporter 对象的方法。 采用 cancellation_token 的 lambda 可以使用该标记来检查取消情况，或将该标记传递给它创建的任务，以便取消异步构造可导致取消这些任务。
 
-如果 lambda 或函数对象的主体返回的结果 (并且不是 task\<TResult >)，则将为其隐式创建的任务运行时上下文中的 MTA 在过程内以异步方式执行。 `IAsyncInfo::Cancel` 方法将导致取消隐式任务。
+如果 lambda 或函数对象的主体返回的结果 (并且不是 task\<TResult >)，则将为其隐式创建的任务运行时上下文中的 MTA 在过程内以异步方式执行。 
+  `IAsyncInfo::Cancel` 方法将导致取消隐式任务。
 
 如果 lambda 的主体返回一个任务，则 lamba 将通过声明 lambda 采用类型为 `cancellation_token` 的参数，以内联方式执行，您可以通过在创建任务时将此标记传入，从而触发对在 lambda 中创建的任何任务的取消。 您还可对此标记使用 `register_callback` 方法，以使运行时在您对产生的异步操作或行为调用 `IAsyncInfo::Cancel` 时调用回调。
 
@@ -392,7 +393,7 @@ void concurrent_vector<T, _Ax>::internal_assign_iterators(
 
 *first*<br/>
 
-*最后一个*<br/>
+*last*<br/>
 
 ##  <a name="interruption_point"></a>  interruption_point
 
@@ -465,7 +466,7 @@ T2<br/>
 *_Item2*<br/>
 第二个源。
 
-*项目 （_i)*<br/>
+*_Items*<br/>
 其他源。
 
 *_PScheduleGroup*<br/>
@@ -518,7 +519,7 @@ T2<br/>
 *_Item2*<br/>
 第二个源。
 
-*项目 （_i)*<br/>
+*_Items*<br/>
 其他源。
 
 *_PScheduleGroup*<br/>
@@ -572,7 +573,7 @@ T2<br/>
 *_Item2*<br/>
 第二个源。
 
-*项目 （_i)*<br/>
+*_Items*<br/>
 其他源。
 
 *_PScheduleGroup*<br/>
@@ -669,10 +670,10 @@ C + + 标准库兼容的内存分配器的类型。
 *_Function*<br/>
 二进制比较器的类型。
 
-*（_b)*<br/>
+*_Begin*<br/>
 一种随机访问迭代器，用于寻址要排序的范围中第一个元素的位置。
 
-*（_e)*<br/>
+*_End*<br/>
 一种随机访问迭代器，用于定址要排序的范围中最后元素之后下一个元素的位置。
 
 *_Alloc*<br/>
@@ -692,7 +693,7 @@ C + + 标准库兼容的内存分配器的实例。
 
 如果未提供的分配器类型或实例，c + + 标准库内存分配器`std::allocator<T>`用于分配的缓冲区。
 
-算法将输入范围分为两个区块，然后将每个区块分成两个以并行方式执行的子区块。 可选自变量 `_Chunk_size` 可用于向算法指示它应按顺序处理区块的大小 < `_Chunk_size`。
+算法将输入范围分为两个区块，然后将每个区块分成两个以并行方式执行的子区块。 可选参数 `_Chunk_size` 可用于向算法指示它应按顺序处理区块的大小 <  `_Chunk_size`。
 
 ##  <a name="parallel_for"></a>  parallel_for
 
@@ -757,7 +758,7 @@ void parallel_for(
 *first*<br/>
 要包括在迭代中的第一个索引。
 
-*最后一个*<br/>
+*last*<br/>
 索引一个过去的迭代中要包含的最后一个索引。
 
 *_Step*<br/>
@@ -766,7 +767,7 @@ void parallel_for(
 *_Func*<br/>
 在每次迭代执行的函数。 这可能是 lambda 表达式、 函数指针，也支持具有签名的函数调用运算符的版本的任何对象`void operator()(_Index_type)`。
 
-*部件 （_p)*<br/>
+*_Part*<br/>
 对分区程序对象的引用。 参数可以是之一`const` [auto_partitioner](auto-partitioner-class.md)`&`， `const` [static_partitioner](static-partitioner-class.md)`&`， `const` [simple_分区程序](simple-partitioner-class.md)`&`或[affinity_partitioner](affinity-partitioner-class.md) `&`如果[affinity_partitioner](affinity-partitioner-class.md)对象，该引用必须是一个非常量左值引用，以便算法可以存储状态，供未来循环重用。
 
 ### <a name="remarks"></a>备注
@@ -804,13 +805,13 @@ void parallel_for_each(
 *first*<br/>
 迭代器，用于寻址第一个元素的位置包括在并行迭代中。
 
-*最后一个*<br/>
+*last*<br/>
 发现的迭代器的最后一个元素之后的位置包括在并行迭代中。
 
 *_Func*<br/>
 应用于每个元素的范围中一个用户定义函数对象。
 
-*部件 （_p)*<br/>
+*_Part*<br/>
 对分区程序对象的引用。 参数可以是之一`const` [auto_partitioner](auto-partitioner-class.md)`&`， `const` [static_partitioner](static-partitioner-class.md)`&`， `const` [simple_分区程序](simple-partitioner-class.md)`&`或[affinity_partitioner](affinity-partitioner-class.md) `&`如果[affinity_partitioner](affinity-partitioner-class.md)对象，该引用必须是一个非常量左值引用，以便算法可以存储状态，供未来循环重用。
 
 ### <a name="remarks"></a>备注
@@ -1078,10 +1079,10 @@ C + + 标准库兼容的内存分配器的类型。
 *_Function*<br/>
 投影函数的类型。
 
-*（_b)*<br/>
+*_Begin*<br/>
 一种随机访问迭代器，用于寻址要排序的范围中第一个元素的位置。
 
-*（_e)*<br/>
+*_End*<br/>
 一种随机访问迭代器，用于定址要排序的范围中最后元素之后下一个元素的位置。
 
 *_Alloc*<br/>
@@ -1101,7 +1102,7 @@ C + + 标准库兼容的内存分配器的实例。
 
 如果未提供的分配器类型或实例，c + + 标准库内存分配器`std::allocator<T>`用于分配的缓冲区。
 
-算法将输入范围分为两个区块，然后将每个区块分成两个以并行方式执行的子区块。 可选自变量 `_Chunk_size` 可用于向算法指示它应按顺序处理区块的大小 < `_Chunk_size`。
+算法将输入范围分为两个区块，然后将每个区块分成两个以并行方式执行的子区块。 可选参数 `_Chunk_size` 可用于向算法指示它应按顺序处理区块的大小 <  `_Chunk_size`。
 
 ##  <a name="parallel_reduce"></a>  parallel_reduce
 
@@ -1147,10 +1148,10 @@ inline _Reduce_type parallel_reduce(
 *_Range_reduce_fun*<br/>
 范围减少函数的类型。 这必须是具有签名的函数类型`_Reduce_type _Range_fun(_Forward_iterator, _Forward_iterator, _Reduce_type)`，_Reduce_type 是相同的标识类型和减少的结果类型。
 
-*（_b)*<br/>
+*_Begin*<br/>
 输入迭代器，用于寻址的范围中的第一个元素会减少。
 
-*（_e)*<br/>
+*_End*<br/>
 发现要减少的范围内最后一个元素之外的一个位置的元素的输入迭代器。
 
 *_Identity*<br/>
@@ -1202,10 +1203,10 @@ inline void parallel_sort(
 *_Function*<br/>
 二元比较函子的类型。
 
-*（_b)*<br/>
+*_Begin*<br/>
 一种随机访问迭代器，用于寻址要排序的范围中第一个元素的位置。
 
-*（_e)*<br/>
+*_End*<br/>
 一种随机访问迭代器，用于定址要排序的范围中最后元素之后下一个元素的位置。
 
 *_Func*<br/>
@@ -1220,7 +1221,7 @@ inline void parallel_sort(
 
 第二个重载使用提供的应具有签名 `bool _Func(T, T)`（其中 `T` 是输入范围中元素的类型）的二进制比较器。
 
-算法将输入范围分为两个区块，然后将每个区块分成两个以并行方式执行的子区块。 可选自变量 `_Chunk_size` 可用于向算法指示它应按顺序处理区块的大小 < `_Chunk_size`。
+算法将输入范围分为两个区块，然后将每个区块分成两个以并行方式执行的子区块。 可选参数 `_Chunk_size` 可用于向算法指示它应按顺序处理区块的大小 <  `_Chunk_size`。
 
 ##  <a name="parallel_transform"></a>  parallel_transform
 
@@ -1312,10 +1313,10 @@ first2,
 在两个源范围的元素上成对执行的二元函子的类型。
 
 *_Partitioner*<br/>
-*First1*<br/>
+*first1*<br/>
 一种输入迭代器，用于定址所操作的第一个或唯一的源范围内第一个元素的位置。
 
-*Last1*<br/>
+*last1*<br/>
 一种输入迭代器，用于定址所操作的第一个或唯一的源范围内最后元素之后下一个元素的位置。
 
 *_Result*<br/>
@@ -1324,10 +1325,10 @@ first2,
 *_Unary_op*<br/>
 用户定义的应用于源范围内每个元素的一元函数对象。
 
-*部件 （_p)*<br/>
+*_Part*<br/>
 对分区程序对象的引用。 参数可以是之一`const` [auto_partitioner](auto-partitioner-class.md)`&`， `const` [static_partitioner](static-partitioner-class.md)`&`， `const` [simple_分区程序](simple-partitioner-class.md)`&`或[affinity_partitioner](affinity-partitioner-class.md) `&`如果[affinity_partitioner](affinity-partitioner-class.md)对象，该引用必须是一个非常量左值引用，以便算法可以存储状态，供未来循环重用。
 
-*First2*<br/>
+*first2*<br/>
 一种输入迭代器，用于定址所操作的第二个源范围内第一个元素的位置。
 
 *_Binary_op*<br/>
@@ -1343,13 +1344,13 @@ first2,
 
 有关迭代器不支持随机访问，仅[auto_partitioner](auto-partitioner-class.md)支持。
 
-采用自变量 `_Unary_op` 的重载将一元函子应用于输入范围内的每个元素，从而将输入范围转换为输出范围。 `_Unary_op` 必须支持带有签名 `operator()(T)` 的函数调用运算符，签名中的 `T` 是要循环访问的范围的值类型。
+采用参数 `_Unary_op` 的重载将一元函子应用于输入范围内的每个元素，从而将输入范围转换为输出范围。 `_Unary_op` 必须支持带有签名 `operator()(T)` 的函数调用运算符，签名中的 `T` 是要循环访问的范围的值类型。
 
 采用参数 `_Binary_op` 的重载将二元函子分别应用于第一个输入范围内的一个元素和第二个输入范围内的一个元素，从而将两个输入范围转换为输出范围。 `_Binary_op` 必须支持具有签名 `operator()(T, U)` 的函数调用运算符，签名中的 `T`, `U` 是两个输入迭代器的值类型。
 
 有关详细信息，请参阅[并行算法](../../../parallel/concrt/parallel-algorithms.md)。
 
-##  <a name="receive"></a>  接收
+##  <a name="receive"></a>  receive
 
 常规接收实现，允许上下文仅等待来自一个源的数据并筛选所接受的值。
 
@@ -1385,7 +1386,7 @@ T receive(
 *_Src*<br/>
 指针或对从其预期的数据源的引用。
 
-*超时) (_t*<br/>
+*_Timeout*<br/>
 最长时间该方法应为其数据，以毫秒为单位。
 
 *_Filter_proc*<br/>
@@ -1427,7 +1428,7 @@ void run_with_cancellation_token(
 
 取消 `cancellation_token` 时，将触发函数对象中的任何中断点。 如果父任务具有不同的标记或没有标记，则显式标记 `_Ct` 会将此 `_Func` 从父任务取消中隔离出来。
 
-##  <a name="send"></a>  发送
+##  <a name="send"></a>  send
 
 同步发送操作，它会一直等待，直到目标接受或拒绝消息。
 
@@ -1447,7 +1448,7 @@ bool send(ITarget<T>& _Trg, const T& _Data);
 *_Trg*<br/>
 指针或向其发送数据的目标引用。
 
-*数据 （_d)*<br/>
+*_Data*<br/>
 对要发送的数据的引用。
 
 ### <a name="return-value"></a>返回值
@@ -1495,7 +1496,8 @@ void __cdecl set_task_execution_resources(
 数组中参数 `GROUP_AFFINITY` 指定的 `_PGroupAffinity` 项的数目。
 
 *_PGroupAffinity*<br/>
-`GROUP_AFFINITY` 项的数组。
+
+  `GROUP_AFFINITY` 项的数组。
 
 ### <a name="remarks"></a>备注
 
@@ -1600,7 +1602,7 @@ void Trace_agents_register_name(
 *_PObject*<br/>
 指向在跟踪中命名的消息块或代理的指针。
 
-*名称 （_n)*<br/>
+*_Name*<br/>
 给定对象的名称。
 
 ##  <a name="try_receive"></a>  try_receive
@@ -1649,7 +1651,7 @@ bool try_receive(
 
 有关详细信息，请参阅[消息传递函数](../../../parallel/concrt/message-passing-functions.md)。
 
-##  <a name="wait"></a>  等待
+##  <a name="wait"></a>  wait
 
 将当前上下文暂停指定的一段时间。
 
@@ -1685,10 +1687,10 @@ auto when_all(
 *_Iterator*<br/>
 输入迭代器的类型。
 
-*（_b)*<br/>
+*_Begin*<br/>
 要合并到结果任务的元素范围中第一个元素的位置。
 
-*（_e)*<br/>
+*_End*<br/>
 超出要合并到结果任务的元素范围的第一个元素的位置。
 
 *_TaskOptions*<br/>
@@ -1708,7 +1710,7 @@ auto when_all(
 
 ##  <a name="when_any"></a>  when_any
 
-创建一个任务，在作为自变量提供的任何任务成功完成后，此任务将成功完成。
+创建一个任务，在作为参数提供的任何任务成功完成后，此任务将成功完成。
 
 ```
 template<typename _Iterator>
@@ -1737,10 +1739,10 @@ auto when_any(
 *_Iterator*<br/>
 输入迭代器的类型。
 
-*（_b)*<br/>
+*_Begin*<br/>
 要合并到结果任务的元素范围中第一个元素的位置。
 
-*（_e)*<br/>
+*_End*<br/>
 超出要合并到结果任务的元素范围的第一个元素的位置。
 
 *_TaskOptions*<br/>

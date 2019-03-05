@@ -5,12 +5,12 @@ helpviewer_keywords:
 - asynchronous agents
 - agents [Concurrency Runtime]
 ms.assetid: 6cf6ccc6-87f1-4e14-af15-ea8ba58fef1a
-ms.openlocfilehash: a99400e4df49e36e1cddda7068f315485b976cde
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: ff6fa851519066c3c399a28557fd8f103d0e94be
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176531"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268936"
 ---
 # <a name="asynchronous-agents"></a>异步代理
 
@@ -46,10 +46,10 @@ ms.locfileid: "52176531"
 |------------|-----------------|
 |[start](reference/agent-class.md#start)|计划`agent`对象的执行并将其设置为`agent_runnable`状态。|
 |[run](reference/agent-class.md#run)|执行该任务是由执行任务`agent`对象。|
-|[完成](reference/agent-class.md#done)|将移动到代理`agent_done`状态。|
-|[取消](../../parallel/concrt/cancellation-in-the-ppl.md#cancel)|如果未启动代理，此方法取消执行代理，并将其设置为`agent_canceled`状态。|
+|[done](reference/agent-class.md#done)|将移动到代理`agent_done`状态。|
+|[cancel](../../parallel/concrt/cancellation-in-the-ppl.md#cancel)|如果未启动代理，此方法取消执行代理，并将其设置为`agent_canceled`状态。|
 |[status](reference/agent-class.md#status)|检索当前状态的`agent`对象。|
-|[等待](reference/agent-class.md#wait)|等待`agent`输入对象`agent_done`或`agent_canceled`状态。|
+|[wait](reference/agent-class.md#wait)|等待`agent`输入对象`agent_done`或`agent_canceled`状态。|
 |[wait_for_all](reference/agent-class.md#wait_for_all)|等待所有提供`agent`对象进入`agent_done`或`agent_canceled`状态。|
 |[wait_for_one](reference/agent-class.md#wait_for_one)|等待至少一个提供`agent`对象进入`agent_done`或`agent_canceled`状态。|
 
@@ -59,9 +59,8 @@ ms.locfileid: "52176531"
 
 ## <a name="example"></a>示例
 
-有关演示如何创建基本的基于代理的应用程序的示例，请参阅[演练： 创建基于代理的应用程序](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md)。
+有关演示如何创建基本的基于代理的应用程序的示例，请参阅[演练：创建基于代理的应用程序](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md)。
 
 ## <a name="see-also"></a>请参阅
 
 [异步代理库](../../parallel/concrt/asynchronous-agents-library.md)
-

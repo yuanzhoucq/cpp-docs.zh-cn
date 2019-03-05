@@ -24,16 +24,17 @@ helpviewer_keywords:
 - CMFCRibbonCheckBox [MFC], OnDrawOnList
 - CMFCRibbonCheckBox [MFC], SetACCData
 ms.assetid: 3a6c3891-c8d1-4af0-b954-7b9ab048782a
-ms.openlocfilehash: 067f38522c1be112d6e12200c2c10e1d439e5057
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 34af1ae818125abd51b9eaf04cd98f9ac24addb3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50612415"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281429"
 ---
 # <a name="cmfcribboncheckbox-class"></a>CMFCRibbonCheckBox 类
 
-`CMFCRibbonCheckBox` 类实现可添加到功能区面板、快速访问工具栏或弹出菜单的复选框。
+
+  `CMFCRibbonCheckBox` 类实现可添加到功能区面板、快速访问工具栏或弹出菜单的复选框。
 
 ## <a name="syntax"></a>语法
 
@@ -217,7 +218,7 @@ virtual BOOL OnDrawMenuImage(CDC*, CRect);
 
 ### <a name="parameters"></a>参数
 
-[in]*CDC&#42;*<br/>
+[in] *CDC&#42;*<br/>
 指向与复选框相关联的 CDC。
 
 *CRect*<br/>

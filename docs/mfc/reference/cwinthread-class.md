@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CWinThread [MFC], m_pActiveWnd
 - CWinThread [MFC], m_pMainWnd
 ms.assetid: 10cdc294-4057-4e76-ac7c-a8967a89af0b
-ms.openlocfilehash: 9c2b393354f65195e0d0060a08b83e321e3d5b1d
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 0e02f123580696519e59d828ec590456cbd2a81c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178416"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270120"
 ---
 # <a name="cwinthread-class"></a>CWinThread 类
 
@@ -91,8 +91,8 @@ class CWinThread : public CCmdTarget
 |[CWinThread::ProcessMessageFilter](#processmessagefilter)|到达应用程序之前截获某些消息。|
 |[CWinThread::ProcessWndProcException](#processwndprocexception)|截获由线程的消息和命令处理程序引发的所有未处理的异常。|
 |[CWinThread::PumpMessage](#pumpmessage)|包含线程的消息循环。|
-|[Cwinthread:: Resumethread](#resumethread)|递减一线程的挂起计数。|
-|[Cwinthread:: Run](#run)|消息泵的线程的控制函数。 重写自定义默认消息循环。|
+|[CWinThread::ResumeThread](#resumethread)|递减一线程的挂起计数。|
+|[CWinThread::Run](#run)|消息泵的线程的控制函数。 重写自定义默认消息循环。|
 |[CWinThread::SetThreadPriority](#setthreadpriority)|设置当前线程的优先级。|
 |[CWinThread::SuspendThread](#suspendthread)|增量的线程的挂起计数。|
 
@@ -311,7 +311,8 @@ BOOL m_bAutoDelete;
 
 `m_bAutoDelete`数据成员是类型 BOOL 的公共变量。
 
-`m_bAutoDelete` 的值不影响关闭基础线程句柄的方式。 在销毁 `CWinThread` 对象时，始终关闭线程句柄。
+
+  `m_bAutoDelete` 的值不影响关闭基础线程句柄的方式。 在销毁 `CWinThread` 对象时，始终关闭线程句柄。
 
 ##  <a name="m_hthread"></a>  CWinThread::m_hThread
 

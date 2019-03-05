@@ -29,12 +29,12 @@ helpviewer_keywords:
 - CComBSTR class
 - CComBSTR
 ms.assetid: 8fea1879-a05e-47a5-a803-8dec60eaa534
-ms.openlocfilehash: 52e8472e315932978af38d405c753b0a62fcbe45
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 48447b9e6a211927d8e729dd761d2e14ecd89615
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50475642"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57282352"
 ---
 # <a name="ccombstr-class"></a>CComBSTR 类
 
@@ -53,7 +53,7 @@ class CComBSTR
 |名称|描述|
 |----------|-----------------|
 |[CComBSTR::CComBSTR](#ccombstr)|构造函数。|
-|[CComBSTR:: ~ CComBSTR](#dtor)|析构函数。|
+|[CComBSTR::~CComBSTR](#dtor)|析构函数。|
 
 ### <a name="public-methods"></a>公共方法
 
@@ -84,12 +84,12 @@ class CComBSTR
 |----------|-----------------|
 |[CComBSTR::operator BSTR](#operator_bstr)|强制转换`CComBSTR`为 BSTR 对象。|
 |[CComBSTR::operator ！](#operator_not)|返回 TRUE 或 FALSE，具体取决于是否`m_str`为 NULL。|
-|[CComBSTR::operator ！ =](#operator_neq)|比较`CComBSTR`的字符串。|
+|[CComBSTR::operator !=](#operator_neq)|比较`CComBSTR`的字符串。|
 |[CComBSTR::operator （& a)](#operator_amp)|返回的地址`m_str`。|
-|[CComBSTR::operator + =](#operator_add_eq)|将追加`CComBSTR`到对象。|
+|[CComBSTR::operator +=](#operator_add_eq)|将追加`CComBSTR`到对象。|
 |[CComBSTR::operator <](#operator_lt)|比较`CComBSTR`的字符串。|
 |[CComBSTR::operator =](#operator_eq)|将一个值赋给`m_str`。|
-|[CComBSTR::operator = =](#operator_eq_eq)|比较`CComBSTR`的字符串。|
+|[CComBSTR::operator ==](#operator_eq_eq)|比较`CComBSTR`的字符串。|
 |[CComBSTR::operator >](#operator_gt)|比较`CComBSTR`的字符串。|
 
 ### <a name="public-data-members"></a>公共数据成员
@@ -338,7 +338,7 @@ CComBSTR(CComBSTR&& src) throw(); // (Visual Studio 2017)
 
 其他构造函数将 `m_str` 设置为指定字符串的副本。 如果传递的值*nSize*，则仅*nSize*字符将被复制，跟终止 null 字符。
 
-`CComBSTR` 支持移动语义。 可以使用移动构造函数（采用右值引用 (`&&`) 来创建新对象的构造函数，该新对象使用与你作为参数传入的旧对象相同的基础数据，而无需复制对象的开销。
+`CComBSTR` 支持移动语义。 可以使用移动构造函数（采用右值引用 (`&&`) 来创建新对象的构造函数，该新对象使用与你作为自变量传入的旧对象相同的基础数据，而无需复制对象的开销。
 
 析构函数释放由 `m_str` 指向的字符串。
 
@@ -633,7 +633,7 @@ CComBSTR& operator= (CComBSTR&& src) throw(); // (Visual Studio 2017)
 
 有关示例，请参阅[CComBSTR::Copy](#copy)。
 
-##  <a name="operator_eq_eq"></a>  CComBSTR::operator = =
+##  <a name="operator_eq_eq"></a>  CComBSTR::operator ==
 
 比较`CComBSTR`的字符串。 `CComBSTR`s 进行比较的用户的默认区域设置上下文中的文本上。
 

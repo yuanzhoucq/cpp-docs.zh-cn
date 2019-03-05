@@ -1,5 +1,5 @@
 ---
-title: TN035：在 Visual C++ 中使用多个资源文件和头文件
+title: TN035:Visual c + + 中使用多个资源文件和头文件
 ms.date: 11/04/2016
 f1_keywords:
 - vc.resources
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - resource files, multiple
 - TN035
 ms.assetid: 1f08ce5e-a912-44cc-ac56-7dd93ad73fb6
-ms.openlocfilehash: 6f89e10c2a05d1352dc2347af0aa0215079ea56c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7d97e4536c2a43e7e224e9056aa39df5480daeca
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50567656"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279909"
 ---
-# <a name="tn035-using-multiple-resource-files-and-header-files-with-visual-c"></a>TN035：在 Visual C++ 中使用多个资源文件和头文件
+# <a name="tn035-using-multiple-resource-files-and-header-files-with-visual-c"></a>TN035:Visual c + + 中使用多个资源文件和头文件
 
 > [!NOTE]
 >  以下技术说明在首次包括在联机文档中后未更新。 因此，某些过程和主题可能已过时或不正确。 要获得最新信息，建议你在联机文档索引中搜索热点话题。
@@ -111,7 +111,7 @@ AFXRES.H 定义框架使用（尤其是在 AFXRES.RC 中使用）的标准符号
 
 ## <a name="_mfcnotes_tn035_including"></a> 包括其他头文件
 
-AppWizard 创建的应用程序仅包括两个头文件：RESOURCE.H 和 AFXRES.H。 只有 RESOURCE.H 特定于应用程序。 在以下情况下，你可能需要包括其他只读头文件：
+应用程序向导创建的应用程序中包括只有两个标头文件：资源。H 和 AFXRES。H. 只有 RESOURCE.H 特定于应用程序。 在以下情况下，你可能需要包括其他只读头文件：
 
 头文件由外部源提供，或者你希望在多个项目之间或同一项目的多个部分之间共享头文件。
 
@@ -300,7 +300,7 @@ Visual C++ 每次保存 .RC 文件时，均会将 //{{NO_DEPENDENCIES}} 注释�
 
 下面说明了 Visual C++ 如何维护 .RC 文件中的这些信息。 你不需要这些信息来使用 Visual C++，但是，这能够加强你的理解，使你能够更自信地使用“设置包括”功能。
 
-上述所有这三种类型的设置包括信息均以两种格式存储在 .RC 文件中：(1) 作为 #include 或资源编译器可解释的其他指令；(2) 作为只能由 Visual C++ 解释的特殊 TEXTINCLUDE 资源。
+设置包括信息的上述三种类型的每个存储中。在两个窗体中的 RC 文件：（1） 作为 #include 或其他指令以资源编译器和 （2） 作为特殊的 TEXTINCLUDE 资源以仅由 Visual c + +。
 
 TEXTINCLUDE 资源的用途是设置包括信息安全存储在 Visual c + + 的易于演示的窗体**设置包括**对话框。 TEXTINCLUDE 是*资源类型*由 Visual c + + 定义。 Visual C++ 可识别具有资源标识符 1、2 和 3 的三种特定 TEXTINCLUDE 资源：
 
@@ -383,4 +383,3 @@ END
 
 [按编号列出的技术说明](../mfc/technical-notes-by-number.md)<br/>
 [按类别列出的技术说明](../mfc/technical-notes-by-category.md)
-

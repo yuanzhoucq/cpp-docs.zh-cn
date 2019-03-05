@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - tile_barrier class
 ms.assetid: b4ccdccb-0032-4e11-b7bd-dc9d43445dee
-ms.openlocfilehash: 7902ba2315fe348789527e755e124e7fc0ba965f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4336a4cc317344c881f60e5ed4c5bdf8328a34b8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509042"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301163"
 ---
 # <a name="tilebarrier-class"></a>tile_barrier 类
 
@@ -41,7 +41,7 @@ class tile_barrier;
 
 |名称|描述|
 |----------|-----------------|
-|[等待](#wait)|指示要停止执行，直到平铺中的所有线程都完成等待的线程组 （磁贴） 中的所有线程。|
+|[wait](#wait)|指示要停止执行，直到平铺中的所有线程都完成等待的线程组 （磁贴） 中的所有线程。|
 |[wait_with_all_memory_fence](#wait_with_all_memory_fence)|阻止执行，直到所有内存访问都完成的磁贴中的所有线程和磁贴中的所有线程都达到此调用。|
 |[wait_with_global_memory_fence](#wait_with_global_memory_fence)|阻止平铺，直到所有全局内存访问都完成且该磁贴中的所有线程都达到此调用中的所有线程的执行。|
 |[wait_with_tile_static_memory_fence](#wait_with_tile_static_memory_fence)|阻止平铺中的所有线程的执行，直到所有`tile_static`内存访问都完成且该磁贴中的所有线程都达到此调用。|
@@ -72,7 +72,7 @@ tile_barrier(
 *_Other*<br/>
 `tile_barrier`要复制对象。
 
-## <a name="wait"></a>  等待
+## <a name="wait"></a>  wait
 
 指示线程组 (Tile) 中的所有线程停止执行，直到 Tile 中的所有线程完成等待。
 

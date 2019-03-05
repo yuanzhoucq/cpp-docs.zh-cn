@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CKeyboardManager [MFC], TranslateCharToUpper
 - CKeyboardManager [MFC], UpdateAccelTable
 ms.assetid: 4809ece6-89df-4479-8b53-9bf476ee107b
-ms.openlocfilehash: d144731d05e861f4b462c4d58022b5155fdeb79b
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: c953958b3e0112997423376d42b62953b936049a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694265"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303602"
 ---
 # <a name="ckeyboardmanager-class"></a>CKeyboardManager 类
 
@@ -69,7 +69,7 @@ class CKeyboardManager : public CObject
 |[CKeyboardManager::LoadState](#loadstate)|从 Windows 注册表加载快捷键表。|
 |[CKeyboardManager::ResetAll](#resetall)|重新加载的快捷键表从应用程序资源。|
 |[CKeyboardManager::SaveState](#savestate)|将快捷方式键表保存到 Windows 注册表中。|
-|[Ckeyboardmanager:: Showallaccelerators](#showallaccelerators)|指定框架显示的所有命令的所有快捷键或每个命令的一个快捷方式键。 此方法不会影响具有只有一个关联的快捷键的命令。|
+|[CKeyboardManager::ShowAllAccelerators](#showallaccelerators)|指定框架显示的所有命令的所有快捷键或每个命令的一个快捷方式键。 此方法不会影响具有只有一个关联的快捷键的命令。|
 |[CKeyboardManager::TranslateCharToUpper](#translatechartoupper)|将字符转换为其上注册。|
 |[CKeyboardManager::UpdateAccelTable](#updateacceltable)|使用新的快捷方式键表中更新快捷方式表。|
 
@@ -198,7 +198,7 @@ static BOOL __stdcall IsKeyPrintable(const UINT nChar);
 |||
 |-|-|
 |参数|描述|
-|*NChar*|[in]此方法检查字符。|
+|*nChar*|[in]此方法检查字符。|
 
 ### <a name="return-value"></a>返回值
 
@@ -326,7 +326,7 @@ static UINT TranslateCharToUpper(const UINT nChar);
 
 ### <a name="parameters"></a>参数
 
-*NChar*<br/>
+*nChar*<br/>
 [in]要转换的字符。
 
 ### <a name="return-value"></a>返回值
@@ -382,4 +382,3 @@ BOOL UpdateAccelTable(
 [CWinAppEx 类](../../mfc/reference/cwinappex-class.md)<br/>
 [CWinAppEx::InitKeyboardManager](../../mfc/reference/cwinappex-class.md#initkeyboardmanager)<br/>
 [键盘和鼠标自定义](../../mfc/keyboard-and-mouse-customization.md)
-

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - MFC, initializing
 - initializing MFC applications
 ms.assetid: 4ef09267-ff7f-4c39-91a0-57454a264f83
-ms.openlocfilehash: 6e430d30dc62a14008fad9e41e3b2cde7ddffc8b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c96d009cf19981a475209233ee397af1cdcb352d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50450591"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289385"
 ---
 # <a name="initinstance-member-function"></a>InitInstance 成员函数
 
@@ -32,11 +32,11 @@ MFC 应用程序向导创建的标准 `InitInstance` 实现将执行以下任务
 
 - 处理命令行以打开命令行上指定的文档或打开新的空文档。
 
-您可以添加自己的初始化代码或修改向导编写的代码。
+你可以添加自己的初始化代码或修改向导编写的代码。
 
 > [!NOTE]
 >  MFC 应用程序必须初始化为单线程单元 (STA)。 如果您调用[CoInitializeEx](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializeex)在你`InitInstance`重写中，指定 COINIT_APARTMENTTHREADED （而非 COINIT_MULTITHREADED）。
 
 ## <a name="see-also"></a>请参阅
 
-[CWinApp：应用程序类](../mfc/cwinapp-the-application-class.md)
+[CWinApp:应用程序类](../mfc/cwinapp-the-application-class.md)

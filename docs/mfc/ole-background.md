@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - OLE, about OLE
 ms.assetid: 5f654eb5-66b1-40c9-9215-bb85356a67f8
-ms.openlocfilehash: 5006a648729e1fc561855fcb8cba1d658a9c82cd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2501373c2ff5904343a6522e4fb18663f5de3843
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619045"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294416"
 ---
 # <a name="ole-background"></a>OLE 后台
 
@@ -26,7 +26,7 @@ OLE 包含很多不同的概念，它们全部用于实现应用程序之间的�
 
 - 链接和嵌入
 
-   链接和嵌入是两种用于存储创建于 OLE 文档（在其他应用程序中创建）中的项的方法。 两者之间的差异的常规信息，请参阅文章[OLE 后台： 链接和嵌入](../mfc/ole-background-linking-and-embedding.md)。 有关详细信息，请参阅文章[容器](../mfc/containers.md)并[服务器](../mfc/servers.md)。
+   链接和嵌入是两种用于存储创建于 OLE 文档（在其他应用程序中创建）中的项的方法。 两者之间的差异的常规信息，请参阅文章[OLE 背景：链接和嵌入](../mfc/ole-background-linking-and-embedding.md)。 有关详细信息，请参阅文章[容器](../mfc/containers.md)并[服务器](../mfc/servers.md)。
 
 - 就地激活（可视化编辑）
 
@@ -42,7 +42,7 @@ OLE 包含很多不同的概念，它们全部用于实现应用程序之间的�
 
 - 复合文件
 
-   复合文件提供了一个标准文件格式，用于简化 OLE 应用程序的复合文档的结构化存储。 在复合文件中，存储具有目录的很多功能，而流具有文件的很多功能。 此技术也称为结构化存储。 复合文件的详细信息，请参阅文章[容器： 复合文件](../mfc/containers-compound-files.md)。
+   复合文件提供了一个标准文件格式，用于简化 OLE 应用程序的复合文档的结构化存储。 在复合文件中，存储具有目录的很多功能，而流具有文件的很多功能。 此技术也称为结构化存储。 复合文件的详细信息，请参阅文章[容器：复合文件](../mfc/containers-compound-files.md)。
 
 - 统一数据传输
 
@@ -71,4 +71,3 @@ OLE 包含很多不同的概念，它们全部用于实现应用程序之间的�
 ## <a name="see-also"></a>请参阅
 
 [OLE](../mfc/ole-in-mfc.md)
-

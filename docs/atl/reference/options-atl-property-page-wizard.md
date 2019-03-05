@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - ATL Property Page Wizard, options
 ms.assetid: a7107779-b2ea-4f99-b84b-7f3e0c504bc8
-ms.openlocfilehash: e891bd9e37bbf2fbedcdd71649305cdc366065fd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c92c7a3f03c3ddedbea02647e2317d77a7655609
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50641999"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298979"
 ---
 # <a name="options-atl-property-page-wizard"></a>选项，ATL 属性页向导
 
@@ -25,8 +25,8 @@ ms.locfileid: "50641999"
 
    |选项|描述|
    |------------|-----------------|
-   |**单精度**|仅在主 COM 线程中运行的属性页。|
-   |**单元**|可以在任何单线程单元中创建的属性页。 默认值。|
+   |**Single**|仅在主 COM 线程中运行的属性页。|
+   |**Apartment**|可以在任何单线程单元中创建的属性页。 默认值。|
 
 - **聚合**
 
@@ -42,4 +42,3 @@ ms.locfileid: "50641999"
 
 [ATL 属性页向导](../../atl/reference/atl-property-page-wizard.md)<br/>
 [字符串，ATL 属性页向导](../../atl/reference/strings-atl-property-page-wizard.md)
-

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - sockets [MFC], asynchronous operation
 - Windows Sockets [MFC], converting Unicode and MBCS strings
 ms.assetid: 825dae17-7c1b-4b86-8d6c-da7f1afb5d8d
-ms.openlocfilehash: abce497f49347719af08e71a75afa12cb99507f3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 51274791393d95517bd8de5ae7248dc634018037
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50459288"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263100"
 ---
 # <a name="windows-sockets-using-class-casyncsocket"></a>Windows 套接字：使用类 CAsyncSocket
 
@@ -24,7 +24,7 @@ ms.locfileid: "50459288"
 
 `CAsyncSocket` 中所述*MFC 参考*。 Visual c + + 还提供 Windows 套接字规范，位于 Windows SDK 中。 细节被留给您。 Visual c + + 未提供的示例应用程序`CAsyncSocket`。
 
-如果您不了高度掌握网络通信，需要一个简单的解决方案，使用类[CSocket](../mfc/reference/csocket-class.md)与`CArchive`对象。 请参阅[Windows 套接字： 使用存档使用套接字](../mfc/windows-sockets-using-sockets-with-archives.md)有关详细信息。
+如果您不了高度掌握网络通信，需要一个简单的解决方案，使用类[CSocket](../mfc/reference/csocket-class.md)与`CArchive`对象。 请参阅[Windows 套接字：对存档使用套接字](../mfc/windows-sockets-using-sockets-with-archives.md)有关详细信息。
 
 本文包含以下内容：
 
@@ -56,13 +56,13 @@ ms.locfileid: "50459288"
 
          For a server socket, you must specify a port. For a client socket, you typically accept the default value for this parameter, which lets Windows Sockets select a port.
 
-   - 套接字类型： **SOCK_STREAM** （默认值） 或**SOCK_DGRAM**。
+   - 套接字类型：**SOCK_STREAM** （默认值） 或**SOCK_DGRAM**。
 
    - 一个套接字"地址"，如"ftp.microsoft.com"或"128.56.22.8"。
 
          This is your Internet Protocol (IP) address on the network. You will probably always rely on the default value for this parameter.
 
-   中所述的条款"端口"和"套接字地址" [Windows 套接字： 端口和套接字地址](../mfc/windows-sockets-ports-and-socket-addresses.md)。
+   中所述的条款"端口"和"套接字地址" [Windows 套接字：端口和套接字地址](../mfc/windows-sockets-ports-and-socket-addresses.md)。
 
 1. 如果套接字，客户端套接字对象连接到服务器套接字，使用[CAsyncSocket::Connect](../mfc/reference/casyncsocket-class.md#connect)。
 
@@ -73,7 +73,7 @@ ms.locfileid: "50459288"
    接受连接，可以执行此类验证密码的任务。
 
     > [!NOTE]
-    >  `Accept`成员函数将一个新的空引用`CSocket`对象作为其参数。 在调用之前，必须构造此对象`Accept`。 如果此套接字对象超出范围，则关闭连接。 不要调用`Create`此新的套接字对象。 有关示例，请参阅文章[Windows 套接字： 操作序列](../mfc/windows-sockets-sequence-of-operations.md)。
+    >  `Accept`成员函数将一个新的空引用`CSocket`对象作为其参数。 在调用之前，必须构造此对象`Accept`。 如果此套接字对象超出范围，则关闭连接。 不要调用`Create`此新的套接字对象。 有关示例，请参阅文章[Windows 套接字：操作顺序](../mfc/windows-sockets-sequence-of-operations.md)。
 
 1. 通过调用执行与其他套接字通信`CAsyncSocket`封装 Windows 套接字 API 函数的对象的成员函数。
 
@@ -85,7 +85,7 @@ ms.locfileid: "50459288"
 
    析构函数调用的对象[关闭](../mfc/reference/casyncsocket-class.md#close)之前销毁的对象的成员函数。
 
-有关此序列中的代码示例 (实际上为`CSocket`对象)，请参阅[Windows 套接字： 操作序列](../mfc/windows-sockets-sequence-of-operations.md)。
+有关此序列中的代码示例 (实际上为`CSocket`对象)，请参阅[Windows 套接字：操作顺序](../mfc/windows-sockets-sequence-of-operations.md)。
 
 ##  <a name="_core_your_responsibilities_with_casyncsocket"></a> 您的职责与 CAsyncSocket
 
@@ -97,7 +97,7 @@ ms.locfileid: "50459288"
 
 - Unicode 和多字节字符之间进行转换设置 (MBCS) 字符串。
 
-术语的定义这些以及其他信息，请参阅[Windows 套接字： 阻止](../mfc/windows-sockets-blocking.md)， [Windows 套接字： 字节排序](../mfc/windows-sockets-byte-ordering.md)， [Windows 套接字： 转换字符串](../mfc/windows-sockets-converting-strings.md).
+术语的定义这些以及其他信息，请参阅[Windows 套接字：阻塞](../mfc/windows-sockets-blocking.md)， [Windows 套接字：字节排序](../mfc/windows-sockets-byte-ordering.md)， [Windows 套接字：将字符串转换](../mfc/windows-sockets-converting-strings.md)。
 
 尽管这些问题，类`CAsycnSocket`可能是正确的选择，如果应用程序需要的所有灵活性和控制可以获取。 如果不是，你应考虑使用类`CSocket`相反。 `CSocket` 隐藏从你的详细信息： 泵 Windows 期间阻止调用消息，并为您提供了访问权限的 it `CArchive`，用于管理的字节顺序差异并为您的字符串转换。
 
@@ -105,11 +105,10 @@ ms.locfileid: "50459288"
 
 - [Windows 套接字：背景](../mfc/windows-sockets-background.md)
 
-- [Windows 套接字：流套接字](../mfc/windows-sockets-stream-sockets.md)
+- [Windows 套接字：Stream 套接字](../mfc/windows-sockets-stream-sockets.md)
 
 - [Windows 套接字：数据报套接字](../mfc/windows-sockets-datagram-sockets.md)
 
 ## <a name="see-also"></a>请参阅
 
 [MFC 中的 Windows 套接字](../mfc/windows-sockets-in-mfc.md)
-

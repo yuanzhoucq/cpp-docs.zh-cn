@@ -1,18 +1,18 @@
 ---
-title: 如何：转换使用取消的 OpenMP 循环以使用并发运行时
+title: 如何：转换使用取消来使用并发运行时的 OpenMP 循环
 ms.date: 11/04/2016
 helpviewer_keywords:
 - converting from OpenMP to the Concurrency Runtime, cancellation
 - cancellation, converting from OpenMP to the Concurrency Runtime
 ms.assetid: 4b0b3c33-bfa9-4e96-ae08-aef245a39cbb
-ms.openlocfilehash: f3a53113952a12b6b25839deb20548c56a9b7e1c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 618e93c18173bfe3e5f5b5f3058a8bb3d61e98ec
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50569567"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300669"
 ---
-# <a name="how-to-convert-an-openmp-loop-that-uses-cancellation-to-use-the-concurrency-runtime"></a>如何：转换使用取消的 OpenMP 循环以使用并发运行时
+# <a name="how-to-convert-an-openmp-loop-that-uses-cancellation-to-use-the-concurrency-runtime"></a>如何：转换使用取消来使用并发运行时的 OpenMP 循环
 
 一些并行循环不需要执行所有迭代。 例如，搜索值的算法可以终止后找到的值。 OpenMP 不提供一种机制来中断并行循环。 但是，您可以使用布尔值或标志，以启用迭代的循环，以指示已找到解决方案。 并发运行时提供的功能，使一个任务就可以取消尚未开始其他任务。
 
@@ -45,11 +45,10 @@ Using the Concurrency Runtime...
 
 复制示例代码并将其粘贴到 Visual Studio 项目中，或将其粘贴在文件中名为`concrt-omp-parallel-any-of.cpp`然后在 Visual Studio 命令提示符窗口中运行以下命令。
 
-**cl.exe /EHsc /openmp concrt-omp-并行-any-of.cpp**
+**cl.exe /EHsc /openmp concrt-omp-parallel-any-of.cpp**
 
 ## <a name="see-also"></a>请参阅
 
 [从 OpenMP 迁移至并发运行时](../../parallel/concrt/migrating-from-openmp-to-the-concurrency-runtime.md)<br/>
 [PPL 中的取消操作](cancellation-in-the-ppl.md)<br/>
 [并行算法](../../parallel/concrt/parallel-algorithms.md)
-

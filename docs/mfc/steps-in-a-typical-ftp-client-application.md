@@ -8,12 +8,12 @@ helpviewer_keywords:
 - FTP (File Transfer Protocol) [MFC], client applications
 - Internet applications [MFC], FTP client applications
 ms.assetid: 70bed7b5-6040-40d1-bc77-702e63a698f2
-ms.openlocfilehash: ef772438558e5d587962242fdd7f1230cc2b2f25
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d08edf704e748767f3b566252ad328baf40b55ea
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50560181"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285797"
 ---
 # <a name="steps-in-a-typical-ftp-client-application"></a>典型 FTP 客户端应用程序中的步骤
 
@@ -21,7 +21,7 @@ ms.locfileid: "50560181"
 
 下表显示了可能会执行典型 FTP 客户端应用程序中的步骤。
 
-|您的目标|采取的操作|效果|
+|您的目标|采取的操作|Effects|
 |---------------|----------------------|-------------|
 |FTP 会话开始。|创建[CInternetSession](../mfc/reference/cinternetsession-class.md)对象。|初始化 WinInet 并连接到服务器。|
 |连接到 FTP 服务器。|使用[cinternetsession:: Getftpconnection](../mfc/reference/cinternetsession-class.md#getftpconnection)。|返回[CFtpConnection](../mfc/reference/cftpconnection-class.md)对象。|

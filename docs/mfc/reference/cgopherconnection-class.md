@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CGopherConnection [MFC], GetAttribute
 - CGopherConnection [MFC], OpenFile
 ms.assetid: b5b96aea-ac99-430e-bd84-d1372b43f78f
-ms.openlocfilehash: f9c2a99c30213a28f4c20ba0f4a2eebea85bef76
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d960d566a63531af211592a7a8ae8f1cb35c5958
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519660"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300712"
 ---
 # <a name="cgopherconnection-class"></a>CGopherConnection 类
 
@@ -54,7 +54,7 @@ class CGopherConnection : public CInternetConnection
 
 Gopher 服务是可识别的 MFC WinInet 类的三个 Internet 服务之一。
 
-该类`CGopherConnection`包含一个构造函数和管理 gopher 服务的三个其他成员函数： [OpenFile](#openfile)， [CreateLocator](#createlocator)，并[GetAttribute](#getattribute).
+类`CGopherConnection`包含一个构造函数和管理 gopher 服务的三个其他成员函数：[OpenFile](#openfile)， [CreateLocator](#createlocator)，和[GetAttribute](#getattribute)。
 
 若要与 gopher Internet 服务器进行通信，必须首先创建的实例[CInternetSession](../../mfc/reference/cinternetsession-class.md)，然后调用[cinternetsession:: Getgopherconnection](../../mfc/reference/cinternetsession-class.md#getgopherconnection)，这将创建`CGopherConnection`对象，并返回的指针。 永远不会创建`CGopherConnection`直接对象。
 
@@ -233,7 +233,7 @@ INTERNET_FLAG_ * 标志的任意组合。 请参阅[cinternetsession:: Openurl](
 
 ### <a name="remarks"></a>备注
 
-重写*dwContext*默认可为您选择的值设置的上下文标识符。 上下文标识符是否与此特定操作相关联`CGopherConnection`对象由其[CInternetSession](../../mfc/reference/cinternetsession-class.md)对象。 值返回到[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)以提供用于标识操作的状态。 请参阅文章[Internet 前几个步骤： WinInet](../../mfc/wininet-basics.md)有关的上下文标识符的详细信息。
+重写*dwContext*默认可为您选择的值设置的上下文标识符。 上下文标识符是否与此特定操作相关联`CGopherConnection`对象由其[CInternetSession](../../mfc/reference/cinternetsession-class.md)对象。 值返回到[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)以提供用于标识操作的状态。 请参阅文章[Internet 前几个步骤：WinInet](../../mfc/wininet-basics.md)有关的上下文标识符的详细信息。
 
 ## <a name="see-also"></a>请参阅
 

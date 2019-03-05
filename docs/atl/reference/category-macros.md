@@ -25,12 +25,12 @@ f1_keywords:
 - atlenc/ATL::UUEncode
 - atlenc/ATL::UUEncodeGetRequiredLength
 ms.assetid: 223578cb-6180-4787-a8d8-ba3787a5d3ee
-ms.openlocfilehash: 0be22a8f7152d7933d4d0ab970fae834200c6d8a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1ee6ab07ee72155acae552da933167b56af72a17
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50609724"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263840"
 ---
 # <a name="category-macros"></a>分类宏
 
@@ -57,7 +57,7 @@ BEGIN_CATEGORY_MAP(theClass)
 
 ### <a name="parameters"></a>参数
 
-*类*<br/>
+*theClass*<br/>
 [in]包含类别映射的类的名称。
 
 ### <a name="remarks"></a>备注

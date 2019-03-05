@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data classes [MFC]
 - simple data type classes [MFC]
 ms.assetid: 0d591d68-0a33-49e9-8a6d-90c90de5c16a
-ms.openlocfilehash: 9288ed3104d2cdf4c6938b171166de7cffd32ccf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4e415805301d7d12bd418a3b55509a7732851492
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50531647"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298472"
 ---
 # <a name="simple-data-type-classes"></a>简单数据类型类
 
@@ -60,4 +60,3 @@ OLE 自动化类型的包装器**货币**，定点算数类型，小数点前的
 ## <a name="see-also"></a>请参阅
 
 [类概述](../mfc/class-library-overview.md)
-

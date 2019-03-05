@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CFtpFileFind [MFC], FindNextFile
 - CFtpFileFind [MFC], GetFileURL
 ms.assetid: 9667cf01-657f-4b11-b9db-f11e5a7b4e4c
-ms.openlocfilehash: 72d1eb147f8d7387a04f25cc008cc4d4638ba691
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5da739cac1ab852ce64526b24ee2b4f66d40d570
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548221"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284822"
 ---
 # <a name="cftpfilefind-class"></a>CFtpFileFind 类
 
@@ -43,8 +43,8 @@ class CFtpFileFind : public CFileFind
 
 |名称|描述|
 |----------|-----------------|
-|[Cftpfilefind:: Findfile](#findfile)|查找 FTP 服务器上的文件。|
-|[Cftpfilefind:: Findnextfile](#findnextfile)|将继续通过以前调用文件搜索[FindFile](#findfile)。|
+|[CFtpFileFind::FindFile](#findfile)|查找 FTP 服务器上的文件。|
+|[CFtpFileFind::FindNextFile](#findnextfile)|将继续通过以前调用文件搜索[FindFile](#findfile)。|
 |[CFtpFileFind::GetFileURL](#getfileurl)|获取的 URL，包括找到的文件的路径。|
 
 ## <a name="remarks"></a>备注
@@ -93,13 +93,13 @@ explicit CFtpFileFind(
 
 ### <a name="remarks"></a>备注
 
-默认值为*dwContext*发送到 mfc`CFtpFileFind`对象从[CInternetSession](../../mfc/reference/cinternetsession-class.md)对象创建`CFtpFileFind`对象。 您可以覆盖默认设置，以便将上下文标识符设置为所选的值。 上下文标识符就会归还[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)以提供与该标识的对象上的状态。 请参阅文章[Internet 前几个步骤： WinInet](../../mfc/wininet-basics.md)有关的上下文标识符的详细信息。
+默认值为*dwContext*发送到 mfc`CFtpFileFind`对象从[CInternetSession](../../mfc/reference/cinternetsession-class.md)对象创建`CFtpFileFind`对象。 您可以覆盖默认设置，以便将上下文标识符设置为所选的值。 上下文标识符就会归还[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)以提供与该标识的对象上的状态。 请参阅文章[Internet 前几个步骤：WinInet](../../mfc/wininet-basics.md)有关的上下文标识符的详细信息。
 
 ### <a name="example"></a>示例
 
   请参阅本主题前面的类概述中的示例。
 
-##  <a name="findfile"></a>  Cftpfilefind:: Findfile
+##  <a name="findfile"></a>  CFtpFileFind::FindFile
 
 调用此成员函数以找到 FTP 文件。
 
@@ -139,7 +139,7 @@ virtual BOOL FindFile(
 
   请参阅本主题中前面的示例。
 
-##  <a name="findnextfile"></a>  Cftpfilefind:: Findnextfile
+##  <a name="findnextfile"></a>  CFtpFileFind::FindNextFile
 
 调用此成员函数以继续文件搜索开始通过调用[FindFile](#findfile)成员函数。
 

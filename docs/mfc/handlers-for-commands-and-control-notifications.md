@@ -10,16 +10,16 @@ helpviewer_keywords:
 - notifications [MFC], handlers for control
 - handlers [MFC], command
 ms.assetid: 20f57f4a-f577-4c09-80a2-43faf32a1c2e
-ms.openlocfilehash: 28bed2937409cd1df5ee8d295e466609232e0e91
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6c92660c67fa91c27bb094111cebfef57904cdc7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50622048"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296691"
 ---
 # <a name="handlers-for-commands-and-control-notifications"></a>命令和控件通知的处理程序
 
-命令或控件通知消息没有默认的处理程序。 因此，您将仅受为这些消息类别命名处理程序的约定约束。 当您将命令或控件通知映射到处理程序时，“属性”窗口将基于命令 ID 或控件通知代码建议一个名称。 您可以接受建议的名称、更改或替换该名称。
+命令或控件通知消息没有默认的处理程序。 因此，您将仅受为这些消息类别命名处理程序的约定约束。 当你将命令或控件通知映射到处理程序时，“属性”窗口将基于命令 ID 或控件通知代码建议一个名称。 您可以接受建议的名称、更改或替换该名称。
 
 约定建议您按照处理程序表示的用户界面对象的两个类别为其命名。 因此，可能为“编辑”菜单上的“剪贴”命令对应的处理程序命名
 
@@ -33,7 +33,7 @@ ms.locfileid: "50622048"
 
 您可能会将此命令的 ID **IDC_MY_BUTTON**因为等效于特定于应用程序的用户界面对象。
 
-所有消息类别不采用自变量也不返回值。
+所有消息类别不采用参数也不返回值。
 
 ## <a name="see-also"></a>请参阅
 

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - lightweight tasks
 ms.assetid: b6dcfc7a-9fa9-4144-96a6-2845ea272017
-ms.openlocfilehash: 7e155b82e963e7bf3f19fa44c66e4c22b8c602e6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 19918cf73c2b5b03db895c4751b22b1666ce01de
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481427"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326681"
 ---
 # <a name="lightweight-tasks"></a>轻量级任务
 
@@ -26,10 +26,9 @@ ms.locfileid: "50481427"
 
 ## <a name="example"></a>示例
 
-有关演示如何改编现有代码以使用轻量级任务的示例，请参阅[演练： 调整现有代码使用轻量级任务](../../parallel/concrt/walkthrough-adapting-existing-code-to-use-lightweight-tasks.md)。
+有关演示如何改编现有代码以使用轻量级任务的示例，请参阅[演练：调整现有代码以使用轻量级任务](../../parallel/concrt/walkthrough-adapting-existing-code-to-use-lightweight-tasks.md)。
 
 ## <a name="see-also"></a>请参阅
 
 [任务计划程序](../../parallel/concrt/task-scheduler-concurrency-runtime.md)<br/>
 [演练：调整现有代码以使用轻量级任务](../../parallel/concrt/walkthrough-adapting-existing-code-to-use-lightweight-tasks.md)
-

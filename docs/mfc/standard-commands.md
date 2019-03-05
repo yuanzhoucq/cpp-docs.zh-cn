@@ -15,12 +15,12 @@ helpviewer_keywords:
 - Help [MFC], menus
 - programmer-defined IDs [MFC]
 ms.assetid: 88cf3ab4-79b3-4ac6-9365-8ac561036fbf
-ms.openlocfilehash: fa98a250e6f9de3005cf4978fe66689363865879
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 987023322e38584d10901c1ab1fe20ac46926bd2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50485691"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272082"
 ---
 # <a name="standard-commands"></a>标准命令
 
@@ -57,4 +57,3 @@ ms.locfileid: "50485691"
 ## <a name="see-also"></a>请参阅
 
 [用户界面对象和命令 ID](../mfc/user-interface-objects-and-command-ids.md)
-

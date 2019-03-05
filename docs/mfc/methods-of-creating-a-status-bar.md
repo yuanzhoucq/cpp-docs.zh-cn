@@ -9,16 +9,16 @@ helpviewer_keywords:
 - methods [MFC]
 - status bars [MFC], creating
 ms.assetid: 9aeaf290-7099-4762-a5ba-9c26705333c9
-ms.openlocfilehash: 1156f8bdeafb71dc9e6dbd9fc5b85607542918f7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a2301301d0012bd93ffedd0452dec140174402e0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50587965"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276879"
 ---
 # <a name="methods-of-creating-a-status-bar"></a>创建状态栏的方法
 
-MFC 提供了两个类，创建状态栏： [CStatusBar](../mfc/reference/cstatusbar-class.md)并[CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md) （其包装 Windows 公共控件 API）。 `CStatusBar` 提供的所有功能的公共控件状态栏，它会自动与交互菜单和工具栏，和它为你; 处理许多必需的常用控制设置和结构但是，生成可执行文件通常会比使用创建的大`CStatusBarCtrl`。
+MFC 提供了两个类，创建状态条：[CStatusBar](../mfc/reference/cstatusbar-class.md)并[CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md) （其包装 Windows 公共控件 API）。 `CStatusBar` 提供的所有功能的公共控件状态栏，它会自动与交互菜单和工具栏，和它为你; 处理许多必需的常用控制设置和结构但是，生成可执行文件通常会比使用创建的大`CStatusBarCtrl`。
 
 `CStatusBarCtrl` 通常会导致较小的可执行文件，以及你可能更愿意使用`CStatusBarCtrl`如果不想将状态栏集成到 MFC 体系结构。 如果你打算使用`CStatusBarCtrl`和将状态栏集成到 MFC 体系结构，必须采取额外注意将控制操作传送到 MFC 状态栏。 此通信并不困难;但是，它是在使用时是不需要的额外工作`CStatusBar`。
 
@@ -34,4 +34,3 @@ Visual c + + 提供了两种方式利用状态栏常见控件。
 
 [使用 CStatusBarCtrl](../mfc/using-cstatusbarctrl.md)<br/>
 [控件](../mfc/controls-mfc.md)
-

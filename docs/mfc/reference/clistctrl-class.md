@@ -264,12 +264,12 @@ helpviewer_keywords:
 - CListCtrl [MFC], SubItemHitTest
 - CListCtrl [MFC], Update
 ms.assetid: fe08a1ca-4b05-4ff7-a12a-ee4c765a2197
-ms.openlocfilehash: 4bc50a8a77a4964cf92d003ed1e06213398f401c
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 850c16420606452414cbe284c5f9f25031859c93
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525543"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304517"
 ---
 # <a name="clistctrl-class"></a>CListCtrl 类
 
@@ -309,7 +309,7 @@ class CListCtrl : public CWnd
 |[CListCtrl::FindItem](#finditem)|搜索具有指定特征的列表视图项。|
 |[CListCtrl::GetBkColor](#getbkcolor)|检索列表视图控件的背景色。|
 |[CListCtrl::GetBkImage](#getbkimage)|检索当前的背景图像的列表视图控件。|
-|[Clistctrl:: Getcallbackmask](#getcallbackmask)|检索列表视图控件的回调掩码。|
+|[CListCtrl::GetCallbackMask](#getcallbackmask)|检索列表视图控件的回调掩码。|
 |[CListCtrl::GetCheck](#getcheck)|检索与项关联的状态图像的当前显示状态。|
 |[CListCtrl::GetColumn](#getcolumn)|检索控件的列的属性。|
 |[CListCtrl::GetColumnOrderArray](#getcolumnorderarray)|检索列表视图控件的列顺序 （从左到右）。|
@@ -334,7 +334,7 @@ class CListCtrl : public CWnd
 |[CListCtrl::GetInsertMark](#getinsertmark)|检索插入标记的当前位置。|
 |[CListCtrl::GetInsertMarkColor](#getinsertmarkcolor)|检索插入标记的当前颜色。|
 |[CListCtrl::GetInsertMarkRect](#getinsertmarkrect)|检索绑定的插入点的矩形。|
-|[Clistctrl:: Getitem](#getitem)|检索列表视图项的属性。|
+|[CListCtrl::GetItem](#getitem)|检索列表视图项的属性。|
 |[CListCtrl::GetItemCount](#getitemcount)|检索在列表视图控件中的项的数目。|
 |[CListCtrl::GetItemData](#getitemdata)|检索与项相关联的特定于应用程序的值。|
 |[CListCtrl::GetItemIndexRect](#getitemindexrect)|检索当前的列表视图控件中的子项的全部或部分的边框。|
@@ -382,7 +382,7 @@ class CListCtrl : public CWnd
 |[CListCtrl::Scroll](#scroll)|将列表视图控件的内容滚动。|
 |[CListCtrl::SetBkColor](#setbkcolor)|设置列表视图控件的背景的色。|
 |[CListCtrl::SetBkImage](#setbkimage)|设置当前的背景图像的列表视图控件。|
-|[Clistctrl:: Setcallbackmask](#setcallbackmask)|设置列表视图控件的回调掩码。|
+|[CListCtrl::SetCallbackMask](#setcallbackmask)|设置列表视图控件的回调掩码。|
 |[CListCtrl::SetCheck](#setcheck)|设置当前显示的与项关联的状态图像的状态。|
 |[CListCtrl::SetColumn](#setcolumn)|设置列表视图列的属性。|
 |[CListCtrl::SetColumnOrderArray](#setcolumnorderarray)|设置列表视图控件的列顺序 （从左到右）。|
@@ -398,7 +398,7 @@ class CListCtrl : public CWnd
 |[CListCtrl::SetInfoTip](#setinfotip)|设置工具提示文本。|
 |[CListCtrl::SetInsertMark](#setinsertmark)|将插入点设置为定义的位置。|
 |[CListCtrl::SetInsertMarkColor](#setinsertmarkcolor)|设置插入点的颜色。|
-|[Clistctrl:: Setitem](#setitem)|设置某些或所有列表视图项的特性。|
+|[CListCtrl::SetItem](#setitem)|设置某些或所有列表视图项的特性。|
 |[CListCtrl::SetItemCount](#setitemcount)|准备添加大量项的列表视图控件。|
 |[CListCtrl::SetItemCountEx](#setitemcountex)|设置虚拟列表视图控件的项计数。|
 |[CListCtrl::SetItemData](#setitemdata)|设置项的特定于应用程序的值。|
@@ -428,7 +428,7 @@ class CListCtrl : public CWnd
 
 下面是简要概述`CListCtrl`类。 有关详细的概念介绍，请参阅[使用 CListCtrl](../../mfc/using-clistctrl.md)并[控件](../../mfc/controls-mfc.md)。
 
-## <a name="views"></a>视图
+## <a name="views"></a>Views
 
 列表视图控件可以显示其内容中四种不同的方式，称为"视图"。
 
@@ -446,9 +446,9 @@ class CListCtrl : public CWnd
 
 - 报表视图
 
-   每个项将显示在其自己的行，在右侧列中排列的其他信息。 最左侧列包含的小图标和标签，并且后续列都包含由应用程序指定的子项。 内嵌的标题控件 (类[CHeaderCtrl](../../mfc/reference/cheaderctrl-class.md)) 实现这些列。 标头控件和报表视图中的列的详细信息，请参阅[使用 CListCtrl： 控件 （报表视图） 中添加列](../../mfc/adding-columns-to-the-control-report-view.md)。
+   每个项将显示在其自己的行，在右侧列中排列的其他信息。 最左侧列包含的小图标和标签，并且后续列都包含由应用程序指定的子项。 内嵌的标题控件 (类[CHeaderCtrl](../../mfc/reference/cheaderctrl-class.md)) 实现这些列。 标头控件和报表视图中的列的详细信息，请参阅[使用 CListCtrl:将列添加到控件 （报表视图）](../../mfc/adding-columns-to-the-control-report-view.md)。
 
-控件的当前列表视图的样式确定当前的视图。 这些样式和其使用情况的详细信息，请参阅[使用 CListCtrl： 更改列表控件样式](../../mfc/changing-list-control-styles.md)。
+控件的当前列表视图的样式确定当前的视图。 这些样式和其使用情况的详细信息，请参阅[使用 CListCtrl:更改列表控件样式](../../mfc/changing-list-control-styles.md)。
 
 ## <a name="extended-styles"></a>扩展的样式
 
@@ -460,7 +460,7 @@ class CListCtrl : public CWnd
 
 - 虚拟列表视图
 
-   启用时，使得控件可以支持多达 DWORD 项。 这是通过将放置管理项的应用程序数据的开销。 除了项选择和焦点的信息，必须由应用程序管理项的所有信息。 有关详细信息，请参阅[使用 CListCtrl： 虚拟列表控件](../../mfc/virtual-list-controls.md)。
+   启用时，使得控件可以支持多达 DWORD 项。 这是通过将放置管理项的应用程序数据的开销。 除了项选择和焦点的信息，必须由应用程序管理项的所有信息。 有关详细信息，请参阅[使用 CListCtrl:虚拟列表控件](../../mfc/virtual-list-controls.md)。
 
 - 点击和两个激活
 
@@ -470,7 +470,7 @@ class CListCtrl : public CWnd
 
    如果启用，将允许拖放重新排序的列表视图控件中的列。 仅在报表视图中可用。
 
-有关使用这些新的信息扩展样式，请参阅[使用 CListCtrl： 更改列表控件样式](../../mfc/changing-list-control-styles.md)。
+有关使用这些新的信息扩展样式，请参阅[使用 CListCtrl:更改列表控件样式](../../mfc/changing-list-control-styles.md)。
 
 ## <a name="items-and-subitems"></a>项及其子项
 
@@ -478,7 +478,7 @@ class CListCtrl : public CWnd
 
 类`CListCtrl`提供以下用于插入、 删除、 查找和修改这些项函数。 有关详细信息，请参阅[clistctrl:: Getitem](#getitem)， [CListCtrl::InsertItem](#insertitem)，并[CListCtrl::FindItem](#finditem)，[将项添加到控件](../adding-items-to-the-control.md)，并[滚动、 排列、 排序和查找列表控件中](../scrolling-arranging-sorting-and-finding-in-list-controls.md)。
 
-默认情况下，列表视图控件负责存储项的图标和文本特性。 但是，这些项类型，除了类`CListCtrl`支持"回调项"。 "回调项"是列表视图项为其应用程序，而不是控件 — 存储文本、 图标或两者。 回调掩码用于指定哪些项目属性 （文本和/或图标） 提供的应用程序。 如果应用程序使用回调项，它必须能够提供按需的文本和/或图标属性。 应用程序已保留其中某些信息时，回调项很有用。 有关详细信息，请参阅[使用 CListCtrl： 回调项和回调掩码](../callback-items-and-the-callback-mask.md)。
+默认情况下，列表视图控件负责存储项的图标和文本特性。 但是，这些项类型，除了类`CListCtrl`支持"回调项"。 "回调项"是列表视图项为其应用程序，而不是控件 — 存储文本、 图标或两者。 回调掩码用于指定哪些项目属性 （文本和/或图标） 提供的应用程序。 如果应用程序使用回调项，它必须能够提供按需的文本和/或图标属性。 应用程序已保留其中某些信息时，回调项很有用。 有关详细信息，请参阅[使用 CListCtrl:回调项和回调掩码](../callback-items-and-the-callback-mask.md)。
 
 ## <a name="image-lists"></a>图像列表
 
@@ -500,7 +500,7 @@ class CListCtrl : public CWnd
 
    在报表视图用于显示每个标头控件项中的小图像。
 
-默认情况下，列表视图控件销毁时销毁; 分配给它的映像列表但是，开发人员可以通过每个图像列表时销毁不再使用，由应用程序自定义此行为。 有关详细信息，请参阅[使用 CListCtrl： 列表项和图像列表](../list-items-and-image-lists.md)。
+默认情况下，列表视图控件销毁时销毁; 分配给它的映像列表但是，开发人员可以通过每个图像列表时销毁不再使用，由应用程序自定义此行为。 有关详细信息，请参阅[使用 CListCtrl:列表项和图像列表](../list-items-and-image-lists.md)。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -930,7 +930,7 @@ int FindItem(
 *pFindInfo*<br/>
 一个指向[LVFINDINFO](/windows/desktop/api/commctrl/ns-commctrl-taglvfindinfoa)结构，它包含有关要在其中搜索的项的信息。
 
-*n 开始*<br/>
+*nStart*<br/>
 此项开始搜索，则为-1 以从头开始的索引。 处的项*n 开始*如果从搜索中排除*n 开始*不等于-1。
 
 ### <a name="return-value"></a>返回值
@@ -1009,7 +1009,7 @@ BOOL GetBkImage(LVBKIMAGE* plvbkImage) const;
         }
 ```
 
-## <a name="getcallbackmask"></a>  Clistctrl:: Getcallbackmask
+## <a name="getcallbackmask"></a>  CListCtrl::GetCallbackMask
 
 检索列表视图控件的回调掩码。
 
@@ -1700,7 +1700,7 @@ int GetInsertMarkRect(LPRECT pRect) const;
 
 此成员函数模拟的功能[LVM_GETINSERTMARKRECT](/windows/desktop/Controls/lvm-getinsertmarkrect)消息，如 Windows SDK 中所述。
 
-## <a name="getitem"></a>  Clistctrl:: Getitem
+## <a name="getitem"></a>  CListCtrl::GetItem
 
 检索某些或所有列表视图项的特性。
 
@@ -2556,7 +2556,7 @@ void GetWorkAreas(
 *nWorkAreas*<br/>
 数`RECT`结构中包含*中国*数组。
 
-*中华人民共和国*<br/>
+*prc*<br/>
 指向数组的指针`RECT`结构 (或[CRect](../../atl-mfc-shared/reference/crect-class.md)对象) 的接收工作区域的列表视图控件。 这些结构中的值是在工作区坐标。
 
 ### <a name="remarks"></a>备注
@@ -2672,7 +2672,7 @@ int InsertColumn(
 包含列的标题的字符串的地址。
 
 *nFormat*<br/>
-整数，指定的列的对齐方式。 它可以是下列值之一： LVCFMT_LEFT、 LVCFMT_RIGHT 或 LVCFMT_CENTER。
+整数，指定的列的对齐方式。 它可以是下列值之一：LVCFMT_LEFT、 LVCFMT_RIGHT 或 LVCFMT_CENTER。
 
 *nWidth*<br/>
 列中，以像素为单位的宽度。 如果此参数为-1，未设置列的宽度。
@@ -3043,7 +3043,7 @@ BOOL RedrawItems(
 *nFirst*<br/>
 要进行重新绘制的第一项的索引。
 
-*n 上次*<br/>
+*nLast*<br/>
 要进行重新绘制的最后一项的索引。
 
 ### <a name="return-value"></a>返回值
@@ -3183,7 +3183,7 @@ BOOL SetBkImage(
 
   有关示例，请参阅[CListCtrl::GetBkImage](#getbkimage)。
 
-## <a name="setcallbackmask"></a>  Clistctrl:: Setcallbackmask
+## <a name="setcallbackmask"></a>  CListCtrl::SetCallbackMask
 
 设置列表视图控件的回调掩码。
 
@@ -3409,7 +3409,7 @@ HCURSOR SetHotCursor(HCURSOR hc);
 
 ### <a name="parameters"></a>参数
 
-*混合连接*<br/>
+*hc*<br/>
 游标资源，用于表示热光标的句柄。
 
 ### <a name="return-value"></a>返回值
@@ -3598,7 +3598,7 @@ COLORREF SetInsertMarkColor(COLORREF color);
 
 ### <a name="parameters"></a>参数
 
-*颜色*<br/>
+*color*<br/>
 一个[COLORREF](/windows/desktop/gdi/colorref)结构，它指定要设置插入点的颜色。
 
 ### <a name="return-value"></a>返回值
@@ -3609,7 +3609,7 @@ COLORREF SetInsertMarkColor(COLORREF color);
 
 此成员函数模拟的功能[LVM_SETINSERTMARKCOLOR](/windows/desktop/Controls/lvm-setinsertmarkcolor)消息，如 Windows SDK 中所述。
 
-## <a name="setitem"></a>  Clistctrl:: Setitem
+## <a name="setitem"></a>  CListCtrl::SetItem
 
 设置某些或所有列表视图项的特性。
 
@@ -3955,7 +3955,7 @@ COLORREF SetOutlineColor(COLORREF color);
 
 ### <a name="parameters"></a>参数
 
-*颜色*<br/>
+*color*<br/>
 新[COLORREF](/windows/desktop/gdi/colorref)结构，它包含轮廓颜色。
 
 ### <a name="return-value"></a>返回值
@@ -4426,4 +4426,3 @@ BOOL Update(int nItem);
 [CWnd 类](cwnd-class.md)<br/>
 [层次结构图](../hierarchy-chart.md)<br/>
 [CImageList 类](cimagelist-class.md)
-

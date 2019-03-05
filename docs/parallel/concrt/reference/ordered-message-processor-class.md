@@ -14,16 +14,17 @@ f1_keywords:
 helpviewer_keywords:
 - ordered_message_processor class
 ms.assetid: 787adfb7-7f79-4a70-864a-80e3b64088cd
-ms.openlocfilehash: c6e09ff862f0725cc508e3e390dbfa3cc12f7daa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b88544f399031a5f770fa39aa1f3300306158511
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50545959"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270743"
 ---
 # <a name="orderedmessageprocessor-class"></a>ordered_message_processor 类
 
-`ordered_message_processor` 是允许消息块按接收顺序处理消息的 `message_processor`。
+
+  `ordered_message_processor` 是允许消息块按接收顺序处理消息的 `message_processor`。
 
 ## <a name="syntax"></a>语法
 
@@ -57,10 +58,10 @@ class ordered_message_processor : public message_processor<T>;
 |名称|描述|
 |----------|-----------------|
 |[async_send](#async_send)|异步消息进行排队，并开始处理任务，如果这不已完成。 (重写[message_processor:: async_send](message-processor-class.md#async_send)。)|
-|[初始化](#initialize)|初始化`ordered_message_processor`与相应的回调函数、 计划和计划组的对象。|
+|[initialize](#initialize)|初始化`ordered_message_processor`与相应的回调函数、 计划和计划组的对象。|
 |[initialize_batched_processing](#initialize_batched_processing)|初始化消息的批处理|
 |[sync_send](#sync_send)|同步消息进行排队，并开始处理任务，如果这不已完成。 (重写[message_processor:: sync_send](message-processor-class.md#sync_send)。)|
-|[等待](#wait)|特定于处理器的旋转等待中的消息块的析构函数用于确保所有异步处理任务有时间完成，然后再销毁块。 (重写[message_processor:: wait](message-processor-class.md#wait)。)|
+|[wait](#wait)|特定于处理器的旋转等待中的消息块的析构函数用于确保所有异步处理任务有时间完成，然后再销毁块。 (重写[message_processor:: wait](message-processor-class.md#wait)。)|
 
 ### <a name="protected-methods"></a>受保护的方法
 

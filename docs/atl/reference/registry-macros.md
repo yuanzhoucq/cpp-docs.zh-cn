@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - registry, ATL macros
 ms.assetid: 3ee041da-c63b-42a4-89cf-2a4b2a6f81ae
-ms.openlocfilehash: bced900cd7bac666daf415d91a4540828c769025
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8e05d6a47ea67138e8d1d456077526dd3178cc44
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50660377"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57292908"
 ---
 # <a name="registry-macros"></a>注册表宏
 
@@ -108,7 +108,7 @@ pid<br/>
 [in]UINT，是要用作程序的说明在注册表中的资源字符串的索引。
 
 *flags*<br/>
-[in]一个 dword 值，包含程序的注册表中的线程模型。 必须是以下值之一： THREADFLAGS_APARTMENT、 THREADFLAGS_BOTH 或 AUTPRXFLAG。
+[in]一个 dword 值，包含程序的注册表中的线程模型。 必须是以下值之一：THREADFLAGS_APARTMENT、 THREADFLAGS_BOTH 或 AUTPRXFLAG。
 
 ### <a name="remarks"></a>备注
 

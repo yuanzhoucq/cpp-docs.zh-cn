@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CFont [MFC], FromHandle
 - CFont [MFC], GetLogFont
 ms.assetid: 3fad6bfe-d6ce-4ab9-967a-5ce0aa102800
-ms.openlocfilehash: f925940f0813e1912be9f2382b676e80db8240c6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 60a717136f69b29df48dd8f449ddaffe5c15ccbf
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607891"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271861"
 ---
 # <a name="cfont-class"></a>CFont 类
 
@@ -50,7 +50,7 @@ class CFont : public CGdiObject
 |名称|描述|
 |----------|-----------------|
 |[CFont::CreateFont](#createfont)|初始化`CFont`与指定的特性。|
-|[Cfont:: Createfontindirect](#createfontindirect)|初始化`CFont`对象中给定的特征`LOGFONT`结构。|
+|[CFont::CreateFontIndirect](#createfontindirect)|初始化`CFont`对象中给定的特征`LOGFONT`结构。|
 |[CFont::CreatePointFont](#createpointfont)|初始化`CFont`与指定的高度，以点和字样的十分之几。|
 |[CFont::CreatePointFontIndirect](#createpointfontindirect)|与相同`CreateFontIndirect`不同之处在于字体高度以点而不是逻辑单元的十分之几。|
 |[CFont::FromHandle](#fromhandle)|返回一个指向`CFont`对象在给定 Windows HFONT。|
@@ -192,7 +192,7 @@ OEM 字符集与系统相关。
 
 [!code-cpp[NVC_MFCDocView#71](../../mfc/codesnippet/cpp/cfont-class_2.cpp)]
 
-##  <a name="createfontindirect"></a>  Cfont:: Createfontindirect
+##  <a name="createfontindirect"></a>  CFont::CreateFontIndirect
 
 初始化`CFont`对象中给定的特征[LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)结构。
 
@@ -362,4 +362,3 @@ Windows GDI 字体对象的句柄附加到`CFont`如果成功，否则该值为 
 [MFC 示例 HIERSVR](../../visual-cpp-samples.md)<br/>
 [CGdiObject 类](../../mfc/reference/cgdiobject-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)
-

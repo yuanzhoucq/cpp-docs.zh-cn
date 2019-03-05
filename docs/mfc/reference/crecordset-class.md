@@ -130,12 +130,12 @@ helpviewer_keywords:
 - CRecordset [MFC], m_strFilter
 - CRecordset [MFC], m_strSort
 ms.assetid: dd89a21d-ef39-4aab-891b-1e373d67c855
-ms.openlocfilehash: f8193e071d9c7730e85cabbcb10a701ca763085e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: efb833a8d4cc0b801f75951bc648d6b83df5bae8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50621387"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305180"
 ---
 # <a name="crecordset-class"></a>CRecordset 类
 
@@ -176,7 +176,7 @@ class CRecordset : public CObject
 |[CRecordset::Edit](#edit)|准备对当前记录的更改。 调用`Update`以完成编辑。|
 |[CRecordset::FlushResultSet](#flushresultset)|返回非零，如果存在另一个结果设置为在使用预定义的查询时进行检索。|
 |[CRecordset::GetBookmark](#getbookmark)|将一条记录的书签值分配给参数对象。|
-|[Crecordset:: Getdefaultconnect](#getdefaultconnect)|调用以获取默认连接字符串。|
+|[CRecordset::GetDefaultConnect](#getdefaultconnect)|调用以获取默认连接字符串。|
 |[CRecordset::GetDefaultSQL](#getdefaultsql)|调用以获取要执行的默认 SQL 字符串。|
 |[CRecordset::GetFieldValue](#getfieldvalue)|在记录集中返回的字段值。|
 |[CRecordset::GetODBCFieldCount](#getodbcfieldcount)|在记录集中返回字段的数。|
@@ -202,7 +202,7 @@ class CRecordset : public CObject
 |[CRecordset::MovePrev](#moveprev)|在上一条记录或上一个行集上定位的当前记录。 用于测试`IsBOF`第一个。|
 |[CRecordset::OnSetOptions](#onsetoptions)|调用以设置 （使用所选内容上） 的选项为指定的 ODBC 语句。|
 |[CRecordset::OnSetUpdateOptions](#onsetupdateoptions)|调用以设置指定的 ODBC 语句 （适用于更新） 的选项。|
-|[Crecordset:: Open](#open)|通过检索表或执行的查询的记录集表示打开记录集。|
+|[CRecordset::Open](#open)|通过检索表或执行的查询的记录集表示打开记录集。|
 |[CRecordset::RefreshRowset](#refreshrowset)|刷新的数据和指定的行的状态。|
 |[CRecordset::Requery](#requery)|运行以刷新所选的记录的记录集的查询。|
 |[CRecordset::SetAbsolutePosition](#setabsoluteposition)|定位到指定的记录号相对应的记录的记录集。|
@@ -231,7 +231,7 @@ class CRecordset : public CObject
 名为"记录集，"`CRecordset`对象通常使用两种形式： 动态集和快照。 动态集与其他用户所做的数据更新中保持同步。 快照是数据的静态视图。 每个窗体表示一组固定的打开记录集时，记录但时滚动中动态集的记录时，它反映随后所做的更改记录、 其他用户或应用程序中的其他记录集。
 
 > [!NOTE]
->  如果您正在使用的数据访问对象 (DAO) 类而不是开放式数据库连接 (ODBC) 类，使用类[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)相反。 有关详细信息，请参阅文章[概述： 数据库编程](../../data/data-access-programming-mfc-atl.md)。
+>  如果您正在使用的数据访问对象 (DAO) 类而不是开放式数据库连接 (ODBC) 类，使用类[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)相反。 有关详细信息，请参阅文章[概述：数据库编程](../../data/data-access-programming-mfc-atl.md)。
 
 若要使用这两种记录集，您通常派生应用程序特定的记录集类从`CRecordset`。 记录集从数据源选择的记录，然后，可以：
 
@@ -249,7 +249,7 @@ class CRecordset : public CObject
 
 在派生`CRecordset`类中，记录字段交换 (RFX) 或大容量记录字段交换 (Bulk RFX) 用于支持读取和更新记录的字段。
 
-记录集和记录字段交换有关的详细信息，请参阅文章[概述： 数据库编程](../../data/data-access-programming-mfc-atl.md)，[记录集 (ODBC)](../../data/odbc/recordset-odbc.md)，[记录集： 提取记录 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)，并[记录字段交换 (RFX)](../../data/odbc/record-field-exchange-rfx.md)。 致力于动态集和快照，请参阅文章[动态集](../../data/odbc/dynaset.md)并[快照](../../data/odbc/snapshot.md)。
+记录集和记录字段交换有关的详细信息，请参阅文章[概述：数据库编程](../../data/data-access-programming-mfc-atl.md)，[记录集 (ODBC)](../../data/odbc/recordset-odbc.md)，[记录集：提取记录 (ODBC) 批量](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)，并[记录字段交换 (RFX)](../../data/odbc/record-field-exchange-rfx.md)。 致力于动态集和快照，请参阅文章[动态集](../../data/odbc/dynaset.md)并[快照](../../data/odbc/snapshot.md)。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -274,7 +274,7 @@ virtual void AddNew();
 必须调用[再次查询](#requery)成员函数，以查看新添加的记录。 记录的字段是最初为 Null。 （在数据库术语中，Null 意味着"无值"，并且不为 NULL，c + + 中相同。）若要完成该操作，必须调用[更新](#update)成员函数。 `Update` 将所做的更改保存到数据源。
 
 > [!NOTE]
->  如果已实现批量行提取，则不能调用`AddNew`。 这将导致失败的断言。 尽管类`CRecordset`不提供一种机制，用于更新的数据大容量行，可以编写您自己的函数，通过使用 ODBC API 函数`SQLSetPos`。 有关批量行提取的详细信息，请参阅 [记录集：批量提取记录 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)一文。
+>  如果已实现批量行提取，则不能调用`AddNew`。 这将导致失败的断言。 尽管类`CRecordset`不提供一种机制，用于更新的数据大容量行，可以编写您自己的函数，通过使用 ODBC API 函数`SQLSetPos`。 有关批量行提取的详细信息，请参阅文章[记录集：(ODBC) 批量提取记录](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
 
 `AddNew` 准备新的空记录中使用记录集的字段数据成员。 调用后`AddNew`，在记录集的字段数据成员中设置所需的值。 (无需调用[编辑](#edit)成员函数实现此目的; 请改用`Edit`仅为现有记录。)当您随后调用`Update`、 已更改的字段数据成员中的值保存在数据源上。
 
@@ -288,11 +288,11 @@ virtual void AddNew();
 
 您不能调用`AddNew`记录集的`Open`尚未调用成员函数。 一个`CDBException`如果您调用，将引发`AddNew`无法附加到记录集。 您可以确定记录集是否可更新通过调用[CanAppend](#canappend)。
 
-有关详细信息，请参阅以下文章：[记录集： 如何更新记录 (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)，[记录集： 添加、 更新和删除记录 (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)，和[事务 (ODBC)](../../data/odbc/transaction-odbc.md)。
+有关详细信息，请参阅以下文章：[记录集：如何记录集更新记录 (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)，[记录集：添加、 更新和删除记录 (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)，并[事务 (ODBC)](../../data/odbc/transaction-odbc.md)。
 
 ### <a name="example"></a>示例
 
-请参阅文章[事务： 在记录集 (ODBC) 执行的事务](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)。
+请参阅文章[事务：在记录集 (ODBC) 执行事务](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)。
 
 ##  <a name="canappend"></a>  CRecordset::CanAppend
 
@@ -325,7 +325,7 @@ BOOL CanBookmark() const;
 > [!NOTE]
 >  只进的记录集不支持书签。
 
-有关书签和记录集导航的详细信息，请参阅文章[记录集： 书签和绝对位置 (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md)并[记录集： 滚动 (ODBC)](../../data/odbc/recordset-scrolling-odbc.md)。
+有关书签和记录集导航的详细信息，请参阅文章[记录集：书签和绝对位置 (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md)和[记录集：滚动 (ODBC)](../../data/odbc/recordset-scrolling-odbc.md)。
 
 ##  <a name="cancel"></a>  CRecordset::Cancel
 
@@ -350,11 +350,11 @@ void CancelUpdate();
 ### <a name="remarks"></a>备注
 
 > [!NOTE]
->  此成员函数不是适用于使用的批量行提取，因为不能调用此类记录集的记录集`Edit`， `AddNew`，或`Update`。 有关批量行提取的详细信息，请参阅 [记录集：批量提取记录 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)一文。
+>  此成员函数不是适用于使用的批量行提取，因为不能调用此类记录集的记录集`Edit`， `AddNew`，或`Update`。 有关批量行提取的详细信息，请参阅文章[记录集：(ODBC) 批量提取记录](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
 
 如果启用自动脏字段检查，则`CancelUpdate`将还原到之前所具有的值的成员变量`Edit`或`AddNew`已被调用; 否则为值的任何更改将保留。 默认情况下，自动字段检查被启用时打开记录集。 若要禁用它，必须指定`CRecordset::noDirtyFieldCheck`中*dwOptions*参数[打开](#open)成员函数。
 
-有关更新数据的详细信息，请参阅文章[记录集： 添加、 更新和删除记录 (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)。
+有关更新数据的详细信息，请参阅文章[记录集：添加、 更新和删除记录 (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)。
 
 ##  <a name="canrestart"></a>  CRecordset::CanRestart
 
@@ -382,7 +382,7 @@ BOOL CanScroll() const;
 
 ### <a name="remarks"></a>备注
 
-有关滚动的详细信息，请参阅文章[记录集： 滚动 (ODBC)](../../data/odbc/recordset-scrolling-odbc.md)。
+有关滚动的详细信息，请参阅文章[记录集：滚动 (ODBC)](../../data/odbc/recordset-scrolling-odbc.md)。
 
 ##  <a name="cantransact"></a>  CRecordset::CanTransact
 
@@ -444,7 +444,7 @@ ODBC API 函数的返回代码。 有关详细信息，请参阅“备注”。
 |SQL_INVALID_HANDLE|由于无效的环境句柄、 连接句柄或语句句柄失败的函数。 这指示编程错误。 无其他信息是可从`SQLError`。|
 |SQL_STILL_EXECUTING|以异步方式启动的函数仍在执行。 请注意，默认情况下，MFC 将永远不会将此值传递到`CheckRowsetError`;MFC 将继续调用`SQLExtendedFetch`直到其不再返回 SQL_STILL_EXECUTING。|
 
-有关详细信息`SQLError`，请参阅 Windows SDK。 有关批量行提取的详细信息，请参阅 [记录集：批量提取记录 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)一文。
+有关详细信息`SQLError`，请参阅 Windows SDK。 有关批量行提取的详细信息，请参阅文章[记录集：(ODBC) 批量提取记录](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
 
 ##  <a name="close"></a>  CRecordset::Close
 
@@ -488,7 +488,7 @@ CRecordset(CDatabase* pDatabase = NULL);
 
 ### <a name="example"></a>示例
 
-有关详细信息，请参阅文章[记录集： 声明一个类用于表 (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)。
+有关详细信息，请参阅文章[记录集：声明一个类 (ODBC) 的表](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)。
 
 ##  <a name="delete"></a>  CRecordset::Delete
 
@@ -503,7 +503,7 @@ virtual void Delete();
 在成功删除之后, 记录集的字段数据成员将设置为一个 Null 值，并且必须显式调用的一个`Move`才能移出已删除记录的函数。 一旦您移出已删除的记录，不能返回到它。 如果数据源支持事务，则可以进行`Delete`调用事务的一部分。 有关详细信息，请参阅文章[事务 (ODBC)](../../data/odbc/transaction-odbc.md)。
 
 > [!NOTE]
->  如果已实现批量行提取，则不能调用`Delete`。 这将导致失败的断言。 尽管类`CRecordset`不提供一种机制，用于更新的数据大容量行，可以编写您自己的函数，通过使用 ODBC API 函数`SQLSetPos`。 有关批量行提取的详细信息，请参阅 [记录集：批量提取记录 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)一文。
+>  如果已实现批量行提取，则不能调用`Delete`。 这将导致失败的断言。 尽管类`CRecordset`不提供一种机制，用于更新的数据大容量行，可以编写您自己的函数，通过使用 ODBC API 函数`SQLSetPos`。 有关批量行提取的详细信息，请参阅文章[记录集：(ODBC) 批量提取记录](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
 
 > [!CAUTION]
 >  记录集必须可更新，并且必须有有效记录当前记录集内调用时`Delete`; 否则为就会出错。 例如，如果您删除的记录，但在调用之前不将其滚动到新的记录`Delete`再次`Delete`将引发[CDBException](../../mfc/reference/cdbexception-class.md)。
@@ -542,7 +542,7 @@ virtual void DoBulkFieldExchange(CFieldExchange* pFX);
 
 请注意，ClassWizard 不支持批量记录字段交换;因此，您必须重写`DoBulkFieldExchange`手动通过编写对批量 RFX 函数的调用。 有关这些函数的详细信息，请参阅主题[记录字段交换函数](../../mfc/reference/record-field-exchange-functions.md)。
 
-有关批量行提取的详细信息，请参阅 [记录集：批量提取记录 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)一文。 有关相关信息，请参阅文章[记录字段交换 (RFX)](../../data/odbc/record-field-exchange-rfx.md)。
+有关批量行提取的详细信息，请参阅文章[记录集：(ODBC) 批量提取记录](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。 有关相关信息，请参阅文章[记录字段交换 (RFX)](../../data/odbc/record-field-exchange-rfx.md)。
 
 ##  <a name="dofieldexchange"></a>  CRecordset::DoFieldExchange
 
@@ -568,7 +568,7 @@ virtual void DoFieldExchange(CFieldExchange* pFX);
 
 字段数据，称为记录字段交换 (RFX) 的交换中两个方向上的工作： 从数据源上的记录的字段的记录集对象的字段数据成员并从上至记录集对象的数据源的记录。
 
-唯一的操作时通常必须执行实现`DoFieldExchange`派生记录集的类是使用类向导创建类并指定字段数据成员的名称和数据类型。 您还可能会将代码添加到 ClassWizard 写入指定的参数数据成员或处理动态绑定的任何列。 有关详细信息，请参阅文章[记录集： 动态绑定数据列 (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)。
+唯一的操作时通常必须执行实现`DoFieldExchange`派生记录集的类是使用类向导创建类并指定字段数据成员的名称和数据类型。 您还可能会将代码添加到 ClassWizard 写入指定的参数数据成员或处理动态绑定的任何列。 有关详细信息，请参阅文章[记录集：动态绑定数据列 (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)。
 
 声明类向导在派生的记录集类时，向导会将写入的重写`DoFieldExchange`，类似于下面的示例：
 
@@ -576,7 +576,7 @@ virtual void DoFieldExchange(CFieldExchange* pFX);
 
 有关 RFX 函数的详细信息，请参阅主题[记录字段交换函数](../../mfc/reference/record-field-exchange-functions.md)。
 
-有关更多示例和详细信息`DoFieldExchange`，请参阅文章[记录字段交换： RFX 的工作机制](../../data/odbc/record-field-exchange-how-rfx-works.md)。 有关 RFX 的常规信息，请参阅文章[记录字段交换](../../data/odbc/record-field-exchange-rfx.md)。
+有关更多示例和详细信息`DoFieldExchange`，请参阅文章[记录字段交换：RFX 的工作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)。 有关 RFX 的常规信息，请参阅文章[记录字段交换](../../data/odbc/record-field-exchange-rfx.md)。
 
 ##  <a name="edit"></a>  CRecordset::Edit
 
@@ -591,7 +591,7 @@ virtual void Edit();
 调用后`Edit`，可以通过直接重置其值更改的字段数据成员。 在操作完成时您随后调用[更新](#update)成员函数上的数据源保存所做的更改。
 
 > [!NOTE]
->  如果已实现批量行提取，则不能调用`Edit`。 这将导致失败的断言。 尽管类`CRecordset`不提供一种机制，用于更新的数据大容量行，可以编写您自己的函数，通过使用 ODBC API 函数`SQLSetPos`。 有关批量行提取的详细信息，请参阅 [记录集：批量提取记录 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)一文。
+>  如果已实现批量行提取，则不能调用`Edit`。 这将导致失败的断言。 尽管类`CRecordset`不提供一种机制，用于更新的数据大容量行，可以编写您自己的函数，通过使用 ODBC API 函数`SQLSetPos`。 有关批量行提取的详细信息，请参阅文章[记录集：(ODBC) 批量提取记录](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
 
 `Edit` 保存记录集的数据成员的值。 如果您调用`Edit`，进行更改，然后调用`Edit`同样，记录的值会还原到之前第一个`Edit`调用。
 
@@ -603,7 +603,7 @@ virtual void Edit();
 
 如果滚动到新的记录，然后才能调用还原以前的值的当前记录`Update`。 一个`CDBException`如果您调用，将引发`Edit`不能更新的记录集或如果没有当前记录。
 
-有关详细信息，请参阅文章[事务 (ODBC)](../../data/odbc/transaction-odbc.md)并[记录集： 锁定记录 (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)。
+有关详细信息，请参阅文章[事务 (ODBC)](../../data/odbc/transaction-odbc.md)和[记录集：锁定记录 (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)。
 
 ### <a name="example"></a>示例
 
@@ -664,9 +664,9 @@ void GetBookmark(CDBVariant& varBookmark);
 > [!NOTE]
 >  某些记录集在操作之后，书签可能不再有效。 例如，如果您调用`GetBookmark`跟`Requery`，你可能不能返回到的记录`SetBookmark`。 调用[CDatabase::GetBookmarkPersistence](../../mfc/reference/cdatabase-class.md#getbookmarkpersistence)若要检查是否可以安全地调用`SetBookmark`。
 
-有关书签和记录集导航的详细信息，请参阅文章[记录集： 书签和绝对位置 (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md)并[记录集： 滚动 (ODBC)](../../data/odbc/recordset-scrolling-odbc.md)。
+有关书签和记录集导航的详细信息，请参阅文章[记录集：书签和绝对位置 (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md)和[记录集：滚动 (ODBC)](../../data/odbc/recordset-scrolling-odbc.md)。
 
-##  <a name="getdefaultconnect"></a>  Crecordset:: Getdefaultconnect
+##  <a name="getdefaultconnect"></a>  CRecordset::GetDefaultConnect
 
 调用以获取默认连接字符串。
 
@@ -702,7 +702,7 @@ virtual CString GetDefaultSQL();
 
 如果需要为自己使用的 SQL 语句字符串，调用`GetSQL`，它返回用于选择记录集的记录时已打开的 SQL 语句。 您可以编辑中的类的重写的默认 SQL 字符串`GetDefaultSQL`。 例如，可以指定预定义的查询使用调用**调用**语句。 (请注意，不过，您编辑的如果`GetDefaultSQL`，还需要修改`m_nFields`以匹配的数据源中的列数。)
 
-有关详细信息，请参阅文章[记录集： 声明一个类用于表 (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)。
+有关详细信息，请参阅文章[记录集：声明一个类 (ODBC) 的表](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)。
 
 > [!CAUTION]
 >  表名称将为空，如果框架无法识别的表名称，如果提供了多个表名称，或者如果**调用**无法解释语句。 请注意，当使用**调用**语句，不能插入大括号之间的空白并**调用**关键字，也应插入空格前的大括号或之前不**选择**中的关键字**选择**语句。
@@ -744,7 +744,7 @@ void GetFieldValue(
 |C 数据类型|SQL 数据类型|
 |-----------------|-------------------|
 |SQL_C_BIT|SQL_BIT|
-|为 SQL_C_UTINYINT|SQL_TINYINT|
+|SQL_C_UTINYINT|SQL_TINYINT|
 |SQL_C_SSHORT|SQL_SMALLINT|
 |SQL_C_SLONG|SQL_INTEGER|
 |SQL_C_FLOAT|SQL_REAL|
@@ -783,7 +783,7 @@ void GetFieldValue(
 > [!NOTE]
 >  与 DAO 类不同`CDaoRecordset`，`CRecordset`没有`SetFieldValue`成员函数。 如果您创建的对象直接从`CRecordset`，它是实际上它是只读的。
 
-有关批量行提取的详细信息，请参阅 [记录集：批量提取记录 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)一文。
+有关批量行提取的详细信息，请参阅文章[记录集：(ODBC) 批量提取记录](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
 
 ##  <a name="getodbcfieldcount"></a>  CRecordset::GetODBCFieldCount
 
@@ -799,7 +799,7 @@ short GetODBCFieldCount() const;
 
 ### <a name="remarks"></a>备注
 
-有关创建记录集的详细信息，请参阅文章[记录集： 创建和关闭记录集 (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)。
+有关创建记录集的详细信息，请参阅文章[记录集：创建和关闭记录集 (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)。
 
 ##  <a name="getodbcfieldinfo"></a>  CRecordset::GetODBCFieldInfo
 
@@ -832,7 +832,7 @@ void GetODBCFieldInfo(
 
 有关返回的信息的说明，请参阅[CODBCFieldInfo](../../mfc/reference/codbcfieldinfo-structure.md)结构。
 
-有关创建记录集的详细信息，请参阅文章[记录集： 创建和关闭记录集 (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)。
+有关创建记录集的详细信息，请参阅文章[记录集：创建和关闭记录集 (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)。
 
 ##  <a name="getrecordcount"></a>  CRecordset::GetRecordCount
 
@@ -869,7 +869,7 @@ DWORD GetRowsetSize() const;
 
 若要实现批量行提取，必须指定`CRecordset::useMultiRowFetch`选项*dwOptions*参数[打开](#open)成员函数。 若要更改的行集大小的设置，请调用[SetRowsetSize](#setrowsetsize)。
 
-有关批量行提取的详细信息，请参阅 [记录集：批量提取记录 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)一文。
+有关批量行提取的详细信息，请参阅文章[记录集：(ODBC) 批量提取记录](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
 
 ##  <a name="getrowsfetched"></a>  CRecordset::GetRowsFetched
 
@@ -889,7 +889,7 @@ DWORD GetRowsFetched() const;
 
 若要实现批量行提取，必须指定`CRecordset::useMultiRowFetch`选项*dwOptions*参数[打开](#open)成员函数。 若要指定行集大小，请调用[SetRowsetSize](#setrowsetsize)。
 
-有关批量行提取的详细信息，请参阅 [记录集：批量提取记录 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)一文。
+有关批量行提取的详细信息，请参阅文章[记录集：(ODBC) 批量提取记录](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
 
 ### <a name="example"></a>示例
 
@@ -976,7 +976,7 @@ const CString& GetSQL() const;
 
 这通常是 SQL**选择**语句。 返回的字符串`GetSQL`是只读的。
 
-返回的字符串`GetSQL`通常不同于你可能会传递到记录集在任何字符串*lpszSQL*参数`Open`成员函数。 这是因为该记录集构造基于传递给一个完整的 SQL 语句`Open`，使用类向导，您可以指定在指定的内容`m_strFilter`和`m_strSort`数据成员，并且可能具有的任何参数指定。 有关记录集如何构造此 SQL 语句，有关详细信息，请参阅文章[记录集： 如何选择记录 (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)。
+返回的字符串`GetSQL`通常不同于你可能会传递到记录集在任何字符串*lpszSQL*参数`Open`成员函数。 这是因为该记录集构造基于传递给一个完整的 SQL 语句`Open`，使用类向导，您可以指定在指定的内容`m_strFilter`和`m_strSort`数据成员，并且可能具有的任何参数指定。 有关记录集如何构造此 SQL 语句，有关详细信息，请参阅文章[记录集：如何记录集选择记录 (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)。
 
 > [!NOTE]
 >  仅在调用后调用此成员函数[打开](#open)。
@@ -1045,7 +1045,7 @@ BOOL IsDeleted() const;
 有关详细信息`CRecordset::skipDeletedRecords`和驱动程序打包，请参阅[打开](#open)成员函数。
 
 > [!NOTE]
->  如果已实现批量行提取，不应调用`IsDeleted`。 改为调用[GetRowStatus](#getrowstatus)成员函数。 有关批量行提取的详细信息，请参阅 [记录集：批量提取记录 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)一文。
+>  如果已实现批量行提取，不应调用`IsDeleted`。 改为调用[GetRowStatus](#getrowstatus)成员函数。 有关批量行提取的详细信息，请参阅文章[记录集：(ODBC) 批量提取记录](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
 
 ##  <a name="iseof"></a>  CRecordset::IsEOF
 
@@ -1091,13 +1091,13 @@ BOOL IsFieldDirty(void* pv);
 所有已更新字段数据成员中的数据将传输到记录上的数据源时的当前记录更新通过调用[更新](#update)成员函数`CRecordset`(到调用`Edit`或`AddNew`).
 
 > [!NOTE]
->  此成员函数不是适用于使用的批量行提取的记录集。 如果已实现批量行提取，然后`IsFieldDirty`将始终返回 FALSE，将导致失败的断言。 有关批量行提取的详细信息，请参阅 [记录集：批量提取记录 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)一文。
+>  此成员函数不是适用于使用的批量行提取的记录集。 如果已实现批量行提取，然后`IsFieldDirty`将始终返回 FALSE，将导致失败的断言。 有关批量行提取的详细信息，请参阅文章[记录集：(ODBC) 批量提取记录](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
 
 调用`IsFieldDirty`将重置以前调用的效果[SetFieldDirty](#setfielddirty)因为字段的已更新的状态是重新计算。 在`AddNew`的情况下，如果当前字段值不同于伪 null 值，将字段状态设置已更新。 在`Edit`用例中，如果字段值与不同的缓存值，则字段状态将设置已更新。
 
 `IsFieldDirty` 通过实现[DoFieldExchange](#dofieldexchange)。
 
-已更新标志的详细信息，请参阅文章[记录集： 如何选择记录 (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)。
+已更新标志的详细信息，请参阅文章[记录集：如何记录集选择记录 (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)。
 
 ##  <a name="isfieldnull"></a>  CRecordset::IsFieldNull
 
@@ -1121,7 +1121,7 @@ BOOL IsFieldNull(void* pv);
 调用此成员函数可确定记录集的指定的字段数据成员是否已标记为 Null。 （在数据库术语中，Null 意味着"无值"，并且不为 NULL，c + + 中相同。）如果字段数据成员标记为 Null，它被解释为当前记录没有值的列。
 
 > [!NOTE]
->  此成员函数不是适用于使用的批量行提取的记录集。 如果已实现批量行提取，然后`IsFieldNull`将始终返回 FALSE，将导致失败的断言。 有关批量行提取的详细信息，请参阅 [记录集：批量提取记录 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)一文。
+>  此成员函数不是适用于使用的批量行提取的记录集。 如果已实现批量行提取，然后`IsFieldNull`将始终返回 FALSE，将导致失败的断言。 有关批量行提取的详细信息，请参阅文章[记录集：(ODBC) 批量提取记录](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
 
 `IsFieldNull` 通过实现[DoFieldExchange](#dofieldexchange)。
 
@@ -1143,7 +1143,7 @@ BOOL IsFieldNullable(void* pv);
 调用以确定是否可为"null"指定的字段数据成员 （可以是设置为一个 Null 值; 如果此成员函数C + + NULL 不是 Null，这意味着，在数据库术语中，相同"having 没有值")。
 
 > [!NOTE]
->  如果已实现批量行提取，则不能调用`IsFieldNullable`。 改为调用[GetODBCFieldInfo](#getodbcfieldinfo)成员函数以确定是否可以将字段设置为 Null 值。 请注意，您可以始终调用`GetODBCFieldInfo`，无论是否已实现批量行提取。 有关批量行提取的详细信息，请参阅 [记录集：批量提取记录 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)一文。
+>  如果已实现批量行提取，则不能调用`IsFieldNullable`。 改为调用[GetODBCFieldInfo](#getodbcfieldinfo)成员函数以确定是否可以将字段设置为 Null 值。 请注意，您可以始终调用`GetODBCFieldInfo`，无论是否已实现批量行提取。 有关批量行提取的详细信息，请参阅文章[记录集：(ODBC) 批量提取记录](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
 
 不能为 Null 的字段必须具有值。 如果您尝试将此类字段设置为 Null 添加或更新记录时，数据源会拒绝添加或更新，并[更新](#update)将引发异常。 在调用时，会发生异常`Update`，在调用时不[SetFieldNull](#setfieldnull)。
 
@@ -1199,13 +1199,13 @@ BOOL IsOpen() const;
 > [!CAUTION]
 >  此数字必须与对应的"输出列"中注册数`DoFieldExchange`或`DoBulkFieldExchange`后调用[SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype)与参数`CFieldExchange::outputColumn`。
 
-可以将列绑定动态，本文中所述"记录集： 动态绑定数据列。" 如果这样做，则必须增加中的计数`m_nFields`以反映调用 RFX 或批量 RFX 函数数你`DoFieldExchange`或`DoBulkFieldExchange`动态绑定列的成员函数。
+可以将列绑定动态，本文中所述"记录集：动态绑定数据列。" 如果这样做，则必须增加中的计数`m_nFields`以反映调用 RFX 或批量 RFX 函数数你`DoFieldExchange`或`DoBulkFieldExchange`动态绑定列的成员函数。
 
-有关详细信息，请参阅文章[记录集： 动态绑定数据列 (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)并[记录集： 提取记录 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
+有关详细信息，请参阅文章[记录集：动态绑定数据列 (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)和[记录集：(ODBC) 批量提取记录](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
 
 ### <a name="example"></a>示例
 
-请参阅文章[记录字段交换： 使用 RFX](../../data/odbc/record-field-exchange-using-rfx.md)。
+请参阅文章[记录字段交换：使用 RFX](../../data/odbc/record-field-exchange-using-rfx.md)。
 
 ##  <a name="m_nparams"></a>  CRecordset::m_nParams
 
@@ -1222,7 +1222,7 @@ BOOL IsOpen() const;
 
 ### <a name="example"></a>示例
 
-  请参阅文章[记录集： 参数化记录集 (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)并[记录字段交换： 使用 RFX](../../data/odbc/record-field-exchange-using-rfx.md)。
+  请参阅文章[记录集：参数化记录集 (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)和[记录字段交换：使用 RFX](../../data/odbc/record-field-exchange-using-rfx.md)。
 
 ##  <a name="m_pdatabase"></a>  CRecordset::m_pDatabase
 
@@ -1246,9 +1246,9 @@ BOOL IsOpen() const;
 
 请注意，不包括**其中**在字符串中的关键字。 框架提供了它。
 
-您可以还通过参数化筛选器字符串放置 ' 占位符，在类中的参数数据成员声明为每个占位符，并将参数传递给记录集在运行时。 这允许您在运行时构造筛选器。 有关详细信息，请参阅文章[记录集： 参数化记录集 (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)。
+您可以还通过参数化筛选器字符串放置 ' 占位符，在类中的参数数据成员声明为每个占位符，并将参数传递给记录集在运行时。 这允许您在运行时构造筛选器。 有关详细信息，请参阅文章[记录集：参数化记录集 (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)。
 
-详细了解 SQL**其中**子句，请参阅文章[SQL](../../data/odbc/sql.md)。 有关选择和筛选记录的详细信息，请参阅文章[记录集： 筛选记录 (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md)。
+详细了解 SQL**其中**子句，请参阅文章[SQL](../../data/odbc/sql.md)。 有关选择和筛选记录的详细信息，请参阅文章[记录集：筛选记录 (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md)。
 
 ### <a name="example"></a>示例
 
@@ -1268,7 +1268,7 @@ BOOL IsOpen() const;
 
 请注意，不包括**ORDER BY**在字符串中的关键字。 框架提供了它。
 
-有关 SQL 子句的详细信息，请参阅文章[SQL](../../data/odbc/sql.md)。 有关对记录进行排序的详细信息，请参阅文章[记录集： 排序记录 (ODBC)](../../data/odbc/recordset-sorting-records-odbc.md)。
+有关 SQL 子句的详细信息，请参阅文章[SQL](../../data/odbc/sql.md)。 有关对记录进行排序的详细信息，请参阅文章[记录集：排序记录 (ODBC)](../../data/odbc/recordset-sorting-records-odbc.md)。
 
 ### <a name="example"></a>示例
 
@@ -1327,7 +1327,7 @@ virtual void Move(
 > [!NOTE]
 >  如果调用`Move`时的当前记录更新或添加，更新都将丢失而不发出警告。
 
-有关记录集导航的详细信息，请参阅文章[记录集： 滚动 (ODBC)](../../data/odbc/recordset-scrolling-odbc.md)并[记录集： 书签和绝对位置 (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md)。 有关批量行提取的详细信息，请参阅 [记录集：批量提取记录 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)一文。 有关相关信息，请参阅 ODBC API 函数`SQLExtendedFetch`Windows SDK 中。
+有关记录集导航的详细信息，请参阅文章[记录集：滚动 (ODBC)](../../data/odbc/recordset-scrolling-odbc.md)和[记录集：书签和绝对位置 (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md)。 有关批量行提取的详细信息，请参阅文章[记录集：(ODBC) 批量提取记录](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。 有关相关信息，请参阅 ODBC API 函数`SQLExtendedFetch`Windows SDK 中。
 
 ### <a name="example"></a>示例
 
@@ -1359,7 +1359,7 @@ void MoveFirst();
 > [!NOTE]
 >  如果你调用任意`Move`函数时当前记录更新或添加，更新都将丢失而不发出警告。
 
-有关记录集导航的详细信息，请参阅文章[记录集： 滚动 (ODBC)](../../data/odbc/recordset-scrolling-odbc.md)并[记录集： 书签和绝对位置 (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md)。 有关批量行提取的详细信息，请参阅 [记录集：批量提取记录 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)一文。
+有关记录集导航的详细信息，请参阅文章[记录集：滚动 (ODBC)](../../data/odbc/recordset-scrolling-odbc.md)和[记录集：书签和绝对位置 (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md)。 有关批量行提取的详细信息，请参阅文章[记录集：(ODBC) 批量提取记录](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
 
 ### <a name="example"></a>示例
 
@@ -1389,7 +1389,7 @@ void MoveLast();
 > [!NOTE]
 >  如果你调用任意`Move`函数时当前记录更新或添加，更新都将丢失而不发出警告。
 
-有关记录集导航的详细信息，请参阅文章[记录集： 滚动 (ODBC)](../../data/odbc/recordset-scrolling-odbc.md)并[记录集： 书签和绝对位置 (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md)。 有关批量行提取的详细信息，请参阅 [记录集：批量提取记录 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)一文。
+有关记录集导航的详细信息，请参阅文章[记录集：滚动 (ODBC)](../../data/odbc/recordset-scrolling-odbc.md)和[记录集：书签和绝对位置 (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md)。 有关批量行提取的详细信息，请参阅文章[记录集：(ODBC) 批量提取记录](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
 
 ### <a name="example"></a>示例
 
@@ -1419,7 +1419,7 @@ void MoveNext();
 > [!NOTE]
 >  如果你调用任意`Move`函数时当前记录更新或添加，更新都将丢失而不发出警告。
 
-有关记录集导航的详细信息，请参阅文章[记录集： 滚动 (ODBC)](../../data/odbc/recordset-scrolling-odbc.md)并[记录集： 书签和绝对位置 (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md)。 有关批量行提取的详细信息，请参阅 [记录集：批量提取记录 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)一文。
+有关记录集导航的详细信息，请参阅文章[记录集：滚动 (ODBC)](../../data/odbc/recordset-scrolling-odbc.md)和[记录集：书签和绝对位置 (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md)。 有关批量行提取的详细信息，请参阅文章[记录集：(ODBC) 批量提取记录](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
 
 ### <a name="example"></a>示例
 
@@ -1452,7 +1452,7 @@ void MovePrev();
 > [!NOTE]
 >  如果你调用任意`Move`函数时当前记录更新或添加，更新都将丢失而不发出警告。
 
-有关记录集导航的详细信息，请参阅文章[记录集： 滚动 (ODBC)](../../data/odbc/recordset-scrolling-odbc.md)并[记录集： 书签和绝对位置 (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md)。 有关批量行提取的详细信息，请参阅 [记录集：批量提取记录 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)一文。
+有关记录集导航的详细信息，请参阅文章[记录集：滚动 (ODBC)](../../data/odbc/recordset-scrolling-odbc.md)和[记录集：书签和绝对位置 (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md)。 有关批量行提取的详细信息，请参阅文章[记录集：(ODBC) 批量提取记录](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
 
 ### <a name="example"></a>示例
 
@@ -1500,7 +1500,7 @@ ODBC 语句的选项，可设置的 HSTMT。
 
 有关游标的详细信息，请参阅文章[ODBC](../../data/odbc/odbc-basics.md)。
 
-##  <a name="open"></a>  Crecordset:: Open
+##  <a name="open"></a>  CRecordset::Open
 
 通过检索表或执行的查询的记录集表示打开记录集。
 
@@ -1558,11 +1558,11 @@ virtual BOOL Open(
 
 - `CRecordset::optimizeBulkAdd` 已准备的 SQL 语句用于优化一次添加多个记录。 不使用 ODBC API 函数时才应用`SQLSetPos`来更新该记录集。 第一次更新确定哪些字段标记为已更新。 此选项是互斥的与`CRecordset::useMultiRowFetch`。
 
-- `CRecordset::useMultiRowFetch` 实现批量行提取，以允许多个要在单个提取操作中检索的行。 这是一项高级的功能设计用于提高性能;但是，ClassWizard 不支持批量记录字段交换。 此选项是互斥的与`CRecordset::optimizeBulkAdd`。 请注意，如果您指定`CRecordset::useMultiRowFetch`，然后选择`CRecordset::noDirtyFieldCheck`将自动开启 （双缓冲将不可用）; 在仅正向记录集中，该选项`CRecordset::useExtendedFetch`将自动打开。 有关批量行提取的详细信息，请参阅 [记录集：批量提取记录 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)一文。
+- `CRecordset::useMultiRowFetch` 实现批量行提取，以允许多个要在单个提取操作中检索的行。 这是一项高级的功能设计用于提高性能;但是，ClassWizard 不支持批量记录字段交换。 此选项是互斥的与`CRecordset::optimizeBulkAdd`。 请注意，如果您指定`CRecordset::useMultiRowFetch`，然后选择`CRecordset::noDirtyFieldCheck`将自动开启 （双缓冲将不可用）; 在仅正向记录集中，该选项`CRecordset::useExtendedFetch`将自动打开。 有关批量行提取的详细信息，请参阅文章[记录集：(ODBC) 批量提取记录](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
 
 - `CRecordset::skipDeletedRecords` 在记录集中导航时，请跳过所有已删除的记录。 这会降低某些相对提取操作中的性能。 此选项只进的记录集上无效。 如果在调用[移动](#move)与*nRows*参数设置为 0，并且`CRecordset::skipDeletedRecords`选项集，`Move`将断言。 请注意，`CRecordset::skipDeletedRecords`类似于*驱动程序封装*，这意味着，已删除的行已从记录集。 但是，如果您的驱动程序包记录，然后它将跳过删除; 这些记录它将跳过该记录集处于打开状态时删除其他用户的记录。 `CRecordset::skipDeletedRecords` 将跳过的其他用户删除的行。
 
-- `CRecordset::useBookmarks` 可以使用记录集上的书签，如果受支持。 书签降低数据检索，但提高性能的数据导航。 对只进的记录集不有效。 有关详细信息，请参阅文章[记录集： 书签和绝对位置 (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md)。
+- `CRecordset::useBookmarks` 可以使用记录集上的书签，如果受支持。 书签降低数据检索，但提高性能的数据导航。 对只进的记录集不有效。 有关详细信息，请参阅文章[记录集：书签和绝对位置 (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md)。
 
 - `CRecordset::noDirtyFieldCheck` 关闭自动脏字段检查 （双缓冲）。 这将提高性能;但是，您必须手动标记的字段为脏通过调用`SetFieldDirty`和`SetFieldNull`成员函数。请注意在类中的双缓冲`CRecordset`类似于类中的双缓冲`CDaoRecordset`。 但是，在`CRecordset`，你不能启用对各个字段的双缓冲; 对于所有字段启用或禁用的所有字段。 请注意，如果指定了选项`CRecordset::useMultiRowFetch`，然后`CRecordset::noDirtyFieldCheck`自动; 但是，将开启`SetFieldDirty`和`SetFieldNull`不能实现批量行提取的记录集上使用。
 
@@ -1570,7 +1570,7 @@ virtual BOOL Open(
 
 - `CRecordset::useExtendedFetch` 实现`SQLExtendedFetch`而不是`SQLFetch`。 这被设计用于实现批量行提取的只进的记录集。 如果指定了选项`CRecordset::useMultiRowFetch`只进记录集，然后`CRecordset::useExtendedFetch`将自动打开。
 
-- `CRecordset::userAllocMultiRowBuffers` 用户将数据分配存储缓冲区。 使用此选项结合`CRecordset::useMultiRowFetch`如果你想要分配你自己的存储; 否则，该框架将自动分配必要的存储。 有关详细信息，请参阅文章[记录集： 提取记录 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。 请注意该指定`CRecordset::userAllocMultiRowBuffers`而无需指定`CRecordset::useMultiRowFetch`将导致失败的断言。
+- `CRecordset::userAllocMultiRowBuffers` 用户将数据分配存储缓冲区。 使用此选项结合`CRecordset::useMultiRowFetch`如果你想要分配你自己的存储; 否则，该框架将自动分配必要的存储。 有关详细信息，请参阅文章[记录集：(ODBC) 批量提取记录](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。 请注意该指定`CRecordset::userAllocMultiRowBuffers`而无需指定`CRecordset::useMultiRowFetch`将导致失败的断言。
 
 ### <a name="return-value"></a>返回值
 
@@ -1599,13 +1599,13 @@ virtual BOOL Open(
 
 常规步骤是将传递到 NULL `Open`; 在这种情况下，`Open`调用[GetDefaultSQL](#getdefaultsql)。 如果您使用的派生`CRecordset`类，`GetDefaultSQL`提供类向导中指定的表名称。 您可以指定中的其他信息`lpszSQL`参数。
 
-您传递的任何`Open`构造查询的最终 SQL 字符串 (字符串可能具有 SQL**其中**和**ORDER BY**子句追加到`lpszSQL`您传递的字符串)，然后再执行该查询。 可以通过调用检查构造的字符串[GetSQL](#getsql)之后调用`Open`。 有关如何记录集构造 SQL 语句，并选择记录，有关其他详细信息，请参阅文章[记录集： 如何选择记录 (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)。
+您传递的任何`Open`构造查询的最终 SQL 字符串 (字符串可能具有 SQL**其中**和**ORDER BY**子句追加到`lpszSQL`您传递的字符串)，然后再执行该查询。 可以通过调用检查构造的字符串[GetSQL](#getsql)之后调用`Open`。 有关如何记录集构造 SQL 语句，并选择记录，有关其他详细信息，请参阅文章[记录集：如何记录集选择记录 (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)。
 
 记录集类的字段数据成员绑定到所选的数据的列。 如果未返回任何记录，第一条记录将成为当前记录。
 
 如果你想要设置的记录集，如筛选或排序，选项指定这些属性构造记录集对象之后但在调用之前`Open`。 如果你想要刷新后记录集中记录的记录集已打开，请调用[再次查询](#requery)。
 
-有关详细信息，包括其他示例，请参阅文章[记录集 (ODBC)](../../data/odbc/recordset-odbc.md)，[记录集： 如何选择记录 (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)，和[记录集： 创建和关闭记录集 (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)。
+有关详细信息，包括其他示例，请参阅文章[记录集 (ODBC)](../../data/odbc/recordset-odbc.md)，[记录集：如何记录集选择记录 (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)，和[记录集：创建和关闭记录集 (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)。
 
 ### <a name="example"></a>示例
 
@@ -1645,7 +1645,7 @@ void RefreshRowset(
 |SQL_LOCK_EXCLUSIVE|驱动程序或数据源以独占方式锁定行。 并非所有数据源都支持这种类型的锁。|
 |SQL_LOCK_UNLOCK|驱动程序或数据源对行进行解锁。 并非所有数据源都支持这种类型的锁。|
 
-有关详细信息`SQLSetPos`，请参阅 Windows SDK。 有关批量行提取的详细信息，请参阅 [记录集：批量提取记录 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)一文。
+有关详细信息`SQLSetPos`，请参阅 Windows SDK。 有关批量行提取的详细信息，请参阅文章[记录集：(ODBC) 批量提取记录](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
 
 ##  <a name="requery"></a>  CRecordset::Requery
 
@@ -1705,7 +1705,7 @@ void SetAbsolutePosition(long nRows);
 > [!NOTE]
 >  绝对位置不是要用作代理记录编号。 书签仍是保留和返回到给定位置，因为记录的位置发生更改时将删除前面记录的推荐的方法。 此外，则不能确保如果重新因为除非创建和使用SQL语句，否则不能保证在记录集内的单个记录的顺序重新创建记录集，给定的记录将具有相同的绝对位置**ORDER BY**子句。
 
-有关记录集导航和书签的详细信息，请参阅文章[记录集： 滚动 (ODBC)](../../data/odbc/recordset-scrolling-odbc.md)并[记录集： 书签和绝对位置 (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md)。
+有关记录集导航和书签的详细信息，请参阅文章[记录集：滚动 (ODBC)](../../data/odbc/recordset-scrolling-odbc.md)和[记录集：书签和绝对位置 (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md)。
 
 ##  <a name="setbookmark"></a>  CRecordset::SetBookmark
 
@@ -1732,7 +1732,7 @@ void SetBookmark(const CDBVariant& varBookmark);
 > [!NOTE]
 >  某些记录集在操作之后，应检查之前，调用书签暂留`SetBookmark`。 例如，如果检索具有书签`GetBookmark`，然后调用`Requery`，书签可能不再有效。 调用[CDatabase::GetBookmarkPersistence](../../mfc/reference/cdatabase-class.md#getbookmarkpersistence)若要检查是否可以安全地调用`SetBookmark`。
 
-有关书签和记录集导航的详细信息，请参阅文章[记录集： 书签和绝对位置 (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md)并[记录集： 滚动 (ODBC)](../../data/odbc/recordset-scrolling-odbc.md)。
+有关书签和记录集导航的详细信息，请参阅文章[记录集：书签和绝对位置 (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md)和[记录集：滚动 (ODBC)](../../data/odbc/recordset-scrolling-odbc.md)。
 
 ##  <a name="setfielddirty"></a>  CRecordset::SetFieldDirty
 
@@ -1755,7 +1755,7 @@ void SetFieldDirty(void* pv, BOOL bDirty = TRUE);
 将标记为未更改的字段可确保该字段不更新，并且会导致较少 SQL 流量。
 
 > [!NOTE]
->  此成员函数不是适用于使用的批量行提取的记录集。 如果已实现批量行提取，然后`SetFieldDirty`将导致失败的断言。 有关批量行提取的详细信息，请参阅 [记录集：批量提取记录 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)一文。
+>  此成员函数不是适用于使用的批量行提取的记录集。 如果已实现批量行提取，然后`SetFieldDirty`将导致失败的断言。 有关批量行提取的详细信息，请参阅文章[记录集：(ODBC) 批量提取记录](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
 
 Framework 标记更改字段数据成员，以确保它们将写入到数据源上的记录的记录字段交换 (RFX) 机制。 将更改字段的值通常字段已更新会自动设置，因此很少需要调用`SetFieldDirty`自己，但您有时可能想要确保，列将显式更新或插入而不考虑哪些值是字段数据成员。
 
@@ -1795,7 +1795,7 @@ void SetFieldNull(void* pv, BOOL bNull = TRUE);
 当你将一条新记录添加到记录集时，所有字段数据成员是最初设置为 Null 值和标记为"更新"（更改）。 当从数据源检索一条记录时，其列已具有的值或均为 Null。
 
 > [!NOTE]
->  请勿在使用批量行提取的记录集上调用此成员函数。 如果已实现批量行提取，则调用`SetFieldNull`导致失败的断言。 有关批量行提取的详细信息，请参阅 [记录集：批量提取记录 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)一文。
+>  请勿在使用批量行提取的记录集上调用此成员函数。 如果已实现批量行提取，则调用`SetFieldNull`导致失败的断言。 有关批量行提取的详细信息，请参阅文章[记录集：(ODBC) 批量提取记录](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
 
 如果您特别希望将当前记录的字段指定为不具有一个值，调用`SetFieldNull`与*bNull*设置为 TRUE 以标记为 Null。 如果以前标记的字段为 Null，并且现在想要为其提供一个值，只需设置它的新值。 无需删除具有 Null 标志`SetFieldNull`。 若要确定是否允许该字段为 Null，请调用`IsFieldNullable`。
 
@@ -1894,7 +1894,7 @@ void SetRowsetCursorPosition(WORD wRow, WORD wLockType = SQL_LOCK_NO_CHANGE);
 |SQL_LOCK_EXCLUSIVE|驱动程序或数据源以独占方式锁定行。 并非所有数据源都支持这种类型的锁。|
 |SQL_LOCK_UNLOCK|驱动程序或数据源对行进行解锁。 并非所有数据源都支持这种类型的锁。|
 
-有关详细信息`SQLSetPos`，请参阅 Windows SDK。 有关批量行提取的详细信息，请参阅 [记录集：批量提取记录 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)一文。
+有关详细信息`SQLSetPos`，请参阅 Windows SDK。 有关批量行提取的详细信息，请参阅文章[记录集：(ODBC) 批量提取记录](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
 
 ##  <a name="setrowsetsize"></a>  CRecordset::SetRowsetSize
 
@@ -1923,7 +1923,7 @@ virtual void SetRowsetSize(DWORD dwNewRowsetSize);
 
 若要获取的行集大小的当前设置，请调用[GetRowsetSize](#getrowsetsize)。
 
-有关批量行提取的详细信息，请参阅 [记录集：批量提取记录 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)一文。
+有关批量行提取的详细信息，请参阅文章[记录集：(ODBC) 批量提取记录](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
 
 ##  <a name="update"></a>  CRecordset::Update
 
@@ -1942,7 +1942,7 @@ virtual BOOL Update();
 在调用后调用此成员函数[AddNew](#addnew)或[编辑](#edit)成员函数。 完成所需的此调用`AddNew`或`Edit`操作。
 
 > [!NOTE]
->  如果已实现批量行提取，则不能调用`Update`。 这将导致失败的断言。 尽管类`CRecordset`不提供一种机制，用于更新的数据大容量行，可以编写您自己的函数，通过使用 ODBC API 函数`SQLSetPos`。 有关批量行提取的详细信息，请参阅 [记录集：批量提取记录 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)一文。
+>  如果已实现批量行提取，则不能调用`Update`。 这将导致失败的断言。 尽管类`CRecordset`不提供一种机制，用于更新的数据大容量行，可以编写您自己的函数，通过使用 ODBC API 函数`SQLSetPos`。 有关批量行提取的详细信息，请参阅文章[记录集：(ODBC) 批量提取记录](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
 
 这两`AddNew`和`Edit`准备对保存到数据源添加或编辑过的数据放置在该域中的编辑缓冲区。 `Update` 保存数据。 只有这些字段标记为或检测到因为更改会更新。
 
@@ -1951,11 +1951,11 @@ virtual BOOL Update();
 > [!CAUTION]
 >  如果您调用`Update`而不必首先调用`AddNew`或`Edit`，`Update`引发`CDBException`。 如果您调用`AddNew`或`Edit`，必须调用`Update`之前调用`Move`操作或之前关闭记录集或数据源连接。 否则，所做的更改都将丢失而不另行通知。
 
-有关处理的详细信息`Update`失败，请参阅文章[记录集： 如何更新记录 (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)。
+有关处理的详细信息`Update`失败，请参阅文章[记录集：如何记录集更新记录 (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)。
 
 ### <a name="example"></a>示例
 
-请参阅文章[事务： 在记录集 (ODBC) 执行的事务](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)。
+请参阅文章[事务：在记录集 (ODBC) 执行事务](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)。
 
 ## <a name="see-also"></a>请参阅
 

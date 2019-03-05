@@ -1,5 +1,5 @@
 ---
-title: 演练：调试 C++ AMP 应用程序
+title: 演练：调试 c + + AMP 应用程序
 ms.date: 11/19/2018
 helpviewer_keywords:
 - debugging, C++ Accelerated Massive Parallelism
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, debugging
 - debugging, C++ AMP
 ms.assetid: 40e92ecc-f6ba-411c-960c-b3047b854fb5
-ms.openlocfilehash: 610cf317982204715d55d12ece510cb477543f4d
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 5312ba7354c28286cafb092711d66d56a920581a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176687"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57286905"
 ---
-# <a name="walkthrough-debugging-a-c-amp-application"></a>演练：调试 C++ AMP 应用程序
+# <a name="walkthrough-debugging-a-c-amp-application"></a>演练：调试 c + + AMP 应用程序
 
 本主题演示如何调试使用 C++ Accelerated Massive Parallelism (C++ AMP) 应用程序以便利用图形处理单元 (GPU)。 它使用总结大整数数组的并行缩减程序。 本演练阐释了以下任务：
 
@@ -36,7 +36,7 @@ ms.locfileid: "52176687"
 
 - 读取[c + + AMP 概述](../../parallel/amp/cpp-amp-overview.md)。
 
-- 确保文本编辑器中显示行号。 有关详细信息，请参阅[如何： 在编辑器中显示行号](/visualstudio/ide/reference/how-to-display-line-numbers-in-the-editor)。
+- 确保文本编辑器中显示行号。 有关详细信息，请参阅[如何：在编辑器中显示行号](/visualstudio/ide/reference/how-to-display-line-numbers-in-the-editor)。
 
 - 请确保正在运行 Windows 8 或 Windows Server 2012，以支持在软件模拟器上进行调试。
 
@@ -220,7 +220,7 @@ ms.locfileid: "52176687"
 
 2. 在中**属性页**对话框中的**配置属性**，选择**调试**。
 
-3. 在中**要启动的调试器**列表中，选择**本地 Windows 调试器**。
+3. 在“要启动的调试器”列表中，选择“本地 Windows 调试器”。
 
 4. 在中**调试器类型**列表中，验证**自动**处于选中状态。
 
@@ -335,7 +335,7 @@ ms.locfileid: "52176687"
 
 ## <a name="freezing-and-thawing-gpu-threads"></a>冻结和解冻 GPU 线程
 
-您可以冻结 （挂起） 和解冻 （恢复） GPU 线程眖**GPU 线程**窗口或**并行监视**窗口。 您可以冻结和解冻 CPU 线程相同的方式;有关信息，请参阅[如何： 使用线程窗口](/visualstudio/debugger/how-to-use-the-threads-window)。
+您可以冻结 （挂起） 和解冻 （恢复） GPU 线程眖**GPU 线程**窗口或**并行监视**窗口。 您可以冻结和解冻 CPU 线程相同的方式;有关信息，请参阅[如何：使用线程窗口](/visualstudio/debugger/how-to-use-the-threads-window)。
 
 ### <a name="to-freeze-and-thaw-gpu-threads"></a>冻结和解冻 GPU 线程
 

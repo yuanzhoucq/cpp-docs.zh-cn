@@ -5,12 +5,12 @@ helpviewer_keywords:
 - scheduler policies, agents [Concurrency Runtime]
 - creating agents that use specific policies [Concurrency Runtime]
 ms.assetid: 46a3e265-0777-4ec3-a142-967bafc49d67
-ms.openlocfilehash: 955b1043800c8c10a24abff71a7764d0878b89d9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5aac86801015549b5552b51c06a30f8398346a06
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50663367"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57257366"
 ---
 # <a name="how-to-create-agents-that-use-specific-scheduler-policies"></a>如何：创建使用特定计划程序策略的代理
 
@@ -18,7 +18,7 @@ ms.locfileid: "50663367"
 
 每个代理都可能具有唯一的应用程序要求。 例如，可让用户交互 （检索输入或显示输出） 的代理可能需要更高优先级访问计算资源。 计划程序策略让你控制管理任务时，计划程序使用的策略。 本主题演示如何创建使用特定计划程序策略的代理。
 
-使用异步消息块以及自定义计划程序策略的基本示例，请参阅[如何： 指定特定的计划程序策略](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md)。
+使用异步消息块以及自定义计划程序策略的基本示例，请参阅[如何：指定特定的计划程序策略](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md)。
 
 本主题使用通过异步代理库，例如代理、 消息块和消息传递函数的功能来执行工作。 有关异步代理库的详细信息，请参阅[异步代理库](../../parallel/concrt/asynchronous-agents-library.md)。
 
@@ -26,7 +26,7 @@ ms.locfileid: "50663367"
 
 下面的示例定义两个类派生自[concurrency:: agent](../../parallel/concrt/reference/agent-class.md):`permutor`和`printer`。 `permutor`类计算给定输入字符串的所有排列。 `printer`类将打印到控制台的进度消息。 `permutor`类执行一个计算密集型操作，这可能会使用所有可用的计算资源。 若要很有用，`printer`类必须及时地打印每个进度消息。
 
-若要提供`printer`类对计算资源的公平访问，此示例使用中所述的步骤[如何： 管理计划程序实例](../../parallel/concrt/how-to-manage-a-scheduler-instance.md)来创建具有自定义策略的计划程序实例。 自定义策略指定的线程优先级别是最高的优先级类。
+若要提供`printer`类对计算资源的公平访问，此示例使用中所述的步骤[如何：管理计划程序实例](../../parallel/concrt/how-to-manage-a-scheduler-instance.md)来创建具有自定义策略的计划程序实例。 自定义策略指定的线程优先级别是最高的优先级类。
 
 为了说明使用的计划程序的自定义策略的好处，此示例执行整个任务两次。 该示例首先使用默认计划程序来计划这两项任务。 该示例然后使用默认计划程序计划`permutor`对象，并且具有自定义策略来计划的计划程序`printer`对象。
 
@@ -56,4 +56,3 @@ Computing all permutations of 'Grapefruit'...
 
 [计划程序策略](../../parallel/concrt/scheduler-policies.md)<br/>
 [异步代理](../../parallel/concrt/asynchronous-agents.md)
-

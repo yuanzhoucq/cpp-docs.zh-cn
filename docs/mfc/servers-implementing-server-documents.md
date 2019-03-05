@@ -7,12 +7,12 @@ helpviewer_keywords:
 - servers, server documents
 - server documents [MFC], implementing
 ms.assetid: cca1451a-ad09-47ed-b56e-bccd78fc86d1
-ms.openlocfilehash: 17c90eb6350a2bf3cd5b695a99dea954dd89a033
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 17ced1cdb0b40b13fbda68150030efde5735ba7b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50436486"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261864"
 ---
 # <a name="servers-implementing-server-documents"></a>服务器：实现服务器文档
 
@@ -28,7 +28,7 @@ ms.locfileid: "50436486"
 
    `OnGetEmbeddedItem` 容器应用程序的用户创建或编辑嵌入的项时调用。 它应返回一个表示整个文档项。 这应为的对象在`COleServerItem`-派生的类。
 
-1. 重写`Serialize`成员函数以序列化文档的内容。 不需要序列化的服务器项的列表，除非正在使用它们来表示在文档中的本机数据。 有关详细信息，请参阅*实现服务器项*一文中[服务器： 服务器项](../mfc/servers-server-items.md)。
+1. 重写`Serialize`成员函数以序列化文档的内容。 不需要序列化的服务器项的列表，除非正在使用它们来表示在文档中的本机数据。 有关详细信息，请参阅*实现服务器项*一文中[服务器：服务器项](../mfc/servers-server-items.md)。
 
 创建服务器文档时，框架将自动向 OLE 系统 Dll 注册文档。 这样，若要标识服务器文档的 Dll。
 
@@ -39,5 +39,4 @@ ms.locfileid: "50436486"
 [服务器](../mfc/servers.md)<br/>
 [服务器：服务器项](../mfc/servers-server-items.md)<br/>
 [服务器：实现服务器](../mfc/servers-implementing-a-server.md)<br/>
-[服务器：实现就地框架窗口](../mfc/servers-implementing-in-place-frame-windows.md)
-
+[服务器：实现就地框架 Windows](../mfc/servers-implementing-in-place-frame-windows.md)

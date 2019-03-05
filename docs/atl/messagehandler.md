@@ -1,5 +1,5 @@
 ---
-title: 消息处理程序
+title: MessageHandler
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - MessageHandler function
 ms.assetid: 8a0acf97-1b0d-4226-91b9-75446634a03c
-ms.openlocfilehash: 5d7b1af3f96f34be91c9e4616e0ac3a084689b2a
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: deb217e2f889d30ab5c4caa7d9812d5e612dcb62
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693147"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299343"
 ---
-# <a name="messagehandler"></a>消息处理程序
+# <a name="messagehandler"></a>MessageHandler
 
 `MessageHandler` 是由消息映射中的 MESSAGE_HANDLER 宏的第二个参数标识的名称。
 

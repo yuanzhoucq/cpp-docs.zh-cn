@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - vc.codewiz.class.atl.mts.options
 ms.assetid: 2fbe259c-6be1-4d0e-9cfe-721c75c97cb1
-ms.openlocfilehash: 014193f4017aa47b819558cbd4753e6abcffcaaf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0fa649ba41a684be6ed18bd05d48954503c5db16
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562053"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295965"
 ---
 # <a name="com-10-atl-com-10-component-wizard"></a>COM+ 1.0，ATL COM+ 1.0 组件向导
 
@@ -23,7 +23,7 @@ ATL 项目和 ATL COM 类的详细信息，请参阅[ATL COM 桌面组件](../..
 
    |选项|描述|
    |------------|-----------------|
-   |**双**|指定对象支持双重接口 (其 vtable 具有自定义接口函数和后期绑定`IDispatch`方法)。 允许 COM 客户端和自动化控制器都能访问该对象。|
+   |**Dual**|指定对象支持双重接口 (其 vtable 具有自定义接口函数和后期绑定`IDispatch`方法)。 允许 COM 客户端和自动化控制器都能访问该对象。|
    |**自定义**|指定的对象支持自定义界面 （其 vtable 具有自定义接口函数）。 尤其是跨进程边界，可以快于双重接口自定义界面。<br /><br /> - **自动化兼容**将自动化的支持添加到自定义的接口。 对于特性化项目，设置**oleautomation**中组件类的属性。|
 
 - **Queueable**
@@ -37,7 +37,7 @@ ATL 项目和 ATL COM 类的详细信息，请参阅[ATL COM 桌面组件](../..
    |选项|描述|
    |------------|-----------------|
    |**ISupportErrorInfo**|创建支持[ISupportErrorInfo](../../atl/reference/isupporterrorinfoimpl-class.md)接口使对象可以将错误信息返回到客户端。|
-   |**IObjectControl**|提供的三个您对象的访问[IObjectControl](/windows/desktop/api/comsvcs/nn-comsvcs-iobjectcontrol)方法：[激活](/windows/desktop/api/comsvcs/nf-comsvcs-iobjectcontrol-activate)， [CanBePooled](/windows/desktop/api/comsvcs/nf-comsvcs-iobjectcontrol-canbepooled)，以及[停用](/windows/desktop/api/comsvcs/nf-comsvcs-iobjectcontrol-deactivate)。|
+   |**IObjectControl**|提供的三个您对象的访问[IObjectControl](/windows/desktop/api/comsvcs/nn-comsvcs-iobjectcontrol)方法：[激活](/windows/desktop/api/comsvcs/nf-comsvcs-iobjectcontrol-activate)， [CanBePooled](/windows/desktop/api/comsvcs/nf-comsvcs-iobjectcontrol-canbepooled)，和[停用](/windows/desktop/api/comsvcs/nf-comsvcs-iobjectcontrol-deactivate)。|
    |**IObjectConstruct**|创建支持[IObjectConstruct](/windows/desktop/api/comsvcs/nn-comsvcs-iobjectconstruct)界面，可从其他方法或对象的参数中传递管理。|
 
 - **事务**
@@ -55,4 +55,3 @@ ATL 项目和 ATL COM 类的详细信息，请参阅[ATL COM 桌面组件](../..
 
 [ATL COM+ 1.0 组件向导](../../atl/reference/atl-com-plus-1-0-component-wizard.md)<br/>
 [ATL COM + 1.0 组件](../../atl/reference/adding-an-atl-com-plus-1-0-component.md)
-

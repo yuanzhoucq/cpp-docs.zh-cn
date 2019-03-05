@@ -1,5 +1,5 @@
 ---
-title: TN021：命令和消息传送
+title: TN021:命令和消息路由
 ms.date: 06/28/2018
 f1_keywords:
 - vc.routing
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - command routing [MFC], technical note TN021
 - Windows messages [MFC], routing
 ms.assetid: b5952c8b-123e-406c-a36d-a6ac7c6df307
-ms.openlocfilehash: 4a0774234e6314ff6811bbeafa11403f19cf568e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ce8aa2013c8f2f351ca1028f0d6103135ba5ecd8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50635703"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294390"
 ---
-# <a name="tn021-command-and-message-routing"></a>TN021：命令和消息传送
+# <a name="tn021-command-and-message-routing"></a>TN021:命令和消息路由
 
 > [!NOTE]
 >  以下技术说明在首次包括在联机文档中后未更新。 因此，某些过程和主题可能已过时或不正确。 要获得最新信息，建议你在联机文档索引中搜索热点话题。

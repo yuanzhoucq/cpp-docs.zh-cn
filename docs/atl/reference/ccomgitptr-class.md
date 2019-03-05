@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComGITPtr class
 ms.assetid: af895acb-525a-4555-bb67-b241b7df515b
-ms.openlocfilehash: 36ef105b79da51348a61767117b637992e1f8c47
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bf509d027833610e4251c009d4e444dad3fdd5ce
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557165"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296028"
 ---
 # <a name="ccomgitptr-class"></a>CComGITPtr 类
 
@@ -123,7 +123,7 @@ CComGITPtr(CComGITPtr&& rv);
 *p*<br/>
 [in]要存储在全局接口表 (GIT) 中一个接口指针。
 
-*Git*<br/>
+*git*<br/>
 [in]向现有的引用`CComGITPtr`对象。
 
 *dwCookie*<br/>
@@ -231,7 +231,7 @@ CComGITPtr& operator= (CComGITPtr&& rv);
 *p*<br/>
 [in]指向一个接口的指针。
 
-*Git*<br/>
+*git*<br/>
 [in]对引用`CComGITPtr`对象。
 
 *dwCookie*<br/>

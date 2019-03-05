@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - scheduler policies
 ms.assetid: 58fb68bd-4a57-40a8-807b-6edb6f083cd9
-ms.openlocfilehash: df045f7df9d0640b96ae1227c65c65aa7e432350
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e2acfc199e7ad9edf3965dc8ccb4103eb615a66b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668736"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298123"
 ---
 # <a name="scheduler-policies"></a>计划程序策略
 
@@ -49,11 +49,10 @@ ms.locfileid: "50668736"
 
 ## <a name="example"></a>示例
 
-若要查看使用特定计划程序策略来控制计划程序的行为的示例，请参阅[如何： 指定特定的计划程序策略](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md)和[如何： 创建该使用特定计划程序策略的代理](../../parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md).
+若要查看使用特定计划程序策略来控制计划程序的行为的示例，请参阅[如何：指定特定的计划程序策略](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md)和[如何：创建使用特定计划程序策略的代理](../../parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md)。
 
 ## <a name="see-also"></a>请参阅
 
 [任务计划程序](../../parallel/concrt/task-scheduler-concurrency-runtime.md)<br/>
 [如何：指定特定的计划程序策略](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md)<br/>
 [如何：创建使用特定计划程序策略的代理](../../parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md)
-

@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CD2DBitmapBrush [MFC], m_pBitmapBrush
 - CD2DBitmapBrush [MFC], m_pBitmapBrushProperties
 ms.assetid: 46ebbe34-66e0-44c8-af1d-d129e851de5e
-ms.openlocfilehash: 59c4e5f4e55947a4eab7a5258d8fe2b943bab3ff
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1569039db8c1f85d3091282b55d7eda253444deb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50501564"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294403"
 ---
 # <a name="cd2dbitmapbrush-class"></a>CD2DBitmapBrush 类
 
@@ -66,7 +66,7 @@ class CD2DBitmapBrush : public CD2DBrush;
 |名称|描述|
 |----------|-----------------|
 |[CD2DBitmapBrush::CD2DBitmapBrush](#cd2dbitmapbrush)|已重载。 构造一个 CD2DBitmapBrush 对象文件中。|
-|[CD2DBitmapBrush:: ~ CD2DBitmapBrush](#dtor)|析构函数。 当 D2D 位图画笔对象被销毁时调用。|
+|[CD2DBitmapBrush::~CD2DBitmapBrush](#dtor)|析构函数。 当 D2D 位图画笔对象被销毁时调用。|
 
 ### <a name="public-methods"></a>公共方法
 
@@ -120,7 +120,7 @@ class CD2DBitmapBrush : public CD2DBrush;
 
 **标头：** afxrendertarget.h
 
-##  <a name="dtor"></a>  CD2DBitmapBrush:: ~ CD2DBitmapBrush
+##  <a name="dtor"></a>  CD2DBitmapBrush::~CD2DBitmapBrush
 
 析构函数。 当 D2D 位图画笔对象被销毁时调用。
 

@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CArray [MFC], SetAtGrow
 - CArray [MFC], SetSize
 ms.assetid: fead8b00-4cfd-4625-ad0e-251df62ba92f
-ms.openlocfilehash: e97a50b2687029ddff3d946f634e145f6709aa48
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 342eea1d5bcf8adfe9a9ff0e8d915c9155b413ca
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557668"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266128"
 ---
 # <a name="carray-class"></a>CArray 类
 
@@ -81,8 +81,8 @@ class CArray : public CObject
 |名称|描述|
 |----------|-----------------|
 |[CArray::Add](#add)|向数组的末尾添加一个元素；根据需要扩展该数组。|
-|[Carray:: Append](#append)|将另一个数组追加到数组中;如有必要，扩展该数组|
-|[Carray:: Copy](#copy)|将另一个数组复制到该数组；根据需要扩展该数组。|
+|[CArray::Append](#append)|将另一个数组追加到数组中;如有必要，扩展该数组|
+|[CArray::Copy](#copy)|将另一个数组复制到该数组；根据需要扩展该数组。|
 |[CArray::ElementAt](#elementat)|在该数组中返回对元素指针的临时引用。|
 |[CArray::FreeExtra](#freeextra)|若高于当前的上限，则将释放所有未使用的内存。|
 |[CArray::GetAt](#getat)|返回给定索引位置处的值。|
@@ -205,7 +205,7 @@ CArray();
 
 [!code-cpp[NVC_MFCCollections#24](../../mfc/codesnippet/cpp/carray-class_3.cpp)]
 
-##  <a name="copy"></a>  Carray:: Copy
+##  <a name="copy"></a>  CArray::Copy
 
 使用此成员函数将一个数组的元素复制到另一个。
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - memory leaks [MFC], detecting
 - detecting memory leaks [MFC]
 ms.assetid: 229d9de7-a6f3-4cc6-805b-5a9d9b1bfe1d
-ms.openlocfilehash: 5aee7bc2f44e4c2e7851baea554d3069c928088c
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: a110e1345cb970c117de125bd8105e1bc86eaf94
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523424"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288124"
 ---
 # <a name="cmemorystate-structure"></a>CMemoryState 结构
 
@@ -37,10 +37,10 @@ struct CMemoryState
 
 |名称|描述|
 |----------|-----------------|
-|[Cmemorystate:: Checkpoint](#checkpoint)|获取当前内存状态的快照 （检查点）。|
-|[Cmemorystate:: Difference](#difference)|计算两个对象的类型之间的差异`CMemoryState`。|
-|[Cmemorystate:: Dumpallobjectssince](#dumpallobjectssince)|转储自上一个检查点以来的所有当前分配的对象的摘要。|
-|[Cmemorystate:: Dumpstatistics](#dumpstatistics)|打印内存分配的统计信息`CMemoryState`对象。|
+|[CMemoryState::Checkpoint](#checkpoint)|获取当前内存状态的快照 （检查点）。|
+|[CMemoryState::Difference](#difference)|计算两个对象的类型之间的差异`CMemoryState`。|
+|[CMemoryState::DumpAllObjectsSince](#dumpallobjectssince)|转储自上一个检查点以来的所有当前分配的对象的摘要。|
+|[CMemoryState::DumpStatistics](#dumpstatistics)|打印内存分配的统计信息`CMemoryState`对象。|
 
 ## <a name="remarks"></a>备注
 
@@ -75,7 +75,7 @@ struct CMemoryState
 
 **标头：** afx.h
 
-##  <a name="checkpoint"></a>  Cmemorystate:: Checkpoint
+##  <a name="checkpoint"></a>  CMemoryState::Checkpoint
 
 获取快照摘要的内存，并将其存储在此`CMemoryState`对象。
 
@@ -133,7 +133,7 @@ BOOL Difference(
 
   有关示例，请参阅[CMemoryState](#cmemorystate)构造函数。
 
-##  <a name="dumpallobjectssince"></a>  Cmemorystate:: Dumpallobjectssince
+##  <a name="dumpallobjectssince"></a>  CMemoryState::DumpAllObjectsSince
 
 调用`Dump`函数的所有对象类型的派生自类`CObject`的分配 （和仍分配） 自上次[检查点](#checkpoint)调用此`CMemoryState`对象。
 
@@ -149,7 +149,7 @@ void DumpAllObjectsSince() const;
 
   有关示例，请参阅[CMemoryState](#cmemorystate)构造函数。
 
-##  <a name="dumpstatistics"></a>  Cmemorystate:: Dumpstatistics
+##  <a name="dumpstatistics"></a>  CMemoryState::DumpStatistics
 
 将输出从简洁内存统计信息报告`CMemoryState`对象，它由填充[差异](#difference)成员函数。
 
@@ -198,4 +198,3 @@ void DumpStatistics() const;
 ## <a name="see-also"></a>请参阅
 
 [层次结构图](../../mfc/hierarchy-chart.md)
-

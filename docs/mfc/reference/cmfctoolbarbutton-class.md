@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CMFCToolBarButton [MFC], m_nStyle
 - CMFCToolBarButton [MFC], m_strText
 ms.assetid: 8a6ecffb-86b0-4f5c-8211-a9146b463efd
-ms.openlocfilehash: ec5b6692197dc224f503be050a537e6fa265f6d5
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 94d7ba14e01b2965a0fe788162726d1019e847de
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694655"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275228"
 ---
 # <a name="cmfctoolbarbutton-class"></a>CMFCToolBarButton 类
 
@@ -390,7 +390,7 @@ CMFCToolBarButton(
 *bUserButton*<br/>
 [in]一个布尔值，该值确定按钮是否为用户定义。 如果此参数为 TRUE，该按钮是用户定义的。 否则，将从资源加载按钮图像。
 
-*被阻止*<br/>
+*bLocked*<br/>
 [in]一个布尔值，该值确定是否可以自定义按钮。 如果此参数为 TRUE，则不能自定义按钮。 否则，可以自定义按钮。
 
 ##  <a name="comparewith"></a>  CMFCToolBarButton::CompareWith
@@ -479,7 +479,7 @@ virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;
 
 ### <a name="parameters"></a>参数
 
-*MenuButton*<br/>
+*menuButton*<br/>
 [in]对目标菜单按钮的引用。
 
 ### <a name="return-value"></a>返回值
@@ -1085,7 +1085,7 @@ virtual SIZE OnCalculateSize(
 *pDC*<br/>
 [in]所显示的按钮的设备上下文。
 
-*大小*<br/>
+*sizeDefault*<br/>
 [in]按钮的默认大小。
 
 *bHorz*<br/>
@@ -1201,7 +1201,7 @@ virtual BOOL OnContextHelp(CWnd* pWnd);
 
 此方法的默认实现不执行任何操作，返回 FALSE。 重写此方法以返回一个非零值，如果该按钮处理此帮助消息。
 
-WM_HELPHITTEST 消息有关的详细信息，请参阅[TN028： 上下文相关帮助支持](../../mfc/tn028-context-sensitive-help-support.md)。
+WM_HELPHITTEST 消息有关的详细信息，请参阅[TN028:上下文相关帮助支持](../../mfc/tn028-context-sensitive-help-support.md)。
 
 ##  <a name="onctlcolor"></a>  CMFCToolBarButton::OnCtlColor
 
@@ -1449,7 +1449,7 @@ virtual BOOL OnToolHitTest(
 *pWnd*<br/>
 [in]按钮的父窗口。 可以为 NULL。
 
-*PTI*<br/>
+*pTI*<br/>
 [in]一个`TOOLINFO`结构，其中包含有关在工具提示控件中工具的信息。
 
 ### <a name="return-value"></a>返回值
@@ -1582,7 +1582,7 @@ virtual void Serialize(CArchive& ar);
 
 此方法支持数据传输流程，如剪贴板或拖放操作。 它读取或写入如 ID、 文本标签和映像 ID 按钮的属性来自或发往所提供`CArchive`对象。
 
-有关序列化示例，请参阅[序列化： 序列化对象](../../mfc/serialization-serializing-an-object.md)。
+有关序列化示例，请参阅[序列化：将对象序列化为](../../mfc/serialization-serializing-an-object.md)。
 
 ##  <a name="setaccdata"></a>  CMFCToolBarButton::SetACCData
 

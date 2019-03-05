@@ -106,12 +106,12 @@ helpviewer_keywords:
 - CFrameWnd [MFC], m_bAutoMenuEnable
 - CFrameWnd [MFC], rectDefault
 ms.assetid: e2220aba-5bf4-4002-b960-fbcafcad01f1
-ms.openlocfilehash: 3259780d73004c9d1654c26434b55627923cfe23
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 7bdb681754a500ab86538f3397b4c07284b850d0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178787"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300878"
 ---
 # <a name="cframewnd-class"></a>CFrameWnd 类
 
@@ -162,7 +162,7 @@ class CFrameWnd : public CWnd
 |[CFrameWnd::NegotiateBorderSpace](#negotiateborderspace)|协商边框空间的框架窗口中。|
 |[CFrameWnd::OnBarCheck](#onbarcheck)|每当在指定的控件栏上执行某个操作时调用。|
 |[CFrameWnd::OnContextHelp](#oncontexthelp)|处理的就地项的 SHIFT + F1 帮助。|
-|[Cframewnd:: Onsetpreviewmode](#onsetpreviewmode)|执行和跳出执行打印预览模式下设置应用程序的主框架窗口。|
+|[CFrameWnd::OnSetPreviewMode](#onsetpreviewmode)|执行和跳出执行打印预览模式下设置应用程序的主框架窗口。|
 |[CFrameWnd::OnUpdateControlBarMenu](#onupdatecontrolbarmenu)|更新关联的菜单时由框架调用。|
 |[CFrameWnd::RecalcLayout](#recalclayout)|重新定位的控件条`CFrameWnd`对象。|
 |[CFrameWnd::SaveBarState](#savebarstate)|调用以保存控件栏设置。|
@@ -475,7 +475,7 @@ void FloatControlBar(
 *pBar*<br/>
 指向控件条以浮动。
 
-*点*<br/>
+*point*<br/>
 中的位置，屏幕坐标放置控件条的左上的角的位置。
 
 *dwStyle*<br/>
@@ -683,7 +683,7 @@ void InitialUpdateFrame(
 
 ### <a name="parameters"></a>参数
 
-*来写*<br/>
+*pDoc*<br/>
 文档框架窗口所关联到的点。 可以为 NULL。
 
 *bMakeVisible*<br/>
@@ -901,7 +901,7 @@ virtual BOOL OnCreateClient(
 
 ### <a name="parameters"></a>参数
 
-*lpc*<br/>
+*lpcs*<br/>
 指向 Windows [CREATESTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcreatestructa)结构。
 
 *pContext*<br/>
@@ -934,7 +934,7 @@ virtual void OnHideMenuBar();
 
 此事件处理程序使应用程序可以在系统即将隐藏菜单时执行自定义操作。 不能防止菜单上隐藏，但可以例如，调用其他方法来检索菜单样式或状态。
 
-##  <a name="onsetpreviewmode"></a>  Cframewnd:: Onsetpreviewmode
+##  <a name="onsetpreviewmode"></a>  CFrameWnd::OnSetPreviewMode
 
 调用该成员函数以设置应用程序主框架窗口打印预览模式的流入和流出。
 
@@ -1115,7 +1115,7 @@ virtual void SetMenuBarVisibility(DWORD nStyle);
 
 |参数|描述|
 |---------------|-----------------|
-|*nStyle*|[in]指定菜单是隐藏的默认情况下或可见且具有焦点。 *NStyle*参数可以具有以下值：<br /><br />-AFX_MBV_KEEPVISIBLE (0X01)-<br />     菜单显示在任何时候，并且默认情况下没有焦点。<br />-AFX_MBV_DISPLAYONFOCUS (0X02)-<br />     默认情况下隐藏菜单。 如果菜单处于隐藏状态，请按 ALT 键以显示菜单，并为其提供焦点。 如果显示菜单上，则按 ALT 或 ESC 键，若要隐藏菜单。<br />-AFX_MBV_ DISPLAYONFOCUS (0x02) &#124; AFX_MBV_DISPLAYONF10 (0x04)<br />     （按位组合 (OR)）-默认情况下隐藏菜单。 如果菜单处于隐藏状态，请按 F10 键，以显示菜单，并为其提供焦点。 如果显示菜单上，则按 F10 键来切换打开或关闭菜单焦点。 直到按下 ALT 或 ESC 键，可以将其隐藏，则会显示菜单。|
+|*nStyle*|[in]指定菜单是隐藏的默认情况下或可见且具有焦点。 *NStyle*参数可以具有以下值：<br /><br />-AFX_MBV_KEEPVISIBLE (0X01)-<br />     菜单显示在任何时候，并且默认情况下没有焦点。<br />- AFX_MBV_DISPLAYONFOCUS (0x02) -<br />     默认情况下隐藏菜单。 如果菜单处于隐藏状态，请按 ALT 键以显示菜单，并为其提供焦点。 如果显示菜单上，则按 ALT 或 ESC 键，若要隐藏菜单。<br />- AFX_MBV_ DISPLAYONFOCUS (0x02) &#124; AFX_MBV_DISPLAYONF10 (0x04)<br />     （按位组合 (OR)）-默认情况下隐藏菜单。 如果菜单处于隐藏状态，请按 F10 键，以显示菜单，并为其提供焦点。 如果显示菜单上，则按 F10 键来切换打开或关闭菜单焦点。 直到按下 ALT 或 ESC 键，可以将其隐藏，则会显示菜单。|
 
 ### <a name="remarks"></a>备注
 

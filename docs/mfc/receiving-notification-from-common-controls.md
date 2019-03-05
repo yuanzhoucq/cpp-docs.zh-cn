@@ -14,20 +14,20 @@ helpviewer_keywords:
 - Windows common controls [MFC], notifications
 - WM_NOTIFY message
 ms.assetid: 50194592-d60d-44d0-8ab3-338a2a2c63e7
-ms.openlocfilehash: 8813a7f86bde417b48d5ab2d943d296efef5e91c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fb923374866aa8348f9b895c9b97915817564883
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50542644"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57287422"
 ---
 # <a name="receiving-notification-from-common-controls"></a>从公共控件接收通知
 
 公共控件是一系列子窗口，当控件中发生事件（如来自用户的输入）时，它们会将通知消息发送到父窗口。
 
-应用程序依靠这些通知消息来确定用户希望它执行的操作。 最常用的控件将作为 WM_NOTIFY 消息发送通知消息。 Windows 控件发送 WM_COMMAND 消息作为大多数通知消息。 [Cwnd:: Onnotify](../mfc/reference/cwnd-class.md#onnotify)是 WM_NOTIFY 消息的处理程序。 与 `CWnd::OnCommand` 相同，`OnNotify` 的实现会将通知消息调度到 `OnCmdMsg` 以在消息映射中进行处理。 ON_NOTIFY 了处理通知的消息映射项。 有关详细信息，请参阅[技术注意 61： 和 WM_NOTIFY 消息](../mfc/tn061-on-notify-and-wm-notify-messages.md)。
+应用程序依靠这些通知消息来确定用户希望它执行的操作。 最常用的控件将作为 WM_NOTIFY 消息发送通知消息。 Windows 控件发送 WM_COMMAND 消息作为大多数通知消息。 [Cwnd:: Onnotify](../mfc/reference/cwnd-class.md#onnotify)是 WM_NOTIFY 消息的处理程序。 与 `CWnd::OnCommand` 相同，`OnNotify` 的实现会将通知消息调度到 `OnCmdMsg` 以在消息映射中进行处理。 ON_NOTIFY 了处理通知的消息映射项。 有关详细信息，请参阅[技术注意 61:ON_NOTIFY 和 WM_NOTIFY 消息](../mfc/tn061-on-notify-and-wm-notify-messages.md)。
 
-或者，派生类也可以使用“消息反射”处理其自己的通知消息。 有关详细信息，请参阅[技术说明 62: Windows 控件消息反射](../mfc/tn062-message-reflection-for-windows-controls.md)。
+或者，派生类也可以使用“消息反射”处理其自己的通知消息。 有关详细信息，请参阅[技术说明 62:消息反射的 Windows 控件](../mfc/tn062-message-reflection-for-windows-controls.md)。
 
 ## <a name="retrieving-the-cursor-position-in-a-notification-message"></a>在通知消息中检索位置光标
 
@@ -48,4 +48,3 @@ ms.locfileid: "50542644"
 
 [创建和使用控件](../mfc/making-and-using-controls.md)<br/>
 [控件](../mfc/controls-mfc.md)
-
