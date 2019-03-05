@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - reference counting
 ms.assetid: 894a3d7c-2daf-4fd0-8fa4-e6a05bcfb631
-ms.openlocfilehash: 63547405791f7f0391138dd2d23020c62c8a4a28
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 06a0c0e4b650945e10015c3220b926399ec9c6fd
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50655801"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280636"
 ---
 # <a name="ccomobjectrootex-class"></a>CComObjectRootEx 类
 
@@ -52,8 +52,8 @@ class CComObjectRootEx : public CComObjectRootBase
 |[CComObjectRootEx](#ccomobjectrootex)|构造函数。|
 |[InternalAddRef](#internaladdref)|非聚合对象的引用计数会递增。|
 |[InternalRelease](#internalrelease)|递减引用计数的非聚合的对象。|
-|[锁](#lock)|如果线程模型为多线程，获取关键节对象的所有权。|
-|[解锁](#unlock)|如果线程模型为多线程，将释放关键节对象的所有权。|
+|[Lock](#lock)|如果线程模型为多线程，获取关键节对象的所有权。|
+|[Unlock](#unlock)|如果线程模型为多线程，将释放关键节对象的所有权。|
 
 ### <a name="ccomobjectrootbase-methods"></a>CComObjectRootBase 方法
 

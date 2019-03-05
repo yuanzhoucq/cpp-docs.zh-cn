@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - CGlobalHeap class
 ms.assetid: e348d838-3aa7-4bee-a1b3-cd000c99f834
-ms.openlocfilehash: a4bc8b18a1c29049e17576082a30de4a8704eaee
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cba15421fd0329df7a66a35979ed54b863b7cca0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468947"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278296"
 ---
 # <a name="cglobalheap-class"></a>CGlobalHeap 类
 
@@ -37,10 +37,10 @@ class CGlobalHeap : public IAtlMemMgr
 
 |名称|描述|
 |----------|-----------------|
-|[Cglobalheap:: Allocate](#allocate)|调用此方法来分配内存块。|
-|[Cglobalheap:: Free](#free)|调用此方法来释放此内存管理器分配的内存块。|
+|[CGlobalHeap::Allocate](#allocate)|调用此方法来分配内存块。|
+|[CGlobalHeap::Free](#free)|调用此方法来释放此内存管理器分配的内存块。|
 |[CGlobalHeap::GetSize](#getsize)|调用此方法以获取此内存管理器分配的内存块的分配的大小。|
-|[Cglobalheap:: Reallocate](#reallocate)|调用此方法以重新分配由该内存管理器分配的内存。|
+|[CGlobalHeap::Reallocate](#reallocate)|调用此方法以重新分配由该内存管理器分配的内存。|
 
 ## <a name="remarks"></a>备注
 
@@ -63,7 +63,7 @@ class CGlobalHeap : public IAtlMemMgr
 
 **标头：** atlmem.h
 
-##  <a name="allocate"></a>  Cglobalheap:: Allocate
+##  <a name="allocate"></a>  CGlobalHeap::Allocate
 
 调用此方法来分配内存块。
 
@@ -124,7 +124,7 @@ virtual size_t GetSize(void* p) throw();
 
 使用实现[GlobalSize](/windows/desktop/api/winbase/nf-winbase-globalsize)。
 
-##  <a name="reallocate"></a>  Cglobalheap:: Reallocate
+##  <a name="reallocate"></a>  CGlobalHeap::Reallocate
 
 调用此方法以重新分配由该内存管理器分配的内存。
 

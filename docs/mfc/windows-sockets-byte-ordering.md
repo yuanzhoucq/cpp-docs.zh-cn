@@ -6,16 +6,16 @@ helpviewer_keywords:
 - sockets [MFC], byte order issues
 - Windows Sockets [MFC], byte order issues
 ms.assetid: 8a787a65-f9f4-4002-a02f-ac25a5dace5d
-ms.openlocfilehash: 74d3b53ae3ab476ef1224caed91f31929fcce1ff
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ca572ad32a9a46756cacf0221d80b2953b710723
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50453946"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278088"
 ---
 # <a name="windows-sockets-byte-ordering"></a>Windows 套接字：字节排序
 
-本文和两篇配套文章介绍了 Windows 套接字编程中的若干问题。 本文介绍如何字节顺序。 文章中介绍了其他问题： [Windows 套接字： 阻止](../mfc/windows-sockets-blocking.md)并[Windows 套接字： 转换字符串](../mfc/windows-sockets-converting-strings.md)。
+本文和两篇配套文章介绍了 Windows 套接字编程中的若干问题。 本文介绍如何字节顺序。 其他问题的文章中介绍：[Windows 套接字：阻塞](../mfc/windows-sockets-blocking.md)和[Windows 套接字：将字符串转换](../mfc/windows-sockets-converting-strings.md)。
 
 如果使用或派生自类[CAsyncSocket](../mfc/reference/casyncsocket-class.md)，将需要自行管理这些问题。 如果使用或派生自类[CSocket](../mfc/reference/csocket-class.md)，MFC 将为您管理它们。
 
@@ -57,7 +57,7 @@ ms.locfileid: "50453946"
 理想情况下使用 MFC 套接字是编写两个通信端时： 在两端都使用 MFC。 如果你正在编写的应用程序将通信与非 MFC 应用程序，如 FTP 服务器，您可能需要管理字节交换自己之前将数据传递给存档对象中，使用 Windows 套接字转换例程**ntohs**， **ntohl**， **htons**，和**htonl**。 在本文后面部分会显示与非 MFC 应用程序的通信中使用这些函数的示例。
 
 > [!NOTE]
->  如果另一端的通信不是一个 MFC 应用程序，您还必须避免流式处理 c + + 对象派生自`CObject`到您的存档因为接收方将无法再来处理它们。 请参阅中的说明[Windows 套接字： 使用存档使用套接字](../mfc/windows-sockets-using-sockets-with-archives.md)。
+>  如果另一端的通信不是一个 MFC 应用程序，您还必须避免流式处理 c + + 对象派生自`CObject`到您的存档因为接收方将无法再来处理它们。 请参阅中的说明[Windows 套接字：对存档使用套接字](../mfc/windows-sockets-using-sockets-with-archives.md)。
 
 有关字节顺序的详细信息，请参阅 Windows SDK 中提供的 Windows 套接字规范。
 
@@ -98,15 +98,14 @@ C + +**结构**是作为类实质上是相同的操作。 `Message`结构可以�
 
 有关详细信息，请参见:
 
-- [Windows 套接字：使用 CAsyncSocket 类](../mfc/windows-sockets-using-class-casyncsocket.md)
+- [Windows 套接字：使用类 CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
 
 - [Windows 套接字：背景](../mfc/windows-sockets-background.md)
 
-- [Windows 套接字：流套接字](../mfc/windows-sockets-stream-sockets.md)
+- [Windows 套接字：Stream 套接字](../mfc/windows-sockets-stream-sockets.md)
 
 - [Windows 套接字：数据报套接字](../mfc/windows-sockets-datagram-sockets.md)
 
 ## <a name="see-also"></a>请参阅
 
 [MFC 中的 Windows 套接字](../mfc/windows-sockets-in-mfc.md)
-

@@ -64,12 +64,12 @@ f1_keywords:
 helpviewer_keywords:
 - AFX messages [MFC]
 ms.assetid: 3d601f3c-af6d-47d3-8553-34f1318fa74f
-ms.openlocfilehash: 45c6a9174cbd39c4c0c24ffbdfdefb9d184a3cc1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5caf40fc757e2c5c90c06e1698ce4c15d1ed6240
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50594683"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284731"
 ---
 # <a name="afx-messages"></a>AFX 消息
 
@@ -81,7 +81,7 @@ ms.locfileid: "50594683"
 
 ||||||
 |-|-|-|-|-|
-|消息|描述|[in]*wParam*|*lParam* （所有参数都是 [in] 除非另有说明。）|返回值|
+|消息|描述|[in] *wParam*|*lParam* （所有参数都是 [in] 除非另有说明。）|返回值|
 |AFX_WM_ACCGETOBJECT|未使用。|未使用。|不适用。|不适用。|
 |AFX_WM_ACCGETSTATE|用于可访问性支持。 发送到此消息`CMFCPopupMenu`或`CMFCRibbonPanelMenu`检索当前元素的状态。|元素，它可能是菜单按钮或分隔符的索引。|未使用。|元素状态。 如果该索引不存在，则为-1 如果菜单按钮没有任何特殊属性，则为 0。 否则，它是以下标志的组合：<br /><br /> TBBS_DISABLED — 项被禁用<br /><br /> TBBS_CHECKED — 项处于选中状态<br /><br /> TBBS_BUTTON，表明它是标准按键<br /><br /> TBBS_PRESSED — 按下按钮<br /><br /> TBBS_INDETERMINATE-未定义的状态<br /><br /> TBBS_SEPARATOR-而不是一个菜单按钮，此元素窗体的其他菜单项之间的分离|
 |AFX_WM_CHANGE_ACTIVE_TAB|该框架将此消息发送到可调整大小的控件栏控件。 处理此消息以接收来自通知`CMFCTabCtrl`对象时用户更改活动选项卡。|选项卡的索引。|未使用。|非零值。|
@@ -117,7 +117,7 @@ ms.locfileid: "50594683"
 |AFX_WM_RESETKEYBOARD|框架将此消息发送到主框架窗口，用户自定义期间重置所有键盘快捷键。|未使用。|未使用。|未使用。|
 |AFX_WM_RESETMENU|该框架将此消息发送到菜单所有者 （框架窗口） 时用户将重置应用程序框架菜单自定义期间|菜单资源 id。|未使用。|未使用。|
 |AFX_WM_RESETPROMPT|当一个工具栏，从工具栏中的用户重置自定义对话框时，框架将发送此消息。 默认处理程序会显示一个消息框，询问用户是否想要重置此工具栏。|未使用。|未使用。|未使用。|
-|AFX_WM_RESETTOOLBAR|一个`CMFCToolBar`对象将发送此消息，工具栏将还原到其原始状态，也就是说，从资源中加载时。 处理此消息以重新插入工具栏按钮的类派生自`CMFCToolbarButton`。 有关详细信息，请参阅 `CMFCToolbarComboBoxButton` 。|已还原其状态的工具栏资源 ID。|未使用。|为零。|
+|AFX_WM_RESETTOOLBAR|一个`CMFCToolBar`对象将发送此消息，工具栏将还原到其原始状态，也就是说，从资源中加载时。 处理此消息以重新插入工具栏按钮的类派生自`CMFCToolbarButton`。 有关详细信息，请参阅 `CMFCToolbarComboBoxButton`。|已还原其状态的工具栏资源 ID。|未使用。|为零。|
 |AFX_WM_SHOWREGULARMENU|`CMFCToolbarMenuButton` 当用户单击常规菜单按钮时，对象会将此消息发送给其所有者。 处理此消息，则使用每次`CMFCToolbarMenuButton`用户单击按钮时显示弹出菜单。|将消息发送的按钮命令 ID。|光标的屏幕坐标。 低序位字指定的 x 坐标。 高序位字指定的 y 坐标。|未使用。|
 |AFX_WM_TOOLBARMENU|当用户释放鼠标右键，鼠标指针位于客户端或窗格的非工作区中，发送到主框架窗口。|未使用。|鼠标指针屏幕坐标。 低序位字指定的 x 坐标。 高序位字指定的 y 坐标。|如果应用程序处理此消息; 则为零否则为，为非零值。|
 |AFX_WM_UPDATETOOLTIPS|发送给所有工具提示所有者以指明其工具提示控件应重新创建。|应处理此消息的控件的类型。 请参阅后面本主题有关的可能值列表的表。|未使用。|未使用。|
@@ -127,7 +127,7 @@ ms.locfileid: "50594683"
 
 |||
 |-|-|
-|“值”|含义|
+|值|含义|
 |SB_ENDSCROLL|用户结束滚动。|
 |SB_LEFT|在用户滚动到左上方。|
 |SB_RIGHT|在用户滚动到右下角。|

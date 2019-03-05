@@ -8,12 +8,12 @@ helpviewer_keywords:
 - threading [ATL], free threaded marshaler
 - FTM in ATL
 ms.assetid: 2db88a13-2217-4ebc-aa7e-432d5da902eb
-ms.openlocfilehash: b9baff9af10cd785554e849854556a9aa3bd7ca4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ddea5a74dbd40d097398d04c0b2bc274df5ec972
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50621840"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299993"
 ---
 # <a name="atl-and-the-free-threaded-marshaler"></a>ATL 和自由线程封送拆收器
 
@@ -32,4 +32,3 @@ ATL 简单对象向导的属性页提供了一个允许您的类聚合自由线�
 [IMarshal](/windows/desktop/api/objidlbase/nn-objidlbase-imarshal)<br/>
 [何时使用全局接口表](/windows/desktop/com/when-to-use-the-global-interface-table)<br/>
 [进程内服务器线程处理问题](/windows/desktop/com/in-process-server-threading-issues)
-

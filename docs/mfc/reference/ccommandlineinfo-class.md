@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CCommandLineInfo [MFC], m_strPrinterName
 - CCommandLineInfo [MFC], m_strRestartIdentifier
 ms.assetid: 3e313ddb-0a82-4991-87ac-a27feff4668c
-ms.openlocfilehash: 60c0ae66234d5fb3be61d9249cf61ee77dff41ad
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6e4b535da00fdcecf4ce52fad696cb5d2bc55efa
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481466"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303022"
 ---
 # <a name="ccommandlineinfo-class"></a>CCommandLineInfo 类
 
@@ -83,13 +83,13 @@ MFC 应用程序通常将创建此类中的本地实例[InitInstance](../../mfc/
 |----------------------------|----------------------|
 |*app*|新的文件。|
 |*应用*文件名|打开文件。|
-|*应用程序*`/p`文件名|打印到默认打印机的文件。|
+|*app* `/p` filename|打印到默认打印机的文件。|
 |*应用程序*`/pt`文件名打印机驱动程序端口|到指定的打印机的打印文件。|
-|*应用程序* `/dde`|启动和 await DDE 命令。|
-|*应用程序* `/Automation`|OLE 自动化服务器启动。|
-|*应用程序* `/Embedding`|启动编辑嵌入的 OLE 项。|
-|*应用程序* `/Register`<br /><br /> *应用程序* `/Regserver`|通知应用程序执行注册的任何任务。|
-|*应用程序* `/Unregister`<br /><br /> *应用程序* `/Unregserver`|通知应用程序执行任何取消注册的任务。|
+|*app* `/dde`|启动和 await DDE 命令。|
+|*app* `/Automation`|OLE 自动化服务器启动。|
+|*app* `/Embedding`|启动编辑嵌入的 OLE 项。|
+|*app* `/Register`<br /><br /> *app* `/Regserver`|通知应用程序执行注册的任何任务。|
+|*app* `/Unregister`<br /><br /> *app* `/Unregserver`|通知应用程序执行任何取消注册的任务。|
 
 类派生新类从`CCommandLineInfo`以处理其他标志和参数值。 重写[ParseParam](#parseparam)来处理新的标志。
 
@@ -293,7 +293,7 @@ virtual void ParseParam(
 *bFlag*<br/>
 指示是否*pszParam*是参数还是一个标志。
 
-*冲击*<br/>
+*bLast*<br/>
 指示这是最后一个参数或在命令行上的标志。
 
 ### <a name="remarks"></a>备注
@@ -306,13 +306,13 @@ virtual void ParseParam(
 |----------------------------|----------------------|
 |*app*|新的文件。|
 |*应用*文件名|打开文件。|
-|*应用程序*`/p`文件名|打印到默认打印机的文件。|
+|*app* `/p` filename|打印到默认打印机的文件。|
 |*应用程序*`/pt`文件名打印机驱动程序端口|到指定的打印机的打印文件。|
-|*应用程序* `/dde`|启动和 await DDE 命令。|
-|*应用程序* `/Automation`|OLE 自动化服务器启动。|
-|*应用程序* `/Embedding`|启动编辑嵌入的 OLE 项。|
-|*应用程序* `/Register`<br /><br /> *应用程序* `/Regserver`|通知应用程序执行注册的任何任务。|
-|*应用程序* `/Unregister`<br /><br /> *应用程序* `/Unregserver`|通知应用程序执行任何取消注册的任务。|
+|*app* `/dde`|启动和 await DDE 命令。|
+|*app* `/Automation`|OLE 自动化服务器启动。|
+|*app* `/Embedding`|启动编辑嵌入的 OLE 项。|
+|*app* `/Register`<br /><br /> *app* `/Regserver`|通知应用程序执行注册的任何任务。|
+|*app* `/Unregister`<br /><br /> *app* `/Unregserver`|通知应用程序执行任何取消注册的任务。|
 
 此信息存储在[m_bRunAutomated](#m_brunautomated)， [m_bRunEmbedded](#m_brunembedded)，并[m_nShellCommand](#m_nshellcommand)。 标志标记由正斜杠 '  **/** 或连字符**-**。
 
@@ -328,4 +328,3 @@ virtual void ParseParam(
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>
 [CWinApp::ParseCommandLine](../../mfc/reference/cwinapp-class.md#parsecommandline)<br/>
 [CWinApp::ProcessShellCommand](../../mfc/reference/cwinapp-class.md#processshellcommand)
-

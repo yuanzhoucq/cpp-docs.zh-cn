@@ -120,12 +120,12 @@ helpviewer_keywords:
 - CDocument [MFC], m_clrRichPreviewTextColor
 - CDocument [MFC], m_lfRichPreviewFont
 ms.assetid: e5a2891d-e1e1-4599-8c7e-afa9b4945446
-ms.openlocfilehash: e84ceb11ad789ef3bd6933292030ef2af6f1d817
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b7358c2206c15660b9ffb283802283ee71e57f03
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50609308"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299070"
 ---
 # <a name="cdocument-class"></a>CDocument 类
 
@@ -734,7 +734,7 @@ virtual void OnDocumentEvent(DocumentEvent deEvent);
 
 下表列出了可能的值为*deEvent*以及与其对应的事件。
 
-|“值”|相应的事件|
+|值|相应的事件|
 |-----------|-------------------------|
 |`onAfterNewDocument`|已创建新文档。|
 |`onAfterOpenDocument`|打开一个新的文档。|

@@ -17,16 +17,17 @@ f1_keywords:
 helpviewer_keywords:
 - source_link_manager class
 ms.assetid: 287487cf-e0fe-4c35-aa3c-24f081d1ddae
-ms.openlocfilehash: 881b4f15c7238e69a91def08e5d20ad8955ec4e6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d4979eaf9065183be646be72cfdd5a94500edf55
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50545985"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295196"
 ---
 # <a name="sourcelinkmanager-class"></a>source_link_manager 类
 
-`source_link_manager` 对象管理到 `ISource` 块的消息块网络链接。
+
+  `source_link_manager` 对象管理到 `ISource` 块的消息块网络链接。
 
 ## <a name="syntax"></a>语法
 
@@ -64,7 +65,7 @@ class source_link_manager;
 |----------|-----------------|
 |[add](#add)|添加源链接到`source_link_manager`对象。|
 |[begin](#begin)|返回一个迭代器中的第一个元素到`source_link_manager`对象。|
-|[包含](#contains)|搜索`network_link_registry`在此`source_link_manager`指定块的对象。|
+|[contains](#contains)|搜索`network_link_registry`在此`source_link_manager`指定块的对象。|
 |[count](#count)|中的链接块的计数`source_link_manager`对象。|
 |[reference](#reference)|获取引用上`source_link_manager`对象。|
 |[register_target_block](#register_target_block)|注册持有此目标块`source_link_manager`对象。|
@@ -86,7 +87,7 @@ class source_link_manager;
 
 **命名空间：** 并发
 
-##  <a name="add"></a> 添加
+##  <a name="add"></a> add
 
 添加源链接到`source_link_manager`对象。
 
@@ -96,10 +97,10 @@ void add(_EType _Link);
 
 ### <a name="parameters"></a>参数
 
-*链接 （_l)*<br/>
+*_Link*<br/>
 指向要添加的块的指针。
 
-##  <a name="begin"></a> 开始
+##  <a name="begin"></a> begin
 
 返回一个迭代器中的第一个元素到`source_link_manager`对象。
 
@@ -125,14 +126,14 @@ bool contains(_EType _Link);
 
 ### <a name="parameters"></a>参数
 
-*链接 （_l)*<br/>
+*_Link*<br/>
 指向要在其中搜索中的块的指针`source_link_manager`对象。
 
 ### <a name="return-value"></a>返回值
 
 **true**如果未找到指定的块， **false**否则为。
 
-##  <a name="count"></a> 计数
+##  <a name="count"></a> count
 
 中的链接块的计数`source_link_manager`对象。
 
@@ -183,7 +184,7 @@ bool remove(_EType _Link);
 
 ### <a name="parameters"></a>参数
 
-*链接 （_l)*<br/>
+*_Link*<br/>
 指向块被删除，如果找到。
 
 ### <a name="return-value"></a>返回值

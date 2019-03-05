@@ -36,12 +36,12 @@ helpviewer_keywords:
 - CStatusBar [MFC], SetPaneStyle
 - CStatusBar [MFC], SetPaneText
 ms.assetid: a3bde3db-e71c-4881-a3ca-1d5481c345ba
-ms.openlocfilehash: 70d700197e3d249812e8b09a2cba744a0fbc9803
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e7aa577d237c1800ca9df3f0af4c44acdaae9ae2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50649275"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279492"
 ---
 # <a name="cstatusbar-class"></a>CStatusBar 类
 
@@ -108,7 +108,7 @@ class CStatusBar : public CControlBar
 
 调用[SetPaneStyle](#setpanestyle)更新状态栏窗格的样式。
 
-有关使用的详细信息`CStatusBar`，请参阅文章[MFC 中的状态栏实现](../../mfc/status-bar-implementation-in-mfc.md)并[技术说明 31： 控件条](../../mfc/tn031-control-bars.md)。
+有关使用的详细信息`CStatusBar`，请参阅文章[MFC 中的状态栏实现](../../mfc/status-bar-implementation-in-mfc.md)和[技术说明 31:控件条](../../mfc/tn031-control-bars.md)。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - ATL Project Wizard, application settings
 ms.assetid: d48c9fc5-f439-49fd-884c-8bcfa7d52991
-ms.openlocfilehash: e026db8c1d2caacd9af15fb923d194750c9d8217
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bd9d5c6ef1ccb86f2968b1e2d2706092b6db45e9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50622126"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271809"
 ---
 # <a name="application-settings-atl-project-wizard"></a>应用程序设置，ATL 项目向导
 
@@ -29,7 +29,7 @@ ms.locfileid: "50622126"
 
    选择此选项可以创建本地进程外服务器。 此选项不允许对 MFC 或 COM + 1.0 的支持。 它不允许为合并代理/存根 （stub） 代码。
 
-- **服务 (EXE)**
+- **Service (EXE)**
 
    选择此项可创建 Windows 启动时在后台运行的 Windows 应用程序。 此选项不允许对 MFC 或 COM + 1.0 的支持或不允许合并代理/存根 （stub） 代码。
 
@@ -61,4 +61,3 @@ ms.locfileid: "50622126"
 [ATL 项目向导](../../atl/reference/atl-project-wizard.md)<br/>
 [创建 ATL 项目](../../atl/reference/creating-an-atl-project.md)<br/>
 [默认 ATL 项目配置](../../atl/reference/default-atl-project-configurations.md)
-

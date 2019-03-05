@@ -1,5 +1,5 @@
 ---
-title: TN031：控件条
+title: TN031:控件条
 ms.date: 11/04/2016
 f1_keywords:
 - vc.controls.bars
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - TN031
 - styles [MFC], control bars
 ms.assetid: 8cb895c0-40ea-40ef-90ee-1dd29f34cfd1
-ms.openlocfilehash: 9029b8c0fb6aa20de62dbdf21aedeae6d8a15994
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 07178597e66975a006a0ea5293192ee7ea099e42
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463295"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57286460"
 ---
-# <a name="tn031-control-bars"></a>TN031：控件条
+# <a name="tn031-control-bars"></a>TN031:控件条
 
 > [!NOTE]
 >  以下技术说明在首次包括在联机文档中后未更新。 因此，某些过程和主题可能已过时或不正确。 要获得最新信息，建议你在联机文档索引中搜索热点话题。
@@ -120,9 +120,9 @@ MFC 私有 Windows 消息，包括 WM_SIZEPARENT，记录在[技术说明 24](..
 
 ON_UPDATE_COMMAND_UI 处理程序可以调用：
 
-- `Enable`： 若要启用或禁用此窗格。 禁用窗格看上去与启用窗格完全一样，但文本不可见（即，禁用了文本指示器）。
+- `Enable`：若要启用或禁用此窗格。 禁用窗格看上去与启用窗格完全一样，但文本不可见（即，禁用了文本指示器）。
 
-- `SetText`： 若要更改的文本。 请慎用此设置，因为此窗格不会自动重设大小。
+- `SetText`：若要更改的文本。 请慎用此设置，因为此窗格不会自动重设大小。
 
 有关创建 [和自定义 API 的详细信息，请参阅](../mfc/reference/cstatusbar-class.md) 类库参考 *中的* CStatusBar `CStatusBar` 类。 状态栏的大部分自定义应在状态栏最初可见之前完成。
 
@@ -165,11 +165,11 @@ ON_UPDATE_COMMAND_UI 处理程序可以调用：
 
 ON_UPDATE_COMMAND_UI 处理程序可以调用：
 
-- `Enable`： 若要启用或禁用的按钮。 这对按键和复选框按钮同样起作用。
+- `Enable`：若要启用或禁用的按钮。 这对按键和复选框按钮同样起作用。
 
-- `SetCheck`：设置按钮的复选状态。 为工具栏按钮调用此会将该按钮转换为复选框按钮。 `SetCheck` 将采用可以为 0（未选中）、1（已选中）或 2（不确定）的参数
+- `SetCheck`：若要设置按钮的复选状态。 为工具栏按钮调用此会将该按钮转换为复选框按钮。 `SetCheck` 将采用可以为 0（未选中）、1（已选中）或 2（不确定）的参数
 
-- `SetRadio`： `SetCheck`的速记。
+- `SetRadio`：简写形式`SetCheck`。
 
 复选框按钮为“自动”复选框按钮；也就是说，如果用户按它们，则它们将立即更改状态。 “已选中”是按下状态。 无内置用户界面方式将按钮更改为“不确定”状态；此操作必须通过代码来完成。
 
@@ -179,13 +179,13 @@ ON_UPDATE_COMMAND_UI 处理程序可以调用：
 
 用于显示状态的工具栏按钮样式（TBBS_ 值）有 4 种：
 
-- TBBS_CHECKED：   复选框当前处于选中状态（按下）。
+- TBBS_CHECKED: 当前选中复选框状态 （按下）。
 
-- TBBS_INDETERMINATE：   复选框的状态当前不确定。
+- TBBS_INDETERMINATE: 复选框处于当前不确定。
 
-- TBBS_DISABLED：   当前已禁用按钮。
+- TBBS_DISABLED: 当前已禁用按钮。
 
-- TBBS_PRESSED：   当前已按下按钮。
+- TBBS_PRESSED: 当前按下按钮。
 
 下列 TBBS 值表示的是 6 种正式的 Windows 界面应用程序设计指南按钮样式：
 
@@ -197,7 +197,7 @@ ON_UPDATE_COMMAND_UI 处理程序可以调用：
 
 - 按下 = TBBS_CHECKED
 
-- 已禁用 = TBBS_CHECKED &#124; TBBS_DISABLED
+- Down Disabled = TBBS_CHECKED &#124; TBBS_DISABLED
 
 - 不确定 = TBBS_INDETERMINATE
 
@@ -227,4 +227,3 @@ ON_UPDATE_COMMAND_UI 处理程序可以调用：
 
 [按编号列出的技术说明](../mfc/technical-notes-by-number.md)<br/>
 [按类别列出的技术说明](../mfc/technical-notes-by-category.md)
-

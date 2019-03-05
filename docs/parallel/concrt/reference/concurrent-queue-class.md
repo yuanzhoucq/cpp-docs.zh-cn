@@ -16,16 +16,17 @@ f1_keywords:
 helpviewer_keywords:
 - concurrent_queue class
 ms.assetid: c2218996-d0ea-40e9-b002-e9a15b085f51
-ms.openlocfilehash: 36e4b5956e0739b44481fbabe6114c9648e7b229
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d5bbd361dc2dedc24c2a59050ffa680517186494
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477085"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304686"
 ---
 # <a name="concurrentqueue-class"></a>concurrent_queue 类
 
-`concurrent_queue` 类是允许对其元素进行先进先出访问的序列容器类。 它支持一组有限的并发安全操作，例如 `push` 和 `try_pop`。
+
+  `concurrent_queue` 类是允许对其元素进行先进先出访问的序列容器类。 它支持一组有限的并发安全操作，例如 `push` 和 `try_pop`。
 
 ## <a name="syntax"></a>语法
 
@@ -131,10 +132,10 @@ concurrent_queue(_InputIterator _Begin,
 *_OtherQ*<br/>
 要从中复制或移动元素的源 `concurrent_queue` 对象。
 
-*（_b)*<br/>
+*_Begin*<br/>
 要复制的元素范围内的第一个元素的位置。
 
-*（_e)*<br/>
+*_End*<br/>
 要复制的元素范围外的第一个元素的位置。
 
 ### <a name="remarks"></a>备注
@@ -157,7 +158,7 @@ concurrent_queue(_InputIterator _Begin,
 ~concurrent_queue();
 ```
 
-##  <a name="empty"></a> 为空
+##  <a name="empty"></a> empty
 
 调用此方法测试是否在并发队列为空。 此方法是并发安全的。
 
@@ -185,7 +186,7 @@ allocator_type get_allocator() const;
 
 用于构造并发队列的分配器的副本。
 
-##  <a name="push"></a> 推送
+##  <a name="push"></a> push
 
 排入队列的并发队列的结尾处的项。 此方法是并发安全的。
 

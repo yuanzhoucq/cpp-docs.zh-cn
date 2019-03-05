@@ -311,12 +311,12 @@ helpviewer_keywords:
 - CMFCToolBar [MFC], m_bDontScaleImages
 - CMFCToolBar [MFC], m_dblLargeImageRatio
 ms.assetid: e7679c01-fb94-44c0-98c6-3af955292fb5
-ms.openlocfilehash: 98de92a9473d64a87b9b7a9f2891adf4263e1951
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 1f92afa4f40a5a37f32e1bc86418056c8591625f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178962"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283132"
 ---
 # <a name="cmfctoolbar-class"></a>CMFCToolBar 类
 
@@ -365,7 +365,7 @@ class CMFCToolBar : public CMFCBaseToolBar
 |[CMFCToolBar::Create](#create)|创建一个 `CMFCToolBar` 对象。|
 |[CMFCToolBar::CreateEx](#createex)|创建`CMFCToolBar`使用其他样式选项，如大图标的对象。|
 |[CMFCToolBar::Deactivate](#deactivate)|工具栏将停用。|
-|[Cmfctoolbar:: Enablecustomizebutton](#enablecustomizebutton)|启用或禁用**添加或删除按钮**工具栏在端上显示的按钮。|
+|[CMFCToolBar::EnableCustomizeButton](#enablecustomizebutton)|启用或禁用**添加或删除按钮**工具栏在端上显示的按钮。|
 |[CMFCToolBar::EnableDocking](#enabledocking)|启用窗格的停靠到主框架。 (重写[CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking)。)|
 |[CMFCToolBar::EnableLargeIcons](#enablelargeicons)|启用或禁用工具栏按钮上的大图标。|
 |[CMFCToolBar::EnableQuickCustomization](#enablequickcustomization)|启用或禁用工具栏的快速自定义项，以便用户能够按**Alt**密钥，然后将按钮拖动到新位置。|
@@ -439,14 +439,14 @@ class CMFCToolBar : public CMFCBaseToolBar
 |[CMFCToolBar::IsLargeIcons](#islargeicons)|指定应用程序中的工具栏是否当前显示大图标。|
 |[CMFCToolBar::IsLastCommandFromButton](#islastcommandfrombutton)|确定是否最近执行的命令从指定的工具栏按钮发送。|
 |[CMFCToolBar::IsLocked](#islocked)|确定工具栏是否已锁定。|
-|[Cmfctoolbar:: Isonerowwithsibling](#isonerowwithsibling)|确定工具栏和其同级工具栏是否定位于同一行。|
+|[CMFCToolBar::IsOneRowWithSibling](#isonerowwithsibling)|确定工具栏和其同级工具栏是否定位于同一行。|
 |[CMFCToolBar::IsUserDefined](#isuserdefined)|指定工具栏是用户定义。|
 |[CMFCToolBar::LoadBitmap](#loadbitmap)|从应用程序资源加载工具栏图像。|
 |[CMFCToolBar::LoadBitmapEx](#loadbitmapex)|从应用程序资源加载工具栏图像。 包含图像的大小。|
 |[CMFCToolBar::LoadParameters](#loadparameters)|从 Windows 注册表加载全局工具栏选项。|
 |[CMFCToolBar::LoadState](#loadstate)|从 Windows 注册表加载工具栏状态信息。 (重写[CPane::LoadState](../../mfc/reference/cpane-class.md#loadstate)。)|
 |[CMFCToolBar::LoadToolBar](#loadtoolbar)|从应用程序资源加载工具栏。|
-|[Cmfctoolbar:: Loadtoolbarex](#loadtoolbarex)|通过使用从应用程序资源加载工具栏`CMFCToolBarInfo`帮助器类，以使应用程序使用大图像。|
+|[CMFCToolBar::LoadToolBarEx](#loadtoolbarex)|通过使用从应用程序资源加载工具栏`CMFCToolBarInfo`帮助器类，以使应用程序使用大图像。|
 |[CMFCToolBar::OnChangeHot](#onchangehot)|当用户选择工具栏上的按钮时由框架调用。|
 |[CMFCToolBar::OnFillBackground](#onfillbackground)|由框架从调用[CBasePane::DoPaint](../../mfc/reference/cbasepane-class.md#dopaint)以填充工具栏背景。|
 |[CMFCToolBar::OnReset](#onreset)|将工具栏还原到其原始状态。|
@@ -477,14 +477,14 @@ class CMFCToolBar : public CMFCBaseToolBar
 |[CMFCToolBar::SetLockedSizes](#setlockedsizes)|设置工具栏上的锁定的按钮和锁定的图像的大小。|
 |[CMFCToolBar::SetMenuSizes](#setmenusizes)|设置工具栏菜单按钮及其映像的大小。|
 |[CMFCToolBar::SetNonPermittedCommands](#setnonpermittedcommands)|设置的用户不能执行的命令的列表。|
-|[Cmfctoolbar:: Setonerowwithsibling](#setonerowwithsibling)|工具栏和其同级放置在同一行上。|
+|[CMFCToolBar::SetOneRowWithSibling](#setonerowwithsibling)|工具栏和其同级放置在同一行上。|
 |[CMFCToolBar::SetPermament](#setpermament)|指定用户是否可以关闭工具栏。|
 |[CMFCToolBar::SetRouteCommandsViaFrame](#setroutecommandsviaframe)|指定是否与父框架或所有者将命令发送到工具栏。|
 |[CMFCToolBar::SetShowTooltips](#setshowtooltips)|指定框架是否显示工具提示。|
-|[Cmfctoolbar:: Setsiblingtoolbar](#setsiblingtoolbar)|指定工具栏的同级。|
+|[CMFCToolBar::SetSiblingToolBar](#setsiblingtoolbar)|指定工具栏的同级。|
 |[CMFCToolBar::SetSizes](#setsizes)|指定所有工具栏按钮和图像的大小。|
 |[CMFCToolBar::SetToolBarBtnText](#settoolbarbtntext)|在工具栏上，指定按钮的属性。|
-|[Cmfctoolbar:: Settworowswithsibling](#settworowswithsibling)|工具栏和其同级放置在单独的行。|
+|[CMFCToolBar::SetTwoRowsWithSibling](#settworowswithsibling)|工具栏和其同级放置在单独的行。|
 |[CMFCToolBar::SetUserImages](#setuserimages)|在应用程序中设置用户定义的映像的集合。|
 |[CMFCToolBar::StretchPane](#stretchpane)|垂直或水平拉伸工具栏。 (重写[cbasepane:: Stretchpane](../../mfc/reference/cbasepane-class.md#stretchpane)。)|
 |[CMFCToolBar::TranslateChar](#translatechar)|如果指定的键代码对应于有效的键盘快捷方式，执行按钮命令。|
@@ -519,7 +519,7 @@ class CMFCToolBar : public CMFCBaseToolBar
 
 1. 调用[CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking)指定停靠样式。
 
-若要插入的特殊按钮，如组合框或下拉工具栏中，保留在父资源中，虚拟按钮并通过使用来替换在运行时将虚拟按钮[CMFCToolBar::ReplaceButton](#replacebutton)。 有关详细信息，请参阅[演练：将控件置于工具栏上](../walkthrough-putting-controls-on-toolbars.md)。
+若要插入的特殊按钮，如组合框或下拉工具栏中，保留在父资源中，虚拟按钮并通过使用来替换在运行时将虚拟按钮[CMFCToolBar::ReplaceButton](#replacebutton)。 有关详细信息，请参见[演练：将控件置于工具栏上](../walkthrough-putting-controls-on-toolbars.md)。
 
 `CMFCToolBar` 是的 MFC 库类的基类[CMFCMenuBar 类](../../mfc/reference/cmfcmenubar-class.md)， [CMFCPopupMenuBar 类](../../mfc/reference/cmfcpopupmenubar-class.md)，并[CMFCDropDownToolBar 类](../../mfc/reference/cmfcdropdowntoolbar-class.md)。
 
@@ -1135,7 +1135,7 @@ virtual void DrawSeparator(
 
 此方法在派生类中的重写[CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md)以自定义工具栏上的分隔符的外观。 默认实现调用[CMFCVisualManager::OnDrawSeparator](../../mfc/reference/cmfcvisualmanager-class.md#ondrawseparator)来绘制其外观由当前视觉管理器的分隔符。
 
-##  <a name="enablecustomizebutton"></a>  Cmfctoolbar:: Enablecustomizebutton
+##  <a name="enablecustomizebutton"></a>  CMFCToolBar::EnableCustomizeButton
 
 启用或禁用显示在工具栏的自定义按钮。
 
@@ -2146,7 +2146,7 @@ virtual int HitTest(CPoint point);
 
 ### <a name="parameters"></a>参数
 
-*点*<br/>
+*point*<br/>
 [in]要在工作区坐标中测试的点。
 
 ### <a name="return-value"></a>返回值
@@ -2169,7 +2169,7 @@ virtual int InsertButton(
 
 ### <a name="parameters"></a>参数
 
-*按钮*<br/>
+*button*<br/>
 [in]指定要插入的按钮。
 
 *iInsertAt*<br/>
@@ -2511,7 +2511,7 @@ BOOL IsLocked() const;
 
 锁定的工具栏使用单独的映像列表。 有关这些图像列表的详细信息，请参阅[CMFCToolBar::LoadBitmapEx](#loadbitmapex)。
 
-##  <a name="isonerowwithsibling"></a>  Cmfctoolbar:: Isonerowwithsibling
+##  <a name="isonerowwithsibling"></a>  CMFCToolBar::IsOneRowWithSibling
 
 确定工具栏和其同级工具栏是否定位于同一行。
 
@@ -2586,7 +2586,7 @@ virtual BOOL LoadBitmap(
 *uiMenuResID*<br/>
 [in]用于引用常规菜单图像的位图资源 ID。
 
-*被阻止*<br/>
+*bLocked*<br/>
 [in]为 TRUE，则锁定工具栏;否则为 FALSE。
 
 *uiDisabledResID*<br/>
@@ -2615,8 +2615,8 @@ virtual BOOL LoadBitmapEx(
 
 ### <a name="parameters"></a>参数
 
-[in]*params*<br/>
-[in]*阻止*<br/>
+[in] *params*<br/>
+[in] *bLocked*<br/>
 
 ### <a name="return-value"></a>返回值
 
@@ -2630,7 +2630,7 @@ static BOOL __stdcall LoadLargeIconsState(LPCTSTR lpszProfileName = NULL);
 
 ### <a name="parameters"></a>参数
 
-[in]*lpszProfileName*<br/>
+[in] *lpszProfileName*<br/>
 
 ### <a name="return-value"></a>返回值
 
@@ -2715,7 +2715,7 @@ virtual BOOL LoadToolBar(
 *uiMenuResID*<br/>
 [in]用于引用常规菜单图像的位图资源 ID。
 
-*被阻止*<br/>
+*bLocked*<br/>
 [in]一个布尔值，该值指定工具栏或不处于锁定状态。 如果此参数为 *，则返回 TRUE*，工具栏处于锁定状态。 否则，未锁定工具栏。
 
 *uiDisabledResID*<br/>
@@ -2742,7 +2742,7 @@ virtual BOOL LoadToolBar(
 [!code-cpp[NVC_MFC_IEDemo#6](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]
 [!code-cpp[NVC_MFC_IEDemo#7](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_3.cpp)]
 
-##  <a name="loadtoolbarex"></a>  Cmfctoolbar:: Loadtoolbarex
+##  <a name="loadtoolbarex"></a>  CMFCToolBar::LoadToolBarEx
 
 通过使用从应用程序资源加载工具栏`CMFCToolBarInfo`帮助器类，以使应用程序使用大图像。
 
@@ -2761,7 +2761,7 @@ virtual BOOL LoadToolBarEx(
 *params*<br/>
 [in]对引用`CMFCToolBarInfo`对象，包含工具栏图像的资源 Id。
 
-*被阻止*<br/>
+*bLocked*<br/>
 [in]一个布尔值，该值指定工具栏或不处于锁定状态。 如果此参数为 TRUE，已锁定工具栏。 否则，未锁定工具栏。
 
 ### <a name="return-value"></a>返回值
@@ -2890,7 +2890,7 @@ virtual BOOL OnSetAccData(long lVal);
 
 ### <a name="parameters"></a>参数
 
-[in]*lVal*<br/>
+[in] *lVal*<br/>
 
 ### <a name="return-value"></a>返回值
 
@@ -3063,10 +3063,10 @@ int ReplaceButton(
 *uiCmd*<br/>
 [in]要替换为按钮的命令 ID。
 
-*按钮*<br/>
+*button*<br/>
 [in]对引用`CMFCToolBarButton`插入。
 
-*球*<br/>
+*bAll*<br/>
 [in]一个布尔值，指定是否要替换具有指定的命令 ID 的所有按钮*uiCmd*。 如果此参数为 TRUE，将替换具有指定的命令 ID 的所有按钮。 否则，将替换为第一个按钮。
 
 ### <a name="return-value"></a>返回值
@@ -3150,7 +3150,7 @@ static BOOL __stdcall SaveParameters(LPCTSTR lpszProfileName = NULL);
 
 ### <a name="parameters"></a>参数
 
-[in]*lpszProfileName*<br/>
+[in] *lpszProfileName*<br/>
 
 ### <a name="return-value"></a>返回值
 
@@ -3412,7 +3412,7 @@ static void __stdcall SetHelpMode(BOOL bOn = TRUE);
 
 ### <a name="parameters"></a>参数
 
-[in]*bOn*<br/>
+[in] *bOn*<br/>
 
 ### <a name="remarks"></a>备注
 
@@ -3424,7 +3424,7 @@ BOOL SetHot(CMFCToolBarButton* pMenuButton);
 
 ### <a name="parameters"></a>参数
 
-[in]*pMenuButton*<br/>
+[in] *pMenuButton*<br/>
 
 ### <a name="return-value"></a>返回值
 
@@ -3474,7 +3474,7 @@ void SetIgnoreSetText(BOOL bValue);
 
 ### <a name="parameters"></a>参数
 
-[in]*bValue*<br/>
+[in] *bValue*<br/>
 
 ### <a name="remarks"></a>备注
 
@@ -3584,7 +3584,7 @@ static void SetNonPermittedCommands(CList<UINT,UINT>& lstCommands);
 
 此方法将清除前面不允许命令的列表。 默认情况下，不允许命令的列表为空。
 
-##  <a name="setonerowwithsibling"></a>  Cmfctoolbar:: Setonerowwithsibling
+##  <a name="setonerowwithsibling"></a>  CMFCToolBar::SetOneRowWithSibling
 
 工具栏和其同级放置在同一行上。
 
@@ -3608,7 +3608,7 @@ void SetOrigButtons(const CObList& lstOrigButtons);
 
 ### <a name="parameters"></a>参数
 
-[in]*lstOrigButtons*<br/>
+[in] *lstOrigButtons*<br/>
 
 ### <a name="remarks"></a>备注
 
@@ -3641,7 +3641,7 @@ void SetRouteCommandsViaFrame(BOOL bValue);
 
 ### <a name="parameters"></a>参数
 
-*其中 bValue*<br/>
+*bValue*<br/>
 [in]如果此参数为 TRUE，则父框架将命令发送到工具栏。 否则，所有者将命令发送到工具栏。
 
 ### <a name="remarks"></a>备注
@@ -3658,7 +3658,7 @@ static void SetShowTooltips(BOOL bValue);
 
 ### <a name="parameters"></a>参数
 
-*其中 bValue*<br/>
+*bValue*<br/>
 [in]如果此参数为 TRUE，框架将显示工具提示。 否则，该框架将隐藏工具提示。
 
 ### <a name="remarks"></a>备注
@@ -3667,7 +3667,7 @@ static void SetShowTooltips(BOOL bValue);
 
 调用[CMFCToolBar::GetShowTooltips](#getshowtooltips)方法，以确定框架是否显示工具提示。
 
-##  <a name="setsiblingtoolbar"></a>  Cmfctoolbar:: Setsiblingtoolbar
+##  <a name="setsiblingtoolbar"></a>  CMFCToolBar::SetSiblingToolBar
 
 指定工具栏的同级。
 
@@ -3744,7 +3744,7 @@ void SetToolBarBtnText(
 
 在调试版本中，如果此方法生成断言失败*nBtnIndex*不引用到有效的工具栏按钮或工具栏按钮是一个分隔符。
 
-##  <a name="settworowswithsibling"></a>  Cmfctoolbar:: Settworowswithsibling
+##  <a name="settworowswithsibling"></a>  CMFCToolBar::SetTwoRowsWithSibling
 
 工具栏和其同级放置在单独的行。
 
@@ -3825,7 +3825,7 @@ virtual BOOL TranslateChar(UINT nChar);
 
 ### <a name="parameters"></a>参数
 
-*NChar*<br/>
+*nChar*<br/>
 [in]指定虚拟键代码。 标准虚拟键代码的列表，请参见 Winuser.h
 
 ### <a name="return-value"></a>返回值
@@ -3906,4 +3906,3 @@ AFX_IMPORT_DATA static BOOL m_bDontScaleImages;
 [CMFCPopupMenuBar 类](../../mfc/reference/cmfcpopupmenubar-class.md)<br/>
 [CMFCDropDownToolBar 类](../../mfc/reference/cmfcdropdowntoolbar-class.md)<br/>
 [演练：将控件置于工具栏上](../../mfc/walkthrough-putting-controls-on-toolbars.md)
-

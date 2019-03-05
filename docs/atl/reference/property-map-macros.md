@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - property maps
 ms.assetid: 128bc742-2b98-4b97-a243-684dbb83db77
-ms.openlocfilehash: 7422c38bd21a458dccafa6d34fd4d6522f96132a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1e2e7235dd924467d9d5e0613a704fedf8340ae4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50513810"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264893"
 ---
 # <a name="property-map-macros"></a>属性映射宏
 
@@ -27,7 +27,7 @@ ms.locfileid: "50513810"
 |[BEGIN_PROP_MAP](#begin_prop_map)|表示 ATL 属性映射的开头。|
 |[PROP_DATA_ENTRY](#prop_data_entry)|指示范围内或维度，ActiveX 控件。|
 |[PROP_ENTRY_TYPE](#prop_entry_type)|输入属性映射的属性说明、 属性的 DISPID，和属性页 CLSID。|
-|[改用 PROP_ENTRY_TYPE_EX](#prop_entry_type_ex)|输入的属性说明，属性的 DISPID，CLSID 的属性页和`IDispatch`属性映射到 IID。|
+|[PROP_ENTRY_TYPE_EX](#prop_entry_type_ex)|输入的属性说明，属性的 DISPID，CLSID 的属性页和`IDispatch`属性映射到 IID。|
 |[PROP_PAGE](#prop_page)|输入属性映射的属性页 CLSID。|
 |[END_PROP_MAP](#end_prop_map)|将标记 ATL 属性映射的结尾。|
 
@@ -45,7 +45,7 @@ BEGIN_PROP_MAP(theClass)
 
 ### <a name="parameters"></a>参数
 
-*类*<br/>
+*theClass*<br/>
 [in]指定包含该属性映射的类。
 
 ### <a name="remarks"></a>备注
@@ -125,7 +125,7 @@ PROP_ENTRY 宏是不安全，不推荐使用。 它已替换 PROP_ENTRY_TYPE。
 
 有关示例，请参阅[BEGIN_PROP_MAP](#begin_prop_map)。
 
-##  <a name="prop_entry_type_ex"></a>  改用 PROP_ENTRY_TYPE_EX
+##  <a name="prop_entry_type_ex"></a>  PROP_ENTRY_TYPE_EX
 
 类似于[PROP_ENTRY_TYPE](#prop_entry_type)，但允许你指定某个特定 IID，如果您的对象支持多个双重接口。
 

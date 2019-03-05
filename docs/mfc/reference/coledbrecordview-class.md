@@ -12,12 +12,12 @@ helpviewer_keywords:
 - COleDBRecordView [MFC], OnGetRowset
 - COleDBRecordView [MFC], OnMove
 ms.assetid: 98612427-c4c9-4760-b7e1-85b17448add9
-ms.openlocfilehash: fbbaaae72c7b58f898735d768c019a02cdb7d7e5
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 1b09599479010f87e396e6f576c9524651923f9f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518575"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280363"
 ---
 # <a name="coledbrecordview-class"></a>COleDBRecordView 类
 
@@ -51,7 +51,7 @@ class COleDBRecordView : public CFormView
 您可以使用 DDX 函数与`COleDbRecordView`以直接从数据库记录集获取数据并将其显示在对话框控件。 应使用`DDX_*`方法 (如`DDX_Text`)，而非`DDX_Field*`函数 (如`DDX_FieldText`) 与`COleDbRecordView`。 `DDX_FieldText` 不会使用`COleDbRecordView`因为`DDX_FieldText`使用类型的其他参数`CRecordset*`(对于`CRecordView`) 或`CDaoRecordset*`(为`CDaoRecordView`)。
 
 > [!NOTE]
->  如果您正在使用的数据访问对象 (DAO) 类而不是 OLE DB 使用者模板类，使用类[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)相反。 有关详细信息，请参阅文章[概述： 数据库编程](../../data/data-access-programming-mfc-atl.md)。
+>  如果您正在使用的数据访问对象 (DAO) 类而不是 OLE DB 使用者模板类，使用类[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)相反。 有关详细信息，请参阅文章[概述：数据库编程](../../data/data-access-programming-mfc-atl.md)。
 
 `COleDBRecordView` 将跟踪的行集中的用户的位置，以便记录视图可以更新用户界面。 当用户移动到行集中的任一端时，记录视图禁用用户界面对象 — 例如菜单项或工具栏按钮 — 用于移动中相同的方向进一步。
 
@@ -124,7 +124,7 @@ virtual CRowset<>* OnGetRowset() = 0;
 
 [!code-cpp[NVC_MFCDatabase#38](../../mfc/codesnippet/cpp/coledbrecordview-class_1.cpp)]
 
-有关详细信息和示例，请参阅文章[记录视图： 使用记录视图](../../data/using-a-record-view-mfc-data-access.md)。
+有关详细信息和示例，请参阅文章[记录视图：使用记录视图](../../data/using-a-record-view-mfc-data-access.md)。
 
 ##  <a name="onmove"></a>  COleDBRecordView::OnMove
 
@@ -164,4 +164,3 @@ virtual BOOL OnMove(UINT nIDMoveCommand);
 ## <a name="see-also"></a>请参阅
 
 [层次结构图](../../mfc/hierarchy-chart.md)
-

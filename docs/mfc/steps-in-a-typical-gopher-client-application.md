@@ -7,18 +7,18 @@ helpviewer_keywords:
 - Gopher client applications [MFC]
 - Internet client applications [MFC], gopher table
 ms.assetid: 3e4e1869-5da0-453d-8ba9-b648c894bb90
-ms.openlocfilehash: 123b8abd2ca65356c584fa52f9415504bcb701c6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ca1a09a4a570fd705e726ac5a1124a4cf4ccb329
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50486419"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279910"
 ---
 # <a name="steps-in-a-typical-gopher-client-application"></a>典型 Gopher 客户端应用程序中的步骤
 
 下表显示了可能会执行典型 gopher 客户端应用程序中的步骤。
 
-|您的目标|采取的操作|效果|
+|您的目标|采取的操作|Effects|
 |---------------|----------------------|-------------|
 |开始 gopher 会话。|创建[CInternetSession](../mfc/reference/cinternetsession-class.md)对象。|初始化 WinInet 并连接到服务器。|
 |连接到 gopher 服务器。|使用[cinternetsession:: Getgopherconnection](../mfc/reference/cinternetsession-class.md#getgopherconnection)。|返回[CGopherConnection](../mfc/reference/cgopherconnection-class.md)对象。|

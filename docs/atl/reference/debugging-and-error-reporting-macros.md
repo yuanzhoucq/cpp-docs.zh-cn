@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - macros, error reporting
 ms.assetid: 4da9b87f-ec5c-4a32-ab93-637780909b9d
-ms.openlocfilehash: 5de597484db727646b80bd522f11465f442393fd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0f556e64160c61f2fb15c5f5d6f9e170c2008ac8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50522289"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57287318"
 ---
 # <a name="debugging-and-error-reporting-macros"></a>调试和错误报告宏
 
@@ -87,7 +87,7 @@ ATLASSERT(booleanExpression);
 
 ### <a name="parameters"></a>参数
 
-*布尔表达式*<br/>
+*booleanExpression*<br/>
 计算结果为零或不为零的表达式（包括指针）。
 
 ### <a name="remarks"></a>备注
@@ -109,7 +109,7 @@ ATLENSURE_THROW(booleanExpression, hr);
 
 ### <a name="parameters"></a>参数
 
-*布尔表达式*<br/>
+*booleanExpression*<br/>
 指定要测试的布尔表达式。
 
 *hr*<br/>
@@ -145,7 +145,7 @@ ATLTRACENOTIMPL(funcname);
 
 ### <a name="parameters"></a>参数
 
-*函数名*<br/>
+*funcname*<br/>
 [in]包含未实现的函数名称的字符串。
 
 ### <a name="remarks"></a>备注
@@ -181,7 +181,7 @@ ATLTRACE(
 *category*<br/>
 [in]事件或在其上报告的方法的类型。 请参阅备注类别的列表。
 
-*级别*<br/>
+*level*<br/>
 [in]对报表的跟踪级别。 请参阅备注以了解详情。
 
 *lpszFormat*<br/>
@@ -212,7 +212,7 @@ ATLTRACE2(
 *category*<br/>
 [in]事件或在其上报告的方法的类型。 请参阅备注类别的列表。
 
-*级别*<br/>
+*level*<br/>
 [in]对报表的跟踪级别。 请参阅备注以了解详情。
 
 *lpszFormat*<br/>

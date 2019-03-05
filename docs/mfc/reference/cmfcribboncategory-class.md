@@ -130,12 +130,12 @@ helpviewer_keywords:
 - CMFCRibbonCategory [MFC], SetName
 - CMFCRibbonCategory [MFC], SetTabColor
 ms.assetid: 99ba25b6-d060-4fdd-bfab-3c46c22981bb
-ms.openlocfilehash: 96a3351656807fa841661ec9f082bb4255d5136a
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 14ce057c141f22c14361bafd55fce3ccd345d4dd
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176609"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279466"
 ---
 # <a name="cmfcribboncategory-class"></a>CMFCRibbonCategory 类
 
@@ -219,7 +219,7 @@ class CMFCRibbonCategory : public CObject
 |[CMFCRibbonCategory::SetData](#setdata)|将用户定义数据存储在功能区类别。|
 |[CMFCRibbonCategory::SetKeys](#setkeys)|将快捷键提示分配给功能区类别。|
 |[CMFCRibbonCategory::SetName](#setname)||
-|[Cmfcribboncategory:: Settabcolor](#settabcolor)|设置功能区类别的颜色。|
+|[CMFCRibbonCategory::SetTabColor](#settabcolor)|设置功能区类别的颜色。|
 
 ## <a name="remarks"></a>备注
 
@@ -717,7 +717,7 @@ CMFCRibbonPanel* GetPanelFromPoint(CPoint point) const;
 
 ### <a name="parameters"></a>参数
 
-*点*<br/>
+*point*<br/>
 [in]指针相对于窗口的左上角的 x 和 y 坐标。
 
 ### <a name="return-value"></a>返回值
@@ -909,7 +909,7 @@ CMFCRibbonPanel* HighlightPanel(
 *pHLPanel*<br/>
 [in]指向要突出显示的功能区面板。
 
-*点*<br/>
+*point*<br/>
 [in]指针相对于窗口的左上角的 x 和 y 坐标。
 
 ### <a name="return-value"></a>返回值
@@ -932,7 +932,7 @@ CMFCRibbonBaseElement* HitTest(
 
 ### <a name="parameters"></a>参数
 
-*点*<br/>
+*point*<br/>
 [in]将鼠标指针相对于窗口的左上角的 x 和 y 坐标。
 
 *bCheckPanelCaption*<br/>
@@ -956,7 +956,7 @@ int HitTestEx(CPoint point) const;
 
 ### <a name="parameters"></a>参数
 
-*点*<br/>
+*point*<br/>
 [in]将鼠标指针相对于窗口的左上角的 x 和 y 坐标。
 
 ### <a name="return-value"></a>返回值
@@ -977,7 +977,7 @@ CMFCRibbonBaseElement* HitTestScrollButtons(CPoint point) const;
 
 ### <a name="parameters"></a>参数
 
-*点*<br/>
+*point*<br/>
 [in]要测试的点。
 
 ### <a name="return-value"></a>返回值
@@ -1161,7 +1161,7 @@ virtual BOOL OnKey(UINT nChar);
 
 ### <a name="parameters"></a>参数
 
-*NChar*<br/>
+*nChar*<br/>
 用户按下的键虚拟键代码。
 
 ### <a name="remarks"></a>备注
@@ -1176,7 +1176,7 @@ virtual CMFCRibbonBaseElement* OnLButtonDown(CPoint point);
 
 ### <a name="parameters"></a>参数
 
-*点*<br/>
+*point*<br/>
 [in]将鼠标指针相对于窗口的左上角的 x 和 y 坐标。
 
 ### <a name="return-value"></a>返回值
@@ -1195,7 +1195,7 @@ virtual void OnLButtonUp(CPoint point);
 
 ### <a name="parameters"></a>参数
 
-*点*<br/>
+*point*<br/>
 [in]指针相对于窗口的左上角的 x 和 y 坐标。
 
 ### <a name="remarks"></a>备注
@@ -1210,7 +1210,7 @@ virtual void OnMouseMove(CPoint point);
 
 ### <a name="parameters"></a>参数
 
-*点*<br/>
+*point*<br/>
 [in]指针相对于窗口的左上角的 x 和 y 坐标。
 
 ### <a name="remarks"></a>备注
@@ -1351,7 +1351,7 @@ void SetCollapseOrder(const CArray<int,int>& arCollapseOrder);
 
 当类别检测到它具有折叠功能区面板时，它会查找在指定的列表中的下一个元素。 如果列表为空，或未指定足够的元素，该类别使用内部算法。
 
-例如，类别有三个功能区面板，可以进行折叠几次，直到所有面板都，在完全处于折叠状态。 可以设置以下折叠顺序： 0、 0、 2、 2。 在这种情况下，类别将折叠面板 0 两次，面板 2 的两倍。 具有索引为 1 的面板将保持未折叠。
+例如，类别有三个功能区面板，可以进行折叠几次，直到所有面板都，在完全处于折叠状态。 可以设置以下折叠顺序：0, 0, 2, 2. 在这种情况下，类别将折叠面板 0 两次，面板 2 的两倍。 具有索引为 1 的面板将保持未折叠。
 
 ### <a name="example"></a>示例
 
@@ -1406,7 +1406,7 @@ void SetName(LPCTSTR lpszName);
 
 若要设置功能区类别 keytip，追加跟快捷键提示字符换行转义序列*lpszName*。
 
-##  <a name="settabcolor"></a>  Cmfcribboncategory:: Settabcolor
+##  <a name="settabcolor"></a>  CMFCRibbonCategory::SetTabColor
 
 设置功能区类别的颜色。
 
@@ -1416,7 +1416,7 @@ void SetTabColor(AFX_RibbonCategoryColor color);
 
 ### <a name="parameters"></a>参数
 
-*颜色*<br/>
+*color*<br/>
 [in]指定功能区类别的新颜色。
 
 ### <a name="remarks"></a>备注

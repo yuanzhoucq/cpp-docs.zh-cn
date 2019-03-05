@@ -74,12 +74,12 @@ helpviewer_keywords:
 - COleServerItem [MFC], OnShow
 - COleServerItem [MFC], m_sizeExtent
 ms.assetid: 80256df6-3888-4256-944b-787d4b2e6b0d
-ms.openlocfilehash: e0d48d37d8262c4e82a8532333bbd12f193087b5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f774a8db1121dd293db8e58f7cd92aaabaeabada
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50604100"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270548"
 ---
 # <a name="coleserveritem-class"></a>COleServerItem 类
 
@@ -116,7 +116,7 @@ class COleServerItem : public CDocItem
 |[COleServerItem::IsLinkedItem](#islinkeditem)|指示项是否表示链接的 OLE 项。|
 |[COleServerItem::NotifyChanged](#notifychanged)|使用自动链接更新更新所有容器。|
 |[COleServerItem::OnDoVerb](#ondoverb)|调用以执行谓词。|
-|[Coleserveritem:: Ondraw](#ondraw)|当容器请求绘制项; 时调用所需的实现。|
+|[COleServerItem::OnDraw](#ondraw)|当容器请求绘制项; 时调用所需的实现。|
 |[COleServerItem::OnDrawEx](#ondrawex)|为专用的项绘图调用。|
 |[COleServerItem::OnGetClipboardData](#ongetclipboarddata)|由框架调用以获取的数据，都要复制到剪贴板。|
 |[COleServerItem::OnGetExtent](#ongetextent)|由框架调用以检索 OLE 项的大小。|
@@ -155,7 +155,7 @@ class COleServerItem : public CDocItem
 
 若要使用`COleServerItem`、 从其派生一个类并实现[OnDraw](#ondraw)并[Serialize](../../mfc/reference/cobject-class.md#serialize)成员函数。 `OnDraw`函数提供了一个项，使其能够容器应用程序打开复合文档时显示的图元文件表示形式。 `Serialize`函数的`CObject`提供的项，请允许嵌入的项服务器和容器应用程序之间传输的本机表示形式。 [OnGetExtent](#ongetextent)提供到该容器，启用要调整大小的项的容器的项的自然大小。
 
-有关服务器和相关的主题的详细信息，请参阅文章[服务器： 实现服务器](../../mfc/servers-implementing-a-server.md)和"创建容器/服务器应用程序"一文中[容器： 高级功能](../../mfc/containers-advanced-features.md)。
+有关服务器和相关的主题的详细信息，请参阅文章[服务器：实现服务器](../../mfc/servers-implementing-a-server.md)和"创建容器/服务器应用程序"一文中[容器：高级功能](../../mfc/containers-advanced-features.md)。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -509,7 +509,7 @@ virtual void OnDoVerb(LONG iVerb);
 *iVerb*<br/>
 指定要执行的谓词。 它可以是以下之一：
 
-|“值”|含义|符号|
+|值|含义|符号|
 |-----------|-------------|------------|
 |0|主谓词|OLEIVERB_PRIMARY|
 |1|辅助谓词|（无）|
@@ -527,7 +527,7 @@ virtual void OnDoVerb(LONG iVerb);
 
 有关详细信息，请参阅[IOleObject::DoVerb](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-doverb) Windows SDK 中。
 
-##  <a name="ondraw"></a>  Coleserveritem:: Ondraw
+##  <a name="ondraw"></a>  COleServerItem::OnDraw
 
 由框架调用以将 OLE 项渲染到图元文件。
 
@@ -542,7 +542,7 @@ virtual BOOL OnDraw(
 *pDC*<br/>
 一个指向[CDC](../../mfc/reference/cdc-class.md)在其上绘制项的对象。 显示上下文将自动连接到的属性显示上下文以便您可以调用属性的函数，尽管这样会导致图元文件特定于设备的。
 
-*rsize，则将*<br/>
+*rSize*<br/>
 大小 （以 HIMETRIC 为单位，在其中绘制图元文件）。
 
 ### <a name="return-value"></a>返回值
@@ -580,7 +580,7 @@ DVASPECT 枚举中的值。 此参数可以具有以下值之一：
 
 - DVASPECT_DOCPRINT 项表现为似乎打印出的使用文件菜单中的打印命令。
 
-*rsize，则将*<br/>
+*rSize*<br/>
 项以 HIMETRIC 为单位的大小。
 
 ### <a name="return-value"></a>返回值
@@ -646,7 +646,7 @@ virtual BOOL OnGetExtent(
 
 - DVASPECT_DOCPRINT 项表现为似乎打印出的使用文件菜单中的打印命令。
 
-*rsize，则将*<br/>
+*rSize*<br/>
 引用`CSize`对象，它将接收 OLE 项的大小。
 
 ### <a name="return-value"></a>返回值

@@ -12,16 +12,16 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], parameterized property
 - ThrowError method [MFC]
 ms.assetid: e9e34abb-8e2d-461e-bb9c-a1aec5dcecbd
-ms.openlocfilehash: 607fd1c0ee5ae35f46ef26584f7f8e3ac2f1c32f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: df71e2e59763644bd4aefb5d3e3afa46f82f538a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50645583"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277321"
 ---
 # <a name="mfc-activex-controls-advanced-topics"></a>MFC ActiveX 控件：高级主题
 
-本文介绍如何与开发 ActiveX 控件相关的高级的主题。 这些方法包括：
+本文介绍如何与开发 ActiveX 控件相关的高级的主题。 这些问题包括：
 
 - [在 ActiveX 控件中使用数据库类](#_core_using_database_classes_in_activex_controls)
 
@@ -183,4 +183,3 @@ MFC 数据库类的一般概述，请参阅[MFC 数据库类 （DAO 和 ODBC）]
 ## <a name="see-also"></a>请参阅
 
 [MFC ActiveX 控件](../mfc/mfc-activex-controls.md)
-

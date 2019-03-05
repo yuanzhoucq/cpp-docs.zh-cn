@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - WinMain method [MFC]
 ms.assetid: 24ab7597-2354-495b-9a20-2c8ccc7385b3
-ms.openlocfilehash: 8e6e74b8f0fd62f96d6d846bbba867f9189550ee
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8271a10ad7439d2795dcc45d667b23b0932a0486
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50666851"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271822"
 ---
 # <a name="run-member-function"></a>运行成员函数
 
@@ -21,4 +21,4 @@ Framework 应用程序需要花大部分时间[运行](../mfc/reference/cwinapp-
 
 ## <a name="see-also"></a>请参阅
 
-[CWinApp：应用程序类](../mfc/cwinapp-the-application-class.md)
+[CWinApp:应用程序类](../mfc/cwinapp-the-application-class.md)

@@ -12,16 +12,17 @@ f1_keywords:
 helpviewer_keywords:
 - combinable class
 ms.assetid: fe0bfbf6-6250-47da-b8d0-f75369f0b5be
-ms.openlocfilehash: b392a46c3aafac9ab5f3ca2b626f5f78daebc85d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 05256516c0a693a282b8d0de56d6c9e7465f2740
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630745"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299967"
 ---
 # <a name="combinable-class"></a>combinable 类
 
-`combinable<T>` 对象旨在提供数据的线程专用副本，以在并行算法期间执行无锁线程本地子计算。 在并行操作结束时，线程专用子计算可随之合并到最终结果。 此类可替代共享变量使用，并可能会带来性能提升（如果该共享变量上存在大量争用）。
+
+  `combinable<T>` 对象旨在提供数据的线程专用副本，以在并行算法期间执行无锁线程本地子计算。 在并行操作结束时，线程专用子计算可随之合并到最终结果。 此类可替代共享变量使用，并可能会带来性能提升（如果该共享变量上存在大量争用）。
 
 ## <a name="syntax"></a>语法
 
@@ -41,7 +42,7 @@ class combinable;
 
 |名称|描述|
 |----------|-----------------|
-|[可组合](#ctor)|已重载。 构造一个新`combinable`对象。|
+|[combinable](#ctor)|已重载。 构造一个新`combinable`对象。|
 |[~ combinable 析构函数](#dtor)|销毁 `combinable` 对象。|
 
 ### <a name="public-methods"></a>公共方法
@@ -81,7 +82,7 @@ class combinable;
 void clear();
 ```
 
-##  <a name="ctor"></a> 可组合
+##  <a name="ctor"></a> combinable
 
 构造一个新`combinable`对象。
 
@@ -102,7 +103,7 @@ combinable(const combinable& _Copy);
 *_FnInitialize*<br/>
 一个函数，它将调用以初始化的类型的每个新线程专用值`T`。 它必须支持具有签名的函数调用运算符`T ()`。
 
-*（_c)*<br/>
+*_Copy*<br/>
 将现有`combinable`要复制到此对象。
 
 ### <a name="remarks"></a>备注
@@ -113,7 +114,7 @@ combinable(const combinable& _Copy);
 
 第三个构造函数是复制构造函数。
 
-##  <a name="dtor"></a> ~ combinable
+##  <a name="dtor"></a> ~combinable
 
 销毁 `combinable` 对象。
 
@@ -121,7 +122,7 @@ combinable(const combinable& _Copy);
 ~combinable();
 ```
 
-##  <a name="combine"></a> 合并
+##  <a name="combine"></a> combine
 
 通过调用提供的 combine 函子计算的线程本地子计算集的最终值。
 
@@ -159,7 +160,7 @@ void combine_each(_Function _FnCombine) const;
 *_FnCombine*<br/>
 用于将某一子计算仿函数。 其签名就`void (T)`或`void (const T&)`，并且必须是关联性和可交换性。
 
-##  <a name="local"></a> 本地
+##  <a name="local"></a> local
 
 返回到线程专用子计算的引用。
 
@@ -188,7 +189,7 @@ combinable& operator= (const combinable& _Copy);
 
 ### <a name="parameters"></a>参数
 
-*（_c)*<br/>
+*_Copy*<br/>
 将现有`combinable`要复制到此对象。
 
 ### <a name="return-value"></a>返回值

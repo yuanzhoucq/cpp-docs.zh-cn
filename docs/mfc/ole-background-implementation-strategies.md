@@ -1,19 +1,19 @@
 ---
-title: OLE 后台：实现策略
+title: OLE 后台：Implementation Strategies
 ms.date: 11/04/2016
 helpviewer_keywords:
 - OLE [MFC], development strategy
 - OLE applications [MFC], implementing OLE
 - applications [OLE], implementing OLE
 ms.assetid: 0875ddae-99df-488c-82c6-164074a81058
-ms.openlocfilehash: a9bcbc16b08f16953df92efe5a83db39f9a33cc5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 40c74d48b76921f770740602a39d28804a7e3c09
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624388"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284809"
 ---
-# <a name="ole-background-implementation-strategies"></a>OLE 后台：实现策略
+# <a name="ole-background-implementation-strategies"></a>OLE 后台：Implementation Strategies
 
 根据您的应用程序，添加 OLE 支持有四个可能的实现策略：
 
@@ -23,7 +23,7 @@ ms.locfileid: "50624388"
 
 - 您有一个使用不支持 OLE 的 Microsoft 基础类库 2.0 版或更高版本编写的程序。
 
-   如前文所述使用 MFC 应用程序向导创建新应用程序，然后将新应用程序中的代码复制并粘贴到你的现有应用程序中。 这对服务器、容器或自动化应用程序都有效。 请参阅 MFC [SCRIBBLE](../visual-cpp-samples.md)示例有关此策略的示例。
+   如前文所述使用 MFC 应用程序向导创建新应用程序，然后将新应用程序中的代码复制并粘贴到您的现有应用程序中。 这对服务器、容器或自动化应用程序都有效。 请参阅 MFC [SCRIBBLE](../visual-cpp-samples.md)示例有关此策略的示例。
 
 - 您有一个实现 OLE 1.0 版支持的 Microsoft 基础类库程序。
 
@@ -41,4 +41,3 @@ ms.locfileid: "50624388"
 [容器：实现容器](../mfc/containers-implementing-a-container.md)<br/>
 [服务器：实现服务器](../mfc/servers-implementing-a-server.md)<br/>
 [MFC 应用程序向导](../mfc/reference/mfc-application-wizard.md)
-

@@ -62,12 +62,12 @@ helpviewer_keywords:
 - CDataRecoveryHandler [MFC], SetShutdownByRestartManager
 - CDataRecoveryHandler [MFC], UpdateDocumentInfo
 ms.assetid: 7794802c-e583-4eba-90b9-2fed1a161f9c
-ms.openlocfilehash: 10107d7b815f8a3c479a28de8ff07439b5da2fda
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 88cc4a433c774dc7767efaaa62edc71ce8b904d9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456038"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273031"
 ---
 # <a name="cdatarecoveryhandler-class"></a>CDataRecoveryHandler 类
 
@@ -146,7 +146,7 @@ class CDataRecoveryHandler : public CObject
 
 可以使用之前`CDataRecoveryHandler`对象，必须调用[CDataRecoveryHandler::Initialize](#initialize)。
 
-因为`CDataRecoveryHandler`类紧密地连接到重新启动管理器中，`CDataRecoveryHandler`取决于全局参数`m_dwRestartManagerSupportFlags`。 此参数确定的重新启动管理器具有什么权限以及它如何与你的应用程序交互。 若要将重新启动管理器合并到现有应用程序，必须将分配`m_dwRestartManagerSupportFlags`主应用程序的构造函数中的相应值。 有关如何使用重新启动管理器的详细信息，请参阅[如何： 添加重新启动管理器支持](../../mfc/how-to-add-restart-manager-support.md)。
+因为`CDataRecoveryHandler`类紧密地连接到重新启动管理器中，`CDataRecoveryHandler`取决于全局参数`m_dwRestartManagerSupportFlags`。 此参数确定的重新启动管理器具有什么权限以及它如何与你的应用程序交互。 若要将重新启动管理器合并到现有应用程序，必须将分配`m_dwRestartManagerSupportFlags`主应用程序的构造函数中的相应值。 有关如何使用重新启动管理器的详细信息，请参阅[如何：添加重启管理器支持](../../mfc/how-to-add-restart-manager-support.md)。
 
 ## <a name="requirements"></a>要求
 
@@ -689,5 +689,4 @@ virtual BOOL UpdateDocumentInfo(CDocument* pDocument);
 [类](../../mfc/reference/mfc-classes.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>
 [CObject 类](../../mfc/reference/cobject-class.md)<br/>
-[如何：添加重启管理器支持](../../mfc/how-to-add-restart-manager-support.md)
-
+[如何：添加重新启动管理器支持](../../mfc/how-to-add-restart-manager-support.md)

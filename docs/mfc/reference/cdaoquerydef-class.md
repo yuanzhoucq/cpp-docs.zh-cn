@@ -66,12 +66,12 @@ helpviewer_keywords:
 - CDaoQueryDef [MFC], m_pDAOQueryDef
 - CDaoQueryDef [MFC], m_pDatabase
 ms.assetid: 9676a4a3-c712-44d4-8c5d-d1cc78288d3a
-ms.openlocfilehash: 07c508dcf4bd57855d09be5a305847d0b2981305
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 08fb2909a4fd2e5bda3dfc63d19224a515c7c699
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50664524"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283639"
 ---
 # <a name="cdaoquerydef-class"></a>CDaoQueryDef 类
 
@@ -435,9 +435,9 @@ Querydef 的字段集合，用于查找索引中将所需字段的从零开始�
 
 - AFX_DAO_PRIMARY_INFO （默认值） 名称、 类型、 大小、 属性
 
-- AFX_DAO_SECONDARY_INFO 主要信息加上： 要求的序号位置、 允许长度为零、 源字段、 外名称、 源表、 排序规则顺序
+- AFX_DAO_SECONDARY_INFO 主要信息加上：序号位置，必需的允许零长度、 源字段、 外名称、 源表中，比较其排列顺序
 
-- AFX_DAO_ALL_INFO 主要和辅助数据库信息加上： 默认值，验证文本验证规则
+- AFX_DAO_ALL_INFO 主要和辅助数据库信息加上：默认值，验证文本验证规则
 
 *lpszName*<br/>
 包含按名称查找将所需字段的名称的字符串。 可以使用[CString](../../atl-mfc-shared/reference/cstringt-class.md)。

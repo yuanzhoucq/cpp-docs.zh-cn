@@ -1,5 +1,5 @@
 ---
-title: TN043：RFX 例程
+title: TN043:例程
 ms.date: 06/28/2018
 f1_keywords:
 - RFX
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - TN043
 - RFX (record field exchange)
 ms.assetid: f552d0c1-2c83-4389-b472-42c9940aa713
-ms.openlocfilehash: 278351ad1cf81215f4c6033f4cff0b100adedf23
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 18820c7d17ddea355490ee32679d5d690ec3533e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658856"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294481"
 ---
-# <a name="tn043-rfx-routines"></a>TN043：RFX 例程
+# <a name="tn043-rfx-routines"></a>TN043:例程
 
 > [!NOTE]
 > 以下技术说明在首次包括在联机文档中后未更新。 因此，某些过程和主题可能已过时或不正确。 要获得最新信息，建议你在联机文档索引中搜索热点话题。
@@ -144,15 +144,15 @@ RFX_Custom(pFX, "Col2", m_Col2);
 
 若要编写自己的自定义 RFX 函数，建议你复制现有 RFX 函数，并将它修改为根据自己的目的。 选择正确的 RFX 复制可以使您的工作更加轻松。 某些 RFX 函数具有一些在决定要复制时应考虑的唯一属性。
 
-`RFX_Long` 和`RFX_Int`： 这些是最简单的 RFX 函数。 数据值不需要任何特殊的解释，以及数据大小固定的。
+`RFX_Long` 和`RFX_Int`:这些是最简单的 RFX 函数。 数据值不需要任何特殊的解释，以及数据大小固定的。
 
-`RFX_Single` 和`RFX_Double`： 如 RFX_Long 和 RFX_Int 更高版本，这些函数很简单，可以使广泛使用的默认实现。 它们存储在 dbflt.cpp 而不是 dbrfx.cpp，但是，若要启用加载运行时的浮点库，仅在时显式引用。
+`RFX_Single` 和`RFX_Double`:如 RFX_Long 和 RFX_Int 更高版本，这些函数很简单，可以使广泛使用的默认实现。 它们存储在 dbflt.cpp 而不是 dbrfx.cpp，但是，若要启用加载运行时的浮点库，仅在时显式引用。
 
-`RFX_Text` 和`RFX_Binary`： 这两个函数预分配静态缓冲区来存放字符串/二进制文件的信息，并且必须向 ODBC SQLBindCol 注册这些缓冲区而不是注册 （& v）。 因此，这两个函数有很多特例代码。
+`RFX_Text` 和`RFX_Binary`:这两个函数预分配静态缓冲区来存放字符串/二进制文件的信息，并且必须向 ODBC SQLBindCol 注册这些缓冲区而不是注册 （& v）。 因此，这两个函数有很多特例代码。
 
-`RFX_Date`: ODBC 返回自己 TIMESTAMP_STRUCT 数据结构中的日期和时间信息。 此函数为动态分配 TIMESTAMP_STRUCT"代理"作为发送和接收日期时间数据。 各种操作必须 c + + 之间传输的日期和时间信息`CTime`对象和 TIMESTAMP_STRUCT 代理。 这会增加复杂性此函数相当，但它是如何使用代理服务器进行数据传输的一个很好示例。
+`RFX_Date`：ODBC 返回自己 TIMESTAMP_STRUCT 数据结构中的日期和时间信息。 此函数为动态分配 TIMESTAMP_STRUCT"代理"作为发送和接收日期时间数据。 各种操作必须 c + + 之间传输的日期和时间信息`CTime`对象和 TIMESTAMP_STRUCT 代理。 这会增加复杂性此函数相当，但它是如何使用代理服务器进行数据传输的一个很好示例。
 
-`RFX_LongBinary`： 这是唯一的类库 RFX 函数，不使用列绑定来接收和发送数据。 此函数将忽略 BindFieldToColumn 操作相反，在修复操作时，会分配存储区来存放传入 SQL_LONGVARCHAR 或 SQL_LONGVARBINARY 数据，然后执行 SQLGetData 呼叫将检索到的已分配存储的值。 当准备将发送回数据源 （如名称值和值的操作） 的数据值时，此函数将使用 ODBC 的 DATA_AT_EXEC 功能。 请参阅[技术说明 45](../mfc/tn045-mfc-database-support-for-long-varchar-varbinary.md)有关使用 SQL_LONGVARBINARY 和 SQL_LONGVARCHARs 的详细信息。
+`RFX_LongBinary`：这是唯一的类库 RFX 函数，不使用列绑定来接收和发送数据。 此函数将忽略 BindFieldToColumn 操作相反，在修复操作时，会分配存储区来存放传入 SQL_LONGVARCHAR 或 SQL_LONGVARBINARY 数据，然后执行 SQLGetData 呼叫将检索到的已分配存储的值。 当准备将发送回数据源 （如名称值和值的操作） 的数据值时，此函数将使用 ODBC 的 DATA_AT_EXEC 功能。 请参阅[技术说明 45](../mfc/tn045-mfc-database-support-for-long-varchar-varbinary.md)有关使用 SQL_LONGVARBINARY 和 SQL_LONGVARCHARs 的详细信息。
 
 当编写你自己**RFX_** 函数，您通常将能够使用`CFieldExchange::Default`实现给定的操作。 查看相关操作在默认的实现。 如果执行该操作将需要你编写你**RFX_** 函数可以委派给`CFieldExchange::Default`。 你可以看到示例调用`CFieldExchange::Default`dbrfx.cpp 中
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - COleException [MFC], Process
 - COleException [MFC], m_sc
 ms.assetid: 2571e9fe-26cc-42f0-9ad9-8ad5b4311ec1
-ms.openlocfilehash: 243ea2028b30d60a2c19b22238914682966d3b69
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4b5dd2de2924b62dd76d7f16a494566849357de8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50599337"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300357"
 ---
 # <a name="coleexception-class"></a>COleException 类
 
@@ -47,7 +47,7 @@ class COleException : public CException
 
 一般情况下，不应创建`COleException`对象直接; 相反，应调用[AfxThrowOleException](exception-processing.md#afxthrowoleexception)。
 
-有关异常的详细信息，请参阅文章[异常处理 (MFC)](../../mfc/exception-handling-in-mfc.md)并[异常： OLE 异常](../../mfc/exceptions-ole-exceptions.md)。
+有关异常的详细信息，请参阅文章[异常处理 (MFC)](../../mfc/exception-handling-in-mfc.md)和[异常：OLE 异常](../../mfc/exceptions-ole-exceptions.md)。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -112,4 +112,3 @@ SCODE 的详细信息，请参阅[COM 错误代码的结构](/windows/desktop/co
 [MFC 示例 CALCDRIV](../../visual-cpp-samples.md)<br/>
 [CException 类](../../mfc/reference/cexception-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)
-

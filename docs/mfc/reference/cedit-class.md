@@ -94,12 +94,12 @@ helpviewer_keywords:
 - CEdit [MFC], ShowBalloonTip
 - CEdit [MFC], Undo
 ms.assetid: b1533c30-7f10-4663-88d3-8b7f2c9f7024
-ms.openlocfilehash: f18866dca3610db275c629bbb2ac885c21cbdcb8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6af054ea27233de2cc3b551bbec69c0ab3b4be9e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50455804"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289957"
 ---
 # <a name="cedit-class"></a>CEdit Class
 
@@ -181,13 +181,13 @@ class CEdit : public CWnd
 
 每个消息映射条目采用以下形式：
 
-  **ON_**_通知_**(** _id_**，** _memberFxn_ **)**
+  **ON_**_NOTIFICATION_**(** _id_**,** _memberFxn_ **)**
 
 其中`id`指定发送通知的编辑控件的子窗口 ID 和`memberFxn`是您编写以处理通知的父成员函数的名称。
 
 父项的函数原型如下所示：
 
-**afx_msg** void memberFxn **（);**
+**afx_msg** void memberFxn **( );**
 
 下面是可能的消息映射条目和的情况下，将向父级发送说明的列表：
 
@@ -854,7 +854,7 @@ int LineIndex(int nLine = -1) const;
 
 ### <a name="parameters"></a>参数
 
-*n 行*<br/>
+*nLine*<br/>
 包含在文本编辑控件中所需的行的索引值或包含-1。 如果*n 行*为-1，它指定当前行，即，包含脱字号的行。
 
 ### <a name="return-value"></a>返回值
@@ -883,7 +883,7 @@ int LineLength(int nLine = -1) const;
 
 ### <a name="parameters"></a>参数
 
-*n 行*<br/>
+*nLine*<br/>
 其长度是要检索的行中的字符从零开始索引。 默认值为 -1。
 
 ### <a name="return-value"></a>返回值
@@ -966,7 +966,7 @@ CPoint PosFromChar(UINT nChar) const;
 
 ### <a name="parameters"></a>参数
 
-*NChar*<br/>
+*nChar*<br/>
 指定字符的从零开始的索引。
 
 ### <a name="return-value"></a>返回值
@@ -1117,7 +1117,7 @@ void SetLimitText(UINT nMax);
 
 ### <a name="parameters"></a>参数
 
-*最*<br/>
+*nMax*<br/>
 新文本限制，以字符为单位。
 
 ### <a name="remarks"></a>备注

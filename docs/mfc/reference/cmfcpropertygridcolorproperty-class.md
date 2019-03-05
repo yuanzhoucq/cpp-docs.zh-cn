@@ -20,16 +20,17 @@ helpviewer_keywords:
 - CMFCPropertyGridColorProperty [MFC], SetColumnsNumber
 - CMFCPropertyGridColorProperty [MFC], SetOriginalValue
 ms.assetid: af37be93-a91e-40a2-9a65-0f3412c6f0f8
-ms.openlocfilehash: c284906a85ec93c5c5419acb783f6f46ebcf03e9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 65c2c22c93dc3acb50fc4627c3710a3f0c86aeb0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575729"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303958"
 ---
 # <a name="cmfcpropertygridcolorproperty-class"></a>CMFCPropertyGridColorProperty 类
 
-`CMFCPropertyGridColorProperty` 类支持用于打开颜色选择对话框的属性列表控件项。
+
+  `CMFCPropertyGridColorProperty` 类支持用于打开颜色选择对话框的属性列表控件项。
 
 ## <a name="syntax"></a>语法
 
@@ -65,7 +66,8 @@ class CMFCPropertyGridColorProperty : public CMFCPropertyGridProperty
 
 ## <a name="remarks"></a>备注
 
-`CMFCPropertyGridColorProperty` 类支持可添加到属性列表控件的颜色属性。 有关详细信息，请参阅[CMFCPropertyGridCtrl 类](../../mfc/reference/cmfcpropertygridctrl-class.md)。
+
+  `CMFCPropertyGridColorProperty` 类支持可添加到属性列表控件的颜色属性。 有关详细信息，请参阅[CMFCPropertyGridCtrl 类](../../mfc/reference/cmfcpropertygridctrl-class.md)。
 
 ## <a name="example"></a>示例
 
@@ -103,7 +105,7 @@ CMFCPropertyGridColorProperty(
 *strName*<br/>
 [in]属性的名称。
 
-*颜色*<br/>
+*color*<br/>
 [in]属性的颜色值。
 
 *pPalette*<br/>
@@ -187,7 +189,7 @@ void SetColor(COLORREF color);
 
 ### <a name="parameters"></a>参数
 
-*颜色*<br/>
+*color*<br/>
 [in]RGB 颜色值。
 
 ### <a name="remarks"></a>备注

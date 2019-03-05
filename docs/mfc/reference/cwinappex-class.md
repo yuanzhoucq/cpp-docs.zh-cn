@@ -118,12 +118,12 @@ helpviewer_keywords:
 - CWinAppEx [MFC], StoreWindowPlacement
 - CWinAppEx [MFC], m_bForceImageReset
 ms.assetid: a3d3e053-3e22-463f-9444-c73abb1bb9d7
-ms.openlocfilehash: 57c18ff00cd9e3a1d3156d8214ac78b49ca00c1f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c222567703d0e57480c00f6f2bf9e78f16979150
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544412"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288826"
 ---
 # <a name="cwinappex-class"></a>CWinAppEx 类
 
@@ -176,7 +176,7 @@ class CWinAppEx : public CWinApp
 |[CWinAppEx::InitKeyboardManager](#initkeyboardmanager)|初始化 `CKeyboardManager` 对象。|
 |[CWinAppEx::InitMouseManager](#initmousemanager)|初始化 `CMouseManager` 对象。|
 |[CWinAppEx::InitShellManager](#initshellmanager)|初始化`CShellManager`类|
-|[Cwinappex:: Inittooltipmanager](#inittooltipmanager)|初始化`CTooltipManager`类。|
+|[CWinAppEx::InitTooltipManager](#inittooltipmanager)|初始化`CTooltipManager`类。|
 |[CWinAppEx::IsResourceSmartUpdate](#isresourcesmartupdate)||
 |[CWinAppEx::IsStateExists](#isstateexists)|指示指定的键是否是在注册表中。|
 |[CWinAppEx::LoadState](#loadstate)|从注册表加载应用程序状态。|
@@ -222,7 +222,7 @@ class CWinAppEx : public CWinApp
 
 - 派生从主应用程序类`CWinAppEx`。
 
-您将合并后`CWinAppEx`到应用程序，您可以初始化应用程序管理器的任何一个。 在使用应用程序管理器之前，必须通过调用适当的 initialize 方法对其进行初始化。 若要获取特定的管理器的指针，调用相关联的 get 方法。 `CWinAppEx`类管理以下应用程序管理器： [CMouseManager 类](../../mfc/reference/cmousemanager-class.md)， [CContextMenuManager 类](../../mfc/reference/ccontextmenumanager-class.md)， [CKeyboardManager 类](../../mfc/reference/ckeyboardmanager-class.md)， [CUserToolsManager 类](../../mfc/reference/cusertoolsmanager-class.md)，并[CMenuTearOffManager 类](../../mfc/reference/cmenutearoffmanager-class.md)。
+您将合并后`CWinAppEx`到应用程序，您可以初始化应用程序管理器的任何一个。 在使用应用程序管理器之前，必须通过调用适当的 initialize 方法对其进行初始化。 若要获取特定的管理器的指针，调用相关联的 get 方法。 `CWinAppEx`类管理以下应用程序管理器：[CMouseManager 类](../../mfc/reference/cmousemanager-class.md)， [CContextMenuManager 类](../../mfc/reference/ccontextmenumanager-class.md)， [CKeyboardManager 类](../../mfc/reference/ckeyboardmanager-class.md)， [CUserToolsManager 类](../../mfc/reference/cusertoolsmanager-class.md)，和[CMenuTearOffManager 类](../../mfc/reference/cmenutearoffmanager-class.md)。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -478,7 +478,7 @@ int GetInt(
 *lpszEntry*<br/>
 [in]一个字符串，包含注册表项的名称。
 
-*n 默认*<br/>
+*nDefault*<br/>
 [in]该方法将返回指定的注册表条目不存在默认值。
 
 ### <a name="return-value"></a>返回值
@@ -643,7 +643,7 @@ int GetSectionInt(
 *lpszEntry*<br/>
 [in]包含要读取的值的字符串。
 
-*n 默认*<br/>
+*nDefault*<br/>
 [in]要返回指定的值不存在的默认值。
 
 ### <a name="return-value"></a>返回值
@@ -868,7 +868,7 @@ BOOL InitShellManager();
 
 如果应用程序已具有 shell 管理器，并且您调用`InitShellManager`，在应用程序将引发[ASSERT](diagnostic-services.md#assert)失败。 因此，不要调用`InitShellManager`如果您创建`CShellManager`直接对象。 如果不使用自定义`CShellManager`，使用`GetShellManager`若要创建`CShellManager`对象。
 
-##  <a name="inittooltipmanager"></a>  Cwinappex:: Inittooltipmanager
+##  <a name="inittooltipmanager"></a>  CWinAppEx::InitTooltipManager
 
 初始化[CTooltipManager](../../mfc/reference/ctooltipmanager-class.md)对象。
 
@@ -1031,7 +1031,7 @@ virtual void OnAppContextHelp(
 *pWndControl*<br/>
 [in]指向用户对其调用上下文的帮助窗口对象的指针。
 
-*dwHelpIDArray]*<br/>
+*dwHelpIDArray[]*<br/>
 [in]保留的值。
 
 ### <a name="remarks"></a>备注
@@ -1089,7 +1089,7 @@ virtual BOOL OnWorkspaceIdle(CWnd*);
 
 ### <a name="parameters"></a>参数
 
-[in]*CWnd&#38;*<br/>
+[in] *CWnd&#38;*<br/>
 
 ### <a name="return-value"></a>返回值
 
@@ -1232,7 +1232,7 @@ virtual BOOL ShowPopupMenu(
 *uiMenuResId*<br/>
 [in]一个菜单资源 id。
 
-*点*<br/>
+*point*<br/>
 [in]一个[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)屏幕坐标中指定菜单的位置。
 
 *pWnd*<br/>
@@ -1327,7 +1327,7 @@ BOOL WriteInt(
 *lpszEntry*<br/>
 [in]包含的注册表项名称的字符串。
 
-*n 值*<br/>
+*nValue*<br/>
 [in]要存储的数据。
 
 ### <a name="return-value"></a>返回值
@@ -1421,7 +1421,7 @@ BOOL WriteSectionInt(
 *lpszEntry*<br/>
 [in]包含要设置的值的字符串。
 
-*n 值*<br/>
+*nValue*<br/>
 [in]要向注册表写入的数据。
 
 ### <a name="return-value"></a>返回值

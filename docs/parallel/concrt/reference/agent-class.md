@@ -17,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - agent class
 ms.assetid: 1b09e3d2-5e37-4966-b016-907ef1512456
-ms.openlocfilehash: ad096eea3467346d85ce4249e910915cbd73488d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 98ad5f817361d8410e5a60648fb23baec06c42d7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50560246"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289138"
 ---
 # <a name="agent-class"></a>agent 类
 
@@ -47,11 +47,11 @@ class agent;
 
 |名称|描述|
 |----------|-----------------|
-|[取消](#cancel)|将代理移动眖`agent_created`或`agent_runnable`状态到`agent_canceled`状态。|
+|[cancel](#cancel)|将代理移动眖`agent_created`或`agent_runnable`状态到`agent_canceled`状态。|
 |[start](#start)|将从代理移`agent_created`状态变为`agent_runnable`状态，并且计划的执行。|
 |[status](#status)|来自代理的状态信息的同步源。|
 |[status_port](#status_port)|来自代理的状态信息异步源。|
-|[等待](#wait)|等待代理完成其任务。|
+|[wait](#wait)|等待代理完成其任务。|
 |[wait_for_all](#wait_for_all)|等待所有指定的代理来完成其任务。|
 |[wait_for_one](#wait_for_one)|等待指定的代理完成其任务之一。|
 
@@ -59,7 +59,7 @@ class agent;
 
 |名称|描述|
 |----------|-----------------|
-|[完成](#done)|将移动到代理`agent_done`状态，表明代理已完成。|
+|[done](#done)|将移动到代理`agent_done`状态，表明代理已完成。|
 |[run](#run)|表示代理的主要任务。 `run` 应在派生类中重写，并指定代理应执行的操作已启动后。|
 
 ## <a name="remarks"></a>备注
@@ -100,7 +100,7 @@ agent(ScheduleGroup& _PGroup);
 
 如果未指定 `_PScheduler` 或 `_PGroup` 函数，运行时将使用默认的计划程序。
 
-##  <a name="dtor"></a> ~ 代理
+##  <a name="dtor"></a> ~agent
 
 销毁该代理。
 
@@ -203,7 +203,7 @@ static agent_status __cdecl wait(
 *_PAgent*<br/>
 指向要等待的时间的代理的指针。
 
-*超时) (_t*<br/>
+*_Timeout*<br/>
 若要等待，以毫秒为单位最长时间。
 
 ### <a name="return-value"></a>返回值
@@ -239,7 +239,7 @@ static void __cdecl wait_for_all(
 *_PStatus*<br/>
 指向代理状态的数组的指针。 该方法返回时，每个状态的值将表示相应代理的状态。
 
-*超时) (_t*<br/>
+*_Timeout*<br/>
 若要等待，以毫秒为单位最长时间。
 
 ### <a name="remarks"></a>备注
@@ -275,7 +275,7 @@ static void __cdecl wait_for_one(
 *_Index*<br/>
 对将放置代理索引的变量的引用。
 
-*超时) (_t*<br/>
+*_Timeout*<br/>
 若要等待，以毫秒为单位最长时间。
 
 ### <a name="remarks"></a>备注

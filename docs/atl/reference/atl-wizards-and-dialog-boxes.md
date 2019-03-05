@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - ATL, class wizards
 ms.assetid: 51cf002a-83bc-41ba-aeb8-364ea2331375
-ms.openlocfilehash: 2bab97fbcde7ea9febbd898a37bd38b9ed93b93c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1eea4e86d453939f5ba1bdda47906768c8012ba6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50632071"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275878"
 ---
 # <a name="atl-wizards-and-dialog-boxes"></a>ATL 向导和对话框
 
@@ -29,4 +29,3 @@ ms.locfileid: "50632071"
 |[ATL COM + 1.0 组件](../../atl/reference/adding-an-atl-com-plus-1-0-component.md)|创建一个基本的 ATL COM + 1.0 组件|
 |[ATL Active Server Page 组件](../../atl/reference/adding-an-atl-active-server-page-component.md)|创建一个基本的 ATL Active Server Page 组件。|
 |[ATL COM 桌面组件](../../atl/atl-com-desktop-components.md)|链接到 ATL 文档。|
-

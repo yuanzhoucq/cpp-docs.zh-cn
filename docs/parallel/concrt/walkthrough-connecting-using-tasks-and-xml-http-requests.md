@@ -6,12 +6,12 @@ helpviewer_keywords:
 - IXMLHTTPRequest2 and tasks, example
 - IXHR2 and tasks, example
 ms.assetid: e8e12d46-604c-42a7-abfd-b1d1bb2ed6b3
-ms.openlocfilehash: dfe4f111e130520f1c4948dc00fdf340e4d3113e
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: f78adda7625d3a3def60de968c5e7be97f282a7f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175842"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266505"
 ---
 # <a name="walkthrough-connecting-using-tasks-and-xml-http-requests"></a>演练：使用任务和 XML HTTP 请求进行连接
 
@@ -24,7 +24,7 @@ ms.locfileid: "52175842"
 
 本文档首先演示如何创建 `HttpRequest` 及其支持类。 然后，它演示如何使用此类从使用 c + + 和 XAML 的 UWP 应用。
 
-有关使用示例`IXMLHTTPRequest2`但不使用任务，请参阅[快速入门： 使用 XML HTTP 请求 (IXMLHTTPRequest2) 进行连接](/previous-versions/windows/apps/hh770550\(v=win.10\))。
+有关使用示例`IXMLHTTPRequest2`但不使用任务，请参阅[快速入门：使用 XML HTTP 请求 (IXMLHTTPRequest2) 进行连接](/previous-versions/windows/apps/hh770550\(v=win.10\))。
 
 > [!TIP]
 >  `IXMLHTTPRequest2` 和`IXMLHTTPRequest2Callback`是我们建议在 UWP 应用中使用的接口。 还可以调整此示例，以用于桌面应用程序。
@@ -33,11 +33,18 @@ ms.locfileid: "52175842"
 
 ## <a name="defining-the-httprequest-httprequestbufferscallback-and-httprequeststringcallback-classes"></a>定义 HttpRequest、HttpRequestBuffersCallback 和 HttpRequestStringCallback 类
 
-当您使用 `IXMLHTTPRequest2` 接口通过 HTTP 创建 Web 请求时，可以实现 `IXMLHTTPRequest2Callback` 接口来接收服务器响应并对其他事件做出响应。 此示例定义了 `HttpRequest` 类来创建 Web 请求，并定义了 `HttpRequestBuffersCallback` 和 `HttpRequestStringCallback` 类来处理响应。 `HttpRequestBuffersCallback` 和 `HttpRequestStringCallback` 类支持 `HttpRequest` 类；在应用程序代码中您只能使用 `HttpRequest` 类。
+当您使用 `IXMLHTTPRequest2` 接口通过 HTTP 创建 Web 请求时，可以实现 `IXMLHTTPRequest2Callback` 接口来接收服务器响应并对其他事件做出响应。 此示例定义了 `HttpRequest` 类来创建 Web 请求，并定义了 `HttpRequestBuffersCallback` 和 `HttpRequestStringCallback` 类来处理响应。 
+  `HttpRequestBuffersCallback` 和 `HttpRequestStringCallback` 类支持 `HttpRequest` 类；在应用程序代码中您只能使用 `HttpRequest` 类。
 
-`GetAsync` 类的 `PostAsync` 和 `HttpRequest` 方法可以使您分别启动 HTTP GET 和 POST 操作。 这些方法使用 `HttpRequestStringCallback` 类以便将服务器响应作为字符串读取。 `SendAsync` 和 `ReadAsync` 方法使您能够对区块中的大型内容进行流式处理。 每个这些方法返回[concurrency:: task](../../parallel/concrt/reference/task-class.md)来表示该操作。 `GetAsync` 和 `PostAsync` 方法将产生 `task<std::wstring>` 值，值中的 `wstring` 部分表示服务器的响应。 `SendAsync` 和 `ReadAsync` 方法将产生 `task<void>` 值；当发送和读取操作完成后这些任务将会完成。
 
-因为`IXMLHTTPRequest2`接口是异步操作，本示例使用[concurrency:: task_completion_event](../../parallel/concrt/reference/task-completion-event-class.md)创建完成后，回调对象完成或取消下载操作的任务。 `HttpRequest` 类从此任务创建基于任务的延续以设置最终结果。 `HttpRequest` 类使用基于任务的延续来确保，即使在前面的任务产生错误或取消的情况下，延续任务也会运行。 有关基于任务的继续符的详细信息，请参阅[任务并行](../../parallel/concrt/task-parallelism-concurrency-runtime.md)
+  `GetAsync` 类的 `PostAsync` 和 `HttpRequest` 方法可以使您分别启动 HTTP GET 和 POST 操作。 这些方法使用 `HttpRequestStringCallback` 类以便将服务器响应作为字符串读取。 
+  `SendAsync` 和 `ReadAsync` 方法使您能够对区块中的大型内容进行流式处理。 每个这些方法返回[concurrency:: task](../../parallel/concrt/reference/task-class.md)来表示该操作。 
+  `GetAsync` 和 `PostAsync` 方法将产生 `task<std::wstring>` 值，值中的 `wstring` 部分表示服务器的响应。 
+  `SendAsync` 和 `ReadAsync` 方法将产生 `task<void>` 值；当发送和读取操作完成后这些任务将会完成。
+
+因为`IXMLHTTPRequest2`接口是异步操作，本示例使用[concurrency:: task_completion_event](../../parallel/concrt/reference/task-completion-event-class.md)创建完成后，回调对象完成或取消下载操作的任务。 
+  `HttpRequest` 类从此任务创建基于任务的延续以设置最终结果。 
+  `HttpRequest` 类使用基于任务的延续来确保，即使在前面的任务产生错误或取消的情况下，延续任务也会运行。 有关基于任务的继续符的详细信息，请参阅[任务并行](../../parallel/concrt/task-parallelism-concurrency-runtime.md)
 
 若要支持取消，`HttpRequest`、`HttpRequestBuffersCallback` 和 `HttpRequestStringCallback` 类将使用取消标记。 `HttpRequestBuffersCallback`并`HttpRequestStringCallback`类使用[3&gt;concurrency::cancellation_token::register_callback&lt;3}](reference/cancellation-token-class.md#register_callback)方法，以使任务完成事件能够响应取消。 此取消回调将中止下载。 有关详细信息，请参阅[取消](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md#cancellation)。
 
@@ -112,6 +119,6 @@ ms.locfileid: "52175842"
 [PPL 中的取消操作](cancellation-in-the-ppl.md)<br/>
 [C + + 中的异步编程](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps)<br/>
 [用 C++ 为 UWP 应用创建异步操作](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)<br/>
-[快速入门： 使用 XML HTTP 请求 (IXMLHTTPRequest2) 进行连接](/previous-versions/windows/apps/hh770550\(v=win.10\))
+[快速入门：使用 XML HTTP 请求 (IXMLHTTPRequest2) 进行连接](/previous-versions/windows/apps/hh770550\(v=win.10\))
 [task 类 （并发运行时）](../../parallel/concrt/reference/task-class.md)<br/>
 [task_completion_event 类](../../parallel/concrt/reference/task-completion-event-class.md)
