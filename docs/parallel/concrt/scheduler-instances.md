@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - scheduler instances
 ms.assetid: 4819365f-ef99-49cc-963e-50a2a35a8d6b
-ms.openlocfilehash: 370f8a3a8fdcc8e1daaee2d3424f939fb719a449
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 19bd871857dcef6aaef153798388c0272239fa1f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50570165"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301293"
 ---
 # <a name="scheduler-instances"></a>计划程序实例
 
@@ -38,7 +38,7 @@ ms.locfileid: "50570165"
 
 通常情况下，`CurrentScheduler`类用于访问当前计划程序。 `Scheduler`需要管理的计划程序不是当前类十分有用。
 
-以下部分介绍如何创建和管理计划程序实例。 有关完整示例，说明了这些任务的说明，请参阅[如何： 管理计划程序实例](../../parallel/concrt/how-to-manage-a-scheduler-instance.md)。
+以下部分介绍如何创建和管理计划程序实例。 有关完整示例，说明了这些任务的说明，请参阅[如何：管理计划程序实例](../../parallel/concrt/how-to-manage-a-scheduler-instance.md)。
 
 [[返回页首](#top)]
 
@@ -120,7 +120,7 @@ ms.locfileid: "50570165"
 
 ##  <a name="example"></a> 示例
 
-有关如何创建和管理计划程序实例的基本示例，请参阅[如何： 管理计划程序实例](../../parallel/concrt/how-to-manage-a-scheduler-instance.md)。
+有关如何创建和管理计划程序实例的基本示例，请参阅[如何：管理计划程序实例](../../parallel/concrt/how-to-manage-a-scheduler-instance.md)。
 
 ## <a name="see-also"></a>请参阅
 
@@ -128,4 +128,3 @@ ms.locfileid: "50570165"
 [如何：管理计划程序实例](../../parallel/concrt/how-to-manage-a-scheduler-instance.md)<br/>
 [计划程序策略](../../parallel/concrt/scheduler-policies.md)<br/>
 [计划组](../../parallel/concrt/schedule-groups.md)
-

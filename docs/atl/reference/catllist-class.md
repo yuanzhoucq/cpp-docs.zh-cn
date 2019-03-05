@@ -37,12 +37,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlList class
 ms.assetid: 09e98053-64b2-4efa-99ab-d0542caaf981
-ms.openlocfilehash: 9e657bbf375a8babf1c03cc7254310956131d62b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: faed99197eb14da8ea095bef81d0d1a9845b18ad
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50449358"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285498"
 ---
 # <a name="catllist-class"></a>CAtlList 类
 
@@ -76,7 +76,7 @@ class CAtlList
 |名称|描述|
 |----------|-----------------|
 |[CAtlList::CAtlList](#catllist)|构造函数。|
-|[CAtlList:: ~ CAtlList](#dtor)|析构函数。|
+|[CAtlList::~CAtlList](#dtor)|析构函数。|
 
 ### <a name="public-methods"></a>公共方法
 
@@ -134,7 +134,7 @@ POSITION AddHead(INARGTYPE element);
 
 ### <a name="parameters"></a>参数
 
-*元素*<br/>
+*element*<br/>
 新元素。
 
 ### <a name="return-value"></a>返回值
@@ -181,7 +181,7 @@ POSITION AddTail(INARGTYPE element);
 
 ### <a name="parameters"></a>参数
 
-*元素*<br/>
+*element*<br/>
 要添加的元素。
 
 ### <a name="return-value"></a>返回值
@@ -254,7 +254,7 @@ CAtlList(UINT nBlockSize = 10) throw();
 
 [!code-cpp[NVC_ATL_Utilities#18](../../atl/codesnippet/cpp/catllist-class_6.cpp)]
 
-##  <a name="dtor"></a>  CAtlList:: ~ CAtlList
+##  <a name="dtor"></a>  CAtlList::~CAtlList
 
 析构函数。
 
@@ -278,7 +278,7 @@ POSITION Find(INARGTYPE element, POSITION posStartAfter = NULL) const throw();
 
 ### <a name="parameters"></a>参数
 
-*元素*<br/>
+*element*<br/>
 要在列表中找到的元素。
 
 *posStartAfter*<br/>
@@ -536,7 +536,7 @@ POSITION InsertAfter(POSITION pos, INARGTYPE element);
 *pos*<br/>
 将在其后插入新元素的位置值。
 
-*元素*<br/>
+*element*<br/>
 要插入的元素。
 
 ### <a name="return-value"></a>返回值
@@ -564,7 +564,7 @@ POSITION InsertBefore(POSITION pos, INARGTYPE element);
 *pos*<br/>
 新元素将插入到此位置的值前面的列表。
 
-*元素*<br/>
+*element*<br/>
 要插入的元素。
 
 ### <a name="return-value"></a>返回值
@@ -761,7 +761,7 @@ void SetAt(POSITION pos, INARGTYPE element);
 *pos*<br/>
 对应于要更改的元素的位置值。
 
-*元素*<br/>
+*element*<br/>
 新的元素值。
 
 ### <a name="remarks"></a>备注

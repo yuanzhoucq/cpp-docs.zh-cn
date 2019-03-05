@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CInterpolatorBase [MFC], SetDuration
 - CInterpolatorBase [MFC], SetInitialValueAndVelocity
 ms.assetid: bbc3dce7-8398-47f9-b97e-e4fd2d737232
-ms.openlocfilehash: e428478f2f437654ea2f0890993245afc53c01f3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 379aa5607e459ad8acfd99c5899315afb84ac4a3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50541461"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302281"
 ---
 # <a name="cinterpolatorbase-class"></a>CInterpolatorBase 类
 
@@ -145,7 +145,7 @@ IFACEMETHOD(GetDuration)(__out UI_ANIMATION_SECONDS* duration);
 
 ### <a name="parameters"></a>参数
 
-*持续时间*<br/>
+*duration*<br/>
 输出。 转换以秒为单位的持续时间。
 
 ### <a name="return-value"></a>返回值
@@ -162,7 +162,7 @@ IFACEMETHOD(GetFinalValue)(__out DOUBLE* value);
 
 ### <a name="parameters"></a>参数
 
-*value*<br/>
+*值*<br/>
 输出。 转换结束时变量的最终值。
 
 ### <a name="return-value"></a>返回值
@@ -184,7 +184,7 @@ IFACEMETHOD(InterpolateValue)(
 *offset*<br/>
 从过渡的开头的偏移量。 偏移量始终为大于或等于零且小于过渡的持续时间。 如果转换的持续时间为零，不调用此方法。
 
-*value*<br/>
+*值*<br/>
 输出。 内插的值。
 
 ### <a name="return-value"></a>返回值
@@ -206,7 +206,7 @@ IFACEMETHOD(InterpolateVelocity)(
 *offset*<br/>
 从过渡的开头的偏移量。 偏移量始终是大于或等于零且小于或等于过渡的持续时间。 如果转换的持续时间为零，不调用此方法。
 
-*速度*<br/>
+*velocity*<br/>
 输出。 变量的偏移量处的方向的速度。
 
 ### <a name="return-value"></a>返回值
@@ -236,7 +236,7 @@ IFACEMETHOD(SetDuration)(__in UI_ANIMATION_SECONDS duration);
 
 ### <a name="parameters"></a>参数
 
-*持续时间*<br/>
+*duration*<br/>
 过渡的持续时间。
 
 ### <a name="return-value"></a>返回值

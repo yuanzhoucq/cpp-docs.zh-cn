@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Create method [MFC], property sheets
 - CPropertyPage class [MFC], styles
 ms.assetid: 240654d4-152b-4e3f-af7b-44234339206e
-ms.openlocfilehash: ac6315d1b450fa41158f1393471d723627ecec24
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 76acbfa9625fe6cb9a575244b0ed6954eeaaf3f2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509378"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301683"
 ---
 # <a name="using-property-sheets-in-your-application"></a>在您的应用程序中使用属性表
 
@@ -42,7 +42,7 @@ ms.locfileid: "50509378"
 
 1. 创建成员变量以保存此属性页的值。 将成员变量添加到属性页的过程与将成员变量添加到对话框的过程完全一致，因为属性页是一个特殊化对话框。 有关详细信息，请参阅[定义对话框控件成员变量](../windows/defining-member-variables-for-dialog-controls.md)。
 
-1. 构造[CPropertySheet](../mfc/reference/cpropertysheet-class.md)在源代码中的对象。 通常，您将在显示属性表的命令的处理程序中构造 `CPropertySheet` 对象。 此对象表示整个属性表。 如果创建使用模式属性表[DoModal](../mfc/reference/cpropertysheet-class.md#domodal)函数，该框架默认情况下提供三个命令按钮: 确定、 取消，并应用。 与创建无模式属性表，则框架将创建没有命令按钮[创建](../mfc/reference/cpropertysheet-class.md#create)函数。 您无需从 `CPropertySheet` 派生类，除非希望添加其他控件（如预览窗口）或显示无模式属性表。 此步骤对于无模式属性表是必需的，因为它们可能不包含可能用于关闭属性表的任何默认控件。
+1. 构造[CPropertySheet](../mfc/reference/cpropertysheet-class.md)在源代码中的对象。 通常，您将在显示属性表的命令的处理程序中构造 `CPropertySheet` 对象。 此对象表示整个属性表。 如果创建使用模式属性表[DoModal](../mfc/reference/cpropertysheet-class.md#domodal)函数，该框架默认情况下提供三个命令按钮：好了，取消，并应用。 与创建无模式属性表，则框架将创建没有命令按钮[创建](../mfc/reference/cpropertysheet-class.md#create)函数。 您无需从 `CPropertySheet` 派生类，除非希望添加其他控件（如预览窗口）或显示无模式属性表。 此步骤对于无模式属性表是必需的，因为它们可能不包含可能用于关闭属性表的任何默认控件。
 
 1. 对于将添加到属性表的每个页，请执行下列操作：
 
@@ -63,4 +63,3 @@ ms.locfileid: "50509378"
 ## <a name="see-also"></a>请参阅
 
 [属性表](../mfc/property-sheets-mfc.md)
-

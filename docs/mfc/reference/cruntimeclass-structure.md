@@ -9,12 +9,12 @@ helpviewer_keywords:
 - runtime [MFC], class information
 - run-time class [MFC], CRuntimeClass structure
 ms.assetid: de62b6ef-90d4-420f-8c70-f58b36976a2b
-ms.openlocfilehash: 83c10d5a87c7d5782505fcd93e46c678a97b8b5d
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 92979a10c18d9759e0ecc9f0785e56a97c0f0642
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521953"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274292"
 ---
 # <a name="cruntimeclass-structure"></a>CRuntimeClass 结构
 
@@ -88,7 +88,7 @@ static CObject* PASCAL CreateObject(LPCWSTR lpszClassName);
 
 ### <a name="remarks"></a>备注
 
-类派生自`CObject`可以支持动态创建，这是在运行时创建指定类的对象的功能。 文档、 视图和框架类，例如，应支持动态创建。 有关详细信息动态创建并`CreateObject`成员，请参阅[CObject 类](../../mfc/using-cobject.md)并[CObject 类： 指定级别的功能](../../mfc/specifying-levels-of-functionality.md)。
+类派生自`CObject`可以支持动态创建，这是在运行时创建指定类的对象的功能。 文档、 视图和框架类，例如，应支持动态创建。 有关详细信息动态创建并`CreateObject`成员，请参阅[CObject 类](../../mfc/using-cobject.md)和[CObject 类：指定功能级别](../../mfc/specifying-levels-of-functionality.md)。
 
 ### <a name="example"></a>示例
 
@@ -141,7 +141,7 @@ BOOL IsDerivedFrom(const CRuntimeClass* pBaseClass) const;
 > [!NOTE]
 >  若要使用`CRuntimeClass`结构，您必须在你想要检索的运行时对象信息的类的实现包括 IMPLEMENT_DYNAMIC、 IMPLEMENT_DYNCREATE 或 IMPLEMENT_SERIAL 宏。
 
-有关使用的详细信息`CRuntimeClass`，请参阅文章[CObject 类： 访问运行时类信息](../../mfc/accessing-run-time-class-information.md)。
+有关使用的详细信息`CRuntimeClass`，请参阅文章[CObject 类：访问运行时类信息](../../mfc/accessing-run-time-class-information.md)。
 
 ### <a name="example"></a>示例
 
@@ -224,4 +224,3 @@ BOOL IsDerivedFrom(const CRuntimeClass* pBaseClass) const;
 [IMPLEMENT_DYNAMIC](run-time-object-model-services.md#implement_dynamic)<br/>
 [IMPLEMENT_DYNCREATE](run-time-object-model-services.md#implement_dyncreate)<br/>
 [IMPLEMENT_SERIAL](run-time-object-model-services.md#implement_serial)
-

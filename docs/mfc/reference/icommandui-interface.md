@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - ICommandUI interface [MFC]
 ms.assetid: 134afe8d-dcdf-47ca-857a-a166a6b665dd
-ms.openlocfilehash: dd5f79b8ecd65428ce1231777fa6632777859a00
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 31157ba2445a432af274650011b839fb3df9b3c2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467088"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268169"
 ---
 # <a name="icommandui-interface"></a>ICommandUI 接口
 
@@ -51,7 +51,7 @@ interface class ICommandUI
 
 `ICommandUI` 中的 ON_UPDATE_COMMAND_UI 处理程序中使用，而[ICommandTarget](../../mfc/reference/icommandtarget-interface.md)-派生的类。 时应用程序的用户激活 （选择或单击） 菜单中，每个菜单项显示为已启用或禁用。 每个菜单命令的目标来实现的 ON_UPDATE_COMMAND_UI 处理提供此信息。 对于每个命令用户界面对象在应用程序中，使用属性窗口创建消息映射条目和每个处理程序的函数原型。
 
-有关详细信息如何`ICommandUI`路由命令中使用接口，请参阅[如何： 向 Windows 窗体控件添加命令传送](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)。
+有关详细信息如何`ICommandUI`路由命令中使用接口，请参阅[如何：添加命令路由到 Windows 窗体控件](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)。
 
 有关使用 Windows 窗体的详细信息，请参阅[在 MFC 中使用 Windows 窗体用户控件](../../dotnet/using-a-windows-form-user-control-in-mfc.md)。
 
@@ -80,7 +80,7 @@ void ContinueRouting();
 
 ## <a name="remarks"></a>备注
 
-这是应返回 FALSE 的 ON_COMMAND_EX 处理程序结合使用的高级的成员函数。 有关详细信息，请参阅技术注意 TN006： 消息映射。
+这是应返回 FALSE 的 ON_COMMAND_EX 处理程序结合使用的高级的成员函数。 有关详细信息，请参阅技术注意 TN006:消息映射。
 
 ## <a name="enabled"></a> ICommandUI::Enabled
 

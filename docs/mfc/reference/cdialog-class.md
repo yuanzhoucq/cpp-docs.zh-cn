@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CDialog [MFC], OnCancel
 - CDialog [MFC], OnOK
 ms.assetid: ca64b77e-2cd2-47e3-8eff-c2645ad578f9
-ms.openlocfilehash: 9eac0f7efdacc6181d8aaa15398f4d7365c0edd3
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: d3c3bca7932b9e9c7e7723b286c83ca3694a9968
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178494"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305089"
 ---
 # <a name="cdialog-class"></a>CDialog 类
 
@@ -301,7 +301,7 @@ void EndDialog(int nResult);
 
 ### <a name="parameters"></a>参数
 
-*n 结果*<br/>
+*nResult*<br/>
 包含要从对话框返回给调用方的值`DoModal`。
 
 ### <a name="remarks"></a>备注
@@ -562,4 +562,3 @@ void SetHelpID(UINT nIDR);
 [MFC 示例 DLGTEMPL](../../visual-cpp-samples.md)<br/>
 [CWnd 类](../../mfc/reference/cwnd-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)
-

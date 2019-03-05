@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - message_not_found class
 ms.assetid: a96b9995-5ad7-4600-83c8-c15e329ff10e
-ms.openlocfilehash: 7b6bd33e69d24e452414b2537ad70bf31e6b722f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: da0a44b90346959756c1ef7c685bef234fe6e46a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50458469"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296678"
 ---
 # <a name="messagenotfound-class"></a>message_not_found 类
 
@@ -57,11 +57,10 @@ message_not_found() throw();
 
 ### <a name="parameters"></a>参数
 
-*消息 （_m)*<br/>
+*_Message*<br/>
 错误的描述性消息。
 
 ## <a name="see-also"></a>请参阅
 
 [并发命名空间](concurrency-namespace.md)<br/>
 [异步消息块](../../../parallel/concrt/asynchronous-message-blocks.md)
-

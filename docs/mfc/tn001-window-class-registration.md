@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WNDCLASS [MFC]
 - AfxRegisterClass function
 ms.assetid: 1abf678e-f220-4606-85e0-03df32f64c54
-ms.openlocfilehash: 4ae94d1c9c57f6c315ae482e44576ae25194c00f
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: 68c851ae6a6b1b8578df90e2618f257122797aa5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54894258"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294143"
 ---
 # <a name="tn001-window-class-registration"></a>TN001:窗口类注册
 
@@ -110,4 +110,3 @@ pWnd->Create(strWndClass, ...);
 
 [按编号列出的技术说明](../mfc/technical-notes-by-number.md)<br/>
 [按类别列出的技术说明](../mfc/technical-notes-by-category.md)
-

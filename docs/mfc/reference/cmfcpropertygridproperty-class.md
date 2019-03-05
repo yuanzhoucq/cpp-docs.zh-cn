@@ -166,12 +166,12 @@ helpviewer_keywords:
 - CMFCPropertyGridProperty [MFC], m_strFormatLong
 - CMFCPropertyGridProperty [MFC], m_strFormatShort
 ms.assetid: 36f3fabe-0efe-468b-8a0b-5a7956db38a2
-ms.openlocfilehash: f7a8cca3da85e3ac0b7b7e63e83d394a0e8a9899
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 550f238ae66bcaf7d5afc245b709c42c78769949
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50524720"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305063"
 ---
 # <a name="cmfcpropertygridproperty-class"></a>CMFCPropertyGridProperty 类
 
@@ -208,7 +208,7 @@ class CMFCPropertyGridProperty : public CObject
 |[CMFCPropertyGridProperty::Enable](#enable)|启用或禁用一个属性。|
 |[CMFCPropertyGridProperty::EnableSpinControl](#enablespincontrol)|启用或禁用调节按钮控件用于修改属性值。|
 |[CMFCPropertyGridProperty::Expand](#expand)|展开或折叠包含子属性的属性。|
-|[Cmfcpropertygridproperty:: Formatproperty](#formatproperty)|设置属性值的文本表示形式的格式。|
+|[CMFCPropertyGridProperty::FormatProperty](#formatproperty)|设置属性值的文本表示形式的格式。|
 |[CMFCPropertyGridProperty::GetData](#getdata)|检索与属性关联的 DWORD 值。|
 |[CMFCPropertyGridProperty::GetDescription](#getdescription)|检索的属性说明。|
 |[CMFCPropertyGridProperty::GetExpandedSubItems](#getexpandedsubitems)|检索扩展的子项目数。|
@@ -235,7 +235,7 @@ class CMFCPropertyGridProperty : public CObject
 |[CMFCPropertyGridProperty::IsParentExpanded](#isparentexpanded)|指示是否展开当前属性的父级。|
 |[CMFCPropertyGridProperty::IsSelected](#isselected)|指示是否选择当前的属性。|
 |[CMFCPropertyGridProperty::IsVisible](#isvisible)|指示当前属性是否可见。|
-|[Cmfcpropertygridproperty:: Onclickbutton](#onclickbutton)|当用户单击属性中包含的按钮时，由框架调用。|
+|[CMFCPropertyGridProperty::OnClickButton](#onclickbutton)|当用户单击属性中包含的按钮时，由框架调用。|
 |[CMFCPropertyGridProperty::OnClickName](#onclickname)|当用户单击某个属性的名称字段时，调用由父属性列表控件。|
 |[CMFCPropertyGridProperty::OnClickValue](#onclickvalue)|当用户单击某个属性的值字段时，调用由父属性列表控件。|
 |[CMFCPropertyGridProperty::OnCloseCombo](#onclosecombo)|当关闭属性中包含一个组合框时，由框架调用。|
@@ -244,8 +244,8 @@ class CMFCPropertyGridProperty : public CObject
 |[CMFCPropertyGridProperty::OnDrawDescription](#ondrawdescription)|由框架调用以显示属性说明。|
 |[CMFCPropertyGridProperty::OnDrawExpandBox](#ondrawexpandbox)|由框架调用以绘制展开框控件附近包含子属性的属性。|
 |[CMFCPropertyGridProperty::OnDrawName](#ondrawname)|由框架调用以显示属性名称。|
-|[Cmfcpropertygridproperty:: Ondrawvalue](#ondrawvalue)|由框架调用以显示属性值。|
-|[Cmfcpropertygridproperty:: Onedit](#onedit)|当用户要修改属性值时由框架调用。|
+|[CMFCPropertyGridProperty::OnDrawValue](#ondrawvalue)|由框架调用以显示属性值。|
+|[CMFCPropertyGridProperty::OnEdit](#onedit)|当用户要修改属性值时由框架调用。|
 |[CMFCPropertyGridProperty::OnEndEdit](#onendedit)|当用户已完成时由框架调用修改属性值。|
 |[CMFCPropertyGridProperty::OnKillSelection](#onkillselection)||
 |[CMFCPropertyGridProperty::OnPosSizeChanged](#onpossizechanged)||
@@ -254,12 +254,12 @@ class CMFCPropertyGridProperty : public CObject
 |[CMFCPropertyGridProperty::OnSelectCombo](#onselectcombo)|当用户选择某个项的可编辑组合框中，由框架调用。|
 |[CMFCPropertyGridProperty::OnSetCursor](#onsetcursor)|当鼠标指针移动到的属性项，由框架调用。|
 |[CMFCPropertyGridProperty::OnSetSelection](#onsetselection)||
-|[Cmfcpropertygridproperty:: Onupdatevalue](#onupdatevalue)|当可编辑属性值已更改时由框架调用。|
+|[CMFCPropertyGridProperty::OnUpdateValue](#onupdatevalue)|当可编辑属性值已更改时由框架调用。|
 |[CMFCPropertyGridProperty::PushChar](#pushchar)|当选择了属性和用户输入新字符时，调用从属性列表控件。|
 |[CMFCPropertyGridProperty::Redraw](#redraw)|重绘该属性。|
 |[CMFCPropertyGridProperty::RemoveAllOptions](#removealloptions)|从属性中移除所有选项 （项）。|
 |[CMFCPropertyGridProperty::RemoveSubItem](#removesubitem)|删除指定的子项目。|
-|[Cmfcpropertygridproperty:: Resetoriginalvalue](#resetoriginalvalue)|还原已编辑属性的原始值。|
+|[CMFCPropertyGridProperty::ResetOriginalValue](#resetoriginalvalue)|还原已编辑属性的原始值。|
 |[CMFCPropertyGridProperty::SetData](#setdata)|将 DWORD 值与属性相关联。|
 |[CMFCPropertyGridProperty::SetDescription](#setdescription)|指定描述当前属性的文本。|
 |[CMFCPropertyGridProperty::SetName](#setname)|设置属性的名称。|
@@ -569,7 +569,7 @@ void EnableSpinControl(
 *nMin*<br/>
 [in]调节钮控件最小值。 默认值为 0。
 
-*最*<br/>
+*nMax*<br/>
 [in]调节钮控件的最大值。 默认值为 0。
 
 ### <a name="remarks"></a>备注
@@ -593,7 +593,7 @@ void Expand(BOOL bExpand=TRUE);
 
 ### <a name="remarks"></a>备注
 
-##  <a name="formatproperty"></a>  Cmfcpropertygridproperty:: Formatproperty
+##  <a name="formatproperty"></a>  CMFCPropertyGridProperty::FormatProperty
 
 设置属性值的文本表示形式的格式。
 
@@ -880,7 +880,7 @@ CMFCPropertyGridProperty* HitTest(
 
 ### <a name="parameters"></a>参数
 
-*点*<br/>
+*point*<br/>
 [in]要在工作区坐标中测试的点。 此参数通常是当前鼠标指针位置。
 
 *pt*<br/>
@@ -1119,7 +1119,7 @@ static CString m_strFormatShort;
 
 ### <a name="remarks"></a>备注
 
-##  <a name="onclickbutton"></a>  Cmfcpropertygridproperty:: Onclickbutton
+##  <a name="onclickbutton"></a>  CMFCPropertyGridProperty::OnClickButton
 
 当用户单击属性中包含的按钮时，由框架调用。
 
@@ -1129,7 +1129,7 @@ virtual void OnClickButton(CPoint point);
 
 ### <a name="parameters"></a>参数
 
-*点*<br/>
+*point*<br/>
 [in]客户端坐标中的点。
 
 ### <a name="remarks"></a>备注
@@ -1169,7 +1169,7 @@ virtual BOOL OnClickValue(
 *uiMsg*<br/>
 [in]鼠标消息。
 
-*点*<br/>
+*point*<br/>
 [in]客户端坐标中的点。
 
 ### <a name="return-value"></a>返回值
@@ -1224,7 +1224,7 @@ virtual BOOL OnDblClk(CPoint point);
 
 ### <a name="parameters"></a>参数
 
-*点*<br/>
+*point*<br/>
 [in]客户端坐标中的点。
 
 ### <a name="return-value"></a>返回值
@@ -1329,7 +1329,7 @@ virtual void OnDrawName(
 
 ### <a name="remarks"></a>备注
 
-##  <a name="ondrawvalue"></a>  Cmfcpropertygridproperty:: Ondrawvalue
+##  <a name="ondrawvalue"></a>  CMFCPropertyGridProperty::OnDrawValue
 
 由框架调用以显示属性值。
 
@@ -1349,7 +1349,7 @@ virtual void OnDrawValue(
 
 ### <a name="remarks"></a>备注
 
-##  <a name="onedit"></a>  Cmfcpropertygridproperty:: Onedit
+##  <a name="onedit"></a>  CMFCPropertyGridProperty::OnEdit
 
 当用户要修改属性值时由框架调用。
 
@@ -1416,7 +1416,7 @@ virtual void OnKillSelection(CMFCPropertyGridProperty*);
 
 ### <a name="parameters"></a>参数
 
-[in]*CMFCPropertyGridProperty&#42;*<br/>
+[in] *CMFCPropertyGridProperty&#42;*<br/>
 
 ### <a name="remarks"></a>备注
 
@@ -1430,7 +1430,7 @@ virtual void OnPosSizeChanged(CRect);
 
 ### <a name="parameters"></a>参数
 
-[in]*CRect*<br/>
+[in] *CRect*<br/>
 
 ### <a name="remarks"></a>备注
 
@@ -1501,7 +1501,7 @@ virtual BOOL OnSetCursor() const;
 
 ### <a name="remarks"></a>备注
 
-此方法支持以下变量类型： VT_INT、 VT_I2、 VT_I4、 VT_UINT、 VT_UI1、 VT_UI2、 VT_UI4、 VT_R4、 VT_R8 和 VT_BSTR。
+此方法支持以下变量类型：VT_INT、 VT_I2、 VT_I4、 VT_UINT、 VT_UI1、 VT_UI2、 VT_UI4、 VT_R4、 VT_R8 和 VT_BSTR。
 
 ##  <a name="onsetselection"></a>  CMFCPropertyGridProperty::OnSetSelection
 
@@ -1511,13 +1511,13 @@ virtual void OnSetSelection CMFCPropertyGridProperty*);
 
 ### <a name="parameters"></a>参数
 
-[in]*CMFCPropertyGridProperty&#42;*<br/>
+[in] *CMFCPropertyGridProperty&#42;*<br/>
 
 ### <a name="remarks"></a>备注
 
 默认情况下，此方法没有任何影响。
 
-##  <a name="onupdatevalue"></a>  Cmfcpropertygridproperty:: Onupdatevalue
+##  <a name="onupdatevalue"></a>  CMFCPropertyGridProperty::OnUpdateValue
 
 当可编辑属性值已更改时由框架调用。
 
@@ -1541,7 +1541,7 @@ virtual BOOL PushChar(UINT nChar);
 
 ### <a name="parameters"></a>参数
 
-*NChar*<br/>
+*nChar*<br/>
 [in]一个字符。
 
 ### <a name="return-value"></a>返回值
@@ -1550,7 +1550,7 @@ virtual BOOL PushChar(UINT nChar);
 
 ### <a name="remarks"></a>备注
 
-此方法支持一个属性，它是一系列值或以下的变体类型之一： VT_INT、 VT_I2、 VT_I4、 VT_UINT、 VT_UI1、 VT_UI2、 VT_UI4、 VT_R4、 VT_R8 和 VT_BSTR。
+此方法支持一个属性，它是一系列值或以下的变体类型之一：VT_INT、 VT_I2、 VT_I4、 VT_UINT、 VT_UI1、 VT_UI2、 VT_UI4、 VT_R4、 VT_R8 和 VT_BSTR。
 
 ##  <a name="redraw"></a>  CMFCPropertyGridProperty::Redraw
 
@@ -1598,7 +1598,7 @@ BOOL RemoveSubItem(
 
 为 FALSE 指定*bDelete*参数，如果你想要移动指定的子项目; 也就是说，删除子项，并再将其添加到其他位置。
 
-##  <a name="resetoriginalvalue"></a>  Cmfcpropertygridproperty:: Resetoriginalvalue
+##  <a name="resetoriginalvalue"></a>  CMFCPropertyGridProperty::ResetOriginalValue
 
 还原已编辑属性的原始值。
 
