@@ -178,12 +178,12 @@ helpviewer_keywords:
 - CFrameWndEx [MFC], UpdateCaption
 - CFrameWndEx [MFC], WinHelp
 ms.assetid: 5830aca8-4a21-4f31-91f1-dd5477ffcc8d
-ms.openlocfilehash: a0e6861ecf3a6704ddb31c39f7bb2c44cb75ccd8
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 6ba0c2b5449cb0058c1b274d9d9c0d7ae33bcd7f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53179001"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302972"
 ---
 # <a name="cframewndex-class"></a>CFrameWndEx 类
 
@@ -209,7 +209,7 @@ class CFrameWndEx : public CFrameWnd
 |[CFrameWndEx::DockPane](#dockpane)|将指定的窗格停靠到框架窗口。|
 |[CFrameWndEx::DockPaneLeftOf](#dockpaneleftof)|将一个窗格停靠到另一个窗格的左侧。|
 |[CFrameWndEx::EnableAutoHidePanes](#enableautohidepanes)|停靠到主框架窗口的指定边时，请启用窗格的自动隐藏模式。|
-|[Cframewndex:: Enabledocking](#enabledocking)|使属于框架窗口的窗格的停靠。|
+|[CFrameWndEx::EnableDocking](#enabledocking)|使属于框架窗口的窗格的停靠。|
 |[CFrameWndEx::EnableFullScreenMainMenu](#enablefullscreenmainmenu)|显示或隐藏在全屏幕模式下的主菜单。|
 |[CFrameWndEx::EnableFullScreenMode](#enablefullscreenmode)|启用框架窗口的全屏模式。|
 |[CFrameWndEx::EnableLoadDockState](#enableloaddockstate)|启用或禁用的插接状态的加载。|
@@ -465,7 +465,7 @@ BOOL EnableAutoHidePanes(DWORD dwDockStyle);
 
 - CBRS_ALIGN_RIGHT： 允许控件栏可停靠框架窗口的客户端区域的右侧。
 
-##  <a name="enabledocking"></a>  Cframewndex:: Enabledocking
+##  <a name="enabledocking"></a>  CFrameWndEx::EnableDocking
 
 启用的框架窗口的窗格的停靠。
 
@@ -767,7 +767,7 @@ BOOL IsPointNearDockSite(
 
 ### <a name="parameters"></a>参数
 
-*点*<br/>
+*point*<br/>
 [in]点的位置。
 
 *dwBarAlignment*<br/>
@@ -1240,7 +1240,7 @@ afx_msg void OnLButtonDown(
 *nFlags*<br/>
 [in]指示用户是否按下修改键。 有关可能的值，请参阅参数*wParam*中[WM_LBUTTONDOWN 通知](/windows/desktop/inputdev/wm-lbuttondown)。
 
-*点*<br/>
+*point*<br/>
 [in]指定的 x 和指针的 y 坐标，相对于窗口的左上角。
 
 ### <a name="remarks"></a>备注
@@ -1260,7 +1260,7 @@ afx_msg void OnLButtonUp(
 *nFlags*<br/>
 [in]指示用户是否按下修改键。 有关可能的值，请参阅参数*wParam*中[WM_LBUTTONUP 通知](/windows/desktop/inputdev/wm-lbuttonup)。
 
-*点*<br/>
+*point*<br/>
 [in]指定的 x 和指针的 y 坐标，相对于窗口的左上角。
 
 ### <a name="remarks"></a>备注
@@ -1280,7 +1280,7 @@ virtual BOOL OnMenuButtonToolHitTest(
 *pButton*<br/>
 [in]指向工具栏按钮的指针。
 
-*PTI*<br/>
+*pTI*<br/>
 [out]指向工具信息结构的指针。
 
 ### <a name="return-value"></a>返回值
@@ -1304,7 +1304,7 @@ afx_msg LRESULT OnMenuChar(
 
 ### <a name="parameters"></a>参数
 
-*NChar*<br/>
+*nChar*<br/>
 [in]按下的键的字符代码。
 
 *nFlags*<br/>
@@ -1338,7 +1338,7 @@ afx_msg void OnMouseMove(
 *nFlags*<br/>
 [in]指示用户是否按下修改键。 有关可能的值，请参阅参数*wParam*中[WM_MOUSEMOVE 通知](/windows/desktop/inputdev/wm-mousemove)。
 
-*点*<br/>
+*point*<br/>
 [in]指定的 x 和 y 坐标相对于窗口的左上角的指针。
 
 ### <a name="remarks"></a>备注
@@ -1411,7 +1411,7 @@ afx_msg LRESULT OnNcHitTest(CPoint point);
 
 ### <a name="parameters"></a>参数
 
-*点*<br/>
+*point*<br/>
 [in]以屏幕坐标表示的指针的位置。
 
 ### <a name="return-value"></a>返回值
@@ -1435,7 +1435,7 @@ afx_msg void OnNcMouseMove(
 *nHitTest*<br/>
 [in]一个指针，命中枚举的值。 有关可能的值的列表，请参阅[WM_NCHITTEST 通知](/windows/desktop/inputdev/wm-nchittest)。
 
-*点*<br/>
+*point*<br/>
 [in]以屏幕坐标表示的指针的位置。
 
 ### <a name="remarks"></a>备注
@@ -1677,7 +1677,7 @@ afx_msg void OnSize(
 
 ### <a name="parameters"></a>参数
 
-*n 类型*<br/>
+*nType*<br/>
 [in]调整大小的类型。 有关可能的值，请参阅参数*wParam*中[WM_SIZE 通知](/windows/desktop/winmsg/wm-size)。
 
 *cx*<br/>
@@ -1898,7 +1898,7 @@ CBasePane* PaneFromPoint(
 
 ### <a name="parameters"></a>参数
 
-*点*<br/>
+*point*<br/>
 [in]若要检查点的屏幕坐标。
 
 *nSensitivity*<br/>
@@ -2036,7 +2036,7 @@ void SetupToolbarMenu(
 
 ### <a name="parameters"></a>参数
 
-*菜单*<br/>
+*menu*<br/>
 [in]一个`CMenu`要修改对象。
 
 *uiViewUserToolbarCmdFirst*<br/>

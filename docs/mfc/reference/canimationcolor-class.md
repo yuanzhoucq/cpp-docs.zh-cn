@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CAnimationColor [MFC], m_gValue
 - CAnimationColor [MFC], m_rValue
 ms.assetid: 88bfabd4-efeb-4652-87e8-304253d8e48c
-ms.openlocfilehash: 6037dd11ddef10500d9468bdf9fa188901aad739
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ee6003a22db78c2a510579c3d717fec887f8a6ad
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536679"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304324"
 ---
 # <a name="canimationcolor-class"></a>CAnimationColor 类
 
@@ -78,7 +78,7 @@ class CAnimationColor : public CAnimationBaseObject;
 |名称|描述|
 |----------|-----------------|
 |[CAnimationColor::operator COLORREF](#operator_colorref)||
-|[CAnimationColor::operator =](#operator_eq)|将颜色分配给 CAnimationColor。|
+|[CAnimationColor::operator=](#operator_eq)|将颜色分配给 CAnimationColor。|
 
 ### <a name="protected-data-members"></a>受保护的数据成员
 
@@ -146,7 +146,7 @@ CAnimationColor(
 
 ### <a name="parameters"></a>参数
 
-*颜色*<br/>
+*color*<br/>
 指定默认颜色。
 
 *nGroupID*<br/>
@@ -249,7 +249,7 @@ BOOL GetValue(COLORREF& color);
 
 ### <a name="parameters"></a>参数
 
-*颜色*<br/>
+*color*<br/>
 输出。 此方法返回时包含的当前值。
 
 ### <a name="return-value"></a>返回值
@@ -292,7 +292,7 @@ operator COLORREF();
 
 ### <a name="return-value"></a>返回值
 
-##  <a name="operator_eq"></a>  CAnimationColor::operator =
+##  <a name="operator_eq"></a>  CAnimationColor::operator=
 
 将颜色分配给 CAnimationColor。
 
@@ -302,7 +302,7 @@ void operator=(COLORREF color);
 
 ### <a name="parameters"></a>参数
 
-*颜色*<br/>
+*color*<br/>
 指定新值动画颜色。
 
 ### <a name="remarks"></a>备注
@@ -319,7 +319,7 @@ void SetDefaultValue(COLORREF color);
 
 ### <a name="parameters"></a>参数
 
-*颜色*<br/>
+*color*<br/>
 指定新的默认值为红色、 绿色和蓝色分量。
 
 ### <a name="remarks"></a>备注

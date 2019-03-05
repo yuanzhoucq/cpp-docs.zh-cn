@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CMap [MFC], RemoveKey
 - CMap [MFC], SetAt
 ms.assetid: 640a45ab-0993-4def-97ec-42cc78eb10b9
-ms.openlocfilehash: 88ca218d4cb4e70dcc46ba04bbdfb7a9d12eb808
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: 81b52d6876b0691c09db0e9dcf7fa7d491f999ca
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657573"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305167"
 ---
 # <a name="cmap-class"></a>CMap 类
 
@@ -63,7 +63,7 @@ template<class KEY, class ARG_KEY, class VALUE, class ARG_VALUE>class CMap : pub
 *ARG_KEY*<br/>
 用于数据类型*键*自变量; 通常指*密钥*。
 
-*值*<br/>
+*VALUE*<br/>
 在映射中存储的对象的类。
 
 *ARG_VALUE*<br/>
@@ -229,7 +229,7 @@ void GetNextAssoc(
 *rKey*<br/>
 指定返回检索到的元素的键。
 
-*值*<br/>
+*VALUE*<br/>
 指定地图的值的类型的模板参数。
 
 *rValue*<br/>
@@ -341,7 +341,7 @@ BOOL Lookup(ARG_KEY key, VALUE& rValue) const;
 *key*<br/>
 指定用于标识要查找的元素的键。
 
-*值*<br/>
+*VALUE*<br/>
 指定要查找的值的类型。
 
 *rValue*<br/>
@@ -359,7 +359,7 @@ BOOL Lookup(ARG_KEY key, VALUE& rValue) const;
 
 [!code-cpp[NVC_MFCCollections#58](../../mfc/codesnippet/cpp/cmap-class_3.cpp)]
 
-##  <a name="operator_at"></a>  CMap::operator]
+##  <a name="operator_at"></a>  CMap::operator [ ]
 
 便捷替代`SetAt`成员函数。
 
@@ -369,7 +369,7 @@ VALUE& operator[](arg_key key);
 
 ### <a name="parameters"></a>参数
 
-*值*<br/>
+*VALUE*<br/>
 指定该映射值的类型的模板参数。
 
 *ARG_KEY*<br/>

@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - run-time object model services macros
 ms.assetid: 4a3e79df-2ee3-43a4-8193-20298828de85
-ms.openlocfilehash: fce6fb938b501da7bc9251de51c71714e4613fd5
-ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
+ms.openlocfilehash: 45ad85e5b85674be957320ef6fdb7f5a81db6503
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55850280"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304673"
 ---
 # <a name="run-time-object-model-services"></a>运行时对象模型服务
 
 类[CObject](../../mfc/reference/cobject-class.md)并[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)封装多个对象服务，包括对运行时类信息、 序列化和动态对象创建的访问。 所有派生自 `CObject` 的类都继承此功能。
 
-能够访问运行时类信息可让您在运行时确定有关对象的类的信息。 当需要对函数自变量进行额外的类型检查以及必须基于对象的类编写专用代码时很有用，能够在运行时确定对象的类很有用。 C++ 语言不直接支持运行时类信息。
+能够访问运行时类信息可让您在运行时确定有关对象的类的信息。 当需要对函数参数进行额外的类型检查以及必须基于对象的类编写专用代码时很有用，能够在运行时确定对象的类很有用。 C++ 语言不直接支持运行时类信息。
 
 序列化是在文件中写入或读取对象内容的过程。 当应用程序退出后，可以使用序列化来存储对象的内容。 对象随后可在应用程序重新启动时从文件中读取。 此类数据对象被称为“永久对象”。
 
@@ -522,4 +522,3 @@ OLE 类 ID 是对象的唯一 128 位标识符。 它包含一个**长**、 两�
 [宏和全局函数](mfc-macros-and-globals.md)<br/>
 [隔离 MFC 公用控件库](../isolation-of-the-mfc-common-controls-library.md)<br/>
 [CLSID 项](/windows/desktop/com/clsid-key-hklm)
-

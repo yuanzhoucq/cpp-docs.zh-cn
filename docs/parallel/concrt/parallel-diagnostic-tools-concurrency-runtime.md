@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Parallel Diagnostic Tools [Concurrency Runtime]
 ms.assetid: b1a3f1d2-f5df-4f29-852e-906b3d8341fc
-ms.openlocfilehash: a9d6823a5f82e3d52f82f568d3e3c00b68236fef
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 2af1898312a4f448d618fcfc4e43ea93f5f0bc76
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329210"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302775"
 ---
 # <a name="parallel-diagnostic-tools-concurrency-runtime"></a>并行诊断工具（并发运行时）
 
@@ -17,7 +17,7 @@ Visual Studio 为调试和分析多线程应用程序提供了广泛的支持。
 
 ## <a name="debugging"></a>调试
 
-Visual Studio 调试器包括**并行堆栈**窗口中，**并行任务**窗口中，并且**并行监视**窗口。 有关详细信息，请参阅[演练： 调试并行应用程序](/visualstudio/debugger/walkthrough-debugging-a-parallel-application)并[如何： 使用并行监视窗口](/visualstudio/debugger/how-to-use-the-parallel-watch-window)。
+Visual Studio 调试器包括**并行堆栈**窗口中，**并行任务**窗口中，并且**并行监视**窗口。 有关详细信息，请参见[演练：调试并行应用程序](/visualstudio/debugger/walkthrough-debugging-a-parallel-application)和[如何：使用并行监视窗口](/visualstudio/debugger/how-to-use-the-parallel-watch-window)。
 
 ## <a name="profiling"></a>分析
 
@@ -66,4 +66,3 @@ Visual Studio 调试器包括**并行堆栈**窗口中，**并行任务**窗口�
 ## <a name="see-also"></a>请参阅
 
 [并发运行时](../../parallel/concrt/concurrency-runtime.md)
-

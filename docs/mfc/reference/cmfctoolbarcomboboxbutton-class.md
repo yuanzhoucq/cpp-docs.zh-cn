@@ -64,12 +64,12 @@ helpviewer_keywords:
 - CMFCToolBarComboBoxButton [MFC], SetDropDownHeight
 - CMFCToolBarComboBoxButton [MFC], SetFlatMode
 ms.assetid: 32fa39f7-8e4e-4f0a-a31d-7b540d969a6c
-ms.openlocfilehash: 2dd300e4bbf63ed59554d5722c716f8a3f795570
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fae70e44657023b7a7b93f72599bef4ba6faf307
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50561416"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303165"
 ---
 # <a name="cmfctoolbarcomboboxbutton-class"></a>CMFCToolBarComboBoxButton 类
 
@@ -132,7 +132,7 @@ class CMFCToolBarComboBoxButton : public CMFCToolBarButton
 
 3. 在处理 AFX_WM_RESETTOOLBAR 消息的消息处理程序，将虚拟按钮将替换为新组合框按钮通过使用[CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)。
 
-有关详细信息，请参阅[演练： 将置于工具栏上的控件](../../mfc/walkthrough-putting-controls-on-toolbars.md)。 组合框工具栏按钮的示例，请参阅示例项目 VisualStudioDemo。
+有关详细信息，请参见[演练：将控件置于工具栏上](../../mfc/walkthrough-putting-controls-on-toolbars.md)。 组合框工具栏按钮的示例，请参阅示例项目 VisualStudioDemo。
 
 ## <a name="example"></a>示例
 
@@ -285,7 +285,7 @@ virtual int Compare(
 
 一个值，指示区分大小写的字符串之间按字典顺序关系。 下表列出了可能的值：
 
-|“值”|描述|
+|值|描述|
 |-----------|-----------------|
 |\<0|第一个字符串是否小于第二个。|
 |0|第一个字符串等于第二个。|
@@ -430,7 +430,7 @@ virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;
 
 ### <a name="parameters"></a>参数
 
-*MenuButton*<br/>
+*menuButton*<br/>
 [out]对菜单按钮的引用。
 
 ### <a name="return-value"></a>返回值
@@ -901,7 +901,7 @@ virtual SIZE OnCalculateSize(
 *pDC*<br/>
 [in]显示组合框按钮的设备上下文。
 
-*大小*<br/>
+*sizeDefault*<br/>
 [in]组合框按钮的默认大小。
 
 *bHorz*<br/>
@@ -1336,4 +1336,3 @@ void SetText(LPCTSTR lpszText);
 [CComboBox 类](../../mfc/reference/ccombobox-class.md)<br/>
 [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)<br/>
 [演练：将控件置于工具栏上](../../mfc/walkthrough-putting-controls-on-toolbars.md)
-

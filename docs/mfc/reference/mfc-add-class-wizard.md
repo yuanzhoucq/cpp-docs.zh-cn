@@ -7,12 +7,12 @@ helpviewer_keywords:
 - MFC Add Class Wizard
 - wizards [MFC]
 ms.assetid: ad3b0989-d307-43b2-9417-3f9a78889024
-ms.openlocfilehash: 245963d4222188f16fd334d6950e04584ac1e978
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: fa9b947ae6fc0e48aaecde61e35a5f4152c85f27
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51520837"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304088"
 ---
 # <a name="mfc-add-class-wizard"></a>MFC 添加类向导
 
@@ -109,7 +109,7 @@ ms.locfileid: "51520837"
 
 - **类型 ID**
 
-  设置类的类型 ID。 **类型 ID**框连接项目名称和新的类名称，如下所示： *MFCProj.MFCClass*。 此 ID 是仅当你选择可更改**自动化**选项**可按类型 ID 创建**。
+  设置类的类型 ID。 **类型 ID**框连接项目名称和新的类名称，如下所示：*MFCProj.MFCClass*。 此 ID 是仅当你选择可更改**自动化**选项**可按类型 ID 创建**。
 
 - **生成 DocTemplate 资源**
 

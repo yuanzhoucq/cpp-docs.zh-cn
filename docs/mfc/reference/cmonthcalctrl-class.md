@@ -90,12 +90,12 @@ helpviewer_keywords:
 - CMonthCalCtrl [MFC], SizeMinReq
 - CMonthCalCtrl [MFC], SizeRectToMin
 ms.assetid: a42f6bd6-ab5c-4335-82f8-839982fc64a2
-ms.openlocfilehash: 48b02843cc957994aa3f3109a82cb2188dd9acff
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: 9807d45f12b5336ebbb80ea9718af77cf8d38188
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54894193"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303665"
 ---
 # <a name="cmonthcalctrl-class"></a>CMonthCalCtrl 类
 
@@ -373,7 +373,7 @@ DWORD GetCurrentView() const;
 
 当前视图，这将由以下值之一：
 
-|值|含义|
+|“值”|含义|
 |-----------|-------------|
 |MCMV_MONTH|每月视图|
 |MCMV_YEAR|每年的视图|
@@ -448,7 +448,7 @@ int GetFirstDayOfWeek(BOOL* pbLocal = NULL) const;
 
 此成员函数可实现 Win32 消息的行为[MCM_GETFIRSTDAYOFWEEK](/windows/desktop/Controls/mcm-getfirstdayofweek)，如 Windows SDK 中所述。 每周天数表示为整数，按如下所示。
 
-|值|日期是星期几|
+|“值”|日期是星期几|
 |-----------|---------------------|
 |0|星期一|
 |1|星期二|
@@ -587,7 +587,7 @@ int GetMonthRange(
 *dwFlags*<br/>
 值，该值指定要检索的范围限制的作用域。 此值必须是以下值之一。
 
-|“值”|含义|
+|值|含义|
 |-----------|-------------|
 |GMR_DAYSTATE|包括前导和尾随的可见范围仅部分显示的月份。|
 |GMR_VISIBLE|包含完全显示的月份。|

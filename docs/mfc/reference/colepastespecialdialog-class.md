@@ -28,12 +28,12 @@ helpviewer_keywords:
 - COlePasteSpecialDialog [MFC], GetSelectionType
 - COlePasteSpecialDialog [MFC], m_ps
 ms.assetid: 0e82ef9a-9bbe-457e-8240-42c86a0534f7
-ms.openlocfilehash: 247514c37ef62987baa31be83efc73e05735904a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1d135a2a254f71a4123a8bd338e1d6e9f87b74c2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50530021"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303308"
 ---
 # <a name="colepastespecialdialog-class"></a>COlePasteSpecialDialog 类
 
@@ -146,12 +146,12 @@ void AddFormat(
 *bEnableIcon*<br/>
 确定是否显示为图标的复选框启用时在列表框中选择此格式的标志。
 
-*闪烁*<br/>
+*bLink*<br/>
 确定在列表框中选择这种格式时，是否启用粘贴链接单选按钮的标志。
 
 ### <a name="remarks"></a>备注
 
-若要添加为标准格式，例如 CF_TEXT 或 CF_TIFF 或自定义格式的应用程序已注册到系统，可以调用此函数。 有关将数据对象粘贴到你的应用程序的详细信息，请参阅文章[数据对象和数据源： 操作](../../mfc/data-objects-and-data-sources-manipulation.md)。
+若要添加为标准格式，例如 CF_TEXT 或 CF_TIFF 或自定义格式的应用程序已注册到系统，可以调用此函数。 有关将数据对象粘贴到你的应用程序的详细信息，请参阅文章[数据对象和数据源：操作](../../mfc/data-objects-and-data-sources-manipulation.md)。
 
 有关详细信息，请参阅[TYMED](/windows/desktop/api/objidl/ne-objidl-tagtymed)枚举类型和[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) Windows SDK 中的结构。
 
@@ -195,7 +195,7 @@ void AddStandardFormats(BOOL bEnableLink = TRUE);
 
 - CF_METAFILEPICT
 
-- **"嵌入的对象"**
+- **"Embedded Object"**
 
 - （可选）**"源链接"**
 
