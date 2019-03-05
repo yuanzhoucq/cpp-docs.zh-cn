@@ -132,12 +132,12 @@ helpviewer_keywords:
 - CDockablePane [MFC], m_bHideInAutoHideMode
 - CDockablePane [MFC], m_nSlideSteps
 ms.assetid: e2495f4c-765f-48f9-a2e2-e45e47608d91
-ms.openlocfilehash: 657f71e5d89f7d91d8b44836b4d478b41d041f88
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c78634c93bda94940b2834a61d276f63522e4aeb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50623010"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271901"
 ---
 # <a name="cdockablepane-class"></a>CDockablePane Class
 
@@ -161,7 +161,7 @@ class CDockablePane : public CPane
 
 |名称|描述|
 |----------|-----------------|
-|[Cdockablepane:: Attachtotabwnd](#attachtotabwnd)|将一个窗格，附加到另一个窗格。 这将创建选项卡式的窗格。|
+|[CDockablePane::AttachToTabWnd](#attachtotabwnd)|将一个窗格，附加到另一个窗格。 这将创建选项卡式的窗格。|
 |[CDockablePane::CalcFixedLayout](#calcfixedlayout)|返回窗格矩形的大小。|
 |[CDockablePane::CanAcceptMiniFrame](#canacceptminiframe)|确定指定的最小范围是否可停靠到窗格。|
 |[CDockablePane::CanAcceptPane](#canacceptpane)|确定是否可以将另一个窗格停靠到当前的窗格。|
@@ -171,7 +171,7 @@ class CDockablePane : public CPane
 |[CDockablePane::CopyState](#copystate)|将复制的可停靠窗格的状态。|
 |[CDockablePane::Create](#create)|创建 Windows 控件，并将其附加到`CDockablePane`对象。|
 |[CDockablePane::CreateDefaultPaneDivider](#createdefaultpanedivider)|创建到框架窗口停靠的窗格中的默认分隔符。|
-|[Cdockablepane:: Createex](#createex)|创建 Windows 控件，并将其附加到`CDockablePane`对象。|
+|[CDockablePane::CreateEx](#createex)|创建 Windows 控件，并将其附加到`CDockablePane`对象。|
 |[CDockablePane::CreateTabbedPane](#createtabbedpane)|从当前窗格创建选项卡式的窗格。|
 |[CDockablePane::DockPaneContainer](#dockpanecontainer)|将容器停靠到窗格。|
 |[CDockablePane::DockPaneStandard](#dockpanestandard)|将窗格停靠使用大纲 （标准） 停靠。|
@@ -204,7 +204,7 @@ class CDockablePane : public CPane
 |[CDockablePane::IsTabLocationBottom](#istablocationbottom)|指定是否将选项卡位于顶部或底部窗格中。|
 |[CDockablePane::IsTracked](#istracked)|指定是否正在由用户拖动一个窗格。|
 |[CDockablePane::IsVisible](#isvisible)|确定当前窗格是否可见。|
-|[Cdockablepane:: Loadstate](#loadstate)|内部使用。|
+|[CDockablePane::LoadState](#loadstate)|内部使用。|
 |[CDockablePane::OnAfterChangeParent](#onafterchangeparent)|一个窗格的父级发生更改时由框架调用。 (重写[CPane::OnAfterChangeParent](../../mfc/reference/cpane-class.md#onafterchangeparent)。)|
 |[CDockablePane::OnAfterDockFromMiniFrame](#onafterdockfromminiframe)|浮动的停靠栏将停靠在框架窗口时由框架调用。|
 |[CDockablePane::OnBeforeChangeParent](#onbeforechangeparent)|在窗格的父即将更改时由框架调用。 (重写[CPane::OnBeforeChangeParent](../../mfc/reference/cpane-class.md#onbeforechangeparent)。)|
@@ -220,7 +220,7 @@ class CDockablePane : public CPane
 |[CDockablePane::SetLastPercentInPaneContainer](#setlastpercentinpanecontainer)|设置一个窗格，其容器中所占据的空间的百分比。|
 |`CDockablePane::SetResizeMode`|内部使用。|
 |[CDockablePane::SetRestoredDefaultPaneDivider](#setrestoreddefaultpanedivider)|还原的默认窗格分隔符设置。|
-|[Cdockablepane:: Settabbedpanertc](#settabbedpanertc)|设置两个窗格停靠在一起时，会创建一个选项卡式窗口的运行时类信息。|
+|[CDockablePane::SetTabbedPaneRTC](#settabbedpanertc)|设置两个窗格停靠在一起时，会创建一个选项卡式窗口的运行时类信息。|
 |[CDockablePane::ShowPane](#showpane)|显示或隐藏窗格。|
 |[CDockablePane::Slide](#slide)|显示或隐藏具有一个滑动动画，其中显示了仅当窗格处于自动隐藏模式时的窗格。|
 |[CDockablePane::ToggleAutoHide](#toggleautohide)|切换自动隐藏模式。 (重写[CPane::ToggleAutoHide](../../mfc/reference/cpane-class.md#toggleautohide) 。)|
@@ -313,7 +313,7 @@ class CDockablePane : public CPane
 
 **标头：** afxDockablePane.h
 
-##  <a name="attachtotabwnd"></a>  Cdockablepane:: Attachtotabwnd
+##  <a name="attachtotabwnd"></a>  CDockablePane::AttachToTabWnd
 
 将当前窗格附加到目标窗格中，创建选项卡式的窗格。
 
@@ -619,7 +619,7 @@ virtual BOOL Create(
 *lpszWindowName*<br/>
 [in]指定窗口名称。
 
-*大小*<br/>
+*sizeDefault*<br/>
 [in]指定窗口的大小。
 
 ### <a name="return-value"></a>返回值
@@ -671,7 +671,7 @@ static CPaneDivider* __stdcall CreateDefaultPaneDivider(
 |CBRS_ALIGN_LEFT|左侧和右侧的框架窗口的客户端区域停靠窗格。|
 |CBRS_ALIGN_RIGHT|框架窗口的客户端区域的右侧被停靠窗格。|
 
-##  <a name="createex"></a>  Cdockablepane:: Createex
+##  <a name="createex"></a>  CDockablePane::CreateEx
 
 创建 Windows 控件，并将其附加到[CDockablePane](../../mfc/reference/cdockablepane-class.md)对象。
 
@@ -783,7 +783,7 @@ virtual BOOL DockPaneContainer(
 
 *dwAlignment*可以是任何以下值：
 
-|“值”|描述|
+|值|描述|
 |-----------|-----------------|
 |CBRS_ALIGN_TOP|顶部窗格的停靠容器。|
 |CBRS_ALIGN_BOTTOM|底部窗格的停靠容器。|
@@ -1108,7 +1108,7 @@ virtual int HitTest(
 
 ### <a name="parameters"></a>参数
 
-*点*<br/>
+*point*<br/>
 [in]指定要测试的点。
 
 *bDetectCaption*<br/>
@@ -1276,7 +1276,7 @@ virtual BOOL IsVisible() const;
 
 如果在自动隐藏模式下不是可停靠窗格中，来确定的可见性状态[CBasePane::IsVisible](../../mfc/reference/cbasepane-class.md#isvisible)方法。
 
-## ##  <a name="loadstate"></a>  Cdockablepane:: Loadstate
+## ##  <a name="loadstate"></a>  CDockablePane::LoadState
 
 仅限内部使用。 有关详细信息，请参阅所安装的 Visual Studio 的 VC\atlmfc\src\mfc 文件夹中的源代码。
 
@@ -1334,7 +1334,7 @@ virtual void OnAfterChangeParent(CWnd* pWndOldParent);
 
 ### <a name="parameters"></a>参数
 
-[in]*pWndOldParent*<br/>
+[in] *pWndOldParent*<br/>
 
 ### <a name="remarks"></a>备注
 
@@ -1572,7 +1572,7 @@ void SetRestoredDefaultPaneDivider(HWND hRestoredSlider);
 
 还原的默认窗格分隔符是一个窗格，反序列化时获取的。 有关详细信息，请参阅[CDockablePane::RestoreDefaultPaneDivider](#restoredefaultpanedivider)。
 
-##  <a name="settabbedpanertc"></a>  Cdockablepane:: Settabbedpanertc
+##  <a name="settabbedpanertc"></a>  CDockablePane::SetTabbedPaneRTC
 
 设置两个窗格停靠在一起时，会创建一个选项卡式窗口的运行时类信息。
 

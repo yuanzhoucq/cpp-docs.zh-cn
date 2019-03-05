@@ -13,12 +13,12 @@ helpviewer_keywords:
 - events [MFC], ActiveX controls
 - OLE events [MFC]
 ms.assetid: e1e57e0c-206b-4923-a0b5-682c26564f74
-ms.openlocfilehash: 76557e64b5b53c32a7d7f63134085e86bf0138df
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0d8a881d07a3e48673c6dc3298816d165273be0d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50540668"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276762"
 ---
 # <a name="mfc-activex-controls-events"></a>MFC ActiveX 控件：事件
 
@@ -26,7 +26,7 @@ ActiveX 控件使用事件来通知发生到控件的容器。 事件的常见�
 
 事件也称为消息。
 
-MFC 支持两种类型的事件： 常用和自定义。 常用事件是事件的类[COleControl](../mfc/reference/colecontrol-class.md)会自动处理。 常用事件的完整列表，请参阅文章[MFC ActiveX 控件： 添加常用事件](../mfc/mfc-activex-controls-adding-stock-events-to-an-activex-control.md)。 自定义事件使控件能够在特定于该控件的操作发生时通知该容器。 一些示例是一个控件的内部状态或在某些窗口消息接收更改。
+MFC 支持两种类型的事件： 常用和自定义。 常用事件是事件的类[COleControl](../mfc/reference/colecontrol-class.md)会自动处理。 常用事件的完整列表，请参阅文章[MFC ActiveX 控件：添加常用事件](../mfc/mfc-activex-controls-adding-stock-events-to-an-activex-control.md)。 自定义事件使控件能够在特定于该控件的操作发生时通知该容器。 一些示例是一个控件的内部状态或在某些窗口消息接收更改。
 
 为您正确地引发事件的控制，你的控件类必须映射到相关的事件发生时，应调用的成员函数的控件的每个事件。 此映射机制 （称为事件映射） 集中了有关事件的信息，并允许 Visual Studio 轻松访问和操作该控件的事件。 下面的宏，位于标头中声明此事件映射 (。H） 文件的控件类声明：
 
@@ -43,7 +43,7 @@ MFC 支持两种类型的事件： 常用和自定义。 常用事件是事件�
 
 下面两篇文章讨论了事件的详细信息：
 
-- [MFC ActiveX 控件： 添加常用事件](../mfc/mfc-activex-controls-adding-stock-events-to-an-activex-control.md)
+- [MFC ActiveX 控件：添加常用事件](../mfc/mfc-activex-controls-adding-stock-events-to-an-activex-control.md)
 
 - [MFC ActiveX 控件：添加自定义事件](../mfc/mfc-activex-controls-adding-custom-events.md)
 

@@ -268,12 +268,12 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::uint_4::rba
 - amp_short_vectors/Concurrency::graphics::uint_4::set_yzx
 ms.assetid: 1cda9e2c-5970-4ced-ae54-d7ff3c6746f4
-ms.openlocfilehash: e763c2654f0edaa02ceaa5294eb33ef02e69ee9a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e5c0482854a08973593e9c67f2f51d5706304831
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579031"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266804"
 ---
 # <a name="uint4-class"></a>uint_4 类
 
@@ -600,7 +600,7 @@ class uint_4;
 
 **标头：** amp_short_vectors.h
 
-**Namespace:** concurrency:: graphics
+**命名空间：** Concurrency:: graphics
 
 ## <a name="uint_4__ctor"></a> uint_4
 
@@ -653,7 +653,7 @@ explicit inline uint_4(
 *_V3*<br/>
 要初始化元素 3 的值。
 
-*（_V)*<br/>
+*_V*<br/>
 用于初始化值。
 
 *_Other*<br/>

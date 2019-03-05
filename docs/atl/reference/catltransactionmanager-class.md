@@ -25,12 +25,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlTransactionManager class
 ms.assetid: b01732dc-1d16-4b42-bfac-b137fca2b740
-ms.openlocfilehash: e69ea2b7446e784bb643050bd122c93ea53a0676
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 031d72903d72af77f6929072e4605d32d81585a3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463773"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270197"
 ---
 # <a name="catltransactionmanager-class"></a>CAtlTransactionManager 类
 
@@ -51,7 +51,7 @@ class CAtlTransactionManager;
 
 |名称|描述|
 |----------|-----------------|
-|[~ CAtlTransactionManager](#dtor)|CAtlTransactionManager 析构函数。|
+|[~CAtlTransactionManager](#dtor)|CAtlTransactionManager 析构函数。|
 |[CAtlTransactionManager](#catltransactionmanager)|CAtlTransactionManager 构造函数。|
 
 ### <a name="public-methods"></a>公共方法
@@ -59,7 +59,7 @@ class CAtlTransactionManager;
 |名称|描述|
 |----------|-----------------|
 |[关闭](#close)|关闭其中一个事务句柄。|
-|[提交](#commit)|该事务被提交的请求。|
+|[Commit](#commit)|该事务被提交的请求。|
 |[创建](#create)|创建事务句柄。|
 |[CreateFile](#createfile)|创建或打开文件、 文件流或事务处理操作的目录。|
 |[DeleteFile](#deletefile)|作为事务处理操作中删除一个现有文件。|
@@ -72,7 +72,7 @@ class CAtlTransactionManager;
 |[RegCreateKeyEx](#regcreatekeyex)|创建指定的注册表项并将其与事务关联。 如果该键已存在，该函数将打开它。|
 |[RegDeleteKey](#regdeletekey)|作为事务处理操作，从注册表指定特定于平台的视图中删除子项和它的值。|
 |[RegOpenKeyEx](#regopenkeyex)|打开指定的注册表项并将其与事务关联。|
-|[回滚](#rollback)|事务被回滚的请求。|
+|[Rollback](#rollback)|事务被回滚的请求。|
 |[SetFileAttributes](#setfileattributes)|将文件或目录的属性设置为事务处理操作。|
 
 ### <a name="protected-data-members"></a>受保护的数据成员
@@ -92,7 +92,7 @@ class CAtlTransactionManager;
 
 **标头：** atltransactionmanager.h
 
-##  <a name="dtor"></a>  ~ CAtlTransactionManager
+##  <a name="dtor"></a>  ~CAtlTransactionManager
 
 CAtlTransactionManager 析构函数。
 
@@ -191,16 +191,16 @@ inline HANDLE CreateFile(
 若要创建或打开的对象的名称。
 
 *dwDesiredAccess*<br/>
-对可归纳如下读取、 写入、 两个，或都不 （零） 的对象的访问。 最常用的值有 GENERIC_READ、 generic_write 外，或两者： GENERIC_READ &#124; GENERIC_WRITE。
+对可归纳如下读取、 写入、 两个，或都不 （零） 的对象的访问。 最常使用的值为 GENERIC_READ、 generic_write 外，或两者：GENERIC_READ &#124; GENERIC_WRITE.
 
 *dwShareMode*<br/>
-一个对象，它可以是读取、 写入，同时，删除，所有这些操作，或无共享模式： 0，FILE_SHARE_DELETE，FILE_SHARE_READ，FILE_SHARE_WRITE。
+一个对象，它可以是读取、 写入，同时，删除，所有这些操作，或无共享模式：0，FILE_SHARE_DELETE，FILE_SHARE_READ，FILE_SHARE_WRITE。
 
 *lpSecurityAttributes*<br/>
 指向包含可选的安全描述符，并且还确定可以由子进程继承返回的句柄的 SECURITY_ATTRIBUTES 结构的指针。 参数可以为 NULL。
 
 *dwCreationDisposition*<br/>
-要在存在并且不存在的文件上执行的操作。 此参数必须是以下值，不能组合之一： CREATE_ALWAYS、 CREATE_NEW、 OPEN_ALWAYS、 OPEN_EXISTING 或 TRUNCATE_EXISTING。
+要在存在并且不存在的文件上执行的操作。 此参数必须是以下值，不能组合之一：CREATE_ALWAYS、 CREATE_NEW、 OPEN_ALWAYS、 OPEN_EXISTING 或 TRUNCATE_EXISTING。
 
 *dwFlagsAndAttributes*<br/>
 文件属性和标志。 此参数可以包括可用的文件属性 （FILE_ATTRIBUTE_ *） 的任意组合。 所有其他文件属性重写 FILE_ATTRIBUTE_NORMAL。 此参数还可以包含标志的组合 (FILE_FLAG_\*) 进行缓冲行为的控制，访问模式和其他专用的标志。 它们与任何 FILE_ATTRIBUTE_ 结合\*值。
@@ -402,7 +402,7 @@ inline LSTATUS RegCreateKeyEx(
 此密钥的用户定义的类。 可能会忽略此参数。 此参数可以为 NULL。
 
 *dwOptions*<br/>
-此参数可以是下列值之一： REG_OPTION_BACKUP_RESTORE、 REG_OPTION_NON_VOLATILE 或 REG_OPTION_VOLATILE。
+此参数可以是下列值之一：REG_OPTION_BACKUP_RESTORE、 REG_OPTION_NON_VOLATILE 或 REG_OPTION_VOLATILE。
 
 *samDesired*<br/>
 一个屏蔽，它指定密钥的访问权限。
@@ -414,7 +414,7 @@ inline LSTATUS RegCreateKeyEx(
 指向一个变量来接收打开或创建密钥的句柄的指针。 如果键不是预定义的注册表项之一，则调用`RegCloseKey`函数使用句柄完成。
 
 *lpdwDisposition*<br/>
-指向一个变量来接收以下 disposition 值之一： REG_CREATED_NEW_KEY 或 REG_OPENED_EXISTING_KEY。
+一个指向一个变量来接收以下 disposition 值之一：REG_CREATED_NEW_KEY 或 REG_OPENED_EXISTING_KEY。
 
 ### <a name="return-value"></a>返回值
 
@@ -485,7 +485,7 @@ inline LSTATUS RegOpenKeyEx(
 
 此包装器调用`RegOpenKeyTransacted`函数。
 
-##  <a name="rollback"></a>  回滚
+##  <a name="rollback"></a>  Rollback
 
 事务被回滚的请求。
 

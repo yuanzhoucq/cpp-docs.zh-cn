@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CComVariant class
 - VARIANT macro, ATL
 ms.assetid: 4d31149c-d005-44b5-a509-10f84afa2b61
-ms.openlocfilehash: 6a6ad49533028dbcb8c45b63c55a51090533137e
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 6be05b52b96ada7871f955c687036a83b4e0b493
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51522477"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281091"
 ---
 # <a name="ccomvariant-class"></a>CComVariant 类
 
@@ -44,7 +44,7 @@ class CComVariant : public tagVARIANT
 |名称|描述|
 |----------|-----------------|
 |[CComVariant::CComVariant](#ccomvariant)|构造函数。|
-|[CComVariant:: ~ CComVariant](#dtor)|析构函数。|
+|[CComVariant::~CComVariant](#dtor)|析构函数。|
 
 ### <a name="public-methods"></a>公共方法
 
@@ -67,7 +67,7 @@ class CComVariant : public tagVARIANT
 |-|-|
 |[CComVariant::operator <](#operator_lt)|指示是否`CComVariant`对象是否小于指定的变体。|
 |[CComVariant::operator >](#operator_gt)|指示是否`CComVariant`对象是否大于指定的变体。|
-|[运算符 ！ =](#operator_neq)|指示是否`CComVariant`对象不等于指定的变体。|
+|[operator !=](#operator_neq)|指示是否`CComVariant`对象不等于指定的变体。|
 |[operator =](#operator_eq)|将一个值赋给`CComVariant`对象。|
 |[operator ==](#operator_eq_eq)|指示是否`CComVariant`对象等于指定的变体。|
 

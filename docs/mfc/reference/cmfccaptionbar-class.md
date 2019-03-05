@@ -66,12 +66,12 @@ helpviewer_keywords:
 - CMFCCaptionBar [MFC], m_clrBarBorder
 - CMFCCaptionBar [MFC], m_clrBarText
 ms.assetid: acb54d5f-14ff-4c96-aeb3-7717cf566d9a
-ms.openlocfilehash: 857427c12dd0f763bf88c99a65d5f9cf3eca1270
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1a18e235c9f5875a977f740c26b917a3567a678d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429349"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264984"
 ---
 # <a name="cmfccaptionbar-class"></a>CMFCCaptionBar 类
 
@@ -246,7 +246,7 @@ BarElementAlignment GetAlignment(BarElement elem);
 
 ### <a name="parameters"></a>参数
 
-*Elem*<br/>
+*elem*<br/>
 [in]要为其检索对齐一个标题栏元素。
 
 ### <a name="return-value"></a>返回值
@@ -714,7 +714,7 @@ void SetText(
 *strText*<br/>
 [in]要设置的文本字符串。
 
-*文本斜体文本*<br/>
+*textAlignment*<br/>
 [in]文本对齐方式。
 
 ### <a name="remarks"></a>备注

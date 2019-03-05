@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CIPAddressCtrl [MFC], SetFieldFocus
 - CIPAddressCtrl [MFC], SetFieldRange
 ms.assetid: 9764d2f4-cb14-4ba8-b799-7f57a55a47c6
-ms.openlocfilehash: fe5503eb78954bf39a135cd0e4acda6c37fc5fa9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e569829c100a581e24b5ce05df2f90ac7088024b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568696"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266286"
 ---
 # <a name="cipaddressctrl-class"></a>CIPAddressCtrl 类
 
@@ -333,4 +333,3 @@ void SetFieldRange(
 
 [CWnd 类](../../mfc/reference/cwnd-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)
-

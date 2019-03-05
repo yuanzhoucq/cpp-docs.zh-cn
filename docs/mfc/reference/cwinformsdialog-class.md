@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CWinFormsDialog [MFC], GetControlHandle
 - CWinFormsDialog [MFC], OnInitDialog
 ms.assetid: e3cec000-a578-448e-b06a-8af256312f61
-ms.openlocfilehash: 3baa9f99a5a1ecefc0ad9bc9f0c56f0f67dc2e80
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4d0731e40a622f0d360cabc03b68b0fe74c1ebc9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50573483"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277113"
 ---
 # <a name="cwinformsdialog-class"></a>CWinFormsDialog 类
 
@@ -58,8 +58,8 @@ class CWinFormsDialog :
 
 |name||
 |----------|-|
-|[CWinFormsDialog::operator-&gt;](#operator_-_gt)|将替换[CWinFormsDialog::GetControl](#getcontrol)在表达式中。|
-|[CWinFormsDialog::operator TManagedControl ^](#operator_tmanagedcontrol)|将一种类型强制转换为对 Windows 窗体用户控件的引用。|
+|[CWinFormsDialog::operator -&gt;](#operator_-_gt)|将替换[CWinFormsDialog::GetControl](#getcontrol)在表达式中。|
+|[CWinFormsDialog::operator TManagedControl^](#operator_tmanagedcontrol)|将一种类型强制转换为对 Windows 窗体用户控件的引用。|
 
 ## <a name="remarks"></a>备注
 
@@ -126,7 +126,7 @@ virtual BOOL OnInitDialog();
 
 如果您需要执行特殊处理对话框的初始化时，重写此成员函数。 使用此方法的详细信息，请参阅[CDialog::OnInitDialog](../../mfc/reference/cdialog-class.md#oninitdialog)。
 
-##  <a name="operator_-_gt"></a>  CWinFormsDialog::operator-&gt;
+##  <a name="operator_-_gt"></a>  CWinFormsDialog::operator -&gt;
 
 将替换[CWinFormsDialog::GetControl](#getcontrol)在表达式中。
 
@@ -140,7 +140,7 @@ inline TManagedControl^  operator->() const throw();
 
 有关使用 Windows 窗体的信息，请参阅[在 MFC 中使用 Windows 窗体用户控件](../../dotnet/using-a-windows-form-user-control-in-mfc.md)。
 
-##  <a name="operator_tmanagedcontrol_xor"></a>  CWinFormsDialog::operator TManagedControl ^
+##  <a name="operator_tmanagedcontrol_xor"></a>  CWinFormsDialog::operator TManagedControl^
 
 将一种类型强制转换为对 Windows 窗体用户控件的引用。
 

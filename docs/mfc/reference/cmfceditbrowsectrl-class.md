@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CMFCEditBrowseCtrl [MFC], OnIllegalFileName
 - CMFCEditBrowseCtrl [MFC], SetBrowseButtonImage
 ms.assetid: 69cfd886-3d35-4bee-8901-7c88fcf9520f
-ms.openlocfilehash: a16d7508f273fc444be65c1e6cc176911fd28e03
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8d1f603f8439815c92360af40ccb807446d0e84a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643295"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273278"
 ---
 # <a name="cmfceditbrowsectrl-class"></a>CMFCEditBrowseCtrl 类
 
@@ -56,7 +56,7 @@ class CMFCEditBrowseCtrl : public CEdit
 
 |名称|描述|
 |----------|-----------------|
-|[Cmfceditbrowsectrl:: Enablebrowsebutton](#enablebrowsebutton)|启用或禁用 （隐藏） 浏览按钮。|
+|[CMFCEditBrowseCtrl::EnableBrowseButton](#enablebrowsebutton)|启用或禁用 （隐藏） 浏览按钮。|
 |[CMFCEditBrowseCtrl::EnableFileBrowseButton](#enablefilebrowsebutton)|使浏览按钮并将编辑浏览控件放入*文件浏览*模式。|
 |[CMFCEditBrowseCtrl::EnableFolderBrowseButton](#enablefolderbrowsebutton)|使浏览按钮并将编辑浏览控件放入*文件夹浏览*模式。|
 |[CMFCEditBrowseCtrl::GetMode](#getmode)|返回当前的浏览模式。|
@@ -88,7 +88,7 @@ class CMFCEditBrowseCtrl : public CEdit
 
    当用户单击浏览按钮时显示一个标准文件夹选择对话框。
 
-## <a name="how-to-specify-an-edit-browse-control"></a>操作说明： 指定编辑浏览控件
+## <a name="how-to-specify-an-edit-browse-control"></a>操作说明：指定编辑浏览控件
 
 执行以下步骤将合并你的应用程序中的一个编辑浏览控件：
 
@@ -129,7 +129,7 @@ class CMFCEditBrowseCtrl : public CEdit
 
 **标头：** afxeditbrowsectrl.h
 
-##  <a name="enablebrowsebutton"></a>  Cmfceditbrowsectrl:: Enablebrowsebutton
+##  <a name="enablebrowsebutton"></a>  CMFCEditBrowseCtrl::EnableBrowseButton
 
 显示或不在当前编辑浏览控件上显示浏览按钮。
 
@@ -207,7 +207,7 @@ CMFCEditBrowseCtrl::BrowseMode GetMode() const;
 
 下表列出可能的返回值。
 
-|“值”|描述|
+|值|描述|
 |-----------|-----------------|
 |`BrowseMode_Default`|**自定义模式**。 执行程序员定义的操作。|
 |`BrowseMode_File`|**文件模式**。 显示标准文件浏览器对话框。|
@@ -271,7 +271,7 @@ virtual void OnDrawBrowseButton(
 *pDC*<br/>
 一个指向设备上下文的指针。
 
-*rect*<br/>
+*矩形*<br/>
 浏览按钮的边框。
 
 *bIsButtonPressed*<br/>

@@ -18,12 +18,12 @@ helpviewer_keywords:
 - activation [MFC], embedded OLE items
 - OLE activation [MFC]
 ms.assetid: ed8357d9-e487-4aaa-aa6b-2edc4de25dfa
-ms.openlocfilehash: ba3c705227e6ca189527d29d4f3ae0f21c71eb72
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a6009e5209ce71c6eed28faff2f55792a64de408
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50493504"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276944"
 ---
 # <a name="activation-c"></a>Activation (C++)
 
@@ -40,11 +40,10 @@ ms.locfileid: "50493504"
 
 MFC 不支持嵌套的就地激活。 如果生成容器/服务器应用程序，并且容器/服务器嵌入在另一个容器和就地激活，它不能就地激活嵌入对象。
 
-当用户双击它，嵌入项会发生什么情况取决于为项定义的谓词。 有关信息，请参阅[激活： 谓词](../mfc/activation-verbs.md)。
+当用户双击它，嵌入项会发生什么情况取决于为项定义的谓词。 有关信息，请参阅[激活：谓词](../mfc/activation-verbs.md)。
 
 ## <a name="see-also"></a>请参阅
 
 [OLE](../mfc/ole-in-mfc.md)<br/>
 [容器](../mfc/containers.md)<br/>
 [服务器](../mfc/servers.md)
-

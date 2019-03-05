@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CMFCDropDownToolbarButton [MFC], SetDefaultCommand
 - CMFCDropDownToolbarButton [MFC], m_uiShowBarDelay
 ms.assetid: bc9d69e6-bd3e-4c15-9368-e80a504a0ba7
-ms.openlocfilehash: 3544bbd65b5e0c754552f93b45263f768b73fe69
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b33e50328fd3c8997774515f248780edda6bcc75
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50625311"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275488"
 ---
 # <a name="cmfcdropdowntoolbarbutton-class"></a>CMFCDropDownToolbarButton 类
 
@@ -202,7 +202,7 @@ virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;
 
 ### <a name="parameters"></a>参数
 
-*MenuButton*<br/>
+*menuButton*<br/>
 [in]对目标菜单按钮的引用。
 
 ### <a name="return-value"></a>返回值
@@ -291,7 +291,7 @@ virtual SIZE OnCalculateSize(
 *pDC*<br/>
 [in]所显示的按钮的设备上下文。
 
-*大小*<br/>
+*sizeDefault*<br/>
 [in]按钮的默认大小。
 
 *bHorz*<br/>
@@ -391,7 +391,7 @@ virtual BOOL OnContextHelp(CWnd* pWnd);
 
 此方法扩展的基类实现 ( [CMFCToolBarButton::OnContextHelp](../../mfc/reference/cmfctoolbarbutton-class.md#oncontexthelp)) 通过调用[CMFCDropDownToolbarButton::OnClick](#onclick)方法替换*bDelay*设置为 FALSE。 此方法返回的返回值[CMFCDropDownToolbarButton::OnClick](#onclick)。
 
-WM_HELPHITTEST 消息有关的详细信息，请参阅[TN028： 上下文相关帮助支持](../../mfc/tn028-context-sensitive-help-support.md)。
+WM_HELPHITTEST 消息有关的详细信息，请参阅[TN028:上下文相关帮助支持](../../mfc/tn028-context-sensitive-help-support.md)。
 
 ##  <a name="oncustomizemenu"></a>  CMFCDropDownToolbarButton::OnCustomizeMenu
 
@@ -546,4 +546,3 @@ void SetDefaultCommand(UINT uiCmd);
 [CMFCToolBar 类](../../mfc/reference/cmfctoolbar-class.md)<br/>
 [CMFCToolBarMenuButton 类](../../mfc/reference/cmfctoolbarmenubutton-class.md)<br/>
 [演练：将控件置于工具栏上](../../mfc/walkthrough-putting-controls-on-toolbars.md)
-

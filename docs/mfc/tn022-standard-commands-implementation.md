@@ -1,5 +1,5 @@
 ---
-title: TN022：标准命令实现
+title: TN022:标准命令实现
 ms.date: 11/04/2016
 f1_keywords:
 - vc.commands
@@ -59,14 +59,14 @@ helpviewer_keywords:
 - ID_FILE_NEW command [MFC]
 - ID_INDICATOR_NUM command
 ms.assetid: a7883b46-23f7-4870-ac3a-804aed9258b5
-ms.openlocfilehash: 0f79aaaf59f12e226220e51681f64d0bf1131303
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4c066521ba2b5be9ac24a8abaece42e57b8ad85f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50504333"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279342"
 ---
-# <a name="tn022-standard-commands-implementation"></a>TN022：标准命令实现
+# <a name="tn022-standard-commands-implementation"></a>TN022:标准命令实现
 
 > [!NOTE]
 >  以下技术说明在首次包括在联机文档中后未更新。 因此，某些过程和主题可能已过时或不正确。 要获得最新信息，建议你在联机文档索引中搜索热点话题。
@@ -468,30 +468,29 @@ MFC 标头文件 AFXRES 中定义多个标准命令 Id。H. 这些命令的框�
 
 多个标准命令 Id 将用作在状态栏中的指示器。 这些使用相同更新命令 UI 处理机制以在应用程序空闲时显示其当前的可视状态。 由于用户无法选择 （即，不能推送状态栏窗格），然后它就完全没有必要让 ON_COMMAND 处理程序，为这些命令 Id。
 
-- ID_INDICATOR_CAPS: CAP 锁指示符。
+- ID_INDICATOR_CAPS:CAP 锁指示符。
 
-- ID_INDICATOR_NUM: NUM 锁指示符。
+- ID_INDICATOR_NUM:NUM lock 指示器。
 
-- ID_INDICATOR_SCRL: SCRL 锁指示符。
+- ID_INDICATOR_SCRL:SCRL 锁指示符。
 
-- ID_INDICATOR_KANA： 假名锁定 （仅适用于日语系统） 的指示符。
+- ID_INDICATOR_KANA:假名锁定 （仅适用于日语系统） 的指示符。
 
 在中实现所有这三个这些`CFrameWnd::OnUpdateKeyIndicator`，使用命令 ID 映射到相应的虚拟键的实现帮助器。 常见实现启用或禁用 （已禁用的状态窗格 = 无文本）`CCmdUI`具体取决于是否适当虚拟键当前被锁定的对象。
 
 不建议使用此命令处理程序的自定义。
 
-- ID_INDICATOR_EXT： 扩展选择指示器。
+- ID_INDICATOR_EXT:扩展选择指示器。
 
-- ID_INDICATOR_OVR： 替换指示器。
+- ID_INDICATOR_OVR:替换指示器。
 
-- ID_INDICATOR_REC： 录制指示器。
+- ID_INDICATOR_REC:录制指示器。
 
 目前这些指示符没有标准实现。
 
-如果您选择实现这些指示符，我们建议使用这些指示器 Id 和维护在状态栏中的指标的顺序 (即，按以下顺序： EXT，CAP、 NUM、 SCRL、 改写，REC)。
+如果您选择实现这些指示符，我们建议使用这些指示器 Id 和维护在状态栏中的指标的顺序 (即，按以下顺序：EXT，CAP、 NUM、 SCRL、 改写，REC）。
 
 ## <a name="see-also"></a>请参阅
 
 [按编号列出的技术说明](../mfc/technical-notes-by-number.md)<br/>
 [按类别列出的技术说明](../mfc/technical-notes-by-category.md)
-

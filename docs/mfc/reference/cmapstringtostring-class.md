@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CMapStringToOb [MFC], RemoveKey
 - CMapStringToOb [MFC], SetAt
 ms.assetid: b45794c2-fe6b-4edb-a8ca-faa03b57b4a8
-ms.openlocfilehash: 754232ea57a77b4eb37a72ff98a3150419d0a248
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: d18cad73f9cf42ffd04ecbcde840d50f6167743a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657365"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266219"
 ---
 # <a name="cmapstringtostring-class"></a>CMapStringToString 类
 
@@ -229,4 +229,3 @@ CPair* PLookup(LPCTSTR key);
 [MFC 示例收集](../../visual-cpp-samples.md)<br/>
 [CObject 类](../../mfc/reference/cobject-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)
-

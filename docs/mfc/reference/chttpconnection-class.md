@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CHttpConnection [MFC], CHttpConnection
 - CHttpConnection [MFC], OpenRequest
 ms.assetid: a402b662-c445-4988-800d-c8278551babe
-ms.openlocfilehash: 7d11420ca48bfcecbd2534123a36364314b9651c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f7a91454b9a8619cda155f33391e5d02ae7653b5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50610998"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273603"
 ---
 # <a name="chttpconnection-class"></a>CHttpConnection 类
 
@@ -39,7 +39,7 @@ class CHttpConnection : public CInternetConnection
 
 |名称|描述|
 |----------|-----------------|
-|[Chttpconnection::](#openrequest)|将打开一个 HTTP 请求。|
+|[CHttpConnection::OpenRequest](#openrequest)|将打开一个 HTTP 请求。|
 
 ## <a name="remarks"></a>备注
 
@@ -129,7 +129,7 @@ Internet 连接到一个句柄。
 
 永远不会创建`CHttpConnection`直接。 而是通过调用创建对象[cinternetsession:: Gethttpconnection](../../mfc/reference/cinternetsession-class.md#gethttpconnection)。
 
-##  <a name="openrequest"></a>  Chttpconnection::
+##  <a name="openrequest"></a>  CHttpConnection::OpenRequest
 
 调用此成员函数以打开 HTTP 连接。
 
@@ -179,7 +179,7 @@ INTERNET_ FLAG_ * 标志的任意组合。 请参阅备注部分有关的可能�
 *nVerb*<br/>
 与 HTTP 请求类型的号码。 可以是以下各项之一：
 
-|HTTP 请求类型|*nVerb*值|
+|HTTP 请求类型|*nVerb* value|
 |-----------------------|-------------------|
 |HTTP_VERB_POST|0|
 |HTTP_VERB_GET|1|
@@ -205,7 +205,7 @@ INTERNET_ FLAG_ * 标志的任意组合。 请参阅备注部分有关的可能�
 |INTERNET_FLAG_SECURE|使用安全事务语义。 这会转换为使用 SSL/百分比，才有意义的 HTTP 请求中|
 |INTERNET_FLAG_NO_AUTO_REDIRECT|仅用于 HTTP，则指定的重定向操作应不会自动处理中[CHttpFile::SendRequest](../../mfc/reference/chttpfile-class.md#sendrequest)。|
 
-重写`dwContext`默认可为您选择的值设置的上下文标识符。 上下文标识符是否与此特定操作相关联`CHttpConnection`对象由其[CInternetSession](../../mfc/reference/cinternetsession-class.md)对象。 值返回到[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)以提供用于标识操作的状态。 请参阅文章[Internet 前几个步骤： WinInet](../../mfc/wininet-basics.md)有关的上下文标识符的详细信息。
+重写`dwContext`默认可为您选择的值设置的上下文标识符。 上下文标识符是否与此特定操作相关联`CHttpConnection`对象由其[CInternetSession](../../mfc/reference/cinternetsession-class.md)对象。 值返回到[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)以提供用于标识操作的状态。 请参阅文章[Internet 前几个步骤：WinInet](../../mfc/wininet-basics.md)有关的上下文标识符的详细信息。
 
 与此函数可能会引发异常。
 

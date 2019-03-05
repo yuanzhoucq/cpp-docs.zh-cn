@@ -6,18 +6,18 @@ helpviewer_keywords:
 - Windows Sockets [MFC], deriving from socket classes
 - sockets [MFC], deriving from socket classes
 ms.assetid: 3a26e67a-e323-433b-9b05-eca018799801
-ms.openlocfilehash: d860aacef164155f87db33355211b1a8e598c91b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 12ab66cfd9212cd79752e2f6359b857194c6428c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648807"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270292"
 ---
 # <a name="windows-sockets-deriving-from-socket-classes"></a>Windows 套接字：从套接字类派生
 
 本文介绍了一些您可以通过从一个套接字类派生您自己的类来获得的功能。
 
-可以从派生您自己的套接字类[CAsyncSocket](../mfc/reference/casyncsocket-class.md)或[CSocket](../mfc/reference/csocket-class.md)添加您自己的功能。 具体而言，这些类提供多个可以重写虚拟成员函数。 这些函数包括[OnReceive](../mfc/reference/casyncsocket-class.md#onreceive)， [OnSend](../mfc/reference/casyncsocket-class.md#onsend)， [OnAccept](../mfc/reference/casyncsocket-class.md#onaccept)， [OnConnect](../mfc/reference/casyncsocket-class.md#onconnect)，并[OnClose](../mfc/reference/casyncsocket-class.md#onclose)。 您可以利用它们提供的网络事件发生时通知你派生的套接字类中重写函数。 框架调用以通知你重要的套接字的事件，如接收数据，在可以开始阅读这些通知回调函数。 有关通知函数的详细信息，请参阅[Windows 套接字： 套接字通知](../mfc/windows-sockets-socket-notifications.md)。
+可以从派生您自己的套接字类[CAsyncSocket](../mfc/reference/casyncsocket-class.md)或[CSocket](../mfc/reference/csocket-class.md)添加您自己的功能。 具体而言，这些类提供多个可以重写虚拟成员函数。 这些函数包括[OnReceive](../mfc/reference/casyncsocket-class.md#onreceive)， [OnSend](../mfc/reference/casyncsocket-class.md#onsend)， [OnAccept](../mfc/reference/casyncsocket-class.md#onaccept)， [OnConnect](../mfc/reference/casyncsocket-class.md#onconnect)，并[OnClose](../mfc/reference/casyncsocket-class.md#onclose)。 您可以利用它们提供的网络事件发生时通知你派生的套接字类中重写函数。 框架调用以通知你重要的套接字的事件，如接收数据，在可以开始阅读这些通知回调函数。 有关通知函数的详细信息，请参阅[Windows 套接字：套接字通知](../mfc/windows-sockets-socket-notifications.md)。
 
 此外，类`CSocket`提供[OnMessagePending](../mfc/reference/csocket-class.md#onmessagepending)成员函数 (一种高级可重写)。 MFC 套接字发送基于 Windows 的消息时调用此函数。 您可以重写`OnMessagePending`从 Windows 中查找特定消息并对其做出响应。
 
@@ -29,15 +29,14 @@ ms.locfileid: "50648807"
 
 - [Windows 套接字：对存档使用套接字](../mfc/windows-sockets-using-sockets-with-archives.md)
 
-- [Windows 套接字：使用 CAsyncSocket 类](../mfc/windows-sockets-using-class-casyncsocket.md)
+- [Windows 套接字：使用类 CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
 
 - [Windows 套接字：阻止](../mfc/windows-sockets-blocking.md)
 
 - [Windows 套接字：字节排序](../mfc/windows-sockets-byte-ordering.md)
 
-- [Windows 套接字：转换字符串](../mfc/windows-sockets-converting-strings.md)
+- [Windows 套接字：将字符串转换](../mfc/windows-sockets-converting-strings.md)
 
 ## <a name="see-also"></a>请参阅
 
 [MFC 中的 Windows 套接字](../mfc/windows-sockets-in-mfc.md)
-

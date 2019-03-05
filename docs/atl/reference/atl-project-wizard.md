@@ -7,12 +7,12 @@ helpviewer_keywords:
 - ATL projects, creating
 - ATL Project Wizard
 ms.assetid: 564d2aaf-5b8e-4c2a-a925-ca40a283ea34
-ms.openlocfilehash: 7a53b33892b23d414a877721eca514931f82080e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c9d69b6ca8cf1cff45098f0d63b452238db7ddfe
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476695"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259758"
 ---
 # <a name="atl-project-wizard"></a>ATL 项目向导
 
@@ -54,4 +54,3 @@ ms.locfileid: "50476695"
 [ATL COM 对象基础知识](../../atl/fundamentals-of-atl-com-objects.md)<br/>
 [使用 ATL 和 C 运行时代码进行编程](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
 [教程](../../atl/active-template-library-atl-tutorial.md)
-

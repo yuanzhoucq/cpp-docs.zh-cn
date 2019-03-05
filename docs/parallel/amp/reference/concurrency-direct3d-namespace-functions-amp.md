@@ -21,12 +21,12 @@ f1_keywords:
 - amp/Concurrency::direct3d::step
 - amp/Concurrency::direct3d::umin
 ms.assetid: 28943b62-52c9-42dc-baf1-ca7b095c1a19
-ms.openlocfilehash: b721d19cd51a9eb1d07de8898b18728854decb4e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0a2977faf094aafb6290063e39e062ffaeaaec81
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519726"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281325"
 ---
 # <a name="concurrencydirect3d-namespace-functions-amp"></a>Concurrency::direct3d 命名空间函数 (AMP)
 
@@ -37,8 +37,8 @@ ms.locfileid: "50519726"
 |[d3d_access_try_lock](#d3d_access_try_lock)|[d3d_access_unlock](#d3d_access_unlock)|[firstbithigh](#firstbithigh)|
 |[firstbitlow](#firstbitlow)|[get_buffer](#get_buffer)|[get_device](#get_device)|
 |[imax](#imax)|[imin](#imin)|[is_timeout_disabled](#is_timeout_disabled)|
-|[mad](#mad)|[make_array](#make_array)|[干扰](#noise)|
-|[弧度为单位](#radians)|[rcp](#rcp)|[reversebits](#reversebits)|
+|[mad](#mad)|[make_array](#make_array)|[noise](#noise)|
+|[radians](#radians)|[rcp](#rcp)|[reversebits](#reversebits)|
 |[saturate](#saturate)|[sign](#sign)|[smoothstep](#smoothstep)|
 |[step](#step)|[umax](#umax)|[umin](#umin)|
 
@@ -156,7 +156,7 @@ C + + AMP 运行时提供详细的错误信息在调试模式下使用 D3D 调�
 
 ##  <a name="d3d_access_lock"></a>  d3d_access_lock
 
-获取一个锁出于安全执行 D3D 操作在与 accelerator_view 共享的资源。 Accelerator_view 和所有与此 accelerator_view 内部关联的 c + + AMP 资源会采用此锁时执行的操作和其他线程占有 D3D 访问锁时，将阻止。 此锁为非递归： 它是未定义从已经持有锁的线程调用此函数的行为。 它是未定义的行为来执行操作的 accelerator_view 或任何与保留 D3D 访问锁的线程的 accelerator_view 相关联的数据容器。 也可参见 scoped_d3d_access_lock，基于范围的 D3D 访问锁的 RAII 样式类。
+获取一个锁出于安全执行 D3D 操作在与 accelerator_view 共享的资源。 Accelerator_view 和所有与此 accelerator_view 内部关联的 c + + AMP 资源会采用此锁时执行的操作和其他线程占有 D3D 访问锁时，将阻止。 此锁为非递归锁：它是未定义从已经持有锁的线程调用此函数的行为。 它是未定义的行为来执行操作的 accelerator_view 或任何与保留 D3D 访问锁的线程的 accelerator_view 相关联的数据容器。 也可参见 scoped_d3d_access_lock，基于范围的 D3D 访问锁的 RAII 样式类。
 
 ```
 void __cdecl d3d_access_lock(accelerator_view& _Av);
@@ -414,7 +414,7 @@ array<value_type, _Rank> make_array(
 
 创建使用提供的 Direct3D 缓冲区的数组。
 
-##  <a name="noise"></a>  干扰
+##  <a name="noise"></a>  noise
 
 通过采用 Perlin 噪音算法生成一个随机值
 
@@ -501,7 +501,7 @@ inline float saturate(float _X) restrict(amp);
 
 返回固定于 0 和 1 之间的 _X
 
-##  <a name="sign"></a>  登录
+##  <a name="sign"></a>  sign
 
 确定指定的参数的符号。
 
@@ -544,7 +544,7 @@ inline float smoothstep(
 
 如果 _X 小于 _Min，则返回 0；如果 _X 大于 _Max，则返回 1；否则，如果 _X 处于范围 [_Min，_Max] 中，则返回 0 和 1 之间的值
 
-##  <a name="step"></a>  步骤
+##  <a name="step"></a>  step
 
 比较两个值，返回 0 或 1 基于的值大于
 

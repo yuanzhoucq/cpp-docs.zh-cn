@@ -17,12 +17,12 @@ helpviewer_keywords:
 - class factories, ATL macros
 - aggregation [C++], ATL macros
 ms.assetid: d99d379a-0eec-481f-8daa-252dac18f163
-ms.openlocfilehash: c0e3b6903e382ad56be9500792bec895a7641f00
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 889ed4bbfc21209a64cfd9e4fee4b2335ce62010
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50497170"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274890"
 ---
 # <a name="aggregation-and-class-factory-macros"></a>聚合和类工厂宏
 
@@ -144,7 +144,7 @@ DECLARE_CLASSFACTORY2( lic )
 
 ### <a name="parameters"></a>参数
 
-*许可证*<br/>
+*lic*<br/>
 [in]实现的类`VerifyLicenseKey`， `GetLicenseKey`，和`IsLicenseValid`。
 
 ### <a name="remarks"></a>备注
@@ -155,7 +155,7 @@ DECLARE_CLASSFACTORY2( lic )
 
 [!code-cpp[NVC_ATL_COM#2](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_4.h)]
 
-##  <a name="ccomclassfactory2_class"></a>  CComClassFactory2 类
+##  <a name="ccomclassfactory2_class"></a>  CComClassFactory2 Class
 
 此类实现[IClassFactory2](/windows/desktop/api/ocidl/nn-ocidl-iclassfactory2)接口。
 
@@ -168,7 +168,7 @@ class  CComClassFactory2 : public IClassFactory2,
 
 ### <a name="parameters"></a>参数
 
-*许可证*<br/>
+*license*<br/>
 实现以下静态函数的类：
 
 - `static BOOL VerifyLicenseKey( BSTR bstr );`

@@ -6,18 +6,18 @@ helpviewer_keywords:
 - WinInet classes [MFC], programming
 - Internet applications [MFC], client applications
 ms.assetid: 7aba135c-7c15-4e2f-8c34-bbaf792c89a6
-ms.openlocfilehash: 1e95a704a9aeabf288f76558133065806b227bcf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9762e762680e2ac530b87baeac7afdea77ef6f14
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456194"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265738"
 ---
 # <a name="steps-in-a-typical-internet-client-application"></a>典型 Internet 客户端应用程序中的步骤
 
 下表显示了可能会执行典型的 Internet 客户端应用程序中的步骤。
 
-|您的目标|采取的操作|效果|
+|您的目标|采取的操作|Effects|
 |---------------|----------------------|-------------|
 |开始一个 Internet 会话。|创建[CInternetSession](../mfc/reference/cinternetsession-class.md)对象。|初始化 WinInet 并连接到服务器。|
 |设置 Internet 查询选项 （超时限制或的重试次数，例如）。|使用[CInternetSession::SetOption](../mfc/reference/cinternetsession-class.md#setoption)。|如果操作不成功，则返回 FALSE。|

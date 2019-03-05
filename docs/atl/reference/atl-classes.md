@@ -5,12 +5,12 @@ helpviewer_keywords:
 - classes [C++], ATL
 - ATL, classes
 ms.assetid: 7da42e2d-ac84-4506-92bd-502a86d68bdc
-ms.openlocfilehash: 937edb799729005619325cda15f5a720264e9bfc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 561d6cb41ca066f5a2435b4eb1e8710ccaa99ea1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512536"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265562"
 ---
 # <a name="atl-classes-and-structs"></a>ATL 类和结构
 
@@ -130,7 +130,7 @@ ms.locfileid: "50512536"
 |[CHeapPtrBase](../../atl/reference/cheapptrbase-class.md)|此类窗体智能堆指针的多个类的基础。|atlcore.h|
 |[CHeapPtrElementTraits 类](../../atl/reference/cheapptrelementtraits-class.md)|在创建集合的堆指针时，此类提供方法、 静态函数和有用的 typedef。|atlcoll.h|
 |[CHeapPtrList](../../atl/reference/cheapptrlist-class.md)|构造的堆指针的列表时，此类提供了有用的方法。|atlcoll.h|
-|[中的 CImage](../../atl-mfc-shared/reference/cimage-class.md)|提供了增强的位图支持，包括加载和保存 JPEG、 GIF、 BMP、 和可移植网络图形 (PNG) 格式图像的能力。|atlimage.h|
+|[CImage](../../atl-mfc-shared/reference/cimage-class.md)|提供了增强的位图支持，包括加载和保存 JPEG、 GIF、 BMP、 和可移植网络图形 (PNG) 格式图像的能力。|atlimage.h|
 |[CInterfaceArray](../../atl/reference/cinterfacearray-class.md)|构造的 COM 接口指针的数组时，此类提供了有用的方法。|atlcoll.h|
 |[CInterfaceList](../../atl/reference/cinterfacelist-class.md)|构造的 COM 接口指针的列表时，此类提供了有用的方法。|atlcoll.h|
 |[CLocalHeap](../../atl/reference/clocalheap-class.md)|此类实现[IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md)使用 Win32 本地堆函数。|atlmem.h|
@@ -226,4 +226,3 @@ ms.locfileid: "50512536"
 [全局变量](../../atl/reference/atl-global-variables.md)<br/>
 [Typedefs](../../atl/reference/atl-typedefs.md)<br/>
 [类概述](../../atl/atl-class-overview.md)
-

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - splitter window classes [MFC]
 - view classes [MFC], Windows
 ms.assetid: b11683fb-9f43-4de3-9499-2b55775f9870
-ms.openlocfilehash: 5fc08ec23e0a2b2ba105aa3a633ee862dc452450
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ad58fd6fa2548c2cf320baf75b8fc33a835ddd55
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462291"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267090"
 ---
 # <a name="view-classes-windows"></a>视图类 (Windows)
 
@@ -61,7 +61,7 @@ ms.locfileid: "50462291"
 [CListView](../mfc/reference/clistview-class.md)<br/>
 包含 Windows 列表控件的视图 (请参阅[CListCtrl](../mfc/reference/clistctrl-class.md))。 列表控件显示的项，其中每个包括的一个图标和标签时，在文件资源管理器的方式类似于在右窗格中的集合。
 
-[Ctreeview 类](../mfc/reference/ctreeview-class.md)<br/>
+[CTreeView](../mfc/reference/ctreeview-class.md)<br/>
 包含 Windows 树控件的视图 (请参阅[CTreeCtrl](../mfc/reference/ctreectrl-class.md))。 树控件显示图标和标签的排列方式类似于左窗格中的文件资源管理器中的层次的列表。
 
 ## <a name="related-classes"></a>相关的类
@@ -86,4 +86,3 @@ ms.locfileid: "50462291"
 ## <a name="see-also"></a>请参阅
 
 [类概述](../mfc/class-library-overview.md)
-

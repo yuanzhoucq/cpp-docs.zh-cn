@@ -8,18 +8,19 @@ helpviewer_keywords:
 - server items
 - OLE server applications [MFC], server items
 ms.assetid: 28ba81a1-726a-4728-a52d-68bc7efd5a3c
-ms.openlocfilehash: ea04a3eefff0f127873ffbf67ea39ade3a6b9b85
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0adaea1c4f1dd0525ead82dfffdf267326ac865c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50453685"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262280"
 ---
 # <a name="servers-server-items"></a>服务器：服务器项
 
 当容器启动服务器以便用户可编辑嵌入或链接的 OLE 项时，服务器应用程序将创建一个“服务器项”。 服务器项是派生自 `COleServerItem` 的类的对象，可提供服务器文档和容器应用程序之间的接口。
 
-`COleServerItem` 类定义由 OLE 调用的若干可重写的成员函数，通常用于响应容器的请求。 服务器项可以表示服务器文档的一部分或整个文档。 将 OLE 项嵌入到容器文档中时，服务器项表示整个服务器文档。 链接 OLE 项时，服务器项可以表示服务器文档的一部分或整个文档，这取决于是链接到部分文档还是整个文档。
+
+  `COleServerItem` 类定义由 OLE 调用的若干可重写的成员函数，通常用于响应容器的请求。 服务器项可以表示服务器文档的一部分或整个文档。 将 OLE 项嵌入到容器文档中时，服务器项表示整个服务器文档。 链接 OLE 项时，服务器项可以表示服务器文档的一部分或整个文档，这取决于是链接到部分文档还是整个文档。
 
 在中[HIERSVR](../visual-cpp-samples.md)示例，例如，服务器项类`CServerItem`，有一个成员是指向类的对象的指针， `CServerNode`。 `CServerNode`对象是 HIERSVR 应用程序的文档，这是一个树中的节点。 当`CServerNode`对象是根节点，`CServerItem`对象表示整个文档。 当`CServerNode`对象是子节点，`CServerItem`对象表示文档的一部分。 请参阅 MFC OLE 示例[HIERSVR](../visual-cpp-samples.md)有关这种交互的示例。
 
@@ -35,7 +36,7 @@ ms.locfileid: "50453685"
 
    框架调用 `OnDraw` 以将 OLE 项渲染到图元文件中。 容器应用程序可使用此图元文件渲染该项。 应用程序的视图类还有一个 `OnDraw` 成员函数，在服务器应用程序处于活动状态时可使用此成员函数渲染该项。
 
-1. 为服务器文档类实现 `OnGetEmbeddedItem` 的重写。 有关详细信息，请参阅文章[服务器： 实现服务器文档](../mfc/servers-implementing-server-documents.md)和 MFC OLE 示例[HIERSVR](../visual-cpp-samples.md)。
+1. 为服务器文档类实现 `OnGetEmbeddedItem` 的重写。 有关详细信息，请参阅文章[服务器：实现服务器文档](../mfc/servers-implementing-server-documents.md)和 MFC OLE 示例[HIERSVR](../visual-cpp-samples.md)。
 
 1. 实现服务器项类的 `OnGetExtent` 成员函数。 框架调用此函数来检索项的大小。 默认实现不执行任何操作。
 
@@ -52,4 +53,3 @@ ms.locfileid: "50453685"
 ## <a name="see-also"></a>请参阅
 
 [服务器](../mfc/servers.md)
-

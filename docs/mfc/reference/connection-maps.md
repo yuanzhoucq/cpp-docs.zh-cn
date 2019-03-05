@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - connection maps
 ms.assetid: 1f25a9bc-6d09-4614-99cf-dc38e8ddfa73
-ms.openlocfilehash: 388b3d1961f9c7cf3598db08a986c2205ac34bc5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cbd993e7172ca9a25f25db18d5d0fa042db847b3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624804"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271146"
 ---
 # <a name="connection-maps"></a>连接映射
 
@@ -52,7 +52,7 @@ BEGIN_CONNECTION_PART(theClass, localClass)
 
 ### <a name="parameters"></a>参数
 
-*类*<br/>
+*theClass*<br/>
 指定它的连接点这控件类的名称。
 
 *localClass*<br/>
@@ -134,7 +134,7 @@ BEGIN_CONNECTION_MAP(theClass, theBase)
 
 ### <a name="parameters"></a>参数
 
-*类*<br/>
+*theClass*<br/>
 指定连接映射所属的控件类的名称。
 
 *theBase*<br/>
@@ -170,7 +170,7 @@ CONNECTION_PART(theClass, iid, localClass)
 
 ### <a name="parameters"></a>参数
 
-*类*<br/>
+*theClass*<br/>
 指定它的连接点这控件类的名称。
 
 *iid*<br/>

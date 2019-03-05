@@ -13,16 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - call class
 ms.assetid: 1521970a-1e9c-4b0c-a681-d18e40976f49
-ms.openlocfilehash: 5164d2787c86e6c909418f353c15c876d1397afe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9651a74fdb07ad96d6f01edb6818ea48d697c37c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566096"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271952"
 ---
 # <a name="call-class"></a>call 类
 
-`call` 消息块是多源、有序的 `target_block`，可以在接收消息时调用指定函数。
+
+  `call` 消息块是多源、有序的 `target_block`，可以在接收消息时调用指定函数。
 
 ## <a name="syntax"></a>语法
 
@@ -45,7 +46,7 @@ class call : public target_block<multi_link_registry<ISource<T>>>;
 
 |名称|描述|
 |----------|-----------------|
-|[调用](#ctor)|已重载。 构造 `call` 消息块。|
+|[call](#ctor)|已重载。 构造 `call` 消息块。|
 |[~ call 析构函数](#dtor)|销毁`call`消息块。|
 
 ### <a name="protected-methods"></a>受保护的方法
@@ -112,7 +113,7 @@ call(
 *_Func*<br/>
 将为每个接受的消息调用一个函数。
 
-*筛选 （_f)*<br/>
+*_Filter*<br/>
 确定是否应接受提供的消息的筛选器函数。
 
 *_PScheduler*<br/>
@@ -129,7 +130,7 @@ call(
 
 类型`filter_method`是具有签名的伪函数`bool (T const &)`调用此`call`消息块，以确定它是否应接受提供的消息。
 
-##  <a name="dtor"></a> ~ 调用
+##  <a name="dtor"></a> ~call
 
 销毁`call`消息块。
 

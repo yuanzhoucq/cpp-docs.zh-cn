@@ -4,12 +4,12 @@ ms.date: 11/19/2018
 helpviewer_keywords:
 - application button [MFC], customizing
 ms.assetid: ebb11180-ab20-43df-a234-801feca9eb38
-ms.openlocfilehash: ba29e9ad65e0bb1d2163e4051c7c7b53664d8817
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: d45ceaf1cce21f77871e966e0e8f525f95cb4c37
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175322"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269527"
 ---
 # <a name="how-to-customize-the-application-button"></a>如何：自定义应用程序按钮
 
@@ -46,7 +46,7 @@ ms.locfileid: "52175322"
 |**MRU 标题**|指定最近使用列表面板上显示的文本。|
 |**较小的图像**|指定包含一系列的 16x16 图标的图像的标识符。 图标按钮集合中的按钮使用。|
 |**使用**|启用或禁用最近使用列表面板。 最近使用列表面板显示在应用程序菜单上。|
-|**宽度**|指定以像素为单位的最近使用列表面板的宽度。|
+|**Width**|指定以像素为单位的最近使用列表面板的宽度。|
 
 应用程序菜单不会显示在设计图面上。 若要查看它，必须预览功能区或运行该应用程序。
 

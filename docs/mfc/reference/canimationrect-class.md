@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CAnimationRect [MFC], m_szInitial
 - CAnimationRect [MFC], m_topValue
 ms.assetid: 0294156d-241e-4a57-92b2-31234fe557d6
-ms.openlocfilehash: 4e782a9325360b69e33dfaf6a3b0649d9368b32b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 84c4cf92894a9ece2021417445c9d7ab94ee6bdf
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50540174"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259485"
 ---
 # <a name="canimationrect-class"></a>CAnimationRect 类
 
@@ -87,7 +87,7 @@ class CAnimationRect : public CAnimationBaseObject;
 |名称|描述|
 |----------|-----------------|
 |[CAnimationRect::operator RECT](#operator_rect)|CAnimationRect 转换矩形|
-|[CAnimationRect::operator =](#operator_eq)|将 rect 分配给 CAnimationRect。|
+|[CAnimationRect::operator=](#operator_eq)|将 rect 分配给 CAnimationRect。|
 
 ### <a name="public-data-members"></a>公共数据成员
 
@@ -401,7 +401,7 @@ operator RECT();
 
 此函数在内部调用 GetValue。 如果出于某种原因 GetValue 失败，则返回的矩形将包含所有矩形坐标的默认值。
 
-##  <a name="operator_eq"></a>  CAnimationRect::operator =
+##  <a name="operator_eq"></a>  CAnimationRect::operator=
 
 将 rect 分配给 CAnimationRect。
 

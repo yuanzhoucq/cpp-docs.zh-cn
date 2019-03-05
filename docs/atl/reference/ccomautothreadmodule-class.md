@@ -17,12 +17,12 @@ helpviewer_keywords:
 - CComAutoThreadModule class
 - apartment model modules
 ms.assetid: 13063ea5-a57e-4aac-97d3-227137262811
-ms.openlocfilehash: 805227144887b29d85b1948f62060ffe9eb2d0e2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9b0fa685bf9a7de94b158bd62b00161c1b58562d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50435683"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271991"
 ---
 # <a name="ccomautothreadmodule-class"></a>CComAutoThreadModule 类
 
@@ -52,8 +52,8 @@ class CComAutoThreadModule : public CComModule
 |[CreateInstance](#createinstance)|选择一个线程，并在关联的单元中创建对象。|
 |[GetDefaultThreads](#getdefaultthreads)|（静态）动态计算基础的处理器数的模块的线程的数。|
 |[Init](#init)|创建模块的线程。|
-|[锁](#lock)|该模块和当前线程上的锁计数递增。|
-|[解锁](#unlock)|减少锁计数模块和当前线程上。|
+|[Lock](#lock)|该模块和当前线程上的锁计数递增。|
+|[Unlock](#unlock)|减少锁计数模块和当前线程上。|
 
 ### <a name="data-members"></a>数据成员
 

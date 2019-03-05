@@ -12,12 +12,12 @@ f1_keywords:
 - CONCRT/concurrency::join_type
 - CONCRT/concurrency::message_status Enumeration
 ms.assetid: a40e3b2d-ad21-4229-9880-2cfa84f7ab8f
-ms.openlocfilehash: 342655e290167315b7f10caba979804461e10658
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: d3eb49cd1555f23cc83efb0d8d912998295b3c55
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521071"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271185"
 ---
 # <a name="concurrency-namespace-enums"></a>并发命名空间枚举
 
@@ -31,7 +31,8 @@ ms.locfileid: "51521071"
 
 ##  <a name="agent_status"></a>  agent_status 枚举
 
-`agent` 的有效状态。
+
+  `agent` 的有效状态。
 
 ```
 enum agent_status;
@@ -167,7 +168,8 @@ enum DynamicProgressFeedbackType;
 
 ##  <a name="join_type"></a>  join_type 枚举
 
-`join` 消息块的类型。
+
+  `join` 消息块的类型。
 
 ```
 enum join_type;
@@ -186,7 +188,8 @@ enum join_type;
 
 ##  <a name="message_status"></a>  message_status 枚举
 
-`message` 对象的内容到块的有效响应。
+
+  `message` 对象的内容到块的有效响应。
 
 ```
 enum message_status;
@@ -217,16 +220,16 @@ enum PolicyElementKey;
 
 |名称|描述|
 |----------|-----------------|
-|`ContextPriority`|在计划程序中的每个上下文操作系统线程优先级。 如果此项设置为值`INHERIT_THREAD_PRIORITY`计划程序中的上下文将继承在创建计划程序线程的优先级。<br /><br /> 有效的值： 任何有效的值为 Windows`SetThreadPriority`函数和特殊值 `INHERIT_THREAD_PRIORITY`<br /><br /> 默认值： `THREAD_PRIORITY_NORMAL`|
-|`ContextStackSize`|每个上下文中千字节为单位的计划程序中保留的堆栈大小。<br /><br /> 有效值： 正整数<br /><br /> 默认值： `0`，指示使用进程的默认值为堆栈大小。|
-|`DynamicProgressFeedback`|确定是否根据统计信息收集从调度器还是仅基于基础硬件线程的订阅级别，将重新平衡计划程序的资源。 有关详细信息，请参阅[DynamicProgressFeedbackType](#dynamicprogressfeedbacktype)。<br /><br /> 有效值： 隶属`DynamicProgressFeedbackType`枚举，而是`ProgressFeedbackEnabled`或 `ProgressFeedbackDisabled`<br /><br /> 默认值： `ProgressFeedbackEnabled`|
-|`LocalContextCacheSize`|当`SchedulingProtocol`策略的注册表项设置为值`EnhanceScheduleGroupLocality`，这将指定可运行的上下文允许缓存中每个虚拟处理器本地队列的最大数目。 此类上下文通常将中先出 (LIFO) 顺序导致它们变为可运行的虚拟处理器上运行。 请注意，此策略注册表项包含任何这意味着当`SchedulingProtocol`键设置为值`EnhanceForwardProgress`。<br /><br /> 有效值： 非负整数<br /><br /> 默认值： `8`|
-|`MaxConcurrency`|最大并发级别所需的计划程序。 资源管理器将尝试最初分配这多个虚拟处理器。 特殊值[MaxExecutionResources](concurrency-namespace-constants1.md#maxexecutionresources)指示所需的并发级别是相同的计算机上的硬件线程数。 如果指定的值`MinConcurrency`大于在计算机上的硬件线程数和`MaxConcurrency`指定为`MaxExecutionResources`，为`MaxConcurrency`引发以匹配设置为`MinConcurrency`。<br /><br /> 有效值： 正整数以及特殊值 `MaxExecutionResources`<br /><br /> 默认值： `MaxExecutionResources`|
+|`ContextPriority`|在计划程序中的每个上下文操作系统线程优先级。 如果此项设置为值`INHERIT_THREAD_PRIORITY`计划程序中的上下文将继承在创建计划程序线程的优先级。<br /><br /> 有效的值：任何有效的值为 Windows`SetThreadPriority`函数和特殊值 `INHERIT_THREAD_PRIORITY`<br /><br /> 默认值： `THREAD_PRIORITY_NORMAL`|
+|`ContextStackSize`|每个上下文中千字节为单位的计划程序中保留的堆栈大小。<br /><br /> 有效的值：正整数<br /><br /> 默认值： `0`，指示使用进程的默认值为堆栈大小。|
+|`DynamicProgressFeedback`|确定是否根据统计信息收集从调度器还是仅基于基础硬件线程的订阅级别，将重新平衡计划程序的资源。 有关详细信息，请参阅[DynamicProgressFeedbackType](#dynamicprogressfeedbacktype)。<br /><br /> 有效的值：成员`DynamicProgressFeedbackType`枚举，而是`ProgressFeedbackEnabled`或 `ProgressFeedbackDisabled`<br /><br /> 默认值： `ProgressFeedbackEnabled`|
+|`LocalContextCacheSize`|当`SchedulingProtocol`策略的注册表项设置为值`EnhanceScheduleGroupLocality`，这将指定可运行的上下文允许缓存中每个虚拟处理器本地队列的最大数目。 此类上下文通常将中先出 (LIFO) 顺序导致它们变为可运行的虚拟处理器上运行。 请注意，此策略注册表项包含任何这意味着当`SchedulingProtocol`键设置为值`EnhanceForwardProgress`。<br /><br /> 有效的值：非负整数<br /><br /> 默认值： `8`|
+|`MaxConcurrency`|最大并发级别所需的计划程序。 资源管理器将尝试最初分配这多个虚拟处理器。 特殊值[MaxExecutionResources](concurrency-namespace-constants1.md#maxexecutionresources)指示所需的并发级别是相同的计算机上的硬件线程数。 如果指定的值`MinConcurrency`大于在计算机上的硬件线程数和`MaxConcurrency`指定为`MaxExecutionResources`，为`MaxConcurrency`引发以匹配设置为`MinConcurrency`。<br /><br /> 有效的值：正整数以及特殊值 `MaxExecutionResources`<br /><br /> 默认值： `MaxExecutionResources`|
 |`MaxPolicyElementKey`|最大策略元素键。 不是有效的元素键。|
-|`MinConcurrency`|必须通过资源管理器提供对计划程序最小并发级别。 分配给计划程序的虚拟处理器的数量将永远不会低于最小值。 特殊值[MaxExecutionResources](concurrency-namespace-constants1.md#maxexecutionresources)指示最小并发级别是相同的计算机上的硬件线程数。 如果指定的值`MaxConcurrency`的计算机上的硬件线程数少于并`MinConcurrency`指定为`MaxExecutionResources`的值`MinConcurrency`降低以匹配设置为`MaxConcurrency`。<br /><br /> 有效值： 非负整数和特殊值`MaxExecutionResources`。 请注意，对于用于并发运行时计划程序构造的计划程序策略，值 `0` 无效。<br /><br /> 默认值： `1`|
-|`SchedulerKind`|计划程序将使用的基础执行上下文的线程的类型。 有关详细信息，请参阅[SchedulerType](#schedulertype)。<br /><br /> 有效值：枚举 `SchedulerType` 的成员，例如 `ThreadScheduler`<br /><br /> 默认值： `ThreadScheduler`。 这会转换为在所有操作系统上的 Win32 线程。|
-|`SchedulingProtocol`|描述计划程序将使用哪个计划算法。 有关详细信息，请参阅[SchedulingProtocolType](#schedulingprotocoltype)。<br /><br /> 有效值： 隶属`SchedulingProtocolType`枚举，而是`EnhanceScheduleGroupLocality`或 `EnhanceForwardProgress`<br /><br /> 默认值： `EnhanceScheduleGroupLocality`|
-|`TargetOversubscriptionFactor`|探索虚拟处理器，每个硬件线程数。 如果必要，资源管理器可以增加目标过度订阅因素，以满足计算机上硬件线程的 `MaxConcurrency`。<br /><br /> 有效值： 正整数<br /><br /> 默认值： `1`|
+|`MinConcurrency`|必须通过资源管理器提供对计划程序最小并发级别。 分配给计划程序的虚拟处理器的数量将永远不会低于最小值。 特殊值[MaxExecutionResources](concurrency-namespace-constants1.md#maxexecutionresources)指示最小并发级别是相同的计算机上的硬件线程数。 如果指定的值`MaxConcurrency`的计算机上的硬件线程数少于并`MinConcurrency`指定为`MaxExecutionResources`的值`MinConcurrency`降低以匹配设置为`MaxConcurrency`。<br /><br /> 有效的值：非负整数和特殊值`MaxExecutionResources`。 请注意，对于用于并发运行时计划程序构造的计划程序策略，值 `0` 无效。<br /><br /> 默认值： `1`|
+|`SchedulerKind`|计划程序将使用的基础执行上下文的线程的类型。 有关详细信息，请参阅[SchedulerType](#schedulertype)。<br /><br /> 有效的值：成员`SchedulerType`枚举，例如， `ThreadScheduler`<br /><br /> 默认值： `ThreadScheduler`。 这会转换为在所有操作系统上的 Win32 线程。|
+|`SchedulingProtocol`|描述计划程序将使用哪个计划算法。 有关详细信息，请参阅[SchedulingProtocolType](#schedulingprotocoltype)。<br /><br /> 有效的值：成员`SchedulingProtocolType`枚举，而是`EnhanceScheduleGroupLocality`或 `EnhanceForwardProgress`<br /><br /> 默认值： `EnhanceScheduleGroupLocality`|
+|`TargetOversubscriptionFactor`|探索虚拟处理器，每个硬件线程数。 如果必要，资源管理器可以增加目标过度订阅因素，以满足计算机上硬件线程的 `MaxConcurrency`。<br /><br /> 有效的值：正整数<br /><br /> 默认值： `1`|
 |`WinRTInitialization`||
 
 ### <a name="requirements"></a>要求
@@ -305,7 +308,8 @@ enum task_group_status;
 
 |名称|描述|
 |----------|-----------------|
-|`canceled`|`task_group` 或 `structured_task_group` 对象已取消。 一个或多个任务可能未执行。|
+|`canceled`|
+  `task_group` 或 `structured_task_group` 对象已取消。 一个或多个任务可能未执行。|
 |`completed`|排入 `task_group` 或 `structured_task_group` 对象的任务已成功完成。|
 |`not_complete`|排入 `task_group` 对象的任务尚未完成。 请注意，此值目前不是由并发运行时返回的。|
 

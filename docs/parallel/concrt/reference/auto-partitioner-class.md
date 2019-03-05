@@ -8,16 +8,17 @@ f1_keywords:
 helpviewer_keywords:
 - auto_partitioner class
 ms.assetid: 7cc08e5d-20b4-47a4-b4b5-c214a78f5a9e
-ms.openlocfilehash: 9e4701c39512613bd7525c2cc0e3d24a57e7689d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2d8bbb8e8af17dd19953487c47e5fd40343fe349
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644920"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264815"
 ---
 # <a name="autopartitioner-class"></a>auto_partitioner 类
 
-`auto_partitioner` 类表示 `parallel_for`、`parallel_for_each` 和 `parallel_transform` 用于对其循环访问的范围进行分区的默认方法。 此分区方法使用范围窃取进行负载平衡以及按循环访问取消。
+
+  `auto_partitioner` 类表示 `parallel_for`、`parallel_for_each` 和 `parallel_transform` 用于对其循环访问的范围进行分区的默认方法。 此分区方法使用范围窃取进行负载平衡以及按循环访问取消。
 
 ## <a name="syntax"></a>语法
 

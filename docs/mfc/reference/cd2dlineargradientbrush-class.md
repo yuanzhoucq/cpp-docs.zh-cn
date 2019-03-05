@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CD2DLinearGradientBrush [MFC], m_LinearGradientBrushProperties
 - CD2DLinearGradientBrush [MFC], m_pLinearGradientBrush
 ms.assetid: d4be9ff9-0ea8-45e6-9b8d-f3bc5673cbac
-ms.openlocfilehash: 03c370be5bcfc61e1dd398604f27313d3de15f8b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d86235893d1f238f4cba9c927fad17f29060e591
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50635814"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258718"
 ---
 # <a name="cd2dlineargradientbrush-class"></a>CD2DLinearGradientBrush 类
 
@@ -54,7 +54,7 @@ class CD2DLinearGradientBrush : public CD2DGradientBrush;
 |名称|描述|
 |----------|-----------------|
 |[CD2DLinearGradientBrush::CD2DLinearGradientBrush](#cd2dlineargradientbrush)|构造一个 CD2DLinearGradientBrush 对象。|
-|[CD2DLinearGradientBrush:: ~ CD2DLinearGradientBrush](#_dtorcd2dlineargradientbrush)|析构函数。 当 D2D 线性渐变画笔对象被销毁时调用。|
+|[CD2DLinearGradientBrush::~CD2DLinearGradientBrush](#_dtorcd2dlineargradientbrush)|析构函数。 当 D2D 线性渐变画笔对象被销毁时调用。|
 
 ### <a name="public-methods"></a>公共方法
 
@@ -74,7 +74,7 @@ class CD2DLinearGradientBrush : public CD2DGradientBrush;
 
 |名称|描述|
 |----------|-----------------|
-|[CD2DLinearGradientBrush::operator ID2D1LinearGradientBrush *](#operator_id2d1lineargradientbrush_star)|返回 ID2D1LinearGradientBrush 接口|
+|[CD2DLinearGradientBrush::operator ID2D1LinearGradientBrush*](#operator_id2d1lineargradientbrush_star)|返回 ID2D1LinearGradientBrush 接口|
 
 ### <a name="protected-data-members"></a>受保护的数据成员
 
@@ -251,7 +251,7 @@ D2D1_LINEAR_GRADIENT_BRUSH_PROPERTIES m_LinearGradientBrushProperties;
 ID2D1LinearGradientBrush* m_pLinearGradientBrush;
 ```
 
-##  <a name="operator_id2d1lineargradientbrush_star"></a>  CD2DLinearGradientBrush::operator ID2D1LinearGradientBrush *
+##  <a name="operator_id2d1lineargradientbrush_star"></a>  CD2DLinearGradientBrush::operator ID2D1LinearGradientBrush*
 
 返回 ID2D1LinearGradientBrush 接口
 
@@ -273,7 +273,7 @@ void SetEndPoint(CD2DPointF point);
 
 ### <a name="parameters"></a>参数
 
-*点*<br/>
+*point*<br/>
 画笔的坐标空间中的线性渐变的二维终止坐标
 
 ##  <a name="setstartpoint"></a>  CD2DLinearGradientBrush::SetStartPoint
@@ -286,7 +286,7 @@ void SetStartPoint(CD2DPointF point);
 
 ### <a name="parameters"></a>参数
 
-*点*<br/>
+*point*<br/>
 画笔的坐标空间中的线性渐变的二维起始坐标
 
 ## <a name="see-also"></a>请参阅

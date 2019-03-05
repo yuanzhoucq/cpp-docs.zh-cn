@@ -11,12 +11,12 @@ helpviewer_keywords:
 - servers [MFC], installing
 - OLE server applications [MFC], registering servers
 ms.assetid: 991d5684-72c1-4f9e-a09a-9184ed12bbb9
-ms.openlocfilehash: 1c8c0d32db202b8ba26afec708bcc8bab8e3282c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0bc606acfba26d27d0ab36045e4772593e760e98
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50461953"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272161"
 ---
 # <a name="registration"></a>注册
 
@@ -46,7 +46,7 @@ RegEdit 将 .reg 文本文件的内容合并到注册数据库中。 若要验�
 
 在使用应用程序向导创建服务器应用程序时，该向导将自动为你完成所有初始化任务。 本节介绍了在手动编写服务器应用程序时您必须执行的操作。
 
-当服务器应用程序由容器应用程序启动时，OLE 系统 DLL 会将“/Embedding”选项添加到服务器的命令行中。 服务器应用程序的行为因其是否由容器启动而异，因此应用程序在开始执行时应执行的第一个操作是检查命令行上的“/Embedding”或“-Embedding”选项。 如果此开关存在，则加载一组不同的资源，这些资源显示服务器处于就地活动状态或完全打开状态。 有关详细信息，请参阅[菜单和资源： 服务器添加](../mfc/menus-and-resources-server-additions.md)。
+当服务器应用程序由容器应用程序启动时，OLE 系统 DLL 会将“/Embedding”选项添加到服务器的命令行中。 服务器应用程序的行为因其是否由容器启动而异，因此应用程序在开始执行时应执行的第一个操作是检查命令行上的“/Embedding”或“-Embedding”选项。 如果此开关存在，则加载一组不同的资源，这些资源显示服务器处于就地活动状态或完全打开状态。 有关详细信息，请参阅[菜单和资源：服务器添加](../mfc/menus-and-resources-server-additions.md)。
 
 服务器应用程序还应调用其 `CWinApp::RunEmbedded` 函数来分析命令行。 如果返回非零值，则应用程序将不会显示其窗口，因为它已从容器应用程序运行，而不是作为独立的应用程序运行。 此函数会在系统注册数据库中更新服务器的条目，并调用 `RegisterAll` 成员函数，还将执行实例注册。
 

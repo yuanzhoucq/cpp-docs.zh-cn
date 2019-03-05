@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Clipboard, copying data to
 - Clipboard, pasting
 ms.assetid: 580e10be-241f-4f9f-94cf-8302edc5beef
-ms.openlocfilehash: 7f22418b4006bcb9fac1d4430660c8721bc7e903
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: da589743e98b2ac020e006aedb0ccc0415998f17
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437032"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270730"
 ---
 # <a name="clipboard-copying-and-pasting-data"></a>剪贴板：复制和粘贴数据
 
@@ -70,4 +70,3 @@ ms.locfileid: "50437032"
 ## <a name="see-also"></a>请参阅
 
 [剪贴板：使用 OLE 剪贴板机制](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)
-

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - upgrading ActiveX controls
 - licensing ActiveX controls
 ms.assetid: 4d12ddfa-b491-4f9f-a0b7-b51458e05651
-ms.openlocfilehash: 18641c6e25aaccd6b5d0bcbbddbf8fc73b2a3c52
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fc7313c862d3536326894c947fa371d833e8fab8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525796"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276970"
 ---
 # <a name="upgrading-an-existing-activex-control"></a>升级现有 ActiveX 控件
 
@@ -42,7 +42,7 @@ ms.locfileid: "50525796"
 
 - [Internet Explorer 浏览器安全级别和控件行为](#_core_internet_explorer_browser_safety_levels_and_control_behavior)
 
-此外可以添加优化，如中所述[ActiveX 控件： 优化](../mfc/mfc-activex-controls-optimization.md)。 名字对象可用于下载属性和大型 Blob 以异步方式，如中所述[Internet 上的 ActiveX 控件](../mfc/activex-controls-on-the-internet.md)。
+此外可以添加优化，如中所述[ActiveX 控件：优化](../mfc/mfc-activex-controls-optimization.md)。 名字对象可用于下载属性和大型 Blob 以异步方式，如中所述[Internet 上的 ActiveX 控件](../mfc/activex-controls-on-the-internet.md)。
 
 ##  <a name="_core_packaging_code_for_downloading"></a> 用于下载的打包代码
 
@@ -50,7 +50,8 @@ ms.locfileid: "50525796"
 
 ### <a name="the-codebase-tag"></a>CODEBASE 标记
 
-ActiveX 控件是使用 `<OBJECT>` 标记嵌入在网页中的。 `CODEBASE` 标记的 `<OBJECT>` 参数指定从中下载控件的位置。 `CODEBASE` 可成功指向很多不同的文件类型。
+ActiveX 控件是使用 `<OBJECT>` 标记嵌入在网页中的。 
+  `CODEBASE` 标记的 `<OBJECT>` 参数指定从中下载控件的位置。 `CODEBASE` 可成功指向很多不同的文件类型。
 
 ### <a name="using-the-codebase-tag-with-an-ocx-file"></a>将 CODEBASE 标记用于 OCX 文件
 
@@ -86,7 +87,8 @@ Cabinet 文件是使用 MFC 打包 ActiveX 控件的推荐方法。 通过在 Ca
 
 工具来创建 cabinet 文件是现已成为[Windows 10 SDK](https://dev.windows.com/downloads/windows-10-sdk)。
 
-`CODEBASE` 指向的 Cabinet 文件应包含 ActiveX 控件的 .ocx 文件和用于控制其安装的 .inf 文件。 您可以通过指定控件文件的名称和一个 .inf 文件来创建 Cabinet 文件。 不要在此 Cabinet 文件中包含可能已存在于系统上的依赖 DLL。 例如，MFC DLL 在单独的 Cabinet 文件中打包并通过控制 .inf 文件来引用。
+
+  `CODEBASE` 指向的 Cabinet 文件应包含 ActiveX 控件的 .ocx 文件和用于控制其安装的 .inf 文件。 您可以通过指定控件文件的名称和一个 .inf 文件来创建 Cabinet 文件。 不要在此 Cabinet 文件中包含可能已存在于系统上的依赖 DLL。 例如，MFC DLL 在单独的 Cabinet 文件中打包并通过控制 .inf 文件来引用。
 
 有关如何创建 CAB 文件的详细信息，请参阅[创建 CAB 文件](/windows/desktop/devnotes/cabinet-api-functions)。
 
@@ -220,7 +222,7 @@ HKEY_CLASSES_ROOT\CLSID\{06889605-B8D0-101A-91F1-00608CEAD5B3}\Implemented Categ
 </OBJECT>
 ```
 
-有关控件授权详细信息，请参阅[ActiveX 控件： 许可 ActiveX 控件](../mfc/mfc-activex-controls-licensing-an-activex-control.md)。
+有关控件授权详细信息，请参阅[ActiveX 控件：授权 ActiveX 控件](../mfc/mfc-activex-controls-licensing-an-activex-control.md)。
 
 ##  <a name="_core_signing_code"></a> 代码签名
 
@@ -274,5 +276,4 @@ HKEY_CLASSES_ROOT\CLSID\{06889605-B8D0-101A-91F1-00608CEAD5B3}\Implemented Categ
 
 [MFC Internet 编程任务](../mfc/mfc-internet-programming-tasks.md)<br/>
 [MFC Internet 编程基础知识](../mfc/mfc-internet-programming-basics.md)<br/>
-[MFC ActiveX 控件：许可 ActiveX 控件](../mfc/mfc-activex-controls-licensing-an-activex-control.md)
-
+[MFC ActiveX 控件：授权 ActiveX 控件](../mfc/mfc-activex-controls-licensing-an-activex-control.md)

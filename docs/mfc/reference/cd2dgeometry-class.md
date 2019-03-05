@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CD2DGeometry [MFC], Widen
 - CD2DGeometry [MFC], m_pGeometry
 ms.assetid: 3f95054b-fdb8-4e87-87f2-9fc3df7279ec
-ms.openlocfilehash: 929926129ddee0efdee4f1b02494b503755811d7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4549b2e7981d5f8493ddf9f24477e75a94ddde8b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50610686"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271224"
 ---
 # <a name="cd2dgeometry-class"></a>CD2DGeometry 类
 
@@ -70,7 +70,7 @@ class CD2DGeometry : public CD2DResource;
 |名称|描述|
 |----------|-----------------|
 |[CD2DGeometry::CD2DGeometry](#cd2dgeometry)|构造一个 CD2DGeometry 对象。|
-|[CD2DGeometry:: ~ CD2DGeometry](#_dtorcd2dgeometry)|析构函数。 当 D2D geometry 对象被销毁时调用。|
+|[CD2DGeometry::~CD2DGeometry](#_dtorcd2dgeometry)|析构函数。 当 D2D geometry 对象被销毁时调用。|
 
 ### <a name="public-methods"></a>公共方法
 
@@ -231,10 +231,10 @@ BOOL ComputeArea(
 
 ### <a name="parameters"></a>参数
 
-*转变*<br/>
+*worldTransform*<br/>
 要计算其区域之前应用到此几何图形的转换。
 
-*区域*<br/>
+*area*<br/>
 此方法返回时，包含指向该几何图形的转换后的平展版本的区域。 为此参数，必须分配存储空间。
 
 *flatteningTolerance*<br/>
@@ -257,7 +257,7 @@ BOOL ComputeLength(
 
 ### <a name="parameters"></a>参数
 
-*转变*<br/>
+*worldTransform*<br/>
 要计算其长度之前应用于几何图形的转换。
 
 *length*<br/>
@@ -288,10 +288,10 @@ BOOL ComputePointAtLength(
 *length*<br/>
 若要查找的正切值的点的几何图形的距离。 此距离是否少于 0，此方法计算的几何中的第一个点。 如果此距离大于该几何图形的长度，则此方法计算几何图形中的最后一个点。
 
-*转变*<br/>
+*worldTransform*<br/>
 要计算指定的点和正切值之前应用于几何图形的转换。
 
-*点*<br/>
+*point*<br/>
 在该几何图形的指定距离处位置。 如果几何图形为空，则此点包含 NaN 作为其 x 和 y 值。
 
 *unitTangentVector*<br/>
@@ -338,13 +338,13 @@ BOOL FillContainsPoint(
 
 ### <a name="parameters"></a>参数
 
-*点*<br/>
+*point*<br/>
 要测试的点。
 
-*转变*<br/>
+*worldTransform*<br/>
 要应用于在进行包容测试之前该几何图形的转换。
 
-*包含*<br/>
+*contains*<br/>
 当此方法返回时包含 geometry 填充的区域包含点; 如果为 TRUE 的布尔值否则为 FALSE。 为此参数，必须分配存储空间。
 
 *flatteningTolerance*<br/>
@@ -376,8 +376,8 @@ CD2DRectF& bounds) const;
 
 ### <a name="parameters"></a>参数
 
-*转变*<br/>
-*边界*
+*worldTransform*<br/>
+*bounds*
 
 ### <a name="return-value"></a>返回值
 
@@ -402,10 +402,10 @@ BOOL GetWidenedBounds(
 *strokeStyle*<br/>
 加宽几何图形的笔画的样式。
 
-*转变*<br/>
+*worldTransform*<br/>
 要将应用到几何图形转换几何图形后并绘制一样几何图形后转换。
 
-*边界*<br/>
+*bounds*<br/>
 此方法返回时，包含该加宽几何图形的边界。 为此参数，必须分配存储空间。
 
 *flatteningTolerance*<br/>
@@ -460,7 +460,7 @@ BOOL Outline(
 
 ### <a name="parameters"></a>参数
 
-*转变*<br/>
+*worldTransform*<br/>
 要应用到几何图形大纲的转换。
 
 *geometrySink*<br/>
@@ -490,7 +490,7 @@ BOOL Simplify(
 *simplificationOption*<br/>
 一个值，指定简化的几何图形是否应包含曲线。
 
-*转变*<br/>
+*worldTransform*<br/>
 要应用于简化几何图形的转换。
 
 *geometrySink*<br/>
@@ -519,7 +519,7 @@ BOOL StrokeContainsPoint(
 
 ### <a name="parameters"></a>参数
 
-*点*<br/>
+*point*<br/>
 要进行包容测试的点。
 
 *strokeWidth*<br/>
@@ -528,10 +528,10 @@ BOOL StrokeContainsPoint(
 *strokeStyle*<br/>
 要应用的笔画的样式。
 
-*转变*<br/>
+*worldTransform*<br/>
 要将应用于描边的几何图形的转换。
 
-*包含*<br/>
+*contains*<br/>
 此方法返回时，包含几何图形的笔画包含指定的点; 如果设置为 TRUE 的布尔值否则为 FALSE。 为此参数，必须分配存储空间。
 
 *flatteningTolerance*<br/>
@@ -554,7 +554,7 @@ BOOL Tessellate(
 
 ### <a name="parameters"></a>参数
 
-*转变*<br/>
+*worldTransform*<br/>
 要应用于此几何形状或为 NULL 的转换。
 
 *tessellationSink*<br/>
@@ -588,7 +588,7 @@ BOOL Widen(
 *strokeStyle*<br/>
 要应用于几何形状，则为 NULL 的笔划的样式。
 
-*转变*<br/>
+*worldTransform*<br/>
 要扩大它后应用于该几何图形的转换。
 
 *geometrySink*<br/>

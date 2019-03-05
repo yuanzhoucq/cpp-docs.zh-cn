@@ -26,12 +26,12 @@ helpviewer_keywords:
 - COleDispatchDriver [MFC], m_bAutoRelease
 - COleDispatchDriver [MFC], m_lpDispatch
 ms.assetid: 3ed98daf-cdc7-4374-8a0c-cf695a8d3657
-ms.openlocfilehash: 9d0ffba2e8b682a33dc435b0968c59844a858c72
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 22ba71bc0abaefd20cb68d82d4fefe06ab7fa929
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524932"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274567"
 ---
 # <a name="coledispatchdriver-class"></a>COleDispatchDriver 类
 
@@ -56,10 +56,10 @@ class COleDispatchDriver
 |名称|描述|
 |----------|-----------------|
 |[COleDispatchDriver::AttachDispatch](#attachdispatch)|将附加`IDispatch`连接到`COleDispatchDriver`对象。|
-|[Coledispatchdriver:: Createdispatch](#createdispatch)|创建`IDispatch`连接并将其附加到`COleDispatchDriver`对象。|
+|[COleDispatchDriver::CreateDispatch](#createdispatch)|创建`IDispatch`连接并将其附加到`COleDispatchDriver`对象。|
 |[COleDispatchDriver::DetachDispatch](#detachdispatch)|分离`IDispatch`连接，而不释放它。|
 |[COleDispatchDriver::GetProperty](#getproperty)|获取自动化属性。|
-|[Coledispatchdriver:: Invokehelper](#invokehelper)|调用自动化方法的帮助器。|
+|[COleDispatchDriver::InvokeHelper](#invokehelper)|调用自动化方法的帮助器。|
 |[COleDispatchDriver::ReleaseDispatch](#releasedispatch)|版本`IDispatch`连接。|
 |[COleDispatchDriver::SetProperty](#setproperty)|设置自动化属性。|
 
@@ -158,7 +158,7 @@ COleDispatchDriver(const COleDispatchDriver& dispatchSrc);
 
   请参阅 [COleDispatchDriver::CreateDispatch](#createdispatch)的示例。
 
-##  <a name="createdispatch"></a>  Coledispatchdriver:: Createdispatch
+##  <a name="createdispatch"></a>  COleDispatchDriver::CreateDispatch
 
 创建一个 [IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface) 接口对象，并将其附加到 `COleDispatchDriver` 对象。
 
@@ -239,7 +239,7 @@ void GetProperty(
 
 [!code-cpp[NVC_MFCOleContainer#6](../../mfc/codesnippet/cpp/coledispatchdriver-class_4.cpp)]
 
-##  <a name="invokehelper"></a>  Coledispatchdriver:: Invokehelper
+##  <a name="invokehelper"></a>  COleDispatchDriver::InvokeHelper
 
 调用对象方法或属性指定的*dwDispID*，在指定的上下文*wFlags*。
 
@@ -291,7 +291,7 @@ void AFX_CDECL InvokeHelper(
 |VT_DISPATCH|LPDISPATCH|
 |VT_ERROR|SCODE|
 |VT_BOOL|**BOOL**|
-|VT_VARIANT|**变体**|
+|VT_VARIANT|**VARIANT**|
 |VT_UNKNOWN|LPUNKNOWN|
 
 *PbParamInfo*参数是以空格分隔的列表**VTS_** 常量。 其中一个或多个值（由空格（而不是逗号）分隔）指定函数的参数列表。 可能值使用 [EVENT_CUSTOM](event-maps.md#event_custom) 宏来列出。

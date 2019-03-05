@@ -52,12 +52,12 @@ helpviewer_keywords:
 - CArchive [MFC], WriteString
 - CArchive [MFC], m_pDocument
 ms.assetid: 9e950d23-b874-456e-ae4b-fe00781a7699
-ms.openlocfilehash: f1e5701e95ec080845f3d2422da5d6ce4b9c906b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8f169964c6a313f37b5ea50a5105af29af7b59b1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50465606"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266323"
 ---
 # <a name="carchive-class"></a>CArchive 类
 
@@ -90,7 +90,7 @@ class CArchive
 |[CArchive::IsLoading](#isloading)|确定是否正在加载存档。|
 |[CArchive::IsStoring](#isstoring)|确定是否存储在存档。|
 |[CArchive::MapObject](#mapobject)|将对象放在映射的不序列化到文件，但可供引用的子对象。|
-|[Carchive:: Read](#read)|读取原始字节。|
+|[CArchive::Read](#read)|读取原始字节。|
 |[CArchive::ReadClass](#readclass)|读取使用以前存储的类引用`WriteClass`。|
 |[CArchive::ReadObject](#readobject)|调用对象的`Serialize`加载的函数。|
 |[CArchive::ReadString](#readstring)|读取单个文本行。|
@@ -98,7 +98,7 @@ class CArchive
 |[CArchive::SetLoadParams](#setloadparams)|设置负载数组增长的大小。 加载的任何对象之前或之前必须调用`MapObject`或`ReadObject`调用。|
 |[CArchive::SetObjectSchema](#setobjectschema)|设置存档对象中存储的对象架构。|
 |[CArchive::SetStoreParams](#setstoreparams)|设置哈希表大小和用于序列化过程中标识唯一对象的映射的块大小。|
-|[Carchive:: Write](#write)|写入原始字节。|
+|[CArchive::Write](#write)|写入原始字节。|
 |[CArchive::WriteClass](#writeclass)|将引用写入`CRuntimeClass`到`CArchive`。|
 |[CArchive::WriteObject](#writeobject)|调用对象的`Serialize`用于存储的函数。|
 |[CArchive::WriteString](#writestring)|写入单个文本行。|
@@ -132,7 +132,7 @@ class CArchive
 
 `CArchive` 此外支持使用 MFC Windows 套接字类编程[CSocket](../../mfc/reference/csocket-class.md)并[CSocketFile](../../mfc/reference/csocketfile-class.md)。 [IsBufferEmpty](#isbufferempty)成员函数支持该使用情况。
 
-有关详细信息`CArchive`，请参阅文章[序列化](../../mfc/serialization-in-mfc.md)并[Windows 套接字： 使用存档使用套接字](../../mfc/windows-sockets-using-sockets-with-archives.md)。
+有关详细信息`CArchive`，请参阅文章[序列化](../../mfc/serialization-in-mfc.md)和[Windows 套接字：对存档使用套接字](../../mfc/windows-sockets-using-sockets-with-archives.md)。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -298,7 +298,7 @@ BOOL IsBufferEmpty() const;
 
 使用的原因`IsBufferEmpty`具有与关联的存档`CSocketFile`对象是存档的缓冲区可能包含多个消息或记录。 收到一条消息后, 应使用`IsBufferEmpty`来控制循环将继续接收数据，直到缓冲区为空。 有关详细信息，请参阅[接收](../../mfc/reference/casyncsocket-class.md#receive)类的成员函数`CAsyncSocket`，其中说明了如何使用`IsBufferEmpty`。
 
-有关详细信息，请参阅[Windows 套接字： 使用存档使用套接字](../../mfc/windows-sockets-using-sockets-with-archives.md)。
+有关详细信息，请参阅[Windows 套接字：对存档使用套接字](../../mfc/windows-sockets-using-sockets-with-archives.md)。
 
 ##  <a name="isloading"></a>  CArchive::IsLoading
 
@@ -352,7 +352,7 @@ void MapObject(const CObject* pOb);
 
 ### <a name="parameters"></a>参数
 
-*邮政信箱*<br/>
+*pOb*<br/>
 指向要存储的对象的常量指针。
 
 ### <a name="remarks"></a>备注
@@ -552,7 +552,7 @@ UINT Read(void* lpBuf, UINT nMax);
 *lpBuf*<br/>
 指向将接收从存档中读取的数据的用户提供的缓冲区的指针。
 
-*最*<br/>
+*nMax*<br/>
 无符号的整数，指定的字节数从存档中读取。
 
 ### <a name="return-value"></a>返回值
@@ -653,7 +653,7 @@ LPTSTR ReadString(LPTSTR lpsz, UINT nMax);
 *lpsz*<br/>
 指定指向将接收的以 null 结尾的文本字符串的用户提供的缓冲区的指针。
 
-*最*<br/>
+*nMax*<br/>
 指定要读取的字符最大数目。 应为一个小于的大小*lpsz*缓冲区。
 
 ### <a name="return-value"></a>返回值
@@ -784,7 +784,7 @@ void Write(const void* lpBuf, INT nMax);
 *lpBuf*<br/>
 指向包含要写入到存档的数据的用户提供的缓冲区的指针。
 
-*最*<br/>
+*nMax*<br/>
 一个整数，指定要写入到存档的字节数。
 
 ### <a name="remarks"></a>备注
@@ -834,7 +834,7 @@ void WriteObject(const CObject* pOb);
 
 ### <a name="parameters"></a>参数
 
-*邮政信箱*<br/>
+*pOb*<br/>
 指向要存储的对象的常量指针。
 
 ### <a name="remarks"></a>备注

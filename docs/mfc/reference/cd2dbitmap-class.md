@@ -51,12 +51,12 @@ helpviewer_keywords:
 - CD2DBitmap [MFC], m_strPath
 - CD2DBitmap [MFC], m_uiResID
 ms.assetid: 2b3686f1-812c-462b-b449-9f0cb6949bf6
-ms.openlocfilehash: 869d8c9cffae1a257de04cf82446025be33ef7de
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 288ba5e1503a4e3eefe83624cf9a489274a10823
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605863"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264711"
 ---
 # <a name="cd2dbitmap-class"></a>CD2DBitmap 类
 
@@ -75,7 +75,7 @@ class CD2DBitmap : public CD2DResource;
 |名称|描述|
 |----------|-----------------|
 |[CD2DBitmap::CD2DBitmap](#cd2dbitmap)|已重载。 构造从 HBITMAP CD2DBitmap 对象。|
-|[CD2DBitmap:: ~ CD2DBitmap](#_dtorcd2dbitmap)|析构函数。 当 D2D 位图对象被销毁时调用。|
+|[CD2DBitmap::~CD2DBitmap](#_dtorcd2dbitmap)|析构函数。 当 D2D 位图对象被销毁时调用。|
 
 ### <a name="protected-constructors"></a>受保护的构造函数
 
@@ -137,7 +137,7 @@ class CD2DBitmap : public CD2DResource;
 
 **标头：** afxrendertarget.h
 
-##  <a name="_dtorcd2dbitmap"></a>  CD2DBitmap:: ~ CD2DBitmap
+##  <a name="_dtorcd2dbitmap"></a>  CD2DBitmap::~CD2DBitmap
 
 析构函数。 当 D2D 位图对象被销毁时调用。
 
@@ -260,7 +260,7 @@ HRESULT CopyFromMemory(
 *srcData*<br/>
 要复制的数据。
 
-*间距*<br/>
+*pitch*<br/>
 跨距或的源位图存储在 srcData 音调。 跨距是扫描行 （一行像素在内存中） 的字节数。 可以从下面的公式计算跨距： 像素宽度\*每像素 + 内存填充的字节数。
 
 *destRect*<br/>

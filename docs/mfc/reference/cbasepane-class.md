@@ -166,12 +166,12 @@ helpviewer_keywords:
 - CBasePane [MFC], UndockPane
 - CBasePane [MFC], DoPaint
 ms.assetid: 8163dd51-d7c7-4def-9c74-61f8ecdfad82
-ms.openlocfilehash: 1de59e4404960ed99dedaadfa576168bc31da444
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 30a5eff8b18df8372c23b5f400c90ff85bdad0eb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694785"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259806"
 ---
 # <a name="cbasepane-class"></a>CBasePane 类
 
@@ -201,13 +201,13 @@ class CBasePane : public CWnd
 |[CBasePane::AccNotifyObjectFocusEvent](#accnotifyobjectfocusevent)|`CBasePane` 不使用此方法。|
 |`CBasePane::accSelect`|由框架调用以修改选定内容或移动指定对象的键盘焦点。 (重写[CWnd::accSelect](../../mfc/reference/cwnd-class.md#accselect)。)|
 |[CBasePane::AddPane](#addpane)|将一个窗格添加到停靠管理器。|
-|[Cbasepane:: Adjustdockinglayout](#adjustdockinglayout)|将重定向到停靠管理器调用以调整停靠布局。|
-|[Cbasepane:: Adjustlayout](#adjustlayout)|当窗格应调整其内部布局时由框架调用。|
-|[Cbasepane:: Calcfixedlayout](#calcfixedlayout)|计算控件条的水平大小。|
-|[Cbasepane:: Canacceptpane](#canacceptpane)|确定是否可将另一个窗格停靠到窗格。|
+|[CBasePane::AdjustDockingLayout](#adjustdockinglayout)|将重定向到停靠管理器调用以调整停靠布局。|
+|[CBasePane::AdjustLayout](#adjustlayout)|当窗格应调整其内部布局时由框架调用。|
+|[CBasePane::CalcFixedLayout](#calcfixedlayout)|计算控件条的水平大小。|
+|[CBasePane::CanAcceptPane](#canacceptpane)|确定是否可将另一个窗格停靠到窗格。|
 |[CBasePane::CanAutoHide](#canautohide)|确定在窗格是否支持自动隐藏模式。|
 |[CBasePane::CanBeAttached](#canbeattached)|确定是否可以将窗格停靠到另一个窗格。|
-|[Cbasepane:: Canbeclosed](#canbeclosed)|确定是否可以关闭窗格。|
+|[CBasePane::CanBeClosed](#canbeclosed)|确定是否可以关闭窗格。|
 |[CBasePane::CanBeDocked](#canbedocked)|确定是否可以将窗格停靠到另一个窗格。|
 |[CBasePane::CanBeResized](#canberesized)|确定是否可以调整窗格的大小。|
 |[CBasePane::CanBeTabbedDocument](#canbetabbeddocument)|指定是否可以将窗格转换 MDI 选项卡式文档。|
@@ -215,11 +215,11 @@ class CBasePane : public CWnd
 |[CBasePane::CanFocus](#canfocus)|指定是否在窗格可以接收焦点。|
 |[CBasePane::CopyState](#copystate)|将复制给定窗格的状态。|
 |[CBasePane::CreateDefaultMiniframe](#createdefaultminiframe)|如果可以浮动窗格中，将创建一个微型框架窗口。|
-|[Cbasepane:: Createex](#createex)|创建窗格控件。|
-|[Cbasepane:: Dockpane](#dockpane)|将窗格停靠到另一个窗格或框架窗口。|
+|[CBasePane::CreateEx](#createex)|创建窗格控件。|
+|[CBasePane::DockPane](#dockpane)|将窗格停靠到另一个窗格或框架窗口。|
 |[CBasePane::DockPaneUsingRTTI](#dockpaneusingrtti)|通过使用运行时类型信息停靠窗格。|
 |[CBasePane::DockToFrameWindow](#docktoframewindow)|将可停靠窗格停靠到的帧。|
-|[Cbasepane:: Doesallowdyninsertbefore](#doesallowdyninsertbefore)|确定另一个窗格是否可以动态地插入此窗格与父框架之间。|
+|[CBasePane::DoesAllowDynInsertBefore](#doesallowdyninsertbefore)|确定另一个窗格是否可以动态地插入此窗格与父框架之间。|
 |[CBasePane::EnableDocking](#enabledocking)|启用窗格的停靠到主框架。|
 |[CBasePane::EnableGripper](#enablegripper)|启用或禁用控制手柄。 如果启用了控制手柄，用户可以拖动它以重新定位窗格。|
 |`CBasePane::FillWindowRect`|内部使用。|
@@ -238,10 +238,10 @@ class CBasePane : public CWnd
 |[CBasePane::get_accSelection](#get_accselection)|由框架调用以检索该对象的选定子级。 (重写[CWnd::get_accSelection](../../mfc/reference/cwnd-class.md#get_accselection)。)|
 |`CBasePane::get_accState`|由框架调用以检索指定对象的当前状态。 (重写[CWnd::get_accState](../../mfc/reference/cwnd-class.md#get_accstate)。)|
 |`CBasePane::get_accValue`|由框架调用以检索指定对象的值。 (重写[CWnd::get_accValue](../../mfc/reference/cwnd-class.md#get_accvalue)。)|
-|[Cbasepane:: Getcaptionheight](#getcaptionheight)|返回标题高度。|
+|[CBasePane::GetCaptionHeight](#getcaptionheight)|返回标题高度。|
 |[CBasePane::GetControlBarStyle](#getcontrolbarstyle)|返回控件栏样式。|
 |[CBasePane::GetCurrentAlignment](#getcurrentalignment)|返回当前窗格对齐方式。|
-|[Cbasepane:: Getdockingmode](#getdockingmode)|返回当前窗格停靠模式。|
+|[CBasePane::GetDockingMode](#getdockingmode)|返回当前窗格停靠模式。|
 |[CBasePane::GetDockSiteFrameWnd](#getdocksiteframewnd)|返回一个指向是在窗格的停靠站点窗口。|
 |[CBasePane::GetEnabledAlignment](#getenabledalignment)|返回应用于在窗格的 CBRS_ALIGN_ 样式。|
 |[CBasePane::GetMFCStyle](#getmfcstyle)|返回特定于 MFC 的窗格样式。|
@@ -266,20 +266,20 @@ class CBasePane : public CWnd
 |[CBasePane::IsMDITabbed](#ismditabbed)|确定在窗格是否已添加到作为选项卡式文档的 MDI 子窗口。|
 |[CBasePane::IsPaneVisible](#ispanevisible)|指定是否将 WS_VISIBLE 标志设置为窗格。|
 |[CBasePane::IsPointNearDockSite](#ispointneardocksite)|确定指定的点是否在停靠站点附近。|
-|[Cbasepane:: Isresizable](#isresizable)|确定是否可以调整窗格的大小。|
+|[CBasePane::IsResizable](#isresizable)|确定是否可以调整窗格的大小。|
 |[CBasePane::IsRestoredFromRegistry](#isrestoredfromregistry)|确定是否从注册表还原窗格。|
 |[CBasePane::IsTabbed](#istabbed)|确定是否已插入窗格的选项卡式窗口选项卡控件中。|
 |`CBasePane::IsTooltipTopmost`|内部使用。|
 |[CBasePane::IsVisible](#isvisible)|确定窗格是否可见。|
 |[CBasePane::LoadState](#loadstate)|从注册表加载窗格状态。|
-|[Cbasepane:: Movewindow](#movewindow)|将窗格移动。|
+|[CBasePane::MoveWindow](#movewindow)|将窗格移动。|
 |[CBasePane::OnAfterChangeParent](#onafterchangeparent)|当窗格的父级发生更改时由框架调用。|
 |[CBasePane::OnBeforeChangeParent](#onbeforechangeparent)|窗格中更改其父窗口之前由框架调用。|
 |[CBasePane::OnDrawCaption](#ondrawcaption)|绘制标题时，框架将调用此方法。|
 |[CBasePane::OnMovePaneDivider](#onmovepanedivider)|当前未使用此方法。|
 |[CBasePane::OnPaneContextMenu](#onpanecontextmenu)|生成具有一组窗格菜单时由框架调用。|
 |[CBasePane::OnRemoveFromMiniFrame](#onremovefromminiframe)|从其父微型框架窗口删除窗格时，由框架调用。|
-|[Cbasepane:: Onsetaccdata](#onsetaccdata)|`CBasePane` 不使用此方法。|
+|[CBasePane::OnSetAccData](#onsetaccdata)|`CBasePane` 不使用此方法。|
 |`CBasePane::OnUpdateCmdUI`|内部使用。|
 |[CBasePane::PaneFromPoint](#panefrompoint)|返回包含给定的点的窗格。|
 |`CBasePane::PreTranslateMessage`|在将窗口消息发送到 [TranslateMessage](../../mfc/reference/cwinapp-class.md) 和 [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) Windows 函数之前，由 [CWinApp](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) 类用于对此消息进行转换。 （重写 [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)。）|
@@ -297,7 +297,7 @@ class CBasePane : public CWnd
 |`CBasePane::SetRestoredFromRegistry`|内部使用。|
 |[CBasePane::SetWindowPos](#setwindowpos)|更改大小、 位置和窗格的 Z 顺序。|
 |[CBasePane::ShowPane](#showpane)|显示或隐藏窗格。|
-|[Cbasepane:: Stretchpane](#stretchpane)|垂直或水平拉伸窗格。|
+|[CBasePane::StretchPane](#stretchpane)|垂直或水平拉伸窗格。|
 |[CBasePane::UndockPane](#undockpane)|从停靠站点、 默认滑块或当前停靠位置的微型框架窗口删除窗格。|
 
 ### <a name="protected-methods"></a>受保护的方法
@@ -324,7 +324,7 @@ class CBasePane : public CWnd
 
   这些是您可以将与按位或运算结合的标志。
 
-`CBasePane` 实现以下虚拟布尔方法，以反映这些标志： [cbasepane:: Canbeclosed](#canbeclosed)， [CBasePane::CanAutoHide](#canautohide)， [CBasePane::CanFloat](#canfloat)。 可以在自定义其行为的派生类中替代它们。
+`CBasePane` 实现了以下虚拟布尔方法以反映这些标志：[Cbasepane:: Canbeclosed](#canbeclosed)， [CBasePane::CanAutoHide](#canautohide)， [CBasePane::CanFloat](#canfloat)。 可以在自定义其行为的派生类中替代它们。
 
 - 可以通过重写自定义的停靠行为[cbasepane:: Canacceptpane](#canacceptpane)。 具有你以防止另一个窗格停靠到该从此方法返回 FALSE。
 
@@ -449,7 +449,7 @@ virtual CSize CalcFixedLayout(
 
 备注部分中，请参阅[CControlBar::CalcFixedLayout](../../mfc/reference/ccontrolbar-class.md#calcfixedlayout)
 
-##  <a name="canacceptpane"></a>  Cbasepane:: Canacceptpane
+##  <a name="canacceptpane"></a>  CBasePane::CanAcceptPane
 
 确定是否可将另一个窗格停靠到窗格。
 
@@ -730,7 +730,7 @@ virtual BOOL CreateEx(
 |-----------|-----------------|
 |AFX_CBRS_FLOAT|在窗格可以浮动。|
 |AFX_CBRS_AUTOHIDE|在窗格支持自动隐藏模式|
-|AFX_CBRS_RESIZE|可以调整窗格的大小。 **重要说明：** 未实现此样式。|
+|AFX_CBRS_RESIZE|可以调整窗格的大小。 **重要提示：** 未实现此样式。|
 |AFX_CBRS_CLOSE|可以关闭窗格。|
 |AFX_CBRS_AUTO_ROLLUP|将浮动时，可以汇总窗格。|
 |AFX_CBRS_REGULAR_TABS|当其中一个窗格将停靠到另一个具有该样式的窗格中时，将创建一个正则选项卡式的窗口。 (有关详细信息，请参阅[CTabbedPane 类](../../mfc/reference/ctabbedpane-class.md)。)|
@@ -738,7 +738,7 @@ virtual BOOL CreateEx(
 
 若要使用的新样式，他们中指定*dwControlBarStyle*。
 
-##  <a name="dockpane"></a>  Cbasepane:: Dockpane
+##  <a name="dockpane"></a>  CBasePane::DockPane
 
 将窗格停靠到另一个窗格或框架窗口。
 
@@ -825,7 +825,7 @@ virtual BOOL DockToFrameWindow(
 
 此方法失败如果窗格分隔符 ( [CPaneDivider 类](../../mfc/reference/cpanedivider-class.md)) 无法创建。 否则，它始终返回 TRUE。
 
-##  <a name="doesallowdyninsertbefore"></a>  Cbasepane:: Doesallowdyninsertbefore
+##  <a name="doesallowdyninsertbefore"></a>  CBasePane::DoesAllowDynInsertBefore
 
 确定另一个窗格是否可以动态地插入此窗格与父框架之间。
 
@@ -983,7 +983,7 @@ virtual HRESULT get_accSelection(VARIANT* pvarChildren);
 
 此函数是 MFC 中的活动辅助功能支持的一部分。 如果有非有窗口的用户界面元素以外无窗口 ActiveX 控件，重写此函数在派生类中。
 
-##  <a name="getcaptionheight"></a>  Cbasepane:: Getcaptionheight
+##  <a name="getcaptionheight"></a>  CBasePane::GetCaptionHeight
 
 返回标题高度。
 
@@ -1030,14 +1030,14 @@ virtual DWORD GetCurrentAlignment() const;
 
 控件条的当前对齐方式。 下表显示了可能的值：
 
-|“值”|对齐方式|
+|值|对齐方式|
 |-----------|---------------|
 |CBRS_ALIGN_LEFT|左对齐方式。|
 |CBRS_ALIGN_RIGHT|右对齐方式。|
 |CBRS_ALIGN_TOP|顶端对齐。|
 |CBRS_ALIGN_BOTTOM|靠下对齐。|
 
-##  <a name="getdockingmode"></a>  Cbasepane:: Getdockingmode
+##  <a name="getdockingmode"></a>  CBasePane::GetDockingMode
 
 返回当前窗格停靠模式。
 
@@ -1427,7 +1427,7 @@ BOOL IsPointNearDockSite(
 
 ### <a name="parameters"></a>参数
 
-*点*<br/>
+*point*<br/>
 [in]指定的点。
 
 *dwBarAlignment*<br/>
@@ -1444,7 +1444,7 @@ BOOL IsPointNearDockSite(
 
 在到停靠管理器中设置的敏感度内时，关键是附近停靠站点。 默认敏感度为 15 像素。
 
-##  <a name="isresizable"></a>  Cbasepane:: Isresizable
+##  <a name="isresizable"></a>  CBasePane::IsResizable
 
 确定是否可以调整窗格的大小。
 
@@ -1651,7 +1651,7 @@ virtual void OnPaneContextMenu(
 *pParentFrame*<br/>
 [in]指向父框架的指针。
 
-*点*<br/>
+*point*<br/>
 [in]指定的快捷菜单的位置。
 
 ### <a name="remarks"></a>备注
@@ -1679,7 +1679,7 @@ virtual void OnRemoveFromMiniFrame(CPaneFrameWnd* pMiniFrame);
 
 默认实现不执行任何操作。
 
-##  <a name="onsetaccdata"></a>  Cbasepane:: Onsetaccdata
+##  <a name="onsetaccdata"></a>  CBasePane::OnSetAccData
 
 `CBasePane` 不使用此方法。
 
@@ -1712,7 +1712,7 @@ CBasePane* PaneFromPoint(
 
 ### <a name="parameters"></a>参数
 
-*点*<br/>
+*point*<br/>
 [in]指定以屏幕坐标，以检查点。
 
 *nSensitivity*<br/>

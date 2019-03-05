@@ -1,5 +1,5 @@
 ---
-title: TN020：ID 命名和编号约定
+title: TN020:ID 命名和编号约定
 ms.date: 11/04/2016
 f1_keywords:
 - vc.id
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - resource identifiers, naming and numbering
 - resource identifiers
 ms.assetid: aecbd2cf-68b3-47f6-ae21-b1f507917245
-ms.openlocfilehash: 9e575ee99b78b8efa75096cac4559eb9aea7fd21
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: f1cd44ed448cc4c0fc60d490a613f0ad91071376
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518666"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267389"
 ---
-# <a name="tn020-id-naming-and-numbering-conventions"></a>TN020：ID 命名和编号约定
+# <a name="tn020-id-naming-and-numbering-conventions"></a>TN020:ID 命名和编号约定
 
 本说明介绍 ID 命名和编号约定，MFC 2.0 使用的资源、 命令、 字符串、 控件和子窗口。
 
@@ -76,7 +76,7 @@ MFC 库还使用"IDW_"前缀，作为一种特殊形式的控件 Id （而不是
 |------------|-------------------|-----------------|
 |IDR_|多个|1 到 0x6FFF|
 |IDD_|对话框模板|1 到 0x6FFF|
-|IDC_，IDI_，IDB_|光标、 图标、 位图|1 到 0x6FFF|
+|IDC_,IDI_,IDB_|光标、 图标、 位图|1 到 0x6FFF|
 |IDS_ IDP_|常规字符串|1 到 0x7FFF|
 |ID_|命令|0x8000 到 0xDFFF|
 |IDC_|控件|8 到 0xDFFF|
@@ -107,4 +107,3 @@ MFC 库还使用"IDW_"前缀，作为一种特殊形式的控件 Id （而不是
 
 [按编号列出的技术说明](../mfc/technical-notes-by-number.md)<br/>
 [按类别列出的技术说明](../mfc/technical-notes-by-category.md)
-

@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CTabCtrl [MFC], SetPadding
 - CTabCtrl [MFC], SetToolTips
 ms.assetid: 42e4aff6-46ae-4b2c-beaa-d1dce8d82138
-ms.openlocfilehash: ae3daff2582b9e58cc325304fac449423fb673a0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 62d42995a3d1b4a61dbd3ff38c48d9b300177798
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50621424"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259537"
 ---
 # <a name="ctabctrl-class"></a>CTabCtrl 类
 
@@ -120,7 +120,7 @@ class CTabCtrl : public CWnd
 |[CTabCtrl::GetToolTips](#gettooltips)|检索与选项卡控件关联的工具提示控件的句柄。|
 |[CTabCtrl::HighlightItem](#highlightitem)|设置选项卡项的突出显示状态。|
 |[CTabCtrl::HitTest](#hittest)|确定哪些选项卡上，如果有，为指定的屏幕位置。|
-|[Ctabctrl:: Insertitem](#insertitem)|在选项卡控件中插入一个新选项卡。|
+|[CTabCtrl::InsertItem](#insertitem)|在选项卡控件中插入一个新选项卡。|
 |[CTabCtrl::RemoveImage](#removeimage)|从选项卡控件的图像列表中移除图像。|
 |[CTabCtrl::SetCurFocus](#setcurfocus)|将焦点设置到指定的选项卡中选项卡控件。|
 |[CTabCtrl::SetCurSel](#setcursel)|在选项卡控件中选择一个选项卡。|
@@ -517,7 +517,7 @@ DWORD GetItemState(
 
 对接收的状态信息的 DWORD 值的引用。 可以是以下值之一：
 
-|“值”|描述|
+|值|描述|
 |-----------|-----------------|
 |TCIS_BUTTONPRESSED|选择该选项卡控件项。|
 |TCIS_HIGHLIGHTED|突出显示该选项卡控件项，并使用当前突出显示颜色绘制选项卡和文本。 在使用突出显示颜色，这将是 true 的内插，不是抖色的颜色。|
@@ -599,7 +599,7 @@ int HitTest(TCHITTESTINFO* pHitTestInfo) const;
 
 如果没有选项卡在指定的位置，则返回选项卡或 1 的从零开始的索引。
 
-##  <a name="insertitem"></a>  Ctabctrl:: Insertitem
+##  <a name="insertitem"></a>  CTabCtrl::InsertItem
 
 在现有选项卡控件中插入一个新选项卡。
 
@@ -858,7 +858,7 @@ BOOL SetItemState(
 *dwState*<br/>
 对包含的状态信息的 DWORD 值的引用。 可以是以下值之一：
 
-|“值”|描述|
+|值|描述|
 |-----------|-----------------|
 |TCIS_BUTTONPRESSED|选择该选项卡控件项。|
 |TCIS_HIGHLIGHTED|突出显示该选项卡控件项，并使用当前突出显示颜色绘制选项卡和文本。 在使用突出显示颜色，这将是 true 的内插，不是抖色的颜色。|

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Active technology [MFC]
 - COM [MFC], MFC support
 ms.assetid: 7646bdcb-3a06-4ed5-9386-9b00f3979dcb
-ms.openlocfilehash: a3da9e437dc9ca20aa2a02977b1c8653d68930f5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 67c7ea3e93b3158abc552c552c450c31c109be80
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50645154"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57257821"
 ---
 # <a name="mfc-com"></a>MFC COM
 
@@ -32,7 +32,7 @@ Active 技术包括客户端和服务器技术，包括以下：
 
    - [Internet 上的 ActiveX 控件](../mfc/activex-controls-on-the-internet.md)
 
-   - [概述： Internet](../mfc/mfc-internet-programming-basics.md)
+   - [概述：Internet](../mfc/mfc-internet-programming-basics.md)
 
    - [升级现有 ActiveX 控件来在 Internet 上使用](../mfc/upgrading-an-existing-activex-control.md)
 
@@ -61,4 +61,3 @@ Active 技术包括客户端和服务器技术，包括以下：
 ## <a name="see-also"></a>请参阅
 
 [概念](../mfc/mfc-concepts.md)
-

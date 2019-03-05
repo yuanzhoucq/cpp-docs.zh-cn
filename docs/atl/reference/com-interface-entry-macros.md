@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - COM interfaces, COM interface entry macros
 ms.assetid: 19dcb768-2e1f-4b8d-a618-453a01a4bd00
-ms.openlocfilehash: 8341061ba6365beb97f4413aab8bfbbfdc25e035
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: ed2b8445a0f13b82338d2904d43fd17688d05b9e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693915"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276372"
 ---
 # <a name="cominterfaceentry-macros"></a>COM_INTERFACE_ENTRY 宏
 
@@ -345,7 +345,7 @@ COM_INTERFACE_ENTRY_FUNC(iid, dw, func)
 *iid*<br/>
 [in]公开的接口的 GUID。
 
-*数据仓库*<br/>
+*dw*<br/>
 [in]一个参数传递给*func*。
 
 *func*<br/>
@@ -369,7 +369,7 @@ COM_INTERFACE_ENTRY_FUNC_BLIND(dw, func)
 
 ### <a name="parameters"></a>参数
 
-*数据仓库*<br/>
+*dw*<br/>
 [in]一个参数传递给*func*。
 
 *func*<br/>
@@ -397,4 +397,3 @@ COM_INTERFACE_ENTRY_NOINTERFACE(x)
 此宏可用于防止在特定情况下使用一个接口。 例如，您可以插入之前 COM_INTERFACE_ENTRY_AGGREGATE_BLIND 以防止该接口的查询转发到聚合的内部未知在 COM 映射此宏。
 
 将通过追加构造 IID 的接口*x*到`IID_`。 例如，如果*x*是`IPersistStorage`，将 IID `IID_IPersistStorage`。
-

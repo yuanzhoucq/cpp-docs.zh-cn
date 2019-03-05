@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CSingleLock [MFC], Lock
 - CSingleLock [MFC], Unlock
 ms.assetid: 7dae7288-8066-4a3e-85e0-78d28bfc6bc8
-ms.openlocfilehash: 2d65af79971aab88884efe1f92d1090194b737d6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 31bd43f7f7a6fbccd4680db013ac5c654123061e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50459561"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259888"
 ---
 # <a name="csinglelock-class"></a>CSingleLock 类
 
@@ -55,7 +55,7 @@ class CSingleLock
 
 若要使用`CSingleLock`对象，请在受控的资源类中调用其构造函数内的成员函数。 然后调用[IsLocked](#islocked)成员函数以确定资源是否可用。 如果是，继续使用成员函数的其余部分。 如果资源不可用，等待指定的要释放的资源的时间内，或返回失败。 使用资源完成后，调用[解锁](#unlock)函数如果`CSingleLock`对象将再次，使用或允许`CSingleLock`要销毁对象。
 
-`CSingleLock` 对象需要从派生的对象存在[CSyncObject](../../mfc/reference/csyncobject-class.md)。 这通常是类的受控的资源的数据成员。 有关如何使用的详细信息`CSingleLock`对象，请参阅文章[多线程处理： 如何使用同步类](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)。
+`CSingleLock` 对象需要从派生的对象存在[CSyncObject](../../mfc/reference/csyncobject-class.md)。 这通常是类的受控的资源的数据成员。 有关如何使用的详细信息`CSingleLock`对象，请参阅文章[多线程处理：如何使用同步类](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 

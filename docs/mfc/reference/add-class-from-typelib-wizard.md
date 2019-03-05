@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Add Class from TypeLib Wizard [MFC]
 - COM interfaces, adding classes
 ms.assetid: 96152afd-9374-4649-a6ab-b0fa2a5592a3
-ms.openlocfilehash: c0423ac06aa46b65c1fb0ffb3935d4bb54821ee9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a2c291e1c9e78d288bdb2d15f224520d764dfa1b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654332"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273876"
 ---
 # <a name="add-class-from-typelib-wizard"></a>从类型库添加类向导
 
@@ -34,7 +34,7 @@ ms.locfileid: "50654332"
 
    列出了当前在系统中注册的类型库。 从以显示它的接口在此列表中选择类型库**接口**列表。
 
-   请参阅"在分布式 COM:: 类型库和语言集成"有关正在注册类型库的详细信息的 MSDN library 中。
+   请参阅"内部分布式 COM:类型库和语言集成"有关正在注册类型库的详细信息的 MSDN library 中。
 
 - **位置**
 
@@ -71,4 +71,3 @@ ms.locfileid: "50654332"
 
 [类型库中的 MFC 类](../../mfc/reference/adding-an-mfc-class-from-a-type-library.md)<br/>
 [自动化客户端：使用类型库](../../mfc/automation-clients-using-type-libraries.md)
-

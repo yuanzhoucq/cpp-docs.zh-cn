@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSplitterWndEx [MFC], OnDrawSplitter
 ms.assetid: 33e5eef3-05e1-4a07-a968-bf9207ce8598
-ms.openlocfilehash: fa58dbffc3e6416c18b8124f8e5edfe1ce987815
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8dedad4e99a37b13dc618859c8e6d8a83a65ea76
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50538991"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265140"
 ---
 # <a name="csplitterwndex-class"></a>CSplitterWndEx 类
 
@@ -77,7 +77,7 @@ virtual void OnDrawSplitter(
 *pDC*<br/>
 [in]指向设备上下文指针。 如果此参数为 NULL，该框架重绘活动窗口。
 
-*n 类型*<br/>
+*nType*<br/>
 [in]其中一个`CSplitterWnd::ESplitType`枚举值，该值指定要绘制的拆分器窗口元素。 有效值为 `splitBox`、`splitBar`、`splitIntersection` 和 `splitBorder`。
 
 *rect*<br/>

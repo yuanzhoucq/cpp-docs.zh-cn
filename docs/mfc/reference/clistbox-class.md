@@ -102,12 +102,12 @@ helpviewer_keywords:
 - CListBox [MFC], SetTopIndex
 - CListBox [MFC], VKeyToItem
 ms.assetid: 7ba3c699-c286-4cd9-9066-532c41ec05d1
-ms.openlocfilehash: ad9f945a91a96c40afe614240a847a028ba5b5d9
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 17ff89fde3ef893c2cfcd8beeb8482722af60358
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178611"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280311"
 ---
 # <a name="clistbox-class"></a>CListBox 类
 
@@ -139,7 +139,7 @@ class CListBox : public CWnd
 |[CListBox::DeleteString](#deletestring)|从列表框中删除一个字符串。|
 |[CListBox::Dir](#dir)|将文件名、 驱动器或同时从当前目录添加到列表框中。|
 |[CListBox::DrawItem](#drawitem)|由框架在所有者描述列表框中更改的可视方面时调用。|
-|[Clistbox:: Findstring](#findstring)|在列表框中的字符串搜索。|
+|[CListBox::FindString](#findstring)|在列表框中的字符串搜索。|
 |[CListBox::FindStringExact](#findstringexact)|查找与指定的字符串匹配的第一个列表框中字符串。|
 |[CListBox::GetAnchorIndex](#getanchorindex)|检索列表框中当前的定位点项的从零开始的索引。|
 |[CListBox::GetCaretIndex](#getcaretindex)|确定具有多选列表框中的聚焦框的项的索引。|
@@ -525,7 +525,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 
 [!code-cpp[NVC_MFC_CListBox#9](../../mfc/codesnippet/cpp/clistbox-class_9.cpp)]
 
-##  <a name="findstring"></a>  Clistbox:: Findstring
+##  <a name="findstring"></a>  CListBox::FindString
 
 查找包含指定的前缀，而无需更改的列表框中选择的列表框中的第一个字符串。
 
@@ -1242,7 +1242,7 @@ int SetCurSel(int nSelect);
 
 ### <a name="parameters"></a>参数
 
-*请选择*<br/>
+*nSelect*<br/>
 指定要选择的字符串的从零开始的索引。 如果*请选择*为-1，列表框设置为不具有任何选择。
 
 ### <a name="return-value"></a>返回值

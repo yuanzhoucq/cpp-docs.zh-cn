@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - ATL Active Server Page Component Wizard, options
 ms.assetid: 54f34e26-53c7-4456-9675-cb86e356bde0
-ms.openlocfilehash: d8d8eaa6190bd04d626b9a23c9d27d1f9daeb003
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7e9740a67f265484c349a4df644be882dba30c13
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50595632"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280233"
 ---
 # <a name="options-atl-active-server-page-component-wizard"></a>选项，ATL Active Server Page 组件向导
 
@@ -27,8 +27,8 @@ ATL 项目和 ATL COM 类的详细信息，请参阅[ATL COM 桌面组件](../..
 
    |选项|描述|
    |------------|-----------------|
-   |**单精度**|指定该对象使用单线程模型。 在单线程处理模型中，对象始终在主 COM 线程中运行。 请参阅[单线程单元](/windows/desktop/com/single-threaded-apartments)并[InprocServer32](/windows/desktop/com/inprocserver32)有关详细信息。|
-   |**单元**|指定该对象使用单元线程处理。 等效于单线程单元。 单线程单元的组件的每个对象分配一个单元用于其线程的生存期内的对象;但是，多个线程可以用于多个对象。 每个单元绑定到特定线程，并具有 Windows 消息泵 （默认值）。<br /><br /> 请参阅[单线程单元](/windows/desktop/com/single-threaded-apartments)有关详细信息。|
+   |**Single**|指定该对象使用单线程模型。 在单线程处理模型中，对象始终在主 COM 线程中运行。 请参阅[单线程单元](/windows/desktop/com/single-threaded-apartments)并[InprocServer32](/windows/desktop/com/inprocserver32)有关详细信息。|
+   |**Apartment**|指定该对象使用单元线程处理。 等效于单线程单元。 单线程单元的组件的每个对象分配一个单元用于其线程的生存期内的对象;但是，多个线程可以用于多个对象。 每个单元绑定到特定线程，并具有 Windows 消息泵 （默认值）。<br /><br /> 请参阅[单线程单元](/windows/desktop/com/single-threaded-apartments)有关详细信息。|
    |**两者**|指定该对象可以使用单元或自由线程处理，具体取决于创建它的线程的类型。|
    |**免费**|指定该对象使用自由线程处理。 自由线程处理相当于多线程单元模型。 请参阅[多线程单元](/windows/desktop/com/multithreaded-apartments)有关详细信息。|
    |**Neutral**|指定对象后面的多线程单元的准则，但它可以在任何类型的线程上执行。|
@@ -57,4 +57,3 @@ ATL 项目和 ATL COM 类的详细信息，请参阅[ATL COM 桌面组件](../..
 
 [ATL Active Server Page 组件向导](../../atl/reference/atl-active-server-page-component-wizard.md)<br/>
 [ATL Active Server Page 组件](../../atl/reference/adding-an-atl-active-server-page-component.md)
-

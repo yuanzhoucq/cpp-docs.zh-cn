@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - CThreadPool class
 ms.assetid: 06683718-01b9-413c-9481-2dc1734ec70f
-ms.openlocfilehash: b1cf1dfc623edbb2b6e71aa6476a2fe0cccbc20b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7d363de0d787ecc5015093005b39a379acd82e71
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677183"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262696"
 ---
 # <a name="cthreadpool-class"></a>CThreadPool 类
 
@@ -40,7 +40,7 @@ class CThreadPool : public IThreadPoolConfig
 
 #### <a name="parameters"></a>参数
 
-*辅助角色*<br/>
+*Worker*<br/>
 类符合[辅助原型](../../atl/reference/worker-archetype.md)提供用来处理的工作项排入队列在线程池的代码。
 
 *ThreadTraits*<br/>
@@ -53,7 +53,7 @@ class CThreadPool : public IThreadPoolConfig
 |名称|描述|
 |----------|-----------------|
 |[CThreadPool::CThreadPool](#cthreadpool)|线程池的构造函数。|
-|[CThreadPool:: ~ CThreadPool](#dtor)|线程池的析构函数。|
+|[CThreadPool::~CThreadPool](#dtor)|线程池的析构函数。|
 
 ### <a name="public-methods"></a>公共方法
 
@@ -254,7 +254,7 @@ BOOL QueueRequest(Worker::RequestType request) throw();
 
 ### <a name="parameters"></a>参数
 
-*请求*<br/>
+*request*<br/>
 要排入队列的请求。
 
 ### <a name="return-value"></a>返回值

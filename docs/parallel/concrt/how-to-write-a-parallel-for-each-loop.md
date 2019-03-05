@@ -5,12 +5,12 @@ helpviewer_keywords:
 - writing a parallel_for_each loop [Concurrency Runtime]
 - parallel_for_each function, example
 ms.assetid: fa9c0ba6-ace0-4f88-8681-c7c1f52aff20
-ms.openlocfilehash: e3b19ec180f9f4e75a2f280a0ecd159e5b932565
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 19af9be8ef6d9c38a0942e7c85caa0a8bc4e6813
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50610504"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272212"
 ---
 # <a name="how-to-write-a-parallelforeach-loop"></a>如何：编写 parallel_for_each 循环
 
@@ -42,10 +42,9 @@ took 1653 ms
 
 ## <a name="robust-programming"></a>可靠编程
 
-该示例将传递给 lambda 表达式`parallel_for_each`算法使用`InterlockedIncrement`函数，以使并行迭代的循环，以同时递增计数器。 如果使用函数如`InterlockedIncrement`来同步对共享资源的访问，可以提供性能瓶颈在代码中。 您可以使用免锁定同步机制，例如，则[concurrency:: combinable](../../parallel/concrt/reference/combinable-class.md)类中，以消除对共享资源同时访问。 有关使用示例`combinable`类以这种方式，请参阅[如何： 使用 combinable 提高性能](../../parallel/concrt/how-to-use-combinable-to-improve-performance.md)。
+该示例将传递给 lambda 表达式`parallel_for_each`算法使用`InterlockedIncrement`函数，以使并行迭代的循环，以同时递增计数器。 如果使用函数如`InterlockedIncrement`来同步对共享资源的访问，可以提供性能瓶颈在代码中。 您可以使用免锁定同步机制，例如，则[concurrency:: combinable](../../parallel/concrt/reference/combinable-class.md)类中，以消除对共享资源同时访问。 有关使用示例`combinable`类以这种方式，请参阅[如何：使用 combinable 提高性能](../../parallel/concrt/how-to-use-combinable-to-improve-performance.md)。
 
 ## <a name="see-also"></a>请参阅
 
 [并行算法](../../parallel/concrt/parallel-algorithms.md)<br/>
 [parallel_for_each 函数](reference/concurrency-namespace-functions.md#parallel_for_each)
-

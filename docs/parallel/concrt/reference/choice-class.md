@@ -20,16 +20,17 @@ f1_keywords:
 helpviewer_keywords:
 - choice class
 ms.assetid: 4157a539-d5c2-4161-b1ab-536ce2888397
-ms.openlocfilehash: 60b09b674bec58a7d35a9a37d9a8f4c40d8cd522
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: aa4945bb5f9ef28937487ba504e23c461992b263
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51522722"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267012"
 ---
 # <a name="choice-class"></a>choice 类
 
-`choice` 消息块是多源、单目标的块，表示与一组源进行的控制流交互。 choice 块将等待多个源中的任何一个源以生成消息，并将传播生成该消息的源的索引。
+
+  `choice` 消息块是多源、单目标的块，表示与一组源进行的控制流交互。 choice 块将等待多个源中的任何一个源以生成消息，并将传播生成该消息的源的索引。
 
 ## <a name="syntax"></a>语法
 
@@ -75,7 +76,7 @@ class choice: public ISource<size_t>;
 |[reserve](#reserve)|保留以前由此一条消息`choice`消息块。|
 |[unlink_target](#unlink_target)|取消链接此目标块`choice`消息块。|
 |[unlink_targets](#unlink_targets)|取消链接所有目标从此`choice`消息块。 (重写[isource:: Unlink_targets](isource-class.md#unlink_targets)。)|
-|[value](#value)|获取选定的索引的消息`choice`消息块。|
+|[值](#value)|获取选定的索引的消息`choice`消息块。|
 
 ## <a name="remarks"></a>备注
 
@@ -174,7 +175,7 @@ choice 的源的 `tuple` 。
 
 在锁定状态下不执行移动构造，这意味着应由用户确保在移动期间没有轻量任务处于飞行状态。 否则可能会发生大量争用，从而导致异常或不一致的状态。
 
-##  <a name="dtor"></a> ~ 的选择
+##  <a name="dtor"></a> ~choice
 
 销毁`choice`消息块。
 
@@ -220,7 +221,7 @@ bool has_value() const;
 
 **true**块已接收一个值，如果**false**否则为。
 
-##  <a name="index"></a> 索引
+##  <a name="index"></a> index
 
 返回到一个索引`tuple`表示所选的元素`choice`消息块。
 

@@ -162,12 +162,12 @@ helpviewer_keywords:
 - CTreeCtrl [MFC], SortChildren
 - CTreeCtrl [MFC], SortChildrenCB
 ms.assetid: 96e20031-6161-4143-8c12-8d1816c66d90
-ms.openlocfilehash: cc98a2e24fbb3eaff94e4c941986080d0bdbd7ef
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9bc31cc9cff12146e6f5fe227e0e191d1c555063
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477943"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271393"
 ---
 # <a name="ctreectrl-class"></a>CTreeCtrl Class
 
