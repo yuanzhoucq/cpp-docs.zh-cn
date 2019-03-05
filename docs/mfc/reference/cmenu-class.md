@@ -84,12 +84,12 @@ helpviewer_keywords:
 - CMenu [MFC], TrackPopupMenuEx
 - CMenu [MFC], m_hMenu
 ms.assetid: 40cacfdc-d45c-4ec7-bf28-991c72812499
-ms.openlocfilehash: 2834de457ce9e2a71537e706f0fdf84463b16a8d
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: bdc5f2ebf20949f63b3892ee8e8c6eedf05e2838
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178912"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293857"
 ---
 # <a name="cmenu-class"></a>CMenu 类
 
@@ -157,7 +157,7 @@ class CMenu : public CObject
 |----------|-----------------|
 |[CMenu::operator HMENU](#operator_hmenu)|检索菜单对象的句柄。|
 |[CMenu::operator ！ =](#operator_neq)|确定两个菜单对象是否不相等。|
-|[CMenu::operator = =](#operator_eq_eq)|确定两个菜单对象是否相等。|
+|[CMenu::operator ==](#operator_eq_eq)|确定两个菜单对象是否相等。|
 
 ### <a name="public-data-members"></a>公共数据成员
 
@@ -309,7 +309,7 @@ UINT CheckMenuItem(
 *nIDCheckItem*<br/>
 指定要检查的菜单项，由*n 请查看*。
 
-*n 请查看*<br/>
+*nCheck*<br/>
 指定如何检查菜单项以及如何确定在菜单中的项的位置。 *N 请查看*参数可以是 MF_CHECKED 或 MF_UNCHECKED 与 MF_BYPOSITION 或 MF_BYCOMMAND 标志的组合。 可以通过使用按位 OR 运算符组合这些标志。 它们具有以下含义：
 
 - MF_BYCOMMAND 指定参数提供了现有的菜单项的命令 ID。 这是默认设置。
@@ -459,7 +459,7 @@ BOOL DeleteMenu(
 
 ### <a name="parameters"></a>参数
 
-*位置*<br/>
+*nPosition*<br/>
 指定的菜单项，是要删除由*nFlags*。
 
 *nFlags*<br/>
@@ -929,7 +929,7 @@ BOOL InsertMenu(
 
 ### <a name="parameters"></a>参数
 
-*位置*<br/>
+*nPosition*<br/>
 指定要在其前面的新菜单项是要插入的菜单项。 *NFlags*参数可用于解释*位置*以下方面：
 
 |nFlags|位置的解释|
@@ -1118,7 +1118,7 @@ BOOL ModifyMenu(
 
 ### <a name="parameters"></a>参数
 
-*位置*<br/>
+*nPosition*<br/>
 指定要更改的菜单项。 *NFlags*参数可用于解释*位置*以下方面：
 
 |nFlags|位置的解释|
@@ -1186,7 +1186,7 @@ BOOL operator!=(const CMenu& menu) const;
 
 ### <a name="parameters"></a>参数
 
-*菜单*<br/>
+*menu*<br/>
 一个`CMenu`比较的对象。
 
 ### <a name="remarks"></a>备注
@@ -1203,7 +1203,7 @@ BOOL operator==(const CMenu& menu) const;
 
 ### <a name="parameters"></a>参数
 
-*菜单*<br/>
+*menu*<br/>
 一个`CMenu`比较的对象。
 
 ### <a name="remarks"></a>备注
@@ -1222,7 +1222,7 @@ BOOL RemoveMenu(
 
 ### <a name="parameters"></a>参数
 
-*位置*<br/>
+*nPosition*<br/>
 指定要移除的菜单项。 *NFlags*参数可用于解释*位置*以下方面：
 
 |nFlags|位置的解释|
@@ -1337,7 +1337,7 @@ BOOL SetMenuItemBitmaps(
 
 ### <a name="parameters"></a>参数
 
-*位置*<br/>
+*nPosition*<br/>
 指定要更改的菜单项。 *NFlags*参数可用于解释*位置*以下方面：
 
 |nFlags|位置的解释|

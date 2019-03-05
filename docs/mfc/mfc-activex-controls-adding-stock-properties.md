@@ -9,12 +9,12 @@ helpviewer_keywords:
 - foreground colors, ActiveX controls
 - foreground colors [MFC]
 ms.assetid: 8b98c8c5-5b69-4366-87bf-0e61e6668ecb
-ms.openlocfilehash: b27979b5492ed03b93aa0d8990c9c0b699242c86
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 940f61c9ce6ccb57843333582455e61c1f7ac73b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607826"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289684"
 ---
 # <a name="mfc-activex-controls-adding-stock-properties"></a>MFC ActiveX 控件：添加常用属性
 
@@ -75,15 +75,15 @@ ms.locfileid: "50607826"
 
 |属性|调度映射条目|如何访问值|
 |--------------|------------------------|-------------------------|
-|`Appearance`|DISP_STOCKPROP_APPEARANCE （)|值的可访问性`m_sAppearance`。|
-|`BackColor`|DISP_STOCKPROP_BACKCOLOR （)|值通过调用可访问`GetBackColor`。|
-|`BorderStyle`|DISP_STOCKPROP_BORDERSTYLE （)|值的可访问性`m_sBorderStyle`。|
-|`Caption`|DISP_STOCKPROP_CAPTION （)|值通过调用可访问`InternalGetText`。|
-|`Enabled`|DISP_STOCKPROP_ENABLED （)|值的可访问性`m_bEnabled`。|
-|`Font`|DISP_STOCKPROP_FONT （)|请参阅文章[MFC ActiveX 控件： 使用字体](../mfc/mfc-activex-controls-using-fonts.md)的使用情况。|
-|`ForeColor`|DISP_STOCKPROP_FORECOLOR （)|值通过调用可访问`GetForeColor`。|
+|`Appearance`|DISP_STOCKPROP_APPEARANCE( )|值的可访问性`m_sAppearance`。|
+|`BackColor`|DISP_STOCKPROP_BACKCOLOR( )|值通过调用可访问`GetBackColor`。|
+|`BorderStyle`|DISP_STOCKPROP_BORDERSTYLE( )|值的可访问性`m_sBorderStyle`。|
+|`Caption`|DISP_STOCKPROP_CAPTION( )|值通过调用可访问`InternalGetText`。|
+|`Enabled`|DISP_STOCKPROP_ENABLED( )|值的可访问性`m_bEnabled`。|
+|`Font`|DISP_STOCKPROP_FONT( )|请参阅文章[MFC ActiveX 控件：使用字体](../mfc/mfc-activex-controls-using-fonts.md)的使用情况。|
+|`ForeColor`|DISP_STOCKPROP_FORECOLOR( )|值通过调用可访问`GetForeColor`。|
 |`hWnd`|DISP_STOCKPROP_HWND （)|值的可访问性`m_hWnd`。|
-|`Text`|DISP_STOCKPROP_TEXT （)|值通过调用可访问`InternalGetText`。 此属性等同于`Caption`，属性名称除外。|
+|`Text`|DISP_STOCKPROP_TEXT( )|值通过调用可访问`InternalGetText`。 此属性等同于`Caption`，属性名称除外。|
 |`ReadyState`|DISP_STOCKPROP_READYSTATE()|值的可访问性`m_lReadyState`或 `GetReadyState`|
 
 ##  <a name="_core_stock_properties_and_notification"></a> 常用属性和通知

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Internet applications [MFC], client applications
 - MFC, Internet applications
 ms.assetid: a2c4a40c-a94e-4b3e-9dbf-f8a8dc8e5428
-ms.openlocfilehash: 041fa90b030edd9b5324c183b0153a8a062735da
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6e32210217321e4eb59d7d3e666a4f5494eb3642
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50494960"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57287695"
 ---
 # <a name="writing-an-internet-client-application-using-mfc-wininet-classes"></a>使用 MFC WinInet 类编写 Internet 客户端应用程序
 
@@ -28,7 +28,7 @@ ms.locfileid: "50494960"
 
 - 如果 Internet 会话读取或写入数据，则必须创建的实例`CInternetFile`(或其子类[CHttpFile](../mfc/reference/chttpfile-class.md)或[CGopherFile](../mfc/reference/cgopherfile-class.md))。 读取数据的最简单方法是调用[cinternetsession:: Openurl](../mfc/reference/cinternetsession-class.md#openurl)。 此函数将分析您提供的统一资源定位器 (URL)、打开与 URL 指定的服务器的连接并返回一个只读的 `CInternetFile` 对象。 `CInternetSession::OpenURL` 并不会特定于一种协议类型 - 同一调用适用于所有 FTP、HTTP 或 gopher URL。 `CInternetSession::OpenURL` 甚至会处理本地文件（返回 `CStdioFile` 而非 `CInternetFile`）。
 
-- 如果 Internet 会话不读取或写入数据，而是执行其他任务（如删除 FTP 目录中的文件），则你可能不需要创建 `CInternetFile` 的实例。
+- 如果 Internet 会话不读取或写入数据，而是执行其他任务（如删除 FTP 目录中的文件），则您可能不需要创建 `CInternetFile` 的实例。
 
 可通过两种方法创建 `CInternetFile` 对象：
 

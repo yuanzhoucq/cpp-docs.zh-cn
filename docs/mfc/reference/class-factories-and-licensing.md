@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - class factories [MFC], and licensing
 ms.assetid: 53c4856a-4062-46db-9f69-dd4339f746b3
-ms.openlocfilehash: bfe4957312a3e1f5c08768af6fe96eb0c2e8b1f0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3788d904bf903481d57dd73a28bf6eafadd5f019
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50514388"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289568"
 ---
 # <a name="class-factories-and-licensing"></a>类工厂和许可
 
 为了创建 OLE 控件的实例，容器应用程序调用了控件的类工厂的成员函数。 由于控件是实际 OLE 对象，类工厂将负责创建控件的实例。 每个 OLE 控件类必须有一个类工厂。
 
-OLE 控件的另一个重要功能是强制使用许可证。 ControlWizard 可让您在控件项目的创建过程中包含授权。 有关控件授权的详细信息，请参阅文章[ActiveX 控件： 许可 ActiveX 控件](../../mfc/mfc-activex-controls-licensing-an-activex-control.md)。
+OLE 控件的另一个重要功能是强制使用许可证。 ControlWizard 可让您在控件项目的创建过程中包含授权。 有关控件授权的详细信息，请参阅文章[ActiveX 控件：授权 ActiveX 控件](../../mfc/mfc-activex-controls-licensing-an-activex-control.md)。
 
 下表列出了用于声明和实现控件的类工厂以及为控件授权的几个宏和函数。
 

@@ -1,17 +1,17 @@
 ---
-title: 演练：更新 MFC 随意画图应用程序（第 2 部分）
+title: 演练：正在更新 MFC 随意画图应用程序 （第 2 部分）
 ms.date: 09/20/2018
 helpviewer_keywords:
 - walkthroughs [MFC]
 ms.assetid: 602df5c2-17d4-4cd9-8cf6-dff652c4cae5
-ms.openlocfilehash: 6a52486658307f001001e91772dad1167730def2
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: c4c4ecce92bce3fbd2cb37f69b9aa02a9af4d7c3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519264"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291426"
 ---
-# <a name="walkthrough-updating-the-mfc-scribble-application-part-2"></a>演练：更新 MFC 随意画图应用程序（第 2 部分）
+# <a name="walkthrough-updating-the-mfc-scribble-application-part-2"></a>演练：正在更新 MFC 随意画图应用程序 （第 2 部分）
 
 [第 1 部分](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md)本演练介绍了如何将 Office Fluent 功能区添加到经典的自由曲线应用程序。 此部分演示如何添加功能区面板和控件，用户可以使用而不是菜单和命令。
 
@@ -338,4 +338,4 @@ ms.locfileid: "51519264"
 ## <a name="see-also"></a>请参阅
 
 [演练](../mfc/walkthroughs-mfc.md)<br/>
-[演练：更新 MFC 随意画图应用程序（第 1 部分）](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md)
+[演练：正在更新 MFC 随意画图应用程序 （第 1 部分）](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md)

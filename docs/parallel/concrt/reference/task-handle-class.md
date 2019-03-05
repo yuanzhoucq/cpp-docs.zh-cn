@@ -8,16 +8,17 @@ f1_keywords:
 helpviewer_keywords:
 - task_handle class
 ms.assetid: 74a34b15-708b-4231-a509-947874292b13
-ms.openlocfilehash: 060be8614fc3a0a93d446c747b65de82b863ab3c
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 4193c2d1e08c1b5a43dc728edd24efd19be87268
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518874"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298082"
 ---
 # <a name="taskhandle-class"></a>task_handle 类
 
-`task_handle` 类表示单个并行工作项。 它封装执行一项工作所需的指令和数据。
+
+  `task_handle` 类表示单个并行工作项。 它封装执行一项工作所需的指令和数据。
 
 ## <a name="syntax"></a>语法
 
@@ -68,7 +69,7 @@ class task_handle : public ::Concurrency::details::_UnrealizedChore;
 
 **命名空间：** 并发
 
-##  <a name="task_handle__operator_call"></a> operator （)
+##  <a name="task_handle__operator_call"></a> operator()
 
 运行时将调用来执行任务句柄的工作函数调用运算符。
 
@@ -93,7 +94,7 @@ task_handle(const _Function& _Func);
 
 运行时创建一份工作函数传递给构造函数。 因此，在函数中发生的任何状态更改对象传递给`task_handle`对象不会显示在该函数对象的副本。
 
-##  <a name="dtor"></a> ~ task_handle
+##  <a name="dtor"></a> ~task_handle
 
 销毁`task_handle`对象。
 

@@ -20,16 +20,17 @@ f1_keywords:
 helpviewer_keywords:
 - overwrite_buffer class
 ms.assetid: 5cc428fe-3697-419c-9fb2-78f6181c9293
-ms.openlocfilehash: 680c07015538a2eacc9480d3cd22da9a36071e32
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: adac6e220a60a49a2b9bfa9463f16f8956b08d2e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50455989"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299304"
 ---
 # <a name="overwritebuffer-class"></a>overwrite_buffer 类
 
-`overwrite_buffer` 消息块是多目标、多源、有序的 `propagator_block`，一次能够存储一条消息。 新消息覆盖之前保存的消息。
+
+  `overwrite_buffer` 消息块是多目标、多源、有序的 `propagator_block`，一次能够存储一条消息。 新消息覆盖之前保存的消息。
 
 ## <a name="syntax"></a>语法
 
@@ -57,7 +58,7 @@ class overwrite_buffer : public propagator_block<multi_link_registry<ITarget<T>>
 |名称|描述|
 |----------|-----------------|
 |[has_value](#has_value)|检查是否这`overwrite_buffer`消息块尚未具有值。|
-|[value](#value)|获取对存储在消息的当前负载`overwrite_buffer`消息块。|
+|[值](#value)|获取对存储在消息的当前负载`overwrite_buffer`消息块。|
 
 ### <a name="protected-methods"></a>受保护的方法
 
@@ -165,7 +166,7 @@ virtual void link_target_notification(_Inout_ ITarget<T>* _PTarget);
 *_PTarget*<br/>
 指向新链接的目标的指针。
 
-##  <a name="dtor"></a> ~ overwrite_buffer
+##  <a name="dtor"></a> ~overwrite_buffer
 
 销毁`overwrite_buffer`消息块。
 
@@ -200,7 +201,7 @@ overwrite_buffer(
 
 ### <a name="parameters"></a>参数
 
-*筛选 （_f)*<br/>
+*_Filter*<br/>
 确定是否应接受提供的消息的筛选器函数。
 
 *_PScheduler*<br/>

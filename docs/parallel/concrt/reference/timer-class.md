@@ -18,16 +18,17 @@ f1_keywords:
 helpviewer_keywords:
 - timer class
 ms.assetid: 4f4dea51-de9f-40f9-93f5-dd724c567b49
-ms.openlocfilehash: beb374efe26c25fed490b7407e087e2cc46043c8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e36441f53c9b53c9826ee92b2892142a522d7243
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50659831"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298147"
 ---
 # <a name="timer-class"></a>timer 类
 
-`timer` 消息块是单目标的 `source_block`，能够在经过指定的时间段后或在特定时间间隔向其目标发送消息。
+
+  `timer` 消息块是单目标的 `source_block`，能够在经过指定的时间段后或在特定时间间隔向其目标发送消息。
 
 ## <a name="syntax"></a>语法
 
@@ -205,7 +206,7 @@ virtual void resume_propagation();
 void start();
 ```
 
-##  <a name="stop"></a> 停止
+##  <a name="stop"></a> stop
 
 停止`timer`消息块。
 
@@ -244,7 +245,7 @@ timer(
 *_Ms*<br/>
 必须启动指定的消息传播下游的调用后经过的毫秒数。
 
-*value*<br/>
+*值*<br/>
 一个值，该值将下游传播，当计时器已过期。
 
 *_PTarget*<br/>
@@ -263,7 +264,7 @@ timer(
 
 如果未指定 `_Scheduler` 或 `_ScheduleGroup` 函数，运行时将使用默认的计划程序。
 
-##  <a name="dtor"></a> ~ 计时器
+##  <a name="dtor"></a> ~timer
 
 销毁`timer`消息块。
 

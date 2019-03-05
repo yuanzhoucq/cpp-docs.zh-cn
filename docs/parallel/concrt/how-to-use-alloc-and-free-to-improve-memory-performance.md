@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Alloc and Free, using [Concurrency Runtime]
 - Using Alloc and Free [Concurrency Runtime]
 ms.assetid: e1fab9e8-a97d-4104-bead-e95958db79f9
-ms.openlocfilehash: d91734859cd7d3499979566f427c10a0f026941b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f55bf360ac2b4c7162c1ed2b917ac6ce8c7cd11f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467810"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296119"
 ---
 # <a name="how-to-use-alloc-and-free-to-improve-memory-performance"></a>如何：使用 Alloc 和 Free 提高内存性能
 
@@ -63,4 +63,3 @@ Took 656 ms with Alloc/Free.
 [内存管理函数](../../parallel/concrt/memory-management-functions.md)<br/>
 [Alloc 函数](reference/concurrency-namespace-functions.md#alloc)<br/>
 [Free 函数](reference/concurrency-namespace-functions.md#free)
-

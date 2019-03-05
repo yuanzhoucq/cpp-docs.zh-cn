@@ -7,12 +7,12 @@ helpviewer_keywords:
 - best practices, Parallel Patterns Library
 - Parallel Patterns Library, best practices
 ms.assetid: e43e0304-4d54-4bd8-a3b3-b8673559a9d7
-ms.openlocfilehash: 153dbf461176ee62f42dbe41a1c426a8c34ae716
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fc120ecc122678b54c7dd27b95445f523bc114a6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50503274"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293610"
 ---
 # <a name="best-practices-in-the-parallel-patterns-library"></a>并行模式库中的最佳做法
 
@@ -76,13 +76,14 @@ ms.locfileid: "50503274"
 
 [!code-cpp[concrt-image-processing-filter#22](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_5.cpp)]
 
-有关使用流水线来并行执行图像处理的类似示例，请参阅[演练： 创建图像处理网络](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)。
+有关使用流水线来并行执行图像处理的类似示例，请参阅[演练：创建图像处理网络](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)。
 
 [[返回页首](#top)]
 
 ##  <a name="divide-and-conquer"></a> 使用 parallel_invoke 来求解分割和解决问题
 
-一个*分割和解决*问题是一种使用递归将任务细分为多个子任务的 fork-join 构造。 除了[concurrency:: task_group](reference/task-group-class.md)并[concurrency:: structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md)类，也可以使用[concurrency:: parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke)算法解决分割和解决问题。 `parallel_invoke` 算法具有比任务组对象更简洁的语法，并当具有固定数目的并行任务时非常有用。
+一个*分割和解决*问题是一种使用递归将任务细分为多个子任务的 fork-join 构造。 除了[concurrency:: task_group](reference/task-group-class.md)并[concurrency:: structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md)类，也可以使用[concurrency:: parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke)算法解决分割和解决问题。 
+  `parallel_invoke` 算法具有比任务组对象更简洁的语法，并当具有固定数目的并行任务时非常有用。
 
 下面的示例演示使用 `parallel_invoke` 算法来实现双调排序算法。
 
@@ -90,7 +91,7 @@ ms.locfileid: "50503274"
 
 为了降低开销，`parallel_invoke` 算法将在调用上下文时执行系列任务的最后一个。
 
-此示例的完整版本，请参阅[如何： 使用 parallel_invoke 来编写并行排序例程](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md)。 有关详细信息`parallel_invoke`算法，请参阅[并行算法](../../parallel/concrt/parallel-algorithms.md)。
+此示例的完整版本，请参阅[如何：使用 parallel_invoke 来编写并行排序例程](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md)。 有关详细信息`parallel_invoke`算法，请参阅[并行算法](../../parallel/concrt/parallel-algorithms.md)。
 
 [[返回页首](#top)]
 
@@ -102,17 +103,19 @@ PPL 提供了两种方法来取消任务组或并行算法所执行的并行工�
 
 [!code-cpp[concrt-parallel-array-search#2](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_7.cpp)]
 
-由于并行算法使用任务组，当一个并行迭代取消父任务组时，整个任务将被取消。 此示例的完整版本，请参阅[如何： 使用取消中断并行循环](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md)。
+由于并行算法使用任务组，当一个并行迭代取消父任务组时，整个任务将被取消。 此示例的完整版本，请参阅[如何：使用取消中断并行循环](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md)。
 
 尽管异常处理是一种比取消机制效率更低的取消并行工作的方法，但在某些情况中异常处理也非常适用。 例如，下面的方法，`for_all`，以递归方式在 `tree` 结构的每个节点上执行工作函数。 在此示例中，`_children`数据成员是[std:: list](../../standard-library/list-class.md) ，其中包含`tree`对象。
 
 [!code-cpp[concrt-task-tree-search#6](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_8.cpp)]
 
-如果不要求对树的每个元素调用工作函数，则 `tree::for_all` 方法的调用方可以引发异常。 下面的介绍了 `search_for_value` 函数，它可在所提供的 `tree` 对象中搜索值。 `search_for_value` 函数使用工作函数，可在树的当前元素匹配提供的值时引发异常。 `search_for_value` 函数使用 `try-catch` 块来捕获异常，并将结果打印到控制台。
+如果不要求对树的每个元素调用工作函数，则 `tree::for_all` 方法的调用方可以引发异常。 下面的介绍了 `search_for_value` 函数，它可在所提供的 `tree` 对象中搜索值。 
+  `search_for_value` 函数使用工作函数，可在树的当前元素匹配提供的值时引发异常。 
+  `search_for_value` 函数使用 `try-catch` 块来捕获异常，并将结果打印到控制台。
 
 [!code-cpp[concrt-task-tree-search#3](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_9.cpp)]
 
-此示例的完整版本，请参阅[如何： 使用异常处理中断并行循环](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md)。
+此示例的完整版本，请参阅[如何：使用异常处理来中断并行循环](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md)。
 
 取消和 PPL 提供的异常处理机制的更多常规信息，请参阅[PPL 中的取消](cancellation-in-the-ppl.md)并[异常处理](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)。
 
@@ -120,7 +123,7 @@ PPL 提供了两种方法来取消任务组或并行算法所执行的并行工�
 
 ##  <a name="object-destruction"></a> 了解取消和异常处理如何影响对象析构
 
-在并行工作树中，取消的任务会阻止子任务运行。 如果一个子任务执行的操作对应用程序很重要（如释放资源），则这可能会导致问题。 此外，任务取消可能导致异常通过对象析构函数进行传播，并在应用程序中导致不明确的行为。
+在并行工作树中，取消的任务会阻止子任务运行。 如果一个子任务执行的操作对于应用程序很重要（如释放资源），则这可能会导致问题。 此外，任务取消可能导致异常通过对象析构函数进行传播，并在应用程序中导致不明确的行为。
 
 在下面的示例中，`Resource` 类描述资源，`Container` 类描述保存资源的容器。 在其析构函数中，`Container` 类在它两个 `Resource` 成员上并行调用 `cleanup` 方法，然后在它第三个 `Resource` 成员上调用 `cleanup` 方法。
 
@@ -174,7 +177,8 @@ Container 1: Freeing resources...Exiting program...
 
 [!code-cpp[concrt-blocking-cancel#1](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_13.cpp)]
 
-`new` 运算符可执行可能会停滞的堆分配。 仅当该任务执行协作停滞调用，如调用时，运行时执行其他工作[concurrency::critical_section::lock](reference/critical-section-class.md#lock)。
+
+  `new` 运算符可执行可能会停滞的堆分配。 仅当该任务执行协作停滞调用，如调用时，运行时执行其他工作[concurrency::critical_section::lock](reference/critical-section-class.md#lock)。
 
 下面的示例介绍如何防止不必要的工作，从而提高性能。 此示例在为 `Answer` 对象分配存储前先取消任务组。
 
@@ -192,13 +196,14 @@ Container 1: Freeing resources...Exiting program...
 
 此示例也可能导致性能不佳，因为频繁的锁定操作有力地对循环进行了序列化。 此外，当并发运行时对象执行停滞操作时，计划程序可能会在第一个线程等待数据时创建其他线程来执行其他工作。 如果运行时因许多任务正等待共享数据而创建许多线程，那么应用程序可能不会很好地运行，或进入资源不足的状态。
 
-PPL 定义[concurrency:: combinable](../../parallel/concrt/reference/combinable-class.md)类，它可以帮助您消除通过无锁方式提供对共享资源的访问的共享的状态。 `combinable` 类提供了线程本地存储，该存储允许你执行细化的计算，然后将这些计算合并为最终的结果。 你可以将 `combinable` 对象当作 reduction 变量。
+PPL 定义[concurrency:: combinable](../../parallel/concrt/reference/combinable-class.md)类，它可以帮助您消除通过无锁方式提供对共享资源的访问的共享的状态。 
+  `combinable` 类提供了线程本地存储，该存储允许你执行细化的计算，然后将这些计算合并为最终的结果。 你可以将 `combinable` 对象当作 reduction 变量。
 
 下面的示例使用 `combinable` 对象而不是 `critical_section` 对象来计算总和，从而修改前一个结果。 此示例可进行缩放，因为每个线程都会保存自己的总和本地副本。 此示例使用[concurrency::combinable::combine](reference/combinable-class.md#combine)方法以将本地计算合并为最终的结果。
 
 [!code-cpp[concrt-parallel-sum-of-primes#3](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_16.cpp)]
 
-此示例的完整版本，请参阅[如何： 使用 combinable 提高性能](../../parallel/concrt/how-to-use-combinable-to-improve-performance.md)。 有关详细信息`combinable`类，请参阅[并行容器和对象](../../parallel/concrt/parallel-containers-and-objects.md)。
+此示例的完整版本，请参阅[如何：使用 combinable 提高性能](../../parallel/concrt/how-to-use-combinable-to-improve-performance.md)。 有关详细信息`combinable`类，请参阅[并行容器和对象](../../parallel/concrt/parallel-containers-and-objects.md)。
 
 [[返回页首](#top)]
 
@@ -220,7 +225,8 @@ PPL 定义[concurrency:: combinable](../../parallel/concrt/reference/combinable-
 
 此示例假定内存缓存的大小为 64 个或更少的字节。
 
-我们建议你使用[concurrency:: combinable](../../parallel/concrt/reference/combinable-class.md)类时必须共享在任务之间的数据。 `combinable` 类以不太可能发生错误共享的方式创建线程本地变量。 有关详细信息`combinable`类，请参阅[并行容器和对象](../../parallel/concrt/parallel-containers-and-objects.md)。
+我们建议你使用[concurrency:: combinable](../../parallel/concrt/reference/combinable-class.md)类时必须共享在任务之间的数据。 
+  `combinable` 类以不太可能发生错误共享的方式创建线程本地变量。 有关详细信息`combinable`类，请参阅[并行容器和对象](../../parallel/concrt/parallel-containers-and-objects.md)。
 
 [[返回页首](#top)]
 
@@ -228,11 +234,12 @@ PPL 定义[concurrency:: combinable](../../parallel/concrt/reference/combinable-
 
 如果向任务组或并行算法提供 Lambda 表达式，capture 子句将指定 Lambda 表达式的主体是否通过值或引用访问封闭范围中的变量。 通过引用将变量传递到 Lambda 表达式时，必须保证该变量的生存期在任务完成之前一直保持。
 
-请看下面的示例，该示例定义了 `object` 类和 `perform_action` 函数。 `perform_action` 函数创建 `object` 变量，并在该变量中以异步方式执行某项操作。 由于不能保证在 `perform_action` 函数返回前完成任务，因此，如果 `object` 变量在任务运行时被销毁，则程序将崩溃或发生未指定的行为。
+请看下面的示例，该示例定义了 `object` 类和 `perform_action` 函数。 
+  `perform_action` 函数创建 `object` 变量，并在该变量中以异步方式执行某项操作。 由于不能保证在 `perform_action` 函数返回前完成任务，因此，如果 `object` 变量在任务运行时被销毁，则程序将崩溃或发生未指定的行为。
 
 [!code-cpp[concrt-lambda-lifetime#1](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_20.cpp)]
 
-具体取决于应用程序的需求，可使用以下方法之一来保证变量在每项任务的整个生存期保持有效。
+具体取决于应用程序的要求，可使用以下方法之一来保证变量在每项任务的整个生存期保持有效。
 
 下面的示例通过值将 `object` 变量传入任务。 因此，任务可在自己的变量副本上进行操作。
 
@@ -266,8 +273,7 @@ PPL 定义[concurrency:: combinable](../../parallel/concrt/reference/combinable-
 [异常处理](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)<br/>
 [演练：创建图像处理网络](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)<br/>
 [如何：使用 parallel_invoke 来编写并行排序例程](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md)<br/>
-[如何：使用取消来中断并行循环](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md)<br/>
-[如何：使用 combinable 提高性能](../../parallel/concrt/how-to-use-combinable-to-improve-performance.md)<br/>
+[如何：通过取消来中断并行循环](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md)<br/>
+[如何：使用 Combinable 改进性能](../../parallel/concrt/how-to-use-combinable-to-improve-performance.md)<br/>
 [异步代理库中的最佳做法](../../parallel/concrt/best-practices-in-the-asynchronous-agents-library.md)<br/>
 [并发运行时中的常规最佳做法](../../parallel/concrt/general-best-practices-in-the-concurrency-runtime.md)
-

@@ -72,12 +72,12 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::unorm_3::get_yz
 - amp_short_vectors/Concurrency::graphics::unorm_3::rbg
 ms.assetid: ea4e7a17-5256-464c-af28-8b01962564c0
-ms.openlocfilehash: 2ea10af6ffa1c3e4731b889ddec2d6f0c86ec981
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: befbf350bbd591d168f19e87c81370220d29ef9f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50458027"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300903"
 ---
 # <a name="unorm3-class"></a>unorm_3 类
 
@@ -205,7 +205,7 @@ class unorm_3;
 
 **标头：** amp_short_vectors.h
 
-**Namespace:** concurrency:: graphics
+**命名空间：** Concurrency:: graphics
 
 ##  <a name="ctor"></a> unorm_3
 
@@ -271,7 +271,7 @@ explicit inline unorm_3(
 *_V2*<br/>
 要初始化元素 2 的值。
 
-*（_V)*<br/>
+*_V*<br/>
 用于初始化值。
 
 *_Other*<br/>

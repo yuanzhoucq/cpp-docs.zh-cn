@@ -9,12 +9,12 @@ helpviewer_keywords:
 - IServiceProviderImpl class
 - IServiceProvider interface, ATL implementation
 ms.assetid: 251254d3-c4ce-40d7-aee0-3d676d1d72f2
-ms.openlocfilehash: 231c65d92ff287e35d5475109e70d21f5a047baa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e52c28d528e187713d2d0925fed23bd8cd4493d5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50609876"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298667"
 ---
 # <a name="iserviceproviderimpl-class"></a>IServiceProviderImpl 类
 
@@ -44,11 +44,11 @@ class ATL_NO_VTABLE IServiceProviderImpl : public IServiceProvider
 
 `IServiceProvider`接口定位其 GUID 指定的服务并在服务上返回所请求的接口的接口指针。 类`IServiceProviderImpl`提供此接口的默认实现。
 
-`IServiceProviderImpl` 指定一种方法： [QueryService](#queryservice)，它创建或访问指定的服务并返回到该服务的指定接口的接口指针。
+`IServiceProviderImpl` 指定一种方法：[QueryService](#queryservice)，它创建或访问指定的服务并返回到该服务的指定接口的接口指针。
 
 `IServiceProviderImpl` 使用服务映射，开头[BEGIN_SERVICE_MAP](service-map-macros.md#begin_service_map) ，以结束[END_SERVICE_MAP](service-map-macros.md#end_service_map)。
 
-服务映射包含两个条目： [SERVICE_ENTRY](service-map-macros.md#service_entry)，指示该对象支持的一个指定的服务 id (SID) 和[SERVICE_ENTRY_CHAIN](service-map-macros.md#service_entry_chain)，它调用`QueryService`链接到另一个对象。
+服务映射包含两个条目：[SERVICE_ENTRY](service-map-macros.md#service_entry)，指示该对象支持的一个指定的服务 id (SID) 和[SERVICE_ENTRY_CHAIN](service-map-macros.md#service_entry_chain)，它调用`QueryService`链接到另一个对象。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - scheduler policies [Concurrency Runtime]
 - task scheduler [Concurrency Runtime], wait function
 ms.assetid: 9aba278c-e0c9-4ede-b7c6-fedf7a365d90
-ms.openlocfilehash: 91ef4ed14fa1ddc25ff494f6666a50f5b39b8a54
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c5d37d320344d2ebf83be2c939f5a7372d4af306
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50676702"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57286804"
 ---
 # <a name="task-scheduler-concurrency-runtime"></a>任务计划程序（并发运行时）
 
@@ -57,4 +57,3 @@ ms.locfileid: "50676702"
 |[并行模式库 (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)|介绍如何在应用程序中使用各种并行模式（例如并行算法）。|
 |[异步代理库](../../parallel/concrt/asynchronous-agents-library.md)|介绍如何在应用程序中使用异步代理。|
 |[并发运行时](../../parallel/concrt/concurrency-runtime.md)|描述可以简化并发编程并包含相关主题链接的并发运行时。|
-

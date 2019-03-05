@@ -1,5 +1,5 @@
 ---
-title: TN025：文档、视图和框架创建
+title: TN025:文档、 视图和框架创建
 ms.date: 11/04/2016
 f1_keywords:
 - vc.creation
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - documents [MFC], view and frame creation
 - TN025
 ms.assetid: 09254d72-6e1d-43db-80e9-693887dbeda2
-ms.openlocfilehash: aa8bc305848ce95e0b5bfef1ac6785b18bc84015
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4958e7c4ca2c3cf9eed6420d72d0399fa112098d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50634754"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284679"
 ---
-# <a name="tn025-document-view-and-frame-creation"></a>TN025：文档、视图和框架创建
+# <a name="tn025-document-view-and-frame-creation"></a>TN025:文档、 视图和框架创建
 
 > [!NOTE]
 >  以下技术说明在首次包括在联机文档中后未更新。 因此，某些过程和主题可能已过时或不正确。 要获得最新信息，建议你在联机文档索引中搜索热点话题。
@@ -25,7 +25,7 @@ ms.locfileid: "50634754"
 
 系统中有一个 `CWinApp` 对象。
 
-它由框架的 `WinMain` 内部实现以静态方式构造和初始化。 必须派生自`CWinApp`以执行任何有用 (异常： MFC 扩展 Dll 不应具有`CWinApp`实例-初始化完成`DllMain`相反)。
+它由框架的 `WinMain` 内部实现以静态方式构造和初始化。 您必须派生自`CWinApp`以执行任何有用 (异常：MFC 扩展 Dll 不应有`CWinApp`实例-初始化完成`DllMain`相反)。
 
 一个 `CWinApp` 对象拥有一个文档模板列表 (`CPtrList`)。 每个应用程序有一个或多个文档模板。 DocTemplate 通常从 `CWinApp::InitInstance` 中的资源文件（即字符串数组）中加载。
 
@@ -39,7 +39,8 @@ AddDocTemplate(pTemplate);
 
 ## <a name="doctemplates"></a>DocTemplate
 
-`CDocTemplate` 是文档的创建者和管理者。 它对自己创建的文档具有所有权。 如果应用程序使用了下面所述的基于资源的方法，则不需要从 `CDocTemplate` 派生。
+
+  `CDocTemplate` 是文档的创建者和管理者。 它对自己创建的文档具有所有权。 如果应用程序使用了下面所述的基于资源的方法，则不需要从 `CDocTemplate` 派生。
 
 对于 SDI 应用程序，类 `CSingleDocTemplate` 将跟踪一个打开的文档。 对于 MDI 应用程序，类 `CMultiDocTemplate` 类将保留所有当前打开的从该模板创建的文档的列表 (`CPtrList`)。 `CDocTemplate::AddDocument` 和 `CDocTemplate::RemoveDocument` 提供了用于在模板中添加或删除文档的虚拟成员函数。 `CDocTemplate` 是的友元`CDocument`所以我们可以设置受保护`CDocument::m_pDocTemplate`后指针以指回创建文档的文档模板。
 
@@ -57,13 +58,16 @@ AddDocTemplate(pTemplate);
 
 文档不创建/销毁视图，但它们在创建后会相互连接。 当文档关闭（通过“文件”/“关闭”）时，所有连接的视图都将关闭。 当文档中的最后一个视图关闭（通过“窗口”/“关闭”）时，文档将关闭。
 
-`CDocument::AddView`（`RemoveView` 接口）用于维护视图列表。 `CDocument` 是的友元`CView`所以我们可以设置`CView::m_pDocument`后的指针。
+
+  `CDocument::AddView`（`RemoveView` 接口）用于维护视图列表。 `CDocument` 是的友元`CView`所以我们可以设置`CView::m_pDocument`后的指针。
 
 ## <a name="cframewnd"></a>CFrameWnd
 
-`CFrameWnd`（也称为“框架”）的作用与在 MFC 1.0 中的作用相同，但现在 `CFrameWnd` 类可以在很多情况下使用，而不用派生新类。 派生类 `CMDIFrameWnd` 和 `CMDIChildWnd` 也已增强，因此很多标准命令已经实现。
 
-`CFrameWnd` 负责在框架的工作区中创建窗口。 通常，有一个填充框架的工作区的主窗口。
+  `CFrameWnd`（也称为“框架”）的作用与在 MFC 1.0 中的作用相同，但现在 `CFrameWnd` 类可以在很多情况下使用，而不用派生新类。 派生类 `CMDIFrameWnd` 和 `CMDIChildWnd` 也已增强，因此很多标准命令已经实现。
+
+
+  `CFrameWnd` 负责在框架的工作区中创建窗口。 通常，有一个填充框架的工作区的主窗口。
 
 对于 MDI 框架窗口，工作区将使用 MDICLIENT 控件填充，该控件又是所有 MDI 子框架窗口的父级。 对于 SDI 框架窗口或 MDI 子框架窗口，工作区通常用 `CView` 派生的窗口对象填充。 对于 `CSplitterWnd`，视图的工作区用 `CSplitterWnd` 窗口对象填充，`CView` 派生窗口对象（每个拆分窗格一个）将作为 `CSplitterWnd` 的子窗口创建。
 
@@ -71,4 +75,3 @@ AddDocTemplate(pTemplate);
 
 [按编号列出的技术说明](../mfc/technical-notes-by-number.md)<br/>
 [按类别列出的技术说明](../mfc/technical-notes-by-category.md)
-

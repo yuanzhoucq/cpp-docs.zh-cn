@@ -1,5 +1,5 @@
 ---
-title: 异常：数据库异常
+title: 异常:“数据库异常”
 ms.date: 11/04/2016
 helpviewer_keywords:
 - DAO [MFC], exceptions
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - databases [MFC], exception handling
 - error codes [MFC], database exception handling
 ms.assetid: 28daf260-f824-4be6-aecc-1f859e6dec26
-ms.openlocfilehash: 17a52787462301e839cb2e960fad8b480380ba49
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2f7f3bff9f28968361ecfa7374a235a727443004
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492789"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285550"
 ---
-# <a name="exceptions-database-exceptions"></a>异常：数据库异常
+# <a name="exceptions-database-exceptions"></a>异常:“数据库异常”
 
 本文介绍如何处理数据库异常。 在本文中的材料的大多数应用是否正在使用的 MFC 类开放式数据库连接 (ODBC) 或 MFC 类的数据访问对象 (DAO)。 显式标记为特定于一个或另一个模型的材料。 包括以下主题：
 
@@ -77,4 +77,3 @@ DAO 示例适用于 ODBC 示例类似，但通常可以检索更多类型的信�
 ## <a name="see-also"></a>请参阅
 
 [异常处理](../mfc/exception-handling-in-mfc.md)
-

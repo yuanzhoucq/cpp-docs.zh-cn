@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - ATL projects, COM+ 1.0 support
 ms.assetid: 51fb08ac-d632-4657-a4e0-d3f989f0b6f8
-ms.openlocfilehash: 4bc7683d6121dec748e30c1ea717042b9cf1ecbc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 39a3597b8df833d89942e31b361f791b14ceb8c9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562456"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57292586"
 ---
 # <a name="com-10-support-in-atl-projects"></a>COM + 1.0 支持在 ATL 项目中
 
@@ -32,4 +32,3 @@ COM + 1.0 专为开发的基于组件的分布式应用程序。 它还提供用
 [ATL COM 对象基础知识](../../atl/fundamentals-of-atl-com-objects.md)<br/>
 [使用 ATL 和 C 运行时代码进行编程](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
 [默认 ATL 项目配置](../../atl/reference/default-atl-project-configurations.md)
-

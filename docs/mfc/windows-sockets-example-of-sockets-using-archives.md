@@ -6,12 +6,12 @@ helpviewer_keywords:
 - examples [MFC], Windows Sockets
 - Windows Sockets [MFC], with archives
 ms.assetid: 2e3c9bb2-7e7b-4f28-8dc5-6cb7a484edac
-ms.openlocfilehash: 285053c79b13ebea23aedc7dae52eabe85f55a12
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4ea1e2911b156066360da09993fa7302db79f12b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50436265"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295249"
 ---
 # <a name="windows-sockets-example-of-sockets-using-archives"></a>Windows 套接字：使用存档的套接字的示例
 
@@ -43,7 +43,7 @@ ms.locfileid: "50436265"
 发送消息在此通信模型中，"Received"一词*strText*变量，是显示在另一端的通信，因此它指定到接收用户一定数量的数据包数据已被接收到。 接收方会回复原始发件人的屏幕显示"发送"，显示的相似字符串。 这两个字符串的回执指示发生了成功通信。
 
 > [!CAUTION]
->  如果您要编写 MFC 客户端程序来与建立的（非 MFC）服务器通信，则请勿通过存档发送 C++ 对象。 除非服务器是了解要发送的对象类型的 MFC 应用程序，它将无法接收和反序列化您的对象。 示例，请参见文章[Windows 套接字： 字节排序](../mfc/windows-sockets-byte-ordering.md)显示了此类型的通信。
+>  如果您要编写 MFC 客户端程序来与建立的（非 MFC）服务器通信，则请勿通过存档发送 C++ 对象。 除非服务器是了解要发送的对象类型的 MFC 应用程序，它将无法接收和反序列化您的对象。 在本文中的示例[Windows 套接字：字节排序](../mfc/windows-sockets-byte-ordering.md)显示了此类型的通信。
 
 有关详细信息，请参阅 Windows 套接字规范： **htonl**， **htons**， **ntohl**， **ntohs**。 此外，有关详细信息，请参阅：
 
@@ -60,5 +60,4 @@ ms.locfileid: "50436265"
 [CArchive::operator <<](../mfc/reference/carchive-class.md#operator_lt_lt)<br/>
 [CArchive::operator >>](../mfc/reference/carchive-class.md#operator_lt_lt)<br/>
 [CArchive::Flush](../mfc/reference/carchive-class.md#flush)<br/>
-[Cobject:: Serialize](../mfc/reference/cobject-class.md#serialize)
-
+[CObject::Serialize](../mfc/reference/cobject-class.md#serialize)

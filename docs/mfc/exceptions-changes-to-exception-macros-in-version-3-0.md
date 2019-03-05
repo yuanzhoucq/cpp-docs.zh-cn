@@ -1,5 +1,5 @@
 ---
-title: 异常：3.0 版本中对异常宏的修改
+title: 异常:对异常宏的修改版本 3.0 中的更改
 ms.date: 11/04/2016
 helpviewer_keywords:
 - C++ exception handling [MFC], upgrade considerations
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - exceptions [MFC], what's changed
 - THROW_LAST macro [MFC]
 ms.assetid: 3aa20d8c-229e-449c-995c-ab879eac84bc
-ms.openlocfilehash: 54826ee7a7ac129ae69715b45770a0a66596a2a3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fb51ad91e001f0ed153bf4fdb5aa598ab5ba5042
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607982"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291218"
 ---
-# <a name="exceptions-changes-to-exception-macros-in-version-30"></a>异常：3.0 版本中对异常宏的修改
+# <a name="exceptions-changes-to-exception-macros-in-version-30"></a>异常:对异常宏的修改版本 3.0 中的更改
 
 这是一个高级的主题。
 
@@ -58,9 +58,8 @@ Catch 块不能引发它捕获到的异常相同的指针。
 
 使用**引发**catch 块会导致该指针`e`要删除，以便在外部 catch 站点将接收了无效的指针。 使用**THROW_LAST**以重新引发`e`。
 
-有关详细信息，请参阅[异常： 捕捉和删除异常](../mfc/exceptions-catching-and-deleting-exceptions.md)。
+有关详细信息，请参阅[异常：捕捉和删除异常](../mfc/exceptions-catching-and-deleting-exceptions.md)。
 
 ## <a name="see-also"></a>请参阅
 
 [异常处理](../mfc/exception-handling-in-mfc.md)
-

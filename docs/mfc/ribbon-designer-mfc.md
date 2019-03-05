@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Ribbon Designer (MFC)
 - MFC Ribbon Designer
 ms.assetid: 0806dfd6-7d11-471a-99e1-4072852231f9
-ms.openlocfilehash: 903adc96f4c9bc092ac23787781a76c0e7e3714c
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 0972cdfbb80129b0c87c96fa7daf6768d18aa0c4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175829"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288774"
 ---
 # <a name="ribbon-designer-mfc"></a>功能区设计器 (MFC)
 
@@ -56,11 +56,11 @@ ms.locfileid: "52175829"
 
 可通过两种方式向 MFC 项目添加功能区资源：
 
-- 创建 MFC 应用程序，并配置 MFC 项目向导以创建功能区。 有关详细信息，请参阅[演练： 创建功能区应用程序使用 MFC](../mfc/walkthrough-creating-a-ribbon-application-by-using-mfc.md)。
+- 创建 MFC 应用程序，并配置 MFC 项目向导以创建功能区。 有关详细信息，请参见[演练：使用 MFC 创建功能区应用程序](../mfc/walkthrough-creating-a-ribbon-application-by-using-mfc.md)。
 
-- 在现有 MFC 项目中，创建功能区资源并加载该资源。 有关详细信息，请参阅[演练： 更新 MFC 自由曲线应用程序 (第 1 部分)](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md)。
+- 在现有 MFC 项目中，创建功能区资源并加载该资源。 有关详细信息，请参见[演练：正在更新 MFC 随意画图应用程序 （第 1 部分）](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md)。
 
-如果你的项目已经有手动编码的功能区，MFC 提供一些功能，可用于将现有功能区转换为功能区资源。 有关详细信息，请参阅[如何： 将现有 MFC 功能区转换为功能区资源](../mfc/how-to-convert-an-existing-mfc-ribbon-to-a-ribbon-resource.md)。
+如果你的项目已经有手动编码的功能区，MFC 提供一些功能，可用于将现有功能区转换为功能区资源。 有关详细信息，请参阅[如何：将现有 MFC 功能区转换为功能区资源](../mfc/how-to-convert-an-existing-mfc-ribbon-to-a-ribbon-resource.md)。
 
 > [!NOTE]
 >  不能在基于对话框的应用程序中创建功能区。 有关详细信息，请参阅[应用程序类型、 MFC 应用程序向导](../mfc/reference/application-type-mfc-application-wizard.md)。
@@ -73,7 +73,7 @@ ms.locfileid: "52175829"
 
 ![MFC 功能区设计器](../mfc/media/ribbon_designer.png "MFC 功能区设计器")
 
-- **工具箱：** 包含的控件，可拖动到设计器图面。
+- **工具箱：** 包含控件，可拖动到设计器图面。
 
 - **设计器图面：** 包含功能区资源的可视表示形式。
 
@@ -81,7 +81,7 @@ ms.locfileid: "52175829"
 
 - **资源视图窗口：** 显示在项目中包含功能区资源的资源。
 
-- **功能区编辑器工具栏：** Contains 命令，使您预览功能区，并更改其可视主题。
+- **功能区编辑器工具栏：** 包含可预览功能区，并更改其可视主题的命令。
 
 以下主题介绍如何使用功能区设计器中的功能：
 
@@ -97,20 +97,19 @@ ms.locfileid: "52175829"
 
 ![MFC 功能区](../mfc/media/ribbon.png "MFC 功能区")
 
-- **应用程序按钮：** 出现在功能区的左上角的按钮。 “应用程序”按钮取代“文件”菜单，即使在功能区最小化时也可见。 单击该按钮时，将显示一个包含命令列表的菜单。
+- **应用程序按钮：** 在功能区的左上角显示的按钮。 “应用程序”按钮取代“文件”菜单，即使在功能区最小化时也可见。 单击该按钮时，将显示一个包含命令列表的菜单。
 
 - **快速访问工具栏：** 经常显示一个小型的可自定义工具栏使用的命令。
 
-- **类别**： 表示功能区选项卡的内容的逻辑分组。
+- **类别**:表示功能区选项卡的内容逻辑分组。
 
-- **类别默认按钮：** 功能区最小化时显示在功能区按钮。 单击该按钮时，类别将以菜单的形式重新出现。
+- **类别默认按钮：** 当功能区最小化显示在功能区按钮。 单击该按钮时，类别将以菜单的形式重新出现。
 
 - **面板：** 显示的一组相关控件的功能区栏区域。 每个功能区类别都包含一个或多个功能区面板。
 
-- **功能区元素：** 面板中的控件，例如，按钮和组合框。 若要查看功能区上可以承载各种控件，请参阅[RibbonGadgets 示例： 功能区的小工具应用程序](../visual-cpp-samples.md)。
+- **功能区元素：** 面板中的控件，例如，按钮和组合框。 若要查看功能区上可以承载各种控件，请参阅[RibbonGadgets 示例：功能区的小工具应用程序](../visual-cpp-samples.md)。
 
 ## <a name="see-also"></a>请参阅
 
 [用户界面元素](../mfc/user-interface-elements-mfc.md)<br/>
 [使用资源文件](../windows/working-with-resource-files.md)
-

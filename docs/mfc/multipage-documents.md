@@ -25,12 +25,12 @@ helpviewer_keywords:
 - printing [MFC], pagination
 - documents [MFC], paginating
 ms.assetid: 69626b86-73ac-4b74-b126-9955034835ef
-ms.openlocfilehash: b4ec9f456443b9cd180f1558946829281bc10a36
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 81e03657977d31827c5c7c3d3272e3d4255a4a8b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176375"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295001"
 ---
 # <a name="multipage-documents"></a>多页文档
 
@@ -73,7 +73,8 @@ ms.locfileid: "52176375"
 
 ##  <a name="_core_pagination"></a> 分页
 
-框架将存储中的打印作业有关的信息的大部分[CPrintInfo](../mfc/reference/cprintinfo-structure.md)结构。 `CPrintInfo` 中的某些值与分页有关；这些值是可访问的，如下表所示。
+框架将存储中的打印作业有关的信息的大部分[CPrintInfo](../mfc/reference/cprintinfo-structure.md)结构。 
+  `CPrintInfo` 中的某些值与分页有关；这些值是可访问的，如下表所示。
 
 ### <a name="page-number-information-stored-in-cprintinfo"></a>存储在 CPrintInfo 中的页码信息
 
@@ -99,7 +100,7 @@ ms.locfileid: "52176375"
 
 [OnPrint](../mfc/reference/cview-class.md#onprint)成员函数执行页的实际打印。 文章[如何执行默认打印](../mfc/how-default-printing-is-done.md)演示了框架如何调用[OnDraw](../mfc/reference/cview-class.md#ondraw)使用打印机设备上下文以执行打印。 更准确地说，框架使用 `OnPrint` 结构和设备上下文调用 `CPrintInfo`，而 `OnPrint` 将设备上下文传递到 `OnDraw`。 重写 `OnPrint` 以执行只应在打印期间进行并且不是用于屏幕显示的任何渲染。 例如，若要打印页眉或页脚 (请参阅文章[页眉和页脚](../mfc/headers-and-footers.md)有关详细信息)。 然后，从 `OnDraw` 的重写调用 `OnPrint` 以执行屏幕显示和打印共用的渲染。
 
-`OnDraw` 同时为屏幕显示和打印执行渲染意味着您的应用程序是“所见即所得”的。 但是，此处假定您没有编写所见即所得的应用程序。 例如，想象一下这样一个文本编辑器：使用粗体字体进行打印但显示控件代码以在屏幕上指示粗体文本。 在这种情况下，您应严格使用 `OnDraw` 进行屏幕显示。 当重写 `OnPrint` 时，请用对 `OnDraw` 的调用替换对单独的绘图函数的调用。 该函数将使用您不在屏幕上显示的特性，按照文档在纸上显示的方式绘制文档。
+这一事实，`OnDraw`同时为屏幕显示和打印意味着应用程序的所见即所得执行渲染："所见即所得。" 但是，此处假定您没有编写所见即所得的应用程序。 例如，想象一下这样一个文本编辑器：使用粗体字体进行打印但显示控件代码以在屏幕上指示粗体文本。 在这种情况下，您应严格使用 `OnDraw` 进行屏幕显示。 当重写 `OnPrint` 时，请用对 `OnDraw` 的调用替换对单独的绘图函数的调用。 该函数将使用您不在屏幕上显示的特性，按照文档在纸上显示的方式绘制文档。
 
 ##  <a name="_core_printer_pages_vs.._document_pages"></a> 打印机页与文档页
 

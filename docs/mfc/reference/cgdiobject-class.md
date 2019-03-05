@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CGdiObject [MFC], UnrealizeObject
 - CGdiObject [MFC], m_hObject
 ms.assetid: 1cba3ba5-3d49-4e43-8293-209299f2f6f4
-ms.openlocfilehash: 87545d67addb6a1f0931007d8912989968f7a74a
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 1b2b87173bf504455ba314fdd89ffae298cae6a8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53177844"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301215"
 ---
 # <a name="cgdiobject-class"></a>CGdiObject 类
 
@@ -74,8 +74,8 @@ class CGdiObject : public CObject
 
 |名称|描述|
 |----------|-----------------|
-|[CGdiObject::operator ！ =](#operator_neq)|确定两个 GDI 对象是否以逻辑方式不相等。|
-|[CGdiObject::operator = =](#operator_eq_eq)|确定两个 GDI 对象是否从逻辑上相等。|
+|[CGdiObject::operator !=](#operator_neq)|确定两个 GDI 对象是否以逻辑方式不相等。|
+|[CGdiObject::operator ==](#operator_eq_eq)|确定两个 GDI 对象是否从逻辑上相等。|
 |[CGdiObject::operator HGDIOBJ](#operator_hgdiobj)|检索附加 Windows GDI 对象的句柄。|
 
 ### <a name="public-data-members"></a>公共数据成员
@@ -250,7 +250,7 @@ int GetObject(
 |`CPen`|[LOGPEN](/windows/desktop/api/Wingdi/ns-wingdi-taglogpen)|
 |`CBrush`|[LOGBRUSH](/windows/desktop/api/wingdi/ns-wingdi-taglogbrush)|
 |`CFont`|[LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)|
-|`CBitmap`|[位图](/windows/desktop/api/wingdi/ns-wingdi-tagbitmap)|
+|`CBitmap`|[BITMAP](/windows/desktop/api/wingdi/ns-wingdi-tagbitmap)|
 |`CPalette`|WORD|
 |`CRgn`|不支持|
 
@@ -270,7 +270,7 @@ UINT GetObjectType() const;
 
 类型的对象，如果成功，则否则为 0。 值可以是下列任一值：
 
-- OBJ_BITMAP 位图
+- OBJ_BITMAP Bitmap
 
 - OBJ_BRUSH 画笔
 
@@ -341,7 +341,7 @@ BOOL operator!=(const CGdiObject& obj) const;
 
 确定左侧和右侧的 GDI 对象是否不等于右侧的 GDI 对象。
 
-##  <a name="operator_eq_eq"></a>  CGdiObject::operator = =
+##  <a name="operator_eq_eq"></a>  CGdiObject::operator ==
 
 确定两个 GDI 对象是否从逻辑上相等。
 

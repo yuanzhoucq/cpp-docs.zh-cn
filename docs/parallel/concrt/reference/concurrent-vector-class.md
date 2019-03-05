@@ -33,16 +33,17 @@ f1_keywords:
 helpviewer_keywords:
 - concurrent_vector class
 ms.assetid: a217b4ac-af2b-4d41-94eb-09a75ee28622
-ms.openlocfilehash: e8036b0942600e5d47254583e2675c525010a5c1
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: 7c2ca35239dfb3ce4c0f710259f54005ff9f3c94
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657560"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283171"
 ---
 # <a name="concurrentvector-class"></a>concurrent_vector 类
 
-`concurrent_vector` 类是允许对任意元素进行随机访问的序列容器类。 它支持并发安全追加、元素访问、迭代器访问和迭代器遍历操作。
+
+  `concurrent_vector` 类是允许对任意元素进行随机访问的序列容器类。 它支持并发安全追加、元素访问、迭代器访问和迭代器遍历操作。
 
 ## <a name="syntax"></a>语法
 
@@ -164,13 +165,13 @@ void assign(_InputIterator _Begin,
 *_N*<br/>
 要复制到此并发向量的项目数。
 
-*项目 （_i)*<br/>
+*_Item*<br/>
 对用来填充并发向量值的引用。
 
-*（_b)*<br/>
+*_Begin*<br/>
 指向源范围的第一个元素的迭代器。
 
-*（_e)*<br/>
+*_End*<br/>
 指向一个源范围的最后一个元素之后的迭代器。
 
 ### <a name="remarks"></a>备注
@@ -202,7 +203,7 @@ const_reference at(size_type _Index) const;
 
 该方法将引发`out_of_range`如果`_Index`大于或等于并发向量的大小和`range_error`如果索引不中断向量的一部分。 有关如何一个向量，可能会中断的详细信息，请参阅[并行容器和对象](../../../parallel/concrt/parallel-containers-and-objects.md)。
 
-##  <a name="back"></a> 返回
+##  <a name="back"></a> back
 
 返回的引用或`const`到最后一个引用并发向量中的元素。 如果并发向量为空，则返回值未定义。 此方法是并发安全的。
 
@@ -216,7 +217,7 @@ const_reference back() const;
 
 引用或`const`到最后一个引用并发向量中的元素。
 
-##  <a name="begin"></a> 开始
+##  <a name="begin"></a> begin
 
 返回一个迭代器的类型`iterator`或`const_iterator`并发向量的开头。 此方法是并发安全的。
 
@@ -331,15 +332,16 @@ concurrent_vector(_InputIterator _Begin,
 要从中复制或移动元素的源 `concurrent_vector` 对象。
 
 *_N*<br/>
-`concurrent_vector` 对象的初始容量。
 
-*项目 （_i)*<br/>
+  `concurrent_vector` 对象的初始容量。
+
+*_Item*<br/>
 构造的对象中的元素的值。
 
-*（_b)*<br/>
+*_Begin*<br/>
 要复制的元素范围内的第一个元素的位置。
 
-*（_e)*<br/>
+*_End*<br/>
 要复制的元素范围外的第一个元素的位置。
 
 ### <a name="remarks"></a>备注
@@ -390,7 +392,7 @@ const_reverse_iterator crend() const;
 
 类型的迭代器`const_reverse_iterator`到并发向量末尾。
 
-##  <a name="empty"></a> 为空
+##  <a name="empty"></a> empty
 
 测试是否并发向量为空时调用此方法。 此方法是并发安全的。
 
@@ -460,7 +462,7 @@ iterator grow_by(
 *_Delta*<br/>
 要追加到对象的元素数。
 
-*项目 （_i)*<br/>
+*_Item*<br/>
 要初始化新元素的值。
 
 ### <a name="return-value"></a>返回值
@@ -528,7 +530,7 @@ concurrent_vector& operator= (
 
 对此引用`concurrent_vector`对象。
 
-##  <a name="operator_at"></a> operator]
+##  <a name="operator_at"></a> operator[]
 
 提供对并发向量中的给定索引处的元素的访问。 此方法是并发安全方法对于读取操作，并且还增加矢量，只要你确保值`_Index`小于并发向量的大小。
 
@@ -565,7 +567,7 @@ iterator push_back(T&& _Item);
 
 ### <a name="parameters"></a>参数
 
-*项目 （_i)*<br/>
+*_Item*<br/>
 要追加的值。
 
 ### <a name="return-value"></a>返回值
@@ -672,7 +674,7 @@ size_type size() const;
 
 保证返回的大小将追加到该函数调用的所有元素都包含`push_back`，或增大调用此方法之前已完成的操作。 但是，它还可能包括分配的元素，但仍在通过对任何的增长方法的并发调用的构造。
 
-##  <a name="swap"></a> 交换
+##  <a name="swap"></a> swap
 
 交换两个并发向量的内容。 此方法不是并发安全的。
 
@@ -689,4 +691,3 @@ void swap(concurrent_vector& _Vector);
 
 [并发命名空间](concurrency-namespace.md)<br/>
 [并行容器和对象](../../../parallel/concrt/parallel-containers-and-objects.md)
-

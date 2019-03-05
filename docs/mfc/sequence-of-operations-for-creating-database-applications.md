@@ -7,12 +7,12 @@ helpviewer_keywords:
 - database applications [MFC], creating
 - MFC, database applications
 ms.assetid: 9371da59-8536-43cd-8314-706ad320e2ec
-ms.openlocfilehash: 0f512408b54d6aa9cc5c2b44dbd359e31e8bc57f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: efd6b12b186ce0ef1c0caf57f313f6aa50425fec
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624895"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283665"
 ---
 # <a name="sequence-of-operations-for-creating-database-applications"></a>用于创建数据库应用程序的操作顺序
 
@@ -31,7 +31,7 @@ ms.locfileid: "50624895"
 |根据需要创建其他记录的视图和记录集类。|使用类视图创建的类和对话框编辑器设计视图。|类视图创建新类的其他的文件。|
 |根据需要在代码中创建记录集对象。 每个记录集用于处理记录...|在记录集都基于派生自的类[CRecordset](../mfc/reference/crecordset-class.md)使用向导。|ODBC 使用记录字段交换 (RFX) 数据库和记录集的字段数据成员之间交换数据。 如果使用记录视图，对话框数据交换 (DDX) 之间交换数据记录集和记录视图上的控件。|
 |...或创建一个显式[CDatabase](../mfc/reference/cdatabase-class.md)代码中的每个你想要打开的数据库。|记录集对象基于的数据库对象。|数据库对象提供对数据源的接口。|
-|动态绑定到记录集的数据列。|在 ODBC 中，将代码添加到派生的记录集类，以管理绑定。 请参阅文章[记录集： 动态绑定数据列 (ODBC)](../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)。||
+|动态绑定到记录集的数据列。|在 ODBC 中，将代码添加到派生的记录集类，以管理绑定。 请参阅文章[记录集：动态绑定数据列 (ODBC)](../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)。||
 
 ## <a name="see-also"></a>请参阅
 

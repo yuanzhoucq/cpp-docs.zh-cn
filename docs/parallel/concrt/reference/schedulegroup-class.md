@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - ScheduleGroup class
 ms.assetid: 86d380ff-f2e8-411c-b1a8-22bd3079824a
-ms.openlocfilehash: 6132ec6623a009c09a37b7d704ce683a58956a04
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ce7734a1330f2d6e495565338879764482439d09
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50518711"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283847"
 ---
 # <a name="schedulegroup-class"></a>ScheduleGroup 类
 
@@ -121,7 +121,7 @@ virtual unsigned int Release() = 0;
 
 计划组都与特定计划程序实例相关联。 必须确保对于计划组的所有引用都在所有对计划程序的引用释放之前释放，因为后者可能导致计划程序破坏。 执行操作; 否则为结果中未定义的行为。
 
-##  <a name="dtor"></a> ~ ScheduleGroup
+##  <a name="dtor"></a> ~ScheduleGroup
 
 ```
 virtual ~ScheduleGroup();
@@ -142,7 +142,7 @@ virtual void ScheduleTask(
 *_Proc*<br/>
 指向要执行要执行的轻量任务正文的函数的指针。
 
-*数据 （_d)*<br/>
+*_Data*<br/>
 指向将作为参数传递给任务的正文数据的 void 指针。
 
 ### <a name="remarks"></a>备注
@@ -155,4 +155,3 @@ virtual void ScheduleTask(
 [CurrentScheduler 类](currentscheduler-class.md)<br/>
 [Scheduler 类](scheduler-class.md)<br/>
 [任务计划程序](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)
-

@@ -25,12 +25,12 @@ helpviewer_keywords:
 - registering controls
 - OLEPRO32.DLL
 ms.assetid: cd70ac9b-f613-4879-9e81-6381fdfda2a1
-ms.openlocfilehash: 26ea2cce8891d145740d2f91e06e15c2a1161566
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 409ace2197396cf7adbd330cfbd891745a23cf53
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50513732"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300111"
 ---
 # <a name="mfc-activex-controls-distributing-activex-controls"></a>MFC ActiveX 控件：发行 ActiveX 控件
 
@@ -82,4 +82,3 @@ ANSI 控件，在所有 Win32 操作系统中工作，允许各种 Win32 操作�
 ## <a name="see-also"></a>请参阅
 
 [MFC ActiveX 控件](../mfc/mfc-activex-controls.md)
-

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - properties [ATL], classes
 - properties [ATL]
 ms.assetid: 31616f98-69f8-48b2-8d58-b8e7d1c2b2d8
-ms.openlocfilehash: 9c56638c72328a59223f3323d55f4dcc6ced2609
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f5d318cecc527d0c41124ccf14326ea308007b1d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50474056"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290464"
 ---
 # <a name="properties-and-property-pages-classes"></a>属性和属性页类
 
@@ -44,4 +44,3 @@ ms.locfileid: "50474056"
 
 [类概述](../atl/atl-class-overview.md)<br/>
 [属性映射宏](../atl/reference/property-map-macros.md)
-

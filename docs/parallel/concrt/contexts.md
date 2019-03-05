@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - contexts [Concurrency Runtime]
 ms.assetid: 10c1d861-8fbb-4ba0-b2ec-61876b11176e
-ms.openlocfilehash: b7d1a5bbc63781e865be8053cb4365d6a8590935
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d511f8fa751d61c3c490a184dae660096dd9f76f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50529163"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285901"
 ---
 # <a name="contexts"></a>上下文
 
@@ -26,7 +26,7 @@ ms.locfileid: "50529163"
 
 ### <a name="example"></a>示例
 
-有关使用示例`wait`函数将让出当前上下文，因此允许获得其他上下文中运行，请参阅[如何： 使用计划组影响执行顺序为](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md)。
+有关使用示例`wait`函数将让出当前上下文，因此允许获得其他上下文中运行，请参阅[如何：使用计划组影响执行顺序](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md)。
 
 ## <a name="the-context-class"></a>上下文类
 
@@ -46,7 +46,7 @@ ms.locfileid: "50529163"
 
 #### <a name="example"></a>示例
 
-有关使用示例`Context::Block`， `Context::Unblock`，并`Context::Yield`方法来实现协作信号量类，请参阅[如何： 使用上下文类实现协作信号量](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md)。
+有关使用示例`Context::Block`， `Context::Unblock`，并`Context::Yield`方法来实现协作信号量类，请参阅[如何：使用上下文类实现协作信号量](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md)。
 
 ##### <a name="oversubscription"></a>过度订阅
 
@@ -66,7 +66,7 @@ ms.locfileid: "50529163"
 
 ###### <a name="example"></a>示例
 
-使用过度订阅偏移延迟引起通过网络连接读取数据的示例，请参阅[如何： 使用过度订阅偏移延迟](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md)。
+使用过度订阅偏移延迟引起通过网络连接读取数据的示例，请参阅[如何：使用过度订阅偏移延迟](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md)。
 
 ## <a name="see-also"></a>请参阅
 
@@ -74,4 +74,3 @@ ms.locfileid: "50529163"
 [如何：使用计划组影响执行顺序](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md)<br/>
 [如何：使用上下文类实现协作信号量](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md)<br/>
 [如何：使用过度订阅偏移延迟](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md)
-

@@ -19,16 +19,17 @@ f1_keywords:
 - AGENTS/concurrency::unbounded_buffer::send_message
 - AGENTS/concurrency::unbounded_buffer::supports_anonymous_source
 ms.assetid: 6b1a939a-1819-4385-b1d8-708f83d4ec47
-ms.openlocfilehash: b4a54e80067c5bc4cea9cd0dac0e24a66e1858e0
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 1474381a2d1c0947b2428ab4cf0b4683198eef84
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694746"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288137"
 ---
 # <a name="unboundedbuffer-class"></a>unbounded_buffer 类
 
-`unbounded_buffer` 消息块是多目标、多源、有序的 `propagator_block`，能够存储不限数量的消息。
+
+  `unbounded_buffer` 消息块是多目标、多源、有序的 `propagator_block`，能够存储不限数量的消息。
 
 ## <a name="syntax"></a>语法
 
@@ -41,7 +42,7 @@ class unbounded_buffer : public propagator_block<multi_link_registry<ITarget<   
 
 #### <a name="parameters"></a>参数
 
-*类型 （_t)*<br/>
+*_Type*<br/>
 存储和传播被缓冲区的消息的负载类型。
 
 ## <a name="members"></a>成员
@@ -138,7 +139,7 @@ virtual message<_Type> * consume_message(
 
 类似于`accept`，但通过调用前面始终有`reserve`。
 
-##  <a name="dequeue"></a> 取消排队
+##  <a name="dequeue"></a> dequeue
 
 移除的项从`unbounded_buffer`消息块。
 
@@ -150,7 +151,7 @@ _Type dequeue();
 
 从删除消息的负载`unbounded_buffer`。
 
-##  <a name="enqueue"></a> 排入队列
+##  <a name="enqueue"></a> enqueue
 
 将项添加到`unbounded_buffer`消息块。
 
@@ -162,7 +163,7 @@ bool enqueue(
 
 ### <a name="parameters"></a>参数
 
-*项目 （_i)*<br/>
+*_Item*<br/>
 要添加的项。
 
 ### <a name="return-value"></a>返回值
@@ -347,7 +348,7 @@ unbounded_buffer(
 
 ### <a name="parameters"></a>参数
 
-*筛选 （_f)*<br/>
+*_Filter*<br/>
 确定是否应接受提供的消息的筛选器函数。
 
 *_PScheduler*<br/>
@@ -362,7 +363,7 @@ unbounded_buffer(
 
 类型`filter_method`是具有签名的伪函数`bool (_Type const &)`调用此`unbounded_buffer`消息块，以确定它是否应接受提供的消息。
 
-##  <a name="dtor"></a> ~ unbounded_buffer
+##  <a name="dtor"></a> ~unbounded_buffer
 
 销毁`unbounded_buffer`消息块。
 
@@ -375,4 +376,3 @@ unbounded_buffer(
 [并发命名空间](concurrency-namespace.md)<br/>
 [overwrite_buffer 类](overwrite-buffer-class.md)<br/>
 [single_assignment 类](single-assignment-class.md)
-

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - reference counts
 - references, counting
 ms.assetid: b1fd4514-6de6-429f-9e60-2777c0d07a3d
-ms.openlocfilehash: f77939c25de19d619d6b4eeb2d3d6a0f3f1e5178
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fa160cb40af632321e1b14fd3ca88a4dd578b972
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50473107"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293420"
 ---
 # <a name="reference-counting"></a>引用计数
 
@@ -36,4 +36,3 @@ COM 用途`IUnknown`方法， [AddRef](/windows/desktop/api/unknwn/nf-unknwn-iun
 
 [COM 简介](../atl/introduction-to-com.md)<br/>
 [管理对象生存期通过引用计数](/windows/desktop/com/managing-object-lifetimes-through-reference-counting)
-

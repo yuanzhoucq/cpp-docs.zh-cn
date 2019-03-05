@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CMFCRibbonProgressBar [MFC], SetPos
 - CMFCRibbonProgressBar [MFC], SetRange
 ms.assetid: de3d9f2e-ed59-480e-aa7d-08a33ab36c67
-ms.openlocfilehash: 13d73b09fc9fb88736242e7d0c04c33baa795914
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 626666a8f03a8312bd26fceca745f82ad1ab89b1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608593"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285914"
 ---
 # <a name="cmfcribbonprogressbar-class"></a>CMFCRibbonProgressBar 类
 
@@ -163,7 +163,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 
 ### <a name="parameters"></a>参数
 
-[in]*pDC*<br/>
+[in] *pDC*<br/>
 
 ### <a name="return-value"></a>返回值
 
@@ -195,7 +195,7 @@ virtual void OnDraw(CDC* pDC);
 
 ### <a name="parameters"></a>参数
 
-[in]*pDC*<br/>
+[in] *pDC*<br/>
 
 ### <a name="remarks"></a>备注
 
@@ -253,7 +253,7 @@ void SetRange(
 *nMin*<br/>
 [in]指定范围的最小值。
 
-*最*<br/>
+*nMax*<br/>
 [in]指定范围的最大值。
 
 ### <a name="remarks"></a>备注

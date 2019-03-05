@@ -6,33 +6,33 @@ f1_keywords:
 helpviewer_keywords:
 - MFC ActiveX Control Wizard, control settings
 ms.assetid: 2ccaa4fc-0d52-413e-afa3-ecd474c3f6f0
-ms.openlocfilehash: 3eedf24fa4b0bb527b374dbc9f538408f20de953
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 34cc49fff88399a6c3cf5f7db71410c88e5c9bab
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548234"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289632"
 ---
 # <a name="control-settings-mfc-activex-control-wizard"></a>MFC ActiveX 控件向导控件设置
 
 使用向导的此页可以指定希望该控件的行为方式。 例如，可以基于标准 Windows 控件类型上的控件、 优化其行为和外观，或指示该控件可以充当其他控件的容器。
 
-有关如何选择效率最大化的控件的此页上的选项的详细信息，请参阅[MFC ActiveX 控件： 优化](../../mfc/mfc-activex-controls-optimization.md)。
+有关如何选择效率最大化的控件的此页上的选项的详细信息，请参阅[MFC ActiveX 控件：优化](../../mfc/mfc-activex-controls-optimization.md)。
 
 ## <a name="uielement-list"></a>UIElement 列表
 
 - **创建基于控件**
 
-   在此列表中，可以选择控件应从中继承的控件的类型。 列表是可用于控制类的一个子集`CreateWindowEx`和 commctrl.h 中指定的其他公共控件。 你的选择确定在控件的样式`PreCreateWindow`函数，在*ProjName*Ctrl.cpp 文件。 有关详细信息，请参阅[MFC ActiveX 控件： 子类化 Windows 控件](../../mfc/mfc-activex-controls-subclassing-a-windows-control.md)。
+   在此列表中，可以选择控件应从中继承的控件的类型。 列表是可用于控制类的一个子集`CreateWindowEx`和 commctrl.h 中指定的其他公共控件。 你的选择确定在控件的样式`PreCreateWindow`函数，在*ProjName*Ctrl.cpp 文件。 有关详细信息，请参阅[MFC ActiveX 控件：Windows 控件子类化](../../mfc/mfc-activex-controls-subclassing-a-windows-control.md)。
 
    |控件|描述|
    |-------------|-----------------|
    |**按钮**|Windows 按钮控件|
    |**组合框**|Windows 组合框控件|
-   |**编辑**|Windows 编辑框控件|
-   |**列表框**|Windows 列表框控件|
-   |**滚动条**|Windows 在滚动条控件|
-   |**静态**|Windows 静态控件|
+   |**EDIT**|Windows 编辑框控件|
+   |**LISTBOX**|Windows 列表框控件|
+   |**SCROLLBAR**|Windows 在滚动条控件|
+   |**STATIC**|Windows 静态控件|
    |**msctls_hotkey32**|热键常见控件|
    |**msctls_progress32**|进度栏公共控件|
    |**msctls_statusbar32**|状态栏公共控件|
@@ -98,4 +98,3 @@ ms.locfileid: "50548234"
 [MFC ActiveX 控件向导](../../mfc/reference/mfc-activex-control-wizard.md)<br/>
 [应用程序设置, MFC ActiveX 控件向导](../../mfc/reference/application-settings-mfc-activex-control-wizard.md)<br/>
 [MFC ActiveX 控件向导的控件名称](../../mfc/reference/control-names-mfc-activex-control-wizard.md)
-

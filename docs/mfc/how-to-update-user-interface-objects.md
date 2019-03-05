@@ -13,12 +13,12 @@ helpviewer_keywords:
 - commands [MFC], updating UI
 - enabling menus [MFC]
 ms.assetid: 82f09773-c978-427b-b321-05a6143b7369
-ms.openlocfilehash: 2e16d912d0fb9ac195df80846d5bd740d86e30ec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0dee9bb48c11cf061af60ebaf9a80c0123d339be
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566057"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289697"
 ---
 # <a name="how-to-update-user-interface-objects"></a>如何：更新用户界面对象
 
@@ -41,4 +41,3 @@ ms.locfileid: "50566057"
 ## <a name="see-also"></a>请参阅
 
 [菜单](../mfc/menus-mfc.md)
-

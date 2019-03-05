@@ -11,12 +11,12 @@ helpviewer_keywords:
 - events [MFC], ActiveX controls
 - BEGIN_EVENTSINK_MAP macro
 ms.assetid: f9c106db-052f-4e32-82ad-750646aa760b
-ms.openlocfilehash: 5deff0a50de813cc5faa43a86e591d3003a3c03e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8087d84d2203e4f910200acdd1b00e58d14f920e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50659623"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293558"
 ---
 # <a name="activex-control-containers-handling-events-from-an-activex-control"></a>ActiveX 控件容器：处理 ActiveX 控件中的事件
 
@@ -70,4 +70,3 @@ ms.locfileid: "50659623"
 ## <a name="see-also"></a>请参阅
 
 [ActiveX 控件容器](../mfc/activex-control-containers.md)
-
