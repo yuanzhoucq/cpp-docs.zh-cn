@@ -15,12 +15,12 @@ helpviewer_keywords:
 - CLSID_CPicturePropPage [MFC]
 - MFC ActiveX controls [MFC], property pages
 ms.assetid: 22638d86-ff3e-4124-933e-54b7c2a25968
-ms.openlocfilehash: f31bf245e35231b6cc62497e7bbc57ff7f0e6af1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b73a027422cfe9cbf03afece400c1b513cace151
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50545387"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304699"
 ---
 # <a name="mfc-activex-controls-using-stock-property-pages"></a>MFC ActiveX 控件：使用常用属性页
 
@@ -33,7 +33,7 @@ ms.locfileid: "50545387"
 
 - [MFC ActiveX 控件：属性页](../mfc/mfc-activex-controls-property-pages.md)
 
-- [MFC ActiveX 控件：添加另一自定义属性页](../mfc/mfc-activex-controls-adding-another-custom-property-page.md)
+- [MFC ActiveX 控件：添加另一个自定义属性页](../mfc/mfc-activex-controls-adding-another-custom-property-page.md)
 
 MFC 还提供了三个常用属性页，可用于 ActiveX 控件： `CLSID_CColorPropPage`， `CLSID_CFontPropPage`，和`CLSID_CPicturePropPage`。 这些页面分别显示用于常用颜色、 字体和图片属性的用户界面。
 
@@ -55,4 +55,3 @@ MFC 还提供了三个常用属性页，可用于 ActiveX 控件： `CLSID_CColo
 
 [MFC ActiveX 控件](../mfc/mfc-activex-controls.md)<br/>
 [MFC ActiveX 控件：添加常用属性](../mfc/mfc-activex-controls-adding-stock-properties.md)
-

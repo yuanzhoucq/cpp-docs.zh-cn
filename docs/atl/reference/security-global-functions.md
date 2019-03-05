@@ -16,12 +16,12 @@ helpviewer_keywords:
 - ACL object global functions
 - security IDs [C++]
 ms.assetid: 6a584bfe-16b7-47f4-8439-9c789c41567a
-ms.openlocfilehash: 95074860c5fc5bef02852600b51751e9a028465a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2c9a6fd31850ed137167b6987ddf2f83f34c64a1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50555228"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295872"
 ---
 # <a name="security-global-functions"></a>安全全局函数
 
@@ -65,7 +65,7 @@ inline bool AtlGetDacl(
 *hObject*<br/>
 要为其检索安全信息的对象的句柄。
 
-*对象类型*<br/>
+*ObjectType*<br/>
 指定一个介于[SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-_se_object_type)指示的标识的对象类型的枚举*hObject*参数。
 
 *pDacl*<br/>
@@ -99,7 +99,7 @@ inline bool AtlSetDacl(
 *hObject*<br/>
 要为其设置安全信息的对象的句柄。
 
-*对象类型*<br/>
+*ObjectType*<br/>
 指定一个介于[SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-_se_object_type)指示的标识的对象类型的枚举*hObject*参数。
 
 *rDacl*<br/>
@@ -138,7 +138,7 @@ inline bool AtlGetGroupSid(
 *hObject*<br/>
 要从其检索安全信息的对象的句柄。
 
-*对象类型*<br/>
+*ObjectType*<br/>
 指定一个介于[SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-_se_object_type)指示的标识的对象类型的枚举*hObject*参数。
 
 *pSid*<br/>
@@ -171,7 +171,7 @@ inline bool AtlSetGroupSid(
 *hObject*<br/>
 要为其设置安全信息的对象的句柄。
 
-*对象类型*<br/>
+*ObjectType*<br/>
 指定一个介于[SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-_se_object_type)指示的标识的对象类型的枚举*hObject*参数。
 
 *rSid*<br/>
@@ -204,7 +204,7 @@ inline bool AtlGetOwnerSid(
 *hObject*<br/>
 要从其检索安全信息的对象的句柄。
 
-*对象类型*<br/>
+*ObjectType*<br/>
 指定一个介于[SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-_se_object_type)指示的标识的对象类型的枚举*hObject*参数。
 
 *pSid*<br/>
@@ -237,7 +237,7 @@ inline bool AtlSetOwnerSid(
 *hObject*<br/>
 要为其设置安全信息的对象的句柄。
 
-*对象类型*<br/>
+*ObjectType*<br/>
 指定一个介于[SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-_se_object_type)指示的标识的对象类型的枚举*hObject*参数。
 
 *rSid*<br/>
@@ -271,7 +271,7 @@ inline bool AtlGetSacl(
 *hObject*<br/>
 要从其检索安全信息的对象的句柄。
 
-*对象类型*<br/>
+*ObjectType*<br/>
 指定一个介于[SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-_se_object_type)指示的标识的对象类型的枚举*hObject*参数。
 
 *pSacl*<br/>
@@ -313,7 +313,7 @@ inline bool AtlSetSacl(
 *hObject*<br/>
 要为其设置安全信息的对象的句柄。
 
-*对象类型*<br/>
+*ObjectType*<br/>
 指定一个介于[SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-_se_object_type)指示的标识的对象类型的枚举*hObject*参数。
 
 *rSacl*<br/>
@@ -362,7 +362,7 @@ bool bRequestNeededPrivileges = true) throw(...);
 *pszObjectName*<br/>
 指向一个以 null 结尾的字符串，指定要从其检索安全信息的对象的名称。
 
-*对象类型*<br/>
+*ObjectType*<br/>
 指定一个介于[SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-_se_object_type)指示的标识的对象类型的枚举*pszObjectName*参数。
 
 *pSecurityDescriptor*<br/>

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - COleTemplateServer [MFC], Unregister
 - COleTemplateServer [MFC], UpdateRegistry
 ms.assetid: 47a2887d-8162-4993-a842-a784177c7f5c
-ms.openlocfilehash: f66936c597b8c595dc21ae6994d7af0477e8d2aa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bcc79f781be3a0292398e4f211ea55f5403b6b8f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528643"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302875"
 ---
 # <a name="coletemplateserver-class"></a>COleTemplateServer 类
 
@@ -53,7 +53,7 @@ class COleTemplateServer : public COleObjectFactory
 
 `COleTemplateServer` 重写`OnCreateInstance`成员函数定义的`COleObjectFactory`。 由框架来创建适当类型的 c + + 对象调用此成员函数。
 
-有关服务器的详细信息，请参阅文章[服务器： 实现服务器](../../mfc/servers-implementing-a-server.md)。
+有关服务器的详细信息，请参阅文章[服务器：实现服务器](../../mfc/servers-implementing-a-server.md)。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 

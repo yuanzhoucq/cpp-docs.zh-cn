@@ -35,12 +35,12 @@ f1_keywords:
 helpviewer_keywords:
 - CUrl class
 ms.assetid: b3894d34-47b9-4961-9719-4197153793da
-ms.openlocfilehash: ed42461af50fa83ca142127587d334cc7e75d914
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 913365e2b20015b22480dfd364d75b2be3c6355b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471508"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295651"
 ---
 # <a name="curl-class"></a>CUrl 类
 
@@ -62,7 +62,7 @@ class CUrl
 |名称|描述|
 |----------|-----------------|
 |[CUrl::CUrl](#curl)|构造函数。|
-|[CUrl:: ~ CUrl](#dtor)|析构函数。|
+|[CUrl::~CUrl](#dtor)|析构函数。|
 
 ### <a name="public-methods"></a>公共方法
 
@@ -122,7 +122,7 @@ class CUrl
 
 - 主机名:"`www.microsoft.com`"
 
-- 端口号： 80
+- 端口号：80
 
 - UrlPath:"visualc/stuff.htm"
 
@@ -147,17 +147,17 @@ inline BOOL Canonicalize(DWORD dwFlags = 0) throw();
 *dwFlags*<br/>
 控制规范化标志。 如果未不指定任何标志 (*dwFlags* = 0)，该方法将所有不安全字符和 meta 序列 (如\\。，\...，和\\...) 进行转义序列。 *dwFlags*可以是下列值之一：
 
-- ATL_URL_BROWSER_MODE： 不会进行编码或解码字符后"#"或""并不会删除尾随空格后""。 如果未指定此值，编码整个 URL，并删除尾随空格。
+- ATL_URL_BROWSER_MODE:不会进行编码或解码字符后"#"或""并不会删除尾随空格后""。 如果未指定此值，编码整个 URL，并删除尾随空格。
 
-- ATL_URL _DECODE： 将所有 %xx 序列都转换为字符，其中包括转义序列之前分析该 URL。
+- ATL_URL _DECODE:将所有 %xx 序列都转换为字符，其中包括转义序列之前分析该 URL。
 
-- ATL_URL _ENCODE_PERCENT： 将遇到任何百分号编码。 默认情况下，不进行编码百分号。
+- ATL_URL _ENCODE_PERCENT:将遇到任何百分号编码。 默认情况下，不进行编码百分号。
 
-- ATL_URL _ENCODE_SPACES_ONLY： 对仅空格进行编码。
+- ATL_URL _ENCODE_SPACES_ONLY:对仅空格进行编码。
 
-- ATL_URL _NO_ENCODE： 不转换不安全字符进行转义序列。
+- ATL_URL _NO_ENCODE:不转换不安全字符进行转义序列。
 
-- ATL_URL _NO_META： 不会删除元序列 (如"。"和"..") 从该 URL。
+- ATL_URL _NO_META:不会删除元序列 (如"。"和"..") 从该 URL。
 
 ### <a name="return-value"></a>返回值
 
@@ -225,7 +225,7 @@ inline BOOL CreateUrl(
 
 此方法将其各个字段追加才能构建完整的 URL 字符串，使用以下格式：
 
-**\<方案 >://\<用户 >:\<传递 >\@\<域 >:\<端口 >\<路径 >\<额外 >**
+**\<scheme>://\<user>:\<pass>\@\<domain>:\<port>\<path>\<extra>**
 
 调用此方法时*pdwMaxLength*参数最初应包含引用的字符串缓冲区的最大长度*lpszUrl*参数。 值*pdwMaxLength*参数将更新与 URL 字符串的实际长度。
 
@@ -246,10 +246,10 @@ CUrl(const CUrl& urlThat) throw();
 
 ### <a name="parameters"></a>参数
 
-*Url*<br/>
+*urlThat*<br/>
 `CUrl`对象，若要复制到创建的 URL。
 
-##  <a name="dtor"></a>  CUrl:: ~ CUrl
+##  <a name="dtor"></a>  CUrl::~CUrl
 
 析构函数。
 
@@ -447,7 +447,7 @@ CUrl& operator= (const CUrl& urlThat) throw();
 
 ### <a name="parameters"></a>参数
 
-*Url*<br/>
+*urlThat*<br/>
 `CUrl`对象要复制到当前的对象。
 
 ### <a name="return-value"></a>返回值

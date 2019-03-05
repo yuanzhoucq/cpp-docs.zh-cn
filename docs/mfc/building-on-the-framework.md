@@ -7,12 +7,12 @@ helpviewer_keywords:
 - applications [MFC]
 - MFC, application development
 ms.assetid: 883f0f19-866f-4221-8a3d-5607941dc8d0
-ms.openlocfilehash: 511d66821bf23c149fafb0bfd397929077f020ac
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 989aecdfafc0d57bfb28874ee84dbf40f8fefc30
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496234"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298329"
 ---
 # <a name="building-on-the-framework"></a>基于框架生成
 
@@ -33,4 +33,3 @@ ms.locfileid: "50496234"
 ## <a name="see-also"></a>请参阅
 
 [常规 MFC 主题](../mfc/general-mfc-topics.md)
-

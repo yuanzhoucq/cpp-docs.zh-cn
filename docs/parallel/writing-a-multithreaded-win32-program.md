@@ -14,12 +14,12 @@ helpviewer_keywords:
 - mutex [C++]
 - threading [C++], thread stacks
 ms.assetid: 1415f47d-417f-4f42-949b-946fb28aab0e
-ms.openlocfilehash: c7d9790cfee39fbddd9ab545d48fa375d56f3a05
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c8536505882ca9a87aec385ca1c42d652ea84ff7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50561325"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326527"
 ---
 # <a name="writing-a-multithreaded-win32-program"></a>编写多线程 Win32 程序
 
@@ -28,7 +28,7 @@ ms.locfileid: "50561325"
 ##  <a name="_core_sharing_common_resources_between_threads"></a> 常见线程之间共享资源
 
 > [!NOTE]
->  从 MFC 的角度的类似讨论，请参阅[多线程处理： 编程提示](multithreading-programming-tips.md)并[多线程处理： 何时使用同步类](multithreading-when-to-use-the-synchronization-classes.md)。
+>  从 MFC 的角度的类似讨论，请参阅[多线程处理：编程提示](multithreading-programming-tips.md)和[多线程处理：何时使用同步类](multithreading-when-to-use-the-synchronization-classes.md)。
 
 每个线程都具有其自己的堆栈并注册其自己的 CPU 的副本。 在进程中的所有线程共享其他资源，如文件、 静态数据和堆内存。 使用这些常用资源的线程必须同步。 Win32 提供多种方式来同步资源，包括信号量、 临界区、 事件和互斥体。
 

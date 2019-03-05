@@ -14,16 +14,16 @@ helpviewer_keywords:
 - containers [MFC], OLE container applications
 - server applications [MFC]
 ms.assetid: dafbb31d-096c-4654-b774-12900d832919
-ms.openlocfilehash: 3c696f1e99a73cbce6f1ff749de937297b28d88b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c154562e58cf8f37d77df61556fe25b19ca54c70
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50616920"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304816"
 ---
 # <a name="ole-background-containers-and-servers"></a>OLE 后台：容器和服务器
 
-容器应用程序是可将嵌入项或者链接项并入自己的文档中的应用程序。 管理容器应用程序的文档必须能够存储和显示 OLE 文档组件，以及创建应用程序本身的数据。 容器应用程序还必须允许用户以插入新项或通过激活服务器应用程序在必要时编辑现有项。 容器应用程序的用户界面要求一文中列出[容器： 用户界面问题](../mfc/containers-user-interface-issues.md)。
+容器应用程序是可将嵌入项或者链接项并入自己的文档中的应用程序。 管理容器应用程序的文档必须能够存储和显示 OLE 文档组件，以及创建应用程序本身的数据。 容器应用程序还必须允许用户以插入新项或通过激活服务器应用程序在必要时编辑现有项。 一文中列出了的容器应用程序的用户界面要求[容器：用户界面问题](../mfc/containers-user-interface-issues.md)。
 
 服务器应用程序或组件应用程序，可以创建供容器应用程序使用的 OLE 文档组件的应用程序。 服务器应用程序通常支持拖放或其数据复制到剪贴板，以便容器应用程序可以插入为嵌入或链接项的数据。 应用程序可以是一个容器和服务器。
 
@@ -41,4 +41,3 @@ ms.locfileid: "50616920"
 [服务器](../mfc/servers.md)<br/>
 [容器：客户端项](../mfc/containers-client-items.md)<br/>
 [服务器：服务器项](../mfc/servers-server-items.md)
-

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - lists [MFC], image
 - CImageList class [MFC], manipulating
 ms.assetid: 043418f8-077e-4dce-b8bb-2b7b0d7b5156
-ms.openlocfilehash: 7ec641f1e7090e27edd367203b430b932ede52a2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1e86961980c91ade47a3d6510dec5c04ac36cffb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643763"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304842"
 ---
 # <a name="manipulating-image-lists"></a>操作图像列表
 
@@ -31,4 +31,3 @@ ms.locfileid: "50643763"
 
 [使用 CImageList](../mfc/using-cimagelist.md)<br/>
 [控件](../mfc/controls-mfc.md)
-

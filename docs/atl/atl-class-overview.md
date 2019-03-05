@@ -7,12 +7,12 @@ helpviewer_keywords:
 - classes [C++], ATL
 - ATL, class reference
 ms.assetid: c38ac93d-c3a2-4ce7-8153-f1d34c0f0fa6
-ms.openlocfilehash: df5ae8da3bb8e192737a06396ab71ba138562b98
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9d0e74a02a114392a3fc686142f84a9a807d1537
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50529648"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288046"
 ---
 # <a name="atl-class-overview"></a>ATL 类概述
 
@@ -27,7 +27,7 @@ ms.locfileid: "50529648"
 |[复合控件](../atl/composite-controls-classes.md)|[属性和属性页](../atl/properties-and-property-pages-classes.md)|
 |[连接点](../atl/connection-points-classes.md)|[注册表支持](../atl/registry-support-classes.md)|
 |[控件包含](../atl/control-containment-classes.md)|[正在运行的对象](../atl/running-objects-classes.md)|
-|[控件： 常规支持](../atl/controls-general-support-classes.md)|[安全性](../atl/security-classes.md)|
+|[控件：一般支持](../atl/controls-general-support-classes.md)|[安全性](../atl/security-classes.md)|
 |[数据传输](../atl/data-transfer-classes.md)|[服务提供商支持](../atl/service-provider-support-classes.md)|
 |[数据类型](../atl/data-types-classes.md)|[站点信息](../atl/site-information-classes.md)|
 |[调试和异常](../atl/debugging-and-exceptions-classes.md)|[字符串和文本](../atl/string-and-text-classes.md)|
@@ -48,4 +48,3 @@ ms.locfileid: "50529648"
 [全局变量](../atl/reference/atl-global-variables.md)<br/>
 [宏](../atl/reference/atl-macros.md)<br/>
 [Typedefs](../atl/reference/atl-typedefs.md)
-
