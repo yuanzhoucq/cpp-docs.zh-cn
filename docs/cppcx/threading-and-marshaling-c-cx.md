@@ -8,12 +8,12 @@ helpviewer_keywords:
 - agility, C++/CX
 - C++/CX, threading issues
 ms.assetid: 83e9ca1d-5107-4194-ae6f-e01bd928c614
-ms.openlocfilehash: faf541a0705de3e0e3d1b795d1abbdc2e9707974
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ddf59e8df82b1ec98f4e1fabe9917027bdf0c75b
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50582625"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426753"
 ---
 # <a name="threading-and-marshaling-ccx"></a>线程处理和封送处理 (C++/CX)
 
@@ -61,7 +61,7 @@ ref class MyOptions
 
 > `Warning 1 warning C4451: 'Platform::Agile<T>::_object' : Usage of ref class 'Windows::Security::Credentials::UI::CredentialPickerOptions' inside this context can lead to invalid marshaling of object across contexts. Consider using 'Platform::Agile<Windows::Security::Credentials::UI::CredentialPickerOptions>' instead`
 
-在成员范围或全局范围添加对于具有“标准”封送处理行为的对象的引用时，编译器会发出警告来建议您将该类型包在 `Platform::Agile<T>`中： `Consider using 'Platform::Agile<Windows::Security::Credentials::UI::CredentialPickerOptions>' instead` 如果使用 `Agile<T>`，可以像使用任何其他敏捷类一样使用该类。 在这些情况下使用 `Platform::Agile<T>` ：
+添加引用时，在成员范围或全局范围 — 到具有"标准"封送处理行为的对象，编译器会发出警告，建议您将在该类型`Platform::Agile<T>`:`Consider using 'Platform::Agile<Windows::Security::Credentials::UI::CredentialPickerOptions>' instead` 如果使用`Agile<T>`，像任何其他敏捷类一样，可以使用该类。 在这些情况下使用 `Platform::Agile<T>` ：
 
 - 在全局范围内声明非敏捷变量。
 
@@ -124,5 +124,5 @@ public ref class MySTAClass
 
 ## <a name="see-also"></a>请参阅
 
-[ThreadingModel](https://msdn.microsoft.com/library/windows/apps/xaml/windows.foundation.metadata.threadingmodel.aspx)<br/>
-[MarshallingBehavior](https://msdn.microsoft.com/library/windows/apps/xaml/windows.foundation.metadata.marshalingbehaviorattribute.aspx)
+[ThreadingModel](/uwp/api/Windows.Foundation.Metadata.ThreadingModel)<br/>
+[MarshallingBehavior](/uwp/api/windows.foundation.metadata.marshalingbehaviorattribute)

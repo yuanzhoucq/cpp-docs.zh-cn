@@ -2,12 +2,12 @@
 title: 选择 .netmodule 输入文件的格式
 ms.date: 11/04/2016
 ms.assetid: 4653d1bd-300f-4083-86f5-d1a06f44e61c
-ms.openlocfilehash: 92f7aafa102a8591192f4394aee62afe86bb3549
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ed492e47c09c05fc8ce2af3e19822cc5dde47b63
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50444312"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57420045"
 ---
 # <a name="choosing-the-format-of-netmodule-input-files"></a>选择 .netmodule 输入文件的格式
 

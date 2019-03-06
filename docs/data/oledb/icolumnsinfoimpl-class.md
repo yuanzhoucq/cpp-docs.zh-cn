@@ -27,16 +27,16 @@ helpviewer_keywords:
 - GetColumnInfo method
 - MapColumnIDs method
 ms.assetid: ba74c1c5-2eda-4452-8b57-84919fa0d066
-ms.openlocfilehash: 67052bdc5d49673146c036167c027d1efd882495
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 802c105e7795cdce604e72983f4fda549abcd5fb
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556498"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57418264"
 ---
 # <a name="icolumnsinfoimpl-class"></a>IColumnsInfoImpl 类
 
-提供的实现[IColumnsInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms724541(v=vs.85))接口。
+提供的实现[IColumnsInfo](/previous-versions/windows/desktop/ms724541(v=vs.85))接口。
 
 ## <a name="syntax"></a>语法
 
@@ -69,7 +69,7 @@ class ATL_NO_VTABLE IColumnsInfoImpl :
 
 针对行集和命令必需的接口。 若要修改的提供程序的行为`IColumnsInfo`实现中，您需要修改提供程序列映射。
 
-## <a name="getcolumninfo"></a> Icolumnsinfoimpl:: Getcolumninfo
+## <a name="getcolumninfo"></a> IColumnsInfoImpl::GetColumnInfo
 
 返回所需的大多数使用者的列元数据。
 
@@ -83,9 +83,9 @@ STDMETHOD (GetColumnInfo)(DBORDINAL* pcColumns,
 
 #### <a name="parameters"></a>参数
 
-请参阅[icolumnsinfo:: Getcolumninfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms722704(v=vs.85))中*OLE DB 程序员参考*。
+请参阅[icolumnsinfo:: Getcolumninfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\))中*OLE DB 程序员参考*。
 
-## <a name="mapcolumnids"></a> Icolumnsinfoimpl:: Mapcolumnids
+## <a name="mapcolumnids"></a> IColumnsInfoImpl::MapColumnIDs
 
 在由指定的列 Id 标识的行集返回的列序号的数组。
 
@@ -99,7 +99,7 @@ STDMETHOD (MapColumnIDs)(DBORDINAL cColumnIDs,
 
 #### <a name="parameters"></a>参数
 
-请参阅[IColumnsInfo::MapColumnIDs](https://docs.microsoft.com/previous-versions/windows/desktop/ms714200(v=vs.85))中*OLE DB 程序员参考*。
+请参阅[IColumnsInfo::MapColumnIDs](/previous-versions/windows/desktop/ms714200(v=vs.85))中*OLE DB 程序员参考*。
 
 ## <a name="see-also"></a>请参阅
 

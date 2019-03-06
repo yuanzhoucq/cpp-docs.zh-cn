@@ -10,12 +10,12 @@ helpviewer_keywords:
 - FU compiler option [C++]
 - /FU compiler option [C++]
 ms.assetid: 698f8603-457f-435a-baff-5ac9243d6ca1
-ms.openlocfilehash: ecd9290336cfd6efd183bdd701f1d447b7ddaf2b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1a035be2080d9fe407799122f804668e0fc3ce76
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492083"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413155"
 ---
 # <a name="fu-name-forced-using-file"></a>/FU（命名强制 #using 文件）
 
@@ -23,7 +23,7 @@ ms.locfileid: "50492083"
 
 ## <a name="syntax"></a>语法
 
-> **/FU** *文件*
+> **/FU** *file*
 
 ## <a name="arguments"></a>自变量
 

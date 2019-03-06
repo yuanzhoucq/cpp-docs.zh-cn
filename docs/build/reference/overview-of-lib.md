@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - LIB [C++], modes
 ms.assetid: e997d423-f574-434f-8b56-25585d137ee0
-ms.openlocfilehash: 03209bc409453cab1769606cb972f4572d3617bd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a66f78d225a5899b53a931c7eb6a0564de689ca1
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548494"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423282"
 ---
 # <a name="overview-of-lib"></a>LIB 概述
 
@@ -36,17 +36,17 @@ LIB 创建标准库、 导入库和导出的文件可用于[链接](../../build/
 |**/DEF**|创建导入库和导出文件。<br/><br/>有关详细信息请参阅[生成导入库和导出文件](../../build/reference/building-an-import-library-and-export-file.md)。|
 |**/ERRORREPORT**|   内部错误的 lib.exe 向 Microsoft 发送信息。<br/><br/>有关详细信息请参阅[运行 LIB](../../build/reference/running-lib.md)。|
 |**/EXPORT**|   从你的程序中导出函数。<br/><br/>有关详细信息请参阅[生成导入库和导出文件](../../build/reference/building-an-import-library-and-export-file.md)。|
-|**/ 提取**|   创建一个包含一份现有库的成员的对象 (.obj) 文件。<br/><br/>有关详细信息请参阅[提取库成员](../../build/reference/extracting-a-library-member.md)。|
+|**/EXTRACT**|   创建一个包含一份现有库的成员的对象 (.obj) 文件。<br/><br/>有关详细信息请参阅[提取库成员](../../build/reference/extracting-a-library-member.md)。|
 |**/INCLUDE**|   将符号添加到符号表。<br/><br/>有关详细信息请参阅[生成导入库和导出文件](../../build/reference/building-an-import-library-and-export-file.md)。|
 |**/LIBPATH**|   重写环境库路径。<br/><br/>有关详细信息请参阅[管理库](../../build/reference/managing-a-library.md)。|
-|**/ 列表**|   到标准输出将显示有关输出库的信息。<br/><br/>有关详细信息请参阅[管理库](../../build/reference/managing-a-library.md)。|
+|**/LIST**|   到标准输出将显示有关输出库的信息。<br/><br/>有关详细信息请参阅[管理库](../../build/reference/managing-a-library.md)。|
 |**/LTCG**|   导致要生成使用链接时间代码生成库。<br/><br/>有关详细信息请参阅[运行 LIB](../../build/reference/running-lib.md)。|
 |**/MACHINE**|   指定程序的目标平台。<br/><br/>有关详细信息请参阅[运行 LIB](../../build/reference/running-lib.md)。|
-|**/ 名称**|   当生成导入库，指定正在为其生成导入库的 DLL 的名称。<br/><br/>有关详细信息请参阅[管理库](../../build/reference/managing-a-library.md)。|
+|**/NAME**|   当生成导入库，指定正在为其生成导入库的 DLL 的名称。<br/><br/>有关详细信息请参阅[管理库](../../build/reference/managing-a-library.md)。|
 |**/NODEFAULTLIB**|   从其解析外部引用时搜索的库列表中删除一个或多个默认库。<br/><br/>有关详细信息请参阅[管理库](../../build/reference/managing-a-library.md)。|
 |**/NOLOGO**|   取消显示 LIB 版权消息和版本，并防止回显命令文件。<br/><br/>有关详细信息请参阅[运行 LIB](../../build/reference/running-lib.md)。|
 |**/OUT**|   重写默认输出文件名。<br/><br/>有关详细信息请参阅[管理库](../../build/reference/managing-a-library.md)。|
-|**/ 删除**|   忽略输出库中的对象。<br/><br/>有关详细信息请参阅[管理库](../../build/reference/managing-a-library.md)。|
+|**/REMOVE**|   忽略输出库中的对象。<br/><br/>有关详细信息请参阅[管理库](../../build/reference/managing-a-library.md)。|
 |**/SUBSYSTEM**|   告知操作系统如何运行通过链接到输出库创建的程序。<br/><br/>有关详细信息请参阅[管理库](../../build/reference/managing-a-library.md)。|
 |**/VERBOSE**|   显示有关进度的会话，包括要添加的.obj 文件的名称的详细信息。<br/><br/>有关详细信息请参阅[运行 LIB](../../build/reference/running-lib.md)。|
 |**/WX**|   将警告视为错误。<br/><br/>有关详细信息请参阅[运行 LIB](../../build/reference/running-lib.md)。|

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - browse information files (.bsc)
 - browse information files (.bsc), creating
 ms.assetid: b5c12832-51f6-4953-8044-4264dd0fb242
-ms.openlocfilehash: d620c7170ef5e84a05496af6e74d3a22f594749b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 02f2107469e2fbbc4ea3591e1211e600d16fb9e9
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50469961"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413012"
 ---
 # <a name="building-browse-information-files-overview"></a>生成浏览信息文件：概述
 

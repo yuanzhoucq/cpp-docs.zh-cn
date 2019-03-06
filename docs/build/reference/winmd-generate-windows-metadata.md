@@ -4,18 +4,18 @@ ms.date: 11/04/2016
 f1_keywords:
 - VC.Project.VCLinkerTool.GenerateWindowsMetadata
 ms.assetid: bcfb4901-411e-4c9e-9f78-23028b6e5fcc
-ms.openlocfilehash: 3a59dd770d9429f23a4f401c6e1f5b13b9f743ef
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 83d22a0114b26f53fa9df9d2470c71cd80465d64
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656100"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426676"
 ---
 # <a name="winmd-generate-windows-metadata"></a>/WINMD（生成 Windows 元数据）
 
 启用 Windows 运行时元数据 (.winmd) 文件的生成。
 
-> **/ WINMD**\[**:**{**否**\|**仅**}]
+> **/WINMD**\[**:**{**NO**\|**ONLY**}]
 
 ## <a name="arguments"></a>自变量
 
@@ -25,7 +25,7 @@ ms.locfileid: "50656100"
 **/WINMD:NO**<br/>
 链接器仅生成二进制可执行文件，但不生成 .winmd 文件。
 
-**/WINMD： 仅**<br/>
+**/WINMD:ONLY**<br/>
 链接器仅生成 .winmd 文件，但不生成二进制可执行文件。
 
 ## <a name="remarks"></a>备注
@@ -44,7 +44,7 @@ ms.locfileid: "50656100"
 
 ## <a name="see-also"></a>请参阅
 
-[演练： 创建简单的 Windows 运行时组件，并从 JavaScript 调用它](/windows/uwp/winrt-components/walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript)<br/>
+[演练：创建一个简单的 Windows 运行时组件并从 JavaScript 调用它](/windows/uwp/winrt-components/walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript)<br/>
 [Microsoft 接口定义语言 3.0 简介](/uwp/midl-3/intro)<br/>
 [/WINMDFILE（指定 winmd 文件）](winmdfile-specify-winmd-file.md)<br/>
 [/WINMDFILE（指定 winmd 密钥文件）](winmdkeyfile-specify-winmd-key-file.md)<br/>

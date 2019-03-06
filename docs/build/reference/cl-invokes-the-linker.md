@@ -10,12 +10,12 @@ helpviewer_keywords:
 - cl.exe compiler [C++], compiling without linking
 - cl.exe compiler [C++], controlling linker
 ms.assetid: eae47ef7-09eb-40c9-b318-7c714cd452fc
-ms.openlocfilehash: e071209bd09fea17082379bf3f2486866b52c548
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4e65801fcddef739f3fabe88b2b940602fde965a
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447198"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57412726"
 ---
 # <a name="cl-invokes-the-linker"></a>CL 调用链接器
 
@@ -32,7 +32,7 @@ CL 编译除非使用 /c 选项后会自动调用链接器。 CL 将传递给链
 
 ## <a name="example"></a>示例
 
-假设您正在编译三个 C 源代码文件： MAIN.c、 MOD1.c 和 MOD2.c。 每个文件包含对不同文件中定义的函数的调用：
+假设您正在编译三个 C 源文件：MAIN.c、 MOD1.c 和 MOD2.c。 每个文件包含对不同文件中定义的函数的调用：
 
 - MAIN.c 调用函数`func1`MOD1.c 和函数中`func2`MOD2.c 中。
 

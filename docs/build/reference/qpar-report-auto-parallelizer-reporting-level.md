@@ -2,12 +2,12 @@
 title: /Qpar-report（自动并行化程序报告等级）
 ms.date: 11/04/2016
 ms.assetid: 562673b9-02da-4bf8-bb64-70bc25ef4651
-ms.openlocfilehash: 4f3f496deb9f87d4f33f5e36832bd46405a482b0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4ab14f890d888664b2847f3e3d4b193d7c77da1a
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50550028"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57419902"
 ---
 # <a name="qpar-report-auto-parallelizer-reporting-level"></a>/Qpar-report（自动并行化程序报告等级）
 
@@ -21,10 +21,10 @@ ms.locfileid: "50550028"
 
 ## <a name="remarks"></a>备注
 
-**/Qpar-报告： 1**<br/>
+**/Qpar-report:1**<br/>
 为并行化的循环输出提供相关信息的消息。
 
-**/Qpar-报表： 2**<br/>
+**/Qpar-report:2**<br/>
 为并行化的循环和未并行化的循环输出提供相关信息的消息以及原因代码。
 
 消息报告为 stdout。 如果未报告任何提供相关信息的消息，则该代码不包含任何循环，或者报告级别未设置为报告未并行化的循环。 有关原因代码和消息的详细信息，请参阅[矢量化程序和并行化程序消息](../../error-messages/tool-errors/vectorizer-and-parallelizer-messages.md)。

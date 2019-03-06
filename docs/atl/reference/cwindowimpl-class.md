@@ -18,12 +18,12 @@ helpviewer_keywords:
 - CWindowImpl class
 - subclassing windows, ATL
 ms.assetid: 02eefd45-a0a6-4d1b-99f6-dbf627e2cc2f
-ms.openlocfilehash: 2e4a9b585ed653927c87eaf82dfae8ce8f982dfc
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 96807debc7a3af5eca5d7a0c17a7728431733325
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57290698"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57417926"
 ---
 # <a name="cwindowimpl-class"></a>CWindowImpl 类
 
@@ -149,7 +149,7 @@ HWND Create(
 [in]父级或所有者窗口的句柄。
 
 *rect*<br/>
-[in]一个[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构，它指定窗口的位置。 `RECT`可以由指针或按引用传递。
+[in]一个[RECT](/previous-versions/dd162897\(v=vs.85\))结构，它指定窗口的位置。 `RECT`可以由指针或按引用传递。
 
 *szWindowName*<br/>
 [in]指定窗口的名称。 默认值为 NULL。

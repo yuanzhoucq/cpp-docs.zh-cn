@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CSpinButtonCtrl [MFC], SetPos
 - CSpinButtonCtrl [MFC], SetRange
 ms.assetid: 509bfd76-1c5a-4af6-973f-e133c0b87734
-ms.openlocfilehash: 3c973d92550469804a5389b84f53005e4f2c154f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: ff61fb4f918e25d430fc31ae55c3ad8794ce39f1
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57290425"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57425024"
 ---
 # <a name="cspinbuttonctrl-class"></a>CSpinButtonCtrl 类
 
@@ -120,7 +120,7 @@ virtual BOOL Create(
 指定数值调节钮 button 控件的样式。 应用于控件的数值调节钮按钮控件样式的任意组合。 这些样式中所述[Up-down 控件样式](/windows/desktop/Controls/up-down-control-styles)Windows SDK 中。
 
 *rect*<br/>
-指定数值调节钮 button 控件的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构
+指定数值调节钮 button 控件的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT](/previous-versions/dd162897\(v=vs.85\))结构
 
 *pParentWnd*<br/>
 数值调节钮按钮控件的父窗口，通常一个指向`CDialog`。 它不能为 NULL。
@@ -160,7 +160,7 @@ virtual BOOL CreateEx(
 指定数值调节钮 button 控件的样式。 应用于控件的数值调节钮按钮控件样式的任意组合。 这些样式中所述[Up-down 控件样式](/windows/desktop/Controls/up-down-control-styles)Windows SDK 中。
 
 *rect*<br/>
-对引用[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构的结构描述的大小和窗口的工作区中创建的位置*pParentWnd*。
+对引用[RECT](/previous-versions/dd162897\(v=vs.85\))结构的结构描述的大小和窗口的工作区中创建的位置*pParentWnd*。
 
 *pParentWnd*<br/>
 指向控件的父级的窗口的指针。

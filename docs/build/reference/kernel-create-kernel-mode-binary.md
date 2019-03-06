@@ -5,12 +5,12 @@ f1_keywords:
 - /kernel
 - /kernel-
 ms.assetid: 6d7fdff0-c3d1-4b78-9367-4da588ce8b05
-ms.openlocfilehash: 0df133922af90a91d5c1ae1ad3caebe11d854b8f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 33a0f4019d8ad278f5850c499ee552ee72279455
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509652"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414747"
 ---
 # <a name="kernel-create-kernel-mode-binary"></a>/kernel（创建内核模式二进制）
 
@@ -40,9 +40,10 @@ ms.locfileid: "50509652"
 
 下表列出了编译器行为发生变化时 **/kernel**指定。
 
-|行为类型|**/kernel**行为|
+|行为类型|**/kernel** Behavior|
 |-------------------|---------------------------|
-|C++ 异常处理|禁用。 `throw` 和 `try` 关键字的所有实例都发出了编译器错误（异常规范 `throw()` 除外）。 否 **/EH**选项将与兼容 **/kernel**，除 **/EH-**。|
+|C++ 异常处理|禁用。 
+  `throw` 和 `try` 关键字的所有实例都发出了编译器错误（异常规范 `throw()` 除外）。 否 **/EH**选项将与兼容 **/kernel**，除 **/EH-**。|
 |RTTI|禁用。 除非以静态方式使用 `dynamic_cast`，否则 `typeid` 和 `dynamic_cast` 关键字的所有实例都会发出编译器错误。|
 |`new` 和 `delete`|您必须显式定义 `new()` 或 `delete()` 运算符；编译器和运行时都不会提供默认定义。|
 
@@ -79,8 +80,8 @@ class NONPAGESECTION MyNonPagedClass
 
    ||**/kernel** obj|**/kernel-** obj、 MASM obj 或 cvtresed|混合 **/kernel**并 **/kernel-** obj|
    |-|----------------------|-----------------------------------------------|-------------------------------------------------|
-   |**链接/内核**|是|是|是，但出现警告 LNK4257|
-   |**链接**|是|是|是|
+   |**link /kernel**|是|是|是，但出现警告 LNK4257|
+   |**link**|是|是|是|
 
    **不使用 /KERNEL; 编译 LNK4257 正在链接对象映像可能无法运行**
 

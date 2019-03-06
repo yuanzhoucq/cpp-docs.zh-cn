@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3099
 ms.assetid: b3dded0f-76c9-42c1-991b-532eb8619661
-ms.openlocfilehash: e9a76fa2e0dc5602a88324cfd2fef85457ad7e99
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: beaa34bb9bed4824383cdad32c6bfd0aea19f6b7
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512107"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57418565"
 ---
 # <a name="compiler-error-c3099"></a>编译器错误 C3099
 
@@ -19,7 +19,7 @@ ms.locfileid: "50512107"
 
 使用<xref:System.AttributeUsageAttribute>声明 **/clr**属性。 使用 `Windows::Foundation::Metadata::AttributeUsageAttribute` 声明 Windows 运行时特性。
 
-有关 /CLR 特性的详细信息，请参阅[用户定义的特性](../../windows/user-defined-attributes-cpp-component-extensions.md)。 Windows 运行时中的受支持属性，请参阅[Windows.Foundation.Metadata 命名空间](https://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.aspx)
+有关 /CLR 特性的详细信息，请参阅[用户定义的特性](../../windows/user-defined-attributes-cpp-component-extensions.md)。 Windows 运行时中的受支持属性，请参阅[Windows.Foundation.Metadata 命名空间](/uwp/api/windows.foundation.metadata)
 
 ## <a name="example"></a>示例
 

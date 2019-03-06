@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - collection/Platform::Collections::UnorderedMapView
 ms.assetid: 545a3725-2efd-4cc1-b590-4a7cd2351f61
-ms.openlocfilehash: 9564904fa77ae6a7355119e83bdfa3ac65a4050c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a60d962d79684cb16d8d5a5139b9b65df8148052
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50560831"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414403"
 ---
 # <a name="platformcollectionsunorderedmapview-class"></a>Platform::Collections::UnorderedMapView 类
 
@@ -71,7 +71,7 @@ UnorderedMapView 是具体的 c + + 实现[Windows::Foundation::Collections::IMa
 
 ## <a name="first"></a>  UnorderedMapView::First 方法
 
-返回一个迭代器，指定第一个[Windows::Foundation::Collections::IKeyValuePair\<K，V >](https://msdn.microsoft.com/library/windows/apps/br226031.aspx)无序映射中的元素。
+返回一个迭代器，指定第一个[Windows::Foundation::Collections::IKeyValuePair\<K，V >](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_)无序映射中的元素。
 
 ### <a name="syntax"></a>语法
 
@@ -129,7 +129,7 @@ V Lookup(K key);
 
 ## <a name="size"></a>  UnorderedMapView::Size 方法
 
-返回的数[Windows::Foundation::Collections::IKeyValuePair\<K，V >](https://msdn.microsoft.com/library/windows/apps/br226031.aspx) UnorderedMapView 中的元素。
+返回的数[Windows::Foundation::Collections::IKeyValuePair\<K，V >](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_) UnorderedMapView 中的元素。
 
 ### <a name="syntax"></a>语法
 
@@ -236,7 +236,7 @@ UnorderedMapView 的类型名称。
 *first*<br/>
 用于初始化 UnorderedMapView 的一系列元素中的第一个元素的输入迭代器。
 
-*最后一个*<br/>
+*last*<br/>
 用于初始化 UnorderedMapView 的一系列元素之后的第一个元素的输入迭代器。
 
 ## <a name="see-also"></a>请参阅

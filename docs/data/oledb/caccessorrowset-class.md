@@ -30,12 +30,12 @@ helpviewer_keywords:
 - FreeRecordMemory method
 - GetColumnInfo method
 ms.assetid: bd4f58ed-cebf-4d43-8985-1e5fcbf06953
-ms.openlocfilehash: 6f870cf6c079786c49846bcf7c3010998ccdbe00
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: dd7156575f551af1643dd3d1f8238ee1e3fe86f4
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556458"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57420149"
 ---
 # <a name="caccessorrowset-class"></a>CAccessorRowset 类
 
@@ -71,13 +71,13 @@ class CAccessorRowset : public TAccessor, public TRowset<TAccessor>
 |[CAccessorRowset](#caccessorrowset)|构造函数。|
 |[关闭](#close)|关闭的行集和任何访问器。|
 |[FreeRecordMemory](#freerecordmemory)|释放当前需要释放的记录中的任何列。|
-|[GetColumnInfo](#getcolumninfo)|实现[icolumnsinfo:: Getcolumninfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms722704(v=vs.85))。|
+|[GetColumnInfo](#getcolumninfo)|实现[icolumnsinfo:: Getcolumninfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\))。|
 
 ## <a name="remarks"></a>备注
 
 类`TAccessor`管理访问器。 类*TRowset*管理行集。
 
-## <a name="bind"></a> Caccessorrowset:: Bind
+## <a name="bind"></a> CAccessorRowset::Bind
 
 如果你指定创建绑定`bBind`作为**false**中[ccommand:: Open](../../data/oledb/ccommand-open.md)。
 
@@ -91,7 +91,7 @@ HRESULT Bind();
 
 标准的 HRESULT。
 
-## <a name="caccessorrowset"></a> Caccessorrowset:: Caccessorrowset
+## <a name="caccessorrowset"></a> CAccessorRowset::CAccessorRowset
 
 初始化 `CAccessorRowset` 对象。
 
@@ -101,7 +101,7 @@ HRESULT Bind();
 CAccessorRowset();
 ```
 
-## <a name="close"></a> Caccessorrowset:: Close
+## <a name="close"></a> CAccessorRowset::Close
 
 释放任何活动的访问器和行集。
 
@@ -115,7 +115,7 @@ void Close();
 
 释放关联的任何内存。
 
-## <a name="freerecordmemory"></a> Caccessorrowset:: Freerecordmemory
+## <a name="freerecordmemory"></a> CAccessorRowset::FreeRecordMemory
 
 释放当前需要释放的记录中的任何列。
 
@@ -125,7 +125,7 @@ void Close();
 void FreeRecordMemory();
 ```
 
-## <a name="getcolumninfo"></a> Caccessorrowset:: Getcolumninfo
+## <a name="getcolumninfo"></a> CAccessorRowset::GetColumnInfo
 
 从打开的行集中获取列信息。
 
@@ -142,7 +142,7 @@ HRESULT GetColumnInfo(DBORDINAL* pColumns,
 
 #### <a name="parameters"></a>参数
 
-请参阅[icolumnsinfo:: Getcolumninfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms722704(v=vs.85))中*OLE DB 程序员参考*。
+请参阅[icolumnsinfo:: Getcolumninfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\))中*OLE DB 程序员参考*。
 
 ### <a name="return-value"></a>返回值
 
@@ -152,7 +152,7 @@ HRESULT GetColumnInfo(DBORDINAL* pColumns,
 
 用户必须释放返回的列信息和字符串缓冲区。 当你使用时使用此方法的第二个版本[CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)和需要重写这些绑定。
 
-有关详细信息，请参阅[icolumnsinfo:: Getcolumninfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms722704(v=vs.85))中*OLE DB 程序员参考*。
+有关详细信息，请参阅[icolumnsinfo:: Getcolumninfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\))中*OLE DB 程序员参考*。
 
 ## <a name="see-also"></a>请参阅
 

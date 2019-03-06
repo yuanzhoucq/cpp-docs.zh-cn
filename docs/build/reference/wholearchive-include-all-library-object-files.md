@@ -2,12 +2,12 @@
 title: /WHOLEARCHIVE （包括所有库对象文件）
 ms.date: 11/04/2016
 ms.assetid: ee92d12f-18af-4602-9683-d6223be62ac9
-ms.openlocfilehash: 26bd720a2ecd07bccb1317e1540cb071e7027078
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cc260f139a9312bbac7fed34471481401db770d4
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50494219"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57412908"
 ---
 # <a name="wholearchive-include-all-library-object-files"></a>/WHOLEARCHIVE （包括所有库对象文件）
 
@@ -15,7 +15,7 @@ Force 链接器在链接的可执行文件中的静态库中包括所有对象�
 
 ## <a name="syntax"></a>语法
 
-> /WHOLEARCHIVE [:*库*]
+> /WHOLEARCHIVE[:*library*]
 
 ## <a name="remarks"></a>备注
 

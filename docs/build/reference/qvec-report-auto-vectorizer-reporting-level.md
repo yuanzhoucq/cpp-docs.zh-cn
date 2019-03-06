@@ -2,12 +2,12 @@
 title: /Qvec-report（自动矢量化程序报告等级）
 ms.date: 11/04/2016
 ms.assetid: 4778c9a3-0692-4085-9b05-1bfeadf4c74a
-ms.openlocfilehash: dc8c1d3bc65b0160fd489f1cdebe06e4fc9a0992
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6fc4e129a908b5347c85794d369856873dac9180
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50590224"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57417991"
 ---
 # <a name="qvec-report-auto-vectorizer-reporting-level"></a>/Qvec-report（自动矢量化程序报告等级）
 
@@ -21,10 +21,10 @@ ms.locfileid: "50590224"
 
 ## <a name="remarks"></a>备注
 
-**/ Qvec-报告： 1**<br/>
+**/Qvec-report:1**<br/>
 输出已向量化的循环一条信息性消息。
 
-**/ Qvec-报表： 2**<br/>
+**/Qvec-report:2**<br/>
 输出信息性消息已向量化的循环和 for 循环未向量化以及原因代码。
 
 有关原因代码和消息的信息，请参阅[矢量化程序和并行化程序消息](../../error-messages/tool-errors/vectorizer-and-parallelizer-messages.md)。

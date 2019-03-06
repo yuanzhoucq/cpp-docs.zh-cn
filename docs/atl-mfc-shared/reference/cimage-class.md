@@ -54,12 +54,12 @@ helpviewer_keywords:
 - CImage class
 - transparent color
 ms.assetid: 52861e3d-bf7e-481f-a240-90e88f76c490
-ms.openlocfilehash: 0042fffb0eaa383909edd6647bcdb4375341d8dd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a62919ebd6b2aba54aa8003743b0006571cdedf4
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605850"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57419662"
 ---
 # <a name="cimage-class"></a>CImage 类
 
@@ -86,14 +86,14 @@ class CImage
 
 |名称|描述|
 |----------|-----------------|
-|[Cimage:: Alphablend](#alphablend)|显示透明或半透明的像素的位图。|
+|[CImage::AlphaBlend](#alphablend)|显示透明或半透明的像素的位图。|
 |[CImage::Attach](#attach)|将附加到 HBITMAP`CImage`对象。 可以用于非 DIB 部分位图或 DIB 部分位图。|
 |[CImage::BitBlt](#bitblt)|将位图从源设备上下文复制到此当前设备上下文。|
 |[CImage::Create](#create)|创建 DIB 部分位图，并将其附加到以前构造`CImage`对象。|
 |[CImage::CreateEx](#createex)|创建 DIB 部分位图 （使用其他参数），并将其附加到以前构造`CImage`对象。|
 |[CImage::Destroy](#destroy)|从位图中分离`CImage`对象，并销毁位图。|
 |[CImage::Detach](#detach)|从位图中分离`CImage`对象。|
-|[Cimage:: Draw](#draw)|将位图从源矩形复制到目标矩形。 `Draw` 拉伸或压缩位图以适合目标矩形的尺寸，如有必要，并处理 alpha 值混合处理和透明的颜色。|
+|[CImage::Draw](#draw)|将位图从源矩形复制到目标矩形。 `Draw` 拉伸或压缩位图以适合目标矩形的尺寸，如有必要，并处理 alpha 值混合处理和透明的颜色。|
 |[CImage::GetBits](#getbits)|检索指向位图的实际像素值。|
 |[CImage::GetBPP](#getbpp)|检索每个像素的位数。|
 |[CImage::GetColorTable](#getcolortable)|从颜色表中的项的范围中检索红、 绿、 蓝 (RGB) 颜色值。|
@@ -258,7 +258,7 @@ Y 坐标中的目标矩形左上角的逻辑单元。
 对源和目标位图、 要应用于整个源位图和源位图的格式信息的全局 alpha 值的 alpha 值混合处理函数。 目前仅限于 AC_SRC_OVER 源和目标 blend 函数。
 
 *pointDest*<br/>
-对引用[点](https://msdn.microsoft.com/library/windows/desktop/dd162805)标识中的逻辑单元的目标矩形左上的角的结构。
+对引用[点](/previous-versions/dd162805\(v=vs.85\))标识中的逻辑单元的目标矩形左上的角的结构。
 
 *nDestWidth*<br/>
 使用逻辑单位，目标矩形的宽度。
@@ -279,7 +279,7 @@ Y 坐标中的目标矩形左上角的逻辑单元。
 使用逻辑单位，源矩形的高度。
 
 *rectDest*<br/>
-对引用[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构，确定目标。
+对引用[RECT](/previous-versions/dd162897\(v=vs.85\))结构，确定目标。
 
 *rectSrc*<br/>
 对引用`RECT`结构，用于标识源。
@@ -368,7 +368,7 @@ BOOL BitBlt(
 要执行的光栅操作。 光栅操作代码定义了如何结合在一起的源、 目标和模式的位 （根据当前选定的画笔的定义） 形成目标。 请参阅[BitBlt](/windows/desktop/api/wingdi/nf-wingdi-bitblt) Windows SDK for 其他光栅操作代码及其说明的列表中。
 
 *pointDest*<br/>
-一个[点](https://msdn.microsoft.com/library/windows/desktop/dd162805)结构，指示目标矩形左上的角。
+一个[点](/previous-versions/dd162805\(v=vs.85\))结构，指示目标矩形左上的角。
 
 *nDestWidth*<br/>
 使用逻辑单位，目标矩形的宽度。
@@ -383,7 +383,7 @@ BOOL BitBlt(
 源矩形左上角逻辑 y 坐标。
 
 *rectDest*<br/>
-一个[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构，指示目标矩形。
+一个[RECT](/previous-versions/dd162897\(v=vs.85\))结构，指示目标矩形。
 
 *pointSrc*<br/>
 一个`POINT`结构，指示源矩形左上的角。
@@ -523,7 +523,7 @@ HBITMAP Detach() throw();
 
 分离，位图的句柄或如果没有位图已附加，则为 NULL。
 
-##  <a name="draw"></a>  Cimage:: Draw
+##  <a name="draw"></a>  CImage::Draw
 
 将位图从源设备上下文复制到当前的设备上下文。
 
@@ -595,13 +595,13 @@ Y 坐标，以逻辑单元的源矩形左上角。
 使用逻辑单位，源矩形的高度。
 
 *rectDest*<br/>
-对引用[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构，确定目标。
+对引用[RECT](/previous-versions/dd162897\(v=vs.85\))结构，确定目标。
 
 *rectSrc*<br/>
 对引用`RECT`结构，用于标识源。
 
 *pointDest*<br/>
-对引用[点](https://msdn.microsoft.com/library/windows/desktop/dd162805)标识中的逻辑单元的目标矩形左上的角的结构。
+对引用[点](/previous-versions/dd162805\(v=vs.85\))标识中的逻辑单元的目标矩形左上的角的结构。
 
 ### <a name="return-value"></a>返回值
 
@@ -763,7 +763,7 @@ _T("All Image Files"));
 
 将参数*strExporter*采用格式：
 
-文件 description0&#124;\*.ext0&#124;filedescription1&#124;\*.ext1&#124;....file 说明*n*&#124;\*.ext *n*&#124;&#124;
+file description0&#124;\*.ext0&#124;filedescription1&#124;\*.ext1&#124;...file description *n*&#124;\*.ext *n*&#124;&#124;
 
 其中&#124;由指定的分隔符字符`chSeparator`。 例如：
 
@@ -854,7 +854,7 @@ _T("All Image Files"));
 
 将参数*strImporter*采用格式：
 
-文件 description0&#124;\*.ext0&#124;filedescription1&#124;\*.ext1&#124;....file 说明*n*&#124;\*.ext *n*&#124;&#124;
+file description0&#124;\*.ext0&#124;filedescription1&#124;\*.ext1&#124;...file description *n*&#124;\*.ext *n*&#124;&#124;
 
 其中&#124;是由指定的分隔符*chSeparator*。 例如：
 
@@ -1259,10 +1259,10 @@ Y 坐标，以逻辑单元的源矩形左上角。
 单色位图左上角 y 坐标。
 
 *rectSrc*<br/>
-对引用[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构，它指定源矩形的坐标。
+对引用[RECT](/previous-versions/dd162897\(v=vs.85\))结构，它指定源矩形的坐标。
 
 *pointMask*<br/>
-一个[点](https://msdn.microsoft.com/library/windows/desktop/dd162805)结构，指示掩码位图左上的角。
+一个[点](/previous-versions/dd162805\(v=vs.85\))结构，指示掩码位图左上的角。
 
 ### <a name="return-value"></a>返回值
 
@@ -1384,7 +1384,7 @@ void SetPixel(int x, int y, COLORREF color) throw();
 *y*<br/>
 要设置的像素的垂直位置。
 
-*颜色*<br/>
+*color*<br/>
 为其设置像素的颜色。
 
 ### <a name="remarks"></a>备注
@@ -1519,7 +1519,7 @@ Y 坐标中的目标矩形左上角的逻辑单元。
 要执行的光栅操作。 光栅操作代码定义了如何结合在一起的源、 目标和模式的位 （根据当前选定的画笔的定义） 形成目标。 请参阅[BitBlt](/windows/desktop/api/wingdi/nf-wingdi-bitblt) Windows SDK for 其他光栅操作代码及其说明的列表中。
 
 *rectDest*<br/>
-对引用[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构，确定目标。
+对引用[RECT](/previous-versions/dd162897\(v=vs.85\))结构，确定目标。
 
 *xSrc*<br/>
 X 坐标，以逻辑单元的源矩形左上角。
@@ -1602,7 +1602,7 @@ Y 坐标中的目标矩形左上角的逻辑单元。
 中要被视为透明的源位图的颜色。 通过默认情况下，CLR_INVALID，指示应使用当前设置为图像的透明色的颜色。
 
 *rectDest*<br/>
-对引用[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构，确定目标。
+对引用[RECT](/previous-versions/dd162897\(v=vs.85\))结构，确定目标。
 
 *xSrc*<br/>
 X 坐标，以逻辑单元的源矩形左上角。

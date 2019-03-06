@@ -1,17 +1,17 @@
 ---
-title: 如何：在 C++/CLI 中使用数组
+title: 如何：使用数组中 C + + /cli CLI
 ms.date: 11/04/2016
 helpviewer_keywords:
 - arrays [C++], single-dimension
 ms.assetid: 301cfb3e-199f-42c8-8151-629dce9e87f3
-ms.openlocfilehash: e38e15cffbf623f629f57243923ddae273801bfc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b0a13441bc3532884dbbd32f28d57c15e352c3ef
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596243"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414598"
 ---
-# <a name="how-to-use-arrays-in-ccli"></a>如何：在 C++/CLI 中使用数组
+# <a name="how-to-use-arrays-in-ccli"></a>如何：使用数组中 C + + /cli CLI
 
 本文介绍如何使用数组中 C + + /cli CLI。
 
@@ -503,7 +503,7 @@ int main() {
 
 标准 c + + 与数组不同，托管的数组隐式派生自数组基类它们均从中继承常见行为。 例如，`Sort`方法，可用于任何数组中的项进行排序。
 
-对于包含基本的内部类型的数组，可以调用`Sort`方法。 您可以重写的排序条件，而这又是必需时想要为复杂类型的数组进行排序。 在这种情况下，数组元素类型必须实现[IComparable::CompareTo](https://msdn.microsoft.com/library/system.icomparable.compareto.aspx)方法。
+对于包含基本的内部类型的数组，可以调用`Sort`方法。 您可以重写的排序条件，而这又是必需时想要为复杂类型的数组进行排序。 在这种情况下，数组元素类型必须实现<xref:System.IComparable.CompareTo%2A>方法。
 
 ```cpp
 // array_sort.cpp
@@ -520,7 +520,7 @@ int main() {
 
 ## <a name="sorting-arrays-by-using-custom-criteria"></a>通过使用自定义条件对数组进行排序
 
-要对包含基本的内部类型的数组进行排序，只需调用`Array::Sort`方法。 但是，对包含复杂类型，或若要重写默认排序条件，请重写的排序数组[IComparable::CompareTo](https://msdn.microsoft.com/library/system.icomparable.compareto.aspx)方法。
+要对包含基本的内部类型的数组进行排序，只需调用`Array::Sort`方法。 但是，对包含复杂类型，或若要重写默认排序条件，请重写的排序数组<xref:System.IComparable.CompareTo%2A>方法。
 
 在以下示例中，一种结构名为`Element`派生自<xref:System.IComparable>，并已写入到提供<xref:System.IComparable.CompareTo%2A>用作排序条件的两个整数平均值的方法。
 

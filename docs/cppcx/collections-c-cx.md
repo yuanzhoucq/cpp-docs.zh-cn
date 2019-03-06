@@ -2,12 +2,12 @@
 title: 集合 (C++/CX)
 ms.date: 11/19/2018
 ms.assetid: 914da30b-aac5-4cd7-9da3-a5ac08cdd72c
-ms.openlocfilehash: d256e333ddf31bdb637680b70718af85e753a21d
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 155f14a2948215afb918e15c345cfa83f630db9e
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176388"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423516"
 ---
 # <a name="collections-ccx"></a>集合 (C++/CX)
 
@@ -23,7 +23,7 @@ Windows 运行时定义的接口集合和相关的类型和 C + + /cli CX 提供
 
 - [Platform::Collections::VectorView 类](../cppcx/platform-collections-vectorview-class.md) 和[Platform::Collections::MapView 类](../cppcx/platform-collections-mapview-class.md) 是 `Vector` 和 `Map`的只读版本。
 
-- 迭代器是在 [Platform::Collections Namespace](../cppcx/platform-collections-namespace.md)中定义的。 这些迭代器既满足了 STL 迭代器的要求，又使你能够对任何 [Windows::Foundation::Collections](../standard-library/algorithm-functions.md#find)接口类型或  [Platform::Collections](../standard-library/algorithm-functions.md#count_if)具体类型使用 [std::find](https://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.aspx) 、 [std::count_if](../cppcx/platform-collections-namespace.md) 和其他 STL 算法。 例如，这意味着您可以循环访问集合中的 Windows 运行时组件在 C# 中创建并将 STL 算法应用于它。
+- 迭代器是在 [Platform::Collections Namespace](../cppcx/platform-collections-namespace.md)中定义的。 这些迭代器既满足了 STL 迭代器的要求，又使你能够对任何 [Windows::Foundation::Collections](../standard-library/algorithm-functions.md#find)接口类型或  [Platform::Collections](../standard-library/algorithm-functions.md#count_if)具体类型使用 [std::find](/uwp/api/windows.foundation.collections) 、 [std::count_if](../cppcx/platform-collections-namespace.md) 和其他 STL 算法。 例如，这意味着您可以循环访问集合中的 Windows 运行时组件在 C# 中创建并将 STL 算法应用于它。
 
    > [!IMPORTANT]
    > 代理迭代器 `VectorIterator` 和 `VectorViewIterator` 使用代理对象 `VectoryProxy<T>` 及 `ArrowProxy<T>` 实现与 STL 容器的共同使用。 有关更多信息，请参见本文后面的“VectorProxy 元素”。
@@ -34,7 +34,7 @@ Windows 运行时定义的接口集合和相关的类型和 C + + /cli CX 提供
 
 ## <a name="vector-usage"></a>向量用法
 
-当您的类必须将序列容器传递给另一个 Windows 运行时组件时，使用[Windows::Foundation::Collections:: IVector\<T >](https://msdn.microsoft.com/library/windows/apps/br206631.aspx)作为参数或返回类型和[平台::Collections::Vector\<T >](../cppcx/platform-collections-vector-class.md)作为具体实现。 如果你尝试在公共返回值或参数中使用 `Vector` 类型，则将引发编译器错误 C3986。 可以通过将 `Vector` 更改为 `IVector`来修复该错误。
+当您的类必须将序列容器传递给另一个 Windows 运行时组件时，使用[Windows::Foundation::Collections::IVector\<T >](/uwp/api/Windows.Foundation.Collections.IVector_T_)作为参数或返回类型，并[Platform::Collections::Vector\<T >](../cppcx/platform-collections-vector-class.md)作为具体实现。 如果你尝试在公共返回值或参数中使用 `Vector` 类型，则将引发编译器错误 C3986。 可以通过将 `Vector` 更改为 `IVector`来修复该错误。
 
 > [!IMPORTANT]
 > 如果您要在自己的程序中传递序列，请使用 `Vector` 或 `std::vector` ，因为它们比 `IVector`更高效。 在通过 ABI 传递容器时，仅使用 `IVector` 。
@@ -53,11 +53,11 @@ Windows 运行时定义的接口集合和相关的类型和 C + + /cli CX 提供
 
 ## <a name="value-types-in-vector"></a>Vector 中的值类型
 
-要存储到 [Platform::Collections::Vector](../cppcx/platform-collections-vector-class.md) 中的任何元素必须支持相等性比较（隐式支持或通过使用你提供的自定义 [std::equal_to](../standard-library/equal-to-struct.md) 运算符支持）。 所有引用类型和所有标量类型都隐式支持相等性比较。 对于非标量值类型（如 [Windows::Foundation::DateTime](https://msdn.microsoft.com/library/windows/apps/windows.foundation.datetime.aspx)）或自定义比较（如 `objA->UniqueID == objB->UniqueID`），必须提供自定义函数对象。
+要存储到 [Platform::Collections::Vector](../cppcx/platform-collections-vector-class.md) 中的任何元素必须支持相等性比较（隐式支持或通过使用你提供的自定义 [std::equal_to](../standard-library/equal-to-struct.md) 运算符支持）。 所有引用类型和所有标量类型都隐式支持相等性比较。 对于非标量值类型（如 [Windows::Foundation::DateTime](/uwp/api/windows.foundation.datetime)）或自定义比较（如 `objA->UniqueID == objB->UniqueID`），必须提供自定义函数对象。
 
 ## <a name="vectorproxy-elements"></a>VectorProxy 元素
 
-[Platform::Collections::VectorIterator](../cppcx/platform-collections-vectoriterator-class.md)并[Platform::Collections::VectorViewIterator](../cppcx/platform-collections-vectorviewiterator-class.md)启用`range for`循环和算法，如[std:: sort](../standard-library/algorithm-functions.md#sort) 与[IVector\<T >](https://msdn.microsoft.com/library/windows/apps/br206631.aspx)容器。 但是，无法通过 C++ 指针取消引用来访问 `IVector` 元素，只能通过 [GetAt](https://msdn.microsoft.com/library/windows/apps/br206634.aspx) 和 [SetAt](https://msdn.microsoft.com/library/windows/apps/br206642.aspx) 方法访问此类元素。 因此，这些迭代器使用的代理类`Platform::Details::VectorProxy<T>`并`Platform::Details::ArrowProxy<T>`以提供对各个元素通过访问__\*__， __->__，和__\[]__ 运算符所需的标准库。 严格来说，给定 `IVector<Person^> vec`， `*begin(vec)` 的类型为 `VectorProxy<Person^>`。 不过，代理对象对于你的代码几乎始终是透明的。 我们不讨论这些代理对象，因为它们仅由迭代器在内部使用，但了解该机制的工作原理将非常有用。
+[Platform::Collections::VectorIterator](../cppcx/platform-collections-vectoriterator-class.md)并[Platform::Collections::VectorViewIterator](../cppcx/platform-collections-vectorviewiterator-class.md)启用`range for`循环和算法，如[std:: sort](../standard-library/algorithm-functions.md#sort) 与[IVector\<T >](/uwp/api/Windows.Foundation.Collections.IVector_T_)容器。 但是，无法通过 C++ 指针取消引用来访问 `IVector` 元素，只能通过 [GetAt](/uwp/api/windows.foundation.collections.ivector-1.getat) 和 [SetAt](/uwp/api/windows.foundation.collections.ivector-1.setat) 方法访问此类元素。 因此，这些迭代器使用的代理类`Platform::Details::VectorProxy<T>`并`Platform::Details::ArrowProxy<T>`以提供对各个元素通过访问__\*__， __->__，和__\[]__ 运算符所需的标准库。 严格来说，给定 `IVector<Person^> vec`， `*begin(vec)` 的类型为 `VectorProxy<Person^>`。 不过，代理对象对于你的代码几乎始终是透明的。 我们不讨论这些代理对象，因为它们仅由迭代器在内部使用，但了解该机制的工作原理将非常有用。
 
 对 `range for` 容器使用 `IVector` 循环时，请使用 `auto&&` 以使迭代器变量正确绑定到 `VectorProxy` 元素。 如果使用 `auto` 或 `auto&`，将引发编译器警告 C4239，警告文本中将提到 `VectoryProxy` 。
 
@@ -131,17 +131,17 @@ void FindButton(UIElementCollection^ col)
 
 |Iterators|函数|
 |---------------|---------------|
-|[Platform::Collections::VectorIterator\<T>](../cppcx/platform-collections-vectoriterator-class.md)<br /><br /> (在内部存储[Windows::Foundation::Collections:: IVector\<T >](https://msdn.microsoft.com/library/windows/apps/br206631.aspx)和 int。)|[开始](../cppcx/begin-function.md)/ [最终](../cppcx/end-function.md)([Windows::Foundation::Collections:: IVector\<T >](https://msdn.microsoft.com/library/windows/apps/br206631.aspx))|
-|[Platform::Collections::VectorViewIterator\<T>](../cppcx/platform-collections-vectorviewiterator-class.md)<br /><br /> (在内部存储[IVectorView\<T >](https://msdn.microsoft.com/library/windows/apps/br226058.aspx)^ 和 int。)|[开始](../cppcx/begin-function.md)/ [最终](../cppcx/end-function.md)([IVectorView\<T >](https://msdn.microsoft.com/library/windows/apps/br226058.aspx)^)|
-|[Platform::Collections::InputIterator\<T>](../cppcx/platform-collections-inputiterator-class.md)<br /><br /> (在内部存储[IIterator\<T >](https://msdn.microsoft.com/library/windows/apps/br226026.aspx)^ 和 t。)|[开始](../cppcx/begin-function.md)/ [最终](../cppcx/end-function.md)([IIterable\<T >](https://msdn.microsoft.com/library/windows/apps/br226024.aspx))|
-|[Platform::Collections::InputIterator < 2&gt;platform::collections::inputiterator&lt;ikeyvaluepair&lt;k\<K，V > ^ >](../cppcx/platform-collections-inputiterator-class.md)<br /><br /> (在内部存储[IIterator\<T >](https://msdn.microsoft.com/library/windows/apps/br226026.aspx)^ 和 t。)|[开始](../cppcx/begin-function.md)/ [最终](../cppcx/end-function.md)([IMap\<K，V >](/uwp/api/Windows.Foundation.Collections.IMap_K_V_)。|
-|[Platform::Collections::InputIterator < 2&gt;platform::collections::inputiterator&lt;ikeyvaluepair&lt;k\<K，V > ^ >](../cppcx/platform-collections-inputiterator-class.md)<br /><br /> (在内部存储[IIterator\<T >](https://msdn.microsoft.com/library/windows/apps/br226026.aspx)^ 和 t。)|[开始](../cppcx/begin-function.md)/ [最终](../cppcx/end-function.md)([Windows:: Foundation::Collections::IMapView]/uwp/api/Windows.Foundation.Collections.IMapView_K_V_))|
+|[Platform::Collections::VectorIterator\<T>](../cppcx/platform-collections-vectoriterator-class.md)<br /><br /> (在内部存储[Windows::Foundation::Collections::IVector\<T >](/uwp/api/Windows.Foundation.Collections.IVector_T_)和 int。)|[begin](../cppcx/begin-function.md)/ [end](../cppcx/end-function.md)([Windows::Foundation::Collections::IVector\<T>](/uwp/api/Windows.Foundation.Collections.IVector_T_))|
+|[Platform::Collections::VectorViewIterator\<T>](../cppcx/platform-collections-vectorviewiterator-class.md)<br /><br /> (在内部存储[IVectorView\<T >](/uwp/api/Windows.Foundation.Collections.IVectorView_T_)^ 和 int。)|[开始](../cppcx/begin-function.md)/ [最终](../cppcx/end-function.md)([IVectorView\<T >](/uwp/api/Windows.Foundation.Collections.IVectorView_T_)^)|
+|[Platform::Collections::InputIterator\<T>](../cppcx/platform-collections-inputiterator-class.md)<br /><br /> (在内部存储[IIterator\<T >](/uwp/api/Windows.Foundation.Collections.IIterator_T_)^ 和 t。)|[开始](../cppcx/begin-function.md)/ [最终](../cppcx/end-function.md)([IIterable\<T >](/uwp/api/Windows.Foundation.Collections.IIterable_T_))|
+|[Platform::Collections::InputIterator<IKeyValuePair\<K, V>^>](../cppcx/platform-collections-inputiterator-class.md)<br /><br /> (在内部存储[IIterator\<T >](/uwp/api/Windows.Foundation.Collections.IIterator_T_)^ 和 t。)|[开始](../cppcx/begin-function.md)/ [最终](../cppcx/end-function.md)([IMap\<K，V >](/uwp/api/Windows.Foundation.Collections.IMap_K_V_)。|
+|[Platform::Collections::InputIterator<IKeyValuePair\<K, V>^>](../cppcx/platform-collections-inputiterator-class.md)<br /><br /> (在内部存储[IIterator\<T >](/uwp/api/Windows.Foundation.Collections.IIterator_T_)^ 和 t。)|[开始](../cppcx/begin-function.md)/ [最终](../cppcx/end-function.md)([Windows:: Foundation::Collections::IMapView]/uwp/api/Windows.Foundation.Collections.IMapView_K_V_))|
 
 ### <a name="collection-change-events"></a>集合更改事件
 
 `Vector` 和 `Map` 支持 XAML 集合中的数据绑定，方式是通过实现在更改或重置集合对象，或在插入、移除或更改集合的任何元素时发生的事件。 您可编写自己的支持数据绑定的类型，尽管因这些类型是密封类型而导致无法从 `Map` 或 `Vector` 继承。
 
-[Windows::Foundation::Collections::VectorChangedEventHandler](/uwp/api/windows.foundation.collections.vectorchangedeventhandler) 和 [Windows::Foundation::Collections::MapChangedEventHandler](/uwp/api/windows.foundation.collections.mapchangedeventhandler) 委托用于指定集合更改事件的事件处理程序的签名。 [Windows::Foundation::Collections::CollectionChange](https://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.collectionchange.aspx) 公共枚举类和 `Platform::Collection::Details::MapChangedEventArgs` 与 `Platform::Collections::Details::VectorChangedEventArgs` ref 类用于存储事件参数以确定引发事件的原因。 `*EventArgs`类型中定义`Details`命名空间因为无需显式构造或使用它们时使用`Map`或`Vector`。
+[Windows::Foundation::Collections::VectorChangedEventHandler](/uwp/api/windows.foundation.collections.vectorchangedeventhandler) 和 [Windows::Foundation::Collections::MapChangedEventHandler](/uwp/api/windows.foundation.collections.mapchangedeventhandler) 委托用于指定集合更改事件的事件处理程序的签名。 [Windows::Foundation::Collections::CollectionChange](/uwp/api/windows.foundation.collections.collectionchange) 公共枚举类和 `Platform::Collection::Details::MapChangedEventArgs` 与 `Platform::Collections::Details::VectorChangedEventArgs` ref 类用于存储事件参数以确定引发事件的原因。 `*EventArgs`类型中定义`Details`命名空间因为无需显式构造或使用它们时使用`Map`或`Vector`。
 
 ## <a name="see-also"></a>请参阅
 

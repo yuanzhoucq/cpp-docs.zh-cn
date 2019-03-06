@@ -1,18 +1,18 @@
 ---
-title: 如何：创建 CLR 控制台应用程序 (C++/CLI)
+title: 如何：创建 CLR 控制台应用程序 (C + + CLI)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - console applications, templates
 - CLR console applications, project template
 ms.assetid: e89bce3c-706f-4ae0-8a90-cb1a0f674e70
-ms.openlocfilehash: fa45578b1e773e954fe692bd1c49e311626c35de
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9ce50266eeb17ad858891149489db85b03855aec
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525637"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426325"
 ---
-# <a name="how-to-create-clr-console-applications-ccli"></a>如何：创建 CLR 控制台应用程序 (C++/CLI)
+# <a name="how-to-create-clr-console-applications-ccli"></a>如何：创建 CLR 控制台应用程序 (C + + CLI)
 
 你可以使用控制台应用程序模板创建已具有基本项目引用和文件的控制台应用程序项目。
 
@@ -22,7 +22,7 @@ ms.locfileid: "50525637"
 
 - 以下 .NET Framework 命名空间的参考信息：
 
-   - [System](https://msdn.microsoft.com/library/system.appdomainmanager.appdomainmanager.aspx)- 包含基本类和基类，这些类定义常用值和引用数据类型、事件/事件处理程序、接口、特性和处理异常。
+   - <xref:System.AppDomainManager>-包含基本类和基类，这些类定义常用的值和引用数据类型、 事件和事件处理程序、 接口、 属性和处理异常。
 
    - mscorlib - 支持 .NET Framework 开发的程序集 DLL。
 

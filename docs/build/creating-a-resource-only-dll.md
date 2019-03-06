@@ -5,16 +5,16 @@ helpviewer_keywords:
 - resource-only DLLs [C++], creating
 - DLLs [C++], creating
 ms.assetid: e6b1d4da-7275-467f-a58c-a0a8a5835199
-ms.openlocfilehash: 9a31d4197e71fb6cf20a0ecfce778552357d7e06
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d2854c9ca993e9f1f27cab60cdd09e28ce2985f1
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50612909"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57412638"
 ---
 # <a name="creating-a-resource-only-dll"></a>创建纯资源 DLL
 
-纯资源 DLL 是一个 DLL 包含资源，如图标、 位图、 字符串和对话框。 使用纯资源 DLL 是共享相同的资源分到多个程序集的好方法。 它还是提供多种语言的本地化资源的应用程序的好方法 (请参阅[MFC 应用程序中的本地化资源： 附属 Dll](../build/localized-resources-in-mfc-applications-satellite-dlls.md))。
+纯资源 DLL 是一个 DLL 包含资源，如图标、 位图、 字符串和对话框。 使用纯资源 DLL 是共享相同的资源分到多个程序集的好方法。 它还是提供多种语言的本地化资源的应用程序的好方法 (请参阅[MFC 应用程序中的本地化资源：附属 Dll](../build/localized-resources-in-mfc-applications-satellite-dlls.md))。
 
 若要创建纯资源 DLL，请创建新的 Win32 DLL (非 MFC) 项目，并将资源添加到项目。
 

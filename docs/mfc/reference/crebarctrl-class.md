@@ -98,12 +98,12 @@ helpviewer_keywords:
 - CReBarCtrl [MFC], ShowBand
 - CReBarCtrl [MFC], SizeToRect
 ms.assetid: 154570d7-e48c-425d-8c7e-c64542bcb4cc
-ms.openlocfilehash: f1e9c6e4505c67b881d479817ec8b45e4ae5dc8b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: db72dbab14db69f14d7c3d813562ec661df4b424
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304544"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57417653"
 ---
 # <a name="crebarctrl-class"></a>CReBarCtrl 类
 
@@ -255,7 +255,7 @@ virtual BOOL Create(
 指定应用于控件的 rebar 控件样式的组合。 请参阅[Rebar 控件样式](/windows/desktop/Controls/rebar-control-styles)Windows SDK for 支持样式的列表中。
 
 *rect*<br/>
-对引用[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构，它是位置和 rebar 控件的大小。
+对引用[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT](/previous-versions/dd162897\(v=vs.85\))结构，它是位置和 rebar 控件的大小。
 
 *pParentWnd*<br/>
 一个指向[CWnd](../../mfc/reference/cwnd-class.md)是 rebar 控件的父窗口的对象。 它不能为 NULL。
@@ -303,7 +303,7 @@ virtual BOOL CreateEx(
 指定应用于控件的 rebar 控件样式的组合。 有关受支持的样式的列表，请参阅[Rebar 控件样式](/windows/desktop/Controls/rebar-control-styles)Windows SDK 中。
 
 *rect*<br/>
-对引用[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构的结构描述的大小和窗口的工作区中创建的位置*pParentWnd*。
+对引用[RECT](/previous-versions/dd162897\(v=vs.85\))结构的结构描述的大小和窗口的工作区中创建的位置*pParentWnd*。
 
 *pParentWnd*<br/>
 指向控件的父级的窗口的指针。
@@ -389,7 +389,7 @@ void GetBandBorders(
 带区为其检索边框的从零开始索引。
 
 *prc*<br/>
-一个指向[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构，它将接收外边框。 如果 rebar 控件具有 RBS_BANDBORDERS 样式，此结构的每个成员将收到像素的数，在相应的一端外，构成边框。 如果对 rebar 控件不具有 RBS_BANDBORDERS 样式，仅此结构的左侧的成员接收有效的信息。 Rebar 控件样式的说明，请参阅[Rebar 控件样式](/windows/desktop/Controls/rebar-control-styles)Windows SDK 中。
+一个指向[RECT](/previous-versions/dd162897\(v=vs.85\))结构，它将接收外边框。 如果 rebar 控件具有 RBS_BANDBORDERS 样式，此结构的每个成员将收到像素的数，在相应的一端外，构成边框。 如果对 rebar 控件不具有 RBS_BANDBORDERS 样式，仅此结构的左侧的成员接收有效的信息。 Rebar 控件样式的说明，请参阅[Rebar 控件样式](/windows/desktop/Controls/rebar-control-styles)Windows SDK 中。
 
 ##  <a name="getbandcount"></a>  CReBarCtrl::GetBandCount
 
@@ -584,7 +584,7 @@ BOOL GetRect(
 在 rebar 控件带区的从零开始索引。
 
 *prc*<br/>
-一个指向[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构，它将接收 rebar 带区的边界。
+一个指向[RECT](/previous-versions/dd162897\(v=vs.85\))结构，它将接收 rebar 带区的边界。
 
 ### <a name="return-value"></a>返回值
 

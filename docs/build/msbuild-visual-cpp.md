@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MSBuild
 ms.assetid: 7a1be7ff-0312-4669-adf2-5f5bf507d560
-ms.openlocfilehash: 4e0a82602cdeb775569099c559eef5aed51b431f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f6ca3ac46a4d84c9513ba4f7fd34a15f667cb6ed
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429427"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423217"
 ---
 # <a name="msbuild-visual-c"></a>MSBuild (Visual C++)
 

@@ -3,12 +3,12 @@ title: 枚举类 (C + + /cli 和 C + + /cli CX)
 ms.date: 10/12/2018
 ms.topic: reference
 ms.assetid: 8010fa8c-bad6-45b4-8214-b4db64d7ffe1
-ms.openlocfilehash: 5bc850831e961a500ae71ce90e3ca39b3aabd159
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aee3d4f44c18074ca536ff028565bbbd0e37d04c
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50592512"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57417419"
 ---
 # <a name="enum-class--ccli-and-ccx"></a>枚举类 (C + + /cli 和 C + + /cli CX)
 
@@ -55,7 +55,7 @@ accessenum structenumeration-identifier[:underlying-type] { enumerator-list } [v
 
 ### <a name="remarks"></a>备注
 
-有关详细信息和示例，请参阅 [枚举](https://msdn.microsoft.com/%20library/windows/apps/hh755820.aspx)。
+有关详细信息和示例，请参阅 [枚举](../cppcx/enums-c-cx.md)。
 
 请注意，如果可定义枚举器的值的常数表达式不能由 *underlying-type*表示，则编译器将发出错误消息。  但是，编译器不会报告不适用于基础类型的值的错误。 例如：
 

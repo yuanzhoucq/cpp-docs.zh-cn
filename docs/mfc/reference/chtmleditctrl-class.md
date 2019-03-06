@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CHtmlEditCtrl [MFC], GetDHtmlDocument
 - CHtmlEditCtrl [MFC], GetStartDocument
 ms.assetid: 0fc4a238-b05f-4874-9edc-6a6701f064d9
-ms.openlocfilehash: 6c1447c3157bceb4540007eca5c3eb85e8269bd2
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 6f5c465a8ec9c8f54af5545e66fb849a08d241af
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57285303"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57420916"
 ---
 # <a name="chtmleditctrl-class"></a>CHtmlEditCtrl 类
 
@@ -45,7 +45,7 @@ class CHtmlEditCtrl: public CWnd,
 |名称|描述|
 |----------|-----------------|
 |[CHtmlEditCtrl::Create](#create)|创建 WebBrowser ActiveX 控件，并将其附加到`CHtmlEditCtrl`对象。 此函数自动使 WebBrowser ActiveX 控件进入编辑模式。|
-|[CHtmlEditCtrl::GetDHtmlDocument](#getdhtmldocument)|检索[IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx)所包含的 web 浏览器控件中当前加载该文档上的接口。|
+|[CHtmlEditCtrl::GetDHtmlDocument](#getdhtmldocument)|检索[IHTMLDocument2](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752574\(v=vs.85\))所包含的 web 浏览器控件中当前加载该文档上的接口。|
 |[CHtmlEditCtrl::GetStartDocument](#getstartdocument)|检索默认文档包含的 WebBrowser 控件中加载的 URL。|
 
 ## <a name="remarks"></a>备注
@@ -116,7 +116,7 @@ virtual BOOL Create(
 
 ##  <a name="getdhtmldocument"></a>  CHtmlEditCtrl::GetDHtmlDocument
 
-检索[IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx)所包含的 web 浏览器控件中当前加载该文档上的接口
+检索[IHTMLDocument2](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752574\(v=vs.85\))所包含的 web 浏览器控件中当前加载该文档上的接口
 
 ```
 BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;

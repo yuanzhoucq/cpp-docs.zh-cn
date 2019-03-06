@@ -11,12 +11,12 @@ helpviewer_keywords:
 - executable files [C++], base address
 - /REBASE editbin option [C++]
 ms.assetid: 3f89d874-af5c-485b-974b-fd205f6e1a4b
-ms.openlocfilehash: de8b648c6bca02c71a9cfedd92bfbe7e6ca56b70
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f0b581dfc116e25228a9aa9133c4de027e194799
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463643"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57422034"
 ---
 # <a name="rebase"></a>/REBASE
 
@@ -32,7 +32,7 @@ ms.locfileid: "50463643"
 
 |修饰符|操作|
 |--------------|------------|
-|**基本 =**<em>地址</em>|为重新分配到文件的基址提供起始地址。 指定*地址*以十进制或 C 语言表示法。 如果未指定基本，默认开始基址是 0x400000 处。 必须指定如果列表是使用的基础，并*地址*设置基址的范围的末尾。|
+|**BASE=**<em>address</em>|为重新分配到文件的基址提供起始地址。 指定*地址*以十进制或 C 语言表示法。 如果未指定基本，默认开始基址是 0x400000 处。 必须指定如果列表是使用的基础，并*地址*设置基址的范围的末尾。|
 |**BASEFILE**|创建一个名为 COFFBASE 文件。TXT，这是一个文本文件中链接的所需的格式/基本选项。|
 |**向下**|告知 EDITBIN 重新分配基址向下的从结束地址。 使用下面的地址范围末尾的最高可能地址中的第一个文件指定的顺序重新分配文件。 基本必须使用与列表以确保足够的地址空间并且将这些文件。 若要确定由指定的文件所需的地址空间，运行 /REBASE EDITBIN 的文件，并将 64KB 添加到显示的总大小。|
 

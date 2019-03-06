@@ -8,12 +8,12 @@ helpviewer_keywords:
 - shared DLL versions [C++]
 - dynamically linked DLLs [C++]
 ms.assetid: b4f7ab92-8723-42a5-890e-214f4e29dcd0
-ms.openlocfilehash: 550391d51560ff0beca8252ffb6193dd1e4d89b3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 548fbde379937ab4d915f08a43a8b865e071d688
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50632383"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413168"
 ---
 # <a name="regular-mfc-dlls-dynamically-linked-to-mfc"></a>动态链接到 MFC 的规则 MFC Dll
 
@@ -33,7 +33,7 @@ AFX_MANAGE_STATE(AfxGetStaticModuleState( ))
 
 - 与静态链接的规则 MFC DLL，这种类型的 DLL 动态链接到 MFC DLL (也称为共享 MFC DLL)。
 
-- MFC 导入库链接到此类型的 DLL 是同一个用于 MFC 扩展 Dll 或使用 MFC DLL 的应用程序：.lib MFCxx (D)。
+- MFC 导入库链接到此类型的 DLL 是由 MFC 扩展 Dll 或使用 MFC DLL 的应用程序使用同一个：MFCxx (D).lib。
 
 常规 MFC DLL 动态链接到 MFC 具有以下要求：
 
