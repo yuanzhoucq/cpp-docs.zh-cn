@@ -10,12 +10,12 @@ helpviewer_keywords:
 - MANIFESTUAC linker option
 - -MANIFESTUAC linker option
 ms.assetid: 2d243c39-fa13-493c-b56f-d0d972a1603a
-ms.openlocfilehash: 702dae41f873218dab0d3fb24e46dacd710bc20f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8ae9d18bb0fe2172886ef24250d53cf76851bbba
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50625080"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57420422"
 ---
 # <a name="manifestuac-embeds-uac-information-in-manifest"></a>/MANIFESTUAC（将 UAC 信息嵌入到清单中）
 
@@ -33,10 +33,10 @@ ms.locfileid: "50625080"
 
 ### <a name="parameters"></a>参数
 
-*片段*<br/>
+*fragment*<br/>
 一个字符串，包含`level`和`uiAccess`值。 有关详细信息，请参阅本主题后面备注部分。
 
-*级别 （_l)*<br/>
+*_level*<br/>
 之一*asInvoker*， *highestAvailable*，或*requireAdministrator*。 默认值为 asInvoker。 有关详细信息，请参阅本主题后面备注部分。
 
 *_uiAccess*<br/>
@@ -48,11 +48,11 @@ ms.locfileid: "50625080"
 
 /MANIFESTUAC:level 的选项如下所示：
 
-- `asInvoker`： 应用程序将使用与启动它的进程相同的权限运行。 将应用程序可以通过选择提升到更高的权限级别**以管理员身份运行**。
+- `asInvoker`：应用程序将使用与启动它的进程相同的权限运行。 将应用程序可以通过选择提升到更高的权限级别**以管理员身份运行**。
 
-- 最高可用性： 应用程序将使用它可以最高的权限级别运行。 如果启动应用程序的用户是 Administrators 组的成员，此选项等同于 requireAdministrator。 如果最高可用权限级别比打开过程级别更高，系统将提示输入凭据。
+- 最高可用性：应用程序将使用它可以最高的权限级别运行。 如果启动应用程序的用户是 Administrators 组的成员，此选项等同于 requireAdministrator。 如果最高可用权限级别比打开过程级别更高，系统将提示输入凭据。
 
-- requireAdministrator： 应用程序将使用管理员权限运行。 启动应用程序的用户必须是 Administrators 组的成员。 如果打开过程未使用管理权限运行，系统将提示输入凭据。
+- requireAdministrator:应用程序将使用管理员权限运行。 启动应用程序的用户必须是 Administrators 组的成员。 如果打开过程未使用管理权限运行，系统将提示输入凭据。
 
 通过使用 /MANIFESTUAC:fragment 选项，可以在一个步骤中指定的级别和 uiAccess 值。 片段必须采用以下形式：
 

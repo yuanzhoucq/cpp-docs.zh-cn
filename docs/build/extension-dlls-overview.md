@@ -1,5 +1,5 @@
 ---
-title: 扩展 DLL：概述
+title: 扩展 Dll:概述
 ms.date: 11/04/2016
 helpviewer_keywords:
 - AFXDLL library
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - shared DLL versions [C++]
 - extension DLLs [C++], about MFC extension DLLs
 ms.assetid: eb5e10b7-d615-4bc7-908d-e3e99b7b1d5f
-ms.openlocfilehash: 1967370f587b0b78c4e68ebff14804b20f158bd0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0ad5c82d72a3cd9b4801274aefd40d96afdbcdd1
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498197"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57425050"
 ---
-# <a name="mfc-extension-dlls-overview"></a>MFC 扩展 Dll： 概述
+# <a name="mfc-extension-dlls-overview"></a>MFC 扩展 Dll:概述
 
 MFC 扩展 DLL 是通常实现从现有的 Microsoft 基础类库类派生的可重用类的 DLL。 MFC 扩展 Dll 是使用 MFC （也称为共享的 MFC 版本） 的动态链接库版本构建的。 MFC 的可执行文件 （应用程序或规则 MFC Dll） 使用共享 MFC 版本构建的可以使用 MFC 扩展 DLL。 MFC 扩展 DLL，可从 MFC 派生新的自定义类，并再提供此扩展的版本的 MFC 应用程序调用 DLL 的。
 

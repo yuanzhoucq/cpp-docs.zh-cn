@@ -264,12 +264,12 @@ helpviewer_keywords:
 - CListCtrl [MFC], SubItemHitTest
 - CListCtrl [MFC], Update
 ms.assetid: fe08a1ca-4b05-4ff7-a12a-ee4c765a2197
-ms.openlocfilehash: 850c16420606452414cbe284c5f9f25031859c93
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: fdfc0888e7d6213fb7c04a5257358da8f5dae138
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304517"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57425089"
 ---
 # <a name="clistctrl-class"></a>CListCtrl 类
 
@@ -619,7 +619,7 @@ virtual BOOL Create(
 指定列表控件的样式。 应用于控件的列表控件样式的任意组合。 请参阅[列表视图的窗口样式](/windows/desktop/Controls/list-view-window-styles)有关的完整列表，这些样式的 Windows SDK 中。 设置扩展样式特定于控件使用[SetExtendedStyle](#setextendedstyle)。
 
 *rect*<br/>
-指定列表控件的大小和位置。 它可以是`CRect`对象或[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构。
+指定列表控件的大小和位置。 它可以是`CRect`对象或[RECT](/previous-versions/dd162897\(v=vs.85\))结构。
 
 *pParentWnd*<br/>
 指定列表控件的父窗口中，通常`CDialog`。 它不能为 NULL。
@@ -667,7 +667,7 @@ virtual BOOL CreateEx(
 指定列表控件的样式。 应用于控件的列表控件样式的任意组合。 这些样式的完整列表，请参阅[列表视图的窗口样式](/windows/desktop/Controls/list-view-window-styles)Windows SDK 中。
 
 *rect*<br/>
-对引用[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构的结构描述的大小和窗口的工作区中创建的位置*pParentWnd*。
+对引用[RECT](/previous-versions/dd162897\(v=vs.85\))结构的结构描述的大小和窗口的工作区中创建的位置*pParentWnd*。
 
 *pParentWnd*<br/>
 指向控件的父级的窗口的指针。
@@ -701,7 +701,7 @@ CImageList* CreateDragImage(
 若要创建的拖动图像列表的项的索引。
 
 *lpPoint*<br/>
-地址[点](https://msdn.microsoft.com/library/windows/desktop/dd162805)接收的图像的左上角的初始位置的结构视图中协调。
+地址[点](/previous-versions/dd162805\(v=vs.85\))接收的图像的左上角的初始位置的结构视图中协调。
 
 ### <a name="return-value"></a>返回值
 
@@ -1442,7 +1442,7 @@ BOOL GetGroupRect(
 |参数|描述|
 |---------------|-----------------|
 |*iGroupId*|[in]指定一组。|
-|*lpRect*|[in、 out]指向[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构。 如果此方法成功，该结构接收由指定的组的矩形坐标*iGroupId*。|
+|*lpRect*|[in、 out]指向[RECT](/previous-versions/dd162897\(v=vs.85\))结构。 如果此方法成功，该结构接收由指定的组的矩形坐标*iGroupId*。|
 |*iCoords*|[in]指定要检索的矩形坐标。 使用下列值之一：<br /><br /> -LVGGR_GROUP-整个展开组 （默认值） 坐标。<br />-LVGGR_HEADER-仅标头 （已折叠组） 的坐标。<br />-LVGGR_SUBSETLINK-坐标仅子集链接 （标记子集）。|
 
 ### <a name="return-value"></a>返回值
@@ -1451,7 +1451,7 @@ BOOL GetGroupRect(
 
 ### <a name="remarks"></a>备注
 
-调用方负责分配[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)指向结构*pRect*参数。
+调用方负责分配[RECT](/previous-versions/dd162897\(v=vs.85\))指向结构*pRect*参数。
 
 此方法将发送[LVM_GETGROUPRECT](/windows/desktop/Controls/lvm-getgrouprect)消息，Windows SDK 中所述。
 
@@ -1790,7 +1790,7 @@ BOOL GetItemIndexRect(
 |*pItemIndex*|[in]指向[LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762)子项的父项的结构。<br /><br /> 调用方负责分配和设置的成员[LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762)结构。 此参数不能为 NULL。|
 |*iColumn*|[in]在控件中列的从零开始的索引。|
 |*rectType*|[in]为其检索边框的列表视图子项的部分。 指定下列值之一：<br /><br /> LVIR_BOUNDS-返回整个子项，包括图标和标签的边框。<br /><br /> LVIR_ICON-返回的图标或小图标的子项的边框。<br /><br /> LVIR_LABEL-返回子项文本的边框。|
-|*pRect*|[out]指向[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)接收该子项的边框的相关信息的结构。<br /><br /> 调用方负责分配[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构。 此参数不能为 NULL。|
+|*pRect*|[out]指向[RECT](/previous-versions/dd162897\(v=vs.85\))接收该子项的边框的相关信息的结构。<br /><br /> 调用方负责分配[RECT](/previous-versions/dd162897\(v=vs.85\))结构。 此参数不能为 NULL。|
 
 ### <a name="return-value"></a>返回值
 
@@ -1844,7 +1844,7 @@ BOOL GetItemPosition(
 要检索其位置的项的索引。
 
 *lpPoint*<br/>
-地址[点](https://msdn.microsoft.com/library/windows/desktop/dd162805)接收项的左上角的位置的结构视图中协调。
+地址[点](/previous-versions/dd162805\(v=vs.85\))接收项的左上角的位置的结构视图中协调。
 
 ### <a name="return-value"></a>返回值
 
@@ -1883,7 +1883,7 @@ BOOL GetItemRect(
 要检索其位置的项的索引。
 
 *lpRect*<br/>
-地址[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构，它接收的边框。
+地址[RECT](/previous-versions/dd162897\(v=vs.85\))结构，它接收的边框。
 
 *nCode*<br/>
 要为其检索边框的列表视图项的一部分。 它可以是下列值之一：
@@ -2220,7 +2220,7 @@ BOOL GetOrigin(LPPOINT lpPoint) const;
 ### <a name="parameters"></a>参数
 
 *lpPoint*<br/>
-地址[点](https://msdn.microsoft.com/library/windows/desktop/dd162805)接收视图原点的结构。
+地址[点](/previous-versions/dd162805\(v=vs.85\))接收视图原点的结构。
 
 ### <a name="return-value"></a>返回值
 
@@ -2531,7 +2531,7 @@ BOOL GetViewRect(LPRECT lpRect) const;
 ### <a name="parameters"></a>参数
 
 *lpRect*<br/>
-地址[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构。
+地址[RECT](/previous-versions/dd162897\(v=vs.85\))结构。
 
 ### <a name="return-value"></a>返回值
 
@@ -2834,7 +2834,7 @@ int InsertMarkHitTest(
 ### <a name="parameters"></a>参数
 
 *pPoint*<br/>
-一个指向[点](https://msdn.microsoft.com/library/windows/desktop/dd162805)结构，其中包含了点击的测试协调，相对于列表控件的客户端区域。
+一个指向[点](/previous-versions/dd162805\(v=vs.85\))结构，其中包含了点击的测试协调，相对于列表控件的客户端区域。
 
 *lvim*<br/>
 一个指向[LVINSERTMARK](/windows/desktop/api/commctrl/ns-commctrl-lvinsertmark)结构，它指定为坐标点参数定义的最近的插入点。
@@ -3854,7 +3854,7 @@ BOOL SetItemPosition(
 若要设置其位置的项的索引。
 
 *pt*<br/>
-一个[点](https://msdn.microsoft.com/library/windows/desktop/dd162805)结构，它指定视图中的新位置的项的左上角坐标。
+一个[点](/previous-versions/dd162805\(v=vs.85\))结构，它指定视图中的新位置的项的左上角坐标。
 
 ### <a name="return-value"></a>返回值
 

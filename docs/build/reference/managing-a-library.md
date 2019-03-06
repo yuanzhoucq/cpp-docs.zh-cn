@@ -40,12 +40,12 @@ helpviewer_keywords:
 - LIST library manager option
 - /CONVERT library manager option
 ms.assetid: f56a8b85-fbdc-4c09-8d8e-00f0ffe1da53
-ms.openlocfilehash: 69cd03e029d014b9b74a8688f155dfb1f023b55c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fb06fdf0298d627f289448930b490fb0660e381d
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477059"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57419599"
 ---
 # <a name="managing-a-library"></a>管理库
 
@@ -66,7 +66,7 @@ LIB [options...] files...
 **/LIBPATH:** *dir*<br/>
 重写环境库路径。 有关详细信息，请参阅链接的说明[/LIBPATH](../../build/reference/libpath-additional-libpath.md)选项。
 
-**/ 列表**<br/>
+**/LIST**<br/>
 到标准输出将显示有关输出库的信息。 输出可以定向到一个文件。 可以使用 /LIST 来确定现有库的内容，而无需修改它。
 
 **/ 名称：** *文件名*<br/>

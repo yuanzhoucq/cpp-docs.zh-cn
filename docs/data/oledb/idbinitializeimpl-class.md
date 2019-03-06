@@ -39,16 +39,16 @@ helpviewer_keywords:
 - m_dwStatus
 - m_pCUtlPropInfo
 ms.assetid: e4182f81-0443-44f5-a0d3-e7e075d6f883
-ms.openlocfilehash: 4d9499262d0b4167d7c3941113f49bfa23e0467b
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 18145f3dc9545f79b08d9d92cacdafad0520c992
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556759"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57418736"
 ---
 # <a name="idbinitializeimpl-class"></a>IDBInitializeImpl 类
 
-提供一个实现[IDBInitialize](https://docs.microsoft.com/previous-versions/windows/desktop/ms713706(v=vs.85))接口。
+提供一个实现[IDBInitialize](/previous-versions/windows/desktop/ms713706(v=vs.85))接口。
 
 ## <a name="syntax"></a>语法
 
@@ -106,7 +106,7 @@ IDBInitializeImpl();
 
 初始化所有数据成员。
 
-## <a name="initialize"></a> Idbinitializeimpl:: Initialize
+## <a name="initialize"></a> IDBInitializeImpl::Initialize
 
 通过准备数据源对象的属性支持来初始化该对象。
 
@@ -118,9 +118,9 @@ STDMETHOD(Initialize)(void);
 
 ### <a name="remarks"></a>备注
 
-请参阅[idbinitialize:: Initialize](https://docs.microsoft.com/previous-versions/windows/desktop/ms718026(v=vs.85))中*OLE DB 程序员参考*。
+请参阅[idbinitialize:: Initialize](/previous-versions/windows/desktop/ms718026(v=vs.85))中*OLE DB 程序员参考*。
 
-## <a name="uninitialize"></a> Idbinitializeimpl:: Uninitialize
+## <a name="uninitialize"></a> IDBInitializeImpl::Uninitialize
 
 位置数据源，因为内部资源，例如属性支持未初始化状态的对象。
 
@@ -132,9 +132,9 @@ STDMETHOD(Uninitialize)(void);
 
 ### <a name="remarks"></a>备注
 
-请参阅[IDBInitialize::Uninitialize](https://docs.microsoft.com/previous-versions/windows/desktop/ms719648(v=vs.85))中*OLE DB 程序员参考*。
+请参阅[IDBInitialize::Uninitialize](/previous-versions/windows/desktop/ms719648(v=vs.85))中*OLE DB 程序员参考*。
 
-## <a name="dwstatus"></a> Idbinitializeimpl:: M_dwstatus
+## <a name="dwstatus"></a> IDBInitializeImpl::m_dwStatus
 
 数据源的标志。
 
@@ -162,7 +162,7 @@ enum DATASOURCE_FLAGS {
 |`DSF_PERSIST_DIRTY`|如果数据源对象 （即，如果进行了更改） 需要持久性，设置。|
 |`DSF_INITIALIZED`|如果初始化数据源，设置。|
 
-## <a name="pcutlpropinfo"></a> Idbinitializeimpl:: M_pcutlpropinfo
+## <a name="pcutlpropinfo"></a> IDBInitializeImpl::m_pCUtlPropInfo
 
 指向实现对象，用于 DB 属性信息的指针。
 

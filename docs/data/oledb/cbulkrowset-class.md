@@ -102,12 +102,12 @@ helpviewer_keywords:
 - ReleaseRows method
 - SetRows method
 ms.assetid: c6bde426-c543-4022-a98a-9519d9e2ae59
-ms.openlocfilehash: bb7f7ee0b4c190889daf661816a9e1c96575a052
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 776123baa0d53ac2a1777849b60d35cf0d93a172
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51557084"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426220"
 ---
 # <a name="cbulkrowset-class"></a>CBulkRowset 类
 
@@ -152,9 +152,9 @@ class CBulkRowset : public CRowset<TAccessor>
 
 [!code-cpp[NVC_OLEDB_Consumer#1](../../data/oledb/codesnippet/cpp/cbulkrowset-class_1.cpp)]
 
-## <a name="addrefrows"></a> Cbulkrowset:: Addrefrows
+## <a name="addrefrows"></a> CBulkRowset::AddRefRows
 
-调用[irowset:: Addrefrows](https://docs.microsoft.com/previous-versions/windows/desktop/ms719619(v=vs.85))来增加当前从 bulk 行集检索到的所有行的引用计数。
+调用[irowset:: Addrefrows](/previous-versions/windows/desktop/ms719619(v=vs.85))来增加当前从 bulk 行集检索到的所有行的引用计数。
 
 ### <a name="syntax"></a>语法
 
@@ -166,7 +166,7 @@ HRESULT AddRefRows() throw();
 
 标准的 HRESULT。
 
-## <a name="cbulkrowset"></a> Cbulkrowset:: Cbulkrowset
+## <a name="cbulkrowset"></a> CBulkRowset::CBulkRowset
 
 创建一个新的 `CBulkRowset` 对象并将默认行数设置为 10。
 
@@ -176,7 +176,7 @@ HRESULT AddRefRows() throw();
 CBulkRowset();
 ```
 
-## <a name="movefirst"></a> Cbulkrowset:: Movefirst
+## <a name="movefirst"></a> CBulkRowset::MoveFirst
 
 检索数据的第一行。
 
@@ -190,7 +190,7 @@ HRESULT MoveFirst() throw();
 
 标准的 HRESULT。
 
-## <a name="movelast"></a> Cbulkrowset:: Movelast
+## <a name="movelast"></a> CBulkRowset::MoveLast
 
 将移动到最后一个行。
 
@@ -204,7 +204,7 @@ HRESULT MoveLast() throw();
 
 标准的 HRESULT。
 
-## <a name="movenext"></a> Cbulkrowset:: Movenext
+## <a name="movenext"></a> CBulkRowset::MoveNext
 
 检索下的一行数据。
 
@@ -218,7 +218,7 @@ HRESULT MoveNext() throw();
 
 标准的 HRESULT。 当已达到行集末尾时，返回 DB_S_ENDOFROWSET。
 
-## <a name="moveprev"></a> Cbulkrowset:: Moveprev
+## <a name="moveprev"></a> CBulkRowset::MovePrev
 
 移动到上一行。
 
@@ -232,7 +232,7 @@ HRESULT MovePrev() throw();
 
 标准的 HRESULT。
 
-## <a name="movetobookmark"></a> Cbulkrowset:: Movetobookmark
+## <a name="movetobookmark"></a> CBulkRowset::MoveToBookmark
 
 提取标记的书签或指定的偏移量处的行的行 (*lSkip*) 从该书签。
 
@@ -245,7 +245,7 @@ HRESULT MoveToBookmark(const CBookmarkBase& bookmark,
 
 #### <a name="parameters"></a>参数
 
-*书签*<br/>
+*bookmark*<br/>
 [in] 标记要从其提取数据的位置的书签。
 
 *lSkip*<br/>
@@ -253,9 +253,9 @@ HRESULT MoveToBookmark(const CBookmarkBase& bookmark,
 
 ### <a name="return-value"></a>返回值
 
-请参阅[irowset:: Getdata](https://docs.microsoft.com/previous-versions/windows/desktop/ms716988(v=vs.85))中*OLE DB 程序员参考*。
+请参阅[irowset:: Getdata](/previous-versions/windows/desktop/ms716988(v=vs.85))中*OLE DB 程序员参考*。
 
-## <a name="movetoratio"></a> Cbulkrowset:: Movetoratio
+## <a name="movetoratio"></a> CBulkRowset::MoveToRatio
 
 提取从行集中的小数位置开始的行。
 
@@ -284,11 +284,11 @@ HRESULT MoveToRatio(DBCOUNTITEM nNumerator,
 
 `(nNumerator *  RowsetSize ) / nDenominator`
 
-其中`RowsetSize`是行集，以行为单位的大小。 此公式的准确性取决于特定的提供程序。 有关详细信息，请参阅[irowsetscroll:: Getrowsatratio](https://docs.microsoft.com/previous-versions/windows/desktop/ms709602(v=vs.85))中*OLE DB 程序员参考*。
+其中`RowsetSize`是行集，以行为单位的大小。 此公式的准确性取决于特定的提供程序。 有关详细信息，请参阅[irowsetscroll:: Getrowsatratio](/previous-versions/windows/desktop/ms709602(v=vs.85))中*OLE DB 程序员参考*。
 
-## <a name="releaserows"></a> Cbulkrowset:: Releaserows
+## <a name="releaserows"></a> CBulkRowset::ReleaseRows
 
-调用[irowset:: Releaserows](https://docs.microsoft.com/previous-versions/windows/desktop/ms719771(v=vs.85))要递减当前从 bulk 行集检索到的所有行的引用计数。
+调用[irowset:: Releaserows](/previous-versions/windows/desktop/ms719771(v=vs.85))要递减当前从 bulk 行集检索到的所有行的引用计数。
 
 ### <a name="syntax"></a>语法
 
@@ -300,7 +300,7 @@ HRESULT ReleaseRows() throw();
 
 标准的 HRESULT。
 
-## <a name="setrows"></a> Cbulkrowset:: Setrows
+## <a name="setrows"></a> CBulkRowset::SetRows
 
 设置每个调用检索的行句柄数量。
 
