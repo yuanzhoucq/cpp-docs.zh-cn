@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - IDocHostUIHandlerDispatch interface
 ms.assetid: 6963a301-601a-4ac3-8bef-f7b252ea2fc6
-ms.openlocfilehash: 0652801d7ad80ba53716299e3919f5b432de855a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 6ce3532e99dc1d0ff0151285766aa5d78c2b9e9d
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293142"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57421877"
 ---
 # <a name="idochostuihandlerdispatch-interface"></a>IDocHostUIHandlerDispatch 接口
 
@@ -36,21 +36,21 @@ interface IDocHostUIHandlerDispatch : IDispatch
 
 |||
 |-|-|
-|[EnableModeless](https://msdn.microsoft.com/library/aa753253.aspx)|从 MSHTML 实现调用[IOleInPlaceActiveObject::EnableModeless](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-enablemodeless)。 也称为 MSHTML 显示模式 UI 时。|
-|[FilterDataObject](https://msdn.microsoft.com/library/aa753254.aspx)|调用由 MSHTML 以允许主机替换 MSHTML 的数据对象在主机上。|
-|[GetDropTarget](https://msdn.microsoft.com/library/aa753255.aspx)|当它被用作拖放目标以允许主机提供替代时，调用 MSHTML [IDropTarget](/windows/desktop/api/oleidl/nn-oleidl-idroptarget)。|
-|[GetExternal](https://msdn.microsoft.com/library/aa753256.aspx)|由 MSHTML 获取主机的 IDispatch 接口调用。|
-|[GetHostInfo](https://msdn.microsoft.com/library/aa753257.aspx)|检索 MSHTML 主机的用户界面功能。|
-|[GetOptionKeyPath](https://msdn.microsoft.com/library/aa753258.aspx)|返回 MSHTML 在其下存储用户首选项的注册表项。|
-|[HideUI](https://msdn.microsoft.com/library/aa753259.aspx)|当 MSHTML 删除其菜单和工具栏时调用。|
-|[OnDocWindowActivate](https://msdn.microsoft.com/library/aa753261.aspx)|从 MSHTML 实现调用[IOleInPlaceActiveObject::OnDocWindowActivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-ondocwindowactivate)。|
-|[OnFrameWindowActivate](https://msdn.microsoft.com/library/aa753262.aspx)|从 MSHTML 实现调用[ioleinplaceactiveobject:: Onframewindowactivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-onframewindowactivate)。|
-|[ResizeBorder](https://msdn.microsoft.com/library/aa753263.aspx)|从 MSHTML 实现调用[IOleInPlaceActiveObject::ResizeBorder](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-resizeborder)。|
-|[ShowContextMenu](https://msdn.microsoft.com/library/aa753264.aspx)|从 MSHTML 以显示上下文菜单调用。|
-|[ShowUI](https://msdn.microsoft.com/library/aa753265.aspx)|允许主机替换 MSHTML 菜单和工具栏。|
-|[TranslateAccelerator](https://msdn.microsoft.com/library/aa753266.aspx)|由 MSHTML 调用时[:: Translateaccelerator](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-translateaccelerator)或[iolecontrolsite:: Translateaccelerator](/windows/desktop/api/ocidl/nf-ocidl-iolecontrolsite-translateaccelerator)调用。|
-|[TranslateUrl](https://msdn.microsoft.com/library/aa753267.aspx)|由 MSHTML 以允许主机有机会修改要加载的 URL 调用。|
-|[UpdateUI](https://msdn.microsoft.com/library/aa753268.aspx)|通知主机命令状态已更改。|
+|[EnableModeless](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753253\(v=vs.85\))|从 MSHTML 实现调用[IOleInPlaceActiveObject::EnableModeless](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-enablemodeless)。 也称为 MSHTML 显示模式 UI 时。|
+|[FilterDataObject](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753254\(v=vs.85\))|调用由 MSHTML 以允许主机替换 MSHTML 的数据对象在主机上。|
+|[GetDropTarget](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753255\(v=vs.85\))|当它被用作拖放目标以允许主机提供替代时，调用 MSHTML [IDropTarget](/windows/desktop/api/oleidl/nn-oleidl-idroptarget)。|
+|[GetExternal](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753256\(v=vs.85\))|由 MSHTML 获取主机的 IDispatch 接口调用。|
+|[GetHostInfo](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753257\(v=vs.85\))|检索 MSHTML 主机的用户界面功能。|
+|[GetOptionKeyPath](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753258\(v=vs.85\))|返回 MSHTML 在其下存储用户首选项的注册表项。|
+|[HideUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753259\(v=vs.85\))|当 MSHTML 删除其菜单和工具栏时调用。|
+|[OnDocWindowActivate](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753261\(v=vs.85\))|从 MSHTML 实现调用[IOleInPlaceActiveObject::OnDocWindowActivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-ondocwindowactivate)。|
+|[OnFrameWindowActivate](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753262\(v=vs.85\))|从 MSHTML 实现调用[ioleinplaceactiveobject:: Onframewindowactivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-onframewindowactivate)。|
+|[ResizeBorder](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753263\(v=vs.85\))|从 MSHTML 实现调用[IOleInPlaceActiveObject::ResizeBorder](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-resizeborder)。|
+|[ShowContextMenu](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753264\(v=vs.85\))|从 MSHTML 以显示上下文菜单调用。|
+|[ShowUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753265\(v=vs.85\))|允许主机替换 MSHTML 菜单和工具栏。|
+|[TranslateAccelerator](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753266\(v=vs.85\))|由 MSHTML 调用时[:: Translateaccelerator](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-translateaccelerator)或[iolecontrolsite:: Translateaccelerator](/windows/desktop/api/ocidl/nf-ocidl-iolecontrolsite-translateaccelerator)调用。|
+|[TranslateUrl](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753267\(v=vs.85\))|由 MSHTML 以允许主机有机会修改要加载的 URL 调用。|
+|[UpdateUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753268\(v=vs.85\))|通知主机命令状态已更改。|
 
 ## <a name="remarks"></a>备注
 

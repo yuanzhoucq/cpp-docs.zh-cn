@@ -29,12 +29,12 @@ helpviewer_keywords:
 - /Es BSCMAKE option
 - Ei BSCMAKE option
 ms.assetid: fa2f1e06-c684-41cf-80dd-6a554835ebd2
-ms.openlocfilehash: 669f1fc3ef151ee76ab6b057798f33f5b3cc1287
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7727f433ae68f26075645b35ff5edad43159ec67
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50464904"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57415404"
 ---
 # <a name="bscmake-options"></a>BSCMAKE 选项
 
@@ -48,7 +48,7 @@ ms.locfileid: "50464904"
 **/El**<br/>
 排除本地符号。 默认值是包含本地符号。 有关本地符号的详细信息，请参阅[创建.sbr 文件](../../build/reference/creating-an-dot-sbr-file.md)。
 
-**/ E m**<br/>
+**/Em**<br/>
 排除宏的正文中的符号。 使用 **/e m**浏览信息文件中包含宏的名称。 默认值是包含宏名称和宏扩展的结果。
 
 **/Er (** *符号*...**)**<br/>
@@ -57,7 +57,7 @@ ms.locfileid: "50464904"
 **/Es**<br/>
 从浏览信息文件中排除指定的绝对路径或在 INCLUDE 环境变量中指定的绝对路径中找到的每个包含文件。 (通常情况下，这些是系统包含文件，其中包含很多你可能不需要在浏览信息文件中的信息。)此选项不排除没有路径或相对路径或文件中包含的相对路径中找到使用指定的文件。 可以使用 **/Ei**选项和 **/Es**排除的文件 **/Es**不排除。 如果想要排除文件一部分的 **/Es**不包括，使用 **/Ei**而不是 **/Es**和列出你想要排除的文件。
 
-**/errorreport:**[**无** &#124; **提示符** &#124; **队列** &#124; **发送**]<br/>
+**/errorreport:**[**none** &#124; **prompt** &#124; **queue** &#124; **send**]<br/>
 可以将信息发送给 Microsoft，有关 bscmake.exe 中的内部错误。
 
 有关详细信息 **/errorreport**，请参阅[/errorReport （报告内部编译器错误）](../../build/reference/errorreport-report-internal-compiler-errors.md)。
@@ -74,7 +74,7 @@ ms.locfileid: "50464904"
 **/NOLOGO**<br/>
 禁止显示 BSCMAKE 版权消息。
 
-**/o** *文件名*<br/>
+**/o** *filename*<br/>
 指定浏览信息文件的名称。 默认情况下，BSCMAKE 提供浏览信息文件的第一个的.sbr 文件和.bsc 扩展的基名称。
 
 **/S (** *文件名*...**)**<br/>

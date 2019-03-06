@@ -15,12 +15,12 @@ helpviewer_keywords:
 - precompiled header files, naming
 - /Fp compiler option [C++]
 ms.assetid: 0fcd9cbd-e09f-44d3-9715-b41efb5d0be2
-ms.openlocfilehash: 30a569b367d10a4f230d0054b19833c6614afac7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8384aa1ee27fee0bc42e023b78b948d9acd384e8
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50517086"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414091"
 ---
 # <a name="fp-name-pch-file"></a>/Fp（命名 .Pch 文件）
 
@@ -28,7 +28,7 @@ ms.locfileid: "50517086"
 
 ## <a name="syntax"></a>语法
 
-> **/Fp**<em>路径名</em>
+> **/Fp**<em>pathname</em>
 
 ## <a name="remarks"></a>备注
 

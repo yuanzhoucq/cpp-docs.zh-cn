@@ -11,12 +11,12 @@ helpviewer_keywords:
 - dimensions
 - CSize class
 ms.assetid: fb2cf85a-0bc1-46f8-892b-309c108b52ae
-ms.openlocfilehash: 9bbd23fe793946dc0f081f4d19b9f6e26fcfda82
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 36da88a49e7d0e648d44b0798e108a60abb935d9
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178364"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57415144"
 ---
 # <a name="csize-class"></a>CSize 类
 
@@ -41,11 +41,11 @@ class CSize : public tagSIZE
 |名称|描述|
 |----------|-----------------|
 |[CSize::operator-](#operator_-)|中减去两个大小。|
-|[CSize::operator ！ =](#operator_neq)|检查之间是否不相等`CSize`和大小。|
+|[CSize::operator !=](#operator_neq)|检查之间是否不相等`CSize`和大小。|
 |[CSize::operator +](#operator_add)|将添加两个大小。|
-|[CSize::operator + =](#operator_add_eq)|添加到大小`CSize`。|
-|[CSize::operator =](#operator_-_eq)|从大小中减去`CSize`。|
-|[CSize::operator = =](#operator_eq_eq)|检查是否相等`CSize`和大小。|
+|[CSize::operator +=](#operator_add_eq)|添加到大小`CSize`。|
+|[CSize::operator -=](#operator_-_eq)|从大小中减去`CSize`。|
+|[CSize::operator ==](#operator_eq_eq)|检查是否相等`CSize`和大小。|
 
 ## <a name="remarks"></a>备注
 
@@ -147,7 +147,7 @@ void operator+=(SIZE size) throw();
 
 [!code-cpp[NVC_ATLMFC_Utilities#100](../../atl-mfc-shared/codesnippet/cpp/csize-class_4.cpp)]
 
-##  <a name="operator_-_eq"></a>  CSize::operator =
+##  <a name="operator_-_eq"></a>  CSize::operator -=
 
 从该大小中减去`CSize`。
 
@@ -173,17 +173,17 @@ CRect operator+(const RECT* lpRect) const throw();
 
 请参阅各个运算符的以下说明：
 
-- **运算符 + (** *大小* **)**
+- **operator +(** *size* **)**
 
   此操作将添加两个`CSize`值。
 
-- **运算符 + (** *点* **)**
+- **operator +(** *point* **)**
 
-  此操作的偏移量 （移动）[点](https://msdn.microsoft.com/library/windows/desktop/dd162805)(或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)) 值由此`CSize`值。 `cx`并`cy`此成员`CSize`值添加到`x`并`y`的数据成员`POINT`值。 它相当于的新版[CPoint::operator +](../../atl-mfc-shared/reference/cpoint-class.md#operator_add)采用[大小](/windows/desktop/api/windef/ns-windef-tagsize)参数。
+  此操作的偏移量 （移动）[点](/previous-versions/dd162805\(v=vs.85\))(或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)) 值由此`CSize`值。 `cx`并`cy`此成员`CSize`值添加到`x`并`y`的数据成员`POINT`值。 它相当于的新版[CPoint::operator +](../../atl-mfc-shared/reference/cpoint-class.md#operator_add)采用[大小](/windows/desktop/api/windef/ns-windef-tagsize)参数。
 
-- **运算符 + (** *lpRect* **)**
+- **operator +(** *lpRect* **)**
 
-   此操作的偏移量 （移动） [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) (或[CRect](../../atl-mfc-shared/reference/crect-class.md)) 值由此`CSize`值。 `cx`并`cy`此成员`CSize`值添加到`left`， `top`， `right`，以及`bottom`的数据成员`RECT`值。 它相当于的新版[CRect::operator +](../../atl-mfc-shared/reference/crect-class.md#operator_add)采用[大小](/windows/desktop/api/windef/ns-windef-tagsize)参数。
+   此操作的偏移量 （移动） [RECT](/previous-versions/dd162897\(v=vs.85\)) (或[CRect](../../atl-mfc-shared/reference/crect-class.md)) 值由此`CSize`值。 `cx`并`cy`此成员`CSize`值添加到`left`， `top`， `right`，以及`bottom`的数据成员`RECT`值。 它相当于的新版[CRect::operator +](../../atl-mfc-shared/reference/crect-class.md#operator_add)采用[大小](/windows/desktop/api/windef/ns-windef-tagsize)参数。
 
 ### <a name="example"></a>示例
 
@@ -204,19 +204,19 @@ CSize operator-() const throw();
 
 第四个运算符，一元负，可更改的登录`CSize`值。 请参阅各个运算符的以下说明：
 
-- **运算符-(** *大小* **)**
+- **operator -(** *size* **)**
 
   此操作中减去两个`CSize`值。
 
-- **运算符-(** *点* **)**
+- **operator -(** *point* **)**
 
-  此操作的偏移量 （移动）[点](https://msdn.microsoft.com/library/windows/desktop/dd162805)或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)值，从而此加法逆元`CSize`值。 `cx`并`cy`此`CSize`减去值`x`并`y`的数据成员`POINT`值。 它相当于的新版[CPoint::operator-](../../atl-mfc-shared/reference/cpoint-class.md#operator_-)采用[大小](/windows/desktop/api/windef/ns-windef-tagsize)参数。
+  此操作的偏移量 （移动）[点](/previous-versions/dd162805\(v=vs.85\))或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)值，从而此加法逆元`CSize`值。 `cx`并`cy`此`CSize`减去值`x`并`y`的数据成员`POINT`值。 它相当于的新版[CPoint::operator-](../../atl-mfc-shared/reference/cpoint-class.md#operator_-)采用[大小](/windows/desktop/api/windef/ns-windef-tagsize)参数。
 
-- **运算符-(** *lpRect* **)**
+- **operator -(** *lpRect* **)**
 
-  此操作的偏移量 （移动） [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)或[CRect](../../atl-mfc-shared/reference/crect-class.md)值，从而此加法逆元`CSize`值。 `cx`并`cy`此成员`CSize`减去值`left`， `top`， `right`，以及`bottom`的数据成员`RECT`值。 它相当于的新版[CRect::operator-](../../atl-mfc-shared/reference/crect-class.md#operator_-)采用[大小](/windows/desktop/api/windef/ns-windef-tagsize)参数。
+  此操作的偏移量 （移动） [RECT](/previous-versions/dd162897\(v=vs.85\))或[CRect](../../atl-mfc-shared/reference/crect-class.md)值，从而此加法逆元`CSize`值。 `cx`并`cy`此成员`CSize`减去值`left`， `top`， `right`，以及`bottom`的数据成员`RECT`值。 它相当于的新版[CRect::operator-](../../atl-mfc-shared/reference/crect-class.md#operator_-)采用[大小](/windows/desktop/api/windef/ns-windef-tagsize)参数。
 
-- **运算符-（)**
+- **operator -()**
 
   此操作将返回此加法逆元`CSize`值。
 

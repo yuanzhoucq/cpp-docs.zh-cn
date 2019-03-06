@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CStatusBarCtrl [MFC], SetText
 - CStatusBarCtrl [MFC], SetTipText
 ms.assetid: 8504ad38-7b91-4746-aede-ac98886eb47b
-ms.openlocfilehash: 5a5adc5ae6b1981d7f8260d684a33d8bd7918e40
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 8db2be9b14f9d60f2103ce0b63b772962b079bbe
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57272836"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426129"
 ---
 # <a name="cstatusbarctrl-class"></a>CStatusBarCtrl 类
 
@@ -132,7 +132,7 @@ virtual BOOL Create(
 指定状态栏控件的样式。 应用状态栏控件样式中列出的任意组合[常见控件样式](/windows/desktop/Controls/common-control-styles)Windows SDK 中。 此参数必须包含 WS_CHILD 样式。 它还应包括 WS_VISIBLE 样式。
 
 *rect*<br/>
-指定状态栏控件的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构。
+指定状态栏控件的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT](/previous-versions/dd162897\(v=vs.85\))结构。
 
 *pParentWnd*<br/>
 通常指定控件的父窗口状态栏`CDialog`。 它不能为 NULL。
@@ -178,7 +178,7 @@ virtual BOOL CreateEx(
 指定状态栏控件的样式。 应用状态栏控件样式中列出的任意组合[常见控件样式](/windows/desktop/Controls/common-control-styles)Windows SDK 中。 此参数必须包含 WS_CHILD 样式。 它还应包括 WS_VISIBLE 样式。
 
 *rect*<br/>
-对引用[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构的结构描述的大小和窗口的工作区中创建的位置*pParentWnd*。
+对引用[RECT](/previous-versions/dd162897\(v=vs.85\))结构的结构描述的大小和窗口的工作区中创建的位置*pParentWnd*。
 
 *pParentWnd*<br/>
 指向控件的父级的窗口的指针。
@@ -344,7 +344,7 @@ BOOL GetRect(
 其边框是要检索的部件的从零开始索引。
 
 *lpRect*<br/>
-地址[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构，它接收的边框。
+地址[RECT](/previous-versions/dd162897\(v=vs.85\))结构，它接收的边框。
 
 ### <a name="return-value"></a>返回值
 

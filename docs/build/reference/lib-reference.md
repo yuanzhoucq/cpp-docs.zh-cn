@@ -10,19 +10,19 @@ helpviewer_keywords:
 - LIB [C++]
 - 32-Bit Library Manager
 ms.assetid: ecc7f643-bbd4-47a3-8dc6-b360f880db91
-ms.openlocfilehash: 1b3982e29d1bbf919e326e39f62ddb361d4c12ab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 382810fd418dbc49b20885f487ca9a35b0889a5f
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543268"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57415326"
 ---
 # <a name="lib-reference"></a>LIB 引用
 
 Microsoft 库管理器 (LIB.exe) 创建并管理通用对象文件格式 (COFF) 对象文件的库。 LIB 还可用来创建导出文件和导入库，以便引用导出的定义。
 
 > [!NOTE]
->  可以仅从 Visual Studio 命令提示符启动此工具。 不能从系统命令提示符或从文件资源管理器启动此工具。
+>  可以仅从 Visual Studio 命令提示符启动此工具。 无法从系统命令提示符或文件资源管理器中启动它。
 
 - [LIB 概述](../../build/reference/overview-of-lib.md)
 

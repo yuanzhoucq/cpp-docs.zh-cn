@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CIPAddressCtrl [MFC], SetFieldFocus
 - CIPAddressCtrl [MFC], SetFieldRange
 ms.assetid: 9764d2f4-cb14-4ba8-b799-7f57a55a47c6
-ms.openlocfilehash: e569829c100a581e24b5ce05df2f90ac7088024b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 5abcf838308d8965f3c55dc7d85dbac974825394
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57266286"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426389"
 ---
 # <a name="cipaddressctrl-class"></a>CIPAddressCtrl 类
 
@@ -122,7 +122,7 @@ virtual BOOL Create(
 IP 地址控件的样式。 应用窗口样式的组合。 必须包括 WS_CHILD 样式，因为该控件必须是子窗口。 请参阅[CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) Windows SDK for windows 样式的列表中。
 
 *rect*<br/>
-对 IP 地址控件的大小和位置的引用。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构。
+对 IP 地址控件的大小和位置的引用。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT](/previous-versions/dd162897\(v=vs.85\))结构。
 
 *pParentWnd*<br/>
 指向 IP 地址控件的父窗口的指针。 它不能为 NULL。
@@ -166,7 +166,7 @@ virtual BOOL CreateEx(
 IP 地址控件的样式。 应用窗口样式的组合。 必须包括 WS_CHILD 样式，因为该控件必须是子窗口。 请参阅[CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) Windows SDK for windows 样式的列表中。
 
 *rect*<br/>
-对引用[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构的结构描述的大小和窗口的工作区中创建的位置*pParentWnd*。
+对引用[RECT](/previous-versions/dd162897\(v=vs.85\))结构的结构描述的大小和窗口的工作区中创建的位置*pParentWnd*。
 
 *pParentWnd*<br/>
 指向控件的父级的窗口的指针。

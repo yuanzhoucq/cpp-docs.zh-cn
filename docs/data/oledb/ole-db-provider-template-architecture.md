@@ -6,12 +6,12 @@ helpviewer_keywords:
 - architecture [C++], OLE DB Provider
 - OLE DB provider templates, object model
 ms.assetid: 639304a3-f9e0-44dc-8d0c-0ebd2455b363
-ms.openlocfilehash: 099c29e141d721645c416e60be240c22d22cd869
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: b6d177d793451b7c5e9c19f6d40add973a627d60
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175634"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57422996"
 ---
 # <a name="ole-db-provider-template-architecture"></a>OLE DB 提供程序模板体系结构
 
@@ -39,15 +39,15 @@ OLE DB 提供程序模板提供预打包实现所有所需的接口。 通过 OL
 
 OLE DB 提供程序模板不会实现的行和存储对象。
 
-下表列出了必需和可选接口，上面列出的对象根据[OLE DB 2.6 SDK 文档](https://docs.microsoft.com/previous-versions/windows/desktop/ms722784(v=vs.85))。
+下表列出了必需和可选接口，上面列出的对象根据[OLE DB 2.6 SDK 文档](/previous-versions/windows/desktop/ms722784(v=vs.85))。
 
 |组件|接口|注释|
 |---------------|---------------|-------------|
-|[数据源](../../data/oledb/data-source-object-interfaces.md)([CDataSource](../../data/oledb/cdatasource-class.md))|[必需] `IDBCreateSession`<br /><br /> [必需] `IDBInitialize`<br /><br /> [必需] `IDBProperties`<br /><br /> [必需] `IPersist`<br /><br /> [可选] `IConnectionPointContainer`<br /><br /> [可选] `IDBAsynchStatus`<br /><br /> [可选] `IDBDataSourceAdmin`<br /><br /> [可选] `IDBInfo`<br /><br /> [可选] `IPersistFile`<br /><br /> [可选] `ISupportErrorInfo`|与提供程序从使用者连接。 该对象用于指定用户 ID、 密码和数据源名称等连接上的属性。 该对象还可以用来管理数据源 （创建、 更新、 删除表，等）。|
-|[会话](../../data/oledb/session-object-interfaces.md)([CSession](../../data/oledb/cdataconnection-operator-csession-amp.md))|[必需] `IGetDataSource`<br /><br /> [必需] `IOpenRowset`<br /><br /> [必需] `ISessionProperties`<br /><br /> [可选] `IAlterIndex`<br /><br /> [可选] `IAlterTable`<br /><br /> [可选] `IBindResource`<br /><br /> [可选] `ICreateRow`<br /><br /> [可选] `IDBCreateCommand`<br /><br /> [可选] `IDBSchemaRowset`<br /><br /> [可选] `IIndexDefinition`<br /><br /> [可选] `ISupportErrorInfo`<br /><br /> [可选] `ITableCreation`<br /><br /> [可选] `ITableDefinition`<br /><br /> [可选] `ITableDefinitionWithConstraints`<br /><br /> [可选] `ITransaction`<br /><br /> [可选] `ITransactionJoin`<br /><br /> [可选] `ITransactionLocal`<br /><br /> [可选] `ITransactionObject`|会话对象是使用者和提供程序之间的单个对话。 它是类似于 ODBC `HSTMT` ，可以有多个同时会话活动。<br /><br /> 会话对象是主链接以获取对 OLE DB 功能。 若要进入命令、 事务或行集对象，则翻会话对象。|
-|[行集](../../data/oledb/rowset-object-interfaces.md)([CRowset](../../data/oledb/crowset-class.md))|[必需] `IAccessor`<br /><br /> [必需] `IColumnsInfo`<br /><br /> [必需] `IConvertType`<br /><br /> [必需] `IRowset`<br /><br /> [必需] `IRowsetInfo`<br /><br /> [可选] `IChapteredRowset`<br /><br /> [可选] `IColumnsInfo2`<br /><br /> [可选] `IColumnsRowset`<br /><br /> [可选] `IConnectionPointContainer`<br /><br /> [可选] `IDBAsynchStatus`<br /><br /> [可选] `IGetRow`<br /><br /> [可选] `IRowsetChange`<br /><br /> [可选] `IRowsetChapterMember`<br /><br /> [可选] `IRowsetCurrentIndex`<br /><br /> [可选] `IRowsetFind`<br /><br /> [可选] `IRowsetIdentity`<br /><br /> [可选] `IRowsetIndex`<br /><br /> [可选] `IRowsetLocate`<br /><br /> [可选] `IRowsetRefresh`<br /><br /> [可选] `IRowsetScroll`<br /><br /> [可选] `IRowsetUpdate`<br /><br /> [可选] `IRowsetView`<br /><br /> [可选] `ISupportErrorInfo`<br /><br /> [可选] `IRowsetBookmark`|行集对象是从数据源的数据。 该对象用于该数据和对数据的任何基本操作 （更新、 fetch、 移动和其他人） 的绑定。 始终具有一个行集对象来保留和处理数据。|
-|[命令](../../data/oledb/command-object-interfaces.md)([CCommand](ccommand-class.md))|[必需] `IAccessor`<br /><br /> [必需] `IColumnsInfo`<br /><br /> [必需] `ICommand`<br /><br /> [必需] `ICommandProperties`<br /><br /> [必需] `ICommandText`<br /><br /> [必需] `IConvertType`<br /><br /> [可选] `IColumnsRowset`<br /><br /> [可选] `ICommandPersist`<br /><br /> [可选] `ICommandPrepare`<br /><br /> [可选] `ICommandWithParameters`<br /><br /> [可选] `ISupportErrorInfo`<br /><br /> [可选] `ICommandStream`|命令对象处理数据，例如查询上的操作。 它可以处理参数化或非参数化语句。<br /><br /> 命令对象也是负责处理参数和输出列的绑定的。 绑定是包含有关应如何检索行集中的列信息的结构。 它包含如序号、 数据类型、 长度和状态信息。|
-|[事务](../../data/oledb/transaction-object-interfaces.md)（可选）|[必需] `IConnectionPointContainer`<br /><br /> [必需] `ITransaction`<br /><br /> [可选] `ISupportErrorInfo`|事务对象上的数据源定义原子工作单元，并确定每个这些工作单元之间的关系。 OLE DB 提供程序模板不直接支持此对象 （即，创建你自己的对象）。|
+|[数据源](../../data/oledb/data-source-object-interfaces.md)([CDataSource](../../data/oledb/cdatasource-class.md))|[mandatory] `IDBCreateSession`<br /><br /> [mandatory] `IDBInitialize`<br /><br /> [mandatory] `IDBProperties`<br /><br /> [mandatory] `IPersist`<br /><br /> [optional] `IConnectionPointContainer`<br /><br /> [optional] `IDBAsynchStatus`<br /><br /> [optional] `IDBDataSourceAdmin`<br /><br /> [optional] `IDBInfo`<br /><br /> [optional] `IPersistFile`<br /><br /> [optional] `ISupportErrorInfo`|与提供程序从使用者连接。 该对象用于指定用户 ID、 密码和数据源名称等连接上的属性。 该对象还可以用来管理数据源 （创建、 更新、 删除表，等）。|
+|[会话](../../data/oledb/session-object-interfaces.md)([CSession](../../data/oledb/cdataconnection-operator-csession-amp.md))|[mandatory] `IGetDataSource`<br /><br /> [mandatory] `IOpenRowset`<br /><br /> [mandatory] `ISessionProperties`<br /><br /> [optional] `IAlterIndex`<br /><br /> [optional] `IAlterTable`<br /><br /> [optional] `IBindResource`<br /><br /> [optional] `ICreateRow`<br /><br /> [optional] `IDBCreateCommand`<br /><br /> [optional] `IDBSchemaRowset`<br /><br /> [optional] `IIndexDefinition`<br /><br /> [optional] `ISupportErrorInfo`<br /><br /> [optional] `ITableCreation`<br /><br /> [optional] `ITableDefinition`<br /><br /> [optional] `ITableDefinitionWithConstraints`<br /><br /> [optional] `ITransaction`<br /><br /> [optional] `ITransactionJoin`<br /><br /> [optional] `ITransactionLocal`<br /><br /> [optional] `ITransactionObject`|会话对象是使用者和提供程序之间的单个对话。 它是类似于 ODBC `HSTMT` ，可以有多个同时会话活动。<br /><br /> 会话对象是主链接以获取对 OLE DB 功能。 若要进入命令、 事务或行集对象，则翻会话对象。|
+|[Rowset](../../data/oledb/rowset-object-interfaces.md) ([CRowset](../../data/oledb/crowset-class.md))|[mandatory] `IAccessor`<br /><br /> [mandatory] `IColumnsInfo`<br /><br /> [mandatory] `IConvertType`<br /><br /> [mandatory] `IRowset`<br /><br /> [mandatory] `IRowsetInfo`<br /><br /> [optional] `IChapteredRowset`<br /><br /> [optional] `IColumnsInfo2`<br /><br /> [optional] `IColumnsRowset`<br /><br /> [optional] `IConnectionPointContainer`<br /><br /> [optional] `IDBAsynchStatus`<br /><br /> [optional] `IGetRow`<br /><br /> [optional] `IRowsetChange`<br /><br /> [optional] `IRowsetChapterMember`<br /><br /> [optional] `IRowsetCurrentIndex`<br /><br /> [optional] `IRowsetFind`<br /><br /> [optional] `IRowsetIdentity`<br /><br /> [optional] `IRowsetIndex`<br /><br /> [optional] `IRowsetLocate`<br /><br /> [optional] `IRowsetRefresh`<br /><br /> [optional] `IRowsetScroll`<br /><br /> [optional] `IRowsetUpdate`<br /><br /> [optional] `IRowsetView`<br /><br /> [optional] `ISupportErrorInfo`<br /><br /> [optional] `IRowsetBookmark`|行集对象是从数据源的数据。 该对象用于该数据和对数据的任何基本操作 （更新、 fetch、 移动和其他人） 的绑定。 始终具有一个行集对象来保留和处理数据。|
+|[命令](../../data/oledb/command-object-interfaces.md)([CCommand](ccommand-class.md))|[mandatory] `IAccessor`<br /><br /> [mandatory] `IColumnsInfo`<br /><br /> [mandatory] `ICommand`<br /><br /> [mandatory] `ICommandProperties`<br /><br /> [mandatory] `ICommandText`<br /><br /> [mandatory] `IConvertType`<br /><br /> [optional] `IColumnsRowset`<br /><br /> [optional] `ICommandPersist`<br /><br /> [optional] `ICommandPrepare`<br /><br /> [optional] `ICommandWithParameters`<br /><br /> [optional] `ISupportErrorInfo`<br /><br /> [optional] `ICommandStream`|命令对象处理数据，例如查询上的操作。 它可以处理参数化或非参数化语句。<br /><br /> 命令对象也是负责处理参数和输出列的绑定的。 绑定是包含有关应如何检索行集中的列信息的结构。 它包含如序号、 数据类型、 长度和状态信息。|
+|[事务](../../data/oledb/transaction-object-interfaces.md)（可选）|[mandatory] `IConnectionPointContainer`<br /><br /> [mandatory] `ITransaction`<br /><br /> [optional] `ISupportErrorInfo`|事务对象上的数据源定义原子工作单元，并确定每个这些工作单元之间的关系。 OLE DB 提供程序模板不直接支持此对象 （即，创建你自己的对象）。|
 
 有关详细信息，请参阅下列主题：
 
@@ -58,4 +58,4 @@ OLE DB 提供程序模板不会实现的行和存储对象。
 ## <a name="see-also"></a>请参阅
 
 [OLE DB 提供程序模板](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
-[OLE DB 接口](https://docs.microsoft.com/previous-versions/windows/desktop/ms709709(v=vs.85))<br/>
+[OLE DB 接口](/previous-versions/windows/desktop/ms709709(v=vs.85))<br/>

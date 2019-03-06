@@ -15,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - Map Class (C++/Cx)
 ms.assetid: 2b8cf968-1167-4898-a149-1195b32c1785
-ms.openlocfilehash: c6edd8cdd089e24011df41db09f3c1bb5d6465f9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a41f2012b4ee5441bcb9aa7d99cd0d0e97b6acc7
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481453"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423698"
 ---
 # <a name="platformcollectionsmap-class"></a>Platform::Collections::Map 类
 
@@ -93,7 +93,7 @@ ref class Map sealed;
 |||
 |-|-|
 |name|描述|
-|[Map:: mapchanged](#mapchanged-event.md) `event`|当映射更改时发生。|
+|[Map::MapChanged](#mapchanged-event.md) `event`|当映射更改时发生。|
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -182,7 +182,7 @@ virtual bool Insert(K key, V value);
 *key*<br/>
 键值对中的键部分。 类型*键*是 typename *K*。
 
-*value*<br/>
+*值*<br/>
 键值对中的值部分。 类型*值*是 typename *V*。
 
 ### <a name="return-value"></a>返回值
@@ -243,7 +243,7 @@ Map(
 *first*<br/>
 用于初始化当前映射的一系列元素中的第一个元素的输入迭代器。
 
-*最后一个*<br/>
+*last*<br/>
 用于初始化当前映射的一系列元素之后的第一个元素的输入迭代器。
 
 ## <a name="mapchanged"></a>  Map:: mapchanged 事件
@@ -258,7 +258,7 @@ event Windows::Foundation::Collections::MapChangedEventHandler<K,V>^ MapChanged;
 
 ### <a name="property-valuereturn-value"></a>属性值/返回值
 
-一个[MapChangedEventHandler\<K，V >](/uwp/api/windows.foundation.collections.mapchangedeventhandler)包含引发事件，并已发生更改的类型的对象有关的信息。 另请参阅[IMapChangedEventArgs\<K >](https://msdn.microsoft.com/library/windows/apps/br226034.aspx)并[CollectionChange 枚举](https://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.collectionchange.aspx)。
+一个[MapChangedEventHandler\<K，V >](/uwp/api/windows.foundation.collections.mapchangedeventhandler)包含引发事件，并已发生更改的类型的对象有关的信息。 另请参阅[IMapChangedEventArgs\<K >](/uwp/api/Windows.Foundation.Collections.IMapChangedEventArgs_K_)并[CollectionChange 枚举](/uwp/api/windows.foundation.collections.collectionchange)。
 
 ## <a name="net-framework-equivalent"></a>.NET Framework 等效项
 
@@ -281,7 +281,7 @@ virtual void Remove(K key);
 
 ## <a name="size"></a>  Map:: size 方法
 
-返回的数[Windows::Foundation::Collections::IKeyValuePair\<K，V >](https://msdn.microsoft.com/library/windows/apps/br226031.aspx)映射中的元素。
+返回的数[Windows::Foundation::Collections::IKeyValuePair\<K，V >](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_)映射中的元素。
 
 ### <a name="syntax"></a>语法
 

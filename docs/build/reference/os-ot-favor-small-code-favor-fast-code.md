@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Os compiler option [C++]
 - -Os compiler option [C++]
 ms.assetid: 9a340806-fa15-4308-892c-355d83cac0f2
-ms.openlocfilehash: aa404641a42b0209e8436ca206e59a3b5f425133
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c2abf23c15e6550a6d115f2e2b41a9c59de5fa3a
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50565953"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424634"
 ---
 # <a name="os-ot-favor-small-code-favor-fast-code"></a>/Os、/Ot（代码大小优先、代码速度优先）
 
@@ -46,7 +46,7 @@ ms.locfileid: "50565953"
 > [!NOTE]
 >  通过分析测试运行收集的信息将覆盖本应有效如果指定的优化 **/Ob**， **/Os**，或 **/Ot**。 有关详细信息[按配置文件优化](../../build/reference/profile-guided-optimizations.md)。
 
-**x86 特定**
+**x86 Specific**
 
 下面的代码示例演示了代码大小优先之间的差异 (**/Os**) 选项和代码速度优先 (**/Ot**) 选项：
 

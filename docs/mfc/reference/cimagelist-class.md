@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CImageList [MFC], Write
 - CImageList [MFC], m_hImageList
 ms.assetid: b6d1a704-1c82-4548-8a8f-77972adc98a5
-ms.openlocfilehash: 3e8c524a95730282d0e35e5f791ebf229725e282
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 2fc92858f84826e2b953fcbc9de020741e97b007
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57298914"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57416002"
 ---
 # <a name="cimagelist-class"></a>CImageList 类
 
@@ -357,7 +357,7 @@ BOOL Create(CImageList* pImageList);
 *nFlags*<br/>
 指定要创建图像列表的类型。 此参数可以是以下值的组合，但它可以包括只有一个`ILC_COLOR`值。
 
-|“值”|含义|
+|值|含义|
 |-----------|-------------|
 |ILC_COLOR|如果指定任何其他 ILC_COLOR * 标志时，请使用默认行为。 通常情况下，默认值是 ILC_COLOR4;但对于较旧的显示器驱动程序，默认值是 ILC_COLORDDB。|
 |ILC_COLOR4|使用 4 位 （16 种颜色） 与设备无关位图 (DIB) 部分作为位图图像列表。|
@@ -691,13 +691,13 @@ BOOL DrawIndirect(
 要绘制的图像的从零开始的索引。
 
 *pt*<br/>
-一个[点](https://msdn.microsoft.com/library/windows/desktop/dd162805)结构，它包含 x 坐标和 y 坐标绘制图像的位置。
+一个[点](/previous-versions/dd162805\(v=vs.85\))结构，它包含 x 坐标和 y 坐标绘制图像的位置。
 
 *sz*<br/>
 一个[大小](/windows/desktop/api/windef/ns-windef-tagsize)结构，指示要绘制的图像的大小。
 
 *ptOrigin*<br/>
-一个[点](https://msdn.microsoft.com/library/windows/desktop/dd162805)结构，它包含 x 坐标和 y 坐标指定相对于映像自身绘制操作的左上的角。 不绘制左侧的 x 坐标和 y 坐标上面的图像的像素。
+一个[点](/previous-versions/dd162805\(v=vs.85\))结构，它包含 x 坐标和 y 坐标指定相对于映像自身绘制操作的左上的角。 不绘制左侧的 x 坐标和 y 坐标上面的图像的像素。
 
 *fStyle*<br/>
 标志，指定的绘制样式和覆盖层图像 （可选）。 上覆盖图像，请参阅备注部分的信息。 MFC 默认实现，ILD_NORMAL，绘制图像的图像列表中使用的背景色。 如果背景色为 CLR_NONE 值，以透明方式使用掩码绘制图像。
@@ -720,7 +720,7 @@ BOOL DrawIndirect(
 *rgbFore*<br/>
 映像前景色，默认情况下 CLR_DEFAULT。 此参数可以是应用程序定义的 RGB 值或以下值之一：
 
-|“值”|含义|
+|值|含义|
 |-----------|-------------|
 |CLR_DEFAULT|默认前景色。 使用系统突出显示颜色作为前景色绘制图像。|
 |CLR_NONE|没有 blend 颜色。 图像与目标设备上下文的颜色混合。|
@@ -874,7 +874,7 @@ static CImageList* PASCAL GetDragImage(
 ### <a name="parameters"></a>参数
 
 *lpPoint*<br/>
-地址[点](https://msdn.microsoft.com/library/windows/desktop/dd162805)结构，它接收当前拖动位置。
+地址[点](/previous-versions/dd162805\(v=vs.85\))结构，它接收当前拖动位置。
 
 *lpPointHotSpot*<br/>
 地址`POINT`接收拖动图像相对于拖动位置的偏移量的结构。

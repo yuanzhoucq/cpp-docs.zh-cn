@@ -13,12 +13,12 @@ helpviewer_keywords:
 - CRestrictions class
 - Open method
 ms.assetid: 0aaa2364-641c-4318-b110-7446aada4b4f
-ms.openlocfilehash: 95517931f3156c4850e07c78910ccbffff424faa
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 3ade541e5418799f525a08d3fc868f07d2bdfe6a
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556512"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57412817"
 ---
 # <a name="crestrictions-class"></a>CRestrictions 类
 
@@ -55,7 +55,7 @@ class CRestrictions :
 |-|-|
 |[打开](#open)|返回一个结果集，根据用户提供的限制。|
 
-## <a name="open"></a> Crestrictions:: Open
+## <a name="open"></a> CRestrictions::Open
 
 返回一个结果集，根据用户提供的限制。
 
@@ -75,7 +75,7 @@ HRESULT Open(const CSession& session,
 
 #### <a name="parameters"></a>参数
 
-*会话*<br/>
+*session*<br/>
 [in]指定用于连接到数据源的现有会话对象。
 
 *lpszParam*<br/>
@@ -92,7 +92,7 @@ HRESULT Open(const CSession& session,
 
 架构行集上，可以指定最多七个限制。
 
-请参阅[IDBSchemaRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms713686(v=vs.85))有关每个架构行集上定义的限制信息。
+请参阅[IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85))有关每个架构行集上定义的限制信息。
 
 ## <a name="see-also"></a>请参阅
 

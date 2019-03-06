@@ -52,16 +52,16 @@ helpviewer_keywords:
 - m_bCancelWhenExecuting
 - m_bIsExecuting
 ms.assetid: ef285fef-0d66-45e6-a762-b03357098e3b
-ms.openlocfilehash: c5e599b437f7660801a1eb40618eb49bee84a918
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: e1f461cc850a2122af7902babfad8f1e14ac3e33
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556811"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424842"
 ---
 # <a name="icommandimpl-class"></a>ICommandImpl 类
 
-提供用于实现[ICommand](https://docs.microsoft.com/previous-versions/windows/desktop/ms709737(v=vs.85))接口。
+提供用于实现[ICommand](/previous-versions/windows/desktop/ms709737(v=vs.85))接口。
 
 ## <a name="syntax"></a>语法
 
@@ -119,7 +119,7 @@ STDMETHOD(Cancel)();
 
 ### <a name="remarks"></a>备注
 
-请参阅[ICommand::Cancel](https://docs.microsoft.com/previous-versions/windows/desktop/ms714402(v=vs.85))中*OLE DB 程序员参考*。
+请参阅[ICommand::Cancel](/previous-versions/windows/desktop/ms714402(v=vs.85))中*OLE DB 程序员参考*。
 
 ## <a name="cancelexecution"></a> Icommandimpl:: Cancelexecution
 
@@ -131,7 +131,7 @@ STDMETHOD(Cancel)();
 HRESULT CancelExecution();
 ```
 
-## <a name="createrowset"></a> Icommandimpl:: Createrowset
+## <a name="createrowset"></a> ICommandImpl::CreateRowset
 
 调用[Execute](../../data/oledb/icommandimpl-execute.md)创建单个行集。
 
@@ -178,7 +178,7 @@ HRESULT CreateRowset(IUnknown* pUnkOuter,
 
 若要创建多个行集，或提供你自己创建不同的行集的条件，将放到不同的调用`CreateRowset`从`Execute`。
 
-请参阅[icommand:: Execute](https://docs.microsoft.com/previous-versions/windows/desktop/ms718095(v=vs.85))中*OLE DB 程序员参考。*
+请参阅[icommand:: Execute](/previous-versions/windows/desktop/ms718095(v=vs.85))中*OLE DB 程序员参考。*
 
 ## <a name="execute"></a> Icommandimpl:: Execute
 
@@ -196,7 +196,7 @@ HRESULT Execute(IUnknown* pUnkOuter,
 
 #### <a name="parameters"></a>参数
 
-请参阅[icommand:: Execute](https://docs.microsoft.com/previous-versions/windows/desktop/ms718095(v=vs.85))中*OLE DB 程序员参考*。
+请参阅[icommand:: Execute](/previous-versions/windows/desktop/ms718095(v=vs.85))中*OLE DB 程序员参考*。
 
 ### <a name="remarks"></a>备注
 
@@ -217,7 +217,7 @@ STDMETHOD (GetDBSession) (REFIID riid,
 
 #### <a name="parameters"></a>参数
 
-请参阅[ICommand::GetDBSession](https://docs.microsoft.com/previous-versions/windows/desktop/ms719622(v=vs.85))中*OLE DB 程序员参考*。
+请参阅[ICommand::GetDBSession](/previous-versions/windows/desktop/ms719622(v=vs.85))中*OLE DB 程序员参考*。
 
 ### <a name="remarks"></a>备注
 
@@ -233,7 +233,7 @@ STDMETHOD (GetDBSession) (REFIID riid,
 ICommandImpl();
 ```
 
-## <a name="bcancel"></a> Icommandimpl:: M_bcancel
+## <a name="bcancel"></a> ICommandImpl::m_bCancel
 
 指示是否取消该命令。
 

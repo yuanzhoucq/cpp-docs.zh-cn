@@ -1,18 +1,18 @@
 ---
-title: 非 MFC DLL：概述
+title: 非 MFC Dll:概述
 ms.date: 11/04/2016
 helpviewer_keywords:
 - non-MFC DLLs [C++]
 - DLLs [C++], non-MFC
 ms.assetid: 1ed5d1ee-e20c-47d7-801d-87ea26a73842
-ms.openlocfilehash: 15cceb80b0f771c0c304572e2263b1479d6b0db7
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 2363d9ab13e120ab72a30628a7c37c411e8de3a2
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693017"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414520"
 ---
-# <a name="non-mfc-dlls-overview"></a>非 MFC DLL：概述
+# <a name="non-mfc-dlls-overview"></a>非 MFC Dll:概述
 
 非 MFC DLL 是在内部，不使用 MFC 的 DLL 和可由 MFC 或非 MFC 可执行文件调用 DLL 中导出的函数。 通常从非 MFC DLL 使用标准的 C 接口导出函数。
 
@@ -20,7 +20,7 @@ ms.locfileid: "51693017"
 
 ## <a name="what-do-you-want-to-do"></a>你希望做什么？
 
-- [演练： 创建和使用动态链接库](../build/walkthrough-creating-and-using-a-dynamic-link-library-cpp.md)
+- [演练：创建和使用动态链接库](../build/walkthrough-creating-and-using-a-dynamic-link-library-cpp.md)
 
 - [从 DLL 导出](../build/exporting-from-a-dll.md)
 

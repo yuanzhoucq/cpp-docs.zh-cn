@@ -6,12 +6,12 @@ helpviewer_keywords:
 - DLLs [C++], types
 - DLLs [C++], MFC
 ms.assetid: f6a30db9-6138-4b2c-90cc-a17855e499a6
-ms.openlocfilehash: daf042f742a9c4b7757813fc73eeb4b6d1a87413
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fb63814161fb72121a34d2857b6fada3866e505a
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441114"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424803"
 ---
 # <a name="kinds-of-dlls"></a>DLL 类型
 
@@ -55,7 +55,7 @@ MFC 库本身不可用，在任一静态链接库或若干 Dll，使用 MFC DLL 
 
 如果 DLL 动态链接到 MFC，可能与您的 DLL 重新分发 MFC Dll。 此体系结构是对共享类库以节省磁盘空间和最大程度减少内存使用情况的多个可执行文件之间特别有用。
 
-之前的版本 4.0 中，Visual c + + 仅支持两种使用 MFC 的 Dll: Usrdll 和 Afxdll。 静态链接到 MFC 的规则 MFC Dll 具有 usrdll 相同的特性。 MFC 扩展 Dll 具有 Afxdll 相同的特性。
+之前的版本 4.0，Visual c + + 仅支持两种类型的使用 MFC 的 Dll:Usrdll 和 Afxdll。 静态链接到 MFC 的规则 MFC Dll 具有 usrdll 相同的特性。 MFC 扩展 Dll 具有 Afxdll 相同的特性。
 
 ### <a name="what-do-you-want-to-know-more-about"></a>你想进一步了解什么？
 

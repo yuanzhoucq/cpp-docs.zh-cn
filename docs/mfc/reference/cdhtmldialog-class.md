@@ -116,12 +116,12 @@ helpviewer_keywords:
 - CDHtmlDialog [MFC], m_strCurrentUrl
 - CDHtmlDialog [MFC], m_szHtmlResID
 ms.assetid: 3f941c85-87e1-4f0f-9cc5-ffee8498b312
-ms.openlocfilehash: 9cf01f16fe21d0c5bea34bf168c6ea6bff04c195
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 5b3e34987b5d6b63ee302ba53e456c448ac3c3d2
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57263606"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413948"
 ---
 # <a name="cdhtmldialog-class"></a>CDHtmlDialog 类
 
@@ -582,7 +582,7 @@ STDMETHOD(EnableModeless)(BOOL fEnable);
 ### <a name="parameters"></a>参数
 
 *fEnable*<br/>
-请参阅*fEnable*中[IDocHostUIHandler::EnableModeless](https://msdn.microsoft.com/library/aa753253.aspx) Windows SDK 中。
+请参阅*fEnable*中[IDocHostUIHandler::EnableModeless](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753253\(v=vs.85\)) Windows SDK 中。
 
 ### <a name="return-value"></a>返回值
 
@@ -590,7 +590,7 @@ STDMETHOD(EnableModeless)(BOOL fEnable);
 
 ### <a name="remarks"></a>备注
 
-此成员函数是 CDHtmlDialog 的实现[IDocHostUIHandler::EnableModeless](https://msdn.microsoft.com/library/aa753253.aspx)，如 Windows SDK 中所述。
+此成员函数是 CDHtmlDialog 的实现[IDocHostUIHandler::EnableModeless](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753253\(v=vs.85\))，如 Windows SDK 中所述。
 
 ##  <a name="filterdataobject"></a>  CDHtmlDialog::FilterDataObject
 
@@ -605,7 +605,7 @@ STDMETHOD(FilterDataObject)(
 ### <a name="parameters"></a>参数
 
 *pDO*<br/>
-请参阅*pDO*中[IDocHostUIHandler::FilterDataObject](https://msdn.microsoft.com/library/aa753254.aspx) Windows SDK 中。
+请参阅*pDO*中[IDocHostUIHandler::FilterDataObject](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753254\(v=vs.85\)) Windows SDK 中。
 
 *ppDORet*<br/>
 请参阅*ppDORet*中`IDocHostUIHandler::FilterDataObject`Windows SDK 中。
@@ -616,7 +616,7 @@ STDMETHOD(FilterDataObject)(
 
 ### <a name="remarks"></a>备注
 
-此成员函数是 CDHtmlDialog 的实现[IDocHostUIHandler::FilterDataObject](https://msdn.microsoft.com/library/aa753254.aspx)，如 Windows SDK 中所述。
+此成员函数是 CDHtmlDialog 的实现[IDocHostUIHandler::FilterDataObject](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753254\(v=vs.85\))，如 Windows SDK 中所述。
 
 ##  <a name="getcontroldispatch"></a>  CDHtmlDialog::GetControlDispatch
 
@@ -695,7 +695,7 @@ void GetCurrentUrl(CString& szUrl);
 
 ##  <a name="getdhtmldocument"></a>  CDHtmlDialog::GetDHtmlDocument
 
-检索[IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx)当前加载的 HTML 文档上的接口。
+检索[IHTMLDocument2](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752574\(v=vs.85\))当前加载的 HTML 文档上的接口。
 
 ```
 HRESULT GetDHtmlDocument(IHTMLDocument2 **pphtmlDoc);
@@ -722,7 +722,7 @@ STDMETHOD(GetDropTarget)(
 ### <a name="parameters"></a>参数
 
 *pDropTarget*<br/>
-请参阅*pDropTarget*中[IDocHostUIHandler::GetDropTarget](https://msdn.microsoft.com/library/aa753255.aspx) Windows SDK 中。
+请参阅*pDropTarget*中[IDocHostUIHandler::GetDropTarget](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753255\(v=vs.85\)) Windows SDK 中。
 
 *ppDropTarget*<br/>
 请参阅*ppDropTarget*中`IDocHostUIHandler::GetDropTarget`Windows SDK 中。
@@ -733,7 +733,7 @@ STDMETHOD(GetDropTarget)(
 
 ### <a name="remarks"></a>备注
 
-此成员函数是 CDHtmlDialog 的实现[IDocHostUIHandler::GetDropTarget](https://msdn.microsoft.com/library/aa753255.aspx)，如 Windows SDK 中所述。
+此成员函数是 CDHtmlDialog 的实现[IDocHostUIHandler::GetDropTarget](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753255\(v=vs.85\))，如 Windows SDK 中所述。
 
 ##  <a name="getelement"></a>  CDHtmlDialog::GetElement
 
@@ -896,7 +896,7 @@ STDMETHOD(GetExternal)(IDispatch** ppDispatch);
 ### <a name="parameters"></a>参数
 
 *ppDispatch*<br/>
-请参阅*ppDispatch*中[IDocHostUIHandler::GetExternal](https://msdn.microsoft.com/library/aa753256.aspx) Windows SDK 中。
+请参阅*ppDispatch*中[IDocHostUIHandler::GetExternal](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753256\(v=vs.85\)) Windows SDK 中。
 
 ### <a name="return-value"></a>返回值
 
@@ -904,7 +904,7 @@ STDMETHOD(GetExternal)(IDispatch** ppDispatch);
 
 ### <a name="remarks"></a>备注
 
-此成员函数是 CDHtmlDialog 的实现[IDocHostUIHandler::GetExternal](https://msdn.microsoft.com/library/aa753256.aspx)，如 Windows SDK 中所述。
+此成员函数是 CDHtmlDialog 的实现[IDocHostUIHandler::GetExternal](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753256\(v=vs.85\))，如 Windows SDK 中所述。
 
 ##  <a name="gethostinfo"></a>  CDHtmlDialog::GetHostInfo
 
@@ -917,7 +917,7 @@ STDMETHOD(GetHostInfo)(DOCHOSTUIINFO* pInfo);
 ### <a name="parameters"></a>参数
 
 *pInfo*<br/>
-请参阅*pInfo*中[IDocHostUIHandler::GetHostInfo](https://msdn.microsoft.com/library/aa753257.aspx) Windows SDK 中。
+请参阅*pInfo*中[IDocHostUIHandler::GetHostInfo](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753257\(v=vs.85\)) Windows SDK 中。
 
 ### <a name="return-value"></a>返回值
 
@@ -925,7 +925,7 @@ STDMETHOD(GetHostInfo)(DOCHOSTUIINFO* pInfo);
 
 ### <a name="remarks"></a>备注
 
-此成员函数是 CDHtmlDialog 的实现[IDocHostUIHandler::GetHostInfo](https://msdn.microsoft.com/library/aa753257.aspx)，如 Windows SDK 中所述。
+此成员函数是 CDHtmlDialog 的实现[IDocHostUIHandler::GetHostInfo](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753257\(v=vs.85\))，如 Windows SDK 中所述。
 
 ##  <a name="getoptionkeypath"></a>  CDHtmlDialog::GetOptionKeyPath
 
@@ -940,7 +940,7 @@ STDMETHOD(GetOptionKeyPath)(
 ### <a name="parameters"></a>参数
 
 *pchKey*<br/>
-请参阅*pchKey*中[IDocHostUIHandler::GetOptionKeyPath](https://msdn.microsoft.com/library/aa753258.aspx) Windows SDK 中。
+请参阅*pchKey*中[IDocHostUIHandler::GetOptionKeyPath](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753258\(v=vs.85\)) Windows SDK 中。
 
 *dw*<br/>
 请参阅*dw*中`IDocHostUIHandler::GetOptionKeyPath`Windows SDK 中。
@@ -951,7 +951,7 @@ STDMETHOD(GetOptionKeyPath)(
 
 ### <a name="remarks"></a>备注
 
-此成员函数是 CDHtmlDialog 的实现[IDocHostUIHandler::GetOptionKeyPath](https://msdn.microsoft.com/library/aa753258.aspx)，如 Windows SDK 中所述。
+此成员函数是 CDHtmlDialog 的实现[IDocHostUIHandler::GetOptionKeyPath](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753258\(v=vs.85\))，如 Windows SDK 中所述。
 
 ##  <a name="hideui"></a>  CDHtmlDialog::HideUI
 
@@ -967,7 +967,7 @@ STDMETHOD(HideUI)(void);
 
 ### <a name="remarks"></a>备注
 
-此成员函数是 CDHtmlDialog 的实现[IDocHostUIHandler::HideUI](https://msdn.microsoft.com/library/aa753259.aspx)，如 Windows SDK 中所述。
+此成员函数是 CDHtmlDialog 的实现[IDocHostUIHandler::HideUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753259\(v=vs.85\))，如 Windows SDK 中所述。
 
 ##  <a name="isexternaldispatchsafe"></a>  CDHtmlDialog::IsExternalDispatchSafe
 
@@ -1082,7 +1082,7 @@ void Navigate(
 指向包含要设定为目标的 URL 的字符串的指针。
 
 *dwFlags*<br/>
-用于指定是否要将资源添加到历史记录列表、 是否缓存读取或写入从缓存中，以及是否要在新窗口中显示该资源的变量的标志。 可以将变量定义的值的组合[BrowserNavConstants](https://msdn.microsoft.com/library/aa768360.aspx)枚举。
+用于指定是否要将资源添加到历史记录列表、 是否缓存读取或写入从缓存中，以及是否要在新窗口中显示该资源的变量的标志。 可以将变量定义的值的组合[BrowserNavConstants](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768360\(v=vs.85\))枚举。
 
 *lpszTargetFrameName*<br/>
 指向包含要在其中显示资源框架的名称的字符串的指针。
@@ -1143,7 +1143,7 @@ STDMETHOD(OnDocWindowActivate)(BOOL fActivate);
 ### <a name="parameters"></a>参数
 
 *fActivate*<br/>
-请参阅*fActivate*中[IDocHostUIHandler::OnDocWindowActivate](https://msdn.microsoft.com/library/aa753261.aspx) Windows SDK 中。
+请参阅*fActivate*中[IDocHostUIHandler::OnDocWindowActivate](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753261\(v=vs.85\)) Windows SDK 中。
 
 ### <a name="return-value"></a>返回值
 
@@ -1151,7 +1151,7 @@ STDMETHOD(OnDocWindowActivate)(BOOL fActivate);
 
 ### <a name="remarks"></a>备注
 
-此成员函数是 CDHtmlDialog 的实现，以[IDocHostUIHandler::OnDocWindowActivate](https://msdn.microsoft.com/library/aa753261.aspx)，如 Windows SDK 中所述。
+此成员函数是 CDHtmlDialog 的实现，以[IDocHostUIHandler::OnDocWindowActivate](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753261\(v=vs.85\))，如 Windows SDK 中所述。
 
 ##  <a name="onframewindowactivate"></a>  CDHtmlDialog::OnFrameWindowActivate
 
@@ -1164,7 +1164,7 @@ STDMETHOD(OnFrameWindowActivate)(BOOL fActivate);
 ### <a name="parameters"></a>参数
 
 *fActivate*<br/>
-请参阅*fActivate*中[IDocHostUIHandler::OnFrameWindowActivate](https://msdn.microsoft.com/library/aa753262.aspx) Windows SDK 中。
+请参阅*fActivate*中[IDocHostUIHandler::OnFrameWindowActivate](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753262\(v=vs.85\)) Windows SDK 中。
 
 ### <a name="return-value"></a>返回值
 
@@ -1172,7 +1172,7 @@ STDMETHOD(OnFrameWindowActivate)(BOOL fActivate);
 
 ### <a name="remarks"></a>备注
 
-此成员函数是 CDHtmlDialog 的实现[IDocHostUIHandler::OnFrameWindowActivate](https://msdn.microsoft.com/library/aa753262.aspx)，如 Windows SDK 中所述。
+此成员函数是 CDHtmlDialog 的实现[IDocHostUIHandler::OnFrameWindowActivate](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753262\(v=vs.85\))，如 Windows SDK 中所述。
 
 ##  <a name="oninitdialog"></a>  CDHtmlDialog::OnInitDialog
 
@@ -1226,7 +1226,7 @@ STDMETHOD(ResizeBorder)(
 ### <a name="parameters"></a>参数
 
 *prcBorder*<br/>
-请参阅*prcBorder*中[IDocHostUIHandler::ResizeBorder](https://msdn.microsoft.com/library/aa753263.aspx) Windows SDK 中。
+请参阅*prcBorder*中[IDocHostUIHandler::ResizeBorder](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753263\(v=vs.85\)) Windows SDK 中。
 
 *pUIWindow*<br/>
 请参阅*pUIWindow*中`IDocHostUIHandler::ResizeBorder`Windows SDK 中。
@@ -1374,7 +1374,7 @@ void SetHostFlags(DWORD dwFlags);
 ### <a name="parameters"></a>参数
 
 *dwFlags*<br/>
-有关可能的值，请参阅[DOCHOSTUIFLAG](https://msdn.microsoft.com/library/aa753277.aspx) Windows SDK 中。
+有关可能的值，请参阅[DOCHOSTUIFLAG](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753277\(v=vs.85\)) Windows SDK 中。
 
 ##  <a name="showcontextmenu"></a>  CDHtmlDialog::ShowContextMenu
 
@@ -1391,7 +1391,7 @@ STDMETHOD(ShowContextMenu)(
 ### <a name="parameters"></a>参数
 
 *dwID*<br/>
-请参阅*dwID*中[IDocHostUIHandler::ShowContextMenu](https://msdn.microsoft.com/library/aa753264.aspx) Windows SDK 中。
+请参阅*dwID*中[IDocHostUIHandler::ShowContextMenu](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753264\(v=vs.85\)) Windows SDK 中。
 
 *ppt*<br/>
 请参阅*ppt*中`IDocHostUIHandler::ShowContextMenu`Windows SDK 中。
@@ -1408,7 +1408,7 @@ STDMETHOD(ShowContextMenu)(
 
 ### <a name="remarks"></a>备注
 
-此成员函数是 CDHtmlDialog 的实现[IDocHostUIHandler::ShowContextMenu](https://msdn.microsoft.com/library/aa753264.aspx)，如 Windows SDK 中所述。
+此成员函数是 CDHtmlDialog 的实现[IDocHostUIHandler::ShowContextMenu](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753264\(v=vs.85\))，如 Windows SDK 中所述。
 
 ##  <a name="showui"></a>  CDHtmlDialog::ShowUI
 
@@ -1426,7 +1426,7 @@ STDMETHOD(ShowUI)(
 ### <a name="parameters"></a>参数
 
 *dwID*<br/>
-请参阅*dwID*中[IDocHostUIHandler::ShowUI](https://msdn.microsoft.com/library/aa753265.aspx) Windows SDK 中。
+请参阅*dwID*中[IDocHostUIHandler::ShowUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753265\(v=vs.85\)) Windows SDK 中。
 
 *pActiveObject*<br/>
 请参阅*d pActiveObject*中`IDocHostUIHandler::ShowUI`Windows SDK 中。
@@ -1446,7 +1446,7 @@ STDMETHOD(ShowUI)(
 
 ### <a name="remarks"></a>备注
 
-此成员函数是 CDHtmlDialog 的实现[IDocHostUIHandler::ShowUI](https://msdn.microsoft.com/library/aa753265.aspx)，如 Windows SDK 中所述。
+此成员函数是 CDHtmlDialog 的实现[IDocHostUIHandler::ShowUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753265\(v=vs.85\))，如 Windows SDK 中所述。
 
 ##  <a name="translateaccelerator"></a>  CDHtmlDialog::TranslateAccelerator
 
@@ -1462,7 +1462,7 @@ STDMETHOD(TranslateAccelerator)(
 ### <a name="parameters"></a>参数
 
 *lpMsg*<br/>
-请参阅*lpMsg*中[IDocHostUIHandler::TranslateAccelerator](https://msdn.microsoft.com/library/aa753266.aspx) Windows SDK 中。
+请参阅*lpMsg*中[IDocHostUIHandler::TranslateAccelerator](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753266\(v=vs.85\)) Windows SDK 中。
 
 *pguidCmdGroup*<br/>
 请参阅*pguidCmdGroup*中`IDocHostUIHandler::TranslateAccelerator`Windows SDK 中。
@@ -1476,7 +1476,7 @@ STDMETHOD(TranslateAccelerator)(
 
 ### <a name="remarks"></a>备注
 
-此成员函数是 CDHtmlDialog 的实现[IDocHostUIHandler::TranslateAccelerator](https://msdn.microsoft.com/library/aa753266.aspx)，如 Windows SDK 中所述。
+此成员函数是 CDHtmlDialog 的实现[IDocHostUIHandler::TranslateAccelerator](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753266\(v=vs.85\))，如 Windows SDK 中所述。
 
 ##  <a name="translateurl"></a>  CDHtmlDialog::TranslateUrl
 
@@ -1492,7 +1492,7 @@ STDMETHOD(TranslateUrl)(
 ### <a name="parameters"></a>参数
 
 *dwTranslate*<br/>
-请参阅*dwTranslate*中[IDocHostUIHandler::TranslateUrl](https://msdn.microsoft.com/library/aa753267.aspx) Windows SDK 中。
+请参阅*dwTranslate*中[IDocHostUIHandler::TranslateUrl](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753267\(v=vs.85\)) Windows SDK 中。
 
 *pchURLIn*<br/>
 请参阅*pchURLIn*中`IDocHostUIHandler::TranslateUrl`Windows SDK 中。
@@ -1506,7 +1506,7 @@ STDMETHOD(TranslateUrl)(
 
 ### <a name="remarks"></a>备注
 
-此成员函数是 CDHtmlDialog 的实现[IDocHostUIHandler::TranslateUrl](https://msdn.microsoft.com/library/aa753267.aspx)，如 Windows SDK 中所述。
+此成员函数是 CDHtmlDialog 的实现[IDocHostUIHandler::TranslateUrl](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753267\(v=vs.85\))，如 Windows SDK 中所述。
 
 ##  <a name="updateui"></a>  CDHtmlDialog::UpdateUI
 
@@ -1522,7 +1522,7 @@ STDMETHOD(UpdateUI)(void);
 
 ### <a name="remarks"></a>备注
 
-此成员函数是 CDHtmlDialog 的实现[IDocHostUIHandler::UpdateUI](https://msdn.microsoft.com/library/aa753268.aspx)，如 Windows SDK 中所述。
+此成员函数是 CDHtmlDialog 的实现[IDocHostUIHandler::UpdateUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753268\(v=vs.85\))，如 Windows SDK 中所述。
 
 ## <a name="see-also"></a>请参阅
 

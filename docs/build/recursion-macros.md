@@ -6,12 +6,12 @@ helpviewer_keywords:
 - recursion macros
 - macros, recursion
 ms.assetid: c53e5ae7-619e-46b1-bdc2-86d8c7798b1d
-ms.openlocfilehash: 0005a4be0422ed83816eabc7b55932a81441ae25
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c04b23d4c8116fdf898c2f732b63c5e02adf5661
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50451254"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57416405"
 ---
 # <a name="recursion-macros"></a>递归宏
 
@@ -19,7 +19,7 @@ ms.locfileid: "50451254"
 
 |宏|定义|
 |-----------|----------------|
-|**使**|最初用于调用 NMAKE 命令。<br /><br /> $ （make） 宏提供 nmake.exe 的完整路径。|
+|**MAKE**|最初用于调用 NMAKE 命令。<br /><br /> $ （make） 宏提供 nmake.exe 的完整路径。|
 |**MAKEDIR**|NMAKE 调用时的当前目录。|
 |**MAKEFLAGS**|当前正在生效的选项。 使用作为`/$(MAKEFLAGS)`。  请注意，/F 则不包含。|
 

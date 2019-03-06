@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows 8.x apps, creating C++ async operations
 - Creating C++ async operations
 ms.assetid: a57cecf4-394a-4391-a957-1d52ed2e5494
-ms.openlocfilehash: 0284970d57cf4cde65b4fb77338423cb81d5d54b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 8815861e525a2824bb1bc7a7d0e40f96b053c6a4
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57302268"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426779"
 ---
 # <a name="creating-asynchronous-operations-in-c-for-uwp-apps"></a>在 c + + 为 UWP 应用创建异步操作
 
@@ -51,7 +51,7 @@ Windows 运行时是一个编程接口，可用于创建仅在特殊操作系统
 
 通过使用 Windows 运行时，可以使用各种编程语言的最佳功能，并将它们合并到一个应用。 例如，可以在 JavaScript 中创建 UI，在 C++ 组件中执行计算密集型应用程序逻辑。 在后台执行这些计算密集型操作的能力是使 UI 保持响应状态的一个关键因素。 因为`task`类是特定于 c + +，则必须使用 Windows 运行时接口以异步操作传达给其他组件 （c + + 之外的语言编写可能）。 Windows 运行时提供可用来表示异步操作的四个接口：
 
-[Windows::Foundation::IAsyncAction](https://msdn.microsoft.com/library/windows/apps/windows.foundation.iasyncaction.aspx)<br/>
+[Windows::Foundation::IAsyncAction](/uwp/api/windows.foundation.iasyncaction)<br/>
 表示异步操作。
 
 [Windows::Foundation::IAsyncActionWithProgress\<TProgress>](https://msdn.microsoft.com/library/windows/apps/br206581.aspx)<br/>
@@ -92,7 +92,7 @@ Windows 运行时是一个编程接口，可用于创建仅在特殊操作系统
 
 ##  <a name="example-component"></a> 示例：创建 c + + Windows 运行时组件和使用它从C#
 
-请考虑使用 XAML 和 C# 来定义 UI 和 c + + Windows 运行时组件来执行计算密集型操作的应用程序。 在此示例中，C++ 组件会计算给定范围中的哪些数字是质数。 若要阐释四个 Windows 运行时异步任务接口之间的差异，首先，在 Visual Studio 中，创建**空白解决方案**并将其命名`Primes`。 然后在解决方案中添加一个“Windows 运行时组件”  项目并命名为 `PrimesLibrary`。 将以下代码添加到生成的 C++ 标头文件中（本示例将 Class1.h 重命名为 Primes.h）。 每个 `public` 方法定义四个异步接口之一。 返回一个值，方法返回[Windows::Foundation::Collections::IVector\<int >](https://msdn.microsoft.com/library/windows/apps/br206631.aspx)对象。 报告进度的方法生成 `double` 值，这些值定义了已完成的整体工作的百分比。
+请考虑使用 XAML 和 C# 来定义 UI 和 c + + Windows 运行时组件来执行计算密集型操作的应用程序。 在此示例中，C++ 组件会计算给定范围中的哪些数字是质数。 若要阐释四个 Windows 运行时异步任务接口之间的差异，首先，在 Visual Studio 中，创建**空白解决方案**并将其命名`Primes`。 然后在解决方案中添加一个“Windows 运行时组件”  项目并命名为 `PrimesLibrary`。 将以下代码添加到生成的 C++ 标头文件中（本示例将 Class1.h 重命名为 Primes.h）。 每个 `public` 方法定义四个异步接口之一。 返回一个值，方法返回[Windows::Foundation::Collections::IVector\<int >](/uwp/api/Windows.Foundation.Collections.IVector_T_)对象。 报告进度的方法生成 `double` 值，这些值定义了已完成的整体工作的百分比。
 
 [!code-cpp[concrt-windowsstore-primes#1](../../parallel/concrt/codesnippet/cpp/creating-asynchronous-operations-in-cpp-for-windows-store-apps_2.h)]
 
@@ -117,7 +117,7 @@ Windows 运行时是一个编程接口，可用于创建仅在特殊操作系统
 
 这些方法使用 `async` 和 `await` 关键字在异步操作完成后更新 UI。 有关 UWP 应用中的异步编程的信息，请参阅[线程处理和异步编程](/windows/uwp/threading-async)。
 
-`getPrimesCancellation` 和 `cancelGetPrimes` 方法协同工作以使用户能够取消操作。 当用户选择**取消**按钮，`cancelGetPrimes`方法调用[IAsyncOperationWithProgress\<TResult，TProgress >:: 取消](https://msdn.microsoft.com/library/windows/apps/windows.foundation.iasyncinfo.cancel.aspx)取消该操作。 并发运行时，它管理基础异步操作，将引发由 Windows 运行时进行通信取消完成后捕获内部异常类型。 有关取消模型的详细信息，请参阅[取消](../../parallel/concrt/cancellation-in-the-ppl.md)。
+`getPrimesCancellation` 和 `cancelGetPrimes` 方法协同工作以使用户能够取消操作。 当用户选择**取消**按钮，`cancelGetPrimes`方法调用[IAsyncOperationWithProgress\<TResult，TProgress >:: 取消](/uwp/api/windows.foundation.iasyncinfo.cancel)取消该操作。 并发运行时，它管理基础异步操作，将引发由 Windows 运行时进行通信取消完成后捕获内部异常类型。 有关取消模型的详细信息，请参阅[取消](../../parallel/concrt/cancellation-in-the-ppl.md)。
 
 > [!IMPORTANT]
 >  若要使 PPL 能够正确地报告给 Windows 运行时它已取消操作，不要捕捉此内部异常类型。 这意味着也不应捕捉所有异常 (`catch (...)`)。 如果必须捕捉所有异常，重新引发异常以确保 Windows 运行时，可以完成取消操作。

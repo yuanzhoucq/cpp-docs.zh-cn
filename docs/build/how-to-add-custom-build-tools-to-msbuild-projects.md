@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - 'msbuild (c++), howto: add custom build tools'
 ms.assetid: de03899a-371d-4396-9bf9-34f45a65e909
-ms.openlocfilehash: 48923c997c881e8786a8c20b00077161cf470195
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d07c8de3405791e94193368e921c0f594845a418
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543463"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413844"
 ---
 # <a name="how-to-add-custom-build-tools-to-msbuild-projects"></a>如何：向 MSBuild 项目添加自定义生成工具
 

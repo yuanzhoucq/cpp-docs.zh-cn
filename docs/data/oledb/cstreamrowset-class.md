@@ -27,12 +27,12 @@ helpviewer_keywords:
 - CStreamRowset class, constructor
 - Close method
 ms.assetid: a106e953-a38a-464e-8ea5-28963d9e4811
-ms.openlocfilehash: 69844a9048601060a425f7bcf52bc2cf30381227
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 44fb2dab939a0180df2faa1b8b889048619f4c02
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556451"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57412960"
 ---
 # <a name="cstreamrowset-class"></a>CStreamRowset 类
 
@@ -61,7 +61,7 @@ class CStreamRowset
 |||
 |-|-|
 |[CStreamRowset](#cstreamrowset)|构造函数。 实例化并初始化`CStreamRowset`对象。|
-|[关闭](#close)|版本[ISequentialStream](https://docs.microsoft.com/previous-versions/windows/desktop/ms718035(v=vs.85))类中的接口指针。|
+|[关闭](#close)|版本[ISequentialStream](/previous-versions/windows/desktop/ms718035(v=vs.85))类中的接口指针。|
 
 ## <a name="remarks"></a>备注
 
@@ -82,7 +82,7 @@ SQL Server 2000 执行 XML 格式中，并将返回所有列和行集作为一�
 > [!NOTE]
 >  此功能仅适用于 SQL Server 2000。
 
-## <a name="cstreamrowset"></a> Cstreamrowset:: Cstreamrowset
+## <a name="cstreamrowset"></a> CStreamRowset::CStreamRowset
 
 实例化并初始化`CStreamRowset`对象。
 
@@ -92,9 +92,9 @@ SQL Server 2000 执行 XML 格式中，并将返回所有列和行集作为一�
 CStreamRowset();
 ```
 
-## <a name="close"></a> Cstreamrowset:: Close
+## <a name="close"></a> CStreamRowset::Close
 
-版本[ISequentialStream](https://docs.microsoft.com/previous-versions/windows/desktop/ms718035(v=vs.85))类中的接口指针。
+版本[ISequentialStream](/previous-versions/windows/desktop/ms718035(v=vs.85))类中的接口指针。
 
 ### <a name="syntax"></a>语法
 
