@@ -818,12 +818,12 @@ helpviewer_keywords:
 - CWnd [MFC], WindowProc
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
-ms.openlocfilehash: 7427d8b50dadd9694112ad27c2892ee228a93864
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 493fe04f34f615d9113196e3db8bc744f420d4a2
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57276541"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426259"
 ---
 # <a name="cwnd-class"></a>CWnd 类
 
@@ -1826,7 +1826,7 @@ CWnd* ChildWindowFromPoint(
 *nflags*<br/>
 指定要跳过的子窗口。 此参数可以是以下值的组合：
 
-|“值”|含义|
+|值|含义|
 |-----------|-------------|
 |CWP_ALL|请勿跳过任何子窗口|
 |CWP_SKIPINVISIBLE|跳过不可见的子窗口|
@@ -2689,10 +2689,10 @@ BOOL DrawAnimatedRects(
 指定动画的类型。 如果指定 IDANI_CAPTION，窗口标题将进行动画处理从指定的位置*lprcFrom*到指定的位置*lprcTo*。 效果相当于最小化或最大化窗口。
 
 *lprcFrom*<br/>
-指向[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构，它指定的位置和大小的图标或最小化的窗口。
+指向[RECT](/previous-versions/dd162897\(v=vs.85\))结构，它指定的位置和大小的图标或最小化的窗口。
 
 *lprcTo*<br/>
-指向[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构，它指定的位置和还原窗口的大小
+指向[RECT](/previous-versions/dd162897\(v=vs.85\))结构，它指定的位置和还原窗口的大小
 
 ### <a name="return-value"></a>返回值
 
@@ -6348,7 +6348,7 @@ afx_msg int OnCompareItem(
 
 指示两个项的相对位置。 它可能是以下值之一：
 
-|值|含义|
+|“值”|含义|
 |-----------|-------------|
 |-1|第 1 项进行排序项 2 之前。|
 |0|第 1 项和项 2 排序相同。|
@@ -9528,7 +9528,7 @@ afx_msg void OnSysChar(
 *nFlags*<br/>
 *NFlags*参数可以为下列值：
 
-|值|含义|
+|“值”|含义|
 |-----------|-------------|
 |0-15|指定的重复计数。 值是由于用户按下键而重复击键次数...|
 |16-23|指定扫描代码。 值取决于原始设备制造商 (OEM)|
@@ -9652,7 +9652,7 @@ afx_msg void OnSysDeadChar(
 *nFlags*<br/>
 指定扫描代码、 密钥转换代码、 上一项状态和上下文的代码中，如下面的列表中所示：
 
-|值|含义|
+|“值”|含义|
 |-----------|-------------|
 |0-7|扫描代码 （依赖于 OEM 的值）。 高序位字低位字节。|
 |8|扩展的密钥，如功能键或 （如果它是扩展的键为 1; 否则为 0） 数字键盘上的密钥。|
@@ -9738,7 +9738,7 @@ afx_msg void OnSysKeyUp(
 *nFlags*<br/>
 指定扫描代码、 密钥转换代码、 上一项状态和上下文的代码中，如下面的列表中所示：
 
-|值|含义|
+|“值”|含义|
 |-----------|-------------|
 |0-7|扫描代码 （依赖于 OEM 的值）。 高序位字低位字节。|
 |8|扩展的密钥，如功能键或 （如果它是扩展的键为 1; 否则为 0） 数字键盘上的密钥。|
