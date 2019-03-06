@@ -90,12 +90,12 @@ helpviewer_keywords:
 - CMonthCalCtrl [MFC], SizeMinReq
 - CMonthCalCtrl [MFC], SizeRectToMin
 ms.assetid: a42f6bd6-ab5c-4335-82f8-839982fc64a2
-ms.openlocfilehash: 9807d45f12b5336ebbb80ea9718af77cf8d38188
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 440d158774a716db9fba351200f2760783925cc6
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57303665"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413922"
 ---
 # <a name="cmonthcalctrl-class"></a>CMonthCalCtrl 类
 
@@ -227,10 +227,10 @@ virtual BOOL Create(
 指定应用于月历控件的 Windows 样式的组合。 请参阅[个月日历控件样式](/windows/desktop/Controls/month-calendar-control-styles)有关样式的详细信息 Windows SDK 中。
 
 *rect*<br/>
-对引用[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构。 包含的位置和月历控件的大小。
+对引用[RECT](/previous-versions/dd162897\(v=vs.85\))结构。 包含的位置和月历控件的大小。
 
 *pt*<br/>
-对引用[点](https://msdn.microsoft.com/library/windows/desktop/dd162805)结构，它标识月历控件的位置。
+对引用[点](/previous-versions/dd162805\(v=vs.85\))结构，它标识月历控件的位置。
 
 *pParentWnd*<br/>
 一个指向[CWnd](../../mfc/reference/cwnd-class.md)是月历控件的父窗口的对象。 它不能为 NULL。
@@ -448,7 +448,7 @@ int GetFirstDayOfWeek(BOOL* pbLocal = NULL) const;
 
 此成员函数可实现 Win32 消息的行为[MCM_GETFIRSTDAYOFWEEK](/windows/desktop/Controls/mcm-getfirstdayofweek)，如 Windows SDK 中所述。 每周天数表示为整数，按如下所示。
 
-|“值”|日期是星期几|
+|值|日期是星期几|
 |-----------|---------------------|
 |0|星期一|
 |1|星期二|
@@ -523,7 +523,7 @@ BOOL GetMinReqRect(RECT* pRect) const;
 ### <a name="parameters"></a>参数
 
 *pRect*<br/>
-一个指向[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构，它将接收边界矩形信息。 此参数必须是有效的地址，并且不能为 NULL。
+一个指向[RECT](/previous-versions/dd162897\(v=vs.85\))结构，它将接收边界矩形信息。 此参数必须是有效的地址，并且不能为 NULL。
 
 ### <a name="return-value"></a>返回值
 
@@ -587,7 +587,7 @@ int GetMonthRange(
 *dwFlags*<br/>
 值，该值指定要检索的范围限制的作用域。 此值必须是以下值之一。
 
-|值|含义|
+|“值”|含义|
 |-----------|-------------|
 |GMR_DAYSTATE|包括前导和尾随的可见范围仅部分显示的月份。|
 |GMR_VISIBLE|包含完全显示的月份。|
@@ -917,7 +917,7 @@ COLORREF SetColor(
 *nRegion*<br/>
 一个整数值，指定要设置哪些月日历颜色。 此值可以是以下值之一。
 
-|“值”|含义|
+|值|含义|
 |-----------|-------------|
 |MCSC_BACKGROUND|显示不同的月份的背景色。|
 |MCSC_MONTHBK|显示月份中的背景色。|
@@ -1290,11 +1290,11 @@ LPRECT SizeRectToMin(LPRECT lpRect);
 
 |参数|描述|
 |---------------|-----------------|
-|*lpRect*|[in]指向[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构，它定义包含日历所需的数量的矩形。|
+|*lpRect*|[in]指向[RECT](/previous-versions/dd162897\(v=vs.85\))结构，它定义包含日历所需的数量的矩形。|
 
 ### <a name="return-value"></a>返回值
 
-指向[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)由定义结构，它定义的矩形的大小小于或等于矩形*lpRect*参数。
+指向[RECT](/previous-versions/dd162897\(v=vs.85\))由定义结构，它定义的矩形的大小小于或等于矩形*lpRect*参数。
 
 ### <a name="remarks"></a>备注
 

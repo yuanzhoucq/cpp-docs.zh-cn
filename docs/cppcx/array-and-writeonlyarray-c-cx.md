@@ -2,12 +2,12 @@
 title: Array 和 WriteOnlyArray (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: ef7cc5f9-cae6-4636-8220-f789e5b6aea4
-ms.openlocfilehash: b957e7d34486aced4796a029ebfdfa710dc71fcc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 44dc57d834272a1d78b0825ac5208d3b251aef6b
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50530190"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57420695"
 ---
 # <a name="array-and-writeonlyarray-ccx"></a>Array 和 WriteOnlyArray (C++/CX)
 
@@ -79,13 +79,13 @@ Windows 运行时类型系统不支持交错数组的概念，因此无法在公
 
 在某些情况下，数据将通过 ABI 传递给 [Platform::Array](../cppcx/platform-array-class.md)，并且你最终需要在 C 样式数组中处理数据以实现较高的效率，对于这些情况你可以使用 [Platform::ArrayReference](../cppcx/platform-arrayreference-class.md) 来避免额外的复制操作。 在将 [Platform::ArrayReference](../cppcx/platform-arrayreference-class.md) 作为实参传递给采用 `Platform::Array`的形参时， `ArrayReference` 会直接将数据存储到你指定的 C 样式数组中。 需要了解的是， `ArrayReference` 未锁定源数据，因此，如果在调用完成之前在另一个线程上修改或删除此数据，则结果将是未定义的。
 
-下面的代码片段演示如何将 [DataReader](https://msdn.microsoft.com/library/windows/apps/windows.storage.streams.datareader.aspx) 操作的结果复制到 `Platform::Array` （通常模式）中，以及如何替代 `ArrayReference` 以将数据直接复制到 C 样式数组中：
+下面的代码片段演示如何将 [DataReader](/uwp/api/Windows.Storage.Streams.DataReader) 操作的结果复制到 `Platform::Array` （通常模式）中，以及如何替代 `ArrayReference` 以将数据直接复制到 C 样式数组中：
 
 [!code-cpp[cx_arrays#07](../cppcx/codesnippet/CPP/js-array/class1.h#07)]
 
 ## <a name="avoid-exposing-an-array-as-a-property"></a>避免将数组公开为属性
 
-通常，应避免将 `Platform::Array` 类型公开为 ref 类中的属性，因为将返回整个数组，即使在客户端代码仅尝试访问单个元素时也是如此。 当需要将序列容器公开为公共 ref 类的属性时， [Windows::Foundation::IVector](https://msdn.microsoft.com/library/windows/apps/br206631.aspx) 是更好的选择。 在私有或内部 API 中（未发布到元数据），请考虑使用标准 C++ 容器（如 [std::vector](../standard-library/vector-class.md)）。
+通常，应避免将 `Platform::Array` 类型公开为 ref 类中的属性，因为将返回整个数组，即使在客户端代码仅尝试访问单个元素时也是如此。 当需要将序列容器公开为公共 ref 类的属性时， [Windows::Foundation::IVector](/uwp/api/Windows.Foundation.Collections.IVector_T_) 是更好的选择。 在私有或内部 API 中（未发布到元数据），请考虑使用标准 C++ 容器（如 [std::vector](../standard-library/vector-class.md)）。
 
 ## <a name="see-also"></a>请参阅
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - special characters, in NMAKE macros
 - macros, special characters
 ms.assetid: 92c34ab5-ca6b-4fc0-bcf4-3172eaeda9f0
-ms.openlocfilehash: 18fa83fcfd0c70ac4e8b9bf5be08ac1922998ecb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e2703adbbdba392b1a317e2656c6f3dba30a36b6
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50443725"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57420748"
 ---
 # <a name="special-characters-in-a-makefile"></a>生成文件中的特殊字符
 
@@ -24,7 +24,7 @@ ms.locfileid: "50443725"
 
 在宏中，反斜杠 (\\) 后接新行的字符被替换为空格。
 
-在命令中，百分号 （%） 是一个文件说明符。 若要表示 %按原义在命令中的，指定代替一个双百分号 （%）。 在其他情况下，NMAKE 单个 %按原义解释，但它始终将一个双精度值 %%作为单个 %。 因此，用于表示文本 %%，指定是三个百分号，%%%，或四个百分号 %%%。
+在命令中，百分号 （%）是一个文件说明符。 若要表示 %按原义在命令中的，指定两个百分比符号 （%）代替一项要求。 在其他情况下，NMAKE 单个 %按原义解释，但它始终将一个双精度值 %%作为单个 %。 因此，用于表示文本 %%，指定是三个百分号，%%%，或四个百分号 %%%。
 
 若要为原义字符，在命令中使用美元符号 （$），指定两个美元符号 （$$）。 此外可以在其他情况下使用此方法，^ $ 的工作原理。
 

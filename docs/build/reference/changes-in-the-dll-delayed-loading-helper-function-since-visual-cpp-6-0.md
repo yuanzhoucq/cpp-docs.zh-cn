@@ -7,12 +7,12 @@ helpviewer_keywords:
 - __delayLoadHelper2 function
 - helper functions, what's changed
 ms.assetid: 99f0be69-105d-49ba-8dd5-3be7939c0c72
-ms.openlocfilehash: 8d50962bf66e07d6238be4a1a973c9d9ff06a556
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 25c59d37b753c80014b566fd925363cae71798be
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613767"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426519"
 ---
 # <a name="changes-in-the-dll-delayed-loading-helper-function-since-visual-c-60"></a>自 Visual C++ 6.0 以来 DLL 延迟加载 Helper 函数所做的更改
 
@@ -47,7 +47,7 @@ ms.locfileid: "50613767"
 
 - 重命名的帮助器函数 **__delayLoadHelper2**。
 
-- 由于延迟描述符 (ImgDelayDescr 中 delayimp.h) 中的指针已从绝对地址 (VAs) 更改为相对地址 (Rva)，以这两个 32 位和 64 位程序中按预期工作，您需要将它们转换回为指针。 引入了新的函数： PFromRva，delayhlp.cpp 中找到。 可以在每个描述符中的字段上使用此函数以将其转换回任一 32 位或 64 位指针。 默认延迟加载 helper 函数仍然是合适的模板使用作为示例。
+- 由于延迟描述符 (ImgDelayDescr 中 delayimp.h) 中的指针已从绝对地址 (VAs) 更改为相对地址 (Rva)，以这两个 32 位和 64 位程序中按预期工作，您需要将它们转换回为指针。 引入了新的函数：PFromRva delayhlp.cpp 中找到。 可以在每个描述符中的字段上使用此函数以将其转换回任一 32 位或 64 位指针。 默认延迟加载 helper 函数仍然是合适的模板使用作为示例。
 
 ## <a name="load-all-imports-for-a-delay-loaded-dll"></a>延迟加载的 DLL 加载所有导入
 

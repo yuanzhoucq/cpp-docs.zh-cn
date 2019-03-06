@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C++ exception handling, x64
 - exception handling, x64
 ms.assetid: 41fecd2d-3717-4643-b21c-65dcd2f18c93
-ms.openlocfilehash: 33206dfb885239839c3a64436b6b540fc7d4e6e5
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: 7dab7f3b6593bf4eaed1b8c804deb915677ccf5b
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627535"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57422970"
 ---
 # <a name="x64-exception-handling"></a>x64 异常处理
 
@@ -68,7 +68,7 @@ UNWIND_INFO 结构必须对齐在内存中的 DWORD。 下面是每个字段的�
 
    展开数据，当前为 1 的版本号。
 
-- **标志**
+- **标记**
 
    当前定义三个标记：
 
@@ -182,21 +182,21 @@ UNWIND_INFO 结构必须对齐在内存中的 DWORD。 下面是每个字段的�
 
   |||
   |-|-|
-  |RSP + 32|SS|
-  |RSP + 24|旧 RSP|
-  |RSP + 16|EFLAGS|
-  |RSP + 8|CS|
+  |RSP+32|SS|
+  |RSP+24|旧 RSP|
+  |RSP+16|EFLAGS|
+  |RSP+8|CS|
   |RSP|RIP|
 
   如果操作信息等于 1，然后这些帧之一已推送：
 
   |||
   |-|-|
-  |RSP + 40|SS|
-  |RSP + 32|旧 RSP|
-  |RSP + 24|EFLAGS|
-  |RSP + 16|CS|
-  |RSP + 8|RIP|
+  |RSP+40|SS|
+  |RSP+32|旧 RSP|
+  |RSP+24|EFLAGS|
+  |RSP+16|CS|
+  |RSP+8|RIP|
   |RSP|错误代码|
 
   此展开代码始终出现在伪序言中，其永远不会实际执行，但改为出现在之前的真正入口点的一个中断例程，并存在只是为了提供一个位置来模拟计算机帧的推送。 `UWOP_PUSH_MACHFRAME` 记录该模拟，指示计算机已从概念上讲中完成此操作：
@@ -330,12 +330,12 @@ typedef struct _DISPATCHER_CONTEXT {
 |伪操作|描述|
 |-|-|
 |PROC 帧\[:*ehandler*]|原因 MASM 来生成函数表条目中的.pdata 和展开.xdata 中的信息的函数的结构化异常处理展开行为。  如果*ehandler*存在，则此过程中为特定于语言的处理程序.xdata 输入。<br /><br /> 当使用帧属性时，它必须后接。ENDPROLOG 指令。  如果该函数是叶函数 (如中所定义[函数类型](../build/stack-usage.md#function-types)) 帧属性是不必要的因为这些伪操作的剩余部分。|
-|.PUSHREG*注册*|生成使用当前偏移量在序言中指定的寄存器号 UWOP_PUSH_NONVOL 展开代码项。<br /><br /> 这应仅用于非易失性整数寄存器。  对于推送易失寄存器的内容，请使用。ALLOCSTACK 8 改为|
+|.PUSHREG *register*|生成使用当前偏移量在序言中指定的寄存器号 UWOP_PUSH_NONVOL 展开代码项。<br /><br /> 这应仅用于非易失性整数寄存器。  对于推送易失寄存器的内容，请使用。ALLOCSTACK 8 改为|
 |.SETFRAME*注册*，*偏移量*|填写在帧中使用指定的寄存器和偏移量的展开信息寄存器字段和偏移量。 偏移量必须为 16 的倍数且小于或等于 240。 此指令还会生成使用当前的序言偏移量的指定寄存器 UWOP_SET_FPREG 展开代码项。|
 |.ALLOCSTACK*大小*|在序言中生成 UWOP_ALLOC_SMALL 或 UWOP_ALLOC_LARGE 与当前的偏移量为指定的大小。<br /><br /> *大小*操作数必须是 8 的倍数。|
 |.SAVEREG*注册*，*偏移量*|生成 UWOP_SAVE_NONVOL 或指定的注册和使用当前的序言偏移的偏移量的 UWOP_SAVE_NONVOL_FAR 展开代码项。 MASM 选择最有效的编码。<br /><br /> *偏移量*必须为正数，且为 8 的倍数。 *偏移量*相对于基过程的框架，它通常位于 RSP，或者，如果使用帧指针，不成比例的帧指针。|
 |.SAVEXMM128*注册*，*偏移量*|生成 UWOP_SAVE_XMM128 或指定的 XMM 寄存器和使用当前的序言偏移的偏移量的 UWOP_SAVE_XMM128_FAR 展开代码项。 MASM 选择最有效的编码。<br /><br /> *偏移量*必须为正数，且 16 的倍数。  *偏移量*相对于基过程的框架，它通常位于 RSP，或者，如果使用帧指针，不成比例的帧指针。|
-|.PUSHFRAME \[*代码*]|生成 UWOP_PUSH_MACHFRAME 展开代码项。 如果可选*代码*指定，则展开代码项提供的修饰符为 1。 否则修饰符为 0。|
+|.PUSHFRAME \[*code*]|生成 UWOP_PUSH_MACHFRAME 展开代码项。 如果可选*代码*指定，则展开代码项提供的修饰符为 1。 否则修饰符为 0。|
 |.ENDPROLOG|表示结束的序言声明。  必须在函数的第一个 255 字节中。|
 
 下面是示例函数 prolog 与大部分操作码的正确用法：

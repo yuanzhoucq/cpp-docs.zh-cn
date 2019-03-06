@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CreateRowset method
 - OpenRowset method
 ms.assetid: d259cedc-1db4-41cf-bc9f-5030907ab486
-ms.openlocfilehash: 437f78636d1fa75f5bb8e4304a347dc3b554c34d
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 3d4f778f560b55f22c1c54185bea79af07949ceb
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556252"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57422740"
 ---
 # <a name="iopenrowsetimpl-class"></a>IOpenRowsetImpl 类
 
@@ -52,11 +52,11 @@ class IOpenRowsetImpl : public IOpenRowset
 
 ## <a name="remarks"></a>备注
 
-[IOpenRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms716946(v=vs.85))接口是必需的会话对象。 打开，并返回包含来自单个基表或索引的所有行的行集。
+[IOpenRowset](/previous-versions/windows/desktop/ms716946(v=vs.85))接口是必需的会话对象。 打开，并返回包含来自单个基表或索引的所有行的行集。
 
-## <a name="createrowset"></a> Iopenrowsetimpl:: Createrowset
+## <a name="createrowset"></a> IOpenRowsetImpl::CreateRowset
 
-创建一个行集对象。 不直接由用户调用。 请参阅[iopenrowset:: Openrowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms716724(v=vs.85))中*OLE DB 程序员参考。*
+创建一个行集对象。 不直接由用户调用。 请参阅[iopenrowset:: Openrowset](/previous-versions/windows/desktop/ms716724(v=vs.85))中*OLE DB 程序员参考。*
 
 ### <a name="syntax"></a>语法
 
@@ -80,9 +80,9 @@ HRESULT CreateRowset(IUnknown* pUnkOuter,
 *pRowsetObj*<br/>
 [out]指向行集对象的指针。 通常不使用此参数，但如果必须传递给 COM 对象之前在行集上执行更多的工作，可以使用它。 生存期*pRowsetObj*受*ppRowset*。
 
-其他参数，请参阅[iopenrowset:: Openrowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms716724(v=vs.85))中*OLE DB 程序员参考。*
+其他参数，请参阅[iopenrowset:: Openrowset](/previous-versions/windows/desktop/ms716724(v=vs.85))中*OLE DB 程序员参考。*
 
-## <a name="openrowset"></a> Iopenrowsetimpl:: Openrowset
+## <a name="openrowset"></a> IOpenRowsetImpl::OpenRowset
 
 打开并返回包含来自单个基表或索引的所有行的行集。
 
@@ -100,7 +100,7 @@ HRESULT OpenRowset(IUnknown* pUnkOuter,
 
 #### <a name="parameters"></a>参数
 
-请参阅[iopenrowset:: Openrowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms716724(v=vs.85))中*OLE DB 程序员参考*。
+请参阅[iopenrowset:: Openrowset](/previous-versions/windows/desktop/ms716724(v=vs.85))中*OLE DB 程序员参考*。
 
 ### <a name="remarks"></a>备注
 

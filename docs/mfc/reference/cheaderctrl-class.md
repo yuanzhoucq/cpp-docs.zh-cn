@@ -64,12 +64,12 @@ helpviewer_keywords:
 - CHeaderCtrl [MFC], SetItem
 - CHeaderCtrl [MFC], SetOrderArray
 ms.assetid: b847ac90-5fae-4a87-88e0-ca45f77b8b3b
-ms.openlocfilehash: a683c877b67f4eae1a7411f5916987c9789b6817
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 51cdfb481892ba5057d4ca26ff4d6e51665557e5
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57261344"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57415612"
 ---
 # <a name="cheaderctrl-class"></a>CHeaderCtrl 类
 
@@ -96,7 +96,7 @@ class CHeaderCtrl : public CWnd
 |[CHeaderCtrl::ClearAllFilters](#clearallfilters)|清除所有筛选器的标头控件。|
 |[CHeaderCtrl::ClearFilter](#clearfilter)|清除标头控件的筛选器。|
 |[CHeaderCtrl::Create](#create)|创建标头控件，并将其附加到`CHeaderCtrl`对象。|
-|[Cheaderctrl:: Createdragimage](#createdragimage)|创建标头控件中的项的图像的透明版本。|
+|[CHeaderCtrl::CreateDragImage](#createdragimage)|创建标头控件中的项的图像的透明版本。|
 |[CHeaderCtrl::CreateEx](#createex)|创建具有指定的 Windows 扩展样式的标头控件并将其附加到`CListCtrl`对象。|
 |[CHeaderCtrl::DeleteItem](#deleteitem)|从标头控件中删除项。|
 |[CHeaderCtrl::DrawItem](#drawitem)|绘制指定的标头控件的项。|
@@ -104,14 +104,14 @@ class CHeaderCtrl : public CWnd
 |[CHeaderCtrl::GetBitmapMargin](#getbitmapmargin)|检索标头控件中的位图的边距的宽度。|
 |[CHeaderCtrl::GetFocusedItem](#getfocuseditem)|获取当前具有焦点的标题控件中的项标识符。|
 |[CHeaderCtrl::GetImageList](#getimagelist)|检索用于绘制控件中的标头项的图像列表的句柄。|
-|[Cheaderctrl:: Getitem](#getitem)|检索标头控件中的项有关的信息。|
+|[CHeaderCtrl::GetItem](#getitem)|检索标头控件中的项有关的信息。|
 |[CHeaderCtrl::GetItemCount](#getitemcount)|检索标头控件中的项的计数。|
 |[CHeaderCtrl::GetItemDropDownRect](#getitemdropdownrect)|标头控件中获取指定的下拉按钮的边界矩形信息。|
 |[CHeaderCtrl::GetItemRect](#getitemrect)|检索标头控件中的给定项的边框。|
-|[Cheaderctrl:: Getorderarray](#getorderarray)|检索标头控件中的项的从左到右顺序。|
+|[CHeaderCtrl::GetOrderArray](#getorderarray)|检索标头控件中的项的从左到右顺序。|
 |[CHeaderCtrl::GetOverflowRect](#getoverflowrect)|获取当前标头控件的溢出按钮的边框。|
 |[CHeaderCtrl::HitTest](#hittest)|确定哪些标头项 （如果有的话，是位于指定点。|
-|[Cheaderctrl:: Insertitem](#insertitem)|将新项插入到标头控件。|
+|[CHeaderCtrl::InsertItem](#insertitem)|将新项插入到标头控件。|
 |[CHeaderCtrl::Layout](#layout)|检索的大小和位置标头控件给定矩形内。|
 |[CHeaderCtrl::OrderToIndex](#ordertoindex)|检索基于标头控件中的顺序的项的索引值。|
 |[CHeaderCtrl::SetBitmapMargin](#setbitmapmargin)|设置标头控件中的位图的边距的宽度。|
@@ -119,8 +119,8 @@ class CHeaderCtrl : public CWnd
 |[CHeaderCtrl::SetFocusedItem](#setfocuseditem)|将焦点设置为当前的标头控件中的指定的标头项。|
 |[CHeaderCtrl::SetHotDivider](#sethotdivider)|更改标头项以指示手动之间的分隔线拖放的标头项。|
 |[CHeaderCtrl::SetImageList](#setimagelist)|将图像列表分配给标头控件。|
-|[Cheaderctrl:: Setitem](#setitem)|设置标头控件中的指定项的属性。|
-|[Cheaderctrl:: Setorderarray](#setorderarray)|设置标头控件中项的从左到右顺序。|
+|[CHeaderCtrl::SetItem](#setitem)|设置标头控件中的指定项的属性。|
+|[CHeaderCtrl::SetOrderArray](#setorderarray)|设置标头控件中项的从左到右顺序。|
 
 ## <a name="remarks"></a>备注
 
@@ -231,7 +231,7 @@ virtual BOOL Create(
 指定标头控件的样式。 标头控件样式的说明，请参阅[标头控件样式](/windows/desktop/Controls/header-control-styles)Windows SDK 中。
 
 *rect*<br/>
-指定标头控件的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构。
+指定标头控件的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT](/previous-versions/dd162897\(v=vs.85\))结构。
 
 *pParentWnd*<br/>
 指定标头控件的父窗口中，通常`CDialog`。 它不能为 NULL。
@@ -301,7 +301,7 @@ virtual BOOL CreateEx(
 标头控件的样式。 标头控件样式的说明，请参阅[标头控件样式](/windows/desktop/Controls/header-control-styles)Windows SDK 中。 请参阅[创建](#create)有关其他样式的列表。
 
 *rect*<br/>
-对引用[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构的结构描述的大小和窗口的工作区中创建的位置*pParentWnd*。
+对引用[RECT](/previous-versions/dd162897\(v=vs.85\))结构的结构描述的大小和窗口的工作区中创建的位置*pParentWnd*。
 
 *pParentWnd*<br/>
 指向控件的父级的窗口的指针。
@@ -317,7 +317,7 @@ virtual BOOL CreateEx(
 
 使用`CreateEx`而不是`Create`若要将应用扩展的 Windows 样式，指定的 Windows 扩展的样式加**WS_EX_**。
 
-##  <a name="createdragimage"></a>  Cheaderctrl:: Createdragimage
+##  <a name="createdragimage"></a>  CHeaderCtrl::CreateDragImage
 
 创建标头控件中的项的图像的透明版本。
 
@@ -486,7 +486,7 @@ CImageList* GetImageList() const;
 
 [!code-cpp[NVC_MFC_CHeaderCtrl#9](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_11.cpp)]
 
-##  <a name="getitem"></a>  Cheaderctrl:: Getitem
+##  <a name="getitem"></a>  CHeaderCtrl::GetItem
 
 检索标头控件项目的信息。
 
@@ -543,7 +543,7 @@ BOOL GetItemDropDownRect(
 |参数|描述|
 |---------------|-----------------|
 |*iItem*|[in]其样式是 HDF_SPLITBUTTON 标头项的从零开始索引。 有关详细信息，请参阅`fmt`的成员[HDITEM](/windows/desktop/api/commctrl/ns-commctrl-_hd_itema)结构。|
-|*lpRect*|[out]指向[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构接收边界矩形信息。|
+|*lpRect*|[out]指向[RECT](/previous-versions/dd162897\(v=vs.85\))结构接收边界矩形信息。|
 
 ### <a name="return-value"></a>返回值
 
@@ -581,7 +581,7 @@ BOOL GetItemRect(
 标头控件项的从零开始索引。
 
 *lpRect*<br/>
-指向的地址的指针[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)接收边界矩形信息的结构。
+指向的地址的指针[RECT](/previous-versions/dd162897\(v=vs.85\))接收边界矩形信息的结构。
 
 ### <a name="return-value"></a>返回值
 
@@ -591,7 +591,7 @@ BOOL GetItemRect(
 
 此方法实现的 Win32 消息的行为[HDM_GETITEMRECT](/windows/desktop/Controls/hdm-getitemrect)，如 Windows SDK 中所述。
 
-##  <a name="getorderarray"></a>  Cheaderctrl:: Getorderarray
+##  <a name="getorderarray"></a>  CHeaderCtrl::GetOrderArray
 
 检索标头控件中的项的从左到右顺序。
 
@@ -633,7 +633,7 @@ BOOL GetOverflowRect(LPRECT lpRect) const;
 
 |参数|描述|
 |---------------|-----------------|
-|*lpRect*|[out]指向[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)接收边界矩形信息的结构。|
+|*lpRect*|[out]指向[RECT](/previous-versions/dd162897\(v=vs.85\))接收边界矩形信息的结构。|
 
 ### <a name="return-value"></a>返回值
 
@@ -691,7 +691,7 @@ int HitTest(LPHDHITTESTINFO* phdhti);
 
 [!code-cpp[NVC_MFC_CHeaderCtrl_s4#1](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_16.cpp)]
 
-##  <a name="insertitem"></a>  Cheaderctrl:: Insertitem
+##  <a name="insertitem"></a>  CHeaderCtrl::InsertItem
 
 将新项插入到指定索引处的标头控件。
 
@@ -901,7 +901,7 @@ CImageList* SetImageList(CImageList* pImageList);
 
   有关示例，请参阅[CHeaderCtrl::GetImageList](#getimagelist)。
 
-##  <a name="setitem"></a>  Cheaderctrl:: Setitem
+##  <a name="setitem"></a>  CHeaderCtrl::SetItem
 
 设置标头控件中的指定项的属性。
 
@@ -927,7 +927,7 @@ BOOL SetItem(
 
   有关示例，请参阅[cheaderctrl:: Getitem](#getitem)。
 
-##  <a name="setorderarray"></a>  Cheaderctrl:: Setorderarray
+##  <a name="setorderarray"></a>  CHeaderCtrl::SetOrderArray
 
 设置标头控件中项的从左到右顺序。
 

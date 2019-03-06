@@ -15,12 +15,12 @@ helpviewer_keywords:
 - /Yc compiler option [C++]
 - Yc compiler option [C++]
 ms.assetid: 47c2e555-b4f5-46e6-906e-ab5cf21f0678
-ms.openlocfilehash: bda384152962bc59ab37b1aae138091aa6f4514c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 35b8bfb30a49efa35a3af3d3b76e75f8dede9fd7
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536833"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57418966"
 ---
 # <a name="yc-create-precompiled-header-file"></a>/Yc（创建预编译标头文件）
 
@@ -29,7 +29,7 @@ ms.locfileid: "50536833"
 ## <a name="syntax"></a>语法
 
 > __/Yc__<br/>
-> __/Yc__*文件名*
+> __/Yc__*filename*
 
 ## <a name="arguments"></a>自变量
 

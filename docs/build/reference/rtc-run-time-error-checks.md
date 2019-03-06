@@ -25,12 +25,12 @@ helpviewer_keywords:
 - RTCc compiler option
 - -RTCc compiler option [C++]
 ms.assetid: 9702c558-412c-4004-acd5-80761f589368
-ms.openlocfilehash: 77dc97ee07499b7df37a115dafafddd71acb7bb1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3ac70904332f5f05463b317f02a2ab8d3bfc7bb3
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654995"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424608"
 ---
 # <a name="rtc-run-time-error-checks"></a>/RTC（运行时错误检查）
 
@@ -95,7 +95,7 @@ c = a;  // No run-time error with /RTCu
 
 ## <a name="remarks"></a>备注
 
-运行时错误检查是一种方法，以便查找你正在运行的代码; 中的问题有关详细信息，请参阅[如何： 使用本机运行时检查](/visualstudio/debugger/how-to-use-native-run-time-checks)。
+运行时错误检查是一种方法，以便查找你正在运行的代码; 中的问题有关详细信息，请参阅[如何：使用本机运行时检查](/visualstudio/debugger/how-to-use-native-run-time-checks)。
 
 如果您编译你的程序在命令行使用任一 **/RTC**编译器选项、 任何杂注[优化](../../preprocessor/optimize.md)在代码中的说明将以静默方式失败。 这是因为运行时错误检查 （已优化） 的发布版本中无效。
 
@@ -111,7 +111,7 @@ c = a;  // No run-time error with /RTCu
 
 1. 单击**代码生成**属性页。
 
-1. 修改一个或两个以下属性：**基本运行时检查**或**较小类型检查**。
+1. 修改一个或两个以下属性：**基本运行时检查**或**较小的类型检查**。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>以编程方式设置此编译器选项
 

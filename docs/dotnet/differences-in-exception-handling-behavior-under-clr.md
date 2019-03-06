@@ -5,12 +5,12 @@ helpviewer_keywords:
 - EXCEPTION_CONTINUE_EXECUTION macro
 - set_se_translator function
 ms.assetid: 2e7e8daf-d019-44b0-a51c-62d7aaa89104
-ms.openlocfilehash: 4898ff7893ec327495e757f2ffa0eb37ae051875
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fea928fc293ef916d560e51ecb27aee452b6a4c3
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50551328"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414624"
 ---
 # <a name="differences-in-exception-handling-behavior-under-clr"></a>/CLR 下的异常处理行为的差异
 
@@ -97,7 +97,7 @@ We should execute this handler if compiled to native
 
 ##  <a name="vccondisassociatedrethrows"></a> 解除关联的重新引发
 
-**/clr**不支持重新引发 catch 处理程序 （称为解除关联的重新引发） 之外的异常。 此类型的异常被视为一个标准的 C++ 重新引发。 如果在存在活动的托管异常时遇到解除关联的重新引发，则此异常将包装为 C++ 异常，然后重新引发。 仅可以作为类型的异常捕获到此类型的异常[system:: sehexception](https://msdn.microsoft.com/library/system.runtime.interopservices.sehexception.aspx)。
+**/clr**不支持重新引发 catch 处理程序 （称为解除关联的重新引发） 之外的异常。 此类型的异常被视为一个标准的 C++ 重新引发。 如果在存在活动的托管异常时遇到解除关联的重新引发，则此异常将包装为 C++ 异常，然后重新引发。 此类型的异常可以仅作为类型的异常被捕获<xref:System.Runtime.InteropServices.SEHException>。
 
 以下示例演示了作为 C++ 异常重新引发的托管异常：
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - databases [C++], transactions
 - distributed transactions [C++]
 ms.assetid: 3d72e583-ad38-42ff-8f11-e2166d60a5a7
-ms.openlocfilehash: 647112f480f6470f7d893ecd1d5177618dc23708
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 2e3605b636bbcb16a1c6f543bc9090d2b212a60b
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556258"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57418564"
 ---
 # <a name="supporting-transactions-in-ole-db"></a>在 OLE DB 中支持事务
 
@@ -22,11 +22,11 @@ ms.locfileid: "51556258"
 
 OLE DB 提供以下三种方法支持事务：
 
-- [ITransactionLocal::StartTransaction](https://docs.microsoft.com/previous-versions/windows/desktop/ms709786(v=vs.85))
+- [ITransactionLocal::StartTransaction](/previous-versions/windows/desktop/ms709786(v=vs.85))
 
-- [ITransaction::Commit](https://docs.microsoft.com/previous-versions/windows/desktop/ms713008(v=vs.85))
+- [ITransaction::Commit](/previous-versions/windows/desktop/ms713008(v=vs.85))
 
-- [ITransaction::Abort](https://docs.microsoft.com/previous-versions/windows/desktop/ms709833(v=vs.85))
+- [ITransaction::Abort](/previous-versions/windows/desktop/ms709833(v=vs.85))
 
 ## <a name="relationship-of-sessions-and-transactions"></a>会话和事务之间的关系
 
@@ -48,7 +48,7 @@ OLE DB 提供以下三种方法支持事务：
 
 ## <a name="nested-transactions"></a>嵌套的事务
 
-一个[transaction](https://docs.microsoft.com/previous-versions/windows/desktop/ms716985(v=vs.85))发生时启动新的本地事务在会话中存在活动事务。 作为当前事务下的嵌套事务启动新事务。 如果提供程序不支持嵌套的事务，则调用`StartTransaction`时已存在对该会话的活动事务返回 XACT_E_XTIONEXISTS。
+一个[transaction](/previous-versions/windows/desktop/ms716985(v=vs.85))发生时启动新的本地事务在会话中存在活动事务。 作为当前事务下的嵌套事务启动新事务。 如果提供程序不支持嵌套的事务，则调用`StartTransaction`时已存在对该会话的活动事务返回 XACT_E_XTIONEXISTS。
 
 ## <a name="distributed-transactions"></a>分布式事务
 

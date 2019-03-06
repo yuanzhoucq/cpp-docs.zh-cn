@@ -182,12 +182,12 @@ helpviewer_keywords:
 - CToolBarCtrl [MFC], SetToolTips
 - CToolBarCtrl [MFC], SetWindowTheme
 ms.assetid: 8f2f8ad2-05d7-4975-8715-3f2eed795248
-ms.openlocfilehash: 61cbcbd2a64e8648c6467ebbc0d86d6f89953442
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 97854a554be729b75d50f09b0627ffc94b1b093f
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57302490"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424478"
 ---
 # <a name="ctoolbarctrl-class"></a>CToolBarCtrl 类
 
@@ -627,7 +627,7 @@ virtual BOOL Create(
 指定工具栏控件的样式。 工具栏必须始终具有 WS_CHILD 样式。 此外，可以指定 toolbar 样式和窗口样式的任意组合，如下所述**备注**。
 
 *rect*<br/>
-（可选） 指定工具栏控件的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构。
+（可选） 指定工具栏控件的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT](/previous-versions/dd162897\(v=vs.85\))结构。
 
 *pParentWnd*<br/>
 指定工具栏控件的父窗口。 它不能为 NULL。
@@ -681,7 +681,7 @@ virtual BOOL CreateEx(
 指定工具栏控件的样式。 工具栏必须始终具有 WS_CHILD 样式。 此外，可以指定 toolbar 样式和窗口样式的任意组合，如中所述**备注**一部分[创建](#create)。
 
 *rect*<br/>
-对引用[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构的结构描述的大小和窗口的工作区中创建的位置*pParentWnd*。
+对引用[RECT](/previous-versions/dd162897\(v=vs.85\))结构的结构描述的大小和窗口的工作区中创建的位置*pParentWnd*。
 
 *pParentWnd*<br/>
 指向控件的父级的窗口的指针。
@@ -1085,7 +1085,7 @@ BOOL GetItemRect(
 要为其检索信息的按钮的从零开始索引。
 
 *lpRect*<br/>
-地址[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构或[CRect](../../atl-mfc-shared/reference/crect-class.md)对象，它接收的边框的坐标。
+地址[RECT](/previous-versions/dd162897\(v=vs.85\))结构或[CRect](../../atl-mfc-shared/reference/crect-class.md)对象，它接收的边框的坐标。
 
 ### <a name="return-value"></a>返回值
 
@@ -1202,7 +1202,7 @@ BOOL GetRect(
 按钮标识符。
 
 *lpRect*<br/>
-一个指向[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构接收边界矩形信息。
+一个指向[RECT](/previous-versions/dd162897\(v=vs.85\))结构接收边界矩形信息。
 
 ### <a name="return-value"></a>返回值
 
@@ -1325,7 +1325,7 @@ int HitTest(LPPOINT ppt) const;
 ### <a name="parameters"></a>参数
 
 *ppt*<br/>
-一个指向[点](https://msdn.microsoft.com/library/windows/desktop/dd162805)结构，它包含中的命中测试的 x 坐标`x`成员和 y 坐标的命中测试中`y`成员。 坐标是相对于工具栏的工作区。
+一个指向[点](/previous-versions/dd162805\(v=vs.85\))结构，它包含中的命中测试的 x 坐标`x`成员和 y 坐标的命中测试中`y`成员。 坐标是相对于工具栏的工作区。
 
 ### <a name="return-value"></a>返回值
 
@@ -1428,7 +1428,7 @@ BOOL InsertMarkHitTest(
 ### <a name="parameters"></a>参数
 
 *ppt*<br/>
-一个指向[点](https://msdn.microsoft.com/library/windows/desktop/dd162805)结构，其中包含了点击的测试协调，相对于客户端区域的工具栏。
+一个指向[点](/previous-versions/dd162805\(v=vs.85\))结构，其中包含了点击的测试协调，相对于客户端区域的工具栏。
 
 *ptbim*<br/>
 一个指向[TBINSERTMARK](/windows/desktop/api/commctrl/ns-commctrl-tbinsertmark)接收插入标记信息的结构。
@@ -2295,7 +2295,7 @@ void SetRows(
 指示是否使用更多的行或更少的行，如果不能将工具栏大小调整至请求的行数。
 
 *lpRect*<br/>
-指向[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构，它将接收工具栏的新边框。
+指向[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT](/previous-versions/dd162897\(v=vs.85\))结构，它将接收工具栏的新边框。
 
 ### <a name="remarks"></a>备注
 

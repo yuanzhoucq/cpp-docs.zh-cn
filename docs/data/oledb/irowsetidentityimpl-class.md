@@ -14,16 +14,16 @@ helpviewer_keywords:
 - IRowsetIdentityImpl class
 - IsSameRow method
 ms.assetid: 56821edf-e045-40c8-96bd-231552cd5799
-ms.openlocfilehash: b70ebdaa44331d9fa545763f0dd19e6320dd652b
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: e70330a023dc48b7e763bfb874da5290f2fa519f
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556213"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424517"
 ---
 # <a name="irowsetidentityimpl-class"></a>IRowsetIdentityImpl 类
 
-实现 OLE DB [IRowsetIdentity](https://docs.microsoft.com/previous-versions/windows/desktop/ms715913(v=vs.85))接口，可对行标识进行测试。
+实现 OLE DB [IRowsetIdentity](/previous-versions/windows/desktop/ms715913(v=vs.85))接口，可对行标识进行测试。
 
 ## <a name="syntax"></a>语法
 
@@ -53,7 +53,7 @@ class ATL_NO_VTABLE IRowsetIdentityImpl
 |-|-|
 |[IsSameRow](#issamerow)|比较两个行句柄，以了解它们是否引用同一行。|
 
-## <a name="issamerow"></a> Irowsetidentityimpl:: Issamerow
+## <a name="issamerow"></a> IRowsetIdentityImpl::IsSameRow
 
 比较两个行句柄，以了解它们是否引用同一行。
 
@@ -66,7 +66,7 @@ STDMETHOD(IsSameRow )(HROW hThisRow,
 
 #### <a name="parameters"></a>参数
 
-请参阅[IRowsetIdentity::IsSameRow](https://docs.microsoft.com/previous-versions/windows/desktop/ms719629(v=vs.85))中*OLE DB 程序员参考*。
+请参阅[IRowsetIdentity::IsSameRow](/previous-versions/windows/desktop/ms719629(v=vs.85))中*OLE DB 程序员参考*。
 
 ### <a name="remarks"></a>备注
 

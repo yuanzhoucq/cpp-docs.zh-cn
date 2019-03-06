@@ -10,12 +10,12 @@ helpviewer_keywords:
 - cl.exe compiler [C++], features that affect linking
 - cl.exe compiler [C++], controlling linker
 ms.assetid: e4c03896-c99c-4599-8502-e0f4bebe69d0
-ms.openlocfilehash: 21d0baccaf74fc08bb110b0ae9f8b7dc108abd6b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3fed75b18ead80b8367eb1254793d632629efeff
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50561562"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426701"
 ---
 # <a name="compiler-controlled-link-options"></a>Compiler-Controlled LINK Options
 
@@ -24,11 +24,11 @@ CL 编译器会自动调用链接，除非指定了 /c 选项。 CL 提供了通
 |CL 规范|CL 操作会影响链接|
 |----------------------|---------------------------------|
 |.C、.cxx、.cpp 或.def 以外任何文件扩展名|将文件名传递作为输入链接|
-|*文件名*.def|将传递 /DEF:*文件名*.def|
-|/F*数*|传递 /STACK:*数*|
-|/Fd*文件名*|将传递 /PDB:*文件名*|
-|/Fe*文件名*|将传递 /out:*文件名*|
-|/Fm*文件名*|传递 /MAP:*文件名*|
+|*filename*.def|将传递 /DEF:*文件名*.def|
+|/F*number*|传递 /STACK:*数*|
+|/Fd*filename*|将传递 /PDB:*文件名*|
+|/Fe*filename*|将传递 /out:*文件名*|
+|/Fm*filename*|传递 /MAP:*文件名*|
 |/Gy|创建封装的函数 (Comdat);启用函数级链接|
 |/LD|将传递 /DLL|
 |/LDd|将传递 /DLL|

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - cl.exe compiler, precompiling code
 - .pch files, creating
 ms.assetid: e2cdb404-a517-4189-9771-c869c660cb1b
-ms.openlocfilehash: b570b76328ee9824610aac495d97cede19189cf9
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 75ebc466b55cdc2221783531024eefece2e976bb
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176427"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413766"
 ---
 # <a name="creating-precompiled-header-files"></a>创建预编译标头文件
 
@@ -73,7 +73,7 @@ Microsoft C 和 C++ 编译器提供预编译任何 C 或 C++ 代码（包括内�
 
 由于 PCH 文件包含有关计算机环境的信息以及有关程序的内存地址信息，应仅使用创建它时所在的计算机上的 PCH 文件。
 
-## <a name="consistency-rules-for-per-file-use-of-precompiled-headers"></a>按文件使用预编译标头的一致性规则
+## <a name="consistency-rules-for-per-file-use-of-precompiled-headers"></a>按文件使用预编译头的一致性规则
 
 [/Yu](../../build/reference/yu-use-precompiled-header-file.md)编译器选项可以指定要使用哪个 PCH 文件。
 
@@ -145,7 +145,7 @@ PCH 文件创建的过程通常处理的杂注会影响同随后使用 PCH 文�
 > [!NOTE]
 >  预编译标头功能用于仅在 C 和 c + + 源代码文件中。
 
-## <a name="using-precompiled-headers-in-a-project"></a>在项目中使用预编译标头
+## <a name="using-precompiled-headers-in-a-project"></a>在项目中使用预编译头
 
 前面几节将概括介绍预编译标头： /Yc 和 /Yu，/Fp 选项，并[hdrstop](../../preprocessor/hdrstop.md)杂注。 本部分介绍的项目; 使用手动预编译标头选项的方法它结尾的示例生成文件和它所管理的代码。
 

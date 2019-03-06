@@ -16,12 +16,12 @@ helpviewer_keywords:
 - listing file type
 - assembly-only listing
 ms.assetid: c7507d0e-c69d-44f9-b8e2-d2c398697402
-ms.openlocfilehash: 6bb5e18c5a174c9e48b253031daad195e6132375
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 610c94646b82783a49ca6de6bc443e99a3c137bc
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507289"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57420903"
 ---
 # <a name="fa-fa-listing-file"></a>/FA、/Fa（列出文件）
 
@@ -29,7 +29,7 @@ ms.locfileid: "50507289"
 
 ## <a name="syntax"></a>语法
 
-> **/FA**[**c**\][**s**\][**u**] **/Fa**_路径名_
+> **/FA**[**c**\][**s**\][**u**] **/Fa**_pathname_
 
 ## <a name="remarks"></a>备注
 
@@ -61,16 +61,16 @@ ms.locfileid: "50507289"
 *filename*<br/>
 名为的列表文件*文件名*.asm 放在当前目录中。 编译单个源代码文件时，此值才有效。
 
-*将文件名.扩展名*<br/>
+*filename.extension*<br/>
 名为的列表文件*文件名.扩展名*位于当前目录中。 编译单个源代码文件时，此值才有效。
 
-*目录*__\\__<br/>
+*directory*__\\__<br/>
 一个*source_file*创建.asm 文件并将其放在指定*directory*为编译中每个源代码文件。 请注意所需的尾随反斜杠。 允许仅在当前磁盘上的路径。
 
-*目录*__\\__*文件名*<br/>
+*directory*__\\__*filename*<br/>
 名为的列表文件*文件名*.asm 放在指定*directory*。 编译单个源代码文件时，此值才有效。
 
-*目录*__\\__*文件名.扩展名*<br/>
+*directory*__\\__*filename.extension*<br/>
 名为的列表文件*文件名.扩展名*放置在指定*directory*。 编译单个源代码文件时，此值才有效。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - assemblies [C++], linking resource files
 - /ASSEMBLYRESOURCE linker option
 ms.assetid: 0ce6e1fb-921b-4b1b-a59c-d35388d789f2
-ms.openlocfilehash: 566a667ababaa67c7aff71861b111416abbbd878
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c18a014ca645cceb3196fb7efefd227e96f8e1fa
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50486593"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57416211"
 ---
 # <a name="assemblyresource-embed-a-managed-resource"></a>/ASSEMBLYRESOURCE（嵌入托管资源）
 
@@ -40,7 +40,7 @@ ms.locfileid: "50486593"
 
 资源是在公共程序集时使用链接器创建的。 链接器不允许你重命名的程序集中的资源。
 
-如果*文件名*是.NET Framework 创建的资源 (.resources) 文件的示例中，通过[资源文件生成器 (Resgen.exe)](/dotnet/framework/tools/resgen-exe-resource-file-generator)或在开发环境中，则可以使用来访问中的成员**System.Resources**命名空间 (请参阅[System.Resources.ResourceManager](https://msdn.microsoft.com/library/system.resources.resourcemanager.aspx)有关详细信息)。 对于所有其他资源，请使用**GetManifestResource** \*中的方法**不过 System.Reflection.Assembly**类，以在运行时访问资源。
+如果*文件名*是.NET Framework 创建的资源 (.resources) 文件的示例中，通过[资源文件生成器 (Resgen.exe)](/dotnet/framework/tools/resgen-exe-resource-file-generator)或在开发环境中，则可以使用来访问中的成员**System.Resources**命名空间 (请参阅[System.Resources.ResourceManager](/dotnet/api/system.resources.resourcemanager)有关详细信息)。 对于所有其他资源，请使用**GetManifestResource** \*中的方法**不过 System.Reflection.Assembly**类，以在运行时访问资源。
 
 影响的程序集生成其他链接器选项有：
 

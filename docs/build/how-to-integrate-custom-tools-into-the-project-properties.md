@@ -1,19 +1,19 @@
 ---
-title: 如何：将自定义工具集成到项目属性中
+title: 如何：将自定义工具集成到项目属性
 ms.date: 04/27/2016
 f1_keywords:
 - msbuild.cpp.howto.integratecustomtools
 helpviewer_keywords:
 - 'msbuild (c++), howto: integrate custom tools'
 ms.assetid: f32d91a4-44e9-4de3-aa9a-1c7f709ad2ee
-ms.openlocfilehash: 7041e6583ba1e2c7f035edcc72617ccdb8d5aa02
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3464bfb04211969a6d4209ca45a277100a99883d
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50633007"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57416392"
 ---
-# <a name="how-to-integrate-custom-tools-into-the-project-properties"></a>如何：将自定义工具集成到项目属性中
+# <a name="how-to-integrate-custom-tools-into-the-project-properties"></a>如何：将自定义工具集成到项目属性
 
 可以将自定义工具选项添加到 Visual Studio**属性页**通过创建基础的 XML 架构文件的窗口。
 
