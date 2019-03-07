@@ -21,23 +21,23 @@ helpviewer_keywords:
 - data resources [C++]
 - resources [C++], creating
 ms.assetid: 2483c48b-1252-4dbc-826b-82e6c1a0e9cb
-ms.openlocfilehash: 420c5ecf44f8e8b264d9eafd93de58c0db3bedf4
-ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
+ms.openlocfilehash: df693e87bc9a370409eb43155d3f976a9f00cdac
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57210713"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57562856"
 ---
 # <a name="binary-editor-c"></a>二进制编辑器 （c + +）
 
 > [!CAUTION]
 > 编辑资源，例如对话框、 图像或中的菜单**二进制编辑器**是很危险的。 不正确的编辑可能会损坏资源，导致其在其本机编辑器中无法读取。
 
-**二进制编辑器**允许您编辑十六进制或 ASCII 格式的二进制级别的任何资源。 还可以使用 [查找命令](/visualstudio/ide/reference/find-command) 来搜索 ASCII 字符串或十六进制字节。 使用**二进制编辑器**仅当需要进行查看或进行次要更改为自定义资源或资源类型不受 Visual Studio 环境。
+**二进制编辑器**允许您编辑十六进制或 ASCII 格式的二进制级别的任何资源。 还可以使用 [查找命令](/visualstudio/ide/reference/find-command) 来搜索 ASCII 字符串或十六进制字节。 使用**二进制编辑器**仅当需要进行查看或进行次要更改为自定义资源或资源类型不受 Visual Studio 环境。 **二进制编辑器**在 Express 版本中不可用。
 
-若要打开**二进制编辑器**的新文件，请转到菜单**文件** > **新建** > **文件**，选择的类型你想要编辑，然后选择下拉箭头旁的文件**开放**按钮，然后选择**打开** > **二进制编辑器**。
+- 若要打开**二进制编辑器**的新文件，请转到菜单**文件** > **新建** > **文件**，选择的类型你想要编辑，然后选择下拉箭头旁的文件**开放**按钮，然后选择**打开** > **二进制编辑器**。
 
-若要打开**二进制编辑器**对现有文件，请转到菜单**文件** > **打开** > **文件**，选择你想要编辑，然后选择下拉箭头旁的文件**开放**按钮，然后选择**打开** > **二进制编辑器**。
+- 若要打开**二进制编辑器**对现有文件，请转到菜单**文件** > **打开** > **文件**，选择你想要编辑，然后选择下拉箭头旁的文件**开放**按钮，然后选择**打开** > **二进制编辑器**。
 
    ![二进制编辑器](../mfc/media/vcbinaryeditor2.gif "vcBinaryEditor2")<br/>
    显示在对话框中的二进制数据**二进制编辑器**
@@ -45,9 +45,7 @@ ms.locfileid: "57210713"
 只有特定 ASCII 值表示在**二进制编辑器**(0x20 到 0x7E)。 在右侧面板 ASCII 值部分中的扩展的字符显示为句点**二进制编辑器**。 可打印字符是 ASCII 值 32 到 126。
 
 > [!TIP]
-> 使用时**二进制编辑器**，在许多情况下你可以右击以显示特定于资源的命令的快捷菜单。 可用命令取决于所指向的光标。 例如，如果单击指向**二进制编辑器**时选择了十六进制值，则快捷菜单会显示**剪切**，**复制**，和**粘贴**命令。
-
-**二进制编辑器**在 Express 版本中不可用。
+> 使用时**二进制编辑器**，在许多情况下你可以右击以显示特定于资源的命令的快捷菜单。 可用命令取决于所指向的光标。 例如，如果您右键单击指向**二进制编辑器**时选择了十六进制值，则快捷菜单会显示**剪切**，**复制**，以及**粘贴**命令。
 
 ## <a name="how-to"></a>操作说明
 
@@ -55,12 +53,12 @@ ms.locfileid: "57210713"
 
 ### <a name="to-open-a-windows-desktop-resource-for-binary-editing"></a>打开 Windows 桌面资源进行二进制编辑
 
-1. 在 [资源视图](../windows/resource-view-window.md)中，选择要编辑的特定资源文件。
+1. 在 [资源视图](/windows/how-to-create-a-resource-script-file#create-resources)中，选择要编辑的特定资源文件。
 
 1. 右键单击资源，然后选择**打开二进制数据**。
 
 > [!NOTE]
-> 如果您使用[资源视图](../windows/resource-view-window.md)窗口中打开资源的格式的 Visual Studio 无法识别，如 RCDATA 或自定义资源，资源会自动打开在**二进制编辑器**。
+> 如果您使用**资源视图**窗口中打开资源的格式的 Visual Studio 无法识别，如 RCDATA 或自定义资源，资源会自动打开在**二进制编辑器**。
 
 ### <a name="to-open-a-managed-resource-for-binary-editing"></a>打开托管资源进行二进制编辑
 
@@ -75,8 +73,7 @@ ms.locfileid: "57210713"
 
 ### <a name="to-edit-a-resource"></a>编辑资源的步骤
 
-> [!NOTE]
-> 如果你想要使用**二进制编辑器**上已在另一个编辑器窗口中编辑的资源，先关闭其他编辑器窗口。
+如果你想要使用**二进制编辑器**上已在另一个编辑器窗口中编辑的资源，先关闭其他编辑器窗口。
 
 1. 选择你想要编辑的字节。
 
@@ -93,7 +90,7 @@ ms.locfileid: "57210713"
 
 您可以搜索 ASCII 字符串或十六进制字节。 例如，若要查找*Hello*，您可以搜索字符串*Hello*还是十六进制值， *48 65 6C 6 C 6F*。
 
-1. 从**编辑**菜单中，选择[查找](/visualstudio/ide/reference/find-command)。
+1. 转到菜单**编辑** > [查找](/visualstudio/ide/reference/find-command)。
 
 1. 在中**查找内容**框中，从下拉列表中选择以前的搜索字符串或键入想要查找的数据。
 

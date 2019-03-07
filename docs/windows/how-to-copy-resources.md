@@ -30,20 +30,14 @@ helpviewer_keywords:
 - cursors [C++], importing and exporting
 - images [C++], exporting
 ms.assetid: 65f523e8-017f-4fc6-82d1-083c56d9131f
-ms.openlocfilehash: ce1cf1f6d0010475192ecf7ef3ce2416fac51dfd
-ms.sourcegitcommit: e540706f4e2675e7f597cfc5b4f8dde648b007bb
+ms.openlocfilehash: 28127ea89fdba1b70988ced1d6004c0f914c66e2
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56676404"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57563038"
 ---
 # <a name="how-to-manage-resources-c"></a>如何：管理资源 （c + +）
-
-可以为你的项目来管理资源：
-
-- 复制和编辑资源。
-
-- 导入和导出资源。
 
 ## <a name="copy-and-edit-resources"></a>复制和编辑资源
 
@@ -54,7 +48,7 @@ ms.locfileid: "56676404"
 > [!NOTE]
 > Visual c + + 包括可以在自己的应用程序中使用的示例资源文件。 有关详细信息，请参阅[剪贴画：公共资源](https://github.com/Microsoft/VCSamples)。
 
-您可以在项目外部打开.rc 文件之间使用拖放方法。
+您不能拖放、 复制、 剪切、 或在项目中的资源文件之间粘贴 (**资源视图**) 并在文档窗口中打开独立.rc 文件。 无法在以前版本的产品来执行此操作。 仅在项目外部打开.rc 文件之间使用拖放方法。
 
 ### <a name="to-copy-resources"></a>若要将资源复制
 
@@ -78,9 +72,6 @@ ms.locfileid: "56676404"
       1. 右键单击要在其中粘贴该资源的资源文件 (例如， *Source2.rc*)，然后选择**粘贴**。
 
 > [!NOTE]
-> 您不能拖放、 复制、 剪切、 或在项目中的资源文件之间粘贴 (**资源视图**) 和独立.rc 文件 （即在文档窗口中打开）。 无法在以前版本的产品来执行此操作。
-
-> [!NOTE]
 > 若要避免使用符号名称或现有文件中的值冲突，Visual c + + 可能会更改传输的资源的符号值或符号名称和值时将其复制到新文件。
 
 在资源中进行复制时，你可以更改其语言属性和/或条件属性。
@@ -95,13 +86,13 @@ ms.locfileid: "56676404"
 IDD_AboutBox (Finnish - XX33)
 ```
 
-复制的现有资源并更改其语言或条件
+### <a name="to-copy-an-existing-resource-and-change-its-language-or-condition"></a>复制的现有资源并更改其语言或条件
 
-1. 在.rc 文件中或在[资源视图](../windows/resource-view-window.md)窗口中，右键单击你想要复制，并选择的资源**插入副本**。 然后设置以下各项：
+在中 *.rc*文件中或在[资源视图](../windows/resource-view-window.md)窗口中，右键单击你想要复制，并选择的资源**插入副本**。 然后设置以下各项：
 
-   - 有关**语言**列表框中，选择的语言。
+- 有关**语言**列表框中，选择的语言。
 
-   - 在中**条件**框中，键入条件。
+- 在中**条件**框中，键入条件。
 
 ### <a name="to-edit-resources"></a>若要编辑的资源
 

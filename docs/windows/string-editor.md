@@ -32,12 +32,12 @@ helpviewer_keywords:
 - strings [C++], formatting
 - strings [C++], special characters
 ms.assetid: f71ab8de-3068-4e29-8e28-5a33d18dd416
-ms.openlocfilehash: d040c09b36c2b46036744c8a263802da48cd8e60
-ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
+ms.openlocfilehash: bea53c33ef723cf8c98d0c542d24389e730c092a
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57210791"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57563298"
 ---
 # <a name="string-editor-c"></a>字符串编辑器 （c + +）
 
@@ -56,7 +56,7 @@ ms.locfileid: "57210791"
 
 ### <a name="to-find-a-string-resource-in-the-string-table"></a>若要在字符串表中查找的字符串资源
 
-1. 通过双击中对应的图标打开字符串表[资源视图](../windows/resource-view-window.md)。
+1. 通过双击中对应的图标打开字符串表[资源视图](/windows/how-to-create-a-resource-script-file#create-resources)。
 
 1. 转到菜单**编辑** > **查找和替换**，然后选择**查找**。
 
@@ -77,9 +77,9 @@ ms.locfileid: "57210791"
 
 **字符串编辑器**可确保不使用已在使用的 ID。 如果您选择 ID 已在使用中，**字符串编辑器**将通知你，然后分配一个通用的唯一 ID，例如`IDS_STRING58113`。
 
-若要添加的字符串表项：
+#### <a name="to-add-a-string-table-entry"></a>若要添加的字符串表项
 
-1. 通过双击中对应的图标打开字符串表[资源视图](../windows/resource-view-window.md)。
+1. 通过双击中对应的图标打开字符串表[资源视图](/windows/how-to-create-a-resource-script-file#create-resources)。
 
 1. 字符串表中右键单击并选择**新的字符串**。
 
@@ -92,7 +92,7 @@ ms.locfileid: "57210791"
    > [!NOTE]
    > 在 Windows 字符串表中不允许 null 字符串。 如果您是一个 null 字符串的字符串表中创建一个条目，将收到一条消息询问你**请输入该表项字符串**。
 
-若要删除的字符串表项：
+#### <a name="to-delete-a-string-table-entry"></a>若要删除的字符串表项
 
 选择你想要删除并执行以下任一的项：
 
@@ -110,7 +110,7 @@ ms.locfileid: "57210791"
 
 1. 将光标放在目标**字符串编辑器**窗口。
 
-1. 在你想要移动字符串.rc 文件中，右键单击并选择**粘贴**。
+1. 在中 *.rc*想要移动字符串，用鼠标右键单击并选择的文件**粘贴**。
 
 > [!NOTE]
 > 如果**ID**或**值**与某个现有的移动的字符串冲突**ID**或者**值**在目标文件中，任一该**ID**或**值**的更改已移动的字符串。
@@ -122,9 +122,9 @@ ms.locfileid: "57210791"
 > [!NOTE]
 >  此外可以编辑字符串的属性中[属性窗口](/visualstudio/ide/reference/properties-window)。
 
-若要更改字符串或其标识符：
+#### <a name="to-change-a-string-or-its-identifier"></a>若要更改字符串或其标识符
 
-1. 通过双击中对应的图标打开字符串表[资源视图](../windows/resource-view-window.md)。
+1. 通过双击中对应的图标打开字符串表[资源视图](/windows/how-to-create-a-resource-script-file#create-resources)。
 
 1. 选择你想要编辑，并双击的字符串**ID**，**值**，或**标题**列，则你可以：
 
@@ -134,9 +134,9 @@ ms.locfileid: "57210791"
 
    - 键入中的编辑**标题**列。
 
-若要更改多个字符串资源的标题属性：
+#### <a name="to-change-the-caption-property-of-multiple-string-resources"></a>若要更改多个字符串资源的标题属性
 
-1. 通过双击中对应的图标打开字符串表[资源视图](../windows/resource-view-window.md)。
+1. 通过双击中对应的图标打开字符串表[资源视图](/windows/how-to-create-a-resource-script-file#create-resources)。
 
 1. 选择你想要通过按下更改的字符串**Ctrl**选择每个键。
 
@@ -146,7 +146,7 @@ ms.locfileid: "57210791"
 
 ### <a name="to-add-formatting-or-special-characters-to-a-string-resource"></a>若要将格式设置或特殊字符添加到字符串资源
 
-1. 通过双击中对应的图标打开字符串表[资源视图](../windows/resource-view-window.md)。
+1. 通过双击中对应的图标打开字符串表[资源视图](/windows/how-to-create-a-resource-script-file#create-resources)。
 
 1. 选择你想要修改的字符串。
 
