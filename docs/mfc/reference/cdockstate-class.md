@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CDockState [MFC], SaveState
 - CDockState [MFC], m_arrBarInfo
 ms.assetid: 09e7c10b-3abd-4cb2-ad36-42420fe6bc36
-ms.openlocfilehash: 56be735aa99cfebe4ec64ff76f53d28cc9b9779e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b8c4b80d7182795d8919adb64491d506325976ef
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50443597"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262683"
 ---
 # <a name="cdockstate-class"></a>CDockState 类
 
@@ -58,7 +58,7 @@ class CDockState : public CObject
 
 [CFrameWnd::GetDockState](../../mfc/reference/cframewnd-class.md#getdockstate)检索框架窗口的状态信息`CControlBar`对象，并将其放`CDockState`对象。 然后可以写入的内容`CDockState`到存储使用对象[Serialize](../../mfc/reference/cobject-class.md#serialize)或[CDockState::SaveState](#savestate)。 如果以后想要还原在框架窗口控件条的状态，可以加载的状态与`Serialize`或[CDockState::LoadState](#loadstate)，然后使用[CFrameWnd::SetDockState](../../mfc/reference/cframewnd-class.md#setdockstate)应用已保存状态设置为框架窗口的控件条。
 
-停靠控件条的详细信息，请参阅文章[控件条](../../mfc/control-bars.md)，[工具栏： 停靠和浮动](../../mfc/docking-and-floating-toolbars.md)，并[帧 Windows](../../mfc/frame-windows.md)。
+停靠控件条的详细信息，请参阅文章[控件条](../../mfc/control-bars.md)，[工具栏：停靠和浮动](../../mfc/docking-and-floating-toolbars.md)，并[帧 Windows](../../mfc/frame-windows.md)。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -144,4 +144,3 @@ void SaveState(LPCTSTR lpszProfileName);
 
 [CObject 类](../../mfc/reference/cobject-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)
-

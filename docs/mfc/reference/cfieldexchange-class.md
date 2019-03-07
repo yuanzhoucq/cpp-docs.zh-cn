@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CFieldExchange [MFC], IsFieldType
 - CFieldExchange [MFC], SetFieldType
 ms.assetid: 24c5c0b3-06a6-430e-9b6f-005a2c65e29f
-ms.openlocfilehash: e039a2deaf3372af5daac8fddd8f3a0672719f88
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e66b3ed16d4f21d46567c37bfaf7929d32f63b8e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588222"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294975"
 ---
 # <a name="cfieldexchange-class"></a>CFieldExchange 类
 
@@ -55,7 +55,7 @@ class CFieldExchange
 
 - `CFieldExchange::inoutParam` 适用于输入/输出参数数据成员。
 
-为编写你自己的自定义 RFX 例程提供了大部分类的成员函数和数据成员。 将使用`SetFieldType`频繁。 有关详细信息，请参阅文章[记录字段交换 (RFX)](../../data/odbc/record-field-exchange-rfx.md)并[记录集 (ODBC)](../../data/odbc/recordset-odbc.md)。 有关批量行提取的信息，请参阅文章[记录集： 提取记录 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。 有关 RFX 和批量 RFX 全局函数的详细信息，请参阅[记录字段交换函数](../../mfc/reference/record-field-exchange-functions.md)此引用的 MFC 宏和全局部分中。
+为编写你自己的自定义 RFX 例程提供了大部分类的成员函数和数据成员。 将使用`SetFieldType`频繁。 有关详细信息，请参阅文章[记录字段交换 (RFX)](../../data/odbc/record-field-exchange-rfx.md)并[记录集 (ODBC)](../../data/odbc/recordset-odbc.md)。 有关批量行提取的信息，请参阅文章[记录集：(ODBC) 批量提取记录](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。 有关 RFX 和批量 RFX 全局函数的详细信息，请参阅[记录字段交换函数](../../mfc/reference/record-field-exchange-functions.md)此引用的 MFC 宏和全局部分中。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -124,7 +124,7 @@ void SetFieldType(UINT nFieldType);
 
 一般情况下，必须通过调用前面 RFX 函数调用与字段数据成员或参数数据成员关联的每个组`SetFieldType`。 *NFieldType*参数的每个`SetFieldType`调用标识按照 RFX 函数调用所表示的数据成员的类型`SetFieldType`调用。
 
-有关处理输出和输入/输出参数的详细信息，请参阅`CRecordset`成员函数[FlushResultSet](../../mfc/reference/crecordset-class.md#flushresultset)。 有关 RFX 和批量 RFX 函数的详细信息，请参阅主题[记录字段交换函数](../../mfc/reference/record-field-exchange-functions.md)。 有关批量行提取的相关信息，请参阅文章[记录集： 提取记录 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
+有关处理输出和输入/输出参数的详细信息，请参阅`CRecordset`成员函数[FlushResultSet](../../mfc/reference/crecordset-class.md#flushresultset)。 有关 RFX 和批量 RFX 函数的详细信息，请参阅主题[记录字段交换函数](../../mfc/reference/record-field-exchange-functions.md)。 有关批量行提取的相关信息，请参阅文章[记录集：(ODBC) 批量提取记录](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
 
 ### <a name="example"></a>示例
 

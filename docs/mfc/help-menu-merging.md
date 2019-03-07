@@ -6,12 +6,12 @@ helpviewer_keywords:
 - merging Help menus [MFC]
 - Help [MFC], for active document containers
 ms.assetid: 9d615999-79ba-471a-9288-718f0c903d49
-ms.openlocfilehash: 3db635cfdc39f9c4166bbf3d6958f52e535d91f1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e1e8f9af696b6ea4cd485f4215e1c8425098e987
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50578524"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296836"
 ---
 # <a name="help-menu-merging"></a>帮助菜单合并
 
@@ -37,7 +37,7 @@ ms.locfileid: "50578524"
 
 若要构造此合并**帮助**菜单中，活动文档包容体系结构修改一般 OLE 文档过程。 根据 OLE 文档，合并的菜单栏可以有 6 个菜单中，组 namely**文件**，**编辑**，**容器**，**对象**， **窗口**，**帮助**按顺序。 每个组可包含零个或多个菜单。 组**文件**，**容器**，并**窗口**属于容器和组**编辑**，**对象、** 并**帮助**属于对象。 当对象需要执行菜单合并时，它会创建一个空白菜单栏并将其传递给容器。 容器然后插入其菜单中，通过调用`IOleInPlaceFrame::InsertMenus`。 此对象还传递是 6 个 LONG 值的数组的结构 (**OLEMENUGROUPWIDTHS**)。 在插入菜单后，容器将标记它在每个组中添加的菜单数，然后返回。 然后，此对象插入其菜单，请注意每个容器组中的菜单计数。 最后，对象会将合并的菜单栏和数组（包含每个组中的菜单计数）传递给 OLE，后者将返回一个不透明的“菜单描述符”句柄。 更高版本的对象将传递该句柄和合并的菜单栏到容器，通过`IOleInPlaceFrame::SetMenu`。 此时，容器将显示合并后的菜单栏，并且还会将句柄传递给 OLE，以便 OLE 能够对菜单消息进行正确的调度。
 
-在修改后的活动文档过程中，该对象首先必须初始化**OLEMENUGROUPWIDTHS**到零，然后再将它传递给容器的元素。 然后，容器将执行常规菜单插入，有一个例外： 容器插入**帮助**菜单作为最后一项，并将值 1 存储中的最后一个 （第六个） 条目**OLEMENUGROUPWIDTHS**数组（即，宽度 [5]，属于对象的帮助组）。 这**帮助**菜单中将有为子菜单，其中只有一项"**容器帮助**>"按前面所述的级联菜单。
+在修改后的活动文档过程中，该对象首先必须初始化**OLEMENUGROUPWIDTHS**到零，然后再将它传递给容器的元素。 然后，容器将执行常规菜单插入，有一个例外：容器插入**帮助**菜单作为最后一项，并将值 1 存储中的最后一个 （第六个） 条目**OLEMENUGROUPWIDTHS**数组 （即，宽度 [5]，属于对象的帮助组）。 这**帮助**菜单中将有为子菜单，其中只有一项"**容器帮助**>"按前面所述的级联菜单。
 
 该对象然后执行其常规菜单插入代码，不同之处在于之前插入其**帮助**菜单中，它会检查的第六个条目**OLEMENUGROUPWIDTHS**数组。 如果值为 1 且最后一个菜单的名称是**帮助**（或适当的本地化字符串），则该对象将插入其**帮助**作为容器的子菜单的菜单**帮助**菜单。
 
@@ -52,4 +52,3 @@ ms.locfileid: "50578524"
 ## <a name="see-also"></a>请参阅
 
 [活动文档容器](../mfc/active-document-containers.md)
-

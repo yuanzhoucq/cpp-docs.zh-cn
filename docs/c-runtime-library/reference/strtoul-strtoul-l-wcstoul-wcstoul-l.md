@@ -18,6 +18,7 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - strtoul
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - strtoul_l function
 - tcstoul function
 ms.assetid: 38f2afe8-8178-4e0b-8bbe-d5c6ad66e3ab
-ms.openlocfilehash: c1ef17b7b5cf1dac2d10cd16889241c40f89a507
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d4d974084c9249740d565f879f471bc7dfc697bd
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50436124"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210778"
 ---
 # <a name="strtoul-strtoull-wcstoul-wcstoull"></a>strtoul、_strtoul_l、wcstoul、_wcstoul_l
 
@@ -111,7 +112,7 @@ unsigned long _wcstoul_l(
 
 **strtoul**预期*strSource*以指向以下形式的字符串：
 
-> [*空格*] [{**+** &#124; **-**}] [**0** [{ **x**&#124; **X** }]] [*数字*&#124; *字母*]  
+> [*whitespace*] [{**+** &#124; **-**}] [**0** [{ **x** &#124; **X** }]] [*digits*  &#124; *letters*]
 
 一个*空格*可能包含的空格和制表符，被忽略。 *数字*是一个或多个十进制数字。 *字母*中的一个或多个字母 a 到 z （或 A 到 Z）。 不符合此形式的第一个字符停止扫描。 如果*基*则用作数字的基数是 2 和 36，之间。 如果*基*为 0，指向字符串的初始字符*strSource*用于确定基数。 如果第一个字符为 0，且第二个字符不为“x”或“X”，则将该字符串视为八进制整数。 如果第一个字符为“0”，且第二个字符为“x”或“X”，则将该字符串视为十六进制整数。 如果第一个字符是“1”至“9”，则将该字符串视为十进制整数。 为字母“a”到“z”（或“A”到“Z”）分配了 10 到 35 的值；仅允许分配的值小于 *base* 的字母。 超出基数范围的第一个字符停止扫描。 例如，如果*基*为 0 和扫描的第一个字符为"0"，则假定八进制整数，且"8"或"9"字符将停止扫描。 **strtoul**允许加号 (**+**) 或减号 (**-**) 符号前缀; 前导减号符号表示返回值不起作用。
 

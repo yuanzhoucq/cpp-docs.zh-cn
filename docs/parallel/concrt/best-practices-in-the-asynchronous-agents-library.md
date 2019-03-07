@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Asynchronous Agents Library, practices to avoid
 - practices to avoid, Asynchronous Agents Library
 ms.assetid: 85f52354-41eb-4b0d-98c5-f7344ee8a8cf
-ms.openlocfilehash: 70c979be0d37817cf199af0b6a3cbf114fced265
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c61393957a63895a9ecbdaaae8d83a5fbd710de3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50494572"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266414"
 ---
 # <a name="best-practices-in-the-asynchronous-agents-library"></a>异步代理库中的最佳做法
 
@@ -42,7 +42,7 @@ ms.locfileid: "50494572"
 
 [!code-cpp[concrt-simple-agent#1](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-asynchronous-agents-library_1.cpp)]
 
-有关如何定义和使用代理的完整示例，请参阅[演练： 创建基于代理的应用程序](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md)并[演练： 创建数据流代理](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md)。
+有关如何定义和使用代理的完整示例，请参阅[演练：创建基于代理的应用程序](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md)和[演练：创建数据流代理](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md)。
 
 [[返回页首](#top)]
 
@@ -58,7 +58,7 @@ ms.locfileid: "50494572"
 
 在此示例中生成者将相对较少的消息发送给使用者。 因此，此示例没有演示潜在的低内存或内存不足条件。 但是，此机制时，数据管道包含相对大量的消息。
 
-有关如何创建信号量类，用于在此示例中的详细信息，请参阅[如何： 使用上下文类实现协作信号量](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md)。
+有关如何创建信号量类，用于在此示例中的详细信息，请参阅[如何：使用上下文类实现协作信号量](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md)。
 
 [[返回页首](#top)]
 
@@ -66,7 +66,7 @@ ms.locfileid: "50494572"
 
 非常粗粒度的数据管道执行的工作时，代理库是最有用。 例如，某个应用程序组件可能会从文件或网络连接读取数据并偶尔会将该数据发送到另一个组件。 代理库使用传播消息的协议将导致有更多的开销比提供的任务并行构造的消息传递机制[并行模式库](../../parallel/concrt/parallel-patterns-library-ppl.md)(PPL)。 因此，请确保通过数据管道执行的工作是足够长，以抵消这种开销。
 
-尽管粗粒度其任务时，数据管道是最有效，但数据管道的每个阶段可以使用 PPL 构造，如任务组和并行算法进行更细化的工作。 在每个处理阶段使用细粒度并行操作的粗粒度的数据网络的示例，请参阅[演练： 创建图像处理网络](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)。
+尽管粗粒度其任务时，数据管道是最有效，但数据管道的每个阶段可以使用 PPL 构造，如任务组和并行算法进行更细化的工作。 在每个处理阶段使用细粒度并行操作的粗粒度的数据网络的示例，请参阅[演练：创建图像处理网络](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)。
 
 [[返回页首](#top)]
 
@@ -123,4 +123,3 @@ Destroying resource 64...
 [演练：创建图像处理网络](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)<br/>
 [并行模式库中的最佳做法](../../parallel/concrt/best-practices-in-the-parallel-patterns-library.md)<br/>
 [并发运行时中的常规最佳做法](../../parallel/concrt/general-best-practices-in-the-concurrency-runtime.md)
-

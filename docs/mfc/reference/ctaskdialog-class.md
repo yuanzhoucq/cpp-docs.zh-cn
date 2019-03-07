@@ -116,12 +116,12 @@ helpviewer_keywords:
 - CTaskDialog [MFC], ShowDialog
 - CTaskDialog [MFC], TaskDialogCallback
 ms.assetid: 1991ec98-ae56-4483-958b-233809c8c559
-ms.openlocfilehash: 7b95252c830e27a0602f149f880258511ec24e64
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 04c8a60f546700be8eeb2ec8a948e0ea321d12f8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52177064"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265010"
 ---
 # <a name="ctaskdialog-class"></a>CTaskDialog Class
 
@@ -247,7 +247,7 @@ CTaskDialog 示例
 
 ## <a name="requirements"></a>要求
 
-**所需的最低操作系统：** Windows Vista
+**最小所需的操作系统：** Windows Vista
 
 **标头：** afxtaskdialog.h
 
@@ -1604,7 +1604,7 @@ HRESULT TaskDialogCallback(
 
 值*wParam*并*lParam*取决于特定生成的消息。 就可以为一个或两个这些值可为空。 下表列出了支持的默认通知和的值*wParam*并*lParam*表示。 如果重写此方法在派生类中的，应在下表中实现每个消息的回调代码。
 
-|通知消息|*wParam*值|*lParam*值|
+|通知消息|*wParam* Value|*lParam*值|
 |--------------------------|--------------------|--------------------|
 |TDN_CREATED|未使用。|未使用。|
 |TDN_NAVIGATED|未使用。|未使用。|

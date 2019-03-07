@@ -1,5 +1,5 @@
 ---
-title: 异常：捕捉和删除异常
+title: 异常:捕捉和删除异常
 ms.date: 11/04/2016
 helpviewer_keywords:
 - exceptions [MFC], deleting
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - catch blocks [MFC], catching and deleting exceptions
 - execution [MFC], returns from within catch block
 ms.assetid: 7c233ff0-89de-4de0-a68a-9e9cdb164311
-ms.openlocfilehash: 370062d3e17127e711f2b4356cbb133a6c1d20b9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 511850c3c17a4eb70529202f4b0c2b36132fc8ff
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50625898"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57287199"
 ---
-# <a name="exceptions-catching-and-deleting-exceptions"></a>异常：捕捉和删除异常
+# <a name="exceptions-catching-and-deleting-exceptions"></a>异常:捕捉和删除异常
 
 下列说明和示例演示如何捕获和删除异常。 有关详细信息**尝试**，**捕获**，并**引发**关键字，请参见[c + + 异常处理](../cpp/cpp-exception-handling.md)。
 
@@ -49,9 +49,8 @@ ms.locfileid: "50625898"
 
    [!code-cpp[NVC_MFCExceptions#5](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_3.cpp)]
 
-有关详细信息，请参阅[异常： 从 MFC 异常宏转换](../mfc/exceptions-converting-from-mfc-exception-macros.md)。
+有关详细信息，请参阅[异常：从 MFC 异常宏转换](../mfc/exceptions-converting-from-mfc-exception-macros.md)。
 
 ## <a name="see-also"></a>请参阅
 
 [异常处理](../mfc/exception-handling-in-mfc.md)
-

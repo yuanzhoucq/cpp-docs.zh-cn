@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CD2DGeometrySink [MFC], SetSegmentFlags
 - CD2DGeometrySink [MFC], m_pSink
 ms.assetid: e5e07f41-0343-4ab1-9d6b-8c62ed33c04a
-ms.openlocfilehash: ff68cc737f28763e5545b0ccaf2c0122e78cb051
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 48c88f0b837b2e49e4c87f07a9aa28c16a66c1e3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654662"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271198"
 ---
 # <a name="cd2dgeometrysink-class"></a>CD2DGeometrySink 类
 
@@ -62,7 +62,7 @@ class CD2DGeometrySink;
 |名称|描述|
 |----------|-----------------|
 |[CD2DGeometrySink::CD2DGeometrySink](#cd2dgeometrysink)|构造 CD2DPathGeometry 对象从一个 CD2DGeometrySink 对象。|
-|[CD2DGeometrySink:: ~ CD2DGeometrySink](#_dtorcd2dgeometrysink)|析构函数。 当 D2D geometry 接收器对象被销毁时调用。|
+|[CD2DGeometrySink::~CD2DGeometrySink](#_dtorcd2dgeometrysink)|析构函数。 当 D2D geometry 接收器对象被销毁时调用。|
 
 ### <a name="public-methods"></a>公共方法
 
@@ -121,7 +121,7 @@ void AddArc(const D2D1_ARC_SEGMENT& arc);
 
 ### <a name="parameters"></a>参数
 
-*弧线*<br/>
+*arc*<br/>
 圆弧线段将添加到图
 
 ##  <a name="addbezier"></a>  CD2DGeometrySink::AddBezier
@@ -134,7 +134,7 @@ void AddBezier(const D2D1_BEZIER_SEGMENT& bezier);
 
 ### <a name="parameters"></a>参数
 
-*贝塞尔曲线*<br/>
+*bezier*<br/>
 描述的控点和终结点的贝塞尔曲线，若要添加的结构。
 
 ##  <a name="addbeziers"></a>  CD2DGeometrySink::AddBeziers
@@ -149,7 +149,7 @@ void AddBeziers(
 
 ### <a name="parameters"></a>参数
 
-*贝赛尔曲线*<br/>
+*beziers*<br/>
 描述要创建的贝塞尔曲线的贝塞尔线段数组。 一条曲线来自到数组中的第一个贝塞尔段的结束点的几何接收器的当前点 （绘制的最后一个段或由 BeginFigure 指定位置的终结点）。 如果数组包含其他贝赛尔曲线段，每个后续的贝塞尔线段使用前面的贝塞尔线段的终点作为其起点。
 
 ##  <a name="addline"></a>  CD2DGeometrySink::AddLine
@@ -162,7 +162,7 @@ void AddLine(CD2DPointF point);
 
 ### <a name="parameters"></a>参数
 
-*点*<br/>
+*point*<br/>
 绘制线条的终点。
 
 ##  <a name="addlines"></a>  CD2DGeometrySink::AddLines
@@ -177,7 +177,7 @@ void AddLines(
 
 ### <a name="parameters"></a>参数
 
-*点*<br/>
+*points*<br/>
 描述要绘制的线条的一个或多个点的数组。 从几何图形接收器当前点 （绘制的最后一个段或由 BeginFigure 指定位置的终结点） 到数组中的第一个点绘制线条。 如果数组包含额外的点，线条是从第一个点绘制到第二个点数组中从第二个点到第三个点，依次类推。 要绘制的线条终结点的序列的数组。
 
 ##  <a name="addquadraticbezier"></a>  CD2DGeometrySink::AddQuadraticBezier
@@ -190,7 +190,7 @@ void AddQuadraticBezier(const D2D1_QUADRATIC_BEZIER_SEGMENT& bezier);
 
 ### <a name="parameters"></a>参数
 
-*贝塞尔曲线*<br/>
+*bezier*<br/>
 描述的控制点和终点的二次贝塞尔曲线，若要添加的结构。
 
 ##  <a name="addquadraticbeziers"></a>  CD2DGeometrySink::AddQuadraticBeziers
@@ -205,7 +205,7 @@ void AddQuadraticBeziers(
 
 ### <a name="parameters"></a>参数
 
-*贝赛尔曲线*<br/>
+*beziers*<br/>
 二次贝塞尔线段的序列的数组。
 
 ##  <a name="beginfigure"></a>  CD2DGeometrySink::BeginFigure

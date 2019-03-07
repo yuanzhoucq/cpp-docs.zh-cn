@@ -36,12 +36,12 @@ helpviewer_keywords:
 - CMFCPreviewCtrlImpl [MFC], m_font
 - CMFCPreviewCtrlImpl [MFC], m_pDocument
 ms.assetid: 06257fa0-54c9-478d-9d68-c9698c3f93ed
-ms.openlocfilehash: 3ec1acd1872bc0e51117602ef723116170458afd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f66ed8478023bd42e185da4f21740d1de2536140
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636730"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295742"
 ---
 # <a name="cmfcpreviewctrlimpl-class"></a>CMFCPreviewCtrlImpl 类
 
@@ -59,7 +59,7 @@ class CMFCPreviewCtrlImpl : public CWnd;
 
 |名称|描述|
 |----------|-----------------|
-|[CMFCPreviewCtrlImpl:: ~ CMFCPreviewCtrlImpl](#dtor)|Destructs 预览控件对象。|
+|[CMFCPreviewCtrlImpl::~CMFCPreviewCtrlImpl](#dtor)|Destructs 预览控件对象。|
 |[CMFCPreviewCtrlImpl::CMFCPreviewCtrlImpl](#cmfcpreviewctrlimpl)|构造一个预览控件对象。|
 
 ### <a name="public-methods"></a>公共方法
@@ -136,7 +136,7 @@ virtual BOOL Create(
 *hWndParent*<br/>
 用于丰富预览提供 shell 主机窗口的句柄。
 
-*中华人民共和国*<br/>
+*prc*<br/>
 指定的初始大小和窗口的位置。
 
 *pContext*<br/>
@@ -319,7 +319,7 @@ virtual void SetRect(
 
 ### <a name="parameters"></a>参数
 
-*中华人民共和国*<br/>
+*prc*<br/>
 指定新的大小和预览控件的位置。
 
 *bRedraw*<br/>
@@ -329,7 +329,7 @@ virtual void SetRect(
 
 通常宿主控件在调整大小时设置新边框。
 
-## <a name="dtor"></a> CMFCPreviewCtrlImpl:: ~ CMFCPreviewCtrlImpl
+## <a name="dtor"></a> CMFCPreviewCtrlImpl::~CMFCPreviewCtrlImpl
 
 Destructs 预览控件对象。
 
@@ -338,4 +338,3 @@ Destructs 预览控件对象。
 ```
 virtual ~CMFCPreviewCtrlImpl();
 ```
-

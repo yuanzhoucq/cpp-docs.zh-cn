@@ -3,16 +3,15 @@ title: vcpkg-- 用于 Windows、Linux 和 MacOS 的 C++ 包管理器
 description: vcpkg 是一种命令行程序包管理器，可极大简化 Windows 上的开源 C++ 库的购置与安装。
 author: mikeblome
 ms.author: mblome
-ms.date: 05/14/2018
-ms.technology:
-- cpp-ide
+ms.date: 02/22/2019
+ms.technology: cpp-ide
 ms.assetid: f50d459a-e18f-4b4e-814b-913e444cedd6
-ms.openlocfilehash: 2f7dc6f1d9c78d894c5cf0e6ba20c8bdfc54e67a
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: dc07086f271c9789629b335b58758b88e8e3d4e8
+ms.sourcegitcommit: fbc05d8581913bca6eff664e5ecfcda8e471b8b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518679"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56809706"
 ---
 # <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg：用于 Windows、Linux 和 MacOS 的 C++ 包管理器
 
@@ -32,7 +31,7 @@ vcpkg 是一种命令行包管理器，可极大简化 Windows、Linux 和 MacOS
 
 ## <a name="installation"></a>安装
 
-从 GitHub 克隆 vcpkg 存储库： https://github.com/Microsoft/vcpkg. 可凭喜好下载到任意文件夹位置。
+从 GitHub 克隆 vcpkg 存储库：[https://github.com/Microsoft/vcpkg](https://github.com/Microsoft/vcpkg)。 可凭喜好下载到任意文件夹位置。
 
 在根文件夹中运行 bootstrapper：
 
@@ -207,7 +206,7 @@ vcpkg 实例的内容如下：
 
 ## <a name="command-line-reference"></a>命令行参考
 
-|命令|描述|
+|命令|说明|
 |---------|---------|
 |**vcpkg search [pat]**|搜索可安装的包|
 |**vcpkg install \<pkg>...**|安装包|
@@ -229,7 +228,7 @@ vcpkg 实例的内容如下：
 
 ### <a name="options"></a>选项
 
-|选项|描述|
+|选项|说明|
 |---------|---------|
 |**--triplet \<t>**|指定目标体系结构三元组。 （默认：`%VCPKG_DEFAULT_TRIPLET%`，另请参阅“vcpkg help triplet”）|
 |**--vcpkg-root \<path>**|指定 vcpkg 根目录（默认：`%VCPKG_ROOT%`）|

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - databases [MFC], dialog data exchange (DDX) support
 - DAO [MFC], dialog data exchange (DDX) support
 ms.assetid: 0d8cde38-3a2c-4100-9589-ac80a7b1ce91
-ms.openlocfilehash: 36341a1b122e6dcb1c475f2f95e03d384c3a034f
-ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
+ms.openlocfilehash: 2a794d16b2f94bf8ba66b6c0398dec262d8829e5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55850030"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269885"
 ---
 # <a name="dialog-data-exchange-functions-for-crecordview-and-cdaorecordview"></a>CRecordView 和 CDaoRecordView 的对话框数据交换函数
 
@@ -48,7 +48,7 @@ ms.locfileid: "55850030"
 |[DDX_FieldRadio](#ddx_fieldradio)|传输整型数据记录集字段数据成员和一组中的单选按钮之间`CRecordView`或`CDaoRecordView`。|
 |[DDX_FieldScroll](#ddx_fieldscroll)|设置或获取滚动条控件中的滚动位置`CRecordView`或`CDaoRecordView`。 从调用你[DoFieldExchange](../../mfc/reference/cdaorecordset-class.md#dofieldexchange)函数。|
 |[DDX_FieldSlider](#ddx_fieldslider)|同步缩略图的滑块控件中的记录视图位置和一个`int`的记录集字段数据成员。 |
-|[DDX_FieldText](#ddx_fieldtext)|重载的版本都是可用于传输`int`， **UINT**，**长**， `DWORD`， [CString](../../atl-mfc-shared/reference/cstringt-class.md)， **float****双**，**短**， [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)，以及[COleCurrency](../../mfc/reference/colecurrency-class.md)之间的记录集字段数据成员和编辑数据框中`CRecordView`或`CDaoRecordView`。|
+|[DDX_FieldText](#ddx_fieldtext)|重载的版本都是可用于传输`int`， **UINT**，**长**， `DWORD`， [CString](../../atl-mfc-shared/reference/cstringt-class.md)， **float** **双**，**短**， [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)，以及[COleCurrency](../../mfc/reference/colecurrency-class.md)之间的记录集字段数据成员和编辑数据框中`CRecordView`或`CDaoRecordView`。|
 
 ##  <a name="ddx_fieldcbindex"></a>  DDX_FieldCBIndex
 

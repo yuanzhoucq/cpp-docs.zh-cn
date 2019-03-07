@@ -9,16 +9,16 @@ helpviewer_keywords:
 - registering custom Clipboard data formats
 - custom Clipboard data formats
 ms.assetid: aea58159-65ed-4385-aeaa-3d9d5281903b
-ms.openlocfilehash: 991736714d52b4b5fb1a001fb17f1daefed5ddb4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 16e949973ff621b1e4e36475d95763ac47b4a00d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50560558"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280213"
 ---
 # <a name="clipboard-adding-other-formats"></a>剪贴板：添加其他格式
 
-本主题说明如何扩展支持的格式，尤其是对于 OLE 支持的列表。 本主题[剪贴板： 复制和粘贴数据](../mfc/clipboard-copying-and-pasting-data.md)描述了可支持从剪贴板复制和粘贴所需的最小实现。 如果这是所有实现，放置在剪贴板上的唯一格式是**CF_METAFILEPICT**， **CF_EMBEDSOURCE**， **CF_OBJECTDESCRIPTOR**，并可能**CF_LINKSOURCE**。 大多数应用程序将需要更多格式在剪贴板上的比这三个字段。
+本主题说明如何扩展支持的格式，尤其是对于 OLE 支持的列表。 本主题[剪贴板：复制和粘贴数据](../mfc/clipboard-copying-and-pasting-data.md)描述了可支持从剪贴板复制和粘贴所需的最小实现。 如果这是所有实现，放置在剪贴板上的唯一格式是**CF_METAFILEPICT**， **CF_EMBEDSOURCE**， **CF_OBJECTDESCRIPTOR**，并可能**CF_LINKSOURCE**。 大多数应用程序将需要更多格式在剪贴板上的比这三个字段。
 
 ##  <a name="_core_registering_custom_formats"></a> 注册自定义格式
 
@@ -49,4 +49,3 @@ MFC OLE 示例程序中使用此技术[HIERSVR](../visual-cpp-samples.md) (检�
 ## <a name="see-also"></a>请参阅
 
 [剪贴板：使用 OLE 剪贴板机制](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)
-

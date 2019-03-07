@@ -10,12 +10,12 @@ helpviewer_keywords:
 - /F compiler option [C++]
 - stack, setting size
 ms.assetid: 17320b6f-8305-445b-9ec2-75833f4b29e0
-ms.openlocfilehash: 69d26a4e4634ea60457d75bc97d2266036d11e10
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 31d694c176afd3c79cde172248bfcd93d1346b54
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525523"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414442"
 ---
 # <a name="f-set-stack-size"></a>/F（设置堆栈大小）
 
@@ -23,11 +23,11 @@ ms.locfileid: "50525523"
 
 ## <a name="syntax"></a>语法
 
-> **/F** *数*
+> **/F** *number*
 
 ## <a name="arguments"></a>自变量
 
-*数量*<br/>
+*number*<br/>
 堆栈大小 （字节）。
 
 ## <a name="remarks"></a>备注

@@ -58,12 +58,12 @@ helpviewer_keywords:
 - CDaoDatabase [MFC], m_pDAODatabase
 - CDaoDatabase [MFC], m_pWorkspace
 ms.assetid: 8ff5b342-964d-449d-bef1-d0ff56aadf6d
-ms.openlocfilehash: 6bdabafc905b1ae5d6ed9a1fcd83ab1982871c3b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d1e9db1ddebe05d42cbb8c4ba242938d6d86cc81
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50439270"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272889"
 ---
 # <a name="cdaodatabase-class"></a>CDaoDatabase 类
 
@@ -104,8 +104,8 @@ class CDaoDatabase : public CObject
 |[CDaoDatabase::GetRecordsAffected](#getrecordsaffected)|返回的记录数受影响由最后一个更新、 编辑或添加操作或通过调用`Execute`。|
 |[CDaoDatabase::GetRelationCount](#getrelationcount)|返回数据库中的表之间定义关系的数量。|
 |[CDaoDatabase::GetRelationInfo](#getrelationinfo)|返回有关指定的关系数据库中的表之间定义的信息。|
-|[Cdaodatabase:: Gettabledefcount](#gettabledefcount)|返回数据库中定义的表数。|
-|[Cdaodatabase:: Gettabledefinfo](#gettabledefinfo)|在数据库中返回有关指定表的信息。|
+|[CDaoDatabase::GetTableDefCount](#gettabledefcount)|返回数据库中定义的表数。|
+|[CDaoDatabase::GetTableDefInfo](#gettabledefinfo)|在数据库中返回有关指定表的信息。|
 |[CDaoDatabase::GetVersion](#getversion)|返回与数据库相关联的数据库引擎的版本。|
 |[CDaoDatabase::IsOpen](#isopen)|返回非零值如果`CDaoDatabase`对象当前连接到数据库。|
 |[CDaoDatabase::Open](#open)|建立到数据库的连接。|
@@ -587,9 +587,9 @@ void GetQueryDefInfo(
 
 - AFX_DAO_PRIMARY_INFO （默认值） 的名称、 类型
 
-- AFX_DAO_SECONDARY_INFO 主要信息加上： 创建日期、 最后一次更新日期，返回的记录、 可更新
+- AFX_DAO_SECONDARY_INFO 主要信息加上：创建日期、 最后一次更新，返回的记录，可更新的日期
 
-- AFX_DAO_ALL_INFO 主要和辅助数据库信息加上： SQL 中，连接中，odbc 超时
+- AFX_DAO_ALL_INFO 主要和辅助数据库信息加上：SQL 连接，odbc 超时
 
 *lpszName*<br/>
 包含的数据库，以便按名称查找中定义的查询名称的字符串。
@@ -699,7 +699,7 @@ void GetRelationInfo(
 > [!NOTE]
 >  如果将关系设置对象的属性，用于激活级联操作 (`dbRelationUpdateCascades`或`dbRelationDeleteCascades`)、 Microsoft Jet 数据库引擎会自动更新或删除记录在一个或多个其他表时更改相关主键表。 例如，假设您建立客户表和 Orders 表之间的级联删除关系。 当从客户表中删除记录时，也会删除与该客户相关的 Orders 表中的记录。 此外，如果建立订单表和其他表之间的级联删除关系，则在从客户表中删除记录时，会自动删除这些表中的记录。
 
-##  <a name="gettabledefcount"></a>  Cdaodatabase:: Gettabledefcount
+##  <a name="gettabledefcount"></a>  CDaoDatabase::GetTableDefCount
 
 调用此成员函数以检索数据库中定义的表数。
 
@@ -715,7 +715,7 @@ short GetTableDefCount();
 
 `GetTableDefCount` 如果您需要循环访问数据库的 TableDefs 集合中的所有 tabledefs，非常有用。 若要获取给定表集合中的信息，请参阅[GetTableDefInfo](#gettabledefinfo)。
 
-##  <a name="gettabledefinfo"></a>  Cdaodatabase:: Gettabledefinfo
+##  <a name="gettabledefinfo"></a>  CDaoDatabase::GetTableDefInfo
 
 调用此成员函数以获取各种类型的表在数据库中定义的信息。
 
@@ -744,9 +744,9 @@ void GetTableDefInfo(
 
 - AFX_DAO_PRIMARY_INFO （默认值） 名称，可更新，属性
 
-- AFX_DAO_SECONDARY_INFO 主要信息加上： 创建日期，上次更新日期，源表名，连接
+- AFX_DAO_SECONDARY_INFO 主要信息加上：创建日期、 日期上次更新时间，源表名称，连接
 
-- AFX_DAO_ALL_INFO 主要和辅助数据库信息加上： 验证规则，验证文本记录计数
+- AFX_DAO_ALL_INFO 主要和辅助数据库信息加上：验证规则，验证文本记录计数
 
 *lpszName*<br/>
 按名称查找 tabledef 对象名称。

@@ -152,12 +152,12 @@ helpviewer_keywords:
 - CRichEditCtrl [MFC], StreamOut
 - CRichEditCtrl [MFC], Undo
 ms.assetid: 2be52788-822c-4c27-aafd-2471231e74eb
-ms.openlocfilehash: c42f7b77c04b2c94923908fa8b9542bea313b154
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 634aa4adbe4e7084266be43ef932074373835c10
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178988"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414286"
 ---
 # <a name="cricheditctrl-class"></a>CRichEditCtrl 类
 
@@ -489,7 +489,7 @@ virtual BOOL CreateEx(
 指定编辑控件的样式。 应用中列出的窗口样式的组合**备注**一部分[创建](#create)并[编辑控件样式](/windows/desktop/Controls/edit-control-styles)Windows SDK 中所述。
 
 *rect*<br/>
-对引用[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构的结构描述的大小和窗口的工作区中创建的位置*pParentWnd*。
+对引用[RECT](/previous-versions/dd162897\(v=vs.85\))结构的结构描述的大小和窗口的工作区中创建的位置*pParentWnd*。
 
 *pParentWnd*<br/>
 指向控件的父级的窗口的指针。
@@ -635,7 +635,7 @@ DWORD FindWordBreak(
 *nCode*<br/>
 指示要执行的操作。 有关可能的值的列表，请参阅参数的说明*代码*中 EM_FINDWORDBREAK Windows SDK 中。
 
-*n 开始*<br/>
+*nStart*<br/>
 从其开始的从零开始的字符位置。
 
 ### <a name="return-value"></a>返回值
@@ -1204,7 +1204,7 @@ int GetTextRange(
 *nFirst*<br/>
 范围中前面紧邻的第一个字符的字符位置索引。
 
-*n 上次*<br/>
+*nLast*<br/>
 范围中的最后一个字符之后紧跟的字符位置。
 
 *refString*<br/>
@@ -1343,7 +1343,7 @@ int LineIndex(int nLine = -1) const;
 
 ### <a name="parameters"></a>参数
 
-*n 行*<br/>
+*nLine*<br/>
 包含在文本编辑控件中所需的行的索引值或包含-1。 如果*n 行*为-1，它指定当前行，即，包含脱字号的行。
 
 ### <a name="return-value"></a>返回值
@@ -1370,7 +1370,7 @@ int LineLength(int nLine = -1) const;
 
 ### <a name="parameters"></a>参数
 
-*n 行*<br/>
+*nLine*<br/>
 指定其长度是要检索的行中的一个字符的字符索引。 如果此参数为-1，则返回当前行 （包含脱字号的行） 的长度，不包括任何长度在所选的行中的文本。 当`LineLength`称为对于单行编辑控件，则忽略此参数。
 
 ### <a name="return-value"></a>返回值
@@ -1477,7 +1477,7 @@ CPoint PosFromChar(UINT nChar) const;
 
 ### <a name="parameters"></a>参数
 
-*NChar*<br/>
+*nChar*<br/>
 字符的从零开始的索引。
 
 ### <a name="return-value"></a>返回值

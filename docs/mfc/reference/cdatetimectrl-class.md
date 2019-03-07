@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CDateTimeCtrl [MFC], SetRange
 - CDateTimeCtrl [MFC], SetTime
 ms.assetid: 7113993b-5d37-4148-939f-500a190c5bdc
-ms.openlocfilehash: 5acac454bd0b22b994b74a052bd3cf0b0eee2614
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: a68f3570f0e8c3315e8b0716cddcd37563894e76
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54894336"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57422489"
 ---
 # <a name="cdatetimectrl-class"></a>CDateTimeCtrl 类
 
@@ -158,7 +158,7 @@ virtual BOOL Create(
 指定日期时间控件样式的组合。 请参阅[日期和时间选取器控件样式](/windows/desktop/Controls/date-and-time-picker-control-styles)有关日期和时间选取器样式的详细信息 Windows SDK 中。
 
 *rect*<br/>
-对引用[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构，它是位置和日期和时间选取器控件的大小。
+对引用[RECT](/previous-versions/dd162897\(v=vs.85\))结构，它是位置和日期和时间选取器控件的大小。
 
 *pParentWnd*<br/>
 一个指向[CWnd](../../mfc/reference/cwnd-class.md)是日期和时间选取器控件的父窗口的对象。 它不能为 NULL。
@@ -446,7 +446,7 @@ COLORREF SetMonthCalColor(
 *iColor*<br/>
 **int**值，该值指定要设置的月份的日历控件的区域。 此值可以是以下值之一。
 
-|“值”|含义|
+|值|含义|
 |-----------|-------------|
 |MCSC_BACKGROUND|设置显示不同的月份的背景色。|
 |MCSC_MONTHBK|设置显示在一个月中的背景色。|

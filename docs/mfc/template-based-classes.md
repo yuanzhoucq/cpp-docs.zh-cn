@@ -22,12 +22,12 @@ helpviewer_keywords:
 - template-based collection classes [MFC]
 - simple list collection classes [MFC]
 ms.assetid: c69fc95b-c8f6-4a99-abed-517c9898ef0c
-ms.openlocfilehash: 8bd64e1c5efd1f80f43cb3460719326f30d5416c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 40633c8b2b09d27e97443364ed3ce711ee217e18
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557850"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284653"
 ---
 # <a name="template-based-classes"></a>基于模板的类
 
@@ -71,7 +71,7 @@ MFC 预定义了两种类别的基于模板的集合：
 
 ###  <a name="_core_simple_map_usage"></a> 简单的地图使用情况
 
-简单的地图类[CMap](../mfc/reference/cmap-class.md)，采用四个参数：*密钥*， *ARG_KEY*，*值*，和*ARG_VALUE*. Array 和 list 像类一样，映射类可以存储任何数据类型。 与数组和列表，这些索引和排序它们存储的数据，不同映射关联键和值： 访问存储在映射中的指定值的关联的键的值。 *密钥*参数指定用来访问数据存储在映射中的键的数据类型。 如果类型*键*是结构或类， *ARG_KEY*参数通常是对中指定的类型的引用*密钥*。 *值*参数指定映射中存储的项的类型。 如果类型*ARG_VALUE*是结构或类， *ARG_VALUE*参数通常是对中指定的类型的引用*值*。 例如：
+简单的地图类[CMap](../mfc/reference/cmap-class.md)，采用四个参数：*键*， *ARG_KEY*，*值*，并且*ARG_VALUE*。 Array 和 list 像类一样，映射类可以存储任何数据类型。 与数组和列表，这些索引和存储的数据进行排序，映射将键和值相关联：访问存储在映射中的指定值的关联的键的值。 *密钥*参数指定用来访问数据存储在映射中的键的数据类型。 如果类型*键*是结构或类， *ARG_KEY*参数通常是对中指定的类型的引用*密钥*。 *值*参数指定映射中存储的项的类型。 如果类型*ARG_VALUE*是结构或类， *ARG_VALUE*参数通常是对中指定的类型的引用*值*。 例如：
 
 [!code-cpp[NVC_MFCCollections#3](../mfc/codesnippet/cpp/template-based-classes_3.cpp)]
 
@@ -87,7 +87,7 @@ MFC 预定义了两种类别的基于模板的集合：
 
 ###  <a name="_core_typed.2d.pointer_array_and_list_usage"></a> 类型化指针数组和列表的用法
 
-类型化指针数组和列表类[CTypedPtrArray](../mfc/reference/ctypedptrarray-class.md)并[CTypedPtrList](../mfc/reference/ctypedptrlist-class.md)，采用两个参数： *BASE_CLASS*并*类型*。 这些类可以存储任何数据类型，在中指定*类型*参数。 它们派生自其中一个存储指针; 的非模板集合类指定在此基类*BASE_CLASS*。 对于数组，使用两种`CObArray`或`CPtrArray`。 对于列表，请使用两种`CObList`或`CPtrList`。
+类型化指针数组和列表类[CTypedPtrArray](../mfc/reference/ctypedptrarray-class.md)并[CTypedPtrList](../mfc/reference/ctypedptrlist-class.md)，采用两个参数：*BASE_CLASS*并*类型*。 这些类可以存储任何数据类型，在中指定*类型*参数。 它们派生自其中一个存储指针; 的非模板集合类指定在此基类*BASE_CLASS*。 对于数组，使用两种`CObArray`或`CPtrArray`。 对于列表，请使用两种`CObList`或`CPtrList`。
 
 实际上，在声明时基于的集合，说`CObList`，新类不仅继承其基类的成员，但它还声明许多其他类型安全成员函数和运算符，帮助通过封装提供类型安全对基类成员的调用。 这些封装管理所有必要的类型转换。 例如：
 
@@ -99,7 +99,7 @@ MFC 预定义了两种类别的基于模板的集合：
 
 ###  <a name="_core_typed.2d.pointer_map_usage"></a> 类型化指针映射的用法
 
-类型化指针映射类[CTypedPtrMap](../mfc/reference/ctypedptrmap-class.md)，采用三个参数： *BASE_CLASS*，*密钥*，以及*值*。 *BASE_CLASS*参数指定的类从其派生新类： `CMapPtrToWord`， `CMapPtrToPtr`， `CMapStringToPtr`， `CMapWordToPtr`， `CMapStringToOb`，依次类推。 *键*类似于*密钥*中`CMap`： 它指定用于查找的键的类型。 *值*类似于*值*中`CMap`： 它指定的对象存储在映射中的类型。 例如：
+类型化指针映射类[CTypedPtrMap](../mfc/reference/ctypedptrmap-class.md)，采用三个参数：*BASE_CLASS*，*密钥*，和*值*。 *BASE_CLASS*参数指定的类从其派生新类： `CMapPtrToWord`， `CMapPtrToPtr`， `CMapStringToPtr`， `CMapWordToPtr`， `CMapStringToOb`，依次类推。 *键*类似于*密钥*中`CMap`:它指定用于查找的键的类型。 *值*类似于*值*中`CMap`:它指定的对象存储在映射中的类型。 例如：
 
 [!code-cpp[NVC_MFCCollections#6](../mfc/codesnippet/cpp/template-based-classes_6.cpp)]
 
@@ -115,4 +115,3 @@ MFC 预定义了两种类别的基于模板的集合：
 ## <a name="see-also"></a>请参阅
 
 [集合](../mfc/collections.md)
-

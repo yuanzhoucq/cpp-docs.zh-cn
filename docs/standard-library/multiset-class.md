@@ -86,12 +86,12 @@ helpviewer_keywords:
 - std::multiset [C++], upper_bound
 - std::multiset [C++], value_comp
 ms.assetid: 630e8c10-0ce9-4ad9-8d79-9e91a600713f
-ms.openlocfilehash: 8d2e298a2e4c6eb16a1851b3a9ce7ddc886a76f2
-ms.sourcegitcommit: d441305fb19131afbd7fc259d8cda63ea26f2343
+ms.openlocfilehash: 3b059db877d24f5e4414745ba6c2f9ee4f6591e7
+ms.sourcegitcommit: 7cd712176e5bc341b9d8f899d41ad49f02f85e5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51678465"
+ms.lasthandoff: 02/19/2019
+ms.locfileid: "56418713"
 ---
 # <a name="multiset-class"></a>multiset 类
 
@@ -114,7 +114,7 @@ class multiset
 
 在 C++ 14 中可以通过指定没有类型参数的 `std::less<>` 或 `std::greater<>` 谓词来启用异类查找。 有关详细信息，请参阅[关联容器中的异类查找](../standard-library/stl-containers.md#sequence_containers)
 
-*分配器*<br/>
+*Allocator*<br/>
 一种表示存储的分配器对象的类型，该分配器对象封装有关多重集合的内存分配和解除分配的详细信息。 默认值为 `allocator<Key>`。
 
 ## <a name="remarks"></a>备注
@@ -482,7 +482,7 @@ multiset 中其排序键与参数键匹配的元素数量。
 
 成员函数返回以下范围内的元素 *x* 的数量
 
-\[ lower_bound (*键*)、 upper_bound (*密钥*))
+\[ lower_bound(*key*), upper_bound(*key*) )
 
 ### <a name="example"></a>示例
 
@@ -705,7 +705,7 @@ iterator emplace(Args&&... args);
 
 |参数|描述|
 |-|-|
-|*参数*|用于构造要插入到多重集中的元素的转发参数。|
+|*args*|用于构造要插入到多重集中的元素的转发参数。|
 
 ### <a name="return-value"></a>返回值
 
@@ -773,7 +773,7 @@ iterator emplace_hint(
 
 |参数|描述|
 |-|-|
-|*参数*|用于构造要插入到多重集中的元素的转发参数。|
+|*args*|用于构造要插入到多重集中的元素的转发参数。|
 |*where*|开始搜索正确插入点的位置。 (如果该点紧贴*其中*，插入可发生在分期常量时间内而非对数时间。)|
 
 ### <a name="return-value"></a>返回值
@@ -1168,7 +1168,7 @@ IList);
 
 |参数|描述|
 |-|-|
-|*val*|要插入到多重集合中的元素的值。|
+|*Val*|要插入到多重集合中的元素的值。|
 |*Where*|开始搜索正确插入点的位置。 (如果该点紧贴*其中*，插入可发生在分期常量时间内而非对数时间。)|
 |*ValTy*|指定多重集合可用于构造的元素的自变量类型的模板参数[value_type](../standard-library/map-class.md#value_type)，和完美转发*Val*作为自变量。|
 |*第一个*|要复制的第一个元素的位置。|
@@ -1929,7 +1929,7 @@ int main() {
       cout << *ms1_Iter << " ";
    cout << "." << endl;
 
-   // rend can be used to terminate an interation
+   // rend can be used to terminate an iteration
    // through a multiset in a reverse order
    cout << "The reversed multiset is: ";
    for ( ms1_rIter = ms1.rbegin( ) ; ms1_rIter != ms1.rend( ); ms1_rIter++ )

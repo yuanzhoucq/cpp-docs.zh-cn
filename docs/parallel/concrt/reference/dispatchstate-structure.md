@@ -11,16 +11,17 @@ f1_keywords:
 helpviewer_keywords:
 - DispatchState structure
 ms.assetid: 8c52546e-1650-48a0-985f-7e4a0fc26a90
-ms.openlocfilehash: 4c15fc0ba9c78d8b6416cd88480c8ada6e3febf1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c755675a69ce86bc03a3fdb59fa7d43a20676495
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50603552"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265049"
 ---
 # <a name="dispatchstate-structure"></a>DispatchState 结构
 
-`DispatchState` 结构用于将状态传输给 `IExecutionContext::Dispatch` 方法。 它描述了在 `IExecutionContext` 接口上调用 `Dispatch` 方法的情形。
+
+  `DispatchState` 结构用于将状态传输给 `IExecutionContext::Dispatch` 方法。 它描述了在 `IExecutionContext` 接口上调用 `Dispatch` 方法的情形。
 
 ## <a name="syntax"></a>语法
 

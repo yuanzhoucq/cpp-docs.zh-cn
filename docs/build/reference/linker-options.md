@@ -9,12 +9,12 @@ helpviewer_keywords:
 - libraries [C++], linking to COFF
 - LINK tool [C++], linker options
 ms.assetid: c1d51b8a-bd23-416d-81e4-900e02b2c129
-ms.openlocfilehash: 22ac88ede7cc015efd12f1a996ffdf361b43f041
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 63cfa784242af1f737c116629a29be5ad77af31d
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50510105"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57415196"
 ---
 # <a name="linker-options"></a>链接器选项
 
@@ -58,7 +58,7 @@ LINK.exe 将通用对象文件格式 (COFF) 对象文件和库链接起来，以
 |[/DELAY](../../build/reference/delay-delay-load-import-settings.md)|控制 DLL 的延迟加载。|
 |[/DELAYLOAD](../../build/reference/delayload-delay-load-import.md)|导致延迟加载指定的 DLL。|
 |[/DELAYSIGN](../../build/reference/delaysign-partially-sign-an-assembly.md)|对程序集进行部分签名。|
-|[/ DEPENDENTLOADFLAG](dependentloadflag.md)|设置依赖 DLL 加载默认标志。|
+|[/DEPENDENTLOADFLAG](dependentloadflag.md)|设置依赖 DLL 加载默认标志。|
 |[/DLL](../../build/reference/dll-build-a-dll.md)|生成 DLL。|
 |[/DRIVER](../../build/reference/driver-windows-nt-kernel-mode-driver.md)|创建内核模式驱动程序。|
 |[/DYNAMICBASE](../../build/reference/dynamicbase-use-address-space-layout-randomization.md)|使用地址空间布局随机化 (ASLR) 功能，指定是否生成可在加载时随机重新设定基址的可执行文件映像。|
@@ -95,7 +95,7 @@ LINK.exe 将通用对象文件格式 (COFF) 对象文件和库链接起来，以
 |[/MAPINFO](../../build/reference/mapinfo-include-information-in-mapfile.md)|包括映射文件中的指定信息。|
 |[/MERGE](../../build/reference/merge-combine-sections.md)|合并节。|
 |[/MIDL](../../build/reference/midl-specify-midl-command-line-options.md)|指定 MIDL 命令行选项。|
-|[/ NATVIS](../../build/reference/natvis-add-natvis-to-pdb.md)|将调试器可视化工具中的 Natvis 文件添加到 PDB。|
+|[/NATVIS](../../build/reference/natvis-add-natvis-to-pdb.md)|将调试器可视化工具中的 Natvis 文件添加到 PDB。|
 |[/NOASSEMBLY](../../build/reference/noassembly-create-a-msil-module.md)|取消创建 .NET Framework 程序集。|
 |[/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md)|在解析外部引用时忽略所有（或指定的）默认库。|
 |[/NOENTRY](../../build/reference/noentry-no-entry-point.md)|创建纯资源 DLL。|
@@ -113,7 +113,7 @@ LINK.exe 将通用对象文件格式 (COFF) 对象文件和库链接起来，以
 |[/RELEASE](../../build/reference/release-set-the-checksum.md)|在 .exe 标头中设置校验和。|
 |[/SAFESEH](../../build/reference/safeseh-image-has-safe-exception-handlers.md)|指定映像将包含安全异常处理程序表。|
 |[/SECTION](../../build/reference/section-specify-section-attributes.md)|重写节的特性。|
-|[/ SOURCELINK](../../build/reference/sourcelink.md)|指定要添加到 PDB 的 SourceLink 文件。|
+|[/SOURCELINK](../../build/reference/sourcelink.md)|指定要添加到 PDB 的 SourceLink 文件。|
 |[/STACK](../../build/reference/stack-stack-allocations.md)|设置堆栈的大小（以字节为单位）。|
 |[/STUB](../../build/reference/stub-ms-dos-stub-file-name.md)|将 MS-DOS 存根程序附加到 Win32 程序。|
 |[/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md)|通知操作系统如何运行 .exe 文件。|

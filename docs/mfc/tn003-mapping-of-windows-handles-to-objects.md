@@ -1,5 +1,5 @@
 ---
-title: TN003：将 Windows 句柄映射到对象
+title: TN003:映射的 Windows 句柄到对象
 ms.date: 11/04/2016
 f1_keywords:
 - vc.mapping
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - Windows handles to objects [MFC]
 - mappings [MFC], Windows handles to objects
 ms.assetid: fbea9f38-992c-4091-8dbc-f29e288617d6
-ms.openlocfilehash: 46421016171f61a199e6a0a04f6b9b81e260496e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e7844398ebaf5a8fdf8c56ab18b33d8c7717d1ad
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677144"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326694"
 ---
-# <a name="tn003-mapping-of-windows-handles-to-objects"></a>TN003：将 Windows 句柄映射到对象
+# <a name="tn003-mapping-of-windows-handles-to-objects"></a>TN003:映射的 Windows 句柄到对象
 
 此注释描述 MFC 例程，支持映射 Windows 对象 c + + 对象的句柄。
 
@@ -87,4 +87,3 @@ myWnd.Detach();
 
 [按编号列出的技术说明](../mfc/technical-notes-by-number.md)<br/>
 [按类别列出的技术说明](../mfc/technical-notes-by-category.md)
-

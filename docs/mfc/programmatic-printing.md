@@ -8,18 +8,19 @@ helpviewer_keywords:
 - IPrint interface
 - printing [MFC]
 ms.assetid: 3db0945b-5e13-4be4-86a0-6aecdae565bd
-ms.openlocfilehash: d01dcd901425fb3957201dca754a01042e629ebb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: eb8804610832f91f4b24487fddfe9c24a3799117
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630654"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263996"
 ---
 # <a name="programmatic-printing"></a>以编程方式打印
 
 OLE 提供了用于唯一标识永久文档 (`GetClassFile`) 并将其加载到其相关代码 (`CoCreateInstance`， `QueryInterface(IID_IPersistFile)`， `QueryInterface(IID_IPersistStorage)`， `IPersistFile::Load`，并`IPersistStorage::Load`)。 为了进一步启用打印文档，活动文档包容（使用最初未随 OLE 2.0 一起提供的现有 OLE 设计）引入了一个基本标准的打印接口 `IPrint`（通常可以通过任何能够加载文档类型的持久状态的对象获取）。 活动文档的每个视图都可以选择支持`IPrint`接口，以提供这些功能。
 
-`IPrint` 接口定义如下：
+
+  `IPrint` 接口定义如下：
 
 ```
 interface IPrint : IUnknown
@@ -72,4 +73,3 @@ interface IContinueCallback : IUnknown
 ## <a name="see-also"></a>请参阅
 
 [活动文档容器](../mfc/active-document-containers.md)
-

@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CAnimateCtrl [MFC], Seek
 - CAnimateCtrl [MFC], Stop
 ms.assetid: 5e8eb1bd-96b7-47b8-8de2-6bcbb3cc299b
-ms.openlocfilehash: 6a22c88e1a19cd1aef1bbfacd7f255adc2b19d0e
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 867bec619dc633b7b1fbf9785e14132ba8c493ba
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178248"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57417185"
 ---
 # <a name="canimatectrl-class"></a>CAnimateCtrl 类
 
@@ -206,7 +206,7 @@ virtual BOOL CreateEx(
 指定动画控件的样式。 应用窗口的任意组合和动画控件样式中所述[动画控件样式](/windows/desktop/Controls/animation-control-styles)Windows SDK 中。
 
 *rect*<br/>
-对引用[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构的结构描述的大小和窗口的工作区中创建的位置*pParentWnd*。
+对引用[RECT](/previous-versions/dd162897\(v=vs.85\))结构的结构描述的大小和窗口的工作区中创建的位置*pParentWnd*。
 
 *pParentWnd*<br/>
 指向控件的父级的窗口的指针。
@@ -291,7 +291,7 @@ BOOL Play(
 *nFrom*<br/>
 播放开始处的帧的从零开始索引。 值必须是小于 65536。 值为 0 意味着开头 AVI 剪辑中的第一个帧。
 
-*若要*<br/>
+*nTo*<br/>
 帧的从零开始的索引位置播放结束。 值必须是小于 65536。 值为-1 表示结尾 AVI 剪辑中的最后一帧。
 
 *nRep*<br/>
@@ -319,7 +319,7 @@ BOOL Seek(UINT nTo);
 
 ### <a name="parameters"></a>参数
 
-*若要*<br/>
+*nTo*<br/>
 若要显示的帧的从零开始索引。 值必须是小于 65536。 值为 0 意味着在 AVI 剪辑中显示的第一帧。 值为-1 表示在 AVI 剪辑中显示的最后一帧。
 
 ### <a name="return-value"></a>返回值
@@ -356,4 +356,3 @@ BOOL Stop();
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>
 [CAnimateCtrl::Create](#create)<br/>
 [ON_CONTROL](message-map-macros-mfc.md#on_control)
-

@@ -7,16 +7,16 @@ helpviewer_keywords:
 - threading [C++], troubleshooting
 - troubleshooting [C++], multithreading
 ms.assetid: 06cc231d-bb5a-409d-8bd3-676c9e2a8c5b
-ms.openlocfilehash: 598758a4ceb0a12640faf2832f9f03cd1e44ef9f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3ceae832599243ffa0aad2b6fa67148e7ea30510
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50461641"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288177"
 ---
 # <a name="avoiding-problem-areas-with-multithread-programs"></a>避免与多线程程序有关的问题
 
-有几个创建、 链接，或执行多线程 C 程序中可能会遇到的问题。 一些较为常见的问题是下表中所述。 (从 MFC 的角度的类似讨论，请参阅[多线程处理： 编程提示](multithreading-programming-tips.md)。)
+有几个创建、 链接，或执行多线程 C 程序中可能会遇到的问题。 一些较为常见的问题是下表中所述。 (从 MFC 的角度的类似讨论，请参阅[多线程处理：编程提示](multithreading-programming-tips.md)。)
 
 |问题|可能的原因|
 |-------------|--------------------|

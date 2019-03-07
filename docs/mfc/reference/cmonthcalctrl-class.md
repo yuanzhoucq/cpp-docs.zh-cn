@@ -90,12 +90,12 @@ helpviewer_keywords:
 - CMonthCalCtrl [MFC], SizeMinReq
 - CMonthCalCtrl [MFC], SizeRectToMin
 ms.assetid: a42f6bd6-ab5c-4335-82f8-839982fc64a2
-ms.openlocfilehash: 48b02843cc957994aa3f3109a82cb2188dd9acff
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: 440d158774a716db9fba351200f2760783925cc6
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54894193"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413922"
 ---
 # <a name="cmonthcalctrl-class"></a>CMonthCalCtrl 类
 
@@ -227,10 +227,10 @@ virtual BOOL Create(
 指定应用于月历控件的 Windows 样式的组合。 请参阅[个月日历控件样式](/windows/desktop/Controls/month-calendar-control-styles)有关样式的详细信息 Windows SDK 中。
 
 *rect*<br/>
-对引用[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构。 包含的位置和月历控件的大小。
+对引用[RECT](/previous-versions/dd162897\(v=vs.85\))结构。 包含的位置和月历控件的大小。
 
 *pt*<br/>
-对引用[点](https://msdn.microsoft.com/library/windows/desktop/dd162805)结构，它标识月历控件的位置。
+对引用[点](/previous-versions/dd162805\(v=vs.85\))结构，它标识月历控件的位置。
 
 *pParentWnd*<br/>
 一个指向[CWnd](../../mfc/reference/cwnd-class.md)是月历控件的父窗口的对象。 它不能为 NULL。
@@ -373,7 +373,7 @@ DWORD GetCurrentView() const;
 
 当前视图，这将由以下值之一：
 
-|值|含义|
+|“值”|含义|
 |-----------|-------------|
 |MCMV_MONTH|每月视图|
 |MCMV_YEAR|每年的视图|
@@ -523,7 +523,7 @@ BOOL GetMinReqRect(RECT* pRect) const;
 ### <a name="parameters"></a>参数
 
 *pRect*<br/>
-一个指向[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构，它将接收边界矩形信息。 此参数必须是有效的地址，并且不能为 NULL。
+一个指向[RECT](/previous-versions/dd162897\(v=vs.85\))结构，它将接收边界矩形信息。 此参数必须是有效的地址，并且不能为 NULL。
 
 ### <a name="return-value"></a>返回值
 
@@ -917,7 +917,7 @@ COLORREF SetColor(
 *nRegion*<br/>
 一个整数值，指定要设置哪些月日历颜色。 此值可以是以下值之一。
 
-|“值”|含义|
+|值|含义|
 |-----------|-------------|
 |MCSC_BACKGROUND|显示不同的月份的背景色。|
 |MCSC_MONTHBK|显示月份中的背景色。|
@@ -1290,11 +1290,11 @@ LPRECT SizeRectToMin(LPRECT lpRect);
 
 |参数|描述|
 |---------------|-----------------|
-|*lpRect*|[in]指向[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构，它定义包含日历所需的数量的矩形。|
+|*lpRect*|[in]指向[RECT](/previous-versions/dd162897\(v=vs.85\))结构，它定义包含日历所需的数量的矩形。|
 
 ### <a name="return-value"></a>返回值
 
-指向[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)由定义结构，它定义的矩形的大小小于或等于矩形*lpRect*参数。
+指向[RECT](/previous-versions/dd162897\(v=vs.85\))由定义结构，它定义的矩形的大小小于或等于矩形*lpRect*参数。
 
 ### <a name="remarks"></a>备注
 

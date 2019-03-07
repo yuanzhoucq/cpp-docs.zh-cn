@@ -16,12 +16,12 @@ helpviewer_keywords:
 - COleDispatchException [MFC], m_strSource
 - COleDispatchException [MFC], m_wCode
 ms.assetid: 0e95c8be-e21a-490c-99ec-181c6a9a26d0
-ms.openlocfilehash: 06f8d8abd8ea337369ceed62a9944e867d355768
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f6440ef202d0eafc4730b1e63ca4627d5dab61bc
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456233"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299954"
 ---
 # <a name="coledispatchexception-class"></a>COleDispatchException 类
 
@@ -51,7 +51,7 @@ class COleDispatchException : public CException
 
 一般情况下，应调用[AfxThrowOleDispatchException](exception-processing.md#afxthrowoledispatchexception)来创建和引发`COleDispatchException`对象。
 
-有关异常的详细信息，请参阅文章[异常处理 (MFC)](../../mfc/exception-handling-in-mfc.md)并[异常： OLE 异常](../../mfc/exceptions-ole-exceptions.md)。
+有关异常的详细信息，请参阅文章[异常处理 (MFC)](../../mfc/exception-handling-in-mfc.md)和[异常：OLE 异常](../../mfc/exceptions-ole-exceptions.md)。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 

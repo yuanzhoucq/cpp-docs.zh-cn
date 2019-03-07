@@ -9,12 +9,12 @@ helpviewer_keywords:
 - OLE DB provider templates, notifications
 - OLE DB providers, notifications
 ms.assetid: 76e875fd-2bfd-4e4e-9f43-dbe5a3fa7382
-ms.openlocfilehash: 77344150f5c0d969c1636ac146138242d96ee39f
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 25af1656295606658c62c2c85c1c037a54181527
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556551"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57425622"
 ---
 # <a name="supporting-notifications"></a>支持通知
 
@@ -22,7 +22,7 @@ ms.locfileid: "51556551"
 
 若要实现通知，提供程序类必须继承[IRowsetNotifyCP](../../data/oledb/irowsetnotifycp-class.md)并[IConnectionPointContainer](../../atl/reference/iconnectionpointcontainerimpl-class.md)。
 
-`IRowsetNotifyCP` 实现连接点接口的提供程序站点[IRowsetNotify](https://docs.microsoft.com/previous-versions/windows/desktop/ms712959(v=vs.85))。 `IRowsetNotifyCP` 实现广播函数向侦听器建议的连接点`IID_IRowsetNotify`对行集的内容的更改。
+`IRowsetNotifyCP` 实现连接点接口的提供程序站点[IRowsetNotify](/previous-versions/windows/desktop/ms712959(v=vs.85))。 `IRowsetNotifyCP` 实现广播函数向侦听器建议的连接点`IID_IRowsetNotify`对行集的内容的更改。
 
 您还必须实现和注册`IRowsetNotify`上使用使用者 （也称为接收器） [IRowsetNotifyImpl](../../data/oledb/irowsetnotifyimpl-class.md) ，以便使用者可以处理通知。 有关实现上使用者连接点接口的信息，请参阅[接收通知](../../data/oledb/receiving-notifications.md)。
 

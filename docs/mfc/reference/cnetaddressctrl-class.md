@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CNetAddressCtrl [MFC], GetAllowType
 - CNetAddressCtrl [MFC], SetAllowType
 ms.assetid: cb4c6aca-3f49-4b52-b76c-65f57096155b
-ms.openlocfilehash: ee44c05fa6417aaca367798d7a94a900d521b896
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: ec4d7aa6f2a1061e632b81a27a0233cf5fdd1c63
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176233"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423555"
 ---
 # <a name="cnetaddressctrl-class"></a>CNetAddressCtrl 类
 
@@ -127,7 +127,7 @@ virtual BOOL Create(
 |参数|描述|
 |---------------|-----------------|
 |*dwStyle*|[in]要应用于控件的样式的按位组合。 有关详细信息，请参阅[编辑样式](../../mfc/reference/styles-used-by-mfc.md#edit-styles)。|
-|*rect*|[in]对引用[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构，其中包含的位置和大小的控件。|
+|*rect*|[in]对引用[RECT](/previous-versions/dd162897\(v=vs.85\))结构，其中包含的位置和大小的控件。|
 |*pParentWnd*|[in]指向的非 null 指针[CWnd](../../mfc/reference/cwnd-class.md)是控件的父窗口的对象。|
 |*nID*|[in]控件的 ID。|
 
@@ -154,7 +154,7 @@ virtual BOOL CreateEx(
 |---------------|-----------------|
 |*dwExStyle*|[in]若要应用于控件的扩展样式的按位组合 (OR)。 有关详细信息，请参阅*dwExStyle*的参数[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa)函数。|
 |*dwStyle*|[in]按位组合 (OR) 要应用于控件的样式。 有关详细信息，请参阅[编辑样式](../../mfc/reference/styles-used-by-mfc.md#edit-styles)。|
-|*rect*|[in]对引用[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构，其中包含的位置和大小的控件。|
+|*rect*|[in]对引用[RECT](/previous-versions/dd162897\(v=vs.85\))结构，其中包含的位置和大小的控件。|
 |*pParentWnd*|[in]指向的非 null 指针[CWnd](../../mfc/reference/cwnd-class.md)是控件的父窗口的对象。|
 |*nID*|[in]控件的 ID。|
 

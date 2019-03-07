@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - Object class
 ms.assetid: 709e84a8-0bff-471b-bc14-63e424080b5a
-ms.openlocfilehash: 00f2b57bdf63f9f8bcfd9e544bebab2805ff7f65
-ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
+ms.openlocfilehash: 8267d42e67ddf703b4a3a681509b92978e7de8bb
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55850086"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57422776"
 ---
 # <a name="platformobject-class"></a>Platform::Object 类
 
@@ -116,7 +116,7 @@ Object::GetType();
 
 静态[type:: gettypecode](../cppcx/platform-type-class.md#gettypecode)可用于获取[platform:: typecode 枚举](../cppcx/platform-typecode-enumeration.md)值，该值表示当前类型。 这对于内置类型通常很有用。 除了任何 ref 类的类型代码[platform:: string](../cppcx/platform-string-class.md)是对象 (1)。
 
-[Windows::UI::Xaml::Interop::TypeName](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx)作为 Windows 组件和应用之间传递类型信息的独立于语言的方法在 Windows Api 中使用类。 T[platform:: type 类](../cppcx/platform-type-class.md)之间进行转换有运算符`Type`和`TypeName`。
+[Windows::UI::Xaml::Interop::TypeName](/uwp/api/windows.ui.xaml.interop.typename)作为 Windows 组件和应用之间传递类型信息的独立于语言的方法在 Windows Api 中使用类。 T[platform:: type 类](../cppcx/platform-type-class.md)之间进行转换有运算符`Type`和`TypeName`。
 
 使用[typeid](../windows/typeid-cpp-component-extensions.md)运算符可返回`Platform::Type`对象的类名，例如，XAML 页面之间导航时：
 

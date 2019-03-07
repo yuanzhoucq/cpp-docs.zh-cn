@@ -60,12 +60,12 @@ helpviewer_keywords:
 - CFile [MFC], m_hFile
 - CFile [MFC], m_pTM
 ms.assetid: b2eb5757-d499-4e67-b044-dd7d1abaa0f8
-ms.openlocfilehash: dc0e6f75f4794b94d6e94d77f2e427b9c1df9f06
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f287b04b32b7bc45342ac7248fbe986a3dcf959e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644140"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289862"
 ---
 # <a name="cfile-class"></a>CFile 类
 
@@ -89,7 +89,7 @@ class CFile : public CObject
 
 |名称|描述|
 |----------|-----------------|
-|[Cfile:: Abort](#abort)|关闭正在忽略所有警告和错误的文件。|
+|[CFile::Abort](#abort)|关闭正在忽略所有警告和错误的文件。|
 |[CFile::Close](#close)|关闭文件并删除该对象。|
 |[CFile::Duplicate](#duplicate)|构造一个基于此文件的复制对象。|
 |[CFile::Flush](#flush)|刷新所有数据尚未被写入。|
@@ -98,7 +98,7 @@ class CFile : public CObject
 |[CFile::GetFileTitle](#getfiletitle)|检索所选文件的标题。|
 |[CFile::GetLength](#getlength)|检索文件的长度。|
 |[CFile::GetPosition](#getposition)|检索当前的文件指针。|
-|[Cfile:: Getstatus](#getstatus)|检索状态的打开的文件，或在静态版本中，检索指定的文件 （静态、 虚拟函数） 的状态。|
+|[CFile::GetStatus](#getstatus)|检索状态的打开的文件，或在静态版本中，检索指定的文件 （静态、 虚拟函数） 的状态。|
 |[CFile::LockRange](#lockrange)|锁定文件中的字节的范围。|
 |[CFile::Open](#open)|安全地打开文件的错误测试选项。|
 |[CFile::Read](#read)|从当前文件位置的文件读取 （无缓冲） 数据。|
@@ -154,7 +154,7 @@ class CFile : public CObject
 
 **标头：** afx.h
 
-##  <a name="abort"></a>  Cfile:: Abort
+##  <a name="abort"></a>  CFile::Abort
 
 关闭与此对象关联的文件，并使该文件进行读取或写入不可用。
 
@@ -422,7 +422,7 @@ virtual ULONGLONG GetPosition() const;
 
 [!code-cpp[NVC_MFCFiles#8](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_5.cpp)]
 
-##  <a name="getstatus"></a>  Cfile:: Getstatus
+##  <a name="getstatus"></a>  CFile::GetStatus
 
 此方法检索与相关的状态信息给定`CFile`对象实例或给定的文件路径。
 
@@ -731,7 +731,7 @@ UINT nFrom);
 
 下表列出了可能值*nFrom*参数。
 
-|“值”|描述|
+|值|描述|
 |-----------|-----------------|
 |`CFile::begin`|从文件开头向搜索。|
 |`CFile::current`|从文件指针的当前位置向搜索。|

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - Concurrency namespace
 ms.assetid: b5aab265-3bac-42c5-8ead-f92ce05ef267
-ms.openlocfilehash: 5ddafe5dd821fb21eb6dd03d63122fa98a56af51
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e0870eb046f1cec091a72d49c94a2fea41484340
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50635365"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278686"
 ---
 # <a name="concurrency-namespace-c-amp"></a>Concurrency 命名空间 (C++ AMP)
 
@@ -66,8 +66,8 @@ namespace Concurrency;
 
 |运算符|描述|
 |--------------|-----------------|
-|[运算符 = = 运算符 (c + + AMP)](concurrency-namespace-operators-amp.md#operator_eq_eq)|确定指定的数据结构是否相等。|
-|[运算符 ！ = 运算符 (c + + AMP)](concurrency-namespace-operators-amp.md#operator_neq)|确定指定的数据结构是否不相等。|
+|[operator== Operator (C++ AMP)](concurrency-namespace-operators-amp.md#operator_eq_eq)|确定指定的数据结构是否相等。|
+|[operator!= Operator (C++ AMP)](concurrency-namespace-operators-amp.md#operator_neq)|确定指定的数据结构是否不相等。|
 |[operator + 运算符 (c + + AMP)](concurrency-namespace-operators-amp.md#operator_add)|计算指定的参数的按分量逐位的总和。|
 |[operator-运算符 (c + + AMP)](concurrency-namespace-operators-amp.md#operator-)|计算指定参数间的按分量逐位差异。|
 |[运算符 * 运算符 (c + + AMP)](concurrency-namespace-operators-amp.md#operator_star)|计算指定的参数的乘积。|
@@ -114,4 +114,3 @@ namespace Concurrency;
 ## <a name="see-also"></a>请参阅
 
 [参考 (C++ AMP)](reference-cpp-amp.md)
-

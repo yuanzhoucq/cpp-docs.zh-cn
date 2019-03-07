@@ -162,12 +162,12 @@ helpviewer_keywords:
 - CTreeCtrl [MFC], SortChildren
 - CTreeCtrl [MFC], SortChildrenCB
 ms.assetid: 96e20031-6161-4143-8c12-8d1816c66d90
-ms.openlocfilehash: cc98a2e24fbb3eaff94e4c941986080d0bdbd7ef
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 92666e10d82d96b76ad43b652ed90e0e41b8f853
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477943"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57418927"
 ---
 # <a name="ctreectrl-class"></a>CTreeCtrl Class
 
@@ -315,7 +315,7 @@ virtual BOOL Create(
 指定树视图控件的样式。 应用窗口样式中, 所述[CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa)，和的任意组合[树视图控件样式](/windows/desktop/Controls/tree-view-control-window-styles)Windows SDK 中所述。
 
 *rect*<br/>
-指定树视图控件的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构。
+指定树视图控件的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT](/previous-versions/dd162897\(v=vs.85\))结构。
 
 *pParentWnd*<br/>
 指定树视图控件的父窗口中，通常`CDialog`。 它不能为 NULL。
@@ -361,7 +361,7 @@ virtual BOOL CreateEx(
 指定树视图控件的样式。 应用窗口样式中, 所述[CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa)，和的任意组合[树视图控件样式](/windows/desktop/Controls/tree-view-control-window-styles)Windows SDK 中所述。
 
 *rect*<br/>
-对引用[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构的结构描述的大小和窗口的工作区中创建的位置*pParentWnd*。
+对引用[RECT](/previous-versions/dd162897\(v=vs.85\))结构的结构描述的大小和窗口的工作区中创建的位置*pParentWnd*。
 
 *pParentWnd*<br/>
 指向控件的父级的窗口的指针。
@@ -887,7 +887,7 @@ BOOL GetItemPartRect(
 |---------------|-----------------|
 |*hItem*|[in]句柄的树视图控件项。|
 |*nPart*|[in]部件的标识符。 必须设置为 TVGIPR_BUTTON。|
-|*lpRect*|[out]指向[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构。 如果此方法成功，该结构接收由指定的部件的矩形坐标*hItem*并*nPart*。|
+|*lpRect*|[out]指向[RECT](/previous-versions/dd162897\(v=vs.85\))结构。 如果此方法成功，该结构接收由指定的部件的矩形坐标*hItem*并*nPart*。|
 
 ### <a name="return-value"></a>返回值
 
@@ -928,7 +928,7 @@ BOOL GetItemRect(
 树视图控件项的句柄。
 
 *lpRect*<br/>
-指向[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构，它接收的边框。 坐标是相对于树视图控件的左上角。
+指向[RECT](/previous-versions/dd162897\(v=vs.85\))结构，它接收的边框。 坐标是相对于树视图控件的左上角。
 
 *bTextOnly*<br/>
 如果此参数为非零值，边界矩形将包括只项的文本。 否则，它在树视图控件中包括项占用的整个行。
@@ -1366,7 +1366,7 @@ HTREEITEM HitTest(TVHITTESTINFO* pHitTestInfo) const;
 
 |||
 |-|-|
-|“值”|含义|
+|值|含义|
 |TVHT_ABOVE|客户端区域的上方。|
 |TVHT_BELOW|下面的工作区。|
 |TVHT_NOWHERE|在客户端区域中，但最后一项之下。|

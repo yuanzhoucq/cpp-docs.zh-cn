@@ -5,12 +5,12 @@ helpviewer_keywords:
 - applications [OLE], OLE container
 - OLE containers [MFC], implementing
 ms.assetid: af1e2079-619a-4eac-9327-985ad875823a
-ms.openlocfilehash: 89bb8b483dba6e635eef5d9857bb558eca8e8fec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0ab91316c9ee07296fbc46f9f17b3c46c71ee96f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50546700"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271419"
 ---
 # <a name="containers-implementing-a-container"></a>容器：实现容器
 
@@ -46,7 +46,7 @@ ms.locfileid: "50546700"
 
 应用程序向导将为您，派生类，但您可能需要重写`OnChange`和在前面的过程中的步骤 2 中与其列出的其他函数。 需要为大部分应用程序自定义主干实现，因为这些函数在各应用程序之间的实现是不同的。 此示例，请参阅 MFC 示例[DRAWCLI](../visual-cpp-samples.md)并[容器](../visual-cpp-samples.md)。
 
-您必须将大量项添加到容器应用程序的菜单结构才能支持 OLE。 有关详细信息，请参阅[菜单和资源： 容器添加](../mfc/menus-and-resources-container-additions.md)。
+您必须将大量项添加到容器应用程序的菜单结构才能支持 OLE。 有关详细信息，请参阅[菜单和资源：添加容器](../mfc/menus-and-resources-container-additions.md)。
 
 您可能还想在容器应用程序中支持下列某些功能：
 
@@ -60,10 +60,9 @@ ms.locfileid: "50546700"
 
 - 链接到嵌入对象或组合容器/服务器应用程序。
 
-   有关详细信息，请参阅[容器： 高级功能](../mfc/containers-advanced-features.md)。
+   有关详细信息，请参阅[容器：高级功能](../mfc/containers-advanced-features.md)。
 
 ## <a name="see-also"></a>请参阅
 
 [容器](../mfc/containers.md)<br/>
 [容器：客户端项](../mfc/containers-client-items.md)
-

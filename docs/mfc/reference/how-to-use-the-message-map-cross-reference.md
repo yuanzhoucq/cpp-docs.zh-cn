@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - windows [MFC], message maps
 ms.assetid: 2e863d23-9e58-45ba-b5e4-a8ceefccd0c8
-ms.openlocfilehash: 71c46e7c30eab414534012c2fe314999568d2bd8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9467dce943da8c5fb447dcd3c83d044218fa183d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50457793"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326096"
 ---
 # <a name="how-to-use-the-message-map-cross-reference"></a>如何：使用消息映射交叉引用
 
@@ -30,4 +30,3 @@ ms.locfileid: "50457793"
 ## <a name="see-also"></a>请参阅
 
 [消息映射](../../mfc/reference/message-maps-mfc.md)
-

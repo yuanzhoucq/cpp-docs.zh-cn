@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ActiveX control containers [MFC]
 - OLE controls [MFC], containers
 ms.assetid: 0eb1a713-e607-4c79-a0c7-67c5f1fd5fab
-ms.openlocfilehash: 3356c5d94eaf4cef0b44c509144d0de4a5d42abf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8340acafc81447052fcb8d90df8997e81dc4117
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50549105"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296496"
 ---
 # <a name="activex-control-containers"></a>ActiveX 控件容器
 
@@ -33,17 +33,17 @@ ActiveX 控件容器与通过该控件交互公开[方法](../mfc/mfc-activex-co
 
 - [ActiveX 控件的容器](../mfc/containers-for-activex-controls.md)
 
-- [ActiveX 控件容器：手动启用 ActiveX 控件包容](../mfc/activex-control-containers-manually-enabling-activex-control-containment.md)
+- [ActiveX 控件容器：手动启用 ActiveX 控件包含](../mfc/activex-control-containers-manually-enabling-activex-control-containment.md)
 
 - [ActiveX 控件容器：将控件插入控件容器应用程序](../mfc/inserting-a-control-into-a-control-container-application.md)
 
 - [ActiveX 控件容器：将 ActiveX 控件连接到成员变量](../mfc/activex-control-containers-connecting-an-activex-control-to-a-member-variable.md)
 
-- [ActiveX 控件容器： 处理事件从 ActiveX 控件](../mfc/activex-control-containers-handling-events-from-an-activex-control.md)
+- [ActiveX 控件容器：ActiveX 控件中处理事件](../mfc/activex-control-containers-handling-events-from-an-activex-control.md)
 
 - [ActiveX 控件容器：查看和修改控件属性](../mfc/activex-control-containers-viewing-and-modifying-control-properties.md)
 
-- [ActiveX 控件容器：对 ActiveX 控件容器中的 ActiveX 控件编程](../mfc/programming-activex-controls-in-a-activex-control-container.md)
+- [ActiveX 控件容器：ActiveX 控件容器中的 ActiveX 控件编程](../mfc/programming-activex-controls-in-a-activex-control-container.md)
 
 - [ActiveX 控件容器：使用非对话框容器中的控件](../mfc/activex-control-containers-using-controls-in-a-non-dialog-container.md)
 
@@ -54,4 +54,3 @@ ActiveX 控件容器与通过该控件交互公开[方法](../mfc/mfc-activex-co
 ## <a name="see-also"></a>请参阅
 
 [MFC ActiveX 控件](../mfc/mfc-activex-controls.md)
-

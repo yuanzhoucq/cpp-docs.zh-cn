@@ -6,12 +6,12 @@ helpviewer_keywords:
 - linker command line [C++]
 - LINK tool [C++], command-line syntax
 ms.assetid: e2a31e17-77bd-4e74-9305-75b105b26539
-ms.openlocfilehash: 844d2fe4c02e274cda02fe71303f0b6dd092b431
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 55171c1f16b43e08b5c4a6b078c82f4ed08855d5
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50464111"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57422723"
 ---
 # <a name="linker-command-line-syntax"></a>链接器命令行语法
 
@@ -24,7 +24,7 @@ LINK arguments
 `arguments`包括选项和文件名，可以按任意顺序指定。 选项为已处理的第一个，则文件。 使用一个或多个空格或制表符分隔的参数。
 
 > [!NOTE]
->  可以仅从 Visual Studio 命令提示符启动此工具。 不能从系统命令提示符或从文件资源管理器启动此工具。
+>  可以仅从 Visual Studio 命令提示符启动此工具。 无法从系统命令提示符或文件资源管理器中启动它。
 
 在命令行选项选项说明符组成，短划线 （-） 或正斜杠 （/） 后, 跟的选项的名称。 不能缩写选项名称。 某些选项带自变量，在冒号 （:） 后指定。 不包含空格或选项卡允许选项规范中除 /COMMENT 选项中带引号的字符串中。 以十进制或 C 语言表示法指定数值参数。 选项名及其关键字或 filename 参数不区分大小写，但用作参数的标识符区分大小写。
 

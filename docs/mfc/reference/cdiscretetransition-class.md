@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CDiscreteTransition [MFC], m_delay
 - CDiscreteTransition [MFC], m_hold
 ms.assetid: b4d84fb3-ccaa-451c-a69b-6b50dcb9b9c8
-ms.openlocfilehash: 6092e805516d242daf6149615a8ef72df334dfd5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dc2311f7dae71f7c3848b7825b297ec5c9747859
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656698"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262826"
 ---
 # <a name="cdiscretetransition-class"></a>CDiscreteTransition 类
 
@@ -84,13 +84,13 @@ CDiscreteTransition(
 
 ### <a name="parameters"></a>参数
 
-*延迟*<br/>
+*delay*<br/>
 若要延迟到最后一个值的即时切换所依据的时间量。
 
 *dblFinalValue*<br/>
 转换结束时的动画变量的值。
 
-*保存*<br/>
+*hold*<br/>
 要保存该变量在其最终值的时间量。
 
 ##  <a name="create"></a>  CDiscreteTransition::Create

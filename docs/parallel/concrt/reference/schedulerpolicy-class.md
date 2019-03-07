@@ -11,16 +11,17 @@ f1_keywords:
 helpviewer_keywords:
 - SchedulerPolicy class
 ms.assetid: bcebf51a-65f8-45a3-809b-d1ff93527dc4
-ms.openlocfilehash: 0d1c28501abc86d09b683b0ed91f831fe8697306
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2eff40b11e4e9a5981ad85c37c8345abefb13fed
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462046"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265530"
 ---
 # <a name="schedulerpolicy-class"></a>SchedulerPolicy 类
 
-`SchedulerPolicy` 类包含一组控制计划程序实例的行为的键/值对，一个键/值对对应于一个策略元素。
+
+  `SchedulerPolicy` 类包含一组控制计划程序实例的行为的键/值对，一个键/值对对应于一个策略元素。
 
 ## <a name="syntax"></a>语法
 
@@ -138,7 +139,7 @@ SchedulerPolicy(
 
 第三个构造函数是复制构造函数。 通常，定义新的计划程序策略最方便的方法是复制现有策略并使用 `SetPolicyValue` 或 `SetConcurrencyLimits` 方法对其进行修改。
 
-##  <a name="dtor"></a> ~ SchedulerPolicy
+##  <a name="dtor"></a> ~SchedulerPolicy
 
 销毁计划程序策略。
 
@@ -185,7 +186,7 @@ unsigned int SetPolicyValue(
 *key*<br/>
 要设置的值的策略键。
 
-*value*<br/>
+*值*<br/>
 要将策略键设置为的值。
 
 ### <a name="return-value"></a>返回值
@@ -207,4 +208,3 @@ unsigned int SetPolicyValue(
 [CurrentScheduler 类](currentscheduler-class.md)<br/>
 [Scheduler 类](scheduler-class.md)<br/>
 [任务计划程序](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)
-

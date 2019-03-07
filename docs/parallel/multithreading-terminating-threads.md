@@ -1,5 +1,5 @@
 ---
-title: 多线程处理： 终止线程在 MFC 中
+title: 多线程处理：MFC 中的终止线程
 ms.date: 08/27/2018
 f1_keywords:
 - CREATE_SUSPENDED
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - stopping threads
 - AfxEndThread method
 ms.assetid: 4c0a8c6d-c02f-456d-bd02-0a8c8d006ecb
-ms.openlocfilehash: 37a7a6fc443e172f80cc7c30c462ec4d69b3e8de
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: dd11f5db646e172d7ea2c2cc646841249d95ef31
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693290"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303626"
 ---
-# <a name="multithreading-terminating-threads-in-mfc"></a>多线程处理： 终止线程在 MFC 中
+# <a name="multithreading-terminating-threads-in-mfc"></a>多线程处理：MFC 中的终止线程
 
 两个正常的情况下会导致线程终止： 控制函数退出或不允许线程运行到完成。 如果字处理器使用后台打印线程，如果已成功打印已完成控制函数将正常终止。 如果用户想要取消打印，但是，后台打印线程必须提前终止。 本主题说明如何实现每种情况以及如何在终止后获取线程的退出代码。
 
@@ -32,13 +32,13 @@ ms.locfileid: "51693290"
 
 ##  <a name="_core_normal_thread_termination"></a> 正常线程终止
 
-对于辅助线程，正常线程终止很简单： 退出控制函数并返回一个值，表示终止的原因。 你可以使用[AfxEndThread](../mfc/reference/application-information-and-management.md#afxendthread)函数或**返回**语句。 通常情况下，0 表示成功完成，但这取决于您。
+对于辅助线程，正常线程终止很简单：退出控制函数并返回一个值，表示终止的原因。 你可以使用[AfxEndThread](../mfc/reference/application-information-and-management.md#afxendthread)函数或**返回**语句。 通常情况下，0 表示成功完成，但这取决于您。
 
 对于用户界面线程，该过程也很简单： 从在用户界面线程中，调用[PostQuitMessage](/windows/desktop/api/winuser/nf-winuser-postquitmessage) Windows SDK 中。 唯一的参数的`PostQuitMessage`采用是线程的退出代码。 对于辅助线程，0 通常表示成功完成。
 
 ##  <a name="_core_premature_thread_termination"></a> 过早的线程终止
 
-过早终止线程是很简单： 调用[AfxEndThread](../mfc/reference/application-information-and-management.md#afxendthread)从线程内。 将所需的退出代码作为唯一参数传递。 这将停止执行线程、 解除分配线程的堆栈、 分离附加到线程，所有 Dll 和从内存中删除线程对象。
+过早终止线程是很简单：调用[AfxEndThread](../mfc/reference/application-information-and-management.md#afxendthread)从线程内。 将所需的退出代码作为唯一参数传递。 这将停止执行线程、 解除分配线程的堆栈、 分离附加到线程，所有 Dll 和从内存中删除线程对象。
 
 `AfxEndThread` 必须从调用的线程终止内。 如果你想要从另一个线程终止线程，必须设置两个线程间的通信方法。
 

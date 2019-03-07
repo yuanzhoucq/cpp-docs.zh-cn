@@ -52,12 +52,12 @@ helpviewer_keywords:
 - CMFCToolBarEditBoxButton [MFC], SetContextMenuID
 - CMFCToolBarEditBoxButton [MFC], SetFlatMode
 ms.assetid: b21d9b67-6bf7-4ca9-bd62-b237756e0ab3
-ms.openlocfilehash: bf71bb508bf0327a7fdf34b128bdb825323cd3a6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ac07ff4e6bf97518e2c659a9d6df9bd721b6b806
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525708"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291608"
 ---
 # <a name="cmfctoolbareditboxbutton-class"></a>CMFCToolBarEditBoxButton 类
 
@@ -127,7 +127,7 @@ class CMFCToolBarEditBoxButton : public CMFCToolBarButton
 
 3. 在处理 AFX_WM_RESETTOOLBAR 消息的消息处理程序，将虚拟按钮将替换为新组合框按钮通过使用[CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)。
 
-有关详细信息，请参阅[演练： 将置于工具栏上的控件](../../mfc/walkthrough-putting-controls-on-toolbars.md)。
+有关详细信息，请参见[演练：将控件置于工具栏上](../../mfc/walkthrough-putting-controls-on-toolbars.md)。
 
 ## <a name="example"></a>示例
 
@@ -693,4 +693,3 @@ virtual void SetStyle(UINT nStyle);
 [CEdit 类](../../mfc/reference/cedit-class.md)<br/>
 [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)<br/>
 [演练：将控件置于工具栏上](../../mfc/walkthrough-putting-controls-on-toolbars.md)
-

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CDBException [MFC], m_strError
 - CDBException [MFC], m_strStateNativeOrigin
 ms.assetid: eb9e1119-89f5-49a7-b9d4-b91cee1ccc82
-ms.openlocfilehash: 6ae0ebb94952408aa2576d4320ce4e00308c458f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8a5195d4d2a3662d79d515c28dc66d1b0a27b24
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50549508"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295014"
 ---
 # <a name="cdbexception-class"></a>CDBException 类
 
@@ -44,13 +44,13 @@ class CDBException : public CException
 该类包括两个公共数据成员可以使用以确定导致异常或显示一条描述异常的文本消息。 `CDBException` 对象构造，并由数据库类的成员函数引发。
 
 > [!NOTE]
->  此类是一个 MFC 的开放式数据库连接 (ODBC) 类。 如果改为使用较新的数据访问对象 (DAO) 类，使用[CDaoException](../../mfc/reference/cdaoexception-class.md)相反。 所有 DAO 类名称作为前缀都具有"CDao"。 有关详细信息，请参阅文章[概述： 数据库编程](../../data/data-access-programming-mfc-atl.md)。
+>  此类是一个 MFC 的开放式数据库连接 (ODBC) 类。 如果改为使用较新的数据访问对象 (DAO) 类，使用[CDaoException](../../mfc/reference/cdaoexception-class.md)相反。 所有 DAO 类名称作为前缀都具有"CDao"。 有关详细信息，请参阅文章[概述：数据库编程](../../data/data-access-programming-mfc-atl.md)。
 
 异常的异常执行涉及外部程序的控制，如数据源的条件的情况下，或网络 I/O 错误。 你可能希望在正常执行程序的过程中看到的错误通常不会考虑异常。
 
 您可以访问这些对象的作用域内**捕获**表达式。 您可以引发`CDBException`对象从你自己的代码与`AfxThrowDBException`全局函数。
 
-有关常规，或有关中的异常处理的详细信息`CDBException`对象，请参阅文章[异常处理 (MFC)](../../mfc/exception-handling-in-mfc.md)并[异常： 数据库异常](../../mfc/exceptions-database-exceptions.md)。
+有关常规，或有关中的异常处理的详细信息`CDBException`对象，请参阅文章[异常处理 (MFC)](../../mfc/exception-handling-in-mfc.md)和[异常：数据库异常](../../mfc/exceptions-database-exceptions.md)。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -134,7 +134,7 @@ class CDBException : public CException
 
 - 包含五个字符的错误代码的以 null 结尾的字符串返回 SQLSTATE *szSqlState* ODBC 函数的参数`SQLError`。 附录 A 列出了 SQLSTATE 值[ODBC 错误代码](/previous-versions/windows/desktop/ms714687)，在*ODBC 程序员参考*。 示例:"S0022"。
 
-- 在中返回特定于数据源的本机错误代码*pfNativeError*参数的`SQLError`函数。 示例： 207。
+- 在中返回特定于数据源的本机错误代码*pfNativeError*参数的`SQLError`函数。 示例:207.
 
 - 在返回的错误消息文本*szErrorMsg*参数的`SQLError`函数。 此消息包含几个用括号括起来的名称。 向用户从其源传递错误，因为每个 ODBC 组件 （数据源，驱动程序，驱动程序管理器） 将追加其自己的名称。 此信息可帮助找出错误的源。 示例: [Microsoft] [SQL Server Driver] [SQL Server]
 
@@ -144,11 +144,11 @@ class CDBException : public CException
 
 ### <a name="example"></a>示例
 
-  ODBC： 从"状态： S0022，本机： 207，源: [Microsoft] [SQL Server Driver] [SQL Server] 无效的列名称 ColName"
+  从 ODBC:"State:S0022,Native:207,Origin:[Microsoft][ODBC SQL Server Driver][SQL Server] Invalid column name 'ColName'"
 
-在`m_strStateNativeOrigin`:"状态： S0022，本机： 207，源: [Microsoft] [SQL Server Driver] [SQL Server]"
+在 `m_strStateNativeOrigin`中："State:S0022,Native:207,Origin:[Microsoft][ODBC SQL Server Driver][SQL Server]"
 
-在`m_strError`:"无效的列 ColName name"
+在 `m_strError`中："无效的列 ColName name"
 
 ## <a name="see-also"></a>请参阅
 

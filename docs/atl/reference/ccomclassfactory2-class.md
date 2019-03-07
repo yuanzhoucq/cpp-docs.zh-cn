@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComClassFactory2 class
 ms.assetid: 19b66fd6-b9ed-47a0-822c-8132184f5a3e
-ms.openlocfilehash: ba5bda2e73964e7195c4955806e897f9496c244a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b3b14fa59765aa72a1142e0eef41aa84abea35de
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50460198"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301840"
 ---
 # <a name="ccomclassfactory2-class"></a>CComClassFactory2 类
 
@@ -34,7 +34,7 @@ class CComClassFactory2 : public IClassFactory2,
 
 #### <a name="parameters"></a>参数
 
-*许可证*<br/>
+*license*<br/>
 实现以下静态函数的类：
 
 - `static BOOL VerifyLicenseKey( BSTR bstr );`
@@ -182,7 +182,7 @@ STDMETHOD(LockServer)(BOOL fLock);
 
 ### <a name="parameters"></a>参数
 
-*纷纷采用*<br/>
+*fLock*<br/>
 [in]如果为 TRUE，将增加的锁计数;否则，将减少锁计数。
 
 ### <a name="return-value"></a>返回值

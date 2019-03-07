@@ -10,12 +10,12 @@ helpviewer_keywords:
 - PDBPATH dumpbin option
 - PDB files, path
 ms.assetid: ccf67dcd-0b23-4250-ad47-06c48acbe82b
-ms.openlocfilehash: d77ab2eb056326ba372a60cc79688d26b252ac44
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e59f36905bcb9eb379e2bc17c9041b81fd98a535
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50527213"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57420032"
 ---
 # <a name="pdbpath"></a>/PDBPATH
 
@@ -28,7 +28,7 @@ ms.locfileid: "50527213"
 *filename*<br/>
 要为其查找匹配的.pdb 文件的.dll 或.exe 文件的名称。
 
-**: VERBOSE**<br/>
+**:VERBOSE**<br/>
 （可选）报告其中尝试找到.pdb 文件的所有目录。
 
 ## <a name="remarks"></a>备注

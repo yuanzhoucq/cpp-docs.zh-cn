@@ -1,5 +1,5 @@
 ---
-title: CMFCVisualManagerOffice2003 类
+title: CMFCVisualManagerOffice2003 Class
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCVisualManagerOffice2003
@@ -92,14 +92,14 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCVisualManagerOffice2003 Class [MFC]
 ms.assetid: 115482cd-e349-450a-8dc4-c6023d092aab
-ms.openlocfilehash: 1b811de23b4a049bd462ddbb3f9b96e80ae25be0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c3b0a031db8ff843bb43f7dfa69f046d6ae99a96
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50558803"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273265"
 ---
-# <a name="cmfcvisualmanageroffice2003-class"></a>CMFCVisualManagerOffice2003 类
+# <a name="cmfcvisualmanageroffice2003-class"></a>CMFCVisualManagerOffice2003 Class
 
 `CMFCVisualManagerOffice2003` 向应用程序提供 Microsoft Office 2003 外观。
 
@@ -452,7 +452,7 @@ virtual int GetShowAllMenuItemsHeight(
 *pDC*<br/>
 [in]指向设备上下文的指针。
 
-*大小*<br/>
+*sizeDefault*<br/>
 [in]默认菜单大小。
 
 ### <a name="return-value"></a>返回值
@@ -586,7 +586,7 @@ virtual BOOL GetToolTipInfo(
 *params*<br/>
 [out]对引用[CMFCToolTipInfo 类](../../mfc/reference/cmfctooltipinfo-class.md)其中此方法返回工具提示信息的对象。
 
-*n 类型*<br/>
+*nType*<br/>
 [in]键入要返回的工具提示信息的信息。
 
 ### <a name="return-value"></a>返回值
@@ -793,11 +793,11 @@ virtual BOOL OnDrawBrowseButton(
 
 ### <a name="parameters"></a>参数
 
-[in]*pDC*<br/>
-[in]*rect*<br/>
-[in]*pEdit*<br/>
-[in]*状态*<br/>
-[in]*clrText*<br/>
+[in] *pDC*<br/>
+[in] *rect*<br/>
+[in] *pEdit*<br/>
+[in] *state*<br/>
+[in] *clrText*<br/>
 
 ### <a name="return-value"></a>返回值
 
@@ -892,7 +892,7 @@ virtual void OnDrawCheckBoxEx(
 [in]复选框的边框。
 
 *nState*<br/>
-[in]复选框的状态： 如果未选中状态，则为 0，1，如果选中，2 如果选中混合。
+[in]复选框的状态：如果未选中状态，则为 0，1，如果选中，2 如果选中混合。
 
 *bHighlighted*<br/>
 [in]如果该复选框，选中此选项，或如果不是 FALSE，则为 TRUE。
@@ -1048,7 +1048,7 @@ virtual void OnDrawHeaderCtrlBorder(
 *rect*<br/>
 [in]指定的标头控件的边界矩形。
 
-[in]*bIsPressed*<br/>
+[in] *bIsPressed*<br/>
 [in]*bIsHighlighted*<br/>
 一个布尔参数，指示是否按下了标头控件。
 
@@ -1709,9 +1709,9 @@ virtual void OnDrawStatusBarProgress(
 *clrBar*<br/>
 [in]进度栏的初始颜色。 值是颜色渐变的开始或完成的进度栏的颜色。
 
-[in]*clrProgressBarDest*<br/>
-[in]*clrProgressText*<br/>
-[in]*bProgressText*<br/>
+[in] *clrProgressBarDest*<br/>
+[in] *clrProgressText*<br/>
+[in] *bProgressText*<br/>
 
 ### <a name="remarks"></a>备注
 

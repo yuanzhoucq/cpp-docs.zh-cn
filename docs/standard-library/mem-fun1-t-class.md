@@ -1,21 +1,21 @@
 ---
 title: mem_fun1_t 类
-ms.date: 11/04/2016
+ms.date: 02/21/2019
 f1_keywords:
-- xfunctional/std::mem_fun1_t
+- functional/std::mem_fun1_t
 helpviewer_keywords:
 - mem_fun1_t class
 ms.assetid: 01a8c2c2-b2f7-4e3f-869c-5b5b9f06ea54
-ms.openlocfilehash: 9a1fe26e66eb2ad20e6889b95640fadd2b3c45a0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 42a6ee7c169d078e216b82365ab26d10838798c6
+ms.sourcegitcommit: 4299caac2dc9e806c74ac833d856a3838b0f52a1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613185"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57006430"
 ---
 # <a name="memfun1t-class"></a>mem_fun1_t 类
 
-一种适配器类，允许`non_const`带一个自变量作为二元函数对象在使用指针自变量初始化时调用的成员函数。
+一种适配器类，允许`non_const`带一个自变量作为二元函数对象在使用指针自变量初始化时调用的成员函数。 在 C + + 11 中，在 C + + 17 中删除不推荐使用。
 
 ## <a name="syntax"></a>语法
 

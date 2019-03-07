@@ -12,12 +12,12 @@ helpviewer_keywords:
 - delayed rendering [MFC]
 - OLE [MFC], data sources
 ms.assetid: f7f27e77-bb5d-4131-b819-d71bf929ebaf
-ms.openlocfilehash: ee5cb320cb07a656675bd6735d6761cb69573d0f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 81dfe911866c4d1ba1720ee2c9854076c499f0a3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636145"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57286746"
 ---
 # <a name="data-objects-and-data-sources-manipulation"></a>数据对象和数据源：操作
 
@@ -67,7 +67,7 @@ ms.locfileid: "50636145"
 
    - 调用数据对象的`BeginEnumFormats`成员函数以开始枚举的格式可在剪贴板上。 然后，调用`GetNextFormat`直到剪贴板返回一种格式应用程序支持或有没有更多的格式。
 
-如果使用的**ON_UPDATE_COMMAND_UI**，你现在可以启用粘贴以及可能的编辑菜单上的选择性粘贴项目。 若要执行此操作，调用`CMenu::EnableMenuItem`或`CCmdUI::Enable`。 详细了解哪些容器应用程序应与菜单项和时，请参阅[菜单和资源： 容器添加](../mfc/menus-and-resources-container-additions.md)。
+如果使用的**ON_UPDATE_COMMAND_UI**，你现在可以启用粘贴以及可能的编辑菜单上的选择性粘贴项目。 若要执行此操作，调用`CMenu::EnableMenuItem`或`CCmdUI::Enable`。 详细了解哪些容器应用程序应与菜单项和时，请参阅[菜单和资源：添加容器](../mfc/menus-and-resources-container-additions.md)。
 
 ##  <a name="_core_retrieving_data_from_a_data_object"></a> 从数据对象中检索数据
 

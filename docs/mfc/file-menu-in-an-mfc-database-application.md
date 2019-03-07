@@ -5,12 +5,12 @@ helpviewer_keywords:
 - File menu
 - database applications [MFC], File menu commands
 ms.assetid: 92dafb75-c1b3-4860-80a0-87a83bfc36f2
-ms.openlocfilehash: ce56dd5f04312ae9e7b7f747ce81cb704f3d085d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6c9a195a81423417809b65b5edce32027071ad2e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629198"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279115"
 ---
 # <a name="file-menu-in-an-mfc-database-application"></a>MFC 数据库应用程序中的文件菜单
 
@@ -35,4 +35,3 @@ MFC 应用程序向导支持使用不与任何文档相关的“文件”菜单�
 ## <a name="see-also"></a>请参阅
 
 [序列化：序列化与数据库输入/输出](../mfc/serialization-serialization-vs-database-input-output.md)
-

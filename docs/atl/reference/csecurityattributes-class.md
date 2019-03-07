@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSecurityAttributes class
 ms.assetid: a094880c-52e1-4a28-97ff-752d5869908e
-ms.openlocfilehash: 0b39109bd97e2bb83b7a51fdd6e626b63c4c8798
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ef0756ee1dd0aa7d82caf218aa2c417df0c2778c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50604975"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269248"
 ---
 # <a name="csecurityattributes-class"></a>CSecurityAttributes 类
 
@@ -41,7 +41,7 @@ class CSecurityAttributes : public SECURITY_ATTRIBUTES
 
 |名称|描述|
 |----------|-----------------|
-|[Csecurityattributes:: Set](#set)|调用此方法以设置的属性`CSecurityAttributes`对象。|
+|[CSecurityAttributes::Set](#set)|调用此方法以设置的属性`CSecurityAttributes`对象。|
 
 ## <a name="remarks"></a>备注
 
@@ -76,7 +76,7 @@ explicit CSecurityAttributes(const CSecurityDesc& rSecurityDescriptor, bool bInh
 *bInheritsHandle*<br/>
 指定在创建新进程时是否继承返回的句柄。 如果此成员为 true，则新进程继承该句柄。
 
-##  <a name="set"></a>  Csecurityattributes:: Set
+##  <a name="set"></a>  CSecurityAttributes::Set
 
 调用此方法以设置的属性`CSecurityAttributes`对象。
 

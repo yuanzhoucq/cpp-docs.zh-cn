@@ -6,12 +6,12 @@ helpviewer_keywords:
 - pragmas, for optimization
 - optimization, keywords and pragmas
 ms.assetid: 66a94842-ef10-490a-88b3-51d1a568ead5
-ms.openlocfilehash: 1d975d72385396e37a1c1fd3587a7b91fdd680a0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ece9a163660d5cd5a756a1bf141ede31a21a770c
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50504398"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57421176"
 ---
 # <a name="optimization-pragmas-and-keywords"></a>优化杂注和关键字
 
@@ -33,9 +33,9 @@ ms.locfileid: "50504398"
 
 - [#pragma inline_recursion](../../preprocessor/inline-recursion.md)
 
-- [#pragma 内部函数](../../preprocessor/intrinsic.md)
+- [#pragma intrinsic](../../preprocessor/intrinsic.md)
 
-- [#pragma 优化](../../preprocessor/optimize.md)
+- [#pragma optimize](../../preprocessor/optimize.md)
 
 - [register 关键字](../../cpp/storage-classes-cpp.md#register)
 

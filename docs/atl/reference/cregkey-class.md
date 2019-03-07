@@ -42,12 +42,12 @@ helpviewer_keywords:
 - registry, writing to
 - registry, deleting keys
 ms.assetid: 3afce82b-ba2c-4c1a-8404-dc969e1af74b
-ms.openlocfilehash: cf2f97c1c3b389d0ee2b3d4bcdd2d9da2dbb3c8d
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 56a3289d5546db21c42d22b5e8544913bdaa78cf
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694850"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283652"
 ---
 # <a name="cregkey-class"></a>CRegKey 类
 
@@ -69,7 +69,7 @@ class CRegKey
 |名称|描述|
 |----------|-----------------|
 |[CRegKey::CRegKey](#cregkey)|构造函数。|
-|[CRegKey:: ~ CRegKey](#dtor)|析构函数。|
+|[CRegKey::~CRegKey](#dtor)|析构函数。|
 
 ### <a name="public-methods"></a>公共方法
 
@@ -414,14 +414,14 @@ LONG NotifyChangeKeyValue(
 *dwNotifyFilter*<br/>
 指定应报告的一组标志，用于控制哪些更改。 此参数可以是以下值的组合：
 
-|“值”|含义|
+|值|含义|
 |-----------|-------------|
 |REG_NOTIFY_CHANGE_NAME|如果在添加或删除一个子项，请通知调用方。|
 |REG_NOTIFY_CHANGE_ATTRIBUTES|通知调用方的密钥，如安全描述符信息的属性的更改。|
 |REG_NOTIFY_CHANGE_LAST_SET|通知调用方对密钥的值的更改。 这可能包括添加或删除一个值，或更改的现有值。|
 |REG_NOTIFY_CHANGE_SECURITY|通知调用方对密钥的安全描述符的更改。|
 
-*n t*<br/>
+*hEvent*<br/>
 事件的句柄。 如果*bAsync*参数为 TRUE，该方法立即返回，并通过此事件报告更改。 如果*bAsync*为 FALSE 时， *hEvent*将被忽略。
 
 *bAsync*<br/>
@@ -887,7 +887,7 @@ LONG SetKeySecurity(SECURITY_INFORMATION si, PSECURITY_DESCRIPTOR psd) throw();
 *si*<br/>
 指定要设置的安全描述符的组件。 值可以是以下值的组合：
 
-|“值”|含义|
+|值|含义|
 |-----------|-------------|
 |DACL_SECURITY_INFORMATION|设置密钥的自由访问控制列表 (DACL)。 该密钥必须拥有 WRITE_DAC 访问权限，或调用进程必须是对象的所有者。|
 |GROUP_SECURITY_INFORMATION|设置密钥的主要组安全标识符 (SID)。 该密钥必须拥有 WRITE_OWNER 访问权限，或调用进程必须是对象的所有者。|

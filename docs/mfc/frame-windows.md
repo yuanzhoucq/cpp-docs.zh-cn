@@ -15,12 +15,12 @@ helpviewer_keywords:
 - MDI [MFC], frame windows
 - splitter windows [MFC], and frame windows
 ms.assetid: 40677339-8135-4f5e-aba6-3fced3078077
-ms.openlocfilehash: 76c2f303713644c5f78f20d2ea868bd67b9eae71
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 939230753f25db38e6ba2f26340f40ddf74d23bf
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175364"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271133"
 ---
 # <a name="frame-windows"></a>框架窗口
 
@@ -71,7 +71,7 @@ MFC 框架使用框架窗口来包含视图。 两个组件-框架和内容 — 
 
 - [响应动态数据交换 (DDE)](../mfc/responding-to-dynamic-data-exchange-dde.md)
 
-- [半模式状态： 上下文相关 Windows 帮助 （协调其他窗口操作）](../mfc/orchestrating-other-window-actions.md)
+- [半模式状态：区分上下文的 Windows 帮助 （协调其他窗口操作）](../mfc/orchestrating-other-window-actions.md)
 
 - [半模式状态： 打印和打印预览 （协调其他窗口操作）](../mfc/orchestrating-other-window-actions.md)
 
@@ -86,4 +86,3 @@ MFC 框架使用框架窗口来包含视图。 两个组件-框架和内容 — 
 ## <a name="see-also"></a>请参阅
 
 [Windows](../mfc/windows.md)
-

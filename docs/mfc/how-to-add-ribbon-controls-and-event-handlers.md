@@ -5,12 +5,12 @@ helpviewer_keywords:
 - event handlers [MFC], adding
 - ribbon controls [MFC], adding
 ms.assetid: b31f25bc-ede7-49c3-9e3c-dffe4e174a69
-ms.openlocfilehash: 356358e5fd5ac4f3f7511f178ca304e9ab7eff86
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 8a164101dc42241a2cc76c91a3baa66e02e4dc90
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518393"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291127"
 ---
 # <a name="how-to-add-ribbon-controls-and-event-handlers"></a>如何：添加功能区控件和事件处理程序
 
@@ -40,6 +40,5 @@ ms.locfileid: "51518393"
 
 ## <a name="see-also"></a>请参阅
 
-[RibbonGadgets 示例： 功能区的小工具应用程序](../visual-cpp-samples.md)<br/>
+[RibbonGadgets 示例：功能区的小工具应用程序](../visual-cpp-samples.md)<br/>
 [功能区设计器 (MFC)](../mfc/ribbon-designer-mfc.md)
-

@@ -13,12 +13,12 @@ f1_keywords:
 - AMPRT/Concurrency::completion_future::wait_for
 - AMPRT/Concurrency::completion_future::wait_until
 ms.assetid: 1303c62e-546d-4b02-a578-251ed3fc0b6b
-ms.openlocfilehash: d121477cf63236ee40df826a63dd7c7c9880d142
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 663122c2d8cd430e921773e75dfd7975e4a41516
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50535286"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272914"
 ---
 # <a name="completionfuture-class"></a>completion_future 类
 
@@ -47,7 +47,7 @@ class completion_future;
 |[then](#then)|链接到一个回调函数对象`completion_future`关联的异步操作完成执行时要执行对象。|
 |[to_task](#to_task)|返回`task`对应于关联的异步操作对象。|
 |[valid](#valid)|获取一个布尔值，该值指示对象是否与异步操作相关联。|
-|[等待](#wait)|阻止，直到关联的异步操作完成。|
+|[wait](#wait)|阻止，直到关联的异步操作完成。|
 |[wait_for](#wait_for)|阻止，直到关联的异步操作完成或由指定的时间`_Rel_time`已过。|
 |[wait_until](#wait_until)|阻止，直到关联的异步操作完成或当前时间超过指定的值直到`_Abs_time`。|
 
@@ -277,7 +277,7 @@ std::future_status::future_status wait_until(
 
 1. `std::future_status::timeout` 如果指定的时间段已过。
 
-## <a name="dtor"></a> ~ completion_future
+## <a name="dtor"></a> ~completion_future
 
 销毁`completion_future`对象。
 

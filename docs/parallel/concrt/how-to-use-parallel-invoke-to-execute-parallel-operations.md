@@ -5,12 +5,12 @@ helpviewer_keywords:
 - parallel_invoke function, example
 - calling multiple functions in parallel [Concurrency Runtime]
 ms.assetid: a6aea69b-d647-4b7e-bf3b-e6a6a9880072
-ms.openlocfilehash: 2d4cd19a3cbb02b9c18b1733f8df6f64eb956803
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d618b5f202c6aaf454a60f4f37211d9000600562
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50473679"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293519"
 ---
 # <a name="how-to-use-parallelinvoke-to-execute-parallel-operations"></a>如何：使用 parallel_invoke 来执行并行操作
 
@@ -68,16 +68,15 @@ The following palindromes appear in the text:
 
 由于此示例中并行执行三个任务，因此不应期望性能扩展具有三个以上处理器的计算机上。 若要提高性能的更多，可以分解成更小的任务的最长运行的任务，并以并行方式运行这些任务。
 
-可以使用`parallel_invoke`算法而不是[concurrency:: task_group](reference/task-group-class.md)并[concurrency:: structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md)类如果不需要取消支持。 有关示例进行比较的使用情况`parallel_invoke`算法与任务组，请参阅[如何： 使用 parallel_invoke 来编写并行排序例程](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md)。
+可以使用`parallel_invoke`算法而不是[concurrency:: task_group](reference/task-group-class.md)并[concurrency:: structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md)类如果不需要取消支持。 有关示例进行比较的使用情况`parallel_invoke`算法与任务组，请参阅[如何：使用 parallel_invoke 来编写并行排序例程](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md)。
 
 ## <a name="compiling-the-code"></a>编译代码
 
 若要编译代码，将其复制然后将其粘贴到 Visual Studio 项目中，或将其粘贴在文件中名为`parallel-word-mining.cpp`然后在 Visual Studio 命令提示符窗口中运行以下命令。
 
-**cl.exe /EHsc /MD/DUNICODE /D_AFXDLL 并行 word mining.cpp**
+**cl.exe /EHsc /MD /DUNICODE /D_AFXDLL parallel-word-mining.cpp**
 
 ## <a name="see-also"></a>请参阅
 
 [并行算法](../../parallel/concrt/parallel-algorithms.md)<br/>
 [parallel_invoke 函数](reference/concurrency-namespace-functions.md#parallel_invoke)
-

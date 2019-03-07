@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - collection/Platform::Collections::UnorderedMap
 ms.assetid: dc84f261-b13c-4c0a-9b57-30dcb9e3065e
-ms.openlocfilehash: d3e6069f4bf7b0c23d5db5844821524ee80589da
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7790b363ef3f30b0ad0602568190ab443a2c1401
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648326"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423607"
 ---
 # <a name="platformcollectionsunorderedmap-class"></a>Platform::Collections::UnorderedMap 类
 
@@ -106,7 +106,7 @@ virtual void Clear();
 
 ## <a name="first"></a>  Unorderedmap:: First 方法
 
-返回一个迭代器，指定第一个[Windows::Foundation::Collections::IKeyValuePair\<K，V >](https://msdn.microsoft.com/library/windows/apps/br226031.aspx)无序映射中的元素。
+返回一个迭代器，指定第一个[Windows::Foundation::Collections::IKeyValuePair\<K，V >](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_)无序映射中的元素。
 
 ### <a name="syntax"></a>语法
 
@@ -177,7 +177,7 @@ virtual bool Insert(
 *key*<br/>
 键值对中的键部分。 类型*键*是 typename *K*。
 
-*value*<br/>
+*值*<br/>
 键值对中的值部分。 类型*值*是 typename *V*。
 
 ### <a name="return-value"></a>返回值
@@ -217,7 +217,7 @@ event Windows::Foundation::Collections::MapChangedEventHandler<K,V>^ MapChanged;
 
 ### <a name="property-valuereturn-value"></a>属性值/返回值
 
-一个[MapChangedEventHandler\<K，V >](/uwp/api/windows.foundation.collections.mapchangedeventhandler)包含引发事件，并已发生更改的类型的对象有关的信息。 另请参阅[IMapChangedEventArgs\<K >](https://msdn.microsoft.com/library/windows/apps/br226034.aspx)并[CollectionChange 枚举](https://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.collectionchange.aspx)。
+一个[MapChangedEventHandler\<K，V >](/uwp/api/windows.foundation.collections.mapchangedeventhandler)包含引发事件，并已发生更改的类型的对象有关的信息。 另请参阅[IMapChangedEventArgs\<K >](/uwp/api/Windows.Foundation.Collections.IMapChangedEventArgs_K_)并[CollectionChange 枚举](/uwp/api/windows.foundation.collections.collectionchange)。
 
 ## <a name="net-framework-equivalent"></a>.NET Framework 等效项
 
@@ -241,7 +241,7 @@ virtual void Remove(
 
 ## <a name="size"></a>  Unorderedmap:: Size 方法
 
-返回的数[Windows::Foundation::Collections::IKeyValuePair\<K，V >](https://msdn.microsoft.com/library/windows/apps/br226031.aspx) UnorderedMap 中的元素。
+返回的数[Windows::Foundation::Collections::IKeyValuePair\<K，V >](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_) UnorderedMap 中的元素。
 
 ### <a name="syntax"></a>语法
 
@@ -358,7 +358,7 @@ UnorderedMap(
 *first*<br/>
 用于初始化当前 UnorderedMap 的一系列元素中的第一个元素的输入迭代器。
 
-*最后一个*<br/>
+*last*<br/>
 用于初始化当前 UnorderedMap 的一系列元素之后的第一个元素的输入迭代器。
 
 ## <a name="see-also"></a>请参阅

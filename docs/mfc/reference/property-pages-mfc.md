@@ -7,12 +7,12 @@ helpviewer_keywords:
 - property page data transfer functions in MFC
 - property pages [MFC], global MFC functions
 ms.assetid: 734f88bc-c776-4136-9b0e-f45c761a45c1
-ms.openlocfilehash: 4f8e56ed4be6bf4c7a5283894493ee46c4ed2ff4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e2f75044c7cfbc1f9d2af1d9bda5c108f9afa881
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620904"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269209"
 ---
 # <a name="property-pages-mfc"></a>属性页 (MFC)
 
@@ -35,7 +35,7 @@ ms.locfileid: "50620904"
 |[DDP_Radio](#ddp_radio)|与控件的属性的控件的属性页中的单选按钮组的链接。|
 |[DDP_Text](#ddp_text)|与控件的属性的控件的属性页中将控件链接。 此函数处理多个不同类型的属性，如**双**，**短**，BSTR，以及**长**。|
 
-有关详细信息`DoDataExchange`函数和属性页，请参阅文章[ActiveX 控件： 属性页](../../mfc/mfc-activex-controls-property-pages.md)。
+有关详细信息`DoDataExchange`函数和属性页，请参阅文章[ActiveX 控件：属性页](../../mfc/mfc-activex-controls-property-pages.md)。
 
 下面是用于创建和管理 OLE 控件的属性页的宏的列表：
 
@@ -438,7 +438,7 @@ BEGIN_PROPPAGEIDS(class_name,  count)
 
 在实现 (.cpp) 文件中定义您的类的成员函数，属性页列表开头 BEGIN_PROPPAGEIDS 宏，则为每个属性页中，添加宏条目并完成属性页列表与 END_PROPPAGEIDS宏。
 
-属性页的详细信息，请参阅文章[ActiveX 控件： 属性页](../../mfc/mfc-activex-controls-property-pages.md)。
+属性页的详细信息，请参阅文章[ActiveX 控件：属性页](../../mfc/mfc-activex-controls-property-pages.md)。
 
 ### <a name="requirements"></a>要求
 

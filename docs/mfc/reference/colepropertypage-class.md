@@ -38,12 +38,12 @@ helpviewer_keywords:
 - COlePropertyPage [MFC], SetModifiedFlag
 - COlePropertyPage [MFC], SetPageName
 ms.assetid: e9972872-8e6b-4550-905e-d36a274d64dc
-ms.openlocfilehash: 905f92ef7875dac984b6c0d537e4687dcc779f49
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 55f4b7304d0b50004585b55142804e0bb4234c16
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605707"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271250"
 ---
 # <a name="colepropertypage-class"></a>COlePropertyPage 类
 
@@ -89,7 +89,7 @@ class AFX_NOVTABLE COlePropertyPage : public CDialog
 
 每个自定义或库存控制属性可以具有控件的用户可以查看当前属性值并根据需要修改该值的对话框控件。
 
-有关使用的详细信息`COlePropertyPage`，请参阅文章[ActiveX 控件： 属性页](../../mfc/mfc-activex-controls-property-pages.md)。
+有关使用的详细信息`COlePropertyPage`，请参阅文章[ActiveX 控件：属性页](../../mfc/mfc-activex-controls-property-pages.md)。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 

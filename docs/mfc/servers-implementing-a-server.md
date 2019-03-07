@@ -5,12 +5,12 @@ helpviewer_keywords:
 - servers, implementing
 - OLE server applications [MFC], implementing OLE servers
 ms.assetid: 5bd57e8e-3b23-4f23-9597-496fac2d24b5
-ms.openlocfilehash: a5c89ff1256d557ef417b9e53ce76bbf1b5d6196
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 953d157f4bbad0b460947740a2622074dfc90f4f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518951"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267558"
 ---
 # <a name="servers-implementing-a-server"></a>服务器：实现服务器
 
@@ -26,13 +26,13 @@ ms.locfileid: "51518951"
 
   - 使用服务器处于就地活动状态时的菜单和工具栏资源。
 
-  这些资源的详细信息，请参阅[菜单和资源： 服务器添加](../mfc/menus-and-resources-server-additions.md)。
+  这些资源的详细信息，请参阅[菜单和资源：服务器添加](../mfc/menus-and-resources-server-additions.md)。
 
-- 定义项类派生自`COleServerItem`。 服务器项的更多详细信息，请参阅[服务器： 服务器项](../mfc/servers-server-items.md)。
+- 定义项类派生自`COleServerItem`。 服务器项的更多详细信息，请参阅[服务器：服务器项](../mfc/servers-server-items.md)。
 
-- 更改到的文档类的基类`COleServerDoc`。 有关更多详细信息，请参阅[服务器： 实现服务器文档](../mfc/servers-implementing-server-documents.md)。
+- 更改到的文档类的基类`COleServerDoc`。 有关更多详细信息，请参阅[服务器：实现服务器文档](../mfc/servers-implementing-server-documents.md)。
 
-- 定义框架窗口类派生自`COleIPFrameWnd`。 有关更多详细信息，请参阅[服务器： 实现就地框架 Windows](../mfc/servers-implementing-in-place-frame-windows.md)。
+- 定义框架窗口类派生自`COleIPFrameWnd`。 有关更多详细信息，请参阅[服务器：实现就地框架 Windows](../mfc/servers-implementing-in-place-frame-windows.md)。
 
 - Windows 注册数据库中创建服务器应用程序的条目，并向 OLE 系统注册的服务器的新实例。 本主题的信息，请参阅[注册](../mfc/registration.md)。
 
@@ -46,4 +46,3 @@ ms.locfileid: "51518951"
 [容器](../mfc/containers.md)<br/>
 [菜单和资源 (OLE)](../mfc/menus-and-resources-ole.md)<br/>
 [注册](../mfc/registration.md)
-

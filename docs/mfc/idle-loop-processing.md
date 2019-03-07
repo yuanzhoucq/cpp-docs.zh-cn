@@ -16,12 +16,12 @@ helpviewer_keywords:
 - processing [MFC]
 - background processing [MFC]
 ms.assetid: 5c7c46c1-6107-4304-895f-480983bb1e44
-ms.openlocfilehash: 35078b944412142a07906791e74209fd5dab06d3
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 0d0e3fcba9ce447ec359958fc5ed59c6d596dd7a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693433"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57287119"
 ---
 # <a name="idle-loop-processing"></a>空闲循环处理
 
@@ -59,4 +59,3 @@ ms.locfileid: "51693433"
 ## <a name="see-also"></a>请参阅
 
 [常规 MFC 主题](../mfc/general-mfc-topics.md)
-

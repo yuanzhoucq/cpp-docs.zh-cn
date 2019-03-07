@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CCmdTarget [MFC], OnFinalRelease
 - CCmdTarget [MFC], RestoreWaitCursor
 ms.assetid: 8883b132-2057-4ce0-a5f2-88979f8f2b13
-ms.openlocfilehash: 4e93f167b9cb28a83c42220fa58b17d5c4845a75
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: 5e4de39b0352f33ad59950754df7c0815d6038c3
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54894284"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57417900"
 ---
 # <a name="ccmdtarget-class"></a>CCmdTarget 类
 
@@ -169,7 +169,7 @@ BOOL DoOleVerb(
 包含该对象的文档窗口的句柄。
 
 *lpRect*<br/>
-指向[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构，它包含的坐标，以像素为单位，用于定义对象的边界中的矩形*hwndParent*。
+指向[RECT](/previous-versions/dd162897\(v=vs.85\))结构，它包含的坐标，以像素为单位，用于定义对象的边界中的矩形*hwndParent*。
 
 ### <a name="return-value"></a>返回值
 

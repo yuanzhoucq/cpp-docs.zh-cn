@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CreateAccessor method
 - CreateParameterAccessor method
 ms.assetid: a0088074-7135-465c-b228-69097a50b8cc
-ms.openlocfilehash: b3d4a1a6f4680579adafec7c1fcf5f4372f9918e
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 98689fc3262cd8fc3bcb29e0bda59b1f40761141
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556707"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57422779"
 ---
 # <a name="cmanualaccessor-class"></a>CManualAccessor 类
 
@@ -84,7 +84,7 @@ void AddBindEntry(DBORDINAL nOrdinal,
 
 #### <a name="parameters"></a>参数
 
-请参阅[DBBINDING](https://docs.microsoft.com/previous-versions/windows/desktop/ms716845(v=vs.85))中*OLE DB 程序员参考*。
+请参阅[DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85))中*OLE DB 程序员参考*。
 
 *nOrdinal*<br/>
 [in]列号。
@@ -125,7 +125,7 @@ void AddParameterEntry(DBORDINAL nOrdinal,
 
 #### <a name="parameters"></a>参数
 
-请参阅[DBBINDING](https://docs.microsoft.com/previous-versions/windows/desktop/ms716845(v=vs.85))中*OLE DB 程序员参考*。
+请参阅[DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85))中*OLE DB 程序员参考*。
 
 *nOrdinal*<br/>
 [in]参数数目。
@@ -152,7 +152,7 @@ void AddParameterEntry(DBORDINAL nOrdinal,
 
 若要使用此函数，必须首先调用[CreateParameterAccessor](../../data/oledb/cmanualaccessor-createparameteraccessor.md)。
 
-## <a name="createaccessor"></a> Cmanualaccessor:: Createaccessor
+## <a name="createaccessor"></a> CManualAccessor::CreateAccessor
 
 列绑定结构分配内存并初始化列数据成员。
 
@@ -183,7 +183,7 @@ HRESULT CreateAccessor(int nBindEntries,
 
 在调用之前调用此函数`CManualAccessor::AddBindEntry`函数。
 
-## <a name="createparameteraccessor"></a> Cmanualaccessor:: Createparameteraccessor
+## <a name="createparameteraccessor"></a> CManualAccessor::CreateParameterAccessor
 
 参数绑定结构分配内存并初始化参数数据成员。
 

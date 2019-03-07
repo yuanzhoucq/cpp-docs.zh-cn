@@ -4,12 +4,12 @@ ms.date: 11/19/2018
 helpviewer_keywords:
 - parallel algorithms [Concurrency Runtime]
 ms.assetid: 045dca7b-4d73-4558-a44c-383b88a28473
-ms.openlocfilehash: b8a08919ce6792babb9b8b1b809e242465a200f9
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 75491130e8e5fc426116685332490efd2c5fe60b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176440"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262865"
 ---
 # <a name="parallel-algorithms"></a>并行算法
 
@@ -31,7 +31,7 @@ ms.locfileid: "52176440"
 
     - [Parallel_reduce 算法](#parallel_reduce)
 
-    - [示例： 执行映射和降低并行](#map_reduce_example)
+    - [示例：执行映射和降低并行](#map_reduce_example)
 
 - [分区的工作](#partitions)
 
@@ -45,7 +45,8 @@ ms.locfileid: "52176440"
 
 `parallel_for`算法对任务进行分区并行执行以最佳方式。 当工作负载不平衡时，此算法还会使用工作窃取算法和范围窃取来平衡这些分区。 当某个循环迭代以协作方式阻止时，运行时将重新分发分配给其他线程或处理器的当前线程的范围的迭代。 同样，当某个线程完成一系列迭代，运行时重新分配给该线程从其他线程的工作。 `parallel_for`算法还支持*嵌套并行度*。 当一个并行循环包含另一个并行循环时，运行时之间协调处理资源更高效地并行执行循环体。
 
-`parallel_for` 算法有多个重载版本。 第一个版本使用起始值、 结束值和一个工作函数 （lambda 表达式、 函数对象或函数指针）。 第二个版本进入起始值、 结束值、 值的步骤，并且工作函数。 此函数的第一个版本使用的步长值为 1。 其余版本采用分区程序对象，使您能够指定 `parallel_for` 如何在线程之间对范围进行分区。 中的部分中的更详细地介绍了分区程序[分区工作](#partitions)本文档中。
+
+  `parallel_for` 算法有多个重载版本。 第一个版本使用起始值、 结束值和一个工作函数 （lambda 表达式、 函数对象或函数指针）。 第二个版本进入起始值、 结束值、 值的步骤，并且工作函数。 此函数的第一个版本使用的步长值为 1。 其余版本采用分区程序对象，使您能够指定 `parallel_for` 如何在线程之间对范围进行分区。 中的部分中的更详细地介绍了分区程序[分区工作](#partitions)本文档中。
 
 可以将许多转换`for`循环，以使用`parallel_for`。 但是，`parallel_for`算法不同于`for`语句按以下方式：
 
@@ -78,7 +79,7 @@ ms.locfileid: "52176440"
 
 因为`parallel_for`算法作用于并行中的每个项，在其中值打印到控制台的顺序会有所变化。
 
-有关使用的完整示例`parallel_for`算法，请参阅[如何： 编写 parallel_for 循环](../../parallel/concrt/how-to-write-a-parallel-for-loop.md)。
+有关使用的完整示例`parallel_for`算法，请参阅[如何：编写 parallel_for 循环](../../parallel/concrt/how-to-write-a-parallel-for-loop.md)。
 
 [[返回页首](#top)]
 
@@ -104,7 +105,7 @@ ms.locfileid: "52176440"
 
 因为`parallel_for_each`算法作用于并行中的每个项，在其中值打印到控制台的顺序会有所变化。
 
-有关使用的完整示例`parallel_for_each`算法，请参阅[如何： 编写 parallel_for_each 循环](../../parallel/concrt/how-to-write-a-parallel-for-each-loop.md)。
+有关使用的完整示例`parallel_for_each`算法，请参阅[如何：编写 parallel_for_each 循环](../../parallel/concrt/how-to-write-a-parallel-for-each-loop.md)。
 
 [[返回页首](#top)]
 
@@ -128,7 +129,7 @@ ms.locfileid: "52176440"
 108 11.2 HelloHello
 ```
 
-有关使用的完整示例`parallel_invoke`算法，请参阅[如何： 使用 parallel_invoke 来编写并行排序例程](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md)并[如何： 使用 parallel_invoke 来执行并行操作](../../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md)。
+有关使用的完整示例`parallel_invoke`算法，请参阅[如何：使用 parallel_invoke 来编写并行排序例程](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md)和[如何：使用 parallel_invoke 来执行并行操作](../../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md)。
 
 [[返回页首](#top)]
 
@@ -156,7 +157,8 @@ ms.locfileid: "52176440"
 > [!WARNING]
 >  本示例演示 `parallel_transform` 的基本用法。 由于工作函数不会执行大量工作，因此本示例中不会有显著的性能提升。
 
-`parallel_transform` 算法有两个重载。 第一个重载采用一个输入范围和一个一元函数。 该一元函数可以是采用一个自变量的 lambda 表达式、一个函数对象或从 `unary_function` 派生的一个类型。 第二个重载采用两个输入范围和一个二元函数。 二元函数可以采用两个自变量、 函数对象或从派生的类型的 lambda 表达式[std:: binary_function](../../standard-library/binary-function-struct.md)。 下面的示例阐释了这些差异。
+
+  `parallel_transform` 算法有两个重载。 第一个重载采用一个输入范围和一个一元函数。 该一元函数可以是采用一个自变量的 Lambda 表达式、一个函数对象或从 `unary_function` 派生的一个类型。 第二个重载采用两个输入范围和一个二元函数。 二元函数可以采用两个自变量、 函数对象或从派生的类型的 lambda 表达式[std:: binary_function](../../standard-library/binary-function-struct.md)。 下面的示例阐释了这些差异。
 
 [!code-cpp[concrt-parallel-transform-vectors#2](../../parallel/concrt/codesnippet/cpp/parallel-algorithms_5.cpp)]
 
@@ -181,7 +183,7 @@ ms.locfileid: "52176440"
 
 在许多情况下，您可以看作`parallel_reduce`使用的简写形式`parallel_for_each`一起使用的算法[concurrency:: combinable](../../parallel/concrt/reference/combinable-class.md)类。
 
-###  <a name="map_reduce_example"></a> 示例： 执行映射和降低并行
+###  <a name="map_reduce_example"></a> 示例：执行映射和降低并行
 
 一个*映射*操作将函数应用于序列中的每个值。 一个*减少*操作组合为一个值序列的元素。 可以使用 c + + 标准库[std:: transform](../../standard-library/algorithm-functions.md#transform)并[std:: accumulate](../../standard-library/numeric-functions.md#accumulate)函数来执行映射和化简操作。 但是，对于许多问题，您可以使用 `parallel_transform` 算法并行执行映射操作，并使用 `parallel_reduce` 算法并行执行化简操作。
 
@@ -189,7 +191,7 @@ ms.locfileid: "52176440"
 
 [!code-cpp[concrt-parallel-map-reduce-sum-of-primes#1](../../parallel/concrt/codesnippet/cpp/parallel-algorithms_7.cpp)]
 
-有关执行映射和化简并行操作的另一个示例，请参阅[如何： 执行映射和降低操作并行](../../parallel/concrt/how-to-perform-map-and-reduce-operations-in-parallel.md)。
+有关执行映射和化简并行操作的另一个示例，请参阅[如何：执行映射和化简操作并行](../../parallel/concrt/how-to-perform-map-and-reduce-operations-in-parallel.md)。
 
 [[返回页首](#top)]
 
@@ -197,7 +199,8 @@ ms.locfileid: "52176440"
 
 并行执行对数据源的操作，一个重要步骤是将*分区*成可由多个线程同时访问的多个部分的源。 分区程序将指定并行算法应如何在线程之间对范围进行分区。 如本文档前面所述，PPL 使用的是默认分区机制，该默认分区机制创建初始工作负荷并在工作负荷不平衡时使用工作窃取算法和范围窃取来平衡这些分区。 例如，当某个循环迭代完成一个迭代范围时，运行时会将其他线程的工作重新分配给该线程。 但是，在某些方案中，你可能希望指定另一个更适用于你的问题的分区机制。
 
-`parallel_for`、`parallel_for_each` 和 `parallel_transform` 算法提供采用一个附加参数 `_Partitioner` 的重载版本。 此参数定义了用于划分工作的分区程序类型。 以下是 PPL 定义的分区程序种类：
+
+  `parallel_for`、`parallel_for_each` 和 `parallel_transform` 算法提供采用一个附加参数 `_Partitioner` 的重载版本。 此参数定义了用于划分工作的分区程序类型。 以下是 PPL 定义的分区程序种类：
 
 [concurrency::affinity_partitioner](../../parallel/concrt/reference/affinity-partitioner-class.md)<br/>
 将工作划分为一个固定数量的范围（通常是可用于在循环中工作的辅助线程的数量）。 此分区程序类型与 `static_partitioner` 类似，但通过将范围映射到辅助线程的方式改善了缓存的关联。 当在相同数据集中多次执行一个循环（例如一个循环内的循环）且数据适合缓存时，此分区程序类型可提高性能。 此分区程序不完全参与取消。 它也不使用协作停滞语义，因此不能与具有前向依赖关系的并行循环一起使用。
@@ -233,9 +236,12 @@ ms.locfileid: "52176440"
 
 PPL 提供三种排序算法： [concurrency:: parallel_sort](reference/concurrency-namespace-functions.md#parallel_sort)， [concurrency:: parallel_buffered_sort](reference/concurrency-namespace-functions.md#parallel_buffered_sort)，并[concurrency:: parallel_radixsort](reference/concurrency-namespace-functions.md#parallel_radixsort)。 当您具有可受益于并行排序的数据集时，这些排序算法很有用。 具体而言，当您具有大型数据集时或使用需要消耗大量计算资源的比较操作对数据进行排序时，并行排序很有用。 每种算法都会就地对元素排序。
 
-`parallel_sort` 和 `parallel_buffered_sort` 算法都是基于比较的算法。 即，它们按值来比较元素。 `parallel_sort` 算法没有其他内存要求，适用于通用排序。 `parallel_buffered_sort`算法的性能优于`parallel_sort`，但它需要 o （n） 空间。
 
-`parallel_radixsort` 算法是基于哈希的。 即，它使用整数键来对元素排序。 通过使用键，此算法可以直接计算元素的目标，而不是使用比较。 如`parallel_buffered_sort`，此算法要求 o （n） 空间。
+  `parallel_sort` 和 `parallel_buffered_sort` 算法都是基于比较的算法。 即，它们按值来比较元素。 
+  `parallel_sort` 算法没有其他内存要求，适用于通用排序。 `parallel_buffered_sort`算法的性能优于`parallel_sort`，但它需要 o （n） 空间。
+
+
+  `parallel_radixsort` 算法是基于哈希的。 即，它使用整数键来对元素排序。 通过使用键，此算法可以直接计算元素的目标，而不是使用比较。 如`parallel_buffered_sort`，此算法要求 o （n） 空间。
 
 下表总结了三种并行排序算法的重要属性。
 
@@ -288,7 +294,7 @@ PPL 提供三种排序算法： [concurrency:: parallel_sort](reference/concurre
 
 - 数据集的特征。 例如，一种算法对已完成近似排序的数据可能执行效果很好，但对完全未排序的数据执行效果就不那么好了。
 
-- 区块的大小。 可选的 `_Chunk_size` 自变量将指定算法在将整体排序细分成较小工作单元时何时从并行排序实现切换为串行排序实现。 例如，如果提供的是 512，算法会在工作单元包含 512 个或更少元素时切换到串行实现。 串行实现可以提高整体性能，因为它消除了并行处理数据所需的开销。
+- 区块的大小。 可选的 `_Chunk_size` 参数将指定算法在将整体排序细分成较小工作单元时何时从并行排序实现切换为串行排序实现。 例如，如果提供的是 512，算法会在工作单元包含 512 个或更少元素时切换到串行实现。 串行实现可以提高整体性能，因为它消除了并行处理数据所需的开销。
 
 以并行方式对小型数据集排序可能不值得，即使是在您拥有大量的可用计算资源或您的比较函数或哈希函数执行相对大量的工作时。 可以使用[std:: sort](../../standard-library/algorithm-functions.md#sort)函数对小型数据集进行排序。 (`parallel_sort`并`parallel_buffered_sort`调用`sort`时指定的块区大小大于数据集; 但是，`parallel_buffered_sort`必须分配 o （n） 空间，这可能需要更多时间由于锁争用或内存分配。)
 
@@ -299,7 +305,7 @@ PPL 提供三种排序算法： [concurrency:: parallel_sort](reference/concurre
 使用`parallel_radixsort`大型数据集和应用程序符合附加的 o （n） 空间要求时进行排序。 当等效的比较操作开销较大或两种操作开销都很大时，`parallel_radixsort` 尤其有用。
 
 > [!CAUTION]
->  好的哈希函数的实现要求您知道数据集范围以及数据集中的每个元素如何转换为对应的无符号值。 由于哈希操作会处理无符号值，如果无法生成无符号哈希值，请考虑使用另外的排序策略。
+>  好的哈希函数的实现要求你知道数据集范围以及数据集中的每个元素如何转换为对应的无符号值。 由于哈希操作会处理无符号值，如果无法生成无符号哈希值，请考虑使用另外的排序策略。
 
 下面的示例针对相同大小的随机数据集对 `sort`、`parallel_sort`、`parallel_buffered_sort` 和 `parallel_radixsort` 的性能进行比较。
 
@@ -343,4 +349,3 @@ PPL 提供三种排序算法： [concurrency:: parallel_sort](reference/concurre
 [parallel_buffered_sort 函数](reference/concurrency-namespace-functions.md#parallel_buffered_sort)
 
 [parallel_radixsort 函数](reference/concurrency-namespace-functions.md#parallel_radixsort)
-

@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CImageList [MFC], Write
 - CImageList [MFC], m_hImageList
 ms.assetid: b6d1a704-1c82-4548-8a8f-77972adc98a5
-ms.openlocfilehash: 5bcf815fce4123ca1014e1679fd810c1ce321be4
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 2fc92858f84826e2b953fcbc9de020741e97b007
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178585"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57416002"
 ---
 # <a name="cimagelist-class"></a>CImageList 类
 
@@ -115,7 +115,7 @@ class CImageList : public CObject
 |[CImageList::DragLeave](#dragleave)|解锁窗口并隐藏拖动图像，以便该窗口可以更新。|
 |[CImageList::DragMove](#dragmove)|将图像拖放操作期间所拖动的移动。|
 |[CImageList::DragShowNolock](#dragshownolock)|显示或在拖动操作中，而无需锁定在窗口隐藏拖动图像。|
-|[Cimagelist:: Draw](#draw)|绘制正被拖动拖放操作期间的图像。|
+|[CImageList::Draw](#draw)|绘制正被拖动拖放操作期间的图像。|
 |[CImageList::DrawEx](#drawex)|在指定的设备上下文中绘制的图像列表项。 该函数使用指定的绘制样式，并结合使用指定的颜色的图像。|
 |[CImageList::DrawIndirect](#drawindirect)|从图像列表绘制图像。|
 |[CImageList::EndDrag](#enddrag)|结束拖动操作。|
@@ -133,7 +133,7 @@ class CImageList : public CObject
 |[CImageList::SetBkColor](#setbkcolor)|设置图像列表的背景色。|
 |[CImageList::SetDragCursorImage](#setdragcursorimage)|创建一个新的拖动图像。|
 |[CImageList::SetImageCount](#setimagecount)|重置图像列表中的图像的计数。|
-|[Cimagelist:: Setoverlayimage](#setoverlayimage)|将图像的从零开始的索引添加到映像用作覆盖掩码的列表。|
+|[CImageList::SetOverlayImage](#setoverlayimage)|将图像的从零开始的索引添加到映像用作覆盖掩码的列表。|
 |[CImageList::Write](#write)|将图像列表写入到存档。|
 
 ### <a name="public-operators"></a>公共运算符
@@ -479,7 +479,7 @@ static BOOL PASCAL DragEnter(
 *pWndLock*<br/>
 对拥有拖动图像的窗口的指针。
 
-*点*<br/>
+*point*<br/>
 要显示拖动图像的位置。 坐标都相对于窗口 （而不是工作区） 的左上角。
 
 ### <a name="return-value"></a>返回值
@@ -565,7 +565,7 @@ static BOOL PASCAL DragShowNolock(BOOL bShow);
 
 [CImageList::DragEnter](#dragenter)函数在拖动操作期间会锁定到窗口的所有更新。 此函数，但是，不会锁定该窗口。
 
-##  <a name="draw"></a>  Cimagelist:: Draw
+##  <a name="draw"></a>  CImageList::Draw
 
 调用此函数可绘制拖放操作期间正被拖动图像。
 
@@ -594,7 +594,7 @@ BOOL Draw(
 |值|含义|
 |-----------|-------------|
 |ILD_BLEND25 ILD_FOCUS|绘制图像，混合系统突出显示颜色的 25%。 如果图像列表不包含一个掩码，则此值无效。|
-|ILD_BLEND50，ILD_SELECTED ILD_BLEND|绘制图像，混合系统突出显示颜色的 50%。 如果图像列表不包含一个掩码，则此值无效。|
+|ILD_BLEND50, ILD_SELECTED, ILD_BLEND|绘制图像，混合系统突出显示颜色的 50%。 如果图像列表不包含一个掩码，则此值无效。|
 |ILD_MASK|绘制掩码。|
 |ILD_NORMAL|绘制图像的图像列表中使用的背景色。 如果背景色为 CLR_NONE 值，以透明方式使用掩码绘制图像。|
 |ILD_TRANSPARENT|使用绘制的图像以透明方式的掩码，而不考虑的背景色。|
@@ -691,13 +691,13 @@ BOOL DrawIndirect(
 要绘制的图像的从零开始的索引。
 
 *pt*<br/>
-一个[点](https://msdn.microsoft.com/library/windows/desktop/dd162805)结构，它包含 x 坐标和 y 坐标绘制图像的位置。
+一个[点](/previous-versions/dd162805\(v=vs.85\))结构，它包含 x 坐标和 y 坐标绘制图像的位置。
 
 *sz*<br/>
 一个[大小](/windows/desktop/api/windef/ns-windef-tagsize)结构，指示要绘制的图像的大小。
 
 *ptOrigin*<br/>
-一个[点](https://msdn.microsoft.com/library/windows/desktop/dd162805)结构，它包含 x 坐标和 y 坐标指定相对于映像自身绘制操作的左上的角。 不绘制左侧的 x 坐标和 y 坐标上面的图像的像素。
+一个[点](/previous-versions/dd162805\(v=vs.85\))结构，它包含 x 坐标和 y 坐标指定相对于映像自身绘制操作的左上的角。 不绘制左侧的 x 坐标和 y 坐标上面的图像的像素。
 
 *fStyle*<br/>
 标志，指定的绘制样式和覆盖层图像 （可选）。 上覆盖图像，请参阅备注部分的信息。 MFC 默认实现，ILD_NORMAL，绘制图像的图像列表中使用的背景色。 如果背景色为 CLR_NONE 值，以透明方式使用掩码绘制图像。
@@ -712,7 +712,7 @@ BOOL DrawIndirect(
 *rgbBack*<br/>
 图像背景色，默认情况下 CLR_DEFAULT。 此参数可以是应用程序定义的 RGB 值或以下值之一：
 
-|值|含义|
+|“值”|含义|
 |-----------|-------------|
 |CLR_DEFAULT|默认背景色。 使用图像列表的背景色绘制图像。|
 |CLR_NONE|无背景色。 透明地绘制图像。|
@@ -874,7 +874,7 @@ static CImageList* PASCAL GetDragImage(
 ### <a name="parameters"></a>参数
 
 *lpPoint*<br/>
-地址[点](https://msdn.microsoft.com/library/windows/desktop/dd162805)结构，它接收当前拖动位置。
+地址[点](/previous-versions/dd162805\(v=vs.85\))结构，它接收当前拖动位置。
 
 *lpPointHotSpot*<br/>
 地址`POINT`接收拖动图像相对于拖动位置的偏移量的结构。
@@ -1097,7 +1097,7 @@ BOOL SetDragCursorImage(
 
 ### <a name="parameters"></a>参数
 
-*n 拖动下方*<br/>
+*nDrag*<br/>
 要结合拖动图像的新图像的索引。
 
 *ptHotSpot*<br/>
@@ -1138,7 +1138,7 @@ BOOL SetImageCount(UINT uNewCount);
 
 [!code-cpp[NVC_MFC_CImageList#21](../../mfc/reference/codesnippet/cpp/cimagelist-class_21.cpp)]
 
-##  <a name="setoverlayimage"></a>  Cimagelist:: Setoverlayimage
+##  <a name="setoverlayimage"></a>  CImageList::SetOverlayImage
 
 调用此函数可将图像的从零开始的索引添加到映像用作覆盖掩码的列表。
 

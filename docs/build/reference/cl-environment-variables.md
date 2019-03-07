@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LIBPATH environment variable
 - environment variables, CL compiler
 ms.assetid: 2606585b-a681-42ee-986e-1c9a2da32108
-ms.openlocfilehash: 4c9643e977c707f7e7fd99ccc48d0475e2dc7837
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 47d6966cdc821cee4bd9ffd61b36c0c79143b6c2
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50535763"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57412453"
 ---
 # <a name="cl-environment-variables"></a>CL 环境变量
 
@@ -46,11 +46,11 @@ CL 工具使用以下环境变量:
 
 设置此环境变量时，如果输入`CL INPUT.C`在命令行中，这是有效的命令：
 
-> CL /Zp2 /Ox /I\INCLUDE\MYINCLS \LIB\BINMODE。OBJ 输入。C
+> CL /Zp2 /Ox /I\INCLUDE\MYINCLS \LIB\BINMODE.OBJ INPUT.C
 
 下面的示例使普通 CL 命令编译源文件 FILE1.c 和 FILE2.c，然后链接对象文件 FILE1.obj、FILE2.obj 和 FILE3.obj：
 
-> 设置 CL = FILE1。C FILE2。C 集\_CL\_= FILE3。OBJ CL
+> SET CL=FILE1.C FILE2.C SET \_CL\_=FILE3.OBJ CL
 
 这与下面的命令行的效果相同：
 

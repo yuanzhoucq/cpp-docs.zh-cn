@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CMFCPropertyGridFontProperty [MFC], GetColor
 - CMFCPropertyGridFontProperty [MFC], GetLogFont
 ms.assetid: 83693f33-bbd3-4fcb-a9ad-fa79fcf2ca24
-ms.openlocfilehash: 40f49e7e22b3e1c81e69b9b1f6b02789165dc5eb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2ab4f43b2b12dff88148097e2961f235669aaa62
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631703"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295664"
 ---
 # <a name="cmfcpropertygridfontproperty-class"></a>CMFCPropertyGridFontProperty 类
 
@@ -93,7 +93,7 @@ CMFCPropertyGridFontProperty(
 *dwData*<br/>
 [in]特定于应用程序的数据，如整数或与属性关联的其他数据的指针。 默认值为 0。
 
-*颜色*<br/>
+*color*<br/>
 [in]字体的颜色。 默认值为默认颜色。
 
 ### <a name="remarks"></a>备注

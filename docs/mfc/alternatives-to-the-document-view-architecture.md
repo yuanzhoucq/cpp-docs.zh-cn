@@ -6,12 +6,12 @@ helpviewer_keywords:
 - CDocument class [MFC], space requirements
 - views [MFC], applications without
 ms.assetid: 2c22f352-a137-45ce-9971-c142173496fb
-ms.openlocfilehash: 7b4da7df691837b47daa35c4b474711062d4e5c7
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 98bb4de2f6d1a43fc1958a0fcbaafa1ac0af82a3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523164"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57282547"
 ---
 # <a name="alternatives-to-the-documentview-architecture"></a>文档/视图结构的替换选项
 
@@ -23,7 +23,7 @@ MFC 应用程序通常使用文档/视图体系结构来管理信息、文件格
 
 - 如果您编写某个轻量级实用工具，则可能会发现不使用文档/视图体系结构也可进行此操作。
 
-- 如果原始代码已将数据管理与数据视图混合，则不值得将代码移到文档/视图模型，因为你必须将两者分开。 你可能更愿意将代码保留原样。
+- 如果原始代码已将数据管理与数据视图混合，则不值得将代码移到文档/视图模型，因为你必须将两者分开。 您可能更愿意将代码保留原样。
 
 若要创建的应用程序不使用文档/视图体系结构，请清除**文档/视图体系结构支持**MFC 应用程序向导的步骤 1 中的复选框。 请参阅[MFC 应用程序向导](../mfc/reference/mfc-application-wizard.md)有关详细信息。
 
@@ -32,7 +32,7 @@ MFC 应用程序通常使用文档/视图体系结构来管理信息、文件格
 
 Visual C++ 向导以及源编辑器和对话框编辑器与生成的应用程序一起工作，就像与其他任何向导生成的应用程序一起工作一样。 应用程序可以支持工具栏、 滚动条和状态栏，并且具有**有关**框。 您的应用程序将不注册任何文档模板，且不包含文档类。
 
-请注意，生成的应用程序有视图类`CChildView`派生自`CWnd`。 MFC 创建视图类的一个实例并将其放置在您的应用程序创建的框架窗口中。 MFC 仍将强制使用视图窗口，因为它简化了应用程序内容的定位和管理。 您可以将绘制代码添加到此类的 `OnPaint` 成员中。 您的代码应将滚动条添加到视图而不是框架中。
+请注意，生成的应用程序有视图类`CChildView`派生自`CWnd`。 MFC 创建视图类的一个实例并将其放置在您的应用程序创建的框架窗口中。 MFC 仍将强制使用视图窗口，因为它简化了应用程序内容的定位和管理。 你可以将绘制代码添加到此类的 `OnPaint` 成员中。 你的代码应将滚动条添加到视图而不是框架中。
 
 由于 MFC 提供的文档/视图体系结构负责实现应用程序的许多基本功能，因此，如果项目中缺失该体系结构，则意味着您负责实现应用程序的许多重要功能：
 
@@ -62,9 +62,8 @@ Visual C++ 向导以及源编辑器和对话框编辑器与生成的应用程序
 
 - 重写创建文档和视图的 MFC 框架部分，以便不再需要创建它们。 文档创建过程将以对 `CWinApp::AddDocTemplate` 的调用开始。 从应用程序类的 `InitInstance` 成员函数中消除该调用，而在 `InitInstance` 中创建一个框架窗口。 将数据管理代码放置在框架窗口类中。 文档/视图创建过程所示[文档/视图创建](../mfc/document-view-creation.md)。 这种方法需要更多的工作并要求更深入地了解框架，但它使您完全避免了文档/视图开销。
 
-文章[MFC： 使用数据库类不结合文档和视图](../data/mfc-using-database-classes-without-documents-and-views.md)数据库应用程序的上下文中提供的文档/视图替代项的更具体示例。
+文章[MFC:使用数据库类不结合文档和视图](../data/mfc-using-database-classes-without-documents-and-views.md)数据库应用程序的上下文中提供的文档/视图替代项的更具体示例。
 
 ## <a name="see-also"></a>请参阅
 
 [文档/视图体系结构](../mfc/document-view-architecture.md)
-

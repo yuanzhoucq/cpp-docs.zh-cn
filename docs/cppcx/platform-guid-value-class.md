@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Guid Struct
 ms.assetid: 25c0bfb2-7f93-44d8-bdf4-ef4fbac3424a
-ms.openlocfilehash: ad71ed4965a3dd4846c9ba5d8ed2627ed8f7e056
-ms.sourcegitcommit: 360b55e89e5954f494e52b1cf989fbaceda06f1c
+ms.openlocfilehash: bf7d73e1e50bb77a84267f3a5388c07a49c54c79
+ms.sourcegitcommit: fbc05d8581913bca6eff664e5ecfcda8e471b8b1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54334646"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56809693"
 ---
 # <a name="platformguid-value-class"></a>Platform::Guid 值类
 
@@ -38,7 +38,7 @@ public value struct Guid
 
 ### <a name="remarks"></a>备注
 
-有关如何生成一个新的示例`Platform::Guid`使用 Windows 函数[CoCreateGuid](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateguid)，请参阅[WinRT 组件：如何生成 GUID？](https://www.eternalcoding.com/?p=383)
+若要生成一个新`Platform::Guid`，使用[Windows::Foundation::GuidHelper::CreateNewGuid](/uwp/api/windows.foundation.guidhelper.createnewguid#Windows_Foundation_GuidHelper_CreateNewGuid)静态方法。
 
 ### <a name="requirements"></a>要求
 
@@ -141,6 +141,10 @@ static bool Platform::Guid::operator==(Platform::Guid guid1, Platform::Guid guid
 ### <a name="return-value"></a>返回值
 
 如果两个`Platform::Guid`实例是否相等。
+
+### <a name="remarks"></a>备注
+
+更倾向于使用`==`而不是运算符[Windows::Foundation::GuidHelper::Equals](/uwp/api/windows.foundation.guidhelper.equals)静态方法。
 
 ## <a name="operator-inequality"></a> Guid::operator ！ = 运算符
 

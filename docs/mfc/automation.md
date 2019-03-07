@@ -20,12 +20,12 @@ helpviewer_keywords:
 - MFC COM, Automation
 - methods [MFC], Automation
 ms.assetid: 329117f0-c1aa-4680-a901-bfb71277dfba
-ms.openlocfilehash: de376c6c5ab2be0da5f6b9495c6adb61e19d6622
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b26a08bbe9ef9b9151910871201abe05a44d2f6c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50572752"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265556"
 ---
 # <a name="automation"></a>自动化
 
@@ -49,7 +49,7 @@ ms.locfileid: "50572752"
 
 ##  <a name="_core_passing_parameters_in_automation"></a> 在自动化中传递参数
 
-创建自动化方法的一个难点是帮助提供一个统一的“安全”机制，以便在自动化服务器和客户端之间传递数据。 自动化使用 **VARIANT** 类型传递数据。 **VARIANT** 类型是带标记的联合。 它有一个表示值的数据成员（这是一个匿名的 C++ 联合）和一个指示存储在该联合中的信息类型的数据成员。 **VARIANT** 类型支持很多标准数据类型：2 字节和 4 字节的整数、4 字节和 8 字节的浮点数、字符串和布尔值。 此外，它支持**HRESULT** （OLE 错误代码），**货币**（定点数值类型），并且**日期**（绝对日期和时间） 类型，以及指向`IUnknown`和`IDispatch`接口。
+创建自动化方法的一个难点是帮助提供一个统一的“安全”机制，以便在自动化服务器和客户端之间传递数据。 自动化使用 **VARIANT** 类型传递数据。 **VARIANT** 类型是带标记的联合。 它有一个表示值的数据成员（这是一个匿名的 C++ 联合）和一个指示存储在该联合中的信息类型的数据成员。 **变体**类型支持很多标准数据类型：2 字节和 4 字节整数、 4 和 8 字节浮点数、 字符串和布尔值。 此外，它支持**HRESULT** （OLE 错误代码），**货币**（定点数值类型），并且**日期**（绝对日期和时间） 类型，以及指向`IUnknown`和`IDispatch`接口。
 
 **VARIANT** 类型封装在 [COleVariant](../mfc/reference/colevariant-class.md) 类中。 支持的 **CURRENCY** 和 **DATE** 类封装在 [COleCurrency](../mfc/reference/colecurrency-class.md) 和 [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md) 类中。
 

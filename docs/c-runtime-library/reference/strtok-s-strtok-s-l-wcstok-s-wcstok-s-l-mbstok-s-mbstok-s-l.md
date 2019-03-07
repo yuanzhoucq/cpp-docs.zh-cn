@@ -21,6 +21,7 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - _tcstok_s_l
@@ -47,12 +48,12 @@ helpviewer_keywords:
 - _mbstok_s function
 - strtok_s function
 ms.assetid: 7696c972-f83b-4617-8c82-95973e9fdb46
-ms.openlocfilehash: a8b87e0b2d4ecf9dc6fb1b52f512406a6df0622c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 24a945742f3db82e41f662a337eef1f79ef13bd6
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50517450"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210583"
 ---
 # <a name="strtoks-strtoksl-wcstoks-wcstoksl-mbstoks-mbstoksl"></a>strtok_s、_strtok_s_l、wcstok_s、_wcstok_s_l、_mbstok_s、_mbstok_s_l
 
@@ -109,7 +110,7 @@ unsigned char* _mbstok_s(
 *str*<br/>
 包含或多个令牌，若要查找的字符串。
 
-*分隔符*<br/>
+*delimiters*<br/>
 要使用的分隔符字符组。
 
 *context*<br/>
@@ -124,7 +125,7 @@ unsigned char* _mbstok_s(
 
 ### <a name="error-conditions"></a>错误条件
 
-|*str*|*分隔符*|*context*|返回值|**errno**|
+|*str*|*delimiters*|*context*|返回值|**errno**|
 |----------------|------------------|---------------|------------------|-------------|
 |**NULL**|任何|指向空指针的指针|**NULL**|**EINVAL**|
 |任何|**NULL**|任何|**NULL**|**EINVAL**|
@@ -150,7 +151,7 @@ unsigned char* _mbstok_s(
 |-------------|---------------------|
 |**strtok_s**|\<string.h>|
 |**_strtok_s_l**|\<string.h>|
-|**wcstok_s**，<br />**_wcstok_s_l**|\<string.h> 或 \<wchar.h>|
+|**wcstok_s**,<br />**_wcstok_s_l**|\<string.h> 或 \<wchar.h>|
 |**_mbstok_s**，<br />**_mbstok_s_l**|\<mbstring.h>|
 
 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。

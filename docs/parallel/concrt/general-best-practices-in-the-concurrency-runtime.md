@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Concurrency Runtime, general best practices
 ms.assetid: ce5c784c-051e-44a6-be84-8b3e1139c18b
-ms.openlocfilehash: 445e985117929cae2ec9a26a1e148b3eff55c2a6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e25011e2466d76c946cc55421ed228c8ea174161
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50647689"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285602"
 ---
 # <a name="general-best-practices-in-the-concurrency-runtime"></a>并发运行时中的常规最佳做法
 
@@ -49,7 +49,7 @@ ms.locfileid: "50647689"
 
 该示例产生下面的输出：
 
-1: 250000000 1: 500000000 1: 750000000 1: 1000000000 2: 250000000 2: 500000000 2: 750000000 2: 1000000000
+1:250000000 1:500000000 1:750000000 1:1000000000 2:250000000 2:500000000 2:750000000 2:1000000000
 
 有几种方法实现两个任务之间的协作。 一种方法是偶尔会将控制权转交给一个长时间运行的任务中的任务计划程序。 下面的示例修改`task`函数来调用[concurrency::Context::Yield](reference/context-class.md#yield)方法来让任务计划程序，以便可以运行另一个任务。
 
@@ -84,7 +84,7 @@ ms.locfileid: "50647689"
 
 [!code-cpp[concrt-download-oversubscription#4](../../parallel/concrt/codesnippet/cpp/general-best-practices-in-the-concurrency-runtime_3.cpp)]
 
-因为`GetHttpFile`函数执行潜在延迟操作，过度订阅可以启用其他任务运行，因为当前任务等待数据。 此示例的完整版本，请参阅[如何： 使用过度订阅偏移延迟](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md)。
+因为`GetHttpFile`函数执行潜在延迟操作，过度订阅可以启用其他任务运行，因为当前任务等待数据。 此示例的完整版本，请参阅[如何：使用过度订阅偏移延迟](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md)。
 
 [[返回页首](#top)]
 
@@ -92,7 +92,7 @@ ms.locfileid: "50647689"
 
 使用内存管理函数， [concurrency:: alloc](reference/concurrency-namespace-functions.md#alloc)并[concurrency:: free](reference/concurrency-namespace-functions.md#free)，如果你具有经常分配小型对象的生存期相对较短的精细任务。 并发运行时保存每个正在运行的线程的单独的内存缓存。 `Alloc`和`Free`函数分配和释放内存而不使用锁或内存屏障的这些缓存。
 
-有关这些内存管理函数的详细信息，请参阅[任务计划程序](../../parallel/concrt/task-scheduler-concurrency-runtime.md)。 有关使用这些函数的示例，请参阅[如何： 使用 Alloc 和 Free 提高内存性能](../../parallel/concrt/how-to-use-alloc-and-free-to-improve-memory-performance.md)。
+有关这些内存管理函数的详细信息，请参阅[任务计划程序](../../parallel/concrt/task-scheduler-concurrency-runtime.md)。 有关使用这些函数的示例，请参阅[如何：使用 Alloc 和 Free 提高内存性能](../../parallel/concrt/how-to-use-alloc-and-free-to-improve-memory-performance.md)。
 
 [[返回页首](#top)]
 
@@ -124,7 +124,7 @@ Error details:
     negative balance: -76
 ```
 
-有关使用 RAII 模式来管理并发对象的生存期的其他示例，请参阅[演练： 从用户界面线程中删除工作](../../parallel/concrt/walkthrough-removing-work-from-a-user-interface-thread.md)，[如何： 使用上下文类实现协作信号量](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md)，并[如何： 使用过度订阅偏移延迟](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md)。
+有关使用 RAII 模式来管理并发对象的生存期的其他示例，请参阅[演练：从用户界面线程中删除工作](../../parallel/concrt/walkthrough-removing-work-from-a-user-interface-thread.md)，[如何：使用上下文类实现协作信号量](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md)，和[如何：使用过度订阅偏移延迟](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md)。
 
 [[返回页首](#top)]
 

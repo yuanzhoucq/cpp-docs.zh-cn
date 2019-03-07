@@ -13,12 +13,12 @@ f1_keywords:
 - amp/Concurrency::global_memory_fence
 - amp/Concurrency::tile_static_memory_fence
 ms.assetid: 2bef0985-cb90-4ece-90b9-66529aec73c9
-ms.openlocfilehash: 43be1fc3a5df52f6edcc05b501b1463bd5da7e6c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7baae51480c273ca023856253af7963ac83d7c92
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481791"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284835"
 ---
 # <a name="concurrency-namespace-functions-amp"></a>并发命名空间函数 (AMP)
 
@@ -79,7 +79,7 @@ inline bool atomic_compare_exchange(
 *_Expected_value*<br/>
 从中读取要进行比较的第二个值的位置。
 
-*value*<br/>
+*值*<br/>
 要存储到指定的内存位置的值`_Dest`如果`_Dest`等同于`_Expected_value`。
 
 ### <a name="return-value"></a>返回值
@@ -112,7 +112,7 @@ inline float atomic_exchange(
 *_Dest*<br/>
 指向目标位置的指针。
 
-*value*<br/>
+*值*<br/>
 新值。
 
 ### <a name="return-value"></a>返回值
@@ -140,7 +140,7 @@ inline unsigned int atomic_fetch_add(
 *_Dest*<br/>
 指向该内存位置的指针。
 
-*value*<br/>
+*值*<br/>
 要添加的值。
 
 ### <a name="return-value"></a>返回值
@@ -168,7 +168,7 @@ inline unsigned int atomic_fetch_and(
 *_Dest*<br/>
 指向该内存位置的指针。
 
-*value*<br/>
+*值*<br/>
 要使用按位 AND 计算中的值。
 
 ### <a name="return-value"></a>返回值
@@ -235,7 +235,7 @@ inline unsigned int atomic_fetch_max(
 *_Dest*<br/>
 读取从要进行比较的值的哪一个位置，并且两个值的最大已存储。
 
-*value*<br/>
+*值*<br/>
 要与位于指定位置处的值进行比较的值。
 
 ### <a name="return-value"></a>返回值
@@ -263,7 +263,7 @@ inline unsigned int atomic_fetch_min(
 *_Dest*<br/>
 读取从要进行比较的值的哪一个位置，以及两个值的最小值是要存储。
 
-*value*<br/>
+*值*<br/>
 要与位于指定位置处的值进行比较的值。
 
 ### <a name="return-value"></a>返回值
@@ -291,7 +291,7 @@ inline unsigned int atomic_fetch_or(
 *_Dest*<br/>
 指向该内存位置的指针。
 
-*value*<br/>
+*值*<br/>
 用于执行按位或计算的值。
 
 ### <a name="return-value"></a>返回值
@@ -319,7 +319,7 @@ inline unsigned int atomic_fetch_sub(
 *_Dest*<br/>
 指向目标位置的指针。
 
-*value*<br/>
+*值*<br/>
 要减去的值。
 
 ### <a name="return-value"></a>返回值
@@ -347,7 +347,7 @@ inline unsigned int atomic_fetch_xor(
 *_Dest*<br/>
 指向该内存位置的指针。
 
-*value*<br/>
+*值*<br/>
 要使用 XOR 计算中的值。
 
 ### <a name="return-value"></a>返回值
@@ -546,7 +546,7 @@ concurrency::completion_future copy_async(
 
 ##  <a name="direct3d_abort"></a>  direct3d_abort
 
-用 `restrict(amp)` 限制子句中止函数的执行。 当 AMP 运行时检测该调用时，将引发 [runtime_exception](runtime-exception-class.md) 异常并显示错误消息“参考光栅器: 命中着色器中止指令”。
+用 `restrict(amp)` 限制子句中止函数的执行。 当 AMP 运行时检测该调用时，将引发[runtime_exception](runtime-exception-class.md)异常并显示错误消息"参考光栅器：命中着色器中止指令"。
 
 ```
 void direct3d_abort() restrict(amp);

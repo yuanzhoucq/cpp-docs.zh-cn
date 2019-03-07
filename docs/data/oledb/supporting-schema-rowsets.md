@@ -7,16 +7,16 @@ helpviewer_keywords:
 - OLE DB providers, schema rowsets
 - OLE DB, schema rowsets
 ms.assetid: 71c5e14b-6e33-4502-a2d9-a1dc6d6e9ba0
-ms.openlocfilehash: 6046bcb1b99e446974a3b4fae11d0021778bf526
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: f8809754cc79d2a8c3d0f7bd32630ad9cab70a43
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556876"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423100"
 ---
 # <a name="supporting-schema-rowsets"></a>支持架构行集
 
-架构行集允许使用者无需知道其基础结构或架构中获取有关数据存储区的信息。 例如，数据存储区可能有组织到用户定义层次结构，因此会有没有办法确保通过阅读本文了解除架构表。 （作为另一个示例中，Visual c + + 向导使用架构行集来生成使用者的访问器。）若要允许使用者执行此操作，提供程序的会话对象公开的方法上[IDBSchemaRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms713686(v=vs.85))接口。 在 Visual c + + 应用程序，您使用[IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md)类，以实现`IDBSchemaRowset`。
+架构行集允许使用者无需知道其基础结构或架构中获取有关数据存储区的信息。 例如，数据存储区可能有组织到用户定义层次结构，因此会有没有办法确保通过阅读本文了解除架构表。 （作为另一个示例中，Visual c + + 向导使用架构行集来生成使用者的访问器。）若要允许使用者执行此操作，提供程序的会话对象公开的方法上[IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85))接口。 在 Visual c + + 应用程序，您使用[IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md)类，以实现`IDBSchemaRowset`。
 
 `IDBSchemaRowsetImpl` 支持以下方法：
 
@@ -34,11 +34,11 @@ ms.locfileid: "51556876"
 
 **ATL OLE DB 提供程序向导**会话标头文件中创建三个架构类：
 
-- **C**<em>短名称</em>**SessionTRSchemaRowset**
+- **C**<em>ShortName</em>**SessionTRSchemaRowset**
 
-- **C**<em>短名称</em>**SessionColSchemaRowset**
+- **C**<em>ShortName</em>**SessionColSchemaRowset**
 
-- **C**<em>短名称</em>**SessionPTSchemaRowset**
+- **C**<em>ShortName</em>**SessionPTSchemaRowset**
 
 这些类对架构信息; 的使用者请求做出响应请注意，OLE DB 规范要求支持这些三个架构行集：
 
@@ -86,7 +86,7 @@ class CUpdateSessionTRSchemaRowset :
 
 `CUpdateSession` 继承自`IDBSchemaRowsetImpl`，因此它处理方法的所有限制。 使用`CSchemaRowsetImpl`，声明 （在上面的架构映射中列出） 的三个子类： `CUpdateSessionTRSchemaRowset`， `CUpdateSessionColSchemaRowset`，和`CUpdateSessionPTSchemaRowset`。 每个这些子类别有`Execute`处理各自的限制 （搜索条件） 的一组方法。 每个`Execute`方法比较的值*cRestrictions*并*rgRestrictions*参数。 请参阅中的这些参数的说明[SetRestrictions](../../data/oledb/idbschemarowsetimpl-setrestrictions.md)。
 
-有关哪些限制对应于特定架构行集的详细信息，请参阅架构行集 Guid 表中[IDBSchemaRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms713686(v=vs.85))中**OLE DB 程序员参考**Windows SDK 中.
+有关哪些限制对应于特定架构行集的详细信息，请参阅架构行集 Guid 表中[IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85))中**OLE DB 程序员参考**Windows SDK 中.
 
 例如，如果上 DBSCHEMA_TABLES 支持 TABLE_NAME 限制，将执行以下操作：
 
@@ -105,7 +105,7 @@ class CUpdateSessionTRSchemaRowset :
 
 ### <a name="example"></a>示例
 
-此代码摘自[UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV)示例。 `UpdatePv` 支持三个所需的架构行集： DBSCHEMA_TABLES、 DBSCHEMA_COLUMNS 和 DBSCHEMA_PROVIDER_TYPES。 为了举例说明如何在您的提供程序中实现架构支持，本主题逐步讲解如何完成实现 DBSCHEMA_TABLE 行集。
+此代码摘自[UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV)示例。 `UpdatePv` 支持的三个所需的架构行集：DBSCHEMA_TABLES、 DBSCHEMA_COLUMNS 和 DBSCHEMA_PROVIDER_TYPES。 为了举例说明如何在您的提供程序中实现架构支持，本主题逐步讲解如何完成实现 DBSCHEMA_TABLE 行集。
 
 > [!NOTE]
 > 示例代码可能不同于此处; 列出示例代码应视为较新版本。
@@ -214,7 +214,7 @@ wcspy_s(trData.m_szDesc, OLESTR("The Directory Table"), 19);
 wcsncpy_s(trData.m_szTable, T2OLE(szFile), _TRUNCATE());
 ```
 
-`UpdatePV` 设置只有三个列： TABLE_NAME、 TABLE_TYPE 和说明。 请记下为其返回信息的列，因为在实现时需要此信息`GetDBStatus`:
+`UpdatePV` 设置只有三个列：TABLE_NAME、 TABLE_TYPE 和说明。 请记下为其返回信息的列，因为在实现时需要此信息`GetDBStatus`:
 
 ```cpp
     _ATLTRY

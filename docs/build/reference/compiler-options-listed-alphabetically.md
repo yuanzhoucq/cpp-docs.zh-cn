@@ -3,12 +3,12 @@ title: 按字母顺序列出的编译器选项
 ms.date: 08/20/2018
 helpviewer_keywords:
 - compiler options, C++
-ms.openlocfilehash: fa5ae089e112c147fb5e18b13af2ef5b95a7fda3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 73236485026b82895426a2651b48a83fc35ce8b7
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50646727"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57415872"
 ---
 # <a name="compiler-options-listed-alphabetically"></a>按字母顺序列出的编译器选项
 
@@ -79,7 +79,7 @@ ms.locfileid: "50646727"
 |[/hotpatch](hotpatch-create-hotpatchable-image.md)|创建可热修补的映像。|
 |[/I](i-additional-include-directories.md)|在目录中搜索包含文件。|
 |[/J](j-default-char-type-is-unsigned.md)|更改默认的 `char` 类型。|
-|[/ JMC](jmc.md)|支持本机 c + + ' 仅我的代码进行调试。|
+|[/JMC](jmc.md)|支持本机 c + + ' 仅我的代码进行调试。|
 |[/kernel](kernel-create-kernel-mode-binary.md)|编译器和链接器将创建可在 Windows 内核中执行的二进制文件。|
 |[/LD](md-mt-ld-use-run-time-library.md)|创建动态链接库。|
 |[/LDd](md-mt-ld-use-run-time-library.md)|创建调试动态链接库。|

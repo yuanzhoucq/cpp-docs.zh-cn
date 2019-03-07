@@ -8,12 +8,12 @@ helpviewer_keywords:
 - notifications [MFC], tool tips
 - tool tips [MFC], notifications
 ms.assetid: d0370a65-21ba-4676-bcc5-8cf851bbb15c
-ms.openlocfilehash: 1dd73364b0b67e9ca3e7e47b172cc54db88aaba4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 97db98322cd7c0d14e46f54a055bbc646c90d785
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50603627"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268988"
 ---
 # <a name="handling-ttnneedtext-notification-for-tool-tips"></a>处理工具提示的 TTN_NEEDTEXT 通知
 
@@ -52,4 +52,3 @@ ms.locfileid: "50603627"
 ## <a name="see-also"></a>请参阅
 
 [Windows 中未从 CFrameWnd 派生的工具提示](../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md)
-

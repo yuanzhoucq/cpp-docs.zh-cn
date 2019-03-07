@@ -5,12 +5,12 @@ f1_keywords:
 - concrt/concurrency::operator!=
 - concrt/concurrency:[operator&amp;&amp
 ms.assetid: 8e373f23-fc8e-49f7-82e6-ba0c57b822f8
-ms.openlocfilehash: 5982ae0ec3baff38b43b0ce504a47d512559390d
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: d790833e7dcecb5776d2adecd5e6bc1f681db1cf
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521604"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258796"
 ---
 # <a name="concurrency-namespace-operators"></a>并发命名空间运算符
 
@@ -22,7 +22,7 @@ ms.locfileid: "51521604"
 
 ##  <a name="operator_lor"></a>  运算符&#124;&#124;运算符
 
-创建将在作为自变量提供的任一任务成功完成时成功完成的任务。
+创建将在作为参数提供的任一任务成功完成时成功完成的任务。
 
 ```
 template<typename ReturnType>
@@ -62,7 +62,7 @@ inline task<void> operator||(
 
 ### <a name="remarks"></a>备注
 
-如果两个任务均被取消或引发异常，则返回的任务将在已取消状态下完成，并且当你对此任务调用 `get()` 或 `wait()` 时将引发一种异常（在遇到异常的情况下）。
+如果两个任务均被取消或引发异常，则返回的任务将在已取消状态下完成，并且当您对此任务调用 `get()` 或 `wait()` 时将引发一种异常（在遇到异常的情况下）。
 
 ##  <a name="operator_amp_amp"></a>  运算符&amp;&amp;运算符
 

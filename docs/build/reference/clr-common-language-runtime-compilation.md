@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Managed Extensions for C++, compiling
 - common language runtime, /clr compiler option
 ms.assetid: fec5a8c0-40ec-484c-a213-8dec918c1d6c
-ms.openlocfilehash: 9e9867e5cea8d45aefa0901798b86557b05693f5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5a908fc49776eaca68d9a79fb679b759155853d9
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528032"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57418849"
 ---
 # <a name="clr-common-language-runtime-compilation"></a>/clr（公共语言运行时编译）
 
@@ -26,7 +26,7 @@ ms.locfileid: "50528032"
 
 ## <a name="syntax"></a>语法
 
-> **/clr**[**:**_选项_]
+> **/clr**[**:**_options_]
 
 ## <a name="arguments"></a>自变量
 
@@ -37,7 +37,7 @@ ms.locfileid: "50528032"
 
    不带任何选项 **/clr**创建应用程序的元数据。 其他 CLR 应用程序可以使用该元数据，并且该应用程序也可以使用其他 CLR 组件的元数据中的类型和数据。 有关详细信息，请参阅[混合 （本机和托管） 程序集](../../dotnet/mixed-native-and-managed-assemblies.md)。
 
-- **纯**
+- **pure**
 
    **/clr: pure 已弃用**。 在 Visual Studio 2017 中删除的选项。 建议移植对 C# 来说必须是纯 MSIL 的代码。
 

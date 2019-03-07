@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CSinusoidalTransitionFromVelocity [MFC], m_duration
 - CSinusoidalTransitionFromVelocity [MFC], m_period
 ms.assetid: cc885f17-b84b-45ee-8f1f-36a8bbb7adad
-ms.openlocfilehash: 585ffcf787b2e1156b4f0b9f6444b15a4d5bfc54
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f61effb6dacdd1076784de8e825a3acec192474c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50500511"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57286939"
 ---
 # <a name="csinusoidaltransitionfromvelocity-class"></a>CSinusoidalTransitionFromVelocity 类
 
@@ -99,10 +99,10 @@ CSinusoidalTransitionFromVelocity(
 
 ### <a name="parameters"></a>参数
 
-*持续时间*<br/>
+*duration*<br/>
 过渡的持续时间。
 
-*段*<br/>
+*period*<br/>
 以秒为单位的正弦波振荡的段。
 
 ##  <a name="m_duration"></a>  CSinusoidalTransitionFromVelocity::m_duration

@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - event class
 ms.assetid: fba35a53-6568-4bfa-9aaf-07c0928cf73d
-ms.openlocfilehash: 323b9a6e2c46bea8d82f0f589d1174041c1f0780
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aa9d46b868c1a31729a9590db3b3f67179903881
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50480101"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264659"
 ---
 # <a name="event-class"></a>event 类
 
@@ -43,7 +43,7 @@ class event;
 |----------|-----------------|
 |[reset](#reset)|将事件重置为非终止状态。|
 |[set](#set)|向事件发出信号。|
-|[等待](#wait)|等待事件收到信号。|
+|[wait](#wait)|等待事件收到信号。|
 |[wait_for_multiple](#wait_for_multiple)|等待多个事件收到信号。|
 
 ### <a name="public-constants"></a>公共常量
@@ -126,7 +126,7 @@ size_t wait(unsigned int _Timeout = COOPERATIVE_TIMEOUT_INFINITE);
 
 ### <a name="parameters"></a>参数
 
-*超时) (_t*<br/>
+*_Timeout*<br/>
 表示毫秒的数之前等待超时。值`COOPERATIVE_TIMEOUT_INFINITE`表示无超时。
 
 ### <a name="return-value"></a>返回值
@@ -159,7 +159,7 @@ static size_t __cdecl wait_for_multiple(
 *_FWaitAll*<br/>
 如果设置为值 **，则返回 true**，该数组内的所有事件中都提供的参数指定`_PPEvents`参数必须为满足在等待收到信号。 如果设置为值**false**，它指定数组中的任何事件中提供`_PPEvents`参数成为发出信号将满足等待。
 
-*超时) (_t*<br/>
+*_Timeout*<br/>
 表示毫秒的数之前等待超时。值`COOPERATIVE_TIMEOUT_INFINITE`表示无超时。
 
 ### <a name="return-value"></a>返回值

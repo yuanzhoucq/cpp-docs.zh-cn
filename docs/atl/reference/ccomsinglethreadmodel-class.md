@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CComSingleThreadModel class
 - single-threaded applications, ATL
 ms.assetid: e5dc30c7-405a-4ba4-8ae9-51937243fce8
-ms.openlocfilehash: 2b0e19c94c16de936758ed4e547d731aed40cb26
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 57219ca79dfa46437a8b13d889bb5f0c5a5d6f37
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50565355"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262043"
 ---
 # <a name="ccomsinglethreadmodel-class"></a>CComSingleThreadModel 类
 
@@ -59,7 +59,7 @@ class CComSingleThreadModel
 |`CComObjectThreadModel`|S|S|M|
 |`CComGlobalsThreadModel`|S|M|M|
 
-S = `CComSingleThreadModel`;M = `CComMultiThreadModel`
+S= `CComSingleThreadModel`; M= `CComMultiThreadModel`
 
 `CComSingleThreadModel` 本身定义三个**typedef**名称。 `ThreadModelNoCS` 引用`CComSingleThreadModel`。 `AutoCriticalSection` 并`CriticalSection`引用类[CComFakeCriticalSection](../../atl/reference/ccomfakecriticalsection-class.md)，其中提供了与获取并释放关键节的所有权相关联的方法为空。
 

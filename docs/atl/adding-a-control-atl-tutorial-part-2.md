@@ -3,12 +3,12 @@ title: 添加控件（ATL 教程，第 2 部分）
 ms.custom: get-started-article
 ms.date: 09/26/2018
 ms.assetid: c9575a75-1064-41f1-9697-7aada560c669
-ms.openlocfilehash: b59d8f05e151e1d543f6aa6bb2b62ae0f59dc36a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 45841c33ad30ff427f9b792a779d135b4f6e7eca
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50428647"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283223"
 ---
 # <a name="adding-a-control-atl-tutorial-part-2"></a>添加控件（ATL 教程，第 2 部分）
 
@@ -38,7 +38,7 @@ ms.locfileid: "50428647"
 |**类**|创建实现控件的 c + + 类名称。|
 |**.h 文件**|创建用于包含 c + + 类的定义文件。|
 |**.cpp 文件**|创建用于包含 c + + 类的实现文件。|
-|**组件类**|此控件的组件类的名称。|
+|**CoClass**|此控件的组件类的名称。|
 |**Interface**|该控件将在其实现其自定义方法和属性的接口的名称。|
 |**Type**|关于控件的说明。|
 |**ProgID**|可用于查找控件的 CLSID 可读名称。|

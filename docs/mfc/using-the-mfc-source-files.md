@@ -11,12 +11,12 @@ helpviewer_keywords:
 - protected member access
 - source files, MFC
 ms.assetid: 3230e8fb-3b69-4ddf-9538-365ac7ea5e72
-ms.openlocfilehash: 40decb64914167061f6538df36d086347f52e1b6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ac8d8ea64de9fd93487b3108857669931e31d0be
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50659285"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267025"
 ---
 # <a name="using-the-mfc-source-files"></a>使用 MFC 源文件
 
@@ -55,4 +55,3 @@ Microsoft 基础类 (MFC) 库提供完整源代码。 标头文件 (.h) 位于 \
 ## <a name="see-also"></a>请参阅
 
 [常规 MFC 主题](../mfc/general-mfc-topics.md)
-

@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CMFCToolTipInfo [MFC], m_nGradientAngle
 - CMFCToolTipInfo [MFC], m_nMaxDescrWidth
 ms.assetid: f9d3d7f8-1f08-4342-a7b2-683860e5d2a5
-ms.openlocfilehash: 07f2882570e77d554230853dff87bc81df80e4cd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b38c3a62cca376ef7a19a111fe3a34c923983d1b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668619"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270210"
 ---
 # <a name="cmfctooltipinfo-class"></a>CMFCToolTipInfo 类
 
@@ -55,7 +55,7 @@ class CMFCToolTipInfo
 
 |名称|描述|
 |----------|-----------------|
-|[CMFCToolTipInfo::operator =](#operator_eq)||
+|[CMFCToolTipInfo::operator=](#operator_eq)||
 
 ### <a name="data-members"></a>数据成员
 
@@ -239,7 +239,7 @@ BOOL m_bVislManagerTheme;
 
 如果`m_bVislManagerTheme`为 TRUE 时，每个工具提示请求一个新[CMFCToolTipInfo](../../mfc/reference/cmfctooltipinfo-class.md)从应用程序之前它们显示在屏幕上，并使用该对象中的值来确定其外观的可视化管理器。 其他成员你[CMFCToolTipInfo](../../mfc/reference/cmfctooltipinfo-class.md)将被忽略。
 
-##  <a name="operator_eq"></a>  CMFCToolTipInfo::operator =
+##  <a name="operator_eq"></a>  CMFCToolTipInfo::operator=
 
 有关更多详细信息，请参阅中的源代码**VC\\atlmfc\\src\\mfc**的 Visual Studio 安装文件夹。
 
@@ -249,7 +249,7 @@ CMFCToolTipInfo& operator=(CMFCToolTipInfo& src);
 
 ### <a name="parameters"></a>参数
 
-[in]*src*<br/>
+[in] *src*<br/>
 
 ### <a name="return-value"></a>返回值
 

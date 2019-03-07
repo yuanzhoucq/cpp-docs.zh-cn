@@ -7,7 +7,6 @@ f1_keywords:
 - C2125
 - C2126
 - C2127
-- C2131
 - C2136
 - C2176
 - C2187
@@ -24,12 +23,12 @@ helpviewer_keywords:
 - C2187
 - C2189
 ms.assetid: 1ccab076-0954-4386-b959-d3112a6793ae
-ms.openlocfilehash: 98e804b7c53eddf239e752f120854439cc3a0b01
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 31974bb830364b2ef41a7da17cb0ad95d931f771
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50546547"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423529"
 ---
 # <a name="compiler-errors-c2100-through-c2199"></a>编译器错误s C2100 through C2199
 
@@ -46,7 +45,7 @@ ms.locfileid: "50546547"
 |[编译器错误 C2102](compiler-error-c2102.md)|"&" 要求左值|
 |[编译器错误 C2103](compiler-error-c2103.md)|寄存器变量上的“&”|
 |[编译器错误 C2104](compiler-error-c2104.md)|位域上的“&”被忽略|
-|[编译器错误 C2105](compiler-error-c2105.md)|'*运算符*需要左值|
+|[编译器错误 C2105](compiler-error-c2105.md)|'*operator*' needs l-value|
 |[编译器错误 C2106](compiler-error-c2106.md)|'*运算符*： 左的操作数必须为左值|
 |[编译器错误 C2107](compiler-error-c2107.md)|非法索引，不允许间接寻址|
 |[编译器错误 C2108](compiler-error-c2108.md)|下标不是整型类型|
@@ -72,7 +71,7 @@ ms.locfileid: "50546547"
 |[编译器错误 C2128](compiler-error-c2128.md)|'*函数*: alloc_text/same_seg 只适用于带 C 链接的函数|
 |[编译器错误 C2129](compiler-error-c2129.md)|静态函数*标识符*声明但未定义|
 |[编译器错误 C2130](compiler-error-c2130.md)|#line 应包含文件名，却找到字符串*令牌*|
-|编译器错误 C2131|表达式计算结果不为常量|
+|[编译器错误 C2131](compiler-error-c2131.md)|表达式计算结果不为常量|
 |[编译器错误 C2132](compiler-error-c2132.md)|语法错误： 意外的标识符|
 |[编译器错误 C2133](compiler-error-c2133.md)|'*标识符*： 未知的大小|
 |[编译器错误 C2134](compiler-error-c2134.md)|'*函数*： 调用不会导致一个常量表达式|

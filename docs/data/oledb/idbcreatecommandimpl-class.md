@@ -12,16 +12,16 @@ helpviewer_keywords:
 - IDBCreateCommandImpl class
 - CreateCommand method
 ms.assetid: eac4755e-1668-42e1-958e-a35620c385ae
-ms.openlocfilehash: 4b8c713bcf00cd68f9621b8c112d4d6fd27aec01
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: fda12332ef14cb95e9f11f8df0b94ccfffa0303d
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556396"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57425180"
 ---
 # <a name="idbcreatecommandimpl-class"></a>IDBCreateCommandImpl 类
 
-提供的实现[IDBCreateCommand](https://docs.microsoft.com/previous-versions/windows/desktop/ms711625(v=vs.85))接口。
+提供的实现[IDBCreateCommand](/previous-versions/windows/desktop/ms711625(v=vs.85))接口。
 
 ## <a name="syntax"></a>语法
 
@@ -55,7 +55,7 @@ class ATL_NO_VTABLE IDBCreateCommandImpl
 
 要获取新的命令的会话对象上一可选接口。
 
-## <a name="createcommand"></a> Idbcreatecommandimpl:: Createcommand
+## <a name="createcommand"></a> IDBCreateCommandImpl::CreateCommand
 
 创建新的命令并返回所请求的接口。
 
@@ -69,7 +69,7 @@ STDMETHOD(CreateCommand)(IUnknown * pUnkOuter,
 
 #### <a name="parameters"></a>参数
 
-请参阅[idbcreatecommand:: Createcommand](https://docs.microsoft.com/previous-versions/windows/desktop/ms709772(v=vs.85))中*OLE DB 程序员参考*。
+请参阅[idbcreatecommand:: Createcommand](/previous-versions/windows/desktop/ms709772(v=vs.85))中*OLE DB 程序员参考*。
 
 某些参数对应于*OLE DB 程序员参考*中所述的不同名称的参数`IDBCreateCommand::CreateCommand`:
 

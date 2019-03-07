@@ -8,12 +8,12 @@ helpviewer_keywords:
 - CDialog class [MFC], MFC dialog boxes
 - MFC dialog boxes
 ms.assetid: e4feea1a-8360-4ccb-9b84-507f1ccd9ef3
-ms.openlocfilehash: 400107a7b61ae28ca1d3ec69ee3217d58f55d9e2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9add6f003f0f6cd4ab85980e1e35370770da43aa
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50665070"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57282053"
 ---
 # <a name="dialog-boxes"></a>对话框
 
@@ -33,7 +33,7 @@ ms.locfileid: "50665070"
 
 ## <a name="what-do-you-want-to-know-more-about"></a>你想要了解更多信息
 
-- [示例：通过菜单命令显示对话框](../mfc/example-displaying-a-dialog-box-via-a-menu-command.md)
+- [示例：显示一个对话框，通过菜单命令](../mfc/example-displaying-a-dialog-box-via-a-menu-command.md)
 
 - [框架中的对话框组件](../mfc/dialog-box-components-in-the-framework.md)
 

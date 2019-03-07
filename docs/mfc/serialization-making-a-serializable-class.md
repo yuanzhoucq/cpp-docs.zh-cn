@@ -16,12 +16,12 @@ helpviewer_keywords:
 - serialization [MFC], serializable classes
 - no default constructor
 ms.assetid: 59a14d32-1cc8-4275-9829-99639beee27c
-ms.openlocfilehash: aa9a7f6cb1cb28c701e3954cad27e60cf9f7df4f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 995744381c8f82dc637e4aa0452e37af170b168b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50486965"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281455"
 ---
 # <a name="serialization-making-a-serializable-class"></a>序列化：定义可序列化的类
 
@@ -45,7 +45,8 @@ ms.locfileid: "50486965"
 
 ##  <a name="_core_overriding_the_serialize_member_function"></a> 重写 Serialize 成员函数
 
-在 `Serialize` 类中定义的 `CObject` 成员函数负责实际上序列化捕获对象的当前状态所需的数据。 `Serialize` 函数具有一个 `CArchive` 自变量，供它读取和写入对象数据。 [CArchive](../mfc/reference/carchive-class.md)对象具有成员函数时， `IsStoring`，指示是否`Serialize`存储 （写入数据） 或加载 （读取数据）。 使用结果`IsStoring`作为指南，您可以插入对象的数据`CArchive`对象使用插入运算符 (**<\<**) 或使用提取运算符 (提取数据**>>**).
+在 `Serialize` 类中定义的 `CObject` 成员函数负责实际上序列化捕获对象的当前状态所需的数据。 
+  `Serialize` 函数具有一个 `CArchive` 参数，供它读取和写入对象数据。 [CArchive](../mfc/reference/carchive-class.md)对象具有成员函数时， `IsStoring`，指示是否`Serialize`存储 （写入数据） 或加载 （读取数据）。 使用结果`IsStoring`作为指南，您可以插入对象的数据`CArchive`对象使用插入运算符 (**<\<**) 或使用提取运算符 (提取数据**>>**).
 
 请考虑派生自类`CObject`并且具有的类型的两个新成员变量`CString`并**WORD**。 以下类声明片段显示了新成员变量以及重写的 `Serialize` 成员函数的声明：
 
@@ -80,9 +81,9 @@ DECLARE_SERIAL 宏要求将支持序列化的类声明中，如下所示：
 
 ##  <a name="_core_using_the_implement_serial_macro_in_the_implementation_file"></a> 在实现文件中使用 IMPLEMENT_SERIAL 宏
 
-IMPLEMENT_SERIAL 宏用于定义各种功能所需类派生可序列化类时从`CObject`。 您为您的类在实现文件 (.cpp) 中使用此宏。 此宏的前两个自变量是类的名称和其直接基类的名称。
+IMPLEMENT_SERIAL 宏用于定义各种功能所需类派生可序列化类时从`CObject`。 您为您的类在实现文件 (.cpp) 中使用此宏。 此宏的前两个参数是类的名称和其直接基类的名称。
 
-该宏的第三个自变量是一个架构数字。 架构数字本质上是类的对象的版本号。 请对架构数字使用大于或等于 0 的整数值。 （不要将此架构数字与数据库术语混淆。）
+该宏的第三个参数是一个架构数字。 架构数字本质上是类的对象的版本号。 请对架构数字使用大于或等于 0 的整数值。 （不要将此架构数字与数据库术语混淆。）
 
 MFC 序列化代码在将对象读入内存时检查架构数字。 如果磁盘上的对象的架构数字与内存中的架构数字不匹配，库将引发 `CArchiveException`，这会阻止您的程序读取不正确的版本的对象。
 
@@ -92,9 +93,8 @@ MFC 序列化代码在将对象读入内存时检查架构数字。 如果磁盘
 
 [!code-cpp[NVC_MFCSerialization#4](../mfc/codesnippet/cpp/serialization-making-a-serializable-class_4.cpp)]
 
-一旦您有一个可序列化类，如本文所述，您可以序列化的类的对象[序列化： 序列化对象](../mfc/serialization-serializing-an-object.md)。
+一旦您有一个可序列化类，如本文所述，您可以序列化的类的对象[序列化：将对象序列化为](../mfc/serialization-serializing-an-object.md)。
 
 ## <a name="see-also"></a>请参阅
 
 [序列化](../mfc/serialization-in-mfc.md)
-

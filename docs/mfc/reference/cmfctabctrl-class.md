@@ -104,12 +104,12 @@ helpviewer_keywords:
 - CMFCTabCtrl [MFC], SynchronizeScrollBar
 - CMFCTabCtrl [MFC], m_bEnableActivate
 ms.assetid: d441385d-2c72-4203-96fa-deae2273da35
-ms.openlocfilehash: 8388a79bf7c85f3d603bd4ef234947e872534cba
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8dc8c51cc1847d29b76e2017db4c1368b35b9a9f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505114"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281676"
 ---
 # <a name="cmfctabctrl-class"></a>CMFCTabCtrl Class
 
@@ -874,9 +874,9 @@ virtual DROPEFFECT OnDragEnter(
 [in]指向包含在用户拖动的数据的数据对象。
 
 *dwKeyState*<br/>
-[in]包含修改键的状态。 此参数是以下值的按位组合 (OR): MK_CONTROL、 MK_SHIFT、 MK_ALT、 MK_LBUTTON、 MK_MBUTTON 和 MK_RBUTTON。 有关详细信息，请参阅**消息参数**一部分[有关鼠标输入](/windows/desktop/inputdev/about-mouse-input)。
+[in]包含修改键的状态。 此参数是以下值的按位组合 (OR):MK_CONTROL、 MK_SHIFT、 MK_ALT、 MK_LBUTTON、 MK_MBUTTON 和 MK_RBUTTON。 有关详细信息，请参阅**消息参数**一部分[有关鼠标输入](/windows/desktop/inputdev/about-mouse-input)。
 
-*点*<br/>
+*point*<br/>
 [in]包含当前工作区坐标中的光标位置。
 
 ### <a name="return-value"></a>返回值
@@ -908,7 +908,7 @@ virtual DROPEFFECT OnDragOver(
 *dwKeyState*<br/>
 [in]修改键，状态即 MK_CONTROL、 MK_SHIFT、 MK_ALT、 MK_LBUTTON、 MK_MBUTTON 和 MK_RBUTTON 的按位组合 (OR)。 详细信息，请参阅"消息参数"中[有关鼠标输入](/windows/desktop/inputdev/about-mouse-input)。
 
-*点*<br/>
+*point*<br/>
 [in]当前的鼠标位置。
 
 ### <a name="return-value"></a>返回值
@@ -929,7 +929,7 @@ virtual void OnShowTabDocumentsMenu(CPoint point);
 
 ### <a name="parameters"></a>参数
 
-*点*<br/>
+*point*<br/>
 [in]要显示的弹出菜单的位置的坐标。
 
 ### <a name="remarks"></a>备注
@@ -1111,7 +1111,7 @@ void StopResize(BOOL bCancel);
 
 ### <a name="parameters"></a>参数
 
-*卡*<br/>
+*bCancel*<br/>
 [in]为 TRUE，则放弃当前的调整大小操作;如果为 FALSE，完成当前的调整大小操作。 在任一情况下，框架将停止绘制大小调整矩形。
 
 ##  <a name="synchronizescrollbar"></a>  CMFCTabCtrl::SynchronizeScrollBar

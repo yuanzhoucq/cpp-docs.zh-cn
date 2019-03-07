@@ -5,12 +5,12 @@ helpviewer_keywords:
 - tree controls [MFC], item information
 - CTreeCtrl class [MFC], item information
 ms.assetid: 8dcab855-27de-49e9-95d8-f78ba963ea71
-ms.openlocfilehash: f33d9616b04abfe442471705b6d1a42333648a69
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e0eb8af4fbbb6f59c0dda75ec3705183ce916350
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506088"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288891"
 ---
 # <a name="tree-control-item-information"></a>树控件项信息
 
@@ -18,7 +18,7 @@ ms.locfileid: "50506088"
 
 [GetItemState](../mfc/reference/ctreectrl-class.md#getitemstate)， [GetItemText](../mfc/reference/ctreectrl-class.md#getitemtext)， [GetItemData](../mfc/reference/ctreectrl-class.md#getitemdata)，以及[GetItemImage](../mfc/reference/ctreectrl-class.md#getitemimage)成员函数将检索的独立特性项。 其中每个函数都有一个对应的为项目设置特性的 Set 函数。
 
-[GetNextItem](../mfc/reference/ctreectrl-class.md#getnextitem)成员函数将检索具有与当前项的指定的关系的树控件项。 此函数可检索项目的父级、下一或上一可见项目、第一个子项目等等。 此外，还有成员函数来遍历树： [GetRootItem](../mfc/reference/ctreectrl-class.md#getrootitem)， [GetFirstVisibleItem](../mfc/reference/ctreectrl-class.md#getfirstvisibleitem)， [GetNextVisibleItem](../mfc/reference/ctreectrl-class.md#getnextvisibleitem)， [GetPrevVisibleItem](../mfc/reference/ctreectrl-class.md#getprevvisibleitem)， [GetChildItem](../mfc/reference/ctreectrl-class.md#getchilditem)， [GetNextSiblingItem](../mfc/reference/ctreectrl-class.md#getnextsiblingitem)， [GetPrevSiblingItem](../mfc/reference/ctreectrl-class.md#getprevsiblingitem)， [GetParentItem](../mfc/reference/ctreectrl-class.md#getparentitem)， [GetSelectedItem](../mfc/reference/ctreectrl-class.md#getselecteditem)，并[GetDropHilightItem](../mfc/reference/ctreectrl-class.md#getdrophilightitem)。
+[GetNextItem](../mfc/reference/ctreectrl-class.md#getnextitem)成员函数将检索具有与当前项的指定的关系的树控件项。 此函数可检索项目的父级、下一或上一可见项目、第一个子项目等等。 还有成员函数来遍历树：[GetRootItem](../mfc/reference/ctreectrl-class.md#getrootitem)， [GetFirstVisibleItem](../mfc/reference/ctreectrl-class.md#getfirstvisibleitem)， [GetNextVisibleItem](../mfc/reference/ctreectrl-class.md#getnextvisibleitem)， [GetPrevVisibleItem](../mfc/reference/ctreectrl-class.md#getprevvisibleitem)， [GetChildItem](../mfc/reference/ctreectrl-class.md#getchilditem)，[GetNextSiblingItem](../mfc/reference/ctreectrl-class.md#getnextsiblingitem)， [GetPrevSiblingItem](../mfc/reference/ctreectrl-class.md#getprevsiblingitem)， [GetParentItem](../mfc/reference/ctreectrl-class.md#getparentitem)， [GetSelectedItem](../mfc/reference/ctreectrl-class.md#getselecteditem)，和[GetDropHilightItem](../mfc/reference/ctreectrl-class.md#getdrophilightitem)。
 
 [GetItemRect](../mfc/reference/ctreectrl-class.md#getitemrect)成员函数将检索树控件项的边框。 [GetCount](../mfc/reference/ctreectrl-class.md#getcount)并[GetVisibleCount](../mfc/reference/ctreectrl-class.md#getvisiblecount)成员函数将检索树控件中项的计数和当前可见在树控件的窗口中，分别是项的计数。 你可以确保特定的项是通过调用可见[EnsureVisible](../mfc/reference/ctreectrl-class.md#ensurevisible)成员函数。
 
@@ -26,4 +26,3 @@ ms.locfileid: "50506088"
 
 [使用 CTreeCtrl](../mfc/using-ctreectrl.md)<br/>
 [控件](../mfc/controls-mfc.md)
-

@@ -45,12 +45,12 @@ helpviewer_keywords:
 - RFX (record field exchange), data exchange functions [MFC]
 - RFX (record field exchange)
 ms.assetid: 6e4c5c1c-acb7-4c18-bf51-bf7959a696cd
-ms.openlocfilehash: 2970a722f79e9707f8721c1c8595bfd1d133f898
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 865c67b88c37e32ef33fa410ef178b81b7a6ecac
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525939"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297068"
 ---
 # <a name="record-field-exchange-functions"></a>记录字段交换函数
 
@@ -62,9 +62,9 @@ ms.locfileid: "50525939"
 
 记录字段交换函数在框架每次调用 `DoFieldExchange` 或 `DoBulkFieldExchange`时传输数据。 每个函数传输一种特定的数据类型。
 
-有关如何使用这些函数的详细信息，请参阅 [记录字段交换：RFX 的工作方式 (ODBC)](../../data/odbc/record-field-exchange-how-rfx-works.md)一文。 有关批量行提取的详细信息，请参阅 [记录集：批量提取记录 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)一文。
+有关如何使用这些函数的详细信息，请参阅文章[记录字段交换：RFX 的工作方式 (ODBC)](../../data/odbc/record-field-exchange-how-rfx-works.md)。 有关批量行提取的详细信息，请参阅文章[记录集：(ODBC) 批量提取记录](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
 
-对于动态绑定的数据列，你还可以自行调用 RFX 或 DFX 函数，如 [记录集：动态绑定数据列 (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)一文中所述。 此外，你还可以编写自己的自定义 RFX 或 DFX 例程，如技术说明 [43](../../mfc/tn043-rfx-routines.md) （针对 ODBC）和技术说明 [53](../../mfc/tn053-custom-dfx-routines-for-dao-database-classes.md) （针对 DAO）中所述。
+对于动态绑定的数据列，您还可以调用 RFX 或 DFX 函数，如文章中所述[记录集：动态绑定数据列 (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)。 此外，你还可以编写自己的自定义 RFX 或 DFX 例程，如技术说明 [43](../../mfc/tn043-rfx-routines.md) （针对 ODBC）和技术说明 [53](../../mfc/tn053-custom-dfx-routines-for-dao-database-classes.md) （针对 DAO）中所述。
 
 有关示例的 RFX 和批量 RFX 函数出现在`DoFieldExchange`并`DoBulkFieldExchange`函数，请参阅[RFX_Text](#rfx_text)和 [RFX_Text_Bulk] #rfx_text_bulk)。 DFX 函数与 RFX 函数非常类似。
 
@@ -132,12 +132,12 @@ void RFX_Binary(
 ### <a name="parameters"></a>参数
 
 *pFX*<br/>
-指向类的对象的指针[CFieldExchange](cfieldexchange-class.md)。 此对象包含用于定义每次函数时的上下文的信息。 有关操作的详细信息`CFieldExchange`可以指定对象，请参阅文章[记录字段交换： RFX 的工作机制](../../data/odbc/record-field-exchange-how-rfx-works.md)。
+指向类的对象的指针[CFieldExchange](cfieldexchange-class.md)。 此对象包含用于定义每次函数时的上下文的信息。 有关操作的详细信息`CFieldExchange`可以指定对象，请参阅文章[记录字段交换：RFX 的工作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)。
 
 *szName*<br/>
 数据列的名称。
 
-*value*<br/>
+*值*<br/>
 存储在指定的数据成员中的值（要传输的值）。 对于从记录集到数据源，类型的值的传输[CByteArray](cbytearray-class.md)，则来自指定的数据成员。 对于从数据源得到记录集的传输，将在指定的数据成员中存储值。
 
 *nMaxLength*<br/>
@@ -171,12 +171,12 @@ void RFX_Bool(
 ### <a name="parameters"></a>参数
 
 *pFX*<br/>
-指向类的对象的指针[CFieldExchange](cfieldexchange-class.md)。 此对象包含用于定义每次函数时的上下文的信息。 有关操作的详细信息`CFieldExchange`可以指定对象，请参阅文章[记录字段交换： RFX 的工作机制](../../data/odbc/record-field-exchange-how-rfx-works.md)。
+指向类的对象的指针[CFieldExchange](cfieldexchange-class.md)。 此对象包含用于定义每次函数时的上下文的信息。 有关操作的详细信息`CFieldExchange`可以指定对象，请参阅文章[记录字段交换：RFX 的工作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)。
 
 *szName*<br/>
 数据列的名称。
 
-*value*<br/>
+*值*<br/>
 存储在指定的数据成员中的值（要传输的值）。 从记录集传输到数据源后，对于类型 BOOL 的值执行从指定的数据成员。 对于从数据源得到记录集的传输，将在指定的数据成员中存储值。
 
 ### <a name="example"></a>示例
@@ -203,12 +203,12 @@ void RFX_Byte(
 ### <a name="parameters"></a>参数
 
 *pFX*<br/>
-指向类的对象的指针[CFieldExchange](cfieldexchange-class.md)。 此对象包含用于定义每次函数时的上下文的信息。 有关操作的详细信息`CFieldExchange`可以指定对象，请参阅文章[记录字段交换： RFX 的工作机制](../../data/odbc/record-field-exchange-how-rfx-works.md)。
+指向类的对象的指针[CFieldExchange](cfieldexchange-class.md)。 此对象包含用于定义每次函数时的上下文的信息。 有关操作的详细信息`CFieldExchange`可以指定对象，请参阅文章[记录字段交换：RFX 的工作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)。
 
 *szName*<br/>
 数据列的名称。
 
-*value*<br/>
+*值*<br/>
 存储在指定的数据成员中的值（要传输的值）。 对于从记录集传输到数据源后，BYTE，类型的值执行从指定的数据成员。 对于从数据源得到记录集的传输，将在指定的数据成员中存储值。
 
 ### <a name="example"></a>示例
@@ -245,12 +245,12 @@ void RFX_Date(
 ### <a name="parameters"></a>参数
 
 *pFX*<br/>
-指向类的对象的指针[CFieldExchange](cfieldexchange-class.md)。 此对象包含用于定义每次函数时的上下文的信息。 有关操作的详细信息`CFieldExchange`可以指定对象，请参阅文章[记录字段交换： RFX 的工作机制](../../data/odbc/record-field-exchange-how-rfx-works.md)。
+指向类的对象的指针[CFieldExchange](cfieldexchange-class.md)。 此对象包含用于定义每次函数时的上下文的信息。 有关操作的详细信息`CFieldExchange`可以指定对象，请参阅文章[记录字段交换：RFX 的工作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)。
 
 *szName*<br/>
 数据列的名称。
 
-*value*<br/>
+*值*<br/>
 指定的数据成员; 中存储的值要传输的值。 该函数的各个版本使用不同的数据类型作为值：
 
 该函数的第一个版本将引用[CTime](../../atl-mfc-shared/reference/ctime-class.md)对象。 对于从记录集传输到数据源后，此值执行从指定的数据成员。 对于从数据源得到记录集的传输，将在指定的数据成员中存储值。
@@ -285,12 +285,12 @@ void RFX_Double(
 ### <a name="parameters"></a>参数
 
 *pFX*<br/>
-指向类的对象的指针[CFieldExchange](cfieldexchange-class.md)。 此对象包含用于定义每次函数时的上下文的信息。 有关操作的详细信息`CFieldExchange`可以指定对象，请参阅文章[记录字段交换： RFX 的工作机制](../../data/odbc/record-field-exchange-how-rfx-works.md)。
+指向类的对象的指针[CFieldExchange](cfieldexchange-class.md)。 此对象包含用于定义每次函数时的上下文的信息。 有关操作的详细信息`CFieldExchange`可以指定对象，请参阅文章[记录字段交换：RFX 的工作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)。
 
 *szName*<br/>
 数据列的名称。
 
-*value*<br/>
+*值*<br/>
 存储在指定的数据成员中的值（要传输的值）。 对于从记录集到数据源，类型的值的传输**double**，则来自指定的数据成员。 对于从数据源得到记录集的传输，将在指定的数据成员中存储值。
 
 ### <a name="example"></a>示例
@@ -317,12 +317,12 @@ void RFX_Int(
 ### <a name="parameters"></a>参数
 
 *pFX*<br/>
-指向类的对象的指针[CFieldExchange](cfieldexchange-class.md)。 此对象包含用于定义每次函数时的上下文的信息。 有关操作的详细信息`CFieldExchange`可以指定对象，请参阅文章[记录字段交换： RFX 的工作机制](../../data/odbc/record-field-exchange-how-rfx-works.md)。
+指向类的对象的指针[CFieldExchange](cfieldexchange-class.md)。 此对象包含用于定义每次函数时的上下文的信息。 有关操作的详细信息`CFieldExchange`可以指定对象，请参阅文章[记录字段交换：RFX 的工作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)。
 
 *szName*<br/>
 数据列的名称。
 
-*value*<br/>
+*值*<br/>
 存储在指定的数据成员中的值（要传输的值）。 对于从记录集到数据源，类型的值的传输**int**，则来自指定的数据成员。 对于从数据源得到记录集的传输，将在指定的数据成员中存储值。
 
 ### <a name="example"></a>示例
@@ -350,12 +350,12 @@ value );
 ### <a name="parameters"></a>参数
 
 *pFX*<br/>
-指向类的对象的指针[CFieldExchange](cfieldexchange-class.md)。 此对象包含用于定义每次函数时的上下文的信息。 有关操作的详细信息`CFieldExchange`可以指定对象，请参阅文章[记录字段交换： RFX 的工作机制](../../data/odbc/record-field-exchange-how-rfx-works.md)。
+指向类的对象的指针[CFieldExchange](cfieldexchange-class.md)。 此对象包含用于定义每次函数时的上下文的信息。 有关操作的详细信息`CFieldExchange`可以指定对象，请参阅文章[记录字段交换：RFX 的工作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)。
 
 *szName*<br/>
 数据列的名称。
 
-*value*<br/>
+*值*<br/>
 存储在指定的数据成员中的值（要传输的值）。 对于从记录集到数据源，类型的值的传输**长**，则来自指定的数据成员。 对于从数据源得到记录集的传输，将在指定的数据成员中存储值。
 
 ### <a name="example"></a>示例
@@ -382,12 +382,12 @@ void RFX_LongBinary(
 ### <a name="parameters"></a>参数
 
 *pFX*<br/>
-指向类的对象的指针[CFieldExchange](cfieldexchange-class.md)。 此对象包含用于定义每次函数时的上下文的信息。 有关操作的详细信息`CFieldExchange`可以指定对象，请参阅文章[记录字段交换： RFX 的工作机制](../../data/odbc/record-field-exchange-how-rfx-works.md)。
+指向类的对象的指针[CFieldExchange](cfieldexchange-class.md)。 此对象包含用于定义每次函数时的上下文的信息。 有关操作的详细信息`CFieldExchange`可以指定对象，请参阅文章[记录字段交换：RFX 的工作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)。
 
 *szName*<br/>
 数据列的名称。
 
-*value*<br/>
+*值*<br/>
 存储在指定的数据成员中的值（要传输的值）。 对于从记录集到数据源，类型的值的传输`CLongBinary`，则来自指定的数据成员。 对于从数据源得到记录集的传输，将在指定的数据成员中存储值。
 
 ### <a name="example"></a>示例
@@ -414,12 +414,12 @@ void RFX_Single(
 ### <a name="parameters"></a>参数
 
 *pFX*<br/>
-指向类的对象的指针[CFieldExchange](cfieldexchange-class.md)。 此对象包含用于定义每次函数时的上下文的信息。 有关操作的详细信息`CFieldExchange`可以指定对象，请参阅文章[记录字段交换： RFX 的工作机制](../../data/odbc/record-field-exchange-how-rfx-works.md)。
+指向类的对象的指针[CFieldExchange](cfieldexchange-class.md)。 此对象包含用于定义每次函数时的上下文的信息。 有关操作的详细信息`CFieldExchange`可以指定对象，请参阅文章[记录字段交换：RFX 的工作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)。
 
 *szName*<br/>
 数据列的名称。
 
-*value*<br/>
+*值*<br/>
 存储在指定的数据成员中的值（要传输的值）。 对于从记录集到数据源，类型的值的传输**float**，则来自指定的数据成员。 对于从数据源得到记录集的传输，将在指定的数据成员中存储值。
 
 ### <a name="example"></a>示例
@@ -449,12 +449,12 @@ void RFX_Text(
 ### <a name="parameters"></a>参数
 
 *pFX*<br/>
-指向类的对象的指针`CFieldExchange`。 此对象包含用于定义每次函数时的上下文的信息。 有关操作的详细信息`CFieldExchange`可以指定对象，请参阅文章[记录字段交换： RFX 的工作机制](../../data/odbc/record-field-exchange-how-rfx-works.md)。
+指向类的对象的指针`CFieldExchange`。 此对象包含用于定义每次函数时的上下文的信息。 有关操作的详细信息`CFieldExchange`可以指定对象，请参阅文章[记录字段交换：RFX 的工作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)。
 
 *szName*<br/>
 数据列的名称。
 
-*value*<br/>
+*值*<br/>
 存储在指定的数据成员中的值（要传输的值）。 对于从记录集到数据源，类型的值的传输`CString`，则来自指定的数据成员。 对于从数据源得到记录集的传输，将在指定的数据成员中存储值。
 
 *nMaxLength*<br/>
@@ -514,7 +514,7 @@ void RFX_Binary_Bulk(
 ### <a name="parameters"></a>参数
 
 *pFX*<br/>
-一个指向[CFieldExchange](cfieldexchange-class.md)对象。 此对象包含用于定义每次函数时的上下文的信息。 有关详细信息，请参阅文章[记录字段交换： RFX 的工作机制](../../data/odbc/record-field-exchange-how-rfx-works.md)。
+一个指向[CFieldExchange](cfieldexchange-class.md)对象。 此对象包含用于定义每次函数时的上下文的信息。 有关详细信息，请参阅文章[记录字段交换：RFX 的工作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)。
 
 *szName*<br/>
 数据列的名称。
@@ -537,7 +537,7 @@ void RFX_Binary_Bulk(
 > [!NOTE]
 >  批量记录字段交换只将数据传输从数据源到记录集对象。 为了使您的记录集可更新，您必须使用 ODBC API 函数`SQLSetPos`。
 
-有关详细信息，请参阅文章[记录集： 提取记录 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)并[记录字段交换 (RFX)](../../data/odbc/record-field-exchange-rfx.md)。
+有关详细信息，请参阅文章[记录集：提取记录 (ODBC) 批量](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)并[记录字段交换 (RFX)](../../data/odbc/record-field-exchange-rfx.md)。
 
 ### <a name="example"></a>示例
 
@@ -564,7 +564,7 @@ void RFX_Bool_Bulk(
 ### <a name="parameters"></a>参数
 
 *pFX*<br/>
-一个指向[CFieldExchange](cfieldexchange-class.md)对象。 此对象包含用于定义每次函数时的上下文的信息。 有关详细信息，请参阅文章[记录字段交换： RFX 的工作机制](../../data/odbc/record-field-exchange-how-rfx-works.md)。
+一个指向[CFieldExchange](cfieldexchange-class.md)对象。 此对象包含用于定义每次函数时的上下文的信息。 有关详细信息，请参阅文章[记录字段交换：RFX 的工作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)。
 
 *szName*<br/>
 数据列的名称。
@@ -584,7 +584,7 @@ void RFX_Bool_Bulk(
 > [!NOTE]
 >  批量记录字段交换只将数据传输从数据源到记录集对象。 若要使您的记录集可更新，必须使用 ODBC API 函数`SQLSetPos`。
 
-有关详细信息，请参阅文章[记录集： 提取记录 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)并[记录字段交换 (RFX)](../../data/odbc/record-field-exchange-rfx.md)。
+有关详细信息，请参阅文章[记录集：提取记录 (ODBC) 批量](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)并[记录字段交换 (RFX)](../../data/odbc/record-field-exchange-rfx.md)。
 
 ### <a name="example"></a>示例
 
@@ -611,7 +611,7 @@ void RFX_Byte_Bulk(
 ### <a name="parameters"></a>参数
 
 *pFX*<br/>
-一个指向[CFieldExchange](cfieldexchange-class.md)对象。 此对象包含用于定义每次函数时的上下文的信息。 有关详细信息，请参阅文章[记录字段交换： RFX 的工作机制](../../data/odbc/record-field-exchange-how-rfx-works.md)。
+一个指向[CFieldExchange](cfieldexchange-class.md)对象。 此对象包含用于定义每次函数时的上下文的信息。 有关详细信息，请参阅文章[记录字段交换：RFX 的工作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)。
 
 *szName*<br/>
 数据列的名称。
@@ -631,7 +631,7 @@ void RFX_Byte_Bulk(
 > [!NOTE]
 >  批量记录字段交换只将数据传输从数据源到记录集对象。 若要使您的记录集可更新，必须使用 ODBC API 函数`SQLSetPos`。
 
-有关详细信息，请参阅文章[记录集： 提取记录 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)并[记录字段交换 (RFX)](../../data/odbc/record-field-exchange-rfx.md)。
+有关详细信息，请参阅文章[记录集：提取记录 (ODBC) 批量](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)并[记录字段交换 (RFX)](../../data/odbc/record-field-exchange-rfx.md)。
 
 ### <a name="example"></a>示例
 
@@ -658,7 +658,7 @@ void RFX_Date_Bulk(
 ### <a name="parameters"></a>参数
 
 *pFX*<br/>
-一个指向[CFieldExchange](cfieldexchange-class.md)对象。 此对象包含用于定义每次函数时的上下文的信息。 有关详细信息，请参阅文章[记录字段交换： RFX 的工作机制](../../data/odbc/record-field-exchange-how-rfx-works.md)。
+一个指向[CFieldExchange](cfieldexchange-class.md)对象。 此对象包含用于定义每次函数时的上下文的信息。 有关详细信息，请参阅文章[记录字段交换：RFX 的工作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)。
 
 *szName*<br/>
 数据列的名称。
@@ -678,7 +678,7 @@ void RFX_Date_Bulk(
 > [!NOTE]
 >  批量记录字段交换只将数据传输从数据源到记录集对象。 若要使您的记录集可更新，必须使用 ODBC API 函数`SQLSetPos`。
 
-有关详细信息，请参阅文章[记录集： 提取记录 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)并[记录字段交换 (RFX)](../../data/odbc/record-field-exchange-rfx.md)。
+有关详细信息，请参阅文章[记录集：提取记录 (ODBC) 批量](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)并[记录字段交换 (RFX)](../../data/odbc/record-field-exchange-rfx.md)。
 
 ### <a name="example"></a>示例
 
@@ -705,7 +705,7 @@ void RFX_Double_Bulk(
 ### <a name="parameters"></a>参数
 
 *pFX*<br/>
-一个指向[CFieldExchange](cfieldexchange-class.md)对象。 此对象包含用于定义每次函数时的上下文的信息。 有关详细信息，请参阅文章[记录字段交换： RFX 的工作机制](../../data/odbc/record-field-exchange-how-rfx-works.md)。
+一个指向[CFieldExchange](cfieldexchange-class.md)对象。 此对象包含用于定义每次函数时的上下文的信息。 有关详细信息，请参阅文章[记录字段交换：RFX 的工作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)。
 
 *szName*<br/>
 数据列的名称。
@@ -725,7 +725,7 @@ void RFX_Double_Bulk(
 > [!NOTE]
 >  批量记录字段交换只将数据传输从数据源到记录集对象。 若要使您的记录集可更新，必须使用 ODBC API 函数`SQLSetPos`。
 
-有关详细信息，请参阅文章[记录集： 提取记录 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)并[记录字段交换 (RFX)](../../data/odbc/record-field-exchange-rfx.md)。
+有关详细信息，请参阅文章[记录集：提取记录 (ODBC) 批量](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)并[记录字段交换 (RFX)](../../data/odbc/record-field-exchange-rfx.md)。
 
 ### <a name="example"></a>示例
 
@@ -751,12 +751,12 @@ void RFX_Int(
 ### <a name="parameters"></a>参数
 
 *pFX*<br/>
-指向类的对象的指针[CFieldExchange](cfieldexchange-class.md)。 此对象包含用于定义每次函数时的上下文的信息。 有关操作的详细信息`CFieldExchange`可以指定对象，请参阅文章[记录字段交换： RFX 的工作机制](../../data/odbc/record-field-exchange-how-rfx-works.md)。
+指向类的对象的指针[CFieldExchange](cfieldexchange-class.md)。 此对象包含用于定义每次函数时的上下文的信息。 有关操作的详细信息`CFieldExchange`可以指定对象，请参阅文章[记录字段交换：RFX 的工作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)。
 
 *szName*<br/>
 数据列的名称。
 
-*value*<br/>
+*值*<br/>
 存储在指定的数据成员中的值（要传输的值）。 对于从记录集到数据源，类型的值的传输**int**，则来自指定的数据成员。 对于从数据源得到记录集的传输，将在指定的数据成员中存储值。
 
 ### <a name="example"></a>示例
@@ -784,7 +784,7 @@ void RFX_Long_Bulk(
 ### <a name="parameters"></a>参数
 
 *pFX*<br/>
-一个指向[CFieldExchange](cfieldexchange-class.md)对象。 此对象包含用于定义每次函数时的上下文的信息。 有关详细信息，请参阅文章[记录字段交换： RFX 的工作机制](../../data/odbc/record-field-exchange-how-rfx-works.md)。
+一个指向[CFieldExchange](cfieldexchange-class.md)对象。 此对象包含用于定义每次函数时的上下文的信息。 有关详细信息，请参阅文章[记录字段交换：RFX 的工作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)。
 
 *szName*<br/>
 数据列的名称。
@@ -804,7 +804,7 @@ void RFX_Long_Bulk(
 > [!NOTE]
 >  批量记录字段交换只将数据传输从数据源到记录集对象。 若要使您的记录集可更新，必须使用 ODBC API 函数`SQLSetPos`。
 
-有关详细信息，请参阅文章[记录集： 提取记录 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)并[记录字段交换 (RFX)](../../data/odbc/record-field-exchange-rfx.md)。
+有关详细信息，请参阅文章[记录集：提取记录 (ODBC) 批量](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)并[记录字段交换 (RFX)](../../data/odbc/record-field-exchange-rfx.md)。
 
 ### <a name="example"></a>示例
 
@@ -831,7 +831,7 @@ void RFX_Single_Bulk(
 ### <a name="parameters"></a>参数
 
 *pFX*<br/>
-一个指向[CFieldExchange](cfieldexchange-class.md)对象。 此对象包含用于定义每次函数时的上下文的信息。 有关详细信息，请参阅文章[记录字段交换： RFX 的工作机制](../../data/odbc/record-field-exchange-how-rfx-works.md)。
+一个指向[CFieldExchange](cfieldexchange-class.md)对象。 此对象包含用于定义每次函数时的上下文的信息。 有关详细信息，请参阅文章[记录字段交换：RFX 的工作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)。
 
 *szName*<br/>
 数据列的名称。
@@ -851,7 +851,7 @@ void RFX_Single_Bulk(
 > [!NOTE]
 >  批量记录字段交换只将数据传输从数据源到记录集对象。 若要使您的记录集可更新，必须使用 ODBC API 函数`SQLSetPos`。
 
-有关详细信息，请参阅文章[记录集： 提取记录 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)并[记录字段交换 (RFX)](../../data/odbc/record-field-exchange-rfx.md)。
+有关详细信息，请参阅文章[记录集：提取记录 (ODBC) 批量](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)并[记录字段交换 (RFX)](../../data/odbc/record-field-exchange-rfx.md)。
 
 ### <a name="example"></a>示例
 
@@ -879,7 +879,7 @@ void RFX_Text_Bulk(
 ### <a name="parameters"></a>参数
 
 *pFX*<br/>
-一个指向[CFieldExchange](cfieldexchange-class.md)对象。 此对象包含用于定义每次函数时的上下文的信息。 有关详细信息，请参阅文章[记录字段交换： RFX 的工作机制](../../data/odbc/record-field-exchange-how-rfx-works.md)。
+一个指向[CFieldExchange](cfieldexchange-class.md)对象。 此对象包含用于定义每次函数时的上下文的信息。 有关详细信息，请参阅文章[记录字段交换：RFX 的工作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)。
 
 *szName*<br/>
 数据列的名称。
@@ -902,7 +902,7 @@ void RFX_Text_Bulk(
 > [!NOTE]
 >  批量记录字段交换只将数据传输从数据源到记录集对象。 若要使您的记录集可更新，必须使用 ODBC API 函数`SQLSetPos`。
 
-有关详细信息，请参阅文章[记录集： 提取记录 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)并[记录字段交换 (RFX)](../../data/odbc/record-field-exchange-rfx.md)。
+有关详细信息，请参阅文章[记录集：提取记录 (ODBC) 批量](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)并[记录字段交换 (RFX)](../../data/odbc/record-field-exchange-rfx.md)。
 
 ### <a name="example"></a>示例
 
@@ -950,7 +950,7 @@ void AFXAPI DFX_Binary(
 *szName*<br/>
 数据列的名称。
 
-*value*<br/>
+*值*<br/>
 存储在指定的数据成员中的值（要传输的值）。 对于从记录集到数据源，类型的值的传输[CByteArray](cbytearray-class.md)，则来自指定的数据成员。 对于从数据源得到记录集的传输，将在指定的数据成员中存储值。
 
 *nPreAllocSize*<br/>
@@ -996,7 +996,7 @@ void AFXAPI DFX_Bool(
 *szName*<br/>
 数据列的名称。
 
-*value*<br/>
+*值*<br/>
 存储在指定的数据成员中的值（要传输的值）。 从记录集传输到数据源后，对于类型 BOOL 的值执行从指定的数据成员。 对于从数据源得到记录集的传输，将在指定的数据成员中存储值。
 
 *dwBindOptions*<br/>
@@ -1039,7 +1039,7 @@ void AFXAPI DFX_Byte(
 *szName*<br/>
 数据列的名称。
 
-*value*<br/>
+*值*<br/>
 存储在指定的数据成员中的值（要传输的值）。 对于从记录集传输到数据源后，BYTE，类型的值执行从指定的数据成员。 对于从数据源得到记录集的传输，将在指定的数据成员中存储值。
 
 *dwBindOptions*<br/>
@@ -1082,7 +1082,7 @@ void AFXAPI DFX_Currency(
 *szName*<br/>
 数据列的名称。
 
-*value*<br/>
+*值*<br/>
 存储在指定的数据成员中的值（要传输的值）。 对于从记录集传输到数据源后，此值执行从指定的数据成员的类型[COleCurrency](colecurrency-class.md)。 对于从数据源得到记录集的传输，将在指定的数据成员中存储值。
 
 *dwBindOptions*<br/>
@@ -1125,7 +1125,7 @@ void AFXAPI DFX_DateTime(
 *szName*<br/>
 数据列的名称。
 
-*value*<br/>
+*值*<br/>
 存储在指定的数据成员中的值（要传输的值）。 该函数将引用[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)对象。 对于从记录集传输到数据源后，此值执行从指定的数据成员。 对于从数据源得到记录集的传输，将在指定的数据成员中存储值。
 
 *dwBindOptions*<br/>
@@ -1171,7 +1171,7 @@ void AFXAPI DFX_Double(
 *szName*<br/>
 数据列的名称。
 
-*value*<br/>
+*值*<br/>
 存储在指定的数据成员中的值（要传输的值）。 对于从记录集到数据源，类型的值的传输**double**，则来自指定的数据成员。 对于从数据源得到记录集的传输，将在指定的数据成员中存储值。
 
 *dwBindOptions*<br/>
@@ -1214,7 +1214,7 @@ void AFXAPI DFX_Long(
 *szName*<br/>
 数据列的名称。
 
-*value*<br/>
+*值*<br/>
 存储在指定的数据成员中的值（要传输的值）。 对于从记录集到数据源，类型的值的传输**长**，则来自指定的数据成员。 对于从数据源得到记录集的传输，将在指定的数据成员中存储值。
 
 *dwBindOptions*<br/>
@@ -1258,7 +1258,7 @@ void AFXAPI DFX_LongBinary(
 *szName*<br/>
 数据列的名称。
 
-*value*<br/>
+*值*<br/>
 存储在指定的数据成员中的值（要传输的值）。 对于从记录集到数据源，类型的值的传输[CLongBinary](clongbinary-class.md)，则来自指定的数据成员。 对于从数据源得到记录集的传输，将在指定的数据成员中存储值。
 
 *dwPreAllocSize*<br/>
@@ -1304,7 +1304,7 @@ void AFXAPI DFX_Short(
 *szName*<br/>
 数据列的名称。
 
-*value*<br/>
+*值*<br/>
 存储在指定的数据成员中的值（要传输的值）。 对于从记录集到数据源，类型的值的传输**短**，则来自指定的数据成员。 对于从数据源得到记录集的传输，将在指定的数据成员中存储值。
 
 *dwBindOptions*<br/>
@@ -1350,7 +1350,7 @@ void AFXAPI DFX_Single(
 *szName*<br/>
 数据列的名称。
 
-*value*<br/>
+*值*<br/>
 存储在指定的数据成员中的值（要传输的值）。 对于从记录集到数据源，类型的值的传输**float**，则来自指定的数据成员。 对于从数据源得到记录集的传输，将在指定的数据成员中存储值。
 
 *dwBindOptions*<br/>
@@ -1394,7 +1394,7 @@ void AFXAPI DFX_Text(
 *szName*<br/>
 数据列的名称。
 
-*value*<br/>
+*值*<br/>
 存储在指定的数据成员中的值（要传输的值）。 对于从记录集到数据源，类型的值的传输[CString](../../atl-mfc-shared/reference/cstringt-class.md)，则来自指定的数据成员。 对于从数据源得到记录集的传输，将在指定的数据成员中存储值。
 
 *nPreAllocSize*<br/>
@@ -1440,4 +1440,3 @@ void CCustSet::DoFieldExchange(CDaoFieldExchange* pFX)
 [CRecordset::DoFieldExchange](crecordset-class.md#dofieldexchange)<br/>
 [CRecordset::DoBulkFieldExchange](crecordset-class.md#dobulkfieldexchange)<br/>
 [CDaoRecordset::DoFieldExchange](cdaorecordset-class.md#dofieldexchange)
-

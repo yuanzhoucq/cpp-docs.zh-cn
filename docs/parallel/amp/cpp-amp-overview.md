@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, overview
 - C++ Accelerated Massive Parallelism
 ms.assetid: 9e593b06-6e3c-43e9-8bae-6d89efdd39fc
-ms.openlocfilehash: 26f24e922769a565c88264032373662116eee290
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: da77e2ba93554cb65d4cc92353d05d54467b50d4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176986"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269638"
 ---
 # <a name="c-amp-overview"></a>C++ AMP 概述
 
@@ -54,9 +54,9 @@ void StandardMethod() {
 
 代码的重要部分如下所示：
 
-- 数据： 数据包括三个数组。 所有具有相同的秩 (1) 和长度 (5)。
+- 数据：数据包括三个数组。 所有具有相同的秩 (1) 和长度 (5)。
 
-- 迭代： 第一个`for`循环提供了用于循环访问数组中元素的机制。 你想要执行以计算总和的代码包含在第一个`for`块。
+- 迭代:第一个`for`循环提供了用于循环访问数组中元素的机制。 你想要执行以计算总和的代码包含在第一个`for`块。
 
 - 索引：`idx`变量访问数组的各个元素。
 
@@ -98,11 +98,11 @@ void CppAmpMethod() {
 
 相同的基本元素不存在，但使用 c + + AMP 构造：
 
-- 数据： 使用 c + + 数组构造三个 c + + AMP [array_view](../../parallel/amp/reference/array-view-class.md)对象。 提供四个值来构造`array_view`对象： 数据值、 秩、 元素类型和长度的`array_view`每个维度中的对象。 等级和类型作为类型参数传递。 数据和长度作为构造函数参数传递。 在此示例中，传递给构造函数的 c + + 数组是一维的。 等级和长度用于构造中的数据的矩形形状`array_view`对象和值用于填充数组的数据。 运行时库还包括[array 类](../../parallel/amp/reference/array-class.md)，其中包含类似于一个接口`array_view`类和更高版本在本文中讨论。
+- 数据：使用 c + + 数组构造三个 c + + AMP [array_view](../../parallel/amp/reference/array-view-class.md)对象。 提供四个值来构造`array_view`对象： 数据值、 秩、 元素类型和长度的`array_view`每个维度中的对象。 等级和类型作为类型参数传递。 数据和长度作为构造函数参数传递。 在此示例中，传递给构造函数的 c + + 数组是一维的。 等级和长度用于构造中的数据的矩形形状`array_view`对象和值用于填充数组的数据。 运行时库还包括[array 类](../../parallel/amp/reference/array-class.md)，其中包含类似于一个接口`array_view`类和更高版本在本文中讨论。
 
-- 迭代： [parallel_for_each 函数 (c + + AMP)](reference/concurrency-namespace-functions-amp.md#parallel_for_each)提供了一种机制，用于循环访问的数据元素，或*计算域*。 在此示例中，计算域由`sum.extent`。 你想要执行的代码包含在 lambda 表达式，或*内核函数*。 `restrict(amp)`指示使用仅 c + + AMP 可以加快的 c + + 语言的子集。
+- 迭代:[Parallel_for_each 函数 (c + + AMP)](reference/concurrency-namespace-functions-amp.md#parallel_for_each)提供了一种机制，用于循环访问的数据元素，或*计算域*。 在此示例中，计算域由`sum.extent`。 你想要执行的代码包含在 lambda 表达式，或*内核函数*。 `restrict(amp)`指示使用仅 c + + AMP 可以加快的 c + + 语言的子集。
 
-- 索引： [index 类](../../parallel/amp/reference/index-class.md)变量`idx`，声明了一个要匹配的秩的一个级别`array_view`对象。 通过使用索引，您可以访问的各个元素`array_view`对象。
+- 索引：[Index 类](../../parallel/amp/reference/index-class.md)变量`idx`，声明了一个要匹配的秩的一个级别`array_view`对象。 通过使用索引，您可以访问的各个元素`array_view`对象。
 
 ## <a name="shaping-and-indexing-data-index-and-extent"></a>形成和索引数据: index 和 extent
 
@@ -354,7 +354,7 @@ void AddArraysWithFunction() {
 }
 ```
 
-## <a name="accelerating-code-tiles-and-barriers"></a>加速代码: 平铺和屏障
+## <a name="accelerating-code-tiles-and-barriers"></a>加速代码：平铺和屏障
 
 可以通过使用平铺来获取额外的加速。 平铺将线程划分为相等的矩形子集或*磁贴*。 确定合适的平铺大小根据您的数据集和您编码的算法。 对于每个线程，您可以访问*全局*相对于整个数据元素的位置`array`或`array_view`并访问*本地*平铺的位置。 使用本地索引值可以简化你的代码，因为无需编写代码，以便转换到本地的索引值从全局。 若要使用平铺，调用[extent:: tile 方法](reference/extent-class.md#tile)中的计算域上`parallel_for_each`方法，并使用[tiled_index](../../parallel/amp/reference/tiled-index-class.md) lambda 表达式中的对象。
 
@@ -457,19 +457,19 @@ void MathExample() {
 
 C + + AMP 包括为加速的图形编程设计的图形库。 仅在支持本地图形功能的设备上使用此库。 方法是在[concurrency:: graphics Namespace](../../parallel/amp/reference/concurrency-graphics-namespace.md)和包含在\<amp_graphics.h > 标头文件。 图形库的关键组件包括：
 
-- [texture 类](../../parallel/amp/reference/texture-class.md)： 可以使用纹理类从内存或从文件创建纹理。 纹理类似于数组，因为它们包含的数据，并且它们类似于 c + + 标准库分配和复制构造方面中的容器。 有关详细信息，请参阅 [C++ 标准库容器](../../standard-library/stl-containers.md)。 有关模板参数`texture`类是元素类型和秩。 秩可以是 1、 2 或 3。 元素类型可以是本文稍后介绍的短矢量类型之一。
+- [texture 类](../../parallel/amp/reference/texture-class.md):纹理类可用于从内存或从文件创建纹理。 纹理类似于数组，因为它们包含的数据，并且它们类似于 c + + 标准库分配和复制构造方面中的容器。 有关详细信息，请参阅 [C++ 标准库容器](../../standard-library/stl-containers.md)。 有关模板参数`texture`类是元素类型和秩。 秩可以是 1、 2 或 3。 元素类型可以是本文稍后介绍的短矢量类型之一。
 
-- [writeonly_texture_view 类](../../parallel/amp/reference/writeonly-texture-view-class.md)： 提供对任何纹理的只写访问。
+- [writeonly_texture_view 类](../../parallel/amp/reference/writeonly-texture-view-class.md):提供对任何纹理的只写访问。
 
-- 短矢量库： 定义一组的短矢量类型的长度 2、 3 和 4 上，基于**int**， `uint`， **float**， **double**，[范数](../../parallel/amp/reference/norm-class.md)，或[unorm](../../parallel/amp/reference/unorm-class.md)。
+- 短矢量库：定义一组的短矢量类型的长度 2、 3 和 4 上，基于**int**， `uint`， **float**， **double**， [norm](../../parallel/amp/reference/norm-class.md)，或[unorm](../../parallel/amp/reference/unorm-class.md)。
 
-## <a name="universal-windows-platform-uwp-apps"></a>通用 Windows 平台 (UWP) 应用程序
+## <a name="universal-windows-platform-uwp-apps"></a>通用 Windows 平台 (UWP) 应用
 
 像其他 c + + 库，可以在 UWP 应用中使用 c + + AMP。 这些文章介绍了如何在应用中包含 c + + AMP 代码通过使用 c + +、 C#、 Visual Basic 或 JavaScript 创建的：
 
 - [在 UWP 应用中使用 C++ AMP](../../parallel/amp/using-cpp-amp-in-windows-store-apps.md)
 
-- [演练： 在 c + + 中创建一个基本的 Windows 运行时组件并从 JavaScript 调用它](http://go.microsoft.com/fwlink/p/?linkid=249077)
+- [演练：在 c + + 中创建一个基本的 Windows 运行时组件并从 JavaScript 调用它](http://go.microsoft.com/fwlink/p/?linkid=249077)
 
 - [必应地图行程优化器中 JavaScript 和 c + + 的 Windows 应用商店应用](http://go.microsoft.com/fwlink/p/?linkid=249078)
 

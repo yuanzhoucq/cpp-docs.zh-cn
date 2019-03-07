@@ -40,12 +40,12 @@ f1_keywords:
 helpviewer_keywords:
 - accelerator class
 ms.assetid: 37eed593-cf87-4611-9cdc-e98df6c2377a
-ms.openlocfilehash: 2045d2d1c6a848378ac55114b61177d386b14fab
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 31008b398d17ac0c226f9359745067c4fefc08a9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523918"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326607"
 ---
 # <a name="accelerator-class"></a>accelerator 类
 
@@ -133,7 +133,7 @@ class accelerator;
 
 **命名空间：** 并发
 
-##  <a name="dtor"></a> </a> ~ accelerator
+##  <a name="dtor"></a> </a> ~accelerator
 
 销毁`accelerator`对象。
 
@@ -286,7 +286,8 @@ size_t get_dedicated_memory() const;
 
 ### <a name="return-value"></a>返回值
 
-`accelerator` 的专用内存（单位为 KB）。
+
+  `accelerator` 的专用内存（单位为 KB）。
 
 ##  <a name="get_default_cpu_access_type"></a> get_default_cpu_access_type
 
@@ -322,7 +323,8 @@ std::wstring get_description() const;
 
 ### <a name="return-value"></a>返回值
 
-`accelerator` 设备的简短说明。
+
+  `accelerator` 设备的简短说明。
 
 ##  <a name="get_device_path"></a> get_device_path
 
@@ -505,7 +507,7 @@ static inline bool set_default(std::wstring _Path);
 
 ### <a name="parameters"></a>参数
 
-*路径 （_p)*<br/>
+*_Path*<br/>
 快捷键的路径。
 
 ### <a name="return-value"></a>返回值
@@ -561,7 +563,7 @@ __declspec(property(get= get_supports_limited_double_precision)) bool supports_l
 __declspec(property(get= get_version)) unsigned int version;
 ```
 
-##  <a name="dtor"></a> </a> ~ accelerator_view
+##  <a name="dtor"></a> </a> ~accelerator_view
 
 销毁[accelerator_view](accelerator-view-class.md)对象。
 
@@ -604,7 +606,7 @@ concurrency::completion_future create_marker();
 
 将来以跟踪到此提交到目前为止的所有命令的完成`accelerator_view`对象。
 
-##  <a name="flush"></a> 刷新
+##  <a name="flush"></a> flush
 
 提交所有挂起命令列入[accelerator_view](accelerator-view-class.md)给快捷键用于执行对象。
 
@@ -662,7 +664,8 @@ queuing_mode get_queuing_mode() const;
 
 ### <a name="return-value"></a>返回值
 
-`accelerator_view` 对象的排队模式。
+
+  `accelerator_view` 对象的排队模式。
 
 ##  <a name="get_version"></a> get_version
 

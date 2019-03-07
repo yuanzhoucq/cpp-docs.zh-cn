@@ -18,12 +18,12 @@ helpviewer_keywords:
 - OLE controls [MFC], DDX functions
 - DDX (dialog data exchange), OLE support
 ms.assetid: 7ef1f288-ff65-40d4-aad2-5497bc00bb27
-ms.openlocfilehash: 5d330d8dd423927a3f4abbe6475a8d6219fa9af2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: df96d44cefeb15d89653538c3006d109a97a21a7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50531243"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298251"
 ---
 # <a name="dialog-data-exchange-functions-for-ole-controls"></a>OLE 控件的对话框数据交换函数
 
@@ -69,7 +69,7 @@ void AFXAPI DDX_OCBool(
 *dispid*<br/>
 该控件的属性的调度 ID。
 
-*value*<br/>
+*值*<br/>
 对与其交换数据的对话框、窗体视图或控件视图对象的成员变量的引用。
 
 ### <a name="remarks"></a>备注
@@ -103,7 +103,7 @@ void AFXAPI DDX_OCBoolRO(
 *dispid*<br/>
 该控件的属性的调度 ID。
 
-*value*<br/>
+*值*<br/>
 对与其交换数据的对话框、窗体视图或控件视图对象的成员变量的引用。
 
 ### <a name="remarks"></a>备注
@@ -137,7 +137,7 @@ void AFXAPI DDX_OCColor(
 *dispid*<br/>
 该控件的属性的调度 ID。
 
-*value*<br/>
+*值*<br/>
 对与其交换数据的对话框、窗体视图或控件视图对象的成员变量的引用。
 
 ### <a name="remarks"></a>备注
@@ -171,7 +171,7 @@ void AFXAPI DDX_OCColorRO(
 *dispid*<br/>
 该控件的属性的调度 ID。
 
-*value*<br/>
+*值*<br/>
 对与其交换数据的对话框、窗体视图或控件视图对象的成员变量的引用。
 
 ### <a name="remarks"></a>备注
@@ -211,7 +211,7 @@ void AFXAPI DDX_OCFloat(
 *dispid*<br/>
 该控件的属性的调度 ID。
 
-*value*<br/>
+*值*<br/>
 对与其交换数据的对话框、窗体视图或控件视图对象的成员变量的引用。
 
 ### <a name="remarks"></a>备注
@@ -251,7 +251,7 @@ void AFXAPI DDX_OCFloatRO(
 *dispid*<br/>
 该控件的属性的调度 ID。
 
-*value*<br/>
+*值*<br/>
 对与其交换数据的对话框、窗体视图或控件视图对象的成员变量的引用。
 
 ### <a name="remarks"></a>备注
@@ -291,7 +291,7 @@ void AFXAPI DDX_OCInt(
 *dispid*<br/>
 该控件的属性的调度 ID。
 
-*value*<br/>
+*值*<br/>
 对与其交换数据的对话框、窗体视图或控件视图对象的成员变量的引用。
 
 ### <a name="remarks"></a>备注
@@ -331,7 +331,7 @@ void AFXAPI DDX_OCIntRO(
 *dispid*<br/>
 该控件的属性的调度 ID。
 
-*value*<br/>
+*值*<br/>
 对与其交换数据的对话框、窗体视图或控件视图对象的成员变量的引用。
 
 ### <a name="remarks"></a>备注
@@ -365,7 +365,7 @@ void AFXAPI DDX_OCShort(
 *dispid*<br/>
 该控件的属性的调度 ID。
 
-*value*<br/>
+*值*<br/>
 对与其交换数据的对话框、窗体视图或控件视图对象的成员变量的引用。
 
 ### <a name="remarks"></a>备注
@@ -399,7 +399,7 @@ void AFXAPI DDX_OCShortRO(
 *dispid*<br/>
 该控件的属性的调度 ID。
 
-*value*<br/>
+*值*<br/>
 对与其交换数据的对话框、窗体视图或控件视图对象的成员变量的引用。
 
 ### <a name="remarks"></a>备注
@@ -433,7 +433,7 @@ void AFXAPI DDX_OCText(
 *dispid*<br/>
 该控件的属性的调度 ID。
 
-*value*<br/>
+*值*<br/>
 对与其交换数据的对话框、窗体视图或控件视图对象的成员变量的引用。
 
 ### <a name="remarks"></a>备注
@@ -467,7 +467,7 @@ void AFXAPI DDX_OCTextRO(
 *dispid*<br/>
 该控件的属性的调度 ID。
 
-*value*<br/>
+*值*<br/>
 对与其交换数据的对话框、窗体视图或控件视图对象的成员变量的引用。
 
 ### <a name="remarks"></a>备注

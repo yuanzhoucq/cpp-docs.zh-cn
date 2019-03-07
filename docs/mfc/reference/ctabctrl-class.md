@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CTabCtrl [MFC], SetPadding
 - CTabCtrl [MFC], SetToolTips
 ms.assetid: 42e4aff6-46ae-4b2c-beaa-d1dce8d82138
-ms.openlocfilehash: ae3daff2582b9e58cc325304fac449423fb673a0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ccf35c7a036a69487d5138baf8c017f9c5995bef
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50621424"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57425011"
 ---
 # <a name="ctabctrl-class"></a>CTabCtrl 类
 
@@ -120,7 +120,7 @@ class CTabCtrl : public CWnd
 |[CTabCtrl::GetToolTips](#gettooltips)|检索与选项卡控件关联的工具提示控件的句柄。|
 |[CTabCtrl::HighlightItem](#highlightitem)|设置选项卡项的突出显示状态。|
 |[CTabCtrl::HitTest](#hittest)|确定哪些选项卡上，如果有，为指定的屏幕位置。|
-|[Ctabctrl:: Insertitem](#insertitem)|在选项卡控件中插入一个新选项卡。|
+|[CTabCtrl::InsertItem](#insertitem)|在选项卡控件中插入一个新选项卡。|
 |[CTabCtrl::RemoveImage](#removeimage)|从选项卡控件的图像列表中移除图像。|
 |[CTabCtrl::SetCurFocus](#setcurfocus)|将焦点设置到指定的选项卡中选项卡控件。|
 |[CTabCtrl::SetCurSel](#setcursel)|在选项卡控件中选择一个选项卡。|
@@ -170,7 +170,7 @@ void AdjustRect(BOOL bLarger,   LPRECT lpRect);
 指示要执行哪些操作。 如果此参数为 TRUE， *lpRect*指定显示矩形，并接收相应的窗口矩形。 如果此参数为 FALSE 时， *lpRect*指定窗口矩形，并接收相应显示矩形。
 
 *lpRect*<br/>
-指向[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构，它指定给定的矩形并接收的计算的矩形。
+指向[RECT](/previous-versions/dd162897\(v=vs.85\))结构，它指定给定的矩形并接收的计算的矩形。
 
 ### <a name="example"></a>示例
 
@@ -194,7 +194,7 @@ virtual BOOL Create(
 指定选项卡控件的样式。 应用的任意组合[选项卡控件样式](/windows/desktop/Controls/tab-control-styles)Windows SDK 中所述。 请参阅**备注**还可以应用到控件的窗口样式的列表。
 
 *rect*<br/>
-指定选项卡控件的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构。
+指定选项卡控件的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT](/previous-versions/dd162897\(v=vs.85\))结构。
 
 *pParentWnd*<br/>
 通常指定选项卡控件的父窗口， `CDialog`。 它不能为 NULL。
@@ -250,7 +250,7 @@ virtual BOOL CreateEx(
 指定选项卡控件的样式。 应用的任意组合[选项卡控件样式](/windows/desktop/Controls/tab-control-styles)Windows SDK 中所述。 请参阅**备注**中[创建](#create)还可以应用到控件的窗口样式的列表。
 
 *rect*<br/>
-对引用[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构的结构描述的大小和窗口的工作区中创建的位置*pParentWnd*。
+对引用[RECT](/previous-versions/dd162897\(v=vs.85\))结构的结构描述的大小和窗口的工作区中创建的位置*pParentWnd*。
 
 *pParentWnd*<br/>
 指向控件的父级的窗口的指针。
@@ -485,7 +485,7 @@ BOOL GetItemRect(int nItem,   LPRECT lpRect) const;
 该选项卡项的从零开始的索引。
 
 *lpRect*<br/>
-指向[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构，它接收的边框的选项卡。这些坐标使用视区的当前映射模式。
+指向[RECT](/previous-versions/dd162897\(v=vs.85\))结构，它接收的边框的选项卡。这些坐标使用视区的当前映射模式。
 
 ### <a name="return-value"></a>返回值
 
@@ -517,7 +517,7 @@ DWORD GetItemState(
 
 对接收的状态信息的 DWORD 值的引用。 可以是以下值之一：
 
-|“值”|描述|
+|值|描述|
 |-----------|-----------------|
 |TCIS_BUTTONPRESSED|选择该选项卡控件项。|
 |TCIS_HIGHLIGHTED|突出显示该选项卡控件项，并使用当前突出显示颜色绘制选项卡和文本。 在使用突出显示颜色，这将是 true 的内插，不是抖色的颜色。|
@@ -599,7 +599,7 @@ int HitTest(TCHITTESTINFO* pHitTestInfo) const;
 
 如果没有选项卡在指定的位置，则返回选项卡或 1 的从零开始的索引。
 
-##  <a name="insertitem"></a>  Ctabctrl:: Insertitem
+##  <a name="insertitem"></a>  CTabCtrl::InsertItem
 
 在现有选项卡控件中插入一个新选项卡。
 
@@ -858,7 +858,7 @@ BOOL SetItemState(
 *dwState*<br/>
 对包含的状态信息的 DWORD 值的引用。 可以是以下值之一：
 
-|“值”|描述|
+|值|描述|
 |-----------|-----------------|
 |TCIS_BUTTONPRESSED|选择该选项卡控件项。|
 |TCIS_HIGHLIGHTED|突出显示该选项卡控件项，并使用当前突出显示颜色绘制选项卡和文本。 在使用突出显示颜色，这将是 true 的内插，不是抖色的颜色。|

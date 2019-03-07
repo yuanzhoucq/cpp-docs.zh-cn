@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -SUBSYSTEM linker option
 - subsystem specifications
 ms.assetid: d7b133cf-cf22-4da8-ab46-6552702c0b9b
-ms.openlocfilehash: 3d808f86a9ea3b34da0dccae18ecc000ca364f0a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0b6a8a841cefcd519cbeeae9f3355d72e1bbf286
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50518386"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57417003"
 ---
 # <a name="subsystem-specify-subsystem"></a>/SUBSYSTEM（指定子系统）
 
@@ -41,7 +41,7 @@ Win32 字符模式应用程序。 操作系统提供为控制台应用程序提�
 **EFI_RUNTIME_DRIVER**<br/>
 可扩展固件接口子系统中。 请参阅 EFI 规范的详细信息。 有关示例，请参阅 Intel 网站。 最小和默认版本为 1.0。
 
-**本机**<br/>
+**NATIVE**<br/>
 用于 Windows NT 内核模式驱动程序。 此选项通常预留给 Windows 系统组件。 如果[/driver: wdm](../../build/reference/driver-windows-nt-kernel-mode-driver.md)指定，本机模式是默认值。
 
 **POSIX**<br/>
@@ -64,12 +64,12 @@ Win32 字符模式应用程序。 操作系统提供为控制台应用程序提�
 |子系统|最低|默认|
 |---------------|-------------|-------------|
 |BOOT_APPLICATION|1.0|1.0|
-|CONSOLE|5.01 (x86) (x64) 5.02 6.02 (ARM)|（x86、 x64） 6.00 6.02 (ARM)|
-|窗口|5.01 (x86) (x64) 5.02 6.02 (ARM)|（x86、 x64） 6.00 6.02 (ARM)|
+|CONSOLE|5.01 (x86) 5.02 (x64) 6.02 (ARM)|（x86、 x64） 6.00 6.02 (ARM)|
+|窗口|5.01 (x86) 5.02 (x64) 6.02 (ARM)|（x86、 x64） 6.00 6.02 (ARM)|
 |本机 （带驱动程序： WDM)|(x86) 1.00 1.10 (x64、 ARM)|(x86) 1.00 1.10 (x64、 ARM)|
-|本机 （不带 /driver: wdm)|4.00 (x86) (x64) 5.02 6.02 (ARM)|4.00 (x86) (x64) 5.02 6.02 (ARM)|
+|本机 （不带 /driver: wdm)|4.00 (x86) 5.02 (x64) 6.02 (ARM)|4.00 (x86) 5.02 (x64) 6.02 (ARM)|
 |POSIX|1.0|19.90|
-|EFI_APPLICATION，EFI_BOOT_SERVICE_DRIVER，EFI_ROM EFI_RUNTIME_DRIVER|1.0|1.0|
+|EFI_APPLICATION, EFI_BOOT_SERVICE_DRIVER, EFI_ROM, EFI_RUNTIME_DRIVER|1.0|1.0|
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此链接器选项
 

@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CMFCHeaderCtrl [MFC], OnDrawSortArrow
 - CMFCHeaderCtrl [MFC], OnFillBackground
 ms.assetid: 2f5fbf7b-5c75-42db-9216-640b1628f777
-ms.openlocfilehash: 10d7dda39223e1d6206d2ede96874d9d546c8776
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 86674e086da482e59b2711f5ba9154848ff05a6f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50538497"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269430"
 ---
 # <a name="cmfcheaderctrl-class"></a>CListCtrl
 
@@ -116,7 +116,7 @@ CMFCHeaderCtrl::CMFCHeaderCtrl()
 
 此构造函数初始化为指定值的以下成员变量：
 
-|成员变量|“值”|
+|成员变量|值|
 |---------------------|-----------|
 |`m_bIsMousePressed`|false|
 |`m_bMultipleSort`|false|
@@ -160,7 +160,7 @@ int GetColumnState(int iColumn) const;
 
 一个值，指示指定列的排序状态。 下表列出了可能的值：
 
-|“值”|描述|
+|值|描述|
 |-----------|-----------------|
 |-1|按降序排序。|
 |0|未排序。|
@@ -323,7 +323,7 @@ void SetSortColumn(
 *bAscending*<br/>
 [in]指定列的排序顺序的*iColumn*参数指定。 为 TRUE，则设置按升序顺序;为 FALSE，则设置按降序排序。 默认值为 TRUE。
 
-*b 将*<br/>
+*bAdd*<br/>
 [in]如果为列的排序顺序设置*iColumn*参数指定。
 
 如果当前的标头控件处于*多个列的排序*模式下，此方法将指定的列添加到对列进行排序的列表。 使用[CMFCHeaderCtrl::EnableMultipleSort](#enablemultiplesort)设置多个列排序模式。

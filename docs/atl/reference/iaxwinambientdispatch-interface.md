@@ -35,12 +35,12 @@ f1_keywords:
 helpviewer_keywords:
 - IAxWinAmbientDispatch interface
 ms.assetid: 55ba6f7b-7a3c-4792-ae47-c8a84b683ca9
-ms.openlocfilehash: f143b2c58159d1bb0812152c68d3c31153d4570d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 85a8f1d41c6c54f94b500807a1e4ca504206f56a
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467426"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57425648"
 ---
 # <a name="iaxwinambientdispatch-interface"></a>IAxWinAmbientDispatch 接口
 
@@ -94,7 +94,7 @@ interface IAxWinAmbientDispatch : IDispatch
 
 此接口由 ATL 的 ActiveX 控件承载对象公开。 将可用的环境属性设置为所承载的控件或指定容器的行为的其他方面此接口上调用的方法。 若要通过所提供的属性来对补充`IAxWinAmbientDispatch`，使用[IAxWinAmbientDispatchEx](../../atl/reference/iaxwinambientdispatchex-interface.md)。
 
-[AXHost](https://msdn.microsoft.com/library/system.windows.forms.axhost.aspx)会尝试加载有关类型信息`IAxWinAmbientDispatch`和`IAxWinAmbientDispatchEx`从类型库包含的代码。
+<xref:System.Windows.Forms.AxHost> 有关加载的类型信息将尝试`IAxWinAmbientDispatch`和`IAxWinAmbientDispatchEx`从类型库包含的代码。
 
 如果要链接到 ATL90.dll， **AXHost**将从类型库 DLL 中加载的类型信息。
 
@@ -698,4 +698,3 @@ ATL 主机对象实现使用此属性的默认值为 VARIANT_TRUE。
 [IAxWinHostWindow 接口](../../atl/reference/iaxwinhostwindow-interface.md)<br/>
 [CAxWindow::QueryHost](../../atl/reference/caxwindow-class.md#queryhost)<br/>
 [AtlAxGetHost](composite-control-global-functions.md#atlaxgethost)
-

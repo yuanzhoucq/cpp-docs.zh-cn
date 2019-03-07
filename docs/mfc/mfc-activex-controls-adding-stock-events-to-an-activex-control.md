@@ -42,12 +42,12 @@ helpviewer_keywords:
 - EVENT_STOCK_READYSTATECHANGE event
 - EVENT_STOCK_KEYPRESS event
 ms.assetid: 3eeadc67-4b3d-4444-8caa-53054073988a
-ms.openlocfilehash: d224bfada94878fcec69b0675bd0faa03575ed27
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9f6f3c63f0436296791df428c704bce96eca3ec0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50540005"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291114"
 ---
 # <a name="mfc-activex-controls-adding-stock-events-to-an-activex-control"></a>MFC ActiveX 控件：向 ActiveX 控件添加常用事件
 
@@ -61,16 +61,16 @@ ms.locfileid: "50540005"
 
 |事件|触发函数|注释|
 |-----------|---------------------|--------------|
-|单击|**void FireClick （)**|触发时控制捕获鼠标，任何**BUTTONUP**接收 （左侧、 中间或右侧） 消息，并在控件上释放该按钮。 此事件之前发生的股票鼠标按下和 MouseUp 事件。<br /><br /> 事件映射条目： **EVENT_STOCK_CLICK （)**|
-|DblClick|**void FireDblClick （)**|单击与类似但时引发的**BUTTONDBLCLK**接收消息。<br /><br /> 事件映射条目： **EVENT_STOCK_DBLCLICK （)**|
-|Error|**void FireError (SCODE***scode* **，LPCSTR** `lpszDescription` **，UINT**`nHelpID`**= 0)**|当将范围之外的方法调用或属性访问 ActiveX 控件中发生错误时引发。<br /><br /> 事件映射条目： **EVENT_STOCK_ERROREVENT （)**|
-|KeyDown|**void FireKeyDown (短**`nChar` **，short**`nShiftState`**)**|时引发的`WM_SYSKEYDOWN`或`WM_KEYDOWN`接收消息。<br /><br /> 事件映射条目： **EVENT_STOCK_KEYDOWN （)**|
-|按键|**void FireKeyPress (短** <strong>\*</strong> `pnChar` **)**|时引发的`WM_CHAR`接收消息。<br /><br /> 事件映射条目： **EVENT_STOCK_KEYPRESS （)**|
-|KeyUp|**void FireKeyUp (短**`nChar` **，short**`nShiftState`**)**|时引发的`WM_SYSKEYUP`或`WM_KEYUP`接收消息。<br /><br /> 事件映射条目： **EVENT_STOCK_KEYUP （)**|
-|鼠标按下|**void FireMouseDown (短**`nButton` **，short** `nShiftState` **，float***x* **，float** *y***)**|如果任何激发**BUTTONDOWN**收到 （左侧、 中间或右侧）。 将鼠标捕获前激发此事件。<br /><br /> 事件映射条目： **EVENT_STOCK_MOUSEDOWN （)**|
-|MouseMove|**void FireMouseMove (短**`nButton` **，short** `nShiftState` **，float***x* **，float** *y***)**|当收到 WM_MOUSEMOVE 消息时触发。<br /><br /> 事件映射条目： **EVENT_STOCK_MOUSEMOVE （)**|
-|MouseUp|**void FireMouseUp (短**`nButton` **，short** `nShiftState` **，float***x* **，float** *y***)**|如果任何激发**BUTTONUP**收到 （左侧、 中间或右侧）。 激发此事件之前释放鼠标捕获。<br /><br /> 事件映射条目： **EVENT_STOCK_MOUSEUP （)**|
-|Readystatechange 等|**void FireReadyStateChange （)**|当控件转换为收到的数据量由于下一步的就绪状态时引发。<br /><br /> 事件映射条目： **EVENT_STOCK_READYSTATECHANGE （)**|
+|单击|**void FireClick( )**|触发时控制捕获鼠标，任何**BUTTONUP**接收 （左侧、 中间或右侧） 消息，并在控件上释放该按钮。 此事件之前发生的股票鼠标按下和 MouseUp 事件。<br /><br /> 事件映射条目：**EVENT_STOCK_CLICK( )**|
+|DblClick|**void FireDblClick( )**|单击与类似但时引发的**BUTTONDBLCLK**接收消息。<br /><br /> 事件映射条目：**EVENT_STOCK_DBLCLICK( )**|
+|Error|**void FireError( SCODE**  *scode* **, LPCSTR**  `lpszDescription` **, UINT**  `nHelpID`  **= 0 )**|当将范围之外的方法调用或属性访问 ActiveX 控件中发生错误时引发。<br /><br /> 事件映射条目：**EVENT_STOCK_ERROREVENT( )**|
+|KeyDown|**void FireKeyDown( short**  `nChar` **, short**  `nShiftState`  **)**|时引发的`WM_SYSKEYDOWN`或`WM_KEYDOWN`接收消息。<br /><br /> 事件映射条目：**EVENT_STOCK_KEYDOWN( )**|
+|KeyPress|**void FireKeyPress( short** <strong>\*</strong>  `pnChar`  **)**|时引发的`WM_CHAR`接收消息。<br /><br /> 事件映射条目：**EVENT_STOCK_KEYPRESS( )**|
+|KeyUp|**void FireKeyUp (短**`nChar` **，short**`nShiftState`**)**|时引发的`WM_SYSKEYUP`或`WM_KEYUP`接收消息。<br /><br /> 事件映射条目：**EVENT_STOCK_KEYUP( )**|
+|MouseDown|**void FireMouseDown (短**`nButton` **，short** `nShiftState` **，float***x* **，float** *y***)**|如果任何激发**BUTTONDOWN**收到 （左侧、 中间或右侧）。 将鼠标捕获前激发此事件。<br /><br /> 事件映射条目：**EVENT_STOCK_MOUSEDOWN( )**|
+|MouseMove|**void FireMouseMove (短**`nButton` **，short** `nShiftState` **，float***x* **，float** *y***)**|当收到 WM_MOUSEMOVE 消息时触发。<br /><br /> 事件映射条目：**EVENT_STOCK_MOUSEMOVE( )**|
+|MouseUp|**void FireMouseUp (短**`nButton` **，short** `nShiftState` **，float***x* **，float** *y***)**|如果任何激发**BUTTONUP**收到 （左侧、 中间或右侧）。 激发此事件之前释放鼠标捕获。<br /><br /> 事件映射条目：**EVENT_STOCK_MOUSEUP( )**|
+|ReadyStateChange|**void FireReadyStateChange( )**|当控件转换为收到的数据量由于下一步的就绪状态时引发。<br /><br /> 事件映射条目：**EVENT_STOCK_READYSTATECHANGE( )**|
 
 ##  <a name="_core_adding_a_stock_event_using_classwizard"></a> 添加常用事件使用添加事件向导
 

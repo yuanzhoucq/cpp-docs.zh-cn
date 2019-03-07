@@ -19,12 +19,12 @@ helpviewer_keywords:
 - SelectStockFont method [MFC]
 - fonts [MFC], ActiveX controls
 ms.assetid: 7c51d602-3f5a-481d-84d1-a5d8a3a71761
-ms.openlocfilehash: 9fb7668f65b04372b87059034c3ec6cd20abc48d
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: ce1e913bb3bd1c3b74db43dc02d9d360b9cfd00c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175816"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271302"
 ---
 # <a name="mfc-activex-controls-using-fonts"></a>MFC ActiveX 控件：使用字体
 
@@ -42,7 +42,7 @@ ms.locfileid: "52175816"
 
 访问通过字体对象[GetFont](../mfc/reference/colecontrol-class.md#getfont)， [SetFont](../mfc/reference/colecontrol-class.md#setfont)，并[InternalGetFont](../mfc/reference/colecontrol-class.md#internalgetfont)函数的`COleControl`。 控制用户访问字体对象通过`GetFont`和`SetFont`与任何其他 Get/Set 属性相同的方式中的函数。 需要在控件内对字体对象的访问时，请使用`InternalGetFont`函数。
 
-如中所述[MFC ActiveX 控件： 属性](../mfc/mfc-activex-controls-properties.md)，添加常用属性是使用轻松[添加属性向导](../ide/names-add-property-wizard.md)。 选择的字体属性，并添加属性向导自动常用字体将项插入到控件的调度映射。
+如中所述[MFC ActiveX 控件：属性](../mfc/mfc-activex-controls-properties.md)，添加常用属性是使用轻松[添加属性向导](../ide/names-add-property-wizard.md)。 选择的字体属性，并添加属性向导自动常用字体将项插入到控件的调度映射。
 
 #### <a name="to-add-the-stock-font-property-using-the-add-property-wizard"></a>若要添加使用添加属性向导的堆栈 Font 属性
 
@@ -238,4 +238,3 @@ DISP_PROPERTY_EX 宏将相关联`HeadingFont`与其对应的属性名称`CSample
 [MFC ActiveX 控件](../mfc/mfc-activex-controls.md)<br/>
 [MFC ActiveX 控件：在 ActiveX 控件中使用图片](../mfc/mfc-activex-controls-using-pictures-in-an-activex-control.md)<br/>
 [MFC ActiveX 控件：使用常用属性页](../mfc/mfc-activex-controls-using-stock-property-pages.md)
-

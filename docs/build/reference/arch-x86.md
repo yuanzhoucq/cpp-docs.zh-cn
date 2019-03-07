@@ -2,12 +2,12 @@
 title: /arch (x86)
 ms.date: 11/04/2016
 ms.assetid: 9dd5a75d-06e4-4674-aade-33228486078d
-ms.openlocfilehash: fb115d564ca24ff29e120e0d8c25e0dbe28024cb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e2aba6dc18db621710b5293f9f970fa5f453b8a9
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50549703"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57421802"
 ---
 # <a name="arch-x86"></a>/arch (x86)
 
@@ -21,19 +21,19 @@ ms.locfileid: "50549703"
 
 ## <a name="arguments"></a>自变量
 
-**/ arch:ia32**<br/>
+**/arch:IA32**<br/>
 指定未增强指令，同时为浮点计算指定 x87。
 
 **/arch:SSE**<br/>
 启用对 SSE 指令的使用。
 
-**/ arch:sse2**<br/>
+**/arch:SSE2**<br/>
 启用对 SSE2 指令的使用。 这是在 x86 上的默认指令平台如果没有 **/arch**指定选项。
 
-**/arch: avx**<br/>
+**/arch:AVX**<br/>
 启用对 Intel 高级矢量扩展指令的使用。
 
-**/ arch:avx2**<br/>
+**/arch:AVX2**<br/>
 启用对 Intel 高级矢量扩展 2 指令的使用。
 
 ## <a name="remarks"></a>备注

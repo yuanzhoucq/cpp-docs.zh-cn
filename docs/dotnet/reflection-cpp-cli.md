@@ -18,12 +18,12 @@ helpviewer_keywords:
 - data types [C++], enumerating
 - public members [C++]
 ms.assetid: 46b6ff4a-e441-4022-8892-78e69422f230
-ms.openlocfilehash: 9d7d2623608d7dab27de78567582c7043468e98f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 769ba87f64a8096ac8c7f14cc091119345177b3b
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50444013"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426441"
 ---
 # <a name="reflection-ccli"></a>反射 (C++/CLI)
 
@@ -31,14 +31,14 @@ ms.locfileid: "50444013"
 
 请注意，提供的程序集名称是强名称 (请参阅[创建和使用具有强名称程序集](/dotnet/framework/app-domains/create-and-use-strong-named-assemblies))，其中包括程序集版本、 区域性和签名信息。 另请注意，在其中定义数据类型的命名空间的名称可以检索，以及类的基类的名称。
 
-若要访问的反射功能的最常见方法是通过<xref:System.Object.GetType%2A>方法。 此方法提供的[system:: object](https://msdn.microsoft.com/library/system.object.aspx)，从垃圾收集的所有类都派生的。
+若要访问的反射功能的最常见方法是通过<xref:System.Object.GetType%2A>方法。 此方法提供的<xref:System.Object?displayProperty=nameWithType>，从垃圾收集的所有类都派生的。
 
 > [!NOTE]
 > 如果使用生成.exe 只允许对用 Visual c + + 编译器生成的.exe 的反射 **/clr: pure**或 **/clr: safe**编译器选项。 **/Clr: pure**并 **/clr: safe**编译器选项都不建议使用在 Visual Studio 2015 和 Visual Studio 2017 中不可用。 请参阅[/clr （公共语言运行时编译）](../build/reference/clr-common-language-runtime-compilation.md)有关详细信息。
 
-有关详细信息，请参阅[System.Reflection Namespace](https://msdn.microsoft.com/library/system.reflection.aspx)
+有关详细信息，请参阅<xref:System.Reflection>。
 
-## <a name="example-gettype"></a>示例： GetType
+## <a name="example-gettype"></a>示例:GetType
 
 `GetType`方法返回一个指向<xref:System.Type>类对象，它描述当该对象所基于的类型。 (**类型**对象不包含任何特定于实例的信息。)其中一项是类型的可以按如下所示显示的完整名称：
 
@@ -114,7 +114,7 @@ there are 3 options in enum 'Options'
 value of 'o' is Option2
 ```
 
-## <a name="example-gettype-members-and-properties"></a>示例： GetType 成员和属性
+## <a name="example-gettype-members-and-properties"></a>示例:GetType 成员和属性
 
 `GetType`对象支持的成员和可用于检查类型的属性数。 此代码检索并显示其中一些信息：
 
@@ -177,9 +177,9 @@ public:
 
 ## <a name="example-inspection-of-assemblies"></a>程序集的示例： 检查
 
-如果上面的代码编译为 DLL 调用 vcpp_reflection_6.dll，可以使用反射来检查此程序集的内容。 这涉及到使用静态反射 API 函数[Assembly::Load](https://msdn.microsoft.com/library/system.reflection.assembly.load.aspx)加载程序集。 此函数返回的地址**程序集**然后可以查询有关模块中的类型的对象。
+如果上面的代码编译为 DLL 调用 vcpp_reflection_6.dll，可以使用反射来检查此程序集的内容。 这涉及到使用静态反射 API 函数 xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType 加载程序集。 此函数返回的地址**程序集**然后可以查询有关模块中的类型的对象。
 
-反射系统已成功加载程序集的数组后**类型**与检索对象[Assembly::GetTypes](https://msdn.microsoft.com/library/system.reflection.assembly.gettypes.aspx)函数。 每个数组元素包含有关不同类型的信息，尽管这种情况下，定义一个类。 使用循环，每个**类型**此数组中查询有关使用的类型成员**Type::GetMembers**函数。 此函数返回的数组**MethodInfo**对象，每个对象，其中包含有关成员函数、 数据成员或类型中的属性的信息。
+反射系统已成功加载程序集的数组后**类型**对象检索与<xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=nameWithType>函数。 每个数组元素包含有关不同类型的信息，尽管这种情况下，定义一个类。 使用循环，每个**类型**此数组中查询有关使用的类型成员**Type::GetMembers**函数。 此函数返回的数组**MethodInfo**对象，每个对象，其中包含有关成员函数、 数据成员或类型中的属性的信息。
 
 请注意，方法的列表包含函数显式中定义**TestClass**和函数隐式继承自**system:: object**类。 在.NET 中，而不是在 Visual c + + 语法中所描述的一部分，属性显示为 get/set 函数访问的基础数据成员。 Get/set 函数在此列表中显示为常规方法。 通过公共语言运行时，不是由 Visual c + + 编译器支持反射。
 
@@ -232,7 +232,7 @@ int main() {
 }
 ```
 
-## <a name="implement"></a> 如何： 实现使用反射的插件组件体系结构
+## <a name="implement"></a> 操作说明：实现使用反射的插件组件体系结构
 
 下面的代码示例演示如何使用反射可以实现简单的"插件"体系结构。 列的第一个部分是应用程序，第二项是插件。 应用程序是填充本身使用作为命令行参数提供的插件 DLL 中找到任何基于窗体的类的多个文档窗体。
 
@@ -340,7 +340,7 @@ protected:
 };
 ```
 
-## <a name="enumerate"></a> 如何： 枚举使用反射程序集中的数据类型
+## <a name="enumerate"></a> 操作说明：枚举中使用反射的程序集的数据类型
 
 下面的代码演示的公共类型和成员使用枚举<xref:System.Reflection>。
 

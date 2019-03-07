@@ -60,12 +60,12 @@ helpviewer_keywords:
 - COleSafeArray [MFC], UnaccessData
 - COleSafeArray [MFC], Unlock
 ms.assetid: f45a5224-5f48-40ec-9ddd-287ef9740150
-ms.openlocfilehash: 07e507f0546849a64625ccd67a0f7463cd510841
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 0833dca9311689063c2ebeadd3942d9f5ce376e2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525400"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267155"
 ---
 # <a name="colesafearray-class"></a>COleSafeArray 类
 
@@ -103,7 +103,7 @@ class COleSafeArray : public tagVARIANT
 |[COleSafeArray::Detach](#detach)|分离的变体数组从`COleSafeArray`对象 （以便不会释放数据）。|
 |[COleSafeArray::GetByteArray](#getbytearray)|将复制到安全数组的内容[CByteArray](../../mfc/reference/cbytearray-class.md)。|
 |[COleSafeArray::GetDim](#getdim)|返回数组中的维数。|
-|[Colesafearray:: Getelement](#getelement)|检索单个元素的安全数组。|
+|[COleSafeArray::GetElement](#getelement)|检索单个元素的安全数组。|
 |[COleSafeArray::GetElemSize](#getelemsize)|返回的大小，以字节为单位的安全数组中的一个元素。|
 |[COleSafeArray::GetLBound](#getlbound)|返回安全数组任意维度的下限。|
 |[COleSafeArray::GetOneDimSize](#getonedimsize)|返回的元素数中的一维`COleSafeArray`对象。|
@@ -123,7 +123,7 @@ class COleSafeArray : public tagVARIANT
 |[COleSafeArray::operator LPCVARIANT](#operator_lpcvariant)|访问基础`VARIANT`结构的`COleSafeArray`对象。|
 |[COleSafeArray::operator LPVARIANT](#operator_lpvariant)|访问基础`VARIANT`结构的`COleSafeArray`对象。|
 |[COleSafeArray::operator =](#operator_eq)|将复制到的值`COleSafeArray`对象 (`SAFEARRAY`， `VARIANT`， `COleVariant`，或`COleSafeArray`数组)。|
-|[COleSafeArray::operator = =](#operator_eq_eq)|比较两个变体的数组 (`SAFEARRAY`， `VARIANT`， `COleVariant`，或`COleSafeArray`数组)。|
+|[COleSafeArray::operator ==](#operator_eq_eq)|比较两个变体的数组 (`SAFEARRAY`， `VARIANT`， `COleVariant`，或`COleSafeArray`数组)。|
 |[COleSafeArray::operator &lt;&lt;](#operator_lt_lt)|输出的内容`COleSafeArray`转储上下文的对象。|
 
 ## <a name="remarks"></a>备注
@@ -426,7 +426,7 @@ void GetByteArray(CByteArray& bytes);
 
 ### <a name="parameters"></a>参数
 
-*字节数*<br/>
+*bytes*<br/>
 对引用[CByteArray](../../mfc/reference/cbytearray-class.md)对象。
 
 ##  <a name="getdim"></a>  COleSafeArray::GetDim

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - ICommandTarget interface [MFC]
 ms.assetid: dd9927f6-3479-4e7c-8ef9-13206cf901f3
-ms.openlocfilehash: 830802f960cba1789c21c53efbf0ed05de3ac4cd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a224b868ea1923bb4f84b0d682c71fadb63da572
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557447"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299921"
 ---
 # <a name="icommandtarget-interface"></a>ICommandTarget 接口
 
@@ -37,7 +37,7 @@ interface class ICommandTarget
 
 当您承载在 MFC 视图中，用户控件时[CWinFormsView](../../mfc/reference/cwinformsview-class.md)路由命令和更新命令 UI 消息到用户控件，使其能够处理 MFC 命令 （例如，框架菜单项和工具栏按钮）。 通过实现`ICommandTarget`，让用户能够控制对引用[ICommandSource](../../mfc/reference/icommandsource-interface.md)对象。
 
-请参阅[如何： 向 Windows 窗体控件添加命令传送](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)以举例说明如何使用`ICommandTarget`。
+请参阅[如何：向 Windows 窗体控件添加命令传送](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)以举例说明如何使用`ICommandTarget`。
 
 有关使用 Windows 窗体的详细信息，请参阅[在 MFC 中使用 Windows 窗体用户控件](../../dotnet/using-a-windows-form-user-control-in-mfc.md)。
 
@@ -62,10 +62,9 @@ void Initialize(ICommandSource^ cmdSource);
 
 托管时 MFC 视图中的用户控件，CWinFormsView 将命令和更新命令 UI 消息路由到用户控件，使其能够处理 MFC 命令。
 
-此方法初始化命令目标对象，并将其与指定的命令源对象 cmdSource 关联。 用户控件类实现中，应调用它。 在初始化时，应该向命令源对象通过调用在初始化实现 ICommandSource::AddCommandHandler 注册命令处理程序。 请参阅如何： 将命令路由添加到 Windows 窗体控件中举例说明如何使用初始化执行此操作。
+此方法初始化命令目标对象，并将其与指定的命令源对象 cmdSource 关联。 用户控件类实现中，应调用它。 在初始化时，应该向命令源对象通过调用在初始化实现 ICommandSource::AddCommandHandler 注册命令处理程序。 了解如何：将命令路由添加到有关如何使用初始化执行此操作的示例在 Windows 窗体控件。
 
 ## <a name="see-also"></a>请参阅
 
-[如何：向 Windows 窗体控件添加命令传送](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)<br/>
+[如何：向 Windows 窗体控件添加命令路由](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)<br/>
 [ICommandSource 接口](../../mfc/reference/icommandsource-interface.md)
-

@@ -164,12 +164,12 @@ helpviewer_keywords:
 - COleClientItem [MFC], OnScrollBy
 - COleClientItem [MFC], OnShowItem
 ms.assetid: 7f571b7c-2758-4839-847a-0cf1ef643128
-ms.openlocfilehash: 80d28aa6a71adb72b8a3e0f5cd997577d61d0a52
-ms.sourcegitcommit: d441305fb19131afbd7fc259d8cda63ea26f2343
+ms.openlocfilehash: ec3048e7bd033e5c296b558dd2083c648bc377e7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51678582"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295352"
 ---
 # <a name="coleclientitem-class"></a>COleClientItem 类
 
@@ -287,7 +287,7 @@ OLE 项表示的数据，由服务器应用程序，可以将"无缝"合并到�
 
 `COleClientItem` 可以通过使用[COleDocument](../../mfc/reference/coledocument-class.md)， [COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md)，或[COleServerDoc](../../mfc/reference/coleserverdoc-class.md)类。 若要使用`COleClientItem`、 从其派生一个类并实现[OnChange](#onchange)成员函数，用于定义容器的项所做的更改的响应方式。 若要支持就地激活，重写[OnGetItemPosition](#ongetitemposition)成员函数。 此函数提供了有关 OLE 项的显示位置的信息。
 
-有关使用容器接口的详细信息，请参阅文章[容器： 实现容器](../../mfc/containers-implementing-a-container.md)并[激活](../../mfc/activation-cpp.md)。
+有关使用容器接口的详细信息，请参阅文章[容器：实现容器](../../mfc/containers-implementing-a-container.md)并[激活](../../mfc/activation-cpp.md)。
 
 > [!NOTE]
 >  Windows SDK 引用嵌入的和链接的项称为"对象"，并将类型的项作为"类"。 此引用使用术语"项"以将 OLE 实体与相应的 c + + 对象和字词"类型"c + + 类区分开来 OLE 类别区分开来。
@@ -322,7 +322,7 @@ void Activate(
 *nVerb*<br/>
 指定要执行的谓词。 它可以是以下值之一：
 
-|“值”|含义|符号|
+|值|含义|符号|
 |-----------|-------------|------------|
 |- 0|主谓词|OLEIVERB_PRIMARY|
 |- 1|辅助谓词|（无）|
@@ -627,7 +627,7 @@ BOOL CreateFromClipboard(
 
 ### <a name="parameters"></a>参数
 
-*呈现器*<br/>
+*render*<br/>
 标志，指定服务器的 OLE 项呈现方式。 有关可能的值，请参阅[OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) Windows SDK 中。
 
 *cfFormat*<br/>
@@ -663,7 +663,7 @@ BOOL CreateFromData(
 *pDataObject*<br/>
 指向[COleDataObject](../../mfc/reference/coledataobject-class.md)是要创建的 OLE 项的对象。
 
-*呈现器*<br/>
+*render*<br/>
 标志，指定服务器的 OLE 项呈现方式。 有关可能的值，请参阅[OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) Windows SDK 中。
 
 *cfFormat*<br/>
@@ -703,7 +703,7 @@ BOOL CreateFromFile(
 *clsid*<br/>
 留待将来使用。
 
-*呈现器*<br/>
+*render*<br/>
 标志，指定服务器的 OLE 项呈现方式。 有关可能的值，请参阅[OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) Windows SDK 中。
 
 *cfFormat*<br/>
@@ -735,7 +735,7 @@ BOOL CreateLinkFromClipboard(
 
 ### <a name="parameters"></a>参数
 
-*呈现器*<br/>
+*render*<br/>
 标志，指定服务器的 OLE 项呈现方式。 有关可能的值，请参阅[OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) Windows SDK 中。
 
 *cfFormat*<br/>
@@ -771,7 +771,7 @@ BOOL CreateLinkFromData(
 *pDataObject*<br/>
 指向[COleDataObject](../../mfc/reference/coledataobject-class.md)是要创建的 OLE 项的对象。
 
-*呈现器*<br/>
+*render*<br/>
 标志，指定服务器的 OLE 项呈现方式。 有关可能的值，请参阅[OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) Windows SDK 中。
 
 *cfFormat*<br/>
@@ -807,7 +807,7 @@ BOOL CreateLinkFromFile(
 *lpszFileName*<br/>
 指向要创建的 OLE 项的文件的名称。
 
-*呈现器*<br/>
+*render*<br/>
 标志，指定服务器的 OLE 项呈现方式。 有关可能的值，请参阅[OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) Windows SDK 中。
 
 *cfFormat*<br/>
@@ -843,7 +843,7 @@ BOOL CreateNewItem(
 *clsid*<br/>
 唯一标识要创建的 OLE 项的类型的 ID。
 
-*呈现器*<br/>
+*render*<br/>
 标志，指定服务器的 OLE 项呈现方式。 有关可能的值，请参阅[OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) Windows SDK 中。
 
 *cfFormat*<br/>
@@ -875,7 +875,7 @@ BOOL CreateStaticFromClipboard(
 
 ### <a name="parameters"></a>参数
 
-*呈现器*<br/>
+*render*<br/>
 标志，指定服务器的 OLE 项呈现方式。 有关可能的值，请参阅[OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) Windows SDK 中。
 
 *cfFormat*<br/>
@@ -911,7 +911,7 @@ BOOL CreateStaticFromData(
 *pDataObject*<br/>
 指向[COleDataObject](../../mfc/reference/coledataobject-class.md)是要创建的 OLE 项的对象。
 
-*呈现器*<br/>
+*render*<br/>
 标志，指定服务器的 OLE 项呈现方式。 有关可能的值，请参阅[OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) Windows SDK 中。
 
 *cfFormat*<br/>
@@ -1045,7 +1045,7 @@ virtual BOOL DoVerb(
 *nVerb*<br/>
 指定要执行的谓词。 它可以包括以下项之一：
 
-|“值”|含义|符号|
+|值|含义|符号|
 |-----------|-------------|------------|
 |- 0|主谓词|OLEIVERB_PRIMARY|
 |- 1|辅助谓词|（无）|
@@ -1328,13 +1328,13 @@ UINT GetItemState() const;
 
 ### <a name="return-value"></a>返回值
 
-一个`COleClientItem::ItemState`枚举值，该值可以是以下值之一： `emptyState`， `loadedState`， `openState`， `activeState`， `activeUIState`。 有关这些状态信息，请参阅文章[容器： 客户端项状态](../../mfc/containers-client-item-states.md)。
+一个`COleClientItem::ItemState`枚举值，该值可以是以下值之一： `emptyState`， `loadedState`， `openState`， `activeState`， `activeUIState`。 有关这些状态信息，请参阅文章[容器：客户端项状态](../../mfc/containers-client-item-states.md)。
 
 ### <a name="remarks"></a>备注
 
 若要将 OLE 项的状态更改时得到通知，请使用[OnChange](#onchange)成员函数。
 
-有关详细信息，请参阅文章[容器： 客户端项状态](../../mfc/containers-client-item-states.md)。
+有关详细信息，请参阅文章[容器：客户端项状态](../../mfc/containers-client-item-states.md)。
 
 ##  <a name="getlaststatus"></a>  COleClientItem::GetLastStatus
 
@@ -1780,7 +1780,7 @@ virtual void OnInsertMenus(
 指向一个空菜单。
 
 *lpMenuWidths*<br/>
-指向数组的 6 个 LONG 值，该值指示在每个以下的菜单组中的菜单数： 文件中，编辑，容器对象，窗口中，帮助。 容器应用程序负责文件、 容器和窗口菜单组，对应于 0、 2 和 4 此数组的元素。
+指向 6 个 LONG 值，该值指示菜单数每个以下的菜单组中的数组：文件中，编辑，容器对象，窗口中，帮助。 容器应用程序负责文件、 容器和窗口菜单组，对应于 0、 2 和 4 此数组的元素。
 
 ### <a name="remarks"></a>备注
 

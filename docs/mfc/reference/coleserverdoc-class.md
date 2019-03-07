@@ -82,12 +82,12 @@ helpviewer_keywords:
 - COleServerDoc [MFC], OnSetItemRects
 - COleServerDoc [MFC], OnShowDocument
 ms.assetid: a9cdd96a-e0ac-43bb-9203-2c29237e965c
-ms.openlocfilehash: b9d339b11b3e1fa8452c845cfa8a8f41c5194f8d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3069c5f53b37984cbeae8bee1379bb8b0c36ccc3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50604940"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285277"
 ---
 # <a name="coleserverdoc-class"></a>COleServerDoc 类
 
@@ -168,7 +168,7 @@ class AFX_NOVTABLE COleServerDoc : public COleLinkingDoc
 
 需要一个`COleServerDoc`-对于每种类型的服务器记录您的应用程序支持派生类。 例如，如果服务器应用程序支持的工作表和图表，必须有两个`COleServerDoc`-派生的类。
 
-服务器上的详细信息，请参阅文章[服务器： 实现服务器](../../mfc/servers-implementing-a-server.md)。
+服务器上的详细信息，请参阅文章[服务器：实现服务器](../../mfc/servers-implementing-a-server.md)。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 

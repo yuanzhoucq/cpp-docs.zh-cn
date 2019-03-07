@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Restart manager [MFC]
 - C++, application crash support
 ms.assetid: 7f3f5867-d4bc-4ba8-b3c9-dc1e7be93642
-ms.openlocfilehash: 77267cdad1fa976d73381ca798ca5002c09dc7ec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 23f860c43c63e3153f4b87f8eaf05d61709af82f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50565123"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279778"
 ---
 # <a name="how-to-add-restart-manager-support"></a>如何：添加重新启动管理器支持
 
@@ -37,7 +37,7 @@ ms.locfileid: "50565123"
     m_dwRestartManagerSupportFlags = AFX_RESTART_MANAGER_SUPPORT_ALL_ASPECTS;
 ```
 
-1. 请确保应用程序的 `InitInstance` 方法将调用其父 `InitInstance` 方法： [CWinApp::InitInstance](../mfc/reference/cwinapp-class.md#initinstance) 或 `CWinAppEx::InitInstance`的一项功能。 `InitInstance`方法负责检查*m_dwRestartManagerSupportFlags*参数。
+1. 请确保`InitInstance`应用程序的方法将调用其父`InitInstance`方法：[Cwinapp:: Initinstance](../mfc/reference/cwinapp-class.md#initinstance)或`CWinAppEx::InitInstance`。 `InitInstance`方法负责检查*m_dwRestartManagerSupportFlags*参数。
 
 1. 编译并运行应用程序。
 
@@ -48,4 +48,3 @@ ms.locfileid: "50565123"
 [CWinApp 类](../mfc/reference/cwinapp-class.md)<br/>
 [CWinApp::m_nAutosaveInterval](../mfc/reference/cwinapp-class.md#m_nautosaveinterval)<br/>
 [CDocument::OnDocumentEvent](../mfc/reference/cdocument-class.md#ondocumentevent)
-

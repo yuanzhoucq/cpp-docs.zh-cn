@@ -31,12 +31,12 @@ helpviewer_keywords:
 - CComModule class
 - DLL modules [C++], ATL
 ms.assetid: f5face2c-8fd8-40e6-9ec3-54ab74701769
-ms.openlocfilehash: 73d25f15aaeed15e3972c48e682c70f0b8c505c8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6d95460902c44ff058a4c7b90c810ab44489d952
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50589444"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298926"
 ---
 # <a name="ccommodule-class"></a>CComModule 类
 
@@ -67,7 +67,7 @@ class CComModule : public _ATL_MODULE
 |[CComModule::RegisterServer](#registerserver)|更新对象映射中的每个对象的系统注册表。|
 |[CComModule::RegisterTypeLib](#registertypelib)|注册类型库。|
 |[CComModule::RevokeClassObjects](#revokeclassobjects)|撤消类对象。 对于仅 Exe。|
-|[Ccommodule:: Term](#term)|释放数据成员。|
+|[CComModule::Term](#term)|释放数据成员。|
 |[CComModule::UnregisterClassHelper](#unregisterclasshelper)|从系统注册表中删除对象的标准类注册。|
 |[CComModule::UnregisterServer](#unregisterserver)|注销对象映射中的每个对象。|
 |[CComModule::UpdateRegistryClass](#updateregistryclass)|注册或注销的对象的标准类注册。|

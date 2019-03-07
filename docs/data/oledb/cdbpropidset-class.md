@@ -33,12 +33,12 @@ helpviewer_keywords:
 - operator=, property sets
 - SetGUID method
 ms.assetid: 52bb806c-9581-494d-9af7-50d8a4834805
-ms.openlocfilehash: fdda18243366de059b26fd566b5eecb308cbed14
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: d51b1bf6862aebda34586518be6501f57f119590
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556642"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57419950"
 ---
 # <a name="cdbpropidset-class"></a>CDBPropIDSet 类
 
@@ -72,9 +72,9 @@ class CDBPropIDSet : public tagDBPROPIDSET
 
 ## <a name="remarks"></a>备注
 
-OLE DB 使用者使用`DBPROPIDSET`结构传递的使用者要为其获取属性信息的属性 Id 的数组。 在单个标识的属性[DBPROPIDSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms717981(v=vs.85))结构属于一个属性集。
+OLE DB 使用者使用`DBPROPIDSET`结构传递的使用者要为其获取属性信息的属性 Id 的数组。 在单个标识的属性[DBPROPIDSET](/previous-versions/windows/desktop/ms717981(v=vs.85))结构属于一个属性集。
 
-## <a name="addpropertyid"></a> Cdbpropidset:: Addpropertyid
+## <a name="addpropertyid"></a> CDBPropIDSet::AddPropertyID
 
 将属性 ID 添加到属性 ID 集中。
 
@@ -91,7 +91,7 @@ bool AddPropertyID(DBPROPID propid) throw();
 
 ## <a name="cdbpropidset"></a> Cdbpropidset:: Cdbpropidset
 
-构造函数。 初始化`rgProperties`， `cProperties`，和 （可选）`guidPropertySet`的字段[DBPROPIDSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms717981(v=vs.85))结构。
+构造函数。 初始化`rgProperties`， `cProperties`，和 （可选）`guidPropertySet`的字段[DBPROPIDSET](/previous-versions/windows/desktop/ms717981(v=vs.85))结构。
 
 ### <a name="syntax"></a>语法
 
@@ -111,7 +111,7 @@ CDBPropIDSet();
 *propidset*<br/>
 [in] 复制构造的另一个 `CDBPropIDSet` 对象。
 
-## <a name="setguid"></a> Cdbpropidset:: Setguid
+## <a name="setguid"></a> CDBPropIDSet::SetGUID
 
 GUID 字段设置`DBPROPIDSET`结构。
 
@@ -124,7 +124,7 @@ void SetGUID(const GUID& guid) throw();
 #### <a name="parameters"></a>参数
 
 *guid*<br/>
-[in]使用 GUID 来设置`guidPropertySet`字段[DBPROPIDSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms717981(v=vs.85))结构。
+[in]使用 GUID 来设置`guidPropertySet`字段[DBPROPIDSET](/previous-versions/windows/desktop/ms717981(v=vs.85))结构。
 
 ### <a name="remarks"></a>备注
 

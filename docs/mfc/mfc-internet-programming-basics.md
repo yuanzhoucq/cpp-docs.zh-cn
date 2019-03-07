@@ -16,12 +16,12 @@ helpviewer_keywords:
 - Internet content [MFC]
 - WinInet classes [MFC]
 ms.assetid: 6df2dfd0-6e3f-4587-9d01-2a32f00f8a6f
-ms.openlocfilehash: 5bb6a1d379ed754ed96637dfe5b3e4da983edb9f
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 37fe5486d6d41ad182779a3a15b0aca3af51d04b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175582"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288436"
 ---
 # <a name="mfc-internet-programming-basics"></a>MFC Internet 编程基础知识
 
@@ -81,4 +81,3 @@ MFC 提供了支持 Internet 编程的类。 可以使用[COleControl](../mfc/re
 Windows SDK 的 OLE 部分包含有关 OLE 编程的其他信息。 此信息提供了有关使用 Win32 WinInet 函数直接，而不是通过 MFC 类的详细信息。 它还包含有关 Internet 技术的概述信息。
 
 ## <a name="see-also"></a>请参阅
-

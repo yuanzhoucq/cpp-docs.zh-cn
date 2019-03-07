@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CTypedPtrMap [MFC], RemoveKey
 - CTypedPtrMap [MFC], SetAt
 ms.assetid: 9f377385-c6e9-4471-8b40-8fe220c50164
-ms.openlocfilehash: 4c6d20279792788c1013df8540080b2715ade1f2
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: 05689001f8c385191057a8dc824a508189a43f05
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657378"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266050"
 ---
 # <a name="ctypedptrmap-class"></a>CTypedPtrMap Class
 
@@ -40,7 +40,7 @@ class CTypedPtrMap : public BASE_CLASS
 *KEY*<br/>
 用作映射的键的对象的类。
 
-*值*<br/>
+*VALUE*<br/>
 在映射中存储的对象的类。
 
 ## <a name="members"></a>成员
@@ -100,7 +100,7 @@ void GetNextAssoc(
 *rKey*<br/>
 指定返回检索到的元素的键。
 
-*值*<br/>
+*VALUE*<br/>
 指定地图的值的类型的模板参数。
 
 *rValue*<br/>
@@ -130,7 +130,7 @@ BOOL Lookup(BASE_CLASS ::BASE_ARG_KEY key, VALUE& rValue) const;
 *key*<br/>
 要查找的元素的键。
 
-*值*<br/>
+*VALUE*<br/>
 指定的值存储在此映射中的类型的模板参数。
 
 *rValue*<br/>
@@ -144,7 +144,7 @@ BOOL Lookup(BASE_CLASS ::BASE_ARG_KEY key, VALUE& rValue) const;
 
 此内联函数将调用`BASE_CLASS` **:: 查找**。
 
-##  <a name="operator_at"></a>  CTypedPtrMap::operator]
+##  <a name="operator_at"></a>  CTypedPtrMap::operator [ ]
 
 仅在左侧和右侧的赋值语句 （左值） 上，可以使用此运算符。
 
@@ -154,7 +154,7 @@ VALUE& operator[ ](base_class ::base_arg_key key);
 
 ### <a name="parameters"></a>参数
 
-*值*<br/>
+*VALUE*<br/>
 指定的值存储在此映射中的类型的模板参数。
 
 *BASE_CLASS*<br/>

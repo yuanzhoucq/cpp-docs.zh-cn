@@ -13,12 +13,12 @@ helpviewer_keywords:
 - memory, managing
 - memory, memory manager
 ms.assetid: 18b2c569-25fe-4464-bdb6-3b1abef7154a
-ms.openlocfilehash: ed1dfd1dc8767b4f198ec6cc8dd626a04800bffd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b9b6ac6dc265378f617e053bc48ac6030425cef4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596763"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297913"
 ---
 # <a name="iatlmemmgr-class"></a>IAtlMemMgr 类
 
@@ -36,7 +36,7 @@ __interface __declspec(uuid("654F7EF5-CFDF-4df9-A450-6C6A13C622C0")) IAtlMemMgr
 
 |||
 |-|-|
-|[分配](#allocate)|调用此方法来分配内存块。|
+|[Allocate](#allocate)|调用此方法来分配内存块。|
 |[免费](#free)|调用此方法以释放的内存块。|
 |[GetSize](#getsize)|调用此方法来检索分配的内存块的大小。|
 |[重新分配](#reallocate)|调用此方法以重新分配的内存块。|

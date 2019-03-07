@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CMFCColorMenuButton [MFC], OnDraw
 - CMFCColorMenuButton [MFC], OnDrawOnCustomizeList
 ms.assetid: 42685704-e994-4f7b-9553-62283c27b754
-ms.openlocfilehash: adb0cdbdde90ad7bdd6aef42c1e83c7ba3fd28b0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 64d61cc9464ef0877baad33a8685cee1482f240d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624882"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301332"
 ---
 # <a name="cmfccolormenubutton-class"></a>CMFCColorMenuButton 类
 
@@ -506,7 +506,7 @@ static void SetColorByCmdID(
 *uiCmdID*<br/>
 [in]颜色菜单按钮的资源 ID。
 
-*颜色*<br/>
+*color*<br/>
 [in]RGB 颜色值。
 
 ##  <a name="setcolorname"></a>  CMFCColorMenuButton::SetColorName
@@ -521,7 +521,7 @@ static void SetColorName(
 
 ### <a name="parameters"></a>参数
 
-*颜色*<br/>
+*color*<br/>
 [in]其名称将更改颜色的 RGB 值。
 
 *strName*<br/>

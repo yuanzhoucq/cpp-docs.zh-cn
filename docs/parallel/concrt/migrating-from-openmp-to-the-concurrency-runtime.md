@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Concurrency Runtime, migrating from OpenMP
 - OpenMP, migrating to the Concurrency Runtime
 ms.assetid: 9bab7bb1-e45d-44b2-8509-3b226be2c93b
-ms.openlocfilehash: 78fa83c30bc55d82ffa5d2ba1e7d65472643f86b
-ms.sourcegitcommit: ee0103752884425843556a19cf418a504dc3cd02
+ms.openlocfilehash: 16b0f175867e18e127997749098cce998674b3d2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53737619"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259498"
 ---
 # <a name="migrating-from-openmp-to-the-concurrency-runtime"></a>从 OpenMP 迁移至并发运行时
 
@@ -52,13 +52,13 @@ OpenMP 编程模型由开放标准定义，具有与 Fortran 和 C/C++ 编程语
 
 提供一个基本循环使用 OpenMP[并行](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)并[有关](../../parallel/openmp/reference/for-openmp.md)指令，演示如何将其转换为使用并发运行时[concurrency:: parallel_for](reference/concurrency-namespace-functions.md#parallel_for)算法。
 
-[如何：转换使用取消来使用并发运行时的 OpenMP 循环](../../parallel/concrt/convert-an-openmp-loop-that-uses-cancellation.md)<br/>
+[如何：转换使用取消的 OpenMP 循环以使用并发运行时](../../parallel/concrt/convert-an-openmp-loop-that-uses-cancellation.md)<br/>
 给定 OpenMP[并行](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[为](../../parallel/openmp/reference/for-openmp.md)循环不需要所有迭代来运行，演示如何将其转换为使用并发运行时取消机制。
 
-[如何：转换使用异常处理以使用并发运行时的 OpenMP 循环](../../parallel/concrt/convert-an-openmp-loop-that-uses-exception-handling.md)<br/>
+[如何：转换使用异常处理的 OpenMP 循环以使用并发运行时](../../parallel/concrt/convert-an-openmp-loop-that-uses-exception-handling.md)<br/>
 给定 OpenMP[并行](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[为](../../parallel/openmp/reference/for-openmp.md)循环执行异常处理，演示如何将其转换为使用并发运行时异常处理机制。
 
-[如何：转换使用缩减变量以使用并发运行时的 OpenMP 循环](../../parallel/concrt/convert-an-openmp-loop-that-uses-a-reduction-variable.md)<br/>
+[如何：将使用缩减变量的 OpenMP 循环转换为使用并发运行时](../../parallel/concrt/convert-an-openmp-loop-that-uses-a-reduction-variable.md)<br/>
 给定 OpenMP[并行](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[有关](../../parallel/openmp/reference/for-openmp.md)使用循环[减少](../../parallel/openmp/reference/reduction.md)子句，演示如何将其转换为使用并发运行时。
 
 ## <a name="see-also"></a>请参阅
@@ -67,4 +67,3 @@ OpenMP 编程模型由开放标准定义，具有与 Fortran 和 C/C++ 编程语
 [OpenMP](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md#openmp)<br/>
 [并行模式库 (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)<br/>
 [异步代理库](../../parallel/concrt/asynchronous-agents-library.md)
-

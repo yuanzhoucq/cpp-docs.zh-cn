@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - IAxWinAmbientDispatchEx interface
 ms.assetid: 2c25e079-6128-4278-bc72-b2c6195ba7ef
-ms.openlocfilehash: 5b4afabe2c12dff048bc6a6fb904a82b3cea4d01
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 638152d8c49bd20742a586bc665efcdb662b6f3a
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539433"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413883"
 ---
 # <a name="iaxwinambientdispatchex-interface"></a>IAxWinAmbientDispatchEx 接口
 
@@ -38,11 +38,11 @@ MIDL_INTERFACE("B2D0778B - AC99 - 4c58 - A5C8 - E7724E5316B5") IAxWinAmbientDisp
 
 ## <a name="remarks"></a>备注
 
-在静态链接到 ATL 和主机的 ActiveX 控件，尤其是具有环境属性的 ActiveX 控件的 ATL 应用程序中包含此接口。 不包括此接口将生成此断言:"您是否忘记了要传递给 CComModule::Init 的 LIBID"
+在静态链接到 ATL 和主机的 ActiveX 控件，尤其是具有环境属性的 ActiveX 控件的 ATL 应用程序中包含此接口。 不包括此接口将生成此断言："您忘记了要传递给 CComModule::Init 的 LIBID"
 
 此接口由 ATL 的 ActiveX 控件承载对象公开。 派生自[IAxWinAmbientDispatch](../../atl/reference/iaxwinambientdispatch-interface.md)，`IAxWinAmbientDispatchEx`添加允许你补充由 ATL 提供与您自己的环境属性接口的方法。
 
-[AXHost](https://msdn.microsoft.com/library/system.windows.forms.axhost.aspx)会尝试加载有关类型信息`IAxWinAmbientDispatch`和`IAxWinAmbientDispatchEx`从类型库包含的代码。
+<xref:System.Windows.Forms.AxHost> 有关加载的类型信息将尝试`IAxWinAmbientDispatch`和`IAxWinAmbientDispatchEx`从类型库包含的代码。
 
 如果要链接到 ATL90.dll， **AXHost**将加载 DLL 中的类型库中的类型信息。
 

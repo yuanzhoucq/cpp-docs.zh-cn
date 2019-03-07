@@ -108,12 +108,12 @@ helpviewer_keywords:
 - CComboBox [MFC], SetTopIndex
 - CComboBox [MFC], ShowDropDown
 ms.assetid: 4e73b5df-0d2e-4658-9706-38133fb10513
-ms.openlocfilehash: e7472b808d8b5d743d884d9e3806df7ffe499836
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 847927a36bac8540dd95307ae3c0259d0adba12a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178774"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304465"
 ---
 # <a name="ccombobox-class"></a>CComboBox 类
 
@@ -147,7 +147,7 @@ class CComboBox : public CWnd
 |[CComboBox::DeleteString](#deletestring)|从组合框的列表框中删除一个字符串。|
 |[CComboBox::Dir](#dir)|将文件名称的列表添加到组合框的列表框。|
 |[CComboBox::DrawItem](#drawitem)|由框架在所有者描述的组合框中更改的可视方面时调用。|
-|[Ccombobox:: Findstring](#findstring)|查找包含指定的前缀组合框的列表框中的第一个字符串。|
+|[CComboBox::FindString](#findstring)|查找包含指定的前缀组合框的列表框中的第一个字符串。|
 |[CComboBox::FindStringExact](#findstringexact)|查找第一个列表框中的字符串 （组合框） 与指定的字符串匹配。|
 |[CComboBox::GetComboBoxInfo](#getcomboboxinfo)|检索有关的信息`CComboBox`对象。|
 |[CComboBox::GetCount](#getcount)|检索在组合框的列表框中的项的数目。|
@@ -214,7 +214,7 @@ class CComboBox : public CWnd
 
 父项的函数原型如下所示：
 
-**afx_msg** `void` `memberFxn` **（);**
+**afx_msg** `void` `memberFxn` **( );**
 
 无法预测将发送某些通知的顺序。 具体而言，如果之前或之后 CBN_CLOSEUP 通知，则可能会出现 CBN_SELCHANGE 通知。
 
@@ -554,7 +554,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 
 [!code-cpp[NVC_MFC_CComboBox#11](../../mfc/reference/codesnippet/cpp/ccombobox-class_11.cpp)]
 
-##  <a name="findstring"></a>  Ccombobox:: Findstring
+##  <a name="findstring"></a>  CComboBox::FindString
 
 找到，但不会选择第一个字符串中包含一个组合框的列表框中指定的前缀。
 
@@ -1227,7 +1227,7 @@ int SetCurSel(int nSelect);
 
 ### <a name="parameters"></a>参数
 
-*请选择*<br/>
+*nSelect*<br/>
 指定要选择的字符串的从零开始的索引。 如果为-1，删除任何当前所选内容的列表框中，并清除编辑控件。
 
 ### <a name="return-value"></a>返回值

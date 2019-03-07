@@ -40,16 +40,17 @@ helpviewer_keywords:
 - CMFCPropertySheet [MFC], SetIconsList
 - CMFCPropertySheet [MFC], SetLook
 ms.assetid: 01d93573-9698-440f-a6a4-5bebbee879dc
-ms.openlocfilehash: 1168375606ef86061269454aa361a076efa331a4
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 7e5b553e6a10bee0e5b05bb32b9af3069269ca91
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176401"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294559"
 ---
 # <a name="cmfcpropertysheet-class"></a>CMFCPropertySheet 类
 
-`CMFCPropertySheet` 类支持每个属性页由页选项卡、工具栏按钮、树控件节点或列表项表示的属性表。
+
+  `CMFCPropertySheet` 类支持每个属性页由页选项卡、工具栏按钮、树控件节点或列表项表示的属性表。
 
 ## <a name="syntax"></a>语法
 
@@ -70,7 +71,7 @@ class CMFCPropertySheet : public CPropertySheet
 
 |名称|描述|
 |----------|-----------------|
-|[Cmfcpropertysheet:: Addpage](#addpage)|向属性表添加页面。|
+|[CMFCPropertySheet::AddPage](#addpage)|向属性表添加页面。|
 |[CMFCPropertySheet::AddPageToTree](#addpagetotree)|向树控件添加新的属性页。|
 |[CMFCPropertySheet::AddTreeCategory](#addtreecategory)|向树控件添加新节点。|
 |[CMFCPropertySheet::EnablePageHeader](#enablepageheader)|在每个页面顶部保留一定空间，用于绘制自定义页眉。|
@@ -88,11 +89,13 @@ class CMFCPropertySheet : public CPropertySheet
 |[CMFCPropertySheet::RemoveCategory](#removecategory)|从树控件中删除节点。|
 |[CMFCPropertySheet::RemovePage](#removepage)|从属性表中删除属性页。|
 |[CMFCPropertySheet::SetIconsList](#seticonslist)|指定用于 Outlook 窗格的导航控件的图像列表。|
-|[Cmfcpropertysheet:: Setlook](#setlook)|指定属性表的外观。|
+|[CMFCPropertySheet::SetLook](#setlook)|指定属性表的外观。|
 
 ## <a name="remarks"></a>备注
 
-`CMFCPropertySheet` 类表示属性表，也称为选项卡对话框。 `CMFCPropertySheet` 类可以用多种方式显示属性页。
+
+  `CMFCPropertySheet` 类表示属性表，也称为选项卡对话框。 
+  `CMFCPropertySheet` 类可以用多种方式显示属性页。
 
 执行以下步骤，以便在应用程序中使用 `CMFCPropertySheet` 类：
 
@@ -138,7 +141,7 @@ class CMFCPropertySheet : public CPropertySheet
 
 **标头：** afxpropertysheet.h
 
-##  <a name="addpage"></a>  Cmfcpropertysheet:: Addpage
+##  <a name="addpage"></a>  CMFCPropertySheet::AddPage
 
 向属性表添加页面。
 
@@ -383,7 +386,7 @@ virtual void OnDrawPageHeader(
 *pDC*<br/>
 [in]指向设备上下文指针。
 
-*n 页面*<br/>
+*nPage*<br/>
 [in]从零开始的属性页面数。
 
 *rectHeader*<br/>
@@ -441,7 +444,7 @@ void RemovePage(int nPage);
 *pPage*<br/>
 [in]为表示要删除的属性页的属性页对象的指针。 不能为 NULL。
 
-*n 页面*<br/>
+*nPage*<br/>
 [in]要删除的页的从零开始的索引。
 
 ### <a name="remarks"></a>备注
@@ -484,7 +487,7 @@ void SetIconsList(HIMAGELIST hIcons);
 
 有关支持此方法的方法的详细信息，请参阅[CImageList::Create](../../mfc/reference/cimagelist-class.md#create)并[CImageList::Add](../../mfc/reference/cimagelist-class.md#add)。 有关如何设置的属性表样式的详细信息，请参阅[cmfcpropertysheet:: Setlook](#setlook)。
 
-##  <a name="setlook"></a>  Cmfcpropertysheet:: Setlook
+##  <a name="setlook"></a>  CMFCPropertySheet::SetLook
 
 指定属性表的外观。
 
@@ -496,7 +499,7 @@ void SetLook(
 
 ### <a name="parameters"></a>参数
 
-*查找*<br/>
+*look*<br/>
 [in]指定属性表的外观的枚举值之一。 属性表的默认样式为`CMFCPropertySheet::PropSheetLook_Tabs`。 有关详细信息，请参阅本主题的备注部分中的表。
 
 *nNavControlWidth*<br/>
@@ -508,7 +511,7 @@ void SetLook(
 
 下表列出了可以在中指定的枚举值*查找*参数。
 
-|“值”|描述|
+|值|描述|
 |-----------|-----------------|
 |`CMFCPropertySheet::PropSheetLook_Tabs`|（默认值）显示每个属性页的选项卡。 选项卡显示在属性表的顶部，并具有堆积，如果有更多选项卡而不能显示单个行中。|
 |`CMFCPropertySheet::PropSheetLook_OutlookBar`|在左侧和右侧的属性表的 Microsoft Outlook 栏样式显示导航按钮的列表。 在列表中的每个按钮对应于属性页。 如果有多个按钮而不能显示在列表的可见区域中，框架将显示滚动箭头。|

@@ -18,16 +18,17 @@ f1_keywords:
 helpviewer_keywords:
 - transformer class
 ms.assetid: eea71925-7043-4a92-bfd4-dbc0ece5d081
-ms.openlocfilehash: cc35a4e2de2b29bb6d437dfcbf48ef361fefdfa3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c07017539bc0125e9e8c27e208480a50ccc7a719
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618278"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299174"
 ---
 # <a name="transformer-class"></a>transformer 类
 
-`transformer` 消息块是单目标、多源、有序的 `propagator_block`，它可以接受一个类型的消息，并能够存储不限数量的另一个类型的消息。
+
+  `transformer` 消息块是单目标、多源、有序的 `propagator_block`，它可以接受一个类型的消息，并能够存储不限数量的另一个类型的消息。
 
 ## <a name="syntax"></a>语法
 
@@ -39,10 +40,10 @@ class transformer : public propagator_block<single_link_registry<ITarget<_Output
 
 #### <a name="parameters"></a>参数
 
-*（_i)*<br/>
+*_Input*<br/>
 接受的缓冲区的消息的负载类型。
 
-*（_o)*<br/>
+*_Output*<br/>
 存储和传播缓冲区的消息的负载类型。
 
 ## <a name="members"></a>成员
@@ -288,7 +289,7 @@ transformer(
 *_PTarget*<br/>
 指向要与转换器链接的目标块的指针。
 
-*筛选 （_f)*<br/>
+*_Filter*<br/>
 确定是否应接受提供的消息的筛选器函数。
 
 *_PScheduler*<br/>
@@ -305,7 +306,7 @@ transformer(
 
 类型`filter_method`是具有签名的伪函数`bool (_Input const &)`调用此`transformer`消息块，以确定它是否应接受提供的消息。
 
-##  <a name="dtor"></a> ~ transformer
+##  <a name="dtor"></a> ~transformer
 
 销毁`transformer`消息块。
 

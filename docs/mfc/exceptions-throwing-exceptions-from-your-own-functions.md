@@ -1,21 +1,21 @@
 ---
-title: 异常：从您自己的函数引发异常
+title: 异常:从您自己的函数引发异常
 ms.date: 11/04/2016
 helpviewer_keywords:
 - throwing exceptions [MFC], from functions
 - functions [MFC], throwing exceptions
 - exceptions [MFC], throwing
 ms.assetid: 492976e8-8804-4234-8e8f-30dffd0501be
-ms.openlocfilehash: 4d0961bff706ccf86eb09d2dcbe695a13bfa8702
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 030bf3db9ff305f35cbfb0b518c8704114ce083d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50558981"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297939"
 ---
-# <a name="exceptions-throwing-exceptions-from-your-own-functions"></a>异常：从您自己的函数引发异常
+# <a name="exceptions-throwing-exceptions-from-your-own-functions"></a>异常:从您自己的函数引发异常
 
-可以单独使用 MFC 异常处理范例来捕获 MFC 或其他库中的函数引发的异常。 除了捕获库代码引发的异常之外，当你编写可能遇到异常条件的函数时，你还可以从自己的函数引发异常。
+可以单独使用 MFC 异常处理范例来捕获 MFC 或其他库中的函数引发的异常。 除了捕获库代码引发的异常之外，当您编写可能遇到异常条件的函数时，您还可以从自己的函数引发异常。
 
 引发异常时，当前函数的执行已停止，并直接跳转到**捕获**最里面的异常帧的块。 异常机制将绕过函数的正常退出路径。 因此，您必须确保在正常退出会删除那些内存块。
 
@@ -43,4 +43,3 @@ ms.locfileid: "50558981"
 ## <a name="see-also"></a>请参阅
 
 [异常处理](../mfc/exception-handling-in-mfc.md)
-

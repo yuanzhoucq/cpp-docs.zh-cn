@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - EDITBIN program, options
 ms.assetid: 2da9f88e-cbab-4d64-bb66-ef700535230f
-ms.openlocfilehash: 263cfb79897ae60daff64521928db865f1dcb874
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 409c40986068475299c95f1be0dff5f15d022520
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50540538"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424322"
 ---
 # <a name="editbin-options"></a>EDITBIN 选项
 
@@ -27,7 +27,7 @@ EDITBIN 提供以下选项：
 |[/ALLOWISOLATION](../../build/reference/allowisolation.md)|指定 DLL 或可执行文件清单查找行为。|
 |[/APPCONTAINER](../../build/reference/appcontainer.md)|指定应用是否必须在 AppContainer 内运行 — 例如，UWP 应用。|
 |[/BIND](../../build/reference/bind.md)|将指定对象中的入口点地址设为速度加载时间。|
-|[/DYNAMICBASE](../../build/reference/dynamicbase.md)|使用地址空间布局随机化 (ASLR) 功能，指定是否可在加载时随机变基 DLL 或可执行映像。|
+|[/DYNAMICBASE](../../build/reference/dynamicbase.md)|使用地址空间布局随机化 (ASLR) 功能，指定是否可在加载时随机重新设定 DLL 或可执行图像的基址。|
 |[/ERRORREPORT](../../build/reference/errorreport-editbin-exe.md)|向 Microsoft 报告内部错误。|
 |[/HEAP](../../build/reference/heap.md)|以字节设置可执行映像堆的大小。|
 |[/HIGHENTROPYVA](../../build/reference/highentropyva.md)|指定 DLL 或可执行映像是否支持高熵（64 位）地址空间布局随机化 (ASLR)。|
@@ -40,7 +40,7 @@ EDITBIN 提供以下选项：
 |[/SECTION](../../build/reference/section-editbin.md)|重写节的特性。|
 |[/STACK](../../build/reference/stack.md)|以字节设置可执行映像栈的大小。|
 |[/SUBSYSTEM](../../build/reference/subsystem.md)|指定执行环境。|
-|[/SWAPRUN](../../build/reference/swaprun.md)|指定可执行映像必须复制到交换文件，然后从其中运行。|
+|[/SWAPRUN](../../build/reference/swaprun.md)|指定可执行图像必须复制到交换文件，然后从其中运行。|
 |[/TSAWARE](../../build/reference/tsaware.md)|指定应用可在多用户环境中运行。|
 |[/VERSION](../../build/reference/version.md)|在标头中设置版本号。|
 

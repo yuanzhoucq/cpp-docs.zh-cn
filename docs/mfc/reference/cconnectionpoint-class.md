@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CConnectionPoint [MFC], OnAdvise
 - CConnectionPoint [MFC], QuerySinkInterface
 ms.assetid: f0f23a1e-5e8c-41a9-aa6c-1a4793b28e8f
-ms.openlocfilehash: efa8a7bf9e14bd93682fcc2d5802a84f1bdb1e96
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a75ce23cf55f26505c2584c3a021b654602a6a2b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629926"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288943"
 ---
 # <a name="cconnectionpoint-class"></a>CConnectionPoint 类
 
@@ -57,7 +57,7 @@ class CConnectionPoint : public CCmdTarget
 |[CConnectionPoint::GetContainer](#getcontainer)|检索拥有连接映射的控件的容器。|
 |[CConnectionPoint::GetIID](#getiid)|检索连接点的接口 ID。|
 |[CConnectionPoint::GetMaxConnections](#getmaxconnections)|检索由控件支持的连接点的最大数目。|
-|[在](#getnextconnection)|检索到的连接元素的指针*pos*。|
+|[CConnectionPoint::GetNextConnection](#getnextconnection)|检索到的连接元素的指针*pos*。|
 |[CConnectionPoint::GetStartPosition](#getstartposition)|通过返回位置值，可传递给启动映射迭代`GetNextConnection`调用。|
 |[CConnectionPoint::OnAdvise](#onadvise)|由框架建立或断开连接时调用。|
 |[CConnectionPoint::QuerySinkInterface](#querysinkinterface)|检索指向请求的接收器接口的指针。|
@@ -172,7 +172,7 @@ virtual int GetMaxConnections();
 
 如果你想要限制可以连接到您的控件的接收器的数目来覆盖此函数。
 
-##  <a name="getnextconnection"></a>  在
+##  <a name="getnextconnection"></a>  CConnectionPoint::GetNextConnection
 
 检索到的连接元素的指针*pos*。
 
@@ -262,4 +262,3 @@ virtual HRESULT QuerySinkInterface(
 
 [CCmdTarget 类](../../mfc/reference/ccmdtarget-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)
-

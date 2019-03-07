@@ -13,16 +13,16 @@ helpviewer_keywords:
 - Afx naming convention
 - macros
 ms.assetid: add4e33f-0e62-4d27-be14-896cb8675d22
-ms.openlocfilehash: 2dfb2c1c5062f742b728ea651a292be84e33f6d1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 27664d4e48c0c4e09439f9e970ded9f2a630d90d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566772"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268182"
 ---
 # <a name="mfc-macros-and-globals"></a>MFC 宏和全局函数
 
-Microsoft 基础类库可以分为两个主要部分: （1） 的 MFC 类和 （2） 宏和全局变量。 如果函数或变量不是类的成员，则全局函数或变量。
+Microsoft 基础类库可以分为两个主要部分：（1） 的 MFC 类和 （2） 宏和全局变量。 如果函数或变量不是类的成员，则全局函数或变量。
 
 MFC 库和活动模板库 (ATL) 共享字符串转换宏。 有关详细信息，请参阅[字符串转换宏](../../atl/reference/string-conversion-macros.md)ATL 文档中。
 
@@ -128,4 +128,3 @@ MFC 宏和全局函数提供了以下类别中的功能。
 ## <a name="see-also"></a>请参阅
 
 [类概述](../../mfc/class-library-overview.md)
-

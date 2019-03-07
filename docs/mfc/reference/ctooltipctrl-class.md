@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CToolTipCtrl [MFC], Update
 - CToolTipCtrl [MFC], UpdateTipText
 ms.assetid: 8973f70c-b73a-46c7-908d-758f364b9a97
-ms.openlocfilehash: 177f6eeada942440c33f7dd0a0cbc6d9e59d867c
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: 6055926e05f8a7f9fbecec113e859d08e6b6e636
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54894141"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57420838"
 ---
 # <a name="ctooltipctrl-class"></a>CToolTipCtrl Class
 
@@ -140,7 +140,8 @@ class CToolTipCtrl : public CWnd
 
 `CToolTipCtrl` 提供的功能提供给控件的初始时间和持续时间的工具提示，周围的工具提示文本、 工具提示窗口本身的宽度和工具提示的背景和文本颜色的边距宽度。 一个工具提示控件可以提供多个工具的信息。
 
-`CToolTipCtrl` 类提供了 Windows 公共工具提示控件的功能。 此控件 (并因此`CToolTipCtrl`类) 仅适用于在 Windows 95/98 和 Windows NT 版本 3.51 下运行的程序和更高版本。
+
+  `CToolTipCtrl` 类提供了 Windows 公共工具提示控件的功能。 此控件 (并因此`CToolTipCtrl`类) 仅适用于在 Windows 95/98 和 Windows NT 版本 3.51 下运行的程序和更高版本。
 
 有关启用工具提示的详细信息，请参阅[Windows 中的工具提示未从 CFrameWnd 派生](../../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md)。
 
@@ -210,7 +211,7 @@ BOOL AddTool(
 包含该工具的文本的字符串资源的 ID。
 
 *lpRectTool*<br/>
-指向[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构，它包含该工具的坐标的边框。 坐标是相对于工作区的标识窗口的左上角*pWnd*。
+指向[RECT](/previous-versions/dd162897\(v=vs.85\))结构，它包含该工具的坐标的边框。 坐标是相对于工作区的标识窗口的左上角*pWnd*。
 
 *nIDTool*<br/>
 该工具的 ID。
@@ -248,7 +249,7 @@ BOOL AdjustRect(
 ### <a name="parameters"></a>参数
 
 *lprc*<br/>
-指向[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)包含工具提示窗口矩形或文本显示矩形的结构。
+指向[RECT](/previous-versions/dd162897\(v=vs.85\))包含工具提示窗口矩形或文本显示矩形的结构。
 
 *bLarger*<br/>
 如果为 TRUE， *lprc*用来指定显示文本矩形，并接收相应的窗口矩形。 如果为 FALSE， *lprc*用来指定窗口矩形，并接收相应的文本显示矩形。
@@ -453,7 +454,7 @@ void GetMargin(LPRECT lprc) const;
 ### <a name="parameters"></a>参数
 
 *lprc*<br/>
-地址`RECT`结构，它将接收的边距信息。 成员[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构未定义的绑定矩形。 出于此消息，目的解释结构成员，如下所示：
+地址`RECT`结构，它将接收的边距信息。 成员[RECT](/previous-versions/dd162897\(v=vs.85\))结构未定义的绑定矩形。 出于此消息，目的解释结构成员，如下所示：
 
 |成员|表示形式|
 |------------|--------------------|
@@ -867,7 +868,7 @@ void SetToolRect(
 该工具的 ID。
 
 *lpRect*<br/>
-指向[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构，它指定的新边框。
+指向[RECT](/previous-versions/dd162897\(v=vs.85\))结构，它指定的新边框。
 
 ##  <a name="setwindowtheme"></a>  CToolTipCtrl::SetWindowTheme
 

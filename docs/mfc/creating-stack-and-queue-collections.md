@@ -11,18 +11,18 @@ helpviewer_keywords:
 - stack collections
 - collections, queue
 ms.assetid: 3c7bc198-35f0-4fc3-aaed-6005a0f22638
-ms.openlocfilehash: 082308acaeddcb173a0d873c0f50e2e40fd8fe12
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ed0ad9b98a69e56df4e66b25bc6ca08cdaaad413
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50569200"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301462"
 ---
 # <a name="creating-stack-and-queue-collections"></a>创建堆栈和队列集合
 
 此文章介绍了如何创建其他数据结构，如[堆栈](#_core_stacks)并[队列](#_core_queues)，MFC 类列表中。 示例使用从 `CList` 派生的类，但可以直接使用 `CList`，除非您需要添加功能。
 
-##  <a name="_core_stacks"></a> 堆栈
+##  <a name="_core_stacks"></a> Stacks
 
 由于标准列表集合具有头和尾，因此很容易创建一个模仿后进先出堆栈的行为的派生列表集合。 堆栈就像自助餐厅中的一堆盘子。 新添的盘子将会放在现有的盘子的上面。 最后添加的盘子将会首先被取用。 列表集合成员函数 `AddHead` 和 `RemoveHead` 可用于专门从列表头中添加和移除元素；因此，最新添加的元素将是第一个被移除的。
 
@@ -51,4 +51,3 @@ ms.locfileid: "50569200"
 ## <a name="see-also"></a>请参阅
 
 [集合](../mfc/collections.md)
-

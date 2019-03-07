@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComEnumOnSTL class
 ms.assetid: befe1a44-7a00-4f28-9a2e-cc0fa526643c
-ms.openlocfilehash: 7b1efb3bd574edde59f6d8845d73a51dfabea433
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 56d0de1131791def3ea536c6e5a7f5ce0bef9617
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50626611"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290503"
 ---
 # <a name="ccomenumonstl-class"></a>CComEnumOnSTL 类
 
@@ -102,7 +102,7 @@ C + + 标准库容器类。
 ## <a name="see-also"></a>请参阅
 
 [IEnumOnSTLImpl](../../atl/reference/ienumonstlimpl-class.md)<br/>
-[ATLCollections 示例： 演示 ICollectionOnSTLImpl 和 CComEnumOnSTL，自定义复制策略类](../../visual-cpp-samples.md)<br/>
+[ATLCollections 示例：演示 ICollectionOnSTLImpl 和 CComEnumOnSTL，自定义复制策略类](../../visual-cpp-samples.md)<br/>
 [类概述](../../atl/atl-class-overview.md)<br/>
 [CComObjectRootEx 类](../../atl/reference/ccomobjectrootex-class.md)<br/>
 [CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel)<br/>

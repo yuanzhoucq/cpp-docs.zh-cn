@@ -10,12 +10,12 @@ helpviewer_keywords:
 - casting types [MFC]
 - macros [MFC], casting pointers
 ms.assetid: e138465e-c35f-4e84-b788-bd200ccf2f0e
-ms.openlocfilehash: 42b668287905fc5f6e05a09949d53acc51c79026
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3107b860747bc2434ae9afca39b517d8dcc9eb01
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50584132"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299356"
 ---
 # <a name="type-casting-of-mfc-class-objects"></a>MFC 类对象的类型强制转换
 
@@ -72,7 +72,7 @@ STATIC_DOWNCAST(class_name, pobject)
 
 *pobject*必须为 NULL，或者指向对象的直接派生的类或间接从*class_name*。 在应用程序定义 _DEBUG 预处理器符号的版本中，如果断言宏*pobject*不为 NULL，或如果它指向一个对象，不是"类型的"中指定的类*class_name*参数 (请参阅[CObject::IsKindOf](../../mfc/reference/cobject-class.md#iskindof))。 在非 **_DEBUG**版本中，该宏执行转换，而无需任何类型检查。
 
-在指定的类*class_name*参数必须派生自`CObject`，并且必须使用 DECLARE_DYNAMIC 和 IMPLEMENT_DYNAMIC、 DECLARE_DYNCREATE 和 IMPLEMENT_DYNCREATE，或 DECLARE_SERIAL 和 IMPLEMENT_为串行宏一文中所述[CObject 类： 从 CObject 派生类](../../mfc/deriving-a-class-from-cobject.md)。
+在指定的类*class_name*参数必须派生自`CObject`，并且必须使用 DECLARE_DYNAMIC 和 IMPLEMENT_DYNAMIC、 DECLARE_DYNCREATE 和 IMPLEMENT_DYNCREATE，或 DECLARE_SERIAL 和 IMPLEMENT_为串行宏一文中所述[CObject 类：从 CObject 派生类](../../mfc/deriving-a-class-from-cobject.md)。
 
 例如，可能会强制转换为指针`CMyDoc`，称为`pMyDoc`，为指向的`CDocument`使用此表达式：
 

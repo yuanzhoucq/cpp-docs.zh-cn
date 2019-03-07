@@ -11,12 +11,12 @@ helpviewer_keywords:
 - CListCtrl class [MFC], sorting
 - CListCtrl class [MFC], arranging the list
 ms.assetid: dcc51e4c-0ca8-4319-bec5-6994cc8ac9e5
-ms.openlocfilehash: 3cc322a41c06b385cdd298629b8b96778f6a0f2d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 94ede322536f0ef57a87b4e6d4d448e4dff34814
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467092"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277737"
 ---
 # <a name="scrolling-arranging-sorting-and-finding-in-list-controls"></a>在列表控件中滚动、排列、排序和查找
 
@@ -28,4 +28,3 @@ ms.locfileid: "50467092"
 
 [使用 CListCtrl](../mfc/using-clistctrl.md)<br/>
 [控件](../mfc/controls-mfc.md)
-

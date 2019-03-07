@@ -21,12 +21,12 @@ helpviewer_keywords:
 - ON_EN_KILLFOCUS macro [MFC]
 - edit controls [MFC], edit control handlers
 ms.assetid: 55b88b5e-12b5-4422-b03e-c8c2f27d095c
-ms.openlocfilehash: 67734281191d0b16d3ebaa43610915b04a8069ff
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 53586de574fca6ab88b93444c9d571c62354cef2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509026"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302021"
 ---
 # <a name="edit-control-handlers"></a>编辑控件处理程序
 
@@ -34,16 +34,15 @@ ms.locfileid: "50509026"
 
 |映射条目|函数原型|
 |---------------|------------------------|
-|ON_EN_CHANGE ( \<id >， \<memberFxn >)|afx_msg void memberFxn （);|
-|ON_EN_ERRSPACE ( \<id >， \<memberFxn >)|afx_msg void memberFxn （);|
-|ON_EN_HSCROLL ( \<id >， \<memberFxn >)|afx_msg void memberFxn （);|
-|ON_EN_KILLFOCUS ( \<id >， \<memberFxn >)|afx_msg void memberFxn （);|
-|ON_EN_MAXTEXT ( \<id >， \<memberFxn >)|afx_msg void memberFxn （);|
-|ON_EN_SETFOCUS ( \<id >， \<memberFxn >)|afx_msg void memberFxn （);|
-|ON_EN_UPDATE ( \<id >， \<memberFxn >)|afx_msg void memberFxn （);|
-|ON_EN_VSCROLL ( \<id >， \<memberFxn >)|afx_msg void memberFxn （);|
+|ON_EN_CHANGE( \<id>, \<memberFxn> )|afx_msg void memberFxn( );|
+|ON_EN_ERRSPACE( \<id>, \<memberFxn> )|afx_msg void memberFxn( );|
+|ON_EN_HSCROLL( \<id>, \<memberFxn> )|afx_msg void memberFxn( );|
+|ON_EN_KILLFOCUS( \<id>, \<memberFxn> )|afx_msg void memberFxn( );|
+|ON_EN_MAXTEXT( \<id>, \<memberFxn> )|afx_msg void memberFxn( );|
+|ON_EN_SETFOCUS( \<id>, \<memberFxn> )|afx_msg void memberFxn( );|
+|ON_EN_UPDATE( \<id>, \<memberFxn> )|afx_msg void memberFxn( );|
+|ON_EN_VSCROLL( \<id>, \<memberFxn> )|afx_msg void memberFxn( );|
 
 ## <a name="see-also"></a>请参阅
 
 [消息映射](../../mfc/reference/message-maps-mfc.md)
-

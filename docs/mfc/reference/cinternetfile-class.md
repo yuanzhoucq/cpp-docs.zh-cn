@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CInternetFile [MFC], WriteString
 - CInternetFile [MFC], m_hFile
 ms.assetid: 96935681-ee71-4a8d-9783-5abc7b3e6f10
-ms.openlocfilehash: 309d4210f72f7ecd83ed6a8eb79874a1c8170d59
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 65bc36856e253d086cc430a600daa9255e21ea75
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50586870"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279973"
 ---
 # <a name="cinternetfile-class"></a>CInternetFile 类
 
@@ -65,7 +65,7 @@ class CInternetFile : public CStdioFile
 |[CInternetFile::Close](#close)|关闭`CInternetFile`并释放其资源。|
 |[CInternetFile::Flush](#flush)|刷新写入缓冲区的内容，并确保内存中的数据写入到目标计算机。|
 |[CInternetFile::GetLength](#getlength)|返回文件的大小。|
-|[Cinternetfile:: Read](#read)|读取指定的字节数。|
+|[CInternetFile::Read](#read)|读取指定的字节数。|
 |[CInternetFile::ReadString](#readstring)|读取字符的流。|
 |[CInternetFile::Seek](#seek)|在打开的文件指针重新定位。|
 |[CInternetFile::SetReadBufferSize](#setreadbuffersize)|设置要从中读取数据的缓冲区的大小。|
@@ -216,7 +216,7 @@ HINTERNET m_hFile;
 operator HINTERNET() const;
 ```
 
-##  <a name="read"></a>  Cinternetfile:: Read
+##  <a name="read"></a>  CInternetFile::Read
 
 调用此成员函数以读取到给定的内存，开始*lpvBuf*，则指定的字节数*nCount*。
 
@@ -261,7 +261,7 @@ virtual LPTSTR ReadString(
 *pstr*<br/>
 指向将接收所读取的行的字符串的指针。
 
-*最*<br/>
+*nMax*<br/>
 要读取的字符数目上限。
 
 *rString*<br/>

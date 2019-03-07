@@ -5,12 +5,12 @@ helpviewer_keywords:
 - HTML controls, ATL support
 - DHTML controls, ATL support
 ms.assetid: b627547a-3768-4346-9900-4b7a21fb8e27
-ms.openlocfilehash: e38b94e200754ce9dd37df2bfb17dfaa32cafe49
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 32b1c00e3ad3ed15fa56f7718789fe1a2e3ecbab
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175699"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424374"
 ---
 # <a name="identifying-the-elements-of-the-dhtml-control-project"></a>标识 DHTML 控件项目的元素
 
@@ -22,7 +22,7 @@ DHTML 控件是类似于任何 ATL 控件除外：
 
 - 它创建 UI 控件的 HTML 资源。
 
-- 它允许访问 DHTML 对象模型通过成员变量`m_spBrowser`，这是类型的智能指针[IWebBrowser2](https://msdn.microsoft.com/library/aa752127.aspx)。 使用此指针访问 DHTML 对象模型的任何部分。
+- 它允许访问 DHTML 对象模型通过成员变量`m_spBrowser`，这是类型的智能指针[IWebBrowser2](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752127\(v=vs.85\))。 使用此指针访问 DHTML 对象模型的任何部分。
 
 下图说明了您的 DLL、 DHTML 控件、 Web 浏览器和 HTML 资源之间的关系。
 
@@ -54,4 +54,3 @@ ATL 控件向导生成的 HTML 资源和.cpp 文件中，默认代码的控件�
 ## <a name="see-also"></a>请参阅
 
 [支持 DHTML 控件](../atl/atl-support-for-dhtml-controls.md)
-

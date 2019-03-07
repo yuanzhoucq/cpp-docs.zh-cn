@@ -6,12 +6,12 @@ helpviewer_keywords:
 - asynchronous message blocks
 - greedy join [Concurrency Runtime]
 ms.assetid: 79c456c0-1692-480c-bb67-98f2434c1252
-ms.openlocfilehash: b78b4db4dda33e0a94da3624ea1ffd8748a601f4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: de6a433ab733207d5c56b46e693837056a0cd8b1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50586116"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274158"
 ---
 # <a name="asynchronous-message-blocks"></a>异步消息块
 
@@ -80,7 +80,7 @@ ms.locfileid: "50586116"
 [single_assignment](#single_assignment)<br/>
 存储可以写入一次并从多个时间中读取的消息。
 
-[调用](#call)<br/>
+[call](#call)<br/>
 当它收到一条消息时执行工作。
 
 [transformer](#transformer)<br/>
@@ -97,26 +97,26 @@ ms.locfileid: "50586116"
 
 这些消息块类型具有不同的特征，使它们适用于不同的情况。 以下是一些特征：
 
-- *传播类型*： 消息块是否充当源的数据和 / 或数据，接收方。
+- *传播类型*:是否消息块是用作源的数据和 / 或数据，接收方。
 
-- *消息排序*： 消息块是否保持原始顺序发送或接收消息。 每个预定义的消息块类型维持其发送或接收消息的原始顺序。
+- *消息排序*:是否消息块保持原始顺序发送或接收消息。 每个预定义的消息块类型维持其发送或接收消息的原始顺序。
 
-- *源计数*： 消息块可以读取的源的最大数目。
+- *源计数*:消息块可以读取的源的最大个数。
 
-- *目标计数*： 消息块可以将写入到的目标的最大数目。
+- *目标计数*:消息块可以将写入到的目标最大数目。
 
 下表显示了这些特征如何与各种消息块类型相关联。
 
 |消息块类型|传播类型 （源、 目标，或两者）|消息顺序 （有序或无序列表）|源计数|目标计数|
 |------------------------|--------------------------------------------------|-----------------------------------------------|------------------|------------------|
-|`unbounded_buffer`|消息和传送|Ordered|不受限制|不受限制|
-|`overwrite_buffer`|消息和传送|Ordered|不受限制|不受限制|
-|`single_assignment`|消息和传送|Ordered|不受限制|不受限制|
+|`unbounded_buffer`|双向|Ordered|不受限制|不受限制|
+|`overwrite_buffer`|双向|Ordered|不受限制|不受限制|
+|`single_assignment`|双向|Ordered|不受限制|不受限制|
 |`call`|目标|Ordered|不受限制|不适用|
-|`transformer`|消息和传送|Ordered|不受限制|1|
-|`choice`|消息和传送|Ordered|10|1|
-|`join`|消息和传送|Ordered|不受限制|1|
-|`multitype_join`|消息和传送|Ordered|10|1|
+|`transformer`|双向|Ordered|不受限制|1|
+|`choice`|双向|Ordered|10|1|
+|`join`|双向|Ordered|不受限制|1|
+|`multitype_join`|双向|Ordered|10|1|
 |`timer`|源|不适用|不适用|1|
 
 以下部分介绍更多详细信息中的消息块类型。
@@ -139,7 +139,7 @@ ms.locfileid: "50586116"
 334455
 ```
 
-有关完整示例，演示如何使用`unbounded_buffer`类，请参阅[如何： 实现各种制造者-使用者模式](../../parallel/concrt/how-to-implement-various-producer-consumer-patterns.md)。
+有关完整示例，演示如何使用`unbounded_buffer`类，请参阅[如何：实现各种制造者-使用者模式](../../parallel/concrt/how-to-implement-various-producer-consumer-patterns.md)。
 
 [[返回页首](#top)]
 
@@ -161,7 +161,7 @@ ms.locfileid: "50586116"
 555555
 ```
 
-有关完整示例，演示如何使用`overwrite_buffer`类，请参阅[如何： 实现各种制造者-使用者模式](../../parallel/concrt/how-to-implement-various-producer-consumer-patterns.md)。
+有关完整示例，演示如何使用`overwrite_buffer`类，请参阅[如何：实现各种制造者-使用者模式](../../parallel/concrt/how-to-implement-various-producer-consumer-patterns.md)。
 
 [[返回页首](#top)]
 
@@ -181,7 +181,7 @@ ms.locfileid: "50586116"
 333333
 ```
 
-有关完整示例，演示如何使用`single_assignment`类，请参阅[演练： 实现 Future](../../parallel/concrt/walkthrough-implementing-futures.md)。
+有关完整示例，演示如何使用`single_assignment`类，请参阅[演练：实现 Future](../../parallel/concrt/walkthrough-implementing-futures.md)。
 
 [[返回页首](#top)]
 
@@ -201,7 +201,7 @@ ms.locfileid: "50586116"
 334455
 ```
 
-有关完整示例，演示如何使用`call`类，请参阅[如何： 为 call 和 transformer 类提供工作函数](../../parallel/concrt/how-to-provide-work-functions-to-the-call-and-transformer-classes.md)。
+有关完整示例，演示如何使用`call`类，请参阅[如何：为 call 和 transformer 类提供工作函数](../../parallel/concrt/how-to-provide-work-functions-to-the-call-and-transformer-classes.md)。
 
 [[返回页首](#top)]
 
@@ -225,7 +225,7 @@ ms.locfileid: "50586116"
 10.8914.5218.15
 ```
 
-有关完整示例，演示如何使用`transformer`类，请参阅[如何： 在数据管道中的使用转换器](../../parallel/concrt/how-to-use-transformer-in-a-data-pipeline.md)。
+有关完整示例，演示如何使用`transformer`类，请参阅[如何：在数据管道中的使用转换器](../../parallel/concrt/how-to-use-transformer-in-a-data-pipeline.md)。
 
 [[返回页首](#top)]
 
@@ -255,7 +255,7 @@ fib35 received its value first. Result = 9227465
 
 此示例使用[concurrency:: parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke)算法来计算中并行的斐波那契数字。 有关详细信息`parallel_invoke`，请参阅[并行算法](../../parallel/concrt/parallel-algorithms.md)。
 
-有关完整示例，演示如何使用`choice`类，请参阅[如何： 选择在完成任务](../../parallel/concrt/how-to-select-among-completed-tasks.md)。
+有关完整示例，演示如何使用`choice`类，请参阅[如何：在已完成的任务之间选择](../../parallel/concrt/how-to-select-among-completed-tasks.md)。
 
 [[返回页首](#top)]
 
@@ -287,7 +287,7 @@ fib35 = 9227465fib37 = 24157817half_of_fib42 = 1.33957e+008
 
 此示例使用[concurrency:: parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke)算法来计算中并行的斐波那契数字。 有关详细信息`parallel_invoke`，请参阅[并行算法](../../parallel/concrt/parallel-algorithms.md)。
 
-有关完整示例，演示如何使用`join`类，请参阅[如何： 选择在完成任务](../../parallel/concrt/how-to-select-among-completed-tasks.md)并[演练： 使用 join 避免死锁](../../parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md)。
+有关完整示例，演示如何使用`join`类，请参阅[如何：在已完成的任务之间选择](../../parallel/concrt/how-to-select-among-completed-tasks.md)和[演练：使用 join 避免死锁](../../parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md)。
 
 [[返回页首](#top)]
 
@@ -313,7 +313,7 @@ fib35 = 9227465fib37 = 24157817half_of_fib42 = 1.33957e+008
 Computing fib(42)..................................................result is 267914296
 ```
 
-有关完整示例，演示如何使用`timer`类，请参阅[如何： 定期发送一条消息](../../parallel/concrt/how-to-send-a-message-at-a-regular-interval.md)。
+有关完整示例，演示如何使用`timer`类，请参阅[如何：在固定时间间隔发送一条消息](../../parallel/concrt/how-to-send-a-message-at-a-regular-interval.md)。
 
 [[返回页首](#top)]
 
@@ -340,7 +340,7 @@ bool (T const &)
 
 若要消除不必要的数据复制，使用第二个窗体时您具有按值传播的聚合类型。
 
-消息筛选支持*数据流*编程模型，在接收数据时组件执行计算。 有关使用筛选器函数来控制流的消息传递网络中的数据的示例，请参阅[如何： 使用消息块筛选器](../../parallel/concrt/how-to-use-a-message-block-filter.md)，[演练： 创建数据流代理](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md)，和[演练： 创建图像处理网络](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)。
+消息筛选支持*数据流*编程模型，在接收数据时组件执行计算。 有关使用筛选器函数来控制流的消息传递网络中的数据的示例，请参阅[如何：使用消息块筛选器](../../parallel/concrt/how-to-use-a-message-block-filter.md)，[演练：创建数据流代理](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md)，和[演练：创建图像处理网络](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)。
 
 [[返回页首](#top)]
 
@@ -352,11 +352,10 @@ bool (T const &)
 
 贪婪联接，它还从多个源读取输入的消息，使用消息保留它在等待从每个源接收的消息读取其他消息。 例如，请考虑从消息块接收消息的贪婪联接`A`和`B`。 如果贪婪联接从 B 接收两条消息，但尚未收到来自的消息`A`，贪婪联接将保存来自的第二个消息的唯一的消息标识符`B`。 贪婪联接收到来自后`A`，并将传播这些消息，它使用已保存的消息标识符以查看是否第二个消息从`B`仍然可用。
 
-实现您自己的自定义消息块类型时，可以使用消息保留。 有关如何创建自定义消息块类型的示例，请参阅[演练： 创建自定义消息块](../../parallel/concrt/walkthrough-creating-a-custom-message-block.md)。
+实现您自己的自定义消息块类型时，可以使用消息保留。 有关如何创建自定义消息块类型的示例，请参阅[演练：创建自定义消息块](../../parallel/concrt/walkthrough-creating-a-custom-message-block.md)。
 
 [[返回页首](#top)]
 
 ## <a name="see-also"></a>请参阅
 
 [异步代理库](../../parallel/concrt/asynchronous-agents-library.md)
-

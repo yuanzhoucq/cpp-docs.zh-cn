@@ -14,12 +14,12 @@ helpviewer_keywords:
 - COleDropSource [MFC], OnBeginDrag
 - COleDropSource [MFC], QueryContinueDrag
 ms.assetid: d3eecc5f-a70b-4a01-b705-7d2c098ebe17
-ms.openlocfilehash: 51d524054b67a5cecc5aa7791b0aeea0cc076813
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 587aa0730502d5e8f90c4fec57bb87886b79fb3f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50457770"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304972"
 ---
 # <a name="coledropsource-class"></a>COleDropSource 类
 
@@ -147,7 +147,7 @@ virtual SCODE QueryContinueDrag(
 指出是否已按了 ESC 键下自上次调用以来`COleDropSource::QueryContinueDrag`。
 
 *dwKeyState*<br/>
-包含在键盘上的修改键的状态。 这是以下任意数量的组合： MK_CONTROL、 MK_SHIFT、 MK_ALT、 MK_LBUTTON、 MK_MBUTTON 和 MK_RBUTTON。
+包含在键盘上的修改键的状态。 这是以下任意数量的组合：MK_CONTROL、 MK_SHIFT、 MK_ALT、 MK_LBUTTON、 MK_MBUTTON 和 MK_RBUTTON。
 
 ### <a name="return-value"></a>返回值
 
@@ -167,4 +167,3 @@ virtual SCODE QueryContinueDrag(
 [MFC 示例 OCLIENT](../../visual-cpp-samples.md)<br/>
 [CCmdTarget 类](../../mfc/reference/ccmdtarget-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)
-

@@ -16,16 +16,17 @@ f1_keywords:
 helpviewer_keywords:
 - ISource class
 ms.assetid: c7b73463-42f6-4dcc-801a-81379b12d35a
-ms.openlocfilehash: 4e96dc11455015a83af9be545ba15c96b5e2f779
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5b0704f3d666eca08bafb33f9236709478d347d8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620514"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288761"
 ---
 # <a name="isource-class"></a>ISource 类
 
-`ISource` 类是所有源块的接口。 源块将消息传播到 `ITarget` 块。
+
+  `ISource` 类是所有源块的接口。 源块将消息传播到 `ITarget` 块。
 
 ## <a name="syntax"></a>语法
 
@@ -150,7 +151,7 @@ virtual message<T>* consume(
 
 `consume`方法是类似于`accept`，但始终必须通过调用带`reserve`返回**true**。
 
-##  <a name="dtor"></a> ~ ISource
+##  <a name="dtor"></a> ~ISource
 
 销毁`ISource`对象。
 

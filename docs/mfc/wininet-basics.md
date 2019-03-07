@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WinInet classes [MFC], displaying progress
 - WinInet classes [MFC], about WinInet classes
 ms.assetid: 665de5ac-e80d-427d-8d91-2ae466885940
-ms.openlocfilehash: f56d2bb6e6a0b49b3d69dbcc0bf6346b72e9f7b0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 79ec102aa27440c64f03c6e22b9f2fe959cac6b9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519179"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264451"
 ---
 # <a name="wininet-basics"></a>WinInet 基础知识
 
@@ -67,4 +67,3 @@ WinInet 的其他信息，请参阅[Win32 Internet 扩展 (WinInet)](../mfc/win3
 
 [MFC Internet 编程基础知识](../mfc/mfc-internet-programming-basics.md)<br/>
 [Win32 Internet 扩展 (WinInet)](../mfc/win32-internet-extensions-wininet.md)
-

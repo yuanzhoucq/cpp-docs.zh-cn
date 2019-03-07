@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CStatusBarCtrl [MFC], SetText
 - CStatusBarCtrl [MFC], SetTipText
 ms.assetid: 8504ad38-7b91-4746-aede-ac98886eb47b
-ms.openlocfilehash: 71ae39cb62da7938880973dc48b65ed69b9c8b92
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8db2be9b14f9d60f2103ce0b63b772962b079bbe
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50569724"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426129"
 ---
 # <a name="cstatusbarctrl-class"></a>CStatusBarCtrl 类
 
@@ -80,9 +80,9 @@ class CStatusBarCtrl : public CWnd
 |[CStatusBarCtrl::GetIcon](#geticon)|检索当前状态栏控件中的部件 （也称为窗格） 的图标。|
 |[CStatusBarCtrl::GetParts](#getparts)|检索状态栏控件中的部分的计数。|
 |[CStatusBarCtrl::GetRect](#getrect)|检索状态栏控件中的部件的边框。|
-|[Cstatusbarctrl:: Gettext](#gettext)|检索从状态栏控件给定部分的文本。|
-|[Cstatusbarctrl:: Gettextlength](#gettextlength)|检索的长度，以字符为单位的状态栏控件给定部分中的文本。|
-|[Cstatusbarctrl:: Gettiptext](#gettiptext)|检索在状态栏窗格的工具提示文本。|
+|[CStatusBarCtrl::GetText](#gettext)|检索从状态栏控件给定部分的文本。|
+|[CStatusBarCtrl::GetTextLength](#gettextlength)|检索的长度，以字符为单位的状态栏控件给定部分中的文本。|
+|[CStatusBarCtrl::GetTipText](#gettiptext)|检索在状态栏窗格的工具提示文本。|
 |[CStatusBarCtrl::IsSimple](#issimple)|检查以确定它是否在简单模式下状态窗口控件。|
 |[CStatusBarCtrl::SetBkColor](#setbkcolor)|在状态栏中设置的背景色。|
 |[CStatusBarCtrl::SetIcon](#seticon)|在状态栏中设置窗格中的图标。|
@@ -90,7 +90,7 @@ class CStatusBarCtrl : public CWnd
 |[CStatusBarCtrl::SetParts](#setparts)|设置状态栏控件和每个部分的右边缘坐标中的部件。|
 |[CStatusBarCtrl::SetSimple](#setsimple)|指定状态栏控件是否显示简单的文本或显示通过以前调用设置的所有控件部件`SetParts`。|
 |[CStatusBarCtrl::SetText](#settext)|设置状态栏控件给定部分中的文本。|
-|[Cstatusbarctrl:: Settiptext](#settiptext)|在状态栏中设置一个窗格的工具提示文本。|
+|[CStatusBarCtrl::SetTipText](#settiptext)|在状态栏中设置一个窗格的工具提示文本。|
 
 ## <a name="remarks"></a>备注
 
@@ -132,7 +132,7 @@ virtual BOOL Create(
 指定状态栏控件的样式。 应用状态栏控件样式中列出的任意组合[常见控件样式](/windows/desktop/Controls/common-control-styles)Windows SDK 中。 此参数必须包含 WS_CHILD 样式。 它还应包括 WS_VISIBLE 样式。
 
 *rect*<br/>
-指定状态栏控件的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构。
+指定状态栏控件的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT](/previous-versions/dd162897\(v=vs.85\))结构。
 
 *pParentWnd*<br/>
 通常指定控件的父窗口状态栏`CDialog`。 它不能为 NULL。
@@ -178,7 +178,7 @@ virtual BOOL CreateEx(
 指定状态栏控件的样式。 应用状态栏控件样式中列出的任意组合[常见控件样式](/windows/desktop/Controls/common-control-styles)Windows SDK 中。 此参数必须包含 WS_CHILD 样式。 它还应包括 WS_VISIBLE 样式。
 
 *rect*<br/>
-对引用[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构的结构描述的大小和窗口的工作区中创建的位置*pParentWnd*。
+对引用[RECT](/previous-versions/dd162897\(v=vs.85\))结构的结构描述的大小和窗口的工作区中创建的位置*pParentWnd*。
 
 *pParentWnd*<br/>
 指向控件的父级的窗口的指针。
@@ -344,7 +344,7 @@ BOOL GetRect(
 其边框是要检索的部件的从零开始索引。
 
 *lpRect*<br/>
-地址[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构，它接收的边框。
+地址[RECT](/previous-versions/dd162897\(v=vs.85\))结构，它接收的边框。
 
 ### <a name="return-value"></a>返回值
 
@@ -354,7 +354,7 @@ BOOL GetRect(
 
 [!code-cpp[NVC_MFC_CStatusBarCtrl#4](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_6.cpp)]
 
-##  <a name="gettext"></a>  Cstatusbarctrl:: Gettext
+##  <a name="gettext"></a>  CStatusBarCtrl::GetText
 
 检索从状态栏控件给定部分的文本。
 
@@ -396,7 +396,7 @@ int GetText(
 
 [!code-cpp[NVC_MFC_CStatusBarCtrl#5](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_7.cpp)]
 
-##  <a name="gettextlength"></a>  Cstatusbarctrl:: Gettextlength
+##  <a name="gettextlength"></a>  CStatusBarCtrl::GetTextLength
 
 检索的长度，以字符为单位的状态栏控件给定部分中的文本。
 
@@ -430,7 +430,7 @@ int GetTextLength(
 
 [!code-cpp[NVC_MFC_CStatusBarCtrl#6](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_8.cpp)]
 
-##  <a name="gettiptext"></a>  Cstatusbarctrl:: Gettiptext
+##  <a name="gettiptext"></a>  CStatusBarCtrl::GetTipText
 
 检索在状态栏窗格的工具提示文本。
 
@@ -613,7 +613,7 @@ BOOL SetText(
 *nPane*<br/>
 要设置部件的从零开始的索引。 如果此值为 255，则假定状态栏控件是仅具有一个部件的简单控件。
 
-*n 类型*<br/>
+*nType*<br/>
 绘制操作的类型。 请参阅[SB_SETTEXT 消息](/windows/desktop/Controls/sb-settext)有关可能的值的列表。
 
 ### <a name="return-value"></a>返回值
@@ -628,7 +628,7 @@ BOOL SetText(
 
 [!code-cpp[NVC_MFC_CStatusBarCtrl#11](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_13.cpp)]
 
-##  <a name="settiptext"></a>  Cstatusbarctrl:: Settiptext
+##  <a name="settiptext"></a>  CStatusBarCtrl::SetTipText
 
 在状态栏中设置一个窗格的工具提示文本。
 

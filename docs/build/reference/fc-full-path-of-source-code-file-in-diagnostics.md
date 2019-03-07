@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /FC compiler option [C++]
 - -FC compiler option [C++]
 ms.assetid: 1f11414e-cb42-421b-be68-9d369aab036b
-ms.openlocfilehash: 3629ec35f0be5ebfd384b949acb2910dcbea3318
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 96809f09efd068b80f04a70d4356c1ceaf5f113c
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624904"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57422476"
 ---
 # <a name="fc-full-path-of-source-code-file-in-diagnostics"></a>/FC（所诊断源代码文件的完整路径）
 
@@ -36,11 +36,11 @@ int main( ) {
 
 无需 **/FC**，诊断文本将类似于以下诊断文本：
 
-- compiler_option_FC.cpp(5)： 错误 C2143： 语法错误： 缺少; 之前}
+- compiler_option_FC.cpp(5) : error C2143: syntax error : missing ';' before '}'
 
 与 **/FC**，诊断文本将类似于以下诊断文本：
 
-- c:\test\compiler_option_fc.cpp(5)： 错误 C2143： 语法错误： 缺少; 之前}
+- c:\test\compiler_option_fc.cpp(5) : error C2143: syntax error : missing ';' before '}'
 
 **/FC**如果你想要查看的文件名称的完整路径，使用时也需要&#95;&#95;文件&#95;&#95;宏。 请参阅[预定义的宏](../../preprocessor/predefined-macros.md)有关详细信息&#95;&#95;文件&#95;&#95;。
 

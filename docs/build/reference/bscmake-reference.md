@@ -10,12 +10,12 @@ helpviewer_keywords:
 - bsc files, building
 - BSCMAKE
 ms.assetid: b97ad994-1355-4809-98db-6abc12c6fb13
-ms.openlocfilehash: 1f321d51d1b880ea634c835567767c528aca041b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1dd89047b8fa6a415e7e19dd69ca3f499887299f
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509469"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57416243"
 ---
 # <a name="bscmake-reference"></a>BSCMAKE 参考
 
@@ -29,7 +29,7 @@ Microsoft 浏览信息维护实用工具 (BSCMAKE.EXE) 从编译期间创建的 
 如果在开发环境外部生成程序，则仍可以创建一个可在该环境中检查的自定义 .bsc。 对编译期间创建 .sbr 文件运行 BSCMAKE。
 
 > [!NOTE]
->  可以仅从 Visual Studio 开发人员命令提示符启动此工具。 不能从系统命令提示符或从文件资源管理器启动此工具。
+>  可以仅从 Visual Studio 开发人员命令提示符启动此工具。 无法从系统命令提示符或文件资源管理器中启动它。
 
 本节包括下列主题：
 

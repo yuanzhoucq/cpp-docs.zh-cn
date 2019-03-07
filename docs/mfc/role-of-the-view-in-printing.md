@@ -9,12 +9,12 @@ helpviewer_keywords:
 - CView class [MFC], role in printing
 - printing views [MFC]
 ms.assetid: 8d4a3c8e-1fce-4edc-b608-94cb5f3e487e
-ms.openlocfilehash: 7aaf50a63c0d5dcf52f5ee388162f37d66505b0b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 835ea44ef82e59543bab835cd4bf5029dde0b453
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50635443"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279310"
 ---
 # <a name="role-of-the-view-in-printing"></a>视图在打印中的作用
 
@@ -31,4 +31,3 @@ ms.locfileid: "50635443"
 ## <a name="see-also"></a>请参阅
 
 [使用视图](../mfc/using-views.md)
-

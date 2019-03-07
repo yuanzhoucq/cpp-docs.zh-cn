@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CControlBar [MFC], m_bAutoDelete
 - CControlBar [MFC], m_pInPlaceOwner
 ms.assetid: 4d668c55-9b42-4838-97ac-cf2b3000b82c
-ms.openlocfilehash: e9fba929017edfe547f2cc20105ea4f4bcdc9c33
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9ac9ad66a076202113f0c59dafae243b6951ee4c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644387"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291621"
 ---
 # <a name="ccontrolbar-class"></a>CControlBar Class
 
@@ -107,7 +107,7 @@ class CControlBar : public CWnd
 
 - [控件条](../../mfc/control-bars.md)
 
-- [技术说明 31： 控件条](../../mfc/tn031-control-bars.md)。
+- [技术说明 31:控件条](../../mfc/tn031-control-bars.md)。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 

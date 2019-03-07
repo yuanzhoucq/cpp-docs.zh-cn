@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CAnimationValue [MFC], GetAnimationVariableList
 - CAnimationValue [MFC], m_value
 ms.assetid: 78c5ae19-ede5-4f20-bfbe-68b467b603c2
-ms.openlocfilehash: 9a43536e3f9f90b70d5d68eb5ce5d277f9b42e00
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 86a2caa8946bcafeabf85687a24b2430ecefe790
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613793"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283535"
 ---
 # <a name="canimationvalue-class"></a>CAnimationValue 类
 
@@ -66,7 +66,7 @@ class CAnimationValue : public CAnimationBaseObject;
 |----------|-----------------|
 |[CAnimationValue::operator 双](#operator_double)|提供之间 CAnimationValue 和双精度型的转换。|
 |[CAnimationValue::operator INT32](#operator_int32)|提供了 CAnimationValue 和 INT32 之间的转换。|
-|[CAnimationValue::operator =](#operator_eq)|已重载。 将一个 INT32 值分配给 CAnimationValue。|
+|[CAnimationValue::operator=](#operator_eq)|已重载。 将一个 INT32 值分配给 CAnimationValue。|
 
 ### <a name="protected-data-members"></a>受保护的数据成员
 
@@ -168,7 +168,7 @@ BOOL GetValue(INT32& nValue);
 *dblValue*<br/>
 输出。 在函数返回时它会包含动画变量的当前值。
 
-*n 值*<br/>
+*nValue*<br/>
 输出。 在函数返回时它会包含动画变量的当前值。
 
 ### <a name="return-value"></a>返回值
@@ -235,7 +235,7 @@ operator INT32();
 
 提供了 CAnimationValue 和 INT32 之间的转换。 此方法在内部调用 GetValue 并不会检查有错误。 如果 GetValue 失败，返回的值将包含在构造函数中或使用 SetDefaultValue 以前设置的默认值。
 
-##  <a name="operator_eq"></a>  CAnimationValue::operator =
+##  <a name="operator_eq"></a>  CAnimationValue::operator=
 
 将一个双精度值分配给 CAnimationValue。
 

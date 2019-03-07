@@ -6,12 +6,12 @@ helpviewer_keywords:
 - MFC, adding classes from type libraries
 - type libraries, adding MFC classes from
 ms.assetid: aba40476-3cfb-47af-990e-ae2e9e0d79cf
-ms.openlocfilehash: 5cd94ad6d400cf2db60131e822f430f87a129cbe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8264de2c717c874da157cb29ad5e336e3ecbd0f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548013"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301579"
 ---
 # <a name="adding-an-mfc-class-from-a-type-library"></a>从类型库添加 MFC 类
 
@@ -20,7 +20,7 @@ ms.locfileid: "50548013"
 > [!NOTE]
 >  不需要使用自动化已启用从类型库添加类创建 MFC 项目。
 
-类型库包含一个组件，定义方法以及其参数和返回类型公开的接口的二进制描述。 必须注册类型库，它才会显示在**可用的类型库**中从类型库向导添加类的列表。 请参阅"在分布式 COM:: 类型库和语言集成"的详细信息的 MSDN library 中。
+类型库包含一个组件，定义方法以及其参数和返回类型公开的接口的二进制描述。 必须注册类型库，它才会显示在**可用的类型库**中从类型库向导添加类的列表。 请参阅"内部分布式 COM:类型库和语言集成"的详细信息的 MSDN library 中。
 
 ### <a name="to-add-an-mfc-class-from-a-type-library"></a>若要从类型库添加 MFC 类
 
@@ -38,4 +38,3 @@ ms.locfileid: "50548013"
 
 [自动化客户端](../../mfc/automation-clients.md)<br/>
 [自动化客户端：使用类型库](../../mfc/automation-clients-using-type-libraries.md)
-

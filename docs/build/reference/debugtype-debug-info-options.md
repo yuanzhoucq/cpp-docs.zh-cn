@@ -8,12 +8,12 @@ helpviewer_keywords:
 - DEBUGTYPE linker option
 - -DEBUGTYPE linker option
 ms.assetid: 1ddcb718-7fec-4f92-a319-3f70f04fe742
-ms.openlocfilehash: f730e485b7dc29cb8fe98bdcc7ea50f5e8c622d7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c4a24d79295c1f7dbbe645c4a6e52f58b4a08807
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50676988"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423491"
 ---
 # <a name="debugtype-debug-info-options"></a>/DEBUGTYPE（调试信息选项）
 
@@ -31,7 +31,7 @@ ms.locfileid: "50676988"
 **PDATA**<br/>
 指示链接器向 PDB 文件中的调试流信息添加 .pdata 和 .xdata 条目。 默认情况下启用此选项时同时 **/debug**并 **/DRIVER**所指定的选项。 如果 **/DEBUGTYPE:PDATA**指定其本身而言，链接器会自动将包含调试符号在 PDB 文件中的。 如果 **/DEBUGTYPE:PDATA，修正**指定，则链接器不包括调试符号在 PDB 文件中的。
 
-**链接地址信息**<br/>
+**FIXUP**<br/>
 指示链接器向 PDB 文件中的调试流信息添加重定位表条目。 默认情况下启用此选项时同时 **/debug**并 **/profile**所指定的选项。 如果 **/DEBUGTYPE:FIXUP**或 **/DEBUGTYPE:FIXUP，PDATA**指定，则链接器不包括调试符号在 PDB 文件中的。
 
 自变量 **/DEBUGTYPE**可能按任何顺序组合并用逗号分隔。 **/DEBUGTYPE**选项和其参数不区分大小写。

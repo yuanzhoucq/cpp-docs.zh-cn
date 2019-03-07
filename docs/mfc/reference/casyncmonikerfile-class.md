@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CAsyncMonikerFile [MFC], OnStartBinding
 - CAsyncMonikerFile [MFC], OnStopBinding
 ms.assetid: 17378b66-a49a-4b67-88e3-7756ad26a2fc
-ms.openlocfilehash: 107f791505bc41b8dbf9c0374c5e3821abbc0fe3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b86cba0c2e8f7991902a552d404355d6c1474138
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50669061"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57425817"
 ---
 # <a name="casyncmonikerfile-class"></a>CAsyncMonikerFile 类
 
@@ -87,9 +87,9 @@ class CAsyncMonikerFile : public CMonikerFile
 
 有关如何在 Internet 应用程序中使用异步名字对象和 ActiveX 控件的详细信息，请参阅以下文章：
 
-- [异步名字对象 Internet 前几个步骤：](../../mfc/asynchronous-monikers-on-the-internet.md)
+- [Internet 前几个步骤：异步名字对象](../../mfc/asynchronous-monikers-on-the-internet.md)
 
-- [Internet 前几个步骤： ActiveX 控件](../../mfc/activex-controls-on-the-internet.md)
+- [Internet 前几个步骤：ActiveX 控件](../../mfc/activex-controls-on-the-internet.md)
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -158,7 +158,7 @@ virtual IUnknown* CreateBindStatusCallback(IUnknown* pUnkControlling);
 
 [CAsyncMonikerFile::Open](#open)调用`CreateBindStatusCallback`。
 
-有关异步名字对象和异步绑定的详细信息，请参阅[IBindStatusCallback](https://msdn.microsoft.com/library/ie/ms775060)接口并[如何异步绑定和存储工作](/windows/desktop/Stg/how-asynchronous-binding-and-storage-work)。 有关聚合的讨论，请参阅[聚合](/windows/desktop/com/aggregation)。 所有三个主题，请在 Windows SDK 中。
+有关异步名字对象和异步绑定的详细信息，请参阅[IBindStatusCallback](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775060\(v=vs.85\))接口并[如何异步绑定和存储工作](/windows/desktop/Stg/how-asynchronous-binding-and-storage-work)。 有关聚合的讨论，请参阅[聚合](/windows/desktop/com/aggregation)。 所有三个主题，请在 Windows SDK 中。
 
 ##  <a name="getbindinfo"></a>  CAsyncMonikerFile::GetBindInfo
 
@@ -218,7 +218,7 @@ virtual LONG GetPriority() const;
 
 ### <a name="return-value"></a>返回值
 
-异步传输会发生的优先级。 一个标准的线程优先级标志： THREAD_PRIORITY_ABOVE_NORMAL、 THREAD_PRIORITY_BELOW_NORMAL、 THREAD_PRIORITY_HIGHEST、 THREAD_PRIORITY_IDLE、 THREAD_PRIORITY_LOWEST、 THREAD_PRIORITY_NORMAL 和 THREAD_PRIORITY_TIME_CRITICAL。 请参阅 Windows 函数[SetThreadPriority](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-setthreadpriority)有关这些值的说明。
+异步传输会发生的优先级。 标准线程优先级标志之一：THREAD_PRIORITY_ABOVE_NORMAL、 THREAD_PRIORITY_BELOW_NORMAL、 THREAD_PRIORITY_HIGHEST、 THREAD_PRIORITY_IDLE、 THREAD_PRIORITY_LOWEST、 THREAD_PRIORITY_NORMAL 和 THREAD_PRIORITY_TIME_CRITICAL。 请参阅 Windows 函数[SetThreadPriority](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-setthreadpriority)有关这些值的说明。
 
 ### <a name="remarks"></a>备注
 

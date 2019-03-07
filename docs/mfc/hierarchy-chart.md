@@ -8,12 +8,12 @@ helpviewer_keywords:
 - classes [MFC], MFC hierarchy
 - MFC, object model
 ms.assetid: 19d70341-e391-4a72-94c6-35755ce975d4
-ms.openlocfilehash: 0af7f6b9e2bb3027287ec33540c51e0784d3c56b
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 4b991c9dab2d3549ac64b5ba0b8689c6fe63f113
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175465"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275281"
 ---
 # <a name="hierarchy-chart"></a>层次结构图
 
@@ -29,7 +29,7 @@ ms.locfileid: "52175465"
 
 ![类不派生自 CObject](../mfc/media/mfc_hierarchy_chart3of3.png "不派生自 CObject 的类")
 
-您可以从以下位置下载完整图表： [MFC 层次结构图表下载](https://aka.ms/hxgg8e)。
+可以从以下位置下载完整图表：[MFC 层次结构图表中显示下载](https://aka.ms/hxgg8e)。
 
 ## <a name="see-also"></a>请参阅
 

@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CFtpConnection [MFC], Rename
 - CFtpConnection [MFC], SetCurrentDirectory
 ms.assetid: 5e3a0501-8893-49cf-a3d5-0628d8d6b936
-ms.openlocfilehash: 71e5c8629a1aa1c489cc51224f9d008c4cdd3397
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 12ef4de16279c5c2033a95df5928a6dfb7a2a652
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50504242"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295118"
 ---
 # <a name="cftpconnection-class"></a>CFtpConnection 类
 
@@ -61,15 +61,15 @@ class CFtpConnection : public CInternetConnection
 |----------|-----------------|
 |[CFtpConnection::Command](#command)|向 FTP 服务器直接发送命令。|
 |[CFtpConnection::CreateDirectory](#createdirectory)|在服务器上创建一个目录。|
-|[Cftpconnection:: Getcurrentdirectory](#getcurrentdirectory)|获取此连接的当前目录。|
-|[Cftpconnection:: Getcurrentdirectoryasurl](#getcurrentdirectoryasurl)|为此连接以 URL 形式获取当前目录。|
+|[CFtpConnection::GetCurrentDirectory](#getcurrentdirectory)|获取此连接的当前目录。|
+|[CFtpConnection::GetCurrentDirectoryAsURL](#getcurrentdirectoryasurl)|为此连接以 URL 形式获取当前目录。|
 |[CFtpConnection::GetFile](#getfile)|从连接的服务器获取的文件|
 |[CFtpConnection::OpenFile](#openfile)|打开连接的服务器上的文件。|
 |[CFtpConnection::PutFile](#putfile)|将放置在服务器上的文件。|
-|[Cftpconnection:: Remove](#remove)|从服务器中删除文件。|
+|[CFtpConnection::Remove](#remove)|从服务器中删除文件。|
 |[CFtpConnection::RemoveDirectory](#removedirectory)|从服务器中删除指定的目录。|
 |[CFtpConnection::Rename](#rename)|重命名服务器上的文件。|
-|[Cftpconnection:: Setcurrentdirectory](#setcurrentdirectory)|设置当前的 FTP 目录。|
+|[CFtpConnection::SetCurrentDirectory](#setcurrentdirectory)|设置当前的 FTP 目录。|
 
 ## <a name="remarks"></a>备注
 
@@ -216,7 +216,7 @@ BOOL CreateDirectory(LPCTSTR pstrDirName);
 
 `pstrDirName`参数可以是部分或完全限定的文件名相对于当前目录。 反斜杠 (\\) 或正斜杠 （/） 可用作其中任一名称的目录分隔符。 `CreateDirectory` 在使用之前，将转换为相应的字符的目录名称分隔符。
 
-##  <a name="getcurrentdirectory"></a>  Cftpconnection:: Getcurrentdirectory
+##  <a name="getcurrentdirectory"></a>  CFtpConnection::GetCurrentDirectory
 
 调用此成员函数可获取当前目录的名称。
 
@@ -354,7 +354,7 @@ BOOL GetFile(
 
 这两*pstrRemoteFile*并*pstrLocalFile*可以是相对于当前目录的任一部分限定的文件名或完全限定的。 反斜杠 (\\) 或正斜杠 （/） 可用作其中任一名称的目录分隔符。 `GetFile` 在使用之前，将转换为相应的字符的目录名称分隔符。
 
-重写*dwContext*默认可为您选择的值设置的上下文标识符。 上下文标识符是否与此特定操作相关联`CFtpConnection`对象由其[CInternetSession](../../mfc/reference/cinternetsession-class.md)对象。 值返回到[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)以提供用于标识操作的状态。 请参阅文章[Internet 前几个步骤： WinInet](../../mfc/wininet-basics.md)有关的上下文标识符的详细信息。
+重写*dwContext*默认可为您选择的值设置的上下文标识符。 上下文标识符是否与此特定操作相关联`CFtpConnection`对象由其[CInternetSession](../../mfc/reference/cinternetsession-class.md)对象。 值返回到[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)以提供用于标识操作的状态。 请参阅文章[Internet 前几个步骤：WinInet](../../mfc/wininet-basics.md)有关的上下文标识符的详细信息。
 
 ##  <a name="openfile"></a>  CFtpConnection::OpenFile
 
@@ -404,7 +404,7 @@ CInternetFile* OpenFile(
 
 *PstrFileName*参数可以是任一部分限定的文件名相对于当前目录或完全限定。 反斜杠 (\\) 或正斜杠 （/） 可用作其中任一名称的目录分隔符。 `OpenFile` 然后再使用它将转换为相应的字符的目录名称分隔符。
 
-重写*dwContext*默认可为您选择的值设置的上下文标识符。 上下文标识符是否与此特定操作相关联`CFtpConnection`对象由其[CInternetSession](../../mfc/reference/cinternetsession-class.md)对象。 值返回到[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)以提供用于标识操作的状态。 请参阅文章[Internet 前几个步骤： WinInet](../../mfc/wininet-basics.md)有关的上下文标识符的详细信息。
+重写*dwContext*默认可为您选择的值设置的上下文标识符。 上下文标识符是否与此特定操作相关联`CFtpConnection`对象由其[CInternetSession](../../mfc/reference/cinternetsession-class.md)对象。 值返回到[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)以提供用于标识操作的状态。 请参阅文章[Internet 前几个步骤：WinInet](../../mfc/wininet-basics.md)有关的上下文标识符的详细信息。
 
 ##  <a name="putfile"></a>  CFtpConnection::PutFile
 
@@ -440,9 +440,9 @@ BOOL PutFile(
 
 `PutFile` 是处理所有与存储 FTP 服务器上的文件关联的操作的高级例程。 应用程序，只发送的数据，或需要进一步控制文件传输，应使用[OpenFile](#openfile)并[CInternetFile::Write](../../mfc/reference/cinternetfile-class.md#write)。
 
-重写`dwContext`默认可为您选择的值设置的上下文标识符。 上下文标识符是否与此特定操作相关联`CFtpConnection`对象由其[CInternetSession](../../mfc/reference/cinternetsession-class.md)对象。 值返回到[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)以提供用于标识操作的状态。 请参阅文章[Internet 前几个步骤： WinInet](../../mfc/wininet-basics.md)有关的上下文标识符的详细信息。
+重写`dwContext`默认可为您选择的值设置的上下文标识符。 上下文标识符是否与此特定操作相关联`CFtpConnection`对象由其[CInternetSession](../../mfc/reference/cinternetsession-class.md)对象。 值返回到[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)以提供用于标识操作的状态。 请参阅文章[Internet 前几个步骤：WinInet](../../mfc/wininet-basics.md)有关的上下文标识符的详细信息。
 
-##  <a name="remove"></a>  Cftpconnection:: Remove
+##  <a name="remove"></a>  CFtpConnection::Remove
 
 调用此成员函数以从连接的服务器中删除指定的文件。
 
@@ -512,7 +512,7 @@ BOOL Rename(
 
 *PstrExisting*并*pstrNew*参数可以是任一部分限定的文件名相对于当前目录或完全限定。 反斜杠 (\\) 或正斜杠 （/） 可用作其中任一名称的目录分隔符。 `Rename` 在使用之前，将转换为相应的字符的目录名称分隔符。
 
-##  <a name="setcurrentdirectory"></a>  Cftpconnection:: Setcurrentdirectory
+##  <a name="setcurrentdirectory"></a>  CFtpConnection::SetCurrentDirectory
 
 调用此成员函数以将更改为 FTP 服务器上的不同目录。
 

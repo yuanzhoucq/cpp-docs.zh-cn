@@ -6,12 +6,12 @@ helpviewer_keywords:
 - user interfaces, creating
 - user interfaces
 ms.assetid: f5daf2c1-bc08-4b71-9b03-da2c0aab5764
-ms.openlocfilehash: 72087e4abef9904876de1b43044bcc59200e1356
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bf1c3f677ac8cd2e3ad91ef694f0637af8a6f578
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50487628"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278608"
 ---
 # <a name="user-interface-elements-mfc"></a>用户界面元素 (MFC)
 
@@ -43,7 +43,7 @@ ms.locfileid: "50487628"
 [窗体视图](../mfc/form-views-mfc.md)<br/>
 介绍如何将窗体支持添加到你的应用程序。
 
-[HTML 帮助：为程序提供区分上下文的帮助](../mfc/html-help-context-sensitive-help-for-your-programs.md)<br/>
+[HTML 帮助：程序的的上下文相关帮助](../mfc/html-help-context-sensitive-help-for-your-programs.md)<br/>
 介绍如何使用 HTML 帮助添加到你的应用程序的上下文相关帮助。
 
 [MDI 选项卡式组](../mfc/mdi-tabbed-groups.md)<br/>
@@ -83,4 +83,3 @@ ms.locfileid: "50487628"
 
 [MFC 桌面应用程序](../mfc/mfc-desktop-applications.md)<br/>
 提供 MFC 库的参考材料。 MFC 是一组构成的应用程序框架，这是为 Windows API 编写的应用程序的框架的类。
-

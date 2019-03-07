@@ -12,12 +12,12 @@ helpviewer_keywords:
 - debugging [MFC], memory leaks
 - memory leaks, MFC debug classes
 ms.assetid: d79e084a-8326-4251-8700-4efac07c511e
-ms.openlocfilehash: 6cabd2fb35a60f1b6b53d47d19e95fa65d92c620
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 90a21b260185bb2202eed66b8e4144eb7183c157
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50521341"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301176"
 ---
 # <a name="debugging-support-classes"></a>调试支持类
 
@@ -32,4 +32,3 @@ MFC 提供了以下类，以帮助您调试动态内存分配问题。
 ## <a name="see-also"></a>请参阅
 
 [类概述](../mfc/class-library-overview.md)
-

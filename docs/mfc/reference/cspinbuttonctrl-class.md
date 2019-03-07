@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CSpinButtonCtrl [MFC], SetPos
 - CSpinButtonCtrl [MFC], SetRange
 ms.assetid: 509bfd76-1c5a-4af6-973f-e133c0b87734
-ms.openlocfilehash: 8d77175b271d144983aecd1168eb0d66eb46d6ec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ff61fb4f918e25d430fc31ae55c3ad8794ce39f1
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50526374"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57425024"
 ---
 # <a name="cspinbuttonctrl-class"></a>CSpinButtonCtrl 类
 
@@ -72,7 +72,7 @@ class CSpinButtonCtrl : public CWnd
 |[CSpinButtonCtrl::SetBase](#setbase)|设置数值调节按钮控件的基础。|
 |[CSpinButtonCtrl::SetBuddy](#setbuddy)|设置数值调节按钮控件的合作者窗口。|
 |[CSpinButtonCtrl::SetPos](#setpos)|设置控件的当前位置。|
-|[Cspinbuttonctrl:: Setrange](#setrange)|设置的上限和下限限制 （范围） 数值调节按钮控件。|
+|[CSpinButtonCtrl::SetRange](#setrange)|设置的上限和下限限制 （范围） 数值调节按钮控件。|
 
 ## <a name="remarks"></a>备注
 
@@ -120,7 +120,7 @@ virtual BOOL Create(
 指定数值调节钮 button 控件的样式。 应用于控件的数值调节钮按钮控件样式的任意组合。 这些样式中所述[Up-down 控件样式](/windows/desktop/Controls/up-down-control-styles)Windows SDK 中。
 
 *rect*<br/>
-指定数值调节钮 button 控件的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构
+指定数值调节钮 button 控件的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT](/previous-versions/dd162897\(v=vs.85\))结构
 
 *pParentWnd*<br/>
 数值调节钮按钮控件的父窗口，通常一个指向`CDialog`。 它不能为 NULL。
@@ -160,7 +160,7 @@ virtual BOOL CreateEx(
 指定数值调节钮 button 控件的样式。 应用于控件的数值调节钮按钮控件样式的任意组合。 这些样式中所述[Up-down 控件样式](/windows/desktop/Controls/up-down-control-styles)Windows SDK 中。
 
 *rect*<br/>
-对引用[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构的结构描述的大小和窗口的工作区中创建的位置*pParentWnd*。
+对引用[RECT](/previous-versions/dd162897\(v=vs.85\))结构的结构描述的大小和窗口的工作区中创建的位置*pParentWnd*。
 
 *pParentWnd*<br/>
 指向控件的父级的窗口的指针。
@@ -271,10 +271,10 @@ void GetRange32(
 
 ### <a name="parameters"></a>参数
 
-*较低*<br/>
+*lower*<br/>
 一个整数，它接收控件的下限值对的引用。
 
-*上限*<br/>
+*upper*<br/>
 对一个整数，它接收控件的上限值的引用。
 
 ### <a name="return-value"></a>返回值
@@ -371,7 +371,7 @@ int SetPos32(int nPos);
 
 `SetPos32` 设置 32 位位置。
 
-##  <a name="setrange"></a>  Cspinbuttonctrl:: Setrange
+##  <a name="setrange"></a>  CSpinButtonCtrl::SetRange
 
 设置的上限和下限限制 （范围） 数值调节按钮控件。
 

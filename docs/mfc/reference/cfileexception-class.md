@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CFileException [MFC], m_lOsError
 - CFileException [MFC], m_strFileName
 ms.assetid: f6491bb9-bfbc-42fd-a952-b33f9b62323f
-ms.openlocfilehash: e6b1b25f9125701a212f379c925a80ff888d58f3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a3514c76d4136fe2bc0b096cc382e6f7f4dd3392
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50485810"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305115"
 ---
 # <a name="cfileexception-class"></a>CFileException 类
 
@@ -98,7 +98,7 @@ CFileException(
 
 ### <a name="parameters"></a>参数
 
-*原因*<br/>
+*cause*<br/>
 指示异常原因的枚举的类型变量。 请参阅[CFileException::m_cause](#m_cause)有关的可能值列表。
 
 *lOsError*<br/>
@@ -187,35 +187,35 @@ int m_cause;
 
 此数据成员是类型的公共变量**int**。枚举器及其含义如下所示：
 
-- `CFileException::none` 0： 未发生错误。
+- `CFileException::none` 0:未发生错误。
 
-- `CFileException::genericException` 1： 出现未知的错误。
+- `CFileException::genericException` 1:发生了未指定的错误。
 
-- `CFileException::fileNotFound` 2： 找不到文件。
+- `CFileException::fileNotFound` 2:找不到文件。
 
-- `CFileException::badPath` 3： 全部或部分路径无效。
+- `CFileException::badPath` 3:全部或部分路径无效。
 
-- `CFileException::tooManyOpenFiles` 4： 超过了允许的打开的文件数。
+- `CFileException::tooManyOpenFiles` 4:超出了允许的打开的文件数。
 
-- `CFileException::accessDenied` 5： 无法访问该文件。
+- `CFileException::accessDenied` 5:无法访问该文件。
 
-- `CFileException::invalidFile` 6： 试图使用无效的文件句柄。
+- `CFileException::invalidFile` 6:试图使用无效的文件句柄。
 
-- `CFileException::removeCurrentDir` 7： 不能删除当前工作目录。
+- `CFileException::removeCurrentDir` 7:不能删除当前工作目录。
 
-- `CFileException::directoryFull` 8： 没有更多的目录条目。
+- `CFileException::directoryFull` 8:没有更多的目录条目。
 
-- `CFileException::badSeek` 9： 时尝试设置文件指针时出错。
+- `CFileException::badSeek` 9:尝试设置文件指针时出错。
 
-- `CFileException::hardIO` 10： 出现硬件错误。
+- `CFileException::hardIO` 10:出现硬件错误。
 
-- `CFileException::sharingViolation` 11： 共享。未加载 EXE，或共享的区域被锁定。
+- `CFileException::sharingViolation` 11:共享。未加载 EXE，或共享的区域被锁定。
 
-- `CFileException::lockViolation` 12： 尝试锁定已被锁定的区域时出现。
+- `CFileException::lockViolation` 12:尝试锁定已被锁定的区域时出现。
 
-- `CFileException::diskFull` 14： 磁盘已满。
+- `CFileException::diskFull` 14:磁盘已满。
 
-- `CFileException::endOfFile` 15： 已达到文件结尾。
+- `CFileException::endOfFile` 15:已达到文件结尾。
 
     > [!NOTE]
     >  引发这些 `CFileException` 的枚举器不同于引发 `CArchiveException` 的枚举器。
@@ -313,4 +313,3 @@ static void PASCAL ThrowOsError(LONG lOsError, LPCTSTR lpszFileName = NULL);
 [CException 类](../../mfc/reference/cexception-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>
 [异常处理](../../mfc/reference/exception-processing.md)
-

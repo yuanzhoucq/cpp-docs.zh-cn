@@ -10,12 +10,12 @@ helpviewer_keywords:
 - embedded objects [MFC]
 - OLE items [MFC], types
 ms.assetid: 11107711-eb96-4099-8f5c-7910bb3ecb75
-ms.openlocfilehash: 7595d87ce54b0a34dd4e5f3489dd36e3918fd8a5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 02607df2a8fa086c5751f2b446e349a3efdbcd20
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50465476"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280961"
 ---
 # <a name="ole-background-linking-and-embedding"></a>OLE 后台：链接和嵌入
 
@@ -33,4 +33,3 @@ OLE 提供了另一种方式来合并其他应用程序中的数据：创建链�
 [OLE 后台：容器和服务器](../mfc/ole-background-containers-and-servers.md)<br/>
 [容器：客户端项](../mfc/containers-client-items.md)<br/>
 [服务器：服务器项](../mfc/servers-server-items.md)
-

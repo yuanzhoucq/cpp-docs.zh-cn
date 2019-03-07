@@ -127,12 +127,12 @@ helpviewer_keywords:
 - SetStatus method
 - SetValue method
 ms.assetid: 374b13b7-1f09-457d-9e6b-df260ff4d178
-ms.openlocfilehash: 12953da220016c7f66e9a2f01b4b8860d2e508b8
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: a9e862e9df785a0986d9d75759de85c0c1448912
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51557019"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423451"
 ---
 # <a name="cdynamicaccessor-class"></a>CDynamicAccessor 类
 
@@ -156,7 +156,7 @@ class CDynamicAccessor : public CAccessorBase
 |-|-|
 |[AddBindEntry](#addbindentry)|重写默认访问器时，请将绑定条目添加到输出列。|
 |[CDynamicAccessor](#cdynamicaccessor)|实例化并初始化`CDynamicAccessor`对象。|
-|[关闭](#close)|取消绑定所有列时，释放分配的内存，并释放[IAccessor](https://docs.microsoft.com/previous-versions/windows/desktop/ms719672(v=vs.85))类中的接口指针。|
+|[关闭](#close)|取消绑定所有列时，释放分配的内存，并释放[IAccessor](/previous-versions/windows/desktop/ms719672(v=vs.85))类中的接口指针。|
 |[GetBlobHandling](#getblobhandling)|检索 BLOB 处理的当前行值。|
 |[GetBlobSizeLimit](#getblobsizelimit)|检索以字节为单位的最大 BLOB 大小。|
 |[GetBookmark](#getbookmark)|检索当前行的书签。|
@@ -183,7 +183,7 @@ class CDynamicAccessor : public CAccessorBase
 
 有关的讨论和使用动态访问器类的示例，请参阅[使用动态访问器](../../data/oledb/using-dynamic-accessors.md)。
 
-## <a name="addbindentry"></a> Cdynamicaccessor:: Addbindentry
+## <a name="addbindentry"></a> CDynamicAccessor::AddBindEntry
 
 将绑定条目添加到输出列。
 
@@ -196,7 +196,7 @@ HRESULT AddBindEntry(const DBCOLUMNINFO& info) throw();
 #### <a name="parameters"></a>参数
 
 info<br/>
-[in]一个`DBCOLUMNINFO`结构，它包含的列信息。 请参阅中的"DBCOLUMNINFO 结构" [icolumnsinfo:: Getcolumninfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms722704(v=vs.85))中*OLE DB 程序员参考*。
+[in]一个`DBCOLUMNINFO`结构，它包含的列信息。 请参阅中的"DBCOLUMNINFO 结构" [icolumnsinfo:: Getcolumninfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\))中*OLE DB 程序员参考*。
 
 ### <a name="return-value"></a>返回值
 
@@ -206,7 +206,7 @@ info<br/>
 
 使用此方法重写使用创建的默认访问器时`CDynamicAccessor`(请参阅[如何实现提取的数据？](../../data/oledb/fetching-data.md))。
 
-## <a name="cdynamicaccessor"></a> Cdynamicaccessor:: Cdynamicaccessor
+## <a name="cdynamicaccessor"></a> CDynamicAccessor::CDynamicAccessor
 
 实例化并初始化`CDynamicAccessor`对象。
 
@@ -231,9 +231,9 @@ CDynamicAccessor(DBBLOBHANDLINGENUM eBlobHandling = DBBLOBHANDLING_DEFAULT,
 
 此外可以指定如何`CDynamicAccessor`处理被称为 BLOB 数据的列数据： 它可以处理 BLOB 数据以默认方式; 可以跳过 （不绑定） BLOB 数据; 也可以将 BLOB 数据绑定中提供程序分配内存。
 
-## <a name="close"></a> Cdynamicaccessor:: Close
+## <a name="close"></a> CDynamicAccessor::Close
 
-取消绑定所有列时，释放分配的内存，并释放[IAccessor](https://docs.microsoft.com/previous-versions/windows/desktop/ms719672(v=vs.85))类中的接口指针。
+取消绑定所有列时，释放分配的内存，并释放[IAccessor](/previous-versions/windows/desktop/ms719672(v=vs.85))类中的接口指针。
 
 ### <a name="syntax"></a>语法
 
@@ -241,7 +241,7 @@ CDynamicAccessor(DBBLOBHANDLINGENUM eBlobHandling = DBBLOBHANDLING_DEFAULT,
 void Close() throw();
 ```
 
-## <a name="getblobhandling"></a> Cdynamicaccessor:: Getblobhandling
+## <a name="getblobhandling"></a> CDynamicAccessor::GetBlobHandling
 
 检索 BLOB 处理的当前行值。
 
@@ -255,7 +255,7 @@ const DBBLOBHANDLINGENUM GetBlobHandling() const;
 
 返回处理值的 BLOB *eBlobHandling*通过设置[SetBlobHandling](../../data/oledb/cdynamicaccessor-setblobhandling.md)。
 
-## <a name="getblobsizelimit"></a> Cdynamicaccessor:: Getblobsizelimit
+## <a name="getblobsizelimit"></a> CDynamicAccessor::GetBlobSizeLimit
 
 检索以字节为单位的最大 BLOB 大小。
 
@@ -269,7 +269,7 @@ const DBLENGTH GetBlobSizeLimit() const;
 
 返回处理值的 BLOB *nBlobSize*通过设置[SetBlobSizeLimit](../../data/oledb/cdynamicaccessor-setblobsizelimit.md)。
 
-## <a name="getbookmark"></a> Cdynamicaccessor:: Getbookmark
+## <a name="getbookmark"></a> CDynamicAccessor::GetBookmark
 
 检索当前行的书签。
 
@@ -292,7 +292,7 @@ HRESULT GetBookmark(CBookmark< >* pBookmark) const throw();
 
 您需要设置`DBPROP_IRowsetLocate`为 variant_true，则检索一个书签。
 
-## <a name="getcolumncount"></a> Cdynamicaccessor:: Getcolumncount
+## <a name="getcolumncount"></a> CDynamicAccessor::GetColumnCount
 
 检索列的数。
 
@@ -306,7 +306,7 @@ DBORDINAL GetColumnCount() const throw();
 
 检索的列数。
 
-## <a name="getcolumnflags"></a> Cdynamicaccessor:: Getcolumnflags
+## <a name="getcolumnflags"></a> CDynamicAccessor::GetColumnFlags
 
 检索列特征。
 
@@ -323,7 +323,7 @@ bool GetColumnFlags(DBORDINAL nColumn,
 [in] 列号。 列号从 1 开始。 值为 0 指书签列，如果有的话。
 
 *pFlags*<br/>
-[out]指向描述列特征的位掩码的指针。 请参阅中的"DBCOLUMNFLAGS 枚举类型" [icolumnsinfo:: Getcolumninfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms722704(v=vs.85))中*OLE DB 程序员参考*。
+[out]指向描述列特征的位掩码的指针。 请参阅中的"DBCOLUMNFLAGS 枚举类型" [icolumnsinfo:: Getcolumninfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\))中*OLE DB 程序员参考*。
 
 ### <a name="return-value"></a>返回值
 
@@ -333,7 +333,7 @@ bool GetColumnFlags(DBORDINAL nColumn,
 
 从一个偏移的列号。 列零是一种特殊情况;如果可用，则该书签。
 
-## <a name="getcolumninfo"></a> Cdynamicaccessor:: Getcolumninfo
+## <a name="getcolumninfo"></a> CDynamicAccessor::GetColumnInfo
 
 返回所需的大多数使用者的列元数据。
 
@@ -349,13 +349,13 @@ HRESULT GetColumnInfo(IRowset* pRowset,
 #### <a name="parameters"></a>参数
 
 *pRowset*<br/>
-[in]一个指向[IRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms720986(v=vs.85))接口。
+[in]一个指向[IRowset](/previous-versions/windows/desktop/ms720986(v=vs.85))接口。
 
 *pColumns*<br/>
 [out]一个指向内存中要在行集中; 返回的列数此数字包括书签列，如果有的话。
 
 *ppColumnInfo*<br/>
-[out]指向内存中要返回的数组的指针`DBCOLUMNINFO`结构。 请参阅中的"DBCOLUMNINFO 结构" [icolumnsinfo:: Getcolumninfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms722704(v=vs.85))中*OLE DB 程序员参考*。
+[out]指向内存中要返回的数组的指针`DBCOLUMNINFO`结构。 请参阅中的"DBCOLUMNINFO 结构" [icolumnsinfo:: Getcolumninfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\))中*OLE DB 程序员参考*。
 
 *ppStringsBuffer*<br/>
 [out]指向在其中存储的所有字符串值返回一个指向内存的指针 (在使用名称*columnid* ; 二是*pwszName*) 单个分配块中。
@@ -366,9 +366,9 @@ HRESULT GetColumnInfo(IRowset* pRowset,
 
 ### <a name="remarks"></a>备注
 
-请参阅[icolumnsinfo:: Getcolumninfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms722704(v=vs.85))中*OLE DB 程序员参考*有关数据类型信息`DBORDINAL`， `DBCOLUMNINFO`，和`OLECHAR`。
+请参阅[icolumnsinfo:: Getcolumninfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\))中*OLE DB 程序员参考*有关数据类型信息`DBORDINAL`， `DBCOLUMNINFO`，和`OLECHAR`。
 
-## <a name="getcolumnname"></a> Cdynamicaccessor:: Getcolumnname
+## <a name="getcolumnname"></a> CDynamicAccessor::GetColumnName
 
 检索指定列的名称。
 
@@ -387,7 +387,7 @@ LPOLESTR GetColumnName(DBORDINAL nColumn) const throw();
 
 指定列的名称。
 
-## <a name="getcolumntype"></a> Cdynamicaccessor:: Getcolumntype
+## <a name="getcolumntype"></a> CDynamicAccessor::GetColumnType
 
 检索指定列的数据类型。
 
@@ -410,7 +410,7 @@ bool GetColumnType(DBORDINAL nColumn,
 
 返回 **，则返回 true**成功后或**false**失败。
 
-## <a name="getlength"></a> Cdynamicaccessor:: Getlength
+## <a name="getlength"></a> CDynamicAccessor::GetLength
 
 检索指定列的长度。
 
@@ -446,7 +446,7 @@ bool GetLength(const WCHAR* pColumnName,
 
 第一个重写使用的列号，而第二个和第三个重写 ANSI 或 Unicode 格式，使用列名称分别。
 
-## <a name="getordinal"></a> Cdynamicaccessor:: Getordinal
+## <a name="getordinal"></a> CDynamicAccessor::GetOrdinal
 
 根据列名检索列号。
 
@@ -472,7 +472,7 @@ bool GetOrdinal(const WCHAR* pColumnName,
 
 返回 **，则返回 true**如果找到具有指定名称的列。 否则，此函数返回**false**。
 
-## <a name="getstatus"></a> Cdynamicaccessor:: Getstatus
+## <a name="getstatus"></a> CDynamicAccessor::GetStatus
 
 检索指定列的状态。
 
@@ -498,13 +498,13 @@ bool GetStatus(const WCHAR* pColumnName,
 [in] 指向包含列名的字符串的指针。
 
 *pStatus*<br/>
-[out]指向包含的列状态的变量的指针。 请参阅[DBSTATUS](https://docs.microsoft.com/previous-versions/windows/desktop/ms722617(v=vs.85))中*OLE DB 程序员参考*有关详细信息。
+[out]指向包含的列状态的变量的指针。 请参阅[DBSTATUS](/previous-versions/windows/desktop/ms722617(v=vs.85))中*OLE DB 程序员参考*有关详细信息。
 
 ### <a name="return-value"></a>返回值
 
 返回 **，则返回 true**如果找到指定的列。 否则，此函数返回**false**。
 
-## <a name="getvalue"></a> Cdynamicaccessor:: Getvalue
+## <a name="getvalue"></a> CDynamicAccessor::GetValue
 
 检索指定列的数据。
 
@@ -553,7 +553,7 @@ bool GetValue(const WCHAR* pColumnName, ctype* pData) const throw();
 
 在调试模式下，如果您将收到一个断言的大小*pData*是为它所指向的列的大小不相等。
 
-## <a name="setblobhandling"></a> Cdynamicaccessor:: Setblobhandling
+## <a name="setblobhandling"></a> CDynamicAccessor::SetBlobHandling
 
 设置 BLOB 处理的当前行值。
 
@@ -568,11 +568,11 @@ bool SetBlobHandling(DBBLOBHANDLINGENUM eBlobHandling);
 *eBlobHandling*<br/>
 指定处理 BLOB 数据的方式。 它可以采用以下值：
 
-- DBBLOBHANDLING_DEFAULT： 处理列的数据大于*nBlobSize* (通过设置`SetBlobSizeLimit`) 作为 BLOB 数据，检索通过`ISequentialStream`或`IStream`对象。 此选项将尝试将每个列以包含大于数据绑定*nBlobSize*或列出为 DBTYPE_IUNKNOWN 作为 BLOB 数据。
+- DBBLOBHANDLING_DEFAULT:处理列的数据大于*nBlobSize* (通过设置`SetBlobSizeLimit`) 作为 BLOB 数据，检索通过`ISequentialStream`或`IStream`对象。 此选项将尝试将每个列以包含大于数据绑定*nBlobSize*或列出为 DBTYPE_IUNKNOWN 作为 BLOB 数据。
 
-- DBBLOBHANDLING_NOSTREAMS： 处理列的数据大于*nBlobSize* (通过设置`SetBlobSizeLimit`) 作为 BLOB 数据，检索通过提供程序分配，使用者拥有的内存中的引用。 此选项可用于具有一个以上的 BLOB 列的表，该提供程序只支持一个`ISequentialStream`每个访问器的对象。
+- DBBLOBHANDLING_NOSTREAMS:处理列的数据大于*nBlobSize* (通过设置`SetBlobSizeLimit`) 作为 BLOB 数据，检索通过提供程序分配，使用者拥有的内存中的引用。 此选项可用于具有一个以上的 BLOB 列的表，该提供程序只支持一个`ISequentialStream`每个访问器的对象。
 
-- DBBLOBHANDLING_SKIP： 跳过 （不绑定） 限定为包含 Blob 的列 （访问器不能将绑定或检索列的值，但它仍将检索的列状态和长度）。
+- DBBLOBHANDLING_SKIP:跳过 （不绑定） 限定为包含 Blob 的列 （访问器不能将绑定或检索列的值，但它仍将检索的列状态和长度）。
 
 ### <a name="remarks"></a>备注
 
@@ -580,7 +580,7 @@ bool SetBlobHandling(DBBLOBHANDLINGENUM eBlobHandling);
 
 构造函数方法[CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)设置处理到 DBBLOBHANDLING_DEFAULT 值的 BLOB。
 
-## <a name="setblobsizelimit"></a> Cdynamicaccessor:: Setblobsizelimit
+## <a name="setblobsizelimit"></a> CDynamicAccessor::SetBlobSizeLimit
 
 以字节为单位设置的最大 BLOB 大小。
 
@@ -601,7 +601,7 @@ void SetBlobSizeLimit(DBLENGTH nBlobSize);
 
 构造函数方法[CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)设置为默认值为 8000 个字节的最大 BLOB 大小。
 
-## <a name="setlength"></a> Cdynamicaccessor:: Setlength
+## <a name="setlength"></a> CDynamicAccessor::SetLength
 
 设置指定列的长度。
 
@@ -633,7 +633,7 @@ bool SetLength(const WCHAR* pColumnName,
 
 返回 **，则返回 true**如果已成功设置指定的列长度。 否则，此函数返回**false**。
 
-## <a name="setstatus"></a> Cdynamicaccessor:: Setstatus
+## <a name="setstatus"></a> CDynamicAccessor::SetStatus
 
 设置指定列的状态。
 
@@ -656,7 +656,7 @@ bool SetStatus(const WCHAR* pColumnName,
 [in] 列号。 列号从 1 开始。 值为 0 指书签列，如果有的话。
 
 *status*<br/>
-[in]列状态。 请参阅[DBSTATUS](https://docs.microsoft.com/previous-versions/windows/desktop/ms722617(v=vs.85))中*OLE DB 程序员参考*有关详细信息。
+[in]列状态。 请参阅[DBSTATUS](/previous-versions/windows/desktop/ms722617(v=vs.85))中*OLE DB 程序员参考*有关详细信息。
 
 *pColumnName*<br/>
 [in] 指向包含列名的字符串的指针。
@@ -665,7 +665,7 @@ bool SetStatus(const WCHAR* pColumnName,
 
 返回 **，则返回 true**如果指定的列状态设置成功。 否则，此函数返回**false**。
 
-## <a name="setvalue"></a> Cdynamicaccessor:: Setvalue
+## <a name="setvalue"></a> CDynamicAccessor::SetValue
 
 将数据存储到指定的列。
 

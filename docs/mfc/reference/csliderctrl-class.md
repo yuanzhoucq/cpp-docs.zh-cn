@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CSliderCtrl [MFC], SetTipSide
 - CSliderCtrl [MFC], SetToolTips
 ms.assetid: dd12b084-4eda-4550-a810-8f3cfb06b871
-ms.openlocfilehash: c8c8971e467b2b8063bb5bb5d8e953fc48bcc42e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0179d69726f49f2df02979264da4966b35178434
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50666097"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57421995"
 ---
 # <a name="csliderctrl-class"></a>CSliderCtrl 类
 
@@ -209,7 +209,7 @@ virtual BOOL Create(
 指定滑块控件的样式。 应用的任意组合[滑块控件样式](/windows/desktop/Controls/trackbar-control-styles)Windows SDK，向控件中所述。
 
 *rect*<br/>
-指定滑块控件的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构。
+指定滑块控件的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT](/previous-versions/dd162897\(v=vs.85\))结构。
 
 *pParentWnd*<br/>
 通常指定滑块控件的父窗口， `CDialog`。 它不能为 NULL。
@@ -251,7 +251,7 @@ virtual BOOL CreateEx(
 指定滑块控件的样式。 应用的任意组合[滑块控件样式](/windows/desktop/Controls/trackbar-control-styles)Windows SDK，向控件中所述。
 
 *rect*<br/>
-对引用[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构的结构描述的大小和窗口的工作区中创建的位置*pParentWnd*。
+对引用[RECT](/previous-versions/dd162897\(v=vs.85\))结构的结构描述的大小和窗口的工作区中创建的位置*pParentWnd*。
 
 *pParentWnd*<br/>
 指向控件的父级的窗口的指针。
@@ -388,7 +388,7 @@ void GetRange(
 *nMin*<br/>
 对一个整数，它接收的最小位置引用。
 
-*最*<br/>
+*nMax*<br/>
 对一个整数，它接收的最大位置的引用。
 
 ### <a name="remarks"></a>备注
@@ -434,7 +434,7 @@ void GetSelection(
 *nMin*<br/>
 对一个整数，它接收当前所选内容的起始位置的引用。
 
-*最*<br/>
+*nMax*<br/>
 对一个整数，它接收当前所选内容的结束位置的引用。
 
 ##  <a name="getthumblength"></a>  CSliderCtrl::GetThumbLength
@@ -633,7 +633,7 @@ void SetRange(
 *nMin*<br/>
 滑块的最小位置。
 
-*最*<br/>
+*nMax*<br/>
 最大滑块的位置。
 
 *bRedraw*<br/>
@@ -651,7 +651,7 @@ void SetRangeMax(
 
 ### <a name="parameters"></a>参数
 
-*最*<br/>
+*nMax*<br/>
 最大滑块的位置。
 
 *bRedraw*<br/>
@@ -690,7 +690,7 @@ void SetSelection(
 *nMin*<br/>
 滑块的起始位置。
 
-*最*<br/>
+*nMax*<br/>
 滑块的结束位置。
 
 ##  <a name="setthumblength"></a>  CSliderCtrl::SetThumbLength
@@ -771,7 +771,7 @@ int SetTipSide(int nLocation);
 
 ### <a name="parameters"></a>参数
 
-*n 位置*<br/>
+*nLocation*<br/>
 值，该值表示要显示工具提示控件的位置。 有关可能的值的列表，请参阅 Win32 消息[TBM_SETTIPSIDE](/windows/desktop/Controls/tbm-settipside)，如 Windows SDK 中所述。
 
 ### <a name="return-value"></a>返回值

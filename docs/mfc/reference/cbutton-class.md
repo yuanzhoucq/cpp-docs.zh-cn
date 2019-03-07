@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CButton [MFC], SetState
 - CButton [MFC], SetTextMargin
 ms.assetid: cdc76d5b-31da-43c5-bc43-fde4cb39de5b
-ms.openlocfilehash: 26dcf50cc3dc48fec5d6e4957ffd1ef340ad1dbf
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: b1a02d995594f5e079359151167ac970a3d1ab37
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178638"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260135"
 ---
 # <a name="cbutton-class"></a>CButton 类
 
@@ -430,7 +430,7 @@ BOOL GetNote(
 
 在第一个重载[CString](../../atl-mfc-shared/using-cstring.md)对象，其中包含与当前命令链接控件相关联的注释文本。
 
-- 或 -
+或
 
 在第二个重载中，TRUE，如果此方法成功;否则为 FALSE。
 
@@ -696,7 +696,7 @@ void SetCheck(int nCheck);
 
 ### <a name="parameters"></a>参数
 
-*n 请查看*<br/>
+*nCheck*<br/>
 指定的检查状态。 此参数可以是以下值之一：
 
 |值|含义|

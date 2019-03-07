@@ -14,12 +14,12 @@ helpviewer_keywords:
 - OLE containers [MFC], compound files
 - access modes for files [MFC]
 ms.assetid: 8b83cb3e-76c8-4bbe-ba16-737092b36f49
-ms.openlocfilehash: 5a8ba0821d92ab41a4b95fb7b2a26da63c1df285
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8ae701af3dbf45a1b48ef223f421d17f6abee213
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643258"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326605"
 ---
 # <a name="containers-compound-files"></a>容器：复合文件
 

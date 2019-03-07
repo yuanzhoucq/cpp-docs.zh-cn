@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CSplitButton [MFC], SetDropDownMenu
 - CSplitButton [MFC], OnDropDown
 ms.assetid: 6844d0a9-6408-4e44-9b5f-57628ed8bad6
-ms.openlocfilehash: 56c006eaa9b0c9860a973727602fd29a33d7ec43
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 70bba379f33be2d4df05f6b96eac14bf248cf356
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176623"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414638"
 ---
 # <a name="csplitbutton-class"></a>CSplitButton 类
 
@@ -97,7 +97,7 @@ virtual BOOL Create(
 |参数|描述|
 |---------------|-----------------|
 |*dwStyle*|[in]按位组合 (OR) 要应用于控件的样式。 有关详细信息，请参阅[按钮样式](../../mfc/reference/styles-used-by-mfc.md#button-styles)。|
-|*rect*|[in]对引用[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构，其中包含的位置和大小的控件。|
+|*rect*|[in]对引用[RECT](/previous-versions/dd162897\(v=vs.85\))结构，其中包含的位置和大小的控件。|
 |*pParentWnd*|[in]指向的非 null 指针[CWnd](../../mfc/reference/cwnd-class.md)是控件的父窗口的对象。|
 |*nID*|[in]控件的 ID。|
 

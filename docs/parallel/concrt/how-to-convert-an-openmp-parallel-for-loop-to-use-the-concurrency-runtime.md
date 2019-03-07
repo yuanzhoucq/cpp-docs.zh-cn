@@ -7,12 +7,12 @@ helpviewer_keywords:
 - parallel for loops, converting from OpenMP to the Concurrency Runtime
 - parallel loops, converting from OpenMP to the Concurrency Runtime
 ms.assetid: d8a7b656-f86c-456e-9c5d-a7d52f94646e
-ms.openlocfilehash: 9ab80df8bfe4c06ee36e0a60db4800be68576909
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bc408465f34f0558e9f426ae35b83d4610898414
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50488551"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296132"
 ---
 # <a name="how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime"></a>如何：转换 OpenMP parallel for 循环以使用并发运行时
 
@@ -49,11 +49,10 @@ found 107254 prime numbers.
 
 复制示例代码并将其粘贴到 Visual Studio 项目中，或将其粘贴在文件中名为`concrt-omp-count-primes.cpp`然后在 Visual Studio 命令提示符窗口中运行以下命令。
 
-**cl.exe /EHsc /openmp concrt-omp-计数-primes.cpp**
+**cl.exe /EHsc /openmp concrt-omp-count-primes.cpp**
 
 ## <a name="see-also"></a>请参阅
 
 [从 OpenMP 迁移至并发运行时](../../parallel/concrt/migrating-from-openmp-to-the-concurrency-runtime.md)<br/>
 [并行算法](../../parallel/concrt/parallel-algorithms.md)<br/>
 [并行容器和对象](../../parallel/concrt/parallel-containers-and-objects.md)
-

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - encoding
 - encoding, functions
 ms.assetid: 82d4fdf3-3c4a-4fe2-b297-8ffb4714406f
-ms.openlocfilehash: f23c6ee3354521d0edbd2772f9a2fdf3ec6a184c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8fe0506980c22ad9a64bf69f6877b041b957a1a4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492711"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295716"
 ---
 # <a name="atl-encoding-reference"></a>ATL 编码引用
 
@@ -37,7 +37,7 @@ ms.locfileid: "50492711"
 |[QPDecodeGetRequiredLength](reference/atl-text-encoding-functions.md#qpdecodegetrequiredlength)|调用此函数可获取某个缓冲区的大小（以字节为单位），该缓冲区可包含从指定长度的 Quoted Printable 编码字符串解码而来的数据。|
 |[QPEncode](reference/atl-text-encoding-functions.md#qpencode)|调用此函数可对某些 Quoted Printable 格式的数据进行编码。|
 |[QPEncodeGetRequiredLength](reference/atl-text-encoding-functions.md#qpencodegetrequiredlength)|调用此函数可获取某个缓冲区的大小（以字符为单位），该缓冲区可包含从指定大小的数据编码而来的字符串。|
-|[取消解码](reference/atl-text-encoding-functions.md#uudecode)|对已进行 uuencode 如通过以前调用的数据的字符串解码[UUEncode](reference/atl-text-encoding-functions.md#uuencode)。|
+|[UUDecode](reference/atl-text-encoding-functions.md#uudecode)|对已进行 uuencode 如通过以前调用的数据的字符串解码[UUEncode](reference/atl-text-encoding-functions.md#uuencode)。|
 |[UUDecodeGetRequiredLength](reference/atl-text-encoding-functions.md#uudecodegetrequiredlength)|调用此函数可获取某个缓冲区的大小（以字节为单位），该缓冲区可包含从指定长度的已进行 uuencode 的字符串解码而来的数据。|
 |[UUEncode](reference/atl-text-encoding-functions.md#uuencode)|调用此函数可对某些数据进行 uuencode。|
 |[UUEncodeGetRequiredLength](reference/atl-text-encoding-functions.md#uuencodegetrequiredlength)|调用此函数可获取某个缓冲区的大小（以字符为单位），该缓冲区可包含从指定大小的数据编码而来的字符串。|
@@ -46,4 +46,3 @@ ms.locfileid: "50492711"
 
 [概念](../atl/active-template-library-atl-concepts.md)<br/>
 [ATL COM 桌面组件](../atl/atl-com-desktop-components.md)
-

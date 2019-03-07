@@ -37,12 +37,12 @@ f1_keywords:
 - atlwin/ATL::REFLECTED_NOTIFY_RANGE_CODE_HANDLER
 - atlwin/ATL::REFLECTED_NOTIFY_RANGE_HANDLER
 ms.assetid: eefdd546-8934-4a30-b263-9c06a8addcbd
-ms.openlocfilehash: a246e907d401167011b5a3e1306c146a338e233a
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: bedef3a8563e27f72017720530e3b7addb78ec3d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694367"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290373"
 ---
 # <a name="message-map-macros-atl"></a>消息映射宏 (ATL)
 
@@ -138,7 +138,7 @@ BEGIN_MSG_MAP(theClass)
 
 ### <a name="parameters"></a>参数
 
-*类*<br/>
+*theClass*<br/>
 [in]包含在消息映射的类的名称。
 
 ### <a name="remarks"></a>备注
@@ -588,7 +588,7 @@ MESSAGE_HANDLER( msg, func )
 
 ### <a name="parameters"></a>参数
 
-*消息*<br/>
+*msg*<br/>
 [in]Windows 消息。
 
 *func*<br/>

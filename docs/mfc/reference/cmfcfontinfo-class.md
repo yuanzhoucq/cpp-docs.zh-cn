@@ -18,12 +18,12 @@ helpviewer_keywords:
 - CMFCFontInfo [MFC], m_strName
 - CMFCFontInfo [MFC], m_strScript
 ms.assetid: f88329b2-d74e-4921-9441-a3bb6536a049
-ms.openlocfilehash: 606d70176e93de6f5526c30f182cee6f8c05499f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2377b7f6afdf78a0e8b7c8ac97a36a4920c06bb8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50522364"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281182"
 ---
 # <a name="cmfcfontinfo-class"></a>CMFCFontInfo 类
 
@@ -102,7 +102,7 @@ CMFCFontInfo(const CMFCFontInfo& src);
 *nPitchAndFamily*<br/>
 [in]一个值，指定的间距和系列的字体。 有关详细信息，请参阅`lfPitchAndFamily`的成员[LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)结构。
 
-*n 类型*<br/>
+*nType*<br/>
 [in]一个值，指定的字体类型。 此参数可以是 DEVICE_FONTTYPE、 RASTER_FONTTYPE 和 TRUETYPE_FONTTYPE 的按位组合 (OR)。
 
 *src*<br/>

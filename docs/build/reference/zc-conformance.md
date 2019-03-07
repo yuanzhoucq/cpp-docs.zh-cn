@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Conformance compiler options
 - Zc compiler options [C++]
 ms.assetid: db1cc175-6e93-4a2e-9396-c3725d2d8f71
-ms.openlocfilehash: b1f612040eea0078b0f27cf72327db94fe9e2939
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 50f3e7a79b80514b6c28bd9aee86c720d6e20cf6
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50665423"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413909"
 ---
 # <a name="zc-conformance"></a>/Zc（一致性）
 
@@ -33,12 +33,12 @@ ms.locfileid: "50665423"
 |选项|行为|
 |---|---|
 |[alignedNew\[-\]](zc-alignednew.md)|启用 C + + 17 过度对齐动态分配 （在默认情况下在 C + + 17）。|
-|[自动\[-\]](zc-auto-deduce-variable-type.md)|强制实施的新的标准 c + + 含义`auto`(在默认情况下)。|
+|[auto\[-\]](zc-auto-deduce-variable-type.md)|强制实施的新的标准 c + + 含义`auto`(在默认情况下)。|
 |[__cplusplus\[-\]](zc-cplusplus.md)|启用 **__cplusplus**宏来报告的受支持的标准 （默认情况下关闭）。|
 |[externConstexpr\[-\]](zc-externconstexpr.md)|启用外部链接的`constexpr`变量 （默认情况下关闭）。|
 |[forScope\[-\]](zc-forscope-force-conformance-in-for-loop-scope.md)|强制执行标准 c + +`for`范围规则 (在默认情况下)。|
 |[implicitNoexcept\[-\]](zc-implicitnoexcept-implicit-exception-specifiers.md)|启用隐式`noexcept`上所需的功能 (在默认情况下)。|
-|[内联\[-\]](zc-inline-remove-unreferenced-comdat.md)|如果它为 COMDAT 或具有内部链接只能删除未引用的函数或数据 （默认情况下关闭）。|
+|[inline\[-\]](zc-inline-remove-unreferenced-comdat.md)|如果它为 COMDAT 或具有内部链接只能删除未引用的函数或数据 （默认情况下关闭）。|
 |[noexceptTypes\[-\]](zc-noexcepttypes.md)|强制执行 C + + 17 noexcept 规则 (在默认情况下，在 C + + 17 或更高版本)。|
 |[referenceBinding\[-\]](zc-referencebinding-enforce-reference-binding-rules.md)|UDT 临时不会绑定到的非常量左值引用 （默认情况下关闭）。|
 |[rvalueCast\[-\]](zc-rvaluecast-enforce-type-conversion-rules.md)|强制实施标准 c + + 显式类型转换规则 （默认情况下关闭）。|
@@ -47,7 +47,7 @@ ms.locfileid: "50665423"
 |[ternary\[-\]](zc-ternary.md)|强制实施条件运算符的操作数类型上的规则 （默认情况下关闭）。|
 |[threadSafeInit\[-\]](zc-threadsafeinit-thread-safe-local-static-initialization.md)|启用线程安全的本地静态初始化 (在默认情况下)。|
 |[throwingNew\[-\]](zc-throwingnew-assume-operator-new-throws.md)|假定`operator new`失败时引发 （默认情况下关闭）。|
-|[三字符组\[-\]](zc-trigraphs-trigraphs-substitution.md)|启用三元祖 （已过时，关闭默认情况下）。|
+|[trigraphs\[-\]](zc-trigraphs-trigraphs-substitution.md)|启用三元祖 （已过时，关闭默认情况下）。|
 |[twoPhase-](zc-twophase.md)|使用不符合要求模板分析 （默认情况下一致性） 的行为。|
 |[wchar_t\[-\]](zc-wchar-t-wchar-t-is-native-type.md)|`wchar_t` 是本机类型，不是 typedef (在默认情况下)。|
 

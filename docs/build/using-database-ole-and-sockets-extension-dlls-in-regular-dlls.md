@@ -6,18 +6,18 @@ helpviewer_keywords:
 - DLLs [C++], extension
 - DLLs [C++], regular
 ms.assetid: 9f1d14a7-9e2a-4760-b3b6-db014fcdb7ff
-ms.openlocfilehash: 74945f712fed68548e3853d231a586ec0c70d84b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b2d4cc4f3b82bd3082ba3b4eac635ea91c19691f
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50587520"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57421202"
 ---
 # <a name="using-database-ole-and-sockets-mfc-extension-dlls-in-regular-mfc-dlls"></a>在规则 MFC Dll 中使用数据库、 OLE 和套接字 MFC 扩展 Dll
 
 当使用的 MFC 扩展 DLL 规则 MFC DLL，如果 MFC 扩展 DLL 不连接到**CDynLinkLibrary**对象链的规则 MFC DLL，则可能会遇到一个或多个一组相关的问题。 因为调试版本的 MFC 数据库、 OLE 和套接字支持 Dll 作为 MFC 扩展 Dll 实现的可能会看到类似的问题，如果你正在使用这些 MFC 功能，即使你未显式使用任何你自己的 MFC 扩展 Dll。 一些症状是：
 
-- 当尝试反序列化的类类型的对象定义 MFC 扩展 DLL，该消息中"警告： 无法加载 CYourClass 从存档。 类未定义的。" 显示在跟踪调试窗口和对象进行序列化将失败。
+- 当尝试反序列化的类类型的对象定义 MFC 扩展 DLL，该消息中"警告：无法加载 CYourClass 从存档。 类未定义的。" 显示在跟踪调试窗口和对象进行序列化将失败。
 
 - 可能会引发异常，指出不好的类。
 

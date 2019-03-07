@@ -7,12 +7,12 @@ helpviewer_keywords:
 - TN014
 - custom controls [MFC]
 ms.assetid: 1917a498-f643-457c-b570-9a0af7dbf7bb
-ms.openlocfilehash: 1f04029e47ee7d262cdc5e2eab463799acd7d943
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: d529b235daa1c6aa889b69e8d6bb2f02a58436bb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178403"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297484"
 ---
 # <a name="tn014-custom-controls"></a>TN014:自定义控件
 
@@ -116,7 +116,8 @@ MFC 常规示例[CTRLTEST](../visual-cpp-samples.md)提供自我描述菜单和�
 
 这不应与 C++ 类派生混淆。 有关说明，c + + 术语*基类*和*派生的类*类似于*超类*并*子类*在 Windows 中对象模型。 使用 MFC 的 C++ 派生和 Windows 子类化在功能上是相同的，只不过 C++ 不支持动态子类化。
 
-`CWnd` 类提供了 C++ 对象（派生自 `CWnd`）与 Windows 窗口对象（称为 `HWND`）之间的连接。
+
+  `CWnd` 类提供了 C++ 对象（派生自 `CWnd`）与 Windows 窗口对象（称为 `HWND`）之间的连接。
 
 它们有 3 种常见的相关方式：
 

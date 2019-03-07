@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - critical_section class
 ms.assetid: fa3c89d6-be5d-4d1b-bddb-8232814e6cf6
-ms.openlocfilehash: a08cb5049d742a9740361595bd931a2f7a48bd16
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f334b159ae39f48006a135c6e36d413b737a7344
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498756"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260941"
 ---
 # <a name="criticalsection-class"></a>critical_section 类
 
@@ -177,7 +177,7 @@ bool try_lock_for(unsigned int _Timeout);
 
 ### <a name="parameters"></a>参数
 
-*超时) (_t*<br/>
+*_Timeout*<br/>
 超时前要等待的毫秒数。
 
 ### <a name="return-value"></a>返回值

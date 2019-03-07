@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CPropertyPage [MFC], SetModified
 - CPropertyPage [MFC], m_psp
 ms.assetid: d9000a21-aa81-4530-85d9-f43432afb4dc
-ms.openlocfilehash: 1816e6ee2dc0f358cb2da4c8bab572daa33a29c6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ef46001e230813afb0abb857b7aee39bf5fba05d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50561234"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260746"
 ---
 # <a name="cpropertypage-class"></a>CPropertyPage 类
 
@@ -74,16 +74,16 @@ class CPropertyPage : public CDialog
 |[CPropertyPage::GetPSP](#getpsp)|检索 Windows [PROPSHEETPAGE](/windows/desktop/api/prsht/ns-prsht-_propsheetpagea_v2)与关联的结构`CPropertyPage`对象。|
 |[CPropertyPage::OnApply](#onapply)|单击立即应用按钮时由框架调用。|
 |[CPropertyPage::OnCancel](#oncancel)|单击取消按钮时由框架调用。|
-|[Cpropertypage:: Onkillactive](#onkillactive)|当前页不再是活动的页面时由框架调用。 执行数据验证。|
+|[CPropertyPage::OnKillActive](#onkillactive)|当前页不再是活动的页面时由框架调用。 执行数据验证。|
 |[CPropertyPage::OnOK](#onok)|单击确定，立即应用，或关闭按钮时由框架调用。|
 |[CPropertyPage::OnQueryCancel](#onquerycancel)|单击取消按钮，并在取消发生之前，由框架调用。|
 |[CPropertyPage::OnReset](#onreset)|单击取消按钮时由框架调用。|
-|[Cpropertypage:: Onsetactive](#onsetactive)|当该页成为活动页时由框架调用。|
+|[CPropertyPage::OnSetActive](#onsetactive)|当该页成为活动页时由框架调用。|
 |[CPropertyPage::OnWizardBack](#onwizardback)|使用向导类型的属性表时单击后退按钮时由框架调用。|
 |[CPropertyPage::OnWizardFinish](#onwizardfinish)|使用向导类型的属性表时单击完成按钮时由框架调用。|
 |[CPropertyPage::OnWizardNext](#onwizardnext)|使用向导类型的属性表时单击下一步按钮时由框架调用。|
 |[CPropertyPage::QuerySiblings](#querysiblings)|将消息转发到属性表的每一页。|
-|[Cpropertypage:: Setmodified](#setmodified)|调用以激活或停用的立即应用按钮。|
+|[CPropertyPage::SetModified](#setmodified)|调用以激活或停用的立即应用按钮。|
 
 ### <a name="public-data-members"></a>公共数据成员
 
@@ -333,7 +333,7 @@ virtual void OnCancel();
 
 [!code-cpp[NVC_MFCDocView#114](../../mfc/codesnippet/cpp/cpropertypage-class_4.cpp)]
 
-##  <a name="onkillactive"></a>  Cpropertypage:: Onkillactive
+##  <a name="onkillactive"></a>  CPropertyPage::OnKillActive
 
 当该页不再是活动页时，由框架调用此成员函数。
 
@@ -419,7 +419,7 @@ virtual void OnReset();
 
   有关示例，请参阅[CPropertyPage::OnCancel](#oncancel)。
 
-##  <a name="onsetactive"></a>  Cpropertypage:: Onsetactive
+##  <a name="onsetactive"></a>  CPropertyPage::OnSetActive
 
 用户选择和成为活动页的页时，由框架调用此成员函数。
 
@@ -551,7 +551,7 @@ LRESULT QuerySiblings(
 
 [!code-cpp[NVC_MFCDocView#126](../../mfc/codesnippet/cpp/cpropertypage-class_16.cpp)]
 
-##  <a name="setmodified"></a>  Cpropertypage:: Setmodified
+##  <a name="setmodified"></a>  CPropertyPage::SetModified
 
 调用此成员函数可启用或禁用立即应用按钮，根据是否属性页中的设置应该应用到相应的外部对象。
 

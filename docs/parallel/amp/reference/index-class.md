@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - index structure
 ms.assetid: cbe79b08-0ba7-474c-9828-f1a71da39eb3
-ms.openlocfilehash: 921d87de72c13e1971d9b40474bf3d91033c0580
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 054db83e4d8e140af37dcff9a7664ffdf7902325
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50529306"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284640"
 ---
 # <a name="index-class"></a>index 类
 
@@ -124,7 +124,7 @@ explicit index(
 *_Other*<br/>
 一个新的索引对象所基于的索引对象。
 
-## <a name="operator--"></a>  operator-
+## <a name="operator--"></a>  operator--
 
 递减的索引对象的每个元素。
 ```
@@ -139,7 +139,7 @@ index operator--(
 
 针对前缀运算符，该索引对象 (* 这)。 针对后缀运算符，新的索引对象。
 
-## <a name="operator_mod_eq"></a>  operator(mod) =
+## <a name="operator_mod_eq"></a>  operator(mod)=
 
 该元素除以指定数目时将计算索引对象的每个元素的模数 （余数）。
 
@@ -171,7 +171,7 @@ index<_Rank>& operator*=(
 *_Rhs*<br/>
 要相乘的数。
 
-## <a name="operator_div_eq"></a>  / = 运算符
+## <a name="operator_div_eq"></a>  operator/=
 
 索引对象的每个元素除以指定的数目。
 
@@ -275,7 +275,7 @@ index<_Rank>& operator=(
 
 对此索引对象的引用。
 
-## <a name="operator_-_eq"></a>  运算符 =
+## <a name="operator_-_eq"></a>  operator-=
 
 减去指定的数字从每个元素的索引对象。
 ```

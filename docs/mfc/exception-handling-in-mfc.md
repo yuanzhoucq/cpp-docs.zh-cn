@@ -33,12 +33,12 @@ helpviewer_keywords:
 - function calls [MFC], results
 - out-of-memory exceptions [MFC]
 ms.assetid: 0926627d-2ba7-44a6-babe-d851a4a2517c
-ms.openlocfilehash: 4b520072bd0c07e261f2cf4baf51d7ea3d14a5ab
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: cb11a74932e44f94f481a2fdc48b8d6ee359f9e8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694551"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260538"
 ---
 # <a name="exception-handling-in-mfc"></a>MFC 中的异常处理
 
@@ -50,9 +50,9 @@ ms.locfileid: "51694551"
 
 如果您要编写使用 MFC 的新应用程序，应使用 c + + 机制。 如果你的现有应用程序已广泛使用该机制，可以使用基于宏的机制。
 
-您可以轻松地转换现有代码以使用 c + + 异常，而不是 MFC 异常宏。 文章中所述将转换你的代码和执行此操作的指导原则的优势[异常： 从 MFC 异常宏转换](../mfc/exceptions-converting-from-mfc-exception-macros.md)。
+您可以轻松地转换现有代码以使用 c + + 异常，而不是 MFC 异常宏。 文章中所述将转换你的代码和执行此操作的指导原则的优点[异常：从 MFC 异常宏转换](../mfc/exceptions-converting-from-mfc-exception-macros.md)。
 
-如果您已开发了使用 MFC 异常宏的应用程序，则可以继续使用这些宏在现有代码中，同时在新代码中使用 c + + 异常。 文章[异常： 3.0 版中的异常宏将变为](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md)提供的指导可用于执行此操作。
+如果您已开发了使用 MFC 异常宏的应用程序，则可以继续使用这些宏在现有代码中，同时在新代码中使用 c + + 异常。 文章[异常：将更改为版本 3.0 中的异常宏](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md)提供的指导可用于执行此操作。
 
 > [!NOTE]
 >  若要启用 c + + 异常处理代码中，项目的 C/c + + 文件夹中的代码生成页上选择启用 c + + 异常[属性页](../ide/property-pages-visual-cpp.md)对话框中或使用[/EHsc](../build/reference/eh-exception-handling-model.md)编译器选项。
@@ -115,22 +115,21 @@ ms.locfileid: "51694551"
 
 - [异常：释放异常中的对象](../mfc/exceptions-freeing-objects-in-exceptions.md)
 
-- [异常：从自己的函数引发异常](../mfc/exceptions-throwing-exceptions-from-your-own-functions.md)
+- [异常：从您自己的函数引发异常](../mfc/exceptions-throwing-exceptions-from-your-own-functions.md)
 
 - [异常：数据库异常](../mfc/exceptions-database-exceptions.md)
 
-- [异常：OLE 异常](../mfc/exceptions-ole-exceptions.md)
+- [异常：OLE Exceptions](../mfc/exceptions-ole-exceptions.md)
 
 以下文章比较 MFC 异常宏与 c + + 异常关键字并解释如何调整你的代码：
 
-- [异常：3.0 版本中对异常宏的修改](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md)
+- [异常：对异常宏的修改版本 3.0 中的更改](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md)
 
 - [异常：从 MFC 异常宏转换](../mfc/exceptions-converting-from-mfc-exception-macros.md)
 
-- [异常：使用 MFC 宏和 C++ 异常](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md)
+- [异常：使用 MFC 宏和 c + + 异常](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md)
 
 ## <a name="see-also"></a>请参阅
 
 [C++ 异常处理](../cpp/cpp-exception-handling.md)<br/>
-[如何： 创建我自己的自定义异常类](http://go.microsoft.com/fwlink/p/?linkid=128045)
-
+[如何实现:创建我自己的自定义异常类](http://go.microsoft.com/fwlink/p/?linkid=128045)

@@ -18,12 +18,12 @@ helpviewer_keywords:
 - sequenced data flow
 - stream sockets [MFC]
 ms.assetid: f60d4ed2-bf23-4a0e-98d2-fee77e8473dd
-ms.openlocfilehash: 93342f734d1e475cbae1b7e3025c59e6e6f73284
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6ab866609d0b75aaf9d06a01c204433d80e7e3d8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468024"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274916"
 ---
 # <a name="windows-sockets-background"></a>Windows 套接字：背景
 
@@ -44,7 +44,7 @@ Windows 套接字规范定义的 Microsoft Windows 二进制文件兼容的网�
 
 Microsoft 基础类库 (MFC) 通过提供两个类支持使用 Windows 套接字 API 进行编程。 这些类之一`CSocket`，提供高级别的抽象来简化您的网络通信编程。
 
-Windows 套接字规范，Windows 套接字： 为网络计算在 Microsoft Windows，现在在 1.1 版中，打开接口的个人和公司 TCP/IP 社区中的一大组开发作为一个开放的网络标准和是使用免费提供。 套接字编程模型支持一个"通信的域"目前，使用 Internet 协议套件。 该规范是在 Windows SDK 中提供。
+Windows 套接字规范，Windows 套接字：为网络计算在 Microsoft Windows，现在在 1.1 版中，打开接口的个人和公司 TCP/IP 社区中的一大组开发作为一个开放的网络标准和自由地可供使用。 套接字编程模型支持一个"通信的域"目前，使用 Internet 协议套件。 该规范是在 Windows SDK 中提供。
 
 > [!TIP]
 >  由于套接字使用 Internet 协议套件，因此它们是支持"信息高速公路。"上的 Internet 通信的应用程序的首选的路由
@@ -70,7 +70,7 @@ Windows 套接字规范，Windows 套接字： 为网络计算在 Microsoft Wind
 > [!NOTE]
 >  在某些网络协议，如 XNS，流可以是面向记录的记录的流而不是字节流。 但是，更常见的 TCP/IP 协议，在流是字节流。 Windows 套接字提供独立于基础协议的抽象的级别。
 
-有关这些类型的信息和哪种类型的套接字在哪些情况下使用，请参阅[Windows 套接字： 套接字 Stream](../mfc/windows-sockets-stream-sockets.md)并[Windows 套接字： 数据报套接字](../mfc/windows-sockets-datagram-sockets.md)。
+有关这些类型的信息和哪种类型的套接字在哪些情况下使用，请参阅[Windows 套接字：Stream 套接字](../mfc/windows-sockets-stream-sockets.md)和[Windows 套接字：数据报套接字](../mfc/windows-sockets-datagram-sockets.md)。
 
 ##  <a name="_core_the_socket_data_type"></a> 套接字的数据类型
 
@@ -89,7 +89,7 @@ Windows 套接字规范，Windows 套接字： 为网络计算在 Microsoft Wind
 - 通过让解释与函数调用消息接收应用程序进行远程过程调用 (RPC)。
 
 > [!TIP]
->  理想情况下使用 MFC 套接字是编写两个通信端时： 在两端都使用 MFC。 本主题中，包括如何与非 MFC 应用程序，在通信时管理这种情况的详细信息请参阅[Windows 套接字： 字节排序](../mfc/windows-sockets-byte-ordering.md)。
+>  理想情况下使用 MFC 套接字是编写两个通信端时： 在两端都使用 MFC。 本主题中，包括如何与非 MFC 应用程序，在通信时管理这种情况的详细信息请参阅[Windows 套接字：字节排序](../mfc/windows-sockets-byte-ordering.md)。
 
 有关详细信息，请参阅 Windows 套接字规范： **ntohs**， **ntohl**， **htons**， **htonl**。 此外，请参阅以下主题：
 
@@ -97,9 +97,8 @@ Windows 套接字规范，Windows 套接字： 为网络计算在 Microsoft Wind
 
 - [Windows 套接字：使用存档的套接字的示例](../mfc/windows-sockets-example-of-sockets-using-archives.md)
 
-- [Windows 套接字：使用 CAsyncSocket 类](../mfc/windows-sockets-using-class-casyncsocket.md)
+- [Windows 套接字：使用类 CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
 
 ## <a name="see-also"></a>请参阅
 
 [MFC 中的 Windows 套接字](../mfc/windows-sockets-in-mfc.md)
-

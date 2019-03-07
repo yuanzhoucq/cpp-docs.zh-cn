@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - schedule groups
 ms.assetid: 03523572-5891-4d17-89ce-fa795605f28b
-ms.openlocfilehash: 60d6bdaf863e60fa9923f7d7447309338c5dbed2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: febcc0a9c7af75801962ea6be687ce87cc5501d4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50453516"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295964"
 ---
 # <a name="schedule-groups"></a>计划组
 
@@ -20,7 +20,7 @@ ms.locfileid: "50453516"
 
 每个`Scheduler`对象具有计划的每个节点的默认计划组。 一个*计划节点*映射到基础系统拓扑。 运行时创建一个计划节点对于每个处理器包或非统一内存体系结构 (NUMA) 节点，数字较大者。 如果您没有将任务与计划组显式关联，计划程序会选择要添加到任务的组。
 
-`SchedulingProtocol`计划程序策略会影响计划程序在其中执行每个计划组中的任务的顺序。 当`SchedulingProtocol`设置为`EnhanceScheduleGroupLocality`（这是默认值），任务计划程序可从当前任务完成或协作让出资源时使用计划组中选择下一个任务。 任务计划程序搜索工作的当前计划组之前它将移到下一个可用组。 相反，当`SchedulingProtocol`设置为`EnhanceForwardProgress`，每个任务完成或生成后，计划程序将移到下一步计划组。 将这些策略进行比较的示例，请参阅[如何： 使用计划组影响执行顺序为](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md)。
+`SchedulingProtocol`计划程序策略会影响计划程序在其中执行每个计划组中的任务的顺序。 当`SchedulingProtocol`设置为`EnhanceScheduleGroupLocality`（这是默认值），任务计划程序可从当前任务完成或协作让出资源时使用计划组中选择下一个任务。 任务计划程序搜索工作的当前计划组之前它将移到下一个可用组。 相反，当`SchedulingProtocol`设置为`EnhanceForwardProgress`，每个任务完成或生成后，计划程序将移到下一步计划组。 将这些策略进行比较的示例，请参阅[如何：使用计划组影响执行顺序](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md)。
 
 运行时使用[concurrency:: schedulegroup](../../parallel/concrt/reference/schedulegroup-class.md)类来表示计划组。 若要创建`ScheduleGroup`对象，请调用[concurrency::CurrentScheduler::CreateScheduleGroup](reference/currentscheduler-class.md#createschedulegroup)或[concurrency::Scheduler::CreateScheduleGroup](reference/scheduler-class.md#createschedulegroup)方法。 运行时使用的引用计数机制来控制的生存期`ScheduleGroup`对象，就像它对待`Scheduler`对象。 当你创建`ScheduleGroup`对象时，运行时将引用设置到其中一个计数器。 [Concurrency::ScheduleGroup::Reference](reference/schedulegroup-class.md#reference)方法按 1 递增引用计数器。 [Concurrency::ScheduleGroup::Release](reference/schedulegroup-class.md#release)方法递减一个引用计数器。
 
@@ -30,11 +30,10 @@ ms.locfileid: "50453516"
 
 ## <a name="example"></a>示例
 
-使用计划组以控制任务执行的顺序示例，请参阅[如何： 使用计划组影响执行顺序为](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md)。
+使用计划组以控制任务执行的顺序示例，请参阅[如何：使用计划组影响执行顺序](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md)。
 
 ## <a name="see-also"></a>请参阅
 
 [任务计划程序](../../parallel/concrt/task-scheduler-concurrency-runtime.md)<br/>
 [计划程序实例](../../parallel/concrt/scheduler-instances.md)<br/>
 [如何：使用计划组影响执行顺序](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md)
-

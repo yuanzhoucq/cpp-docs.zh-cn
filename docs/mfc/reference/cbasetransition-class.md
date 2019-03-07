@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CBaseTransition [MFC], m_transition
 - CBaseTransition [MFC], m_type
 ms.assetid: dfe84007-bbc5-43b7-b5b8-fae9145573bf
-ms.openlocfilehash: b4c15be574700730e847bce06aaa4a6f82aed4b0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1f9bc3708974511506741a35c11676df2b0be592
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539121"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258367"
 ---
 # <a name="cbasetransition-class"></a>CBaseTransition 类
 
@@ -90,7 +90,7 @@ class CBaseTransition : public CObject;
 |[CBaseTransition::GetTransition](#gettransition)|已重载。 返回指向基础 COM 转换对象的指针。|
 |[CBaseTransition::GetType](#gettype)|返回转换类型。|
 |[CBaseTransition::IsAdded](#isadded)|指示是否已将转换添加到情节提要。|
-|[Cbasetransition::](#setkeyframes)|设置关键帧进行转换。|
+|[CBaseTransition::SetKeyframes](#setkeyframes)|设置关键帧进行转换。|
 |[CBaseTransition::SetRelatedVariable](#setrelatedvariable)|建立动画变量和转换之间的关系。|
 
 ### <a name="protected-data-members"></a>受保护的数据成员
@@ -370,7 +370,7 @@ ATL::CComPtr<IUIAnimationTransition> m_transition;
 TRANSITION_TYPE m_type;
 ```
 
-##  <a name="setkeyframes"></a>  Cbasetransition::
+##  <a name="setkeyframes"></a>  CBaseTransition::SetKeyframes
 
 设置关键帧进行转换。
 
@@ -385,7 +385,7 @@ void SetKeyframes(
 *pStart*<br/>
 指定过渡的开头关键帧。
 
-*挂起*<br/>
+*pEnd*<br/>
 指定在转换结束关键帧。
 
 ### <a name="remarks"></a>备注

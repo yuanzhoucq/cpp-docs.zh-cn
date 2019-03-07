@@ -1,19 +1,19 @@
 ---
-title: 如何： 配置 Visual c + + 项目以面向 64 位 x64 平台
+title: 如何：配置 Visual c + + 项目以面向 64 位 x64 平台
 ms.date: 11/04/2016
 helpviewer_keywords:
 - platforms [C++], 64-bit
 - 64-bit programming [C++], configuring projects
 - project configurations [C++]
 ms.assetid: 2b9ae001-df36-4750-83b2-982145d632ad
-ms.openlocfilehash: c0c734648b084c3f58577cb56984e3ea003a6a8e
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 17255a5671880063f030ed0087c1fa839c5a14ef
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523932"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57421360"
 ---
-# <a name="how-to-configure-visual-c-projects-to-target-64-bit-x64-platforms"></a>如何： 配置 Visual c + + 项目以面向 64 位 x64 平台
+# <a name="how-to-configure-visual-c-projects-to-target-64-bit-x64-platforms"></a>如何：配置 Visual c + + 项目以面向 64 位 x64 平台
 
 可以使用 Visual Studio IDE 中的项目配置来设置 c + + 应用程序以面向 64 位 x64 平台。 还可以将 Win32 项目设置迁移到 64 位项目配置。
 
@@ -47,9 +47,9 @@ ms.locfileid: "51523932"
 
   - 关闭“注册输出” 。 有关详细信息，请参阅 [Linker Property Pages](../ide/linker-property-pages.md)。
 
-  - “目标环境” 设置为 **/env x64**。 有关详细信息，请参阅 [MIDL Property Pages: General](../ide/midl-property-pages-general.md)。
+  - “目标环境” 设置为 **/env x64**。 有关详细信息，请参阅[MIDL 属性页：常规](../ide/midl-property-pages-general.md)。
 
-  - “验证参数” 被清除并且重置为默认值。 有关详细信息，请参阅 [MIDL Property Pages: Advanced](../ide/midl-property-pages-advanced.md)。
+  - “验证参数” 被清除并且重置为默认值。 有关详细信息，请参阅[MIDL 属性页：高级](../ide/midl-property-pages-advanced.md)。
 
   - 如果在 Win32 项目配置中已将“调试信息格式”  设置为 **/ZI** ，则在 64 位项目配置中将设置为 **/Zi** 。 有关详细信息，请参阅 [/Z7、/Zi、/ZI（调试信息格式）](../build/reference/z7-zi-zi-debug-information-format.md)。
 

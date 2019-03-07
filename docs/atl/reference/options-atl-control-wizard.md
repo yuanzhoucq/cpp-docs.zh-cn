@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - ATL Control Wizard, options
 ms.assetid: 4607c51a-992d-433e-9281-919c6f519a3d
-ms.openlocfilehash: e607e35b2b3970f329692ba8d2c612d7f6a6591b
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 1dd136739162c72d8064deb9b1498794f1985e1b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51522306"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57282976"
 ---
 # <a name="options-atl-control-wizard"></a>选项，ATL 控件向导
 
@@ -23,9 +23,9 @@ ms.locfileid: "51522306"
 
 想要创建的控件类型。
 
-- **标准控件**: ActiveX 控件。
+- **标准控件**:ActiveX 控件。
 
-- **复合控件**: ActiveX 控件可以包含 （类似于一个对话框） 的其他 ActiveX 控件或 Windows 控件。 复合控件包括：
+- **复合控件**:ActiveX 控件可以包含 （类似于一个对话框） 的其他 ActiveX 控件或 Windows 控件。 复合控件包括：
 
   - 用于实现复合控件的对话框中的模板。
 
@@ -39,7 +39,7 @@ ms.locfileid: "51522306"
 
     默认情况下，此控件设置[CComControlBase::m_bWindowOnly](../../atl/reference/ccomcontrolbase-class.md#m_bwindowonly)为 true，以指示这是有窗口的控件。 它实现了接收器映射。 有关详细信息，请参阅[支持 DHTML 控件](../../atl/atl-support-for-dhtml-controls.md)。
 
-- **DHTML 控件**: ATL DHTML 控件指定用户界面，使用 HTML。 DHTML UI 类包含 COM 映射。 默认情况下，此控件设置[CComControlBase::m_bWindowOnly](../../atl/reference/ccomcontrolbase-class.md#m_bwindowonly)为 true，以指示这是有窗口的控件。
+- **DHTML 控件**:ATL DHTML 控件指定用户界面，使用 HTML。 DHTML UI 类包含 COM 映射。 默认情况下，此控件设置[CComControlBase::m_bWindowOnly](../../atl/reference/ccomcontrolbase-class.md#m_bwindowonly)为 true，以指示这是有窗口的控件。
 
    有关详细信息，请参阅[标识 DHTML 控件项目的元素](../../atl/identifying-the-elements-of-the-dhtml-control-project.md)。
 
@@ -51,27 +51,27 @@ ms.locfileid: "51522306"
 
 添加聚合支持您创建的控件。 有关详细信息，请参阅[聚合](../../atl/aggregation.md)。
 
-- **是**： 创建可聚合的控件。
+- **是**:创建可聚合的控件。
 
-- **不**： 创建不能聚合的控件。
+- **不**:创建不能聚合的控件。
 
-- **仅**： 创建仅可以通过聚合实例化的控件。
+- **仅**:创建仅可以通过聚合实例化的控件。
 
 ### <a name="threading-model"></a>线程模型
 
 指定由控件使用的线程模型。
 
-- **单个**： 控件将仅在主 COM 线程中运行。
+- **单个**:该控件将仅在主 COM 线程中运行。
 
-- **单元**： 可以在任何单线程单元中创建控件。 默认值。
+- **单元**:可以在任何单线程单元中创建控件。 默认值。
 
 ### <a name="interface"></a>接口
 
 此控件向容器公开的接口的类型。
 
-- **双**： 创建属性和方法通过公开的接口`IDispatch`以及直接通过 VTBL。
+- **双**:创建公开属性和方法通过接口`IDispatch`以及直接通过 VTBL。
 
-- **自定义**： 创建一个直接通过 VTBL 公开方法的接口。
+- **自定义**：创建直接通过 VTBL 公开方法的接口。
 
    如果选择**自定义**，则可以指定的控件是**自动化兼容**。 如果选择**自动化兼容**，然后该向导将添加[oleautomation](../../windows/oleautomation.md)属性到 idl，接口和接口可以封送处理中 oleaut32.dll 通用封送处理程序。 请参阅[封送处理的详细信息](/windows/desktop/com/marshaling-details)Windows SDK for 的详细信息中。
 
@@ -81,11 +81,10 @@ ms.locfileid: "51522306"
 
 设置控件的其他杂项支持。
 
-- **连接点**： 使对象的类派生来使您的对象的连接点[IConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md)并使其能够公开源接口。
+- **连接点**:派生的对象的类，从而使您的对象的连接点[IConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md)并使其能够公开源接口。
 
-- **许可**： 将支持添加到的控件[许可](/windows/desktop/com/licensing)。 如果客户端计算机具有正确的许可证，则仅可以托管授权的控件。
+- **许可**:将支持添加到的控件[许可](/windows/desktop/com/licensing)。 如果客户端计算机具有正确的许可证，则仅可以托管授权的控件。
 
 ## <a name="see-also"></a>请参阅
 
 [ATL 控件向导](../../atl/reference/atl-control-wizard.md)
-

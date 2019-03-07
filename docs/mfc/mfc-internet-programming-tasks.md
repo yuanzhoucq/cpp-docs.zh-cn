@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Internet applications [MFC], getting started
 - Internet applications [MFC], first steps
 ms.assetid: 6377e9b8-07c4-4380-b63b-05f5a9061313
-ms.openlocfilehash: ea7291a63fe9864f7254d4db8b68e4c9abf732c3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1b0a8696e25054099cdbf208dd5a1f713bfbe6d3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507973"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277820"
 ---
 # <a name="mfc-internet-programming-tasks"></a>MFC Internet 编程任务
 
@@ -50,4 +50,3 @@ Active 技术包括 ActiveX 控件（以前称为 OLE 控件）和活动文档�
 
 [MFC Internet 编程基础知识](../mfc/mfc-internet-programming-basics.md)<br/>
 [按任务划分的 Internet 信息](../mfc/internet-information-by-task.md)
-

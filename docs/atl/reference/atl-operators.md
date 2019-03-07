@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - operators [ATL]
 ms.assetid: 58ccd252-2869-45ee-8a5c-3ca40ee7f8a2
-ms.openlocfilehash: 361b0316e27ee06c64b3ed5e11c6aab10210596f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6f1bd4f88b8d3a37f051a208a887c5264f61955a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476253"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293493"
 ---
 # <a name="atl-operators"></a>ATL 运算符
 
@@ -18,11 +18,11 @@ ms.locfileid: "50476253"
 |运算符|描述|
 |--------------|-----------------|
 |[operator ==](#operator_eq_eq)|比较两个`CSid`对象或`SID`结构是否相等。|
-|[运算符 ！ =](#operator_neq)|比较两个`CSid`对象或`SID`结构是否不相等。|
-|[运算符 <](#operator_lt)|如果测试`CSid`对象或`SID`运算符左侧的结构是不会早于`CSid`对象或`SID`（适用于 c + + 标准库兼容性） 右侧的结构。|
-|[运算符 >](#operator_gt)|如果测试`CSid`对象或`SID`运算符左侧的结构是否大于`CSid`对象或`SID`（适用于 c + + 标准库兼容性） 右侧的结构。|
-|[运算符 < =](#operator_lt__eq)|如果测试`CSid`对象或`SID`运算符左侧的结构是否小于或等于`CSid`对象或`SID`（适用于 c + + 标准库兼容性） 右侧的结构。|
-|[运算符 > =](#operator_gt__eq)|如果测试`CSid`对象或`SID`运算符左侧的结构是大于或等于`CSid`对象或`SID`（适用于 c + + 标准库兼容性） 右侧的结构。|
+|[operator !=](#operator_neq)|比较两个`CSid`对象或`SID`结构是否不相等。|
+|[operator <](#operator_lt)|如果测试`CSid`对象或`SID`运算符左侧的结构是不会早于`CSid`对象或`SID`（适用于 c + + 标准库兼容性） 右侧的结构。|
+|[operator >](#operator_gt)|如果测试`CSid`对象或`SID`运算符左侧的结构是否大于`CSid`对象或`SID`（适用于 c + + 标准库兼容性） 右侧的结构。|
+|[operator <=](#operator_lt__eq)|如果测试`CSid`对象或`SID`运算符左侧的结构是否小于或等于`CSid`对象或`SID`（适用于 c + + 标准库兼容性） 右侧的结构。|
+|[operator >=](#operator_gt__eq)|如果测试`CSid`对象或`SID`运算符左侧的结构是大于或等于`CSid`对象或`SID`（适用于 c + + 标准库兼容性） 右侧的结构。|
 
 ## <a name="requirements"></a>要求
 
@@ -92,7 +92,7 @@ bool operator<(const CSid& lhs, const CSid& rhs) throw();
 
 此运算符作用于的地址`CSid`对象或`SID`结构，并实现以提供与 c + + 标准库集合类的兼容性。
 
-##  <a name="operator_gt"></a>  运算符 >
+##  <a name="operator_gt"></a>  operator >
 
 如果测试`CSid`对象或`SID`运算符左侧的结构是否大于`CSid`对象或`SID`（适用于 c + + 标准库兼容性） 右侧的结构。
 
@@ -140,7 +140,7 @@ bool operator<(const CSid& lhs, const CSid& rhs) throw();
 
 此运算符作用于的地址`CSid`对象或`SID`结构，并实现以提供与 c + + 标准库集合类的兼容性。
 
-##  <a name="operator_gt__eq"></a>  运算符 > =
+##  <a name="operator_gt__eq"></a>  operator >=
 
 如果测试`CSid`对象或`SID`运算符左侧的结构是大于或等于`CSid`对象或`SID`（适用于 c + + 标准库兼容性） 右侧的结构。
 
@@ -163,4 +163,3 @@ bool operator<(const CSid& lhs, const CSid& rhs) throw();
 ### <a name="remarks"></a>备注
 
 此运算符作用于的地址`CSid`对象或`SID`结构，并实现以提供与 c + + 标准库集合类的兼容性。
-

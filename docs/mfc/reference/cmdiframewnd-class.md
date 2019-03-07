@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CMDIFrameWnd [MFC], MDISetMenu
 - CMDIFrameWnd [MFC], MDITile
 ms.assetid: fa8736e6-511b-4c51-8b4d-eba78378aeb9
-ms.openlocfilehash: 9d9a2d33f61aa9033bb17c090989b4f08ee82bd7
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: d3fc71c3e294b26aea405b8800199cf88120fa08
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178377"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57282443"
 ---
 # <a name="cmdiframewnd-class"></a>CMDIFrameWnd 类
 
@@ -194,7 +194,7 @@ CMDIChildWnd* CreateNewChild(
 *pClass*<br/>
 若要创建的子窗口的运行时类。
 
-*资源*<br/>
+*nResource*<br/>
 与子窗口相关联的共享资源的 ID。
 
 *hMenu*<br/>
@@ -275,7 +275,7 @@ void MDICascade(int nType);
 
 ### <a name="parameters"></a>参数
 
-*n 类型*<br/>
+*nType*<br/>
 指定级联标志。 可以指定仅以下标记：MDITILE_SKIPDISABLED，这样可防止已禁用的 MDI 子窗口正在级联。
 
 ### <a name="remarks"></a>备注
@@ -440,7 +440,7 @@ void MDITile(int nType);
 
 ### <a name="parameters"></a>参数
 
-*n 类型*<br/>
+*nType*<br/>
 指定平铺标志。 此参数可以是下列标志之一：
 
 - 使该窗口显示上面另一个 MDITILE_HORIZONTAL 磁贴 MDI 子窗口。

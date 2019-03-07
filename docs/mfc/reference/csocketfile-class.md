@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSocketFile [MFC], CSocketFile
 ms.assetid: 7924c098-5f72-40d6-989d-42800a47958f
-ms.openlocfilehash: f31bbda1bb6428b6bcca25d6eddce98156fac1d6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f3fa73320ae34283b0cdac559111a53a879c031c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588829"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274266"
 ---
 # <a name="csocketfile-class"></a>CSocketFile 类
 
@@ -50,7 +50,7 @@ class CSocketFile : public CFile
 
 [!code-cpp[NVC_MFCSocketThread#4](../../mfc/reference/codesnippet/cpp/csocketfile-class_1.cpp)]
 
-有关详细信息，请参阅[MFC 中的 Windows 套接字](../../mfc/windows-sockets-in-mfc.md)， [Windows 套接字： 使用存档使用套接字](../../mfc/windows-sockets-using-sockets-with-archives.md)，以及[Windows Sockets 2 API](/windows/desktop/WinSock/windows-sockets-start-page-2)。
+有关详细信息，请参阅[MFC 中的 Windows 套接字](../../mfc/windows-sockets-in-mfc.md)， [Windows 套接字：对存档使用套接字](../../mfc/windows-sockets-using-sockets-with-archives.md)，以及[Windows Sockets 2 API](/windows/desktop/WinSock/windows-sockets-start-page-2)。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -93,7 +93,7 @@ explicit CSocketFile(
 
 使用`CSocketFile`，但是，数据是基于消息; 缓冲区中可以包含多条消息，因此接收请求的字节数少于并不表示文件结尾。 在此情况下不会阻止应用程序，因为它可能与`CFile`，并且可以继续从缓冲区读取消息，直到缓冲区为空。 [CArchive::IsBufferEmpty](../../mfc/reference/carchive-class.md#isbufferempty)函数可用于监视在这种情况中的存档文件的缓冲区的状态。
 
-有关详细信息的使用`CSocketFile`，请参阅文章[Windows 套接字： 使用存档使用套接字](../../mfc/windows-sockets-using-sockets-with-archives.md)并[Windows 套接字： 套接字的使用存档示例](../../mfc/windows-sockets-example-of-sockets-using-archives.md)。
+有关详细信息的使用`CSocketFile`，请参阅文章[Windows 套接字：对存档使用套接字](../../mfc/windows-sockets-using-sockets-with-archives.md)和[Windows 套接字：使用存档的套接字的示例](../../mfc/windows-sockets-example-of-sockets-using-archives.md)。
 
 ## <a name="see-also"></a>请参阅
 

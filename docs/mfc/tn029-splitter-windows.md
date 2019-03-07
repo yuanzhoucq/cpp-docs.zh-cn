@@ -1,5 +1,5 @@
 ---
-title: TN029：拆分窗口
+title: TN029:拆分窗口
 ms.date: 11/04/2016
 f1_keywords:
 - vc.windows.splitter
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - TN029
 - splitter windows [MFC], about splitter windows
 ms.assetid: 2c57ce99-2a3c-4eff-9cea-baccb13af075
-ms.openlocfilehash: 245ad33dd7bc7d3b6365463d4d2ae9538a12bfdc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0c27545c6f425eda952e87c80ed1d37de9e1093a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50501980"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294988"
 ---
-# <a name="tn029-splitter-windows"></a>TN029：拆分窗口
+# <a name="tn029-splitter-windows"></a>TN029:拆分窗口
 
 此注释描述 MFC [CSplitterWnd 类](../mfc/reference/csplitterwnd-class.md)，这样将拆分窗口，并管理其他窗格窗口的大小调整。
 
@@ -54,17 +54,17 @@ ms.locfileid: "50501980"
 
 下面是特定于拆分窗口的术语的列表：
 
-`CSplitterWnd`： 一个提供的拆分窗格的控件和所有窗格对行或列之间共享的滚动条的窗口。 从零开始的数字与指定行和列 (在第一个窗格中，行 = 0 且列 = 0)。
+`CSplitterWnd`：提供拆分窗格的控件和所有窗格对行或列之间共享的滚动条的窗口。 从零开始的数字与指定行和列 (在第一个窗格中，行 = 0 且列 = 0)。
 
-窗格中： 一个特定于应用程序窗口的`CSplitterWnd`管理。 一个窗格，通常是一个对象，派生自[CView 类](../mfc/reference/cview-class.md)，但可以是任何[CWnd](../mfc/reference/cwnd-class.md)对象都有相应的子窗口 id。
+窗格中：特定于应用程序窗口的`CSplitterWnd`管理。 一个窗格，通常是一个对象，派生自[CView 类](../mfc/reference/cview-class.md)，但可以是任何[CWnd](../mfc/reference/cwnd-class.md)对象都有相应的子窗口 id。
 
 若要使用`CWnd`-派生对象，请将传递到对象的 RUNTIME_CLASS`CreateView`函数，您会像使用`CView`-派生的类。 您的类必须使用 DECLARE_DYNCREATE 和 IMPLEMENT_DYNCREATE，因为框架使用在运行时动态创建。 尽管有很多中的代码`CSplitterWnd`这是特定于`CView`类， [CObject::IsKindOf](../mfc/reference/cobject-class.md#iskindof)之前执行这些操作时始终使用。
 
-拆分条： 行和列的窗格之间放置一个控件。 它可能用于调整大小的行或列的窗格。
+拆分条：行和列的窗格之间放置一个控件。 它可能用于调整大小的行或列的窗格。
 
-拆分器中： 控件中动态`CSplitterWnd`可用来创建新行或列的窗格。 它位于顶部或左侧的水平滚动条的垂直滚动条。
+拆分器中：动态中的控件`CSplitterWnd`可用来创建新行或列的窗格。 它位于顶部或左侧的水平滚动条的垂直滚动条。
 
-拆分器交集： 垂直拆分条和水平拆分条的交集。 您可以拖动它以同时调整行和列的窗格的大小。
+拆分器交集：垂直拆分条和水平拆分条的交集。 您可以拖动它以同时调整行和列的窗格的大小。
 
 ## <a name="shared-scroll-bars"></a>共享的滚动条
 
@@ -140,4 +140,3 @@ ms.locfileid: "50501980"
 
 [按编号列出的技术说明](../mfc/technical-notes-by-number.md)<br/>
 [按类别列出的技术说明](../mfc/technical-notes-by-category.md)
-

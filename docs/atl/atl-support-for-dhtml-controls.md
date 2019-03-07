@@ -6,12 +6,12 @@ helpviewer_keywords:
 - DHTML controls, ATL support
 - DHTML controls
 ms.assetid: 4ba98098-da5d-4362-96ad-8372f816c307
-ms.openlocfilehash: e0aa7c7d997ba00495f0ed05ad5e0dfc4b5773a3
-ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
+ms.openlocfilehash: dd8ac616d127c3307c1c432c0b3c9bc2ef1d6181
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55849402"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265257"
 ---
 # <a name="atl-support-for-dhtml-controls"></a>ATL 支持 DHTML 控件
 
@@ -53,4 +53,3 @@ DHTML 控件非常到任何其他 ATL 控件相似，但 DHTML 控件包含其�
 
 [ATL](../atl/active-template-library-atl-concepts.md)<br/>
 提供了关于如何使用 Active Template Library 进行编程的概念性主题的链接。
-

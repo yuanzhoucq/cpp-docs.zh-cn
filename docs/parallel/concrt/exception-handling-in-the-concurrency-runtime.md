@@ -8,12 +8,12 @@ helpviewer_keywords:
 - agents, exception handling [Concurrency Runtime]
 - task groups, exception handling [Concurrency Runtime]
 ms.assetid: 4d1494fb-3089-4f4b-8cfb-712aa67d7a7a
-ms.openlocfilehash: 7611e9d3f0bbf961784c9fed23117750a101486f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8239913c369605503134a9ea4c99789528911868
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437864"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272628"
 ---
 # <a name="exception-handling-in-the-concurrency-runtime"></a>并发运行时中的异常处理
 
@@ -102,7 +102,7 @@ ms.locfileid: "50437864"
 X = 15, Y = 30Caught exception: point is NULL.
 ```
 
-有关使用任务组中的异常处理的完整示例，请参阅[如何： 使用异常处理中断并行循环](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md)。
+有关使用任务组中的异常处理的完整示例，请参阅[如何：使用异常处理来中断并行循环](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md)。
 
 [[返回页首](#top)]
 
@@ -193,4 +193,3 @@ the status of the agent is: done
 [PPL 中的取消操作](cancellation-in-the-ppl.md)<br/>
 [任务计划程序](../../parallel/concrt/task-scheduler-concurrency-runtime.md)<br/>
 [异步代理](../../parallel/concrt/asynchronous-agents.md)
-

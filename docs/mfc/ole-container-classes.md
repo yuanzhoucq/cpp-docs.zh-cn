@@ -11,12 +11,12 @@ helpviewer_keywords:
 - OLE [MFC], classes
 - containers [MFC], OLE container applications
 ms.assetid: 1e27e1ab-4c22-41eb-8547-6915c72668ae
-ms.openlocfilehash: 518ae4889a2c5d9dae10e5b5cba6845010ba883c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 87db824e5ab4daec15870b245ea8341be7442109
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50517138"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57292545"
 ---
 # <a name="ole-container-classes"></a>OLE 容器类
 
@@ -51,4 +51,3 @@ OLE 处理失败导致的异常。 此类将由容器和服务器使用。
 ## <a name="see-also"></a>请参阅
 
 [类概述](../mfc/class-library-overview.md)
-

@@ -30,12 +30,12 @@ helpviewer_keywords:
 - OnPropertyChanged method
 - SetPropValue method
 ms.assetid: bb525178-765c-4e23-a110-c0fd70c05437
-ms.openlocfilehash: db0976ecd3e3af76640a56ebc1e07e9ade2e3815
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 1c45e28e0e74d7216023f06ad22896c53c9226b8
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556772"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423048"
 ---
 # <a name="cutlprops-class"></a>CUtlProps 类
 
@@ -73,11 +73,11 @@ class ATL_NO_VTABLE CUtlProps : public CUtlPropsBase
 
 此类大部分是实现详细信息。
 
-`CUtlProps` 在内部设置的属性包含两个成员： [GetPropValue](../../data/oledb/cutlprops-getpropvalue.md)并[SetPropValue](../../data/oledb/cutlprops-setpropvalue.md)。
+`CUtlProps` 在内部设置的属性包含两个成员：[GetPropValue](../../data/oledb/cutlprops-getpropvalue.md)并[SetPropValue](../../data/oledb/cutlprops-setpropvalue.md)。
 
 属性集映射中使用的宏的详细信息，请参阅[BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)并[END_PROPSET_MAP](../../data/oledb/end-propset-map.md)。
 
-## <a name="getpropvalue"></a> Cutlprops:: Getpropvalue
+## <a name="getpropvalue"></a> CUtlProps::GetPropValue
 
 从属性集获取的属性。
 
@@ -104,7 +104,7 @@ OUT_OF_LINE HRESULT GetPropValue(const GUID* pguidPropSet,
 
 `Failure` 在出现故障，如果成功，则为 S_OK。
 
-## <a name="isvalidvalue"></a> Cutlprops:: Isvalidvalue
+## <a name="isvalidvalue"></a> CUtlProps::IsValidValue
 
 用于设置属性之前验证值。
 
@@ -121,7 +121,7 @@ virtual HRESULT CUtlPropsBase::IsValidValue(ULONG /* iCurSet */,
 属性集数组; 中的索引如果只有一个属性集，则为零。
 
 *pDBProp*<br/>
-属性 ID 和中的新值[DBPROP](https://docs.microsoft.com/previous-versions/windows/desktop/ms717970(v=vs.85))结构。
+属性 ID 和中的新值[DBPROP](/previous-versions/windows/desktop/ms717970(v=vs.85))结构。
 
 ### <a name="return-value"></a>返回值
 
@@ -183,7 +183,7 @@ virtual HRESULT OnPropertyChanged(ULONG /* iCurSet */,
 属性集数组; 中的索引如果只有一个属性集，则为零。
 
 *pDBProp*<br/>
-属性 ID 和中的新值[DBPROP](https://docs.microsoft.com/previous-versions/windows/desktop/ms717970(v=vs.85))结构。
+属性 ID 和中的新值[DBPROP](/previous-versions/windows/desktop/ms717970(v=vs.85))结构。
 
 ### <a name="return-value"></a>返回值
 
@@ -199,7 +199,7 @@ virtual HRESULT OnPropertyChanged(ULONG /* iCurSet */,
 
 [!code-cpp[NVC_OLEDB_Provider#2](../../data/oledb/codesnippet/cpp/cutlprops-onpropertychanged_1.h)]
 
-## <a name="setpropvalue"></a> Cutlprops:: Setpropvalue
+## <a name="setpropvalue"></a> CUtlProps::SetPropValue
 
 在属性集中设置一个属性。
 

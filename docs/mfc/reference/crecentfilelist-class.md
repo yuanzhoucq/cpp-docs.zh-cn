@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CRecentFileList [MFC], UpdateMenu
 - CRecentFileList [MFC], WriteList
 ms.assetid: a77f0524-7584-4582-849a-7e97b76d186e
-ms.openlocfilehash: e38f63090e3de2a73c60618a36d25a397d595dac
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: 30536d91d057de4e551b5a28200dd903e12713b3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657417"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304829"
 ---
 # <a name="crecentfilelist-class"></a>CRecentFileList 类
 
@@ -137,7 +137,7 @@ CRecentFileList(
 
 ### <a name="parameters"></a>参数
 
-*n 开始*<br/>
+*nStart*<br/>
 在菜单上显示的 MRU （最近使用） 文件列表编号的偏移量。
 
 *lpszSection*<br/>
@@ -206,7 +206,7 @@ int GetSize() const;
 
 在当前的文件数最近使用 (过的 MRU) 文件列表。
 
-##  <a name="operator_at"></a>  CRecentFileList::operator]
+##  <a name="operator_at"></a>  CRecentFileList::operator [ ]
 
 重载的下标 (`[]`) 运算符返回单个`CString`中从零开始的索引指定*nIndex*。
 
@@ -264,4 +264,3 @@ virtual void WriteList();
 ## <a name="see-also"></a>请参阅
 
 [层次结构图](../../mfc/hierarchy-chart.md)
-

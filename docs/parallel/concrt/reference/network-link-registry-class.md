@@ -12,16 +12,17 @@ f1_keywords:
 helpviewer_keywords:
 - network_link_registry class
 ms.assetid: 3e7b4097-09f1-4252-964e-b15b8f7f7fc6
-ms.openlocfilehash: 1d0aa8b3b5409659dee08b4e4365beac1a3a92be
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2537ed857651b5210b104a270b3d827246b8339a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492256"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273343"
 ---
 # <a name="networklinkregistry-class"></a>network_link_registry 类
 
-`network_link_registry` 抽象基类管理源块和目标块之间的链接。
+
+  `network_link_registry` 抽象基类管理源块和目标块之间的链接。
 
 ## <a name="syntax"></a>语法
 
@@ -32,7 +33,7 @@ class network_link_registry;
 
 #### <a name="parameters"></a>参数
 
-*（_b)*<br/>
+*_Block*<br/>
 块数据类型存储在`network_link_registry`。
 
 ## <a name="members"></a>成员
@@ -52,7 +53,7 @@ class network_link_registry;
 |----------|-----------------|
 |[add](#add)|当在派生类中重写，将添加一个指向`network_link_registry`对象。|
 |[begin](#begin)|当在派生类中重写时返回一个迭代器中的第一个元素到`network_link_registry`对象。|
-|[包含](#contains)|当在派生类中重写，将搜索`network_link_registry`指定块的对象。|
+|[contains](#contains)|当在派生类中重写，将搜索`network_link_registry`指定块的对象。|
 |[count](#count)|当在派生类中重写时返回中的项数`network_link_registry`对象。|
 |[remove](#remove)|当在派生类中重写中删除指定的块从`network_link_registry`对象。|
 
@@ -70,7 +71,7 @@ class network_link_registry;
 
 **命名空间：** 并发
 
-##  <a name="add"></a> 添加
+##  <a name="add"></a> add
 
 当在派生类中重写，将添加一个指向`network_link_registry`对象。
 
@@ -80,10 +81,10 @@ virtual void add(_EType _Link) = 0;
 
 ### <a name="parameters"></a>参数
 
-*链接 （_l)*<br/>
+*_Link*<br/>
 指向要添加的块的指针。
 
-##  <a name="begin"></a> 开始
+##  <a name="begin"></a> begin
 
 当在派生类中重写时返回一个迭代器中的第一个元素到`network_link_registry`对象。
 
@@ -109,14 +110,14 @@ virtual bool contains(_EType _Link) = 0;
 
 ### <a name="parameters"></a>参数
 
-*链接 （_l)*<br/>
+*_Link*<br/>
 指向要搜索的中的块的指针`network_link_registry`对象。
 
 ### <a name="return-value"></a>返回值
 
 **true**找到块，如果**false**否则为。
 
-##  <a name="count"></a> 计数
+##  <a name="count"></a> count
 
 当在派生类中重写时返回中的项数`network_link_registry`对象。
 
@@ -138,7 +139,7 @@ virtual bool remove(_EType _Link) = 0;
 
 ### <a name="parameters"></a>参数
 
-*链接 （_l)*<br/>
+*_Link*<br/>
 指向块被删除，如果找到。
 
 ### <a name="return-value"></a>返回值

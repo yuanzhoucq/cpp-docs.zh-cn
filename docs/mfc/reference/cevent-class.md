@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CEvent [MFC], SetEvent
 - CEvent [MFC], Unlock
 ms.assetid: df676042-ce27-4702-800a-e73ff4f44395
-ms.openlocfilehash: 883f3065c9d15ad793e6c0d548b911f10d166c0a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d7731c87c6d6b0ebdec9a0c72c24b04334aa0662
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667891"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300266"
 ---
 # <a name="cevent-class"></a>CEvent 类
 
@@ -66,7 +66,7 @@ class CEvent : public CSyncObject
 
 若要访问控制的资源`CEvent`对象以这种方式，请首先创建任一类型的变量[CSingleLock](../../mfc/reference/csinglelock-class.md)或类型[CMultiLock](../../mfc/reference/cmultilock-class.md)中所需的资源的访问方法。 然后调用`Lock`锁定对象的方法 (例如， [CMultiLock::Lock](../../mfc/reference/cmultilock-class.md#lock))。 此时，你的线程将访问资源、 等待资源释放和获取访问权限，或等待资源释放、 超时时间，并无法获取对资源的访问权限。 在任何情况下，以线程安全的方式访问所需的资源。 若要释放资源，请调用`SetEvent`信号通知事件对象，然后使用`Unlock`锁对象的方法 (例如， [CMultiLock::Unlock](../../mfc/reference/cmultilock-class.md#unlock))，或让离开作用域的锁对象。
 
-有关如何使用详细信息`CEvent`对象，请参阅[多线程处理： 如何使用同步类](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)。
+有关如何使用详细信息`CEvent`对象，请参阅[多线程处理：如何使用同步类](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)。
 
 ## <a name="example"></a>示例
 
@@ -107,7 +107,8 @@ CEvent(
 如果为 TRUE，则指定事件对象手动事件，否则事件对象是自动的事件。
 
 *lpszName*<br/>
-`CEvent` 对象的名称。 如果将跨进程边界使用的对象必须提供。 如果名称匹配的现有事件，构造函数将生成新`CEvent`对象引用该名称的事件。 如果名称与现有同步对象的不是事件相匹配，则构造将失败。 如果为 NULL，则名称将为 null。
+
+  `CEvent` 对象的名称。 如果将跨进程边界使用的对象必须提供。 如果名称匹配的现有事件，构造函数将生成新`CEvent`对象引用该名称的事件。 如果名称与现有同步对象的不是事件相匹配，则构造将失败。 如果为 NULL，则名称将为 null。
 
 *lpsaAttribute*<br/>
 事件对象的安全特性。 此结构的完整说明，请参阅[SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) Windows SDK 中。
@@ -195,4 +196,3 @@ BOOL Unlock();
 
 [CSyncObject 类](../../mfc/reference/csyncobject-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)
-

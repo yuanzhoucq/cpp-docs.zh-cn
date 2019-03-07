@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CRecentDockSiteInfo [MFC], SetInfo
 - CRecentDockSiteInfo [MFC], StoreDockInfo
 ms.assetid: 2dd14f95-d5a2-4461-a7a5-2c6c36a3a165
-ms.openlocfilehash: aee66ea9893325921c62bfaef9cd501ef40e817a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4a522d4dc88e7d1937ffa5b859aec32615939f21
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50615275"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275241"
 ---
 # <a name="crecentdocksiteinfo-class"></a>CRecentDockSiteInfo 类
 
@@ -75,7 +75,8 @@ class CRecentDockSiteInfo : public CObject
 
 ## <a name="remarks"></a>备注
 
-`CRecentDockSiteInfo` 类是数据管理类。 它在 `CPane` 在停靠与浮动之间转换时跟踪其最近状态。 当用户双击浮动的可停靠窗格时，它会成为停靠状态。 双击停靠的窗格会使它恢复为以前的位置、大小和状态。 同样，当窗格重新停靠时，它会返回到以前的停靠位置。 通过此数据类可以实现此行为。 由于此类的成员存储停靠的窗格的状态信息，因此它们不应由应用程序直接修改。
+
+  `CRecentDockSiteInfo` 类是数据管理类。 它在 `CPane` 在停靠与浮动之间转换时跟踪其最近状态。 当用户双击浮动的可停靠窗格时，它会成为停靠状态。 双击停靠的窗格会使它恢复为以前的位置、大小和状态。 同样，当窗格重新停靠时，它会返回到以前的停靠位置。 通过此数据类可以实现此行为。 由于此类的成员存储停靠的窗格的状态信息，因此它们不应由应用程序直接修改。
 
 每次创建窗格时会创建一个 `CRecentDockSiteInfo` 对象。 每个`CPane`对象具有一个成员变量[cpane:: M_recentdockinfo](../../mfc/reference/cpane-class.md#m_recentdockinfo)，用于存储此信息。
 
@@ -105,7 +106,7 @@ CRecentDockSiteInfo(CPane* pBar);
 
 ### <a name="parameters"></a>参数
 
-[in]*pBar*<br/>
+[in] *pBar*<br/>
 
 ### <a name="remarks"></a>备注
 
@@ -127,7 +128,7 @@ int GetRecentDockedPercent(BOOL bForSlider);
 
 ### <a name="parameters"></a>参数
 
-[in]*bForSlider*<br/>
+[in] *bForSlider*<br/>
 
 ### <a name="return-value"></a>返回值
 
@@ -141,7 +142,7 @@ CRect& GetRecentDockedRect(BOOL bForSlider);
 
 ### <a name="parameters"></a>参数
 
-[in]*bForSlider*<br/>
+[in] *bForSlider*<br/>
 
 ### <a name="return-value"></a>返回值
 
@@ -155,7 +156,7 @@ CList<HWND, HWND>& GetRecentListOfPanes(BOOL bForSlider);
 
 ### <a name="parameters"></a>参数
 
-[in]*bForSlider*<br/>
+[in] *bForSlider*<br/>
 
 ### <a name="return-value"></a>返回值
 
@@ -169,7 +170,7 @@ CPaneContainer* GetRecentPaneContainer(BOOL bForSlider);
 
 ### <a name="parameters"></a>参数
 
-[in]*bForSlider*<br/>
+[in] *bForSlider*<br/>
 
 ### <a name="return-value"></a>返回值
 
@@ -183,7 +184,7 @@ CPaneContainer* GetRecentTabContainer(BOOL bForSlider);
 
 ### <a name="parameters"></a>参数
 
-[in]*bForSlider*<br/>
+[in] *bForSlider*<br/>
 
 ### <a name="return-value"></a>返回值
 
@@ -205,7 +206,7 @@ BOOL IsRecentLeftPane(BOOL bForSlider);
 
 ### <a name="parameters"></a>参数
 
-[in]*bForSlider*<br/>
+[in] *bForSlider*<br/>
 
 ### <a name="return-value"></a>返回值
 
@@ -219,7 +220,7 @@ CRecentDockSiteInfo& operator=(CRecentDockSiteInfo& src);
 
 ### <a name="parameters"></a>参数
 
-[in]*src*<br/>
+[in] *src*<br/>
 
 ### <a name="return-value"></a>返回值
 
@@ -235,9 +236,9 @@ void SaveListOfRecentPanes(CList<HWND,
 
 ### <a name="parameters"></a>参数
 
-[in]*CList < HWND*<br/>
-[in]*lstOrg*<br/>
-[in]*bForSlider*<br/>
+[in] *CList<HWND*<br/>
+[in] *lstOrg*<br/>
+[in] *bForSlider*<br/>
 
 ### <a name="remarks"></a>备注
 
@@ -251,8 +252,8 @@ virtual void SetInfo(
 
 ### <a name="parameters"></a>参数
 
-[in]*bForSlider*<br/>
-[in]*srcInfo*<br/>
+[in] *bForSlider*<br/>
+[in] *srcInfo*<br/>
 
 ### <a name="remarks"></a>备注
 
@@ -266,8 +267,8 @@ virtual void StoreDockInfo(
 
 ### <a name="parameters"></a>参数
 
-[in]*pRecentContainer*<br/>
-[in]*pTabbedBar*<br/>
+[in] *pRecentContainer*<br/>
+[in] *pTabbedBar*<br/>
 
 ### <a name="remarks"></a>备注
 

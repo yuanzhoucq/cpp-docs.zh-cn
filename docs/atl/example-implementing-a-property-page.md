@@ -4,14 +4,14 @@ ms.date: 11/19/2018
 helpviewer_keywords:
 - property pages, implementing
 ms.assetid: c30b67fe-ce08-4249-ae29-f3060fa8d61e
-ms.openlocfilehash: a76a0f49e8b0ec7458b781785cd5030d2c523f0b
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: a86393954cdebec59bd2c6a50cd5e547ef06acb7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176466"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267233"
 ---
-# <a name="example-implementing-a-property-page"></a>示例： 实现属性页
+# <a name="example-implementing-a-property-page"></a>示例:实现属性页
 
 此示例演示如何生成属性页的显示 （并允许您更改） 的属性[文档类](../mfc/document-classes.md)接口。
 
@@ -45,7 +45,7 @@ ms.locfileid: "52176466"
 |----------|-----------|
 |标题|TextDocument|
 |文档字符串|VCUE TextDocument 属性|
-|帮助文件|*\<保留为空 >*|
+|帮助文件|*\<blank>*|
 
 在向导的此页上设置的值将在调用时返回到属性页容器`IPropertyPage::GetPageInfo`。 此后对字符串依赖于该容器，但通常它们将用于识别您对用户的页。 标题将通常显示在页面顶部的选项卡中，并可能在状态栏或工具提示中显示文档字符串，（尽管标准属性框架根本不使用此字符串）。
 

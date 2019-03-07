@@ -48,12 +48,12 @@ helpviewer_keywords:
 - CPagerCtrl [MFC], SetChild
 - CPagerCtrl [MFC], SetScrollPos
 ms.assetid: 65ac58dd-4f5e-4b7e-b15c-e0d435a7e884
-ms.openlocfilehash: cd3eed89753031de64d35a2b3602b1fb42356123
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 648bc17f0f130b831aa619b90ed13ba6be35b4d4
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613533"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57417568"
 ---
 # <a name="cpagerctrl-class"></a>CPagerCtrl 类
 
@@ -149,7 +149,7 @@ virtual BOOL Create(
 |参数|描述|
 |---------------|-----------------|
 |*dwStyle*|[in]按位组合 (OR)[的窗口样式](../../mfc/reference/styles-used-by-mfc.md#window-styles)并[页导航控件样式](/windows/desktop/Controls/pager-control-styles)要应用于该控件。|
-|*rect*|[in]对引用[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构，其中包含的位置和大小的工作区坐标中的控件。|
+|*rect*|[in]对引用[RECT](/previous-versions/dd162897\(v=vs.85\))结构，其中包含的位置和大小的工作区坐标中的控件。|
 |*pParentWnd*|[in]一个指向[CWnd](../../mfc/reference/cwnd-class.md)是控件的父窗口的对象。 此参数不能为 NULL。|
 |*nID*|[in]控件的 ID。|
 
@@ -186,7 +186,7 @@ virtual BOOL CreateEx(
 |---------------|-----------------|
 |*dwExStyle*|[in]若要应用于控件的扩展样式的按位组合。 有关详细信息，请参阅*dwExStyle*的参数[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa)函数。|
 |*dwStyle*|[in]按位组合 (OR)[的窗口样式](../../mfc/reference/styles-used-by-mfc.md#window-styles)并[页导航控件样式](/windows/desktop/Controls/pager-control-styles)要应用于该控件。|
-|*rect*|[in]对引用[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构，其中包含的位置和大小的工作区坐标中的控件。|
+|*rect*|[in]对引用[RECT](/previous-versions/dd162897\(v=vs.85\))结构，其中包含的位置和大小的工作区坐标中的控件。|
 |*pParentWnd*|[in]一个指向[CWnd](../../mfc/reference/cwnd-class.md)是控件的父窗口的对象。 此参数不能为 NULL。|
 |*nID*|[in]控件的 ID。|
 
@@ -617,4 +617,3 @@ void SetScrollPos(int iPos);
 [CPagerCtrl 类](../../mfc/reference/cpagerctrl-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>
 [页导航控件](/windows/desktop/Controls/pager-controls)
-

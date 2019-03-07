@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CAnimationBaseObject [MFC], m_nObjectID
 - CAnimationBaseObject [MFC], m_pParentController
 ms.assetid: 76b25917-940e-4eba-940f-31d270702603
-ms.openlocfilehash: 6527abf5c91cf440bbbe76d0d5fe49ce2c5dbef7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 18b2319ea3c51edf79b6a90095b8363db830d66c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50430435"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258913"
 ---
 # <a name="canimationbaseobject-class"></a>CAnimationBaseObject 类
 
@@ -74,7 +74,7 @@ class CAnimationBaseObject : public CObject;
 |名称|描述|
 |----------|-----------------|
 |[CAnimationBaseObject::CAnimationBaseObject](#canimationbaseobject)|已重载。 构造一个动画对象。|
-|[CAnimationBaseObject:: ~ CAnimationBaseObject](#canimationbaseobject__~canimationbaseobject)|析构函数。 当动画对象被销毁时调用。|
+|[CAnimationBaseObject::~CAnimationBaseObject](#canimationbaseobject__~canimationbaseobject)|析构函数。 当动画对象被销毁时调用。|
 
 ### <a name="public-methods"></a>公共方法
 
@@ -315,7 +315,7 @@ virtual void GetAnimationVariableList(
 
 ### <a name="remarks"></a>备注
 
-这是必须在派生类中重写的纯虚方法。 动画对象，具体取决于它的类型，包含一个或多个动画变量。 例如，CAnimationPoint 包含 X 和 Y 坐标分别表示两个变量。 基类 CAnimationBaseObject 实现某些泛型方法，作用于动画变量的列表： ApplyTransitions、 ClearTransitions、 EnableValueChangedEvent、 EnableIntegerValueChangedEvent。 这些方法调用 GetAnimationVariableList，该类填充派生类中有特定动画对象中包含的实际动画变量，然后循环访问列表并执行必要的操作。 如果创建自定义动画对象，您必须向 lst 添加该对象中包含的所有动画变量。
+这是必须在派生类中重写的纯虚方法。 动画对象，具体取决于它的类型，包含一个或多个动画变量。 例如，CAnimationPoint 包含 X 和 Y 坐标分别表示两个变量。 基类 CAnimationBaseObject 实现某些泛型方法，作用于动画变量的列表：ApplyTransitions，ClearTransitions，EnableValueChangedEvent，EnableIntegerValueChangedEvent。 这些方法调用 GetAnimationVariableList，该类填充派生类中有特定动画对象中包含的实际动画变量，然后循环访问列表并执行必要的操作。 如果创建自定义动画对象，您必须向 lst 添加该对象中包含的所有动画变量。
 
 ##  <a name="getautodestroytransitions"></a>  CAnimationBaseObject::GetAutodestroyTransitions
 
@@ -431,7 +431,7 @@ void SetAutodestroyTransitions(BOOL bValue);
 
 ### <a name="parameters"></a>参数
 
-*其中 bValue*<br/>
+*bValue*<br/>
 指定自动销毁标志。
 
 ### <a name="remarks"></a>备注

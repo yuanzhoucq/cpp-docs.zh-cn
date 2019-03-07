@@ -1,21 +1,21 @@
 ---
 title: binder1st 类
-ms.date: 11/04/2016
+ms.date: 02/21/2019
 f1_keywords:
-- xfunctional/std::binder1st
+- functional/std::binder1st
 helpviewer_keywords:
 - binder1st class
 ms.assetid: 6b8ee343-c82f-48f8-867d-06f9d1d324c0
-ms.openlocfilehash: a8e962e118d162e46e2edfca3ce11e7cbf322e10
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f70a1a4a0903b66edf5f42e59788b9a2d97fc967
+ms.sourcegitcommit: 4299caac2dc9e806c74ac833d856a3838b0f52a1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50439625"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57006625"
 ---
 # <a name="binder1st-class"></a>binder1st 类
 
-一种模板类，用于提供构造函数，通过将二元函数的第一个自变量绑定到指定的值，将二元函数对象转换为一元函数对象。
+一种模板类，用于提供构造函数，通过将二元函数的第一个自变量绑定到指定的值，将二元函数对象转换为一元函数对象。 在 C + + 11 中的已弃用[绑定](functional-functions.md#bind)，并在 C + + 17 中移除。
 
 ## <a name="syntax"></a>语法
 
@@ -29,7 +29,7 @@ public:
     typedef typename Operation::argument_type argument_type;
     typedef typename Operation::result_type result_type;
     binder1st(
-        const Operation& Func,
+        const Operation& binary_fn,
         const typename Operation::first_argument_type& left);
 
     result_type operator()(const argument_type& right) const;
@@ -43,7 +43,7 @@ protected:
 
 ### <a name="parameters"></a>参数
 
-*Func*<br/>
+*binary_fn*<br/>
 要转换为一元函数对象的二元函数对象。
 
 *left*<br/>
@@ -58,9 +58,9 @@ protected:
 
 ## <a name="remarks"></a>备注
 
-此模板类存储二元函数对象的副本*Func*中`op`，以及一份*左*中`value`。 它将其成员函数 `operator()` 定义为返回 **op**( **value**, `right`)。
+此模板类存储二元函数对象的副本*binary_fn*中`op`，以及一份*左*中`value`。 它定义其成员函数`operator()`为返回`op( value, right )`。
 
-如果*Func*是类型的对象`Operation`并`c`是常量，则[bind1st](../standard-library/functional-functions.md#bind1st) ( `Func`， `c` ) 等效于`binder1st`类构造函数`binder1st` \< **操作**> ( `Func`， `c` ) 且更为方便。
+如果*binary_fn*是类型的对象`Operation`并`c`是常量，则`bind1st( binary_fn, c )`是更方便等效于`binder1st<Operation>( binary_fn, c )`。 有关详细信息，请参阅[bind1st](../standard-library/functional-functions.md#bind1st)。
 
 ## <a name="example"></a>示例
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - set include directories
 - include directories, compiler option [C++]
 ms.assetid: 3e9add2a-5ed8-4d15-ad79-5b411e313a49
-ms.openlocfilehash: 0dc1769924880d8cb1b5dc173dd614e87584cac9
-ms.sourcegitcommit: 45835842604602a011813d0cd70abc5df91b89ed
+ms.openlocfilehash: 72f871b99602c63e3edaea719faf5de6d4451515
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50750387"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57412843"
 ---
 # <a name="i-additional-include-directories"></a>/I （附加包含目录）
 
@@ -27,11 +27,11 @@ ms.locfileid: "50750387"
 
 ## <a name="syntax"></a>语法
 
-> **/I**[]*目录*
+> **/I**[ ]*directory*
 
 ### <a name="arguments"></a>自变量
 
-*目录*<br/>
+*directory*<br/>
 要添加到的目录列表的目录搜索包含文件。
 
 ## <a name="remarks"></a>备注
@@ -62,7 +62,7 @@ ms.locfileid: "50750387"
 
 ## <a name="example"></a>示例
 
-以下命令将查找请求的 MAIN.c 按以下顺序包含文件： 首先，如果使用双引号指定，本地文件进行搜索。 接下来，搜索将继续在的 \INCLUDE 目录中，然后在 \MY\INCLUDE 目录中，并最后的目录中分配给 INCLUDE 环境变量。
+以下命令将查找请求的 MAIN.c 按以下顺序包含文件：首先，如果指定使用双引号，则搜索本地文件。 接下来，搜索将继续在的 \INCLUDE 目录中，然后在 \MY\INCLUDE 目录中，并最后的目录中分配给 INCLUDE 环境变量。
 
 ```
 CL /I \INCLUDE /I\MY\INCLUDE MAIN.C

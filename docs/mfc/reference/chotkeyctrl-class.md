@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CHotKeyCtrl [MFC], SetHotKey
 - CHotKeyCtrl [MFC], SetRules
 ms.assetid: 896f9766-0718-4f58-aab2-20325e118ca6
-ms.openlocfilehash: 0b673c873f773844c13894d3f0448536f297dc53
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: 66edc7d4a1b4c78480da7d11cf30f7feeecefe2c
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54894505"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57417380"
 ---
 # <a name="chotkeyctrl-class"></a>CHotKeyCtrl 类
 
@@ -151,7 +151,7 @@ virtual BOOL CreateEx(
 指定热键控件的样式。 将应用控件样式的任意组合。 有关详细信息，请参阅[常见控件样式](/windows/desktop/Controls/common-control-styles)Windows SDK 中。
 
 *rect*<br/>
-对引用[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构的结构描述的大小和窗口的工作区中创建的位置*pParentWnd*。
+对引用[RECT](/previous-versions/dd162897\(v=vs.85\))结构的结构描述的大小和窗口的工作区中创建的位置*pParentWnd*。
 
 *pParentWnd*<br/>
 指向控件的父级的窗口的指针。
@@ -323,4 +323,3 @@ void SetRules(
 
 [CWnd 类](../../mfc/reference/cwnd-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)
-

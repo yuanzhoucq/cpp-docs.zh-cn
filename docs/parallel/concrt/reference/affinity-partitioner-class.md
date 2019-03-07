@@ -8,16 +8,17 @@ f1_keywords:
 helpviewer_keywords:
 - affinity_partitioner class
 ms.assetid: 31bf7bb1-bd01-491c-9760-d9d60edfccad
-ms.openlocfilehash: 41073aceec5f9b8c3a5ac36a921e29c5270f44e6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dac25755c388e5297ce671da09b7938f09f1ef03
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50499033"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262787"
 ---
 # <a name="affinitypartitioner-class"></a>affinity_partitioner 类
 
-`affinity_partitioner` 类与 `static_partitioner` 类相似，但它选择将子范围映射到工作线程，从而改善缓存关联。 在同一数据集中重新执行循环且数据适应缓存时，它可以显著提高性能。 请注意，必须与在特定数据集中执行的并行循环的后续迭代一起使用同一 `affinity_partitioner` 对象，才能受益于数据位置。
+
+  `affinity_partitioner` 类与 `static_partitioner` 类相似，但它选择将子范围映射到工作线程，从而改善缓存关联。 在同一数据集中重新执行循环且数据适应缓存时，它可以显著提高性能。 请注意，必须与在特定数据集中执行的并行循环的后续迭代一起使用同一 `affinity_partitioner` 对象，才能受益于数据位置。
 
 ## <a name="syntax"></a>语法
 

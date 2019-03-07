@@ -26,12 +26,12 @@ f1_keywords:
 helpviewer_keywords:
 - array_view class
 ms.assetid: 7e7ec9bc-05a2-4372-b05d-752b50006c5a
-ms.openlocfilehash: d33c54e82e9bc228b97bff4802c9231a98f51033
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: e73639ffd11e08edb2fdb03471f2c6c88730f02d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657482"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268464"
 ---
 # <a name="arrayview-class"></a>array_view 类
 
@@ -151,9 +151,9 @@ class array_view<const value_type, _Rank> : public _Array_view_base<_Rank, sizeo
 
 **标头：** amp.h
 
-**Namespace:** 并发
+**命名空间：** 并发
 
-##  <a name="dtor"></a> ~ array_view
+##  <a name="dtor"></a> ~array_view
 
 销毁`array_view`对象。
 
@@ -348,7 +348,7 @@ array_view(
 *_Other*<br/>
 类型的对象`array_view<T,N>`从其初始化新`array_view`。
 
-*大小) (_s*<br/>
+*_Size*<br/>
 从其提供数据的 C 样式数组的大小。
 
 *_Src*<br/>
@@ -371,7 +371,7 @@ void copy_to(
 *_Dest*<br/>
 要将复制到的对象。
 
-##  <a name="data"></a> 数据
+##  <a name="data"></a> data
 
 返回一个指针指向原始数据的`array_view`。
 
@@ -413,7 +413,8 @@ Concurrency::extent<_Rank> get_extent() const restrict(cpu, amp);
 
 ### <a name="return-value"></a>返回值
 
-`extent` 对象的  `array_view` 对象。
+
+  `extent` 对象的  `array_view` 对象。
 
 ##  <a name="get_ref"></a> get_ref
 
@@ -443,7 +444,7 @@ accelerator_view get_source_accelerator_view() const;
 
 ### <a name="return-value"></a>返回值
 
-##  <a name="operator_call"></a> operator （)
+##  <a name="operator_call"></a> operator()
 
 返回由参数或参数指定的元素的值。
 
@@ -488,7 +489,7 @@ typename details::_Projection_result_type<value_type,_Rank>::_Const_result_type 
 
 元素指定的参数或参数的值。
 
-##  <a name="operator_at"></a> operator]
+##  <a name="operator_at"></a> operator[]
 
 返回由参数指定的元素。
 
@@ -641,7 +642,7 @@ array_view section(
 *_Ext*<br/>
 [程度](extent-class.md)指定区域范围的对象。 原始是 0。
 
-*上 _Idx*<br/>
+*_Idx*<br/>
 [索引](index-class.md)对象，它指定原点的位置。 子节是范围的其余部分。
 
 *_I0*<br/>

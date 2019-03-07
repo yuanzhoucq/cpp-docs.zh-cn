@@ -1,19 +1,19 @@
 ---
-title: MFC ActiveX 控件：高级属性实现
+title: MFC ActiveX 控件：高级的属性实现
 ms.date: 09/12/2018
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], error codes
 - properties [MFC], ActiveX controls
 - MFC ActiveX controls [MFC], properties
 ms.assetid: ec2e6759-5a8e-41d8-a275-99af8ff6f32e
-ms.openlocfilehash: d26dbcb1c18c3c939214051d9010cb5b6db90929
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 438c95c56961cc587b64e494678ade191f18ab6b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568020"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266960"
 ---
-# <a name="mfc-activex-controls-advanced-property-implementation"></a>MFC ActiveX 控件：高级属性实现
+# <a name="mfc-activex-controls-advanced-property-implementation"></a>MFC ActiveX 控件：高级的属性实现
 
 本指南介绍了与实现高级中的 ActiveX 控件的属性相关的主题。
 
@@ -62,14 +62,14 @@ ms.locfileid: "50568020"
 
 ##  <a name="_core_returning_error_codes_from_a_property"></a> 从属性返回错误代码
 
-若要指示错误发生时尝试获取或设置一个属性，使用`COleControl::ThrowError`函数采用 SCODE （状态代码） 作为参数。 可以使用预定义的 SCODE 或你自己的一个定义。 预定义 SCODEs 和用于定义自定义 SCODEs 说明的列表，请参阅[ActiveX 控件中处理错误](../mfc/mfc-activex-controls-advanced-topics.md)中文章 ActiveX 控件： 高级主题。
+若要指示错误发生时尝试获取或设置一个属性，使用`COleControl::ThrowError`函数采用 SCODE （状态代码） 作为参数。 可以使用预定义的 SCODE 或你自己的一个定义。 预定义 SCODEs 和用于定义自定义 SCODEs 说明的列表，请参阅[ActiveX 控件中处理错误](../mfc/mfc-activex-controls-advanced-topics.md)文章 ActiveX 控件中：高级的主题。
 
 最常见的预定义 SCODEs，例如，存在帮助器函数[colecontrol:: Setnotsupported](../mfc/reference/colecontrol-class.md#setnotsupported)， [colecontrol:: Getnotsupported](../mfc/reference/colecontrol-class.md#getnotsupported)，和[COleControl::SetNotPermitted](../mfc/reference/colecontrol-class.md#setnotpermitted).
 
 > [!NOTE]
 >  `ThrowError` 用于返回属性的 Get 或 Set 中从错误的一种方法只可用作函数或自动化方法。 这是适当异常处理程序将出现在堆栈上的唯一时间。
 
-有关报告其他区域中的代码的异常的详细信息，请参阅[COleControl::FireError](../mfc/reference/colecontrol-class.md#fireerror)和部分[ActiveX 控件中处理错误](../mfc/mfc-activex-controls-advanced-topics.md)在文章的 ActiveX 控件： 高级主题。
+有关报告其他区域中的代码的异常的详细信息，请参阅[COleControl::FireError](../mfc/reference/colecontrol-class.md#fireerror)和部分[ActiveX 控件中处理错误](../mfc/mfc-activex-controls-advanced-topics.md)文章 ActiveX 控件中：高级的主题。
 
 ## <a name="see-also"></a>请参阅
 

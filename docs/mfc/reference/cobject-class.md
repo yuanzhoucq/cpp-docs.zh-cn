@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CObject [MFC], IsSerializable
 - CObject [MFC], Serialize
 ms.assetid: 95e9acd3-d9eb-4ac0-b52b-ca4a501a7a3a
-ms.openlocfilehash: eb0580f6fef39df29d66e15cfd051a0460cb8d56
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 515c4e90ee6ab77a6c7c1ae108393ea1aafb7c17
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50584010"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304062"
 ---
 # <a name="cobject-class"></a>CObject 类
 
@@ -54,7 +54,7 @@ class AFX_NOVTABLE CObject
 |[CObject::GetRuntimeClass](#getruntimeclass)|返回`CRuntimeClass`结构对应于此对象的类。|
 |[CObject::IsKindOf](#iskindof)|测试与给定类的此对象的关系。|
 |[CObject::IsSerializable](#isserializable)|测试以查看是否可以序列化此对象。|
-|[Cobject:: Serialize](#serialize)|加载或存储一个对象从/到存档。|
+|[CObject::Serialize](#serialize)|加载或存储一个对象从/到存档。|
 
 ### <a name="public-operators"></a>公共运算符
 
@@ -343,7 +343,7 @@ void* PASCAL operator new(
 
 [!code-cpp[NVC_MFCCObjectSample#16](../../mfc/codesnippet/cpp/cobject-class_9.h)]
 
-##  <a name="serialize"></a>  Cobject:: Serialize
+##  <a name="serialize"></a>  CObject::Serialize
 
 从存档读取该对象或将该对象写入存档。
 
@@ -366,7 +366,7 @@ virtual void Serialize(CArchive& ar);
 
 `Serialize` 调用[CArchive::ReadObject](../../mfc/reference/carchive-class.md#readobject)并[CArchive::WriteObject](../../mfc/reference/carchive-class.md#writeobject)。 这些函数与相关联`CArchive`插入运算符 ( **< \<**) 和提取运算符 ( **>>**)。
 
-有关序列化示例，请参阅文章[序列化： 序列化对象](../../mfc/serialization-serializing-an-object.md)。
+有关序列化示例，请参阅文章[序列化：将对象序列化为](../../mfc/serialization-serializing-an-object.md)。
 
 ### <a name="example"></a>示例
 
@@ -377,4 +377,3 @@ virtual void Serialize(CArchive& ar);
 ## <a name="see-also"></a>请参阅
 
 [层次结构图](../../mfc/hierarchy-chart.md)
-

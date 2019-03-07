@@ -9,12 +9,12 @@ helpviewer_keywords:
 - thread attribute
 - Thread Local Storage [C++]
 ms.assetid: 80801907-d792-45ca-b776-df0cf2e9f197
-ms.openlocfilehash: 02c699ec64fe03a1f892fc3c7e8bf9f6b9c05dfc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f5a75f7964b0291a980b22d36e7ce6a0a87d3dc3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507583"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293454"
 ---
 # <a name="thread-local-storage-tls"></a>线程本地存储 (TLS)
 
@@ -22,7 +22,7 @@ ms.locfileid: "50507583"
 
 ##  <a name="_core_compiler_implementation_for_tls"></a> TLS 的编译器实现
 
-**C + + 11:** `thread_local`存储类说明符是指定对象的线程本地存储区和类成员的建议的方法。 有关详细信息，请参阅[存储类 （c + +）](../cpp/storage-classes-cpp.md)。
+**C + + 11:**`thread_local`存储类说明符是指定对象的线程本地存储区和类成员的建议的方法。 有关详细信息，请参阅[存储类 （c + +）](../cpp/storage-classes-cpp.md)。
 
 Visual c + + 还提供了一个特定于 Microsoft 的属性，[线程](../cpp/thread.md)，作为扩展的存储类修饰符。 使用 **__declspec**关键字来声明**线程**变量。 例如，以下代码声明了一个整数线程局部变量，并用一个值对其进行初始化：
 
@@ -104,7 +104,7 @@ __declspec( thread ) int tls_i = 1;
 
    因为将来可能要对线程本地存储功能进行增强，C++ 不允许对线程数据进行此类的动态初始化。
 
-- Windows Vista 之前的 Windows 操作系统上`__declspec`（线程） 具有一些限制。 如果 DLL 将任何数据或对象声明为 `__declspec`（线程），可能会导致保护错误（如果动态加载）。 与加载 DLL 后[LoadLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya)，它会导致系统故障，只要代码引用`__declspec`（线程） 数据。 由于线程的全局变量空间在运行时进行分配，此空间的大小基于对应用程序的需求加静态链接的所有 DLL 的需求的计算。 使用 `LoadLibrary` 时，不能扩展此空间以允许用 `__declspec`（线程）声明的线程本地变量。 使用 TLS Api，如[TlsAlloc](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsalloc)，在您的 DLL 来分配 TLS，如果使用可能加载了 DLL `LoadLibrary`。
+- Windows Vista 之前的 Windows 操作系统上`__declspec`（线程） 具有一些限制。 如果 DLL 将任何数据或对象声明为 `__declspec`（线程），可能会导致保护错误（如果动态加载）。 与加载 DLL 后[LoadLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya)，它会导致系统故障，只要代码引用`__declspec`（线程） 数据。 由于线程的全局变量空间在运行时进行分配，此空间的大小基于对应用程序的要求加静态链接的所有 DLL 的要求的计算。 使用 `LoadLibrary` 时，不能扩展此空间以允许用 `__declspec`（线程）声明的线程本地变量。 使用 TLS Api，如[TlsAlloc](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsalloc)，在您的 DLL 来分配 TLS，如果使用可能加载了 DLL `LoadLibrary`。
 
 ## <a name="see-also"></a>请参阅
 

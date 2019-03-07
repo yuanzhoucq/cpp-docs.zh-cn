@@ -1,19 +1,19 @@
 ---
-title: 演练： 创建和使用你自己动态链接库 （c + +）
+title: 演练：创建和使用你自己动态链接库 （c + +）
 ms.custom: conceptual
 ms.date: 09/24/2018
 helpviewer_keywords:
 - libraries [C++], DLLs
 - DLLs [C++], walkthroughs
 ms.assetid: 3ae94848-44e7-4955-bbad-7d40f493e941
-ms.openlocfilehash: c09fa369cd4e0b726d809fa709518574d4fdbc6e
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: fb77230d5cc27c1fba1f7df1404150fada36d43a
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330536"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57416444"
 ---
-# <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>演练： 创建和使用你自己动态链接库 （c + +）
+# <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>演练：创建和使用你自己动态链接库 （c + +）
 
 此分步演练说明如何使用 Visual Studio IDE 来创建你自己编写的 c + + 中的动态链接库 (DLL)，然后从另一个 c + + 应用程序中使用它。 Dll 是一种最有用的一种 Windows 组件。 若要缩小你的应用，并使其更轻松地提供服务和扩展你的应用，可以使用作为一种方式来共享代码和资源，它们。 在本演练中，将创建实现某些数学函数，一个 DLL，然后创建一个控制台应用，使用该 DLL 中的函数。 此过程中，您了解到的一些编程方法和在 Windows Dll 中使用的约定。
 
@@ -39,7 +39,7 @@ ms.locfileid: "51330536"
 
 ## <a name="prerequisites"></a>系统必备
 
-- 运行 Microsoft Windows 7 或更高版本的计算机。 我们建议获取最佳开发体验的 Windows 10。
+- 运行 Microsoft Windows 7 或更高版本的计算机。 建议使用 Windows 10 以获得最佳开发体验。
 
 - Visual Studio 2017 的副本。 有关如何下载和安装 Visual Studio 的信息，请参阅[安装 Visual Studio 2017](/visualstudio/install/install-visual-studio)。 当您运行安装程序时，请确保**使用 c + + 的桌面开发**检查工作负荷。 别担心，如果您未安装 Visual Studio 时安装此工作负荷。 可以再次运行安装程序并立即安装。
 

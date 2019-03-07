@@ -52,12 +52,12 @@ helpviewer_keywords:
 - CView [MFC], OnPrint
 - CView [MFC], OnUpdate
 ms.assetid: 9cff3c56-7564-416b-b9a4-71a9254ed755
-ms.openlocfilehash: 679cdc5b5a0a85ade09fe1999e8de40300a8ae8e
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: fe9b282fd248f8dd03a6a7f078c03866d1b14b2d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694382"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305011"
 ---
 # <a name="cview-class"></a>CView 类
 
@@ -90,7 +90,7 @@ class AFX_NOVTABLE CView : public CWnd
 |[CView::OnDragScroll](#ondragscroll)|调用以确定是否将光标拖到窗口的滚动区域。|
 |[CView::OnDrop](#ondrop)|当某项已放入视图，默认处理程序的拖放区域时调用。|
 |[CView::OnDropEx](#ondropex)|当某项已放入视图中，主要处理程序的拖放区域时调用。|
-|[Cview:: Oninitialupdate](#oninitialupdate)|视图首次附加到文档后调用。|
+|[CView::OnInitialUpdate](#oninitialupdate)|视图首次附加到文档后调用。|
 |[CView::OnPrepareDC](#onpreparedc)|之前调用`OnDraw`是用于屏幕显示调用成员函数或`OnPrint`个打印或打印预览调用成员函数。|
 |[CView::OnScroll](#onscroll)|当不在视图的边框将 OLE 项时调用。|
 |[CView::OnScrollBy](#onscrollby)|包含活动的就地 OLE 项的视图滚动时调用。|
@@ -102,7 +102,7 @@ class AFX_NOVTABLE CView : public CWnd
 |[CView::OnActivateFrame](#onactivateframe)|当激活或停用包含视图的框架窗口时调用。|
 |[CView::OnActivateView](#onactivateview)|当激活视图时调用。|
 |[CView::OnBeginPrinting](#onbeginprinting)|打印作业开始; 时调用重写以分配图形设备接口 (GDI) 资源。|
-|[Cview:: Ondraw](#ondraw)|调用以呈现用于屏幕显示、 打印或打印预览的文档图像。 所需的实现。|
+|[CView::OnDraw](#ondraw)|调用以呈现用于屏幕显示、 打印或打印预览的文档图像。 所需的实现。|
 |[CView::OnEndPrinting](#onendprinting)|打印作业结束; 时调用若要解除分配 GDI 资源的重写。|
 |[CView::OnEndPrintPreview](#onendprintpreview)|当退出预览模式时调用。|
 |[CView::OnPreparePrinting](#onprepareprinting)|在打印或预览; 文档之前调用重写以初始化打印对话框。|
@@ -334,9 +334,9 @@ virtual DROPEFFECT OnDragEnter(
 指向[COleDataObject](../../mfc/reference/coledataobject-class.md)拖入该视图的拖放区域。
 
 *dwKeyState*<br/>
-包含修改键的状态。 这是以下任意数量的组合： MK_CONTROL、 MK_SHIFT、 MK_ALT、 MK_LBUTTON、 MK_MBUTTON 和 MK_RBUTTON。
+包含修改键的状态。 这是以下任意数量的组合：MK_CONTROL、 MK_SHIFT、 MK_ALT、 MK_LBUTTON、 MK_MBUTTON 和 MK_RBUTTON。
 
-*点*<br/>
+*point*<br/>
 当前鼠标相对于客户端区域视图的位置。
 
 ### <a name="return-value"></a>返回值
@@ -357,7 +357,7 @@ virtual DROPEFFECT OnDragEnter(
 
 默认实现是不执行任何操作并返回 DROPEFFECT_NONE。
 
-重写此函数可用于未来调用准备[OnDragOver](#ondragover)成员函数。 应在这一次以便以后用于检索此数据对象中所需的任何数据`OnDragOver`成员函数。 此外应在此时间为提供用户可视反馈更新视图。 有关详细信息，请参阅文章[拖放： 实现放置目标](../../mfc/drag-and-drop-implementing-a-drop-target.md)。
+重写此函数可用于未来调用准备[OnDragOver](#ondragover)成员函数。 应在这一次以便以后用于检索此数据对象中所需的任何数据`OnDragOver`成员函数。 此外应在此时间为提供用户可视反馈更新视图。 有关详细信息，请参阅文章[拖放到：实现放置目标](../../mfc/drag-and-drop-implementing-a-drop-target.md)。
 
 ##  <a name="ondragleave"></a>  CView::OnDragLeave
 
@@ -388,9 +388,9 @@ virtual DROPEFFECT OnDragOver(
 指向[COleDataObject](../../mfc/reference/coledataobject-class.md)正在拖放目标上方。
 
 *dwKeyState*<br/>
-包含修改键的状态。 这是以下任意数量的组合： MK_CONTROL、 MK_SHIFT、 MK_ALT、 MK_LBUTTON、 MK_MBUTTON 和 MK_RBUTTON。
+包含修改键的状态。 这是以下任意数量的组合：MK_CONTROL、 MK_SHIFT、 MK_ALT、 MK_LBUTTON、 MK_MBUTTON 和 MK_RBUTTON。
 
-*点*<br/>
+*point*<br/>
 当前的鼠标位置相对于视图的客户端区域。
 
 ### <a name="return-value"></a>返回值
@@ -411,7 +411,7 @@ virtual DROPEFFECT OnDragOver(
 
 默认实现是不执行任何操作并返回 DROPEFFECT_NONE。
 
-重写此函数可拖动操作过程中为提供用户可视反馈。 由于连续调用此函数时，它所包含的任何代码应优化尽可能多地。 有关详细信息，请参阅文章[拖放： 实现放置目标](../../mfc/drag-and-drop-implementing-a-drop-target.md)。
+重写此函数可拖动操作过程中为提供用户可视反馈。 由于连续调用此函数时，它所包含的任何代码应优化尽可能多地。 有关详细信息，请参阅文章[拖放到：实现放置目标](../../mfc/drag-and-drop-implementing-a-drop-target.md)。
 
 ##  <a name="ondragscroll"></a>  CView::OnDragScroll
 
@@ -426,9 +426,9 @@ virtual DROPEFFECT OnDragScroll(
 ### <a name="parameters"></a>参数
 
 *dwKeyState*<br/>
-包含修改键的状态。 这是以下任意数量的组合： MK_CONTROL、 MK_SHIFT、 MK_ALT、 MK_LBUTTON、 MK_MBUTTON 和 MK_RBUTTON。
+包含修改键的状态。 这是以下任意数量的组合：MK_CONTROL、 MK_SHIFT、 MK_ALT、 MK_LBUTTON、 MK_MBUTTON 和 MK_RBUTTON。
 
-*点*<br/>
+*point*<br/>
 包含以像素为单位，相对于屏幕光标的位置。
 
 ### <a name="return-value"></a>返回值
@@ -449,9 +449,9 @@ virtual DROPEFFECT OnDragScroll(
 
 ### <a name="remarks"></a>备注
 
-当你想要为此事件提供特殊行为时，重写此函数。 将光标拖到默认滚动区域内的每个窗口的边框时，默认实现自动滚动 windows。有关详细信息，请参阅文章[拖放： 实现放置目标](../../mfc/drag-and-drop-implementing-a-drop-target.md)。
+当你想要为此事件提供特殊行为时，重写此函数。 将光标拖到默认滚动区域内的每个窗口的边框时，默认实现自动滚动 windows。有关详细信息，请参阅文章[拖放到：实现放置目标](../../mfc/drag-and-drop-implementing-a-drop-target.md)。
 
-##  <a name="ondraw"></a>  Cview:: Ondraw
+##  <a name="ondraw"></a>  CView::OnDraw
 
 由框架调用以呈现文档的图像。
 
@@ -496,7 +496,7 @@ pDataObject * 指向[COleDataObject](../../mfc/reference/coledataobject-class.md
 
 - DROPEFFECT_LINK 创建数据对象和其服务器之间的链接。
 
-*点*<br/>
+*point*<br/>
 当前的鼠标位置相对于视图的客户端区域。
 
 ### <a name="return-value"></a>返回值
@@ -532,10 +532,10 @@ virtual DROPEFFECT OnDropEx(
 *dropDefault*<br/>
 用户选择基于当前的关键状态的默认拖放操作效果。 它可能是 DROPEFFECT_NONE。 放置效果备注部分所述。
 
-*下拉列表*<br/>
+*dropList*<br/>
 放置源支持拖放效果的列表。 可以使用的按位 OR 组合放置效果值 ( **&#124;**) 操作。 放置效果备注部分所述。
 
-*点*<br/>
+*point*<br/>
 当前的鼠标位置相对于视图的客户端区域。
 
 ### <a name="return-value"></a>返回值
@@ -618,7 +618,7 @@ virtual void OnEndPrintPreview(
 *pInfo*<br/>
 指向描述当前打印作业的 [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) 结构。
 
-*点*<br/>
+*point*<br/>
 上次在预览模式下显示的页面上指定的点。
 
 *pView*<br/>

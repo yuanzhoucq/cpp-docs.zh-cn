@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CD2DTextFormat [MFC], ReCreate
 - CD2DTextFormat [MFC], m_pTextFormat
 ms.assetid: db194cec-9dae-4644-ab84-7c43b7164117
-ms.openlocfilehash: 092ffff91113b42cd106fe7079b06b9482400c63
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9d796ac39ba29e6d286926f4975f8f6d2054e7ac
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557152"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297887"
 ---
 # <a name="cd2dtextformat-class"></a>CD2DTextFormat 类
 
@@ -48,7 +48,7 @@ class CD2DTextFormat : public CD2DResource;
 |名称|描述|
 |----------|-----------------|
 |[CD2DTextFormat::CD2DTextFormat](#cd2dtextformat)|构造一个 CD2DTextFormat 对象。|
-|[CD2DTextFormat:: ~ CD2DTextFormat](#cd2dtextformat__~cd2dtextformat)|析构函数。 当 D2D 文本格式对象被销毁时调用。|
+|[CD2DTextFormat::~CD2DTextFormat](#cd2dtextformat__~cd2dtextformat)|析构函数。 当 D2D 文本格式对象被销毁时调用。|
 
 ### <a name="public-methods"></a>公共方法
 
@@ -66,7 +66,7 @@ class CD2DTextFormat : public CD2DResource;
 
 |名称|描述|
 |----------|-----------------|
-|[CD2DTextFormat::operator IDWriteTextFormat *](#operator_idwritetextformat_star)|返回 IDWriteTextFormat 接口|
+|[CD2DTextFormat::operator IDWriteTextFormat*](#operator_idwritetextformat_star)|返回 IDWriteTextFormat 接口|
 
 ### <a name="protected-data-members"></a>受保护的数据成员
 
@@ -86,7 +86,7 @@ class CD2DTextFormat : public CD2DResource;
 
 **标头：** afxrendertarget.h
 
-##  <a name="_dtorcd2dtextformat"></a>  CD2DTextFormat:: ~ CD2DTextFormat
+##  <a name="_dtorcd2dtextformat"></a>  CD2DTextFormat::~CD2DTextFormat
 
 析构函数。 当 D2D 文本格式对象被销毁时调用。
 
@@ -216,7 +216,7 @@ virtual BOOL IsValid() const;
 IDWriteTextFormat* m_pTextFormat;
 ```
 
-##  <a name="operator_idwritetextformat_star"></a>  CD2DTextFormat::operator IDWriteTextFormat *
+##  <a name="operator_idwritetextformat_star"></a>  CD2DTextFormat::operator IDWriteTextFormat*
 
 返回 IDWriteTextFormat 接口
 

@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CPropExchange [MFC], IsAsynchronous
 - CPropExchange [MFC], IsLoading
 ms.assetid: ed872180-e770-4942-892a-92139d501fab
-ms.openlocfilehash: 772388d069bdec274bd396b776d404711b694771
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4210399e32c2bb39008afa75b787c19e3338a7d5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50560360"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276346"
 ---
 # <a name="cpropexchange-class"></a>CPropExchange 类
 
@@ -68,7 +68,7 @@ class AFX_NOVTABLE CPropExchange
 
 `CPropExchange` 可用于序列化控件的属性或初始化后加载或创建控件的控件的属性。 `ExchangeProp`并`ExchangeFontProp`成员函数的`CPropExchange`能够存储到的属性并将其加载从不同的媒体。
 
-有关使用的详细信息`CPropExchange`，请参阅文章[MFC ActiveX 控件： 属性页](../../mfc/mfc-activex-controls-property-pages.md)。
+有关使用的详细信息`CPropExchange`，请参阅文章[MFC ActiveX 控件：属性页](../../mfc/mfc-activex-controls-property-pages.md)。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -127,7 +127,7 @@ virtual BOOL ExchangeFontProp(
 *pszPropName*<br/>
 正在交换的属性的名称。
 
-*字体*<br/>
+*font*<br/>
 对引用[CFontHolder](../../mfc/reference/cfontholder-class.md)对象，其中包含字体属性。
 
 *pFontDesc*<br/>
@@ -294,4 +294,3 @@ BOOL IsLoading();
 
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>
 [COleControl::DoPropExchange](../../mfc/reference/colecontrol-class.md#dopropexchange)
-

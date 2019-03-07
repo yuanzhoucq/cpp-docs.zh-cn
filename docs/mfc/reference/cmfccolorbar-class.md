@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CMFCColorBar [MFC], SetPropList
 - CMFCColorBar [MFC], ShowCommandMessageString
 ms.assetid: 4756ee40-25a5-4cee-af7f-acab7993d1c7
-ms.openlocfilehash: 6e6ce3f48e2b0a7b0aa8396047eb4a52015f364d
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: f1f7610fc315da65145798058fdcf9752e7873d0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694837"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283249"
 ---
 # <a name="cmfccolorbar-class"></a>CMFCColorBar 类
 
@@ -330,10 +330,10 @@ CMFCColorBar(
 
 ### <a name="parameters"></a>参数
 
-*颜色*<br/>
+*colors*<br/>
 [in]框架在颜色栏控件显示的颜色的数组。
 
-*颜色*<br/>
+*color*<br/>
 [in]最初选定的颜色。
 
 *lpszAutoColor*<br/>
@@ -494,7 +494,7 @@ static BOOL CreatePalette(
 |参数|描述|
 |---------------|-----------------|
 |*arColors*|[in]一个颜色数组。|
-|*调色板*|[in]颜色的调色板。|
+|*palette*|[in]颜色的调色板。|
 
 ### <a name="return-value"></a>返回值
 
@@ -701,7 +701,7 @@ virtual BOOL OnKey(UINT nChar);
 
 ### <a name="parameters"></a>参数
 
-*NChar*<br/>
+*nChar*<br/>
 [in]用户按下键的虚拟键代码。
 
 ### <a name="return-value"></a>返回值
@@ -808,7 +808,7 @@ void SetColor(COLORREF color);
 
 ### <a name="parameters"></a>参数
 
-*颜色*<br/>
+*color*<br/>
 [in]RGB 颜色值。
 
 ##  <a name="setcolorname"></a>  CMFCColorBar::SetColorName
@@ -823,7 +823,7 @@ static void SetColorName(
 
 ### <a name="parameters"></a>参数
 
-*颜色*<br/>
+*color*<br/>
 [in]一种颜色的 RGB 值。
 
 *strName*<br/>

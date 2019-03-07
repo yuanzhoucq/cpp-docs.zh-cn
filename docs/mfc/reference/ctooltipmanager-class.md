@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CTooltipManager [MFC], SetTooltipText
 - CTooltipManager [MFC], UpdateTooltips
 ms.assetid: c71779d7-8b6e-47ef-8500-d4552731fe86
-ms.openlocfilehash: 79589cb631635f4ed8b85f4399a86e8fadf61dda
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7ca0c657872bb2a3c56c9406a88f8c674cb46938
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50431641"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260629"
 ---
 # <a name="ctooltipmanager-class"></a>CTooltipManager 类
 
@@ -41,7 +41,7 @@ class CTooltipManager : public CObject
 |----------|-----------------|
 |[CTooltipManager::CreateToolTip](#createtooltip)|为指定的 Windows 控件类型创建工具提示控件。|
 |[CTooltipManager::DeleteToolTip](#deletetooltip)|删除工具提示控件。|
-|[Ctooltipmanager:: Settooltipparams](#settooltipparams)|自定义指定 Windows 控件类型工具提示的可视外观。|
+|[CTooltipManager::SetTooltipParams](#settooltipparams)|自定义指定 Windows 控件类型工具提示的可视外观。|
 |[CTooltipManager::SetTooltipText](#settooltiptext)|设置工具提示控件的文本和说明。|
 |[CTooltipManager::UpdateTooltips](#updatetooltips)||
 
@@ -78,7 +78,7 @@ static BOOL CreateToolTip(
 *pWndParent*<br/>
 [in]在工具提示的父级。
 
-*n 类型*<br/>
+*nType*<br/>
 [in]在工具提示的类型。
 
 ### <a name="return-value"></a>返回值
@@ -102,9 +102,9 @@ static BOOL CreateToolTip(
 |AFX_TOOLTIP_TYPE_EDIT|文本框。|无。|
 |AFX_TOOLTIP_TYPE_MINIFRAME|袖珍框架。|CPaneFrameWnd|
 |AFX_TOOLTIP_TYPE_PLANNER|规划器。|无。|
-|AFX_TOOLTIP_TYPE_RIBBON|功能区栏。|CMFCRibbonBar CMFCRibbonPanelMenuBar|
+|AFX_TOOLTIP_TYPE_RIBBON|功能区栏。|CMFCRibbonBar, CMFCRibbonPanelMenuBar|
 |AFX_TOOLTIP_TYPE_TAB|选项卡控件。|CMFCTabCtrl|
-|AFX_TOOLTIP_TYPE_TOOLBAR|一个工具栏。|CMFCToolBar、 CMFCPopupMenuBar|
+|AFX_TOOLTIP_TYPE_TOOLBAR|一个工具栏。|CMFCToolBar, CMFCPopupMenuBar|
 |AFX_TOOLTIP_TYPE_TOOLBOX|工具箱。|无。|
 
 ##  <a name="deletetooltip"></a>  CTooltipManager::DeleteToolTip
@@ -124,7 +124,7 @@ static void DeleteToolTip(CToolTipCtrl*& pToolTip);
 
 调用此方法为每个[CToolTipCtrl 类](../../mfc/reference/ctooltipctrl-class.md)创建的[CTooltipManager::CreateToolTip](#createtooltip)。 父控件应调用此方法从其`OnDestroy`处理程序。 这需要从 framework 正确删除工具提示。 此方法设置*pToolTip*为之前它将返回 NULL。
 
-##  <a name="settooltipparams"></a>  Ctooltipmanager:: Settooltipparams
+##  <a name="settooltipparams"></a>  CTooltipManager::SetTooltipParams
 
 自定义指定的 Windows 控件类型的工具提示控件的外观。
 
@@ -175,13 +175,13 @@ static void SetTooltipText(
 
 ### <a name="parameters"></a>参数
 
-*PTI*<br/>
+*pTI*<br/>
 [in]指向 TOOLINFO 对象的指针。
 
 *pToolTip*<br/>
 [in、 out]指向要为其设置的文本和说明的工具提示控件的指针。
 
-*n 类型*<br/>
+*nType*<br/>
 [in]指定该工具提示与之关联的控件的类型。
 
 *strText*<br/>

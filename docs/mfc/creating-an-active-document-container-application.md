@@ -8,12 +8,12 @@ helpviewer_keywords:
 - MFC COM, active document containment
 - applications [MFC], active document container
 ms.assetid: 14e2d022-a6c5-4249-8712-706b0f4433f7
-ms.openlocfilehash: 5cdd3de8f4efcc23f89b81cb61302b5950938800
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 965778fd5d17aa416b198c101edc3a445a39580b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51520408"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57257283"
 ---
 # <a name="creating-an-active-document-container-application"></a>创建活动文档容器应用程序
 
@@ -39,7 +39,7 @@ ms.locfileid: "51520408"
 
 1. 当 MFC 应用程序向导完成应用程序生成时，使用解决方案资源管理器打开下列文件：
 
-   - *Myprojview.cpp 中*
+   - *MyProjview.cpp*
 
 1. 在中*myprojview.cpp 中*，进行以下更改：
 
@@ -64,4 +64,3 @@ ms.locfileid: "51520408"
 ## <a name="see-also"></a>请参阅
 
 [活动文档包容](../mfc/active-document-containment.md)
-

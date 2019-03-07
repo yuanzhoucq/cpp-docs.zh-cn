@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - message class
 ms.assetid: 3e1f3505-6c0c-486c-8191-666d0880ec62
-ms.openlocfilehash: 6b0c37f61ef437662a4e624c3a81edb526e7464c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 83cfdb5807581f7092709691a1839052abdd657c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636848"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263073"
 ---
 # <a name="message-class"></a>message 类
 
@@ -62,7 +62,7 @@ class message : public ::Concurrency::details::_Runtime_object;
 
 |名称|描述|
 |----------|-----------------|
-|[有效负载](#payload)|有效负载`message`对象。|
+|[payload](#payload)|有效负载`message`对象。|
 
 ## <a name="remarks"></a>备注
 
@@ -114,7 +114,7 @@ message(
 *_P*<br/>
 此消息的负载。
 
-*Id （_i)*<br/>
+*_Id*<br/>
 此消息的唯一 ID。
 
 *_Msg*<br/>
@@ -124,7 +124,7 @@ message(
 
 将指针传递到构造函数`message`对象，如参数将引发[invalid_argument](../../../standard-library/invalid-argument-class.md)异常如果参数`_Msg`是`NULL`。
 
-##  <a name="dtor"></a> ~ 消息
+##  <a name="dtor"></a> ~message
 
 销毁`message`对象。
 

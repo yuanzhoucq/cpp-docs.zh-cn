@@ -192,12 +192,12 @@ helpviewer_keywords:
 - CWinApp [MFC], m_nAutosaveInterval
 - CWinApp [MFC], m_pDataRecoveryHandler
 ms.assetid: e426a3cd-0d15-40d6-bd55-beaa5feb2343
-ms.openlocfilehash: 3f9afdf18fcaff0d3613b4204d8690f915079e7d
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 6366638ebfd5e78ad517a8913e4276d5cd820670
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178936"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264665"
 ---
 # <a name="cwinapp-class"></a>CWinApp 类
 
@@ -248,7 +248,7 @@ class CWinApp : public CWinThread
 |[CWinApp::GetSectionKey](#getsectionkey)|返回键 HKEY_CURRENT_USER\\"简称软件"\RegistryKey\AppName\lpszSection。|
 |[CWinApp::HideApplication](#hideapplication)|隐藏应用程序，然后关闭所有文档。|
 |[CWinApp::HtmlHelp](#htmlhelp)|调用`HTMLHelp`Windows 函数。|
-|[Cwinapp:: Initinstance](#initinstance)|重写以执行 Windows 实例初始化，如创建窗口对象。|
+|[CWinApp::InitInstance](#initinstance)|重写以执行 Windows 实例初始化，如创建窗口对象。|
 |[CWinApp::IsTaskbarInteractionEnabled](#istaskbarinteractionenabled)|指示是否启用了 Windows 7 任务栏交互。|
 |[CWinApp::LoadCursor](#loadcursor)|加载光标资源。|
 |[CWinApp::LoadIcon](#loadicon)|加载图标资源。|
@@ -269,7 +269,7 @@ class CWinApp : public CWinThread
 |[CWinApp::ReopenPreviousFilesAtRestart](#reopenpreviousfilesatrestart)|确定是否重新启动管理器重新打开该应用程序意外退出时，打开了文件。|
 |[CWinApp::RestartInstance](#restartinstance)|处理重新启动管理器启动应用程序重启。|
 |[CWinApp::RestoreAutosavedFilesAtRestart](#restoreautosavedfilesatrestart)|确定是否重新启动管理器还原自动保存的文件，重新启动该应用程序时。|
-|[Cwinapp:: Run](#run)|运行默认消息循环。 重写自定义消息循环。|
+|[CWinApp::Run](#run)|运行默认消息循环。 重写自定义消息循环。|
 |[CWinApp::RunAutomated](#runautomated)|测试应用程序的命令行 **/Automation**选项。 已过时。 相反，使用中的值[CCommandLineInfo::m_bRunAutomated](../../mfc/reference/ccommandlineinfo-class.md#m_brunautomated)后调用[ParseCommandLine](#parsecommandline)。|
 |[CWinApp::RunEmbedded](#runembedded)|测试应用程序的命令行 **/嵌入**选项。 已过时。 相反，使用中的值[CCommandLineInfo::m_bRunEmbedded](../../mfc/reference/ccommandlineinfo-class.md#m_brunembedded)后调用[ParseCommandLine](#parsecommandline)。|
 |[CWinApp::SaveAllModified](#saveallmodified)|提示用户保存所有已修改的文档。|
@@ -282,7 +282,7 @@ class CWinApp : public CWinThread
 |[CWinApp::Unregister](#unregister)|注销的一切已知要注册的内容`CWinApp`对象。|
 |[CWinApp::WinHelp](#winhelp)|调用`WinHelp`Windows 函数。|
 |[CWinApp::WriteProfileBinary](#writeprofilebinary)|将二进制数据写入到应用程序中的条目。INI 文件。|
-|[Cwinapp:: Writeprofileint](#writeprofileint)|将整数写入到应用程序中的条目。INI 文件。|
+|[CWinApp::WriteProfileInt](#writeprofileint)|将整数写入到应用程序中的条目。INI 文件。|
 |[CWinApp::WriteProfileString](#writeprofilestring)|将字符串写入到应用程序中的条目。INI 文件。|
 
 ### <a name="protected-methods"></a>受保护的方法
@@ -299,7 +299,7 @@ class CWinApp : public CWinThread
 |[CWinApp::OnHelpFinder](#onhelpfinder)|处理 ID_HELP_FINDER 和 ID_DEFAULT_HELP 命令。|
 |[CWinApp::OnHelpIndex](#onhelpindex)|处理 ID_HELP_INDEX 命令并提供默认帮助主题。|
 |[CWinApp::OnHelpUsing](#onhelpusing)|处理 ID_HELP_USING 命令。|
-|[对下列项自动](#registershellfiletypes)|注册应用程序的所有文档类型与 Windows 文件管理器。|
+|[CWinApp::RegisterShellFileTypes](#registershellfiletypes)|注册应用程序的所有文档类型与 Windows 文件管理器。|
 |[CWinApp::SetAppID](#setappid)|显式设置为应用程序的应用程序用户模型 ID。 任何用户界面呈现给用户 （的最佳位置是应用程序构造函数） 之前，应调用此方法。|
 |[CWinApp::SetRegistryKey](#setregistrykey)|导致应用程序设置存储在注册表中而不是。INI 文件。|
 |[CWinApp::UnregisterShellFileTypes](#unregistershellfiletypes)|取消注册应用程序的所有文档类型与 Windows 文件管理器。|
@@ -549,7 +549,7 @@ virtual int DoMessageBox(
 *lpszPrompt*<br/>
 在消息框文本的地址。
 
-*n 类型*<br/>
+*nType*<br/>
 消息框[样式](../../mfc/reference/styles-used-by-mfc.md#message-box-styles)。
 
 *nIDPrompt*<br/>
@@ -929,7 +929,7 @@ UINT GetProfileInt(
 *lpszEntry*<br/>
 指向以 null 结尾的字符串，该字符串包含要检索其值的条目。
 
-*n 默认*<br/>
+*nDefault*<br/>
 指定在框架找不到条目时要返回的默认值。
 
 ### <a name="return-value"></a>返回值
@@ -1044,7 +1044,7 @@ virtual void HtmlHelp(
 
 当你的应用程序终止时，框架会自动关闭 HTMLHelp 应用程序。
 
-##  <a name="initinstance"></a>  Cwinapp:: Initinstance
+##  <a name="initinstance"></a>  CWinApp::InitInstance
 
 Windows 允许要在同一时间运行的相同程序的多个副本。
 
@@ -1307,15 +1307,15 @@ DWORD m_dwRestartManagerSupportFlags;
 |-|-|
 |Flag|描述|
 |AFX_RESTART_MANAGER_SUPPORT_RESTART|使用注册应用程序[CWinApp::RegisterWithRestartManager](#registerwithrestartmanager)。 重新启动管理器负责重新启动应用程序，如果意外退出。|
-|-AFX_RESTART_MANAGER_SUPPORT_RECOVERY|重新启动管理器注册该应用程序，并且重新启动该应用程序时，重新启动管理器调用恢复的回调函数。 默认恢复回调函数是[CWinApp::ApplicationRecoveryCallback](#applicationrecoverycallback)。|
-|-AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART|启用了自动保存和重新启动管理器则自动保存任何打开文档时应用程序重新启动。|
-|-AFX_RESTART_MANAGER_AUTOSAVE_AT_INTERVAL|启用了自动保存和重新启动管理器则自动保存任何打开文档的定期时间间隔。 通过定义间隔[CWinApp::m_nAutosaveInterval](#m_nautosaveinterval)。|
-|-AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES|在重新启动从意外的退出应用程序后，重新启动管理器打开以前打开的文档。 [CDataRecoveryHandler 类](../../mfc/reference/cdatarecoveryhandler-class.md)处理存储的打开的文档列表并将它们还原。|
-|-AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES|重新启动管理器会提示用户重新启动该应用程序后还原自动保存文件。 `CDataRecoveryHandler`类会询问用户。|
-|-AFX_RESTART_MANAGER_SUPPORT_NO_AUTOSAVE|AFX_RESTART_MANAGER_SUPPORT_RESTART、 AFX_RESTART_MANAGER_SUPPORT_RECOVER 和 AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES 的并集。|
-|-AFX_RESTART_MANAGER_SUPPORT_ALL_ASPECTS|AFX_RESTART_MANAGER_SUPPORT_NO_AUTOSAVE、 AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART、 AFX_RESTART_MANAGER_AUTOSAVE_AT_INTERVAL 和 AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES 的联合。|
-|-AFX_RESTART_MANAGER_SUPPORT_RESTART_ASPECTS|AFX_RESTART_MANAGER_SUPPORT_RESTART、 AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART、 AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES 和 AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES 的联合。|
-|-AFX_RESTART_MANAGER_SUPPORT_RECOVERY_ASPECTS|联合 ofAFX_RESTART_MANAGER_SUPPORT_RECOVERY、 AFX_RESTART_MANAGER_AUTOSAVE_AT_INTERVAL、 AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES 和 AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES。|
+|- AFX_RESTART_MANAGER_SUPPORT_RECOVERY|重新启动管理器注册该应用程序，并且重新启动该应用程序时，重新启动管理器调用恢复的回调函数。 默认恢复回调函数是[CWinApp::ApplicationRecoveryCallback](#applicationrecoverycallback)。|
+|- AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART|启用了自动保存和重新启动管理器则自动保存任何打开文档时应用程序重新启动。|
+|- AFX_RESTART_MANAGER_AUTOSAVE_AT_INTERVAL|启用了自动保存和重新启动管理器则自动保存任何打开文档的定期时间间隔。 通过定义间隔[CWinApp::m_nAutosaveInterval](#m_nautosaveinterval)。|
+|- AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES|在重新启动从意外的退出应用程序后，重新启动管理器打开以前打开的文档。 [CDataRecoveryHandler 类](../../mfc/reference/cdatarecoveryhandler-class.md)处理存储的打开的文档列表并将它们还原。|
+|- AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES|重新启动管理器会提示用户重新启动该应用程序后还原自动保存文件。 `CDataRecoveryHandler`类会询问用户。|
+|- AFX_RESTART_MANAGER_SUPPORT_NO_AUTOSAVE|AFX_RESTART_MANAGER_SUPPORT_RESTART、 AFX_RESTART_MANAGER_SUPPORT_RECOVER 和 AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES 的并集。|
+|- AFX_RESTART_MANAGER_SUPPORT_ALL_ASPECTS|AFX_RESTART_MANAGER_SUPPORT_NO_AUTOSAVE、 AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART、 AFX_RESTART_MANAGER_AUTOSAVE_AT_INTERVAL 和 AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES 的联合。|
+|- AFX_RESTART_MANAGER_SUPPORT_RESTART_ASPECTS|AFX_RESTART_MANAGER_SUPPORT_RESTART、 AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART、 AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES 和 AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES 的联合。|
+|- AFX_RESTART_MANAGER_SUPPORT_RECOVERY_ASPECTS|联合 ofAFX_RESTART_MANAGER_SUPPORT_RECOVERY、 AFX_RESTART_MANAGER_AUTOSAVE_AT_INTERVAL、 AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES 和 AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES。|
 
 ##  <a name="m_ehelptype"></a>  CWinApp::m_eHelpType
 
@@ -1916,7 +1916,7 @@ virtual BOOL Register();
 
 默认实现只需返回 TRUE。 重写此函数可提供任何自定义的注册步骤。
 
-##  <a name="registershellfiletypes"></a>  对下列项自动
+##  <a name="registershellfiletypes"></a>  CWinApp::RegisterShellFileTypes
 
 调用此成员函数以使用 Windows 文件管理器注册的所有应用程序的文档类型。
 
@@ -2038,7 +2038,7 @@ virtual BOOL RestoreAutosavedFilesAtRestart() const;
 
 TRUE 表示重新启动管理器还原自动保存设置文件。FALSE 表示不重新启动管理器。
 
-##  <a name="run"></a>  Cwinapp:: Run
+##  <a name="run"></a>  CWinApp::Run
 
 提供默认消息循环。
 
@@ -2310,7 +2310,7 @@ BOOL WriteProfileBinary(
 
 有关其他示例，请参阅示例[CWinApp::GetProfileBinary](#getprofilebinary)。
 
-##  <a name="writeprofileint"></a>  Cwinapp:: Writeprofileint
+##  <a name="writeprofileint"></a>  CWinApp::WriteProfileInt
 
 调用此成员函数可将指定的值写入到应用程序的注册表项的指定部分或。INI 文件。
 
@@ -2329,7 +2329,7 @@ BOOL WriteProfileInt(
 *lpszEntry*<br/>
 指向包含到其中的值是要写入的条目的以 null 结尾的字符串。 如果该条目不存在指定的节中，将创建它。
 
-*n 值*<br/>
+*nValue*<br/>
 包含要写入的值。
 
 ### <a name="return-value"></a>返回值

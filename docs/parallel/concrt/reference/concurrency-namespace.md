@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - Concurrency namespace
 ms.assetid: f1d33ca2-679b-4442-b140-22a9d9df61d1
-ms.openlocfilehash: ccfa168f811b2c357a3760097ca7bbaab4f5ed3a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aa2fe7dedd1c7e1a8b5a72e01508b4201bd72a7d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629844"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303386"
 ---
 # <a name="concurrency-namespace"></a>concurrency 命名空间
 
@@ -52,23 +52,36 @@ namespace concurrency;
 
 |名称|描述|
 |----------|-----------------|
-|[affinity_partitioner 类](affinity-partitioner-class.md)|`affinity_partitioner` 类与 `static_partitioner` 类相似，但它选择将子范围映射到工作线程，从而改善缓存关联。 在同一数据集中重新执行循环且数据适应缓存时，它可以显著提高性能。 请注意，必须与在特定数据集中执行的并行循环的后续迭代一起使用同一 `affinity_partitioner` 对象，才能受益于数据位置。|
+|[affinity_partitioner 类](affinity-partitioner-class.md)|
+  `affinity_partitioner` 类与 `static_partitioner` 类相似，但它选择将子范围映射到工作线程，从而改善缓存关联。 在同一数据集中重新执行循环且数据适应缓存时，它可以显著提高性能。 请注意，必须与在特定数据集中执行的并行循环的后续迭代一起使用同一 `affinity_partitioner` 对象，才能受益于数据位置。|
 |[agent 类](agent-class.md)|旨在用作所有独立代理的基类的类。 用于对其他代理隐藏状态并通过消息传递进行交互。|
-|[auto_partitioner 类](auto-partitioner-class.md)|`auto_partitioner` 类表示 `parallel_for`、`parallel_for_each` 和 `parallel_transform` 用于对其循环访问的范围进行分区的默认方法。 此分区方法使用范围窃取进行负载平衡以及按循环访问取消。|
+|[auto_partitioner 类](auto-partitioner-class.md)|
+  `auto_partitioner` 类表示 `parallel_for`、`parallel_for_each` 和 `parallel_transform` 用于对其循环访问的范围进行分区的默认方法。 此分区方法使用范围窃取进行负载平衡以及按循环访问取消。|
 |[bad_target 类](bad-target-class.md)|此类描述消息块被给予指向目标的指针，但该目标对于正在执行的操作无效时引发的异常。|
-|[call 类](call-class.md)|`call` 消息块是多源、有序的 `target_block`，可以在接收消息时调用指定函数。|
-|[cancellation_token 类](cancellation-token-class.md)|`cancellation_token` 类表示确定某项操作是否已请求取消的功能。 给定的标记可与 `task_group`、`structured_task_group` 或 `task` 关联以实现隐式取消。 它还可为了取消而进行轮询，或可在取消关联的 `cancellation_token_source` 时注册回调。|
-|[cancellation_token_registration 类](cancellation-token-registration-class.md)|`cancellation_token_registration` 类表示来自 `cancellation_token` 的回调通知。 如果 `register` 上的 `cancellation_token` 方法用于接收何时进行取消的通知，则系统就会将 `cancellation_token_registration` 对象作为回调的句柄返回，以便调用方可以请求特定回调，而不再通过使用 `deregister` 方法来实现。|
-|[cancellation_token_source 类](cancellation-token-source-class.md)|`cancellation_token_source` 类表示取消某个可取消操作的功能。|
-|[choice 类](choice-class.md)|`choice` 消息块是多源、单目标的块，表示与一组源进行的控制流交互。 choice 块将等待多个源中的任何一个源以生成消息，并将传播生成该消息的源的索引。|
-|[combinable 类](combinable-class.md)|`combinable<T>` 对象旨在提供数据的线程专用副本，以在并行算法期间执行无锁线程本地子计算。 在并行操作结束时，线程专用子计算可随之合并到最终结果。 此类可替代共享变量使用，并可能会带来性能提升（如果该共享变量上存在大量争用）。|
-|[concurrent_priority_queue 类](concurrent-priority-queue-class.md)|`concurrent_priority_queue` 类是允许多个线程并发推送和弹出项的容器。 项按优先级顺序弹出，其中优先级由作为模板自变量提供的涵子确定。|
-|[concurrent_queue 类](concurrent-queue-class.md)|`concurrent_queue` 类是允许对其元素进行先进先出访问的序列容器类。 它支持一组有限的并发安全操作，例如 `push` 和 `try_pop`。|
-|[concurrent_unordered_map 类](concurrent-unordered-map-class.md)|`concurrent_unordered_map` 类是控制 `std::pair<const K, _Element_type>` 类型元素的长短不一序列的并发安全容器。 序列以支持并发安全追加、元素访问、迭代器访问和迭代器遍历操作的方式表示。|
-|[concurrent_unordered_multimap 类](concurrent-unordered-multimap-class.md)|`concurrent_unordered_multimap` 类是控制 `std::pair<const K, _Element_type>` 类型元素的长短不一序列的并发安全容器。 序列以支持并发安全追加、元素访问、迭代器访问和迭代器遍历操作的方式表示。|
+|[call 类](call-class.md)|
+  `call` 消息块是多源、有序的 `target_block`，可以在接收消息时调用指定函数。|
+|[cancellation_token 类](cancellation-token-class.md)|
+  `cancellation_token` 类表示确定某项操作是否已请求取消的功能。 给定的标记可与 `task_group`、`structured_task_group` 或 `task` 关联以实现隐式取消。 它还可为了取消而进行轮询，或可在取消关联的 `cancellation_token_source` 时注册回调。|
+|[cancellation_token_registration 类](cancellation-token-registration-class.md)|
+  `cancellation_token_registration` 类表示来自 `cancellation_token` 的回调通知。 如果 `register` 上的 `cancellation_token` 方法用于接收何时进行取消的通知，则系统就会将 `cancellation_token_registration` 对象作为回调的句柄返回，以便调用方可以请求特定回调，而不再通过使用 `deregister` 方法来实现。|
+|[cancellation_token_source 类](cancellation-token-source-class.md)|
+  `cancellation_token_source` 类表示取消某个可取消操作的功能。|
+|[choice 类](choice-class.md)|
+  `choice` 消息块是多源、单目标的块，表示与一组源进行的控制流交互。 choice 块将等待多个源中的任何一个源以生成消息，并将传播生成该消息的源的索引。|
+|[combinable 类](combinable-class.md)|
+  `combinable<T>` 对象旨在提供数据的线程专用副本，以在并行算法期间执行无锁线程本地子计算。 在并行操作结束时，线程专用子计算可随之合并到最终结果。 此类可替代共享变量使用，并可能会带来性能提升（如果该共享变量上存在大量争用）。|
+|[concurrent_priority_queue 类](concurrent-priority-queue-class.md)|
+  `concurrent_priority_queue` 类是允许多个线程并发推送和弹出项的容器。 项按优先级顺序弹出，其中优先级由作为模板参数提供的涵子确定。|
+|[concurrent_queue 类](concurrent-queue-class.md)|
+  `concurrent_queue` 类是允许对其元素进行先进先出访问的序列容器类。 它支持一组有限的并发安全操作，例如 `push` 和 `try_pop`。|
+|[concurrent_unordered_map 类](concurrent-unordered-map-class.md)|
+  `concurrent_unordered_map` 类是控制 `std::pair<const K, _Element_type>` 类型元素的长短不一序列的并发安全容器。 序列以支持并发安全追加、元素访问、迭代器访问和迭代器遍历操作的方式表示。|
+|[concurrent_unordered_multimap 类](concurrent-unordered-multimap-class.md)|
+  `concurrent_unordered_multimap` 类是控制 `std::pair<const K, _Element_type>` 类型元素的长短不一序列的并发安全容器。 序列以支持并发安全追加、元素访问、迭代器访问和迭代器遍历操作的方式表示。|
 |[concurrent_unordered_multiset 类](concurrent-unordered-multiset-class.md)|`concurrent_unordered_multiset`类是控制元素的类型 K.变长序列的并发安全容器序列表示方式支持并发安全追加、 元素访问、 迭代器访问和迭代器遍历操作。|
 |[concurrent_unordered_set 类](concurrent-unordered-set-class.md)|`concurrent_unordered_set`类是控制元素的类型 K.变长序列的并发安全容器序列表示方式支持并发安全追加、 元素访问、 迭代器访问和迭代器遍历操作。|
-|[concurrent_vector 类](concurrent-vector-class.md)|`concurrent_vector` 类是允许对任意元素进行随机访问的序列容器类。 它支持并发安全追加、元素访问、迭代器访问和迭代器遍历操作。|
+|[concurrent_vector 类](concurrent-vector-class.md)|
+  `concurrent_vector` 类是允许对任意元素进行随机访问的序列容器类。 它支持并发安全追加、元素访问、迭代器访问和迭代器遍历操作。|
 |[Context 类](context-class.md)|表示执行上下文的抽象。|
 |[context_self_unblock 类](context-self-unblock-class.md)|此类描述从同一上下文调用 `Context` 对象的 `Unblock` 方法时引发的异常。 这将指示给定上下文解除阻止自身的尝试。|
 |[context_unblock_unbalanced 类](context-unblock-unbalanced-class.md)|此类描述对 `Context` 对象的 `Block` 和 `Unblock` 方法的调用未恰当配对时引发的异常。|
@@ -87,55 +100,82 @@ namespace concurrency;
 |[invalid_scheduler_policy_key 类](invalid-scheduler-policy-key-class.md)|此类描述无效或未知键传递给 `SchedulerPolicy` 对象构造函数，或 `SchedulerPolicy` 对象的 `SetPolicyValue` 方法被传递了必须使用其他方式（例如 `SetConcurrencyLimits` 方法）进行更改的键时引发的异常。|
 |[invalid_scheduler_policy_thread_specification 类](invalid-scheduler-policy-thread-specification-class.md)|此类描述尝试设置 `SchedulerPolicy` 对象的并发限制，以便 `MinConcurrency` 键的值小于 `MaxConcurrency` 键的值时引发的异常。|
 |[invalid_scheduler_policy_value 类](invalid-scheduler-policy-value-class.md)|此类描述 `SchedulerPolicy` 对象的策略键设置为对于该键无效的值时引发的异常。|
-|[ISource 类](isource-class.md)|`ISource` 类是所有源块的接口。 源块将消息传播到 `ITarget` 块。|
-|[ITarget 类](itarget-class.md)|`ITarget` 类是所有目标块的接口。 目标块使用 `ISource` 块提供给它们的消息。|
-|[join 类](join-class.md)|`join` 消息块是单目标、多源、有序的 `propagator_block`，它可以合并来自其每个源的 `T` 类型消息。|
+|[ISource 类](isource-class.md)|
+  `ISource` 类是所有源块的接口。 源块将消息传播到 `ITarget` 块。|
+|[ITarget 类](itarget-class.md)|
+  `ITarget` 类是所有目标块的接口。 目标块使用 `ISource` 块提供给它们的消息。|
+|[join 类](join-class.md)|
+  `join` 消息块是单目标、多源、有序的 `propagator_block`，它可以合并来自其每个源的 `T` 类型消息。|
 |[location 类](location-class.md)|硬件上物理位置的抽象。|
 |[message 类](message-class.md)|包含正在消息块之间传递的数据负载的基本消息信封。|
 |[message_not_found 类](message-not-found-class.md)|此类描述消息块找不到请求的消息时引发的异常。|
-|[message_processor 类](message-processor-class.md)|`message_processor` 类是用于处理 `message` 对象的抽象基类。 不能保证消息的排序。|
+|[message_processor 类](message-processor-class.md)|
+  `message_processor` 类是用于处理 `message` 对象的抽象基类。 不能保证消息的排序。|
 |[missing_wait 类](missing-wait-class.md)|此类描述执行对象的析构函数时仍有计划到 `task_group` 或 `structured_task_group` 对象的任务时引发的异常。 如果因为堆栈展开为异常的结果而到达析构函数的调用条件，则永远不会引发此异常。|
-|[multi_link_registry 类](multi-link-registry-class.md)|`multi_link_registry` 对象是管理多个源块或多个目标块的 `network_link_registry`。|
-|[multitype_join 类](multitype-join-class.md)|`multitype_join` 消息块是多源、单目标的消息块，可以合并来自其每个源的不同类型的消息并向其目标提供合并的消息的元组。|
+|[multi_link_registry 类](multi-link-registry-class.md)|
+  `multi_link_registry` 对象是管理多个源块或多个目标块的 `network_link_registry`。|
+|[multitype_join 类](multitype-join-class.md)|
+  `multitype_join` 消息块是多源、单目标的消息块，可以合并来自其每个源的不同类型的消息并向其目标提供合并的消息的元组。|
 |[nested_scheduler_missing_detach 类](nested-scheduler-missing-detach-class.md)|此类描述并发运行时检测到你没有在通过 `Scheduler` 对象的 `Attach` 方法附加到第二个计划程序的上下文中调用 `CurrentScheduler::Detach` 方法时引发的异常。|
-|[network_link_registry 类](network-link-registry-class.md)|`network_link_registry` 抽象基类管理源块和目标块之间的链接。|
+|[network_link_registry 类](network-link-registry-class.md)|
+  `network_link_registry` 抽象基类管理源块和目标块之间的链接。|
 |[operation_timed_out 类](operation-timed-out-class.md)|此类描述操作超时时引发的异常。|
-|[ordered_message_processor 类](ordered-message-processor-class.md)|`ordered_message_processor` 是允许消息块按接收顺序处理消息的 `message_processor`。|
-|[overwrite_buffer 类](overwrite-buffer-class.md)|`overwrite_buffer` 消息块是多目标、多源、有序的 `propagator_block`，一次能够存储一条消息。 新消息覆盖之前保存的消息。|
+|[ordered_message_processor 类](ordered-message-processor-class.md)|
+  `ordered_message_processor` 是允许消息块按接收顺序处理消息的 `message_processor`。|
+|[overwrite_buffer 类](overwrite-buffer-class.md)|
+  `overwrite_buffer` 消息块是多目标、多源、有序的 `propagator_block`，一次能够存储一条消息。 新消息覆盖之前保存的消息。|
 |[progress_reporter 类](progress-reporter-class.md)|进度报告器类允许报告特定类型的进度通知。 每个 progress_reporter 对象都是绑定到特定异步动作或操作的。|
-|[propagator_block 类](propagator-block-class.md)|`propagator_block` 类是同时为源和目标的消息块的抽象基类。 它合并了 `source_block` 和 `target_block` 类的功能。|
+|[propagator_block 类](propagator-block-class.md)|
+  `propagator_block` 类是同时为源和目标的消息块的抽象基类。 它合并了 `source_block` 和 `target_block` 类的功能。|
 |[reader_writer_lock 类](reader-writer-lock-class.md)|具有仅限本地旋转的基于编写器首选队列的读取器-编写器锁。 锁授予对编写器的先进先出 (FIFO) 访问权限，并在出现编写器持续负载的情况下停止读取器。|
 |[ScheduleGroup 类](schedulegroup-class.md)|表示计划组的抽象。 计划组整理受益于在时间上（通过在移动到另一个组之前执行同一个组中的另一个任务）或空间上（通过在同一 NUMA 节点或物理套接字上执行同一个组内的多个项）紧密计划在一起的一组相关工作。|
 |[Scheduler 类](scheduler-class.md)|表示并发运行时计划程序的抽象。|
 |[scheduler_not_attached 类](scheduler-not-attached-class.md)|此类描述需要将计划程序附加到当前上下文以执行操作，而实际并未进行附加即执行该操作时引发的异常。|
 |[scheduler_resource_allocation_error 类](scheduler-resource-allocation-error-class.md)|此类描述因未能在并发运行时中获取关键资源而引发的异常。|
 |[scheduler_worker_creation_error 类](scheduler-worker-creation-error-class.md)|此类描述因未能在并发运行时中创建辅助执行上下文而引发的异常。|
-|[SchedulerPolicy 类](schedulerpolicy-class.md)|`SchedulerPolicy` 类包含一组控制计划程序实例的行为的键/值对，一个键/值对对应于一个策略元素。|
-|[simple_partitioner 类](simple-partitioner-class.md)|`simple_partitioner` 类表示由 `parallel_for` 循环访问的范围的静态分区。 分区程序将该范围分成区块，以便每个区块都至少具有区块大小指定的迭代数量。|
-|[single_assignment 类](single-assignment-class.md)|`single_assignment` 消息块是多目标、多源、有序的 `propagator_block`，能够存储单个一次写入的 `message`。|
-|[single_link_registry 类](single-link-registry-class.md)|`single_link_registry` 对象是仅管理单个源块或目标块的 `network_link_registry`。|
-|[source_block 类](source-block-class.md)|`source_block` 是仅限于源的块的抽象基类。 该类提供基本链接管理功能和常见错误检查。|
-|[source_link_manager 类](source-link-manager-class.md)|`source_link_manager` 对象管理到 `ISource` 块的消息块网络链接。|
-|[static_partitioner 类](static-partitioner-class.md)|`static_partitioner` 类表示由 `parallel_for` 循环访问的范围的静态分区。 只要基础计划程序有工作线程可用，分区程序就会将范围分成尽可能多的区块。|
-|[structured_task_group 类](structured-task-group-class.md)|`structured_task_group` 类表示并行工作的高度结构化集合。 可以使用 `task_handle` 对象将各个并行任务排队到 `structured_task_group` 并等待它们完成，或在它们完成执行之前取消任务组，这将中止尚未开始执行的所有任务。|
-|[target_block 类](target-block-class.md)|`target_block` 类是抽象基类，它提供基本链接管理功能和针对仅限于目标的块的错误检查。|
+|[SchedulerPolicy 类](schedulerpolicy-class.md)|
+  `SchedulerPolicy` 类包含一组控制计划程序实例的行为的键/值对，一个键/值对对应于一个策略元素。|
+|[simple_partitioner 类](simple-partitioner-class.md)|
+  `simple_partitioner` 类表示由 `parallel_for` 循环访问的范围的静态分区。 分区程序将该范围分成区块，以便每个区块都至少具有区块大小指定的迭代数量。|
+|[single_assignment 类](single-assignment-class.md)|
+  `single_assignment` 消息块是多目标、多源、有序的 `propagator_block`，能够存储单个一次写入的 `message`。|
+|[single_link_registry 类](single-link-registry-class.md)|
+  `single_link_registry` 对象是仅管理单个源块或目标块的 `network_link_registry`。|
+|[source_block 类](source-block-class.md)|
+  `source_block` 是仅限于源的块的抽象基类。 该类提供基本链接管理功能和常见错误检查。|
+|[source_link_manager 类](source-link-manager-class.md)|
+  `source_link_manager` 对象管理到 `ISource` 块的消息块网络链接。|
+|[static_partitioner 类](static-partitioner-class.md)|
+  `static_partitioner` 类表示由 `parallel_for` 循环访问的范围的静态分区。 只要基础计划程序有工作线程可用，分区程序就会将范围分成尽可能多的区块。|
+|[structured_task_group 类](structured-task-group-class.md)|
+  `structured_task_group` 类表示并行工作的高度结构化集合。 可以使用 `task_handle` 对象将各个并行任务排队到 `structured_task_group` 并等待它们完成，或在它们完成执行之前取消任务组，这将中止尚未开始执行的所有任务。|
+|[target_block 类](target-block-class.md)|
+  `target_block` 类是抽象基类，它提供基本链接管理功能和针对仅限于目标的块的错误检查。|
 |[task 类（并发运行时）](task-class.md)|并行模式库 (PPL) `task` 类。 `task` 对象，表示可异步执行的工作，以及可与并发运行时中的并行算法生成的其他任务一起执行的工作。 成功完成后，它将生成类型为 `_ResultType` 的结果。 类型为 `task<void>` 的任务不生成任何结果。 可独立于其他任务等待和取消的任务。 它也可通过使用 continuations(`then`)、join(`when_all`) 和 choice(`when_any`) 模式由其他任务构成。|
 |[task_canceled 类](task-canceled-class.md)|此类描述了 PPL 任务层为了强制取消当前任务而引发的异常。 它也会通过引发`get()`方法[任务](task-class.md)，为已取消的任务。|
-|[task_completion_event 类](task-completion-event-class.md)|`task_completion_event` 类可让你延迟任务的执行，直到满足条件，或开始一项任务来响应外部事件。|
-|[task_continuation_context 类](task-continuation-context-class.md)|`task_continuation_context` 类可让你指定想要执行延续的位置。 最好仅使用此类从 UWP 应用。 对于非 Windows 运行时应用程序，任务延续的执行上下文是由运行时，并且不可配置。|
-|[task_group 类](task-group-class.md)|`task_group` 类表示可以等待或取消的并行工作的集合。|
-|[task_handle 类](task-handle-class.md)|`task_handle` 类表示单个并行工作项。 它封装执行一项工作所需的指令和数据。|
+|[task_completion_event 类](task-completion-event-class.md)|
+  `task_completion_event` 类可让你延迟任务的执行，直到满足条件，或开始一项任务来响应外部事件。|
+|[task_continuation_context 类](task-continuation-context-class.md)|
+  `task_continuation_context` 类可让你指定想要执行延续的位置。 最好仅使用此类从 UWP 应用。 对于非 Windows 运行时应用程序，任务延续的执行上下文是由运行时，并且不可配置。|
+|[task_group 类](task-group-class.md)|
+  `task_group` 类表示可以等待或取消的并行工作的集合。|
+|[task_handle 类](task-handle-class.md)|
+  `task_handle` 类表示单个并行工作项。 它封装执行一项工作所需的指令和数据。|
 |[task_options 类（并发运行时）](task-options-class-concurrency-runtime.md)|表示可用于创建任务的选项|
-|[timer 类](timer-class.md)|`timer` 消息块是单目标的 `source_block`，能够在经过指定的时间段后或在特定时间间隔向其目标发送消息。|
-|[transformer 类](transformer-class.md)|`transformer` 消息块是单目标、多源、有序的 `propagator_block`，它可以接受一个类型的消息，并能够存储不限数量的另一个类型的消息。|
-|[unbounded_buffer 类](unbounded-buffer-class.md)|`unbounded_buffer` 消息块是多目标、多源、有序的 `propagator_block`，能够存储不限数量的消息。|
+|[timer 类](timer-class.md)|
+  `timer` 消息块是单目标的 `source_block`，能够在经过指定的时间段后或在特定时间间隔向其目标发送消息。|
+|[transformer 类](transformer-class.md)|
+  `transformer` 消息块是单目标、多源、有序的 `propagator_block`，它可以接受一个类型的消息，并能够存储不限数量的另一个类型的消息。|
+|[unbounded_buffer 类](unbounded-buffer-class.md)|
+  `unbounded_buffer` 消息块是多目标、多源、有序的 `propagator_block`，能够存储不限数量的消息。|
 |[unsupported_os 类](unsupported-os-class.md)|此类描述使用不受支持的操作系统时引发的一种异常。|
 
 ### <a name="structures"></a>结构
 
 |名称|描述|
 |----------|-----------------|
-|[DispatchState 结构](dispatchstate-structure.md)|`DispatchState` 结构用于将状态传输给 `IExecutionContext::Dispatch` 方法。 它描述了在 `IExecutionContext` 接口上调用 `Dispatch` 方法的情形。|
+|[DispatchState 结构](dispatchstate-structure.md)|
+  `DispatchState` 结构用于将状态传输给 `IExecutionContext::Dispatch` 方法。 它描述了在 `IExecutionContext` 接口上调用 `Dispatch` 方法的情形。|
 |[IExecutionContext 结构](iexecutioncontext-structure.md)|可以在给定虚拟处理器上运行并可以协作切换上下文的执行上下文的接口。|
 |[IExecutionResource 结构](iexecutionresource-structure.md)|硬件线程的抽象。|
 |[IResourceManager 结构](iresourcemanager-structure.md)|并发运行时的资源管理器的接口。 这是计划程序与资源管理器进行通信的接口。|
@@ -156,14 +196,17 @@ namespace concurrency;
 
 |name|描述|
 |----------|-----------------|
-|[agent_status](concurrency-namespace-enums.md#agent_status)|`agent` 的有效状态。|
+|[agent_status](concurrency-namespace-enums.md#agent_status)|
+  `agent` 的有效状态。|
 |[Agents_EventType](concurrency-namespace-enums.md#agents_eventtype)|可以使用代理库提供的跟踪功能进行跟踪的事件的类型|
 |[ConcRT_EventType](concurrency-namespace-enums.md#concrt_eventtype)|可以使用并发运行时提供的跟踪功能进行跟踪的事件的类型。|
 |[Concrt_TraceFlags](concurrency-namespace-enums.md#concrt_traceflags)|事件类型的跟踪标志|
 |[CriticalRegionType](concurrency-namespace-enums.md#criticalregiontype)|上下文位于其中的关键区域的类型。|
 |[DynamicProgressFeedbackType](concurrency-namespace-enums.md#dynamicprogressfeedbacktype)|由 `DynamicProgressFeedback` 策略用于描述重新平衡计划程序资源的依据是从计划程序收集的统计信息，还是通过对 `IVirtualProcessorRoot` 接口上的 `Activate` 和 `Deactivate` 方法进行调用以进出空闲状态的虚拟处理器。 有关可用计划程序策略的详细信息，请参阅[PolicyElementKey](concurrency-namespace-enums.md#policyelementkey)。|
-|[join_type](concurrency-namespace-enums.md#join_type)|`join` 消息块的类型。|
-|[message_status](concurrency-namespace-enums.md#message_status)|`message` 对象的内容到块的有效响应。|
+|[join_type](concurrency-namespace-enums.md#join_type)|
+  `join` 消息块的类型。|
+|[message_status](concurrency-namespace-enums.md#message_status)|
+  `message` 对象的内容到块的有效响应。|
 |[PolicyElementKey](concurrency-namespace-enums.md#policyelementkey)|描述计划程序行为各个方面的策略键。 每个策略元素由一个键值对描述。 有关计划程序策略和它们的影响计划程序的详细信息，请参阅[任务计划程序](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)。|
 |[SchedulerType](concurrency-namespace-enums.md#schedulertype)|由 `SchedulerKind` 策略用于描述应由计划程序用于基础执行上下文的线程的类型。 有关可用计划程序策略的详细信息，请参阅[PolicyElementKey](concurrency-namespace-enums.md#policyelementkey)。|
 |[SchedulingProtocolType](concurrency-namespace-enums.md#schedulingprotocoltype)|由 `SchedulingProtocol` 策略用于描述将哪个计划算法用于计划程序。 有关可用计划程序策略的详细信息，请参阅[PolicyElementKey](concurrency-namespace-enums.md#policyelementkey)。|
@@ -224,7 +267,7 @@ namespace concurrency;
 |----------|-----------------|
 |[operator!=](concurrency-namespace-operators.md#operator_neq)|测试运算符左侧的 `concurrent_vector` 对象是否不等于右侧的 `concurrent_vector` 对象。|
 |[operator&&](concurrency-namespace-operators.md#operator_amp_amp)|已重载。 创建一个任务，在作为自变量提供的两个任务成功完成后，此任务将成功完成。|
-|[operator&#124;&#124;](concurrency-namespace-operators.md#operator_lor)|已重载。 创建将在作为自变量提供的任一任务成功完成时成功完成的任务。|
+|[operator&#124;&#124;](concurrency-namespace-operators.md#operator_lor)|已重载。 创建将在作为参数提供的任一任务成功完成时成功完成的任务。|
 |[operator<](concurrency-namespace-operators.md#operator_lt)|测试运算符左侧的 `concurrent_vector` 对象是否小于右侧的 `concurrent_vector` 对象。|
 |[operator<=](concurrency-namespace-operators.md#operator_lt_eq)|测试运算符左侧的 `concurrent_vector` 对象是否小于或等于右侧的 `concurrent_vector` 对象。|
 |[operator==](concurrency-namespace-operators.md#operator_eq_eq)|测试运算符左侧的 `concurrent_vector` 对象是否等于右侧的 `concurrent_vector` 对象。|
@@ -261,4 +304,3 @@ namespace concurrency;
 ## <a name="see-also"></a>请参阅
 
 [引用](reference-concurrency-runtime.md)
-

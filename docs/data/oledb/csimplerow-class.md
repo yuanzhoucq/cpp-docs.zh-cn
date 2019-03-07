@@ -35,12 +35,12 @@ helpviewer_keywords:
 - m_dwRef
 - m_iRowset
 ms.assetid: 06d9621d-60cc-4508-8b0c-528d1b1a809b
-ms.openlocfilehash: dba86b310dcd9b89026d95732f9ca542e6995146
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: b7284ace73d80eff6337e1d71cafef26094455f0
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556629"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414014"
 ---
 # <a name="csimplerow-class"></a>CSimpleRow 类
 
@@ -78,7 +78,7 @@ class CSimpleRow
 
 行控点在逻辑上就结果行的唯一标记。 `IRowsetImpl` 创建一个新`CSimpleRow`为每个行中请求[irowsetimpl:: Getnextrows](../../data/oledb/irowsetimpl-getnextrows.md)。 `CSimpleRow` 因为它的默认模板自变量也可以使用的行控点，您自己的实现替换`IRowsetImpl`。 到替换此类的唯一要求是能够提供接受类型的单个参数的构造函数替换类**长**。
 
-## <a name="addrefrow"></a> Csimplerow:: Addrefrow
+## <a name="addrefrow"></a> CSimpleRow::AddRefRow
 
 将引用计数添加到现有的行控点，以线程安全的方式。
 
@@ -88,7 +88,7 @@ class CSimpleRow
 DWORD AddRefRow();
 ```
 
-## <a name="compare"></a> Csimplerow:: Compare
+## <a name="compare"></a> CSimpleRow::Compare
 
 比较两个行，以查看它们是否引用同一个行实例。
 
@@ -105,7 +105,7 @@ HRESULT Compare(CSimpleRow* pRow);
 
 ### <a name="return-value"></a>返回值
 
-HRESULT 值，通常为 S_OK，指示两个行是相同的行实例，或 S_FALSE，指示两个行都不同。 请参阅[IRowsetIdentity::IsSameRow](https://docs.microsoft.com/previous-versions/windows/desktop/ms719629(v=vs.85))中*OLE DB 程序员参考*有关其他可能的返回值。
+HRESULT 值，通常为 S_OK，指示两个行是相同的行实例，或 S_FALSE，指示两个行都不同。 请参阅[IRowsetIdentity::IsSameRow](/previous-versions/windows/desktop/ms719629(v=vs.85))中*OLE DB 程序员参考*有关其他可能的返回值。
 
 ## <a name="csimplerow"></a> Csimplerow:: Csimplerow
 
@@ -126,7 +126,7 @@ CSimpleRow(DBCOUNTITEM iRowsetCur);
 
 集[m_iRowset](../../data/oledb/csimplerow-m-irowset.md)到*iRowsetCur*。
 
-## <a name="releaserow"></a> Csimplerow:: Releaserow
+## <a name="releaserow"></a> CSimpleRow::ReleaseRow
 
 释放行以线程安全的方式。
 
@@ -136,7 +136,7 @@ CSimpleRow(DBCOUNTITEM iRowsetCur);
 DWORD ReleaseRow();
 ```
 
-## <a name="dwref"></a> Csimplerow:: M_dwref
+## <a name="dwref"></a> CSimpleRow::m_dwRef
 
 为现有的行句柄的引用计数。
 
@@ -146,7 +146,7 @@ DWORD ReleaseRow();
 DWORD m_dwRef;
 ```
 
-## <a name="irowset"></a> Csimplerow:: M_irowset
+## <a name="irowset"></a> CSimpleRow::m_iRowset
 
 表示光标的行集的索引。
 

@@ -35,23 +35,23 @@ helpviewer_keywords:
 - calculated symbols
 - shared symbols
 ms.assetid: 26541832-8dba-4177-b642-e08f94502ea7
-ms.openlocfilehash: 4f1c44e8fc2ae34ddcb65ec23ca8d98e11d50ec0
-ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
+ms.openlocfilehash: d3c8a747c1e66490c333ff050c7bfa6e6f723a87
+ms.sourcegitcommit: f127b08f114b8d6cab6b684febcb6f2ae0e055ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56320583"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56954895"
 ---
 # <a name="how-to-manage-symbols"></a>如何：管理符号
 
-创建新资源或资源对象时，开发环境会向它分配默认符号名，例如 IDD_DIALOG1。 可以使用[属性窗口](/visualstudio/ide/reference/properties-window)更改默认符号名或更改任何已与资源关联的符号的名称。
+当您创建新资源或资源对象时，在开发环境将其分配默认符号名，例如， `IDD_DIALOG1`。 可以使用[属性窗口](/visualstudio/ide/reference/properties-window)更改默认符号名或更改任何已与资源关联的符号的名称。
 
 对于关联的符号与单个资源，还可以使用**属性**窗口来更改符号值。 可以使用[资源符号对话框](../windows/resource-symbols-dialog-box.md)若要更改的当前未分配给资源的符号的值。
 
 通常情况下所有符号定义都保存在`Resource.h`。 但是，你可能需要更改此包含文件名，以便可以在同一个目录下使用多个资源文件。
 
 > [!NOTE]
-> 如果你的项目尚未包含.rc 文件，请参阅[创建新的资源脚本文件](../windows/how-to-create-a-resource-script-file.md)。
+> 如果你的项目尚未包含.rc 文件，请参阅[如何：创建资源](../windows/how-to-create-a-resource-script-file.md)。
 
 ## <a name="symbol-name-restrictions"></a>符号名限制
 
@@ -67,14 +67,14 @@ ms.locfileid: "56320583"
 
 - 符号名不区分大小写，但保留第一个符号定义的大小写。 定义符号的头文件由资源编译器/编辑器和 C++ 程序用于引用资源文件中定义的资源。 对于只有大小写不同的两个符号名，C++ 程序会看到两个单独的符号，而资源编译器/编辑器将这两个名称视为引用单个符号。
 
-   > [!NOTE]
-   > 如果不遵循下面概述的标准符号名方案（ID*_[关键字]），并且符号名恰好与资源脚本编译器已知的关键字相同，则尝试生成资源脚本文件会导致看似难以进行诊断的随机错误生成。 若要防止出现此情况，请遵循标准命名方案。
+> [!NOTE]
+> 如果不遵循标准符号名方案 （下面略述和符号名恰好是相同的资源脚本编译器，尝试生成资源脚本文件与已知关键字将导致生成的随机错误这是很难诊断。 若要防止出现此情况，请遵循标准命名方案。
 
-符号名具有描述性前缀，可指示它们所表示的资源或对象的类型。 这些描述性前缀以文本组合 ID 开头。 Microsoft 基础类库 (MFC) 使用下表中所示的符号命名约定。
+符号名具有描述性前缀，可指示它们所表示的资源或对象的类型。 这些描述性前缀以文本组合 ID 开头。 Microsoft 基础类库 (MFC) 使用下表中所示的符号命名约定：
 
 |类别|前缀|使用|
 |--------------|------------|---------|
-|资源|IDR_ IDD_ IDC_ IDI_ IDB_|加速器或菜单（以及关联或自定义资源） 对话框 光标 图标 位图|
+|资源|IDR_、 IDD_、 IDC_、 IDI_、 IDB_|快捷键或菜单 （和关联或自定义资源），对话框、 游标、 图标、 位图|
 |菜单项|ID_|Menu item|
 |命令|ID_|命令|
 |控件和子窗口|IDC_|控件|
@@ -89,11 +89,12 @@ ms.locfileid: "56320583"
 
    如果输入新符号名，已自动对其赋值。
 
-可以使用[资源符号对话框](../windows/resource-symbols-dialog-box.md)更改当前未分配给资源的符号的名称。
+> [!NOTE]
+> 可以使用[资源符号对话框](../windows/resource-symbols-dialog-box.md)更改当前未分配给资源的符号的名称。
 
 ## <a name="symbol-value-restrictions"></a>符号值限制
 
-符号值可以是用于 #define 预处理器指令的以正常方式表示的任何整数。 下面是符号值的一些示例：
+符号值可以是任何整数以正常方式表示`#define`预处理器指令。 下面是符号值的一些示例：
 
 ```
 18
@@ -116,15 +117,13 @@ ms.locfileid: "56320583"
     #define IDC_MYEDIT  IDC_OTHEREDIT  //not supported
     ```
 
-- 您不能用作值定义参数使用预处理器宏。 例如：
+- 您不能用作值定义参数使用预处理器宏。 以下示例并不是有效的表达式，而不考虑什么`ID`在编译时计算结果为：
 
     ```cpp
     #define   IDD_ABOUT  ID(7) //not supported
     ```
 
-   不是有效的表达式，而不考虑什么`ID`在编译时计算的结果。
-
-- 应用程序可能具有包含使用表达式定义的符号的现有文件。 有关如何包含符号作为只读符号的详细信息，请参阅[使用共享 （只读） 或计算符号](../windows/including-shared-read-only-or-calculated-symbols.md)。
+- 应用程序可能具有包含使用表达式定义的符号的现有文件。
 
 有关数字范围的详细信息，请参阅[TN023:标准 MFC 资源](../mfc/tn023-standard-mfc-resources.md)。
 
@@ -138,7 +137,7 @@ ms.locfileid: "56320583"
     IDC_EDITNAME=5100
     ```
 
-下次保存项目时，新值会存储在符号头文件中。 中的 ID 框中; 只有符号名保持可见它们验证之后，不显示的等号和值。
+   下次保存项目时，新值会存储在符号头文件中。 在 ID 框中，只有符号名仍然可见且等号和值不会显示它们正在验证之后。
 
 ## <a name="change-or-delete-symbols"></a>更改或删除符号
 
@@ -151,14 +150,14 @@ ms.locfileid: "56320583"
 1. 中提供的框中编辑符号的名称或值**更改符号**对话框。
 
    > [!NOTE]
-   > 若要更改符号的*是*分配给资源或对象，必须使用资源编辑器或**属性**窗口。
+   > 若要更改分配给资源或对象的符号，必须使用资源编辑器或**属性**窗口。
 
 ### <a name="to-delete-an-unassigned-unused-symbol"></a>删除未分配（未使用）的符号
 
 在中[资源符号对话框](../windows/resource-symbols-dialog-box.md)，选择你想要删除，并且选择符号**删除**。
 
-   > [!NOTE]
-   > 在资源文件中删除未使用的符号之前，请确保它未在程序中的其他位置使用，也未由编译时包含的资源文件使用。
+> [!NOTE]
+> 在删除之前在资源文件中未使用的符号，请确保它不使用其他位置在程序中或在编译时包含的资源文件。
 
 ## <a name="include-symbols"></a>包含符号
 
@@ -193,9 +192,9 @@ ms.locfileid: "56320583"
    请勿调用文件`Resource.h`，因为它是通常由主符号头文件的文件名。
 
    > [!NOTE]
-   > **重要**完全按照您键入您在只读符号指令框中键入包含资源文件中。 请确保输入的内容不包含任何拼写或语法错误。
+   > 在键入**只读符号指令**框包含在资源文件中完全按照输入它。 请确保输入的内容不包含任何拼写或语法错误。
 
-   使用**只读符号指令**框可包括仅限符号定义的文件。 不包含资源定义;否则，保存文件时，会创建重复的资源定义。
+   使用**只读符号指令**框可包括仅限符号定义的文件。 不包含资源定义，保存文件时，将创建其他重复资源定义。
 
 1. 将符号置于指定的文件中。
 
@@ -215,6 +214,6 @@ Win32
 
 ## <a name="see-also"></a>请参阅
 
-[资源标识符 （符号）](../windows/symbols-resource-identifiers.md)<br/>
-[创建符号](../windows/creating-new-symbols.md)<br/>
+[资源标识符（符号）](../windows/symbols-resource-identifiers.md)<br/>
+[如何：创建符号](../windows/creating-new-symbols.md)<br/>
 [预定义的符号 ID](../windows/predefined-symbol-ids.md)<br/>

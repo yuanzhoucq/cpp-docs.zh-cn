@@ -17,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - ICommandSource interface [MFC]
 ms.assetid: a4b1f698-c09f-4ba8-9b13-0e74a0a4967e
-ms.openlocfilehash: 4fca5a2ffef7e8da4f6dd79fcd99c72e92cfdf6a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 21c4f4544a6ccf2342580bc5859739fc1f50d0c2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50538432"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296015"
 ---
 # <a name="icommandsource-interface"></a>ICommandSource 接口
 
@@ -55,7 +55,7 @@ interface class ICommandSource
 
 当您承载在 MFC 视图中，用户控件时[CWinFormsView 类](../../mfc/reference/cwinformsview-class.md)路由命令和更新命令 UI 消息到用户控件，使其能够处理 MFC 命令 （例如，框架菜单项和工具栏按钮）。 通过实现[ICommandTarget 接口](../../mfc/reference/icommandtarget-interface.md)，让用户能够控制对引用`ICommandSource`对象。
 
-请参阅[如何： 向 Windows 窗体控件添加命令传送](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)以举例说明如何使用`ICommandTarget`。
+请参阅[如何：向 Windows 窗体控件添加命令传送](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)以举例说明如何使用`ICommandTarget`。
 
 有关使用 Windows 窗体的详细信息，请参阅[在 MFC 中使用 Windows 窗体用户控件](../../dotnet/using-a-windows-form-user-control-in-mfc.md)。
 
@@ -82,7 +82,7 @@ void AddCommandHandler(
 ### <a name="remarks"></a>备注
 
 此方法将命令处理程序 cmdHandler 添加到命令源对象，并将该处理程序映射到 cmdID。
-请参阅[如何： 向 Windows 窗体控件添加命令传送](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)以举例说明如何使用 AddCommandHandler。
+请参阅[如何：向 Windows 窗体控件添加命令传送](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)以举例说明如何使用 AddCommandHandler。
 
 ## <a name="addcommandrangehandler"></a> ICommandSource::AddCommandRangeHandler
 
@@ -248,5 +248,5 @@ void SendCommand(unsigned int command);
 此方法以同步方式发送的消息映射到指定的命令的 ID。 它调用 CWnd::SendMessage 窗口的消息队列中放置消息，并等待，直到该窗口过程返回之前处理完该消息。
 ## <a name="see-also"></a>请参阅
 
-[如何：向 Windows 窗体控件添加命令传送](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)<br/>
+[如何：向 Windows 窗体控件添加命令路由](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)<br/>
 [ICommandTarget 接口](../../mfc/reference/icommandtarget-interface.md)

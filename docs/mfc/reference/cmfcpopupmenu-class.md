@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CMFCPopupMenu [MFC], OnChangeHot
 - CMFCPopupMenu [MFC], OnChooseItem
 ms.assetid: 9555dca1-8c9c-44c9-af72-0659ddad128e
-ms.openlocfilehash: b52ae91b7ce0111725e5ba21a7f8ca8aaa6779e9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b45ac09ff87c191e55e403951fdff18cae33256d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50517671"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57292271"
 ---
 # <a name="cmfcpopupmenu-class"></a>CMFCPopupMenu 类
 
@@ -310,8 +310,8 @@ static BOOL __stdcall ActivatePopupMenu(
 
 ### <a name="parameters"></a>参数
 
-[in]*pTopFrame*<br/>
-[in]*pPopupMenu*<br/>
+[in] *pTopFrame*<br/>
+[in] *pPopupMenu*<br/>
 
 ### <a name="return-value"></a>返回值
 
@@ -381,7 +381,7 @@ void CloseMenu(BOOL bSetFocusToBar = FALSE);
 
 ### <a name="parameters"></a>参数
 
-[in]*bSetFocusToBar*<br/>
+[in] *bSetFocusToBar*<br/>
 
 ### <a name="remarks"></a>备注
 
@@ -435,7 +435,7 @@ virtual BOOL Create(
 *hMenu*<br/>
 [in]菜单资源的句柄。
 
-*被阻止*<br/>
+*bLocked*<br/>
 [in]一个布尔型参数，该值指示是否可自定义菜单。 FALSE 表示弹出菜单是可自定义。
 
 *bOwnMessage*<br/>
@@ -466,9 +466,9 @@ virtual CPane* CreateTearOffBar(
 
 ### <a name="parameters"></a>参数
 
-[in]*pWndMain*<br/>
-[in]*uiID*<br/>
-[in]*lpszName*<br/>
+[in] *pWndMain*<br/>
+[in] *uiID*<br/>
+[in] *lpszName*<br/>
 
 ### <a name="return-value"></a>返回值
 
@@ -533,7 +533,7 @@ void EnableResize(CSize sizeMinResize);
 
 ### <a name="parameters"></a>参数
 
-[in]*sizeMinResize*<br/>
+[in] *sizeMinResize*<br/>
 
 ### <a name="remarks"></a>备注
 
@@ -557,7 +557,7 @@ void EnableVertResize(int nMinResize);
 
 ### <a name="parameters"></a>参数
 
-[in]*nMinResize*<br/>
+[in] *nMinResize*<br/>
 
 ### <a name="remarks"></a>备注
 
@@ -569,7 +569,7 @@ CMFCToolBarMenuButton* FindSubItemByCommand(UINT uiCmd) const;
 
 ### <a name="parameters"></a>参数
 
-[in]*uiCmd*<br/>
+[in] *uiCmd*<br/>
 
 ### <a name="return-value"></a>返回值
 
@@ -754,7 +754,7 @@ virtual CWnd* GetParentArea(CRect& rectParentBtn);
 
 ### <a name="parameters"></a>参数
 
-[in]*rectParentBtn*<br/>
+[in] *rectParentBtn*<br/>
 
 ### <a name="return-value"></a>返回值
 
@@ -894,7 +894,7 @@ int InsertItem(
 
 ### <a name="parameters"></a>参数
 
-*按钮*<br/>
+*button*<br/>
 [in]对要添加的菜单项的引用。
 
 *iInsertAt*<br/>
@@ -1095,7 +1095,7 @@ void MoveTo(const CPoint& pt);
 
 ### <a name="parameters"></a>参数
 
-[in]*pt*<br/>
+[in] *pt*<br/>
 
 ### <a name="remarks"></a>备注
 
@@ -1107,7 +1107,7 @@ virtual void OnChangeHot(int nHot);
 
 ### <a name="parameters"></a>参数
 
-[in]*nHot*<br/>
+[in] *nHot*<br/>
 
 ### <a name="remarks"></a>备注
 
@@ -1119,7 +1119,7 @@ virtual void OnChooseItem(UINT uidCmdID);
 
 ### <a name="parameters"></a>参数
 
-[in]*uidCmdID*<br/>
+[in] *uidCmdID*<br/>
 
 ### <a name="remarks"></a>备注
 
@@ -1135,10 +1135,10 @@ virtual BOOL OnCmdMsg(
 
 ### <a name="parameters"></a>参数
 
-[in]*nID*<br/>
-[in]*nCode*<br/>
-[in]*pExtra*<br/>
-[in]*pHandlerInfo*<br/>
+[in] *nID*<br/>
+[in] *nCode*<br/>
+[in] *pExtra*<br/>
+[in] *pHandlerInfo*<br/>
 
 ### <a name="return-value"></a>返回值
 
@@ -1152,7 +1152,7 @@ BOOL PostCommand(UINT uiCommandID);
 
 ### <a name="parameters"></a>参数
 
-[in]*uiCommandID*<br/>
+[in] *uiCommandID*<br/>
 
 ### <a name="return-value"></a>返回值
 
@@ -1166,7 +1166,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 
 ### <a name="parameters"></a>参数
 
-[in]*pMsg*<br/>
+[in] *pMsg*<br/>
 
 ### <a name="return-value"></a>返回值
 
@@ -1180,7 +1180,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 
 ### <a name="parameters"></a>参数
 
-[in]*bNotify*<br/>
+[in] *bNotify*<br/>
 
 ### <a name="remarks"></a>备注
 
@@ -1265,7 +1265,7 @@ void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
 
 ### <a name="parameters"></a>参数
 
-[in]*bAutoDestroy*<br/>
+[in] *bAutoDestroy*<br/>
 
 ### <a name="remarks"></a>备注
 
@@ -1296,7 +1296,7 @@ static void SetForceMenuFocus(BOOL bValue);
 
 ### <a name="parameters"></a>参数
 
-*其中 bValue*<br/>
+*bValue*<br/>
 [in]如果你想要强制转换为菜单栏显示一个弹出菜单时输入的焦点的框架，则为 TRUE。 如果你想要保留焦点的弹出菜单，则为 FALSE。
 
 ### <a name="remarks"></a>备注
@@ -1313,7 +1313,7 @@ static void SetForceShadow(BOOL bValue);
 
 ### <a name="parameters"></a>参数
 
-*其中 bValue*<br/>
+*bValue*<br/>
 [in]如果你想要否则 FALSE 绘制菜单阴影的框架，则为 TRUE。
 
 ### <a name="remarks"></a>备注
@@ -1345,7 +1345,7 @@ void SetMessageWnd(CWnd* pMsgWnd);
 
 ### <a name="parameters"></a>参数
 
-[in]*pMsgWnd*<br/>
+[in] *pMsgWnd*<br/>
 
 ### <a name="remarks"></a>备注
 
@@ -1357,7 +1357,7 @@ void SetParentRibbonElement(CMFCRibbonBaseElement* pElem);
 
 ### <a name="parameters"></a>参数
 
-[in]*pElem*<br/>
+[in] *pElem*<br/>
 
 ### <a name="remarks"></a>备注
 

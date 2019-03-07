@@ -20,16 +20,17 @@ f1_keywords:
 helpviewer_keywords:
 - propagator_block class
 ms.assetid: 86aa75fd-eda5-42aa-aadf-25c0c1c9742d
-ms.openlocfilehash: 38b7c920f8ffcab6d709d9484f308a56cd6b8425
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7f466ad8f474ddb73d2235d9999c3dbeae627672
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613273"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272940"
 ---
 # <a name="propagatorblock-class"></a>propagator_block 类
 
-`propagator_block` 类是同时为源和目标的消息块的抽象基类。 它合并了 `source_block` 和 `target_block` 类的功能。
+
+  `propagator_block` 类是同时为源和目标的消息块的抽象基类。 它合并了 `source_block` 和 `target_block` 类的功能。
 
 ## <a name="syntax"></a>语法
 
@@ -222,7 +223,7 @@ virtual message_status propagate_message(
 propagator_block();
 ```
 
-##  <a name="dtor"></a> ~ propagator_block
+##  <a name="dtor"></a> ~propagator_block
 
 销毁 `propagator_block` 对象。
 
@@ -240,7 +241,7 @@ void register_filter(filter_method const& _Filter);
 
 ### <a name="parameters"></a>参数
 
-*筛选 （_f)*<br/>
+*_Filter*<br/>
 筛选器方法。
 
 ##  <a name="remove_network_links"></a> remove_network_links

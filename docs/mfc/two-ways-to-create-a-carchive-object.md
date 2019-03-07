@@ -13,12 +13,12 @@ helpviewer_keywords:
 - data storage [MFC], CArchive class
 - CArchive class [MFC], constructor
 ms.assetid: aefa28ce-b55c-40dc-9e42-5f038030985d
-ms.openlocfilehash: a97223602e9994647a8af16cc68de5394494c1ca
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 80e3e73840bce53691c3f5fdafb62c60bdb8f832
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50659921"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273798"
 ---
 # <a name="two-ways-to-create-a-carchive-object"></a>创建 CArchive 对象的两种方法
 
@@ -60,7 +60,7 @@ ms.locfileid: "50659921"
 
    第二个参数`CArchive`构造函数是一个枚举的值，指定是否将用于从文件存储或加载数据或使用存档。 `Serialize`函数的对象通过调用检查此状态`IsStoring`存档对象函数。
 
-完成后，存储或加载数据传入或传出`CArchive`对象，请关闭它。 尽管`CArchive`(和`CFile`) 存档 （和文件），会自动关闭对象，它是很好的做法显式执行操作，因为它可从错误中的恢复更轻松。 有关错误处理的详细信息，请参阅文章[异常： 捕捉和删除异常](../mfc/exceptions-catching-and-deleting-exceptions.md)。
+完成后，存储或加载数据传入或传出`CArchive`对象，请关闭它。 尽管`CArchive`(和`CFile`) 存档 （和文件），会自动关闭对象，它是很好的做法显式执行操作，因为它可从错误中的恢复更轻松。 有关错误处理的详细信息，请参阅文章[异常：捕捉和删除异常](../mfc/exceptions-catching-and-deleting-exceptions.md)。
 
 #### <a name="to-close-the-carchive-object"></a>若要关闭 CArchive 对象
 
@@ -71,4 +71,3 @@ ms.locfileid: "50659921"
 ## <a name="see-also"></a>请参阅
 
 [序列化：对象的序列化](../mfc/serialization-serializing-an-object.md)
-

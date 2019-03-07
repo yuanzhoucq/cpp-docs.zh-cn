@@ -10,12 +10,12 @@ helpviewer_keywords:
 - throwing exceptions, managed exceptions
 - Visual C++, handling managed exceptions
 ms.assetid: 40ce8931-1ecc-491a-815f-733b23fcba35
-ms.openlocfilehash: 45244ace414fc073956684088ac43eb9b92f1e5b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b4eb74fe3e485f12ac7f43b0a8a56800ef0535e7
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588235"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423841"
 ---
 # <a name="basic-concepts-in-using-managed-exceptions"></a>使用托管异常中的基本概念
 
@@ -29,7 +29,7 @@ ms.locfileid: "50588235"
 
 ## <a name="remarks"></a>备注
 
-如果使用编译 **/clr**选项，您可以处理 CLR 异常，以及标准[c + + 异常处理](../cpp/cpp-exception-handling.md)并[结构化异常处理](../cpp/structured-exception-handling-c-cpp.md)(SEH)。 CLR 异常是由托管类型引发任何异常。 [System:: exception](https://msdn.microsoft.com/library/system.exception.aspx)类提供许多有用的方法，用于处理 CLR 异常和建议作为用户定义的异常类的基类。
+如果使用编译 **/clr**选项，您可以处理 CLR 异常，以及标准<xref:System.Exception>类提供许多有用的方法，用于处理 CLR 异常和建议作为用户定义的异常的基类类。
 
 捕获从接口派生的异常类型下，不支持 **/clr**。 此外，公共语言运行时不会不允许您捕获堆栈溢出异常;堆栈溢出异常将终止该进程。
 
@@ -140,7 +140,7 @@ In 'catch(MyStruct^ catchException)'
 
 ### <a name="catching-unmanaged-types"></a>捕获非托管的类型
 
-时引发的非托管的对象类型，则将其包装类型的异常[System::Runtime.InteropServices::SEHException](https://msdn.microsoft.com/library/system.runtime.interopservices.sehexception.aspx)。 搜索相应时**捕获**子句中，有两种可行方法。
+时引发的非托管的对象类型，则将其包装的类型异常<xref:System.Runtime.InteropServices.SEHException>。 搜索相应时**捕获**子句中，有两种可行方法。
 
 - 如果遇到本机 c + + 类型，此异常将解包并相比所遇到的类型。 这种比较允许本机 c + + 类型以正常方式捕获。
 

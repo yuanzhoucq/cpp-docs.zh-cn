@@ -10,12 +10,12 @@ helpviewer_keywords:
 - /DELAYLOAD linker option
 - delayed loading of DLLs, /DELAYLOAD option
 ms.assetid: 39ea0f1e-5c01-450f-9c75-2d9761ff9b28
-ms.openlocfilehash: 3833c2006a93ee73d2ed68ab7be5e869935143ce
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aa8cc5a565b4af625a1ee85f67ca1c82e065486b
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525003"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57416275"
 ---
 # <a name="delayload-delay-load-import"></a>/DELAYLOAD（延迟加载导入）
 
@@ -23,7 +23,7 @@ ms.locfileid: "50525003"
 
 ## <a name="parameters"></a>参数
 
-*dll 名称*<br/>
+*dllname*<br/>
 想要延迟加载的 DLL 的名称。
 
 ## <a name="remarks"></a>备注

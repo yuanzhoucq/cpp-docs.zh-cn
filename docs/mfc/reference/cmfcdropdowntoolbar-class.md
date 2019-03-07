@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CMFCDropDownToolBar [MFC], OnSendCommand
 - CMFCDropDownToolBar [MFC], OnUpdateCmdUI
 ms.assetid: 78818ec5-83ce-42fa-a0d4-2d9d5ecc8770
-ms.openlocfilehash: 9c5115d2453f21d83eda39950ac45a0290e9bfa8
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 704d48cc546943d818ae8b898060fe0f7e203c53
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176934"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303548"
 ---
 # <a name="cmfcdropdowntoolbar-class"></a>CMFCDropDownToolBar 类
 
@@ -72,7 +72,7 @@ class CMFCDropDownToolBar : public CMFCToolBar
 
 3. 替换为与将虚拟按钮`CMFCDropDownToolBarButton`通过使用对象[CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)。
 
-有关工具栏按钮的详细信息，请参阅[演练： 将置于工具栏上的控件](../../mfc/walkthrough-putting-controls-on-toolbars.md)。 下拉工具栏的示例，请参阅示例项目 VisualStudioDemo。
+有关工具栏按钮的详细信息，请参阅[演练：将控件置于工具栏上](../../mfc/walkthrough-putting-controls-on-toolbars.md)。 下拉工具栏的示例，请参阅示例项目 VisualStudioDemo。
 
 ## <a name="example"></a>示例
 
@@ -138,7 +138,7 @@ virtual BOOL LoadBitmap(
 *uiMenuResID*<br/>
 [in]用于引用常规菜单图像的位图资源 ID。
 
-*被阻止*<br/>
+*bLocked*<br/>
 [in]为 TRUE，则锁定工具栏;否则为 FALSE。
 
 *uiDisabledResID*<br/>
@@ -172,19 +172,19 @@ virtual BOOL LoadToolBar(
 
 ### <a name="parameters"></a>参数
 
-[in]*uiResID*<br/>
+[in] *uiResID*<br/>
 
-[in]*uiColdResID*<br/>
+[in] *uiColdResID*<br/>
 
-[in]*uiMenuResID*<br/>
+[in] *uiMenuResID*<br/>
 
 [in]*BOOL*<br/>
 
-[in]*uiDisabledResID*<br/>
+[in] *uiDisabledResID*<br/>
 
-[in]*uiMenuDisabledResID*<br/>
+[in] *uiMenuDisabledResID*<br/>
 
-[in]*uiHotResID*<br/>
+[in] *uiHotResID*<br/>
 
 ### <a name="return-value"></a>返回值
 
@@ -200,9 +200,9 @@ afx_msg void OnLButtonUp(
 
 ### <a name="parameters"></a>参数
 
-[in]*nFlags*<br/>
+[in] *nFlags*<br/>
 
-[in]*点*<br/>
+[in] *point*<br/>
 
 ### <a name="remarks"></a>备注
 
@@ -216,9 +216,9 @@ afx_msg void OnMouseMove(
 
 ### <a name="parameters"></a>参数
 
-[in]*nFlags*<br/>
+[in] *nFlags*<br/>
 
-[in]*点*<br/>
+[in] *point*<br/>
 
 ### <a name="remarks"></a>备注
 
@@ -230,7 +230,7 @@ virtual BOOL OnSendCommand(const CMFCToolBarButton* pButton);
 
 ### <a name="parameters"></a>参数
 
-[in]*pButton*<br/>
+[in] *pButton*<br/>
 
 ### <a name="return-value"></a>返回值
 
@@ -246,9 +246,9 @@ virtual void OnUpdateCmdUI(
 
 ### <a name="parameters"></a>参数
 
-[in]*pTarget*<br/>
+[in] *pTarget*<br/>
 
-[in]*bDisableIfNoHndler*<br/>
+[in] *bDisableIfNoHndler*<br/>
 
 ### <a name="remarks"></a>备注
 
@@ -261,4 +261,3 @@ virtual void OnUpdateCmdUI(
 [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)<br/>
 [CMFCDropDownToolbarButton 类](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md)<br/>
 [演练：将控件置于工具栏上](../../mfc/walkthrough-putting-controls-on-toolbars.md)
-

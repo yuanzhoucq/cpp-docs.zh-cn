@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CDocObjectServerItem [MFC], OnHide
 - CDocObjectServerItem [MFC], OnShow
 ms.assetid: 530f7156-50c8-4806-9328-602c9133f622
-ms.openlocfilehash: cecbab366b64c85b39131a13233598abec83d5ab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f11c202e85453897f6ebf04d8dc165d2b733a406
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536521"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275256"
 ---
 # <a name="cdocobjectserveritem-class"></a>CDocObjectServerItem 类
 
@@ -55,7 +55,7 @@ class CDocObjectServerItem : public COleServerItem
 
 ## <a name="remarks"></a>备注
 
-`CDocObjectServerItem` 定义可重写成员函数： [OnHide](#onhide)， [OnDoVerb](#ondoverb)，并[OnShow](#onshow)。
+`CDocObjectServerItem` 定义可重写成员函数：[OnHide](#onhide)， [OnDoVerb](#ondoverb)，和[OnShow](#onshow)。
 
 若要使用`CDocObjectServerItem`，确保[OnGetEmbeddedItem](../../mfc/reference/coleserverdoc-class.md#ongetembeddeditem)重写中你`COleServerDoc`-派生的类返回一个新`CDocObjectServerItem`对象。 如果需要更改你的项中的任何功能，可以创建自己的新实例`CDocObjectServerItem`-派生的类。
 

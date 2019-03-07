@@ -5,12 +5,12 @@ helpviewer_keywords:
 - cooperative semaphore implementing
 - context class
 ms.assetid: 22f4b9c0-ca22-4a68-90ba-39e99ea76696
-ms.openlocfilehash: 460a1de03f34cb8ef9753e761aaef37470cd6d0e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 92f77fade972bff1528bc9a22416670354c70f34
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467752"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300760"
 ---
 # <a name="how-to-use-the-context-class-to-implement-a-cooperative-semaphore"></a>如何：使用上下文类实现协作信号量
 
@@ -90,4 +90,3 @@ In loop iteration 4...
 
 [上下文](../../parallel/concrt/contexts.md)<br/>
 [并行容器和对象](../../parallel/concrt/parallel-containers-and-objects.md)
-

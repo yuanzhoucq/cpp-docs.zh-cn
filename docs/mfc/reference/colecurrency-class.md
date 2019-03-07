@@ -22,12 +22,12 @@ helpviewer_keywords:
 - COleCurrency [MFC], m_cur
 - COleCurrency [MFC], m_status
 ms.assetid: 3a36e345-303f-46fb-a57c-858274378a8d
-ms.openlocfilehash: e3b0a369071571fb343d1b5030eebbf7c471bc81
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 64f2b00c8a5aefe8a39c24d26af2a97625225059
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519186"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273174"
 ---
 # <a name="colecurrency-class"></a>COleCurrency 类
 
@@ -63,11 +63,11 @@ class COleCurrency
 |----------|-----------------|
 |[operator =](#operator_eq)|副本`COleCurrency`值。|
 |[运算符 +、-](#operator_plus_minus)|添加、 相减，并且更改的符号`COleCurrency`值。|
-|[运算符 + =、 =](#operator_plus_minus_eq)|将添加并减去`COleCurrency`从此值`COleCurrency`对象。|
-|[运算符 * /](#operator_star)|刻度`COleCurrency`的整数值的值。|
-|[运算符 * =、 / =](#operator_star_div_eq)|缩放此`COleCurrency`的整数值的值。|
-|[运算符 <<](#operator_stream)|输出`COleCurrency`值设为`CArchive`或`CDumpContext`。|
-|[运算符 >>](#operator_stream)|输入`COleCurrency`对象从`CArchive`。|
+|[operator +=, -=](#operator_plus_minus_eq)|将添加并减去`COleCurrency`从此值`COleCurrency`对象。|
+|[operator */](#operator_star)|刻度`COleCurrency`的整数值的值。|
+|[operator *=, /=](#operator_star_div_eq)|缩放此`COleCurrency`的整数值的值。|
+|[operator <<](#operator_stream)|输出`COleCurrency`值设为`CArchive`或`CDumpContext`。|
+|[operator >>](#operator_stream)|输入`COleCurrency`对象从`CArchive`。|
 |[运算符货币](#operator_currency)|将转换`COleCurrency`为货币值。|
 |[运算符 = =、 <、 < =，等等。](#colecurrency_relational_operators)|比较两个`COleCurrency`值。|
 
@@ -222,13 +222,13 @@ enum CurrencyStatus {
 
 - [operator =](#operator_eq)
 
-- [运算符 +-](#operator_plus_minus)
+- [operator + -](#operator_plus_minus)
 
 - [operator + = 和 =](#operator_plus_minus_eq)
 
-- [运算符 * /](#operator_star)
+- [operator * /](#operator_star)
 
-- [运算符 * = 和 / =](#operator_star_div_eq)
+- [operator *= and /=](#operator_star_div_eq)
 
 ### <a name="example"></a>示例
 
@@ -285,11 +285,11 @@ enum CurrencyStatus{
 
 - [运算符 +、-](#operator_plus_minus)
 
-- [运算符 + =、 =](#operator_plus_minus_eq)
+- [operator +=, -=](#operator_plus_minus_eq)
 
-- [运算符 * /](#operator_star)
+- [operator */](#operator_star)
 
-- [运算符 * =、 / =](#operator_star_div_eq)
+- [operator *=, /=](#operator_star_div_eq)
 
 > [!CAUTION]
 >  此数据成员是针对高级编程情况。 应使用的内联成员函数[GetStatus](#getstatus)并[SetStatus](#setstatus)。 请参阅`SetStatus`有关显式设置此数据成员的其他注意事项。
@@ -320,7 +320,7 @@ const COleCurrency& operator=(const COleCurrency& curSrc);
 
 [!code-cpp[NVC_MFCOleContainer#15](../../mfc/codesnippet/cpp/colecurrency-class_4.cpp)]
 
-##  <a name="operator_plus_minus"></a>  COleCurrency::operator +、-
+##  <a name="operator_plus_minus"></a>  COleCurrency::operator +, -
 
 这些运算符使您得以，加法和减法两个`COleCurrency`值到和从每个其他和更改的登录`COleCurrency`值。
 
@@ -344,7 +344,7 @@ COleCurrency operator-() const;
 
 [!code-cpp[NVC_MFCOleContainer#16](../../mfc/codesnippet/cpp/colecurrency-class_5.cpp)]
 
-##  <a name="operator_plus_minus_eq"></a>  COleCurrency::operator + =、 =
+##  <a name="operator_plus_minus_eq"></a>  COleCurrency::operator +=, -=
 
 可以，加法和减法`COleCurrency`值到和从该`COleCurrency`对象。
 
@@ -413,7 +413,7 @@ const COleCurrency& operator/=(long nOperand);
 
 [!code-cpp[NVC_MFCOleContainer#19](../../mfc/codesnippet/cpp/colecurrency-class_8.cpp)]
 
-##  <a name="operator_stream"></a>  COleCurrency::operator &lt; &lt;， &gt;&gt;
+##  <a name="operator_stream"></a>  COleCurrency::operator &lt;&lt;, &gt;&gt;
 
 支持诊断转储和存储到存档。
 

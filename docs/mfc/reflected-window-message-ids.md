@@ -46,16 +46,16 @@ helpviewer_keywords:
 - OCM_NOTIFY message [MFC]
 - reflected messages
 ms.assetid: 3417ff51-ff9f-458c-bff4-17c200f00d96
-ms.openlocfilehash: 238fafee5201ec01e24be21512c73d1b33b706f1
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 2f6aea30fbf86865b5d42ea8da364685010c95c0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693550"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302086"
 ---
 # <a name="reflected-window-message-ids"></a>反射窗口消息 ID
 
-一种快速创建 ActiveX 控件或其他专用控件的方法是子类化窗口。 有关详细信息，请参阅[MFC ActiveX 控件： 子类化 Windows 控件](../mfc/mfc-activex-controls-subclassing-a-windows-control.md)。
+一种快速创建 ActiveX 控件或其他专用控件的方法是子类化窗口。 有关详细信息，请参阅[MFC ActiveX 控件：Windows 控件子类化](../mfc/mfc-activex-controls-subclassing-a-windows-control.md)。
 
 若要防止控件的容器接收由子类化 Windows 控件，发送的窗口消息[COleControl](../mfc/reference/colecontrol-class.md)创建"reflector"窗口来截获某些窗口消息并将其发送回控件。 控件在其窗口过程中可以通过对 ActiveX 控件采取适当操作来处理这些反射的消息。
 
@@ -86,6 +86,5 @@ ms.locfileid: "51693550"
 
 ## <a name="see-also"></a>请参阅
 
-[MFC ActiveX 控件：创建 Windows 控件的子类](../mfc/mfc-activex-controls-subclassing-a-windows-control.md)<br/>
-[TN062：Windows 控件的消息反射](../mfc/tn062-message-reflection-for-windows-controls.md)
-
+[MFC ActiveX 控件：子类化 Windows 控件](../mfc/mfc-activex-controls-subclassing-a-windows-control.md)<br/>
+[TN062:Windows 控件的消息反射](../mfc/tn062-message-reflection-for-windows-controls.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - ATL projects, adding property pages
 - ATL Property Page Wizard
 ms.assetid: 6113e325-facd-4f68-b491-144d75209922
-ms.openlocfilehash: 9b698616dbde06452e9ab08f37c646a2cedbc37c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 791901ab3181ad2c8ac862a970980250693d20f7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50572765"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258276"
 ---
 # <a name="atl-property-page-wizard"></a>ATL 属性页向导
 
@@ -69,4 +69,3 @@ ms.locfileid: "50572765"
 [选项，ATL 属性页向导](../../atl/reference/options-atl-property-page-wizard.md)<br/>
 [字符串，ATL 属性页向导](../../atl/reference/strings-atl-property-page-wizard.md)<br/>
 [示例：实现属性页](../../atl/example-implementing-a-property-page.md)
-

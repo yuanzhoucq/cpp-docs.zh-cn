@@ -36,12 +36,12 @@ helpviewer_keywords:
 - COleDataSource [MFC], OnSetData
 - COleDataSource [MFC], SetClipboard
 ms.assetid: 02c8ee7d-8e10-4463-8613-bb2a0305ca69
-ms.openlocfilehash: 539f3f1611d4d9d83d37754b66986c6b4f59549c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bc3d9f089dc6289331c79c6a1e18eccbc9ff4993
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614196"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296970"
 ---
 # <a name="coledatasource-class"></a>COleDataSource 类
 
@@ -70,7 +70,7 @@ class COleDataSource : public CCmdTarget
 |[COleDataSource::DelayRenderData](#delayrenderdata)|提供了使用延迟的呈现采用指定格式数据。|
 |[COleDataSource::DelayRenderFileData](#delayrenderfiledata)|提供在指定的格式数据`CFile`指针。|
 |[COleDataSource::DelaySetData](#delaysetdata)|中支持每种格式为调用`OnSetData`。|
-|[Coledatasource:: Dodragdrop](#dodragdrop)|执行与数据源拖放操作。|
+|[COleDataSource::DoDragDrop](#dodragdrop)|执行与数据源拖放操作。|
 |[COleDataSource::Empty](#empty)|清空`COleDataSource`的数据的对象。|
 |[COleDataSource::FlushClipboard](#flushclipboard)|将所有数据都呈现到剪贴板。|
 |[COleDataSource::GetClipboardOwner](#getclipboardowner)|验证放置在剪贴板上的数据仍然存在。|
@@ -130,7 +130,7 @@ void CacheData(
 
 在调用`CacheData``ptd`的成员`lpFormatEtc`的内容*lpStgMedium*所拥有的数据对象，不是由调用方。
 
-若要使用延迟的呈现，调用[DelayRenderData](#delayrenderdata)或[DelayRenderFileData](#delayrenderfiledata)成员函数。 有关详细信息延迟呈现为 mfc 已处理，请参阅文章[数据对象和数据源： 操作](../../mfc/data-objects-and-data-sources-manipulation.md)。
+若要使用延迟的呈现，调用[DelayRenderData](#delayrenderdata)或[DelayRenderFileData](#delayrenderfiledata)成员函数。 有关详细信息延迟呈现为 mfc 已处理，请参阅文章[数据对象和数据源：操作](../../mfc/data-objects-and-data-sources-manipulation.md)。
 
 有关详细信息，请参阅[STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium)并[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) Windows SDK 中的结构。
 
@@ -162,7 +162,7 @@ void CacheGlobalData(
 
 此函数提供了使用立即呈现，因此调用函数; 时，必须提供数据的数据需要时才被缓存数据。 使用`CacheData`成员函数，如果你所提供的大量数据，或如果需要结构化的存储介质。
 
-若要使用延迟的呈现，调用[DelayRenderData](#delayrenderdata)或[DelayRenderFileData](#delayrenderfiledata)成员函数。 有关详细信息延迟呈现为 mfc 已处理，请参阅文章[数据对象和数据源： 操作](../../mfc/data-objects-and-data-sources-manipulation.md)。
+若要使用延迟的呈现，调用[DelayRenderData](#delayrenderdata)或[DelayRenderFileData](#delayrenderfiledata)成员函数。 有关详细信息延迟呈现为 mfc 已处理，请参阅文章[数据对象和数据源：操作](../../mfc/data-objects-and-data-sources-manipulation.md)。
 
 有关详细信息，请参阅[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) Windows SDK 中的结构。
 
@@ -198,7 +198,7 @@ void DelayRenderData(
 
 此函数提供了使用延迟呈现，因此不立即提供数据的数据。 [OnRenderData](#onrenderdata)或[OnRenderGlobalData](#onrenderglobaldata)成员函数调用以请求数据。
 
-如果您不打算提供通过将数据，请使用此函数`CFile`对象。 如果想要提供的数据通过`CFile`对象，请调用[DelayRenderFileData](#delayrenderfiledata)成员函数。 有关详细信息延迟呈现为 mfc 已处理，请参阅文章[数据对象和数据源： 操作](../../mfc/data-objects-and-data-sources-manipulation.md)。
+如果您不打算提供通过将数据，请使用此函数`CFile`对象。 如果想要提供的数据通过`CFile`对象，请调用[DelayRenderFileData](#delayrenderfiledata)成员函数。 有关详细信息延迟呈现为 mfc 已处理，请参阅文章[数据对象和数据源：操作](../../mfc/data-objects-and-data-sources-manipulation.md)。
 
 若要使用立即呈现，调用[CacheData](#cachedata)或[CacheGlobalData](#cacheglobaldata)成员函数。
 
@@ -228,7 +228,7 @@ void DelayRenderFileData(
 
 此函数提供了使用延迟呈现，因此不立即提供数据的数据。 [OnRenderFileData](#onrenderfiledata)成员函数调用以请求数据。
 
-使用此函数，如果要使用`CFile`要提供的数据对象。 如果您不打算使用`CFile`对象，请调用[DelayRenderData](#delayrenderdata)成员函数。 有关详细信息延迟呈现为 mfc 已处理，请参阅文章[数据对象和数据源： 操作](../../mfc/data-objects-and-data-sources-manipulation.md)。
+使用此函数，如果要使用`CFile`要提供的数据对象。 如果您不打算使用`CFile`对象，请调用[DelayRenderData](#delayrenderdata)成员函数。 有关详细信息延迟呈现为 mfc 已处理，请参阅文章[数据对象和数据源：操作](../../mfc/data-objects-and-data-sources-manipulation.md)。
 
 若要使用立即呈现，调用[CacheData](#cachedata)或[CacheGlobalData](#cacheglobaldata)成员函数。
 
@@ -262,7 +262,7 @@ void DelaySetData(
 
 有关详细信息，请参阅[RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata) Windows SDK 中。
 
-##  <a name="dodragdrop"></a>  Coledatasource:: Dodragdrop
+##  <a name="dodragdrop"></a>  COleDataSource::DoDragDrop
 
 调用`DoDragDrop`成员函数中通常执行此数据源，拖放操作[CWnd::OnLButtonDown](../../mfc/reference/cwnd-class.md#onlbuttondown)处理程序。
 
@@ -310,7 +310,7 @@ DROPEFFECT DoDragDrop(
 
 详细了解如何将拖动的延迟信息存储在任一注册表或。INI 文件，请参阅[WriteProfileString](/windows/desktop/api/winbase/nf-winbase-writeprofilestringa) Windows SDK 中。
 
-有关详细信息，请参阅文章[拖放： 实现放置源](../../mfc/drag-and-drop-implementing-a-drop-source.md)。
+有关详细信息，请参阅文章[拖放到：实现放置源](../../mfc/drag-and-drop-implementing-a-drop-source.md)。
 
 ##  <a name="empty"></a>  COleDataSource::Empty
 
@@ -374,7 +374,7 @@ virtual BOOL OnRenderData(
 
 ### <a name="remarks"></a>备注
 
-指定的格式是一个以前放置在`COleDataSource`对象使用[DelayRenderData](#delayrenderdata)或[DelayRenderFileData](#delayrenderfiledata)延迟呈现的成员函数。 此函数的默认实现将调用[OnRenderFileData](#onrenderfiledata)或[OnRenderGlobalData](#onrenderglobaldata)如果提供的存储介质是文件或内存，分别。 如果提供了这些格式任一的默认实现将返回 0 并不执行任何操作。 有关详细信息延迟呈现为 mfc 已处理，请参阅文章[数据对象和数据源： 操作](../../mfc/data-objects-and-data-sources-manipulation.md)。
+指定的格式是一个以前放置在`COleDataSource`对象使用[DelayRenderData](#delayrenderdata)或[DelayRenderFileData](#delayrenderfiledata)延迟呈现的成员函数。 此函数的默认实现将调用[OnRenderFileData](#onrenderfiledata)或[OnRenderGlobalData](#onrenderglobaldata)如果提供的存储介质是文件或内存，分别。 如果提供了这些格式任一的默认实现将返回 0 并不执行任何操作。 有关详细信息延迟呈现为 mfc 已处理，请参阅文章[数据对象和数据源：操作](../../mfc/data-objects-and-data-sources-manipulation.md)。
 
 如果*lpStgMedium*-> *tymed*是 TYMED_NULL，`STGMEDIUM`应分配并由指定填充*lpFormatEtc-> tymed*。 如果不是 TYMED_NULL，`STGMEDIUM`应在具有数据的位置填充。
 
@@ -408,7 +408,7 @@ virtual BOOL OnRenderFileData(
 
 指定的格式是一个以前放置在`COleDataSource`对象使用[DelayRenderData](#delayrenderdata)延迟呈现的成员函数。 此函数的默认实现只是返回 FALSE。
 
-这是一种高级可重写。 重写此函数可提供请求的格式和介质中的数据。 具体取决于你的数据，你可能想要改为重写此函数的其他版本之一。 如果你想要处理多个存储媒体，重写[OnRenderData](#onrenderdata)。 如果数据是在文件中，或者是大小可变的重写`OnRenderFileData`。 有关详细信息延迟呈现为 mfc 已处理，请参阅文章[数据对象和数据源： 操作](../../mfc/data-objects-and-data-sources-manipulation.md)。
+这是一种高级可重写。 重写此函数可提供请求的格式和介质中的数据。 具体取决于你的数据，你可能想要改为重写此函数的其他版本之一。 如果你想要处理多个存储媒体，重写[OnRenderData](#onrenderdata)。 如果数据是在文件中，或者是大小可变的重写`OnRenderFileData`。 有关详细信息延迟呈现为 mfc 已处理，请参阅文章[数据对象和数据源：操作](../../mfc/data-objects-and-data-sources-manipulation.md)。
 
 有关详细信息，请参阅[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc)结构并[idataobject:: Getdata](/windows/desktop/api/objidl/nf-objidl-idataobject-getdata) Windows SDK 中。
 
@@ -440,7 +440,7 @@ virtual BOOL OnRenderGlobalData(
 
 如果*phGlobal*为 NULL，则应分配并返回新 HGLOBAL *phGlobal*。 否则，HGLOBAL 指定*phGlobal*应填充数据。 在 HGLOBAL 中放置的数据量不能超过内存块的当前大小。 此外，块不能重新分配给较大的大小。
 
-这是一种高级可重写。 重写此函数可提供请求的格式和介质中的数据。 具体取决于你的数据，你可能想要改为重写此函数的其他版本之一。 如果你想要处理多个存储媒体，重写[OnRenderData](#onrenderdata)。 如果数据是在文件中，或者是大小可变的重写[OnRenderFileData](#onrenderfiledata)。 有关详细信息延迟呈现为 mfc 已处理，请参阅文章[数据对象和数据源： 操作](../../mfc/data-objects-and-data-sources-manipulation.md)。
+这是一种高级可重写。 重写此函数可提供请求的格式和介质中的数据。 具体取决于你的数据，你可能想要改为重写此函数的其他版本之一。 如果你想要处理多个存储媒体，重写[OnRenderData](#onrenderdata)。 如果数据是在文件中，或者是大小可变的重写[OnRenderFileData](#onrenderfiledata)。 有关详细信息延迟呈现为 mfc 已处理，请参阅文章[数据对象和数据源：操作](../../mfc/data-objects-and-data-sources-manipulation.md)。
 
 有关详细信息，请参阅[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc)结构并[idataobject:: Getdata](/windows/desktop/api/objidl/nf-objidl-idataobject-getdata) Windows SDK 中。
 
@@ -480,7 +480,7 @@ virtual BOOL OnSetData(
 
 ##  <a name="setclipboard"></a>  COleDataSource::SetClipboard
 
-中包含的数据将放`COleDataSource`调用下列函数之一后在剪贴板上的对象： [CacheData](#cachedata)， [CacheGlobalData](#cacheglobaldata)， [DelayRenderData](#delayrenderdata)，或[DelayRenderFileData](#delayrenderfiledata)。
+中包含的数据放入`COleDataSource`调用下列函数之一后在剪贴板上的对象：[CacheData](#cachedata)， [CacheGlobalData](#cacheglobaldata)， [DelayRenderData](#delayrenderdata)，或[DelayRenderFileData](#delayrenderfiledata)。
 
 ```
 void SetClipboard();

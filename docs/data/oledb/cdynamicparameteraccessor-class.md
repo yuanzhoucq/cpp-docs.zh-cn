@@ -90,12 +90,12 @@ helpviewer_keywords:
 - SetParamStatus method
 - SetParamString method
 ms.assetid: 5f22626e-e80d-491f-8b3b-cedc50331960
-ms.openlocfilehash: c2cc67e6e837844356a071aa362dcca85eca24e4
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: a655d95cf165ab2c5cba3a391b81d6f420f8322f
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556967"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57418511"
 ---
 # <a name="cdynamicparameteraccessor-class"></a>CDynamicParameterAccessor 类
 
@@ -139,7 +139,7 @@ class CDynamicParameterAccessor : public CDynamicAccessor
 
 有关演示如何使用此类以执行 SQL Server 存储过程并获取输出参数值的示例，请参阅[DynamicConsumer](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/DynamicConsumer)示例中的代码[Microsoft VCSamples](https://github.com/Microsoft/VCSamples)GitHub 上的存储库。
 
-## <a name="cdynamicparameteraccessor"></a> Cdynamicparameteraccessor:: Cdynamicparameteraccessor
+## <a name="cdynamicparameteraccessor"></a> CDynamicParameterAccessor::CDynamicParameterAccessor
 
 构造函数。
 
@@ -165,7 +165,7 @@ CDynamicParameterAccessor(
 
 请参阅[cdynamicaccessor:: Cdynamicaccessor](../../data/oledb/cdynamicaccessor-cdynamicaccessor.md) BLOB 处理的详细信息的构造函数。
 
-## <a name="getparam"></a> Cdynamicparameteraccessor:: Getparam
+## <a name="getparam"></a> CDynamicParameterAccessor::GetParam
 
 从参数缓冲区中检索指定参数的非字符串数据。
 
@@ -203,7 +203,7 @@ void* GetParam(TCHAR* pParamName) const throw();
 
 使用`GetParam`从缓冲区检索非字符串参数数据。 使用[GetParamString](../../data/oledb/cdynamicparameteraccessor-getparamstring.md)从缓冲区检索字符串参数数据。
 
-## <a name="getparamcount"></a> Cdynamicparameteraccessor:: Getparamcount
+## <a name="getparamcount"></a> CDynamicParameterAccessor::GetParamCount
 
 检索存储在缓冲区中的参数数目。
 
@@ -217,7 +217,7 @@ DB_UPARAMS GetParamCount() const throw();
 
 参数的数量。
 
-## <a name="getparamio"></a> Cdynamicparameteraccessor:: Getparamio
+## <a name="getparamio"></a> CDynamicParameterAccessor::GetParamIO
 
 确定指定参数是输入参数还是输出参数。
 
@@ -250,7 +250,7 @@ enum DBPARAMIOENUM {
 
 返回 **，则返回 true**成功后或**false**失败。
 
-## <a name="getparamlength"></a> Cdynamicparameteraccessor:: Getparamlength
+## <a name="getparamlength"></a> CDynamicParameterAccessor::GetParamLength
 
 检索存储在缓冲区中的指定参数的长度。
 
@@ -275,7 +275,7 @@ DBLENGTH* GetParamLength(DBORDINAL nParam) const throw();
 
 第一个重写返回 **，则返回 true**成功后或**false**失败。 第二个重写指向包含参数的长度的内存。
 
-## <a name="getparamname"></a> Cdynamicparameteraccessor:: Getparamname
+## <a name="getparamname"></a> CDynamicParameterAccessor::GetParamName
 
 检索指定参数的名称。
 
@@ -294,7 +294,7 @@ LPOLESTR GetParamName(DBORDINAL nParam) const throw();
 
 指定参数的名称。
 
-## <a name="getparamstatus"></a> Cdynamicparameteraccessor:: Getparamstatus
+## <a name="getparamstatus"></a> CDynamicParameterAccessor::GetParamStatus
 
 检索存储在缓冲区中的指定参数的状态。
 
@@ -313,13 +313,13 @@ DBSTATUS* GetParamStatus(DBORDINAL nParam) const throw();
 [in] 参数号（相对于 1 的偏移量）。 将为返回值保留参数 0。 参数号是基于参数在 SQL 或存储的过程调用中的顺序的参数索引。 请参阅[SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md)有关的示例。
 
 *pStatus*<br/>
-[out]指向包含指定的参数的 DBSTATUS 状态的变量的指针。 DBSTATUS 值的信息，请参阅[状态](https://docs.microsoft.com/previous-versions/windows/desktop/ms722617(v=vs.85))中*OLE DB 程序员参考*，或在 oledb.h DBSTATUS 搜索。
+[out]指向包含指定的参数的 DBSTATUS 状态的变量的指针。 DBSTATUS 值的信息，请参阅[状态](/previous-versions/windows/desktop/ms722617(v=vs.85))中*OLE DB 程序员参考*，或在 oledb.h DBSTATUS 搜索。
 
 ### <a name="remarks"></a>备注
 
 第一个重写返回 **，则返回 true**成功后或**false**失败。 第二个重写指向包含指定的参数的状态的内存。
 
-## <a name="getparamstring"></a> Cdynamicparameteraccessor:: Getparamstring
+## <a name="getparamstring"></a> CDynamicParameterAccessor::GetParamString
 
 检索存储在缓冲区中的指定参数的字符串数据。
 
@@ -367,7 +367,7 @@ bool GetParamString(DBORDINAL nParam,
 
 使用`GetParamString`从缓冲区检索字符串参数数据。 使用[GetParam](../../data/oledb/cdynamicparameteraccessor-getparam.md)从缓冲区检索非字符串参数数据。
 
-## <a name="getparamtype"></a> Cdynamicparameteraccessor:: Getparamtype
+## <a name="getparamtype"></a> CDynamicParameterAccessor::GetParamType
 
 检索指定参数的数据类型。
 
@@ -390,7 +390,7 @@ bool GetParamType(DBORDINAL nParam,
 
 返回 **，则返回 true**成功后或**false**失败。
 
-## <a name="setparam"></a> Cdynamicparameteraccessor:: Setparam
+## <a name="setparam"></a> CDynamicParameterAccessor::SetParam
 
 设置使用指定的 （非字符串） 数据的参数缓冲区。
 
@@ -425,7 +425,7 @@ bool SetParam(TCHAR* pParamName,
 [in]指向包含要写入缓冲区的数据的内存的指针。
 
 *status*<br/>
-[in]DBSTATUS 列状态。 DBSTATUS 值的信息，请参阅[状态](https://docs.microsoft.com/previous-versions/windows/desktop/ms722617(v=vs.85))中*OLE DB 程序员参考*，或在 oledb.h DBSTATUS 搜索。
+[in]DBSTATUS 列状态。 DBSTATUS 值的信息，请参阅[状态](/previous-versions/windows/desktop/ms722617(v=vs.85))中*OLE DB 程序员参考*，或在 oledb.h DBSTATUS 搜索。
 
 ### <a name="return-value"></a>返回值
 
@@ -433,7 +433,7 @@ bool SetParam(TCHAR* pParamName,
 
 使用`SetParam`用于将非字符串参数数据设置缓冲区中。 使用[SetParamString](../../data/oledb/cdynamicparameteraccessor-setparamstring.md)用于将字符串参数数据设置缓冲区中。
 
-## <a name="setparamlength"></a> Cdynamicparameteraccessor:: Setparamlength
+## <a name="setparamlength"></a> CDynamicParameterAccessor::SetParamLength
 
 设置存储在缓冲区中的指定参数的长度。
 
@@ -456,7 +456,7 @@ bool SetParamLength(DBORDINAL nParam,
 
 返回 **，则返回 true**成功后或**false**失败。
 
-## <a name="setparamstatus"></a> Cdynamicparameteraccessor:: Setparamstatus
+## <a name="setparamstatus"></a> CDynamicParameterAccessor::SetParamStatus
 
 设置存储在缓冲区中的指定参数的状态。
 
@@ -473,13 +473,13 @@ bool SetParamStatus(DBORDINAL nParam,
 [in] 参数号（相对于 1 的偏移量）。 将为返回值保留参数 0。 参数号是基于参数在 SQL 或存储的过程调用中的顺序的参数索引。 请参阅[SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md)有关的示例。
 
 *status*<br/>
-[in]指定参数的 DBSTATUS 状态。 DBSTATUS 值的信息，请参阅[状态](https://docs.microsoft.com/previous-versions/windows/desktop/ms722617(v=vs.85))中*OLE DB 程序员参考*，或在 oledb.h DBSTATUS 搜索。
+[in]指定参数的 DBSTATUS 状态。 DBSTATUS 值的信息，请参阅[状态](/previous-versions/windows/desktop/ms722617(v=vs.85))中*OLE DB 程序员参考*，或在 oledb.h DBSTATUS 搜索。
 
 ### <a name="remarks"></a>备注
 
 返回 **，则返回 true**成功后或**false**失败。
 
-## <a name="setparamstring"></a> Cdynamicparameteraccessor:: Setparamstring
+## <a name="setparamstring"></a> CDynamicParameterAccessor::SetParamString
 
 设置存储在缓冲区中的指定参数的字符串数据。
 
@@ -502,7 +502,7 @@ bool SetParamString(DBORDINAL nParam,
 [in]一个指向 ANSI (**CHAR**) 或 Unicode (**WCHAR**) 的字符串的指定参数的数据。 请参阅 oledb.h DBSTATUS。
 
 *status*<br/>
-[in]指定参数的 DBSTATUS 状态。 DBSTATUS 值的信息，请参阅[状态](https://docs.microsoft.com/previous-versions/windows/desktop/ms722617(v=vs.85))中*OLE DB 程序员参考*，或在 oledb.h DBSTATUS 搜索。
+[in]指定参数的 DBSTATUS 状态。 DBSTATUS 值的信息，请参阅[状态](/previous-versions/windows/desktop/ms722617(v=vs.85))中*OLE DB 程序员参考*，或在 oledb.h DBSTATUS 搜索。
 
 ### <a name="remarks"></a>备注
 

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], methods
 - PtInCircle custom method [MFC]
 ms.assetid: 8f8dc344-44a0-4021-8db5-4cdd3d700e18
-ms.openlocfilehash: bd67e5f248f389755b1bf25854867322af60878e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4f5a7dc844d80ae94df8af7c0b2eea141376f9e9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50554552"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278842"
 ---
 # <a name="mfc-activex-controls-adding-custom-methods"></a>MFC ActiveX 控件：添加自定义方法
 
@@ -26,7 +26,7 @@ ActiveX 控件用户可以在任何时候执行特定于控件的操作调用的
 以下过程演示如何将 PtInCircle 自定义的方法添加到 ActiveX 控件的主干代码。 PtInCircle 确定传递给控件的坐标为内部或外部圆。 此外可以使用此相同的过程来添加其他自定义方法。 替换为您的自定义方法名称和其参数 PtInCircle 方法名称和参数。
 
 > [!NOTE]
->  此示例使用`InCircle`事件的文章中的函数。 此函数的详细信息，请参阅文章[MFC ActiveX 控件： 向 ActiveX 控件添加自定义事件](../mfc/mfc-activex-controls-adding-custom-events.md)。
+>  此示例使用`InCircle`事件的文章中的函数。 此函数的详细信息，请参阅文章[MFC ActiveX 控件：向 ActiveX 控件添加自定义事件](../mfc/mfc-activex-controls-adding-custom-events.md)。
 
 #### <a name="to-add-the-ptincircle-custom-method-using-the-add-method-wizard"></a>若要添加 PtInCircle 自定义的方法使用添加方法向导
 
@@ -80,4 +80,3 @@ DISP_FUNCTION 宏映射方法`PtInCircle`到控件的处理程序函数`PtInCirc
 
 [MFC ActiveX 控件](../mfc/mfc-activex-controls.md)<br/>
 [“类视图”和“对象浏览器”图标](/visualstudio/ide/class-view-and-object-browser-icons)
-

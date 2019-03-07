@@ -11,12 +11,12 @@ helpviewer_keywords:
 - .exp files [C++]
 - EXP files
 ms.assetid: 399f5636-0a4d-462e-b500-5f5b9ae5ad22
-ms.openlocfilehash: 4f70aad2fa91431da771f8e5be47956ae2db45a1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 170adfe54b34d14f84b54c717bc9f75fe0b7ab37
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50661924"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57418472"
 ---
 # <a name="exp-files-as-linker-input"></a>用作链接器输入的 .Exp 文件
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CRichEditDoc [MFC], GetView
 - CRichEditDoc [MFC], m_bRTF
 ms.assetid: c936ec18-d516-49d4-b7fb-c9aa0229eddc
-ms.openlocfilehash: 8e97b17a3620d75660a5ac2109bc440f8ad27b16
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4c2021128dcc06a76cf3b68c0ec49b72a5860046
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50453444"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295131"
 ---
 # <a name="cricheditdoc-class"></a>CRichEditDoc 类
 
@@ -45,7 +45,7 @@ class CRichEditDoc : public COleServerDoc
 
 |名称|描述|
 |----------|-----------------|
-|[M_brtf](#m_brtf)|指示流 I/O 是否应包含格式设置。|
+|[CRichEditDoc::m_bRTF](#m_brtf)|指示流 I/O 是否应包含格式设置。|
 
 ## <a name="remarks"></a>备注
 
@@ -136,7 +136,7 @@ virtual CRichEditView* GetView() const;
 
 中包含的文本和格式设置信息`CRichEditView`对象。 `CRichEditDoc`对象维护序列化的 OLE 项。 应该只有一个`CRichEditView`为每个`CRichEditDoc`。
 
-##  <a name="m_brtf"></a>  M_brtf
+##  <a name="m_brtf"></a>  CRichEditDoc::m_bRTF
 
 如果为 TRUE，指示[CRichEditCtrl::StreamIn](../../mfc/reference/cricheditctrl-class.md#streamin)并[CRichEditCtrl::StreamOut](../../mfc/reference/cricheditctrl-class.md#streamout)应存储段落和字符格式设置特征。
 

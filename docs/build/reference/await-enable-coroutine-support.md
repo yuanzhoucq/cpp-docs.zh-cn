@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -await enable coroutine support [C++]
 - await enable coroutine support [C++]
 ms.assetid: 302c8e69-09b6-4c58-bcdd-0a6a8713a8df
-ms.openlocfilehash: e3f7359b60e1ba22c2646cecfd35b827919ae033
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f84ba6297c61a78a8870100125887b450849a087
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50590421"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424049"
 ---
 # <a name="await-enable-coroutine-support"></a>/await （启用协同程序支持）
 

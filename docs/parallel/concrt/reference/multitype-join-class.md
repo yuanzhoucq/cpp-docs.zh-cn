@@ -17,16 +17,17 @@ f1_keywords:
 helpviewer_keywords:
 - multitype_join class
 ms.assetid: 236e87a0-4867-49fd-869a-bef4010e49a7
-ms.openlocfilehash: 2fd94ef072fcab9af076fcdfa1b5c094d77f89c8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7a0c68c2c017eedfa23548bee1d17177e8eaaa1e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50547382"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289021"
 ---
 # <a name="multitypejoin-class"></a>multitype_join 类
 
-`multitype_join` 消息块是多源、单目标的消息块，可以合并来自其每个源的不同类型的消息并向其目标提供合并的消息的元组。
+
+  `multitype_join` 消息块是多源、单目标的消息块，可以合并来自其每个源的不同类型的消息并向其目标提供合并的消息的元组。
 
 ## <a name="syntax"></a>语法
 
@@ -200,7 +201,7 @@ multitype_join(
 *_PScheduleGroup*<br/>
 在其中计划了 `ScheduleGroup` 消息块的传播任务的 `multitype_join` 对象。 所用 `Scheduler` 对象由该计划组提示。
 
-*（_j)*<br/>
+*_Join*<br/>
 要从中进行复制的 `multitype_join` 消息块。 请注意原始对象是孤立的，使之成为一个移动构造函数。
 
 ### <a name="remarks"></a>备注
@@ -209,7 +210,7 @@ multitype_join(
 
 在锁定状态下不执行移动构造，这意味着应由用户确保在移动期间没有轻量任务处于飞行状态。 否则可能会发生大量争用，从而导致异常或不一致的状态。
 
-##  <a name="dtor"></a> ~ multitype_join
+##  <a name="dtor"></a> ~multitype_join
 
 销毁`multitype_join`消息块。
 

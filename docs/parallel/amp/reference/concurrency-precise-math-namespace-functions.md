@@ -90,12 +90,12 @@ f1_keywords:
 - amp_math/Concurrency::precise_math::trunc
 - amp_math/Concurrency::precise_math::truncf
 ms.assetid: fae53ab4-d1c5-45bb-a6a0-a74258e9aea3
-ms.openlocfilehash: ccbb9bdda3132626a6bf76161104c9716a9b5c89
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7690c0629e7035d0130f0a7dbdcabf3e959ae7b6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50469350"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297341"
 ---
 # <a name="concurrencyprecisemath-namespace-functions"></a>Concurrency:: precise_math 命名空间函数
 
@@ -132,7 +132,7 @@ ms.locfileid: "50469350"
 |[modff](#modff)|[nan](#nan)|[nanf](#nanf)|
 |[nearbyint](#nearbyint)|[nearbyintf](#nearbyintf)|[nextafter](#nextafter)|
 |[nextafterf](#nextafterf)|[phi](#phi)|[phif](#phif)|
-|[pow](#pow)|[powf](#powf)|[概率](#probit)|
+|[pow](#pow)|[powf](#powf)|[probit](#probit)|
 |[probitf](#probitf)|[rcbrt](#rcbrt)|[rcbrtf](#rcbrtf)|
 |[remainder](#remainder)|[remainderf](#remainderf)|[remquo](#remquo)|
 |[remquof](#remquof)|[round](#round)|[roundf](#roundf)|
@@ -164,7 +164,7 @@ inline double acos(double _X) restrict(amp);
 
 ### <a name="return-value"></a>返回值
 
-返回自变量的反余弦值
+返回参数的反余弦值
 
 ##  <a name="acosf"></a>  acosf
 
@@ -181,7 +181,7 @@ inline float acosf(float _X) restrict(amp);
 
 ### <a name="return-value"></a>返回值
 
-返回自变量的反余弦值
+返回参数的反余弦值
 
 ##  <a name="acosh"></a>  acosh
 
@@ -200,7 +200,7 @@ inline double acosh(double _X) restrict(amp);
 
 ### <a name="return-value"></a>返回值
 
-返回自变量的反双曲余弦值
+返回参数的反双曲余弦值
 
 ##  <a name="acoshf"></a>  acoshf
 
@@ -217,7 +217,7 @@ inline float acoshf(float _X) restrict(amp);
 
 ### <a name="return-value"></a>返回值
 
-返回自变量的反双曲余弦值
+返回参数的反双曲余弦值
 
 ##  <a name="asin"></a>  asin
 
@@ -272,7 +272,7 @@ inline double asinh(double _X) restrict(amp);
 
 ### <a name="return-value"></a>返回值
 
-返回自变量的反双曲正弦值
+返回参数的反双曲正弦值
 
 ##  <a name="asinhf"></a>  asinhf
 
@@ -289,7 +289,7 @@ inline float asinhf(float _X) restrict(amp);
 
 ### <a name="return-value"></a>返回值
 
-返回自变量的反双曲正弦值
+返回参数的反双曲正弦值
 
 ##  <a name="atan"></a>  atan
 
@@ -392,7 +392,7 @@ inline double atanh(double _X) restrict(amp);
 
 ### <a name="return-value"></a>返回值
 
-返回自变量的反双曲正切值
+返回参数的反双曲正切值
 
 ##  <a name="atanhf"></a>  atanhf
 
@@ -409,7 +409,7 @@ inline float atanhf(float _X) restrict(amp);
 
 ### <a name="return-value"></a>返回值
 
-返回自变量的反双曲正切值
+返回参数的反双曲正切值
 
 ##  <a name="cbrt"></a>  cbrt
 
@@ -428,7 +428,7 @@ inline double cbrt(double _X) restrict(amp);
 
 ### <a name="return-value"></a>返回值
 
-返回自变量的实立方根
+返回参数的实立方根
 
 ##  <a name="cbrtf"></a>  cbrtf
 
@@ -445,7 +445,7 @@ inline float cbrtf(float _X) restrict(amp);
 
 ### <a name="return-value"></a>返回值
 
-返回自变量的实立方根
+返回参数的实立方根
 
 ##  <a name="ceil"></a>  ceil
 
@@ -548,7 +548,7 @@ inline double cos(double _X) restrict(amp);
 
 ### <a name="return-value"></a>返回值
 
-返回自变量的余弦值
+返回参数的余弦值
 
 ##  <a name="cosf"></a>  cosf
 
@@ -565,7 +565,7 @@ inline float cosf(float _X) restrict(amp);
 
 ### <a name="return-value"></a>返回值
 
-返回自变量的余弦值
+返回参数的余弦值
 
 ##  <a name="cosh"></a>  cosh
 
@@ -821,7 +821,7 @@ inline float exp10f(float _X) restrict(amp);
 
 ##  <a name="expm1"></a>  expm1
 
-计算自变量的以 e 为底的指数，减去 1
+计算参数的以 e 为底的指数，减去 1
 
 ```
 inline float expm1(float exponent) restrict(amp);
@@ -831,7 +831,7 @@ inline double expm1(double exponent) restrict(amp);
 
 ### <a name="parameters"></a>参数
 
-*指数*<br/>
+*exponent*<br/>
 指数项*n*的数学表达式`e` <sup>n</sup>，其中`e`是自然对数的底数。
 
 ### <a name="return-value"></a>返回值
@@ -840,7 +840,7 @@ inline double expm1(double exponent) restrict(amp);
 
 ##  <a name="expm1f"></a>  expm1f
 
-计算自变量的以 e 为底的指数，减去 1
+计算参数的以 e 为底的指数，减去 1
 
 ```
 inline float expm1f(float exponent) restrict(amp);
@@ -848,7 +848,7 @@ inline float expm1f(float exponent) restrict(amp);
 
 ### <a name="parameters"></a>参数
 
-*指数*<br/>
+*exponent*<br/>
 指数项*n*的数学表达式`e` <sup>n</sup>，其中`e`是自然对数的底数。
 
 ### <a name="return-value"></a>返回值
@@ -1243,7 +1243,7 @@ inline float fmodf(
 
 ##  <a name="fpclassify"></a>  fpclassify
 
-将自变量值分类为 NaN、无穷大、正常、次正常、零
+将参数值分类为 NaN、无穷大、正常、次正常、零
 
 ```
 inline int fpclassify(float _X) restrict(amp);
@@ -1279,7 +1279,7 @@ inline double frexp(
 *_X*<br/>
 浮点值
 
-*2^_exp*<br/>
+*_Exp*<br/>
 以浮点值形式返回 _X 的整数指数。
 
 ### <a name="return-value"></a>返回值
@@ -1301,7 +1301,7 @@ inline float frexpf(
 *_X*<br/>
 浮点值
 
-*2^_exp*<br/>
+*_Exp*<br/>
 以浮点值形式返回 _X 的整数指数。
 
 ### <a name="return-value"></a>返回值
@@ -1466,7 +1466,7 @@ inline int isnormal(double _X) restrict(amp);
 
 ### <a name="return-value"></a>返回值
 
-当且仅当自变量具有规范值时，返回一个非零值
+当且仅当参数具有规范值时，返回一个非零值
 
 ##  <a name="ldexp"></a>  ldexp
 
@@ -1487,7 +1487,7 @@ inline double ldexp(
 *_X*<br/>
 浮点值尾数
 
-*2^_exp*<br/>
+*_Exp*<br/>
 整数值指数
 
 ### <a name="return-value"></a>返回值
@@ -1509,7 +1509,7 @@ inline float ldexpf(
 *_X*<br/>
 浮点值尾数
 
-*2^_exp*<br/>
+*_Exp*<br/>
 整数值指数
 
 ### <a name="return-value"></a>返回值
@@ -1535,12 +1535,12 @@ inline double lgamma(
 *_X*<br/>
 浮点值
 
-*（_s)*<br/>
+*_Sign*<br/>
 返回符号
 
 ### <a name="return-value"></a>返回值
 
-返回自变量伽玛绝对值的自然对数
+返回参数伽玛绝对值的自然对数
 
 ##  <a name="lgammaf"></a>  lgammaf
 
@@ -1557,12 +1557,12 @@ inline float lgammaf(
 *_X*<br/>
 浮点值
 
-*（_s)*<br/>
+*_Sign*<br/>
 返回符号
 
 ### <a name="return-value"></a>返回值
 
-返回自变量伽玛绝对值的自然对数
+返回参数伽玛绝对值的自然对数
 
 ##  <a name="log"></a>  log
 
@@ -1621,7 +1621,7 @@ inline float log10f(float _X) restrict(amp);
 
 ##  <a name="log1p"></a>  log1p
 
-计算 1 加自变量的以 e 为底的对数
+计算 1 加参数的以 e 为底的对数
 
 ```
 inline float log1p(float _X) restrict(amp);
@@ -1636,11 +1636,11 @@ inline double log1p(double _X) restrict(amp);
 
 ### <a name="return-value"></a>返回值
 
-返回 1加自变量的以 e 为底的对数
+返回 1加参数的以 e 为底的对数
 
 ##  <a name="log1pf"></a>  log1pf
 
-计算 1 加自变量的以 e 为底的对数
+计算 1 加参数的以 e 为底的对数
 
 ```
 inline float log1pf(float _X) restrict(amp);
@@ -1653,7 +1653,7 @@ inline float log1pf(float _X) restrict(amp);
 
 ### <a name="return-value"></a>返回值
 
-返回 1加自变量的以 e 为底的对数
+返回 1加参数的以 e 为底的对数
 
 ##  <a name="log2"></a>  log2
 
@@ -1828,7 +1828,7 @@ inline float nanf(int _X) restrict(amp);
 
 ##  <a name="nearbyint"></a>  nearbyint
 
-通过使用当前舍入方向，将自变量舍入为浮点格式的整数值。
+通过使用当前舍入方向，将参数舍入为浮点格式的整数值。
 
 ```
 inline float nearbyint(float _X) restrict(amp);
@@ -1847,7 +1847,7 @@ inline double nearbyint(double _X) restrict(amp);
 
 ##  <a name="nearbyintf"></a>  nearbyintf
 
-通过使用当前舍入方向，将自变量舍入为浮点格式的整数值。
+通过使用当前舍入方向，将参数舍入为浮点格式的整数值。
 
 ```
 inline float nearbyintf(float _X) restrict(amp);
@@ -2062,7 +2062,7 @@ inline float rcbrtf(float _X) restrict(amp);
 
 返回自变量的立方根的倒数
 
-##  <a name="remainder"></a>  其余部分
+##  <a name="remainder"></a>  remainder
 
 计算余数：_X REM _Y
 
@@ -2388,7 +2388,7 @@ inline double sin(double _X) restrict(amp);
 
 ### <a name="return-value"></a>返回值
 
-返回自变量的正弦值
+返回参数的正弦值
 
 ##  <a name="sinf"></a>  sinf
 
@@ -2405,7 +2405,7 @@ inline float sinf(float _X) restrict(amp);
 
 ### <a name="return-value"></a>返回值
 
-返回自变量的正弦值
+返回参数的正弦值
 
 ##  <a name="sincos"></a>  sincos
 
@@ -2473,7 +2473,7 @@ inline double sinh(double _X) restrict(amp);
 
 ### <a name="return-value"></a>返回值
 
-返回自变量的双曲正弦值
+返回参数的双曲正弦值
 
 ##  <a name="sinhf"></a>  sinhf
 
@@ -2490,7 +2490,7 @@ inline float sinhf(float _X) restrict(amp);
 
 ### <a name="return-value"></a>返回值
 
-返回自变量的双曲正弦值
+返回参数的双曲正弦值
 
 ##  <a name="sinpi"></a>  sinpi
 
@@ -2530,7 +2530,7 @@ inline float sinpif(float _X) restrict(amp);
 
 ##  <a name="sqrt"></a>  sqrt
 
-计算自变量的平方根
+计算参数的平方根
 
 ```
 inline float sqrt(float _X) restrict(amp);
@@ -2549,7 +2549,7 @@ inline double sqrt(double _X) restrict(amp);
 
 ##  <a name="sqrtf"></a>  sqrtf
 
-计算自变量的平方根
+计算参数的平方根
 
 ```
 inline float sqrtf(float _X) restrict(amp);
@@ -2581,7 +2581,7 @@ inline double tan(double _X) restrict(amp);
 
 ### <a name="return-value"></a>返回值
 
-返回自变量的正切值
+返回参数的正切值
 
 ##  <a name="tanf"></a>  tanf
 
@@ -2598,7 +2598,7 @@ inline float tanf(float _X) restrict(amp);
 
 ### <a name="return-value"></a>返回值
 
-返回自变量的正切值
+返回参数的正切值
 
 ##  <a name="tanh"></a>  tanh
 
@@ -2617,7 +2617,7 @@ inline double tanh(double _X) restrict(amp);
 
 ### <a name="return-value"></a>返回值
 
-返回自变量的双曲正切值
+返回参数的双曲正切值
 
 ##  <a name="tanhf"></a>  tanhf
 
@@ -2634,7 +2634,7 @@ inline float tanhf(float _X) restrict(amp);
 
 ### <a name="return-value"></a>返回值
 
-返回自变量的双曲正切值
+返回参数的双曲正切值
 
 ##  <a name="tanpi"></a>  tanpi
 

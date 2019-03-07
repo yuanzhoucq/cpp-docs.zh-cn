@@ -100,12 +100,12 @@ helpviewer_keywords:
 - CRichEditView [MFC], m_nBulletIndent
 - CRichEditView [MFC], m_nWordWrap
 ms.assetid: bd576b10-4cc0-4050-8f76-e1a0548411e4
-ms.openlocfilehash: 8cfaef2c8b064cb9faa8c0f6bf65a8868eed7cc7
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 9cedcfbfb662d7d4d635a02b82ea45828c54b958
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178735"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259511"
 ---
 # <a name="cricheditview-class"></a>CRichEditView 类
 
@@ -143,7 +143,7 @@ class CRichEditView : public CCtrlView
 |[CRichEditView::GetParaFormatSelection](#getparaformatselection)|检索段落格式设置为当前所选内容的属性。|
 |[CRichEditView::GetPrintRect](#getprintrect)|检索此 rich edit 视图的打印矩形。|
 |[CRichEditView::GetPrintWidth](#getprintwidth)|检索此 rich edit 视图的打印宽度。|
-|[Cricheditview:: Getricheditctrl](#getricheditctrl)|检索格式文本编辑控件。|
+|[CRichEditView::GetRichEditCtrl](#getricheditctrl)|检索格式文本编辑控件。|
 |[CRichEditView::GetSelectedItem](#getselecteditem)|从 rich edit 视图中检索所选的项。|
 |[CRichEditView::GetTextLength](#gettextlength)|检索 rich edit 视图中的文本的长度。|
 |[CRichEditView::GetTextLengthEx](#gettextlengthex)|检索字符或 rich edit 视图中的字节的数。 确定长度的方法的扩展的标志列表。|
@@ -573,7 +573,7 @@ int GetPrintWidth() const;
 
 以 MM_TWIPS 度量的打印区域的宽度。
 
-##  <a name="getricheditctrl"></a>  Cricheditview:: Getricheditctrl
+##  <a name="getricheditctrl"></a>  CRichEditView::GetRichEditCtrl
 
 调用此函数可检索[CRichEditCtrl](../../mfc/reference/cricheditctrl-class.md)与关联的对象`CRichEditView`对象。
 

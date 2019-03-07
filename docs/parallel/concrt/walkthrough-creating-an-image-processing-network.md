@@ -5,12 +5,12 @@ helpviewer_keywords:
 - image-processing networks, creating [Concurrency Runtime]
 - creating image-processing networks [Concurrency Runtime]
 ms.assetid: 78ccadc9-5ce2-46cc-bd62-ce0f99d356b8
-ms.openlocfilehash: 93a20ca9967c8730e1563a653c8f4546d94161fb
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 035d73190f3596044a35cbc45681807801385eab
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176167"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262801"
 ---
 # <a name="walkthrough-creating-an-image-processing-network"></a>演练：创建图像处理网络
 
@@ -162,7 +162,7 @@ ms.locfileid: "52176167"
 
 复制示例代码并将其粘贴到 Visual Studio 项目中，或将其粘贴在文件中名为`image-processing-network.cpp`然后在 Visual Studio 命令提示符窗口中运行以下命令。
 
-**cl.exe /DUNICODE /EHsc 图像处理 network.cpp /link gdiplus.lib**
+**cl.exe /DUNICODE /EHsc image-processing-network.cpp /link gdiplus.lib**
 
 ## <a name="see-also"></a>请参阅
 

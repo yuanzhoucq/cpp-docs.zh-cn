@@ -52,12 +52,12 @@ helpviewer_keywords:
 - CPropertySheet [MFC], SetWizardMode
 - CPropertySheet [MFC], m_psh
 ms.assetid: 8461ccff-d14f-46e0-a746-42ad642ef94e
-ms.openlocfilehash: 8ea466abe153bd31ef15c41b277b57f90cd2b50b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 03f9e5e0cac9cc71080bfe97d6a3115fd3cc99b5
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50450929"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57418992"
 ---
 # <a name="cpropertysheet-class"></a>CPropertySheet 类
 
@@ -81,11 +81,11 @@ class CPropertySheet : public CWnd
 
 |名称|描述|
 |----------|-----------------|
-|[Cpropertysheet:: Addpage](#addpage)|向属性表添加页面。|
+|[CPropertySheet::AddPage](#addpage)|向属性表添加页面。|
 |[CPropertySheet::Construct](#construct)|构造 `CPropertySheet` 对象。|
 |[CPropertySheet::Create](#create)|显示无模式属性表。|
-|[Cpropertysheet:: Domodal](#domodal)|显示模式属性表。|
-|[Cpropertysheet:: Enablestackedtabs](#enablestackedtabs)|指示是否在属性表使用堆积或滚动选项卡。|
+|[CPropertySheet::DoModal](#domodal)|显示模式属性表。|
+|[CPropertySheet::EnableStackedTabs](#enablestackedtabs)|指示是否在属性表使用堆积或滚动选项卡。|
 |[CPropertySheet::EndDialog](#enddialog)|终止属性表。|
 |[CPropertySheet::GetActiveIndex](#getactiveindex)|检索活动的属性表页的索引。|
 |[CPropertySheet::GetActivePage](#getactivepage)|返回活动页对象。|
@@ -94,7 +94,7 @@ class CPropertySheet : public CWnd
 |[CPropertySheet::GetPageIndex](#getpageindex)|检索指定的属性表页的索引。|
 |[CPropertySheet::GetTabControl](#gettabcontrol)|检索指向选项卡控件。|
 |[CPropertySheet::MapDialogRect](#mapdialogrect)|将一个矩形的对话框单位转换为屏幕单位。|
-|[Cpropertysheet:: Oninitdialog](#oninitdialog)|重写以增加属性表初始化。|
+|[CPropertySheet::OnInitDialog](#oninitdialog)|重写以增加属性表初始化。|
 |[CPropertySheet::PressButton](#pressbutton)|模拟所选的属性表中指定的按钮。|
 |[CPropertySheet::RemovePage](#removepage)|删除从属性表页。|
 |[CPropertySheet::SetActivePage](#setactivepage)|以编程方式设置活动页对象。|
@@ -117,7 +117,7 @@ class CPropertySheet : public CWnd
 
 若要在属性表对象中自动显示这些新映像，对的调用中传递的位图和调色板映像的有效值[CPropertySheet::Construct](#construct)或[CPropertySheet::CPropertySheet](#cpropertysheet).
 
-即使`CPropertySheet`不派生自[CDialog](../../mfc/reference/cdialog-class.md)，以及管理`CPropertySheet`对象是类似于管理`CDialog`对象。 例如，创建属性表的所需的两部分构造： 调用构造函数中，，然后调用[DoModal](#domodal)的模式属性表或[创建](#create)无模式属性表。 `CPropertySheet` 有两种类型的构造函数： [CPropertySheet::Construct](#construct)并[CPropertySheet::CPropertySheet](#cpropertysheet)。
+即使`CPropertySheet`不派生自[CDialog](../../mfc/reference/cdialog-class.md)，以及管理`CPropertySheet`对象是类似于管理`CDialog`对象。 例如，创建属性表的所需的两部分构造： 调用构造函数中，，然后调用[DoModal](#domodal)的模式属性表或[创建](#create)无模式属性表。 `CPropertySheet` 有两种类型的构造函数：[CPropertySheet::Construct](#construct)并[CPropertySheet::CPropertySheet](#cpropertysheet)。
 
 当构造`CPropertySheet`对象时，某些[窗口样式](../../mfc/reference/styles-used-by-mfc.md#window-styles)会导致首次异常发生。 这将导致从系统尝试进行更改的属性表样式，然后创建工作表。 若要避免此异常，请确保在创建时设置以下样式在`CPropertySheet`:
 
@@ -161,7 +161,7 @@ class CPropertySheet : public CWnd
 
 **标头：** afxdlgs.h
 
-##  <a name="addpage"></a>  Cpropertysheet:: Addpage
+##  <a name="addpage"></a>  CPropertySheet::AddPage
 
 将提供与最右侧的选项卡页添加属性表中。
 
@@ -371,7 +371,7 @@ virtual BOOL Create(CWnd* pParentWnd = NULL,
 
 [!code-cpp[NVC_MFCDocView#133](../../mfc/codesnippet/cpp/cpropertysheet-class_5.cpp)]
 
-##  <a name="domodal"></a>  Cpropertysheet:: Domodal
+##  <a name="domodal"></a>  CPropertySheet::DoModal
 
 显示模式属性表。
 
@@ -418,7 +418,7 @@ IDOK 或 IDCANCEL 如果函数成功，则否则为 0 或-1。 如果已建立�
 
 有关示例，请参阅[cpropertysheet:: Addpage](#addpage)。
 
-##  <a name="enablestackedtabs"></a>  Cpropertysheet:: Enablestackedtabs
+##  <a name="enablestackedtabs"></a>  CPropertySheet::EnableStackedTabs
 
 指示是否堆栈选项卡属性表中的行数。
 
@@ -510,7 +510,7 @@ CPropertyPage* GetPage(int nPage) const;
 
 ### <a name="parameters"></a>参数
 
-*n 页面*<br/>
+*nPage*<br/>
 索引所需的页上，从 0 开始。 必须是介于 0 和一个小于页面在属性表中，非独占数之间。
 
 ### <a name="return-value"></a>返回值
@@ -607,7 +607,7 @@ void MapDialogRect(LPRECT lpRect) const;
 ### <a name="parameters"></a>参数
 
 *lpRect*<br/>
-指向[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构或[CRect](../../atl-mfc-shared/reference/crect-class.md)对象，它包含对话框中要转换的坐标。
+指向[RECT](/previous-versions/dd162897\(v=vs.85\))结构或[CRect](../../atl-mfc-shared/reference/crect-class.md)对象，它包含对话框中要转换的坐标。
 
 ### <a name="remarks"></a>备注
 
@@ -617,7 +617,7 @@ void MapDialogRect(LPRECT lpRect) const;
 
 `MapDialogRect`成员函数将替换中的对话框单元*lpRect*与屏幕单位 （像素），使该矩形可以用于创建一个对话框，或将控件放在一个框。
 
-##  <a name="oninitdialog"></a>  Cpropertysheet:: Oninitdialog
+##  <a name="oninitdialog"></a>  CPropertySheet::OnInitDialog
 
 重写以增加属性表初始化。
 
@@ -647,8 +647,8 @@ void PressButton(int nButton);
 
 ### <a name="parameters"></a>参数
 
-*n 按钮*<br/>
-n 按钮： 标识按钮按下。 此参数可以是下列值之一：
+*nButton*<br/>
+n 按钮：标识按下的按钮。 此参数可以是下列值之一：
 
 - PSBTN_BACK 选择后退按钮。
 
@@ -688,7 +688,7 @@ void RemovePage(int nPage);
 *pPage*<br/>
 指向页后，可以从属性表中删除。 不能为 NULL。
 
-*n 页面*<br/>
+*nPage*<br/>
 要删除的页的索引。 必须是介于 0 和一个小于页面在属性表中，非独占数之间。
 
 ### <a name="remarks"></a>备注
@@ -706,7 +706,7 @@ BOOL SetActivePage(CPropertyPage* pPage);
 
 ### <a name="parameters"></a>参数
 
-*n 页面*<br/>
+*nPage*<br/>
 若要设置的页的索引。 它必须介于 0 和一个小于页面在属性表中，非独占数之间。
 
 *pPage*<br/>

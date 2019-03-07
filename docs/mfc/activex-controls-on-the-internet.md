@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Internet applications [MFC], ActiveX controls
 - networks [MFC], downloading with ActiveX controls
 ms.assetid: 7ab943c8-2022-41df-9065-d629b616eeec
-ms.openlocfilehash: 7becf4d4f579fa4b9b954935f55a06b2fed78593
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c019c922a5690d4ead861c40bed3c0c1c76cea28
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50603705"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57282998"
 ---
 # <a name="activex-controls-on-the-internet"></a>Internet 上的 ActiveX 控件
 
@@ -45,11 +45,11 @@ ActiveX 控件不受 Internet 限制。 ActiveX 控件还可在任何容器中�
 
 ## <a name="making-your-existing-controls-internet-friendly"></a>使现有控件支持 Internet
 
-设计在 Internet 环境下正常运行的控件需要考虑 Internet 上相对较低的转换率。 您可以使用现有控件；但是，您应采取下列步骤使您的代码大小更小以及使您的控件属性能够异步下载。
+设计在 Internet 环境下正常运行的控件需要考虑 Internet 上相对较低的转换率。 你可以使用现有控件；但是，你应采取下列步骤使你的代码大小更小以及使你的控件属性能够异步下载。
 
 若要提高控件的性能，请遵循下列有关效率注意事项的提示：
 
-- 实现本文所述的技术[ActiveX 控件： 优化](../mfc/mfc-activex-controls-optimization.md)。
+- 实现本文所述的技术[ActiveX 控件：优化](../mfc/mfc-activex-controls-optimization.md)。
 
 - 考虑如何实例化控件。
 
@@ -89,7 +89,7 @@ ActiveX 控件不受 Internet 限制。 ActiveX 控件还可在任何容器中�
 
 1. 上**控制设置**页上，选择**异步加载属性**。 选择此选项将为您设置就绪状态属性和就绪状态更改事件。
 
-   此外可以选择其他优化，如**无窗口激活**中, 所述[ActiveX 控件： 优化](../mfc/mfc-activex-controls-optimization.md)。
+   此外可以选择其他优化，如**无窗口激活**中, 所述[ActiveX 控件：优化](../mfc/mfc-activex-controls-optimization.md)。
 
 1. 选择**完成**创建项目。
 
@@ -183,7 +183,7 @@ ActiveX 控件不受 Internet 限制。 ActiveX 控件还可在任何容器中�
 
 ## <a name="updating-an-existing-ole-control-to-use-new-activex-control-features"></a>将现有 OLE 控件更新为使用新的 ActiveX 控件功能
 
-如果 OLE 控件是使用 4.2 之前的 Visual C++ 版本创建的，则您可执行下列步骤来提高其性能并增强其功能。 有关这些更改的详细讨论，请参阅[ActiveX 控件： 优化](../mfc/mfc-activex-controls-optimization.md)。
+如果 OLE 控件是使用 4.2 之前的 Visual C++ 版本创建的，则您可执行下列步骤来提高其性能并增强其功能。 有关这些更改的详细讨论，请参阅[ActiveX 控件：优化](../mfc/mfc-activex-controls-optimization.md)。
 
 如果要向现有控件添加异步属性支持，则需要添加就绪状态属性和 `ReadyStateChange` 事件。 在控件的构造函数中，添加：
 
@@ -195,4 +195,3 @@ ActiveX 控件不受 Internet 限制。 ActiveX 控件还可在任何容器中�
 
 [MFC Internet 编程任务](../mfc/mfc-internet-programming-tasks.md)<br/>
 [MFC Internet 编程基础知识](../mfc/mfc-internet-programming-basics.md)
-

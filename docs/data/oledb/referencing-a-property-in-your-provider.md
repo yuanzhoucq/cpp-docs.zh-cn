@@ -6,16 +6,16 @@ helpviewer_keywords:
 - references, to properties in providers
 - referencing properties in providers
 ms.assetid: bfbb3851-5eed-467a-a179-4a97a9515525
-ms.openlocfilehash: 642e6219f72e506205e8192770be7d8af5d0d817
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: d8c775af8f887deb7bf49016f9716fa0a76d2439
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556450"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57415937"
 ---
 # <a name="referencing-a-property-in-your-provider"></a>在提供程序中引用属性
 
-找到所需的属性的属性组和属性 ID。 有关详细信息，请参阅[OLE DB 属性](https://docs.microsoft.com/previous-versions/windows/desktop/ms722734(v=vs.85))中**OLE DB 程序员参考**。
+找到所需的属性的属性组和属性 ID。 有关详细信息，请参阅[OLE DB 属性](/previous-versions/windows/desktop/ms722734(v=vs.85))中**OLE DB 程序员参考**。
 
 下面的示例假定你正在尝试获取从行集中的属性。 使用会话或命令的代码类似，但使用不同的接口。
 

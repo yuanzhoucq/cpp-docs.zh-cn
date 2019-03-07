@@ -2,12 +2,12 @@
 title: Rich Edit 控件示例
 ms.date: 02/06/2019
 ms.assetid: ac98bf45-ca74-459c-9b3e-df278a67a00f
-ms.openlocfilehash: 92b095087553e1ad2a9ca8c0cce29e8e3a86d132
-ms.sourcegitcommit: 63c072f5e941989636f5a2b13800b68bb7129931
+ms.openlocfilehash: 8d4b2284e1738b1739d732739d392297b90ffb4c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55763916"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267454"
 ---
 # <a name="rich-edit-control-examples"></a>Rich Edit 控件示例
 
@@ -17,4 +17,3 @@ MFC OLE 示例[写字板](https://github.com/Microsoft/VCSamples/tree/da802c2aa9
 
 [使用 CRichEditCtrl](../mfc/using-cricheditctrl.md)<br/>
 [控件](../mfc/controls-mfc.md)
-
