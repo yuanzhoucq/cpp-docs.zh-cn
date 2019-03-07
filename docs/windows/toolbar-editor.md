@@ -50,12 +50,12 @@ helpviewer_keywords:
 - buttons [C++], tool tips
 - Toolbar editor [C++], creating tool tips
 ms.assetid: aa9f0adf-60f6-4f79-ab05-bc330f15ec43
-ms.openlocfilehash: 5aadb00e6e010467ee9c70dc357916d3c4f81853
-ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
+ms.openlocfilehash: a138eb5aa40429696ca2efa4a67e1a1c5490f4fa
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57211077"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57563246"
 ---
 # <a name="toolbar-editor-c"></a>工具栏编辑器 （c + +）
 
@@ -103,7 +103,7 @@ ms.locfileid: "57211077"
 
 ### <a name="to-create-new-toolbars"></a>若要创建新工具栏
 
-1. 在中**资源**视图中，右键单击你的.rc 文件并选择**添加资源**。 如果你的.rc 文件中有一个现有工具栏，可以右键单击**工具栏**文件夹，然后选择**插入工具栏**。
+1. 在中**资源视图**，右键单击你 *.rc*文件，然后选择**添加资源**。 如果您有一个现有工具栏您 *.rc*文件中，可以右键单击**工具栏**文件夹，然后选择**插入工具栏**。
 
 1. 在中**添加资源**对话框中，选择**工具栏**中**资源类型**列表，然后选择**新建**。
 
@@ -111,7 +111,7 @@ ms.locfileid: "57211077"
 
 ### <a name="to-convert-bitmaps-to-toolbar-resources"></a>若要将位图转换为工具栏资源
 
-1. 打开现有的位图资源中[的图像编辑器](../windows/image-editor-for-icons.md)。 如果位图不是在你的.rc 文件中，右键单击.rc 文件，然后选择**导入**，然后导航到你想要添加到你的.rc 文件，并选择的位图**打开**。
+1. 打开现有的位图资源中[的图像编辑器](../windows/image-editor-for-icons.md)。 如果位图不是在你 *.rc*文件中，右键单击 *.rc*文件，然后选择**导入**，然后导航到想要添加到该位图在 *.rc*文件，然后选择**打开**。
 
 1. 转到菜单**图像** > **工具栏编辑器**。
 
@@ -126,7 +126,7 @@ ms.locfileid: "57211077"
 
 ### <a name="to-manage-toolbar-buttons"></a>若要管理工具栏按钮
 
-若要创建新的工具栏按钮：
+#### <a name="to-create-a-new-toolbar-button"></a>若要创建新的工具栏按钮
 
 1. 在中[资源视图](../windows/resource-view-window.md)展开资源文件夹 (例如， *Project1.rc*)。
 
@@ -134,36 +134,34 @@ ms.locfileid: "57211077"
 
    - 将 ID 分配给工具栏右侧的空白按钮。 您可以通过编辑来实现**ID**属性中的[属性窗口](/visualstudio/ide/reference/properties-window)。 例如，你可能想要提供的工具栏按钮和菜单选项相同的 ID。 在这种情况下，使用下拉列表框选择**ID**的菜单选项。
 
-   - 选择工具栏右侧的空白按钮 (在**工具栏视图**窗格) 并开始绘制。 分配一个默认按钮命令 ID (ID_BUTTON\<n >)。
+   - 选择空白按钮中的工具栏右侧**工具栏视图**窗格并开始绘制。 分配一个默认按钮命令 ID (ID_BUTTON\<n >)。
 
-您还可以复制并粘贴到为新按钮的工具栏上的图像。
-
-若要将图像添加到工具栏中，为的按钮：
+#### <a name="to-add-an-image-to-a-toolbar-as-a-button"></a>若要将图像添加到工具栏中，为的按钮
 
 1. 在中[资源视图](../windows/resource-view-window.md)，通过双击它打开工具栏。
 
 1. 接下来，打开你想要添加到您的工具栏图像。
 
    > [!NOTE]
-   > 如果您在 Visual Studio 中打开该映像，将在中打开**图像**编辑器。 此外可以在其他图形程序中打开的图像。
+   > 如果您在 Visual Studio 中打开该映像，将在中打开**的图像编辑器**。 此外可以在其他图形程序中打开的图像。
 
-1. 从**编辑**菜单中，选择**副本**。
+1. 转到菜单**编辑** > **副本**。
 
 1. 选择其选项卡顶部的源窗口中切换到您的工具栏。
 
-1. 从**编辑**菜单中，选择**粘贴**。
+1. 转到菜单**编辑** > **粘贴**。
 
    图像将显示在工具栏上，为新按钮。
 
-若要移动的工具栏按钮：
+#### <a name="to-move-a-toolbar-button"></a>移动工具栏按钮
 
 在中**工具栏视图**窗格中，将你想要将移动到其新位置上工具栏按钮。
 
-若要从工具栏中复制按钮，按下**Ctrl**密钥并在**工具栏视图**窗格中，将按钮拖到其新位置的工具栏上或某个位置上另一个工具栏。
+- 若要从工具栏中复制按钮，按下**Ctrl**密钥并在**工具栏视图**窗格中，将按钮拖到其新位置的工具栏上或某个位置上另一个工具栏。
 
-若要删除的工具栏按钮，选择工具栏上的按钮，并将其拖出工具栏。
+- 若要删除的工具栏按钮，选择工具栏上的按钮，并将其拖出工具栏。
 
-要插入或删除上一个工具栏按钮之间的空间，或者将它们拖离或向另一个在工具栏上。
+- 要插入或删除上一个工具栏按钮之间的空间，或者将它们拖离或向另一个在工具栏上。
 
 |操作|步骤|
 |------|------|
@@ -175,19 +173,19 @@ ms.locfileid: "57211077"
 > [!NOTE]
 > 如果没有离开所拖动的按钮的一侧空间并拖动按钮与相邻的按钮，多个中间**工具栏编辑器**插入在相反一侧所拖动的按钮的一个空格。
 
-若要更改工具栏按钮的属性：
+#### <a name="to-change-the-properties-of-a-toolbar-button"></a>若要更改工具栏按钮的属性
 
 1. 在 c + + 项目中，选择工具栏上的按钮。
 
 1. 键入中的新 ID **ID**属性中的[属性窗口](/visualstudio/ide/reference/properties-window)，或使用下拉列表选择一个新**ID**。
 
-若要创建的工具栏按钮的工具提示：
+#### <a name="to-create-a-tool-tip-for-a-toolbar-button"></a>若要创建的工具栏按钮的工具提示
 
 1. 选择工具栏上的按钮。
 
 1. 在中[属性窗口](/visualstudio/ide/reference/properties-window)，在**提示**字段中添加按钮进行状态栏并在该消息后的说明，添加`\n`和工具提示名称。
 
-有关示例，请参阅有关的工具提示**打印**按钮**写字板**:
+例如，若要查看的工具提示**打印**按钮**写字板**:
 
 1. 打开**写字板**。
 

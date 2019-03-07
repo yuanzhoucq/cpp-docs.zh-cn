@@ -8,19 +8,19 @@ helpviewer_keywords:
 - accelerator keys
 - Image editor [C++], accelerator keys
 ms.assetid: add37861-3e17-4a6f-89e8-46df12e74a90
-ms.openlocfilehash: 604f97edc8e4e49bad477d76e0e46334b8cf726b
-ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
+ms.openlocfilehash: 0b29f435ab91b10e010e956d26fb8d2d116edc6e
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/18/2019
-ms.locfileid: "56336529"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57563116"
 ---
 # <a name="accelerator-keys-c-image-editor-for-icons"></a>快捷键 （图标的图像编辑器 c + +）
 
-下面是默认情况下绑定到键的图像编辑器命令的快捷键。 若要更改快捷键，请单击**选项**上**工具**菜单中，然后选择**键盘**下**环境**文件夹。 有关详细信息，请参阅[标识并自定义键盘快捷方式](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio)。
+下面是默认情况下绑定到键的图像编辑器命令的快捷键。 若要更改快捷键，请转到菜单**工具** > **选项**，然后选择**键盘**下**环境**文件夹。 有关详细信息，请参阅[标识并自定义键盘快捷方式](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio)。
 
 > [!NOTE]
-> 对话框中的可用选项以及显示的菜单命令的名称和位置可能与“帮助”中的描述不同，具体取决于您的当前设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[个性化设置 Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide)。
+> 对话框中的可用选项以及显示的菜单命令的名称和位置可能与“帮助”中的描述不同，具体取决于您的当前设置或版本。 若要更改设置，请转到菜单**工具** > **导入和导出设置**。 有关详细信息，请参阅[个性化设置 Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide)。
 
 |命令|键|描述|
 |-------------|----------|-----------------|
@@ -68,4 +68,8 @@ ms.locfileid: "56336529"
 
 ## <a name="see-also"></a>请参阅
 
-[图标的图像编辑器](../windows/image-editor-for-icons.md)
+[图标的图像编辑器](../windows/image-editor-for-icons.md)<br/>
+[如何：创建图标或其他图像](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md)<br/>
+[如何：编辑图像](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)<br/>
+[如何：使用绘图工具](../windows/using-a-drawing-tool-image-editor-for-icons.md)<br/>
+[如何：处理颜色](../windows/working-with-color-image-editor-for-icons.md)<br/>

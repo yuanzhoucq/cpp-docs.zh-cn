@@ -5,12 +5,12 @@ helpviewer_keywords:
 - symbols [C++], predefined IDs
 - predefined symbol IDs
 ms.assetid: 91a5d610-1a04-47e8-b8a4-63ad650a90df
-ms.openlocfilehash: 7d3581a9f6f2a2080f72634a01d3417ffecf82a4
-ms.sourcegitcommit: f127b08f114b8d6cab6b684febcb6f2ae0e055ba
+ms.openlocfilehash: 22337e812936a90f8d7c4ead33989e1e0c4d39f0
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "56954908"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57562752"
 ---
 # <a name="predefined-symbol-ids"></a>预定义的符号 ID
 
@@ -18,7 +18,7 @@ ms.locfileid: "56954908"
 
 处理资源时，这些符号 ID 变得很重要。 它们可用于编辑快捷键对应表，其中一些已与虚拟键相关联。 它们还可以通过[属性窗口](/visualstudio/ide/reference/properties-window)。 可以将任何预定义的符号 Id 分配给新资源，或可以将快捷键分配给它们和 ID 会自动将与该密钥组合关联的符号与关联的功能。
 
-以下具有预定义符号的库将显示为项目的一部分：
+库具有预定义将显示为项目的一部分的符号：
 
 - [ATL 预定义的符号](../windows/atl-predefined-symbols.md)
 

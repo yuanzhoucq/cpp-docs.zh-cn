@@ -24,12 +24,12 @@ helpviewer_keywords:
 - files [C++], editable types
 - resource editing
 ms.assetid: 4d2b6fcc-07cf-4289-be87-83a60f69533c
-ms.openlocfilehash: bd73db481659573d51e4abd56da9689e2e8ade25
-ms.sourcegitcommit: e540706f4e2675e7f597cfc5b4f8dde648b007bb
+ms.openlocfilehash: 3de2010cca04d007bf61bf8c139cbc69d790e579
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56676430"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57562999"
 ---
 # <a name="resource-files-c"></a>资源文件 (C++)
 
@@ -121,9 +121,9 @@ ms.locfileid: "56676430"
 
 1. 展开**资源文件**文件夹，然后：
 
-   - 若要在文本编辑器中打开，双击.manifest 文件。
+   - 若要在文本编辑器中打开，双击 *.manifest*文件。
 
-   - 若要打开另一个编辑器中，右击.manifest 文件，并选择**打开方式...**.指定要使用和选择的编辑器**打开**。
+   - 若要打开另一个编辑器中，右键单击 *.manifest*文件，然后选择**打开**。 指定要使用和选择的编辑器**打开**。
 
 ## <a name="requirements"></a>要求
 
