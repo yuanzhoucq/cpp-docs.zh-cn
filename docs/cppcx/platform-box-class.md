@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::Box
 ms.assetid: b3d7ea37-e98a-4fbc-80b0-ad35e50250c6
-ms.openlocfilehash: 29cbe852dcd606ea5cf2953c709fc8e47b89e1f1
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: ca8c9229d0ef5fa654f462282f257b1684984102
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327026"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742938"
 ---
 # <a name="platformbox-class"></a>Platform::Box 类
 
@@ -26,7 +26,7 @@ ref class Box abstract;
 
 **标头：** vccorlib.h
 
-**命名空间：** Platform
+**命名空间：** 平台
 
 ### <a name="members"></a>成员
 
@@ -35,8 +35,8 @@ ref class Box abstract;
 |[Box](#ctor) | 创建可以封装指定类型的值的 `Box`。 |
 |[运算符框&lt;const T&gt;^](#box-const-t) | 实现从 `const` 值类 `T` 或 `enum` 类 `T` 到 `Box<T>` 的装箱转换。 |
 |[运算符框&lt;const 易失性 T&gt;^](#box-const-volatile-t) | 启用从 `const volatile` 值类 `T` 或 `enum` 类型 `T` 到 `Box<T>` 的装箱转换。 |
-|[运算符框&lt;T&gt;^](#box-t) | 实现从值类 `T` 到 `Box<T>` 的装箱转换。 |
-|[运算符框&lt;易失性 T&gt;^](#box-volatile-t) | 启用从 `volatile` 值类 `T` 或 `enum` 类型 `T` 到 `Box<T>` 的装箱转换。 |
+|[operator Box&lt;T&gt;^](#box-t) | 实现从值类 `T` 到 `Box<T>` 的装箱转换。 |
+|[operator Box&lt;volatile T&gt;^](#box-volatile-t) | 启用从 `volatile` 值类 `T` 或 `enum` 类型 `T` 到 `Box<T>` 的装箱转换。 |
 |[Box:: operator T](#t) | 实现从 `T` 值类或 `enum` 类 `T` 到 `Box<T>` 的装箱转换。 |
 |[Value 属性](#value) | 返回在 `Box` 对象中封装的值。 |
 

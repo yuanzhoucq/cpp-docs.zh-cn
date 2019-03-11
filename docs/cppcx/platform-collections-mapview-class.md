@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - MapView Class
 ms.assetid: 9577dde7-f599-43c6-b1e4-7d653706fd62
-ms.openlocfilehash: cd1865320d56d71481cdaf7055f796bfab26eeab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1e38865f1d43edac4fc895052f1ea1b5a54a34ab
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496367"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749251"
 ---
 # <a name="platformcollectionsmapview-class"></a>Platform::Collections::MapView 类
 
@@ -54,16 +54,16 @@ MapView 是具体的 c + + 实现[Windows::Foundation::Collections::IMapView \<K
 
 |名称|描述|
 |----------|-----------------|
-|[Mapview:: Mapview](#ctor)|初始化 MapView 类的新实例。|
+|[MapView::MapView](#ctor)|初始化 MapView 类的新实例。|
 
 ### <a name="public-methods"></a>公共方法
 
 |名称|描述|
 |----------|-----------------|
-|[Mapview:: First](#first)|返回初始化为映射视图中第一个元素的迭代器。|
-|[Mapview:: Haskey](#haskey)|确定当前 MapView 中是否包含指定键。|
-|[Mapview:: Lookup](#lookup)|检索当前 MapView 对象中指定键处的元素。|
-|[Mapview:: Size](#size)|返回当前 MapView 对象中的元素数目。|
+|[MapView::First](#first)|返回初始化为映射视图中第一个元素的迭代器。|
+|[MapView::HasKey](#haskey)|确定当前 MapView 中是否包含指定键。|
+|[MapView::Lookup](#lookup)|检索当前 MapView 对象中指定键处的元素。|
+|[MapView::Size](#size)|返回当前 MapView 对象中的元素数目。|
 |[MapView::Split](#split)|将原始 MapView 对象拆分成两个 MapView 对象。|
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
@@ -171,7 +171,7 @@ MapView(
 *first*<br/>
 用于初始化当前 MapView 的一系列元素中的第一个元素的输入迭代器。
 
-*最后一个*<br/>
+*last*<br/>
 用于初始化当前 MapView 的一系列元素之后的第一个元素的输入迭代器。
 
 *il*<br/>

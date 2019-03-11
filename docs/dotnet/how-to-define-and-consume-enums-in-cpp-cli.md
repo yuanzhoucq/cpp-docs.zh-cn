@@ -1,17 +1,17 @@
 ---
-title: 如何：在 C++/CLI 中定义和使用枚举
+title: 如何：定义和使用枚举在 C + + /cli CLI
 ms.date: 11/04/2016
 helpviewer_keywords:
 - enum class, specifying underlying types
 ms.assetid: df8f2b91-b9d2-4fab-9be4-b1d58b8bc570
-ms.openlocfilehash: 6dc70da0e3888ffee11a6378da5ea82efe58112b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0252c4b64690f6a2fb0fd97b97841fe45fcce244
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539654"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751448"
 ---
-# <a name="how-to-define-and-consume-enums-in-ccli"></a>如何：在 C++/CLI 中定义和使用枚举
+# <a name="how-to-define-and-consume-enums-in-ccli"></a>如何：定义和使用枚举在 C + + /cli CLI
 
 本主题讨论了枚举在 C + + /cli CLI。
 

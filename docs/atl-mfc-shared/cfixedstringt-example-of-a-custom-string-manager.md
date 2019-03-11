@@ -1,27 +1,27 @@
 ---
-title: CFixedStringT： 自定义字符串管理器的示例
+title: CFixedStringT:示例中的自定义字符串管理器
 ms.date: 11/04/2016
 helpviewer_keywords:
 - CFixedStringT class, using a custom string manager
 ms.assetid: 1cf11fd7-51b8-4b94-87af-02bc25f47dd6
-ms.openlocfilehash: d35c4c998a6e5913cd972312c511b2a102480c81
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2b6da5d4166b220ef63500d0154ab32dc72b40f4
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50663152"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740702"
 ---
-# <a name="cfixedstringt-example-of-a-custom-string-manager"></a>CFixedStringT： 自定义字符串管理器的示例
+# <a name="cfixedstringt-example-of-a-custom-string-manager"></a>CFixedStringT:示例中的自定义字符串管理器
 
 ATL 库实现的类使用的自定义字符串管理器的一个示例[CFixedStringT](../atl-mfc-shared/reference/cfixedstringt-class.md)称为**那么 CFixedStringMgr**。 `CFixedStringT` 派生自[CStringT](../atl-mfc-shared/reference/cstringt-class.md)并实现一个字符串，其字符数据分配作为的一部分`CFixedStringT`对象本身，只要该字符串是指定的长度小于`t_nChars`的模板参数`CFixedStringT`. 使用此方法，该字符串不需要在堆，除非字符串的长度大小固定的缓冲区的大小超过指定值。 因为`CFixedStringT`并非总是不使用堆分配其字符串数据，它不能使用`CAtlStringMgr`为其字符串管理器。 它使用自定义字符串管理器 (`CFixedStringMgr`)，实现[IAtlStringMgr](../atl-mfc-shared/reference/iatlstringmgr-class.md)接口。 中介绍了此接口[实现的自定义字符串管理器 （高级方法）](../atl-mfc-shared/implementation-of-a-custom-string-manager-advanced-method.md)。
 
 构造函数`CFixedStringMgr`采用三个参数：
 
-- *pData:* 指向的固定`CStringData`要使用的结构。
+- *pData:* 一个指向固定的`CStringData`要使用的结构。
 
 - *nChars:* 最大字符数`CStringData`结构可以容纳。
 
-- *pMgr:* 指向的`IAtlStringMgr`接口的"备份字符串 manager"。
+- *pMgr:* 一个指向`IAtlStringMgr`接口的"备份字符串 manager"。
 
 构造函数存储的值*pData*并*pMgr*在其各自的成员变量 (`m_pData`和`m_pMgr`)。 然后，它设置为零，可用长度等于最大大小固定的缓冲区和引用计数为-1 的缓冲区的长度。 引用计数值指示缓冲区被锁定，并使用此实例的`CFixedStringMgr`作为字符串管理器。
 
@@ -64,4 +64,3 @@ ATL 库实现的类使用的自定义字符串管理器的一个示例[CFixedStr
 ## <a name="see-also"></a>请参阅
 
 [使用 CStringT 进行内存管理](../atl-mfc-shared/memory-management-with-cstringt.md)
-

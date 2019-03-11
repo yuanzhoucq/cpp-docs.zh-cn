@@ -26,12 +26,12 @@ helpviewer_keywords:
 - Date data type, MFC encapsulation of
 - COleDateTimeSpan class
 ms.assetid: 7441526d-a30a-4019-8fb3-3fee6f897cbe
-ms.openlocfilehash: 7bcf4c50577cf7211f90415143edac9fd0df1d5b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: feef238be96d9a04c2c41e6955efec8b23cf6a89
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509326"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748484"
 ---
 # <a name="coledatetimespan-class"></a>COleDateTimeSpan 类
 
@@ -73,10 +73,10 @@ class COleDateTimeSpan
 |||
 |-|-|
 |[运算符 +、-](#operator_add_-)|添加、 相减，并更改用于登录`COleDateTimeSpan`值。|
-|[运算符 + =、 =](#operator_add_eq_-_eq)|加法和减法`COleDateTimeSpan`从此值`COleDateTimeSpan`值。|
+|[operator +=, -=](#operator_add_eq_-_eq)|加法和减法`COleDateTimeSpan`从此值`COleDateTimeSpan`值。|
 |[operator =](#operator_eq)|副本`COleDateTimeSpan`值。|
-|[运算符 = =、 <、 < =](#coledatetimespan_relational_operators)|比较两个`COleDateTimeSpan`值。|
-|[运算符 double](#operator_double)|将此转换`COleDateTimeSpan`值设为**double**。|
+|[operator ==, <, <=](#coledatetimespan_relational_operators)|比较两个`COleDateTimeSpan`值。|
+|[operator double](#operator_double)|将此转换`COleDateTimeSpan`值设为**double**。|
 
 ### <a name="public-data-members"></a>公共数据成员
 
@@ -93,7 +93,7 @@ class COleDateTimeSpan
 
 `COleDateTimeSpan` 用于其伴生类[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)。 `COleDateTime` 封装`DATE`的 OLE 自动化的数据类型。 `COleDateTime` 表示绝对时间值。 所有`COleDateTime`计算涉及`COleDateTimeSpan`值。 这些类之间的关系是类似于之间[CTime](../../atl-mfc-shared/reference/ctime-class.md)并[CTimeSpan](../../atl-mfc-shared/reference/ctimespan-class.md)。
 
-有关详细信息`COleDateTime`并`COleDateTimeSpan`类，请参阅文章[日期和时间： 自动化支持](../../atl-mfc-shared/date-and-time-automation-support.md)。
+有关详细信息`COleDateTime`并`COleDateTimeSpan`类，请参阅文章[日期和时间：自动化支持](../../atl-mfc-shared/date-and-time-automation-support.md)。
 
 ## <a name="requirements"></a>要求
 
@@ -162,7 +162,7 @@ COleDateTimeSpan(LONG lDays, int nHours, int nMins, int nSecs) throw();
 
 新的状态`COleDateTimeSpan`对象设置为有效。
 
-有关更多信息的边界`COleDateTimeSpan`值，请参阅文章[日期和时间： 自动化支持](../../atl-mfc-shared/date-and-time-automation-support.md)。
+有关更多信息的边界`COleDateTimeSpan`值，请参阅文章[日期和时间：自动化支持](../../atl-mfc-shared/date-and-time-automation-support.md)。
 
 ### <a name="example"></a>示例
 
@@ -207,10 +207,10 @@ CString Format(UINT nID) const;
 
 此函数的窗体的简短说明如下所示：
 
-**格式 (** *pFormat* **)**<br/>
+**Format(** *pFormat* **)**<br/>
 此窗体设置使用的格式字符串，包含特殊的格式化代码前面带有百分号 （%） 的值的格式如`printf`。 格式设置字符串作为参数传递给函数。
 
-**格式 (** *nID* **)**<br/>
+**Format(** *nID* **)**<br/>
 此窗体设置使用的格式字符串，包含特殊的格式化代码前面带有百分号 （%） 的值的格式如`printf`。 格式设置字符串是一个资源。 此字符串资源的 ID 作为参数进行传递。
 
 ### <a name="example"></a>示例
@@ -403,7 +403,7 @@ enum DateTimeSpanStatus{
 
 有关可能的状态设置为无效的操作的详细信息，请参阅[COleDateTimeSpan::operator +、-](../../atl-mfc-shared/reference/coledatetime-class.md#operator_add_-)并[COleDateTimeSpan::operator + =、-=](../../atl-mfc-shared/reference/coledatetime-class.md#operator_add_eq_-_eq)。
 
-有关更多信息的边界`COleDateTimeSpan`值，请参阅文章[日期和时间： 自动化支持](../../atl-mfc-shared/date-and-time-automation-support.md)。
+有关更多信息的边界`COleDateTimeSpan`值，请参阅文章[日期和时间：自动化支持](../../atl-mfc-shared/date-and-time-automation-support.md)。
 
 ##  <a name="gettotaldays"></a>  COleDateTimeSpan::GetTotalDays
 
@@ -603,7 +603,7 @@ enum DateTimeSpanStatus{
 > [!CAUTION]
 >  此数据成员是针对高级编程情况。 应使用的内联成员函数[GetStatus](#getstatus)并[SetStatus](#setstatus)。 请参阅`SetStatus`有关显式设置此数据成员的其他注意事项。
 
-有关更多信息的边界`COleDateTimeSpan`值，请参阅文章[日期和时间： 自动化支持](../../atl-mfc-shared/date-and-time-automation-support.md)。
+有关更多信息的边界`COleDateTimeSpan`值，请参阅文章[日期和时间：自动化支持](../../atl-mfc-shared/date-and-time-automation-support.md)。
 
 ##  <a name="operator_eq"></a>  COleDateTimeSpan::operator =
 
@@ -617,7 +617,7 @@ COleDateTimeSpan& operator=(double dblSpanSrc) throw();
 
 此重载的赋值运算符复制到此源日期/时间范围值`COleDateTimeSpan`对象。
 
-##  <a name="operator_add_-"></a>  COleDateTimeSpan::operator +、-
+##  <a name="operator_add_-"></a>  COleDateTimeSpan::operator +, -
 
 添加、 相减，并更改用于登录`COleDateTimeSpan`值。
 
@@ -641,7 +641,7 @@ COleDateTimeSpan operator-() const throw();
 
 [!code-cpp[NVC_ATLMFC_Utilities#23](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_10.cpp)]
 
-##  <a name="operator_add_eq_-_eq"></a>  COleDateTimeSpan::operator + =、 =
+##  <a name="operator_add_eq_-_eq"></a>  COleDateTimeSpan::operator +=, -=
 
 加法和减法`COleDateTimeSpan`从此值`COleDateTimeSpan`值。
 
@@ -662,7 +662,7 @@ COleDateTimeSpan& operator-=(const COleDateTimeSpan dateSpan) throw();
 
 [!code-cpp[NVC_ATLMFC_Utilities#24](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_11.cpp)]
 
-##  <a name="operator_double"></a>  COleDateTimeSpan::operator 双精度
+##  <a name="operator_double"></a>  COleDateTimeSpan::operator double
 
 将此转换`COleDateTimeSpan`值设为**double**。
 
@@ -758,4 +758,3 @@ enum DateTimeSpanStatus{
 [CTimeSpan 类](../../atl-mfc-shared/reference/ctimespan-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>
 [ATL/MFC 共享类](../../atl-mfc-shared/atl-mfc-shared-classes.md)
-

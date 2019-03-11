@@ -1,5 +1,5 @@
 ---
-title: 如何：调用 Windows 窗体控件的属性和方法
+title: 如何：调用控件属性和方法的 Windows 窗体
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,22 +10,22 @@ helpviewer_keywords:
 - calling properties
 - Windows Forms controls [C++], properties
 ms.assetid: 6e647d8a-fdaa-4aa1-b3fe-04f15cff8eb3
-ms.openlocfilehash: 809fa428172dffb5f53e7339e04882b451c8562f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 61b565839b3f3c24670819fdcf2dde558e3461ac
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50561481"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743765"
 ---
-# <a name="how-to-call-properties-and-methods-of-the-windows-forms-control"></a>如何：调用 Windows 窗体控件的属性和方法
+# <a name="how-to-call-properties-and-methods-of-the-windows-forms-control"></a>如何：调用控件属性和方法的 Windows 窗体
 
 因为[CWinFormsView::GetControl](../mfc/reference/cwinformsview-class.md#getcontrol)返回一个指向<xref:System.Windows.Forms.Control?displayProperty=fullName>，并不是指向`WindowsControlLibrary1::UserControl1`，则最好添加用户控件类型的成员并将其在初始化[IView::OnInitialUpdate](../mfc/reference/iview-interface.md#oninitialupdate). 现在，可调用的方法和属性使用`m_ViewControl`。
 
-本主题假定你之前已完成[如何： 在对话框中创建用户控件并承载](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md)并[如何： 创建用户控件和宿主 MDI 视图](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md)。
+本主题假定你之前已完成[如何：在对话框中创建用户控件并承载](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md)和[如何：创建用户控件并承载 MDI 视图](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md)。
 
 ### <a name="to-create-the-mfc-host-application"></a>若要创建 MFC 宿主应用程序
 
-1. 打开你在中创建的 MFC 应用程序[如何： 创建用户控件和宿主 MDI 视图](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md)。
+1. 打开你在中创建的 MFC 应用程序[如何：创建用户控件并承载 MDI 视图](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md)。
 
 1. 将以下行添加到的公共重写部分`CMFC02View`类在 MFC02View.h 中的声明。
 

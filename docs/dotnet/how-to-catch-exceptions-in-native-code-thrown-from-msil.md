@@ -1,19 +1,19 @@
 ---
-title: 如何：在本机代码中捕捉从 MSIL 引发的异常
+title: 如何：在从 MSIL 引发的本机代码中捕捉异常
 ms.date: 11/04/2016
 helpviewer_keywords:
 - exceptions, catching
 - catching exceptions, thrown from MSIL
 - MSIL, catching exceptions in native code
 ms.assetid: c15afd2b-8505-43bf-8a4a-f1d41532a124
-ms.openlocfilehash: 73c9a9af66a6e292c76b96ec47a5853684e602f9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: acb3ba1ab6d10decba10b899861007abfff03359
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50635579"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748718"
 ---
-# <a name="how-to-catch-exceptions-in-native-code-thrown-from-msil"></a>如何：在本机代码中捕捉从 MSIL 引发的异常
+# <a name="how-to-catch-exceptions-in-native-code-thrown-from-msil"></a>如何：在从 MSIL 引发的本机代码中捕捉异常
 
 在本机代码中，可以捕捉从 MSIL 的本机 c + + 异常。  您可以捕获与 CLR 异常`__try`和`__except`。
 

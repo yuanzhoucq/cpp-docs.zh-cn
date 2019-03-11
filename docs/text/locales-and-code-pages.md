@@ -15,16 +15,16 @@ helpviewer_keywords:
 - code pages [C++], locales
 - conventions [C++], international character support
 ms.assetid: bd937361-b6d3-4c98-af95-beb7c903187b
-ms.openlocfilehash: 0015e0a7a81abbd3472a8c845a9b8c0d8caf4618
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c0cfc7f192b65738984feb1933ea720fdf18fc6d
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50610531"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750710"
 ---
 # <a name="locales-and-code-pages"></a>区域设置和代码页
 
-区域设置 ID 反映了本地约定和特定地理区域的语言。 可能有一个以上的国家/地区说某种特定的语言，例如，巴西和葡萄牙都说葡萄牙语。 反之，一个国家/地区可能有一种以上的官方语言。 例如，加拿大有两种语言： 英语和法语。 因此，加拿大有两种不同的区域设置： 加拿大英语和加拿大法语。 一些与区域设置相关的类别包括日期的格式设置和货币值的显示格式。
+区域设置 ID 反映了本地约定和特定地理区域的语言。 可能有一个以上的国家/地区说某种特定的语言，例如，巴西和葡萄牙都说葡萄牙语。 反之，一个国家/地区可能有一种以上的官方语言。 例如，加拿大有两种语言：英语和法语。 因此，加拿大有两种不同的区域设置：加拿大英语和加拿大法语。 一些与区域设置相关的类别包括日期的格式设置和货币值的显示格式。
 
 语言确定文本和数据的格式约定，而国家/地区则确定本地约定。 每种语言具有唯一的映射，由代码页，其中包括在字母表中 （例如标点符号和数字） 字符。 代码页是一个字符集和与语言相关。 在这种情况下，[区域设置](../c-runtime-library/locale.md)是唯一的语言、 国家/地区和代码页。 通过调用，可在运行时更改区域设置和代码页设置[setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)函数。
 

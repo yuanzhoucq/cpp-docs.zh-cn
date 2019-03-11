@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - boxing, explicitly requesting
 ms.assetid: 1359e6e5-162d-4f5d-9b6a-1690d93df3ee
-ms.openlocfilehash: ae0d26157bce1892888ea64d953d4c020c0bec87
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1e720923c89a79f75350b6e7d0781ad6fc5759ed
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636327"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748744"
 ---
 # <a name="how-to-explicitly-request-boxing"></a>如何：显式请求装箱
 

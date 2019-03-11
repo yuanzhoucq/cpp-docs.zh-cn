@@ -1,18 +1,18 @@
 ---
-title: 如何：公开程序集中的 STL/CLR 容器
+title: 如何：公开从程序集中的 STL/CLR 容器
 ms.date: 11/04/2016
 helpviewer_keywords:
 - STL/CLR Containers [STL/CLR]
 - STL/CLR, cross-assembly issues
 ms.assetid: 87efb41b-3db3-4498-a2e7-f3ef8a99f04d
-ms.openlocfilehash: ba881210f7ee48acd0e92dce3432cae92f3072ee
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 206a95cbaa808f54d7ae0e500b5a2bea272d974b
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50590081"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748432"
 ---
-# <a name="how-to-expose-an-stlclr-container-from-an-assembly"></a>如何：公开程序集中的 STL/CLR 容器
+# <a name="how-to-expose-an-stlclr-container-from-an-assembly"></a>如何：公开从程序集中的 STL/CLR 容器
 
 STL/CLR 容器，如`list`和`map`作为模板 ref 类实现。 因为在编译时实例化 c + + 模板，具有相同的签名，但位于不同的程序集的两个模板类是实际不同的类型。 这意味着不能跨程序集边界使用模板类。
 

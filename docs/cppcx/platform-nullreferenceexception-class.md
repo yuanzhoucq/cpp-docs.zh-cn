@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::NullReferenceException
 ms.assetid: be202577-d898-4716-83cd-e3556fe8a241
-ms.openlocfilehash: a79be4aa9dfcb91ead80da0f41c73378f294299f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f513331757031c6f2f1231bb2c5fcb573d1645b2
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50464600"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739135"
 ---
 # <a name="platformnullreferenceexception-class"></a>Platform::NullReferenceException 类
 
@@ -35,7 +35,7 @@ public ref class NullReferenceException : COMException,    IException,    IPrint
 
 **支持的最低服务器：** Windows Server 2012
 
-**命名空间：** Platform
+**命名空间：** 平台
 
 **元数据：** platform.winmd
 

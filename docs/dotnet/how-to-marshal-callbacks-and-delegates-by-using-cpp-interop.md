@@ -1,5 +1,5 @@
 ---
-title: 如何：使用 C++ 互操作封送回调和委托
+title: 如何：使用 c + + 互操作封送回调和委托
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - marshaling [C++], callbacks and delegates
 - callbacks [C++], marshaling
 ms.assetid: 2313e9eb-5df9-4367-be0f-14b4712d8d2d
-ms.openlocfilehash: b72b99798a2c719f1ba919478132c7133fd71ca1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d3814ffbcd23168a9727b1b1d73e2c825639a9c5
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50615717"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739216"
 ---
-# <a name="how-to-marshal-callbacks-and-delegates-by-using-c-interop"></a>如何：使用 C++ 互操作封送回调和委托
+# <a name="how-to-marshal-callbacks-and-delegates-by-using-c-interop"></a>如何：使用 c + + 互操作封送回调和委托
 
 本主题演示了回调的封送处理，并使用 Visual c + + 的托管和非托管代码之间委托 （回调的托管的版本）。
 

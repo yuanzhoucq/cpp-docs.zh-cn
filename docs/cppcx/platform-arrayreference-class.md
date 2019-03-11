@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::ArrayReference Class
 ms.assetid: 9ab3b15e-8a60-4600-8fcb-7d6c86284f4b
-ms.openlocfilehash: 4c297f033b78e1b7f9283f5becb9db974bb2b9ff
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 923f60e90517e377b99d5e29f38c48b2633c3c46
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51522852"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742979"
 ---
 # <a name="platformarrayreference-class"></a>Platform::ArrayReference 类
 
@@ -30,7 +30,7 @@ class ArrayReference
 
 |名称|描述|
 |----------|-----------------|
-|[Arrayreference:: Arrayreference](#ctor)|初始化 `ArrayReference` 类的新实例。|
+|[ArrayReference::ArrayReference](#ctor)|初始化 `ArrayReference` 类的新实例。|
 
 ### <a name="public-operators"></a>公共运算符
 
@@ -39,7 +39,7 @@ class ArrayReference
 |[ArrayReference::operator() 运算符](#operator-call)|将此 `ArrayReference` 转换为 `Platform::Array<T>^*`。|
 |[ArrayReference::operator= 运算符](#operator-assign)|将另一 `ArrayReference` 的内容分配给此实例。|
 
-## <a name="exceptions"></a>异常
+## <a name="exceptions"></a>Exceptions
 
 ### <a name="remarks"></a>备注
 
@@ -51,7 +51,7 @@ class ArrayReference
 
 **支持的最低服务器：** Windows Server 2012
 
-**命名空间：** Platform
+**命名空间：** 平台
 
 **标头：** vccorlib.h
 

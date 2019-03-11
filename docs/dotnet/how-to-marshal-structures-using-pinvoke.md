@@ -8,12 +8,12 @@ helpviewer_keywords:
 - interop [C++], structures
 - marshaling [C++], structures
 ms.assetid: 35997e6f-9251-4af3-8c6e-0712d64d6a5d
-ms.openlocfilehash: e79eb343f81cf2d66e394be7561d2c9727c4c9ed
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d5c64a3e93cd85d7e38bac7c0ea3fa3c3301abc9
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429105"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747990"
 ---
 # <a name="how-to-marshal-structures-using-pinvoke"></a>如何：使用 PInvoke 封送结构
 
@@ -21,7 +21,7 @@ ms.locfileid: "50429105"
 
 - [使用 C++ 互操作（隐式 PInvoke）](../dotnet/using-cpp-interop-implicit-pinvoke.md)
 
-- [如何：使用 PInvoke 封送处理字符串](../dotnet/how-to-marshal-strings-using-pinvoke.md)
+- [如何：使用 PInvoke 封送字符串](../dotnet/how-to-marshal-strings-using-pinvoke.md)
 
 默认情况下，本机和托管结构的布局方式以不同的方式在内存中，成功跨托管/非托管边界传递结构需要额外的步骤来保持数据的完整性。
 

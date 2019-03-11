@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security [C++]
 - security [C++], best practices
 ms.assetid: 86acaccf-cdb4-4517-bd58-553618e3ec42
-ms.openlocfilehash: 6816a7ffbc09d0e01659dd56282e238fdbfc4a27
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 81a15f7a34ebe6c4c101932074c63cb1c7f7fd26
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462294"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742467"
 ---
 # <a name="security-best-practices-for-c"></a>C++ 安全性最佳做法
 
@@ -48,7 +48,8 @@ ms.locfileid: "50462294"
 
 [SafeInt 库](../windows/safeint-library.md)有助于防止整数溢出以及应用程序执行数学运算时可能发生其他可利用错误。 `SafeInt`库包含[SafeInt 类](../windows/safeint-class.md)，则[SafeIntException 类](../windows/safeintexception-class.md)，以及几个[SafeInt 函数](../windows/safeint-functions.md)。
 
-`SafeInt` 类可防止整数溢出和被零除攻击。 您可以使用它处理不同类型的值之间的比较。 它提供了两个错误处理策略。 默认策略是针对引发 `SafeInt` 类异常的 `SafeIntException` 类，以报告无法完成数学运算的原因。 第二个策略针对 `SafeInt` 类，用以停止程序的执行。 还可以定义自定义策略。
+
+  `SafeInt` 类可防止整数溢出和被零除攻击。 您可以使用它处理不同类型的值之间的比较。 它提供了两个错误处理策略。 默认策略是针对引发 `SafeInt` 类异常的 `SafeIntException` 类，以报告无法完成数学运算的原因。 第二个策略针对 `SafeInt` 类，用以停止程序的执行。 还可以定义自定义策略。
 
 每个 `SafeInt` 函数各保护一个数学运算免于出现可被利用的错误。 您可使用两种不同的参数，而不必将它们转换为相同类型。 若要保护多个数学运算，请使用 `SafeInt` 类。
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - hosting Windows Forms control [C++]
 - Windows Forms [C++], MFC support
 ms.assetid: 9f66ee52-b7cb-4ffd-8306-392a5da990d8
-ms.openlocfilehash: 921e6fac32d37f8976d53d49adab72fb27ab5e99
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 56cf00da71fe6c47e39de2a8fc06df572a301a61
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50632214"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748562"
 ---
 # <a name="hosting-a-windows-form-user-control-in-an-mfc-dialog-box"></a>在 MFC 对话框中承载 Windows 窗体用户控件
 
@@ -24,15 +24,15 @@ MFC 为一种特殊的 ActiveX 控件承载 Windows 窗体控件和使用 Active
 
 ## <a name="in-this-section"></a>本节内容
 
-[如何：创建用户控件并将它承载在对话框中](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md)
+[如何：创建用户控件并在对话框中托管](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md)
 
-[如何： 使用 Windows 窗体执行 DDX/DDV 数据绑定](../dotnet/how-to-do-ddx-ddv-data-binding-with-windows-forms.md)
+[如何：执行 DDX/DDV 数据绑定与 Windows 窗体](../dotnet/how-to-do-ddx-ddv-data-binding-with-windows-forms.md)
 
 [如何：接收来自本机 C++ 类的 Windows 窗体事件](../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)
 
 ## <a name="reference"></a>参考
 
-[CWinFormsControl 类](../mfc/reference/cwinformscontrol-class.md) &#124; [CDialog 类](../mfc/reference/cdialog-class.md) &#124; [CWnd 类](../mfc/reference/cwnd-class.md)&#124; <xref:System.Windows.Forms.Control>
+[CWinFormsControl Class](../mfc/reference/cwinformscontrol-class.md) &#124; [CDialog Class](../mfc/reference/cdialog-class.md) &#124; [CWnd Class](../mfc/reference/cwnd-class.md) &#124; <xref:System.Windows.Forms.Control>
 
 ## <a name="see-also"></a>请参阅
 

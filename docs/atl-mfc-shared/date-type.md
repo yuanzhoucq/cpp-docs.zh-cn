@@ -11,12 +11,12 @@ helpviewer_keywords:
 - MFC, date and time
 - hour values representation
 ms.assetid: 695853ed-b614-4575-b793-b8c287372038
-ms.openlocfilehash: b8460d50a0c6cbd4b213e45c62d8d6cadae68544
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bd63b400cad6efc3b3899c17a3bf835596b4008c
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548182"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750385"
 ---
 # <a name="date-type"></a>日期类型
 
@@ -62,10 +62,9 @@ ms.locfileid: "50548182"
 > [!CAUTION]
 >  请注意，由于上午 6:00 始终由分数值 0.25 不考虑 （后 1899 年 12 月 30 日） 表示一天的整数是否正或负 （之前 1899 年 12 月 30 日），简单的浮动点比较会错误地排序表示早于 12/30/1899 为一天上午 6:00 任何日期*更高版本*于日期表示该同一天上午 7:00。
 
-与日期相关的问题的详细信息和`COleDateTime`下找不到类型[COleDateTime 类](../atl-mfc-shared/reference/coledatetime-class.md)并[日期和时间： 自动化支持](../atl-mfc-shared/date-and-time-automation-support.md)。
+与日期相关的问题的详细信息和`COleDateTime`下找不到类型[COleDateTime 类](../atl-mfc-shared/reference/coledatetime-class.md)和[日期和时间：自动化支持](../atl-mfc-shared/date-and-time-automation-support.md)。
 
 ## <a name="see-also"></a>请参阅
 
 [日期和时间](../atl-mfc-shared/date-and-time.md)<br/>
 [COleDateTime 类](../atl-mfc-shared/reference/coledatetime-class.md)
-

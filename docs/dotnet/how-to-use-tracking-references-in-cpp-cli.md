@@ -1,19 +1,19 @@
 ---
-title: 如何：在 C++/CLI 中使用跟踪引用
+title: 如何：使用跟踪引用在 C + + /cli CLI
 ms.date: 11/04/2016
 helpviewer_keywords:
 - CLR types, passing by reference
 ms.assetid: d91e471c-34ff-4786-9e0d-c6db0494b946
-ms.openlocfilehash: 8b95f6e3a5d98676134622e5c8805c6c031a1a80
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cf4d528fe23ee6959b770bfce859d24d2f3403cf
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50454777"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746235"
 ---
-# <a name="how-to-use-tracking-references-in-ccli"></a>如何：在 C++/CLI 中使用跟踪引用
+# <a name="how-to-use-tracking-references-in-ccli"></a>如何：使用跟踪引用在 C + + /cli CLI
 
-本文介绍如何使用跟踪引用 （%） 中 C + + /cli CLI，若要按引用传递公共语言运行时 (CLR) 类型。
+本文介绍如何使用跟踪引用 （%）在 C + + /cli CLI，若要按引用传递公共语言运行时 (CLR) 类型。
 
 ## <a name="to-pass-clr-types-by-reference"></a>若要通过引用来传递 CLR 类型
 

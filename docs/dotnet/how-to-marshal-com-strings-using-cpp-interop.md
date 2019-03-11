@@ -1,5 +1,5 @@
 ---
-title: 如何：使用 C++ 互操作封送 COM 字符串
+title: 如何：使用 c + + 互操作封送 COM 字符串
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - data marshaling [C++], strings
 - COM [C++], marshaling strings
 ms.assetid: 06590759-bf99-4e34-a3a9-4527ea592cc2
-ms.openlocfilehash: 664c9ed973e2dff4467d13742390da8a944eb87a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: baf3a2e6720cd2f72606cf5089e0409df602fee6
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559115"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751509"
 ---
-# <a name="how-to-marshal-com-strings-using-c-interop"></a>如何：使用 C++ 互操作封送 COM 字符串
+# <a name="how-to-marshal-com-strings-using-c-interop"></a>如何：使用 c + + 互操作封送 COM 字符串
 
 本主题演示如何能够 BSTR （偏好在 COM 编程中的基本字符串格式） 传递从托管到非托管函数，反之亦然。 有关与其他字符串类型进行互操作，请参阅以下主题：
 

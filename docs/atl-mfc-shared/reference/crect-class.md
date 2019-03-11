@@ -34,12 +34,12 @@ helpviewer_keywords:
 - LPRECT operator
 - RECT structure
 ms.assetid: dee4e752-15d6-4db4-b68f-1ad65b2ed6ca
-ms.openlocfilehash: 5e9d4b5c28adceb52078c13dbf18170e7a2b19e5
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: fadb430d570e516d915d520f06e4c247b131c3db
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178748"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739424"
 ---
 # <a name="crect-class"></a>CRect 类
 
@@ -76,7 +76,7 @@ class CRect : public tagRECT
 |[CRect::MoveToX](#movetox)|将移动`CRect`到指定的 x 坐标。|
 |[CRect::MoveToXY](#movetoxy)|将移动`CRect`指定到 x 和 y 坐标。|
 |[CRect::MoveToY](#movetoy)|将移动`CRect`到指定的 y 坐标。|
-|[Crect:: Normalizerect](#normalizerect)|标准化的高度和宽度`CRect`。|
+|[CRect::NormalizeRect](#normalizerect)|标准化的高度和宽度`CRect`。|
 |[CRect::OffsetRect](#offsetrect)|将移动`CRect`由指定的偏移量。|
 |[CRect::PtInRect](#ptinrect)|确定指定的点是否位于`CRect`。|
 |[CRect::SetRect](#setrect)|设置的维度`CRect`。|
@@ -91,19 +91,19 @@ class CRect : public tagRECT
 
 |名称|描述|
 |----------|-----------------|
-|[CRect::operator-](#operator_-)|从给定的偏移量中减去`CRect`或压缩`CRect`，并返回结果`CRect`。|
+|[CRect::operator -](#operator_-)|从给定的偏移量中减去`CRect`或压缩`CRect`，并返回结果`CRect`。|
 |[CRect::operator LPCRECT](#operator_lpcrect)|将 `CRect` 转换为 `LPCRECT`。|
 |[CRect::operator LPRECT](#operator_lprect)|将 `CRect` 转换为 `LPRECT`。|
-|[CRect::operator ！ =](#operator_neq)|确定是否`CRect`不等于一个矩形。|
+|[CRect::operator !=](#operator_neq)|确定是否`CRect`不等于一个矩形。|
 |[CRect::operator &amp;](#operator_amp)|创建的交集`CRect`和一个矩形，并返回结果`CRect`。|
 |[CRect::operator &amp;=](#operator_amp_eq)|集`CRect`等于的交集`CRect`和一个矩形。|
-|[CRect::operator&#124;](#operator_or)|创建的联合`CRect`和一个矩形，并返回结果`CRect`。|
+|[CRect::operator &#124;](#operator_or)|创建的联合`CRect`和一个矩形，并返回结果`CRect`。|
 |[CRect::operator &#124;=](#operator_or_eq)|集`CRect`等于的并集`CRect`和一个矩形。|
 |[CRect::operator +](#operator_add)|将添加到给定的偏移量`CRect`或增大`CRect`，并返回结果`CRect`。|
-|[CRect::operator + =](#operator_add_eq)|将添加到指定的偏移量`CRect`或增大`CRect`。|
+|[CRect::operator +=](#operator_add_eq)|将添加到指定的偏移量`CRect`或增大`CRect`。|
 |[CRect::operator =](#operator_eq)|将复制到矩形的尺寸`CRect`。|
-|[CRect::operator =](#operator_-_eq)|从指定的偏移量中减去`CRect`或压缩`CRect`。|
-|[CRect::operator = =](#operator_eq_eq)|确定是否`CRect`等同于一个矩形。|
+|[CRect::operator -=](#operator_-_eq)|从指定的偏移量中减去`CRect`或压缩`CRect`。|
+|[CRect::operator ==](#operator_eq_eq)|确定是否`CRect`等同于一个矩形。|
 
 ## <a name="remarks"></a>备注
 
@@ -306,13 +306,13 @@ CRect(POINT topLeft, POINT bottomRight) throw();
 *lpSrcRect*<br/>
 指向`RECT`结构的坐标`CRect`。
 
-*点*<br/>
+*point*<br/>
 指定要构造的矩形的起始点。 对应于左上角。
 
 *size*<br/>
 指定到右下角的矩形来构造的左上角的位移。
 
-*左边框*<br/>
+*topLeft*<br/>
 指定的左上角位置`CRect`。
 
 *bottomRight*<br/>
@@ -696,7 +696,7 @@ void MoveToXY(POINT point) throw();
 *y*<br/>
 矩形的左上角绝对 y 坐标。
 
-*点*<br/>
+*point*<br/>
 一个`POINT`结构，它指定矩形的绝对的左上角。
 
 ### <a name="example"></a>示例
@@ -733,7 +733,7 @@ void MoveToY(int y) throw();
    ASSERT(rect == CRect(0, 10, 100, 110));
 ```
 
-##  <a name="normalizerect"></a>  Crect:: Normalizerect
+##  <a name="normalizerect"></a>  CRect::NormalizeRect
 
 规范化`CRect`，以便为正数，高度和宽度。
 
@@ -776,7 +776,7 @@ void OffsetRect(SIZE size) throw();
 *y*<br/>
 指定要上移或下移的量。 它必须为负数向上移动。
 
-*点*<br/>
+*point*<br/>
 包含[点](/windows/desktop/api/windef/ns-windef-tagpoint)结构或[CPoint](cpoint-class.md)对象，它指定要移动这两个维度。
 
 *size*<br/>
@@ -937,7 +937,7 @@ void operator+=(LPCRECT lpRect) throw();
 
 ### <a name="parameters"></a>参数
 
-*点*<br/>
+*point*<br/>
 一个[点](/windows/desktop/api/windef/ns-windef-tagpoint)结构或[CPoint](cpoint-class.md)对象，它指定要移动矩形的单位数。
 
 *size*<br/>
@@ -963,7 +963,7 @@ void operator+=(LPCRECT lpRect) throw();
    ASSERT(rect1 == rect2);
 ```
 
-##  <a name="operator_-_eq"></a>  CRect::operator =
+##  <a name="operator_-_eq"></a>  CRect::operator -=
 
 前两个重载移动`CRect`由指定的偏移量。
 
@@ -975,7 +975,7 @@ void operator-=(LPCRECT lpRect) throw();
 
 ### <a name="parameters"></a>参数
 
-*点*<br/>
+*point*<br/>
 一个[点](/windows/desktop/api/windef/ns-windef-tagpoint)结构或[CPoint](cpoint-class.md)对象，它指定要移动矩形的单位数。
 
 *size*<br/>
@@ -1068,7 +1068,7 @@ CRect operator+(SIZE size) const throw();
 
 ### <a name="parameters"></a>参数
 
-*点*<br/>
+*point*<br/>
 一个[点](/windows/desktop/api/windef/ns-windef-tagpoint)结构或[CPoint](cpoint-class.md)对象，它指定要移动的返回值的单位数。
 
 *size*<br/>
@@ -1099,7 +1099,7 @@ CRect operator+(SIZE size) const throw();
    ASSERT(rectResult == rect2);
 ```
 
-##  <a name="operator_-"></a>  CRect::operator-
+##  <a name="operator_-"></a>  CRect::operator -
 
 前两个重载将返回`CRect`对象，它等于`CRect`移置开指定的偏移量。
 
@@ -1111,7 +1111,7 @@ CRect operator-(LPCRECT lpRect) const throw();
 
 ### <a name="parameters"></a>参数
 
-*点*<br/>
+*point*<br/>
 一个[点](/windows/desktop/api/windef/ns-windef-tagpoint)结构或`CPoint`对象，它指定要移动的返回值的单位数。
 
 *size*<br/>
@@ -1178,7 +1178,7 @@ CRect operator&(const RECT& rect2) const throw();
    ASSERT(rectResult == rect3);
 ```
 
-##  <a name="operator_or"></a>  CRect::operator&#124;
+##  <a name="operator_or"></a>  CRect::operator &#124;
 
 返回`CRect`即的并集`CRect`并*rect2*。
 
@@ -1225,7 +1225,7 @@ BOOL PtInRect(POINT point) const throw();
 
 ### <a name="parameters"></a>参数
 
-*点*<br/>
+*point*<br/>
 包含[点](/windows/desktop/api/windef/ns-windef-tagpoint)结构或[CPoint](cpoint-class.md)对象。
 
 ### <a name="return-value"></a>返回值
@@ -1504,4 +1504,3 @@ int Width() const throw();
 [CPoint 类](cpoint-class.md)<br/>
 [CSize 类](csize-class.md)<br/>
 [RECT](/windows/desktop/api/windef/ns-windef-tagrect)
-
