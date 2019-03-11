@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::OutOfBoundsException
 ms.assetid: 96f8bf75-1207-4049-964b-7771822cadf3
-ms.openlocfilehash: f3bc2e45cdb205a70128f976674ef7794a02eabf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3f5165c0394726e0f6606f5261ba6306d8408948
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544479"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747211"
 ---
 # <a name="platformoutofboundsexception-class"></a>Platform::OutOfBoundsException 类
 
@@ -35,7 +35,7 @@ public ref class OutOfBoundsException : COMException,    IException,    IPrintab
 
 **支持的最低服务器：** Windows Server 2012
 
-**命名空间：** Platform
+**命名空间：** 平台
 
 **元数据：** platform.winmd
 

@@ -1,5 +1,5 @@
 ---
-title: 如何：使用本机类型声明句柄
+title: 如何：本机类型声明句柄
 ms.custom: get-started-article
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - gcroot keyword [C++]
 - types [C++], declaring handles in
 ms.assetid: b8c0eead-17e5-4003-b21f-b673f997d79f
-ms.openlocfilehash: 4b5cd212589be04f5f9f3a5dd6d4496a8f5add2c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f5d6d31be9f3c10e1a56639ccf20663ce59d7941
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50464917"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57745978"
 ---
-# <a name="how-to-declare-handles-in-native-types"></a>如何：使用本机类型声明句柄
+# <a name="how-to-declare-handles-in-native-types"></a>如何：本机类型声明句柄
 
 不能声明中的本机类型的句柄类型。 vcclr.h 提供类型安全的包装器模板`gcroot`从 c + + 堆引用 CLR 对象。 此模板允许您在本机类型中嵌入虚拟句柄，并将它视为像它是一样的基础类型。 在大多数情况下，可以使用`gcroot`作为嵌入类型而不需要任何转换的对象。 但是，对于[对于每个，在](../dotnet/for-each-in.md)，你必须使用`static_cast`来检索基本托管的引用。
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data marshaling [C++], strings
 - platform invoke [C++], strings
 ms.assetid: bcc75733-7337-4d9b-b1e9-b95a98256088
-ms.openlocfilehash: 86ce065da5c214c0da803ad53d19eaec3de5efb4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f316e33f1711ea0053fb68c0af7e89f90b793e05
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50598115"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739248"
 ---
 # <a name="how-to-marshal-strings-using-pinvoke"></a>如何：使用 PInvoke 封送处理字符串
 

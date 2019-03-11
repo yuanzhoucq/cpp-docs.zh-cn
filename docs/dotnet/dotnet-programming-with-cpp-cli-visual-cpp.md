@@ -7,18 +7,18 @@ helpviewer_keywords:
 - .NET applications [C++]
 - Visual C++, .NET programming
 ms.assetid: 2c7f3b0f-a266-4f0e-b318-d6f1371e04a9
-ms.openlocfilehash: 40978bff010fbb1640398c3248c595b3ae04289f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 21a45dbff2b02ccce5444706c158e5bdcc6e6cc2
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50470143"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749810"
 ---
 # <a name="net-programming-with-ccli-visual-c"></a>使用 C++/CLI (Visual C++) 进行 .NET 编程
 
-**Visual Studio 2015**： 默认情况下，使用 Visual Studio 2015 创建的 CLR 项目目标.NET Framework 4.5.2。 若要在创建新项目时将目标设定为 .NET Framework 4.6，请在“新建项目”  对话框中，更改该对话框顶部中间的下拉列表中的目标框架。 若要更改现有项目的目标框架，请关闭项目、编辑项目文件 (.vcxproj)，并将目标 Framework 版本的值更改为 4.6。 设置将在你下次打开该项目时生效。
+**Visual Studio 2015**:默认情况下，使用 Visual Studio 2015 创建的 CLR 项目将以.NET Framework 4.5.2 为目标。 若要在创建新项目时将目标设定为 .NET Framework 4.6，请在“新建项目”  对话框中，更改该对话框顶部中间的下拉列表中的目标框架。 若要更改现有项目的目标框架，请关闭项目、编辑项目文件 (.vcxproj)，并将目标 Framework 版本的值更改为 4.6。 设置将在你下次打开该项目时生效。
 
-**Visual Studio 2017**： 在 Visual Studio 2017 中，默认框架是 4.6.1 和 Framework 版本选择器是在底部**新建项目对话框**。 C + + /cli 默认情况下不安装 CLI 本身。 若要安装组件，请打开 Visual Studio 安装程序并选择 C + + /cli 下 Visual c + + CLI 组件。
+**Visual Studio 2017**:在 Visual Studio 2017 中，默认框架是 4.6.1 和 Framework 版本选择器是在底部**新建项目对话框**。 C + + /cli 默认情况下不安装 CLI 本身。 若要安装组件，请打开 Visual Studio 安装程序并选择 C + + /cli 下 Visual c + + CLI 组件。
 
 ## <a name="in-this-section"></a>本节内容
 

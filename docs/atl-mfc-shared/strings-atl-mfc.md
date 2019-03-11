@@ -21,12 +21,12 @@ helpviewer_keywords:
 - strings [C++], class CString
 - literal strings [C++], class CStringT
 ms.assetid: 3b33125b-1684-4542-a3a7-b00de7d0419e
-ms.openlocfilehash: 1f0764dd7231492a2addef6359318aa436869a31
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f4d300bccb6387c510dc16d55eda17de20b4b134
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50626676"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742574"
 ---
 # <a name="strings-atlmfc"></a>字符串 (ATL/MFC)
 
@@ -51,4 +51,3 @@ ms.locfileid: "50626676"
 ## <a name="see-also"></a>请参阅
 
 [ATL/MFC 共享类](../atl-mfc-shared/atl-mfc-shared-classes.md)
-

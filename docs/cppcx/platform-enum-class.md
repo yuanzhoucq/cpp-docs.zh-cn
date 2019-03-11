@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Enum Struct
 ms.assetid: cf82f0eb-7a37-4e4e-bbe7-e4aebbc9ec0a
-ms.openlocfilehash: 4431f21fe71bd7b6376f2f530b844077bc1fda6e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d91974cb1c98561ba61927b84d06ad45cffc1291
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50469610"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57745146"
 ---
 # <a name="platformenum-class"></a>Platform::Enum 类
 
@@ -38,7 +38,7 @@ public class Enum
 
 **支持的最低服务器：** Windows Server 2012
 
-**命名空间：** Platform
+**命名空间：** 平台
 
 **元数据：** platform.winmd
 

@@ -19,12 +19,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::String
 ms.assetid: 72dd04a4-a694-40d3-b899-eaa0b503eab8
-ms.openlocfilehash: ef9838fa8a6a34eac1d2d3531ff93fb124c81d4b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ac9ee843f5f11d4a42377b16ec77b266238fc461
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607033"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746183"
 ---
 # <a name="platformstring-class"></a>Platform::String 类
 
@@ -72,7 +72,7 @@ public ref class String sealed : Object,
 |[String::Data](#data)|返回指向当前字符串开头的指针。|
 |[String::Dispose](#dispose)|释放资源。|
 |[String::End](#end)|返回通过当前字符串末尾的指针。|
-|[String:: equals](#equals)|指示指定对象是否等于当前对象。|
+|[String::Equals](#equals)|指示指定对象是否等于当前对象。|
 |[String::GetHashCode](#gethashcode)|返回此实例的哈希代码。|
 |[String::IsEmpty](#isempty)|指示当前字符串对象是否为空。|
 |[String::IsFastPass](#isfastpass)|指示当前字符串对象是否参与*快速传递*操作。 在快速传递操作中，将挂起引用计数。|
@@ -98,7 +98,7 @@ public ref class String sealed : Object,
 
 **支持的最低服务器：** Windows Server 2012
 
-**命名空间：** Platform
+**命名空间：** 平台
 
 **头文件** vccorlib.h（默认包含在内）
 
@@ -138,7 +138,7 @@ int CompareOrdinal( String^ str1, String^ str2 );
 
 一个整数，指示两个比较字之间的词法关系。 下表列出可能的返回值。
 
-|“值”|条件|
+|值|条件|
 |-----------|---------------|
 |-1|`str1` 小于 `str2`。|
 |0|`str1` 等于 `str2`。|
@@ -282,7 +282,7 @@ bool IsFastPass();
 
 ### <a name="remarks"></a>备注
 
-在引用计数对象作为参数并且被调用的函数只读取该对象的函数调用中，编译器可以安全地挂起引用计数并改进调用性能。 没有可供您的代码对此属性执行的任何操作。 系统处理所有详细信息。
+在引用计数对象作为参数并且被调用的函数只读取该对象的函数调用中，编译器可以安全地挂起引用计数并改进调用性能。 没有可供你的代码对此属性执行的任何操作。 系统处理所有详细信息。
 
 ## <a name="length"></a>  String:: length 方法
 

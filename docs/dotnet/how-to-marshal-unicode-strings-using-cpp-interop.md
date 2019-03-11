@@ -1,5 +1,5 @@
 ---
-title: 如何：使用 C++ 互操作封送 Unicode 字符串
+title: 如何：使用 c + + 互操作封送 Unicode 字符串
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - data marshaling [C++], strings
 - Unicode, marshaling strings
 ms.assetid: 96c2141d-6c5d-43ef-a1aa-5785afb9a9aa
-ms.openlocfilehash: f08ea9d6eb879aa3b07ac0ff983637236368a11a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 920f06bd2197315b11f239827de76eba9591bad5
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507778"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742660"
 ---
-# <a name="how-to-marshal-unicode-strings-using-c-interop"></a>如何：使用 C++ 互操作封送 Unicode 字符串
+# <a name="how-to-marshal-unicode-strings-using-c-interop"></a>如何：使用 c + + 互操作封送 Unicode 字符串
 
 本主题演示 Visual c + + 互操作性的一个方面。 有关详细信息，请参阅[使用 c + + 互操作 (隐式 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)。
 

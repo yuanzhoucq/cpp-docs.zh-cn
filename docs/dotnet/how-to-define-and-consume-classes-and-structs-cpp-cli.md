@@ -1,18 +1,18 @@
 ---
-title: 如何：定义和使用类和结构 (C++/CLI)
+title: 如何：定义和使用类和结构 (C + + CLI)
 ms.date: 09/12/2018
 helpviewer_keywords:
 - structs [C++]
 - classes [C++], instantiating
 ms.assetid: 1c03cb0d-1459-4b5e-af65-97d6b3094fd7
-ms.openlocfilehash: 028e8622c034920e993444458c52536d2e3ec6de
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2c43234ca05c661d8f3d920b1129256a7550a5e2
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50436135"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751825"
 ---
-# <a name="how-to-define-and-consume-classes-and-structs-ccli"></a>如何：定义和使用类和结构 (C++/CLI)
+# <a name="how-to-define-and-consume-classes-and-structs-ccli"></a>如何：定义和使用类和结构 (C + + CLI)
 
 本文介绍如何定义和使用用户定义的引用类型和值类型在 C + + /cli CLI。
 
@@ -455,7 +455,7 @@ CLR 类型，例如，类或结构，可以具有可用于初始化静态数据�
 
 作为私有成员函数，定义静态构造函数，因为它旨在只能由 CLR 调用。
 
-有关静态构造函数的详细信息，请参阅[如何： 定义接口静态构造函数 (C + + CLI)](../dotnet/how-to-define-an-interface-static-constructor-cpp-cli.md) 。
+有关静态构造函数的详细信息，请参阅[如何：定义接口静态构造函数 (C + + CLI)](../dotnet/how-to-define-an-interface-static-constructor-cpp-cli.md) 。
 
 ```cpp
 // compile with: /clr

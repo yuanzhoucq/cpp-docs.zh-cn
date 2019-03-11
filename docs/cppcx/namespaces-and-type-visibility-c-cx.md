@@ -2,12 +2,12 @@
 title: 命名空间和类型可见性 (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: cbc01a3a-3b69-4ded-9c42-ecbf0fd0a00e
-ms.openlocfilehash: 02a73f84314d4406c5fb8e9b8635a307c30e4c3d
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 54bac3492991d0bd849f7476cc87a1336108bd52
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693889"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739295"
 ---
 # <a name="namespaces-and-type-visibility-ccx-"></a>命名空间和类型可见性 (C++/CX)
 
@@ -31,7 +31,7 @@ ms.locfileid: "51693889"
 ||||
 |-|-|-|
 |修饰符|含义|是否发送到元数据|
-|private|默认可访问性。 与在标准 C++ 中的含义一样。|否|
+|private|默认可访问性。 与在标准 C++ 中的含义一样。|No|
 |protected|与在标准 C++ 中的含义一样（在应用程序或组件中以及元数据中）。|是|
 |public|与在标准 C++ 中的含义一样。|是|
 |`public protected` - 或 - `protected public`|元数据中的受保护的可访问性，应用程序或组件中的公共可访问性。|是|

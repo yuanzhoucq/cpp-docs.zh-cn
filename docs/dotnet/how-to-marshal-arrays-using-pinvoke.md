@@ -8,12 +8,12 @@ helpviewer_keywords:
 - interop [C++], arrays
 - data marshaling [C++], arrays
 ms.assetid: a1237797-a2da-4df4-984a-6333ed3af406
-ms.openlocfilehash: bd349fb1eca63fc336a30f4f23ae337d1191bb26
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 60b49135928e3dadffc2a3c7a422646d2f3a768d
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50628509"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57752306"
 ---
 # <a name="how-to-marshal-arrays-using-pinvoke"></a>如何：使用 PInvoke 封送数组
 

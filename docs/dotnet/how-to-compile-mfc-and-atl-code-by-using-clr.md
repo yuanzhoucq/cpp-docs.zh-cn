@@ -1,5 +1,5 @@
 ---
-title: 如何： 使用-clr 编译 MFC 和 ATL 代码
+title: 如何：通过使用-clr 编译 MFC 和 ATL 代码
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - interop [C++], /clr compiler option
 - extension DLLs [C++], /clr compiler option
 ms.assetid: 12464bec-33a4-482c-880a-c078de7f6ea5
-ms.openlocfilehash: e5e9f800d6316e3b4f1209ec62440ae42233fc13
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9a24e82787eb0fce8ff668843e73de9f2d05e1ad
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50638069"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751604"
 ---
-# <a name="how-to-compile-mfc-and-atl-code-by-using-clr"></a>如何：使用 /clr 编译 MFC 和 ATL 代码
+# <a name="how-to-compile-mfc-and-atl-code-by-using-clr"></a>如何：编译 MFC 和 ATL 代码使用 /clr
 
 本主题讨论如何将现有的 MFC 和 ATL 程序，以面向公共语言运行时编译。
 

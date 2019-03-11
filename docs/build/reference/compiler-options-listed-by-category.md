@@ -4,12 +4,12 @@ ms.date: 11/12/2018
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-ms.openlocfilehash: 63b621bf99a1aeada10706badfe19cde417d7233
-ms.sourcegitcommit: e540706f4e2675e7f597cfc5b4f8dde648b007bb
+ms.openlocfilehash: 128b477a2c4252c841990e2a2462029abe5a3bbb
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56676495"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746964"
 ---
 # <a name="compiler-options-listed-by-category"></a>按类别列出的编译器选项
 
@@ -118,9 +118,9 @@ ms.locfileid: "56676495"
 |[/vms](vmm-vms-vmv-general-purpose-representation.md)|声明单一继承。|
 |[/vmv](vmm-vms-vmv-general-purpose-representation.md)|声明虚拟继承。|
 |[/Z7](z7-zi-zi-debug-information-format.md)|生成与 C 7.0 兼容的调试信息。|
-|[/Za](za-ze-disable-language-extensions.md)|禁用语言扩展。|
+|[/Za](za-ze-disable-language-extensions.md)|禁用 C89 语言扩展。|
 |[/Zc](zc-conformance.md)|指定在 [/Ze](za-ze-disable-language-extensions.md)下的标准行为。|
-|[/Ze](za-ze-disable-language-extensions.md)|已否决。 启用语言扩展。|
+|[/Ze](za-ze-disable-language-extensions.md)|已否决。 启用 C89 语言扩展。|
 |[/Zf](zf.md)|改进了 PDB 中并行生成的生成时间。|
 |[/ZI](z7-zi-zi-debug-information-format.md)|将调试信息包含在与“编辑并继续”兼容的程序数据库中。 (仅限 x86)|
 |[/Zi](z7-zi-zi-debug-information-format.md)|生成完整的调试信息。|

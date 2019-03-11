@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Spectre
 - CVE-2017-5753
 - Speculative Execution
-ms.openlocfilehash: 94e55f08e4ff427aef0c93bf74c711a6fd935d0a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 20e6d45c088fe92fa736539e485d6807802b368a
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631009"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750541"
 ---
 # <a name="c-developer-guidance-for-speculative-execution-side-channels"></a>推理执行端通道的 c + + 开发人员指南
 

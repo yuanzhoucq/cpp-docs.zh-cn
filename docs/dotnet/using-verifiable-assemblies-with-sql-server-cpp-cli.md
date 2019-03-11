@@ -4,12 +4,12 @@ ms.date: 10/17/2018
 helpviewer_keywords:
 - verifiable assemblies [C++], with SQL Server
 ms.assetid: 5248a60d-aa88-4ff3-b30a-b791c3ea2de9
-ms.openlocfilehash: a977aa81a598e1698dfbc1c5679b85378b7ba6fc
-ms.sourcegitcommit: d04dfe95801bafcbd5371e40e626fe5c678343b8
+ms.openlocfilehash: 27dec67cc0932a784cdd041ba346bb8c635b280d
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52389924"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747691"
 ---
 # <a name="using-verifiable-assemblies-with-sql-server-ccli"></a>结合使用 SQL Server 和可验证的程序集 (C++/CLI)
 
@@ -19,9 +19,9 @@ ms.locfileid: "52389924"
 
 SQL Server transact-sql (T-SQL) 以允许你可验证程序集安装到 SQL Server 中提供的扩展。 SQL Server 的权限集指定安全上下文中，具有以下级别的安全性：
 
-- 不受限制的模式： 您自己承担; 运行代码代码不需要是可验证类型安全的。
+- 不受限制的模式：您自己承担; 运行代码代码不需要是可验证类型安全的。
 
-- 安全模式： 运行可验证类型安全代码;使用 /clr: safe 编译。
+- 安全模式：运行可验证类型安全代码;使用 /clr: safe 编译。
 
 > [!IMPORTANT]
 > 不推荐使用 visual Studio 2015 和 Visual Studio 2017 不支持 **/clr: pure**并 **/clr: safe**创建可验证项目。 如果需要可验证代码，我们建议将转换为 C# 代码。

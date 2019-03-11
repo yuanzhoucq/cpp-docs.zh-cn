@@ -1,19 +1,19 @@
 ---
-title: 如何：定义接口静态构造函数 (C++/CLI)
+title: 如何：定义接口静态构造函数 (C + + CLI)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - constructors [C++]
 - static constructors, interface
 - interface static constructor
 ms.assetid: 1f031cb2-e94f-43dc-819b-44cf2faaaa49
-ms.openlocfilehash: 0617454e0957dccc7e28a5172a40273b5d93bede
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dc1ef81bdefa5ed5d6418325bb250b7954d87268
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566382"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748602"
 ---
-# <a name="how-to-define-an-interface-static-constructor-ccli"></a>如何：定义接口静态构造函数 (C++/CLI)
+# <a name="how-to-define-an-interface-static-constructor-ccli"></a>如何：定义接口静态构造函数 (C + + CLI)
 
 接口可具有一个静态构造函数，其可用于初始化静态数据成员。  一个静态构造函数最多调用一次，并且将在首次访问静态接口成员之前调用。
 

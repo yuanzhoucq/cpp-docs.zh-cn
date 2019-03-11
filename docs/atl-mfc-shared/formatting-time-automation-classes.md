@@ -1,19 +1,19 @@
 ---
-title: 格式化时间： 自动化类
+title: 格式化时间：自动化类
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Automation classes, formatting time
 - time [C++], formatting
 - formatting [C++], time
 ms.assetid: 155c5bef-b555-4bed-9545-29afc49715f1
-ms.openlocfilehash: 2d08adcc03c7b9f46f6b6bd290b02ff5f22029f2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2c3157bd29879ae5206a27e238d05a4b5c9a61e0
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429700"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742692"
 ---
-# <a name="formatting-time-automation-classes"></a>格式化时间： 自动化类
+# <a name="formatting-time-automation-classes"></a>格式化时间：自动化类
 
 ## <a name="to-format-a-time"></a>时间格式
 
@@ -32,4 +32,3 @@ ms.locfileid: "50429700"
 ## <a name="see-also"></a>请参阅
 
 [日期和时间：自动化支持](../atl-mfc-shared/date-and-time-automation-support.md)
-

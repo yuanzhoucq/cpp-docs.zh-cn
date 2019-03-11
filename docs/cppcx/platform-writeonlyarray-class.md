@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::WriteOnlyArray Class
 ms.assetid: 92d7dd56-ec58-4b8c-88ba-9c903668b687
-ms.openlocfilehash: ff339bc2b144e22d7177638424dd8e617eecfb3b
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: fb582106fe2f18e939f11180048a125c683ca2f6
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330603"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57744391"
 ---
 # <a name="platformwriteonlyarray-class"></a>Platform::WriteOnlyArray 类
 
@@ -39,12 +39,12 @@ private ref class WriteOnlyArray<T, 1>
 
 |name|描述|
 |----------|-----------------|
-|[Writeonlyarray:: Begin](#begin)|指向数组中第一个元素的迭代器。|
-|[Writeonlyarray:: Data](#data)|指向数据缓冲区的指针。|
-|[Writeonlyarray:: End](#end)|指向数组中最后一个元素的下一位置的迭代器。|
-|[Writeonlyarray:: Fastpass](#fastpass)|指示数组能否使用 FastPass 机制，此机制是系统透明执行的优化。 请勿在你的代码中使用此机制|
-|[Writeonlyarray:: Length](#length)|返回数组中的元素数目。|
-|[Writeonlyarray:: Set](#set)|将指定元素设置为指定值。|
+|[WriteOnlyArray::begin](#begin)|指向数组中第一个元素的迭代器。|
+|[WriteOnlyArray::Data](#data)|指向数据缓冲区的指针。|
+|[WriteOnlyArray::end](#end)|指向数组中最后一个元素的下一位置的迭代器。|
+|[WriteOnlyArray::FastPass](#fastpass)|指示数组能否使用 FastPass 机制，此机制是系统透明执行的优化。 请勿在你的代码中使用此机制|
+|[WriteOnlyArray::Length](#length)|返回数组中的元素数目。|
+|[WriteOnlyArray::set](#set)|将指定元素设置为指定值。|
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -56,7 +56,7 @@ private ref class WriteOnlyArray<T, 1>
 
 **元数据：** Platform.winmd
 
-**命名空间：** Platform
+**命名空间：** 平台
 
 ## <a name="begin"></a>  WriteOnlyArray::begin 方法
 

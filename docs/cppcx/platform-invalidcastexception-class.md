@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::InvalidCastException
 ms.assetid: 0215131d-1251-4913-9561-824410e045b6
-ms.openlocfilehash: 9ff48fc456f03adc0e516624a16118e3ddad8718
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6e502346cb373d9dec5450987c4807b445234b28
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507666"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57745226"
 ---
 # <a name="platforminvalidcastexception-class"></a>Platform::InvalidCastException 类
 
@@ -35,7 +35,7 @@ public ref class InvalidCastException : COMException,    IException,    IPrintab
 
 **支持的最低服务器：** Windows Server 2012
 
-**命名空间：** Platform
+**命名空间：** 平台
 
 **元数据：** platform.winmd
 

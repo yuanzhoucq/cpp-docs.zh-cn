@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Unicode [C++], string objects
 - strings [C++], Unicode
 - strings [C++], character set support
-ms.openlocfilehash: 8a7f79f9a75c2be4ee855d89b47b6b8e59a67d15
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 59e8759ffbe61b80c74d8b5aba5bc50886d6b23d
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596646"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743913"
 ---
 # <a name="unicode-and-multibyte-character-set-mbcs-support"></a>Unicode 和多字节字符集 (MBCS) 支持
 
@@ -35,11 +35,11 @@ Microsoft 建议所有新开发的 MFC Unicode 库并在 Visual Studio 2013 和 
 
 |||||
 |-|-|-|-|
-|UAFXCW。LIB|UAFXCW。PDB|UAFXCWD.LIB|UAFXCWD。PDB|
-|MFC*版本*U.LIB|MFC*版本*U.PDB|MFC*版本*U.DLL|MFC*版本*UD。LIB|
-|MFC*版本*UD。PDB|MFC*version*UD.DLL|MFCS*版本*U.LIB|MFCS*版本*U.PDB|
-|MFCS*版本*UD。LIB|MFCS*版本*UD。PDB|MFCM*版本*U.LIB|MFCM*版本*U.PDB|
-|MFCM*版本*U.DLL|MFCM*版本*UD。LIB|MFCM*版本*UD。PDB|MFCM*version*UD.DLL|
+|UAFXCW.LIB|UAFXCW.PDB|UAFXCWD.LIB|UAFXCWD.PDB|
+|MFC*version*U.LIB|MFC*version*U.PDB|MFC*version*U.DLL|MFC*version*UD.LIB|
+|MFC*version*UD.PDB|MFC*version*UD.DLL|MFCS*version*U.LIB|MFCS*version*U.PDB|
+|MFCS*version*UD.LIB|MFCS*version*UD.PDB|MFCM*version*U.LIB|MFCM*version*U.PDB|
+|MFCM*version*U.DLL|MFCM*version*UD.LIB|MFCM*version*UD.PDB|MFCM*version*UD.DLL|
 
 (*版本*表示版本号的文件; 例如，"140"意味着版本 14.0。)
 

@@ -1,5 +1,5 @@
 ---
-title: 如何：使用 C++ 互操作封送数组
+title: 如何：封送数组使用 c + + 互操作
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - C++ Interop, arrays
 - data marshaling [C++], arrays
 ms.assetid: c2b37ab1-8acf-4855-ad3c-7d2864826b14
-ms.openlocfilehash: 10cf89d0f14a072318e6b1ef743f386e6ba914cd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0b27fd65b7d42bff2a009b14c39d9547d8a4a919
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441660"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739997"
 ---
-# <a name="how-to-marshal-arrays-using-c-interop"></a>如何：使用 C++ 互操作封送数组
+# <a name="how-to-marshal-arrays-using-c-interop"></a>如何：封送数组使用 c + + 互操作
 
 本主题演示 Visual c + + 互操作性的一个方面。 有关详细信息，请参阅[使用 c + + 互操作 (隐式 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)。
 

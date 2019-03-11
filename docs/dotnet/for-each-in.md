@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - for each keyword [C++]
 ms.assetid: 0c3a364b-2747-43f3-bb8d-b7d3b7023f79
-ms.openlocfilehash: 61ddf4f8dd4042f7be0b892b4fe239caa932a85e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c5ee72e557c62e3db2eeb5dac4811133719183f6
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532727"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746297"
 ---
 # <a name="for-each-in"></a>for each, in
 
@@ -37,15 +37,16 @@ ms.locfileid: "50532727"
 *identifier*<br/>
 代表集合元素的迭代变量。  当`identifier`是[跟踪引用运算符](../windows/tracking-reference-operator-cpp-component-extensions.md)，可以修改该元素。
 
-*表达式*<br/>
+*expression*<br/>
 数组表达式或集合。 集合元素必须让编译器能将其转换为 `identifier` 类型。
 
-*语句*<br/>
+*statements*<br/>
 要执行的一个或多个语句。
 
 ### <a name="remarks"></a>备注
 
-`for each` 语句用于循环访问集合。 可修改集合中的元素，但无法添加或删除元素。
+
+  `for each` 语句用于循环访问集合。 可修改集合中的元素，但无法添加或删除元素。
 
 *语句*数组或集合中每个元素执行。 为集合中的所有元素完成迭代后，控制将传递给 `for each` 块之后的语句。
 
@@ -55,11 +56,11 @@ ms.locfileid: "50532727"
 
 - [使用 for each 循环访问 C++ 标准库集合](../dotnet/iterating-over-stl-collection-by-using-for-each.md)
 
-- [如何：使用 for each 循环访问数组](../dotnet/how-to-iterate-over-arrays-with-for-each.md)
+- [如何：For each 循环与数组](../dotnet/how-to-iterate-over-arrays-with-for-each.md)
 
-- [如何：使用 for each 循环访问泛型集合](../dotnet/how-to-iterate-over-a-generic-collection-with-for-each.md)
+- [如何：For each 循环与泛型集合](../dotnet/how-to-iterate-over-a-generic-collection-with-for-each.md)
 
-- [如何：使用 for each 循环访问用户定义集合](../dotnet/how-to-iterate-over-a-user-defined-collection-with-for-each.md)
+- [如何：For each 循环与用户定义的集合](../dotnet/how-to-iterate-over-a-user-defined-collection-with-for-each.md)
 
 ## <a name="windows-runtime"></a>Windows 运行时
 
@@ -111,7 +112,7 @@ Testing
 
 CLR 语法等同于**所有运行时**语法中，按如下所示除外。
 
-*表达式*<br/>
+*expression*<br/>
 托管的数组表达式或集合。 集合元素必须让编译器可以将其从转换<xref:System.Object>到*标识符*类型。
 
 *表达式*计算结果为的类型实现<xref:System.Collections.IEnumerable>， <xref:System.Collections.Generic.IEnumerable%601>，或定义的类型`GetEnumerator`方法可返回一种类型的实现<xref:System.Collections.IEnumerator>声明所有中定义的方法或`IEnumerator`.

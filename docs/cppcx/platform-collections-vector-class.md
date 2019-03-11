@@ -21,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - Vector Class (C++/Cx)
 ms.assetid: aee8c076-9700-47c3-99b6-799fd3edb0ca
-ms.openlocfilehash: fb03f7a00dfabe9d082ca761552af99e552d3190
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5466f1d1c8987724aa0768cd8915e06b62b031ad
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50499858"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747120"
 ---
 # <a name="platformcollectionsvector-class"></a>Platform::Collections::Vector 类
 
@@ -226,7 +226,7 @@ virtual bool IndexOf(T value, unsigned int* index);
 
 ### <a name="parameters"></a>参数
 
-*value*<br/>
+*值*<br/>
 要查找的项。
 
 *index*<br/>
@@ -257,7 +257,7 @@ virtual void InsertAt(unsigned int index, T item)
 *index*<br/>
 从零开始的无符号整数，用于指定 Vector 对象中的特定元素。
 
-*项*<br/>
+*item*<br/>
 项后指定的元素插入到向量*索引*。 类型*项*由定义*T*类型名称。
 
 ## <a name="removeat"></a>  Vector:: removeat 方法
@@ -315,7 +315,7 @@ virtual void SetAt(unsigned int index, T item);
 *index*<br/>
 从零开始的无符号整数，用于指定 Vector 对象中的特定元素。
 
-*项*<br/>
+*item*<br/>
 要分配给指定元素的值。 类型*项*由定义*T*类型名称。
 
 ## <a name="size"></a>  Vector:: size 方法
@@ -375,7 +375,7 @@ Vector(std::initializer_list<T> il);
 *size*<br/>
 向量中元素的数目。
 
-*value*<br/>
+*值*<br/>
 用于初始化当前向量中每个元素的值。
 
 *v*<br/>
@@ -387,7 +387,7 @@ Vector(std::initializer_list<T> il);
 *first*<br/>
 用于初始化当前向量的对象序列中的第一个元素。 类型*第一个*通过传递*完美转发*。 有关详细信息，请参阅[右值引用声明符：&&](../cpp/rvalue-reference-declarator-amp-amp.md)。
 
-*最后一个*<br/>
+*last*<br/>
 用于初始化当前向量的对象序列中的最后一个元素。 类型*上次*通过传递*完美转发*。 有关详细信息，请参阅[右值引用声明符：&&](../cpp/rvalue-reference-declarator-amp-amp.md)。
 
 ## <a name="see-also"></a>请参阅

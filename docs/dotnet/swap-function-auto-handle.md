@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - swap function
 ms.assetid: 7dd91b5c-f0de-4634-a2e2-642626706e27
-ms.openlocfilehash: a4e15e2a0481f10b58517135c5dc283549f358af
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: eb410d420e91f9b64742d74d9f9262a4db42f562
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50638297"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751617"
 ---
 # <a name="swap-function-autohandle"></a>swap 函数 (auto_handle)
 
@@ -31,10 +31,10 @@ void swap(
 
 #### <a name="parameters"></a>参数
 
-*_ 左*<br/>
+*_left*<br/>
 一个 `auto_handle`。
 
-*（_r)*<br/>
+*_right*<br/>
 另一个`auto_handle`。
 
 ## <a name="example"></a>示例

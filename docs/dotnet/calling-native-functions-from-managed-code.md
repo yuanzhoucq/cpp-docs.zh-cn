@@ -9,12 +9,12 @@ helpviewer_keywords:
 - calling native functions from managed code
 - interop [C++], calling native functions from managed code
 ms.assetid: 982cef18-20d9-42b4-8242-a77fa65f2e36
-ms.openlocfilehash: 97b0221a4ec73be41bb5ba052607dfb5ced233c8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 285bfabbd5935df303a39ada11c388713ae24f34
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462033"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743244"
 ---
 # <a name="calling-native-functions-from-managed-code"></a>从托管代码调用本机函数
 
@@ -196,7 +196,7 @@ int main() {
 
 在本主题中前面所示示例中，DllImport 的 CharSet 参数指定如何将托管的字符串封送处理;在这种情况下，它们应封送到本机端为 ANSI 字符串。
 
-可以使用 MarshalAs 特性来指定各个自变量封送处理信息的本机函数。 有几个选项进行封送处理字符串\*参数： BStr、 ANSIBStr、 TBStr、 LPStr、 LPWStr 和 LPTStr。 默认选项为 LPStr。
+可以使用 MarshalAs 特性来指定各个自变量封送处理信息的本机函数。 有几个选项进行封送处理字符串\*参数：BStr、 ANSIBStr、 TBStr、 LPStr、 LPWStr 和 LPTStr。 默认选项为 LPStr。
 
 在此示例中，该字符串被封送为双字节 Unicode 字符字符串 LPWStr。 输出是第一个字母的 Hello World ！ 因为封送的字符串的第二个字节为 null，并且将放则将此解释为字符串的结尾标记。
 

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - VectorViewIterator Class
 ms.assetid: be3aa1ae-e6ba-4a06-8d6b-86d8128026f7
-ms.openlocfilehash: 6ee03b546cf89aff3ef79fa9c89d15f39b4d9fe0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4d4a591c6febdf6e34757251c4de5d01a9e2fa87
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539134"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743738"
 ---
 # <a name="platformcollectionsvectorviewiterator-class"></a>Platform::Collections::VectorViewIterator 类
 
@@ -383,7 +383,8 @@ reference operator[](difference_type n) const;
 
 ### <a name="return-value"></a>返回值
 
-`n` 元素从当前 VectorViewIterator 移置开的元素。
+
+  `n` 元素从当前 VectorViewIterator 移置开的元素。
 
 ## <a name="ctor"></a>  Vectorviewiterator:: Vectorviewiterator 构造函数
 

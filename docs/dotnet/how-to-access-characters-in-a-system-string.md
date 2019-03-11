@@ -1,5 +1,5 @@
 ---
-title: 如何：访问 System::String 中的字符
+title: '如何：System:: string 中访问字符'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - examples [C++], strings
 - strings [C++], accessing characters
 ms.assetid: cfc89756-aef3-4988-907e-fb236dcb7087
-ms.openlocfilehash: 6ecd3ed09e31e99898143e30ffe70c1c14aea9f0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 68444b337710515ccf8ecb98157d144493978ecd
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667035"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57738453"
 ---
-# <a name="how-to-access-characters-in-a-systemstring"></a>如何：访问 System::String 中的字符
+# <a name="how-to-access-characters-in-a-systemstring"></a>如何：System:: string 中访问字符
 
 您可以访问的字符<xref:System.String>对象的高性能调用到非托管函数`wchar_t*`字符串。 该方法生成的第一个字符的内部指针<xref:System.String>对象。 此指针可以直接操作或固定并传递给函数应为普通`wchar_t`字符串。
 

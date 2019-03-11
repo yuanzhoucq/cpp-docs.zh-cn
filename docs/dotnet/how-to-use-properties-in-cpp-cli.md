@@ -1,18 +1,18 @@
 ---
-title: 如何：在 C++/CLI 中使用属性
+title: 如何：使用属性中 C + + /cli CLI
 ms.date: 07/21/2017
 helpviewer_keywords:
 - simple properties
 - properties [C++], simple
 ms.assetid: f5d82547-e214-4f05-9e1b-ddb6d0dc5e4c
-ms.openlocfilehash: 546c729245fb0c941f07e9222b71670278c44fde
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f29bf419ca19ce1bbe45e36adb08d7f4e5629f5a
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50617485"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739285"
 ---
-# <a name="how-to-use-properties-in-ccli"></a>如何：在 C++/CLI 中使用属性
+# <a name="how-to-use-properties-in-ccli"></a>如何：使用属性中 C + + /cli CLI
 
 本文介绍如何使用属性中 C + + /cli CLI。
 
@@ -88,7 +88,7 @@ int main() {
 
 如果使用默认索引属性，只需通过指类名称，可以访问的数据结构，但如果使用用户定义的索引的属性，则必须指定要访问的数据结构的属性名称。
 
-有关如何使用用 C# 编写的索引器的信息，请参阅[如何： 使用 C# 索引器 (C + + CLI)](../dotnet/how-to-consume-a-csharp-indexer-cpp-cli.md)。
+有关如何使用索引器中写入的信息C#，请参阅[如何：使用C#索引器 (C + + CLI)](../dotnet/how-to-consume-a-csharp-indexer-cpp-cli.md)。
 
 此代码示例演示如何使用默认值和用户定义的索引的属性：
 

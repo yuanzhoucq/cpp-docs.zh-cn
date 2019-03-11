@@ -23,12 +23,12 @@ helpviewer_keywords:
 - shared classes, CTimeSpan
 - time, elapsed
 ms.assetid: ee1e42f6-1839-477a-8435-fb26ad475140
-ms.openlocfilehash: 6ab22b9a093a1aa9c8ae0249c036ea2bf89065f6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3c80260c1f57e49a34b4e9f3331f4d0d69ab30ce
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50641867"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57752319"
 ---
 # <a name="ctimespan-class"></a>CTimeSpan 类
 
@@ -67,9 +67,9 @@ class CTimeSpan
 
 |||
 |-|-|
-|[运算符 +-](#operator_add_-)|将添加并减去`CTimeSpan`对象。|
-|[operator + = =](#operator_add_eq_-_eq)|将添加并减去`CTimeSpan`对象与此`CTimeSpan`。|
-|[运算符 = = < 等。](#ctimespan_comparison_operators)|比较两个相对时间值。|
+|[operator + -](#operator_add_-)|将添加并减去`CTimeSpan`对象。|
+|[operator += -=](#operator_add_eq_-_eq)|将添加并减去`CTimeSpan`对象与此`CTimeSpan`。|
+|[operator == < etc.](#ctimespan_comparison_operators)|比较两个相对时间值。|
 
 ## <a name="remarks"></a>备注
 
@@ -104,7 +104,7 @@ bool operator>=(CTimeSpan span) const throw();
 
 ### <a name="parameters"></a>参数
 
-*s p a n*<br/>
+*span*<br/>
 要比较的对象。
 
 ### <a name="return-value"></a>返回值
@@ -156,7 +156,7 @@ CTimeSpan(
    |组件|范围|
    |---------------|-----------|
    |*lDays*|0-25,000 （近似）|
-   |*n 小时*|0-23|
+   |*nHours*|0-23|
    |*nMins*|0-59|
    |*nSecs*|0-59|
 
@@ -178,7 +178,7 @@ CString Format(UINT nID) const;
 
 ### <a name="parameters"></a>参数
 
-*pFormat*， *pszFormat*<br/>
+*pFormat*, *pszFormat*<br/>
 格式设置字符串类似于`printf`格式设置字符串。 格式设置代码，前面有百分比 (`%`) 登录，将替换为相应`CTimeSpan`组件。 格式设置字符串中的其他字符被复制到返回的字符串不变。 值和格式设置代码的含义`Format`如下所示：
 
 - **%D**总在此天数 `CTimeSpan`
@@ -334,7 +334,7 @@ LONGLONG GetTotalSeconds() const throw();
 
 有关示例，请参阅[GetTotalHours](#gettotalhours)。
 
-##  <a name="operator_add_-"></a>  CTimeSpan::operator +、-
+##  <a name="operator_add_-"></a>  CTimeSpan::operator +, -
 
 将添加并减去`CTimeSpan`对象。
 
@@ -345,7 +345,7 @@ CTimeSpan operator-(CTimeSpan span) const throw();
 
 ### <a name="parameters"></a>参数
 
-*s p a n*<br/>
+*span*<br/>
 要添加到值`CTimeSpan`对象。
 
 ### <a name="return-value"></a>返回值
@@ -360,7 +360,7 @@ CTimeSpan operator-(CTimeSpan span) const throw();
 
 [!code-cpp[NVC_ATLMFC_Utilities#167](../../atl-mfc-shared/codesnippet/cpp/ctimespan-class_7.cpp)]
 
-##  <a name="operator_add_eq_-_eq"></a>  CTimeSpan::operator + =、 =
+##  <a name="operator_add_eq_-_eq"></a>  CTimeSpan::operator +=, -=
 
 将添加并减去`CTimeSpan`对象与此`CTimeSpan`。
 
@@ -371,7 +371,7 @@ CTimeSpan& operator-=(CTimeSpan span) throw();
 
 ### <a name="parameters"></a>参数
 
-*s p a n*<br/>
+*span*<br/>
 要添加到值`CTimeSpan`对象。
 
 ### <a name="return-value"></a>返回值
@@ -416,4 +416,3 @@ CArchive& Serialize64(CArchive& ar);
 [time、_time32、_time64](../../c-runtime-library/reference/time-time32-time64.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>
 [ATL/MFC 共享类](../../atl-mfc-shared/atl-mfc-shared-classes.md)
-

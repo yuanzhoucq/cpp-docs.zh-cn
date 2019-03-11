@@ -17,12 +17,12 @@ helpviewer_keywords:
 - exceptions, diagnosing odd behavior
 - compatibility, between assemblies
 ms.assetid: 679b8ed3-d966-4a0c-b627-2a3f3ec96b74
-ms.openlocfilehash: fe3b5e3a887e4a440c3570750c569ec6c71ea611
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c61f3fdd434a1b746c024b1a98d1d71f04df7e5b
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50595950"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746912"
 ---
 # <a name="managed-types-ccli"></a>托管类型 (C++/CLI)
 
@@ -125,7 +125,7 @@ S.i = 11
 
 但是，如果您添加到另一个成员`struct S`nested_value_types.cpp 中, (例如， `double d;`) 和无需重新编译客户端重新编译该组件，则结果为未处理的异常 (类型的<xref:System.IO.FileLoadException?displayProperty=fullName>)。
 
-## <a name="test_equality"></a> 如何： 测试相等性
+## <a name="test_equality"></a> 操作说明：确定相等性的测试
 
 在下面的示例中，使用 Managed Extensions for c + + 的相等性测试基于句柄的引用。
 
@@ -150,7 +150,7 @@ IL_0012:  call       bool [mscorlib]System.String::op_Equality(string,
                                                                string)
 ```
 
-## <a name="diagnose_fix"></a> 如何： 诊断和修复程序集兼容性问题
+## <a name="diagnose_fix"></a> 操作说明：诊断和修复程序集兼容性问题
 
 本主题介绍了在编译时引用的程序集的版本与在运行时，引用的程序集的版本不匹配时可能发生以及如何避免此问题。
 

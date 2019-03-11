@@ -15,12 +15,12 @@ helpviewer_keywords:
 - strings [C++], class CString
 - casting CString objects
 ms.assetid: 5048de8a-5298-4891-b8a0-c554b5a3ac1b
-ms.openlocfilehash: f68f021d16de7ad701ce20c3be59ed6958aa6893
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: eee23296d9aac40849dacf58c3b3d9bdf583d1df
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528389"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743279"
 ---
 # <a name="cstring-operations-relating-to-c-style-strings"></a>与 C 样式字符串相关的 CString 操作
 
@@ -50,7 +50,8 @@ char myString[256];
 strcpy(myString, (LPCTSTR)aCString);
 ```
 
-你可以使用 `CString` 方法（例如 `SetAt`）来修改字符串对象中的单个字符。 但是，LPCTSTR 指针是临时的并且对进行任何更改时变为无效`CString`。 `CString` 还可能超出范围，并且被自动删除。 我们建议您让的全新 LPCTSTR 指针`CString`对象每次使用一个。
+你可以使用 `CString` 方法（例如 `SetAt`）来修改字符串对象中的单个字符。 但是，LPCTSTR 指针是临时的并且对进行任何更改时变为无效`CString`。 
+  `CString` 还可能超出范围，并且被自动删除。 我们建议您让的全新 LPCTSTR 指针`CString`对象每次使用一个。
 
 有时你可能需要 `CString` 数据的副本以直接修改。 使用更安全的函数 `strcpy_s`（或者 Unicode/MBCS 可移植 `_tcscpy_s`）将 `CString` 对象复制到单独的缓冲区中。 这是可安全修改字符的位置，如以下示例所示。
 
