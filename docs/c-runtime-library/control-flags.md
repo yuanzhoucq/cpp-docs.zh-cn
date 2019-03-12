@@ -8,18 +8,18 @@ helpviewer_keywords:
 - heap allocation, control flags
 - debug heap, control flags
 ms.assetid: 8dbd24a5-0633-42d1-9771-776db338465f
-ms.openlocfilehash: 45349099ed5c607468430d2f0a901c6374d88fc7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7ac5f239ea4d242618fb23ba617a3a6539492053
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50475733"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750109"
 ---
 # <a name="control-flags"></a>控制标志
 
 Microsoft C 运行库的调试版本使用下列标志控制堆分配和报告过程。 有关详细信息，请参阅 [CRT 调试方法](/visualstudio/debugger/crt-debugging-techniques)。
 
-|Flag|描述|
+|Flag|说明|
 |----------|-----------------|
 |[_CRTDBG_MAP_ALLOC](../c-runtime-library/crtdbg-map-alloc.md)|将基堆函数映射到其对应的调试版本|
 |[_DEBUG](../c-runtime-library/debug.md)|支持使用运行时函数的调试版本|

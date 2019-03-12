@@ -5,12 +5,12 @@ helpviewer_keywords:
 - 3rd-party libraries
 - vspkg
 ms.assetid: b055ed20-8a9e-45b2-ac2a-e3d94271c009
-ms.openlocfilehash: 1abd7f05614317237c911ceb69c243211a373e34
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 51c1634aade159e095b5957a15783e40ec0284d0
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658297"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750957"
 ---
 # <a name="porting-third-party-libraries"></a>移植第三方库
 
@@ -18,7 +18,7 @@ ms.locfileid: "50658297"
 
 ## <a name="introducing-vcpkg"></a>vcpkg 简介
 
-在过去，查找和升级第三方库有时并非易事。 为了更容易获取和重建 C++ 第三方开源库，Visual C++ 团队创建了一个名为 **VC++ 包工具** 或 **vcpkg** 的命令行工具。 Vcpkg 有一个可搜索目录，包含许多热门 C++ 开源库。 你可以直接从 vcpkg 命令行安装目录中的任何库。 安装库时，Vcpkg 会在计算机上创建一个目录树，并在此文件夹中添加 .h、.lib 和二进制文件。 你可以在编译命令行中使用此文件夹，或者使用 vcpkg 集成安装命令将其集成到 Visual Studio 2015 或更高版本。 集成库位置后，Visual Studio 可以找到该位置，并将其添加到你创建的任何新项目中。 要使用库，只需使用 `#include` 将其包含在内即可，Visual Studio 会自动将 .lib 路径添加到项目设置并将 dll 复制到解决方案文件夹。 有关详细信息，请参阅 [vcpkg：用于 C++ 的程序包管理器 ](../vcpkg.md)。
+在过去，查找和升级第三方库有时并非易事。 为了更容易获取和重建 C++ 第三方开源库，Visual C++ 团队创建了一个名为 **VC++ 包工具** 或 **vcpkg** 的命令行工具。 Vcpkg 有一个可搜索目录，包含许多热门 C++ 开源库。 你可以直接从 vcpkg 命令行安装目录中的任何库。 安装库时，Vcpkg 会在计算机上创建一个目录树，并在此文件夹中添加 .h、.lib 和二进制文件。 你可以在编译命令行中使用此文件夹，或者使用 vcpkg 集成安装命令将其集成到 Visual Studio 2015 或更高版本。 集成库位置后，Visual Studio 可以找到该位置，并将其添加到你创建的任何新项目中。 要使用库，只需使用 `#include` 将其包含在内即可，Visual Studio 会自动将 .lib 路径添加到项目设置并将 dll 复制到解决方案文件夹。 有关详细信息，请参阅[vcpkg：适用于 C++ 的包管理器](../vcpkg.md)。
 
 ## <a name="reporting-issues"></a>报告问题
 

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - environment control routines
 - process control routines
 ms.assetid: 7fde74c3-c2a6-4d15-84b8-092160d60c3e
-ms.openlocfilehash: df080d1ed8c5a00711468a159acb07159ad31930
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: c837739d4954c65d45a590bd5c7f904e2375102e
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329405"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742108"
 ---
 # <a name="process-and-environment-control"></a>进程和环境控制
 
@@ -77,13 +77,13 @@ _exec 和 _spawn 系列间的差异是：_spawn 函数可以将新进程中的�
 
 |函数|使用 PATH 变量查找文件|参数传递约定|环境设置|
 |---------------|--------------------------------------|----------------------------------|--------------------------|
-|_execl、_spawnl|否|列表|继承自调用进程|
-|_execle、_spawnle|否|列表|指向作为最后一个参数传递的新进程的环境表|
+|_execl、_spawnl|No|列表|继承自调用进程|
+|_execle、_spawnle|No|列表|指向作为最后一个参数传递的新进程的环境表|
 |_execlp、_spawnlp|是|列表|继承自调用进程|
 |_execvpe、_spawnvpe|是|数组|指向作为最后一个参数传递的新进程的环境表|
 |_execlpe、_spawnlpe|是|列表|指向作为最后一个参数传递的新进程的环境表|
-|_execv、_spawnv|否|数组|继承自调用进程|
-|_execve、_spawnve|否|数组|指向作为最后一个参数传递的新进程的环境表|
+|_execv、_spawnv|No|数组|继承自调用进程|
+|_execve、_spawnve|No|数组|指向作为最后一个参数传递的新进程的环境表|
 |_execvp、_spawnvp|是|数组|继承自调用进程|
 
 ## <a name="see-also"></a>请参阅

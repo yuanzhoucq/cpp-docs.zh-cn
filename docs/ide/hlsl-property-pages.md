@@ -4,26 +4,26 @@ ms.date: 11/04/2016
 f1_keywords:
 - VC.Project.FXCompilerTool.AdditionalOptionsPage
 ms.assetid: 0c65f5ec-a2a5-4f5b-8d4c-fa57113a5a1d
-ms.openlocfilehash: 74775e34e3f0591457c2ecff6168767d065b916e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 68189d6d4de75e71b5dfe430b870dd37742e934c
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50666552"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57752332"
 ---
 # <a name="hlsl-property-pages"></a>“HLSL”属性页
 
 可以使用 HLSL 编译器 (fxc.exe) 属性页来配置单个 HLSL 着色器文件生成的方式。 此属性分为三个类别：
 
-- [HLSL 属性页：常规](../ide/hlsl-property-pages-general.md)
+- [“HLSL”属性页：常规](../ide/hlsl-property-pages-general.md)
 
    提供属性以指定 HLSL 编译器常用的选项。
 
-- [HLSL 属性页：高级](../ide/hlsl-property-pages-advanced.md)
+- [“HLSL”属性页：高级](../ide/hlsl-property-pages-advanced.md)
 
    提供属性以指定 HLSL 编译器的其他选项。
 
-- [HLSL 属性页：输出文件](../ide/hlsl-property-pages-output-files.md)
+- [“HLSL”属性页：输出文件](../ide/hlsl-property-pages-output-files.md)
 
    提供属性以指定 HLSL 编译器输出文件的方式。
 

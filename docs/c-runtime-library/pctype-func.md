@@ -17,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - __pctype_func
 ms.assetid: d52b8add-d07d-4516-a22f-e836cde0c57f
-ms.openlocfilehash: fc0f4b0be80534744beda1fe7595293ceb002924
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a152f3612373189c964aaca005fe3b989eec8694
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50444221"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742014"
 ---
 # <a name="pctypefunc"></a>__pctype_func
 

@@ -4,12 +4,12 @@ ms.date: 06/21/2018
 ms.technology: cpp-ide
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 7758905f6db537260ec9e8b6e516bfa409e97ad2
-ms.sourcegitcommit: fbc05d8581913bca6eff664e5ecfcda8e471b8b1
+ms.openlocfilehash: 4b64f79ea5a9566d2ad28216fbc5e736b622fe00
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56809732"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740242"
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset-or-documentation"></a>如何使用 Visual C++ 工具集或文档报告问题
 
@@ -398,4 +398,3 @@ Visual Studio 用户可使用 Visual Studio 中的“报告问题”工具报告
 我们使用 GitHub 问题来跟踪文档中报告的问题。 现在可直接从内容页创建 GitHub 问题，这可帮助用户以更丰富的方式与文档作者和产品团队进行互动。 如果发现文档存在问题、错误代码示例、令人困惑的说明、关键信息的遗漏，甚至只是一个拼写错误，都请与我们联系。 滚动至本页底部，然后选择“登录以提供文档反馈”。 如果现在没有 GitHub 帐户，则需要创建一个，创建帐户后，可以看到所有文档问题及其状态，还可在报告的问题有了变化时收到通知。 有关详细信息，请参阅 [docs.microsoft.com 中即将推出的新反馈系统](/teamblog/a-new-feedback-system-is-coming-to-docs)。
 
 使用文档反馈按钮在 GitHub 上创建文档问题时，创建问题的页面的相关信息会自动填写到该问题中，这样我们就可了解问题出现的位置。 请不要编辑该信息。 只需要追加错误的详细信息和建议的修复方法（如果愿意）。 [文档为开放源](https://github.com/MicrosoftDocs/cpp-docs/)，如果想要自己对其进行实际修复和提出建议，可直接进行。 有关帮助改进文档的方式的详细信息，请参阅 GitHub 上的[帮助指南](https://github.com/MicrosoftDocs/cpp-docs/blob/master/CONTRIBUTING.md)。
-

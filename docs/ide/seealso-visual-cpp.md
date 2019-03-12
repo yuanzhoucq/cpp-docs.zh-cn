@@ -8,12 +8,12 @@ helpviewer_keywords:
 - seealso C++ XML tag
 - <seealso> C++ XML tag
 ms.assetid: cb33d100-9c50-4485-8d0c-573429eff155
-ms.openlocfilehash: 788c2502574cb06ee92a4ef7341eae4868211fda
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 184ea874311c50caaa60440ea4f22fe40f240a6e
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50517775"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746158"
 ---
 # <a name="ltseealsogt-visual-c"></a>&lt;seealso&gt; (Visual C++)
 

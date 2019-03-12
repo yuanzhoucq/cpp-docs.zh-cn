@@ -11,12 +11,12 @@ helpviewer_keywords:
 - cpp.stop
 - Class View, hint file
 ms.assetid: 17194f66-cf62-4523-abec-77db0675ab65
-ms.openlocfilehash: ca250849a0bcd150a6359abdad996b72c4372713
-ms.sourcegitcommit: 4299caac2dc9e806c74ac833d856a3838b0f52a1
+ms.openlocfilehash: c08b45bddaed23bf5d1bf82fd6d27d1078fc84a6
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "57006743"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740973"
 ---
 # <a name="hint-files"></a>提示文件
 
@@ -39,7 +39,7 @@ C++ 浏览数据库分析器是一款模糊分析器，它可在很短的时间�
 > - 在 Visual Studio 2017 版本 15.6 之前的版本中：针对所有更改在解决方案中删除 .sdf 文件和/或 VC.db 文件。
 > - 在 Visual Studio 2017 版本 15.6 至 15.9 之间的版本中：关闭解决方案，并在添加新的提示文件后重新打开它。
 
-## <a name="scenario"></a>场景
+## <a name="scenario"></a>方案
 
 ```cpp
 #define NOEXCEPT noexcept

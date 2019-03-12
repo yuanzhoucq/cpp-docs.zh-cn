@@ -17,12 +17,12 @@ helpviewer_keywords:
 - __wargv
 - __argc
 ms.assetid: 17001b0a-04ad-4762-b3a6-c54847f02d7c
-ms.openlocfilehash: de0c4783b30764350eea35007583c1481ab01024
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f428d81215193361a409473a411eb5c4d91fa997
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575313"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743307"
 ---
 # <a name="argc-argv-wargv"></a>__argc、__argv、__wargv
 

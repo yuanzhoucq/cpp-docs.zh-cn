@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application deployment [C++], DLL redistribution
 - deploying applications [C++], DLL redistribution
 ms.assetid: f7a2cb42-fb48-42ab-abd2-b35e2fd5601a
-ms.openlocfilehash: fdca832810312d2f36697da8fbaac539c5ce951c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ee81fb1560133b2777a33e80d32c0e2e55c01bf4
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452593"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749082"
 ---
 # <a name="determining-which-dlls-to-redistribute"></a>确定要重新分发的 DLL
 
@@ -37,7 +37,7 @@ ms.locfileid: "50452593"
 
 下表描述了应用程序可能依赖的一些 Visual C++ DLL。
 
-|Visual C++ 库|描述|适用对象|
+|Visual C++ 库|说明|适用对象|
 |--------------------------|-----------------|----------------|
 |vcruntimeversion.dll|本机代码的运行库。|使用常规 C 和 C++ 语言启用和终止服务的应用程序。|
 |vccorlibversion.dll|托管代码的运行库。|使用托管代码的 C++ 语言服务的应用程序。|
