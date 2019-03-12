@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - XML documentation, processing XML file
 ms.assetid: e70fdeae-80ac-4872-ab24-771c5635cfbf
-ms.openlocfilehash: bc9aa57ffd68630d0a4209f8f8611882f8f36fc3
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 75b58b7ce2b5c96e853c99f0827ee4de605a6f3d
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524165"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748471"
 ---
 # <a name="xml-file-processing"></a>.Xml 文件处理
 
@@ -23,7 +23,7 @@ ms.locfileid: "51524165"
 
 - ID 字符串的第一部分标识被标识的成员类型，单个字符后跟一个冒号。 使用下面的成员类型：
 
-  | 字符 | 描述 |
+  | 字符 | 说明 |
   |---------------|-----------------|
   | N | namespace<br /><br /> 无法将文档注释添加到命名空间中，但可能对命名空间进行 cref 引用。 |
   | T | 类型：类、接口、结构、枚举、委托 |

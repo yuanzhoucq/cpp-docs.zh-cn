@@ -4,18 +4,18 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - file types [C++], WinHelp files
 ms.assetid: 4fdcbd66-66b0-4866-894a-fd7b4c2557e4
-ms.openlocfilehash: 142702699523633bf810d0077ce7ba6355557d21
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7bc00902b449905ee75e77f147150cbb68bf3f22
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496285"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751799"
 ---
 # <a name="help-files-winhelp"></a>帮助文件 (WinHelp)
 
 在 MFC 应用程序向导的[高级功能](../mfc/reference/advanced-features-mfc-application-wizard.md)页中，选中“上下文相关帮助”复选框，然后选择“WinHelp 格式”，将 WinHelp 类型的帮助支持添加到应用程序时，将创建以下文件。
 
-|文件名|目录位置|解决方案资源管理器位置|描述|
+|文件名|目录位置|解决方案资源管理器位置|说明|
 |---------------|------------------------|--------------------------------|-----------------|
 |Projname.hpj|Projname\hlp|源文件|帮助编译器创建程序或控件的帮助文件时使用的帮助项目文件。|
 |Projname.rtf|Projname\hlp|帮助文件|包含可编辑的模板主题以及有关自定义 .hpj 文件的信息。|
@@ -26,7 +26,7 @@ ms.locfileid: "50496285"
 
 通过在 MFC ActiveX 控件向导的[应用程序设置](../mfc/reference/application-settings-mfc-activex-control-wizard.md)选项卡中选择“生成帮助文件”，可将 WinHelp 支持添加到 MFC ActiveX 控件项目。 将帮助支持添加到 MFC ActiveX 控件时，以下文件将添加到项目中：
 
-|文件名|目录位置|解决方案资源管理器位置|描述|
+|文件名|目录位置|解决方案资源管理器位置|说明|
 |---------------|------------------------|--------------------------------|-----------------|
 |Projname.hpj|Projname\hlp|源文件|帮助编译器创建程序或控件的帮助文件时使用的项目文件。|
 |Projname.rtf|Projname\hlp|项目|包含可编辑的模板主题以及有关自定义 .hpj 文件的信息。|

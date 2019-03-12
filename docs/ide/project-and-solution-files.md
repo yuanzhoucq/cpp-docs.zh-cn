@@ -11,18 +11,18 @@ helpviewer_keywords:
 - browsing database file, .sdf
 - file types [C++], project files
 ms.assetid: 5823b954-36cf-42d3-8fd5-25bab3ef63d9
-ms.openlocfilehash: ea7fc0fa7ea57de9f12f30804ace2cecccaa4bff
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: f09c9912fa3c7de96f18458bc9823e6302ebe418
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330884"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743728"
 ---
 # <a name="project-and-solution-files"></a>项目和解决方案文件
 
 在 Visual Studio 中创建项目时，会创建以下文件。 它们用于管理解决方案中的项目文件。
 
-|Filename|目录位置|解决方案资源管理器位置|描述|
+|Filename|目录位置|解决方案资源管理器位置|说明|
 |--------------|------------------------|--------------------------------|-----------------|
 |Solname.sln|Projname|在解决方案资源管理器中不显示|*解决方案*文件。 它将一个或多个项目的所有元素组织到一个解决方案中。|
 |Projname.suo|Projname|在解决方案资源管理器中不显示|解决方案选项文件。 它存储解决方案的自定义项，以便每次打开解决方案中的项目或文件时，都具有所需的外观和行为。|
