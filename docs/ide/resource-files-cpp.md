@@ -6,12 +6,12 @@ helpviewer_keywords:
 - resources [C++]
 - file types [C++], resource files
 ms.assetid: 338a4a0f-0c62-4ef1-a34f-5d86262d93a4
-ms.openlocfilehash: f9ead50c1c8761968ebad65f6a5289cfeea8fdaf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e19ad88a52467cd7ad2d5fa17dd964fd1bb38429
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50622997"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747042"
 ---
 # <a name="resource-files-c"></a>资源文件 (C++)
 
@@ -19,7 +19,7 @@ ms.locfileid: "50622997"
 
 有关详细信息，请参阅[使用资源](../windows/working-with-resource-files.md)。
 
-|文件名|目录位置|解决方案资源管理器位置|描述|
+|文件名|目录位置|解决方案资源管理器位置|说明|
 |---------------|------------------------|--------------------------------|-----------------|
 |Projname.rc|Projname|源文件|项目的资源脚本文件。 资源脚本文件包含以下内容，具体取决于项目类型以及为项目选择的支持（例如工具栏、对话框或 HTML）：<br /><br />- 默认菜单定义。<br />- 快捷键和字符串表。<br />- 默认“关于”对话框。<br />- 其他对话框。<br />- 图标文件 (res\\Projname.ico)。<br />- 版本信息。<br />- 位图。<br />- 工具栏。<br />- HTML 文件。<br /><br /> 资源文件包含标准 Microsoft 基础类资源的文件 Afxres.rc。|
 |Resource.h|Projname|头文件|资源头文件，其中包括项目使用的资源的定义。|

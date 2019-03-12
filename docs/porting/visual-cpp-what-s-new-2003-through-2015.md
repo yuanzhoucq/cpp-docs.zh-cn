@@ -2,12 +2,12 @@
 title: Visual C++ 新增功能（2003 - 2015）
 ms.date: 11/04/2016
 ms.assetid: c4afde6f-3d75-40bf-986f-be57e3818e26
-ms.openlocfilehash: bc0092aeb8910f960befc174c1f71ce05c4eb131
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: fdd1d2c2183d06defe413340b8aef05c5bd61750
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54894349"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749147"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Visual C++ 新增功能（2003 - 2015）
 
@@ -1743,7 +1743,7 @@ Visual Studio 2010 中引入了像并行模式库这样功能强大的 C++ 并�
 
 **引用突出显示。** 选择一个符号现在将在当前文件中突出显示该符号的所有实例。 按 Ctrl+Shift+向上键或 Ctrl+Shift+向下键可以在突出显示的引用之间移动。 可在“文本编辑器” > “C/C++” > “高级”下的“选项”对话框中关闭此功能。
 
-### <a name="application-lifecycle-management-tools"></a>应用程序生命周期管理 工具
+### <a name="application-lifecycle-management-tools"></a>Application Lifecycle Management 工具
 
 #### <a name="static-code-analysis"></a>静态代码分析
 

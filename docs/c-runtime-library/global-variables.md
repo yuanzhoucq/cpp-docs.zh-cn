@@ -8,18 +8,18 @@ helpviewer_keywords:
 - variables, global
 - global variables, Microsoft run-time library
 ms.assetid: 01d1551c-2f0c-4f72-935c-6442caccf84f
-ms.openlocfilehash: b66d77285cb601b30a89a313fa21b815f42775b3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dfa78bd2c7aae7cc6059443066cbef58512755ce
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50522533"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57744367"
 ---
 # <a name="global-variables"></a>全局变量
 
 Microsoft C 运行时库提供了以下全局变量或宏。 已弃用几个全局变量或宏，以便使用我们建议的更安全的函数版本，而非全局变量。
 
-|变量|描述|
+|变量|说明|
 |--------------|-----------------|
 |[__argc、\__argv、\__wargv](../c-runtime-library/argc-argv-wargv.md)|包含命令行自变量。|
 |[_daylight、_dstbias、_timezone，和 _tzname](../c-runtime-library/daylight-dstbias-timezone-and-tzname.md)|已否决。 请改为使用 `_get_daylight`、`_get_dstbias`、`_get_timezone` 和 `_get_tzname`。<br /><br /> 调整本地时间；用于一些日期和时间函数。|
