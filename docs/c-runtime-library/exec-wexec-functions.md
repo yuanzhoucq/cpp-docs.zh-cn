@@ -53,12 +53,12 @@ helpviewer_keywords:
 - _exec function
 - _texecvpe function
 ms.assetid: a261df93-206a-4fdc-b8ac-66aa7db83bc6
-ms.openlocfilehash: 4974571764c22b26e84e93c68d679afc8a1cea73
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 72300f754015e54daf14863ca2ae677bde8f7d1a
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50573363"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746196"
 ---
 # <a name="exec-wexec-functions"></a>_exec、_wexec 函数
 
@@ -73,7 +73,7 @@ ms.locfileid: "50573363"
 
 函数名称末尾的字母可确定该变量。
 
-|_exec 函数后缀|描述|
+|_exec 函数后缀|说明|
 |----------------------------|-----------------|
 |`e`|将指向环境设置的指针数组 `envp` 传递给新进程。|
 |`l`|将命令行参数单独传递给 `_exec` 函数。 通常在提前知道新进程的参数数量时使用。|

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - SEEK_END constant
 - SEEK_CUR constant
 ms.assetid: 9deeb13e-5aa3-4c33-80d8-721c80a4de9d
-ms.openlocfilehash: a97495aaa5ab0a79ed71a48a12162bd14fc60131
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.openlocfilehash: 2e6cb2e0d781212f3b5e7758554507dfa438a716
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220447"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743371"
 ---
 # <a name="fseek-lseek-constants"></a>fseek、_lseek 常量
 

@@ -22,12 +22,12 @@ helpviewer_keywords:
 - M_SQRT2 constant
 - M_LN2 constant
 ms.assetid: db533c3f-6ae8-4520-9d35-c8fabbef3529
-ms.openlocfilehash: dae30ca5e44d00f5480431d5de2ea856047e0590
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bd17004585e0238f36b939b19379ef62e349fac9
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50531952"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57744162"
 ---
 # <a name="math-constants"></a>Math 常量
 
@@ -45,7 +45,7 @@ ms.locfileid: "50531952"
 
 下列符号定义了其所指示的表达式的值：
 
-|符号|表达式|“值”|
+|符号|表达式|值|
 |------------|----------------|-----------|
 |M_E|E|2.71828182845904523536|
 |M_LOG2E|log2(e)|1.44269504088896340736|

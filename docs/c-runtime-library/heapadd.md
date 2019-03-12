@@ -21,12 +21,12 @@ helpviewer_keywords:
 - heaps, adding memory
 - heapadd function
 ms.assetid: 4d691fe2-2763-49f4-afb1-62738b7cd3ff
-ms.openlocfilehash: ea124e5f4e8a412e7347211b4968b24429270736
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8cfd2a5a112a7a5b578f7b6dfcdcc3998596bc86
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496572"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57738507"
 ---
 # <a name="heapadd"></a>_heapadd
 

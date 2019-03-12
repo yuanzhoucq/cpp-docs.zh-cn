@@ -2,12 +2,12 @@
 title: 在 Visual Studio 中新建 C++ Linux 项目
 ms.date: 09/12/2018
 ms.assetid: 5d7c1d67-bc31-4f96-8622-2b4cf91372fd
-ms.openlocfilehash: 394fc5727035dd5a65b67ebf26a925fd3484582e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bd5ab1d2bc1077f366082bf8767f8f690173ac8b
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50623023"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57745161"
 ---
 # <a name="create-a-new-linux-project"></a>新建 Linux 项目
 
@@ -22,10 +22,9 @@ ms.locfileid: "50623023"
 
    ![新建 Linux 项目](media/newproject.png)
 
-   | 项目类型 | 描述
+   | 项目类型 | 说明
    | ------------ | ---
    | **Blink (Raspberry)**           | 项目针对 Raspberry Pi 设备，写入示例代码以让 LED 闪烁
    | **控制台应用程序 (Linux)** | 项目针对任何 Linux 计算机，写入示例代码以将文本输出到控制台
    | **空项目 (Linux)**       | 项目针对任何 Linux 计算机，未写入任何示例代码
    | **生成文件项目 (Linux)**    | 项目针对任何 Linux 计算机，使用标准生成文件的生成系统生成
-

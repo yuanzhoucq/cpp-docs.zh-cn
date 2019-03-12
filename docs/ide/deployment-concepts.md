@@ -8,12 +8,12 @@ helpviewer_keywords:
 - deploying applications [C++], about deploying applications
 - libraries [C++], application deployment issues
 ms.assetid: ebd7f246-ab54-40e8-87fa-dac02c0047b3
-ms.openlocfilehash: ec2fd28aff6e7021ca978ccd0e3af86a6dbd36c6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0111063b3bd280781bcd2aabd51621e1e9ef3ecd
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462681"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57738628"
 ---
 # <a name="deployment-concepts"></a>部署概念
 
@@ -51,4 +51,3 @@ Visual C++ 库打包为 DLL，所有用于 C/C++ 应用程序的必要库都由 
 
 - [部署桌面应用程序](../ide/deploying-native-desktop-applications-visual-cpp.md)
 - [了解 Visual C++ 应用程序的依赖项](../ide/understanding-the-dependencies-of-a-visual-cpp-application.md)
-

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - applications [C++], projects
 - Visual C++ projects, types
 ms.assetid: 7337987e-1e7b-4120-9a4b-94f0401f15e7
-ms.openlocfilehash: 456fdb5ec2025b3085332eced3a0c7f33e117918
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7a81d73100ef52b61f834f7bffe4467bd296c079
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658011"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57744554"
 ---
 # <a name="visual-c-project-types"></a>Visual C++ 项目类型
 
@@ -32,7 +32,7 @@ Visual Studio 中包含的项目模板取决于安装的产品版本和工作负
 
 ### <a name="windows-desktop"></a>Windows 桌面
 
-|项目模板|描述|
+|项目模板|说明|
 |----------------------|-----------------------------|
 |[Windows 控制台应用程序](../windows/creating-a-console-application.md)|用于创建 Windows 控制台应用程序的项目。|
 |[Windows 桌面应用程序](../windows/walkthrough-creating-windows-desktop-applications-cpp.md)|用于创建 Windows 桌面 (Win32) 应用程序的项目。|
@@ -42,7 +42,7 @@ Visual Studio 中包含的项目模板取决于安装的产品版本和工作负
 
 ### <a name="general"></a>常规
 
-|项目模板|描述|
+|项目模板|说明|
 |----------------------|-----------------------------|
 |空项目|用于创建应用程序、库和 DLL 的空项目。 必须添加任何必需的代码或资源。|
 |[生成文件项目](../ide/creating-a-makefile-project.md)|用于使用外部生成系统的项目。|
@@ -50,13 +50,13 @@ Visual Studio 中包含的项目模板取决于安装的产品版本和工作负
 
 ### <a name="atl"></a>ATL
 
-|项目模板|描述|
+|项目模板|说明|
 |----------------------|-----------------------------|
 |[ATL 项目](../atl/reference/creating-an-atl-project.md)|使用活动模板库的项目。|
 
 ### <a name="test"></a>测试
 
-|项目模板|描述|
+|项目模板|说明|
 |----------------------|-----------------------------|
 |[本机单元测试项目](/visualstudio/test/writing-unit-tests-for-c-cpp-with-the-microsoft-unit-testing-framework-for-cpp)|其中包含本机 C++ 单元测试的项目。|
 
@@ -64,7 +64,7 @@ Visual Studio 中包含的项目模板取决于安装的产品版本和工作负
 
 如果将 MFC 和 ATL 支持组件添加到 Visual Studio 安装，则这些项目模板将添加到 Visual Studio。
 
-|项目模板|描述|
+|项目模板|说明|
 |----------------------|-----------------------------|
 |[MFC 应用程序](../mfc/reference/creating-an-mfc-application.md)|用于创建使用 Microsoft 基础类 (MFC) 库的应用程序的项目。|
 |[MFC ActiveX 控件](../mfc/reference/creating-an-mfc-activex-control.md)|用于创建使用 MFC 库的 ActiveX 控件的项目。|
@@ -76,7 +76,7 @@ Visual Studio 中包含的项目模板取决于安装的产品版本和工作负
 
 有关 C++ 中 Windows 通用应用的概述，请参阅[通用 Windows 应用 (C++)](../windows/universal-windows-apps-cpp.md)。
 
-|项目模板|描述|
+|项目模板|说明|
 |----------------------|-----------------------------|
 |空白应用程序|用于没有预定义控件或布局的单页通用 Windows 平台 (UWP) 应用的项目。|
 |DirectX 11 应用|用于使用 DirectX 11 的通用 Windows 平台应用的项目。|

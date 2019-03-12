@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - file types [C++], MFC source and header
 ms.assetid: f61419a8-bf69-4bbb-8f7c-1734be5e6db6
-ms.openlocfilehash: c60c00772005efc0402cdeba9d710548c6412b15
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c49a17802e0c7c43cae58153a6df6c4f70f69980
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50639148"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743853"
 ---
 # <a name="mfc-program-or-control-source-and-header-files"></a>MFC 程序或控件的源文件和头文件
 
@@ -17,7 +17,7 @@ ms.locfileid: "50639148"
 
 所有这些文件都位于 Projname 目录中，并位于解决方案资源管理器中的头文件（.h 文件）文件夹或源文件（.cpp 文件）文件夹中。
 
-|文件名|描述|
+|文件名|说明|
 |---------------|-----------------|
 |projname.h|程序或 DLL 的主包含文件。 它包含其他头文件的所有全局符号和 `#include` 指令。 它从 `CWinApp` 派生 `CPrjnameApp` 类并声明 `InitInstance` 成员函数。 对于控件，`CPrjnameApp` 类派生自 `COleControlModule`。|
 |Projname.cpp|主程序源文件。 它创建一个派生自 `CWinApp` 的 `CPrjnameApp` 类的对象，并替代 `InitInstance` 成员函数。<br /><br /> 对于可执行文件，可使用 `CPrjnameApp::InitInstance` 执行多项操作。 可注册作为文档和视图之间的连接的文档模板；创建主框架窗口；创建一个空文档（如果已将一个文档指定为应用程序的命令行参数，则打开一个文档）。<br /><br /> 对于 DLL 和 ActiveX（以前称为 OLE）控件，`CProjNameApp::InitInstance` 通过调用 `COleObjectFactory::RegisterAll` 向 OLE 注册控件的对象工厂，并调用 `AfxOLEInit`。 此外，成员函数 `CProjNameApp::ExitInstance` 还可用于通过调用 AfxOleTerm 从内存卸载控件。<br /><br /> 该文件还通过实现 `DllRegisterServer` 和 `DllUnregisterServer` 函数在 Windows 注册数据库中注册和取消注册该控件。|

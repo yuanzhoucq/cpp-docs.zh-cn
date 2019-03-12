@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - ___lc_codepage_func
 ms.assetid: 6a663bd0-5a63-4a2f-9507-872ec1582aae
-ms.openlocfilehash: 3a6bcb9688116fc72b4c33b13fff73db3dff6c15
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aebd978839cc59c94c01e9c24432b69add72c4dc
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50573249"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751322"
 ---
 # <a name="lccodepagefunc"></a>___lc_codepage_func
 

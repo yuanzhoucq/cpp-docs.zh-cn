@@ -20,12 +20,12 @@ helpviewer_keywords:
 - P_WAIT constant
 - _P_WAIT constant
 ms.assetid: e0533e88-d362-46fc-b53c-5f193226d879
-ms.openlocfilehash: 1bfb13309ae4bd667a5e128300740f4c903f08be
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 988cc5e1b982f0c5577db77ae94f1df46c95ec0e
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50580942"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742753"
 ---
 # <a name="spawn-constants"></a>spawn 常量
 
