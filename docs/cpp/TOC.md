@@ -9,7 +9,7 @@
 ### [智能指针（现代 C++）](smart-pointers-modern-cpp.md)
 #### [如何：创建和使用 unique_ptr 实例](how-to-create-and-use-unique-ptr-instances.md)
 #### [如何：创建和使用 shared_ptr 实例](how-to-create-and-use-shared-ptr-instances.md)
-#### [如何：创建和使用共享 weak_ptr 实例](how-to-create-and-use-weak-ptr-instances.md)
+#### [如何：创建和使用 weak_ptr 实例](how-to-create-and-use-weak-ptr-instances.md)
 #### [如何：创建和使用 CComPtr 和 CComQIPtr 实例](how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md)
 ### [用于编译时封装的 Pimpl（现代 C++）](pimpl-for-compile-time-encapsulation-modern-cpp.md)
 ### [容器（现代 C++）](containers-modern-cpp.md)
@@ -416,4 +416,3 @@
 ## [Microsoft 扩展](microsoft-extensions.md)
 ## [非标准行为](nonstandard-behavior.md)
 ### [编译器限制](compiler-limits.md)
-
