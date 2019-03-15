@@ -6,12 +6,12 @@ helpviewer_keywords:
 - libraries [C++], DLLs
 - DLLs [C++], walkthroughs
 ms.assetid: 3ae94848-44e7-4955-bbad-7d40f493e941
-ms.openlocfilehash: fb77230d5cc27c1fba1f7df1404150fada36d43a
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: c1f59c704e96ade82295f4ae88265f549987e981
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57416444"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813963"
 ---
 # <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>演练：创建和使用你自己动态链接库 （c + +）
 
@@ -29,11 +29,11 @@ ms.locfileid: "57416444"
 
 - 运行已完成的应用程序。
 
-像静态链接的库，DLL_导出_变量、 函数和资源的名称和你的应用_导入_这些名称，若要使用这些变量、 函数和资源。 与静态链接的库，Windows 将应用程序中的导入连接到在加载时或在运行时，而不是将它们连接在链接时在 DLL 中导出。 Windows 要求不是要建立这些连接的标准 c + + 编译模型的一部分的附加信息。 Visual c + + 编译器实现对 c + + 提供此额外信息的一些 Microsoft 专用扩展。 我们看一下，我们将介绍这些扩展。
+像静态链接的库，DLL_导出_变量、 函数和资源的名称和你的应用_导入_这些名称，若要使用这些变量、 函数和资源。 与静态链接的库，Windows 将应用程序中的导入连接到在加载时或在运行时，而不是将它们连接在链接时在 DLL 中导出。 Windows 要求不是要建立这些连接的标准 c + + 编译模型的一部分的附加信息。 MSVC 编译器实现对 c + + 提供此额外信息的一些 Microsoft 专用扩展。 我们看一下，我们将介绍这些扩展。
 
 本演练将创建两个 Visual Studio 解决方案;一个生成 DLL，另一个生成客户端应用程序。 DLL 使用 C 调用约定，因此可以使用生成的其他语言，只要平台和调用和链接约定匹配的应用中调用它。 客户端应用程序使用_隐式链接_、 Windows 位置链接到 DLL 在加载时的应用程序。 此链接，就像函数一样 DLL 提供的函数调用静态链接库中的应用。
 
-本演练中并未涵盖一些常见的情况。 它不会显示 c + + Dll 供其他编程语言。 它不会显示如何创建纯资源 DLL。 它也不会显示显式链接在运行时，而不是在加载时加载的 Dll 的使用。 请放心，你可以使用 Visual c + + 来执行所有这些操作。 有关 Dll 的详细信息的链接，请参阅[Visual c + + 中的 Dll](../build/dlls-in-visual-cpp.md)。 有关隐式链接和显式链接的详细信息，请参阅[确定要使用的链接方法](../build/linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)。 有关用于使用 C 语言链接约定的编程语言创建 c + + Dll 的信息，请参阅[导出 c + + 函数以用于 C 语言可执行文件](../build/exporting-cpp-functions-for-use-in-c-language-executables.md)。 有关如何创建.NET 语言配合使用的 Dll 的信息，请参阅[从 Visual Basic 应用程序调用 DLL 函数](../build/calling-dll-functions-from-visual-basic-applications.md)。
+本演练中并未涵盖一些常见的情况。 它不会显示 c + + Dll 供其他编程语言。 它不会显示如何创建纯资源 DLL。 它也不会显示显式链接在运行时，而不是在加载时加载的 Dll 的使用。 请放心，你可以使用 Visual c + + 来执行所有这些操作。 有关 Dll 的详细信息的链接，请参阅[Visual c + + 中的 Dll](dlls-in-visual-cpp.md)。 有关隐式链接和显式链接的详细信息，请参阅[确定要使用的链接方法](linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)。 有关用于使用 C 语言链接约定的编程语言创建 c + + Dll 的信息，请参阅[导出 c + + 函数以用于 C 语言可执行文件](exporting-cpp-functions-for-use-in-c-language-executables.md)。 有关如何创建.NET 语言配合使用的 Dll 的信息，请参阅[从 Visual Basic 应用程序调用 DLL 函数](calling-dll-functions-from-visual-basic-applications.md)。
 
 本演练使用 Visual Studio 2017，但代码和说明的大部分也适用于早期版本。 若要生成新项目的步骤更改在 Visual Studio 2017 版本 15.3 中启动。 本演练介绍如何创建项目类型提供的更高版本和较早版本。 查找与你的 Visual Studio 版本匹配的步骤。
 
@@ -400,7 +400,4 @@ int main()
 
 ## <a name="see-also"></a>请参阅
 
-[Visual C++ 中的 DLL](../build/dlls-in-visual-cpp.md)<br/>
-[部署桌面应用程序](../ide/deploying-native-desktop-applications-visual-cpp.md)<br/>
-[演练：部署程序 (C++)](../ide/walkthrough-deploying-your-program-cpp.md)<br/>
-[从 Visual Basic 应用程序调用 DLL 函数](../build/calling-dll-functions-from-visual-basic-applications.md)
+[从 Visual Basic 应用程序调用 DLL 函数](calling-dll-functions-from-visual-basic-applications.md)

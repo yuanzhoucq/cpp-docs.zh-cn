@@ -11,12 +11,12 @@ helpviewer_keywords:
 - .pch files, use existing
 - precompiled header files, use existing
 ms.assetid: 24f1bd0e-b624-4296-a17e-d4b53e374e1f
-ms.openlocfilehash: 49cc7a67a8b25e515d352d481b6ede8d521e51e1
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: c0dcb045450d6e6eca31b8c76a92726e62400656
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424114"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810112"
 ---
 # <a name="yu-use-precompiled-header-file"></a>/Yu（使用预编译标头文件）
 
@@ -45,7 +45,7 @@ ms.locfileid: "57424114"
 
 在命令行中，不允许有空格之间 **/Yu**和`filename`。
 
-当指定 **/Yu**选项而无需文件名称，在源应用程序必须包含[#pragma hdrstop](../../preprocessor/hdrstop.md)指定预编译标头，.pch 文件的文件名的杂注。 在这种情况下，编译器将使用预编译标头 （.pch 文件） 由名为[/Fp （名称。Pch 文件）](../../build/reference/fp-name-dot-pch-file.md)。 编译器将跳过该杂注的位置，从指定的杂注，预编译标头文件还原的已编译的状态并进行编译杂注后面的代码。 如果 **#pragma hdrstop**未指定文件名，编译器将查找具有派生自的基名称的扩展名为.pch 的源文件的名称的文件。 此外可以使用 **/Fp**选项可以指定不同的.pch 文件。
+当指定 **/Yu**选项而无需文件名称，在源应用程序必须包含[#pragma hdrstop](../../preprocessor/hdrstop.md)指定预编译标头，.pch 文件的文件名的杂注。 在这种情况下，编译器将使用预编译标头 （.pch 文件） 由名为[/Fp （名称。Pch 文件）](fp-name-dot-pch-file.md)。 编译器将跳过该杂注的位置，从指定的杂注，预编译标头文件还原的已编译的状态并进行编译杂注后面的代码。 如果 **#pragma hdrstop**未指定文件名，编译器将查找具有派生自的基名称的扩展名为.pch 的源文件的名称的文件。 此外可以使用 **/Fp**选项可以指定不同的.pch 文件。
 
 如果指定 **/Yu**选项不包含文件名称，并不能指定**hdrstop**杂注，生成一个错误消息和编译不成功。
 
@@ -55,15 +55,15 @@ ms.locfileid: "57424114"
 
 预编译标头的详细信息，请参阅：
 
-- [/Y（预编译标头）](../../build/reference/y-precompiled-headers.md)
+- [/Y（预编译标头）](y-precompiled-headers.md)
 
-- [创建预编译标头文件](../../build/reference/creating-precompiled-header-files.md)
+- [预编译的头文件](../creating-precompiled-header-files.md)
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
-1. 指定[/Yc （创建预编译标头文件）](../../build/reference/yc-create-precompiled-header-file.md)在项目中的.cpp 文件。
+1. 指定[/Yc （创建预编译标头文件）](yc-create-precompiled-header-file.md)在项目中的.cpp 文件。
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[Visual Studio 中的设置 c + + 编译器和生成属性](../working-with-project-properties.md)。
 
 1. 单击 **“C/C++”** 文件夹。
 
@@ -88,7 +88,7 @@ ms.locfileid: "57424114"
 
 使用命令行编译`CL /YuMYAPP.H PROG.CPP`，编译器不会处理这三个保存在预处理所有这三个文件 （以及它们可能包含任何文件） 中所花费的时间从而 include 语句，但 myapp.pch，使用预编译代码。
 
-可以使用[/Fp （名称。Pch 文件）](../../build/reference/fp-name-dot-pch-file.md)选项与 **/Yu**选项以指定.pch 文件的名称，如果名称不同于对任一文件名称参数 **/Yc**或源文件，如下所示的基名称以下：
+可以使用[/Fp （名称。Pch 文件）](fp-name-dot-pch-file.md)选项与 **/Yu**选项以指定.pch 文件的名称，如果名称不同于对任一文件名称参数 **/Yc**或源文件，如下所示的基名称以下：
 
 ```
 CL /YuMYAPP.H /FpMYPCH.pch PROG.CPP
@@ -98,5 +98,5 @@ CL /YuMYAPP.H /FpMYPCH.pch PROG.CPP
 
 ## <a name="see-also"></a>请参阅
 
-[编译器选项](../../build/reference/compiler-options.md)<br/>
-[设置编译器选项](../../build/reference/setting-compiler-options.md)
+[MSVC 编译器选项](compiler-options.md)<br/>
+[MSVC 编译器命令行语法](compiler-command-line-syntax.md)

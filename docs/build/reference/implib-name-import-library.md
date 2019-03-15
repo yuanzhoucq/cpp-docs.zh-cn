@@ -10,12 +10,12 @@ helpviewer_keywords:
 - -IMPLIB linker option
 - import libraries, overriding default name
 ms.assetid: fe8f71ab-7055-41b5-8ef8-2b97cfa4a432
-ms.openlocfilehash: 8d3793b11e7bd0430c94d89f9d40ec3627c4eb20
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: dc9a9220d55f7831a00f70ec155cc5b57a695818
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413350"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57821308"
 ---
 # <a name="implib-name-import-library"></a>/IMPLIB（命名导入库）
 
@@ -32,15 +32,15 @@ ms.locfileid: "57413350"
 
 - [__Declspec （dllexport)](../../cpp/dllexport-dllimport.md)的源代码中的关键字
 
-- [导出](../../build/reference/exports.md).def 文件语句
+- [导出](exports.md).def 文件语句
 
-- [/Export](../../build/reference/export-exports-a-function.md) LINK 命令中的规范
+- [/Export](export-exports-a-function.md) LINK 命令中的规范
 
-未创建导入库时，链接将忽略 /IMPLIB。 如果未指定导出，链接将不创建导入库。 如果在生成中使用导出文件时，链接将假定导入库已存在且不会创建一个。 导入库和导出文件的信息，请参阅[LIB 引用](../../build/reference/lib-reference.md)。
+未创建导入库时，链接将忽略 /IMPLIB。 如果未指定导出，链接将不创建导入库。 如果在生成中使用导出文件时，链接将假定导入库已存在且不会创建一个。 导入库和导出文件的信息，请参阅[LIB 引用](lib-reference.md)。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此链接器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置 Visual c + + 项目属性](../../ide/working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[Visual Studio 中的设置 c + + 编译器和生成属性](../working-with-project-properties.md)。
 
 1. 单击**链接器**文件夹。
 
@@ -54,5 +54,5 @@ ms.locfileid: "57413350"
 
 ## <a name="see-also"></a>请参阅
 
-[设置链接器选项](../../build/reference/setting-linker-options.md)<br/>
-[链接器选项](../../build/reference/linker-options.md)
+[MSVC 链接器引用](linking.md)<br/>
+[MSVC 链接器选项](linker-options.md)
