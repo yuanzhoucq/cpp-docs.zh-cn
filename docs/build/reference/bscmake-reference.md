@@ -10,12 +10,12 @@ helpviewer_keywords:
 - bsc files, building
 - BSCMAKE
 ms.assetid: b97ad994-1355-4809-98db-6abc12c6fb13
-ms.openlocfilehash: 1dd89047b8fa6a415e7e19dd69ca3f499887299f
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 4303e48e3d02f0f69b177e8a888157a6f90aaa89
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57416243"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822348"
 ---
 # <a name="bscmake-reference"></a>BSCMAKE 参考
 
@@ -33,18 +33,18 @@ Microsoft 浏览信息维护实用工具 (BSCMAKE.EXE) 从编译期间创建的 
 
 本节包括下列主题：
 
-- [生成浏览信息文件：概述](../../build/reference/building-browse-information-files-overview.md)
+- [生成浏览信息文件：概述](building-browse-information-files-overview.md)
 
-- [生成.bsc 文件](../../build/reference/building-a-dot-bsc-file.md)
+- [生成.bsc 文件](building-a-dot-bsc-file.md)
 
-- [BSCMAKE 命令行](../../build/reference/bscmake-command-line.md)
+- [BSCMAKE 命令行](bscmake-command-line.md)
 
-- [BSCMAKE 命令文件](../../build/reference/bscmake-command-file-response-file.md)
+- [BSCMAKE 命令文件](bscmake-command-file-response-file.md)
 
-- [BSCMAKE 选项](../../build/reference/bscmake-options.md)
+- [BSCMAKE 选项](bscmake-options.md)
 
-- [BSCMAKE 退出代码](../../build/reference/bscmake-exit-codes.md)
+- [BSCMAKE 退出代码](bscmake-exit-codes.md)
 
 ## <a name="see-also"></a>请参阅
 
-[C/C++ 生成工具](../../build/reference/c-cpp-build-tools.md)
+[其他 MSVC 生成工具](c-cpp-build-tools.md)

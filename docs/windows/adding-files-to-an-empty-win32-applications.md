@@ -7,12 +7,12 @@ helpviewer_keywords:
 - blank projects
 - files [C++], adding to projects
 ms.assetid: 070098e8-0396-49fe-a697-3daa2f1be6de
-ms.openlocfilehash: d5347a0693619e5db44b1087fc249c68b9227fb2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8facd371ad2dddbb8ce239af5ca536b21a606807
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568645"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818201"
 ---
 # <a name="adding-files-to-an-empty-win32-applications"></a>向空的 Win32 应用程序添加文件
 
@@ -29,7 +29,7 @@ ms.locfileid: "50568645"
 若要添加为既不源、 标头或到你的项目资源文件的文件，请右键单击**解决方案**中的节点**解决方案资源管理器**和相同的方式将文件添加到项目。 一个**杂项**将创建文件夹来保存你的项目中的其他文件。
 
 > [!NOTE]
-> 在生成项目之前，需要指定这些文件的生成选项，以便将文件正确地添加到已完成的应用程序中。 有关详细信息，请参阅 [通过属性页指定项目设置](../ide/property-pages-visual-cpp.md) 和 [生成 C/C++ 程序](../build/building-c-cpp-programs.md)。
+> 在生成项目之前，需要指定这些文件的生成选项，以便将文件正确地添加到已完成的应用程序中。 有关详细信息，请参阅 [通过属性页指定项目设置](../build/reference/property-pages-visual-cpp.md) 和 [生成 C/C++ 程序](../build/building-c-cpp-programs.md)。
 
 ## <a name="see-also"></a>请参阅
 

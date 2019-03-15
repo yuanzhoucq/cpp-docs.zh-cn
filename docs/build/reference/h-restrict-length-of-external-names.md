@@ -10,12 +10,12 @@ helpviewer_keywords:
 - external names
 - -H compiler option [C++]
 ms.assetid: de701dd3-ed04-4c88-8195-960d2520ec2e
-ms.openlocfilehash: bb7821587d6c0bbe06eb6baa02227955582eb76d
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: bdd3da8d3a5165262c00bc3475122e31f5770726
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420409"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57811259"
 ---
 # <a name="h-restrict-length-of-external-names"></a>/H（限制外部名称长度）
 
@@ -68,13 +68,13 @@ void func2(void) {}
 
 您还必须是使用时应谨慎 **/H**由于预定义的编译器的标识符选项。 如果最大标识符长度太小，某些预定义的标识符将无法解析，以及某些库函数调用。 例如，如果`printf`使用函数和选项 **/H5**指定在编译时，该符号 **_prin**将创建以引用`printf`，这将不会找到和在库中。
 
-利用 **/H**与不兼容[/GL （全程序优化）](../../build/reference/gl-whole-program-optimization.md)。
+利用 **/H**与不兼容[/GL （全程序优化）](gl-whole-program-optimization.md)。
 
-**/H**自 Visual Studio 2005 选项已弃用; 已增加最大长度限制以及 **/H**不再需要。 有关不推荐使用的编译器选项的列表，请参阅**已弃用并删除的编译器选项**中[按类别列出的编译器选项](../../build/reference/compiler-options-listed-by-category.md)。
+**/H**自 Visual Studio 2005 选项已弃用; 已增加最大长度限制以及 **/H**不再需要。 有关不推荐使用的编译器选项的列表，请参阅**已弃用并删除的编译器选项**中[按类别列出的编译器选项](compiler-options-listed-by-category.md)。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[Visual Studio 中的设置 c + + 编译器和生成属性](../working-with-project-properties.md)。
 
 1. 选择**配置属性** > **C/c + +** > **命令行**属性页。
 
@@ -86,5 +86,5 @@ void func2(void) {}
 
 ## <a name="see-also"></a>请参阅
 
-[编译器选项](../../build/reference/compiler-options.md)<br/>
-[设置编译器选项](../../build/reference/setting-compiler-options.md)
+[MSVC 编译器选项](compiler-options.md)<br/>
+[MSVC 编译器命令行语法](compiler-command-line-syntax.md)

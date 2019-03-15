@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - side-by-side applications [C++]
 ms.assetid: 7fa20b16-3737-4f76-a0b5-1dacea19a1e8
-ms.openlocfilehash: 6875c4178a405f887166b0606af329614d27907f
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 037fde58366ea4548ce3c7ff56c38cfc1a58aa17
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413870"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815185"
 ---
 # <a name="building-cc-side-by-side-assemblies"></a>生成 C/C++ 并行程序集
 
@@ -31,6 +31,5 @@ Visual c + + 应用程序可能使用的应用程序的不同部分中的一个�
 
 ## <a name="see-also"></a>请参阅
 
-[部署示例](../ide/deployment-examples.md)<br/>
-[生成 C/C++ 独立应用程序](../build/building-c-cpp-isolated-applications.md)<br/>
-[生成 C/C++ 独立应用程序和并行程序集](../build/building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)
+[生成 C/C++ 独立应用程序](building-c-cpp-isolated-applications.md)<br/>
+[生成 C/C++ 独立应用程序和并行程序集](building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)

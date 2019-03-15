@@ -7,12 +7,12 @@ helpviewer_keywords:
 - -Zc:externConstexpr compiler option (C++)
 - extern constexpr variables (C++)
 ms.assetid: 4da5e33a-2e4d-4ed2-8616-bd8f43265c27
-ms.openlocfilehash: b0af9fa0cc61b82853e64808897b30aaf2fa887d
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 3c18a5310646ea39c0599f709e9fddc3990b7a2b
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57415157"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813053"
 ---
 # <a name="zcexternconstexpr-enable-extern-constexpr-variables"></a>/Zc: externconstexpr （启用 extern constexpr 变量）
 
@@ -30,7 +30,7 @@ ms.locfileid: "57415157"
 
 ### <a name="to-set-this-compiler-option-in-visual-studio"></a>在 Visual Studio 中设置此编译器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[Visual Studio 中的设置 c + + 编译器和生成属性](../working-with-project-properties.md)。
 
 1. 选择**配置属性** > **C/c + +** > **命令行**属性页。
 
@@ -38,5 +38,5 @@ ms.locfileid: "57415157"
 
 ## <a name="see-also"></a>请参阅
 
-[/Zc（一致性）](../../build/reference/zc-conformance.md)<br/>
+[/Zc（一致性）](zc-conformance.md)<br/>
 [auto 关键字](../../cpp/auto-keyword.md)

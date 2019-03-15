@@ -15,12 +15,12 @@ helpviewer_keywords:
 - extension DLLs [C++]
 - extension DLLs [C++], about MFC extension DLLs
 ms.assetid: f69ac3d4-e474-4b1c-87a1-6738843a135c
-ms.openlocfilehash: 28954ff1c77b7dcc530392fce095ed9df5c29cbf
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: eca33b60b8fa6ba812bf5fa68520f51ceb1d164b
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414559"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820437"
 ---
 # <a name="mfc-extension-dlls"></a>MFC 扩展 Dll
 
@@ -116,7 +116,7 @@ MFCxx.dll 是通常的最后一个的资源和类列表。 MFCxx.dll 包括所�
 
 ### <a name="what-do-you-want-to-do"></a>你希望做什么？
 
-- [初始化 MFC 扩展 DLL](../build/run-time-library-behavior.md#initializing-extension-dlls)
+- [初始化 MFC 扩展 DLL](run-time-library-behavior.md#initializing-extension-dlls)
 
 ### <a name="what-do-you-want-to-know-more-about"></a>你想进一步了解什么？
 
@@ -124,12 +124,12 @@ MFCxx.dll 是通常的最后一个的资源和类列表。 MFCxx.dll 包括所�
 
 - [MFC 的 DLL 版本](../mfc/tn033-dll-version-of-mfc.md)
 
-- [静态链接到 MFC 的规则 MFC Dll](../build/regular-dlls-statically-linked-to-mfc.md)
+- [静态链接到 MFC 的规则 MFC Dll](regular-dlls-statically-linked-to-mfc.md)
 
-- [动态链接到 MFC 的规则 MFC Dll](../build/regular-dlls-dynamically-linked-to-mfc.md)
+- [动态链接到 MFC 的规则 MFC Dll](regular-dlls-dynamically-linked-to-mfc.md)
 
-- [在规则 MFC DLL 中使用数据库、OLE 和套接字 MFC 扩展 DLL](../build/using-database-ole-and-sockets-extension-dlls-in-regular-dlls.md)
+- [在规则 MFC DLL 中使用数据库、OLE 和套接字 MFC 扩展 DLL](using-database-ole-and-sockets-extension-dlls-in-regular-dlls.md)
 
 ## <a name="see-also"></a>请参阅
 
-[Visual C++ 中的 DLL](../build/dlls-in-visual-cpp.md)
+[Visual C++ 中的 DLL](dlls-in-visual-cpp.md)

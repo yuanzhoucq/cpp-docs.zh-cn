@@ -9,12 +9,12 @@ helpviewer_keywords:
 - linker [C++], assembly signing
 - strong-named assemblies [C++]
 ms.assetid: c337cd3f-e5dd-4c6f-a1ad-437e85dba1cc
-ms.openlocfilehash: 762c95c3ecc60995e8d0e6f9e4f7bc95d179c26f
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: ac46d069ece3c75af93f93497169d054b45267d0
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57747496"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813924"
 ---
 # <a name="strong-name-assemblies-assembly-signing-ccli"></a>强名称程序集（程序集签名）(C++/CLI)
 
@@ -34,7 +34,7 @@ ms.locfileid: "57747496"
 
 如果你在命令行生成、 链接器选项用于对程序集签名，然后运行后续处理工具 （如 mt.exe)，您需要使用 sn.exe 程序集重新签名。 或者，可以生成和延迟签名程序集并后运行后续处理的工具，需要完成的签名。
 
-如果在开发环境中生成时使用的签名特性，可以通过显式调用 sn.exe 成功登录该程序集 ([Sn.exe （强名称工具）](/dotnet/framework/tools/sn-exe-strong-name-tool)) 后期生成事件中。 有关详细信息，请参阅[指定生成事件](../ide/specifying-build-events.md)。 如果使用属性和生成后事件，与使用链接器选项相比，生成时间可能会更少。
+如果在开发环境中生成时使用的签名特性，可以通过显式调用 sn.exe 成功登录该程序集 ([Sn.exe （强名称工具）](/dotnet/framework/tools/sn-exe-strong-name-tool)) 后期生成事件中。 有关详细信息，请参阅[指定生成事件](../build/specifying-build-events.md)。 如果使用属性和生成后事件，与使用链接器选项相比，生成时间可能会更少。
 
 以下链接器选项支持程序集签名：
 

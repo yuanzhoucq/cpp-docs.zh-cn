@@ -12,12 +12,12 @@ helpviewer_keywords:
 - symbols, add to symbol table
 - -INCLUDE linker option
 ms.assetid: 4a039677-360a-480f-bd0b-448e239b449c
-ms.openlocfilehash: 389bd16829c2466b02cb879c8bc8d43c9efa6fb4
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 1f7a443e32ed20550e3017c7e6ce70f4adf5137d
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57421215"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810973"
 ---
 # <a name="include-force-symbol-references"></a>/INCLUDE（强制符号引用）
 
@@ -38,11 +38,11 @@ ms.locfileid: "57421215"
 
 链接器解析`symbol`通过添加包含该程序的符号定义的对象。 此功能可用于包括库对象，否则将不会链接到该程序。
 
-使用此选项指定一个符号，将覆盖由该符号的移除[/opt: ref](../../build/reference/opt-optimizations.md)。
+使用此选项指定一个符号，将覆盖由该符号的移除[/opt: ref](opt-optimizations.md)。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此链接器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置 Visual c + + 项目属性](../../ide/working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[Visual Studio 中的设置 c + + 编译器和生成属性](../working-with-project-properties.md)。
 
 1. 单击**链接器**文件夹。
 
@@ -56,5 +56,5 @@ ms.locfileid: "57421215"
 
 ## <a name="see-also"></a>请参阅
 
-[设置链接器选项](../../build/reference/setting-linker-options.md)<br/>
-[链接器选项](../../build/reference/linker-options.md)
+[MSVC 链接器引用](linking.md)<br/>
+[MSVC 链接器选项](linker-options.md)

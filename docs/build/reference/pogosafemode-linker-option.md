@@ -3,12 +3,12 @@ title: / POGOSAFEMODE (在线程安全模式下运行 PGO)
 ms.date: 03/14/2018
 f1_keywords:
 - POGOSAFEMODE
-ms.openlocfilehash: f210884d693ef0d778943580b9c5a7b2ec2ea336
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bbb328bf67d7823305a43f1d61252747cf5ea29e
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544425"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57821282"
 ---
 # <a name="pogosafemode-run-pgo-in-thread-safe-mode"></a>/ POGOSAFEMODE (在线程安全模式下运行 PGO)
 
@@ -26,11 +26,11 @@ ms.locfileid: "50544425"
 
 默认情况下，PGO 分析以快速模式操作。 **/ POGOSAFEMODE**是仅在需要你想要使用安全模式。
 
-若要运行 PGO 分析在安全模式下，必须使用任一 **/GENPROFILE： 确切**（首选） 或使用环境变量[PogoSafeMode](environment-variables-for-profile-guided-optimizations.md)或链接器开关 **/POGOSAFEMODE**，取决于系统。 如果您正在执行分析在 x64 计算机，必须使用链接器开关。 如果您正在执行分析 x86 计算机，可以使用链接器开关或开始 PGO 检测过程之前将环境变量定义为任何值。
+若要运行 PGO 分析在安全模式下，必须使用任一 **/GENPROFILE： 确切**（首选） 或使用环境变量[PogoSafeMode](../environment-variables-for-profile-guided-optimizations.md)或链接器开关 **/POGOSAFEMODE**，取决于系统。 如果您正在执行分析在 x64 计算机，必须使用链接器开关。 如果您正在执行分析 x86 计算机，可以使用链接器开关或开始 PGO 检测过程之前将环境变量定义为任何值。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此链接器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置 Visual c + + 项目属性](../../ide/working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[Visual Studio 中的设置 c + + 编译器和生成属性](../working-with-project-properties.md)。
 
 1. 选择**配置属性** > **链接器** > **优化**属性页。
 
@@ -38,7 +38,7 @@ ms.locfileid: "50544425"
 
 1. 选择**配置属性** > **链接器** > **命令行**属性页。
 
-1. 输入 **/POGOSAFEMODE**到选项**其他选项**框。 选择**确定**以保存所做的更改。
+1. 输入 **/POGOSAFEMODE**到选项**其他选项**框。 选择“确定”以保存更改。
 
 ### <a name="to-set-this-linker-option-programmatically"></a>以编程方式设置此链接器选项
 
@@ -48,5 +48,5 @@ ms.locfileid: "50544425"
 
 [/GENPROFILE 和 /FASTGENPROFILE](genprofile-fastgenprofile-generate-profiling-instrumented-build.md)<br/>
 [/LTCG](ltcg-link-time-code-generation.md)<br/>
-[按配置文件优化](../../build/reference/profile-guided-optimizations.md)<br/>
-[用于按配置文件优化的环境变量](../../build/reference/environment-variables-for-profile-guided-optimizations.md)<br/>
+[按配置文件优化](../profile-guided-optimizations.md)<br/>
+[用于按配置文件优化的环境变量](../environment-variables-for-profile-guided-optimizations.md)<br/>

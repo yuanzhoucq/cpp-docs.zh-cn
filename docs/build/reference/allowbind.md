@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /ALLOWBIND editbin option
 - -ALLOWBIND editbin option
 ms.assetid: eaadbb8c-4339-4281-9a75-3a1ce2352ff8
-ms.openlocfilehash: 8f59cc83c06bbaaccba911c44835247253cb264b
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 4cb7e5a3627d865e2f2193dee096c72cced75f5f
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57416886"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57819813"
 ---
 # <a name="allowbind"></a>/ALLOWBIND
 
@@ -30,8 +30,8 @@ ms.locfileid: "57416886"
 
 使用 **/allowbind: no**以防止 Bind.exe 绑定 DLL。
 
-有关详细信息，请参阅[/ALLOWBIND](../../build/reference/allowbind-prevent-dll-binding.md)链接器选项。
+有关详细信息，请参阅[/ALLOWBIND](allowbind-prevent-dll-binding.md)链接器选项。
 
 ## <a name="see-also"></a>请参阅
 
-[EDITBIN 选项](../../build/reference/editbin-options.md)
+[EDITBIN 选项](editbin-options.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - functions [C++], importing
 - functions [C++], exporting
 ms.assetid: 89f488f8-b078-40fe-afd7-80bd7840057b
-ms.openlocfilehash: fb117ce6c6088b9fdca57f7d4fd7d0193e1813c2
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: ed523d84228124d4a8d99e443c0c744f362f1c56
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57425544"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822036"
 ---
 # <a name="importing-and-exporting-inline-functions"></a>导入和导出内联函数
 
@@ -30,20 +30,20 @@ ms.locfileid: "57425544"
 
 ## <a name="what-do-you-want-to-do"></a>你希望做什么？
 
-- [从 DLL 导出](../build/exporting-from-a-dll.md)
+- [从 DLL 导出](exporting-from-a-dll.md)
 
-- [导出从 DLL 使用。DEF 文件](../build/exporting-from-a-dll-using-def-files.md)
+- [导出从 DLL 使用。DEF 文件](exporting-from-a-dll-using-def-files.md)
 
-- [使用 __declspec （dllexport） 从 DLL 导出](../build/exporting-from-a-dll-using-declspec-dllexport.md)
+- [使用 __declspec （dllexport） 从 DLL 导出](exporting-from-a-dll-using-declspec-dllexport.md)
 
-- [导出和导入使用 AFX_EXT_CLASS](../build/exporting-and-importing-using-afx-ext-class.md)
+- [导出和导入使用 AFX_EXT_CLASS](exporting-and-importing-using-afx-ext-class.md)
 
-- [导出 c + + 函数以用于 C 语言可执行文件](../build/exporting-cpp-functions-for-use-in-c-language-executables.md)
+- [导出 c + + 函数以用于 C 语言可执行文件](exporting-cpp-functions-for-use-in-c-language-executables.md)
 
-- [确定要使用的导出方法](../build/determining-which-exporting-method-to-use.md)
+- [确定要使用的导出方法](determining-which-exporting-method-to-use.md)
 
-- [导入到使用 __declspec （dllimport） 的应用程序](../build/importing-into-an-application-using-declspec-dllimport.md)
+- [导入到使用 __declspec （dllimport） 的应用程序](importing-into-an-application-using-declspec-dllimport.md)
 
 ## <a name="see-also"></a>请参阅
 
-[导入和导出](../build/importing-and-exporting.md)
+[导入和导出](importing-and-exporting.md)

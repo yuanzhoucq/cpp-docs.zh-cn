@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0008
 ms.assetid: 6bf7f17a-d2a8-4826-99c7-d600d846952f
-ms.openlocfilehash: 696b77e9906b231a680027a3faaf23e53d8fb6e9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5741b7ef8cb9a7ae53d64874d3531e9271c09e0f
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525896"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815991"
 ---
 # <a name="project-build-error-prj0008"></a>项目生成错误 PRJ0008
 
@@ -19,6 +19,6 @@ ms.locfileid: "50525896"
 
 **请确保文件未被另一个进程打开并且未被写保护。**
 
-重新生成或清理期间，Visual c + + 删除所有已知中间文件和输出文件的生成，以及符合中的通配符规范的任何文件**删除的扩展**属性中的[常规配置设置属性页](../../ide/general-property-page-project.md)。
+重新生成或清理期间，Visual c + + 删除所有已知中间文件和输出文件的生成，以及符合中的通配符规范的任何文件**删除的扩展**属性中的[常规配置设置属性页](../../build/reference/general-property-page-project.md)。
 
 如果 Visual c + + 不能删除文件，您将看到此错误。 若要解决此错误，使该文件，其目录可写在生成的用户。

@@ -19,16 +19,16 @@ helpviewer_keywords:
 - Single Inheritance compiler option
 - -vmv compiler option [C++]
 ms.assetid: 0fcd7ae0-3031-4c62-a2a8-e154c8685dae
-ms.openlocfilehash: 3c11572880a0b58a1ba82f2e794c9dbfbd521c44
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 7a46cecdbf96ad891ce218df4769a60590e562a9
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57425206"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810037"
 ---
 # <a name="vmm-vms-vmv-general-purpose-representation"></a>/vmm、/vms、/vmv（通用表示形式）
 
-使用何时[/vmb、 /vmg （表示方法）](../../build/reference/vmb-vmg-representation-method.md)选为[表示方法](../../build/reference/vmb-vmg-representation-method.md)。 这些选项指示尚未遇到类定义的继承模型。
+使用何时[/vmb、 /vmg （表示方法）](vmb-vmg-representation-method.md)选为[表示方法](vmb-vmg-representation-method.md)。 这些选项指示尚未遇到类定义的继承模型。
 
 ## <a name="syntax"></a>语法
 
@@ -52,7 +52,7 @@ ms.locfileid: "57425206"
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[Visual Studio 中的设置 c + + 编译器和生成属性](../working-with-project-properties.md)。
 
 1. 单击 **“C/C++”** 文件夹。
 
@@ -66,6 +66,6 @@ ms.locfileid: "57425206"
 
 ## <a name="see-also"></a>请参阅
 
-[/vmb、/vmg（表示方法）](../../build/reference/vmb-vmg-representation-method.md)<br/>
-[编译器选项](../../build/reference/compiler-options.md)<br/>
-[设置编译器选项](../../build/reference/setting-compiler-options.md)
+[/vmb、/vmg（表示方法）](vmb-vmg-representation-method.md)<br/>
+[MSVC 编译器选项](compiler-options.md)<br/>
+[MSVC 编译器命令行语法](compiler-command-line-syntax.md)

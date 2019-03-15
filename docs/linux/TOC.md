@@ -4,7 +4,7 @@
 # [新建 Linux 项目](create-a-new-linux-project.md)
 # [连接到远程 Linux 计算机](connect-to-your-remote-linux-computer.md)
 # [部署、运行和调试 Linux 项目](deploy-run-and-debug-your-linux-project.md)
-# [教程：在 Visual Studio 中创建 C++ 跨平台项目](../ide/get-started-linux-cmake.md)
+# [教程：在 Visual Studio 中创建 C++ 跨平台项目](../build/get-started-linux-cmake.md)
 # [Linux 项目属性页引用](prop-pages-linux.md)
 ## [常规属性 (Linux)](prop-pages/general-linux.md)
 ## [调试属性 (Linux)](prop-pages/debugging-linux.md)

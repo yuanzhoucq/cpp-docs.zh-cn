@@ -12,12 +12,12 @@ helpviewer_keywords:
 - /DELAY linker option
 - -DELAY linker option
 ms.assetid: 9334b332-cc58-4dae-b10f-a4c75972d50c
-ms.openlocfilehash: 56f019e99eb9a54b83f6b070d769efa2b94f5621
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: d3c32ba04cbad509ff2819020a35102698d6ceb3
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57426367"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57821334"
 ---
 # <a name="delay-delay-load-import-settings"></a>/DELAY（延迟加载导入设置）
 
@@ -28,23 +28,23 @@ ms.locfileid: "57426367"
 
 ## <a name="remarks"></a>备注
 
-/DELAY 选项控制[延迟加载](../../build/reference/linker-support-for-delay-loaded-dlls.md)的 Dll:
+/DELAY 选项控制[延迟加载](linker-support-for-delay-loaded-dlls.md)的 Dll:
 
 - UNLOAD 限定符通知延迟加载 Helper 函数支持 DLL 的显式卸载。 导入地址表 (IAT) 被重置为其原始形式，从而使 IAT 指针无效并导致它们被覆盖。
 
-   如果不选择 UNLOAD，任何调用到[FUnloadDelayLoadedDLL](../../build/reference/explicitly-unloading-a-delay-loaded-dll.md)将失败。
+   如果不选择 UNLOAD，任何调用到[FUnloadDelayLoadedDLL](explicitly-unloading-a-delay-loaded-dll.md)将失败。
 
-- NOBIND 限定符通知链接器不要在最终图像中包含可绑定的 IAT。 默认值是为延迟加载的 DLL 创建可绑定的 IAT。 无法静态绑定生成的图像。 （可以在执行之前静态绑定包含可绑定 IAT 的图像。）请参阅[/绑定](../../build/reference/bind.md)。
+- NOBIND 限定符通知链接器不要在最终图像中包含可绑定的 IAT。 默认值是为延迟加载的 DLL 创建可绑定的 IAT。 无法静态绑定生成的图像。 （可以在执行之前静态绑定包含可绑定 IAT 的图像。）请参阅[/绑定](bind.md)。
 
    如果绑定了 DLL，该帮助器函数将尝试使用绑定的信息，而不是调用[GetProcAddress](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress)上每个引用的导入。 如果时间戳或首选地址与加载的 DLL 的时间戳或首选地址不匹配，则 Helper 函数将假定绑定的 IAT 已经过期并继续执行，就像绑定的 IAT 不存在一样。
 
    NOBIND 导致程序图像比较大，但是可以加快 DLL 的加载时间。 如果从不打算绑定 DLL，则 NOBIND 将禁止生成绑定的 IAT。
 
-若要指定 Dll 延迟加载，请使用[/DELAYLOAD](../../build/reference/delayload-delay-load-import.md)选项。
+若要指定 Dll 延迟加载，请使用[/DELAYLOAD](delayload-delay-load-import.md)选项。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此链接器选项
 
-1. 打开项目的“属性页”  对话框。 有关信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关信息，请参阅[Visual Studio 中的设置 c + + 编译器和生成属性](../working-with-project-properties.md)。
 
 1. 展开**配置属性**，**链接器**，然后选择**高级**。
 
@@ -56,5 +56,5 @@ ms.locfileid: "57426367"
 
 ## <a name="see-also"></a>请参阅
 
-[设置链接器选项](../../build/reference/setting-linker-options.md)<br/>
-[链接器选项](../../build/reference/linker-options.md)
+[MSVC 链接器引用](linking.md)<br/>
+[MSVC 链接器选项](linker-options.md)

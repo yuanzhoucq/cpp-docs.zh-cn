@@ -6,12 +6,12 @@ helpviewer_keywords:
 - name decoration [C++]
 - names [C++], decorated
 ms.assetid: a4e9ae8e-b239-4454-b401-4102793cb344
-ms.openlocfilehash: d9d3db9a3db1943581e5fd603ba85777cb49b863
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 3fae232e6ca886195315002f4e65063d8a23ddc8
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57423308"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815413"
 ---
 # <a name="decorated-names"></a>修饰名
 
@@ -67,7 +67,7 @@ C 函数的修饰形式取决于其声明中使用的调用约定，如下表所
 
 #### <a name="to-use-a-listing-to-view-decorated-names"></a>若要使用列表查看修饰名
 
-1. 通过编译包含数据、 对象或函数定义或原型的源文件生成列表[列出文件类型](../../build/reference/fa-fa-listing-file.md)设置为包含源代码的程序集的编译器选项 (**/FAs**)。
+1. 通过编译包含数据、 对象或函数定义或原型的源文件生成列表[列出文件类型](fa-fa-listing-file.md)设置为包含源代码的程序集的编译器选项 (**/FAs**)。
 
    例如，输入`cl /c /FAs example.cpp`在开发人员命令提示符下，若要生成列表文件 example.asm。
 
@@ -94,5 +94,5 @@ is :- "private: void __thiscall a::func1(int)"
 
 ## <a name="see-also"></a>请参阅
 
-[C/C++ 生成工具](../../build/reference/c-cpp-build-tools.md)<br/>
+[其他 MSVC 生成工具](c-cpp-build-tools.md)<br/>
 [使用 extern 指定链接](../../cpp/using-extern-to-specify-linkage.md)

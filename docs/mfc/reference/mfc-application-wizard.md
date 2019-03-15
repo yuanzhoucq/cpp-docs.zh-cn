@@ -7,19 +7,19 @@ helpviewer_keywords:
 - MFC Application Wizard
 - executable files, creating
 ms.assetid: 227ac090-921d-4b2f-be0a-66a5f4cab0d4
-ms.openlocfilehash: 3cdaba750060290fa25007d4097b6782d6f20fbf
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 808e8364764dd826ee82e445627ba21b06946ed6
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258627"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822660"
 ---
 # <a name="mfc-application-wizard"></a>MFC 应用程序向导
 
 MFC 应用程序向导生成应用程序，编译时，可实现 Windows 可执行文件 (.exe) 应用程序的基本功能。 MFC 初学者应用程序包括 c + + 源文件 (.cpp)、 资源 (.rc) 文件、 标头 (.h) 文件和项目 (.vcxproj) 文件。 在这些初学者文件中生成的代码基于 MFC。
 
 > [!NOTE]
->  根据你选择的选项，该向导在你的项目中创建其他文件。 例如，如果您选择**上下文相关帮助**上[高级功能](../../mfc/reference/advanced-features-mfc-application-wizard.md)页上，向导将创建编译项目的帮助文件所必需的文件。 有关该向导创建的文件的详细信息，请参阅[Visual c + + 项目创建的文件类型](../../ide/file-types-created-for-visual-cpp-projects.md)，并查看项目中的 Readme.txt 文件。
+>  根据你选择的选项，该向导在你的项目中创建其他文件。 例如，如果您选择**上下文相关帮助**上[高级功能](../../mfc/reference/advanced-features-mfc-application-wizard.md)页上，向导将创建编译项目的帮助文件所必需的文件。 有关该向导创建的文件的详细信息，请参阅[Visual c + + 项目创建的文件类型](../../build/reference/file-types-created-for-visual-cpp-projects.md)，并查看项目中的 Readme.txt 文件。
 
 ## <a name="overview"></a>概述
 

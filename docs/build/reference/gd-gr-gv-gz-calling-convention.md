@@ -21,12 +21,12 @@ helpviewer_keywords:
 - Gv compiler option [C++]
 - /Gr compiler option [C++]
 ms.assetid: fd3110cb-2d77-49f2-99cf-a03f9ead00a3
-ms.openlocfilehash: 8eba665e34fc3b949283557461e33348106fd532
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7c4f7e6edb020f5c8d2abf80f14df33e18a915c5
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50451500"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57817457"
 ---
 # <a name="gd-gr-gv-gz-calling-convention"></a>/Gd、/Gr、/Gv、/Gz（调用约定）
 
@@ -51,14 +51,14 @@ ms.locfileid: "50451500"
 
 采用可变数量的参数的函数必须标记为`__cdecl`。
 
-**/Gd**， **/Gr**， **/Gv**并 **/Gz**都不符合[/clr: safe](../../build/reference/clr-common-language-runtime-compilation.md)或 **/clr: pure**. **/Clr: pure**并 **/clr: safe**编译器选项在 Visual Studio 2015 中弃用，在 Visual Studio 2017 中不受支持。
+**/Gd**， **/Gr**， **/Gv**并 **/Gz**都不符合[/clr: safe](clr-common-language-runtime-compilation.md)或 **/clr: pure**. **/Clr: pure**并 **/clr: safe**编译器选项在 Visual Studio 2015 中弃用，在 Visual Studio 2017 中不受支持。
 
 > [!NOTE]
 > 默认情况下，对于 x86 处理器，c + + 成员函数使用[__thiscall](../../cpp/thiscall.md)。
 
 适用于所有处理器，显式标记为一个成员函数`__cdecl`， `__fastcall`， `__vectorcall`，或`__stdcall`如果它不会忽略该体系结构上使用指定的调用约定。 始终采用可变数量的参数，则会使用一个成员函数`__cdecl`调用约定。
 
-这些编译器选项对 c + + 方法和函数的名称修饰无效。 除非声明为`extern "C"`，c + + 方法和函数使用不同的名称修饰方案。 有关详细信息，请参阅[修饰名](../../build/reference/decorated-names.md)。
+这些编译器选项对 c + + 方法和函数的名称修饰无效。 除非声明为`extern "C"`，c + + 方法和函数使用不同的名称修饰方案。 有关详细信息，请参阅[修饰名](decorated-names.md)。
 
 有关调用约定的详细信息，请参阅[调用约定](../../cpp/calling-conventions.md)。
 
@@ -66,7 +66,7 @@ ms.locfileid: "50451500"
 
 在 x86 处理器，所有函数参数都传递到堆栈上从右到左。 在 ARM 和 x64 体系结构中，某些参数通过寄存器进行传递和从右到左，在堆栈上的其余部分传递。 调用的例程中弹出参数在堆栈。
 
-对于 C，`__cdecl`命名的函数名称的约定使用前面带下划线 ( `_` ); 执行没有任何大小写转换。 除非声明为`extern "C"`，c + + 函数使用不同的名称修饰方案。 有关详细信息，请参阅[修饰名](../../build/reference/decorated-names.md)。
+对于 C，`__cdecl`命名的函数名称的约定使用前面带下划线 ( `_` ); 执行没有任何大小写转换。 除非声明为`extern "C"`，c + + 函数使用不同的名称修饰方案。 有关详细信息，请参阅[修饰名](decorated-names.md)。
 
 ## <a name="fastcall-specifics"></a>__fastcall 细节
 
@@ -99,7 +99,7 @@ ms.locfileid: "50451500"
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[Visual Studio 中的设置 c + + 编译器和生成属性](../working-with-project-properties.md)。
 
 1. 选择**C/c + +** > **高级**属性页。
 
@@ -111,5 +111,5 @@ ms.locfileid: "50451500"
 
 ## <a name="see-also"></a>请参阅
 
-- [编译器选项](../../build/reference/compiler-options.md)
-- [设置编译器选项](../../build/reference/setting-compiler-options.md)
+- [MSVC 编译器选项](compiler-options.md)
+- [MSVC 编译器命令行语法](compiler-command-line-syntax.md)

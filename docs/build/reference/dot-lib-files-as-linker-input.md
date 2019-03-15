@@ -14,22 +14,22 @@ helpviewer_keywords:
 - defaults [C++], libraries
 - .lib files
 ms.assetid: dc5d2b1c-2487-41fa-aa71-ad1e0647958b
-ms.openlocfilehash: f3b2ae0d82e682cc89243b7b527ee6e0b51d4c3d
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 02f719b3101b04ad6b219bf882a50a994061af0c
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57426766"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822608"
 ---
 # <a name="lib-files-as-linker-input"></a>用作链接器输入的 .Lib 文件
 
-链接接受 COFF 标准库和 COFF 导入这两种通常具有扩展名的库。 lib。 标准库包含对象和 LIB 工具创建的。 导入库包含有关在其他程序中导出的信息，并生成包含导出的程序时，或 LIB 工具创建通过链接。 有关使用 LIB 创建标准或导入的库的信息，请参阅[LIB 引用](../../build/reference/lib-reference.md)。 有关使用链接创建导入库的详细信息，请参阅[/DLL](../../build/reference/dll-build-a-dll.md)选项。
+链接接受 COFF 标准库和 COFF 导入这两种通常具有扩展名的库。 lib。 标准库包含对象和 LIB 工具创建的。 导入库包含有关在其他程序中导出的信息，并生成包含导出的程序时，或 LIB 工具创建通过链接。 有关使用 LIB 创建标准或导入的库的信息，请参阅[LIB 引用](lib-reference.md)。 有关使用链接创建导入库的详细信息，请参阅[/DLL](dll-build-a-dll.md)选项。
 
-一个库链接到指定为文件名称参数或默认库。 链接通过首先在命令行上指定的库中搜索在解析外部引用，然后在指定的默认库与[/DEFAULTLIB](../../build/reference/defaultlib-specify-default-library.md)选项，然后在默认库名为.obj 文件中。 如果使用的库名称指定了路径，链接查找该目录中的库。 如果未指定路径，链接查找第一个链接，正在运行的目录中，然后在 LIB 环境变量中指定的任何目录。
+一个库链接到指定为文件名称参数或默认库。 链接通过首先在命令行上指定的库中搜索在解析外部引用，然后在指定的默认库与[/DEFAULTLIB](defaultlib-specify-default-library.md)选项，然后在默认库名为.obj 文件中。 如果使用的库名称指定了路径，链接查找该目录中的库。 如果未指定路径，链接查找第一个链接，正在运行的目录中，然后在 LIB 环境变量中指定的任何目录。
 
 ## <a name="to-add-lib-files-as-linker-input-in-the-development-environment"></a>若要添加作为开发环境中的链接器输入的.lib 文件
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[Visual Studio 中的设置 c + + 编译器和生成属性](../working-with-project-properties.md)。
 
 1. 选择**输入**中的属性页**链接器**文件夹。
 
@@ -69,5 +69,5 @@ int main() {
 
 ## <a name="see-also"></a>请参阅
 
-[LINK 输入文件](../../build/reference/link-input-files.md)<br/>
-[链接器选项](../../build/reference/linker-options.md)
+[LINK 输入文件](link-input-files.md)<br/>
+[MSVC 链接器选项](linker-options.md)

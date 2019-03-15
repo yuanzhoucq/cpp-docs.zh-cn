@@ -10,12 +10,12 @@ helpviewer_keywords:
 - V compiler option [C++]
 - -V compiler option [C++]
 ms.assetid: 3e93fb7a-5dfd-49a6-bd49-3dca8052e0f3
-ms.openlocfilehash: 7cae4e75bb2459ff45b02f20d5643deb756261d0
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 7bebd3ab9677bb340203bbf857e4ee9f287e36e6
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413259"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57817603"
 ---
 # <a name="v-version-number"></a>/V（版本号）
 
@@ -38,11 +38,11 @@ ms.locfileid: "57413259"
 
 此外可以使用[注释 （C/c + +）](../../preprocessor/comment-c-cpp.md)与编译器注释类型参数在.obj 文件中放置编译器的名称和版本数。
 
-**/V**选项在 Visual Studio 2005 中; 从开始已弃用 **/V**主要是用于支持构建虚拟设备驱动程序 (VxDs) 和 Visual c + + 工具集不再支持生成 Vxd。 有关不推荐使用的编译器选项的列表，请参阅**已弃用并删除的编译器选项**中[按类别列出的编译器选项](../../build/reference/compiler-options-listed-by-category.md)。
+**/V**选项在 Visual Studio 2005 中; 从开始已弃用 **/V**主要是用于支持构建虚拟设备驱动程序 (VxDs) 和 Visual c + + 工具集不再支持生成 Vxd。 有关不推荐使用的编译器选项的列表，请参阅**已弃用并删除的编译器选项**中[按类别列出的编译器选项](compiler-options-listed-by-category.md)。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[Visual Studio 中的设置 c + + 编译器和生成属性](../working-with-project-properties.md)。
 
 1. 单击 **“C/C++”** 文件夹。
 
@@ -56,5 +56,5 @@ ms.locfileid: "57413259"
 
 ## <a name="see-also"></a>请参阅
 
-[编译器选项](../../build/reference/compiler-options.md)<br/>
-[设置编译器选项](../../build/reference/setting-compiler-options.md)
+[MSVC 编译器选项](compiler-options.md)<br/>
+[MSVC 编译器命令行语法](compiler-command-line-syntax.md)

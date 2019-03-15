@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - PRJ0049
 ms.assetid: 8b38afa1-e080-4efd-ae89-776cfd044413
-ms.openlocfilehash: a451b7fe7b2f7cd89f8898232badf0d3b7e9f138
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fba3de0be764aa56b56ed22c6a9fde9366295456
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447211"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816225"
 ---
 # <a name="project-build-warning-prj0049"></a>项目生成警告 PRJ0049
 
@@ -21,7 +21,7 @@ ms.locfileid: "50447211"
 
 1. 选择以下选项之一：
 
-   - 更改在项目的目标的框架**属性页**对话框中，这样就晚于或等于最小的 framework 版本的所有引用的程序集和项目。 有关详细信息，请参阅[添加引用](../../ide/adding-references-in-visual-cpp-projects.md)。
+   - 更改在项目的目标的框架**属性页**对话框中，这样就晚于或等于最小的 framework 版本的所有引用的程序集和项目。 有关详细信息，请参阅[添加引用](../../build/adding-references-in-visual-cpp-projects.md)。
 
    - 删除对该程序集或晚于目标框架的最小的 framework 版本的项目的引用。 这些项都标有在项目的警告图标**属性页**。
 

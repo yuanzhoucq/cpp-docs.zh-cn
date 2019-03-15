@@ -5,12 +5,12 @@ helpviewer_keywords:
 - side-by-side assemblies [C++]
 - isolated assemblies [C++]
 ms.assetid: 945a885f-cb3e-4c8a-a0b9-2c2e3e02cc50
-ms.openlocfilehash: 332c78581d4a13c61c3adb7728b2b3ef2cf1a2a2
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 61da61b4a213c01ca66e8978c78622fe8b2818d1
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420617"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57817577"
 ---
 # <a name="concepts-of-isolated-applications-and-side-by-side-assemblies"></a>独立应用程序和并行程序集的概念
 
@@ -32,8 +32,8 @@ ms.locfileid: "57420617"
 
 ## <a name="visual-c-libraries"></a>Visual C++ 库
 
-在 Visual Studio 2005 和 Visual Studio 2008 中，可再发行库（如 ATL、MFC、CRT、标准 C++、OpenMP 和 MSDIA）已作为共享的并行程序集部署到本机程序集缓存中。 在当前版本中，可再发行库使用集中部署。 默认情况下，使用 Visual C++ 生成的所有应用程序在生成时都将清单嵌入到最终二进制文件中，该清单将描述此二进制文件在 Visual C++ 库中的依赖项。 若要了解 Visual C++ 应用程序的清单生成，请参阅 [Understanding Manifest Generation for C/C++ Programs](../build/understanding-manifest-generation-for-c-cpp-programs.md)。 对于静态链接到自身使用的库的应用程序，或链接到使用本地部署的库的应用程序，清单不是必需的。 有关部署的更多信息，请参阅 [Deployment in Visual C++](../ide/deployment-in-visual-cpp.md)。
+在 Visual Studio 2005 和 Visual Studio 2008 中，可再发行库（如 ATL、MFC、CRT、标准 C++、OpenMP 和 MSDIA）已作为共享的并行程序集部署到本机程序集缓存中。 在当前版本中，可再发行库使用集中部署。 默认情况下，使用 Visual C++ 生成的所有应用程序在生成时都将清单嵌入到最终二进制文件中，该清单将描述此二进制文件在 Visual C++ 库中的依赖项。 若要了解 Visual C++ 应用程序的清单生成，请参阅 [Understanding Manifest Generation for C/C++ Programs](understanding-manifest-generation-for-c-cpp-programs.md)。 对于静态链接到自身使用的库的应用程序，或链接到使用本地部署的库的应用程序，清单不是必需的。 有关部署的更多信息，请参阅 [Deployment in Visual C++](../ide/deployment-in-visual-cpp.md)。
 
 ## <a name="see-also"></a>请参阅
 
-[生成 C/C++ 独立应用程序和并行程序集](../build/building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)
+[生成 C/C++ 独立应用程序和并行程序集](building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)

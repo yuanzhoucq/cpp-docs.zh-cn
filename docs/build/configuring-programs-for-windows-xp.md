@@ -2,16 +2,16 @@
 title: 配置 Windows XP 的程序
 ms.date: 02/02/2018
 ms.assetid: 1e4487b3-d815-4123-878b-5718b22f0fd5
-ms.openlocfilehash: 73fc66c358f2bfa390177557da2f114f225cec1a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 989a4e2c7e91c05498902bf1c5cb9d838ee47c3b
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50582736"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814288"
 ---
 # <a name="configuring-programs-for-windows-xp"></a>配置 Windows XP 的程序
 
-由于 Visual Studio 支持多个平台工具集，可面向的操作系统和不受默认工具集的运行时库。 例如，通过切换平台工具集，您可以使用 C + + 11、 C + + 14 和支持的 Visual Studio 中的 Visual c + + 编译器的 C + + 17 语言增强功能来创建面向 Windows XP 和 Windows Server 2003 的应用。 可以还使用较旧的平台工具集来维护二进制兼容旧代码，并仍充分利用 Visual Studio IDE 的最新功能。
+由于 Visual Studio 支持多个平台工具集，可面向的操作系统和不受默认工具集的运行时库。 例如，通过切换平台工具集，您可以使用 C + + 11、 C + + 14 和支持的 Visual Studio 中的 MSVC 编译器的 C + + 17 语言增强功能来创建面向 Windows XP 和 Windows Server 2003 的应用。 可以还使用较旧的平台工具集来维护二进制兼容旧代码，并仍充分利用 Visual Studio IDE 的最新功能。
 
 ## <a name="install-the-windows-xp-platform-toolset"></a>安装 Windows XP 平台工具集
 

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - objects [C++], adding to ATL projects
 - ATL Control Wizard
 ms.assetid: c0adcbd0-07fe-4c55-a8fd-8c2c65ecdaad
-ms.openlocfilehash: b442db405ed04c4ebf697089adf3529cd590753a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 94478f01655ff68b6b8067771eb3fdab42d1af01
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57325992"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807567"
 ---
 # <a name="adding-objects-and-controls-to-an-atl-project"></a>将对象和控件添加到 ATL 项目
 
@@ -47,8 +47,7 @@ ms.locfileid: "57325992"
 ## <a name="see-also"></a>请参阅
 
 [ATL 项目向导](../../atl/reference/atl-project-wizard.md)<br/>
-[Visual C++ 项目类型](../../ide/visual-cpp-project-types.md)<br/>
-[使用应用程序向导创建桌面项目](../../ide/creating-desktop-projects-by-using-application-wizards.md)<br/>
+[Visual C++ 项目类型](../../build/reference/visual-cpp-project-types.md)<br/>
 [ATL COM 对象基础知识](../../atl/fundamentals-of-atl-com-objects.md)<br/>
 [使用 ATL 和 C 运行时代码进行编程](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
 [默认 ATL 项目配置](../../atl/reference/default-atl-project-configurations.md)

@@ -2,12 +2,12 @@
 title: ARM ABI 约定概述
 ms.date: 07/11/2018
 ms.assetid: 23f4ae8c-3148-4657-8c47-e933a9f387de
-ms.openlocfilehash: d25cba2800348ca1ae45c5bb59163816a4eefa02
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 17f2598912879d0eb54fd189e1fae541ba2f874f
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50436018"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810453"
 ---
 # <a name="overview-of-arm32-abi-conventions"></a>ARM32 ABI 约定概述
 
@@ -23,7 +23,7 @@ ARM 上的 Windows 假定始终都在 ARMv7 体系结构上运行。 VFPv3-D32 �
 
 ## <a name="endianness"></a>字节排序方式
 
-在 Little-endian 模式下执行 ARM 上的 Windows。 Visual C++ 编译器和 Windows 运行时始终都需要 Little-endian 数据。 尽管 ARM 指令集体系结构 (ISA) 中的 SETEND 指令甚至允许用户模式代码更改当前字节排序方式，但不鼓励执行此操作，因为这对于应用程序很危险。 如果在 Big-endian 模式下生成某个异常，则该行为将不可预测，并且可能会导致用户模式中出现应用程序错误或者内核模式中出现 bugcheck。
+在 Little-endian 模式下执行 ARM 上的 Windows。 MSVC 编译器和 Windows 运行时在任何时候需要 little-endian 数据。 尽管 ARM 指令集体系结构 (ISA) 中的 SETEND 指令甚至允许用户模式代码更改当前字节排序方式，但不鼓励执行此操作，因为这对于应用程序很危险。 如果在 Big-endian 模式下生成某个异常，则该行为将不可预测，并且可能会导致用户模式中出现应用程序错误或者内核模式中出现 bugcheck。
 
 ## <a name="alignment"></a>对齐
 
@@ -135,9 +135,9 @@ Windows 仅支持 ARM 变量，它们支持 VFPv3-D32 协处理器。 这意味�
 
 ## <a name="parameter-passing"></a>参数传递
 
-对于不可变参数函数，ARM 上的 Windows ABI 将遵循参数传递的 ARM 规则，该规则包括 VFP 和高级 SIMD 扩展。 这些规则遵循[过程调用标准 ARM 体系结构](http://infocenter.arm.com/help/topic/com.arm.doc.ihi0042c/IHI0042C_aapcs.pdf)、 与 VFP 扩展合并。 默认情况下，寄存器中可以传递前四个整数自变量以及最多八个浮点自变量或矢量自变量，而其他自变量在堆栈上传递。 使用此过程将自变量分配给寄存器或堆栈：
+对于不可变参数函数，ARM 上的 Windows ABI 将遵循参数传递的 ARM 规则，该规则包括 VFP 和高级 SIMD 扩展。 这些规则遵循[过程调用标准 ARM 体系结构](http://infocenter.arm.com/help/topic/com.arm.doc.ihi0042c/IHI0042C_aapcs.pdf)、 与 VFP 扩展合并。 默认情况下，寄存器中可以传递前四个整数参数以及最多八个浮点参数或矢量参数，而其他参数在堆栈上传递。 使用此过程将自变量分配给寄存器或堆栈：
 
-### <a name="stage-a-initialization"></a>答： 初始化阶段
+### <a name="stage-a-initialization"></a>阶段 a:初始化
 
 在自变量处理开始之前需要正好执行一次初始化：
 
@@ -149,7 +149,7 @@ Windows 仅支持 ARM 变量，它们支持 VFPv3-D32 协处理器。 这意味�
 
 1. 如果调用在内存中返回结果的函数，则该结果的地址将被置于 r0 中并且 NCRN 将设置为 r1。
 
-### <a name="stage-b-pre-padding-and-extension-of-arguments"></a>阶段 b： 预填充和扩展的参数
+### <a name="stage-b-pre-padding-and-extension-of-arguments"></a>阶段 b:预填充和扩展的参数
 
 对于列表中的每个自变量，将从以下列表中应用第一个匹配规则：
 
@@ -157,9 +157,9 @@ Windows 仅支持 ARM 变量，它们支持 VFPv3-D32 协处理器。 这意味�
 
 1. 如果参数是 1 个字节或 16 位半字，则可通过零扩展或符号扩展使其成为 32 位全字并且可视为 4 字节参数。
 
-1. 如果自变量为复合类型，则其大小将会舍入为 4 的最接近倍数。
+1. 如果参数为复合类型，则其大小将会舍入为 4 的最接近倍数。
 
-### <a name="stage-c-assignment-of-arguments-to-registers-and-stack"></a>阶段 c： 自变量分配给寄存器和堆栈
+### <a name="stage-c-assignment-of-arguments-to-registers-and-stack"></a>阶段 c:自变量分配给寄存器和堆栈
 
 对于列表中的每个自变量，将依次应用以下规则，直到自变量被分配：
 
@@ -205,13 +205,13 @@ Windows 中的内核模式堆栈默认为 3 个页面 (12 KB)。 请注意，不
 
 ## <a name="stack-walking"></a>堆栈审核
 
-使用启用帧指针编译 Windows 代码 ([/Oy （框架指针省略）](../build/reference/oy-frame-pointer-omission.md)) 以实现快速审核堆栈。 通常，r11 寄存器指向链中的下一个链接，它是指定指向堆栈上前一个帧的指针和返回地址的 {r11, lr} 对。 建议你的代码也启用帧指针以改进分析和跟踪。
+使用启用帧指针编译 Windows 代码 ([/Oy （框架指针省略）](reference/oy-frame-pointer-omission.md)) 以实现快速审核堆栈。 通常，r11 寄存器指向链中的下一个链接，它是指定指向堆栈上前一个帧的指针和返回地址的 {r11, lr} 对。 建议你的代码也启用帧指针以改进分析和跟踪。
 
 ## <a name="exception-unwinding"></a>异常展开
 
 在异常处理期间，通过使用展开代码堆栈可以启用堆栈展开。 展开代码是存储在可执行映像的 .xdata 部分中的字节的序列。 它们以抽象的方式描述了函数序言和尾声代码的操作，以便可以撤消函数序言的效果，从而准备展开调用方的堆栈帧。
 
-ARM EABI 指定了使用展开代码的异常展开模式。 但是，在 Windows 中进行展开时此规范是不够的，此时必须处理处理器在函数序言或尾声中间的情况。 ARM 异常数据和展开上 Windows 的详细信息，请参阅[ARM 异常处理](../build/arm-exception-handling.md)。
+ARM EABI 指定了使用展开代码的异常展开模式。 但是，在 Windows 中进行展开时此规范是不够的，此时必须处理处理器在函数序言或尾声中间的情况。 ARM 异常数据和展开上 Windows 的详细信息，请参阅[ARM 异常处理](arm-exception-handling.md)。
 
 建议使用对 `RtlAddFunctionTable` 以及关联函数的调用中指定的动态函数表来描述动态生成的代码，以便生成的代码可以参与异常处理。
 
@@ -223,5 +223,5 @@ ARM EABI 指定了使用展开代码的异常展开模式。 但是，在 Window
 
 ## <a name="see-also"></a>请参阅
 
-[Visual C++ ARM 迁移的常见问题](../build/common-visual-cpp-arm-migration-issues.md)<br/>
-[ARM 异常处理](../build/arm-exception-handling.md)
+[Visual C++ ARM 迁移的常见问题](common-visual-cpp-arm-migration-issues.md)<br/>
+[ARM 异常处理](arm-exception-handling.md)

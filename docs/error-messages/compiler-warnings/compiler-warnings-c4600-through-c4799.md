@@ -57,14 +57,13 @@ f1_keywords:
 - C4767
 - C4770
 - C4792
-- C4794
 ms.assetid: 22bd4392-f3be-445c-9f23-6126aebac901
-ms.openlocfilehash: 02b679e3cfb91b09db381b014ba2f3d3d0e5b02a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4acc36fcf7508bdcfcc1bd936110df4c32c47ae2
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50553148"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810076"
 ---
 # <a name="compiler-warnings-c4600-through-c4799"></a>编译器警告 C4600-C4799
 
@@ -147,7 +146,7 @@ ms.locfileid: "50553148"
 |编译器警告 （等级 C4681|class： 组件类不指定是事件源的默认接口|
 |编译器警告 （等级 C4682|parameter： 指定，默认为 [in] 未方向参数特性|
 |[编译器警告（等级 1）C4683](../../error-messages/compiler-warnings/compiler-warning-level-1-c4683.md)|function： 事件源有输出的参数;挂接多个事件处理程序时应谨慎|
-|[编译器警告（等级 1）C4684](../../error-messages/compiler-warnings/compiler-warning-level-1-c4684.md)|attribute： 警告!! 属性可能会导致生成无效代码： 小心使用|
+|[编译器警告（等级 1）C4684](../../error-messages/compiler-warnings/compiler-warning-level-1-c4684.md)|attribute:警告!! 属性可能会导致生成无效代码： 小心使用|
 |编译器警告 （等级 1） C4685|分析模板参数时需要“> >”，却找到了“>>”|
 |[编译器警告（等级 3）C4686](../../error-messages/compiler-warnings/compiler-warning-level-3-c4686.md)|“user-defined type”: 行为可能有更改，UDT 中的更改返回调用约定|
 |[编译器警告 （错误） C4687](../../error-messages/compiler-warnings/compiler-warning-c4687.md)|class： 密封的抽象类不能实现接口 interface|
@@ -194,7 +193,7 @@ ms.locfileid: "50553148"
 |[编译器警告（等级 1）C4743](../../error-messages/compiler-warnings/compiler-warning-level-1-c4743.md)|type 具有 file1 和 file2 中不同的大小： 数量和字节数|
 |[编译器警告（等级 1）C4744](../../error-messages/compiler-warnings/compiler-warning-level-1-c4744.md)|var 具有 file1 和 file2 中的不同类型: type1 和 type2|
 |[编译器警告 C4746](../../error-messages/compiler-warnings/compiler-warning-c4746.md)|可变访问*表达式*' 受 /volatile:\<iso&#124;ms > 设置; 请考虑使用 __iso_volatile_load/store 内部函数|
-|[编译器警告（等级 1）C4747](../../error-messages/compiler-warnings/compiler-warning-level-1-c4747.md)|调用托管入口点： 托管的代码可能无法运行在有加载程序锁，包括 DLL 入口点和调用从 DLL 入口点访问|
+|[编译器警告（等级 1）C4747](../../error-messages/compiler-warnings/compiler-warning-level-1-c4747.md)|调用托管 entrypoint:托管的代码可能无法运行在有加载程序锁，包括 DLL 入口点和调用从 DLL 入口点访问|
 |编译器警告 （等级 C4749|有条件地支持： offsetof 应用于非布局类型*类型*|
 |编译器警告 （等级 1） C4750|“identifier”：函数 with _alloca() 内嵌到循环中|
 |编译器警告 （等级 C4751|/arch: avx 不适用于 intel （） 流式处理 SIMD 扩展的内联 ASM 内|

@@ -8,16 +8,16 @@ helpviewer_keywords:
 - -SECTION linker option
 - section attributes
 - /SECTION linker option
-ms.openlocfilehash: d86dca297940da4978fe42270f444acc5f11fd82
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8fb73043c9c185adee0859bb81098eab022430c2
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543687"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816550"
 ---
 # <a name="section-specify-section-attributes"></a>/SECTION（指定节特性）
 
-> **/ 部分：**_名称_，[[**！**]{**DEKPRSW**}] [**，ALIGN =**_数_]
+> **/SECTION:**_name_,[[**!**]{**DEKPRSW**}][**,ALIGN=**_number_]
 
 ## <a name="remarks"></a>备注
 
@@ -71,15 +71,15 @@ ms.locfileid: "50543687"
 |K|可缓存|将标记为不可缓存的部分|
 |P|可分页|将标记为不可分页的部分|
 
-K 和 P 是不寻常的与其对应的部分标志使用相反的含义。 如果您指定其中一个.text 部分通过 **/SECTION:.text，K**选项，没有任何区别，节标记中的在运行时[DUMPBIN](../../build/reference/dumpbin-options.md)与[/HEADERS](../../build/reference/headers.md)选项;已隐式缓存部分。 若要删除默认值，指定 **/SECTION:.text，！K**相反。 DUMPBIN 显示部分特征，包括"不缓存。"
+K 和 P 是不寻常的与其对应的部分标志使用相反的含义。 如果您指定其中一个.text 部分通过 **/SECTION:.text，K**选项，没有任何区别，节标记中的在运行时[DUMPBIN](dumpbin-options.md)与[/HEADERS](headers.md)选项;已隐式缓存部分。 若要删除默认值，指定 **/SECTION:.text，！K**相反。 DUMPBIN 显示部分特征，包括"不缓存。"
 
 不具有 E、 R 或 W 设置的 PE 文件中的某个部分可能是无效的。
 
-**ALIGN =**_数_参数允许您指定的特定部分的对齐值。 _数_参数是以字节为单位，必须为 2 的幂。 请参阅[/align](../../build/reference/align-section-alignment.md)有关详细信息。
+**ALIGN =**_数_参数允许您指定的特定部分的对齐值。 _数_参数是以字节为单位，必须为 2 的幂。 请参阅[/align](align-section-alignment.md)有关详细信息。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此链接器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置 Visual c + + 项目属性](../../ide/working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[Visual Studio 中的设置 c + + 编译器和生成属性](../working-with-project-properties.md)。
 
 1. 选择**配置属性** > **链接器** > **命令行**属性页。
 
@@ -91,5 +91,5 @@ K 和 P 是不寻常的与其对应的部分标志使用相反的含义。 如�
 
 ## <a name="see-also"></a>请参阅
 
-[设置链接器选项](../../build/reference/setting-linker-options.md)<br/>
-[链接器选项](../../build/reference/linker-options.md)
+[MSVC 链接器引用](linking.md)<br/>
+[MSVC 链接器选项](linker-options.md)

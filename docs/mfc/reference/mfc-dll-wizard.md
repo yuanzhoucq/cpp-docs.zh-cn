@@ -11,12 +11,12 @@ helpviewer_keywords:
 - MFC DLLs [MFC]
 - DLLs [MFC], creating
 ms.assetid: 4e936031-7e39-4f40-a295-42a09c5ff264
-ms.openlocfilehash: f0fbc0b943865e4c6b4145618689a267224045bb
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c0c8edfd26fc6abdcef1cbb2cfa93d88f9a37cde
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57299278"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822699"
 ---
 # <a name="mfc-dll-wizard"></a>MFC DLL 向导
 
@@ -40,9 +40,9 @@ ms.locfileid: "57299278"
 
 ## <a name="see-also"></a>请参阅
 
-[创建和管理 Visual C++ 项目](../../ide/creating-and-managing-visual-cpp-projects.md)<br/>
-[属性页](../../ide/property-pages-visual-cpp.md)<br/>
-[使用项目属性](../../ide/working-with-project-properties.md)<br/>
+[创建和管理 Visual C++ 项目](../../build/creating-and-managing-visual-cpp-projects.md)<br/>
+[属性页](../../build/reference/property-pages-visual-cpp.md)<br/>
+[设置编译器和生成属性](../../build/working-with-project-properties.md)<br/>
 [MFC 类](../../mfc/reference/adding-an-mfc-class.md)<br/>
 [添加成员函数](../../ide/adding-a-member-function-visual-cpp.md)<br/>
 [实现接口](../../ide/implementing-an-interface-visual-cpp.md)<br/>

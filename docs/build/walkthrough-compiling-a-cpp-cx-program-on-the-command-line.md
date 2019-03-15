@@ -2,12 +2,12 @@
 title: 演练：编译 C + + /CX 程序命令行上
 ms.date: 09/24/2018
 ms.assetid: 626f5544-69ed-4736-83a9-f11389b371b2
-ms.openlocfilehash: 7f6716b379a11f88adb5c75643e325a9b2856eac
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: ad718a2eb876430d7721d0cd20cfd5b952750f8b
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413792"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57809504"
 ---
 # <a name="walkthrough-compiling-a-ccx-program-on-the-command-line"></a>演练：编译 C + + /CX 程序命令行上
 
@@ -24,11 +24,11 @@ ms.locfileid: "57413792"
 
 ## <a name="compiling-a-ccx-program"></a>编译 C++/CX 程序
 
-若要启用编译为 C + + /CX 中，必须使用[/ZW](../build/reference/zw-windows-runtime-compilation.md)编译器选项。 Visual C++ 编译器将生成一个面向 Windows 运行时的 .exe 文件，并链接到所需的库。
+若要启用编译为 C + + /CX 中，必须使用[/ZW](reference/zw-windows-runtime-compilation.md)编译器选项。 MSVC 编译器将生成面向 Windows 运行时，并链接到所需的库的.exe 文件。
 
 #### <a name="to-compile-a-ccx-application-on-the-command-line"></a>在命令行上编译 C++/CX 应用程序
 
-1. 打开**开发人员命令提示**窗口。 (在**启动**窗口中，打开**应用**。 打开**Visual Studio Tools**下你的 Visual Studio 版本的文件夹，然后选择**开发人员命令提示**快捷方式。)有关如何打开开发人员命令提示窗口的详细信息，请参阅[命令行上的生成 C/c + + 代码](../build/building-on-the-command-line.md)。
+1. 打开**开发人员命令提示**窗口。 (在**启动**窗口中，打开**应用**。 打开**Visual Studio Tools**下你的 Visual Studio 版本的文件夹，然后选择**开发人员命令提示**快捷方式。)有关如何打开开发人员命令提示窗口的详细信息，请参阅[使用命令行中的 MSVC 工具集](building-on-the-command-line.md)。
 
    可能需要管理员凭据才能成功编译此代码，取决于计算机的操作系统和配置。 若要以管理员身份运行命令提示符窗口中，打开快捷菜单**开发人员命令提示**，然后选择**以管理员身份运行**。
 
@@ -51,7 +51,7 @@ ms.locfileid: "57413792"
 
    已创建使用 Windows 运行时的 Visual c + + 源文件[平台命名空间](../cppcx/platform-namespace-c-cx.md)命名空间。
 
-1. 在命令提示符处，输入**cl /EHsc /ZW basiccx.cpp /link /subsystem: console**。 cl.exe 编译器将源代码编译到 .obj 文件中，然后运行链接器以生成名为 basiccx.exe 的可执行程序。 ( [/EHsc](../build/reference/eh-exception-handling-model.md)编译器选项指定 c + + 异常处理模型，并[/link](../build/reference/link-pass-options-to-linker.md)标志指定控制台应用程序。)
+1. 在命令提示符处，输入**cl /EHsc /ZW basiccx.cpp /link /subsystem: console**。 cl.exe 编译器将源代码编译到 .obj 文件中，然后运行链接器以生成名为 basiccx.exe 的可执行程序。 ( [/EHsc](reference/eh-exception-handling-model.md)编译器选项指定 c + + 异常处理模型，并[/link](reference/link-pass-options-to-linker.md)标志指定控制台应用程序。)
 
 1. 若要运行 basiccx.exe 程序，在命令提示符处，输入**basiccx**。
 
@@ -63,6 +63,5 @@ ms.locfileid: "57413792"
 
 ## <a name="see-also"></a>请参阅
 
-[C++ 语言参考](../cpp/cpp-language-reference.md)<br/>
-[生成 C/C++ 程序](../build/building-c-cpp-programs.md)<br/>
-[编译器选项](../build/reference/compiler-options.md)
+[项目和生成系统](projects-and-build-systems-cpp.md)<br/>
+[MSVC 编译器选项](reference/compiler-options.md)
