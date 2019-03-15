@@ -9,12 +9,12 @@ helpviewer_keywords:
 - projects [MFC], creating
 - DLLs [MFC], creating
 ms.assetid: 05540b93-4781-4a90-aadf-55158313f5b2
-ms.openlocfilehash: 21173582f68b1d50fefbe22250546fcce63730b4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 6ddc32ac3a2de5993e6755df0cd9fc7d3546094e
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57278829"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814145"
 ---
 # <a name="creating-an-mfc-dll-project"></a>创建 MFC DLL 项目
 
@@ -25,7 +25,7 @@ ms.locfileid: "57278829"
 
 ### <a name="to-create-an-mfc-dll-project-using-the-mfc-dll-wizard"></a>若要创建 MFC DLL 项目使用 MFC DLL 向导
 
-1. 请按帮助主题[使用 Visual C++ 应用程序向导创建项目](../../ide/creating-desktop-projects-by-using-application-wizards.md)中的说明进行操作。
+1. 按照帮助主题中的说明[创建一个 c + + 控制台应用程序项目](../../get-started/tutorial-console-cpp.md)。
 
 **请注意**中**新建项目**对话框中，选择`MFC DLL`模板窗格打开 MFC DLL 向导中的图标。
 
@@ -36,10 +36,11 @@ ms.locfileid: "57278829"
 
 1. 单击**完成**以关闭向导并打开新项目中的**解决方案资源管理器**。
 
-你的项目创建后，可以查看中创建的文件**解决方案资源管理器**。 有关向导为项目创建的文件的更多信息，请参见项目生成的文件 ReadMe.txt。 有关文件类型的详细信息，请参阅[Visual c + + 项目创建的文件类型](../../ide/file-types-created-for-visual-cpp-projects.md)。
+你的项目创建后，可以查看中创建的文件**解决方案资源管理器**。 有关向导为项目创建的文件的更多信息，请参见项目生成的文件 ReadMe.txt。 有关文件类型的详细信息，请参阅[Visual c + + 项目创建的文件类型](../../build/reference/file-types-created-for-visual-cpp-projects.md)。
 
 ## <a name="see-also"></a>请参阅
 
 [Visual C++ 项目类型](/visualstudio/debugger/debugging-preparation-visual-cpp-project-types)<br/>
 [用代码向导添加功能](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
-[属性页](../../ide/property-pages-visual-cpp.md)
+[属性页](../../build/reference/property-pages-visual-cpp.md)
+

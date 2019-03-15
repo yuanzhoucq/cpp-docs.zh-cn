@@ -26,12 +26,12 @@ helpviewer_keywords:
 - semicolon, command files
 - / command files
 ms.assetid: d54f5c81-7147-4b2c-a8db-68ce6eb1eabd
-ms.openlocfilehash: 8fdfeb16d41f51262cbd3a3814699a7b8dbc5fe4
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: e95427b571cd14ad39a7ba4f368b90e806f13862
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413324"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57820359"
 ---
 # <a name="running-lib"></a>运行 LIB
 
@@ -66,7 +66,7 @@ ms.locfileid: "57413324"
 
 如果 lib.exe 在运行时失败，则可以使用 **/ERRORREPORT**有关这些内部错误向 Microsoft 发送信息。
 
-有关详细信息 **/ERRORREPORT**，请参阅[/errorReport （报告内部编译器错误）](../../build/reference/errorreport-report-internal-compiler-errors.md)。
+有关详细信息 **/ERRORREPORT**，请参阅[/errorReport （报告内部编译器错误）](errorreport-report-internal-compiler-errors.md)。
 
 > **/LTCG**
 
@@ -90,10 +90,10 @@ ms.locfileid: "57413324"
 
 > **/WX**[**:NO**]
 
-将警告视为错误。 请参阅[/WX （将链接器警告视为错误）](../../build/reference/wx-treat-linker-warnings-as-errors.md)有关详细信息。
+将警告视为错误。 请参阅[/WX （将链接器警告视为错误）](wx-treat-linker-warnings-as-errors.md)有关详细信息。
 
 其他选项仅适用于特定的 LIB 模式。 这些选项描述每种模式的各节所述。
 
 ## <a name="see-also"></a>请参阅
 
-[LIB 引用](../../build/reference/lib-reference.md)
+[LIB 引用](lib-reference.md)

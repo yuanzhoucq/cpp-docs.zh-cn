@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - applications [MFC], managing
 ms.assetid: b72f4154-24db-4e75-bca3-6873e2459c15
-ms.openlocfilehash: 6bdcf97c921dc45939ab9ddf18f1d624c2fd83b8
-ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
+ms.openlocfilehash: 78b9ae467d3504f3922c540a3e4cd100322d8f4e
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55850293"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57808386"
 ---
 # <a name="application-information-and-management"></a>应用程序信息和管理
 
@@ -208,7 +208,8 @@ HINSTANCE AFXAPI AfxFindResourceHandle( LPCTSTR lpszName,  LPCTSTR lpszType );
 
 ##  <a name="afxfreelibrary"></a>  AfxFreeLibrary
 
-`AfxFreeLibrary` 和 `AfxLoadLibrary` 用于维护每个已加载库模块的引用计数。
+
+  `AfxFreeLibrary` 和 `AfxLoadLibrary` 用于维护每个已加载库模块的引用计数。
 
 ```
 BOOL AFXAPI AfxFreeLibrary(HINSTANCE hInstLib);
@@ -711,7 +712,7 @@ void AFXAPI AfxSetPerUserRegistration(BOOL bEnable);
 
 Windows Vista，访问注册表，通常可用的应用程序之前**HKEY_CLASSES_ROOT**节点。 但是，与 Windows Vista 或更高版本的操作系统，必须在提升模式下将 HKCR 写入运行应用程序。
 
-此方法使应用程序可以读取和写入注册表，而无需通过将从 HKCR 到 HKCU 注册表访问重定向在提升模式下运行。 有关详细信息，请参阅 [Linker Property Pages](../../ide/linker-property-pages.md)。
+此方法使应用程序可以读取和写入注册表，而无需通过将从 HKCR 到 HKCU 注册表访问重定向在提升模式下运行。 有关详细信息，请参阅 [Linker Property Pages](../../build/reference/linker-property-pages.md)。
 
 如果启用注册表重定向，则框架会将访问从到的 HKCR **HKEY_CURRENT_USER\Software\Classes**。 仅 MFC 和 ATL 框架受重定向影响。
 

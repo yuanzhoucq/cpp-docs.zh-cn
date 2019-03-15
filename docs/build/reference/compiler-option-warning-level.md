@@ -57,12 +57,12 @@ helpviewer_keywords:
 - -w compiler option [C++]
 - /W2 compiler option [C++]
 - /Wv compiler option [C++]
-ms.openlocfilehash: 4842e845013bf69a7bc033ba7b6abf5ecc7d5079
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 997a73541ab95a393bda4ebf5412c11f025b03a3
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441738"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57820684"
 ---
 # <a name="w-w0-w1-w2-w3-w4-w1-w2-w3-w4-wall-wd-we-wo-wv-wx-warning-level"></a>/w、 /W0、 /W1、 /W2、 /W3、 / w4、 /w1、 /w2、 /w3、 /w4、 /Wall、 /wd、 / /we、 /wo、 /Wv、 /WX （警告级别）
 
@@ -98,13 +98,13 @@ ms.locfileid: "50441738"
 |**/W0**<br /><br /> **/W1**<br /><br /> **/W2**<br /><br /> **/W3**<br /><br /> **/W4**|指定要由编译器生成的警告级别。 有效的警告等级 0 到 4 范围内：<br />**/ W0**禁止显示所有警告。 这相当于 **/w**。<br />**/ W1**显示等级 1 （严重） 警告。 **/ W1**是命令行编译器中的默认设置。<br />**/ W2**显示等级 1 和等级 2 （明显） 警告。<br />**/ W3**显示级别 1、 2 级和等级 3 （生产质量） 警告。 **/ W3**是在 IDE 中的默认设置。<br />**/ W4**显示级别 1，级别 2 和等级 3 警告以及在所有级别 4 （信息性） 的警告，默认情况下不会关闭。 我们建议使用此选项可以提供类似于 lint 的警告。 对于新项目，它可能是最好使用 **/w4**在所有编译; 这将确保尽可能少的可能的硬查找代码缺陷。|
 |**/Wall**|显示所有情况下显示的警告 **/w4**和其他警告的 **/w4**不包括 — 例如，默认情况下处于关闭状态的警告。 有关详细信息，请参阅[编译器警告，是 Off By Default](../../preprocessor/compiler-warnings-that-are-off-by-default.md)。|
 |**/Wv**\[**:**_version_]|显示仅在编译器版本中引入的警告*版本*及更早版本。 禁止显示代码中的新警告时迁移到较新版本的编译器，并修复它们保持您现有的生成过程，您可以使用此选项。 可选参数*版本*采用形式*nn*[。*mm*[。*和*]] 其中*nn*是主要版本号*mm*是可选的次要版本编号和*和*是可选的生成数编译器。 例如，使用 */Wv:17*若要显示在 Visual Studio 2012 （即，任何版本 17 的主要版本号的编译器） 或更早版本，引入的警告，但取消 Visual Studio 2013 （主要版本中引入的警告18） 及更高版本。 默认情况下 **/Wv**使用取消当前的编译器版本号，并不将任何警告。 有关哪些警告所抑制的编译器版本的信息，请参阅[由编译器版本的编译器警告](../../error-messages/compiler-warnings/compiler-warnings-by-compiler-version.md)。|
-|**/WX**|将所有编译器警告视为错误。 对于新项目，它可能是最好使用 **/WX**在所有编译; 中对所有警告进行都解析可确保最少的可能的硬查找代码缺陷。<br /><br /> 链接器还有 **/WX**选项。 有关详细信息，请参阅 [/WX（将链接器警告视为错误）](../../build/reference/wx-treat-linker-warnings-as-errors.md)。|
-|**/w1**_nnnn_<br /><br /> **/w2**_nnnn_<br /><br /> **/w3**_nnnn_<br /><br /> **/ w4**_nnnn_|为指定的警告数量设置警告等级_nnnn_。 这样可以设置特定的警告级别时更改该警告的编译器行为。 可以使用这些选项与其他警告选项结合使用，以强制执行的警告，而不是默认的 Visual Studio 提供自己的编码标准。<br /><br /> 例如， **/w34326**使 C4326 生成为级别 3 警告而不是 1 级。 如果在编译时通过使用两 **/w34326**选项和 **/W2**选项时，警告 C4326 不生成。|
+|**/WX**|将所有编译器警告视为错误。 对于新项目，它可能是最好使用 **/WX**在所有编译; 中对所有警告进行都解析可确保最少的可能的硬查找代码缺陷。<br /><br /> 链接器还有 **/WX**选项。 有关详细信息，请参阅 [/WX（将链接器警告视为错误）](wx-treat-linker-warnings-as-errors.md)。|
+|**/w1**_nnnn_<br /><br /> **/w2**_nnnn_<br /><br /> **/w3**_nnnn_<br /><br /> **/w4**_nnnn_|为指定的警告数量设置警告等级_nnnn_。 这样可以设置特定的警告级别时更改该警告的编译器行为。 可以使用这些选项与其他警告选项结合使用，以强制执行的警告，而不是默认的 Visual Studio 提供自己的编码标准。<br /><br /> 例如， **/w34326**使 C4326 生成为级别 3 警告而不是 1 级。 如果在编译时通过使用两 **/w34326**选项和 **/W2**选项时，警告 C4326 不生成。|
 |**/wd**_nnnn_|禁止显示由指定的编译器警告_nnnn_。<br /><br /> 例如， **/wd4326**禁止显示编译器警告 C4326。|
 |**/we**_nnnn_|将指定的编译器警告_nnnn_为错误。<br /><br /> 例如， **/we4326**导致警告 C4326 被视为编译器错误编号。|
 |**/wo**_nnnn_|编译器警告，它指定的报表_nnnn_仅一次。<br /><br /> 例如， **/wo4326**会导致警告 C4326 报告仅一次，第一次它遇到由编译器。|
 
-如果您使用的任何警告选项时使用创建预编译标头[/Yc](../../build/reference/yc-create-precompiled-header-file.md)选项，任何使用使用预编译标头[/Yu](../../build/reference/yu-use-precompiled-header-file.md)选项将使这些相同的警告选项生效电子邮件了。 您可以重写预编译标头中使用命令行上的另一个警告选项设置的警告选项。
+如果您使用的任何警告选项时使用创建预编译标头[/Yc](yc-create-precompiled-header-file.md)选项，任何使用使用预编译标头[/Yu](yu-use-precompiled-header-file.md)选项将使这些相同的警告选项生效电子邮件了。 您可以重写预编译标头中使用命令行上的另一个警告选项设置的警告选项。
 
 可以使用[#pragma 警告](../../preprocessor/warning.md)指令来控制级别的警告，它在编译时报告在特定源文件中。
 
@@ -114,7 +114,7 @@ ms.locfileid: "50441738"
 
 ### <a name="to-set-the-compiler-options-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置编译器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[Visual Studio 中的设置 c + + 编译器和生成属性](../working-with-project-properties.md)。
 
 1. 若要设置 **/W0**， **/W1**， **/W2**， **/W3**， **/w4**， **/wall**m **/Wv**， **/WX**或 **/WX-** 选项中，选择**配置属性** > **C /C + +** > **常规**属性页。
 
@@ -132,7 +132,7 @@ ms.locfileid: "50441738"
 
 1. 若要设置 **/wo**选项，选中**配置属性** > **C/c + +** > **命令行**属性页。 输入中的编译器选项**其他选项**框。
 
-1. 选择**确定**以保存所做的更改。
+1. 选择“确定”以保存更改。
 
 ### <a name="to-set-the-compiler-option-programmatically"></a>以编程方式设置编译器选项
 
@@ -140,5 +140,5 @@ ms.locfileid: "50441738"
 
 ## <a name="see-also"></a>请参阅
 
-[编译器选项](../../build/reference/compiler-options.md)<br/>
-[设置编译器选项](../../build/reference/setting-compiler-options.md)
+[MSVC 编译器选项](compiler-options.md)<br/>
+[MSVC 编译器命令行语法](compiler-command-line-syntax.md)

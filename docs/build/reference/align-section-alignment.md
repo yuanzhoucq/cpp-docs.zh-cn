@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -ALIGN linker option
 - section alignment
 - sections
-ms.openlocfilehash: b68ec42db9c927fe8f56dad8f5670059359a1843
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d8d2e6a859c68af473d49dc04b76f0a15056aa56
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50665785"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57809465"
 ---
 # <a name="align-section-alignment"></a>/ALIGN（节对齐）
 
@@ -26,7 +26,7 @@ ms.locfileid: "50665785"
 
 ### <a name="arguments"></a>自变量
 
-*数量*<br/>
+*number*<br/>
 对齐值 （字节）。
 
 ## <a name="remarks"></a>备注
@@ -35,13 +35,13 @@ ms.locfileid: "50665785"
 
 除非你正在编写设备驱动程序之类的应用程序，您应该不需要修改对齐方式。
 
-可以修改使用的对齐参数的特定部分的对齐方式[/section](../../build/reference/section-specify-section-attributes.md)选项。
+可以修改使用的对齐参数的特定部分的对齐方式[/section](section-specify-section-attributes.md)选项。
 
 您指定的对齐值不能小于最大的节对齐。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此链接器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置 Visual c + + 项目属性](../../ide/working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[Visual Studio 中的设置 c + + 编译器和生成属性](../working-with-project-properties.md)。
 
 1. 选择**配置属性** > **链接器** > **命令行**属性页。
 
@@ -53,5 +53,5 @@ ms.locfileid: "50665785"
 
 ## <a name="see-also"></a>请参阅
 
-[设置链接器选项](../../build/reference/setting-linker-options.md)<br/>
-[链接器选项](../../build/reference/linker-options.md)
+[MSVC 链接器引用](linking.md)<br/>
+[MSVC 链接器选项](linker-options.md)
