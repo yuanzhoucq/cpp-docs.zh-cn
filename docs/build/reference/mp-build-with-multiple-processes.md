@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /MP compiler option (C++)
 - MP compiler option (C++)
 - cl.exe compiler, multi-process build
-ms.openlocfilehash: d0a3e50ca75535d505e46c0e454a8e0902b1ffb1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8a66f6f6f1f4ce77e33df992b915be9ca5dcce70
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562079"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57808451"
 ---
 # <a name="mp-build-with-multiple-processes"></a>/MP（使用多个进程生成）
 
@@ -50,10 +50,10 @@ ms.locfileid: "50562079"
 |选项或语言功能|描述|
 |--------------------------------|-----------------|
 |[#import](../../preprocessor/hash-import-directive-cpp.md) 预处理器指令|将类型库中的类型转换为 C++ 类，然后将这些类写入头文件。|
-|[/E](../../build/reference/e-preprocess-to-stdout.md), [/EP](../../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md)|将预处理器输出复制到标准输出 (**stdout**)。|
-|[/Gm](../../build/reference/gm-enable-minimal-rebuild.md)|启用增量重新生成。|
-|[/showIncludes](../../build/reference/showincludes-list-include-files.md)|将包含文件的列表写入标准错误 (**stderr**)。|
-|[/Yc](../../build/reference/yc-create-precompiled-header-file.md)|编写预编译头文件。|
+|[/E](e-preprocess-to-stdout.md), [/EP](ep-preprocess-to-stdout-without-hash-line-directives.md)|将预处理器输出复制到标准输出 (**stdout**)。|
+|[/Gm](gm-enable-minimal-rebuild.md)|启用增量重新生成。|
+|[/showIncludes](showincludes-list-include-files.md)|将包含文件的列表写入标准错误 (**stderr**)。|
+|[/Yc](yc-create-precompiled-header-file.md)|编写预编译头文件。|
 
 ## <a name="diagnostic-messages"></a>诊断消息
 
@@ -61,7 +61,7 @@ ms.locfileid: "50562079"
 
 |诊断消息|描述|编译器行为|
 |------------------------|-----------------|-----------------------|
-|**C2813**|**#Import** 指令与 **/MP** 选项不兼容。|除非另外指定了 [编译器警告等级](../../build/reference/compiler-option-warning-level.md) 选项，否则编译终止。|
+|**C2813**|**#Import** 指令与 **/MP** 选项不兼容。|除非另外指定了 [编译器警告等级](compiler-option-warning-level.md) 选项，否则编译终止。|
 |**D9014**|为指定值无效*processMax*参数。|编译器将忽略无效值，并假定值为 1。|
 |**D9030**|指定选项与 **/MP**不兼容。|编译器会忽略 **/MP** 选项。|
 
@@ -99,7 +99,7 @@ ms.locfileid: "50562079"
 
 在有可用于编译源文件的进程时编译源文件。 如果文件多于进程数，则可用进程会编译第一组文件。 当进程处理完以前的文件并可处理其中一个剩余文件时，将处理剩余的文件。
 
-不要在命令行上多次指定同一源文件。 例如，如果某工具自动创建基于项目中依赖项信息的 [makefile](../../build/contents-of-a-makefile.md) ，可能会发生这种情况。 如果未指定 **/MP** 选项，编译器将按顺序处理文件列表，并重新编译每个出现的文件。 但是，如果指定了 **/MP** 选项，不同的编译器可能会同时编译相同的文件。 因此，不同的编译器将尝试同时写入相同的输出文件。 某个编译器将获得对输出文件独占写入访问权限并成功完成写入，而其他编译器则会失败并出现文件访问错误。
+不要在命令行上多次指定同一源文件。 例如，如果某工具自动创建基于项目中依赖项信息的 [makefile](contents-of-a-makefile.md) ，可能会发生这种情况。 如果未指定 **/MP** 选项，编译器将按顺序处理文件列表，并重新编译每个出现的文件。 但是，如果指定了 **/MP** 选项，不同的编译器可能会同时编译相同的文件。 因此，不同的编译器将尝试同时写入相同的输出文件。 某个编译器将获得对输出文件独占写入访问权限并成功完成写入，而其他编译器则会失败并出现文件访问错误。
 
 ### <a name="using-type-libraries-import"></a>使用类型库 (#import)
 

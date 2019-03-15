@@ -160,14 +160,13 @@ helpviewer_keywords:
 - C1852
 - C1901
 - C1903
-- C1904
 ms.assetid: 6c8df109-7594-48ed-987a-97d9fe2b04af
-ms.openlocfilehash: edf2227bd0a542ce9ca5e8a6a3f908347bd816e6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1159a635f0c7a61e591b4d96c4e55bd2baf44782
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677326"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814444"
 ---
 # <a name="compiler-fatal-errors-c999-through-c1999"></a>编译器错误 C999 到 C1999
 
@@ -224,7 +223,7 @@ ms.locfileid: "50677326"
 |错误 C1063|编译器限制: 编译器堆栈溢出|
 |[错误 C1064](../../error-messages/compiler-errors-1/fatal-error-c1064.md)|编译器限制: 标记已溢出内部缓冲区|
 |[错误 C1065](../../error-messages/compiler-errors-1/fatal-error-c1065.md)|编译器限制: 超出标记范围|
-|[错误 C1067](../../error-messages/compiler-errors-1/fatal-error-c1067.md)|编译器限制: 已超出类型记录的 64K 大小限制|
+|[错误 C1067](../../error-messages/compiler-errors-1/fatal-error-c1067.md)|编译器限制：已超出类型记录的大小的 64k 限制|
 |错误 C1068|无法打开文件“*file*”|
 |错误 C1069|无法读取编译器命令行|
 |错误 C1070|文件“*file*”中的 #if/#endif 对不匹配|
@@ -234,7 +233,7 @@ ms.locfileid: "50677326"
 |[错误 C1075](../../error-messages/compiler-errors-1/fatal-error-c1075.md)|左侧的 *token* 与文件结尾不匹配|
 |[错误 C1076](../../error-messages/compiler-errors-1/fatal-error-c1076.md)|编译器限制: 达到内部堆限制；使用 /Zm 指定更高的限制|
 |错误 C1077|编译器限制：不能有 *number* 个以上的命令行选项|
-|[错误 C1079](../../error-messages/compiler-errors-1/fatal-error-c1079.md)|编译器限制: 超出 PCH 文件大小限制|
+|[错误 C1079](../../error-messages/compiler-errors-1/fatal-error-c1079.md)|编译器限制：超出 PCH 文件大小限制|
 |[错误 C1080](../../error-messages/compiler-errors-1/fatal-error-c1080.md)|编译器限制：命令行选项超出 *number* 个字符的限制|
 |[错误 C1081](../../error-messages/compiler-errors-1/fatal-error-c1081.md)|“*file*”：文件名太长|
 |错误 C1082|无法关闭 *type* 文件：“*file*”： *message*|
@@ -265,7 +264,7 @@ ms.locfileid: "50677326"
 |错误 C1111|模板/泛型参数太多|
 |错误 C1112|编译器限制： `'number`”个宏参数（过多），只允许 *number* 个|
 |[错误 C1113](../../error-messages/compiler-errors-1/fatal-error-c1113.md)|在“*file*”上 #using 失败|
-|错误 C1114|“*file*”：WinRT 不支持托管程序集的 #using|
+|错误 C1114|'*文件*:WinRT 不支持 #using 的托管程序集|
 |[错误 C1120](../../error-messages/compiler-errors-1/fatal-error-c1120.md)|对于“*function*”，调用 GetProcAddress 失败|
 |[错误 C1121](../../error-messages/compiler-errors-1/fatal-error-c1121.md)|调用 CryptoAPI 失败|
 |[错误 C1126](../../error-messages/compiler-errors-1/fatal-error-c1126.md)|自动分配超过 *size*|

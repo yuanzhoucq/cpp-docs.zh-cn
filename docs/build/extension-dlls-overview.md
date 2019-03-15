@@ -8,12 +8,12 @@ helpviewer_keywords:
 - shared DLL versions [C++]
 - extension DLLs [C++], about MFC extension DLLs
 ms.assetid: eb5e10b7-d615-4bc7-908d-e3e99b7b1d5f
-ms.openlocfilehash: 0ad5c82d72a3cd9b4801274aefd40d96afdbcdd1
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: ab9b980cbb3e89eebee945e90c54f23d6717a1a4
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57425050"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816472"
 ---
 # <a name="mfc-extension-dlls-overview"></a>MFC 扩展 Dll:概述
 
@@ -27,22 +27,22 @@ MFC 扩展 DLL 是通常实现从现有的 Microsoft 基础类库类派生的可
 
 ## <a name="what-do-you-want-to-do"></a>你希望做什么？
 
-- [初始化 MFC 扩展 DLL](../build/run-time-library-behavior.md#initializing-extension-dlls)
+- [初始化 MFC 扩展 DLL](run-time-library-behavior.md#initializing-extension-dlls)
 
 ## <a name="what-do-you-want-to-know-more-about"></a>你想进一步了解什么？
 
-- [MFC 扩展 DLL](../build/extension-dlls.md)
+- [MFC 扩展 DLL](extension-dlls.md)
 
-- [在规则 MFC DLL 中使用数据库、OLE 和套接字 MFC 扩展 DLL](../build/using-database-ole-and-sockets-extension-dlls-in-regular-dlls.md)
+- [在规则 MFC DLL 中使用数据库、OLE 和套接字 MFC 扩展 DLL](using-database-ole-and-sockets-extension-dlls-in-regular-dlls.md)
 
-- [非 MFC DLL：概述](../build/non-mfc-dlls-overview.md)
+- [非 MFC DLL：概述](non-mfc-dlls-overview.md)
 
-- [静态链接到 MFC 的规则 MFC Dll](../build/regular-dlls-statically-linked-to-mfc.md)
+- [静态链接到 MFC 的规则 MFC Dll](regular-dlls-statically-linked-to-mfc.md)
 
-- [动态链接到 MFC 的规则 MFC Dll](../build/regular-dlls-dynamically-linked-to-mfc.md)
+- [动态链接到 MFC 的规则 MFC Dll](regular-dlls-dynamically-linked-to-mfc.md)
 
 - [创建 MFC DLL](../mfc/reference/mfc-dll-wizard.md)
 
 ## <a name="see-also"></a>请参阅
 
-[DLL 的类型](../build/kinds-of-dlls.md)
+[DLL 的类型](kinds-of-dlls.md)

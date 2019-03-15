@@ -10,12 +10,12 @@ helpviewer_keywords:
 - cl.exe compiler [C++], compiling without linking
 - cl.exe compiler [C++], controlling linker
 ms.assetid: eae47ef7-09eb-40c9-b318-7c714cd452fc
-ms.openlocfilehash: 4e65801fcddef739f3fabe88b2b940602fde965a
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: f8d8c5e1b0ca4d2a35a57683fea2e6de12747860
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57412726"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57821477"
 ---
 # <a name="cl-invokes-the-linker"></a>CL 调用链接器
 
@@ -28,7 +28,7 @@ CL 编译除非使用 /c 选项后会自动调用链接器。 CL 将传递给链
 |/Zg|生成函数原型|
 |/Zs|检查语法|
 
-有关链接的更多详细信息，请参阅[链接器选项](../../build/reference/linker-options.md)。
+有关链接的更多详细信息，请参阅[MSVC 链接器选项](linker-options.md)。
 
 ## <a name="example"></a>示例
 
@@ -46,7 +46,7 @@ CL 编译除非使用 /c 选项后会自动调用链接器。 CL 将传递给链
 CL MAIN.c MOD1.C MOD2.C MYGRAPH.lib
 ```
 
-CL 首先编译 C 源文件，并创建 MAIN.obj、 MOD1.obj 和 MOD2.obj 对象文件。编译器会在每个.obj 文件中提供的标准库的名称。 有关更多详细信息，请参阅[使用运行时库](../../build/reference/md-mt-ld-use-run-time-library.md)。
+CL 首先编译 C 源文件，并创建 MAIN.obj、 MOD1.obj 和 MOD2.obj 对象文件。编译器会在每个.obj 文件中提供的标准库的名称。 有关更多详细信息，请参阅[使用运行时库](md-mt-ld-use-run-time-library.md)。
 
 CL 到链接器传递.obj 文件，以及 MYGRAPH.lib，名称的名称。 链接器解析外部引用，如下所示：
 
@@ -58,5 +58,5 @@ CL 到链接器传递.obj 文件，以及 MYGRAPH.lib，名称的名称。 链�
 
 ## <a name="see-also"></a>请参阅
 
-[编译器选项](../../build/reference/compiler-options.md)<br/>
-[设置编译器选项](../../build/reference/setting-compiler-options.md)
+[MSVC 编译器选项](compiler-options.md)<br/>
+[设置编译器选项](compiler-command-line-syntax.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DLLs [C++], building
 - DLL linker option [C++]
 ms.assetid: c7685aec-31d0-490f-9503-fb5171a23609
-ms.openlocfilehash: edad85b2890679e4247c7d34b4e19534e871f4dd
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 5f7907d659ee3bedc590b88320df03edce005b06
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420058"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820502"
 ---
 # <a name="dll-build-a-dll"></a>/DLL（生成 DLL）
 
@@ -29,9 +29,9 @@ ms.locfileid: "57420058"
 
 1. [__declspec （dllexport)](../../cpp/dllexport-dllimport.md)中的源代码
 
-1. [导出](../../build/reference/exports.md).def 文件语句
+1. [导出](exports.md).def 文件语句
 
-1. [/Export](../../build/reference/export-exports-a-function.md) LINK 命令中的规范
+1. [/Export](export-exports-a-function.md) LINK 命令中的规范
 
 程序可以使用多个方法。
 
@@ -43,7 +43,7 @@ ms.locfileid: "57420058"
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此链接器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置 Visual c + + 项目属性](../../ide/working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[Visual Studio 中的设置 c + + 编译器和生成属性](../working-with-project-properties.md)。
 
 1. 单击**配置属性**文件夹。
 
@@ -57,5 +57,5 @@ ms.locfileid: "57420058"
 
 ## <a name="see-also"></a>请参阅
 
-[设置链接器选项](../../build/reference/setting-linker-options.md)<br/>
-[链接器选项](../../build/reference/linker-options.md)
+[MSVC 链接器引用](linking.md)<br/>
+[MSVC 链接器选项](linker-options.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - migration [C++], /clr compiler option
 - /clr compiler option [C++], porting to
 ms.assetid: c9290b8b-436a-4510-8b56-eae51f4a9afc
-ms.openlocfilehash: 02e678f98773f9ae7bb4f611210329a7a1116f17
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 8c4827891799d2c76a344e4c6da8f3d96333826e
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57749108"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816023"
 ---
 # <a name="how-to-migrate-to-clr"></a>如何：迁移到 /clr
 
@@ -98,7 +98,7 @@ COMObj2->Method(args);  // C++ equivalent
 **/clr**可以通过中的说明在开发环境中选取[/clr （公共语言运行时编译）](../build/reference/clr-common-language-runtime-compilation.md)。 正如前面提到的此步骤将自动禁用冲突的项目设置。
 
 > [!NOTE]
->  从 Visual c + + 2003 中，升级托管的库或 web 服务项目时 **/Zl**编译器选项将添加到**命令行**属性页。 这将导致 LNK2001。 删除 **/Zl**从**命令行**属性页后，可以解决。 请参阅[/Zl （省略默认库名）](../build/reference/zl-omit-default-library-name.md)并[使用项目属性](../ide/working-with-project-properties.md)有关详细信息。 或添加到链接器的 msvcrt.lib 和 msvcmrt.lib**附加依赖项**属性。
+>  从 Visual c + + 2003 中，升级托管的库或 web 服务项目时 **/Zl**编译器选项将添加到**命令行**属性页。 这将导致 LNK2001。 删除 **/Zl**从**命令行**属性页后，可以解决。 请参阅[/Zl （省略默认库名）](../build/reference/zl-omit-default-library-name.md)并[设置编译器和生成属性](../build/working-with-project-properties.md)有关详细信息。 或添加到链接器的 msvcrt.lib 和 msvcmrt.lib**附加依赖项**属性。
 
 对于使用生成文件生成的项目，不兼容的编译器选项必须处于禁用状态一次手动 **/clr**添加。 请参阅 /[/clr 限制](../build/reference/clr-restrictions.md)为与不兼容的编译器选项的信息 **/clr**。
 

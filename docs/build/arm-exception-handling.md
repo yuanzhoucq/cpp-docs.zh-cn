@@ -2,16 +2,16 @@
 title: ARM 异常处理
 ms.date: 07/11/2018
 ms.assetid: fe0e615f-c033-4ad5-97f4-ff96af45b201
-ms.openlocfilehash: f6df8afd453f7e71d1ecc2ebb188c079a3aad02a
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: cbbec3f40df2765fa76399ce667ae30f4533b018
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694343"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814535"
 ---
 # <a name="arm-exception-handling"></a>ARM 异常处理
 
-针对异步硬件生成的异常和同步软件生成的异常，ARM 上的 Windows 将使用相同的结构化异常处理机制。 将通过使用语言帮助器函数，基于 Windows 结构化异常处理来生成特定于语言的异常处理程序。 本文档描述了 ARM 和由 Microsoft ARM 汇编程序和 Visual c + + 编译器生成的代码使用的语言帮助器上的 Windows 中的异常处理。
+针对异步硬件生成的异常和同步软件生成的异常，ARM 上的 Windows 将使用相同的结构化异常处理机制。 将通过使用语言帮助器函数，基于 Windows 结构化异常处理来生成特定于语言的异常处理程序。 本文档描述了 ARM 和由 Microsoft ARM 汇编程序和 MSVC 编译器生成的代码使用的语言帮助器上的 Windows 中的异常处理。
 
 ## <a name="arm-exception-handling"></a>ARM 异常处理
 
@@ -104,7 +104,7 @@ ARM 的每个 .pdata 记录的长度是 8 个字节。 记录的一般格式是�
 
 |指令|在下列情况下将假定存在操作码：|大小|操作码|展开代码|
 |-----------------|-----------------------------------|----------|------------|------------------|
-|1|*H*= = 1|16|`push {r0-r3}`|04|
+|1|*H*==1|16|`push {r0-r3}`|04|
 |2|*C*= = 1 或*L*= = 1 或*R*= = 0 或 PF = = 1|16/32|`push {registers}`|80-BF/D0-DF/EC-ED|
 |3a|*C*= = 1 和 (*L*= = 0 和*R*= = 1 且 PF = = 0)|16|`mov r11,sp`|C0-CF/FB|
 |3b|*C*= = 1 和 (*L*= = 1 或*R*= = 0 或 PF = = 1)|32|`add r11,sp,#xx`|FC|
@@ -147,8 +147,8 @@ ARM 的每个 .pdata 记录的长度是 8 个字节。 记录的一般格式是�
 |8|*C*= = 1 或 (*L*= = 1 和*H*= = 0) 或*R*= = 0 或*EF*= = 1|16/32|`pop   {registers}`|
 |9a|*H*= = 1 并且*L*= = 0|16|`add   sp,sp,#0x10`|
 |9b|*H*= = 1 并且*L*= = 1|32|`ldr   pc,[sp],#0x14`|
-|10a|*Ret*= = 1|16|`bx    reg`|
-|10b|*Ret*= = 2|32|`b     address`|
+|10a|*Ret*==1|16|`bx    reg`|
+|10b|*Ret*==2|32|`b     address`|
 
 如果指定了不可折叠的调整，则指令 6 为显式堆栈调整。 因为*PF*无关*EF*，可以有指令 5 存在且没有指令 6 或进行相反转换。
 
@@ -190,7 +190,7 @@ ARM 的每个 .pdata 记录的长度是 8 个字节。 记录的一般格式是�
 
 1. 如果*X*标头中的字段为 1，则展开代码字节后跟异常处理程序信息。 这由一个*异常处理程序 RVA*包含地址的异常处理程序，然后输入 （长度可变） 异常处理程序所需的数据量。
 
-.xdata 记录的设计目的是为了能够提取前 8 个字节并计算该记录的完整大小，其中不包括它后面的大小可变的异常数据的长度。 此代码段将计算该记录大小：
+.xdata 记录的设计目的是为了能够获取前 8 个字节并计算该记录的完整大小，其中不包括它后面的大小可变的异常数据的长度。 此代码段将计算该记录大小：
 
 ```cpp
 ULONG ComputeXdataSize(PULONG *Xdata)
@@ -444,7 +444,7 @@ Epilogue:
 
    - *堆栈调整*= 0，表示未进行堆栈调整
 
-### <a name="example-2-nested-function-with-local-allocation"></a>示例 2：具有本地分配的嵌套函数
+### <a name="example-2-nested-function-with-local-allocation"></a>示例 2：具有本地分配的嵌套的函数
 
 ```asm
 Prologue:
@@ -546,7 +546,7 @@ Epilogues:
 
    - *标志*= 0，表示存在.xdata 记录 （因多个尾声而需要）
 
-   - *.xdata 地址*-0x00400000
+   - *.xdata address* - 0x00400000
 
 .xdata（变量，6 个字）：
 
@@ -576,7 +576,7 @@ Epilogues:
 
    - 展开代码 2 = 0xFF：末尾
 
-### <a name="example-5-function-with-dynamic-stack-and-inner-epilogue"></a>示例 5：具有动态堆栈和内部尾声的函数
+### <a name="example-5-function-with-dynamic-stack-and-inner-epilogue"></a>示例 5:具有动态堆栈和内部尾声的函数
 
 ```asm
 Prologue:
@@ -606,7 +606,7 @@ Epilogue:
 
    - *标志*= 0，表示存在.xdata 记录 （因多个尾声而需要）
 
-   - *.xdata 地址*-0x00400000
+   - *.xdata address* - 0x00400000
 
 .xdata（变量，3 个字）：
 
@@ -626,7 +626,7 @@ Epilogue:
 
    - *代码字*= 0x01，表示展开代码的一个 32 位字
 
-- 字 1：尾声范围偏移量为 0xC6 (= 0x18C/2)，从 0x00 处开始展开代码索引并且具有条件 0x0E （始终）
+- 字 1:尾声范围偏移量为 0xC6 （= 0x18C/2），从 0x00 处并且具有条件 0x0e （始终） 开始展开代码索引
 
 - 展开代码，从字 2 处开始：（在序言/尾声之间进行共享）
 
@@ -638,7 +638,7 @@ Epilogue:
 
    - 展开代码 3 = 0xFD：末尾，计为尾声的 16 位指令
 
-### <a name="example-6-function-with-exception-handler"></a>示例 6：具有异常处理程序的函数
+### <a name="example-6-function-with-exception-handler"></a>示例 6:具有异常处理程序函数
 
 ```asm
 Prologue:
@@ -664,7 +664,7 @@ Epilogue:
 
    - *标志*= 0，表示存在.xdata 记录 （因多个尾声而需要）
 
-   - *.xdata 地址*-0x00400000
+   - *.xdata address* - 0x00400000
 
 .xdata（变量，5 个字）：
 
@@ -698,7 +698,7 @@ Epilogue:
 
 - 字 4 及之后的字为内联异常数据
 
-### <a name="example-7-funclet"></a>示例 7：Funclet
+### <a name="example-7-funclet"></a>示例 7:Funclet
 
 ```asm
 Function:
@@ -739,5 +739,5 @@ Function:
 
 ## <a name="see-also"></a>请参阅
 
-[ARM ABI 约定概述](../build/overview-of-arm-abi-conventions.md)<br/>
-[Visual C++ ARM 迁移的常见问题](../build/common-visual-cpp-arm-migration-issues.md)
+[ARM ABI 约定概述](overview-of-arm-abi-conventions.md)<br/>
+[Visual C++ ARM 迁移的常见问题](common-visual-cpp-arm-migration-issues.md)

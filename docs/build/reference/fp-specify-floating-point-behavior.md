@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -fp compiler option [C++]
 - /fp compiler option [C++]
 ms.assetid: 10469d6b-e68b-4268-8075-d073f4f5d57e
-ms.openlocfilehash: c571bf104fd7e8f6a287c3dd35c444d904b4b7e8
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: 616efc0980c6ddadfee078dbe7a382372c5636ec
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54894089"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818162"
 ---
 # <a name="fp-specify-floating-point-behavior"></a>/fp （指定浮点行为）
 
@@ -51,7 +51,7 @@ ms.locfileid: "54894089"
 
 #### <a name="fast"></a>快速
 
-**/Fp: fast**选项使编译器能够重新排序、 合并或简化浮点运算，以优化浮点代码的速度和空间。 编译器可能会忽略在赋值语句舍入、 类型强制转换或函数调用。 它可能会对操作重新排序或执行代数转换，例如，使用关联和分布式法律，即使此类转换导致显著不同的舍入行为。 由于此增强优化某些浮点计算的结果可能不同于由其他生成的那些 **/fp**选项。 特殊值 （NaN、 + infinity、-infinity、-0.0） 不会传播，或根据 IEEE 754 标准严格行为。 在下，可生成浮点缩写 **/fp: fast**。 编译器仍受下的基础体系结构 **/fp: fast**，以及额外的优化可通过使用[/arch](../../build/reference/arch-minimum-cpu-architecture.md)选项。
+**/Fp: fast**选项使编译器能够重新排序、 合并或简化浮点运算，以优化浮点代码的速度和空间。 编译器可能会忽略在赋值语句舍入、 类型强制转换或函数调用。 它可能会对操作重新排序或执行代数转换，例如，使用关联和分布式法律，即使此类转换导致显著不同的舍入行为。 由于此增强优化某些浮点计算的结果可能不同于由其他生成的那些 **/fp**选项。 特殊值 （NaN、 + infinity、-infinity、-0.0） 不会传播，或根据 IEEE 754 标准严格行为。 在下，可生成浮点缩写 **/fp: fast**。 编译器仍受下的基础体系结构 **/fp: fast**，以及额外的优化可通过使用[/arch](arch-minimum-cpu-architecture.md)选项。
 
 下 **/fp: fast**，编译器将生成用于在默认的浮点环境中运行的代码，并假定浮点环境不是访问或修改在运行时。 也就是说，它假定，该代码不取消屏蔽浮点异常、 读取或写入浮点状态注册或更改舍入模式。
 
@@ -67,7 +67,7 @@ ms.locfileid: "54894089"
 
 多个 **/fp**在相同的编译器命令行中指定选项。 只有一个 **/fp: strict**， **/fp: fast**，并 **/fp： 精确**选项可以实际上是一次。 如果命令行上指定多个以下选项之一，则优先采用更高版本的选项和编译器生成警告。 **/Fp: strict**并 **/fp： 除**选项都不符合 **/clr**。
 
-[/Za](../../build/reference/za-ze-disable-language-extensions.md) （ANSI 兼容性） 选项不兼容 **/fp**。
+[/Za](za-ze-disable-language-extensions.md) （ANSI 兼容性） 选项不兼容 **/fp**。
 
 ### <a name="using-pragmas-to-control-floating-point-behavior"></a>使用杂注控制浮点行为
 
@@ -256,7 +256,7 @@ float casting(float a, float b)
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[Visual Studio 中的设置 c + + 编译器和生成属性](../working-with-project-properties.md)。
 
 1. 选择**配置属性** > **C/c + +** > **代码生成**属性页。
 
@@ -268,6 +268,6 @@ float casting(float a, float b)
 
 ## <a name="see-also"></a>请参阅
 
-[编译器选项](compiler-options.md)<br/>
-[设置编译器选项](setting-compiler-options.md)<br/>
-[Microsoft Visual c + + 浮点优化](floating-point-optimization.md)<br/>
+[MSVC 编译器选项](compiler-options.md)<br/>
+[MSVC 编译器命令行语法](compiler-command-line-syntax.md)<br/>
+[MSVC 浮点优化](floating-point-optimization.md)<br/>

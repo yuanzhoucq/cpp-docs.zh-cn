@@ -6,12 +6,12 @@ helpviewer_keywords:
 - DLLs [C++], types
 - DLLs [C++], MFC
 ms.assetid: f6a30db9-6138-4b2c-90cc-a17855e499a6
-ms.openlocfilehash: fb63814161fb72121a34d2857b6fada3866e505a
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: f4aa8b1be7cd9ad32b10f12c5d1dfd3ae86adc1d
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424803"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820281"
 ---
 # <a name="kinds-of-dlls"></a>DLL 类型
 
@@ -31,13 +31,13 @@ MFC 库本身不可用，在任一静态链接库或若干 Dll，使用 MFC DLL 
 
 ### <a name="what-do-you-want-to-know-more-about"></a>你想进一步了解什么？
 
-- [非 MFC DLL：概述](../build/non-mfc-dlls-overview.md)
+- [非 MFC DLL：概述](non-mfc-dlls-overview.md)
 
-- [静态链接到 MFC 的规则 MFC Dll](../build/regular-dlls-statically-linked-to-mfc.md)
+- [静态链接到 MFC 的规则 MFC Dll](regular-dlls-statically-linked-to-mfc.md)
 
-- [动态链接到 MFC 的规则 MFC Dll](../build/regular-dlls-dynamically-linked-to-mfc.md)
+- [动态链接到 MFC 的规则 MFC Dll](regular-dlls-dynamically-linked-to-mfc.md)
 
-- [MFC 扩展 DLL：概述](../build/extension-dlls-overview.md)
+- [MFC 扩展 DLL：概述](extension-dlls-overview.md)
 
 - [要使用的 DLL 哪种类型](#_core_which_kind_of_dll_to_use)
 
@@ -59,14 +59,14 @@ MFC 库本身不可用，在任一静态链接库或若干 Dll，使用 MFC DLL 
 
 ### <a name="what-do-you-want-to-know-more-about"></a>你想进一步了解什么？
 
-- [非 MFC DLL：概述](../build/non-mfc-dlls-overview.md)
+- [非 MFC DLL：概述](non-mfc-dlls-overview.md)
 
-- [静态链接到 MFC 的规则 MFC Dll](../build/regular-dlls-statically-linked-to-mfc.md)
+- [静态链接到 MFC 的规则 MFC Dll](regular-dlls-statically-linked-to-mfc.md)
 
-- [动态链接到 MFC 的规则 MFC Dll](../build/regular-dlls-dynamically-linked-to-mfc.md)
+- [动态链接到 MFC 的规则 MFC Dll](regular-dlls-dynamically-linked-to-mfc.md)
 
-- [MFC 扩展 DLL：概述](../build/extension-dlls-overview.md)
+- [MFC 扩展 DLL：概述](extension-dlls-overview.md)
 
 ## <a name="see-also"></a>请参阅
 
-[Visual C++ 中的 DLL](../build/dlls-in-visual-cpp.md)
+[Visual C++ 中的 DLL](dlls-in-visual-cpp.md)

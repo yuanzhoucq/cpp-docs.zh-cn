@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0025
 ms.assetid: 57725c78-bc63-44f3-9667-2969b2d7c41d
-ms.openlocfilehash: 5cc6a042c04bc205dd3cf2242d48f2572a51885c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5f3699dce75a20b9cc6e1d712bc5702543ab7b6c
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50599670"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814561"
 ---
 # <a name="project-build-error-prj0025"></a>项目生成错误 PRJ0025
 
@@ -23,4 +23,4 @@ ms.locfileid: "50599670"
 
 此错误的解决方法是更新生成规则的内容或生成事件以使用 ANSI 或在计算机上安装的代码页，并将其设置为系统默认值。
 
-有关详细信息自定义生成步骤和生成事件，请参阅[了解自定义生成步骤和生成事件](../../ide/understanding-custom-build-steps-and-build-events.md)。
+有关详细信息自定义生成步骤和生成事件，请参阅[了解自定义生成步骤和生成事件](../../build/understanding-custom-build-steps-and-build-events.md)。

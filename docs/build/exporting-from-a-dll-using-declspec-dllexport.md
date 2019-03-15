@@ -10,12 +10,12 @@ helpviewer_keywords:
 - export directives [C++]
 - exporting DLLs [C++], __declspec(dllexport) keyword
 ms.assetid: a35e25e8-7263-4a04-bad4-00b284458679
-ms.openlocfilehash: 48592fd6162ee354d82e73228e8b144ef0f354ed
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 3b6b9733776f30fc8dcbfeee709b7d24e0f0187b
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420579"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810232"
 ---
 # <a name="exporting-from-a-dll-using-declspecdllexport"></a>使用 __declspec(dllexport) 从 DLL 导出
 
@@ -49,7 +49,7 @@ class __declspec(dllexport) CExampleExport : public CObject
 #define DllExport   __declspec( dllexport )
 ```
 
-**__declspec （dllexport)** 存储函数的 DLL 导出表中的名称。 如果你想要优化的表的大小，请参阅[从按序号而不是按名称的 DLL 导出函数](../build/exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md)。
+**__declspec （dllexport)** 存储函数的 DLL 导出表中的名称。 如果你想要优化的表的大小，请参阅[从按序号而不是按名称的 DLL 导出函数](exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md)。
 
 > [!NOTE]
 >  当移植 DLL 源代码从 Win16 到 Win32 时，将为每个实例 **__export**与 **__declspec （dllexport)**。
@@ -58,28 +58,28 @@ class __declspec(dllexport) CExampleExport : public CObject
 
 ## <a name="what-do-you-want-to-do"></a>你希望做什么？
 
-- [使用.def 文件从 DLL 导出](../build/exporting-from-a-dll-using-def-files.md)
+- [使用.def 文件从 DLL 导出](exporting-from-a-dll-using-def-files.md)
 
-- [导出和导入使用 AFX_EXT_CLASS](../build/exporting-and-importing-using-afx-ext-class.md)
+- [导出和导入使用 AFX_EXT_CLASS](exporting-and-importing-using-afx-ext-class.md)
 
-- [导出 c + + 函数以用于 C 语言可执行文件](../build/exporting-cpp-functions-for-use-in-c-language-executables.md)
+- [导出 c + + 函数以用于 C 语言可执行文件](exporting-cpp-functions-for-use-in-c-language-executables.md)
 
-- [导出 C 函数以用于 C 或 c + + 语言可执行文件](../build/exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
+- [导出 C 函数以用于 C 或 c + + 语言可执行文件](exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
 
-- [确定要使用的导出方法](../build/determining-which-exporting-method-to-use.md)
+- [确定要使用的导出方法](determining-which-exporting-method-to-use.md)
 
-- [导入到使用 __declspec （dllimport） 的应用程序](../build/importing-into-an-application-using-declspec-dllimport.md)
+- [导入到使用 __declspec （dllimport） 的应用程序](importing-into-an-application-using-declspec-dllimport.md)
 
-- [初始化 DLL](../build/run-time-library-behavior.md#initializing-a-dll)
+- [初始化 DLL](run-time-library-behavior.md#initializing-a-dll)
 
 ## <a name="what-do-you-want-to-know-more-about"></a>你想进一步了解什么？
 
 - [__Declspec 关键字](../cpp/declspec.md)
 
-- [导入和导出内联函数](../build/importing-and-exporting-inline-functions.md)
+- [导入和导出内联函数](importing-and-exporting-inline-functions.md)
 
-- [相互导入](../build/mutual-imports.md)
+- [相互导入](mutual-imports.md)
 
 ## <a name="see-also"></a>请参阅
 
-[从 DLL 导出](../build/exporting-from-a-dll.md)
+[从 DLL 导出](exporting-from-a-dll.md)
