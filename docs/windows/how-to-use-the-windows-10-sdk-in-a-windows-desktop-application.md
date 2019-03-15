@@ -1,16 +1,16 @@
 ---
-title: 如何：在 Windows 桌面应用程序中使用 Windows 10 SDK
+title: 如何：使用 Windows 10 SDK 中的 Windows 桌面应用程序
 ms.custom: get-started-article
 ms.date: 07/12/2018
 ms.assetid: eed6421e-9355-44a6-9582-3f1d453a6d44
-ms.openlocfilehash: ed860a229866991b01266093058b71cc2ae84986
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 25ef3674a7ab741f20a07d6e65d1b5524fb88d5f
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50669113"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57809920"
 ---
-# <a name="how-to-use-the-windows-10-sdk-in-a-windows-desktop-application"></a>如何：在 Windows 桌面应用程序中使用 Windows 10 SDK
+# <a name="how-to-use-the-windows-10-sdk-in-a-windows-desktop-application"></a>如何：使用 Windows 10 SDK 中的 Windows 桌面应用程序
 
 当在 Visual Studio 2017 中创建经典 Windows 桌面项目时，它是默认设置使用 c + + 桌面工作负载的安装或上一次更新时已安装了 Windows 10 SDK 的版本进行生成。 Windows 7 和更高版本，此版本的 Windows SDK 都兼容。 请参阅[使用 Windows 标头](/windows/desktop/WinProg/using-the-windows-headers)有关面向特定版本 Windows 的详细信息。
 
@@ -38,7 +38,7 @@ ms.locfileid: "50669113"
 
    `Retargeting End: 1 completed, 0 failed, 0 skipped`
 
-4. 打开项目属性，然后在 **“配置属性”-&gt;“常规”** 部分中查看 **“Windows 目标平台版本”** 的值。 更改此处的值与执行过程具有相同的效果。 请参阅 [General Property Page (Project)](../ide/general-property-page-project.md)。
+4. 打开项目属性，然后在 **“配置属性”-&gt;“常规”** 部分中查看 **“Windows 目标平台版本”** 的值。 更改此处的值与执行过程具有相同的效果。 请参阅 [General Property Page (Project)](../build/reference/general-property-page-project.md)。
 
    ![目标平台版本](../windows/media/retargetingwindowssdk3.PNG "RetargetingWindowsSDK3")
 

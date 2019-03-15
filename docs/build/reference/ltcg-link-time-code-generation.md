@@ -13,12 +13,12 @@ helpviewer_keywords:
 - -LTCG linker option
 - LTCG linker option
 ms.assetid: 788c6f52-fdb8-40c2-90af-4026ea2cf2e2
-ms.openlocfilehash: 68c12cc7666da489870da1cacacc5053aeca5b51
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 40fb591952180735de3a2c226a3953a303c7d90f
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50523209"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810310"
 ---
 # <a name="ltcg-link-time-code-generation"></a>/LTCG（链接时间代码生成）
 
@@ -37,64 +37,64 @@ ms.locfileid: "50523209"
 **增量**<br/>
 （可选）指定链接器仅向受影响的编辑，而不是整个项目文件的一套适用全程序优化或链接时间代码生成 (LTCG)。 默认情况下，此标志未设置何时 **/LTCG**指定，并且通过使用全程序优化链接整个项目。
 
-**NOSTATUS** &AMP;#124; **状态**<br/>
+**NOSTATUS** &#124; **STATUS**<br/>
 （可选）指定链接器是否显示进度指示器，显示的链接百分比已完成。 默认情况下不显示此状态信息。
 
-**关闭**<br/>
+**OFF**<br/>
 （可选）禁用链接时间代码生成。 此行为是时也是如此 **/LTCG**未指定命令行上。
 
 **PGINSTRUMENT**<br/>
-（可选）从 Visual Studio 2015 开始，不建议使用此选项。 请改用 **/LTCG**并[/GENPROFILE 或 /FASTGENPROFILE](genprofile-fastgenprofile-generate-profiling-instrumented-build.md)生成的按配置优化检测的生成。 从检测过的运行中收集的数据用于创建优化的映像。 有关详细信息，请参阅[按配置优化](profile-guided-optimizations.md)。 此选项的缩写形式是 **/ltcg: pgi**。
+（可选）从 Visual Studio 2015 开始，不建议使用此选项。 请改用 **/LTCG**并[/GENPROFILE 或 /FASTGENPROFILE](genprofile-fastgenprofile-generate-profiling-instrumented-build.md)生成的按配置优化检测的生成。 从检测过的运行中收集的数据用于创建优化的映像。 有关详细信息，请参阅[按配置文件优化](../profile-guided-optimizations.md)。 此选项的缩写形式是 **/ltcg: pgi**。
 
 **PGOPTIMIZE**<br/>
-（可选）从 Visual Studio 2015 开始，不建议使用此选项。 请改用 **/LTCG**并[/USEPROFILE](useprofile.md)来生成优化的映像。 有关详细信息，请参阅[按配置优化](../../build/reference/profile-guided-optimizations.md)。 此选项的缩写形式是 **/ltcg: pgo**。
+（可选）从 Visual Studio 2015 开始，不建议使用此选项。 请改用 **/LTCG**并[/USEPROFILE](useprofile.md)来生成优化的映像。 有关详细信息，请参阅[按配置文件优化](../profile-guided-optimizations.md)。 此选项的缩写形式是 **/ltcg: pgo**。
 
 **PGUPDATE**<br/>
-（可选）从 Visual Studio 2015 开始，不建议使用此选项。 请改用 **/LTCG**并 **/USEPROFILE**重新生成优化的映像。 有关详细信息，请参阅[按配置优化](../../build/reference/profile-guided-optimizations.md)。 此选项的缩写形式是 **/ltcg: pgu**。
+（可选）从 Visual Studio 2015 开始，不建议使用此选项。 请改用 **/LTCG**并 **/USEPROFILE**重新生成优化的映像。 有关详细信息，请参阅[按配置文件优化](../profile-guided-optimizations.md)。 此选项的缩写形式是 **/ltcg: pgu**。
 
 ## <a name="remarks"></a>备注
 
-**/LTCG**选项通知链接器调用编译器并执行全程序优化。 你也可以执行按配置优化。 有关详细信息，请参阅[按配置优化](../../build/reference/profile-guided-optimizations.md)。
+**/LTCG**选项通知链接器调用编译器并执行全程序优化。 你也可以执行按配置优化。 有关详细信息，请参阅[按配置文件优化](../profile-guided-optimizations.md)。
 
 使用以下例外情况，不能将链接器选项添加到的 PGO 组合 **/LTCG**并 **/USEPROFILE**的以前的 PGO 初始化组合中不指定 **/LTCG**并 **/GENPROFILE**选项：
 
-- [/BASE](../../build/reference/base-base-address.md)
+- [/BASE](base-base-address.md)
 
-- [/FIXED](../../build/reference/fixed-fixed-base-address.md)
+- [/FIXED](fixed-fixed-base-address.md)
 
 - **/LTCG**
 
-- [/MAP](../../build/reference/map-generate-mapfile.md)
+- [/MAP](map-generate-mapfile.md)
 
-- [/MAPINFO](../../build/reference/mapinfo-include-information-in-mapfile.md)
+- [/MAPINFO](mapinfo-include-information-in-mapfile.md)
 
-- [/NOLOGO](../../build/reference/nologo-suppress-startup-banner-linker.md)
+- [/NOLOGO](nologo-suppress-startup-banner-linker.md)
 
-- [/OUT](../../build/reference/out-output-file-name.md)
+- [/OUT](out-output-file-name.md)
 
-- [/PGD](../../build/reference/pgd-specify-database-for-profile-guided-optimizations.md)
+- [/PGD](pgd-specify-database-for-profile-guided-optimizations.md)
 
-- [/PDB](../../build/reference/pdb-use-program-database.md)
+- [/PDB](pdb-use-program-database.md)
 
-- [/PDBSTRIPPED](../../build/reference/pdbstripped-strip-private-symbols.md)
+- [/PDBSTRIPPED](pdbstripped-strip-private-symbols.md)
 
-- [/STUB](../../build/reference/stub-ms-dos-stub-file-name.md)
+- [/STUB](stub-ms-dos-stub-file-name.md)
 
-- [/VERBOSE](../../build/reference/verbose-print-progress-messages.md)
+- [/VERBOSE](verbose-print-progress-messages.md)
 
 与指定的任何链接器选项 **/LTCG**并 **/GENPROFILE**选项以初始化 PGO 无需指定通过使用生成 **/LTCG**和 **/USEPROFILE**; 它们隐式。
 
 这篇文章的其余部分将讨论 **/LTCG**链接时间代码生成方面。
 
-**/LTCG**与隐式[/GL](../../build/reference/gl-whole-program-optimization.md)。
+**/LTCG**与隐式[/GL](gl-whole-program-optimization.md)。
 
-如果它传递通过使用已编译的模块，链接器将调用链接时间代码生成 **/GL**或 MSIL 模块 (请参阅[用作链接器输入的.netmodule 文件](../../build/reference/netmodule-files-as-linker-input.md))。 如果未显式指定 **/LTCG**时将传递 **/GL**或 MSIL 模块到链接器链接器最终会检测到这，并通过重新启动链接 **/LTCG**。 显式指定 **/LTCG**时将传递 **/GL**和 MSIL 模块到可能最快的链接器生成性能。
+如果它传递通过使用已编译的模块，链接器将调用链接时间代码生成 **/GL**或 MSIL 模块 (请参阅[用作链接器输入的.netmodule 文件](netmodule-files-as-linker-input.md))。 如果未显式指定 **/LTCG**时将传递 **/GL**或 MSIL 模块到链接器链接器最终会检测到这，并通过重新启动链接 **/LTCG**。 显式指定 **/LTCG**时将传递 **/GL**和 MSIL 模块到可能最快的链接器生成性能。
 
 为了实现更快的性能，使用 **/LTCG： 增量**。 此选项通知链接器仅重新优化受到源文件更改影响的文件集，而不是重新优化整个项目。 这可以显著减少所需的链接时间。 这不是作为增量链接的相同选项。
 
-**/LTCG**不是有效用于[/incremental](../../build/reference/incremental-link-incrementally.md)。
+**/LTCG**不是有效用于[/incremental](incremental-link-incrementally.md)。
 
-当 **/LTCG**用于链接使用编译的模块[/Og](../../build/reference/og-global-optimizations.md)， [/o1](../../build/reference/o1-o2-minimize-size-maximize-speed.md)， [/o2](../../build/reference/o1-o2-minimize-size-maximize-speed.md)，或[/Ox](../../build/reference/ox-full-optimization.md)、将执行以下优化：
+当 **/LTCG**用于链接使用编译的模块[/Og](og-global-optimizations.md)， [/o1](o1-o2-minimize-size-maximize-speed.md)， [/o2](o1-o2-minimize-size-maximize-speed.md)，或[/Ox](ox-full-optimization.md)、将执行以下优化：
 
 - 跨模块内联
 
@@ -130,7 +130,7 @@ ms.locfileid: "50523209"
 
 ### <a name="ltcg-and-msil-modules"></a>/LTCG 和 MSIL 模块
 
-指定 [/LTCG](../../build/reference/gl-whole-program-optimization.md) 时，使用 [/GL](../../build/reference/clr-common-language-runtime-compilation.md) 和 **/clr** 编译的模块可用作链接器的输入：
+指定 [/LTCG](gl-whole-program-optimization.md) 时，使用 [/GL](clr-common-language-runtime-compilation.md) 和 **/clr** 编译的模块可用作链接器的输入：
 
 - **/LTCG**可接受本机对象文件和混合本机/托管对象文件 (通过使用编译 **/clr**)。 **/Clr: pure**并 **/clr: safe**编译器选项在 Visual Studio 2015 中弃用，在 Visual Studio 2017 中不受支持。
 
@@ -138,7 +138,7 @@ ms.locfileid: "50523209"
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
-1. 打开项目“属性页”  对话框。 请参阅[使用项目属性](../../ide/working-with-project-properties.md)。
+1. 打开项目“属性页”  对话框。 请参阅[Visual Studio 中的设置 c + + 编译器和生成属性](../working-with-project-properties.md)。
 
 1. 选择**配置属性** > **常规**属性页。
 
@@ -152,5 +152,5 @@ ms.locfileid: "50523209"
 
 ## <a name="see-also"></a>请参阅
 
-- [设置链接器选项](../../build/reference/setting-linker-options.md)
-- [链接器选项](../../build/reference/linker-options.md)
+- [MSVC 链接器引用](linking.md)
+- [MSVC 链接器选项](linker-options.md)

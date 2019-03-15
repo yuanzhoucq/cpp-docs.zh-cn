@@ -9,12 +9,12 @@ helpviewer_keywords:
 - side-by-side applications [C++]
 - builds [C++], side-by-side assemblies
 ms.assetid: 9465904e-76f7-48bd-bb3f-c55d8f1699b6
-ms.openlocfilehash: 5d487e8a124d2edd7ce5a658d4965f1567756d5a
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: e3c39595008d92b390b03a56bdcf5fc8990b2103
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694148"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807550"
 ---
 # <a name="building-cc-isolated-applications-and-side-by-side-assemblies"></a>生成 C/C++ 独立应用程序和并行程序集
 
@@ -26,19 +26,19 @@ Visual C++ 支持 Windows 客户端应用程序的部署模型，其理论基础
 
 ## <a name="in-this-section"></a>本节内容
 
-[独立应用程序和并行程序集的概念](../build/concepts-of-isolated-applications-and-side-by-side-assemblies.md)
+[独立应用程序和并行程序集的概念](concepts-of-isolated-applications-and-side-by-side-assemblies.md)
 
-[生成 C/C++ 独立应用程序](../build/building-c-cpp-isolated-applications.md)
+[生成 C/C++ 独立应用程序](building-c-cpp-isolated-applications.md)
 
-[生成 C/C++ 并行程序集](../build/building-c-cpp-side-by-side-assemblies.md)
+[生成 C/C++ 并行程序集](building-c-cpp-side-by-side-assemblies.md)
 
-[如何：生成免注册 COM 组件](../build/how-to-build-registration-free-com-components.md)
+[如何：生成免注册的 COM 组件](how-to-build-registration-free-com-components.md)
 
-[如何：生成独立应用程序以使用 COM 组件](../build/how-to-build-isolated-applications-to-consume-com-components.md)
+[如何：生成独立应用程序以使用 COM 组件](how-to-build-isolated-applications-to-consume-com-components.md)
 
-[了解 C/C++ 程序的清单生成](../build/understanding-manifest-generation-for-c-cpp-programs.md)
+[了解 C/C++ 程序的清单生成](understanding-manifest-generation-for-c-cpp-programs.md)
 
-[C/C++ 独立应用程序和并行程序集疑难解答](../build/troubleshooting-c-cpp-isolated-applications-and-side-by-side-assemblies.md)
+[C/C++ 独立应用程序和并行程序集疑难解答](troubleshooting-c-cpp-isolated-applications-and-side-by-side-assemblies.md)
 
 ## <a name="related-sections"></a>相关章节
 

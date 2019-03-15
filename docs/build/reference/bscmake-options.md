@@ -29,24 +29,24 @@ helpviewer_keywords:
 - /Es BSCMAKE option
 - Ei BSCMAKE option
 ms.assetid: fa2f1e06-c684-41cf-80dd-6a554835ebd2
-ms.openlocfilehash: 7727f433ae68f26075645b35ff5edad43159ec67
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: bf4c3648079dff16481dbdd56b9a70093fd22d8d
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57415404"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812052"
 ---
 # <a name="bscmake-options"></a>BSCMAKE 选项
 
 本部分介绍可用于控制 BSCMAKE 选项。 多个选项控制通过排除或包括特定的信息的浏览信息文件的内容。 排除选项可以允许 BSCMAKE 运行得更快，并可能会导致较小的.bsc 文件。 选项名称不区分大小写 (除 **/help**并 **/NOLOGO**)。
 
-仅 **/NOLOGO**并 **/o**可从 Visual Studio 开发环境。  请参阅[设置 Visual c + + 项目属性](../../ide/working-with-project-properties.md)有关的信息访问项目的属性页。
+仅 **/NOLOGO**并 **/o**可从 Visual Studio 开发环境。  请参阅[Visual Studio 中的设置 c + + 编译器和生成属性](../working-with-project-properties.md)有关的信息访问项目的属性页。
 
 **/Ei (** *文件名*...**)**<br/>
 从浏览信息文件中排除指定的包含文件的内容。 若要指定多个文件，请用空格分隔这些名称，并将列表括在括号中。 括号不是必需的如果只指定一个*文件名*。 使用 **/Ei**连同 **/Es**选项以排除未排除的文件 **/Es**。
 
 **/El**<br/>
-排除本地符号。 默认值是包含本地符号。 有关本地符号的详细信息，请参阅[创建.sbr 文件](../../build/reference/creating-an-dot-sbr-file.md)。
+排除本地符号。 默认值是包含本地符号。 有关本地符号的详细信息，请参阅[创建.sbr 文件](creating-an-dot-sbr-file.md)。
 
 **/Em**<br/>
 排除宏的正文中的符号。 使用 **/e m**浏览信息文件中包含宏的名称。 默认值是包含宏名称和宏扩展的结果。
@@ -60,7 +60,7 @@ ms.locfileid: "57415404"
 **/errorreport:**[**none** &#124; **prompt** &#124; **queue** &#124; **send**]<br/>
 可以将信息发送给 Microsoft，有关 bscmake.exe 中的内部错误。
 
-有关详细信息 **/errorreport**，请参阅[/errorReport （报告内部编译器错误）](../../build/reference/errorreport-report-internal-compiler-errors.md)。
+有关详细信息 **/errorreport**，请参阅[/errorReport （报告内部编译器错误）](errorreport-report-internal-compiler-errors.md)。
 
 **/HELP**<br/>
 显示 BSCMAKE 命令行语法的摘要。
@@ -69,7 +69,7 @@ ms.locfileid: "57415404"
 包括未引用的符号。 默认情况下，BSCMAKE 不会记录任何已定义但未被引用的符号。 如果已打包的.sbr 文件，此选项不起该输入文件因为编译器已移除未引用的符号。
 
 **/n**<br/>
-强制非增量生成。 使用 **/n**强制完全生成浏览信息文件.bsc 文件是否存在并防止.sbr 文件被截断。 请参阅[BSCMAKE 如何生成.bsc 文件](../../build/reference/how-bscmake-builds-a-dot-bsc-file.md)。
+强制非增量生成。 使用 **/n**强制完全生成浏览信息文件.bsc 文件是否存在并防止.sbr 文件被截断。 请参阅[BSCMAKE 如何生成.bsc 文件](how-bscmake-builds-a-dot-bsc-file.md)。
 
 **/NOLOGO**<br/>
 禁止显示 BSCMAKE 版权消息。
@@ -94,4 +94,4 @@ BSCMAKE /n /S toolbox.h /o main.bsc file1.sbr file2.sbr file3.sbr
 
 ## <a name="see-also"></a>请参阅
 
-[BSCMAKE 参考](../../build/reference/bscmake-reference.md)
+[BSCMAKE 参考](bscmake-reference.md)

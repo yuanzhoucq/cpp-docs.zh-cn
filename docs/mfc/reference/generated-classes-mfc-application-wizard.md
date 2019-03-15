@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MFC Application Wizard, generated classes
 ms.assetid: 5f33209c-7f01-4f72-8c1c-6f02f507ba9f
-ms.openlocfilehash: 5926911a07edf6e4ce543b728a7b5c3984861948
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: ac402591692720c15ec8a118fea04d9b3c444f06
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57267415"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810323"
 ---
 # <a name="generated-classes-mfc-application-wizard"></a>MFC 应用程序向导的生成的类
 
@@ -42,4 +42,5 @@ ms.locfileid: "57267415"
 ## <a name="see-also"></a>请参阅
 
 [MFC 应用程序向导的高级功能](../../mfc/reference/advanced-features-mfc-application-wizard.md)<br/>
-[为 Visual C++ 项目创建的文件类型](../../ide/file-types-created-for-visual-cpp-projects.md)
+[为 Visual C++ 项目创建的文件类型](../../build/reference/file-types-created-for-visual-cpp-projects.md)
+

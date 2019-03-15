@@ -1,17 +1,17 @@
 ---
-title: 如何：创建可验证的 C++ 项目 (C++/CLI)
+title: 如何：创建可验证 c + + 项目 (C + + CLI)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - verifiable assemblies [C++], creating
 - conversions, C++ projects
 - Visual C++ projects
 ms.assetid: 4ef2cc1a-e3e5-4d67-8d8d-9c614f8ec5d3
-ms.openlocfilehash: acd37469f0702b73cdb1386fcf43091c8d27aebb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: de3742717bf55c53ab4007aaed18b6ce687fbede
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630433"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57817370"
 ---
 # <a name="how-to-create-verifiable-c-projects-ccli"></a>如何： 创建可验证 c + + 项目 (C + + CLI)
 
@@ -28,7 +28,7 @@ Visual c + + 应用程序向导不会创建可验证的项目。
 
 ### <a name="to-change-the-compiler-and-linker-settings"></a>若要更改的编译器和链接器设置
 
-1. 显示项目属性页。 有关详细信息，请参阅[使用项目属性](../ide/working-with-project-properties.md)。
+1. 显示项目属性页。 有关详细信息，请参阅[设置编译器和生成属性](../build/working-with-project-properties.md)。
 
 1. 上**常规**页**配置属性**节点中，设置**公共语言运行时支持**属性设置为**安全 MSIL 公共语言运行时支持 (/: safe)**。
 
@@ -56,7 +56,7 @@ Visual c + + 应用程序向导不会创建可验证的项目。
 
 1. 将 _tmain() 更改为项目的主.cpp 文件中的 main （）。
 
-1. 显示项目属性页。 有关详细信息，请参阅[使用项目属性](../ide/working-with-project-properties.md)。
+1. 显示项目属性页。 有关详细信息，请参阅[设置编译器和生成属性](../build/working-with-project-properties.md)。
 
 1. 上**高级**页**链接器**节点中，输入`Main`作为**入口点**属性值。
 

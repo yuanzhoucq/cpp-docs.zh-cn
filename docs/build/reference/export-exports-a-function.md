@@ -9,12 +9,12 @@ helpviewer_keywords:
 - EXPORT linker option
 - -EXPORT linker option
 ms.assetid: 0920fb44-a472-4091-a8e6-73051f494ca0
-ms.openlocfilehash: 86e2dadbfcdc31d5d5f5fe3121c33f9011c14ab5
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 7c4f4621bbccd4285bcf4eca07d2544d53d14f6c
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414378"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57819843"
 ---
 # <a name="export-exports-a-function"></a>/EXPORT（导出函数）
 
@@ -36,7 +36,7 @@ ms.locfileid: "57414378"
 
 1. [__declspec （dllexport)](../../cpp/dllexport-dllimport.md)中的源代码
 
-1. [导出](../../build/reference/exports.md).def 文件语句
+1. [导出](exports.md).def 文件语句
 
 1. LINK 命令中 /EXPORT 规范
 
@@ -44,7 +44,7 @@ ms.locfileid: "57414378"
 
 可以在同一程序中使用所有这些方法。 当 LINK 在生成包含导出的程序时，它还创建导入库，除非生成中使用了.exp 文件。
 
-链接使用修饰形式的标识符。 创建的.obj 文件时，编译器将修饰标识符。 如果*entryname*中其未修饰链接器指定窗体 （即显示在源代码中） 中，尝试与名称匹配链接。 如果它找不到唯一的匹配项，链接会发出一条错误消息。 使用[DUMPBIN](../../build/reference/dumpbin-reference.md)工具来获取[修饰名](../../build/reference/decorated-names.md)窗体时需要指定链接器的标识符。
+链接使用修饰形式的标识符。 创建的.obj 文件时，编译器将修饰标识符。 如果*entryname*中其未修饰链接器指定窗体 （即显示在源代码中） 中，尝试与名称匹配链接。 如果它找不到唯一的匹配项，链接会发出一条错误消息。 使用[DUMPBIN](dumpbin-reference.md)工具来获取[修饰名](decorated-names.md)窗体时需要指定链接器的标识符。
 
 > [!NOTE]
 > 未指定 C 标识符声明的修饰的形式`__cdecl`或`__stdcall`。
@@ -58,7 +58,7 @@ BOOL CALLBACK PlainFuncName( Things * lpParams)
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此链接器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置 Visual c + + 项目属性](../../ide/working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[Visual Studio 中的设置 c + + 编译器和生成属性](../working-with-project-properties.md)。
 
 1. 选择**配置属性** > **链接器** > **命令行**属性页。
 
@@ -70,5 +70,5 @@ BOOL CALLBACK PlainFuncName( Things * lpParams)
 
 ## <a name="see-also"></a>请参阅
 
-[设置链接器选项](../../build/reference/setting-linker-options.md)<br/>
-[链接器选项](../../build/reference/linker-options.md)
+[MSVC 链接器引用](linking.md)<br/>
+[MSVC 链接器选项](linker-options.md)

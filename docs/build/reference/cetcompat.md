@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - /CETCOMPAT linker option
 - /CETCOMPAT
-ms.openlocfilehash: 48eb1e2369e54d855bd19bb1d26ad057c903b9d0
-ms.sourcegitcommit: 7cd712176e5bc341b9d8f899d41ad49f02f85e5f
+ms.openlocfilehash: 1a01dd45667f64dbcbe11acaf1180835bd0d6e31
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/19/2019
-ms.locfileid: "56418687"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57809842"
 ---
 # <a name="cetcompat-control-flow-enforcement-technology-compatible"></a>/ CETCOMPAT （控制流强制技术兼容）
 
@@ -36,7 +36,7 @@ ms.locfileid: "56418687"
 
 ### <a name="to-set-the-cetcompat-linker-option-in-visual-studio"></a>在 Visual Studio 中设置 /CETCOMPAT 链接器选项
 
-1. 打开**属性页**项目对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。
+1. 打开**属性页**项目对话框。 有关详细信息，请参阅[使用项目属性](../working-with-project-properties.md)。
 
 1. 选择**配置属性** > **链接器** > **命令行**属性页。
 
@@ -48,5 +48,4 @@ ms.locfileid: "56418687"
 
 ## <a name="see-also"></a>请参阅
 
-[设置链接器选项](../../build/reference/setting-linker-options.md)<br/>
-[链接器选项](../../build/reference/linker-options.md)
+[链接器选项](linker-options.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - /Zp compiler option [C++]
 - -Zp compiler option [C++]
 ms.assetid: 5242f656-ed9b-48a3-bc73-cfcf3ed2520f
-ms.openlocfilehash: d1821d8dc5eab202a918893a1e7895151629b551
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: d30e61137fc5ff8f6a5501ac7815edafc18f7680
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627522"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807684"
 ---
 # <a name="zp-struct-member-alignment"></a>/Zp（结构成员对齐）
 
@@ -24,7 +24,7 @@ ms.locfileid: "53627522"
 
 ## <a name="syntax"></a>语法
 
-> **/Zp**[**1**|**2**|**4**|**8** | **16**]
+> **/Zp**[**1**|**2**|**4**|**8**|**16**]
 
 ## <a name="remarks"></a>备注
 
@@ -53,11 +53,11 @@ ms.locfileid: "53627522"
 
 - [__unaligned](../../cpp/unaligned.md)
 
-- [结构对齐示例](../../build/x64-software-conventions.md#examples-of-structure-alignment)(特定于 x64)
+- [/ALIGN（节对齐）](align-section-alignment.md)
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[Visual Studio 中的设置 c + + 编译器和生成属性](../working-with-project-properties.md)。
 
 1. 选择**C/c + +** > **代码生成**属性页。
 
@@ -69,5 +69,5 @@ ms.locfileid: "53627522"
 
 ## <a name="see-also"></a>请参阅
 
-- [编译器选项](../../build/reference/compiler-options.md)
-- [设置编译器选项](../../build/reference/setting-compiler-options.md)
+- [MSVC 编译器选项](compiler-options.md)
+- [MSVC 编译器命令行语法](compiler-command-line-syntax.md)

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - /execution-charset compiler option
 ms.assetid: d3c5bf7f-526d-4ee4-acc5-c1a02a4fc481
-ms.openlocfilehash: ec5ac314f73c49b47f4132583d7651681b6b0545
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 54f8d4d0edaa310384d19a9c9a188f96ec895eac
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413051"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57811649"
 ---
 # <a name="source-charset-set-source-character-set"></a>/source-charset （设置源字符集）
 
@@ -44,7 +44,7 @@ IANA 定义字符集名称。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
-1. 打开项目“属性页”  对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。
+1. 打开项目“属性页”  对话框。 有关详细信息，请参阅[Visual Studio 中的设置 c + + 编译器和生成属性](../working-with-project-properties.md)。
 
 1. 展开**配置属性**， **C/c + +**，**命令行**文件夹。
 
@@ -54,8 +54,8 @@ IANA 定义字符集名称。
 
 ## <a name="see-also"></a>请参阅
 
-[编译器选项](../../build/reference/compiler-options.md)<br/>
-[设置编译器选项](../../build/reference/setting-compiler-options.md)<br/>
-[/execution-charset （设置执行字符集）](../../build/reference/execution-charset-set-execution-character-set.md)<br/>
-[/utf-8（将源和可执行字符集设置为 UTF-8）](../../build/reference/utf-8-set-source-and-executable-character-sets-to-utf-8.md)<br/>
-[/validate-charset（验证兼容的字符）](../../build/reference/validate-charset-validate-for-compatible-characters.md)
+[MSVC 编译器选项](compiler-options.md)<br/>
+[MSVC 编译器命令行语法](compiler-command-line-syntax.md)<br/>
+[/execution-charset （设置执行字符集）](execution-charset-set-execution-character-set.md)<br/>
+[/utf-8（将源和可执行字符集设置为 UTF-8）](utf-8-set-source-and-executable-character-sets-to-utf-8.md)<br/>
+[/validate-charset（验证兼容的字符）](validate-charset-validate-for-compatible-characters.md)

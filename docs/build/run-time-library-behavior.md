@@ -15,12 +15,12 @@ helpviewer_keywords:
 - run-time [C++], DLL startup sequence
 - DLLs [C++], startup sequence
 ms.assetid: e06f24ab-6ca5-44ef-9857-aed0c6f049f2
-ms.openlocfilehash: 084741a3a408fe79e27c3fab81e1f5c4c9f06c4e
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: ea970f010e86d655963485339c48b8f7d36d6270
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414585"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57811434"
 ---
 # <a name="dlls-and-visual-c-run-time-library-behavior"></a>Dll 和 Visual c + + 运行时库行为
 
@@ -32,10 +32,10 @@ ms.locfileid: "57414585"
 
 VCRuntime 库提供了名为入口点函数`_DllMainCRTStartup`处理默认值初始化和终止操作。 在过程上附加，`_DllMainCRTStartup`函数设置了缓冲区安全检查，初始化 CRT 和其他库、 初始化运行时类型信息，初始化并调用构造函数的静态和非本地数据，初始化线程本地存储递增每个附加的内部静态计数器，然后调用用户或库-提供`DllMain`。 在进程分离，该函数将完成这些步骤按相反的顺序。 它将调用`DllMain`递减内部计数器，调用析构函数、 调用 CRT 终止函数并注册`atexit`函数，并通知的终止的任何其他库。 当附件计数器回到零时，该函数返回`FALSE`以指示 Windows 可以卸载 DLL。 `_DllMainCRTStartup`函数还调用期间线程附加和线程分离。 在这些情况下，VCRuntime 代码任何附加的初始化和终止其自身的、 不会，只需调用`DllMain`来传递沿该消息。 如果`DllMain`返回`FALSE`进程中附加，信令故障时，`_DllMainCRTStartup`调用`DllMain`试，并将传递`DLL_PROCESS_DETACH`作为*原因*参数，然后将经历的其余部分终止进程。
 
-生成 Visual c + + 中的默认入口点的 Dll 时`_DllMainCRTStartup`提供 VCRuntime 自动链接中。 不需要使用您的 DLL 指定入口点函数[/ENTRY （入口点符号）](../build/reference/entry-entry-point-symbol.md)链接器选项。
+生成 Visual c + + 中的默认入口点的 Dll 时`_DllMainCRTStartup`提供 VCRuntime 自动链接中。 不需要使用您的 DLL 指定入口点函数[/ENTRY （入口点符号）](reference/entry-entry-point-symbol.md)链接器选项。
 
 > [!NOTE]
-> 虽然可以使用 /ENTRY dll 指定另一个入口点函数： 链接器选项，我们不建议这样做，因为入口点函数必须重复的所有内容的`_DllMainCRTStartup`中相同的顺序执行。 VCRuntime 提供允许您可以复制其行为的函数。 例如，可以调用[__security_init_cookie](../c-runtime-library/reference/security-init-cookie.md)立即在过程上附加以支持[/GS （缓冲区安全检查）](../build/reference/gs-buffer-security-check.md)缓冲区检查选项。 您可以调用`_CRT_INIT`函数，将作为入口点函数，来执行 DLL 初始化和终止函数的其余部分传递相同的参数。
+> 虽然可以使用 /ENTRY dll 指定另一个入口点函数： 链接器选项，我们不建议这样做，因为入口点函数必须重复的所有内容的`_DllMainCRTStartup`中相同的顺序执行。 VCRuntime 提供允许您可以复制其行为的函数。 例如，可以调用[__security_init_cookie](../c-runtime-library/reference/security-init-cookie.md)立即在过程上附加以支持[/GS （缓冲区安全检查）](reference/gs-buffer-security-check.md)缓冲区检查选项。 您可以调用`_CRT_INIT`函数，将作为入口点函数，来执行 DLL 初始化和终止函数的其余部分传递相同的参数。
 
 <a name="initializing-a-dll"></a>
 
@@ -180,6 +180,6 @@ DllMain(HINSTANCE hInstance, DWORD dwReason, LPVOID lpReserved)
 
 ## <a name="see-also"></a>请参阅
 
-[Visual C++ 中的 DLL](../build/dlls-in-visual-cpp.md)<br/>
+[Visual C++ 中的 DLL](dlls-in-visual-cpp.md)<br/>
 [DllMain 入口点](/windows/desktop/Dlls/dllmain)<br/>
 [动态链接库的最佳做法](/windows/desktop/Dlls/dynamic-link-library-best-practices)

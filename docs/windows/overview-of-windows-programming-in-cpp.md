@@ -2,12 +2,12 @@
 title: C++ 中 Windows 编程概述
 ms.date: 11/15/2018
 ms.assetid: efc691d7-21f3-47ae-ae56-cab999ccf59d
-ms.openlocfilehash: b33236df6e4c7f679ff1dd9f9f8bc409c86e011a
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 6338b390b11c58f3ebac2af1bb568ea3c3470cd1
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693851"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810440"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>C++ 中 Windows 编程概述
 
@@ -21,7 +21,7 @@ C + + 控制台应用程序从命令行控制台窗口中运行，并可以显�
 
 术语*本机桌面客户端应用程序*引用 C 或 c + + 窗口使用的应用程序原始 Windows Win32 Api 以访问操作系统。 这些 Api 是自行写入主要是用 c 语言在创建此类应用程序时，您可以选择直接针对 C 样式消息循环，用于处理操作系统事件进行编程或使用*Microsoft 基础类*(MFC) 包装 Win32 c + + 库中是某种程度上面向对象的一种方法。 两种方法被视为"现代"相比通用 Windows 平台 （见下文），但同时仍是完全受支持并且具有数百万行的当今世界中运行的代码。
 
-若要开始使用传统 Windows c + + 编程，请参阅[Win32 和 c + + 入门](/windows/desktop/LearnWin32/learn-to-program-for-windows)。 获取 Win32 一定了解后，可以将其更轻松地了解[MFC 桌面应用程序](/mfc/mfc-desktop-applications)。 传统的 c + + 桌面应用程序使用复杂的图形的示例，请参阅[Hilo： 开发 c + + 应用程序转换为 Windows](https://msdn.microsoft.com/library/windows/desktop/ff708696.aspx)。
+若要开始使用传统 Windows c + + 编程，请参阅[Win32 和 c + + 入门](/windows/desktop/LearnWin32/learn-to-program-for-windows)。 获取 Win32 一定了解后，可以将其更轻松地了解[MFC 桌面应用程序](/mfc/mfc-desktop-applications)。 传统的 c + + 桌面应用程序使用复杂的图形的示例，请参阅[Hilo:针对 Windows 的 c + + 应用程序开发](https://msdn.microsoft.com/library/windows/desktop/ff708696.aspx)。
 
 ### <a name="c-or-net"></a>C + + 或.NET？ 
 
@@ -73,13 +73,13 @@ Visual Studio 包含 C 运行时库 (CRT)、 c + + 标准库和其他特定于 M
 
 Microsoft 库包括：
 
-- Microsoft 基础类 (MFC)：一种面向对象的框架，用于创建传统的 Windows 程序（特别是企业级应用程序），这些应用程序具有诸如功能按钮、列表框、树视图和其他控件等丰富的用户界面。 有关详细信息，请参阅 [MFC Desktop Applications](../mfc/mfc-desktop-applications.md)。
+- Microsoft 基础类 (MFC):面向对象的框架，用于创建传统 Windows 程序 — 特别是企业应用程序 — 功能按钮、 列表框、 树视图和其他控件具有丰富的用户界面。 有关详细信息，请参阅 [MFC Desktop Applications](../mfc/mfc-desktop-applications.md)。
 
-- 活动模板库 (ATL)：一种功能强大的帮助程序库，用于创建 COM 组件。 有关详细信息，请参阅 [ATL COM Desktop Components](../atl/atl-com-desktop-components.md)。
+- 活动模板库 (ATL):用于创建 COM 组件的功能强大的帮助程序库。 有关详细信息，请参阅 [ATL COM Desktop Components](../atl/atl-com-desktop-components.md)。
 
-- C++ AMP (C++ Accelerated Massive Parallelism)：一种可以在 GPU 上实现高性能泛型计算工作的库。 有关详细信息，请参阅 [C++ AMP (C++ Accelerated Massive Parallelism)](../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)。
+- C + + AMP (c + + Accelerated Massive Parallelism):一种库，允许在 GPU 上的高性能泛型计算工作。 有关详细信息，请参阅 [C++ AMP (C++ Accelerated Massive Parallelism)](../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)。
 
-- 并发运行时：一种可以简化多核和众核设备编程的并行和异步编程工作的库。 有关详细信息，请参阅 [Concurrency Runtime](../parallel/concrt/concurrency-runtime.md)。
+- 并发运行时：一个库，简化了并行和异步编程的多核和众核设备工作。 有关详细信息，请参阅 [Concurrency Runtime](../parallel/concrt/concurrency-runtime.md)。
 
 许多 Windows 编程方案还需要 Windows SDK，Windows SDK 包括可以实现对 Windows 操作系统组件访问的标头文件。 默认情况下，Visual Studio 安装 Windows SDK 的 c + + 桌面工作负载，从而使开发通用 Windows 应用的组件。 若要开发 UWP 应用，需要 Windows SDK 的 Windows 10 版本。 有关信息，请参阅[Windows 10 SDK](https://dev.windows.com/downloads/windows-10-sdk)。 (适用于 Windows 的早期版本的 Windows sdk 的详细信息，请参阅[Windows SDK 存档](https://developer.microsoft.com/windows/downloads/sdk-archive))。
 
@@ -89,7 +89,7 @@ Microsoft 库包括：
 
 ## <a name="development-tools"></a>开发工具
 
-Visual Studio 包含一个功能强大的本机代码调试器、静态分析工具、图形调试工具、一个功能齐全的代码编辑器、单元测试支持，以及许多其他工具和实用程序。 有关详细信息，请参阅[开始使用 Visual Studio 进行开发](/visualstudio/ide/get-started-developing-with-visual-studio)，并[IDE 和开发工具](../ide/ide-and-tools-for-visual-cpp-development.md)。
+Visual Studio 包含一个功能强大的本机代码调试器、静态分析工具、图形调试工具、一个功能齐全的代码编辑器、单元测试支持，以及许多其他工具和实用程序。 有关详细信息，请参阅[开始使用 Visual Studio 进行开发](/visualstudio/ide/get-started-developing-with-visual-studio)，并[Visual Studio 中概述的 c + + 开发](../overview-of-cpp-development.md)。
 
 ## <a name="in-this-section"></a>本节内容
 |标题|描述|

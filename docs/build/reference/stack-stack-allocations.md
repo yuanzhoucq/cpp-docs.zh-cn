@@ -12,12 +12,12 @@ helpviewer_keywords:
 - /STACK linker option
 - stack, setting size
 ms.assetid: 73283660-e4bd-47cc-b5ca-04c5d739034c
-ms.openlocfilehash: 34d764f88b1dccb60c7d9a006be119e3800ac2d9
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 27de554e1933b2753f641be358461c8d7ff4fffa
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57412765"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813794"
 ---
 # <a name="stack-stack-allocations"></a>/STACK（堆栈分配）
 
@@ -35,11 +35,11 @@ ms.locfileid: "57412765"
 
 以十进制或 C 语言表示方式指定 `reserve` 和 `commit` 值。
 
-若要设置堆栈大小的另一种方法是使用[STACKSIZE](../../build/reference/stacksize.md)模块定义 (.def) 文件中的语句。 **STACKSIZE**重写堆栈分配 (/stack) 如果同时指定了选项。 使用生成的.exe 文件后，可以更改堆栈大小[EDITBIN](../../build/reference/editbin-reference.md)工具。
+若要设置堆栈大小的另一种方法是使用[STACKSIZE](stacksize.md)模块定义 (.def) 文件中的语句。 **STACKSIZE**重写堆栈分配 (/stack) 如果同时指定了选项。 使用生成的.exe 文件后，可以更改堆栈大小[EDITBIN](editbin-reference.md)工具。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此链接器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置 Visual c + + 项目属性](../../ide/working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[Visual Studio 中的设置 c + + 编译器和生成属性](../working-with-project-properties.md)。
 
 1. 选择**链接器**文件夹。
 
@@ -57,5 +57,5 @@ ms.locfileid: "57412765"
 
 ## <a name="see-also"></a>请参阅
 
-[设置链接器选项](../../build/reference/setting-linker-options.md)<br/>
-[链接器选项](../../build/reference/linker-options.md)
+[MSVC 链接器引用](linking.md)<br/>
+[MSVC 链接器选项](linker-options.md)

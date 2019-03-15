@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - /validate-charset compiler option
 ms.assetid: 50360fd0-4d32-4a4f-95d0-53d38c12ad4c
-ms.openlocfilehash: ca7724922fa579087cf4c6c1790819dc539112a5
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 30c818bcb64c2f2ee57c05a4870e7d30afe98cfe
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57423932"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810063"
 ---
 # <a name="validate-charset-validate-for-compatible-characters"></a>/validate-charset （验证兼容的字符）
 
@@ -34,7 +34,7 @@ Visual Studio 使用的源字符集和执行字符集之间的转换过程的内
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
-1. 打开项目“属性页”  对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。
+1. 打开项目“属性页”  对话框。 有关详细信息，请参阅[Visual Studio 中的设置 c + + 编译器和生成属性](../working-with-project-properties.md)。
 
 1. 展开**配置属性**， **C/c + +**，**命令行**文件夹。
 
@@ -44,8 +44,8 @@ Visual Studio 使用的源字符集和执行字符集之间的转换过程的内
 
 ## <a name="see-also"></a>请参阅
 
-[编译器选项](../../build/reference/compiler-options.md)<br/>
-[设置编译器选项](../../build/reference/setting-compiler-options.md)<br/>
-[/execution-charset （设置执行字符集）](../../build/reference/execution-charset-set-execution-character-set.md)<br/>
-[/source-charset（设置源字符集）](../../build/reference/source-charset-set-source-character-set.md)<br/>
-[/utf-8（将源和可执行字符集设置为 UTF-8）](../../build/reference/utf-8-set-source-and-executable-character-sets-to-utf-8.md)
+[MSVC 编译器选项](compiler-options.md)<br/>
+[MSVC 编译器命令行语法](compiler-command-line-syntax.md)<br/>
+[/execution-charset （设置执行字符集）](execution-charset-set-execution-character-set.md)<br/>
+[/source-charset（设置源字符集）](source-charset-set-source-character-set.md)<br/>
+[/utf-8（将源和可执行字符集设置为 UTF-8）](utf-8-set-source-and-executable-character-sets-to-utf-8.md)

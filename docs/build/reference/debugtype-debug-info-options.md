@@ -8,12 +8,12 @@ helpviewer_keywords:
 - DEBUGTYPE linker option
 - -DEBUGTYPE linker option
 ms.assetid: 1ddcb718-7fec-4f92-a319-3f70f04fe742
-ms.openlocfilehash: c4a24d79295c1f7dbbe645c4a6e52f58b4a08807
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 00e3cb61f8ec9aa707bb72aa9ff05a64f98d4e47
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57423491"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820047"
 ---
 # <a name="debugtype-debug-info-options"></a>/DEBUGTYPE（调试信息选项）
 
@@ -40,11 +40,11 @@ ms.locfileid: "57423491"
 
 使用 **/DEBUGTYPE**选项以指定在调试流中包含重定位表数据或.pdata 和.xdata 标头信息。 这导致链接器包含有关破坏内核模式代码时内核调试程序中可见的用户模式代码的信息。 若要使调试符号可用时**修正**是指定，包括**CV**参数。
 
-若要调试代码在用户模式下，这是典型的应用程序， **/DEBUGTYPE**选项不需要。 默认情况下，输出指定调试编译器开关 ([/Z7、 /Zi、 /ZI](../../build/reference/z7-zi-zi-debug-information-format.md)) 发出所有信息需要由 Visual Studio 调试器。 使用 **/DEBUGTYPE:PDATA**或 **/debugtype: cv，PDATA，修正**结合了用户模式和内核模式组件，如设备驱动程序的配置应用程序的代码进行调试。 有关内核模式调试程序的详细信息，请参阅[调试工具的 Windows （WinDbg、 KD、 CDB、 NTSD）](/windows-hardware/drivers/debugger/index)
+若要调试代码在用户模式下，这是典型的应用程序， **/DEBUGTYPE**选项不需要。 默认情况下，输出指定调试编译器开关 ([/Z7、 /Zi、 /ZI](z7-zi-zi-debug-information-format.md)) 发出所有信息需要由 Visual Studio 调试器。 使用 **/DEBUGTYPE:PDATA**或 **/debugtype: cv，PDATA，修正**结合了用户模式和内核模式组件，如设备驱动程序的配置应用程序的代码进行调试。 有关内核模式调试程序的详细信息，请参阅[调试工具的 Windows （WinDbg、 KD、 CDB、 NTSD）](/windows-hardware/drivers/debugger/index)
 
 ## <a name="see-also"></a>请参阅
 
-[/DEBUG（生成调试信息）](../../build/reference/debug-generate-debug-info.md)<br/>
-[/DRIVER（Windows NT 内核模式驱动程序）](../../build/reference/driver-windows-nt-kernel-mode-driver.md)<br/>
-[/PROFILE（性能工具探查器）](../../build/reference/profile-performance-tools-profiler.md)<br/>
+[/DEBUG（生成调试信息）](debug-generate-debug-info.md)<br/>
+[/DRIVER（Windows NT 内核模式驱动程序）](driver-windows-nt-kernel-mode-driver.md)<br/>
+[/PROFILE（性能工具探查器）](profile-performance-tools-profiler.md)<br/>
 [（WinDbg、 KD、 CDB、 NTSD） 的 Windows 调试工具](/windows-hardware/drivers/debugger/index)

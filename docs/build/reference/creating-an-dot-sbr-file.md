@@ -9,20 +9,20 @@ helpviewer_keywords:
 - local symbols in browse information
 - symbols
 ms.assetid: bdb4b93c-a88a-441a-84fd-01087d03be25
-ms.openlocfilehash: 54cf19a7024f6f0a1db33e1f1ccde15cde95301b
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 75c3b926a605de66c876e9350218807031cd9a43
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418524"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810401"
 ---
 # <a name="creating-an-sbr-file"></a>创建 .Sbr 文件
 
 BSCMAKE 的输入的文件是.sbr 文件。 编译器创建的每个对象文件 (.obj) 对其进行编译的.sbr 文件。 当生成或更新你的浏览信息文件时，所有的.sbr 文件为你的项目必须是可在磁盘上。
 
-若要创建的.sbr 文件与所有可能的信息，请指定[/FR](../../build/reference/fr-fr-create-dot-sbr-file.md)。
+若要创建的.sbr 文件与所有可能的信息，请指定[/FR](fr-fr-create-dot-sbr-file.md)。
 
-若要创建不包含本地符号的.sbr 文件，请指定[/Fr](../../build/reference/fr-fr-create-dot-sbr-file.md)。 如果.sbr 文件包含本地符号，则可以仍省略它们从.bsc 文件使用 BSCMAKE 的[/El 选项](../../build/reference/bscmake-options.md)`.`
+若要创建不包含本地符号的.sbr 文件，请指定[/Fr](fr-fr-create-dot-sbr-file.md)。 如果.sbr 文件包含本地符号，则可以仍省略它们从.bsc 文件使用 BSCMAKE 的[/El 选项](bscmake-options.md)`.`
 
 无需执行完整编译，可以创建的.sbr 文件。 例如，可以指定向编译器执行语法检查，并仍生成的.sbr 文件，如果指定 /FR 或 /Fr./Zs 选项
 
@@ -30,4 +30,4 @@ BSCMAKE 的输入的文件是.sbr 文件。 编译器创建的每个对象文件
 
 ## <a name="see-also"></a>请参阅
 
-[生成 .Bsc 文件](../../build/reference/building-a-dot-bsc-file.md)
+[生成 .Bsc 文件](building-a-dot-bsc-file.md)

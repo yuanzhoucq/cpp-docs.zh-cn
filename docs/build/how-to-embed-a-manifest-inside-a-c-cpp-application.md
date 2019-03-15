@@ -6,16 +6,16 @@ helpviewer_keywords:
 - embedding manifests
 - makefiles, updating to embed manifest
 ms.assetid: ec0bac69-2fdc-466c-ab0d-710a22974e5d
-ms.openlocfilehash: b1bff23c91b465d697cc52a2b893ece5be3764b1
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 332d6d75080be3fdde6b8238ab79b8e5b1d1121e
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57412895"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57809777"
 ---
 # <a name="how-to-embed-a-manifest-inside-a-cc-application"></a>如何：将 C/c + + 应用程序清单嵌入
 
-建议 C/c + + 应用程序 （或库） 将其清单嵌入到最终二进制文件，因为这可保证正确的运行时行为在大多数情况下。 默认情况下，Visual Studio 尝试生成源代码文件; 一个项目时嵌入清单请参阅[Visual Studio 中的清单生成](../build/manifest-generation-in-visual-studio.md)有关详细信息。 但是，如果使用 nmake 生成应用程序，则需要对现有生成文件进行一些更改。 本部分演示如何更改现有生成文件将自动嵌入最终二进制文件中的清单。
+建议 C/c + + 应用程序 （或库） 将其清单嵌入到最终二进制文件，因为这可保证正确的运行时行为在大多数情况下。 默认情况下，Visual Studio 尝试生成源代码文件; 一个项目时嵌入清单请参阅[Visual Studio 中的清单生成](manifest-generation-in-visual-studio.md)有关详细信息。 但是，如果使用 nmake 生成应用程序，则需要对现有生成文件进行一些更改。 本部分演示如何更改现有生成文件将自动嵌入最终二进制文件中的清单。
 
 ## <a name="two-approaches"></a>两种方法
 
@@ -255,4 +255,4 @@ $(_VC_MANIFEST_BASENAME).auto.manifest :
 
 ## <a name="see-also"></a>请参阅
 
-[了解 C/C++ 程序的清单生成](../build/understanding-manifest-generation-for-c-cpp-programs.md)
+[了解 C/C++ 程序的清单生成](understanding-manifest-generation-for-c-cpp-programs.md)

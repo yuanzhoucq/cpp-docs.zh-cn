@@ -2,16 +2,16 @@
 title: 选择 .netmodule 输入文件的格式
 ms.date: 11/04/2016
 ms.assetid: 4653d1bd-300f-4083-86f5-d1a06f44e61c
-ms.openlocfilehash: ed492e47c09c05fc8ce2af3e19822cc5dde47b63
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: d48bfe84210143db333d1e6b081acf1aa66980cf
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420045"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807320"
 ---
 # <a name="choosing-the-format-of-netmodule-input-files"></a>选择 .netmodule 输入文件的格式
 
-MSIL.obj 文件 (使用编译[/clr](../../build/reference/clr-common-language-runtime-compilation.md)) 也可用作.netmodule 文件。  .obj 文件包含元数据和本机符号。  .netmodule 只包含元数据。
+MSIL.obj 文件 (使用编译[/clr](clr-common-language-runtime-compilation.md)) 也可用作.netmodule 文件。  .obj 文件包含元数据和本机符号。  .netmodule 只包含元数据。
 
 您可以将 MSIL.obj 文件通过 /addmodule 编译器选项传递给任何其他 Visual Studio 编译器 （但请注意，.obj 文件将成为生成的程序集的一部分，必须随程序集）。  例如，Visual C# 和 Visual Basic 有 /addmodule 编译器选项。
 
@@ -22,11 +22,11 @@ MSIL.obj 文件 (使用编译[/clr](../../build/reference/clr-common-language-ru
 
 其他 Visual Studio 编译器只能使用一个模块中的托管的类型。
 
-请使用以下内容确定是否需要使用 .netmodule 或 .obj 文件作为 Visual C++ 链接器的模块输入：
+使用以下方法来确定是否需要使用.netmodule 或.obj 文件作为 MSVC 链接器的模块输入：
 
 - 如果您要使用 Visual C++ 之外的 Visual Studio 编译器进行构建，请生成 .netmodule 并使用它作为链接器的输入。
 
-- 如果要使用 Visual C++ 编译器生成模块，并且该模块将用于构建库以外的内容，则使用编译器生成的 .obj 文件作为链接器的模块输入；不要使用 .netmodule 文件作为输入。
+- 如果使用 MSVC 编译器来生成模块，并且如果模块将用于构建库以外的内容，使用由编译器生成作为链接器，则模块输入的.obj 文件不要使用.netmodule 文件作为输入。
 
 - 如果你的模块将用于生成 （而不是托管） 的本机库，使用.obj 文件作为链接器的模块输入并生成一个.lib 库文件。
 
@@ -36,4 +36,4 @@ MSIL.obj 文件 (使用编译[/clr](../../build/reference/clr-common-language-ru
 
 ## <a name="see-also"></a>请参阅
 
-[用作链接器输入的 .netmodule 文件](../../build/reference/netmodule-files-as-linker-input.md)
+[用作链接器输入的 .netmodule 文件](netmodule-files-as-linker-input.md)

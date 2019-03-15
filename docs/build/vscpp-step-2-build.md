@@ -6,12 +6,12 @@ ms.date: 12/12/2017
 ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d71-719d-42dc-90d7-1d0ca31a2f55
-ms.openlocfilehash: 09780d5823190eb4cb3b4ad13bb60e33808e4987
-ms.sourcegitcommit: beeb77b2976e997debc55b1af35024cc62e62799
+ms.openlocfilehash: 59813a553a9034503d8bf432400db31e6e3d9478
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "52977727"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813540"
 ---
 # <a name="build-and-run-a-c-console-app-project"></a>生成并运行 c + + 控制台应用程序项目
 
@@ -19,23 +19,23 @@ ms.locfileid: "52977727"
 
 ## <a name="prerequisites"></a>系统必备
 
-- 使用 c + + 工作负载安装并运行您的计算机上具有 Visual Studio 中使用的桌面开发。 如果未尚未安装，请按照中的步骤[Visual Studio 中的安装 c + + 支持](../build/vscpp-step-0-installation.md)。
+- 使用 c + + 工作负载安装并运行您的计算机上具有 Visual Studio 中使用的桌面开发。 如果未尚未安装，请按照中的步骤[Visual Studio 中的安装 c + + 支持](vscpp-step-0-installation.md)。
 
-- 创建"Hello，World ！" 项目并输入其源代码。 如果尚未执行此操作，请按照中的步骤[创建一个 c + + 控制台应用程序项目](../build/vscpp-step-1-create.md)。
+- 创建"Hello，World ！" 项目并输入其源代码。 如果尚未执行此操作，请按照中的步骤[创建一个 c + + 控制台应用程序项目](vscpp-step-1-create.md)。
 
 如果 Visual Studio 外观如下所示，您就可以生成并运行你的应用：
 
-   ![准备好生成新项目](../build/media/vscpp-ready-to-build.png "准备好生成新项目")
+   ![准备好生成新项目](media/vscpp-ready-to-build.png "准备好生成新项目")
 
 ## <a name="build-and-run-your-code-in-visual-studio"></a>生成并在 Visual Studio 中运行你的代码
 
 1. 若要生成项目时，选择**生成解决方案**从**生成**菜单。 **输出**窗口会显示生成过程的结果。
 
-   ![生成项目](../build/media/vscpp-build-solution.gif "生成项目")
+   ![生成项目](media/vscpp-build-solution.gif "生成项目")
 
 1. 若要运行代码，在菜单栏上，选择**调试**，**启动但不调试**。
 
-   ![启动项目](../build/media/vscpp-start-without-debugging.gif "启动项目")
+   ![启动项目](media/vscpp-start-without-debugging.gif "启动项目")
 
    打开一个控制台窗口，然后运行您的应用程序。 当在 Visual Studio 中启动控制台应用程序时，它运行你的代码，然后打印"按任意键继续。 . ." 若要让人可以看到输出。
 
@@ -55,7 +55,7 @@ ms.locfileid: "52977727"
 
 1. 在命令提示符窗口中，右键单击要将您的应用程序的路径粘贴到命令提示符。 按 Enter 以运行你的应用。
 
-   ![在命令提示符下运行应用程序](../build/media/vscpp-run-in-cmd.gif "在命令提示符下运行应用")
+   ![在命令提示符下运行应用程序](media/vscpp-run-in-cmd.gif "在命令提示符下运行应用")
 
 恭喜，你已生成并在 Visual Studio 中运行控制台应用 ！
 

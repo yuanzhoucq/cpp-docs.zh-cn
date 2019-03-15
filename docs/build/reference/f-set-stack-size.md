@@ -10,12 +10,12 @@ helpviewer_keywords:
 - /F compiler option [C++]
 - stack, setting size
 ms.assetid: 17320b6f-8305-445b-9ec2-75833f4b29e0
-ms.openlocfilehash: 31d694c176afd3c79cde172248bfcd93d1346b54
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 9db595daa7de7820b594a8515ece7481b4382c98
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414442"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820411"
 ---
 # <a name="f-set-stack-size"></a>/F（设置堆栈大小）
 
@@ -38,13 +38,13 @@ ms.locfileid: "57414442"
 
 此外可以设置堆栈大小：
 
-- 使用 **/stack**链接器选项。 有关详细信息，请参阅[/stack](../../build/reference/stack.md)。
+- 使用 **/stack**链接器选项。 有关详细信息，请参阅[/stack](stack.md)。
 
-- 使用 EDITBIN 的.exe 文件。 有关详细信息，请参阅[EDITBIN 参考](../../build/reference/editbin-reference.md)。
+- 使用 EDITBIN 的.exe 文件。 有关详细信息，请参阅[EDITBIN 参考](editbin-reference.md)。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[Visual Studio 中的设置 c + + 编译器和生成属性](../working-with-project-properties.md)。
 
 1. 选择**配置属性** > **C/c + +** > **命令行**属性页。
 
@@ -56,5 +56,5 @@ ms.locfileid: "57414442"
 
 ## <a name="see-also"></a>请参阅
 
-[编译器选项](../../build/reference/compiler-options.md)<br/>
-[设置编译器选项](../../build/reference/setting-compiler-options.md)
+[MSVC 编译器选项](compiler-options.md)<br/>
+[MSVC 编译器命令行语法](compiler-command-line-syntax.md)

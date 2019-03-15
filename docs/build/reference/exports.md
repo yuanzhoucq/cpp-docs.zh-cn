@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - EXPORTS .def file statement
 ms.assetid: dbcd7579-b855-44c4-bd27-931e157657f7
-ms.openlocfilehash: b12548bafa9a0c580c5976cd7c4c54d8726e5ace
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 33b70c680bfc3db24f5326a2027fa9ec4740e3f2
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50435670"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814132"
 ---
 # <a name="exports"></a>EXPORTS
 
@@ -51,9 +51,9 @@ EXPORTS
    func2=other_module.#42
 ```
 
-因为 Visual c + + 编译器针对 c + + 函数使用名称修饰，您必须使用修饰的名*internal_name*或者通过使用定义导出的函数`extern "C"`的源代码中。 编译器还将修饰使用的 C 函数[__stdcall](../../cpp/stdcall.md)调用约定以下划线 (\_) 前缀和后缀组成 at 符号 (\@) 跟 in （采用十进制） 的字节数参数列表。
+MSVC 编译器针对 c + + 函数使用名称修饰，因为您必须使用修饰的名*internal_name*或者通过使用定义导出的函数`extern "C"`的源代码中。 编译器还将修饰使用的 C 函数[__stdcall](../../cpp/stdcall.md)调用约定以下划线 (\_) 前缀和后缀组成 at 符号 (\@) 跟 in （采用十进制） 的字节数参数列表。
 
-若要查找由编译器产生的修饰的名，请使用[DUMPBIN](../../build/reference/dumpbin-reference.md)工具或链接器[/map](../../build/reference/map-generate-mapfile.md)选项。 修饰名特定于编译器。 如果要将修饰名导出到 .DEF 文件中，则链接到 DLL 的可执行文件也必须通过使用同一版本的编译器生成。 这可确保调用方中的修饰名与 .DEF 文件中的导出名相匹配。
+若要查找由编译器产生的修饰的名，请使用[DUMPBIN](dumpbin-reference.md)工具或链接器[/map](map-generate-mapfile.md)选项。 修饰名特定于编译器。 如果要将修饰名导出到 .DEF 文件中，则链接到 DLL 的可执行文件也必须通过使用同一版本的编译器生成。 这可确保调用方中的修饰名与 .DEF 文件中的导出名相匹配。
 
 可以使用\@*序号*指定一个数字，而不是函数名称，将进入 DLL 的导出表。 许多 Windows DLL 将导出序号以支持旧版代码。 通常使用采用 16 位 Windows 编码的序号，因为这有助于最大程度地减小 DLL 的大小。 除非 DLL 的客户端需要按序号导出函数以支持旧版，否则我们不建议你执行此操作。 由于 .LIB 文件将包含序号与函数之间的映射，因此你可以像通常在使用 DLL 的项目中那样使用函数名。
 
@@ -74,7 +74,7 @@ EXPORTS
 
 1. .DEF 文件中的 `EXPORTS` 语句
 
-1. [/Export](../../build/reference/export-exports-a-function.md) LINK 命令中的规范
+1. [/Export](export-exports-a-function.md) LINK 命令中的规范
 
 1. 一个[注释](../../preprocessor/comment-c-cpp.md)指令中的源代码的窗体`#pragma comment(linker, "/export: definition ")`。 下面的示例演示一个 #pragma 注释指令之前函数声明中，其中`PlainFuncName`是未修饰的名称，和`_PlainFuncName@4`是该函数的修饰的名：
 
@@ -102,4 +102,4 @@ EXPORTS
 
 ## <a name="see-also"></a>请参阅
 
-[模块定义语句的规则](../../build/reference/rules-for-module-definition-statements.md)
+[模块定义语句的规则](rules-for-module-definition-statements.md)

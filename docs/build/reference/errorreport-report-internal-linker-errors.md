@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ERRORREPORT linker option
 - -ERRORREPORT linker option
 ms.assetid: f5fab595-a2f1-4eb0-ab5c-1c0fbd3d8c28
-ms.openlocfilehash: 97d36e9db342e5873fc76a156b879e03af880dbf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 26cc157cb7247a3a2ea7c10b415df1160540c9ad
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447230"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818019"
 ---
 # <a name="errorreport-report-internal-linker-errors"></a>/ERRORREPORT（报告内部链接器错误）
 
@@ -42,7 +42,7 @@ ms.locfileid: "50447230"
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
-1. 打开项目“属性页”  对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。
+1. 打开项目“属性页”  对话框。 有关详细信息，请参阅[Visual Studio 中的设置 c + + 编译器和生成属性](../working-with-project-properties.md)。
 
 1. 打开**配置属性** > **链接器** > **高级**属性页。
 
@@ -54,6 +54,6 @@ ms.locfileid: "50447230"
 
 ## <a name="see-also"></a>请参阅
 
-[/errorReport（报告内部编译器错误）](../../build/reference/errorreport-report-internal-compiler-errors.md)<br/>
-[设置链接器选项](../../build/reference/setting-linker-options.md)<br/>
-[链接器选项](../../build/reference/linker-options.md)
+[/errorReport（报告内部编译器错误）](errorreport-report-internal-compiler-errors.md)<br/>
+[MSVC 链接器引用](linking.md)<br/>
+[MSVC 链接器选项](linker-options.md)

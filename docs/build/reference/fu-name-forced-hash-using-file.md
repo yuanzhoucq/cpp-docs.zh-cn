@@ -10,12 +10,12 @@ helpviewer_keywords:
 - FU compiler option [C++]
 - /FU compiler option [C++]
 ms.assetid: 698f8603-457f-435a-baff-5ac9243d6ca1
-ms.openlocfilehash: 1a035be2080d9fe407799122f804668e0fc3ce76
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: c47a45208ac5b5c7e0000516ed114c008feda7ca
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413155"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807502"
 ---
 # <a name="fu-name-forced-using-file"></a>/FU（命名强制 #using 文件）
 
@@ -36,11 +36,11 @@ ms.locfileid: "57413155"
 
 如果使用的 C + + /cli CLI 并引用要使用元数据[友元程序集](../../dotnet/friend-assemblies-cpp.md)功能，不能使用 **/FU**。 你必须将 `#using` 与 `[as friend]` 特性一起使用，才能在代码中引用元数据。 友元程序集不支持在 Visual c + + 组件扩展 C + + /cli CX。
 
-有关如何创建程序集或模块的公共语言运行时 (CLR) 的信息，请参阅[/clr （公共语言运行时编译）](../../build/reference/clr-common-language-runtime-compilation.md)。 了解如何构建在 C + + /CX 中，请参阅[构建应用程序和库](../../cppcx/building-apps-and-libraries-c-cx.md)。
+有关如何创建程序集或模块的公共语言运行时 (CLR) 的信息，请参阅[/clr （公共语言运行时编译）](clr-common-language-runtime-compilation.md)。 了解如何构建在 C + + /CX 中，请参阅[构建应用程序和库](../../cppcx/building-apps-and-libraries-c-cx.md)。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[Visual Studio 中的设置 c + + 编译器和生成属性](../working-with-project-properties.md)。
 
 1. 选择**配置属性** > **C/c + +** > **高级**属性页。
 
@@ -52,6 +52,6 @@ ms.locfileid: "57413155"
 
 ## <a name="see-also"></a>请参阅
 
-[输出文件 (/F) 选项](../../build/reference/output-file-f-options.md)<br/>
-[编译器选项](../../build/reference/compiler-options.md)<br/>
-[设置编译器选项](../../build/reference/setting-compiler-options.md)
+[输出文件 (/F) 选项](output-file-f-options.md)<br/>
+[MSVC 编译器选项](compiler-options.md)<br/>
+[MSVC 编译器命令行语法](compiler-command-line-syntax.md)

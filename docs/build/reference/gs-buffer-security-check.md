@@ -14,12 +14,12 @@ helpviewer_keywords:
 - -GS compiler option [C++]
 - buffers [C++], avoiding overruns
 ms.assetid: 8d8a5ea1-cd5e-42e1-bc36-66e1cd7e731e
-ms.openlocfilehash: 6681ff09b846011af1b500f88a535c208d0bc1c1
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 10afa874092eb563903ba5f49c6add136afc869c
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57417567"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820229"
 ---
 # <a name="gs-buffer-security-check"></a>/GS（缓冲区安全检查）
 
@@ -96,7 +96,7 @@ Cookie 和本地变量之前分配的易受攻击的参数。 缓冲区溢出可
 
 - 不包含 GS 缓冲区的函数。
 
-- 优化 ([/O 选项](../../build/reference/o-options-optimize-code.md)) 未启用。
+- 优化 ([/O 选项](o-options-optimize-code.md)) 未启用。
 
 - 具有变量参数列表 （...） 的函数。
 
@@ -116,7 +116,7 @@ Cookie 和本地变量之前分配的易受攻击的参数。 缓冲区溢出可
 
 1. 在中**解决方案资源管理器**，右键单击项目，然后单击**属性**。
 
-   有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。
+   有关详细信息，请参阅[Visual Studio 中的设置 c + + 编译器和生成属性](../working-with-project-properties.md)。
 
 1. 在中**属性页**对话框中，单击**C/c + +** 文件夹。
 
@@ -157,5 +157,5 @@ int main() {
 
 ## <a name="see-also"></a>请参阅
 
-[编译器选项](../../build/reference/compiler-options.md)<br/>
-[设置编译器选项](../../build/reference/setting-compiler-options.md)
+[MSVC 编译器选项](compiler-options.md)<br/>
+[MSVC 编译器命令行语法](compiler-command-line-syntax.md)

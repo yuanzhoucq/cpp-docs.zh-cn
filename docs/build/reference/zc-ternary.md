@@ -7,12 +7,12 @@ helpviewer_keywords:
 - /Zc:ternary
 - Zc:ternary
 - -Zc:ternary
-ms.openlocfilehash: 2bc9e924656b9e1cb914255780adc4ae50220275
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cb9a4f8468a9cb57af711cdca36ee343e5092493
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618187"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816485"
 ---
 # <a name="zcternary-enforce-conditional-operator-rules"></a>/Zc: ternary （强制实施条件运算符规则）
 
@@ -151,7 +151,7 @@ int main(int argc, char**) {
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[Visual Studio 中的设置 c + + 编译器和生成属性](../working-with-project-properties.md)。
 
 1. 选择**配置属性** > **C/c + +** > **命令行**属性页。
 
@@ -159,4 +159,4 @@ int main(int argc, char**) {
 
 ## <a name="see-also"></a>请参阅
 
-[/Zc（一致性）](../../build/reference/zc-conformance.md)
+[/Zc（一致性）](zc-conformance.md)

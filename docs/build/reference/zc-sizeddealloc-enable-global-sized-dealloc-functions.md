@@ -11,12 +11,12 @@ helpviewer_keywords:
 - /Zc compiler options (C++)
 - Zc compiler options (C++)
 ms.assetid: 3a73ace0-4d36-420a-b699-0ca6fc0dd134
-ms.openlocfilehash: 160e90f0b068da6fe8330ac97dfd8bda52f05a38
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dc381058c6a2ef84542be1d3cdd00c410aa51c2f
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536599"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57809294"
 ---
 # <a name="zcsizeddealloc-enable-global-sized-deallocation-functions"></a>/Zc: sizeddealloc （启用全局大小释放函数）
 
@@ -40,7 +40,7 @@ C + + 14 标准更改编译器的行为。 在定义全局`operator delete`和`o
 
 ## <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[Visual Studio 中的设置 c + + 编译器和生成属性](../working-with-project-properties.md)。
 
 1. 从**配置**下拉列表菜单中，选择**所有配置**。
 
@@ -50,6 +50,6 @@ C + + 14 标准更改编译器的行为。 在定义全局`operator delete`和`o
 
 ## <a name="see-also"></a>请参阅
 
-[编译器选项](../../build/reference/compiler-options.md)<br/>
-[设置编译器选项](../../build/reference/setting-compiler-options.md)<br/>
-[/Zc（一致性）](../../build/reference/zc-conformance.md)<br/>
+[MSVC 编译器选项](compiler-options.md)<br/>
+[MSVC 编译器命令行语法](compiler-command-line-syntax.md)<br/>
+[/Zc（一致性）](zc-conformance.md)<br/>

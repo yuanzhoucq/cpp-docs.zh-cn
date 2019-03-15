@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - STACKSIZE .def file statement
 ms.assetid: 4d8c79bd-1cb4-4e4d-90f2-b5a7a4d20e7a
-ms.openlocfilehash: 5f0c23ad8b8d81f888616042ee5d6ba5bc63bd44
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 2d27b4fd596098f4abc5bb0d804d87bd08f70a60
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57412869"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814314"
 ---
 # <a name="stacksize"></a>STACKSIZE
 
@@ -23,10 +23,10 @@ STACKSIZE reserve[,commit]
 
 ## <a name="remarks"></a>备注
 
-设置堆栈的等效方法是使用[堆栈分配](../../build/reference/stack-stack-allocations.md)(/stack) 选项。 了解有关该选项的详细信息的文档*保留*和`commit`参数。
+设置堆栈的等效方法是使用[堆栈分配](stack-stack-allocations.md)(/stack) 选项。 了解有关该选项的详细信息的文档*保留*和`commit`参数。
 
 此选项对 Dll 无效。
 
 ## <a name="see-also"></a>请参阅
 
-[模块定义语句的规则](../../build/reference/rules-for-module-definition-statements.md)
+[模块定义语句的规则](rules-for-module-definition-statements.md)

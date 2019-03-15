@@ -10,12 +10,12 @@ helpviewer_keywords:
 - /ENTRY linker option
 - ENTRY linker option
 ms.assetid: 26c62ba2-4f52-4882-a7bd-7046a0abf445
-ms.openlocfilehash: 5ebc18d6d895928b1deec392cbb0bd91f48a96ed
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 0f3604ef75ce10928463c088e423615886555eda
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57425700"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807853"
 ---
 # <a name="entry-entry-point-symbol"></a>/ENTRY（入口点符号）
 
@@ -42,17 +42,17 @@ ms.locfileid: "57425700"
 |**WinMainCRTStartup** (或**wWinMainCRTStartup**)|使用 /SUBSYSTEM 的应用程序：**WINDOWS**; 调用`WinMain`(或`wWinMain`)，必须对其进行定义以使用 `__stdcall`|
 |**_DllMainCRTStartup**|DLL;调用`DllMain`如果存在，其必须进行定义以使用 `__stdcall`|
 
-如果[/DLL](../../build/reference/dll-build-a-dll.md)或[/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md)未指定选项、 链接器会选择取决于是否的子系统和入口点`main`或`WinMain`定义。
+如果[/DLL](dll-build-a-dll.md)或[/SUBSYSTEM](subsystem-specify-subsystem.md)未指定选项、 链接器会选择取决于是否的子系统和入口点`main`或`WinMain`定义。
 
 函数`main`， `WinMain`，和`DllMain`是三种形式的用户定义入口点。
 
 /ENTRY 到指定的函数创建托管的映像时，必须具有的签名 (LPVOID *var1*，DWORD *var2*，LPVOID *var3*)。
 
-了解如何定义您自己`DllMain`入口点，请参阅[Dll 和 Visual c + + 运行时库行为](../../build/run-time-library-behavior.md)。
+了解如何定义您自己`DllMain`入口点，请参阅[Dll 和 Visual c + + 运行时库行为](../run-time-library-behavior.md)。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此链接器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置 Visual c + + 项目属性](../../ide/working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[Visual Studio 中的设置 c + + 编译器和生成属性](../working-with-project-properties.md)。
 
 1. 单击**链接器**文件夹。
 
@@ -66,5 +66,5 @@ ms.locfileid: "57425700"
 
 ## <a name="see-also"></a>请参阅
 
-[设置链接器选项](../../build/reference/setting-linker-options.md)<br/>
-[链接器选项](../../build/reference/linker-options.md)
+[MSVC 链接器引用](linking.md)<br/>
+[MSVC 链接器选项](linker-options.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - PDB files, creating
 - .pdb files, creating
 ms.assetid: d23db0ce-10cb-427a-bc60-d6b2a852723d
-ms.openlocfilehash: 6a57e4eb23d40355094f4c8274a42ccb7e1b0e20
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: ddcf83cafd5f499158f3116f04e40397b7f8d0a8
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420630"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57821503"
 ---
 # <a name="pdb-use-program-database"></a>/PDB（使用程序数据库）
 
@@ -31,17 +31,17 @@ ms.locfileid: "57420630"
 
 ## <a name="remarks"></a>备注
 
-默认情况下，当[/debug](../../build/reference/debug-generate-debug-info.md)指定，则链接器将创建包含调试信息的程序数据库 (PDB)。 PDB 的默认文件名称有该程序，扩展名为.pdb 的基名称。
+默认情况下，当[/debug](debug-generate-debug-info.md)指定，则链接器将创建包含调试信息的程序数据库 (PDB)。 PDB 的默认文件名称有该程序，扩展名为.pdb 的基名称。
 
 使用 /PDB:*文件名*指定 PDB 文件的名称。 如果未指定 /DEBUG，则忽略 /PDB 选项。
 
 PDB 文件可以是最多为 2 GB。
 
-有关详细信息，请参阅[用作链接器输入的.pdb 文件](../../build/reference/dot-pdb-files-as-linker-input.md)。
+有关详细信息，请参阅[用作链接器输入的.pdb 文件](dot-pdb-files-as-linker-input.md)。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此链接器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置 Visual c + + 项目属性](../../ide/working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[Visual Studio 中的设置 c + + 编译器和生成属性](../working-with-project-properties.md)。
 
 1. 单击**链接器**文件夹。
 
@@ -55,5 +55,5 @@ PDB 文件可以是最多为 2 GB。
 
 ## <a name="see-also"></a>请参阅
 
-[设置链接器选项](../../build/reference/setting-linker-options.md)<br/>
-[链接器选项](../../build/reference/linker-options.md)
+[MSVC 链接器引用](linking.md)<br/>
+[MSVC 链接器选项](linker-options.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - LINK tool [C++], options for full linking
 - incremental linking
 ms.assetid: 135656ff-94fa-4ad4-a613-22e1a2a5d16b
-ms.openlocfilehash: 60cec41173afc9955bddf9df0bd6796b5df6285c
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 189affe57694a8369e9cf7ac98815cc5888b69aa
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414078"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816134"
 ---
 # <a name="incremental-link-incrementally"></a>/INCREMENTAL（增量链接）
 
@@ -54,7 +54,7 @@ ms.locfileid: "57414078"
 
 - 选定 /ORDER
 
-/ 增量时隐式[/debug](../../build/reference/debug-generate-debug-info.md)指定。
+/ 增量时隐式[/debug](debug-generate-debug-info.md)指定。
 
 此外，如果发生以下任何情况，则 LINK 执行完全链接：
 
@@ -72,7 +72,7 @@ ms.locfileid: "57414078"
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此链接器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[Visual Studio 中的设置 c + + 编译器和生成属性](../working-with-project-properties.md)。
 
 1. 选择**链接器**文件夹。
 
@@ -86,5 +86,5 @@ ms.locfileid: "57414078"
 
 ## <a name="see-also"></a>请参阅
 
-[设置链接器选项](../../build/reference/setting-linker-options.md)<br/>
-[链接器选项](../../build/reference/linker-options.md)
+[MSVC 链接器引用](linking.md)<br/>
+[MSVC 链接器选项](linker-options.md)

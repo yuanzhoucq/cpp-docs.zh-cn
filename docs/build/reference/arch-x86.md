@@ -2,16 +2,16 @@
 title: /arch (x86)
 ms.date: 11/04/2016
 ms.assetid: 9dd5a75d-06e4-4674-aade-33228486078d
-ms.openlocfilehash: e2aba6dc18db621710b5293f9f970fa5f453b8a9
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: a429824a7c22aa9aba460481394785d31b92a5ef
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57421802"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812247"
 ---
 # <a name="arch-x86"></a>/arch (x86)
 
-在 x86 上为代码生成指定体系结构。 另请参阅[/arch (x64)](../../build/reference/arch-x64.md)并[/arch (ARM)](../../build/reference/arch-arm.md)。
+在 x86 上为代码生成指定体系结构。 另请参阅[/arch (x64)](arch-x64.md)并[/arch (ARM)](arch-arm.md)。
 
 ## <a name="syntax"></a>语法
 
@@ -48,9 +48,9 @@ SSE 和 SSE2 指令在各种 Intel 和 AMD 处理器中均存在。 Intel 浅桥
 
 由于的 x86 编译器生成的代码使用 SSE2 指令的默认情况下，您必须指定 **/arch:ia32**禁用 SSE 和 SSE2 指令生成适用于 x86 处理器。
 
-**/arch**仅会影响代码生成的本机函数。 当你使用[/clr](../../build/reference/clr-common-language-runtime-compilation.md)进行编译， **/arch**对托管函数的代码生成没有影响。
+**/arch**仅会影响代码生成的本机函数。 当你使用[/clr](clr-common-language-runtime-compilation.md)进行编译， **/arch**对托管函数的代码生成没有影响。
 
-**/arch**并[/QIfist](../../build/reference/qifist-suppress-ftol.md)不能使用同一编译。 具体而言，如果不使用 `_controlfp` 修改 FP 控制字，则运行时启动代码会将 x87 FPU 控制字精度控制字段设置为 53 位。 因此，表达式中的每个浮点型和双运算都使用 53 位有效数和 15 位指数。 但是，每个 SSE 单精度运算都使用 24 位有效数和 8 位指数，而 SSE2 双精度运算使用 53 位有效数和 11 位指数。 有关详细信息，请参阅 [_control87、_controlfp、\__control87_2](../../c-runtime-library/reference/control87-controlfp-control87-2.md)。 在单个表达式树中可能会出现这些差异，而在每一子表达式后存在用户赋值的情况下则不会。 考虑以下情况：
+**/arch**并[/QIfist](qifist-suppress-ftol.md)不能使用同一编译。 具体而言，如果不使用 `_controlfp` 修改 FP 控制字，则运行时启动代码会将 x87 FPU 控制字精度控制字段设置为 53 位。 因此，表达式中的每个浮点型和双运算都使用 53 位有效数和 15 位指数。 但是，每个 SSE 单精度运算都使用 24 位有效数和 8 位指数，而 SSE2 双精度运算使用 53 位有效数和 11 位指数。 有关详细信息，请参阅 [_control87、_controlfp、\__control87_2](../../c-runtime-library/reference/control87-controlfp-control87-2.md)。 在单个表达式树中可能会出现这些差异，而在每一子表达式后存在用户赋值的情况下则不会。 考虑以下情况：
 
 ```cpp
 r = f1 * f2 + d;  // Different results are possible on SSE/SSE2.
@@ -66,7 +66,7 @@ r = t + d;     // This should produce the same overall result
 
 ### <a name="to-set-this-compiler-option-for-avx-avx2-ia32-sse-or-sse2-in-visual-studio"></a>在 Visual Studio 中设置 AVX、AVX2、IA32、SSE 或 SSE2 的此编译器选项
 
-1. 打开**属性页**项目对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。
+1. 打开**属性页**项目对话框。 有关详细信息，请参阅[Visual Studio 中的设置 c + + 编译器和生成属性](../working-with-project-properties.md)。
 
 1. 选择**配置属性**， **C/c + +** 文件夹。
 
@@ -80,6 +80,6 @@ r = t + d;     // This should produce the same overall result
 
 ## <a name="see-also"></a>请参阅
 
-[/arch（最小 CPU 体系结构）](../../build/reference/arch-minimum-cpu-architecture.md)<br/>
-[编译器选项](../../build/reference/compiler-options.md)<br/>
-[设置编译器选项](../../build/reference/setting-compiler-options.md)
+[/arch（最小 CPU 体系结构）](arch-minimum-cpu-architecture.md)<br/>
+[MSVC 编译器选项](compiler-options.md)<br/>
+[MSVC 编译器命令行语法](compiler-command-line-syntax.md)

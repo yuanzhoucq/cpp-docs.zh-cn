@@ -13,12 +13,12 @@ helpviewer_keywords:
 - explicit linking [C++]
 - DLLs [C++], unloading
 ms.assetid: 4a48d290-3971-43e9-8e97-ba656cd0c8f8
-ms.openlocfilehash: 51d14b86a92f3acb76dc54d1bade2d2cd0baa055
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 709e4fdbc24d6fbbac44944e686a6fecf8c9b8db
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57419941"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57808139"
 ---
 # <a name="freelibrary-and-afxfreelibrary"></a>FreeLibrary 和 AfxFreeLibrary
 
@@ -28,18 +28,18 @@ MFC 应用程序中使用[AfxFreeLibrary](../mfc/reference/application-informati
 
 ## <a name="what-do-you-want-to-do"></a>你希望做什么？
 
-- [如何隐式链接到 DLL](../build/linking-an-executable-to-a-dll.md#linking-implicitly)
+- [将可执行文件链接到 DLL](linking-an-executable-to-a-dll.md#linking-implicitly)
 
-- [确定要使用的链接方法](../build/linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)
+- [将可执行文件链接到 DLL](linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)
 
 ## <a name="what-do-you-want-to-know-more-about"></a>你想进一步了解什么？
 
-- [LoadLibrary 和 AfxLoadLibrary](../build/loadlibrary-and-afxloadlibrary.md)
+- [LoadLibrary 和 AfxLoadLibrary](loadlibrary-and-afxloadlibrary.md)
 
-- [GetProcAddress](../build/getprocaddress.md)
+- [GetProcAddress](getprocaddress.md)
 
 ## <a name="see-also"></a>请参阅
 
-[Visual C++ 中的 DLL](../build/dlls-in-visual-cpp.md)<br/>
+[Visual C++ 中的 DLL](dlls-in-visual-cpp.md)<br/>
 [FreeLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-freelibrary)
 [AfxFreeLibrary](../mfc/reference/application-information-and-management.md#afxfreelibrary)
