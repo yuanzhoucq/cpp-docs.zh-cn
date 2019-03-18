@@ -6,16 +6,16 @@ helpviewer_keywords:
 - application deployment [C++], ClickOnce
 - ClickOnce deployment [C++], C++ applications
 ms.assetid: 9988c546-0936-452c-932f-9c76daa42157
-ms.openlocfilehash: 29395e5d7e4ba9e2c582d9e5c081a4f667dcaafa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e1460f13226291e76d297b628d3542a1e147900f
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467803"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742153"
 ---
 # <a name="clickonce-deployment-for-visual-c-applications"></a>Visual C++ 应用程序的 ClickOnce 部署
 
-Visual Studio 提供了两种不同的技术来部署 Windows 应用程序：ClickOnce 部署或 [Windows Installer](/windows/desktop/Msi/windows-installer-portal) 部署。
+Visual Studio 提供了两种不同的方法来部署 Windows 应用程序：ClickOnce 部署或 [Windows Installer](/windows/desktop/Msi/windows-installer-portal) 部署。
 
 ## <a name="clickonce-deployment-in-c"></a>C++ 中的 ClickOnce 部署
 

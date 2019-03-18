@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Win32 Application Wizard
 - Win32 Project Wizard
 ms.assetid: 5d7b3a5e-8461-479a-969a-67b7883725b9
-ms.openlocfilehash: 1b89ae1c91536956924090f4a5eafa883053ed7e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 639834c8d723b65b894e6d216cbeb3b7f4dc37ec
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50526149"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822686"
 ---
 # <a name="win32-application-wizard"></a>Win32 应用程序向导
 
@@ -20,10 +20,10 @@ Visual C++ Win32 应用程序向导，可以创建四种类型中任意一种的
 
 |支持级别|控制台应用程序|可执行 (Windows) 应用程序|动态链接库|静态库|
 |---------------------|-------------------------|----------------------------------------|---------------------------|--------------------|
-|**空项目**|是|是|是|否|
-|**导出符号**|否|否|是|否|
+|**空项目**|是|是|是|No|
+|**导出符号**|No|否|是|No|
 |**预编译头**|否|否|否|是|
-|**ATL 支持**|是|No|否|否|
+|**ATL 支持**|是|No|否|No|
 |**MFC 支持**|是|No|否|是|
 
 ## <a name="overview"></a>概述
@@ -47,9 +47,9 @@ Visual C++ Win32 应用程序向导，可以创建四种类型中任意一种的
 > [!NOTE]
 > 不能添加 ATL 类，只能向支持 MFC 的 Windows 桌面应用程序类型添加 MFC 类（请参阅上表）。
 
-可在 **解决方案资源管理器**中查看你通过向导为项目创建的文件。 向导将创建为你的项目文件的详细信息，请参阅项目生成的文件， `ReadMe.txt`。 有关文件类型的更多信息，请参见 [为 Visual C++ 项目创建的文件类型](../ide/file-types-created-for-visual-cpp-projects.md)。
+可在 **解决方案资源管理器**中查看你通过向导为项目创建的文件。 向导将创建为你的项目文件的详细信息，请参阅项目生成的文件， `ReadMe.txt`。 有关文件类型的更多信息，请参见 [为 Visual C++ 项目创建的文件类型](../build/reference/file-types-created-for-visual-cpp-projects.md)。
 
 ## <a name="see-also"></a>请参阅
 
 [创建空的 Windows 桌面应用程序](../windows/creating-an-empty-windows-desktop-application.md)<br/>
-[Visual C++ 项目类型](../ide/visual-cpp-project-types.md)
+[Visual C++ 项目类型](../build/reference/visual-cpp-project-types.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - output files, LIB
 ms.assetid: e73d2f9b-a42d-402b-b7e3-3a94bebb317e
-ms.openlocfilehash: 31c69a273d9f201046171ecc8889dda6e07328d6
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: d7a6352665f12307bfa54025a32f9f7b84311dac
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57419317"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807914"
 ---
 # <a name="lib-output-files"></a>LIB 输出文件
 
@@ -25,4 +25,4 @@ LIB 所产生的输出文件取决于在其中它的使用的模式下, 表中�
 
 ## <a name="see-also"></a>请参阅
 
-[LIB 概述](../../build/reference/overview-of-lib.md)
+[LIB 概述](overview-of-lib.md)

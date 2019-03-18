@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -HEAP editbin option
 - /HEAP editbin option
 ms.assetid: 6ce759b5-75b7-44ff-a5fd-3a83a0ba9a48
-ms.openlocfilehash: 24470c00afce54bab0a15dd08e03cef6dfee63fc
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: fcf557b467ba5bd04352ba2f2702659a1eb2948d
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57415248"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810349"
 ---
 # <a name="heap"></a>/HEAP
 
@@ -29,7 +29,7 @@ reserve[,commit]
 ## <a name="remarks"></a>备注
 
 
-  `reserve` 参数指定虚拟内存中的初始堆分配总量。 默认情况下，堆大小为 1 MB。 [EDITBIN 参考](../../build/reference/editbin-reference.md)调高为指定的值为 4 个字节的最接近倍数。
+  `reserve` 参数指定虚拟内存中的初始堆分配总量。 默认情况下，堆大小为 1 MB。 [EDITBIN 参考](editbin-reference.md)调高为指定的值为 4 个字节的最接近倍数。
 
 可选`commit`参数是取决于操作系统的解释。 在 Windows 操作系统中，它指定最初要分配的物理内存量和在展开堆时要分配的额外内存量。 提交的虚拟内存后，在分页文件为保留的空间。 当应用需要更多堆空间但又会增加内存需求和可能的应用启动持续时间时，提高 `commit` 值可减少系统分配的内存。 
   `commit` 值必须小于或等于 `reserve` 值。
@@ -38,4 +38,4 @@ reserve[,commit]
 
 ## <a name="see-also"></a>请参阅
 
-[EDITBIN 选项](../../build/reference/editbin-options.md)
+[EDITBIN 选项](editbin-options.md)

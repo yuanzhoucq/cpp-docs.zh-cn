@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /openmp compiler option [C++]
 - -openmp compiler option [C++]
 ms.assetid: 9082b175-18d3-4378-86a7-c0eb95664e13
-ms.openlocfilehash: bea51c7af41df666fd441555daa0d8d8387377ac
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: f1edcc6d29a5b84106b3a5fd91d2446c34e0f7b9
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414130"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807463"
 ---
 # <a name="openmp-enable-openmp-20-support"></a>/openmp（启用 OpenMP 2.0 支持）
 
@@ -29,7 +29,7 @@ ms.locfileid: "57414130"
 
 `#pragma omp` 用于指定[指令](../../parallel/openmp/reference/openmp-directives.md)并[子句](../../parallel/openmp/reference/openmp-clauses.md)。 如果 **/openmp** OpenMP 子句和指令，编译器将忽略在编译时，未指定。 [OpenMP 函数](../../parallel/openmp/reference/openmp-functions.md)调用处理由编译器即使 **/openmp**未指定。
 
-使用应用程序编译 **/openmp**并 **/clr**只能在单个应用程序域进程中运行; 不支持多个应用程序域。 也就是说，当运行时模块构造函数 (.cctor)，它会检测与编译的进程 **/openmp**和应用程序是否正在加载到非默认运行时。 有关详细信息，请参阅[appdomain](../../cpp/appdomain.md)， [/clr （公共语言运行时编译）](../../build/reference/clr-common-language-runtime-compilation.md)，并[混合程序集初始化](../../dotnet/initialization-of-mixed-assemblies.md)。
+使用应用程序编译 **/openmp**并 **/clr**只能在单个应用程序域进程中运行; 不支持多个应用程序域。 也就是说，当运行时模块构造函数 (.cctor)，它会检测与编译的进程 **/openmp**和应用程序是否正在加载到非默认运行时。 有关详细信息，请参阅[appdomain](../../cpp/appdomain.md)， [/clr （公共语言运行时编译）](clr-common-language-runtime-compilation.md)，并[混合程序集初始化](../../dotnet/initialization-of-mixed-assemblies.md)。
 
 如果你尝试加载使用编译的应用程序 **/openmp**并 **/clr**到非默认应用程序域，<xref:System.TypeInitializationException>将在调试器外部引发异常和在调试器中，将引发 OpenMPWithMultipleAppdomainsException 异常。
 
@@ -45,7 +45,7 @@ Microsoft 建议您不要编写 **/openmp**应用程序，允许部分受信任�
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[Visual Studio 中的设置 c + + 编译器和生成属性](../working-with-project-properties.md)。
 
 1. 展开“配置属性”节点。
 
@@ -113,5 +113,5 @@ int main(int argc, char* argv[]) {
 
 ## <a name="see-also"></a>请参阅
 
-[编译器选项](../../build/reference/compiler-options.md)<br/>
-[设置编译器选项](../../build/reference/setting-compiler-options.md)
+[MSVC 编译器选项](compiler-options.md)<br/>
+[MSVC 编译器命令行语法](compiler-command-line-syntax.md)

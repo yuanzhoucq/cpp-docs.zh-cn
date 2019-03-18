@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4634
 ms.assetid: 3e3496ce-2ac7-43d0-a48a-f514c950e81d
-ms.openlocfilehash: a26356dd32f1513eadf4ef2b82175cf71aed13a4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7d0e2af13128a201d96aa905d85621e14441a673
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536660"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818253"
 ---
 # <a name="compiler-warning-level-4-c4634"></a>编译器警告（等级 4）C4634
 
@@ -19,7 +19,7 @@ XML 文档注释：不能应用：原因
 
 XML 文档标记不能应用于所有 C++ 构造。  例如，无法将文档注释添加到命名空间或模板中。
 
-有关更多信息，请参见 [XML Documentation](../../ide/xml-documentation-visual-cpp.md)。
+有关更多信息，请参见 [XML Documentation](../../build/reference/xml-documentation-visual-cpp.md)。
 
 ## <a name="example"></a>示例
 

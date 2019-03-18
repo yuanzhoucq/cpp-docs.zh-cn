@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DRIVER linker option
 - /DRIVER linker option
 ms.assetid: aeee8e28-5d97-40f5-ba16-9f370fe8a1b8
-ms.openlocfilehash: 596566c357dd78d656e5e564a9b0f9097d20637e
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: ab7253d7e386bf385bcb3a586c5e0e1c1e860694
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57423906"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57811675"
 ---
 # <a name="driver-windows-nt-kernel-mode-driver"></a>/DRIVER（Windows NT 内核模式驱动程序）
 
@@ -33,13 +33,13 @@ ms.locfileid: "57423906"
 
 如果 **/DRIVER**指定：
 
-- **/Fixed: no**生效。 有关详细信息，请参阅 [/FIXED（固定基址）](../../build/reference/fixed-fixed-base-address.md)。
+- **/Fixed: no**生效。 有关详细信息，请参阅 [/FIXED（固定基址）](fixed-fixed-base-address.md)。
 
-- 输出文件的扩展名设置为.sys。 使用 **/out**更改默认的文件名和扩展名。 有关详细信息，请参阅 [/OUT（输出文件名）](../../build/reference/out-output-file-name.md)。
+- 输出文件的扩展名设置为.sys。 使用 **/out**更改默认的文件名和扩展名。 有关详细信息，请参阅 [/OUT（输出文件名）](out-output-file-name.md)。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此链接器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置 Visual c + + 项目属性](../../ide/working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[Visual Studio 中的设置 c + + 编译器和生成属性](../working-with-project-properties.md)。
 
 1. 单击**链接器**文件夹。
 
@@ -53,5 +53,5 @@ ms.locfileid: "57423906"
 
 ## <a name="see-also"></a>请参阅
 
-[设置链接器选项](../../build/reference/setting-linker-options.md)<br/>
-[链接器选项](../../build/reference/linker-options.md)
+[MSVC 链接器引用](linking.md)<br/>
+[MSVC 链接器选项](linker-options.md)

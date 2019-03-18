@@ -33,12 +33,12 @@ helpviewer_keywords:
 - function calls [MFC], results
 - out-of-memory exceptions [MFC]
 ms.assetid: 0926627d-2ba7-44a6-babe-d851a4a2517c
-ms.openlocfilehash: cb11a74932e44f94f481a2fdc48b8d6ee359f9e8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: afa49a4d54397cf79a3bd0af28e4a0f0a4c7639e
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57260538"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818630"
 ---
 # <a name="exception-handling-in-mfc"></a>MFC 中的异常处理
 
@@ -55,7 +55,7 @@ ms.locfileid: "57260538"
 如果您已开发了使用 MFC 异常宏的应用程序，则可以继续使用这些宏在现有代码中，同时在新代码中使用 c + + 异常。 文章[异常：将更改为版本 3.0 中的异常宏](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md)提供的指导可用于执行此操作。
 
 > [!NOTE]
->  若要启用 c + + 异常处理代码中，项目的 C/c + + 文件夹中的代码生成页上选择启用 c + + 异常[属性页](../ide/property-pages-visual-cpp.md)对话框中或使用[/EHsc](../build/reference/eh-exception-handling-model.md)编译器选项。
+>  若要启用 c + + 异常处理代码中，项目的 C/c + + 文件夹中的代码生成页上选择启用 c + + 异常[属性页](../build/reference/property-pages-visual-cpp.md)对话框中或使用[/EHsc](../build/reference/eh-exception-handling-model.md)编译器选项。
 
 本文介绍了以下主题：
 

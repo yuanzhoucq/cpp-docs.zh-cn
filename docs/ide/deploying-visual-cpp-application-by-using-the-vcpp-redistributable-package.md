@@ -4,14 +4,14 @@ ms.date: 09/17/2018
 helpviewer_keywords:
 - walkthrough, deploying a Visual C++ application by using the redistributable package
 ms.assetid: e59becbf-b8c6-4c8e-bab3-b69cc1ed3e5e
-ms.openlocfilehash: 6de94ac300c5d50be67ede24cfcc3d03bc966fed
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ccf6b74096894c2e48258e6e0a60b807c7c6c5b4
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50436423"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743793"
 ---
-# <a name="walkthrough-deploying-a-visual-c-application-by-using-the-visual-c-redistributable-package"></a>演练：使用 Visual C++ 可再发行组件包部署 Visual C++ 应用程序
+# <a name="walkthrough-deploying-a-visual-c-application-by-using-the-visual-c-redistributable-package"></a>演练：使用 Visual C++ 可再发行软件包部署 Visual C++ 应用程序
 
 本文分步说明了如何使用 Visual C++ 可再发行组件包部署 Visual C++ 应用程序的方法。
 
@@ -25,7 +25,7 @@ ms.locfileid: "50436423"
 
 ### <a name="to-use-the-visual-c-redistributable-package-to-deploy-an-application"></a>使用 Visual C++ 可再发行组件包部署应用程序
 
-1.  按照[演练：使用安装项目部署 Visual C++ 应用程序](walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project.md)中的步骤创建并生成 MFC 应用程序。
+1.  请按照[演练：使用安装项目部署 Visual C++ 应用程序](walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project.md)中的步骤创建和生成 MFC 应用程序。
 
 1. 创建文件，将其命名为 setup.bat，并向其添加以下命令。 将 `MyMFCApplication` 更改为项目名称。
 

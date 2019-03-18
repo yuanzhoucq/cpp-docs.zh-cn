@@ -8,12 +8,12 @@ helpviewer_keywords:
 - '#include directive'
 - include directive (#include)
 ms.assetid: 17067dc0-8db1-4f2d-b43e-ec12ecf83238
-ms.openlocfilehash: da68f71d2a3830cdd86870d8ef072c3fb04933db
-ms.sourcegitcommit: 45835842604602a011813d0cd70abc5df91b89ed
+ms.openlocfilehash: 67a44574a5a72a7b7addc0ed3d7b51cd3eb5b984
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50750400"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57821379"
 ---
 # <a name="include-directive-cc"></a>#include 指令 (C/C++)
 
@@ -49,7 +49,7 @@ ms.locfileid: "50750400"
 
 当嵌套了包含文件并从命令行开始编译时，目录搜索会从父文件的目录开始，然后在所有祖父文件的目录中继续进行。 即，搜索将相对于包含当前正在处理的源的目录开始。 如果找不到该文件，则搜索会移动到由指定的目录[/I （附加包含目录）](../build/reference/i-additional-include-directories.md)编译器选项。 最后，将搜索 INCLUDE 环境变量指定的目录。
 
-从 Visual Studio 开发环境中，将忽略 INCLUDE 环境变量。 有关如何设置搜索包含文件的目录信息 — 这也适用于 LIB 环境变量，请参阅[VC + + Directories Property Page](../ide/vcpp-directories-property-page.md)。
+从 Visual Studio 开发环境中，将忽略 INCLUDE 环境变量。 有关如何设置搜索包含文件的目录信息 — 这也适用于 LIB 环境变量，请参阅[VC + + Directories Property Page](../build/reference/vcpp-directories-property-page.md)。
 
 此示例使用尖括号显示文件包含：
 

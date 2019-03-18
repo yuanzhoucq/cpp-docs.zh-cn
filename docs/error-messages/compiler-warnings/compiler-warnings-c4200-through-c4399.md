@@ -31,14 +31,13 @@ f1_keywords:
 - C4380
 - C4387
 - C4388
-- C4396
 ms.assetid: 170248db-7bf2-4823-92d9-437b04c1290d
-ms.openlocfilehash: 02340234fc504773a29b3d83ae606cd1eb4e09f1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9cca32973ead1d7d88e37c4745491c8d5f181e0b
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50455987"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810505"
 ---
 # <a name="compiler-warnings-c4200-through-c4399"></a>编译器警告 C4200-C4399
 
@@ -104,7 +103,7 @@ ms.locfileid: "50455987"
 |[编译器警告（等级 1）C4269](../../error-messages/compiler-warnings/compiler-warning-level-1-c4269.md)|'*标识符*： 用编译器生成默认构造函数初始化 const 自动数据产生不可靠的结果|
 |[编译器警告（等级 1）C4272](../../error-messages/compiler-warnings/compiler-warning-level-1-c4272.md)|'*函数*： 被标记为 __declspec （dllimport）; 导入函数时必须指定本机调用约定。|
 |[编译器警告（等级 1）C4273](../../error-messages/compiler-warnings/compiler-warning-level-1-c4273.md)|'*函数*: dll 链接不一致|
-|编译器警告 （等级 1） C4274|#ident 忽略;请参阅 #pragma comment （exestr，'string'） 的文档|
+|编译器警告 （等级 1） C4274|#ident ignored; see documentation for #pragma comment(exestr, 'string')|
 |[编译器警告（等级 2）C4275](../../error-messages/compiler-warnings/compiler-warning-level-2-c4275.md)|非 dll 接口*classkey*''*identifier1*用作 dll 接口的基表示*classkey*''*identifier2*|
 |[编译器警告（等级 1）C4276](../../error-messages/compiler-warnings/compiler-warning-level-1-c4276.md)|'*函数*： 不提供原型; 假定无参数|
 |编译器警告 （等级 1） C4277|导入的项*classname*::*成员*作为数据成员和函数成员; 存在忽略数据成员|
@@ -116,7 +115,7 @@ ms.locfileid: "50455987"
 |[编译器警告（等级 3）C4283](../../error-messages/compiler-warnings/compiler-warning-level-3-c4283.md)|并通过类型*typeN*|
 |[编译器警告（等级 2）C4285](../../error-messages/compiler-warnings/compiler-warning-level-2-c4285.md)|返回类型*标识符*:: operator-> 为递归，如果应用使用中|
 |[编译器警告（等级 1）C4286](../../error-messages/compiler-warnings/compiler-warning-level-1-c4286.md)|'*derived_type*： 由基类捕获 ('*base_type*) 行上'*line_number*|
-|[编译器警告（等级 3）C4287](../../error-messages/compiler-warnings/compiler-warning-level-3-c4287.md)|'*运算符*： 无符号/负常量不匹配|
+|[编译器警告（等级 3）C4287](../../error-messages/compiler-warnings/compiler-warning-level-3-c4287.md)|'*operator*': unsigned/negative constant mismatch|
 |[编译器警告（等级 1）C4288](../../error-messages/compiler-warnings/compiler-warning-level-1-c4288.md)|使用了非标准扩展:*变量*： 在 for 循环中声明的循环控制变量用在 for 循环范围外; 它与外部作用域中的声明冲突|
 |[编译器警告（等级 4）C4289](../../error-messages/compiler-warnings/compiler-warning-level-4-c4289.md)|使用了非标准扩展:*变量*： 在 for 循环中声明的循环控制变量用在 for 循环范围外|
 |[编译器警告（等级 3）C4290](../../error-messages/compiler-warnings/compiler-warning-level-3-c4290.md)|忽略但指示函数的 c + + 异常规范不是 __declspec （nothrow）|
@@ -153,7 +152,7 @@ ms.locfileid: "50455987"
 |[编译器警告（等级 1）C4326](../../error-messages/compiler-warnings/compiler-warning-level-1-c4326.md)|返回类型*函数*'应是'*type1*而不是 of*type2*|
 |编译器警告 C4327|'*赋值*: LHS 的间接对齐 ('*alignment1*) 大于 RHS ('*alignment2*)|
 |编译器警告 C4328|'*函数*： 形参的间接对齐*parameter_number* (*parameter_alignment*) 大于实参对齐 (*argument_alignment*)|
-|[编译器警告（等级 1）C4329](../../error-messages/compiler-warnings/compiler-warning-level-1-c4329.md)|枚举上忽略 __declspec(align())|
+|[编译器警告（等级 1）C4329](../../error-messages/compiler-warnings/compiler-warning-level-1-c4329.md)|__declspec(align()) is ignored on enum|
 |编译器警告 （等级 1） C4330|属性*特性*for 部分*部分*被忽略|
 |[编译器警告（等级 1）C4333](../../error-messages/compiler-warnings/compiler-warning-level-1-c4333.md)|'*shift_operator*： 右移位数过大数据丢失|
 |[编译器警告（等级 3）C4334](../../error-messages/compiler-warnings/compiler-warning-level-3-c4334.md)|'*shift_operator*: 32 位移位的结果隐式转换为 64 位 （是否 64 位移？）|
@@ -175,7 +174,7 @@ ms.locfileid: "50455987"
 |[编译器警告（等级 2）C4356](../../error-messages/compiler-warnings/compiler-warning-level-2-c4356.md)|'*成员*： 不能通过派生类中初始化静态数据成员|
 |[编译器警告（等级 3）C4357](../../error-messages/compiler-warnings/compiler-warning-level-3-c4357.md)|委托的形式自变量列表中找到 param 数组参数*委派*生成时，忽略'*函数*|
 |[编译器警告（等级 1）C4358](../../error-messages/compiler-warnings/compiler-warning-level-1-c4358.md)|'*运算符*： 组合委托的返回类型不是 void; 返回的值是不确定|
-|[编译器警告（等级 3）C4359](../../error-messages/compiler-warnings/compiler-warning-level-3-c4359.md)|'*类型*： 对齐说明符小于实际对齐方式 ('*对齐*)，并且将被忽略。|
+|[编译器警告（等级 3）C4359](../../error-messages/compiler-warnings/compiler-warning-level-3-c4359.md)|'*类型*:对齐说明符小于实际对齐方式 ('*对齐*)，并且将被忽略。|
 |编译器警告 （等级 2） C4362|'*类型*: CLR 不支持大于 8 个字节的对齐方式|
 |[编译器警告（等级 1）C4364](../../error-messages/compiler-warnings/compiler-warning-level-1-c4364.md)|#using 适用于程序集*程序集*以前在看到*位置*' ('*line_number*) 而无需作为\_友元属性; 作为\_友元不应用|
 |[编译器警告（等级 4）C4365](../../error-messages/compiler-warnings/compiler-warning-level-4-c4365.md)|'*表达式*： 从转换*type1*to*type2*，有符号/无符号不匹配|
@@ -192,7 +191,7 @@ ms.locfileid: "50455987"
 |[编译器警告（等级 1）C4377](../../error-messages/compiler-warnings/compiler-warning-level-1-c4377.md)|本机类型是私有默认设置。-d1PrivateNativeTypes 已被否决|
 |[编译器警告（等级 1）C4378](../../error-messages/compiler-warnings/compiler-warning-level-1-c4378.md)|必须获得函数指针才能运行初始值设定项;请考虑 System::ModuleHandle::ResolveMethodHandle|
 |[编译器警告（等级 1）C4379](../../error-messages/compiler-warnings/compiler-warning-level-1-c4379.md)|版本*version_number*的公共语言运行时不支持此编译器。 使用此版本可能会导致意外的结果|
-|编译器警告 （等级 1，错误） C4380|'*类*： 无法弃用默认构造函数|
+|编译器警告 （等级 1，错误） C4380|'*类*:无法弃用默认构造函数|
 |[编译器警告（等级 1）C4381](../../error-messages/compiler-warnings/compiler-warning-level-1-c4381.md)|'*function1*： 不能由非公共方法实现接口方法*function2*|
 |[编译器警告（等级 1）C4382](../../error-messages/compiler-warnings/compiler-warning-level-1-c4382.md)|引发 '*类型*： 带有 __clrcall 析构函数或复制构造函数的类型仅可捕获在 /clr: pure 模块|
 |[编译器警告（等级 1）C4383](../../error-messages/compiler-warnings/compiler-warning-level-1-c4383.md)|'*instance_dereference_operator*： 取消引用句柄的意义可以更改，用户定义*instance_dereference_operator*运算符存在; 编写将运算符用作静态函数为有关操作数的显式|

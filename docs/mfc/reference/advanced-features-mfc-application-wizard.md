@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MFC Application Wizard, advanced features
 ms.assetid: 8a6681c5-6576-4b12-841a-6862beee76fa
-ms.openlocfilehash: 5643e1e9f4f558163c1c2a3b65070f90afdc7dba
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 44d85e7614f6a82af2e58f03a6d65d5d7740ab9b
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57278218"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816433"
 ---
 # <a name="advanced-features-mfc-application-wizard"></a>MFC 应用程序向导的高级功能
 
@@ -21,7 +21,7 @@ ms.locfileid: "57278218"
 
    生成一组帮助文件的上下文相关帮助，可通过使用 F1 和帮助菜单或通过单击**帮助**出现在对话框中的按钮。 帮助支持需要帮助编译器。 如果没有帮助编译器，可以通过运行安装程序来安装它。
 
-   请参阅[HTML 帮助：为程序的上下文相关帮助](../../mfc/html-help-context-sensitive-help-for-your-programs.md)并[帮助文件 （HTML 帮助）](../../ide/help-files-html-help.md)有关详细信息。
+   请参阅[HTML 帮助：为程序的上下文相关帮助](../../mfc/html-help-context-sensitive-help-for-your-programs.md)并[帮助文件 （HTML 帮助）](../../build/reference/help-files-html-help.md)有关详细信息。
 
 - **打印和打印预览**
 

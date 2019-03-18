@@ -6,12 +6,12 @@ ms.topic: conceptual
 helpviewer_keywords:
 - attributes [C++/CLI], reference topics
 ms.assetid: 613a3611-b3eb-4347-aa38-99b654600e1c
-ms.openlocfilehash: 4a37542bd69926572e44322c406862117560affe
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: f9d339860e9d2bdb8d66f6b7f8f49d3993b2d5cf
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175764"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820736"
 ---
 # <a name="c-attributes-for-com-and-net"></a>对于 COM 和.NET 的 c + + 特性
 
@@ -49,7 +49,7 @@ class CMyReceiver
 
 ## <a name="basic-mechanics-of-attributes"></a>特性的基本机制
 
-有三种方法将属性插入你的项目。 首先，您可以将它们手动插入您的源代码。 第二，您可以将它们插入在项目中使用对象的属性网格。 最后，您可以插入它们使用不同的向导。 有关使用的详细信息**属性**窗口和各种向导，请参阅[创建和管理 Visual c + + 项目](../../ide/creating-and-managing-visual-cpp-projects.md)。
+有三种方法将属性插入你的项目。 首先，您可以将它们手动插入您的源代码。 第二，您可以将它们插入在项目中使用对象的属性网格。 最后，您可以插入它们使用不同的向导。 有关使用的详细信息**属性**窗口和各种向导，请参阅[创建和管理 Visual c + + 项目](../../build/creating-and-managing-visual-cpp-projects.md)。
 
 作为之前，当生成项目时，编译器将分析每个 c + + 源代码文件，生成的对象文件。 但是，当编译器遇到属性，它分析并语法验证。 然后编译器将动态调用要插入代码或在编译时进行其他修改的属性提供程序。 具体取决于属性的类型不同的提供程序实现。 例如，由 Atlprov.dll 实现与 ATL 相关的属性。
 

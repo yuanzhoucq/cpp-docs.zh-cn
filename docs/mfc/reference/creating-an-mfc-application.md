@@ -6,12 +6,12 @@ helpviewer_keywords:
 - MFC, creating applications
 - MFC applications
 ms.assetid: b8b8aa08-9c49-404c-8078-b42079ac18f0
-ms.openlocfilehash: 30fac6579d05eed276b60918b2417cd96044359a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 251275fd866ce7c9d697787c35c6207ef77862db
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57292622"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818591"
 ---
 # <a name="creating-an-mfc-application"></a>创建 MFC 应用程序
 
@@ -36,7 +36,7 @@ MFC 可执行文件通常分为五类： 标准 Windows 应用程序、 对话�
 
 ### <a name="to-create-an-mfc-application-using-the-mfc-application-wizard"></a>使用 MFC 应用程序向导创建 MFC 应用程序
 
-1. 请按帮助主题[使用 Visual C++ 应用程序向导创建项目](../../ide/creating-desktop-projects-by-using-application-wizards.md)中的说明进行操作。
+1. 按照帮助主题中的说明[创建一个 c + + 控制台应用程序项目](../../get-started/tutorial-console-cpp.md)。
 
 1. 在中**新的项目**对话框中，选择**MFC 应用程序**在模板窗格中，以打开向导。
 
@@ -47,9 +47,10 @@ MFC 可执行文件通常分为五类： 标准 Windows 应用程序、 对话�
 
 1. 单击**完成**关闭向导并在开发环境中打开新项目。
 
-你的项目创建后，可以查看中创建的文件**解决方案资源管理器**。 有关向导为项目创建的文件的更多信息，请参见项目生成的文件 ReadMe.txt。 有关文件类型的详细信息，请参阅[Visual c + + 项目创建的文件类型](../../ide/file-types-created-for-visual-cpp-projects.md)。
+你的项目创建后，可以查看中创建的文件**解决方案资源管理器**。 有关向导为项目创建的文件的更多信息，请参见项目生成的文件 ReadMe.txt。 有关文件类型的详细信息，请参阅[Visual c + + 项目创建的文件类型](../../build/reference/file-types-created-for-visual-cpp-projects.md)。
 
 ## <a name="see-also"></a>请参阅
 
 [用代码向导添加功能](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
-[属性页](../../ide/property-pages-visual-cpp.md)
+[属性页](../../build/reference/property-pages-visual-cpp.md)
+

@@ -27,18 +27,18 @@ helpviewer_keywords:
 - UNICODE constant
 - _T type
 ms.assetid: 2848121c-e51f-4b9b-a2e6-833ece4b0cb3
-ms.openlocfilehash: b39e8563797ca0b57b54d2c85f851c8c45b29905
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aa6827607430bf8f0db37997bac0223833fcd171
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471439"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747925"
 ---
 # <a name="using-generic-text-mappings"></a>使用一般文本映射
 
 **Microsoft 专用**
 
-为了简化各种国际市场的代码开发，Microsoft 运行时库为许多数据类型、例程和其他对象提供了 Microsoft 专用的“一般文本”映射。 这些映射在 TCHAR.H 中进行定义。 可以使用这些名称映射来编写可编译全部三种字符集（ASCII (SBCS)、MBCS 或 Unicode）的通用代码：具体取决于使用 `#define` 语句定义的清单常量。 一般文本映射是与 ANSI 不兼容的 Microsoft 扩展。
+为了简化各种国际市场的代码开发，Microsoft 运行时库为许多数据类型、例程和其他对象提供了 Microsoft 专用的“一般文本”映射。 这些映射在 TCHAR.H 中进行定义。 可使用这些名称映射来写入泛型代码，使其可针对以下任何一种字符集进行编译：ASCII (SBCS)、MBCS 或 Unicode，具体取决于使用 `#define` 语句定义的应用程序清单常数。 一般文本映射是与 ANSI 不兼容的 Microsoft 扩展。
 
 ### <a name="preprocessor-directives-for-generic-text-mappings"></a>用于一般文本映射的预处理器指令
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - preprocessor, directives
 - COM, type library header file
 ms.assetid: 787d1112-e543-40d7-ab15-a63d43f4030a
-ms.openlocfilehash: 8029adfd5b4f27e097df693c85ee0d711a13dc4e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a7dc30d3e5869e9b0f534a4769d4517a0514c144
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50612363"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822621"
 ---
 # <a name="import-directive-c"></a>#import 指令 (C++)
 
@@ -72,7 +72,7 @@ ms.locfileid: "50612363"
 #import "..\drawctl\drawctl.tlb" no_namespace, raw_interfaces_only
 ```
 
-\-或-
+\- 或 -
 
 ```cpp
 #import "..\drawctl\drawctl.tlb" no_namespace raw_interfaces_only
@@ -121,16 +121,16 @@ ms.locfileid: "50612363"
 
 - 当 **#import**是处理，编译器首先会检查标头存在并且保持最新。 如果是，则不需要重新创建。
 
-**#Import**指令也参与最小重新生成，并可以放置在预编译标头文件。 请参阅[创建预编译标头文件](../build/reference/creating-precompiled-header-files.md)有关详细信息。
+**#Import**指令也参与最小重新生成，并可以放置在预编译标头文件。 请参阅[创建预编译标头文件](../build/creating-precompiled-header-files.md)有关详细信息。
 
 ###  <a name="_predir_the_primary_type_library_header_file"></a> 主类型库标头文件
 主类型库头文件包含 7 个部分：
 
-- 标题样本：包含注释、COMDEF.H（定义标头中使用的一些标准宏）的 `#include` 语句和其他杂项安装信息。
+- 标题样本：包含注释、 `#include` COMDEF 的语句。H （它定义的标头中使用的一些标准宏），和其他杂项安装信息。
 
-- 转发引用和 typedef：包含结构声明（例如 `struct IMyInterface` 和 typedef）。
+- 前向引用和 typedef:包含结构声明如`struct IMyInterface`和 typedef。
 
-- 智能指针声明： 模板类`_com_ptr_t`是封装接口指针，并且不需要调用的智能指针实现`AddRef`， `Release`，`QueryInterface`函数。 此外，它在创建新的 COM 对象时会隐藏 `CoCreateInstance` 调用。 本部分使用宏语句`_COM_SMARTPTR_TYPEDEF`若要将模板专用化的 COM 接口的 typedef 建立[_com_ptr_t](../cpp/com-ptr-t-class.md)模板类。 例如，对于接口`IMyInterface`、。TLH 文件将包含：
+- 智能指针声明：此模板类`_com_ptr_t`是封装接口指针，并且不需要调用的智能指针实现`AddRef`， `Release`，`QueryInterface`函数。 此外，它在创建新的 COM 对象时会隐藏 `CoCreateInstance` 调用。 本部分使用宏语句`_COM_SMARTPTR_TYPEDEF`若要将模板专用化的 COM 接口的 typedef 建立[_com_ptr_t](../cpp/com-ptr-t-class.md)模板类。 例如，对于接口`IMyInterface`、。TLH 文件将包含：
 
     ```TLH
     _COM_SMARTPTR_TYPEDEF(IMyInterface, __uuidof(IMyInterface));
@@ -144,13 +144,13 @@ ms.locfileid: "50612363"
 
    然后类型 `IMyInterfacePtr` 可以代替原始的接口指针 `IMyInterface*` 使用。 因此，则无需调用各种`IUnknown`成员函数
 
-- Typeinfo 声明： 主要包含类定义和公开返回的各个 typeinfo 项的其他项`ITypeLib:GetTypeInfo`。 在本节中，类型库中每个 typeinfo 都会反映在标头中，具体形式取决于 `TYPEKIND` 信息。
+- Typeinfo 声明：主要包含类定义和公开返回的各个 typeinfo 项的其他项`ITypeLib:GetTypeInfo`。 在本节中，类型库中每个 typeinfo 都会反映在标头中，具体形式取决于 `TYPEKIND` 信息。
 
 - 可选旧式 GUID 定义：包含名为 GUID 常量的初始化。 这些是窗体的名称`CLSID_CoClass`和`IID_Interface`，类似于那些由 MIDL 编译器生成。
 
 - 用于次要类型库标头的 `#include` 语句。
 
-- 页脚样本：当前包含 `#pragma pack(pop)`。
+- 页脚样本：当前包括`#pragma pack(pop)`。
 
 除标题样本和页脚样本部分之外的所有部分的命名空间中都包含指定其名称`library`原始 IDL 文件中的语句。 您可使用类型库标头的名称，方法是通过显式限定命名空间名称或通过包括以下语句：
 

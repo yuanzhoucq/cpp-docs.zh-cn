@@ -8,12 +8,12 @@ helpviewer_keywords:
 - exporting DLLs [C++], C functions in C++ executables
 - exporting functions [C++], C functions in C++ executables
 ms.assetid: b51d6e5e-37cf-4c1c-b0bf-fcf188c82f00
-ms.openlocfilehash: 0d459c0116a657e12eafa09b50b1a855243f96ea
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: b7ba2ed30615efb3b05e71cecf0ea69898feb8ba
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57416496"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812429"
 ---
 # <a name="exporting-c-functions-for-use-in-c-or-c-language-executables"></a>导出 C 函数以用于 C 或 C++ 语言可执行文件
 
@@ -46,24 +46,24 @@ extern "C" {
 
 ## <a name="what-do-you-want-to-do"></a>你希望做什么？
 
-- [使用.def 文件从 DLL 导出](../build/exporting-from-a-dll-using-def-files.md)
+- [使用.def 文件从 DLL 导出](exporting-from-a-dll-using-def-files.md)
 
-- [使用 __declspec （dllexport） 从 DLL 导出](../build/exporting-from-a-dll-using-declspec-dllexport.md)
+- [使用 __declspec （dllexport） 从 DLL 导出](exporting-from-a-dll-using-declspec-dllexport.md)
 
-- [导出和导入使用 AFX_EXT_CLASS](../build/exporting-and-importing-using-afx-ext-class.md)
+- [导出和导入使用 AFX_EXT_CLASS](exporting-and-importing-using-afx-ext-class.md)
 
-- [确定要使用的导出方法](../build/determining-which-exporting-method-to-use.md)
+- [确定要使用的导出方法](determining-which-exporting-method-to-use.md)
 
-- [导入到使用 __declspec （dllimport） 的应用程序](../build/importing-into-an-application-using-declspec-dllimport.md)
+- [导入到使用 __declspec （dllimport） 的应用程序](importing-into-an-application-using-declspec-dllimport.md)
 
-- [初始化 DLL](../build/run-time-library-behavior.md#initializing-a-dll)
+- [初始化 DLL](run-time-library-behavior.md#initializing-a-dll)
 
 ## <a name="what-do-you-want-to-know-more-about"></a>你想进一步了解什么？
 
-- [修饰的名](../build/reference/decorated-names.md)
+- [修饰的名](reference/decorated-names.md)
 
 - [使用 extern 指定链接](../cpp/using-extern-to-specify-linkage.md)
 
 ## <a name="see-also"></a>请参阅
 
-[从 DLL 导出](../build/exporting-from-a-dll.md)
+[从 DLL 导出](exporting-from-a-dll.md)

@@ -3,12 +3,12 @@ title: 按字母顺序列出的编译器选项
 ms.date: 08/20/2018
 helpviewer_keywords:
 - compiler options, C++
-ms.openlocfilehash: 73236485026b82895426a2651b48a83fc35ce8b7
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 6175d62938534e790fb60b300ff55ad031da5801
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57415872"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57811935"
 ---
 # <a name="compiler-options-listed-alphabetically"></a>按字母顺序列出的编译器选项
 
@@ -164,6 +164,5 @@ ms.locfileid: "57415872"
 
 ## <a name="see-also"></a>请参阅
 
-[C/C++ 生成参考](c-cpp-building-reference.md)<br/>
-[编译器选项](compiler-options.md)<br/>
-[设置编译器选项](setting-compiler-options.md)
+[MSVC 编译器选项](compiler-options.md)<br/>
+[MSVC 编译器命令行语法](compiler-command-line-syntax.md)

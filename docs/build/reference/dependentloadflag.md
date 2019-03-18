@@ -10,12 +10,12 @@ helpviewer_keywords:
 - linker [C++], DEPENDENTLOADFLAG
 - DEPENDENTLOADFLAG linker option
 - /DEPENDENTLOADFLAG linker option
-ms.openlocfilehash: 0bdf2542d641f751f40757079eb576f2c97540dc
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 94998e06f23a7e70524221d3cb75166b5d3f2c44
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326155"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815965"
 ---
 # <a name="dependentloadflag-set-default-dependent-load-flags"></a>/ DEPENDENTLOADFLAG （设置默认依赖加载标志）
 
@@ -23,7 +23,7 @@ ms.locfileid: "51326155"
 
 ## <a name="syntax"></a>语法
 
-> **/ DEPENDENTLOADFLAG**[**:**_loadflags_]
+> **/DEPENDENTLOADFLAG**[**:**_loadflags_]
 
 ### <a name="arguments"></a>自变量
 
@@ -42,7 +42,7 @@ ms.locfileid: "51326155"
 
 ### <a name="to-set-the-dependentloadflag-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置 DEPENDENTLOADFLAG 链接器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置 Visual c + + 项目属性](../../ide/working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[Visual Studio 中的设置 c + + 编译器和生成属性](../working-with-project-properties.md)。
 
 1. 选择**配置属性** > **链接器** > **命令行**属性页。
 
@@ -54,9 +54,9 @@ ms.locfileid: "51326155"
 
 ## <a name="see-also"></a>请参阅
 
-- [设置链接器选项](setting-linker-options.md)
-- [链接器选项](linker-options.md)
-- [如何隐式链接到 DLL](../linking-an-executable-to-a-dll.md#linking-implicitly)
-- [确定要使用的链接方法](../linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)
+- [MSVC 链接器引用](linking.md)
+- [MSVC 链接器选项](linker-options.md)
+- [将可执行文件链接到 DLL](../linking-an-executable-to-a-dll.md#linking-implicitly)
+- [将可执行文件链接到 DLL](../linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)
 - [LoadLibraryEx](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibraryexa)
 - [动态链接库搜索顺序](/windows/desktop/Dlls/dynamic-link-library-search-order)

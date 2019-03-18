@@ -13,16 +13,16 @@ helpviewer_keywords:
 - common subexpression elimination
 - Og compiler option [C++]
 ms.assetid: d10630cc-b9cf-4e97-bde3-8d7ee79e9435
-ms.openlocfilehash: e8032d7dbd771ca1527c6515a779b0f532a2c658
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 5e45273b6b609f1bf78504a519c1fb98e2147f76
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420864"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818526"
 ---
 # <a name="og-global-optimizations"></a>/Og（全局优化）
 
-已否决。 提供本地和全局优化自动寄存器分配和循环优化。 我们建议你使用任一[/O1 （最小化大小）](../../build/reference/o1-o2-minimize-size-maximize-speed.md)或[/o2 （最大化速度）](../../build/reference/o1-o2-minimize-size-maximize-speed.md)改为。
+已否决。 提供本地和全局优化自动寄存器分配和循环优化。 我们建议你使用任一[/O1 （最小化大小）](o1-o2-minimize-size-maximize-speed.md)或[/o2 （最大化速度）](o1-o2-minimize-size-maximize-speed.md)改为。
 
 ## <a name="syntax"></a>语法
 
@@ -30,7 +30,7 @@ ms.locfileid: "57420864"
 
 ## <a name="remarks"></a>备注
 
-**/Og**已弃用。 现在默认情况下通常启用这些优化。 优化的详细信息，请参阅[/o1，/o2 （最小化大小、 最大化速度）](../../build/reference/o1-o2-minimize-size-maximize-speed.md)或[/Ox （启用最速度优化）](../../build/reference/ox-full-optimization.md)。
+**/Og**已弃用。 现在默认情况下通常启用这些优化。 优化的详细信息，请参阅[/o1，/o2 （最小化大小、 最大化速度）](o1-o2-minimize-size-maximize-speed.md)或[/Ox （启用最速度优化）](ox-full-optimization.md)。
 
 以下优化下有 **/Og**:
 
@@ -76,11 +76,11 @@ ms.locfileid: "57420864"
    > [!NOTE]
    > 可以启用或禁用函数的函数使用全局优化`optimize`一起使用的杂注`g`选项。
 
-有关相关信息，请参阅[/Oi （生成内部函数）](../../build/reference/oi-generate-intrinsic-functions.md)并[/Ox （启用最速度优化）](../../build/reference/ox-full-optimization.md)。
+有关相关信息，请参阅[/Oi （生成内部函数）](oi-generate-intrinsic-functions.md)并[/Ox （启用最速度优化）](ox-full-optimization.md)。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[Visual Studio 中的设置 c + + 编译器和生成属性](../working-with-project-properties.md)。
 
 1. 单击 **“C/C++”** 文件夹。
 
@@ -94,8 +94,4 @@ ms.locfileid: "57420864"
 
 ## <a name="see-also"></a>请参阅
 
-[/O 选项（优化代码）](../../build/reference/o-options-optimize-code.md)
-
-[编译器选项](../../build/reference/compiler-options.md)
-
-[设置编译器选项](../../build/reference/setting-compiler-options.md)
+[MSVC 编译器命令行语法](compiler-command-line-syntax.md)

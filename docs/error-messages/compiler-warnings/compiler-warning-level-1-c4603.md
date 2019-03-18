@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4603
 ms.assetid: f065994e-e3e5-4694-b868-c124472b3342
-ms.openlocfilehash: 6d5d5b1d2d959c8c2da87f1cad949895be7331b5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: abecf4edad9ebe7abe1aec9cedae524639fe0201
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608446"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822361"
 ---
 # <a name="compiler-warning-level-1-c4603"></a>编译器警告（等级 1）C4603
 
@@ -21,4 +21,4 @@ ms.locfileid: "50608446"
 
 ## <a name="see-also"></a>请参阅
 
-[创建预编译标头文件](../../build/reference/creating-precompiled-header-files.md)
+[创建预编译标头文件](../../build/creating-precompiled-header-files.md)

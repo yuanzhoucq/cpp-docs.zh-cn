@@ -7,12 +7,12 @@ helpviewer_keywords:
 - linking [C++], resource files
 - resource files, linking
 ms.assetid: 9c37ab00-97df-4d9a-91cd-6bf132970683
-ms.openlocfilehash: 6fdd7b8b32d08da639263c091034c1bc8694cd87
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 68bb9da55faa7e41d743e1f3a45ca4b79f7f2242
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57426558"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814210"
 ---
 # <a name="res-files-as-linker-input"></a>用作链接器输入的 .Res 文件
 
@@ -20,5 +20,5 @@ ms.locfileid: "57426558"
 
 ## <a name="see-also"></a>请参阅
 
-[LINK 输入文件](../../build/reference/link-input-files.md)<br/>
-[链接器选项](../../build/reference/linker-options.md)
+[LINK 输入文件](link-input-files.md)<br/>
+[MSVC 链接器选项](linker-options.md)

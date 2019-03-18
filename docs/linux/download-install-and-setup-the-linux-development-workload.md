@@ -1,18 +1,22 @@
 ---
 title: 在 Visual Studio 中安装 C++ Linux 工作负载
 description: 介绍如何在 Visual Studio 中下载、安装和设置用于 C++ 的 Linux 工作负荷。
-ms.date: 02/06/2019
+ms.date: 03/05/2019
 ms.assetid: e11b40b2-f3a4-4f06-b788-73334d58dfd9
-ms.openlocfilehash: c01c8ddeeb8439a7610c0f6c7c11b608ab3675d8
-ms.sourcegitcommit: 63c072f5e941989636f5a2b13800b68bb7129931
+ms.openlocfilehash: 74155724abb3a0e02cc27dd8a8d144f142ee4b6f
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55763878"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747717"
 ---
-# <a name="download-install-and-setup-the-linux-workload"></a>下载、安装和设置 Linux 工作负载
+# <a name="download-install-and-set-up-the-linux-workload"></a>下载、安装和设置 Linux 工作负载
 
-可以使用 Windows 中的 Visual Studio IDE 来创建、编辑和调试在 Linux 物理计算机、虚拟机或[适用于 Linux 的 Windows 子系统](/windows/wsl/about)上执行的 C++ 项目。 为了实现所有这些方案，请先安装“使用 C++ 的 Linux 开发”工作负荷。
+可使用 Windows 中的 Visual Studio 2017 IDE 来创建、编辑和调试在 Linux 物理计算机、虚拟机或[适用于 Linux 的 Windows 子系统](/windows/wsl/about)上执行的 C++ 项目。 
+
+可处理使用 CMake 的现有基本代码或任何其他生成系统，无需将其转换为 Visual Studio 项目。 如果基本代码为跨平台代码，则从 Visual Studio 中可同时面向 Windows 和 Linux。 例如，可在 Windows 上使用 Visual Studio 编辑、调试和配置代码，然后快速重定向 Linux 项目以执行进一步测试。 Linux 头文件将自动复制到本地计算机上，Visual Studio 会在该位置使用这些头文件提供完全 IntelliSense 支持（“语句完成”、“转到定义”等）。
+ 
+对于任何这些方案，都必须拥有“使用 C++ 的 Linux 开发”工作负载。 
 
 ## <a name="visual-studio-setup"></a>Visual Studio 安装程序
 
@@ -22,6 +26,8 @@ ms.locfileid: "55763878"
    ![适用于 Linux 开发的 Visual C++ 工作负荷](media/linuxworkload.png)
 
 1. 如果使用 CMake 或目标是 IoT 或嵌入式平台，请转到“使用 C++ 的 Linux 开发”下右侧的“安装详细信息”窗格，展开“可选组件”，然后选择所需的组件。
+
+    **Visual Studio 2017 版本 15.4 及更高版本**<br/>:为 Visual Studio 安装 Linux C++ 工作负载时，会默认选中对 Linux 的 CMake 支持。
 
 1. 单击“修改”以继续进行安装。
 
@@ -63,3 +69,6 @@ Windows 10 上的另一个选项是激活适用于 Linux 的 Windows 子系统�
 
    这将启动该服务并在后台运行它，准备接受连接。
 
+## <a name="ensure-you-have-cmake-38-on-the-remote-linux-machine"></a>确保在远程 Linux 计算机上具有 CMake 3.8
+
+你的 Linux 发行版可能具有更早版本的 CMake。 使用 Visual Studio 中的 CMake 支持需要 CMake 3.8 中引入的服务器模式支持。 对于 Microsoft 提供的 CMake 变体，请在 [https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases) 中下载最新的预生成二进制文件并保存到 Linux 计算机。

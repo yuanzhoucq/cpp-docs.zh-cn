@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2001
 ms.assetid: dc1cf267-c984-486c-abd2-fd07c799f7ef
-ms.openlocfilehash: dba197be71fc77af6d95c2ec62053928ac1627cc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 824fa9108e6322b1bcf77d6c28c7fb843b743833
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631655"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57808100"
 ---
 # <a name="linker-tools-error-lnk2001"></a>链接器工具错误 LNK2001
 
@@ -47,7 +47,7 @@ ms.locfileid: "50631655"
 
 生成 ATL 项目的发布版本生成 CRT 启动代码是必需的消息时，会出现此错误。 若要解决此问题，请执行下列操作之一
 
-- 删除`_ATL_MIN_CRT`从列表中的预处理器定义允许 CRT 启动代码将包括在内。 请参阅[常规属性页 （项目）](../../ide/general-property-page-project.md)有关详细信息。
+- 删除`_ATL_MIN_CRT`从列表中的预处理器定义允许 CRT 启动代码将包括在内。 请参阅[常规属性页 （项目）](../../build/reference/general-property-page-project.md)有关详细信息。
 
 - 如果可能，删除对需要 CRT 启动代码的 CRT 函数的调用。 相反，使用它们的 Win32 等效项。 例如，使用 `lstrcmp` 而不是 `strcmp`。 需要 CRT 启动代码的已知的功能是一些字符串和浮点函数。
 

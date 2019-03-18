@@ -29,12 +29,12 @@ helpviewer_keywords:
 - extensions
 - compl method
 ms.assetid: e811a74a-45ba-4c00-b206-2f2321b8689a
-ms.openlocfilehash: b4025413fcf6389249fc011da020c0cd7c6f4519
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dab8ac23be8b66ca84c57514c6c04e94dddebaae
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447432"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813885"
 ---
 # <a name="microsoft-extensions-to-c-and-c"></a>Microsoft C 和 c + + 扩展
 
@@ -77,7 +77,7 @@ C++ 编译器和 C 编译器都支持以下类型的非 ANSI 转换：
    ```
 
    > [!NOTE]
-   > 此扩展仅适用于 C 语言。 您可以在 C++ 代码中使用以下 ANSI C 标准窗体，将指针视为指向其他类型的指针来修改。
+   > 此扩展仅适用于 C 语言。 你可以在 C++ 代码中使用以下 ANSI C 标准窗体，将指针视为指向其他类型的指针来修改。
 
    可采用如下方式重新编写前面的示例以符合 ANSI C 标准。
 
@@ -274,7 +274,7 @@ void func ()
 
 - ! (not)
 
-- ！ = (not_eq)
+- != (not_eq)
 
 - &#124;&#124;（或者）
 
@@ -300,6 +300,6 @@ int main()
 
 ## <a name="see-also"></a>请参阅
 
-- [/Za、/Ze（禁用语言扩展）](../../build/reference/za-ze-disable-language-extensions.md)
-- [编译器选项](../../build/reference/compiler-options.md)
-- [设置编译器选项](../../build/reference/setting-compiler-options.md)
+- [/Za、/Ze（禁用语言扩展）](za-ze-disable-language-extensions.md)
+- [MSVC 编译器选项](compiler-options.md)
+- [MSVC 编译器命令行语法](compiler-command-line-syntax.md)

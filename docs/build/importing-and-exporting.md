@@ -8,12 +8,12 @@ helpviewer_keywords:
 - DLLs [C++], exporting from
 - __declspec(dllimport) keyword [C++]
 ms.assetid: 7c44c2aa-2117-4cec-9615-a65bfd3f8f7b
-ms.openlocfilehash: 1aaf18003f831ca94ecd90dafb472ecb894b8a60
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 882010cd28c291e9f49ca0f7dd9d646c70130184
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424790"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815822"
 ---
 # <a name="importing-and-exporting"></a>导入和导出
 
@@ -27,7 +27,7 @@ ms.locfileid: "57424790"
 
 模块定义 (.def) 文件是包含一个或多个描述 DLL 各种特性的 module 语句的文本文件。 如果不使用 **__declspec （dllimport)** 或 **__declspec （dllexport)** 若要导出的 DLL 函数，则 DLL 需要.def 文件。
 
-可以使用.def 文件复制到[导入应用程序](../build/importing-using-def-files.md)或设置为[从 DLL 导出](../build/exporting-from-a-dll-using-def-files.md)。
+可以使用.def 文件复制到[导入应用程序](importing-using-def-files.md)或设置为[从 DLL 导出](exporting-from-a-dll-using-def-files.md)。
 
 ## <a name="using-declspec"></a>使用 __declspec
 
@@ -41,10 +41,10 @@ Win32 可移植可执行文件格式设计为最大程度减少必须打开，�
 
 ## <a name="what-do-you-want-to-do"></a>你希望做什么？
 
-- [导入到应用程序](../build/importing-into-an-application-using-declspec-dllimport.md)
+- [导入到应用程序](importing-into-an-application-using-declspec-dllimport.md)
 
-- [从 DLL 导出](../build/exporting-from-a-dll.md)
+- [从 DLL 导出](exporting-from-a-dll.md)
 
 ## <a name="see-also"></a>请参阅
 
-[Visual C++ 中的 DLL](../build/dlls-in-visual-cpp.md)
+[Visual C++ 中的 DLL](dlls-in-visual-cpp.md)

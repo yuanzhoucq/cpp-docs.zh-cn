@@ -1,6 +1,6 @@
 ---
-title: Visual C++ 中的 DLL
-ms.date: 11/04/2016
+title: 在 Visual Studio 中创建 C/c + + Dll
+ms.date: 12/10/2018
 helpviewer_keywords:
 - executable files [C++]
 - dynamic linking [C++]
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - DLLs [C++]
 - DLLs [C++], about DLLs
 ms.assetid: 5216bca4-51e2-466b-b221-0e3e776056f0
-ms.openlocfilehash: be653be42b1905f1edbcf8d50f7aef2b343c2691
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5bd30c84ba202c3f772ad4451368efde10285e6c
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667189"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815809"
 ---
-# <a name="dlls-in-visual-c"></a>Visual C++ 中的 DLL
+# <a name="create-cc-dlls-in-visual-studio"></a>在 Visual Studio 中创建 C/c + + Dll
 
 在 Windows 中，动态链接库 (DLL) 是一种作为函数和资源的共享库的可执行文件。 动态链接是操作系统功能，使可执行文件调用的函数或使用存储在单独的文件的资源。 可从使用这些函数和资源的可执行文件中对其分别进行编译和部署。 DLL 不是独立的可执行文件;它在调用它的应用程序的上下文中运行。 操作系统可以将 DLL 加载到应用程序的内存空间时加载该应用程序 (*隐式链接*)，或按需在运行时 (*显式链接*)。 DLL 还可以在可执行文件之间轻松共享函数和资源。 多个应用程序可同时访问内存中单个 DLL 副本的内容。
 
@@ -61,61 +61,61 @@ ms.locfileid: "50667189"
 
 以下主题提供有关如何的详细的信息中 Visual c + + 程序 dll。
 
-[演练：创建和使用动态链接库 (C++)](../build/walkthrough-creating-and-using-a-dynamic-link-library-cpp.md)<br/>
+[演练：创建和使用动态链接库 (C++)](walkthrough-creating-and-using-a-dynamic-link-library-cpp.md)<br/>
 介绍如何使用 Visual Studio 创建和使用 DLL。
 
-[DLL 的类型](../build/kinds-of-dlls.md)<br/>
+[DLL 的类型](kinds-of-dlls.md)<br/>
 提供有关可生成的不同类型的 DLL 的信息。
 
-[DLL 常见问题](../build/dll-frequently-asked-questions.md)<br/>
+[DLL 常见问题](dll-frequently-asked-questions.md)<br/>
 提供有关 DLL 的常见问题解答。
 
-[将可执行文件链接到 DLL](../build/linking-an-executable-to-a-dll.md)<br/>
+[将可执行文件链接到 DLL](linking-an-executable-to-a-dll.md)<br/>
 描述与 DLL 的显式链接和隐式链接。
 
-[初始化 DLL](../build/run-time-library-behavior.md#initializing-a-dll)<br/>
+[初始化 DLL](run-time-library-behavior.md#initializing-a-dll)<br/>
 讨论当 DLL 加载时必须执行的 DLL 初始化代码。
 
-[DLL 和 Visual C++ 运行时库行为](../build/run-time-library-behavior.md)<br/>
+[DLL 和 Visual C++ 运行时库行为](run-time-library-behavior.md)<br/>
 描述运行库如何执行 DLL 启动序列。
 
-[LoadLibrary 和 AfxLoadLibrary](../build/loadlibrary-and-afxloadlibrary.md)<br/>
+[LoadLibrary 和 AfxLoadLibrary](loadlibrary-and-afxloadlibrary.md)<br/>
 讨论如何使用**LoadLibrary**和`AfxLoadLibrary`显式链接到在运行时的 DLL。
 
-[GetProcAddress](../build/getprocaddress.md)<br/>
+[GetProcAddress](getprocaddress.md)<br/>
 讨论如何使用**GetProcAddress**获取 DLL 中导出函数的地址。
 
-[FreeLibrary 和 AfxFreeLibrary](../build/freelibrary-and-afxfreelibrary.md)<br/>
+[FreeLibrary 和 AfxFreeLibrary](freelibrary-and-afxfreelibrary.md)<br/>
 讨论如何使用**FreeLibrary**和`AfxFreeLibrary`当不再需要 DLL 模块。
 
 [动态链接库搜索顺序](/windows/desktop/Dlls/dynamic-link-library-search-order)<br/>
 描述 Windows 操作系统用来定位系统上的 DLL 的搜索路径。
 
-[动态链接到 MFC 的规则 MFC DLL 的模块状态](../build/module-states-of-a-regular-dll-dynamically-linked-to-mfc.md)<br/>
+[动态链接到 MFC 的规则 MFC DLL 的模块状态](module-states-of-a-regular-dll-dynamically-linked-to-mfc.md)<br/>
 描述正则表达式 MFC DLL 动态链接到 MFC 模块的状态。
 
-[MFC 扩展 DLL](../build/extension-dlls-overview.md)<br/>
+[MFC 扩展 DLL](extension-dlls-overview.md)<br/>
 解释通常实现从现有 Microsoft 基础类库类派生的可重用类的 DLL。
 
-[创建纯资源 DLL](../build/creating-a-resource-only-dll.md)<br/>
+[创建纯资源 DLL](creating-a-resource-only-dll.md)<br/>
 讨论只包含资源（如图标、位图、字符串和对话框等）的纯资源 DLL。
 
-[MFC 应用程序中已本地化的资源：附属 DLL](../build/localized-resources-in-mfc-applications-satellite-dlls.md)<br/>
+[MFC 应用程序中已本地化的资源：附属 DLL](localized-resources-in-mfc-applications-satellite-dlls.md)<br/>
 提供对附属 DLL 的增强支持，该功能有助于创建针对多种语言进行本地化的应用程序。
 
-[导入和导出](../build/importing-and-exporting.md)<br/>
+[导入和导出](importing-and-exporting.md)<br/>
 描述如何将公共符号导入应用程序或从 DLL 导出函数。
 
-[Active 技术和 DLL](../build/active-technology-and-dlls.md)<br/>
+[Active 技术和 DLL](active-technology-and-dlls.md)<br/>
 使对象服务器得以在 DLL 内实现。
 
-[DLL 中的自动化](../build/automation-in-a-dll.md)<br/>
+[DLL 中的自动化](automation-in-a-dll.md)<br/>
 描述“MFC DLL 向导”中的“自动化”选项提供的内容。
 
 [MFC DLL 命名约定](../mfc/mfc-library-versions.md#mfc-static-library-naming-conventions)<br/>
 讨论 MFC 中包含的 DLL 和库如何遵循结构化命名约定。
 
-[从 Visual Basic 应用程序调用 DLL 函数](../build/calling-dll-functions-from-visual-basic-applications.md)<br/>
+[从 Visual Basic 应用程序调用 DLL 函数](calling-dll-functions-from-visual-basic-applications.md)<br/>
 描述如何从 Visual Basic 应用程序中调用 DLL 函数。
 
 ## <a name="related-sections"></a>相关章节

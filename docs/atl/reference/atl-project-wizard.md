@@ -7,12 +7,12 @@ helpviewer_keywords:
 - ATL projects, creating
 - ATL Project Wizard
 ms.assetid: 564d2aaf-5b8e-4c2a-a925-ca40a283ea34
-ms.openlocfilehash: c9d69b6ca8cf1cff45098f0d63b452238db7ddfe
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 4059961d70e6486f7417a5eff034b194d9860558
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259758"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807788"
 ---
 # <a name="atl-project-wizard"></a>ATL 项目向导
 
@@ -44,13 +44,12 @@ ms.locfileid: "57259758"
 
 - [优化编译器为 ATL 项目](../../atl/reference/specifying-compiler-optimization-for-an-atl-project.md)
 
-您可以指定项目属性 (例如，[是否以静态方式链接到 CRT](../../atl/programming-with-atl-and-c-run-time-code.md)) 中[项目属性](../../ide/general-property-page-project.md)页上，并且可以设置[生成配置](/visualstudio/ide/understanding-build-configurations)为ATL 项目。
+您可以指定项目属性 (例如，[是否以静态方式链接到 CRT](../../atl/programming-with-atl-and-c-run-time-code.md)) 中[项目属性](../../build/reference/general-property-page-project.md)页上，并且可以设置[生成配置](/visualstudio/ide/understanding-build-configurations)为ATL 项目。
 
 ## <a name="see-also"></a>请参阅
 
-[创建和管理 Visual C++ 项目](../../ide/creating-and-managing-visual-cpp-projects.md)<br/>
-[Visual C++ 项目类型](../../ide/visual-cpp-project-types.md)<br/>
-[使用应用程序向导创建桌面项目](../../ide/creating-desktop-projects-by-using-application-wizards.md)<br/>
+[创建和管理 Visual C++ 项目](../../build/creating-and-managing-visual-cpp-projects.md)<br/>
+[Visual C++ 项目类型](../../build/reference/visual-cpp-project-types.md)<br/>
 [ATL COM 对象基础知识](../../atl/fundamentals-of-atl-com-objects.md)<br/>
 [使用 ATL 和 C 运行时代码进行编程](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
 [教程](../../atl/active-template-library-atl-tutorial.md)
