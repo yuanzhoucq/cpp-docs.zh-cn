@@ -8,18 +8,18 @@ helpviewer_keywords:
 - command files
 - command files, CL compiler
 ms.assetid: ec3cea06-2af0-4fe9-a94c-119c9d31b3a9
-ms.openlocfilehash: dae3238f24fc1ac4898aee0b23c3f1899f2e25fc
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 9810f7b4308eab2b47a068072039335e59e19f5f
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420071"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57816069"
 ---
 # <a name="cl-command-files"></a>CL 命令文件
 
-命令文件是包含选项和文件名，否则应键入的文本文件[命令行](../../build/reference/compiler-command-line-syntax.md)或使用指定[CL 环境变量](../../build/reference/cl-environment-variables.md)。 CL 接受作为参数在 CL 环境变量或命令行编译器命令文件。 与命令行或 CL 环境变量不同，命令文件允许使用多行选项和文件名。
+命令文件是包含选项和文件名，否则应键入的文本文件[命令行](compiler-command-line-syntax.md)或使用指定[CL 环境变量](cl-environment-variables.md)。 CL 接受作为参数在 CL 环境变量或命令行编译器命令文件。 与命令行或 CL 环境变量不同，命令文件允许使用多行选项和文件名。
 
-根据命令文件名 CL 环境变量中或命令行上的位置处理选项和命令文件中的文件名。 但是，如果 /link 选项出现在命令文件，在行的其余部分上的所有选项都传递给链接器。 命令文件中的后续行中的选项和命令文件调用后的在命令行选项仍属编译器选项。 有关选项的顺序将如何影响其解释的详细信息，请参阅[CL 选项的顺序](../../build/reference/order-of-cl-options.md)。
+根据命令文件名 CL 环境变量中或命令行上的位置处理选项和命令文件中的文件名。 但是，如果 /link 选项出现在命令文件，在行的其余部分上的所有选项都传递给链接器。 命令文件中的后续行中的选项和命令文件调用后的在命令行选项仍属编译器选项。 有关选项的顺序将如何影响其解释的详细信息，请参阅[CL 选项的顺序](order-of-cl-options.md)。
 
 命令文件不得包含 CL 命令。 每个选项必须开始和结束的同一行;不能使用反斜杠 (**\\**) 若要跨两个行合并选项。
 
@@ -47,5 +47,5 @@ CL /Ob2 /Og MYAPP.C /link LIBC.LIB
 
 ## <a name="see-also"></a>请参阅
 
-[设置编译器选项](../../build/reference/setting-compiler-options.md)<br/>
-[编译器选项](../../build/reference/compiler-options.md)
+[MSVC 编译器命令行语法](compiler-command-line-syntax.md)<br/>
+[MSVC 编译器选项](compiler-options.md)

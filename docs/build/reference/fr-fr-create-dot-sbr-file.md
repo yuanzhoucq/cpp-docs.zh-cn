@@ -13,12 +13,12 @@ helpviewer_keywords:
 - FR compiler option [C++]
 - symbolic browser information
 ms.assetid: 3fd8f88b-3924-4feb-9393-287036a28896
-ms.openlocfilehash: 41b415889465441b0c53f12ec7f4aa412a636562
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: a75a9d143012dee7946591d708921d6734b2acda
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418078"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57811870"
 ---
 # <a name="fr-fr-create-sbr-file"></a>/FR、/Fr（创建 .Sbr 文件）
 
@@ -41,14 +41,14 @@ ms.locfileid: "57418078"
 
 如果不指定 `filename`，则该 .sbr 文件将获取与源文件相同的基名称。
 
-**/Fr** 已弃用；请改用 **/FR** 。 有关详细信息，请参阅 [Compiler Options Listed by Category](../../build/reference/compiler-options-listed-by-category.md)中的“已弃用并删除的编译器选项”。
+**/Fr** 已弃用；请改用 **/FR** 。 有关详细信息，请参阅 [Compiler Options Listed by Category](compiler-options-listed-by-category.md)中的“已弃用并删除的编译器选项”。
 
 > [!NOTE]
 >  请勿更改 .sbr 扩展名。 BSCMAKE 要求中间文件具有此扩展名。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[Visual Studio 中的设置 c + + 编译器和生成属性](../working-with-project-properties.md)。
 
 1. 在导航窗格中，选择“C/C++” 、“浏览信息”  属性页。
 
@@ -60,7 +60,7 @@ ms.locfileid: "57418078"
 
 ## <a name="see-also"></a>请参阅
 
-[输出文件 (/F) 选项](../../build/reference/output-file-f-options.md)<br/>
-[编译器选项](../../build/reference/compiler-options.md)<br/>
-[设置编译器选项](../../build/reference/setting-compiler-options.md)<br/>
-[指定路径名](../../build/reference/specifying-the-pathname.md)
+[输出文件 (/F) 选项](output-file-f-options.md)<br/>
+[MSVC 编译器选项](compiler-options.md)<br/>
+[MSVC 编译器命令行语法](compiler-command-line-syntax.md)<br/>
+[指定路径名](specifying-the-pathname.md)

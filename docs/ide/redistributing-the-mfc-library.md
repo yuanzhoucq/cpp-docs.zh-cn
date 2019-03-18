@@ -5,12 +5,12 @@ helpviewer_keywords:
 - MFC, redistributing
 - redistributing MFC library
 ms.assetid: 72714ce1-385e-4c1c-afa5-96b03e873866
-ms.openlocfilehash: 891a11e02b60bf5337b02956e9562b2f4b45a6e4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5e7352306627722ff2921c2a46cb49b6318f10b6
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50659935"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746951"
 ---
 # <a name="redistributing-the-mfc-library"></a>重新分发 MFC 库
 
@@ -25,7 +25,7 @@ ms.locfileid: "50659935"
 
 如果将应用程序静态链接到 MFC（即如果在“属性页”对话框的“常规”选项卡上指定“在静态库中使用 MFC”），则无需重新分发 MFC DLL。 但是，尽管静态链接可能适用于应用程序的测试和内部部署，但不建议使用它来重新分发 MFC。 如需深入了解部署 Visual C++ 库的建议策略，请参阅[选择部署方法](../ide/choosing-a-deployment-method.md)。
 
-如果应用程序使用实现 WebBrowser 控件的 MFC 类（例如，[CHtmlView 类](../mfc/reference/chtmlview-class.md)或 [CHtmlEditView 类](../mfc/reference/chtmleditview-class.md)），建议同时安装最新版本的 Microsoft Internet Explorer，以便目标计算机具有最新的通用控件文件。 （至少需要 Internet Explorer 4.0。）有关如何安装 Internet Explorer 组件的信息，请参阅 Microsoft 支持部门网站上的“文章 185375：如何创建 Internet Explorer 的单一 EXE 安装”。
+如果应用程序使用实现 WebBrowser 控件的 MFC 类（例如，[CHtmlView 类](../mfc/reference/chtmlview-class.md)或 [CHtmlEditView 类](../mfc/reference/chtmleditview-class.md)），建议同时安装最新版本的 Microsoft Internet Explorer，以便目标计算机具有最新的通用控件文件。 （至少需要 Internet Explorer 4.0。）有关如何安装 Internet Explorer 组件的信息，请参阅“Microsoft 支持”网站上的“文章 185375：如何创建 Internet Explorer 的单个 EXE 安装”。
 
 如果应用程序使用 MFC 数据库类（例如 [CRecordset 类](../mfc/reference/crecordset-class.md)和 [CRecordView 类](../mfc/reference/crecordview-class.md)），则必须重新分发 ODBC 和应用程序使用的任何 ODBC 驱动程序。
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - __stdcall keyword [C++]
 - DLL functions [C++], calling
 ms.assetid: 282f7fbf-a0f2-4b9f-b277-1982710be56c
-ms.openlocfilehash: 88705b2a33e3eb82043d93c534477fce96849502
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 1e4f1a538da2394c6cead6ea011faf126b022a3f
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57417577"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814964"
 ---
 # <a name="calling-dll-functions-from-visual-basic-applications"></a>从 Visual Basic 应用程序调用 DLL 函数
 
@@ -33,7 +33,7 @@ int __stdcall func (int a, double b)
 
 C 调用约定 (`__cdecl`) 将作为该名称修饰`_func`。
 
-若要获取修饰的名，请使用[/map](../build/reference/map-generate-mapfile.md)。 利用 **__declspec （dllexport)** 执行以下操作：
+若要获取修饰的名，请使用[/map](reference/map-generate-mapfile.md)。 利用 **__declspec （dllexport)** 执行以下操作：
 
 - 如果使用 C 调用约定导出函数 (`__cdecl`)，则它抽出前导下划线 ( **\_** ) 导出名称时。
 
@@ -58,18 +58,18 @@ EXPORTS
 
 ## <a name="what-do-you-want-to-know-more-about"></a>你想进一步了解什么？
 
-- [从 DLL 导出](../build/exporting-from-a-dll.md)
+- [从 DLL 导出](exporting-from-a-dll.md)
 
-- [导出从 DLL 使用。DEF 文件](../build/exporting-from-a-dll-using-def-files.md)
+- [导出从 DLL 使用。DEF 文件](exporting-from-a-dll-using-def-files.md)
 
-- [使用 __declspec （dllexport） 从 DLL 导出](../build/exporting-from-a-dll-using-declspec-dllexport.md)
+- [使用 __declspec （dllexport） 从 DLL 导出](exporting-from-a-dll-using-declspec-dllexport.md)
 
-- [导出 c + + 函数以用于 C 语言可执行文件](../build/exporting-cpp-functions-for-use-in-c-language-executables.md)
+- [导出 c + + 函数以用于 C 语言可执行文件](exporting-cpp-functions-for-use-in-c-language-executables.md)
 
-- [确定要使用的导出方法](../build/determining-which-exporting-method-to-use.md)
+- [确定要使用的导出方法](determining-which-exporting-method-to-use.md)
 
-- [修饰的名](../build/reference/decorated-names.md)
+- [修饰的名](reference/decorated-names.md)
 
 ## <a name="see-also"></a>请参阅
 
-[Visual C++ 中的 DLL](../build/dlls-in-visual-cpp.md)
+[Visual C++ 中的 DLL](dlls-in-visual-cpp.md)

@@ -2,12 +2,12 @@
 title: Visual C++ ARM 迁移的常见问题
 ms.date: 11/04/2016
 ms.assetid: 0f4c434e-0679-4331-ba0a-cc15dd435a46
-ms.openlocfilehash: 6aea623bc9f096265decbe91ccdc5d5f1f6ecef1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a39e1d5e26a62cafa093067bb42f33178a1af6af
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618502"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816251"
 ---
 # <a name="common-visual-c-arm-migration-issues"></a>Visual C++ ARM 迁移的常见问题
 
@@ -92,7 +92,7 @@ Handle::acquire(operator->(memory_handle), operator*(p));
 
 ### <a name="volatile-keyword-default-behavior"></a>易失关键字默认行为
 
-MSVC 编译器支持两种不同的解释`volatile`存储可以通过使用编译器开关指定的限定符。 [/Volatile: ms](../build/reference/volatile-volatile-keyword-interpretation.md)开关用于选择 Microsoft 扩展易失性保证强排序的语义，因为由于这些体系结构上强内存模型已针对 x86 和 x64 传统的用例。 [/Volatile: iso](../build/reference/volatile-volatile-keyword-interpretation.md)开关用于选择严格 c + + 标准可变语义，不能保证强排序。
+MSVC 编译器支持两种不同的解释`volatile`存储可以通过使用编译器开关指定的限定符。 [/Volatile: ms](reference/volatile-volatile-keyword-interpretation.md)开关用于选择 Microsoft 扩展易失性保证强排序的语义，因为由于这些体系结构上强内存模型已针对 x86 和 x64 传统的用例。 [/Volatile: iso](reference/volatile-volatile-keyword-interpretation.md)开关用于选择严格 c + + 标准可变语义，不能保证强排序。
 
 在 ARM 体系结构中，默认值是 **/volatile: iso**由于 ARM 处理器具有弱排序内存模型，而且因为 ARM 软件不依赖于扩展的语义的旧版 **/volatile: ms** ，通常没有与执行的软件进行交互。 但是，它是仍有时方便或甚至需要编译 ARM 程序以使用扩展的语义。 例如，可能会以端口的程序，使用 ISO c + + 语义，成本过高或驱动程序软件可能需要遵守的传统的语义，才能正常工作。 在这些情况下，你可以使用 **/volatile: ms**交换机; 但是，若要重新创建在 ARM 目标上的传统可变语义，编译器必须将插入围绕每个读取或写入的内存屏障`volatile`变量以强制实施强排序，这会对性能产生负面影响。
 
@@ -100,4 +100,4 @@ MSVC 编译器支持两种不同的解释`volatile`存储可以通过使用编�
 
 ## <a name="see-also"></a>请参阅
 
-[为 ARM 处理器配置 Visual C++](../build/configuring-programs-for-arm-processors-visual-cpp.md)
+[为 ARM 处理器配置 Visual C++](configuring-programs-for-arm-processors-visual-cpp.md)

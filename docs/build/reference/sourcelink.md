@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - /SOURCELINK linker option
 - /SOURCELINK
-ms.openlocfilehash: a5a01ca56a49791a608c5c836312c7728e9328c3
-ms.sourcegitcommit: fe1e21df175cd004d21c6e4659082efceb649a8b
+ms.openlocfilehash: 1643727d8f556a905eccbfa9626d1aaa8ea63cbf
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53978278"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816602"
 ---
 # <a name="sourcelink-include-source-link-file-in-pdb"></a>/ SOURCELINK （包括源链接 PDB 文件）
 
@@ -32,7 +32,7 @@ ms.locfileid: "53978278"
 
 ### <a name="to-set-the-sourcelink-linker-option-in-visual-studio"></a>在 Visual Studio 中设置 /SOURCELINK 链接器选项
 
-1. 打开**属性页**项目对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。
+1. 打开**属性页**项目对话框。 有关详细信息，请参阅[Visual Studio 中的设置 c + + 编译器和生成属性](../working-with-project-properties.md)。
 
 1. 选择**配置属性** > **链接器** > **命令行**属性页。
 
@@ -44,5 +44,5 @@ ms.locfileid: "53978278"
 
 ## <a name="see-also"></a>请参阅
 
-[设置链接器选项](../../build/reference/setting-linker-options.md)<br/>
-[链接器选项](../../build/reference/linker-options.md)
+[MSVC 链接器引用](linking.md)<br/>
+[MSVC 链接器选项](linker-options.md)

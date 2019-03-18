@@ -6,12 +6,12 @@ helpviewer_keywords:
 - project debugging [C++]
 - debugging projects
 ms.assetid: a5cade77-ba51-4b03-a7a0-6897e3cd6a59
-ms.openlocfilehash: 85753e4842ab2377aa64384bb75e0c2dafd3f858
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4cd0f81ccf768938d585c206d5f50b20f6a0ae19
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50581943"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57741347"
 ---
 # <a name="walkthrough-debugging-a-project-c"></a>演练：调试项目 (C++)
 
@@ -54,7 +54,7 @@ ms.locfileid: "50581943"
 ## <a name="next-steps"></a>后续步骤
 
 上一步：[演练：测试项目 (C++)](../ide/walkthrough-testing-a-project-cpp.md)<br/>
-下一步：[演练：部署程序 (C++)](../ide/walkthrough-deploying-your-program-cpp.md)<br/>
+**下一篇：**[演练：部署程序 (C++)](../ide/walkthrough-deploying-your-program-cpp.md)<br/>
 
 ## <a name="see-also"></a>请参阅
 

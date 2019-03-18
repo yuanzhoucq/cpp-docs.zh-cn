@@ -12,12 +12,12 @@ helpviewer_keywords:
 - -GS compiler option [C++]
 - stack checking calls
 ms.assetid: 40daed7c-f942-4085-b872-01e12b37729e
-ms.openlocfilehash: 49433cd0c84b05248bacf1e930dd5ec78bc3cd1b
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: e31b42c1d9422d44c5f106f40c4a60a38f23425b
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418823"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818556"
 ---
 # <a name="gs-control-stack-checking-calls"></a>/Gs（控制堆栈检查调用）
 
@@ -55,7 +55,7 @@ X86、 ARM，和 ARM64 目标 **/Gs**选项，而不*大小*自变量是与相�
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[Visual Studio 中的设置 c + + 编译器和生成属性](../working-with-project-properties.md)。
 
 1. 选择**配置属性** > **C/c + +** > **命令行**属性页。
 
@@ -67,5 +67,5 @@ X86、 ARM，和 ARM64 目标 **/Gs**选项，而不*大小*自变量是与相�
 
 ## <a name="see-also"></a>请参阅
 
-[编译器选项](../../build/reference/compiler-options.md)<br/>
-[设置编译器选项](../../build/reference/setting-compiler-options.md)
+[MSVC 编译器选项](compiler-options.md)<br/>
+[MSVC 编译器命令行语法](compiler-command-line-syntax.md)

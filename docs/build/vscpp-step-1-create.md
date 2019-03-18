@@ -6,12 +6,12 @@ ms.date: 12/12/2017
 ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
-ms.openlocfilehash: 5722dcc06f5141818910e44a6160d12bcd4eaecd
-ms.sourcegitcommit: beeb77b2976e997debc55b1af35024cc62e62799
+ms.openlocfilehash: 3bbbd40534e3e429d68dbb6205134c57db40c851
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "52977753"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57817720"
 ---
 # <a name="create-a-c-console-app-project"></a>创建一个 c + + 控制台应用程序项目
 
@@ -19,7 +19,7 @@ ms.locfileid: "52977753"
 
 ## <a name="prerequisites"></a>系统必备
 
-- 使用 c + + 工作负载安装并运行您的计算机上具有 Visual Studio 中使用的桌面开发。 如果未尚未安装，请参阅[Visual Studio 2017 中的安装 c + + 支持](../build/vscpp-step-0-installation.md)。
+- 使用 c + + 工作负载安装并运行您的计算机上具有 Visual Studio 中使用的桌面开发。 如果未尚未安装，请参阅[Visual Studio 2017 中的安装 c + + 支持](vscpp-step-0-installation.md)。
 
 ## <a name="create-your-app-project"></a>创建应用程序项目
 
@@ -27,11 +27,11 @@ Visual Studio 使用项目来组织应用的代码，使用解决方案来组织
 
 1. 在 Visual Studio 中打开**文件**菜单，然后选择**新建 > 项目**以打开**新项目**对话框。
 
-   ![打开新建项目对话框](../build/media/vscpp-file-new-project.gif "打开新建项目对话框")
+   ![打开新建项目对话框](media/vscpp-file-new-project.gif "打开新建项目对话框")
 
 1. 在中**新的项目**对话框中，选择**已安装**， **Visual c + +** 如果未选中，然后选择**空项目**模板。 在中**名称**字段中，输入*HelloWorld*。 选择**确定**创建项目。
 
-   ![命名并创建新项目](../build/media/vscpp-concierge-project-name-callouts.png "名称并创建新项目")
+   ![命名并创建新项目](media/vscpp-concierge-project-name-callouts.png "名称并创建新项目")
 
 Visual Studio 创建一个新的空项目可供您希望创建和添加你的源代码文件的应用的那类专用化。 您将执行的下一步。
 
@@ -43,9 +43,9 @@ Visual Studio 可以为 Windows 和其他平台创建各种各样的应用程序
 
 1. 在 Visual Studio 中打开**项目**菜单，然后选择**属性**以打开**HelloWorld 属性页**对话框。
 
-1. 在中**属性页**对话框下**配置属性**，选择**链接器**，**系统**，然后选择编辑框旁边**子系统**属性。 在显示的下拉列表菜单，选择**控制台 (/ /SUBSYSTEM: CONSOLE)**。 选择**确定**以保存所做的更改。
+1. 在中**属性页**对话框下**配置属性**，选择**链接器**，**系统**，然后选择编辑框旁边**子系统**属性。 在显示的下拉列表菜单，选择**控制台 (/ /SUBSYSTEM: CONSOLE)**。 选择“确定”以保存更改。
 
-   ![打开属性页对话框](../build/media/vscpp-properties-linker-subsystem.gif "打开属性页对话框")
+   ![打开属性页对话框](media/vscpp-properties-linker-subsystem.gif "打开属性页对话框")
 
 Visual Studio 现在知道要生成项目以在控制台窗口中运行。 接下来，将添加一个源代码文件，并输入您的应用程序的代码。
 
@@ -57,7 +57,7 @@ Visual Studio 现在知道要生成项目以在控制台窗口中运行。 接�
 
 1. 在中**添加新项**对话框中，选择**Visual c + +** 下**已安装**如果已选择。 在中心窗格中，选择**c + + 文件 (.cpp)**。 更改**名称**到*HelloWorld.cpp*。 选择**添加**以关闭对话框并创建该文件。
 
-   ![将源代码文件添加为 HelloWorld.cpp](../build/media/vscpp-add-new-item.gif "为 HelloWorld.cpp 添加源文件")
+   ![将源代码文件添加为 HelloWorld.cpp](media/vscpp-add-new-item.gif "为 HelloWorld.cpp 添加源文件")
 
 Visual studio 创建一个新的、 空的源代码文件，并在编辑器窗口，准备好输入你的源代码中打开它。
 
@@ -79,7 +79,7 @@ Visual studio 创建一个新的、 空的源代码文件，并在编辑器窗�
 
    代码应如下所示在编辑器窗口中：
 
-   ![Hello World 代码编辑器中的](../build/media/vscpp-hello-world-editor.png "编辑器中的 Hello World 代码")
+   ![Hello World 代码编辑器中的](media/vscpp-hello-world-editor.png "编辑器中的 Hello World 代码")
 
 代码如下所示在编辑器中，当你准备好转到下一步并构建您的应用程序。
 

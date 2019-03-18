@@ -10,12 +10,12 @@ helpviewer_keywords:
 - MFC ActiveX Control Wizard
 - OLE controls [MFC]
 ms.assetid: f19d698c-bdc3-4c74-af97-3d6ccb441b75
-ms.openlocfilehash: 009c7a2b0c703facf70b7a4b2706f288c4d7fd9a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: cec4c3aa6aedfa7a1f8234c6cc2355970d453f56
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57267573"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822673"
 ---
 # <a name="mfc-activex-control-wizard"></a>MFC ActiveX 控件向导
 
@@ -64,6 +64,6 @@ MFC starter 项目包括 c + + 源文件 (.cpp)、 资源 (.rc) 文件和项目 
 
 ## <a name="see-also"></a>请参阅
 
-[创建和管理 Visual C++ 项目](../../ide/creating-and-managing-visual-cpp-projects.md)<br/>
-[Visual C++ 项目类型](../../ide/visual-cpp-project-types.md)<br/>
+[创建和管理 Visual C++ 项目](../../build/creating-and-managing-visual-cpp-projects.md)<br/>
+[Visual C++ 项目类型](../../build/reference/visual-cpp-project-types.md)<br/>
 [概念](../../atl/active-template-library-atl-concepts.md)

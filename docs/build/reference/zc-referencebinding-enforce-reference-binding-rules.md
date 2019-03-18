@@ -11,12 +11,12 @@ helpviewer_keywords:
 - /Zc compiler options (C++)
 - Zc compiler options (C++)
 ms.assetid: 0c6cfaac-9c2a-41a3-aa94-64ca8ef261fc
-ms.openlocfilehash: baf2106f015a4e8557cb8469d300709694e06d84
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9dfe8f5b4713d9567f6e98af6685c552fb51160e
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50428322"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57822153"
 ---
 # <a name="zcreferencebinding-enforce-reference-binding-rules"></a>/Zc: referencebinding （强制引用绑定规则）
 
@@ -59,7 +59,7 @@ void main() {
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[Visual Studio 中的设置 c + + 编译器和生成属性](../working-with-project-properties.md)。
 
 1. 选择**配置属性** > **C/c + +** > **命令行**属性页。
 
@@ -67,6 +67,6 @@ void main() {
 
 ## <a name="see-also"></a>请参阅
 
-[编译器选项](../../build/reference/compiler-options.md)<br/>
-[设置编译器选项](../../build/reference/setting-compiler-options.md)<br/>
-[/Zc（一致性）](../../build/reference/zc-conformance.md)<br/>
+[MSVC 编译器选项](compiler-options.md)<br/>
+[MSVC 编译器命令行语法](compiler-command-line-syntax.md)<br/>
+[/Zc（一致性）](zc-conformance.md)<br/>

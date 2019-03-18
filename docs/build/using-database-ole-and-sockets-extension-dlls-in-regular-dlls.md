@@ -6,12 +6,12 @@ helpviewer_keywords:
 - DLLs [C++], extension
 - DLLs [C++], regular
 ms.assetid: 9f1d14a7-9e2a-4760-b3b6-db014fcdb7ff
-ms.openlocfilehash: b2d4cc4f3b82bd3082ba3b4eac635ea91c19691f
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: d08822a04abe5a01883ad8aa1bd6d94269e810cc
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57421202"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57807970"
 ---
 # <a name="using-database-ole-and-sockets-mfc-extension-dlls-in-regular-mfc-dlls"></a>在规则 MFC Dll 中使用数据库、 OLE 和套接字 MFC 扩展 Dll
 
@@ -132,17 +132,17 @@ BOOL CYourRegularDLL::InitInstance()
 
 ### <a name="what-do-you-want-to-do"></a>你希望做什么？
 
-- [初始化 MFC 扩展 DLL](../build/run-time-library-behavior.md#initializing-extension-dlls)
+- [初始化 MFC 扩展 DLL](run-time-library-behavior.md#initializing-extension-dlls)
 
-- [初始化规则 MFC Dll](../build/run-time-library-behavior.md#initializing-regular-dlls)
+- [初始化规则 MFC Dll](run-time-library-behavior.md#initializing-regular-dlls)
 
 ### <a name="what-do-you-want-to-know-more-about"></a>你想进一步了解什么？
 
-- [MFC 扩展 DLL](../build/extension-dlls.md)
+- [MFC 扩展 DLL](extension-dlls.md)
 
-- [静态链接到 MFC 的规则 MFC DLL](../build/regular-dlls-statically-linked-to-mfc.md)
+- [静态链接到 MFC 的规则 MFC DLL](regular-dlls-statically-linked-to-mfc.md)
 
-- [动态链接到 MFC 的规则 MFC DLL](../build/regular-dlls-dynamically-linked-to-mfc.md)
+- [动态链接到 MFC 的规则 MFC DLL](regular-dlls-dynamically-linked-to-mfc.md)
 
 - [将 MFC 作为 DLL 的一部分使用](../mfc/tn011-using-mfc-as-part-of-a-dll.md)
 
@@ -150,4 +150,4 @@ BOOL CYourRegularDLL::InitInstance()
 
 ## <a name="see-also"></a>请参阅
 
-[MFC 扩展 DLL](../build/extension-dlls.md)
+[MFC 扩展 DLL](extension-dlls.md)

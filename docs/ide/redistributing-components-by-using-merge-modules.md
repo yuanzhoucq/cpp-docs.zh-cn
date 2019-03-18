@@ -5,12 +5,12 @@ helpviewer_keywords:
 - merge modules, using
 - redistributing applications, using merge modules
 ms.assetid: 93b84211-bf9b-4a78-9f22-474ac2ef7840
-ms.openlocfilehash: 8fa717f376017560c4bd2e9012bd25c5190da563
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b98bcad0d8df26796cb6e2a2c29d90a7a20aadd1
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50676455"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57741422"
 ---
 # <a name="redistributing-components-by-using-merge-modules"></a>使用合并模块重新发布组件
 

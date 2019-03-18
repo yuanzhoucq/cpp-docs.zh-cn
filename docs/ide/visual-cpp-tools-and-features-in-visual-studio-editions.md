@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Visual C++, versions
 - editions [C++]
 ms.assetid: 3d88607b-9cc4-490a-8d4c-31ee7610a26f
-ms.openlocfilehash: 7f40e59ae3e5e883827a212a16d1dd19822dc136
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3d3c6e25594eb3bb01ad3fc995a24cdc723d5726
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463747"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751890"
 ---
 # <a name="visual-c-tools-and-features-in-visual-studio-editions"></a>Visual Studio 版本中的 Visual C++ 工具和功能
 
@@ -106,7 +106,7 @@ ms.locfileid: "50463747"
 |托管调试||X|X|X|
 |GPU 使用情况|X||X|X|
 |内存使用率|X||X|X|
-|远程调试|X|X|X|X|
+|Remote Debugging|X|X|X|X|
 |SQL 调试|||X|X|
 |静态代码分析|有限|有限|X|X|
 
@@ -119,8 +119,8 @@ ms.locfileid: "50463747"
 |HTML 样式设计器/编辑器|X|X|X|X|
 |XML 编辑器|X|X|X|X|
 |源代码编辑器|X|X|X|X|
-|工作效率功能：重构、IntelliSense、C++ 代码格式设置|X|X|X|X|
-|Windows 窗体设计器||X|X|X|
+|提高生产力的功能：重构、IntelliSense、C++ 代码格式设置|X|X|X|X|
+|Windows Forms Designer — Windows 窗体设计器||X|X|X|
 |数据设计器|||X|X|
 |本机资源编辑器（.rc 文件）|||X|X|
 |资源编辑器|X|X|X|X|

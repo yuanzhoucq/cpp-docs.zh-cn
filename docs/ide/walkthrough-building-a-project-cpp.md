@@ -6,12 +6,12 @@ helpviewer_keywords:
 - projects [C++], building
 - project building [C++]
 ms.assetid: d459bc03-88ef-48d0-9f9a-82d17f0b6a4d
-ms.openlocfilehash: c12cd50dd92e728c88945cd83029f7e5e62816da
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 1d5dbd8f83f501c3b68bad771089eab8acc6f8aa
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524152"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742496"
 ---
 # <a name="walkthrough-building-a-project-c"></a>演练：生成项目 (C++)
 
@@ -55,7 +55,7 @@ ms.locfileid: "51524152"
 ## <a name="next-steps"></a>后续步骤
 
 上一步：[演练：使用项目和解决方案 (C++)](../ide/walkthrough-working-with-projects-and-solutions-cpp.md)<br/>
-下一步：[演练：测试项目 (C++)](../ide/walkthrough-testing-a-project-cpp.md)<br/>
+**下一篇：**[演练：测试项目 (C++)](../ide/walkthrough-testing-a-project-cpp.md)<br/>
 
 ## <a name="see-also"></a>请参阅
 

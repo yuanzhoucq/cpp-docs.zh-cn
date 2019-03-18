@@ -6,12 +6,12 @@ helpviewer_keywords:
 - cl.exe compiler, output files
 - output files, specifying pathnames
 ms.assetid: 7a6595ce-3383-44ae-957a-466bfa29c343
-ms.openlocfilehash: 07afcd102b2b1839b3925ad1e6905507ea316361
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: dcff3610255c40f4e06201e52a53eb5dd965a4be
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57423321"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57821347"
 ---
 # <a name="specifying-the-pathname"></a>指定路径名
 
@@ -38,6 +38,6 @@ CL /FmPRN HELLO.CPP
 
 ## <a name="see-also"></a>请参阅
 
-[输出文件 (/F) 选项](../../build/reference/output-file-f-options.md)<br/>
-[编译器选项](../../build/reference/compiler-options.md)<br/>
-[设置编译器选项](../../build/reference/setting-compiler-options.md)
+[输出文件 (/F) 选项](output-file-f-options.md)<br/>
+[MSVC 编译器选项](compiler-options.md)<br/>
+[MSVC 编译器命令行语法](compiler-command-line-syntax.md)

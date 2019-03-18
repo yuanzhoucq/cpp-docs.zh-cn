@@ -9,12 +9,12 @@ helpviewer_keywords:
 - EDITBIN program
 - COFF files, editing
 ms.assetid: efdda03b-3dfc-4d31-90e6-caf5b3977914
-ms.openlocfilehash: 39fdcfd3221599f20617092118e5cef5267e3d2b
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 45c2967a55e85ae31bb77bb2e8d50415eafbea46
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418784"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807905"
 ---
 # <a name="editbin-reference"></a>EDITBIN 参考
 
@@ -23,12 +23,12 @@ Microsoft COFF 二进制文件编辑器 (EDITBIN。EXE) 修改通用对象文件
 > [!NOTE]
 >  可以仅从 Visual Studio 命令提示符启动此工具。 无法从系统命令提示符或文件资源管理器中启动它。
 
-EDITBIN 不是可用于与生成文件[/GL](../../build/reference/gl-whole-program-optimization.md)编译器选项。 对使用 /GL 生成的二进制文件进行任何修改将需要通过重新编译和链接。
+EDITBIN 不是可用于与生成文件[/GL](gl-whole-program-optimization.md)编译器选项。 对使用 /GL 生成的二进制文件进行任何修改将需要通过重新编译和链接。
 
-- [EDITBIN 命令行](../../build/reference/editbin-command-line.md)
+- [EDITBIN 命令行](editbin-command-line.md)
 
-- [EDITBIN 选项](../../build/reference/editbin-options.md)
+- [EDITBIN 选项](editbin-options.md)
 
 ## <a name="see-also"></a>请参阅
 
-[C/C++ 生成工具](../../build/reference/c-cpp-build-tools.md)
+[其他 MSVC 生成工具](c-cpp-build-tools.md)

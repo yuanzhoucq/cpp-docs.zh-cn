@@ -12,12 +12,12 @@ helpviewer_keywords:
 - -GT compiler option [C++]
 - fiber-safe static thread-local storage compiler option [C++]
 ms.assetid: 071fec79-c701-432b-9970-457344133159
-ms.openlocfilehash: 14d2f66401b7b7ed324b79b12b6de26c7ee450b2
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 417ac00a446f773a424553e42478a4f0cf58efc6
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420253"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822511"
 ---
 # <a name="gt-support-fiber-safe-thread-local-storage"></a>/GT（支持纤程安全的线程本地存储区）
 
@@ -33,11 +33,11 @@ ms.locfileid: "57420253"
 
 使用声明数据`__declspec(thread)`通过线程本地存储 (TLS) 数组引用。 TLS 数组是系统会为每个线程维护的地址的数组。 此数组中的每个地址提供的线程本地存储的数据的位置。
 
-纤程是轻型对象，堆栈和寄存器上下文组成，并可以在各种线程上安排。 纤程可以在任何线程上运行。 纤程可能会被置换出和更高版本上重新启动另一个线程，因为 TLS 数组的地址不得缓存或作为公共子表达式优化整个函数调用 (请参阅[/Og （全局优化）](../../build/reference/og-global-optimizations.md)选项详细信息）。 **/GT**可防止这种优化。
+纤程是轻型对象，堆栈和寄存器上下文组成，并可以在各种线程上安排。 纤程可以在任何线程上运行。 纤程可能会被置换出和更高版本上重新启动另一个线程，因为 TLS 数组的地址不得缓存或作为公共子表达式优化整个函数调用 (请参阅[/Og （全局优化）](og-global-optimizations.md)选项详细信息）。 **/GT**可防止这种优化。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[Visual Studio 中的设置 c + + 编译器和生成属性](../working-with-project-properties.md)。
 
 1. 单击 **“C/C++”** 文件夹。
 
@@ -51,5 +51,5 @@ ms.locfileid: "57420253"
 
 ## <a name="see-also"></a>请参阅
 
-[编译器选项](../../build/reference/compiler-options.md)<br/>
-[设置编译器选项](../../build/reference/setting-compiler-options.md)
+[MSVC 编译器选项](compiler-options.md)<br/>
+[MSVC 编译器命令行语法](compiler-command-line-syntax.md)

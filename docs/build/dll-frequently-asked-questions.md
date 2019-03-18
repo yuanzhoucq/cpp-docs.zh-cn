@@ -6,12 +6,12 @@ helpviewer_keywords:
 - DLLs [C++], frequently asked questions
 - FAQs [C++], DLLs
 ms.assetid: 09dd068e-fc33-414e-82f7-289c70680256
-ms.openlocfilehash: 17acde51d3fa9a7fabf14de748fd60b126b8b8f3
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 33a0c9dd1abbfb9375ce1aef53fd152a521ac97d
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418836"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57821932"
 ---
 # <a name="dll-frequently-asked-questions"></a>DLL 常见问题
 
@@ -59,9 +59,9 @@ ms.locfileid: "57418836"
 
 如果您的 DLL 是以静态方式链接到 MFC，更改为正则表达式的规则 MFC DLL 动态链接到 MFC 的 MFC DLL 可减小文件大小。
 
-如果 DLL 具有大量导出函数，使用.def 文件导出的函数 (而不是使用 **__declspec （dllexport)**)，并使用.def 文件[NONAME 特性](../build/exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md)上每个导出的函数。 NONAME 特性会导致只有序号值而不是函数名称存储在 DLL 的导出表中，这会减少文件大小。
+如果 DLL 具有大量导出函数，使用.def 文件导出的函数 (而不是使用 **__declspec （dllexport)**)，并使用.def 文件[NONAME 特性](exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md)上每个导出的函数。 NONAME 特性会导致只有序号值而不是函数名称存储在 DLL 的导出表中，这会减少文件大小。
 
-应用程序加载时，会加载隐式链接到应用程序的 Dll。 若要在加载时提高性能，请尝试将该 DLL 分割成不同的 Dll。 将放入一个 DLL 加载后立即需要调用应用程序的所有函数，并且具有隐式链接到该 DLL 调用应用程序。 将其他函数的调用应用程序不需要立即放入另一个 DLL 和具有应用程序显式链接到该 DLL。 有关详细信息，请参阅[确定要使用的链接方法](../build/linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)。
+应用程序加载时，会加载隐式链接到应用程序的 Dll。 若要在加载时提高性能，请尝试将该 DLL 分割成不同的 Dll。 将放入一个 DLL 加载后立即需要调用应用程序的所有函数，并且具有隐式链接到该 DLL 调用应用程序。 将其他函数的调用应用程序不需要立即放入另一个 DLL 和具有应用程序显式链接到该 DLL。 有关详细信息，请参阅[可执行文件链接到 DLL](linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)。
 
 ## <a name="memory_leak"></a> 存在&#39;s 规则 MFC DLL，但我的代码中的内存泄漏看起来很正常。 如何查找内存泄漏？
 
@@ -69,4 +69,4 @@ ms.locfileid: "57418836"
 
 ## <a name="see-also"></a>请参阅
 
-[Visual C++ 中的 DLL](../build/dlls-in-visual-cpp.md)
+[Visual C++ 中的 DLL](dlls-in-visual-cpp.md)

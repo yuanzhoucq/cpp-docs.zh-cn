@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - scanf function, width specification
 ms.assetid: 94b4e8fe-c4a2-4799-8b6c-a2cf28ffb09c
-ms.openlocfilehash: e4608d46664dad3e04d37a82368cc6e7173106f4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1431002a7e7d0054ac20c05c76b05cabc96177c5
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445157"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743260"
 ---
 # <a name="scanf-width-specification"></a>scanf 宽度规范
 
@@ -79,7 +79,7 @@ wscanf_s(L"%hC", &x, 2);    // Read a single-byte character
 
 ## <a name="reading-undelimited-strings"></a>读取未分隔的字符串
 
-若要读取未由空白字符分隔的字符串，可将括号 (**[ ]**) 中的字符集替换为 **s**（字符串）类型字符。 括号中的字符集称为控制字符串。 相应的输入字段一直读取到控制字符串中未显示的第一个字符。 如果字符集中的第一个字符是插入符号 (**^**)，则效果相反：输入字段一直读取到字符集其余部分中显示的第一个字符。
+若要读取未由空白字符分隔的字符串，可将括号 (**[ ]**) 中的字符集替换为 **s**（字符串）类型字符。 括号中的字符集称为控制字符串。 相应的输入字段一直读取到控制字符串中未显示的第一个字符。 如果集中的第一个字符是插入符号（^），则效果相反：输入字段将读取到出现在字符集其余部分中的第一个字符。
 
 请注意，**%[a-z]** 和 **%[z-a]** 解释为与 **%[abcde...z]** 等同。 这是一个常见的 `scanf` 函数扩展，但请注意，ANSI 标准并不需要此扩展。
 

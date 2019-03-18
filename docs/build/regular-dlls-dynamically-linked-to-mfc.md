@@ -8,12 +8,12 @@ helpviewer_keywords:
 - shared DLL versions [C++]
 - dynamically linked DLLs [C++]
 ms.assetid: b4f7ab92-8723-42a5-890e-214f4e29dcd0
-ms.openlocfilehash: 548fbde379937ab4d915f08a43a8b865e071d688
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 3bfed5f75dab4c501708950fdb99f53c40ec142c
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413168"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57821295"
 ---
 # <a name="regular-mfc-dlls-dynamically-linked-to-mfc"></a>动态链接到 MFC 的规则 MFC Dll
 
@@ -83,18 +83,18 @@ AFX_MANAGE_STATE(AfxGetStaticModuleState( ))
 
 ## <a name="what-do-you-want-to-do"></a>你希望做什么？
 
-- [初始化规则 MFC Dll](../build/run-time-library-behavior.md#initializing-regular-dlls)
+- [初始化规则 MFC Dll](run-time-library-behavior.md#initializing-regular-dlls)
 
 ## <a name="what-do-you-want-to-know-more-about"></a>你想进一步了解什么？
 
-- [动态链接到 MFC 的规则 MFC DLL 的模块状态](../build/module-states-of-a-regular-dll-dynamically-linked-to-mfc.md)
+- [动态链接到 MFC 的规则 MFC DLL 的模块状态](module-states-of-a-regular-dll-dynamically-linked-to-mfc.md)
 
 - [管理 MFC 模块状态数据](../mfc/managing-the-state-data-of-mfc-modules.md)
 
-- [在规则 MFC DLL 中使用数据库、OLE 和套接字 MFC 扩展 DLL](../build/using-database-ole-and-sockets-extension-dlls-in-regular-dlls.md)
+- [在规则 MFC DLL 中使用数据库、OLE 和套接字 MFC 扩展 DLL](using-database-ole-and-sockets-extension-dlls-in-regular-dlls.md)
 
 - [将 MFC 作为 DLL 的一部分使用](../mfc/tn011-using-mfc-as-part-of-a-dll.md)
 
 ## <a name="see-also"></a>请参阅
 
-[DLL 的类型](../build/kinds-of-dlls.md)
+[DLL 的类型](kinds-of-dlls.md)

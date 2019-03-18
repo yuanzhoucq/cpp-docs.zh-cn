@@ -1,16 +1,16 @@
 ---
 title: ARM64 异常处理
 ms.date: 11/19/2018
-ms.openlocfilehash: a4d4adcc365c1e9caf7faa0e225fabe133d0a6eb
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 921029704e4bf5adabfbe0a82387dadc911b9036
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176674"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816147"
 ---
 # <a name="arm64-exception-handling"></a>ARM64 异常处理
 
-Windows 在 ARM64 上的使用相同的结构化的异常处理机制，用于异步硬件生成的异常和同步软件生成的异常。 将通过使用语言帮助器函数，基于 Windows 结构化异常处理来生成特定于语言的异常处理程序。 本文档介绍 ARM64 和由 Microsoft ARM 汇编程序和 Visual c + + 编译器生成的代码使用的语言帮助器上的 Windows 中的异常处理。
+Windows 在 ARM64 上的使用相同的结构化的异常处理机制，用于异步硬件生成的异常和同步软件生成的异常。 将通过使用语言帮助器函数，基于 Windows 结构化异常处理来生成特定于语言的异常处理程序。 本文档介绍 ARM64 和由 Microsoft ARM 汇编程序和 MSVC 编译器生成的代码使用的语言帮助器上的 Windows 中的异常处理。
 
 ## <a name="goals-and-motivation"></a>目标和动机
 
@@ -44,7 +44,7 @@ Windows 在 ARM64 上的使用相同的结构化的异常处理机制，用于�
 
 1. 在 epilog 中没有任何条件代码。
 
-1. 专用帧指针寄存器： sp 保存在 prolog 中的另一个寄存器 (r29) 中，如果的注册保持在整个函数，保持不变，以便可以随时恢复原始 sp。
+1. 专用的帧指针寄存器：如果 sp 保存在另一个寄存器 (r29) 在序言中，注册保持在整个函数，不变，以便可以随时恢复原始 sp。
 
 1. 除非 sp 保存在另一个寄存器中，所有操作的堆栈指针的 prolog 和 epilog 中严格的都发生。
 
@@ -52,7 +52,7 @@ Windows 在 ARM64 上的使用相同的结构化的异常处理机制，用于�
 
 ## <a name="arm64-stack-frame-layout"></a>ARM64 堆栈帧布局
 
-![堆栈帧布局](../build/media/arm64-exception-handling-stack-frame.png "堆栈帧布局")
+![堆栈帧布局](media/arm64-exception-handling-stack-frame.png "堆栈帧布局")
 
 对于链接在一起的帧的函数，可以根据优化注意事项的本地变量区域中的任何位置保存 fp 和 lr 对。 目标是最大化的局部变量可以达到通过基于帧指针 (r29) 或堆栈指针 (sp) 的一个单个指令的数量。 但是对于`alloca`函数必须链接和 r29 必须指向堆栈的底部。 若要允许更多寄存器-对-寻址的模式下，非易失性注册的 aave 区域放置于本地区域堆栈的顶部。 下面是示例，展示了几个最有效的 prolog 序列。 为了明确和更好的缓存区域，便于在所有规范的 prolog 中存储被调用方保存的寄存器的顺序是按"增长设置"的顺序。 `#framesz` 下面表示整个堆栈 （不包括 alloca 区域） 的大小。 `#localsz` 并`#outsz`表示本地区域的大小 (包括保存区域\<r29，lr > 对) 和分别传出参数大小。
 
@@ -187,7 +187,7 @@ Windows 在 ARM64 上的使用相同的结构化的异常处理机制，用于�
 
 每个.pdata 记录的 ARM64 是 8 个字节的长度。 在第一个单词后, 跟与第二个函数的 32 位 RVA 启动的每个记录位置的一般格式包含指向长度可变的.xdata 块或已打包的字描述规范函数展开序列。
 
-![.pdata 记录布局](../build/media/arm64-exception-handling-pdata-record.png ".pdata 记录布局")
+![.pdata 记录布局](media/arm64-exception-handling-pdata-record.png ".pdata 记录布局")
 
 字段是按如下所示：
 
@@ -203,7 +203,7 @@ Windows 在 ARM64 上的使用相同的结构化的异常处理机制，用于�
 
 当已打包的展开格式不足以描述函数的展开时，必须创建长度可变的 .xdata 记录。 该记录的地址存储在 .pdata 记录的第二个字中。 .Xdata 的格式是已打包的长度可变的组词语：
 
-![.xdata 记录布局](../build/media/arm64-exception-handling-xdata-record.png ".xdata 记录布局")
+![.xdata 记录布局](media/arm64-exception-handling-xdata-record.png ".xdata 记录布局")
 
 此数据被分为四个部分：
 
@@ -291,14 +291,14 @@ ULONG ComputeXdataSize(PULONG *Xdata)
 |`save_fplr_x`|        10zzzzzz： 保存\<r29，lr > 对在 [sp-（#Z + 1） * 8] ！，预索引偏移量 > =-512 |
 |`alloc_m`|        11000xxx'xxxxxxxx： 分配大堆栈大小\<16k (2 ^11 * 16)。 |
 |`save_regp`|        110010xx xxzzzzzz： 保存 r(19+#X) 对在 [sp + #Z * 8]，偏移量\<= 504 |
-|`save_regp_x`|        110011xx xxzzzzzz： 保存对 r(19+#X) 在 [sp-（#Z + 1） * 8] ！，预索引偏移量 > =-512 |
+|`save_regp_x`|        110011xx'xxzzzzzz: save pair r(19+#X) at [sp-(#Z+1)*8]!, pre-indexed offset >= -512 |
 |`save_reg`|        110100xx xxzzzzzz： 保存 reg r(19+#X) 在 [sp + #Z * 8]，偏移量\<= 504 |
-|`save_reg_x`|        1101010 x'xxxzzzzz： 保存 reg r(19+#X) 在 [sp-（#Z + 1） * 8] ！，预索引偏移量 > =-256 |
+|`save_reg_x`|        1101010x'xxxzzzzz: save reg r(19+#X) at [sp-(#Z+1)*8]!, pre-indexed offset >= -256 |
 |`save_lrpair`|         1101011 x'xxzzzzzz： 保存对\<r19 + 2 *#X，lr > 在 [sp + #Z*8]，偏移量\<= 504 |
 |`save_fregp`|        1101100 x'xxzzzzzz： 保存对 d(8+#X) 在 [sp + #Z * 8]，偏移量\<= 504 |
-|`save_fregp_x`|        1101101 x'xxzzzzzz： 在保存对 d(8+#X) [sp-（#Z + 1） * 8] ！，预索引偏移量 > =-512 |
+|`save_fregp_x`|        1101101x'xxzzzzzz: save pair d(8+#X), at [sp-(#Z+1)*8]!, pre-indexed offset >= -512 |
 |`save_freg`|        1101110 x'xxzzzzzz： 保存 reg d(8+#X) 在 [sp + #Z * 8]，偏移量\<= 504 |
-|`save_freg_x`|        11011110 xxxzzzzz： 保存 reg d(8+#X) 在 [sp-（#Z + 1） * 8] ！，预索引偏移量 > =-256 |
+|`save_freg_x`|        11011110'xxxzzzzz: save reg d(8+#X) at [sp-(#Z+1)*8]!, pre-indexed offset >= -256 |
 |`alloc_l`|         11100000' xxxxxxxx 'xxxxxxxx' xxxxxxxx： 分配大堆栈大小\<256 M (2 ^24 * 16) |
 |`set_fp`|        11100001： 设置 r29： 与： mov r29 sp |
 |`add_fp`|        11100010' xxxxxxxx： 设置 r29 与： 添加 r29、 sp、 #x * 8 |
@@ -306,16 +306,16 @@ ULONG ComputeXdataSize(PULONG *Xdata)
 |`end`|            11100100： 展开代码的末尾。 表示已在 epilog 中。 |
 |`end_c`|        11100101： 当前链接作用域中的展开代码的末尾。 |
 |`save_next`|        11100110： 保存下一个非易失性 Int 或 FP 注册对。 |
-|`arithmetic(add)`|    11100111"000zxxxx： 将 cookie reg(z) 添加到 lr (0 = x28，1 = sp);添加 lr，lr，reg(z) |
-|`arithmetic(sub)`|    11100111"001zxxxx: sub cookie reg(z) lr 从 (0 = x28，1 = sp);sub lr，lr，reg(z) |
-|`arithmetic(eor)`|    11100111"010zxxxx： 使用 cookie reg(z) eor lr (0 = x28，1 = sp);eor lr，lr，reg(z) |
+|`arithmetic(add)`|    11100111'000zxxxx: add cookie reg(z) to lr (0=x28, 1=sp); add lr, lr, reg(z) |
+|`arithmetic(sub)`|    11100111'001zxxxx: sub cookie reg(z) from lr (0=x28, 1=sp); sub lr, lr, reg(z) |
+|`arithmetic(eor)`|    11100111'010zxxxx: eor lr with cookie reg(z) (0=x28, 1=sp); eor lr, lr, reg(z) |
 |`arithmetic(rol)`|    11100111"0110xxxx： 模拟的 rol 的 cookie reg (x28); 与 lrxip0 = neg x28;ror lr xip0 |
-|`arithmetic(ror)`|    11100111"100zxxxx： 使用 cookie reg(z) ror lr (0 = x28，1 = sp);ror lr，lr，reg(z) |
-| |            11100111: xxxz---:-保留 |
+|`arithmetic(ror)`|    11100111'100zxxxx: ror lr with cookie reg(z) (0=x28, 1=sp); ror lr, lr, reg(z) |
+| |            11100111: xxxz----: ---- reserved |
 | |              11101xxx： 对于自定义堆栈情况下才会生成 asm 例程的保留 |
-| |              11101001: MSFT_OP_TRAP_FRAME 的自定义堆栈 |
-| |              11101010: MSFT_OP_MACHINE_FRAME 的自定义堆栈 |
-| |              11101011: MSFT_OP_CONTEXT 的自定义堆栈 |
+| |              11101001:自定义 MSFT_OP_TRAP_FRAME 堆栈 |
+| |              11101010:自定义 MSFT_OP_MACHINE_FRAME 堆栈 |
+| |              11101011:自定义 MSFT_OP_CONTEXT 堆栈 |
 | |              1111xxxx： 保留 |
 
 在具有涵盖多个字节的大值的说明，第一次存储最高有效位。 上面的展开代码经过专门设计，以便通过只需查找代码的第一个字节，就可以知道以字节为单位的展开代码的总大小。 考虑到每个展开代码完全映射到在 prolog/epilog 中的指令，来计算的大小 prolog 或 epilog 中，需要完成的是引导从序列的开始到结束时，使用查找表或类似的设备来确定多长时间 cor响应操作码。
@@ -334,7 +334,7 @@ ULONG ComputeXdataSize(PULONG *Xdata)
 
 具有已打包的.pdata 记录的格式展开数据如下所示：
 
-![.pdata 记录的已打包展开数据](../build/media/arm64-exception-handling-packed-unwind-data.png ".pdata 记录的已打包展开数据")
+![.pdata 记录的已打包展开数据](media/arm64-exception-handling-packed-unwind-data.png ".pdata 记录的已打包展开数据")
 
 字段是按如下所示：
 
@@ -357,30 +357,30 @@ ULONG ComputeXdataSize(PULONG *Xdata)
 
 属于类别 1、 2 （不带传出参数区域）、 3 和 4 上面部分中的规范 prolog 可以由已打包的展开格式表示。  Epilog 规范函数按照非常类似的形式，除非**H**不起作用，`set_fp`省略指令，和步骤，以及每个步骤中的说明的顺序反转在 epilog 中。 下表中详细介绍这些步骤为已打包的 xdata 的算法：
 
-步骤 0： 执行每个区域的大小预先计算。
+步骤 0:执行预先计算的每个区域的大小。
 
-步骤 1： 保存 Int 被调用方保存的寄存器。
+步骤 1：保存 Int 被调用方保存的寄存器。
 
-步骤 2： 此步骤是特定于类型 4 早期部分中。 lr 保存 Int 区域的末尾。
+步骤 2：此步骤是特定于类型 4 早期部分中。 lr 保存 Int 区域的末尾。
 
-步骤 3： 保存 FP 被调用方保存的寄存器。
+步骤 3：保存 FP 被调用方保存的寄存器。
 
-步骤 4： 将输入的参数保存在主参数区域。
+步骤 4：将输入的参数保存在主参数区域。
 
-步骤 5： 分配剩余堆栈，包括本地区域中， \<r29，lr > 对，并且传出参数区域。 5a 对应于规范类型 1。 图 5b 和 5 c 是规范类型 2。 5d 和 5e 针对这两个类型 3 且键入 4。
+步骤 5：分配剩余堆栈，包括本地区域中， \<r29，lr > 对，并且传出参数区域。 5a 对应于规范类型 1。 图 5b 和 5 c 是规范类型 2。 5d 和 5e 针对这两个类型 3 且键入 4。
 
 步骤 #|标志值|# of 说明|操作码|展开代码
 -|-|-|-|-
 0|||`#intsz = RegI * 8;`<br/>`if (CR==01) #intsz += 8; // lr`<br/>`#fpsz = RegF * 8;`<br/>`if(RegF) #fpsz += 8;`<br/>`#savsz=((#intsz+#fpsz+8*H)+0xf)&~0xf)`<br/>`#locsz = #famsz - #savsz`|
-1|0 < **regI** < = 10|RegI / 2 + **RegI** %2|`stp r19,r20,[sp,#savsz]!`<br/>`stp r21,r22,[sp,16]`<br/>`...`|`save_regp_x`<br/>`save_regp`<br/>`...`
-2|**CR**= = 01 *|1|`str lr,[sp, #intsz-8]`\*|`save_reg`
-3|0 < **RegF** < = 7|(RegF + 1）/2 +<br/>(RegF + 1) %2）。|`stp d8,d9,[sp, #intsz]`\*\*<br/>`stp d10,d11,[sp, #intsz+16]`<br/>`...`<br/>`str d(8+RegF),[sp, #intsz+#fpsz-8]`|`save_fregp`<br/>`...`<br/>`save_freg`
+1|0 < **RegI** <= 10|RegI / 2 + **RegI** %2|`stp r19,r20,[sp,#savsz]!`<br/>`stp r21,r22,[sp,16]`<br/>`...`|`save_regp_x`<br/>`save_regp`<br/>`...`
+2|**CR**==01*|1|`str lr,[sp, #intsz-8]`\*|`save_reg`
+3|0 < **RegF** <=7|(RegF + 1）/2 +<br/>(RegF + 1) %2）。|`stp d8,d9,[sp, #intsz]`\*\*<br/>`stp d10,d11,[sp, #intsz+16]`<br/>`...`<br/>`str d(8+RegF),[sp, #intsz+#fpsz-8]`|`save_fregp`<br/>`...`<br/>`save_freg`
 4|**H** = = 1|4|`stp r0,r1,[sp, #intsz+#fpsz]`<br/>`stp r2,r3,[sp, #intsz+#fpsz+16]`<br/>`stp r4,r5,[sp, #intsz+#fpsz+32]`<br/>`stp r6,r7,[sp, #intsz+#fpsz+48]`|`nop`<br/>`nop`<br/>`nop`<br/>`nop`
-5a|**CR** = = 11 & & #locsz<br/> < = 512|2|`stp r29,lr,[sp,-#locsz]!`<br/>`mov r29,sp`\*\*\*|`save_fplr_x`<br/>`set_fp`
-5b|**CR** = = 11 &AMP; &AMP;<br/>512 < #locsz < = 4088|3|`sub sp,sp, #locsz`<br/>`stp r29,lr,[sp,0]`<br/>`add r29, sp, 0`|`alloc_m`<br/>`save_fplr`<br/>`set_fp`
-5c|**CR** = = 11 & & #locsz > 4088|4|`sub sp,sp,4088`<br/>`sub sp,sp, (#locsz-4088)`<br/>`stp r29,lr,[sp,0]`<br/>`add r29, sp, 0`|`alloc_m`<br/>`alloc_s`/`alloc_m`<br/>`save_fplr`<br/>`set_fp`
-5d|(**CR** = = 00 \| \| **CR**= = 01) &AMP; &AMP;<br/>#locsz < = 4088|1|`sub sp,sp, #locsz`|`alloc_s`/`alloc_m`
-5e|(**CR** = = 00 \| \| **CR**= = 01) &AMP; &AMP;<br/>#locsz > 4088|2|`sub sp,sp,4088`<br/>`sub sp,sp, (#locsz-4088)`|`alloc_m`<br/>`alloc_s`/`alloc_m`
+5a|**CR** == 11 && #locsz<br/> <= 512|2|`stp r29,lr,[sp,-#locsz]!`<br/>`mov r29,sp`\*\*\*|`save_fplr_x`<br/>`set_fp`
+5b|**CR** = = 11 &AMP; &AMP;<br/>512 < #locsz <= 4088|3|`sub sp,sp, #locsz`<br/>`stp r29,lr,[sp,0]`<br/>`add r29, sp, 0`|`alloc_m`<br/>`save_fplr`<br/>`set_fp`
+5c|**CR** == 11 && #locsz > 4088|4|`sub sp,sp,4088`<br/>`sub sp,sp, (#locsz-4088)`<br/>`stp r29,lr,[sp,0]`<br/>`add r29, sp, 0`|`alloc_m`<br/>`alloc_s`/`alloc_m`<br/>`save_fplr`<br/>`set_fp`
+5d|(**CR** == 00 \|\| **CR**==01) &&<br/>#locsz <= 4088|1|`sub sp,sp, #locsz`|`alloc_s`/`alloc_m`
+5e|(**CR** == 00 \|\| **CR**==01) &&<br/>#locsz > 4088|2|`sub sp,sp,4088`<br/>`sub sp,sp, (#locsz-4088)`|`alloc_m`<br/>`alloc_s`/`alloc_m`
 
 \* 如果**CR** = = 01 和**RegI**数为奇数，步骤 2 和步骤 1 中的最后一个 save_rep 合并到一个 save_regp。
 
@@ -531,7 +531,7 @@ ULONG ComputeXdataSize(PULONG *Xdata)
 
 ## <a name="examples"></a>示例
 
-### <a name="example-1-frame-chained-compact-form"></a>示例 1： 链接框架，compact 的窗体
+### <a name="example-1-frame-chained-compact-form"></a>示例 1：链接框架，compact 窗体
 
 ```asm
 |Foo|     PROC
@@ -549,7 +549,7 @@ ULONG ComputeXdataSize(PULONG *Xdata)
     ;Flags[SingleProEpi] functionLength[492] RegF[0] RegI[1] H[0] frameChainReturn[Chained] frameSize[2080]
 ```
 
-### <a name="example-2-frame-chained-full-form-with-mirror-prolog--epilog"></a>示例 2： 帧的链接后，完整格式使用镜像 Prolog 和 Epilog
+### <a name="example-2-frame-chained-full-form-with-mirror-prolog--epilog"></a>示例 2：使用镜像 Prolog 和 Epilog 帧链连接的完整格式
 
 ```asm
 |Bar|     PROC
@@ -583,7 +583,7 @@ ULONG ComputeXdataSize(PULONG *Xdata)
 
 请注意，EpilogStart 索引 [0] 指向相同的序言展开代码序列。
 
-### <a name="example-3-variadic-unchained-function"></a>示例 3： 非链接可变参数函数
+### <a name="example-3-variadic-unchained-function"></a>示例 3：可变参数非链接函数
 
 ```asm
 |Delegate| PROC
@@ -622,9 +622,9 @@ ULONG ComputeXdataSize(PULONG *Xdata)
     ;end
 ```
 
-注意： EpilogStart 索引 [4] 指向序言展开代码 （部分重用展开数组） 的中间。
+注意:序言展开代码 （部分重用展开数组） 的中间点 EpilogStart 索引 [4]。
 
 ## <a name="see-also"></a>请参阅
 
 [ARM64 ABI 约定概述](arm64-windows-abi-conventions.md)<br/>
-[ARM 异常处理](../build/arm-exception-handling.md)
+[ARM 异常处理](arm-exception-handling.md)

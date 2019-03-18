@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -analyze compiler option [C++]
 - analyze compiler option [C++]
 ms.assetid: 81da536a-e030-4bd4-be18-383927597d08
-ms.openlocfilehash: 057fabe9612f84af07649d7a4f7bbf6d83e01f6c
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 63cfd2bd206a361301c75110a684e1d2c642a1f2
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57426207"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57819501"
 ---
 # <a name="analyze-code-analysis"></a>/analyze（代码分析）
 
@@ -32,7 +32,7 @@ ms.locfileid: "57426207"
 
 / 分析将分析中的默认模式。 分析输出转到**输出**等其他错误消息的窗口。 使用 **/analyze-** 来显式关闭分析。
 
-/analyze: WX 指定 **/analyze: WX-** 意味着代码分析警告不被视为错误使用编译时 **/WX**。 有关详细信息，请参阅 [/w, /W0, /W1, /W2, /W3, /W4, /w1, /w2, /w3, /w4, /Wall, /wd, /we, /wo, /Wv, /WX（警告级别）](../../build/reference/compiler-option-warning-level.md)。
+/analyze: WX 指定 **/analyze: WX-** 意味着代码分析警告不被视为错误使用编译时 **/WX**。 有关详细信息，请参阅 [/w, /W0, /W1, /W2, /W3, /W4, /w1, /w2, /w3, /w4, /Wall, /wd, /we, /wo, /Wv, /WX（警告级别）](compiler-option-warning-level.md)。
 
 /analyze: log`filename`详细的分析器结果将以 XML 形式写入到由指定的文件`filename`。
 
@@ -79,7 +79,7 @@ set Esp.Extensions=CppCoreCheck.dll
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[Visual Studio 中的设置 c + + 编译器和生成属性](../working-with-project-properties.md)。
 
 1. 展开“配置属性”节点。
 
@@ -95,5 +95,5 @@ set Esp.Extensions=CppCoreCheck.dll
 
 ## <a name="see-also"></a>请参阅
 
-- [编译器选项](../../build/reference/compiler-options.md)
-- [设置编译器选项](../../build/reference/setting-compiler-options.md)
+- [MSVC 编译器选项](compiler-options.md)
+- [MSVC 编译器命令行语法](compiler-command-line-syntax.md)

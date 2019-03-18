@@ -30,7 +30,6 @@ f1_keywords:
 - C4455
 - C4456
 - C4457
-- C4458
 - C4459
 - C4472
 - C4474
@@ -99,7 +98,6 @@ helpviewer_keywords:
 - C4455
 - C4456
 - C4457
-- C4458
 - C4459
 - C4472
 - C4474
@@ -140,12 +138,12 @@ helpviewer_keywords:
 - C4594
 - C4595
 ms.assetid: b07850a5-ae89-48ea-bf9a-f0e30939f9b9
-ms.openlocfilehash: 14195271fa0e5e399b801fd36803db4731e690f9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 990560e2c05f66a010382f736735c19c17d4dc28
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50491290"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816615"
 ---
 # <a name="compiler-warnings-c4400-through-c4599"></a>编译器警告 C4400-C4599
 
@@ -173,7 +171,7 @@ ms.locfileid: "50491290"
 |[编译器警告（等级 2）C4412](../../error-messages/compiler-warnings/compiler-warning-level-2-c4412.md)|'*函数*： 函数签名包含类型*类型*';C + + 对象是不安全纯代码之间传递与混合或本机。|
 |编译器警告 C4413|classname::member： 引用成员被初始化为构造函数退出后不会持久保存临时|
 |[编译器警告（等级 3）C4414](../../error-messages/compiler-warnings/compiler-warning-level-3-c4414.md)|'*函数*： 短跳转到函数转换为附近|
-|编译器警告 （等级 1） C4415|重复 __declspec (code_seg ('*名称*'))|
+|编译器警告 （等级 1） C4415|duplicate __declspec(code_seg('*name*'))|
 |编译器警告 （等级 1） C4416|__declspec(code_seg(...)) 包含空字符串： 忽略|
 |编译器警告 （等级 1） C4417|显式模板实例化不能具有 __declspec(code_seg(...))： 忽略|
 |编译器警告 （等级 1） C4418|在枚举上忽略 __declspec(code_seg(...))|
@@ -186,10 +184,10 @@ ms.locfileid: "50491290"
 |编译器警告 （等级 1） C4426|优化标志发生更改后包括标头，可能是由于 #pragma optimize （） 超出|
 |编译器警告 （等级 1） C4427|'*运算符*： 除数，未定义的行为发生溢出|
 |[编译器警告（等级 4）C4429](../../error-messages/compiler-warnings/compiler-warning-level-4-c4429.md)|可能不完整或格式不正确通用字符名称|
-|[编译器警告 （错误） C4430](../../error-messages/compiler-warnings/compiler-warning-c4430.md)|缺少类型说明符 - 假定为 int。 注意： c + + 不支持默认 int|
-|[编译器警告（等级 4）C4431](../../error-messages/compiler-warnings/compiler-warning-level-4-c4431.md)|缺少类型说明符 - 假定为 int。 注意: C 不再支持默认的 int|
+|[编译器警告 （错误） C4430](../../error-messages/compiler-warnings/compiler-warning-c4430.md)|缺少类型说明符 - 假定为 int。 注意:C + + 不支持默认 int|
+|[编译器警告（等级 4）C4431](../../error-messages/compiler-warnings/compiler-warning-level-4-c4431.md)|缺少类型说明符 - 假定为 int。 注意:C 不再支持默认 int|
 |[编译器警告（等级 4）C4434](../../error-messages/compiler-warnings/compiler-warning-level-4-c4434.md)|静态构造函数必须具有私有可访问性;更改为专用访问|
-|[编译器警告（等级 4）C4435](../../error-messages/compiler-warnings/compiler-warning-level-4-c4435.md)|'*derived_class*': / vd2 下的对象布局将因虚拟基而更改*base_class*|
+|[编译器警告（等级 4）C4435](../../error-messages/compiler-warnings/compiler-warning-level-4-c4435.md)|'*derived_class*:/ Vd2 下的对象布局将因虚拟基而更改*base_class*|
 |[编译器警告（等级 1）C4436](../../error-messages/compiler-warnings/compiler-warning-level-1-c4436.md)|动态\_从虚拟基的强制转换*base_class*到*derived_class*构造函数或析构函数可能会失败的部分构造的对象|
 |[编译器警告（等级 4）C4437](../../error-messages/compiler-warnings/compiler-warning-level-4-c4437.md)|动态\_从虚拟基的强制转换*base_class*到*derived_class*在某些上下文中可能会失败|
 |编译器警告 C4438|'*函数*： 不能安全地调用 /await: clrcompat 模式。 如果 '*函数*调入 CLR 则可能会导致 CLR 头损坏|
@@ -205,9 +203,9 @@ ms.locfileid: "50491290"
 |编译器警告 C4448|'*类型*1 不具有元数据中指定的默认接口。 选择:*type2*，这可能会在运行时失败。|
 |编译器警告 C4449|'*类型*非密封的类型应标记为 [WebHostHidden]|
 |编译器警告 C4450|'*type1*应将标记为 [WebHostHidden] 因为它派生'*type2*|
-|编译器警告 （等级 C4451|classname1::member: ref 类 classname2::member 在此上下文的使用情况可能会导致无效的封送处理对象跨上下文|
+|编译器警告 （等级 C4451|classname1::member:使用 ref 类 classname2::member 在此上下文可能会导致无效的封送处理对象跨上下文|
 |编译器警告 （等级 1） C4452|'*标识符*： 公共类型不能在全局范围内。 它必须是输出.winmd 文件的名称的子级的命名空间中。|
-|编译器警告 （等级 1） C4453|'*类型*： 不应使用不是公共类型的发布接口上的 [WebHostHidden] 类型 [WebHostHidden]|
+|编译器警告 （等级 1） C4453|'*类型*:不应使用不是公共类型的发布接口上的 [WebHostHidden] 类型 [WebHostHidden]|
 |编译器警告 （等级 1） C4454|'*函数*[defaultoverload] 指定重载的多个输入参数的数目。 选取*声明*为默认重载|
 |编译器警告 （等级 1） C4455|运算符*运算符*： 保留不以下划线开头的文本后缀标识符|
 |[编译器警告（等级 4）C4456](compiler-warning-level-4-c4456.md)|声明*标识符*隐藏上一个本地声明|
@@ -242,7 +240,7 @@ ms.locfileid: "50491290"
 |编译器警告 （等级 1） C4491|'*名称*： 具有非法的 IDL 版本格式|
 |编译器警告 （等级 1，错误） C4492|'*function1*： 匹配 ref 基类方法*function2*，但未标记为 override|
 |编译器警告 （等级 3，错误） C4493|删除表达式不起作用的析构函数作为 '*类型*没有 'public' 可访问性|
-|编译器警告 （等级 1） C4494|'*函数*： 忽略 __declspec （allocator），因为该函数返回类型不是指针或引用|
+|编译器警告 （等级 1） C4494|'*函数*:忽略 __declspec （allocator），因为该函数返回类型不是指针或引用|
 |编译器警告 C4495|使用了非标准扩展 __super： 替换为显示基类名|
 |编译器警告 C4496|使用非标准扩展 for each： 替换为 ranged-for 语句|
 |编译器警告 C4497|sealed 使用了非标准扩展： 替换为最终|
@@ -306,7 +304,7 @@ ms.locfileid: "50491290"
 |编译器警告 （等级 3） C4569|'*函数*： 没有成员的显式重写签名匹配|
 |[编译器警告（等级 3）C4570](../../error-messages/compiler-warnings/compiler-warning-level-3-c4570.md)|'*类型*： 没有显式声明为抽象的但具有抽象函数|
 |[编译器警告（等级 4）C4571](../../error-messages/compiler-warnings/compiler-warning-level-4-c4571.md)|Visual c + + 7.1; 之后更改的信息： 自语义不再捕获结构化的异常 (SEH)|
-|[编译器警告（等级 1）C4572](../../error-messages/compiler-warnings/compiler-warning-level-1-c4572.md)|在 /clr 下的 [ParamArray] 特性不推荐使用，请使用...改为|
+|[编译器警告（等级 1）C4572](../../error-messages/compiler-warnings/compiler-warning-level-1-c4572.md)|[ParamArray] 特性已弃用，使用在 /clr 下...改为|
 |编译器警告 （等级 1） C4573|使用情况*lambda 函数*要求编译器捕获 this，但当前默认捕获模式不允许|
 |编译器警告 （等级 C4574|'*标识符*被定义为"0： 您是否希望使用 #if identifier？|
 |编译器警告 （等级 1） C4575|__vectorcall 与不兼容 / clr 选项： 将转换为 __stdcall|
@@ -318,8 +316,8 @@ ms.locfileid: "50491290"
 |编译器警告 （等级 C4582|'*类型*： 构造函数未隐式调用|
 |编译器警告 （等级 C4583|'*类型*： 析构函数未隐式调用|
 |[编译器警告（等级 1）C4584](../../error-messages/compiler-warnings/compiler-warning-level-1-c4584.md)|'*class1*： 基类'*class2*'已是基类的*class3 移*|
-|编译器警告 （等级 1，错误） C4585|'*类*: WinRT public ref class 必须密封的或派生自的现有未密封的类|
-|编译器警告 （等级 1，错误） C4586|'*类型*： 不能在名为 Windows 的顶级命名空间中声明为公共类型|
+|编译器警告 （等级 1，错误） C4585|'*类*:WinRT public ref class 必须密封的或从现有未密封类派生|
+|编译器警告 （等级 1，错误） C4586|'*类型*:在名为 Windows 的顶级命名空间中不能声明为公共类型|
 |编译器警告 （等级 1） C4587|'*anonymous_structure*： 行为更改： 不再隐式调用构造函数|
 |编译器警告 （等级 1） C4588|'*anonymous_structure*： 行为更改： 不再隐式调用析构函数|
 |编译器警告 （等级 1） C4591|constexpr 调用深度限制*数量*超出 (/ constexpr:depth\<数 >)|

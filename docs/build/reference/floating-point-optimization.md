@@ -1,13 +1,13 @@
 ---
-title: Microsoft Visual 的 c + + 浮点优化
+title: MSVC 浮点优化
 ms.date: 03/09/2018
 ms.topic: conceptual
-ms.openlocfilehash: 6e297cebb4982b293e86885815436c4120d903cd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 78c5c310f2f348b5cfa5a92feb65e265d28560d9
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50504294"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814366"
 ---
 # <a name="microsoft-visual-c-floating-point-optimization"></a>Microsoft Visual c + + 浮点优化
 
@@ -36,11 +36,11 @@ float KahanSum( const float A[], int n )
 
 一个简单的 c + + 编译器可能认为浮点算术，遵循相同的代数实数算术规则。 此类编译器可能然后会错误地认为
 
-> C = T 和-Y = = > （总和 + Y） 的总和-Y = = > 0;
+> C = T - sum - Y ==> (sum+Y)-sum-Y ==> 0;
 
 即，C 感知的值始终是常数零。 如果此常数值然后传播到后续的表达式，则循环主体减少到简单求和。 准确地说，是
 
-> Y = [i]-C = = > Y = [i]<br/>T = sum + Y = = > T = sum + [i]<br/>sum = T = = > sum = sum + [i]
+> Y = A[i] - C ==> Y = A[i]<br/>T = sum + Y ==> T = sum + A[i]<br/>sum = T ==> sum = sum + A[i]
 
 因此，对简单编译器的逻辑转换`KahanSum`函数将是：
 
@@ -361,7 +361,7 @@ double a, b;
 a = b*tmp0;
 ```
 
-这是安全的转换，因为优化器可以在编译时确定 x / 4.0 = = x*(1/4.0) 所有的 x，其中包括无穷大和 NaN 的浮点值。 通过使用乘法取代除法运算，编译器可以节省一些循环 — 尤其是在 FPUs 不直接实现部门，但需要编译器生成的倒数近似值组合并乘加上有关说明。 编译器可能会执行下 fp 这样的优化： 精确仅当替换乘法产生完全相同的结果，作为该除法运算。 编译器还可以执行简单转换下 fp： 精确，提供的结果是相同的。 这些方法包括：
+这是安全的转换，因为优化器可以在编译时确定 x / 4.0 = = x*(1/4.0) 所有的 x，其中包括无穷大和 NaN 的浮点值。 通过使用乘法取代除法运算，编译器可以节省一些循环 — 尤其是在 FPUs 不直接实现部门，但需要编译器生成的倒数近似值组合并乘加上有关说明。 编译器可能会执行下 fp 这样的优化： 精确仅当替换乘法产生完全相同的结果，作为该除法运算。 编译器还可以执行简单转换下 fp： 精确，提供的结果是相同的。 这些问题包括：
 
 |窗体|描述
 |-|-|
@@ -952,11 +952,11 @@ d = t + c;           // won't be contracted because of rounding of a*b
 ||||||
 |-|-|-|-|-|
 ||float_control(precise)|float_control(except)|fp_contract|fenv_access|
-|/fp: strict|on|on|关闭|on|
-|/fp: strict /fp： 除-|on|关闭|关闭|on|
-|/fp： 精确|on|关闭|on|关闭|
-|/fp: precise /fp： 除外|on|on|on|关闭|
-|/fp: fast|关闭|关闭|on|关闭|
+|/fp:strict|on|on|关闭|on|
+|/fp:strict /fp:except-|on|关闭|关闭|on|
+|/fp:precise|on|关闭|on|关闭|
+|/fp:precise /fp:except|on|on|on|关闭|
+|/fp:fast|关闭|关闭|on|关闭|
 
 例如，以下显式启用 /fp: fast 语义。
 
@@ -1088,4 +1088,4 @@ catch(float_exception)
 
 ## <a name="see-also"></a>请参阅
 
-[优化代码](optimizing-your-code.md)<br/>
+[优化代码](../optimizing-your-code.md)<br/>

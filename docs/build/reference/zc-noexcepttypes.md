@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Zc:noexceptTypes
 - -Zc:noexceptTypes
 ms.assetid: 1cbf7e3c-0f82-4f91-84dd-612bcf26d2c6
-ms.openlocfilehash: f5f2fa3ef85e7ff15b28188e45a4ec397878873c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 28e06f54049d36262134b6be7eadb0e6e5349a45
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462226"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812104"
 ---
 # <a name="zcnoexcepttypes-c17-noexcept-rules"></a>/Zc:noexceptTypes （c + + 17 noexcept 规则）
 
@@ -73,7 +73,7 @@ struct B : A
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[Visual Studio 中的设置 c + + 编译器和生成属性](../working-with-project-properties.md)。
 
 1. 选择**配置属性** > **C/c + +** > **命令行**属性页。
 
@@ -81,6 +81,6 @@ struct B : A
 
 ## <a name="see-also"></a>请参阅
 
-[/Zc（一致性）](../../build/reference/zc-conformance.md)<br/>
+[/Zc（一致性）](zc-conformance.md)<br/>
 [noexcept](../../cpp/noexcept-cpp.md)<br/>
 [异常规范 (throw)](../../cpp/exception-specifications-throw-cpp.md)

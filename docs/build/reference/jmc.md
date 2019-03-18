@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -JMC compiler option [C++]
 - User code, debugging
 - JMC compiler option [C++]
-ms.openlocfilehash: d1950ff4a973ddbd23ff902ba4afb0d45dacb0e5
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: c107ad7107d2a65ed19719933aa127c0557916ce
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57417757"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57808048"
 ---
 # <a name="jmc-just-my-code-debugging"></a>/ JMC （仅我的代码调试）
 
@@ -36,7 +36,7 @@ Visual Studio[仅我的代码](/visualstudio/debugger/just-my-code)设置指定�
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[Visual Studio 中的设置 c + + 编译器和生成属性](../working-with-project-properties.md)。
 
 1. 选择**配置属性** > **C/c + +** > **常规**属性页。
 
@@ -48,5 +48,5 @@ Visual Studio[仅我的代码](/visualstudio/debugger/just-my-code)设置指定�
 
 ## <a name="see-also"></a>请参阅
 
-[编译器选项](../../build/reference/compiler-options.md)<br/>
-[设置编译器选项](../../build/reference/setting-compiler-options.md)<br/>
+[MSVC 编译器选项](compiler-options.md)<br/>
+[MSVC 编译器命令行语法](compiler-command-line-syntax.md)<br/>

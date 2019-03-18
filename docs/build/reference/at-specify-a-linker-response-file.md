@@ -10,12 +10,12 @@ helpviewer_keywords:
 - '@ linker option'
 - response files, C/C++ linker
 ms.assetid: 5530014f-17d0-4f6b-a6b0-a6ba34f34cfd
-ms.openlocfilehash: 32c100a5b7388c71081c46200ec8aea047ccf0d4
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 9e595857a6089c59aa6638ed51acacae3a0eb5e9
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57412466"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816498"
 ---
 # <a name="-specify-a-linker-response-file"></a>@（指定链接器响应文件）
 
@@ -32,7 +32,7 @@ ms.locfileid: "57412466"
 
 ## <a name="remarks"></a>备注
 
-请参阅[@ （指定编译器响应文件）](../../build/reference/at-specify-a-compiler-response-file.md)有关详细信息。
+请参阅[@ （指定编译器响应文件）](at-specify-a-compiler-response-file.md)有关详细信息。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此链接器选项
 
@@ -44,5 +44,5 @@ ms.locfileid: "57412466"
 
 ## <a name="see-also"></a>请参阅
 
-[设置链接器选项](../../build/reference/setting-linker-options.md)<br/>
-[链接器选项](../../build/reference/linker-options.md)
+[MSVC 链接器引用](linking.md)<br/>
+[MSVC 链接器选项](linker-options.md)

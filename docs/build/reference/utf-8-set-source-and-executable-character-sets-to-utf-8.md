@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - /utf-8 compiler option
 ms.assetid: f0e1f3cb-6cae-46eb-9483-04ed13d9b504
-ms.openlocfilehash: cb683e9baddea455b72bb823676ba1e6adabfd4c
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 5ac15c63041e76b8bb0d292868bb982c21866078
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57421553"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812286"
 ---
 # <a name="utf-8-set-source-and-executable-character-sets-to-utf-8"></a>/utf-8 （设置源和可执行字符集设置为 utf-8）
 
@@ -31,7 +31,7 @@ ms.locfileid: "57421553"
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
-1. 打开项目“属性页”  对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。
+1. 打开项目“属性页”  对话框。 有关详细信息，请参阅[Visual Studio 中的设置 c + + 编译器和生成属性](../working-with-project-properties.md)。
 
 1. 展开**配置属性**， **C/c + +**，**命令行**文件夹。
 
@@ -41,8 +41,8 @@ ms.locfileid: "57421553"
 
 ## <a name="see-also"></a>请参阅
 
-[编译器选项](../../build/reference/compiler-options.md)<br/>
-[设置编译器选项](../../build/reference/setting-compiler-options.md)<br/>
-[/execution-charset （设置执行字符集）](../../build/reference/execution-charset-set-execution-character-set.md)<br/>
-[/source-charset（设置源字符集）](../../build/reference/source-charset-set-source-character-set.md)<br/>
-[/validate-charset（验证兼容的字符）](../../build/reference/validate-charset-validate-for-compatible-characters.md)
+[MSVC 编译器选项](compiler-options.md)<br/>
+[MSVC 编译器命令行语法](compiler-command-line-syntax.md)<br/>
+[/execution-charset （设置执行字符集）](execution-charset-set-execution-character-set.md)<br/>
+[/source-charset（设置源字符集）](source-charset-set-source-character-set.md)<br/>
+[/validate-charset（验证兼容的字符）](validate-charset-validate-for-compatible-characters.md)

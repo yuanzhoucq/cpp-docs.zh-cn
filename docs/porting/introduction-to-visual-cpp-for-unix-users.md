@@ -4,12 +4,12 @@ ms.date: 09/01/2017
 helpviewer_keywords:
 - UNIX [C++]
 ms.assetid: 36108b31-e7fa-49a8-a1f7-7077fcbec873
-ms.openlocfilehash: e930702862149de4dae65aab2f880f35850e0687
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6522461cf1f08eee9187a8f739cb21fe01e755f5
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50597543"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747003"
 ---
 # <a name="introduction-to-visual-c-for-unix-users"></a>Visual C++ 简介（针对 UNIX 用户）
 
@@ -19,7 +19,7 @@ ms.locfileid: "50597543"
 
 可按使用 UNIX 命令行环境的相似方式来使用命令行中的 C++ 编译器。 使用命令行 C 和 C++ 编译器 (CL.EXE)、链接器 (LINK.EXE) 以及包括 NMAKE.EXE（Microsoft 版 UNIX make 实用工具）在内的其他工具，从命令提示符进行编译。
 
-在 UNIX 中，命令安装在常用文件夹中，例如 /usr/bin。 在 Visual Studio 中，命令行工具安装在 VC\bin 子目录及其子目录的 Visual Studio 安装目录中。 不同于 UNIX，这些工具在纯命令提示符窗口中不可用。 要使用命令行工具，请使用开发者命令提示符快捷方式，或者运行 vcvarsall.bat 等开发者命令文件。 此操作设置路径和从命令行编译 C++ 程序所必需的其他环境变量。 有关详细信息，请参阅[在命令行上生成 C/C++ 代码](../build/building-on-the-command-line.md)和[演练：在命令行上编译本机 C++ 程序](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)。
+在 UNIX 中，命令安装在常用文件夹中，例如 /usr/bin。 在 Visual Studio 中，命令行工具安装在 VC\bin 子目录及其子目录的 Visual Studio 安装目录中。 不同于 UNIX，这些工具在纯命令提示符窗口中不可用。 要使用命令行工具，请使用开发者命令提示符快捷方式，或者运行 vcvarsall.bat 等开发者命令文件。 此操作设置路径和从命令行编译 C++ 程序所必需的其他环境变量。 有关详细信息，请参阅[在命令行上生成 C/C++ 代码](../build/building-on-the-command-line.md)以及[演练：在命令行上编译本机 C++ 程序](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)。
 
 要打开开发者命令提示符快捷方式，请在桌面搜索控件中输入“开发者命令提示符”，然后选择适用于你的 Visual Studio 版本的“开发者命令提示符”结果。 要选择为特定主机和目标体系结构预配置的开发者命令提示符，请打开“开始”菜单（桌面一角的 Windows 图标），然后滚动到你的 Visual Studio 版本的文件夹，例如“Visual Studio 2017”。 打开文件夹，选择首选主机和目标体系结构的命令提示符快捷方式。
 
@@ -37,7 +37,7 @@ ms.locfileid: "50597543"
 
 ## <a name="importing-your-existing-code"></a>导入现有代码
 
-可使用 C++ 编译器生成现有代码（无论代码是设置为使用生成文件进行编译还是不用此文件），再将其放入 Visual Studio 项目。 有关详细信息，请参阅[如何：通过现有代码创建 C++ 项目](../ide/how-to-create-a-cpp-project-from-existing-code.md)。
+可使用 C++ 编译器生成现有代码（无论代码是设置为使用生成文件进行编译还是不用此文件），再将其放入 Visual Studio 项目。 有关详细信息，请参阅[如何：根据现有代码创建 C++ 项目](../ide/how-to-create-a-cpp-project-from-existing-code.md)。
 
 ## <a name="creating-a-new-project"></a>创建新项目
 

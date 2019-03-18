@@ -8,12 +8,12 @@ f1_keywords:
 - VC.Project.VCXDCMakeTool.UseUnicodeResponseFiles
 helpviewer_keywords:
 - Unicode, Visual C++
-ms.openlocfilehash: cb21165e51960c0ca2f728381413c1a7260c9f83
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 71458ab345670c0a5715576a7da80c4e6ff2955b
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50494973"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807495"
 ---
 # <a name="unicode-support-in-the-compiler-and-linker"></a>编译器和链接器中的 Unicode 支持
 
@@ -45,8 +45,8 @@ Unicode 可以输入到源代码文件中的以下编码：
 
 ## <a name="asm-and-cod-dumps"></a>.asm 和.cod 转储
 
-.asm 和.cod 转储为 ANSI 默认情况下，以便兼容 MASM。 使用[/fau 则](../../build/reference/fa-fa-listing-file.md)输出 utf-8。 请注意，如果您指定 **/FAs**，混合的源只直接输出和可能看起来出现乱码，例如，如果源代码为 utf-8 并且未指定 **/fasu 时**。
+.asm 和.cod 转储为 ANSI 默认情况下，以便兼容 MASM。 使用[/fau 则](fa-fa-listing-file.md)输出 utf-8。 请注意，如果您指定 **/FAs**，混合的源只直接输出和可能看起来出现乱码，例如，如果源代码为 utf-8 并且未指定 **/fasu 时**。
 
 ## <a name="see-also"></a>请参阅
 
-[在命令行上生成 C/C++ 代码](../../build/building-on-the-command-line.md)
+[使用命令行中的 MSVC 工具集](../building-on-the-command-line.md)

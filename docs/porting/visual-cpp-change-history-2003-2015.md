@@ -4,12 +4,12 @@ ms.date: 08/30/2017
 helpviewer_keywords:
 - breaking changes [C++]
 ms.assetid: b38385a9-a483-4de9-99a6-797488bc5110
-ms.openlocfilehash: b1070a330e40c0bf73f3713783b3f126d0848cbc
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: dcae15ade3bd155e16149cc56981f79abb245e16
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525517"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740384"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Visual C++ 更改历史记录（2003 - 2015）
 
@@ -143,9 +143,9 @@ ms.locfileid: "51525517"
 
   - 静默 NaN：1.#QNAN
 
-  - 信号 NaN：1.#SNAN
+  - 信令 NaN：1.#SNAN
 
-  - 无穷大 NaN：1.#IND
+  - 不定 NaN：1.#IND
 
   这些字符串的任何一种都可能已采用符号作为前缀并且格式设置也可能略有不同，具体取决于字段宽度和精度（有时会起到不寻常的作用，例如，`printf("%.2f\n", INFINITY)` 可以打印 1.#J，因为 #INF 会“四舍五入”为 2 位数的精度）。 C99 引入了有关如何设置无穷大和 NaN 格式的新要求。 现在，MSVC 实现符合这些要求。 新字符串如下所示：
 
@@ -289,7 +289,7 @@ ms.locfileid: "51525517"
 
 - **asctime**
 
-   在早期版本中，[asctime](../c-runtime-library/reference/asctime-wasctime.md) 函数会以前导零填充单位数的日期（例如：Fri Jun 06 08:00:00 2014）。 规范要求此类日期应以前导空格填充，例如 Fri Jun  6 08:00:00 2014。 已解决此问题。
+   在早期版本中，[asctime](../c-runtime-library/reference/asctime-wasctime.md) 函数会以前导零填充单位数的日期，例如：Fri Jun 06 08:00:00 2014。 规范要求此类日期应以前导空格填充，例如 Fri Jun  6 08:00:00 2014。 已解决此问题。
 
 - strftime 和 wcsftime
 
@@ -1047,7 +1047,7 @@ ms.locfileid: "51525517"
 
 - **对重载函数的调用不明确**
 
-   下面的代码现在生成错误 C266："N::bind":对重载函数的调用不明确
+   下面的代码现在生成错误 C266：“N::bind”: 对重载函数的调用不明确
 
     ```cpp
     template<typename R, typename T, typename T1, typename A1>
@@ -1190,7 +1190,7 @@ ms.locfileid: "51525517"
 
 - **值无法捕获 MFC 异常，因为此类异常无法复制**
 
-   MFC 应用程序中的以下代码现在生成错误 C2316："D":无法被捕获，因为析构函数和/或复制构造函数不可访问或已遭删除
+   MFC 应用程序中的下列代码现在会造成错误 C2316：“D”: 无法作为析构函数捕获，或者复制构造函数不可访问或已删除，或同时出现这两种情况
 
     ```cpp
     struct B {
@@ -1336,7 +1336,7 @@ ms.locfileid: "51525517"
 
 - **修复非静态数据成员初始化 (NSDMI) 中的无效复制初始化**
 
-   下面的代码现在生成错误 C2664："S1::S1(S1 &&)":无法将自变量 1 从 "bool" 转换成 "const S1 &"。
+   下面的代码现在生成错误 C2664：“S1::S1(S1 &&)”: 无法将自变量 1 从 “bool” 转换为 “const S1 &”:
 
     ```cpp
     struct S1 {
@@ -1358,7 +1358,7 @@ ms.locfileid: "51525517"
 
 - **访问 decltype 语句内部的构造函数**
 
-   下面的代码现在生成错误 C2248："S::S":无法访问类 "S" 中声明的私有成员。
+   下面的代码现在会生成错误 C2248：“S::S”: 无法访问类 “S” 中声明的私有成员：
 
     ```cpp
     class S {
@@ -1480,7 +1480,7 @@ ms.locfileid: "51525517"
 
 - **无法在派生构造函数的主体中调用受保护的基构造函数。**
 
-   下面的代码现在生成错误 C2248："S1::S1":无法访问类 "S1" 中声明的受保护成员
+   下面的代码现在会生成错误 C2248：“S1::S1”: 无法访问类 “S1” 中受保护的成员
 
     ```cpp
     struct S1 {
@@ -1838,7 +1838,7 @@ ms.locfileid: "51525517"
     error C2668: 'function' : ambiguous call to overloaded function.
     ```
 
-   示例 1： 对重载函数的调用不明确（之前）
+   示例 1：对重载函数的调用不明确（之前）
 
     ```cpp
     // In previous versions of the compiler, code written in this way would unambiguously call f(int, Args...)
@@ -2899,7 +2899,7 @@ ms.locfileid: "51525517"
     };
     ```
 
-   在 Visual Studio 2013 之前，此代码输出以下消息：“警告 C4370: 'S2' : 为了更好地封装，类的布局与早期版本的编译器已有所不同”。
+   在 Visual Studio 2013 之前，此代码输出以下消息：“警告 C4370: “S2”: 为了更好地封装，类的布局与早期版本的编译器已有所不同”。
 
    在所有版本的编译器中，x86 编译器具有相同的次优布局问题。 例如，如果为 x86 编译以下代码：
 
@@ -2911,7 +2911,8 @@ ms.locfileid: "51525517"
     };
     ```
 
-   `sizeof(S)` 的结果为 24。 但是，如果使用刚才提到的 x64 变通方案，则此结果可以减少到 16：
+   
+  `sizeof(S)` 的结果为 24。 但是，如果使用刚才提到的 x64 变通方案，则此结果可以减少到 16：
 
     ```cpp
     struct dummy {
@@ -2963,7 +2964,7 @@ Visual Studio 2013 中的 C++ 编译器可以检测到 _ITERATOR_DEBUG_LEVEL 中
 
 ### <a name="mfc-and-atl"></a>MFC 和 ATL
 
-- **仅 Visual Studio 2013**：Visual Studio 中不再包括 MFC MBCS 库，因为 Unicode 很受欢迎，大大减少了 MBCS 的使用。 此更改也使 MFC 与 Windows SDK 本身更加紧密联合在一起，因为许多新控件和消息都仅支持 Unicode。 但是，如果必须继续使用 MFC MBCS 库，可以从 MSDN 下载中心下载，下载位置：[适用于 Visual Studio 2013 的多字节 MFC 库](https://www.microsoft.com/download/details.aspx?id=40770)（Multibyte MFC Library for Visual Studio 2013）。 Visual C++ 可再发行组件包仍包含此库。  （请注意：Visual Studio 2015 及更高版本的 C++ 安装组件中包含 MBCS DLL）。
+- **仅 Visual Studio 2013**：Visual Studio 中不包括 MFC MBCS 库，因为 Unicode 很受欢迎，大大减少了 MBCS 的使用。 此更改也使 MFC 与 Windows SDK 本身更加紧密联合在一起，因为许多新控件和消息都仅支持 Unicode。 但是，如果必须继续使用 MFC MBCS 库，可以从 MSDN 下载中心下载，下载位置：[适用于 Visual Studio 2013 的多字节 MFC 库](https://www.microsoft.com/download/details.aspx?id=40770)（Multibyte MFC Library for Visual Studio 2013）。 Visual C++ 可再发行组件包仍包含此库。  （注意：Visual Studio 2015 及更高版本的 C++ 安装组件中包含 MBCS DLL）。
 
 - MFC 功能区的辅助功能已更改。  现在显示的是分层体系结构，而不是一级体系结构。 通过调用 `CRibbonBar::EnableSingleLevelAccessibilityMode()` 可继续使用旧有行为。
 
@@ -3043,7 +3044,7 @@ Visual Studio 2013 中的 C++ 编译器可以检测到 _ITERATOR_DEBUG_LEVEL 中
 
 - 根据 C++98/03 和 C++11 标准之间的重大更改，在 Visual Studio 2012 的 Visual C++ 中，使用显式模板参数调用 `make_pair()`（正如在 `make_pair<int, int>(x, y)` 中那样）通常不编译。 相关解决方案是始终调用没有显式模板参数的 `make_pair() `，正如在 `make_pair(x, y)` 中那样。 提供显式模板参数会破坏函数的作用。 如果需要精确控制结果类型，请使用 `pair` 而不是 `make_pair` - 正如在 `pair<short, short>(int1, int2)` 中那样。
 
-- C++98/03 和 C++11 标准之间的另一重大更改是：如果 A 可隐式转换为 B，B 可隐式转换为 C，但 A 不能隐式转换为 C，则 C++98/03 和 Visual C++ 2010 允许 `pair<A, X>`（隐式或显式）转换为 `pair<C, X>`。 （此处不关注另一种类型 X，这不针对此对中的第一种类型。）由于 C++11 和 Visual Studio 2012 中的 C++ 编译器检测到 A 不能隐式转换为 C，所以从重载解析中删除了对转换。 这对许多方案来说是有益的更改。 例如，重载 `func(const pair<int, int>&)` 和 `func(const pair<string, string>&)`，并使用 `pair<const char *, const char *>` 调用 `func()`，将使用此更改进行编译。 但是，此更改会中断依赖主动对转换的代码。 通常可以通过显式执行部分转换来修复这些代码，例如，将 `make_pair(static_cast<B>(a), x)` 传递给需要 `pair<C, X>` 的函数。
+- C++98/03 和 C++11 标准之间的另一重大更改：如果 A 可隐式转换为 B，B 可隐式转换为 C，但 A 不能隐式转换为 C，则 C++98/03 和 Visual C++ 2010 允许 `pair<A, X>`（隐式或显式）转换为 `pair<C, X>`。 （此处不关注另一种类型 X，这不针对此对中的第一种类型。）由于 C++11 和 Visual Studio 2012 中的 C++ 编译器检测到 A 不能隐式转换为 C，所以从重载解析中删除了对转换。 这对许多方案来说是有益的更改。 例如，重载 `func(const pair<int, int>&)` 和 `func(const pair<string, string>&)`，并使用 `pair<const char *, const char *>` 调用 `func()`，将使用此更改进行编译。 但是，此更改会中断依赖主动对转换的代码。 通常可以通过显式执行部分转换来修复这些代码，例如，将 `make_pair(static_cast<B>(a), x)` 传递给需要 `pair<C, X>` 的函数。
 
 - Visual C++ 2010 模拟可变参数模板（如 `make_shared<T>(arg1, arg2, argN)`）通过使用预处理器机制杜绝重载和专用化，将参数个数限制为最多 10 个。 在 Visual Studio 2012 中，此限制减少到 5 个参数，以减少大多数用户的编译时间和编译器内存消耗。 但是，可以通过在项目范围内将 _VARIADIC_MAX 显式定义为 10 来设置之前的限制。
 
@@ -3413,13 +3414,13 @@ Visual Studio 2013 中的 C++ 编译器可以检测到 _ITERATOR_DEBUG_LEVEL 中
 
 - `CFileDialog` 类：`CFileDialog` 类的自定义模板无法自动移植到 Windows Vista。 该模板仍然可用，但将不具有 Windows Vista 样式对话框的其他功能或外观。
 
-- `CWnd` 类和 `CFrameWnd` 类：已删除 `CWnd::GetMenuBarInfo` 方法。
+- `CWnd` 类和 `CFrameWnd` 类：`CWnd::GetMenuBarInfo` 方法已删除。
 
    `CFrameWnd::GetMenuBarInfo` 方法现在是非虚拟方法。 有关详细信息，请参阅 Windows SDK 中的 GetMenuBarInfo 函数。
 
 - MFC ISAPI 支持：MFC 不再支持使用 Internet 服务器应用程序编程接口 (ISAPI) 生成应用程序。 若要生成 ISAPI 应用程序，请直接调用 ISAPI 扩展。
 
-- 弃用的 ANSI API：已弃用某些 MFC 方法的 ANSI 版本。 请在以后的应用程序中使用这些方法的 Unicode 版本。 有关详细信息，请参阅“Windows Vista 公共控件的生成要求”。
+- 弃用了 ANSI API：已弃用某些 MFC 方法的 ANSI 版本。 请在以后的应用程序中使用这些方法的 Unicode 版本。 有关详细信息，请参阅“Windows Vista 公共控件的生成要求”。
 
 ## <a name="visual-c-2005-breaking-changes"></a>Visual C++ 2005 重大更改
 
@@ -3471,7 +3472,7 @@ Visual Studio 2013 中的 C++ 编译器可以检测到 _ITERATOR_DEBUG_LEVEL 中
 
 - 调用 `valarray::resize()` 时，`valarray` 的内容将会丢失，并将替换为默认值。 `resize()` 方法旨在重新初始化 `valarray`，而不是使其像向量一样动态增长。
 
-- 调试迭代器：使用 C 运行时库的调试版本生成和错误使用迭代器的应用程序可能会在运行时开始看到断言。 若要禁用这些断言，必须将 _HAS_ITERATOR_DEBUGGING（Visual Studio 2010 之后由 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) 取代）定义为 0。 有关详细信息，请参阅[调试迭代器支持](../standard-library/debug-iterator-support.md)
+- 调试迭代器：如果应用程序使用 C 运行时库的调试版本生成并且错误使用迭代器，则可能会在运行时开始看到断言。 若要禁用这些断言，必须将 _HAS_ITERATOR_DEBUGGING（Visual Studio 2010 之后由 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) 取代）定义为 0。 有关详细信息，请参阅[调试迭代器支持](../standard-library/debug-iterator-support.md)
 
 ## <a name="visual-c-net-2003-breaking-changes"></a>Visual C++ .NET 2003 重大更改
 

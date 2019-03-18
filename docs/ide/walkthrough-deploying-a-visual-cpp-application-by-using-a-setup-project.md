@@ -4,12 +4,12 @@ ms.date: 09/17/2018
 helpviewer_keywords:
 - deployment for Visual C++
 ms.assetid: 66735cda-8fe3-4211-a19a-2cf717a12a3f
-ms.openlocfilehash: 3dc607ea082e31ba73f34ce1ca8acd3ebc78292a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e2d83d45f1369e250b24708edd17f4004e030a17
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50565589"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749121"
 ---
 # <a name="walkthrough-deploying-a-visual-c-application-by-using-a-setup-project"></a>演练：使用安装项目部署 Visual C++ 应用程序
 
@@ -31,8 +31,8 @@ ms.locfileid: "50565589"
 
    > [!NOTE]
    > 如果缺少“MFC 应用程序”类型：<br/>
-   > Visual Studio 2017：选择“新建项目”对话框左窗格中的“打开 Visual Studio 安装程序”。 安装位于“可选”组件部分中“使用 C++ 的桌面开发”下名为“适用于 x86 和 x64 的 Visual C++ MFC”的选项。<br/>
-   > Visual Studio 2015：单击 Windows“开始”按钮并键入“添加或删除程序”。 从结果列表打开程序，然后在已安装程序列表中找到你的 Microsoft Visual Studio 2015 安装程序。 双击它，然后选择“修改”，并选择“Visual C++”下的“Microsoft 基础类”组件。
+   > **Visual Studio 2017**：选择“新建项目”对话框左窗格中的“打开 Visual Studio 安装程序”。 安装位于“可选”组件部分中“使用 C++ 的桌面开发”下名为“适用于 x86 和 x64 的 Visual C++ MFC”的选项。<br/>
+   > **Visual Studio 2015**：单击 Windows“开始”按钮并键入“添加或删除程序”。 从结果列表打开程序，然后在已安装程序列表中找到你的 Microsoft Visual Studio 2015 安装程序。 双击它，然后选择“修改”，并选择“Visual C++”下的“Microsoft 基础类”组件。
 
 1. 将活动解决方案配置更改为“发布”。 从“生成”菜单中，选择“Configuration Manager”。 从“Configuration Manager”对话框的“活动解决方案配置”下拉框中选择“发布”。 单击 **“关闭”**。
 

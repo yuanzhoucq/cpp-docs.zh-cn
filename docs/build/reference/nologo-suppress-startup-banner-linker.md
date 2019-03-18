@@ -13,12 +13,12 @@ helpviewer_keywords:
 - banners, suppressing startup
 - NOLOGO linker option
 ms.assetid: 3b20dddd-eca6-4545-a331-9f70bf720197
-ms.openlocfilehash: 1b966c1f7af556a85aadcafaa8ed43da5b3f75df
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 0ef0c6f8e0073e7450daa8d0433ce4d6e82ceab8
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57422151"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812494"
 ---
 # <a name="nologo-suppress-startup-banner-linker"></a>/NOLOGO（取消显示启动版权标志）（链接器）
 
@@ -30,7 +30,7 @@ ms.locfileid: "57422151"
 
 /NOLOGO 选项禁止显示版权消息和版本数。
 
-此选项还将取消回显命令文件。 有关详细信息，请参阅[LINK 命令文件](../../build/reference/link-command-files.md)。
+此选项还将取消回显命令文件。 有关详细信息，请参阅[LINK 命令文件](linking.md)。
 
 默认情况下，此信息发送到输出窗口，链接器。 在命令行中，它发送到标准输出，并可以定向到一个文件。
 
@@ -44,5 +44,5 @@ ms.locfileid: "57422151"
 
 ## <a name="see-also"></a>请参阅
 
-[设置链接器选项](../../build/reference/setting-linker-options.md)<br/>
-[链接器选项](../../build/reference/linker-options.md)
+[MSVC 链接器引用](linking.md)<br/>
+[MSVC 链接器选项](linker-options.md)

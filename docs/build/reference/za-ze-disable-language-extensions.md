@@ -18,12 +18,12 @@ helpviewer_keywords:
 - Disable Language Extensions compiler option
 - Ze compiler option [C++]
 ms.assetid: 65e49258-7161-4289-a176-7c5c0656b1a2
-ms.openlocfilehash: 71718aed7853e7d09b15734bad6a350f9a19fd5e
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 1db1dbdba4829ccf939cdc4f07ccfefe2474a35d
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57422827"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812299"
 ---
 # <a name="za-ze-disable-language-extensions"></a>/Za、/Ze（禁用语言扩展）
 
@@ -51,7 +51,7 @@ Microsoft C/c + + 编译器支持 C 代码的编译两种方式：
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[Visual Studio 中的设置 c + + 编译器和生成属性](../working-with-project-properties.md)。
 
 1. 在导航窗格中，选择**配置属性** > **C/c + +** > **语言**。
 
@@ -64,7 +64,6 @@ Microsoft C/c + + 编译器支持 C 代码的编译两种方式：
 ## <a name="see-also"></a>请参阅
 
 [编译器选项](compiler-options.md)<br/>
-[设置编译器选项](setting-compiler-options.md)<br/>
 [/Zc（一致性）](zc-conformance.md)<br/>
 [/permissive-（标准符合性）](permissive-standards-conformance.md)<br/>
 [/std（指定语言标准版本）](std-specify-language-standard-version.md)<br/>

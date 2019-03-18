@@ -5,12 +5,12 @@ helpviewer_keywords:
 - non-MFC DLLs [C++]
 - DLLs [C++], non-MFC
 ms.assetid: 1ed5d1ee-e20c-47d7-801d-87ea26a73842
-ms.openlocfilehash: 2363d9ab13e120ab72a30628a7c37c411e8de3a2
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 14cbdadd8c66d6fdf282f644102a6d4a783893b5
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414520"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57809283"
 ---
 # <a name="non-mfc-dlls-overview"></a>非 MFC Dll:概述
 
@@ -20,22 +20,22 @@ ms.locfileid: "57414520"
 
 ## <a name="what-do-you-want-to-do"></a>你希望做什么？
 
-- [演练：创建和使用动态链接库](../build/walkthrough-creating-and-using-a-dynamic-link-library-cpp.md)
+- [演练：创建和使用动态链接库](walkthrough-creating-and-using-a-dynamic-link-library-cpp.md)
 
-- [从 DLL 导出](../build/exporting-from-a-dll.md)
+- [从 DLL 导出](exporting-from-a-dll.md)
 
-- [将可执行文件链接到 DLL](../build/linking-an-executable-to-a-dll.md)
+- [将可执行文件链接到 DLL](linking-an-executable-to-a-dll.md)
 
-- [初始化 DLL](../build/run-time-library-behavior.md#initializing-a-dll)
+- [初始化 DLL](run-time-library-behavior.md#initializing-a-dll)
 
 ## <a name="what-do-you-want-to-know-more-about"></a>你想进一步了解什么？
 
-- [静态链接到 MFC 的规则 MFC Dll](../build/regular-dlls-statically-linked-to-mfc.md)
+- [静态链接到 MFC 的规则 MFC Dll](regular-dlls-statically-linked-to-mfc.md)
 
-- [动态链接到 MFC 的规则 MFC Dll](../build/regular-dlls-dynamically-linked-to-mfc.md)
+- [动态链接到 MFC 的规则 MFC Dll](regular-dlls-dynamically-linked-to-mfc.md)
 
-- [MFC 扩展 DLL：概述](../build/extension-dlls-overview.md)
+- [MFC 扩展 DLL：概述](extension-dlls-overview.md)
 
 ## <a name="see-also"></a>请参阅
 
-[DLL 的类型](../build/kinds-of-dlls.md)
+[DLL 的类型](kinds-of-dlls.md)

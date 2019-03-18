@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - 'msbuild (c++), howto: use build events in projects'
 ms.assetid: 2a58dc9d-3d50-4e49-97c1-86c5a05ce218
-ms.openlocfilehash: ea9ff51066c09e1e4a783b622248d9774a023172
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 7678b975558b245fb730bff35fb156bf21d7f895
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57417569"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814108"
 ---
 # <a name="how-to-use-build-events-in-msbuild-projects"></a>如何：在 MSBuild 项目中使用生成事件
 
@@ -39,7 +39,7 @@ ms.locfileid: "57417569"
 
 ## <a name="example"></a>示例
 
-下面的示例可以在中创建的 myproject.vcxproj 文件的项目元素内添加[演练：使用 MSBuild 创建 Visual c + + 项目](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)。 一个*预生成*事件使 main.cpp 的副本; 以*预链接*事件使一个 main.obj; 的副本和一个*后期生成*事件生成 myproject.exe 的副本。 如果使用发布配置生成项目，则执行生成事件。 如果使用调试配置生成项目，则不执行生成事件。
+下面的示例可以在中创建的 myproject.vcxproj 文件的项目元素内添加[演练：使用 MSBuild 创建 Visual c + + 项目](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)。 一个*预生成*事件使 main.cpp 的副本; 以*预链接*事件使一个 main.obj; 的副本和一个*后期生成*事件生成 myproject.exe 的副本。 如果使用发布配置生成项目，则执行生成事件。 如果使用调试配置生成项目，则不执行生成事件。
 
 ```
 <ItemDefinitionGroup>
@@ -72,5 +72,5 @@ ms.locfileid: "57417569"
 
 ## <a name="see-also"></a>请参阅
 
-[MSBuild (Visual C++)](../build/msbuild-visual-cpp.md)<br/>
-[演练：使用 MSBuild 创建 Visual C++ 项目](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)
+[在命令行-c + + 的 MSBuild](msbuild-visual-cpp.md)<br/>
+[演练：使用 MSBuild 创建 Visual C++ 项目](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)

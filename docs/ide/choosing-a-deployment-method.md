@@ -12,19 +12,19 @@ helpviewer_keywords:
 - static linking [C++]
 - libraries [C++], application deployment issues
 ms.assetid: fd8eb956-f4a0-4ffb-b401-328c73e66986
-ms.openlocfilehash: eb9b0784dc5a31accc086314e64758b5bd91033f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e755ad44d088dca77f012569cd3783079cd23f86
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607644"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739708"
 ---
 # <a name="choosing-a-deployment-method"></a>选择部署方法
 
 我们建议你使用 Windows Installer 进行部署，除非你的 Visual C++ 应用程序是自包含的并且可使用复制命令部署。 Windows Installer 支持安装、修复和卸载，还支持应用程序文件、依赖项和注册表项的原子更新。
 
 > [!NOTE]
->  虽然在 Visual Studio 中可以进行 Visual C++ 本机应用程序的 [ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment) 部署，但需要额外的步骤。 有关详细信息，请参阅 [ClickOnce Deployment for Visual C++ Applications](../ide/clickonce-deployment-for-visual-cpp-applications.md)。
+>  虽然在 Visual Studio 中可以进行 Visual C++ 本机应用程序的 [ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment) 部署，但需要额外的步骤。 有关详细信息，请参阅[Visual c + + 应用程序的 ClickOnce 部署](../ide/clickonce-deployment-for-visual-cpp-applications.md)。
 
 ## <a name="visual-c-libraries-are-shared-dlls"></a>Visual C++ 库是共享的 DLL
 
@@ -34,7 +34,7 @@ ms.locfileid: "50607644"
 
 在你的部署中，可以重新发布获得重新发布许可的任何版本的 Visual C++ 库。 以下是三种部署方法：
 
-- 使用可再发行组件包进行集中部署，这些包将 Visual C++ 库作为共享 DLL 安装在 %windir%\system32\\ 中。 （安装到该文件夹中需要管理员权限。）你可以创建一个脚本或安装程序，以便在目标计算机上安装应用程序之前运行可再发行组件包。 可再发行组件包可用于 x86、x64 和 ARM 平台（VCRedist_x86.exe、VCRedist_x64.exe 或 VCRedist_arm.exe）。 Visual Studio 将这些包放置在 %ProgramFiles(x86)%\Microsoft Visual Studio `version`\VC\Redist\\`locale ID`\\ 中。 你还可以从 [Microsoft 下载中心](http://go.microsoft.com/fwlink/p/?linkid=132793)下载这些包。 （使用下载中心的搜索框搜索与你的应用程序匹配的“Visual C++ 可再发行组件包 Visual Studio 版本和更新”。 例如，若使用 Visual Studio 2015 Update 3 生成应用程序，则搜索“Visual C++ Redistributable Package 2015 Update 3”。）若要详细了解如何使用可再发行组件包，请参阅[演练：使用 Visual C++ 可再发行包部署 Visual C++ 应用程序](../ide/deploying-visual-cpp-application-by-using-the-vcpp-redistributable-package.md)。
+- 使用可再发行组件包进行集中部署，这些包将 Visual C++ 库作为共享 DLL 安装在 %windir%\system32\\ 中。 （安装到该文件夹中需要管理员权限。）可以创建一个脚本或安装程序，以便在目标计算机上安装应用程序之前运行可再发行组件包。 可再发行组件包可用于 x86、x64 和 ARM 平台（VCRedist_x86.exe、VCRedist_x64.exe 或 VCRedist_arm.exe）。 Visual Studio 将这些包放置在 %ProgramFiles(x86)%\Microsoft Visual Studio `version`\VC\Redist\\`locale ID`\\ 中。 你还可以从 [Microsoft 下载中心](http://go.microsoft.com/fwlink/p/?linkid=132793)下载这些包。 （使用下载中心的搜索框搜索与你的应用程序匹配的“Visual C++ 可再发行组件包 Visual Studio 版本和更新”。 例如，若使用 Visual Studio 2015 Update 3 生成应用程序，则搜索“Visual C++ Redistributable Package 2015 Update 3”。）有关如何使用可再发行组件包的信息，请参阅[演练：使用 Visual C++ 可再发行软件包部署 Visual C++ 应用程序](../ide/deploying-visual-cpp-application-by-using-the-vcpp-redistributable-package.md)。
 
 - 使用合并模块进行集中部署，其中每个模块会将特定的 Visual C++ 库作为共享 DLL 安装在 %windir%\system32\\ 中。 （安装到该文件夹中需要管理员权限。）合并模块将成为你应用程序的 .msi 安装程序文件的一部分。 Visual C++ 可再发行合并模块包含在 Visual Studio 的 \Program Files (x86)\Common Files\Merge Modules\\ 中。 有关详细信息，请参阅[使用合并模块重新分发](../ide/redistributing-components-by-using-merge-modules.md)。
 

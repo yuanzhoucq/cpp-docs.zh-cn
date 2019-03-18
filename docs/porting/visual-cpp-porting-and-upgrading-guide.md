@@ -2,12 +2,12 @@
 title: Visual C++ 移植和升级指南
 ms.date: 09/18/2018
 ms.assetid: f5fbcc3d-aa72-41a6-ad9a-a706af2166fb
-ms.openlocfilehash: 39b0e716ae6dbc1210130908b27cfa1d06f86ec6
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 1b3f7142b5240d8b4a94040d5cda7d033e50e39d
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556863"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57752423"
 ---
 # <a name="visual-c-porting-and-upgrading-guide"></a>Visual C++ 移植和升级指南
 
@@ -73,7 +73,7 @@ Visual Studio 中的生成系统和项目文件格式从 Visual Studio 2008 及�
 
 ## <a name="related-topics"></a>相关主题
 
-|标题|描述|
+|Title|说明|
 |-----------|-----------------|
 |[从 Visual C++ 早期版本升级项目](upgrading-projects-from-earlier-versions-of-visual-cpp.md)|讨论如何使用在早期版本的 Visual C++ 中创建的项目。|
 |[Visual Studio 2017 RC 中 C++ 编译器的新增功能](../what-s-new-for-visual-cpp-in-visual-studio.md)|从 Visual Studio 2015 到 Visual Studio 2017 的 IDE 和工具更改|

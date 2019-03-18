@@ -10,12 +10,12 @@ helpviewer_keywords:
 - -NATVIS linker option
 - Add Natvis file to PDB
 ms.assetid: 8747fc0c-701a-4796-bb4d-818ab4465cca
-ms.openlocfilehash: 983cbe4c4bd4164d81b83a23fe19569318d5193c
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: e758a49b41a17d805b752947cd1944087c8ff852
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424972"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57809231"
 ---
 # <a name="natvis-add-natvis-to-pdb"></a>/ NATVIS （将 Natvis 添加到 PDB）
 
@@ -30,11 +30,11 @@ ms.locfileid: "57424972"
 
 /NATVIS 选项嵌入 Natvis 文件中定义的调试器可视化效果*文件名*到由 LINK 生成的 PDB 文件。 这使调试器能够显示独立于.natvis 文件的可视化效果。 可以使用多个 /NATVIS 选项生成的 PDB 文件中嵌入多个 Natvis 文件。
 
-通过使用不创建 PDB 文件时，链接会忽略 /NATVIS [/debug](../../build/reference/debug-generate-debug-info.md)选项。 有关创建和使用的.natvis 文件的信息，请参阅[Visual Studio 调试器中创建本机对象的自定义视图](/visualstudio/debugger/create-custom-views-of-native-objects)。
+通过使用不创建 PDB 文件时，链接会忽略 /NATVIS [/debug](debug-generate-debug-info.md)选项。 有关创建和使用的.natvis 文件的信息，请参阅[Visual Studio 调试器中创建本机对象的自定义视图](/visualstudio/debugger/create-custom-views-of-native-objects)。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此链接器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置 Visual c + + 项目属性](../../ide/working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[Visual Studio 中的设置 c + + 编译器和生成属性](../working-with-project-properties.md)。
 
 1. 选择**命令行**中的属性页**链接器**文件夹。
 
@@ -46,6 +46,5 @@ ms.locfileid: "57424972"
 
 ## <a name="see-also"></a>请参阅
 
-[在 Visual Studio 调试器中创建本机对象的自定义视图](/visualstudio/debugger/create-custom-views-of-native-objects)<br/>
-[设置链接器选项](../../build/reference/setting-linker-options.md)<br/>
-[链接器选项](../../build/reference/linker-options.md)
+[MSVC 链接器引用](linking.md)<br/>
+[MSVC 链接器选项](linker-options.md)

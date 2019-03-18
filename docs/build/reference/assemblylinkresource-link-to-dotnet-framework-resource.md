@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ASSEMBLYLINKRESOURCE linker option
 - /ASSEMBLYLINKRESOURCE linker option
 ms.assetid: 8b6ad184-1b33-47a4-8513-4803cf915b64
-ms.openlocfilehash: d2970f4e6d94cfa2e6315eeff85eb71a30dc032a
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: fb707a2721ed40ee3ec37d01b2bbcfcc51f05c38
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57422424"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57807801"
 ---
 # <a name="assemblylinkresource-link-to-net-framework-resource"></a>/ASSEMBLYLINKRESOURCE（链接到 .NET Framework 资源）
 
@@ -29,11 +29,11 @@ ms.locfileid: "57422424"
 
 ## <a name="remarks"></a>备注
 
-/ASSEMBLYLINKRESOURCE 选项创建指向.NET Framework 资源的链接在输出文件中。资源文件不会放入输出文件。 [/ASSEMBLYRESOURCE](../../build/reference/assemblyresource-embed-a-managed-resource.md)将资源文件嵌入到输出文件中。
+/ASSEMBLYLINKRESOURCE 选项创建指向.NET Framework 资源的链接在输出文件中。资源文件不会放入输出文件。 [/ASSEMBLYRESOURCE](assemblyresource-embed-a-managed-resource.md)将资源文件嵌入到输出文件中。
 
 链接的资源则是公有的程序集时使用链接器创建的。
 
-/ASSEMBLYLINKRESOURCE 要求编译包括[/clr](../../build/reference/clr-common-language-runtime-compilation.md);[/LN](../../build/reference/ln-create-msil-module.md)或[/NOASSEMBLY](../../build/reference/noassembly-create-a-msil-module.md)不允许使用 /ASSEMBLYLINKRESOURCE。
+/ASSEMBLYLINKRESOURCE 要求编译包括[/clr](clr-common-language-runtime-compilation.md);[/LN](ln-create-msil-module.md)或[/NOASSEMBLY](noassembly-create-a-msil-module.md)不允许使用 /ASSEMBLYLINKRESOURCE。
 
 如果*文件名*是.NET Framework 创建的资源文件，例如，通过[Resgen.exe](/dotnet/framework/tools/resgen-exe-resource-file-generator)或在开发环境中，则可以使用来访问中的成员**System.Resources**命名空间。 有关详细信息，请参阅[System.Resources.ResourceManager](/dotnet/api/system.resources.resourcemanager)。 对于所有其他资源，请使用**GetManifestResource** \*中的方法**不过 System.Reflection.Assembly**类，以在运行时访问资源。
 
@@ -41,23 +41,23 @@ ms.locfileid: "57422424"
 
 影响的程序集生成其他链接器选项有：
 
-- [/ASSEMBLYDEBUG](../../build/reference/assemblydebug-add-debuggableattribute.md)
+- [/ASSEMBLYDEBUG](assemblydebug-add-debuggableattribute.md)
 
-- [/ASSEMBLYMODULE](../../build/reference/assemblymodule-add-a-msil-module-to-the-assembly.md)
+- [/ASSEMBLYMODULE](assemblymodule-add-a-msil-module-to-the-assembly.md)
 
-- [/ASSEMBLYRESOURCE](../../build/reference/assemblyresource-embed-a-managed-resource.md)
+- [/ASSEMBLYRESOURCE](assemblyresource-embed-a-managed-resource.md)
 
-- [/DELAYSIGN](../../build/reference/delaysign-partially-sign-an-assembly.md)
+- [/DELAYSIGN](delaysign-partially-sign-an-assembly.md)
 
-- [/KEYCONTAINER](../../build/reference/keycontainer-specify-a-key-container-to-sign-an-assembly.md)
+- [/KEYCONTAINER](keycontainer-specify-a-key-container-to-sign-an-assembly.md)
 
-- [/KEYFILE](../../build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly.md)
+- [/KEYFILE](keyfile-specify-key-or-key-pair-to-sign-an-assembly.md)
 
-- [/NOASSEMBLY](../../build/reference/noassembly-create-a-msil-module.md)
+- [/NOASSEMBLY](noassembly-create-a-msil-module.md)
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此链接器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置 Visual c + + 项目属性](../../ide/working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[Visual Studio 中的设置 c + + 编译器和生成属性](../working-with-project-properties.md)。
 
 1. 单击**链接器**文件夹。
 
@@ -71,5 +71,5 @@ ms.locfileid: "57422424"
 
 ## <a name="see-also"></a>请参阅
 
-[设置链接器选项](../../build/reference/setting-linker-options.md)<br/>
-[链接器选项](../../build/reference/linker-options.md)
+[MSVC 链接器引用](linking.md)<br/>
+[MSVC 链接器选项](linker-options.md)

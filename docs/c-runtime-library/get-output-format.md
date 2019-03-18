@@ -20,12 +20,12 @@ helpviewer_keywords:
 - get_output_format function
 - _get_output_format function
 ms.assetid: 0ce42f3b-3479-41c4-bcbf-1d21f7ee37e7
-ms.openlocfilehash: a78ffb1c7fd32db3092bcf1d2297a0be6fa9f47b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 60e209f6f8b723bfae1a4b434750b6237dc6479d
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50518789"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751422"
 ---
 # <a name="getoutputformat"></a>_get_output_format
 

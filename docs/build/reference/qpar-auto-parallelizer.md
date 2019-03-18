@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - VC.Project.VCCLCompilerTool.EnableParallelCodeGeneration
 ms.assetid: 33ecf49d-c0d5-4f34-bce3-84ff03f38918
-ms.openlocfilehash: 8563382f9a95d9b7da49efdf1f12d517eae3da3d
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: c1ddea73c5aa8d3e7e70b45834cb04154bf3b4bb
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57416626"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57809556"
 ---
 # <a name="qpar-auto-parallelizer"></a>/Qpar（自动并行化程序）
 
@@ -27,7 +27,7 @@ ms.locfileid: "57416626"
 
 提供了 `#pragma loop()` 指令来帮助优化程序并行化特定循环。 有关详细信息，请参阅[循环](../../preprocessor/loop.md)。
 
-有关如何启用自动并行化程序的输出消息的信息，请参阅[/Qpar-report （自动并行化程序报告等级）](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md)。
+有关如何启用自动并行化程序的输出消息的信息，请参阅[/Qpar-report （自动并行化程序报告等级）](qpar-report-auto-parallelizer-reporting-level.md)。
 
 ### <a name="to-set-the-qpar-compiler-option-in-visual-studio"></a>在 Visual Studio 中设置 /Qpar 编译器选项
 
@@ -43,9 +43,9 @@ ms.locfileid: "57416626"
 
 ## <a name="see-also"></a>请参阅
 
-[/Q 选项（低级别操作）](../../build/reference/q-options-low-level-operations.md)<br/>
-[/Qpar-report（自动并行化程序报告等级）](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md)<br/>
-[编译器选项](../../build/reference/compiler-options.md)<br/>
-[设置编译器选项](../../build/reference/setting-compiler-options.md)<br/>
+[/Q 选项（低级别操作）](q-options-low-level-operations.md)<br/>
+[/Qpar-report（自动并行化程序报告等级）](qpar-report-auto-parallelizer-reporting-level.md)<br/>
+[MSVC 编译器选项](compiler-options.md)<br/>
+[MSVC 编译器命令行语法](compiler-command-line-syntax.md)<br/>
 [#pragma loop()](../../preprocessor/loop.md)<br/>
 [本机代码中的并行编程](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/04/12/auto-vectorizer-in-visual-studio-2012-overview/)
