@@ -5,25 +5,26 @@ helpviewer_keywords:
 - warnings, compiler
 - cl.exe compiler, setting options
 ms.assetid: 69809cfb-a38a-4035-b154-283a61938df8
-ms.openlocfilehash: 48c18ce5af758e1329f149bc49969dad733af88f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e189ead864fe2be6e0ccb3bc76a58f2441740076
+ms.sourcegitcommit: a901c4acbfc80ca10663d37c09921f04c5b6dd17
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50651368"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58142553"
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>默认情况下处于关闭状态的编译器警告
-编译器包括默认情况下，关闭的警告，因为大多数开发人员不希望看到它们。 在某些情况下，它们表示一个样式的选择，或在较旧代码中，是常见的惯用语言或语言充分利用 Microsoft 扩展。 在其他情况下，它们指示程序员经常做出错误的假设，这可能会导致意外的或未定义行为的区域。 有些警告可能非常库标头中存在干扰。 C 运行时库以及 c + + 标准库设计用于不发出任何警告仅在警告等级[/w4](../build/reference/compiler-option-warning-level.md)。
+
+编译器支持默认情况下，关闭的警告，因为大多数开发人员不发现它们很有用。 在某些情况下，它们发出警告有关样式的选择，或在较旧代码中常见的惯用语言。 有关使用语言的 Microsoft 扩展的其他警告。 在其他情况下，它们指示程序员经常做出错误的假设，这可能会导致意外的或未定义行为的区域。 如果启用，有些警告可能会很多时候显示库标头中。 C 运行时库以及 c + + 标准库设计用于不发出任何警告仅在警告等级[/w4](../build/reference/compiler-option-warning-level.md)。
 
 ## <a name="enable-warnings-that-are-off-by-default"></a>启用默认情况下处于关闭状态的警告
 
 您可以启用警告，方法是通常情况下关闭默认情况下使用以下选项之一：
 
-- **#pragma 警告 (默认值：** *warning_number* **)**
+- **#pragma warning(default :** *warning_number* **)**
 
    指定的警告 (*warning_number*) 在其默认级别启用。 该警告的文档包含该警告的默认级别。
 
-- **#pragma 警告 (** *warning_level* **:** *warning_number* **)**
+- **#pragma warning(** *warning_level* **:** *warning_number* **)**
 
    指定的警告 (*warning_number*) 在指定级别启用 (*warning_level*)。
 
@@ -33,7 +34,7 @@ ms.locfileid: "50651368"
 
 - [/w*Lnnnn*](../build/reference/compiler-option-warning-level.md)
 
-   这使警告*nnnn*级别*L*。
+   此选项将启用警告*nnnn*级别*L*。
 
 ## <a name="warnings-that-are-off-by-default"></a>默认情况下处于关闭状态的警告
 
@@ -43,7 +44,8 @@ ms.locfileid: "50651368"
 |-|-|
 |[C4061](../error-messages/compiler-warnings/compiler-warning-level-4-c4061.md) （级别 4）|枚举器*标识符*的 switch 中的*枚举*没有被 case 标签显式处理|
 |[C4062](../error-messages/compiler-warnings/compiler-warning-level-4-c4062.md) （级别 4）|枚举器*标识符*的 switch 中的*枚举*未处理|
-|C4191（级别 3）|'*运算符*： 从不安全转换*type_of_expression*to*type_required*|
+| [C4165](../error-messages/compiler-warnings/compiler-warning-level-1-c4165.md) （级别 1） | HRESULT 正在转换为 bool;是否确定这是你想？ |
+| [C4191](../error-messages/compiler-warnings/compiler-warning-level-3-c4191.md) （级别 3）|'*运算符*： 从不安全转换*type_of_expression*to*type_required*|
 |[C4242](../error-messages/compiler-warnings/compiler-warning-level-4-c4242.md) （级别 4）|'*标识符*： 从转换*type1*to*type2*，可能丢失数据|
 |[C4254](../error-messages/compiler-warnings/compiler-warning-level-4-c4254.md) （级别 4）|'*运算符*： 从转换*type1*to*type2*，可能丢失数据|
 |[C4255](../error-messages/compiler-warnings/compiler-warning-level-4-c4255.md) （级别 4）|'*函数*： 未给出函数原型： 将转换为 (void)|
@@ -51,7 +53,7 @@ ms.locfileid: "50651368"
 |[C4264](../error-messages/compiler-warnings/compiler-warning-level-1-c4264.md) （级别 1）|'*virtual_function*： 不重写虚拟成员函数从基本的'*类*; 函数被隐藏|
 |[C4265](../error-messages/compiler-warnings/compiler-warning-level-3-c4265.md) （级别 3）|'*类*： 类有虚函数，但析构函数不是虚拟|
 |[C4266](../error-messages/compiler-warnings/compiler-warning-level-4-c4266.md) （级别 4）|'*函数*： 不重写虚拟成员函数从基本的'*类型*; 函数被隐藏|
-|[C4287](../error-messages/compiler-warnings/compiler-warning-level-3-c4287.md) （级别 3）|'*运算符*： 无符号/负常量不匹配|
+|[C4287](../error-messages/compiler-warnings/compiler-warning-level-3-c4287.md) （级别 3）|'*operator*': unsigned/negative constant mismatch|
 |[C4289](../error-messages/compiler-warnings/compiler-warning-level-4-c4289.md) （级别 4）|使用了非标准扩展:*var*： 在 for 循环中声明的循环控制变量用在 for 循环范围外|
 |[C4296](../error-messages/compiler-warnings/compiler-warning-level-4-c4296.md) （级别 4）|'*运算符*： 表达式始终为 false|
 |[C4339](../error-messages/compiler-warnings/compiler-warning-level-4-c4339.md) （级别 4）|'*类型*： 未定义的类型检测到使用了在 CLR 元数据-使用此类型可能导致运行时异常|
@@ -64,7 +66,7 @@ ms.locfileid: "50651368"
 |C4388 （级别 4）|有符号/无符号不匹配|
 |[C4412](../error-messages/compiler-warnings/compiler-warning-level-2-c4412.md) （级别 2）|'*函数*： 函数签名包含类型*类型*';纯代码之间传递的不安全和混合或本机 c + + 对象是|
 |C4426 （级别 1）|优化标志发生更改后包括标头，可能是由于 #pragma optimize （） 超出<sup>14.1</sup>|
-|[C4435](../error-messages/compiler-warnings/compiler-warning-level-4-c4435.md) （级别 4）|'*class1*': / vd2 下的对象布局将因虚拟基而更改*class2*|
+|[C4435](../error-messages/compiler-warnings/compiler-warning-level-4-c4435.md) （级别 4）|'*class1*:/ Vd2 下的对象布局将因虚拟基而更改*class2*|
 |[C4437](../error-messages/compiler-warnings/compiler-warning-level-4-c4437.md) （级别 4）|从虚拟基的 dynamic_cast '*class1*到*class2*在某些上下文中可能会失败|
 |C4444 （级别 3）|顶级“__unaligned”没有在该上下文中实现|
 |[C4464](../error-messages/compiler-warnings/c4464.md) （级别 4）|相对包含路径包含..|
@@ -97,8 +99,9 @@ ms.locfileid: "50651368"
 |[C4626](../error-messages/compiler-warnings/compiler-warning-level-4-c4626.md) （级别 4）|“derived class”: 未能生成赋值运算符，因为基类赋值运算符不可访问|
 |[C4628](../error-messages/compiler-warnings/compiler-warning-level-1-c4628.md) （级别 1）|-Ze 不支持二合字母。 字符序列*有向图时会*未解释的替换标记为*char*|
 |[C4640](../error-messages/compiler-warnings/compiler-warning-level-3-c4640.md) （级别 3）|'*实例*： 本地静态对象的结构不是线程安全|
+| C4643 （级别 4） | 向前声明 '*标识符*c + + 标准不允许使用标准的命名空间中。 <sup>15.8</sup> |
 |C4647 （级别 3）|行为更改： __is_pod (*类型*) 在早期版本中具有不同的值|
-|C4654 （级别 4）|代码放在包含的预编译标头行中将被忽略。 将代码添加到预编译标头。 <sup>第 14.1</sup>|
+|C4654 （级别 4）|代码放在包含的预编译标头行中将被忽略。 将代码添加到预编译标头。 <sup>14.1</sup>|
 |[C4668](../error-messages/compiler-warnings/compiler-warning-level-4-c4668.md) （级别 4）|'*符号*未定义为预处理器宏，用"0"替换为中'*指令*|
 |[C4682](../error-messages/compiler-warnings/compiler-warning-level-4-c4682.md) （级别 4）|'*符号*： 指定，默认为 [in] 未方向参数特性|
 |[C4686](../error-messages/compiler-warnings/compiler-warning-level-3-c4686.md) （级别 3）|'*用户定义类型*： 行为可能有更改，UDT 中的更改返回调用约定|
@@ -112,7 +115,9 @@ ms.locfileid: "50651368"
 |C4774 （级别 4）|'*字符串*： 格式字符串参数中的预期*数*不是字符串文字|
 |C4777 （级别 4）|'*函数*： 格式字符串*字符串*要求类型的自变量*type1*，但可变参数参数*数*具有类型*type2*|
 |C4786 （级别 3）|'*符号*： 对象名被截断为*数*中的调试信息的字符|
+| [C4800](../error-messages/compiler-warnings/compiler-warning-level-3-c4800.md) （级别 4） | 从隐式转换*类型*为布尔值。 可能会丢失信息<sup>16.0</sup> |
 |[C4820](../error-messages/compiler-warnings/compiler-warning-level-4-c4820.md) （级别 4）|'*字节*字节填充添加在构造之后*member_name*|
+| [C4822](../error-messages/compiler-warnings/compiler-warning-level-1-c4822.md) （级别 1） | '*成员*： 局部类成员函数没有正文 |
 |C4826 （级别 2）|从转换*type1*到*type2*将进行符号扩展。 这可能会导致意外的运行时行为。|
 |C4837 （级别 4）|检测到三元祖:??*字符*替换为*字符*|
 |C4841 （级别 4）|使用非标准扩展： offsetof 中使用的复合成员指示符|
@@ -150,6 +155,10 @@ ms.locfileid: "50651368"
 <sup>15.3</sup>此警告是从 Visual Studio 2017 版本 15.3 开始，提供。<br/>
 <sup>15.5</sup>此警告是从 Visual Studio 2017 版本 15.5 开始，提供。<br/>
 <sup>15.7</sup>此警告是从 Visual Studio 2017 版本 15.7 中开始提供。<br/>
+<sup>15.8</sup>此警告是在 Visual Studio 2017 版本 15.8 从开始提供。<br/>
+::: moniker range=">= vs-2019"
+<sup>16.0</sup>此警告是从开始在 Visual Studio 2019 RTM 中提供。<br/>
+::: moniker-end
 <sup>为永久</sup>此警告处于关闭状态，除非[触发-](../build/reference/permissive-standards-conformance.md)设置编译器选项。<br/>
 
 ## <a name="warnings-off-by-default-in-earlier-versions"></a>在早期版本中默认情况下关闭的警告
@@ -167,7 +176,7 @@ ms.locfileid: "50651368"
 
 |||
 |-|-|
-|[C4431](../error-messages/compiler-warnings/compiler-warning-level-4-c4431.md) （级别 4）|缺少类型说明符 - 假定为 int。 注意: C 不再支持默认的 int|
+|[C4431](../error-messages/compiler-warnings/compiler-warning-level-4-c4431.md) （级别 4）|缺少类型说明符 - 假定为 int。 注意:C 不再支持默认 int|
 
 ## <a name="see-also"></a>请参阅
 
