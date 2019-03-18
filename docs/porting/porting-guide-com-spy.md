@@ -1,15 +1,15 @@
 ---
-title: 迁移指南：COM Spy
+title: 移植指南：COM Spy
 ms.date: 11/04/2016
 ms.assetid: 24aa0d52-4014-4acb-8052-f4e2e4bbc3bb
-ms.openlocfilehash: 67dbcc815404c26535763239eddb176fcecf03f4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ca81b240a102195109c0ad6ef05bfaed10306704
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441777"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751682"
 ---
-# <a name="porting-guide-com-spy"></a>迁移指南：COM Spy
+# <a name="porting-guide-com-spy"></a>移植指南：COM Spy
 
 本主题是一系列文章中的第二个主题，它演示将旧版 Visual C++ 项目升级到最新版本 Visual Studio 的过程。 本主题中的示例代码是先前使用 Visual Studio 2005 编译的代码。
 

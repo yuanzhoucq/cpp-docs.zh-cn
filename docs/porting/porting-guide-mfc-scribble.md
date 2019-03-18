@@ -1,15 +1,15 @@
 ---
-title: 迁移指南：MFC Scribble
+title: 移植指南：MFC Scribble
 ms.date: 11/19/2018
 ms.assetid: 8ddb517d-89ba-41a1-ab0d-4d2c6d9047e8
-ms.openlocfilehash: 353dc8fb42b73ec7e0ee748ef9fefd030c073703
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 436dd27d8c2669e21ddc8a9e453f369cdd14f70c
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175647"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57741306"
 ---
-# <a name="porting-guide-mfc-scribble"></a>迁移指南：MFC Scribble
+# <a name="porting-guide-mfc-scribble"></a>移植指南：MFC Scribble
 
 本主题是向你介绍 Visual C++ 项目升级过程的几个主题中的第一个主题，具体升级过程为将在较旧版本的 Visual Studio 中创建的 Visual C++ 项目升级到 Visual Studio 2017。 这些主题通过示例介绍升级过程，从非常简单的项目开始，过渡到稍微更复杂的项目。 在本主题中，我们将完成特定项目 (MFC Scribble) 的升级过程。 它很适合作为对 C++ 项目升级过程的基本介绍。
 

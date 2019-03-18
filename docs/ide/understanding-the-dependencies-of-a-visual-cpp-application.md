@@ -11,16 +11,16 @@ helpviewer_keywords:
 - depends.exe
 - libraries [C++], application deployment issues
 ms.assetid: 62a44c95-c389-4c5f-82fd-07d7ef09dbf9
-ms.openlocfilehash: 8ed340bed62d3b2cfcf32e0b98f032c9146b6bb9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ed510e0d289349b1d7a0129a1c586b0bf1715b7e
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629263"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751474"
 ---
 # <a name="understanding-the-dependencies-of-a-visual-c-application"></a>了解 Visual C++ 应用程序的依赖项
 
-你可以查看项目属性来确定应用程序依赖于哪些 Visual C++ 库。 （在解决方案资源管理器中，右键单击该项目并选择“属性”以打开“属性页”对话框。）你还可以使用 Dependency Walker (depends.exe)，以更全面地了解依赖项。
+你可以查看项目属性来确定应用程序依赖于哪些 Visual C++ 库。 （在解决方案资源管理器中，右键单击该项目并选择“属性”以打开“属性页”对话框。）还可使用 Dependency Walker (depends.exe)，以更全面地了解依赖项。
 
 在“属性页”对话框中，你可以检查“配置属性”下的各个页面，以便了解依赖项。 例如，如果你的项目使用 MFC 库并且你在“配置属性”、“常规”页上选择“使用 MFC”、“在共享 DLL 中使用 MFC”，则你的应用程序在运行时依赖于 MFC DLL（如 mfc\<version>.dll）。 如果你的应用程序不使用 MFC，而你在“配置属性”>“C/C++”>“代码生成”页上选择“多线程调试 DLL (/MDd)”或“多线程 DLL (/MD)”的“运行库”值，则它可能依赖于 CRT 库。
 
