@@ -4,12 +4,12 @@ ms.date: 06/21/2018
 ms.technology: cpp-ide
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 4b64f79ea5a9566d2ad28216fbc5e736b622fe00
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 50b1005c7734b62941cbda087161d5ec41a0d026
+ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57740242"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57808035"
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset-or-documentation"></a>如何使用 Visual C++ 工具集或文档报告问题
 
@@ -43,7 +43,7 @@ ms.locfileid: "57740242"
 
 #### <a name="to-report-the-full-version-of-the-compiler-youre-using"></a>报告你正在使用的编译器的完整版本
 
-1. 打开与用于生成项目的 Visual Studio 版本和配置体系结构匹配的“开发人员命令提示”。 例如，如果在 x64 上使用 Visual Studio 2017 生成面向 x64 的项目，请选择“适用于 VS 2017 的 x64 本机工具命令提示”。 有关详细信息，请参阅[开发人员命令提示快捷方式](build/building-on-the-command-line.md#developer-command-prompt-shortcuts)。
+1. 打开与用于生成项目的 Visual Studio 版本和配置体系结构匹配的“开发人员命令提示”。 例如，如果在 x64 上使用 Visual Studio 2017 生成面向 x64 的项目，请选择“适用于 VS 2017 的 x64 本机工具命令提示”。 有关详细信息，请参阅[开发人员命令提示快捷方式](build/building-on-the-command-line.md#developer_command_prompt_shortcuts)。
 
 1. 在“开发人员命令提示”控制台窗口中，输入命令 cl/Bv。
 
