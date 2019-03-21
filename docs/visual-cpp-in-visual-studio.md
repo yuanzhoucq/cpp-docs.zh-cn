@@ -1,5 +1,5 @@
 ---
-title: Visual Studio 中的 Visual C++
+title: Visual Studio 中的 C++
 description: Visual C++ 是 Microsoft C++ 编译器、代码编辑器和 Visual Studio IDE 中相关工具的名称。 使用 Visual C++ 开发面向 Windows、Linux、Android 和 iOS 的程序。
 ms.date: 09/26/2018
 ms.technology: cpp-ide
@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C++, home page
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 0dd7cc2aebb9ff0f95d11c839a104b94b3d37db6
-ms.sourcegitcommit: fbc05d8581913bca6eff664e5ecfcda8e471b8b1
+ms.openlocfilehash: 475f9394d9a12d05c95bc73ec451fbfe6fc4b052
+ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56809643"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57814405"
 ---
 # <a name="visual-c-in-visual-studio"></a>Visual Studio 中的 Visual C++
 
@@ -71,11 +71,14 @@ MSVC C++ 编译器中按功能列出的符合性状态列表。
 
 ## <a name="c-development-tools"></a>C++ 开发工具
 
-[IDE 和开发工具](ide/ide-and-tools-for-visual-cpp-development.md)<br/>
+[Visual Studio 中的 C++ 开发概述](overview-of-cpp-development.md)<br/>
 如何使用 Visual Studio IDE 来创建项目、编辑代码、链接到库、编译、调试、创建单元测试、执行静态分析、部署等。
 
-[编译器和生成工具](build/building-c-cpp-programs.md)<br/>
-Microsoft C++ 编译器和链接器选项、错误消息、命令行示例、不同平台的配置以及生成参考主题。
+[项目和生成系统](build/projects-and-build-systems-cpp.md)<br/>
+如何使用 MSVC 编译器和链接器选项创建和配置 Visual Studio C ++ 项目、CMake 项目和其他类型的项目。
+
+[编写和重构 C++ 代码](ide/writing-and-refactoring-code-cpp.md)<br/>
+如何使用 C++ 编辑器中的高效工作功能来重构、导航和编写代码。
 
 [调试本机代码](/visualstudio/debugger/debugging-native-code)<br/>
 在 C++ 项目中使用 Visual Studio 调试器。
