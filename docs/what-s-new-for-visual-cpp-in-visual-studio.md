@@ -5,12 +5,12 @@ ms.technology: cpp-ide
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 062052faf85b342629506a41c39b99a1b59502b9
-ms.sourcegitcommit: fbc05d8581913bca6eff664e5ecfcda8e471b8b1
+ms.openlocfilehash: b75a1903b3e0767f8aa009134a2b37a7d1a8e0d0
+ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56809784"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57810466"
 ---
 # <a name="whats-new-for-visual-c-in-visual-studio-2017"></a>Visual Studio 2017 中 Visual C++ 的新增功能
 
@@ -315,7 +315,7 @@ C++ 现在支持通过“Ctrl+单击”转到定义，使利用鼠标导航到�
 
 ## <a name="non-msbuild-projects-with-open-folder"></a>包含“打开文件夹”的非 MSBuild 项目
 
-Visual Studio 2017 引入了“打开文件夹”功能，使得能够在包含源代码的文件夹中进行编码、生成和调试，而无需创建任何解决方案或项目。 这使得使用 Visual Studio 变得更简单，即使你的项目不基于 MSBuild。 使用“打开文件夹”，可获得 Visual Studio 为 MSBuild 所提供的强大代码理解、编辑、生成和调试功能。 有关详细信息，请参阅 [Visual C++ 中的“打开文件夹”项目](ide/non-msbuild-projects.md)。
+Visual Studio 2017 引入了“打开文件夹”功能，使得能够在包含源代码的文件夹中进行编码、生成和调试，而无需创建任何解决方案或项目。 这使得使用 Visual Studio 变得更简单，即使你的项目不基于 MSBuild。 使用“打开文件夹”，可获得 Visual Studio 为 MSBuild 所提供的强大代码理解、编辑、生成和调试功能。 有关详细信息，请参阅 [C++ 的“打开文件夹”项目](build/open-folder-projects-cpp.md)。
 
 - 改进了“打开文件夹”体验。 可通过以下 .json 文件自定义体验：
   - 使用 CppProperties.json 可自定义 IntelliSense 和浏览体验。
@@ -330,7 +330,7 @@ Visual Studio 2017 引入了“打开文件夹”功能，使得能够在包含�
 
 ## <a name="cmake-support-via-open-folder"></a>通过“打开文件夹”支持 CMake
 
-Visual Studio 2017 支持在不转换为 MSBuild 项目文件 (.vcxproj) 的情况下使用 CMake 项目。 有关详细信息，请参阅 [Visual C++ 中的 CMake 项目](ide/cmake-tools-for-visual-cpp.md)。 使用“打开文件夹”打开 CMake 项目时会自动配置用于 C++ 编辑、构建和调试的环境。
+Visual Studio 2017 支持在不转换为 MSBuild 项目文件 (.vcxproj) 的情况下使用 CMake 项目。 有关详细信息，请参阅 [Visual C++ 中的 CMake 项目](build/cmake-projects-in-visual-studio.md)。 使用“打开文件夹”打开 CMake 项目时会自动配置用于 C++ 编辑、构建和调试的环境。
 
 - 无需在根文件夹中创建 CppProperties.json 文件，C++ IntelliSense 便可正常工作。 此外，我们增添了一个新的下拉列表，允许用户在分别由 CMake 和 CppProperties.json 文件提供的配置之间轻松切换。
 
@@ -342,7 +342,7 @@ Visual Studio 2017 支持在不转换为 MSBuild 项目文件 (.vcxproj) 的情�
 
 **Visual Studio 2017 版本 15.5**：添加了对导入现有 CMake 缓存的支持。
 
-**Visual Studio 2017 15.7 版**：添加了对CMake 3.11、CMake 项目中的代码分析、解决方案资源管理器中的“目标”视图、缓存生成选项以及单个文件编译的支持。 有关详细信息，请参阅 [Visual C++ 中的 CMake 项目](ide/cmake-tools-for-visual-cpp.md)和 [CMake Support in Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/cmake-support-in-visual-studio-targets-view-single-file-compilation-and-cache-generation-settings/)（Visual Studio 中的 CMake 支持）。
+**Visual Studio 2017 15.7 版**：添加了对CMake 3.11、CMake 项目中的代码分析、解决方案资源管理器中的“目标”视图、缓存生成选项以及单个文件编译的支持。 有关详细信息，请参阅 [Visual C++ 中的 CMake 项目](build/cmake-projects-in-visual-studio.md)和 [CMake Support in Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/cmake-support-in-visual-studio-targets-view-single-file-compilation-and-cache-generation-settings/)（Visual Studio 中的 CMake 支持）。
 
 ## <a name="windows-desktop-development-with-c"></a>使用 C++ 的 Windows 桌面开发
 

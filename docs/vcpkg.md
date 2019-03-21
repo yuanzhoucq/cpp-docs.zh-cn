@@ -3,15 +3,15 @@ title: vcpkg-- 用于 Windows、Linux 和 MacOS 的 C++ 包管理器
 description: vcpkg 是一种命令行程序包管理器，可极大简化 Windows 上的开源 C++ 库的购置与安装。
 author: mikeblome
 ms.author: mblome
-ms.date: 02/22/2019
+ms.date: 03/18/2019
 ms.technology: cpp-ide
 ms.assetid: f50d459a-e18f-4b4e-814b-913e444cedd6
-ms.openlocfilehash: dc07086f271c9789629b335b58758b88e8e3d4e8
-ms.sourcegitcommit: fbc05d8581913bca6eff664e5ecfcda8e471b8b1
+ms.openlocfilehash: 2ca1b88f492d96f8a08d296cab7f35f3b72409c9
+ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56809706"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58172876"
 ---
 # <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg：用于 Windows、Linux 和 MacOS 的 C++ 包管理器
 
@@ -19,7 +19,7 @@ vcpkg 是一种命令行包管理器，可极大简化 Windows、Linux 和 MacOS
 
 ## <a name="simple-yet-flexible"></a>简单而灵活
 
-仅通过单个命令就能下载源并生成库。 vcpkg 本身就是一个开源项目，可通过 GitHub 获取。 可凭喜好自定义个人专用克隆。 例如，除在公共目录中找到的内容外，还可指定不同的库或不同版本的库。 可在单台计算机上拥有多个 vcpkg 克隆，每个克隆都可生成自定义库集和/或编译开关等。每个克隆都是一个自包含、x 可复制的环境，它自身的 vcpkg.exe 副本仅可在自己的层次结构中运行。 vcpkg 不会被添加到任何环境变量，并且在 Windows 注册表或 Visual Studio 上也不会有依赖项。
+仅通过单个命令就能下载源并生成库。 vcpkg 本身就是一个开源项目，可通过 GitHub 获取。 可凭喜好自定义个人专用克隆。 例如，除在公共目录中找到的内容外，还可指定不同的库或不同版本的库。 可在单台计算机上拥有多个 vcpkg 克隆，每个克隆都可生成自定义库集和/或编译开关等。每个克隆都是一个自包含的环境，它自身的 vcpkg.exe 副本仅可在自己的层次结构中运行。 vcpkg 不会被添加到任何环境变量，并且在 Windows 注册表或 Visual Studio 上也不会有依赖项。
 
 ## <a name="sources-not-binaries"></a>源不是二进制文件
 

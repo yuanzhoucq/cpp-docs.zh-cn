@@ -3,12 +3,12 @@ title: 在 Visual Studio 中配置 Linux CMake 项目
 description: 如何在 Visual Studio 中配置 Linux CMake 项目
 ms.date: 11/01/2018
 ms.assetid: f8707b32-f90d-494d-ae0b-1d44425fdc25
-ms.openlocfilehash: f2186c14fbe2eb1273fceb4a378b359564eae327
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 22de2f7a7b5374f781a032f5152610d7a97feb16
+ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750593"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57815861"
 ---
 # <a name="configure-a-linux-cmake-project"></a>配置 Linux CMake 项目
 
@@ -22,7 +22,7 @@ Visual Studio 不会修改 CMakeLists.txt 文件或原始 CMake 缓存，因此�
 
 使用 Visual Studio 中的 CMake 支持需要 CMake 3.8 中引入的服务器模式支持。 对于 Microsoft 提供的 CMake 变体，请在 [https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases) 中下载最新的预生成二进制文件。
 
-本主题假定你已阅读 [CMake Tools for Visual Studio](../ide/cmake-tools-for-visual-cpp.md)。 
+本主题假定你已阅读 [CMake Tools for Visual Studio](../build/cmake-projects-in-visual-studio.md)。 
 
 > [!NOTE]
 > 使用 Visual Studio 中的 CMake 支持需要 CMake 3.8 中引入的服务器模式支持。 对于 Microsoft 提供的 CMake 变体，请在 [https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases) 中下载最新的预生成二进制文件。 在 Visual Studio 2019 中，可以自动部署预生成二进制文件（请参阅[下载预生成 CMake 二进制文件](#download-prebuilt-cmake-binaries)）。
@@ -67,11 +67,11 @@ add_executable(hello-cmake hello.cpp)
 
 若要在远程系统上调试代码，请设置断点，并在项目设置旁边的工具栏菜单中选择“CMake 目标”作为启动项，再选择工具栏中的“&#x23f5; 开始”，或按 F5。
 
-若要自定义程序的命令行参数，请右键单击解决方案资源管理器中的可执行文件，并选择“调试和启动设置”。 这会打开或创建 launch.vs.json 配置文件，其中包含程序信息。 若要指定其他参数，请以 `args` JSON 数组形式添加它们。 有关详细信息，请参阅 [Visual C++ 中的“打开文件夹”项目](../ide/configure-cmake-debugging-sessions.md)和[配置 CMake 调试会话](../ide/non-msbuild-projects.md)。
+若要自定义程序的命令行参数，请右键单击解决方案资源管理器中的可执行文件，并选择“调试和启动设置”。 这会打开或创建 launch.vs.json 配置文件，其中包含程序信息。 若要指定其他参数，请以 `args` JSON 数组形式添加它们。 有关详细信息，请参阅 [C++ 的“打开文件夹”项目](../build/configure-cmake-debugging-sessions.md)和[配置 CMake 调试会话](../build/open-folder-projects-cpp.md)。
 
 ## <a name="configure-cmake-settings-for-linux"></a>配置适用于 Linux 的 CMake 设置
 
-CMake Linux 项目中的 CMakeSettings.json 文件可指定在[自定义 CMake 设置](../ide/customize-cmake-settings.md)中列出的所有属性，以及控制远程 Linux 计算机上的生成设置的其他属性。 若要更改默认的 CMake 设置，请从主菜单依次选择“CMake”|“更改 CMake 设置”|“CMakeLists.txt”，或右键单击“解决方案资源管理器”中的“CMakeSettings.txt”，然后选择“更改 CMake 设置”。 然后，visual Studio 会在根项目文件夹中创建一个新的 `CMakeSettings.json` 文件。 可使用“CMake 设置”编辑器打开文件或直接修改该文件。 
+CMake Linux 项目中的 CMakeSettings.json 文件可指定在[自定义 CMake 设置](../build/customize-cmake-settings.md)中列出的所有属性，以及控制远程 Linux 计算机上的生成设置的其他属性。 若要更改默认的 CMake 设置，请从主菜单依次选择“CMake”|“更改 CMake 设置”|“CMakeLists.txt”，或右键单击“解决方案资源管理器”中的“CMakeSettings.txt”，然后选择“更改 CMake 设置”。 然后，visual Studio 会在根项目文件夹中创建一个新的 `CMakeSettings.json` 文件。 可使用“CMake 设置”编辑器打开文件或直接修改该文件。 
 
 以下示例显示了基于上述代码示例的 Linux 调试的默认配置：
 
@@ -138,10 +138,10 @@ CMake Linux 项目中的 CMakeSettings.json 文件可指定在[自定义 CMake �
 
 ## <a name="see-also"></a>请参阅
 
-[使用项目属性](../ide/working-with-project-properties.md)<br/>
-[Visual C++ 的 CMake 工具](../ide/cmake-tools-for-visual-cpp.md)<br/>
+[使用项目属性](../build/working-with-project-properties.md)<br/>
+[Visual Studio 中的 CMake 项目](../build/cmake-projects-in-visual-studio.md)<br/>
 [连接到远程 Linux 计算机](connect-to-your-remote-linux-computer.md)<br/>
-[自定义 CMake 设置](../ide/customize-cmake-settings.md)<br/>
-[配置 CMake 调试会话](../ide/configure-cmake-debugging-sessions.md)<br/>
+[自定义 CMake 设置](../build/customize-cmake-settings.md)<br/>
+[配置 CMake 调试会话](../build/configure-cmake-debugging-sessions.md)<br/>
 [部署、运行和调试 Linux 项目](deploy-run-and-debug-your-linux-project.md)<br/>
-[CMake 预定义配置引用](../ide/cmake-predefined-configuration-reference.md)<br/>
+[CMake 预定义配置引用](../build/cmake-predefined-configuration-reference.md)<br/>

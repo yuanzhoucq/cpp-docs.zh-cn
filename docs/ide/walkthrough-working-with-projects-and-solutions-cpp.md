@@ -7,12 +7,12 @@ helpviewer_keywords:
 - projects [C++]
 - solutions [C++], about solutions
 ms.assetid: 93a3f290-e294-46e3-876e-e3084d9ae833
-ms.openlocfilehash: 968e4981a28d646b75335ee380635fd8f8e863e3
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 9408938b670d8130305f2e1c1258fc6fcb9875bb
+ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519226"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57820060"
 ---
 # <a name="walkthrough-working-with-projects-and-solutions-c"></a>演练：使用项目和解决方案 (C++)
 
@@ -22,7 +22,7 @@ ms.locfileid: "51519226"
 
 ## <a name="before-you-start"></a>准备工作
 
-要完成本演练，需要 Visual Studio 2017 版本 15.3 或更高版本。 如果需要副本，此处是一个简短的指南：[在 Visual Studio 中安装 C++ 支持](../build/vscpp-step-0-installation.md)。 如果尚未安装，请按照通过“Hello, World”教程完成安装后的后续步骤操作，确保 Visual C++ 正确安装且正常工作。
+要完成本演练，需要 Visual Studio 2017 版本 15.3 或更高版本。 如果需要副本，下面是简要指南：[在 Visual Studio 中安装 C++ 支持](../build/vscpp-step-0-installation.md)。 如果尚未安装，请按照通过“Hello, World”教程完成安装后的后续步骤操作，确保 Visual C++ 正确安装且正常工作。
 
 了解 C++ 语言的基础知识以及编译器、链接器和调试程序的用途会很有帮助。 本教程还假定你熟悉 Windows 及其菜单、对话框的使用方式。
 
@@ -83,11 +83,13 @@ ms.locfileid: "51519226"
 
       修改构造函数，使其带有一个类型为 `int`、名为“players”的参数。
 
-      <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#101](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_2.h)]--> `Cardgame(int players);`
+      <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#101](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_2.h)]-->
+      `Cardgame(int players);`
 
    - 在默认析构函数之后，为名为 GetParticipants 的 `static int` 成员函数添加内联声明，该成员函数没有参数且返回 `totalParticipants` 值。
 
-      <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#102](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_3.h)]--> `static int GetParticipants() { return totalParticipants; }`
+      <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#102](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_3.h)]-->
+      `static int GetParticipants() { return totalParticipants; }`
 
    在你对 Cardgame.h 文件进行更改之后，该文件应类似于以下代码：
 
@@ -216,9 +218,9 @@ ms.locfileid: "51519226"
 ## <a name="next-steps"></a>后续步骤
 
 上一步：[使用 Visual Studio IDE 进行 C++ 桌面开发](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)<br/>
-下一步：[演练：生成项目 (C++)](../ide/walkthrough-building-a-project-cpp.md)<br/>
+**下一篇：**[演练：生成项目 (C++)](../ide/walkthrough-building-a-project-cpp.md)<br/>
 
 ## <a name="see-also"></a>请参阅
 
 [C++ 语言参考](../cpp/cpp-language-reference.md)<br/>
-[生成 C/C++ 程序](../build/building-c-cpp-programs.md)<br/>
+[项目和生成系统](../build/projects-and-build-systems-cpp.md)<br/>
