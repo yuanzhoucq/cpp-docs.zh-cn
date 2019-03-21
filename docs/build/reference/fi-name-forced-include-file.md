@@ -12,12 +12,12 @@ helpviewer_keywords:
 - /FI compiler option [C++]
 - preprocess header file compiler option [C++]
 ms.assetid: 07e79577-8152-4df9-a64c-aae08c603397
-ms.openlocfilehash: 2e85706a0266696b83fe1a1a6cdc45ba3399fc21
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: e047ecc5266a898f2c6dc24be3c204f8ddf94386
+ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57809218"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58278364"
 ---
 # <a name="fi-name-forced-include-file"></a>/FI（命名强制包含文件）
 
@@ -41,7 +41,7 @@ ms.locfileid: "57809218"
 
 1. 单击**高级**属性页。
 
-1. 修改**强制包含**属性。
+1. 修改**强制包含文件**属性。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>以编程方式设置此编译器选项
 
