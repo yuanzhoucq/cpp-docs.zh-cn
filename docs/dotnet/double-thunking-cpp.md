@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /clr compiler option [C++], double thunking
 - interoperability [C++], double thunking
 ms.assetid: a85090b2-dc3c-498a-b40c-340db229dd6f
-ms.openlocfilehash: 984a20d701b159820a94483fe9d3743f015b71f6
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: f34af20ed3dd2c48659bdbf7794c443920dbb4e9
+ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57741960"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58278393"
 ---
 # <a name="double-thunking-c"></a>双重 Thunk (C++)
 
@@ -27,7 +27,7 @@ ms.locfileid: "57741960"
 
 同样，如果导出 ([dllexport、 dllimport](../cpp/dllexport-dllimport.md)) 托管的函数，生成一个本机入口点和任何函数导入，并调用该函数将调用通过本机入口点。 若要避免双重形式转换在此情况下，不要使用本机导出/导入语义;只需引用通过元数据`#using`(请参阅[#using 指令](../preprocessor/hash-using-directive-cpp.md))。
 
-编译器已更新，以减少不必要的双重形式转换。 例如，使用托管类型 （包括返回类型） 的签名中的任何函数会隐式标记为`__clrcall`。 双精度的转换 （thunk） 消除的详细信息，请参阅[ https://msdn.microsoft.com/msdnmag/issues/05/01/COptimizations/default.aspx ](https://msdn.microsoft.com/msdnmag/issues/05/01/COptimizations/default.aspx)。
+编译器已更新，以减少不必要的双重形式转换。 例如，使用托管类型 （包括返回类型） 的签名中的任何函数会隐式标记为`__clrcall`。
 
 ## <a name="example"></a>示例
 
