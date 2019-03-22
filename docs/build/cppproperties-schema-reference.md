@@ -1,25 +1,25 @@
 ---
-title: CppProperties.json 架构参考
-ms.date: 03/05/2019
+title: CppProperties.json 架构引用
+ms.date: 03/21/2019
 helpviewer_keywords:
 - CMake in Visual C++
-ms.openlocfilehash: fd655de3313dd95eb3fcefaeba21e703d32e860a
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 43ffa0e92649fe233c6a743d4b64a2749cb28f5a
+ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57824894"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356096"
 ---
-# <a name="cpppropertiesjson-schema-reference"></a>CppProperties.json 架构参考
+# <a name="cpppropertiesjson-schema-reference"></a>CppProperties.json 架构引用
 
-不使用 CMake 打开文件夹项目可以存储中的项目配置设置`CppProperties.json`文件。 (CMake 项目使用[CMakeSettings.json](customize-cmake-settings.md)文件。)Visual Studio IDE 使用`CppProperties.json`IntelliSense 和代码导航。 配置包含名称/值对，并定义 #include 路径、 编译器开关和其他参数。 
+不使用 CMake 的“打开文件夹”项目可以将项目配置设定存储在 `CppProperties.json` 文件中。 （CMake 项目使用 [CMakeSettings.json](customize-cmake-settings.md) 文件。）Visual Studio IDE 对 IntelliSense 和代码导航使用 `CppProperties.json`。 配置包含名称/值对，定义了 #include 路径、编译器开关和其他参数组成。 
 
 
 ## <a name="default-configurations"></a>默认配置
 
-Visual Studio 提供了预定义的配置的 x86 和 x64 调试和发布。 默认情况下，你的项目具有 x86 调试配置`CppProperties.json`。 若要添加新的配置，请右键单击`CppProperties.json`文件中**解决方案资源管理器**，然后选择**添加配置**:
+Visual Studio 预定义的配置为 x86 和 x64 的 Debug 和 Release。 默认情况下，项目在 `CppProperties.json` 中为 x86-Debug 配置。 若要添加新的配置，请右键单击“解决方案资源管理器”中的 `CppProperties.json` 文件，然后选择“添加配置”：
 
-![打开文件夹添加配置](media/open-folder-add-config.png "打开文件夹添加新的配置")
+![“打开文件夹”的添加配置](media/open-folder-add-config.png "Open Folder add new configuration")
 
 默认配置如下所示：
 
@@ -97,9 +97,9 @@ Visual Studio 提供了预定义的配置的 x86 和 x64 调试和发布。 默�
   ]
 }
 ```
-对于具有一系列允许的值的属性，代码编辑器中显示可用的选项，当您开始键入：
+对于具有一系列允许值的属性，开始键入内容时代码编辑器会显示可用选项：
 
-![打开文件夹 IntelliSense](media/open-folder-intellisense-mode.png "打开文件夹 IntelliSense")
+![“打开文件夹”的 IntelliSense](media/open-folder-intellisense-mode.png "Open Folder IntelliSense")
 
 
 
@@ -109,18 +109,20 @@ Visual Studio 提供了预定义的配置的 x86 和 x64 调试和发布。 默�
 
 |||
 |-|-|
-|`name`|在 c + + 配置下拉列表中显示的配置名称|
-|`includePath`|应在包含路径 （映射到 /I 为大多数编译器） 中指定的文件夹的列表|
-|`defines`|应为的宏的列表定义 （映射到 /D 为大多数编译器）|
-|`compilerSwitches`|可能会影响 IntelliSense 的行为的一个或多个其他开关|
-|`forcedInclude`|要自动包含在每个编译单元中的标头 （MSVC 为映射到 /FI; 或-包括用于 clang）|
-|`undefines`|宏是未定义 （映射到 /U 表示 MSVC） 的列表|
-|`intelliSenseMode`|要使用 IntelliSense 引擎。 你可以为 MSVC、gcc 或 Clang 指定体系结构特定的变量：<br/><br/>- msvc-x86（默认）<br/>- msvc-x64<br/>- msvc-arm<br/>- windows-clang-x86<br/>- windows-clang-x64<br/>- windows-clang-arm<br/>- Linux-x64<br/>- Linux-x86<br/>- Linux-arm<br/>- gccarm|
+|`name`|显示在“C++ 配置”下拉列表中的配置名称|
+|`includePath`|应在包含路径中指定的文件夹的列表（对于大多数编译器，映射到 /I）|
+|`defines`|应定义的宏的列表（对于大多数编译器，映射到 /D）|
+|`compilerSwitches`|可以影响 IntelliSense 行为的一个或多个附加开关|
+|`forcedInclude`|会自动包含在每个编译单元的标头（对于 MSVC，映射到 /FI；对于 clang，映射到 -include）|
+|`undefines`|未定义的宏的列表（对于 MSVC，映射到 /U）|
+|`intelliSenseMode`|要使用的 IntelliSense 引擎。 你可以为 MSVC、gcc 或 Clang 指定体系结构特定的变量：<br/><br/>- windows-msvc-x86 (default)<br/>- windows-msvc-x64<br/>- msvc-arm<br/>- windows-clang-x86<br/>- windows-clang-x64<br/>- windows-clang-arm<br/>- Linux-x64<br/>- Linux-x86<br/>- Linux-arm<br/>- gccarm|
+
+注意:值`msvc-x86`和`msvc-x64`支持仅由于历史原因。 请使用`windows-msvc*`变体。
 
 ## <a name="custom-configurations"></a>自定义配置
 
 
-您可以自定义任何中默认 configuations `CppProperties.json`，或创建新的配置。 每个配置都会显示在配置下拉列表中：
+可自定义 `CppProperties.json` 中的任何默认配置，或创建新配置。 每个配置都会显示在配置下拉列表中：
 
 ```json
 {
@@ -139,7 +141,7 @@ Visual Studio 提供了预定义的配置的 x86 和 x64 调试和发布。 默�
 
 ## <a name="system-environment-variables"></a>系统环境变量 
 
- `CppProperties.json` 支持系统环境变量扩展为包括路径和其他属性值。 语法为 `${env.FOODIR}`，用于扩展环境变量 `%FOODIR%`。 还支持下列系统定义的变量：
+ `CppProperties.json` 支持用于包含路径和其他属性值的系统环境变量扩展。 语法为 `${env.FOODIR}`，用于扩展环境变量 `%FOODIR%`。 还支持下列系统定义的变量：
 
 |变量名|描述|
 |-----------|-----------------|
@@ -162,7 +164,7 @@ Visual Studio 提供了预定义的配置的 x86 和 x64 调试和发布。 默�
 
 ## <a name="custom-environment-variables"></a>自定义环境变量
 
-可以定义中的自定义环境变量`CppProperties.json`是全局或每个配置。 下面的示例演示如何声明并使用默认和自定义的环境变量。 全局 environments 属性声明名为 INCLUDE 的变量，此变量可用于任何配置：
+可在 `CppProperties.json` 中以全局形式或按配置定义自定义环境变量。 下面的示例演示如何声明并使用默认和自定义的环境变量。 全局 environments 属性声明名为 INCLUDE 的变量，此变量可用于任何配置：
 
 ```json
 {
@@ -186,7 +188,7 @@ Visual Studio 提供了预定义的配置的 x86 和 x64 调试和发布。 默�
         "${env.INCLUDE}"
       ],
       "defines": [ "WIN32", "_DEBUG", "UNICODE", "_UNICODE" ],
-      "intelliSenseMode": "msvc-x86"
+      "intelliSenseMode": "windows-msvc-x86"
     },
     {
       "inheritEnvironments": [
@@ -199,12 +201,12 @@ Visual Studio 提供了预定义的配置的 x86 和 x64 调试和发布。 默�
         "${env.INCLUDE}"
       ],
       "defines": [ "WIN32", "_DEBUG", "UNICODE", "_UNICODE" ],
-      "intelliSenseMode": "msvc-x64"
+      "intelliSenseMode": "windows-msvc-x64"
     }
   ]
 }
 ```
-## <a name="per-configuration-environment-variables"></a>每个配置环境变量
+## <a name="per-configuration-environment-variables"></a>预配置环境变量
 
 还可在某个配置内定义 environments 属性，让它只应用于该配置，并覆盖所有同名的全局变量。 在下面的示例中，x64 配置定义了一个会覆盖全局值的本地 INCLUDE 变量：
 
@@ -227,7 +229,7 @@ Visual Studio 提供了预定义的配置的 x86 和 x64 调试和发布。 默�
         "${env.INCLUDE}"
       ],
       "defines": [ "WIN32", "_DEBUG", "UNICODE", "_UNICODE" ],
-      "intelliSenseMode": "msvc-x86"
+      "intelliSenseMode": "windows-msvc-x86"
     },
     {
       "environments": [
@@ -246,25 +248,25 @@ Visual Studio 提供了预定义的配置的 x86 和 x64 调试和发布。 默�
         "${env.INCLUDE}"
       ],
       "defines": [ "WIN32", "_DEBUG", "UNICODE", "_UNICODE" ],
-      "intelliSenseMode": "msvc-x64"
+      "intelliSenseMode": "windows-msvc-x64"
     }
   ]
 }
 ```
 
-所有自定义和默认环境变量也会出现在`tasks.vs.json`和`launch.vs.json`。
+所有自定义和默认环境变量也能用于 `tasks.vs.json` 和 `launch.vs.json`。
 
-#### <a name="build-in-macros"></a>生成中的宏
+#### <a name="build-in-macros"></a>内置宏
 
-有权访问中的以下内置宏`CppProperties.json`:
+可访问 `CppProperties.json` 中的下列内置宏：
 
 |||
 |-|-|
 |`${workspaceRoot}`| 工作区文件夹的完整路径|
-|`${projectRoot}`| 文件夹的完整路径其中`CppProperties.json`放置|
+|`${projectRoot}`| `CppProperties.json` 所在文件夹的完整路径|
 |`${vsInstallDir}`| 安装 VS 2017 的运行示例的文件夹的完整路径|
 
-例如，如果你的项目具有的包含文件夹，并且还包括 windows.h 和 Windows SDK 中的其他常见标头，您可能想要更新你`CppProperties.json`与这些配置文件包括：
+例如，如果项目具备包含文件夹并包含 windows.h 和 Windows SDK 中的其他通用标头，可能需要更新 `CppProperties.json` 配置文件，使其带有以下包含内容：
 
 ```json
 {

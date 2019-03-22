@@ -17,12 +17,12 @@ helpviewer_keywords:
 - exceptions, diagnosing odd behavior
 - compatibility, between assemblies
 ms.assetid: 679b8ed3-d966-4a0c-b627-2a3f3ec96b74
-ms.openlocfilehash: c61f3fdd434a1b746c024b1a98d1d71f04df7e5b
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: b91918d526d83d4cf47436d02b7c67038576bafb
+ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57746912"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356174"
 ---
 # <a name="managed-types-ccli"></a>托管类型 (C++/CLI)
 
@@ -46,19 +46,21 @@ int main(int, char*[], char*[]) {}
 
 |Visual c + + 类型|.NET Framework 类型|
 |-----------------------|-------------------------|
-|**bool**|**System.Boolean**|
-|**签名 char** (请参阅[/J](../build/reference/j-default-char-type-is-unsigned.md)有关详细信息)|**System.SByte**|
-|**unsigned char**|**System.Byte**|
-|**wchar_t**|**System.Char**|
-|**双精度**和**长双精度**|**System.Double**|
-|**float**|**System.Single**|
-|**int**，**带符号整型**，**长**，并**长签名**|**System.Int32**|
-|**无符号的整型**和**无符号长**|**System.UInt32**|
-|**__int64**和**签名 __int64**|**System.Int64**|
-|unsigned __int64|**System.UInt64**|
-|**短**和**短签名**|**System.Int16**|
-|**unsigned short**|**System.UInt16**|
-|**void**|**System.Void**|
+|**void**|<xref:System.Void?displayProperty=nameWithType>|
+|**bool**|<xref:System.Boolean?displayProperty=nameWithType>|
+|**有符号的字符** |<xref:System.SByte?displayProperty=nameWithType>|
+|**unsigned char**|<xref:System.Byte?displayProperty=nameWithType>|
+|**wchar_t**|<xref:System.Char?displayProperty=nameWithType>|
+|**短**和**短签名**|<xref:System.Int16?displayProperty=nameWithType>|
+|**unsigned short**|<xref:System.UInt16?displayProperty=nameWithType>|
+|**int**，**带符号整型**，**长**，并**长签名**|<xref:System.Int32?displayProperty=nameWithType>|
+|**无符号的整型**和**无符号长**|<xref:System.UInt32?displayProperty=nameWithType>|
+|**__int64**和**签名 __int64**|<xref:System.Int64?displayProperty=nameWithType>|
+|unsigned __int64|<xref:System.UInt64?displayProperty=nameWithType>|
+|**float**|<xref:System.Single?displayProperty=nameWithType>|
+|**双精度**和**长双精度**|<xref:System.Double?displayProperty=nameWithType>|
+
+有关编译器选项为默认值为有符号或无符号的详细信息**char**，请参阅[/J （默认 char 类型是无符号）](../build/reference/j-default-char-type-is-unsigned.md)。
 
 ## <a name="version_issues"></a> 嵌套在本机类型中的值类型的版本问题
 

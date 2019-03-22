@@ -37,12 +37,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HString::Set method
 - Microsoft::WRL::Wrappers::HString::~HString, destructor
 ms.assetid: 6709dd2e-8d72-4675-8ec7-1baa7d71854d
-ms.openlocfilehash: 9d660f507f50c00c8ccd6f19505f09285ede9e60
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: 19ef11a5d33e69bb77049e450df1b386528b7f7b
+ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54893595"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356226"
 ---
 # <a name="hstring-class"></a>HString 类
 
@@ -83,7 +83,7 @@ Windows 运行时提供通过字符串的访问权限[HSTRING](/windows/desktop/
 
 ### <a name="public-operators"></a>公共运算符
 
-名称                                         | 描述
+name                                         | 描述
 -------------------------------------------- | ----------------------------------------------------------------------------
 [HString::operator=](#operator-assign)       | 另一个的值移`HString`对象与当前`HString`对象。
 [HString::operator==](#operator-equality)    | 指示两个参数是否相等。
@@ -187,7 +187,7 @@ HSTRING* GetAddressOf() throw()
 初始化 `HString` 类的新实例。
 
 ```cpp
-HString(HSTRING hstr = nullptr) throw();
+HString() throw();
 HString(HString&& other) throw();
 ```
 

@@ -1,12 +1,12 @@
 ---
 title: ARM64 ABI 约定概述
-ms.date: 07/11/2018
-ms.openlocfilehash: 537f8cf5bb8db61854bea7f4624e3dd3176c6a59
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.date: 03/22/2019
+ms.openlocfilehash: 5dddc26285606b771a3939be19dff5b9ad53f3c7
+ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816537"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356187"
 ---
 # <a name="overview-of-arm64-abi-conventions"></a>ARM64 ABI 约定概述
 
@@ -191,7 +191,7 @@ X0 中返回整数值。 浮点值 s0/d0/v0 根据形式返回。
 
 以下利 ARM ABI，堆栈必须保持为 16 字节对齐在所有时间。 AArch64 包含生成错误时执行的 SP 相对负载或应用商店和 SP 不是 16 字节对齐的堆栈对齐的硬件功能。 在任何时候启用此功能在运行 Windows。
 
-分配 4k 或多个值得堆栈的函数必须确保按顺序访问的最后一页之前每个页时，从而确保没有代码可以"跳过"Windows 用于展开堆栈的受保护页。 通常这是通过`__chkstk`帮助器，具有将按 16 个 in x8 划分的总堆栈分配的自定义调用约定。
+分配 4k 或多个值得堆栈的函数必须确保按顺序访问的最后一页之前每个页时，从而确保没有代码可以"跳过"Windows 用于展开堆栈的受保护页。 通常这是通过`__chkstk`帮助器，具有将按 16 个 in x15 划分的总堆栈分配的自定义调用约定。
 
 ## <a name="red-zone"></a>红色区域
 

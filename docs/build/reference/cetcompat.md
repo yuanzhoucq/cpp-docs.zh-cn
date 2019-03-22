@@ -1,21 +1,21 @@
 ---
-title: / CETCOMPAT （控制流强制技术兼容）
+title: / CETCOMPAT （CET 阴影堆栈兼容）
 ms.date: 02/19/2019
 f1_keywords:
 - /CETCOMPAT
 helpviewer_keywords:
 - /CETCOMPAT linker option
 - /CETCOMPAT
-ms.openlocfilehash: 1a01dd45667f64dbcbe11acaf1180835bd0d6e31
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 0ed5d9d4f9f4f4dc5cd4fc19df4179e86e430187
+ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57809842"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356010"
 ---
-# <a name="cetcompat-control-flow-enforcement-technology-compatible"></a>/ CETCOMPAT （控制流强制技术兼容）
+# <a name="cetcompat-cet-shadow-stack-compatible"></a>/ CETCOMPAT （CET 阴影堆栈兼容）
 
-指定是否将标记为控制流强制技术 (CET) 兼容的可执行映像。
+指定是否将标记为与控制流强制技术 (CET) 阴影堆栈兼容的可执行映像。
 
 ## <a name="syntax"></a>语法
 
@@ -24,13 +24,13 @@ ms.locfileid: "57809842"
 ## <a name="arguments"></a>自变量
 
 **NO**<br/>
-指定的可执行文件不应标记与 CET 兼容。
+指定的可执行文件不应标记与 CET 阴影堆栈兼容。
 
 ## <a name="remarks"></a>备注
 
-控制流强制技术 (CET) 是一项计算机处理器功能，可提供更有效地防止某些类型的恶意软件攻击的功能。 有关详细信息，请参阅[Intel 控制流强制技术预览](https://software.intel.com/sites/default/files/managed/4d/2a/control-flow-enforcement-technology-preview.pdf)。
+控制流强制技术 (CET) 阴影堆栈是一种计算机处理器功能，提供了功能来防范返回面向编程 (ROP) 基于恶意软件攻击。 有关详细信息，请参阅[Intel 控制流强制技术预览](https://software.intel.com/sites/default/files/managed/4d/2a/control-flow-enforcement-technology-preview.pdf)。
 
-**/CETCOMPAT**链接器选项通知链接器将标记作为 CET 兼容二进制文件。 **/CETCOMPAT:NO**将标记为与 cet 证书不兼容的二进制文件。 如果在命令行上指定这两个选项，则使用指定的最后一个。 此开关目前仅适用于 x86 和 x64 体系结构。
+**/CETCOMPAT**链接器选项通知链接器将标记作为 CET 阴影堆栈兼容的二进制文件。 **/CETCOMPAT:NO**将标记为与 CET 阴影堆栈不兼容的二进制文件。 如果在命令行上指定这两个选项，则使用指定的最后一个。 此开关目前仅适用于 x86 和 x64 体系结构。
 
 **/CETCOMPAT**选项是在 Visual Studio 2019 预览版 3 工具集开始提供。
 
