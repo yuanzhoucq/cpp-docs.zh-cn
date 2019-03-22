@@ -153,12 +153,12 @@ helpviewer_keywords:
 - C5105
 - C5106
 - C5107
-ms.openlocfilehash: 101181e72aaf30ca8bc1d0e4191649fcc4155a64
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: 46bb439b490295b7f3279f06421d3fd6b8d6ba8b
+ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328338"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356252"
 ---
 # <a name="compiler-warnings-c4800-through-c5999"></a>编译器警告 C4800-通过 C5999
 
@@ -169,7 +169,7 @@ ms.locfileid: "58328338"
 ## <a name="warning-messages"></a>警告消息
 
 |警告|消息|
-|-------------|-------------|
+|-------------|------------|
 |[编译器警告 （等级 C4800](compiler-warning-level-3-c4800.md)| 从隐式转换*类型*为布尔值。 可能会丢失信息 |
 |[编译器警告（等级 1）C4803](compiler-warning-level-1-c4803.md)|'*方法*： 引发方法具有不同的存储类从与事件*事件*|
 |[编译器警告（等级 1）C4804](compiler-warning-level-1-c4804.md)|'*操作*： 不安全地使用操作中的 bool 类型|

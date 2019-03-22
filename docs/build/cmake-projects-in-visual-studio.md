@@ -4,12 +4,12 @@ ms.date: 03/05/2019
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: b055a1e3ca1d43cc0a1633401c1a08a3d54c1a31
-ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
+ms.openlocfilehash: 84511c0712fffcacc1f90d4bde808620e0a0ab0f
+ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58278445"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356136"
 ---
 # <a name="cmake-projects-in-visual-studio"></a>Visual Studio 中的 CMake 项目
 
@@ -17,7 +17,7 @@ CMake 是一种跨平台开源工具，用于定义在多个平台上运行的�
 
 在 Visual Studio 2015 中，Visual Studio 用户可使用 [CMake 生成器](https://cmake.org/cmake/help/latest/manual/cmake-generators.7.html)生成 MSBuild 项目文件，IDE 之后可将该项目文件用于 IntelliSense、浏览和编译。
 
-Visual Studio 2017 引入了对 CMake 的丰富支持，包括[跨平台 CMake 项目](../linux/cmake-linux-project.md)。 “Visual C++ Tools for CMake”组件使用“打开文件夹”功能，让 IDE 能够直接将 CMake 项目文件（例如 CMakeLists.txt）用于 IntelliSense 和浏览。 支持 Ninja 和 Visual Studio 生成器。 如果使用 Visual Studio 生成器，则会生成一个临时项目文件并将该文件传递给 msbuild.exe，但是绝不会出于 IntelliSense 或浏览目的加载它。 可以导入现有的 CMake 缓存；Visual Studio 自动提取自定义变量并创建预填充的 `CMakeSettings.json` 文件。 
+Visual Studio 2017 引入了对 CMake 的丰富支持，包括[跨平台 CMake 项目](../linux/cmake-linux-project.md)。 “Visual C++ Tools for CMake”组件使用“打开文件夹”功能，让 IDE 能够直接将 CMake 项目文件（例如 CMakeLists.txt）用于 IntelliSense 和浏览。 支持 Ninja 和 Visual Studio 生成器。 如果使用 Visual Studio 生成器，则会生成一个临时项目文件并将该文件传递给 msbuild.exe，但是绝不会出于 IntelliSense 或浏览目的加载它。 您可以导入现有 CMake 缓存;Visual Studio 会自动将提取自定义的变量，并创建预填充**CMakeSettings.json**文件。 
 
 ## <a name="installation"></a>安装
 
@@ -47,18 +47,18 @@ Visual Studio 2017 引入了对 CMake 的丰富支持，包括[跨平台 CMake �
 
 ![CMake“目标视图”按钮](media/cmake-targets-view.png)
 
-Visual Studio 使用名为 `CMakeSettings.json` 的文件存储 Cmake.exe 的环境变量或命令行选项。 还可使用 `CMakeSettings.json` 定义和存储多个 CMake 生成配置，并在 IDE 中方便地在它们之间切换。 
+Visual Studio 使用名为的文件**CMakeSettings.json**存储环境变量或 Cmake.exe 的命令行选项。 **CMakeSettings.json**还可以让您来定义和存储多个 CMake 生成配置，并方便地在 IDE 中它们之间进行切换。 
 
-否则，请使用 `CMakeLists.txt` 来指定源文件、查找库、设置编译器和链接器选项（就像在任何 CMake 项目中进行操作一样），以及指定其他与生成系统相关的信息。
+否则，请使用**CMakeLists.txt**就像你会在任何 CMake 项目指定源代码文件，发现库、 设置编译器和链接器选项，并指定其他生成系统中的相关信息。
 
-如果需要在调试时将参数传递给可执行文件，可以使用另一个名为 `launch.vs.json` 的文件。 在某些情况中，Visual Studio 会自动生成这些文件；你可以手动编辑它们。 也可自己创建文件。
+如果你需要在调试时将参数传递到可执行文件，可以使用另一个名为的文件**launch.vs.json**。 在某些情况中，Visual Studio 会自动生成这些文件；你可以手动编辑它们。 也可自己创建文件。
 
 > [!NOTE]
-> 对于其他类型的“打开文件夹”项目，将使用另外两个 JSON 文件：`CppProperties.json` 和 `tasks.vs.json`。 这些都与 CMake 项目无关。
+> 对于其他类型的打开文件夹项目，可使用两个其他的 JSON 文件：**CppProperties.json**并**tasks.vs.json**。 这些都与 CMake 项目无关。
 
 ## <a name="import-an-existing-cache"></a>导入现有缓存
 
-导入现有 CMakeCache.txt 文件时，Visual Studio 自动提取自定义的变量，并基于这些变量创建一个预填充的 [`CMakeSettings.json`](#cmake_settings) 文件。 不会以任何方式修改原始缓存，并且仍可从命令行或者借助用于生成原始缓存的工具或 IDE 使用该原始缓存。 新的 `CMakeSettings.json` 文件与项目的根 CMakeLists.txt 放在一起。 Visual Studio 基于设置文件生成新的缓存。 可在“工具”|“选项”|“CMake”|“常规”对话框中替代自动缓存生成。
+Visual Studio 导入现有 CMakeCache.txt 文件时，会自动提取自定义的变量，并创建预填充[ **CMakeSettings.json** ](#cmake_settings)文件基于它们。 不会以任何方式修改原始缓存，并且仍可从命令行或者借助用于生成原始缓存的工具或 IDE 使用该原始缓存。 新**CMakeSettings.json**文件将位于与项目的根 CMakeLists.txt 一起。 Visual Studio 基于设置文件生成新的缓存。 可在“工具”|“选项”|“CMake”|“常规”对话框中替代自动缓存生成。
 
 并非缓存中的所有内容都会被导入。  生成器和编译器的位置等属性替换为已知适合用于 IDE 的默认值。
 
@@ -88,7 +88,7 @@ Visual Studio 使用名为 `CMakeSettings.json` 的文件存储 Cmake.exe 的环
 
 ![CMake 生成菜单命令](media/cmake-build-menu.png "CMake 生成命令菜单")
 
-可自定义生成配置、环境变量、命令行参数和其他设置，而无需使用 `CMakeSettings.json` 文件修改 CMakeLists.txt 文件。 有关详细信息，请参阅[自定义 CMake 设置](customize-cmake-settings.md)。
+可以自生成配置、 环境变量、 命令行参数和其他设置定义不修改 CMakeLists.txt 文件的使用情况**CMakeSettings.json**文件。 有关详细信息，请参阅[自定义 CMake 设置](customize-cmake-settings.md)。
 
 生成结果按预期显示在“输出窗口”和“错误列表”中。
 
@@ -104,7 +104,7 @@ Visual Studio 使用名为 `CMakeSettings.json` 的文件存储 Cmake.exe 的环
 
 如果在上次生成后进行了更改，则“运行”或“F5”命令会先生成项目。
 
-可通过设置 `launch.vs.json` 文件中的属性来自定义 CMake 调试会话。 有关更多信息，请参阅[配置 CMake 调试会话](configure-cmake-debugging-sessions.md)。
+你可以自定义调试会话中设置属性 CMake **launch.vs.json**文件。 有关更多信息，请参阅[配置 CMake 调试会话](configure-cmake-debugging-sessions.md)。
 
 
 ## <a name="editing-cmakeliststxt-files"></a>编辑 CMakeLists.txt 文件
@@ -120,13 +120,13 @@ Visual Studio 使用名为 `CMakeSettings.json` 的文件存储 Cmake.exe 的环
 
 ## <a name="cmake-configure-step"></a>CMake 配置步骤
 
-如果对 `CMakeSettings.json` 或 CMakeLists.txt 文件进行了重大更改，Visual Studio 会自动重新运行 CMake 配置步骤。 如果配置步骤正确完成，则可在 C++ IntelliSense 和语言服务以及生成和调试操作中使用所收集的信息。
+当对进行重大更改**CMakeSettings.json**或 CMakeLists.txt 文件，Visual Studio 会自动重新运行 CMake 配置步骤。 如果配置步骤正确完成，则可在 C++ IntelliSense 和语言服务以及生成和调试操作中使用所收集的信息。
 
 如果多个 CMake 项目使用相同的 CMake 配置名称（例如 x86-Debug），那么在选择该配置时会配置并生成所有这些项目（在其自己的生成根文件夹中）。 可以调试参与该 CMake 配置的所有 CMake 项目中的目标。
 
    ![CMake“仅生成”菜单项](media/cmake-build-only.png "CMake“仅生成”菜单项")
 
-要将生成和调试会话限制在工作区中的项目子集内，请在 `CMakeSettings.json` 文件中用唯一名称新建一个配置，并仅将该配置应用于这些项目。 如果选择了该配置，则仅为这些特定项目启用 IntelliSense 以及生成和调试命令。
+若要限制生成和调试会话保存到工作区中项目的子集，创建新的配置中的唯一名称**CMakeSettings.json**文件，并将其应用于仅限这些项目。 如果选择了该配置，则仅为这些特定项目启用 IntelliSense 以及生成和调试命令。
 
 ## <a name="troubleshooting-cmake-cache-errors"></a>排查 CMake 缓存错误
 

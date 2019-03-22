@@ -52,12 +52,12 @@ helpviewer_keywords:
 - C1505
 - C1901
 ms.assetid: 6c8df109-7594-48ed-987a-97d9fe2b04af
-ms.openlocfilehash: 6809ef1640c324e247bd20c83d4622fe27987ae6
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: 17c456f6ab248964cbd19cd9695da290254ccf1b
+ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328241"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356213"
 ---
 # <a name="compiler-fatal-errors-c999-through-c1999"></a>编译器错误 C999 到 C1999
 
@@ -70,7 +70,7 @@ ms.locfileid: "58328241"
 |Error|消息|
 |-----------|-------------|
 |[错误 C999](../../error-messages/compiler-errors-1/fatal-error-c999.md)|未知消息请在 Visual C++ 帮助菜单上，选择技术支持命令，或打开技术支持帮助文件了解详细信息|
-|[错误 C1001](../../error-messages/compiler-errors-1/fatal-error-c1001.md)|编译器中发生了内部错误。<br /><br /> （编译器文件“*file*”中的第 *number*行）<br /><br /> 若要解决此问题，请尝试简化或更改以上所列出位置附近的程序。 请在 Visual C++ 帮助菜单上，选择技术支持命令，或打开技术支持帮助文件了解详细信息|
+|[错误 C1001](../../error-messages/compiler-errors-1/fatal-error-c1001.md)|编译器中发生了内部错误。<br /> （编译器文件“*file*”中的第 *number*行）<br /> 若要解决此问题，请尝试简化或更改以上所列出位置附近的程序。 请在 Visual C++ 帮助菜单上，选择技术支持命令，或打开技术支持帮助文件了解详细信息|
 |[错误 C1002](../../error-messages/compiler-errors-1/fatal-error-c1002.md)|在第 2 遍中编译器的堆空间不足|
 |[错误 C1003](../../error-messages/compiler-errors-1/fatal-error-c1003.md)|错误计数超过 *number*；正在停止编译|
 |[错误 C1004](../../error-messages/compiler-errors-1/fatal-error-c1004.md)|发现意外的文件尾|
@@ -78,7 +78,7 @@ ms.locfileid: "58328241"
 |[错误 C1007](../../error-messages/compiler-errors-1/fatal-error-c1007.md)|无法识别的标志“*string*”（在“*option*”中）|
 |[错误 C1008](../../error-messages/compiler-errors-1/fatal-error-c1008.md)|没有指定输入文件|
 |[错误 C1009](../../error-messages/compiler-errors-1/fatal-error-c1009.md)|编译器限制: 宏嵌套太深|
-|[错误 C1010](../../error-messages/compiler-errors-1/fatal-error-c1010.md)|查找预编译头时意外的文件尾。 是否忘记添加 #include <*文件*> 到您的源？|
+|[错误 C1010](../../error-messages/compiler-errors-1/fatal-error-c1010.md)|查找预编译头时意外的文件尾。 是否忘记添加 #include \<*文件*> 到您的源？|
 |[错误 C1012](fatal-error-c1012.md)|括号不匹配：缺少“*character*”|
 |[错误 C1013](fatal-error-c1013.md)|编译器限制: 左括号太多|
 |[错误 C1014](fatal-error-c1014.md)|包含文件太多：深度 = *number*|
