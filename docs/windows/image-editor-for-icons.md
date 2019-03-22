@@ -42,12 +42,12 @@ helpviewer_keywords:
 - Image editor [C++], grid settings
 - grid settings, Image editor
 ms.assetid: 586d2b8b-0348-4883-a85d-1ff0ddbf14dd
-ms.openlocfilehash: 73fd4a8996bcfbaaf6fdd4018e524b66913d11cd
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 22fe458a72d970bb09687a53232f94b171e14a45
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563077"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328423"
 ---
 # <a name="image-editor-for-icons-c"></a>（c + +） 图标的图像编辑器
 
@@ -60,7 +60,7 @@ ms.locfileid: "57563077"
 
 此外可以使用**的图像编辑器**并[二进制编辑器](binary-editor.md)来处理托管项目中的资源文件。 你要编辑的任何托管资源都必须是链接的资源。 Visual Studio 资源编辑器不支持编辑嵌入的资源。
 
-除了创建新的图形资源，你可以[导入现有的映像](/windows/how-to-copy-resources#import-and-export-resources)进行编辑，然后将其添加到你的项目。 也可以打开并编辑映像不是用于项目的一部分[独立图像编辑](../windows/editing-an-image-outside-of-a-project-image-editor-for-icons.md)。
+除了创建新的图形资源，你可以[导入现有的映像](../windows/how-to-copy-resources.md#import-and-export-resources)进行编辑，然后将其添加到你的项目。 也可以打开并编辑映像不是用于项目的一部分[独立图像编辑](../windows/editing-an-image-outside-of-a-project-image-editor-for-icons.md)。
 
 有关的信息**的图像编辑器**，请参阅如何[创建图标或其他映像](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md)，[编辑图像](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)，[使用绘图工具](../windows/using-a-drawing-tool-image-editor-for-icons.md)， [处理颜色](../windows/working-with-color-image-editor-for-icons.md)，并[快捷键](../windows/accelerator-keys-image-editor-for-icons.md)。
 
@@ -151,7 +151,7 @@ ms.locfileid: "57563077"
 
 下面是举例说明如何将文本添加到 Windows 应用程序中的图标和操作文本的字体。
 
-1. 创建 c + + Windows 窗体应用程序。 有关详细信息，请参阅[创建一个 Windows 应用程序项目](/previous-versions/visualstudio/visual-studio-2010/42wc9kk5)。 *App.ico*默认情况下将文件添加到你的项目。
+1. 创建 c + + Windows 窗体应用程序。 有关详细信息，请参阅[如何：创建 Windows 窗体应用程序](/previous-versions/visualstudio/visual-studio-2008/s69bf10x(v%3dvs.90))。 *App.ico*默认情况下将文件添加到你的项目。
 
 1. 在中**解决方案资源管理器**，双击该文件*app.ico*。 **的图像编辑器**将打开。
 
@@ -215,7 +215,7 @@ ms.locfileid: "57563077"
 
 ## <a name="requirements"></a>要求
 
-无
+None
 
 ## <a name="see-also"></a>请参阅
 

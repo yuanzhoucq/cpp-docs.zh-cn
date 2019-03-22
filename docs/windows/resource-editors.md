@@ -21,12 +21,12 @@ helpviewer_keywords:
 - properties [C++], resources
 - resources [C++], properties
 ms.assetid: e20a29ec-d6fb-4ead-98f3-431a0e23aaaf
-ms.openlocfilehash: 461322076e2de4e2cd89c6d39592989aecc75361
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: a0b5e3905daf72307702dbe4f05c2871cf768ac0
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563012"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328800"
 ---
 # <a name="resource-editors-c"></a>资源编辑器 （c + +）
 
@@ -63,13 +63,13 @@ ms.locfileid: "57563012"
 > [!NOTE]
 > 可以使用修改资源的属性**属性**窗口。
 
-- 若要编辑的资源，属性在[资源视图](/windows/how-to-create-a-resource-script-file#create-resources)，右键单击你想要编辑，并选择的资源**属性**。  然后，在[属性窗口](/visualstudio/ide/reference/properties-window)，更改所需的资源的属性。
+- 若要编辑的资源，属性在[资源视图](how-to-create-a-resource-script-file.md#create-resources)，右键单击你想要编辑，并选择的资源**属性**。  然后，在[属性窗口](/visualstudio/ide/reference/properties-window)，更改所需的资源的属性。
 
 - 若要撤消的对资源的属性所做的更改，请确保所需的资源具有焦点**资源视图**，然后选择**撤消**从**编辑**菜单。
 
 ### <a name="win32-resources"></a>Win32 资源
 
-您可以访问中的 Win32 资源[资源视图](/windows/how-to-create-a-resource-script-file#create-resources)窗格。
+您可以访问中的 Win32 资源[资源视图](how-to-create-a-resource-script-file.md#create-resources)窗格。
 
 #### <a name="to-view-a-win32-resource-in-a-resource-editor"></a>若要在资源编辑器中查看 Win32 资源
 
@@ -113,7 +113,7 @@ ms.locfileid: "57563012"
 
 ### <a name="to-preview-resources"></a>若要预览资源
 
-1. 在中[资源视图](/windows/how-to-create-a-resource-script-file#create-resources)或文档窗口中，选择你的资源，例如， **IDD_ABOUTBOX**。
+1. 在中[资源视图](how-to-create-a-resource-script-file.md#create-resources)或文档窗口中，选择你的资源，例如， **IDD_ABOUTBOX**。
 
 1. 在中[属性窗口](/visualstudio/ide/reference/properties-window)，选择**属性页**按钮。
 
@@ -124,7 +124,7 @@ ms.locfileid: "57563012"
 
 ## <a name="requirements"></a>要求
 
-无
+None
 
 ## <a name="see-also"></a>请参阅
 

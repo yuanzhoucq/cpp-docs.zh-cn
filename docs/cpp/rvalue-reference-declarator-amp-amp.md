@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - '&& rvalue reference declarator'
 ms.assetid: eab0ce3a-c5a3-4992-aa70-6a8ab1f7491d
-ms.openlocfilehash: caec1ae10db273b6ed604af29b20a1908b1313cc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 185c2de5dc21dd305a2792d4ee8e6baf69c35b28
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614638"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328904"
 ---
 # <a name="rvalue-reference-declarator-ampamp"></a>右值引用声明符： &amp;&amp;
 
@@ -148,7 +148,8 @@ int main()
 
 **您可以重载采用左值引用和右值引用的函数。**
 
-通过重载函数以采用**const**左值引用或右值引用，可以编写代码来区分不可更改的对象 （左值） 和可修改的临时值 （右值）。 可以将对象传递给采用右值引用，除非该对象标记为一个函数**const**。 以下示例演示了函数 `f`，该函数将被重载以采用左值引用和右值引用。 `main` 函数同时使用左值和右值来调用 `f`。
+通过重载函数以采用**const**左值引用或右值引用，可以编写代码来区分不可更改的对象 （左值） 和可修改的临时值 （右值）。 可以将对象传递给采用右值引用，除非该对象标记为一个函数**const**。 以下示例演示了函数 `f`，该函数将被重载以采用左值引用和右值引用。 
+  `main` 函数同时使用左值和右值来调用 `f`。
 
 ```cpp
 // reference-overload.cpp
@@ -220,7 +221,7 @@ void g(MemoryBlock&&)
 MemoryBlock&& f(MemoryBlock&& block)
 {
    g(block);
-   return block;
+   return move(block);
 }
 
 int main()
@@ -236,7 +237,8 @@ In g(const MemoryBlock&).
 In g(MemoryBlock&&).
 ```
 
-在此示例中，`main` 函数将右值传递给 `f`。 `f` 的主体将其命名参数视为左值。 从 `f` 到 `g` 的调用会将参数绑定到左值引用（第一个重载版本的 `g`）。
+在此示例中，`main` 函数将右值传递给 `f`。 
+  `f` 的主体将其命名参数视为左值。 从 `f` 到 `g` 的调用会将参数绑定到左值引用（第一个重载版本的 `g`）。
 
 - **您可以强制转换为右值引用的左值。**
 
@@ -285,7 +287,9 @@ In g(MemoryBlock&&).
 
 如果函数参数是右值，则编译器将参数推导为右值引用。 例如，如果将对 `X` 类型的对象的右值引用传递给采用类型 `T&&` 作为其参数的模板函数，则模板自变量推导会将 `T` 推导为 `X`。 因此，参数具有类型 `X&&`。 如果函数自变量是左值或**const**左值，编译器可以推断其类型为左值引用或**const**该类型的左值引用。
 
-以下示例声明了一个结构模板，然后针对不同引用类型对其进行了专用化。 `print_type_and_value` 函数采用右值引用作为其参数，并将它转发给适当专用版本的 `S::print` 方法。 `main` 函数演示了调用 `S::print` 方法的各种方式。
+以下示例声明了一个结构模板，然后针对不同引用类型对其进行了专用化。 
+  `print_type_and_value` 函数采用右值引用作为其参数，并将它转发给适当专用版本的 `S::print` 方法。 
+  `main` 函数演示了调用 `S::print` 方法的各种方式。
 
 ```cpp
 // template-type-deduction.cpp
@@ -375,7 +379,7 @@ print<T&&>: third
 print<const T&&>: fourth
 ```
 
-为了解析对 `print_type_and_value` 函数的每个调用，编译器首先会执行模板自变量推导。 然后，编译器在用推导出的模板参数替换参数类型时应用引用折叠规则。 例如，将局部变量 `s1` 传递给 `print_type_and_value` 函数将导致编译器生成以下函数签名：
+为了解析对 `print_type_and_value` 函数的每个调用，编译器首先会执行模板自变量推导。 然后，编译器在用推导出的模板自变量替换参数类型时应用引用折叠规则。 例如，将局部变量 `s1` 传递给 `print_type_and_value` 函数将导致编译器生成以下函数签名：
 
 ```cpp
 print_type_and_value<string&>(string& && t)
@@ -403,7 +407,7 @@ print_type_and_value<string&>(string& t)
 
 ## <a name="summary"></a>总结
 
-右值引用可将左值和右值区分开。 它们可以帮助您消除不必要的内存分配和复制操作需求，从而提高应用程序的性能。 它们还使您能够编写一个版本的函数，该函数可接受任意参数并将其转发给另一个函数，就像已直接调用其他函数一样。
+右值引用可将左值和右值区分开。 它们可以帮助您消除不必要的内存分配和复制操作需求，从而提高应用程序的性能。 它们还使你能够编写一个版本的函数，该函数可接受任意自变量并将其转发给另一个函数，就像已直接调用其他函数一样。
 
 ## <a name="see-also"></a>请参阅
 

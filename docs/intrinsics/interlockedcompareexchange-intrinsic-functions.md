@@ -48,12 +48,12 @@ helpviewer_keywords:
 - InterlockedCompareExchange64_rel intrinsic
 - _InterlockedCompareExchange64_rel intrinsic
 ms.assetid: c3ad79c0-a523-4930-a3a4-69a65d7d5c81
-ms.openlocfilehash: 545bbeec545b37324ff9c15512b27073f5ffc1c7
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: 840a7e63bb9b98cfb46ea36e30b3439168688c87
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627289"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328307"
 ---
 # <a name="interlockedcompareexchange-intrinsic-functions"></a>_InterlockedCompareExchange 内部函数
 
@@ -193,7 +193,7 @@ __int64 _InterlockedCompareExchange64_rel(
 
 ## <a name="requirements"></a>要求
 
-|内部函数|体系结构|标头|
+|内部函数|体系结构|Header|
 |---------------|------------------|------------|
 |`_InterlockedCompareExchange`, `_InterlockedCompareExchange8`, `_InterlockedCompareExchange16`, `_InterlockedCompareExchange64`|x86、 ARM、 x64|\<intrin.h>|
 |`_InterlockedCompareExchange_acq`, `_InterlockedCompareExchange_rel`, `_InterlockedCompareExchange8_acq`, `_InterlockedCompareExchange8_nf`, `_InterlockedCompareExchange8_rel`,`_InterlockedCompareExchange16_acq`, `_InterlockedCompareExchange16_nf`, `_InterlockedCompareExchange16_rel`, `_InterlockedCompareExchange64_acq`, `_InterlockedCompareExchange64_nf`, `_InterlockedCompareExchange64_rel`,|ARM|\<intrin.h>|
@@ -204,9 +204,10 @@ __int64 _InterlockedCompareExchange64_rel(
 
 `_InterlockedCompareExchange` 可执行 `Destination` 值与 `Comparand` 值之间的原子比较。 如果 `Destination` 值等于 `Comparand` 值，`Exchange` 值将存储在由 `Destination` 指定的地址。 否则，不会执行任何操作。
 
-`_InterlockedCompareExchange` 提供了编译器内部函数支持 Win32 Windows SDK [3&gt;interlockedcompareexchange&lt;3}](/windows/desktop/api/winbase/nf-winbase-interlockedcompareexchange)函数。
+`_InterlockedCompareExchange` 提供了编译器内部函数支持 Win32 Windows SDK [3&gt;interlockedcompareexchange&lt;3}](/windows/desktop/api/winnt/nf-winnt-interlockedcompareexchange)函数。
 
-`_InterlockedCompareExchange` 存在几种变体，这些变体根据其涉及的数据类型和是否使用特定于处理器获取或发布语义而有所不同。
+
+  `_InterlockedCompareExchange` 存在几种变体，这些变体根据其涉及的数据类型和是否使用特定于处理器获取或发布语义而有所不同。
 
 当 `_InterlockedCompareExchange` 函数对长整型数值操作时，`_InterlockedCompareExchange8` 对 8 位整数值操作，`_InterlockedCompareExchange16` 对短整型数值操作，`_InterlockedCompareExchange64` 对 64 位整数值操作。
 

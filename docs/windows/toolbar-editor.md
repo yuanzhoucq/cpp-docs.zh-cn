@@ -50,12 +50,12 @@ helpviewer_keywords:
 - buttons [C++], tool tips
 - Toolbar editor [C++], creating tool tips
 ms.assetid: aa9f0adf-60f6-4f79-ab05-bc330f15ec43
-ms.openlocfilehash: a138eb5aa40429696ca2efa4a67e1a1c5490f4fa
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 83402159d19f07cf94a0d00ccd79d68549b124e9
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563246"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328852"
 ---
 # <a name="toolbar-editor-c"></a>工具栏编辑器 （c + +）
 
@@ -128,7 +128,7 @@ ms.locfileid: "57563246"
 
 #### <a name="to-create-a-new-toolbar-button"></a>若要创建新的工具栏按钮
 
-1. 在中[资源视图](../windows/resource-view-window.md)展开资源文件夹 (例如， *Project1.rc*)。
+1. 在中[资源视图](how-to-create-a-resource-script-file.md#create-resources)展开资源文件夹 (例如， *Project1.rc*)。
 
 1. 展开**工具栏**文件夹，然后选择工具栏上，若要编辑，然后执行下列操作之一：
 
@@ -138,7 +138,7 @@ ms.locfileid: "57563246"
 
 #### <a name="to-add-an-image-to-a-toolbar-as-a-button"></a>若要将图像添加到工具栏中，为的按钮
 
-1. 在中[资源视图](../windows/resource-view-window.md)，通过双击它打开工具栏。
+1. 在中[资源视图](how-to-create-a-resource-script-file.md#create-resources)，通过双击它打开工具栏。
 
 1. 接下来，打开你想要添加到您的工具栏图像。
 

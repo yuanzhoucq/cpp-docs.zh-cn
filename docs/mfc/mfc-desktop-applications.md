@@ -9,12 +9,12 @@ helpviewer_keywords:
 - class libraries, MFC
 - MFC, about MFC
 ms.assetid: 7101cb18-a681-495c-8f2b-069ad20c72f7
-ms.openlocfilehash: 364f29406b2c00d26ecc4cc69060ed8ec21b743b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 60c50eb25132a38c72be762ab96d8ee262f5b349
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57291272"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328826"
 ---
 # <a name="mfc-desktop-applications"></a>MFC 桌面应用程序
 
@@ -85,7 +85,7 @@ Visual Studio 中用于创建 MFC 应用程序的功能的指南。
 [Visual C++ 库参考](../standard-library/cpp-standard-library-reference.md)<br/>
 提供 Visual C++ 附带的各种库链接，其中包括 ATL、MFC、OLE DB 模板、C 运行时库和 C++ 标准库。
 
-[在 Visual Studio 中进行调试](/visualstudio/debugger/debugging-in-visual-studio.md)<br/>
+[在 Visual Studio 中进行调试](/visualstudio/debugger/debugging-in-visual-studio)<br/>
 提供一些链接，所涉及内容为使用 Visual Studio 调试器纠正应用程序或存储过程中的逻辑错误。
 
 ## <a name="see-also"></a>请参阅

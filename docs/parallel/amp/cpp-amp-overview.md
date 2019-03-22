@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, overview
 - C++ Accelerated Massive Parallelism
 ms.assetid: 9e593b06-6e3c-43e9-8bae-6d89efdd39fc
-ms.openlocfilehash: da77e2ba93554cb65d4cc92353d05d54467b50d4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: a4bd8546ba551ee37b9c03b5965a4079a3bd9f98
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57269638"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328878"
 ---
 # <a name="c-amp-overview"></a>C++ AMP 概述
 
@@ -21,11 +21,15 @@ C + + Accelerated Massive Parallelism (c + + AMP) 通过利用离散图像卡上
 
 ## <a name="system-requirements"></a>系统要求
 
-- Windows 7、 Windows 8、 Windows Server 2008 R2 或 Windows Server 2012
+- Windows 7 或更高版本
+
+- Windows Server 2008 R2 或更高版本
 
 - DirectX 11 功能级别 11.0 或更高的硬件
 
 - 对于在软件模拟器上进行调试，Windows 8 或 Windows Server 2012 是必需的。 对于在硬件上进行的调试，您必须为图形卡安装驱动程序。 有关详细信息，请参阅[调试 GPU 代码](/visualstudio/debugger/debugging-gpu-code)。
+
+- 注意:在 ARM64 上目前不支持 a m P。
 
 ## <a name="introduction"></a>介绍
 

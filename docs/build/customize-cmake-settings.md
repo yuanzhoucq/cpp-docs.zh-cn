@@ -1,38 +1,38 @@
 ---
-title: 自定义 Visual Studio 中的 CMake 生成设置
+title: 在 Visual Studio 中自定义 CMake 生成设置
 ms.date: 03/05/2019
 helpviewer_keywords:
 - CMake build settings
-ms.openlocfilehash: aa840dd41ee6843afae80343e42ba62741bbcd80
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: dd34fbefcbc89c7c4aa93105ae5bad31ae4d5f01
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57824472"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328293"
 ---
 # <a name="customize-cmake-build-settings"></a>自定义 CMake 生成设置
 
-Visual Studio 提供了定义如何调用 CMake.exe 创建 CMake 缓存对于给定的项目的多个 CMake 配置。 若要添加新的配置，请单击工具栏中的下拉列表的配置，然后选择**管理配置**:
+Visual Studio 提供多个 CMake 配置，这些配置定义如何调用 CMake.exe 来创建给定项目的 CMake 缓存。 若要添加新的配置，请单击工具栏的下拉列表中的配置，然后选择“管理配置”：
 
    ![CMake 管理配置](media/cmake-manage-configurations.png)
 
-您可以从预定义的配置列表中选择：
+可从预定义配置列表中进行选择：
 
-   ![CMake 预定义的配置](media/cmake-configurations.png)
+   ![CMake 预定义配置](media/cmake-configurations.png)
 
-首次选择一个配置时，Visual Studio 将创建`CMakeSettings.json`项目的根文件夹中的文件。 此文件用于重新创建 CMake 缓存文件，例如，在“清除”操作后重新创建。 
+第一次选择配置时，Visual Studio 会在项目的根文件夹里创建一个 `CMakeSettings.json` 文件。 此文件用于重新创建 CMake 缓存文件，例如，在“清除”操作后重新创建。 
 
-若要添加其他配置，请右键单击`CMakeSettings.json`，然后选择**添加配置**。 
+要添加其他配置，请右键单击 `CMakeSettings.json`，然后选择“添加配置”。 
 
-   ![CMake 添加配置](media/cmake-add-configuration.png "CMake 添加配置")
+   ![CMake 添加配置](media/cmake-add-configuration.png "CMake Add Configuration")
 
-JSON IntelliSense 可帮助你编辑`CMakeSettings.json`文件：
+可借助 JSON IntelliSense 编辑 `CMakeSettings.json` 文件：
 
    ![CMake JSON IntelliSense](media/cmake-json-intellisense.png "CMake JSON IntelliSense")
 
-此外可以编辑文件使用**CMake 设置编辑器**。 右键单击`CMakeSettings.json`中**解决方案资源管理器**，然后选择**编辑 CMake 设置**。 或者，选择**管理配置**从配置下拉列表顶部的编辑器窗口。 
+也可使用“CMake 设置编辑器”来编辑文件。 右键单击“解决方案资源管理器”中的 `CMakeSettings.json`，然后选择“编辑 CMake 设置”。 或者，从顶部的编辑器窗口的配置下拉列表中选择“管理配置”。 
 
-您可以直接编辑`CMakeSettings.json`若要创建自定义配置下面的示例显示了可用作起始点的示例配置：
+还可直接编辑 `CMakeSettings.json` 以创建自定义配置。下列示例显示了示例配置，可以用作起始点：
 
 ```json
     {
@@ -49,23 +49,23 @@ JSON IntelliSense 可帮助你编辑`CMakeSettings.json`文件：
 
 ```
 
-- **name**：显示在 C++ 配置下拉列表中的配置名称。 `${name}`宏可用于编写其他属性值，例如路径时使用此值。 有关示例，请参阅**buildRoot**中的定义`CMakeSettings.json`。
+- **name**：显示在 C++ 配置下拉列表中的配置名称。 `${name}` 宏使得在编写其他属性值时（例如路径），可以使用此值。 有关示例，请参阅 `CMakeSettings.json` 中的 buildRoot 定义。
 
-- **生成器**： 映射到 CMake **-G**切换并指定要使用的生成器。 此外可以为宏，使用此属性`${generator}`，当编写其他属性值。 Visual Studio 当前支持下列 CMake 生成器：
+- **generator**：映射到 CMake -G 开关并指定要使用的生成器。 编写其他属性时，此属性也可用作宏 `${generator}`。 Visual Studio 当前支持下列 CMake 生成器：
 
-    - "Ninja"
-    - "Visual Studio 14 2015"
-    - "Visual Studio 14 2015 ARM"
-    - "Visual Studio 14 2015 Win64"
-    - "Visual Studio 15 2017"
-    - "Visual Studio 15 2017 ARM"
-    - "Visual Studio 15 2017 Win64"
+  - "Ninja"
+  - "Visual Studio 14 2015"
+  - "Visual Studio 14 2015 ARM"
+  - "Visual Studio 14 2015 Win64"
+  - "Visual Studio 15 2017"
+  - "Visual Studio 15 2017 ARM"
+  - "Visual Studio 15 2017 Win64"
 
-    由于 Ninja 旨在加快生成速度，而不是为了提高灵活性和功能，因此它被设为默认生成器。 但是，某些 CMake 项目可能无法使用 Ninja 正确地进行生成。 如果发生这种情况，可以指示 CMake 改为生成 Visual Studio 项目。
+  由于 Ninja 旨在加快生成速度，而不是为了提高灵活性和功能，因此它被设为默认生成器。 但是，某些 CMake 项目可能无法使用 Ninja 正确地进行生成。 如果发生这种情况，可以指示 CMake 改为生成 Visual Studio 项目。
 
-    若要指定 Visual Studio 生成器，请打开`CMakeSettings.json`从主菜单中选择**CMake |更改 CMake 设置**。 删除“Ninja”并键入“V”。 这可激活 IntelliSense，从而可让用户选择所需生成器。
+  要指定一个 Visual Studio 生成器，请通过选择“CMake”|“更改 CMake 设置”，从主菜单打开 `CMakeSettings.json`。 删除“Ninja”并键入“V”。 这可激活 IntelliSense，从而可让用户选择所需生成器。
 
-    当活动配置指定的 Visual Studio 生成器时，默认情况下 MSBuild.exe 调用使用了`-m -v:minimal`参数。 若要在自定义生成，`CMakeSettings.json`文件，可以指定其他[MSBuild 命令行参数](../build/msbuild-visual-cpp-overview.md)要传递给生成系统通过`buildCommandArgs`属性：
+  当活动配置指定一个 Visual Studio 生成器时，默认情况下使用 `-m -v:minimal` 参数调用 MSBuild.exe。 要自定义生成，可在 `CMakeSettings.json` 文件中指定要通过 `buildCommandArgs` 属性传递到生成系统的其他 [MSBuild 命令行参数](../build/reference/msbuild-visual-cpp-overview.md)：
     
     ```json
     "buildCommandArgs": "-m:8 -v:minimal -p:PreferredToolArchitecture=x64"
@@ -73,7 +73,7 @@ JSON IntelliSense 可帮助你编辑`CMakeSettings.json`文件：
 
 - **buildRoot**：映射到 -DCMAKE_BINARY_DIR 开关，并指定要创建 CMake 的位置。 如果文件夹不存在，则会创建一个。
 
-- **variables**：包含将作为 -D name=value 传递到 CMake 的 CMake 变量的名称/值对。 如果 CMake 项目生成指令指定将任何变量直接添加到 CMake 缓存文件，那么建议改为在这里添加它们。 下面的示例演示如何指定 14.14.26428 的名称-值对 MSVC 工具集：
+- **variables**：包含将作为 -D name=value 传递到 CMake 的 CMake 变量的名称/值对。 如果 CMake 项目生成指令指定将任何变量直接添加到 CMake 缓存文件，那么建议改为在这里添加它们。 下面的示例演示如何为 14.14.26428 MSVC 工具集指定名称/值对：
 
 ```json
 "variables": [
@@ -96,18 +96,18 @@ JSON IntelliSense 可帮助你编辑`CMakeSettings.json`文件：
 
 - buildCommandArgs：指定传递给基础生成系统的其他开关。 例如，使用 Ninja 生成器强制输出命令行使用 Ninja 时，传递 -v。
 
-有关 CMake Linux 项目提供了其他设置。 请参阅[配置 CMake Linux 项目](../linux/cmake-linux-project.md)。
+可用于 CMake Linux 项目的其他设置。 请参阅[配置 CMake Linux 项目](../linux/cmake-linux-project.md)。
 
 ## <a name="environment-variables"></a>环境变量
 
- `CMakeSettings.json` 此外支持任何上面提到的属性中使用环境变量。 所使用的语法为 `${env.FOO}`，用于展开环境变量 %FOO%。
+ `CMakeSettings.json` 还支持使用上述任何属性中的环境变量。 所使用的语法为 `${env.FOO}`，用于展开环境变量 %FOO%。
 此外，还可以使用此文件中内置的宏：
 
 - `${workspaceRoot}`：提供工作区文件夹的完整路径
 - `${workspaceHash}`：工作区位置的哈希；可用于创建当前工作区的唯一标识符（例如用于文件路径）
 - `${projectFile}`：根 CMakeLists.txt 文件的完整路径
 - `${projectDir}`：根 CMakeLists.txt 文件的文件夹完整路径
-- `${thisFile}` – 的完整路径`CMakeSettings.json`文件
+- `${thisFile}` - `CMakeSettings.json` 文件的完整路径
 - `${name}`：配置的名称
 - `${generator}`：配置中使用的 CMake 生成器的名称
 
@@ -132,10 +132,10 @@ usage: ninja [options] [targets...]
 |   -n       | 试运行（不运行命令但像命令行运行成功了一样操作）|
 |   -v       | 在生成过程中显示所有命令行|
 |   -d MODE  | 启用调试（使用 -d 列表列出模式）|
-|   -t TOOL  | 运行次级工具（使用 -t 列表列出次级工具）。 终止顶级选项；有更多标志传递给工具|
+|   -t TOOL  | 运行次级工具（使用 -t 列表列出次级工具）。 终止顶级选项;进一步将标志传递给工具|
 |   -w FLAG  | 调整警告（使用-w 列表列出警告）|
 
-## <a name="inherited-environments"></a>继承的环境
+## <a name="inherited-environments"></a>继承环境
 
  `CMakeSettings.json` 支持继承环境。 此功能支持：(1) 继承默认环境，以及 (2) 创建在运行时传递给 CMake.exe 的自定义环境变量。
 
@@ -160,7 +160,7 @@ usage: ninja [options] [targets...]
 
 ### <a name="custom-environment-variables"></a>自定义环境变量
 
-在中`CMakeSettings.json`，可以全局定义自定义环境变量或在配置每个**环境**属性。 下面的示例定义一个全局变量“BuildDir”，该变量在 x86-Debug 和 x64-Debug 配置中继承。 每个配置都使用该变量来指定配置的“buildRoot”属性值。 也请注意每个配置如何使用“inheritEnvironments”属性来指定仅应用于该配置的值。
+在 `CMakeSettings.json` 中，可在“环境”属性中以全局形式或按配置自定义环境变量。 下面的示例定义一个全局变量“BuildDir”，该变量在 x86-Debug 和 x64-Debug 配置中继承。 每个配置都使用该变量来指定配置的“buildRoot”属性值。 也请注意每个配置如何使用“inheritEnvironments”属性来指定仅应用于该配置的值。
 
 ```json
 {
@@ -192,7 +192,7 @@ usage: ninja [options] [targets...]
 }
 ```
 
-在下一步的示例中，x86 调试配置定义自己的值为**BuildDir**属性。 此值将覆盖全局设置的值**BuildDir**属性，以便**BuildRoot**计算结果为`D:\custom-builddir\x86-Debug`。
+在下一个示例中，x86-Debug 配置为 BuildDir 属性定义其自己的值。 此值替代由全局 BuildDir 属性设置的值，以便 BuildRoot 评估为 `D:\custom-builddir\x86-Debug`。
 
 ```json
 {
@@ -236,9 +236,9 @@ usage: ninja [options] [targets...]
 
 ## <a name="see-also"></a>请参阅
 
-[在 Visual Studio 中的 CMake 项目](cmake-projects-in-visual-studio.md)<br/>
+[Visual Studio 中的 CMake 项目](cmake-projects-in-visual-studio.md)<br/>
 [配置 Linux CMake 项目](../linux/cmake-linux-project.md)<br/>
 [连接到远程 Linux 计算机](../linux/connect-to-your-remote-linux-computer.md)<br/>
 [配置 CMake 调试会话](configure-cmake-debugging-sessions.md)<br/>
 [部署、运行和调试 Linux 项目](../linux/deploy-run-and-debug-your-linux-project.md)<br/>
-[CMake 预定义的配置参考](cmake-predefined-configuration-reference.md)<br/>
+[CMake 预定义配置引用](cmake-predefined-configuration-reference.md)<br/>

@@ -2,12 +2,12 @@
 title: Visual C++ 语言引用 (C++/CX)
 ms.date: 09/15/2017
 ms.assetid: 3f6abf92-4e5e-4ed8-8e11-f9252380d30a
-ms.openlocfilehash: 319374447ba08dbf18fba91e4c24c0874d3b6ce2
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: ce0272499b653b9077a891e39e9b29797e7e051d
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57422957"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328410"
 ---
 # <a name="visual-c-language-reference-ccx"></a>Visual C++ 语言引用 (C++/CX)
 
@@ -24,7 +24,7 @@ C + + /cli CX 是一套用于 Windows 应用程序和 Windows 运行时组件中
 
 - 可供基于 JavaScript 的 Windows 应用的 c + + Windows 运行时组件。 有关详细信息，请参阅 [Creating Windows Runtime Components in C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)。
 
-- Windows DirectX 游戏和图形密集型应用程序。 有关详细信息，请参阅[使用 DirectX 创建简单的 UWP 游戏](/windows/uwp/gaming/tutorial--create-your-first-metro-style-directx-game)。
+- Windows DirectX 游戏和图形密集型应用程序。 有关详细信息，请参阅[使用 DirectX 创建简单的 UWP 游戏](/windows/uwp/gaming/tutorial--create-your-first-uwp-directx-game)。
 
 ## <a name="related-articles"></a>相关文章
 
@@ -32,7 +32,7 @@ C + + /cli CX 是一套用于 Windows 应用程序和 Windows 运行时组件中
 |-|-|
 |[快速参考](../cppcx/quick-reference-c-cx.md)|表的关键字和运算符的 C + + /cli CX。|
 |[类型系统](../cppcx/type-system-c-cx.md)|介绍了基本的 C + + /cli CX 类型和编程构造，以及如何利用 C + + /cli CX 来使用和创建 Windows 运行时类型。|
-|[构建应用程序和库](../cppcx/building-apps-and-libraries-c-cx.md)|讨论如何使用 IDE 生成应用程序并链接到静态库和 DLL。|
+|[构建应用程序和库](../cppcx/building-apps-and-libraries-c-cx.md)|讨论如何使用 IDE 来生成应用并将链接到静态库和 Dll。|
 |[与其他语言进行互操作](../cppcx/interoperating-with-other-languages-c-cx.md)|讨论如何组件编写通过使用 C + + /cli CX 可用以 JavaScript 编写的组件，任何托管语言中或 Windows 运行时 c + + 模板库。|
 |[线程处理和封送处理](../cppcx/threading-and-marshaling-c-cx.md)|讨论如何为你创建的组件指定线程处理和封送行为。|
 |[命名空间参考](../cppcx/namespaces-reference-c-cx.md)|默认命名空间、平台命名空间、Platform::Collections 和相关命名空间的参考文档。|

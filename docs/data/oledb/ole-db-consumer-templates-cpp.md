@@ -7,12 +7,12 @@ helpviewer_keywords:
 - OLE DB consumer templates [C++]
 - databases [C++], consumers
 ms.assetid: d3e42612-0bc0-4d65-9c32-0e8a7b219e82
-ms.openlocfilehash: f3b247660e65975630b9434685d0a12caf0fc257
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: a93b0a48bc5996cbb96194762b9c03ea143556e2
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57419162"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328718"
 ---
 # <a name="ole-db-consumer-templates-c"></a>OLE DB 使用者模板 (C++)
 
@@ -24,7 +24,7 @@ OLE DB 使用者模板支持 OLE DB 2.6 版规范。 （OLE DB 使用者模板�
 
 - 用于 OLE DB 编程的本机 C/C++ 数据类型。
 
-要使用 OLE DB 模板，应熟悉 C++ 模板、COM 和 OLE DB 接口。 如果您不熟悉 OLE DB，请参阅[OLE DB 程序员参考](/previous-versions/windows/desktop/ms718124(v=vs.85))。
+要使用 OLE DB 模板，应熟悉 C++ 模板、COM 和 OLE DB 接口。 如果您不熟悉 OLE DB，请参阅[Microsoft OLE DB 驱动程序适用于 SQL Server](/sql/connect/oledb/oledb-driver-for-sql-server)。
 
 OLE DB 模板支持现有 OLE DB 对象模型而不是添加新的对象模型。 OLE DB 使用者模板中的顶层类并行于 OLE DB 规范中定义的组件。 OLE DB 使用者模板的设计包括高级功能，如行集上的多个访问器。 模板和多重继承的使用可缩小库的规模并让库变得灵活。
 
@@ -61,4 +61,4 @@ OLE DB 使用者将数据库表中的列与局部变量绑定；它使用 [访�
 [OLE DB 编程](../../data/oledb/ole-db-programming.md)<br/>
 [数据访问](../data-access-in-cpp.md)<br/>
 [OLE DB SDK 文档](/previous-versions/windows/desktop/ms722784(v=vs.85))<br/>
-[OLE DB 程序员参考](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming)
+[SQL Server 的 Microsoft OLE DB 驱动程序](/sql/connect/oledb/oledb-driver-for-sql-server)

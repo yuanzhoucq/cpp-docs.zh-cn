@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_param attribute
 ms.assetid: a28315f5-4722-459e-92ef-32e83c0b205a
-ms.openlocfilehash: 58d6fa5026395b4be6663ab253cf9ffdfea01788
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2de051b099da5f179a7634cddfb359d85f4b1f83
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505035"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328787"
 ---
 # <a name="dbparam"></a>db_param
 
@@ -25,7 +25,7 @@ ms.locfileid: "50505035"
 
 ### <a name="parameters"></a>参数
 
-*序号*<br/>
+*ordinal*<br/>
 列对应的编号 （DBCOLUMNINFO 序号） 到要将数据绑定到行集中的字段。
 
 *paramtype*<br/>
@@ -38,16 +38,16 @@ ms.locfileid: "50505035"
 - DBPARAMIO_NOTPARAM 访问器没有任何参数。 设置`eParamIO`为行中此值的访问器提醒用户参数将被忽略。
 
 *dbtype*<br/>
-（可选）OLE DB[类型指示符](/previous-versions/windows/desktop/ms711251)列条目。
+（可选）OLE DB[类型指示符](/previous-versions/windows/desktop/ms711251(v=vs.85))列条目。
 
 *precision*<br/>
-（可选）要用于列条目精度。 有关详细信息，请参阅的说明`bPrecision`元素的[DBBINDING 结构](/previous-versions/windows/desktop/ms716845)
+（可选）要用于列条目精度。 有关详细信息，请参阅的说明`bPrecision`元素的[DBBINDING 结构](/previous-versions/windows/desktop/ms716845(v=vs.85))
 
-*缩放*<br/>
-（可选）要用于列项目的比例。 有关详细信息，请参阅的说明`bScale`元素的[DBBINDING 结构](/previous-versions/windows/desktop/ms716845)
+*scale*<br/>
+（可选）要用于列项目的比例。 有关详细信息，请参阅的说明`bScale`元素的[DBBINDING 结构](/previous-versions/windows/desktop/ms716845(v=vs.85))
 
 *status*<br/>
-（可选）成员变量，用来保存此列的状态。 状态指示该列的值是数据值或其他某个值，如空值。 有关可能的值，请参阅[状态](/previous-versions/windows/desktop/ms722617)中*OLE DB 程序员参考*。
+（可选）成员变量，用来保存此列的状态。 状态指示该列的值是数据值或其他某个值，如空值。 有关可能的值，请参阅[状态](/previous-versions/windows/desktop/ms722617(v=vs.85))中*OLE DB 程序员参考*。
 
 *length*<br/>
 （可选）成员变量，用来保存的列的大小以字节为单位。
@@ -56,7 +56,7 @@ ms.locfileid: "50505035"
 
 **db_param**定义的参数，在命令中使用; 因此可以将它与`db_command`。 例如，可以使用**db_param**绑定中的 SQL 查询或存储的过程的参数。 由问号 （？），表示存储过程中的参数，并应将数据成员绑定参数的显示顺序。
 
-**db_param**分隔可以参与在 OLE DB 中的成员数据`ICommandWithParameters`-基于绑定。 它设置参数类型 （输入或输出）、 OLE DB 类型、 精度、 小数位数、 状态和为指定的参数的长度。 此属性将插入的 OLE DB 使用者宏 BEGIN_PARAM_MAP...END_PARAM_MAP。 您会使用标记每个成员**db_param**属性将占用 COLUMN_ENTRY 窗体中的映射中的一个条目。
+**db_param**分隔可以参与在 OLE DB 中的成员数据`ICommandWithParameters`-基于绑定。 它设置参数类型 （输入或输出）、 OLE DB 类型、 精度、 小数位数、 状态和为指定的参数的长度。 此属性将插入的 OLE DB 使用者宏 BEGIN_PARAM_MAP...END_PARAM_MAP. 您会使用标记每个成员**db_param**属性将占用 COLUMN_ENTRY 窗体中的映射中的一个条目。
 
 **db_param**与可以结合使用[db_table](db-table.md)或[db_command](db-command.md)属性。
 
@@ -110,8 +110,8 @@ struct CSalesbyYear {
 |-|-|
 |**适用对象**|**类**，**结构**，成员、 方法、 本地|
 |**可重复**|否|
-|**必需的特性**|无|
-|**无效的特性**|无|
+|**必需的特性**|None|
+|**无效的特性**|None|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 

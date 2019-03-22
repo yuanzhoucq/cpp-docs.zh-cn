@@ -33,12 +33,12 @@ helpviewer_keywords:
 - keyboard shortcuts [C++], property changing
 - accelerator tables [C++], changing properties
 ms.assetid: 013c30b6-5d61-4f1c-acef-8bd15bed7060
-ms.openlocfilehash: f57c09d549a4ceb92db21c06499b4f6e71fc6a52
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 4ed283b9be2afdacfbc93c647c7633fb7802e7fd
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57562934"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328397"
 ---
 # <a name="accelerator-editor-c"></a>快捷键编辑器 （c + +）
 
@@ -69,7 +69,7 @@ ms.locfileid: "57562934"
 
 以下是合法的条目**修饰符**快捷键对应表中的属性：
 
-   |值|描述|
+   |“值”|描述|
    |-----------|-----------------|
    |**无**|用户仅按**密钥**值。<br/><br/>使用此值是最有效地使用 ASCII/ANSI 值 001 026，通过它解释为 ^ A 到 ^ Z (**Ctrl + A**通过**Ctrl + Z**)。|
    |**Alt**|用户必须按**Alt**之前**密钥**值。|
@@ -116,7 +116,7 @@ ms.locfileid: "57562934"
 
 ### <a name="to-edit-in-an-accelerator-table"></a>在快捷键对应表中编辑
 
-1. 通过双击中对应的图标打开快捷键对应表[资源视图](/windows/how-to-create-a-resource-script-file#create-resources)。
+1. 通过双击中对应的图标打开快捷键对应表[资源视图](how-to-create-a-resource-script-file.md#create-resources)。
 
 1. 在表中选择一个条目，并选择以激活就地编辑。
 
@@ -132,7 +132,7 @@ ms.locfileid: "57562934"
 
 ### <a name="to-find-an-entry-in-an-open-accelerator-table"></a>在打开的快捷键对应表中查找项
 
-1. 通过双击中对应的图标打开快捷键对应表[资源视图](/windows/how-to-create-a-resource-script-file#create-resources)。
+1. 通过双击中对应的图标打开快捷键对应表[资源视图](how-to-create-a-resource-script-file.md#create-resources)。
 
 1. 选择列标题可以按字母顺序排序的列的内容。 例如，选择**ID**快捷键对应表中按字母顺序显示所有 Id。
 
@@ -140,7 +140,7 @@ ms.locfileid: "57562934"
 
 ### <a name="to-add-an-entry-to-an-accelerator-table"></a>向快捷键对应表添加项
 
-1. 通过双击中对应的图标打开快捷键对应表[资源视图](/windows/how-to-create-a-resource-script-file#create-resources)。
+1. 通过双击中对应的图标打开快捷键对应表[资源视图](how-to-create-a-resource-script-file.md#create-resources)。
 
 1. 在快捷键对应表中右键单击并选择**新的加速器**，或选择表底部的空行项。
 
@@ -155,7 +155,7 @@ ms.locfileid: "57562934"
 
 ### <a name="to-delete-an-entry-from-an-accelerator-table"></a>若要从快捷键对应表删除项
 
-1. 通过双击中对应的图标打开快捷键对应表[资源视图](/windows/how-to-create-a-resource-script-file#create-resources)。
+1. 通过双击中对应的图标打开快捷键对应表[资源视图](how-to-create-a-resource-script-file.md#create-resources)。
 
 1. 选择你想要删除，或按下的条目**Ctrl**或**Shift**键并选择以选择多个条目。
 
@@ -177,7 +177,7 @@ ms.locfileid: "57562934"
 
 ### <a name="to-change-the-properties-of-multiple-accelerator-keys"></a>若要更改多个快捷键的属性
 
-1. 通过双击中对应的图标打开快捷键对应表[资源视图](/windows/how-to-create-a-resource-script-file#create-resources)。
+1. 通过双击中对应的图标打开快捷键对应表[资源视图](how-to-create-a-resource-script-file.md#create-resources)。
 
 1. 选择你想要更改通过按下的快捷键**Ctrl**选择每个键。
 

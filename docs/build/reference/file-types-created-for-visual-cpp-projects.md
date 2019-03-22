@@ -14,18 +14,18 @@ helpviewer_keywords:
 - .def files
 - licensing ActiveX controls
 ms.assetid: 2b0ee2e0-ae81-4185-9bb9-11da3c99a283
-ms.openlocfilehash: c05dd9da5dd17b0e06ace750d34f2c5abcf94380
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 7ef8127b829b60d84af72874292c33ae1c7c4636
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57825069"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58327576"
 ---
 # <a name="file-types-created-for-visual-studio-c-projects"></a>为 Visual Studio c + + 项目创建的文件类型
 
 本主题介绍与 Visual Studio 项目类型提供的经典桌面应用程序相关联的文件的所有类型。 项目中包含的实际文件取决于项目类型以及在使用向导时选择的选项。
 
-- [项目和解决方案文件]()
+- [项目和解决方案文件](project-and-solution-files.md)
 
 - [CLR 项目](files-created-for-clr-projects.md)
 
@@ -54,7 +54,7 @@ ms.locfileid: "57825069"
 |.atp|项目|应用程序模板项目文件。|
 |.bmp、.dib、.gif、.jpg、.jpe、.png|资源|常规图像文件。|
 |.bsc|编译|浏览器代码文件。|
-|.cpp；.c|源|应用程序的主源代码文件。|
+|.cpp、.c|源|应用程序的主源代码文件。|
 |.cur|资源|光标位图图形文件。|
 |.dbp|项目|数据库项目文件。|
 |.disco|源|动态发现文档文件。 处理 XML Web 服务发现。|
@@ -78,8 +78,8 @@ ms.locfileid: "57825069"
 |.vap|项目|Visual Studio Analyzer 项目文件。|
 |.vbg|解决方案|兼容的项目组文件。|
 |.vbp、.vip、.vbproj|Project|Visual Basic 项目文件。|
-|.vcxitems|项目|用于在多个 C++ 项目之间共享代码文件的共享项目。 有关更多信息，请参见 [项目文件和生成文件]() 。|
-|.vcxproj|项目|Visual Studio 项目文件。 有关更多信息，请参见 [项目文件和生成文件]() 。|
+|.vcxitems|项目|用于在多个 C++ 项目之间共享代码文件的共享项目。 请参阅[项目和解决方案文件](project-and-solution-files.md)有关详细信息。|
+|.vcxproj|项目|Visual Studio 项目文件。 请参阅[项目和解决方案文件](project-and-solution-files.md)有关详细信息。|
 |.vcxproj.filters|项目|解决方案资源管理器用于将文件添加到项目时，筛选器文件定义在解决方案资源管理器树视图中添加文件（基于其文件扩展名）的位置。|
 |.vdproj|项目|Visual Studio 部署项目文件。|
 |.vmx|项目|宏项目文件。|

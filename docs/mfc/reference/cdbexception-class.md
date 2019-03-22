@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CDBException [MFC], m_strError
 - CDBException [MFC], m_strStateNativeOrigin
 ms.assetid: eb9e1119-89f5-49a7-b9d4-b91cee1ccc82
-ms.openlocfilehash: e8a5195d4d2a3662d79d515c28dc66d1b0a27b24
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 755b89635eedd7808f900dc63cd3039845db1dd3
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57295014"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328527"
 ---
 # <a name="cdbexception-class"></a>CDBException 类
 
@@ -33,7 +33,7 @@ class CDBException : public CException
 
 ### <a name="public-data-members"></a>公共数据成员
 
-|名称|描述|
+|name|描述|
 |----------|-----------------|
 |[CDBException::m_nRetCode](#m_nretcode)|包含类型 RETCODE 的开放式数据库连接 (ODBC) 返回代码。|
 |[CDBException::m_strError](#m_strerror)|包含在字母数字术语描述错误的字符串。|
@@ -132,7 +132,7 @@ class CDBException : public CException
 
 该字符串采用窗体"状态: %s，本机: %ld，源: %s"，其中的格式代码，按顺序，将替换为描述的值：
 
-- 包含五个字符的错误代码的以 null 结尾的字符串返回 SQLSTATE *szSqlState* ODBC 函数的参数`SQLError`。 附录 A 列出了 SQLSTATE 值[ODBC 错误代码](/previous-versions/windows/desktop/ms714687)，在*ODBC 程序员参考*。 示例:"S0022"。
+- 包含五个字符的错误代码的以 null 结尾的字符串返回 SQLSTATE *szSqlState* ODBC 函数的参数`SQLError`。 附录 A 列出了 SQLSTATE 值[ODBC 错误代码](/previous-versions/windows/desktop/ms714687(v=vs.85))，在*ODBC 程序员参考*。 示例:"S0022"。
 
 - 在中返回特定于数据源的本机错误代码*pfNativeError*参数的`SQLError`函数。 示例:207.
 
@@ -140,13 +140,13 @@ class CDBException : public CException
 
 该框架将错误字符串解释，并将放入其组件`m_strStateNativeOrigin`; 如果`m_strStateNativeOrigin`包含信息的多个错误，这些错误由换行符分隔。 该框架将放入的字母数字错误文本`m_strError`。
 
-有关用于构成此字符串的代码的其他信息，请参阅[SQLError](/previous-versions/windows/desktop/ms716312)函数，在*ODBC 程序员参考*。
+有关用于构成此字符串的代码的其他信息，请参阅[SQLError](/previous-versions/windows/desktop/ms716312(v=vs.85))函数，在*ODBC 程序员参考*。
 
 ### <a name="example"></a>示例
 
-  从 ODBC:"State:S0022,Native:207,Origin:[Microsoft][ODBC SQL Server Driver][SQL Server] Invalid column name 'ColName'"
+  从 ODBC:"State:S0022,Native:207,Origin:\[Microsoft]\[ODBC SQL Server Driver]\[SQL Server] Invalid column name 'ColName'"
 
-在 `m_strStateNativeOrigin`中："State:S0022,Native:207,Origin:[Microsoft][ODBC SQL Server Driver][SQL Server]"
+在 `m_strStateNativeOrigin`中："State:S0022,Native:207,Origin:\[Microsoft]\[ODBC SQL Server Driver]\[SQL Server]"
 
 在 `m_strError`中："无效的列 ColName name"
 

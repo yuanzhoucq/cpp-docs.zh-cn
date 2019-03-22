@@ -87,12 +87,12 @@ helpviewer_keywords:
 - graphics [C++], converting formats
 - images [C++], converting formats
 ms.assetid: 66db3fb2-cfc1-48a2-9bdd-53f61eb7ee30
-ms.openlocfilehash: 92eac69e6802a824c4b6e107d2ff3393e931a542
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 4191b1bd495a8908610b6e49c3dff676de2304dc
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563051"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328488"
 ---
 # <a name="how-to-create-an-icon-or-other-image"></a>如何：创建图标或其他图像
 
@@ -167,7 +167,7 @@ ms.locfileid: "57563051"
 
 #### <a name="to-create-a-new-icon-or-cursor"></a>若要创建新图标或光标
 
-1. 在中[资源视图](/windows/how-to-create-a-resource-script-file#create-resources)，右键单击你 *.rc*文件，然后选择**插入资源**。 如果已有现有的图像资源您 *.rc*文件，例如游标，您可以右键单击**游标**文件夹，然后选择**插入光标**。
+1. 在中[资源视图](how-to-create-a-resource-script-file.md#create-resources)，右键单击你 *.rc*文件，然后选择**插入资源**。 如果已有现有的图像资源您 *.rc*文件，例如游标，您可以右键单击**游标**文件夹，然后选择**插入光标**。
 
 1. 在中[插入资源对话框](../windows/add-resource-dialog-box.md)，选择**图标**或**游标**，然后选择**新建**。 对于图标，此操作使用 32 × 32，16 色图标创建一个图标资源。 对于游标，32 × 32，创建单色 （2 种颜色） 映像。
 
@@ -228,7 +228,7 @@ ms.locfileid: "57563051"
 
 #### <a name="to-create-a-256-color-icon-or-cursor"></a>若要创建 256 色图标或光标
 
-1. 在中[资源视图](/windows/how-to-create-a-resource-script-file#create-resources)，右键单击你 *.rc*文件，然后选择**插入资源**。 如果已有现有的图像资源您 *.rc*文件，例如游标，您可以右键单击**游标**文件夹，然后选择**插入光标**。
+1. 在中[资源视图](how-to-create-a-resource-script-file.md#create-resources)，右键单击你 *.rc*文件，然后选择**插入资源**。 如果已有现有的图像资源您 *.rc*文件，例如游标，您可以右键单击**游标**文件夹，然后选择**插入光标**。
 
 1. 在中[插入资源对话框](../windows/add-resource-dialog-box.md)，选择**图标**或**游标**，然后选择**新建**。
 
@@ -295,7 +295,7 @@ ms.locfileid: "57563051"
 
 ### <a name="to-add-a-new-image-resource-to-an-unmanaged-c-project"></a>若要将新的图像资源添加到非托管的 c + + 项目
 
-1. 在中[资源视图](/windows/how-to-create-a-resource-script-file#create-resources)，右键单击你 *.rc*文件，然后选择**插入资源**。 如果已有现有的图像资源您 *.rc*文件中，可以如游标，您只需右键单击**光标**文件夹，然后选择**插入光标**。
+1. 在中[资源视图](how-to-create-a-resource-script-file.md#create-resources)，右键单击你 *.rc*文件，然后选择**插入资源**。 如果已有现有的图像资源您 *.rc*文件中，可以如游标，您只需右键单击**光标**文件夹，然后选择**插入光标**。
 
 1. 在中[插入资源对话框](../windows/add-resource-dialog-box.md)，选择你想要创建的图像资源的类型 (**位图**，例如) 然后选择**新建**。
 
@@ -315,7 +315,7 @@ ms.locfileid: "57563051"
 
 ## <a name="requirements"></a>要求
 
-无
+None
 
 ## <a name="see-also"></a>请参阅
 

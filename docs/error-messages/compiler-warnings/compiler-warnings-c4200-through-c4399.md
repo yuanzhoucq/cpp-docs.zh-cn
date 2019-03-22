@@ -3,7 +3,6 @@ title: 编译器警告 C4200-C4399
 ms.date: 11/17/2017
 f1_keywords:
 - C4203
-- C4274
 - C4277
 - C4279
 - C4298
@@ -12,7 +11,6 @@ f1_keywords:
 - C4303
 - C4314
 - C4315
-- C4316
 - C4317
 - C4318
 - C4321
@@ -22,22 +20,20 @@ f1_keywords:
 - C4328
 - C4330
 - C4338
-- C4343
 - C4352
 - C4362
 - C4367
 - C4370
-- C4373
 - C4380
 - C4387
 - C4388
 ms.assetid: 170248db-7bf2-4823-92d9-437b04c1290d
-ms.openlocfilehash: 9cca32973ead1d7d88e37c4745491c8d5f181e0b
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: d79c9c12664f9920f03490b8cb53ec671d3d78a3
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57810505"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328260"
 ---
 # <a name="compiler-warnings-c4200-through-c4399"></a>编译器警告 C4200-C4399
 
@@ -103,7 +99,7 @@ ms.locfileid: "57810505"
 |[编译器警告（等级 1）C4269](../../error-messages/compiler-warnings/compiler-warning-level-1-c4269.md)|'*标识符*： 用编译器生成默认构造函数初始化 const 自动数据产生不可靠的结果|
 |[编译器警告（等级 1）C4272](../../error-messages/compiler-warnings/compiler-warning-level-1-c4272.md)|'*函数*： 被标记为 __declspec （dllimport）; 导入函数时必须指定本机调用约定。|
 |[编译器警告（等级 1）C4273](../../error-messages/compiler-warnings/compiler-warning-level-1-c4273.md)|'*函数*: dll 链接不一致|
-|编译器警告 （等级 1） C4274|#ident ignored; see documentation for #pragma comment(exestr, 'string')|
+|[编译器警告 （等级 1） C4274](compiler-warning-level-1-c4274.md)|#ident ignored; see documentation for #pragma comment(exestr, 'string')|
 |[编译器警告（等级 2）C4275](../../error-messages/compiler-warnings/compiler-warning-level-2-c4275.md)|非 dll 接口*classkey*''*identifier1*用作 dll 接口的基表示*classkey*''*identifier2*|
 |[编译器警告（等级 1）C4276](../../error-messages/compiler-warnings/compiler-warning-level-1-c4276.md)|'*函数*： 不提供原型; 假定无参数|
 |编译器警告 （等级 1） C4277|导入的项*classname*::*成员*作为数据成员和函数成员; 存在忽略数据成员|
@@ -140,7 +136,7 @@ ms.locfileid: "57810505"
 |[编译器警告（等级 1）C4313](../../error-messages/compiler-warnings/compiler-warning-level-1-c4313.md)|'*函数*:*format_specifier*格式字符串与冲突参数'*argument_number*的类型'*类型*|
 |编译器警告 C4314|杂的注参数应为"32"或"64"|
 |编译器警告 （等级 C4315|'*classname*： 成员 this 指针*成员*'可能不满足*对齐*按预期方式由构造函数|
-|编译器警告 （等级 3） C4316|'*标识符*： 在堆上分配的对象可能未对齐*对齐*|
+|[编译器警告 （等级 3） C4316](compiler-warning-level-3-c4316.md)|'*标识符*： 在堆上分配的对象可能未对齐*对齐*|
 |编译器警告 （等级 1） C4317|'*printf_family*： 没有足够自变量传递为格式字符串|
 |编译器警告 C4318|将常量零作为长度传递给 memset|
 |[编译器警告（等级 1）C4319](../../error-messages/compiler-warnings/compiler-warning-level-1-c4319.md)|'*运算符*： 零扩展*type1*to*type2*更大的|
@@ -163,7 +159,7 @@ ms.locfileid: "57810505"
 |[编译器警告（等级 4）C4339](../../error-messages/compiler-warnings/compiler-warning-level-4-c4339.md)|'*类型*： 未定义的类型中检测到使用 WinRT&#124;CLR 元数据-使用此类型可能会导致运行时异常|
 |[编译器警告（等级 1）C4340](../../error-messages/compiler-warnings/compiler-warning-level-1-c4340.md)|'*值*： 值由正值切换为负值|
 |[编译器警告（等级 1）C4342](../../error-messages/compiler-warnings/compiler-warning-level-1-c4342.md)|行为更改: '*函数*调用，但在以前的版本中，称为成员运算符|
-|编译器警告 （等级 C4343|#pragma optimize("g",off) 重写 /Og 选项|
+|[编译器警告 （等级 C4343](compiler-warning-level-4-c4343.md)|#pragma optimize("g",off) 重写 /Og 选项|
 |[编译器警告（等级 1）C4344](../../error-messages/compiler-warnings/compiler-warning-level-1-c4344.md)|行为更改： 使用显式模板参数导致调用 '*函数*|
 |[编译器警告（等级 1）C4346](../../error-messages/compiler-warnings/compiler-warning-level-1-c4346.md)|'*名称*： 依赖名称不是类型|
 |[编译器警告（等级 1）C4348](../../error-messages/compiler-warnings/compiler-warning-level-1-c4348.md)|'*类型*： 重定义默认参数： 参数'*parameter_number*|
@@ -184,7 +180,7 @@ ms.locfileid: "57810505"
 |[编译器警告（等级 1）C4369](../../error-messages/compiler-warnings/compiler-warning-level-1-c4369.md)|'*枚举器*： 枚举器值*值*不能表示为'*类型*，值为*new_value*|
 |编译器警告 C4370|'*classname*： 类的布局已从以前版本更好地封装的编译器的更改|
 |[编译器警告 （等级 3） C4371](../../error-messages/compiler-warnings/c4371.md)|'*classname*： 类的布局可能已更改从以前版本的编译器更好地封装成员*成员*|
-|编译器警告 （等级 3） C4373|'*derived_class*::*函数*： 虚函数重写*base_class*::*函数*上, 一版本的编译器未进行重写时参数只上有差异 const/volatile 限定符|
+|[编译器警告 （等级 3） C4373](compiler-warning-level-3-c4373.md)|'*derived_class*::*函数*： 虚函数重写*base_class*::*函数*上, 一版本的编译器未进行重写时参数只上有差异 const/volatile 限定符|
 |[编译器警告（等级 1）C4374](../../error-messages/compiler-warnings/compiler-warning-level-1-c4374.md)|'*function1*： 不能由非虚方法实现接口方法*function2*|
 |[编译器警告（等级 1）C4375](../../error-messages/compiler-warnings/compiler-warning-level-1-c4375.md)|非公共方法*method2*不重写*method2*|
 |[编译器警告（等级 1）C4376](../../error-messages/compiler-warnings/compiler-warning-level-1-c4376.md)|访问说明符*old_specifier*: 不再受支持： 请使用 '*new_specifier*: 改为|
@@ -205,7 +201,7 @@ ms.locfileid: "57810505"
 |[编译器警告（等级 1）C4393](../../error-messages/compiler-warnings/compiler-warning-level-1-c4393.md)|'*变量*： 常量不起任何作用'*文本*数据成员; 被忽略|
 |[编译器警告 C4394](../../error-messages/compiler-warnings/compiler-warning-c4394.md)|'*函数*: per-appdomain 符号不应该用 __declspec('dllexport') 标记|
 |[编译器警告（等级 1）C4395](../../error-messages/compiler-warnings/compiler-warning-level-1-c4395.md)|'*函数*: initonly 数据成员的副本将调用成员函数*成员*|
-|编译器警告 （等级 2） C4396|'*函数*： 友元声明引用函数模板的专用化时，不能使用内联说明符|
+|[编译器警告 （等级 2） C4396](compiler-warning-level-2-c4396.md)|'*函数*： 友元声明引用函数模板的专用化时，不能使用内联说明符|
 |[编译器警告（等级 1）C4397](../../error-messages/compiler-warnings/compiler-warning-level-1-c4397.md)|已忽略 DefaultCharSetAttribute|
 |[编译器警告（等级 3）C4398](../../error-messages/compiler-warnings/compiler-warning-level-3-c4398.md)|'*变量*： 每个进程的全局对象可能无法使用多个 appdomain 正常工作; 请考虑使用 __declspec|
 |[编译器警告（等级 1）C4399](../../error-messages/compiler-warnings/compiler-warning-level-1-c4399.md)|'*符号*: per-process 符号不应该用 __declspec('dllimport') 使用 /clr 编译时标记： pure|

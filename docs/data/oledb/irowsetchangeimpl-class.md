@@ -32,12 +32,12 @@ helpviewer_keywords:
 - SetData method
 - FlushData method
 ms.assetid: 1e9fee15-ed9e-4387-af8f-215569beca6c
-ms.openlocfilehash: 299cebd93a3d54ab747f5c58b22dbbf215a02e4c
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 452bd28e3ea061ecc30ef802290242e4cb830792
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57426649"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328592"
 ---
 # <a name="irowsetchangeimpl-class"></a>IRowsetChangeImpl 类
 
@@ -90,7 +90,7 @@ class ATL_NO_VTABLE IRowsetChangeImpl : public BaseInterface
 
 |||
 |-|-|
-|[FlushData](#flushdata)|要将数据提交到其存储区提供程序的入口。|
+|[FlushData](#flushdata)|重写提供程序数据提交到自己的存储。|
 
 ## <a name="remarks"></a>备注
 
@@ -124,7 +124,7 @@ STDMETHOD (DeleteRows )(HCHAPTER /* hReserved */,
 
 #### <a name="parameters"></a>参数
 
-请参阅[IRowsetChange::DeleteRows](/previous-versions/windows/desktop/ms724362(v=vs.85)(v%3dvs.85))中*OLE DB 程序员参考*。
+请参阅[IRowsetChange::DeleteRows](/previous-versions/windows/desktop/ms724362(v=vs.85))中*OLE DB 程序员参考*。
 
 ## <a name="insertrow"></a> IRowsetChangeImpl::InsertRow
 
@@ -161,7 +161,7 @@ STDMETHOD (SetData )(HROW hRow,
 
 ## <a name="flushdata"></a> IRowsetChangeImpl::FlushData
 
-要将数据提交到其存储区提供程序的入口。
+重写提供程序数据提交到自己的存储。
 
 ### <a name="syntax"></a>语法
 

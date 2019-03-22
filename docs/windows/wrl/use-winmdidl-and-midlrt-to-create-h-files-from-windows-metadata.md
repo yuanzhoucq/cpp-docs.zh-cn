@@ -3,12 +3,12 @@ title: 如何：使用 winmdidl.exe 和 midlrt.exe 通过窗口元数据创建.h
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 4be8ba11-c223-44ad-9256-7e1edae9a7bc
-ms.openlocfilehash: b81f6901e60f27ada27f14d7dbc7c10fa3faec34
-ms.sourcegitcommit: 360b55e89e5954f494e52b1cf989fbaceda06f1c
+ms.openlocfilehash: b9016f05b82e3eb04474d370bd069e8008de5278
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54335712"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328709"
 ---
 # <a name="how-to-use-winmdidlexe-and-midlrtexe-to-create-h-files-from-windows-metadata"></a>如何：使用 winmdidl.exe 和 midlrt.exe 通过窗口元数据创建.h 文件
 
@@ -18,7 +18,7 @@ Winmdidl.exe 和 midlrt.exe 可在本机 C++ 代码与 Windows 运行时组件�
 
 - 创建自定义 IDL 和头文件，以便使用 Windows 运行时模板库 (WRL) 编写的 C++ 应用可以使用自定义 Windows 运行时组件。
 
-- 为 Windows 运行时组件中用户定义的事件类型生成代理和存根 (Stub) 文件。 有关详细信息，请参阅[自定义事件和 Windows 运行时组件中的事件访问器](/uwp/winrt-components/custom-events-and-event-accessors-in-windows-runtime-components)。
+- 为 Windows 运行时组件中用户定义的事件类型生成代理和存根 (Stub) 文件。 有关详细信息，请参阅[自定义事件和 Windows 运行时组件中的事件访问器](/windows/uwp/winrt-components/custom-events-and-event-accessors-in-windows-runtime-components)。
 
 只有分析自定义 .winmd 文件才需要这些工具。 已为你生成用于 Windows 操作系统组件的 .idl 和 .h 文件。 默认情况下，在 Windows 8.1 中，这些文件位于 \Program 文件 (x86) \Windows Kits\8.1\Include\winrt\\。
 
@@ -26,7 +26,7 @@ Winmdidl.exe 和 midlrt.exe 可在本机 C++ 代码与 Windows 运行时组件�
 
 默认情况下，在 [Windows 8.1 中，winmdidl.exe 和 midlrt.exe 位于 C:\Program Files (x86) \Windows Kits\8.1\\。 \bin\x86\ 和 \bin\x64\ 文件夹中也提供了这些工具的相应版本。
 
-## <a name="winmdidl-command-line-arguments"></a>Winmdidl 命令行自变量
+## <a name="winmdidl-command-line-arguments"></a>Winmdidl 命令行参数
 
 ```
 Winmdidl.exe [/nologo] [/suppressversioncheck] [/time] [/outdir:dir] [/banner:file] [/utf8] Winmdfile
@@ -53,7 +53,7 @@ Winmdidl.exe [/nologo] [/suppressversioncheck] [/time] [/outdir:dir] [/banner:fi
 *Winmdfile*<br/>
 要分析的 .winmd 文件的名称。 如果路径包含空格，请使用引号。
 
-## <a name="midlrt-command-line-arguments"></a>Midlrt 命令行自变量
+## <a name="midlrt-command-line-arguments"></a>Midlrt 命令行参数
 
 请参阅[MIDLRT 和 Windows 运行时组件](/windows/desktop/Midl/midlrt-and-windows-runtime-components)。
 
@@ -75,4 +75,4 @@ Winmdidl.exe [/nologo] [/suppressversioncheck] [/time] [/outdir:dir] [/banner:fi
 
 Winmdidl 操作的输出文件的名称与输入文件相同，但是具有 .idl 文件扩展名。
 
-如果你在开发将从 WRL 访问的 Windows 运行时组件，则可以指定 winmdidl.exe 和 midlrt.exe 作为生成后步骤运行，以便在每次生成时都生成 .idl 和 .h 文件。 有关示例，请参阅[在 Windows 运行时组件中引发事件](/uwp/winrt-components/raising-events-in-windows-runtime-components)。
+如果你在开发将从 WRL 访问的 Windows 运行时组件，则可以指定 winmdidl.exe 和 midlrt.exe 作为生成后步骤运行，以便在每次生成时都生成 .idl 和 .h 文件。 有关示例，请参阅[在 Windows 运行时组件中引发事件](/windows/uwp/winrt-components/raising-events-in-windows-runtime-components)。
