@@ -32,12 +32,12 @@ helpviewer_keywords:
 - strings [C++], formatting
 - strings [C++], special characters
 ms.assetid: f71ab8de-3068-4e29-8e28-5a33d18dd416
-ms.openlocfilehash: bea53c33ef723cf8c98d0c542d24389e730c092a
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 6c855986d98f265f876f2acdd085eea46e057c93
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563298"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328891"
 ---
 # <a name="string-editor-c"></a>字符串编辑器 （c + +）
 
@@ -56,7 +56,7 @@ ms.locfileid: "57563298"
 
 ### <a name="to-find-a-string-resource-in-the-string-table"></a>若要在字符串表中查找的字符串资源
 
-1. 通过双击中对应的图标打开字符串表[资源视图](/windows/how-to-create-a-resource-script-file#create-resources)。
+1. 通过双击中对应的图标打开字符串表[资源视图](how-to-create-a-resource-script-file.md#create-resources)。
 
 1. 转到菜单**编辑** > **查找和替换**，然后选择**查找**。
 
@@ -79,7 +79,7 @@ ms.locfileid: "57563298"
 
 #### <a name="to-add-a-string-table-entry"></a>若要添加的字符串表项
 
-1. 通过双击中对应的图标打开字符串表[资源视图](/windows/how-to-create-a-resource-script-file#create-resources)。
+1. 通过双击中对应的图标打开字符串表[资源视图](how-to-create-a-resource-script-file.md#create-resources)。
 
 1. 字符串表中右键单击并选择**新的字符串**。
 
@@ -124,7 +124,7 @@ ms.locfileid: "57563298"
 
 #### <a name="to-change-a-string-or-its-identifier"></a>若要更改字符串或其标识符
 
-1. 通过双击中对应的图标打开字符串表[资源视图](/windows/how-to-create-a-resource-script-file#create-resources)。
+1. 通过双击中对应的图标打开字符串表[资源视图](how-to-create-a-resource-script-file.md#create-resources)。
 
 1. 选择你想要编辑，并双击的字符串**ID**，**值**，或**标题**列，则你可以：
 
@@ -136,7 +136,7 @@ ms.locfileid: "57563298"
 
 #### <a name="to-change-the-caption-property-of-multiple-string-resources"></a>若要更改多个字符串资源的标题属性
 
-1. 通过双击中对应的图标打开字符串表[资源视图](/windows/how-to-create-a-resource-script-file#create-resources)。
+1. 通过双击中对应的图标打开字符串表[资源视图](how-to-create-a-resource-script-file.md#create-resources)。
 
 1. 选择你想要通过按下更改的字符串**Ctrl**选择每个键。
 
@@ -146,7 +146,7 @@ ms.locfileid: "57563298"
 
 ### <a name="to-add-formatting-or-special-characters-to-a-string-resource"></a>若要将格式设置或特殊字符添加到字符串资源
 
-1. 通过双击中对应的图标打开字符串表[资源视图](/windows/how-to-create-a-resource-script-file#create-resources)。
+1. 通过双击中对应的图标打开字符串表[资源视图](how-to-create-a-resource-script-file.md#create-resources)。
 
 1. 选择你想要修改的字符串。
 

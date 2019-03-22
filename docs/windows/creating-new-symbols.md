@@ -19,12 +19,12 @@ helpviewer_keywords:
 - View Use button
 - resource editors [C++], resource symbols
 ms.assetid: 35168d31-3af6-4ecd-9362-3707d47b53f3
-ms.openlocfilehash: 91092b29d7265904e69b093310daa72b673d8745
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: c2e2f67a6547b05fca198a54b13776a1d3fafecf
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563376"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328917"
 ---
 # <a name="how-to-create-symbols-c"></a>如何：创建符号 （c + +）
 
@@ -65,7 +65,7 @@ ms.locfileid: "57563376"
 
 ## <a name="to-view-resource-symbols"></a>查看资源符号
 
-在中[资源视图](/windows/how-to-create-a-resource-script-file#create-resources)，右键单击你 *.rc*文件，然后选择**资源符号**若要查看资源符号表中的**资源符号**对话框。
+在中[资源视图](how-to-create-a-resource-script-file.md#create-resources)，右键单击你 *.rc*文件，然后选择**资源符号**若要查看资源符号表中的**资源符号**对话框。
 
 > [!NOTE]
 > 若要查看预定义的符号，请**显示只读符号**复选框。

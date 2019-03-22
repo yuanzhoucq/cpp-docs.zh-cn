@@ -8,18 +8,18 @@ helpviewer_keywords:
 - data [C++], data access technologies
 - data access [C++], class libraries for databases
 ms.assetid: 95da6237-bbe2-480a-ae50-3a520051ceff
-ms.openlocfilehash: 3f1597ab4947329d6103b417a0f4b5bd6664b110
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 7a222100cc7e13ee78f01cf4bb9c376af15f9b0e
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51692753"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328774"
 ---
 # <a name="data-access-in-visual-c"></a>Visual C++ 中的数据访问
 
 几乎所有数据库产品（SQL 和 NoSQL）都提供用于本机 C++ 应用程序的接口。 行业标准接口是 ODBC，所有主要 SQL 数据库产品和多数 NoSQL 产品都支持该接口。 对于非 Microsoft 产品，请咨询供应商，了解详细信息。 此外，还提供具有各种许可条款的第三方库。
 
-自 2011 年起，Microsoft 已将 ODBC 作为本机应用程序连接到本地和云中 Microsoft SQL Server 数据库的标准接口。 有关详细信息，请参阅[数据访问编程\( MFC ATL\)](data-access-programming-mfc-atl.md)。 C++/CLI 库可以使用本机 ODBC 驱动程序或 ADO.NET。 有关详细信息，请参阅[使用 ADO.NET 进行数据访问 (C++/CLI)](/dotnet/data-access-using-adonet-cpp-cli.md) 和[在 Visual Studio 中访问数据](https://docs.microsoft.com/visualstudio/data-tools/accessing-data-in-visual-studio)。
+自 2011 年起，Microsoft 已将 ODBC 作为本机应用程序连接到本地和云中 Microsoft SQL Server 数据库的标准接口。 有关详细信息，请参阅[数据访问编程\( MFC ATL\)](data-access-programming-mfc-atl.md)。 C++/CLI 库可以使用本机 ODBC 驱动程序或 ADO.NET。 有关详细信息，请参阅[使用 ADO.NET 进行数据访问 (C++/CLI)](../dotnet/data-access-using-adonet-cpp-cli.md) 和[在 Visual Studio 中访问数据](https://docs.microsoft.com/visualstudio/data-tools/accessing-data-in-visual-studio)。
 
 ## <a name="in-this-section"></a>本节内容
 
@@ -53,7 +53,7 @@ SQL Server Native Client 是可同时用于 OLE DB 和 ODBC 的独立数据访�
 Azure Blob 存储是将非结构化数据作为对象/blob 存储在云中的服务。 Blob 存储可以存储任何类型的文本或二进制数据（如文档、媒体文件或应用程序安装程序）。 Blob 存储也称为对象存储。
 
 [ ODBC 程序员参考](https://docs.microsoft.com/sql/odbc/reference/odbc-programmer-s-reference)<br/>
-ODBC 接口用于与 C 编程语言一起使用。 ODBC 接口的使用涉及三大块：SQL 语句、ODBC 函数调用，以及 C 编程。
+ODBC 接口用于与 C 编程语言一起使用。 ODBC 接口的使用涉及三大块：SQL 语句，ODBC 函数调用，以及 C 编程。
 
 ## <a name="see-also"></a>请参阅
 

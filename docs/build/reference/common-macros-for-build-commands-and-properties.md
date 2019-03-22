@@ -1,6 +1,6 @@
 ---
-title: 用于生成命令和属性的常用宏
-ms.date: 05/29/2018
+title: 有关 MSBuild 命令和属性的常用宏
+ms.date: 03/20/2019
 f1_keywords:
 - VC.Project.VCCLCompilerTool.GenerateXMLDocumentationFiles
 - VC.Project.VCCLCompilerTool.XMLDocumentationFileName
@@ -90,26 +90,29 @@ helpviewer_keywords:
 - builds [C++], macros
 - $(FrameworkDir) macro
 - $(PlatformName) macro
+- $(PlatformShortName) macro
 - SolutionPath macro $(SolutionPath)
 ms.assetid: 239bd708-2ea9-4687-b264-043f1febf98b
-ms.openlocfilehash: 669114691bc89c1e8136e07a949be57cda3d71b9
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 46fdd5e356ded96388a154ff459ef4cc3c02267f
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57824524"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58327673"
 ---
-# <a name="common-macros-for-build-commands-and-properties"></a>用于生成命令和属性的常用宏
+# <a name="common-macros-for-msbuild-commands-and-properties"></a>有关 MSBuild 命令和属性的常用宏
 
-根据你的安装选项，Visual Studio 可以为你提供数百个宏。 这些宏对应于默认设置的，或者在 .props 或 .targets 文件中，或者在项目设置中设置的 MSBuild 属性。 你可以在项目“属性页”  对话框中接受字符串的任意位置使用这些宏。 这些宏不区分大小写。
+具体取决于您的安装选项，Visual Studio 可以提供数百个宏到您在 Visual Studio 项目 （基于 MSBuild） 中。 这些宏对应于默认设置的，或者在 .props 或 .targets 文件中，或者在项目设置中设置的 MSBuild 属性。 你可以在项目“属性页”  对话框中接受字符串的任意位置使用这些宏。 这些宏不区分大小写。
 
 ## <a name="view-the-current-properties-and-macros"></a>查看当前属性和宏
 
-若要显示当前可用的宏，请在“属性页面”对话框中的任何属性页面上，选择属性行末尾的下拉箭头。 如果“编辑” 可用，请选择它，然后在“编辑”对话框中选择“宏”按钮。 对 Visual Studio 可见的当前属性和宏集，连同每个属性和宏的当前值一起列出。 有关详细信息，请参阅**Specifying User-Defined 值**一部分[c + + 项目属性页引用](property-pages-visual-cpp.md)。
+若要显示所有当前可用的宏，**属性页**对话框下**VC + + 目录**，选择某一属性行末尾的下拉箭头。 单击**编辑**，然后在编辑对话框中，选择**宏**按钮。 对 Visual Studio 可见的当前属性和宏集，连同每个属性和宏的当前值一起列出。 有关详细信息，请参阅**Specifying User-Defined 值**一部分[c + + 项目属性页引用](property-pages-visual-cpp.md)。
+
+![VC + + 宏按钮](../media/vcppdir_libdir_macros.png "宏菜单")
 
 ## <a name="list-of-common-macros"></a>常见宏列表
 
-下表介绍了可用宏的常用子集。 此列表远未详尽。 有关如何创建 MSBuild 属性定义以及如何在 .props、.targets 和 .vcxproj 文件中将其用作宏的详细信息，请参阅 [MSBuild 属性](/visualstudio/msbuild/msbuild-properties)。
+下表说明了常用的子集可用宏;有许多更未在此处列出。 转到**宏**对话框以查看所有属性和它们在项目中的当前值。 有关如何创建 MSBuild 属性定义以及如何在 .props、.targets 和 .vcxproj 文件中将其用作宏的详细信息，请参阅 [MSBuild 属性](/visualstudio/msbuild/msbuild-properties)。
 
 |宏|描述|
 |-----------|-----------------|
@@ -122,6 +125,7 @@ ms.locfileid: "57824524"
 |**$(IntDir)**|为中间文件指定的目录路径。 如果这是一个相对路径，则中间文件将转到追加到项目目录的此路径。 此路径应具有尾随斜杠。 这将解析为 **Intermediate Directory** 属性的值。 请勿使用 **$(OutDir)** 定义此属性。|
 |**$(OutDir)**|输出文件目录的路径。 如果这是一个相对路径，则输出文件将转到追加到项目目录中的此路径。 此路径应具有尾随斜杠。 这将解析为 **Output Directory** 属性的值。 请勿使用 **$(IntDir)** 定义此属性。|
 |**$(Platform)**|当前项目平台的名称（例如“Win32”）。|
+|**$(PlatformShortName)**|当前体系结构，例如，"x86"或"x64"短名称。|
 |**$(ProjectDir)**|项目的目录（定义为驱动器 + 路径）；包括尾随反斜杠“\\”。|
 |**$(ProjectExt)**|项目的文件扩展名。 文件扩展名之前包括“.”。|
 |**$(ProjectFileName)**|项目的文件名称（定义为基名称 + 文件扩展名）。|
@@ -162,6 +166,6 @@ Visual Studio 2008 和 Visual Studio 2010 之间的 C++ 生成系统已显著更
 
 ## <a name="see-also"></a>请参阅
 
-- [Visual Studio Projects - C++](../creating-and-managing-visual-cpp-projects.md)
+- [Visual Studio 项目 - C++](../creating-and-managing-visual-cpp-projects.md)
 - [Visual C++ 移植和升级指南](../../porting/visual-cpp-porting-and-upgrading-guide.md)
 - [潜在的升级问题概述](../../porting/overview-of-potential-upgrade-issues-visual-cpp.md)

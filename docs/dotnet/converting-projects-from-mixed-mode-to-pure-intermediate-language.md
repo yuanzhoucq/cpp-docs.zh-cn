@@ -7,12 +7,12 @@ helpviewer_keywords:
 - mixed-mode applications, intermediate language
 - projects [C++], converting to intermediate language
 ms.assetid: 855f9e3c-4f09-4bfe-8eab-a45f68292be9
-ms.openlocfilehash: 46a12e6204113b00c209696bbdfd1093232d7521
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 93eff646fb582e25ad70549afc714c5321e56079
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559664"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328579"
 ---
 # <a name="converting-projects-from-mixed-mode-to-pure-intermediate-language"></a>将项目从混合模式转换为纯中间语言
 
@@ -77,19 +77,19 @@ ms.locfileid: "50559664"
 
    |结构|描述|
    |---------------|-----------------|
-   |[布尔值](/dotnet/api/system.boolean)|表示布尔值。|
+   |[Boolean](/dotnet/api/system.boolean)|表示布尔值。|
    |[Byte](/dotnet/api/system.byte)|表示一个 8 位无符号整数。|
    |[Char](/dotnet/api/system.char)|表示一个 Unicode 字符。|
-   |[DateTime](/dotnet/api/system.datetime.datetime.aspx)|表示时间上的一刻，通常以日期和当天的时间表示。|
+   |[DateTime](/dotnet/api/system.datetime)|表示时间上的一刻，通常以日期和当天的时间表示。|
    |[小数](/dotnet/api/system.decimal)|表示十进制数。|
-   |[双精度](/dotnet/api/system.double)|表示一个双精度浮点数。|
+   |[Double](/dotnet/api/system.double)|表示一个双精度浮点数。|
    |[Guid](/dotnet/api/system.guid)|表示全局唯一标识符 (GUID)。|
    |[Int16](/dotnet/api/system.int16)|表示 16 位有符号整数。|
    |[Int32](/dotnet/api/system.int32)|表示 32 位带符号整数。|
    |[Int64](/dotnet/api/system.int64)|表示 64 位有符号整数。|
    |[IntPtr](/dotnet/api/system.intptr)|用于表示指针或句柄的平台特定类型。|
-   |[SByte](/dotnet/api/system.byte.aspx)|表示 8 位有符号整数。|
-   |[单精度](/dotnet/api/system.single.aspx)|表示一个单精度浮点数。|
+   |[SByte](/dotnet/api/system.byte)|表示 8 位有符号整数。|
+   |[Single](/dotnet/api/system.single)|表示一个单精度浮点数。|
    |[TimeSpan](/dotnet/api/system.timespan)|表示一个时间间隔。|
    |[UInt16](/dotnet/api/system.uint16)|表示 16 位无符号整数。|
    |[UInt32](/dotnet/api/system.uint32)|表示 32 位无符号整数。|

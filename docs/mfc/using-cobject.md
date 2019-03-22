@@ -10,12 +10,12 @@ helpviewer_keywords:
 - MFC, base class
 - CObject class [MFC]
 ms.assetid: d0cd19bb-2856-4b41-abbc-620fd64cb223
-ms.openlocfilehash: 15b5bebb8e75d24b769cd29971d08b3fbf92fcf8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 6c4355f43df33f37838cfc9be4453e42271ae9f3
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57302125"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328475"
 ---
 # <a name="using-cobject"></a>使用 CObject
 
@@ -31,7 +31,7 @@ ms.locfileid: "57302125"
 
 - [动态创建对象](../mfc/dynamic-object-creation.md)
 
-- [对象的数据转储以进行诊断](/previous-versions/visualstudio/visual-studio-2010/sc15kz85)
+- [对象的数据转储以进行诊断](/previous-versions/visualstudio/visual-studio-2010/sc15kz85(v=vs.100))
 
 - 验证对象的内部状态 (请参阅[MFC ASSERT_VALID 和 CObject::AssertValid](reference/diagnostic-services.md#assert_valid))
 

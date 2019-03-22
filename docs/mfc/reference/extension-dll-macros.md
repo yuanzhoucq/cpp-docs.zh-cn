@@ -4,12 +4,12 @@ ms.date: 04/03/2017
 helpviewer_keywords:
 - module macros in MFC
 ms.assetid: 303f4161-cb5e-4099-81ad-acdb11aa60fb
-ms.openlocfilehash: 1d0cbd1f702a1d26dd2eaafd88efcfd61f52ff78
-ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
+ms.openlocfilehash: 863350067c39fbc9cdb3d9d3a6c4448348d977de
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55850211"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328761"
 ---
 # <a name="macros-and-functions-for-managing-dlls"></a>宏和用于管理 Dll 函数
 
@@ -21,9 +21,9 @@ ms.locfileid: "55850211"
 |[AfxNetInitModule](#afxnetinitmodule)|提供了从动态链接到 MFC 的规则 MFC DLL 的 MFC 套接字支持。|
 |[AfxGetAmbientActCtx](#afxgetambientactctx)|获取每个模块状态标志的当前状态。|
 |[AfxGetStaticModuleState](#afxgetstaticmodulestate)|设置模块状态初始化之前和/或若要清理后还原以前的模块状态。|
-|[AfxInitExtensionModule]()#afxinitextensionmodule|初始化 DLL。|
+|[AfxInitExtensionModule](#afxinitextensionmodule)|初始化 DLL。|
 |[AfxSetAmbientActCtx](#afxsetambientactctx)|设置每个模块状态标志，这会影响 MFC 的 WinSxS 行为。|
-|[AfxTermExtensionModule]()#afxtermextensionmodule)|允许在 MFC 清理 MFC 扩展 DLL 时从 DLL 分离的每个进程。|
+|[AfxTermExtensionModule](#afxtermextensionmodule)|允许在 MFC 清理 MFC 扩展 DLL 时从 DLL 分离的每个进程。|
 
 ## <a name="afx_ext_class"></a>  AFX_EXT_CLASS
 

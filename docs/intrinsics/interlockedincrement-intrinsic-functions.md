@@ -44,18 +44,18 @@ helpviewer_keywords:
 - _InterlockedIncrement_acq intrinsic
 - InterlockedIncrement intrinsic
 ms.assetid: 37700615-f372-438b-bcef-d76e11839482
-ms.openlocfilehash: 3054a9eab21f6f7ec149f7f1c23c3c40fca3b9e1
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: 91e9c6dac1b6f13997bb7e4f2727a743a9177083
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626927"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328605"
 ---
 # <a name="interlockedincrement-intrinsic-functions"></a>_InterlockedIncrement 内部函数
 
 **Microsoft 专用**
 
-提供编译器内部函数支持 Win32 Windows SDK [InterlockedIncrement](/windows/desktop/api/winbase/nf-winbase-interlockedincrement)函数。
+提供编译器内部函数支持 Win32 Windows SDK [InterlockedIncrement](/windows/desktop/api/winnt/nf-winnt-interlockedincrement)函数。
 
 ## <a name="syntax"></a>语法
 
@@ -116,7 +116,8 @@ __int64 _InterlockedIncrement64_nf(
 
 ## <a name="remarks"></a>备注
 
-`_InterlockedIncrement` 存在几种变体，这些变体根据其涉及的数据类型和是否使用特定于处理器获取或发布语义而有所不同。
+
+  `_InterlockedIncrement` 存在几种变体，这些变体根据其涉及的数据类型和是否使用特定于处理器获取或发布语义而有所不同。
 
 当 `_InterlockedIncrement` 函数对 32 位整数值操作时，`_InterlockedIncrement16` 对 16 位整数值操作且 `_InterlockedIncrement64` 可以对 64 位整数值操作。
 

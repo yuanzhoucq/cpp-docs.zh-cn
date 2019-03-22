@@ -35,12 +35,12 @@ helpviewer_keywords:
 - calculated symbols
 - shared symbols
 ms.assetid: 26541832-8dba-4177-b642-e08f94502ea7
-ms.openlocfilehash: 0de53b102cf06d8b4541f54f961f84408664caed
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: f2edafb0b60cfafcf7ad53b8402ffc39a6fc2f7c
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57562791"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328839"
 ---
 # <a name="how-to-manage-symbols"></a>如何：管理符号
 
@@ -85,7 +85,7 @@ ms.locfileid: "57562791"
 
 ### <a name="to-change-a-symbol-name-id"></a>若要更改符号名 (ID)
 
-1. 在中[资源视图](/windows/how-to-create-a-resource-script-file#create-resources)，选择的资源。
+1. 在中[资源视图](how-to-create-a-resource-script-file.md#create-resources)，选择的资源。
 
 1. 在中**属性**窗口中，输入新符号名或从现有符号列表中选择**ID**框。
 
@@ -129,7 +129,7 @@ ms.locfileid: "57562791"
 
 ### <a name="to-change-a-symbol-value"></a>若要更改符号值
 
-1. 在中[资源视图](/windows/how-to-create-a-resource-script-file#create-resources)，选择的资源。
+1. 在中[资源视图](how-to-create-a-resource-script-file.md#create-resources)，选择的资源。
 
 1. 在中**属性**窗口中，键入符号名称后跟一个等号和中的整数**ID**框中，例如：
 
@@ -185,7 +185,7 @@ ms.locfileid: "57562791"
 
 ### <a name="to-include-shared-read-only-symbols-in-your-resource-file"></a>在资源文件包含共享（只读）符号
 
-1. 在中[资源视图](/windows/how-to-create-a-resource-script-file#create-resources)，右键单击你 *.rc*文件，然后选择[资源包括](../windows/resource-includes-dialog-box.md)。
+1. 在中[资源视图](how-to-create-a-resource-script-file.md#create-resources)，右键单击你 *.rc*文件，然后选择[资源包括](../windows/resource-includes-dialog-box.md)。
 
 1. 在中**只读符号指令**框中，使用`#include`编译器指令，以指定想要保留只读符号的文件。
 
@@ -204,7 +204,7 @@ ms.locfileid: "57562791"
 
 ### <a name="to-change-the-name-of-the-resource-symbol-header-file"></a>更改资源符号头文件的名称
 
-1. 在中[资源视图](/windows/how-to-create-a-resource-script-file#create-resources)，右键单击你 *.rc*文件，然后选择[资源包括](../windows/resource-includes-dialog-box.md)。
+1. 在中[资源视图](how-to-create-a-resource-script-file.md#create-resources)，右键单击你 *.rc*文件，然后选择[资源包括](../windows/resource-includes-dialog-box.md)。
 
 1. 在中**符号头文件**框中，键入包含文件的新名称。
 

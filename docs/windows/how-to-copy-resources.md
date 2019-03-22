@@ -30,12 +30,12 @@ helpviewer_keywords:
 - cursors [C++], importing and exporting
 - images [C++], exporting
 ms.assetid: 65f523e8-017f-4fc6-82d1-083c56d9131f
-ms.openlocfilehash: 28127ea89fdba1b70988ced1d6004c0f914c66e2
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 9867fdf260750d47421e699cdd0d7a58b02ce947
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563038"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328618"
 ---
 # <a name="how-to-manage-resources-c"></a>如何：管理资源 （c + +）
 
@@ -52,7 +52,7 @@ ms.locfileid: "57563038"
 
 ### <a name="to-copy-resources"></a>若要将资源复制
 
-1. 打开两个独立的资源文件 (请参阅如何[以打开资源脚本文件](/how-to-create-a-resource-script-file#use-resource-script-files))。 例如，打开*Source1.rc*并*Source2.rc*。
+1. 同时单独打开这两个资源文件。 (请参阅[使用资源脚本文件](how-to-create-a-resource-script-file.md#use-resource-script-files))。 例如，打开*Source1.rc*并*Source2.rc*。
 
 1. 在第一个.rc 文件，可以：
 
@@ -88,7 +88,7 @@ IDD_AboutBox (Finnish - XX33)
 
 ### <a name="to-copy-an-existing-resource-and-change-its-language-or-condition"></a>复制的现有资源并更改其语言或条件
 
-在中 *.rc*文件中或在[资源视图](../windows/resource-view-window.md)窗口中，右键单击你想要复制，并选择的资源**插入副本**。 然后设置以下各项：
+在中 *.rc*文件中或在[资源视图](how-to-create-a-resource-script-file.md#create-resources)窗口中，右键单击你想要复制，并选择的资源**插入副本**。 然后设置以下各项：
 
 - 有关**语言**列表框中，选择的语言。
 
@@ -107,7 +107,7 @@ IDD_AboutBox (Finnish - XX33)
 
 ### <a name="to-import-a-resource-into-the-resource-script-file"></a>若要将资源导入到资源脚本文件
 
-1. 在中[资源视图](../windows/resource-view-window.md)右键单击你想要将资源添加，然后选择资源脚本 (.rc) 文件的节点**导入**。
+1. 在中[资源视图](how-to-create-a-resource-script-file.md#create-resources)右键单击你想要将资源添加，然后选择资源脚本 (.rc) 文件的节点**导入**。
 
 1. 找到并选择位图 (.bmp)、 图标 (.ico)、 光标 (.cur)、 html 文件 (.htm) 或要导入其他文件的文件名。
 
@@ -118,7 +118,7 @@ IDD_AboutBox (Finnish - XX33)
 
 ### <a name="to-export-a-resource-for-use-outside-of-visual-c"></a>若要导出在 Visual c + + 外部使用的资源
 
-1. 在中[资源视图](../windows/resource-view-window.md)，右键单击你想要导出，然后选择的资源**导出**。 您可以接受当前文件的名称或键入一个新。
+1. 在中[资源视图](how-to-create-a-resource-script-file.md#create-resources)，右键单击你想要导出，然后选择的资源**导出**。 您可以接受当前文件的名称或键入一个新。
 
 1. 导航到要保存该文件并选择的文件夹**导出**。
 

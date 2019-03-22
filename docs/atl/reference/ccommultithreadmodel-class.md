@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CComMultiThreadModel class
 - threading [ATL]
 ms.assetid: db8f1662-2f7a-44b3-b341-ffbfb6e422a3
-ms.openlocfilehash: 6b77efffca127c79c665cb8dedb916b0874de038
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 2ec83fc320d65f5f51c14f9523544972cd69c66c
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57290724"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328683"
 ---
 # <a name="ccommultithreadmodel-class"></a>CComMultiThreadModel 类
 
@@ -35,7 +35,7 @@ class CComMultiThreadModel
 
 ### <a name="public-typedefs"></a>公共 Typedef
 
-|名称|描述|
+|name|描述|
 |----------|-----------------|
 |[CComMultiThreadModel::AutoCriticalSection](#autocriticalsection)|引用类[CComAutoCriticalSection](../../atl/reference/ccomautocriticalsection-class.md)。|
 |[CComMultiThreadModel::CriticalSection](#criticalsection)|引用类[CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)。|
@@ -157,7 +157,7 @@ typedef CComCriticalSection CriticalSection;
 
 ##  <a name="decrement"></a>  CComMultiThreadModel::Decrement
 
-此静态函数将调用 Win32 函数[InterlockedDecrement](/windows/desktop/api/winbase/nf-winbase-interlockeddecrement)，指向变量的值的递减*p*。
+此静态函数将调用 Win32 函数[InterlockedDecrement](/windows/desktop/api/winnt/nf-winnt-interlockeddecrement)，指向变量的值的递减*p*。
 
 ```
 static ULONG WINAPI Decrement(LPLONG p) throw ();
@@ -178,7 +178,7 @@ static ULONG WINAPI Decrement(LPLONG p) throw ();
 
 ##  <a name="increment"></a>  CComMultiThreadModel::Increment
 
-此静态函数将调用 Win32 函数[InterlockedIncrement](/windows/desktop/api/winbase/nf-winbase-interlockedincrement)，指向的变量的值时都会增加*p*。
+此静态函数将调用 Win32 函数[InterlockedIncrement](/windows/desktop/api/winnt/nf-winnt-interlockedincrement)，指向的变量的值时都会增加*p*。
 
 ```
 static ULONG WINAPI Increment(LPLONG p) throw ();
