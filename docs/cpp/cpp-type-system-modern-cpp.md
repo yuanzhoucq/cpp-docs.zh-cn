@@ -3,12 +3,12 @@ title: C++ 类型系统（现代 C++）
 ms.date: 11/19/2018
 ms.topic: conceptual
 ms.assetid: 553c0ed6-77c4-43e9-87b1-c903eec53e80
-ms.openlocfilehash: ea4d8da9af10df2fb930daaad8374d70b6704d28
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.openlocfilehash: 4dfbf408654ccc92c92d6855c15238cb07c01b58
+ms.sourcegitcommit: 6e4dd21759caaed262a7255735cf8d6e8fb9f4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220668"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58476898"
 ---
 # <a name="c-type-system-modern-c"></a>C++ 类型系统（现代 C++）
 
@@ -102,9 +102,7 @@ PI = .75 //Error. Cannot modify const variable.
 
 - 编译器没有用户定义的类型的内置知识。 它会了解类型的第一次遇到在编译过程定义时。
 
-- 通过定义（通过重载）适当的运算符作为类成员或非成员函数，可以指定可对你的类型执行的操作以及你的类型转换为其他类型的方式。 有关详细信息，请参阅[函数重载](function-overloading.md)。
-
-- 不必将它们静态类型化（对象类型的规则从不改变）。 通过的机制*继承*并*多态性*，声明为类 （称为类的对象实例） 的用户定义类型的变量可能会在运行时比在具有不同的类型编译时间。 有关详细信息，请参阅[继承](../cpp/inheritance-cpp.md)。
+- 通过定义（通过重载）适当的运算符作为类成员或非成员函数，可以指定可对你的类型执行的操作以及你的类型转换为其他类型的方式。 有关详细信息，请参阅[函数重载](function-overloading.md)
 
 ## <a name="pointer-types"></a>指针类型
 

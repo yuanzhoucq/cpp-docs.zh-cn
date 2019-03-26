@@ -1,17 +1,17 @@
 ---
 title: 编译器警告（等级 1）C4789
-ms.date: 11/04/2016
+ms.date: 03/25/2019
 f1_keywords:
 - C4789
 helpviewer_keywords:
 - C4789
 ms.assetid: 5800c301-5afb-4af0-85c1-ceb54d775234
-ms.openlocfilehash: f489915f07eefd0909cbcd806a590f93f674c258
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 36a5032098c5caabb1b050833e487fd58679a782
+ms.sourcegitcommit: 6e4dd21759caaed262a7255735cf8d6e8fb9f4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677391"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58476846"
 ---
 # <a name="compiler-warning-level-1-c4789"></a>编译器警告（等级 1）C4789
 
@@ -19,9 +19,11 @@ ms.locfileid: "50677391"
 
 ## <a name="remarks"></a>备注
 
-在使用特定 C 运行时 (CRT) 函数、传递参数以及执行赋值时针对缓冲区溢出进行警告，以便在编译时知道数据大小。 此警告针对那些可能会避开典型数据大小不匹配检测的情况。
+**C4789**当使用特定 C 运行时 (CRT) 函数时缓冲区溢出警告。 传递的参数或进行分配时，它还可以报告大小不匹配。 如果在编译时已知的数据大小可能该警告。 此警告针对那些可能会避开典型数据大小不匹配检测的情况。
 
-将编译时已知其长度的数据复制并放入其大小在编译时已知太小、无法容纳数据的数据块时，会出现该警告。 必须通过使用以下 CRT 函数之一的内部形式完成复制：
+**C4789**会发出警告时数据将复制到具有已知要在编译时太小的数据块。
+
+如果该副本将使用这些 CRT 函数之一的内部形式将出现警告：
 
 - [strcpy](../../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md)
 
@@ -29,18 +31,18 @@ ms.locfileid: "50677391"
 
 - [memcpy](../../c-runtime-library/reference/memcpy-wmemcpy.md)， [wmemcpy](../../c-runtime-library/reference/memcpy-wmemcpy.md)
 
-当使用强制转换使参数数据类型不匹配时，也会出现警告，然后尝试从左值引用进行复制赋值。
+当参数转换为更大的数据类型，并请从左值引用进行复制赋值，也会出现警告。
 
-Visual C++ 可能会对不曾执行的代码路径生成此警告。 可以使用 `#pragma` 临时禁用该警告，如此示例中所示：
+Visual c + + 可能会生成此警告永远不会执行的代码路径。 可以使用 `#pragma` 临时禁用该警告，如此示例中所示：
 
 ```cpp
-#pragma(push)
-#pragma warning ( disable : 4789 )
+#pragma warning( push )
+#pragma warning( disable : 4789 )
 // unused code that generates compiler warning C4789`
-#pragma(pop)
+#pragma warning( pop )
 ```
 
-这可防止 Visual C++ 对该特定代码块生成警告。 `#pragma(push)` 会在 `#pragma warning(disable: 4789)` 更改现有状态之前保留该状态。 `#pragma(pop)` 会还原压入的状态，并移除 `#pragma warning(disable:4789)` 的效果。 详细了解 c + + 预处理器指令`#pragma`，请参阅[警告](../../preprocessor/warning.md)并[杂注指令和 __Pragma 关键字](../../preprocessor/pragma-directives-and-the-pragma-keyword.md)。
+此方法可以防止 Visual c + + 生成的警告的该特定代码块。 `#pragma warning(push)` 会在 `#pragma warning(disable: 4789)` 更改现有状态之前保留该状态。 `#pragma warning(pop)` 会还原压入的状态，并移除 `#pragma warning(disable:4789)` 的效果。 详细了解 c + + 预处理器指令`#pragma`，请参阅[警告](../../preprocessor/warning.md)并[杂注指令和 __Pragma 关键字](../../preprocessor/pragma-directives-and-the-pragma-keyword.md)。
 
 ## <a name="example"></a>示例
 

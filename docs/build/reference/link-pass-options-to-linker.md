@@ -1,6 +1,6 @@
 ---
 title: /link（将选项传递到链接器）
-ms.date: 11/04/2016
+ms.date: 03/25/2019
 f1_keywords:
 - /link
 helpviewer_keywords:
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -link compiler option [C++]
 - cl.exe compiler [C++], passing options to linker
 ms.assetid: 16902a94-c094-4328-841f-3ac94ca04848
-ms.openlocfilehash: 7f40841b82db9f46019ce2a96a61a1a0f622b6d5
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: ef81a6617df811660506c08434f3b65e29155794
+ms.sourcegitcommit: 6e4dd21759caaed262a7255735cf8d6e8fb9f4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57813430"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58476833"
 ---
 # <a name="link-pass-options-to-linker"></a>/link（将选项传递到链接器）
 
@@ -24,28 +24,32 @@ ms.locfileid: "57813430"
 
 ## <a name="syntax"></a>语法
 
-```
-/link linkeroptions
-```
+> **/link** *linker-options*
 
 ## <a name="arguments"></a>自变量
 
-*linkeroptions*<br/>
+*linker-options*<br/>
 链接器选项或要传递给链接器选项。
 
 ## <a name="remarks"></a>备注
 
 **/Link**选项以及与之链接器选项必须出现在任何文件的名称和 CL 选项之后。 是之间需要空格 **/link**和`linkeroptions`。 有关详细信息，请参阅[MSVC 链接器引用](linking.md)。
 
+## <a name="example"></a>示例
+
+此示例命令行编译*hello.cpp*并将其链接到现有的对象文件*there.obj*。然后将其传递额外 **/VERSION**到链接器命令：
+
+`cl /W4 /EHsc hello.cpp there.obj /link /VERSION:3.14`
+
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
+
+通常情况下，IDE 将发送单独的命令来编译和链接你的代码。 在项目属性页中，可以设置链接器选项。
 
 1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[Visual Studio 中的设置 c + + 编译器和生成属性](../working-with-project-properties.md)。
 
-1. 单击**链接器**文件夹。
+1. 选择**配置属性** > **链接器**文件夹。
 
-1. 单击链接器属性页。
-
-1. 修改一个或多个属性。
+1. 修改一个或多个属性。 选择“确定”以保存更改。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>以编程方式设置此编译器选项
 

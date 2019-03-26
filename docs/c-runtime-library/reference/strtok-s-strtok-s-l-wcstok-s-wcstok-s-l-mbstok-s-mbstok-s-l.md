@@ -1,6 +1,6 @@
 ---
 title: strtok_s、_strtok_s_l、wcstok_s、_wcstok_s_l、_mbstok_s、_mbstok_s_l
-ms.date: 11/04/2016
+ms.date: 03/25/2019
 apiname:
 - _wcstok_s_l
 - _mbstok_s_l
@@ -48,12 +48,12 @@ helpviewer_keywords:
 - _mbstok_s function
 - strtok_s function
 ms.assetid: 7696c972-f83b-4617-8c82-95973e9fdb46
-ms.openlocfilehash: 0020d4944ffb379584a044023bc34169b4a5c983
-ms.sourcegitcommit: 0064d37467f958dd6a5111f20d7660eaccd53ee9
+ms.openlocfilehash: e2c237927aa133d33085be40b88789c1024d6b34
+ms.sourcegitcommit: 6e4dd21759caaed262a7255735cf8d6e8fb9f4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58416970"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58476885"
 ---
 # <a name="strtoks-strtoksl-wcstoks-wcstoksl-mbstoks-mbstoksl"></a>strtok_s、_strtok_s_l、wcstok_s、_wcstok_s_l、_mbstok_s、_mbstok_s_l
 
@@ -137,13 +137,15 @@ unsigned char* _mbstok_s_l(
 
 **Strtok_s**系列函数查找中的下一步标记*str*。 中的字符组*分隔符*指定的令牌中找到可能的分隔符*str*在当前调用上。 **wcstok_s**并 **_mbstok_s**宽字符及多字节字符版本的**strtok_s**。 参数和返回值**wcstok_s**并 **_wcstok_s_l**是宽字符字符串; **_mbstok_s**和 **_mbstok_s_l**都是多字节字符字符串。 否则这些函数具有相同行为。
 
-此函数验证其参数。 如果出现错误条件表中的错误条件，则调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许继续执行，这些函数将设置**errno**到**EINVAL**并返回**NULL**。
+此函数验证其参数。 时出现的错误条件，如下所示的错误条件表中，会调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许继续执行，这些函数将设置**errno**到**EINVAL**并返回**NULL**。
 
-在首次调用**strtok_s**函数跳过前导分隔符并返回一个指针中的第一个标记*str*，终止空字符的标记。 更多标记可以分离出的余数*str*的调用的一系列**strtok_s**。 每次调用**strtok_s**修改*str*的方法是通过调用返回标记后插入空字符。 *上下文*所读取的字符串，其中在字符串中的下一个标记是要读取跟踪的指针。 若要读取的下一个令牌*str*，调用**strtok_s**与**NULL**值*str*参数，并传递同一*上下文*参数。 **NULL** *str*参数可以使**strtok_s**搜索中的修改后的下一个标记*str*。 *分隔符*参数可使用从到下一次调用的任何值，以使分隔符集可能会有所不同。
+在首次调用**strtok_s**，函数跳过前导分隔符并返回一个指针中的第一个标记*str*，终止空字符的标记。 更多标记可以分离出的余数*str*的调用的一系列**strtok_s**。 每次调用**strtok_s**修改*str*的方法是通过调用返回标记后插入空字符。 *上下文*所读取的字符串，其中在字符串中的下一个标记是要读取跟踪的指针。 若要读取的下一个令牌*str*，调用**strtok_s**与**NULL**值*str*参数，并传递同一*上下文*参数。 **NULL** *str*参数可以使**strtok_s**搜索中的修改后的下一个标记*str*。 *分隔符*参数可使用从到下一次调用的任何值，以使分隔符集可能会有所不同。
 
 由于*上下文*形参取代了使用中的静态缓冲区**strtok**并 **_strtok_l**，可以分析同时在同一线程中的两个字符串。
 
-输出值受区域设置的 LC_CTYPE 类别设置影响；有关详细信息，请参阅 [setlocale](setlocale-wsetlocale.md)。 无需这些函数的版本 **_l**后缀的区域设置相关的行为使用当前线程区域设置。 与版本 **_l**后缀完全相同，只不过它们改用*区域设置*参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+输出值受的设置**LC_CTYPE**类别设置的区域设置。 有关详细信息，请参阅 [setlocale](setlocale-wsetlocale.md)。
+
+无需这些函数的版本 **_l**后缀的区域设置相关的行为使用当前线程区域设置。 与版本 **_l**后缀是相同，只不过它们改用由指定的区域设置*区域设置*参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
 ## <a name="requirements"></a>要求
 
