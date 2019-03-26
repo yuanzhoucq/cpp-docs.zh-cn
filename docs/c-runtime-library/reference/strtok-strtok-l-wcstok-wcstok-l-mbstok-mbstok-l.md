@@ -1,6 +1,6 @@
 ---
 title: strtok、_strtok_l、wcstok、_wcstok_l、_mbstok、_mbstok_l
-ms.date: 11/04/2016
+ms.date: 03/25/2019
 apiname:
 - _mbstok_l
 - _mbstok
@@ -45,12 +45,12 @@ helpviewer_keywords:
 - _tcstok_l function
 - strtok_l function
 ms.assetid: 904cb734-f0d7-4d77-ba81-4791ddf461ae
-ms.openlocfilehash: bb791c7049379f62b99804fa8f1cf3a57fe0b749
-ms.sourcegitcommit: 0064d37467f958dd6a5111f20d7660eaccd53ee9
+ms.openlocfilehash: 22dd01a0b2558c83ca1e25875a2ace7dd4ee15c0
+ms.sourcegitcommit: 6e4dd21759caaed262a7255735cf8d6e8fb9f4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58416957"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58476911"
 ---
 # <a name="strtok-strtokl-wcstok-wcstokl-mbstok-mbstokl"></a>strtok、_strtok_l、wcstok、_wcstok_l、_mbstok、_mbstok_l
 
@@ -81,11 +81,11 @@ wchar_t *wcstok_l(
    _locale_t locale
 );
 unsigned char *_mbstok(
-   unsigned char*strToken,
+   unsigned char *strToken,
    const unsigned char *strDelimit
 );
 unsigned char *_mbstok_l(
-   unsigned char*strToken,
+   unsigned char *strToken,
    const unsigned char *strDelimit,
    _locale_t locale
 );
@@ -104,7 +104,7 @@ unsigned char *_mbstok_l(
 
 ## <a name="return-value"></a>返回值
 
-返回一个指向下一个令牌中找到*strToken*。 它们将返回**NULL**找到没有更多标记时。 每个调用都会修改*strToken* ，只需替换 null 字符在返回的令牌后发生的第一个分隔符。
+返回一个指向下一个令牌中找到*strToken*。 这些函数返回**NULL**找到没有更多标记时。 每个调用都会修改*strToken* ，只需替换 null 字符在返回的令牌后发生的第一个分隔符。
 
 ## <a name="remarks"></a>备注
 
@@ -115,7 +115,9 @@ unsigned char *_mbstok_l(
 
 在首次调用**strtok**，函数跳过前导分隔符并返回一个指针中的第一个标记*strToken*，终止空字符的标记。 更多标记可以分离出的余数*strToken*的调用的一系列**strtok**。 每次调用**strtok**修改*strToken*的方法是插入 null 字符之后**令牌**通过调用返回。 若要读取的下一个令牌*strToken*，调用**strtok**与**NULL**值*strToken*参数。 **NULL** *strToken*参数可以使**strtok**搜索中的修改后的下一个标记*strToken*。 *StrDelimit*参数可使用从到下一次调用的任何值，以使分隔符集可能会有所不同。
 
-输出值受区域设置的 LC_CTYPE 类别设置影响；有关详细信息，请参阅 [setlocale](setlocale-wsetlocale.md)。 这些不带 **_l** 后缀的函数版本使用此区域设置相关的行为的当前区域设置；带有 **_l** 后缀的版本相同，只不过它们使用传递的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+输出值受的设置**LC_CTYPE**类别设置的区域设置。 有关详细信息，请参阅 [setlocale](setlocale-wsetlocale.md)。
+
+无需这些函数的版本 **_l**后缀的区域设置相关的行为使用当前区域设置。 与版本 **_l**后缀是相同，只不过它们改用传入的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
 > [!NOTE]
 > 每个函数均使用线程本地静态变量，以将字符串分析为标记。 因此，多线程可以同时调用这些函数，不会产生不良影响。 但是，在单个线程内，对任一这些函数的交替调用很可能导致数据损坏和结果不准确。 解析不同的字符串时，在解析完一个字符串后再开始解析下一个字符串。 此外，请注意，从调用其他函数的循环内调用其中任一函数可能引发潜在危险。 如果其他函数最终使用这些函数之一，则导致调用交错的序列，从而触发数据损坏。

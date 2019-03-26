@@ -6,12 +6,12 @@ helpviewer_keywords:
 - libraries [C++], DLLs
 - DLLs [C++], walkthroughs
 ms.assetid: 3ae94848-44e7-4955-bbad-7d40f493e941
-ms.openlocfilehash: c1f59c704e96ade82295f4ae88265f549987e981
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 44a2f1da6a02444c79247178c34281e39731f0f3
+ms.sourcegitcommit: 6e4dd21759caaed262a7255735cf8d6e8fb9f4d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57813963"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58476924"
 ---
 # <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>演练：创建和使用你自己动态链接库 （c + +）
 
@@ -296,9 +296,11 @@ ms.locfileid: "57813963"
 
 1. 在顶部窗格中双击**附加包含目录**对话框，使编辑控件。
 
-1. 在编辑控件中，指定的位置的路径**MathLibrary.h**标头文件。 在这种情况下，可以使用相对路径：
+1. 在编辑控件中，指定的位置的路径**MathLibrary.h**标头文件。 在这种情况下，您可以从包含客户端项目包含在 DLL 项目中的.h 文件的文件夹中的.cpp 文件的文件夹使用相对路径。 如果客户端项目在单独的解决方案与 DLL 的解决方案的相同文件夹中，相对路径应如下所示：
 
    `..\..\MathLibrary\MathLibrary`
+
+   如果 DLL 和客户端项目在同一解决方案中，或者解决方案处于不同的文件夹，然后必须相应地调整相对路径。
 
    ![将标头位置添加到附加包含目录属性](media/mathclient-additional-include-directories.png "将标头位置添加到附加包含目录属性")
 
