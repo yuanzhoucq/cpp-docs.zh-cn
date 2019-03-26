@@ -10,12 +10,12 @@ helpviewer_keywords:
 - porting to Win32 [C++]
 - Win32 applications [C++], migrating from UNIX
 ms.assetid: 3837e4fe-3f96-4f24-b2a1-7be94718a881
-ms.openlocfilehash: 325cdb86f61f658776c69057022c005c389492d3
-ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
+ms.openlocfilehash: 3146c94879532a5c58208369bb6d131a3a027c33
+ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57813898"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58278471"
 ---
 # <a name="porting-from-unix-to-win32"></a>从 UNIX 到 Win32 的迁移
 
@@ -38,12 +38,6 @@ UNIX 程序员通常考虑使用类似于 UNIX 库的第三方库来将 UNIX 代
 [UNIX 自定义应用程序迁移指南](https://technet.microsoft.com/library/bb656290.aspx)提供了将代码从 UNIX 迁移到 Win32 环境方面的技术性帮助信息。
 
 [Unix 迁移项目指南](https://technet.microsoft.com/library/bb656287.aspx)对“UNIX 自定义应用程序迁移指南”进行了补充，提供了将大量项目从 UNIX 迁移到 Win32 方面的概览帮助信息。 该指南针对项目迁移的各个阶段中要考虑的问题提供了相应建议。
-
-### <a name="microsoft-windows-services-for-unix-sfu"></a>Microsoft Windows Services for UNIX (SFU)
-
-Microsoft Windows Services for UNIX (SFU) 提供了一系列完整的用于将 Windows 集成到基于 UNIX 的现有环境的跨平台服务。 面向 UNIX 的服务提供文件共享、远程访问和管理、密码同步、公共目录管理、一组常用的实用工具和一个外壳。
-
-[Windows Services for UNIX](http://www.microsoft.com/downloads/details.aspx?FamilyID=896c9688-601b-44f1-81a4-02878ff11778&displaylang=en)
 
 ### <a name="interopsystemscom"></a>InteropSystems.com
 

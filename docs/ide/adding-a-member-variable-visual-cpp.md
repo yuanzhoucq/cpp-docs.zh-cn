@@ -12,16 +12,16 @@ helpviewer_keywords:
 - dialog box controls, variable types
 - variables, dialog box control member variables
 ms.assetid: 437783bd-8eb4-4508-8b73-7380116e9d71
-ms.openlocfilehash: 2a519c0606a7df6e0ce55997a055d78865afafbf
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 0f10b4867b443f0db69743d7ff23bb059290b0a5
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694408"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328956"
 ---
 # <a name="add-a-member-variable"></a>添加成员变量
 
-可使用“类视图”向类添加成员变量。 成员变量可以是[数据交换和数据验证](../mfc/dialog-data-exchange-and-validation.md)，也可以是泛型。 数据成员变量向导采用相关信息并使用其将元素插入源文件中的适当位置。 可从[资源视图](../windows/resource-view-window.md)中的[对话框编辑器](../windows/dialog-editor.md)或[类视图](/visualstudio/ide/viewing-the-structure-of-code)添加成员变量。
+可使用“类视图”向类添加成员变量。 成员变量可以是[数据交换和数据验证](../mfc/dialog-data-exchange-and-validation.md)，也可以是泛型。 数据成员变量向导采用相关信息并使用其将元素插入源文件中的适当位置。 可从[资源视图](../windows/how-to-create-a-resource-script-file.md#create-resources)中的[对话框编辑器](../windows/dialog-editor.md)或[类视图](/visualstudio/ide/viewing-the-structure-of-code)添加成员变量。
 
 > [!NOTE]
 > 设计和实现对话框时，可能会发现使用对话框编辑器添加对话框控件，然后实现控件的成员变量更为有效。
@@ -69,7 +69,7 @@ ms.locfileid: "51694408"
   设置成员变量的访问权限。 访问修饰符是一种关键字，用于指定其他类对该成员变量的访问权限。 有关指定访问权限的详细信息，请参阅[成员访问控制](../cpp/member-access-control-cpp.md)。 默认情况下，成员变量的访问级别设置为 `public`。
 
   - [public](../cpp/public-cpp.md)
-  - [protected](../cpp/protected-cpp.md)
+  - [受保护](../cpp/protected-cpp.md)
   - [private](../cpp/private-cpp.md)
 
 - **变量类型**
@@ -104,7 +104,7 @@ ms.locfileid: "51694408"
 
   为要添加的控件变量设置 ID。 从要为其添加成员变量的控件类型的 ID 列表中进行选择。 该列表仅在选中“控件变量”框时为活动状态，且仅包含已添加到对话框的控件 ID。 例如，对于标准的“确定”按钮，控件 ID 为“IDOK”。
 
-  |选项|描述|
+  |选项|说明|
   |------------|-----------------|
   |**控件**|此选项为控件类型的默认设置选项。 它管理控件本身，而不管理控件的状态或内容（比如你可能希望管理列表框、组合框或编辑框）。|
   |**值**|此选项适用于可以保存值或显示状态的控件类型，例如编辑框或复选框。 此外，此选项也可于管理范围、内容或状态的控件类型。 有关详细信息，请参阅[对话框控件和变量类型](#dialog-box-controls-and-variable-types)。|
