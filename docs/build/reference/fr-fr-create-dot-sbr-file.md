@@ -13,12 +13,12 @@ helpviewer_keywords:
 - FR compiler option [C++]
 - symbolic browser information
 ms.assetid: 3fd8f88b-3924-4feb-9393-287036a28896
-ms.openlocfilehash: a75a9d143012dee7946591d708921d6734b2acda
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 73642baba77a62cac531ae7b2842ec9953b338ec
+ms.sourcegitcommit: 06fc71a46e3c4f6202a1c0bc604aa40611f50d36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57811870"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58508697"
 ---
 # <a name="fr-fr-create-sbr-file"></a>/FR、/Fr（创建 .Sbr 文件）
 
@@ -32,6 +32,9 @@ ms.locfileid: "57811870"
 ```
 
 ## <a name="remarks"></a>备注
+
+> [!WARNING]
+> 虽然安装 Visual Studio 时仍会安装 BSCMAKE，但 IDE 将不再使用它。 从 Visual Studio 2008 起，浏览信息和符号信息自动存储在解决方案文件夹的 SQL Server .sdf 文件中。
 
 在生成过程中，Microsoft 浏览信息文件维护实用工具 (BSCMAKE) 将使用这些文件来创建 .BSC 文件，用于显示浏览信息。
 

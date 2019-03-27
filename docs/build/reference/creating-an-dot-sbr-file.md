@@ -9,14 +9,17 @@ helpviewer_keywords:
 - local symbols in browse information
 - symbols
 ms.assetid: bdb4b93c-a88a-441a-84fd-01087d03be25
-ms.openlocfilehash: 75c3b926a605de66c876e9350218807031cd9a43
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 6a2e685d33b108ce542fdc6e3e0565cc37299c1c
+ms.sourcegitcommit: 06fc71a46e3c4f6202a1c0bc604aa40611f50d36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57810401"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58508736"
 ---
 # <a name="creating-an-sbr-file"></a>创建 .Sbr 文件
+
+> [!WARNING]
+> 虽然安装 Visual Studio 时仍会安装 BSCMAKE，但 IDE 将不再使用它。 从 Visual Studio 2008 起，浏览信息和符号信息自动存储在解决方案文件夹的 SQL Server .sdf 文件中。
 
 BSCMAKE 的输入的文件是.sbr 文件。 编译器创建的每个对象文件 (.obj) 对其进行编译的.sbr 文件。 当生成或更新你的浏览信息文件时，所有的.sbr 文件为你的项目必须是可在磁盘上。
 
