@@ -2,12 +2,12 @@
 title: 移植到通用 Windows 平台 (C++)
 ms.date: 11/04/2016
 ms.assetid: f662d2e4-8940-418d-8109-cb76cb8f8569
-ms.openlocfilehash: 06543ce27fe4fed839a6f6b885259e8cc1b180c6
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 6bda600abfea04e1158f6ff993e04e5076e4c24b
+ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518536"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58278458"
 ---
 # <a name="porting-to-the-universal-windows-platform-c"></a>移植到通用 Windows 平台 (C++)
 
@@ -21,9 +21,9 @@ Windows 开发人员中心文档包含将 Windows 8.1 应用移植到通用 Wind
 
 - [将 Windows 8.1 运行时组件移植到 UWP](#BK_81Component)
 
-如果具有经典的桌面 Win32 DLL，并且想要从 UWP 应用程序调用它，也可以执行此操作。 使用此类过程，可以为现有经典 Windows 桌面 C++ 应用程序或跨平台标准 C++ 代码创建 UWP 用户界面层。 请参阅[如何在通用 Windows 平台应用中使用现有 C++ 代码](../porting/how-to-use-existing-cpp-code-in-a-universal-windows-platform-app.md)。
+如果具有经典的桌面 Win32 DLL，并且想要从 UWP 应用程序调用它，也可以执行此操作。 使用此类过程，可以为现有经典 Windows 桌面 C++ 应用程序或跨平台标准 C++ 代码创建 UWP 用户界面层。 请参阅[如何：在通用 Windows 平台应用中使用现有 C++ 代码](../porting/how-to-use-existing-cpp-code-in-a-universal-windows-platform-app.md)。
 
-## <a name="BK_81StoreApp"></a>将 Windows 8.1 应用商店应用移植到 UWP
+## <a name="BK_81StoreApp"></a> 将 Windows 8.1 应用商店应用移植到 UWP
 
 如果拥有 Windows 8.1 应用商店应用，则可以使用此过程使其在 UWP 和运行 Windows 10 的任何设备上正常工作。  最好首先使用 Visual Studio 2017 将项目生成为 Windows 8.1 项目，以首先消除由编译器和库中的更改所引发的任何问题。 完成后，有两种方法可以将其转换为 Windows 10 UWP 项目。 最简单的方法（如下面的过程所述）是创建通用 Windows 项目，并将现有的代码复制到其中。 如果对 Windows 8.1 桌面和 Windows 8.1 手机使用通用项目，则你的项目开始时在 XAML 中有两个不同的布局，但最终只有一个调整至显示大小的动态布局。
 
@@ -74,7 +74,7 @@ Windows 开发人员中心文档包含将 Windows 8.1 应用移植到通用 Wind
 
 ### <a name="to-port-a-windows-81-runtime-component-to-the-uwp"></a>将 Windows 8.1 运行时组件移植到 UWP
 
-1. 在 Visual Studio 2017 的“新建项目”对话框中，找到“Windows 通用”节点。 如果看不到此节点，则首先安装 [用于 Windows 10 的工具](http://go.microsoft.com/fwlink/p/?LinkID=617903) 。 选择“Windows 运行时组件”  模板，给定组件名称，然后选择“确定”按钮  。 组件名称将被用作命名空间名称，因此你可能想要使用与旧项目的命名空间相同的名称。 这要求你在与旧文件夹不同的文件夹中创建该项目。 如果选择了一个不同的名称，则可以在生成的代码文件中更新命名空间名称。
+1. 在 Visual Studio 2017 的“新建项目”对话框中，找到“Windows 通用”节点。 如果看不到此节点，请先安装 [Windows 10 SDK](https://developer.microsoft.com/windows/downloads/windows-10-sdk)。 选择“Windows 运行时组件”  模板，给定组件名称，然后选择“确定”按钮  。 组件名称将被用作命名空间名称，因此你可能想要使用与旧项目的命名空间相同的名称。 这要求你在与旧文件夹不同的文件夹中创建该项目。 如果选择了一个不同的名称，则可以在生成的代码文件中更新命名空间名称。
 
 1. 关闭该项目。
 
