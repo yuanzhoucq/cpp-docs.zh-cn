@@ -1,6 +1,6 @@
 ---
 title: CWinFormsDialog 类
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CWinFormsDialog
 - AFXWINFORMS/CWinFormsDialog
@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CWinFormsDialog [MFC], GetControlHandle
 - CWinFormsDialog [MFC], OnInitDialog
 ms.assetid: e3cec000-a578-448e-b06a-8af256312f61
-ms.openlocfilehash: 4d0731e40a622f0d360cabc03b68b0fe74c1ebc9
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 1542f852a8fe3f05d81ae59efb8a522caae671fd
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57277113"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565342"
 ---
 # <a name="cwinformsdialog-class"></a>CWinFormsDialog 类
 
@@ -56,10 +56,10 @@ class CWinFormsDialog :
 
 ### <a name="public-operators"></a>公共运算符
 
-|name||
+|名称||
 |----------|-|
 |[CWinFormsDialog::operator -&gt;](#operator_-_gt)|将替换[CWinFormsDialog::GetControl](#getcontrol)在表达式中。|
-|[CWinFormsDialog::operator TManagedControl^](#operator_tmanagedcontrol)|将一种类型强制转换为对 Windows 窗体用户控件的引用。|
+|[CWinFormsDialog::operator TManagedControl^](#operator-tmanagedcontrol-hat)|将一种类型强制转换为对 Windows 窗体用户控件的引用。|
 
 ## <a name="remarks"></a>备注
 
@@ -140,7 +140,7 @@ inline TManagedControl^  operator->() const throw();
 
 有关使用 Windows 窗体的信息，请参阅[在 MFC 中使用 Windows 窗体用户控件](../../dotnet/using-a-windows-form-user-control-in-mfc.md)。
 
-##  <a name="operator_tmanagedcontrol_xor"></a>  CWinFormsDialog::operator TManagedControl^
+##  <a name="operator-tmanagedcontrol-hat"></a>  CWinFormsDialog::operator TManagedControl^
 
 将一种类型强制转换为对 Windows 窗体用户控件的引用。
 

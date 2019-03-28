@@ -1,6 +1,6 @@
 ---
 title: 赋值运算符
-ms.date: 03/05/2018
+ms.date: 03/27/2019
 f1_keywords:
 - =
 - '*='
@@ -31,20 +31,20 @@ helpviewer_keywords:
 - /= operator
 - <<= operator
 ms.assetid: b028cf35-2ff1-4f14-9027-fd53ebec8aa0
-ms.openlocfilehash: 44211e43a0449c8a50ff03cac31eeed1fcc49a28
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 758c82f02d2b113f6c750f7f0ede662c97b646b0
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51328469"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565475"
 ---
 # <a name="assignment-operators"></a>赋值运算符
 
 ## <a name="syntax"></a>语法
 
-*表达式**赋值运算符**表达式*
+*expression* *assignment-operator* *expression*
 
-*赋值运算符*： 之一<br/>
+*assignment-operator* : one of<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<strong>=&nbsp;&nbsp;&nbsp;*=&nbsp;&nbsp;&nbsp;/=&nbsp;&nbsp;&nbsp;%=&nbsp;&nbsp;&nbsp;+=&nbsp;&nbsp;&nbsp;-=&nbsp;&nbsp;&nbsp;\<\<=&nbsp;&nbsp;&nbsp;>>=&nbsp;&nbsp;&nbsp;&=&nbsp;&nbsp;&nbsp;^=&nbsp;&nbsp;&nbsp;\|=</strong>
 
 ## <a name="remarks"></a>备注
@@ -57,7 +57,7 @@ ms.locfileid: "51328469"
 
 下表中除 = 运算符之外的所有其他赋值运算符都是复合赋值运算符。
 
-### <a name="assignment-operators"></a>赋值运算符
+### <a name="assignment-operators-table"></a>赋值运算符表
 
 |运算符|含义|
 |--------------|-------------|
@@ -73,7 +73,7 @@ ms.locfileid: "51328469"
 |**^=**|获取第一个和第二个操作数的按位“异或”；将结果存储在第一个操作数指定的对象中。|
 |**\|=**|获取第一个和第二个操作数的按位“与或”；将结果存储在第一个操作数指定的对象中。|
 
-**运算符关键字**
+### <a name="operator-keywords"></a>运算符关键字
 
 三个复合赋值运算符具有文本等效项。 它们是：
 
@@ -176,11 +176,11 @@ B = A;
 
 - 如果存在显式转换函数 `UserType1::operator UserType2`，则调用该函数。
 
-- 调用采用 `UserType2::UserType2` 自变量并复制结果的构造函数 `UserType1`，前提是存在此类构造函数。
+- 调用采用 `UserType2::UserType2` 参数并复制结果的构造函数 `UserType1`，前提是存在此类构造函数。
 
 ## <a name="compound-assignment"></a>复合赋值
 
-复合赋值运算符，在表中所示[赋值运算符](#assignment-operators)，在窗体中指定*e1* *op*= *e2*，其中*e1*是可修改左值不是**const**类型和*e2*是以下之一：
+中显示的复合赋值运算符[赋值运算符表](#assignment-operators-table)，在窗体中指定*e1* *op*= *e2*，其中*e1*是可修改左值不是**const**类型和*e2*是以下之一：
 
 - 算术类型
 

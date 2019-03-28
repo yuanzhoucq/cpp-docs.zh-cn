@@ -1,6 +1,6 @@
 ---
 title: CDHtmlDialog 类
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CDHtmlDialog
 - AFXDHTML/CDHtmlDialog
@@ -116,12 +116,12 @@ helpviewer_keywords:
 - CDHtmlDialog [MFC], m_strCurrentUrl
 - CDHtmlDialog [MFC], m_szHtmlResID
 ms.assetid: 3f941c85-87e1-4f0f-9cc5-ffee8498b312
-ms.openlocfilehash: 5b3e34987b5d6b63ee302ba53e456c448ac3c3d2
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: bda980c26f9791e1d4f03026f7e118e69a4ab881
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413948"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565800"
 ---
 # <a name="cdhtmldialog-class"></a>CDHtmlDialog 类
 
@@ -140,7 +140,7 @@ class CDHtmlDialog : public CDialog, public CDHtmlEventSink
 |名称|描述|
 |----------|-----------------|
 |[CDHtmlDialog::CDHtmlDialog](#cdhtmldialog)|构造一个 CDHtmlDialog 对象。|
-|[CDHtmlDialog::~CDHtmlDialog](#cdhtmldialog__~cdhtmldialog)|销毁 CDHtmlDialog 对象。|
+|[CDHtmlDialog::~CDHtmlDialog](#_dtorcdhtmldialog)|销毁 CDHtmlDialog 对象。|
 
 ### <a name="public-methods"></a>公共方法
 
@@ -352,7 +352,7 @@ virtual BOOL CreateControlSite(
 void DDX_DHtml_AxControl(
     CDataExchange* pDX,
     LPCTSTR szId,
-    DISPID dispid,
+    DISPID dispId,
     VARIANT& var);
 
 void DDX_DHtml_AxControl(
@@ -370,7 +370,7 @@ void DDX_DHtml_AxControl(
 *szId*<br/>
 ActiveX 控件的 HTML 源代码中的对象标记的 ID 参数的值。
 
-*dispid*<br/>
+*dispId*<br/>
 进行交换数据的属性的调度 ID。
 
 *szPropName*<br/>
@@ -417,43 +417,43 @@ void DDX_DHtml_CheckBox(
 void DDX_DHtml_ElementText(
     CDataExchange* pDX,
     LPCTSTR szId,
-    DISPID dispid,
+    DISPID dispId,
     CString& value);
 
 void DDX_DHtml_ElementText(
     CDataExchange* pDX,
     LPCTSTR szId,
-    DISPID dispid,
+    DISPID dispId,
     short& value);
 
 void DDX_DHtml_ElementText(
     CDataExchange* pDX,
     LPCTSTR szId,
-    DISPID dispid,
+    DISPID dispId,
     int& value);
 
 void DDX_DHtml_ElementText(
     CDataExchange* pDX,
     LPCTSTR szId,
-    DISPID dispid,
+    DISPID dispId,
     long& value);
 
 void DDX_DHtml_ElementText(
     CDataExchange* pDX,
     LPCTSTR szId,
-    DISPID dispid,
+    DISPID dispId,
     DWORD& value);
 
 void DDX_DHtml_ElementText(
     CDataExchange* pDX,
     LPCTSTR szId,
-    DISPID dispid,
+    DISPID dispId,
     float& value);
 
 void DDX_DHtml_ElementText(
     CDataExchange* pDX,
     LPCTSTR szId,
-    DISPID dispid,
+    DISPID dispId,
     double& value);
 ```
 
@@ -465,7 +465,7 @@ void DDX_DHtml_ElementText(
 *szId*<br/>
 为 HTML 控件的 ID 参数指定值。
 
-*dispid*<br/>
+*dispId*<br/>
 想要交换数据的 HTML 元素的调度 ID。
 
 *值*<br/>
@@ -510,7 +510,7 @@ void DDX_DHtml_SelectIndex(
 一个指向[CDataExchange](../../mfc/reference/cdataexchange-class.md)对象。
 
 *szId*<br/>
-为 HTML 控件的 id 参数指定值。
+为 HTML 控件的指定值`id`参数。
 
 *值*<br/>
 正在交换值。
@@ -651,11 +651,11 @@ VARIANT GetControlProperty(
 
 VARIANT GetControlProperty(
     LPCTSTR szId,
-    DISPID dispid);
+    DISPID dispId);
 
 VARIANT GetControlProperty(
     IDispatch* pdispControl,
-    DISPID dispid);
+    DISPID dispId);
 ```
 
 ### <a name="parameters"></a>参数
@@ -669,7 +669,7 @@ ActiveX 控件的 HTML ID。
 *pdispControl*<br/>
 `IDispatch` ActiveX 控件的指针。
 
-*dispid*<br/>
+*dispId*<br/>
 属性的调度 ID。
 
 ### <a name="return-value"></a>返回值
@@ -802,7 +802,7 @@ template <class Q> HRESULT GetElementInterface(
 
 HRESULT GetElementInterface(
     LPCTSTR szElementId,
-    REFIID riid,
+    REFIID refiid,
     void** ppvObj);
 ```
 
@@ -814,7 +814,7 @@ HTML 元素的 ID。
 *ppvObj*<br/>
 如果找到该元素将填入请求的接口指针的指针和查询的地址会成功。
 
-*riid*<br/>
+*refiid*<br/>
 接口 ID (IID) 所请求的接口。
 
 ### <a name="return-value"></a>返回值
@@ -827,12 +827,12 @@ HTML 元素的 ID。
 
 ##  <a name="getelementproperty"></a>  CDHtmlDialog::GetElementProperty
 
-检索通过标识的属性的值*dispid*标识的 HTML 元素从*szElementId*。
+检索通过标识的属性的值*dispId*标识的 HTML 元素从*szElementId*。
 
 ```
 VARIANT GetElementProperty(
     LPCTSTR szElementId,
-    DISPID dispid);
+    DISPID dispId);
 ```
 
 ### <a name="parameters"></a>参数
@@ -840,7 +840,7 @@ VARIANT GetElementProperty(
 *szElementId*<br/>
 HTML 元素的 ID。
 
-*dispid*<br/>
+*dispId*<br/>
 属性的调度 ID。
 
 ### <a name="return-value"></a>返回值
@@ -1151,7 +1151,7 @@ STDMETHOD(OnDocWindowActivate)(BOOL fActivate);
 
 ### <a name="remarks"></a>备注
 
-此成员函数是 CDHtmlDialog 的实现，以[IDocHostUIHandler::OnDocWindowActivate](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753261\(v=vs.85\))，如 Windows SDK 中所述。
+此成员函数是 CDHtmlDialog 的实现[IDocHostUIHandler::OnDocWindowActivate](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753261\(v=vs.85\))，如 Windows SDK 中所述。
 
 ##  <a name="onframewindowactivate"></a>  CDHtmlDialog::OnFrameWindowActivate
 
@@ -1245,12 +1245,12 @@ STDMETHOD(ResizeBorder)(
 ```
 void SetControlProperty(
     LPCTSTR szElementId,
-    DISPID dispid,
+    DISPID dispId,
     VARIANT* pVar);
 
 void SetControlProperty(
     IDispatch* pdispControl,
-    DISPID dispid,
+    DISPID dispId,
     VARIANT* pVar);
 
 void SetControlProperty(
@@ -1264,7 +1264,7 @@ void SetControlProperty(
 *szElementId*<br/>
 ActiveX 控件的 HTML ID。
 
-*dispid*<br/>
+*dispId*<br/>
 要设置的属性的调度 ID。
 
 *pVar*<br/>
@@ -1296,8 +1296,7 @@ void SetElementHtml(
 HTML 元素的 ID。
 
 *bstrText*<br/>
-
-  `innerHTML` 属性的新值。
+`innerHTML` 属性的新值。
 
 *punkElem*<br/>
 `IUnknown` HTML 元素的指针。
@@ -1309,7 +1308,7 @@ HTML 元素的 ID。
 ```
 void SetElementProperty(
     LPCTSTR szElementId,
-    DISPID dispid,
+    DISPID dispId,
     VARIANT* pVar);
 ```
 
@@ -1318,7 +1317,7 @@ void SetElementProperty(
 *szElementId*<br/>
 HTML 元素的 ID。
 
-*dispid*<br/>
+*dispId*<br/>
 要设置的属性的调度 ID。
 
 *pVar*<br/>
@@ -1344,8 +1343,7 @@ void SetElementText(
 HTML 元素的 ID。
 
 *bstrText*<br/>
-
-  `innerText` 属性的新值。
+`innerText` 属性的新值。
 
 *punkElem*<br/>
 `IUnknown` HTML 元素的指针。

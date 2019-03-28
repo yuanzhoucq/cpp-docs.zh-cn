@@ -1,6 +1,6 @@
 ---
 title: task_handle 类
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - task_handle
 - PPL/concurrency::task_handle
@@ -8,17 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - task_handle class
 ms.assetid: 74a34b15-708b-4231-a509-947874292b13
-ms.openlocfilehash: 4193c2d1e08c1b5a43dc728edd24efd19be87268
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 8528bc212603484be9325ed967e9475e4faa1348
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57298082"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565095"
 ---
 # <a name="taskhandle-class"></a>task_handle 类
 
-
-  `task_handle` 类表示单个并行工作项。 它封装执行一项工作所需的指令和数据。
+`task_handle` 类表示单个并行工作项。 它封装执行一项工作所需的指令和数据。
 
 ## <a name="syntax"></a>语法
 
@@ -40,7 +39,7 @@ class task_handle : public ::Concurrency::details::_UnrealizedChore;
 
 |名称|描述|
 |----------|-----------------|
-|[task_handle](#ctor)|构造一个新`task_handle`对象。 通过调用作为构造函数的参数指定的函数执行该任务的工作。|
+|[task_handle](#task_handle)|构造一个新`task_handle`对象。 通过调用作为构造函数的参数指定的函数执行该任务的工作。|
 |[~ task_handle 析构函数](#dtor)|销毁`task_handle`对象。|
 
 ### <a name="public-operators"></a>公共运算符
@@ -77,7 +76,7 @@ class task_handle : public ::Concurrency::details::_UnrealizedChore;
 void operator()() const;
 ```
 
-##  <a name="task_handle__ctor"></a> task_handle
+## <a name="taskhandle"></a>task_handle
 
 构造一个新`task_handle`对象。 通过调用作为构造函数的参数指定的函数执行该任务的工作。
 

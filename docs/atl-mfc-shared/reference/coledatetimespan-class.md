@@ -1,6 +1,6 @@
 ---
 title: COleDateTimeSpan 类
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - COleDateTimeSpan
 - ATLCOMTIME/ATL::COleDateTimeSpan
@@ -26,12 +26,12 @@ helpviewer_keywords:
 - Date data type, MFC encapsulation of
 - COleDateTimeSpan class
 ms.assetid: 7441526d-a30a-4019-8fb3-3fee6f897cbe
-ms.openlocfilehash: feef238be96d9a04c2c41e6955efec8b23cf6a89
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: b68a984488f37326f3b0c1249a5f17a3eb76548b
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57748484"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565644"
 ---
 # <a name="coledatetimespan-class"></a>COleDateTimeSpan 类
 
@@ -745,7 +745,7 @@ enum DateTimeSpanStatus{
 - `COleDateTimeSpan::null` 指示此`COleDateTimeSpan`对象为 null，也即，已为此对象提供任何值。 （此为"null"数据库意义上的"无任何值，"，而不 c + + 为 NULL。）
 
    > [!CAUTION]
-   > 此函数是针对高级编程情况。 此函数不会更改此对象中的数据。 通常将用于将状态设置为**null**或**无效**。 请注意，赋值运算符 ([运算符 =](#eq)) 和[SetDateTimeSpan](#setdatetimespan)设置基于源值的对象的状态。
+   > 此函数是针对高级编程情况。 此函数不会更改此对象中的数据。 通常将用于将状态设置为**null**或**无效**。 请注意，赋值运算符 ([运算符 =](#operator_eq)) 和[SetDateTimeSpan](#setdatetimespan)设置基于源值的对象的状态。
 
 ### <a name="example"></a>示例
 

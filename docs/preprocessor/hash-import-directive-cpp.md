@@ -1,6 +1,6 @@
 ---
 title: '#导入指令 （c + +）'
-ms.date: 10/18/2018
+ms.date: 03/27/2019
 f1_keywords:
 - '#import'
 helpviewer_keywords:
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - preprocessor, directives
 - COM, type library header file
 ms.assetid: 787d1112-e543-40d7-ab15-a63d43f4030a
-ms.openlocfilehash: a7dc30d3e5869e9b0f534a4769d4517a0514c144
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 72fd1d025ab19b7db9521e08655d00936b77581e
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57822621"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58564948"
 ---
 # <a name="import-directive-c"></a>#import 指令 (C++)
 
@@ -160,7 +160,7 @@ using namespace MyLib;
 
 后立即 **#import**的源代码中的语句。
 
-命名空间可通过使用抑制[no_namespace](#_predir_no_namespace)的属性 **#import**指令。 但是，禁止显示命名空间可能会导致名称冲突。 此外可以通过重命名命名空间[rename_namespace](#_predir_rename_namespace)属性。
+命名空间可通过使用抑制[no_namespace](no-namespace.md)) 的属性 **#import**指令。 但是，禁止显示命名空间可能会导致名称冲突。 此外可以通过重命名命名空间[rename_namespace](rename-namespace.md)属性。
 
 编译器提供了至其当前处理的类型库所需的任何类型库依赖项的完整路径。 路径是以注释形式写入编译器为每个已处理的类型库生成的类型库标头 (.TLH) 中的。
 

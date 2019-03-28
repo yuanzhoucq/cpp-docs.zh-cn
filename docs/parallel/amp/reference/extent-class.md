@@ -1,6 +1,6 @@
 ---
 title: extent 类 (C++ AMP)
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - extent
 - AMP/extent
@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - extent structure
 ms.assetid: edb5de3d-3935-4dbb-8365-4cc6c4fb0269
-ms.openlocfilehash: 2236b1a1b72f307dae1efa0cfe197e222820c460
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 46af59708ef3f0d91883c52502bce4d09676ca77
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270184"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565826"
 ---
 # <a name="extent-class-c-amp"></a>extent 类 (C++ AMP)
 
@@ -75,9 +75,9 @@ class extent;
 
 ### <a name="public-constants"></a>公共常量
 
-|name|描述|
+|名称|描述|
 |----------|-----------------|
-|[rank 常量](#rank)|获取的排名`extent`对象。|
+|[rank 常量](#rank_constant)|获取的排名`extent`对象。|
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 

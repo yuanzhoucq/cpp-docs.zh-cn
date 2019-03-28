@@ -1,18 +1,18 @@
 ---
 title: Platform::Collections::VectorViewIterator 类
-ms.date: 12/30/2016
+ms.date: 03/27/2019
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::VectorViewIterator::VectorViewIterator
 helpviewer_keywords:
 - VectorViewIterator Class
 ms.assetid: be3aa1ae-e6ba-4a06-8d6b-86d8128026f7
-ms.openlocfilehash: 4d4a591c6febdf6e34757251c4de5d01a9e2fa87
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 0de4ffb8e72c21490f07ae164aa23ffcd524c2b8
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57743738"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565657"
 ---
 # <a name="platformcollectionsvectorviewiterator-class"></a>Platform::Collections::VectorViewIterator 类
 
@@ -61,7 +61,7 @@ VectorViewIterator 模板类的类型名称。
 |[VectorViewIterator::operator\[\]](#operator-at)|检索对偏移当前 VectorViewIterator 指定量的元素的引用。|
 |[VectorViewIterator::operator+ 运算符](#operator-plus)|返回引用偏移指定 VectorViewIterator 指定偏移量处的元素的 VectorViewIterator。|
 |[VectorViewIterator::operator++ 运算符](#operator-increment)|递增当前 VectorViewIterator。|
-|[VectorViewIterator::operator+= 运算符](#operator-plus-assign)|按指定偏移量递增当前 VectorViewIterator。|
+|[VectorViewIterator::operator+= 运算符](#operator-plus-equals)|按指定偏移量递增当前 VectorViewIterator。|
 |[VectorViewIterator::operator< 运算符](#operator-less-than)|指示当前 VectorViewIterator 是否小于指定 VectorViewIterator。|
 |[Vectorviewiterator:: Operator\<= 运算符](#operator-less-than-or-equals)|指示当前 VectorViewIterator 是否小于或等于指定的 VectorViewIterator。|
 |[VectorViewIterator::operator-= 运算符](#operator-minus-assign)|按指定偏移量递减当前 VectorViewIterator。|
@@ -383,8 +383,7 @@ reference operator[](difference_type n) const;
 
 ### <a name="return-value"></a>返回值
 
-
-  `n` 元素从当前 VectorViewIterator 移置开的元素。
+`n` 元素从当前 VectorViewIterator 移置开的元素。
 
 ## <a name="ctor"></a>  Vectorviewiterator:: Vectorviewiterator 构造函数
 

@@ -34,12 +34,12 @@ helpviewer_keywords:
 - LPRECT operator
 - RECT structure
 ms.assetid: dee4e752-15d6-4db4-b68f-1ad65b2ed6ca
-ms.openlocfilehash: fadb430d570e516d915d520f06e4c247b131c3db
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 6e87d77eec526cbfcfe5c1e6e78b0287226f0613
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57739424"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565689"
 ---
 # <a name="crect-class"></a>CRect 类
 
@@ -950,7 +950,7 @@ void operator+=(LPCRECT lpRect) throw();
 
 参数的*x*并*y* (或`cx`并`cy`) 值添加到`CRect`。
 
-第三个重载增大`CRect`单位指定参数的每个成员中的数。
+第三个重载增大`CRect`按每个成员的参数中指定的单位数。
 
 ### <a name="example"></a>示例
 
@@ -988,7 +988,7 @@ void operator-=(LPCRECT lpRect) throw();
 
 参数的*x*并*y* (或`cx`并`cy`) 的值减去从`CRect`。
 
-第三个重载压缩`CRect`单位指定参数的每个成员中的数。 请注意，此重载的功能类似于[DeflateRect](#deflaterect)。
+第三个重载压缩`CRect`按每个成员的参数中指定的单位数。 请注意，此重载的功能类似于[DeflateRect](#deflaterect)。
 
 ### <a name="example"></a>示例
 
@@ -1085,7 +1085,7 @@ CRect operator+(SIZE size) const throw();
 
 参数的*x*并*y* (或`cx`并`cy`) 参数添加到`CRect`的位置。
 
-第三个重载方法返回一个新`CRect`，它等于`CRect`中参数的每个成员的单元指定数进行扩充。
+第三个重载方法返回一个新`CRect`，它等于`CRect`按每个成员的参数中指定的单位数进行扩充。
 
 ### <a name="example"></a>示例
 
@@ -1128,7 +1128,7 @@ CRect operator-(LPCRECT lpRect) const throw();
 
 参数的*x*并*y* (或`cx`并`cy`) 参数减去从`CRect`的位置。
 
-第三个重载方法返回一个新`CRect`，它等于`CRect`伸缩单位指定参数的每个成员中的数。 请注意，此重载的功能类似于[DeflateRect](#deflaterect)，而非[SubtractRect](#subtractrect)。
+第三个重载方法返回一个新`CRect`，它等于`CRect`伸缩的参数的每个成员中指定的单位数。 请注意，此重载的功能类似于[DeflateRect](#deflaterect)，而非[SubtractRect](#subtractrect)。
 
 ### <a name="example"></a>示例
 

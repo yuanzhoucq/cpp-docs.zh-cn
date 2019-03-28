@@ -1,6 +1,6 @@
 ---
 title: Platform::Collections::Map 类
-ms.date: 01/18/2018
+ms.date: 03/27/2019
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::Map::Map
@@ -15,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - Map Class (C++/Cx)
 ms.assetid: 2b8cf968-1167-4898-a149-1195b32c1785
-ms.openlocfilehash: cbe0b5e422c05cee46bff85e816ecc726c667749
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: ce50290217c7c06e26f26fc50564d3e37c873157
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57745176"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565277"
 ---
 # <a name="platformcollectionsmap-class"></a>Platform::Collections::Map 类
 
@@ -47,7 +47,7 @@ ref class Map sealed;
 *C*<br/>
 提供一个函数对象的类型，该对象可以将两个元素值作为排序键加以比较，以决定它们在映射中的相对顺序。 默认情况下[std:: less\<K >](../standard-library/less-struct.md)。
 
-*__is_valid_winrt_type()* 验证的类型的编译器生成函数*K*并*V*和此类型不能存储在映射中时提供友好错误消息。
+*__is_valid_winrt_type()* 编译器生成的函数，用于验证的类型*K*并*V*和此类型不能存储在映射中时提供友好错误消息。
 
 ### <a name="remarks"></a>备注
 
@@ -92,8 +92,8 @@ ref class Map sealed;
 
 |||
 |-|-|
-|name|描述|
-|[Map::MapChanged](#mapchanged-event.md) `event`|当映射更改时发生。|
+|名称|描述|
+|[Map:: mapchanged](#mapchanged)事件|当映射更改时发生。|
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -238,7 +238,7 @@ Map(
 提供一个函数对象的类型，该对象可以将两个元素值作为排序键加以比较，以决定它们在映射中的相对顺序。
 
 *m*<br/>
-引用或[Lvalues 和 Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md)到`map Class`用于初始化当前映射。
+引用或[rvalue](../cpp/lvalues-and-rvalues-visual-cpp.md)到`map Class`用于初始化当前映射。
 
 *first*<br/>
 用于初始化当前映射的一系列元素中的第一个元素的输入迭代器。

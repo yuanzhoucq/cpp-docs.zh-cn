@@ -1,18 +1,18 @@
 ---
 title: Platform::Collections::BackInsertIterator 类
-ms.date: 12/30/2016
+ms.date: 03/27/2019
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::BackInsertIterator::BackInsertIterator
 helpviewer_keywords:
 - BackInsertIterator Class
 ms.assetid: aecee1ff-100d-4129-b84b-1966f0923dbf
-ms.openlocfilehash: 7478555b19bbe5c984fcbe531d2d8be1a0b865a9
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 02aee3101156b28dbd59ccd51c071e6774ca1e7a
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57739537"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58564718"
 ---
 # <a name="platformcollectionsbackinsertiterator-class"></a>Platform::Collections::BackInsertIterator 类
 
@@ -81,8 +81,7 @@ IVector\<T > 对象。
 
 ### <a name="remarks"></a>备注
 
-
-  `BackInsertIterator` 在参数 `v` 指定的对象的最后一个元素之后插入元素。
+`BackInsertIterator` 在参数 `v` 指定的对象的最后一个元素之后插入元素。
 
 ## <a name="operator-assign"></a>  Backinsertiterator:: Operator = 运算符
 
@@ -142,7 +141,7 @@ BackInsertIterator operator++(int);
 
 按照设计，第一个语法示例前递增当前 BackInsertIterator，第二个语法后递增当前 BackInsertIterator。 第二个语法中的 `int` 类型指示后递增操作，而不是实际整数操作数。
 
-但是，此运算符不会实际修改 BackInsertIterator， 而是返回对未经修改的当前迭代器的引用。 这是相同的行为[运算符 *](#dereference-operator)。
+但是，此运算符不会实际修改 BackInsertIterator， 而是返回对未经修改的当前迭代器的引用。 这是相同的行为[运算符 *](#operator-dereference)。
 
 ## <a name="see-also"></a>请参阅
 

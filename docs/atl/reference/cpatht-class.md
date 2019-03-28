@@ -1,6 +1,6 @@
 ---
 title: CPathT 类
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CPathT
 - ATLPATH/ATL::CPathT
@@ -49,19 +49,19 @@ f1_keywords:
 helpviewer_keywords:
 - CPathT class
 ms.assetid: eba4137d-1fd2-4b44-a2e1-0944db64df3c
-ms.openlocfilehash: 36d8710bd7bb055d8629dec57ec4d8c3602c8f79
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 109f9baefd0e6775db05eeba8cb78542bf60a9ac
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57273018"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565781"
 ---
 # <a name="cpatht-class"></a>CPathT 类
 
 此类表示的路径。
 
 > [!IMPORTANT]
->  不能在 Windows 运行时中执行的应用程序中使用此类和其成员。
+> 不能在 Windows 运行时中执行的应用程序中使用此类和其成员。
 
 ## <a name="syntax"></a>语法
 
@@ -139,7 +139,7 @@ class CPathT
 |----------|-----------------|
 |[CPathT::operator const StringType （& a)](#operator_const_stringtype_amp)|此运算符使对象可以被视为字符串。|
 |[CPathT::operator CPathT::PCXSTR](#operator_cpatht__pcxstr)|此运算符使对象可以被视为字符串。|
-|[CPathT::operator StringType （& a)](#operator_stringtype)|此运算符使对象可以被视为字符串。|
+|[CPathT::operator StringType （& a)](#operator_stringtype_amp)|此运算符使对象可以被视为字符串。|
 |[CPathT::operator +=](#operator_add_eq)|此运算符将字符串追加到路径。|
 
 ### <a name="public-data-members"></a>公共数据成员
@@ -653,7 +653,7 @@ CPathT<StringType>& operator+=(PCXSTR pszMore);
 此运算符使对象可以被视为字符串。
 
 ```
-operatorconst StringType&() const throw();
+operator const StringType&() const throw();
 ```
 
 ### <a name="return-value"></a>返回值
@@ -665,19 +665,19 @@ operatorconst StringType&() const throw();
 此运算符使对象可以被视为字符串。
 
 ```
-operatorPCXSTR() const throw();
+operator PCXSTR() const throw();
 ```
 
 ### <a name="return-value"></a>返回值
 
 返回表示此对象管理的当前路径的字符串。
 
-##  <a name="operator_stringtype__amp"></a>  CPathT::operator StringType &amp;
+##  <a name="operator_stringtype_amp"></a>  CPathT::operator StringType &amp;
 
 此运算符使对象可以被视为字符串。
 
 ```
-operatorStringType&() throw();
+operator StringType&() throw();
 ```
 
 ### <a name="return-value"></a>返回值
