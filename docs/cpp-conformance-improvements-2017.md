@@ -1,18 +1,18 @@
 ---
 title: C++ 的符合性改进
-ms.date: 10/31/2018
+ms.date: 03/26/2019
 ms.technology: cpp-language
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 855322f09c9c8f5292c6e299f946c3cec5d9949a
-ms.sourcegitcommit: fbc05d8581913bca6eff664e5ecfcda8e471b8b1
+ms.openlocfilehash: b2c014534ce24b9796510195d6ae5a922fb484d8
+ms.sourcegitcommit: 06fc71a46e3c4f6202a1c0bc604aa40611f50d36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56809745"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58508866"
 ---
-# <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-157improvements157-158update158-159update159"></a>Visual Studio 2017 版本 15.0、[15.3](#improvements_153)、[15.5](#improvements_155)、[15.6](#improvements_156)、[15.7](#improvements_157)、[15.8](#update_158)、[15.9](#update_159) 中 C++ 的符合性改进
+# <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-157improvements157-158update158-159improvements159"></a>Visual Studio 2017 版本 15.0、[15.3](#improvements_153)、[15.5](#improvements_155)、[15.6](#improvements_156)、[15.7](#improvements_157)、[15.8](#update_158)、[15.9](#improvements_159) 中 C++ 的符合性改进
 
 Microsoft Visual C++ 编译器支持通用 constexpr 和用于聚合的 NSDMI，现具有 C++14 标准版中的全部新增功能。 请注意，编译器仍缺少 C++11 和 C++98 标准版中的一些功能。 请参阅 [Visual C++ 语言合规性](visual-cpp-language-conformance.md)中显示编译器当前状态的表。
 
@@ -335,6 +335,45 @@ void bar(A<0> *p)
 ### <a name="c17-constexpr-for-chartraits-partial"></a>C++17 char_traits 的 constexpr（部分）
 
 [P0426R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0426r1.html) 对 `std::traits_type` 成员函数 `length`、`compare` 和 `find` 进行了更改，以便使 `std::string_view` 在常数表达式中可用。 （在 Visual Studio 2017 版本 15.6 中，仅支持 Clang/LLVM。 在版本 15.7 预览版 2 中，也几乎完全支持 ClXX。）
+
+## <a name="improvements_159"></a>Visual Studio 2017 版本 15.9 中的改进
+
+### <a name="left-to-right-evaluation-order-for-operators-----and-"></a>运算符 ->*、[]、>> 和 << 从左到右的计算顺序
+
+从 C++17 开始，运算符 ->*、[]、>> 和 \<\< 的操作数必须按从左到右的顺序计算。 在以下两种情况下，编译器无法保证此顺序：
+- 其中一个操作数表达式是由值传递的对象或包含由值传递的对象时，或
+- 使用 /clr 进行编译，且其中的一个操作数是对象的字段或数组元素时。
+
+当编译器无法保证从左到右计算时，它将发出警告 [C4866](https://docs.microsoft.com/cpp/error-messages/compiler-warnings/c4866?view=vs-2017)。 只有在指定 /std:c++17 或更高版本时才会生成此警告，因为这些运算符的从左到右顺序要求是在 C++17 中引入的。
+
+若要解决此警告，首先考虑操作数的从左到右计算是否是必需的，例如，操作数的计算可能会生成依赖于顺序的副作用的情况。 在许多情况下，操作数计算的顺序不会有什么明显的影响。 如果计算顺序必须是从左到右，则考虑是否可以改为通过常量引用来传递操作数。 此更改可消除以下代码示例中的警告。
+
+```cpp
+// C4866.cpp
+// compile with: /w14866 /std:c++17
+
+class HasCopyConstructor
+{
+public:
+    int x;
+
+    HasCopyConstructor(int x) : x(x) {}
+    HasCopyConstructor(const HasCopyConstructor& h) : x(h.x) { }
+};
+
+int operator>>(HasCopyConstructor a, HasCopyConstructor b) { return a.x >> b.x; }
+
+// This version of operator>> does not trigger the warning:
+// int operator>>(const HasCopyConstructor& a, const HasCopyConstructor& b) { return a.x >> b.x; }
+
+int main()
+{
+    HasCopyConstructor a{ 1 };
+    HasCopyConstructor b{ 2 };
+
+    a>>b;        // C4866 for call to operator>>
+};
+```
 
 ## <a name="bug-fixes-in-visual-studio-versions-150-153update153-155update155-157update157-158update158-and-159update159"></a>Visual Studio 版本 15.0、[15.3](#update_153)、[15.5](#update_155)、[15.7](#update_157)、[15.8](#update_158) 和 [15.9](#update_159) 中的 bug 修复
 
