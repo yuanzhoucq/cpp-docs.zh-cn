@@ -1,19 +1,19 @@
 ---
 title: 设置 c + + 编译器和生成 Visual Studio 中的属性
 description: 使用 Visual Studio IDE 更改 c + + 编译器和链接器选项和其他生成设置。
-ms.date: 12/10/2018
+ms.date: 03/27/2019
 helpviewer_keywords:
 - project properties [C++], modifying
 - properties [C++]
 - Visual C++ projects, properties
 - projects [C++], properties
 ms.assetid: 9b0d6f8b-7d4e-4e61-aa75-7d14944816cd
-ms.openlocfilehash: 55adb6dc91919bda9c2827a89e5de536667085c1
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: ab5456bfc8a1b8305813f4ee4a4399091de15aee
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57825141"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58564903"
 ---
 # <a name="set-compiler-and-build-properties"></a>设置编译器和生成属性
 
@@ -65,7 +65,7 @@ MSBuild 支持使用称为"宏"某些字符串值包括目录和路径的编译�
 
 ![项目属性页](media/project_property_pages_vc.png "Project_Property_Pages_VC")
 
-可以使用属性编辑器来查看所有可用宏的值。 本文后面的[属性页宏](#bkmkPropertiesVersusMacros)部分中讨论了宏。
+可以使用属性编辑器来查看所有可用宏的值。
 
 ### <a name="predefined-macros"></a>预定义宏
 
@@ -79,7 +79,7 @@ MSBuild 支持使用称为"宏"某些字符串值包括目录和路径的编译�
 
 你可以创建用户定义的宏，以便在项目生成中将宏用作变量。 例如，可以创建一个用户定义的宏来提供自定义生成步骤或自定义生成工具的值。 用户定义的宏是名称/值对。 在项目文件中，使用 $(<em>name</em>) 表示法访问该值。
 
-用户定义的宏存储在属性表中。 如果你的项目尚未包含属性表，则可以创建一个下的步骤[共享或重新 Visual Studio c + + 项目设置](#bkmkPropertySheets)。
+用户定义的宏存储在属性表中。 如果你的项目尚未包含属性表，则可以创建一个下的步骤[共享或重用 Visual Studio 项目设置](create-reusable-property-configurations.md)。
 
 #### <a name="to-create-a-user-defined-macro"></a>创建用户定义的宏
 
@@ -128,17 +128,17 @@ MSVC 编译器 (cl.exe) 可识别某些环境变量，专门 LIB、 LIBPATH、 P
 
 ## <a name="in-this-section"></a>本节内容
 
-[共享或重新 Visual Studio 项目设置](create-reusable-property-configurations.md)<br/>
+[共享或重用 Visual Studio 项目设置](create-reusable-property-configurations.md)<br/>
 如何创建具有可共享的自定义生成设置或 resused.props 文件。
 
 [项目属性继承](project-property-inheritance.md)<br/>
 介绍.props、.targets、.vcxproj 文件和生成过程中的环境变量的评估顺序。
 
-[而无需更改项目文件中修改属性和目标](modify-project-properties-without-changing-project-file.md)<br/>
+[在不更改项目文件的情况下修改属性和目标](modify-project-properties-without-changing-project-file.md)<br/>
 如何创建临时生成设置，而无需修改项目文件。 
 
 ## <a name="see-also"></a>请参阅
 
-[Visual Studio Projects - C++](creating-and-managing-visual-cpp-projects.md)<br/>
+[Visual Studio 项目 - C++](creating-and-managing-visual-cpp-projects.md)<br/>
 [.vcxproj 和 .props 文件结构](reference/vcxproj-file-structure.md)<br/>
 [属性页 XML 文件](reference/property-page-xml-files.md)<br/>

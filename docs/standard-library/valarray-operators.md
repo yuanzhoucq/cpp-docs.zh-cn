@@ -1,6 +1,6 @@
 ---
 title: '&lt;valarray&gt; 运算符'
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - valarray/std::operator!=
 - valarray/std::operator%
@@ -30,12 +30,12 @@ helpviewer_keywords:
 - std::operator&lt; (valarray)
 - std::operator&lt;&lt; (valarray)
 - std::operator&lt;= (valarray), std::operator== (valarray)
-ms.openlocfilehash: daaddf6de79411aea58b79feb0fbfd0f8ff56f5c
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 6de4b4ad75f9240fb86ff5e363f4a7d9062925d9
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51332603"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565917"
 ---
 # <a name="ltvalarraygt-operators"></a>&lt;valarray&gt; 运算符
 
@@ -268,7 +268,7 @@ operator&(
 
 按位运算仅可用于操作中的位**char**并**int**数据类型和变体而不是在**float**， **double**， **longdouble**， **void**， **bool**或其他更复杂的数据类型。
 
-按位 `AND` 具有与逻辑 `AND` 相同的事实表，但是按位 OR 适用于单个位级别上的数据类型。 [operator&&](../standard-library/valarray-operators.md#amp) 应用于元素级别，它将所有非零值视为 true，结果是布尔值的 valarray。 相反，按位 **ANDoperator&** 可产生 0 或 1 以外的值的 valarray，具体取决于按位运算的结果。
+按位 `AND` 具有与逻辑 `AND` 相同的事实表，但是按位 OR 适用于单个位级别上的数据类型。 [operator&&](#op_amp_amp) 应用于元素级别，它将所有非零值视为 true，结果是布尔值的 valarray。 按位`AND`[运算符 &](#op_amp)，与此相反，可产生 0 或 1，具体取决于按位运算的结果以外的值的 valarray。
 
 ### <a name="example"></a>示例
 
@@ -356,7 +356,7 @@ operator&&(
 
 ### <a name="remarks"></a>备注
 
-逻辑`ANDoperator&&`适用于元素级别，它将所有非零值视为 true，并将该结果是布尔值的 valarray。 位版本的`AND`，[运算符 &、](../standard-library/valarray-operators.md#op_amp)，与此相反，可产生 0 或 1，具体取决于按位运算的结果以外的值的 valarray。
+逻辑`ANDoperator&&`适用于元素级别，它将所有非零值视为 true，并将该结果是布尔值的 valarray。 位版本的`AND`，[运算符 &、](#op_amp)，与此相反，可产生 0 或 1，具体取决于按位运算的结果以外的值的 valarray。
 
 ### <a name="example"></a>示例
 
@@ -1430,7 +1430,7 @@ operator^(
 
 按位运算仅可用于操作中的位**char**并**int**数据类型和变体而不是在**float**， **double**， **长双精度**， **void**， **bool**或其他更复杂的数据类型。
 
-按位异 `OR` ( **XOR**) 具有以下语义：假设有位 b1 和 b2，如果其中恰好有一个位为 true，则 b1 **XOR** b2 为 **true**；如果两个位都为 false 或都为 true，则为 **false**。
+按位异`OR`( **XOR**) 具有以下语义：假设有位*b*1 和*b*2 *b*1 **XOR** *b*2 是**true**如果正好有一个位为 true;**false**如果两个位都为 false，或如果两个位都为 true。
 
 ### <a name="example"></a>示例
 

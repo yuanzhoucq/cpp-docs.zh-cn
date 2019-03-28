@@ -1,17 +1,17 @@
 ---
 title: 并行容器和对象
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 helpviewer_keywords:
 - parallel objects
 - parallel containers
 - concurrent containers
 ms.assetid: 90ab715c-29cd-48eb-8e76-528619aab466
-ms.openlocfilehash: b406bc194735a2796f03f1e9d6cf0cf2ae2e6f86
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: bcf3ead9fe945ecb2246fdb28b7f67cd51b1238b
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51333281"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565943"
 ---
 # <a name="parallel-containers-and-objects"></a>并行容器和对象
 
@@ -27,13 +27,13 @@ ms.locfileid: "51333281"
 
 并发容器：
 
-- [concurrent_vector 类](#ctor)
+- [concurrent_vector 类](#vector)
 
-   - [之间的差异 concurrent_vector 和向量](#ctor)
+   - [之间的差异 concurrent_vector 和向量](#vector-differences)
 
-   - [并发安全操作，](#ctor)
+   - [并发安全操作，](#vector-safety)
 
-   - [异常安全性](#ctor)
+   - [异常安全性](#vector-exceptions)
 
 - [concurrent_queue 类](#queue)
 
@@ -189,7 +189,7 @@ ms.locfileid: "51333281"
 
 [!code-cpp[concrt-unordered-map-structure#1](../../parallel/concrt/codesnippet/cpp/parallel-containers-and-objects_2.cpp)]
 
-有关使用示例`concurrent_unordered_map`若要执行映射和化简并行操作，请参阅[如何： 执行映射和降低操作并行](../../parallel/concrt/how-to-perform-map-and-reduce-operations-in-parallel.md)。
+有关使用示例`concurrent_unordered_map`若要执行映射和化简并行操作，请参阅[如何：执行映射和化简操作并行](../../parallel/concrt/how-to-perform-map-and-reduce-operations-in-parallel.md)。
 
 ###  <a name="map-differences"></a> 之间的差异 concurrent_unordered_map 和 unordered_map
 
@@ -291,7 +291,7 @@ ms.locfileid: "51333281"
 
 有关如何使用示例`combinable`类，请参阅以下主题：
 
-- [如何：使用 combinable 提高性能](../../parallel/concrt/how-to-use-combinable-to-improve-performance.md)
+- [如何：使用 Combinable 改进性能](../../parallel/concrt/how-to-use-combinable-to-improve-performance.md)
 
 - [如何：使用 combinable 来组合集](../../parallel/concrt/how-to-use-combinable-to-combine-sets.md)
 
@@ -302,7 +302,7 @@ ms.locfileid: "51333281"
 [如何：使用并行容器提高效率](../../parallel/concrt/how-to-use-parallel-containers-to-increase-efficiency.md)<br/>
 演示如何使用并行容器来高效地存储和访问数据并行。
 
-[如何：使用 combinable 提高性能](../../parallel/concrt/how-to-use-combinable-to-improve-performance.md)<br/>
+[如何：使用 Combinable 改进性能](../../parallel/concrt/how-to-use-combinable-to-improve-performance.md)<br/>
 演示如何使用`combinable`类来取消共享的状态，并因此改进性能。
 
 [如何：使用 combinable 来组合集](../../parallel/concrt/how-to-use-combinable-to-combine-sets.md)<br/>

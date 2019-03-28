@@ -1,6 +1,6 @@
 ---
 title: CStringT 类
-ms.date: 10/18/2018
+ms.date: 03/27/2019
 f1_keywords:
 - CStringT
 - ATLSTR/ATL::CStringT
@@ -80,12 +80,12 @@ helpviewer_keywords:
 - shared classes, CStringT
 - CStringT class
 ms.assetid: 7cacc59c-425f-40f1-8f5b-6db921318ec9
-ms.openlocfilehash: 9566830de4d3af8f34e8efa5e5ef468acae1fba5
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 327ffc40a9b7e41004bc5aac7ecc320076de537f
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750866"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565813"
 ---
 # <a name="cstringt-class"></a>CStringT 类
 
@@ -182,7 +182,7 @@ class CStringT :
 
 |||
 |-|-|
-|[operator =](#operator_eq)|将一个新值赋给`CStringT`对象。|
+|[CStringT::operator =](#operator_eq)|将一个新值赋给`CStringT`对象。|
 |[CStringT::operator +](#operator_add)|将连接两个字符串或字符和字符串。|
 |[CStringT::operator +=](#operator_add_eq)|连接到现有字符串的末尾的新字符串。|
 |[CStringT::operator ==](#operator_eq_eq)|确定两个字符串是否以逻辑方式相等。|
@@ -251,7 +251,7 @@ class CStringT :
 
 因为`CStringT`使用模板自变量来定义字符类型 (任一[wchar_t](../../c-runtime-library/standard-types.md)或[char](../../c-runtime-library/standard-types.md)) 支持，方法参数类型可以是复杂有时。 若要简化此问题，一组预定义的类型定义和使用整个`CStringT`类。 下表列出了各种类型：
 
-|name|描述|
+|名称|描述|
 |----------|-----------------|
 |`XCHAR`|单个字符 (任一**wchar_t**或**char**) 使用相同的字符类型作为`CStringT`对象。|
 |`YCHAR`|单个字符 (任一**wchar_t**或**char**) 使用相反的字符类型作为`CStringT`对象。|
@@ -1023,6 +1023,56 @@ void OemToAnsi();
 ### <a name="example"></a>示例
 
 有关示例，请参阅[CStringT::AnsiToOem](#ansitooem)。
+
+##  <a name="operator_eq"></a>  CStringT::operator =
+
+将新值分配为字符串。
+
+```
+CStringT& operator=(const CStringT& strSrc);
+
+template<bool bMFCDLL>
+CStringT& operator=(const CSimpleStringT<BaseType, bMFCDLL>& str);
+
+CStringT& operator=(PCXSTR pszSrc);
+CStringT& operator=(PCYSTR pszSrc);
+CStringT& operator=(const unsigned char* pszSrc);
+CStringT& operator=(XCHAR ch);
+CStringT& operator=(YCHAR ch);
+CStringT& operator=(const VARIANT& var);
+```
+
+### <a name="parameters"></a>参数
+
+*strSrc*<br/>
+一个`CStringT`要分配给此字符串。
+
+*str*<br/>
+对 `CThisSimpleString` 对象的引用。
+
+*bMFCDLL*<br/>
+一个布尔值，指定项目是否非 MFC DLL。
+
+*BaseType*<br/>
+字符串基类型。
+
+*var*<br/>
+要将分配给此字符串的变体对象。
+
+*ch*<br/>
+要将分配给字符串 ANSI 或 Unicode 字符。
+
+*pszSrc*<br/>
+指向要分配的原始字符串的指针。
+
+### <a name="remarks"></a>备注
+
+赋值运算符接受另一个`CStringT`对象、 字符指针或单个字符。 请注意，每当你使用此运算符，因为可以分配新存储时，可能会发生异常的内存。
+
+有关的信息`CThisSimpleString`，请参阅备注部分[CStringT::CStringT](#cstringt)。
+
+> [!NOTE]
+> 尽管可能创建`CStringT`实例包含嵌入的 null 字符，我们建议不使用它。 在调用方法和运算符`CStringT`包含嵌入的 null 字符的对象可能会产生意外的结果。
 
 ##  <a name="operator_add"></a>  CStringT::operator +
 

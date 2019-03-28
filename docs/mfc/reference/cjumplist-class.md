@@ -1,6 +1,6 @@
 ---
 title: CJumpList 类
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CJumpList
 - AFXADV/CJumpList
@@ -36,12 +36,12 @@ helpviewer_keywords:
 - CJumpList [MFC], InitializeList
 - CJumpList [MFC], SetAppID
 ms.assetid: d364d27e-f512-4b12-9872-c2a17c78ab1f
-ms.openlocfilehash: b72ea6f3715be1e4a11d457dbdeaba7a622ef8b6
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 9296912c97b1efb5f7cbd1ed9f769d0222d5f85c
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259069"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565303"
 ---
 # <a name="cjumplist-class"></a>CJumpList 类
 
@@ -60,9 +60,9 @@ class CJumpList;
 |名称|描述|
 |----------|-----------------|
 |[CJumpList::CJumpList](#cjumplist)|构造 `CJumpList` 对象。|
-|[CJumpList:: ~ CJumpList](#cjumplist__~cjumplist)|销毁 `CJumpList` 对象。|
+|[CJumpList:: ~ CJumpList](#_dtorcjumplist)|销毁 `CJumpList` 对象。|
 
-|name|描述|
+|名称|描述|
 |----------|-----------------|
 |[CJumpList::AbortList](#abortlist)|无需处理将中止生成列表的事务。|
 |[CJumpList::AddDestination](#adddestination)|已重载。 将目标添加到列表。|
@@ -188,7 +188,7 @@ BOOL AddTask(IShellLink* pShellLink);
 指定目标任务路径。
 
 *strCommandLineArgs*<br/>
-指定由 strTargetExecutablePath 指定的可执行文件的命令行参数。
+指定由指定的可执行文件的命令行参数*strTargetExecutablePath*。
 
 *strTitle*<br/>
 将在目标列表中显示的任务名称。

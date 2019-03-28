@@ -1,6 +1,6 @@
 ---
 title: time_point 类
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - chrono/std::chrono::time_point
 - chrono/std::chrono::time_point::time_point
@@ -10,12 +10,12 @@ f1_keywords:
 ms.assetid: 18be1e52-57b9-489a-8a9b-f58894f0aaad
 helpviewer_keywords:
 - std::chrono [C++], time_point
-ms.openlocfilehash: f38cb883f1fc9e07c65d261ea7a6e074bf02db5a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 99477f57dc44d63f663a6db38250cc0620151ec9
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50513745"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565238"
 ---
 # <a name="timepoint-class"></a>time_point 类
 
@@ -108,7 +108,7 @@ time_point& operator+=(const duration& Dur);
 
 相加后执行 `time_point` 对象。
 
-## <a name="time_point__operator-_eq"></a>  time_point::operator-=
+## <a name="operator-_eq"></a>  time_point::operator-=
 
 从存储[持续时间](../standard-library/duration-class.md)值减去指定的值。
 

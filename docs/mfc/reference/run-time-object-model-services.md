@@ -1,17 +1,17 @@
 ---
 title: 运行时对象模型服务
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - vc.mfc.macros
 helpviewer_keywords:
 - run-time object model services macros
 ms.assetid: 4a3e79df-2ee3-43a4-8193-20298828de85
-ms.openlocfilehash: 45ad85e5b85674be957320ef6fdb7f5a81db6503
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 59f5be1d8bb38295b50732583fea47924160cecf
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304673"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565887"
 ---
 # <a name="run-time-object-model-services"></a>运行时对象模型服务
 
@@ -363,7 +363,7 @@ OLE 类 ID 是对象的唯一 128 位标识符。 它包含一个**长**、 两�
 
 **标头：** afxdisp.h
 
-## <a name="implement_olecreate"></a> IMPLEMENT_OLECTLTYPE
+## <a name="implementolectltype"></a>IMPLEMENT_OLECTLTYPE
 
 实现`GetUserTypeNameID`和`GetMiscStatus`控件类的成员函数。
 

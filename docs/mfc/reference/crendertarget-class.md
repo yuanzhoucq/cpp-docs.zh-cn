@@ -1,6 +1,6 @@
 ---
 title: CRenderTarget 类
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CRenderTarget
 - AFXRENDERTARGET/CRenderTarget
@@ -114,12 +114,12 @@ helpviewer_keywords:
 - CRenderTarget [MFC], m_pRenderTarget
 - CRenderTarget [MFC], m_pTextFormatDefault
 ms.assetid: 30d1607d-68d3-4d14-ac36-fdbd0ef903a1
-ms.openlocfilehash: 112bd4422a1fa6b9b97239228dc586a0555ddc96
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: a14a1fba25c8c38c4bcf441dda566f14dc790f76
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259875"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565749"
 ---
 # <a name="crendertarget-class"></a>CRenderTarget 类
 
@@ -138,7 +138,7 @@ class CRenderTarget : public CObject;
 |名称|描述|
 |----------|-----------------|
 |[CRenderTarget::CRenderTarget](#crendertarget)|构造一个 CRenderTarget 对象。|
-|[CRenderTarget::~CRenderTarget](#crendertarget__~crendertarget)|析构函数。 当呈现器目标对象被销毁时调用。|
+|[CRenderTarget::~CRenderTarget](#_dtorcrendertarget)|析构函数。 当呈现器目标对象被销毁时调用。|
 
 ### <a name="public-methods"></a>公共方法
 
@@ -502,7 +502,7 @@ void DrawLine(
 
 ```
 void DrawRectangle(
-    const CD2DRectF& rect,
+    const CD2DRectF& rectangle,
     CD2DBrush* pBrush,
     FLOAT fStrokeWidth = 1.0,
     ID2D1StrokeStyle* strokeStyle = NULL);
@@ -510,7 +510,7 @@ void DrawRectangle(
 
 ### <a name="parameters"></a>参数
 
-*rect*<br/>
+*rectangle*<br/>
 若要绘制，以独立于设备的像素为单位的矩形的尺寸
 
 *pBrush*<br/>
@@ -555,7 +555,7 @@ void DrawRoundedRectangle(
 ```
 void DrawText(
     const CString& strText,
-    const CD2DRectF& rect,
+    const CD2DRectF& rectangle,
     CD2DBrush* pForegroundBrush,
     CD2DTextFormat* textFormat = NULL,
     D2D1_DRAW_TEXT_OPTIONS options = D2D1_DRAW_TEXT_OPTIONS_NONE,
@@ -567,7 +567,7 @@ void DrawText(
 *strText*<br/>
 指向要绘制的 Unicode 字符数组的指针。
 
-*rect*<br/>
+*rectangle*<br/>
 大小和在其中绘制文本区域的位置。
 
 *pForegroundBrush*<br/>
@@ -714,13 +714,13 @@ void FillOpacityMask(
 
 ```
 void FillRectangle(
-    const CD2DRectF& rect,
+    const CD2DRectF& rectangle,
     CD2DBrush* pBrush);
 ```
 
 ### <a name="parameters"></a>参数
 
-*rect*<br/>
+*rectangle*<br/>
 若要绘制，以独立于设备的像素为单位的矩形的尺寸。
 
 *pBrush*<br/>
