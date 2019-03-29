@@ -1,6 +1,6 @@
 ---
 title: CSid 类
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CSid
 - ATLSECURITY/ATL::CSid
@@ -21,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSid class
 ms.assetid: be58b7ca-5958-49c3-a833-ca341aaaf753
-ms.openlocfilehash: 02b7cbb9e66e1e8297699503fc510247efed1629
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 4c8d05fd193254f2431bbec7692ff25420c1bf05
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301891"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565865"
 ---
 # <a name="csid-class"></a>CSid 类
 
@@ -86,8 +86,8 @@ class CSid
 |-|-|
 |[operator ==](#operator_eq_eq)|测试相等的两个安全描述符对象|
 |[operator !=](#operator_neq)|测试不相等的两个安全描述符对象|
-|[运算符 \<](#operator_lt_)|比较两个安全描述符对象的相对值。|
-|[operator >](#operator_gt_)|比较两个安全描述符对象的相对值。|
+|[运算符 \<](#operator_lt)|比较两个安全描述符对象的相对值。|
+|[operator >](#operator_gt)|比较两个安全描述符对象的相对值。|
 |[operator \<=](#operator_lt__eq)|比较两个安全描述符对象的相对值。|
 |[operator >=](#operator_gt__eq)|比较两个安全描述符对象的相对值。|
 
@@ -119,7 +119,7 @@ LPCTSTR AccountName() const throw(...);
 
 此方法会尝试查找指定的名称`SID`（安全标识符）。 有关完整详细信息，请参阅[LookupAccountSid](/windows/desktop/api/winbase/nf-winbase-lookupaccountsida)。
 
-如果没有帐户名称`SID`可以找到`AccountName`返回空字符串。 原因可能是网络超时可防止此方法查找名称。 它也会发生没有相应的帐户名称，例如登录安全标识符`SID`标识登录会话。
+如果没有帐户名称`SID`可以找到`AccountName`返回空字符串。 原因可能是网络超时可防止此方法查找名称。 它还会发生的安全标识符没有相应的帐户名称，如`SID`标识登录会话。
 
 ##  <a name="csid"></a>  CSid::CSid
 
@@ -210,7 +210,7 @@ LPCTSTR Domain() const throw(...);
 
 此方法会尝试查找指定的名称`SID`（安全标识符）。 有关完整详细信息，请参阅[LookupAccountSid](/windows/desktop/api/winbase/nf-winbase-lookupaccountsida)。
 
-如果没有帐户名称`SID`可以找到`Domain`返回空字符串作为域。 原因可能是网络超时可防止此方法查找名称。 它也会发生没有相应的帐户名称，例如登录安全标识符`SID`标识登录会话。
+如果没有帐户名称`SID`可以找到`Domain`返回空字符串作为域。 原因可能是网络超时可防止此方法查找名称。 它还会发生的安全标识符没有相应的帐户名称，如`SID`标识登录会话。
 
 ##  <a name="equalprefix"></a>  CSid::EqualPrefix
 
