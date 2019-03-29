@@ -1,6 +1,6 @@
 ---
 title: CBaseTransition 类
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CBaseTransition
 - AFXANIMATIONCONTROLLER/CBaseTransition
@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CBaseTransition [MFC], m_transition
 - CBaseTransition [MFC], m_type
 ms.assetid: dfe84007-bbc5-43b7-b5b8-fae9145573bf
-ms.openlocfilehash: 1f9bc3708974511506741a35c11676df2b0be592
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 37bf536403d0edfc16b098929a4758a6c6958cf1
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258367"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565904"
 ---
 # <a name="cbasetransition-class"></a>CBaseTransition 类
 
@@ -73,8 +73,8 @@ class CBaseTransition : public CObject;
 
 |名称|描述|
 |----------|-----------------|
-|[CBaseTransition::CBaseTransition](#cbasetransition)|构造基本转换对象。|
-|[CBaseTransition:: ~ CBaseTransition](#cbasetransition__~cbasetransition)|析构函数。 当转换对象被销毁时调用。|
+|[CBaseTransition::CBaseTransition](#cbasetransition)|构造一个基转换对象。|
+|[CBaseTransition:: ~ CBaseTransition](#_dtorcbasetransition)|析构函数。 当转换对象被销毁时调用。|
 
 ### <a name="public-methods"></a>公共方法
 
@@ -170,7 +170,7 @@ BOOL AddToStoryboardAtKeyframes(IUIAnimationStoryboard* pStoryboard);
 
 ##  <a name="cbasetransition"></a>  CBaseTransition::CBaseTransition
 
-构造基本转换对象。
+构造一个基转换对象。
 
 ```
 CBaseTransition();
@@ -320,7 +320,7 @@ BOOL IsAdded();
 
 ### <a name="remarks"></a>备注
 
-最高级别代码添加到情节提要的转换时，将在内部设置此标志。
+顶级代码添加到情节提要的转换时，将在内部设置此标志。
 
 ##  <a name="m_badded"></a>  CBaseTransition::m_bAdded
 
