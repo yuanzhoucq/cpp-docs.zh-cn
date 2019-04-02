@@ -4,12 +4,12 @@ ms.date: 09/01/2017
 helpviewer_keywords:
 - UNIX [C++]
 ms.assetid: 36108b31-e7fa-49a8-a1f7-7077fcbec873
-ms.openlocfilehash: 0cffdc2be00b4af9badbbbc80bcfef48b3f76e19
-ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
+ms.openlocfilehash: 2b0736bca9cc0b67f9ea8ac83dc18fadaeefdb3c
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57818370"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780816"
 ---
 # <a name="introduction-to-visual-c-for-unix-users"></a>Visual C++ 简介（针对 UNIX 用户）
 
@@ -51,7 +51,7 @@ ms.locfileid: "57818370"
 
 Microsoft Visual C++ 编译器实现了一些对标准 C++ 编程语言的扩展，支持 Windows 操作系统编程。 这些扩展用于指定存储类特性、函数调用约定和基于寻址以及其他用途。 有关所有受支持的 C++ 扩展的完整列表，请参阅 [Microsoft 专用的修饰符](../cpp/microsoft-specific-modifiers.md)。
 
-可以使用 `/Za` 编译器选项禁用所有特定于 Microsoft 的 C++ 扩展。 如果希望编写可在多个平台上运行的代码，建议使用此选项。 有关 `/Za` 编译器选项的详细信息，请参阅 [/Za、/Ze（禁用语言扩展）](../build/reference/za-ze-disable-language-extensions.md)。 有关 C++ 编译器符合性的详细信息，请参阅 [Visual C++ 语言符合性](../visual-cpp-language-conformance.md)和[非标准行为](../cpp/nonstandard-behavior.md)。
+可以使用 `/Za` 编译器选项禁用所有特定于 Microsoft 的 C++ 扩展。 如果希望编写可在多个平台上运行的代码，建议使用此选项。 有关 `/Za` 编译器选项的详细信息，请参阅 [/Za、/Ze（禁用语言扩展）](../build/reference/za-ze-disable-language-extensions.md)。 有关 C++ 编译器符合性的详细信息，请参阅 [Visual C++ 语言符合性](../overview/visual-cpp-language-conformance.md)和[非标准行为](../cpp/nonstandard-behavior.md)。
 
 ## <a name="precompiled-headers"></a>预编译标头
 
