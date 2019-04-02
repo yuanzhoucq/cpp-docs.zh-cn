@@ -4,18 +4,18 @@ ms.date: 08/30/2017
 helpviewer_keywords:
 - breaking changes [C++]
 ms.assetid: b38385a9-a483-4de9-99a6-797488bc5110
-ms.openlocfilehash: 20920a5f1a1cdf2a4e10263a7b1de3010f24f9c0
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: 9be4db9e0f7c50054dc6e6ca498b1c9d49715a8d
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58329034"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775408"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Visual C++ 更改历史记录（2003 - 2015）
 
 本文介绍从 Visual Studio 2003 到 Visual Studio 2015 的所有重大更改。在本文中，术语“新行为”或“现在”指 Visual Studio 2015 及更高版本。 术语“旧行为”和“之前”指 Visual Studio 2013 和早期版本。
 
-有关 Visual Studio 2017 的信息，请参阅 [Visual Studio 2017 中 Visual C++ 的新增功能](../what-s-new-for-visual-cpp-in-visual-studio.md)和 [Visual Studio 2017 中 Visual C++ 的符合性改进](../cpp-conformance-improvements-2017.md)。
+有关 Visual Studio 2017 的信息，请参阅 [Visual Studio 2017 中 Visual C++ 的新增功能](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)和 [Visual Studio 2017 中 Visual C++ 的符合性改进](../overview/cpp-conformance-improvements-2017.md)。
 
 > [!NOTE]
 > Visual Studio 2015 和 Visual Studio 2017 之间没有二进制的重大更改。
@@ -2910,8 +2910,7 @@ ms.locfileid: "58329034"
     };
     ```
 
-   
-  `sizeof(S)` 的结果为 24。 但是，如果使用刚才提到的 x64 变通方案，则此结果可以减少到 16：
+   `sizeof(S)` 的结果为 24。 但是，如果使用刚才提到的 x64 变通方案，则此结果可以减少到 16：
 
     ```cpp
     struct dummy {
@@ -3525,4 +3524,4 @@ Visual Studio 2013 中的 C++ 编译器可以检测到 _ITERATOR_DEBUG_LEVEL 中
 
 ## <a name="see-also"></a>请参阅
 
-[Visual Studio 中 Visual C++ 的新增功能](../what-s-new-for-visual-cpp-in-visual-studio.md)
+[Visual Studio 中 Visual C++ 的新增功能](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)

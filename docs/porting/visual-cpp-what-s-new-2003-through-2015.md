@@ -2,19 +2,19 @@
 title: Visual C++ 新增功能（2003 - 2015）
 ms.date: 11/04/2016
 ms.assetid: c4afde6f-3d75-40bf-986f-be57e3818e26
-ms.openlocfilehash: fdd1d2c2183d06defe413340b8aef05c5bd61750
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: e2a785871d85ce742bee7b78586756cced38986e
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57749147"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768674"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Visual C++ 新增功能（2003 - 2015）
 
 本页面包括从 Visual Studio 2003 到 Visual Studio 2015 的所有 Visual C++ 版本的“新增功能”页。 提供这些信息的目的是方便用户从早期版本的 Visual C++ 进行升级。
 
 > [!NOTE]
-> 有关 Visual Studio 2017 的信息，请参阅 [Visual Studio 2017 中 Visual C++ 的新增功能](../what-s-new-for-visual-cpp-in-visual-studio.md)和 [Visual Studio 2017 中 Visual C++ 的符合性改进](../cpp-conformance-improvements-2017.md)。
+> 有关 Visual Studio 2017 的信息，请参阅 [Visual Studio 2017 中 Visual C++ 的新增功能](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)和 [Visual Studio 2017 中 Visual C++ 的符合性改进](../overview/cpp-conformance-improvements-2017.md)。
 
 ## <a name="whats-new-for-c-in-visual-studio-2015"></a>Visual Studio 2015 中 C++ 的新增功能
 
