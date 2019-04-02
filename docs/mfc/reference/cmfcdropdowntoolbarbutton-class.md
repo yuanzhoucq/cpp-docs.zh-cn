@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CMFCDropDownToolbarButton [MFC], SetDefaultCommand
 - CMFCDropDownToolbarButton [MFC], m_uiShowBarDelay
 ms.assetid: bc9d69e6-bd3e-4c15-9368-e80a504a0ba7
-ms.openlocfilehash: b33e50328fd3c8997774515f248780edda6bcc75
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 5027b43e1519d9f8cc2880cc4de005d5137bbb67
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57275488"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768999"
 ---
 # <a name="cmfcdropdowntoolbarbutton-class"></a>CMFCDropDownToolbarButton 类
 
@@ -94,7 +94,7 @@ class CMFCDropDownToolbarButton : public CMFCToolBarButton
 
 ### <a name="data-members"></a>数据成员
 
-|name|描述|
+|名称|描述|
 |----------|-----------------|
 |[CMFCDropDownToolbarButton::m_uiShowBarDelay](#m_uishowbardelay)|指定用户必须按住鼠标按钮的下拉工具栏出现之前的时间的长度。|
 
@@ -163,7 +163,7 @@ CMFCDropDownToolbarButton(
 
 ### <a name="example"></a>示例
 
-下面的示例演示如何构造的对象`CMFCDropDownToolbarButton`类。 此代码片段属于[Visual Studio 演示示例](../../visual-cpp-samples.md)。
+下面的示例演示如何构造的对象`CMFCDropDownToolbarButton`类。 此代码片段属于[Visual Studio 演示示例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#31](../../mfc/codesnippet/cpp/cmfcdropdowntoolbarbutton-class_1.cpp)]
 

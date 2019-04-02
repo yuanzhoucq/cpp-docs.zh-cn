@@ -22,12 +22,12 @@ helpviewer_keywords:
 - handler functions [MFC], declaring
 - message ranges [MFC], mapping
 ms.assetid: a271478b-5e1c-46f5-9f29-e5be44b27d08
-ms.openlocfilehash: b587064625178c520338e4253e812e8f84275257
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: d2bc961486d9bc686e1ca0d5feb0fe01d65f9512
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57266362"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773991"
 ---
 # <a name="handlers-for-message-map-ranges"></a>消息映射范围的处理程序
 
@@ -95,7 +95,7 @@ ms.locfileid: "57266362"
 
 ##  <a name="_core_example_for_a_range_of_command_ids"></a> 范围的命令 Id 的示例
 
-何时可以使用一个示例是在处理命令，例如 MFC 示例中的缩放命令的范围[HIERSVR](../visual-cpp-samples.md)。 此命令会放大的视图中，缩放 25%到其正常尺寸的 300%之间。 HIERSVR 的视图类使用范围来处理与类似于这样的消息映射条目的缩放命令：
+何时可以使用一个示例是在处理命令，例如 MFC 示例中的缩放命令的范围[HIERSVR](../overview/visual-cpp-samples.md)。 此命令会放大的视图中，缩放 25%到其正常尺寸的 300%之间。 HIERSVR 的视图类使用范围来处理与类似于这样的消息映射条目的缩放命令：
 
 [!code-cpp[NVC_MFCMessageHandling#8](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_3.cpp)]
 

@@ -52,12 +52,12 @@ helpviewer_keywords:
 - CView [MFC], OnPrint
 - CView [MFC], OnUpdate
 ms.assetid: 9cff3c56-7564-416b-b9a4-71a9254ed755
-ms.openlocfilehash: fe9b282fd248f8dd03a6a7f078c03866d1b14b2d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 06c6d4dff28399f3d8e6ac7f46d9ed751850036f
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305011"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775304"
 ---
 # <a name="cview-class"></a>CView 类
 
@@ -351,7 +351,7 @@ virtual DROPEFFECT OnDragEnter(
 
 - 有关 MK_ALT DROPEFFECT_MOVE 创建已删除的对象和删除原始对象的副本。 这通常是默认放置效果，在该视图可以接受此数据对象。
 
-有关详细信息，请参阅 MFC 高级概念示例[OCLIENT](../../visual-cpp-samples.md)。
+有关详细信息，请参阅 MFC 高级概念示例[OCLIENT](../../overview/visual-cpp-samples.md)。
 
 ### <a name="remarks"></a>备注
 
@@ -405,7 +405,7 @@ virtual DROPEFFECT OnDragOver(
 
 - 有关 MK_ALT DROPEFFECT_MOVE 创建已删除的对象和删除原始对象的副本。 这通常是默认放置效果，在该视图可以接受的数据对象。
 
-有关详细信息，请参阅 MFC 高级概念示例[OCLIENT](../../visual-cpp-samples.md)。
+有关详细信息，请参阅 MFC 高级概念示例[OCLIENT](../../overview/visual-cpp-samples.md)。
 
 ### <a name="remarks"></a>备注
 
@@ -445,7 +445,7 @@ virtual DROPEFFECT OnDragScroll(
 
 - DROPEFFECT_SCROLL 指示拖动滚动操作即将发生或目标视图中不存在。
 
-有关详细信息，请参阅 MFC 高级概念示例[OCLIENT](../../visual-cpp-samples.md)。
+有关详细信息，请参阅 MFC 高级概念示例[OCLIENT](../../overview/visual-cpp-samples.md)。
 
 ### <a name="remarks"></a>备注
 
@@ -871,7 +871,7 @@ virtual void OnUpdate(
 
 ## <a name="see-also"></a>请参阅
 
-[MFC 示例 MDIDOCVW](../../visual-cpp-samples.md)<br/>
+[MFC 示例 MDIDOCVW](../../overview/visual-cpp-samples.md)<br/>
 [CWnd 类](../../mfc/reference/cwnd-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>
 [CWnd 类](../../mfc/reference/cwnd-class.md)<br/>

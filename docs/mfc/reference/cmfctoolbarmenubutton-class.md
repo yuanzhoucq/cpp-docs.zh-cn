@@ -92,12 +92,12 @@ helpviewer_keywords:
 - CMFCToolBarMenuButton [MFC], DrawDocumentIcon
 - CMFCToolBarMenuButton [MFC], m_bAlwaysCallOwnerDraw
 ms.assetid: cfa50176-7e4b-4527-9904-86a1b48fc1bc
-ms.openlocfilehash: 775d977fa1c995c42cc85660b1c9d13aea40a01e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 7733969a0218dacf481ac82c764911c61ecabbbf
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57281516"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769142"
 ---
 # <a name="cmfctoolbarmenubutton-class"></a>CMFCToolBarMenuButton 类
 
@@ -171,7 +171,7 @@ class CMFCToolBarMenuButton : public CMFCToolBarButton
 
 ### <a name="data-members"></a>数据成员
 
-|name|描述|
+|名称|描述|
 |----------|-----------------|
 |[CMFCToolBarMenuButton::m_bAlwaysCallOwnerDraw](#m_balwayscallownerdraw)|如果为 TRUE，框架将始终调用[CFrameWndEx::OnDrawMenuImage](../../mfc/reference/cframewndex-class.md#ondrawmenuimage)时绘制一个按钮。|
 
@@ -183,7 +183,7 @@ class CMFCToolBarMenuButton : public CMFCToolBarButton
 
 ## <a name="example"></a>示例
 
-下面的示例演示如何配置`CMFCToolBarMenuButton`对象。 该代码演示如何指定下拉列表菜单处于调色板模式，并指定在用户拖动从菜单栏的菜单按钮时创建的拖曳栏的 ID。 此代码片段属于 [Word Pad 示例](../../visual-cpp-samples.md)。
+下面的示例演示如何配置`CMFCToolBarMenuButton`对象。 该代码演示如何指定下拉列表菜单处于调色板模式，并指定在用户拖动从菜单栏的菜单按钮时创建的拖曳栏的 ID。 此代码片段属于 [Word Pad 示例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_WordPad#10](../../mfc/reference/codesnippet/cpp/cmfctoolbarmenubutton-class_1.cpp)]
 
@@ -241,7 +241,7 @@ CMFCToolBarMenuButton(
 
 ### <a name="example"></a>示例
 
-下面的示例演示如何构造的对象`CMFCToolBarMenuButton`类。 此代码片段属于 [Word Pad 示例](../../visual-cpp-samples.md)。
+下面的示例演示如何构造的对象`CMFCToolBarMenuButton`类。 此代码片段属于 [Word Pad 示例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_WordPad#9](../../mfc/reference/codesnippet/cpp/cmfctoolbarmenubutton-class_2.cpp)]
 

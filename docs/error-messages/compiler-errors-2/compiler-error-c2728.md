@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2728
 ms.assetid: 65635f91-1cd1-46e4-9ad7-14726d0546af
-ms.openlocfilehash: 3e3584d5e9166bb57e3be56e33f0198cacace7c1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1fbbc3d63386ebe98a447de8b7166a5263d2168f
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50615171"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767413"
 ---
 # <a name="compiler-error-c2728"></a>编译器错误 C2728
 
@@ -19,7 +19,7 @@ ms.locfileid: "50615171"
 
 数组创建语法用于创建托管对象或 WinRT 对象的数组。 不能使用本机数组语法创建托管对象或 WinRT 对象的数组。
 
-有关详细信息，请参阅 [数组](../../windows/arrays-cpp-component-extensions.md)。
+有关详细信息，请参阅 [数组](../../extensions/arrays-cpp-component-extensions.md)。
 
 以下示例将生成 C2728，并演示如何修复此错误：
 

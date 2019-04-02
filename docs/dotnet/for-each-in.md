@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - for each keyword [C++]
 ms.assetid: 0c3a364b-2747-43f3-bb8d-b7d3b7023f79
-ms.openlocfilehash: c5ee72e557c62e3db2eeb5dac4811133719183f6
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: b1dfe3a32f88c0e9456e3d73c31c533911f8d3ac
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57746297"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770686"
 ---
 # <a name="for-each-in"></a>for each, in
 
@@ -35,7 +35,7 @@ ms.locfileid: "57746297"
 `identifier` 的类型。
 
 *identifier*<br/>
-代表集合元素的迭代变量。  当`identifier`是[跟踪引用运算符](../windows/tracking-reference-operator-cpp-component-extensions.md)，可以修改该元素。
+代表集合元素的迭代变量。  当`identifier`是[跟踪引用运算符](../extensions/tracking-reference-operator-cpp-component-extensions.md)，可以修改该元素。
 
 *expression*<br/>
 数组表达式或集合。 集合元素必须让编译器能将其转换为 `identifier` 类型。
@@ -45,12 +45,11 @@ ms.locfileid: "57746297"
 
 ### <a name="remarks"></a>备注
 
-
-  `for each` 语句用于循环访问集合。 可修改集合中的元素，但无法添加或删除元素。
+`for each` 语句用于循环访问集合。 可修改集合中的元素，但无法添加或删除元素。
 
 *语句*数组或集合中每个元素执行。 为集合中的所有元素完成迭代后，控制将传递给 `for each` 块之后的语句。
 
-`for each` 并`in`都[上下文相关的关键字](../windows/context-sensitive-keywords-cpp-component-extensions.md)。
+`for each` 并`in`都[上下文相关的关键字](../extensions/context-sensitive-keywords-cpp-component-extensions.md)。
 
 更多相关信息：
 
@@ -160,4 +159,4 @@ Testing
 
 ## <a name="see-also"></a>请参阅
 
-[适用于运行时平台的组件扩展](../windows/component-extensions-for-runtime-platforms.md)
+[适用于运行时平台的组件扩展](../extensions/component-extensions-for-runtime-platforms.md)

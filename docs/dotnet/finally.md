@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - finally keyword [C++]
 ms.assetid: b55f3c8e-1af0-43e8-bcfb-99c3685d2578
-ms.openlocfilehash: cb2bbdb36a102c7ef8974a9ac210473f2306f5d6
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: f7db4320cf901412e3a9e3de682d0cfbcc9f23bc
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57746768"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58771508"
 ---
 # <a name="finally"></a>finally
 
@@ -19,7 +19,7 @@ ms.locfileid: "57746768"
 
 用途`finally`块是清理发生异常后继续保持任何资源。 请注意，`finally`始终执行块，即使未引发任何异常。 `catch`引发托管的异常时，仅执行块中关联`try`块。
 
-`finally` 是上下文相关的关键字;请参阅[上下文相关的关键字](../windows/context-sensitive-keywords-cpp-component-extensions.md)有关详细信息。
+`finally` 是上下文相关的关键字;请参阅[上下文相关的关键字](../extensions/context-sensitive-keywords-cpp-component-extensions.md)有关详细信息。
 
 ## <a name="example"></a>示例
 
@@ -58,4 +58,4 @@ in finally
 
 ## <a name="see-also"></a>请参阅
 
-[异常处理](../windows/exception-handling-cpp-component-extensions.md)
+[异常处理](../extensions/exception-handling-cpp-component-extensions.md)

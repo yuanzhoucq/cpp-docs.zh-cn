@@ -2,12 +2,12 @@
 title: 编译器内部函数和程序集语言
 ms.date: 11/04/2016
 ms.assetid: ddd51620-d01b-44cf-853b-e11420d13137
-ms.openlocfilehash: 07fad5e677b999f215e2d379c5ebf4183f210c99
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 016303262db40917099dfd6d13b4b11ad6ec2797
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50600672"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770195"
 ---
 # <a name="compiler-intrinsics-and-assembly-language"></a>编译器内部函数和程序集语言
 
@@ -21,4 +21,4 @@ ms.locfileid: "50600672"
 |[内联汇编程序](../assembler/inline/inline-assembler.md)|解释如何使用具有 x86 处理器的 Visual C/C++ 内联汇编。|
 |[ARM 汇编程序参考](../assembler/arm/arm-assembler-reference.md)|提供 Microsoft ARM 汇编程序 (armasm) 和相关工具的参考材料。|
 |[Microsoft 宏汇编程序参考](../assembler/masm/microsoft-macro-assembler-reference.md)|提供 Microsoft Macro 汇编程序 (masm) 的参考材料。|
-|[Visual C++](../visual-cpp-in-visual-studio.md)|Visual C++ 文档的顶级文章。|
+|[Visual C++](../overview/visual-cpp-in-visual-studio.md)|Visual C++ 文档的顶级文章。|

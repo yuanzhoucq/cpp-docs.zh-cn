@@ -7,19 +7,19 @@ helpviewer_keywords:
 - single document interface (SDI), adding views
 - views [MFC], SDI applications
 ms.assetid: 86d0c134-01d5-429c-b672-36cfb956dc01
-ms.openlocfilehash: b665f090fc680221be70f170452d756dd5f68dc5
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 593c59c73b58b4364c9d652ce8eb415c17af496c
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57284276"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767582"
 ---
 # <a name="adding-multiple-views-to-a-single-document"></a>向单个文档添加多个视图
 
 在使用 Microsoft 基础类 (MFC) 库创建一个单文档界面 (SDI) 应用程序，每个文档类型都与单个视图类型关联。 在某些情况下，最好的功能切换与新视图的当前视图的文档。
 
 > [!TIP]
->  有关实现单个文档的多个视图的其他过程，请参阅[CDocument::AddView](../mfc/reference/cdocument-class.md#addview)并[收集](../visual-cpp-samples.md)MFC 示例。
+>  有关实现单个文档的多个视图的其他过程，请参阅[CDocument::AddView](../mfc/reference/cdocument-class.md#addview)并[收集](../overview/visual-cpp-samples.md)MFC 示例。
 
 您可以实现此功能添加一个新的`CView`-派生的类和动态切换视图，向现有的 MFC 应用程序的其他代码。
 

@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - macros, error reporting
 ms.assetid: 4da9b87f-ec5c-4a32-ab93-637780909b9d
-ms.openlocfilehash: 24ab589ae19bd2027e2527ebefbf48dbf24e399d
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
+ms.openlocfilehash: 0d5010f913521848675987b145a1277c7b00decf
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58565030"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775037"
 ---
 # <a name="debugging-and-error-reporting-macros"></a>调试和错误报告宏
 
@@ -220,7 +220,7 @@ ATLTRACE2(
 
 ### <a name="remarks"></a>备注
 
-ATLTRACE2 的缩写形式将字符串写入调试器的输出窗口。 ATLTRACE2 第二种形式还将输出写入到调试器的输出窗口中，但可能会发生的 ATL/MFC 跟踪工具的设置 (请参阅[ATLTraceTool 示例](../../visual-cpp-samples.md))。 例如，如果您设置*级别*到 4 和 ATL/MFC 跟踪工具到级别 0 中，不会看到消息。 *级别*可以是 0、 1、 2、 3 或 4。 默认情况下，0，报告最严重的问题。
+ATLTRACE2 的缩写形式将字符串写入调试器的输出窗口。 ATLTRACE2 第二种形式还将输出写入到调试器的输出窗口中，但可能会发生的 ATL/MFC 跟踪工具的设置 (请参阅[ATLTraceTool 示例](../../overview/visual-cpp-samples.md))。 例如，如果您设置*级别*到 4 和 ATL/MFC 跟踪工具到级别 0 中，不会看到消息。 *级别*可以是 0、 1、 2、 3 或 4。 默认情况下，0，报告最严重的问题。
 
 *类别*参数列出了要设置的跟踪标志。 这些标志对应于为其您要报告的方法的类型。 以下各表列出可用于有效的跟踪标志*类别*参数。
 

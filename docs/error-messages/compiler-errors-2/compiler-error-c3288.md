@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3288
 ms.assetid: ed08a540-9751-46e1-9cbe-c51d6a49ffab
-ms.openlocfilehash: 30a88d1047f8395fc8e3042cf2a1da88e6e5c2d3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d076dabe0df91cefb90be5ec9e90f371331a51f1
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608411"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58771002"
 ---
 # <a name="compiler-error-c3288"></a>编译器错误 C3288
 
 type： 非法取消对引用的句柄类型
 
-编译器检测到非法取消引用的句柄类型。 可以取消引用句柄类型并将其分配给一个引用。 有关详细信息，请参阅[跟踪引用运算符](../../windows/tracking-reference-operator-cpp-component-extensions.md)。
+编译器检测到非法取消引用的句柄类型。 可以取消引用句柄类型并将其分配给一个引用。 有关详细信息，请参阅[跟踪引用运算符](../../extensions/tracking-reference-operator-cpp-component-extensions.md)。
 
 ## <a name="example"></a>示例
 

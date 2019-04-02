@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - reference types, C++ stack semantics for
 ms.assetid: 319a1304-f4a4-4079-8b84-01cec847d531
-ms.openlocfilehash: 6ba17a56c5274295c44cdc5aa651380d1e6c83d3
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 69771de120dc413496a3b7b0613e51a13d208e22
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57740923"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772600"
 ---
 # <a name="c-stack-semantics-for-reference-types"></a>参考类型的 C++ 堆栈语义
 
-在 Visual C++ 2005 之前，只能使用 `new` 运算符来创建引用类型的实例（这会在垃圾回收堆上创建对象）。 但是现在，您可以使用用来在堆栈上创建本机类型的实例的相同语法创建引用类型的实例。 因此，不需要使用[ref new、 gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md)创建引用类型的对象。 此外，当对象超出范围时，编译器将调用对象的析构函数。
+在 Visual C++ 2005 之前，只能使用 `new` 运算符来创建引用类型的实例（这会在垃圾回收堆上创建对象）。 但是现在，您可以使用用来在堆栈上创建本机类型的实例的相同语法创建引用类型的实例。 因此，不需要使用[ref new、 gcnew](../extensions/ref-new-gcnew-cpp-component-extensions.md)创建引用类型的对象。 此外，当对象超出范围时，编译器将调用对象的析构函数。
 
 ## <a name="remarks"></a>备注
 
@@ -41,9 +41,9 @@ ms.locfileid: "57740923"
 
 以下引用类型不可与堆栈语义一起使用：
 
-- [委托（C++ 组件扩展）](../windows/delegate-cpp-component-extensions.md)
+- [委托（C++ 组件扩展）](../extensions/delegate-cpp-component-extensions.md)
 
-- [数组](../windows/arrays-cpp-component-extensions.md)
+- [数组](../extensions/arrays-cpp-component-extensions.md)
 
 - <xref:System.String>
 
@@ -101,7 +101,7 @@ int main() {
 }
 ```
 
-### <a name="output"></a>输出
+### <a name="output"></a>Output
 
 ```Output
 98
@@ -113,4 +113,4 @@ int main() {
 
 ## <a name="see-also"></a>请参阅
 
-[类和结构](../windows/classes-and-structs-cpp-component-extensions.md)
+[类和结构](../extensions/classes-and-structs-cpp-component-extensions.md)

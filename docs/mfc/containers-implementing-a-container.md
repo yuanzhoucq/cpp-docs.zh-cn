@@ -5,12 +5,12 @@ helpviewer_keywords:
 - applications [OLE], OLE container
 - OLE containers [MFC], implementing
 ms.assetid: af1e2079-619a-4eac-9327-985ad875823a
-ms.openlocfilehash: 0ab91316c9ee07296fbc46f9f17b3c46c71ee96f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: b0d737a2025ed0006db00425d42c02ebf0bdeda8
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57271419"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767881"
 ---
 # <a name="containers-implementing-a-container"></a>容器：实现容器
 
@@ -36,7 +36,7 @@ ms.locfileid: "57271419"
 
 1. 实现 `OnSize` 消息处理程序以通知 OLE 嵌入项，它需要更改其矩形才能反映其包含视图的大小更改。
 
-由于这些功能的实现在各应用程序之间差异巨大，因此应用程序向导仅提供基本实现。 您可能必须自定义这些函数才能让应用程序正常工作。 此示例，请参阅[容器](../visual-cpp-samples.md)示例。
+由于这些功能的实现在各应用程序之间差异巨大，因此应用程序向导仅提供基本实现。 您可能必须自定义这些函数才能让应用程序正常工作。 此示例，请参阅[容器](../overview/visual-cpp-samples.md)示例。
 
 #### <a name="to-handle-embedded-and-linked-items"></a>处理嵌入项和链接项
 
@@ -44,7 +44,7 @@ ms.locfileid: "57271419"
 
 1. 重写`OnChange`， `OnChangeItemPosition`，和`OnGetItemPosition`。 这些函数处理嵌入项和链接项的大小调整、定位和修改。
 
-应用程序向导将为您，派生类，但您可能需要重写`OnChange`和在前面的过程中的步骤 2 中与其列出的其他函数。 需要为大部分应用程序自定义主干实现，因为这些函数在各应用程序之间的实现是不同的。 此示例，请参阅 MFC 示例[DRAWCLI](../visual-cpp-samples.md)并[容器](../visual-cpp-samples.md)。
+应用程序向导将为您，派生类，但您可能需要重写`OnChange`和在前面的过程中的步骤 2 中与其列出的其他函数。 需要为大部分应用程序自定义主干实现，因为这些函数在各应用程序之间的实现是不同的。 此示例，请参阅 MFC 示例[DRAWCLI](../overview/visual-cpp-samples.md)并[容器](../overview/visual-cpp-samples.md)。
 
 您必须将大量项添加到容器应用程序的菜单结构才能支持 OLE。 有关详细信息，请参阅[菜单和资源：添加容器](../mfc/menus-and-resources-container-additions.md)。
 

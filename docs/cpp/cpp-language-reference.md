@@ -8,12 +8,12 @@ helpviewer_keywords:
 - language reference, Visual C++
 - Visual C++, language reference
 ms.assetid: 4be9cacb-c862-4391-894a-3a118c9c93ce
-ms.openlocfilehash: 4d184e70e6a7284d07e706ce8b8c247c96442750
-ms.sourcegitcommit: cce52b2232b94ce8fd8135155b86e2d38a4e4562
+ms.openlocfilehash: 8da5a4f7113bbb4256e45e7ec3c91a9c6677643c
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54031260"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774030"
 ---
 # <a name="c-language-reference"></a>C++ 语言参考
 
@@ -97,8 +97,8 @@ Microsoft 的 C++ 扩展。
 
 ## <a name="related-sections"></a>相关章节
 
-[适用于运行时平台的组件扩展](../windows/component-extensions-for-runtime-platforms.md)<br/>
-有关使用 Visual C++ 来以公共语言运行时为目标的参考材料。
+[适用于运行时平台的组件扩展](../extensions/component-extensions-for-runtime-platforms.md)<br/>
+有关使用 Visual c + + 到目标.NET 参考材料。
 
 [C/C++ 生成参考](../build/reference/c-cpp-building-reference.md)<br/>
 编译器选项、链接器选项和其他生成工具。

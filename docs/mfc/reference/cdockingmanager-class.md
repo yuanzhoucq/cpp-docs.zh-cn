@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CDockingManager [MFC], m_nTimeOutBeforeDockingBarDock
 - CDockingManager [MFC], m_nTimeOutBeforeToolBarDock
 ms.assetid: 98e69c43-55d8-4f43-b861-4fda80ec1e32
-ms.openlocfilehash: 268a46e1bdecc1ea468c152fd0ed480873c36591
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 6d3bbafa15ada97f53710f0faf6a18ea8e892f6c
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57260382"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58771304"
 ---
 # <a name="cdockingmanager-class"></a>CDockingManager 类
 
@@ -258,7 +258,7 @@ class CDockingManager : public CObject
 
 ### <a name="data-members"></a>数据成员
 
-|name|描述|
+|名称|描述|
 |----------|-----------------|
 |[CDockingManager::m_bHideDockingBarsInContainerMode](#m_bhidedockingbarsincontainermode)|指定是否停靠管理器将隐藏在 OLE 容器模式下的窗格。|
 |[CDockingManager::m_dockModeGlobal](#m_dockmodeglobal)|指定的全局停靠模式。|
@@ -292,7 +292,7 @@ class CDockingManager : public CObject
 
 ## <a name="example"></a>示例
 
-下面的示例演示如何使用中的各种方法`CDockingManager`类，以配置`CDockingManager`对象。 该示例演示如何显示一个额外的按钮将打开一个弹出菜单上的所有停靠的窗格的标题，以及如何设置该对象的停靠模式。 此代码片段属于[Visual Studio 演示示例](../../visual-cpp-samples.md)。
+下面的示例演示如何使用中的各种方法`CDockingManager`类，以配置`CDockingManager`对象。 该示例演示如何显示一个额外的按钮将打开一个弹出菜单上的所有停靠的窗格的标题，以及如何设置该对象的停靠模式。 此代码片段属于[Visual Studio 演示示例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#24](../../mfc/codesnippet/cpp/cdockingmanager-class_1.cpp)]
 

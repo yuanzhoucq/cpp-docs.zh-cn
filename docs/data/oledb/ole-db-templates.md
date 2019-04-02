@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - OLE DB templates
 ms.assetid: 73918f6f-1fd7-4fa2-a0ff-7f9d792fce7e
-ms.openlocfilehash: 518697a35a51c75b76efd22ed55980c778f1f6c9
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 9f0f917de7eeb2ace6800368d10958cec7d36e6a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523775"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770377"
 ---
 # <a name="ole-db-templates"></a>OLE DB 模板
 
@@ -33,7 +33,7 @@ OLE DB 模板使 OLE DB 数据访问更加轻松。 Visual c + + 提供模板类
 [OLE DB 程序员参考](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming)<br/>
 提供 OLE DB 的 Windows SDK 文档的链接。
 
-[OLE DB 模板示例](../../visual-cpp-samples.md)<br/>
+[OLE DB 模板示例](../../overview/visual-cpp-samples.md)<br/>
 提供指向演示如何在项目中使用 OLE DB 的 OLE DB 模板示例。
 
 [OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>

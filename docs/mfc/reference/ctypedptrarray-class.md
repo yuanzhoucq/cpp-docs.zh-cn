@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CTypedPtrArray [MFC], SetAt
 - CTypedPtrArray [MFC], SetAtGrow
 ms.assetid: e3ecdf1a-a889-4156-92dd-ddbd36ccd919
-ms.openlocfilehash: 8a6fc0786a169f9c1e73eb8acadfc51d063334c9
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 080e47746b83b6ff12db9f6df0fc27bcd202bb51
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57275332"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768680"
 ---
 # <a name="ctypedptrarray-class"></a>CTypedPtrArray 类
 
@@ -328,7 +328,7 @@ void SetAtGrow(
 
 ## <a name="see-also"></a>请参阅
 
-[MFC 示例收集](../../visual-cpp-samples.md)<br/>
+[MFC 示例收集](../../overview/visual-cpp-samples.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>
 [CPtrArray 类](../../mfc/reference/cptrarray-class.md)<br/>
 [CObArray 类](../../mfc/reference/cobarray-class.md)

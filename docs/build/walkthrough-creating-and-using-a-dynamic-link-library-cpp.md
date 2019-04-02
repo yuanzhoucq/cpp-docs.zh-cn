@@ -6,12 +6,12 @@ helpviewer_keywords:
 - libraries [C++], DLLs
 - DLLs [C++], walkthroughs
 ms.assetid: 3ae94848-44e7-4955-bbad-7d40f493e941
-ms.openlocfilehash: 44a2f1da6a02444c79247178c34281e39731f0f3
-ms.sourcegitcommit: 6e4dd21759caaed262a7255735cf8d6e8fb9f4d7
+ms.openlocfilehash: 248b423659d026774d4945ee6330a39dc4c6e16e
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58476924"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770143"
 ---
 # <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>演练：创建和使用你自己动态链接库 （c + +）
 
@@ -398,7 +398,7 @@ int main()
 
 现在，已创建一个 DLL 和客户端应用程序，您可以进行试验。 尝试在客户端应用的代码中设置断点并在调试器中运行应用程序。 请参阅单步执行库调用时，会发生什么情况。 将其他函数添加到库，或写入另一个使用您的 DLL 的客户端应用。
 
-在部署您的应用程序时，还必须部署它使用的 Dll。 若要将来自第三方的 Dll 生成或包含提供给您的应用程序的最简单方法是将其放在与您的应用程序相同的目录也称为*应用程序本地部署*。 有关部署的更多信息，请参阅 [Deployment in Visual C++](../ide/deployment-in-visual-cpp.md)。
+在部署您的应用程序时，还必须部署它使用的 Dll。 若要将来自第三方的 Dll 生成或包含提供给您的应用程序的最简单方法是将其放在与您的应用程序相同的目录也称为*应用程序本地部署*。 有关部署的更多信息，请参阅 [Deployment in Visual C++](../windows/deployment-in-visual-cpp.md)。
 
 ## <a name="see-also"></a>请参阅
 

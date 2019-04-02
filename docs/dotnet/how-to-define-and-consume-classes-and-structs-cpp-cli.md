@@ -5,12 +5,12 @@ helpviewer_keywords:
 - structs [C++]
 - classes [C++], instantiating
 ms.assetid: 1c03cb0d-1459-4b5e-af65-97d6b3094fd7
-ms.openlocfilehash: 2c43234ca05c661d8f3d920b1129256a7550a5e2
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 090259a4ad6b46eccf66dca6c99b4eb532b7ae5c
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57751825"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774914"
 ---
 # <a name="how-to-define-and-consume-classes-and-structs-ccli"></a>如何：定义和使用类和结构 (C + + CLI)
 
@@ -97,7 +97,7 @@ int main() {
 
 *隐式抽象类*不能实例化。 如果类的基类型是一个接口和类未实现的所有接口的成员函数，类是隐式抽象。
 
-如果你不能构造中从接口派生的类的对象，原因可能是此类是隐式抽象。 有关抽象类的详细信息，请参阅[抽象](../windows/abstract-cpp-component-extensions.md)。
+如果你不能构造中从接口派生的类的对象，原因可能是此类是隐式抽象。 有关抽象类的详细信息，请参阅[抽象](../extensions/abstract-cpp-component-extensions.md)。
 
 下面的代码示例演示`MyClass`不能实例化类，因为函数`MyClass::func2`未实现。 若要启用要编译的示例，请取消注释`MyClass::func2`。
 
@@ -229,7 +229,7 @@ in Public_Class
 |public|成员是可访问内部和外部程序集。  请参阅[公共](../cpp/public-cpp.md)有关详细信息。|
 |private|成员不是内部和外部程序集都不访问的。  请参阅[专用](../cpp/private-cpp.md)有关详细信息。|
 |protected|成员是可访问内部和外部程序集，而只是派生类型。  请参阅[保护](../cpp/protected-cpp.md)有关详细信息。|
-|internal|成员是在程序集中公共的但是私有程序集外部的。  `internal` 是上下文相关的关键字。  有关详细信息，请参阅[上下文相关的关键字](../windows/context-sensitive-keywords-cpp-component-extensions.md)。|
+|internal|成员是在程序集中公共的但是私有程序集外部的。  `internal` 是上下文相关的关键字。  有关详细信息，请参阅[上下文相关的关键字](../extensions/context-sensitive-keywords-cpp-component-extensions.md)。|
 |公共受保护-或-受保护公共|成员是在程序集中公共的但是程序集外部的受保护。|
 |专用受保护-或-受保护的私有|成员是受保护在程序集中，但专用程序集外部的。|
 
@@ -499,9 +499,9 @@ in static constructor
 
 有关详细信息，请参见
 
-- [对象句柄运算符 (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)
+- [对象句柄运算符 (^)](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md)
 
-- [interior_ptr (C++/CLI)](../windows/interior-ptr-cpp-cli.md)
+- [interior_ptr (C++/CLI)](../extensions/interior-ptr-cpp-cli.md)
 
 ```cpp
 // compile with: /clr
@@ -797,7 +797,7 @@ ref struct A {
 
 - 该对象是运行其析构函数的对象中的成员。
 
-- 在调用[删除](../cpp/delete-operator-cpp.md)句柄运算符 ([对象句柄运算符 (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md))。
+- 在调用[删除](../cpp/delete-operator-cpp.md)句柄运算符 ([对象句柄运算符 (^)](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md))。
 
 - 显式调用析构函数。
 
@@ -844,7 +844,7 @@ int main() {
 
 如果终结器中删除的托管类型中的本机指针，则必须确保，不会过早地收集到或通过本机指针的引用;而不是使用的托管类型上调用析构函数<xref:System.GC.KeepAlive%2A>。
 
-在编译时，可以检测类型是否具有终结器或析构函数。 有关详细信息，请参阅[编译器支持类型特征](../windows/compiler-support-for-type-traits-cpp-component-extensions.md)。
+在编译时，可以检测类型是否具有终结器或析构函数。 有关详细信息，请参阅[编译器支持类型特征](../extensions/compiler-support-for-type-traits-cpp-component-extensions.md)。
 
 下一个示例演示两种类型，一个具有非托管的资源，一个具有托管确定性地释放的资源。
 
@@ -914,5 +914,5 @@ int main() {
 
 ## <a name="see-also"></a>请参阅
 
-[类和结构](../windows/classes-and-structs-cpp-component-extensions.md)<br/>
-[类和结构](../windows/classes-and-structs-cpp-component-extensions.md)
+[类和结构](../extensions/classes-and-structs-cpp-component-extensions.md)<br/>
+[类和结构](../extensions/classes-and-structs-cpp-component-extensions.md)

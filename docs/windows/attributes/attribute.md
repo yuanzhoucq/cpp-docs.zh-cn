@@ -9,17 +9,17 @@ helpviewer_keywords:
 - attribute attribute
 - attributes [C++/CLI], custom
 ms.assetid: 8cb3489f-65c4-44ea-b0aa-3c3c6b15741d
-ms.openlocfilehash: 4c9af2491518112425668a0856473cd8418338d3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a8b0f9231b8aeaf90b56730a12932b7bf5971b29
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668788"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767374"
 ---
 # <a name="attribute"></a>attribute
 
 > [!NOTE]
-> **特性**属性现已弃用。  使用公共语言运行时属性`System.Attribute`到直接来创建用户定义的特性。 有关详细信息，请参阅 [User-Defined Attributes](../user-defined-attributes-cpp-component-extensions.md)。
+> **特性**属性现已弃用。  使用公共语言运行时属性`System.Attribute`到直接来创建用户定义的特性。 有关详细信息，请参阅 [User-Defined Attributes](../../extensions/user-defined-attributes-cpp-component-extensions.md)。
 
 ## <a name="see-also"></a>请参阅
 

@@ -19,12 +19,12 @@ helpviewer_keywords:
 - ambient properties
 - controls [ATL], properties
 ms.assetid: 55368c27-bd16-45a7-b701-edb36157c8e8
-ms.openlocfilehash: 29eeb31c0823a0614fa1404cf7efc1c281bab3a4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: ffbec7c1a83c0dd829878f4c73340528d32fb852
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57261578"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58771547"
 ---
 # <a name="ccomcontrol-class"></a>CComControl 类
 
@@ -73,7 +73,7 @@ class ATL_NO_VTABLE CComControl : public CComControlBase,
 
 有关创建控件的详细信息，请参阅[ATL 教程](../../atl/active-template-library-atl-tutorial.md)。 ATL 项目向导的详细信息，请参阅文章[创建 ATL 项目](../../atl/reference/creating-an-atl-project.md)。
 
-有关的演示`CComControl`方法和数据成员，请参阅[CIRC](../../visual-cpp-samples.md)示例。
+有关的演示`CComControl`方法和数据成员，请参阅[CIRC](../../overview/visual-cpp-samples.md)示例。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 

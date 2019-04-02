@@ -7,12 +7,12 @@ helpviewer_keywords:
 - class types [C++], class statements
 - class keyword [C++]
 ms.assetid: dd23c09f-6598-4069-8bff-69c7f2518b9f
-ms.openlocfilehash: 5abd2ef73ff8af9ebc2f1827cb5403025d5383ee
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: c4ef9690a41737147354ee0976f6912c4711ff67
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330991"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774810"
 ---
 # <a name="class-c"></a>class (C++)
 
@@ -31,25 +31,25 @@ class [ms-decl-spec] [tag [: base-list ]]
 
 #### <a name="parameters"></a>参数
 
-*模板规范*<br/>
+*template-spec*<br/>
 可选模板规范。 有关详细信息，请参阅[模板](templates-cpp.md)。
 
 *class*<br/>
 **类**关键字。
 
-*ms 声明规范*<br/>
+*ms-decl-spec*<br/>
 可选存储类规范。 有关详细信息，请参阅[__declspec](../cpp/declspec.md)关键字。
 
-*标记*<br/>
+*tag*<br/>
 提供给类的类型名称。 标记将变成类的范围内的保留的字。 标记是可选项。 如果省略，则定义匿名类。 有关详细信息，请参阅[匿名类类型](../cpp/anonymous-class-types.md)。
 
-*基础列表*<br/>
+*base-list*<br/>
 类或结构，此类将从中派生其成员的可选列表。 请参阅[基类](../cpp/base-classes.md)有关详细信息。 每个基的类或结构名称的前面可具有访问说明符 ([公共](../cpp/public-cpp.md)，[专用](../cpp/private-cpp.md)，[保护](../cpp/protected-cpp.md)) 和[虚拟](../cpp/virtual-cpp.md)关键字。 请参阅中的成员访问表[控制对类成员的访问](member-access-control-cpp.md)有关详细信息。
 
-*成员的列表*<br/>
+*member-list*<br/>
 类成员的列表。 请参阅[类成员概述](../cpp/class-member-overview.md)有关详细信息。
 
-*声明符*<br/>
+*declarators*<br/>
 指定类类型的一个或多个实例的名称的声明符列表。 如果类的所有数据成员声明符可以包含初始值设定项列表**公共**。 这是更常见的结构，其数据成员均**公共**默认情况下，比类。 请参阅[的声明符概述](../cpp/overview-of-declarators.md)有关详细信息。
 
 ## <a name="remarks"></a>备注
@@ -66,7 +66,7 @@ class [ms-decl-spec] [tag [: base-list ]]
 
 - [__virtual_inheritance](../cpp/inheritance-keywords.md)
 
-有关托管的类和结构的信息，请参阅[类和结构](../windows/classes-and-structs-cpp-component-extensions.md)
+有关托管的类和结构在 C + + /cli 和 C + + /CX 中，请参阅[类和结构](../extensions/classes-and-structs-cpp-component-extensions.md)
 
 ## <a name="example"></a>示例
 

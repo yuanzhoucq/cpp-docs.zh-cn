@@ -11,12 +11,12 @@ helpviewer_keywords:
 - paint messages in view class [MFC]
 - device contexts, screen drawings
 ms.assetid: e3761db6-0f19-4482-a4cd-ac38ef7c4d3a
-ms.openlocfilehash: 77844ebd31f624229870d27c72b08a987b7533bd
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: bc461347b56379976cdf62014507e3a15529f081
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57280766"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772548"
 ---
 # <a name="drawing-in-a-view"></a>在视图中绘制
 
@@ -42,7 +42,7 @@ Windows 当视图变为无效时，将其发送**WM_PAINT**消息。 该视图�
 
 该示例将打印它获取从文档，以在视图中为中心的任何字符串。 如果`OnDraw`调用是针对屏幕绘制`CDC`对象中传递*pDC*是`CPaintDC`已调用其构造函数`BeginPaint`。 对绘图函数的调用通过设备上下文指针。 有关设备上下文和绘图调用的信息，请参阅类[CDC](../mfc/reference/cdc-class.md)中*MFC 参考*并[使用窗口对象](../mfc/working-with-window-objects.md)。
 
-有关如何编写的更多示例`OnDraw`，请参阅[MFC 示例](../visual-cpp-samples.md)。
+有关如何编写的更多示例`OnDraw`，请参阅[MFC 示例](../overview/visual-cpp-samples.md)。
 
 ## <a name="see-also"></a>请参阅
 
