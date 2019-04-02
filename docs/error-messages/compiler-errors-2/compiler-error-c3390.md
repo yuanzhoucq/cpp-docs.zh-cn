@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3390
 ms.assetid: 84800a87-c8e6-45aa-82ae-02f816dc8d97
-ms.openlocfilehash: e1146bf0ed2dd6d38a3c67cc6799c0e73f253323
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3f1149d4584a0ea3d0061a3ec4e2b77830603ef2
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532608"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768739"
 ---
 # <a name="compiler-error-c3390"></a>编译器错误 C3390
 
 “type_arg”: 对于泛型“generic_type”，泛型参数“param”的类型实参无效，它必须是引用类型
 
-泛型类型实例化错误。  检查类型定义。  有关详细信息，请参阅[泛型](../../windows/generics-cpp-component-extensions.md)。
+泛型类型实例化错误。  检查类型定义。  有关详细信息，请参阅[泛型](../../extensions/generics-cpp-component-extensions.md)。
 
 ## <a name="example"></a>示例
 

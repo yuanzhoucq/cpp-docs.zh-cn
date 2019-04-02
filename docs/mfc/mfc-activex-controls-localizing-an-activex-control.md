@@ -10,12 +10,12 @@ helpviewer_keywords:
 - LocaleID ambient property [MFC]
 - LOCALIZE sample [MFC]
 ms.assetid: a44b839a-c652-4ec5-b824-04392708a5f9
-ms.openlocfilehash: 4e9ef9a2f79bda5d41c01984f063622b3b73fb51
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 13c8ff545763017b01685e012ab2d497eaf7084a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57268208"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767543"
 ---
 # <a name="mfc-activex-controls-localizing-an-activex-control"></a>MFC ActiveX 控件：本地化 ActiveX 控件
 
@@ -28,7 +28,7 @@ ms.locfileid: "57268208"
 
 通常，ActiveX 控件应始终将其区域设置基于环境 LocaleID 属性。 有三种方法可以实现此操作：
 
-- 始终按需基于环境 LocaleID 属性的当前值加载资源。 MFC ActiveX 控件示例[LOCALIZE](../visual-cpp-samples.md)使用此策略。
+- 始终按需基于环境 LocaleID 属性的当前值加载资源。 MFC ActiveX 控件示例[LOCALIZE](../overview/visual-cpp-samples.md)使用此策略。
 
 - 在实例化第一个控件时基于环境 LocaleID 属性加载资源，并将这些资源用于所有其他实例。 本文演示此策略。
 
@@ -40,7 +40,7 @@ ms.locfileid: "57268208"
     > [!NOTE]
     >  这对控件有效，但运行时 DLL 将不能在环境 LocaleID 属性更改时动态更新其自己的资源。 此外，ActiveX 控件的运行时 DLL 将使用线程区域设置确定其资源的区域设置。
 
-本文其余部分介绍两个本地化策略。 第一种策略[本地化控件的可编程性接口](#_core_localizing_your_control.92.s_programmability_interface)（属性、 方法和事件的名称）。 第二个策略[本地化控件的用户界面](#_core_localizing_the_control.92.s_user_interface)，使用容器的环境 LocaleID 属性。 有关控件本地化的演示，请参阅 MFC ActiveX 控件示例[LOCALIZE](../visual-cpp-samples.md)。
+本文其余部分介绍两个本地化策略。 第一种策略[本地化控件的可编程性接口](#_core_localizing_your_control.92.s_programmability_interface)（属性、 方法和事件的名称）。 第二个策略[本地化控件的用户界面](#_core_localizing_the_control.92.s_user_interface)，使用容器的环境 LocaleID 属性。 有关控件本地化的演示，请参阅 MFC ActiveX 控件示例[LOCALIZE](../overview/visual-cpp-samples.md)。
 
 ##  <a name="_core_localizing_your_control.92.s_programmability_interface"></a> 本地化控件的可编程性接口
 
@@ -88,7 +88,7 @@ ms.locfileid: "57268208"
 
 [!code-cpp[NVC_MFC_AxLoc#3](../mfc/codesnippet/cpp/mfc-activex-controls-localizing-an-activex-control_3.cpp)]
 
-请注意，可以在 switch 语句的每个 case 中检查子语言 ID，以提供更专用的本地化。 此函数的演示，请参阅`GetResourceHandle`函数在 MFC ActiveX 控件示例[LOCALIZE](../visual-cpp-samples.md)。
+请注意，可以在 switch 语句的每个 case 中检查子语言 ID，以提供更专用的本地化。 此函数的演示，请参阅`GetResourceHandle`函数在 MFC ActiveX 控件示例[LOCALIZE](../overview/visual-cpp-samples.md)。
 
 当控件先将自身加载到容器时，它可以调用[colecontrol:: Ambientlocaleid](../mfc/reference/colecontrol-class.md#ambientlocaleid)检索区域设置 id。 控件之后可以将返回的区域设置 ID 值传递到 `GetLocalizedResourceHandle` 函数，这将加载合适的资源库。 如果有的话，该控件应传递所得句柄，向[AfxSetResourceHandle](../mfc/reference/application-information-and-management.md#afxsetresourcehandle):
 

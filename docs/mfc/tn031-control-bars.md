@@ -14,12 +14,12 @@ helpviewer_keywords:
 - TN031
 - styles [MFC], control bars
 ms.assetid: 8cb895c0-40ea-40ef-90ee-1dd29f34cfd1
-ms.openlocfilehash: 07178597e66975a006a0ea5293192ee7ea099e42
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 39309408c6d1fc6cbb4223eda22c511865f14498
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57286460"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772509"
 ---
 # <a name="tn031-control-bars"></a>TN031:控件条
 
@@ -136,7 +136,7 @@ ON_UPDATE_COMMAND_UI 处理程序可以调用：
 
 每个按钮的大小必须相同。 默认值为标准的 24x22 像素。 每个图像/字形的大小必须相同，并且必须在位图中并行。 默认图像/字形大小为 16x15 像素。 因此，对于具有 10 个按钮（使用标准大小）的工具栏，您需要一个宽 160 像素、高 15 像素的位图。
 
-每个按钮都有且只有一个图像/字形。 不同的按钮状态和样式（例如，已按、抬起、按下、已禁用、已禁用并按下、不确定）都是在算法上通过这一个图像/字形生成。 任何颜色位图或 DIB 均可在理论中使用。 如果原始图像是灰色阴影，则生成不同按钮状态的算法最适用。 有关示例，请查看 MFC 常规示例 [CLIPART](../visual-cpp-samples.md) 中提供的标准工具栏按钮和工具栏按钮剪贴画。
+每个按钮都有且只有一个图像/字形。 不同的按钮状态和样式（例如，已按、抬起、按下、已禁用、已禁用并按下、不确定）都是在算法上通过这一个图像/字形生成。 任何颜色位图或 DIB 均可在理论中使用。 如果原始图像是灰色阴影，则生成不同按钮状态的算法最适用。 有关示例，请查看 MFC 常规示例 [CLIPART](../overview/visual-cpp-samples.md) 中提供的标准工具栏按钮和工具栏按钮剪贴画。
 
 工具栏使用的颜色还与 Windows 界面应用程序设计指南建议的颜色也保持一致。 这些颜色未经过硬编码，将动态更改以响应控制面板中的用户自定义。
 

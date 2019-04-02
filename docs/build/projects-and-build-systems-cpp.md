@@ -12,12 +12,12 @@ helpviewer_keywords:
 - builds [C++], options
 - Visual C++, build options
 ms.assetid: fa6ed4ff-334a-4d99-b5e2-a1f83d2b3008
-ms.openlocfilehash: 0c4a74ce69f5c52eb6fc107ea477e5715e86ecd2
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 6a4048d741cf291d8d6173c1444b6933523c6851
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57824511"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775421"
 ---
 # <a name="cc-projects-and-build-systems-in-visual-studio"></a>C/c + + 项目和 Visual Studio 中的生成系统
 
@@ -74,10 +74,12 @@ cl /EHsc hello.cpp
 
 [发行版本](release-builds.md)如何创建和故障排除优化的发布版本以部署到最终用户。
 
-[使用命令行中的 MSVC 工具集](building-on-the-command-line.md)<br/>
+[通过命令行使用 MSVC 工具集](building-on-the-command-line.md)<br/>
 讨论如何使用 C/c + + 编译器和生成直接从命令行，而无需使用 Visual Studio IDE 的工具。
 
 [构建 Visual Studio 中的 Dll](dlls-in-visual-cpp.md)如何创建、 调试和部署 Visual Studio 中的 C/c + + Dll （共享库）。
+
+[演练：创建和使用静态库](walkthrough-creating-and-using-a-static-library-cpp.md)如何创建一个.lib 二进制文件。
 
 [生成 C/c + + 独立应用程序和通过并行程序集](building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)介绍了 Windows 桌面应用程序，其理论基础的独立应用程序和通过并行程序集的部署模型。
 

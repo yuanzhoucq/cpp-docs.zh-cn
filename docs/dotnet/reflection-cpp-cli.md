@@ -18,12 +18,12 @@ helpviewer_keywords:
 - data types [C++], enumerating
 - public members [C++]
 ms.assetid: 46b6ff4a-e441-4022-8892-78e69422f230
-ms.openlocfilehash: 769ba87f64a8096ac8c7f14cc091119345177b3b
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: a17910e0288b81723aa837ba9204bb40713d5d49
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57426441"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770783"
 ---
 # <a name="reflection-ccli"></a>反射 (C++/CLI)
 
@@ -79,7 +79,7 @@ type of i = 'System.Int32'
 
 ## <a name="example-typeid"></a>示例： typeid
 
-如同`GetType`方法， [typeid](../windows/typeid-cpp-component-extensions.md)运算符将返回一个指向**类型**对象，因此此代码指示的类型名称**System.Int32**。 显示类型名称是最基本的反射功能，但可能会更有用的方法是检查或发现枚举类型的有效值。 这可以通过使用静态**Enum::GetNames**函数，它返回数组的字符串，每个都包含以文本形式的枚举值。  下面的示例检索有关的值枚举值的字符串数组**选项**(CLR) 枚举并将它们显示在循环中。
+如同`GetType`方法， [typeid](../extensions/typeid-cpp-component-extensions.md)运算符将返回一个指向**类型**对象，因此此代码指示的类型名称**System.Int32**。 显示类型名称是最基本的反射功能，但可能会更有用的方法是检查或发现枚举类型的有效值。 这可以通过使用静态**Enum::GetNames**函数，它返回数组的字符串，每个都包含以文本形式的枚举值。  下面的示例检索有关的值枚举值的字符串数组**选项**(CLR) 枚举并将它们显示在循环中。
 
 如果第四个选项添加到**选项**枚举，此代码将报告无需重新编译，即使该枚举在单独的程序集中定义的新选项。
 

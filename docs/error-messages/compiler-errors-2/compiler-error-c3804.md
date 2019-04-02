@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3804
 ms.assetid: 7c4cda28-ec96-4d04-937b-36dbd9944722
-ms.openlocfilehash: e83380696aca3d6d45c235925b830bef9e3061a3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c3c00d1d07306a9e8dc67d3f75a5cb25d8f03aee
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544581"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770287"
 ---
 # <a name="compiler-error-c3804"></a>编译器错误 C3804
 
@@ -19,7 +19,7 @@ property_accessor： 访问器方法的属性必须是全部静态或所有非�
 
 访问器函数时定义非 trivial 属性，可以是静态或实例，但不可同时使用两者。
 
-有关更多信息，请参见 [property](../../windows/property-cpp-component-extensions.md) 。
+有关更多信息，请参见 [property](../../extensions/property-cpp-component-extensions.md) 。
 
 ## <a name="example"></a>示例
 

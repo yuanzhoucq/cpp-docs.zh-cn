@@ -20,12 +20,12 @@ helpviewer_keywords:
 - MFC COM, Automation
 - methods [MFC], Automation
 ms.assetid: 329117f0-c1aa-4680-a901-bfb71277dfba
-ms.openlocfilehash: b26a08bbe9ef9b9151910871201abe05a44d2f6c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 7818aa708a762f2a284be029a6c3f3facd971d9a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57265556"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767725"
 ---
 # <a name="automation"></a>自动化
 
@@ -55,17 +55,17 @@ ms.locfileid: "57265556"
 
 ## <a name="automation-samples"></a>自动化示例
 
-- [AUTOCLIK](../visual-cpp-samples.md) 使用此示例可了解自动化技术并作为学习远程自动化的基础。
+- [AUTOCLIK](../overview/visual-cpp-samples.md) 使用此示例可了解自动化技术并作为学习远程自动化的基础。
 
-- [ACDUAL](../visual-cpp-samples.md) 将双重接口添加到自动化服务器应用程序中。
+- [ACDUAL](../overview/visual-cpp-samples.md) 将双重接口添加到自动化服务器应用程序中。
 
-- [CALCDRIV](../visual-cpp-samples.md) 驱动 MFCCALC 的自动化客户端应用程序。
+- [CALCDRIV](../overview/visual-cpp-samples.md) 驱动 MFCCALC 的自动化客户端应用程序。
 
-- [INPROC](../visual-cpp-samples.md) 演示进程内自动化服务器应用程序。
+- [INPROC](../overview/visual-cpp-samples.md) 演示进程内自动化服务器应用程序。
 
-- [IPDRIVE](../visual-cpp-samples.md) 驱动 INPROC 的自动化客户端应用程序。
+- [IPDRIVE](../overview/visual-cpp-samples.md) 驱动 INPROC 的自动化客户端应用程序。
 
-- [MFCCALC](../visual-cpp-samples.md) 演示自动化客户端应用程序。
+- [MFCCALC](../overview/visual-cpp-samples.md) 演示自动化客户端应用程序。
 
 ## <a name="what-do-you-want-to-know-more-about"></a>你想要了解更多信息
 

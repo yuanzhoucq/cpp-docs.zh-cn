@@ -311,12 +311,12 @@ helpviewer_keywords:
 - CMFCToolBar [MFC], m_bDontScaleImages
 - CMFCToolBar [MFC], m_dblLargeImageRatio
 ms.assetid: e7679c01-fb94-44c0-98c6-3af955292fb5
-ms.openlocfilehash: 1f92afa4f40a5a37f32e1bc86418056c8591625f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 523e89859a6726bdff1dd27975077263abe481c4
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283132"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775620"
 ---
 # <a name="cmfctoolbar-class"></a>CMFCToolBar 类
 
@@ -504,7 +504,7 @@ class CMFCToolBar : public CMFCBaseToolBar
 
 ### <a name="data-members"></a>数据成员
 
-|name|描述|
+|名称|描述|
 |----------|-----------------|
 |[CMFCToolBar::m_bDontScaleImages](#m_bdontscaleimages)|在高 DPI 模式下，指定是否要缩放或不工具栏图像。|
 |[CMFCToolBar::m_dblLargeImageRatio](#m_dbllargeimageratio)|指定的图像的大小 （高度或宽度） 的维度和维度的常规映像之间的比率。|
@@ -525,7 +525,7 @@ class CMFCToolBar : public CMFCBaseToolBar
 
 ## <a name="example"></a>示例
 
-下面的示例演示了如何使用 `CMFCToolBar` 类中的各种方法。 该示例演示如何设置工具条的窗口标签的文本、 设置边框、 窗格中，样式设置和启用**添加或删除按钮**工具栏在端上显示的按钮。 此代码片段属于[IE 演示示例](../../visual-cpp-samples.md)。
+下面的示例演示了如何使用 `CMFCToolBar` 类中的各种方法。 该示例演示如何设置工具条的窗口标签的文本、 设置边框、 窗格中，样式设置和启用**添加或删除按钮**工具栏在端上显示的按钮。 此代码片段属于[IE 演示示例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_IEDemo#6](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]
 [!code-cpp[NVC_MFC_IEDemo#8](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_2.cpp)]
@@ -1031,7 +1031,7 @@ virtual BOOL CreateEx(
 
 ### <a name="example"></a>示例
 
-下面的示例演示如何使用`CreateEx`方法的`CMFCToolBar`类。 此代码片段属于[IE 演示示例](../../visual-cpp-samples.md)。
+下面的示例演示如何使用`CreateEx`方法的`CMFCToolBar`类。 此代码片段属于[IE 演示示例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_IEDemo#6](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]
 [!code-cpp[NVC_MFC_IEDemo#7](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_3.cpp)]
@@ -1799,7 +1799,7 @@ virtual void GetItemRect(
 
 ### <a name="example"></a>示例
 
-下面的示例演示如何使用`GetItemRect`方法的`CMFCToolBar`类。 此代码片段属于[IE 演示示例](../../visual-cpp-samples.md)。
+下面的示例演示如何使用`GetItemRect`方法的`CMFCToolBar`类。 此代码片段属于[IE 演示示例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_IEDemo#6](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]
 [!code-cpp[NVC_MFC_IEDemo#9](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_4.cpp)]
@@ -2737,7 +2737,7 @@ virtual BOOL LoadToolBar(
 
 ### <a name="example"></a>示例
 
-下面的示例演示如何使用`LoadToolBar`中的方法`CMFCToolBar`类。 此代码片段属于[IE 演示示例](../../visual-cpp-samples.md)。
+下面的示例演示如何使用`LoadToolBar`中的方法`CMFCToolBar`类。 此代码片段属于[IE 演示示例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_IEDemo#6](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]
 [!code-cpp[NVC_MFC_IEDemo#7](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_3.cpp)]
@@ -3079,7 +3079,7 @@ int ReplaceButton(
 
 ### <a name="example"></a>示例
 
-下面的示例演示如何使用`ReplaceButton`中的方法`CMFCToolBar`类。 此代码片段属于[IE 演示示例](../../visual-cpp-samples.md)。
+下面的示例演示如何使用`ReplaceButton`中的方法`CMFCToolBar`类。 此代码片段属于[IE 演示示例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_IEDemo#6](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]
 [!code-cpp[NVC_MFC_IEDemo#10](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_5.cpp)]

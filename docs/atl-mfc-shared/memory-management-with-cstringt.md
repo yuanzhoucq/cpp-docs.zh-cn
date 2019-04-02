@@ -14,12 +14,12 @@ helpviewer_keywords:
 - strings [C++], memory management
 - CStringT class, memory management
 ms.assetid: 88b8342d-19b5-48c4-9cf6-e4c44cece21e
-ms.openlocfilehash: 189d15df17ac28528ebbcc41879871e3426f48fb
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 8f83b088becf97ca3d8779a537e42369b4a8c832
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57748627"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768375"
 ---
 # <a name="memory-management-with-cstringt"></a>使用 CStringT 进行内存管理
 
@@ -35,4 +35,4 @@ ms.locfileid: "57748627"
 
 ## <a name="see-also"></a>请参阅
 
-[CustomString 示例](../visual-cpp-samples.md)
+[CustomString 示例](../overview/visual-cpp-samples.md)

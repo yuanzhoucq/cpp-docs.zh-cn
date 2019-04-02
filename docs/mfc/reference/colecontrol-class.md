@@ -334,12 +334,12 @@ helpviewer_keywords:
 - COleControl [MFC], IsInvokeAllowed
 - COleControl [MFC], SetInitialDataFormats
 ms.assetid: 53e95299-38e8-447b-9c5f-a381d27f5123
-ms.openlocfilehash: 8587eb76f38c07d54234c810dfd6ab79f487e740
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 30d73d546ee68a25f1e59776020477d038da65e8
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283418"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58771495"
 ---
 # <a name="colecontrol-class"></a>COleControl 类
 
@@ -4209,8 +4209,8 @@ virtual LRESULT WindowProc(
 
 ## <a name="see-also"></a>请参阅
 
-[MFC 示例 CIRC3](../../visual-cpp-samples.md)<br/>
-[MFC 示例 TESTHELP](../../visual-cpp-samples.md)<br/>
+[MFC 示例 CIRC3](../../overview/visual-cpp-samples.md)<br/>
+[MFC 示例 TESTHELP](../../overview/visual-cpp-samples.md)<br/>
 [COlePropertyPage 类](../../mfc/reference/colepropertypage-class.md)<br/>
 [CWnd 类](../../mfc/reference/cwnd-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>

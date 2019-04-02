@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - msclr::ptr class
 ms.assetid: 0144d0e4-919c-45f9-a3f8-fbc9edba32bf
-ms.openlocfilehash: 8909f91e31279f1fc1395610aea4708b79731113
-ms.sourcegitcommit: 9813e146a4eb30929d8352872859e8fcb7ff6d2f
+ms.openlocfilehash: 342c222b837e179e2e13dbbd27c88efc18b12332
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54805963"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774165"
 ---
 # <a name="comptr-class"></a>com::ptr 类
 
@@ -43,7 +43,7 @@ COM 接口。
 
 `com::ptr` 还可用作局部函数变量，用来简化各种 COM 任务和自动执行生成期管理。
 
-一个`com::ptr`不能直接用作函数参数; 使用[跟踪引用运算符](../windows/tracking-reference-operator-cpp-component-extensions.md)或[对象句柄运算符 (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)相反。
+一个`com::ptr`不能直接用作函数参数; 使用[跟踪引用运算符](../extensions/tracking-reference-operator-cpp-component-extensions.md)或[对象句柄运算符 (^)](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md)相反。
 
 一个`com::ptr`不能直接从函数返回; 请改用句柄。
 
@@ -167,14 +167,14 @@ int main() {
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|name|描述| 
+|名称|描述| 
 |---------|-----------| 
 |[ptr::ptr](#ptr)|构造`com::ptr`要包装的 COM 对象。| 
 |[ptr::~ptr](#tilde-ptr)|因`com::ptr`。| 
 
 ### <a name="public-methods"></a>公共方法
 
-|name|描述|
+|名称|描述|
 |---------|-----------| 
 |[ptr::Attach](#attach)|将附加到的 COM 对象`com::ptr`。| 
 |[ptr::CreateInstance](#createInstance)|创建中的 COM 对象的实例`com::ptr`。| 
@@ -185,7 +185,7 @@ int main() {
 
 ### <a name="public-operators"></a>公共运算符
 
-|name|描述|
+|名称|描述|
 |---------|-----------| 
 |[ptr::operator-&gt;](#operator-arrow)|成员访问运算符，用于在拥有的 COM 对象上调用方法。| 
 |[ptr::operator=](#operator-assign)|将附加到的 COM 对象`com::ptr`。| 

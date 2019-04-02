@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CScrollView [MFC], SetScaleToFitSize
 - CScrollView [MFC], SetScrollSizes
 ms.assetid: 4ba16dac-1acb-4be0-bb55-5fb695b6948d
-ms.openlocfilehash: ea95de2bceab290f94bb7c0e7bbc94a90048ee13
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: d60082092bd42fbe220eee08953ad5fda0ff0a85
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259251"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774148"
 ---
 # <a name="cscrollview-class"></a>CScrollView 类
 
@@ -82,7 +82,7 @@ class CScrollView : public CView
 
 您可以处理鼠标滚轮滚动自己通过重写消息映射[OnMouseWheel](../../mfc/reference/cwnd-class.md#onmousewheel)并[OnRegisteredMouseWheel](../../mfc/reference/cwnd-class.md#onregisteredmousewheel)成员函数。 因为它们是用于`CScrollView`，这些成员函数支持的建议的行为[对 wm_mousewheel 进行](/windows/desktop/inputdev/wm-mousewheel)，鼠标轮旋转消息。
 
-若要充分利用自动滚动，派生视图类从`CScrollView`而不是从`CView`。 该视图是首次创建时，如果你想要计算的基于大小的文档，调用的可滚动视图大小`SetScrollSizes`通过重写的成员函数[cview:: Oninitialupdate](../../mfc/reference/cview-class.md#oninitialupdate)或[CView::OnUpdate](../../mfc/reference/cview-class.md#onupdate)。 （您必须编写您自己的代码来查询文档的大小。 有关示例，请参阅[Scribble 示例](../../visual-cpp-samples.md)。)
+若要充分利用自动滚动，派生视图类从`CScrollView`而不是从`CView`。 该视图是首次创建时，如果你想要计算的基于大小的文档，调用的可滚动视图大小`SetScrollSizes`通过重写的成员函数[cview:: Oninitialupdate](../../mfc/reference/cview-class.md#oninitialupdate)或[CView::OnUpdate](../../mfc/reference/cview-class.md#onupdate)。 （您必须编写您自己的代码来查询文档的大小。 有关示例，请参阅[Scribble 示例](../../overview/visual-cpp-samples.md)。)
 
 对调用`SetScrollSizes`成员函数将设置视图的映射模式下，滚动视图和水平或垂直地滚动的金额的总的维度。 所有尺寸都都以逻辑单位。 该视图的逻辑大小通常计算从数据存储在文档中，但在某些情况下，可能想要指定固定的大小。 有关这两种方法的示例，请参阅[CScrollView::SetScrollSizes](#setscrollsizes)。
 
@@ -376,7 +376,7 @@ void SetScrollSizes(
 
 ## <a name="see-also"></a>请参阅
 
-[MFC 示例 DIBLOOK](../../visual-cpp-samples.md)<br/>
+[MFC 示例 DIBLOOK](../../overview/visual-cpp-samples.md)<br/>
 [CView 类](../../mfc/reference/cview-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>
 [CView 类](../../mfc/reference/cview-class.md)<br/>

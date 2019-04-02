@@ -57,12 +57,12 @@ helpviewer_keywords:
 - OpenWithPromptFileName method
 - OpenWithServiceComponents method
 ms.assetid: 99bf862c-9d5c-4117-9501-aa0e2672085c
-ms.openlocfilehash: ed2c0b11dfdc6882352c87166b74b2fab327fcd3
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: cb92c19dd839fc09ed803e170a2762e4ac7cd494
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418602"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770784"
 ---
 # <a name="cdatasource-class"></a>CDataSource 类
 
@@ -98,7 +98,7 @@ class CDataSource
 
 可以为单个连接创建一个或多个数据库会话。 这些会话由 `CSession` 表示。 必须调用[cdatasource:: Open](../../data/oledb/cdatasource-open.md)以打开之前创建的会话连接`CSession::Open`。
 
-有关如何使用的示例`CDataSource`，请参阅[CatDB](../../visual-cpp-samples.md)示例。
+有关如何使用的示例`CDataSource`，请参阅[CatDB](../../overview/visual-cpp-samples.md)示例。
 
 ## <a name="close"></a> CDataSource::Close
 

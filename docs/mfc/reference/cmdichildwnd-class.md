@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CMDIChildWnd [MFC], MDIRestore
 - CMDIChildWnd [MFC], SetHandles
 ms.assetid: 6d07f5d4-9a3e-4723-9fa5-e65bb669fdd5
-ms.openlocfilehash: efcf5057481345c001cc48224f53c666623d0780
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 13f027e68184a4869e88883ff8b8d3b123b94e3e
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304985"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774576"
 ---
 # <a name="cmdichildwnd-class"></a>CMDIChildWnd 类
 
@@ -287,9 +287,9 @@ void SetHandles(
 
 ## <a name="see-also"></a>请参阅
 
-[MFC 示例 MDI](../../visual-cpp-samples.md)<br/>
-[MFC 示例 MDIDOCVW](../../visual-cpp-samples.md)<br/>
-[MFC 示例 SNAPVW](../../visual-cpp-samples.md)<br/>
+[MFC 示例 MDI](../../overview/visual-cpp-samples.md)<br/>
+[MFC 示例 MDIDOCVW](../../overview/visual-cpp-samples.md)<br/>
+[MFC 示例 SNAPVW](../../overview/visual-cpp-samples.md)<br/>
 [CFrameWnd 类](../../mfc/reference/cframewnd-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>
 [CWnd 类](../../mfc/reference/cwnd-class.md)<br/>

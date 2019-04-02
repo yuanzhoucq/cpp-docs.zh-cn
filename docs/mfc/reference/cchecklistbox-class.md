@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CCheckListBox [MFC], SetCheck
 - CCheckListBox [MFC], SetCheckStyle
 ms.assetid: 1dd78438-00e8-441c-b36f-9c4f9ac0d019
-ms.openlocfilehash: b34891c4f46679e43aea36a9b52d6399e020ef71
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 9c649dd979b28e2b545a797c5453a2ec9aa6d0dc
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57273057"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768037"
 ---
 # <a name="cchecklistbox-class"></a>CCheckListBox 类
 
@@ -240,7 +240,7 @@ int GetCheck(int nIndex);
 
 指定的复选框的状态。 下表列出了可能的值。
 
-|“值”|描述|
+|值|描述|
 |-----------|-----------------|
 |BST_CHECKED|选中复选框。|
 |BST_UNCHECKED|未选中该复选框。|
@@ -379,7 +379,7 @@ void SetCheckStyle(UINT nStyle);
 
 ## <a name="see-also"></a>请参阅
 
-[MFC 示例 TSTCON](../../visual-cpp-samples.md)<br/>
+[MFC 示例 TSTCON](../../overview/visual-cpp-samples.md)<br/>
 [CListBox 类](../../mfc/reference/clistbox-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>
 [CListBox 类](../../mfc/reference/clistbox-class.md)

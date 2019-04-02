@@ -344,12 +344,12 @@ helpviewer_keywords:
 - CMFCVisualManager [MFC], SetMenuShadowDepth
 - CMFCVisualManager [MFC], SetShadowHighlightedImage
 ms.assetid: beed80f7-36a2-4d64-9f09-e807cfefc3fe
-ms.openlocfilehash: 594e727a091cbb7b2999e540ae8da7ddec2a7a14
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 7b4d6a31e69e75af240e0e58cbfbb7d2d24291aa
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57294325"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775161"
 ---
 # <a name="cmfcvisualmanager-class"></a>CMFCVisualManager 类
 
@@ -587,7 +587,7 @@ void CMFCSkinsApp::SetSkin (int iIndex)
 
 ## <a name="example"></a>示例
 
-下面的示例演示如何检索的默认值`CMFCVisualManager`对象。 此代码片段属于[任务窗格示例](../../visual-cpp-samples.md)。
+下面的示例演示如何检索的默认值`CMFCVisualManager`对象。 此代码片段属于[任务窗格示例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_TasksPane#1](../../mfc/reference/codesnippet/cpp/cmfcvisualmanager-class_1.h)]
 
@@ -4331,7 +4331,7 @@ virtual void OnFillBarBackground(
 
 ### <a name="example"></a>示例
 
-下面的示例演示如何使用`OnFillBarBackground`在`CMFCVisualManager`类。 此代码片段属于[Outlook 演示示例](../../visual-cpp-samples.md)。
+下面的示例演示如何使用`OnFillBarBackground`在`CMFCVisualManager`类。 此代码片段属于[Outlook 演示示例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_OutlookDemo#4](../../mfc/reference/codesnippet/cpp/cmfcvisualmanager-class_2.cpp)]
 

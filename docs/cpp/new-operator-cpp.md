@@ -4,19 +4,19 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - new keyword [C++]
 ms.assetid: 69fee812-1c28-4882-8fda-d1ad17860004
-ms.openlocfilehash: 83800f823ffd14fd61a9735b09b12d2f07f6d0a4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bcb7784e59966510970bd9b3ae0157ae982e462d
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477982"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768063"
 ---
 # <a name="new-operator-c"></a>new 运算符 (C++)
 
 对象或对象的数组分配内存*类型名称*从自由存储，并返回适当类型化的非零指针的对象。
 
 > [!NOTE]
->  Microsoft c + + 组件扩展提供的支持**新**关键字以添加 vtable 槽条目。 有关详细信息，请参阅[new （新槽 vtable 中的）](../windows/new-new-slot-in-vtable-cpp-component-extensions.md)
+>  Microsoft c + + 组件扩展提供的支持**新**关键字以添加 vtable 槽条目。 有关详细信息，请参阅[new （新槽 vtable 中的）](../extensions/new-new-slot-in-vtable-cpp-component-extensions.md)
 
 ## <a name="syntax"></a>语法
 
@@ -29,7 +29,7 @@ ms.locfileid: "50477982"
 
 如果不成功，**新**将返回零或引发异常; 请参阅[新和 delete 运算符](../cpp/new-and-delete-operators.md)有关详细信息。 您可以更改此默认行为： 编写自定义异常处理例程并调用[_set_new_handler](../c-runtime-library/reference/set-new-handler.md)带有函数名称作为其参数的运行时库函数。
 
-有关如何在托管堆上创建对象的信息，请参阅[gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md)。
+有关如何在托管堆上创建对象的信息，请参阅[gcnew](../extensions/ref-new-gcnew-cpp-component-extensions.md)。
 
 当**新**是用于为 C++ 类对象分配内存，该对象的构造函数中调用后分配内存。
 
@@ -61,7 +61,7 @@ delete *p;
 
 以下列表介绍的语法元素**新**:
 
-*放置*<br/>
+*placement*<br/>
 提供了一种方法并传递其他参数，如果您重载**新**。
 
 *type-name*<br/>
@@ -183,7 +183,7 @@ int main()
 
 - 初始值设定项中提供的自变量与构造函数的自变量一致。
 
-- 该类有一个默认构造函数（可在没有自变量的情况下调用的构造函数）。
+- 该类有一个默认构造函数（可在没有参数的情况下调用的构造函数）。
 
 使用分配数组时，没有显式的每个元素初始化可进行**新**运算符; 只有默认构造函数，如果存在，则调用。 请参阅[默认自变量](../cpp/default-arguments.md)有关详细信息。
 

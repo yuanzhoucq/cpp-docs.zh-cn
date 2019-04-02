@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4694
 ms.assetid: 5ca122bb-34f3-43ee-a21f-95802cd515f7
-ms.openlocfilehash: 6eaaa4c1f16e2ac2c5029511430a145fd9b943e2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6164fd2e19e35233ba67feb84d117f1e4e01f20d
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50428335"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770351"
 ---
 # <a name="compiler-warning-c4694"></a>编译器警告 C4694
 
@@ -19,7 +19,7 @@ ms.locfileid: "50428335"
 
 一个抽象密封类不能继承自引用类型；一个密封抽象类既不能实现基类函数，也不能用作基类。
 
-有关详细信息，请参阅[抽象](../../windows/abstract-cpp-component-extensions.md)，[密封](../../windows/sealed-cpp-component-extensions.md)，并[类和结构](../../windows/classes-and-structs-cpp-component-extensions.md)。
+有关详细信息，请参阅[抽象](../../extensions/abstract-cpp-component-extensions.md)，[密封](../../extensions/sealed-cpp-component-extensions.md)，并[类和结构](../../extensions/classes-and-structs-cpp-component-extensions.md)。
 
 此警告被自动提升为错误。 如果你想要修改此行为，使用[#pragma 警告](../../preprocessor/warning.md)。
 
