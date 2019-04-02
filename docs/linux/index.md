@@ -59,7 +59,7 @@ description: 创建和调试在 Linux 上运行的应用程序。
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardText">
-                        <h3><a href="/cpp/visual-cpp-in-visual-studio">Visual C++</a></h3>
+                        <h3><a href="/cpp/overview/visual-cpp-in-visual-studio.md">Visual C++</a></h3>
                         <p><a href="/cpp/overview-of-cpp-development">用于 Visual C++ 开发的 IDE 和工具</a></p>
                     </div>
                 </div>
