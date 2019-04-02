@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CDialogBar [MFC], CDialogBar
 - CDialogBar [MFC], Create
 ms.assetid: da2f7a30-970c-44e3-87f0-6094bd002cab
-ms.openlocfilehash: 2ae7c941b527a7cbaa01bf43ef4d41c9a4975dac
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: af84c5239a9cb3cbddb1ab4f0230e5b1a3373573
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57302398"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768297"
 ---
 # <a name="cdialogbar-class"></a>CDialogBar 类
 
@@ -143,7 +143,7 @@ Styl toolbar。 支持的其他工具栏样式是：
 
 ## <a name="see-also"></a>请参阅
 
-[MFC 示例 CTRLBARS](../../visual-cpp-samples.md)<br/>
+[MFC 示例 CTRLBARS](../../overview/visual-cpp-samples.md)<br/>
 [CControlBar 类](../../mfc/reference/ccontrolbar-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>
 [CFormView 类](../../mfc/reference/cformview-class.md)<br/>

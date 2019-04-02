@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CRectTracker [MFC], m_rect
 - CRectTracker [MFC], m_sizeMin
 ms.assetid: 99caa7f2-3c0d-4a42-bbee-e5d1d342d4ee
-ms.openlocfilehash: 1834c378246835314002cdf05fe9a294b609c4e4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 9c54cdfecfa6c4ff0eef7e16003ab2097553953d
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259576"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775681"
 ---
 # <a name="crecttracker-class"></a>CRectTracker 类
 
@@ -481,8 +481,8 @@ BOOL TrackRubberBand(
 
 ## <a name="see-also"></a>请参阅
 
-[MFC 示例跟踪器](../../visual-cpp-samples.md)<br/>
-[MFC 示例 DRAWCLI](../../visual-cpp-samples.md)<br/>
+[MFC 示例跟踪器](../../overview/visual-cpp-samples.md)<br/>
+[MFC 示例 DRAWCLI](../../overview/visual-cpp-samples.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>
 [COleResizeBar 类](../../mfc/reference/coleresizebar-class.md)<br/>
 [CRect 类](../../atl-mfc-shared/reference/crect-class.md)

@@ -4,12 +4,12 @@ ms.date: 11/17/2017
 f1_keywords:
 - c.errors
 ms.assetid: 78019050-9a30-4b61-8250-a5702e0e2393
-ms.openlocfilehash: 74494a92d9ac8d84da64af7a896f3c32913afc40
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: b1a4aa5114965451791f44d88eb9e5ca61ff9c57
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178249"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58766880"
 ---
 # <a name="c-runtime-errors-r6002-through-r6035"></a>C 运行时错误 R6002 到 R6035
 
@@ -17,7 +17,7 @@ ms.locfileid: "53178249"
 
 在 Microsoft 的公共论坛中有关错误和警告都可能会发现更多帮助。 可以上搜索的错误或警告编号[开发人员社区](https://developercommunity.visualstudio.com)站点。 [Visual c + + 常规](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=vcgeneral)论坛是有关 Visual c + + 其他论坛中未涉及的问题。 此外可以搜索错误和警告，并上提问[Stack Overflow](http://stackoverflow.com/)查找解决方案。
 
-有关更多帮助和社区资源的链接，请参阅[Visual c + + 帮助和社区](../../visual-cpp-help-and-community.md)。
+有关更多帮助和社区资源的链接，请参阅[Visual c + + 帮助和社区](../../overview/visual-cpp-help-and-community.md)。
 
 ## <a name="c-runtime-errors"></a>C 运行时错误
 

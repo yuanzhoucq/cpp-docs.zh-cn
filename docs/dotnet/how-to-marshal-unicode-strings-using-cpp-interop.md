@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data marshaling [C++], strings
 - Unicode, marshaling strings
 ms.assetid: 96c2141d-6c5d-43ef-a1aa-5785afb9a9aa
-ms.openlocfilehash: 920f06bd2197315b11f239827de76eba9591bad5
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 37b56834e000cff686557730252f3d425f642772
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57742660"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58777670"
 ---
 # <a name="how-to-marshal-unicode-strings-using-c-interop"></a>如何：使用 c + + 互操作封送 Unicode 字符串
 
@@ -30,7 +30,7 @@ ms.locfileid: "57742660"
 
 ## <a name="example"></a>示例
 
-若要从托管到非托管函数传递一个 Unicode 字符串，可以使用 （在 Vcclr.h 中声明） 的 PtrToStringChars 函数中的托管的字符串的存储位置的内存访问。 因为此地址将传递给本机函数中，很重要，使用固定内存[pin_ptr (C + + CLI)](../windows/pin-ptr-cpp-cli.md)以防止被重新定位的字符串数据，应垃圾回收周期发生时执行非托管的函数。
+若要从托管到非托管函数传递一个 Unicode 字符串，可以使用 （在 Vcclr.h 中声明） 的 PtrToStringChars 函数中的托管的字符串的存储位置的内存访问。 因为此地址将传递给本机函数中，很重要，使用固定内存[pin_ptr (C + + CLI)](../extensions/pin-ptr-cpp-cli.md)以防止被重新定位的字符串数据，应垃圾回收周期发生时执行非托管的函数。
 
 ```
 // MarshalUnicode1.cpp

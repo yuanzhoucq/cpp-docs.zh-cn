@@ -10,12 +10,12 @@ helpviewer_keywords:
 - pointers [C++], marshaling
 - data marshaling [C++], embedded pointers
 ms.assetid: 05fb8858-97f2-47aa-86b2-2c0ad713bdb2
-ms.openlocfilehash: 89194dabb4b124aa7cbd4d1d34a74de491fba66f
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: c6d622060aaf700b6ea1a3bfe797ab3190eee797
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57738482"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780231"
 ---
 # <a name="how-to-marshal-embedded-pointers-using-c-interop"></a>如何：封送嵌入式指针使用 c + + 互操作
 
@@ -23,7 +23,7 @@ ms.locfileid: "57738482"
 
 ## <a name="example"></a>示例
 
-下面的示例演示可以如何从托管函数调用非托管的函数采用包含指针的结构。 托管的函数创建该结构的实例并初始化使用 new 关键字对嵌入的指针 (而不是[ref new、 gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md)关键字)。 此分配本机堆上的内存，因为没有需要固定要禁止显示垃圾回收的数组。 但是，必须显式删除内存以避免内存泄漏。
+下面的示例演示可以如何从托管函数调用非托管的函数采用包含指针的结构。 托管的函数创建该结构的实例并初始化使用 new 关键字对嵌入的指针 (而不是[ref new、 gcnew](../extensions/ref-new-gcnew-cpp-component-extensions.md)关键字)。 此分配本机堆上的内存，因为没有需要固定要禁止显示垃圾回收的数组。 但是，必须显式删除内存以避免内存泄漏。
 
 ```
 // marshal_embedded_pointer.cpp

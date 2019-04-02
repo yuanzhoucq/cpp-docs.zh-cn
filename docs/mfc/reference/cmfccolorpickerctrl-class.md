@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CMFCColorPickerCtrl [MFC], SetType
 - CMFCColorPickerCtrl [MFC], DrawCursor
 ms.assetid: b9bbd03c-beb0-4b55-9765-9985fd05e5dc
-ms.openlocfilehash: 048430c78dfed4158f6fb84eacc07972b79d8a51
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 1977717ee590acb63655ba21bfa5eb6bfe7c9bd8
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57276004"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772353"
 ---
 # <a name="cmfccolorpickerctrl-class"></a>CMFCColorPickerCtrl 类
 
@@ -111,7 +111,7 @@ class CMFCColorPickerCtrl : public CButton
 
 ## <a name="example"></a>示例
 
-下面的示例演示如何配置`CMFCColorPickerCtrl`通过使用中的各种方法的对象`CMFCColorPickerCtrl`类。 该示例演示如何设置选取器控件的类型以及如何设置其颜色、 色调、 亮度和饱和度。 此示例摘自[新的控件示例](../../visual-cpp-samples.md)。
+下面的示例演示如何配置`CMFCColorPickerCtrl`通过使用中的各种方法的对象`CMFCColorPickerCtrl`类。 该示例演示如何设置选取器控件的类型以及如何设置其颜色、 色调、 亮度和饱和度。 此示例摘自[新的控件示例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_NewControls#4](../../mfc/reference/codesnippet/cpp/cmfccolorpickerctrl-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#5](../../mfc/reference/codesnippet/cpp/cmfccolorpickerctrl-class_2.cpp)]

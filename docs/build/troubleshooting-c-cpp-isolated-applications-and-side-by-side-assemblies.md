@@ -6,12 +6,12 @@ helpviewer_keywords:
 - troubleshooting isolated applications
 - troubleshooting Visual C++
 ms.assetid: 3257257a-1f0b-4ede-8564-9277a7113a35
-ms.openlocfilehash: d23662d6dd6d2f241c48e0c83f2fa5ed9532c3f7
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 32896939ddc7fd0b841e1b6904124b06c9bc51c9
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57807944"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58766049"
 ---
 # <a name="troubleshooting-cc-isolated-applications-and-side-by-side-assemblies"></a>C/C++ 独立应用程序和并行程序集疑难解答
 
@@ -31,7 +31,7 @@ ms.locfileid: "57807944"
 
 如果应用程序部署在未安装 Visual Studio 的计算机上，并且它在出现类似于以上消息的错误消息的情况下崩溃，请检查以下内容：
 
-1. 按照中所述的步骤[了解 Visual c + + 应用程序的依赖项](../ide/understanding-the-dependencies-of-a-visual-cpp-application.md)。 Dependency Walker 可以显示应用程序或 DLL 的大多数依赖项。 如果观察到某些 DLL 缺失，请在尝试运行应用程序的计算机上安装它们。
+1. 按照中所述的步骤[了解 Visual c + + 应用程序的依赖项](../windows/understanding-the-dependencies-of-a-visual-cpp-application.md)。 Dependency Walker 可以显示应用程序或 DLL 的大多数依赖项。 如果观察到某些 DLL 缺失，请在尝试运行应用程序的计算机上安装它们。
 
 1. 操作系统加载程序会使用应用程序清单加载应用程序所依赖的程序集。 清单可以作为资源嵌入在二进制文件中，或作为单独文件安装在应用程序文件夹中。 若要检查是否将清单嵌入在二进制文件，请在 Visual Studio 中打开该二进制文件并在其资源列表中查找 RT_MANIFEST。 如果找不到嵌入的清单，查找名称类似于 < 二进制 > 的文件的应用程序文件夹中。\<扩展 >.manifest。
 

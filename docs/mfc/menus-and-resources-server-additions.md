@@ -17,18 +17,18 @@ helpviewer_keywords:
 - server applications [MFC], OLE menus and resources
 - OLE initialization failure [MFC]
 ms.assetid: 56ce9e8d-8f41-4db8-8dee-e8b0702d057c
-ms.openlocfilehash: 0cf5b495ca1e3f6e7b0ae434c09e014a29eadb00
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 85c7b6059a868e93c6c6a7ebbd7b08dac3233612
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57281940"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767193"
 ---
 # <a name="menus-and-resources-server-additions"></a>菜单和资源：添加服务器
 
 本文介绍了对菜单和可视化编辑服务器 （组件） 应用程序中的其他资源进行更改。 服务器应用程序需要许多新增功能的菜单结构和其他资源，因为它可以启动在三种模式之一： 独立、 嵌入，或在位置。 如中所述[菜单和资源 (OLE)](../mfc/menus-and-resources-ole.md)文章中，有最多四个集的菜单。 所有四个用于 MDI 完全服务器应用程序，而只有三个用于袖珍服务器。 应用程序向导将创建菜单布局所需的服务器所需的类型。 可能需要一些自定义。
 
-如果不使用应用程序向导，您可能想要看一看 HIERSVR。RC 中，MFC 示例应用程序的资源脚本[HIERSVR](../visual-cpp-samples.md)，以查看如何实现这些更改。
+如果不使用应用程序向导，您可能想要看一看 HIERSVR。RC 中，MFC 示例应用程序的资源脚本[HIERSVR](../overview/visual-cpp-samples.md)，以查看如何实现这些更改。
 
 在本文中涵盖的主题包括：
 
@@ -56,7 +56,7 @@ ms.locfileid: "57281940"
 
 第二个表是几乎视图的快捷键对应表的一个精确副本。 任何差异并行中所述的完全打开菜单中所做的更改[服务器菜单添加](#_core_server_menu_additions)。
 
-这些快捷键对应表更改的示例，进行比较与在 HIERSVR IDR_MAINFRAME IDR_HIERSVRTYPE_SRVR_IP 和 IDR_HIERSVRTYPE_SRVR_EMB 快捷键对应表。RC 文件包含在 MFC OLE 示例[HIERSVR](../visual-cpp-samples.md)。 文件和窗口加速器就地表中缺少，它们的确切副本位于嵌入的表。
+这些快捷键对应表更改的示例，进行比较与在 HIERSVR IDR_MAINFRAME IDR_HIERSVRTYPE_SRVR_IP 和 IDR_HIERSVRTYPE_SRVR_EMB 快捷键对应表。RC 文件包含在 MFC OLE 示例[HIERSVR](../overview/visual-cpp-samples.md)。 文件和窗口加速器就地表中缺少，它们的确切副本位于嵌入的表。
 
 ##  <a name="_core_string_table_additions_for_server_applications"></a> 服务器应用程序的添加的字符串表
 

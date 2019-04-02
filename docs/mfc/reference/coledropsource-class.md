@@ -14,12 +14,12 @@ helpviewer_keywords:
 - COleDropSource [MFC], OnBeginDrag
 - COleDropSource [MFC], QueryContinueDrag
 ms.assetid: d3eecc5f-a70b-4a01-b705-7d2c098ebe17
-ms.openlocfilehash: 587aa0730502d5e8f90c4fec57bb87886b79fb3f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: a2773333ea1dd89f73e7bdf3c5dc2f36945e0810
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304972"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58778502"
 ---
 # <a name="coledropsource-class"></a>COleDropSource 类
 
@@ -163,7 +163,7 @@ virtual SCODE QueryContinueDrag(
 
 ## <a name="see-also"></a>请参阅
 
-[MFC 示例 HIERSVR](../../visual-cpp-samples.md)<br/>
-[MFC 示例 OCLIENT](../../visual-cpp-samples.md)<br/>
+[MFC 示例 HIERSVR](../../overview/visual-cpp-samples.md)<br/>
+[MFC 示例 OCLIENT](../../overview/visual-cpp-samples.md)<br/>
 [CCmdTarget 类](../../mfc/reference/ccmdtarget-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)

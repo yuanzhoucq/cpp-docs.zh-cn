@@ -6,16 +6,16 @@ helpviewer_keywords:
 - intrinsic functions [C++], event handling
 - event handling [C++], Visual C++
 ms.assetid: 82de3f9a-2d88-470c-9527-8a5b54c8ced4
-ms.openlocfilehash: d1a89d5afce2e3715b5a61c0815d88ed2fbae8b5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4c6701f04544b336de97196e8b65f4d0cd4be296
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50523230"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769467"
 ---
 # <a name="event-handling"></a>事件处理
 
-COM 类主要支持事件处理 (实现 COM 对象，通常使用 ATL 类的 C++ 类或[组件类](../windows/coclass.md)属性)。  有关详细信息，请参阅[COM 中的事件处理](../cpp/event-handling-in-com.md)。
+COM 类主要支持事件处理 (实现 COM 对象，通常使用 ATL 类的 C++ 类或[组件类](../windows/coclass.md)属性)。 有关详细信息，请参阅[COM 中的事件处理](../cpp/event-handling-in-com.md)。
 
 本机 C++ 类（不实现 COM 对象的 C++ 类）也支持事件处理，但将来版本中会弃用并删除此支持。  有关详细信息，请参阅[本机 C++ 中的事件处理](../cpp/event-handling-in-native-cpp.md)。
 
@@ -25,8 +25,8 @@ Visual C++ 包含用于声明事件和事件处理程序的特性和关键字。
 
 |主题|描述|
 |-----------|-----------------|
-|[event_source](../windows/event-source.md)|创建事件源。|
-|[event_receiver](../windows/event-receiver.md)|创建事件接收器（接收器）。|
+|[event_source](../windows/attributes/event-source.md)|创建事件源。|
+|[event_receiver](../windows/attributes/event-receiver.md)|创建事件接收器（接收器）。|
 |[__event](../cpp/event.md)|声明事件。|
 |[__raise](../cpp/raise.md)|强调一个事件的调用站点。|
 |[__hook](../cpp/hook.md)|将处理程序方法与事件关联。|

@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CMFCStatusBar [MFC], SetTipText
 - CMFCStatusBar [MFC], OnDrawPane
 ms.assetid: f2960d1d-f4ed-41e8-bd99-0382b2f8d88e
-ms.openlocfilehash: 94876dcf6549842a5fedbd96a93ef2cc760225ce
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 87f75769e2f400a7721a8c9089d6c5596c31a4e3
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57326746"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775954"
 ---
 # <a name="cmfcstatusbar-class"></a>CMFCStatusBar 类
 
@@ -138,26 +138,26 @@ class CMFCStatusBar : public CPane
 
 ## <a name="remarks"></a>备注
 
-下图显示了从状态栏的图[状态栏演示示例](../../visual-cpp-samples.md)应用程序。
+下图显示了从状态栏的图[状态栏演示示例](../../overview/visual-cpp-samples.md)应用程序。
 
 ![Cmfcstatusbar 示例](../../mfc/reference/media/cmfcstatusbar.png "cmfcstatusbar 示例")
 
 ## <a name="example"></a>示例
 
-下面的示例演示应用程序用于调用中的各种方法的本地变量`CMFCStatusBar`类。 StatusBarDemoView.h 中声明这些变量。 主框架声明在 MainFrm.h 中、 在文档中 StatusBarDemoDoc.h，声明和 StatusBarDemoView.h 中声明视图。 此代码片段属于[状态栏演示示例](../../visual-cpp-samples.md)。
+下面的示例演示应用程序用于调用中的各种方法的本地变量`CMFCStatusBar`类。 StatusBarDemoView.h 中声明这些变量。 主框架声明在 MainFrm.h 中、 在文档中 StatusBarDemoDoc.h，声明和 StatusBarDemoView.h 中声明视图。 此代码片段属于[状态栏演示示例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_StatusBarDemo#9](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_1.h)]
 
 ## <a name="example"></a>示例
 
-下面的示例演示如何获取对的引用`CMFCStatusBar`对象通过引入`GetStatusBar`方法在 MainFrm.h 中，然后再调用此方法从`GetStatusBar`StatusBarDemoView.h 中的方法。 此代码片段属于[状态栏演示示例](../../visual-cpp-samples.md)。
+下面的示例演示如何获取对的引用`CMFCStatusBar`对象通过引入`GetStatusBar`方法在 MainFrm.h 中，然后再调用此方法从`GetStatusBar`StatusBarDemoView.h 中的方法。 此代码片段属于[状态栏演示示例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_StatusBarDemo#7](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_2.h)]
 [!code-cpp[NVC_MFC_StatusBarDemo#8](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_3.h)]
 
 ## <a name="example"></a>示例
 
-下面的示例演示如何调用各种方法中`CMFCStatusBar`StatusBarDemoView.cpp 中的类。 在 MainFrm.h 中声明的常量。 该示例演示如何设置图标，设置状态栏窗格的工具提示文本，指定窗格上显示一个进度栏、 将动画分配到指定的窗格中，设置文本和宽度的状态栏窗格，以及设置进行的当前进度指示器状态栏窗格的 ess 栏。 此代码片段属于[状态栏演示示例](../../visual-cpp-samples.md)。
+下面的示例演示如何调用各种方法中`CMFCStatusBar`StatusBarDemoView.cpp 中的类。 在 MainFrm.h 中声明的常量。 该示例演示如何设置图标，设置状态栏窗格的工具提示文本，指定窗格上显示一个进度栏、 将动画分配到指定的窗格中，设置文本和宽度的状态栏窗格，以及设置进行的当前进度指示器状态栏窗格的 ess 栏。 此代码片段属于[状态栏演示示例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_StatusBarDemo#6](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_4.h)]
 [!code-cpp[NVC_MFC_StatusBarDemo#1](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_5.cpp)]

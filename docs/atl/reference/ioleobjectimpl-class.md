@@ -49,12 +49,12 @@ helpviewer_keywords:
 - IOleObject, ATL implementation
 - IOleObjectImpl class
 ms.assetid: 59750b2d-1633-4a51-a4c2-6455b6b90c45
-ms.openlocfilehash: c228d5030c3577af22feda6a0d03769867b1c5c3
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 5a815023d340839068873c32f1477d33053b13b4
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57268455"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775928"
 ---
 # <a name="ioleobjectimpl-class"></a>IOleObjectImpl 类
 
@@ -369,7 +369,7 @@ STDMETHOD(EnumVerbs)(IEnumOLEVERB** ppEnumOleVerb);
 
 ### <a name="remarks"></a>备注
 
-可以将谓词添加到你的项目的.rgs 文件。 有关示例，请参阅 CIRCCTL。在 RGS [CIRC](../../visual-cpp-samples.md)示例。
+可以将谓词添加到你的项目的.rgs 文件。 有关示例，请参阅 CIRCCTL。在 RGS [CIRC](../../overview/visual-cpp-samples.md)示例。
 
 请参阅[ioleobject:: Enumverbs](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-enumverbs) Windows SDK 中。
 

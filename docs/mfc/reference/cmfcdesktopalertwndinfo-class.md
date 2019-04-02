@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CMFCDesktopAlertWndInfo [MFC], m_strText
 - CMFCDesktopAlertWndInfo [MFC], m_strURL
 ms.assetid: 5c9bb84e-6c96-4748-8e74-6951b6ae8e84
-ms.openlocfilehash: 3c40424a1aba81a7048ba89781fe6c4324f86ccd
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: a4b3d8769b3d267c0bd3f81269dd3b8ab3cf3184
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301631"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768284"
 ---
 # <a name="cmfcdesktopalertwndinfo-class"></a>CMFCDesktopAlertWndInfo 类
 
@@ -47,7 +47,7 @@ class CMFCDesktopAlertWndInfo
 
 ### <a name="data-members"></a>数据成员
 
-|name|描述|
+|名称|描述|
 |----------|-----------------|
 |[CMFCDesktopAlertWndInfo::m_hIcon](#m_hicon)|句柄显示的图标。|
 |[CMFCDesktopAlertWndInfo::m_nURLCmdID](#m_nurlcmdid)|与在桌面警报窗口上的链接关联的命令 ID。|
@@ -68,7 +68,7 @@ class CMFCDesktopAlertWndInfo
 
 ## <a name="example"></a>示例
 
-下面的示例演示如何使用中的各种成员`CMFCDesktopAlertWndInfo`类。 该示例演示如何将该句柄设置为显示，则图标显示在桌面警报窗口，在桌面警报窗口中，显示的链接和与在桌面警报窗口上的链接相关联的命令 ID 的文本。 此示例摘自[桌面警报演示示例](../../visual-cpp-samples.md)。
+下面的示例演示如何使用中的各种成员`CMFCDesktopAlertWndInfo`类。 该示例演示如何将该句柄设置为显示，则图标显示在桌面警报窗口，在桌面警报窗口中，显示的链接和与在桌面警报窗口上的链接相关联的命令 ID 的文本。 此示例摘自[桌面警报演示示例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_DesktopAlertDemo#3](../../mfc/reference/codesnippet/cpp/cmfcdesktopalertwndinfo-class_1.cpp)]
 

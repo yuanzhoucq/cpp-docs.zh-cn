@@ -60,12 +60,12 @@ helpviewer_keywords:
 - CFile [MFC], m_hFile
 - CFile [MFC], m_pTM
 ms.assetid: b2eb5757-d499-4e67-b044-dd7d1abaa0f8
-ms.openlocfilehash: f287b04b32b7bc45342ac7248fbe986a3dcf959e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: db499ffa5f1d82b6e3622287f86132930a929102
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57289862"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768546"
 ---
 # <a name="cfile-class"></a>CFile 类
 
@@ -918,7 +918,7 @@ virtual void Write(
 
 ## <a name="see-also"></a>请参阅
 
-[MFC 示例 DRAWCLI](../../visual-cpp-samples.md)<br/>
+[MFC 示例 DRAWCLI](../../overview/visual-cpp-samples.md)<br/>
 [CObject 类](../../mfc/reference/cobject-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>
 [CStdioFile 类](../../mfc/reference/cstdiofile-class.md)<br/>

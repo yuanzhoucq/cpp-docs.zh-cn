@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4534
 ms.assetid: ec2adf3b-d7a1-4005-bb0c-5d219df78dc8
-ms.openlocfilehash: a2af04502082f7fb30d59af5e6434161227c6d30
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 81445ff42aca78a8e40e9c88eff4bb76a41a8669
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437244"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772652"
 ---
 # <a name="compiler-warning-level-3-c4534"></a>编译器警告（等级 3）C4534
 
@@ -19,7 +19,7 @@ constructor 不会类 class 由于默认自变量的默认构造函数
 
 非托管的类可以具有默认值的参数的构造函数，并且编译器将使用此为默认构造函数。 标记的类`value`关键字将不用作构造函数使用默认值对于其参数的默认构造函数。
 
-有关详细信息，请参阅[类和结构](../../windows/classes-and-structs-cpp-component-extensions.md)。
+有关详细信息，请参阅[类和结构](../../extensions/classes-and-structs-cpp-component-extensions.md)。
 
 下面的示例生成 C4534:
 

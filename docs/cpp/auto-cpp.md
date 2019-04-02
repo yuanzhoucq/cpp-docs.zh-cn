@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - auto keyword [C++]
 ms.assetid: e9d495d7-601c-4547-b897-998389a311f4
-ms.openlocfilehash: f4d17069ed4e06a85b80d2027433ff87be6d1521
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 3d77a17d490f8d7680f095367c309ce0e4f366b7
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518562"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776331"
 ---
 # <a name="auto-c"></a>自动 （C++）
 
@@ -38,9 +38,9 @@ auto declarator initializer;
 
 - **性能：** 您一定会进行任何转换。
 
-- **可用性：** 无需担心类型名称拼写困难和拼写错误。
+- **可用性：** 您无需担心类型名称拼写困难和拼写错误。
 
-- **效率：** 编码可能更有效。
+- **效率：** 您的编码可能更有效。
 
 在其中可能不需要使用转换情况**自动**:
 
@@ -52,7 +52,7 @@ auto declarator initializer;
 
 初始化表达式可以是赋值 （等号语法），直接初始化 （函数样式语法）、[运算符 new](new-operator-cpp.md)表达式或初始化表达式可以是*有关范围声明*中的参数[基于范围的语句 （C++）](../cpp/range-based-for-statement-cpp.md)语句。 有关详细信息，请参阅[初始值设定项](../cpp/initializers.md)和本文档后面的代码示例。
 
-**自动**关键字是类型的占位符，但它本身不是一种类型。 因此，**自动**关键字不能使用强制转换或运算符如[sizeof](../cpp/sizeof-operator.md)并[typeid](../windows/typeid-cpp-component-extensions.md)。
+**自动**关键字是类型的占位符，但它本身不是一种类型。 因此，**自动**关键字不能使用强制转换或运算符如[sizeof](../cpp/sizeof-operator.md)和 (对于 C + + CLI) [typeid](../extensions/typeid-cpp-component-extensions.md)。
 
 ## <a name="usefulness"></a>有用性
 
@@ -133,7 +133,7 @@ int main()
 |[C3536](../error-messages/compiler-errors-2/compiler-error-c3536.md)|符号初始化之前无法使用。 在实践中，这意味着无法使用变量来初始化自身。|
 |[C3537](../error-messages/compiler-errors-2/compiler-error-c3537.md)|不能转换为与声明的类型，**自动**关键字。|
 |[C3538](../error-messages/compiler-errors-2/compiler-error-c3538.md)|使用声明的声明符列表中的所有符号**自动**关键字必须解析为同一类型。 有关详细信息，请参阅[声明和定义](declarations-and-definitions-cpp.md)。|
-|[C3540](../error-messages/compiler-errors-2/compiler-error-c3540.md), [C3541](../error-messages/compiler-errors-2/compiler-error-c3541.md)|[Sizeof](../cpp/sizeof-operator.md)并[typeid](../windows/typeid-cpp-component-extensions.md)运算符不能应用于使用声明的符号**自动**关键字。|
+|[C3540](../error-messages/compiler-errors-2/compiler-error-c3540.md), [C3541](../error-messages/compiler-errors-2/compiler-error-c3541.md)|[Sizeof](../cpp/sizeof-operator.md)并[typeid](../extensions/typeid-cpp-component-extensions.md)运算符不能应用于使用声明的符号**自动**关键字。|
 
 ## <a name="examples"></a>示例
 
@@ -225,7 +225,7 @@ int main()
 [关键字](../cpp/keywords-cpp.md)<br/>
 [/Zc:auto（推导变量类型）](../build/reference/zc-auto-deduce-variable-type.md)<br/>
 [sizeof 运算符](../cpp/sizeof-operator.md)<br/>
-[typeid](../windows/typeid-cpp-component-extensions.md)<br/>
+[typeid](../extensions/typeid-cpp-component-extensions.md)<br/>
 [运算符 new](new-operator-cpp.md)<br/>
 [声明和定义](declarations-and-definitions-cpp.md)<br/>
 [Lambda 表达式的示例](../cpp/examples-of-lambda-expressions.md)<br/>

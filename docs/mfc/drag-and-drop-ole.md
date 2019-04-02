@@ -9,12 +9,12 @@ helpviewer_keywords:
 - drag and drop [MFC], about OLE drag and drop
 - OLE drag and drop [MFC]
 ms.assetid: a4595350-ca06-4400-88a1-f0175c76b77b
-ms.openlocfilehash: 277f82874426a008f598c052966ad81f46c45732
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 98bd58745e56a62bf5700e9b5fe4963a7b584953
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305037"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58766795"
 ---
 # <a name="drag-and-drop-ole"></a>拖放 (OLE)
 
@@ -26,7 +26,7 @@ OLE 拖放不同于文件管理器拖放机制，后者只能处理文件名，�
 
 使用 OLE 拖放，数据可在文档内的各个位置之间、不同的文档之间或不同的应用程序之间传输。 这可在容器或服务器应用程序中实现，任何应用程序可以是放置源、放置目标或同时为二者。 如果应用程序实现了放置源和放置目标支持，则将在子窗口之间或一个窗口中实现拖放。 此功能可使您的应用程序更易于使用。
 
-如果只想要使用 OLE 的拖放功能，请参阅[拖放到：自定义](../mfc/drag-and-drop-customizing.md)。 您可使用文中介绍的方法生成非 OLE 应用程序放置源。 文章[拖放到：实现放置目标](../mfc/drag-and-drop-implementing-a-drop-target.md)介绍了如何实现拖放目标支持 OLE 和非 OLE 应用程序。 它还将有助于查看 MFC OLE 示例[OCLIENT](../visual-cpp-samples.md)并[HIERSVR](../visual-cpp-samples.md)。
+如果只想要使用 OLE 的拖放功能，请参阅[拖放到：自定义](../mfc/drag-and-drop-customizing.md)。 您可使用文中介绍的方法生成非 OLE 应用程序放置源。 文章[拖放到：实现放置目标](../mfc/drag-and-drop-implementing-a-drop-target.md)介绍了如何实现拖放目标支持 OLE 和非 OLE 应用程序。 它还将有助于查看 MFC OLE 示例[OCLIENT](../overview/visual-cpp-samples.md)并[HIERSVR](../overview/visual-cpp-samples.md)。
 
 如果您还未读[数据对象和数据源 (OLE)](../mfc/data-objects-and-data-sources-ole.md)系列文章，您可能想要立即执行此操作。 这些文章介绍数据传输的基本知识，以及如何在应用程序中实现数据传输。
 

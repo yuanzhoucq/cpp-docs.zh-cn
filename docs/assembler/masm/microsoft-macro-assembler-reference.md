@@ -7,12 +7,12 @@ helpviewer_keywords:
 - MASM (Microsoft Macro Assembler)
 - MASM (Microsoft Macro Assembler), documentation overview
 ms.assetid: 1446d55f-e2e7-4fd1-a9b8-b15cf7d4e47c
-ms.openlocfilehash: 2da1d4ec24d29d5db0c12bdc856f8d031aa4ff54
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5b74eef1799dd5f9fae8f2a6aceeb79a115ce837
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534688"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58777865"
 ---
 # <a name="microsoft-macro-assembler-reference"></a>Microsoft 宏汇编程序参考
 
@@ -43,7 +43,7 @@ Microsoft Macro Assembler (MASM) 提供了几大优势，内联程序集。 MASM
 
 ## <a name="related-sections"></a>相关章节
 
-[Visual C++](../../visual-cpp-in-visual-studio.md)<br/>
+[Visual C++](../../overview/visual-cpp-in-visual-studio.md)<br/>
 提供的 Visual Studio 和 Visual c + + 文档的不同区域的链接。
 
 ## <a name="see-also"></a>请参阅

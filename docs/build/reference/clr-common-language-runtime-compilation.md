@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Managed Extensions for C++, compiling
 - common language runtime, /clr compiler option
 ms.assetid: fec5a8c0-40ec-484c-a213-8dec918c1d6c
-ms.openlocfilehash: 124f54f46e71ac8fb8511d12fba43ab77d04c32e
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 1946fdabe66934e64cf95d3c3f12e16bc98ba664
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57822454"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779347"
 ---
 # <a name="clr-common-language-runtime-compilation"></a>/clr（公共语言运行时编译）
 
@@ -67,13 +67,13 @@ ms.locfileid: "57822454"
 
 托管代码是可以由 CLR 检查和管理的代码。 托管代码可以访问托管对象。 有关详细信息，请参阅 [/clr Restrictions](clr-restrictions.md)。
 
-有关如何开发定义和使用托管类型的应用程序的信息，请参阅 [Component Extensions for Runtime Platforms](../../windows/component-extensions-for-runtime-platforms.md)。
+有关如何开发定义和使用托管类型的应用程序的信息，请参阅 [Component Extensions for Runtime Platforms](../../extensions/component-extensions-for-runtime-platforms.md)。
 
 使用 **/clr** 编译的应用程序可以包含也可以不包含托管数据。
 
 若要托管的应用程序上启用调试，请参阅[/ASSEMBLYDEBUG (添加 DebuggableAttribute)](assemblydebug-add-debuggableattribute.md)。
 
-只有 CLR 类型会在垃圾回收堆上实例化。 有关详细信息，请参阅[类和结构](../../windows/classes-and-structs-cpp-component-extensions.md)。 若要将函数编译为本机代码，请使用 `unmanaged` 杂注。 有关详细信息，请参阅[managed、 unmanaged](../../preprocessor/managed-unmanaged.md)。
+只有 CLR 类型会在垃圾回收堆上实例化。 有关详细信息，请参阅[类和结构](../../extensions/classes-and-structs-cpp-component-extensions.md)。 若要将函数编译为本机代码，请使用 `unmanaged` 杂注。 有关详细信息，请参阅[managed、 unmanaged](../../preprocessor/managed-unmanaged.md)。
 
 默认情况下， **/clr** 是无效的。 当 **/clr** 有效时， **/MD** 也有效。 有关详细信息，请参阅 [/MD、/MT、/LD（使用运行时库）](md-mt-ld-use-run-time-library.md)。 **/MD** 确保从标准头 (.h) 文件中选择动态链接的多线程版本运行时例程。 托管编程必须进行多线程处理，因为 CLR 垃圾回收器将在辅助线程中运行终结器。
 

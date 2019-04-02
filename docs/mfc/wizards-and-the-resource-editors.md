@@ -12,12 +12,12 @@ helpviewer_keywords:
 - MFC, wizards
 - Class View tool, managing Windows messages
 ms.assetid: f5dd4d13-9dc1-4a49-b6bf-5b3cb45fa8ba
-ms.openlocfilehash: 5316899b7eb8828847af6d7db95edf3d8ba3822a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 41cbb86b4245bd78baecd222b5573ba5e877243a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57265517"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773822"
 ---
 # <a name="wizards-and-the-resource-editors"></a>向导和资源编辑器
 
@@ -46,7 +46,7 @@ Visual c + + MFC 编程，以及许多集成的资源编辑器中包括用于多
 
 使用 Visual c + +[资源编辑器](../windows/resource-editors.md)来创建和编辑菜单、 对话框、 自定义控件、 快捷键、 位图、 图标、 游标、 字符串和版本资源。 截至 Visual c + + 4.0 版，工具栏编辑器创建工具栏大大简化。
 
-为了帮助您更多，Microsoft 基础类库提供了一个名为常见文件。RES，其中包含你可以从常见复制的"剪贴画"资源。RES 并粘贴到您自己的资源文件。 常见。RES 包括工具栏按钮、 常见游标、 图标和的详细信息。 可以使用、 修改和重新分发应用程序中的这些资源。 有关常见的详细信息。RES，请参阅[剪贴画示例](../visual-cpp-samples.md)。
+为了帮助您更多，Microsoft 基础类库提供了一个名为常见文件。RES，其中包含你可以从常见复制的"剪贴画"资源。RES 并粘贴到您自己的资源文件。 常见。RES 包括工具栏按钮、 常见游标、 图标和的详细信息。 可以使用、 修改和重新分发应用程序中的这些资源。 有关常见的详细信息。RES，请参阅[剪贴画示例](../overview/visual-cpp-samples.md)。
 
 MFC 应用程序向导、 Visual c + + 向导、 资源编辑器和 MFC 框架为您做了大量工作，并使管理你的代码容易得多。 特定于应用程序大部分是代码的在文档和视图的类中。
 

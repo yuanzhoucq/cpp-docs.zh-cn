@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ATL, reference
 - ATL, about ATL
 ms.assetid: 291f38d1-d2de-4687-86a9-99b4fd35706c
-ms.openlocfilehash: 65b8631560ec1b768521d917256c32c75c531fab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e1ee9364cfcd382c8699014fd2ef4a807b63bb0f
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644179"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780426"
 ---
 # <a name="atl-com-desktop-components"></a>ATL COM 桌面组件
 
@@ -47,7 +47,7 @@ ATL 引用记录了活动模板库 (ATL)，一组基于模板的 c + + 类，用
 [ATL 教程](../atl/active-template-library-atl-tutorial.md)<br/>
 将引导你完成创建控件，并演示过程中的某些 ATL 基础知识。
 
-[ATL 示例](../visual-cpp-samples.md)<br/>
+[ATL 示例](../overview/visual-cpp-samples.md)<br/>
 演示如何使用 ATL 编写 COM 对象的示例代码。
 
 [OLE DB 模板](../data/oledb/ole-db-templates.md)<br/>

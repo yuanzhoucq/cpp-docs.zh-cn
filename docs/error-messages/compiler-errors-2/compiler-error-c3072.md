@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3072
 ms.assetid: cdd5cb6b-c478-4698-adfa-c40188d34a18
-ms.openlocfilehash: 34b5cff9191814b2a16a42d9e234bab09f29c117
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2b76fa91d739e9cc89251aaf56aa9b196e62a68d
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50490014"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58777124"
 ---
 # <a name="compiler-error-c3072"></a>编译器错误 C3072
 
@@ -19,7 +19,7 @@ ms.locfileid: "50490014"
 
 使用一元`operator`运算符将 ref 类的实例转换为句柄类型
 
-CLR 类型需要 CLR 运算符，不能使用本机 （或标准） 运算符。  有关详细信息，请参阅[跟踪引用运算符](../../windows/tracking-reference-operator-cpp-component-extensions.md)。
+CLR 类型需要 CLR 运算符，不能使用本机 （或标准） 运算符。  有关详细信息，请参阅[跟踪引用运算符](../../extensions/tracking-reference-operator-cpp-component-extensions.md)。
 
 ## <a name="example"></a>示例
 

@@ -132,12 +132,12 @@ helpviewer_keywords:
 - CDockablePane [MFC], m_bHideInAutoHideMode
 - CDockablePane [MFC], m_nSlideSteps
 ms.assetid: e2495f4c-765f-48f9-a2e2-e45e47608d91
-ms.openlocfilehash: c78634c93bda94940b2834a61d276f63522e4aeb
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: a9d7c4ea941884435c9ecfac54a1d42649c6dbd5
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57271901"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769688"
 ---
 # <a name="cdockablepane-class"></a>CDockablePane Class
 
@@ -239,7 +239,7 @@ class CDockablePane : public CPane
 
 ### <a name="data-members"></a>数据成员
 
-|name|描述|
+|名称|描述|
 |----------|-----------------|
 |[CDockablePane::m_bDisableAnimation](#m_bdisableanimation)|指定是否禁用自动隐藏可停靠窗格的动画。|
 |[CDockablePane::m_bHideInAutoHideMode](#m_bhideinautohidemode)|当窗格处于自动隐藏模式时，请确定窗格的行为。|
@@ -290,7 +290,7 @@ class CDockablePane : public CPane
 
 ## <a name="example"></a>示例
 
-下面的示例演示如何配置`CDockablePane`通过使用中的各种方法的对象`CDockablePane`类。 该示例演示了如何以启用自动隐藏可停靠的窗格中的所有功能、 标题或控制手柄，都启用自动隐藏模式，显示窗格中，和窗格，只是在自动隐藏模式下进行动画处理。 此代码片段属于[Visual Studio 演示示例](../../visual-cpp-samples.md)。
+下面的示例演示如何配置`CDockablePane`通过使用中的各种方法的对象`CDockablePane`类。 该示例演示了如何以启用自动隐藏可停靠的窗格中的所有功能、 标题或控制手柄，都启用自动隐藏模式，显示窗格中，和窗格，只是在自动隐藏模式下进行动画处理。 此代码片段属于[Visual Studio 演示示例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#27](../../mfc/codesnippet/cpp/cdockablepane-class_1.cpp)]
 [!code-cpp[NVC_MFC_VisualStudioDemo#28](../../mfc/codesnippet/cpp/cdockablepane-class_2.cpp)]
@@ -664,7 +664,7 @@ static CPaneDivider* __stdcall CreateDefaultPaneDivider(
 
 *dwAlignment*可以是任何以下值：
 
-|“值”|描述|
+|值|描述|
 |-----------|-----------------|
 |CBRS_ALIGN_TOP|框架窗口的工作区的顶部停靠窗格。|
 |CBRS_ALIGN_BOTTOM|框架窗口的工作区的底部停靠窗格。|

@@ -114,12 +114,12 @@ helpviewer_keywords:
 - CMFCRibbonPanel [MFC], SetKeys
 - CMFCRibbonPanel [MFC], ShowPopup
 ms.assetid: 51d70749-1140-4386-b103-f14082049ba6
-ms.openlocfilehash: 438fc753e91092502c84acfc491ec64c15133023
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 1ba7057405da2ebd7fd1bf699a69f97a650fa47c
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305050"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773198"
 ---
 # <a name="cmfcribbonpanel-class"></a>CMFCRibbonPanel 类
 
@@ -207,7 +207,7 @@ class CMFCRibbonPanel : public CObject
 
 ## <a name="example"></a>示例
 
-下面的示例演示如何配置`CMFCRibbonPanel`通过使用中的各种方法的对象`CMFCRibbonPanel`类。 该示例演示如何设置显示在功能区面板的键盘快捷方式、 垂直对齐面板中的元素，按列，并启用列对齐方式。 此代码片段属于[MS Office 2007 演示示例](../../visual-cpp-samples.md)。
+下面的示例演示如何配置`CMFCRibbonPanel`通过使用中的各种方法的对象`CMFCRibbonPanel`类。 该示例演示如何设置显示在功能区面板的键盘快捷方式、 垂直对齐面板中的元素，按列，并启用列对齐方式。 此代码片段属于[MS Office 2007 演示示例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_MSOffice2007Demo#10](../../mfc/reference/codesnippet/cpp/cmfcribbonpanel-class_1.cpp)]
 

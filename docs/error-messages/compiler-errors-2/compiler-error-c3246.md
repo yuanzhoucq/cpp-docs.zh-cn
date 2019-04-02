@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3246
 ms.assetid: ad85224a-e540-479b-a5eb-a3bc3964c30b
-ms.openlocfilehash: 9e24fc28f84bfacb7478d700047c4eb1363247de
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: eb5ba268508922daf00adb49cf611c038db76343
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50451267"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776695"
 ---
 # <a name="compiler-error-c3246"></a>编译器错误 C3246
 
 “class”: 无法从“type”继承，因为它已声明为“sealed”
 
-标记为 [sealed](../../windows/sealed-cpp-component-extensions.md) 的类不能为任何其他类的基类。
+标记为 [sealed](../../extensions/sealed-cpp-component-extensions.md) 的类不能为任何其他类的基类。
 
 以下示例生成 C3246：
 

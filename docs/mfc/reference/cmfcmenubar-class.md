@@ -106,12 +106,12 @@ helpviewer_keywords:
 - CMFCMenuBar [MFC], SetRecentlyUsedMenus
 - CMFCMenuBar [MFC], SetShowAllCommands
 ms.assetid: 8a3ce4c7-b012-4dc0-b4f8-53c10b4b86b8
-ms.openlocfilehash: e4b1a7eba31ef28578c515c437978bc59cbd08f1
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 87844e843057bb295c904b5f1b3d7dd03fa4d797
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57267363"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775889"
 ---
 # <a name="cmfcmenubar-class"></a>CMFCMenuBar 类
 
@@ -191,7 +191,7 @@ class CMFCMenuBar : public CMFCToolbar
 
 ## <a name="example"></a>示例
 
-下面的示例演示了如何使用 `CMFCMenuBar` 类中的各种方法。 该示例演示如何将窗格的样式设置、 启用自定义按钮、 启用的帮助框，启用对于弹出菜单的阴影和更新菜单栏。 此代码片段属于[IE 演示示例](../../visual-cpp-samples.md)。
+下面的示例演示了如何使用 `CMFCMenuBar` 类中的各种方法。 该示例演示如何将窗格的样式设置、 启用自定义按钮、 启用的帮助框，启用对于弹出菜单的阴影和更新菜单栏。 此代码片段属于[IE 演示示例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_IEDemo#1](../../mfc/reference/codesnippet/cpp/cmfcmenubar-class_1.h)]
 [!code-cpp[NVC_MFC_IEDemo#3](../../mfc/reference/codesnippet/cpp/cmfcmenubar-class_2.cpp)]
@@ -395,7 +395,7 @@ virtual BOOL CreateEx(
 
 ### <a name="example"></a>示例
 
-下面的示例演示如何使用`CreateEx`方法的`CMFCMenuBar`类。 此代码片段属于[IE 演示示例](../../visual-cpp-samples.md)。
+下面的示例演示如何使用`CreateEx`方法的`CMFCMenuBar`类。 此代码片段属于[IE 演示示例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_IEDemo#1](../../mfc/reference/codesnippet/cpp/cmfcmenubar-class_1.h)]
 [!code-cpp[NVC_MFC_IEDemo#2](../../mfc/reference/codesnippet/cpp/cmfcmenubar-class_3.cpp)]

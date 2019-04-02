@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3298
 ms.assetid: 458c2680-95bb-4d5e-895f-ce4115844193
-ms.openlocfilehash: 8a2d8f6ab72a5e72a646cb1fca64635bc72dd2ee
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fe6913d402c6ce4df3551c159eb56a12590799cb
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492829"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773890"
 ---
 # <a name="compiler-error-c3298"></a>编译器错误 C3298
 
@@ -19,7 +19,7 @@ ms.locfileid: "50492829"
 
 不能为约束指定相互排斥的特征。 例如，不能同时将泛型类型参数约束为值类型和引用类型。
 
-有关详细信息，请参阅[泛型类型参数的约束 (C + + CLI)](../../windows/constraints-on-generic-type-parameters-cpp-cli.md)。
+有关详细信息，请参阅[泛型类型参数的约束 (C + + CLI)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md)。
 
 ## <a name="example"></a>示例
 

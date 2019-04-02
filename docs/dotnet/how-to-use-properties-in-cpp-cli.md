@@ -5,12 +5,12 @@ helpviewer_keywords:
 - simple properties
 - properties [C++], simple
 ms.assetid: f5d82547-e214-4f05-9e1b-ddb6d0dc5e4c
-ms.openlocfilehash: f29bf419ca19ce1bbe45e36adb08d7f4e5629f5a
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: cd0748993b6ac92bbf9f66fa868ac6e814e21bb5
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57739285"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781622"
 ---
 # <a name="how-to-use-properties-in-ccli"></a>如何：使用属性中 C + + /cli CLI
 
@@ -259,7 +259,7 @@ int main() {
 
 ## <a name="abstract-and-sealed-properties"></a>抽象和密封属性
 
-尽管[抽象](../windows/abstract-cpp-component-extensions.md)并[密封](../windows/sealed-cpp-component-extensions.md)关键字指定为有效在 ECMA C + + /cli CLI 规范，对于 Visual c + + 编译器中，您不能指定它们在普通的属性，也不在属性上非 trivial 属性的声明。
+尽管[抽象](../extensions/abstract-cpp-component-extensions.md)并[密封](../extensions/sealed-cpp-component-extensions.md)关键字指定为有效在 ECMA C + + /cli CLI 规范，对于 Visual c + + 编译器中，您不能指定它们在普通的属性，也不在属性上非 trivial 属性的声明。
 
 若要声明密封的或抽象属性，必须定义非 trivial 属性，然后指定`abstract`或`sealed`关键字为 get 和 set 访问器函数。
 
@@ -409,4 +409,4 @@ int main() {
 
 ## <a name="see-also"></a>请参阅
 
-[属性](../windows/property-cpp-component-extensions.md)
+[属性](../extensions/property-cpp-component-extensions.md)

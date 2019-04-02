@@ -4,18 +4,18 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - ICollectionOnSTLImpl interface
 ms.assetid: 6d49f819-1957-4813-b074-3f12c494d8ca
-ms.openlocfilehash: 90583f34c9e9fb500bb48fdbd3c1a17d343d865f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 609ec2547cf7a8ab93ef757f7a8e460542c9de28
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57292914"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779243"
 ---
 # <a name="implementing-a-c-standard-library-based-collection"></a>实现 c + + 标准库基于集合
 
 ATL 提供`ICollectionOnSTLImpl`接口以使您能够快速在您的对象上实现基于 c + + 标准库的集合接口。 若要了解此类的工作原理，您可以通过一个简单示例 （下面），使用此类实现旨在自动化客户端的只读集合。
 
-示例代码摘自[ATLCollections 示例](../visual-cpp-samples.md)。
+示例代码摘自[ATLCollections 示例](../overview/visual-cpp-samples.md)。
 
 若要完成此过程，你将：
 
@@ -75,7 +75,7 @@ Visual Basic 支持对此接口的成功至关重要，因为返回的枚举数`
 
 [!code-cpp[NVC_ATL_COM#26](../atl/codesnippet/cpp/implementing-an-stl-based-collection_3.h)]
 
-在此示例中，可以使用自定义`GenericCopy`VCUE_Copy.h 和从 VCUE_CopyString.h 中定义的类[ATLCollections](../visual-cpp-samples.md)示例。 可以在其他代码中，使用此类，但可能需要进一步定义的专用化`GenericCopy`以支持使用自己的集合中的数据类型。 有关详细信息，请参阅[ATL 复制策略类](../atl/atl-copy-policy-classes.md)。
+在此示例中，可以使用自定义`GenericCopy`VCUE_Copy.h 和从 VCUE_CopyString.h 中定义的类[ATLCollections](../overview/visual-cpp-samples.md)示例。 可以在其他代码中，使用此类，但可能需要进一步定义的专用化`GenericCopy`以支持使用自己的集合中的数据类型。 有关详细信息，请参阅[ATL 复制策略类](../atl/atl-copy-policy-classes.md)。
 
 ##  <a name="vcconenumeration_and_collection"></a> 为枚举和集合创建类型定义
 
@@ -102,5 +102,5 @@ Visual Basic 支持对此接口的成功至关重要，因为返回的枚举数`
 ## <a name="see-also"></a>请参阅
 
 [集合和枚举数](../atl/atl-collections-and-enumerators.md)<br/>
-[ATLCollections 示例](../visual-cpp-samples.md)<br/>
+[ATLCollections 示例](../overview/visual-cpp-samples.md)<br/>
 [ATL 复制策略类](../atl/atl-copy-policy-classes.md)

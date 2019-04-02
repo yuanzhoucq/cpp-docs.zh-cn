@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3255
 ms.assetid: 877ffca2-fd92-44b6-9060-6091b928b1c1
-ms.openlocfilehash: a5b483f3aaa82e543d561cb7c550495069a19f7c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 129d2698a782d2b98267877e8d575a6ee641b94b
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519933"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772041"
 ---
 # <a name="compiler-error-c3255"></a>编译器错误 C3255
 
 值类型： 不能动态地分配本机堆上的此值类型对象
 
-值类型的实例 (请参阅[类和结构](../../windows/classes-and-structs-cpp-component-extensions.md)) 包含托管的成员可以在堆栈上，但不是在堆上创建。
+值类型的实例 (请参阅[类和结构](../../extensions/classes-and-structs-cpp-component-extensions.md)) 包含托管的成员可以在堆栈上，但不是在堆上创建。
 
 下面的示例生成 C3255:
 

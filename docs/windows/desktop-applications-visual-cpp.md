@@ -2,12 +2,12 @@
 title: 桌面应用程序 （Visual c + +）
 ms.date: 11/04/2016
 ms.assetid: a020b534-293c-44e2-aa48-516c43ddeb8f
-ms.openlocfilehash: 80b85afc52819a742c85512e8e6031b9b2e26e9a
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 090180062139642d8a686e9f1bf063f3e65aee88
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694564"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58771914"
 ---
 # <a name="desktop-applications-visual-c"></a>桌面应用程序 （Visual c + +）
 
@@ -43,7 +43,7 @@ C 运行时 (CRT) 和标准库类和函数、 COM 对象和公共 Windows 函数
 |[向空的 Win32 应用程序添加文件](adding-files-to-an-empty-win32-applications.md)|如何将文件添加到一个空项目。|
 |[使用资源文件](working-with-resource-files.md)|如何将图像、 图标、 字符串表和其他资源添加到桌面应用程序。|
 |[有关创建使用 DirectX （c + +） 的游戏的资源](resources-for-creating-a-game-using-directx.md)|在 c + + 中创建游戏的内容的链接。|
-|[演练： 创建和使用静态库](walkthrough-creating-and-using-a-static-library-cpp.md)|如何创建一个.lib 二进制文件。|
+|[演练：创建和使用静态库](walkthrough-creating-and-using-a-static-library-cpp.md)|如何创建一个.lib 二进制文件。|
 |[如何：在 Windows 桌面应用程序中使用 Windows 10 SDK](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|包含使用 Windows 10 SDK 设置项目以便生成的步骤。|
 
 ## <a name="related-articles"></a>相关文章
@@ -51,9 +51,9 @@ C 运行时 (CRT) 和标准库类和函数、 COM 对象和公共 Windows 函数
 |标题|描述|
 |-----------|-----------------|
 |[Windows 开发](/windows/desktop/index)|包含有关 Windows API 和 COM 的信息。 （某些 Windows API 和第三方 DLL 是作为 COM 对象实现的。）|
-|[Hilo：开发适用于 Windows 7 的 C++ 应用程序](https://msdn.microsoft.com/library/windows/desktop/ff708696.aspx)|描述如何创建使用 Windows Animation 和 Direct2D 创建基于传送的用户界面的、客户端丰富的 Windows 桌面应用程序。  本教程尚未更新 Windows 7 以来，但它仍提供了 Win32 编程的全面介绍。|
+|[Hilo:Windows 7 的 c + + 应用程序开发](https://msdn.microsoft.com/library/windows/desktop/ff708696.aspx)|描述如何创建使用 Windows Animation 和 Direct2D 创建基于传送的用户界面的、客户端丰富的 Windows 桌面应用程序。  本教程尚未更新 Windows 7 以来，但它仍提供了 Win32 编程的全面介绍。|
 |[C++ 中 Windows 编程概述](overview-of-windows-programming-in-cpp.md)|介绍 Windows 桌面 c + + 编程主要的功能。|
 
 ## <a name="see-also"></a>请参阅
 
-[Visual C++](../visual-cpp-in-visual-studio.md)
+[Visual C++](../overview/visual-cpp-in-visual-studio.md)

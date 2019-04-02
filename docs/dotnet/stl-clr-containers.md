@@ -6,12 +6,12 @@ helpviewer_keywords:
 - STL/CLR, containers
 - containers, STL/CLR
 ms.assetid: 34ca8031-2041-46b9-aed9-29082d1972ea
-ms.openlocfilehash: 511ea14d02b77e237ae9768776c4ff3eb97982ed
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: dc2e5ce3263c61839a1ba434ab0d2a39e6a9078f
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57744353"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774537"
 ---
 # <a name="stlclr-containers"></a>STL/CLR 容器
 
@@ -37,7 +37,7 @@ STL/CLR 容器可容纳以下两种元素类型之一：
 
 ### <a name="handles-to-reference-types"></a>指向引用类型的句柄
 
-您可以将指向引用类型的句柄插入到 STL/CLR 容器中。 C++ 中面向 CLR 的句柄与 C++ 中的指针类似。 有关详细信息，请参阅[句柄对象运算符 (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)。
+您可以将指向引用类型的句柄插入到 STL/CLR 容器中。 C++ 中面向 CLR 的句柄与 C++ 中的指针类似。 有关详细信息，请参阅[句柄对象运算符 (^)](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md)。
 
 #### <a name="example"></a>示例
 
@@ -229,7 +229,7 @@ int main()
 
 您还可以将未装箱的值类型插入到 STL/CLR 容器中。 未装箱的值类型是值类型尚未*装箱*到引用类型。
 
-值类型元素可以是标准值类型之一，如 `int`，也可以是用户定义的值类型，如 `value class`。 有关详细信息，请参阅[类和结构](../windows/classes-and-structs-cpp-component-extensions.md)
+值类型元素可以是标准值类型之一，如 `int`，也可以是用户定义的值类型，如 `value class`。 有关详细信息，请参阅[类和结构](../extensions/classes-and-structs-cpp-component-extensions.md)
 
 #### <a name="example"></a>示例
 

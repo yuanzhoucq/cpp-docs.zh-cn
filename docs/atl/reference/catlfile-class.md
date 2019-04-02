@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlFile class
 ms.assetid: 93ed160b-af2a-448c-9cbe-e5fa46c199bb
-ms.openlocfilehash: 19e230f150803019d47e1ea710e7d713d1822a53
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 0faae50afcd26948bdcb4d4333efb25d5cca33ea
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270082"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772964"
 ---
 # <a name="catlfile-class"></a>CAtlFile 类
 
@@ -449,6 +449,6 @@ HRESULT Write(
 
 ## <a name="see-also"></a>请参阅
 
-[字幕示例](../../visual-cpp-samples.md)<br/>
+[字幕示例](../../overview/visual-cpp-samples.md)<br/>
 [类概述](../../atl/atl-class-overview.md)<br/>
 [CHandle 类](../../atl/reference/chandle-class.md)

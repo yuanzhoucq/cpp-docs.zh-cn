@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - /clr compiler option [C++], restrictions
 ms.assetid: 385f6462-2c68-46d6-810e-469553ead447
-ms.openlocfilehash: e2205740aea5a2e557b8d93c3c60045435c4b71d
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 21b7ead553871854c73021756eb2086f9e6e7393
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816095"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58777813"
 ---
 # <a name="clr-restrictions"></a>/clr 限制
 
@@ -17,7 +17,7 @@ ms.locfileid: "57816095"
 
 - 在结构化的异常处理程序中，没有使用限制`_alloca`编译时 **/clr**。 有关详细信息，请参阅[_alloca](../../c-runtime-library/reference/alloca.md)。
 
-- 使用运行时错误检查不是有效，且 **/clr**。 有关详细信息，请参阅[如何：使用本机运行时检查](/visualstudio/debugger/how-to-use-native-run-time-checks)。
+- 使用运行时错误检查不是有效，且 **/clr**。 有关详细信息，请参阅[如何：使用本机运行时检查](/visualstudio/debugger/how-to-use-native-run-time-checks)
 
 - 当 **/clr**是用于编译仅使用标准 c + + 语法的程序，以下准则适用于内联程序集的使用：
 
@@ -29,7 +29,7 @@ ms.locfileid: "57816095"
 
 - [裸](../../cpp/naked-cpp.md) [__declspec](../../cpp/declspec.md)在 /clr 下忽略修饰符。
 
-- 通过设置的转换器函数[_set_se_translator](../../c-runtime-library/reference/set-se-translator.md)会影响仅非托管代码中的 catch 语句。 请参阅[异常处理](../../windows/exception-handling-cpp-component-extensions.md)有关详细信息。
+- 通过设置的转换器函数[_set_se_translator](../../c-runtime-library/reference/set-se-translator.md)会影响仅非托管代码中的 catch 语句。 请参阅[异常处理](../../extensions/exception-handling-cpp-component-extensions.md)有关详细信息。
 
 - 不允许使用函数指针的比较 **/clr**。
 
