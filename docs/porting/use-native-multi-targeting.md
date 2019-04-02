@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C++ native multi-targeting
 - upgrading Visual C++ applications, retargeting
 ms.assetid: b115aabe-a9dc-4525-90d3-367d97ea20c9
-ms.openlocfilehash: 57f7450537f7609cbc66f8adf0bc868631e15f3a
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 4afc34eb68281ea8f90ded0a647d714f70ba9d96
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57740816"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770936"
 ---
 # <a name="use-native-multi-targeting-in-visual-studio-to-build-old-projects"></a>使用 Visual Studio 中的本机多目标来生成旧项目
 
@@ -67,4 +67,4 @@ Visual Studio 2008 具有自己的专用 C++ 生成系统 VCBuild。 从 Visual 
 ## <a name="see-also"></a>请参阅
 
 [从 Visual C++ 早期版本升级项目](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
-[Visual Studio 2017 中 C++ 的符合性改进](../cpp-conformance-improvements-2017.md)
+[Visual Studio 2017 中 C++ 的符合性改进](../overview/cpp-conformance-improvements-2017.md)
