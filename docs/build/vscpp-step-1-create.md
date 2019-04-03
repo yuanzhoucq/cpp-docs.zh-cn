@@ -1,29 +1,49 @@
 ---
-title: 创建一个 c + + 控制台应用程序项目
-description: 在 Visual c + + 中创建一个 Hello World 控制台应用程序
+title: 创建 C++ 控制台应用项目
+description: 在 Visual C++ 中创建 Hello World 控制台应用
 ms.custom: mvc
-ms.date: 12/12/2017
+ms.date: 04/02/2019
 ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
-ms.openlocfilehash: 3bbbd40534e3e429d68dbb6205134c57db40c851
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 739da0b6e5400117c0b09a3d4c3335bd44529a25
+ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57817720"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58898773"
 ---
-# <a name="create-a-c-console-app-project"></a>创建一个 c + + 控制台应用程序项目
+# <a name="create-a-c-console-app-project"></a>创建 C++ 控制台应用项目
 
-为 c + + 程序员的常用的起始点"Hello，world ！" 在命令行运行的应用程序。 这是创建哪些内容将在 Visual Studio 中在此步骤。
+C++ 程序员通常从在命令行上运行的“Hello, world!” 应用程序开始。 这是创建哪些内容将在 Visual Studio 中在此步骤。
 
 ## <a name="prerequisites"></a>系统必备
 
-- 使用 c + + 工作负载安装并运行您的计算机上具有 Visual Studio 中使用的桌面开发。 如果未尚未安装，请参阅[Visual Studio 2017 中的安装 c + + 支持](vscpp-step-0-installation.md)。
+- 在 Visual Studio 中安装“使用 C++ 的桌面开发”工作负载并在计算机上运行。 如果未尚未安装，请参阅[Visual Studio 中的安装 c + + 支持](vscpp-step-0-installation.md)。
 
-## <a name="create-your-app-project"></a>创建应用程序项目
+## <a name="create-your-app-project"></a>创建应用项目
 
-Visual Studio 使用项目来组织应用的代码，使用解决方案来组织项目。 项目包含所有选项、 配置和规则用于生成应用，并管理项目的所有文件和任何外部文件之间的关系。 若要创建您的应用程序，首先，您将创建新项目和解决方案。
+Visual Studio 使用项目来组织应用的代码，使用解决方案来组织项目。 项目包含用于构建应用的所有选项、配置和规则，并管理所有项目文件与任何外部文件之间的关系。 要创建应用，需首先创建一个新项目和解决方案。
+
+::: moniker range=">=vs-2019"
+
+1. 在 Visual Studio 中打开**文件**菜单，然后选择**新建** > **项目**以打开**创建一个新项目**对话框。 选择**控制台应用程序**模板，然后选择**下一步**。
+
+   ![创建一个新项目](media/vs2019-choose-console-app.png "打开创建新项目对话框")
+
+1. 在中**配置新项目**对话框中，输入*HelloWorld*中**项目名称**编辑框。 选择**创建**创建项目。
+
+   ![命名并创建新项目](media/vs2019-configure-new-project-hello-world.png "名称并创建新项目")
+
+   Visual Studio 创建一个新项目，就可以添加和编辑你的源代码。 默认情况下的控制台应用程序模板填充与"Hello World"应用程序在源代码中：
+
+   ![在 IDE 中的 hello World 项目](media/vs2019-hello-world-code.png "在 IDE 中的 Hello World 项目")
+
+   代码如下所示在编辑器中，当你准备好转到下一步并构建您的应用程序。
+
+::: moniker-end
+
+::: moniker range="<=vs-2017"
 
 1. 在 Visual Studio 中打开**文件**菜单，然后选择**新建 > 项目**以打开**新项目**对话框。
 
@@ -85,10 +105,14 @@ Visual studio 创建一个新的、 空的源代码文件，并在编辑器窗�
 
 [我遇到了问题。](#add-a-source-code-file-issues)
 
+::: moniker-end
+
 ## <a name="next-steps"></a>后续步骤
 
 > [!div class="nextstepaction"]
 > [生成并运行 c + + 项目](vscpp-step-2-build.md)
+
+::: moniker range="<=vs-2017"
 
 ## <a name="troubleshooting-guide"></a>故障排除指南
 
@@ -125,5 +149,7 @@ Visual studio 创建一个新的、 空的源代码文件，并在编辑器窗�
 如果在源代码编辑器中的任何内容显示红色波浪线，请检查你的代码匹配拼写、 标点符号和用例中的示例。 用例中 c + + 代码至关重要。
 
 [返回](#add-code-to-the-source-file)。
+
+::: moniker-end
 
 <iframe src="" height="0" width="0" frameborder="0" name="frameTarget" />

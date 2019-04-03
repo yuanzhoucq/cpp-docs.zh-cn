@@ -9,12 +9,12 @@ helpviewer_keywords:
 - twoPhase
 - disable two-phase name lookup
 - /Zc:twoPhase
-ms.openlocfilehash: b9e94f131448cb9be6c31962ecd19607ceb1b708
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 5f990181fd1e606cf9d7dd33242752bed33aa456
+ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58776032"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58898747"
 ---
 # <a name="zctwophase--disable-two-phase-name-lookup"></a>/Zc: twophase-（禁用两阶段名称查找）
 
@@ -158,7 +158,7 @@ typename T::template X<T>::TYPE func(typename T::TYPE)
 
 下 **/zc: twophase-** ，并且在较旧编译器中，编译器只需要`template`第 2 行的关键字。 默认情况下，并在符合性模式下，编译器现在还要求`template`第 4，指示行的关键字`T::X<T>`是一个模板。 查找缺少此关键字的代码并将其以使符合标准代码提供。
 
-有关符合性问题的详细信息，请参阅[c + + 在 Visual Studio 中的符合性改进](../../overview/cpp-conformance-improvements-2017.md)并[非标准行为](../../cpp/nonstandard-behavior.md)。
+有关符合性问题的详细信息，请参阅[c + + 在 Visual Studio 中的符合性改进](../../overview/cpp-conformance-improvements.md)并[非标准行为](../../cpp/nonstandard-behavior.md)。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
