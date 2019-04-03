@@ -1,6 +1,6 @@
 ---
 title: memchr、wmemchr
-ms.date: 11/04/2016
+ms.date: 03/31/2019
 apiname:
 - wmemchr
 - memchr
@@ -24,12 +24,12 @@ helpviewer_keywords:
 - memchr function
 - wmemchr function
 ms.assetid: 5a348581-28f1-4256-8434-687245f7fc9f
-ms.openlocfilehash: cbd8b80ed42a6532fb7161fab7217a772a2cb777
-ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
+ms.openlocfilehash: 00a1f0d12047cc388b56074a657ffd739e986827
+ms.sourcegitcommit: 489c0b998f2360317701f7a4a97b2b8ad96052d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57209894"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58866911"
 ---
 # <a name="memchr-wmemchr"></a>memchr、wmemchr
 
@@ -87,9 +87,9 @@ const wchar_t *wmemchr(
 
 ## <a name="remarks"></a>备注
 
-`memchr` 和`wmemchr`的第一个匹配项看起来*c*在第一个*计数*字节*缓冲区*。 它将停止时找到*c*或检查第一个*计数*字节。
+`memchr` 和`wmemchr`的第一个匹配项看起来*c*在第一个*计数*字符*缓冲区*。 它将停止时找到*c*或检查第一个*计数*字符。
 
-在 C 中，这些函数采用**const**的第一个参数的指针。 在 C++ 中，有两个重载可用。 采用指向的重载**const**返回一个指向**const**; 将指针传递到非版本**const**返回一个指向非**常量**. 如果这两个定义宏 _CRT_CONST_CORRECT_OVERLOADS **const**和非-**const**提供了这些函数的版本。 如果需要非**const** c + +，这两个 c + + 中的行为定义符号 _CONST_RETURN。
+在 C 中，这些函数采用**const**的第一个参数的指针。 在 C++ 中，有两个重载可用。 采用指向的重载**const**返回一个指向**const**; 将指针传递到非版本**const**返回一个指向非**常量**. 该宏\_CRT\_CONST\_更正\_如果这两个定义重载**const**和非-**const**提供了这些函数的版本。 如果需要非**const**中 c + +，这两个 c + + 重载的行为定义符号\_CONST\_返回。
 
 ## <a name="requirements"></a>要求
 
@@ -135,7 +135,7 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>输出
+### <a name="output"></a>Output
 
 ```Output
 String to be searched:
