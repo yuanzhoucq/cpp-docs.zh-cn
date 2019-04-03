@@ -1,6 +1,6 @@
 ---
 title: 从无符号整型的转换
-ms.date: 01/29/2018
+ms.date: 03/27/2019
 helpviewer_keywords:
 - integers, converting
 - type casts, involving integers
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - type conversion [C++], signed and unsigned integers
 - integral conversions, from unsigned
 ms.assetid: 60fb7e10-bff9-4a13-8a48-e19f25a36a02
-ms.openlocfilehash: d7653c545601d10b159f10a8a3c8f60f9128f944
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3f6136a721f84332451184baa648ebc7c909d5d7
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579681"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565017"
 ---
 # <a name="conversions-from-unsigned-integral-types"></a>从无符号整型的转换
 
-通过截断高序位将无符号整数转换为较短的无符号或带符号整数，或者通过零扩展将其转换为一个较长的无符号或带符号整数（请参阅[从无符号整型类型转换](#_clang_table_4..3)表）。
+通过截断高序位将无符号整数转换为较短的无符号或带符号整数，或者通过零扩展将其转换为一个较长的无符号或带符号整数。 有关详细信息，请参阅[从无符号整型类型转换表](#conversions-from-unsigned-integral-types-table)。
 
 当带整型的值降为较小的带符号整数，或者将无符号整数转换为其相应的带符号整数时，值保持不变（如果可以在新类型中表示该值）。 但是，它表示的值将发生更改（如果设置符号位），如下面的示例所示。
 
@@ -35,9 +35,9 @@ printf_s( "%hd\n", j );   // Prints -3
 
 下表汇总了来自无符号整型的转换。
 
-## <a name="conversions-from-unsigned-integral-types"></a>从无符号整型的转换
+## <a name="conversions-from-unsigned-integral-types-table"></a>从无符号整型类型转换表
 
-|From|到|方法|
+|From|功能|方法|
 |----------|--------|------------|
 |**unsigned char**|**char**|保留位模式；高序位将成为符号位|
 |**unsigned char**|**short**|零扩展|
