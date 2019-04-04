@@ -45,8 +45,7 @@ ms.locfileid: "57262865"
 
 `parallel_for`算法对任务进行分区并行执行以最佳方式。 当工作负载不平衡时，此算法还会使用工作窃取算法和范围窃取来平衡这些分区。 当某个循环迭代以协作方式阻止时，运行时将重新分发分配给其他线程或处理器的当前线程的范围的迭代。 同样，当某个线程完成一系列迭代，运行时重新分配给该线程从其他线程的工作。 `parallel_for`算法还支持*嵌套并行度*。 当一个并行循环包含另一个并行循环时，运行时之间协调处理资源更高效地并行执行循环体。
 
-
-  `parallel_for` 算法有多个重载版本。 第一个版本使用起始值、 结束值和一个工作函数 （lambda 表达式、 函数对象或函数指针）。 第二个版本进入起始值、 结束值、 值的步骤，并且工作函数。 此函数的第一个版本使用的步长值为 1。 其余版本采用分区程序对象，使您能够指定 `parallel_for` 如何在线程之间对范围进行分区。 中的部分中的更详细地介绍了分区程序[分区工作](#partitions)本文档中。
+`parallel_for` 算法有多个重载版本。 第一个版本使用起始值、 结束值和一个工作函数 （lambda 表达式、 函数对象或函数指针）。 第二个版本进入起始值、 结束值、 值的步骤，并且工作函数。 此函数的第一个版本使用的步长值为 1。 其余版本采用分区程序对象，使您能够指定 `parallel_for` 如何在线程之间对范围进行分区。 中的部分中的更详细地介绍了分区程序[分区工作](#partitions)本文档中。
 
 可以将许多转换`for`循环，以使用`parallel_for`。 但是，`parallel_for`算法不同于`for`语句按以下方式：
 
@@ -157,8 +156,7 @@ ms.locfileid: "57262865"
 > [!WARNING]
 >  本示例演示 `parallel_transform` 的基本用法。 由于工作函数不会执行大量工作，因此本示例中不会有显著的性能提升。
 
-
-  `parallel_transform` 算法有两个重载。 第一个重载采用一个输入范围和一个一元函数。 该一元函数可以是采用一个自变量的 Lambda 表达式、一个函数对象或从 `unary_function` 派生的一个类型。 第二个重载采用两个输入范围和一个二元函数。 二元函数可以采用两个自变量、 函数对象或从派生的类型的 lambda 表达式[std:: binary_function](../../standard-library/binary-function-struct.md)。 下面的示例阐释了这些差异。
+`parallel_transform` 算法有两个重载。 第一个重载采用一个输入范围和一个一元函数。 该一元函数可以是采用一个自变量的 Lambda 表达式、一个函数对象或从 `unary_function` 派生的一个类型。 第二个重载采用两个输入范围和一个二元函数。 二元函数可以采用两个自变量、 函数对象或从派生的类型的 lambda 表达式[std:: binary_function](../../standard-library/binary-function-struct.md)。 下面的示例阐释了这些差异。
 
 [!code-cpp[concrt-parallel-transform-vectors#2](../../parallel/concrt/codesnippet/cpp/parallel-algorithms_5.cpp)]
 
@@ -199,8 +197,7 @@ ms.locfileid: "57262865"
 
 并行执行对数据源的操作，一个重要步骤是将*分区*成可由多个线程同时访问的多个部分的源。 分区程序将指定并行算法应如何在线程之间对范围进行分区。 如本文档前面所述，PPL 使用的是默认分区机制，该默认分区机制创建初始工作负荷并在工作负荷不平衡时使用工作窃取算法和范围窃取来平衡这些分区。 例如，当某个循环迭代完成一个迭代范围时，运行时会将其他线程的工作重新分配给该线程。 但是，在某些方案中，你可能希望指定另一个更适用于你的问题的分区机制。
 
-
-  `parallel_for`、`parallel_for_each` 和 `parallel_transform` 算法提供采用一个附加参数 `_Partitioner` 的重载版本。 此参数定义了用于划分工作的分区程序类型。 以下是 PPL 定义的分区程序种类：
+`parallel_for`、`parallel_for_each` 和 `parallel_transform` 算法提供采用一个附加参数 `_Partitioner` 的重载版本。 此参数定义了用于划分工作的分区程序类型。 以下是 PPL 定义的分区程序种类：
 
 [concurrency::affinity_partitioner](../../parallel/concrt/reference/affinity-partitioner-class.md)<br/>
 将工作划分为一个固定数量的范围（通常是可用于在循环中工作的辅助线程的数量）。 此分区程序类型与 `static_partitioner` 类似，但通过将范围映射到辅助线程的方式改善了缓存的关联。 当在相同数据集中多次执行一个循环（例如一个循环内的循环）且数据适合缓存时，此分区程序类型可提高性能。 此分区程序不完全参与取消。 它也不使用协作停滞语义，因此不能与具有前向依赖关系的并行循环一起使用。
@@ -236,12 +233,9 @@ ms.locfileid: "57262865"
 
 PPL 提供三种排序算法： [concurrency:: parallel_sort](reference/concurrency-namespace-functions.md#parallel_sort)， [concurrency:: parallel_buffered_sort](reference/concurrency-namespace-functions.md#parallel_buffered_sort)，并[concurrency:: parallel_radixsort](reference/concurrency-namespace-functions.md#parallel_radixsort)。 当您具有可受益于并行排序的数据集时，这些排序算法很有用。 具体而言，当您具有大型数据集时或使用需要消耗大量计算资源的比较操作对数据进行排序时，并行排序很有用。 每种算法都会就地对元素排序。
 
+`parallel_sort` 和 `parallel_buffered_sort` 算法都是基于比较的算法。 即，它们按值来比较元素。 `parallel_sort` 算法没有其他内存要求，适用于通用排序。 `parallel_buffered_sort`算法的性能优于`parallel_sort`，但它需要 o （n） 空间。
 
-  `parallel_sort` 和 `parallel_buffered_sort` 算法都是基于比较的算法。 即，它们按值来比较元素。 
-  `parallel_sort` 算法没有其他内存要求，适用于通用排序。 `parallel_buffered_sort`算法的性能优于`parallel_sort`，但它需要 o （n） 空间。
-
-
-  `parallel_radixsort` 算法是基于哈希的。 即，它使用整数键来对元素排序。 通过使用键，此算法可以直接计算元素的目标，而不是使用比较。 如`parallel_buffered_sort`，此算法要求 o （n） 空间。
+`parallel_radixsort` 算法是基于哈希的。 即，它使用整数键来对元素排序。 通过使用键，此算法可以直接计算元素的目标，而不是使用比较。 如`parallel_buffered_sort`，此算法要求 o （n） 空间。
 
 下表总结了三种并行排序算法的重要属性。
 

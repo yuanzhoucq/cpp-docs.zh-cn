@@ -67,8 +67,7 @@ C + + AMP 中包含一些 Api [concurrency:: graphics](../../parallel/amp/refere
 
 - 具有两个或四个组件的短矢量。 唯一的例外是 `double_4`，不允许使用此短矢量。
 
-
-  `texture` 对象的秩可以是 1、2 或 3。 在 `texture` 调用的 lambda 中，`parallel_for_each` 对象只能通过引用来捕获。 纹理存储作为 Direct3D 纹理对象存储在 GPU 中。 有关纹理和纹素在 Direct3D 中的详细信息，请参阅[Direct3D 11 中的纹理简介](http://go.microsoft.com/fwlink/p/?linkid=248502)。
+`texture` 对象的秩可以是 1、2 或 3。 在 `texture` 调用的 lambda 中，`parallel_for_each` 对象只能通过引用来捕获。 纹理存储作为 Direct3D 纹理对象存储在 GPU 中。 有关纹理和纹素在 Direct3D 中的详细信息，请参阅[Direct3D 11 中的纹理简介](http://go.microsoft.com/fwlink/p/?linkid=248502)。
 
 你所使用的纹素类型可以是图形编程中使用的众多纹理格式中的一种。 例如，RGBA 格式可以使用 32 位，其中，R、G、B 和 A 标量元素各 8 位。 图形卡的纹理硬件可以访问基于格式的各个元素。 例如，如果你使用的是 RGBA 格式，则纹理硬件可以提取每个 8 位组件形成 32 位窗体。 在 C++ AMP 中，你可以设置每个纹理标量元素的位数，以便自动访问代码中的各个标量元素，而不必进行移位。
 
@@ -217,8 +216,7 @@ void UseBitsPerScalarElement() { // Create the image data. // Each unsigned int 
 
 - T 不是**双**， `norm`，或`unorm`。
 
-- 
-  `texture::bits_per_scalar_element` 属性为 32。
+- `texture::bits_per_scalar_element` 属性为 32。
 
 如果不符合这三个条件，则 `texture` 对象为只读对象。 编译期间将检查前两个条件。 如果有代码尝试写入 `readonly` 纹理对象，将产生编译错误。 为条件`texture::bits_per_scalar_element`在运行时，检测，并在运行时生成[unsupported_feature](../../parallel/amp/reference/unsupported-feature-class.md)异常，如果尝试写入只读`texture`对象。
 
@@ -273,8 +271,7 @@ void copyHostArrayToTexture() { // Copy from source array to texture object by u
 
 - 读写访问由非专用模板类 `texture_view<T, N>` 提供，与纹理一样，支持仅具有 1 个组件的元素；视图可以访问在实例化视图时确定的一个 mipmap 级别。 它不支持采样。
 
-纹理视图类似于数组视图，但不是提供自动数据管理和移动功能， [array_view 类](../../parallel/amp/reference/array-view-class.md)优于[array 类](../../parallel/amp/reference/array-class.md)。 
-  `texture_view` 只能在基础纹理数据所在的快捷键视图中进行访问。
+纹理视图类似于数组视图，但不是提供自动数据管理和移动功能， [array_view 类](../../parallel/amp/reference/array-view-class.md)优于[array 类](../../parallel/amp/reference/array-class.md)。 `texture_view` 只能在基础纹理数据所在的快捷键视图中进行访问。
 
 ### <a name="writeonlytextureview-deprecated"></a>弃用 writeonly_texture_view
 

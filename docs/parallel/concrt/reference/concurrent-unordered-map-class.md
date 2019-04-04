@@ -23,8 +23,7 @@ ms.locfileid: "57284341"
 ---
 # <a name="concurrentunorderedmap-class"></a>concurrent_unordered_map 类
 
-
-  `concurrent_unordered_map` 类是控制 `std::pair<const K, _Element_type>` 类型元素的长短不一序列的并发安全容器。 序列以支持并发安全追加、元素访问、迭代器访问和迭代器遍历操作的方式表示。
+`concurrent_unordered_map` 类是控制 `std::pair<const K, _Element_type>` 类型元素的长短不一序列的并发安全容器。 序列以支持并发安全追加、元素访问、迭代器访问和迭代器遍历操作的方式表示。
 
 ## <a name="syntax"></a>语法
 
