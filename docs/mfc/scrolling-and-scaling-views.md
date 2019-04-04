@@ -8,18 +8,18 @@ helpviewer_keywords:
 - scroll bars [MFC], messages
 - scrolling views [MFC]
 ms.assetid: f98a3421-c336-407e-97ee-dbb2ffd76fbd
-ms.openlocfilehash: 2baa89f233eb6df93cde3adbde35ba1e6d35c093
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 7d26bc656dec3fdcbb8fc5ea4918ec7d59bc5afc
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283704"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58777572"
 ---
 # <a name="scrolling-and-scaling-views"></a>滚动和缩放视图
 
 MFC 支持视图，向下滚动并查看自动调整为显示它们的框架窗口的大小。 类`CScrollView`支持这两种类型的视图。
 
-有关滚动和缩放的详细信息，请参阅类[CScrollView](../mfc/reference/cscrollview-class.md)中*MFC 参考*。 有关滚动的示例，请参阅[Scribble 示例](../visual-cpp-samples.md)。
+有关滚动和缩放的详细信息，请参阅类[CScrollView](../mfc/reference/cscrollview-class.md)中*MFC 参考*。 有关滚动的示例，请参阅[Scribble 示例](../overview/visual-cpp-samples.md)。
 
 ## <a name="what-do-you-want-to-know-more-about"></a>你想要了解更多信息
 

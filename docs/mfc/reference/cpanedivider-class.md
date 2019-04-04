@@ -84,12 +84,12 @@ helpviewer_keywords:
 - CPaneDivider [MFC], m_nDefaultWidth
 - CPaneDivider [MFC], m_pSliderRTC
 ms.assetid: 8e828a5d-232f-4127-b8e3-7fa45a7a476e
-ms.openlocfilehash: 7fc1215fb1b286423d6c50337bf5d94cac3298e2
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 43cba977d50e161c58d3e240e1282049a415c88d
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57273619"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773848"
 ---
 # <a name="cpanedivider-class"></a>CPaneDivider 类
 
@@ -159,7 +159,7 @@ class CPaneDivider : public CBasePane
 
 ### <a name="data-members"></a>数据成员
 
-|name|描述|
+|名称|描述|
 |----------|-----------------|
 |[CPaneDivider::m_nDefaultWidth](#m_ndefaultwidth)|指定以像素为单位的应用程序中的所有窗格分隔线的默认宽度。|
 |[CPaneDivider::m_pSliderRTC](#m_psliderrtc)|有关运行时类信息将存储指针`CPaneDivider`-派生的对象。|
@@ -176,7 +176,7 @@ class CPaneDivider : public CBasePane
 
 ## <a name="example"></a>示例
 
-下面的示例演示如何从 `CWorkspaceBar` 对象获取 `CPaneDivider` 对象。 此代码片段属于[MDI 选项卡演示示例](../../visual-cpp-samples.md)。
+下面的示例演示如何从 `CWorkspaceBar` 对象获取 `CPaneDivider` 对象。 此代码片段属于[MDI 选项卡演示示例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_MDITabsDemo#5](../../mfc/reference/codesnippet/cpp/cpanedivider-class_1.cpp)]
 

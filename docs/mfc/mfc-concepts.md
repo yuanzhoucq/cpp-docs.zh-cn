@@ -3,12 +3,12 @@ title: MFC 概念
 ms.date: 1/09/2018
 f1_keywords:
 - Concepts
-ms.openlocfilehash: 58ab83fc195e199a63c53586983d26103950569b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8d021350125acda52bb4ecf3919282cb7bbe52b1
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50633367"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58766503"
 ---
 # <a name="mfc-concepts"></a>MFC 概念
 
@@ -66,5 +66,5 @@ ms.locfileid: "50633367"
 [MFC 参考](../mfc/mfc-desktop-applications.md)<br/>
 提供 MFC 库参考材料，一组构成应用程序框架的类，它是为 Windows API 编写的应用程序框架。
 
-[MFC 示例](../visual-cpp-samples.md)<br/>
+[MFC 示例](../overview/visual-cpp-samples.md)<br/>
 提供指向演示如何在桌面应用程序、 Dll、 数据库应用程序、 控件、 Web 应用程序和的详细信息中使用 MFC 的示例。

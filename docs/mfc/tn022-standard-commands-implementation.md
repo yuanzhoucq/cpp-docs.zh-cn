@@ -59,12 +59,12 @@ helpviewer_keywords:
 - ID_FILE_NEW command [MFC]
 - ID_INDICATOR_NUM command
 ms.assetid: a7883b46-23f7-4870-ac3a-804aed9258b5
-ms.openlocfilehash: 4c066521ba2b5be9ac24a8abaece42e57b8ad85f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 8d568760cc75a4c1f2ddb6dd88108cc830783194
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57279342"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775826"
 ---
 # <a name="tn022-standard-commands-implementation"></a>TN022:标准命令实现
 
@@ -221,7 +221,7 @@ MFC 标头文件 AFXRES 中定义多个标准命令 Id。H. 这些命令的框�
 
    当前没有此命令的标准实现。 您必须为每个实现此`CView`-派生的类。
 
-   如果您选择实现此命令，我们建议使用此命令 id。 请参阅 MFC 教程示例[SCRIBBLE](../visual-cpp-samples.md)有关的示例实现。
+   如果您选择实现此命令，我们建议使用此命令 id。 请参阅 MFC 教程示例[SCRIBBLE](../overview/visual-cpp-samples.md)有关的示例实现。
 
 - ID_EDIT_COPY 将当前选定内容复制到剪贴板。
 
@@ -438,7 +438,7 @@ MFC 标头文件 AFXRES 中定义多个标准命令 Id。H. 这些命令的框�
 
    所有 OLE 客户端应用程序应都实现此命令。 应用程序向导，使用 OLE 选项时，将创建一个主干实现的`OnInsertObject`必须完成在视图类中。
 
-   请参阅 MFC OLE 示例[OCLIENT](../visual-cpp-samples.md)示例中为此命令的完整实现。
+   请参阅 MFC OLE 示例[OCLIENT](../overview/visual-cpp-samples.md)示例中为此命令的完整实现。
 
 - ID_OLE_EDIT_LINKS 编辑 OLE 链接
 

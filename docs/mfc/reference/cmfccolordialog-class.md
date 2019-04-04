@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CMFCColorDialog [MFC], SetPageOne
 - CMFCColorDialog [MFC], SetPageTwo
 ms.assetid: 235bbbbc-a3b1-46e0-801b-fb55093ec579
-ms.openlocfilehash: d94c223ed1e0b236ae8565d13a9f2c9652b6eb84
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 1b9f57e46d5ac74dd52f7ddb7ebd90f8888891e3
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270291"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772746"
 ---
 # <a name="cmfccolordialog-class"></a>CMFCColorDialog 类
 
@@ -100,7 +100,7 @@ class CMFCColorDialog : public CDialogEx
 
 ## <a name="example"></a>示例
 
-下面的示例演示如何使用各种方法中的配置颜色对话框`CMFCColorDialog`类。 该示例演示如何设置当前和新颜色的对话框中，以及如何在颜色对话框中的两个属性页上设置所选颜色的红色、 绿色和蓝色组件。 此示例摘自[新的控件示例](../../visual-cpp-samples.md)。
+下面的示例演示如何使用各种方法中的配置颜色对话框`CMFCColorDialog`类。 该示例演示如何设置当前和新颜色的对话框中，以及如何在颜色对话框中的两个属性页上设置所选颜色的红色、 绿色和蓝色组件。 此示例摘自[新的控件示例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_NewControls#3](../../mfc/reference/codesnippet/cpp/cmfccolordialog-class_1.cpp)]
 

@@ -9,24 +9,24 @@ helpviewer_keywords:
 - projects [C++], deploying programs
 - application deployment [C++], walkthroughs
 ms.assetid: 79e6cc4e-dced-419d-aaf7-d62d1367603f
-ms.openlocfilehash: 051ef3aa8c691a2191d25183ef96f17b557a47c1
-ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
+ms.openlocfilehash: aa0e1cd6ec7c27b8d3ccc1e327f3cb8da526d4f7
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57820203"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769259"
 ---
 # <a name="walkthrough-deploying-your-program-c"></a>演练：部署程序 (C++)
 
-现在已通过完成先前相关演练创建了应用程序，该演练在[使用 Visual Studio IDE 进行 C++ 桌面开发](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)中列出，最后一步是创建安装程序以便其他用户将程序安装到其计算机上。 对于安装程序，你需要将新项目添加到现有解决方案。 此新项目输出 setup.exe 文件，该文件将把你的应用程序安装到其他计算机上。
+现在已通过完成早期相关演练创建了应用程序，最后一步是创建安装程序以便其他用户将程序安装到自己的计算机上。 对于安装程序，你需要将新项目添加到现有解决方案。 此新项目输出 setup.exe 文件，该文件将把你的应用程序安装到其他计算机上。
 
-本演练演示如何使用 Windows Installer 部署应用程序。 你还可以使用 ClickOnce 部署应用程序。 有关详细信息，请参阅[Visual c + + 应用程序的 ClickOnce 部署](../ide/clickonce-deployment-for-visual-cpp-applications.md)。 有关一般部署的详细信息，请参阅[部署应用程序、服务和组件](/visualstudio/deployment/deploying-applications-services-and-components)。
+本演练演示如何使用 Windows Installer 部署应用程序。 你还可以使用 ClickOnce 部署应用程序。 有关详细信息，请参阅[Visual c + + 应用程序的 ClickOnce 部署](../windows/clickonce-deployment-for-visual-cpp-applications.md)。 有关一般部署的详细信息，请参阅[部署应用程序、服务和组件](/visualstudio/deployment/deploying-applications-services-and-components)。
 
 ## <a name="prerequisites"></a>系统必备
 
 - 本演练假定你具备 C++ 语言的基础知识。
 
-- 它还假定你已完成之前在[使用 Visual Studio IDE 进行 C++ 桌面开发](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)中列出的相关演练。
+- 它还假定你已完成之前在[使用 Visual Studio IDE 进行 C++ 桌面开发](using-the-visual-studio-ide-for-cpp-desktop-development.md)中列出的相关演练。
 
 - 本演练无法在 Visual Studio 速成版中完成。
 
@@ -72,10 +72,10 @@ ms.locfileid: "57820203"
 
 ## <a name="next-steps"></a>后续步骤
 
-上一步：[演练：调试项目 (C++)](../ide/walkthrough-debugging-a-project-cpp.md)<br/>
+上一步：[演练：调试项目 (C++)](walkthrough-debugging-a-project-cpp.md)<br/>
 
 ## <a name="see-also"></a>请参阅
 
 [C++ 语言参考](../cpp/cpp-language-reference.md)<br/>
 [项目和生成系统](../build/projects-and-build-systems-cpp.md)<br/>
-[部署桌面应用程序](../ide/deploying-native-desktop-applications-visual-cpp.md)<br/>
+[部署桌面应用程序](../windows/deploying-native-desktop-applications-visual-cpp.md)<br/>

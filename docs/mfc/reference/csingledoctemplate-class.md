@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSingleDocTemplate [MFC], CSingleDocTemplate
 ms.assetid: 4f3a8212-81ee-48a0-ad22-e0ed7c36a391
-ms.openlocfilehash: fe85119761d2b56ca72c8efff00664c62d4767bb
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 4d1361734f38d903e2171839b95888863126974a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57299525"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58771692"
 ---
 # <a name="csingledoctemplate-class"></a>CSingleDocTemplate 类
 
@@ -117,7 +117,7 @@ END
 
 ## <a name="see-also"></a>请参阅
 
-[MFC 示例 DOCKTOOL](../../visual-cpp-samples.md)<br/>
+[MFC 示例 DOCKTOOL](../../overview/visual-cpp-samples.md)<br/>
 [CDocTemplate 类](../../mfc/reference/cdoctemplate-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>
 [CDocTemplate 类](../../mfc/reference/cdoctemplate-class.md)<br/>

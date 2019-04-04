@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CTabView [MFC], IsScrollBar
 - CTabView [MFC], OnActivateView
 ms.assetid: 8e6ecd9d-d28d-432b-8ec8-0446f0204d52
-ms.openlocfilehash: 5ac62d04c38dbddda90d2f33a9c14c9c131fcd9c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 56640edbd0d2e74a1cc00dad5441350ad3d35725
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57326590"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772082"
 ---
 # <a name="ctabview-class"></a>CTabView 类
 
@@ -65,7 +65,7 @@ class CTabbedView : public CView
 
 例如，可能必须文档可以表示不同的方式： 作为电子表格、 图表、 可编辑窗体中，依次类推。 可以创建根据需要绘制数据的单个视图，它们插入您`CTabView`-派生的对象并将它们而无需任何额外的编码选项卡式。
 
-[TabbedView 示例：MFC 选项卡式视图应用程序](../../visual-cpp-samples.md)说明了使用情况的`CTabView`。
+[TabbedView 示例：MFC 选项卡式视图应用程序](../../overview/visual-cpp-samples.md)说明了使用情况的`CTabView`。
 
 ## <a name="example"></a>示例
 

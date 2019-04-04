@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CMFCMenuButton [MFC], m_hMenu
 - CMFCMenuButton [MFC], m_nMenuResult
 ms.assetid: 53d3d459-1e5a-47c5-8b7f-2e61f6af5187
-ms.openlocfilehash: bacd8726fd4c833f956f763cca81a88d41d1f167
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: cbdf4005ee1a0249e7ed2b5f1d50621fb951f64f
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57298199"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58777358"
 ---
 # <a name="cmfcmenubutton-class"></a>CMFCMenuButton 类
 
@@ -56,7 +56,7 @@ class CMFCMenuButton : public CMFCButton
 
 ### <a name="data-members"></a>数据成员
 
-|name|描述|
+|名称|描述|
 |----------|-----------------|
 |[CMFCMenuButton::m_bOSMenu](#m_bosmenu)|指定是否显示默认系统弹出菜单或使用[CContextMenuManager::TrackPopupMenu](../../mfc/reference/ccontextmenumanager-class.md#trackpopupmenu)。|
 |[CMFCMenuButton::m_bRightArrow](#m_brightarrow)|指定是否将出现弹出菜单的下方或右侧的按钮。|
@@ -72,7 +72,7 @@ class CMFCMenuButton : public CMFCButton
 
 ## <a name="example"></a>示例
 
-下面的示例演示如何设置与该按钮的菜单的句柄，调整大小的按钮根据其文本和图像的大小，以及设置框架显示的弹出菜单。 此代码片段属于[新的控件示例](../../visual-cpp-samples.md)。
+下面的示例演示如何设置与该按钮的菜单的句柄，调整大小的按钮根据其文本和图像的大小，以及设置框架显示的弹出菜单。 此代码片段属于[新的控件示例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_NewControls#38](../../mfc/reference/codesnippet/cpp/cmfcmenubutton-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#39](../../mfc/reference/codesnippet/cpp/cmfcmenubutton-class_2.cpp)]

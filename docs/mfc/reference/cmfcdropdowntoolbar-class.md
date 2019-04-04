@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CMFCDropDownToolBar [MFC], OnSendCommand
 - CMFCDropDownToolBar [MFC], OnUpdateCmdUI
 ms.assetid: 78818ec5-83ce-42fa-a0d4-2d9d5ecc8770
-ms.openlocfilehash: 704d48cc546943d818ae8b898060fe0f7e203c53
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: f2c4135d2a27928dbde4299fa1f8eda42237d893
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57303548"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776786"
 ---
 # <a name="cmfcdropdowntoolbar-class"></a>CMFCDropDownToolBar 类
 
@@ -76,7 +76,7 @@ class CMFCDropDownToolBar : public CMFCToolBar
 
 ## <a name="example"></a>示例
 
-下面的示例演示如何使用`Create`中的方法`CMFCDropDownToolBar`类。 此代码片段属于[Visual Studio 演示示例](../../visual-cpp-samples.md)。
+下面的示例演示如何使用`Create`中的方法`CMFCDropDownToolBar`类。 此代码片段属于[Visual Studio 演示示例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#29](../../mfc/codesnippet/cpp/cmfcdropdowntoolbar-class_1.h)]
 [!code-cpp[NVC_MFC_VisualStudioDemo#30](../../mfc/codesnippet/cpp/cmfcdropdowntoolbar-class_2.cpp)]

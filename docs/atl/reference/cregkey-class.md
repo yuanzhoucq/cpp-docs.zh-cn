@@ -42,12 +42,12 @@ helpviewer_keywords:
 - registry, writing to
 - registry, deleting keys
 ms.assetid: 3afce82b-ba2c-4c1a-8404-dc969e1af74b
-ms.openlocfilehash: 56a3289d5546db21c42d22b5e8544913bdaa78cf
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 1215c66f1f40cfbc96b813d4eb5084f07698bc01
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283652"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58778294"
 ---
 # <a name="cregkey-class"></a>CRegKey 类
 
@@ -1058,5 +1058,5 @@ ATL_DEPRECATED LONG SetValue(
 
 ## <a name="see-also"></a>请参阅
 
-[DCOM 示例](../../visual-cpp-samples.md)<br/>
+[DCOM 示例](../../overview/visual-cpp-samples.md)<br/>
 [类概述](../../atl/atl-class-overview.md)

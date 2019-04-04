@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2440
 ms.assetid: 36e6676c-f04f-4715-8ba1-f096c4bf3b44
-ms.openlocfilehash: 86841e15469f15ebb329e0957d4dacb5a96d6fe3
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: c85a8284c91037e981f0d1ea82507b49be8121a3
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518497"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780673"
 ---
 # <a name="compiler-error-c2440"></a>编译器错误 C2440
 
@@ -167,7 +167,7 @@ int main() {
 
 ## <a name="example"></a>示例
 
-如果你尝试创建其类型为的 Visual c + + 数组的实例，也可能出现 C2440 <xref:System.Array>。  有关详细信息，请参阅[数组](../../windows/arrays-cpp-component-extensions.md)。  下一步的示例生成 C2440:
+如果你尝试创建其类型为的 Visual c + + 数组的实例，也可能出现 C2440 <xref:System.Array>。  有关详细信息，请参阅[数组](../../extensions/arrays-cpp-component-extensions.md)。  下一步的示例生成 C2440:
 
 ```cpp
 // C2440e.cpp

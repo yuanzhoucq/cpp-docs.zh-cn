@@ -18,12 +18,12 @@ helpviewer_keywords:
 - CMFCFontInfo [MFC], m_strName
 - CMFCFontInfo [MFC], m_strScript
 ms.assetid: f88329b2-d74e-4921-9441-a3bb6536a049
-ms.openlocfilehash: 2377b7f6afdf78a0e8b7c8ac97a36a4920c06bb8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 930aceb4514195f0e844c35d326b52d9cd8d31fa
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57281182"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781323"
 ---
 # <a name="cmfcfontinfo-class"></a>CMFCFontInfo 类
 
@@ -51,7 +51,7 @@ class CMFCFontInfo : public CObject
 
 ### <a name="data-members"></a>数据成员
 
-|name|描述|
+|名称|描述|
 |----------|-----------------|
 |[CMFCFontInfo::m_nCharSet](#m_ncharset)|一个值，指定与字体相关的字符集 （脚本）。|
 |[CMFCFontInfo::m_nPitchAndFamily](#m_npitchandfamily)|一个值，指定的间距和系列的字体。|
@@ -65,7 +65,7 @@ class CMFCFontInfo : public CObject
 
 ## <a name="example"></a>示例
 
-下面的示例演示如何使用各种成员`CMFCFontInfo`类。 该示例演示如何获取`CMFCFontInfo`对象从`CMFCRibbonFontComboBox`，以及如何访问其本地变量。 此示例摘自[MSOffice 2007 演示示例](../../visual-cpp-samples.md)。
+下面的示例演示如何使用各种成员`CMFCFontInfo`类。 该示例演示如何获取`CMFCFontInfo`对象从`CMFCRibbonFontComboBox`，以及如何访问其本地变量。 此示例摘自[MSOffice 2007 演示示例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_MSOffice2007Demo#6](../../mfc/reference/codesnippet/cpp/cmfcfontinfo-class_1.cpp)]
 

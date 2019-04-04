@@ -6,12 +6,12 @@ helpviewer_keywords:
 - class libraries [MFC], MFC
 - MFC, application development
 ms.assetid: 617e9945-9bb3-471d-a3ba-e235fcfb55d1
-ms.openlocfilehash: a55bfae8599e2b221cb853cb17bd4113839fb9c1
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 71cdda0abea8cec29c3b6e17ddfb584e32a931c6
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270964"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769714"
 ---
 # <a name="general-mfc-topics"></a>常规 MFC 主题
 
@@ -23,7 +23,7 @@ MFC 框架是一种让您基于 Windows 专家程序员的工作来进行开发�
 
 ## <a name="in-this-section"></a>本节内容
 
-`MFC Samples`提供的[Visual c + + 示例](../visual-cpp-samples.md)
+`MFC Samples`提供的[Visual c + + 示例](../overview/visual-cpp-samples.md)
 
 [使用 MFC 源文件](../mfc/using-the-mfc-source-files.md)
 

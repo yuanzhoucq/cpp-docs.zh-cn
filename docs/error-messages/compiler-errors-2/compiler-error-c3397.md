@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3397
 ms.assetid: a8536e87-79c4-4ed7-bd96-42704d06391f
-ms.openlocfilehash: 3f0b8207f9d6c74ac40510c5acff509f583f95f0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c6ca48eb53cf1c6d661a201fa8c4d2539669b9bf
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50434588"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772847"
 ---
 # <a name="compiler-error-c3397"></a>编译器错误 C3397
 
 默认参数中不允许进行聚合初始化
 
-未正确声明数组。  请参阅[数组](../../windows/arrays-cpp-component-extensions.md)有关详细信息。
+未正确声明数组。  请参阅[数组](../../extensions/arrays-cpp-component-extensions.md)有关详细信息。
 
 ## <a name="example"></a>示例
 

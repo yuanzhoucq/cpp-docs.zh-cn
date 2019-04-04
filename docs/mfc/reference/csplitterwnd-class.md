@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CSplitterWnd [MFC], OnDrawSplitter
 - CSplitterWnd [MFC], OnInvertTracker
 ms.assetid: fd0de258-6dbe-4552-9e47-a39de0471d51
-ms.openlocfilehash: 42913ddea7818636dce8d630ed2d79d13c19ce81
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 065735c13a3e763208142eb6bc989d3a496221f0
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57302099"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781440"
 ---
 # <a name="csplitterwnd-class"></a>CSplitterWnd 类
 
@@ -175,9 +175,9 @@ class CSplitterWnd : public CWnd
 
 有关如何创建动态拆分窗口的详细信息，请参阅：
 
-- MFC 示例[Scribble](../../visual-cpp-samples.md)
+- MFC 示例[Scribble](../../overview/visual-cpp-samples.md)
 
-- MFC 示例[VIEWEX](../../visual-cpp-samples.md)。
+- MFC 示例[VIEWEX](../../overview/visual-cpp-samples.md)。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -1036,7 +1036,7 @@ virtual void OnDraw(CDC* pDC);
 
 ## <a name="see-also"></a>请参阅
 
-[MFC 示例 VIEWEX](../../visual-cpp-samples.md)<br/>
+[MFC 示例 VIEWEX](../../overview/visual-cpp-samples.md)<br/>
 [CWnd 类](../../mfc/reference/cwnd-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>
 [CView 类](../../mfc/reference/cview-class.md)<br/>

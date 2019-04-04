@@ -90,12 +90,12 @@ helpviewer_keywords:
 - CMonthCalCtrl [MFC], SizeMinReq
 - CMonthCalCtrl [MFC], SizeRectToMin
 ms.assetid: a42f6bd6-ab5c-4335-82f8-839982fc64a2
-ms.openlocfilehash: 440d158774a716db9fba351200f2760783925cc6
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: bd062a4e0d4db364c9cb628608c6af165dc0edc2
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413922"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58777163"
 ---
 # <a name="cmonthcalctrl-class"></a>CMonthCalCtrl 类
 
@@ -373,7 +373,7 @@ DWORD GetCurrentView() const;
 
 当前视图，这将由以下值之一：
 
-|“值”|含义|
+|值|含义|
 |-----------|-------------|
 |MCMV_MONTH|每月视图|
 |MCMV_YEAR|每年的视图|
@@ -587,7 +587,7 @@ int GetMonthRange(
 *dwFlags*<br/>
 值，该值指定要检索的范围限制的作用域。 此值必须是以下值之一。
 
-|“值”|含义|
+|值|含义|
 |-----------|-------------|
 |GMR_DAYSTATE|包括前导和尾随的可见范围仅部分显示的月份。|
 |GMR_VISIBLE|包含完全显示的月份。|
@@ -1304,7 +1304,7 @@ LPRECT SizeRectToMin(LPRECT lpRect);
 
 ## <a name="see-also"></a>请参阅
 
-[MFC 示例 CMNCTRL1](../../visual-cpp-samples.md)<br/>
+[MFC 示例 CMNCTRL1](../../overview/visual-cpp-samples.md)<br/>
 [CWnd 类](../../mfc/reference/cwnd-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>
 [CDateTimeCtrl 类](../../mfc/reference/cdatetimectrl-class.md)

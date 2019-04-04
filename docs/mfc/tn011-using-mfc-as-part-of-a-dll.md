@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DLLs [MFC], linking
 - MFC DLLs [MFC], linking regular MFC DLLs to MFC
 ms.assetid: 76753e9c-59dc-40f6-b6a7-f6bb9a7c4190
-ms.openlocfilehash: 63e97c3b9260465259d76cf6996d1d389f65ee41
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 7e9fda44e2af4ec32bae6299fbcc0eda17984f9b
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57326447"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769727"
 ---
 # <a name="tn011-using-mfc-as-part-of-a-dll"></a>TN011:将 MFC 作为 DLL 的一部分使用
 
@@ -57,7 +57,7 @@ MFC 的规则 Dll 有若干优点：
 
 必须显式导出应用程序和 DLL 之间的接口 (API)。 建议您将接口定义为低带宽，并且如果可以只使用 C 接口。 直接 C 接口更易于维护更复杂的 C++ 类。
 
-将 API 放在 C 文件和 C++ 文件均可包含的单独标头中。 请参阅 MFC 高级概念示例中的 screencap.h [DLLScreenCap](../visual-cpp-samples.md)有关的示例。 若要导出函数，请在模块定义文件 (.DEF) 的 `EXPORTS` 部分中输入它们，或将 `__declspec(dllexport)` 包含在您的函数定义中。 使用 `__declspec(dllimport)` 将这些函数导入客户端可执行文件中。
+将 API 放在 C 文件和 C++ 文件均可包含的单独标头中。 请参阅 MFC 高级概念示例中的 screencap.h [DLLScreenCap](../overview/visual-cpp-samples.md)有关的示例。 若要导出函数，请在模块定义文件 (.DEF) 的 `EXPORTS` 部分中输入它们，或将 `__declspec(dllexport)` 包含在您的函数定义中。 使用 `__declspec(dllimport)` 将这些函数导入客户端可执行文件中。
 
 必须将 AFX_MANAGE_STATE 宏添加动态链接到 MFC 的规则 MFC Dll 中的所有导出函数的开头。 此宏会将当前模块状态设置为 DLL 的模块状态。 若要使用该宏，请将以下代码行添加到从 DLL 导出的函数的开始处：
 

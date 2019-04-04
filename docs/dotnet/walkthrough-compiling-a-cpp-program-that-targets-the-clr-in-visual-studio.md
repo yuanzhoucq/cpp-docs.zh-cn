@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C++, managed code
 - managed code [C++]
 ms.assetid: 339f89df-a5d2-4040-831a-ddbe25b5dce4
-ms.openlocfilehash: a65ccdb4d2f031a70ba03719b58fb439407cdfc8
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: d0a006c6928bf42c3e6f4adfbc3d1fdde7ff7c87
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57824953"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773042"
 ---
 # <a name="walkthrough-compile-a-ccli-program-that-targets-the-clr-in-visual-studio"></a>演练：编译 C + + /cli 面向 Visual Studio 中的 CLR 的 CLI 程序
 
@@ -51,13 +51,13 @@ ms.locfileid: "57824953"
 
 1. 单击 Visual Studio 中新创建的选项卡并键入有效的 Visual C++ 程序或从示例程序中复制粘贴一个。
 
-   例如，可以使用[如何：写入一个文本文件 (C + + CLI)](how-to-write-a-text-file-cpp-cli.md)示例程序 (在**文件处理和 I/O**节点编程指南)。
+   例如，可以使用[如何：编写文本文件 (C++/CLI)](how-to-write-a-text-file-cpp-cli.md) 示例程序（位于编程指南中的“文件处理和 I/O”节点）。
 
    如果使用该示例程序，请注意在创建 .NET 对象时使用 `gcnew` 关键字（而不是 `new` 关键字），并且 `gcnew` 返回图柄 (`^`) 而不是指针 (`*`)：
 
    `StreamWriter^ sw = gcnew StreamWriter(fileName);`
 
-   若要详细了解新的 Visual C++ 语法，请参阅[运行时平台的组件扩展](../windows/component-extensions-for-runtime-platforms.md)。
+   若要详细了解新的 Visual C++ 语法，请参阅[运行时平台的组件扩展](../extensions/component-extensions-for-runtime-platforms.md)。
 
 1. 在 **“生成”** 菜单上，单击 **“生成解决方案”**。
 

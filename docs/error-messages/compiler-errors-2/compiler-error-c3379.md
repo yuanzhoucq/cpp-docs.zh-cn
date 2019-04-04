@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3379
 ms.assetid: a66c2c4e-091c-4426-9cde-7c4cfb2ffce1
-ms.openlocfilehash: 2d6b2cb15cfaa0b72b946c0edb3b451737b51772
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5bf4e2e42b4534d47a2a7d3c9a838c404a99ba68
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50553499"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769970"
 ---
 # <a name="compiler-error-c3379"></a>编译器错误 C3379
 
@@ -19,7 +19,7 @@ class： 嵌套的类不能将程序集访问说明符作为其声明的一部�
 
 当应用于托管类型，例如类或结构，[公共](../../cpp/public-cpp.md)并[专用](../../cpp/private-cpp.md)关键字指示是否将程序集元数据通过公开的类。 `public` 或`private`不能应用于嵌套类，该类将继承封闭类的程序集访问权限。
 
-与一起使用时[/clr](../../build/reference/clr-common-language-runtime-compilation.md)，则`ref`并`value`关键字指示该类受托管 (请参阅[类和结构](../../windows/classes-and-structs-cpp-component-extensions.md))。
+与一起使用时[/clr](../../build/reference/clr-common-language-runtime-compilation.md)，则`ref`并`value`关键字指示该类受托管 (请参阅[类和结构](../../extensions/classes-and-structs-cpp-component-extensions.md))。
 
 下面的示例生成 C3379:
 

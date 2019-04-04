@@ -4,12 +4,12 @@ ms.date: 09/20/2018
 helpviewer_keywords:
 - shell controls (MFC)
 ms.assetid: f0015caa-199d-4aaf-9501-5a239fce9095
-ms.openlocfilehash: 9314eec7c02ed0286a7ae3fcf14bae6572dd710c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: ef0e4856a844503f8d13b7b6ed37318b76b6af69
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57288782"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772145"
 ---
 # <a name="walkthrough-using-the-new-mfc-shell-controls"></a>演练：使用新的 MFC Shell 控件
 
@@ -166,7 +166,7 @@ ms.locfileid: "57288782"
 
 - 该向导进行创建 Outlook 栏**文件夹**窗格和一个**日历**窗格。 它可能不具有意义**日历**窗格中的**资源管理器**窗口中，因此现在删除该窗格。
 
-- `CMFCShellListCtrl`支持在不同模式下，如查看文件**大图标**，**小图标**，**列表**，并且**详细信息**。 更新应用程序以实现此功能。 提示： 请参阅[Visual c + + 示例](../visual-cpp-samples.md)。
+- `CMFCShellListCtrl`支持在不同模式下，如查看文件**大图标**，**小图标**，**列表**，并且**详细信息**。 更新应用程序以实现此功能。 提示： 请参阅[Visual c + + 示例](../overview/visual-cpp-samples.md)。
 
 ## <a name="see-also"></a>请参阅
 

@@ -4,18 +4,18 @@ ms.date: 11/19/2018
 helpviewer_keywords:
 - property pages, implementing
 ms.assetid: c30b67fe-ce08-4249-ae29-f3060fa8d61e
-ms.openlocfilehash: a86393954cdebec59bd2c6a50cd5e547ef06acb7
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 9aaf75916196f33904a51289d0a49725e042aa9e
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57267233"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58777033"
 ---
 # <a name="example-implementing-a-property-page"></a>示例:实现属性页
 
 此示例演示如何生成属性页的显示 （并允许您更改） 的属性[文档类](../mfc/document-classes.md)接口。
 
-示例基于[ATLPages 示例](../visual-cpp-samples.md)。
+示例基于[ATLPages 示例](../overview/visual-cpp-samples.md)。
 
 若要完成此示例中，你将：
 
@@ -41,7 +41,7 @@ ms.locfileid: "57267233"
 
 首先，创建新的 ATL 项目调用 DLL 服务器`ATLPages7`。 现在，使用[ATL 属性页向导](../atl/reference/atl-property-page-wizard.md)生成属性页。 为提供的属性页**短名称**的**DocProperties**然后切换到**字符串**页后，可以设置特定于页面属性的项下, 表中所示。
 
-|项|“值”|
+|项|值|
 |----------|-----------|
 |标题|TextDocument|
 |文档字符串|VCUE TextDocument 属性|
@@ -127,7 +127,7 @@ ms.locfileid: "57267233"
 
 使用[添加类对话框](../ide/add-class-dialog-box.md)并[ATL 简单对象向导](../atl/reference/atl-simple-object-wizard.md)生成一个新类并使用`Helper`作为其短名称。 创建后，添加一个方法下, 表中所示。
 
-|项|“值”|
+|项|值|
 |----------|-----------|
 |方法名|`ShowPage`|
 |参数|`[in] BSTR bstrCaption, [in] BSTR bstrID, [in] IUnknown* pUnk`|
@@ -164,4 +164,4 @@ End Module
 ## <a name="see-also"></a>请参阅
 
 [属性页](../atl/atl-com-property-pages.md)<br/>
-[ATLPages 示例](../visual-cpp-samples.md)
+[ATLPages 示例](../overview/visual-cpp-samples.md)

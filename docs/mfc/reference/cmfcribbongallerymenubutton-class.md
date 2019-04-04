@@ -18,12 +18,12 @@ helpviewer_keywords:
 - CMFCRibbonGalleryMenuButton [MFC], HasButton
 - CMFCRibbonGalleryMenuButton [MFC], IsEmptyMenuAllowed
 ms.assetid: 4d459d9b-8b1a-4371-92f6-dc4ce6cc42c8
-ms.openlocfilehash: 9398e0c07d64760d7140b9c4ecf3bbf987a636f3
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: b63eab7c1e4d03a9103795892603b819eb7d02f3
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57326759"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58777137"
 ---
 # <a name="cmfcribbongallerymenubutton-class"></a>CMFCRibbonGalleryMenuButton 类
 
@@ -152,7 +152,7 @@ CMFCRibbonGalleryMenuButton(
 
 ### <a name="example"></a>示例
 
-下面的示例演示如何使用的构造函数`CMFCRibbonGalleryMenuButton`类。 此代码片段属于[MS Office 2007 演示示例](../../visual-cpp-samples.md)。
+下面的示例演示如何使用的构造函数`CMFCRibbonGalleryMenuButton`类。 此代码片段属于[MS Office 2007 演示示例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_MSOffice2007Demo#8](../../mfc/reference/codesnippet/cpp/cmfcribbongallerymenubutton-class_1.cpp)]
 

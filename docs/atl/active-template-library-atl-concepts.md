@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - ATL, about ATL
 ms.assetid: a3960991-4d76-4da5-9568-3fa7fde53ff4
-ms.openlocfilehash: 90fd096f15f185feebc6f6ae8b73b010fe3c1813
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 7eb7eb1c369f825fbb689cd476d43be538ae8d9a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57265335"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774615"
 ---
 # <a name="active-template-library-atl-concepts"></a>活动模板库 (ATL) 概念
 
@@ -87,7 +87,7 @@ ATL 7.0 讨论新的模块类。 Module 类实现的基本功能所需的 atl。
 
 ## <a name="related-sections"></a>相关章节
 
-[ATL 示例](../visual-cpp-samples.md)<br/>
+[ATL 示例](../overview/visual-cpp-samples.md)<br/>
 提供的说明以及指向 ATL 示例程序。
 
 [创建 ATL 项目](../atl/reference/creating-an-atl-project.md)<br/>

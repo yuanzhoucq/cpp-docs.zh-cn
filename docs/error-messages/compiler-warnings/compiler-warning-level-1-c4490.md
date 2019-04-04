@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4490
 ms.assetid: f9b03ecf-41a1-4f4d-a74c-2c1e88234ccc
-ms.openlocfilehash: 89ee97a4efde6f2f9c57daf0ae769e5e12341913
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bf51994c210bd751e0d29bec169dfc4366784486
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624336"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779178"
 ---
 # <a name="compiler-warning-level-1-c4490"></a>编译器警告（等级 1）C4490
 
@@ -19,7 +19,7 @@ override： 重写说明符; 的使用不正确function 不匹配 ref 基类方�
 
 未正确使用重写说明符。 例如，不重写接口函数，实现它。
 
-有关详细信息，请参阅[重写说明符](../../windows/override-specifiers-cpp-component-extensions.md)。
+有关详细信息，请参阅[重写说明符](../../extensions/override-specifiers-cpp-component-extensions.md)。
 
 ## <a name="example"></a>示例
 

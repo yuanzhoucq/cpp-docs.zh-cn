@@ -12,19 +12,19 @@ helpviewer_keywords:
 - IPF, command-line compiler
 - x64 [C++], command-line compiler
 ms.assetid: 4da93a19-e20d-4778-902a-5eee9a6a90b5
-ms.openlocfilehash: b30b831522016ce61f138f7e0521c42ff44e04d9
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 8436254a3d8c5c1dae018c2309ceaad7bd5b2408
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57809764"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769272"
 ---
 # <a name="how-to-enable-a-64-bit-x64-hosted-msvc-toolset-on-the-command-line"></a>如何：启用 64 位，x64 托管在命令行上的 MSVC 工具集
 
 Visual Studio 包含 c + + 编译器、 链接器，并可用于创建特定于平台的版本，你可以在 32 位、 64 位或基于 ARM 的 Windows 操作系统运行的应用的其他工具。 其他可选的 Visual Studio 工作负载，可以使用 c + + 工具面向其他平台，例如 iOS、 Android 和 Linux。 默认生成体系结构使用 32 位、 x86 承载的工具来生成 32 位、 x86 本机 Windows 代码。 但是，很可能在 64 位计算机。 通过使用 64 位，x64 托管工具集生成 x86、 x64 或 ARM 处理器的代码时，可以充分利用处理器和内存空间可用于 64 位代码。
 
 > [!NOTE]
-> 有关每个 Visual Studio 版本附带的特定工具的信息，请参阅[Visual c + + 工具和 Visual Studio 版本中的功能](../ide/visual-cpp-tools-and-features-in-visual-studio-editions.md)。
+> 有关每个 Visual Studio 版本附带的特定工具的信息，请参阅[Visual c + + 工具和 Visual Studio 版本中的功能](../overview/visual-cpp-tools-and-features-in-visual-studio-editions.md)。
 >
 > 有关如何使用 Visual Studio IDE 创建 64 位应用程序的信息，请参阅[如何：针对 64 位 x64 平台配置 Visual C++ 项目](how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md)。
 

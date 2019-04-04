@@ -20,12 +20,12 @@ helpviewer_keywords:
 - frame window classes [MFC], toolbar embedded in
 - LoadToolBar method [MFC]
 ms.assetid: cc00aaff-8a56-433b-b0c0-b857d76b4ffd
-ms.openlocfilehash: 39e790e5152dd07ab40901140ecdd8f8791a446e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 9c784db2e1a482b313147e6837d6bbbd16d0ecb4
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258393"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775486"
 ---
 # <a name="toolbar-fundamentals"></a>工具栏基础知识
 
@@ -62,7 +62,7 @@ ms.locfileid: "57258393"
 1. 调用函数，可以让停靠、 浮动和工具提示。 有关这些调用的详细信息，请参阅文章[停靠和浮动工具栏](../mfc/docking-and-floating-toolbars.md)。
 
 > [!NOTE]
->  MFC 常规示例[DOCKTOOL](../visual-cpp-samples.md)包括旧的和新 MFC 工具栏的说明。 使用工具栏`COldToolbar`需要在步骤 2 中的调用`LoadBitmap`(而非`LoadToolBar`) 和`SetButtons`。 新的工具栏要求对调用`LoadToolBar`。
+>  MFC 常规示例[DOCKTOOL](../overview/visual-cpp-samples.md)包括旧的和新 MFC 工具栏的说明。 使用工具栏`COldToolbar`需要在步骤 2 中的调用`LoadBitmap`(而非`LoadToolBar`) 和`SetButtons`。 新的工具栏要求对调用`LoadToolBar`。
 
 停靠、 浮动和工具提示的调用是可选的。 您可以删除这些行从`OnCreate`您的喜好而定。 结果是保持固定，不能浮动或重新停靠并不能显示工具提示的工具栏。
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - marshaling [C++], callbacks and delegates
 - callbacks [C++], marshaling
 ms.assetid: 2313e9eb-5df9-4367-be0f-14b4712d8d2d
-ms.openlocfilehash: d3814ffbcd23168a9727b1b1d73e2c825639a9c5
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: f8088bf90162fd2177599c252b0eee6332d61289
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57739216"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58766932"
 ---
 # <a name="how-to-marshal-callbacks-and-delegates-by-using-c-interop"></a>如何：使用 c + + 互操作封送回调和委托
 
@@ -27,7 +27,7 @@ ms.locfileid: "57739216"
 
 下面的示例演示如何配置非托管的 API 来触发托管的委托。 创建托管的委托，另一个互操作的方法， <xref:System.Runtime.InteropServices.Marshal.GetFunctionPointerForDelegate%2A>，用于检索委托基础的入口点。 此地址然后传递给非托管函数，而不必了解这一事实作为托管函数实现中调用它。
 
-请注意，就完成了可能的但并非必需，为 pin 使用委托[pin_ptr (C + + CLI)](../windows/pin-ptr-cpp-cli.md)阻止它被重新定位或由垃圾回收器。 需要从过早垃圾回收的保护，但固定提供了更多保护不是必需的因为它会阻止集合，但还可以防止重定位。
+请注意，就完成了可能的但并非必需，为 pin 使用委托[pin_ptr (C + + CLI)](../extensions/pin-ptr-cpp-cli.md)阻止它被重新定位或由垃圾回收器。 需要从过早垃圾回收的保护，但固定提供了更多保护不是必需的因为它会阻止集合，但还可以防止重定位。
 
 如果垃圾回收重新定位一个委托，它将不会影响其中托管回调，因此<xref:System.Runtime.InteropServices.GCHandle.Alloc%2A>用于添加对委托，允许重定位的委托，但阻止可供使用的引用。 使用 GCHandle，而不 pin_ptr 可减少托管堆的碎片可能性。
 

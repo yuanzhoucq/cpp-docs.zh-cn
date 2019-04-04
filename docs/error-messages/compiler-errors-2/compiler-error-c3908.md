@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3908
 ms.assetid: 3c322482-c79e-4197-a578-2ad9bc379d1a
-ms.openlocfilehash: 84b21f20cbc8203a9cd70e487738c34c6ad3a89b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e11d830c3d662ea424caadeb50df669700f8c78f
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50598921"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58766750"
 ---
 # <a name="compiler-error-c3908"></a>编译器错误 C3908
 
@@ -19,7 +19,7 @@ ms.locfileid: "50598921"
 
 属性访问器方法 （get 或 set） 不能具有限制性比属性本身上指定的访问权限的访问权限。  同样，对于事件访问器方法。
 
-有关详细信息，请参阅[属性](../../windows/property-cpp-component-extensions.md)并[事件](../../windows/event-cpp-component-extensions.md)。
+有关详细信息，请参阅[属性](../../extensions/property-cpp-component-extensions.md)并[事件](../../extensions/event-cpp-component-extensions.md)。
 
 下面的示例生成 C3908:
 

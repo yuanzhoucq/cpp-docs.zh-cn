@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CDataPathProperty [MFC], SetControl
 - CDataPathProperty [MFC], SetPath
 ms.assetid: 1f96efdb-54e4-460b-862c-eba5d4103488
-ms.openlocfilehash: 61c8dfa85363509ee09eaaccdb6d45d70390c344
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 89cb8ddcdd42643f52f755516e8845109163c57a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57262761"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780335"
 ---
 # <a name="cdatapathproperty-class"></a>CDataPathProperty 类
 
@@ -217,7 +217,7 @@ void SetPath(LPCTSTR lpszPath);
 
 ## <a name="see-also"></a>请参阅
 
-[MFC 示例图像](../../visual-cpp-samples.md)<br/>
+[MFC 示例图像](../../overview/visual-cpp-samples.md)<br/>
 [CAsyncMonikerFile 类](../../mfc/reference/casyncmonikerfile-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>
 [CAsyncMonikerFile 类](../../mfc/reference/casyncmonikerfile-class.md)

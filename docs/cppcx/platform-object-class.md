@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - Object class
 ms.assetid: 709e84a8-0bff-471b-bc14-63e424080b5a
-ms.openlocfilehash: 8e2304ca2c4a6e974262fdb1b449a64b5871a474
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 77313f8c4dcc87fa9de852afe2d60e614f8fc3a3
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57749875"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781011"
 ---
 # <a name="platformobject-class"></a>Platform::Object 类
 
@@ -57,7 +57,7 @@ public ref class Object : Object
 
 **标头：** vccorlib.h
 
-**命名空间：** 平台
+**命名空间：** Platform
 
 ## <a name="equals"></a> Object:: equals 方法
 
@@ -118,7 +118,7 @@ Object::GetType();
 
 [Windows::UI::Xaml::Interop::TypeName](/uwp/api/windows.ui.xaml.interop.typename)作为 Windows 组件和应用之间传递类型信息的独立于语言的方法在 Windows Api 中使用类。 T[platform:: type 类](../cppcx/platform-type-class.md)之间进行转换有运算符`Type`和`TypeName`。
 
-使用[typeid](../windows/typeid-cpp-component-extensions.md)运算符可返回`Platform::Type`对象的类名，例如，XAML 页面之间导航时：
+使用[typeid](../extensions/typeid-cpp-component-extensions.md)运算符可返回`Platform::Type`对象的类名，例如，XAML 页面之间导航时：
 
 ```
 rootFrame->Navigate(TypeName(MainPage::typeid), e->Arguments);

@@ -7,18 +7,18 @@ helpviewer_keywords:
 - TN014
 - custom controls [MFC]
 ms.assetid: 1917a498-f643-457c-b570-9a0af7dbf7bb
-ms.openlocfilehash: d529b235daa1c6aa889b69e8d6bb2f02a58436bb
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c68b60f065e69213b3ab32c887bc7af129a70fef
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57297484"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772119"
 ---
 # <a name="tn014-custom-controls"></a>TN014:自定义控件
 
 此说明描述 MFC 对自定义和自我绘制控件的支持。 它还介绍了动态子类化，并描述了之间的关系[CWnd](../mfc/reference/cwnd-class.md)对象和`HWND`s。
 
-MFC 示例应用程序 CTRLTEST 演示了如何使用许多自定义控件。 请参阅 MFC 常规示例的源代码[CTRLTEST](../visual-cpp-samples.md)和联机帮助。
+MFC 示例应用程序 CTRLTEST 演示了如何使用许多自定义控件。 请参阅 MFC 常规示例的源代码[CTRLTEST](../overview/visual-cpp-samples.md)和联机帮助。
 
 ## <a name="owner-draw-controlsmenus"></a>所有者描述控件/菜单
 
@@ -104,7 +104,7 @@ MFC 提供的默认实现 (在`CWnd`并[CMenu](../mfc/reference/cmenu-class.md)�
 
 ## <a name="examples-of-self-drawing-controls-and-menus"></a>自我描述控件和菜单的示例
 
-MFC 常规示例[CTRLTEST](../visual-cpp-samples.md)提供自我描述菜单和自我描述列表框的示例。
+MFC 常规示例[CTRLTEST](../overview/visual-cpp-samples.md)提供自我描述菜单和自我描述列表框的示例。
 
 自我描述按钮最典型的示例是位图按钮。 位图按钮是显示了不同状态的一个、两个或三个位图图像的按钮。 MFC 类中提供的此示例[CBitmapButton](../mfc/reference/cbitmapbutton-class.md)。
 
@@ -116,8 +116,7 @@ MFC 常规示例[CTRLTEST](../visual-cpp-samples.md)提供自我描述菜单和�
 
 这不应与 C++ 类派生混淆。 有关说明，c + + 术语*基类*和*派生的类*类似于*超类*并*子类*在 Windows 中对象模型。 使用 MFC 的 C++ 派生和 Windows 子类化在功能上是相同的，只不过 C++ 不支持动态子类化。
 
-
-  `CWnd` 类提供了 C++ 对象（派生自 `CWnd`）与 Windows 窗口对象（称为 `HWND`）之间的连接。
+`CWnd` 类提供了 C++ 对象（派生自 `CWnd`）与 Windows 窗口对象（称为 `HWND`）之间的连接。
 
 它们有 3 种常见的相关方式：
 
@@ -131,7 +130,7 @@ MFC 常规示例[CTRLTEST](../visual-cpp-samples.md)提供自我描述菜单和�
 
 这两个例程均会将一个 `CWnd` 对象附加到现有 `HWND`。 `SubclassWindow` 将直接采用 `HWND`。 `SubclassDlgItem` 是采用控件 ID 和父窗口的帮助器函数。 `SubclassDlgItem` 旨在将 C++ 对象附加到通过对话框模板创建的对话控件。
 
-请参阅[CTRLTEST](../visual-cpp-samples.md)何时使用的几个示例的示例`SubclassWindow`和`SubclassDlgItem`。
+请参阅[CTRLTEST](../overview/visual-cpp-samples.md)何时使用的几个示例的示例`SubclassWindow`和`SubclassDlgItem`。
 
 ## <a name="see-also"></a>请参阅
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4754
 ms.assetid: e0e4606a-754a-4f42-a274-21a34978d21d
-ms.openlocfilehash: 82036017188acc3f882e9751096af8ab268fd9db
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 203f2b97547c7ff8b1d68e3640e62d531b2600e9
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525166"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780348"
 ---
 # <a name="compiler-warning-level-4-c4754"></a>编译器警告（等级 4）C4754
 
@@ -19,7 +19,7 @@ ms.locfileid: "51525166"
 
 发出了 C4754 警告，因为比较的结果总是相同。 这可能表示条件的其中一个分支绝不会执行，原因最可能是关联的整数表达式不正确。 此代码缺陷通常在对 64 位体系结构执行了不正确的整数溢出检查时发生。
 
-整数转换规则很复杂，并且有很多微小的缺陷。 作为解决每个 C4754 警告的替代方法，你可以更新代码以使用[SafeInt 库](../../windows/safeint-library.md)。
+整数转换规则很复杂，并且有很多微小的缺陷。 作为解决每个 C4754 警告的替代方法，你可以更新代码以使用[SafeInt 库](../../safeint/safeint-library.md)。
 
 ## <a name="example"></a>示例
 
@@ -85,7 +85,7 @@ int wrap_overflow(unsigned long a)
 Warning C4754: Conversion rules for arithmetic operations in the comparison at C4754b.cpp (7) mean that one branch cannot be executed. Cast '4' to 'ULONG' (or similar type of 4 bytes).
 ```
 
-请注意，警告消息在警告分析遇到违规代码时显式列出了常量值 4 而不是原始的源字符串，`sizeof(unsigned long)` 已转换为常量。 因此，您可能必须追查源代码的哪个表达式与警告消息中的常量值关联。 解析为 C4754 警告消息中的常量的最常见的代码来源是表达式，如 `sizeof(TYPE)` 和 `strlen(szConstantString)`。
+请注意，警告消息在警告分析遇到违规代码时显式列出了常量值 4 而不是原始的源字符串，`sizeof(unsigned long)` 已转换为常量。 因此，你可能必须追查源代码的哪个表达式与警告消息中的常量值关联。 解析为 C4754 警告消息中的常量的最常见的代码来源是表达式，如 `sizeof(TYPE)` 和 `strlen(szConstantString)`。
 
 在这种情况下，修复后的代码将类似于形式：
 

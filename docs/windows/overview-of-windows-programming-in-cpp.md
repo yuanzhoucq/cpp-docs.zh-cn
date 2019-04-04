@@ -1,13 +1,13 @@
 ---
 title: C++ 中 Windows 编程概述
-ms.date: 11/15/2018
+ms.date: 03/28/2019
 ms.assetid: efc691d7-21f3-47ae-ae56-cab999ccf59d
-ms.openlocfilehash: 6338b390b11c58f3ebac2af1bb568ea3c3470cd1
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 35842ae73e59685946afe31e88729a36a6431768
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57810440"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772899"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>C++ 中 Windows 编程概述
 
@@ -19,13 +19,13 @@ C + + 控制台应用程序从命令行控制台窗口中运行，并可以显�
  
 ## <a name="native-desktop-client-applications"></a>本机桌面客户端应用程序
 
-术语*本机桌面客户端应用程序*引用 C 或 c + + 窗口使用的应用程序原始 Windows Win32 Api 以访问操作系统。 这些 Api 是自行写入主要是用 c 语言在创建此类应用程序时，您可以选择直接针对 C 样式消息循环，用于处理操作系统事件进行编程或使用*Microsoft 基础类*(MFC) 包装 Win32 c + + 库中是某种程度上面向对象的一种方法。 两种方法被视为"现代"相比通用 Windows 平台 （见下文），但同时仍是完全受支持并且具有数百万行的当今世界中运行的代码。
+术语*本机桌面客户端应用程序*指的是 C 或 c + + 窗口使用的应用程序的原始本机[Windows C Api 和/或 COM Api](/windows/desktop/apiindex/windows-api-list)访问操作系统。 这些 Api 是自行写入主要是用 c 语言在创建此类应用程序时，您可以选择直接针对 C 样式消息循环，用于处理操作系统事件进行编程或使用*Microsoft 基础类*(MFC) 包装 Win32 c + + 库中是某种程度上面向对象的一种方法。 两种方法被视为"现代"相比通用 Windows 平台 （见下文），但同时仍是完全受支持并且具有数百万行的当今世界中运行的代码。 在窗口中运行的 Win32 应用程序需要开发人员显式使用 Windows 过程函数中的 Windows 消息。 虽然名为 32 位，但 Win32 应用程序可以编译为 32 位 (x86) 或 64 位 (x64) 二进制程序。 在 Visual Studio IDE 中，x86 和 Win32 这两个术语是同义的。
 
 若要开始使用传统 Windows c + + 编程，请参阅[Win32 和 c + + 入门](/windows/desktop/LearnWin32/learn-to-program-for-windows)。 获取 Win32 一定了解后，可以将其更轻松地了解[MFC 桌面应用程序](/mfc/mfc-desktop-applications)。 传统的 c + + 桌面应用程序使用复杂的图形的示例，请参阅[Hilo:针对 Windows 的 c + + 应用程序开发](https://msdn.microsoft.com/library/windows/desktop/ff708696.aspx)。
 
 ### <a name="c-or-net"></a>C + + 或.NET？ 
 
-对于大多数桌面应用程序方案 (即，不面向 UWP)，请考虑使用C#和.NET。 这是因为.NET 编程是通常不太复杂、 更不易于出错，并且具有比 Win32 或 MFC 一个更现代的面向对象的 API。 在大多数情况下，其性能就足够了。 可以使用 Win32，以及 （请参阅下面的 UWP） 的新式 Windows 运行时 API 和.NET 功能的丰富图形，Windows Presentation Foundation (WPF)。 作为一般规则，我们建议使用 c + + 桌面应用程序，当你需要时：
+对于大多数桌面应用程序方案 (即，不面向 UWP)，请考虑使用C#若要创建的用户界面。 这是因为.NET 编程是通常不太复杂、 更不易于出错，并且具有比 Win32 或 MFC 一个更现代的面向对象的 API。 在大多数情况下，其性能就足够了。 可以使用 Win32，以及 （请参阅下面的 UWP） 的新式 Windows 运行时 API 和.NET 功能的丰富图形，Windows Presentation Foundation (WPF)。 作为一般规则，我们建议使用 c + + 桌面应用程序，当你需要时：
 
 - 对内存使用情况精确的控制
 - 中电源消耗最经济
@@ -33,9 +33,11 @@ C + + 控制台应用程序从命令行控制台窗口中运行，并可以显�
 - directx 访问
 - 标准 c + + 库的使用率很高
 
+可以创建中的用户界面C#，使用 C + + /cli CLI，若要启用应用程序来使用本机 c + + 库。 有关详细信息，请参阅[.NET 编程使用 C + + /cli CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)。
+
 ## <a name="com-components"></a>COM 组件
 
-Windows 操作系统的许多部分都基于上组件对象模型 (COM) 的定义使组件可以从任何计算机语言编写的客户端应用程序使用一个二进制标准。 在 c + + 中可以使用活动模板库 (ATL) 来简化创建您自己的 COM 组件的工作。 有关详细信息，请参阅[组件对象模型 (COM)](/windows/desktop/com/component-object-model--com--portal)并[ATL COM 桌面组件](../atl/atl-com-desktop-components.md)。
+[组件对象模型 (COM)](/windows/desktop/com/the-component-object-model)是一种规范，用来相互通信的不同语言编写的程序。 许多 Windows 组件作为 COM 对象实现，并且遵循标准 COM 规则对象的创建过程的接口发现和对象的析构。  使用 c + + 桌面应用程序的 COM 对象是相对简单，但更高级编写你自己的 COM 对象。 [活动模板库 (ATL)](../atl/atl-com-desktop-components.md)提供宏和 helper 函数，简化了 COM 开发。 有关详细信息，请参阅[ATL COM 桌面组件](../atl/atl-com-desktop-components.md)。
 
 ## <a name="windows-universal-apps"></a>Windows 通用应用
 
@@ -43,15 +45,15 @@ Windows 操作系统的许多部分都基于上组件对象模型 (COM) 的定�
 
 包括适用于 UWP 的原始 c + + 支持的 （1） C + + /CX 中，一种方言语法扩展插件使用 c + + 或 （2） 将 Windows 运行时库 (WRL) 基于标准 c + + 和 com。 这两个 C + + /cli CX 和 WRL 仍受支持。 我们建议为新项目[C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)这完全取决于标准 c + + 并提供更快的性能。 
 
-适用于 Windows 10 可以打包现有 c + + 桌面应用程序作为-用于通过 Microsoft Store 的部署。 有关详细信息，请参阅[打包桌面应用程序 （桌面桥）](/windows/uwp/porting/desktop-to-uwp-root)。
+## <a name="desktop-bridge"></a>桌面桥
+
+在 Windows 10 中，可以将现有的桌面应用程序或者 COM 对象打包为 UWP 应用并添加 UWP 功能，如触摸屏输入，或从现代 Windows API 集调用 API。 还可以向 Visual Studio 的桌面解决方案中添加 UWP 应用，然后将其封装在单个包中，使用 Windows API 在其间通信。
+
+在 Visual Studio 2017 版本 15.4 及更高版本中，可以创建一个 Windows 应用程序包项目，大大简化打包现有桌面应用程序的工作。 桌面应用程序使用的注册表调用或 API 存在一些限制，但多数情况下，在应用包中运行时，可以创建替代代码路径来实现类似功能。 有关详细信息，请参阅[桌面桥](/windows-uwp/porting/desktop-to-uwp-root)。
 
 ## <a name="games"></a>游戏
 
 DirectX 游戏可以在电脑或 Xbox 上运行。 有关详细信息，请参阅[DirectX 图形和游戏](/windows/desktop/directx)。
-
-## <a name="net-wrappers-for-c-libraries"></a>C + + 库的.NET 包装
-
-您可以使用 C + + /cli CLI 来创建互操作层，使.NET 代码，以使用本机 c + + 库。 有关详细信息，请参阅[.NET 编程使用 C + + /cli CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)。
 
 ## <a name="sql-server-database-clients"></a>SQL Server 数据库客户端
 
@@ -69,7 +71,7 @@ Windows*服务*是可以在使用很少或没有用户交互在后台中运行�
 
 Visual Studio 包含 C 运行时库 (CRT)、 c + + 标准库和其他特定于 Microsoft 的库。 包含这些库的标头文件的包含文件夹位于 \VC\ 文件夹下或在 CRT 中的 Windows SDK 安装文件夹的情况下的 Visual Studio 安装目录中。
 
-可以使用[Vcpkg 程序包管理器](../vcpkg.md)方便地安装用于 Windows 的数百个第三方开放源代码库。
+可以使用[Vcpkg 程序包管理器](../build/vcpkg.md)方便地安装用于 Windows 的数百个第三方开放源代码库。
 
 Microsoft 库包括：
 
@@ -89,22 +91,34 @@ Microsoft 库包括：
 
 ## <a name="development-tools"></a>开发工具
 
-Visual Studio 包含一个功能强大的本机代码调试器、静态分析工具、图形调试工具、一个功能齐全的代码编辑器、单元测试支持，以及许多其他工具和实用程序。 有关详细信息，请参阅[开始使用 Visual Studio 进行开发](/visualstudio/ide/get-started-developing-with-visual-studio)，并[Visual Studio 中概述的 c + + 开发](../overview-of-cpp-development.md)。
+Visual Studio 包含一个功能强大的本机代码调试器、静态分析工具、图形调试工具、一个功能齐全的代码编辑器、单元测试支持，以及许多其他工具和实用程序。 有关详细信息，请参阅[开始使用 Visual Studio 进行开发](/visualstudio/ide/get-started-developing-with-visual-studio)，并[Visual Studio 中概述的 c + + 开发](../overview/overview-of-cpp-development.md)。
 
 ## <a name="in-this-section"></a>本节内容
 |标题|描述|
 |-----------|-----------------|
-|[C++ 中的 Windows 桌面应用程序](desktop-applications-visual-cpp.md)| 如何创建传统桌面应用程序。|
+|[演练：创建标准 c + + 程序](walkthrough-creating-a-standard-cpp-program-cpp.md)| 创建一个 Windows 控制台应用程序。|
+|[演练：创建 Windows 桌面应用程序 (C++)](walkthrough-creating-windows-desktop-applications-cpp.md)|创建一个简单的 Windows 桌面应用程序。|
+|[Windows 桌面向导](windows-desktop-wizard.md)|使用向导来创建新的 Windows 项目。|
 |[活动模板库 (ATL)](../atl/TOC.md)|使用 ATL 库在 c + + 中创建 COM 组件。|
 |[Microsoft 基础类 (MFC)](../mfc/TOC.md)|使用 MFC 创建大或小 Windows 应用程序使用对话框和控件|
 |[ATL 和 MFC 共享类](../atl-mfc-shared/TOC.md)|使用 ATL 和 MFC 中的共享如 CString 类。|
-|[使用 C++/CLI 的 .NET开发](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)|创建包装的本机 c + + 库，使其能够与.NET 应用程序和组件之间的通信。|
-|[ .NET 和 UWP 的组件扩展](component-extensions-for-runtime-platforms.md)|引用的语法元素共享的 C + + /CX 和 C + + /cli CLI。|
-|[通用 Windows 应用 (C++)](universal-windows-apps-cpp.md)|编写 UWP 应用程序使用 C + + /CX 或 Windows 运行时模板库 (WRL)。|
-|[COM 和 .NET 的 C++ 属性](attributes/cpp-attributes-com-net.md)|使用.NET 或 com。 仅限 Windows 的编程的非标准属性|
+|[数据访问](../data/data-access-in-cpp.md)| OLE DB 和 ODBC|
+|[文本和字符串](../text/text-and-strings-in-visual-cpp.md)|在 Windows 上的各种字符串类型。|
+|[有关使用 DirectX 创建游戏的资源](resources-for-creating-a-game-using-directx.md)
+|[如何：在 Windows 桌面应用程序中使用 Windows 10 SDK](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|Windows SDK|
+|[使用资源文件](working-with-resource-files.md)|如何将图像、 图标、 字符串表和其他资源添加到桌面应用程序。|
+|[有关创建使用 DirectX （c + +） 的游戏的资源](resources-for-creating-a-game-using-directx.md)|在 c + + 中创建游戏的内容的链接。|
+|[如何：在 Windows 桌面应用程序中使用 Windows 10 SDK](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|包含使用 Windows 10 SDK 设置项目以便生成的步骤。|
+|[部署本机桌面应用程序](deploying-native-desktop-applications-visual-cpp.md)|部署在 Windows 上的本机应用程序。|
+
 
 ## <a name="related-articles"></a>相关文章
 
 |标题|描述|
 |-----------|-----------------|
-|[Visual C++](../visual-cpp-in-visual-studio.md)|Visual c + + 开发人员内容的父主题。|
+|[Visual C++](../overview/visual-cpp-in-visual-studio.md)|Visual c + + 开发人员内容的父主题。|
+[使用 C++/CLI 的 .NET开发](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)|创建包装的本机 c + + 库，使其能够与.NET 应用程序和组件之间的通信。|
+|[ .NET 和 UWP 的组件扩展](../extensions/component-extensions-for-runtime-platforms.md)|引用的语法元素共享的 C + + /CX 和 C + + /cli CLI。|
+|[通用 Windows 应用 (C++)](universal-windows-apps-cpp.md)|编写 UWP 应用程序使用 C + + /CX 或 Windows 运行时模板库 (WRL)。|
+|[COM 和 .NET 的 C++ 属性](attributes/cpp-attributes-com-net.md)|使用.NET 或 com。 仅限 Windows 的编程的非标准属性|
+

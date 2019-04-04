@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CMFCOutlookBarTabCtrl [MFC], SetToolbarImageList
 - CMFCOutlookBarTabCtrl [MFC], SetVisiblePageButtons
 ms.assetid: b1f2b3f7-cc59-49a3-99d8-7ff9b37c044b
-ms.openlocfilehash: 01effb8cb1142db0bcae6f9c456e4a3b3abd69e8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c791f3988c7257ed7d188917394e74a6dbeca98b
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57269930"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776799"
 ---
 # <a name="cmfcoutlookbartabctrl-class"></a>CMFCOutlookBarTabCtrl Class
 
@@ -109,7 +109,7 @@ class CMFCOutlookBarTabCtrl : public CMFCBaseTabCtrl
 
 ## <a name="example"></a>示例
 
-下面的示例演示如何初始化`CMFCOutlookBarTabCtrl`对象，并使用各种方法中的`CMFCOutlookBarTabCtrl`类。 该示例演示如何以启用上的 Outlook 栏选项卡页按钮的文本标签的就地编辑、 启用动画、 启用滚动句柄，使用户可以滚动浏览 Outlook 栏窗格上的按钮，设置 Outlook 选项卡 cont 的边框大小rol 和组上的 Outlook 栏选项卡按钮的文本标签的对齐方式。 此代码片段属于[Outlook 演示示例](../../visual-cpp-samples.md)。
+下面的示例演示如何初始化`CMFCOutlookBarTabCtrl`对象，并使用各种方法中的`CMFCOutlookBarTabCtrl`类。 该示例演示如何以启用上的 Outlook 栏选项卡页按钮的文本标签的就地编辑、 启用动画、 启用滚动句柄，使用户可以滚动浏览 Outlook 栏窗格上的按钮，设置 Outlook 选项卡 cont 的边框大小rol 和组上的 Outlook 栏选项卡按钮的文本标签的对齐方式。 此代码片段属于[Outlook 演示示例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_OutlookDemo#1](../../mfc/reference/codesnippet/cpp/cmfcoutlookbartabctrl-class_1.cpp)]
 [!code-cpp[NVC_MFC_OutlookDemo#2](../../mfc/reference/codesnippet/cpp/cmfcoutlookbartabctrl-class_2.cpp)]
@@ -170,7 +170,7 @@ void AddControl(
 
 ### <a name="example"></a>示例
 
-下面的示例演示如何使用`AddControl`中的方法`CMFCOutlookBarTabCtrl`类。 此代码片段属于[Outlook 演示示例](../../visual-cpp-samples.md)。
+下面的示例演示如何使用`AddControl`中的方法`CMFCOutlookBarTabCtrl`类。 此代码片段属于[Outlook 演示示例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_OutlookDemo#3](../../mfc/reference/codesnippet/cpp/cmfcoutlookbartabctrl-class_3.cpp)]
 

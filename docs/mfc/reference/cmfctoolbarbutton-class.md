@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CMFCToolBarButton [MFC], m_nStyle
 - CMFCToolBarButton [MFC], m_strText
 ms.assetid: 8a6ecffb-86b0-4f5c-8211-a9146b463efd
-ms.openlocfilehash: 94d7ba14e01b2965a0fe788162726d1019e847de
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 0a3af2b13eeb2775671ee89019b1562010acc059
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57275228"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776383"
 ---
 # <a name="cmfctoolbarbutton-class"></a>CMFCToolBarButton 类
 
@@ -260,7 +260,7 @@ class CMFCToolBarButton : public CObject
 
 ### <a name="data-members"></a>数据成员
 
-|name|描述|
+|名称|描述|
 |----------|-----------------|
 |[CMFCToolBarButton::m_bImage](#m_bimage)|指定是否在按钮上显示图像。|
 |[CMFCToolBarButton::m_bText](#m_btext)|指定是否在按钮上显示的文本标签。|
@@ -287,7 +287,7 @@ class CMFCToolBarButton : public CObject
 
 ## <a name="example"></a>示例
 
-下面的示例演示如何配置`CMFCToolBarButton`通过使用中的各种方法的对象`CMFCToolBarButton`类。 该示例说明了如何启用鼠标和键盘输入，设置按钮的图像索引，设置按钮的边框以及使按钮可见。 此代码片段属于[选项卡控件示例](../../visual-cpp-samples.md)。
+下面的示例演示如何配置`CMFCToolBarButton`通过使用中的各种方法的对象`CMFCToolBarButton`类。 该示例说明了如何启用鼠标和键盘输入，设置按钮的图像索引，设置按钮的边框以及使按钮可见。 此代码片段属于[选项卡控件示例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_TabControl#1](../../mfc/reference/codesnippet/cpp/cmfctoolbarbutton-class_1.cpp)]
 [!code-cpp[NVC_MFC_TabControl#2](../../mfc/reference/codesnippet/cpp/cmfctoolbarbutton-class_2.cpp)]

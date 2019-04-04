@@ -20,12 +20,12 @@ helpviewer_keywords:
 - C++ COM Interop
 - .NET [C++], porting C++ native to
 ms.assetid: 5f710bf1-88ae-4c4e-8326-b3f0b7c4c68a
-ms.openlocfilehash: ffe4aaeecc3e0f65851a87840cd21f81c4806fb4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aaa07373b7dd22807290ceefa9197b4013c61fe5
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50464575"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58778229"
 ---
 # <a name="using-c-interop-implicit-pinvoke"></a>使用 C++ 互操作（隐式 PInvoke）
 
@@ -59,7 +59,7 @@ C + + 互操作是通过显式 PInvoke 建议，因为它更好地提供类型�
 
 ## <a name="blittable-types"></a>可直接复制类型
 
-有关使用简单、 内部类型的非托管 Api (请参阅[Blittable 和非 Blittable 类型](/dotnet/framework/interop/blittable-and-non-blittable-types))，无需特殊编码，因为这些数据类型在内存中，具有相同的表示形式，但需要更复杂的数据类型显式数据封送处理。 有关示例，请参阅[如何： 从托管代码使用 PInvoke 调用本机 Dll](../dotnet/how-to-call-native-dlls-from-managed-code-using-pinvoke.md)。
+有关使用简单、 内部类型的非托管 Api (请参阅[Blittable 和非 Blittable 类型](/dotnet/framework/interop/blittable-and-non-blittable-types))，无需特殊编码，因为这些数据类型在内存中，具有相同的表示形式，但需要更复杂的数据类型显式数据封送处理。 有关示例，请参见 [如何：使用 PInvoke 从托管代码调用本机 Dll](../dotnet/how-to-call-native-dlls-from-managed-code-using-pinvoke.md)。
 
 ## <a name="example"></a>示例
 
@@ -109,41 +109,41 @@ Done
 
 - [如何：访问 System::String 中的字符](../dotnet/how-to-access-characters-in-a-system-string.md)
 
-- [如何：将 char * 字符串转换为 System::Byte 数组](../dotnet/how-to-convert-char-star-string-to-system-byte-array.md)
+- [如何：将 char* 字符串转换为 System::Byte 数组](../dotnet/how-to-convert-char-star-string-to-system-byte-array.md)
 
-- [如何： 将 system:: string 转换为 wchar_t * 或 char\*](../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md)
+- [如何：将 system:: string 转换为 wchar_t * 或 char\*](../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md)
 
 - [如何：将 System::String 转换为标准字符串](../dotnet/how-to-convert-system-string-to-standard-string.md)
 
 - [如何：将标准字符串转换为 System::String](../dotnet/how-to-convert-standard-string-to-system-string.md)
 
-- [如何：获取字节数组的指针](../dotnet/how-to-obtain-a-pointer-to-byte-array.md)
+- [如何：获取指向字节数组的指针](../dotnet/how-to-obtain-a-pointer-to-byte-array.md)
 
-- [如何：将非托管资源加载到一个字节数组](../dotnet/how-to-load-unmanaged-resources-into-a-byte-array.md)
+- [如何：将非托管资源加载到字节数组中](../dotnet/how-to-load-unmanaged-resources-into-a-byte-array.md)
 
 - [如何：修改本机函数中的引用类](../dotnet/how-to-modify-reference-class-in-a-native-function.md)
 
-- [如何：确定映像为本机映像还是 CLR 映像](../dotnet/how-to-determine-if-an-image-is-native-or-clr.md)
+- [如何：确定是本机映像还是 CLR 映像](../dotnet/how-to-determine-if-an-image-is-native-or-clr.md)
 
 - [如何：向全局程序集缓存添加本机 DLL](../dotnet/how-to-add-native-dll-to-global-assembly-cache.md)
 
-- [如何：在本机类型中保存对值类型的引用](../dotnet/how-to-hold-reference-to-value-type-in-native-type.md)
+- [如何：在本机类型中保留对值类型的引用](../dotnet/how-to-hold-reference-to-value-type-in-native-type.md)
 
-- [如何：在非托管内存中保存对象引用](../dotnet/how-to-hold-object-reference-in-unmanaged-memory.md)
+- [如何：在非托管内存中保留对象引用](../dotnet/how-to-hold-object-reference-in-unmanaged-memory.md)
 
-- [如何： 检测 /clr 编译](../dotnet/how-to-detect-clr-compilation.md)
+- [如何：检测 /clr 编译](../dotnet/how-to-detect-clr-compilation.md)
 
-- [如何：在 System::Guid 与 _GUID 之间进行转换](../dotnet/how-to-convert-between-system-guid-and-guid.md)
+- [如何：在 System::Guid 与 _GUID 之间转换](../dotnet/how-to-convert-between-system-guid-and-guid.md)
 
 - [如何：指定 out 参数](../dotnet/how-to-specify-an-out-parameter.md)
 
-- [如何： 在 /clr 编译中使用本机类型](../dotnet/how-to-use-a-native-type-in-a-clr-compilation.md)
+- [如何：在 /clr 编译中使用本机类型](../dotnet/how-to-use-a-native-type-in-a-clr-compilation.md)
 
-- [如何：使用本机类型声明句柄](../dotnet/how-to-declare-handles-in-native-types.md)
+- [如何：在本机类型中声明句柄](../dotnet/how-to-declare-handles-in-native-types.md)
 
 - [如何：包装本机类以供 C# 使用](../dotnet/how-to-wrap-native-class-for-use-by-csharp.md)
 
-在互操作方案中使用委托的信息，请参阅[委托 （c + + 组件扩展）](../windows/delegate-cpp-component-extensions.md)。
+在互操作方案中使用委托的信息，请参阅[委托 （c + + 组件扩展）](../extensions/delegate-cpp-component-extensions.md)。
 
 ## <a name="see-also"></a>请参阅
 

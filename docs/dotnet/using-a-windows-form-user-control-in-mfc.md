@@ -9,12 +9,12 @@ helpviewer_keywords:
 - interop [C++], MFC
 - Windows Forms [C++], MFC support
 ms.assetid: 63fb099b-1dff-469c-9e34-dab52e122fcd
-ms.openlocfilehash: d36932a3edc0129f0497cb8db4095283650c5c96
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 38c5c37712b430b137934d441056e60f2c130f78
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50494154"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773094"
 ---
 # <a name="using-a-windows-form-user-control-in-mfc"></a>在 MFC 中使用 Windows 窗体用户控件
 
@@ -34,7 +34,7 @@ ms.locfileid: "50494154"
 > [!NOTE]
 > 在生成应用程序中使用的 MFC Windows 窗体界面 DLL (mfcmifc80.dll) 专用 （修改） 副本时，它将无法安装到 GAC 中，除非 Microsoft 密钥替换供应商密钥。 程序集签名的详细信息，请参阅[使用程序集编程](/dotnet/framework/app-domains/programming-with-assemblies)并[强名称程序集 （程序集签名） (C + + CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md)。
 
-如果您的 MFC 应用程序使用 Windows 窗体，您需要重新分发 mfcmifc80.dll 与你的应用程序。 有关详细信息，请参阅[重新分发 MFC 库](../ide/redistributing-the-mfc-library.md)。
+如果您的 MFC 应用程序使用 Windows 窗体，您需要重新分发 mfcmifc80.dll 与你的应用程序。 有关详细信息，请参阅[重新分发 MFC 库](../windows/redistributing-the-mfc-library.md)。
 
 ## <a name="in-this-section"></a>本节内容
 

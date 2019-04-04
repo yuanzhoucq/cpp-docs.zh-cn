@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CMFCRibbonLinkCtrl [MFC], OpenLink
 - CMFCRibbonLinkCtrl [MFC], SetLink
 ms.assetid: 77ae1941-e0ab-4a9d-911e-1752d34c079b
-ms.openlocfilehash: 9f47e5a3a25120370bd618ac3a89de76761fa61a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: bc13cf29fd9fed9f91221f00d4b605b3d9c3506f
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57287786"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772392"
 ---
 # <a name="cmfcribbonlinkctrl-class"></a>CMFCRibbonLinkCtrl 类
 
@@ -113,7 +113,7 @@ CMFCRibbonLinkCtrl(
 
 ### <a name="example"></a>示例
 
-下面的示例演示如何使用的构造函数`CMFCRibbonLinkCtrl`类。 此代码片段属于[功能区的小工具示例](../../visual-cpp-samples.md)。
+下面的示例演示如何使用的构造函数`CMFCRibbonLinkCtrl`类。 此代码片段属于[功能区的小工具示例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_RibbonGadgets#1](../../mfc/reference/codesnippet/cpp/cmfcribbonlinkctrl-class_1.cpp)]
 

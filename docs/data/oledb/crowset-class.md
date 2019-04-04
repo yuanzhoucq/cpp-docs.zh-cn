@@ -238,12 +238,12 @@ helpviewer_keywords:
 - Update method
 - UpdateAll method
 ms.assetid: b0228a90-b8dd-47cc-b397-8d4c15c1e7f4
-ms.openlocfilehash: 4a24dada2f1211138449e65a8865810a46230970
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: eda4bb09865698a657828c6d4684a8df92ffe9b6
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58329008"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779451"
 ---
 # <a name="crowset-class"></a>CRowset 类
 
@@ -534,7 +534,7 @@ HRESULT GetDataHere(int nAccessor,
 
 ### <a name="remarks"></a>备注
 
-有关如何使用此函数的示例，请参阅[MultiRead 的示例](../../visual-cpp-samples.md)。
+有关如何使用此函数的示例，请参阅[MultiRead 的示例](../../overview/visual-cpp-samples.md)。
 
 ## <a name="getoriginaldata"></a> CRowset::GetOriginalData
 
@@ -937,8 +937,8 @@ HRESULT UpdateAll(DBCOUNTITEM* pcRows = NULL,
 
 ## <a name="see-also"></a>请参阅
 
-[DBViewer 示例](../../visual-cpp-samples.md)<br/>
-[MultiRead 的示例](../../visual-cpp-samples.md)<br/>
-[MultiRead 的属性示例](../../visual-cpp-samples.md)<br/>
+[DBViewer 示例](../../overview/visual-cpp-samples.md)<br/>
+[MultiRead 的示例](../../overview/visual-cpp-samples.md)<br/>
+[MultiRead 的属性示例](../../overview/visual-cpp-samples.md)<br/>
 [OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [OLE DB 使用者模板参考](../../data/oledb/ole-db-consumer-templates-reference.md)
