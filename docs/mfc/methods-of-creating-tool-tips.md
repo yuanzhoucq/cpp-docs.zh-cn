@@ -21,8 +21,7 @@ MFC 提供了三个类来创建和管理工具提示控件：[CWnd](../mfc/refer
 
 如果您创建工具栏使用`CToolBarCtrl`，可以实现该工具栏中直接使用以下成员函数的工具提示：[GetToolTips](../mfc/reference/ctoolbarctrl-class.md#gettooltips)并[SetToolTips](../mfc/reference/ctoolbarctrl-class.md#settooltips)。 请参阅这些单独的成员函数和[处理工具提示通知](../mfc/handling-tool-tip-notifications.md)有关它们如何实现工具提示的详细信息。
 
-
-  `CToolTipCtrl` 类提供了 Windows 公共工具提示控件的功能。 一个工具提示控件可以提供多个工具的信息。 工具是一个窗口（如子窗口或控件）或窗口工作区中应用程序定义的矩形区域。 [CMFCToolTipCtrl](../mfc/reference/cmfctooltipctrl-class.md)类派生自`CToolTipCtrl`和提供的其他可视样式和功能。
+`CToolTipCtrl` 类提供了 Windows 公共工具提示控件的功能。 一个工具提示控件可以提供多个工具的信息。 工具是一个窗口（如子窗口或控件）或窗口工作区中应用程序定义的矩形区域。 [CMFCToolTipCtrl](../mfc/reference/cmfctooltipctrl-class.md)类派生自`CToolTipCtrl`和提供的其他可视样式和功能。
 
 ## <a name="see-also"></a>请参阅
 

@@ -23,8 +23,7 @@ ms.locfileid: "57274591"
 
 每个命令目标类都可能重写 `OnCmdMsg` 成员函数。 通过重写，每个类会将命令路由到下一特定目标。 框架窗口，例如，始终将命令路由至其当前子窗口或视图中，表中所示[标准命令传送](../mfc/command-routing.md)。
 
-
-  `CCmdTarget` 的默认 `OnCmdMsg` 实现使用命令目标类的消息映射搜索收到的每条命令消息的处理程序函数 - 通过搜索标准消息的同一方式。 如果找到匹配项，则将调用找到的处理程序。 消息映射搜索所述[如何 Framework 搜索消息映射](../mfc/how-the-framework-searches-message-maps.md)。
+`CCmdTarget` 的默认 `OnCmdMsg` 实现使用命令目标类的消息映射搜索收到的每条命令消息的处理程序函数 - 通过搜索标准消息的同一方式。 如果找到匹配项，则将调用找到的处理程序。 消息映射搜索所述[如何 Framework 搜索消息映射](../mfc/how-the-framework-searches-message-maps.md)。
 
 ## <a name="see-also"></a>请参阅
 
