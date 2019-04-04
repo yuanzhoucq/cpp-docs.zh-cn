@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Add References Dialog Box (C++)
 - .NET Framework (C++), Add References Dialog Box
 ms.assetid: 12b8f571-0f21-40b3-9404-5318a57e9cb5
-ms.openlocfilehash: 8daba00432d7f14c8517da3ed4dc506cfd80865a
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: eb4d970527ba919af10eadab7c907f5108767b9b
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57824982"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780465"
 ---
 # <a name="consuming-libraries-and-components"></a>使用库和组件
 
@@ -20,7 +20,7 @@ ms.locfileid: "57824982"
 
 ## <a name="consuming-libraries-downloaded-via-vcpkg"></a>通过 vcpkg 使用库下载
 
-若要使用的库，使用下载**vcpkg**包管理器中，你可以忽略以下说明。 请参阅 [vcpkg：适用于 Windows、 Linux 和 MacOS 的 c + + 程序包管理器](../vcpkg.md#integrate-with-visual-studio-windows)有关详细信息。
+若要使用的库，使用下载**vcpkg**包管理器中，你可以忽略以下说明。 请参阅 [vcpkg：适用于 Windows、 Linux 和 MacOS 的 c + + 程序包管理器](vcpkg.md#integrate-with-visual-studio-windows)有关详细信息。
 
 ## <a name="consuming-static-libraries"></a>当前使用的静态库
 
@@ -167,4 +167,4 @@ ActiveX 引用属性仅可用于对 COM 组件的引用。 只有在“引用”
 ## <a name="see-also"></a>请参阅
 
 [C + + 项目属性页引用](reference/property-pages-visual-cpp.md)<br>
-[设置 c + + 编译器和生成 Visual Studio 中的属性](working-with-project-properties.md)
+[在 Visual Studio 中设置 C++ 编译器并生成属性](working-with-project-properties.md)

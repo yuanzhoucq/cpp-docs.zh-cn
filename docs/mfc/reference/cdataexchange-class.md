@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CDataExchange [MFC], m_bSaveAndValidate
 - CDataExchange [MFC], m_pDlgWnd
 ms.assetid: 84ed6113-325d-493e-a75d-223f03a992b8
-ms.openlocfilehash: 630bc41ee20aa7cf6f62cd320b15b8dca0d3fedf
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 0e7a9d429acb1acd72942e5f10ac0815232ddc69
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57268390"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776305"
 ---
 # <a name="cdataexchange-class"></a>CDataExchange 类
 
@@ -230,7 +230,7 @@ COleControlSite* PrepareOleCtrl(int nIDC);
 
 ## <a name="see-also"></a>请参阅
 
-[MFC 示例 VIEWEX](../../visual-cpp-samples.md)<br/>
+[MFC 示例 VIEWEX](../../overview/visual-cpp-samples.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>
 [CWnd::DoDataExchange](../../mfc/reference/cwnd-class.md#dodataexchange)<br/>
 [CWnd::UpdateData](../../mfc/reference/cwnd-class.md#updatedata)

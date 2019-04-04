@@ -100,12 +100,12 @@ helpviewer_keywords:
 - CRichEditView [MFC], m_nBulletIndent
 - CRichEditView [MFC], m_nWordWrap
 ms.assetid: bd576b10-4cc0-4050-8f76-e1a0548411e4
-ms.openlocfilehash: 9cedcfbfb662d7d4d635a02b82ea45828c54b958
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 60eeaa2a37dd824ae418b25e95743c21c65ae7ce
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259511"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773718"
 ---
 # <a name="cricheditview-class"></a>CRichEditView 类
 
@@ -194,7 +194,7 @@ class CRichEditView : public CCtrlView
 
 此 Windows 公共控件 (并因此[CRichEditCtrl](../../mfc/reference/cricheditctrl-class.md)和相关类) 仅适用于在 Windows 95/98 和 Windows NT 版本 3.51 下运行的程序和更高版本。
 
-在 MFC 应用程序中使用 rich edit 视图的示例，请参阅[写字板](../../visual-cpp-samples.md)示例应用程序。
+在 MFC 应用程序中使用 rich edit 视图的示例，请参阅[写字板](../../overview/visual-cpp-samples.md)示例应用程序。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -1284,7 +1284,7 @@ virtual void WrapChanged();
 
 ## <a name="see-also"></a>请参阅
 
-[MFC 示例写字板](../../visual-cpp-samples.md)<br/>
+[MFC 示例写字板](../../overview/visual-cpp-samples.md)<br/>
 [CCtrlView 类](../../mfc/reference/cctrlview-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>
 [CRichEditDoc 类](../../mfc/reference/cricheditdoc-class.md)<br/>

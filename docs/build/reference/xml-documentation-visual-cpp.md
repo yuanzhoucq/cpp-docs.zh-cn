@@ -7,12 +7,12 @@ helpviewer_keywords:
 - comments, C++ source code files
 - /// delimiter for C++ documentation
 ms.assetid: a1aec1c5-b2d1-4c74-83ae-1dbbbb76b506
-ms.openlocfilehash: d111d601d966ec5f863d62d9788654101a2ab56d
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: c46cb77dd2efe41a41c7108115d6d22808782f01
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57824853"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773523"
 ---
 # <a name="xml-documentation-visual-c"></a>XML 文档 (Visual C++)
 
@@ -44,4 +44,4 @@ ms.locfileid: "57824853"
 
 ## <a name="see-also"></a>请参阅
 
-[适用于运行时平台的组件扩展](../../windows/component-extensions-for-runtime-platforms.md)
+[适用于运行时平台的组件扩展](../../extensions/component-extensions-for-runtime-platforms.md)

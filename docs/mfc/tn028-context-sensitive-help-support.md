@@ -8,12 +8,12 @@ helpviewer_keywords:
 - TN028
 - resource identifiers, context-sensitive Help
 ms.assetid: 884f1c55-fa27-4d4c-984f-30907d477484
-ms.openlocfilehash: e3ac2742f2c57c01c645c72c933234a96ece773a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 5689e314c2ba94068619a066e5f458e06819b2b7
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57288280"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773471"
 ---
 # <a name="tn028-context-sensitive-help-support"></a>TN028:上下文相关帮助支持
 
@@ -148,7 +148,7 @@ HID_MY_COMMAND    0x10096
 
 此格式与帮助编译器的工具兼容，该设备使用主题名称（左侧的符号）映射上下文 ID（右侧的数字）。
 
-MAKEHM 的源代码现已推出 MFC 编程实用工具示例[MAKEHM](../visual-cpp-samples.md)。
+MAKEHM 的源代码现已推出 MFC 编程实用工具示例[MAKEHM](../overview/visual-cpp-samples.md)。
 
 ## <a name="adding-help-support-after-running-the-mfc-application-wizard"></a>在运行 MFC 应用程序向导后添加帮助支持
 
@@ -158,8 +158,7 @@ MAKEHM 的源代码现已推出 MFC 编程实用工具示例[MAKEHM](../visual-c
 
 通过 `AfxMessageBox` 函数（`MessageBox` Windows API 的包装器）支持消息框上的“帮助”（有时称为“警报”）。
 
-
-  `AfxMessageBox` 有两种形式，一种与字符串 ID 一起使用，另一种与指向字符串 (`LPCSTR`) 的指针一起使用：
+`AfxMessageBox` 有两种形式，一种与字符串 ID 一起使用，另一种与指向字符串 (`LPCSTR`) 的指针一起使用：
 
 ```
 int AFXAPI AfxMessageBox(LPCSTR lpszText,

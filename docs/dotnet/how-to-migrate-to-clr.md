@@ -10,12 +10,12 @@ helpviewer_keywords:
 - migration [C++], /clr compiler option
 - /clr compiler option [C++], porting to
 ms.assetid: c9290b8b-436a-4510-8b56-eae51f4a9afc
-ms.openlocfilehash: 8c4827891799d2c76a344e4c6da8f3d96333826e
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 6ac470b85a14bfe32c7f3fe47168180687669ec6
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816023"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781310"
 ---
 # <a name="how-to-migrate-to-clr"></a>如何：迁移到 /clr
 
@@ -152,7 +152,7 @@ COMObj2->Method(args);  // C++ equivalent
 
 ## <a name="using-new-visual-c-features"></a>使用 Visual c + + 的新功能
 
-应用程序编译、 链接和运行之后, 可以开始在编译使用的任何模块中使用.NET 功能 **/clr**。 有关详细信息，请参阅[运行时平台的组件扩展](../windows/component-extensions-for-runtime-platforms.md)。
+应用程序编译、 链接和运行之后, 可以开始在编译使用的任何模块中使用.NET 功能 **/clr**。 有关详细信息，请参阅[运行时平台的组件扩展](../extensions/component-extensions-for-runtime-platforms.md)。
 
 如果用于 c + + 托管扩展，可以转换代码以使用新语法。 转换为 c + + 托管扩展的详细信息，请参阅[C + + /cli 迁移入门](../dotnet/cpp-cli-migration-primer.md)。
 
@@ -162,7 +162,7 @@ COMObj2->Method(args);  // C++ equivalent
 
 - [本机和 .NET 的互操作性](../dotnet/native-and-dotnet-interoperability.md)
 
-- [适用于运行时平台的组件扩展](../windows/component-extensions-for-runtime-platforms.md)
+- [适用于运行时平台的组件扩展](../extensions/component-extensions-for-runtime-platforms.md)
 
 ## <a name="see-also"></a>请参阅
 

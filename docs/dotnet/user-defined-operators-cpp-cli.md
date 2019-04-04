@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - user-defined operators under /clr
 ms.assetid: 42f93b4a-6de4-4e34-b07b-5a62ac014f2c
-ms.openlocfilehash: 462d0d2819d4c65b0e37d39f24566a7152a44cf3
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: cf80eb4c440c1308e8ea06a563c18569e4e4ddf2
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57739988"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774563"
 ---
 # <a name="user-defined-operators-ccli"></a>用户定义的运算符 (C++/CLI)
 
@@ -19,7 +19,7 @@ ms.locfileid: "57739988"
 
 - 封闭类型的实例的一个句柄 (`type` ^)。
 
-- 封闭类型实例的句柄的间接引用类型（`type`^& 或 type^%）。
+- 间接引用类型 (`type`^ & 或类型 ^ %)为封闭类型的实例的句柄。
 
 在值类型中，静态的用户定义的运算符的参数之一必须是以下类型中的一个：
 
@@ -27,9 +27,9 @@ ms.locfileid: "57739988"
 
 - 封闭类型的间接指针类型 (`type` ^)。
 
-- 封闭类型的间接引用类型（`type`% 或 `type`&）。
+- 间接引用类型 (`type`%或`type`&) 到封闭类型。
 
-- 句柄的间接引用类型（`type`^% 或 `type`^&）。
+- 间接引用类型 (`type`^ %或`type`^ &) 句柄。
 
 您可以定义以下运算符：
 
@@ -165,4 +165,4 @@ int main() {
 
 ## <a name="see-also"></a>请参阅
 
-[类和结构](../windows/classes-and-structs-cpp-component-extensions.md)
+[类和结构](../extensions/classes-and-structs-cpp-component-extensions.md)

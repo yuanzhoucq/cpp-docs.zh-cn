@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - CRectTracker class [MFC], implementing trackers
 ms.assetid: baaeca2c-5114-485f-bf58-8807db1bc973
-ms.openlocfilehash: af8e1b72bde268a15012515065853daa617936e4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 0f037480e83b8ca1ba12af56904afe25a33e4d6c
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283977"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774459"
 ---
 # <a name="how-to-implement-tracking-in-your-code"></a>如何：在代码中实现跟踪
 
@@ -27,7 +27,7 @@ ms.locfileid: "57283977"
 |阴影的边框|项是当前处于就地活动状态|
 |阴影图案覆盖项|项的服务器处于打开状态|
 
-您可以处理此初始化轻松地使用检查 OLE 项的状态，并设置适当的样式的过程。 `SetupTracker`函数中的 OCLIENT 示例演示了跟踪器初始化。 此函数的参数包括跟踪器的地址*pTracker*; 以指向与跟踪程序，相关的客户端项*pItem*; 和指向一个矩形、 *pTrueRect*. 此函数的更完整示例，请参阅 MFC OLE 示例[OCLIENT](../visual-cpp-samples.md)。
+您可以处理此初始化轻松地使用检查 OLE 项的状态，并设置适当的样式的过程。 `SetupTracker`函数中的 OCLIENT 示例演示了跟踪器初始化。 此函数的参数包括跟踪器的地址*pTracker*; 以指向与跟踪程序，相关的客户端项*pItem*; 和指向一个矩形、 *pTrueRect*. 此函数的更完整示例，请参阅 MFC OLE 示例[OCLIENT](../overview/visual-cpp-samples.md)。
 
 **SetupTracker**代码示例显示了一个函数; 函数的行混杂在一起讨论的函数的功能：
 
@@ -45,11 +45,11 @@ ms.locfileid: "57283977"
 
 [!code-cpp[NVC_MFCOClient#4](../mfc/codesnippet/cpp/how-to-implement-tracking-in-your-code_4.cpp)]
 
-然后可以调用此函数，每当时，跟踪器会显示。 例如，调用该函数从`OnDraw`视图类函数。 这会更新时重新绘制该视图跟踪器的外观。 有关完整示例，请参阅`CMainView::OnDraw`函数的 MFC OLE 示例[OCLIENT](../visual-cpp-samples.md)。
+然后可以调用此函数，每当时，跟踪器会显示。 例如，调用该函数从`OnDraw`视图类函数。 这会更新时重新绘制该视图跟踪器的外观。 有关完整示例，请参阅`CMainView::OnDraw`函数的 MFC OLE 示例[OCLIENT](../overview/visual-cpp-samples.md)。
 
-在应用程序时，会发生需要跟踪程序代码，例如调整大小、 移动或点击检测的事件。 这些操作通常表示试图进行抓取或移动项。 在这些情况下，你将需要确定抓取的内容： 重设大小句柄或之间的边界的一部分重设大小句柄。 `OnLButtonDown`消息处理程序是测试与项相关的鼠标位置的好时机。 调用`CRectTracker::HitTest`。 如果该测试返回新鲜`CRectTracker::hitOutside`，项是已调整大小或移动。 因此，应该使调用`Track`成员函数。 请参阅`CMainView::OnLButtonDown`函数位于 MFC OLE 示例[OCLIENT](../visual-cpp-samples.md)有关完整示例。
+在应用程序时，会发生需要跟踪程序代码，例如调整大小、 移动或点击检测的事件。 这些操作通常表示试图进行抓取或移动项。 在这些情况下，你将需要确定抓取的内容： 重设大小句柄或之间的边界的一部分重设大小句柄。 `OnLButtonDown`消息处理程序是测试与项相关的鼠标位置的好时机。 调用`CRectTracker::HitTest`。 如果该测试返回新鲜`CRectTracker::hitOutside`，项是已调整大小或移动。 因此，应该使调用`Track`成员函数。 请参阅`CMainView::OnLButtonDown`函数位于 MFC OLE 示例[OCLIENT](../overview/visual-cpp-samples.md)有关完整示例。
 
-`CRectTracker`类提供了几个不同的光标形状，用于指示是否迁移后，重设大小，或拖动操作正在进行。 若要处理此事件，检查以查看是否已选择当前位于鼠标下的项。 如果是，请调用`CRectTracker::SetCursor`，或调用默认处理程序。 下面的示例是从 MFC OLE 示例[OCLIENT](../visual-cpp-samples.md):
+`CRectTracker`类提供了几个不同的光标形状，用于指示是否迁移后，重设大小，或拖动操作正在进行。 若要处理此事件，检查以查看是否已选择当前位于鼠标下的项。 如果是，请调用`CRectTracker::SetCursor`，或调用默认处理程序。 下面的示例是从 MFC OLE 示例[OCLIENT](../overview/visual-cpp-samples.md):
 
 [!code-cpp[NVC_MFCOClient#5](../mfc/codesnippet/cpp/how-to-implement-tracking-in-your-code_5.cpp)]
 

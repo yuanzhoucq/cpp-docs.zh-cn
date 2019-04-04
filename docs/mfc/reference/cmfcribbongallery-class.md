@@ -78,12 +78,12 @@ helpviewer_keywords:
 - CMFCRibbonGallery [MFC], SetPaletteID
 - CMFCRibbonGallery [MFC], OnDrawPaletteIcon
 ms.assetid: 9734c9c9-981c-4b3f-8c59-264fd41811b4
-ms.openlocfilehash: aa2996cba7d4839387d5801d2bab70b428134db4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 818ce55e44d91520e568308a1a1e8a1fa0c8658d
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57298628"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780387"
 ---
 # <a name="cmfcribbongallery-class"></a>CMFCRibbonGallery 类
 
@@ -155,7 +155,7 @@ class CMFCRibbonGallery : public CMFCRibbonButton
 
 ## <a name="example"></a>示例
 
-下面的示例演示如何使用中的各种方法`CMFCRibbonGallery`类，以配置`CMFCRibbonGallery`对象。 该示例说明了如何在库中指定每个行项的数目、 启用菜单面板的大小调整、 启用侧栏左侧的弹出菜单和显示功能区库为直接在功能区栏上的调色板。 此代码片段属于 [Draw Client 示例](../../visual-cpp-samples.md)。
+下面的示例演示如何使用中的各种方法`CMFCRibbonGallery`类，以配置`CMFCRibbonGallery`对象。 该示例说明了如何在库中指定每个行项的数目、 启用菜单面板的大小调整、 启用侧栏左侧的弹出菜单和显示功能区库为直接在功能区栏上的调色板。 此代码片段属于 [Draw Client 示例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_DrawClient#6](../../mfc/reference/codesnippet/cpp/cmfcribbongallery-class_1.cpp)]
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - C++ Interop, arrays
 - data marshaling [C++], arrays
 ms.assetid: c2b37ab1-8acf-4855-ad3c-7d2864826b14
-ms.openlocfilehash: 0b27fd65b7d42bff2a009b14c39d9547d8a4a919
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 91fd86a547a0241f0cfcca7cfc36c204429d80ac
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57739997"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776890"
 ---
 # <a name="how-to-marshal-arrays-using-c-interop"></a>如何：封送数组使用 c + + 互操作
 
@@ -24,7 +24,7 @@ ms.locfileid: "57739997"
 
 ## <a name="example"></a>示例
 
-下面的示例演示如何将托管的数组传递给非托管函数。 托管的函数使用[pin_ptr (C + + CLI)](../windows/pin-ptr-cpp-cli.md)若要禁止显示之前调用非托管的函数数组的垃圾回收。 通过为在 GC 堆提供固定指针的非托管的函数，可以避免使数组的副本的开销。 为了演示，非托管的函数访问 GC 堆内存，它会修改数组的内容，所做的更改会反映在托管的函数时继续控制。
+下面的示例演示如何将托管的数组传递给非托管函数。 托管的函数使用[pin_ptr (C + + CLI)](../extensions/pin-ptr-cpp-cli.md)若要禁止显示之前调用非托管的函数数组的垃圾回收。 通过为在 GC 堆提供固定指针的非托管的函数，可以避免使数组的副本的开销。 为了演示，非托管的函数访问 GC 堆内存，它会修改数组的内容，所做的更改会反映在托管的函数时继续控制。
 
 ```
 // PassArray1.cpp

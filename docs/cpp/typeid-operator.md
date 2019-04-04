@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - typeid operator
 ms.assetid: 8871cee6-d6b9-4301-a5cb-bf3dc9798d61
-ms.openlocfilehash: dfbf5275391e2820c94d2827c9b2c3eb252365c5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b1185f48df4a941eb2a5d81bfa67d07cdf4387d0
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50571920"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780881"
 ---
 # <a name="typeid-operator"></a>typeid 运算符
 
@@ -26,7 +26,7 @@ typeid(expression)
 
 结果**typeid**是`const type_info&`。 值是指`type_info`表示的对象*类型 id*或类型的*表达式*，具体哪种形式的取决于**typeid**使用。 请参阅[type_info 类](../cpp/type-info-class.md)有关详细信息。
 
-**Typeid**不适用于托管类型 （抽象声明符或实例），请参阅[typeid](../windows/typeid-cpp-component-extensions.md)有关获取信息<xref:System.Type>的指定类型。
+**Typeid**不适用于托管类型 （抽象声明符或实例），请参阅[typeid](../extensions/typeid-cpp-component-extensions.md)有关获取信息<xref:System.Type>的指定类型。
 
 **Typeid**运算符执行运行时检查时应用于多态类类型的左值的对象的真实类型不能由提供的静态信息。 此类情况是：
 

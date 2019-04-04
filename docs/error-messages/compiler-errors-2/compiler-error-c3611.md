@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3611
 ms.assetid: 42f3e320-41de-420a-bd05-8924cab765aa
-ms.openlocfilehash: 08e9b969c9eb03dd0259813487bfeb04bfaa5ca9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2d4c5cb02b1b8c5472502380fe7c74ff4a91954a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50590237"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781921"
 ---
 # <a name="compiler-error-c3611"></a>编译器错误 C3611
 
 function： 密封的函数不能具有纯说明符
 
-密封的函数未正确声明。  有关详细信息，请参阅[密封](../../windows/sealed-cpp-component-extensions.md)。
+密封的函数未正确声明。  有关详细信息，请参阅[密封](../../extensions/sealed-cpp-component-extensions.md)。
 
 ## <a name="example"></a>示例
 

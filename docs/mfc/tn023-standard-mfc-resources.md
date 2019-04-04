@@ -8,12 +8,12 @@ helpviewer_keywords:
 - TN023
 - standard resources
 ms.assetid: 60af8415-c576-4c2f-a711-ca5da0b9a1f2
-ms.openlocfilehash: b4edc00f77152b8d677f3113e0ed6386569b0988
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: d29f0ab2254a52e01f2016f64a37ddfce47955bb
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57277672"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780309"
 ---
 # <a name="tn023-standard-mfc-resources"></a>TN023:标准 MFC 资源
 
@@ -23,7 +23,7 @@ ms.locfileid: "57277672"
 
 MFC 提供了可在应用程序中使用的两种预定义资源：剪贴画资源和标准框架资源。
 
-剪贴画资源是框架并不依赖的、但您可能希望添加到应用程序的用户界面的附加资源。 以下剪贴画资源包含在 MFC 常规示例[剪贴画](../visual-cpp-samples.md):
+剪贴画资源是框架并不依赖的、但您可能希望添加到应用程序的用户界面的附加资源。 以下剪贴画资源包含在 MFC 常规示例[剪贴画](../overview/visual-cpp-samples.md):
 
 - Common.rc:包含单个文件的资源：
 

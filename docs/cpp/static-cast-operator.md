@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - static_cast keyword [C++]
 ms.assetid: 1f7c0c1c-b288-476c-89d6-0e2ceda5c293
-ms.openlocfilehash: 8e39fe7eb0fb9b77a82b305fa2f8186ad4e855a1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dca6d5297379e6ddc1c70dba80f35f2f55672e49
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50601703"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776916"
 ---
 # <a name="staticcast-operator"></a>static_cast 运算符
 
@@ -103,7 +103,7 @@ void f() {
 
 **Static_cast**运算符无法转换掉**const**，**易失性**，或者 **__unaligned**属性。 请参阅[const_cast 运算符](../cpp/const-cast-operator.md)有关删除这些属性的信息。
 
-由于重定位垃圾回收器，使用顶部执行无检查的转换的危险**static_cast**仅在性能关键代码时应确定将正常工作。 如果必须使用**static_cast**在发布模式下，将其与[safe_cast](../windows/safe-cast-cpp-component-extensions.md)在调试版本中，以确保成功。
+**C + + /CLI CLI:** 由于重定位垃圾回收器，使用顶部执行无检查的转换的危险**static_cast**仅在性能关键代码时应确定将正常工作。 如果必须使用**static_cast**在发布模式下，将其与[safe_cast](../extensions/safe-cast-cpp-component-extensions.md)在调试版本中，以确保成功。
 
 ## <a name="see-also"></a>请参阅
 

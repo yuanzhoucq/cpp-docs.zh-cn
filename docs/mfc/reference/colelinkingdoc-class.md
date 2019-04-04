@@ -16,12 +16,12 @@ helpviewer_keywords:
 - COleLinkingDoc [MFC], OnFindEmbeddedItem
 - COleLinkingDoc [MFC], OnGetLinkedItem
 ms.assetid: 9f547f35-2f95-427f-b9c0-85c31940198b
-ms.openlocfilehash: 275119b2343c4d13b6a32f939fc8c3b2b5d5890c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c5076ceef0c6626fac0232fadf6818edd78b4ccf
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57300397"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773549"
 ---
 # <a name="colelinkingdoc-class"></a>COleLinkingDoc 类
 
@@ -57,7 +57,7 @@ class COleLinkingDoc : public COleDocument
 
 ## <a name="remarks"></a>备注
 
-支持将链接到嵌入的项的容器应用程序称为"链接容器"。 [OCLIENT](../../visual-cpp-samples.md)示例应用程序是链接容器的示例。
+支持将链接到嵌入的项的容器应用程序称为"链接容器"。 [OCLIENT](../../overview/visual-cpp-samples.md)示例应用程序是链接容器的示例。
 
 链接的项的源是在另一个文档，必须在要编辑嵌入项的顺序加载包含文档中嵌入的项。 出于此原因，链接容器必须能够在用户想要编辑的链接项目源时由另一个容器应用程序启动。 你的应用程序还必须使用[COleTemplateServer](../../mfc/reference/coletemplateserver-class.md)类，以便它可以创建文档时以编程方式启动。
 
@@ -75,7 +75,7 @@ class COleLinkingDoc : public COleDocument
 
 [!code-cpp[NVC_MFCOleContainer#25](../../mfc/codesnippet/cpp/colelinkingdoc-class_3.cpp)]
 
-有关示例`CWinApp`的派生类定义和`InitInstance`函数中，请参阅 OCLIENT。H 和 OCLIENT。在 MFC 示例 CPP [OCLIENT](../../visual-cpp-samples.md)。
+有关示例`CWinApp`的派生类定义和`InitInstance`函数中，请参阅 OCLIENT。H 和 OCLIENT。在 MFC 示例 CPP [OCLIENT](../../overview/visual-cpp-samples.md)。
 
 有关使用的详细信息`COleLinkingDoc`，请参阅文章[容器：实现容器](../../mfc/containers-implementing-a-container.md)和[容器：高级功能](../../mfc/containers-advanced-features.md)。
 
@@ -193,7 +193,7 @@ void Revoke();
 
 ## <a name="see-also"></a>请参阅
 
-[MFC 示例 OCLIENT](../../visual-cpp-samples.md)<br/>
+[MFC 示例 OCLIENT](../../overview/visual-cpp-samples.md)<br/>
 [COleDocument 类](../../mfc/reference/coledocument-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>
 [CDocTemplate 类](../../mfc/reference/cdoctemplate-class.md)

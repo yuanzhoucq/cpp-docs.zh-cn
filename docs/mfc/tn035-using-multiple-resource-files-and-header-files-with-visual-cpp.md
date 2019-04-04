@@ -7,12 +7,12 @@ helpviewer_keywords:
 - resource files, multiple
 - TN035
 ms.assetid: 1f08ce5e-a912-44cc-ac56-7dd93ad73fb6
-ms.openlocfilehash: 7d97e4536c2a43e7e224e9056aa39df5480daeca
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 0493dd45caf5eb78da435987a4590442a908a5a3
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57279909"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772759"
 ---
 # <a name="tn035-using-multiple-resource-files-and-header-files-with-visual-c"></a>TN035:Visual c + + 中使用多个资源文件和头文件
 
@@ -177,7 +177,7 @@ Visual C++ 和资源编译器通过 #include 指令将一个 .RC 文件包括在
 
 - 如果要通过文本编辑器以可读格式维护资源，应将资源保留在 Visual C++ 未编辑的 .RC 文件中。
 
-- 如果需要以其他专用数据编辑器可解释的二进制格式或文本格式保留用户定义的资源，则应将资源保留在单独 .RC 文件中，以防 Visual C++ 将格式更改为十六进制数据。 。在 MFC 高级概念示例 WAV （声音） 文件资源[SPEAKN](../visual-cpp-samples.md)是一个很好示例。
+- 如果需要以其他专用数据编辑器可解释的二进制格式或文本格式保留用户定义的资源，则应将资源保留在单独 .RC 文件中，以防 Visual C++ 将格式更改为十六进制数据。 。在 MFC 高级概念示例 WAV （声音） 文件资源[SPEAKN](../overview/visual-cpp-samples.md)是一个很好示例。
 
 还可以在“设置包括”对话框的编译时指令中通过 #include 指令包括另一 .RC 文件：
 

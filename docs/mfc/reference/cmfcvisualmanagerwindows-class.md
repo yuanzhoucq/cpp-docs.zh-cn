@@ -140,12 +140,12 @@ helpviewer_keywords:
 - CMFCVisualManagerWindows [MFC], SetOfficeStyleMenus
 - CMFCVisualManagerWindows [MFC], m_b3DTabsXPTheme
 ms.assetid: 568b6e9e-8e67-4477-9a3d-2981cbd09861
-ms.openlocfilehash: 3219de7f90d76e18b52efab8d8601b848427fca7
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: d26e679135f6e8c8236803bae0343e956000c9e8
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57275956"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779113"
 ---
 # <a name="cmfcvisualmanagerwindows-class"></a>CMFCVisualManagerWindows 类
 
@@ -240,7 +240,7 @@ class CMFCVisualManagerWindows : public CMFCVisualManagerOfficeXP
 
 ### <a name="data-members"></a>数据成员
 
-|name|描述|
+|名称|描述|
 |----------|-----------------|
 |[CMFCVisualManagerWindows::m_b3DTabsXPTheme](#m_b3dtabsxptheme)|指定的 Windows XP 主题是否显示三维选项卡。|
 
@@ -252,7 +252,7 @@ class CMFCVisualManagerWindows : public CMFCVisualManagerOfficeXP
 
 ## <a name="example"></a>示例
 
-下面的示例演示如何使用`CMFCVisualManagerWindows`。 此代码片段属于[桌面警报演示示例](../../visual-cpp-samples.md)。
+下面的示例演示如何使用`CMFCVisualManagerWindows`。 此代码片段属于[桌面警报演示示例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_DesktopAlertDemo#10](../../mfc/reference/codesnippet/cpp/cmfcvisualmanagerwindows-class_1.cpp)]
 

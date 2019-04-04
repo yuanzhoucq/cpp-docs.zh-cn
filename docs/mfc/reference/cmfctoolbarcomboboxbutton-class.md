@@ -64,12 +64,12 @@ helpviewer_keywords:
 - CMFCToolBarComboBoxButton [MFC], SetDropDownHeight
 - CMFCToolBarComboBoxButton [MFC], SetFlatMode
 ms.assetid: 32fa39f7-8e4e-4f0a-a31d-7b540d969a6c
-ms.openlocfilehash: fae70e44657023b7a7b93f72599bef4ba6faf307
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: e3c124103aa95d9db5095e438a6b21d46c7cb35d
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57303165"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772067"
 ---
 # <a name="cmfctoolbarcomboboxbutton-class"></a>CMFCToolBarComboBoxButton 类
 
@@ -136,7 +136,7 @@ class CMFCToolBarComboBoxButton : public CMFCToolBarButton
 
 ## <a name="example"></a>示例
 
-下面的示例演示了如何使用 `CMFCToolBarComboBoxButton` 类中的各种方法。 该示例演示如何启用编辑和组合框、 在应用程序中设置的垂直位置的组合框按钮、 列表框的高度设置向下拖放、 应用程序中设置组合框按钮的平面样式外观并将文本设置在组合框的编辑框中框按钮。 此代码片段属于[Visual Studio 演示示例](../../visual-cpp-samples.md)。
+下面的示例演示了如何使用 `CMFCToolBarComboBoxButton` 类中的各种方法。 该示例演示如何启用编辑和组合框、 在应用程序中设置的垂直位置的组合框按钮、 列表框的高度设置向下拖放、 应用程序中设置组合框按钮的平面样式外观并将文本设置在组合框的编辑框中框按钮。 此代码片段属于[Visual Studio 演示示例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#36](../../mfc/codesnippet/cpp/cmfctoolbarcomboboxbutton-class_1.cpp)]
 [!code-cpp[NVC_MFC_VisualStudioDemo#37](../../mfc/codesnippet/cpp/cmfctoolbarcomboboxbutton-class_2.cpp)]

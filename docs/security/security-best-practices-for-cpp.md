@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security [C++]
 - security [C++], best practices
 ms.assetid: 86acaccf-cdb4-4517-bd58-553618e3ec42
-ms.openlocfilehash: 81a15f7a34ebe6c4c101932074c63cb1c7f7fd26
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: bc449d0bbf222391868dc7586e0245fd6e8cd2ac
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57742467"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769857"
 ---
 # <a name="security-best-practices-for-c"></a>C++ 安全性最佳做法
 
@@ -46,14 +46,13 @@ ms.locfileid: "57742467"
 
 ## <a name="safeint-library"></a>SafeInt 库
 
-[SafeInt 库](../windows/safeint-library.md)有助于防止整数溢出以及应用程序执行数学运算时可能发生其他可利用错误。 `SafeInt`库包含[SafeInt 类](../windows/safeint-class.md)，则[SafeIntException 类](../windows/safeintexception-class.md)，以及几个[SafeInt 函数](../windows/safeint-functions.md)。
+[SafeInt 库](../safeint/safeint-library.md)有助于防止整数溢出以及应用程序执行数学运算时可能发生其他可利用错误。 `SafeInt`库包含[SafeInt 类](../safeint/safeint-class.md)，则[SafeIntException 类](../safeint/safeintexception-class.md)，以及几个[SafeInt 函数](../safeint/safeint-functions.md)。
 
-
-  `SafeInt` 类可防止整数溢出和被零除攻击。 您可以使用它处理不同类型的值之间的比较。 它提供了两个错误处理策略。 默认策略是针对引发 `SafeInt` 类异常的 `SafeIntException` 类，以报告无法完成数学运算的原因。 第二个策略针对 `SafeInt` 类，用以停止程序的执行。 还可以定义自定义策略。
+`SafeInt` 类可防止整数溢出和被零除攻击。 您可以使用它处理不同类型的值之间的比较。 它提供了两个错误处理策略。 默认策略是针对引发 `SafeInt` 类异常的 `SafeIntException` 类，以报告无法完成数学运算的原因。 第二个策略针对 `SafeInt` 类，用以停止程序的执行。 还可以定义自定义策略。
 
 每个 `SafeInt` 函数各保护一个数学运算免于出现可被利用的错误。 您可使用两种不同的参数，而不必将它们转换为相同类型。 若要保护多个数学运算，请使用 `SafeInt` 类。
 
-## <a name="checked-iterators"></a>经过检查的迭代器
+## <a name="checked-iterators"></a>Checked Iterators
 
 经过检查的迭代器强制实施容器边界。 默认情况下，当检查的迭代器超出范围时，它将生成异常并终止程序的执行。 检查迭代器提供了其他级别的响应取决于分配给预处理器的值定义，如 **\_SECURE\_SCL\_引发**和 **\_迭代器\_调试\_级别**。 例如，在**\_迭代器\_调试\_LEVEL = 2**，经检查迭代器提供了全面的正确性检查处于调试模式，这可供使用断言。 有关详细信息，请参阅[Checked Iterators](../standard-library/checked-iterators.md)并[\_迭代器\_调试\_级别](../standard-library/iterator-debug-level.md)。
 

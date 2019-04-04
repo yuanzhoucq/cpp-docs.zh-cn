@@ -5,16 +5,16 @@ helpviewer_keywords:
 - month calendar controls [MFC], examples
 - CMonthCalCtrl class [MFC], examples
 ms.assetid: 1af7fb59-d6fd-46e0-aaa5-b0394a0a3ed5
-ms.openlocfilehash: bdcd9105c28fca344fa6605937aefd31e093973a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: b798b5f9fd71b6d18b7fe52d6407ea7b89892c90
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57274227"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773510"
 ---
 # <a name="month-calendar-control-examples"></a>月历控件示例
 
-[CMNCTRL1](../visual-cpp-samples.md)示例应用程序说明的各种特性`CMonthCalCtrl`类。 在示例的单独选项卡上找到的控件演示了基本功能，并允许用户动态修改特定特性。
+[CMNCTRL1](../overview/visual-cpp-samples.md)示例应用程序说明的各种特性`CMonthCalCtrl`类。 在示例的单独选项卡上找到的控件演示了基本功能，并允许用户动态修改特定特性。
 
 ## <a name="see-also"></a>请参阅
 

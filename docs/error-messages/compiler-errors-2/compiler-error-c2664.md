@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2664
 ms.assetid: 3595d66e-cf87-4fda-a896-c0cd81f95db4
-ms.openlocfilehash: d9ebea5c955dcf89308654feec9866d4fdc924cd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cffd178e1736358333ee27d4572d3531de23f527
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50501356"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774602"
 ---
 # <a name="compiler-error-c2664"></a>编译器错误 C2664
 
@@ -31,7 +31,7 @@ ms.locfileid: "50501356"
 
 如果某个类在它的一个基类中隐藏了成员，也可能生成 C2664。
 
-有关详细信息，请参阅[如何： 转换 system:: string 到 wchar_t * 或 char\*](../../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md)。
+有关详细信息，请参阅[如何：将 system:: string 转换为 wchar_t * 或 char\*](../../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md)。
 
 ## <a name="example"></a>示例
 
@@ -189,7 +189,7 @@ int main( ) {
 
 ## <a name="example"></a>示例
 
-枚举变量未转换为其满足函数调用的基础类型。 有关详细信息，请参阅[枚举类](../../windows/enum-class-cpp-component-extensions.md)。 下面的示例生成 C2664，并演示如何修复此错误。
+枚举变量未转换为其满足函数调用的基础类型。 有关详细信息，请参阅[枚举类](../../extensions/enum-class-cpp-component-extensions.md)。 下面的示例生成 C2664，并演示如何修复此错误。
 
 ```
 // C2664f.cpp

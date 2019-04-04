@@ -82,12 +82,12 @@ helpviewer_keywords:
 - COleServerDoc [MFC], OnSetItemRects
 - COleServerDoc [MFC], OnShowDocument
 ms.assetid: a9cdd96a-e0ac-43bb-9203-2c29237e965c
-ms.openlocfilehash: 3069c5f53b37984cbeae8bee1379bb8b0c36ccc3
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 4cada70723c7fadc9c91c40380b8a7e9fc46a07a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57285277"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58777254"
 ---
 # <a name="coleserverdoc-class"></a>COleServerDoc 类
 
@@ -642,7 +642,7 @@ OLECMDEXECOPT_SHOWHELP
 
 如果成功，则为 S_OK 返回否则为台以下的错误代码：
 
-|“值”|描述|
+|值|描述|
 |-----------|-----------------|
 |E_UNEXPECTED|出现意外的错误|
 |E_FAIL|出现错误|
@@ -943,7 +943,7 @@ void UpdateAllItems(
 
 ## <a name="see-also"></a>请参阅
 
-[MFC 示例 HIERSVR](../../visual-cpp-samples.md)<br/>
+[MFC 示例 HIERSVR](../../overview/visual-cpp-samples.md)<br/>
 [COleLinkingDoc 类](../../mfc/reference/colelinkingdoc-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>
 [COleDocument 类](../../mfc/reference/coledocument-class.md)<br/>

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data marshaling [C++], strings
 - COM [C++], marshaling strings
 ms.assetid: 06590759-bf99-4e34-a3a9-4527ea592cc2
-ms.openlocfilehash: baf3a2e6720cd2f72606cf5089e0409df602fee6
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: e86cf0b3e57eda9a0f4fa5fe2337d0c42de5669f
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57751509"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780868"
 ---
 # <a name="how-to-marshal-com-strings-using-c-interop"></a>如何：使用 c + + 互操作封送 COM 字符串
 
@@ -28,7 +28,7 @@ ms.locfileid: "57751509"
 
 ## <a name="example"></a>示例
 
-下面的示例演示如何将传递 BSTR （在 COM 编程中使用的字符串格式） 从托管到非托管函数。 调用托管函数使用<xref:System.Runtime.InteropServices.Marshal.StringToBSTR%2A>以获取.NET System.String 内容的 BSTR 表示形式的地址。 使用固定此指针[pin_ptr (C + + CLI)](../windows/pin-ptr-cpp-cli.md)以确保非托管的函数执行时，其物理地址在垃圾回收周期期间未发生更改。 禁止垃圾回收器移动到的内存[pin_ptr (C + + CLI)](../windows/pin-ptr-cpp-cli.md)超出范围。
+下面的示例演示如何将传递 BSTR （在 COM 编程中使用的字符串格式） 从托管到非托管函数。 调用托管函数使用<xref:System.Runtime.InteropServices.Marshal.StringToBSTR%2A>以获取.NET System.String 内容的 BSTR 表示形式的地址。 使用固定此指针[pin_ptr (C + + CLI)](../extensions/pin-ptr-cpp-cli.md)以确保非托管的函数执行时，其物理地址在垃圾回收周期期间未发生更改。 禁止垃圾回收器移动到的内存[pin_ptr (C + + CLI)](../extensions/pin-ptr-cpp-cli.md)超出范围。
 
 ```
 // MarshalBSTR1.cpp

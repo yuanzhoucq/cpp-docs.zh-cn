@@ -230,12 +230,12 @@ helpviewer_keywords:
 - CMFCVisualManagerOffice2007 [MFC], OnUpdateSystemColors
 - CMFCVisualManagerOffice2007 [MFC], SetResourceHandle
 ms.assetid: fb687c74-6d08-4c72-8acf-27f75dda6d6b
-ms.openlocfilehash: 28e0c1f3ca593fed939b0cf3fa0fa3085d79d156
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 4ea04ece6f381fb2bce1c33716c7e7248bca5b7b
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57282430"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58778931"
 ---
 # <a name="cmfcvisualmanageroffice2007-class"></a>CMFCVisualManagerOffice2007 Class
 
@@ -376,7 +376,7 @@ class CMFCVisualManagerOffice2007 : public CMFCVisualManagerOffice2003
 
 ## <a name="example"></a>示例
 
-下面的示例演示如何使用 Office 2007 的可视化管理器。 此代码片段属于[桌面警报演示示例](../../visual-cpp-samples.md)。
+下面的示例演示如何使用 Office 2007 的可视化管理器。 此代码片段属于[桌面警报演示示例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_DesktopAlertDemo#7](../../mfc/reference/codesnippet/cpp/cmfcvisualmanageroffice2007-class_1.cpp)]
 

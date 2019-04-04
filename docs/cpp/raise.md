@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - __raise keyword [C++]
 ms.assetid: 6f1ae418-5f0f-48b6-9f6e-8ea7e66b239a
-ms.openlocfilehash: 865524fe91b7d137e3a943973dcca6d833bd16df
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c5703c87945667f4ac65647019a72b304363bee2
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471430"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780621"
 ---
 # <a name="raise"></a>__raise
 
@@ -26,7 +26,7 @@ __raise method-declarator;
 
 ## <a name="remarks"></a>备注
 
-在托管代码中，事件只能从定义它的类中引发。 请参阅[事件](../windows/event-cpp-component-extensions.md)有关详细信息。
+在托管代码中，事件只能从定义它的类中引发。 请参阅[事件](../extensions/event-cpp-component-extensions.md)有关详细信息。
 
 关键字 **__raise**导致调用非事件会发出的错误。
 
@@ -63,4 +63,4 @@ int main() {
 
 [关键字](../cpp/keywords-cpp.md)<br/>
 [事件处理](../cpp/event-handling.md)<br/>
-[适用于运行时平台的组件扩展](../windows/component-extensions-for-runtime-platforms.md)
+[适用于运行时平台的组件扩展](../extensions/component-extensions-for-runtime-platforms.md)

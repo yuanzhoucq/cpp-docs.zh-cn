@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - IDispEventImpl class, using
 ms.assetid: 82d53b61-9d0d-45c5-aff9-2fafa468a9ca
-ms.openlocfilehash: 59f8e7d095f3d514ab41b28dc37f5d3c707bbd08
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: c532164788d359c7834759de01407d49c19463ca
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57820294"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769324"
 ---
 # <a name="using-idispeventimpl"></a>使用 IDispEventImpl
 
@@ -29,7 +29,7 @@ ms.locfileid: "57820294"
 
 下面的示例演示如何处理`DocumentChange`由 Word 的事件触发**应用程序**对象。 此事件指一种方法上`ApplicationEvents`调度接口。
 
-该示例摘自[ATLEventHandling 示例](../visual-cpp-samples.md)。
+该示例摘自[ATLEventHandling 示例](../overview/visual-cpp-samples.md)。
 
 ```cpp
 [ uuid(000209F7-0000-0000-C000-000000000046), hidden ]
@@ -58,4 +58,4 @@ methods:
 ## <a name="see-also"></a>请参阅
 
 [事件处理](../atl/event-handling-and-atl.md)<br/>
-[ATLEventHandling 示例](../visual-cpp-samples.md)
+[ATLEventHandling 示例](../overview/visual-cpp-samples.md)

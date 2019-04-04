@@ -7,12 +7,12 @@ helpviewer_keywords:
 - enumerators, ATL classes
 - collection interfaces
 ms.assetid: b2d37119-3ab2-4e0a-b65b-f377f07e4098
-ms.openlocfilehash: 690fc023b72b2606efc190aceb7c266a35a4ebb4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: ebf7be8b2c80a714a27567ce0334475519a69454
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283042"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768011"
 ---
 # <a name="atl-collections-and-enumerators"></a>ATL 集合和枚举数
 
@@ -40,7 +40,7 @@ ms.locfileid: "57283042"
 [ATL](../atl/active-template-library-atl-concepts.md)<br/>
 提供了关于如何使用 Active Template Library 进行编程的概念性主题的链接。
 
-[ATLCollections 示例](../visual-cpp-samples.md)<br/>
+[ATLCollections 示例](../overview/visual-cpp-samples.md)<br/>
 一个示例，演示如何使用`ICollectionOnSTLImpl`和`CComEnumOnSTL`，和自定义复制策略类的实现。
 
 ## <a name="see-also"></a>请参阅

@@ -2,16 +2,16 @@
 title: 演练：编译 C + + /CX 程序命令行上
 ms.date: 09/24/2018
 ms.assetid: 626f5544-69ed-4736-83a9-f11389b371b2
-ms.openlocfilehash: ad718a2eb876430d7721d0cd20cfd5b952750f8b
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 099bef402d22abc12a31f105f63e5405c65a1d82
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57809504"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58766050"
 ---
 # <a name="walkthrough-compiling-a-ccx-program-on-the-command-line"></a>演练：编译 C + + /CX 程序命令行上
 
-可以创建面向 Windows 运行时的 Visual C++ 程序，并在命令行上生成这些程序。 Visual C++ 支持 Visual C++ 组件扩展 (C++/CX)，其中具有面向 Windows 运行时编程模型的其他类型和运算符。 您可以使用 C + + /CX 构建通用 Windows 平台 (UWP)、 Windows Phone 8.1 和 Windows 桌面应用程序。 有关详细信息，请参阅[的 c + 教程 + /cli CX](https://msdn.microsoft.com/magazine/dn166929.aspx)并[运行时平台的组件扩展](../windows/component-extensions-for-runtime-platforms.md)。
+可以创建面向 Windows 运行时的 Visual C++ 程序，并在命令行上生成这些程序。 Visual C++ 支持 Visual C++ 组件扩展 (C++/CX)，其中具有面向 Windows 运行时编程模型的其他类型和运算符。 您可以使用 C + + /CX 构建通用 Windows 平台 (UWP)、 Windows Phone 8.1 和 Windows 桌面应用程序。 有关详细信息，请参阅[的 c + 教程 + /cli CX](https://msdn.microsoft.com/magazine/dn166929.aspx)并[运行时平台的组件扩展](../extensions/component-extensions-for-runtime-platforms.md)。
 
 在此演练中，你将使用文本编辑器创建一个基本的 C++/CX 程序，然后在命令行上对其进行编译。 （可使用你自己的 C++/CX 程序，而非键入显示的程序，或者也可使用来自另一篇帮助文章中的 C++/CX 代码示例。 此方法可用于构建和测试不含 UI 元素的小模块连接）。
 
