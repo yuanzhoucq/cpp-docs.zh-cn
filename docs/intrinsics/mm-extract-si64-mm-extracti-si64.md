@@ -9,12 +9,12 @@ helpviewer_keywords:
 - _mm_extracti_si64 intrinsic
 - _mm_extract_si64 intrinsic
 ms.assetid: 459fdd72-cc54-4ee5-bbd5-d2c6067a88e7
-ms.openlocfilehash: 21e2b23ca4ac3b98c44ea7152badc5c79f386c09
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e77ca5589ed50a4199921603afec1d9888c6cca5
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630095"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59040207"
 ---
 # <a name="mmextractsi64-mmextractisi64"></a>_mm_extract_si64、_mm_extracti_si64
 
@@ -47,7 +47,7 @@ __m128i _mm_extracti_si64(
 *长度*<br/>
 [in]一个整数，指定要提取的字段的长度。
 
-*Tuple*<br/>
+*索引*<br/>
 [in]一个整数，指定要提取的字段的索引
 
 ## <a name="return-value"></a>返回值

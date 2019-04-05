@@ -13,12 +13,12 @@ helpviewer_keywords:
 - dialog box controls [C++], custom (user) controls
 - Dialog Editor [C++], custom controls
 ms.assetid: e216c4f9-2fd4-429d-889a-8ebce7bad177
-ms.openlocfilehash: 152113200fd7aa9ee87b749380e370fe4e6ad9ff
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 563cf73299c00413889ada2520b1bf4fcd86f2be
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563350"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023693"
 ---
 # <a name="dialog-box-controls-c"></a>对话框控件 （c + +）
 
@@ -38,7 +38,7 @@ ms.locfileid: "57563350"
 
 |控件名称|默认事件|
 |---|---|
-|[按钮控件](../mfc/reference/cbutton-class.md)|BN_CLICKED|
+|[Button 控件](../mfc/reference/cbutton-class.md)|BN_CLICKED|
 |[复选框控件](../mfc/reference/styles-used-by-mfc.md#button-styles)|BN_CLICKED|
 |[组合框控件](../mfc/reference/ccombobox-class.md)|CBN_SELCHANGE|
 |[编辑控件](../mfc/reference/cedit-class.md)|EN_CHANGE|
@@ -57,18 +57,18 @@ ms.locfileid: "57563350"
 
 |控件名称|默认事件|
 |---|---|
-|[滑块控件](../mfc/slider-control-styles.md)|NM_CUSTOMDRAW|
+|[Slider 控件](../mfc/slider-control-styles.md)|NM_CUSTOMDRAW|
 |[数值调节钮控件](../mfc/using-cspinbuttonctrl.md)|UDN_DELTAPOS|
 |[进度控件](../mfc/styles-for-the-progress-control.md)|NM_CUSTOMDRAW|
 |[热键控件](../mfc/using-a-hot-key-control.md)|NM_OUTOFMEMORY|
 |[列表控件](../mfc/list-control-and-list-view.md)|LVN_ITEMCHANGE|
 |[树控件](../mfc/tree-control-styles.md)|TVN_SELCHANGE|
-|[选项卡控件](../mfc/tab-controls-and-property-sheets.md)|TCN_SELCHANGE|
+|[Tab 控件](../mfc/tab-controls-and-property-sheets.md)|TCN_SELCHANGE|
 |[动画控件](../mfc/using-an-animation-control.md)|ACN_START|
-|[日期时间选取器控件](../mfc/creating-the-date-and-time-picker-control.md)|DTN_DATETIMECHANGE|
+|[日期时间选择器控件](../mfc/creating-the-date-and-time-picker-control.md)|DTN_DATETIMECHANGE|
 |[月历控件](../mfc/month-calendar-control-examples.md)|MCN_SELCHANGE|
 |[IP 地址控件](../mfc/reference/cipaddressctrl-class.md)|IPN_FIELDCHANGED|
-|[扩展的组合框控件](../mfc/creating-an-extended-combo-box-control.md)||
+|[扩展组合框控件](../mfc/creating-an-extended-combo-box-control.md)||
 |自定义控件|TTN_GETDISPINFO|
 
 ## <a name="custom-controls"></a>自定义控件

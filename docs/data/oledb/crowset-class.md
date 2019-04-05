@@ -238,12 +238,12 @@ helpviewer_keywords:
 - Update method
 - UpdateAll method
 ms.assetid: b0228a90-b8dd-47cc-b397-8d4c15c1e7f4
-ms.openlocfilehash: eda4bb09865698a657828c6d4684a8df92ffe9b6
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: dc4f619fb0dba924693682c927247e809fe2cfe9
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58779451"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59032318"
 ---
 # <a name="crowset-class"></a>CRowset 类
 
@@ -273,7 +273,7 @@ class CRowset
 |-|-|
 |[AddRefRows](#addrefrows)|递增与当前行相关联的引用计数。|
 |[关闭](#close)|释放行和当前`IRowset`接口。|
-|[Compare](#compare)|比较两个创建一个书签，使用[IRowsetLocate::Compare](/previous-versions/windows/desktop/ms709539(v=vs.85))。|
+|[比较](#compare)|比较两个创建一个书签，使用[IRowsetLocate::Compare](/previous-versions/windows/desktop/ms709539(v=vs.85))。|
 |[CRowset](#crowset)|创建一个新`CRowset`对象，并 （可选） 将其与`IRowset`作为参数提供的接口。|
 |[删除](#delete)|从行集使用删除的行[IRowsetChange:DeleteRows](/previous-versions/windows/desktop/ms724362(v=vs.85))。|
 |[FindNextRow](#findnextrow)|后指定的书签查找下一个匹配行。|
@@ -282,7 +282,7 @@ class CRowset
 |[GetDataHere](#getdatahere)|从指定的缓冲区中检索数据。|
 |[GetOriginalData](#getoriginaldata)|检索最近从提取或传输到数据源，忽略挂起的更改的数据。|
 |[GetRowStatus](#getrowstatus)|返回的所有行的状态。|
-|[插入](#insert)|创建并将插入新行使用[IRowsetChange:InsertRow](/previous-versions/windows/desktop/ms716921(v=vs.85))。|
+|[Insert](#insert)|创建并将插入新行使用[IRowsetChange:InsertRow](/previous-versions/windows/desktop/ms716921(v=vs.85))。|
 |[IsSameRow](#issamerow)|将指定的行与当前行进行比较。|
 |[MoveFirst](#movefirst)|将下一步提取位置重新定位到的初始位置。|
 |[MoveLast](#movelast)|将移动到最后一个记录。|
@@ -741,7 +741,7 @@ HRESULT MoveToBookmark(const CBookmarkBase& bookmark,
 
 #### <a name="parameters"></a>参数
 
-*bookmark*<br/>
+*bookmark（书签）*<br/>
 [in] 标记要从其提取数据的位置的书签。
 
 *lSkip*<br/>

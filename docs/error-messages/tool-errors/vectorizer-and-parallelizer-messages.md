@@ -8,12 +8,12 @@ f1_keywords:
 - C5001
 - C5012
 ms.assetid: d8f4844a-f414-42ab-b9a5-925a5da9d365
-ms.openlocfilehash: 69e174a000edfea7027a04f9cf97bf5a1aeb585e
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 6f80bc9d2a2438a6003c93ce7e60de50fd639a16
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518758"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023901"
 ---
 # <a name="vectorizer-and-parallelizer-messages"></a>矢量化程序和并行化程序消息
 
@@ -984,7 +984,7 @@ void code_1505(int *A, int *B)
 
 [自动并行化和自动矢量化](../../parallel/auto-parallelization-and-auto-vectorization.md)<br/>
 [本机代码中的并行编程](http://go.microsoft.com/fwlink/p/?linkid=263662)<br/>
-[#pragma loop （)](../../preprocessor/loop.md)<br/>
+[#pragma loop()](../../preprocessor/loop.md)<br/>
 [/Q 选项（低级别操作）](../../build/reference/q-options-low-level-operations.md)<br/>
 [/Qpar-report（自动并行化程序报告等级）](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md)<br/>
 [/Qvec-report（自动矢量化程序报告等级）](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md)

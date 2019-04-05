@@ -7,12 +7,12 @@ helpviewer_keywords:
 - _mm_stream_sd intrinsic
 - movntsd instruction
 ms.assetid: 2b4bea5e-e64e-45fa-9afc-88a2e4b82cfc
-ms.openlocfilehash: cf57d485ab3dd268d217b2ef44ff53bcec3d2e63
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 3555b71e15d6f9c618a83f573d6da3cda9e7b705
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518133"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023511"
 ---
 # <a name="mmstreamsd"></a>_mm_stream_sd
 

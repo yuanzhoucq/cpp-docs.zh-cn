@@ -127,12 +127,12 @@ helpviewer_keywords:
 - SetStatus method
 - SetValue method
 ms.assetid: 374b13b7-1f09-457d-9e6b-df260ff4d178
-ms.openlocfilehash: a9e862e9df785a0986d9d75759de85c0c1448912
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 19b8d0c86044e04cc60fd7aab89ec828c46f5fb9
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57423451"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59040963"
 ---
 # <a name="cdynamicaccessor-class"></a>CDynamicAccessor 类
 
@@ -195,7 +195,7 @@ HRESULT AddBindEntry(const DBCOLUMNINFO& info) throw();
 
 #### <a name="parameters"></a>参数
 
-info<br/>
+*info*<br/>
 [in]一个`DBCOLUMNINFO`结构，它包含的列信息。 请参阅中的"DBCOLUMNINFO 结构" [icolumnsinfo:: Getcolumninfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\))中*OLE DB 程序员参考*。
 
 ### <a name="return-value"></a>返回值
@@ -696,7 +696,7 @@ bool SetValue(
 *pColumnName*<br/>
 [in] 指向包含列名的字符串的指针。
 
-*data*<br/>
+*数据*<br/>
 [in]指向包含数据的内存的指针。
 
 *nColumn*<br/>

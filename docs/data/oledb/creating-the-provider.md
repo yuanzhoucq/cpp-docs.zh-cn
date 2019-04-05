@@ -4,18 +4,18 @@ ms.date: 10/15/2018
 helpviewer_keywords:
 - OLE DB providers, creating
 ms.assetid: 2506ba8f-010d-4231-aac1-387432f7b6b9
-ms.openlocfilehash: 05ab045e104e3035f8ccd2fa1924b6959164b8d4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6258b5247e4d9d027e0f03bc133dff1a059665bd
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50538172"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59032344"
 ---
 # <a name="creating-the-provider"></a>创建提供程序
 
 ## <a name="to-create-an-ole-db-provider-with-the-atl-ole-db-provider-wizard"></a>使用 ATL OLE DB 提供程序向导创建 OLE DB 提供程序
 
-1. 右键单击该项目。
+1. 右键单击项目。
 
 1. 在快捷菜单上，单击**外**，然后单击**添加类**。
 
@@ -25,11 +25,11 @@ ms.locfileid: "50538172"
 
 1. 如果需要，编辑的其他名称框。 除了对象和文件名称，可以编辑以下：
 
-   - **组件类**: COM 使用来创建提供程序的名称。
+   - **组件类**:COM 使用来创建提供程序的名称。
 
-   - **ProgID**： 是可用来代替 GUID 的文本字符串的编程标识符。
+   - **ProgID**:编程标识符，是一个文本字符串，可以使用而不是一个 GUID。
 
-   - **版本**： 具有 ProgID 和组件类用于生成版本依赖型编程 id。
+   - **版本**:组件类的 ProgID 与用于生成版本依赖型编程 id。
 
 1. 单击 **“完成”**。
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - out attribute
 ms.assetid: 5051b1bf-4949-4bf1-b82f-35e14f0f244b
-ms.openlocfilehash: 15b82ddca42f9b70ac16538cea19f8aedd799c05
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7020bd6cfcf8bcdbfb773908e693c6364a29e343
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50574438"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037575"
 ---
 # <a name="out-c"></a>out (C++)
 
@@ -39,14 +39,14 @@ ms.locfileid: "50574438"
 |-|-|
 |**适用对象**|接口参数|
 |**可重复**|否|
-|**必需的特性**|无|
-|**无效的特性**|无|
+|**必需的特性**|None|
+|**无效的特性**|None|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
 ## <a name="see-also"></a>请参阅
 
 [IDL 特性](idl-attributes.md)<br/>
-[参数特性](parameter-attributes.md)<br/>
+[Parameter 特性](parameter-attributes.md)<br/>
 [defaultvalue](defaultvalue.md)<br/>
 [id](id.md)

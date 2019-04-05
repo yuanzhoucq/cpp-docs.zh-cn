@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_accessor attribute
 ms.assetid: ec407a9f-24d7-4822-96d4-7cc6a0301815
-ms.openlocfilehash: 3ab2e720e5bab834f76b755336b9ad9170d086b4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bfb287261fce4ebf189801c308f57513f2c9f113
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50495248"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038299"
 ---
 # <a name="dbaccessor"></a>db_accessor
 
@@ -73,8 +73,8 @@ public:
 |-|-|
 |**适用对象**|特性块|
 |**可重复**|否|
-|**必需的特性**|无|
-|**无效的特性**|无|
+|**必需的特性**|None|
+|**无效的特性**|None|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 

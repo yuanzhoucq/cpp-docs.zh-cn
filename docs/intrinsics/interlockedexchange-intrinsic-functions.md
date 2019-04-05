@@ -44,12 +44,12 @@ helpviewer_keywords:
 - _InterlockedExchange intrinsic
 - _InterlockedExchange8_nf
 ms.assetid: be2f232a-6301-462a-a92b-fcdeb8b0f209
-ms.openlocfilehash: bccf9f46a886a622c493485818601044afff232d
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: 3945b8a7516962531050e999e96bdef31b179bbb
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328514"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59021490"
 ---
 # <a name="interlockedexchange-intrinsic-functions"></a>_InterlockedExchange 内部函数
 
@@ -166,8 +166,7 @@ __int64 _InterlockedExchange64_rel(
 
 `_InterlockedExchange` 提供了编译器内部函数支持 Win32 Windows SDK [InterlockedExchange](/windows/desktop/api/winnt/nf-winnt-interlockedexchange)函数。
 
-
-  `_InterlockedExchange` 存在几种变体，这些变体根据其涉及的数据类型和是否使用特定于处理器获取或发布语义而有所不同。
+`_InterlockedExchange` 存在几种变体，这些变体根据其涉及的数据类型和是否使用特定于处理器获取或发布语义而有所不同。
 
 当 `_InterlockedExchange` 函数对 32 位整数值操作时，`_InterlockedExchange8` 对 8 位整数值操作，`_InterlockedExchange16` 对 16 位整数值操作且 `_InterlockedExchange64` 对 64 位整数值操作。
 

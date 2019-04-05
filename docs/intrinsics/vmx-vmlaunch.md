@@ -7,12 +7,12 @@ helpviewer_keywords:
 - VMLAUNCH instruction
 - __vmx_vmlaunch intrinsic
 ms.assetid: 708f7c38-b7c1-4ee7-bfc4-0daeb9cc9360
-ms.openlocfilehash: 70c26da61d1ba9a8e5dc52d6fb0318fad918f525
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 37f3a39ee7b0d4d24f26fab2347ac9fca020ec47
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512949"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037037"
 ---
 # <a name="vmxvmlaunch"></a>__vmx_vmlaunch
 
@@ -29,7 +29,7 @@ unsigned char __vmx_vmlaunch(
 
 ## <a name="return-value"></a>返回值
 
-|“值”|含义|
+|值|含义|
 |-----------|-------------|
 |0|操作成功。|
 |1|操作失败，当前 VMCS 的 `VM-instruction error field` 中提供了扩展状态。|

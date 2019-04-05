@@ -43,12 +43,12 @@ helpviewer_keywords:
 - operator[], arrays
 - m_nRowsRead
 ms.assetid: 511427e1-73ca-4fd8-9ba1-ae9463557cb6
-ms.openlocfilehash: 0a867f80f3be685b3c45c8645d6441732acf5851
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: b257c4e95a99bfbc8042c5935638a70deac0ea7a
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330978"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59040233"
 ---
 # <a name="carrayrowset-class"></a>CArrayRowset 类
 
@@ -66,7 +66,7 @@ class CArrayRowset :
 ### <a name="parameters"></a>参数
 
 *TAccessor*<br/>
-希望集合使用的访问器类的类型。
+您希望集合使用的访问器类的类型。
 
 ## <a name="requirements"></a>要求
 
@@ -85,7 +85,7 @@ class CArrayRowset :
 
 |||
 |-|-|
-|[Operator&#91;&#93;](#operator)|访问行集合的元素。|
+|[运算符&#91;&#93;](#operator)|访问行集合的元素。|
 
 ### <a name="data-members"></a>数据成员
 
@@ -93,7 +93,7 @@ class CArrayRowset :
 |-|-|
 |[CArrayRowset::m_nRowsRead](#nrowsread)|已读取的行数。|
 
-## <a name="carrayrowset"></a> Carrayrowset:: Carrayrowset
+## <a name="carrayrowset"></a> CArrayRowset::CArrayRowset
 
 创建一个新的 `CArrayRowset` 对象。
 
@@ -105,10 +105,10 @@ CArrayRowset(int nMax = 100000);
 
 #### <a name="parameters"></a>参数
 
-*最*<br/>
+*nMax*<br/>
 [in] 行集中的最大行数。
 
-## <a name="snapshot"></a> Carrayrowset:: Snapshot
+## <a name="snapshot"></a> CArrayRowset::Snapshot
 
 将整个行集读入内存，并创建该行集的图像或快照。
 
@@ -118,7 +118,7 @@ CArrayRowset(int nMax = 100000);
 HRESULT Snapshot() throw();
 ```
 
-## <a name="operator"></a> Carrayrowset:: Operator
+## <a name="operator"></a> CArrayRowset::operator
 
 提供用于访问行集中的行的类似数组的语法。
 
@@ -144,7 +144,7 @@ TAccessor & operator[](int nrow);
 
 如果*nRow*超过行集中的行数，将引发异常。
 
-## <a name="nrowsread"></a> Carrayrowset:: M_nrowsread
+## <a name="nrowsread"></a> CArrayRowset::m_nRowsRead
 
 包含已读取的行集中的行数。
 

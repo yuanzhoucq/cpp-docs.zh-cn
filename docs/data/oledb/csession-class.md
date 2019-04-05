@@ -40,12 +40,12 @@ helpviewer_keywords:
 - Open method
 - StartTransaction method
 ms.assetid: 83cd798f-b45d-4f11-a23c-29183390450c
-ms.openlocfilehash: c4f6cc19897b66bfe26c6d53ccb87c35dbed82c9
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: b34a6300473db94621360f1d04fd73ddd7e8bd69
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58777644"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041453"
 ---
 # <a name="csession-class"></a>CSession 类
 
@@ -67,9 +67,9 @@ class CSession
 
 |||
 |-|-|
-|[Abort](#abort)|取消（终止）事务。|
+|[中止](#abort)|取消（终止）事务。|
 |[关闭](#close)|关闭会话。|
-|[Commit](#commit)|提交事务。|
+|[提交](#commit)|提交事务。|
 |[GetTransactionInfo](#gettransactioninfo)|返回有关事务的信息。|
 |[打开](#open)|为数据源对象打开新会话。|
 |[StartTransaction](#starttransaction)|开始此会话的新事务。|

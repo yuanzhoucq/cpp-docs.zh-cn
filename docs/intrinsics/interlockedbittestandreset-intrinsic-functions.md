@@ -18,12 +18,12 @@ helpviewer_keywords:
 - _interlockedbittestandreset64 intrinsic
 - _interlockedbittestandreset intrinsic
 ms.assetid: 9bbb1442-f2e9-4dc2-b0da-97f3de3493b9
-ms.openlocfilehash: 5b32dc9eb41285afb653817629148b9f666201e8
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: 54ea8b1ccac15eab600c91302969b606c188dc59
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627197"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59040645"
 ---
 # <a name="interlockedbittestandreset-intrinsic-functions"></a>_interlockedbittestandreset 内部函数
 
@@ -89,10 +89,10 @@ unsigned char _interlockedbittestandreset64_HLERelease(
 |内部函数|体系结构|Header|
 |---------------|------------------|------------|
 |`_interlockedbittestandreset`|x86、 ARM、 x64|\<intrin.h>|
-|`_interlockedbittestandreset_acq`, `_interlockedbittestandreset_nf`, `_interlockedbittestandreset_rel`|ARM|\<intrin.h>|
-|`_interlockedbittestandreset_HLEAcquire`， `_interlockedbittestandreset_HLERelease`|x86、x64|\<immintrin.h>|
+|`_interlockedbittestandreset_acq`中， `_interlockedbittestandreset_nf`中， `_interlockedbittestandreset_rel`|ARM|\<intrin.h>|
+|`_interlockedbittestandreset_HLEAcquire`, `_interlockedbittestandreset_HLERelease`|x86、x64|\<immintrin.h>|
 |`_interlockedbittestandreset64`|X64|\<intrin.h>|
-|`_interlockedbittestandreset64_HLEAcquire`， `_interlockedbittestandreset64_HLERelease`|X64|\<immintrin.h>|
+|`_interlockedbittestandreset64_HLEAcquire`, `_interlockedbittestandreset64_HLERelease`|X64|\<immintrin.h>|
 
 ## <a name="remarks"></a>备注
 

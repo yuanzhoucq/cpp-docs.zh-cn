@@ -8,12 +8,12 @@ helpviewer_keywords:
 - record views [C++]
 - forms [C++], data access tasks
 ms.assetid: 562122d9-01d8-4284-acf6-ea109ab0408d
-ms.openlocfilehash: 155a7e4de6272f13d12ab2a64cba190a184f62cf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 199f51f20dd42ee9105b4e09f579c1f48948745f
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588482"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59040194"
 ---
 # <a name="record-views--mfc-data-access"></a>记录视图（MFC 数据访问）
 
@@ -41,7 +41,7 @@ ms.locfileid: "50588482"
 
 - [记录视图的数据交换](../data/data-exchange-for-record-views-mfc-data-access.md)
 
-- [在使用记录视图中的角色](../data/your-role-in-working-with-a-record-view-mfc-data-access.md)
+- [您在使用记录视图中的角色](../data/your-role-in-working-with-a-record-view-mfc-data-access.md)
 
 - [设计和创建记录视图](../data/designing-and-creating-a-record-view-mfc-data-access.md)
 

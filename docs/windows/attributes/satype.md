@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - satype attribute
 ms.assetid: 1716590b-6bcb-4aba-b1bc-82f7335f02c3
-ms.openlocfilehash: 3d2d921e750adad0089df0d00590f256b56c732e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7588e8d855d648309c46d981898cfbbf7888f4c9
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50517684"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59025719"
 ---
 # <a name="satype"></a>satype
 
@@ -36,8 +36,8 @@ ms.locfileid: "50517684"
 |-|-|
 |**适用对象**|接口参数，接口方法|
 |**可重复**|否|
-|**必需的特性**|无|
-|**无效的特性**|无|
+|**必需的特性**|None|
+|**无效的特性**|None|
 
 ## <a name="remarks"></a>备注
 
@@ -62,6 +62,6 @@ __interface A {
 ## <a name="see-also"></a>请参阅
 
 [编译器特性](compiler-attributes.md)<br/>
-[参数特性](parameter-attributes.md)<br/>
+[Parameter 特性](parameter-attributes.md)<br/>
 [方法特性](method-attributes.md)<br/>
 [id](id.md)

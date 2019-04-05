@@ -13,12 +13,12 @@ helpviewer_keywords:
 - snapshots, ODBC recordsets
 - dynasets
 ms.assetid: 333337c5-575e-4d26-b5f6-47166ad7874d
-ms.openlocfilehash: d16087722752b7bbdabd37410908c7ea2ae18ceb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b201e152d83d3812253aa4803eebe715d726219d
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50435251"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59034490"
 ---
 # <a name="recordset-odbc"></a>记录集 (ODBC)
 
@@ -69,9 +69,9 @@ ms.locfileid: "50435251"
 
 ##  <a name="_core_your_recordsets"></a> 记录集
 
-对于每个非重复表、 视图或你想要访问的存储的过程，通常定义派生自的类`CRecordset`。 （例外情况是数据库联接，在其中一个记录集所表示的两个或多个表的列）。在派生的记录集类，请启用记录字段交换 (RFX) 机制或批量记录字段交换 (Bulk RFX) 机制，类似于对话框数据交换 (DDX) 机制。 RFX 和批量 RFX 简化数据源的数据的传输到记录集;RFX 此外将数据从传输您的记录集到数据源。 有关详细信息，请参阅[记录字段交换 (RFX)](../../data/odbc/record-field-exchange-rfx.md)并[记录集： 提取记录 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
+对于每个非重复表、 视图或你想要访问的存储的过程，通常定义派生自的类`CRecordset`。 （例外情况是数据库联接，在其中一个记录集所表示的两个或多个表的列）。在派生的记录集类，请启用记录字段交换 (RFX) 机制或批量记录字段交换 (Bulk RFX) 机制，类似于对话框数据交换 (DDX) 机制。 RFX 和批量 RFX 简化数据源的数据的传输到记录集;RFX 此外将数据从传输您的记录集到数据源。 有关详细信息，请参阅[记录字段交换 (RFX)](../../data/odbc/record-field-exchange-rfx.md)和[记录集：(ODBC) 批量提取记录](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
 
-记录集对象使您可以访问所有所选的记录。 通过使用多个所选记录滚动`CRecordset`成员函数，如`MoveNext`和`MovePrev`。 同时，记录集对象都表示只有一个所选的记录，当前记录。 可以通过声明与列的表或从数据库查询结果的记录相对应的类成员变量的记录集来检查当前记录的字段。 有关记录集数据成员的信息，请参阅[记录集： 体系结构 (ODBC)](../../data/odbc/recordset-architecture-odbc.md)。
+记录集对象使您可以访问所有所选的记录。 通过使用多个所选记录滚动`CRecordset`成员函数，如`MoveNext`和`MovePrev`。 同时，记录集对象都表示只有一个所选的记录，当前记录。 可以通过声明与列的表或从数据库查询结果的记录相对应的类成员变量的记录集来检查当前记录的字段。 有关记录集数据成员的信息，请参阅[记录集：体系结构 (ODBC)](../../data/odbc/recordset-architecture-odbc.md)。
 
 以下主题介绍使用记录集对象的详细信息。 主题将列出按功能类别和自然浏览顺序以允许顺序读取。
 
@@ -79,7 +79,7 @@ ms.locfileid: "50435251"
 
 - [记录集：体系结构 (ODBC)](../../data/odbc/recordset-architecture-odbc.md)
 
-- [记录集：声明表的类 (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)
+- [记录集：声明一个类 (ODBC) 的表](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)
 
 - [记录集：创建和关闭记录集 (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)
 
@@ -89,13 +89,13 @@ ms.locfileid: "50435251"
 
 - [记录集：筛选记录 (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md)
 
-- [记录集：对记录进行排序 (ODBC)](../../data/odbc/recordset-sorting-records-odbc.md)
+- [记录集：排序记录 (ODBC)](../../data/odbc/recordset-sorting-records-odbc.md)
 
 - [记录集：参数化记录集 (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)
 
 ### <a name="topics-about-the-mechanics-of-modifying-recordsets"></a>有关修改记录集的技巧的主题
 
-- [记录集：添加、更新和删除记录 (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)
+- [记录集：添加、 更新和删除记录 (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)
 
 - [记录集：锁定记录 (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)
 
@@ -105,21 +105,21 @@ ms.locfileid: "50435251"
 
 - [记录集：执行联接 (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)
 
-- [记录集：为预定义查询声明一个类 (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)
+- [记录集：声明一个类预定义的查询 (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)
 
 - [记录集：动态绑定数据列 (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)
 
-- [记录集：批量提取记录 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)
+- [记录集：提取记录大容量 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)
 
 - [记录集：处理大数据项 (ODBC)](../../data/odbc/recordset-working-with-large-data-items-odbc.md)
 
-- [记录集：获取 SUM 及其他聚合结果 (ODBC)](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)
+- [记录集：获取 Sum 及其他聚合结果 (ODBC)](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)
 
 ### <a name="topics-about-how-recordsets-work"></a>有关记录集的工作原理的主题
 
-- [记录集：记录集如何选择记录 (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)
+- [记录集：如何记录集选择记录 (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)
 
-- [记录集：记录集如何更新记录 (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)
+- [记录集：如何记录集更新记录 (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)
 
 ## <a name="see-also"></a>请参阅
 

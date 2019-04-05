@@ -32,12 +32,12 @@ helpviewer_keywords:
 - Hash method
 - m_rgbookmarks
 ms.assetid: a8aa3149-7ce8-4976-a680-2da193fd3234
-ms.openlocfilehash: c5954aefaff2cdacb1aa1712f8b4bda93c9e434e
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: e3513084697a60a33b9fa2ab02222a9b332cce79
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420370"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59039814"
 ---
 # <a name="irowsetlocateimpl-class"></a>IRowsetLocateImpl 类
 
@@ -94,10 +94,10 @@ class ATL_NO_VTABLE IRowsetLocateImpl : public IRowsetImpl<
 
 |||
 |-|-|
-|[Compare](#compare)|比较两个的书签。|
+|[比较](#compare)|比较两个的书签。|
 |[GetRowsAt](#getrowsat)|提取从指定的偏移量从书签的行开始的行。|
 |[GetRowsByBookmark](#getrowsbybookmark)|提取匹配指定的书签的行。|
-|[哈希](#hash)|返回哈希值用于指定书签。|
+|[Hash](#hash)|返回哈希值用于指定书签。|
 
 ### <a name="data-members"></a>数据成员
 
@@ -239,4 +239,4 @@ CAtlArray<DBROWCOUNT> m_rgBookmarks;
 [OLE DB 提供程序模板体系结构](../../data/oledb/ole-db-provider-template-architecture.md)<br/>
 [IRowsetLocate:IRowset](/previous-versions/windows/desktop/ms721190(v=vs.85))
 [用于书签的提供程序支持](../../data/oledb/provider-support-for-bookmarks.md)<br/>
-[定位标记](/previous-versions/windows/desktop/ms709728(v=vs.85))
+[书签](/previous-versions/windows/desktop/ms709728(v=vs.85))

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - requires_category attribute
 ms.assetid: a645fdc6-1ef5-414d-8c56-5fe2686d4687
-ms.openlocfilehash: e6621e2cec92eadb0ca4b4ac989b4ca7d578b2ef
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ec35a1958d9fbcf77fef7f498c6c0dba3ab17df9
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429833"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59022134"
 ---
 # <a name="requirescategory"></a>requires_category
 
@@ -62,7 +62,7 @@ class CMyClass {};
 |**适用对象**|**类**，**结构**|
 |**可重复**|否|
 |**必需的特性**|一个或多个以下： `coclass`， `progid`，或`vi_progid`。|
-|**无效的特性**|无|
+|**无效的特性**|None|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 

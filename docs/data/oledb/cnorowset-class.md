@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - CNoRowset class
 ms.assetid: 55c6c7a4-9e3a-4775-a2dd-c8b333012fa6
-ms.openlocfilehash: 513e393bbc782d87b37dab108428f2970fbb92e8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6193e2d461761c53fb05e5c16b3914c56d545173
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644447"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035671"
 ---
 # <a name="cnorowset-class"></a>CNoRowset 类
 
@@ -35,19 +35,19 @@ class CNoRowset
 
 ## <a name="remarks"></a>备注
 
-如果命令不返回行集，请将 `CNoRowset` 用作模板自变量。
+如果命令不返回行集，请将 `CNoRowset` 用作模板参数。
 
-`CNoRowset` 将实现以下存根方法，其中每个方法都对应于其他访问器类方法：
+`CNoRowset` 实现以下存根方法，其中每个对应于其他访问器类方法：
 
 - `BindFinished` -指示绑定操作何时完成 (返回`S_OK`)。
 
 - `Close` -释放行和当前 IRowset 接口。
 
-- `GetIID` - 检索连接点的接口 ID。
+- `GetIID` -检索连接点的接口 ID。
 
 - `GetInterface` -检索接口。
 
-- `GetInterfacePtr` - 检索封装的接口指针。
+- `GetInterfacePtr` -检索封装的接口指针。
 
 - `SetAccessor` -将指针设置为访问器。
 

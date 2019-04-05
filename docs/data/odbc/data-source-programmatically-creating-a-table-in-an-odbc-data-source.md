@@ -7,18 +7,18 @@ helpviewer_keywords:
 - ODBC data sources, creating tables in
 - tables [C++], creating programmatically
 ms.assetid: 9ca68fb5-c3df-424a-a75c-e3fb01cc1b18
-ms.openlocfilehash: 139efb7a34baacb2bb6ad424d13f2d337eb12af6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 61d3f3e39362db27d1e3abc00fa3cb9ea82b86e2
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50661651"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59028394"
 ---
 # <a name="data-source-programmatically-creating-a-table-in-an-odbc-data-source"></a>数据源：以编程方式在 ODBC 数据源中创建表
 
 本主题说明如何创建表以获取你的数据源，使用`ExecuteSQL`类的成员函数`CDatabase`，将该函数传递一个字符串，包含**CREATE TABLE** SQL 语句。
 
-有关在 MFC 中的 ODBC 数据源的常规信息，请参阅[数据源 (ODBC)](../../data/odbc/data-source-odbc.md)。 本主题[数据源： 以编程方式配置 ODBC 数据源](../../data/odbc/data-source-programmatically-configuring-an-odbc-data-source.md)介绍了如何创建数据源。
+有关在 MFC 中的 ODBC 数据源的常规信息，请参阅[数据源 (ODBC)](../../data/odbc/data-source-odbc.md)。 本主题[数据源：以编程方式配置 ODBC 数据源](../../data/odbc/data-source-programmatically-configuring-an-odbc-data-source.md)介绍了如何创建数据源。
 
 数据源建立后，您可以轻松创建使用表`ExecuteSQL`成员函数和**CREATE TABLE** SQL 语句。 例如，如果您有`CDatabase`对象调用`myDB`，可以使用下面的 MFC 代码来创建表：
 

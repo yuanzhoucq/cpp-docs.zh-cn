@@ -65,12 +65,12 @@ helpviewer_keywords:
 - operator CSession*
 - CSession* operator
 ms.assetid: 77432d85-4e20-49ec-a0b0-142137828471
-ms.openlocfilehash: 769dfc99f431cb5ba803075e28176713f9bd7092
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
+ms.openlocfilehash: 94c7025185a24b07d5968157d49c856d4359b33a
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58565501"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59021626"
 ---
 # <a name="cdataconnection-class"></a>CDataConnection 类
 
@@ -104,9 +104,9 @@ class CDataConnection
 |[BOOL 运算符](#op_bool)|确定当前会话是否为打开。|
 |[operator bool](#op_bool_ole)|确定当前会话是否为打开。|
 |[CDataSource 运算符 （& a)](#op_cdata_amp)|返回对所包含的引用`CDataSource`对象。|
-|[operator CDataSource*](#op_cdata_star)|返回指向包含的 `CDataSource` 对象的指针。|
-|[运算符 CSession （& a)](#op_csession_amp)|返回对所包含的引用`CSession`对象。|
-|[运算符 CSession *](#op_csession_star)|返回指向包含的 `CSession` 对象的指针。|
+|[运算符 CDataSource *](#op_cdata_star)|返回指向包含的 `CDataSource` 对象的指针。|
+|[运算符 CSession&](#op_csession_amp)|返回对所包含的引用`CSession`对象。|
+|[运算符 CSession*](#op_csession_star)|返回指向包含的 `CSession` 对象的指针。|
 
 ## <a name="remarks"></a>备注
 
@@ -187,7 +187,7 @@ HRESULT OpenNewSession(CSession & session) throw();
 
 #### <a name="parameters"></a>参数
 
-*session*<br/>
+*会话*<br/>
 [输入/输出]对新的会话对象的引用。
 
 ### <a name="remarks"></a>备注

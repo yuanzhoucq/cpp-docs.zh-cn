@@ -3,12 +3,12 @@ title: 按类别列出的关键 WRL API
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 7367bacf-6b7c-4ecd-a0ce-a662db46fc66
-ms.openlocfilehash: fd4bebf9c823079c3bdb4c4182bf3f30cdf105a7
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: f3065323c567c944dab12fc1ebbcbd6bb57127e9
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58784079"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59039048"
 ---
 # <a name="key-wrl-apis-by-category"></a>按类别列出的关键 WRL API
 
@@ -23,7 +23,7 @@ ms.locfileid: "58784079"
 |[ClassFactory 类](classfactory-class.md)|实现 `IClassFactory` 接口的基本功能。|
 |[ComPtr 类](comptr-class.md)|创建表示模板参数指定的接口的 *智能指针* 类型。 ComPtr 会自动维护基础接口指针的引用计数，并在引用计数变为零时释放接口。|
 |[Event 类（Windows 运行时 C++ 模板库）](event-class-wrl.md)|表示一个事件。|
-|[EventSource 类](eventsource-class.md)|表示一个事件。 `EventSource` 成员函数将添加、删除和调用事件处理程序。|
+|[EventSource 类](eventsource-class.md)|表示一个事件。 `EventSource` 成员函数添加、 删除和调用事件处理程序。|
 |[FtmBase 类](ftmbase-class.md)|表示自由线程封送拆收器对象。|
 |[HandleT 类](handlet-class.md)|表示对象的句柄。|
 |[HString 类](hstring-class.md)|为处理 HSTRING 句柄提供支持。|

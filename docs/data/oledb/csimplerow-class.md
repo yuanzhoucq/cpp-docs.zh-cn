@@ -35,12 +35,12 @@ helpviewer_keywords:
 - m_dwRef
 - m_iRowset
 ms.assetid: 06d9621d-60cc-4508-8b0c-528d1b1a809b
-ms.openlocfilehash: b7284ace73d80eff6337e1d71cafef26094455f0
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 19b90f4454e784907366ef6cf7e3e7e1b9ada799
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414014"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023836"
 ---
 # <a name="csimplerow-class"></a>CSimpleRow 类
 
@@ -63,7 +63,7 @@ class CSimpleRow
 |||
 |-|-|
 |[AddRefRow](#addrefrow)|将引用计数添加到现有的行控点。|
-|[Compare](#compare)|比较两个行，以查看它们是否引用同一个行实例。|
+|[比较](#compare)|比较两个行，以查看它们是否引用同一个行实例。|
 |[CSimpleRow](#csimplerow)|构造函数。|
 |[ReleaseRow](#releaserow)|释放行。|
 

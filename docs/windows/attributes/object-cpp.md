@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - object attribute
 ms.assetid: f2d3c231-630d-4b4c-bd15-b1c30df362dd
-ms.openlocfilehash: 1cae9e6b014f33dfbbcccdeb4172d6f35349e307
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c0f544e84e5110761dfd01e25abef4352f055ff5
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50526148"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59022354"
 ---
 # <a name="object-c"></a>object (C++)
 
@@ -41,8 +41,8 @@ ms.locfileid: "50526148"
 |-|-|
 |**适用对象**|**interface**|
 |**可重复**|否|
-|**必需的特性**|无|
-|**无效的特性**|无|
+|**必需的特性**|None|
+|**无效的特性**|None|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
@@ -52,5 +52,5 @@ ms.locfileid: "50526148"
 [接口特性](interface-attributes.md)<br/>
 [dual](dual.md)<br/>
 [dispinterface](dispinterface.md)<br/>
-[custom](custom-cpp.md)<br/>
+[自定义](custom-cpp.md)<br/>
 [__interface](../../cpp/interface.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - event sinks, creating
 - event sinks
 ms.assetid: bf8fe770-3ea2-4128-b46b-166222ee4097
-ms.openlocfilehash: e483ece1019d4a8203215eddbc4d3b9d545328a6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 81a3ec88c336ddeb550f133e657854b3b6f89d96
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50663178"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023290"
 ---
 # <a name="eventreceiver"></a>event_receiver
 
@@ -32,7 +32,7 @@ ms.locfileid: "50663178"
 
 ### <a name="parameters"></a>参数
 
-*type*<br/>
+*类型*<br/>
 以下值之一的枚举：
 
 - `native` 非托管 C/c + + 代码 （本机类的默认值）。
@@ -72,7 +72,7 @@ ms.locfileid: "50663178"
 |**适用对象**|**类**，**结构**|
 |**可重复**|否|
 |**必需的特性**|`coclass` 当*layout_dependent*=**，则返回 true**|
-|**无效的特性**|无|
+|**无效的特性**|None|
 
 有关详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 

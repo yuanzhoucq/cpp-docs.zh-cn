@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ODBC recordsets, requerying
 - refreshing recordsets
 ms.assetid: 4ebc3b5b-5b91-4f51-a967-245223c6b8e1
-ms.openlocfilehash: b8e7de569a8310fdad0273ae70449d2da544f6e3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7edc1c04da617f96165b25a47ce169b266ae0003
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50482730"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59024590"
 ---
 # <a name="recordset-requerying-a-recordset-odbc"></a>记录集：再次查询记录集 (ODBC)
 
@@ -29,7 +29,7 @@ ms.locfileid: "50482730"
 
 ##  <a name="_core_bringing_the_recordset_up_to_date"></a> 记录集最多引入日期
 
-通常情况下，你将想要再次查询记录集对象以使其保持最新。 在多用户数据库环境中，其他用户可以进行更改的数据的记录集的生命周期内。 有关记录集时反映由其他用户所做的更改和其他用户的记录集时反映所做的更改的详细信息，请参阅[记录集： 如何更新记录 (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)和[动态集](../../data/odbc/dynaset.md).
+通常情况下，你将想要再次查询记录集对象以使其保持最新。 在多用户数据库环境中，其他用户可以进行更改的数据的记录集的生命周期内。 有关记录集时反映由其他用户所做的更改和其他用户的记录集时反映所做的更改的详细信息，请参阅[记录集：如何记录集更新记录 (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)并[动态集](../../data/odbc/dynaset.md)。
 
 ##  <a name="_core_requerying_based_on_new_parameters"></a> 再次查询基于新的参数
 
@@ -48,7 +48,7 @@ ms.locfileid: "50482730"
 
 或者，可以关闭并重新打开原始记录集。 在任一情况下，新的记录集表示数据源的当前状态。
 
-有关示例，请参阅[记录视图： 填充列表框从第二个记录集](../../data/filling-a-list-box-from-a-second-recordset-mfc-data-access.md)。
+有关示例，请参阅[记录视图：从另一个记录集填充列表框](../../data/filling-a-list-box-from-a-second-recordset-mfc-data-access.md)所述。
 
 > [!TIP]
 >  若要优化`Requery`性能，避免更改记录集的[筛选器](../../data/odbc/recordset-filtering-records-odbc.md)或[排序](../../data/odbc/recordset-sorting-records-odbc.md)。 更改仅参数值，然后才能调用`Requery`。

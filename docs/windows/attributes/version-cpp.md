@@ -7,12 +7,12 @@ helpviewer_keywords:
 - version attribute
 - version information, version attribute
 ms.assetid: db6ce5d8-82c2-4329-b1a8-8ca2f67342cb
-ms.openlocfilehash: 01c4cca846326d237fdacd19187a44e21bd15913
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fe1df9e12b9adbf9ce55978fd3479f7e740ddc96
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519309"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59025747"
 ---
 # <a name="version-c"></a>version (C++)
 
@@ -26,7 +26,7 @@ ms.locfileid: "50519309"
 
 ### <a name="parameters"></a>参数
 
-*版本*<br/>
+*version*<br/>
 版本号`coclass`。 如果未指定，则将在.idl 文件中放置 1.0。
 
 ## <a name="remarks"></a>备注
@@ -46,7 +46,7 @@ ms.locfileid: "50519309"
 |**适用对象**|**类**，**结构**|
 |**可重复**|否|
 |**必需的特性**|**coclass**|
-|**无效的特性**|无|
+|**无效的特性**|None|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 

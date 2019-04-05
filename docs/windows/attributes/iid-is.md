@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - iid_is attribute
 ms.assetid: 2f9b42a9-7130-4b08-9b1e-0d5d360e10ff
-ms.openlocfilehash: 176ab83bfae18ff7f43fe0860591f2d1ac50d7eb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b91fb7937bb0e20f2500eace9695bc0ddba21b26
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50535325"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038552"
 ---
 # <a name="iidis"></a>iid_is
 
@@ -59,12 +59,12 @@ __interface IFireTabCtrl : IDispatch
 |-|-|
 |**适用对象**|接口参数，数据成员|
 |**可重复**|否|
-|**必需的特性**|无|
-|**无效的特性**|无|
+|**必需的特性**|None|
+|**无效的特性**|None|
 
 有关详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
 ## <a name="see-also"></a>请参阅
 
 [IDL 特性](idl-attributes.md)<br/>
-[参数特性](parameter-attributes.md)
+[Parameter 特性](parameter-attributes.md)

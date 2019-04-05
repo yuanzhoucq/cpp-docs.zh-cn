@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - AsyncResultType enumeration
 ms.assetid: 4195d234-3f3f-4363-9118-6ad2a7551cf2
-ms.openlocfilehash: 309ed876c71f453336ecc2ed10eedc07f2a80be8
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: d3f99fa85a777ae8361ed6f7cb82fe97ddd8d667
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58784060"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59028047"
 ---
 # <a name="asyncresulttype-enumeration"></a>AsyncResultType 枚举
 
@@ -41,4 +41,4 @@ enum AsyncResultType;
 
 ## <a name="see-also"></a>请参阅
 
-[Microsoft::WRL Namespace](microsoft-wrl-namespace.md)
+[Microsoft::WRL 命名空间](microsoft-wrl-namespace.md)

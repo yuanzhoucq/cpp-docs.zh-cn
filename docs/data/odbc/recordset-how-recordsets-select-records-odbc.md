@@ -1,5 +1,5 @@
 ---
-title: 记录集：记录集如何选择记录 (ODBC)
+title: 记录集：如何记录集选择记录 (ODBC)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - recordsets, selecting records
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - recordsets, constructing SQL statements
 - ODBC recordsets, selecting records
 ms.assetid: 343a6a91-aa4c-4ef7-b21f-2f2bfd0d3787
-ms.openlocfilehash: 7e7bbaad949b5f4456ce4c8aea60099792deb786
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 310481a6ea6637de817bf29d528cbdfe70ae70db
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329459"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041320"
 ---
-# <a name="recordset-how-recordsets-select-records-odbc"></a>记录集：记录集如何选择记录 (ODBC)
+# <a name="recordset-how-recordsets-select-records-odbc"></a>记录集：如何记录集选择记录 (ODBC)
 
 本主题适用于 MFC ODBC 类。
 
@@ -40,11 +40,11 @@ ms.locfileid: "51329459"
 |--------------|-------------|
 |声明在记录集类**添加类**向导|指定要从选择的表。<br /><br /> 指定要包含的列。<br /><br /> 请参阅[添加 MFC ODBC 使用者](../../mfc/reference/adding-an-mfc-odbc-consumer.md)。|
 |完成您的记录集类实现|重写成员函数，如`OnSetOptions`（高级） 设置特定于应用程序的选项，或要更改默认值。 如果希望参数化记录集，则指定的参数数据成员。|
-|构造一个记录集对象 (在调用之前`Open`)|指定在中使用的搜索条件 （可能是复合型）**其中**筛选记录的子句。 请参阅[记录集： 筛选记录 (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md)。<br /><br /> 指定在中使用的排序顺序**ORDER BY**记录进行排序的子句。 请参阅[记录集： 对记录 (ODBC) 进行排序](../../data/odbc/recordset-sorting-records-odbc.md)。<br /><br /> 指定任何参数添加到类的参数值。 请参阅[记录集： 参数化记录集 (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)。|
+|构造一个记录集对象 (在调用之前`Open`)|指定在中使用的搜索条件 （可能是复合型）**其中**筛选记录的子句。 请参阅[记录集：筛选记录 (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md)。<br /><br /> 指定在中使用的排序顺序**ORDER BY**记录进行排序的子句。 请参阅[记录集：排序记录 (ODBC)](../../data/odbc/recordset-sorting-records-odbc.md)。<br /><br /> 指定任何参数添加到类的参数值。 请参阅[记录集：参数化记录集 (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)。|
 
-|通过调用运行记录集的查询`Open`|指定要替换由向导设置的默认 SQL 字符串的自定义 SQL 字符串。 请参阅[crecordset:: Open](../../mfc/reference/crecordset-class.md#open)中*类库参考*并[SQL： 自定义记录集的 SQL 语句 (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)。 |
+|通过调用运行记录集的查询`Open`|指定要替换由向导设置的默认 SQL 字符串的自定义 SQL 字符串。 请参阅[crecordset:: Open](../../mfc/reference/crecordset-class.md#open)中*类库参考*和[SQL:自定义记录集的 SQL 语句 (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)。 |
 
-|调用`Requery`再次查询记录集包含数据源中的最新值 |指定新的参数、 筛选或排序。 请参阅[记录集： 再次查询记录集 (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)。 |
+|调用`Requery`再次查询记录集包含数据源中的最新值 |指定新的参数、 筛选或排序。 请参阅[记录集：再次查询记录集 (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)。 |
 
 ##  <a name="_core_how_a_recordset_constructs_its_sql_statement"></a> 记录集如何构造查询的 SQL 语句
 
@@ -78,19 +78,19 @@ ms.locfileid: "51329459"
 
 - 将自定义 SQL 字符串中的传递*lpszSQL*当你调用[打开](../../mfc/reference/crecordset-class.md#open)记录集。 在传递的任何内容*lpsqSQL*优先于什么[GetDefaultSQL](../../mfc/reference/crecordset-class.md#getdefaultsql)成员函数返回。
 
-   有关详细信息，请参阅[SQL： 自定义您记录集的 SQL 语句 (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)，它描述了类型 SQL 语句 （或部分语句） 的情况下，您可以传递给`Open`和框架与它们的用途。
+   有关详细信息，请参阅[SQL:自定义您的记录集的 SQL 语句 (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)，它描述了类型的 SQL 语句 （或部分语句） 可以传递给`Open`和框架与它们的用途。
 
     > [!NOTE]
     >  如果传递的自定义字符串不以"SELECT"或"{CALL"开头，MFC 将假定它包含表名称。 这同样适用于下一项目符号项。
 
 - 更改字符串，该向导将在记录集中的写入`GetDefaultSQL`成员函数。 编辑函数的代码，以更改它返回的内容。 默认情况下，向导会将写入`GetDefaultSQL`返回单个表名称的函数。
 
-   你可以`GetDefaultSQL`返回的任何项，可以传入*lpszSQL*参数`Open`。 如果不传递中的自定义 SQL 字符串*lpszSQL*，该框架使用的字符串的`GetDefaultSQL`返回。 至少，`GetDefaultSQL`必须返回单个表名称。 但您可以将该返回多个表名，完整**选择**语句，ODBC**调用**语句中，依次类推。 有关一系列可以传递给*lpszSQL* — 或具有`GetDefaultSQL`返回，请参阅[SQL： 自定义您记录集的 SQL 语句 (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)。
+   你可以`GetDefaultSQL`返回的任何项，可以传入*lpszSQL*参数`Open`。 如果不传递中的自定义 SQL 字符串*lpszSQL*，该框架使用的字符串的`GetDefaultSQL`返回。 至少，`GetDefaultSQL`必须返回单个表名称。 但您可以将该返回多个表名，完整**选择**语句，ODBC**调用**语句中，依次类推。 有关一系列可以传递给*lpszSQL* — 或具有`GetDefaultSQL`返回，请参阅[SQL:自定义记录集的 SQL 语句 (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)。
 
-   如果您正在执行的两个或多个表联接，重写`GetDefaultSQL`自定义在 SQL 中使用的表列表**FROM**子句。 有关详细信息，请参阅[记录集： 执行联接 (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)。
+   如果您正在执行的两个或多个表联接，重写`GetDefaultSQL`自定义在 SQL 中使用的表列表**FROM**子句。 有关详细信息，请参阅[记录集：执行联接 (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)。
 
 
-- 手动将其他字段数据成员，可能根据你获取有关架构的信息的数据源在运行时绑定。 将字段数据成员添加到记录集类中， [RFX](../../data/odbc/record-field-exchange-using-rfx.md)或批量 RFX 函数会调用由他们[DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange)或[DoBulkFieldExchange](../../mfc/reference/crecordset-class.md#dobulkfieldexchange)成员函数和类构造函数中的数据成员的初始化。 有关详细信息，请参阅[记录集： 动态绑定数据列 (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)。
+- 手动将其他字段数据成员，可能根据你获取有关架构的信息的数据源在运行时绑定。 将字段数据成员添加到记录集类中， [RFX](../../data/odbc/record-field-exchange-using-rfx.md)或批量 RFX 函数会调用由他们[DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange)或[DoBulkFieldExchange](../../mfc/reference/crecordset-class.md#dobulkfieldexchange)成员函数和类构造函数中的数据成员的初始化。 有关详细信息，请参阅[记录集：动态绑定数据列 (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)。
 
 - 重写记录集成员函数，如`OnSetOptions`，可以设置特定于应用程序的选项或重写默认值。
 
@@ -99,7 +99,7 @@ ms.locfileid: "51329459"
 ## <a name="see-also"></a>请参阅
 
 [记录集 (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[记录集：记录集如何更新记录 (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)<br/>
+[记录集：如何记录集更新记录 (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)<br/>
 [ODBC 基础](../../data/odbc/odbc-basics.md)<br/>
 [SQL](../../data/odbc/sql.md)<br/>
 [记录集：锁定记录 (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)

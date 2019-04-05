@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Visual C++ projects
 - ATL projects
 ms.assetid: 11003cd8-9046-4630-a189-a32bf3b88047
-ms.openlocfilehash: a3ddafab143224b6e20a3e01d1d643c42bbe19e0
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: b4772b9bd625a542a18039386fefe42840ab65b1
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58775317"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038033"
 ---
 # <a name="visual-studio-projects---c"></a>Visual Studio 项目的 c + +
 
@@ -60,13 +60,13 @@ ms.locfileid: "58775317"
 
 ## <a name="in-this-section"></a>本节内容
 
-[在 Visual Studio 中设置 C++ 编译器并生成属性](working-with-project-properties.md)<br/>
+[设置 c + + 编译器和生成 Visual Studio 中的属性](working-with-project-properties.md)<br/>
 如何使用属性页和属性表来指定项目设置。
 
-[在生成时引用库和组件](adding-references-in-visual-cpp-projects.md)<br/>
+[引用库和生成时在组件](adding-references-in-visual-cpp-projects.md)<br/>
 如何在项目中包括库、 Dll、 COM 和.NET 组件。
  
-[整理项目输出文件](how-to-organize-project-output-files-for-builds.md)<br/>
+[组织项目输出文件](how-to-organize-project-output-files-for-builds.md)<br/>
 如何自定义生成过程中创建的可执行文件的位置。
 
 [自定义生成步骤和生成事件](understanding-custom-build-steps-and-build-events.md)<br/>

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - __addgsdword intrinsic
 - __addgsbyte intrinsic
 ms.assetid: 4fa03e69-d849-49ed-ba37-1d3aa23c2a21
-ms.openlocfilehash: 9514c193468d526aa645ea7984691034feebc07a
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.openlocfilehash: 61fff704e600296443964ab62a0b58799c87b51b
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220460"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59031188"
 ---
 # <a name="addgsbyte-addgsword-addgsdword-addgsqword"></a>__addgsbyte, __addgsword, __addgsdword, __addgsqword
 
@@ -52,10 +52,10 @@ void __addgsqword(
 
 #### <a name="parameters"></a>参数
 
-*偏移量*<br/>
+*偏移*<br/>
 [in]从开始处的偏移量`GS`。
 
-*Data*<br/>
+*数据*<br/>
 [in]要添加到内存位置的值。
 
 ## <a name="requirements"></a>要求
@@ -75,7 +75,7 @@ void __addgsqword(
 
 ## <a name="see-also"></a>请参阅
 
-[__incgsbyte， \__incgsword， \__incgsdword， \__incgsqword](../intrinsics/incgsbyte-incgsword-incgsdword-incgsqword.md)<br/>
+[__incgsbyte, \__incgsword, \__incgsdword, \__incgsqword](../intrinsics/incgsbyte-incgsword-incgsdword-incgsqword.md)<br/>
 [__readgsbyte， \__readgsdword， \__readgsqword， \__readgsword](../intrinsics/readgsbyte-readgsdword-readgsqword-readgsword.md)<br/>
 [__writegsbyte， \__writegsdword， \__writegsqword， \__writegsword](../intrinsics/writegsbyte-writegsdword-writegsqword-writegsword.md)<br/>
 [编译器内部函数](../intrinsics/compiler-intrinsics.md)

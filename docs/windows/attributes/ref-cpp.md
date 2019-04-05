@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - ref attribute
 ms.assetid: 67e82d3e-07d9-4ef8-bf2b-0a4491d12557
-ms.openlocfilehash: c22d04f7a799ea720fb7d69ffc1aa21ddf9db55c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f051fe577087d81515ddf0b44dfb15ad0fb2c616
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468427"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041372"
 ---
 # <a name="ref-c"></a>ref (C++)
 
@@ -51,8 +51,8 @@ __interface IFireTabCtrl
 |-|-|
 |**适用对象**|**typedef**，接口参数，接口方法|
 |**可重复**|否|
-|**必需的特性**|无|
-|**无效的特性**|无|
+|**必需的特性**|None|
+|**无效的特性**|None|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
@@ -60,4 +60,4 @@ __interface IFireTabCtrl
 
 [IDL 特性](idl-attributes.md)<br/>
 [Typedef、Enum、Union 和 Struct 特性](typedef-enum-union-and-struct-attributes.md)<br/>
-[参数特性](parameter-attributes.md)
+[Parameter 特性](parameter-attributes.md)

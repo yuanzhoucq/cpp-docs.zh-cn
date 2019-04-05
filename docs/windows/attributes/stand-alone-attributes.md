@@ -5,12 +5,12 @@ helpviewer_keywords:
 - standalone attributes
 - attributes [C++/CLI], standalone
 ms.assetid: 0d72e84e-236c-43b3-ac9a-d9b91fcd6794
-ms.openlocfilehash: 1183d2b171a25b3b2d1aef14c19f81be65effc6a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7dd1f35add3b23dbd81e32a1600481eec79fe7d7
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50640814"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033052"
 ---
 # <a name="stand-alone-attributes"></a>独立特性
 
@@ -21,7 +21,7 @@ ms.locfileid: "50640814"
 |特性|描述|
 |---------------|-----------------|
 |[cpp_quote](cpp-quote.md)|将指定的字符串，而无需引号字符，发送到生成的头文件。|
-|[custom](custom-cpp.md)|你可以定义自己的属性。|
+|[自定义](custom-cpp.md)|你可以定义自己的属性。|
 |[db_command](db-command.md)|创建 OLE DB 命令。|
 |[emitidl](emitidl.md)|确定是否将处理并放置在生成的.idl 文件中所有后续的 IDL 特性。|
 |[idl_module](idl-module.md)|在 DLL 中指定的入口点。|
@@ -32,7 +32,7 @@ ms.locfileid: "50640814"
 |[include](include-cpp.md)|指定要包括在生成的.idl 文件中的一个或多个标头文件。|
 |[includelib](includelib-cpp.md)|导致要生成的.idl 文件中包含的.idl 或.h 文件。|
 |[library_block](library-block.md)|将放置在.idl 文件的库块中的构造。|
-|[module](module-cpp.md)|定义.Idl 文件中的库块。|
+|[name](module-cpp.md)|定义.Idl 文件中的库块。|
 |[no_injected_text](no-injected-text.md)|禁止编译器注入代码作为特性使用结果。|
 |[pragma](pragma.md)|将指定的字符串，而无需引号字符，发送到生成的.idl 文件。|
 

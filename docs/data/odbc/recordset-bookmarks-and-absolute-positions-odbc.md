@@ -21,12 +21,12 @@ helpviewer_keywords:
 - GetBookmark method
 - SetAbsolutePosition method, bookmarks
 ms.assetid: 189788d6-33c1-41c5-9265-97db2a5d43cc
-ms.openlocfilehash: 826c1c0124eb261c97fff8f1e2fa01c8becb073a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c4a223f01b25b4c321ccfb4f4c03c3c5241381ec
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50500928"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023784"
 ---
 # <a name="recordset-bookmarks-and-absolute-positions-odbc"></a>记录集：书签和绝对位置 (ODBC)
 
@@ -80,7 +80,7 @@ rs.SetBookmark( varRecordToReturnTo );
 > [!NOTE]
 >  一条记录的绝对位置有可能不可靠。 如果用户从记录集中，任何后续的记录的更改的序号位置中删除记录。 书签是移动当前记录的推荐的方法。 有关详细信息，请参阅[MFC ODBC 中的书签](#_core_bookmarks_in_mfc_odbc)。
 
-有关记录集导航的详细信息，请参阅[记录集： 滚动 (ODBC)](../../data/odbc/recordset-scrolling-odbc.md)。
+有关记录集导航的详细信息，请参阅[记录集：滚动 (ODBC)](../../data/odbc/recordset-scrolling-odbc.md)。
 
 ## <a name="see-also"></a>请参阅
 

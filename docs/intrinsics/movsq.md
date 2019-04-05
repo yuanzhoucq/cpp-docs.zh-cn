@@ -8,12 +8,12 @@ helpviewer_keywords:
 - rep movsq instruction
 - movsq instruction
 ms.assetid: be116a6e-2176-4ca4-93b1-9ccf3e7e7835
-ms.openlocfilehash: 06f42befa24d4024b3ad4b0c0a8d0897cb2aee9b
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 4e4908cd5ffc28840b5a48b735048cccb557e97c
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326363"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59036742"
 ---
 # <a name="movsq"></a>__movsq
 
@@ -39,7 +39,7 @@ void __movsq(
 *源*<br/>
 [in]操作的源。
 
-“计数”<br/>
+*计数*<br/>
 [in]要复制的四字的数目。
 
 ## <a name="requirements"></a>要求

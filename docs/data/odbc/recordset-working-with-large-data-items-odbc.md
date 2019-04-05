@@ -8,19 +8,19 @@ helpviewer_keywords:
 - binary large objects
 - CLongBinary class, using in recordsets
 ms.assetid: 3e80b5a8-b6e7-43c6-a816-e54befc513a3
-ms.openlocfilehash: 8ef32621821d731d9137a446bea220564cb7f92f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3ba8d4af5b0781c425dd3b1223e2208b279f055e
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50460367"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033039"
 ---
 # <a name="recordset-working-with-large-data-items-odbc"></a>记录集：处理大数据项 (ODBC)
 
 本主题适用于 MFC ODBC 类和 MFC DAO 类。
 
 > [!NOTE]
->  如果使用 MFC DAO 类时，管理大型数据项与类[CByteArray](../../mfc/reference/cbytearray-class.md)而不是类[CLongBinary](../../mfc/reference/clongbinary-class.md)。 如果使用批量行提取使用 MFC ODBC 类，使用`CLongBinary`而非`CByteArray`。 有关批量行提取的详细信息，请参阅[记录集： 提取记录 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
+>  如果使用 MFC DAO 类时，管理大型数据项与类[CByteArray](../../mfc/reference/cbytearray-class.md)而不是类[CLongBinary](../../mfc/reference/clongbinary-class.md)。 如果使用批量行提取使用 MFC ODBC 类，使用`CLongBinary`而非`CByteArray`。 有关批量行提取的详细信息，请参阅[记录集：(ODBC) 批量提取记录](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
 
 假设您的数据库可以存储大的数据，如位图 （雇员照片、 映射、 图片的产品、 OLE 对象等）。 此类数据通常称为二进制大型对象 （或 BLOB） 因为：
 
@@ -62,5 +62,5 @@ ms.locfileid: "50460367"
 ## <a name="see-also"></a>请参阅
 
 [记录集 (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[记录集：获取 SUM 及其他聚合结果 (ODBC)](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)<br/>
+[记录集：获取 Sum 及其他聚合结果 (ODBC)](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)<br/>
 [记录字段交换 (RFX)](../../data/odbc/record-field-exchange-rfx.md)

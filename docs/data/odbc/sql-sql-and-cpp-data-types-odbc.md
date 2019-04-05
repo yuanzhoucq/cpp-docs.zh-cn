@@ -1,19 +1,19 @@
 ---
-title: SQL：SQL 和 C++ 数据类型 (ODBC)
+title: SQL:SQL 和 c + + 数据类型 (ODBC)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - data types [C++], SQL vs. C++
 - SQL data types [C++]
 - SQL [C++], vs. C++ data types
 ms.assetid: 066e0070-d4da-435c-9c4b-f7cab3352c86
-ms.openlocfilehash: 6767d009ca376d8e8579baf32f2c9af1e282abce
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3efa36342b7d16968113acd818a7a1386e4cefcc
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50649492"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59024343"
 ---
-# <a name="sql-sql-and-c-data-types-odbc"></a>SQL：SQL 和 C++ 数据类型 (ODBC)
+# <a name="sql-sql-and-c-data-types-odbc"></a>SQL:SQL 和 c + + 数据类型 (ODBC)
 
 > [!NOTE]
 >  此信息适用于 MFC ODBC 类。 如果您正在使用 MFC DAO 类，请参阅"比较的 Microsoft Jet 数据库引擎 SQL 和 ANSI SQL"DAO 帮助中的主题。
@@ -25,24 +25,24 @@ ms.locfileid: "50649492"
 |ANSI SQL 数据类型|C++ 数据类型|
 |------------------------|---------------------|
 |**CHAR**|`CString`|
-|DECIMAL|`CString` 1|
+|**DECIMAL**|`CString` 1|
 |**SMALLINT**|**int**|
 |**真正**|**float**|
-|**整数**|**long**|
+|**INTEGER**|**long**|
 |**FLOAT**|**double**|
 |**DOUBLE**|**double**|
 |**数值**|`CString` 1|
 |**VARCHAR**|`CString`|
 |**LONGVARCHAR**|`CLongBinary`, `CString` 2|
-|**BIT**|**BOOL**|
+|**位**|**BOOL**|
 |**TINYINT**|**BYTE**|
 |**BIGINT**|`CString` 1|
-|**二进制**|`CByteArray`|
+|**BINARY**|`CByteArray`|
 |**VARBINARY**|`CByteArray`|
 |**LONGVARBINARY**|`CLongBinary`, `CByteArray` 3|
-|DATE|`CTime`， `CString`|
-|**时间**|`CTime`， `CString`|
-|**时间戳**|`CTime`， `CString`|
+|**DATE**|`CTime`, `CString`|
+|**TIME**|`CTime`, `CString`|
+|**TIMESTAMP**|`CTime`, `CString`|
 
 1. ANSI**十进制**并**数值**映射到`CString`因为**SQL_C_CHAR**是默认 ODBC 传输类型。
 
@@ -57,4 +57,4 @@ ms.locfileid: "50649492"
 ## <a name="see-also"></a>请参阅
 
 [SQL](../../data/odbc/sql.md)<br/>
-[SQL：进行直接 SQL 调用 (ODBC)](../../data/odbc/sql-making-direct-sql-calls-odbc.md)
+[SQL:进行直接 SQL 调用 (ODBC)](../../data/odbc/sql-making-direct-sql-calls-odbc.md)

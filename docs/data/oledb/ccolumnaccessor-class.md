@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CColumnAccessor class
 ms.assetid: 6ce1e67f-6a20-490d-9326-c168b43eee7e
-ms.openlocfilehash: 85d3d9d4339634ea7948d7d5e9e09725b7fd8758
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2d65fb047e758f449ed76c954bb4ac0c3623f6dd
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50611362"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59032123"
 ---
 # <a name="ccolumnaccessor-class"></a>CColumnAccessor 类
 
@@ -29,7 +29,7 @@ class CColumnAccessor : public CAccessorBase
 
 在注入的代码中，每个列作为单独的访问器绑定。 您应该知道，此类在注入的代码中使用（例如，您可能在调试遇到此警告），但您通常不必直接使用此类或其方法。
 
-`CColumnAccessor` 可实现以下存根方法，每个方法在功能上对应于其他访问器类方法：
+`CColumnAccessor` 实现以下存根方法，其中每个对应到其他访问器类方法的功能：
 
 - `CColumnAccessor` 构造函数;实例化并初始化`CColumnAccessor`对象。
 

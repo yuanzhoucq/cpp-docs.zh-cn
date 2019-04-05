@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - vararg attribute
 ms.assetid: 20fc3244-18e9-411c-990e-d5b4fa29a570
-ms.openlocfilehash: 6f3048e60c10efed05fc5bccc3c61949351f7bf9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a433522b78424c48c4afe754f7b8337e3952dc8e
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50504697"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037337"
 ---
 # <a name="vararg"></a>vararg
 
@@ -53,8 +53,8 @@ __interface X : public IUnknown
 |-|-|
 |**适用对象**|接口方法|
 |**可重复**|否|
-|**必需的特性**|无|
-|**无效的特性**|无|
+|**必需的特性**|None|
+|**无效的特性**|None|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 

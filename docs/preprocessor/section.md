@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pragmas, section
 - section pragma
 ms.assetid: c67215e9-2c4a-4b0f-b691-2414d2e2d96f
-ms.openlocfilehash: cd8eee564fa17b21d5421a3471fd676af921f444
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 41479d7d8767438d0e59fbe6beb7e435459dcb1b
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462135"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023238"
 ---
 # <a name="section"></a>section
 
@@ -37,10 +37,10 @@ ms.locfileid: "50462135"
 
 |特性|描述|
 |-|-|
-|**read**|允许对数据进行读取操作。|
-|**write**|允许对数据进行写入操作。|
+|**读取**|允许对数据进行读取操作。|
+|**写入**|允许对数据进行写入操作。|
 |**execute**|允许执行代码。|
-|**shared**|在所有加载图像的进程之间共享该节。|
+|**共享**|在所有加载图像的进程之间共享该节。|
 |**nopage**|将该节标记为不可分页：对于 Win32 设备驱动程序很有用。|
 |**nocache**|将该节标记为不可缓存：对于 Win32 设备驱动程序很有用。|
 |**discard**|将该节标记为可丢弃；对于 Win32 设备驱动程序很有用。|

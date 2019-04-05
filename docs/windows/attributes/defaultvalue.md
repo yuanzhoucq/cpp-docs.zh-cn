@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - defaultvalue attribute
 ms.assetid: efa5d050-b2cc-4d9e-9b8e-79954f218d3a
-ms.openlocfilehash: 22aa969185afbac5ab395d0ac7dde23e715b8e58
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ff6924db6f4805bb5f2dbab69076a86020b2a075
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50537665"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59026313"
 ---
 # <a name="defaultvalue"></a>defaultvalue
 
@@ -25,7 +25,7 @@ ms.locfileid: "50537665"
 
 ### <a name="parameters"></a>参数
 
-*value*<br/>
+*值*<br/>
 参数的默认值。
 
 ## <a name="remarks"></a>备注
@@ -62,17 +62,17 @@ __interface IFireTabCtrl : IDispatch {
 |-|-|
 |**适用对象**|接口参数|
 |**可重复**|否|
-|**必需的特性**|无|
-|**无效的特性**|无|
+|**必需的特性**|None|
+|**无效的特性**|None|
 
 有关详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
 ## <a name="see-also"></a>请参阅
 
 [IDL 特性](idl-attributes.md)<br/>
-[参数特性](parameter-attributes.md)<br/>
+[Parameter 特性](parameter-attributes.md)<br/>
 [out](out-cpp.md)<br/>
 [retval](retval.md)<br/>
-[in](in-cpp.md)<br/>
+[中的](in-cpp.md)<br/>
 [pointer_default](pointer-default.md)<br/>
 [unique](unique-cpp.md)

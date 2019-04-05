@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - pointer_default attribute
 ms.assetid: 2d0c7bbc-a1e8-4337-9e54-e304523e2735
-ms.openlocfilehash: 8261d789f50c2750cccce48dac675ef478a70420
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 37bd2b16fb7a7c1c186f59897898e08cc73fffae
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50504385"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59022661"
 ---
 # <a name="pointerdefault"></a>pointer_default
 
@@ -25,7 +25,7 @@ ms.locfileid: "50504385"
 
 ### <a name="parameters"></a>参数
 
-*value*<br/>
+*值*<br/>
 描述指针类型的值： **ptr**， **ref**，或**唯一**。
 
 ## <a name="remarks"></a>备注
@@ -44,8 +44,8 @@ ms.locfileid: "50504385"
 |-|-|
 |**适用对象**|**interface**|
 |**可重复**|否|
-|**必需的特性**|无|
-|**无效的特性**|无|
+|**必需的特性**|None|
+|**无效的特性**|None|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 

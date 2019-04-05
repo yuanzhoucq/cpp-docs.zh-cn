@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - usesgetlasterror attribute
 ms.assetid: d149e33d-35a7-46cb-9137-ae6883d86122
-ms.openlocfilehash: 44a1a55114bcf2466aa5b084f2b53c5457f1a0aa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9f050bbf69edf1ab8327a283299cb5e687ce5380
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50487017"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59032201"
 ---
 # <a name="usesgetlasterror"></a>usesgetlasterror
 
@@ -39,8 +39,8 @@ ms.locfileid: "50487017"
 |-|-|
 |**适用对象**|**模块**属性|
 |**可重复**|否|
-|**必需的特性**|无|
-|**无效的特性**|无|
+|**必需的特性**|None|
+|**无效的特性**|None|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 

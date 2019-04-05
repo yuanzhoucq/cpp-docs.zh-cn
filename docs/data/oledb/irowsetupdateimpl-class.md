@@ -52,12 +52,12 @@ helpviewer_keywords:
 - IsUpdateAllowed method
 - m_mapCachedData
 ms.assetid: f85af76b-ab6f-4f8b-8f4a-337c9679d68f
-ms.openlocfilehash: 0ee4fc505bb3e22046f1b0c197f14326e5a50d7d
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 6c20698e2219cf7c3e1d840e23b5f8113947ae9f
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57423893"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037706"
 ---
 # <a name="irowsetupdateimpl-class"></a>IRowsetUpdateImpl 类
 

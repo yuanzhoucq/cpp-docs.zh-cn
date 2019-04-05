@@ -4,12 +4,12 @@ ms.date: 10/29/2018
 helpviewer_keywords:
 - OLE DB providers, using
 ms.assetid: 002a9731-7e06-49ac-be50-3cc26aa43759
-ms.openlocfilehash: 77869dbde4b177967dd2a75ab5b94506a365219c
-ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
+ms.openlocfilehash: c7cd75c9ff5fd42bae9883a6b7374cae6419b291
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51265004"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59034636"
 ---
 # <a name="advanced-provider-techniques"></a>高级提供程序技术
 

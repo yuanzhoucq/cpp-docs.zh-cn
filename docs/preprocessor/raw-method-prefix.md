@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - raw_method_prefix attribute
 ms.assetid: 71490313-af78-4bb2-b28a-eee67950d30b
-ms.openlocfilehash: c3015cf8b51646d25fd8f36a7336c63dc8fe492b
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
+ms.openlocfilehash: 963e04752dcb797343550d9b89f778bfe0e8a593
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58565592"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59021406"
 ---
 # <a name="rawmethodprefix"></a>raw_method_prefix
 
-**C + + 专用**
+**C++ 专用**
 
 指定不同的前缀以避免名称冲突。
 
@@ -27,7 +27,7 @@ raw_method_prefix("Prefix")
 
 ### <a name="parameters"></a>参数
 
-Prefix<br/>
+*前缀*<br/>
 要使用的前缀。
 
 ## <a name="remarks"></a>备注
@@ -37,9 +37,9 @@ Prefix<br/>
 > [!NOTE]
 > 效果**raw_method_prefix**属性将不会更改由存在[raw_interfaces_only](raw-interfaces-only.md)属性。 **Raw_method_prefix**始终优先于`raw_interfaces_only`中指定前缀。 如果这两个属性使用在同一`#import`语句，然后指定的前缀**raw_method_prefix**使用属性。
 
-**结束 c + + 专用**
+**结束 C++ 专用**
 
 ## <a name="see-also"></a>请参阅
 
-[#import 属性](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[#import 特性](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [#import 指令](../preprocessor/hash-import-directive-cpp.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - OLE DB providers, wizard-generated files
 - CCustomSession class in CustomSess.H
 ms.assetid: d37ad471-cf05-49c5-aa47-cd10824d777f
-ms.openlocfilehash: 75d0c8d871ca736be5e2c33829296b2760092e14
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5cb462aba671e79450e9ee7b8447410252f8edc9
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568007"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023459"
 ---
 # <a name="ccustomsession-customsessh"></a>CCustomSession (CustomSess.H)
 
@@ -39,7 +39,7 @@ class ATL_NO_VTABLE CCustomSession :
 
 该向导还会生成三个会话类： `CCustomSessionColSchema`， `CCustomSessionPTSchema`，和`CCustomSessionTRSchema`。 这些会话用于架构行集。 架构行集允许的提供程序没有使用者无需执行查询或提取数据的情况下向使用者返回的元数据。 获取元数据可以远远快于查找提供程序的功能。
 
-OLE DB 规范要求的提供程序实现`IDBSchemaRowset`接口支持三个架构行集类型： DBSCHEMA_COLUMNS、 DBSCHEMA_PROVIDER_TYPES 和 DBSCHEMA_TABLES。 该向导生成每个架构行集的实现。 向导生成的每个类包含`Execute`方法。 在此`Execute`方法，您可以对有关哪些表、 列和数据类型支持的提供程序返回数据。 此数据是在编译时已知的。
+OLE DB 规范要求的提供程序实现`IDBSchemaRowset`接口支持三个架构行集类型：DBSCHEMA_COLUMNS、 DBSCHEMA_PROVIDER_TYPES 和 DBSCHEMA_TABLES。 该向导生成每个架构行集的实现。 向导生成的每个类包含`Execute`方法。 在此`Execute`方法，您可以对有关哪些表、 列和数据类型支持的提供程序返回数据。 此数据是在编译时已知的。
 
 ## <a name="see-also"></a>请参阅
 

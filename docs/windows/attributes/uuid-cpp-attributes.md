@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - uuid attribute
 ms.assetid: 90562a94-5e28-451b-a4b0-cadda7f66efe
-ms.openlocfilehash: e7d90cc2d1081b52370bcc189ce7545edf34a425
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8d9d55fc2a340165480cab4036ad1e5323e6b625
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631330"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59026037"
 ---
 # <a name="uuid-c-attributes"></a>uuid（C++ 特性）
 
@@ -52,8 +52,8 @@ ms.locfileid: "50631330"
 |-|-|
 |**适用对象**|**类**， **struct**，**接口**，**联合**，**枚举**|
 |**可重复**|否|
-|**必需的特性**|无|
-|**无效的特性**|无|
+|**必需的特性**|None|
+|**无效的特性**|None|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 

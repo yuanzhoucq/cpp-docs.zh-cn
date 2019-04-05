@@ -6,36 +6,36 @@ helpviewer_keywords:
 - intrinsics, alphabetical list
 - intrinsics
 ms.assetid: 178f88a2-7e8e-43ac-b55e-ef3298bef895
-ms.openlocfilehash: 83b254b67cb2a7e09fbf57597996097a7afb5d76
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 67206e63d163b489c5087e6bc6759cde30a3d6c4
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654762"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59026189"
 ---
 # <a name="alphabetical-listing-of-intrinsic-functions"></a>按字母顺序列出的内部函数
 
 以下各部分介绍了部分或所有体系架构中可用的特定于 Microsoft 的内部函数。 其他受支持的内部函数由处理器制造商在标题文件或其网站上提供。 请参阅[ARM 内部函数](../intrinsics/arm-intrinsics.md)， [x86 内部函数](../intrinsics/x86-intrinsics-list.md)，并[x64 内部函数](../intrinsics/x64-amd64-intrinsics-list.md)的部分，了解制造商文档的链接。 本文; 未提供已为其实现的内部函数的 C 运行时库 (CRT) 函数这些函数均记录在[C 运行时库参考](../c-runtime-library/c-run-time-library-reference.md)。
 
-[__addfsword， \__addfsword， \__addfsdword](../intrinsics/addfsbyte-addfsword-addfsdword.md)
+[__addfsbyte, \__addfsword, \__addfsdword](../intrinsics/addfsbyte-addfsword-addfsdword.md)
 
-[__addgsbyte， \__addgsword， \__addgsdword， \__addgsqword](../intrinsics/addgsbyte-addgsword-addgsdword-addgsqword.md)
+[__addgsbyte, \__addgsword, \__addgsdword, \__addgsqword](../intrinsics/addgsbyte-addgsword-addgsdword-addgsqword.md)
 
 [_AddressOfReturnAddress](../intrinsics/addressofreturnaddress.md)
 
 [__assume](../intrinsics/assume.md)
 
-[_BitScanForward, _BitScanForward64](../intrinsics/bitscanforward-bitscanforward64.md)
+[_BitScanForward、_BitScanForward64](../intrinsics/bitscanforward-bitscanforward64.md)
 
-[_BitScanReverse, _BitScanReverse64](../intrinsics/bitscanreverse-bitscanreverse64.md)
+[_BitScanReverse、_BitScanReverse64](../intrinsics/bitscanreverse-bitscanreverse64.md)
 
-[_bittest, _bittest64](../intrinsics/bittest-bittest64.md)
+[_bittest、_bittest64](../intrinsics/bittest-bittest64.md)
 
-[_bittestandcomplement, _bittestandcomplement64](../intrinsics/bittestandcomplement-bittestandcomplement64.md)
+[_bittestandcomplement、_bittestandcomplement64](../intrinsics/bittestandcomplement-bittestandcomplement64.md)
 
-[_bittestandreset, _bittestandreset64](../intrinsics/bittestandreset-bittestandreset64.md)
+[_bittestandreset、_bittestandreset64](../intrinsics/bittestandreset-bittestandreset64.md)
 
-[_bittestandset, _bittestandset64](../intrinsics/bittestandset-bittestandset64.md)
+[_bittestandset、_bittestandset64](../intrinsics/bittestandset-bittestandset64.md)
 
 [__cpuid、 \__cpuidex](../intrinsics/cpuid-cpuidex.md)
 
@@ -61,7 +61,7 @@ ms.locfileid: "50654762"
 
 [__incfsbyte， \__incfsword， \__incfsdword](../intrinsics/incfsbyte-incfsword-incfsdword.md)
 
-[__incgsbyte， \__incgsword， \__incgsdword， \__incgsqword](../intrinsics/incgsbyte-incgsword-incgsdword-incgsqword.md)
+[__incgsbyte, \__incgsword, \__incgsdword, \__incgsqword](../intrinsics/incgsbyte-incgsword-incgsdword-incgsqword.md)
 
 [__indword](../intrinsics/indword.md)
 
@@ -111,7 +111,7 @@ ms.locfileid: "50654762"
 
 [__ll_rshift](../intrinsics/ll-rshift.md)
 
-[__lzcnt16， \__lzcnt， \__lzcnt64](../intrinsics/lzcnt16-lzcnt-lzcnt64.md)
+[__lzcnt16, \__lzcnt, \__lzcnt64](../intrinsics/lzcnt16-lzcnt-lzcnt64.md)
 
 [_mm_cvtsi64x_ss](../intrinsics/mm-cvtsi64x-ss.md)
 
@@ -119,7 +119,7 @@ ms.locfileid: "50654762"
 
 [_mm_cvttss_si64x](../intrinsics/mm-cvttss-si64x.md)
 
-[_mm_extract_si64, _mm_extracti_si64](../intrinsics/mm-extract-si64-mm-extracti-si64.md)
+[_mm_extract_si64、_mm_extracti_si64](../intrinsics/mm-extract-si64-mm-extracti-si64.md)
 
 [_mm_insert_si64, _mm_inserti_si64](../intrinsics/mm-insert-si64-mm-inserti-si64.md)
 
@@ -191,9 +191,9 @@ ms.locfileid: "50654762"
 
 [_ReturnAddress](../intrinsics/returnaddress.md)
 
-[_rotl8, _rotl16](../intrinsics/rotl8-rotl16.md)
+[_rotl8、_rotl16](../intrinsics/rotl8-rotl16.md)
 
-[_rotr8, _rotr16](../intrinsics/rotr8-rotr16.md)
+[_rotr8、_rotr16](../intrinsics/rotr8-rotr16.md)
 
 [__segmentlimit](../intrinsics/segmentlimit.md)
 

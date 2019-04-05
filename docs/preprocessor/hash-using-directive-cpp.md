@@ -12,12 +12,12 @@ helpviewer_keywords:
 - LIBPATH environment variable
 - preprocessor, directives
 ms.assetid: 870b15e5-f361-40a8-ba1c-c57d75c8809a
-ms.openlocfilehash: d69b06d29c366d0ff9c525421311001cab4e501c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ddae6137e94e10f5701e1e7d0f8f7a7514b18662
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50501087"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59034256"
 ---
 # <a name="using-directive-ccli"></a>#using 指令 (C + + CLI)
 
@@ -31,7 +31,7 @@ ms.locfileid: "50501087"
 
 ### <a name="parameters"></a>参数
 
-文件<br/>
+*文件*<br/>
 MSIL .dll、.exe、.netmodule 或 .obj。例如，应用于对象的
 
 `#using <MyComponent.dll>`

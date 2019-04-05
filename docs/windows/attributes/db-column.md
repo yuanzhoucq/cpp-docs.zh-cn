@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_column attribute
 ms.assetid: 58da4afc-f69c-4ae6-af9a-3f9515f56081
-ms.openlocfilehash: 7ceb0b93f37133ccbbf89ed659f74b632e45bcb1
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: e0e2c873452884275e97663ae2d9d6df2f790ffd
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328930"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59024837"
 ---
 # <a name="dbcolumn"></a>db_column
 
@@ -36,10 +36,10 @@ ms.locfileid: "58328930"
 *dbtype*<br/>
 （可选）OLE DB[类型指示符](/previous-versions/windows/desktop/ms711251(v=vs.85))列条目。
 
-*precision*<br/>
+*精度*<br/>
 （可选）要用于列条目精度。 有关详细信息，请参阅的说明`bPrecision`元素的[DBBINDING 结构](/previous-versions/windows/desktop/ms716845(v=vs.85))
 
-*scale*<br/>
+*小数位数*<br/>
 （可选）要用于列项目的比例。 有关详细信息，请参阅的说明`bScale`元素的[DBBINDING 结构](/previous-versions/windows/desktop/ms716845(v=vs.85))
 
 *status*<br/>

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - include attribute
 ms.assetid: d23f8b91-fe5b-48fa-9371-8bd73af7b8e3
-ms.openlocfilehash: 6fb385877285602c1eb6649d11e16558d7fb07ec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d9c68601bea4cecd92b371dada5fb086aeb7657f
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544750"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033692"
 ---
 # <a name="include-c"></a>include (C++)
 
@@ -53,8 +53,8 @@ ms.locfileid: "50544750"
 |-|-|
 |**适用对象**|任何位置|
 |**可重复**|否|
-|**必需的特性**|无|
-|**无效的特性**|无|
+|**必需的特性**|None|
+|**无效的特性**|None|
 
 有关详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 

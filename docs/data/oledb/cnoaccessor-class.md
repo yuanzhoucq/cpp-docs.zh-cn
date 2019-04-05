@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CNoAccessor class
 ms.assetid: eb669ae5-0a56-49a3-9646-c4ae6239da31
-ms.openlocfilehash: d6eb5aaa9a66f46335b0a364e6c6e79abc297d64
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0cf1b47cc03d1839ae5c547393c3c193dab439d4
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50647885"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59027657"
 ---
 # <a name="cnoaccessor-class"></a>CNoAccessor 类
 
@@ -29,7 +29,7 @@ class CNoAccessor
 
 使用`CNoAccessor`作为模板参数，如果不想要支持参数或输出列的类。
 
-`CNoAccessor` 将实现以下存根方法，其中每个方法都对应于其他访问器类方法：
+`CNoAccessor` 实现以下存根方法，其中每个对应于其他访问器类方法：
 
 - `BindColumns` -将列绑定到访问器。
 

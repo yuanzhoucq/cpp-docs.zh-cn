@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - vi_progid attribute
 ms.assetid: a52449be-b93e-4111-b883-44bb8da53261
-ms.openlocfilehash: 1045c240a283a8a534c2266186f941312216f206
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7050543c9acf3801a99d3e32e119325900bdb050
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544269"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033584"
 ---
 # <a name="viprogid"></a>vi_progid
 
@@ -52,8 +52,8 @@ Progid 提供用来标识 COM/ActiveX 对象的类标识符 (CLSID) 的用户可
 |-|-|
 |**适用对象**|**类**，**结构**|
 |**可重复**|否|
-|**必需的特性**|无|
-|**无效的特性**|无|
+|**必需的特性**|None|
+|**无效的特性**|None|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 

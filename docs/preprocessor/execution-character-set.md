@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - pragma execution_character_set
 ms.assetid: 32248cbc-7c92-4dca-8442-230c052b53ad
-ms.openlocfilehash: ff6ff550f39dc746bb687d8d3147baa0837a6cff
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bd31e8e91a1bcbfa6ace9b47fa2b13dd945adb20
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50472660"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59039921"
 ---
 # <a name="executioncharacterset"></a>execution_character_set
 
@@ -43,4 +43,4 @@ ms.locfileid: "50472660"
 
 [Pragma 指令和\_\_杂注关键字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)<br/>
 [/execution-charset （设置执行字符集）](../build/reference/execution-charset-set-execution-character-set.md)<br/>
-[/utf-8（将源和可执行字符集设置为 UTF-8）](../build/reference/utf-8-set-source-and-executable-character-sets-to-utf-8.md)
+[/utf-8 （设置源和可执行字符集设置为 utf-8）](../build/reference/utf-8-set-source-and-executable-character-sets-to-utf-8.md)

@@ -12,16 +12,16 @@ helpviewer_keywords:
 - preprocessor, directives
 - COM, type library header file
 ms.assetid: 787d1112-e543-40d7-ab15-a63d43f4030a
-ms.openlocfilehash: 72fd1d025ab19b7db9521e08655d00936b77581e
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
+ms.openlocfilehash: 98a0f9f66fb209bb41215fc1e86a9682a4fed023
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58564948"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59031980"
 ---
 # <a name="import-directive-c"></a>#import 指令 (C++)
 
-**C + + 专用**
+**C++ 专用**
 
 过去一直合并类型库中的信息。 类型库的内容将转换为 C++ 类，主要描述 COM 接口。
 
@@ -148,7 +148,7 @@ ms.locfileid: "58564948"
 
 - 可选旧式 GUID 定义：包含名为 GUID 常量的初始化。 这些是窗体的名称`CLSID_CoClass`和`IID_Interface`，类似于那些由 MIDL 编译器生成。
 
-- 用于次要类型库标头的 `#include` 语句。
+- `#include` 次要类型库标头的语句。
 
 - 页脚样本：当前包括`#pragma pack(pop)`。
 
@@ -189,7 +189,7 @@ using namespace MyLib;
 
 有关详细信息，请参阅[#import 属性](../preprocessor/hash-import-attributes-cpp.md)。
 
-**结束 c + + 专用**
+**结束 C++ 专用**
 
 ## <a name="see-also"></a>请参阅
 
