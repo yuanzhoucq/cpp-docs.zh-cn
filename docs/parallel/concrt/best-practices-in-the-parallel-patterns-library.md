@@ -82,8 +82,7 @@ ms.locfileid: "57293610"
 
 ##  <a name="divide-and-conquer"></a> 使用 parallel_invoke 来求解分割和解决问题
 
-一个*分割和解决*问题是一种使用递归将任务细分为多个子任务的 fork-join 构造。 除了[concurrency:: task_group](reference/task-group-class.md)并[concurrency:: structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md)类，也可以使用[concurrency:: parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke)算法解决分割和解决问题。 
-  `parallel_invoke` 算法具有比任务组对象更简洁的语法，并当具有固定数目的并行任务时非常有用。
+一个*分割和解决*问题是一种使用递归将任务细分为多个子任务的 fork-join 构造。 除了[concurrency:: task_group](reference/task-group-class.md)并[concurrency:: structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md)类，也可以使用[concurrency:: parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke)算法解决分割和解决问题。 `parallel_invoke` 算法具有比任务组对象更简洁的语法，并当具有固定数目的并行任务时非常有用。
 
 下面的示例演示使用 `parallel_invoke` 算法来实现双调排序算法。
 
@@ -109,9 +108,7 @@ PPL 提供了两种方法来取消任务组或并行算法所执行的并行工�
 
 [!code-cpp[concrt-task-tree-search#6](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_8.cpp)]
 
-如果不要求对树的每个元素调用工作函数，则 `tree::for_all` 方法的调用方可以引发异常。 下面的介绍了 `search_for_value` 函数，它可在所提供的 `tree` 对象中搜索值。 
-  `search_for_value` 函数使用工作函数，可在树的当前元素匹配提供的值时引发异常。 
-  `search_for_value` 函数使用 `try-catch` 块来捕获异常，并将结果打印到控制台。
+如果不要求对树的每个元素调用工作函数，则 `tree::for_all` 方法的调用方可以引发异常。 下面的介绍了 `search_for_value` 函数，它可在所提供的 `tree` 对象中搜索值。 `search_for_value` 函数使用工作函数，可在树的当前元素匹配提供的值时引发异常。 `search_for_value` 函数使用 `try-catch` 块来捕获异常，并将结果打印到控制台。
 
 [!code-cpp[concrt-task-tree-search#3](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_9.cpp)]
 
@@ -177,8 +174,7 @@ Container 1: Freeing resources...Exiting program...
 
 [!code-cpp[concrt-blocking-cancel#1](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_13.cpp)]
 
-
-  `new` 运算符可执行可能会停滞的堆分配。 仅当该任务执行协作停滞调用，如调用时，运行时执行其他工作[concurrency::critical_section::lock](reference/critical-section-class.md#lock)。
+`new` 运算符可执行可能会停滞的堆分配。 仅当该任务执行协作停滞调用，如调用时，运行时执行其他工作[concurrency::critical_section::lock](reference/critical-section-class.md#lock)。
 
 下面的示例介绍如何防止不必要的工作，从而提高性能。 此示例在为 `Answer` 对象分配存储前先取消任务组。
 
@@ -196,8 +192,7 @@ Container 1: Freeing resources...Exiting program...
 
 此示例也可能导致性能不佳，因为频繁的锁定操作有力地对循环进行了序列化。 此外，当并发运行时对象执行停滞操作时，计划程序可能会在第一个线程等待数据时创建其他线程来执行其他工作。 如果运行时因许多任务正等待共享数据而创建许多线程，那么应用程序可能不会很好地运行，或进入资源不足的状态。
 
-PPL 定义[concurrency:: combinable](../../parallel/concrt/reference/combinable-class.md)类，它可以帮助您消除通过无锁方式提供对共享资源的访问的共享的状态。 
-  `combinable` 类提供了线程本地存储，该存储允许你执行细化的计算，然后将这些计算合并为最终的结果。 你可以将 `combinable` 对象当作 reduction 变量。
+PPL 定义[concurrency:: combinable](../../parallel/concrt/reference/combinable-class.md)类，它可以帮助您消除通过无锁方式提供对共享资源的访问的共享的状态。 `combinable` 类提供了线程本地存储，该存储允许你执行细化的计算，然后将这些计算合并为最终的结果。 你可以将 `combinable` 对象当作 reduction 变量。
 
 下面的示例使用 `combinable` 对象而不是 `critical_section` 对象来计算总和，从而修改前一个结果。 此示例可进行缩放，因为每个线程都会保存自己的总和本地副本。 此示例使用[concurrency::combinable::combine](reference/combinable-class.md#combine)方法以将本地计算合并为最终的结果。
 
@@ -225,8 +220,7 @@ PPL 定义[concurrency:: combinable](../../parallel/concrt/reference/combinable-
 
 此示例假定内存缓存的大小为 64 个或更少的字节。
 
-我们建议你使用[concurrency:: combinable](../../parallel/concrt/reference/combinable-class.md)类时必须共享在任务之间的数据。 
-  `combinable` 类以不太可能发生错误共享的方式创建线程本地变量。 有关详细信息`combinable`类，请参阅[并行容器和对象](../../parallel/concrt/parallel-containers-and-objects.md)。
+我们建议你使用[concurrency:: combinable](../../parallel/concrt/reference/combinable-class.md)类时必须共享在任务之间的数据。 `combinable` 类以不太可能发生错误共享的方式创建线程本地变量。 有关详细信息`combinable`类，请参阅[并行容器和对象](../../parallel/concrt/parallel-containers-and-objects.md)。
 
 [[返回页首](#top)]
 
@@ -234,8 +228,7 @@ PPL 定义[concurrency:: combinable](../../parallel/concrt/reference/combinable-
 
 如果向任务组或并行算法提供 Lambda 表达式，capture 子句将指定 Lambda 表达式的主体是否通过值或引用访问封闭范围中的变量。 通过引用将变量传递到 Lambda 表达式时，必须保证该变量的生存期在任务完成之前一直保持。
 
-请看下面的示例，该示例定义了 `object` 类和 `perform_action` 函数。 
-  `perform_action` 函数创建 `object` 变量，并在该变量中以异步方式执行某项操作。 由于不能保证在 `perform_action` 函数返回前完成任务，因此，如果 `object` 变量在任务运行时被销毁，则程序将崩溃或发生未指定的行为。
+请看下面的示例，该示例定义了 `object` 类和 `perform_action` 函数。 `perform_action` 函数创建 `object` 变量，并在该变量中以异步方式执行某项操作。 由于不能保证在 `perform_action` 函数返回前完成任务，因此，如果 `object` 变量在任务运行时被销毁，则程序将崩溃或发生未指定的行为。
 
 [!code-cpp[concrt-lambda-lifetime#1](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_20.cpp)]
 
