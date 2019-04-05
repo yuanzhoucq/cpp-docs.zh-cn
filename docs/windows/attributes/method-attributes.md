@@ -5,12 +5,12 @@ helpviewer_keywords:
 - method attributes
 - attributes [C++/CLI], reference topics
 ms.assetid: b2313352-480d-488b-8c35-6242ffd3a549
-ms.openlocfilehash: 96a3eab3e6d2761019a9f0855ff7cbb978445f68
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aa67d45dfc0fadd300caeaaeb8a7c25bb1c38bcb
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667917"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023563"
 ---
 # <a name="method-attributes"></a>方法特性
 
@@ -20,7 +20,7 @@ ms.locfileid: "50667917"
 |---------------|-----------------|
 |[bindable](bindable.md)|指示该属性支持数据绑定。|
 |[call_as](call-as.md)|允许不可远程处理函数映射到远程函数。|
-|[custom](custom-cpp.md)|你可以定义自己的属性。|
+|[自定义](custom-cpp.md)|你可以定义自己的属性。|
 |[db_column](db-column.md)|将指定的列绑定到行集。|
 |[db_command](db-command.md)|创建 OLE DB 命令。|
 |[db_param](db-param.md)|指定的成员变量相关联的输入或输出参数和分隔变量。|
@@ -34,21 +34,21 @@ ms.locfileid: "50667917"
 |[helpstring](helpstring.md)|指定一个字符串，用于描述应用该字符串的元素。|
 |[helpstringcontext](helpstringcontext.md)|在.hlp 或.chm 文件中指定的帮助主题的 ID。|
 |[helpstringdll](helpstringdll.md)|指定要用于执行文档字符串查找 （本地化） DLL 的名称。|
-|[hidden](hidden.md)|指示该项存在，但不是应在面向用户的浏览器中显示。|
+|[隐藏](hidden.md)|指示该项存在，但不是应在面向用户的浏览器中显示。|
 |[id](id.md)|指定的成员函数 （属性或方法，请在接口或调度接口） 的 DISPID。|
 |[immediatebind](immediatebind.md)|指示数据库将立即收到通知的所有更改将数据绑定对象的属性。|
-|[in](in-cpp.md)|指示参数是要从调用过程传递给被调用过程。|
-|[local](local-cpp.md)|可以使用 MIDL 编译器为标头生成器界面标头中使用时。 单个函数中使用时，将指定为其生成无存根 （stub） 的本地过程。|
+|[中的](in-cpp.md)|指示参数是要从调用过程传递给被调用过程。|
+|[本地](local-cpp.md)|可以使用 MIDL 编译器为标头生成器界面标头中使用时。 单个函数中使用时，将指定为其生成无存根 （stub） 的本地过程。|
 |[nonbrowsable](nonbrowsable.md)|指示接口成员不应显示在属性浏览器中。|
 |[propget](propget.md)|指定的属性访问器函数。|
 |[propput](propput.md)|指定的属性设置函数。|
 |[propputref](propputref.md)|指定使用引用而不是值的属性设置函数。|
 |[ptr](ptr.md)|将一个指针，指定为完整的指针。|
 |[range](range-cpp.md)|指定参数或在运行时设置其值的字段的允许值的范围。|
-|[requestedit](requestedit.md)|指示该属性支持`OnRequestEdit`通知。|
+|[requestedit](requestedit.md)|指示该属性支持 `OnRequestEdit` 通知。|
 |[restricted](restricted.md)|指定不能任意调用模块、 接口或调度接口的成员。|
 |[satype](satype.md)|指定的数据类型`SAFEARRAY`结构。|
-|[source](source-cpp.md)|指定连接点的控件的源接口的类上。 在属性或方法，`source`属性指示该成员返回的对象或为事件源的变体。|
+|[源](source-cpp.md)|指定连接点的控件的源接口的类上。 在属性或方法，`source`属性指示该成员返回的对象或为事件源的变体。|
 |[synchronize](synchronize.md)|同步到目标方法的访问。|
 |[vararg](vararg.md)|指定该函数采用数量可变的参数。|
 

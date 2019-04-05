@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - implements attribute
 ms.assetid: 9cf0858b-cb7d-4d3c-81a6-97d87ed00d25
-ms.openlocfilehash: 519bbe0bdbef786c95ca3f6711b344b7a4f6b641
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 9425f998f0e8fbe5f16e6eb136e00ba3fb7bd5d9
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329875"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033678"
 ---
 # <a name="implements-c"></a>implements (C++)
 
@@ -26,10 +26,10 @@ ms.locfileid: "51329875"
 
 ### <a name="parameters"></a>参数
 
-*interfaces*<br/>
+*接口*<br/>
 以逗号分隔列表将为 IDL 组件类的成员的接口。 用于指定单个接口的速记方法是**实现 (** *interface_name* **)**。
 
-*dispinterfaces*<br/>
+*调度接口*<br/>
 以逗号分隔的将是 IDL 组件类的成员的调度接口的列表。 用于指定单个调度接口的速记方法是**实现 (调度接口 =** *dispinterface_name* **)**。
 
 ## <a name="remarks"></a>备注
@@ -44,8 +44,8 @@ ms.locfileid: "51329875"
 |-|-|
 |**适用对象**|**类**，**结构**|
 |**可重复**|是|
-|**必需的特性**|无|
-|**无效的特性**|无|
+|**必需的特性**|None|
+|**无效的特性**|None|
 
 有关详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 

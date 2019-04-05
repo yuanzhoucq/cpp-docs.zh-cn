@@ -20,12 +20,12 @@ helpviewer_keywords:
 - InterlockedExchangePointer_acq intrinsic
 - InterlockedExchangePointer intrinsic
 ms.assetid: 0eaca0b0-d79e-406b-892d-b3b462c50bbb
-ms.openlocfilehash: 021c754436d6abe877e6b7dd372ba235869d8975
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: 1f6e66ae4d5524518c3388f5af843cc15f65da50
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627408"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59024525"
 ---
 # <a name="interlockedexchangepointer-intrinsic-functions"></a>_InterlockedExchangePointer 内部函数
 
@@ -79,8 +79,8 @@ void * _InterlockedExchangePointer_HLERelease(
 |内部函数|体系结构|Header|
 |---------------|------------------|------------|
 |`_InterlockedExchangePointer`|x86、 ARM、 x64|\<intrin.h>|
-|`_InterlockedExchangePointer_acq`, `_InterlockedExchangePointer_rel`, `_InterlockedExchangePointer_nf`|ARM|\<intrin.h>|
-|`_InterlockedExchangePointer_HLEAcquire`， `_InterlockedExchangePointer_HLERelease`|x64，带 HLE 支持|\<immintrin.h>|
+|`_InterlockedExchangePointer_acq`中， `_InterlockedExchangePointer_rel`中， `_InterlockedExchangePointer_nf`|ARM|\<intrin.h>|
+|`_InterlockedExchangePointer_HLEAcquire`, `_InterlockedExchangePointer_HLERelease`|x64，带 HLE 支持|\<immintrin.h>|
 
 在 x86 体系结构上，`_InterlockedExchangePointer` 是调用 `_InterlockedExchange` 的宏。
 
