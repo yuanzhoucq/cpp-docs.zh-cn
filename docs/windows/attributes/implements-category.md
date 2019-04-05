@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - implements_category attribute
 ms.assetid: fb162df3-1ebe-43dc-a084-668d7ef8c03f
-ms.openlocfilehash: a63504ce327bc2f1996c74dba9c51dc345e15abd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: beca804fae8d6e82b4664102b39d76a23e66ca59
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50647156"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041398"
 ---
 # <a name="implementscategory"></a>implements_category
 
@@ -60,7 +60,7 @@ class CMyClass {};
 |**适用对象**|**类**，**结构**|
 |**可重复**|是|
 |**必需的特性**|以下项之一： `coclass`， `progid`，或 `vi_progid`|
-|**无效的特性**|无|
+|**无效的特性**|None|
 
 有关详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 

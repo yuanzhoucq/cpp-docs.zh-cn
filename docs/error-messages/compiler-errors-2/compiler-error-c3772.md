@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3772
 ms.assetid: 63e938d4-088d-41cc-a562-5881a05b5710
-ms.openlocfilehash: 9a72cb9ee5d1d839f6ca5d113c25795f83dab811
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 420e1eb12cbb178459a96f55efab444a538e6c2b
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50595671"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59027931"
 ---
 # <a name="compiler-error-c3772"></a>编译器错误 C3772
 
@@ -60,4 +60,4 @@ class X {
 ## <a name="see-also"></a>请参阅
 
 [模板](../../cpp/templates-cpp.md)<br/>
-[模板特殊化](../../cpp/template-specialization-cpp.md)
+[模板专用化](../../cpp/template-specialization-cpp.md)
