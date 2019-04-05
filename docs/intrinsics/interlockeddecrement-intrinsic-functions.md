@@ -44,12 +44,12 @@ helpviewer_keywords:
 - _InterlockedDecrement64_nf intrinsic
 - InterlockedDecrement_rel intrinsic
 ms.assetid: 5268fce3-86b5-4b2b-b96c-2e531a3fb9b5
-ms.openlocfilehash: e2816d99991fcd051c5bbfbe6f4be6a43db2ef2e
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: 525c40f4260d59f370f0580d2cb7d9e8f184ee4c
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328553"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035073"
 ---
 # <a name="interlockeddecrement-intrinsic-functions"></a>_InterlockedDecrement 内部函数
 
@@ -111,15 +111,14 @@ __int64 _InterlockedDecrement64_nf(
 
 |内部函数|体系结构|
 |---------------|------------------|
-|`_InterlockedDecrement`, `_InterlockedDecrement16`, `_InterlockedDecrement64`|x86、 ARM、 x64|
+|`_InterlockedDecrement`中， `_InterlockedDecrement16`中， `_InterlockedDecrement64`|x86、 ARM、 x64|
 |`_InterlockedDecrement_acq`, `_InterlockedDecrement_rel`, `_InterlockedDecrement_nf`, `_InterlockedDecrement16_acq`, `_InterlockedDecrement16_rel`, `_InterlockedDecrement16_nf`, `_InterlockedDecrement64_acq`, `_InterlockedDecrement64_rel`, `_InterlockedDecrement64_nf`,|ARM|
 
 **标头文件** \<intrin.h >
 
 ## <a name="remarks"></a>备注
 
-
-  `_InterlockedDecrement` 存在几种变体，这些变体根据其涉及的数据类型和是否使用特定于处理器获取或发布语义而有所不同。
+`_InterlockedDecrement` 存在几种变体，这些变体根据其涉及的数据类型和是否使用特定于处理器获取或发布语义而有所不同。
 
 当 `_InterlockedDecrement` 函数对 32 位整数值操作时，`_InterlockedDecrement16` 对 16 位整数值操作且 `_InterlockedDecrement64` 可以对 64 位整数值操作。
 

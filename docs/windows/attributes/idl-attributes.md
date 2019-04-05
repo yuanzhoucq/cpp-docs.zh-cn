@@ -8,12 +8,12 @@ helpviewer_keywords:
 - IDL files [C++], attributes
 - .idl files [C++]
 ms.assetid: 04c596f4-c97b-4952-8053-316678b1d0b6
-ms.openlocfilehash: 6e88edf114e180a118d0467d5425d16e50d7c216
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a699e327eec056bbb36747840990bb9c7ccc259b
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50593487"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59039491"
 ---
 # <a name="idl-attributes"></a>IDL 特性
 
@@ -38,7 +38,7 @@ ms.locfileid: "50593487"
 |[call_as](call-as.md)|允许不可远程处理函数映射到远程函数。|
 |[case](case-cpp.md)|用于[switch_type](switch-type.md)联合中的属性。|
 |[coclass](coclass.md)|位置类到.idl 文件中为组件类的定义。|
-|[control](control.md)|指定用户定义类型为控件。|
+|[控件](control.md)|指定用户定义类型为控件。|
 |[cpp_quote](cpp-quote.md)|将指定的字符串，而无需引号字符，发送到生成的头文件。|
 |[defaultbind](defaultbind.md)|指示最能代表对象的单个、 可绑定属性。|
 |[defaultcollelem](defaultcollelem.md)|用于 Visual Basic 代码优化。|
@@ -55,7 +55,7 @@ ms.locfileid: "50593487"
 |[helpstringcontext](helpstringcontext.md)|在.hlp 或.chm 文件中指定的帮助主题的 ID。|
 |[helpstringdll](helpstringdll.md)|指定要用于执行文档字符串查找 （本地化） DLL 的名称。|
 |[helpstring](helpstring.md)|指定一个字符串，用于描述应用该字符串的元素。|
-|[hidden](hidden.md)|指示该项存在，但不是应在面向用户的浏览器中显示。|
+|[隐藏](hidden.md)|指示该项存在，但不是应在面向用户的浏览器中显示。|
 |[idl_module](idl-module.md)|在 DLL 中指定的入口点。|
 |[idl_quote](idl-quote.md)|允许你使用属性或 IDL 构造不支持当前版本的 Visual c + + 中的。|
 |[id](id.md)|指定的成员函数 （属性或方法，请在接口或调度接口） 的 DISPID。|
@@ -65,14 +65,14 @@ ms.locfileid: "50593487"
 |[import](import.md)|指定包含你想要从主.idl 文件中引用的定义的另一个.idl、.odl 或标头文件。|
 |[include](include-cpp.md)|指定要包括在生成的.idl 文件中的一个或多个标头文件。|
 |[includelib](includelib-cpp.md)|导致要生成的.idl 文件中包含的.idl 或.h 文件。|
-|[in](in-cpp.md)|指示参数是要从调用过程传递给被调用过程。|
+|[中的](in-cpp.md)|指示参数是要从调用过程传递给被调用过程。|
 |[last_is](last-is.md)|指定要传输的最后一个数组元素的索引。|
 |[lcid](lcid.md)|可以将区域设置标识符传递给函数。|
 |[length_is](length-is.md)|指定要传输的数组元素数。|
 |[licensed](licensed.md)|指示它所应用于的组件类授予许可，并且必须使用实例化`IClassFactory2`。|
-|[local](local-cpp.md)|可以使用 MIDL 编译器为标头生成器界面标头中使用时。 单个函数中使用时，将指定为其生成无存根 （stub） 的本地过程。|
+|[本地](local-cpp.md)|可以使用 MIDL 编译器为标头生成器界面标头中使用时。 单个函数中使用时，将指定为其生成无存根 （stub） 的本地过程。|
 |[max_is](max-is.md)|指定有效的数组索引的最大值。|
-|[module](module-cpp.md)|定义.Idl 文件中的库块。|
+|[name](module-cpp.md)|定义.Idl 文件中的库块。|
 |[ms_union](ms-union.md)|控制 nonencapsulated 联合的网络数据表示形式对齐方式。|
 |[no_injected_text](no-injected-text.md)|禁止编译器注入代码作为特性使用结果。|
 |[nonbrowsable](nonbrowsable.md)|指示接口成员不应显示在属性浏览器中。|
@@ -81,7 +81,7 @@ ms.locfileid: "50593487"
 |[object](object-cpp.md)|标识的自定义的接口;自定义特性的代名词。|
 |[odl](odl.md)|标识为对象描述语言 (ODL) 接口的接口。|
 |[oleautomation](oleautomation.md)|指示接口使用自动化兼容。|
-|[optional](optional-cpp.md)|指定的成员函数的可选参数。|
+|[可选](optional-cpp.md)|指定的成员函数的可选参数。|
 |[out](out-cpp.md)|标识从被调用过程返回到调用过程（从服务器到客户端）的指针参数。|
 |[pointer_default](pointer-default.md)|在参数列表中指定除顶级指针显示的所有指针的默认指针特性。|
 |[pragma](pragma.md)|将指定的字符串，而无需引号字符，发送到生成的.idl 文件。|
@@ -94,11 +94,11 @@ ms.locfileid: "50593487"
 |[range](range-cpp.md)|指定参数或在运行时设置其值的字段的允许值的范围。|
 |[readonly](readonly-cpp.md)|禁止分配给一个变量。|
 |[ref](ref-cpp.md)|标识引用指针。|
-|[requestedit](requestedit.md)|指示该属性支持`OnRequestEdit`通知。|
+|[requestedit](requestedit.md)|指示该属性支持 `OnRequestEdit` 通知。|
 |[restricted](restricted.md)|指定的库或模块、 接口或调度接口的成员不能任意调用。|
 |[retval](retval.md)|指定接收该成员的返回值的参数。|
 |[size_is](size-is.md)|指定的内存大小为固定大小的指针分配、 调整大小的指针和单字节或多维数组的指针。|
-|[source](source-cpp.md)|指示类、 属性或方法的一个成员是事件的源。|
+|[源](source-cpp.md)|指示类、 属性或方法的一个成员是事件的源。|
 |[string](string-cpp.md)|指示的一维**char**， **wchar_t**， `byte`，或等效的数组或指针，指向此类必须视为字符串。|
 |[switch_is](switch-is.md)|指定的表达式或作为联合判别选择联合成员的标识符。|
 |[switch_type](switch-type.md)|标识用作联合判别变量的类型。|

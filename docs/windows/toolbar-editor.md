@@ -50,12 +50,12 @@ helpviewer_keywords:
 - buttons [C++], tool tips
 - Toolbar editor [C++], creating tool tips
 ms.assetid: aa9f0adf-60f6-4f79-ab05-bc330f15ec43
-ms.openlocfilehash: 83402159d19f07cf94a0d00ccd79d68549b124e9
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: 9d50561c598f17e251425972590c0663efe6e832
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328852"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038146"
 ---
 # <a name="toolbar-editor-c"></a>工具栏编辑器 （c + +）
 
@@ -90,9 +90,9 @@ ms.locfileid: "58328852"
 
 |属性|描述|
 |--------------|-----------------|
-|**ID**|定义按钮的 ID。 下拉列表提供了常见**ID**名称。|
-|**Width**|设置按钮的宽度。 建议使用 16 个像素。|
-|**Height**|设置按钮的高度。 一个按钮的高度更改工具栏上的所有按钮的高度。 建议将 15 个像素。|
+|**Id**|定义按钮的 ID。 下拉列表提供了常见**ID**名称。|
+|**宽度**|设置按钮的宽度。 建议使用 16 个像素。|
+|**高度**|设置按钮的高度。 一个按钮的高度更改工具栏上的所有按钮的高度。 建议将 15 个像素。|
 |**提示**|定义在状态栏中显示的消息。 添加*\n* ，并将添加一个名称**工具提示**向工具栏按钮。 有关详细信息，请参阅[创建工具提示](../windows/creating-a-tool-tip-for-a-toolbar-button.md)。|
 
 **宽度**并**高度**应用于所有按钮。 用于创建工具栏的位图具有最大宽度为 2048，因此，如果将按钮宽度设置为*512*只能有四个按钮，如果将宽度设置为*513*，只能有三个按钮。

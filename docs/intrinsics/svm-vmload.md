@@ -7,12 +7,12 @@ helpviewer_keywords:
 - __svm_vmload intrinsic
 - VMLOAD instruction
 ms.assetid: b46a5592-db76-4ffc-8694-2f3494e28bed
-ms.openlocfilehash: 31f60096b60db7d8b135c686af87464060e0401a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 282f1c005c7eb59b2c590c70b38233c88c664e07
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50584764"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59031149"
 ---
 # <a name="svmvmload"></a>__svm_vmload
 
@@ -36,7 +36,7 @@ void __svm_vmload(
 
 ## <a name="remarks"></a>备注
 
-`__svm_vmload` 函数等同于 `VMLOAD` 计算机指令。 此函数支持主机的虚拟机监视器与来宾操作系统及其应用程序进行交互。 有关详细信息，搜索文档中，"AMD64 体系结构编程人员手动卷 2： 系统编程中，"文档数 24593，修订 3.11， [AMD corporation](https://developer.amd.com/resources/developer-guides-manuals/)站点。
+`__svm_vmload` 函数等同于 `VMLOAD` 计算机指令。 此函数支持主机的虚拟机监视器与来宾操作系统及其应用程序进行交互。 有关详细信息，搜索文档中，"AMD64 体系结构编程人员手动卷 2:系统编程，"文档数 24593，3.11，修订[AMD corporation](https://developer.amd.com/resources/developer-guides-manuals/)站点。
 
 ## <a name="requirements"></a>要求
 

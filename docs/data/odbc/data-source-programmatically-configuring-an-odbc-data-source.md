@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ODBC connections, configuring
 - configuring ODBC data sources
 ms.assetid: b8cabe9b-9e12-4d73-ae36-7cb12dee3213
-ms.openlocfilehash: 3d02a19d6c61e79fffd31b67ef1b8f7ea9007fcb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 33269b65835812a6e1a03e091833831781d97b6d
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677365"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037944"
 ---
 # <a name="data-source-programmatically-configuring-an-odbc-data-source"></a>数据源：以编程方式配置 ODBC 数据源
 
@@ -41,7 +41,7 @@ SQLConfigDataSource(NULL,ODBC_ADD_DSN, "Excel Files (*.xls)",
 
 请注意，数据源实际上是一个目录 (C:\EXCELDIR);此目录必须存在。 Excel 驱动程序使用目录作为其数据源和文件作为单独的表 （一个表就是一个.xls 文件）。
 
-有关创建表的详细信息，请参阅[数据源： 以编程方式创建 ODBC 数据源中的表](../../data/odbc/data-source-programmatically-creating-a-table-in-an-odbc-data-source.md)。
+有关创建表的详细信息，请参阅[数据源：以编程方式在 ODBC 数据源中创建一个表](../../data/odbc/data-source-programmatically-creating-a-table-in-an-odbc-data-source.md)。
 
 下面的内容讨论需要传递给参数`::SQLConfigDataSource`ODBC API 函数。 若要使用`::SQLConfigDataSource`，必须包括 Odbcinst.h 头文件，并使用 Odbcinst.lib 导入库。 另外，Odbccp32.dll 必须在路径中在运行的时 （或对于 16 位系统）。
 
@@ -51,7 +51,7 @@ ODBC 管理器 （通常在控制面板中安装） 通过将条目放在 Window
 
 尽管此信息无法直接写入注册表而无需使用`::SQLConfigDataSource`，这样做的任何应用程序依赖于当前驱动程序管理器使用来维护其数据的技术。 如果以不同方式维护有关数据源的 ODBC 驱动程序管理器实现记录到更高版本的修订版本，则任何使用此技术应用程序将断开。 通常，最好在提供使用 API 函数。 例如，你的代码是从 16 位到 32 位可移植的如果您使用`::SQLConfigDataSource`函数，因为该函数可以正确地写入 Odbc.ini 文件或注册表。
 
-##  <a name="_core_sqlconfigdatasource_parameters"></a> SQLConfigDataSource 参数
+##  <a name="_core_sqlconfigdatasource_parameters"></a> SQLConfigDataSource Parameters
 
 以下说明了这些参数的`::SQLConfigDataSource`函数。 从 ODBC API 的大部分信息获取*程序员参考*提供使用 Visual c + + 1.5 和更高版本。
 
@@ -94,7 +94,7 @@ BOOL SQLConfigDataSource(HWND hwndParent,UINT fRequest, LPCSTR lpszDriver, LPCST
 
    - 适用于 32 位，找不到该项**HKEY_CURRENT_USER\Software\ODBC\ODBC。INI\ODBC 数据源**的左窗格中。
 
-      右窗格中列出了项的窗体:"pub: REG_SZ:*<data source name>*"，其中*<data source name>* 是已与你想的驱动程序所需的设置配置的数据源若要使用。 选择所需的数据源，如 SQL Server。 字符串后面的项"pub:"是，在顺序中，键名和值要在中使用你*lpszAttributes*参数。
+      右窗格中列出了项的窗体:"pub:REG_SZ:*<data source name>*"，其中*<data source name>* 是已与你想要使用的驱动程序所需的设置配置的数据源。 选择所需的数据源，如 SQL Server。 字符串后面的项"pub:"是，在顺序中，键名和值要在中使用你*lpszAttributes*参数。
 
    - 对于 16 位，由标记 Odbc.ini 文件中找到的部分 [*\<数据源名称 >*]。
 

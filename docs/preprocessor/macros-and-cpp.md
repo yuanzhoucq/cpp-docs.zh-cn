@@ -5,12 +5,12 @@ helpviewer_keywords:
 - macros, C++
 - macros
 ms.assetid: 83a344c1-73c9-4ace-8b93-cccfb62c6133
-ms.openlocfilehash: cd5d1237bc025cceb25cc290509b929b595a215f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d4915526d5bb84b33f0595678781257d754aaf2d
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50499887"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59024911"
 ---
 # <a name="macros-and-c"></a>宏和 C++
 C++ 提供新功能，其中一些取代了 ANSI C 预处理器提供的功能。 这些新功能可增强语言的类型安全性和可预见性：
@@ -21,7 +21,7 @@ C++ 提供新功能，其中一些取代了 ANSI C 预处理器提供的功能�
 
     - 类型安全。 内联函数需要接受与常规函数相同的类型检查。 宏不是类型安全。
 
-    - 纠正具有副作用的自变量的处理。 内联函数将计算在输入函数体前作为参数提供的表达式。 因此，具有副作用的表达式不可能不安全。
+    - 纠正具有副作用的参数的处理。 内联函数将计算在输入函数体前作为自变量提供的表达式。 因此，具有副作用的表达式不可能不安全。
 
 内联函数的详细信息，请参阅[inline、 __inline、 \__forceinline](../cpp/inline-functions-cpp.md)。
 
@@ -29,5 +29,5 @@ C++ 提供新功能，其中一些取代了 ANSI C 预处理器提供的功能�
 
 ## <a name="see-also"></a>请参阅
 
-[预定义宏](../preprocessor/predefined-macros.md)<br/>
+[预定义的宏](../preprocessor/predefined-macros.md)<br/>
 [宏 (C/C++)](../preprocessor/macros-c-cpp.md)

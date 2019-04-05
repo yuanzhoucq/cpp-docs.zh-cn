@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - D8037
 ms.assetid: acddaaa0-bd84-426f-a37b-8f680b379c9d
-ms.openlocfilehash: 3ebca6a21e6e19e0eca144c61e5c529bc6b2d03c
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: f9f099d1abb8529620c1b3a0bc14705463ca5cd0
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57820749"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59021477"
 ---
 # <a name="command-line-error-d8037"></a>命令行错误 D8037
 
@@ -21,5 +21,5 @@ ms.locfileid: "57820749"
 
 ## <a name="see-also"></a>请参阅
 
-[命令行错误 D8000 - D9999](../../error-messages/tool-errors/command-line-errors-d8000-through-d9999.md)<br/>
+[命令行错误 D8000 到 D9999](../../error-messages/tool-errors/command-line-errors-d8000-through-d9999.md)<br/>
 [MSVC 编译器选项](../../build/reference/compiler-options.md)

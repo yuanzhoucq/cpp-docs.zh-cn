@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ODBC, about ODBC
 - ODBC, components
 ms.assetid: ec529702-0fb2-4754-b8de-d1efa8eca18f
-ms.openlocfilehash: 81b1f6d06d909b5b046703b97c4574270efbdd46
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e14f5d051b9684cd79a34f5fb50feeb785d2f927
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50591719"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033234"
 ---
 # <a name="odbc-basics"></a>ODBC 基础
 
@@ -25,7 +25,7 @@ ms.locfileid: "50591719"
 
 - [使用你的应用程序需要重新分发的哪些 ODBC 组件](../../data/odbc/redistributing-odbc-components-to-your-customers.md)
 
-您还需要阅读相关的文章[ODBC: ODBC 游标库](../../data/odbc/odbc-the-odbc-cursor-library.md)。
+您还需要阅读相关的文章[ODBC:ODBC 游标库](../../data/odbc/odbc-the-odbc-cursor-library.md)。
 
 > [!NOTE]
 > ODBC 数据源是可通过 MFC ODBC 类，如本主题中所述或 MFC 数据访问对象 (DAO) 类的访问。

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - m_nParams data member
 - m_nFields data member, recordsets
 ms.assetid: 47555ddb-11be-4b9e-9b9a-f2931764d298
-ms.openlocfilehash: fc44f2b4fcae51cef78d6b660f0cc86ee516e5e6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5904a69f81dd1fbf22171a46040da5d4f5511588
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50651186"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59039645"
 ---
 # <a name="recordset-architecture-odbc"></a>记录集：体系结构 (ODBC)
 
@@ -33,7 +33,7 @@ ms.locfileid: "50651186"
 - [使用 m_nFields 和 m_nParams 数据成员](#_core_using_m_nfields_and_m_nparams)
 
 > [!NOTE]
->  本主题适用于对象派生自`CRecordset`中的批量行提取尚未实现。 如果已实现批量行提取，体系结构是类似的。 若要了解的差异，请参阅[记录集： 提取记录 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
+>  本主题适用于对象派生自`CRecordset`中的批量行提取尚未实现。 如果已实现批量行提取，体系结构是类似的。 若要了解的差异，请参阅[记录集：(ODBC) 批量提取记录](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
 
 ##  <a name="_core_a_sample_class"></a> 示例类
 
@@ -83,16 +83,16 @@ SELECT CourseID, CourseTitle FROM Course WHERE CourseID = MATH101
 >  MFC 本身并不操作使用的参数，特别是，它不会执行文本替换。 相反，MFC 告知 ODBC 从中获取参数;ODBC 检索数据并执行必要的参数化。
 
 > [!NOTE]
->  参数的顺序非常重要。 此类信息和参数详细信息，请参阅[记录集： 参数化记录集 (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)。
+>  参数的顺序非常重要。 此类信息和参数详细信息，请参阅[记录集：参数化记录集 (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)。
 
 ##  <a name="_core_using_m_nfields_and_m_nparams"></a> 使用 m_nFields 和 m_nParams
 
 当向导将为您的类的构造函数时，它还可以初始化[m_nFields](../../mfc/reference/crecordset-class.md#m_nfields)数据成员，指定的数[字段数据成员](#_core_field_data_members)类中。 如果添加任何[参数](#_core_parameter_data_members)到类，您还必须添加用于初始化[m_nParams](../../mfc/reference/crecordset-class.md#m_nparams)数据成员，用于指定参数数据成员的数目。 该框架使用这些值用于数据成员。
 
-有关详细信息和示例，请参阅[记录字段交换： 使用 RFX](../../data/odbc/record-field-exchange-using-rfx.md)。
+有关详细信息和示例，请参阅[记录字段交换：使用 RFX](../../data/odbc/record-field-exchange-using-rfx.md)。
 
 ## <a name="see-also"></a>请参阅
 
 [记录集 (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[记录集：声明表的类 (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)<br/>
+[记录集：声明一个类 (ODBC) 的表](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)<br/>
 [记录字段交换 (RFX)](../../data/odbc/record-field-exchange-rfx.md)

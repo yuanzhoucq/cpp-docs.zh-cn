@@ -4,12 +4,12 @@ ms.date: 12/08/2018
 helpviewer_keywords:
 - MSBuild overview
 ms.assetid: dd258f6f-ab51-48d9-b274-f7ba911d05ca
-ms.openlocfilehash: e8d5e5379a60128ace9502712a1d240f947ddcd5
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 6c8e891f6bf6ed6b3bb3d1c84dbc13b64ab7b868
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57824488"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59021899"
 ---
 # <a name="msbuild-internals-for-c-projects"></a>MSBuild 的 c + + 项目的内部组件
 
@@ -70,10 +70,10 @@ ms.locfileid: "57824488"
 
 下表列出了几个有用的面向用户的目标。
 
-|目标|描述|
+|Target|描述|
 |------------|-----------------|
 |BscMake|执行 Microsoft 浏览信息维护实用工具工具 bscmake.exe。|
-|生成|生成项目。<br /><br /> 这是一个项目的默认目标。|
+|Build|生成项目。<br /><br /> 这是一个项目的默认目标。|
 |ClCompile|执行 MSVC 编译器工具 cl.exe。|
 |清理|删除临时和中间生成文件。|
 |Lib|执行 Microsoft 32 位库管理器工具 lib.exe。|
@@ -83,7 +83,7 @@ ms.locfileid: "57824488"
 |重新生成|清理，然后生成项目。|
 |ResourceCompile|执行 Microsoft Windows 资源编译器工具 rc.exe。|
 |XdcMake|执行 XML 文档工具 xdcmake.exe。|
-|Xsd|执行 XML 架构定义工具 xsd.exe。 请参见下面的注释。|
+|Xsd|执行 XML 架构定义工具 xsd.exe。 *请参见下面的注释。*|
 
 > [!NOTE]
 > 在 Visual Studio 2017 中，c + + 项目的支持**xsd**文件已弃用。 您仍然可以使用**Microsoft.VisualC.CppCodeProvider**通过添加**CppCodeProvider.dll**手动到 gac 中。

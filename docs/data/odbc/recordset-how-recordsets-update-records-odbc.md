@@ -1,5 +1,5 @@
 ---
-title: 记录集：记录集如何更新记录 (ODBC)
+title: 记录集：如何记录集更新记录 (ODBC)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - records, updating
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - updating recordsets
 - recordsets, updating
 ms.assetid: 5ceecc06-7a86-43b1-93db-a54fb1e717c7
-ms.openlocfilehash: 3b9bea1cc8fc0a11773d2392f88fff333eb7084f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bf71f562714e2dacfe75540e1e532219b3eb307f
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50510001"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59034477"
 ---
-# <a name="recordset-how-recordsets-update-records-odbc"></a>记录集：记录集如何更新记录 (ODBC)
+# <a name="recordset-how-recordsets-update-records-odbc"></a>记录集：如何记录集更新记录 (ODBC)
 
 本主题适用于 MFC ODBC 类。
 
@@ -25,7 +25,7 @@ ms.locfileid: "50510001"
 >  在其上的 SQL 你`CRecordset`基于对象可能会影响记录集的可更新性。 例如，如果 SQL 包含联接或**GROUP BY**子句，则 MFC 会将可更新性设置为 FALSE。
 
 > [!NOTE]
->  本主题适用于对象派生自`CRecordset`中的批量行提取尚未实现。 如果使用批量行提取，请参阅[记录集： 提取记录 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
+>  本主题适用于对象派生自`CRecordset`中的批量行提取尚未实现。 如果使用批量行提取，请参阅[记录集：(ODBC) 批量提取记录](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
 
 本主题说明：
 
@@ -33,15 +33,15 @@ ms.locfileid: "50510001"
 
 - [记录集持久化为未编辑的缓冲区](#_core_the_edit_buffer)并[动态集与快照之间的差异](#_core_dynasets_and_snapshots)。
 
-[记录集： 如何 AddNew、 Edit 和删除工作 (ODBC)](../../data/odbc/recordset-how-addnew-edit-and-delete-work-odbc.md)介绍的这些函数的记录集的角度的操作。
+[记录集：如何 AddNew、 Edit 和删除工作 (ODBC)](../../data/odbc/recordset-how-addnew-edit-and-delete-work-odbc.md)介绍的这些函数的记录集的角度的操作。
 
-[记录集： 更多有关更新 (ODBC)](../../data/odbc/recordset-more-about-updates-odbc.md)通过介绍事务如何影响更新，如何关闭记录集或滚动更新正在运行，以及更新如何与其他更新进行交互来完成记录集更新流程用户。
+[记录集：更多有关更新 (ODBC)](../../data/odbc/recordset-more-about-updates-odbc.md)完成记录集更新情景说明事务如何影响更新，如何关闭记录集或滚动更新正在运行，以及更新如何与其他用户的更新进行交互。
 
 ##  <a name="_core_your_role_in_recordset_updating"></a> 在记录集更新中的角色
 
 下表中使用记录集来添加、 编辑或删除记录，以及该框架为您显示您的角色。
 
-### <a name="recordset-updating-you-and-the-framework"></a>更新记录集： 你和框架
+### <a name="recordset-updating-you-and-the-framework"></a>更新记录集：你和框架
 
 |你|框架|
 |---------|-------------------|
@@ -73,4 +73,4 @@ ms.locfileid: "50510001"
 ## <a name="see-also"></a>请参阅
 
 [记录集 (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[记录集：AddNew、Edit 和 Delete 的工作方式 (ODBC)](../../data/odbc/recordset-how-addnew-edit-and-delete-work-odbc.md)
+[记录集：如何 AddNew，编辑和删除工作 (ODBC)](../../data/odbc/recordset-how-addnew-edit-and-delete-work-odbc.md)

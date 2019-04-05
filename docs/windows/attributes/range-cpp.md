@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - range attribute
 ms.assetid: f352f79e-ecb3-4cdd-9cdd-8406ef473594
-ms.openlocfilehash: b75915b901f55ce7ef8d295531ab5148c6535c93
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9ce941fe95f2bbef3895c039984db1e1d2985ae1
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644955"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59029533"
 ---
 # <a name="range-c"></a>range (C++)
 
@@ -25,10 +25,10 @@ ms.locfileid: "50644955"
 
 ### <a name="parameters"></a>参数
 
-*low*<br/>
+*低*<br/>
 范围下限值。
 
-*high*<br/>
+*高*<br/>
 高范围值。
 
 ## <a name="remarks"></a>备注
@@ -59,8 +59,8 @@ __interface ICustom {
 |-|-|
 |**适用对象**|接口方法，接口参数|
 |**可重复**|否|
-|**必需的特性**|无|
-|**无效的特性**|无|
+|**必需的特性**|None|
+|**无效的特性**|None|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
@@ -68,5 +68,5 @@ __interface ICustom {
 
 [IDL 特性](idl-attributes.md)<br/>
 [方法特性](method-attributes.md)<br/>
-[参数特性](parameter-attributes.md)<br/>
+[Parameter 特性](parameter-attributes.md)<br/>
 [数据成员特性](data-member-attributes.md)

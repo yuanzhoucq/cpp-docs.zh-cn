@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - bindable attribute
 ms.assetid: a2360f92-927b-4af8-98cc-6eca7f4ec954
-ms.openlocfilehash: 08ecd3e242d1e3601f7a5a3ea54c51a679dca97a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 07f446b946d6703c4a8b9ae59ae0edd8172c6879
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50664147"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037232"
 ---
 # <a name="bindable"></a>bindable
 
@@ -29,11 +29,11 @@ ms.locfileid: "50664147"
 
 以下的 MFC 示例显示了如何使用**可绑定**:
 
-- [控件示例： 基于 MFC 的 ActiveX 控件](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
+- [控件示例：基于 MFC 的 ActiveX 控件](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
 
-- [CIRC 示例： ActiveX 控件](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
+- [CIRC 示例：ActiveX 控件](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
 
-- [使用工具提示和帮助 TESTHELP 示例： ActiveX 控件](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
+- [TESTHELP 示例：ActiveX 控件与工具提示和帮助](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
 
 ## <a name="example"></a>示例
 
@@ -66,8 +66,8 @@ __interface IPropDemo : IDispatch {
 |-|-|
 |**适用对象**|接口方法|
 |**可重复**|否|
-|**必需的特性**|无|
-|**无效的特性**|无|
+|**必需的特性**|None|
+|**无效的特性**|None|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 

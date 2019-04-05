@@ -57,12 +57,12 @@ helpviewer_keywords:
 - OpenWithPromptFileName method
 - OpenWithServiceComponents method
 ms.assetid: 99bf862c-9d5c-4117-9501-aa0e2672085c
-ms.openlocfilehash: cb92c19dd839fc09ed803e170a2762e4ac7cd494
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 2564d4d9b0a2e5df1f575d6f2627ce80f48533c1
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58770784"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59021912"
 ---
 # <a name="cdatasource-class"></a>CDataSource 类
 

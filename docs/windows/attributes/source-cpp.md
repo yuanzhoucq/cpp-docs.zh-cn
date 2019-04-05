@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - source attribute
 ms.assetid: 1878d05d-7709-4e97-b114-c62f38f5140e
-ms.openlocfilehash: 59ed66acbbd6ef876e6052767dc5a5243d4b8dd6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 699ea64de49a4383bc8fb62b2f3b2133d7c496c9
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476516"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59030240"
 ---
 # <a name="source-c"></a>source (C++)
 
@@ -25,7 +25,7 @@ ms.locfileid: "50476516"
 
 ### <a name="parameters"></a>参数
 
-*interfaces*<br/>
+*接口*<br/>
 到类属性，指定将应用源时的一个或多个接口。 源应用到属性或方法时，不使用此参数。
 
 ## <a name="remarks"></a>备注
@@ -77,7 +77,7 @@ class NN : public b
 |**适用对象**|**类**， **struct**，**接口**|
 |**可重复**|否|
 |**必需的特性**|`coclass` （当应用于类或结构）|
-|**无效的特性**|无|
+|**无效的特性**|None|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 

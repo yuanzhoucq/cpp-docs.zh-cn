@@ -7,12 +7,12 @@ helpviewer_keywords:
 - sidt instruction
 - __sidt intrinsic
 ms.assetid: 01e83d14-6e63-4dea-8f64-5a0339d69641
-ms.openlocfilehash: 2188b2cdbf5c5f8836197f8cf2ee33928b7e9425
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 88dbb4713577fcf224e1c5646bf4c38b2a1dfafe
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624453"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59036755"
 ---
 # <a name="sidt"></a>__sidt
 
@@ -42,7 +42,7 @@ void __sidt(void * Destination);
 
 ## <a name="remarks"></a>备注
 
-`__sidt` 函数等同于 `SIDT` 计算机指令。 有关详细信息，搜索文档中，"Intel 体系结构软件开发人员手册，2 卷： 指令集引用"在[Intel Corporation](https://software.intel.com/articles/intel-sdm)站点。
+`__sidt` 函数等同于 `SIDT` 计算机指令。 有关详细信息，搜索文档中，"Intel 体系结构软件开发人员手册，卷 2:指令设置参考，"在[Intel Corporation](https://software.intel.com/articles/intel-sdm)站点。
 
 **结束 Microsoft 专用**
 

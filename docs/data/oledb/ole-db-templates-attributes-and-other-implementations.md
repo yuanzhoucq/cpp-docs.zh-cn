@@ -6,12 +6,12 @@ helpviewer_keywords:
 - OLE DB templates, about OLE DB templates
 - OLE DB templates
 ms.assetid: 0c780c1b-9bba-4788-8c33-8552d9f120ac
-ms.openlocfilehash: 079ec68afe2e538a40920fb2c6524f8d5b8aae89
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 0e6b5dbc97f6a7bea1df342d6a792ea43907ca33
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51520630"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59039580"
 ---
 # <a name="ole-db-templates-attributes-and-other-implementations"></a>OLE DB 模板、特性和其他实现
 
@@ -45,7 +45,7 @@ OLE DB 模板，都是 ATL （动态模板库） 的一部分，使高性能 OLE
 
 ## <a name="mfc-ole-db-classes"></a>MFC OLE DB 类
 
-MFC 库包含一个类， [COleDBRecordView](../../mfc/reference/coledbrecordview-class.md)，在控件中显示数据库记录。 该视图是直接连接到的窗体视图`CRowset`对象，并显示字段的`CRowset`对话框模板的控件中的对象。 它还会提供默认实现将移到第一个下, 一步上, 一个，或最后一个记录和更新当前在视图上的记录的接口。 有关详细信息，请参阅 `COleDBRecordView` 。
+MFC 库包含一个类， [COleDBRecordView](../../mfc/reference/coledbrecordview-class.md)，在控件中显示数据库记录。 该视图是直接连接到的窗体视图`CRowset`对象，并显示字段的`CRowset`对话框模板的控件中的对象。 它还会提供默认实现将移到第一个下, 一步上, 一个，或最后一个记录和更新当前在视图上的记录的接口。 有关详细信息，请参阅 `COleDBRecordView`。
 
 ## <a name="ole-db-sdk-interfaces"></a>OLE DB SDK 接口
 

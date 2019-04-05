@@ -56,12 +56,12 @@ helpviewer_keywords:
 - _InterlockedAnd8 intrinsic
 - _InterlockedAnd_HLEAcquire intrinsic
 ms.assetid: ad271dc3-42cd-47d0-9f65-30d5cfeb66fc
-ms.openlocfilehash: 70e618944ddac3468c0e49443cde116c8496df7c
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: b38a181102247ab203c86ccb6310a72135dccc8b
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626763"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033315"
 ---
 # <a name="interlockedand-intrinsic-functions"></a>_InterlockedAnd 内部函数
 
@@ -184,7 +184,7 @@ __int64 _InterlockedAnd64_rel(
 
 ## <a name="requirements"></a>要求
 
-|内部函数|体系结构|标头|
+|内部函数|体系结构|Header|
 |---------------|------------------|------------|
 |`_InterlockedAnd`, `_InterlockedAnd8`, `_InterlockedAnd16`, `_InterlockedAnd64`|x86、 ARM、 x64|\<intrin.h>|
 |`_InterlockedAnd_acq`, `_InterlockedAnd_nf`, `_InterlockedAnd_rel`, `_InterlockedAnd8_acq`, `_InterlockedAnd8_nf`, `_InterlockedAnd8_rel`, `_InterlockedAnd16_acq`, `_InterlockedAnd16_nf`, `_InterlockedAnd16_rel`, `_InterlockedAnd64_acq`, `_InterlockedAnd64_nf`, `_InterlockedAnd64_rel`|ARM|\<intrin.h>|
@@ -193,7 +193,7 @@ __int64 _InterlockedAnd64_rel(
 
 ## <a name="remarks"></a>备注
 
-每个函数名称中的数字指定了自变量的位大小。
+每个函数名称中的数字指定了参数的位大小。
 
 在 ARM 平台上，可以使用带 `_acq` 和 `_rel` 后缀的内部函数获取和发布语义，例如在临界区的起始位置。 带 `_nf`（“无围墙”）后缀的内部函数不能充当内存屏障。
 

@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - no_implementation attribute
 ms.assetid: bdc67785-e131-409c-87bc-f4d2f4abb07b
-ms.openlocfilehash: d4e55d06bef823d28c5deb3467654bc530a3853e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 26527ca69c66c73f5d41084dc42df5faa34481d3
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456779"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59030536"
 ---
 # <a name="noimplementation"></a>no_implementation
-**C + + 专用**
+**C++ 专用**
 
 取消生成 .tli 标头，它包含包装器成员函数的实现。
 
@@ -30,9 +30,9 @@ no_implementation
 
 结合使用此特性[implementation_only](../preprocessor/implementation-only.md)。
 
-**结束 c + + 专用**
+**结束 C++ 专用**
 
 ## <a name="see-also"></a>请参阅
 
-[#import 属性](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[#import 特性](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [#import 指令](../preprocessor/hash-import-directive-cpp.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - databases [C++], ODBC
 - data access [C++], ODBC
 ms.assetid: 56b6067a-651e-4c10-a24d-d4a6a17ca5e4
-ms.openlocfilehash: 8a4d6cad399b1773102dc0bc64e28049cca30d2d
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: fdaafd5c8243143fd9705d45db2497577820ca0a
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523346"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59030084"
 ---
 # <a name="open-database-connectivity-odbc"></a>开放式数据库连接 (ODBC)
 

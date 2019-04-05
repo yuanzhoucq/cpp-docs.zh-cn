@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - custom attributes, defining
 ms.assetid: 3abac928-4d55-4ea6-8cf6-8427a4ad79f1
-ms.openlocfilehash: 7aca125879591f71fe2ba60f34b712918350940f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 227e67696e679452a9c6c0e18c04e3d918f7a93f
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50565693"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59029429"
 ---
 # <a name="custom-c"></a>custom (C++)
 
@@ -31,7 +31,7 @@ ms.locfileid: "50565693"
 *uuid*<br/>
 唯一 ID。
 
-*value*<br/>
+*值*<br/>
 一个值，可以将放入一个变体。
 
 ## <a name="remarks"></a>备注
@@ -49,7 +49,7 @@ ms.locfileid: "50565693"
 |**适用对象**|非 COM**接口**，**类**，**枚举**s，`idl_module`方法、 接口成员、 接口参数**typedef**s，**union**s，**结构**s|
 |**可重复**|是|
 |**必需的特性**|**组件类**（当使用类）|
-|**无效的特性**|无|
+|**无效的特性**|None|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
@@ -58,7 +58,7 @@ ms.locfileid: "50565693"
 [IDL 特性](idl-attributes.md)<br/>
 [独立特性](stand-alone-attributes.md)<br/>
 [Typedef、Enum、Union 和 Struct 特性](typedef-enum-union-and-struct-attributes.md)<br/>
-[参数特性](parameter-attributes.md)<br/>
+[Parameter 特性](parameter-attributes.md)<br/>
 [方法特性](method-attributes.md)<br/>
 [类特性](class-attributes.md)<br/>
 [接口特性](interface-attributes.md)

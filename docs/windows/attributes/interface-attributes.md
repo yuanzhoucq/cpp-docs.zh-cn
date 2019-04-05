@@ -5,12 +5,12 @@ helpviewer_keywords:
 - attributes [C++/CLI], reference topics
 - interface attributes
 ms.assetid: 27fcdfee-abce-4585-8b53-ee31635356e8
-ms.openlocfilehash: d954b7622ac78142c84b40007ecda8138b1b8f2f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8218ccb66c6be9edef5d7de751a73bf4753d069f
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50556634"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59027200"
 ---
 # <a name="interface-attributes"></a>接口特性
 
@@ -19,7 +19,7 @@ ms.locfileid: "50556634"
 |特性|描述|
 |---------------|-----------------|
 |[async_uuid](async-uuid.md)|指定指示 MIDL 编译器定义的 COM 接口的同步和异步版本的 UUID。|
-|[custom](custom-cpp.md)|可以定义自己的属性。|
+|[自定义](custom-cpp.md)|可以定义自己的属性。|
 |[dispinterface](dispinterface.md)|将一个接口作为调度接口置于 .idl 文件中。|
 |[dual](dual.md)|双重接口.idl 文件中放置一个接口。|
 |[export](export.md)|导致要放置在.idl 文件中的数据结构。|
@@ -28,9 +28,9 @@ ms.locfileid: "50556634"
 |[helpstring](helpstring.md)|指定一个字符串，用于描述应用该字符串的元素。|
 |[helpstringcontext](helpstringcontext.md)|在.hlp 或.chm 文件中指定的帮助主题的 ID。|
 |[helpstringdll](helpstringdll.md)|指定要用于执行文档字符串查找 （本地化） DLL 的名称。|
-|[hidden](hidden.md)|指示该项存在，但不是应在面向用户的浏览器中显示。|
+|[隐藏](hidden.md)|指示该项存在，但不是应在面向用户的浏览器中显示。|
 |[library_block](library-block.md)|将放置在.idl 文件的库块中的构造。|
-|[local](local-cpp.md)|可以使用 MIDL 编译器为标头生成器界面标头中使用时。 单个函数中使用时，将指定为其生成无存根 （stub） 的本地过程。|
+|[本地](local-cpp.md)|可以使用 MIDL 编译器为标头生成器界面标头中使用时。 单个函数中使用时，将指定为其生成无存根 （stub） 的本地过程。|
 |[nonextensible](nonextensible.md)|指定`IDispatch`实现仅包括属性和方法的接口描述中列出，并在运行时不能与其他成员扩展。 此属性才有效上[双](dual.md)接口。|
 |[odl](odl.md)|标识为对象描述语言 (ODL) 接口的接口。|
 |[object](object-cpp.md)|标识的自定义的接口。|

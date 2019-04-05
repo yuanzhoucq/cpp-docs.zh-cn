@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - implementation_only attribute
 ms.assetid: d8cabc86-4425-45a0-9587-d57536980088
-ms.openlocfilehash: 9bc083b78cd0c3bd39241de2815580c9eca6a207
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c1435ca74ac2b5a73c308592b1affe6fca097d1b
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654436"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59026644"
 ---
 # <a name="implementationonly"></a>implementation_only
-**C + + 专用**
+**C++ 专用**
 
 取消生成 .tlh 头文件（主要头文件）。
 
@@ -35,9 +35,9 @@ implementation_only
 > [!NOTE]
 > **Implementation_only**属性中某个`#import`语句必须是与另一种结合使用`#import`语句的相同类型库的具有`no_implementation`属性。 否则，将生成编译器错误。 这是因为生成的包装器类定义`#import`语句`no_implementation`编译生成的实现所需属性是**implementation_only**属性。
 
-**结束 c + + 专用**
+**结束 C++ 专用**
 
 ## <a name="see-also"></a>请参阅
 
-[#import 属性](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[#import 特性](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [#import 指令](../preprocessor/hash-import-directive-cpp.md)

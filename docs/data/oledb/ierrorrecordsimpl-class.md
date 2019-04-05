@@ -65,12 +65,12 @@ helpviewer_keywords:
 - GetRecordCount method
 - m_rgErrors
 ms.assetid: dea8e938-c5d8-45ab-86de-eb8fbf534ffb
-ms.openlocfilehash: 24c64c489f52cb4746e3e2b6ebb52bb81870cffd
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: b1ab6b0984cbf84690d69a3ffe7eb3931bf59563
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420188"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59029468"
 ---
 # <a name="ierrorrecordsimpl-class"></a>IErrorRecordsImpl 类
 

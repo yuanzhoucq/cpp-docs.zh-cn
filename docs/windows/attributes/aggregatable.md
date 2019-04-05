@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - aggregatable attribute
 ms.assetid: 9253a46a-cd76-41f2-b3b6-86f709bb069c
-ms.openlocfilehash: 74a561b9b70c5aee36781d102835c73dec2c3ac2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8d5ceb46a124db8c0082495d48e6ee0e21655422
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50582446"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59029286"
 ---
 # <a name="aggregatable"></a>aggregatable
 
@@ -25,7 +25,7 @@ ms.locfileid: "50582446"
 
 ### <a name="parameters"></a>参数
 
-*value*<br/>
+*值*<br/>
 （可选）用于指示何时可聚合 COM 对象的参数：
 
 - `never` 不能聚合的 COM 对象。
@@ -75,7 +75,7 @@ class CMyClass {};
 |**适用对象**|**类**，**结构**|
 |**可重复**|否|
 |**必需的特性**|一个或多个以下： `coclass`， `progid`，或`vi_progid`。|
-|**无效的特性**|无|
+|**无效的特性**|None|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - case attribute
 ms.assetid: 6fb883c3-0526-4932-a901-b4564dcaeb7d
-ms.openlocfilehash: 1ed107b78ea5638d93a773e19de13b4c1fe1036c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b3058f2fe6f35e1b11d4790780cb0fcdcaada706
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648404"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038195"
 ---
 # <a name="case-c"></a>case (C++)
 
@@ -25,7 +25,7 @@ ms.locfileid: "50648404"
 
 #### <a name="parameters"></a>参数
 
-*value*<br/>
+*值*<br/>
 你想要提供的处理可能输入的值。 类型**值**可以是以下类型之一：
 
 - `int`
@@ -71,8 +71,8 @@ struct SizedValue2 {
 |-|-|
 |**适用对象**|成员**类**或**结构**|
 |**可重复**|否|
-|**必需的特性**|无|
-|**无效的特性**|无|
+|**必需的特性**|None|
+|**无效的特性**|None|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 

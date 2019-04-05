@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - idl_quote attribute
 ms.assetid: a370e1b7-948b-4e67-9a25-58facf24e4c9
-ms.openlocfilehash: edfeb18053f3ae4fa8c45211833e0ceaa037cf79
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fd7455298c9a1b69926d85766b6cd7f96bd374cc
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50595567"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037112"
 ---
 # <a name="idlquote"></a>idl_quote
 
@@ -79,8 +79,8 @@ __interface IStatic{
 |-|-|
 |**适用对象**|任何位置|
 |**可重复**|否|
-|**必需的特性**|无|
-|**无效的特性**|无|
+|**必需的特性**|None|
+|**无效的特性**|None|
 
 有关详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 

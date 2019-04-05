@@ -9,16 +9,16 @@ helpviewer_keywords:
 - init_seg pragma
 - data segment initializing [C++]
 ms.assetid: 40a5898a-5c85-4aa9-8d73-3d967eb13610
-ms.openlocfilehash: f11ec6d3cee7af2ce785555af9b73d8c0eb58638
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 801496739fd9bd2b8a14e699ca4da9fe79f3a28d
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532611"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59026625"
 ---
 # <a name="initseg"></a>init_seg
 
-**C + + 专用**
+**C++ 专用**
 
 指定影响启动代码的执行顺序的关键字或代码部分。
 
@@ -36,13 +36,13 @@ ms.locfileid: "50532611"
 
 为选项**init_seg**杂注是：
 
-*compiler*<br/>
+*编译器*<br/>
 保留以供 Microsoft C 运行库初始化使用. 首先构造该组中的对象。
 
 *lib*<br/>
 可用于第三方类库供应商的初始化。 后那些已标记为构造此组中的对象*编译器*但之前的任何其他内容。
 
-*user*<br/>
+*用户*<br/>
 可供任何用户使用。 最后构造此组中的对象。
 
 *节名称*允许初始化部分的显式规范。 在用户指定的对象*节名称*不隐式构造; 但将其地址放置在命名的节*节名称*。
@@ -71,7 +71,7 @@ int __cdecl myexit (void (__cdecl *pf)(void))
 
 不能指定**init_seg**多次在翻译单元中。
 
-即使你的对象没有用户定义的构造函数（未在代码中显式定义的构造函数），编译器也会生成一个构造函数（例如，绑定 v-表指针）。 因此，你的代码必须调用编译器生成的构造函数。
+即使您的对象没有用户定义的构造函数（未在代码中显式定义的构造函数），编译器也会生成一个构造函数（例如，绑定 v-表指针）。 因此，你的代码必须调用编译器生成的构造函数。
 
 ## <a name="example"></a>示例
 

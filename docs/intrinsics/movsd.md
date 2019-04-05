@@ -8,12 +8,12 @@ helpviewer_keywords:
 - __movsd intrinsic
 - movsd instruction
 ms.assetid: eb5cccf3-aa76-47f0-b9fc-eeca38fd943f
-ms.openlocfilehash: 89c2e7bf6045821d01b23608552776aaf389b0cf
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 950e83f2cd03e92bb5a9f953affe8e7ff479a408
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51331004"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59031295"
 ---
 # <a name="movsd"></a>__movsd
 
@@ -39,7 +39,7 @@ void __movsd(
 *源*<br/>
 [in]操作的源。
 
-“计数”<br/>
+*计数*<br/>
 [in]双字数组要复制的数。
 
 ## <a name="requirements"></a>要求

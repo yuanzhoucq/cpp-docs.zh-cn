@@ -30,12 +30,12 @@ helpviewer_keywords:
 - FreeRecordMemory method
 - GetColumnInfo method
 ms.assetid: bd4f58ed-cebf-4d43-8985-1e5fcbf06953
-ms.openlocfilehash: dd7156575f551af1643dd3d1f8238ee1e3fe86f4
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: af38695ccee79e539782dc3f695a567f72fa41c7
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420149"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033899"
 ---
 # <a name="caccessorrowset-class"></a>CAccessorRowset 类
 
@@ -67,7 +67,7 @@ class CAccessorRowset : public TAccessor, public TRowset<TAccessor>
 
 |||
 |-|-|
-|[Bind](#bind)|创建绑定 (使用何时`bBind`指定为**false**中[ccommand:: Open](../../data/oledb/ccommand-open.md))。|
+|[将绑定](#bind)|创建绑定 (使用何时`bBind`指定为**false**中[ccommand:: Open](../../data/oledb/ccommand-open.md))。|
 |[CAccessorRowset](#caccessorrowset)|构造函数。|
 |[关闭](#close)|关闭的行集和任何访问器。|
 |[FreeRecordMemory](#freerecordmemory)|释放当前需要释放的记录中的任何列。|

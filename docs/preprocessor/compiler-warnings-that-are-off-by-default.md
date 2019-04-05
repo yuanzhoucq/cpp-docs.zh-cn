@@ -5,12 +5,12 @@ helpviewer_keywords:
 - warnings, compiler
 - cl.exe compiler, setting options
 ms.assetid: 69809cfb-a38a-4035-b154-283a61938df8
-ms.openlocfilehash: e189ead864fe2be6e0ccb3bc76a58f2441740076
-ms.sourcegitcommit: a901c4acbfc80ca10663d37c09921f04c5b6dd17
+ms.openlocfilehash: ee2b6097a62a8f1030dc631354f96ec7a33d2f11
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58142553"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59039392"
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>默认情况下处于关闭状态的编译器警告
 
@@ -30,7 +30,7 @@ ms.locfileid: "58142553"
 
 - [/Wall](../build/reference/compiler-option-warning-level.md)
 
-   `/Wall` 将启用默认情况下禁用的所有警告。 如果使用此选项，您可以通过使用将关闭单个警告[/wd](../build/reference/compiler-option-warning-level.md)选项。
+   `/Wall` 启用默认情况下处于关闭状态的所有警告。 如果使用此选项，您可以通过使用将关闭单个警告[/wd](../build/reference/compiler-option-warning-level.md)选项。
 
 - [/w*Lnnnn*](../build/reference/compiler-option-warning-level.md)
 
@@ -180,4 +180,4 @@ ms.locfileid: "58142553"
 
 ## <a name="see-also"></a>请参阅
 
-[warning](../preprocessor/warning.md)
+[警告](../preprocessor/warning.md)

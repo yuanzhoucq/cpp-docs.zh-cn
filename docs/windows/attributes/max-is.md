@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - max_is attribute
 ms.assetid: 7c851f5c-6649-4d77-a792-247c37d8f560
-ms.openlocfilehash: 10732d5ba3251185dc7027e3449486af3037f763
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dca2a3dc18aa3c3e75bbb682ed0b1b90adcd9236
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50627469"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041304"
 ---
 # <a name="maxis"></a>max_is
 
@@ -40,7 +40,7 @@ ms.locfileid: "50627469"
 |-|-|
 |**适用对象**|中的字段**struct**或**union**，接口参数，接口方法|
 |**可重复**|否|
-|**必需的特性**|无|
+|**必需的特性**|None|
 |**无效的特性**|**size_is**|
 
 有关详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
@@ -53,7 +53,7 @@ ms.locfileid: "50627469"
 
 [IDL 特性](idl-attributes.md)<br/>
 [Typedef、Enum、Union 和 Struct 特性](typedef-enum-union-and-struct-attributes.md)<br/>
-[参数特性](parameter-attributes.md)<br/>
+[Parameter 特性](parameter-attributes.md)<br/>
 [first_is](first-is.md)<br/>
 [last_is](last-is.md)<br/>
 [length_is](length-is.md)<br/>

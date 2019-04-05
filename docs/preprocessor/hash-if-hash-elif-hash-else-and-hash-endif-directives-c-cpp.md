@@ -21,12 +21,12 @@ helpviewer_keywords:
 - elif directive (#elif)
 - defined directive
 ms.assetid: c77a175f-6ca8-47d4-8df9-7bac5943d01b
-ms.openlocfilehash: 76b8be265145896105490a82946c50bc576e6f9f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 90fbab45c6408c30198c2a52a42545718002cc11
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50520412"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59028086"
 ---
 # <a name="if-elif-else-and-endif-directives-cc"></a>#if、#elif、#else 和 #endif 指令 (C/C++)
 
@@ -37,20 +37,20 @@ ms.locfileid: "50520412"
 *条件*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*if 部分命令部件*<sub>opt</sub> *else 部分*<sub>opt</sub> *endif 行*
 
-*if 部分*:<br/>
+*if-part* :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*如果行文本*
 
 *如果行*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#if***常量表达式*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#ifdef***标识符*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#ifndef***标识符*
+&nbsp;&nbsp;&nbsp;&nbsp;**#if**  *constant-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#ifdef**  *identifier*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#ifndef**  *identifier*
 
 *命令部件*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*命令行文本*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*命令部件命令行文本*
 
 *命令行*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#elif***常量表达式*
+&nbsp;&nbsp;&nbsp;&nbsp;**#elif**  *constant-expression*
 
 *其他部件*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*其他行文本*
@@ -65,7 +65,7 @@ ms.locfileid: "50520412"
 
 **#If**， **#elif**， **#else**，以及 **#endif**指令可以嵌套在其他的文本部分 **#if**指令。 每个嵌套 **#else**， **#elif**，或 **#endif**指令属于最靠近的前面 **#if**指令。
 
-所有条件编译指令，如 **#if**并 **#ifdef**，必须匹配与右 **#endif**指令之前的文件结束; 否则为错误生成消息。 当条件编译指令包含在包含文件中时，这些指令必须满足相同的条件：包含文件的末尾不能有未匹配的条件编译指令。
+所有条件编译指令，如 **#if**并 **#ifdef**，必须匹配与右 **#endif**指令之前的文件结束; 否则为错误生成消息。 当条件编译指令包含在包含文件时，它们必须满足相同的条件：必须有包含文件的末尾没有不匹配的条件编译指令。
 
 命令行后面的部分中执行宏替换 **#elif**命令，因此可以在中使用宏调用*常数表达式*。
 
@@ -97,7 +97,7 @@ ms.locfileid: "50520412"
 
 defined( `identifier` )
 
-defined `identifier`
+已定义 `identifier`
 
 此常量表达式被视为 true （非零），是否*标识符*当前定义; 否则，条件为 false (0)。 定义为空文本的标识符被视为已定义。 **定义**中，可以使用指令 **#if**和一个 **#elif**指令，但在其他位置不可用。
 
@@ -174,7 +174,7 @@ class Example
 
 ## <a name="hasinclude"></a>__has_include
 
-**Visual Studio 2017 版本 15.3 及更高版本**： 确定库标头是否可用于包含：
+**Visual Studio 2017 版本 15.3 及更高版本**：确定是否可用于包含库标头：
 
 ```cpp
 #ifdef __has_include

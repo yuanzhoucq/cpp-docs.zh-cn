@@ -3,12 +3,12 @@ title: Microsoft::WRL::Details 命名空间
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: d71fe149-d804-4c6f-961d-43fe21ef8630
-ms.openlocfilehash: 149b78a20061dc9083c62df4e58d638009c5e0a2
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: fce6e620600164e73d3708d98d8a7fa979e8ab42
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58784114"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59027465"
 ---
 # <a name="microsoftwrldetails-namespace"></a>Microsoft::WRL::Details 命名空间
 
@@ -85,5 +85,5 @@ namespace Microsoft::WRL::Details;
 
 ## <a name="see-also"></a>请参阅
 
-[Microsoft::WRL Namespace](microsoft-wrl-namespace.md)<br/>
+[Microsoft::WRL 命名空间](microsoft-wrl-namespace.md)<br/>
 [Microsoft::WRL::Wrappers 命名空间](microsoft-wrl-wrappers-namespace.md)

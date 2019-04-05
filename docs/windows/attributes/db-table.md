@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_table attribute
 ms.assetid: ff9eb957-4e6d-4175-afcc-fd8ea916cec0
-ms.openlocfilehash: d0b67bae643698b6d4f09a75dd2e4ec6a23a5d28
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3ab548261d6ebcb9d3d7f7e352c8afe3b33db06f
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607267"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023862"
 ---
 # <a name="dbtable"></a>db_table
 
@@ -70,8 +70,8 @@ class CProducts {
 |-|-|
 |**适用对象**|**类**，**结构**|
 |**可重复**|否|
-|**必需的特性**|无|
-|**无效的特性**|无|
+|**必需的特性**|None|
+|**无效的特性**|None|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 

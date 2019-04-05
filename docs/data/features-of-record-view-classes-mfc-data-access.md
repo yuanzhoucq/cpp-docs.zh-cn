@@ -5,12 +5,12 @@ helpviewer_keywords:
 - record views, classes
 - record view classes
 ms.assetid: e7b2820f-09c4-483f-83c0-317e8be42bdf
-ms.openlocfilehash: 2feda8f8f446e02a5056287c656707ea038f5387
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5f8de956065571109c988bd2940d21822bba7cfd
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50461147"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59029870"
 ---
 # <a name="features-of-record-view-classes--mfc-data-access"></a>记录视图类的功能（MFC 数据访问）
 
@@ -22,7 +22,7 @@ ms.locfileid: "50461147"
 
 - 当用户移到另一条记录时，更新将更改为当前记录。
 
-有关导航的详细信息，请参阅[记录视图： 支持在记录视图中导航](../data/supporting-navigation-in-a-record-view-mfc-data-access.md)。
+有关导航的详细信息，请参阅[记录视图：支持记录视图中的导航](../data/supporting-navigation-in-a-record-view-mfc-data-access.md)。
 
 ## <a name="see-also"></a>请参阅
 

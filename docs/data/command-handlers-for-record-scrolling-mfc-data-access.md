@@ -6,12 +6,12 @@ helpviewer_keywords:
 - record scrolling [C++]
 - scrolling records
 ms.assetid: f8b13477-2a37-459e-a30c-806fb78165ac
-ms.openlocfilehash: 0e35baf561693b90b661ac1fe73844961570b29e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 66944221910dbd23d78a78fc951030efbee86bd0
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50460770"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038508"
 ---
 # <a name="command-handlers-for-record-scrolling--mfc-data-access"></a>用于记录滚动的命令处理程序（MFC 数据访问）
 

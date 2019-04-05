@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - preprocessor
 ms.assetid: e120eda3-b413-49f1-a07c-e9fb128cf500
-ms.openlocfilehash: bd139dcbbbe519cc4c9750a657f8b47c5a5bcd18
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b1443d88fdba470cb8ed5058c9a9012bfbdc5bc7
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50530957"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59028569"
 ---
 # <a name="preprocessor"></a>预处理器
 预处理器是将源文件的文本作为翻译的第一阶段操作的文本处理器。 预处理器不会分析源文本，但会为了查找宏调用而将源文本细分为标记。 尽管编译器一般会在其第一个传递中调用预处理器，但还是可以为了在不进行编译的情况下处理文本而单独调用预处理器。
@@ -20,7 +20,7 @@ ms.locfileid: "50530957"
 
 - [预处理器运算符](../preprocessor/preprocessor-operators.md)
 
-- [预定义的宏](../preprocessor/predefined-macros.md)
+- [预定义宏](../preprocessor/predefined-macros.md)
 
 - [杂注](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
 

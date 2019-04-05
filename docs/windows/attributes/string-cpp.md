@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - string attribute
 ms.assetid: ddde900a-2e99-4fcd-86e8-57e1bdba7c93
-ms.openlocfilehash: 8bf708067341ecde4fb18d565b7d72866312decd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e1b528fb922a15655de403c6099ee1d36e2fb3de
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50603185"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023927"
 ---
 # <a name="string-c"></a>string (C++)
 
@@ -52,8 +52,8 @@ __interface IFireTabCtrl
 |-|-|
 |**适用对象**|数组或指针，指向 array，接口参数，接口方法|
 |**可重复**|否|
-|**必需的特性**|无|
-|**无效的特性**|无|
+|**必需的特性**|None|
+|**无效的特性**|None|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 

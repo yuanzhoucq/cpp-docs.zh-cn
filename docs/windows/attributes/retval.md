@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - retval attribute
 ms.assetid: bfa16f08-157d-4eea-afde-1232c54b8501
-ms.openlocfilehash: 4ac6b72095620a3e857f2877d776e91b273e8f33
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9f5ad86a289f8904278a58636e66809ae0edd55b
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566642"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035086"
 ---
 # <a name="retval"></a>retval
 
@@ -42,12 +42,12 @@ ms.locfileid: "50566642"
 |**适用对象**|接口参数，接口方法|
 |**可重复**|否|
 |**必需的特性**|**out**|
-|**无效的特性**|**in**|
+|**无效的特性**|**中的**|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
 ## <a name="see-also"></a>请参阅
 
 [IDL 特性](idl-attributes.md)<br/>
-[参数特性](parameter-attributes.md)<br/>
+[Parameter 特性](parameter-attributes.md)<br/>
 [方法特性](method-attributes.md)

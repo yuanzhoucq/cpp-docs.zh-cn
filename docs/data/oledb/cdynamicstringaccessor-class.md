@@ -12,12 +12,12 @@ helpviewer_keywords:
 - GetString method
 - SetString method
 ms.assetid: 138dc4de-c7c3-478c-863e-431e48249027
-ms.openlocfilehash: dff36dfb2b898c6a4df65492e2d9386c748f049b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6ba56143beb3411734899839a46ab42992dfa4d8
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534610"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035658"
 ---
 # <a name="cdynamicstringaccessor-class"></a>CDynamicStringAccessor 类
 
@@ -55,7 +55,7 @@ class CDynamicStringAccessorT : public CDynamicAccessor
 
 有关的讨论和使用动态访问器类的示例，请参阅[使用动态访问器](../../data/oledb/using-dynamic-accessors.md)。
 
-## <a name="getstring"></a> Cdynamicstringaccessor:: Getstring
+## <a name="getstring"></a> CDynamicStringAccessor::GetString
 
 将指定列数据作为字符串检索。
 
@@ -85,7 +85,7 @@ BaseType* GetString(const WCHAR* pColumnName) const throw();
 
 第二个重写窗体所需列的名称为 ANSI 字符串。 第三个重写窗体所需列的名称为 Unicode 字符串。
 
-## <a name="setstring"></a> Cdynamicstringaccessor:: Setstring
+## <a name="setstring"></a> CDynamicStringAccessor::SetString
 
 将指定列数据设置为字符串。
 
@@ -110,7 +110,7 @@ HRESULT SetString(const WCHAR* pColumnName,
 *pColumnName*<br/>
 [in]指向包含的列名称的字符串的指针。
 
-*data*<br/>
+*数据*<br/>
 [in]指向要写入到指定的列的字符串数据的指针。
 
 ### <a name="return-value"></a>返回值

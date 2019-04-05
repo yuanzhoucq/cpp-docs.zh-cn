@@ -6,12 +6,12 @@ helpviewer_keywords:
 - resources [C++], about resource files
 - resource files [C++], about resource files
 ms.assetid: 2699a539-b369-4b78-80f0-df03eb7b6780
-ms.openlocfilehash: 0a13fb05f0e6e8582d5e476eb889e307458f528d
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: a08c7ecb153b790f06da386ac93d1f05f5981e61
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58767296"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037722"
 ---
 # <a name="working-with-resource-files"></a>使用资源文件
 
@@ -41,7 +41,7 @@ ms.locfileid: "58767296"
 [资源文件](../windows/resource-files-visual-studio.md)<br/>
 描述资源文件以及如何在 Windows 桌面应用程序中使用。 此外提供了指向介绍如何使用资源文件的文章。
 
-[资源标识符（符号）](../windows/symbols-resource-identifiers.md)<br/>
+[资源标识符 （符号）](../windows/symbols-resource-identifiers.md)<br/>
 描述符号并提供有关在项目中使用 **“资源符号”** 对话框管理符号的信息。
 
 [资源编辑器](../windows/resource-editors.md)<br/>
@@ -52,7 +52,7 @@ ms.locfileid: "58767296"
 [Visual C++](../overview/visual-cpp-in-visual-studio.md)<br/>
 提供 Visual C++ 文档的链接。
 
-[与我们交流](/visualstudio/ide/talk-to-us)<br/>
+[Talk to Us](/visualstudio/ide/talk-to-us)<br/>
 提供指向特定信息的链接，这些信息说明如何使用文档集、如何与产品支持部门联系以及如何使用辅助功能。
 
 ## <a name="see-also"></a>请参阅

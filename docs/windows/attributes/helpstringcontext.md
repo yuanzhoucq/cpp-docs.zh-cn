@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - helpstringcontext attribute [C++]
 ms.assetid: d4cd135e-d91c-4aa3-9353-8aeb096f52cf
-ms.openlocfilehash: d292dd53ff3009a571dd5b0a1ba102e75b648e4d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a6df5b63291fbc54d6c12a116fccd8372e8ced9a
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50533596"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59026105"
 ---
 # <a name="helpstringcontext"></a>helpstringcontext
 
@@ -56,8 +56,8 @@ __interface IMyI
 |-|-|
 |**适用对象**|**类**，**接口**，接口方法|
 |**可重复**|否|
-|**必需的特性**|无|
-|**无效的特性**|无|
+|**必需的特性**|None|
+|**无效的特性**|None|
 
 有关详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
@@ -67,4 +67,4 @@ __interface IMyI
 [接口特性](interface-attributes.md)<br/>
 [类特性](class-attributes.md)<br/>
 [方法特性](method-attributes.md)<br/>
-[module](module-cpp.md)
+[name](module-cpp.md)

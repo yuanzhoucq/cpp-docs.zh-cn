@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - defaultvtable attribute
 ms.assetid: 5b3ed483-f69e-44dd-80fc-952028eb9d73
-ms.openlocfilehash: 40f901345601193db9752ea6c6dca980ded0625d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 813fb9dd4edf2f6e522e7310ba1e8bfcd55ed2b9
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579928"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59028342"
 ---
 # <a name="defaultvtable"></a>defaultvtable
 
@@ -71,7 +71,7 @@ class CMyC3 : public IMyI3 {};
 |**适用对象**|**类**，**结构**|
 |**可重复**|否|
 |**必需的特性**|**coclass**|
-|**无效的特性**|无|
+|**无效的特性**|None|
 
 有关详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 

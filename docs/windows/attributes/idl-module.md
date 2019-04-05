@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - idl_module attribute
 ms.assetid: 3578b337-e38a-4334-b747-15404c02dbc0
-ms.openlocfilehash: c58997928fb3121c1ab8e277790969a93d9066de
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 80e4909a61b5b53ecde19471f2c838dd4c425874
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608681"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59034973"
 ---
 # <a name="idlmodule"></a>idl_module
 
@@ -44,7 +44,7 @@ function declaration
 *helpcontext*<br/>
 （可选）此类型库的帮助 ID。
 
-*hidden*<br/>
+*隐藏*<br/>
 （可选）一个参数，阻止显示库。 更多详细信息，请参阅 [隐藏](/windows/desktop/Midl/hidden) MIDL 特性。
 
 *restricted*<br/>
@@ -84,8 +84,8 @@ void FuncName(int i);
 |-|-|
 |**适用对象**|任何位置|
 |**可重复**|否|
-|**必需的特性**|无|
-|**无效的特性**|无|
+|**必需的特性**|None|
+|**无效的特性**|None|
 
 有关详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 

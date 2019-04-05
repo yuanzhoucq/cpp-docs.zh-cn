@@ -1,18 +1,18 @@
 ---
-title: 记录集：声明表的类 (ODBC)
+title: 记录集：声明一个类 (ODBC) 的表
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ODBC recordsets, declaring class for tables
 - recordsets, declaring classes for tables
 ms.assetid: 3fe286c2-3f3d-493d-9d8c-762310939d08
-ms.openlocfilehash: 28de6ed8dcbf34e2ab2c140fdc17a8cd803501de
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 17adc6e26dcbb39453d9009d82843d213271cc78
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476682"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038236"
 ---
-# <a name="recordset-declaring-a-class-for-a-table-odbc"></a>记录集：声明表的类 (ODBC)
+# <a name="recordset-declaring-a-class-for-a-table-odbc"></a>记录集：声明一个类 (ODBC) 的表
 
 本主题适用于 MFC ODBC 类。
 
@@ -28,5 +28,5 @@ ms.locfileid: "50476682"
 
 [记录集 (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
 [记录集：创建和关闭记录集 (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)<br/>
-[记录集：为预定义查询声明一个类 (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)<br/>
+[记录集：声明一个类预定义的查询 (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)<br/>
 [记录集：执行联接 (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - coclass attribute
 ms.assetid: 42da6a10-3af9-4b43-9a1d-689d00b61eb3
-ms.openlocfilehash: 69f749dd6f8b2a8c42b4c75dd3790b9f7fbcf291
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e1f99a2780ab4f451533a3e797e473f60680c6ab
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50603081"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035197"
 ---
 # <a name="coclass"></a>coclass
 
@@ -133,8 +133,8 @@ public:
 |-|-|
 |**适用对象**|**类**，**结构**|
 |**可重复**|否|
-|**必需的特性**|无|
-|**无效的特性**|无|
+|**必需的特性**|None|
+|**无效的特性**|None|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 

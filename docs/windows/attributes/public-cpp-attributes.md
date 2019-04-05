@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - public attribute
 ms.assetid: c42e1fd5-6cb1-48fe-8a03-95f2a2e0137c
-ms.openlocfilehash: d89df014beae5a62a035c3156b92d3337ecd2c14
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a12ab0905064a72057dffac03340b667f07b3ae5
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579330"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59022822"
 ---
 # <a name="public-c-attributes"></a>public（C++ 特性）
 
@@ -53,8 +53,8 @@ __interface IFireTabCtrl : IDispatch
 |-|-|
 |**适用对象**|**typedef**|
 |**可重复**|否|
-|**必需的特性**|无|
-|**无效的特性**|无|
+|**必需的特性**|None|
+|**无效的特性**|None|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 

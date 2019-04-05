@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - helpcontext attribute
 ms.assetid: 6fbb022d-a4b7-4989-a02f-7f18a9b0ad96
-ms.openlocfilehash: 921e5370303cb62830ec281bcefd7c03331efaeb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 22023b4087c67b62d540d021fa06fd3582c7e4e2
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50552745"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038154"
 ---
 # <a name="helpcontext"></a>helpcontext
 
@@ -26,7 +26,7 @@ ms.locfileid: "50552745"
 ### <a name="parameters"></a>参数
 
 *id*<br/>
-帮助主题的上下文 ID。 请参阅[HTML 帮助： 程序的上下文相关帮助](../../mfc/html-help-context-sensitive-help-for-your-programs.md)的上下文 Id 的详细信息。
+帮助主题的上下文 ID。 请参阅[HTML 帮助：为程序的上下文相关帮助](../../mfc/html-help-context-sensitive-help-for-your-programs.md)的上下文 Id 的详细信息。
 
 ## <a name="remarks"></a>备注
 
@@ -44,8 +44,8 @@ ms.locfileid: "50552745"
 |-|-|
 |**适用对象**|**接口**， **typedef**，**类**，方法、 属性|
 |**可重复**|否|
-|**必需的特性**|无|
-|**无效的特性**|无|
+|**必需的特性**|None|
+|**无效的特性**|None|
 
 有关详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 

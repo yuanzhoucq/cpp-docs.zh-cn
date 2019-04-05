@@ -7,12 +7,12 @@ helpviewer_keywords:
 - SKINIT instruction
 - __svm_skinit intrinsic
 ms.assetid: 787ec781-4cf2-40a2-aa20-5192334b131a
-ms.openlocfilehash: 630d4b9d93802038bd00b65495bb18455b0c61a4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 199cba2623f9d8e47c08be642ec485599b87976e
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50591212"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59026131"
 ---
 # <a name="svmskinit"></a>__svm_skinit
 
@@ -40,7 +40,7 @@ void __svm_skinit(
 
 `SLB`参数指定的内存中，调用 64k 块的物理地址*安全加载程序块*(SLB)。 SLB 包含一个名为建立操作环境的计算机，并随后将加载安全内核安全加载程序程序。
 
-此函数支持主机的虚拟机监视器与来宾操作系统及其应用程序进行交互。 有关详细信息，搜索文档中，"AMD64 体系结构编程人员手动卷 2： 系统编程中，"文档数 24593，修订 3.11， [AMD corporation](https://developer.amd.com/resources/developer-guides-manuals/)站点。
+此函数支持主机的虚拟机监视器与来宾操作系统及其应用程序进行交互。 有关详细信息，搜索文档中，"AMD64 体系结构编程人员手动卷 2:系统编程，"文档数 24593，3.11，修订[AMD corporation](https://developer.amd.com/resources/developer-guides-manuals/)站点。
 
 ## <a name="requirements"></a>要求
 

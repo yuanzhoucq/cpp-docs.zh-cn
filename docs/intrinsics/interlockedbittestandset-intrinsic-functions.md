@@ -18,12 +18,12 @@ helpviewer_keywords:
 - _interlockedbittestandset64 intrinsic
 - lock_bts instruction
 ms.assetid: b1b7e334-53ea-48cf-ba60-5fa3ef51a1fc
-ms.openlocfilehash: 2f7dc1cf6501f789d969143bc23469a6ecf7239c
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: 3da533b3cf2ab8f396e4ba284cc0bf921a5c80b5
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627210"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023199"
 ---
 # <a name="interlockedbittestandset-intrinsic-functions"></a>_interlockedbittestandset 内部函数
 
@@ -89,10 +89,10 @@ unsigned char _interlockedbittestandset64_HLERelease(
 |内部函数|体系结构|Header|
 |---------------|------------------|------------|
 |`_interlockedbittestandset`|x86、 ARM、 x64|\<intrin.h>|
-|`_interlockedbittestandset_acq`, `_interlockedbittestandset_nf`, `_interlockedbittestandset_rel`|ARM|\<intrin.h>|
-|`_interlockedbittestandset_HLEAcquire`， `_interlockedbittestandset_HLERelease`|x86、x64|\<immintrin.h>|
+|`_interlockedbittestandset_acq`中， `_interlockedbittestandset_nf`中， `_interlockedbittestandset_rel`|ARM|\<intrin.h>|
+|`_interlockedbittestandset_HLEAcquire`, `_interlockedbittestandset_HLERelease`|x86、x64|\<immintrin.h>|
 |`_interlockedbittestandset64`|X64|\<intrin.h>|
-|`_interlockedbittestandset64_HLEAcquire`， `_interlockedbittestandset64_HLERelease`|X64|\<immintrin.h>|
+|`_interlockedbittestandset64_HLEAcquire`, `_interlockedbittestandset64_HLERelease`|X64|\<immintrin.h>|
 
 ## <a name="remarks"></a>备注
 

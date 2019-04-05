@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <para> C++ XML tag
 - para C++ XML tag
 ms.assetid: 35f2a1b3-bc14-4f13-bcb0-c39ccbf74d59
-ms.openlocfilehash: e7cb997d18a778bca3efd4552f543ec5401e8dd0
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: d8de55344eef7634d8a9a55a32b8ff5beb8852d4
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57824529"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59021425"
 ---
 # <a name="ltparagt"></a>&lt;para&gt;
 
@@ -27,7 +27,7 @@ ms.locfileid: "57824529"
 
 #### <a name="parameters"></a>参数
 
-*content*<br/>
+*内容*<br/>
 段落文本。
 
 ## <a name="remarks"></a>备注

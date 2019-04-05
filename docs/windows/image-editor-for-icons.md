@@ -42,12 +42,12 @@ helpviewer_keywords:
 - Image editor [C++], grid settings
 - grid settings, Image editor
 ms.assetid: 586d2b8b-0348-4883-a85d-1ff0ddbf14dd
-ms.openlocfilehash: 22fe458a72d970bb09687a53232f94b171e14a45
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: dd7da76d3df68fa63c87f64610524accfd4302ef
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328423"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041544"
 ---
 # <a name="image-editor-for-icons-c"></a>（c + +） 图标的图像编辑器
 
@@ -97,8 +97,8 @@ ms.locfileid: "58328423"
 |---|---|
 |**像素网格**|选中之后，显示一个网格，在每个像素周围**的图像编辑器**。<br/><br/>仅在 4 × 及更高分辨率显示网格。|
 |**磁贴网格**|选中时，显示一个网格中的像素的块周围**的图像编辑器**、 指定的网格间距值。|
-|**Width**|指定每个磁贴块的宽度。<br/><br/>绘制位图包含按固定间隔排列的多个映像时，此属性很有用。|
-|**Height**|指定每个磁贴块的高度。<br/><br/>绘制位图包含按固定间隔排列的多个映像时，此属性很有用。|
+|**宽度**|指定每个磁贴块的宽度。<br/><br/>绘制位图包含按固定间隔排列的多个映像时，此属性很有用。|
+|**高度**|指定每个磁贴块的高度。<br/><br/>绘制位图包含按固定间隔排列的多个映像时，此属性很有用。|
 
 ## <a name="toolbar"></a>Toolbar
 
@@ -143,7 +143,7 @@ ms.locfileid: "58328423"
 |---|---|
 |**字体**|列出可用的字体。|
 |**字形**|列出指定的字体的可用样式。|
-|**Size**|列出指定的字体的可用点大小。|
+|**大小**|列出指定的字体的可用点大小。|
 |**示例**|显示文本与指定的字体设置的显示方式的示例。|
 |**脚本**|列出了可用的语言脚本对于指定的字体。<br/><br/>时选择不同的语言脚本，该语言的字符集可用于创建多语言文档。|
 

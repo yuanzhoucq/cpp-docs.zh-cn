@@ -1,5 +1,5 @@
 ---
-title: 记录集：为预定义查询声明一个类 (ODBC)
+title: 记录集：声明一个类预定义的查询 (ODBC)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ODBC recordsets, queries
@@ -8,21 +8,21 @@ helpviewer_keywords:
 - recordsets, predefined queries
 - recordsets, stored procedures
 ms.assetid: d27c4df9-dad2-4484-ba72-92ab0c8ff928
-ms.openlocfilehash: e83bf2ecb24a9abfd8dc9800a3a10d2d65025336
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d4ae9f21c4bd53a8050d6f8c3765bb9823d077ba
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50611258"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59026522"
 ---
-# <a name="recordset-declaring-a-class-for-a-predefined-query-odbc"></a>记录集：为预定义查询声明一个类 (ODBC)
+# <a name="recordset-declaring-a-class-for-a-predefined-query-odbc"></a>记录集：声明一个类预定义的查询 (ODBC)
 
 本主题适用于 MFC ODBC 类。
 
 本主题说明如何创建用于预定义的查询 （有时称为存储的过程，如 Microsoft SQL Server 中所示） 的记录集类。
 
 > [!NOTE]
->  本主题适用于对象派生自`CRecordset`中的批量行提取尚未实现。 如果已实现批量行提取，过程也是非常相似。 若要了解和一些未实现批量行提取的记录集之间的差异，请参阅[记录集： 提取记录 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
+>  本主题适用于对象派生自`CRecordset`中的批量行提取尚未实现。 如果已实现批量行提取，过程也是非常相似。 若要了解和一些未实现批量行提取的记录集之间的差异，请参阅[记录集：(ODBC) 批量提取记录](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
 
 某些数据库管理系统 (Dbms)，可创建一个预定义的查询，如某个函数在程序中调用它。 查询有一个名称，可能不带参数，并可能会返回记录。 本主题中的过程介绍如何调用返回的记录 （也可能采用参数） 的预定义的查询。
 
@@ -63,7 +63,7 @@ ms.locfileid: "50611258"
 
 1. 如果查询采用参数，添加每个参数、 RFX 函数调用和每个初始化的参数数据成员。
 
-1. 必须递增`m_nParams`每个已添加参数，就像`m_nFields`对于此过程的步骤 4 中添加字段。 有关详细信息，请参阅[记录集： 参数化记录集 (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)。
+1. 必须递增`m_nParams`每个已添加参数，就像`m_nFields`对于此过程的步骤 4 中添加字段。 有关详细信息，请参阅[记录集：参数化记录集 (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)。
 
 1. 手动编写 SQL 语句字符串具有以下形式：
 
@@ -154,5 +154,5 @@ if( rsDel.Open( CRecordset::snapshot, strSQL ) )
 
 [记录集 (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
 [记录集：再次查询记录集 (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)<br/>
-[记录集：声明表的类 (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)<br/>
+[记录集：声明一个类 (ODBC) 的表](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)<br/>
 [记录集：执行联接 (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)

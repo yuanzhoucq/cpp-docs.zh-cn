@@ -11,12 +11,12 @@ helpviewer_keywords:
 - cursor library [ODBC], snapshots
 - snapshots
 ms.assetid: b5293a52-0657-43e9-bd71-fe3785b21c7e
-ms.openlocfilehash: 99e1d76f8d65def326b0514f3219cef43f695220
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5999f89156d895ff0c87c892be892c6a614a0132
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512657"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037641"
 ---
 # <a name="snapshot"></a>快照
 
@@ -37,7 +37,7 @@ ms.locfileid: "50512657"
 快照是仅当时被加载 ODBC 游标库可用`CDatabase`构造对象或正在使用的 ODBC 驱动程序支持静态游标。
 
 > [!NOTE]
->  对于某些 ODBC 驱动程序中，快照 （静态游标） 可能不是可更新。 检查您的驱动程序文档支持游标类型和它们支持的并发类型。 若要保证可更新的快照，请确保您在创建时，游标库加载到内存`CDatabase`对象。 有关详细信息，请参阅[ODBC: ODBC 游标库](../../data/odbc/odbc-the-odbc-cursor-library.md)。
+>  对于某些 ODBC 驱动程序中，快照 （静态游标） 可能不是可更新。 检查您的驱动程序文档支持游标类型和它们支持的并发类型。 若要保证可更新的快照，请确保您在创建时，游标库加载到内存`CDatabase`对象。 有关详细信息，请参阅[ODBC:ODBC 游标库](../../data/odbc/odbc-the-odbc-cursor-library.md)。
 
 > [!NOTE]
 >  如果你想要使用快照和动态集，必须将它们建立在两个不同`CDatabase`对象 （两个不同的连接）。

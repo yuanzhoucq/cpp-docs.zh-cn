@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - unique attribute
 ms.assetid: abd7ed14-5ae7-44a8-8333-0058e9c92b2f
-ms.openlocfilehash: 9d049983bb072e073180f1821f04b79e5f5c7444
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c5d7a2d60dc295a4390f777a9ff3718f41321ddd
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512802"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038785"
 ---
 # <a name="unique-c"></a>unique (C++)
 
@@ -39,8 +39,8 @@ ms.locfileid: "50512802"
 |-|-|
 |**适用对象**|**typedef**， **struct**，**联合**，接口参数，接口方法|
 |**可重复**|否|
-|**必需的特性**|无|
-|**无效的特性**|无|
+|**必需的特性**|None|
+|**无效的特性**|None|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
@@ -48,4 +48,4 @@ ms.locfileid: "50512802"
 
 [IDL 特性](idl-attributes.md)<br/>
 [Typedef、Enum、Union 和 Struct 特性](typedef-enum-union-and-struct-attributes.md)<br/>
-[参数特性](parameter-attributes.md)
+[Parameter 特性](parameter-attributes.md)

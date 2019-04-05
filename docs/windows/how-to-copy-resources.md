@@ -30,12 +30,12 @@ helpviewer_keywords:
 - cursors [C++], importing and exporting
 - images [C++], exporting
 ms.assetid: 65f523e8-017f-4fc6-82d1-083c56d9131f
-ms.openlocfilehash: 9867fdf260750d47421e699cdd0d7a58b02ce947
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: 6b9499fbd806c04774d12750c70816d0312a4e3f
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328618"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59036057"
 ---
 # <a name="how-to-manage-resources-c"></a>如何：管理资源 （c + +）
 
@@ -130,4 +130,4 @@ Win32
 
 [资源文件](../windows/resource-files-visual-studio.md)<br/>
 [如何：创建资源](../windows/how-to-create-a-resource-script-file.md)<br/>
-[如何：在编译时添加资源](../windows/how-to-include-resources-at-compile-time.md)<br/>
+[如何：在编译时包含资源](../windows/how-to-include-resources-at-compile-time.md)<br/>

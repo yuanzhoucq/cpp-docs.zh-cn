@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - transmit_as attribute
 ms.assetid: 53d0b8ab-5b06-423e-83eb-3d01a10424b2
-ms.openlocfilehash: 546b4c4b32837b46c48eafbe12e991bb6c1630ed
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e432d1a8f39cbc5e12f192ed7b07c29421bc403e
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50573246"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59032089"
 ---
 # <a name="transmitas"></a>transmit_as
 
@@ -25,7 +25,7 @@ ms.locfileid: "50573246"
 
 ### <a name="parameters"></a>参数
 
-*type*<br/>
+*类型*<br/>
 指定客户端和服务器之间传输的数据类型。
 
 ## <a name="remarks"></a>备注
@@ -72,8 +72,8 @@ struct _TREE_NODE_TYPE * right;
 |-|-|
 |**适用对象**|**typedef**|
 |**可重复**|否|
-|**必需的特性**|无|
-|**无效的特性**|无|
+|**必需的特性**|None|
+|**无效的特性**|None|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
