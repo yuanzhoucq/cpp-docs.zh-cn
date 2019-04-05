@@ -150,12 +150,12 @@ helpviewer_keywords:
 - CMFCPropertyGridCtrl [MFC], OnSelectCombo
 - CMFCPropertyGridCtrl [MFC], ValidateItemData
 ms.assetid: 95877cae-2311-4a2a-9031-0c8c3cf0a5f9
-ms.openlocfilehash: f194879cf4a1388fc156fa4e92f4f9bea5056191
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 93ace0388981f429ac4a422947fbdaae8cdb8f24
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57296002"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58781973"
 ---
 # <a name="cmfcpropertygridctrl-class"></a>CMFCPropertyGridCtrl 类
 
@@ -297,7 +297,7 @@ class CMFCPropertyGridCtrl : public CWnd
 
 ## <a name="example"></a>示例
 
-下面的示例演示如何使用各种方法中的配置的属性网格控件对象`CMFCPropertyGridCtrl`类。 该示例演示如何启用标头控件、 启用描述区域中，并设置属性网格控件的外观。 该示例还演示如何设置按其属性名称，它包含的所有属性的控件，该控件进行排序的字母模式以及如何都设置的属性网格控件的各种元素的自定义颜色。 此示例摘自[新的控件示例](../../visual-cpp-samples.md)。
+下面的示例演示如何使用各种方法中的配置的属性网格控件对象`CMFCPropertyGridCtrl`类。 该示例演示如何启用标头控件、 启用描述区域中，并设置属性网格控件的外观。 该示例还演示如何设置按其属性名称，它包含的所有属性的控件，该控件进行排序的字母模式以及如何都设置的属性网格控件的各种元素的自定义颜色。 此示例摘自[新的控件示例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_NewControls#14](../../mfc/reference/codesnippet/cpp/cmfcpropertygridctrl-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#16](../../mfc/reference/codesnippet/cpp/cmfcpropertygridctrl-class_2.cpp)]
@@ -480,7 +480,7 @@ virtual BOOL Create(
 
 ### <a name="example"></a>示例
 
-下面的示例演示如何使用`Create`中的方法`CMFCPropertyGridCtrl`类。 此示例摘自[新的控件示例](../../visual-cpp-samples.md)。
+下面的示例演示如何使用`Create`中的方法`CMFCPropertyGridCtrl`类。 此示例摘自[新的控件示例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_NewControls#15](../../mfc/reference/codesnippet/cpp/cmfcpropertygridctrl-class_6.cpp)]
 
@@ -1608,7 +1608,7 @@ virtual void UpdateColor(COLORREF color);
 
 ### <a name="parameters"></a>参数
 
-*color*<br/>
+*颜色*<br/>
 [in]RGB 颜色值。
 
 ### <a name="remarks"></a>备注

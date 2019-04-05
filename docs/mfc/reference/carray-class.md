@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CArray [MFC], SetAtGrow
 - CArray [MFC], SetSize
 ms.assetid: fead8b00-4cfd-4625-ad0e-251df62ba92f
-ms.openlocfilehash: 342eea1d5bcf8adfe9a9ff0e8d915c9155b413ca
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: f82dbf7dce2e14bf760bb76d23d23f667797ee0f
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57266128"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58779841"
 ---
 # <a name="carray-class"></a>CArray 类
 
@@ -62,7 +62,7 @@ class CArray : public CObject
 
 #### <a name="parameters"></a>参数
 
-*类型*<br/>
+*TYPE*<br/>
 指定数组中存储的对象类型的模板参数。 *类型*是一个参数，返回的`CArray`。
 
 *ARG_TYPE*<br/>
@@ -102,7 +102,7 @@ class CArray : public CObject
 
 |名称|描述|
 |----------|-----------------|
-|[operator[]](#operator_at)|设置或获取位于指定索引处的元素。|
+|[operator&#91;&#93;](#operator_at)|设置或获取位于指定索引处的元素。|
 
 ## <a name="remarks"></a>备注
 
@@ -281,7 +281,7 @@ const TYPE& GetAt(INT_PTR nIndex) const;
 
 ### <a name="parameters"></a>参数
 
-*类型*<br/>
+*TYPE*<br/>
 指定的数组元素的类型的模板参数。
 
 *nIndex*<br/>
@@ -330,7 +330,7 @@ TYPE* GetData();
 
 ### <a name="parameters"></a>参数
 
-*类型*<br/>
+*TYPE*<br/>
 指定的数组元素的类型的模板参数。
 
 ### <a name="return-value"></a>返回值
@@ -451,7 +451,7 @@ const TYPE& operator[](int_ptr nindex) const;
 
 ### <a name="parameters"></a>参数
 
-*类型*<br/>
+*TYPE*<br/>
 此数组中指定的元素类型模板参数。
 
 *nIndex*<br/>
@@ -630,7 +630,7 @@ void SetSize(
 
 ## <a name="see-also"></a>请参阅
 
-[MFC 示例收集](../../visual-cpp-samples.md)<br/>
+[MFC 示例收集](../../overview/visual-cpp-samples.md)<br/>
 [CObject 类](../../mfc/reference/cobject-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>
 [CObArray 类](../../mfc/reference/cobarray-class.md)<br/>

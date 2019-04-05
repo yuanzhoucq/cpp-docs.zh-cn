@@ -1,5 +1,5 @@
 ---
-title: TN065：针对 OLE 自动化服务器的双重接口支持
+title: TN065:针对 OLE 自动化服务器的双重接口支持
 ms.date: 06/28/2018
 f1_keywords:
 - vc.ole
@@ -9,19 +9,19 @@ helpviewer_keywords:
 - ACDUAL sample [MFC]
 - Automation servers [MFC], dual-interface support
 ms.assetid: b5c8ed09-2f7f-483c-80fc-2a47ad896063
-ms.openlocfilehash: 5a04c2712182fe9c9ed3fd9e5fe4548404f96a5d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 33828f3979fb938ae6e88fa3cb0d6ee24daa958c
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575209"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58776669"
 ---
-# <a name="tn065-dual-interface-support-for-ole-automation-servers"></a>TN065：针对 OLE 自动化服务器的双重接口支持
+# <a name="tn065-dual-interface-support-for-ole-automation-servers"></a>TN065:针对 OLE 自动化服务器的双重接口支持
 
 > [!NOTE]
 > 以下技术说明在首次包括在联机文档中后未更新。 因此，某些过程和主题可能已过时或不正确。 要获得最新信息，建议你在联机文档索引中搜索热点话题。
 
-本说明讨论如何向基于 MFC 的 OLE 自动化服务器应用程序添加双重接口支持。 [ACDUAL](../visual-cpp-samples.md)示例说明了双重接口支持和本说明中的代码示例摘自 ACDUAL。 此说明，例如 DECLARE_DUAL_ERRORINFO、 DUAL_ERRORINFO_PART 和 IMPLEMENT_DUAL_ERRORINFO 中, 所述的宏的 ACDUAL 示例以及可在 MFCDUAL 中找到。H.
+本说明讨论如何向基于 MFC 的 OLE 自动化服务器应用程序添加双重接口支持。 [ACDUAL](../overview/visual-cpp-samples.md)示例说明了双重接口支持和本说明中的代码示例摘自 ACDUAL。 此说明，例如 DECLARE_DUAL_ERRORINFO、 DUAL_ERRORINFO_PART 和 IMPLEMENT_DUAL_ERRORINFO 中, 所述的宏的 ACDUAL 示例以及可在 MFCDUAL 中找到。H.
 
 ## <a name="dual-interfaces"></a>双重接口
 
@@ -43,7 +43,7 @@ ms.locfileid: "50575209"
 
 首先，修改你的服务器定义为对象的双重接口 ODL 文件。 若要定义双重接口，必须使用接口语句，而不是`DISPINTERFACE`Visual c + + 向导生成的语句。 而不是删除现有`DISPINTERFACE`语句中，添加新的接口语句。 通过保留`DISPINTERFACE`窗体中，您可以继续使用类向导将属性和方法添加到您的对象，但必须将等效属性和方法添加到接口语句。
 
-双重接口的接口语句必须具有*OLEAUTOMATION*并*双*属性，该接口必须派生自`IDispatch`。 可以使用[GUIDGEN](../visual-cpp-samples.md)示例来创建**IID**为双重接口：
+双重接口的接口语句必须具有*OLEAUTOMATION*并*双*属性，该接口必须派生自`IDispatch`。 可以使用[GUIDGEN](../overview/visual-cpp-samples.md)示例来创建**IID**为双重接口：
 
 ```IDL
 [ uuid(0BDD0E81-0DD7-11cf-BBA8-444553540000), // IID_IDualAClick
@@ -310,7 +310,7 @@ STDMETHODIMP CAutoClickDoc::XDualAClick::put_text(BSTR newText)
 }
 ```
 
-`CATCH_ALL_DUAL` 负责发生异常时返回正确的错误代码。 `CATCH_ALL_DUAL` 将 MFC 异常转换为 OLE 自动化错误处理的信息，并使用`ICreateErrorInfo`接口。 (示例`CATCH_ALL_DUAL`宏是 MFCDUAL 在文件中。中的 H [ACDUAL](../visual-cpp-samples.md)示例。 它调用来处理异常，该函数`DualHandleException`，MFCDUAL 文件中。CPP。)`CATCH_ALL_DUAL`确定要返回基于所发生的异常类型的错误代码：
+`CATCH_ALL_DUAL` 负责发生异常时返回正确的错误代码。 `CATCH_ALL_DUAL` 将 MFC 异常转换为 OLE 自动化错误处理的信息，并使用`ICreateErrorInfo`接口。 (示例`CATCH_ALL_DUAL`宏是 MFCDUAL 在文件中。中的 H [ACDUAL](../overview/visual-cpp-samples.md)示例。 它调用来处理异常，该函数`DualHandleException`，MFCDUAL 文件中。CPP。)`CATCH_ALL_DUAL`确定要返回基于所发生的异常类型的错误代码：
 
 - [COleDispatchException](../mfc/reference/coledispatchexception-class.md) -在这种情况下，`HRESULT`使用以下代码构造：
 
@@ -332,7 +332,7 @@ STDMETHODIMP CAutoClickDoc::XDualAClick::put_text(BSTR newText)
 
 最后，实现类定义以支持`ISupportErrorInfo`。
 
-( [ACDUAL](../visual-cpp-samples.md)示例包含三个宏，以帮助执行这三个步骤`DECLARE_DUAL_ERRORINFO`， `DUAL_ERRORINFO_PART`，和`IMPLEMENT_DUAL_ERRORINFO`、 MFCDUAL 中包含的所有。H.)
+( [ACDUAL](../overview/visual-cpp-samples.md)示例包含三个宏，以帮助执行这三个步骤`DECLARE_DUAL_ERRORINFO`， `DUAL_ERRORINFO_PART`，和`IMPLEMENT_DUAL_ERRORINFO`、 MFCDUAL 中包含的所有。H.)
 
 下面的示例实现一个类定义以支持`ISupportErrorInfo`。 `CAutoClickDoc` 是自动化类的名称和`IID_IDualAClick`是**IID**是通过 OLE 自动化错误对象报告的错误源的接口：
 

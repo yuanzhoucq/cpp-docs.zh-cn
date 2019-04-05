@@ -112,12 +112,12 @@ helpviewer_keywords:
 - CMDIChildWndEx [MFC], UnregisterTaskbarTab
 - CMDIChildWndEx [MFC], UpdateTaskbarTabIcon
 ms.assetid: d39fec06-0bd6-4271-917d-35aae3b24d8e
-ms.openlocfilehash: 625104ecddd9e14ac77aa05ac54cb578c4d62f85
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: e12cf9f65e6fd6dd7f68edc4a94103baa5a8df62
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293416"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58781752"
 ---
 # <a name="cmdichildwndex-class"></a>CMDIChildWndEx 类
 
@@ -201,7 +201,7 @@ class CMDIChildWndEx : public CMDIChildWnd
 
 ## <a name="example"></a>示例
 
-以下示例从一个类从`CMDIChildWndEx`。 此代码片段来自[VisualStudioDemo 示例：Visual Studio 的 MFC 应用程序](../../visual-cpp-samples.md)。
+以下示例从一个类从`CMDIChildWndEx`。 此代码片段来自[VisualStudioDemo 示例：Visual Studio 的 MFC 应用程序](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#3](../../mfc/codesnippet/cpp/cmdichildwndex-class_1.h)]
 
@@ -431,7 +431,7 @@ virtual LPCTSTR GetDocumentName(CObject** pObj);
 
 ### <a name="example"></a>示例
 
-下面的示例演示 `GetDocumentName` 方法的用法。 此代码片段来自[VisualStudioDemo 示例：Visual Studio 的 MFC 应用程序](../../visual-cpp-samples.md)。
+下面的示例演示 `GetDocumentName` 方法的用法。 此代码片段来自[VisualStudioDemo 示例：Visual Studio 的 MFC 应用程序](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#17](../../mfc/codesnippet/cpp/cmdichildwndex-class_2.cpp)]
 
@@ -602,7 +602,7 @@ virtual BOOL IsReadOnly();
 
 ### <a name="example"></a>示例
 
-下面的示例演示如何重写`IsReadOnly`方法。 此代码片段来自[VisualStudioDemo 示例：Visual Studio 的 MFC 应用程序](../../visual-cpp-samples.md)。
+下面的示例演示如何重写`IsReadOnly`方法。 此代码片段来自[VisualStudioDemo 示例：Visual Studio 的 MFC 应用程序](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#2](../../mfc/codesnippet/cpp/cmdichildwndex-class_3.cpp)]
 
@@ -941,7 +941,7 @@ virtual int OnTaskbarTabThumbnailMouseActivate(
 *nHitTest*<br/>
 指定命中测试区域代码。 命中的测试是一个测试，以便确定光标的位置。
 
-*message*<br/>
+*消息*<br/>
 指定鼠标消息号。
 
 ### <a name="remarks"></a>备注

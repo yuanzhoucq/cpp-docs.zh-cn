@@ -265,10 +265,10 @@ helpviewer_keywords:
 - CListCtrl [MFC], Update
 ms.assetid: fe08a1ca-4b05-4ff7-a12a-ee4c765a2197
 ms.openlocfilehash: eea37d03ca5a4fab450fbca0c4c3f6c76fefb407
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58780608"
 ---
 # <a name="clistctrl-class"></a>CListCtrl 类
@@ -2702,7 +2702,7 @@ LRESULT InsertGroup(
 
 ### <a name="parameters"></a>参数
 
-*index*<br/>
+*索引*<br/>
 在组很要插入的项的索引。
 
 *pgrp*<br/>
@@ -2875,7 +2875,7 @@ BOOL IsItemVisible(int index) const;
 
 |参数|描述|
 |---------------|-----------------|
-|*index*|[in]当前列表视图控件中的项的从零开始索引。|
+|*索引*|[in]当前列表视图控件中的项的从零开始索引。|
 
 ### <a name="return-value"></a>返回值
 
@@ -2923,7 +2923,7 @@ UINT MapIndexToID(UINT index) const;
 
 |参数|描述|
 |---------------|-----------------|
-|*index*|[in]项的从零开始的索引。|
+|*索引*|[in]项的从零开始的索引。|
 
 ### <a name="return-value"></a>返回值
 
@@ -3598,7 +3598,7 @@ COLORREF SetInsertMarkColor(COLORREF color);
 
 ### <a name="parameters"></a>参数
 
-*color*<br/>
+*颜色*<br/>
 一个[COLORREF](/windows/desktop/gdi/colorref)结构，它指定要设置插入点的颜色。
 
 ### <a name="return-value"></a>返回值
@@ -3955,7 +3955,7 @@ COLORREF SetOutlineColor(COLORREF color);
 
 ### <a name="parameters"></a>参数
 
-*color*<br/>
+*颜色*<br/>
 新[COLORREF](/windows/desktop/gdi/colorref)结构，它包含轮廓颜色。
 
 ### <a name="return-value"></a>返回值

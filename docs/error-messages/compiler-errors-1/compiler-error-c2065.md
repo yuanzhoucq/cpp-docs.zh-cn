@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2065
 ms.assetid: 78093376-acb7-45f5-9323-5ed7e0aab1dc
-ms.openlocfilehash: ae7f582de5d6c45df34c42164756356a9c794d31
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3daf2cd532cd07225b822c80b46fc28274d4e2a8
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50482508"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58778749"
 ---
 # <a name="compiler-error-c2065"></a>编译器错误 C2065
 
@@ -203,9 +203,9 @@ int main() {
 }
 ```
 
-## <a name="example-ccli-type-deduction-failure"></a>示例： C + + /cli CLI 类型推断失败
+## <a name="example-ccli-type-deduction-failure"></a>示例:C + + /cli CLI 类型推断失败
 
-发生此错误可以在调用泛型函数，如果预期的类型参数不能从使用的参数推导出来。 有关详细信息，请参阅[泛型函数 (C + + CLI)](../../windows/generic-functions-cpp-cli.md)。
+发生此错误可以在调用泛型函数，如果预期的类型参数不能从使用的参数推导出来。 有关详细信息，请参阅[泛型函数 (C + + CLI)](../../extensions/generic-functions-cpp-cli.md)。
 
 ```cpp
 // C2065_b.cpp
@@ -220,7 +220,7 @@ int main() {
 }
 ```
 
-## <a name="example-ccli-attribute-parameters"></a>示例： C + + /cli CLI 特性参数
+## <a name="example-ccli-attribute-parameters"></a>示例:C + + /cli CLI 特性参数
 
 此错误还可能来自于为 Visual C++ 2005 执行的编译器一致性工作：Visual C++ 特性的参数检查。
 

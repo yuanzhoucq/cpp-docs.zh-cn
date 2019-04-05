@@ -43,10 +43,10 @@ helpviewer_keywords:
 - CMapStringToOb [MFC], SetAt
 ms.assetid: b45794c2-fe6b-4edb-a8ca-faa03b57b4a8
 ms.openlocfilehash: ed717497866076681e39cdee7803a45eb8e097d3
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58780361"
 ---
 # <a name="cmapstringtostring-class"></a>CMapStringToString 类
@@ -110,7 +110,7 @@ class CMapStringToString : public CObject
 
 ## <a name="remarks"></a>备注
 
-`CMapStringToString` 包括用于支持其元素序列化和转储的 `IMPLEMENT_SERIAL` 宏。 如果映射存储到存档，使用重载插入反过来序列的每个元素 ( **<<**) 运算符或`Serialize`成员函数。
+`CMapStringToString` 集成了`IMPLEMENT_SERIAL`宏来支持序列化和转储的它的元素。 如果映射存储到存档，使用重载插入反过来序列的每个元素 ( **<<**) 运算符或`Serialize`成员函数。
 
 如果你需要个人的转储`CString` -  `CString`元素，必须将转储上下文的深度设置为 1 或更高版本。
 
@@ -209,7 +209,7 @@ CPair* PLookup(LPCTSTR key);
 
 ### <a name="parameters"></a>参数
 
-*key*<br/>
+*密钥*<br/>
 指向要在其中搜索的元素的键的指针。
 
 ### <a name="return-value"></a>返回值

@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CMFCRibbonButtonsGroup [MFC], SetImages
 - CMFCRibbonButtonsGroup [MFC], SetParentCategory
 ms.assetid: b993d93e-fc1a-472f-a87f-1d7b7b499845
-ms.openlocfilehash: 3a0806d5c45f429f975b7b8ef0085252fe2b2528
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 39979d48eb7b0f7aba9dbe7bd42c2f91845af968
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57295885"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58781986"
 ---
 # <a name="cmfcribbonbuttonsgroup-class"></a>CMFCRibbonButtonsGroup 类
 
@@ -77,7 +77,7 @@ class CMFCRibbonButtonsGroup : public CMFCRibbonBaseElement
 
 ## <a name="example"></a>示例
 
-下面的示例演示了如何使用 `CMFCRibbonButtonsGroup` 类中的各种方法。 该示例演示如何构造`CMFCRibbonButtonsGroup`对象，将图像分配给功能区按钮的组并将按钮添加到功能区按钮的组。 此代码片段属于 [Draw Client 示例](../../visual-cpp-samples.md)。
+下面的示例演示了如何使用 `CMFCRibbonButtonsGroup` 类中的各种方法。 该示例演示如何构造`CMFCRibbonButtonsGroup`对象，将图像分配给功能区按钮的组并将按钮添加到功能区按钮的组。 此代码片段属于 [Draw Client 示例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_DrawClient#2](../../mfc/reference/codesnippet/cpp/cmfcribbonbuttonsgroup-class_1.cpp)]
 

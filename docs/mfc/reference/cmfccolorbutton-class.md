@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CMFCColorButton [MFC], UpdateColor
 - CMFCColorButton [MFC], m_bEnabledInCustomizeMode
 ms.assetid: 9fdf34ae-4cc5-4c5e-9d89-1c50e8a73699
-ms.openlocfilehash: 05a4ad17feea20c67069e65c5c5df43d543e2377
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c0c9ad79342f2013aa071240c684fce168e55c9e
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293480"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58779997"
 ---
 # <a name="cmfccolorbutton-class"></a>CMFCColorButton 类
 
@@ -98,7 +98,7 @@ class CMFCColorButton : public CMFCButton
 
 ### <a name="data-members"></a>数据成员
 
-|name|描述|
+|名称|描述|
 |----------|-----------------|
 |`m_bAltColorDlg`|一个布尔值。 如果为 TRUE，框架显示[CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md)颜色对话框*其他*单击按钮时，或如果为 FALSE，系统颜色对话框。 默认值为 TRUE。 有关详细信息，请参阅[CMFCColorButton::EnableOtherButton](#enableotherbutton)。|
 |`m_bAutoSetFocus`|一个布尔值。 如果为 TRUE，框架菜单显示时，或如果为 FALSE，不会更改焦点时设置焦点在颜色菜单上。 默认值为 TRUE。|
@@ -126,7 +126,7 @@ class CMFCColorButton : public CMFCButton
 
 ## <a name="example"></a>示例
 
-下面的示例演示如何使用各种方法中的配置的颜色按钮`CMFCColorButton`类。 这些方法设置颜色的颜色按钮和其列数的并启用自动和其他按钮。 此示例摘自[状态栏演示示例](../../visual-cpp-samples.md)。
+下面的示例演示如何使用各种方法中的配置的颜色按钮`CMFCColorButton`类。 这些方法设置颜色的颜色按钮和其列数的并启用自动和其他按钮。 此示例摘自[状态栏演示示例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_StatusBarDemo#10](../../mfc/reference/codesnippet/cpp/cmfccolorbutton-class_1.h)]
 [!code-cpp[NVC_MFC_StatusBarDemo#11](../../mfc/reference/codesnippet/cpp/cmfccolorbutton-class_2.cpp)]
@@ -355,7 +355,7 @@ void SetColor(COLORREF color);
 
 ### <a name="parameters"></a>参数
 
-*color*<br/>
+*颜色*<br/>
 [in]RGB 值。
 
 ### <a name="remarks"></a>备注
@@ -372,7 +372,7 @@ static void SetColorName(
 
 ### <a name="parameters"></a>参数
 
-*color*<br/>
+*颜色*<br/>
 [in]颜色的 RGB 值。
 
 *strName*<br/>
@@ -465,7 +465,7 @@ virtual void UpdateColor(COLORREF color);
 
 ### <a name="parameters"></a>参数
 
-*color*<br/>
+*颜色*<br/>
 [in]用户选定的颜色。
 
 ### <a name="remarks"></a>备注

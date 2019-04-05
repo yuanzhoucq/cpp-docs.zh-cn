@@ -56,12 +56,12 @@ helpviewer_keywords:
 - CDrawingManager [MFC], SetPixel
 - CDrawingManager [MFC], SmartMixColors
 ms.assetid: 9e4775ca-101b-4aa9-a85a-4d047c701215
-ms.openlocfilehash: f14b21c97e5a36d5107e7db526e4153446ae2a01
-ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
+ms.openlocfilehash: 506ab7a06653942ecff05043a7e7efabd535115f
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58278524"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58781687"
 ---
 # <a name="cdrawingmanager-class"></a>CDrawingManager 类
 
@@ -389,7 +389,7 @@ BOOL DrawShadow(
 
 ### <a name="example"></a>示例
 
-下面的示例演示如何使用`DrawShadow`方法的`CDrawingManager`类。 此代码片段属于[Prop 表演示示例](../../visual-cpp-samples.md)。
+下面的示例演示如何使用`DrawShadow`方法的`CDrawingManager`类。 此代码片段属于[Prop 表演示示例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_PropSheetDemo#1](../../mfc/reference/codesnippet/cpp/cdrawingmanager-class_1.cpp)]
 
@@ -473,7 +473,7 @@ void FillGradient(
 
 ### <a name="example"></a>示例
 
-下面的示例演示如何使用`FillGradient`方法的`CDrawingManager`类。 此代码片段属于[MS Office 2007 演示示例](../../visual-cpp-samples.md)。
+下面的示例演示如何使用`FillGradient`方法的`CDrawingManager`类。 此代码片段属于[MS Office 2007 演示示例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_MSOffice2007Demo#12](../../mfc/reference/codesnippet/cpp/cdrawingmanager-class_2.cpp)]
 
@@ -509,7 +509,7 @@ void FillGradient2 (
 
 ### <a name="example"></a>示例
 
-下面的示例演示如何使用`FillGradient2`方法的`CDrawingManager`类。 此代码片段属于[新的控件示例](../../visual-cpp-samples.md)。
+下面的示例演示如何使用`FillGradient2`方法的`CDrawingManager`类。 此代码片段属于[新的控件示例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_NewControls#37](../../mfc/reference/codesnippet/cpp/cdrawingmanager-class_3.cpp)]
 
@@ -702,7 +702,7 @@ static BYTE __stdcall HueToRGB(
 *m1*<br/>
 [in]请参阅备注。
 
-*m2*<br/>
+*M2*<br/>
 [in]请参阅备注。
 
 *h*<br/>
@@ -972,7 +972,7 @@ static void __stdcall SetPixel(
 |*cy*|[in]位图的总高度。|
 |*x*|[in]中要更改的位图的像素 x 坐标。|
 |*y*|[in]中要更改的位图的像素的 y 坐标。|
-|*color*|[in]新颜色标识由提供的坐标的像素。|
+|*颜色*|[in]新颜色标识由提供的坐标的像素。|
 
 ##  <a name="smartmixcolors"></a>  CDrawingManager::SmartMixColors
 

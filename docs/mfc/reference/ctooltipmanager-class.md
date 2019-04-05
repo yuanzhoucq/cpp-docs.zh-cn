@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CTooltipManager [MFC], SetTooltipText
 - CTooltipManager [MFC], UpdateTooltips
 ms.assetid: c71779d7-8b6e-47ef-8500-d4552731fe86
-ms.openlocfilehash: 7ca0c657872bb2a3c56c9406a88f8c674cb46938
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: e8b88f2722f5a4379276f13c2ef159aa4d120533
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57260629"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58776500"
 ---
 # <a name="ctooltipmanager-class"></a>CTooltipManager 类
 
@@ -156,7 +156,7 @@ void SetTooltipParams(
 
 ### <a name="example"></a>示例
 
-下面的示例演示如何使用`SetTooltipParams`方法的`CTooltipManager`类。 此代码片段属于 [Draw Client 示例](../../visual-cpp-samples.md)。
+下面的示例演示如何使用`SetTooltipParams`方法的`CTooltipManager`类。 此代码片段属于 [Draw Client 示例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_DrawClient#11](../../mfc/reference/codesnippet/cpp/ctooltipmanager-class_1.cpp)]
 

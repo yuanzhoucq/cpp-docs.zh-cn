@@ -7,12 +7,12 @@ helpviewer_keywords:
 - TN029
 - splitter windows [MFC], about splitter windows
 ms.assetid: 2c57ce99-2a3c-4eff-9cea-baccb13af075
-ms.openlocfilehash: 0c27545c6f425eda952e87c80ed1d37de9e1093a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 6c2f619d9cd619ca598c66ca657faa1b9dccaaa2
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57294988"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58781726"
 ---
 # <a name="tn029-splitter-windows"></a>TN029:拆分窗口
 
@@ -46,7 +46,7 @@ ms.locfileid: "57294988"
 
 ## <a name="splitter-examples"></a>拆分器示例
 
-直接或间接地，许多 MFC 示例程序使用拆分窗口。 MFC 常规示例[VIEWEX](../visual-cpp-samples.md)说明了几种静态拆分条中，包括如何将拆分器放在拆分器的用法。
+直接或间接地，许多 MFC 示例程序使用拆分窗口。 MFC 常规示例[VIEWEX](../overview/visual-cpp-samples.md)说明了几种静态拆分条中，包括如何将拆分器放在拆分器的用法。
 
 类向导还可用于创建新的多文档界面 (MDI) 子框架窗口类，其中包含拆分器窗口。 拆分窗口的详细信息，请参阅[多个文档类型、 视图和框架 Windows](../mfc/multiple-document-types-views-and-frame-windows.md)。
 
@@ -54,7 +54,7 @@ ms.locfileid: "57294988"
 
 下面是特定于拆分窗口的术语的列表：
 
-`CSplitterWnd`：提供拆分窗格的控件和所有窗格对行或列之间共享的滚动条的窗口。 从零开始的数字与指定行和列 (在第一个窗格中，行 = 0 且列 = 0)。
+`CSplitterWnd`:提供拆分窗格的控件和所有窗格对行或列之间共享的滚动条的窗口。 从零开始的数字与指定行和列 (在第一个窗格中，行 = 0 且列 = 0)。
 
 窗格中：特定于应用程序窗口的`CSplitterWnd`管理。 一个窗格，通常是一个对象，派生自[CView 类](../mfc/reference/cview-class.md)，但可以是任何[CWnd](../mfc/reference/cwnd-class.md)对象都有相应的子窗口 id。
 

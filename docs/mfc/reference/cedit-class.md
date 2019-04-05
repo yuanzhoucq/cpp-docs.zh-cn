@@ -95,10 +95,10 @@ helpviewer_keywords:
 - CEdit [MFC], Undo
 ms.assetid: b1533c30-7f10-4663-88d3-8b7f2c9f7024
 ms.openlocfilehash: 45c03d142c34186660aa2715081ffb0f45e85ccc
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58773744"
 ---
 # <a name="cedit-class"></a>CEdit Class
@@ -854,7 +854,7 @@ int LineIndex(int nLine = -1) const;
 
 ### <a name="parameters"></a>参数
 
-*nLine*<br/>
+*n 行*<br/>
 包含在文本编辑控件中所需的行的索引值或包含-1。 如果*n 行*为-1，它指定当前行，即，包含脱字号的行。
 
 ### <a name="return-value"></a>返回值
@@ -883,7 +883,7 @@ int LineLength(int nLine = -1) const;
 
 ### <a name="parameters"></a>参数
 
-*nLine*<br/>
+*n 行*<br/>
 其长度是要检索的行中的字符从零开始索引。 默认值为 -1。
 
 ### <a name="return-value"></a>返回值

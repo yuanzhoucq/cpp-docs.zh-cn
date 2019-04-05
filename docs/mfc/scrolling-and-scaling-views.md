@@ -9,10 +9,10 @@ helpviewer_keywords:
 - scrolling views [MFC]
 ms.assetid: f98a3421-c336-407e-97ee-dbb2ffd76fbd
 ms.openlocfilehash: 7d26bc656dec3fdcbb8fc5ea4918ec7d59bc5afc
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58777572"
 ---
 # <a name="scrolling-and-scaling-views"></a>滚动和缩放视图
@@ -35,7 +35,7 @@ MFC 支持视图，向下滚动并查看自动调整为显示它们的框架窗�
 
 任何视图可以处理中的滚动条消息及其`OnHScroll`和`OnVScroll`成员函数。 你可以在这些函数中，或者实现滚动条消息处理执行所有工作，也可以使用`CScrollView`类来为您处理滚动。
 
-`CScrollView` 执行下列操作：
+`CScrollView` 执行以下操作：
 
 - 管理窗口和视区大小和映射模式
 

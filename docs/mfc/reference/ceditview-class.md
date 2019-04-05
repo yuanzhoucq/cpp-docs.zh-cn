@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CEditView [MFC], OnTextNotFound
 - CEditView [MFC], dwStyleDefault
 ms.assetid: bf38255c-fcbe-450c-95b2-3c5e35f86c37
-ms.openlocfilehash: a2ce38dcd8879378f7d0e4ea3f074e461c51db75
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 3ab276e83e8642aa5de2fd96305cb6d7b648fc40
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57269846"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58781232"
 ---
 # <a name="ceditview-class"></a>CEditView 类
 
@@ -492,10 +492,10 @@ void UnlockBuffer() const;
 
 ## <a name="see-also"></a>请参阅
 
-[MFC 示例 SUPERPAD](../../visual-cpp-samples.md)<br/>
+[MFC 示例 SUPERPAD](../../overview/visual-cpp-samples.md)<br/>
 [CCtrlView 类](../../mfc/reference/cctrlview-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>
-[CEdit 类](../../mfc/reference/cedit-class.md)<br/>
+[CEdit Class](../../mfc/reference/cedit-class.md)<br/>
 [CDocument 类](../../mfc/reference/cdocument-class.md)<br/>
 [CDocTemplate 类](../../mfc/reference/cdoctemplate-class.md)<br/>
 [CCtrlView 类](../../mfc/reference/cctrlview-class.md)<br/>

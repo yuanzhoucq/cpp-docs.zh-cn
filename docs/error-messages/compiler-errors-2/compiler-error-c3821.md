@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3821
 ms.assetid: 2b327c7a-5faf-443c-ae82-944fae25b4df
-ms.openlocfilehash: 1cfc762cc7151eb2d55f8bd681bec935aea2acd4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 248431afb25aa4b9480818f76388f6ad56d8e006
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50625961"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58778242"
 ---
 # <a name="compiler-error-c3821"></a>编译器错误 C3821
 
@@ -19,7 +19,7 @@ function： 托管的类型或函数不能使用非托管函数
 
 使用内联程序集的函数或[setjmp](../../c-runtime-library/reference/setjmp.md)不能包含值类型或托管的类。 若要修复此错误，删除内联程序集和`setjmp`或删除托管的对象。
 
-如果你尝试在 vararg 函数中使用自动存储，也可能发生 C3821。  有关详细信息，请参阅[变量自变量列表 （...）(C + + CLI)](../../windows/variable-argument-lists-dot-dot-dot-cpp-cli.md)并[引用类型的 c + + 堆栈语义](../../dotnet/cpp-stack-semantics-for-reference-types.md)。
+如果你尝试在 vararg 函数中使用自动存储，也可能发生 C3821。  有关详细信息，请参阅[变量自变量列表 （...）(C + + CLI)](../../extensions/variable-argument-lists-dot-dot-dot-cpp-cli.md)并[引用类型的 c + + 堆栈语义](../../dotnet/cpp-stack-semantics-for-reference-types.md)。
 
 ## <a name="example"></a>示例
 

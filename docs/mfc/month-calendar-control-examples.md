@@ -6,10 +6,10 @@ helpviewer_keywords:
 - CMonthCalCtrl class [MFC], examples
 ms.assetid: 1af7fb59-d6fd-46e0-aaa5-b0394a0a3ed5
 ms.openlocfilehash: b798b5f9fd71b6d18b7fe52d6407ea7b89892c90
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58773510"
 ---
 # <a name="month-calendar-control-examples"></a>月历控件示例
@@ -19,4 +19,4 @@ ms.locfileid: "58773510"
 ## <a name="see-also"></a>请参阅
 
 [使用 CMonthCalCtrl](../mfc/using-cmonthcalctrl.md)<br/>
-[控件](../mfc/controls-mfc.md)
+[Controls](../mfc/controls-mfc.md)

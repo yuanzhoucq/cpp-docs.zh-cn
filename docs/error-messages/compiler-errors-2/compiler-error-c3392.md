@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3392
 ms.assetid: e4757596-e2aa-4314-b01e-5c4bfd2110e9
-ms.openlocfilehash: 34097de7d50e260ee82a8891cee988b1533debdd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 72bdef1b3344b3d69ba0d014f92a85e9381de4b3
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50556567"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58779529"
 ---
 # <a name="compiler-error-c3392"></a>编译器错误 C3392
 
 “type_arg”: 对于泛型“generic_type”，泛型参数“param”的类型变量无效，它必须具有公共无参数构造函数
 
-泛型类型实例化错误。 检查类型定义。 有关详细信息，请参阅[泛型](../../windows/generics-cpp-component-extensions.md)。
+泛型类型实例化错误。 检查类型定义。 有关详细信息，请参阅[泛型](../../extensions/generics-cpp-component-extensions.md)。
 
 ## <a name="example"></a>示例
 

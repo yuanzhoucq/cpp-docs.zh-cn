@@ -45,10 +45,10 @@ helpviewer_keywords:
 - CMFCOutlookBarTabCtrl [MFC], SetVisiblePageButtons
 ms.assetid: b1f2b3f7-cc59-49a3-99d8-7ff9b37c044b
 ms.openlocfilehash: c791f3988c7257ed7d188917394e74a6dbeca98b
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58776799"
 ---
 # <a name="cmfcoutlookbartabctrl-class"></a>CMFCOutlookBarTabCtrl Class
@@ -508,6 +508,6 @@ void SetVisiblePageButtons(int nVisiblePageButtons);
 
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>
 [类](../../mfc/reference/mfc-classes.md)<br/>
-[CMFCBaseTabCtrl 类](../../mfc/reference/cmfcbasetabctrl-class.md)<br/>
+[CMFCBaseTabCtrl Class](../../mfc/reference/cmfcbasetabctrl-class.md)<br/>
 [CMFCOutlookBar 类](../../mfc/reference/cmfcoutlookbar-class.md)<br/>
 [CMFCOutlookBarPane 类](../../mfc/reference/cmfcoutlookbarpane-class.md)

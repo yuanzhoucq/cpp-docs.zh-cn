@@ -14,12 +14,12 @@ helpviewer_keywords:
 - COleTemplateServer [MFC], Unregister
 - COleTemplateServer [MFC], UpdateRegistry
 ms.assetid: 47a2887d-8162-4993-a842-a784177c7f5c
-ms.openlocfilehash: bcc79f781be3a0292398e4f211ea55f5403b6b8f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 3abdf1dc2da5ef9a111371b501d5cd8ce208825d
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57302875"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58781206"
 ---
 # <a name="coletemplateserver-class"></a>COleTemplateServer 类
 
@@ -171,7 +171,7 @@ void UpdateRegistry(
 
 ## <a name="see-also"></a>请参阅
 
-[MFC 示例 HIERSVR](../../visual-cpp-samples.md)<br/>
+[MFC 示例 HIERSVR](../../overview/visual-cpp-samples.md)<br/>
 [COleObjectFactory 类](../../mfc/reference/coleobjectfactory-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>
 [COleServerDoc 类](../../mfc/reference/coleserverdoc-class.md)<br/>

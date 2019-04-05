@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CMenuTearOffManager [MFC], SetInUse
 - CMenuTearOffManager [MFC], SetupTearOffMenus
 ms.assetid: ab7ca272-ce42-4678-95f7-6ad75038f5a0
-ms.openlocfilehash: c6bdbb18c2d1b40423457b4cf07d0a747138b99b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 8b92ddad9d3a6de41cf6914dee268f6e54b5d420
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57266193"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58776058"
 ---
 # <a name="cmenutearoffmanager-class"></a>CMenuTearOffManager 类
 
@@ -70,7 +70,7 @@ class CMenuTearOffManager : public CObject
 
 ## <a name="example"></a>示例
 
-下面的示例演示如何构造和初始化`CMenuTearOffManager`对象通过调用`CWinAppEX::EnableTearOffMenus`方法。 此代码片段属于 [Word Pad 示例](../../visual-cpp-samples.md)。
+下面的示例演示如何构造和初始化`CMenuTearOffManager`对象通过调用`CWinAppEX::EnableTearOffMenus`方法。 此代码片段属于 [Word Pad 示例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_WordPad#12](../../mfc/reference/codesnippet/cpp/cmenutearoffmanager-class_1.cpp)]
 

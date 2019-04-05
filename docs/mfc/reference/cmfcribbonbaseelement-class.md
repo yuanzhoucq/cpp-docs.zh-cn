@@ -233,10 +233,10 @@ helpviewer_keywords:
 - CMFCRibbonBaseElement [MFC], OnSetFocus
 ms.assetid: 419ea91b-5062-44cc-b0a3-f87d29566f62
 ms.openlocfilehash: 6daa5b6249c7ff18a8bc01c2309ffb94d3fb88ce
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58773068"
 ---
 # <a name="cmfcribbonbaseelement-class"></a>CMFCRibbonBaseElement 类
@@ -580,7 +580,7 @@ virtual void DrawImage(
 *pDC*<br/>
 [in]指向设备上下文指针。
 
-*type*<br/>
+*类型*<br/>
 [in]图像类型枚举值。 请参阅可能的值列表的备注的部分。
 
 *rectImage*<br/>
@@ -1933,7 +1933,7 @@ virtual BOOL SetACCData(
 *pParent*<br/>
 功能区元素的父窗口。
 
-*data*<br/>
+*数据*<br/>
 功能区元素的可访问性数据。
 
 ### <a name="return-value"></a>返回值

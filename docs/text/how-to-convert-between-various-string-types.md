@@ -7,12 +7,12 @@ helpviewer_keywords:
 - string conversion [C++]
 - strings [C++], converting
 ms.assetid: e7e4f741-3c82-45f0-b8c0-1e1e343b0e77
-ms.openlocfilehash: d943bb612d9027368bab4832f369db1d5f6165cc
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 21006f19f7c811f87f3f75e346983f7a8e7e0bf5
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57743900"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58778320"
 ---
 # <a name="how-to-convert-between-various-string-types"></a>如何：各种字符串类型之间转换
 
@@ -804,12 +804,12 @@ Hello, World! (basic_string)
 
 [ATL 和 MFC 字符串转换宏](../atl/reference/string-conversion-macros.md)<br/>
 [与 C 样式字符串相关的 CString 操作](../atl-mfc-shared/cstring-operations-relating-to-c-style-strings.md)<br/>
-[如何：将标准字符串转换为 System::String](../dotnet/how-to-convert-standard-string-to-system-string.md)<br/>
-[如何：将 System::String 转换为标准字符串](../dotnet/how-to-convert-system-string-to-standard-string.md)<br/>
+[如何：将标准字符串转换为 system:: string](../dotnet/how-to-convert-standard-string-to-system-string.md)<br/>
+[如何：将 system:: string 转换为标准字符串](../dotnet/how-to-convert-system-string-to-standard-string.md)<br/>
 [如何：将 system:: string 转换为 wchar_t * 或 char\*](../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md)<br/>
-[使用 ccombstr 进行编程](../atl/programming-with-ccombstr-atl.md)<br/>
-[mbstowcs_s、_mbstowcs_s_l](../c-runtime-library/reference/mbstowcs-s-mbstowcs-s-l.md)<br/>
+[使用 CComBSTR 进行编程](../atl/programming-with-ccombstr-atl.md)<br/>
+[mbstowcs_s, _mbstowcs_s_l](../c-runtime-library/reference/mbstowcs-s-mbstowcs-s-l.md)<br/>
 [wcstombs_s、_wcstombs_s_l](../c-runtime-library/reference/wcstombs-s-wcstombs-s-l.md)<br/>
 [strcpy_s、wcscpy_s、_mbscpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md)<br/>
 [strcat_s、wcscat_s、_mbscat_s](../c-runtime-library/reference/strcat-s-wcscat-s-mbscat-s.md)<br/>
-[pin_ptr (C++/CLI)](../windows/pin-ptr-cpp-cli.md)
+[pin_ptr (C++/CLI)](../extensions/pin-ptr-cpp-cli.md)
