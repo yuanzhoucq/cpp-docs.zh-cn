@@ -38,8 +38,7 @@ class CComCurrency
 
 |名称|描述|
 |----------|-----------------|
-|[CComCurrency::CComCurrency](#ccomcurrency)|
-  `CComCurrency` 对象的构造函数。|
+|[CComCurrency::CComCurrency](#ccomcurrency)|`CComCurrency` 对象的构造函数。|
 
 ### <a name="public-methods"></a>公共方法
 
@@ -85,8 +84,7 @@ class CComCurrency
 
 `CComCurrency`包装实现此定点类型的算术、 赋值和比较操作。 已选中受支持的应用程序，以控制定点计算过程中可能出现的舍入误差。
 
-
-  `CComCurrency` 对象以两个组件的形式提供对小数点两侧的数字的访问权限：一个整数组件，它存储小数点左侧的值；一个小数组件，它存储小数点右侧的值。 小数部分在内部存储为一个介于-9999 (CY_MIN_FRACTION) 和 + 9999 (CY_MAX_FRACTION) 之间的整数值。 该方法[CComCurrency::GetFraction](#getfraction)返回一个按 10000 (CY_SCALE) 进行缩放的值。
+`CComCurrency` 对象以两个组件的形式提供对小数点两侧的数字的访问权限：一个整数组件，它存储小数点左侧的值；一个小数组件，它存储小数点右侧的值。 小数部分在内部存储为一个介于-9999 (CY_MIN_FRACTION) 和 + 9999 (CY_MAX_FRACTION) 之间的整数值。 该方法[CComCurrency::GetFraction](#getfraction)返回一个按 10000 (CY_SCALE) 进行缩放的值。
 
 指定整数和小数部分时`CComCurrency`对象，请记住小数部分是 0 到 9999 范围内的数字。 在处理美元等在小数点后仅采用两个有效位数来表示金额的货币时，这一点非常有用。 即使不显示最后两位数字，也必须将它们考虑在内。
 
