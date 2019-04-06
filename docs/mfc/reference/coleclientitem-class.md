@@ -165,10 +165,10 @@ helpviewer_keywords:
 - COleClientItem [MFC], OnShowItem
 ms.assetid: 7f571b7c-2758-4839-847a-0cf1ef643128
 ms.openlocfilehash: 2687dfc9941a512523a7cb771cb872c78b97ce2d
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58773978"
 ---
 # <a name="coleclientitem-class"></a>COleClientItem 类
@@ -627,7 +627,7 @@ BOOL CreateFromClipboard(
 
 ### <a name="parameters"></a>参数
 
-*render*<br/>
+*呈现*<br/>
 标志，指定服务器的 OLE 项呈现方式。 有关可能的值，请参阅[OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) Windows SDK 中。
 
 *cfFormat*<br/>
@@ -663,7 +663,7 @@ BOOL CreateFromData(
 *pDataObject*<br/>
 指向[COleDataObject](../../mfc/reference/coledataobject-class.md)是要创建的 OLE 项的对象。
 
-*render*<br/>
+*呈现*<br/>
 标志，指定服务器的 OLE 项呈现方式。 有关可能的值，请参阅[OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) Windows SDK 中。
 
 *cfFormat*<br/>
@@ -703,7 +703,7 @@ BOOL CreateFromFile(
 *clsid*<br/>
 留待将来使用。
 
-*render*<br/>
+*呈现*<br/>
 标志，指定服务器的 OLE 项呈现方式。 有关可能的值，请参阅[OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) Windows SDK 中。
 
 *cfFormat*<br/>
@@ -735,7 +735,7 @@ BOOL CreateLinkFromClipboard(
 
 ### <a name="parameters"></a>参数
 
-*render*<br/>
+*呈现*<br/>
 标志，指定服务器的 OLE 项呈现方式。 有关可能的值，请参阅[OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) Windows SDK 中。
 
 *cfFormat*<br/>
@@ -771,7 +771,7 @@ BOOL CreateLinkFromData(
 *pDataObject*<br/>
 指向[COleDataObject](../../mfc/reference/coledataobject-class.md)是要创建的 OLE 项的对象。
 
-*render*<br/>
+*呈现*<br/>
 标志，指定服务器的 OLE 项呈现方式。 有关可能的值，请参阅[OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) Windows SDK 中。
 
 *cfFormat*<br/>
@@ -807,7 +807,7 @@ BOOL CreateLinkFromFile(
 *lpszFileName*<br/>
 指向要创建的 OLE 项的文件的名称。
 
-*render*<br/>
+*呈现*<br/>
 标志，指定服务器的 OLE 项呈现方式。 有关可能的值，请参阅[OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) Windows SDK 中。
 
 *cfFormat*<br/>
@@ -843,7 +843,7 @@ BOOL CreateNewItem(
 *clsid*<br/>
 唯一标识要创建的 OLE 项的类型的 ID。
 
-*render*<br/>
+*呈现*<br/>
 标志，指定服务器的 OLE 项呈现方式。 有关可能的值，请参阅[OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) Windows SDK 中。
 
 *cfFormat*<br/>
@@ -875,7 +875,7 @@ BOOL CreateStaticFromClipboard(
 
 ### <a name="parameters"></a>参数
 
-*render*<br/>
+*呈现*<br/>
 标志，指定服务器的 OLE 项呈现方式。 有关可能的值，请参阅[OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) Windows SDK 中。
 
 *cfFormat*<br/>
@@ -911,7 +911,7 @@ BOOL CreateStaticFromData(
 *pDataObject*<br/>
 指向[COleDataObject](../../mfc/reference/coledataobject-class.md)是要创建的 OLE 项的对象。
 
-*render*<br/>
+*呈现*<br/>
 标志，指定服务器的 OLE 项呈现方式。 有关可能的值，请参阅[OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) Windows SDK 中。
 
 *cfFormat*<br/>

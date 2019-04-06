@@ -3,10 +3,10 @@ title: C++ 中 Windows 编程概述
 ms.date: 03/28/2019
 ms.assetid: efc691d7-21f3-47ae-ae56-cab999ccf59d
 ms.openlocfilehash: 35842ae73e59685946afe31e88729a36a6431768
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58772899"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>C++ 中 Windows 编程概述
@@ -97,7 +97,7 @@ Visual Studio 包含一个功能强大的本机代码调试器、静态分析工
 |标题|描述|
 |-----------|-----------------|
 |[演练：创建标准 c + + 程序](walkthrough-creating-a-standard-cpp-program-cpp.md)| 创建一个 Windows 控制台应用程序。|
-|[演练：创建 Windows 桌面应用程序 (C++)](walkthrough-creating-windows-desktop-applications-cpp.md)|创建一个简单的 Windows 桌面应用程序。|
+|[演练：创建 Windows 桌面应用程序 （c + +）](walkthrough-creating-windows-desktop-applications-cpp.md)|创建一个简单的 Windows 桌面应用程序。|
 |[Windows 桌面向导](windows-desktop-wizard.md)|使用向导来创建新的 Windows 项目。|
 |[活动模板库 (ATL)](../atl/TOC.md)|使用 ATL 库在 c + + 中创建 COM 组件。|
 |[Microsoft 基础类 (MFC)](../mfc/TOC.md)|使用 MFC 创建大或小 Windows 应用程序使用对话框和控件|
@@ -105,10 +105,10 @@ Visual Studio 包含一个功能强大的本机代码调试器、静态分析工
 |[数据访问](../data/data-access-in-cpp.md)| OLE DB 和 ODBC|
 |[文本和字符串](../text/text-and-strings-in-visual-cpp.md)|在 Windows 上的各种字符串类型。|
 |[有关使用 DirectX 创建游戏的资源](resources-for-creating-a-game-using-directx.md)
-|[如何：在 Windows 桌面应用程序中使用 Windows 10 SDK](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|Windows SDK|
+|[如何：使用 Windows 10 SDK 中的 Windows 桌面应用程序](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|Windows SDK|
 |[使用资源文件](working-with-resource-files.md)|如何将图像、 图标、 字符串表和其他资源添加到桌面应用程序。|
-|[有关创建使用 DirectX （c + +） 的游戏的资源](resources-for-creating-a-game-using-directx.md)|在 c + + 中创建游戏的内容的链接。|
-|[如何：在 Windows 桌面应用程序中使用 Windows 10 SDK](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|包含使用 Windows 10 SDK 设置项目以便生成的步骤。|
+|[有关使用 DirectX 创建游戏的资源 (C++)](resources-for-creating-a-game-using-directx.md)|在 c + + 中创建游戏的内容的链接。|
+|[如何：使用 Windows 10 SDK 中的 Windows 桌面应用程序](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|包含使用 Windows 10 SDK 设置项目以便生成的步骤。|
 |[部署本机桌面应用程序](deploying-native-desktop-applications-visual-cpp.md)|部署在 Windows 上的本机应用程序。|
 
 
@@ -117,8 +117,8 @@ Visual Studio 包含一个功能强大的本机代码调试器、静态分析工
 |标题|描述|
 |-----------|-----------------|
 |[Visual C++](../overview/visual-cpp-in-visual-studio.md)|Visual c + + 开发人员内容的父主题。|
-[使用 C++/CLI 的 .NET开发](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)|创建包装的本机 c + + 库，使其能够与.NET 应用程序和组件之间的通信。|
-|[ .NET 和 UWP 的组件扩展](../extensions/component-extensions-for-runtime-platforms.md)|引用的语法元素共享的 C + + /CX 和 C + + /cli CLI。|
+[.NET 开发的 C + + /cli CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)|创建包装的本机 c + + 库，使其能够与.NET 应用程序和组件之间的通信。|
+|[适用于.NET 和 UWP 组件扩展](../extensions/component-extensions-for-runtime-platforms.md)|引用的语法元素共享的 C + + /CX 和 C + + /cli CLI。|
 |[通用 Windows 应用 (C++)](universal-windows-apps-cpp.md)|编写 UWP 应用程序使用 C + + /CX 或 Windows 运行时模板库 (WRL)。|
-|[COM 和 .NET 的 C++ 属性](attributes/cpp-attributes-com-net.md)|使用.NET 或 com。 仅限 Windows 的编程的非标准属性|
+|[对于 COM 和.NET 的 c + + 特性](attributes/cpp-attributes-com-net.md)|使用.NET 或 com。 仅限 Windows 的编程的非标准属性|
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - CDialog class [MFC], MFC dialog boxes
 - MFC dialog boxes
 ms.assetid: e4feea1a-8360-4ccb-9b84-507f1ccd9ef3
-ms.openlocfilehash: 9add6f003f0f6cd4ab85980e1e35370770da43aa
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 32a8f8784459338131d4893f25d8798f8031b68b
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57282053"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58778489"
 ---
 # <a name="dialog-boxes"></a>对话框
 
@@ -33,7 +33,7 @@ ms.locfileid: "57282053"
 
 ## <a name="what-do-you-want-to-know-more-about"></a>你想要了解更多信息
 
-- [示例：显示一个对话框，通过菜单命令](../mfc/example-displaying-a-dialog-box-via-a-menu-command.md)
+- [示例:显示一个对话框，通过菜单命令](../mfc/example-displaying-a-dialog-box-via-a-menu-command.md)
 
 - [框架中的对话框组件](../mfc/dialog-box-components-in-the-framework.md)
 
@@ -61,7 +61,7 @@ ms.locfileid: "57282053"
 
 - [OLE 中的对话框](../mfc/dialog-boxes-in-ole.md)
 
-- 创建应用程序用户界面是一个对话框： 请参阅[CMNCTRL1](../visual-cpp-samples.md)或[CMNCTRL2](../visual-cpp-samples.md)示例程序。 应用程序向导提供了此选项。
+- 创建应用程序用户界面是一个对话框： 请参阅[CMNCTRL1](../overview/visual-cpp-samples.md)或[CMNCTRL2](../overview/visual-cpp-samples.md)示例程序。 应用程序向导提供了此选项。
 
 - [示例](../mfc/dialog-sample-list.md)
 

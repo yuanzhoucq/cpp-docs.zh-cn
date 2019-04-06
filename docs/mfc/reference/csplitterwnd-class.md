@@ -73,10 +73,10 @@ helpviewer_keywords:
 - CSplitterWnd [MFC], OnInvertTracker
 ms.assetid: fd0de258-6dbe-4552-9e47-a39de0471d51
 ms.openlocfilehash: 065735c13a3e763208142eb6bc989d3a496221f0
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58781440"
 ---
 # <a name="csplitterwnd-class"></a>CSplitterWnd 类
@@ -388,10 +388,10 @@ virtual BOOL CreateView(
 
 ### <a name="parameters"></a>参数
 
-*row*<br/>
+*行*<br/>
 指定要在其中放置新视图的拆分器窗口一行。
 
-*col*<br/>
+*列号*<br/>
 指定要在其中放置新视图的拆分器窗口中列。
 
 *pViewClass*<br/>
@@ -475,10 +475,10 @@ virtual void DeleteView(
 
 ### <a name="parameters"></a>参数
 
-*row*<br/>
+*行*<br/>
 指定要删除的视图的拆分器窗口一行。
 
-*col*<br/>
+*列号*<br/>
 指定要删除的视图的拆分器窗口中列。
 
 ### <a name="remarks"></a>备注
@@ -628,7 +628,7 @@ void GetColumnInfo(
 
 ### <a name="parameters"></a>参数
 
-*col*<br/>
+*列号*<br/>
 指定的列。
 
 *cxCur*<br/>
@@ -649,10 +649,10 @@ CWnd* GetPane(
 
 ### <a name="parameters"></a>参数
 
-*row*<br/>
+*行*<br/>
 指定的行。
 
-*col*<br/>
+*列号*<br/>
 指定的列。
 
 ### <a name="return-value"></a>返回值
@@ -684,7 +684,7 @@ void GetRowInfo(
 
 ### <a name="parameters"></a>参数
 
-*row*<br/>
+*行*<br/>
 指定的行。
 
 *cyCur*<br/>
@@ -727,10 +727,10 @@ int IdFromRowCol(
 
 ### <a name="parameters"></a>参数
 
-*row*<br/>
+*行*<br/>
 指定的拆分器窗口中的一行。
 
-*col*<br/>
+*列号*<br/>
 指定的拆分器窗口中列。
 
 ### <a name="return-value"></a>返回值
@@ -877,10 +877,10 @@ virtual void SetActivePane(
 
 ### <a name="parameters"></a>参数
 
-*row*<br/>
+*行*<br/>
 如果*pWnd*为 NULL，在将处于活动状态的窗格中指定的一行。
 
-*col*<br/>
+*列号*<br/>
 如果*pWnd*为 NULL，指定将处于活动状态的窗格中的列。
 
 *pWnd*<br/>
@@ -905,7 +905,7 @@ void SetColumnInfo(
 
 ### <a name="parameters"></a>参数
 
-*col*<br/>
+*列号*<br/>
 指定拆分器窗口中列。
 
 *cxIdeal*<br/>
@@ -937,7 +937,7 @@ void SetRowInfo(
 
 ### <a name="parameters"></a>参数
 
-*row*<br/>
+*行*<br/>
 指定拆分器窗口行。
 
 *cyIdeal*<br/>

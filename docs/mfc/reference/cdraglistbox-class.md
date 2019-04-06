@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CDragListBox [MFC], Dropped
 - CDragListBox [MFC], ItemFromPt
 ms.assetid: fee20b42-60ae-4aa9-83f9-5a3d9b96e33b
-ms.openlocfilehash: 6574ffaf8c4b8c0414c00ef2f4a31f6ed74ebe9e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: d8afc5b14f5f52ca7a4d28a3d3c3c5440b7c819f
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57294936"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58781583"
 ---
 # <a name="cdraglistbox-class"></a>CDragListBox 类
 
@@ -218,7 +218,7 @@ int ItemFromPt(
 
 ## <a name="see-also"></a>请参阅
 
-[MFC 示例 TSTCON](../../visual-cpp-samples.md)<br/>
+[MFC 示例 TSTCON](../../overview/visual-cpp-samples.md)<br/>
 [CListBox 类](../../mfc/reference/clistbox-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>
 [CListBox 类](../../mfc/reference/clistbox-class.md)

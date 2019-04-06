@@ -7,10 +7,10 @@ helpviewer_keywords:
 - sockets [MFC], notifications
 ms.assetid: 87d5bf70-6e77-49a9-9a64-aaadee2ad018
 ms.openlocfilehash: df7bfe8a95221682d0f7f4ebb123bd15b79144d5
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58774329"
 ---
 # <a name="windows-sockets-socket-notifications"></a>Windows 套接字：套接字通知
@@ -53,7 +53,7 @@ MFC 调用通知函数，以便你可以在收到通知时自定义套接字的�
 
 - [Windows 套接字：使用存档的套接字如何工作](../mfc/windows-sockets-how-sockets-with-archives-work.md)
 
-- [Windows 套接字：阻止](../mfc/windows-sockets-blocking.md)
+- [Windows 套接字：锁定](../mfc/windows-sockets-blocking.md)
 
 - [Windows 套接字：字节排序](../mfc/windows-sockets-byte-ordering.md)
 

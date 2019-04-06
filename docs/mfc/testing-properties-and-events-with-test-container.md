@@ -10,12 +10,12 @@ helpviewer_keywords:
 - ActiveX controls [MFC], testing
 - properties [MFC], testing
 ms.assetid: 626867cf-fe53-4c30-8973-55bb93ef3917
-ms.openlocfilehash: 2b1d023488e8d547217dafffd224ab9fc05bd876
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 977ef29095e652ab40028a2e8ba7feffabf56418
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57267896"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58781063"
 ---
 # <a name="testing-properties-and-events-with-test-container"></a>使用测试容器测试属性和事件
 
@@ -23,7 +23,7 @@ Visual C++ 中附带的测试容器应用程序是用于测试和调试 ActiveX 
 
 ### <a name="to-access-the-activex-control-test-container"></a>访问 ActiveX 控件测试容器
 
-1. 生成[TSTCON 示例：ActiveX 控件测试容器](../visual-cpp-samples.md)。
+1. 生成[TSTCON 示例：ActiveX 控件测试容器](../overview/visual-cpp-samples.md)。
 
 ### <a name="to-test-your-activex-control"></a>测试 ActiveX 控件
 

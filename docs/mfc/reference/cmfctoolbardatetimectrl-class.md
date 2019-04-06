@@ -48,12 +48,12 @@ helpviewer_keywords:
 - CMFCToolBarDateTimeCtrl [MFC], SetTime
 - CMFCToolBarDateTimeCtrl [MFC], SetTimeAll
 ms.assetid: a3853cb9-8ebc-444f-a1e4-9cf905e24c18
-ms.openlocfilehash: c93d8a2a18518cad8b6fb7fe014828011f78a653
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: dfe1d3dc058371dd13cc335968b9c3a89e057da2
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57280987"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58776045"
 ---
 # <a name="cmfctoolbardatetimectrl-class"></a>CMFCToolBarDateTimeCtrl 类
 
@@ -172,7 +172,7 @@ CMFCToolBarDateTimeCtrl(
 
 ### <a name="example"></a>示例
 
-下面的示例演示如何构造的对象`CMFCToolBarDateTimeCtrl`类。 此代码片段属于[工具栏日期时间选取器示例](../../visual-cpp-samples.md)。
+下面的示例演示如何构造的对象`CMFCToolBarDateTimeCtrl`类。 此代码片段属于[工具栏日期时间选取器示例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_ToolbarDateTimePicker#1](../../mfc/reference/codesnippet/cpp/cmfctoolbardatetimectrl-class_1.cpp)]
 

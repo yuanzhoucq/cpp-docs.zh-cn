@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CMDIFrameWnd [MFC], MDISetMenu
 - CMDIFrameWnd [MFC], MDITile
 ms.assetid: fa8736e6-511b-4c51-8b4d-eba78378aeb9
-ms.openlocfilehash: d3fc71c3e294b26aea405b8800199cf88120fa08
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 9f5289491a7c14749865cfd163417440bc542aba
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57282443"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58776526"
 ---
 # <a name="cmdiframewnd-class"></a>CMDIFrameWnd 类
 
@@ -459,9 +459,9 @@ void MDITile(int nType);
 
 ## <a name="see-also"></a>请参阅
 
-[MFC 示例 MDI](../../visual-cpp-samples.md)<br/>
-[MFC 示例 MDIDOCVW](../../visual-cpp-samples.md)<br/>
-[MFC 示例 SNAPVW](../../visual-cpp-samples.md)<br/>
+[MFC 示例 MDI](../../overview/visual-cpp-samples.md)<br/>
+[MFC 示例 MDIDOCVW](../../overview/visual-cpp-samples.md)<br/>
+[MFC 示例 SNAPVW](../../overview/visual-cpp-samples.md)<br/>
 [CFrameWnd 类](../../mfc/reference/cframewnd-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>
 [CWnd 类](../../mfc/reference/cwnd-class.md)<br/>

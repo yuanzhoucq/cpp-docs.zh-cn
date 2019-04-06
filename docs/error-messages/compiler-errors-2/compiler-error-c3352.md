@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3352
 ms.assetid: f233bed7-474e-425f-aad2-7801578169d4
-ms.openlocfilehash: c45ce5e2e72c6a987a0053cb4b1bbb151c149faf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6641f05c8daa5ad505c0bcb8d29a369ad5fd9a9a
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496529"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58779594"
 ---
 # <a name="compiler-error-c3352"></a>编译器错误 C3352
 
@@ -19,7 +19,7 @@ function： 指定的函数与委托类型 type 不匹配
 
 参数列出有关`function`和委托不匹配。
 
-有关详细信息，请参阅[委托 （c + + 组件扩展）](../../windows/delegate-cpp-component-extensions.md)。
+有关详细信息，请参阅[委托 （c + + 组件扩展）](../../extensions/delegate-cpp-component-extensions.md)。
 
 下面的示例生成 C3352:
 

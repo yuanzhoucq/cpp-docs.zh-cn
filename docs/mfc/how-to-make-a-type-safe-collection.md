@@ -11,17 +11,17 @@ helpviewer_keywords:
 - collection classes [MFC], deriving from nontemplate
 ms.assetid: 7230b2db-4283-4083-b098-eb231bf5b89e
 ms.openlocfilehash: c8be781bad699edb8cb0be844d79802269c3e0c5
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58781518"
 ---
 # <a name="how-to-make-a-type-safe-collection"></a>如何：创建类型安全集合
 
 本文介绍如何针对您自己的数据类型生成类型安全的集合。 包括以下主题：
 
-- [使用基于模板的类的类型安全性，](#_core_using_template.2d.based_classes_for_type_safety)
+- [为了类型安全使用基于模板的类](#_core_using_template.2d.based_classes_for_type_safety)
 
 - [实现帮助器函数](#_core_implementing_helper_functions)
 

@@ -29,10 +29,10 @@ helpviewer_keywords:
 - COlePasteSpecialDialog [MFC], m_ps
 ms.assetid: 0e82ef9a-9bbe-457e-8240-42c86a0534f7
 ms.openlocfilehash: 9c31ed6f82f4280206bf233999fac74981636db3
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58776903"
 ---
 # <a name="colepastespecialdialog-class"></a>COlePasteSpecialDialog 类
@@ -131,7 +131,7 @@ void AddFormat(
 *lpszResult*<br/>
 如果在对话框中选择这种格式，则说明结果的字符串。
 
-*flags*<br/>
+*标志*<br/>
 不同链接和嵌入选项可用于此格式。 此标志的按位组合或多个 OLEUIPASTEFLAG 中的不同值的枚举类型。
 
 *cf*<br/>
@@ -146,7 +146,7 @@ void AddFormat(
 *bEnableIcon*<br/>
 确定是否显示为图标的复选框启用时在列表框中选择此格式的标志。
 
-*bLink*<br/>
+*闪烁*<br/>
 确定在列表框中选择这种格式时，是否启用粘贴链接单选按钮的标志。
 
 ### <a name="remarks"></a>备注
@@ -195,7 +195,7 @@ void AddStandardFormats(BOOL bEnableLink = TRUE);
 
 - CF_METAFILEPICT
 
-- **"Embedded Object"**
+- **"嵌入的对象"**
 
 - （可选）**"源链接"**
 

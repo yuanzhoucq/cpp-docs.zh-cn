@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Clipboard, copying data to
 - Clipboard, pasting
 ms.assetid: 580e10be-241f-4f9f-94cf-8302edc5beef
-ms.openlocfilehash: da589743e98b2ac020e006aedb0ccc0415998f17
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: cff9094315dc97e2040eb4dbad25d044c7c51a81
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270730"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58776097"
 ---
 # <a name="clipboard-copying-and-pasting-data"></a>剪贴板：复制和粘贴数据
 
@@ -32,7 +32,7 @@ ms.locfileid: "57270730"
 
 1. 如果用户选择剪切操作而不是复制操作，从你的应用程序中删除所选的数据。
 
-若要查看此序列的示例，请参阅`OnEditCut`并`OnEditCopy`函数在 MFC OLE 示例程序[OCLIENT](../visual-cpp-samples.md)并[HIERSVR](../visual-cpp-samples.md)。 请注意，这些示例维护一个指向当前所选的数据，以使其步骤 1 已完成。
+若要查看此序列的示例，请参阅`OnEditCut`并`OnEditCopy`函数在 MFC OLE 示例程序[OCLIENT](../overview/visual-cpp-samples.md)并[HIERSVR](../overview/visual-cpp-samples.md)。 请注意，这些示例维护一个指向当前所选的数据，以使其步骤 1 已完成。
 
 ##  <a name="_core_pasting_data"></a> 粘贴数据
 
@@ -50,7 +50,7 @@ ms.locfileid: "57270730"
 
 1. 执行格式粘贴。
 
-此工作原理的示例，请参阅的实现`OnEditPaste`MFC OLE 示例程序中定义的视图类中的成员函数[OCLIENT](../visual-cpp-samples.md)并[HIERSVR](../visual-cpp-samples.md)。
+此工作原理的示例，请参阅的实现`OnEditPaste`MFC OLE 示例程序中定义的视图类中的成员函数[OCLIENT](../overview/visual-cpp-samples.md)并[HIERSVR](../overview/visual-cpp-samples.md)。
 
 > [!TIP]
 >  分离到其自身函数粘贴操作的主要优点是拖放操作期间在应用程序中删除数据时，可以使用相同的粘贴代码。 如 OCLIENT 和 HIERSVR，你`OnDrop`函数也可以调用`DoPasteItem`，重复使用编写实现粘贴操作的代码。

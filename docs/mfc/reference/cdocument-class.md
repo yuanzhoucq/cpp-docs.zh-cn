@@ -121,10 +121,10 @@ helpviewer_keywords:
 - CDocument [MFC], m_lfRichPreviewFont
 ms.assetid: e5a2891d-e1e1-4599-8c7e-afa9b4945446
 ms.openlocfilehash: 2d87ff67000fb5b70c0a5c965638875e6f50b22c
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58774174"
 ---
 # <a name="cdocument-class"></a>CDocument 类
@@ -375,7 +375,7 @@ virtual POSITION FindChunk(
 *guid*<br/>
 指定要查找块的 GUID。
 
-pid<br/>
+*pid*<br/>
 指定块区的 PID 查找。
 
 ### <a name="return-value"></a>返回值
@@ -1070,7 +1070,7 @@ virtual void RemoveChunk(
 
 ### <a name="parameters"></a>参数
 
-*Guid*<br/>
+*GUID*<br/>
 指定要删除一个块的 GUID。
 
 *pid*<br/>
@@ -1116,7 +1116,7 @@ virtual void ReportSaveLoadException(
 *lpszPathName*<br/>
 指向在时的文档的名称保存或加载。
 
-*e*<br/>
+*E*<br/>
 指向所引发的异常。 可以为 NULL。
 
 *bSaving*<br/>

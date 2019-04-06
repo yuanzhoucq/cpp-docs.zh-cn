@@ -102,12 +102,12 @@ helpviewer_keywords:
 - CListBox [MFC], SetTopIndex
 - CListBox [MFC], VKeyToItem
 ms.assetid: 7ba3c699-c286-4cd9-9066-532c41ec05d1
-ms.openlocfilehash: 17ff89fde3ef893c2cfcd8beeb8482722af60358
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: b448f725bac68c2b67dc44d660c664c075aa86da
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57280311"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58778762"
 ---
 # <a name="clistbox-class"></a>CListBox 类
 
@@ -1538,12 +1538,12 @@ virtual int VKeyToItem(
 
 ## <a name="see-also"></a>请参阅
 
-[MFC 示例 CTRLTEST](../../visual-cpp-samples.md)<br/>
+[MFC 示例 CTRLTEST](../../overview/visual-cpp-samples.md)<br/>
 [CWnd 类](../../mfc/reference/cwnd-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>
 [CWnd 类](../../mfc/reference/cwnd-class.md)<br/>
 [CButton 类](../../mfc/reference/cbutton-class.md)<br/>
 [CComboBox 类](../../mfc/reference/ccombobox-class.md)<br/>
-[CEdit 类](../../mfc/reference/cedit-class.md)<br/>
+[CEdit Class](../../mfc/reference/cedit-class.md)<br/>
 [CScrollBar 类](../../mfc/reference/cscrollbar-class.md)<br/>
 [CStatic 类](../../mfc/reference/cstatic-class.md)

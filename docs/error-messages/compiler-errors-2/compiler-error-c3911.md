@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3911
 ms.assetid: b786da59-0e99-479d-bc0d-551126e940f2
-ms.openlocfilehash: 6c00a3bb388130d9a570e9fd731a9ed1200ed179
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 25bf8def4e0a8085e20dc6ba9a04dc7f27cee651
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50622178"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58775980"
 ---
 # <a name="compiler-error-c3911"></a>编译器错误 C3911
 
@@ -19,7 +19,7 @@ event_accessor_method： 函数必须具有类型签名
 
 未正确声明事件访问器方法。
 
-有关详细信息，请参阅[事件](../../windows/event-cpp-component-extensions.md)。
+有关详细信息，请参阅[事件](../../extensions/event-cpp-component-extensions.md)。
 
 下面的示例生成 C3911:
 

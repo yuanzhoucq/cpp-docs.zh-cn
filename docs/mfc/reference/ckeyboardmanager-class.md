@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CKeyboardManager [MFC], TranslateCharToUpper
 - CKeyboardManager [MFC], UpdateAccelTable
 ms.assetid: 4809ece6-89df-4479-8b53-9bf476ee107b
-ms.openlocfilehash: c953958b3e0112997423376d42b62953b936049a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 3360a28d50f64546837cc5ef35dcfc761b4fb0f5
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57303602"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58779802"
 ---
 # <a name="ckeyboardmanager-class"></a>CKeyboardManager 类
 
@@ -81,7 +81,7 @@ class CKeyboardManager : public CObject
 
 ## <a name="example"></a>示例
 
-下面的示例演示如何检索一个指向`CKeyboardManager`对象从`CWinAppEx`类，以及如何显示与菜单命令相关联的所有快捷键。 此代码片段属于[自定义页面示例](../../visual-cpp-samples.md)。
+下面的示例演示如何检索一个指向`CKeyboardManager`对象从`CWinAppEx`类，以及如何显示与菜单命令相关联的所有快捷键。 此代码片段属于[自定义页面示例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_CustomPages#5](../../mfc/reference/codesnippet/cpp/ckeyboardmanager-class_1.cpp)]
 
