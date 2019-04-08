@@ -49,8 +49,7 @@ ms.locfileid: "57294559"
 ---
 # <a name="cmfcpropertysheet-class"></a>CMFCPropertySheet 类
 
-
-  `CMFCPropertySheet` 类支持每个属性页由页选项卡、工具栏按钮、树控件节点或列表项表示的属性表。
+`CMFCPropertySheet` 类支持每个属性页由页选项卡、工具栏按钮、树控件节点或列表项表示的属性表。
 
 ## <a name="syntax"></a>语法
 
@@ -93,9 +92,7 @@ class CMFCPropertySheet : public CPropertySheet
 
 ## <a name="remarks"></a>备注
 
-
-  `CMFCPropertySheet` 类表示属性表，也称为选项卡对话框。 
-  `CMFCPropertySheet` 类可以用多种方式显示属性页。
+`CMFCPropertySheet` 类表示属性表，也称为选项卡对话框。 `CMFCPropertySheet` 类可以用多种方式显示属性页。
 
 执行以下步骤，以便在应用程序中使用 `CMFCPropertySheet` 类：
 

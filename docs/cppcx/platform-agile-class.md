@@ -154,8 +154,7 @@ T^* GetAddressOf() throw();
 
 ### <a name="return-value"></a>返回值
 
-
-  `T` 类型的对象的句柄地址。
+`T` 类型的对象的句柄地址。
 
 ### <a name="remarks"></a>备注
 
@@ -240,8 +239,7 @@ T^ operator=( IUnknown* lp ) throw();
 
 ### <a name="return-value"></a>返回值
 
-
-  `T` 类型的对象的句柄
+`T` 类型的对象的句柄
 
 ### <a name="remarks"></a>备注
 

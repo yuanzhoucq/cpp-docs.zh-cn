@@ -143,12 +143,12 @@ helpviewer_keywords:
 - _WINRT_DLL macro
 - __func__ identifier
 ms.assetid: 1cc5f70a-a225-469c-aed0-fe766238e23f
-ms.openlocfilehash: 9ebc23545817de0f249185700454237c66610c13
-ms.sourcegitcommit: d441305fb19131afbd7fc259d8cda63ea26f2343
+ms.openlocfilehash: 9dcc0922f3715d1e583605a071535f51fa8b2f57
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51678349"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59032448"
 ---
 # <a name="predefined-macros"></a>预定义的宏
 
@@ -362,7 +362,7 @@ Microsoft Visual c + + 支持这些其他预定义的宏。
 
 - **&#95;MSC&#95;VER**定义为整数文本进行编码的编译器的版本号的主要和次要编号元素。 主版本号是句点分隔的版本号的第一个元素和次版本号是第二个元素。 例如，如果 Visual c + + 编译器的版本号为 17.00.51106.1，  **&#95;MSC&#95;VER**宏计算结果为 1700年。 输入`cl /?`在命令行查看编译器的版本号。 始终定义此宏。
 
-   |Visual Studio 版本|&AMP;#95;MSC&AMP;#95;VER|
+   |Visual Studio 版本|&#95;MSC&#95;VER|
    |-|-|
    |Visual Studio 6.0|1200|
    |Visual Studio.NET 2002 (7.0)|1300|
@@ -375,7 +375,7 @@ Microsoft Visual c + + 支持这些其他预定义的宏。
    |Visual Studio 2015 (14.0)|1900|
    |Visual Studio 2017 RTW (15.0)|1910|
    |Visual Studio 2017 版本 15.3|1911|
-   |Visual Studio 2017 版本 15.5|公历 1912 年|
+   |Visual Studio 2017 版本 15.5|1912|
    |Visual Studio 2017 版本 15.6|1913|
    |Visual Studio 2017 15.7 版|1914|
    |Visual Studio 2017 版本 15.8|1915|
@@ -395,7 +395,7 @@ Microsoft Visual c + + 支持这些其他预定义的宏。
 
    有关详细信息，请参阅[Visual c + + 编译器版本](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/visual-c-compiler-version/)Visual c + + 团队博客中。
 
-- **&#95;MSVC&#95;LANG**定义为整数，指定由编译器针对 c + + 语言标准。 如果宏时编译为 c + +，为整数文字值 201402 L [/std: c + + 14](../build/reference/std-specify-language-standard-version.md)编译器选项设置，或默认情况下; 如果它设置为 201703 L [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)设置编译器选项; 并且设置为更高版本中，未指定值时[/std: c + + 最新](../build/reference/std-specify-language-standard-version.md)。 否则，该宏是不确定的。 **&#95;MSVC&#95;LANG**宏和[/std （指定语言标准版本）](../build/reference/std-specify-language-standard-version.md)编译器选项是在 Visual Studio 2015 Update 3 开始提供。
+- **&#95;MSVC&#95;LANG**定义为整数，指定由编译器针对 c + + 语言标准。 如果宏时编译为 c + +，为整数文字值 201402 L [/std: c + + 14](../build/reference/std-specify-language-standard-version.md)编译器选项设置，或默认情况下; 如果它设置为 201703 L [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)设置编译器选项; 并且设置为更高版本中，未指定值时[/std: c + + 最新](../build/reference/std-specify-language-standard-version.md)。 否则，该宏是不确定的。  **&#95;MSVC&#95;LANG**宏和[/std （指定语言标准版本）](../build/reference/std-specify-language-standard-version.md)编译器选项是在 Visual Studio 2015 Update 3 开始提供。
 
 - **&#95;&#95;MSVC&#95;运行时&#95;检查**定义为 1 时的[/RTC](../build/reference/rtc-run-time-error-checks.md)设置编译器选项。 否则，未定义。
 
@@ -420,7 +420,7 @@ Microsoft Visual c + + 支持这些其他预定义的宏。
 
 - **&#95;VC&#95;NODEFAULTLIB**定义为 1 时[/Zl （省略默认库名）](../build/reference/zl-omit-default-library-name.md)设置编译器选项。 否则，未定义。
 
-- **&#95;WCHAR&#95;T&#95;定义**定义为 1 时，默认[/zc: wchar_t](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)设置编译器选项。 **&#95;WCHAR&#95;T&#95;定义**宏定义的但如果不具有任何值`/Zc:wchar_t-`编译器选项设置，并**wchar_t**中包含的系统标头文件中定义应用项目。 否则，未定义。
+- **&#95;WCHAR&#95;T&#95;定义**定义为 1 时，默认[/zc: wchar_t](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)设置编译器选项。  **&#95;WCHAR&#95;T&#95;定义**宏定义的但如果不具有任何值`/Zc:wchar_t-`编译器选项设置，并**wchar_t**中包含的系统标头文件中定义应用项目。 否则，未定义。
 
 - **&#95;WIN32**定义为 1 编译目标为 32 位 ARM x86，在 64 位 ARM 或 x64。 否则，未定义。
 
