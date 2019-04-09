@@ -69,8 +69,7 @@ class CComPtrBase
 |[CComPtrBase::operator T *](#operator_t_star)|强制转换运算符。|
 |[CComPtrBase::operator ！](#operator_not)|NOT 运算符。|
 |[CComPtrBase::operator （& a)](#operator_amp)|& 运算符。|
-|[CComPtrBase::operator *](#operator_star)|
-  \* 运算符。|
+|[CComPtrBase::operator *](#operator_star)|\* 运算符。|
 |[CComPtrBase::operator <](#ccomptrbase__operator lt)|小于-运算符。|
 |[CComPtrBase::operator = =](#operator_eq_eq)|相等运算符。|
 |[CComPtrBase::operator->](#operator_ptr)|指针到成员运算符中。|
@@ -270,8 +269,7 @@ T** operator&() throw();
 
 ##  <a name="operator_star"></a>  CComPtrBase::operator \*
 
-
-  \* 运算符。
+\* 运算符。
 
 ```
 T& operator*() const throw();
