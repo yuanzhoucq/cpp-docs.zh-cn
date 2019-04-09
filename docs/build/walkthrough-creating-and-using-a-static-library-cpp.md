@@ -7,12 +7,12 @@ helpviewer_keywords:
 - static libraries [C++]
 ms.assetid: 3cc36411-7d66-4240-851e-dacb9a8fd6ac
 ms.author: corob
-ms.openlocfilehash: 506db5ea8e94887d9971b48c06ce8c0d6156dccb
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 0d527681abb077a01b3d902c092a21de7a052867
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58784072"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59031503"
 ---
 # <a name="walkthrough-creating-and-using-a-static-library-c"></a>演练：创建和使用静态库 （c + +）
 
@@ -146,5 +146,5 @@ ms.locfileid: "58784072"
 
 ## <a name="see-also"></a>请参阅
 
-[演练：创建和使用动态链接库 (C++)](../build/walkthrough-creating-and-using-a-dynamic-link-library-cpp.md)<br/>
-[桌面应用程序 (Visual C++)](../windows/desktop-applications-visual-cpp.md)<br/>
+[演练：创建和使用动态链接库 （c + +）](../build/walkthrough-creating-and-using-a-dynamic-link-library-cpp.md)<br/>
+[桌面应用程序 （Visual c + +）](../windows/desktop-applications-visual-cpp.md)<br/>

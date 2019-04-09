@@ -1,5 +1,5 @@
 ---
-title: 演练： 创建标准 c + + 程序 （c + +）
+title: 演练：创建标准 c + + 程序 （c + +）
 ms.custom: get-started-article
 ms.date: 09/18/2018
 f1_keywords:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - command-line applications [C++], standard
 - standard applications [C++]
 ms.assetid: 48217e35-d892-46b7-93e3-f6f0b7e2da35
-ms.openlocfilehash: 78d19a277f8bedcdbd098a662c69d6fc622a7cff
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d58d23e757a97402985ef60badf551523c0a275e
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50647452"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59030616"
 ---
-# <a name="walkthrough-creating-a-standard-c-program-c"></a>演练： 创建标准 c + + 程序 （c + +）
+# <a name="walkthrough-creating-a-standard-c-program-c"></a>演练：创建标准 c + + 程序 （c + +）
 
 可以使用 Visual Studio 集成的开发环境 (IDE) 中的 Visual c + + 创建标准 c + + 程序。 按照此演练中的步骤操作，可以创建项目，向项目添加新文件，修改文件以添加 c + + 代码，然后编译并通过使用 Visual Studio 中运行程序。
 
@@ -73,8 +73,8 @@ Visual c + + 遵循 2003 c + + 标准，与以下几点主要例外： 两阶段
 
 ## <a name="next-steps"></a>后续步骤
 
-**上一步：** [控制台在 Visual c + + 中的应用程序](../windows/console-applications-in-visual-cpp.md)<br/>
-**下一步：** [演练： 编译本机 c + + 程序命令行上](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)<br/>
+上一步：[Visual C++ 中的控制台应用程序](../windows/console-applications-in-visual-cpp.md)<br/>
+**下一篇：**[演练：在命令行上编译本机 C++ 程序](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)<br/>
 
 ## <a name="see-also"></a>请参阅
 

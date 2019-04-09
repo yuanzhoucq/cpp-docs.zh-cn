@@ -11,12 +11,12 @@ helpviewer_keywords:
 - build steps [C++], build events
 - builds [C++], custom build steps
 ms.assetid: beb2f017-3e9f-4b2c-9b57-2572fd2628e4
-ms.openlocfilehash: 5bc402ad8999f1864c7e6b1155da3c68862dda97
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: fc12689148e3bf23c233e4656249625d1156f9a7
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57825112"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59028501"
 ---
 # <a name="understanding-custom-build-steps-and-build-events"></a>了解自定义生成步骤和生成事件
 
@@ -28,7 +28,7 @@ ms.locfileid: "57825112"
 
 - **自定义生成工具**
 
-   自定义生成工具是与一个或多个文件关联的生成规则。 自定义生成步骤可将输入文件传递给自定义生成工具，从而产生一个或多个输出文件。 例如，MFC 应用程序中的帮助文件都是借助自定义生成工具生成的。 有关详细信息，请参阅[如何：向 MSBuild 项目添加自定义生成工具](how-to-add-custom-build-tools-to-msbuild-projects.md)并[指定自定义生成工具](specifying-custom-build-tools.md)。
+   自定义生成工具是与一个或多个文件关联的生成规则。 自定义生成步骤可将输入文件传递给自定义生成工具，从而产生一个或多个输出文件。 例如，MFC 应用程序中的帮助文件都是借助自定义生成工具生成的。 有关详细信息，请参阅[如何：向 MSBuild 项目添加自定义生成工具](how-to-add-custom-build-tools-to-msbuild-projects.md)以及[指定自定义生成工具](specifying-custom-build-tools.md)。
 
 - **生成事件**
 
@@ -73,5 +73,5 @@ ms.locfileid: "57825112"
 
 ## <a name="see-also"></a>请参阅
 
-[Visual Studio Projects - C++](creating-and-managing-visual-cpp-projects.md)<br>
+[Visual Studio 项目的 c + +](creating-and-managing-visual-cpp-projects.md)<br>
 [用于生成命令和属性的常用宏](reference/common-macros-for-build-commands-and-properties.md)

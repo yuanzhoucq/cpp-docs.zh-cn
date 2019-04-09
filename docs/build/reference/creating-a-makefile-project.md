@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Makefile projects, creating
 - project files [C++], Makefile projects
 ms.assetid: dd077af3-97a8-48fb-baaa-cf7e07ddef61
-ms.openlocfilehash: bb28d76b0ec459b5fd63f6a00dedff723274e90f
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 9c2edfe35233672e8117d336ba40cfea497b1a22
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57825081"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035593"
 ---
 # <a name="create-a-c-makefile-project"></a>创建 c + + 生成文件项目
 
@@ -21,8 +21,8 @@ ms.locfileid: "57825081"
 如果你有现有生成文件项目，则当你想要在 Visual Studio IDE 中编码和/或对其进行调试时，你有以下选择：
 
 - 使用现有生成文件来配置 Visual Studio 将用于 IntelliSense 的.vcxproj 文件的 Visual Studio 中创建生成文件项目。 （你将不会具有在本机 MSBuild 项目中获得的所有 IDE 功能。）请参阅下面的[创建生成文件项目](#create_a_makefile_project)。
-- 使用“从现有代码文件新建项目”向导来从源代码创建本机 MSBuild 项目。 不会完成此操作后使用原始的生成文件。 有关详细信息，请参阅[如何：从现有代码创建 c + + 项目](../how-to-create-a-cpp-project-from-existing-code.md)。
-- **Visual Studio 2017 和更高版本**:使用**打开文件夹**功能编辑和生成生成文件项目作为-是无需任何干预 MSBuild 系统。 有关详细信息，请参阅[c + + 的打开文件夹项目](../open-folder-projects-cpp.md)。
+- 使用“从现有代码文件新建项目”向导来从源代码创建本机 MSBuild 项目。 不会完成此操作后使用原始的生成文件。 有关详细信息，请参阅[如何：根据现有代码创建 C++ 项目](../how-to-create-a-cpp-project-from-existing-code.md)。
+- **Visual Studio 2017 及更高版本**：使用**打开文件夹**功能编辑和生成生成文件项目作为-是无需任何干预 MSBuild 系统。 有关详细信息，请参阅 [C++ 的“打开文件夹”项目](../open-folder-projects-cpp.md)。
 
 ## <a name="a-namecreateamakefileproject-to-create-a-makefile-project-with-the-makefile-project-template"></a><a name="create_a_makefile_project"> 若要使用生成文件项目模板创建生成文件项目
 
@@ -54,7 +54,7 @@ ms.locfileid: "57825081"
 
 - **重新生成命令行：** 指定当用户从生成菜单中选择重新生成时运行命令行。 显示在重新生成项目的属性页的 Nmake 页上所有的命令行字段。
 
-## <a name="how-to-enable-intellisense-for-makefile-projects"></a>如何：对生成文件项目启用 IntelliSense
+## <a name="how-to-enable-intellisense-for-makefile-projects"></a>如何：为生成文件项目启用 IntelliSense
 
 当特定项目设置或编译器选项的设置不正确时，IntelliSense 失败生成文件项目中。 请按照下列步骤来配置生成文件项目，以便 IntelliSense 能按预期方式：
 
@@ -86,7 +86,7 @@ ms.locfileid: "57825081"
 
 ## <a name="see-also"></a>请参阅
 
-[使用 IntelliSense](/visualstudio/ide/using-intellisense)<br>
+[Using IntelliSense](/visualstudio/ide/using-intellisense)<br>
 [NMAKE 参考](nmake-reference.md)<br>
 [如何：从现有代码创建 c + + 项目](../how-to-create-a-cpp-project-from-existing-code.md)
 [生成文件中的特殊字符](special-characters-in-a-makefile.md)<br/>

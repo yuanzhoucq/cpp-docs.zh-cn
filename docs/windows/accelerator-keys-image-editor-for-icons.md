@@ -8,12 +8,12 @@ helpviewer_keywords:
 - accelerator keys
 - Image editor [C++], accelerator keys
 ms.assetid: add37861-3e17-4a6f-89e8-46df12e74a90
-ms.openlocfilehash: 0b29f435ab91b10e010e956d26fb8d2d116edc6e
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 45afdf4b3b557b560d7597b1bb4330c36a1fc84d
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563116"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59025080"
 ---
 # <a name="accelerator-keys-c-image-editor-for-icons"></a>快捷键 （图标的图像编辑器 c + +）
 
@@ -40,7 +40,7 @@ ms.locfileid: "57563116"
 |图像.直线工具|Ctrl  +  L|用选定形状、大小和颜色绘制一条直线。|
 |图像.放大工具|**Ctrl** + **M**|激活**Magnify**工具，它允许您放大你的映像的特定部分。|
 |图像.放大|Ctrl + Shift + M|在当前放大倍数和 1:1 放大倍数之间切换。|
-|图像.新建图像类型|**插入**|将启动[新建\<设备 > 图像类型对话框](../windows/new-device-image-type-dialog-box-image-editor-for-icons.md)使用它创建不同的图像类型的图像。|
+|图像.新建图像类型|**Insert**|将启动[新建\<设备 > 图像类型对话框](../windows/new-device-image-type-dialog-box-image-editor-for-icons.md)使用它创建不同的图像类型的图像。|
 |图像.下一种颜色|Ctrl + ]<br /><br /> - 或 -<br /><br /> **Ctrl** + **右箭头**|将绘制前景色更改为下一个调色板颜色。|
 |Image.NextRightColor|Ctrl + Shift + ]<br /><br /> - 或 -<br /><br /> **Shift** + **Ctrl** + **右箭头**|将绘制背景色更改为下一个调色板颜色。|
 |图像.空心椭圆工具|**Shift** + **Alt** + **P**|用一个轮廓绘制实心椭圆。|
@@ -64,7 +64,7 @@ ms.locfileid: "57563116"
 
 ## <a name="requirements"></a>要求
 
-无
+None
 
 ## <a name="see-also"></a>请参阅
 

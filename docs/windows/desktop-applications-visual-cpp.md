@@ -2,12 +2,12 @@
 title: 桌面应用程序 （Visual c + +）
 ms.date: 11/04/2016
 ms.assetid: a020b534-293c-44e2-aa48-516c43ddeb8f
-ms.openlocfilehash: 090180062139642d8a686e9f1bf063f3e65aee88
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 1242878c6b79616aaadb6a176cd29deeb89a7daf
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58771914"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033097"
 ---
 # <a name="desktop-applications-visual-c"></a>桌面应用程序 （Visual c + +）
 
@@ -37,14 +37,14 @@ C 运行时 (CRT) 和标准库类和函数、 COM 对象和公共 Windows 函数
 
 |标题|描述|
 |-----------|-----------------|
-|[C++ 中的 Windows 控制台应用程序](console-applications-in-visual-cpp.md)|包含有关控制台应用的信息。 Win32（或 Win64）控制台应用程序本身不具有窗口，且不使用消息循环。 它在控制台窗口中运行，并通过命令行处理输入和输出。|
-|[演练：创建 Windows 桌面应用程序 (C++)](walkthrough-creating-windows-desktop-applications-cpp.md)|创建一个简单的 Windows 桌面应用程序。|
-|[创建空的 Windows 桌面应用程序](creating-an-empty-windows-desktop-application.md)|如何创建 Windows 桌面项目没有默认文件。|
+|[C + + 中的 Windows 控制台应用程序](console-applications-in-visual-cpp.md)|包含有关控制台应用的信息。 Win32（或 Win64）控制台应用程序本身不具有窗口，且不使用消息循环。 它在控制台窗口中运行，并通过命令行处理输入和输出。|
+|[演练：创建 Windows 桌面应用程序 （c + +）](walkthrough-creating-windows-desktop-applications-cpp.md)|创建一个简单的 Windows 桌面应用程序。|
+|[正在创建空的 Windows 桌面应用程序](creating-an-empty-windows-desktop-application.md)|如何创建 Windows 桌面项目没有默认文件。|
 |[向空的 Win32 应用程序添加文件](adding-files-to-an-empty-win32-applications.md)|如何将文件添加到一个空项目。|
 |[使用资源文件](working-with-resource-files.md)|如何将图像、 图标、 字符串表和其他资源添加到桌面应用程序。|
-|[有关创建使用 DirectX （c + +） 的游戏的资源](resources-for-creating-a-game-using-directx.md)|在 c + + 中创建游戏的内容的链接。|
+|[有关使用 DirectX 创建游戏的资源 (C++)](resources-for-creating-a-game-using-directx.md)|在 c + + 中创建游戏的内容的链接。|
 |[演练：创建和使用静态库](walkthrough-creating-and-using-a-static-library-cpp.md)|如何创建一个.lib 二进制文件。|
-|[如何：在 Windows 桌面应用程序中使用 Windows 10 SDK](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|包含使用 Windows 10 SDK 设置项目以便生成的步骤。|
+|[如何：使用 Windows 10 SDK 中的 Windows 桌面应用程序](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|包含使用 Windows 10 SDK 设置项目以便生成的步骤。|
 
 ## <a name="related-articles"></a>相关文章
 
