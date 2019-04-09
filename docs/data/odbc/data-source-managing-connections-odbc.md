@@ -18,12 +18,12 @@ helpviewer_keywords:
 - ODBC data sources [C++], connections
 - database connections [C++], MFC ODBC classes
 ms.assetid: c0adbcdd-c000-40c6-b199-09ffdc7b6ef2
-ms.openlocfilehash: 0f10dd1053819cb201385098b0125042ad556a47
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5b646ca0eb86d3addabaad59ca23f56cfe914114
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568493"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041158"
 ---
 # <a name="data-source-managing-connections-odbc"></a>数据源：管理连接 (ODBC)
 
@@ -72,7 +72,7 @@ ODBC 管理器用于配置你的数据源。 您可以在安装后使用 ODBC �
 
 ##  <a name="_core_working_in_a_multiuser_environment"></a> 在多用户环境中工作
 
-如果多个用户连接到数据源，他们可以更改数据，而您在记录集中操作。 同样，所做的更改可能会影响其他用户的记录集。 有关详细信息，请参阅[记录集： 如何更新记录 (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)并[事务 (ODBC)](../../data/odbc/transaction-odbc.md)。
+如果多个用户连接到数据源，他们可以更改数据，而您在记录集中操作。 同样，所做的更改可能会影响其他用户的记录集。 有关详细信息，请参阅[记录集：如何记录集更新记录 (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)并[事务 (ODBC)](../../data/odbc/transaction-odbc.md)。
 
 ##  <a name="_core_generalizing_the_connection_string"></a> 将连接字符串通用化
 
@@ -139,5 +139,5 @@ ODBC 管理器用于配置你的数据源。 您可以在安装后使用 ODBC �
 ## <a name="see-also"></a>请参阅
 
 [数据源 (ODBC)](../../data/odbc/data-source-odbc.md)<br/>
-[数据源：确定数据源的架构 (ODBC)](../../data/odbc/data-source-determining-the-schema-of-the-data-source-odbc.md)<br/>
+[数据源：确定数据源 (ODBC) 的架构](../../data/odbc/data-source-determining-the-schema-of-the-data-source-odbc.md)<br/>
 [CRecordset 类](../../mfc/reference/crecordset-class.md)

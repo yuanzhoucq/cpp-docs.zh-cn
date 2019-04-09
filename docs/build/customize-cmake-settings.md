@@ -3,12 +3,12 @@ title: 在 Visual Studio 中自定义 CMake 生成设置
 ms.date: 03/05/2019
 helpviewer_keywords:
 - CMake build settings
-ms.openlocfilehash: dd34fbefcbc89c7c4aa93105ae5bad31ae4d5f01
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: 1bdf4ef3e20b055b6fa3d5449a880ddb7aab44a0
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328293"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037518"
 ---
 # <a name="customize-cmake-build-settings"></a>自定义 CMake 生成设置
 
@@ -100,16 +100,16 @@ Visual Studio 提供多个 CMake 配置，这些配置定义如何调用 CMake.e
 
 ## <a name="environment-variables"></a>环境变量
 
- `CMakeSettings.json` 还支持使用上述任何属性中的环境变量。 所使用的语法为 `${env.FOO}`，用于展开环境变量 %FOO%。
+ `CMakeSettings.json` 此外支持任何上面提到的属性中使用环境变量。 所使用的语法为 `${env.FOO}`，用于展开环境变量 %FOO%。
 此外，还可以使用此文件中内置的宏：
 
-- `${workspaceRoot}`：提供工作区文件夹的完整路径
-- `${workspaceHash}`：工作区位置的哈希；可用于创建当前工作区的唯一标识符（例如用于文件路径）
-- `${projectFile}`：根 CMakeLists.txt 文件的完整路径
-- `${projectDir}`：根 CMakeLists.txt 文件的文件夹完整路径
-- `${thisFile}` - `CMakeSettings.json` 文件的完整路径
-- `${name}`：配置的名称
-- `${generator}`：配置中使用的 CMake 生成器的名称
+- `${workspaceRoot}` -提供工作区文件夹的完整路径
+- `${workspaceHash}` – 哈希的工作区的位置;可用于创建当前工作区 （例如，若要在文件夹路径中使用） 的唯一标识符
+- `${projectFile}` – 根 CMakeLists.txt 文件的完整路径
+- `${projectDir}` – 根 CMakeLists.txt 文件的文件夹的完整路径
+- `${thisFile}` – 的完整路径`CMakeSettings.json`文件
+- `${name}` – 配置的名称
+- `${generator}` – 此配置中使用 CMake 生成器的名称
 
 ## <a name="ninja-command-line-arguments"></a>Ninja 命令行参数
 
@@ -121,7 +121,7 @@ ninja: invalid option -- `-?'
 usage: ninja [options] [targets...]
 ```
 
-|选项|描述|
+|Option|描述|
 |--------------|------------|
 | --version  | 打印 ninja 版本（“1.7.1”）|
 |   -C DIR   | 在执行任何其他操作前更改为 DIR|
@@ -236,7 +236,7 @@ usage: ninja [options] [targets...]
 
 ## <a name="see-also"></a>请参阅
 
-[Visual Studio 中的 CMake 项目](cmake-projects-in-visual-studio.md)<br/>
+[在 Visual Studio 中的 CMake 项目](cmake-projects-in-visual-studio.md)<br/>
 [配置 Linux CMake 项目](../linux/cmake-linux-project.md)<br/>
 [连接到远程 Linux 计算机](../linux/connect-to-your-remote-linux-computer.md)<br/>
 [配置 CMake 调试会话](configure-cmake-debugging-sessions.md)<br/>

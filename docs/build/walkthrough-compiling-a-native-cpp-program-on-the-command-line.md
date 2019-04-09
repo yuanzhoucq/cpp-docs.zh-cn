@@ -151,8 +151,7 @@ Visual Studio 的生成工具安装命令行编译器、 工具和生成 C 和 c
 
 `cl /EHsc file1.cpp file2.cpp file3.cpp`
 
-
-  `/EHsc` 命令行选项指示编译器启用 C++ 异常处理。 有关详细信息，请参阅 [/EH（异常处理模型）](reference/eh-exception-handling-model.md)。
+`/EHsc` 命令行选项指示编译器启用 C++ 异常处理。 有关详细信息，请参阅 [/EH（异常处理模型）](reference/eh-exception-handling-model.md)。
 
 时提供额外的源文件时，编译器使用第一个输入的文件创建程序名称。 在这种情况下，它将输出一个名为 file1.exe 程序。 若要将名称更改为 program1.exe，添加[/out](reference/out-output-file-name.md)链接器选项：
 

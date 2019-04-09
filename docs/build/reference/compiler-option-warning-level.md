@@ -57,12 +57,12 @@ helpviewer_keywords:
 - -w compiler option [C++]
 - /W2 compiler option [C++]
 - /Wv compiler option [C++]
-ms.openlocfilehash: 997a73541ab95a393bda4ebf5412c11f025b03a3
-ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
+ms.openlocfilehash: 7b5c19c95cff3058bb3dcc6640f8ab07cf01edd6
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "57820684"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59040064"
 ---
 # <a name="w-w0-w1-w2-w3-w4-w1-w2-w3-w4-wall-wd-we-wo-wv-wx-warning-level"></a>/w、 /W0、 /W1、 /W2、 /W3、 / w4、 /w1、 /w2、 /w3、 /w4、 /Wall、 /wd、 / /we、 /wo、 /Wv、 /WX （警告级别）
 
@@ -92,7 +92,7 @@ ms.locfileid: "57820684"
 
 下表中介绍的警告选项和相关自变量：
 
-|选项|描述|
+|Option|描述|
 ------------|-----------------|
 |**/w**|禁止显示所有编译器警告。|
 |**/W0**<br /><br /> **/W1**<br /><br /> **/W2**<br /><br /> **/W3**<br /><br /> **/W4**|指定要由编译器生成的警告级别。 有效的警告等级 0 到 4 范围内：<br />**/ W0**禁止显示所有警告。 这相当于 **/w**。<br />**/ W1**显示等级 1 （严重） 警告。 **/ W1**是命令行编译器中的默认设置。<br />**/ W2**显示等级 1 和等级 2 （明显） 警告。<br />**/ W3**显示级别 1、 2 级和等级 3 （生产质量） 警告。 **/ W3**是在 IDE 中的默认设置。<br />**/ W4**显示级别 1，级别 2 和等级 3 警告以及在所有级别 4 （信息性） 的警告，默认情况下不会关闭。 我们建议使用此选项可以提供类似于 lint 的警告。 对于新项目，它可能是最好使用 **/w4**在所有编译; 这将确保尽可能少的可能的硬查找代码缺陷。|
@@ -116,7 +116,7 @@ ms.locfileid: "57820684"
 
 1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[Visual Studio 中的设置 c + + 编译器和生成属性](../working-with-project-properties.md)。
 
-1. 若要设置 **/W0**， **/W1**， **/W2**， **/W3**， **/w4**， **/wall**m **/Wv**， **/WX**或 **/WX-** 选项中，选择**配置属性** > **C /C + +** > **常规**属性页。
+1. 若要设置 **/W0**， **/W1**， **/W2**， **/W3**， **/w4**， **/wall**，**/Wv**， **/WX**或 **/WX-** 选项中，选择**配置属性** > **C /C + +** > **常规**属性页。
 
    - 若要设置 **/W0**， **/W1**， **/W2**， **/W3**， **/w4**，或 **/wall**选项，修改**警告等级**属性。
 

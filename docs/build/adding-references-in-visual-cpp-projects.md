@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Add References Dialog Box (C++)
 - .NET Framework (C++), Add References Dialog Box
 ms.assetid: 12b8f571-0f21-40b3-9404-5318a57e9cb5
-ms.openlocfilehash: eb4d970527ba919af10eadab7c907f5108767b9b
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: dff057977e6b6ff0c36d3a888bc4d5c3aa778576
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58780465"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038757"
 ---
 # <a name="consuming-libraries-and-components"></a>使用库和组件
 
@@ -128,11 +128,11 @@ ActiveX 引用属性仅可用于对 COM 组件的引用。 只有在“引用”
 
    显示所引用的程序集的程序及名称。
 
-- **区域性**
+- **culture**
 
    显示所选引用的区域性。
 
-- **说明**
+- **描述**
 
    显示所选引用的描述。
 
@@ -158,7 +158,7 @@ ActiveX 引用属性仅可用于对 COM 组件的引用。 只有在“引用”
 
 - **强名称**
 
-   如果引用的程序集具有强名称，则为`true` 。 强名称程序集的版本是唯一的。
+   `true` 。 强名称程序集的版本是唯一的。
 
 - **Version**
 
@@ -167,4 +167,4 @@ ActiveX 引用属性仅可用于对 COM 组件的引用。 只有在“引用”
 ## <a name="see-also"></a>请参阅
 
 [C + + 项目属性页引用](reference/property-pages-visual-cpp.md)<br>
-[在 Visual Studio 中设置 C++ 编译器并生成属性](working-with-project-properties.md)
+[设置 c + + 编译器和生成 Visual Studio 中的属性](working-with-project-properties.md)

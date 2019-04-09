@@ -1,34 +1,34 @@
 ---
-title: CMake 预定义的配置参考
+title: CMake 预定义配置引用
 ms.description: Visual Studio provides several predefined build configurations for CMake projects on Linux, Windows, ARM, and IoT.
 ms.date: 03/05/2019
 helpviewer_keywords:
 - CMake redefined configurations
-ms.openlocfilehash: d1e77db7ddc38fa41771a512a5b863d403bfdc28
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: cecadaec2e409dfba3b1929e406c36df3e498307
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57824945"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59031439"
 ---
-# <a name="cmake-predefined-build-configurations"></a>CMake 预定义的生成配置
+# <a name="cmake-predefined-build-configurations"></a>CMake 预定义生成配置
 
-CMake 项目，在生成配置中的 CMakeSettings.json 文件提供存储。 当你选择**管理配置**从在主工具栏中生成配置下拉列表中，会出现一个对话框，显示 Visual Studio 中提供的 CMake 配置的默认值： 
-- x86 调试 
-- x86 版本
-- x64 调试
-- x64 版本
-- Linux 调试
+在 CMake 项目中，生成配置存储在 CMakeSettings.json 文件中。 在主要工具栏中的生成配置下拉列表中选择“管理配置”时，将出现一个显示 Visual Studio 中可用的默认 CMake 配置的对话框： 
+- x86 Debug 
+- x86 Release
+- x64 Debug
+- x64 Release
+- Linux-Debug
 - Linux-Release
-- IoT 调试
-- IoT 版本
-- MinGW 调试
-- MinGW 版本 
+- IoT Debug
+- IoT Release
+- MinGW Debug
+- MinGW Release 
 
-当选择某个配置时，它被添加到项目的根文件夹中的 CMakeSettings.json 文件中。 然后可以使用它来生成你的项目。 
+选择某些配置时，该配置将添加到项目根文件夹中的 CMakeSettings.json 文件中。 然后可以使用该配置生成项目。 
 
 
-## <a name="linux-predefined-build-configurations"></a>Linux 预定义的生成配置：
+## <a name="linux-predefined-build-configurations"></a>Linux 预定义生成配置：
 
 ```json
 {
@@ -101,9 +101,9 @@ You can use these optional settings for more control:
 }
 ```
 
-这些选项，可以在远程系统上运行命令之前和之后生成，以及之前 CMake 生成。 值可以是任何有效远程系统的命令。 将输出输送到 Visual Studio。
+这些选项可用于生成前后以及 CMake 生成前在远程系统中运行命令。 值可以是远程系统上的任何有效命令。 输出通过管道传递回 Visual Studio。
 
-## <a name="iot-predefined-build-configurations"></a>IoT 预定义的生成配置
+## <a name="iot-predefined-build-configurations"></a>IoT 预定义生成配置
 
 ```json
 {
@@ -196,7 +196,7 @@ You can use these optional settings for more control:
     }
 ```
 
-## <a name="mingw-predefined-build-configurations"></a>MinGW 预定义的生成配置
+## <a name="mingw-predefined-build-configurations"></a>MinGW 预定义生成配置
 
 ```json
 {
@@ -272,7 +272,7 @@ You can use these optional settings for more control:
     }
 ```
 
-## <a name="x86-64-predefined-build-configurations"></a>x86-64 预定义的生成配置
+## <a name="x86-64-predefined-build-configurations"></a>x86-64 预定义生成配置
 
 ```json
     {
@@ -351,4 +351,4 @@ You can use these optional settings for more control:
 [连接到远程 Linux 计算机](../linux/connect-to-your-remote-linux-computer.md)<br/>
 [配置 CMake 调试会话](configure-cmake-debugging-sessions.md)<br/>
 [部署、运行和调试 Linux 项目](../linux/deploy-run-and-debug-your-linux-project.md)<br/>
-[CMake 预定义的配置参考](cmake-predefined-configuration-reference.md)<br/>
+[CMake 预定义配置引用](cmake-predefined-configuration-reference.md)<br/>

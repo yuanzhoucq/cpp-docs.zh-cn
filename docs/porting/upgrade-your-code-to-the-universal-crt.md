@@ -2,12 +2,12 @@
 title: 将代码升级到通用 CRT
 ms.date: 03/31/2017
 ms.assetid: eaf34c1b-da98-4058-a059-a10db693a5ce
-ms.openlocfilehash: 368b61820310135f14cbe4225b9315e62d3686a7
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: bdf1615d47361654e9690977520d01c332098438
+ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58769181"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58898760"
 ---
 # <a name="upgrade-your-code-to-the-universal-crt"></a>将代码升级到通用 CRT
 
@@ -49,4 +49,4 @@ C 和 C++ 编译器特定的运行时支持库 **vcruntime**，包含支持程�
 [潜在的升级问题概述 (Visual C++)](overview-of-potential-upgrade-issues-visual-cpp.md)<br/>
 [从 Visual C++ 早期版本升级项目](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
 [Visual C++ 更改历史记录（2003 - 2015）](visual-cpp-change-history-2003-2015.md)<br/>
-[Visual Studio 2017 中 C++ 的符合性改进](../overview/cpp-conformance-improvements-2017.md)
+[Visual Studio 中的 C++ 符合性改进](../overview/cpp-conformance-improvements.md)

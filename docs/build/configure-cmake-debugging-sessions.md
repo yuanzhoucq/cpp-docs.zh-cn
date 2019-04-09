@@ -3,12 +3,12 @@ title: 在 Visual Studio 中配置 CMake 调试会话
 ms.date: 03/21/2019
 helpviewer_keywords:
 - CMake debugging
-ms.openlocfilehash: 712728247c439c38d5e640118fc153cf89647c80
-ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
+ms.openlocfilehash: 9899f99994935ec419fff400670644b7d78a190a
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58356161"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035343"
 ---
 # <a name="configure-cmake-debugging-sessions"></a>配置 CMake 调试会话
 
@@ -42,7 +42,7 @@ ms.locfileid: "58356161"
 
 ## <a name="support-for-cmakesettings-variables"></a>对 CMakeSettings 变量的支持
 
- **Launch.vs.json**支持中声明的变量**CMakeSettings.json** （见下文） 和适用于当前所选的配置。 它还具有一个名为 `currentDir` 的键，该键可设置启动的应用的当前目录：
+ **Launch.vs.json**支持中声明的变量**CMakeSettings.json** （见下文） 和适用于当前所选的配置。 它还具有一个名为密钥`currentDir`，用于设置适用于本地项目的启动应用的当前目录：
 
 ```json
 {
@@ -59,9 +59,16 @@ ms.locfileid: "58356161"
 ```cmd
 C:\Users\satyan\7f14809a-2626-873e-952e-cdf038211175\
 ```
+
+注册表项 cwd 设置为远程项目启动应用程序的当前目录。 默认值为 ${debugInfo.defaultWorkingDirectory} 的计算结果为 
+
+```cmd
+/var/tmp/src/bfc6f7f4-4f0f-8b35-80d7-9198fa973fb9/Linux-Debug
+```
+
 ## <a name="see-also"></a>请参阅
 
-[Visual Studio 中的 CMake 项目](cmake-projects-in-visual-studio.md)<br/>
+[在 Visual Studio 中的 CMake 项目](cmake-projects-in-visual-studio.md)<br/>
 [配置 Linux CMake 项目](../linux/cmake-linux-project.md)<br/>
 [连接到远程 Linux 计算机](../linux/connect-to-your-remote-linux-computer.md)<br/>
 [自定义 CMake 生成设置](customize-cmake-settings.md)<br/>
