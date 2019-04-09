@@ -31,8 +31,7 @@ ms.locfileid: "57271185"
 
 ##  <a name="agent_status"></a>  agent_status 枚举
 
-
-  `agent` 的有效状态。
+`agent` 的有效状态。
 
 ```
 enum agent_status;
@@ -168,8 +167,7 @@ enum DynamicProgressFeedbackType;
 
 ##  <a name="join_type"></a>  join_type 枚举
 
-
-  `join` 消息块的类型。
+`join` 消息块的类型。
 
 ```
 enum join_type;
@@ -188,8 +186,7 @@ enum join_type;
 
 ##  <a name="message_status"></a>  message_status 枚举
 
-
-  `message` 对象的内容到块的有效响应。
+`message` 对象的内容到块的有效响应。
 
 ```
 enum message_status;
@@ -308,8 +305,7 @@ enum task_group_status;
 
 |名称|描述|
 |----------|-----------------|
-|`canceled`|
-  `task_group` 或 `structured_task_group` 对象已取消。 一个或多个任务可能未执行。|
+|`canceled`|`task_group` 或 `structured_task_group` 对象已取消。 一个或多个任务可能未执行。|
 |`completed`|排入 `task_group` 或 `structured_task_group` 对象的任务已成功完成。|
 |`not_complete`|排入 `task_group` 对象的任务尚未完成。 请注意，此值目前不是由并发运行时返回的。|
 

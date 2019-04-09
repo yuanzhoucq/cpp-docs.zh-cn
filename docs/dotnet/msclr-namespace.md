@@ -23,8 +23,7 @@ ms.locfileid: "57739334"
 ---
 # <a name="msclr-namespace"></a>msclr 命名空间
 
-
-  `msclr` 命名空间包含 C++ 支持库的所有类。 这些类的详细信息，请参阅[c + + 支持库](../dotnet/cpp-support-library.md)。
+`msclr` 命名空间包含 C++ 支持库的所有类。 这些类的详细信息，请参阅[c + + 支持库](../dotnet/cpp-support-library.md)。
 
 ## <a name="see-also"></a>请参阅
 

@@ -336,8 +336,7 @@ ms.locfileid: "57304894"
 |LBS_DISABLENOSCROLL|列表框中显示一个禁用的垂直滚动条当列表框未包含足够的项滚动。 如果不使用此样式，则当列表框未包含足够的项时，将会隐藏滚动条。|
 |LBS_EXTENDEDSEL|用户可以选择使用 SHIFT 键和鼠标或特定组合键的多个项。|
 |LBS_HASSTRINGS|指定一个所有者描述列表框，其中包含由字符串组成的项。 列表框保留字符串的内存和指针，以便应用程序可使用 `GetText` 成员函数检索特定项的文本。|
-|LBS_MULTICOLUMN|指定水平滚动的多列列表框。 
-  `SetColumnWidth` 成员函数将设置列的宽度。|
+|LBS_MULTICOLUMN|指定水平滚动的多列列表框。 `SetColumnWidth` 成员函数将设置列的宽度。|
 |LBS_MULTIPLESEL|每次用户单击或双击字符串切换字符串选择。 可以选择任意数量的字符串。|
 |LBS_NODATA|指定无数据列表框。 当列表框中的项数超出一千时，请指定此样式。 无数据列表框还必须具有 LBS_OWNERDRAWFIXED 样式，但不能有 LBS_SORT 或 LBS_HASSTRINGS 样式。<br/><br/> 无数据列表框类似于所有者描述的列表框，但它不包含项的字符串或位图数据。 用于添加、插入或删除项的命令始终会忽略任何给定的项数据；在列表框内查找字符串的请求始终会失败。 必须绘制某个项时，系统会将 WM_DRAWITEM 消息发送到所有者窗口。 ItemID 成员`DRAWITEMSTRUCT`WM_DRAWITEM 消息传递结构指定要绘制的项的行号。 无数据列表框不发送 WM_DELETEITEM 消息。|
 |LBS_NOINTEGRALHEIGHT|列表框的大小正是应用程序创建列表框时指定的大小。 通常，Windows 会调整列表框的大小，以使列表框不会只显示部分项。|

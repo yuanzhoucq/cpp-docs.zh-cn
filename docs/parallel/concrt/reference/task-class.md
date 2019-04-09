@@ -180,8 +180,7 @@ task& operator= (task&& _Other);
 
 ### <a name="remarks"></a>备注
 
-
-  `task` 的行为方式与智能指针的类似，在分配副本之后，此 `task` 对象与 `_Other` 表示相同的实际任务。
+`task` 的行为方式与智能指针的类似，在分配副本之后，此 `task` 对象与 `_Other` 表示相同的实际任务。
 
 ##  <a name="operator_eq_eq"></a> 运算符 = =
 
@@ -252,8 +251,7 @@ task(
 
 ### <a name="remarks"></a>备注
 
-
-  `task` 的默认构造函数仅用于允许在容器中使用任务。 只有在分配有效任务后才能使用默认的构造任务。 等方法`get`，`wait`或`then`将引发[invalid_argument](../../../standard-library/invalid-argument-class.md)调用默认构造任务时的异常。
+`task` 的默认构造函数仅用于允许在容器中使用任务。 只有在分配有效任务后才能使用默认的构造任务。 等方法`get`，`wait`或`then`将引发[invalid_argument](../../../standard-library/invalid-argument-class.md)调用默认构造任务时的异常。
 
 通过 `task_completion_event` 创建的任务将在设置任务完成事件后完成（并安排好其延续）。
 
@@ -333,8 +331,7 @@ __declspec(
 
 ##  <a name="wait"></a> 等待
 
-等待此任务到达终止状态。 
-  `wait` 可执行内联任务，前提是所有任务依赖项得到满足并且后台辅助线程没有选取它执行。
+等待此任务到达终止状态。 `wait` 可执行内联任务，前提是所有任务依赖项得到满足并且后台辅助线程没有选取它执行。
 
 ```
 task_status wait() const;
