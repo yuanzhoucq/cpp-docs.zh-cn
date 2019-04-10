@@ -1,6 +1,6 @@
 ---
 title: /FD（IDE 最小重新生成）
-ms.date: 11/04/2016
+ms.date: 04/08/2019
 f1_keywords:
 - /FD
 helpviewer_keywords:
@@ -8,18 +8,18 @@ helpviewer_keywords:
 - -FD compiler option [C++]
 - FD compiler option [C++]
 ms.assetid: 7ef21b8c-a448-4bb4-9585-a2a870028e17
-ms.openlocfilehash: 323a0045ab11f23ab996d5179a135d0eb4184f20
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: ac63b021dc0cb9ee5964af7fa2e168f710653979
+ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57817434"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59424048"
 ---
 # <a name="fd-ide-minimal-rebuild"></a>/FD（IDE 最小重新生成）
 
-**/FD**不向除中的用户公开[命令行](command-line-property-pages.md)c + + 项目的属性页**属性页**对话框中，当且仅当[/Gm （启用最小重新生成）](gm-enable-minimal-rebuild.md)也不会选中。 **/FD**以外的其他开发环境中没有影响。 **/FD**的输出中未公开**cl /？**。
+**/FD**仅向用户公开[命令行](command-line-property-pages.md)属性页的C++项目的**属性页**对话框。 提供当且仅当它是不推荐使用和关闭： 默认情况下[/Gm （启用最小重新生成）](gm-enable-minimal-rebuild.md)选项未选中。 **/FD**以外的其他开发环境中没有影响。 **/FD**的输出中不公开`cl /?`。
 
-如果不启用 **/Gm**开发环境中 **/FD**将使用。 **/FD**可确保.idb 文件有足够的依赖关系信息。 **/FD**仅由开发环境中，并且不应从命令行或生成脚本。
+如果未启用已弃用 **/Gm**在开发环境中，选项 **/FD**使用。 **/FD**可确保.idb 文件有足够的依赖关系信息。 **/FD**仅由开发环境中，从命令行或生成脚本不应使用它。
 
 ## <a name="see-also"></a>请参阅
 

@@ -1,19 +1,19 @@
 ---
-title: c + + 中的 constexpr lambda 表达式
-ms.date: 07/19/2017
+title: 中的 constexpr lambda 表达式C++
+ms.date: 04/08/2019
 helpviewer_keywords:
 - lambda expressions [C++], constexpr
 ms.assetid: b56346cd-fbff-475f-aeaa-ed2010c6d6f7
-ms.openlocfilehash: 937fae7da0f20e81ac5450d597af7a822219d654
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d1bc60a6da813e54c857da38b0164f544216be00
+ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506591"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59424178"
 ---
-# <a name="constexpr-lambda-expressions-in-c"></a>c + + 中的 constexpr lambda 表达式
+# <a name="constexpr-lambda-expressions-in-c"></a>中的 constexpr lambda 表达式C++
 
-**Visual Studio 2017 版本 15.3 及更高版本**(适用于[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): 可能作为声明的 lambda 表达式**constexpr**或固定表达式中使用时的每个初始化常量表达式中允许包含它捕获或引入的数据成员。
+**Visual Studio 2017 版本 15.3 及更高版本**(适用于[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)):可能作为声明的 lambda 表达式**constexpr**或常量表达式中允许的它捕获或引入了每个数据成员初始化时使用的常量表达式中。
 
 ```cpp
     int y = 32;

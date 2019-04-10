@@ -1,6 +1,6 @@
 ---
 title: /MP（使用多个进程生成）
-ms.date: 02/22/2018
+ms.date: 04/08/2019
 f1_keywords:
 - VC.Project.VCCLCompilerTool.MultiProcessorCompilation
 helpviewer_keywords:
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /MP compiler option (C++)
 - MP compiler option (C++)
 - cl.exe compiler, multi-process build
-ms.openlocfilehash: 8a66f6f6f1f4ce77e33df992b915be9ca5dcce70
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: e005b0314e87270e81dbb155dfdaa67be067cd3f
+ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57808451"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59424139"
 ---
 # <a name="mp-build-with-multiple-processes"></a>/MP（使用多个进程生成）
 
@@ -51,7 +51,7 @@ ms.locfileid: "57808451"
 |--------------------------------|-----------------|
 |[#import](../../preprocessor/hash-import-directive-cpp.md) 预处理器指令|将类型库中的类型转换为 C++ 类，然后将这些类写入头文件。|
 |[/E](e-preprocess-to-stdout.md), [/EP](ep-preprocess-to-stdout-without-hash-line-directives.md)|将预处理器输出复制到标准输出 (**stdout**)。|
-|[/Gm](gm-enable-minimal-rebuild.md)|启用增量重新生成。|
+|[/Gm](gm-enable-minimal-rebuild.md)|已否决。 启用增量重新生成。|
 |[/showIncludes](showincludes-list-include-files.md)|将包含文件的列表写入标准错误 (**stderr**)。|
 |[/Yc](yc-create-precompiled-header-file.md)|编写预编译头文件。|
 
@@ -125,12 +125,8 @@ Visual Studio 将使用[MSBuild.exe](/visualstudio/msbuild/msbuild-reference)工
 
 - 如果经过均衡处理的项目和每个项目的文件数量，使用这两个 MSBuild 和 **/MP**。 起初，将 **/maxcpucount** 选项设置为要生成的项目数，并将 **/MP** 选项设置为计算机上的处理器数。 测量性能，然后调整设置以生成最佳结果。 重复此过程，直到对总生成时间感到满意。
 
-#### <a name="the-gm-compiler-option"></a>/Gm 编译器选项
-
-默认情况下，项目生成会为调试版本启用 **/Gm** 编译器选项（增量生成），而对发布版本禁用该选项。 因此，调试版本中会自动禁用 **/MP** 编译器选项，因为它与默认的 **/Gm** 编译器选项冲突。
-
 ## <a name="see-also"></a>请参阅
 
 [#import 指令](../../preprocessor/hash-import-directive-cpp.md)<br/>
 [命令行参考](/visualstudio/msbuild/msbuild-command-line-reference)<br/>
-[/Zf（更快的 PDB 生成）](zf.md)<br/>
+[/Zf （更快的 PDB 生成）](zf.md)<br/>
