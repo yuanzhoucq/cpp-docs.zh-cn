@@ -1,6 +1,6 @@
 ---
 title: /Z7、/Zi、/ZI（调试信息格式）
-ms.date: 02/22/2018
+ms.date: 04/08/2019
 f1_keywords:
 - VC.Project.VCCLCompilerTool.DebugInformationFormat
 - /ZI
@@ -23,12 +23,12 @@ helpviewer_keywords:
 - line numbers only compiler option [C++]
 - cl.exe compiler, debugging options
 - -Z7 compiler option [C++]
-ms.openlocfilehash: 1beab7cb1e8e654d25620eb59a9326f5628ce047
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: e809c7af7465cde98db11eac8628b76d04f7e8b5
+ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816316"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59424074"
 ---
 # <a name="z7-zi-zi-debug-information-format"></a>/Z7、/Zi、/ZI（调试信息格式）
 
@@ -42,7 +42,7 @@ ms.locfileid: "57816316"
 
 当代码编译和生成在调试模式下时，编译器将生成函数和变量、 类型信息和行号位置以供调试程序符号的名称。 此符号化调试信息可以包含由编译器生成的对象文件 （.obj 文件） 或可执行文件的独立 PDB 文件 （.pdb 文件） 中。  以下各节所述的调试信息格式选项。
 
-### <a name="none"></a>无
+### <a name="none"></a>None
 
 默认情况下，如果未不指定任何调试信息格式选项，编译器会生成任何调试信息，因此编译较快。
 
@@ -52,7 +52,7 @@ ms.locfileid: "57816316"
 
 对于第三方库的调试版本的分发服务器，没有到没有 PDB 文件的一个优点。 但是，任何预编译标头的对象文件是必需的库链接阶段，以及用于调试。 如果仅键入.pch 对象文件中的信息 （和无代码），还必须使用[/Yl （为调试库插入 PCH 引用）](yl-inject-pch-reference-for-debug-library.md)选项，在生成库时，默认情况下，启用该选项。
 
-[/Gm （启用最小重新生成）](gm-enable-minimal-rebuild.md)选项不可用 **/z7**指定。
+已弃用[/Gm （启用最小重新生成）](gm-enable-minimal-rebuild.md)选项不可用 **/z7**指定。
 
 ### <a name="zi"></a>/ZI
 
@@ -79,9 +79,9 @@ ms.locfileid: "57816316"
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[Visual Studio 中的设置 c + + 编译器和生成属性](../working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
 
-1. 打开**配置属性** > **C/c + +** > **常规**属性页。
+1. 打开**配置属性** > **C /C++** > **常规**属性页。
 
 1. 修改**调试信息格式**属性。 选择“确定”以保存更改。
 

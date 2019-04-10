@@ -1,6 +1,6 @@
 ---
 title: 触发-（标准符合性）
-ms.date: 06/21/2018
+ms.date: 03/08/2019
 f1_keywords:
 - /permissive
 - VC.Project.VCCLCompilerTool.ConformanceMode
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Standards conformance compiler options
 - permissive compiler options [C++]
 ms.assetid: db1cc175-6e93-4a2e-9396-c3725d2d8f71
-ms.openlocfilehash: 5590996c7598016365bb122977084835830f95ab
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 05089ef4f0a516f932d82f13be979da572701ae2
+ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57820788"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59424126"
 ---
 # <a name="permissive--standards-conformance"></a>触发-（标准符合性）
 
@@ -35,15 +35,15 @@ ms.locfileid: "57820788"
 
 **触发-** 选项适用于几乎所有最新的 Windows 工具包，例如软件开发工具包 (SDK) 或 Windows Driver Kit (WDK)，从 Windows Fall Creators SDK (10.0.16299.0) 中的标头文件。 较旧版本的 SDK 可能无法在编译**触发-** 各种源代码一致性方面的考虑。 编译器和 Sdk 飞船上不同的发布时间线，因此有一些其他问题。 有关特定的标头文件问题，请参阅[Windows 标头问题](#windows-header-issues)下面。
 
-**触发-** 选项集[/zc: strictstrings](zc-conformance.md)并[/zc: rvaluecast](zc-conformance.md)符合标准行为的选项。 但默认为不符合要求的行为。 您可以将传递特定 **/Zc**选项后**触发的**用于重写此行为的命令行上。
+**触发-** 选项集[/zc: referencebinding](zc-referencebinding-enforce-reference-binding-rules.md)， [/zc: strictstrings](zc-strictstrings-disable-string-literal-type-conversion.md)，以及[/zc: rvaluecast](zc-rvaluecast-enforce-type-conversion-rules.md)到符合的选项行为。 这些选项默认为不符合要求的行为。 您可以将传递特定 **/Zc**选项后**触发的**用于重写此行为的命令行上。
 
-在 Visual Studio 2017 版本 15.3 中，编译器从开始版本中**触发-** 选项集[/zc: ternary](zc-ternary.md)选项。 编译器还实现两阶段名称查找的要求的详细信息。 当**触发-** 设置选项，编译器分析函数和类模板定义，标识在模板中使用相关和非依赖名称。 在此版本中，执行仅名称依赖项分析。
+在 Visual Studio 2017 版本 15.3 中，编译器从开始版本中**触发-** 选项集[/zc: ternary](zc-ternary.md)选项。 编译器还实现两阶段名称查找的要求的详细信息。 当**触发-** 设置选项，编译器分析函数和类模板定义，并标识相关和非依赖于在模板中使用的名称。 在此版本中，执行仅名称依赖项分析。
 
 不受特定于环境的扩展语言的区域，以及由该实现标准离开**触发-**。 例如，Microsoft 专用`__declspec`，调用约定和结构化的异常处理关键字，和特定于编译器的杂注指令或属性不在编译器标记**触发-** 模式。
 
-**触发-** 选项使用的符合性支持当前的编译器版本中来确定哪些语言构造是不符合要求。 选项不确定你的代码是否符合特定版本的 c + + 标准。 若要启用所有实现的编译器对最新草案标准的支持，请使用[/std:latest](std-specify-language-standard-version.md)选项。 若要限制当前实现中 C + + 17 标准编译器支持，使用[/std: c + + 17](std-specify-language-standard-version.md)选项。 若要限制的编译器支持以更接近 C + + 14 标准，请使用[/std: c + + 14](std-specify-language-standard-version.md)选项，这是默认值。
+**触发-** 选项使用的符合性支持当前的编译器版本中来确定哪些语言构造是不符合要求。 选项不确定你的代码是否符合特定版本的C++标准。 若要启用所有实现的编译器对最新草案标准的支持，请使用[/std:latest](std-specify-language-standard-version.md)选项。 若要限制当前实现中 C + + 17 标准编译器支持，使用[/std: c + + 17](std-specify-language-standard-version.md)选项。 若要限制的编译器支持以更接近 C + + 14 标准，请使用[/std: c + + 14](std-specify-language-standard-version.md)选项，这是默认值。
 
-未列出所有 C + + 11、 C + + 14 或 C + + 17 符合标准的 Visual Studio 2017 中的 MSVC 编译器支持的代码。 具体取决于版本的 Visual Studio 中，**触发-** 选项可能无法检测到问题有关的两阶段名称查找某些方面，绑定到一个临时的非常量引用、 复制 init 视为直接 init，允许多个用户定义的转换中进行初始化或替代标记的逻辑运算符和不受支持的符合性的其他区域。 有关 Visual C++ 中一致性问题的详细信息，请参阅 [Nonstandard Behavior](../../cpp/nonstandard-behavior.md)。 若要获取最大程度**触发-**，Visual Studio 更新到最新版本。
+未列出所有 C + + 11、 C + + 14 或 C + + 17 符合标准的代码支持的所有版本的 Visual Studio 2017 中的 MSVC 编译器。 具体取决于版本的 Visual Studio 中，**触发-** 选项可能无法检测到问题有关的两阶段名称查找某些方面，绑定到一个临时的非常量引用、 复制 init 视为直接 init，允许多个用户定义的转换中进行初始化或替代标记的逻辑运算符和不受支持的符合性的其他区域。 有关 Visual C++ 中一致性问题的详细信息，请参阅 [Nonstandard Behavior](../../cpp/nonstandard-behavior.md)。 若要获取最大程度**触发-**，Visual Studio 更新到最新版本。
 
 ### <a name="how-to-fix-your-code"></a>如何修复你的代码
 
@@ -56,7 +56,7 @@ void func(int default); // Error C2321: 'default' is a keyword, and
                         // cannot be used in this context
 ```
 
-#### <a name="lookup-members-in-dependent-base"></a>依赖库中的查找成员
+#### <a name="look-up-members-in-dependent-base"></a>查找依赖基础中的成员
 
 ```cpp
 template <typename T>
@@ -237,7 +237,7 @@ class ATL_NO_VTABLE CFooImpl : public ICustom,
 
 在 Visual Studio 2017 版本 15.3 之前的编译器版本中，编译器接受的条件运算符 （或三元运算符） 参数`?:`被视为不明确的标准。 在中**触发-** 模式下，编译器现将发出一个或多个诊断的情况下，编译而无需在早期版本中的诊断。
 
-此更改，可能会导致该列错误包括：
+此更改，可能会导致的常见错误包括：
 
 - 错误 C2593: operator？ 不明确
 
@@ -247,7 +247,7 @@ class ATL_NO_VTABLE CFooImpl : public ICustom,
 
 - 错误 C2446::： 没有从 'B' 到 'A' 转换
 
-某些类 C 到 T 类型提供了从另一种类型 T 的非显式构造函数而非显式转换运算符时，可能会导致此问题的典型代码模式在这种情况下，第二个自变量转换为第三种和第三参数转换为第二个类型的转换是有效的转换，不根据标准明确的。
+某些类 C 到 T 类型提供了从另一种类型 T 的非显式构造函数而非显式转换运算符时，可能会导致此问题的典型代码模式在这种情况下，第二个参数转换为第三个参数的类型和第三个参数转换为第二个参数的类型是有效的转换。 由于两者都有效，则根据标准不明确。
 
 ```cpp
 // Example 1: class that provides conversion to and initialization from some type T
@@ -313,7 +313,7 @@ const char (&z)[2] = count > 3 ? "A" : "B"; // const char* without /Zc:ternary
 
 #### <a name="two-phase-name-look-up"></a>两阶段名称查找
 
-当**触发-** 设置选项，编译器分析函数和类模板定义，标识所需的模板中使用的两阶段名称查找的相关和非依赖名称。 在 Visual Studio 2017 版本 15.3 中，执行名称依赖项分析。 具体而言，未在模板定义的上下文中声明的非依赖名称会导致所需的 ISO c + + 标准的诊断消息。 在 Visual Studio 2017 版本 15.7 中，需要参数依赖查找定义上下文中的非依赖名称的绑定是也可以完成。
+当**触发-** 设置选项，编译器分析函数和类模板定义，标识所需的模板中使用的两阶段名称查找的相关和非依赖名称。 在 Visual Studio 2017 版本 15.3 中，执行名称依赖项分析。 具体而言，未在模板定义的上下文中声明的非依赖名称会导致一条诊断消息所需的 ISOC++标准。 在 Visual Studio 2017 版本 15.7 中，需要定义上下文中的依赖于自变量执行查找非依赖名称的绑定是也可以完成。
 
 ```cpp
 // dependent base
@@ -446,7 +446,7 @@ int main()
 
 1. 打开你的项目**属性页**对话框。
 
-1. 选择**配置属性** > **C/c + +** > **语言**属性页。
+1. 选择**配置属性** > **C /C++** > **语言**属性页。
 
 1. 更改**符合模式**属性值设置为**是 (触发的)**。 选择**确定**或**应用**以保存所做的更改。
 
@@ -454,7 +454,7 @@ int main()
 
 1. 打开你的项目**属性页**对话框。
 
-1. 选择**配置属性** > **C/c + +** > **命令行**属性页。
+1. 选择**配置属性** > **C /C++** > **命令行**属性页。
 
 1. 输入**触发-** 中的编译器选项**其他选项**框。 选择**确定**或**应用**以保存所做的更改。
 
