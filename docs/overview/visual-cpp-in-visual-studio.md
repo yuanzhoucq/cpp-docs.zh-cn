@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C++, home page
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 7ef43491c35ec4f57f7a691851e584e6aad58ef3
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 6430d57ddc8718c419076d2da1008e21efdb9b13
+ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58782156"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58898708"
 ---
 # <a name="c-in-visual-studio"></a>Visual Studio 中的 C++
 
@@ -26,16 +26,16 @@ Microsoft Visual C++（通常缩写为 Visual C++ 或 MSVC）是 Windows Visual 
 
 ## <a name="whats-new-and-conformance-history"></a>新增功能和符合性历史记录
 
-[Visual Studio 2017 中 C++ 的新增功能](what-s-new-for-visual-cpp-in-visual-studio.md)<br/>
-了解 Visual Studio 2017 中的新增功能。
+[Visual Studio 中 C++ 的新增功能](what-s-new-for-visual-cpp-in-visual-studio.md)<br/>
+了解 Visual Studio 中的新增功能。
 
 [Visual Studio 2003 到 2015 中 C++ 新增功能](../porting/visual-cpp-what-s-new-2003-through-2015.md)<br/>
 Visual Studio 2003 到 2015 每个版本中的 C++ 新增功能。
 
-[Visual Studio 2017 中 C++ 的符合性改进](cpp-conformance-improvements-2017.md)<br/>
-了解 Visual Studio 2017 中 C++ 的符合性改进情况。
+[Visual Studio 中的 C++ 符合性改进](cpp-conformance-improvements.md)<br/>
+了解 Visual Studio 中 C++ 的符合性改进情况。
 
-[Visual C++ 语言一致性](visual-cpp-language-conformance.md)<br/>
+[Visual C/C++ 语言一致性](visual-cpp-language-conformance.md)<br/>
 MSVC C++ 编译器中按功能列出的符合性状态列表。
 
 [Visual C++ 更改历史记录（2003 - 2015）](../porting/visual-cpp-change-history-2003-2015.md)<br/>
