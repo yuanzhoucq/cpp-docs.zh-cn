@@ -1,12 +1,12 @@
 ---
 title: ARM64 异常处理
 ms.date: 11/19/2018
-ms.openlocfilehash: ec81374f9a20cf5d23edda7d925705b6a4d5e2e6
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.openlocfilehash: 55476119499a3216f6801877dba692b2a0d1d9ee
+ms.sourcegitcommit: 88631cecbe3e3fa752eae3ad05b7f9d9f9437b4d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59031721"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59534118"
 ---
 # <a name="arm64-exception-handling"></a>ARM64 异常处理
 
@@ -44,7 +44,7 @@ Windows 在 ARM64 上的使用相同的结构化的异常处理机制，用于�
 
 1. 在 epilog 中没有任何条件代码。
 
-1. 专用的帧指针寄存器：如果 sp 保存在另一个寄存器 (r29) 在序言中，注册保持在整个函数，不变，以便可以随时恢复原始 sp。
+1. 专用的帧指针寄存器：如果 sp 保存在另一个寄存器 (x29) 在序言中，注册保持在整个函数，不变，以便可以随时恢复原始 sp。
 
 1. 除非 sp 保存在另一个寄存器中，所有操作的堆栈指针的 prolog 和 epilog 中严格的都发生。
 
@@ -54,90 +54,90 @@ Windows 在 ARM64 上的使用相同的结构化的异常处理机制，用于�
 
 ![堆栈帧布局](media/arm64-exception-handling-stack-frame.png "堆栈帧布局")
 
-对于链接在一起的帧的函数，可以根据优化注意事项的本地变量区域中的任何位置保存 fp 和 lr 对。 目标是最大化的局部变量可以达到通过基于帧指针 (r29) 或堆栈指针 (sp) 的一个单个指令的数量。 但是对于`alloca`函数必须链接和 r29 必须指向堆栈的底部。 若要允许更多寄存器-对-寻址的模式下，非易失寄存器保存区域放置于本地区域堆栈的顶部。 下面是示例，展示了几个最有效的 prolog 序列。 为了明确和更好的缓存区域，便于在所有规范的 prolog 中存储被调用方保存的寄存器的顺序是按"增长设置"的顺序。 `#framesz` 下面表示整个堆栈 （不包括 alloca 区域） 的大小。 `#localsz` 并`#outsz`表示本地区域的大小 (包括保存区域\<r29，lr > 对) 和分别传出参数大小。
+对于链接在一起的帧的函数，可以根据优化注意事项的本地变量区域中的任何位置保存 fp 和 lr 对。 目标是最大化的局部变量可以达到通过基于帧指针 (x29) 或堆栈指针 (sp) 的一个单个指令的数量。 但是对于`alloca`函数必须链接和 x29 必须指向堆栈的底部。 若要允许更多寄存器-对-寻址的模式下，非易失寄存器保存区域放置于本地区域堆栈的顶部。 下面是示例，展示了几个最有效的 prolog 序列。 为了明确和更好的缓存区域，便于在所有规范的 prolog 中存储被调用方保存的寄存器的顺序是按"增长设置"的顺序。 `#framesz` 下面表示整个堆栈 （不包括 alloca 区域） 的大小。 `#localsz` 并`#outsz`表示本地区域的大小 (包括保存区域\<x29，lr > 对) 和分别传出参数大小。
 
 1. 链接在一起，#localsz \<= 512
 
     ```asm
-        stp    r19,r20,[sp,-96]!        // pre-indexed, save in 1st FP/INT pair
-        stp    d8,d9,[sp,16]            // save in FP regs (optional)
-        stp    r0,r1,[sp,32]            // home params (optional)
-        stp    r2,r3,[sp, 48]
-        stp    r4,r5,[sp,64]
-        stp    r6,r7,[sp,72]
-        stp    r29, lr, [sp, -#localsz]!    // save <r29,lr> at bottom of local area
-        mov    r29,sp                   // r29 points to bottom of local
-        sub    sp, #outsz               // (optional for #outsz != 0)
+        stp    x19,x20,[sp,#-96]!        // pre-indexed, save in 1st FP/INT pair
+        stp    d8,d9,[sp,#16]            // save in FP regs (optional)
+        stp    x0,x1,[sp,#32]            // home params (optional)
+        stp    x2,x3,[sp,#48]
+        stp    x4,x5,[sp,#64]
+        stp    x6,x7,[sp,#72]
+        stp    x29,lr,[sp,#-localsz]!   // save <x29,lr> at bottom of local area
+        mov    x29,sp                   // x29 points to bottom of local
+        sub    sp,sp,#outsz             // (optional for #outsz != 0)
     ```
 
 1. 链接在一起，#localsz > 512
 
     ```asm
-        stp    r19,r20,[sp,-96]!        // pre-indexed, save in 1st FP/INT pair
-        stp    d8,d9,[sp,16]            // save in FP regs (optional)
-        stp    r0,r1,[sp,32]            // home params (optional)
-        stp    r2,r3,[sp, 48]
-        stp    r4,r5,[sp,64]
-        stp    r6,r7,[sp,72]
-        sub    sp,#localsz+#outsz       // allocate remaining frame
-        stp    r29, lr, [sp, #outsz]    // save <r29,lr> at bottom of local area
-        add    r29,sp, #outsz           // setup r29 points to bottom of local area
+        stp    x19,x20,[sp,#-96]!        // pre-indexed, save in 1st FP/INT pair
+        stp    d8,d9,[sp,#16]            // save in FP regs (optional)
+        stp    x0,x1,[sp,#32]            // home params (optional)
+        stp    x2,x3,[sp,#48]
+        stp    x4,x5,[sp,#64]
+        stp    x6,x7,[sp,#72]
+        sub    sp,sp,#(localsz+outsz)   // allocate remaining frame
+        stp    x29,lr,[sp,#outsz]       // save <x29,lr> at bottom of local area
+        add    x29,sp,#outsz            // setup x29 points to bottom of local area
     ```
 
 1. 非链接，叶函数 (未保存的 lr)
 
     ```asm
-        stp    r19,r20,[sp, -72]!       // pre-indexed, save in 1st FP/INT reg-pair
-        stp    r21,r22,[sp, 16]
-        str    r23 [sp,32]
-        stp    d8,d9,[sp,40]            // save FP regs (optional)
-        stp    d10,d11,[sp,56]
-        sub    sp,#framesz-72           // allocate the remaining local area
+        stp    x19,x20,[sp,#-80]!       // pre-indexed, save in 1st FP/INT reg-pair
+        stp    x21,x22,[sp,#16]
+        str    x23,[sp,#32]
+        stp    d8,d9,[sp,#40]           // save FP regs (optional)
+        stp    d10,d11,[sp,#56]
+        sub    sp,sp,#(framesz-80)      // allocate the remaining local area
     ```
 
-   所有局部变量访问基于 sp。 \<r29，lr > 指向上一帧。 帧大小\<= 512，"sub sp，..."可以被优化掉 regs 保存区域移到堆栈的底部。 缺点是范围的它不是范围的与更高版本，其他布局一致，并保存的 regs 采取对 regs 和前和后索引偏移量的寻址模式的一部分。
+   所有局部变量访问基于 sp。 \<x29，lr > 指向上一帧。 帧大小\<= 512，"sub sp，..."可以被优化掉 regs 保存区域移到堆栈的底部。 缺点是范围的它不是范围的与更高版本，其他布局一致，并保存的 regs 采取对 regs 和前和后索引偏移量的寻址模式的一部分。
 
 1. 非链接、 非叶函数 （lr 保存在保存 Int 区域）
 
     ```asm
-        stp    r19,r20,[sp,-80]!        // pre-indexed, save in 1st FP/INT reg-pair
-        stp    r21,r22,[sp,16]          // ...
-        stp    r23, lr,[sp, 32]         // save last Int reg and lr
-        stp    d8,d9,[sp, 48]           // save FP reg-pair (optional)
-        stp    d10,d11,[sp,64]          // ...
-        sub    sp,#framesz-80           // allocate the remaining local area
+        stp    x19,x20,[sp,#-80]!       // pre-indexed, save in 1st FP/INT reg-pair
+        stp    x21,x22,[sp,#16]         // ...
+        stp    x23,lr,[sp,#32]          // save last Int reg and lr
+        stp    d8,d9,[sp,#48]           // save FP reg-pair (optional)
+        stp    d10,d11,[sp,#64]         // ...
+        sub    sp,sp,#(framesz-80)      // allocate the remaining local area
     ```
 
    或带有偶数已保存 Int 寄存器
 
     ```asm
-        stp    r19,r20,[sp,-72]!        // pre-indexed, save in 1st FP/INT reg-pair
-        stp    r21,r22,[sp,16]          // ...
-        str    lr,[sp, 32]              // save lr
-        stp    d8,d9,[sp, 40]           // save FP reg-pair (optional)
-        stp    d10,d11,[sp,56]          // ...
-        sub    sp,#framesz-72           // allocate the remaining local area
+        stp    x19,x20,[sp,#-80]!       // pre-indexed, save in 1st FP/INT reg-pair
+        stp    x21,x22,[sp,#16]         // ...
+        str    lr,[sp,#32]              // save lr
+        stp    d8,d9,[sp,#40]           // save FP reg-pair (optional)
+        stp    d10,d11,[sp,#56]         // ...
+        sub    sp,sp,#(framesz-80)      // allocate the remaining local area
     ```
 
-   仅保存 r19:
+   仅保存 x19:
 
     ```asm
-        sub    sp, sp, #16              // reg save area allocation*
-        stp    r19,lr,[sp,0]            // save r19, lr
-        sub    sp,#framesz-16           // allocate the remaining local area
+        sub    sp,sp,#16                // reg save area allocation*
+        stp    x19,lr,[sp]              // save x19, lr
+        sub    sp,sp,#(framesz-16)      // allocate the remaining local area
     ```
 
    \* 因为不能使用展开代码表示预索引的 reg lr stp stp 到区域分配保存 reg 不折叠。
 
-   所有局部变量访问基于 sp。 \<r29 > 指向上一帧。
+   所有局部变量访问基于 sp。 \<x29 > 指向上一帧。
 
 1. 链接在一起，#framesz \<= 512，#outsz = 0
 
     ```asm
-        stp    r29, lr, [sp, -#framesz]!    // pre-indexed, save <r29,lr>
-        mov    r29,sp                       // r29 points to bottom of stack
-        stp    r19,r20,[sp, #framesz -32]   // save INT pair
-        stp    d8,d9,[sp, #framesz -16]     // save FP pair
+        stp    x29,lr,[sp,#-framesz]!       // pre-indexed, save <x29,lr>
+        mov    x29,sp                       // x29 points to bottom of stack
+        stp    x19,x20,[sp,#(framesz-32)]   // save INT pair
+        stp    d8,d9,[sp,#(framesz-16)]     // save FP pair
     ```
 
    与上述 #1 prolog 相比，优点是，所有寄存器保存的说明都准备就绪可以只有一个堆栈分配指令后立即执行。 因此，防止指令级并行性的 sp 上是没有反相关性。
@@ -145,38 +145,38 @@ Windows 在 ARM64 上的使用相同的结构化的异常处理机制，用于�
 1. 链接在一起，帧大小 > 512 （可选的功能而无需分配）
 
     ```asm
-        stp    r29, lr, [sp, -80]!          // pre-indexed, save <r29,lr>
-        stp    r19,r20,[sp,16]              // save in INT regs
-        stp    r21,r22,[sp,32]              // ...
-        stp    d8,d9,[sp,48]                // save in FP regs
-        stp    d10,d11,[sp,64]
-        mov    r29,sp                       // r29 points to top of local area
-        sub    sp,#framesz-80               // allocate the remaining local area
+        stp    x29,lr,[sp,#-80]!            // pre-indexed, save <x29,lr>
+        stp    x19,x20,[sp,#16]             // save in INT regs
+        stp    x21,x22,[sp,#32]             // ...
+        stp    d8,d9,[sp,#48]               // save in FP regs
+        stp    d10,d11,[sp,#64]
+        mov    x29,sp                       // x29 points to top of local area
+        sub    sp,sp,#(framesz-80)          // allocate the remaining local area
     ```
 
-   出于优化目的，r29 可以放在本地区域为"reg 对"和前/后-indexed 偏移量寻址模式提供更好的覆盖范围中的任意位置。 帧指针下方的局部变量可以访问基于 sp。
+   出于优化目的，x29 可以放在本地区域为"reg 对"和前/后-indexed 偏移量寻址模式提供更好的覆盖范围中的任意位置。 帧指针下方的局部变量可以访问基于 sp。
 
 1. 链接在一起，帧大小 > 4 K，带或不带 alloca()，
 
     ```asm
-        stp    r29, lr, [sp, -80]!          // pre-indexed, save <r29,lr>
-        stp    r19,r20,[sp,16]              // save in INT regs
-        stp    r21,r22,[sp,32]              // ...
-        stp    d8,d9,[sp,48]                // save in FP regs
-        stp    d10,d11,[sp,64]
-        mov    r29,sp                       // r29 points to top of local area
-        mov    r8, #framesz/16
-        bl     chkstk
-        sub    sp, r8*16                    // allocate remaining frame
+        stp    x29,lr,[sp,#-80]!            // pre-indexed, save <x29,lr>
+        stp    x19,x20,[sp,#16]             // save in INT regs
+        stp    x21,x22,[sp,#32]             // ...
+        stp    d8,d9,[sp,#48]               // save in FP regs
+        stp    d10,d11,[sp,#64]
+        mov    x29,sp                       // x29 points to top of local area
+        mov    x15,#(framesz/16)
+        bl     __chkstk
+        sub    sp,sp,x15,lsl#4              // allocate remaining frame
                                             // end of prolog
         ...
-        sp = alloca                         // more alloca() in body
+        sub    sp,sp,#alloca                // more alloca() in body
         ...
                                             // beginning of epilog
-        mov    sp,r29                       // sp points to top of local area
-        ldp    d10,d11, [sp,64],
+        mov    sp,x29                       // sp points to top of local area
+        ldp    d10,d11,[sp,#64]
         ...
-        ldp    r29, lr, [sp], -80           // post-indexed, reload <r29,lr>
+        ldp    x29,lr,[sp],#80              // post-indexed, reload <x29,lr>
     ```
 
 ## <a name="arm64-exception-handling-information"></a>ARM64 异常处理信息
@@ -235,7 +235,7 @@ Windows 在 ARM64 上的使用相同的结构化的异常处理机制，用于�
 
    c. **Epilog 开始的索引**为 10 位 (比 2 更多的比特**扩展代码字**) 字段，指示第一个的字节索引展开描述此 epilog 代码。
 
-1. Epilog 作用域的列表是包含展开代码的字节数组后，在后面的部分中的详细信息中所述。 在最接近的全字边界的末尾处填充此数组。 按 Little-Endian 的顺序存储字节，以便可以直接在 Little-Endian 模式下提取它们。
+1. Epilog 作用域的列表是包含展开代码的字节数组后，在后面的部分中的详细信息中所述。 在最接近的全字边界的末尾处填充此数组。 展开到此数组，它最靠近的函数，该函数的边移动正文从开始编写代码。 为每个展开代码字节中的操作以及代码的其余部分的长度的 big endian 顺序以便它们可以提取直接，首先，从最高有效字节存储。
 
 1. 最后，在展开代码字节，如果**X**标头中的位设置为 1，出现异常处理程序信息。 这包含单个**异常处理程序 RVA**提供地址的异常处理程序本身，后面紧跟将长度可变数量的异常处理程序所需的数据。
 
@@ -286,22 +286,22 @@ ULONG ComputeXdataSize(PULONG *Xdata)
 |展开代码|Bits 和解释|
 |-|-|
 |`alloc_s`|000xxxxx： 分配大小的小型堆栈\<512 (2 ^5 * 16)。|
-|`save_r19r20_x`|    001zzzzz： 保存\<r19，r20 > 对在 [sp #Z * 8] ！，预索引偏移量 > =-248 |
-|`save_fplr`|        01zzzzzz： 保存\<r29，lr > 对在 [sp + #Z * 8]，偏移量\<= 504。 |
-|`save_fplr_x`|        10zzzzzz： 保存\<r29，lr > 对在 [sp-（#Z + 1） * 8] ！，预索引偏移量 > =-512 |
+|`save_r19r20_x`|    001zzzzz： 保存\<x19、 x20 > 对在 [sp #Z * 8] ！，预索引偏移量 > =-248 |
+|`save_fplr`|        01zzzzzz： 保存\<x29，lr > 对在 [sp + #Z * 8]，偏移量\<= 504。 |
+|`save_fplr_x`|        10zzzzzz： 保存\<x29，lr > 对在 [sp-（#Z + 1） * 8] ！，预索引偏移量 > =-512 |
 |`alloc_m`|        11000xxx'xxxxxxxx： 分配大堆栈大小\<16k (2 ^11 * 16)。 |
-|`save_regp`|        110010xx xxzzzzzz： 保存 r(19+#X) 对在 [sp + #Z * 8]，偏移量\<= 504 |
-|`save_regp_x`|        110011xx'xxzzzzzz: save pair r(19+#X) at [sp-(#Z+1)*8]!, pre-indexed offset >= -512 |
-|`save_reg`|        110100xx xxzzzzzz： 保存 reg r(19+#X) 在 [sp + #Z * 8]，偏移量\<= 504 |
-|`save_reg_x`|        1101010x'xxxzzzzz: save reg r(19+#X) at [sp-(#Z+1)*8]!, pre-indexed offset >= -256 |
-|`save_lrpair`|         1101011 x'xxzzzzzz： 保存对\<r19 + 2 *#X，lr > 在 [sp + #Z*8]，偏移量\<= 504 |
+|`save_regp`|        110010xx xxzzzzzz： 保存 x(19+#X) 对在 [sp + #Z * 8]，偏移量\<= 504 |
+|`save_regp_x`|        110011xx'xxzzzzzz: save pair x(19+#X) at [sp-(#Z+1)*8]!, pre-indexed offset >= -512 |
+|`save_reg`|        110100xx xxzzzzzz： 保存 reg x(19+#X) 在 [sp + #Z * 8]，偏移量\<= 504 |
+|`save_reg_x`|        1101010x'xxxzzzzz: save reg x(19+#X) at [sp-(#Z+1)*8]!, pre-indexed offset >= -256 |
+|`save_lrpair`|         1101011x'xxzzzzzz: save pair \<x(19+2 *#X),lr> at [sp+#Z*8], offset \<= 504 |
 |`save_fregp`|        1101100 x'xxzzzzzz： 保存对 d(8+#X) 在 [sp + #Z * 8]，偏移量\<= 504 |
 |`save_fregp_x`|        1101101x'xxzzzzzz: save pair d(8+#X), at [sp-(#Z+1)*8]!, pre-indexed offset >= -512 |
 |`save_freg`|        1101110 x'xxzzzzzz： 保存 reg d(8+#X) 在 [sp + #Z * 8]，偏移量\<= 504 |
 |`save_freg_x`|        11011110'xxxzzzzz: save reg d(8+#X) at [sp-(#Z+1)*8]!, pre-indexed offset >= -256 |
 |`alloc_l`|         11100000' xxxxxxxx 'xxxxxxxx' xxxxxxxx： 分配大堆栈大小\<256 M (2 ^24 * 16) |
-|`set_fp`|        11100001： 设置 r29： 与： mov r29 sp |
-|`add_fp`|        11100010' xxxxxxxx： 设置 r29 与： 添加 r29、 sp、 #x * 8 |
+|`set_fp`|        11100001： 设置 x29： 与： mov x29，sp |
+|`add_fp`|        11100010' xxxxxxxx： 设置与 x29: sp，添加 x29，#x * 8 |
 |`nop`|            11100011： 不展开操作是必需的。 |
 |`end`|            11100100： 展开代码的末尾。 表示已在 epilog 中。 |
 |`end_c`|        11100101： 当前链接作用域中的展开代码的末尾。 |
@@ -347,12 +347,12 @@ ULONG ComputeXdataSize(PULONG *Xdata)
 - **函数长度**是一个 11 位字段，提供以字节为单位，除以 4 的整个函数的长度。 如果该函数值大于 8k，必须改为使用完整的.xdata 记录。
 - **帧大小**是一个 9 位域，指示堆栈为 16 除此函数分配的字节数。 大于 (8k-16) 字节的堆栈分配的函数必须使用完整的.xdata 记录。 这包括本地变量的区域，传出参数区域、 被调用方保存 Int 和 FP 区域和家庭参数区域，但不包括动态分配区域。
 - **CR**是一个 2 位标志，指示函数是否包括额外的指令，若要设置帧链和返回链接：
-  - 00 = 非链接的函数\<r29，lr > 对未保存在堆栈中。
+  - 00 = 非链接的函数\<x29，lr > 对未保存在堆栈中。
   - 01 = 非链接的函数\<lr > 保存在堆栈中
   - 10 = 保留;
-  - 11 = 链接的函数 prolog/epilog 中使用的存储/加载对指令\<r29，lr >
-- **H**是一个 1 位标志，指示函数是否寻址整数参数寄存器 (r0-r7) 将它们存储在该函数的开始。 (0 = 不承载寄存器，1 = 家庭寄存器)。
-- **RegI**是 4 位字段，该值指示的非易失性 INT 寄存器 (r19 r28) 保存在规范的堆栈位置数。
+  - 11 = 链接的函数 prolog/epilog 中使用的存储/加载对指令\<x29，lr >
+- **H**是一个 1 位标志，指示函数是否寻址整数参数寄存器 (x0 x7) 通过将它们存储在该函数的开始。 (0 = 不承载寄存器，1 = 家庭寄存器)。
+- **RegI**是 4 位字段，该值指示的非易失性 INT 寄存器 (x19 x28) 保存在规范的堆栈位置数。
 - **RegF** ，该值指示的非易失性 FP 寄存器 (d8 d15) 保存在规范的堆栈位置数是 3 位域。 (RegF = 0： 不保存任何 FP 寄存器;RegF > 0:RegF + 1 FP 寄存器保存的）。 打包展开数据不能用于保存只有一个 FP 寄存器的函数。
 
 属于类别 1、 2 （不带传出参数区域）、 3 和 4 上面部分中的规范 prolog 可以由已打包的展开格式表示。  Epilog 规范函数按照非常类似的形式，除非**H**不起作用，`set_fp`省略指令，和步骤，以及每个步骤中的说明的顺序反转在 epilog 中。 下表中详细介绍这些步骤为已打包的 xdata 的算法：
@@ -367,26 +367,26 @@ ULONG ComputeXdataSize(PULONG *Xdata)
 
 步骤 4：将输入的参数保存在主参数区域。
 
-步骤 5：分配剩余堆栈，包括本地区域中， \<r29，lr > 对，并且传出参数区域。 5a 对应于规范类型 1。 图 5b 和 5 c 是规范类型 2。 5d 和 5e 针对这两个类型 3 且键入 4。
+步骤 5：分配剩余堆栈，包括本地区域中， \<x29，lr > 对，并且传出参数区域。 5a 对应于规范类型 1。 图 5b 和 5 c 是规范类型 2。 5d 和 5e 针对这两个类型 3 且键入 4。
 
 步骤 #|标志值|# of 说明|操作码|展开代码
 -|-|-|-|-
 0|||`#intsz = RegI * 8;`<br/>`if (CR==01) #intsz += 8; // lr`<br/>`#fpsz = RegF * 8;`<br/>`if(RegF) #fpsz += 8;`<br/>`#savsz=((#intsz+#fpsz+8*8*H)+0xf)&~0xf)`<br/>`#locsz = #famsz - #savsz`|
-1|0 < **RegI** <= 10|RegI / 2 + **RegI** %2|`stp r19,r20,[sp,#savsz]!`<br/>`stp r21,r22,[sp,16]`<br/>`...`|`save_regp_x`<br/>`save_regp`<br/>`...`
-2|**CR**==01*|1|`str lr,[sp, #intsz-8]`\*|`save_reg`
-3|0 < **RegF** <=7|(RegF + 1）/2 +<br/>(RegF + 1) %2）。|`stp d8,d9,[sp, #intsz]`\*\*<br/>`stp d10,d11,[sp, #intsz+16]`<br/>`...`<br/>`str d(8+RegF),[sp, #intsz+#fpsz-8]`|`save_fregp`<br/>`...`<br/>`save_freg`
-4|**H** = = 1|4|`stp r0,r1,[sp, #intsz+#fpsz]`<br/>`stp r2,r3,[sp, #intsz+#fpsz+16]`<br/>`stp r4,r5,[sp, #intsz+#fpsz+32]`<br/>`stp r6,r7,[sp, #intsz+#fpsz+48]`|`nop`<br/>`nop`<br/>`nop`<br/>`nop`
-5a|**CR** == 11 && #locsz<br/> <= 512|2|`stp r29,lr,[sp,-#locsz]!`<br/>`mov r29,sp`\*\*\*|`save_fplr_x`<br/>`set_fp`
-5b|**CR** = = 11 &AMP; &AMP;<br/>512 < #locsz <= 4088|3|`sub sp,sp, #locsz`<br/>`stp r29,lr,[sp,0]`<br/>`add r29, sp, 0`|`alloc_m`<br/>`save_fplr`<br/>`set_fp`
-5c|**CR** == 11 && #locsz > 4088|4|`sub sp,sp,4088`<br/>`sub sp,sp, (#locsz-4088)`<br/>`stp r29,lr,[sp,0]`<br/>`add r29, sp, 0`|`alloc_m`<br/>`alloc_s`/`alloc_m`<br/>`save_fplr`<br/>`set_fp`
-5d|(**CR** == 00 \|\| **CR**==01) &&<br/>#locsz <= 4088|1|`sub sp,sp, #locsz`|`alloc_s`/`alloc_m`
-5e|(**CR** == 00 \|\| **CR**==01) &&<br/>#locsz > 4088|2|`sub sp,sp,4088`<br/>`sub sp,sp, (#locsz-4088)`|`alloc_m`<br/>`alloc_s`/`alloc_m`
+1|0 < **RegI** <= 10|RegI / 2 + **RegI** %2|`stp x19,x20,[sp,#savsz]!`<br/>`stp x21,x22,[sp,#16]`<br/>`...`|`save_regp_x`<br/>`save_regp`<br/>`...`
+2|**CR**==01*|1|`str lr,[sp,#(intsz-8)]`\*|`save_reg`
+3|0 < **RegF** <=7|(RegF + 1）/2 +<br/>(RegF + 1) %2）。|`stp d8,d9,[sp,#intsz]`\*\*<br/>`stp d10,d11,[sp,#(intsz+16)]`<br/>`...`<br/>`str d(8+RegF),[sp,#(intsz+fpsz-8)]`|`save_fregp`<br/>`...`<br/>`save_freg`
+4|**H** = = 1|4|`stp x0,x1,[sp,#(intsz+fpsz)]`<br/>`stp x2,x3,[sp,#(intsz+fpsz+16)]`<br/>`stp x4,x5,[sp,#(intsz+fpsz+32)]`<br/>`stp x6,x7,[sp,#(intsz+fpsz+48)]`|`nop`<br/>`nop`<br/>`nop`<br/>`nop`
+5a|**CR** == 11 && #locsz<br/> <= 512|2|`stp x29,lr,[sp,#-locsz]!`<br/>`mov x29,sp`\*\*\*|`save_fplr_x`<br/>`set_fp`
+5b|**CR** = = 11 &AMP; &AMP;<br/>512 < #locsz <= 4080|3|`sub sp,sp,#locsz`<br/>`stp x29,lr,[sp,0]`<br/>`add x29,sp,0`|`alloc_m`<br/>`save_fplr`<br/>`set_fp`
+5c|**CR** == 11 && #locsz > 4080|4|`sub sp,sp,4080`<br/>`sub sp,sp,#(locsz-4080)`<br/>`stp x29,lr,[sp,0]`<br/>`add x29,sp,0`|`alloc_m`<br/>`alloc_s`/`alloc_m`<br/>`save_fplr`<br/>`set_fp`
+5d|(**CR** == 00 \|\| **CR**==01) &&<br/>#locsz <= 4080|1|`sub sp,sp,#locsz`|`alloc_s`/`alloc_m`
+5e|(**CR** == 00 \|\| **CR**==01) &&<br/>#locsz > 4080|2|`sub sp,sp,4080`<br/>`sub sp,sp,#(locsz-4080)`|`alloc_m`<br/>`alloc_s`/`alloc_m`
 
 \* 如果**CR** = = 01 和**RegI**数为奇数，步骤 2 和步骤 1 中的最后一个 save_rep 合并到一个 save_regp。
 
 \*\* 如果**RegI** == **CR** = = 0，并且**RegF** ！ = 0，第一个 stp 浮点不前置。
 
-\*\*\* 对应于没有指令`mov r29, sp`在 epilog 中存在。 打包展开数据不能使用，如果函数需要从 r29 还原 sp。
+\*\*\* 对应于没有指令`mov x29,sp`在 epilog 中存在。 打包展开数据不能使用，如果函数需要从 x29 还原 sp。
 
 ### <a name="unwinding-partial-prologs-and-epilogs"></a>展开部分的 prolog 和 epilog
 
@@ -397,16 +397,16 @@ ULONG ComputeXdataSize(PULONG *Xdata)
 例如，采用此 prolog 和 epilog 序列：
 
 ```asm
-0000:    stp    r29, lr, [sp, -256]!        // save_fplr_x  256 (pre-indexed store)
-0004:    stp    d8,d9,[sp,224]              // save_fregp 0, 224
-0008:    stp    r19,r20,[sp,240]            // save_regp 0, 240
-000c:    mov    r29,sp                      // set_fp
+0000:    stp    x29,lr,[sp,#-256]!          // save_fplr_x  256 (pre-indexed store)
+0004:    stp    d8,d9,[sp,#224]             // save_fregp 0, 224
+0008:    stp    x19,x20,[sp,#240]           // save_regp 0, 240
+000c:    mov    x29,sp                      // set_fp
          ...
-0100:    mov    sp,r29                      // set_fp
-0104:    ldp    r19,r20,[sp,240]            // save_regp 0, 240
+0100:    mov    sp,x29                      // set_fp
+0104:    ldp    x19,x20,[sp,#240]           // save_regp 0, 240
 0108:    ldp    d8,d9,[sp,224]              // save_fregp 0, 224
-010c:    ldp    r29, lr, [sp, -256]!        // save_fplr_x  256 (post-indexed load)
-0110:    ret     lr                         // end
+010c:    ldp    x29,lr,[sp],#256            // save_fplr_x  256 (post-indexed load)
+0110:    ret    lr                          // end
 ```
 
 每个操作码旁边是相应的展开代码描述此操作。 第一件事要注意是序言的展开代码的一系列是 epilog （不包括 epilog 最后一条指令） 的展开代码完全相同的镜像映像。 这是常见的情况，并为此展开的序言代码始终被认为与序言的执行顺序相反的顺序存储。
@@ -442,9 +442,9 @@ ULONG ComputeXdataSize(PULONG *Xdata)
 - (区域 1： 开始)
 
     ```asm
-        stp     r29, lr, [sp, -256]!    // save_fplr_x  256 (pre-indexed store)
-        stp     r19,r20,[sp,240]        // save_regp 0, 240
-        mov     r29,sp                  // set_fp
+        stp     x29,lr,[sp,#-256]!      // save_fplr_x  256 (pre-indexed store)
+        stp     x19,x20,[sp,#240]       // save_regp 0, 240
+        mov     x29,sp                  // set_fp
         ...
     ```
 
@@ -460,9 +460,9 @@ ULONG ComputeXdataSize(PULONG *Xdata)
 
     ```asm
     ...
-        mov     sp,r29                  // set_fp
-        ldp     r19,r20,[sp,240]        // save_regp 0, 240
-        ldp     r29, lr, [sp, -256]!    // save_fplr_x  256 (post-indexed load)
+        mov     sp,x29                  // set_fp
+        ldp     x19,x20,[sp,#240]       // save_regp 0, 240
+        ldp     x29,lr,[sp],#256        // save_fplr_x  256 (post-indexed load)
         ret     lr                      // end
     ```
 
@@ -489,27 +489,27 @@ ULONG ComputeXdataSize(PULONG *Xdata)
 - (区域 1： 开始)
 
     ```asm
-        stp     r29, lr, [sp, -256]!    // save_fplr_x  256 (pre-indexed store)
-        stp     r19,r20,[sp,240]        // save_regp 0, 240
-        mov     r29,sp                  // set_fp
+        stp     x29,lr,[sp,#-256]!      // save_fplr_x  256 (pre-indexed store)
+        stp     x19,x20,[sp,#240]       // save_regp 0, 240
+        mov     x29,sp                  // set_fp
         ...
     ```
 
 - (区域 2： 开始)
 
     ```asm
-        stp     r21,r22,[sp,224]        // save_regp 2, 224
+        stp     x21,x22,[sp,#224]       // save_regp 2, 224
         ...
-        ldp     r21,r22,[sp,224]        // save_regp 2, 224
+        ldp     x21,x22,[sp,#224]       // save_regp 2, 224
     ```
 
 - (区域 2： 结束)
 
     ```asm
         ...
-        mov     sp,r29                  // set_fp
-        ldp     r19,r20,[sp,240]        // save_regp 0, 240
-        ldp     r29, lr, [sp, -256]!    // save_fplr_x  256 (post-indexed load)
+        mov     sp,x29                  // set_fp
+        ldp     x19,x20,[sp,#240]       // save_regp 0, 240
+        ldp     x29,lr,[sp],#256        // save_fplr_x  256 (post-indexed load)
         ret     lr                      // end
     ```
 
