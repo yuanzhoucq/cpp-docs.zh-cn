@@ -5,10 +5,10 @@ helpviewer_keywords:
 - breaking changes [C++]
 ms.assetid: b38385a9-a483-4de9-99a6-797488bc5110
 ms.openlocfilehash: b381a2b7cc9a4ad4749f382838bdec5872a3decf
-ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
+ms.sourcegitcommit: 88631cecbe3e3fa752eae3ad05b7f9d9f9437b4d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/15/2019
 ms.locfileid: "58898877"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Visual C++ 更改历史记录（2003 - 2015）
@@ -42,7 +42,7 @@ ms.locfileid: "58898877"
 
 #### <a name="general-changes"></a>常规更改
 
-- **重构的二进制文件**
+- 重构的二进制文件
 
    CRT 库已经重构为两个不同的二进制文件：包含大多数标准功能的通用 CRT (ucrtbase) 和 VC 运行时库 (vcruntime)。 Vcruntime 库包含与编译器相关的功能，例如异常处理和内部函数。 如果你使用的是默认项目设置，则此更改不会对你产生影响，因为链接器将自动使用新的默认库。 如果将项目的“链接器”属性“忽略所有默认库”设置为“是”，或使用的是命令行上的 `/NODEFAULTLIB` 链接器选项，则必须更新库的列表（位于“附加依赖项”属性）以包括新的重构库。 将旧的 CRT 库（libcmt.lib、libcmtd.lib、msvcrt.lib、msvcrtd.lib）替换为等效的重构库。 对于两个中的每个重构库，都存在静态 (.lib) 和动态 (.dll) 版本，发行（无后缀）和调试版本（使用“d”后缀）。 动态版本具有与之链接的导入库。 两个重构库为通用 CRT（特别是 ucrtbase.dll 或 ucrtbase.lib、ucrtbased.dll 或 ucrtbased.lib）和 VC 运行时库（libvcruntime.lib、vcruntimeversion.dll、libvcruntimed.lib 和 vcruntimedversion.dll）。 *version* 在 Visual Studio 2015 和 Visual Studio 2017 中均为 140。 请参阅 [CRT 库的功能](../c-runtime-library/crt-library-features.md)。
 
@@ -56,7 +56,7 @@ ms.locfileid: "58898877"
 
 #### <a name="mathh"></a>\<math.h>
 
-- **数学库函数的 C++ 重载**
+- 数学库函数的 C++ 重载
 
    在早期版本中，\<math.h> 定义了部分（而不是全部）数学库函数的 C++ 重载。 其余的重载位于 \<cmath> 标头中。 仅包含 \<math.h> 的代码可能会出现函数重载解析问题。 现在，C++ 重载已从 \<math.h> 中删除，并且只能在 \<cmath> 中找到。
 
@@ -66,7 +66,7 @@ ms.locfileid: "58898877"
 
   - `double pow(double, int)`, `float pow(float, float)`, `float pow(float, int)`, `long double pow(long double, long double)`, `long double pow(long double, int)`
 
-  - `float` 和 `long double` 版本的浮点函数：`acos`、`acosh`、`asin`、`asinh`、`atan`、`atanh`、`atan2`、`cbrt`、`ceil`、`copysign`、`cos`、`cosh`、`erf`、`erfc`、`exp`、`exp2`、`expm1`、`fabs`、`fdim`、`floor`、`fma`、`fmax`、`fmin`、`fmod`、`frexp`、`hypot`、`ilogb`、`ldexp`、`lgamma`、`llrint`、`llround`、`log`、`log10`、`log1p`、`log2`、`lrint`、`lround`、`modf`、`nearbyint`、`nextafter`、`nexttoward`、`remainder`、`remquo`、`rint`、`round`、`scalbln`、`scalbn`、`sin`、`sinh`、`sqrt`、`tan`、`tanh`、`tgamma` 和 `trunc`
+  - `float` 和 `long double` 版本的浮点函数：`acos`、`acosh`、`asin`、`asinh`、`atan``atanh`、`atan2`、`cbrt`、`ceil`、`copysign`、`cos`、`cosh`、`erf`、`erfc`、`exp`、`exp2`、`expm1`、`fabs`、`fdim`、`floor`、`fma`、`fmax`、`fmin`、`fmod`、`frexp`、`hypot`、`ilogb`、`ldexp`、`lgamma`、`llrint`、`llround`、`log`、`log10`、`log1p`、`log2`、`lrint`、`lround`、`modf`、`nearbyint`、`nextafter`、`nexttoward`、`remainder`、`remquo`、`rint`、`round`、`scalbln`、`scalbn`、`sin`、`sinh`、`sqrt`、`tan`、`tanh`、`tgamma` 和 `trunc`
 
   如果代码使用具有仅包含 \<math.h 标头的浮点型的 `abs`，则浮点版本将不再可用。 该调用现在解析为 `abs(int)`，即使使用浮点参数，也会生成错误：
 
@@ -76,7 +76,7 @@ ms.locfileid: "58898877"
 
   此警告的解决方法是将对 `abs` 的调用替换为浮点版本的 `abs`（例如双精度型参数的 `fabs` 或浮点型参数的 `fabsf`）或包含 \<cmath 标头并继续使用 `abs`。
 
-- **浮点一致性**
+- 浮点一致性
 
    对数学库所做的许多更改都用以使特例输入（如 NaN 和无穷大）更符合 IEEE-754 和 C11 附录 F 规范。 例如，在早期版本的库中通常被视为错误的 quiet NaN 输入已不再被视为错误。 请参阅 [IEEE 754 标准](https://standards.ieee.org/standard/754-2008.html) 和 [C11 标准](http://www.iso-9899.info/wiki/The_Standard)的附录 F。
 
@@ -88,7 +88,7 @@ ms.locfileid: "58898877"
 
 #### <a name="new-and-newh"></a>\<new> 和 \<new.h>
 
-- **new 和 delete**
+- new 和 delete
 
    在早期版本的库中，实现定义的运算符 new 和 delete 函数已从运行时库 DLL（例如，msvcr120.dll）中导出。 这些运算符函数现在始终以静态方式链接到二进制文件，即使是使用运行时库 DLL 时也是如此。
 
@@ -96,13 +96,13 @@ ms.locfileid: "58898877"
 
 #### <a name="processh"></a>\<process.h>
 
-- **_beginthread 和 _beginthreadex**
+- _beginthread 和 _beginthreadex
 
    现在，[_beginthread](../c-runtime-library/reference/beginthread-beginthreadex.md) 和 [_beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md) 函数保存对模块的引用，在该模块中，已针对线程持续时间定义了线程过程。 这有助于确保线程在完成运行之后才卸载模块。
 
 #### <a name="stdargh"></a>\<stdarg.h>
 
-- **va_start 和引用类型**
+- va_start 和引用类型
 
    编译 C++ 代码时，[va_start](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md) 现在会在编译时验证传递给它的参数是否为引用类型。 C++ 标准禁止引用类型的参数。
 
@@ -125,15 +125,15 @@ ms.locfileid: "58898877"
     dumpbin.exe /LINKERMEMBER somelibrary.lib
     ```
 
-- **gets 和 _getws**
+- gets 和 _getws
 
    已删除 [gets](../c-runtime-library/gets-getws.md) 和 [_getws](../c-runtime-library/gets-getws.md) 函数。 已从 C11 中的 C 标准库删除 gets 函数，因为使用该函数不安全。 _getws 函数是与 gets 等效（但可用于宽字符串）的 Microsoft 扩展。 作为这些函数的替代，请考虑使用 [fgets](../c-runtime-library/reference/fgets-fgetws.md)、[fgetws](../c-runtime-library/reference/fgets-fgetws.md)、[gets_s](../c-runtime-library/reference/gets-s-getws-s.md) 和 [_getws_s](../c-runtime-library/reference/gets-s-getws-s.md)。
 
-- **_cgets 和 _cgetws**
+- _cgets 和 _cgetws
 
    已删除 [_cgets](../c-runtime-library/cgets-cgetws.md) 和 [_cgetws](../c-runtime-library/cgets-cgetws.md) 函数。 作为这些函数替代，请考虑使用 [_cgets_s](../c-runtime-library/reference/cgets-s-cgetws-s.md) 和 [_cgetws_s](../c-runtime-library/reference/cgets-s-cgetws-s.md)。
 
-- **无穷大和 NaN 格式设置**
+- 无穷大和 NaN 格式设置
 
    在早期版本中，可以使用 MSVC 特定的 sentinel 字符串集进行无穷大和 NaN 格式设置。
 
@@ -159,7 +159,7 @@ ms.locfileid: "58898877"
 
   已修改 [scanf](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md) 函数以便分析这些新的字符串，因此这些字符串现在通过 `printf` 和 `scanf` 往返。
 
-- **浮点格式设置和分析**
+- 浮点格式设置和分析
 
    引入了新浮点格式设置和分析算法以提高正确性。 此更改会影响 [printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) 和 [scanf](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md) 系列函数，以及像 [strtod](../c-runtime-library/reference/strtod-strtod-l-wcstod-wcstod-l.md) 这样的函数。
 
@@ -183,33 +183,33 @@ ms.locfileid: "58898877"
 
    旧版本分析算法考虑的输入字符串中有效位数仅达 17，并将丢弃其余数位。 此方法不足以生成由字符串表示的近似值，结果通常是非常接近正确舍入的结果。 新版本的实现会考虑所有存在的数字，并生成所有输入（长度多达 768 位）的正确舍入的结果。 此外，这些函数现在遵循舍入模式（可通过 fesetround 控制）。  这可能是一种中断性行为变更，因为这些函数可能会输出不同的结果。 新版本的结果始终比旧版本的结果更准确。
 
-- **十六进制和无穷大/NaN 浮点分析**
+- 十六进制和无穷大/NaN 浮点分析
 
    浮点分析算法现在将分析十六进制浮点字符串（例如，由 %a 和 %A printf 格式说明符生成的字符串）和由 `printf` 函数生成的所有无穷大和 NaN 字符串（如上文所述）。
 
-- **%A 和 %a 零填充**
+- %A 和 %a 零填充
 
    %a 和 %A 格式说明符将浮点数转化为十六进制的尾数和二进制指数。 在早期版本中，`printf` 函数可能会错误地用零填充字符串。 例如，`printf("%07.0a\n", 1.0)` 可能会打印 00x1p+0，而它本应打印 0x01p+0。 已修复此缺陷。
 
-- **%A 和 %a 精度**
+- %A 和 %a 精度
 
    在早期版本的库中，%A 和 %a 格式说明符的默认精度是 6。 为了符合 C 标准，现在默认精度为 13。
 
    这是使用带 %A 或 %a 的格式字符串的任一函数输出中的运行时行为更改。 在旧版本行为中，使用 %A 说明符的输出可能是“1.1A2B3Cp+111”。 现在相同值的输出是“1.1A2B3C4D5E6F7p+111”。 若要获取旧版本行为，则可以指定精度（例如，%.6A）。 请参阅[精度规范](../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md#precision)。
 
-- **%F 说明符**
+- %F 说明符
 
    现在支持 %F 格式/转换说明符。 它在功能上等效于 %f 格式说明符，但使用大写字母形式进行格式设置的无穷大和 NaN 除外。
 
    在早期版本中，实现过去通常将 F 和 N 分析为长度修饰符。 此行为追溯到分段地址空间的时代：这些长度修饰符分别用于指示或近或远的指针（如 %Fp 或 %Ns 中所示）。 此行为已被删除。 如果遇到 %F，现在则将其视为 %F 格式说明符；如果遇到 %N，现在则将其视为无效的参数。
 
-- **指数格式设置**
+- 指数格式设置
 
    %e 和 %E 格式说明符将浮点数转化为十进制的尾数和指数。 %g 和 %G 格式说明符在某些情况下也以此形式设置格式位数。 在早期版本中，CRT 会始终生成具有三个数字指数的字符串。 例如，`printf("%e\n", 1.0)` 可能会输出 1.000000e+000，这是错误的。 根据 C 要求，如果可使用一个或两个数字表示指数，则仅打印两个数字。
 
    Visual Studio 2005 中添加了全局符合性切换：[_set_output_format](../c-runtime-library/set-output-format.md)。 程序可以调用参数为 _TWO_DIGIT_EXPONENT 的此函数，以启用符合标准的指数打印。 已将默认行为更改为符合标准的指数打印模式。
 
-- **格式字符串验证**
+- 格式字符串验证
 
    在早期版本中，`printf` 和 `scanf` 函数以静默方式接受许多无效格式字符串，有时会起到不寻常的作用。 例如，%hlhlhld 将被视为 %d。 现在所有无效格式字符串都被视为无效的参数。
 
@@ -219,43 +219,43 @@ ms.locfileid: "58898877"
 
 - **_O_U8TEXT 模式**
 
-   [_Setmode](../c-runtime-library/reference/setmode.md) 函数现在可以准确报告在 in_O_U8TEXT 模式中打开的流模式。 在早期版本的库中，它将报告正在 _O_WTEXT 中打开的此类流。
+   [_setmode](../c-runtime-library/reference/setmode.md) 函数现在可以准确报告在 in_O_U8TEXT 模式中打开的流模式。 在早期版本的库中，它将报告正在 _O_WTEXT 中打开的此类流。
 
    如果你的代码解释其中编码为 UTF-8 的流的 _O_WTEXT 模式，这则是一项重大更改。 如果你的应用程序不支持 UTF_8，请考虑为此越来越常见的编码添加支持。
 
-- **snprintf 和 vsnprintf**
+- snprintf 和 vsnprintf
 
    现在已实现 [snprintf](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md) 和 [vsnprintf](../c-runtime-library/reference/vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md) 函数。 较旧的代码通常为宏版本的这些函数提供定义，因为它们未由 CRT 库实现，但在较新版本中则不再需要这些。 如果将 [snprintf](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md) 或 [vsnprintf](../c-runtime-library/reference/vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md) 在包括 \<stdio.h> 之前定义为宏，则现在编译失败并显示错误，该错误指示定义了宏的位置。
 
    通常情况下，解决此问题的方法是删除用户代码中 `snprintf` 或 `vsnprintf` 的任何声明。
 
-- **tmpnam 生成可用文件名**
+- tmpnam 生成可用文件名
 
    在早期版本中，`tmpnam` 和 `tmpnam_s` 函数在驱动器根目录（如 \sd3c）中生成文件名。 这些函数现在在临时目录中生成可用的文件名路径。
 
-- **文件封装**
+- 文件封装
 
    在早期版本中，在 \<stdio.h> 中公开定义完整的文件类型，因此用户代码可以访问 FILE 并修改其内部结构。 该库已更改为隐藏实现细节。 作为此更改的一部分，\<stdio.h> 中所定义的 FILE 现在是不透明类型且无法从 CRT 自身的外部访问其成员。
 
-- **_outp 和 _inp**
+- _outp 和 _inp
 
    已删除函数 [_outp](../c-runtime-library/outp-outpw-outpd.md)、[_outpw](../c-runtime-library/outp-outpw-outpd.md)、[_outpd](../c-runtime-library/outp-outpw-outpd.md)、[_inp](../c-runtime-library/inp-inpw-inpd.md)、[_inpw](../c-runtime-library/inp-inpw-inpd.md) 和 [_inpd](../c-runtime-library/inp-inpw-inpd.md)。
 
 #### <a name="stdlibh-malloch-and-sysstath"></a>\<stdlib.h>、\<malloc.h> 和 \<sys/stat.h>
 
-- **strtof 和 wcstof**
+- strtof 和 wcstof
 
    当值不是以浮点形式表示时，`strtof` 和 `wcstof` 函数无法将 `errno` 设置为 ERANGE。 此错误只特定于这两个函数；`strtod`、`wcstod`、`strtold` 和 `wcstold` 函数不受影响。 此问题已修复，并且是运行时重大更改。
 
-- **对齐的分配函数**
+- 对齐的分配函数
 
    在早期版本中，对齐的分配函数（`_aligned_malloc`、`_aligned_offset_malloc` 等）以静默方式接受带 0 的对齐方式的块的请求。 请求的对齐必须是 2 的幂次方（而 0 不是）。 现在会将请求的对齐为 0 视为无效参数。 此问题已修复，并且是运行时重大更改。
 
-- **堆函数**
+- 堆函数
 
    已删除 `_heapadd`、`_heapset` 和 `_heapused` 函数。 这些函数已不起作用，因为 CRT 已更新为使用 Windows 堆。
 
-- **smallheap**
+- smallheap
 
    已删除 `smallheap` 链接选项。 请参阅[链接选项](../c-runtime-library/link-options.md)。
 
@@ -279,7 +279,7 @@ ms.locfileid: "58898877"
 
    在早期版本中，已使用 Windows API [GetSystemTimeAsFileTime](/windows/desktop/api/sysinfoapi/nf-sysinfoapi-getsystemtimeasfiletime) 实现了 [clock](../c-runtime-library/reference/clock.md) 函数。 使用此实现，clock 函数对系统时间比较敏感，因此不一定是单一的。 已根据 [QueryPerformanceCounter](https://msdn.microsoft.com/library/windows/desktop/ms644904.aspx) 重新实现了 clock 函数，现在它是单一的。
 
-- **fstat 和 _utime**
+- fstat 和 _utime
 
    在早期版本中，[_stat](../c-runtime-library/reference/stat-functions.md)、[fstat](../c-runtime-library/reference/fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md) 和 [_utime](../c-runtime-library/reference/utime-utime32-utime64-wutime-wutime32-wutime64.md) 函数对夏令时的处理方式不正确。 在 Visual Studio 2013 之前的版本中，所有这些函数错误调整标准时时间，就像处于夏时制时间内一样。
 
@@ -289,17 +289,17 @@ ms.locfileid: "58898877"
 
    在早期版本中，[asctime](../c-runtime-library/reference/asctime-wasctime.md) 函数会以前导零填充单位数的日期，例如：`Fri Jun 06 08:00:00 2014`。 规范要求此类日期应以前导空格填充，例如 `Fri Jun  6 08:00:00 2014`。 已修复此问题。
 
-- **strftime 和 wcsftime**
+- strftime 和 wcsftime
 
    `strftime` 和 `wcsftime` 函数现在支持 %C、%D、%e、%F、%g、%G、%h、%n、%r、%R、%t、%T、%u 和 %V 格式说明符。 此外，分析但忽略了 E 和 O 修饰符。
 
    指定 %c 格式说明符生成当前区域设置的“相应的日期和时间表示形式”。 在 C 区域设置中，此表示形式必须与 `%a %b %e %T %Y` 相同，并且形式与 `asctime` 生成的形式相同。 在早期版本中，使用 `MM/DD/YY HH:MM:SS` 表示形式，%c 格式说明符设置的时间格式不正确。 已修复此问题。
 
-- **timespec 和 TIME_UTC**
+- timespec 和 TIME_UTC
 
    \<time.h> 标头现在按照 C11 标准定义 `timespec` 类型和 `timespec_get` 函数。 此外，现在可定义与 `timespec_get` 函数连用的 TIME_UTC 宏。 对于具有任何这些标识符的冲突定义的代码而言，此更新是一项重大更改。
 
-- **CLOCKS_PER_SEC**
+- CLOCKS_PER_SEC
 
    现在，CLOCKS_PER_SEC 宏根据 C 语言要求扩展为整数类型 `clock_t`。
 
@@ -307,15 +307,15 @@ ms.locfileid: "58898877"
 
 为了实现新的优化和调试检查，C++ 标准库的 Visual Studio 实现特意破坏了连续两个版本之间的二进制兼容性。 因此，在使用 C++ 标准库时，使用不同版本编译的对象文件和静态库不能混合在同一二进制文件（EXE 或 DLL）中，并且不能在使用不同版本编译的二进制文件之间传递 C++ 标准库对象。 这样混合会发出关于 _MSC_VER 不匹配的链接器错误。 （_MSC_VER 是包含编译器主版本的宏，例如，Visual Studio 2013 的 1800。）此检查无法检测 DLL 混合，也无法检测涉及 Visual Studio 2008 或早期版本的混合。
 
-- **C++ 标准库包含文件**
+- C++ 标准库包含文件
 
    对 C++ 标准库标头中的包含结构进行了一些更改。 允许 C++ 标准库标头以未指定的方式相互包含。 一般情况下，编写代码应根据 C++ 标准，谨慎包括需要的所有标头，而不是依赖于哪些 C++ 标准库标头包含哪些其他 C++ 标准库标头。 这使得代码可跨版本和平台进行移植。 至少更改 Visual Studio 2015 的两个标头才会影响用户代码。 首先，\<string> 不再包括 \<iterator>。 第二，\<tuple> 现在用于声明 `std::array` 但不包括所有 \<array>，这可能中断代码通过以下代码构造的组合：代码具有名为“array”的变量、你具有 using 指令“using namespace std;”，以及你包括了含有 \<tuple> 的 C++ 标准库标头（如 \<functional>），其现在用于声明 `std::array`。
 
-- **steady_clock**
+- steady_clock
 
    已更改 [steady_clock](../standard-library/steady-clock-struct.md) 的 \<chrono> 实现，以便满足 C++ 标准对稳定性和单一性的需求。 `steady_clock` 现在基于 [QueryPerformanceCounter](https://msdn.microsoft.com/library/windows/desktop/ms644904.aspx)，且 `high_resolution_clock` 现在是 `steady_clock` 的 typedef。 因此，在 Visual Studio 中，`steady_clock::time_point` 现在是 `chrono::time_point<steady_clock>` 的 typedef；但是，其他实现不一定是这种情况。
 
-- **allocators 和 const**
+- 分配器和 const
 
    现在，我们要求分配器进行相等/不等比较，以接受两端上的 const 自变量。 如果分配器定义了这样的运算符，
 
@@ -329,19 +329,19 @@ ms.locfileid: "58898877"
     bool operator==(const MyAlloc& other) const
     ```
 
-- **const 元素**
+- const 元素
 
    C++ 标准始终禁止 const 元素（如 vector\<const T> 或 set\<const T>）的容器。 Visual Studio 2013 及更早版本接受此类容器。 在当前版本中，此类容器无法编译。
 
-- **std::allocator::deallocate**
+- std::allocator::deallocate
 
    在 Visual Studio 2013 和早期版本中，`std::allocator::deallocate(p, n)` 忽略了传入用于 n 的参数。  C++ 标准始终要求 n 必须等于作为第一个参数传递给返回 p 的 `allocate` 调用的值。 但是，在当前版本中将检查 n 的值。 在运行时，为 n 传递不同于标准要求的参数的代码可能会崩溃。
 
-- **hash_map 和 hash_set**
+- hash_map 和 hash_set
 
    非标准标头文件 \<hash_map> 和 \<hash_set> 在 Visual Studio 2015 中已被弃用，并且将在未来版本中删除。 请改用 \<unordered_map> 和 \<unordered_set>。
 
-- **比较运算符和 operator()**
+- 比较运算符和 operator()
 
    关联容器（\<map> 系列）现在要求其比较运算符具有可调用 const 的函数调用运算符。 现在比较运算符类声明中的以下代码无法进行编译：
 
@@ -355,7 +355,7 @@ ms.locfileid: "58898877"
     bool operator()(const X& a, const X& b) const
     ```
 
-- **类型特征**
+- 类型特征
 
    早期版本的 C++ 草稿标准中删除了类型特征的旧名称。 C++11 中已对这些内容进行了更改，并且已更新为 Visual Studio 2015 中的 C++11 值。 下表显示了旧名称和新名称。
 
@@ -381,7 +381,7 @@ ms.locfileid: "58898877"
    |has_trivial_move_assign|is_trivially_move_assignable|
    |has_trivial_destructor|is_trivially_destructible|
 
-- **launch::any 和 launch::sync 策略**
+- launch::any 和 launch::sync 策略
 
    删除了非标准的 `launch::any` 和 `launch::sync` 策略。 相反，对于 `launch::any`，使用 `launch:async | launch:deferred`。 对于 `launch::sync`，使用 `launch::deferred`。 请参阅 [launch 枚举](../standard-library/future-enums.md#launch)。
 
@@ -395,7 +395,7 @@ ms.locfileid: "58898877"
 
 ####  <a name="BK_ConcRT"></a>并发运行时
 
-- **与 concurrency::Context::Yield 冲突的 Windows.h 中的 Yield 宏**
+- 与 concurrency::Context::Yield 冲突的 Windows.h 中的 Yield 宏
 
    并发运行时之前使用 `#undef` 来取消定义 Yield 宏，以避免 Windows.h h 中定义的 Yield 宏和 `concurrency::Context::Yield` 函数之间的冲突。 已删除此 `#undef`，并添加了新的非冲突等效 API 调用 [concurrency::Context::YieldExecution](../parallel/concrt/reference/context-class.md#yieldexecution)。 若要解决与 Yield 的冲突，可以改为更新代码以调用 `YieldExecution` 函数，或在调用站点用括号将 `Yield` 函数名括起来，如下例所示：
 
@@ -415,11 +415,11 @@ ms.locfileid: "58898877"
 
 - [Visual Studio 2015 的符合性改进](#VS_RTM)
 
-- [Update 1 中的符合性改进](#VS_Update1)
+- [更新 1 中的符合性改进](#VS_Update1)
 
-- [Update 2 中的符合性改进](#VS_Update2)
+- [更新 2 中的符合性改进](#VS_Update2)
 
-- [Update 3 中的符合性改进](#VS_Update3)
+- [更新 3 中的符合性改进](#VS_Update3)
 
 ###  <a name="VS_RTM"></a>Visual Studio 2015 的符合性改进
 
@@ -1004,7 +1004,7 @@ ms.locfileid: "58898877"
     //other partial specializations here
     ```
 
-- **对前向声明强制执行规则。 （仅适用于 C。）**
+- **对前向声明强制执行规则。（仅适用于 C。）**
 
    下面的代码现在生成错误 C2065：
 
@@ -1496,7 +1496,7 @@ ms.locfileid: "58898877"
 
    若要修复此错误，请在 `S2` 中删除构造函数对 `S1()` 的调用；如有必要，将其置于其他函数中。
 
-- **{} 防止发生指针转换**
+- {} 防止发生指针转换
 
    下面的代码现在生成错误 C2439："S::p":无法初始化成员
 
@@ -1775,7 +1775,7 @@ ms.locfileid: "58898877"
 
    此外，尽管编译器不能进行具体诊断，但内联运算符 new 会被视为格式不正确。
 
-- **对非类类型调用“operator type()”（用户定义的转换）**
+- **对非类类型调用“operator *type*()”（用户定义的转换）**
 
    早期版本的编译器允许以无提示忽略的方式对非类类型调用“operator *type*()”。 这种旧行为会导致无提示代码生成错误风险，从而导致不可预知的运行时行为。 编译器不再接受这种方式编写的代码，因此会发出编译器错误 C2228。
 
@@ -2966,7 +2966,7 @@ Visual Studio 2013 中的 C++ 编译器可以检测到 _ITERATOR_DEBUG_LEVEL 中
 
 - MFC 功能区的辅助功能已更改。  现在显示的是分层体系结构，而不是一级体系结构。 通过调用 `CRibbonBar::EnableSingleLevelAccessibilityMode()` 可继续使用旧有行为。
 
-- `CDatabase::GetConnect` 方法已删除。 为了提高安全性，连接字符串现在进行加密存储并只根据需要进行解密；它不能返回为纯文本。  可使用 `CDatabase::Dump` 方法来获取此字符串。
+- 已删除 `CDatabase::GetConnect` 方法。 为了提高安全性，连接字符串现在进行加密存储并只根据需要进行解密；它不能返回为纯文本。  可使用 `CDatabase::Dump` 方法来获取此字符串。
 
 - `CWnd::OnPowerBroadcast` 的签名已更改。 此消息处理程序的签名更改为采用 LPARAM 作为第二个参数。
 
@@ -2986,7 +2986,7 @@ Visual Studio 2013 中的 C++ 编译器可以检测到 _ITERATOR_DEBUG_LEVEL 中
 
    - `CMFCMaskedEdit::OnPaste` 更改为无参数而不是使用 (WPARAM, LPARAM) 作为参数，以便可以在消息映射中使用新的 ON_WM_PASTE 宏。
 
-- `#ifdef` 指令已在 MFC 头文件中删除。 已移除与不受支持的 Windows 版本 (WINVER &lt; 0x0501) 相关的 MFC 头文件中的多个 `#ifdef` 指令。
+- 已移除 MFC 头文件中的 `#ifdef` 指令。 已移除与不受支持的 Windows 版本 (WINVER &lt; 0x0501) 相关的 MFC 头文件中的多个 `#ifdef` 指令。
 
 - ATL DLL (atl120.dll) 已移除。 ATL 现在作为标头和静态库 (atls.lib) 提供。
 
@@ -3090,9 +3090,9 @@ Visual Studio 2013 中的 C++ 编译器可以检测到 _ITERATOR_DEBUG_LEVEL 中
 
 - 已向 `CFolderPickerDialog` 构造函数添加参数。 （因为它是默认参数，所以不会破坏源代码。）
 
-- `CFileStatus` 结构大小已更改：`m_attribute` 成员从 BYTE 更改为 DWORD（以匹配从 `GetFileAttributes` 返回的值）。
+- 已更改 `CFileStatus` 结构大小：`m_attribute` 成员从 BYTE 更改为 DWORD（以匹配从 `GetFileAttributes` 返回的值）。
 
-- `CRichEditCtrl` 和 `CRichEditView` 在 Unicode 版本中使用 MSFTEDIT_CLASS（RichEdit 4.1 控件），而不是使用 RICHEDIT_CLASS（RichEdit 3.0 控件）。
+- 在 Unicode 版本中，`CRichEditCtrl` 和 `CRichEditView` 使用 MSFTEDIT_CLASS（RichEdit 4.1 控件），而不是使用 RICHEDIT_CLASS（RichEdit 3.0 控件）。
 
 - 删除了 `AFX_GLOBAL_DATA::IsWindowsThemingDrawParentBackground`，因为它在 Windows Vista、Windows 7 和 Windows 8 上始终为 TRUE。
 
@@ -3436,11 +3436,11 @@ Visual Studio 2013 中的 C++ 编译器可以检测到 _ITERATOR_DEBUG_LEVEL 中
 
 - 任何 printf 系列函数中不再默认支持 %n 格式说明符，因为这在本质上是不安全的。 如果遇到 %n，默认行为是调用无效参数处理程序。 要启用 %n 支持，请使用 `_set_printf_count_output`（另请参阅 `_get_printf_count_output`）。
 
-- `sprintf` 现打印带符号的零的负号。
+- 现在，`sprintf` 打印带符号的零的负号。
 
-- `swprintf` 已更改以符合标准；它现在需要大小参数。 已弃用不带大小参数的 `swprintf` 格式。
+- 已更改 `swprintf` 以符合标准；它现在需要大小参数。 已弃用不带大小参数的 `swprintf` 格式。
 
-- `_set_security_error_handler` 已删除。 删除对该函数的任何调用；默认处理程序是一种处理安全错误的更安全方法。
+- 删除了 `_set_security_error_handler`。 删除对该函数的任何调用；默认处理程序是一种处理安全错误的更安全方法。
 
 - `time_t` 现在是 64 位值（除非已定义 _USE_32BIT_TIME_T）。
 
@@ -3466,7 +3466,7 @@ Visual Studio 2013 中的 C++ 编译器可以检测到 _ITERATOR_DEBUG_LEVEL 中
 
 ### <a name="standard-library-2005"></a>标准库（2005 年）
 
-- 异常类（位于 \<exception> 标头中）已移动到 `std` 命名空间。 在早期版本中，此类位于全局命名空间中。 要解决指示无法找到异常类的错误，请将以下 using 语句添加到代码中： `using namespace std;`
+- 异常类（位于 \<exception> 标头中）已移动到 `std` 命名空间。 在早期版本中，此类位于全局命名空间中。 要解决指示无法找到异常类的错误，请将以下 using 语句添加到代码中：`using namespace std;`
 
 - 调用 `valarray::resize()` 时，`valarray` 的内容将会丢失，并将替换为默认值。 `resize()` 方法旨在重新初始化 `valarray`，而不是使其像向量一样动态增长。
 
@@ -3524,4 +3524,4 @@ Visual Studio 2013 中的 C++ 编译器可以检测到 _ITERATOR_DEBUG_LEVEL 中
 
 ## <a name="see-also"></a>请参阅
 
-[Visual Studio 2017 中 Visual C++ 的新增功能](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)
+[Visual Studio 中 Visual C++ 的新增功能](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)
