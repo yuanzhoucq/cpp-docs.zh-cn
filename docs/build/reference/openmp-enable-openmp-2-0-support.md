@@ -1,6 +1,6 @@
 ---
-title: /openmp（启用 OpenMP 2.0 支持）
-ms.date: 11/04/2016
+title: /openmp （启用 OpenMP 支持）
+ms.date: 04/15/2019
 f1_keywords:
 - /openmp
 - VC.Project.VCCLCompilerTool.OpenMP
@@ -8,50 +8,60 @@ helpviewer_keywords:
 - /openmp compiler option [C++]
 - -openmp compiler option [C++]
 ms.assetid: 9082b175-18d3-4378-86a7-c0eb95664e13
-ms.openlocfilehash: f1edcc6d29a5b84106b3a5fd91d2446c34e0f7b9
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: caa06d89c590abd2b3a74a5a6b118d6ba4acd910
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57807463"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59674261"
 ---
-# <a name="openmp-enable-openmp-20-support"></a>/openmp（启用 OpenMP 2.0 支持）
+# <a name="openmp-enable-openmp-support"></a>/openmp （启用 OpenMP 支持）
 
-使编译器处理`#pragma` [omp](../../preprocessor/omp.md)。
+使编译器处理[ `#pragma omp` ](../../preprocessor/omp.md)支持 OpenMP 指令。
 
 ## <a name="syntax"></a>语法
 
-```
-/openmp
-```
+::: moniker range=">= vs-2019"
+
+> **/openmp**\[**:**__experimental__]
+
+::: moniker-end
+
+::: moniker range="<= vs-2017"
+
+> **/openmp**
+
+::: moniker-end
 
 ## <a name="remarks"></a>备注
 
-`#pragma omp` 用于指定[指令](../../parallel/openmp/reference/openmp-directives.md)并[子句](../../parallel/openmp/reference/openmp-clauses.md)。 如果 **/openmp** OpenMP 子句和指令，编译器将忽略在编译时，未指定。 [OpenMP 函数](../../parallel/openmp/reference/openmp-functions.md)调用处理由编译器即使 **/openmp**未指定。
+`#pragma omp` 用于指定[指令](../../parallel/openmp/reference/openmp-directives.md)并[子句](../../parallel/openmp/reference/openmp-clauses.md)。 如果 **/openmp**未指定在编译时，编译器将忽略 OpenMP 子句和指令。 [OpenMP 函数](../../parallel/openmp/reference/openmp-functions.md)调用处理由编译器即使 **/openmp**未指定。
 
-使用应用程序编译 **/openmp**并 **/clr**只能在单个应用程序域进程中运行; 不支持多个应用程序域。 也就是说，当运行时模块构造函数 (.cctor)，它会检测与编译的进程 **/openmp**和应用程序是否正在加载到非默认运行时。 有关详细信息，请参阅[appdomain](../../cpp/appdomain.md)， [/clr （公共语言运行时编译）](clr-common-language-runtime-compilation.md)，并[混合程序集初始化](../../dotnet/initialization-of-mixed-assemblies.md)。
+::: moniker range=">= vs-2019"
 
-如果你尝试加载使用编译的应用程序 **/openmp**并 **/clr**到非默认应用程序域，<xref:System.TypeInitializationException>将在调试器外部引发异常和在调试器中，将引发 OpenMPWithMultipleAppdomainsException 异常。
+C++编译器当前支持 OpenMP 2.0 标准。 但是，Visual Studio 2019 现在还提供了单指令多数据的功能。 若要使用单指令多数据，通过使用编译 **/openmp： 实验性**选项。 此选项启用这两项的常用 OpenMP 功能，并附加 OpenMP SIMD 功能不可用时使用 **/openmp**切换。
+
+::: moniker-end
+
+使用编译的应用程序 **/openmp**并 **/clr**只能在单个应用程序域进程中运行。 不支持多个应用程序域。 也就是说，当模块构造函数 (`.cctor`) 是运行时，检测到如果使用编译的进程 **/openmp**，以及应用程序加载到非默认运行时。 有关详细信息，请参阅[appdomain](../../cpp/appdomain.md)， [/clr （公共语言运行时编译）](clr-common-language-runtime-compilation.md)，并[混合程序集初始化](../../dotnet/initialization-of-mixed-assemblies.md)。
+
+如果尝试加载应用程序编译的同时使用这二者 **/openmp**并 **/clr**到非默认应用程序域，<xref:System.TypeInitializationException>在调试器外部引发异常和`OpenMPWithMultipleAppdomainsException`异常在调试器中引发。
 
 此外可以在以下情况下引发这些异常：
 
-- 如果你的应用程序编译 **/clr**，但不能与 **/openmp**，已加载到非默认应用程序域，但其中的过程包括使用已编译的应用程序 **/openmp**。
+- 如果使用你的应用程序进行编译 **/clr**但不是 **/openmp**，并加载到非默认应用程序域，其中的过程包括使用编译的应用 **/openmp**.
 
-- 如果传递你 **/clr**应用程序到 regasm.exe 之类的实用程序 ([Regasm.exe （程序集注册工具）](/dotnet/framework/tools/regasm-exe-assembly-registration-tool))，这会将其目标程序集加载到非默认应用程序域。
+- 如果传递你 **/clr**应用到一个实用程序，如[regasm.exe](/dotnet/framework/tools/regasm-exe-assembly-registration-tool)，这会将其目标程序集加载到非默认应用程序域。
 
 公共语言运行时代码访问安全性在 OpenMP 区域中不起作用。 如果应用了并行区域之外的 CLR 代码访问安全特性，它不会生效并行区域中。
 
-Microsoft 建议您不要编写 **/openmp**应用程序，允许部分受信任调用方，使用<xref:System.Security.AllowPartiallyTrustedCallersAttribute>，或任何 CLR 代码访问安全属性。
+Microsoft 不建议编写 **/openmp**应用，其允许部分受信任调用方。 不要使用<xref:System.Security.AllowPartiallyTrustedCallersAttribute>，或任何 CLR 代码访问安全属性。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[Visual Studio 中的设置 c + + 编译器和生成属性](../working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
 
-1. 展开“配置属性”节点。
-
-1. 展开**C/c + +** 节点。
-
-1. 选择**语言**属性页。
+1. 展开**配置属性** > **C /C++** > **语言**属性页。
 
 1. 修改**OpenMP 支持**属性。
 
@@ -61,13 +71,13 @@ Microsoft 建议您不要编写 **/openmp**应用程序，允许部分受信任�
 
 ## <a name="example"></a>示例
 
-下面的示例显示了一些与它启动后，使用线程池线程池启动的效果。 假设 x64，单核双处理器线程池将启动到大约 16ms年。 之后，但没有 threadpool 很少的费用。
+下面的示例显示了一些与启动后将其使用线程池线程池启动的效果。 假设 x64，单核双处理器，线程池用大约 16 毫秒才能启动。 此后，收取稍有额外的费用为线程池。
 
-使用编译 **/openmp**，第二个调用 test2 永远不会运行时间超过你如果使用编译 **/openmp-**，因为没有任何线程池启动。 在一百万次迭代 **/openmp**版本的速度快于 **/openmp-** 的第二次调用到 test2，而在 25 次迭代这两个版本 **/openmp-** 和 **/openmp**版本注册小于时钟粒度。
+当编译使用 **/openmp**，第二个调用 test2 永远不会运行时间超过如果编译使用 **/openmp-**，因为没有任何线程池启动。 在一百万次迭代 **/openmp**版本的速度快于 **/openmp-** test2 第二次调用的版本。 在 25 次迭代，同时 **/openmp-** 并 **/openmp**版本注册小于时钟粒度。
 
-因此，如果在应用程序中有一个循环并且它小于时间 （调整你的计算机上的近似系统开销），运行 **/openmp**可能不合适，但如果它是不止于此的任何内容，你可能想要考虑使用 **/openmp**。
+如果应用程序中有一个循环，并且它在少于 15 ms （调整你的计算机上的近似系统开销） 中运行 **/openmp**可能不太合适。 如果它是更高版本，您可能想要考虑使用 **/openmp**。
 
-```
+```cpp
 // cpp_compiler_options_openmp.cpp
 #include <omp.h>
 #include <stdio.h>
@@ -113,5 +123,6 @@ int main(int argc, char* argv[]) {
 
 ## <a name="see-also"></a>请参阅
 
-[MSVC 编译器选项](compiler-options.md)<br/>
-[MSVC 编译器命令行语法](compiler-command-line-syntax.md)
+[MSVC 编译器选项](compiler-options.md) \
+[MSVC 编译器命令行语法](compiler-command-line-syntax.md) \
+[MSVC 中的 OpenMP](../../parallel/openmp/openmp-in-visual-cpp.md)
