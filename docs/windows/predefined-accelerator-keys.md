@@ -65,7 +65,7 @@ ms.locfileid: "59027505"
 |VK_OEM_COMMA|(Windows)适用于任何国家/地区 **，** 密钥|
 |VK_OEM_MINUS|(Windows)适用于任何国家/地区**-** 密钥|
 |VK_OEM_PERIOD|(Windows)适用于任何国家/地区， **。** 密钥|
-|VK_OEM_PLUS|(Windows)适用于任何国家/地区**+** 密钥|
+|VK_OEM_PLUS|(Windows)适用于任何国家/地区 **+** 密钥|
 |VK_PACKET|(Windows)用于传递 Unicode 字符，如同它们是击键。|
 |VK_RCONTROL|**右 Ctrl**密钥|
 |VK_RMENU|**右菜单**密钥|
