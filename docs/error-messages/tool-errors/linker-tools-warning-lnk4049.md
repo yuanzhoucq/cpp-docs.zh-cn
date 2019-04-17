@@ -1,23 +1,25 @@
 ---
 title: 链接器工具警告 LNK4049
-ms.date: 04/09/2019
+ms.date: 04/15/2019
 f1_keywords:
 - LNK4049
 helpviewer_keywords:
 - LNK4049
 ms.assetid: 5fd5fb24-c860-4149-a557-0ac26a65d97c
-ms.openlocfilehash: 357bf5a981dddadfd79d2d6981ccc9c478909097
-ms.sourcegitcommit: 0ad3f4517e64900a2702dd3d366586f9e2bce2c2
+ms.openlocfilehash: b527d15310dba70c1bae21e601db17db2900e219
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/10/2019
-ms.locfileid: "59477348"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59674248"
 ---
 # <a name="linker-tools-warning-lnk4049"></a>链接器工具警告 LNK4049
 
 > 符号*符号*中定义*filename.obj*导入
 
-符号同时从导出和导入到该程序。
+[__declspec （dllimport)](../../cpp/dllexport-dllimport.md)为指定*符号*即使对象文件中定义了符号*filename.obj*中相同的映像。 删除`__declspec(dllimport)`修饰符来解决此警告。
+
+## <a name="remarks"></a>备注
 
 一个对象文件中定义符号，并使用引用时，链接器会生成此警告`__declspec(dllimport)`中另一个声明修饰符。
 
