@@ -6,12 +6,12 @@ ms.date: 03/25/2019
 ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
-ms.openlocfilehash: b558b2e0c381b8521fe0ba5f18647a933175ce07
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.openlocfilehash: f1e6b06c3212ae3ff192fdf402c0167575161656
+ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "58867007"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59430792"
 ---
 # <a name="create-a-c-console-app-project"></a>创建 C++ 控制台应用项目
 
@@ -34,6 +34,9 @@ Visual Studio 使用项目来组织应用的代码，使用解决方案来组织
 1. 在项目模板列表中，选择“控制台应用”，然后选择“下一步”。
 
    ![选择控制台应用模板](./media/calc-vs2019-choose-console-app.png "Choose the Console App template")
+
+   > [!Important]
+   > 请确保选择 Console App 模板的 C++ 版本。 它具有 C++、Windows 和 Console 标记，该图标在角落处有“++”。
 
 1. 在“配置新项目”对话框中，选择“项目名称”编辑框，将新项目命名为 CalculatorTutorial，然后选择“创建”。
 
