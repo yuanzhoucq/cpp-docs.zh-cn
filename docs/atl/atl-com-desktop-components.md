@@ -6,15 +6,15 @@ helpviewer_keywords:
 - ATL, about ATL
 ms.assetid: 291f38d1-d2de-4687-86a9-99b4fd35706c
 ms.openlocfilehash: e1ee9364cfcd382c8699014fd2ef4a807b63bb0f
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58780426"
 ---
 # <a name="atl-com-desktop-components"></a>ATL COM 桌面组件
 
-ATL 引用记录了活动模板库 (ATL)，一组基于模板的 c + + 类，用于简化组件对象模型 (COM) 对象的编程。 COM 是一个二进制规范，用于创建和使用 Windows 上的软件组件。 若要充分利用 ATL，强烈建议工作熟悉 COM。 有关 COM 的详细信息，请参阅[组件对象模型 (COM)](/windows/desktop/com/component-object-model--com--portal)。
+ATL 引用记录了活动模板库 (ATL)，基于模板的一组C++类，用于简化组件对象模型 (COM) 对象的编程。 COM 是一个二进制规范，用于创建和使用 Windows 上的软件组件。 若要充分利用 ATL，强烈建议工作熟悉 COM。 有关 COM 的详细信息，请参阅[组件对象模型 (COM)](/windows/desktop/com/component-object-model--com--portal)。
 
 ## <a name="in-this-section"></a>本节内容
 

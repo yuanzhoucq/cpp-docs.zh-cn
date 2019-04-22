@@ -9,15 +9,15 @@ helpviewer_keywords:
 - Visual C++, language reference
 ms.assetid: 4be9cacb-c862-4391-894a-3a118c9c93ce
 ms.openlocfilehash: 8da5a4f7113bbb4256e45e7ec3c91a9c6677643c
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58774030"
 ---
 # <a name="c-language-reference"></a>C++ 语言参考
 
-本参考将介绍在 Microsoft Visual C++ 中实现的 C++ 编程语言。 基于组织[ *c + + 参考手册批注*](http://www.stroustrup.com/arm.html) Margaret Ellis 和 Bjarne Stroustrup 和 ANSI/ISO c + + 国际标准 (ISO/IEC FDIS 14882)。 本文涵盖了 C++ 语言功能的 Microsoft 专用实现。
+本参考将介绍在 Microsoft Visual C++ 中实现的 C++ 编程语言。 基于组织[*带批注的C++参考手册*](http://www.stroustrup.com/arm.html) Margaret Ellis 和 Bjarne Stroustrup 和 ANSI/ISO 上C++国际标准 (ISO/IEC FDIS 14882)。 本文涵盖了 C++ 语言功能的 Microsoft 专用实现。
 
 有关现代 C++ 编程做法的概述，请参阅[欢迎回到 C++](welcome-back-to-cpp-modern-cpp.md)。
 
@@ -98,7 +98,7 @@ Microsoft 的 C++ 扩展。
 ## <a name="related-sections"></a>相关章节
 
 [适用于运行时平台的组件扩展](../extensions/component-extensions-for-runtime-platforms.md)<br/>
-有关使用 Visual c + + 到目标.NET 参考材料。
+参考资料上使用视觉对象C++到目标.NET。
 
 [C/C++ 生成参考](../build/reference/c-cpp-building-reference.md)<br/>
 编译器选项、链接器选项和其他生成工具。

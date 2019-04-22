@@ -7,10 +7,10 @@ helpviewer_keywords:
 - metadata, getting (OLE DB Templates)
 ms.assetid: 6b448461-82fb-4acf-816b-3cbb0ca1d186
 ms.openlocfilehash: 12c3de79626411b76a402a7f5407f40a7b054318
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59025998"
 ---
 # <a name="obtaining-metadata-with-schema-rowsets"></a>用架构行集合获取元数据
@@ -42,7 +42,7 @@ ANSI SQL 定义数据存储区的目录/架构模型；OLE DB 使用此模型。
 SELECT * FROM authors WHERE l_name = 'pivo'
 ```
 
-`l_name` 是的限制。 这是仅有一个限制; 使用一个简单示例架构行集类支持多个限制。
+`l_name` 是一个限制。 这是仅有一个限制; 使用一个简单示例架构行集类支持多个限制。
 
 [架构行集 typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)封装所有的 OLE DB 架构行集，从而使您可以通过实例化并打开它访问架构行集就像任何其他行集一样。 例如，typedef 类[CColumns](../../data/oledb/ccolumns-ccolumnsinfo.md)定义为：
 

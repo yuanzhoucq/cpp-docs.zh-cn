@@ -6,10 +6,10 @@ f1_keywords:
 - event/Microsoft::WRL::Callback
 ms.assetid: afb15d25-3230-44f7-b321-e17c54872943
 ms.openlocfilehash: d37e6fdd2521f07728305bfbf5441cebb363030a
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59041385"
 ---
 # <a name="callback-function-wrl"></a>回调函数 (WRL)
@@ -227,7 +227,7 @@ ComPtr<TDelegateInterface> Callback(
 *TArg9*<br/>
 一个模板参数，指定第九个回调方法自变量的类型。
 
-*回调*<br/>
+*callback*<br/>
 一个对象，表示回调对象及其成员函数。
 
 *object*<br/>
@@ -252,4 +252,4 @@ ComPtr<TDelegateInterface> Callback(
 
 ## <a name="see-also"></a>请参阅
 
-[Microsoft::WRL 命名空间](microsoft-wrl-namespace.md)
+[Microsoft::WRL Namespace](microsoft-wrl-namespace.md)

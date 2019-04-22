@@ -10,10 +10,10 @@ helpviewer_keywords:
 - control modules [MFC]
 ms.assetid: 0721724d-d4af-4eda-ad34-5a2b27810dd4
 ms.openlocfilehash: f6d486c7bacb897d70d85414ac3d0bd0d13e447b
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58780283"
 ---
 # <a name="colecontrolmodule-class"></a>COleControlModule 类
@@ -28,7 +28,7 @@ class COleControlModule : public CWinApp
 
 ## <a name="remarks"></a>备注
 
-此类提供用于初始化控制模块的成员函数。 使用 Microsoft 基础类的每个 OLE 控件模块只能包含一个对象派生自`COleControlModule`。 当构造其他 c + + 的全局对象时，将构造此对象。 声明你派生`COleControlModule`在全局级别的对象。
+此类提供用于初始化控制模块的成员函数。 使用 Microsoft 基础类的每个 OLE 控件模块只能包含一个对象派生自`COleControlModule`。 将构造此对象时其他C++全局对象构造。 声明你派生`COleControlModule`在全局级别的对象。
 
 有关使用的详细信息`COleControlModule`类，请参阅[CWinApp](../../mfc/reference/cwinapp-class.md)类和文章[ActiveX 控件](../../mfc/mfc-activex-controls.md)。
 

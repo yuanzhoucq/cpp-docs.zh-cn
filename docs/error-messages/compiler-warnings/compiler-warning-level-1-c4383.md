@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4383
 ms.assetid: 96c0e52d-874e-4b57-a154-0e49b6a00fae
 ms.openlocfilehash: 2510dda59047632e2a4823f734feeffd0c0a5b02
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "58778034"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59777947"
 ---
 # <a name="compiler-warning-level-1-c4383"></a>编译器警告（等级 1）C4383
 
@@ -21,7 +21,7 @@ instance_dereference_operator： 取消引用句柄的意义可以更改，用�
 
 有关详细信息，请参阅[句柄对象运算符 (^)](../../extensions/handle-to-object-operator-hat-cpp-component-extensions.md)并[跟踪引用运算符](../../extensions/tracking-reference-operator-cpp-component-extensions.md)。
 
-此外，实例运算符不供其他语言编译器通过引用的元数据。 有关详细信息，请参阅[用户定义的运算符 (C + + CLI)](../../dotnet/user-defined-operators-cpp-cli.md)。
+此外，实例运算符不供其他语言编译器通过引用的元数据。 有关详细信息，请参阅[用户定义的运算符 (C++/CLI)](../../dotnet/user-defined-operators-cpp-cli.md)。
 
 ## <a name="example"></a>示例
 

@@ -9,16 +9,16 @@ helpviewer_keywords:
 - redistributing applications [C++], about redistributing applications
 ms.assetid: d201b2ce-36f1-44e5-a96c-0db81a1ba652
 ms.openlocfilehash: 2bf4297a6c61d16c68d6a9cb893aed78b9d7609d
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58786142"
 ---
 # <a name="redistributing-visual-c-files"></a>重新分发 Visual C++ 文件
 
 > [!NOTE]
-> 你转到此处是否因为想下载某个 Visual C++ 运行时文件？ 转到[Microsoft 网站](http://www.microsoft.com/)并输入**Visual c + + 可再发行组件**在搜索框中。 下载并安装适用于你的计算机体系结构的可再发行组件包（例如，如果运行 64 位 Windows，请使用 x64）以及所需的 Visual C++ 版本（例如 2015 版）。
+> 你转到此处是否因为想下载某个 Visual C++ 运行时文件？ 转到[Microsoft 网站](http://www.microsoft.com/)并输入**VisualC++可再发行组件**在搜索框中。 下载并安装适用于你的计算机体系结构的可再发行组件包（例如，如果运行 64 位 Windows，请使用 x64）以及所需的 Visual C++ 版本（例如 2015 版）。
 
 部署应用程序时，还必须部署支持该应用程序所需的文件。 如果其中有任何文件由 Microsoft 提供，请检查是否允许你重新发布这些文件。 若要查看 Visual Studio 许可条款，请在 IDE 中的“关于 Microsoft Visual Studio”对话框查看许可条款链接，或下载 [Microsoft 软件许可条款](https://visualstudio.microsoft.com/license-terms/mlt687465/)文件。 若要查看某些版本的 Visual Studio 的 Microsoft 软件许可条款中“可分发代码”部分引用的“REDIST 列表”，请参阅 [Microsoft Visual Studio 2017 和 Microsoft Visual Studio 2017 SDK 的可分发代码（包括实用程序和 BuildServer 文件）](/visualstudio/productinfo/2017-redistribution-vs)，或者如果使用的是 Visual Studio 2015，请参阅 [Microsoft Visual Studio 2015 和 Microsoft Visual Studio 2015 SDK 的可分发代码](/visualstudio/productinfo/2015-redistribution-vs)。 有关可再发行文件的详细信息，请参阅[确定要重新分发的 Dll](determining-which-dlls-to-redistribute.md) 和[部署示例](deployment-examples.md)。
 
@@ -28,7 +28,7 @@ Visual C++ Redistributable Package 将安装并注册所有 Visual C++ 库。 �
 
 每个 Visual C++ 可再发行包都会检查计算机上是否存在较新版本。 如果找到较新版本，则不安装包。 从 Visual Studio 2015 开始，可再发行包会显示一个表明安装失败的错误消息。 如果使用 /quiet 标志运行包，则不会显示错误消息。 在任一情况下，Microsoft 安装程序都会记录错误，并且会将错误结果返回给调用方。 从 Visual Studio 2015 包开始，可以检查注册表是否安装了更新的版本，从而避免出现此错误。 当前所安装的版本存储在 HKEY_LOCAL_MACHINE\SOFTWARE[\Wow6432Node]\Microsoft\VisualStudio\\_vs-version_\VC\Runtimes\\{x86|x64|ARM} 键中，其中 _vs-version_ 是 Visual Studio 的版本号（由于更新的 2017 可再发行组件与 2015 版是二进制兼容的，所以 Visual Studio 2015 和 Visual Studio 2017 的版本号都为 14.0），根据平台所安装的 vcredist 版本，该键可能为 ARM、x86 或 x64。 （不需要在 Wow6432Node 子键下进行检查，除非要使用 RegEdit 查看在 x64 平台上安装的 x86 包的版本。）版本号存储在 REG_SZ 字符串值“Version”和“Major”、“Minor”、“Bld” 和 “Rbld” 等一系列 REG_DWORD 值中。 为了避免在安装时出错，如果当前安装的版本较新，必须跳过可再发行组件包的安装。
 
-如果使用包含 Visual C++ DLL 的合并模块，则必须将该模块包含在用于部署应用程序的 Windows Installer 包（或类似的安装包）中。 有关详细信息，请参阅[使用合并模块重新分发](redistributing-components-by-using-merge-modules.md)。 有关示例，请参阅[演练：部署 Visual c + + 应用程序通过使用安装项目](walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project.md)，其中还说明了如何使用 InstallShield Limited Edition 创建安装包。
+如果使用包含 Visual C++ DLL 的合并模块，则必须将该模块包含在用于部署应用程序的 Windows Installer 包（或类似的安装包）中。 有关详细信息，请参阅[使用合并模块重新分发](redistributing-components-by-using-merge-modules.md)。 有关示例，请参阅[演练：部署一个视觉对象C++使用安装项目的应用程序](walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project.md)，其中还说明了如何使用 InstallShield Limited Edition 创建安装包。
 
 ## <a name="potential-run-time-errors"></a>可能的运行时错误
 

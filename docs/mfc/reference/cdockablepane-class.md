@@ -133,10 +133,10 @@ helpviewer_keywords:
 - CDockablePane [MFC], m_nSlideSteps
 ms.assetid: e2495f4c-765f-48f9-a2e2-e45e47608d91
 ms.openlocfilehash: a9d7c4ea941884435c9ecfac54a1d42649c6dbd5
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58769688"
 ---
 # <a name="cdockablepane-class"></a>CDockablePane Class
@@ -664,7 +664,7 @@ static CPaneDivider* __stdcall CreateDefaultPaneDivider(
 
 *dwAlignment*可以是任何以下值：
 
-|值|描述|
+|“值”|描述|
 |-----------|-----------------|
 |CBRS_ALIGN_TOP|框架窗口的工作区的顶部停靠窗格。|
 |CBRS_ALIGN_BOTTOM|框架窗口的工作区的底部停靠窗格。|
@@ -783,7 +783,7 @@ virtual BOOL DockPaneContainer(
 
 *dwAlignment*可以是任何以下值：
 
-|值|描述|
+|“值”|描述|
 |-----------|-----------------|
 |CBRS_ALIGN_TOP|顶部窗格的停靠容器。|
 |CBRS_ALIGN_BOTTOM|底部窗格的停靠容器。|

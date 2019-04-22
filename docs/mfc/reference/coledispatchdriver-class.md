@@ -27,10 +27,10 @@ helpviewer_keywords:
 - COleDispatchDriver [MFC], m_lpDispatch
 ms.assetid: 3ed98daf-cdc7-4374-8a0c-cf695a8d3657
 ms.openlocfilehash: c0c1fd14105bae3b5413f92b547339ccabf3bb91
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58774771"
 ---
 # <a name="coledispatchdriver-class"></a>COleDispatchDriver 类
@@ -83,7 +83,7 @@ class COleDispatchDriver
 
 OLE 调度接口提供对对象的方法和属性访问。 成员函数`COleDispatchDriver`附加、 分离、 创建和发布类型的调度连接`IDispatch`。 其他成员函数使用变量自变量列表来简化调用`IDispatch::Invoke`。
 
-此类可以直接使用，但它通常仅由添加类向导创建的类。 通过导入类型库中创建新的 c + + 类时，将新的类派生自`COleDispatchDriver`。
+此类可以直接使用，但它通常仅由添加类向导创建的类。 当你创建新C++通过导入类型库的类，新的类派生自`COleDispatchDriver`。
 
 有关详细信息使用`COleDispatchDriver`，请参阅以下文章：
 

@@ -6,10 +6,10 @@ helpviewer_keywords:
 - creating a ribbon aplication (MFC)
 ms.assetid: e61393e2-1d6b-4594-a7ce-157d3d1b0d9f
 ms.openlocfilehash: 29991a389a09e1fe3dc0074b80fd9a255458f673
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58781219"
 ---
 # <a name="walkthrough-creating-a-ribbon-application-by-using-mfc"></a>演练：使用 MFC 创建功能区应用程序
@@ -24,7 +24,7 @@ ms.locfileid: "58781219"
 
 1. 使用**MFC 应用程序向导**创建具有功能区的 MFC 应用程序。 若要在运行向导时，**文件**菜单，依次指向**新建**，然后单击**项目**。
 
-1. 在中**新的项目**对话框框中，展开**Visual c + +** 节点下的**已安装的模板**，选择**MFC**，然后选择**MFC 应用程序**。 例如，键入项目的名称*MFCRibbonApp*，然后单击**确定**。
+1. 在中**新的项目**对话框框中，展开**Visual C++** 节点下的**已安装的模板**，选择**MFC**，然后选择**MFC 应用程序**。 例如，键入项目的名称*MFCRibbonApp*，然后单击**确定**。
 
 1. 在中设置以下选项**MFC 应用程序向导**:
 

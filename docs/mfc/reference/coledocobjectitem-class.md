@@ -25,10 +25,10 @@ helpviewer_keywords:
 - COleDocObjectItem [MFC], Release
 ms.assetid: d150d306-8fd3-4831-b06d-afbe71d8fc9b
 ms.openlocfilehash: 382960b4dc4dcfa61c836a87044dd14585756174
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58769636"
 ---
 # <a name="coledocobjectitem-class"></a>COleDocObjectItem 类
@@ -151,7 +151,7 @@ HRESULT ExecCommand(
 
 如果成功，则为 S_OK 返回否则，返回以下错误代码之一。
 
-|值|描述|
+|“值”|描述|
 |-----------|-----------------|
 |E_UNEXPECTED|出现意外的错误。|
 |E_FAIL|出现错误。|

@@ -7,15 +7,15 @@ helpviewer_keywords:
 - OLE DB templates
 ms.assetid: 73918f6f-1fd7-4fa2-a0ff-7f9d792fce7e
 ms.openlocfilehash: 9f0f917de7eeb2ace6800368d10958cec7d36e6a
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58770377"
 ---
 # <a name="ole-db-templates"></a>OLE DB 模板
 
-OLE DB 模板使 OLE DB 数据访问更加轻松。 Visual c + + 提供模板类来实现许多常用 OLE DB 接口。 可以使用 Visual c + + 使用者模板编写 OLE DB 客户端 （使用者） 应用程序和提供程序模板编写服务器 （提供程序） 应用程序。
+OLE DB 模板使 OLE DB 数据访问更加轻松。 VisualC++提供模板类来实现许多常用 OLE DB 接口。 可以使用视觉对象C++使用者模板 （使用者） 应用程序和提供程序模板编写服务器 （提供程序） 应用程序编写的 OLE DB 客户端。
 
 ## <a name="in-this-section"></a>本节内容
 

@@ -12,10 +12,10 @@ helpviewer_keywords:
 - macros, error reporting
 ms.assetid: 4da9b87f-ec5c-4a32-ab93-637780909b9d
 ms.openlocfilehash: 0d5010f913521848675987b145a1277c7b00decf
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58775037"
 ---
 # <a name="debugging-and-error-reporting-macros"></a>调试和错误报告宏
@@ -176,7 +176,7 @@ ATLTRACE(
 ### <a name="parameters"></a>参数
 
 *exp*<br/>
-[in]字符串和要发送到 Visual c + + 输出窗口或捕获这些消息的任何应用程序的变量。
+[in]字符串和要发送到视觉对象的变量C++输出窗口或捕获这些消息的任何应用程序。
 
 *category*<br/>
 [in]事件或在其上报告的方法的类型。 请参阅备注类别的列表。
@@ -207,7 +207,7 @@ ATLTRACE2(
 ### <a name="parameters"></a>参数
 
 *exp*<br/>
-[in]要将发送到 Visual c + + 输出窗口或捕获这些消息的任何应用程序的字符串。
+[in]要发送到视觉对象的字符串C++输出窗口或捕获这些消息的任何应用程序。
 
 *category*<br/>
 [in]事件或在其上报告的方法的类型。 请参阅备注类别的列表。

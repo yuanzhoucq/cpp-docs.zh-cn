@@ -7,10 +7,10 @@ helpviewer_keywords:
 - uuid attribute
 ms.assetid: 90562a94-5e28-451b-a4b0-cadda7f66efe
 ms.openlocfilehash: 8d9d55fc2a340165480cab4036ad1e5323e6b625
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59026037"
 ---
 # <a name="uuid-c-attributes"></a>uuid（C++ 特性）
@@ -32,7 +32,7 @@ ms.locfileid: "59026037"
 
 ## <a name="remarks"></a>备注
 
-如果未指定的接口或类定义**uuid** c + + 属性，则 Visual c + + 编译器将提供一个。 当指定**uuid**，必须包括引号。
+如果未指定的接口或类定义**uuid** C++属性，然后视觉对象C++编译器将提供一个。 当指定**uuid**，必须包括引号。
 
 如果未指定**uuid**，则编译器将在一台计算机上的不同的属性项目中生成的接口或类具有相同的名称相同的 GUID。
 

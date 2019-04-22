@@ -9,10 +9,10 @@ helpviewer_keywords:
 - code_seg pragma
 ms.assetid: bf4faac1-a511-46a6-8d9e-456851d97d56
 ms.openlocfilehash: e566fb01bf70b343b75254a10466bdda2bc7ce1b
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59041236"
 ---
 # <a name="codeseg"></a>code_seg
@@ -41,7 +41,7 @@ ms.locfileid: "59041236"
 （可选）段的名称。 与一起使用时**pop**，在堆栈中弹出和*段名称*会成为活动文本段名称。
 
 "*segment-class*"<br/>
-（可选）被忽略，但包含与早于 2.0 版的 c + + 版本的兼容性。
+（可选）被忽略，但包含的兼容版本的C++早于 2.0 版。
 
 ## <a name="remarks"></a>备注
 

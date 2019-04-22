@@ -27,10 +27,10 @@ helpviewer_keywords:
 - CTypedPtrList [MFC], SetAt
 ms.assetid: c273096e-1756-4340-864b-4a08b674a65e
 ms.openlocfilehash: 9233e83a08fde87c15be5cc1c42a2f1dd3b56511
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58767985"
 ---
 # <a name="ctypedptrlist-class"></a>CTypedPtrList 类
@@ -71,7 +71,7 @@ class CTypedPtrList : public BASE_CLASS
 
 ## <a name="remarks"></a>备注
 
-当你使用`CTypedPtrList`而非`CObList`或`CPtrList`，c + + 类型检查功能可帮助消除错误引起的不匹配的指针类型。
+当你使用`CTypedPtrList`而非`CObList`或`CPtrList`、C++类型检查的工具可帮助消除错误引起的不匹配的指针类型。
 
 此外，`CTypedPtrList`包装执行大量的强制转换，如果您使用，则将需要`CObList`或`CPtrList`。
 

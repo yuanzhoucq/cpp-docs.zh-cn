@@ -7,10 +7,10 @@ helpviewer_keywords:
 - R6017
 ms.assetid: df3ec5f5-6771-4648-ba06-0e26c6a1cc6a
 ms.openlocfilehash: 45f3b07f540cb72a955b19420130a5a806b750d7
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58774693"
 ---
 # <a name="c-runtime-error-r6017"></a>C 运行时错误 R6017
@@ -30,4 +30,4 @@ ms.locfileid: "58774693"
 
 该过程尝试访问系统资源上的 C 运行时多线程锁定时收到了意外的错误。 如果该过程会无意中更改运行时堆数据，通常会出现此错误。 但是，它可以也会导致运行时库或操作系统代码中出现内部错误。
 
-若要解决此问题，请检查在代码中的堆损坏错误。 有关详细信息和示例，请参阅[CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details)。 接下来，检查您的应用程序部署使用最新可再发行组件。 有关信息，请参阅[Visual c + + 中的部署](../../windows/deployment-in-visual-cpp.md)。
+若要解决此问题，请检查在代码中的堆损坏错误。 有关详细信息和示例，请参阅[CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details)。 接下来，检查您的应用程序部署使用最新可再发行组件。 有关信息，请参阅[视觉对象中的部署C++ ](../../windows/deployment-in-visual-cpp.md)。

@@ -22,10 +22,10 @@ helpviewer_keywords:
 - floating palettes
 ms.assetid: b7f9f9d4-f629-47d2-a3c4-2b33fa6b51e4
 ms.openlocfilehash: 01450dca56ad662c8db0a35f89749c4a288109b3
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58768129"
 ---
 # <a name="docking-and-floating-toolbars"></a>停靠和浮动工具栏
@@ -78,7 +78,7 @@ Microsoft 基础类库支持可停靠工具栏。 可停靠工具栏可以附加
 
 ##  <a name="_core_dynamically_resizing_the_toolbar"></a> 动态调整大小的工具栏
 
-截至 Visual c + + 4.0 版，你可更加动态重设大小的浮动工具栏应用程序的用户。 通常，工具栏的长、 线性形状，水平显示。 但可以更改工具栏的方向和形状。 例如，当用户将停靠工具栏根据一个框架窗口的垂直边，形状将更改为竖排版式。 还有可能工具栏重塑，一个具有多个行的按钮的矩形。
+截至 VisualC++版本 4.0 中，您可以让的应用程序动态重设大小的浮动工具栏的用户。 通常，工具栏的长、 线性形状，水平显示。 但可以更改工具栏的方向和形状。 例如，当用户将停靠工具栏根据一个框架窗口的垂直边，形状将更改为竖排版式。 还有可能工具栏重塑，一个具有多个行的按钮的矩形。
 
 你可以：
 

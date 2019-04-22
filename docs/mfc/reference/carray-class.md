@@ -43,10 +43,10 @@ helpviewer_keywords:
 - CArray [MFC], SetSize
 ms.assetid: fead8b00-4cfd-4625-ad0e-251df62ba92f
 ms.openlocfilehash: f82dbf7dce2e14bf760bb76d23d23f667797ee0f
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58779841"
 ---
 # <a name="carray-class"></a>CArray 类
@@ -62,7 +62,7 @@ class CArray : public CObject
 
 #### <a name="parameters"></a>参数
 
-*TYPE*<br/>
+*类型*<br/>
 指定数组中存储的对象类型的模板参数。 *类型*是一个参数，返回的`CArray`。
 
 *ARG_TYPE*<br/>
@@ -102,7 +102,7 @@ class CArray : public CObject
 
 |名称|描述|
 |----------|-----------------|
-|[operator&#91;&#93;](#operator_at)|设置或获取位于指定索引处的元素。|
+|[operator[]](#operator_at)|设置或获取位于指定索引处的元素。|
 
 ## <a name="remarks"></a>备注
 
@@ -281,7 +281,7 @@ const TYPE& GetAt(INT_PTR nIndex) const;
 
 ### <a name="parameters"></a>参数
 
-*TYPE*<br/>
+*类型*<br/>
 指定的数组元素的类型的模板参数。
 
 *nIndex*<br/>
@@ -330,7 +330,7 @@ TYPE* GetData();
 
 ### <a name="parameters"></a>参数
 
-*TYPE*<br/>
+*类型*<br/>
 指定的数组元素的类型的模板参数。
 
 ### <a name="return-value"></a>返回值
@@ -451,7 +451,7 @@ const TYPE& operator[](int_ptr nindex) const;
 
 ### <a name="parameters"></a>参数
 
-*TYPE*<br/>
+*类型*<br/>
 此数组中指定的元素类型模板参数。
 
 *nIndex*<br/>

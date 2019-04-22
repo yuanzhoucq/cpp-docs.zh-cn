@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::FactoryCache::factory data member
 ms.assetid: 624544e6-0989-47f6-a3e9-edb60e1ee6d4
 ms.openlocfilehash: 7196363567dffa43844bbbd1de76934a317302d1
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58784163"
 ---
 # <a name="factorycache-structure"></a>FactoryCache 结构
 
-支持 Windows 运行时 c + + 模板库基础结构，不应在代码中直接使用。
+支持 Windows 运行时C++模板库基础结构，不应在代码中直接使用。
 
 ## <a name="syntax"></a>语法
 
@@ -53,7 +53,7 @@ struct FactoryCache;
 
 ## <a name="cookie"></a>FactoryCache::cookie
 
-支持 Windows 运行时 c + + 模板库基础结构，不应在代码中直接使用。
+支持 Windows 运行时C++模板库基础结构，不应在代码中直接使用。
 
 ```cpp
 union {
@@ -68,7 +68,7 @@ union {
 
 ## <a name="factory"></a>FactoryCache::factory
 
-支持 Windows 运行时 c + + 模板库基础结构，不应在代码中直接使用。
+支持 Windows 运行时C++模板库基础结构，不应在代码中直接使用。
 
 ```cpp
 IUnknown* factory;

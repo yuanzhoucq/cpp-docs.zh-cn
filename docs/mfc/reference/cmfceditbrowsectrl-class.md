@@ -27,10 +27,10 @@ helpviewer_keywords:
 - CMFCEditBrowseCtrl [MFC], SetBrowseButtonImage
 ms.assetid: 69cfd886-3d35-4bee-8901-7c88fcf9520f
 ms.openlocfilehash: 0c6fb39e17e22bcac60d50b87f7370c6a9f91db9
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58770673"
 ---
 # <a name="cmfceditbrowsectrl-class"></a>CMFCEditBrowseCtrl 类
@@ -207,7 +207,7 @@ CMFCEditBrowseCtrl::BrowseMode GetMode() const;
 
 下表列出可能的返回值。
 
-|值|描述|
+|“值”|描述|
 |-----------|-----------------|
 |`BrowseMode_Default`|**自定义模式**。 执行程序员定义的操作。|
 |`BrowseMode_File`|**文件模式**。 显示标准文件浏览器对话框。|

@@ -11,10 +11,10 @@ helpviewer_keywords:
 - dynasets
 ms.assetid: 2867e6be-208e-4fe7-8bbe-b8697cb1045c
 ms.openlocfilehash: 21c47546d14d9a121bdd0698fe96eb133dbc44a0
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59040405"
 ---
 # <a name="dynaset"></a>动态集
@@ -69,7 +69,7 @@ MFC 数据库类支持动态集，如果满足以下要求：
 
 与不同的快照，使用 ODBC 游标库中间存储来维护，动态集获取一条记录直接从数据源就立即向滚动到它。 这会使情况下与数据源同步动态集最初选择的记录。
 
-有关此版本的 Visual c + + 中包含的 ODBC 驱动程序的列表和有关获取其他驱动程序的信息，请参阅[ODBC 驱动程序列表](../../data/odbc/odbc-driver-list.md)。
+有关包含在视觉对象的此版本的 ODBC 驱动程序的列表C++和有关获取其他驱动程序的信息，请参阅[ODBC 驱动程序列表](../../data/odbc/odbc-driver-list.md)。
 
 ## <a name="see-also"></a>请参阅
 

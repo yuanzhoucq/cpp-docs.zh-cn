@@ -6,10 +6,10 @@ helpviewer_keywords:
 - expressions [C++]
 ms.assetid: aaa1f250-7185-4113-b682-3f5e995943d1
 ms.openlocfilehash: c2dc4f1654b7e76bf9506f82d6d613684258c174
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58771365"
 ---
 # <a name="expressions-c"></a>表达式 (C++)
@@ -48,7 +48,7 @@ ms.locfileid: "58771365"
 
 - [重载的运算符](../cpp/operator-overloading.md)
 
-- [typeid](../extensions/typeid-cpp-component-extensions.md) (C + + CLI)
+- [typeid](../extensions/typeid-cpp-component-extensions.md) (C++/CLI)
 
     > [!NOTE]
     >  无法重载内置类型的运算符；它们的行为是预定义的。

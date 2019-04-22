@@ -5,10 +5,10 @@ helpviewer_keywords:
 - DateTimePicker control [MFC]
 ms.assetid: f03c3a22-7725-45eb-8f8e-dddb2d15c3ca
 ms.openlocfilehash: 9de28d5407da6e83ed3b7cd77cad3f636538a70f
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58780738"
 ---
 # <a name="date-and-time-picker-control-examples"></a>日期和时间选择器控件示例
@@ -18,4 +18,4 @@ ms.locfileid: "58780738"
 ## <a name="see-also"></a>请参阅
 
 [使用 CDateTimeCtrl](../mfc/using-cdatetimectrl.md)<br/>
-[Controls](../mfc/controls-mfc.md)
+[控件](../mfc/controls-mfc.md)
