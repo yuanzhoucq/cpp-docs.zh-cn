@@ -1,5 +1,5 @@
 ---
-title: 模块 （c + + COM 属性）
+title: 模块 (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.module
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - module attributes
 ms.assetid: 02223b2a-62b5-4262-832f-564b1e11e58e
 ms.openlocfilehash: 5c69e0aa9e3444ec9b43470f8feb4d1f870dc9c8
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59040575"
 ---
 # <a name="module-c"></a>module (C++)
@@ -25,7 +25,7 @@ ms.locfileid: "59040575"
 
 ### <a name="parameters"></a>参数
 
-*类型*<br/>
+*type*<br/>
 （可选）可以是以下值之一：
 
 - `dll` 添加函数和类，使产生的 DLL 发挥进程内 COM 服务器。 这是默认值。
@@ -39,7 +39,7 @@ ms.locfileid: "59040575"
 *name*<br/>
 （可选）库块的名称。
 
-*version*<br/>
+*版本*<br/>
 （可选）你想要分配到的库块的版本号。 默认值为 1.0。
 
 *uuid*<br/>
@@ -48,7 +48,7 @@ ms.locfileid: "59040575"
 *lcid*<br/>
 本地化参数。 有关详细信息，请参阅 [lcid](/windows/desktop/Midl/lcid) 。
 
-*控件*<br/>
+*control*<br/>
 （可选）指定库中的所有组件的控件。
 
 *helpstring*<br/>
@@ -66,13 +66,13 @@ ms.locfileid: "59040575"
 *helpstringcontext*<br/>
 （可选）请参阅[helpstringcontext](helpstringcontext.md)有关详细信息。
 
-*隐藏*<br/>
+*hidden*<br/>
 （可选）禁止显示整个媒体库。 这种用法与控件一起使用。 主机需要创建新的类型库，该库对控件进行包装，使其具有扩展特性。 更多详细信息，请参阅 [隐藏](/windows/desktop/Midl/hidden) MIDL 特性。
 
 *restricted*<br/>
 （可选）不能随意调用库中的成员。 更多详细信息，请参阅 [受限](/windows/desktop/Midl/restricted) MIDL 特性。
 
-*自定义*<br/>
+*custom*<br/>
 （可选）一个或多个属性则它类似于[自定义](custom-cpp.md)属性。 第一个参数*自定义*是该特性的 GUID。 例如：
 
 ```
@@ -166,8 +166,8 @@ BOOL WINAPI DllMain(DWORD dwReason, LPVOID lpReserved) {
 [独立特性](stand-alone-attributes.md)<br/>
 [Typedef、Enum、Union 和 Struct 特性](typedef-enum-union-and-struct-attributes.md)<br/>
 [usesgetlasterror](usesgetlasterror.md)<br/>
-[库](/windows/desktop/Midl/library)<br/>
+[library](/windows/desktop/Midl/library)<br/>
 [helpcontext](helpcontext.md)<br/>
 [helpstring](helpstring.md)<br/>
-[帮助文件](helpfile.md)<br/>
+[helpfile](helpfile.md)<br/>
 [版本](version-cpp.md)

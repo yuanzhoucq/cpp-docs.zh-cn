@@ -22,10 +22,10 @@ helpviewer_keywords:
 - styles [MFC], windows
 ms.assetid: 77fa4f03-96b4-4687-9ade-41e46f7e4b0a
 ms.openlocfilehash: 0a002badf9c20ca7b2d1a129eca069e586893f3c
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58767231"
 ---
 # <a name="changing-the-styles-of-a-window-created-by-mfc"></a>更改 MFC 创建的窗口的样式
@@ -34,7 +34,7 @@ ms.locfileid: "58767231"
 
 ##  <a name="_core_changing_styles_in_a_new_mfc_application"></a> 在新的 MFC 应用程序中更改样式
 
-如果你使用 Visual c + + 2.0 或更高版本，你可以创建你的应用程序时更改应用程序向导中的默认窗口样式。 在应用程序向导的用户界面功能页上，可以更改主框架窗口和 MDI 子窗口的样式。 对于任一窗口类型，您可以指定其帧粗细 （胖或瘦） 和任何以下：
+如果您使用的 Visual C++ 2.0 或更高版本，创建你的应用程序时，可以更改应用程序向导中的默认窗口样式。 在应用程序向导的用户界面功能页上，可以更改主框架窗口和 MDI 子窗口的样式。 对于任一窗口类型，您可以指定其帧粗细 （胖或瘦） 和任何以下：
 
 - 窗口是否具有最小化或最大化控件。
 

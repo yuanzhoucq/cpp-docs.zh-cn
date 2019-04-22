@@ -13,22 +13,22 @@ helpviewer_keywords:
 - x64 [C++], command-line compiler
 ms.assetid: 4da93a19-e20d-4778-902a-5eee9a6a90b5
 ms.openlocfilehash: 8436254a3d8c5c1dae018c2309ceaad7bd5b2408
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58769272"
 ---
 # <a name="how-to-enable-a-64-bit-x64-hosted-msvc-toolset-on-the-command-line"></a>如何：启用 64 位，x64 托管在命令行上的 MSVC 工具集
 
-Visual Studio 包含 c + + 编译器、 链接器，并可用于创建特定于平台的版本，你可以在 32 位、 64 位或基于 ARM 的 Windows 操作系统运行的应用的其他工具。 其他可选的 Visual Studio 工作负载，可以使用 c + + 工具面向其他平台，例如 iOS、 Android 和 Linux。 默认生成体系结构使用 32 位、 x86 承载的工具来生成 32 位、 x86 本机 Windows 代码。 但是，很可能在 64 位计算机。 通过使用 64 位，x64 托管工具集生成 x86、 x64 或 ARM 处理器的代码时，可以充分利用处理器和内存空间可用于 64 位代码。
+Visual Studio 提供了C++编译器、 链接器，并可用于创建特定于平台的版本，你可以在 32 位、 64 位或基于 ARM 的 Windows 操作系统运行的应用的其他工具。 其他可选的 Visual Studio 工作负载，可以使用C++面向其他平台，例如 iOS、 Android 和 Linux 的工具。 默认生成体系结构使用 32 位、 x86 承载的工具来生成 32 位、 x86 本机 Windows 代码。 但是，很可能在 64 位计算机。 通过使用 64 位，x64 托管工具集生成 x86、 x64 或 ARM 处理器的代码时，可以充分利用处理器和内存空间可用于 64 位代码。
 
 > [!NOTE]
-> 有关每个 Visual Studio 版本附带的特定工具的信息，请参阅[Visual c + + 工具和 Visual Studio 版本中的功能](../overview/visual-cpp-tools-and-features-in-visual-studio-editions.md)。
+> 有关每个 Visual Studio 版本附带的特定工具的信息，请参阅[可视化C++工具和 Visual Studio 版本中的功能](../overview/visual-cpp-tools-and-features-in-visual-studio-editions.md)。
 >
 > 有关如何使用 Visual Studio IDE 创建 64 位应用程序的信息，请参阅[如何：针对 64 位 x64 平台配置 Visual C++ 项目](how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md)。
 
-在 Visual Studio 安装程序中安装 c + + 工作负荷时，它始终会安装 32 位、 x86 承载、 本机和跨编译器工具生成 x86 和 x64 的代码。 如果包括通用 Windows 平台工作负荷时，它还会安装 x86 承载在跨平台编译器工具生成 ARM 代码。 如果将这些工作负荷安装在 64 位 x64 处理器，您还获得 64 位本机和跨用于创建 x86、 x64 和 ARM 的编译器工具的代码。 32 位和 64 位工具生成相同的代码，但 64 位工具支持预编译标头符号和全程序优化的更多的内存 ([/GL](reference/gl-whole-program-optimization.md)并[/LTCG](reference/ltcg-link-time-code-generation.md)) 选项。 如果使用 32 位工具时遇到内存限制，请，尝试在 64 位工具。
+当你安装C++Visual Studio 安装程序中的工作负载，它始终会安装 32 位、 x86 承载、 本机和跨平台编译器工具，用于构建 x86 和 x64 代码。 如果包括通用 Windows 平台工作负荷时，它还会安装 x86 承载在跨平台编译器工具生成 ARM 代码。 如果将这些工作负荷安装在 64 位 x64 处理器，您还获得 64 位本机和跨用于创建 x86、 x64 和 ARM 的编译器工具的代码。 32 位和 64 位工具生成相同的代码，但 64 位工具支持预编译标头符号和全程序优化的更多的内存 ([/GL](reference/gl-whole-program-optimization.md)并[/LTCG](reference/ltcg-link-time-code-generation.md)) 选项。 如果使用 32 位工具时遇到内存限制，请，尝试在 64 位工具。
 
 ## <a name="use-a-64-bit-hosted-developer-command-prompt-shortcut"></a>使用 64 位托管开发人员命令提示符快捷方式
 
@@ -40,4 +40,4 @@ Visual Studio 包含 c + + 编译器、 链接器，并可用于创建特定于�
 
 ## <a name="see-also"></a>请参阅
 
-[配置 64 位 x64 的 c + + 项目目标](configuring-programs-for-64-bit-visual-cpp.md)<br/>
+[配置C++适用于 64 位 x64 目标项目](configuring-programs-for-64-bit-visual-cpp.md)<br/>

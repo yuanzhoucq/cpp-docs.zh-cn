@@ -7,10 +7,10 @@ helpviewer_keywords:
 - casting operators [C++]
 ms.assetid: 16240348-26bc-4f77-8eab-57253f00ce52
 ms.openlocfilehash: e2ac8e9079b1d30dca077363bbb6cef35960902e
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58768947"
 ---
 # <a name="casting-operators"></a>强制转换运算符
@@ -25,7 +25,7 @@ ms.locfileid: "58768947"
 
 - [reinterpret_cast](../cpp/reinterpret-cast-operator.md)用于位的简单重新解释。
 
-- [safe_cast](../extensions/safe-cast-cpp-component-extensions.md)用 C + + /cli CLI 来生成可验证的 MSIL。
+- [safe_cast](../extensions/safe-cast-cpp-component-extensions.md)中使用C++/CLI 以生成可验证的 MSIL。
 
 使用**const_cast**并**reinterpret_cast**作为最后的手段，因为这些运算符带来的危险相同为旧的样式转换。 但是，若要完全替换旧的样式转换，仍必须使用它们。
 

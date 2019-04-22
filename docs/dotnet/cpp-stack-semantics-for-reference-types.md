@@ -5,10 +5,10 @@ helpviewer_keywords:
 - reference types, C++ stack semantics for
 ms.assetid: 319a1304-f4a4-4079-8b84-01cec847d531
 ms.openlocfilehash: 69771de120dc413496a3b7b0613e51a13d208e22
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58772600"
 ---
 # <a name="c-stack-semantics-for-reference-types"></a>参考类型的 C++ 堆栈语义
@@ -27,7 +27,7 @@ ms.locfileid: "58772600"
 
 编译器不会为引用类型生成默认的赋值运算符。 赋值运算符允许您使用堆栈语义创建一个对象，并且借助使用堆栈语义创建的现有对象对其进行初始化。 引用类型的赋值运算符具有以下形式的签名：`void operator=( R% ){}`。
 
-如果您的类型的析构函数释放重要资源并且您将堆栈语义用于引用类型，则不需要显式调用析构函数（或调用 `delete`）。 引用类型中的析构函数的详细信息，请参阅[析构函数和终结器中如何：定义和使用类和结构 (C + + CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)。
+如果您的类型的析构函数释放重要资源并且您将堆栈语义用于引用类型，则不需要显式调用析构函数（或调用 `delete`）。 引用类型中的析构函数的详细信息，请参阅[析构函数和终结器中如何：定义和使用类和结构 (C++/CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)。
 
 编译器生成的赋值运算符将遵循标准的 C++ 规则以及以下额外规则：
 

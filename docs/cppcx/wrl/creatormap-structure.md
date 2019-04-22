@@ -17,15 +17,15 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::CreatorMap::serverName data member
 ms.assetid: 94e40927-90c3-4107-bca3-3ad2dc4beda9
 ms.openlocfilehash: 44d06f317661059bea92d8c6f27955606a964bb7
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58784099"
 ---
 # <a name="creatormap-structure"></a>CreatorMap 结构
 
-支持 Windows 运行时 c + + 模板库基础结构，不应在代码中直接使用。
+支持 Windows 运行时C++模板库基础结构，不应在代码中直接使用。
 
 ## <a name="syntax"></a>语法
 

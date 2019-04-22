@@ -7,10 +7,10 @@ helpviewer_keywords:
 - struct constructors
 ms.assetid: 3c6ba273-e248-4ff1-8c69-d2abcf1263c6
 ms.openlocfilehash: e9ffd30dd0017e912fd7c196e2d3f0e987fb0810
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58780855"
 ---
 # <a name="struct-c"></a>struct (C++)
@@ -54,13 +54,13 @@ ms.locfileid: "58780855"
 
 结构类型是用户定义的复合类型。 它由可具有不同类型的字段或成员构成。
 
-结构 c + + 中是与类相同，只不过其成员**公共**默认情况下。
+在C++，结构是与类相同，只不过其成员**公共**默认情况下。
 
-有关托管的类和结构在 C + + /cli CLI，请参阅[类和结构](../extensions/classes-and-structs-cpp-component-extensions.md)。
+有关托管的类和结构中的信息C++/CLI，请参阅[类和结构](../extensions/classes-and-structs-cpp-component-extensions.md)。
 
 ## <a name="using-a-structure"></a>使用结构
 
-在 C 中，您必须显式使用**结构**关键字来声明一个结构。 在 c + +，您不需要使用**结构**关键字后定义的类型。
+在 C 中，您必须显式使用**结构**关键字来声明一个结构。 在C++，不需要使用**struct**关键字后定义的类型。
 
 可以选择在定义结构类型时，通过在右大括号和分号之间放置一个或多个逗号分隔的变量名称来声明变量。
 

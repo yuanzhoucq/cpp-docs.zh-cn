@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C3375
 ms.assetid: f1df78c6-e6ca-48f3-8b29-4e1710002bf3
 ms.openlocfilehash: ba1dbf08fb56364d2ab5b8c40847ab89484dc005
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "58781388"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59776400"
 ---
 # <a name="compiler-error-c3375"></a>编译器错误 C3375
 
@@ -19,7 +19,7 @@ ms.locfileid: "58781388"
 
 委托实例化可能已为静态成员函数，或为实例函数未绑定的委托，因此编译器出现此错误。
 
-有关详细信息，请参阅[委托 （c + + 组件扩展）](../../extensions/delegate-cpp-component-extensions.md)。
+有关详细信息，请参阅[委托 (C++组件扩展)](../../extensions/delegate-cpp-component-extensions.md)。
 
 ## <a name="example"></a>示例
 

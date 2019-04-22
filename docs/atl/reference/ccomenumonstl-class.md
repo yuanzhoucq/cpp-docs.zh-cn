@@ -8,15 +8,15 @@ helpviewer_keywords:
 - CComEnumOnSTL class
 ms.assetid: befe1a44-7a00-4f28-9a2e-cc0fa526643c
 ms.openlocfilehash: f9bf9c227984b2fdbf460f970357f395934b238c
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58779854"
 ---
 # <a name="ccomenumonstl-class"></a>CComEnumOnSTL 类
 
-此类定义一个基于 c + + 标准库集合的 COM 枚举器对象。
+此类定义一个基于 COM 的枚举器对象C++标准库集合。
 
 ## <a name="syntax"></a>语法
 
@@ -45,11 +45,11 @@ COM 的枚举器。 请参阅[IEnumString](/windows/desktop/api/objidl/nn-objidl
 一个[复制策略](../../atl/atl-copy-policy-classes.md)类。
 
 *CollType*<br/>
-C + + 标准库容器类。
+一个C++标准库容器类。
 
 ## <a name="remarks"></a>备注
 
-`CComEnumOnSTL` 定义基于 c + + 标准库集合的 COM 枚举器对象。 此类可以在自己或结合[ICollectionOnSTLImpl](../../atl/reference/icollectiononstlimpl-class.md)。 使用此类的典型步骤如下所述。 有关详细信息，请参阅[ATL 集合和枚举器](../../atl/atl-collections-and-enumerators.md)。
+`CComEnumOnSTL` 定义一个基于 COM 的枚举器对象C++标准库集合。 此类可以在自己或结合[ICollectionOnSTLImpl](../../atl/reference/icollectiononstlimpl-class.md)。 使用此类的典型步骤如下所述。 有关详细信息，请参阅[ATL 集合和枚举器](../../atl/atl-collections-and-enumerators.md)。
 
 ## <a name="to-use-this-class-with-icollectiononstlimpl"></a>若要将此类与 ICollectionOnSTLImpl:
 

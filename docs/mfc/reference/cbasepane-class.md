@@ -167,10 +167,10 @@ helpviewer_keywords:
 - CBasePane [MFC], DoPaint
 ms.assetid: 8163dd51-d7c7-4def-9c74-61f8ecdfad82
 ms.openlocfilehash: e0d6b844ba4a5c373dd69c0435bbb9972db3b49b
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58774472"
 ---
 # <a name="cbasepane-class"></a>CBasePane 类
@@ -1030,7 +1030,7 @@ virtual DWORD GetCurrentAlignment() const;
 
 控件条的当前对齐方式。 下表显示了可能的值：
 
-|值|对齐方式|
+|“值”|对齐方式|
 |-----------|---------------|
 |CBRS_ALIGN_LEFT|左对齐方式。|
 |CBRS_ALIGN_RIGHT|右对齐方式。|
@@ -1873,7 +1873,7 @@ virtual void SetPaneAlignment(DWORD dwAlignment);
 
 下表显示了可能的值为*dwAlignment*:
 
-|值|对齐方式|
+|“值”|对齐方式|
 |-----------|---------------|
 |CBRS_ALIGN_LEFT|左对齐方式。|
 |CBRS_ALIGN_RIGHT|右对齐方式。|

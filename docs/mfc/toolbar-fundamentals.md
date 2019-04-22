@@ -21,10 +21,10 @@ helpviewer_keywords:
 - LoadToolBar method [MFC]
 ms.assetid: cc00aaff-8a56-433b-b0c0-b857d76b4ffd
 ms.openlocfilehash: 9c784db2e1a482b313147e6837d6bbbd16d0ecb4
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58775486"
 ---
 # <a name="toolbar-fundamentals"></a>工具栏基础知识
@@ -68,7 +68,7 @@ ms.locfileid: "58775486"
 
 ##  <a name="_core_editing_the_toolbar_resource"></a> 编辑工具栏资源
 
-获取与应用程序向导的默认工具栏基于**RT_TOOLBAR** MFC 4.0 版中引入的自定义资源。 您可以编辑与此资源[工具栏编辑器](../windows/toolbar-editor.md)。 编辑器允许您轻松地添加、 删除和重新排列按钮。 它包含非常类似于 Visual c + + 中的常规图形编辑器的按钮的图形编辑器。 如果编辑工具栏的 Visual c + + 早期版本中，您会发现任务更容易现在。
+获取与应用程序向导的默认工具栏基于**RT_TOOLBAR** MFC 4.0 版中引入的自定义资源。 您可以编辑与此资源[工具栏编辑器](../windows/toolbar-editor.md)。 编辑器允许您轻松地添加、 删除和重新排列按钮。 它包含与视觉对象中的常规图形编辑器非常相似的按钮的图形编辑器C++。 如果编辑视觉对象的以前版本中的工具栏C++，您会发现任务更容易现在。
 
 若要连接到命令工具栏按钮，您为该按钮的命令 ID，如`ID_MYCOMMAND`。 在编辑器工具栏按钮的属性页中指定的命令 ID。 然后，创建命令的处理程序函数 (请参阅[消息映射到函数](../mfc/reference/mapping-messages-to-functions.md)有关详细信息)。
 

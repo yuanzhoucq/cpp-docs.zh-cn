@@ -10,10 +10,10 @@ helpviewer_keywords:
 - Automation servers [MFC], dual-interface support
 ms.assetid: b5c8ed09-2f7f-483c-80fc-2a47ad896063
 ms.openlocfilehash: 33828f3979fb938ae6e88fa3cb0d6ee24daa958c
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58776669"
 ---
 # <a name="tn065-dual-interface-support-for-ole-automation-servers"></a>TN065:针对 OLE 自动化服务器的双重接口支持
@@ -33,7 +33,7 @@ ms.locfileid: "58776669"
 
 - 使用的现有 OLE 自动化控制器`IDispatch`接口将继续工作。
 
-- VTBL 接口是更轻松地从 c + + 调用。
+- VTBL 接口是更轻松地从调用C++。
 
 - 双重接口所需的与 Visual Basic 对象支持功能的兼容性。
 
@@ -41,7 +41,7 @@ ms.locfileid: "58776669"
 
 双重接口是一个自定义派生自接口实际上只是`IDispatch`。 最简单的方法实现中的双重接口支持`CCmdTarget`-基于的类是为第一个实现正常调度接口上使用 MFC 和类向导，您的类，然后添加自定义接口更高版本。 大多数情况下，您的自定义接口的实现只需委托到 MFC`IDispatch`实现。
 
-首先，修改你的服务器定义为对象的双重接口 ODL 文件。 若要定义双重接口，必须使用接口语句，而不是`DISPINTERFACE`Visual c + + 向导生成的语句。 而不是删除现有`DISPINTERFACE`语句中，添加新的接口语句。 通过保留`DISPINTERFACE`窗体中，您可以继续使用类向导将属性和方法添加到您的对象，但必须将等效属性和方法添加到接口语句。
+首先，修改你的服务器定义为对象的双重接口 ODL 文件。 若要定义双重接口，必须使用接口语句，而不是`DISPINTERFACE`语句的视觉对象C++向导生成。 而不是删除现有`DISPINTERFACE`语句中，添加新的接口语句。 通过保留`DISPINTERFACE`窗体中，您可以继续使用类向导将属性和方法添加到您的对象，但必须将等效属性和方法添加到接口语句。
 
 双重接口的接口语句必须具有*OLEAUTOMATION*并*双*属性，该接口必须派生自`IDispatch`。 可以使用[GUIDGEN](../overview/visual-cpp-samples.md)示例来创建**IID**为双重接口：
 
@@ -281,11 +281,11 @@ STDMETHODIMP CAutoClickDoc::XDualAClick::get_Position(
 
 3. 上**构建**菜单上，单击**设置**，然后选择 INITIIDS。CPP 文件列表中的每个配置。
 
-4. 单击**c + +** 选项卡上，单击类别**预编译标头**，然后选择**不使用预编译标头**单选按钮。 单击确定以关闭**生成设置**对话框。
+4. 单击**C++** 选项卡上，单击类别**预编译标头**，然后选择**不使用预编译标头**单选按钮。 单击确定以关闭**生成设置**对话框。
 
 ## <a name="specifying-the-correct-object-class-name-in-the-type-library"></a>类型库中指定正确的对象类名称
 
-错误地随 Visual c + + 向导使用实现类名称服务器的 OLE 可创建类 ODL 文件中指定组件类。 尽管这也可以生效，实现类名可能不是所需对象的用户使用的类名称。 若要指定正确的名称，打开 ODL 文件，找到每个 coclass 语句，并实现类名称替换为正确的外部名称。
+这些向导附带 VisualC++错误地使用实现类名称来指定服务器的 OLE 可创建类 ODL 文件中组件类。 尽管这也可以生效，实现类名可能不是所需对象的用户使用的类名称。 若要指定正确的名称，打开 ODL 文件，找到每个 coclass 语句，并实现类名称替换为正确的外部名称。
 
 请注意，当更改 coclass 语句时，变量的名称**CLSID**MkTypLib 生成标头文件中将相应地更改。 你将需要更新代码以使用新的变量名称。
 

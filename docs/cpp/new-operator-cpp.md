@@ -5,10 +5,10 @@ helpviewer_keywords:
 - new keyword [C++]
 ms.assetid: 69fee812-1c28-4882-8fda-d1ad17860004
 ms.openlocfilehash: bcb7784e59966510970bd9b3ae0157ae982e462d
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58768063"
 ---
 # <a name="new-operator-c"></a>new 运算符 (C++)
@@ -16,7 +16,7 @@ ms.locfileid: "58768063"
 对象或对象的数组分配内存*类型名称*从自由存储，并返回适当类型化的非零指针的对象。
 
 > [!NOTE]
->  Microsoft c + + 组件扩展提供的支持**新**关键字以添加 vtable 槽条目。 有关详细信息，请参阅[new （新槽 vtable 中的）](../extensions/new-new-slot-in-vtable-cpp-component-extensions.md)
+>  MicrosoftC++组件扩展提供了对支持**新**关键字以添加 vtable 槽条目。 有关详细信息，请参阅[new （新槽 vtable 中的）](../extensions/new-new-slot-in-vtable-cpp-component-extensions.md)
 
 ## <a name="syntax"></a>语法
 

@@ -1,5 +1,5 @@
 ---
-title: 如何：将资源包括在编译时 （c + +）
+title: 如何：在编译时包含资源 (C++)
 ms.date: 02/14/2019
 f1_keywords:
 - vs.resvw.resource.including
@@ -24,13 +24,13 @@ helpviewer_keywords:
 - resources [C++], searching for symbols
 ms.assetid: 357e93c2-0a29-42f9-806f-882f688b8924
 ms.openlocfilehash: ca24a10f905e61feb2b090ba3966c752db3d4444
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59041494"
 ---
-# <a name="how-to-include-resources-at-compile-time-c"></a>如何：将资源包括在编译时 （c + +）
+# <a name="how-to-include-resources-at-compile-time-c"></a>如何：在编译时包含资源 (C++)
 
 默认情况下，所有资源都位于一个资源脚本 (.rc) 文件，但是有许多原因可以将资源置于主.rc 文件之外的文件：
 
@@ -57,7 +57,7 @@ ms.locfileid: "59041494"
 | **编译时指令** | 可以包括创建和编辑单独从主资源文件中的资源的资源文件包含编译时指令 （如有条件地包括资源这些指令），或包含自定义格式中的资源。<br/><br/>此外可以使用**编译时指令框**包括标准 MFC 资源文件。 |
 
 > [!NOTE]
-> 由标记.rc 文件中显示这些文本框中的项`TEXTINCLUDE 1`， `TEXTINCLUDE 2`，和`TEXTINCLUDE 3`分别。 有关详细信息，请参阅[TN035:Visual c + + 中使用多个资源文件和头文件](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md)。
+> 由标记.rc 文件中显示这些文本框中的项`TEXTINCLUDE 1`， `TEXTINCLUDE 2`，和`TEXTINCLUDE 3`分别。 有关详细信息，请参阅[TN035:视觉对象使用多个资源文件和头文件C++ ](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md)。
 
 对资源文件使用进行更改后**资源包括**对话框中，您必须关闭并重新打开 *.rc*文件的更改才会生效。
 

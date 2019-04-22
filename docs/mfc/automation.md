@@ -21,10 +21,10 @@ helpviewer_keywords:
 - methods [MFC], Automation
 ms.assetid: 329117f0-c1aa-4680-a901-bfb71277dfba
 ms.openlocfilehash: 7818aa708a762f2a284be029a6c3f3facd971d9a
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58767725"
 ---
 # <a name="automation"></a>自动化
@@ -45,7 +45,7 @@ ms.locfileid: "58767725"
 
 更重要的是自动化提供给用户和解决方案提供商的支持。 自动化通过常用的定义完善的接口公开应用程序功能，使得可以使用单一的常规编程语言（如 Microsoft Visual Basic）而非不同的应用程序特定的宏语言来构建全面的解决方案。
 
-许多商业应用程序，如 Microsoft Excel 和 Microsoft Visual C++，允许您自动化大部分功能。 例如，在 Visual c + +，可以编写 VBScript 宏来自动执行生成、 代码编辑，或调试任务的方面。
+许多商业应用程序，如 Microsoft Excel 和 Microsoft Visual C++，允许您自动化大部分功能。 例如，在视觉对象C++，您可以编写 VBScript 宏来自动执行生成、 代码编辑，或调试任务的方面。
 
 ##  <a name="_core_passing_parameters_in_automation"></a> 在自动化中传递参数
 

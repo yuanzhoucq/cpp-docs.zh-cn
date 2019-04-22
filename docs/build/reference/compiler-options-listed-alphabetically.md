@@ -4,10 +4,10 @@ ms.date: 04/08/2019
 helpviewer_keywords:
 - compiler options, C++
 ms.openlocfilehash: d8ab1cbac7ad8eb44f16c7829ccac20a6d3e73ff
-ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59424113"
 ---
 # <a name="compiler-options-listed-alphabetically"></a>按字母顺序列出的编译器选项
@@ -39,17 +39,17 @@ ms.locfileid: "59424113"
 |[/F](f-set-stack-size.md)|设置堆栈大小。|
 |[/favor](favor-optimize-for-architecture-specifics.md)|生成代码适用于特定 x64 体系结构或 AMD64 和扩展内存 64 技术 (EM64T) 体系结构中的微体系结构的具体情况。|
 |[/FA](fa-fa-listing-file.md)|创建列表文件。|
-|[/FA](fa-fa-listing-file.md)|设置列表文件名。|
+|[/Fa](fa-fa-listing-file.md)|设置列表文件名。|
 |[/FC](fc-full-path-of-source-code-file-in-diagnostics.md)|在诊断文本中显示传递给 cl.exe 的源代码文件的完整路径。|
 |[/Fd](fd-program-database-file-name.md)|重命名程序数据库文件。|
 |[/Fe](fe-name-exe-file.md)|重命名可执行文件。|
 |[/FI](fi-name-forced-include-file.md)|预处理指定的包含文件。|
-|[/FI](fi-preprocess-output-file-name.md)|设置预处理输出文件名。|
+|[/Fi](fi-preprocess-output-file-name.md)|设置预处理输出文件名。|
 |[/Fm](fm-name-mapfile.md)|创建一个映射文件。|
 |[/Fo](fo-object-file-name.md)|创建对象文件。|
 |[/fp](fp-specify-floating-point-behavior.md)|指定浮点行为。|
-|[/fp](fp-name-dot-pch-file.md)|指定预编译头文件名。|
-|[/FR](fr-fr-create-dot-sbr-file.md)<br /><br /> [/FR](fr-fr-create-dot-sbr-file.md)|生成浏览器文件。 **/Fr** 已弃用。|
+|[/Fp](fp-name-dot-pch-file.md)|指定预编译头文件名。|
+|[/FR](fr-fr-create-dot-sbr-file.md)<br /><br /> [/Fr](fr-fr-create-dot-sbr-file.md)|生成浏览器文件。 **/Fr** 已弃用。|
 |[/FS](fs-force-synchronous-pdb-writes.md)|强制写入到程序数据库 (PDB) 文件以通过 MSPDBSRV.EXE 序列化。|
 |[/FU](fu-name-forced-hash-using-file.md)|强制使用文件名，就像它已被传递到 [#using](../../preprocessor/hash-using-directive-cpp.md) 指令一样。|
 |[/Fx](fx-merge-injected-code.md)|将插入的代码与源文件合并。|
@@ -58,13 +58,13 @@ ms.locfileid: "59424113"
 |[/Ge](ge-enable-stack-probes.md)|已否决。 激活堆栈探测。|
 |[/GF](gf-eliminate-duplicate-strings.md)|启用字符串池。|
 |[/GH](gh-enable-pexit-hook-function.md)|调用挂钩函数 `_pexit`。|
-|[/GH](gh-enable-penter-hook-function.md)|调用挂钩函数 `_penter`。|
+|[/Gh](gh-enable-penter-hook-function.md)|调用挂钩函数 `_penter`。|
 |[/GL](gl-whole-program-optimization.md)|启用全程序优化。|
 |[/Gm](gm-enable-minimal-rebuild.md)|已否决。 启用最小重新生成。|
 |[/GR](gr-enable-run-time-type-information.md)|启用运行时类型信息 (RTTI)。|
-|[/GR](gd-gr-gv-gz-calling-convention.md)|使用 `__fastcall` 调用约定（仅限 x86）。|
+|[/Gr](gd-gr-gv-gz-calling-convention.md)|使用 `__fastcall` 调用约定（仅限 x86）。|
 |[/GS](gs-buffer-security-check.md)|缓冲区安全检查。|
-|[/GS](gs-control-stack-checking-calls.md)|控制堆栈探测。|
+|[/Gs](gs-control-stack-checking-calls.md)|控制堆栈探测。|
 |[/GT](gt-support-fiber-safe-thread-local-storage.md)|支持使用静态线程本地存储区分配的数据的纤程安全。|
 |[/guard:cf](guard-enable-control-flow-guard.md)|添加控制流防护安全检查。|
 |[/Gv](gd-gr-gv-gz-calling-convention.md)|使用 `__vectorcall` 调用约定。 （仅限 x86 和 x64）|
@@ -72,7 +72,7 @@ ms.locfileid: "59424113"
 |[/GX](gx-enable-exception-handling.md)|已否决。 启用同步异常处理。 改为使用 [/EH](eh-exception-handling-model.md) 。|
 |[/Gy](gy-enable-function-level-linking.md)|启用函数级链接。|
 |[/GZ](gz-enable-stack-frame-run-time-error-checking.md)|已否决。 与 [/RTC1](rtc-run-time-error-checks.md)相同。|
-|[/GZ](gd-gr-gv-gz-calling-convention.md)|使用 `__stdcall` 调用约定（仅限 x86）。|
+|[/Gz](gd-gr-gv-gz-calling-convention.md)|使用 `__stdcall` 调用约定（仅限 x86）。|
 |[/H](h-restrict-length-of-external-names.md)|已否决。 限制外部（公共）名称的长度。|
 |[/HELP](help-compiler-command-line-help.md)|列出编译器选项。|
 |[/homeparams](homeparams-copy-register-parameters-to-stack.md)|强制将传入寄存器的参数写入其在函数入口的堆栈上的位置。 此编译器选项是仅针对 x64 编译器 （本机编译和跨平台编译）。|
@@ -116,11 +116,11 @@ ms.locfileid: "59424113"
 |[/source-charset](source-charset-set-source-character-set.md)|设置源字符集。|
 |[/std](std-specify-language-standard-version.md)|C++标准版本兼容性的选择器。|
 |[/Tc](tc-tp-tc-tp-specify-source-file-type.md)|指定 C 源文件。|
-|[/Tc](tc-tp-tc-tp-specify-source-file-type.md)|指定源的所有文件都都 c。|
+|[/TC](tc-tp-tc-tp-specify-source-file-type.md)|指定源的所有文件都都 c。|
 |[/Tp](tc-tp-tc-tp-specify-source-file-type.md)|指定 C++ 源文件。|
-|[/Tp](tc-tp-tc-tp-specify-source-file-type.md)|指定源的所有文件都都C++。|
+|[/TP](tc-tp-tc-tp-specify-source-file-type.md)|指定源的所有文件都都C++。|
 |[/U](u-u-undefine-symbols.md)|移除预定义宏。|
-|[/U](u-u-undefine-symbols.md)|移除所有的预定义宏。|
+|[/u](u-u-undefine-symbols.md)|移除所有的预定义宏。|
 |[/utf-8](utf-8-set-source-and-executable-character-sets-to-utf-8.md)|设置源和执行字符集设置为 utf-8。|
 |[/V](v-version-number.md)|已否决。 设置 .obj 文件版本字符串。|
 |[/validate-charset](validate-charset-validate-for-compatible-characters.md)|验证 utf-8 文件兼容的字符。|
@@ -131,7 +131,7 @@ ms.locfileid: "59424113"
 |[/vms](vmm-vms-vmv-general-purpose-representation.md)|声明单一继承。|
 |[/vmv](vmm-vms-vmv-general-purpose-representation.md)|声明虚拟继承。|
 |[/volatile](volatile-volatile-keyword-interpretation.md)|选择如何解释 volatile 关键字。|
-|[/W](compiler-option-warning-level.md)|禁用所有警告。|
+|[/w](compiler-option-warning-level.md)|禁用所有警告。|
 |[/W0、/W1、/W2、/W3、/W4](compiler-option-warning-level.md)|设置要输出的警告级别。|
 |[/W1、/W2、/W3、/W4](compiler-option-warning-level.md)|针对指定的警告设置警告级别。|
 |[/Wall](compiler-option-warning-level.md)|启用所有警告，包括默认情况下禁用的警告。|
@@ -154,7 +154,7 @@ ms.locfileid: "59424113"
 |[/Ze](za-ze-disable-language-extensions.md)|已否决。 启用语言扩展。|
 |[/Zf](zf.md)|改进了 PDB 中并行生成的生成时间。|
 |[/Zg](zg-generate-function-prototypes.md)|已在 Visual C++ 2015 中删除。 生成函数原型。|
-|[/Zi](z7-zi-zi-debug-information-format.md)|将调试信息包含在与“编辑并继续”兼容的程序数据库中。|
+|[/ZI](z7-zi-zi-debug-information-format.md)|将调试信息包含在与“编辑并继续”兼容的程序数据库中。|
 |[/Zi](z7-zi-zi-debug-information-format.md)|生成完整的调试信息。|
 |[/Zl](zl-omit-default-library-name.md)|从 .obj 文件中移除默认库名（仅限 x86）。|
 |[/Zm](zm-specify-precompiled-header-memory-allocation-limit.md)|指定预编译头内存分配限制。|

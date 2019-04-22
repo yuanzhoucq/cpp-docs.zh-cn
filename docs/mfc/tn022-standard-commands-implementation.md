@@ -60,10 +60,10 @@ helpviewer_keywords:
 - ID_INDICATOR_NUM command
 ms.assetid: a7883b46-23f7-4870-ac3a-804aed9258b5
 ms.openlocfilehash: 8d568760cc75a4c1f2ddb6dd88108cc830783194
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58775826"
 ---
 # <a name="tn022-standard-commands-implementation"></a>TN022:标准命令实现
@@ -73,7 +73,7 @@ ms.locfileid: "58775826"
 
 此注释描述 MFC 2.0 提供的标准命令实现方式。 读取[技术说明 21](../mfc/tn021-command-and-message-routing.md)第一个因为它说明了用来实现的许多标准命令的机制。
 
-此说明假定你了解 MFC 体系结构、 Api 和常见的编程做法。 有案可稽以及未记录"的实现仅"介绍了 Api。 这不是一个位置，若要开始学习有关的功能或如何在 MFC 中编程。 有关更多常规信息以及有案可稽的 Api 的详细信息，请参阅 Visual c + +。
+此说明假定你了解 MFC 体系结构、 Api 和常见的编程做法。 有案可稽以及未记录"的实现仅"介绍了 Api。 这不是一个位置，若要开始学习有关的功能或如何在 MFC 中编程。 到视觉对象，请参阅C++更多常规信息和有关有案可稽的 Api 的详细信息。
 
 ## <a name="the-problem"></a>问题
 

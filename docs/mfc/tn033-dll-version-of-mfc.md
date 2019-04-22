@@ -11,10 +11,10 @@ helpviewer_keywords:
 - TN033
 ms.assetid: b6f1080b-b66b-4b1e-8fb1-926c5816392c
 ms.openlocfilehash: 4bfc60e20a073dd34945b91dd48ba82cdf4ab9f3
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58767777"
 ---
 # <a name="tn033-dll-version-of-mfc"></a>TN033:MFC 的 DLL 版本
@@ -38,14 +38,14 @@ ms.locfileid: "58767777"
 这是 DLL 支持 MFC 1.0 中支持的版本。 中所述[技术注意 11](../mfc/tn011-using-mfc-as-part-of-a-dll.md)和 MFC 高级概念示例[DLLScreenCap](../overview/visual-cpp-samples.md)。
 
 > [!NOTE]
-> 截至 Visual c + + 版本 4.0 中，术语**USRDLL**已过时，已由静态链接到 MFC 的规则 MFC DLL。 您也可以构建正则表达式动态链接到 MFC 的 MFC DLL。
+> 截至 Visual C++ 4.0 版中，术语**USRDLL**已过时，已由静态链接到 MFC 的规则 MFC DLL。 您也可以构建正则表达式动态链接到 MFC 的 MFC DLL。
 
 MFC 3.0 （及更高版本） 支持使用所有新功能，包括 OLE 和数据库类的规则 MFC Dll。
 
-**AFXDLL**:这也称为共享版本的 MFC 库。 这是在 MFC 2.0 中添加的新 DLL 支持。 MFC 库本身处于数 Dll （如下所述），客户端应用程序或 DLL 动态链接它需要的 Dll。 跨应用程序/DLL 边界的接口是 C + + MFC 类接口。 客户端应用程序必须是一个 MFC 应用程序。 这支持所有 MFC 3.0 功能 (异常：UNICODE 不是支持数据库类）。
+**AFXDLL**:这也称为共享版本的 MFC 库。 这是在 MFC 2.0 中添加的新 DLL 支持。 MFC 库本身处于数 Dll （如下所述），客户端应用程序或 DLL 动态链接它需要的 Dll。 跨应用程序/DLL 边界的接口是C++/MFC 类接口。 客户端应用程序必须是一个 MFC 应用程序。 这支持所有 MFC 3.0 功能 (异常：UNICODE 不是支持数据库类）。
 
 > [!NOTE]
-> 截至 Visual c + + 4.0 版，这种类型的 DLL 被称为"扩展 DLL。"
+> 截至 VisualC++版本 4.0 中，这种类型的 DLL 被称为"扩展 DLL。"
 
 本说明将使用 MFCxx.DLL 来指代的整个 MFC DLL 集，其中包括：
 
@@ -109,7 +109,7 @@ MFC 扩展 DLL 是一个包含类和编写修饰的 MFC 类功能的函数的 DL
 客户端应用程序和任何 MFC 扩展 Dll 必须使用相同版本的 MFCxx.DLL。 应按照 MFC DLL 的约定并提供这两个调试和零售 (/release) 版本的 MFC 扩展 DLL。 这将允许客户端程序来生成其应用程序的调试和发布版本并将其链接与适当的调试或零售版本的所有 Dll。
 
 > [!NOTE]
->  C + + 名称重整和导出问题，因为 MFC 扩展 DLL 中的导出列表可能不同的同一个 DLL 的调试和零售版本和 Dll 之间针对不同的平台。 零售 MFCxx.DLL 具有大约 2000年导出入口点;调试 MFCxxD.DLL 大约 3000 已导出入口点。
+>  因为C++名称重整和导出问题中的 MFC 扩展 DLL 的导出列表可能会不同的同一个 DLL 的调试和零售版本和 Dll 之间不同的平台。 零售 MFCxx.DLL 具有大约 2000年导出入口点;调试 MFCxxD.DLL 大约 3000 已导出入口点。
 
 ### <a name="quick-note-on-memory-management"></a>有关内存管理的快速说明
 
@@ -127,9 +127,9 @@ MFCxx.DLL 和所有 MFC 扩展 Dll 加载到客户端应用程序的地址空间
 
 如果要将转换为的 MFC 扩展 DLL 的现有项目，开始构建使用共享的版本的 MFC 中，为应用程序的标准规则，然后执行以下操作：
 
-- 添加 **/D_AFXEXT**到编译器标志。 在项目属性对话框中，选择 C/c + + 节点。 然后选择预处理器类别。 添加`_AFXEXT`到定义宏字段中，每个项用分号分隔。
+- 添加 **/D_AFXEXT**到编译器标志。 在项目属性对话框中，选择 C /C++节点。 然后选择预处理器类别。 添加`_AFXEXT`到定义宏字段中，每个项用分号分隔。
 
-- 删除 **/Gy**编译器开关。 在项目属性对话框中，选择 C/c + + 节点。 然后选择代码生成类别。 请确保未启用"启用函数级链接"选项。 这将使更轻松地导出的类，因为链接器将不会删除未引用的函数。 如果原始项目用于构建正则表达式 MFC DLL 以静态方式链接到 MFC，更改 **/MT [d]** 编译器选项 **/MD [d]**。
+- 删除 **/Gy**编译器开关。 在项目属性对话框中，选择 C /C++节点。 然后选择代码生成类别。 请确保未启用"启用函数级链接"选项。 这将使更轻松地导出的类，因为链接器将不会删除未引用的函数。 如果原始项目用于构建正则表达式 MFC DLL 以静态方式链接到 MFC，更改 **/MT [d]** 编译器选项 **/MD [d]**。
 
 - 生成与导出库 **/DLL**到链接的选项。 这会设置时创建新的目标，指定为目标类型的 Win32 动态链接库。
 
@@ -316,11 +316,11 @@ DllMain(HINSTANCE hInstance, DWORD dwReason, LPVOID)
 
 ### <a name="sharing-resources-and-classes"></a>共享资源和类
 
-简单 MFC 扩展 Dll 需要仅导出到客户端应用程序而不安装其他几个低带宽函数。 更多的用户界面密集型 Dll 可能想要将资源和 c + + 类导出到客户端应用程序。
+简单 MFC 扩展 Dll 需要仅导出到客户端应用程序而不安装其他几个低带宽函数。 多个用户界面密集型 Dll 可能想要导出的资源和C++客户端应用程序的类。
 
 导出资源是通过资源的列表。 在每个应用程序是单向链接的列表的`CDynLinkLibrary`对象。 大多数标准加载资源的 MFC 实现时查找的资源，请先查看当前的资源模块 (`AfxGetResourceHandle`)，如果找不到遍历列表`CDynLinkLibrary`尝试加载所请求的资源的对象。
 
-动态创建 c + + 类名称的 c + + 对象是类似的。 MFC 对象反序列化机制需要具有的所有`CRuntimeClass`对象注册，以便它可以通过动态创建基于以前存储的内容所需类型的 c + + 对象重新构造。
+动态创建的C++对象提供C++类名是类似。 MFC 对象反序列化机制需要具有的所有`CRuntimeClass`对象进行注册，以便它可以通过动态创建重新构造C++上以前存储的内容基于所需类型的对象。
 
 如果希望客户端应用程序使用 MFC 扩展 DLL 中的类的`DECLARE_SERIAL`，则您将需要导出您的类对客户端应用程序可见。 这还可通过遍历`CDynLinkLibrary`列表。
 
@@ -365,9 +365,9 @@ extern "C" extern void WINAPI InitXxxDLL()
 
 导出您的类的简单方法是使用`__declspec(dllimport)`和`__declspec(dllexport)`上每个类和你想要导出的全局函数。 这使得更容易，但效率低于命名每个入口点 （如下所述），因为有控制力导出哪些功能较小并且不能按序号导出的函数。 TESTDLL1 和 TESTDLL2 使用此方法导出它们的项。
 
-更有效的方法 （和 MFCxx.DLL 所使用的方法） 是通过命名每个条目中的手动导出每个条目。DEF 文件。 由于我们要从我们 DLL （即，不是全部） 导出选择性导出，因此我们必须确定我们想要导出哪些特定接口。 这是很难，因为必须在窗体中的条目中指定链接器的重整的名称。DEF 文件。 不导出任何 c + + 类，除非您真正需要具有针对它的符号链接。
+更有效的方法 （和 MFCxx.DLL 所使用的方法） 是通过命名每个条目中的手动导出每个条目。DEF 文件。 由于我们要从我们 DLL （即，不是全部） 导出选择性导出，因此我们必须确定我们想要导出哪些特定接口。 这是很难，因为必须在窗体中的条目中指定链接器的重整的名称。DEF 文件。 不会导出任何C++类，除非您真正需要具有针对它的符号链接。
 
-如果已尝试导出 c + + 类。DEF 文件之前，你可能想要开发一个工具，可自动生成此列表。 这可以使用两阶段链接过程。 链接您一次用于没有导出的 DLL，并允许链接器生成。映射文件。 。映射文件可用于生成在应导出的函数的列表，因此与某些重新排列，它可用于为你导出项生成应用。DEF 文件。 MFCxx.DLL 和 OLE 和数千在数量、 数据库 MFC 扩展 Dll 的导出列表是与此类的过程生成的 （尽管它不是完全自动的并且需要一些手动优化一段时间中的每一次）。
+如果你已尝试导出C++类。DEF 文件之前，你可能想要开发一个工具，可自动生成此列表。 这可以使用两阶段链接过程。 链接您一次用于没有导出的 DLL，并允许链接器生成。映射文件。 。映射文件可用于生成在应导出的函数的列表，因此与某些重新排列，它可用于为你导出项生成应用。DEF 文件。 MFCxx.DLL 和 OLE 和数千在数量、 数据库 MFC 扩展 Dll 的导出列表是与此类的过程生成的 （尽管它不是完全自动的并且需要一些手动优化一段时间中的每一次）。
 
 ### <a name="cwinapp-vs-cdynlinklibrary"></a>CWinApp vs。CDynLinkLibrary
 
@@ -401,13 +401,13 @@ MFC 扩展 DLL 不具有`CWinApp`的派生自己的对象; 而是它必须使用
 
 如果使用内部生成文件的大部分标准默认值，可以轻松更改要生成的 DLL 版本的项目。
 
-以下步骤假定已与 NAFXCWD 链接的正常运行 MFC 应用程序。LIB （适用于调试） 和 NAFXCW。LIB （适用于零售） 以及你想要将其转换为使用共享的版本的 MFC 库。 正在运行的 Visual c + + 环境，并且有一个内部项目文件。
+以下步骤假定已与 NAFXCWD 链接的正常运行 MFC 应用程序。LIB （适用于调试） 和 NAFXCW。LIB （适用于零售） 以及你想要将其转换为使用共享的版本的 MFC 库。 运行视觉对象C++环境和内部项目文件。
 
 1. 上**项目**菜单上，单击**属性**。 在中**常规**页**项目默认值**，将 Microsoft 基础类设置为**在共享 DLL 中使用 MFC** (MFCxx(d).dll)。
 
 ### <a name="building-with-nmake"></a>使用 NMAKE 生成
 
-如果你正在使用外部生成文件功能的 Visual c + +，或直接使用 NMAKE，必须编辑你的生成文件，以支持编译器和链接器选项
+如果您使用外部生成文件功能视觉对象的C++，或使用 NMAKE 直接，你将需要编辑生成文件来支持编译器和链接器选项
 
 所需的编译器标志：
 
@@ -428,9 +428,9 @@ MFC 扩展 DLL 不具有`CWinApp`的派生自己的对象; 而是它必须使用
 
 ### <a name="building-the-samples"></a>生成示例
 
-从 Visual c + + 或从命令行生成 NMAKE 兼容共享的文件，可以生成的大多数 MFC 示例程序。
+可从 Visual 生成 MFC 示例程序中的大多数C++或从共享兼容 NMAKE 生成文件从命令行。
 
-若要将这些示例以使用 MFCxx.DLL 的任何转换，可以加载。MAK 到 Visual c + + 文件，并设置项目选项，如上文所述。 如果您使用 NMAKE 生成，你可以指定"AFXDLL = 1"上 NMAKE 命令行，并且将生成该示例使用共享的 MFC 库。
+若要将这些示例以使用 MFCxx.DLL 的任何转换，可以加载。MAK 文件到视觉对象C++并设置项目选项，如上文所述。 如果您使用 NMAKE 生成，你可以指定"AFXDLL = 1"上 NMAKE 命令行，并且将生成该示例使用共享的 MFC 库。
 
 MFC 高级概念示例[DLLHUSK](../overview/visual-cpp-samples.md)使用 MFC 的 DLL 版本生成的。 此示例不只演示了如何构建与 MFCxx.DLL，链接的应用程序，但它还阐释了 MFC DLL 打包选项，例如更高版本中此技术说明描述 MFC 扩展 Dll 的其他功能。
 
@@ -438,7 +438,7 @@ MFC 高级概念示例[DLLHUSK](../overview/visual-cpp-samples.md)使用 MFC 的
 
 零售版本的 Dll (MFCxx [U]。DLL) 可随便重新发布。 不是可以免费再发行 Dll 的调试版本，因此应仅在你的应用程序的开发过程。
 
-调试 Dll 提供调试信息。 通过使用 Visual c + + 调试器，您可以跟踪的应用程序和 DLL 的执行情况。 发布 Dll (MFCxx [U]。DLL) 不包含调试信息。
+调试 Dll 提供调试信息。 通过使用视觉对象C++调试器，可以跟踪你的应用程序和 DLL 的执行。 发布 Dll (MFCxx [U]。DLL) 不包含调试信息。
 
 如果自定义或重新生成 Dll，则应调用它们的内容"MFCxx"MFC SRC 文件 MFCDLL 以外。MAK 介绍生成选项，并包含用于重命名 DLL 的逻辑。 重命名文件是必需的因为这些 Dll 可能共享许多 MFC 应用程序。 MFC Dll 替换为你自定义版本与安装在系统可能会破坏另一个使用共享的 MFC Dll 的 MFC 应用程序。
 
@@ -472,11 +472,11 @@ MFC SRC 中的 MFC 库的正则源具有一些额外的条件代码下`_AFXDLL`#
 
 ### <a name="memory-management"></a>内存管理
 
-使用 MFCxx.DLL 的应用程序使用由 MSVCRTxx.DLL，共享的 C 运行时 DLL 提供常见的内存分配。 应用程序、 任何 MFC 扩展 Dll 和 MFC Dll 本身以及使用此共享的内存分配器。 通过使用内存分配在共享的 DLL，MFC Dll 可以分配内存的更高版本将释放由应用程序，反之亦然。 由于应用程序和 DLL 必须使用相同的分配器，您不应覆盖全局 c + +**运算符 new**或**运算符 delete**。 同一规则适用于 C 运行时内存分配例程的其余部分 (如**malloc**， **realloc**，**免费**，等等)。
+使用 MFCxx.DLL 的应用程序使用由 MSVCRTxx.DLL，共享的 C 运行时 DLL 提供常见的内存分配。 应用程序、 任何 MFC 扩展 Dll 和 MFC Dll 本身以及使用此共享的内存分配器。 通过使用内存分配在共享的 DLL，MFC Dll 可以分配内存的更高版本将释放由应用程序，反之亦然。 由于应用程序和 DLL 必须使用相同的分配器，不应重写C++全局**运算符 new**或**运算符 delete**。 同一规则适用于 C 运行时内存分配例程的其余部分 (如**malloc**， **realloc**，**免费**，等等)。
 
 ### <a name="ordinals-and-class-declspecdllexport-and-dll-naming"></a>序号和类 __declspec （dllexport） 和 DLL 命名
 
-我们不会使用`class` **__declspec （dllexport)** c + + 编译器的功能。 相反，一组导出是附带类库源 （MFCxx.DEF 和 MFCxxD.DEF）。 导出仅这些选定的一组的入口点 （函数和数据）。 其他符号，如 MFC 私有实现函数或类，不会导出所有导出都完成按序号而无需常驻或驻留的名称表中的字符串名称。
+我们不会使用`class` **__declspec （dllexport)** 的功能C++编译器。 相反，一组导出是附带类库源 （MFCxx.DEF 和 MFCxxD.DEF）。 导出仅这些选定的一组的入口点 （函数和数据）。 其他符号，如 MFC 私有实现函数或类，不会导出所有导出都完成按序号而无需常驻或驻留的名称表中的字符串名称。
 
 使用`class` **__declspec （dllexport)** 可能是一个可行的替代，用于构建较小的 Dll，但在 MFC 中，默认值导出机制等较大的 DLL 的情况下具有效率和容量限制。
 

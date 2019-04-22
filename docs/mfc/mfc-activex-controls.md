@@ -16,10 +16,10 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC]
 ms.assetid: c911fb74-3afc-4bf3-a0f5-7922b14d9a1b
 ms.openlocfilehash: d10aad92088a02a1cab0977ea174abdf919a05e9
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58769207"
 ---
 # <a name="mfc-activex-controls"></a>MFC ActiveX 控件
@@ -96,7 +96,7 @@ ActiveX 控件容器与 ActiveX 控件之间的通信
 
 ##  <a name="_core_installing_activex_control_classes_and_tools"></a> 安装 ActiveX 控件类和工具
 
-在安装 Visual c + + 时，MFC ActiveX 控件类和零售和调试运行时 Dll 将自动安装，如果在安装程序 （它们通过默认选中） 中选择了 ActiveX 控件的 ActiveX 控件。
+当你安装 Visual C++，MFC ActiveX 控件类和零售和调试运行时 Dll 将自动安装，如果在安装程序 （它们通过默认选中） 中选择了 ActiveX 控件的 ActiveX 控件。
 
 默认情况下下 \Program Files\Microsoft Visual Studio.NET 中的以下子目录中安装的 ActiveX 控件类和工具：
 

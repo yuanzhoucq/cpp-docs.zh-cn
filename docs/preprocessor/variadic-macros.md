@@ -6,10 +6,10 @@ helpviewer_keywords:
 - __VA_ARGS__ variadic macro specifier
 ms.assetid: 51e757dc-0134-4bb2-bb74-64ea5ad75134
 ms.openlocfilehash: da159ef979ccc38845064debebae55356bc9e9bd
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59022835"
 ---
 # <a name="variadic-macros"></a>Variadic 宏
@@ -20,7 +20,7 @@ Variadic 宏是包含数目可变的参数的类似函数的宏。
 
 若要使用可变参数宏，可以将省略号指定为最终形式自变量的宏定义和替换标识符中`__VA_ARGS__`可能定义中使用插入多余的参数。  `__VA_ARGS__` 将替换所有匹配的省略号，包括以逗号分隔的参数。
 
-C 标准，则指定必须将至少一个参数传递给的省略号，以确保该宏无法解析为具有尾随逗号的表达式。  如果为省略号不传递任何参数时，Visual c + + 实现将禁止显示尾随逗号。
+C 标准，则指定必须将至少一个参数传递给的省略号，以确保该宏无法解析为具有尾随逗号的表达式。  视觉对象C++实现将禁止尾随逗号，如果没有自变量传递给旁边的省略号。
 
 ## <a name="example"></a>示例
 

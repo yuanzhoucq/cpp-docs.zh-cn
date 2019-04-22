@@ -8,10 +8,10 @@ helpviewer_keywords:
 - Platform::Delegate Class
 ms.assetid: 82b21271-768f-4193-9ca2-be68ddfd546e
 ms.openlocfilehash: 4116de3240c3ef334db51095997f946731372708
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58769233"
 ---
 # <a name="platformdelegate-class"></a>Platform::Delegate 类
@@ -44,4 +44,4 @@ Delegate 类具有从 [Platform::Object Class](../cppcx/platform-object-class.md
 
 ## <a name="see-also"></a>请参阅
 
-[平台命名空间](../cppcx/platform-namespace-c-cx.md)
+[Platform 命名空间](../cppcx/platform-namespace-c-cx.md)

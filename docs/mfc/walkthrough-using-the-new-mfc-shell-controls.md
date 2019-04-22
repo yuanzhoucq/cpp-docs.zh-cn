@@ -5,10 +5,10 @@ helpviewer_keywords:
 - shell controls (MFC)
 ms.assetid: f0015caa-199d-4aaf-9501-5a239fce9095
 ms.openlocfilehash: ef0e4856a844503f8d13b7b6ed37318b76b6af69
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58772145"
 ---
 # <a name="walkthrough-using-the-new-mfc-shell-controls"></a>演练：使用新的 MFC Shell 控件
@@ -23,7 +23,7 @@ ms.locfileid: "58772145"
 
 1. 使用**MFC 应用程序向导**若要创建新的 MFC 应用程序。 若要从运行向导时，**文件**菜单中选择**新建**，然后选择**项目**。 **新的项目**将显示对话框。
 
-1. 在中**新的项目**对话框框中，展开**Visual c + +** 中的节点**项目类型**窗格，然后选择**MFC**。 然后，在**模板**窗格中，选择**MFC 应用程序**。 键入项目的名称，如`MFCShellControls`然后单击**确定**。 之后**MFC 应用程序向导**显示，使用以下选项：
+1. 在中**新的项目**对话框框中，展开**Visual C++** 中的节点**项目类型**窗格，然后选择**MFC**。 然后，在**模板**窗格中，选择**MFC 应用程序**。 键入项目的名称，如`MFCShellControls`然后单击**确定**。 之后**MFC 应用程序向导**显示，使用以下选项：
 
     1. 上**应用程序类型**窗格下**应用程序类型**，清除**选项卡式文档**选项。 接下来，选择**单个文档**，然后选择**文档/视图体系结构支持**。 下**项目样式**，选择**Visual Studio**，并从**视觉样式和颜色**下拉列表中，选择**Office 2007 （蓝色主题）**.
 
@@ -166,7 +166,7 @@ ms.locfileid: "58772145"
 
 - 该向导进行创建 Outlook 栏**文件夹**窗格和一个**日历**窗格。 它可能不具有意义**日历**窗格中的**资源管理器**窗口中，因此现在删除该窗格。
 
-- `CMFCShellListCtrl`支持在不同模式下，如查看文件**大图标**，**小图标**，**列表**，并且**详细信息**。 更新应用程序以实现此功能。 提示： 请参阅[Visual c + + 示例](../overview/visual-cpp-samples.md)。
+- `CMFCShellListCtrl`支持在不同模式下，如查看文件**大图标**，**小图标**，**列表**，并且**详细信息**。 更新应用程序以实现此功能。 提示： 请参阅[可视化C++示例](../overview/visual-cpp-samples.md)。
 
 ## <a name="see-also"></a>请参阅
 

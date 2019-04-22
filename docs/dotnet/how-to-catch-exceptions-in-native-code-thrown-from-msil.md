@@ -7,17 +7,17 @@ helpviewer_keywords:
 - MSIL, catching exceptions in native code
 ms.assetid: c15afd2b-8505-43bf-8a4a-f1d41532a124
 ms.openlocfilehash: 95ce7a2afabc34ea78376b12da61f419dab4af34
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58776552"
 ---
 # <a name="how-to-catch-exceptions-in-native-code-thrown-from-msil"></a>如何：在从 MSIL 引发的本机代码中捕捉异常
 
-在本机代码中，可以捕捉从 MSIL 的本机 c + + 异常。  您可以捕获与 CLR 异常`__try`和`__except`。
+在本机代码中，可以捕获本机C++从 MSIL 的异常。  您可以捕获与 CLR 异常`__try`和`__except`。
 
-有关详细信息，请参阅[结构化异常处理 （C/c + +）](../cpp/structured-exception-handling-c-cpp.md)并[c + + 异常处理](../cpp/cpp-exception-handling.md)。
+有关详细信息，请参阅[结构化异常处理 (C /C++)](../cpp/structured-exception-handling-c-cpp.md)并[C++的异常处理](../cpp/cpp-exception-handling.md)。
 
 ## <a name="example"></a>示例
 

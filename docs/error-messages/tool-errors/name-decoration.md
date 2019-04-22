@@ -7,10 +7,10 @@ helpviewer_keywords:
 - decorated names, calling conventions
 ms.assetid: 8327a27b-bb4f-49f2-8218-b851b9d2a463
 ms.openlocfilehash: b916a73e0b8f86755384914fa85ef8a901e4a64c
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59041518"
 ---
 # <a name="name-decoration"></a>名称修饰
@@ -30,7 +30,7 @@ void CALLTYPE test(void)
 |标准调用命名约定 (`__stdcall`)|`_test@0`|`?test@@YGXXZ`|
 |Vectorcall 命名约定 (`__vectorcall`)|`test@@0`|`?test@@YQXXZ`|
 
-使用外部“C”从 C++ 调用 C 函数。 外部“C”对非类 C++ 函数强制使用 C 命名约定。 请注意编译器开关 **/Tc**或 **/Tp**，它们通知编译器忽略文件扩展名并分别将文件编译为 C 或 c + +。 这些选项可能会导致期望外的名称。
+使用外部“C”从 C++ 调用 C 函数。 外部“C”对非类 C++ 函数强制使用 C 命名约定。 请注意编译器开关 **/Tc**或 **/Tp**，它们通知编译器忽略文件扩展名和文件编译为 C 或C++分别。 这些选项可能会导致期望外的名称。
 
 具有不匹配的参数的函数原型也会导致此错误。 名称修饰将函数的参数合并到最终修饰的函数名中。 调用的函数具有与函数声明中不匹配的参数类型时也可能导致 LNK2001。
 

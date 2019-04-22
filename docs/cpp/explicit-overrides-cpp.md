@@ -9,10 +9,10 @@ helpviewer_keywords:
 - explicit override of virtual function
 ms.assetid: ee583234-5cda-4e90-b55e-3f9fbf079ced
 ms.openlocfilehash: dbaf8b0d78093df522cfbc63bf20dd0acb6c477c
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58774251"
 ---
 # <a name="explicit-overrides-c"></a>显式重写 (C++)
@@ -21,7 +21,7 @@ ms.locfileid: "58774251"
 
 如果在两个或多个声明了同一虚函数[接口](../cpp/interface.md)并且如果一个类派生自这些接口，可显式重写每个虚函数。
 
-有关显式重写在托管代码中使用 C + + /cli CLI，请参阅[显式重写](../extensions/explicit-overrides-cpp-component-extensions.md)。
+有关在托管的代码中使用显式重写的信息C++/CLI，请参阅[显式重写](../extensions/explicit-overrides-cpp-component-extensions.md)。
 
 **结束 Microsoft 专用**
 

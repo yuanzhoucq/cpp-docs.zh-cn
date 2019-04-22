@@ -11,10 +11,10 @@ helpviewer_keywords:
 - declaring enumerations
 ms.assetid: 081829db-5dca-411e-a53c-bffef315bcb3
 ms.openlocfilehash: caec9ea7ac5482ff23b73676a3fd7b3d25ad293f
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58772560"
 ---
 # <a name="enumerations-c"></a>枚举 (C++)
@@ -22,7 +22,7 @@ ms.locfileid: "58772560"
 枚举是用户定义的类型，其中包含一组称为枚举器的命名的整型常数。
 
 > [!NOTE]
->  本文包含 ISO 标准 c + + 语言**enum**类型和作用域内 （或强类型化）**枚举类**在 C + + 11 中引入的类型。 有关信息**公共枚举类**或**私有枚举类**类型在 C + + /cli 和 C + + /CX 中，请参阅[枚举类](../extensions/enum-class-cpp-component-extensions.md)。
+>  这篇文章介绍 ISO 标准C++语言**enum**类型和作用域内 （或强类型化）**枚举类**在 C + + 11 中引入的类型。 璝惠**公共枚举类**或**私有枚举类**中的类型C++/CLI 和C++/CX，请参阅[枚举类](../extensions/enum-class-cpp-component-extensions.md)。
 
 ## <a name="syntax"></a>语法
 

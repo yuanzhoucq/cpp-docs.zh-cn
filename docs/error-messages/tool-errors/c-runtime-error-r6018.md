@@ -7,10 +7,10 @@ helpviewer_keywords:
 - R6018
 ms.assetid: f6dd40d1-a119-4d8b-b39e-97350ea23349
 ms.openlocfilehash: b36e2184e5be131645fb4dd58a361fdb9a31da63
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58774967"
 ---
 # <a name="c-runtime-error-r6018"></a>C 运行时错误 R6018
@@ -32,4 +32,4 @@ ms.locfileid: "58774967"
 
 如果该程序会无意中改变了运行时堆数据，通常会出现此错误。 但是，它可以也会导致运行时或操作系统代码中出现内部错误。
 
-若要解决此问题，请检查在代码中的堆损坏错误。 有关详细信息和示例，请参阅[CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details)。 接下来，检查您的应用程序部署使用最新可再发行组件。 有关信息，请参阅[Visual c + + 中的部署](../../windows/deployment-in-visual-cpp.md)。
+若要解决此问题，请检查在代码中的堆损坏错误。 有关详细信息和示例，请参阅[CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details)。 接下来，检查您的应用程序部署使用最新可再发行组件。 有关信息，请参阅[视觉对象中的部署C++ ](../../windows/deployment-in-visual-cpp.md)。

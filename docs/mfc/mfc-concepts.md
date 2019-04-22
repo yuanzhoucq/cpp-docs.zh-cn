@@ -4,10 +4,10 @@ ms.date: 1/09/2018
 f1_keywords:
 - Concepts
 ms.openlocfilehash: 8d021350125acda52bb4ecf3919282cb7bbe52b1
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58766503"
 ---
 # <a name="mfc-concepts"></a>MFC 概念
@@ -23,7 +23,7 @@ ms.locfileid: "58766503"
 提供指向使用`CObject`，MFC 中的大多数类的基类。
 
 [集合](../mfc/collections.md)<br/>
-讨论创建从并不基于 c + + 模板创建的集合类。
+讨论创建从并不从创建的集合类C++模板。
 
 [日期和时间](../atl-mfc-shared/date-and-time.md)<br/>
 提供指向讨论如何使用 MFC 的日期和时间。

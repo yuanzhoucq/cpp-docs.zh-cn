@@ -19,10 +19,10 @@ helpviewer_keywords:
 - public members [C++]
 ms.assetid: 46b6ff4a-e441-4022-8892-78e69422f230
 ms.openlocfilehash: a17910e0288b81723aa837ba9204bb40713d5d49
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58770783"
 ---
 # <a name="reflection-ccli"></a>反射 (C++/CLI)
@@ -34,7 +34,7 @@ ms.locfileid: "58770783"
 若要访问的反射功能的最常见方法是通过<xref:System.Object.GetType%2A>方法。 此方法提供的<xref:System.Object?displayProperty=nameWithType>，从垃圾收集的所有类都派生的。
 
 > [!NOTE]
-> 如果使用生成.exe 只允许对用 Visual c + + 编译器生成的.exe 的反射 **/clr: pure**或 **/clr: safe**编译器选项。 **/Clr: pure**并 **/clr: safe**编译器选项都不建议使用在 Visual Studio 2015 和 Visual Studio 2017 中不可用。 请参阅[/clr （公共语言运行时编译）](../build/reference/clr-common-language-runtime-compilation.md)有关详细信息。
+> 对视觉对象使用生成的.exe 的反射C++如果使用生成.exe 仅允许编译器 **/clr： 纯**或 **/clr: safe**编译器选项。 **/Clr: pure**并 **/clr: safe**编译器选项都不建议使用在 Visual Studio 2015 和 Visual Studio 2017 中不可用。 请参阅[/clr （公共语言运行时编译）](../build/reference/clr-common-language-runtime-compilation.md)有关详细信息。
 
 有关详细信息，请参阅<xref:System.Reflection>。
 
@@ -181,7 +181,7 @@ public:
 
 反射系统已成功加载程序集的数组后**类型**对象检索与<xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=nameWithType>函数。 每个数组元素包含有关不同类型的信息，尽管这种情况下，定义一个类。 使用循环，每个**类型**此数组中查询有关使用的类型成员**Type::GetMembers**函数。 此函数返回的数组**MethodInfo**对象，每个对象，其中包含有关成员函数、 数据成员或类型中的属性的信息。
 
-请注意，方法的列表包含函数显式中定义**TestClass**和函数隐式继承自**system:: object**类。 在.NET 中，而不是在 Visual c + + 语法中所描述的一部分，属性显示为 get/set 函数访问的基础数据成员。 Get/set 函数在此列表中显示为常规方法。 通过公共语言运行时，不是由 Visual c + + 编译器支持反射。
+请注意，方法的列表包含函数显式中定义**TestClass**和函数隐式继承自**system:: object**类。 在.NET 中，而不是视觉对象中所描述的一部分C++语法，属性显示为 get/set 函数访问的基础数据成员。 Get/set 函数在此列表中显示为常规方法。 通过公共语言运行时，不是按视觉对象支持反射C++编译器。
 
 尽管此代码用于检查你定义的程序集，但您可以使用此代码检查.NET 程序集。 例如，如果对 mscorlib 更改 TestAssembly，然后将看到每个类型和方法在 mscorlib.dll 中定义的列表。
 

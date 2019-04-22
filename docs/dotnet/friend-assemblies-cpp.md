@@ -5,10 +5,10 @@ helpviewer_keywords:
 - friend assemblies, Visual C++
 ms.assetid: 8d55fee0-b7c2-4fbe-a23b-dfe424dc71cd
 ms.openlocfilehash: e469556a773ffcdbf50e53d94022c0b6b7abf869
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58781037"
 ---
 # <a name="friend-assemblies-c"></a>友元程序集 (C++)
@@ -47,7 +47,7 @@ ms.locfileid: "58781037"
 
 必须显式授予对程序集中所有类型的访问权限。  例如，如果程序集 C 引用程序集 B，而程序集 B 具有对程序集 A 中所有类型的访问权限，则程序集 C 没有对程序集 A 中所有类型的访问权限。
 
-有关如何进行签名的信息 — 即，如何使强名称的 — 请参阅使用 Visual c + + 编译器生成的程序集[强名称程序集 （程序集签名） (C + + CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md)。
+有关如何进行签名的信息 — 即，如何使强名称的 — 使用视觉对象生成的程序集C++编译器，请参阅[强名称程序集 （程序集签名） (C++/CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md)。
 
 作为对使用友元程序集功能的替代，您可使用 <xref:System.Security.Permissions.StrongNameIdentityPermission> 限制对单独类型的访问。
 
