@@ -1,7 +1,0 @@
-# [OpenMP 指令](openmp-directives.md)
-# [OpenMP 子句](openmp-clauses.md)
-# [OpenMP 库参考](openmp-library-reference.md)
-## [OpenMP 库](openmp-libraries.md)
-## [OpenMP 数据类型](openmp-data-types.md)
-## [OpenMP 环境变量](openmp-environment-variables.md)
-## [OpenMP 函数](openmp-functions.md)
