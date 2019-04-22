@@ -1,17 +1,17 @@
 ---
-title: 在 Visual Studio 中项目的 c + + 的 MSBuild 内部组件
+title: MSBuild 的内部组件C++Visual Studio 中的项目
 ms.date: 12/08/2018
 helpviewer_keywords:
 - MSBuild overview
 ms.assetid: dd258f6f-ab51-48d9-b274-f7ba911d05ca
 ms.openlocfilehash: 6c8e891f6bf6ed6b3bb3d1c84dbc13b64ab7b868
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59021899"
 ---
-# <a name="msbuild-internals-for-c-projects"></a>MSBuild 的 c + + 项目的内部组件
+# <a name="msbuild-internals-for-c-projects"></a>MSBuild 的内部组件C++项目
 
 当你在 IDE 中设置项目属性，然后保存该项目，Visual Studio 将项目设置写入到你的项目文件。 项目文件包含到项目中，唯一的设置，但它不包含生成项目所需的所有设置。 项目文件包含`Import`元素包含的其他网络*支持文件。* 支持文件包含剩余的属性、 目标和生成项目所需的设置。
 
@@ -25,7 +25,7 @@ ms.locfileid: "59021899"
 |---------------|-----------------|
 |*drive*:\Program Files *(x86)* \Microsoft Visual Studio\\*year*\\*edition*\Common7\IDE\VC\VCTargets\ <br /><br />*drive*:\Program Files *(x86)* \MSBuild\Microsoft.Cpp (x86)\v4.0\\*version*\ |包含主目标文件 (.targets) 和目标使用的属性文件 (.props)。 默认情况下，$ （vctargetspath） 宏引用此目录。|
 |*drive*:\Program Files *(x86)* \Microsoft Visual Studio\\*year*\\*edition*\Common7\IDE\VC\VCTargets\Platforms\\*platform*\ <br /><br />*drive*:\Program Files *(x86)* \MSBuild\Microsoft.Cpp\v4.0\\*version*\Platforms\\*platform*\ |包含重写其父目录中的属性和目标的特定于平台的目标和属性文件。 此目录还包含定义此目录中的目标使用的任务的 DLL。<br /><br /> *平台*占位符表示 ARM、 Win32、 或 x64 子目录。|
-|*drive*:\Program Files *(x86)* \Microsoft Visual Studio\\*year*\\*edition*\Common7\IDE\VC\VCTargets\Platforms\\*platform*\PlatformToolsets\\*toolset*\ <br /><br />*drive*:\Program Files *(x86)* \MSBuild\Microsoft.Cpp\v4.0\\*version*\Platforms\\*platform*\PlatformToolsets\\*toolset*\ <br /><br />*drive*:\Program Files *(x86)* \MSBuild\Microsoft.Cpp\v4.0\Platforms\\*platform*\PlatformToolsets\\*toolset*\ |包含使生成操作能够生成 c + + 应用程序通过使用指定的目录*工具集*。<br /><br /> *年份*并*edition*占位符由 Visual Studio 2017 和更高版本。 *版本*占位符是适用于 Visual Studio 2012 V110、 V120 for Visual Studio 2013 或 Visual Studio 2015 的 V140。 *平台*占位符表示 ARM、 Win32、 或 x64 子目录。 *工具集*占位符表示工具集子目录，例如，用于构建 Windows 应用程序通过使用 Visual Studio 2015 工具集，v120_xp 生成适用于 Windows XP 使用 Visual Studio 2013 工具集或到 v110_wp80 v140通过使用 Visual Studio 2012 工具集生成 Windows Phone 8.0 应用。<br /><br />包含启用生成以生成 Visual Studio 2008 或 Visual Studio 2010 的应用程序的目录路径中不包括*版本*，并*平台*占位符表示 Itanium、 Win32、 或 x64 子目录。 *工具集*占位符表示 v90 或 v100 工具集子目录。|
+|*drive*:\Program Files *(x86)* \Microsoft Visual Studio\\*year*\\*edition*\Common7\IDE\VC\VCTargets\Platforms\\*platform*\PlatformToolsets\\*toolset*\ <br /><br />*drive*:\Program Files *(x86)* \MSBuild\Microsoft.Cpp\v4.0\\*version*\Platforms\\*platform*\PlatformToolsets\\*toolset*\ <br /><br />*drive*:\Program Files *(x86)* \MSBuild\Microsoft.Cpp\v4.0\Platforms\\*platform*\PlatformToolsets\\*toolset*\ |包含启用要生成的生成的目录C++通过使用指定的应用程序*工具集*。<br /><br /> *年份*并*edition*占位符由 Visual Studio 2017 和更高版本。 *版本*占位符是适用于 Visual Studio 2012 V110、 V120 for Visual Studio 2013 或 Visual Studio 2015 的 V140。 *平台*占位符表示 ARM、 Win32、 或 x64 子目录。 *工具集*占位符表示工具集子目录，例如，用于构建 Windows 应用程序通过使用 Visual Studio 2015 工具集，v120_xp 生成适用于 Windows XP 使用 Visual Studio 2013 工具集或到 v110_wp80 v140通过使用 Visual Studio 2012 工具集生成 Windows Phone 8.0 应用。<br /><br />包含启用生成以生成 Visual Studio 2008 或 Visual Studio 2010 的应用程序的目录路径中不包括*版本*，并*平台*占位符表示 Itanium、 Win32、 或 x64 子目录。 *工具集*占位符表示 v90 或 v100 工具集子目录。|
 
 ## <a name="support-files"></a>支持文件
 
@@ -83,10 +83,10 @@ ms.locfileid: "59021899"
 |重新生成|清理，然后生成项目。|
 |ResourceCompile|执行 Microsoft Windows 资源编译器工具 rc.exe。|
 |XdcMake|执行 XML 文档工具 xdcmake.exe。|
-|Xsd|执行 XML 架构定义工具 xsd.exe。 *请参见下面的注释。*|
+|Xsd|执行 XML 架构定义工具 xsd.exe。 请参见下面的注释。|
 
 > [!NOTE]
-> 在 Visual Studio 2017 中，c + + 项目的支持**xsd**文件已弃用。 您仍然可以使用**Microsoft.VisualC.CppCodeProvider**通过添加**CppCodeProvider.dll**手动到 gac 中。
+> 在 Visual Studio 2017 中，C++项目的支持**xsd**弃用文件。 您仍然可以使用**Microsoft.VisualC.CppCodeProvider**通过添加**CppCodeProvider.dll**手动到 gac 中。
 
 ## <a name="see-also"></a>请参阅
 

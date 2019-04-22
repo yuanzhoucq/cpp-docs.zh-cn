@@ -10,10 +10,10 @@ helpviewer_keywords:
 - in-place activation, zooming and resizing
 ms.assetid: 4d7859bd-0b2e-4254-be62-2735cecf02c6
 ms.openlocfilehash: c2cb25388184ac969bec7c01d8077a458c03a03a
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58775278"
 ---
 # <a name="tn040-mfcole-in-place-resizing-and-zooming"></a>TN040:MFC/OLE 就地调整大小和缩放
@@ -42,7 +42,7 @@ ms.locfileid: "58775278"
 
 有关正确进行缩放的示例，请参阅 MFC OLE 示例[HIERSVR](../overview/visual-cpp-samples.md)。 HIERSVR 中的缩放实际上很复杂，因为它显示了文本，而文本通常不是以线性方式（提示、排字约定、设计宽度和高度共同让问题复杂化了）缩放的。 尽管如此，HIERSVR 是实现正确的缩放的合理参考，是 MFC 教程如此[SCRIBBLE](../overview/visual-cpp-samples.md) （第 7 步）。
 
-`COleServerDoc::GetZoomFactor` 确定缩放系数根据大量不同指标可从容器或从实现你`COleServerItem`和`COleServerDoc`类。 简而言之，当前缩放系数由以下公式确定：
+`COleServerDoc::GetZoomFactor` 根据从容器或从 `COleServerItem` 和 `COleServerDoc` 类的实现获得的很多不同的指标确定缩放系数。 简而言之，当前缩放系数由以下公式确定：
 
 ```
 Position Rectangle (PR) / Container Extent (CE)
@@ -52,7 +52,7 @@ POSITION RECTANGLE 由容器确定。 当调用 `COleClientItem::OnGetItemPositi
 
 CONTAINER EXTENT 在计算时稍微复杂一些。 如果容器已调用 `COleServerItem::OnSetExtent`（通过调用 `COleClientItem::SetExtent`），则 CONTAINER EXTENT 是转换为基于每逻辑英寸的像素数的像素的此值。 如果容器尚未调用 SetExtent（通常是这种情况），则 CONTAINER EXTENT 是从 `COleServerItem::OnGetExtent` 返回的大小。 因此，如果容器尚未调用 SetExtent，框架将假定，如果它未容器会调用它的原始大小为 100%(从返回的值`COleServerItem::GetExtent`)。 换句话说，框架假定容器正在显示项的 100%（不多不少）。
 
-请务必注意，尽管 `COleServerItem::OnSetExtent` 和 `COleServerItem::OnGetExtent` 具有类似的名称，但它们不操作项的同一特性。 `OnSetExtent` 调用以让服务器知道 （无论缩放系数） 容器中可见对象和`OnGetExtent`称为容器以确定对象的理想大小。
+请务必注意，尽管 `COleServerItem::OnSetExtent` 和 `COleServerItem::OnGetExtent` 具有类似的名称，但它们不操作项的同一特性。 容器将调用 `OnSetExtent` 以告知服务器容器中多少对象是可见的（无论缩放系数如何），并调用 `OnGetExtent` 来确定对象的理想大小。
 
 通过查看每个相关的 API，您可以更清楚地了解情况：
 

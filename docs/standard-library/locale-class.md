@@ -296,7 +296,7 @@ locale combine(const locale& Loc) const;
 
 ### <a name="return-value"></a>返回值
 
-此成员函数返回在替换或添加到的区域设置对象**\*这**方面`Facet`中列出*Loc*。
+此成员函数返回在替换或添加到的区域设置对象 **\*这** 方面`Facet`中列出*Loc*。
 
 ### <a name="example"></a>示例
 

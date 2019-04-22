@@ -11,10 +11,10 @@ helpviewer_keywords:
 - comment pragma
 ms.assetid: 20f099ff-6303-49b3-9c03-a94b6aa69b85
 ms.openlocfilehash: fb9bfef2ae751529b8424143cde020e78f17ec72
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59025265"
 ---
 # <a name="comment-cc"></a>注释 (C/C++)
@@ -39,7 +39,7 @@ ms.locfileid: "59025265"
 
 位数*commentstring*对象文件中。 在链接时，会将该字符串置于可执行文件内。 加载可执行文件时，不会将字符串加载到内存中；但是，可以使用在文件中查找可打印字符串的程序来找到它。 此注释记录类型的一个用途是将版本号或类似信息嵌入可执行文件中。
 
-`exestr` 已弃用，将在未来的版本; 中删除链接器不会处理注释记录。
+在将来版本中，将弃用和移除 `exestr`；链接器不会处理注释记录。
 
 ### <a name="lib"></a>lib
 

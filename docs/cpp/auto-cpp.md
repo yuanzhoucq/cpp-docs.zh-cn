@@ -8,10 +8,10 @@ helpviewer_keywords:
 - auto keyword [C++]
 ms.assetid: e9d495d7-601c-4547-b897-998389a311f4
 ms.openlocfilehash: 3d77a17d490f8d7680f095367c309ce0e4f366b7
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58776331"
 ---
 # <a name="auto-c"></a>自动 （C++）
@@ -52,7 +52,7 @@ auto declarator initializer;
 
 初始化表达式可以是赋值 （等号语法），直接初始化 （函数样式语法）、[运算符 new](new-operator-cpp.md)表达式或初始化表达式可以是*有关范围声明*中的参数[基于范围的语句 （C++）](../cpp/range-based-for-statement-cpp.md)语句。 有关详细信息，请参阅[初始值设定项](../cpp/initializers.md)和本文档后面的代码示例。
 
-**自动**关键字是类型的占位符，但它本身不是一种类型。 因此，**自动**关键字不能使用强制转换或运算符如[sizeof](../cpp/sizeof-operator.md)和 (对于 C + + CLI) [typeid](../extensions/typeid-cpp-component-extensions.md)。
+**自动**关键字是类型的占位符，但它本身不是一种类型。 因此，**自动**关键字不能使用强制转换或运算符如[sizeof](../cpp/sizeof-operator.md)和 (对于C++/CLI) [typeid](../extensions/typeid-cpp-component-extensions.md)。
 
 ## <a name="usefulness"></a>有用性
 

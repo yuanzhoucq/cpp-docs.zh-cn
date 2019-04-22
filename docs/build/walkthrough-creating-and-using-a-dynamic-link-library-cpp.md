@@ -1,5 +1,5 @@
 ---
-title: 演练：创建和使用你自己动态链接库 （c + +）
+title: 演练：创建和使用动态链接库 (C++)
 ms.custom: conceptual
 ms.date: 09/24/2018
 helpviewer_keywords:
@@ -7,15 +7,15 @@ helpviewer_keywords:
 - DLLs [C++], walkthroughs
 ms.assetid: 3ae94848-44e7-4955-bbad-7d40f493e941
 ms.openlocfilehash: 248b423659d026774d4945ee6330a39dc4c6e16e
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58770143"
 ---
-# <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>演练：创建和使用你自己动态链接库 （c + +）
+# <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>演练：创建和使用动态链接库 (C++)
 
-此分步演练说明如何使用 Visual Studio IDE 来创建你自己编写的 c + + 中的动态链接库 (DLL)，然后从另一个 c + + 应用程序中使用它。 Dll 是一种最有用的一种 Windows 组件。 若要缩小你的应用，并使其更轻松地提供服务和扩展你的应用，可以使用作为一种方式来共享代码和资源，它们。 在本演练中，将创建实现某些数学函数，一个 DLL，然后创建一个控制台应用，使用该 DLL 中的函数。 此过程中，您了解到的一些编程方法和在 Windows Dll 中使用的约定。
+此分步演练说明如何使用 Visual Studio IDE 来创建你自己编写的动态链接库 (DLL) C++，然后将其从另一个C++应用程序。 Dll 是一种最有用的一种 Windows 组件。 若要缩小你的应用，并使其更轻松地提供服务和扩展你的应用，可以使用作为一种方式来共享代码和资源，它们。 在本演练中，将创建实现某些数学函数，一个 DLL，然后创建一个控制台应用，使用该 DLL 中的函数。 此过程中，您了解到的一些编程方法和在 Windows Dll 中使用的约定。
 
 本演练涵盖以下任务：
 
@@ -29,11 +29,11 @@ ms.locfileid: "58770143"
 
 - 运行已完成的应用程序。
 
-像静态链接的库，DLL_导出_变量、 函数和资源的名称和你的应用_导入_这些名称，若要使用这些变量、 函数和资源。 与静态链接的库，Windows 将应用程序中的导入连接到在加载时或在运行时，而不是将它们连接在链接时在 DLL 中导出。 Windows 要求不是要建立这些连接的标准 c + + 编译模型的一部分的附加信息。 MSVC 编译器实现对 c + + 提供此额外信息的一些 Microsoft 专用扩展。 我们看一下，我们将介绍这些扩展。
+像静态链接的库，DLL_导出_变量、 函数和资源的名称和你的应用_导入_这些名称，若要使用这些变量、 函数和资源。 与静态链接的库，Windows 将应用程序中的导入连接到在加载时或在运行时，而不是将它们连接在链接时在 DLL 中导出。 Windows 要求不是标准的一部分的额外信息C++编译模型，以使这些连接。 MSVC 编译器实现某些 Microsoft 专用扩展C++提供此额外信息。 我们看一下，我们将介绍这些扩展。
 
 本演练将创建两个 Visual Studio 解决方案;一个生成 DLL，另一个生成客户端应用程序。 DLL 使用 C 调用约定，因此可以使用生成的其他语言，只要平台和调用和链接约定匹配的应用中调用它。 客户端应用程序使用_隐式链接_、 Windows 位置链接到 DLL 在加载时的应用程序。 此链接，就像函数一样 DLL 提供的函数调用静态链接库中的应用。
 
-本演练中并未涵盖一些常见的情况。 它不会显示 c + + Dll 供其他编程语言。 它不会显示如何创建纯资源 DLL。 它也不会显示显式链接在运行时，而不是在加载时加载的 Dll 的使用。 请放心，你可以使用 Visual c + + 来执行所有这些操作。 有关 Dll 的详细信息的链接，请参阅[Visual c + + 中的 Dll](dlls-in-visual-cpp.md)。 有关隐式链接和显式链接的详细信息，请参阅[确定要使用的链接方法](linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)。 有关用于使用 C 语言链接约定的编程语言创建 c + + Dll 的信息，请参阅[导出 c + + 函数以用于 C 语言可执行文件](exporting-cpp-functions-for-use-in-c-language-executables.md)。 有关如何创建.NET 语言配合使用的 Dll 的信息，请参阅[从 Visual Basic 应用程序调用 DLL 函数](calling-dll-functions-from-visual-basic-applications.md)。
+本演练中并未涵盖一些常见的情况。 它不会显示使用C++的其他编程语言的 Dll。 它不会显示如何创建纯资源 DLL。 它也不会显示显式链接在运行时，而不是在加载时加载的 Dll 的使用。 请放心，你可以使用视觉对象C++来执行所有这些操作。 有关 Dll 的详细信息的链接，请参阅[视觉对象中的 Dll C++ ](dlls-in-visual-cpp.md)。 有关隐式链接和显式链接的详细信息，请参阅[确定要使用的链接方法](linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)。 了解如何创建C++以使用编程语言，使用 C 语言链接约定，请参阅使用 Dll[导出C++函数以用于 C 语言可执行文件](exporting-cpp-functions-for-use-in-c-language-executables.md)。 有关如何创建.NET 语言配合使用的 Dll 的信息，请参阅[从 Visual Basic 应用程序调用 DLL 函数](calling-dll-functions-from-visual-basic-applications.md)。
 
 本演练使用 Visual Studio 2017，但代码和说明的大部分也适用于早期版本。 若要生成新项目的步骤更改在 Visual Studio 2017 版本 15.3 中启动。 本演练介绍如何创建项目类型提供的更高版本和较早版本。 查找与你的 Visual Studio 版本匹配的步骤。
 
@@ -41,13 +41,13 @@ ms.locfileid: "58770143"
 
 - 运行 Microsoft Windows 7 或更高版本的计算机。 建议使用 Windows 10 以获得最佳开发体验。
 
-- Visual Studio 2017 的副本。 有关如何下载和安装 Visual Studio 的信息，请参阅[安装 Visual Studio 2017](/visualstudio/install/install-visual-studio)。 当您运行安装程序时，请确保**使用 c + + 的桌面开发**检查工作负荷。 别担心，如果您未安装 Visual Studio 时安装此工作负荷。 可以再次运行安装程序并立即安装。
+- Visual Studio 2017 的副本。 有关如何下载和安装 Visual Studio 的信息，请参阅[安装 Visual Studio 2017](/visualstudio/install/install-visual-studio)。 当您运行安装程序时，请确保**使用的桌面开发C++** 检查工作负荷。 别担心，如果您未安装 Visual Studio 时安装此工作负荷。 可以再次运行安装程序并立即安装。
 
-   ![使用 c + + 的桌面开发](media/desktop-development-with-cpp.png "使用 c + + 的桌面开发")
+   ![使用的桌面开发C++ ](media/desktop-development-with-cpp.png "使用的桌面开发C++")
 
 - 使用 Visual Studio IDE 的基础知识的了解。 如果使用过 Windows 桌面应用程序之前，您可能可以跟上。 有关的介绍，请参阅[Visual Studio IDE 功能导览](/visualstudio/ide/visual-studio-ide)。
 
-- 足够多要跟着介绍一起操作的 c + + 语言的基础知识的了解。 别担心，我们不执行任何操作太复杂。
+- 了解足够的基础知识C++若要跟着介绍一起操作的语言。 别担心，我们不执行任何操作太复杂。
 
 ## <a name="create-the-dll-project"></a>创建 DLL 项目
 
@@ -57,7 +57,7 @@ ms.locfileid: "58770143"
 
 1. 在菜单栏上，依次选择“文件” > “新建” > “项目”，打开“新建项目”对话框。
 
-1. 在左窗格中**新的项目**对话框框中，展开**已安装**并**Visual c + +** 如有必要，然后选择**Windows 桌面**. 在中心窗格中，选择**Windows 桌面向导**。 输入`MathLibrary`中**名称**框以指定项目的名称。
+1. 在左窗格中**新的项目**对话框框中，展开**已安装**并**Visual C++** 如有必要，然后选择**Windows 桌面**. 在中心窗格中，选择**Windows 桌面向导**。 输入`MathLibrary`中**名称**框以指定项目的名称。
 
    ![MathLibrary 项目命名为](media/mathlibrary-new-project-name-153.png "MathLibrary 项目命名为")
 
@@ -76,7 +76,7 @@ ms.locfileid: "58770143"
 >
 >1. 在菜单栏上，依次选择“项目” > “属性”。
 >
->1. 在左窗格中**属性页**对话框中，选择**预处理器**下**配置属性** > **C/c + +**. 检查的内容**预处理器定义**属性。<br/><br/>![检查预处理器定义属性](media/mathlibrary-153bug-preprocessor-definitions-check.png "检查预处理器定义属性")<br/><br/>如果您看到**MATHLIBRARY&#95;导出**中**预处理器定义**列表中，则不需要进行任何更改。 如果您看到**MathLibrary&#95;导出**相反，然后继续执行以下步骤。
+>1. 在左窗格中**属性页**对话框中，选择**预处理器**下**配置属性** > **C /C++**. 检查的内容**预处理器定义**属性。<br/><br/>![检查预处理器定义属性](media/mathlibrary-153bug-preprocessor-definitions-check.png "检查预处理器定义属性")<br/><br/>如果您看到**MATHLIBRARY&#95;导出**中**预处理器定义**列表中，则不需要进行任何更改。 如果您看到**MathLibrary&#95;导出**相反，然后继续执行以下步骤。
 >
 >1. 在顶部**属性页**对话框中，更改**配置**下拉列表**所有配置**。
 >
@@ -90,7 +90,7 @@ ms.locfileid: "58770143"
 
 1. 在菜单栏上，依次选择“文件” > “新建” > “项目”。
 
-1. 在左窗格中**新的项目**对话框框中，展开**已安装** > **模板**，然后选择**Visual c + +**，和然后在中心窗格中，选择**Win32 控制台应用程序**。 输入`MathLibrary`中**名称**编辑框，以指定项目的名称。
+1. 在左窗格中**新的项目**对话框框中，展开**已安装** > **模板**，然后选择**Visual C++** ，然后在中心窗格中，选择**Win32 控制台应用程序**。 输入`MathLibrary`中**名称**编辑框，以指定项目的名称。
 
    ![MathLibrary 项目命名为](media/mathlibrary-project-name.png "MathLibrary 项目命名为")
 
@@ -114,7 +114,7 @@ ms.locfileid: "58770143"
 
 1. 若要创建函数，标头文件的菜单栏上，选择**项目** > **添加新项**。
 
-1. 在中**添加新项**对话框中，在左窗格中，选择**Visual c + +**。 在中间窗格中，选择 **“头文件(.h)”**。 指定`MathLibrary.h`作为标头文件的名称。
+1. 在中**添加新项**对话框中，在左窗格中，选择**Visual C++** 。 在中间窗格中，选择 **“头文件(.h)”**。 指定`MathLibrary.h`作为标头文件的名称。
 
    ![在添加新项对话框添加标头](media/mathlibrary-add-new-item-header-file.png "添加标头文件中添加新项对话框")
 
@@ -246,7 +246,7 @@ ms.locfileid: "58770143"
 ========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========
 ```
 
-恭喜，现已创建 Visual c + + DLL ！ 接下来，将创建使用 DLL 导出的函数的客户端应用程序。
+恭喜，你已创建的 DLL 使用视觉对象C++！ 接下来，将创建使用 DLL 导出的函数的客户端应用程序。
 
 ## <a name="create-a-client-app-that-uses-the-dll"></a>创建使用该 DLL 的客户端应用程序
 
@@ -256,9 +256,9 @@ ms.locfileid: "58770143"
 
 ### <a name="to-create-a-client-app-in-visual-studio-2017-version-153-or-later"></a>若要在 Visual Studio 2017 版本中创建客户端应用程序，15.3 或更高版本
 
-1. 若要创建一个 c + + 应用，它使用的 DLL 的创建，在菜单栏上，选择**文件** > **新建** > **项目**。
+1. 若要创建C++应用程序使用的 DLL 的创建，在菜单栏上，选择**文件** > **新建** > **项目**。
 
-1. 在左窗格中**新的项目**对话框中，选择**Windows Desktop**下**已安装** > **Visual c + +**。 在中心窗格中，选择**Windows 桌面向导**。 指定项目名称`MathClient`，请在**名称**编辑框。
+1. 在左窗格中**新的项目**对话框中，选择**Windows Desktop**下**已安装** > **Visual C++** 。 在中心窗格中，选择**Windows 桌面向导**。 指定项目名称`MathClient`，请在**名称**编辑框。
 
    ![客户端项目命名为](media/mathclient-new-project-name-153.png "命名客户端项目")
 
@@ -266,9 +266,9 @@ ms.locfileid: "58770143"
 
 ### <a name="to-create-a-client-app-in-older-versions-of-visual-studio-2017"></a>若要在较旧版本的 Visual Studio 2017 中创建客户端应用
 
-1. 若要创建一个 c + + 应用，它使用的 DLL 的创建，在菜单栏上，选择**文件** > **新建** > **项目**。
+1. 若要创建C++应用程序使用的 DLL 的创建，在菜单栏上，选择**文件** > **新建** > **项目**。
 
-1. 在左窗格中**新的项目**对话框中，选择**Win32**下**已安装** > **模板** > **Visual c + +**。 在中间窗格中，选择 **“Win32 控制台应用程序”**。 指定项目名称`MathClient`，请在**名称**编辑框。
+1. 在左窗格中**新的项目**对话框中，选择**Win32**下**已安装** > **模板** > **可视化C++** 。 在中间窗格中，选择 **“Win32 控制台应用程序”**。 指定项目名称`MathClient`，请在**名称**编辑框。
 
    ![客户端项目命名为](media/mathclient-project-name.png "命名客户端项目")
 
@@ -288,7 +288,7 @@ ms.locfileid: "58770143"
 
 1. 在中**配置**下拉列表框中，选择**所有配置**如果尚未选择它。
 
-1. 在左窗格中，选择**常规**下**配置属性** > **C/c + +**。
+1. 在左窗格中，选择**常规**下**配置属性** > **C /C++**。
 
 1. 在属性窗格中，选择下拉列表控件旁边**附加包含目录**编辑框中，，然后选择**编辑**。
 

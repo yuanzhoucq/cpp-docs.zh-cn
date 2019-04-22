@@ -25,10 +25,10 @@ helpviewer_keywords:
 - wmemchr function
 ms.assetid: 5a348581-28f1-4256-8434-687245f7fc9f
 ms.openlocfilehash: 00a1f0d12047cc388b56074a657ffd739e986827
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58866911"
 ---
 # <a name="memchr-wmemchr"></a>memchr、wmemchr
@@ -89,7 +89,7 @@ const wchar_t *wmemchr(
 
 `memchr` 和`wmemchr`的第一个匹配项看起来*c*在第一个*计数*字符*缓冲区*。 它将停止时找到*c*或检查第一个*计数*字符。
 
-在 C 中，这些函数采用**const**的第一个参数的指针。 在 C++ 中，有两个重载可用。 采用指向的重载**const**返回一个指向**const**; 将指针传递到非版本**const**返回一个指向非**常量**. 该宏\_CRT\_CONST\_更正\_如果这两个定义重载**const**和非-**const**提供了这些函数的版本。 如果需要非**const**中 c + +，这两个 c + + 重载的行为定义符号\_CONST\_返回。
+在 C 中，这些函数采用**const**的第一个参数的指针。 在 C++ 中，有两个重载可用。 采用指向的重载**const**返回一个指向**const**; 将指针传递到非版本**const**返回一个指向非**常量**. 该宏\_CRT\_CONST\_更正\_如果这两个定义重载**const**和非-**const**提供了这些函数的版本。 如果需要非**const**两个行为C++重载中C++，请定义符号\_CONST\_返回。
 
 ## <a name="requirements"></a>要求
 

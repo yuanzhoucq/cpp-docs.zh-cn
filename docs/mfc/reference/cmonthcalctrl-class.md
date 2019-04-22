@@ -91,10 +91,10 @@ helpviewer_keywords:
 - CMonthCalCtrl [MFC], SizeRectToMin
 ms.assetid: a42f6bd6-ab5c-4335-82f8-839982fc64a2
 ms.openlocfilehash: bd062a4e0d4db364c9cb628608c6af165dc0edc2
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58777163"
 ---
 # <a name="cmonthcalctrl-class"></a>CMonthCalCtrl 类
@@ -373,7 +373,7 @@ DWORD GetCurrentView() const;
 
 当前视图，这将由以下值之一：
 
-|值|含义|
+|“值”|含义|
 |-----------|-------------|
 |MCMV_MONTH|每月视图|
 |MCMV_YEAR|每年的视图|
@@ -448,7 +448,7 @@ int GetFirstDayOfWeek(BOOL* pbLocal = NULL) const;
 
 此成员函数可实现 Win32 消息的行为[MCM_GETFIRSTDAYOFWEEK](/windows/desktop/Controls/mcm-getfirstdayofweek)，如 Windows SDK 中所述。 每周天数表示为整数，按如下所示。
 
-|值|日期是星期几|
+|“值”|日期是星期几|
 |-----------|---------------------|
 |0|星期一|
 |1|星期二|
@@ -587,7 +587,7 @@ int GetMonthRange(
 *dwFlags*<br/>
 值，该值指定要检索的范围限制的作用域。 此值必须是以下值之一。
 
-|值|含义|
+|“值”|含义|
 |-----------|-------------|
 |GMR_DAYSTATE|包括前导和尾随的可见范围仅部分显示的月份。|
 |GMR_VISIBLE|包含完全显示的月份。|
@@ -634,7 +634,7 @@ DWORD GetRange(
 
 可以为零的 DWORD （设置无限制） 或指定限制的信息的以下值的组合。
 
-|值|含义|
+|“值”|含义|
 |-----------|-------------|
 |GDTR_MAX|为控件; 设置最大限制*pMaxRange*有效，并且包含的适用日期信息。|
 |GDTR_MIN|为控件; 设置最小限制*pMinRange*有效，并且包含的适用日期信息。|
@@ -917,7 +917,7 @@ COLORREF SetColor(
 *nRegion*<br/>
 一个整数值，指定要设置哪些月日历颜色。 此值可以是以下值之一。
 
-|值|含义|
+|“值”|含义|
 |-----------|-------------|
 |MCSC_BACKGROUND|显示不同的月份的背景色。|
 |MCSC_MONTHBK|显示月份中的背景色。|

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - collection interfaces
 ms.assetid: b2d37119-3ab2-4e0a-b65b-f377f07e4098
 ms.openlocfilehash: ebf7be8b2c80a714a27567ce0334475519a69454
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58768011"
 ---
 # <a name="atl-collections-and-enumerators"></a>ATL 集合和枚举数
@@ -33,7 +33,7 @@ ms.locfileid: "58768011"
 讨论了每种类型的接口的不同的设计原则。
 
 [实现基于 C++ 标准库的集合](../atl/implementing-an-stl-based-collection.md)<br/>
-一个扩展的示例将指导你完成一个基于 c + + 标准库的集合的实现。
+将指导你完成的实现的扩展的示例C++基于标准库的集合。
 
 ## <a name="related-sections"></a>相关章节
 

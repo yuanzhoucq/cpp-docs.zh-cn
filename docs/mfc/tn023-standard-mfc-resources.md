@@ -9,10 +9,10 @@ helpviewer_keywords:
 - standard resources
 ms.assetid: 60af8415-c576-4c2f-a711-ca5da0b9a1f2
 ms.openlocfilehash: d29f0ab2254a52e01f2016f64a37ddfce47955bb
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58780309"
 ---
 # <a name="tn023-standard-mfc-resources"></a>TN023:标准 MFC 资源
@@ -39,7 +39,7 @@ MFC 提供了可在应用程序中使用的两种预定义资源：剪贴画资�
 
 - Prompts.rc:包含 ID_FILE_NEW 菜单提示字符串资源的每个预定义的命令，如"创建新的文档"。
 
-- Commdlg.rc:包含标准 COMMDLG 对话框模板的 Visual c + + 兼容的.rc 文件。
+- Commdlg.rc:视觉对象C++兼容的.rc 文件，其中包含标准 COMMDLG 对话框模板。
 
 标准框架资源是带有框架所依赖的由 AFX 定义的 ID 的资源，用于内部实现。 您很少需要更改这些 AFX 定义的资源。 如果您确实要更改，则应遵循本主题后面所述的过程。
 

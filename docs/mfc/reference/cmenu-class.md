@@ -85,10 +85,10 @@ helpviewer_keywords:
 - CMenu [MFC], m_hMenu
 ms.assetid: 40cacfdc-d45c-4ec7-bf28-991c72812499
 ms.openlocfilehash: 464b59f7e598ea1901cf88c47c5887cbbf308607
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58770845"
 ---
 # <a name="cmenu-class"></a>CMenu 类
@@ -651,7 +651,7 @@ UINT GetDefaultItem(
 *gmdiFlags*<br/>
 值，该值指定该函数搜索菜单项的方式。 此参数可以是 none、 一个，或以下值的组合：
 
-|值|含义|
+|“值”|含义|
 |-----------|-------------|
 |GMDI_GOINTOPOPUPS|指定，是否默认项是指打开子菜单，该函数将在相应的子菜单以递归方式搜索。 如果子菜单中没有默认项，则返回值标识用于打开子菜单项。<br /><br /> 默认情况下，该函数返回在指定的菜单中，而不管它是用于打开子菜单项的第一个默认项。|
 |GMDI_USEDISABLED|指定该函数将返回默认项，即使它处于禁用状态。<br /><br /> 默认情况下，该函数将跳过已禁用或灰项。|

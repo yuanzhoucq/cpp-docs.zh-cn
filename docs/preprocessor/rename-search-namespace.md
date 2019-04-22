@@ -7,15 +7,15 @@ helpviewer_keywords:
 - rename_search_namespace attribute
 ms.assetid: 47c9d7fd-59dc-4c62-87a1-9011a0040167
 ms.openlocfilehash: ca5d24ca9cc12e9defaa395cf150bc3c04ee4439
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59022848"
 ---
 # <a name="renamesearchnamespace"></a>rename_search_namespace
 
-**C++ 专用**
+**C++特定**
 
 具有相同的功能[rename_namespace](../preprocessor/rename-namespace.md)属性，但在您使用的类型库使用`#import`指令与[auto_search](../preprocessor/auto-search.md)属性。
 
@@ -32,9 +32,9 @@ rename_search_namespace("NewName")
 
 ## <a name="remarks"></a>备注
 
-**结束 C++ 专用**
+**结束C++特定**
 
 ## <a name="see-also"></a>请参阅
 
-[#import 特性](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[#import 属性](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [#import 指令](../preprocessor/hash-import-directive-cpp.md)

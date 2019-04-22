@@ -14,10 +14,10 @@ helpviewer_keywords:
 - common language runtime, /clr compiler option
 ms.assetid: fec5a8c0-40ec-484c-a213-8dec918c1d6c
 ms.openlocfilehash: 1946fdabe66934e64cf95d3c3f12e16bc98ba664
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58779347"
 ---
 # <a name="clr-common-language-runtime-compilation"></a>/clr（公共语言运行时编译）
@@ -57,7 +57,7 @@ ms.locfileid: "58779347"
 
 - **initialAppDomain**
 
-   可以将 Visual c + + 应用程序在 CLR 版本 1 上运行。  使用 **initialAppDomain** 编译的应用程序不应由使用 ASP.NET 的应用程序使用，因为它在 CLR 版本 1 中不受支持 。
+   使视觉对象C++的 CLR 版本 1 上运行应用程序。  使用 **initialAppDomain** 编译的应用程序不应由使用 ASP.NET 的应用程序使用，因为它在 CLR 版本 1 中不受支持 。
 
 - **nostdlib**
 

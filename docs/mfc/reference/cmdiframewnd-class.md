@@ -35,10 +35,10 @@ helpviewer_keywords:
 - CMDIFrameWnd [MFC], MDITile
 ms.assetid: fa8736e6-511b-4c51-8b4d-eba78378aeb9
 ms.openlocfilehash: 9f5289491a7c14749865cfd163417440bc542aba
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58776526"
 ---
 # <a name="cmdiframewnd-class"></a>CMDIFrameWnd 类
@@ -83,7 +83,7 @@ class CMDIFrameWnd : public CFrameWnd
 
 您可以通过调用构造 MDI 框架窗口[创建](../../mfc/reference/cframewnd-class.md#create)或[LoadFrame](../../mfc/reference/cframewnd-class.md#loadframe)成员函数的`CFrameWnd`。
 
-在调用之前`Create`或`LoadFrame`，必须构造框架窗口对象上使用 c + + 堆**新**运算符。 然后再调用`Create`您还可以注册窗口类[AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass)全局函数设置的帧的图标和类样式。
+在调用之前`Create`或`LoadFrame`，必须构造上堆使用的框架窗口对象C++**新**运算符。 然后再调用`Create`您还可以注册窗口类[AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass)全局函数设置的帧的图标和类样式。
 
 使用`Create`成员函数将为快速参数传递的帧创建参数。
 
@@ -111,7 +111,7 @@ class CMDIFrameWnd : public CFrameWnd
 
 - MDI 框架窗口还提供了 ID_WINDOW_NEW，创建一个新帧和当前文档的视图的实现。 应用程序可以重写这些默认命令实现，以自定义 MDI 窗口处理。
 
-不使用 c + +**删除**运算符来销毁框架窗口。 请改用 `CWnd::DestroyWindow`。 `CFrameWnd`的实现`PostNcDestroy`销毁窗口时，将删除 c + + 对象。 当用户关闭帧窗口时，默认值`OnClose`处理程序将调用`DestroyWindow`。
+不要使用C++**删除**运算符来销毁框架窗口。 请改用 `CWnd::DestroyWindow`。 `CFrameWnd`的实现`PostNcDestroy`将删除C++时销毁窗口对象。 当用户关闭帧窗口时，默认值`OnClose`处理程序将调用`DestroyWindow`。
 
 有关详细信息`CMDIFrameWnd`，请参阅[帧 Windows](../../mfc/frame-windows.md)。
 

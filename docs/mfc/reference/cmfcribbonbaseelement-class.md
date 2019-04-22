@@ -233,10 +233,10 @@ helpviewer_keywords:
 - CMFCRibbonBaseElement [MFC], OnSetFocus
 ms.assetid: 419ea91b-5062-44cc-b0a3-f87d29566f62
 ms.openlocfilehash: 6daa5b6249c7ff18a8bc01c2309ffb94d3fb88ce
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58773068"
 ---
 # <a name="cmfcribbonbaseelement-class"></a>CMFCRibbonBaseElement 类
@@ -580,7 +580,7 @@ virtual void DrawImage(
 *pDC*<br/>
 [in]指向设备上下文指针。
 
-*类型*<br/>
+*type*<br/>
 [in]图像类型枚举值。 请参阅可能的值列表的备注的部分。
 
 *rectImage*<br/>
@@ -893,7 +893,7 @@ RibbonElementLocation GetLocationInGroup() const;
 
 一个`RibbonElementLocation`枚举值。 下表列出了可能的值。
 
-|值|描述|
+|“值”|描述|
 |-----------|-----------------|
 |`RibbonElementNotInGroup`|功能区元素不包含在功能区组。|
 |`RibbonElementSingleInGroup`|功能区元素显示为功能区组中的唯一项目。|
@@ -1933,7 +1933,7 @@ virtual BOOL SetACCData(
 *pParent*<br/>
 功能区元素的父窗口。
 
-*数据*<br/>
+*data*<br/>
 功能区元素的可访问性数据。
 
 ### <a name="return-value"></a>返回值

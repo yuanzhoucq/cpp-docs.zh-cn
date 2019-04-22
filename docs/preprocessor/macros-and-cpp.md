@@ -6,16 +6,16 @@ helpviewer_keywords:
 - macros
 ms.assetid: 83a344c1-73c9-4ace-8b93-cccfb62c6133
 ms.openlocfilehash: d4915526d5bb84b33f0595678781257d754aaf2d
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59024911"
 ---
 # <a name="macros-and-c"></a>宏和 C++
 C++ 提供新功能，其中一些取代了 ANSI C 预处理器提供的功能。 这些新功能可增强语言的类型安全性和可预见性：
 
-- 在 c + +，对象声明为**const**可以在常量表达式中使用。 这使程序可以声明具有类型和值信息的常量，以及可以用调试器以符号方式查看的枚举。 使用预处理器 `#define` 指令定义常量不是那么精确。 没有存储分配给**const**对象，除非在程序中找到采用其地址的表达式。
+- 在C++，对象声明为**const**可以在常量表达式中使用。 这使程序可以声明具有类型和值信息的常量，以及可以用调试器以符号方式查看的枚举。 使用预处理器 `#define` 指令定义常量不是那么精确。 没有存储分配给**const**对象，除非在程序中找到采用其地址的表达式。
 
 - C++ 内联函数功能取代了函数类型宏。 使用内联函数取代宏的好处如下：
 
@@ -29,5 +29,5 @@ C++ 提供新功能，其中一些取代了 ANSI C 预处理器提供的功能�
 
 ## <a name="see-also"></a>请参阅
 
-[预定义的宏](../preprocessor/predefined-macros.md)<br/>
+[预定义宏](../preprocessor/predefined-macros.md)<br/>
 [宏 (C/C++)](../preprocessor/macros-c-cpp.md)

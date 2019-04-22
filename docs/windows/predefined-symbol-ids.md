@@ -6,10 +6,10 @@ helpviewer_keywords:
 - predefined symbol IDs
 ms.assetid: 91a5d610-1a04-47e8-b8a4-63ad650a90df
 ms.openlocfilehash: 5acaf9d470ce3d1cccad65bc8235cacfd7a56427
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59024538"
 ---
 # <a name="predefined-symbol-ids"></a>预定义的符号 ID
@@ -35,6 +35,6 @@ Win32、MFC 或 ATL
 
 ## <a name="see-also"></a>请参阅
 
-[资源标识符 （符号）](../windows/symbols-resource-identifiers.md)<br/>
+[资源标识符（符号）](../windows/symbols-resource-identifiers.md)<br/>
 [如何：创建符号](../windows/creating-new-symbols.md)<br/>
 [如何：管理符号](../windows/changing-a-symbol-or-symbol-name-id.md)<br/>

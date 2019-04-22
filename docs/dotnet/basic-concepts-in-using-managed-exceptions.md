@@ -11,10 +11,10 @@ helpviewer_keywords:
 - Visual C++, handling managed exceptions
 ms.assetid: 40ce8931-1ecc-491a-815f-733b23fcba35
 ms.openlocfilehash: e2aed98d9131b3d7b96cdc3e3297823d69d0ad38
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58781531"
 ---
 # <a name="basic-concepts-in-using-managed-exceptions"></a>使用托管异常中的基本概念
@@ -33,11 +33,11 @@ ms.locfileid: "58781531"
 
 捕获从接口派生的异常类型下，不支持 **/clr**。 此外，公共语言运行时不会不允许您捕获堆栈溢出异常;堆栈溢出异常将终止该进程。
 
-有关在托管和非托管应用程序中的异常处理之间的差异的详细信息，请参阅[异常处理行为下托管 c + + 扩展之间的差异](../dotnet/differences-in-exception-handling-behavior-under-clr.md)。
+有关在托管和非托管应用程序中的异常处理之间的差异的详细信息，请参阅[差异在异常处理行为下托管扩展中的C++ ](../dotnet/differences-in-exception-handling-behavior-under-clr.md)。
 
 ##  <a name="vcconbasicconceptsinusingmanagedexceptionsanchor1"></a> 引发的异常在 /clr
 
-C + + throw 表达式扩展为 CLR 类型引发一个句柄。 下面的示例创建一个自定义异常类型，然后引发该类型的实例：
+C++引发表达式扩展为 CLR 类型引发一个句柄。 下面的示例创建一个自定义异常类型，然后引发该类型的实例：
 
 ```
 // clr_exception_handling.cpp
@@ -126,9 +126,9 @@ In 'catch(MyStruct^ catchException)'
 11
 ```
 
-### <a name="order-of-unwinding-for-c-objects"></a>你可以为 c + + 对象展开的顺序
+### <a name="order-of-unwinding-for-c-objects"></a>你可以为展开的顺序C++对象
 
-展开的析构函数可能引发函数和处理函数之间的运行时堆栈上的任何 c + + 对象时发生。 因为 CLR 类型的分配堆上，展开不适用于它们。
+展开发生在任何C++具有析构函数可能引发函数和处理函数之间的运行时堆栈上的对象。 因为 CLR 类型的分配堆上，展开不适用于它们。
 
 引发的异常事件的顺序是按如下所示：
 
@@ -142,9 +142,9 @@ In 'catch(MyStruct^ catchException)'
 
 时引发的非托管的对象类型，则将其包装的类型异常<xref:System.Runtime.InteropServices.SEHException>。 搜索相应时**捕获**子句中，有两种可行方法。
 
-- 如果遇到本机 c + + 类型，此异常将解包并相比所遇到的类型。 这种比较允许本机 c + + 类型以正常方式捕获。
+- 如果一个本机C++遇到类型、 解包，相比所遇到的类型异常。 这种比较允许一个本机C++类型以正常方式捕获。
 
-- 但是，如果**捕获**类型的子句**SEHException**或首先检查任何其基类，该子句将截获的异常。 因此，应将任何 catch 子句的 CLR 类型之前先捕获本机 c + + 类型的所有 catch 子句。
+- 但是，如果**捕获**类型的子句**SEHException**或首先检查任何其基类，该子句将截获的异常。 因此，应将捕获的所有 catch 子句本机C++首先类型之前任何 catch 子句的 CLR 类型。
 
 请注意：
 

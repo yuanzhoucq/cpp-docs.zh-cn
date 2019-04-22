@@ -5,10 +5,10 @@ helpviewer_keywords:
 - event handling [C++], Visual C++
 ms.assetid: e4b9219a-15d8-42fb-83c8-6d2e4e087c8d
 ms.openlocfilehash: 93bfcc93c680618ea3a51eabd145548a4f47563a
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58772327"
 ---
 # <a name="event-handling-in-native-c"></a>本机 C++ 中的事件处理

@@ -49,10 +49,10 @@ helpviewer_keywords:
 - _InterlockedCompareExchange64_rel intrinsic
 ms.assetid: c3ad79c0-a523-4930-a3a4-69a65d7d5c81
 ms.openlocfilehash: 6c0fabe7cbada87253960faca8e207bb10dd07bd
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59021464"
 ---
 # <a name="interlockedcompareexchange-intrinsic-functions"></a>_InterlockedCompareExchange 内部函数
@@ -197,12 +197,12 @@ __int64 _InterlockedCompareExchange64_rel(
 |---------------|------------------|------------|
 |`_InterlockedCompareExchange`, `_InterlockedCompareExchange8`, `_InterlockedCompareExchange16`, `_InterlockedCompareExchange64`|x86、 ARM、 x64|\<intrin.h>|
 |`_InterlockedCompareExchange_acq`, `_InterlockedCompareExchange_rel`, `_InterlockedCompareExchange8_acq`, `_InterlockedCompareExchange8_nf`, `_InterlockedCompareExchange8_rel`,`_InterlockedCompareExchange16_acq`, `_InterlockedCompareExchange16_nf`, `_InterlockedCompareExchange16_rel`, `_InterlockedCompareExchange64_acq`, `_InterlockedCompareExchange64_nf`, `_InterlockedCompareExchange64_rel`,|ARM|\<intrin.h>|
-|`_InterlockedCompareExchange_np`中， `_InterlockedCompareExchange16_np`中， `_InterlockedCompareExchange64_np`|X64|\<intrin.h>|
+|`_InterlockedCompareExchange_np`, `_InterlockedCompareExchange16_np`, `_InterlockedCompareExchange64_np`|X64|\<intrin.h>|
 |`_InterlockedCompareExchange_HLEAcquire`, `_InterlockedCompareExchange_HLERelease`, `_InterlockedCompareExchange64_HLEAcquire`, `_InterlockedCompareExchange64_HLERelease`|x86、x64|\<immintrin.h>|
 
 ## <a name="remarks"></a>备注
 
-`_InterlockedCompareExchange` 执行的原子比较`Destination`值替换`Comparand`值。 如果 `Destination` 值等于 `Comparand` 值，`Exchange` 值将存储在由 `Destination` 指定的地址。 否则，不会执行任何操作。
+`_InterlockedCompareExchange` 可执行 `Destination` 值与 `Comparand` 值之间的原子比较。 如果 `Destination` 值等于 `Comparand` 值，`Exchange` 值将存储在由 `Destination` 指定的地址。 否则，不会执行任何操作。
 
 `_InterlockedCompareExchange` 提供了编译器内部函数支持 Win32 Windows SDK [3&gt;interlockedcompareexchange&lt;3}](/windows/desktop/api/winnt/nf-winnt-interlockedcompareexchange)函数。
 

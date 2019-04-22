@@ -7,10 +7,10 @@ helpviewer_keywords:
 - no_registry attribute
 ms.assetid: d30de4e2-551c-428c-98fd-951330d578d3
 ms.openlocfilehash: 2a0fd9a761f765aa9562ab18c095f683b80c7987
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59023420"
 ---
 # <a name="noregistry"></a>no_registry
@@ -40,5 +40,5 @@ ms.locfileid: "59023420"
 
 ## <a name="see-also"></a>请参阅
 
-[#import 特性](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[#import 属性](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [#import 指令](../preprocessor/hash-import-directive-cpp.md)

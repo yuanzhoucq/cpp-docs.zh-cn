@@ -165,10 +165,10 @@ helpviewer_keywords:
 - COleClientItem [MFC], OnShowItem
 ms.assetid: 7f571b7c-2758-4839-847a-0cf1ef643128
 ms.openlocfilehash: 2687dfc9941a512523a7cb771cb872c78b97ce2d
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58773978"
 ---
 # <a name="coleclientitem-class"></a>COleClientItem 类
@@ -290,7 +290,7 @@ OLE 项表示的数据，由服务器应用程序，可以将"无缝"合并到�
 有关使用容器接口的详细信息，请参阅文章[容器：实现容器](../../mfc/containers-implementing-a-container.md)并[激活](../../mfc/activation-cpp.md)。
 
 > [!NOTE]
->  Windows SDK 引用嵌入的和链接的项称为"对象"，并将类型的项作为"类"。 此引用使用术语"项"以将 OLE 实体与相应的 c + + 对象和字词"类型"c + + 类区分开来 OLE 类别区分开来。
+>  Windows SDK 引用嵌入的和链接的项称为"对象"，并将类型的项作为"类"。 此引用使用术语"项"来区分从对应的 OLE 实体C++对象和字词"类型"来区分从 OLE 类别C++类。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -322,7 +322,7 @@ void Activate(
 *nVerb*<br/>
 指定要执行的谓词。 它可以是以下值之一：
 
-|值|含义|符号|
+|“值”|含义|符号|
 |-----------|-------------|------------|
 |- 0|主谓词|OLEIVERB_PRIMARY|
 |- 1|辅助谓词|（无）|
@@ -516,7 +516,7 @@ OLE 项未在运行时，则此函数无效。
 
 ##  <a name="coleclientitem"></a>  COleClientItem::COleClientItem
 
-构造`COleClientItem`对象，并将其添加到的文档项的容器文档的集合，该构造仅 c + + 对象，并且不执行任何 OLE 初始化。
+构造`COleClientItem`对象，并将其添加到容器文档的集合的文档项仅构造C++对象，并且不执行任何 OLE 初始化。
 
 ```
 COleClientItem(COleDocument* pContainerDoc = NULL);
@@ -627,7 +627,7 @@ BOOL CreateFromClipboard(
 
 ### <a name="parameters"></a>参数
 
-*呈现*<br/>
+*render*<br/>
 标志，指定服务器的 OLE 项呈现方式。 有关可能的值，请参阅[OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) Windows SDK 中。
 
 *cfFormat*<br/>
@@ -663,7 +663,7 @@ BOOL CreateFromData(
 *pDataObject*<br/>
 指向[COleDataObject](../../mfc/reference/coledataobject-class.md)是要创建的 OLE 项的对象。
 
-*呈现*<br/>
+*render*<br/>
 标志，指定服务器的 OLE 项呈现方式。 有关可能的值，请参阅[OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) Windows SDK 中。
 
 *cfFormat*<br/>
@@ -703,7 +703,7 @@ BOOL CreateFromFile(
 *clsid*<br/>
 留待将来使用。
 
-*呈现*<br/>
+*render*<br/>
 标志，指定服务器的 OLE 项呈现方式。 有关可能的值，请参阅[OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) Windows SDK 中。
 
 *cfFormat*<br/>
@@ -735,7 +735,7 @@ BOOL CreateLinkFromClipboard(
 
 ### <a name="parameters"></a>参数
 
-*呈现*<br/>
+*render*<br/>
 标志，指定服务器的 OLE 项呈现方式。 有关可能的值，请参阅[OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) Windows SDK 中。
 
 *cfFormat*<br/>
@@ -771,7 +771,7 @@ BOOL CreateLinkFromData(
 *pDataObject*<br/>
 指向[COleDataObject](../../mfc/reference/coledataobject-class.md)是要创建的 OLE 项的对象。
 
-*呈现*<br/>
+*render*<br/>
 标志，指定服务器的 OLE 项呈现方式。 有关可能的值，请参阅[OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) Windows SDK 中。
 
 *cfFormat*<br/>
@@ -807,7 +807,7 @@ BOOL CreateLinkFromFile(
 *lpszFileName*<br/>
 指向要创建的 OLE 项的文件的名称。
 
-*呈现*<br/>
+*render*<br/>
 标志，指定服务器的 OLE 项呈现方式。 有关可能的值，请参阅[OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) Windows SDK 中。
 
 *cfFormat*<br/>
@@ -843,7 +843,7 @@ BOOL CreateNewItem(
 *clsid*<br/>
 唯一标识要创建的 OLE 项的类型的 ID。
 
-*呈现*<br/>
+*render*<br/>
 标志，指定服务器的 OLE 项呈现方式。 有关可能的值，请参阅[OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) Windows SDK 中。
 
 *cfFormat*<br/>
@@ -875,7 +875,7 @@ BOOL CreateStaticFromClipboard(
 
 ### <a name="parameters"></a>参数
 
-*呈现*<br/>
+*render*<br/>
 标志，指定服务器的 OLE 项呈现方式。 有关可能的值，请参阅[OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) Windows SDK 中。
 
 *cfFormat*<br/>
@@ -911,7 +911,7 @@ BOOL CreateStaticFromData(
 *pDataObject*<br/>
 指向[COleDataObject](../../mfc/reference/coledataobject-class.md)是要创建的 OLE 项的对象。
 
-*呈现*<br/>
+*render*<br/>
 标志，指定服务器的 OLE 项呈现方式。 有关可能的值，请参阅[OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) Windows SDK 中。
 
 *cfFormat*<br/>
@@ -979,7 +979,7 @@ void Delete(BOOL bAutoDelete = TRUE);
 
 ### <a name="remarks"></a>备注
 
-此函数将调用[版本](#release)成员函数，又删除项，永久删除 OLE 项从文档的 c + + 对象。 如果嵌入 OLE 项时，删除项的本机数据。 它将始终关闭正在运行的服务器;因此，如果该项是打开的链接，此函数将关闭它。
+此函数将调用[发行](#release)成员函数，这反过来会删除C++项，永久 OLE 项从文档中删除的对象。 如果嵌入 OLE 项时，删除项的本机数据。 它将始终关闭正在运行的服务器;因此，如果该项是打开的链接，此函数将关闭它。
 
 ##  <a name="dodragdrop"></a>  COleClientItem::DoDragDrop
 
@@ -1045,7 +1045,7 @@ virtual BOOL DoVerb(
 *nVerb*<br/>
 指定要执行的谓词。 它可以包括以下项之一：
 
-|值|含义|符号|
+|“值”|含义|符号|
 |-----------|-------------|------------|
 |- 0|主谓词|OLEIVERB_PRIMARY|
 |- 1|辅助谓词|（无）|

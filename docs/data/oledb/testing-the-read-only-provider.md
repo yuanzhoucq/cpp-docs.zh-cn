@@ -8,10 +8,10 @@ helpviewer_keywords:
 - OLE DB providers, testing
 ms.assetid: e4aa30c1-391b-41f8-ac73-5270e46fd712
 ms.openlocfilehash: a9601b2afe40133a5cc88589b530b5ed549ac81e
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59025119"
 ---
 # <a name="testing-the-read-only-provider"></a>测试只读提供程序
@@ -24,7 +24,7 @@ ms.locfileid: "59025119"
 
 1. 在 **“文件”** 菜单上，单击 **“新建”**，然后单击 **“项目”**。
 
-1. 在中**项目类型**窗格中，选择**已安装** > **Visual c + +** > **MFC/ATL**文件夹。 在中**模板**窗格中，选择**MFC 应用程序**。
+1. 在中**项目类型**窗格中，选择**已安装** > **Visual C++**   >  **MFC/ATL**文件夹. 在中**模板**窗格中，选择**MFC 应用程序**。
 
 1. 输入项目名称*TestProv*，然后单击**确定**。
 

@@ -10,14 +10,14 @@ helpviewer_keywords:
 - pragmas, conform
 ms.assetid: 71b3e174-c53c-4bfc-adf3-af39b1554191
 ms.openlocfilehash: 35c3b06106779a9056f682ff76c6ed4b4ab1ab41
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59026573"
 ---
 # <a name="conform"></a>conform
-**C++ 专用**
+**C++特定**
 
 指定的运行时行为[/zc: forscope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md)编译器选项。
 
@@ -30,7 +30,7 @@ ms.locfileid: "59026573"
 *name*<br/>
 指定要修改的编译器选项的名称。 唯一有效*名称*是`forScope`。
 
-**显示**<br/>
+**show**<br/>
 （可选）当前设置将导致*名称*（true 或 false） 在编译期间显示通过一条警告消息。 例如 `#pragma conform(forScope, show)`。
 
 **上**，**关闭**<br/>

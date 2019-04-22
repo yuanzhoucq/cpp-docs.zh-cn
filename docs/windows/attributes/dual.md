@@ -1,5 +1,5 @@
 ---
-title: 双 （c + + COM 属性）
+title: 双 (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.dual
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - dual attribute
 ms.assetid: 5d4a9069-d819-42cd-ba56-bbcda17157d9
 ms.openlocfilehash: 8f02f6b69b31f10b41d5c920cfc2ad62dfa1cef2
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59023953"
 ---
 # <a name="dual"></a>dual
@@ -25,7 +25,7 @@ ms.locfileid: "59023953"
 
 ## <a name="remarks"></a>备注
 
-当**双**c + + 属性优先于接口时，会导致将接口置于生成的.idl 文件中的库块。
+当**双**C++属性优先于接口时，会导致将接口置于生成的.idl 文件中的库块。
 
 ## <a name="example"></a>示例
 
@@ -70,7 +70,7 @@ __interface IStatic : IDispatch
 
 [IDL 特性](idl-attributes.md)<br/>
 [按用法分的特性](attributes-by-usage.md)<br/>
-[自定义](custom-cpp.md)<br/>
+[custom](custom-cpp.md)<br/>
 [dispinterface](dispinterface.md)<br/>
 [object](object-cpp.md)<br/>
 [__interface](../../cpp/interface.md)

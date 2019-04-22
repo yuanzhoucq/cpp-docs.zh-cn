@@ -9,10 +9,10 @@ helpviewer_keywords:
 - RFX (record field exchange)
 ms.assetid: abc52ca7-6997-47a7-98f3-f347f52b1f72
 ms.openlocfilehash: a7c6714218b5891e078e750a974faed274e113c9
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59023589"
 ---
 # <a name="data-exchange-for-record-views---mfc-data-access"></a>记录视图的数据交换（MFC 数据访问）

@@ -11,21 +11,21 @@ helpviewer_keywords:
 - for each keyword [C++]
 ms.assetid: 0c3a364b-2747-43f3-bb8d-b7d3b7023f79
 ms.openlocfilehash: b1dfe3a32f88c0e9456e3d73c31c533911f8d3ac
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58770686"
 ---
 # <a name="for-each-in"></a>for each, in
 
-通过数组或集合迭代。 此非标准关键字在 C++/CLI 和本机 C++ 项目中可用。 但是，建议不使用它。 请考虑使用标准[基于范围的 for 语句 （c + +）](../cpp/range-based-for-statement-cpp.md)相反。
+通过数组或集合迭代。 此非标准关键字在 C++/CLI 和本机 C++ 项目中可用。 但是，建议不使用它。 请考虑使用标准[基于范围的 for 语句 (C++)](../cpp/range-based-for-statement-cpp.md)相反。
 
 ## <a name="all-runtimes"></a>所有运行时
 
 ### <a name="syntax"></a>语法
 
-> **每个 (** *类型**标识符***中***表达式* **) {**<br/>
+> **每个 (** *类型* *标识符* **中** *表达式* **) {**<br/>
 > &nbsp;&nbsp;&nbsp;&nbsp;*语句*<br/>
 > **}**
 

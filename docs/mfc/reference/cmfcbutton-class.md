@@ -81,10 +81,10 @@ helpviewer_keywords:
 - CMFCButton [MFC], m_nFlatStyle
 ms.assetid: 4b32f57c-7a53-4734-afb9-d47e3359f62e
 ms.openlocfilehash: 0659e5335e1ebc495280a4e0cb5c0167f3b45e1d
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58768207"
 ---
 # <a name="cmfcbutton-class"></a>CMFCButton 类
@@ -503,7 +503,7 @@ AlignStyle m_nAlignStyle;
 
 使用下列任一`CMFCButton::AlignStyle`枚举值，以指定按钮文本的对齐方式：
 
-|值|描述|
+|“值”|描述|
 |-----------|-----------------|
 |ALIGN_CENTER|（默认值）对齐到按钮的中心的按钮文本。|
 |ALIGN_LEFT|对齐到左侧和右侧的按钮的按钮文本。|
@@ -531,7 +531,7 @@ FlatStyle  m_nFlatStyle;
 
 下表列出了`CMFCButton::m_nFlatStyle`指定按钮的外观的枚举值。
 
-|值|描述|
+|“值”|描述|
 |-----------|-----------------|
 |BUTTONSTYLE_3D|（默认值）该按钮显示为具有高的三维边。 单击该按钮，该按钮显示到有深度的缩进按下。|
 |BUTTONSTYLE_FLAT|当鼠标置于按钮上，但不暂停时，按钮将显示为二维，且不具有凸起的边。 当鼠标悬停在按钮上时，按钮将显示具有较低的三维边。 单击该按钮，该按钮显示为浅表缩进按下。|

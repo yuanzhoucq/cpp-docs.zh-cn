@@ -1,19 +1,19 @@
 ---
-title: 如何：定义和使用委托 (C + + CLI)
+title: 如何：定义和使用委托 (C++/CLI)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - delegates
 ms.assetid: 1cdf3420-89c1-47c0-b796-aa984020e0f8
 ms.openlocfilehash: bcbf5bf978da5b6c13dd131e7a19975381bd97a5
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58771301"
 ---
-# <a name="how-to-define-and-use-delegates-ccli"></a>如何：定义和使用委托 (C + + CLI)
+# <a name="how-to-define-and-use-delegates-ccli"></a>如何：定义和使用委托 (C++/CLI)
 
-本文介绍如何定义和使用委托在 C + + /cli CLI。
+本文介绍如何定义和使用委托中的C++/CLI。
 
 尽管.NET Framework 提供了多个委托，但有时您可能需要定义新委托。
 

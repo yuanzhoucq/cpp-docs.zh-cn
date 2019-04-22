@@ -10,10 +10,10 @@ helpviewer_keywords:
 - subscript operator [C++], syntax
 ms.assetid: 69c31494-52da-4dd0-8bbe-6ccbfd50f197
 ms.openlocfilehash: 2d55c18d2c9faa1a704bea129f2551937e76133c
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58767920"
 ---
 # <a name="subscript-operator-"></a>下标运算符]
@@ -28,7 +28,7 @@ postfix-expression [ expression ]
 
 后缀表达式 （这也可以是主表达式） 下标运算符后, 跟 **[]**，指定数组索引。
 
-有关托管数组在 C + + /cli CLI，请参阅[数组](../extensions/arrays-cpp-component-extensions.md)。
+有关托管数组中的信息C++/CLI，请参阅[数组](../extensions/arrays-cpp-component-extensions.md)。
 
 通常情况下，所表示的值*后缀表达式*是一个指针值，如数组标识符，并*表达式*是一个整数值 （包括枚举的类型）。 但是，从语法上来说，只需要一个表达式是指针类型，另一个表达式是整型。 因此整数值可以是在*后缀表达式*位置的指针值可以位于方括号中*表达式*或下标位置。 考虑以下代码片断：
 

@@ -25,10 +25,10 @@ helpviewer_keywords:
 - _InterlockedCompareExchangePointer_np intrinsic
 ms.assetid: 97fde59d-2bf9-42aa-a0fe-a5b6befdd44b
 ms.openlocfilehash: 2db18c73f7765454d29e2dfdbd9408f62c51d32a
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59024811"
 ---
 # <a name="interlockedcompareexchangepointer-intrinsic-functions"></a>_InterlockedCompareExchangePointer 内部函数
@@ -97,12 +97,12 @@ long _InterlockedCompareExchangePointer_rel (
 |内部函数|体系结构|Header|
 |---------------|------------------|------------|
 |`_InterlockedCompareExchangePointer`|x86、 ARM、 x64|\<intrin.h>|
-|`_InterlockedCompareExchangePointer_acq`中， `_InterlockedCompareExchangePointer_nf`中， `_InterlockedCompareExchangePointer_rel`|ARM|\<iiintrin.h>|
-|`_InterlockedCompareExchangePointer_HLEAcquire`, `_InterlockedCompareExchangePointer_HLERelease`|x86、x64|\<immintrin.h>|
+|`_InterlockedCompareExchangePointer_acq`, `_InterlockedCompareExchangePointer_nf`, `_InterlockedCompareExchangePointer_rel`|ARM|\<iiintrin.h>|
+|`_InterlockedCompareExchangePointer_HLEAcquire`， `_InterlockedCompareExchangePointer_HLERelease`|x86、x64|\<immintrin.h>|
 
 ## <a name="remarks"></a>备注
 
-`_InterlockedCompareExchangePointer` 执行的原子比较`Destination`解决其`Comparand`地址。 如果 `Destination` 地址与 `Comparand` 地址相等，则 `Exchange` 地址将存储在由 `Destination` 指定的地址中。 否则，不会执行任何操作。
+`_InterlockedCompareExchangePointer` 执行 `Destination` 地址与 `Comparand` 地址之间的原子比较。 如果 `Destination` 地址与 `Comparand` 地址相等，则 `Exchange` 地址将存储在由 `Destination` 指定的地址中。 否则，不会执行任何操作。
 
 `_InterlockedCompareExchangePointer` 提供了编译器内部函数支持 Win32 Windows SDK [_InterlockedCompareExchangePointer](https://msdn.microsoft.com/library/ff547863.aspx)函数。
 

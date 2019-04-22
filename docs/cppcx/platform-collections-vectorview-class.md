@@ -111,7 +111,7 @@ T GetAt(
 ### <a name="return-value"></a>返回值
 
 
-  `index` 参数指定的元素。 元素类型由 VectorView 模板参数指定*T*。
+  `index` 参数指定的元素。 元素类型由 VectorView 模板参数指定 *T* 。
 
 ## <a name="getmany"></a>  Vectorview:: Getmany 方法
 

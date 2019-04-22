@@ -5,10 +5,10 @@ description: 了解如何使用 C++ 针对平台和设备开发应用程序、�
 author: mikeblome
 ms.author: mblome
 ms.openlocfilehash: f402087b101487a444996e7e27b186382c4874fd
-ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58898669"
 ---
 <div id="main" class="v2">

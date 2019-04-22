@@ -1,21 +1,21 @@
 ---
-title: 在 Visual Studio 中安装 c + + 支持
-description: 安装 Visual c + + 的 Visual Studio 支持
+title: 在 Visual Studio 中安装 C++ 支持
+description: 安装 Visual Studio 支持视觉对象C++
 ms.custom: mvc
 ms.date: 04/02/2019
 ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
 ms.openlocfilehash: 2c2bed4063194bdc3c0f3fbc405be6bf9a4031e7
-ms.sourcegitcommit: 5fc76f5b3c4c3ee49f38f05b37261a324591530b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58870775"
 ---
-# <a name="install-c-support-in-visual-studio"></a>在 Visual Studio 中安装 c + + 支持
+# <a name="install-c-support-in-visual-studio"></a>在 Visual Studio 中安装 C++ 支持
 
-如果尚未下载，并且尚未安装 Visual Studio 和 Visual c + + 工具，下面介绍了如何开始。
+如果您还没有下载并安装 Visual Studio 和视觉对象C++工具还，此处的入门。
 
 ::: moniker range="vs-2019"
 
@@ -24,7 +24,7 @@ ms.locfileid: "58870775"
 欢迎使用 Visual Studio 2019 ！ 在此版本中，很容易选择并安装所需的功能。 并且由于其降低的最小内存需求量，安装速度快、 系统影响更小。
 
 > [!NOTE]
-> 本主题适用于 Windows 上的 Visual Studio 的安装。 [Visual Studio Code](https://code.visualstudio.com/)是一个轻型的跨平台开发环境，在 Windows、 Mac 和 Linux 系统上运行。 在 Microsoft [Visual Studio Code 的 C/c + +](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools)扩展插件支持 IntelliSense、 调试、 代码格式设置、 自动完成功能。 Visual Studio for Mac 不支持 Microsoft c + +，但.NET 语言和跨平台开发支持。 有关安装说明，请参阅[安装 Visual Studio for Mac](/visualstudio/mac/installation/)。
+> 本主题适用于 Windows 上的 Visual Studio 的安装。 [Visual Studio Code](https://code.visualstudio.com/)是一个轻型的跨平台开发环境，在 Windows、 Mac 和 Linux 系统上运行。 在 Microsoft [C /C++用于 Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools)扩展插件支持 IntelliSense、 调试、 代码格式设置、 自动完成功能。 Visual Studio for Mac 不支持 Microsoft C++，但.NET 语言和跨平台开发支持。 有关安装说明，请参阅[安装 Visual Studio for Mac](/visualstudio/mac/installation/)。
 
 想要详细了解此版本的其他新增功能？ 请参阅 Visual Studio[发行说明](/visualstudio/releases/2019/release-notes/)。
 
@@ -73,9 +73,9 @@ ms.locfileid: "58870775"
 
    ![Visual Studio 2019：安装工作负荷](../get-started/media/vs-installer-workloads.png)
 
-   核心 c + + 支持，选择"使用 c + + 的桌面开发"工作负荷。 它附带默认核心编辑器，该编辑器针对超过 20 种语言提供基本代码编辑支持，能够打开和编辑任意文件夹中的代码（而无需使用项目），还提供集成的源代码管理。
+   Core 的C++支持中，选择"使用的桌面开发C++"工作负荷。 它附带默认核心编辑器，该编辑器针对超过 20 种语言提供基本代码编辑支持，能够打开和编辑任意文件夹中的代码（而无需使用项目），还提供集成的源代码管理。
 
-   额外的工作负载支持其他类型的 c + + 开发。 例如，选择要创建 Windows 运行时使用的 Microsoft Store 应用的"通用 Windows 平台开发"工作负荷。 选择"使用 c + + 的游戏开发"来创建使用 DirectX、 Unreal 和 Cocos2d 的游戏。 选择"使用的 Linux 开发 c + +"到目标 Linux 平台，包括 IoT 开发。
+   其他工作负荷都支持其他类型的C++开发。 例如，选择要创建 Windows 运行时使用的 Microsoft Store 应用的"通用 Windows 平台开发"工作负荷。 选择"游戏开发使用C++"创建使用 DirectX、 Unreal 和 Cocos2d 的游戏。 选择"使用的 Linux 开发C++"到目标 Linux 平台，包括 IoT 开发。
 
    **安装详细信息**窗格列出了安装每个工作负荷的包含和可选组件。 您可以选择或取消选择此列表中的可选组件。 例如，若要支持开发使用 Visual Studio 2017 或 2015年编译器工具集，选择 MSVC v141 或 MSVC v140 可选组件。 可以添加对 MFC、 实验性模块语言扩展、 IncrediBuild，和的详细信息的支持。
 
@@ -157,11 +157,11 @@ ms.locfileid: "58870775"
 
 1. 安装程序会向显示工作负荷列表，这些工作负荷是特定开发区域的相关选项组。 现在，对 C++ 的支持是可选工作负荷（默认情况下不会安装）的一部分。
 
-   ![使用 c + + 工作负荷的桌面开发](media/desktop-development-with-cpp.png "使用 c + + 的桌面开发")
+   ![使用的桌面开发C++工作负荷](media/desktop-development-with-cpp.png "使用的桌面开发C++")
 
-   对于 c + +，请选择**使用 c + + 的桌面开发**工作负荷，然后选择**安装**。
+   有关C++，选择**使用的桌面开发C++** 工作负荷，然后选择**安装**。
 
-   ![安装使用 c + + 工作负荷的桌面开发](media/vscpp-concierge-choose-workload.gif "安装使用 c + + 工作负荷的桌面开发")
+   ![安装使用的桌面开发C++工作负荷](media/vscpp-concierge-choose-workload.gif "安装使用的桌面开发C++工作负荷")
 
 1. 安装完成后，选择**启动**按钮以启动 Visual Studio。
 
@@ -196,6 +196,6 @@ ms.locfileid: "58870775"
 ## <a name="next-steps"></a>后续步骤
 
 > [!div class="nextstepaction"]
-> [创建 c + + 项目](vscpp-step-1-create.md)
+> [创建C++项目](vscpp-step-1-create.md)
 
 <iframe src="" height="0" width="0" frameborder="0" name="frameTarget" />

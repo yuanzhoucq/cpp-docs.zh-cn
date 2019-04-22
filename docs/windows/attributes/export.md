@@ -1,5 +1,5 @@
 ---
-title: 导出 （c + + COM 属性）
+title: 导出 (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.export
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - export attribute
 ms.assetid: 70b3e848-fad6-4e09-8c72-be60ca72a4df
 ms.openlocfilehash: 5ffa4283b8a2b265809d06b72be96e217cf8bf9f
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59023602"
 ---
 # <a name="export"></a>export
@@ -25,7 +25,7 @@ ms.locfileid: "59023602"
 
 ## <a name="remarks"></a>备注
 
-**导出**c + + 属性会导致置于.idl 文件中，然后，可使其可用于任何语言的二进制兼容格式的类型库中的数据结构。
+**导出**C++属性将导致置于.idl 文件中，然后，可使其可用于任何语言的二进制兼容格式的类型库中的数据结构。
 
 无法应用**导出**属性为一个类，即使类仅具有公共成员 (等效于**结构**)。
 

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - event handlers [C++], connecting events to
 ms.assetid: f4cabb10-d293-4c0e-a1d2-4745ef9cc22c
 ms.openlocfilehash: c4887d85e01344c171fb0fdfe957f2d8a669ff6a
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58771664"
 ---
 # <a name="hook"></a>__hook
@@ -38,7 +38,7 @@ long __hook(
 *&SourceClass::EventMethod*<br/>
 指向要将事件处理程序方法挂钩到的事件方法的指针：
 
-- 本机 c + + 事件：*SourceClass*是事件源类和*EventMethod*是事件。
+- 本机C++事件：*SourceClass*是事件源类和*EventMethod*是事件。
 
 - COM 事件：*SourceClass*是事件源接口和*EventMethod*是其方法之一。
 
@@ -59,7 +59,7 @@ long __hook(
 *&ReceiverClass::HandlerMethod*<br/>
 指向要挂钩到事件的事件处理程序方法的指针。 作为方法的类或引用相同，则为指定的处理程序如果未指定类名 **__hook**假定该类是在其中进行调用。
 
-- 本机 c + + 事件：*ReceiverClass*是事件接收器类和`HandlerMethod`是处理程序。
+- 本机C++事件：*ReceiverClass*是事件接收器类和`HandlerMethod`是处理程序。
 
 - COM 事件：*ReceiverClass*是事件接收器接口和`HandlerMethod`是其处理程序之一。
 

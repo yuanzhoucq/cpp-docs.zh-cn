@@ -47,10 +47,10 @@ helpviewer_keywords:
 - CMFCPopupMenuBar [MFC], m_bDisableSideBarInXPMode
 ms.assetid: 4c93c459-7f70-4240-8c63-280bb811e374
 ms.openlocfilehash: acb1e2be7d40e5e0c569fffcc92c57c750be8f91
-ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/10/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58776773"
 ---
 # <a name="cmfcpopupmenubar-class"></a>CMFCPopupMenuBar 类

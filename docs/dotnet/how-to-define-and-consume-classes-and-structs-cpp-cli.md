@@ -1,20 +1,20 @@
 ---
-title: 如何：定义和使用类和结构 (C + + CLI)
+title: 如何：定义和使用类和结构 (C++/CLI)
 ms.date: 09/12/2018
 helpviewer_keywords:
 - structs [C++]
 - classes [C++], instantiating
 ms.assetid: 1c03cb0d-1459-4b5e-af65-97d6b3094fd7
 ms.openlocfilehash: 090259a4ad6b46eccf66dca6c99b4eb532b7ae5c
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58774914"
 ---
-# <a name="how-to-define-and-consume-classes-and-structs-ccli"></a>如何：定义和使用类和结构 (C + + CLI)
+# <a name="how-to-define-and-consume-classes-and-structs-ccli"></a>如何：定义和使用类和结构 (C++/CLI)
 
-本文介绍如何定义和使用用户定义的引用类型和值类型在 C + + /cli CLI。
+本文介绍如何定义和使用用户定义的引用类型和中的值类型C++/CLI。
 
 ##  <a name="BKMK_Contents"></a> 内容
 
@@ -127,7 +127,7 @@ int main() {
 
 `public` 指示类型是否包含任何源文件可见`#using`指令包含的类型的程序集。  `private` 指示类型不可见的包含源文件`#using`指令包含的类型的程序集。 但是，专用类型都是相同的程序集内可见的。 默认情况下，一个类的可见性是`private`。
 
-默认情况下，Visual c + + 2005年之前的本机类型必须在程序集外部的公共可访问性。 启用[编译器警告 （等级 1） C4692](../error-messages/compiler-warnings/compiler-warning-level-1-c4692.md)以帮助您查看私有本机类型使用不正确。 使用[make_public](../preprocessor/make-public.md)杂注提供公共可访问性不能修改源代码文件中的本机类型。
+默认情况下，在视觉对象之前C++2005 中，本机类型必须在程序集外部的公共可访问性。 启用[编译器警告 （等级 1） C4692](../error-messages/compiler-warnings/compiler-warning-level-1-c4692.md)以帮助您查看私有本机类型使用不正确。 使用[make_public](../preprocessor/make-public.md)杂注提供公共可访问性不能修改源代码文件中的本机类型。
 
 有关详细信息，请参阅 [#using 指令](../preprocessor/hash-using-directive-cpp.md)。
 
@@ -455,7 +455,7 @@ CLR 类型，例如，类或结构，可以具有可用于初始化静态数据�
 
 作为私有成员函数，定义静态构造函数，因为它旨在只能由 CLR 调用。
 
-有关静态构造函数的详细信息，请参阅[如何：定义接口静态构造函数 (C + + CLI)](../dotnet/how-to-define-an-interface-static-constructor-cpp-cli.md) 。
+有关静态构造函数的详细信息，请参阅[如何：定义接口静态构造函数 (C++/CLI)](../dotnet/how-to-define-an-interface-static-constructor-cpp-cli.md) 。
 
 ```cpp
 // compile with: /clr
@@ -493,7 +493,7 @@ in static constructor
 
 ##  <a name="BKMK_Semantics_of_the_this_pointer"></a> 语义的 this 指针
 
-如果你使用 Visual c + + 定义类型，`this`中引用类型的指针为类型"句柄"。 `this`在值类型的指针为类型"内部指针"。
+使用视觉对象时C++定义类型，`this`中引用类型的指针为类型"句柄"。 `this`在值类型的指针为类型"内部指针"。
 
 这些不同的语义的`this`调用默认索引器时，指针可能会导致意外的行为。 下面的示例演示访问默认索引器 ref 类型和值类型中的正确方法。
 
@@ -548,7 +548,7 @@ int main() {
 
 ##  <a name="BKMK_Hide_by_signature_functions"></a> 按签名隐藏函数
 
-标准 c + + 中的基类中的函数是隐藏的派生类中具有相同名称的函数即使派生类函数不具有相同数量或类型的参数。 这被称为*按名称隐藏*语义。 在引用类型，在基类中的函数可以仅隐藏由派生类中的函数如果的名称和参数列表相同。 这称为*按签名隐藏*语义。
+在标准C++，即使该派生类函数不具有相同数量或类型的参数，在派生类中，具有相同名称的函数被隐藏基类中的函数。 这被称为*按名称隐藏*语义。 在引用类型，在基类中的函数可以仅隐藏由派生类中的函数如果的名称和参数列表相同。 这称为*按签名隐藏*语义。
 
 类被视为按签名隐藏类，其所有功能都作为元数据中标记为`hidebysig`。 默认情况下，将创建的所有类 **/clr**具有`hidebysig`函数。 当一个类具有`hidebysig`函数，编译器不会在任何直接的基类中按名称隐藏函数，但如果编译器遇到继承链中的一个按名称隐藏类，它仍然按名称隐藏该行为。
 
@@ -588,7 +588,7 @@ int main() {
 Base::Test
 ```
 
-下一个示例演示 Visual c + + 编译器中派生程度最高的类调用一个函数，即使需要转换，以匹配一个或多个参数，并不是函数调用的更好地匹配项的基类中调用函数。
+下一个示例显示的视觉对象C++编译器调用的函数派生程度最高的类中 — 即使需要转换，以匹配一个或多个参数，并不是函数调用的更好地匹配项的基类中调用函数。
 
 ```cpp
 // compile with: /clr
@@ -656,7 +656,7 @@ Derived::Test4
 
 ##  <a name="BKMK_Copy_constructors"></a> 复制构造函数
 
-C + + 标准规定当移动对象，以便对对象进行创建和销毁在相同的地址时，调用复制构造函数。
+C++标准规定当移动对象，以便对对象进行创建和销毁在相同的地址时，调用复制构造函数。
 
 但是，当 **/clr**用于编译和编译为 MSIL 调用本机函数的本机类的函数，或多个-传递的值，其中的本机类具有一个复制构造函数和/或析构函数，没有复制调用构造函数和对象被销毁后，在与创建它时所在不同的地址。 如果类具有到自身，指针或代码的地址跟踪对象，这可能导致问题。
 
@@ -721,7 +721,7 @@ S object 0 being destroyed, this=0018F378
 
 ##  <a name="BKMK_Destructors_and_finalizers"></a> 析构函数和终结器
 
-引用类型中的析构函数执行确定性清理的资源。 终结器清理非托管资源，析构函数或不确定地由垃圾回收器可以明确地调用。 有关标准 c + + 中的析构函数的信息，请参阅[析构函数](../cpp/destructors-cpp.md)。
+引用类型中的析构函数执行确定性清理的资源。 终结器清理非托管资源，析构函数或不确定地由垃圾回收器可以明确地调用。 有关标准中的析构函数的信息C++，请参阅[析构函数](../cpp/destructors-cpp.md)。
 
 ```cpp
 class classname {
@@ -730,13 +730,13 @@ class classname {
 };
 ```
 
-在托管 Visual c + + 类的析构函数的行为与不同 c + + 托管扩展。 有关此更改的详细信息，请参阅[析构函数语义的更改](../dotnet/changes-in-destructor-semantics.md)。
+托管的视觉对象中的析构函数的行为C++类不同于托管扩展C++。 有关此更改的详细信息，请参阅[析构函数语义的更改](../dotnet/changes-in-destructor-semantics.md)。
 
 CLR 垃圾回收器删除未使用的托管的对象，并在不再需要时释放其内存。 但是，一种类型可能会使用垃圾回收器不知道如何释放的资源。 这些资源称为非托管资源 （例如本机文件处理）。 我们建议在发布的终结器中的所有非托管的资源。 因为垃圾回收器不确定地释放托管的资源，是不安全，请参阅对托管资源，在终结器因为可能有垃圾回收器已清除该托管资源。
 
-Visual c + + 终结器不与相同<xref:System.Object.Finalize%2A>方法。 (CLR 文档使用终结器和<xref:System.Object.Finalize%2A>方法同义词)。 <xref:System.Object.Finalize%2A>垃圾回收器，它调用类的继承链中每个终结器调用方法。 与 Visual c + + 析构函数，不同的派生类终结器调用不会导致编译器调用所有基类中的终结器。
+视觉对象C++终结器不与相同<xref:System.Object.Finalize%2A>方法。 (CLR 文档使用终结器和<xref:System.Object.Finalize%2A>方法同义词)。 <xref:System.Object.Finalize%2A>垃圾回收器，它调用类的继承链中每个终结器调用方法。 与不同的视觉对象C++析构函数，派生类终结器调用不会导致编译器将调用所有基类中的终结器。
 
-因为 Visual c + + 编译器支持的资源的确定性释放，请勿尝试实现<xref:System.IDisposable.Dispose%2A>或<xref:System.Object.Finalize%2A>方法。 但是，如果您熟悉这些方法，下面是 Visual c + + 终结器和析构函数调用终结器是如何映射到<xref:System.IDisposable.Dispose%2A>模式：
+因为视觉对象C++编译器支持的资源的确定性释放，请勿尝试实现<xref:System.IDisposable.Dispose%2A>或<xref:System.Object.Finalize%2A>方法。 但是，如果您熟悉这些方法，下面是一个视觉对象C++终结器和析构函数调用终结器将映射到<xref:System.IDisposable.Dispose%2A>模式：
 
 ```cpp
 // Visual C++ code
@@ -757,7 +757,7 @@ void Dispose(bool disposing) {
 
 托管的类型还可以使用您希望具有确定性，发布，而不将留给垃圾回收器不再需要对象后，系统不确定地释放在某个时间点的托管的资源。 资源的确定性释放可以显著提高性能。
 
-Visual c + + 编译器使您能够以明确地清理对象的析构函数的定义。 使用析构函数释放要明确地释放的所有资源。  如果存在一个终结器，则请从析构函数，以避免代码重复调用它。
+视觉对象C++编译器使您能够以明确地清理对象的析构函数的定义。 使用析构函数释放要明确地释放的所有资源。  如果存在一个终结器，则请从析构函数，以避免代码重复调用它。
 
 ```cpp
 // compile with: /clr /c
@@ -789,9 +789,9 @@ ref struct A {
 
 明确地清理对象的资源通过调用析构函数可以提高性能与让 CLR 以非确定性终结该对象进行比较。
 
-在 Visual c + + 中编写和使用编译的代码 **/clr**如果运行类型的析构函数：
+视觉对象中编写的代码C++并使用编译的 **/clr**如果运行类型的析构函数：
 
-- 通过使用堆栈语义创建的对象超出范围。 有关详细信息，请参阅[的引用类型的 c + + 堆栈语义](../dotnet/cpp-stack-semantics-for-reference-types.md)。
+- 通过使用堆栈语义创建的对象超出范围。 有关详细信息，请参阅[C++引用类型的堆栈语义](../dotnet/cpp-stack-semantics-for-reference-types.md)。
 
 - 在对象的构造期间引发异常。
 
@@ -828,13 +828,13 @@ int main() {
 }
 ```
 
-如果您的类型具有析构函数，编译器将生成`Dispose`方法，实现<xref:System.IDisposable>。 如果用 Visual c + + 编写并包含从另一种语言使用的析构函数的类型，则调用`IDisposable::Dispose`对该类型将导致该类型的析构函数调用。 当类型从 Visual c + + 客户端使用时，不能直接调用`Dispose`; 相反，通过调用其析构函数`delete`运算符。
+如果您的类型具有析构函数，编译器将生成`Dispose`方法，实现<xref:System.IDisposable>。 如果编写视觉对象中的类型C++和具有从另一种语言，使用析构函数调用`IDisposable::Dispose`对该类型将导致该类型的析构函数调用。 当类型使用从视觉对象C++客户端，不能直接调用`Dispose`; 相反，通过调用其析构函数`delete`运算符。
 
 如果您的类型有终结器，编译器将生成`Finalize(void)`方法来重写<xref:System.Object.Finalize%2A>。
 
-如果类型具有终结器或析构函数，编译器将生成`Dispose(bool)`方法，根据设计模式。 (有关信息，请参阅[Dispose 模式](/dotnet/standard/design-guidelines/dispose-pattern))。 不能显式创作或调用`Dispose(bool)`Visual c + +。
+如果类型具有终结器或析构函数，编译器将生成`Dispose(bool)`方法，根据设计模式。 (有关信息，请参阅[Dispose 模式](/dotnet/standard/design-guidelines/dispose-pattern))。 不能显式创作或调用`Dispose(bool)`视觉对象中C++。
 
-如果类型具有一个基类，它符合设计模式，时会调用派生类的析构函数调用的所有基类的析构函数。 （如果您的类型用 Visual c + + 编写的编译器可确保您的类型实现此模式。）换而言之，引用类的析构函数链接到其基项和作为 c + + 标准指定的成员，类的析构函数为运行，则在相反的顺序在其中它们的创建过程，其成员的析构函数的第一个和最后在构造它们的顺序相反其基类的析构函数。
+如果类型具有一个基类，它符合设计模式，时会调用派生类的析构函数调用的所有基类的析构函数。 (如果您的类型编写视觉对象中C++，编译器可确保您的类型实现此模式。)换而言之，引用类的析构函数链接到其基类和成员由指定C++标准 — 类的析构函数为运行，则在相反的顺序在其中它们的创建过程，其成员的析构函数的第一个和最后在构造它们的顺序相反其基类的析构函数。
 
 析构函数和终结器不允许在值类型或接口中。
 
