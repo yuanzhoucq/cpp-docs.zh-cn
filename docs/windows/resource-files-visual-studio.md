@@ -25,10 +25,10 @@ helpviewer_keywords:
 - resource editing
 ms.assetid: 4d2b6fcc-07cf-4289-be87-83a60f69533c
 ms.openlocfilehash: 45db6d0139cfa3aa8a2eaa8fe6d18158cb6646ce
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59029390"
 ---
 # <a name="resource-files-c"></a>资源文件 (C++)
@@ -54,7 +54,7 @@ ms.locfileid: "59029390"
 
 - 使用嵌套的条件包含资源文件。
 
-- 更新现有资源或将它们转换为 Visual c + +。
+- 更新现有资源或将其转换到视觉对象C++。
 
 - 从当前资源文件中导入图形资源或向其导出图形资源。
 
@@ -90,7 +90,7 @@ ms.locfileid: "59029390"
 
 ## <a name="manifest-resources"></a>清单资源
 
-在 c + + 桌面项目中，清单资源是描述应用程序使用的依赖项的 XML 文件。 例如，在 Visual Studio 中此 MFC 向导生成的清单文件定义应用程序应使用哪个版本的 Windows 公共控件 Dll:
+在C++桌面项目中，清单资源是描述应用程序使用的依赖项的 XML 文件。 例如，在 Visual Studio 中此 MFC 向导生成的清单文件定义应用程序应使用哪个版本的 Windows 公共控件 Dll:
 
 ```xml
 <description>Your app description here</description>
@@ -132,5 +132,5 @@ Win32
 ## <a name="see-also"></a>请参阅
 
 [使用资源文件](../windows/working-with-resource-files.md)<br/>
-[资源标识符 （符号）](../windows/symbols-resource-identifiers.md)<br/>
+[资源标识符（符号）](../windows/symbols-resource-identifiers.md)<br/>
 [资源编辑器](../windows/resource-editors.md)<br/>

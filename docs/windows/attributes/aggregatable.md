@@ -1,5 +1,5 @@
 ---
-title: 聚合 （c + + COM 属性）
+title: 聚合 (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.aggregatable
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - aggregatable attribute
 ms.assetid: 9253a46a-cd76-41f2-b3b6-86f709bb069c
 ms.openlocfilehash: 8d5ceb46a124db8c0082495d48e6ee0e21655422
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59029286"
 ---
 # <a name="aggregatable"></a>aggregatable
@@ -36,7 +36,7 @@ ms.locfileid: "59029286"
 
 ## <a name="remarks"></a>备注
 
-**聚合**c + + 属性具有相同的功能[聚合](/windows/desktop/Midl/aggregatable)MIDL 特性。 这意味着，编译器会将传递**聚合**属性通过到生成的.idl 文件。
+**聚合**C++属性具有相同的功能[聚合](/windows/desktop/Midl/aggregatable)MIDL 特性。 这意味着，编译器会将传递**聚合**属性通过到生成的.idl 文件。
 
 此属性要求 [coclass](coclass.md)、 [progid](progid.md)或 [vi_progid](vi-progid.md) 属性（或隐含这些属性之一的其他属性）也应用于同一个元素。 如果使用任何单个属性，则会自动应用另外两个属性。 例如，如果`progid`应用时，`vi_progid`和`coclass`也会应用。
 

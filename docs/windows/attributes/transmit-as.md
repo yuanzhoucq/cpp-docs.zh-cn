@@ -1,5 +1,5 @@
 ---
-title: transmit_as （c + + COM 属性）
+title: transmit_as (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.transmit_as
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - transmit_as attribute
 ms.assetid: 53d0b8ab-5b06-423e-83eb-3d01a10424b2
 ms.openlocfilehash: e432d1a8f39cbc5e12f192ed7b07c29421bc403e
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59032089"
 ---
 # <a name="transmitas"></a>transmit_as
@@ -25,12 +25,12 @@ ms.locfileid: "59032089"
 
 ### <a name="parameters"></a>参数
 
-*类型*<br/>
+*type*<br/>
 指定客户端和服务器之间传输的数据类型。
 
 ## <a name="remarks"></a>备注
 
-**Transmit_as** c + + 属性具有相同的功能[transmit_as](/windows/desktop/Midl/transmit-as) MIDL 特性。
+**Transmit_as** C++属性具有相同的功能[transmit_as](/windows/desktop/Midl/transmit-as) MIDL 特性。
 
 ## <a name="example"></a>示例
 

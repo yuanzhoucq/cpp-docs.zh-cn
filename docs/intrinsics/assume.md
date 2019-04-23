@@ -9,10 +9,10 @@ helpviewer_keywords:
 - __assume keyword [C++]
 ms.assetid: d8565123-b132-44b1-8235-5a8c8bff85a7
 ms.openlocfilehash: 1d84e9306dcd468153f38cc0c3085b43388e1dbd
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59029416"
 ---
 # <a name="assume"></a>__assume
@@ -31,7 +31,7 @@ __assume(
 
 #### <a name="parameters"></a>参数
 
-*表达式*<br/>
+*expression*<br/>
 假设评估为 true 的任何表达式。
 
 ## <a name="remarks"></a>备注
@@ -43,7 +43,7 @@ __assume(
 > [!WARNING]
 >  程序的可达路径不得包含无效的 `__assume` 语句。 如果编译器可以到达无效的 `__assume` 语句，程序可能会导致不可预测的潜在危险行为。
 
-`__assume` 不是真正内部函数。 不必将其宣传为函数，并且不能用于 `#pragma intrinsic` 指令。 尽管没有生成任何代码，但还是会对由优化程序生成的代码产生影响。
+`__assume` 不是真正的内部函数。 不必将其宣传为函数，并且不能用于 `#pragma intrinsic` 指令。 尽管没有生成任何代码，但还是会对由优化程序生成的代码产生影响。
 
 使用`__assume`中[ASSERT](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md)只有当该断言不是可恢复。 请勿在其中有后续错误恢复代码的断言中使用 `__assume`，因为编译器可能优化掉错误处理的代码。
 

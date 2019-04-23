@@ -6,10 +6,10 @@ f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::Details::CompareStringOrdinal
 ms.assetid: ffa997fd-8cd7-40a5-b9e7-f55d40b072f4
 ms.openlocfilehash: a1ac0576bdd374daa5cbd445af480e7652b61e45
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59027698"
 ---
 # <a name="comparestringordinal-method"></a>CompareStringOrdinal 方法
@@ -34,7 +34,7 @@ inline INT32 CompareStringOrdinal(
 
 ## <a name="return-value"></a>返回值
 
-|值|条件|
+|“值”|条件|
 |-----------|---------------|
 |-1|*lhs*是小于*rhs*。|
 |0|*lhs*等于*rhs*。|

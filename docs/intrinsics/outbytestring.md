@@ -9,10 +9,10 @@ helpviewer_keywords:
 - outsb instruction
 ms.assetid: c9150661-9c18-427f-bae8-710bba6ed78c
 ms.openlocfilehash: 41064dda6a1a0b9ad4c15f98c3f3081f08ef8db6
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59032188"
 ---
 # <a name="outbytestring"></a>__outbytestring
@@ -36,10 +36,10 @@ void __outbytestring(
 *端口*<br/>
 [in]要向其发送数据的端口。
 
-*缓冲区*<br/>
+*Buffer*<br/>
 [in]要指定的端口发送的数据。
 
-*计数*<br/>
+“计数”<br/>
 [in]要发送的数据的字节数。
 
 ## <a name="requirements"></a>要求

@@ -1,5 +1,5 @@
 ---
-title: 演练：创建和使用静态库 （c + +）
+title: 演练：创建和使用静态库 (C++)
 ms.custom: get-started-article
 ms.date: 09/18/2018
 helpviewer_keywords:
@@ -8,13 +8,13 @@ helpviewer_keywords:
 ms.assetid: 3cc36411-7d66-4240-851e-dacb9a8fd6ac
 ms.author: corob
 ms.openlocfilehash: 0d527681abb077a01b3d902c092a21de7a052867
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59031503"
 ---
-# <a name="walkthrough-creating-and-using-a-static-library-c"></a>演练：创建和使用静态库 （c + +）
+# <a name="walkthrough-creating-and-using-a-static-library-c"></a>演练：创建和使用静态库 (C++)
 
 此分步演练演示如何创建用于 C++ 应用的静态库（.lib 文件）。 使用静态库是重用代码的一种绝佳方式。 而不是重新实现同一例程需要一个编写这些功能，每个应用中的时间以静态库，然后从应用中引用它。 从静态库链接的代码成为了应用的一部分，这样你就不必安装另一个文件来使用代码。
 
@@ -40,10 +40,10 @@ ms.locfileid: "59031503"
 
 1. 在菜单栏上，依次选择“文件” > “新建” > “项目”。
 
-1. 在左窗格中**新的项目**对话框框中，展开**已安装** > **Visual c + +**，然后选择**Windows 桌面**. 在中心窗格中，选择**Windows 桌面向导**。
+1. 在左窗格中**新的项目**对话框框中，展开**已安装** > **Visual C++** ，然后选择**Windows 桌面**. 在中心窗格中，选择**Windows 桌面向导**。
 
    > [!NOTE]
-   > 对于版本的 Visual Studio 2017，在**新的项目**对话框框中，展开**已安装** > **模板** >  **Visual c + +**，然后选择**Win32**。 在中间窗格中，选择 **“Win32 控制台应用程序”**。
+   > 对于版本的 Visual Studio 2017，在**新的项目**对话框框中，展开**已安装** > **模板** >  **Visual C++** ，然后选择**Win32**。 在中间窗格中，选择 **“Win32 控制台应用程序”**。
 
 1. 在 *“名称”* 框中为项目指定名称，例如 **MathFuncsLib** 。 在 *“解决方案名称”* 框中为解决方案指定名称，例如 **StaticLibrary** 。 选择“确定”  按钮。
 
@@ -88,10 +88,10 @@ ms.locfileid: "59031503"
 
 1. 在菜单栏上，依次选择“文件” > “新建” > “项目”。
 
-1. 在左窗格中**新的项目**对话框框中，展开**已安装** > **Visual c + +**，然后选择**Windows 桌面**. 在中心窗格中，选择**Windows 桌面向导**。
+1. 在左窗格中**新的项目**对话框框中，展开**已安装** > **Visual C++** ，然后选择**Windows 桌面**. 在中心窗格中，选择**Windows 桌面向导**。
 
    > [!NOTE]
-   > 对于版本的 Visual Studio 2017，在**新的项目**对话框框中，展开**已安装** > **模板** >  **Visual c + +**，然后选择**Win32**。 在中间窗格中，选择 **“Win32 控制台应用程序”**。
+   > 对于版本的 Visual Studio 2017，在**新的项目**对话框框中，展开**已安装** > **模板** >  **Visual C++** ，然后选择**Win32**。 在中间窗格中，选择 **“Win32 控制台应用程序”**。
 
 1. 在 *“名称”* 框中为项目指定名称，例如 **MyExecRefsLib** 。 在 **“解决方案”** 旁的下拉列表中选择 **“添加到解决方案”**。 该命令将新项目添加到包含静态库的解决方案。 选择“确定”  按钮。
 
@@ -119,7 +119,7 @@ ms.locfileid: "59031503"
 
 1. **“添加引用”** 对话框列出了可以引用的库。 **项目**选项卡列出了当前解决方案以及它们引用的所有库中的项目。 在 **“项目”** 选项卡上，选中 **“MathFuncsLib”** 复选框，然后选择 **“确定”** 按钮。
 
-1. 为引用`MathFuncsLib.h`标头文件中，您必须修改包含的目录路径。 在中**属性页**对话框**MyExecRefsLib**，展开**配置属性**节点，展开**C/c + +** 节点，并然后选择**常规**。 下一步**附加包含目录**，指定的路径**MathFuncsLib**目录中或浏览。
+1. 为引用`MathFuncsLib.h`标头文件中，您必须修改包含的目录路径。 在中**属性页**对话框**MyExecRefsLib**，展开**配置属性**节点，展开**C /C++** 节点，并选择**常规**。 下一步**附加包含目录**，指定的路径**MathFuncsLib**目录中或浏览。
 
    若要浏览至目录路径，请打开属性值下拉列表框，然后选择 **“编辑”**。 在中**附加包含目录**对话框中，在文本框中，选择一个空行，然后选择省略号按钮 (**...**) 在行尾。 在 **“选择目录”** 对话框中，选择 **MathFuncsLib** 目录，然后选择 **“选择文件夹”** 按钮以保存所做选择并关闭对话框。 在 **“附加包含目录”** 对话框中，选择 **“确定”** 按钮，然后在 **“属性页”** 对话框中，选择 **“确定”** 按钮以保存对该项目进行的更改。
 
@@ -146,5 +146,5 @@ ms.locfileid: "59031503"
 
 ## <a name="see-also"></a>请参阅
 
-[演练：创建和使用动态链接库 （c + +）](../build/walkthrough-creating-and-using-a-dynamic-link-library-cpp.md)<br/>
-[桌面应用程序 （Visual c + +）](../windows/desktop-applications-visual-cpp.md)<br/>
+[演练：创建和使用动态链接库 (C++)](../build/walkthrough-creating-and-using-a-dynamic-link-library-cpp.md)<br/>
+[桌面应用程序 (Visual C++)](../windows/desktop-applications-visual-cpp.md)<br/>

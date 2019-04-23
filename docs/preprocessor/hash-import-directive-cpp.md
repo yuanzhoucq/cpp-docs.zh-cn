@@ -1,5 +1,5 @@
 ---
-title: '#导入指令 （c + +）'
+title: '#import 指令 (C++)'
 ms.date: 03/27/2019
 f1_keywords:
 - '#import'
@@ -13,15 +13,15 @@ helpviewer_keywords:
 - COM, type library header file
 ms.assetid: 787d1112-e543-40d7-ab15-a63d43f4030a
 ms.openlocfilehash: 98a0f9f66fb209bb41215fc1e86a9682a4fed023
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59031980"
 ---
 # <a name="import-directive-c"></a>#import 指令 (C++)
 
-**C++ 专用**
+**C++特定**
 
 过去一直合并类型库中的信息。 类型库的内容将转换为 C++ 类，主要描述 COM 接口。
 
@@ -109,7 +109,7 @@ ms.locfileid: "59031980"
 
 ##  <a name="_predir_the_23import_directive_header_files_created_by_import"></a> 创建导入的标头文件
 
-**#import**创建两个标头文件以重新构造 c + + 源代码中的类型库内容。 主头文件类似于 Microsoft 接口定义语言 (MIDL) 编译器生成的文件，但具有附加的编译器生成的代码和数据。 [主头文件](#_predir_the_primary_type_library_header_file)与类型库具有相同的基名称加上。TLH 扩展。 次头文件具有与类型库相同的基名称以及 .TLI 扩展。 它包含编译器生成的成员函数的实现，并且包含 (`#include`) 在主头文件中。
+**#import**创建两个标头文件以重新构造中的类型库内容C++的源代码。 主头文件类似于 Microsoft 接口定义语言 (MIDL) 编译器生成的文件，但具有附加的编译器生成的代码和数据。 [主头文件](#_predir_the_primary_type_library_header_file)与类型库具有相同的基名称加上。TLH 扩展。 次头文件具有与类型库相同的基名称以及 .TLI 扩展。 它包含编译器生成的成员函数的实现，并且包含 (`#include`) 在主头文件中。
 
 如果导入使用 byref 参数的调度接口属性，#import 将不会生成 __declspec ([属性](../cpp/property-cpp.md)) 函数的语句。
 
@@ -148,7 +148,7 @@ ms.locfileid: "59031980"
 
 - 可选旧式 GUID 定义：包含名为 GUID 常量的初始化。 这些是窗体的名称`CLSID_CoClass`和`IID_Interface`，类似于那些由 MIDL 编译器生成。
 
-- `#include` 次要类型库标头的语句。
+- 用于次要类型库标头的 `#include` 语句。
 
 - 页脚样本：当前包括`#pragma pack(pop)`。
 
@@ -189,7 +189,7 @@ using namespace MyLib;
 
 有关详细信息，请参阅[#import 属性](../preprocessor/hash-import-attributes-cpp.md)。
 
-**结束 C++ 专用**
+**结束C++特定**
 
 ## <a name="see-also"></a>请参阅
 

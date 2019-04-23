@@ -1,5 +1,5 @@
 ---
-title: 演练：创建标准 c + + 程序 （c + +）
+title: 演练：创建一个标准C++程序 (C++)
 ms.custom: get-started-article
 ms.date: 09/18/2018
 f1_keywords:
@@ -10,19 +10,19 @@ helpviewer_keywords:
 - standard applications [C++]
 ms.assetid: 48217e35-d892-46b7-93e3-f6f0b7e2da35
 ms.openlocfilehash: d58d23e757a97402985ef60badf551523c0a275e
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59030616"
 ---
-# <a name="walkthrough-creating-a-standard-c-program-c"></a>演练：创建标准 c + + 程序 （c + +）
+# <a name="walkthrough-creating-a-standard-c-program-c"></a>演练：创建一个标准C++程序 (C++)
 
-可以使用 Visual Studio 集成的开发环境 (IDE) 中的 Visual c + + 创建标准 c + + 程序。 按照此演练中的步骤操作，可以创建项目，向项目添加新文件，修改文件以添加 c + + 代码，然后编译并通过使用 Visual Studio 中运行程序。
+可以使用视觉对象C++在 Visual Studio 集成的开发环境 (IDE) 来创建标准C++程序。 按照此演练中的步骤操作，可以创建项目，向项目添加新文件，修改要添加的文件C++的代码，然后编译和使用 Visual Studio 中运行程序。
 
-可以键入自己的 c + + 程序，也可以使用示例程序之一。 在本演练中的示例程序是一个控制台应用程序。 此应用程序使用`set`c + + 标准库中的容器。
+您可以键入自己C++程序或使用示例程序之一。 在本演练中的示例程序是一个控制台应用程序。 此应用程序使用`set`容器中的C++标准库。
 
-Visual c + + 遵循 2003 c + + 标准，与以下几点主要例外： 两阶段名称查找、 异常规范和导出。 此外，Visual c + + 支持若干 c++0x 功能，例如，lambda、 自动、 static_assert、 rvalue 引用和 extern 模板。
+VisualC++遵循 2003年C++标准，与以下几点主要例外： 两阶段名称查找、 异常规范和导出。 此外，VisualC++支持若干 c++0x 功能，例如，lambda、 自动、 static_assert、 rvalue 引用和 extern 模板。
 
 > [!NOTE]
 > 如果所需的标准遵从性，请使用`/Za`编译器选项来禁用标准的 Microsoft 扩展。 有关详细信息，请参阅[/Za，/Ze （禁用语言扩展）](../build/reference/za-ze-disable-language-extensions.md)。
@@ -35,10 +35,10 @@ Visual c + + 遵循 2003 c + + 标准，与以下几点主要例外： 两阶段
 
 1. 通过指向创建项目**新建**上**文件**菜单中，然后单击**项目**。
 
-1. 在中**Visual c + +** 项目类型窗格中，单击**Windows Desktop**，然后单击**Windows 控制台应用程序**。
+1. 在中**可视化C++** 项目类型窗格中，单击**Windows Desktop**，然后单击**Windows 控制台应用程序**。
 
    > [!NOTE]
-   > 对于版本的 Visual Studio 2017，在**新的项目**对话框框中，展开**已安装** > **模板** >  **Visual c + +**，然后选择**Win32**。 在中间窗格中，选择 **“Win32 控制台应用程序”**。
+   > 对于版本的 Visual Studio 2017，在**新的项目**对话框框中，展开**已安装** > **模板** >  **Visual C++** ，然后选择**Win32**。 在中间窗格中，选择 **“Win32 控制台应用程序”**。
 
    键入项目的名称。
 
@@ -55,11 +55,11 @@ Visual c + + 遵循 2003 c + + 标准，与以下几点主要例外： 两阶段
 
    1. 在中**解决方案资源管理器**，右键单击**源文件**文件夹，指向**添加**，然后单击**新项**。
 
-   1. 在中**代码**节点中，单击**c + + 文件 (.cpp)**，键入该文件的名称，然后单击**添加**。
+   1. 在中**代码**节点中，单击**C++文件 (.cpp)**，键入该文件的名称，然后单击**添加**。
 
    .Cpp 文件将显示在**源文件**中的文件夹**解决方案资源管理器**，并在 Visual Studio 编辑器中打开该文件。
 
-1. 中的文件在编辑器中，键入一个有效的 c + + 程序，使用 c + + 标准库，或复制其中一个示例程序并将其粘贴在文件中。
+1. 在编辑器中文件中，键入一个有效C++程序，使用C++标准库或复制其中某个示例程序，并将其粘贴在文件中。
 
 1. 保存该文件。
 

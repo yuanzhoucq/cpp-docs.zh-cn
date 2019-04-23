@@ -10,10 +10,10 @@ helpviewer_keywords:
 - _mm_inserti_si64 intrinsic
 ms.assetid: 897a4b36-8b08-4b00-a18f-7850f5732d7d
 ms.openlocfilehash: f8c8f2f9b33588513e25b2290772aac464f46808
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59033013"
 ---
 # <a name="mminsertsi64-mminsertisi64"></a>_mm_insert_si64, _mm_inserti_si64
@@ -48,7 +48,7 @@ __m128i _mm_inserti_si64(
 *长度*<br/>
 [in]整数常量，指定要插入的字段的长度。
 
-*索引*<br/>
+*Tuple*<br/>
 [in]整数常量，它指定将插入数据的字段的最低有效位的索引。
 
 ## <a name="return-value"></a>返回值
@@ -124,5 +124,5 @@ result3 = 0xfffffffff3210fff
 
 ## <a name="see-also"></a>请参阅
 
-[_mm_extract_si64、_mm_extracti_si64](../intrinsics/mm-extract-si64-mm-extracti-si64.md)<br/>
+[_mm_extract_si64, _mm_extracti_si64](../intrinsics/mm-extract-si64-mm-extracti-si64.md)<br/>
 [编译器内部函数](../intrinsics/compiler-intrinsics.md)

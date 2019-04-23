@@ -7,14 +7,14 @@ helpviewer_keywords:
 - raw_dispinterfaces attribute
 ms.assetid: f762864d-29bf-445b-825a-ba7b29a95409
 ms.openlocfilehash: ef8ed3992c77df0f1d551e923ddc90c2d1bb9b0b
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59027918"
 ---
 # <a name="rawdispinterfaces"></a>raw_dispinterfaces
-**C++ 专用**
+**C++特定**
 
 告知编译器生成低级别的包装函数的调用调度接口方法和属性的`IDispatch::Invoke`并返回 HRESULT 错误代码。
 
@@ -28,9 +28,9 @@ raw_dispinterfaces
 
 如果未指定该特性，则只生成高级包装器，它在失败时引发 C++ 异常。
 
-**结束 C++ 专用**
+**结束C++特定**
 
 ## <a name="see-also"></a>请参阅
 
-[#import 特性](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[#import 属性](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [#import 指令](../preprocessor/hash-import-directive-cpp.md)

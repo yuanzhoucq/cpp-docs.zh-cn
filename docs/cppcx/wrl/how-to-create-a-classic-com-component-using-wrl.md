@@ -4,19 +4,19 @@ ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 5efe7690-90d5-4c3c-9e53-11a14cefcb19
 ms.openlocfilehash: bb38f36cdd481e61d049f82159fdc24c3726f646
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59031837"
 ---
 # <a name="how-to-create-a-classic-com-component-using-wrl"></a>如何：创建传统型 COM 组件使用 WRL
 
-Windows 运行时 c + + 模板库 (WRL) 可用于创建桌面应用程序，除了使用进行通用 Windows 平台 (UWP) 应用中使用的基本经典 COM 组件。 对于 COM 组件的创建，Windows 运行时 c + + 模板库可能需要更少的代码比 ATL Windows 运行时 c + + 模板库支持的 COM 子集的信息，请参阅[Windows 运行时 c + + 模板库 (WRL)](windows-runtime-cpp-template-library-wrl.md)。
+可以使用 Windows 运行时C++模板库 (WRL) 来创建基本经典 COM 组件，以便在桌面应用程序，此外到通用 Windows 平台 (UWP) 应用的使用。 COM 组件、 Windows 运行时创建C++模板库可能需要更少的代码比 ATL 有关 COM 的信息子集的 Windows 运行时C++模板库支持，请参阅[Windows 运行时C++模板库 (WRL)](windows-runtime-cpp-template-library-wrl.md)。
 
-本文档演示如何使用 Windows 运行时 c + + 模板库来创建基本的 COM 组件。 尽管可以使用最适合你需求的部署机制，本文档还会展示一种从桌面应用程序注册及使用 COM 组件的基本方法。
+本文档演示如何使用 Windows 运行时C++模板库来创建基本的 COM 组件。 尽管可以使用最适合你需求的部署机制，本文档还会展示一种从桌面应用程序注册及使用 COM 组件的基本方法。
 
-### <a name="to-use-the-windows-runtime-c-template-library-to-create-a-basic-classic-com-component"></a>若要使用 Windows 运行时 c + + 模板库创建基本经典 COM 组件
+### <a name="to-use-the-windows-runtime-c-template-library-to-create-a-basic-classic-com-component"></a>若要使用 Windows 运行时C++模板库创建基本经典 COM 组件
 
 1. 在 Visual Studio 中创建**空白解决方案**项目。 该项目命名，例如， `WRLClassicCOM`。
 
@@ -84,7 +84,7 @@ Windows 运行时 c + + 模板库 (WRL) 可用于创建桌面应用程序，除�
 
 ## <a name="robust-programming"></a>可靠编程
 
-本文档使用标准 COM 函数来演示您可以使用 Windows 运行时 c + + 模板库创建 COM 组件并使其可供任何支持 COM 的技术。 此外可以使用 Windows 运行时 c + + 模板库类型如[Microsoft::WRL::ComPtr](comptr-class.md)管理 COM 及其他对象的生存期在桌面应用中。 下面的代码使用 Windows 运行时 c + + 模板库来管理生存期`ICalculatorComponent`指针。 `CoInitializeWrapper` 类是一种 RAII 包装，可保证 COM 库已释放，并保证 COM 库的生存期长于 `ComPtr` 智能指针对象。
+本文档使用标准 COM 函数来演示您可以使用 Windows 运行时C++模板库创建 COM 组件，并使其可供任何支持 COM 的技术。 你还可以使用 Windows 运行时C++模板库类型，如[Microsoft::WRL::ComPtr](comptr-class.md)在桌面应用程序来管理 COM 及其他对象的生存期。 下面的代码使用 Windows 运行时C++模板库来管理生存期`ICalculatorComponent`指针。 `CoInitializeWrapper` 类是一种 RAII 包装，可保证 COM 库已释放，并保证 COM 库的生存期长于 `ComPtr` 智能指针对象。
 
 [!code-cpp[wrl-classic-com-component#7](../codesnippet/CPP/how-to-create-a-classic-com-component-using-wrl_7.cpp)]
 

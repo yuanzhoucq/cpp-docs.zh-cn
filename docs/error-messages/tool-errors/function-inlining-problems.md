@@ -10,10 +10,10 @@ helpviewer_keywords:
 - function inlining problems
 ms.assetid: 65d59943-4b3c-4a43-aeb6-dccbf7686740
 ms.openlocfilehash: fec3884dff0dda7140f18fa53e493c12996edcf0
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59031519"
 ---
 # <a name="function-inlining-problems"></a>函数内联问题
@@ -56,7 +56,7 @@ int main() {
 
 如果使用的`#pragma inline_depth`编译器指令，请确保你已设置的值为 2 或更高版本。 值为零将关闭内联。 此外请确保你使用 **/ob1**或 **/ob2**编译器选项。
 
-混合使用不同的模块上的内联和非内联编译选项有时会导致问题。 如果使用函数内联开启创建 c + + 库 ([/ob1](../../build/reference/ob-inline-function-expansion.md)或[/ob2](../../build/reference/ob-inline-function-expansion.md))，但相应的头文件描述函数具有内联关闭 （没有选项），你将收到错误 LNK2001。 函数执行不内联到代码从文件中获取标头，但由于它们不是库文件中没有地址来解析引用。
+混合使用不同的模块上的内联和非内联编译选项有时会导致问题。 如果C++库创建了函数内联开启 ([/ob1](../../build/reference/ob-inline-function-expansion.md)或[/ob2](../../build/reference/ob-inline-function-expansion.md))，但相应的头文件描述函数具有内联关闭 （没有选项），你将收到错误LNK2001。 函数执行不内联到代码从文件中获取标头，但由于它们不是库文件中没有地址来解析引用。
 
 同样，使用函数内联的项目尚未定义的函数的.cpp 文件中而不是标头中，文件还将获得 LNK2019。 标头文件是包含无处不在认为合适，但函数才是内联在.cpp 文件中通过通过编译器;因此，链接器将函数视为未解析的外部对象时在其他模块中使用。
 

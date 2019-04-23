@@ -12,10 +12,10 @@ helpviewer_keywords:
 - CCustomSource class in CustomDS.H
 ms.assetid: c143d48e-59c8-4f67-9141-3aab51859b92
 ms.openlocfilehash: 296e7848b1d756fe0aba6156be2501db45bb092b
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59028595"
 ---
 # <a name="ccustomsource-customdsh"></a>CCustomSource (CustomDS.h)
@@ -176,7 +176,7 @@ struct UPROPINFO
 
 ## <a name="user-defined-property-sets"></a>用户定义的属性集
 
-Visual c + + 支持用户定义的属性集。 无需重写`GetProperties`或`GetPropertyInfo`。 相反，模板会检测到任何用户定义的属性集，并将其添加到适当的对象。
+VisualC++支持用户定义的属性集。 无需重写`GetProperties`或`GetPropertyInfo`。 相反，模板会检测到任何用户定义的属性集，并将其添加到适当的对象。
 
 如果有需要在初始化时是可用的用户定义的属性集 (即，使用者调用之前`IDBInitialize::Initialize`)，可以使用 UPROPSET_USERINIT 标志以及 BEGIN_PROPERTY_SET_EX 宏指定这。 在属性集中必须是为实现此目的 （如 OLE DB 规范要求） 的数据源对象中。 例如：
 

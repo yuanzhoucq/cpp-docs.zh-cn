@@ -1,5 +1,5 @@
 ---
-title: 对话框编辑器 （c + +）
+title: 对话框编辑器 (C++)
 ms.date: 02/15/2019
 f1_keywords:
 - vc.editors.dialog.dialog
@@ -24,13 +24,13 @@ helpviewer_keywords:
 - Dialog Editor [C++], shortcut keys
 ms.assetid: d94884ef-2cca-49d8-9b58-775f34848134
 ms.openlocfilehash: dc5a823951e07af96efceec52d2aa23552c2d002
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59029481"
 ---
-# <a name="dialog-editor-c"></a>对话框编辑器 （c + +）
+# <a name="dialog-editor-c"></a>对话框编辑器 (C++)
 
 **对话框编辑器**允许您创建或编辑对话框资源。
 
@@ -67,7 +67,7 @@ ms.locfileid: "59029481"
 
 - 若要显示或隐藏**对话框编辑器**工具栏上，转到菜单**视图** > **工具栏** > **对话框编辑器**。
 
-当打开**对话框编辑器**在 c + + 项目中，**对话框编辑器**工具栏会自动显示在顶部的您的解决方案，但是，如果您显式关闭工具栏，你将需要调用它下次打开**对话框编辑器**。 通过从可用的工具栏和窗口的列表中选择它，可以切换其显示。
+当打开**对话框编辑器**中C++项目中，**对话框编辑器**工具栏会自动显示在顶部的您的解决方案，但是，如果您显式关闭工具栏，你将需要调用下次打开它**对话框编辑器**。 通过从可用的工具栏和窗口的列表中选择它，可以切换其显示。
 
 ## <a name="switch-between-dialog-box-controls-and-code"></a>对话框控件和代码之间切换
 

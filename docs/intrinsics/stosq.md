@@ -9,10 +9,10 @@ helpviewer_keywords:
 - __stosq intrinsic
 ms.assetid: 3ea28297-4369-4c2d-bf0c-91fa539ce209
 ms.openlocfilehash: eacb12f7c02b82607d980281f8d4a0bc1e1d7c14
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59032428"
 ---
 # <a name="stosq"></a>__stosq
@@ -36,10 +36,10 @@ void __stosb(
 *dest*<br/>
 [out]该操作的目标。
 
-*数据*<br/>
+*Data*<br/>
 [in]要存储的数据。
 
-*计数*<br/>
+“计数”<br/>
 [in]四字要写入的块的长度。
 
 ## <a name="requirements"></a>要求

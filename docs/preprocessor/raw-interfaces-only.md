@@ -7,14 +7,14 @@ helpviewer_keywords:
 - raw_interfaces_only attribute
 ms.assetid: 87056c6d-3f34-4248-af58-f5775a35bfb7
 ms.openlocfilehash: 48133b85ccb5ddb8de8e6cb614d41cde22dac66b
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59028255"
 ---
 # <a name="rawinterfacesonly"></a>raw_interfaces_only
-**C++ 专用**
+**C++特定**
 
 取消生成的错误处理的包装函数和[属性](../cpp/property-cpp.md)使用这些包装器函数的声明。
 
@@ -30,9 +30,9 @@ raw_interfaces_only
 
 利用此特性，您可以只公开类型库的低级别内容。
 
-**结束 C++ 专用**
+**结束C++特定**
 
 ## <a name="see-also"></a>请参阅
 
-[#import 特性](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[#import 属性](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [#import 指令](../preprocessor/hash-import-directive-cpp.md)
