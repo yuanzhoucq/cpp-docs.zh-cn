@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C1001
 ms.assetid: 5736cdb3-22c8-4fad-aa85-d5e0d2b232f4
 ms.openlocfilehash: beb382b9c6ccf80d01f5a0262832e7fb7e1ea0a4
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58770923"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59777089"
 ---
 # <a name="fatal-error-c1001"></a>错误 C1001
 
@@ -23,4 +23,4 @@ ms.locfileid: "58770923"
 
 如果优化不负责该错误，请尝试重写其中报告错误，在行或几行代码周围的行。 若要查看的代码编译器在预处理后看到的方式，可以使用[/P （预处理到文件）](../../build/reference/p-preprocess-to-a-file.md)选项。
 
-有关如何隔离错误的源以及如何向 Microsoft 报告内部编译器错误的详细信息，请参阅[如何使用 Visual c + + 工具集报告问题](../../overview/how-to-report-a-problem-with-the-visual-cpp-toolset.md)。
+有关如何隔离错误的源以及如何向 Microsoft 报告内部编译器错误的详细信息，请参阅[如何报告问题与视觉对象C++工具集](../../overview/how-to-report-a-problem-with-the-visual-cpp-toolset.md)。

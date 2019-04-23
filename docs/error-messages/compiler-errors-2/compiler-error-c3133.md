@@ -7,15 +7,15 @@ helpviewer_keywords:
 - C3133
 ms.assetid: 4a709405-b67b-4061-8a2a-19fa5fb34a2a
 ms.openlocfilehash: 0a0c30203f886934a19fde35e51602b57cc1b14d
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "58781713"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59776296"
 ---
 # <a name="compiler-error-c3133"></a>编译器错误 C3133
 
-属性不能应用于 c + + varargs
+属性不能应用于C++varargs
 
 未正确应用特性。 属性不会应用于表示变量参数的省略号。
 

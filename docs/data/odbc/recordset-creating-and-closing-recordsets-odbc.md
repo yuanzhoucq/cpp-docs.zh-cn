@@ -10,10 +10,10 @@ helpviewer_keywords:
 - ODBC recordsets, opening
 ms.assetid: 8d2aac23-4396-4ce2-8c60-5ecf1b360d3d
 ms.openlocfilehash: 5d5dae5bc766c0cfc31b4fb76f7fe104be0dbd74
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59041262"
 ---
 # <a name="recordset-creating-and-closing-recordsets-odbc"></a>记录集：创建和关闭记录集 (ODBC)
@@ -105,7 +105,7 @@ if(!rsStudent.Open(CRecordset::snapshot, NULL, CRecordset::readOnly))
 
    如果函数的堆栈帧上进行声明，当对象超出作用域对象被自动销毁。 否则，请使用**删除**运算符。
 
-`Close` 释放记录集的`HSTMT`处理。 它不会销毁 c + + 对象。
+`Close` 释放记录集的`HSTMT`处理。 它不会销毁C++对象。
 
 ## <a name="see-also"></a>请参阅
 

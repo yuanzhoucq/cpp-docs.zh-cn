@@ -1,5 +1,5 @@
 ---
-title: 杂注 （c + + COM 属性）
+title: 杂注 (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.pragma
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - pragma attribute
 ms.assetid: 3f90d023-b8b5-4007-8311-008bb72cbea1
 ms.openlocfilehash: 159e1570c2bde07bb4df8fa904a519e8e0018a6a
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59041184"
 ---
 # <a name="pragma"></a>pragma
@@ -30,7 +30,7 @@ ms.locfileid: "59041184"
 
 ## <a name="remarks"></a>备注
 
-**杂注**c + + 属性具有相同的功能[杂注](/windows/desktop/Midl/pragma)MIDL 特性。
+**杂注**C++属性具有相同的功能[杂注](/windows/desktop/Midl/pragma)MIDL 特性。
 
 ## <a name="example"></a>示例
 

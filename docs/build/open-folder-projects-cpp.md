@@ -5,10 +5,10 @@ helpviewer_keywords:
 - Open Folder Projects in Visual C++
 ms.assetid: abd1985e-3717-4338-9e80-869db5435175
 ms.openlocfilehash: 380a96bcb1a119b2b6d4104d60936217d1350fbb
-ms.sourcegitcommit: 35c4b3478f8cc310ebbd932a18963ad8ab846ed9
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59237128"
 ---
 # <a name="open-folder-projects-for-c"></a>C++ 的“打开文件夹”项目
@@ -64,7 +64,7 @@ IntelliSense 和浏览行为在一定程序上取决于活动的生成配置，�
 
 ![“打开文件夹”配置任务](media/open-folder-config-tasks.png)
 
-这将创建 （或打开） **tasks.vs.json** .vs 文件夹在项目根文件夹中创建 Visual Studio 中的文件。 可以在此文件中定义任意任务，然后使用从“解决方案资源管理器”上下文菜单调用它。 以下示例显示定义单个任务的 tasks.vs.json 文件。 `taskName` 定义上下文菜单中显示的名称。 `appliesTo` 定义可以对执行命令的文件。 `command` 属性指 COMSPEC 环境变量，该变量定义控制台的路径（Windows 上的 cmd.exe）。 你还可以引用 CppProperties.json 或 CMakeSettings.json 中声明的环境变量。 `args` 属性指定要调用的命令行。 `${file}` 宏检索“解决方案资源管理器”中选定的文件。 下面的示例将显示当前所选 .cpp 文件的文件名。
+这将创建 （或打开） **tasks.vs.json** .vs 文件夹在项目根文件夹中创建 Visual Studio 中的文件。 可以在此文件中定义任意任务，然后使用从“解决方案资源管理器”上下文菜单调用它。 以下示例显示定义单个任务的 tasks.vs.json 文件。 `taskName` 定义上下文菜单中显示的名称。 `appliesTo` 定义可在其中执行命令的文件。 `command` 属性指 COMSPEC 环境变量，该变量定义控制台的路径（Windows 上的 cmd.exe）。 你还可以引用 CppProperties.json 或 CMakeSettings.json 中声明的环境变量。 `args` 属性指定要调用的命令行。 `${file}` 宏检索“解决方案资源管理器”中选定的文件。 下面的示例将显示当前所选 .cpp 文件的文件名。
 
 ```json
 {

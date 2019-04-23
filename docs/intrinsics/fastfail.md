@@ -3,10 +3,10 @@ title: __fastfail
 ms.date: 11/04/2016
 ms.assetid: 9cd32639-e395-4c75-9f3a-ac3ba7f49921
 ms.openlocfilehash: a9f75cbf3c572401ef26fb16ced221eb24d35534
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59041493"
 ---
 # <a name="fastfail"></a>__fastfail
@@ -51,7 +51,7 @@ void __fastfail(unsigned int code);
 
 Windows 8 开始支持本机快速失败机制。 不支持本机快速失败指令的 Windows 操作系统通常会将快速失败请求视为访问冲突，或视为 `UNEXPECTED_KERNEL_MODE_TRAP` 错误检查。 在这些情况下，仍然会终止程序，但并不一定会快速终止。
 
-`__fastfail` 是仅用作内部函数。
+`__fastfail` 只能用作内部函数。
 
 ## <a name="requirements"></a>要求
 
