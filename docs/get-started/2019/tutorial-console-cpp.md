@@ -7,10 +7,10 @@ ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
 ms.openlocfilehash: f1e6b06c3212ae3ff192fdf402c0167575161656
-ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59430792"
 ---
 # <a name="create-a-c-console-app-project"></a>创建 C++ 控制台应用项目
@@ -379,4 +379,4 @@ Visual Studio 使用项目来组织应用的代码，使用解决方案来组织
 
 ## <a name="next-steps"></a>后续步骤
 
-[了解有关 Visual Studio for C++ 的详细信息](https://blogs.msdn.microsoft.com/vcblog/2017/04/21/getting-started-with-visual-studio-for-c-and-cpp-development/)
+[了解有关 Visual Studio for C++ 的更多信息](https://blogs.msdn.microsoft.com/vcblog/2017/04/21/getting-started-with-visual-studio-for-c-and-cpp-development/)
