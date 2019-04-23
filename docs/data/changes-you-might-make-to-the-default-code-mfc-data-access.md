@@ -5,17 +5,17 @@ helpviewer_keywords:
 - record views [C++], customizing default code
 ms.assetid: 9992ed37-a6bf-45a5-a572-5c14e42b6628
 ms.openlocfilehash: fc448ae1e13025a83b33386c2845bdf7bb4d5eec
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59038630"
 ---
 # <a name="changes-you-might-make-to-the-default-code--mfc-data-access"></a>可以对默认代码做的更改（MFC 数据访问）
 
 [MFC 应用程序向导](../mfc/reference/database-support-mfc-application-wizard.md)记录集类为您编写了一个表中选择所有记录。 你通常还可以采用下列一种或多种方式修改该行为：
 
-- 为记录集设置筛选器或排序顺序。 在执行此操作`OnInitialUpdate`记录集对象之前构造完毕后其`Open`调用成员函数。 有关详细信息，请参阅[记录集：筛选记录 (ODBC) 和[记录集：排序记录 (ODBC)](../data/odbc/recordset-sorting-records-odbc.md)。
+- 为记录集设置筛选器或排序顺序。 在执行此操作`OnInitialUpdate`记录集对象之前构造完毕后其`Open`调用成员函数。 有关详细信息，请参阅[记录集：筛选记录 (ODBC)](../data/odbc/recordset-filtering-records-odbc.md) 和[记录集：排序记录 (ODBC)](../data/odbc/recordset-sorting-records-odbc.md)。
 
 - 确定记录集的参数。 筛选后指定运行时的实际参数值。 有关详细信息，请参阅[记录集：确定记录集的参数 (ODBC)](../data/odbc/recordset-parameterizing-a-recordset-odbc.md)
 

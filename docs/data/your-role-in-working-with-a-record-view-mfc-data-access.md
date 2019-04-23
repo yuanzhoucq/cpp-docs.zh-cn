@@ -6,10 +6,10 @@ helpviewer_keywords:
 - MFC, record views
 ms.assetid: 691e89a5-ff21-4ca3-9278-69d4678288bb
 ms.openlocfilehash: c5c35208f654cff90e3cdf87e697e654bdfbe307
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59033000"
 ---
 # <a name="your-role-in-working-with-a-record-view--mfc-data-access"></a>你在使用记录视图中的角色（MFC 数据访问）
@@ -29,7 +29,7 @@ ms.locfileid: "59033000"
 |[可选]编写用于任何特殊验证的代码。||
 |[可选]编写代码以添加或删除记录。||
 
-基于窗体的编程只是处理数据库的一种方法。 有关使用其他用户界面的应用程序的信息，请参阅 [MFC：使用包含文档和视图的数据库类以及 [MFC：使用不含文档和视图的类](../data/mfc-using-database-classes-without-documents-and-views.md)。 显示数据库记录的替代方法，请参见类[CListView](../mfc/reference/clistview-class.md)并[CTreeView](../mfc/reference/ctreeview-class.md)。
+基于窗体的编程只是处理数据库的一种方法。 有关使用其他用户界面的应用程序的信息，请参阅 [MFC：使用包含文档和视图的数据库类](../data/mfc-using-database-classes-with-documents-and-views.md)以及 [MFC：使用不含文档和视图的类](../data/mfc-using-database-classes-without-documents-and-views.md)。 显示数据库记录的替代方法，请参见类[CListView](../mfc/reference/clistview-class.md)并[CTreeView](../mfc/reference/ctreeview-class.md)。
 
 ## <a name="see-also"></a>请参阅
 
