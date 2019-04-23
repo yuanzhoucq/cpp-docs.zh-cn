@@ -1,5 +1,5 @@
 ---
-title: 二进制编辑器 （c + +）
+title: 二进制编辑器 (C++)
 ms.date: 02/14/2019
 f1_keywords:
 - vc.editors.binary.F1
@@ -22,13 +22,13 @@ helpviewer_keywords:
 - resources [C++], creating
 ms.assetid: 2483c48b-1252-4dbc-826b-82e6c1a0e9cb
 ms.openlocfilehash: 832dbf711307b81527bcaff0d1e1b8138f208e46
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59040379"
 ---
-# <a name="binary-editor-c"></a>二进制编辑器 （c + +）
+# <a name="binary-editor-c"></a>二进制编辑器 (C++)
 
 > [!CAUTION]
 > 编辑资源，例如对话框、 图像或中的菜单**二进制编辑器**是很危险的。 不正确的编辑可能会损坏资源，导致其在其本机编辑器中无法读取。

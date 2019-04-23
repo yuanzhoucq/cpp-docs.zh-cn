@@ -1,5 +1,5 @@
 ---
-title: event_source （c + + COM 属性）
+title: event_source (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.event_source
@@ -12,10 +12,10 @@ helpviewer_keywords:
 - event handling, creating event source
 ms.assetid: 0983e36a-6127-4fbb-8a22-8dfec6564c16
 ms.openlocfilehash: 81eba3c032a3556d1c69ad02652455ebc07ab6be
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59035927"
 ---
 # <a name="eventsource"></a>event_source
@@ -30,7 +30,7 @@ ms.locfileid: "59035927"
 
 ### <a name="parameters"></a>参数
 
-*类型*<br/>
+*type*<br/>
 以下值之一的枚举：
 
 - `native` ，用于非托管 C/C++ 代码（非托管类的默认值）。

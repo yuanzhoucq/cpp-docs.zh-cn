@@ -1,5 +1,5 @@
 ---
-title: 资源编辑器 （c + +）
+title: 资源编辑器 (C++)
 ms.date: 02/14/2019
 f1_keywords:
 - vs.editors.resource
@@ -22,13 +22,13 @@ helpviewer_keywords:
 - resources [C++], properties
 ms.assetid: e20a29ec-d6fb-4ead-98f3-431a0e23aaaf
 ms.openlocfilehash: 774575e978a8e7f94868eb1b5dad90c6ac345460
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59038648"
 ---
-# <a name="resource-editors-c"></a>资源编辑器 （c + +）
+# <a name="resource-editors-c"></a>资源编辑器 (C++)
 
 资源编辑器是用于创建或修改 Visual Studio 项目中包含的资源的专用的环境。 Visual Studio 资源编辑器共享技术和接口，以帮助你快速、轻松地创建和修改应用程序资源。 资源编辑器，你可以查看和编辑相应的编辑器和预览资源中的资源。
 
@@ -130,4 +130,4 @@ None
 
 [使用资源文件](../windows/working-with-resource-files.md)<br/>
 [资源文件](../windows/resource-files-visual-studio.md)<br/>
-[资源标识符 （符号）](../windows/symbols-resource-identifiers.md)<br/>
+[资源标识符（符号）](../windows/symbols-resource-identifiers.md)<br/>

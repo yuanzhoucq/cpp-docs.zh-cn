@@ -1,5 +1,5 @@
 ---
-title: 用例 （c + + COM 属性）
+title: 用例 (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.case
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - case attribute
 ms.assetid: 6fb883c3-0526-4932-a901-b4564dcaeb7d
 ms.openlocfilehash: b3058f2fe6f35e1b11d4790780cb0fcdcaada706
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59038195"
 ---
 # <a name="case-c"></a>case (C++)
@@ -40,7 +40,7 @@ ms.locfileid: "59038195"
 
 ## <a name="remarks"></a>备注
 
-**用例**c + + 属性具有相同的功能**用例**MIDL 特性。 此属性仅用于[switch_type](switch-type.md)属性。
+**用例**C++属性具有相同的功能**用例**MIDL 特性。 此属性仅用于[switch_type](switch-type.md)属性。
 
 ## <a name="example"></a>示例
 

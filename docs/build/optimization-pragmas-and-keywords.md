@@ -7,15 +7,15 @@ helpviewer_keywords:
 - optimization, keywords and pragmas
 ms.assetid: 66a94842-ef10-490a-88b3-51d1a568ead5
 ms.openlocfilehash: db9af687c7de560b0012ceea50a7cbfcc7d5de9c
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59035499"
 ---
 # <a name="optimization-pragmas-and-keywords"></a>优化杂注和关键字
 
-多个关键字和 C 或 c + + 代码中使用的杂注影响优化：
+几个关键字和杂注在 C 中使用的或C++代码会影响优化：
 
 - [__asm](../assembler/inline/asm.md)
 
@@ -33,9 +33,9 @@ ms.locfileid: "59035499"
 
 - [#pragma inline_recursion](../preprocessor/inline-recursion.md)
 
-- [#pragma 内部函数](../preprocessor/intrinsic.md)
+- [#pragma intrinsic](../preprocessor/intrinsic.md)
 
-- [#pragma 优化](../preprocessor/optimize.md)
+- [#pragma optimize](../preprocessor/optimize.md)
 
 - [register 关键字](../cpp/storage-classes-cpp.md#register)
 

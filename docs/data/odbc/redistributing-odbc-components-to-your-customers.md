@@ -10,15 +10,15 @@ helpviewer_keywords:
 - components [C++], redistributing
 ms.assetid: 17b065b4-a307-4b89-99ac-d05831cfab87
 ms.openlocfilehash: 1a6ec6f5fdd3c32080d357ca58d31ccea271b7a4
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59040079"
 ---
 # <a name="redistributing-odbc-components-to-your-customers"></a>为客户重新分发 ODBC 组件
 
-如果将 ODBC 管理器程序的功能合并到应用程序，您必须还将分发到你的用户运行这些程序的文件。 这些 ODBC 文件驻留在 Visual c + + CD-ROM 的 \OS\System 目录。 Redistrb.wri 文件和许可协议的相同目录中包含你可以重新分发 ODBC 文件的列表。
+如果将 ODBC 管理器程序的功能合并到应用程序，您必须还将分发到你的用户运行这些程序的文件。 这些 ODBC 文件位于 \OS\System 目录视觉对象的C++CD-ROM。 Redistrb.wri 文件和许可协议的相同目录中包含你可以重新分发 ODBC 文件的列表。
 
 请查阅你打算发布的任何 ODBC 驱动程序的文档。 您需要确定哪些 Dll 和其他文件交付。 此外应阅读[为客户重新分发 ODBC 组件](../../data/odbc/redistributing-odbc-components-to-your-customers.md)，该文介绍了如何重新分发 ODBC 组件。
 

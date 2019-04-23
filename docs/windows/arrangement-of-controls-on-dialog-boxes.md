@@ -1,5 +1,5 @@
 ---
-title: 如何：布局控件 （c + +） |Microsoft Docs
+title: 如何：布局控件 (C++) |Microsoft Docs
 ms.date: 02/15/2019
 f1_keywords:
 - vc.editors.dialog.grouping
@@ -81,13 +81,13 @@ helpviewer_keywords:
 - scroll bars [C++], width
 ms.assetid: 832491cf-98af-42e5-a854-2cb135fd45c6
 ms.openlocfilehash: 878b7371dfa77880d68f1001444ed44b84d7240c
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037416"
 ---
-# <a name="how-to-layout-controls-c"></a>如何：布局控件 （c + +）
+# <a name="how-to-layout-controls-c"></a>如何：布局控件 (C++)
 
 **对话框编辑器**提供布局工具一致，并自动调整控件的大小。 对于大多数任务，你可以使用[对话框编辑器工具栏](../windows/showing-or-hiding-the-dialog-editor-toolbar.md)。 所有**对话框编辑器**工具栏命令还位于**格式**菜单中和大多数具有[键盘快捷方式](../windows/accelerator-keys-for-the-dialog-editor.md)。
 
@@ -114,12 +114,12 @@ ms.locfileid: "59037416"
 |属性|描述|
 |---|---|
 |**版式参考线**|显示布局参考线设置。|
-|**None**|隐藏布局工具。|
+|**无**|隐藏布局工具。|
 |**标尺和参考线**|启用时，将标尺添加到布局工具，并允许放在标尺中的指南。 默认指南将边距。|
-|**Grid**|创建布局网格。 新控件将自动对齐到网格中。|
+|**网格**|创建布局网格。 新控件将自动对齐到网格中。|
 |**网格间距**|对话框框单元 (Dlu) 中显示的网格间距的设置。|
 |**宽度：Dlu**|Dlu 中设置布局网格的宽度。 水平 DLU 是除以 4 的对话框字体平均宽度。|
-|**高度：Dlu**|Dlu 中设置的布局网格的高度。 垂直 DLU 是平均除以 8 对话框字体的高度。|
+|**高：Dlu**|Dlu 中设置的布局网格的高度。 垂直 DLU 是平均除以 8 对话框字体的高度。|
 
 ### <a name="guides-and-margins"></a>参考线和边距
 
@@ -260,7 +260,7 @@ ms.locfileid: "59037416"
 
    |间距|描述|
    |---|---|
-   |**交叉**|最左侧和所选最右边的控件之间均匀分配的空间控件。|
+   |**跨**|最左侧和所选最右边的控件之间均匀分配的空间控件。|
    |**向下**|最上面和最下面选择的控件之间均匀分配的空间控件。|
 
 - 若要置于控件，选择你想要重新排列的控件。 转到菜单**格式** > **在对话框内居中**，然后选择下列排列方式：
@@ -274,8 +274,8 @@ ms.locfileid: "59037416"
 
    |排列方式|描述|
    |---|---|
-   |**右**|对齐普通按钮的对话框中的右边缘。|
-   |**Bottom**|对齐对话框的底部边缘的普通按钮。|
+   |右侧|对齐普通按钮的对话框中的右边缘。|
+   |底部|对齐对话框的底部边缘的普通按钮。|
 
    如果选择不是普通按钮控件，其位置不受影响。
 
@@ -286,5 +286,5 @@ Win32
 ## <a name="see-also"></a>请参阅
 
 [管理对话框控件](controls-in-dialog-boxes.md)<br/>
-[如何：添加、 编辑或删除控件](adding-editing-or-deleting-controls.md)<br/>
-[如何：定义控制访问权限和值](defining-mnemonics-access-keys.md)<br/>
+[如何：添加、编辑或删除控件](adding-editing-or-deleting-controls.md)<br/>
+[如何：定义控件访问权限和值](defining-mnemonics-access-keys.md)<br/>

@@ -11,10 +11,10 @@ helpviewer_keywords:
 - function calls, RFX functions
 ms.assetid: c594300b-5a29-4119-a68b-e7ca32def696
 ms.openlocfilehash: dc717336a5279e7eda1b7c39b19a7c76f9055cd3
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59035979"
 ---
 # <a name="record-field-exchange-using-the-rfx-functions"></a>记录字段交换：使用 RFX 函数
@@ -60,13 +60,13 @@ RFX 全局函数之间交换数据集中的记录的数据源和字段数据成�
 |`RFX_Date`|`CTime`|
 
 
-有关详细信息，请参阅下的 RFX 函数文档[宏和全局函数](../../mfc/reference/mfc-macros-and-globals.md)中*类库参考*。 有关 c + + 数据类型如何映射到 SQL 数据类型的信息，请参阅 ANSI SQL 数据类型映射到 c + + 数据类型的表中[SQL:SQL 和 c + + 数据类型 (ODBC)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md)。
+有关详细信息，请参阅下的 RFX 函数文档[宏和全局函数](../../mfc/reference/mfc-macros-and-globals.md)中*类库参考*。 有关如何信息C++数据类型映射到 SQL 数据类型，请参阅表 ANSI SQL 数据类型映射到C++中的数据类型[SQL:SQL 和C++数据类型 (ODBC)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md)。
 
 ## <a name="see-also"></a>请参阅
 
 [记录字段交换 (RFX)](../../data/odbc/record-field-exchange-rfx.md)<br/>
 [记录字段交换：RFX 的工作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)<br/>
-[记录集：参数化记录集 (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)<br/>
+[记录集：确定记录集的参数 (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)<br/>
 [记录集：动态绑定数据列 (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)<br/>
 [CRecordset 类](../../mfc/reference/crecordset-class.md)<br/>
 [CFieldExchange 类](../../mfc/reference/cfieldexchange-class.md)

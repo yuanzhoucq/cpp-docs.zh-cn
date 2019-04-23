@@ -4,15 +4,15 @@ ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 7367bacf-6b7c-4ecd-a0ce-a662db46fc66
 ms.openlocfilehash: f3065323c567c944dab12fc1ebbcbd6bb57127e9
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59039048"
 ---
 # <a name="key-wrl-apis-by-category"></a>按类别列出的关键 WRL API
 
-下表列出主类、 结构、 函数和 Windows 运行时 c + + 模板库中的宏。 省略中帮助程序命名空间和类的构造。 这些列表提供了 API 文档，从而按命名空间排列。
+下表列出了主要的 Windows 运行时C++模板库类、 结构、 函数和宏。 省略中帮助程序命名空间和类的构造。 这些列表提供了 API 文档，从而按命名空间排列。
 
 ## <a name="classes"></a>类
 
@@ -23,7 +23,7 @@ ms.locfileid: "59039048"
 |[ClassFactory 类](classfactory-class.md)|实现 `IClassFactory` 接口的基本功能。|
 |[ComPtr 类](comptr-class.md)|创建表示模板参数指定的接口的 *智能指针* 类型。 ComPtr 会自动维护基础接口指针的引用计数，并在引用计数变为零时释放接口。|
 |[Event 类（Windows 运行时 C++ 模板库）](event-class-wrl.md)|表示一个事件。|
-|[EventSource 类](eventsource-class.md)|表示一个事件。 `EventSource` 成员函数添加、 删除和调用事件处理程序。|
+|[EventSource 类](eventsource-class.md)|表示一个事件。 `EventSource` 成员函数将添加、删除和调用事件处理程序。|
 |[FtmBase 类](ftmbase-class.md)|表示自由线程封送拆收器对象。|
 |[HandleT 类](handlet-class.md)|表示对象的句柄。|
 |[HString 类](hstring-class.md)|为处理 HSTRING 句柄提供支持。|

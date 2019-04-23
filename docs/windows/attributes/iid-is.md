@@ -1,5 +1,5 @@
 ---
-title: iid_is （c + + COM 属性）
+title: iid_is (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.iid_is
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - iid_is attribute
 ms.assetid: 2f9b42a9-7130-4b08-9b1e-0d5d360e10ff
 ms.openlocfilehash: b91fb7937bb0e20f2500eace9695bc0ddba21b26
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59038552"
 ---
 # <a name="iidis"></a>iid_is
@@ -25,12 +25,12 @@ ms.locfileid: "59038552"
 
 ### <a name="parameters"></a>参数
 
-*表达式*<br/>
+*expression*<br/>
 指定 COM 接口的 IID 是 C 语言表达式指向一个接口指针。
 
 ## <a name="remarks"></a>备注
 
-**Iid_is** c + + 属性具有相同的功能[iid_is](/windows/desktop/Midl/iid-is) MIDL 特性。
+**Iid_is** C++属性具有相同的功能[iid_is](/windows/desktop/Midl/iid-is) MIDL 特性。
 
 ## <a name="example"></a>示例
 
@@ -67,4 +67,4 @@ __interface IFireTabCtrl : IDispatch
 ## <a name="see-also"></a>请参阅
 
 [IDL 特性](idl-attributes.md)<br/>
-[Parameter 特性](parameter-attributes.md)
+[参数特性](parameter-attributes.md)

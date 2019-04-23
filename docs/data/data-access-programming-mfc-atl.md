@@ -9,10 +9,10 @@ helpviewer_keywords:
 - data access [C++], class libraries for databases
 ms.assetid: def97b2c-b5a6-445f-afeb-308050fd4852
 ms.openlocfilehash: b4f5fb6ed21fb23195af340c8de3ee7c654f7fee
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037823"
 ---
 # <a name="data-access-programming-mfcatl"></a>数据访问编程 (MFC/ATL)
@@ -36,4 +36,4 @@ OLE DB 是基于 COM 规范的低级别、高性能 API，仅在 Windows 上可�
 ## <a name="see-also"></a>请参阅
 
 [数据访问](data-access-in-cpp.md)<br/>
-[Microsoft 开放式数据库连接 (ODBC)](/sql/odbc/microsoft-open-database-connectivity-odbc)<br/>
+[Microsoft Open Database Connectivity (ODBC)](/sql/odbc/microsoft-open-database-connectivity-odbc)（Microsoft 开放式数据库连接 (ODBC)）<br/>

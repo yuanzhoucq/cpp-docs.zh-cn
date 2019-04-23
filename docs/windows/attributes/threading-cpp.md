@@ -1,17 +1,17 @@
 ---
-title: 线程处理 （c + + COM 属性）
+title: 线程处理 (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.threading
 helpviewer_keywords:
 - threading attribute
 ms.assetid: 9b558cd6-fbf0-4602-aed5-31c068550ce3
-ms.openlocfilehash: 0feb258941993ff9776bb9f94f61a556d7d4caec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cdebf06a62ebbd1d8648b9777fe200bc7a373261
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50449837"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59038273"
 ---
 # <a name="threading-c"></a>threading (C++)
 
@@ -42,7 +42,7 @@ ms.locfileid: "50449837"
 
 ## <a name="remarks"></a>备注
 
-**线程**c + + 属性生成的.idl 文件中未显示，但将在 COM 对象的实现中使用。
+**线程**C++属性生成的.idl 文件中未显示，但将在 COM 对象的实现中使用。
 
 在 ATL 项目中，如果[组件类](coclass.md)属性也是存在，由指定的线程模型*模型*传递作为模板参数[CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)类由插入`coclass`属性。
 
@@ -61,7 +61,7 @@ ms.locfileid: "50449837"
 |**适用对象**|**类**，**结构**|
 |**可重复**|否|
 |**必需的特性**|**coclass**|
-|**无效的特性**|无|
+|**无效的特性**|None|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
