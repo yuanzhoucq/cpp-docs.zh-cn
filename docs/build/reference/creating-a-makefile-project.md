@@ -1,5 +1,5 @@
 ---
-title: 在 Visual Studio 中创建 c + + 生成文件项目
+title: 创建C++Visual Studio 中的生成文件项目
 ms.date: 12/08/2018
 f1_keywords:
 - vc.appwiz.makefile.project
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - project files [C++], Makefile projects
 ms.assetid: dd077af3-97a8-48fb-baaa-cf7e07ddef61
 ms.openlocfilehash: 9c2edfe35233672e8117d336ba40cfea497b1a22
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59035593"
 ---
-# <a name="create-a-c-makefile-project"></a>创建 c + + 生成文件项目
+# <a name="create-a-c-makefile-project"></a>创建C++生成文件项目
 
 生成文件是一种说明如何编译和链接（或生成）一组 C++ 源代码文件的文本文件。 生成程序会读取生成文件并调用编译器、链接器和其他程序来生成可执行文件。 Microsoft 的实现*做出*程序称为[NMAKE](nmake-reference.md);
 
@@ -40,7 +40,7 @@ ms.locfileid: "59035593"
 
 1. 单击“完成”关闭向导并在解决方案资源管理器中打开新创建的项目。
 
-可以在项目的属性页中查看和编辑项目的属性。 请参阅[Visual Studio 中的设置 c + + 编译器和生成属性](../working-with-project-properties.md)有关显示的属性页信息。
+可以在项目的属性页中查看和编辑项目的属性。 请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)有关显示的属性页信息。
 
 ## <a name="makefile-project-wizard"></a>生成文件项目向导
 
@@ -58,7 +58,7 @@ ms.locfileid: "59035593"
 
 当特定项目设置或编译器选项的设置不正确时，IntelliSense 失败生成文件项目中。 请按照下列步骤来配置生成文件项目，以便 IntelliSense 能按预期方式：
 
-1. 打开“属性页”对话框。 有关详细信息，请参阅[Visual Studio 中的设置 c + + 编译器和生成属性](../working-with-project-properties.md)。
+1. 打开“属性页”对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
 
 1. 展开“配置属性”节点。
 
@@ -86,8 +86,8 @@ ms.locfileid: "59035593"
 
 ## <a name="see-also"></a>请参阅
 
-[Using IntelliSense](/visualstudio/ide/using-intellisense)<br>
+[使用 IntelliSense](/visualstudio/ide/using-intellisense)<br>
 [NMAKE 参考](nmake-reference.md)<br>
-[如何：从现有代码创建 c + + 项目](../how-to-create-a-cpp-project-from-existing-code.md)
+[如何：创建C++从现有代码创建项目](../how-to-create-a-cpp-project-from-existing-code.md)
 [生成文件中的特殊字符](special-characters-in-a-makefile.md)<br/>
 [生成文件的内容](contents-of-a-makefile.md)<br/>

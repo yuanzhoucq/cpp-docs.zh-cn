@@ -1,5 +1,5 @@
 ---
-title: 实现 （c + + COM 属性）
+title: 实现 (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.implements
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - implements attribute
 ms.assetid: 9cf0858b-cb7d-4d3c-81a6-97d87ed00d25
 ms.openlocfilehash: 9425f998f0e8fbe5f16e6eb136e00ba3fb7bd5d9
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59033678"
 ---
 # <a name="implements-c"></a>implements (C++)
@@ -26,10 +26,10 @@ ms.locfileid: "59033678"
 
 ### <a name="parameters"></a>参数
 
-*接口*<br/>
+*interfaces*<br/>
 以逗号分隔列表将为 IDL 组件类的成员的接口。 用于指定单个接口的速记方法是**实现 (** *interface_name* **)**。
 
-*调度接口*<br/>
+*dispinterfaces*<br/>
 以逗号分隔的将是 IDL 组件类的成员的调度接口的列表。 用于指定单个调度接口的速记方法是**实现 (调度接口 =** *dispinterface_name* **)**。
 
 ## <a name="remarks"></a>备注
@@ -51,7 +51,7 @@ ms.locfileid: "59033678"
 
 ## <a name="example"></a>示例
 
-下面的示例分为三个部分：.idl 文件和其关联的.h 文件和 c + + 文件。
+下面的示例分为三个部分：.idl 文件和其关联的.h 文件，和一个C++文件。
 
 假设以下.idl 文件中，将在提供给编译器。
 

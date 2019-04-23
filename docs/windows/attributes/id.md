@@ -1,5 +1,5 @@
 ---
-title: id （c + + COM 属性）
+title: id (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.id
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - id attribute
 ms.assetid: a48d2c99-c5d2-4f46-bf96-5ac88dcb5d0c
 ms.openlocfilehash: 5faf08418771deda3086a434cff6b1900a37e36e
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59034691"
 ---
 # <a name="id"></a>id
@@ -30,7 +30,7 @@ ms.locfileid: "59034691"
 
 ## <a name="remarks"></a>备注
 
-**Id** c + + 属性具有相同的功能[id](/windows/desktop/Midl/id) MIDL 特性。
+**Id** C++属性具有相同的功能[id](/windows/desktop/Midl/id) MIDL 特性。
 
 ## <a name="example"></a>示例
 
@@ -55,5 +55,5 @@ ms.locfileid: "59034691"
 [方法特性](method-attributes.md)<br/>
 [数据成员特性](data-member-attributes.md)<br/>
 [defaultvalue](defaultvalue.md)<br/>
-[中的](in-cpp.md)<br/>
+[in](in-cpp.md)<br/>
 [out](out-cpp.md)

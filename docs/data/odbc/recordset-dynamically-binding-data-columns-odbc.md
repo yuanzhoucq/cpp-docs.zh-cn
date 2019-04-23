@@ -9,10 +9,10 @@ helpviewer_keywords:
 - columns [C++], binding to recordsets
 ms.assetid: bff67254-d953-4ae4-9716-91c348cb840b
 ms.openlocfilehash: c2f2a6a6696f46fb5b8f2777c6c911269c9e7a80
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59035113"
 ---
 # <a name="recordset-dynamically-binding-data-columns-odbc"></a>记录集：动态绑定数据列 (ODBC)
@@ -93,7 +93,7 @@ ms.locfileid: "59035113"
 |-|-|
 |**Current-Table-Columns**| （图中的列表 1）在数据源的表中当前列的列表。 此列表可能与匹配的记录集中当前绑定的列的列表。|
 |**Bound-Recordset-Columns**| （图中的列表 2）记录集中绑定列的列表。 这些列中已有 RFX 语句在`DoFieldExchange`函数。|
-|**列-到-动态绑定**| （图中的列表 3）列的表中但不是在记录集的列表。 下面是你想要动态绑定的列。|
+|**Columns-To-Bind-Dynamically**| （图中的列表 3）列的表中但不是在记录集的列表。 下面是你想要动态绑定的列。|
 |**Dynamic-Column-Values**| （图中的列表 4）从动态绑定列中检索包含存储的值的列表。 此列表的元素与中的列-到-动态绑定，一相对应。|
 
 ###  <a name="_core_building_your_lists"></a> 构建您的列表

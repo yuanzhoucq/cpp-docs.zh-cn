@@ -14,10 +14,10 @@ helpviewer_keywords:
 - dynasets
 ms.assetid: 333337c5-575e-4d26-b5f6-47166ad7874d
 ms.openlocfilehash: b201e152d83d3812253aa4803eebe715d726219d
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59034490"
 ---
 # <a name="recordset-odbc"></a>记录集 (ODBC)
@@ -65,7 +65,7 @@ ms.locfileid: "59034490"
 - 指定`CRecordset::readOnly`中*dwOptions*参数的`Open`。
 
     > [!NOTE]
-    >  有关动态集支持的 ODBC 驱动程序要求的信息，请参阅[ODBC](../../data/odbc/odbc-basics.md)。 有关此版本的 Visual c + + 中包含的 ODBC 驱动程序的列表和有关获取其他驱动程序的信息，请参阅[ODBC 驱动程序列表](../../data/odbc/odbc-driver-list.md)。
+    >  有关动态集支持的 ODBC 驱动程序要求的信息，请参阅[ODBC](../../data/odbc/odbc-basics.md)。 有关包含在视觉对象的此版本的 ODBC 驱动程序的列表C++和有关获取其他驱动程序的信息，请参阅[ODBC 驱动程序列表](../../data/odbc/odbc-driver-list.md)。
 
 ##  <a name="_core_your_recordsets"></a> 记录集
 
@@ -91,7 +91,7 @@ ms.locfileid: "59034490"
 
 - [记录集：排序记录 (ODBC)](../../data/odbc/recordset-sorting-records-odbc.md)
 
-- [记录集：参数化记录集 (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)
+- [记录集：确定记录集的参数 (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)
 
 ### <a name="topics-about-the-mechanics-of-modifying-recordsets"></a>有关修改记录集的技巧的主题
 

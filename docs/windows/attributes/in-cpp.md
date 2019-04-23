@@ -1,5 +1,5 @@
 ---
-title: 在 （c + + COM 属性）
+title: 中 (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.in
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - in attribute
 ms.assetid: 7b450cc4-4d2e-4910-a195-7487c6b7c373
 ms.openlocfilehash: 06d78552ef2ebb878ed630eb377e6249ba60cad4
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59034532"
 ---
 # <a name="in-c"></a>in (C++)
@@ -25,7 +25,7 @@ ms.locfileid: "59034532"
 
 ## <a name="remarks"></a>备注
 
-**中**c + + 属性具有相同的功能[中](/windows/desktop/Midl/in)MIDL 特性。
+**中**C++属性具有相同的功能[中](/windows/desktop/Midl/in)MIDL 特性。
 
 ## <a name="example"></a>示例
 
@@ -47,7 +47,7 @@ ms.locfileid: "59034532"
 ## <a name="see-also"></a>请参阅
 
 [IDL 特性](idl-attributes.md)<br/>
-[Parameter 特性](parameter-attributes.md)<br/>
+[参数特性](parameter-attributes.md)<br/>
 [方法特性](method-attributes.md)<br/>
 [defaultvalue](defaultvalue.md)<br/>
 [id](id.md)<br/>
