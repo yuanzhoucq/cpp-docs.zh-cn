@@ -7,17 +7,17 @@ helpviewer_keywords:
 - C3460
 ms.assetid: adbf8775-10ca-4654-acdf-58dd765351cd
 ms.openlocfilehash: 9ffbc5102855574aba668a2c501cd08dbaebe5b8
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "58775174"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59777934"
 ---
 # <a name="compiler-error-c3460"></a>编译器错误 C3460
 
 “type”: 仅可转发用户定义的类型
 
-有关详细信息，请参阅[类型转发 (C + + CLI)](../../extensions/type-forwarding-cpp-cli.md)。
+有关详细信息，请参阅[类型转发 (C++/CLI)](../../extensions/type-forwarding-cpp-cli.md)。
 
 ## <a name="example"></a>示例
 

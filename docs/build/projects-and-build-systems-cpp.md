@@ -12,12 +12,12 @@ helpviewer_keywords:
 - builds [C++], options
 - Visual C++, build options
 ms.assetid: fa6ed4ff-334a-4d99-b5e2-a1f83d2b3008
-ms.openlocfilehash: 6a4048d741cf291d8d6173c1444b6933523c6851
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: 73797f3817338c48e8ff11eaaadff71263374fd0
+ms.sourcegitcommit: 14b292596bc9b9b883a9c58cd3e366b282a1f7b3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58775421"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60124754"
 ---
 # <a name="cc-projects-and-build-systems-in-visual-studio"></a>C /C++的项目并构建 Visual Studio 中的系统
 
@@ -35,7 +35,7 @@ Visual Studio 2017 可用于编辑、 编译和生成任何C++代码库，且无
 
 ## <a name="the-msvc-toolset"></a>MSVC 工具集
 
-MicrosoftC++编译器、 链接、 标准库和相关的实用工具组成 MSCV 编译器工具集 （也称为工具链或"生成工具"）。 这些元素包含在 Visual Studio 中。 此外可以下载，并从免费作为独立程序包使用的工具集[Visual Studio 2017 生成工具下载位置](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2017)。
+MicrosoftC++编译器、 链接、 标准库和相关的实用工具组成 MSVC 编译器工具集 （也称为工具链或"生成工具"）。 这些元素包含在 Visual Studio 中。 此外可以下载，并从免费作为独立程序包使用的工具集[Visual Studio 2017 生成工具下载位置](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2017)。
 
 可以通过调用 MSVC 编译器 (cl.exe) 直接从命令行构建简单的程序。 下面的命令接受单个源代码文件中，并调用生成名为可执行文件的 cl.exe *hello.exe*: 
 

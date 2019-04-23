@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C3465
 ms.assetid: aeb815e5-b3fc-4525-afe2-d738e9321df1
 ms.openlocfilehash: 117c9b9918950fd2e95e206c5aea457dee183b0a
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "58781570"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59779252"
 ---
 # <a name="compiler-error-c3465"></a>编译器错误 C3465
 
@@ -19,7 +19,7 @@ ms.locfileid: "58781570"
 
 在重新编译客户端之前，类型转发都将适用于客户端应用程序。 重新编译时，包含客户端应用程序中所用类型定义的每个程序集都将需要一个引用。
 
-有关详细信息，请参阅[类型转发 (C + + CLI)](../../extensions/type-forwarding-cpp-cli.md)。
+有关详细信息，请参阅[类型转发 (C++/CLI)](../../extensions/type-forwarding-cpp-cli.md)。
 
 ## <a name="example"></a>示例
 

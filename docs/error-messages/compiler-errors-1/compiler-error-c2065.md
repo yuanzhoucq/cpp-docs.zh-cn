@@ -7,17 +7,17 @@ helpviewer_keywords:
 - C2065
 ms.assetid: 78093376-acb7-45f5-9323-5ed7e0aab1dc
 ms.openlocfilehash: 3daf2cd532cd07225b822c80b46fc28274d4e2a8
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "58778749"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59779396"
 ---
 # <a name="compiler-error-c2065"></a>编译器错误 C2065
 
 > '*标识符*： 未声明的标识符
 
-编译器找不到标识符的声明。 有许多原因导致此错误。 C2065 的最常见原因是，该标识符未声明、 标识符拼写错误、 在文件中，不包含标识符的声明位置标头或标识符缺少的作用域限定符，例如，`cout`而不是`std::cout`. 有关 c + + 中的声明的详细信息，请参阅[声明和定义 （c + +）](../../cpp/declarations-and-definitions-cpp.md)。
+编译器找不到标识符的声明。 有许多原因导致此错误。 C2065 的最常见原因是，该标识符未声明、 标识符拼写错误、 在文件中，不包含标识符的声明位置标头或标识符缺少的作用域限定符，例如，`cout`而不是`std::cout`. 有关详细信息中的声明C++，请参阅[声明和定义 (C++)](../../cpp/declarations-and-definitions-cpp.md)。
 
 下面是一些常见的问题和解决方案中更详细地介绍。
 
@@ -51,7 +51,7 @@ int main() {
 
 ## <a name="example-use-an-unscoped-identifier"></a>示例： 使用未区分范围的标识符
 
-如果你的标识符的范围不正确，可以发生此错误。 如果你使用时，将显示 C2065 `cout`，这是原因。 当 c + + 标准库函数和运算符未完全限定的命名空间，或不带来`std`到通过使用当前作用域的命名空间`using`指令，编译器找不到它们。 若要解决此问题，您必须完全限定的标识符名称，或指定包含命名空间`using`指令。
+如果你的标识符的范围不正确，可以发生此错误。 如果你使用时，将显示 C2065 `cout`，这是原因。 当C++标准库函数和运算符未完全限定的命名空间，或不带来`std`到通过使用当前作用域的命名空间`using`指令，编译器找不到它们。 若要解决此问题，您必须完全限定的标识符名称，或指定包含命名空间`using`指令。
 
 此示例无法进行编译，因为`cout`并`endl`中定义`std`命名空间：
 
@@ -203,9 +203,9 @@ int main() {
 }
 ```
 
-## <a name="example-ccli-type-deduction-failure"></a>示例:C + + /cli CLI 类型推断失败
+## <a name="example-ccli-type-deduction-failure"></a>示例:C++/ CLI 类型推断失败
 
-发生此错误可以在调用泛型函数，如果预期的类型参数不能从使用的参数推导出来。 有关详细信息，请参阅[泛型函数 (C + + CLI)](../../extensions/generic-functions-cpp-cli.md)。
+发生此错误可以在调用泛型函数，如果预期的类型参数不能从使用的参数推导出来。 有关详细信息，请参阅[泛型函数 (C++/CLI)](../../extensions/generic-functions-cpp-cli.md)。
 
 ```cpp
 // C2065_b.cpp
@@ -220,7 +220,7 @@ int main() {
 }
 ```
 
-## <a name="example-ccli-attribute-parameters"></a>示例:C + + /cli CLI 特性参数
+## <a name="example-ccli-attribute-parameters"></a>示例:C++/ CLI 特性参数
 
 此错误还可能来自于为 Visual C++ 2005 执行的编译器一致性工作：Visual C++ 特性的参数检查。
 
