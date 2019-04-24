@@ -7,15 +7,15 @@ helpviewer_keywords:
 - embedded_idl attribute
 ms.assetid: f1c1c2e8-3872-4172-8795-8d1288a20452
 ms.openlocfilehash: c46924d2757d01a934c21a70f23e6556f6a10fd3
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59034084"
 ---
 # <a name="embeddedidl"></a>embedded_idl
 
-**C++ 专用**
+**C++特定**
 
 指定将类型库写入保留了特性生成的代码的 .tlh 文件。
 
@@ -46,9 +46,9 @@ embedded_idl[("param")]
 
 ## <a name="remarks"></a>备注
 
-**结束 C++ 专用**
+**结束C++特定**
 
 ## <a name="see-also"></a>请参阅
 
-[#import 特性](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[#import 属性](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [#import 指令](../preprocessor/hash-import-directive-cpp.md)

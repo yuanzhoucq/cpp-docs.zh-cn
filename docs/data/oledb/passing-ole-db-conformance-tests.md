@@ -8,12 +8,12 @@ helpviewer_keywords:
 - conformance testing [OLE DB]
 - OLE DB providers, testing
 ms.assetid: d1a4f147-2edd-476c-b452-0e6a0ac09891
-ms.openlocfilehash: 7365176df314baf40ac1cc1ed53936598f05c79e
-ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
+ms.openlocfilehash: 9f78b16bc30651560137a39286460a8e5ceccd40
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51265069"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59036992"
 ---
 # <a name="passing-ole-db-conformance-tests"></a>通过 OLE DB 一致性测试
 
@@ -21,7 +21,7 @@ ms.locfileid: "51265069"
 
 ## <a name="running-the-conformance-tests"></a>运行一致性测试
 
-在 Visual c + + 6.0 中，OLE DB 提供程序模板添加了大量挂钩函数，以使你能够检查值和属性。 其中的大多数功能已添加以响应对符合性测试。
+视觉对象中C++6.0，OLE DB 提供程序模板添加了大量挂钩函数，以使你能够检查值和属性。 其中的大多数功能已添加以响应对符合性测试。
 
 > [!NOTE]
 > 您需要添加多个验证函数，以使提供程序通过 OLE DB 一致性测试。

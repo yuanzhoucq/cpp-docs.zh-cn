@@ -1,5 +1,5 @@
 ---
-title: 对话框控件 （c + +） |Microsoft Docs
+title: 对话框控件 (C++) |Microsoft Docs
 ms.date: 02/15/2019
 f1_keywords:
 - Custom Control
@@ -14,13 +14,13 @@ helpviewer_keywords:
 - Dialog Editor [C++], custom controls
 ms.assetid: e216c4f9-2fd4-429d-889a-8ebce7bad177
 ms.openlocfilehash: 563cf73299c00413889ada2520b1bf4fcd86f2be
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59023693"
 ---
-# <a name="dialog-box-controls-c"></a>对话框控件 （c + +）
+# <a name="dialog-box-controls-c"></a>对话框控件 (C++)
 
 可以将控件添加到对话框框中使用**对话框编辑器**选项卡[工具箱窗口](/visualstudio/ide/reference/toolbox)，使您可以选择所需控件并将其拖到对话框的。 默认情况下**工具箱**窗口设置为自动隐藏。 它将显示为你的解决方案的左边距上的选项卡时**对话框编辑器**处于打开状态。 但是，您可以将固定**工具箱**到相应位置通过选择窗口**自动隐藏**窗口右上角的按钮。 有关如何控制此窗口的行为的详细信息，请参阅[窗口管理](/visualstudio/ide/customizing-window-layouts-in-visual-studio)。
 
@@ -38,7 +38,7 @@ ms.locfileid: "59023693"
 
 |控件名称|默认事件|
 |---|---|
-|[Button 控件](../mfc/reference/cbutton-class.md)|BN_CLICKED|
+|[按钮控件](../mfc/reference/cbutton-class.md)|BN_CLICKED|
 |[复选框控件](../mfc/reference/styles-used-by-mfc.md#button-styles)|BN_CLICKED|
 |[组合框控件](../mfc/reference/ccombobox-class.md)|CBN_SELCHANGE|
 |[编辑控件](../mfc/reference/cedit-class.md)|EN_CHANGE|
@@ -57,18 +57,18 @@ ms.locfileid: "59023693"
 
 |控件名称|默认事件|
 |---|---|
-|[Slider 控件](../mfc/slider-control-styles.md)|NM_CUSTOMDRAW|
+|[滑块控件](../mfc/slider-control-styles.md)|NM_CUSTOMDRAW|
 |[数值调节钮控件](../mfc/using-cspinbuttonctrl.md)|UDN_DELTAPOS|
 |[进度控件](../mfc/styles-for-the-progress-control.md)|NM_CUSTOMDRAW|
 |[热键控件](../mfc/using-a-hot-key-control.md)|NM_OUTOFMEMORY|
 |[列表控件](../mfc/list-control-and-list-view.md)|LVN_ITEMCHANGE|
 |[树控件](../mfc/tree-control-styles.md)|TVN_SELCHANGE|
-|[Tab 控件](../mfc/tab-controls-and-property-sheets.md)|TCN_SELCHANGE|
+|[选项卡控件](../mfc/tab-controls-and-property-sheets.md)|TCN_SELCHANGE|
 |[动画控件](../mfc/using-an-animation-control.md)|ACN_START|
-|[日期时间选择器控件](../mfc/creating-the-date-and-time-picker-control.md)|DTN_DATETIMECHANGE|
+|[日期时间选取器控件](../mfc/creating-the-date-and-time-picker-control.md)|DTN_DATETIMECHANGE|
 |[月历控件](../mfc/month-calendar-control-examples.md)|MCN_SELCHANGE|
 |[IP 地址控件](../mfc/reference/cipaddressctrl-class.md)|IPN_FIELDCHANGED|
-|[扩展组合框控件](../mfc/creating-an-extended-combo-box-control.md)||
+|[扩展的组合框控件](../mfc/creating-an-extended-combo-box-control.md)||
 |自定义控件|TTN_GETDISPINFO|
 
 ## <a name="custom-controls"></a>自定义控件
@@ -78,7 +78,7 @@ ms.locfileid: "59023693"
 > [!NOTE]
 > 在这个意义上的自定义控件将不使用 ActiveX 控件相混淆。 ActiveX 控件有时被称为 OLE 自定义控件。 此外，不要混淆 Windows 在所有者绘制的控件与这些控件。
 
-此功能旨在使您可以用而非由 Windows 提供的控件。 在运行时，该控件是一个窗口类 （不完全相同的 c + + 类） 与相关联。 相同的任务是更常见的方法是安装任何控件，如静态控件在对话框中。 然后在在运行时， [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog)函数中，删除该控件并将其自己的自定义控件替换为。
+此功能旨在使您可以用而非由 Windows 提供的控件。 在运行时，控件所关联的窗口类 (不完全相同C++类)。 相同的任务是更常见的方法是安装任何控件，如静态控件在对话框中。 然后在在运行时， [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog)函数中，删除该控件并将其自己的自定义控件替换为。
 
 > [!NOTE]
 > 这是旧技术。 今天被建议在大多数情况下编写的 ActiveX 控件或 Windows 公共控件的子类。

@@ -1,5 +1,5 @@
 ---
-title: 如何：管理资源 （c + +）
+title: 如何：管理资源 (C++)
 ms.date: 02/14/2019
 f1_keywords:
 - vc.resvw.resource.copying
@@ -31,13 +31,13 @@ helpviewer_keywords:
 - images [C++], exporting
 ms.assetid: 65f523e8-017f-4fc6-82d1-083c56d9131f
 ms.openlocfilehash: 6b9499fbd806c04774d12750c70816d0312a4e3f
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59036057"
 ---
-# <a name="how-to-manage-resources-c"></a>如何：管理资源 （c + +）
+# <a name="how-to-manage-resources-c"></a>如何：管理资源 (C++)
 
 ## <a name="copy-and-edit-resources"></a>复制和编辑资源
 
@@ -46,7 +46,7 @@ ms.locfileid: "59036057"
 可以轻松地从现有的资源或可执行文件的资源复制到当前的资源文件。 若要复制的资源，您打开这两个文件同时包含资源和将项从一个文件拖动到另一种或复制并粘贴在两个文件之间。 此方法适用于资源脚本 (.rc) 文件和资源模板 (.rct) 文件，以及作为可执行文件 (.exe) 文件。
 
 > [!NOTE]
-> Visual c + + 包括可以在自己的应用程序中使用的示例资源文件。 有关详细信息，请参阅[剪贴画：公共资源](https://github.com/Microsoft/VCSamples)。
+> VisualC++包括可以在自己的应用程序中使用的示例资源文件。 有关详细信息，请参阅[剪贴画：公共资源](https://github.com/Microsoft/VCSamples)。
 
 您不能拖放、 复制、 剪切、 或在项目中的资源文件之间粘贴 (**资源视图**) 并在文档窗口中打开独立.rc 文件。 无法在以前版本的产品来执行此操作。 仅在项目外部打开.rc 文件之间使用拖放方法。
 
@@ -72,7 +72,7 @@ ms.locfileid: "59036057"
       1. 右键单击要在其中粘贴该资源的资源文件 (例如， *Source2.rc*)，然后选择**粘贴**。
 
 > [!NOTE]
-> 若要避免使用符号名称或现有文件中的值冲突，Visual c + + 可能会更改传输的资源的符号值或符号名称和值时将其复制到新文件。
+> 若要避免发生冲突的符号名或在现有的文件中，视觉对象的值C++时可能会更改传输的资源的符号值或符号名称和值将其复制到新文件。
 
 在资源中进行复制时，你可以更改其语言属性和/或条件属性。
 
@@ -116,7 +116,7 @@ IDD_AboutBox (Finnish - XX33)
 > [!NOTE]
 > 导入过程的工作方式相同的资源类型的无论所选。 导入的资源自动添加到该资源类型的正确节点。
 
-### <a name="to-export-a-resource-for-use-outside-of-visual-c"></a>若要导出在 Visual c + + 外部使用的资源
+### <a name="to-export-a-resource-for-use-outside-of-visual-c"></a>若要导出 Visual 以外使用的资源C++
 
 1. 在中[资源视图](how-to-create-a-resource-script-file.md#create-resources)，右键单击你想要导出，然后选择的资源**导出**。 您可以接受当前文件的名称或键入一个新。
 
@@ -130,4 +130,4 @@ Win32
 
 [资源文件](../windows/resource-files-visual-studio.md)<br/>
 [如何：创建资源](../windows/how-to-create-a-resource-script-file.md)<br/>
-[如何：在编译时包含资源](../windows/how-to-include-resources-at-compile-time.md)<br/>
+[如何：在编译时添加资源](../windows/how-to-include-resources-at-compile-time.md)<br/>

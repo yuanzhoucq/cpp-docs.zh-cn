@@ -1,5 +1,5 @@
 ---
-title: 源 （c + + COM 属性）
+title: 源 (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.source
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - source attribute
 ms.assetid: 1878d05d-7709-4e97-b114-c62f38f5140e
 ms.openlocfilehash: 699ea64de49a4383bc8fb62b2f3b2133d7c496c9
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59030240"
 ---
 # <a name="source-c"></a>source (C++)
@@ -25,12 +25,12 @@ ms.locfileid: "59030240"
 
 ### <a name="parameters"></a>参数
 
-*接口*<br/>
+*interfaces*<br/>
 到类属性，指定将应用源时的一个或多个接口。 源应用到属性或方法时，不使用此参数。
 
 ## <a name="remarks"></a>备注
 
-**源**c + + 属性具有相同的功能[源](/windows/desktop/Midl/source)MIDL 特性。
+**源**C++属性具有相同的功能[源](/windows/desktop/Midl/source)MIDL 特性。
 
 可以使用[默认](default-cpp.md)属性来指定默认源接口的对象。
 

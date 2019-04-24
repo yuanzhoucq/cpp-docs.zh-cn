@@ -1,5 +1,5 @@
 ---
-title: 警告
+title: warning
 ms.date: 11/04/2016
 f1_keywords:
 - warning_CPP
@@ -11,10 +11,10 @@ helpviewer_keywords:
 - warning pragma
 ms.assetid: 8e9a0dec-e223-4657-b21d-5417ebe29cc8
 ms.openlocfilehash: 1341472af22582635207a2bdff93b4367fd59330
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037745"
 ---
 # <a name="warning-pragma"></a>警告杂注
@@ -37,8 +37,8 @@ ms.locfileid: "59037745"
 |------------------------|-------------|
 |*1, 2, 3, 4*|将给定级别应用于指定的警告。 这也会启用默认情况下处于关闭状态的指定警告。|
 |*default*|将警告行为重置为其默认值。 这也会启用默认情况下处于关闭状态的指定警告。 警告将在其默认存档级别生成。<br /><br /> 有关详细信息，请参阅 [Compiler Warnings That Are Off by Default](../preprocessor/compiler-warnings-that-are-off-by-default.md)。|
-|*禁用*|不发出指定的警告消息。|
-|*错误*|将指定警告报告为错误。|
+|*disable*|不发出指定的警告消息。|
+|*error*|将指定警告报告为错误。|
 |*once*|只显示指定消息一次。|
 |*suppress*|将杂注的当前状态推送到堆栈上，禁用下一行的指定警告，然后弹出警告堆栈，从而重置杂注状态。|
 

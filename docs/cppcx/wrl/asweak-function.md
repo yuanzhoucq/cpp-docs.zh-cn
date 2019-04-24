@@ -8,10 +8,10 @@ helpviewer_keywords:
 - AsWeak function
 ms.assetid: a6f10cfc-c1d6-4761-adb9-1a119cc99913
 ms.openlocfilehash: 45df6332fccb2a22284eb6478c7554d87318ca78
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59021393"
 ---
 # <a name="asweak-function"></a>AsWeak 函数
@@ -51,4 +51,4 @@ HRESULT AsWeak(
 
 ## <a name="see-also"></a>请参阅
 
-[Microsoft::WRL 命名空间](microsoft-wrl-namespace.md)
+[Microsoft::WRL Namespace](microsoft-wrl-namespace.md)

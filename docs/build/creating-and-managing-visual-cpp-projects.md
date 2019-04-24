@@ -1,5 +1,5 @@
 ---
-title: Visual Studio 项目的 c + +
+title: Visual Studio 项目的C++
 ms.date: 12/12/2018
 f1_keywords:
 - vcprojects
@@ -12,23 +12,23 @@ helpviewer_keywords:
 - ATL projects
 ms.assetid: 11003cd8-9046-4630-a189-a32bf3b88047
 ms.openlocfilehash: b4772b9bd625a542a18039386fefe42840ab65b1
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59038033"
 ---
-# <a name="visual-studio-projects---c"></a>Visual Studio 项目的 c + +
+# <a name="visual-studio-projects---c"></a>Visual Studio 项目的C++
 
 一个*Visual Studio 项目*项目基于 MSBuild 生成系统。 MSBuild 是 Visual Studio 的本机生成系统，并通常是最佳的生成系统用于 UWP 应用，以及使用 MFC 或 ATL 库、 COM 组件和其他特定于 Windows 的程序的桌面应用程序。 MSBuild 与 Visual Studio 中，紧密集成，但你也可以从命令行使用它。 
 
 ## <a name="create-a-project"></a>创建项目
 
-可以通过选择创建 c + + 项目**文件&#124;新建&#124;项目**，然后在左窗格中选择 Visual c + +。 在中心窗格中可以看到项目模板的列表： 
+您可以创建C++通过选择项目**文件&#124;新建&#124;项目**，然后选择视觉对象C++的左窗格中。 在中心窗格中可以看到项目模板的列表： 
 
    ![项目模板](../overview/media/vs2017-new-project.png "Visual Studio 2017 新建项目对话框")
 
-有关 Visual Studio 中包含的所有默认项目模板的详细信息，请参阅[Visual Studio 中的 c + + 项目模板](reference/visual-cpp-project-types.md)。 可以创建自己的项目模板。 有关详细信息，请参阅[如何：创建项目模板](/visualstudio/ide/how-to-create-project-templates)。
+有关 Visual Studio 中包含的所有默认项目模板的详细信息，请参阅[C++项目模板在 Visual Studio](reference/visual-cpp-project-types.md)。 可以创建自己的项目模板。 有关详细信息，请参阅[如何：创建项目模板](/visualstudio/ide/how-to-create-project-templates)。
 
 创建项目后，它将出现在[解决方案资源管理器](/visualstudio/ide/solutions-and-projects-in-visual-studio)窗口：
 
@@ -46,7 +46,7 @@ ms.locfileid: "59038033"
 
 ## <a name="set-compiler-options-and-other-build-properties"></a>设置编译器选项和其他生成属性
 
-若要配置项目的生成设置，请右键单击中的项目**解决方案资源管理器**，然后选择**属性**。 有关详细信息，请参阅[Visual Studio 中的设置 c + + 编译器和生成属性](working-with-project-properties.md)。
+若要配置项目的生成设置，请右键单击中的项目**解决方案资源管理器**，然后选择**属性**。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](working-with-project-properties.md)。
 
 ## <a name="compile-and-run"></a>编译并运行
 
@@ -60,13 +60,13 @@ ms.locfileid: "59038033"
 
 ## <a name="in-this-section"></a>本节内容
 
-[设置 c + + 编译器和生成 Visual Studio 中的属性](working-with-project-properties.md)<br/>
+[在 Visual Studio 中设置 C++ 编译器并生成属性](working-with-project-properties.md)<br/>
 如何使用属性页和属性表来指定项目设置。
 
-[引用库和生成时在组件](adding-references-in-visual-cpp-projects.md)<br/>
+[在生成时引用库和组件](adding-references-in-visual-cpp-projects.md)<br/>
 如何在项目中包括库、 Dll、 COM 和.NET 组件。
  
-[组织项目输出文件](how-to-organize-project-output-files-for-builds.md)<br/>
+[整理项目输出文件](how-to-organize-project-output-files-for-builds.md)<br/>
 如何自定义生成过程中创建的可执行文件的位置。
 
 [自定义生成步骤和生成事件](understanding-custom-build-steps-and-build-events.md)<br/>

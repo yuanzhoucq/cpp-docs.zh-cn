@@ -1,5 +1,5 @@
 ---
-title: 如何：创建资源 （c + +）
+title: 如何：创建资源 (C++)
 ms.date: 02/14/2019
 f1_keywords:
 - vc.editors.resource
@@ -37,13 +37,13 @@ helpviewer_keywords:
 - .rct files [C++]
 ms.assetid: 82be732a-cdcd-4a58-8de7-976d1418f86b
 ms.openlocfilehash: c22df99240c0fa076124e33224a4f6f4ab9a957e
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59028517"
 ---
-# <a name="how-to-create-resources-c"></a>如何：创建资源 （c + +）
+# <a name="how-to-create-resources-c"></a>如何：创建资源 (C++)
 
 可以为你的项目来创建资源：
 
@@ -72,7 +72,7 @@ ms.locfileid: "59028517"
 
 1. 在菜单中，转到**项目** > **添加新项**。
 
-1. 选择**Visual c + +** 文件夹，然后选择**资源文件 (.rc)** 右窗格中。
+1. 选择**可视化C++** 文件夹，然后选择**资源文件 (.rc)** 右窗格中。
 
 1. 为资源脚本文件中提供一个名称**名称**文本框中，然后选择**打开**。
 
@@ -113,16 +113,16 @@ ms.locfileid: "59028517"
 
 此外可以在使用右键单击**资源视图**窗口来启动命令的快捷菜单，或双击标题栏，停靠和取消停靠该窗口。 右键单击标题栏的命令的控件窗口的行为。 有关详细信息，请参阅[Windows Management](/visualstudio/ide/customizing-window-layouts-in-visual-studio)。
 
-**资源视图**windows 包括**添加资源**对话框具有以下属性将资源添加到 c + + Windows 桌面应用程序项目：
+**资源视图**windows 包括**添加资源**对话框具有以下属性来将资源添加到C++Windows 桌面应用程序项目：
 
 | 属性 | 描述 |
 |---|---|
 | **资源类型** | 指定要创建资源的类型。<br/><br/>您可以展开光标和对话框框资源目录以显示更多资源，在位于 *...\Microsoft visual Studio\<版本\>\VC\VCResourceTemplates\\< LCID\>\mfc.rct*。 如果你需要添加.rct 文件，则将其放在此处或指定另一个[包括路径](../windows/how-to-specify-include-directories-for-resources.md)。 显示在树控件中的顶层资源是 Visual Studio 提供的默认资源。 .Rct 文件中的资源显示在相应类别下的第二个级别。 可以添加的.rct 文件数没有预设的限制。<br/><br/> |
 | **新建** | 创建基于中选择的类型的资源**资源类型**框并在适当的编辑器中打开该资源。<br/><br/>例如，如果创建对话框资源，它会打开中的资源[对话框编辑器](../windows/dialog-editor.md)。 |
-| **导入** | 打开**导入**对话框可以导航到你想要导入到当前项目的资源。<br/><br/>您可以导入位图、 图标、 光标、 HTML、 声音 (。WAV)，或自定义资源文件。 |
-| **自定义** | 打开**新的自定义资源**对话框来创建自定义资源。<br/><br/>此外包括**资源类型**提供一个文本框，以便您输入的自定义资源类型名称的属性。 当您退出时，visual c + + 自动将名称变为大写。 自定义资源只能中编辑[二进制编辑器](../windows/binary-editor.md)。 |
+| **Import** | 打开**导入**对话框可以导航到你想要导入到当前项目的资源。<br/><br/>您可以导入位图、 图标、 光标、 HTML、 声音 (。WAV)，或自定义资源文件。 |
+| **自定义** | 打开**新的自定义资源**对话框来创建自定义资源。<br/><br/>此外包括**资源类型**提供一个文本框，以便您输入的自定义资源类型名称的属性。 VisualC++退出时自动转换成大写的名称。 自定义资源只能中编辑[二进制编辑器](../windows/binary-editor.md)。 |
 
-当创建新资源时，Visual c + + 的唯一名称为其指定，例如， `IDD_Dialog1`。 可以通过编辑资源属性关联的资源编辑器中或在自定义此资源 ID[属性窗口](/visualstudio/ide/reference/properties-window)。
+当创建新的资源，视觉对象C++将唯一的名称分配给它，例如， `IDD_Dialog1`。 可以通过编辑资源属性关联的资源编辑器中或在自定义此资源 ID[属性窗口](/visualstudio/ide/reference/properties-window)。
 
 > [!NOTE]
 > 未指定资源名称或保留的 Visual Studio 的 ID。 保留的名称为`DESIGNINFO`， `HWB`，并`TEXTINCLUDE`，，保留的 ID 为`255`。
@@ -191,4 +191,4 @@ Win32
 
 [资源文件](../windows/resource-files-visual-studio.md)<br/>
 [如何：管理资源](../windows/how-to-copy-resources.md)<br/>
-[如何：在编译时包含资源](../windows/how-to-include-resources-at-compile-time.md)<br/>
+[如何：在编译时添加资源](../windows/how-to-include-resources-at-compile-time.md)<br/>

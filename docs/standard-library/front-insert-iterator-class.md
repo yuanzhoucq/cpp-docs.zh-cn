@@ -11,11 +11,11 @@ helpviewer_keywords:
 - std::front_insert_iterator [C++], reference
 ms.assetid: a9a9c075-136a-4419-928b-c4871afa033c
 ms.openlocfilehash: 322b513dc648bf10fe593d9541560c4d22da21fb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50522936"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62159582"
 ---
 # <a name="frontinsertiterator-class"></a>front_insert_iterator 类
 
@@ -30,7 +30,7 @@ class front_insert_iterator;
 
 ### <a name="parameters"></a>参数
 
-*容器*<br/>
+*Container*<br/>
 要通过 `front_insert_iterator` 将元素插入前端的容器的类型。
 
 ## <a name="remarks"></a>备注
@@ -169,7 +169,7 @@ After the front insertions, the list L is:
 */
 ```
 
-## <a name="op_star"></a>  front_insert_iterator:: operator\*
+## <a name="op_star"></a>  front_insert_iterator::operator\*
 
 取消引用返回其所寻址元素的插入迭代器。
 

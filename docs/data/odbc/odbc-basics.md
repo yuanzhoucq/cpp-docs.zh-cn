@@ -9,10 +9,10 @@ helpviewer_keywords:
 - ODBC, components
 ms.assetid: ec529702-0fb2-4754-b8de-d1efa8eca18f
 ms.openlocfilehash: e14f5d051b9684cd79a34f5fb50feeb785d2f927
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59033234"
 ---
 # <a name="odbc-basics"></a>ODBC 基础
@@ -63,7 +63,7 @@ ODBC 组件如下：
 
 数据库类支持对其具有 ODBC 驱动程序的任何数据源。 这可能，例如，包括关系数据库、 编制索引的顺序访问方法 (ISAM) 数据库、 Microsoft Excel 电子表格或文本文件。 ODBC 驱动程序管理到数据源的连接，SQL 用于从数据库中选择记录。
 
-有关此版本的 Visual c + + 中包含的 ODBC 驱动程序的列表和有关获取其他驱动程序的信息，请参阅[ODBC 驱动程序列表](../../data/odbc/odbc-driver-list.md)。
+有关包含在视觉对象的此版本的 ODBC 驱动程序的列表C++和有关获取其他驱动程序的信息，请参阅[ODBC 驱动程序列表](../../data/odbc/odbc-driver-list.md)。
 
 ## <a name="see-also"></a>请参阅
 

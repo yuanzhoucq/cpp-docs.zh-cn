@@ -1,5 +1,5 @@
 ---
-title: vi_progid （c + + COM 属性）
+title: vi_progid (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.vi_progid
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - vi_progid attribute
 ms.assetid: a52449be-b93e-4111-b883-44bb8da53261
 ms.openlocfilehash: 7050543c9acf3801a99d3e32e119325900bdb050
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59033584"
 ---
 # <a name="viprogid"></a>vi_progid
@@ -32,7 +32,7 @@ Progid 提供用来标识 COM/ActiveX 对象的类标识符 (CLSID) 的用户可
 
 ## <a name="remarks"></a>备注
 
-**Vi_progid** c + + 属性允许您指定 COM 对象独立于版本的 ProgID。 ProgID 具有窗体*name1.name2.version*。 独立于版本的 ProgID 不具有*版本*。 可以同时指定`progid`并**vi_progid**上的特性`coclass`。 如果未指定**vi_progid**，则独立于版本的 ProgID 是指定的值[progid](progid.md)属性。
+**Vi_progid** C++属性允许您指定 COM 对象独立于版本的 ProgID。 ProgID 具有窗体*name1.name2.version*。 独立于版本的 ProgID 不具有*版本*。 可以同时指定`progid`并**vi_progid**上的特性`coclass`。 如果未指定**vi_progid**，则独立于版本的 ProgID 是指定的值[progid](progid.md)属性。
 
 **vi_progid**意味着`coclass`属性，也就是说，如果您指定**vi_progid**，它是与指定相同的功能`coclass`并**vi_progid**属性。
 

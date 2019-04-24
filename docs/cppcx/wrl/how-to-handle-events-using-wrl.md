@@ -4,15 +4,15 @@ ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 1c77543f-7b0c-4a94-93bf-e3225885ed76
 ms.openlocfilehash: 959a85d6cf6de666ae56d09035acefe9a3828ae8
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59033172"
 ---
 # <a name="how-to-handle-events-using-wrl"></a>如何：使用 WRL 处理事件
 
-本文档演示如何使用 Windows 运行时 c + + 模板库 (WRL) 订阅和处理 Windows 运行时对象的事件。
+本文档演示如何使用 Windows 运行时C++模板库 (WRL) 订阅和处理的 Windows 运行时对象的事件。
 
 有关创建该组件的实例，并检索属性值的更多基础示例，请参阅[如何：激活和使用 Windows 运行时组件](how-to-activate-and-use-a-windows-runtime-component-using-wrl.md)。
 
@@ -21,9 +21,9 @@ ms.locfileid: "59033172"
 以下步骤开始`ABI::Windows::System::Threading::IDeviceWatcher`对象，并使用事件处理程序来监视进度。 `IDeviceWatcher`接口，可枚举的设备，以异步方式，或在后台，并添加、 移除或更改设备时收到通知。 [回调](callback-function-wrl.md)函数是此示例中的一个重要部分，因为它可以使该代码以指定的事件处理程序处理的后台操作的结果。 以下是完整的示例。
 
 > [!WARNING]
-> 虽然通常使用 Windows 运行时 c + + 模板库中的通用 Windows 平台应用，但此示例使用一个控制台应用程序是为了进行说明。 函数如`wprintf_s`通用 Windows 平台应用中不可用。 有关类型和可以在通用 Windows 平台应用中使用的函数的详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)并[Win32 和 COM 适用于 UWP 应用](/uwp/win32-and-com/win32-and-com-for-uwp-apps)。
+> 虽然通常使用 Windows 运行时C++模板库在通用 Windows 平台应用中，此示例使用一个控制台应用程序是为了进行说明。 函数如`wprintf_s`通用 Windows 平台应用中不可用。 有关类型和可以在通用 Windows 平台应用中使用的函数的详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)并[Win32 和 COM 适用于 UWP 应用](/uwp/win32-and-com/win32-and-com-for-uwp-apps)。
 
-1. 包括 (`#include`) 所需的任何 Windows 运行时、 Windows 运行时 c + + 模板库或 c + + 标准库标头。
+1. 包括 (`#include`) 所需 Windows 运行时，Windows 运行时的任何C++模板库，或C++标准库标头。
 
    [!code-cpp[wrl-consume-event#2](../codesnippet/CPP/how-to-handle-events-using-wrl_1.cpp)]
 

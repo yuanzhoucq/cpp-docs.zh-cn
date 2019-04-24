@@ -5,15 +5,15 @@ helpviewer_keywords:
 - OLE DB provider templates, object interfaces
 ms.assetid: b0fc7cf8-428a-4584-9d64-ce9074d0eb66
 ms.openlocfilehash: c0452ca74509b65de3787af93bff41b3cb399c99
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59033861"
 ---
 # <a name="adding-an-interface-to-your-provider"></a>将接口添加到提供程序
 
-确定你想要添加到接口的对象 (通常由创建数据源、 行集、 命令或会话对象**OLE DB 提供程序向导**)。 可能需要将添加到接口的对象是一个您的提供程序当前不支持它。 在这种情况下，运行**ATL OLE DB 提供程序向导**来创建对象。 右键单击该项目中的**类视图**，单击**添加** > **新项**从菜单中选择**已安装** >  **Visual c + +** > **ATL**，然后单击**ATL OLEDB 提供程序**。 你可能想要将接口代码放在一个单独的目录，然后将文件复制到你提供程序的项目。
+确定你想要添加到接口的对象 (通常由创建数据源、 行集、 命令或会话对象**OLE DB 提供程序向导**)。 可能需要将添加到接口的对象是一个您的提供程序当前不支持它。 在这种情况下，运行**ATL OLE DB 提供程序向导**来创建对象。 右键单击该项目中的**类视图**，单击**添加** > **新项**从菜单中选择**已安装** > **可视化C++**   >  **ATL**，然后单击**ATL OLEDB 提供程序**。 你可能想要将接口代码放在一个单独的目录，然后将文件复制到你提供程序的项目。
 
 如果你创建一个新类来支持接口，请从类中继承的对象。 例如，可能会将类添加`IRowsetIndexImpl`到行集对象：
 

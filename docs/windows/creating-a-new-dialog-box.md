@@ -1,5 +1,5 @@
 ---
-title: 如何：创建一个对话框 （c + +）
+title: 如何：创建一个对话框 (C++)
 ms.date: 02/15/2019
 f1_keywords:
 - vc.editors.dialog
@@ -15,15 +15,15 @@ helpviewer_keywords:
 - dialog boxes [C++], positioning
 ms.assetid: 303de801-c4f8-42e1-b622-353f6423f688
 ms.openlocfilehash: c5f026683881ba8e608bd00089879e0e2a7b4af2
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59036323"
 ---
-# <a name="how-to-create-a-dialog-box-c"></a>如何：创建一个对话框 （c + +）
+# <a name="how-to-create-a-dialog-box-c"></a>如何：创建一个对话框 (C++)
 
-位置和大小的 c + + 对话框中，和位置中，控件的大小以对话框单元为单位测量。 当选择 Visual Studio 状态栏的右下角显示各个控件和对话框中的值。
+位置和大小的C++对话框的的位置和大小的控件，以对话框单元为单位。 当选择 Visual Studio 状态栏的右下角显示各个控件和对话框中的值。
 
 > [!NOTE]
 > 如果你的项目尚未包含 .rc 文件，请参阅 [创建新的资源脚本文件](../windows/how-to-create-a-resource-script-file.md)。

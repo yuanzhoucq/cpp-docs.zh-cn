@@ -4,10 +4,10 @@ ms.date: 03/21/2019
 helpviewer_keywords:
 - CMake debugging
 ms.openlocfilehash: 9899f99994935ec419fff400670644b7d78a190a
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59035343"
 ---
 # <a name="configure-cmake-debugging-sessions"></a>配置 CMake 调试会话
@@ -68,7 +68,7 @@ C:\Users\satyan\7f14809a-2626-873e-952e-cdf038211175\
 
 ## <a name="see-also"></a>请参阅
 
-[在 Visual Studio 中的 CMake 项目](cmake-projects-in-visual-studio.md)<br/>
+[Visual Studio 中的 CMake 项目](cmake-projects-in-visual-studio.md)<br/>
 [配置 Linux CMake 项目](../linux/cmake-linux-project.md)<br/>
 [连接到远程 Linux 计算机](../linux/connect-to-your-remote-linux-computer.md)<br/>
 [自定义 CMake 生成设置](customize-cmake-settings.md)<br/>

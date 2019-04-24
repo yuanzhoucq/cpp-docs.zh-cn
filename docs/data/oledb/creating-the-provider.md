@@ -5,10 +5,10 @@ helpviewer_keywords:
 - OLE DB providers, creating
 ms.assetid: 2506ba8f-010d-4231-aac1-387432f7b6b9
 ms.openlocfilehash: 6258b5247e4d9d027e0f03bc133dff1a059665bd
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59032344"
 ---
 # <a name="creating-the-provider"></a>创建提供程序
@@ -19,7 +19,7 @@ ms.locfileid: "59032344"
 
 1. 在快捷菜单上，单击**外**，然后单击**添加类**。
 
-1. 在中**添加类**对话框中的**已安装** > **Visual c + +** > **ATL**，选择**ATL OLEDB 提供程序**图标，，然后单击**打开**。
+1. 在中**添加类**对话框中的**已安装** > **Visual C++**   >  **ATL**，选择**ATL OLEDB 提供程序**图标，，然后单击**打开**。
 
 1. 在中**ATL OLE DB 提供程序向导**，输入在提供程序的短名称**短名称**框。 下面的主题使用短名称*自定义*，但你可以使用其他名称。 其他名称框填充根据输入的名称。
 

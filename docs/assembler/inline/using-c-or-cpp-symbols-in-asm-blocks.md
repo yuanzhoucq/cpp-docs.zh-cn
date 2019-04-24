@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Visual C++, in __asm blocks
 ms.assetid: 0758ffdc-dfe9-41c8-a5e1-fd395bcac328
 ms.openlocfilehash: fc22af8ec04d616eb8f5566b118e19c405605401
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50552511"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62166537"
 ---
 # <a name="using-c-or-c-symbols-in-asm-blocks"></a>在 __asm 块中使用 C 或 C++ 符号
 
@@ -21,7 +21,7 @@ ms.locfileid: "50552511"
 
 `__asm` 块可以引用块显示范围内的任何 C 或 C++ 符号。 （C 和 C++ 符号是变量名、函数名和标签；即不是符号常量或 `enum` 成员的名称。 您不能调用 C++ 成员函数。）
 
-C 和 C++ 符号的使用有一些限制：
+ C 和 C++ 符号的使用有一些限制：
 
 - 每个汇编语言语句只能包含一个 C 或 C++ 符号。 多个符号可以出现在仅使用相同的程序集指令**长度**，**类型**，并**大小**表达式。
 

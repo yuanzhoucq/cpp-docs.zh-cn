@@ -8,10 +8,10 @@ helpviewer_keywords:
 - InterfaceListHelper structure
 ms.assetid: 4297e419-c96b-45df-8a00-7568062125ba
 ms.openlocfilehash: 03bfed00147daef22fe91e6f061ea6720834090f
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59025106"
 ---
 # <a name="interfacelisthelper-structure"></a>InterfaceListHelper 结构
@@ -44,10 +44,10 @@ struct InterfaceListHelper<T0, Nil, Nil, Nil, Nil, Nil, Nil, Nil, Nil>;
 *T0*<br/>
 模板参数 0，这是必需的。
 
-*T1*<br/>
+T1<br/>
 模板参数 1，即默认情况下未指定。
 
-*T2*<br/>
+T2<br/>
 模板参数 2，即默认情况下未指定。第三个模板参数。
 
 *T3*<br/>

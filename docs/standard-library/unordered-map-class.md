@@ -139,11 +139,11 @@ helpviewer_keywords:
 - std::unordered_map::swap
 ms.assetid: 7cf7cfa1-16e7-461c-a9b2-3b8d8ec24e0d
 ms.openlocfilehash: 51b84b8a48365189abf1efa111ae2186af0cab11
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519812"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62159140"
 ---
 # <a name="unorderedmap-class"></a>unordered_map 类
 
@@ -168,7 +168,7 @@ class unordered_map;
 |*Ty*|映射类型。|
 |*哈希*|哈希函数对象类型。|
 |*Pred*|相等比较函数对象类型。|
-|*分配*|allocator 类。|
+|*Alloc*|allocator 类。|
 
 ## <a name="members"></a>成员
 
@@ -217,7 +217,7 @@ class unordered_map;
 |[max_bucket_count](#max_bucket_count)|获取最大的存储桶数。|
 |[max_load_factor](#max_load_factor)|获取或设置每个存储桶的最多元素数。|
 |[max_size](#max_size)|获取受控序列的最大大小。|
-|[回顾](#rehash)|重新生成哈希表。|
+|[rehash](#rehash)|重新生成哈希表。|
 |[size](#size)|对元素数进行计数。|
 |[swap](#swap)|交换两个容器的内容。|
 |[unordered_map](#unordered_map)|构造容器对象。|
@@ -1024,7 +1024,7 @@ pair<iterator, bool>  emplace( Args&&... args);
 
 |参数|描述|
 |-|-|
-|*参数*|用于构造要插入到 unordered_map 中的元素的转发参数（除非它已包含一个具有相对有序的值的元素）。|
+|*args*|用于构造要插入到 unordered_map 中的元素的转发参数（除非它已包含一个具有相对有序的值的元素）。|
 
 ### <a name="return-value"></a>返回值
 
@@ -1053,7 +1053,7 @@ iterator emplace_hint(const_iterator where, Args&&... args);
 
 |参数|描述|
 |-|-|
-|*参数*|用于构造要插入 unordered_map 中的元素的转发参数，除非 unordered_map 已包含该元素，或更普遍的情况是，除非它已包含其键已经过相同排序的元素。|
+|*args*|用于构造要插入 unordered_map 中的元素的转发参数，除非 unordered_map 已包含该元素，或更普遍的情况是，除非它已包含其键已经过相同排序的元素。|
 |*where*|有关开始搜索正确插入点的位置的提示。|
 
 ### <a name="return-value"></a>返回值
@@ -1472,7 +1472,7 @@ IList);
 
 |参数|描述|
 |-|-|
-|*val*|要插入到 unordered_map 中的元素的值（除非它已经包含一个具有相对有序的键的元素）。|
+|*Val*|要插入到 unordered_map 中的元素的值（除非它已经包含一个具有相对有序的键的元素）。|
 |*Where*|开始搜索正确插入点的位置。|
 |*ValTy*|指定 unordered_map 可用于构造的元素的自变量类型的模板参数[value_type](../standard-library/map-class.md#value_type)，和完美转发*Val*作为自变量。|
 |*第一个*|要复制的第一个元素的位置。|
@@ -2099,7 +2099,7 @@ Ty& operator[](Key&& keyval);
 
 |参数|描述|
 |-|-|
-|*keyval*|要查找或插入的键值。|
+|*Keyval*|要查找或插入的键值。|
 
 ### <a name="return-value"></a>返回值
 

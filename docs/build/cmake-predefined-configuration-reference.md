@@ -5,10 +5,10 @@ ms.date: 03/05/2019
 helpviewer_keywords:
 - CMake redefined configurations
 ms.openlocfilehash: cecadaec2e409dfba3b1929e406c36df3e498307
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59031439"
 ---
 # <a name="cmake-predefined-build-configurations"></a>CMake 预定义生成配置
@@ -346,7 +346,7 @@ You can use these optional settings for more control:
 
 ## <a name="see-also"></a>请参阅
 
-[在 Visual Studio 中的 CMake 项目](cmake-projects-in-visual-studio.md)<br/>
+[Visual Studio 中的 CMake 项目](cmake-projects-in-visual-studio.md)<br/>
 [配置 Linux CMake 项目](../linux/cmake-linux-project.md)<br/>
 [连接到远程 Linux 计算机](../linux/connect-to-your-remote-linux-computer.md)<br/>
 [配置 CMake 调试会话](configure-cmake-debugging-sessions.md)<br/>

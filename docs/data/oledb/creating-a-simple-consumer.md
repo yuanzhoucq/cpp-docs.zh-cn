@@ -5,10 +5,10 @@ helpviewer_keywords:
 - OLE DB consumers, creating
 ms.assetid: ae32d657-72ea-4db8-9839-75cb5cff68ae
 ms.openlocfilehash: 060a39a8436ff73900ebfaea7d1c882b9862ee7e
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59025125"
 ---
 # <a name="creating-a-simple-consumer"></a>创建简单使用者
@@ -21,7 +21,7 @@ ms.locfileid: "59025125"
 
    此时将出现“新建项目”对话框。
 
-1. 在中**项目类型**窗格中，单击**已安装** > **Visual c + +** > **Windows 桌面**文件夹中，然后单击**Windows 桌面向导**中的图标**模板**窗格。 在中**名称**框中，例如，输入你的项目名称*MyCons*。
+1. 在中**项目类型**窗格中，单击**已安装** > **Visual C++**   >  **Windows 桌面**文件夹，，然后单击**Windows 桌面向导**中的图标**模板**窗格。 在中**名称**框中，例如，输入你的项目名称*MyCons*。
 
 1. 单击 **“确定”**。
 
@@ -41,7 +41,7 @@ ms.locfileid: "59025125"
 
    “添加新项”对话框随即出现。
 
-1. 在中**类别**窗格中，单击**已安装** > **Visual c + +** > **ATL**，单击**ATL OLEDB 使用者**中的图标**模板**窗格中，，然后单击**添加**。
+1. 在中**类别**窗格中，单击**已安装** > **Visual C++**   >  **ATL**，单击**ATL OLEDB 使用者**中的图标**模板**窗格中，，然后单击**添加**。
 
    **ATL OLEDB 使用者向导**出现。
 

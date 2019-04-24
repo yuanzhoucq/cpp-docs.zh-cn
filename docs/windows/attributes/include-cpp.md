@@ -1,5 +1,5 @@
 ---
-title: 包括 （c + + COM 属性）
+title: 包括 (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.include
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - include attribute
 ms.assetid: d23f8b91-fe5b-48fa-9371-8bd73af7b8e3
 ms.openlocfilehash: d9c68601bea4cecd92b371dada5fb086aeb7657f
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59033692"
 ---
 # <a name="include-c"></a>include (C++)
@@ -30,9 +30,9 @@ ms.locfileid: "59033692"
 
 ## <a name="remarks"></a>备注
 
-**包括**c + + 属性会导致`#include`语句下面放置`import "docobj.idl"`语句生成的.idl 文件中。
+**包括**C++属性的原因`#include`语句下面放置`import "docobj.idl"`语句生成的.idl 文件中。
 
-**包括**c + + 属性具有相同的功能[包括](/windows/desktop/Midl/include)MIDL 特性。
+**包括**C++属性具有相同的功能[包括](/windows/desktop/Midl/include)MIDL 特性。
 
 ## <a name="example"></a>示例
 

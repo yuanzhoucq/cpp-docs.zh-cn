@@ -8,15 +8,15 @@ helpviewer_keywords:
 - OLE DB, schema rowsets
 ms.assetid: 71c5e14b-6e33-4502-a2d9-a1dc6d6e9ba0
 ms.openlocfilehash: b49d53836179d765a72409d28304d7166dcf51d8
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59024616"
 ---
 # <a name="supporting-schema-rowsets"></a>支持架构行集
 
-架构行集允许使用者无需知道其基础结构或架构中获取有关数据存储区的信息。 例如，数据存储区可能有组织到用户定义层次结构，因此会有没有办法确保通过阅读本文了解除架构表。 （作为另一个示例中，Visual c + + 向导使用架构行集来生成使用者的访问器。）若要允许使用者执行此操作，提供程序的会话对象公开的方法上[IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85))接口。 在 Visual c + + 应用程序，您使用[IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md)类，以实现`IDBSchemaRowset`。
+架构行集允许使用者无需知道其基础结构或架构中获取有关数据存储区的信息。 例如，数据存储区可能有组织到用户定义层次结构，因此会有没有办法确保通过阅读本文了解除架构表。 (作为另一个示例中，视觉对象C++向导使用架构行集来生成使用者的访问器。)若要允许使用者执行此操作，提供程序的会话对象公开的方法上[IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85))接口。 视觉对象中C++应用程序，使用[IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md)类，以实现`IDBSchemaRowset`。
 
 `IDBSchemaRowsetImpl` 支持以下方法：
 

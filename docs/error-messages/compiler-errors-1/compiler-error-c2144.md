@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2144
 ms.assetid: 49f3959b-324f-4c06-9588-c0ecef5dc5b3
 ms.openlocfilehash: a75330d26b0924e60f7e46d10d617341709d7e23
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "58778281"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59776101"
 ---
 # <a name="compiler-error-c2144"></a>编译器错误 C2144
 
@@ -23,7 +23,7 @@ ms.locfileid: "58778281"
 
 尝试从包含空白字符的 CLR 关键字创建宏时，也会发生 C2144。
 
-如果你尝试进行类型转发，还可能会看到 C2144。 请参阅[类型转发 (C + + CLI)](../../extensions/type-forwarding-cpp-cli.md)有关详细信息。
+如果你尝试进行类型转发，还可能会看到 C2144。 请参阅[类型转发 (C++/CLI)](../../extensions/type-forwarding-cpp-cli.md)有关详细信息。
 
 ## <a name="examples"></a>示例
 

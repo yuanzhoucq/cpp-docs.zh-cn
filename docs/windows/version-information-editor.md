@@ -1,5 +1,5 @@
 ---
-title: 版本信息编辑器 （c + +）
+title: 版本信息编辑器 (C++)
 ms.date: 02/14/2019
 f1_keywords:
 - vc.editors.version.F1
@@ -24,13 +24,13 @@ helpviewer_keywords:
 - version information
 ms.assetid: 772e6f19-f765-4cec-9521-0ad3eeb99f9b
 ms.openlocfilehash: 7910522578d89657adb09eb7729eb7539e010027
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59027645"
 ---
-# <a name="version-information-editor-c"></a>版本信息编辑器 （c + +）
+# <a name="version-information-editor-c"></a>版本信息编辑器 (C++)
 
 版本信息包括公司和产品标识、产品发行版号以及版权与商标通知。 与**版本信息编辑器**，创建和维护此存储在版本信息资源中的数据。 版本信息资源不必需的应用程序，但它是一个很好的收集标识的应用程序的信息。 安装 API 也使用版本信息。
 

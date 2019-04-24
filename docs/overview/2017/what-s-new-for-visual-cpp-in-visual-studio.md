@@ -6,11 +6,11 @@ ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
 author: mikeblome
 ms.author: mblome
 ms.openlocfilehash: e74f8270d241b9725a24ee257fb846a7cc4e079e
-ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58899453"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59779482"
 ---
 # <a name="whats-new-for-c-in-visual-studio-2017"></a>Visual Studio 2017 中 C++ 的新增功能
 
@@ -80,7 +80,7 @@ Microsoft C++ 编译器支持 Intel AVX-512，包括将 AVX-512 中的新函数�
 - 性能改进：`basic_string::operator==` 现先检查字符串的大小，然后再比较字符串的内容。
 - 性能改进：删除了 `basic_string` 中编译器优化程序难以分析的控制耦合。 请注意，对任意短字符串调用 `reserve` 时，即使不执行操作，也会耗费资源。
 - 添加了 \<any\>、\<string_view\>、`apply()` 和 `make_from_tuple()`。
-- `std::vector` 已全面改进，以提高正确性和性能：现可按标准版的要求正确处理插入及定位期间的别名，现在标准版需要时通过 `move_if_noexcept()` 和其他逻辑提供强大的异常保障，且减少了插入/定位所执行的元素操作。
+- 全面改进了 `std::vector`，以提高正确性和性能：现可按标准版的要求正确处理插入及定位期间的别名，现在标准版需要时通过 `move_if_noexcept()` 和其他逻辑提供强大的异常保障，且减少了插入/定位所执行的元素操作。
 - 现在 C++ 标准库会避免取消引用 null 复杂精致指针。
 - 添加了 \<optional\>、\<variant\>、`shared_ptr::weak_type` 和 \<cstdalign\>。
 - 在 `min(initializer_list)`、`max(initializer_list)`、`minmax(initializer_list)`、`min_element()`, `max_element()` 和 `minmax_element()` 中实现了 C++14 `constexpr`。
@@ -116,7 +116,7 @@ Microsoft C++ 编译器支持 Intel AVX-512，包括将 AVX-512 中的新函数�
 - 过去，如果 length 参数不是整数类型，则无法编译 `for_each_n()`、`generate_n()` 和 `search_n()` 算法；现在，它们尝试将非整数长度转换为迭代器的 `difference_type`。
 - `normal_distribution<float>` 不再在标准库中发出关于从双精度型收缩为浮点型的警告。
 - 修复了一些在检查最大大小溢出时与 `npos` 而不是 `max_size()` 相比较的 `basic_string` 操作。
-- `condition_variable::wait_for(lock, relative_time, predicate)` 会在出现虚假唤醒时等待整个相对时间。 现在，它将仅等待单个相对时间间隔。
+- 过去，出现虚假唤醒时，`condition_variable::wait_for(lock, relative_time, predicate)` 会等待整个相对时间。 现在，它将仅等待单个相对时间间隔。
 - `future::get()` 现按标准版要求，使 `future` 失效。
 - `iterator_traits<void *>` 曾经是一个硬错误，它尝试形成 `void&`；而现在，它完全变成了一个空结构，允许在 “is iterator”SFINAE 条件中使用 `iterator_traits`。
 - 修复了 Clang **-Wsystem-headers** 报告的一些警告。
@@ -156,7 +156,7 @@ Microsoft C++ 编译器支持 Intel AVX-512，包括将 AVX-512 中的新函数�
 - 完成了将基于函数的表达式 SFINAE 更改为基于 `struct` 和 `void_t`。
 - 标准库算法现在避免使用后增量迭代器。
 - 修复了在 64 位系统上使用 32 位分配器时的截断警告。
-- `std::vector` 通过重复使用缓冲区（如果可能），在非 POCMA 非等分配器情况下，移动赋值现在更高效。
+- 通过重复使用缓冲区（如果可能），在非 POCMA 非等分配器情况下，`std::vector` 移动赋值现在更高效。
 
 #### <a name="readability-and-other-improvements"></a>可读性和其他改进
 
@@ -206,18 +206,18 @@ Microsoft C++ 编译器支持 Intel AVX-512，包括将 AVX-512 中的新函数�
 - 构造 `std::random_device` 时不再构造再销毁 `std::string`。
 - `std::equal` 和 `std::partition` 有跳转线程优化传递，可以免去一次迭代器比较。
 - 当 `std::reverse` 将指针传递到完全可复制的 `T` 时，它将分派至一个手写的矢量化实现。
-- `std::fill`、`std::equal` 和 `std::lexicographical_compare` 曾被指示如何调度到 `std::byte` 和 `gsl::byte` 的 `memset` 和 `memcmp`（及其他类似 char 的枚举和 enum 类）。 请注意，`std::copy` 使用 `is_trivially_copyable` 进行调度，因此未作任何更改。
+- 过去，`std::fill`、`std::equal` 和 `std::lexicographical_compare` 被指示如何调度到 `std::byte` 和 `gsl::byte` 的 `memset` 和 `memcmp`（及其他类似 char 的枚举和 enum 类）。 请注意，`std::copy` 使用 `is_trivially_copyable` 进行调度，因此未作任何更改。
 - 标准库不再包含仅有的行为是使类型不完全易损坏的空大括号析构函数。
 
 #### <a name="correctness-fixes-in-visual-studio-2017-version-155"></a>Visual Studio 2017 版本 15.5 中的准确性改进
 
-- `std::partition` 现在调用谓词 N 次而不是 N + 1 次（按标准的要求）。
+- 按标准的要求，`std::partition` 现在调用谓词 N 次而不是 N + 1 次。
 - 已在版本 15.5 中修复版本 15.3 中避免神奇的静态对象的尝试。
 - `std::atomic<T>` 不再需要 `T` 默认可构造。
 - 启用了迭代器调试时，需耗用对数时间的堆算法不再进行“输入实际为堆”的线性时间断言。
-- `__declspec(allocator)` 现仅针对 C1XX 进行保护，防止出现来自不了解此 declspec 的 Clang 的警告。
+- 现在，仅为 C1XX 保护 `__declspec(allocator)`，防止出现来自不了解此 declspec 的 Clang 的警告。
 - `basic_string::npos` 现在可作为编译时常数提供。
-- `std::allocator` （在 C++17 模式中）现在正确处理过度对齐的类型（即其对齐高于 `max_align_t` 的类型）的分配，除非由 /Zc:alignedNew- 禁用。  例如，对于 SSE 和 AVX 说明，现在将正确对齐采用 16 或 32 字节对齐的对象的矢量。
+- C++17 模式中的 `std::allocator` 现在正确处理过度对齐的类型（即其对齐高于 `max_align_t` 的类型）的分配，除非由 /Zc:alignedNew- 禁用。  例如，对于 SSE 和 AVX 说明，现在将正确对齐采用 16 或 32 字节对齐的对象的矢量。
 
 ### <a name="visual-studio-2017-version-156"></a>Visual Studio 2017 版本 15.6
 

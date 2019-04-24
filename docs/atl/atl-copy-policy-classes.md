@@ -9,10 +9,10 @@ helpviewer_keywords:
 - _CopyInterface class
 ms.assetid: 06704b68-d318-4c5d-a65b-71457fe9d00d
 ms.openlocfilehash: 73bec31b4ae140797c85a06ee7c5023c9e0c4446
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58776955"
 ---
 # <a name="atl-copy-policy-classes"></a>ATL 复制策略类
@@ -74,7 +74,7 @@ VCUE_Copy.h 还包含此类的以下专用化： `GenericCopy<BSTR>`， `Generic
 
 ### <a name="mapcopy"></a>MapCopy
 
-`MapCopy` 假定要复制的数据存储到 c + + 标准库-style 映射，因此它允许您指定的映射，在其中存储数据的目标类型的类型。 类的实现仅使用提供的 typedef *MapType*类来确定的源数据类型，并调用适当`GenericCopy`类。 不需要此类的任何专用化。
+`MapCopy` 假定要复制的数据存储到C++标准库样式映射，因此它允许您指定的映射，在其中存储数据的目标类型的类型。 类的实现仅使用提供的 typedef *MapType*类来确定的源数据类型，并调用适当`GenericCopy`类。 不需要此类的任何专用化。
 
 [!code-cpp[NVC_ATL_COM#31](../atl/codesnippet/cpp/atl-copy-policy-classes_2.h)]
 

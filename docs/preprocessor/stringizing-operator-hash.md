@@ -13,10 +13,10 @@ helpviewer_keywords:
 - '# preprocessor operator'
 ms.assetid: 1175dd19-4538-43b3-ad97-a008ab80e7b1
 ms.openlocfilehash: 4f23eea017197ae1f984e097bb3967c1228fef09
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59035710"
 ---
 # <a name="stringizing-operator-"></a>字符串化运算符 (#)
@@ -30,7 +30,7 @@ ms.locfileid: "59035710"
 
 此外，如果通常在参数中包含的字符需要转义序列在字符串文本中使用时 (例如，在引号 (**"**) 或反斜杠 (**\\**) 字符)，则所需转义反斜杠将自动插入的字符之前。
 
-Visual c + + 字符串化运算符无法正常使用时与包含转义序列的字符串一起使用。 在此情况下，编译器将生成[编译器错误 C2017](../error-messages/compiler-errors-1/compiler-error-c2017.md)。
+视觉对象C++字符串化运算符无法正常使用时与包含转义序列的字符串一起使用。 在此情况下，编译器将生成[编译器错误 C2017](../error-messages/compiler-errors-1/compiler-error-c2017.md)。
 
 ## <a name="examples"></a>示例
 

@@ -1,15 +1,15 @@
 ---
-title: 参数特性 (c + + COM)
+title: 参数特性 (C++ COM)
 ms.date: 10/02/2018
 helpviewer_keywords:
 - attributes [C++/CLI], parameter attributes
 - parameter attributes
 ms.assetid: 024c2dd5-49d7-4ced-a17a-c56c1bc485b6
 ms.openlocfilehash: e89542027c2187a77c18637432a5b60f47377c10
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59029546"
 ---
 # <a name="parameter-attributes"></a>Parameter 特性
@@ -18,17 +18,17 @@ ms.locfileid: "59029546"
 
 |特性|描述|
 |---------------|-----------------|
-|[自定义](custom-cpp.md)|你可以定义自己的属性。|
+|[custom](custom-cpp.md)|你可以定义自己的属性。|
 |[defaultvalue](defaultvalue.md)|允许类型化可选参数的默认值的规范。|
 |[first_is](first-is.md)|指定要传输的第一个数组元素的索引。|
 |[iid_is](iid-is.md)|指定要传输的第一个数组元素的索引。|
 |[immediatebind](immediatebind.md)|指示数据库将立即收到通知的所有更改将数据绑定对象的属性。|
-|[中的](in-cpp.md)|指示参数是要从调用过程传递给被调用过程。|
+|[in](in-cpp.md)|指示参数是要从调用过程传递给被调用过程。|
 |[last_is](last-is.md)|指定要传输的最后一个数组元素的索引。|
 |[lcid](lcid.md)|可以将区域设置标识符传递给函数。|
 |[length_is](length-is.md)|指定要传输的数组元素数。|
 |[max_is](max-is.md)|指定有效的数组索引的最大值。|
-|[可选](optional-cpp.md)|指定的成员函数的可选参数。|
+|[optional](optional-cpp.md)|指定的成员函数的可选参数。|
 |[out](out-cpp.md)|标识从被调用过程返回到调用过程（从服务器到客户端）的指针参数。|
 |[range](range-cpp.md)|指定参数或在运行时设置其值的字段的允许值的范围。|
 |[ref](ref-cpp.md)|标识引用指针。|

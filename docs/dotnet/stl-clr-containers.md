@@ -7,17 +7,17 @@ helpviewer_keywords:
 - containers, STL/CLR
 ms.assetid: 34ca8031-2041-46b9-aed9-29082d1972ea
 ms.openlocfilehash: dc2e5ce3263c61839a1ba434ab0d2a39e6a9078f
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58774537"
 ---
 # <a name="stlclr-containers"></a>STL/CLR 容器
 
-STL/CLR 库包含类似于那些中找到 c + + 标准库，但在.NET Framework 的托管环境中运行的容器。 它不保持为最新状态与实际的 c + + 标准库，并且用于支持旧版进行维护。
+STL/CLR 库包含类似于中的容器的C++标准库，但它在.NET Framework 的托管环境中运行。 不进行更新的实际C++标准库和维护的旧版支持。
 
-本文档提供 STL/CLR 中的容器的概述，例如容器元素的需求、可以插入到容器中的元素类型以及容器中的元素的所有权问题。 在适当的情况提到了本机 c + + 标准库和 STL/CLR 之间的差异。
+本文档提供 STL/CLR 中的容器的概述，例如容器元素的需求、可以插入到容器中的元素类型以及容器中的元素的所有权问题。 在适当的位置，本机之间的差异C++标准库和 STL/CLR 所述。
 
 ## <a name="requirements-for-container-elements"></a>容器元素的需求
 

@@ -103,10 +103,10 @@ helpviewer_keywords:
 - CListBox [MFC], VKeyToItem
 ms.assetid: 7ba3c699-c286-4cd9-9066-532c41ec05d1
 ms.openlocfilehash: b448f725bac68c2b67dc44d660c664c075aa86da
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58778762"
 ---
 # <a name="clistbox-class"></a>CListBox 类
@@ -341,7 +341,7 @@ virtual int CompareItem(LPCOMPAREITEMSTRUCT lpCompareItemStruct);
 
 指示中所述的两个项目的相对位置[COMPAREITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcompareitemstruct)结构。 它可能是以下值之一：
 
-|值|含义|
+|“值”|含义|
 |-----------|-------------|
 |-1|第 1 项进行排序项 2 之前。|
 |0|第 1 项和项 2 排序相同。|
@@ -478,7 +478,7 @@ int Dir(
 *attr*<br/>
 可以是任何组合**enum**值中所述`CFile::GetStatu` [s](../../mfc/reference/cfile-class.md#getstatus)，或以下值的任意组合：
 
-|值|含义|
+|“值”|含义|
 |-----------|-------------|
 |0x0000|可以读取或写入到文件。|
 |0x0001|可以从读取但不是会写入到文件。|
@@ -1544,6 +1544,6 @@ virtual int VKeyToItem(
 [CWnd 类](../../mfc/reference/cwnd-class.md)<br/>
 [CButton 类](../../mfc/reference/cbutton-class.md)<br/>
 [CComboBox 类](../../mfc/reference/ccombobox-class.md)<br/>
-[CEdit Class](../../mfc/reference/cedit-class.md)<br/>
+[CEdit 类](../../mfc/reference/cedit-class.md)<br/>
 [CScrollBar 类](../../mfc/reference/cscrollbar-class.md)<br/>
 [CStatic 类](../../mfc/reference/cstatic-class.md)

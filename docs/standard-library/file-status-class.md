@@ -13,11 +13,11 @@ helpviewer_keywords:
 - std::experimental::filesystem::file_status::type
 - std::experimental::filesystem::file_status::permissions
 ms.openlocfilehash: 81ce4ecc1673087db8e985f94e297798dd712a6e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630615"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62160012"
 ---
 # <a name="filestatus-class"></a>file_status 类
 
@@ -54,7 +54,7 @@ class file_status;
 
 **Namespace:** std::experimental::filesystem、 std::experimental::filesystem
 
-## <a name="file_status"></a> file_status:: file_status
+## <a name="file_status"></a> file_status::file_status
 
 构造的包装器[file_type](../standard-library/filesystem-enumerations.md#file_type)和文件[perms](../standard-library/filesystem-enumerations.md#perms)。
 
@@ -75,13 +75,13 @@ file_status(file_status&&) noexcept = default;
 *ftype*<br/>
 指定`file_type`，默认为`file_type::none`。
 
-*掩码*<br/>
+*mask*<br/>
 指定的文件`perms`，默认为`perms::unknown`。
 
 *file_status*<br/>
 存储的对象。
 
-## <a name="op_as"></a> file_status::operator =
+## <a name="op_as"></a> file_status::operator=
 
 默认成员赋值运算符的行为符合预期。
 
@@ -95,7 +95,7 @@ file_status& operator=(file_status&&) nexcept = default;
 *file_status*<br/>
 [File_status](../standard-library/file-status-class.md)复制到`file_status`。
 
-## <a name="type"></a> 类型
+## <a name="type"></a> type
 
 获取或设置 `file_type`。
 
@@ -122,7 +122,7 @@ void permissions(perms mask) noexcept
 
 ### <a name="parameters"></a>参数
 
-*掩码*<br/>
+*mask*<br/>
 已指定 `perms`。
 
 ## <a name="see-also"></a>请参阅

@@ -1,5 +1,5 @@
 ---
-title: 如何：添加、 编辑或删除控件 （c + +）
+title: 如何：添加、 编辑或删除控件 (C++)
 ms.date: 02/15/2019
 f1_keywords:
 - vc.editors.dialog.dialog
@@ -44,13 +44,13 @@ helpviewer_keywords:
 - rich edit controls [C++], RichEdit 1.0
 ms.assetid: 73cef03f-5c8c-456a-87d1-1458dff185cf
 ms.openlocfilehash: 2e3e671cd92313ad120d2cd6aae3f7e815e09e65
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59025359"
 ---
-# <a name="how-to-add-edit-or-delete-controls-c"></a>如何：添加、 编辑或删除控件 （c + +）
+# <a name="how-to-add-edit-or-delete-controls-c"></a>如何：添加、 编辑或删除控件 (C++)
 
 使用**对话框编辑器**，可以添加、 重设大小、 编辑和删除控件在对话框中的。 此外可以编辑的控件，如其 ID 属性或者它是否最初可见在运行时。
 
@@ -232,7 +232,7 @@ Win32
 
 [管理对话框控件](controls-in-dialog-boxes.md)<br/>
 [如何：布局控件](arrangement-of-controls-on-dialog-boxes.md)<br/>
-[如何：定义控制访问权限和值](defining-mnemonics-access-keys.md)<br/>
+[如何：定义控件访问权限和值](defining-mnemonics-access-keys.md)<br/>
 
 <!-- excluded links
 [Mapping Messages to Functions](../mfc/reference/mapping-messages-to-functions.md)<br/>

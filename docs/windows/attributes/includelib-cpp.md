@@ -1,5 +1,5 @@
 ---
-title: includelib （c + + COM 属性）
+title: includelib (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.includelib
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - includelib attribute
 ms.assetid: cd90ea6e-5ae8-4f11-b8d1-662db95412b2
 ms.openlocfilehash: 57f039eeae527dd03884b12e7d9eb424d87f597f
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59029995"
 ---
 # <a name="includelib-c"></a>includelib (C++)
@@ -30,7 +30,7 @@ ms.locfileid: "59029995"
 
 ## <a name="remarks"></a>备注
 
-**Includelib** c + + 属性会导致要包含在生成的.idl 文件中之后, 的.idl 或.h 文件`importlib`语句。
+**Includelib** C++属性将导致.idl 或.h 文件包含在生成的.idl 文件中之后,`importlib`语句。
 
 ## <a name="example"></a>示例
 

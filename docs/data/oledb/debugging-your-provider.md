@@ -8,10 +8,10 @@ helpviewer_keywords:
 - Visual C++ debugger
 ms.assetid: 90d4e7db-06ea-4de0-a7f4-4f3751d50d93
 ms.openlocfilehash: 21d4cb455413c3f7cbcbed02cdd4c364a469426d
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59033862"
 ---
 # <a name="debugging-your-provider"></a>调试提供程序
@@ -20,7 +20,7 @@ ms.locfileid: "59033862"
 
 - 由于提供程序在进程中创建的可以创建一些通常情况下使用 OLE DB 使用者模板和单步执行该提供程序的使用者代码。
 
-- 可以使用 Visual c + + 附带的各种实用程序。
+- 可以使用各种实用程序附带 Visual C++。
 
 ## <a name="to-use-debugging"></a>若要使用调试
 

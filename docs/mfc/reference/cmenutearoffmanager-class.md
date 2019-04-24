@@ -25,11 +25,11 @@ helpviewer_keywords:
 - CMenuTearOffManager [MFC], SetupTearOffMenus
 ms.assetid: ab7ca272-ce42-4678-95f7-6ad75038f5a0
 ms.openlocfilehash: 8b92ddad9d3a6de41cf6914dee268f6e54b5d420
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "58776058"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62163703"
 ---
 # <a name="cmenutearoffmanager-class"></a>CMenuTearOffManager 类
 

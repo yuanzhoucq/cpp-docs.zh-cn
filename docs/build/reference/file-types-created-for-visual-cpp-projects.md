@@ -15,10 +15,10 @@ helpviewer_keywords:
 - licensing ActiveX controls
 ms.assetid: 2b0ee2e0-ae81-4185-9bb9-11da3c99a283
 ms.openlocfilehash: eee53acbb8b0b8432a7d5819fb773b616f0e8897
-ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59424088"
 ---
 # <a name="file-types-created-for-visual-studio-c-projects"></a>文件类型为 Visual Studio 创建C++项目
@@ -50,16 +50,16 @@ ms.locfileid: "59424088"
 |文件扩展名|类型|内容|
 |--------------------|----------|--------------|
 |.asmx|源|部署文件。|
-|.asp|源|Active Server Page 文件。|
+|.asp|Source|Active Server Page 文件。|
 |.atp|项目|应用程序模板项目文件。|
 |.bmp、.dib、.gif、.jpg、.jpe、.png|资源|常规图像文件。|
 |.bsc|编译|浏览器代码文件。|
-|.cpp、.c|源|应用程序的主源代码文件。|
+|.cpp、.c|Source|应用程序的主源代码文件。|
 |.cur|资源|光标位图图形文件。|
 |.dbp|项目|数据库项目文件。|
-|.disco|源|动态发现文档文件。 处理 XML Web 服务发现。|
+|.disco|Source|动态发现文档文件。 处理 XML Web 服务发现。|
 |.exe、.dll|项目|可执行文件或动态链接库文件。|
-|.h|源|头（包含）文件。|
+|.h|Source|头（包含）文件。|
 |.htm、.html、.xsp、.asp、.htc、.hta、.xml|资源|公共 Web 文件。|
 |.HxC|项目|帮助项目文件。|
 |.ico|资源|图标位图图形文件。|

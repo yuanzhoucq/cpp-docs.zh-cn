@@ -35,10 +35,10 @@ helpviewer_keywords:
 - CSecurityDesc class
 ms.assetid: 3767a327-378f-4690-ba40-4d9f6a1f5ee4
 ms.openlocfilehash: aadaa64a936aee867766dfc0f7a6e190c9691ca6
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58778021"
 ---
 # <a name="csecuritydesc-class"></a>CSecurityDesc 类
@@ -688,7 +688,7 @@ bool ToString(
 
 *Si*参数可以包含以下 SECURITY_INFORMATION 标志：
 
-|值|含义|
+|“值”|含义|
 |-----------|-------------|
 |OWNER_SECURITY_INFORMATION|包括的所有者。|
 |GROUP_SECURITY_INFORMATION|包括主要组。|

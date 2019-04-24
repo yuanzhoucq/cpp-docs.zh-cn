@@ -6,15 +6,15 @@ helpviewer_keywords:
 - constants, global
 ms.assetid: df5a9bd4-d0a8-4c1c-956e-b481d0bded7d
 ms.openlocfilehash: 1ae29b8744e24b6471f0d5536f3f13cc5ae59499
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59030188"
 ---
 # <a name="global-constants-in-c"></a>C++ 中的全局常量
 
-C + + 的全局常量具有静态链接。 这是与 C 不同。如果你尝试使用全局常数在多个文件中的 c + + 中，将得到未解析的外部错误。 编译器优化了全局常量，留出的变量保留任何空间。
+C++全局常量具有静态链接。 这是与 C 不同。如果尝试使用中的全局常量C++多个文件中获取无法解析的外部错误。 编译器优化了全局常量，留出的变量保留任何空间。
 
 若要解决此错误的一种方法是 const 初始化包括标头文件中，并在 CPP 文件，如有必要，就像它是函数原型中包括该标头。 另一种可能性是使变量成为非常量并评估它时使用的常量引用。
 

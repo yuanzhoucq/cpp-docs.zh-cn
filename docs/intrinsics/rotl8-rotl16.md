@@ -9,10 +9,10 @@ helpviewer_keywords:
 - _rotl16 intrinsic
 ms.assetid: 8c519ab6-aef9-4f07-a387-daee8408368f
 ms.openlocfilehash: 8c87c7a5fa1c2bee475b0e4508b5c1571dc449de
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59028284"
 ---
 # <a name="rotl8-rotl16"></a>_rotl8、_rotl16
@@ -39,7 +39,7 @@ unsigned short _rotl16(
 *值*<br/>
 [in]要旋转的值。
 
-*移位*<br/>
+*shift*<br/>
 [in]要旋转的位数目。
 
 ## <a name="return-value"></a>返回值
@@ -102,5 +102,5 @@ Rotating unsigned short 0x12 left by 10 bits gives 0x4800
 
 ## <a name="see-also"></a>请参阅
 
-[_rotr8、_rotr16](../intrinsics/rotr8-rotr16.md)<br/>
+[_rotr8, _rotr16](../intrinsics/rotr8-rotr16.md)<br/>
 [编译器内部函数](../intrinsics/compiler-intrinsics.md)

@@ -6,10 +6,10 @@ helpviewer_keywords:
 - preprocessor, conventions
 ms.assetid: 469ce448-dc6c-4d0e-ba2b-e2e7a10155e1
 ms.openlocfilehash: c84be60938752e7401e2178dbcbf98c6ed32b1cc
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59034269"
 ---
 # <a name="conventions"></a>约定
@@ -17,7 +17,7 @@ ms.locfileid: "59034269"
 
 |特性|描述|
 |---------------|-----------------|
-|*nonterminal*|斜体类型指示非终止符。|
+|nonterminal|斜体类型指示非终止符。|
 |#include|粗体类型的终止符是必须按所示方式输入的文本保留字和符号。 此上下文中的字符始终区分大小写。|
 |opt|后跟 <sub>opt </sub> 的非终止符始终是可选的。|
 |default typeface|用此字样描述或列出的集中的字符可在语句中用作终止符。|

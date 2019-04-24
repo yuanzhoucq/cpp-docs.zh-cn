@@ -5,10 +5,10 @@ helpviewer_keywords:
 - /clr compiler option [C++], restrictions
 ms.assetid: 385f6462-2c68-46d6-810e-469553ead447
 ms.openlocfilehash: 21b7ead553871854c73021756eb2086f9e6e7393
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58777813"
 ---
 # <a name="clr-restrictions"></a>/clr 限制
@@ -19,7 +19,7 @@ ms.locfileid: "58777813"
 
 - 使用运行时错误检查不是有效，且 **/clr**。 有关详细信息，请参阅[如何：使用本机运行时检查](/visualstudio/debugger/how-to-use-native-run-time-checks)
 
-- 当 **/clr**是用于编译仅使用标准 c + + 语法的程序，以下准则适用于内联程序集的使用：
+- 当 **/clr**用于编译仅使用标准的程序C++语法中，以下准则适用于内联程序集的使用：
 
   - 假定你了解本机堆栈布局的内联程序集代码，调用当前函数或有关计算机的其他低级别信息的外部约定可能会失败如果知识应用于托管函数的堆栈帧。 包含内联程序集代码的函数将生成为非托管函数，就像被放在单独的模块，而无需编译 **/clr**。
 
@@ -51,7 +51,7 @@ ms.locfileid: "58777813"
 
   - [/ZI](z7-zi-zi-debug-information-format.md)
 
-- 组合`_STATIC_CPPLIB`预处理器定义 (`/D_STATIC_CPPLIB`) 和 **/clr**编译器选项不受支持。 这是因为此定义会使应用程序以使用静态多线程 c + + 标准库链接，这不受支持。 有关详细信息，请参阅[/MD、 /MT、 /LD （使用运行时库）](md-mt-ld-use-run-time-library.md)主题。
+- 组合`_STATIC_CPPLIB`预处理器定义 (`/D_STATIC_CPPLIB`) 和 **/clr**编译器选项不受支持。 这是因为此定义会使你的应用程序使用多线程静态链接C++标准库，这不受支持。 有关详细信息，请参阅[/MD、 /MT、 /LD （使用运行时库）](md-mt-ld-use-run-time-library.md)主题。
 
 - 使用时 **/Zi**与 **/clr**，有性能产生影响。 有关详细信息，请参阅[/Zi](z7-zi-zi-debug-information-format.md)。
 
@@ -74,7 +74,7 @@ ms.locfileid: "58777813"
 
 - 不应调用，从托管代码，遍历堆栈，以获得参数信息 （函数参数），则任何函数P/Invoke 层会导致该信息可以进一步在堆栈的下层。  例如，不编译与代理/存根 **/clr**。
 
-- 函数将编译为托管代码，只要有可能，但不是所有 c + + 构造可以转换为托管代码。  在函数的函数的基础上作出此决定。 如果函数的任何部分不能转换为托管代码中，将转换整个函数为本机代码。 在以下情况下阻止编译器生成托管的代码。
+- 函数将编译为托管的代码，只要有可能，但不是所有C++构造可以转换为托管代码。  在函数的函数的基础上作出此决定。 如果函数的任何部分不能转换为托管代码中，将转换整个函数为本机代码。 在以下情况下阻止编译器生成托管的代码。
 
   - 编译器生成的 thunk 或帮助器函数。 通过函数指针，其中包括虚拟函数调用任何函数调用将生成本机 thunk。
 

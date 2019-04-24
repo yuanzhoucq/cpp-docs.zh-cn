@@ -7,10 +7,10 @@ helpviewer_keywords:
 - OLE DB providers, testing
 ms.assetid: bf824fe4-81af-4ffb-beb3-4fa2928dc450
 ms.openlocfilehash: d7a3adad546834e2bdc80a695f4c3bf2259dc0ba
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59038312"
 ---
 # <a name="testing-your-provider"></a>测试提供程序
@@ -21,7 +21,7 @@ ms.locfileid: "59038312"
 
 1. 测试提供程序使用 ADO 编写的使用者应用程序。 大多数开发人员 （特别是 Microsoft Visual Basic 和 Microsoft C# 的开发人员） 的使用者应用程序使用 ADO 或 ADO.NET。 测试使用者应涵盖你的提供商的所有功能区域。 ADO 使用者应用程序的示例，请参阅[Microsoft Visual Basic 中的 ADO 代码示例](https://msdn.microsoft.com/library/ms807514.aspx)。
 
-1. 运行 OLE DB 一致性测试 （包括 ADO 一致性测试） 以显示您的提供程序对 OLE DB 访问接口满足级别 0 标准。 (有关级别 0 的说明，搜索**OLE DB 级别 0 一致性测试**处[OLE DB 程序员指南](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming)。 Visual c + + 数据访问 SDK 中包含这些测试和相关的文档。 这些测试还帮助显示您的提供程序运行良好时由其他聚合[服务提供商](../../data/oledb/ole-db-resource-pooling-and-services.md)时特别有用，如果修改或添加属性。 有关符合性测试的详细信息，请参阅数据访问 sdk，位于其中一个 Visual Studio Cd 上的自述文件。
+1. 运行 OLE DB 一致性测试 （包括 ADO 一致性测试） 以显示您的提供程序对 OLE DB 访问接口满足级别 0 标准。 (有关级别 0 的说明，搜索**OLE DB 级别 0 一致性测试**处[OLE DB 程序员指南](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming)。 这些测试和相关的文档将包括使用视觉对象C++数据访问 SDK 中。 这些测试还帮助显示您的提供程序运行良好时由其他聚合[服务提供商](../../data/oledb/ole-db-resource-pooling-and-services.md)时特别有用，如果修改或添加属性。 有关符合性测试的详细信息，请参阅数据访问 sdk，位于其中一个 Visual Studio Cd 上的自述文件。
 
 ## <a name="see-also"></a>请参阅
 

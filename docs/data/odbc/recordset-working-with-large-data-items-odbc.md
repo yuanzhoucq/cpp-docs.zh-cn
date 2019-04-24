@@ -9,10 +9,10 @@ helpviewer_keywords:
 - CLongBinary class, using in recordsets
 ms.assetid: 3e80b5a8-b6e7-43c6-a816-e54befc513a3
 ms.openlocfilehash: 3ba8d4af5b0781c425dd3b1223e2208b279f055e
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59033039"
 ---
 # <a name="recordset-working-with-large-data-items-odbc"></a>记录集：处理大数据项 (ODBC)
@@ -42,7 +42,7 @@ ms.locfileid: "59033039"
 
 ##  <a name="_core_the_cbytearray_class"></a> CByteArray 类
 
-`CByteArray` 是 MFC 集合类之一。 一个`CByteArray`对象将存储为动态的字节数组，数组可以根据需要进行扩展。 此类与内置 c + + 数组相同的索引，提供快速访问。 `CByteArray` 对象可以序列化和转储以用于诊断目的。 类提供成员函数用于获取和设置将指定的字节、 插入和追加字节和删除 1 个字节或所有字节。 这些功能使得分析更轻松的二进制数据。 例如，如果二进制对象是一个 OLE 对象，您可能需要完成一些标头字节来访问实际对象。
+`CByteArray` 是 MFC 集合类之一。 一个`CByteArray`对象将存储为动态的字节数组，数组可以根据需要进行扩展。 类提供快速访问的索引，如同内置C++数组。 `CByteArray` 对象可以序列化和转储以用于诊断目的。 类提供成员函数用于获取和设置将指定的字节、 插入和追加字节和删除 1 个字节或所有字节。 这些功能使得分析更轻松的二进制数据。 例如，如果二进制对象是一个 OLE 对象，您可能需要完成一些标头字节来访问实际对象。
 
 ##  <a name="_core_using_cbytearray_in_recordsets"></a> 在记录集中使用 CByteArray
 

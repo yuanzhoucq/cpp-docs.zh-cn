@@ -1,5 +1,5 @@
 ---
-title: com_interface_entry （c + + COM 属性）
+title: com_interface_entry (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.com_interface_entry
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - com_interface_entry attribute
 ms.assetid: 10368f81-b99b-4a0f-ba4f-a142e6911a5c
 ms.openlocfilehash: 65d174679f851613e064568b071cfcbdad8f0f06
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59030402"
 ---
 # <a name="cominterfaceentry-c"></a>com_interface_entry (C++)
@@ -31,7 +31,7 @@ ms.locfileid: "59030402"
 
 ## <a name="remarks"></a>备注
 
-**Com_interface_entry** c + + 属性将 unabridged 的字符字符串的内容插入到目标对象的 COM 接口映射。 如果该属性一次应用于目标对象，该条目插入到现有的接口映射的开头。 如果该特性重复应用于相同的目标对象，会将条目插入按接收的顺序中的接口映射的开头。
+**Com_interface_entry** C++属性将 unabridged 的字符字符串的内容插入到目标对象的 COM 接口映射。 如果该属性一次应用于目标对象，该条目插入到现有的接口映射的开头。 如果该特性重复应用于相同的目标对象，会将条目插入按接收的顺序中的接口映射的开头。
 
 此属性要求 [coclass](coclass.md)、 [progid](progid.md)或 [vi_progid](vi-progid.md) 属性（或隐含这些属性之一的其他属性）也应用于同一个元素。 如果使用任何单个属性，则会自动应用另外两个属性。 例如，如果`progid`应用时，`vi_progid`和`coclass`也会应用。
 

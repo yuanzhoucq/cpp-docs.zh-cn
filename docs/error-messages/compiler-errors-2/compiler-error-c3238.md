@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C3238
 ms.assetid: 19942497-b3c5-4df0-9144-142ced92468b
 ms.openlocfilehash: d70bb6dac7cb43701b57f3821872e02ab31426dc
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "58775617"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59778613"
 ---
 # <a name="compiler-error-c3238"></a>编译器错误 C3238
 
@@ -19,7 +19,7 @@ ms.locfileid: "58775617"
 
 通过在引用的程序集中类型转发语法，已在客户端应用程序中定义的类型也被定义了。 两种类型均不能在应用程序的范围内定义。
 
-请参阅[类型转发 (C + + CLI)](../../extensions/type-forwarding-cpp-cli.md)有关详细信息。
+请参阅[类型转发 (C++/CLI)](../../extensions/type-forwarding-cpp-cli.md)有关详细信息。
 
 ## <a name="example"></a>示例
 

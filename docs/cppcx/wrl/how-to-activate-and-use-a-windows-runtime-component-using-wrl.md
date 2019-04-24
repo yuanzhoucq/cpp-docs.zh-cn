@@ -4,19 +4,19 @@ ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 54828f02-6af3-45d1-b965-d0104442f8d5
 ms.openlocfilehash: 8c0bed825f76fdf0f2c5cc1fa095e54f08bb8a67
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037206"
 ---
 # <a name="how-to-activate-and-use-a-windows-runtime-component-using-wrl"></a>如何：激活和使用 Windows 运行时组件使用 WRL
 
-本文档演示如何使用 Windows 运行时 c + + 模板库 (WRL) 初始化 Windows 运行时以及如何进行激活和使用 Windows 运行时组件。
+本文档演示如何使用 Windows 运行时C++模板库 (WRL) 来初始化 Windows 运行时以及如何进行激活和使用 Windows 运行时组件。
 
 若要使用的组件，必须获取由该组件实现的类型的接口指针。 并且由于 Windows 运行时的基础技术是组件对象模型 (COM)，必须遵循 COM 规则以维护类型的实例。 例如，你必须维持*引用计数*，它确定何时从内存中删除类型。
 
-为了简化使用 Windows 运行时，Windows 运行时 c + + 模板库，提供了智能指针模板[ComPtr\<T >](comptr-class.md)，来自动执行引用计数。 当您声明变量时，指定`ComPtr<`*接口名称*`>` *标识符*。 若要访问接口成员，将应用箭头成员访问运算符 (`->`) 的标识符。
+若要简化的 Windows 运行时，Windows 运行时使用C++模板库提供了智能指针模板[ComPtr\<T >](comptr-class.md)，来自动执行引用计数。 当您声明变量时，指定`ComPtr<`*接口名称*`>` *标识符*。 若要访问接口成员，将应用箭头成员访问运算符 (`->`) 的标识符。
 
 > [!IMPORTANT]
 > 当调用接口函数时，始终测试 HRESULT 返回值。
@@ -26,11 +26,11 @@ ms.locfileid: "59037206"
 以下步骤使用`Windows::Foundation::IUriRuntimeClass`接口来演示如何创建 Windows 运行时组件的激活工厂、 创建该组件的实例并检索属性值。 它们还演示如何初始化 Windows 运行时。 以下是完整的示例。
 
 > [!IMPORTANT]
-> 虽然通常使用 Windows 运行时 c + + 模板库中的通用 Windows 平台 (UWP) 应用，但此示例使用一个控制台应用程序是为了进行说明。 函数如`wprintf_s`UWP 应用中不可用。 有关类型和可以在 UWP 应用中使用的函数的详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)并[Win32 和 COM 适用于 UWP 应用](/uwp/win32-and-com/win32-and-com-for-uwp-apps)。
+> 虽然通常使用 Windows 运行时C++模板库在通用 Windows 平台 (UWP) 应用中，此示例使用一个控制台应用程序是为了进行说明。 函数如`wprintf_s`UWP 应用中不可用。 有关类型和可以在 UWP 应用中使用的函数的详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)并[Win32 和 COM 适用于 UWP 应用](/uwp/win32-and-com/win32-and-com-for-uwp-apps)。
 
 #### <a name="to-activate-and-use-a-windows-runtime-component"></a>若要激活和使用 Windows 运行时组件
 
-1. 包括 (`#include`) 所需的任何 Windows 运行时、 Windows 运行时 c + + 模板库或 c + + 标准库标头。
+1. 包括 (`#include`) 所需 Windows 运行时，Windows 运行时的任何C++模板库，或C++标准库标头。
 
    [!code-cpp[wrl-consume-component#2](../codesnippet/CPP/how-to-activate-and-use-a-windows-runtime-component-using-wrl_1.cpp)]
 

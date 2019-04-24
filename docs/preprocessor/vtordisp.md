@@ -9,15 +9,15 @@ helpviewer_keywords:
 - vtordisp pragma
 ms.assetid: 05b7d73c-43fa-4b62-8c8a-170a9e427391
 ms.openlocfilehash: 67c6c329bcee75012f6075334760925eca945501
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59034373"
 ---
 # <a name="vtordisp"></a>vtordisp
 
-**C++ 专用**
+**C++特定**
 
 控制隐藏的 vtordisp 构造函数/析构函数置换成员的添加。
 
@@ -44,7 +44,7 @@ ms.locfileid: "59034373"
 *on*<br/>
 等效于 `#pragma vtordisp(1)`。
 
-*关闭*<br/>
+*off*<br/>
 等效于 `#pragma vtordisp(0)`。
 
 ## <a name="remarks"></a>备注
@@ -57,7 +57,7 @@ ms.locfileid: "59034373"
 
 指定 2 启用隐藏**vtordisp**具有虚函数的所有虚拟基的成员。  `vtordisp(2)` 可能需要确保正确的性能**dynamic_cast**上在部分构造的对象。 有关详细信息，请参阅[编译器警告 （等级 1） C4436](../error-messages/compiler-warnings/compiler-warning-level-1-c4436.md)。
 
-`#pragma vtordisp()`不带任何参数，将 vtordisp 设置还原到其初始设置。
+`#pragma vtordisp()`（没有参数）可将 vtordisp 设置还原到其初始设置。
 
 ```cpp
 #pragma vtordisp(push, 2)
@@ -65,7 +65,7 @@ class GetReal : virtual public VBase { ... };
 #pragma vtordisp(pop)
 ```
 
-**结束 C++ 专用**
+**结束C++特定**
 
 ## <a name="see-also"></a>请参阅
 

@@ -15,15 +15,15 @@ helpviewer_keywords:
 - WRL namespace
 ms.assetid: 01118a8f-f564-4859-b87e-9444848585a1
 ms.openlocfilehash: 749469c7ae2acf3a0da92d24a51bbfca9b68971d
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59033516"
 ---
 # <a name="microsoftwrl-namespace"></a>Microsoft::WRL 命名空间
 
-定义构成了 Windows 运行时 c + + 模板库的基础类型。
+定义构成了 Windows 运行时的基础类型C++模板库。
 
 ## <a name="syntax"></a>语法
 
@@ -48,7 +48,7 @@ namespace Microsoft::WRL;
 |[ClassFactory 类](classfactory-class.md)|实现 `IClassFactory` 接口的基本功能。|
 |[ComPtr 类](comptr-class.md)|创建表示模板参数指定的接口的 *智能指针* 类型。 ComPtr 会自动维护基础接口指针的引用计数，并在引用计数变为零时释放接口。|
 |[DeferrableEventArgs 类](deferrableeventargs-class.md)|一种用于延迟事件的事件参数类型的模板类。|
-|[EventSource 类](eventsource-class.md)|表示一个事件。 `EventSource` 成员函数添加、 删除和调用事件处理程序。|
+|[EventSource 类](eventsource-class.md)|表示一个事件。 `EventSource` 成员函数将添加、删除和调用事件处理程序。|
 |[FtmBase 类](ftmbase-class.md)|表示自由线程封送拆收器对象。|
 |[Module 类](module-class.md)|表示相关对象的集合。|
 |[RuntimeClass 类](runtimeclass-class.md)|表示继承指定数量的接口的实例化类，并提供指定 Windows 运行时、经典 COM 和弱引用支持。|

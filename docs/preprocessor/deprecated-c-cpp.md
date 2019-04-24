@@ -9,10 +9,10 @@ helpviewer_keywords:
 - pragmas, deprecated
 ms.assetid: 9c046f12-7875-499a-8d5d-12f8642fed2d
 ms.openlocfilehash: 262b23e6e4813a5e22bc3f4e7c9a18efb9988a7c
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59023304"
 ---
 # <a name="deprecated-cc"></a>已弃用 (C/C++)
@@ -20,7 +20,7 @@ ms.locfileid: "59023304"
 **弃用**杂注，可以指示，一个函数、 类型或任何其他标识符可能不再支持在以后发布或不再使用。
 
 > [!NOTE]
-> 有关 C + + 14`[[deprecated]]`属性，并指导用户何时使用该属性与 Microsoft declspec 或杂注，请参阅[c + + 标准特性](../cpp/attributes.md)属性。
+> 有关 C + + 14`[[deprecated]]`属性，并指导用户何时使用该属性与 Microsoft declspec 或杂注，请参阅[C++标准属性](../cpp/attributes.md)属性。
 
 ## <a name="syntax"></a>语法
 

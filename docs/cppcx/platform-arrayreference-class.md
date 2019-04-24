@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Platform::ArrayReference Class
 ms.assetid: 9ab3b15e-8a60-4600-8fcb-7d6c86284f4b
 ms.openlocfilehash: 923f60e90517e377b99d5e29f38c48b2633c3c46
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57742979"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62161566"
 ---
 # <a name="platformarrayreference-class"></a>Platform::ArrayReference 类
 
@@ -51,7 +51,7 @@ class ArrayReference
 
 **支持的最低服务器：** Windows Server 2012
 
-**命名空间：** 平台
+**命名空间：** Platform
 
 **标头：** vccorlib.h
 
@@ -118,8 +118,8 @@ Array<TArg>^ operator ();
 
 ### <a name="remarks"></a>备注
 
-[Platform:: arrayreference](../cppcx/platform-arrayreference-class.md)并[platform:: array](../cppcx/platform-array-class.md)是标准 c + + 类模板，而不是 ref 类。
+[Platform:: arrayreference](../cppcx/platform-arrayreference-class.md)并[platform:: array](../cppcx/platform-array-class.md)标准C++类模板，而不是 ref 类。
 
 ## <a name="see-also"></a>请参阅
 
-[平台命名空间](../cppcx/platform-namespace-c-cx.md)
+[Platform 命名空间](../cppcx/platform-namespace-c-cx.md)

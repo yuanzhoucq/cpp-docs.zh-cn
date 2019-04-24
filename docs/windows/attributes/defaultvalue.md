@@ -1,5 +1,5 @@
 ---
-title: 默认值 （c + + COM 属性）
+title: 默认值 (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.defaultvalue
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - defaultvalue attribute
 ms.assetid: efa5d050-b2cc-4d9e-9b8e-79954f218d3a
 ms.openlocfilehash: ff6924db6f4805bb5f2dbab69076a86020b2a075
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59026313"
 ---
 # <a name="defaultvalue"></a>defaultvalue
@@ -30,7 +30,7 @@ ms.locfileid: "59026313"
 
 ## <a name="remarks"></a>备注
 
-**Defaultvalue** c + + 属性具有相同的功能[defaultvalue](/windows/desktop/Midl/defaultvalue) MIDL 特性。
+**Defaultvalue** C++属性具有相同的功能[defaultvalue](/windows/desktop/Midl/defaultvalue) MIDL 特性。
 
 ## <a name="example"></a>示例
 
@@ -70,9 +70,9 @@ __interface IFireTabCtrl : IDispatch {
 ## <a name="see-also"></a>请参阅
 
 [IDL 特性](idl-attributes.md)<br/>
-[Parameter 特性](parameter-attributes.md)<br/>
+[参数特性](parameter-attributes.md)<br/>
 [out](out-cpp.md)<br/>
 [retval](retval.md)<br/>
-[中的](in-cpp.md)<br/>
+[in](in-cpp.md)<br/>
 [pointer_default](pointer-default.md)<br/>
 [unique](unique-cpp.md)

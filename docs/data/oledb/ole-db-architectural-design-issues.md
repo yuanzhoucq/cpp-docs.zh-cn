@@ -5,10 +5,10 @@ helpviewer_keywords:
 - OLE DB, application design considerations
 ms.assetid: 8caa7d99-d2bb-42c9-8884-74f228bb6ecc
 ms.openlocfilehash: 2f0a7a114c671e17d8f95280ab00ed93570e8609
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037667"
 ---
 # <a name="ole-db-architectural-design-issues"></a>OLE DB 结构设计问题
@@ -31,7 +31,7 @@ Microsoft 还提供了几个库来完成此任务： OLE DB 模板库、 OLE DB 
 
 ## <a name="do-you-have-older-code-using-another-data-access-technology-ado-odbc-or-dao"></a>你是否使用另一种数据访问技术 （ADO、 ODBC 或 DAO） 的较旧代码？
 
-给定技术 （如 ADO 组件使用 OLE DB 组件并将 ODBC 代码迁移到 OLE DB） 的可能组合，涵盖所有情况下已超出 Visual c + + 文档的讨论范围。 但是，涉及各种方案的许多文章都可在以下 Microsoft 网站上：
+给定技术 （如 ADO 组件使用 OLE DB 组件并将 ODBC 代码迁移到 OLE DB） 的可能组合，涵盖所有情况下不在视觉对象的范围内C++文档。 但是，涉及各种方案的许多文章都可在以下 Microsoft 网站上：
 
 - [Microsoft 帮助和支持](https://support.microsoft.com/)
 

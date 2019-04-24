@@ -7,12 +7,12 @@ helpviewer_keywords:
 - VMSAVE instruction
 - __svm_vmsave intrinsic
 ms.assetid: 617a60bd-8514-4ba1-8066-bcf4dd481030
-ms.openlocfilehash: 2ffc68b13d09d15d90670fa135a2cac9d9a1d52f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d683a13f636db9683b4a7c8d075ad6c3c88c2aed
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50556606"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59023407"
 ---
 # <a name="svmvmsave"></a>__svm_vmsave
 
@@ -36,7 +36,7 @@ void __svm_vmsave(
 
 ## <a name="remarks"></a>备注
 
-`__svm_vmsave` 函数等同于 `VMSAVE` 计算机指令。 此函数支持主机的虚拟机监视器与来宾操作系统及其应用程序进行交互。 有关详细信息，搜索文档中，"AMD64 体系结构编程人员手动卷 2： 系统编程中，"文档编号 24593、 3.11 或更高版本，在修订[AMD Corporation](https://developer.amd.com/resources/developer-guides-manuals/)站点。
+`__svm_vmsave` 函数等同于 `VMSAVE` 计算机指令。 此函数支持主机的虚拟机监视器与来宾操作系统及其应用程序进行交互。 有关详细信息，搜索文档中，"AMD64 体系结构编程人员手动卷 2:系统编程，"文档数 24593，3.11 或更高版本，在修订[AMD Corporation](https://developer.amd.com/resources/developer-guides-manuals/)站点。
 
 ## <a name="requirements"></a>要求
 

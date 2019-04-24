@@ -21,11 +21,11 @@ helpviewer_keywords:
 - std::future [C++], wait_for
 - std::future [C++], wait_until
 ms.openlocfilehash: 9ca18e62038d93a50b592868f71223962a22857d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50551874"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62159322"
 ---
 # <a name="future-class"></a>future 类
 
@@ -57,7 +57,7 @@ class future;
 |[get](#get)|检索存储在关联异步状态中的结果。|
 |[share](#share)|将对象转换为 `shared_future`。|
 |[valid](#valid)|指定对象是否不为空。|
-|[等待](#wait)|阻止当前线程，直到关联异步状态为准备就绪。|
+|[wait](#wait)|阻止当前线程，直到关联异步状态为准备就绪。|
 |[wait_for](#wait_for)|进行阻止，直到关联异步状态为准备就绪或已过指定时间。|
 |[wait_until](#wait_until)|进行阻止，直到关联异步状态为准备就绪或直到指定时间点。|
 

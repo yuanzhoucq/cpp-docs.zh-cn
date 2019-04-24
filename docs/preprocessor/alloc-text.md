@@ -9,10 +9,10 @@ helpviewer_keywords:
 - pragmas, alloc_text
 ms.assetid: 1fd7be18-e4f7-4f70-b079-6326f72b871a
 ms.openlocfilehash: 399e8956a511f289b480e66db7f03cac0a6c7c20
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59031354"
 ---
 # <a name="alloctext"></a>alloc_text
@@ -28,7 +28,7 @@ textsection
 
 ## <a name="remarks"></a>备注
 
-**Alloc_text**杂注不处理 c + + 成员函数或重载的函数。 它是仅适用于带 C 链接声明的函数-函数使用的声明，即**extern"C"** 链接规范。 如果尝试对带 C++ 链接的函数使用此杂注，则会生成编译器错误。
+**Alloc_text**杂注不处理C++成员函数或重载的函数。 它是仅适用于带 C 链接声明的函数-函数使用的声明，即**extern"C"** 链接规范。 如果尝试对带 C++ 链接的函数使用此杂注，则会生成编译器错误。
 
 由于函数寻址使用`__based`不支持，则指定节位置需要使用**alloc_text**杂注。 指定的名称*textsection*应括在双引号中。
 

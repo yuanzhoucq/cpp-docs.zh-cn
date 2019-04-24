@@ -7,15 +7,15 @@ helpviewer_keywords:
 - R6035
 ms.assetid: f8fb50b8-18bf-4258-b96a-b0a9de468d16
 ms.openlocfilehash: cbade3ce8686c8c293b8d40a73c546805e42215d
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59034016"
 ---
 # <a name="c-runtime-error-r6035"></a>C 运行时错误 R6035
 
-函数依赖于该安全 cookie 处于活动状态时，Microsoft Visual c + + 运行时库，错误 R6035-此应用程序中的模块正在初始化模块的全局安全 cookie。  先前调用 __security_init_cookie。
+Microsoft VisualC++运行时库、 错误 R6035-此应用程序中的模块依赖于该安全 cookie 的函数处于活动状态时，正在初始化模块的全局安全 cookie。  先前调用 __security_init_cookie。
 
 [__security_init_cookie](../../c-runtime-library/reference/security-init-cookie.md)全局安全 cookie 在首次使用前，必须调用。
 
@@ -66,7 +66,7 @@ void DllEntryHelper() {
 在这种情况下，DllEntryPoint 不保护不受缓冲区溢出 （它具有任何本地字符串缓冲区和不使用结构化的异常处理）;因此它可以安全地调用`__security_init_cookie`。 然后，它调用受保护的帮助器函数。
 
 > [!NOTE]
->  R6035 是错误消息仅由 x86 生成调试 CRT，并仅为结构化的异常处理，但条件在所有平台上和异常的所有窗体错误处理，如 c + + EH。
+>  R6035 是错误消息仅由 x86 生成调试 CRT，并仅为结构化的异常处理，但条件错误和异常的所有窗体的所有平台上处理，如C++EH。
 
 ## <a name="see-also"></a>请参阅
 

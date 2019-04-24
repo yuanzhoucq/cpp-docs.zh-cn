@@ -1,5 +1,5 @@
 ---
-title: requires_category （c + + COM 属性）
+title: requires_category (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.requires_category
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - requires_category attribute
 ms.assetid: a645fdc6-1ef5-414d-8c56-5fe2686d4687
 ms.openlocfilehash: ec35a1958d9fbcf77fef7f498c6c0dba3ab17df9
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59022134"
 ---
 # <a name="requirescategory"></a>requires_category
@@ -31,7 +31,7 @@ ms.locfileid: "59022134"
 
 ## <a name="remarks"></a>备注
 
-**Requires_category** c + + 属性指定目标类所需的组件类别。 有关详细信息，请参阅[REQUIRED_CATEGORY](../../atl/reference/category-macros.md#required_category)。
+**Requires_category** C++属性指定目标类所需的组件类别。 有关详细信息，请参阅[REQUIRED_CATEGORY](../../atl/reference/category-macros.md#required_category)。
 
 此属性要求 [coclass](coclass.md)、 [progid](progid.md)或 [vi_progid](vi-progid.md) 属性（或隐含这些属性之一的其他属性）也应用于同一个元素。
 

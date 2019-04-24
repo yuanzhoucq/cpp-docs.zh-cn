@@ -7,15 +7,15 @@ helpviewer_keywords:
 - exclude attribute
 ms.assetid: 0883248a-d4bf-420e-9848-807b28fa976e
 ms.openlocfilehash: d6a320089d5954b2cf1d0d96ae1f37656f2ddd58
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59032383"
 ---
 # <a name="exclude-import"></a>排除 (\#导入)
 
-**C++ 专用**
+**C++特定**
 
 从要生成的类型库标头文件中排除项。
 
@@ -37,9 +37,9 @@ exclude("Name1"[, "Name2",...])
 
 类型库可能包含在系统标头文件或其他类型库中定义的项的定义。 此特性可以采用任意数量的参数，每个参数都是要排除的顶级类型库项。
 
-**结束 C++ 专用**
+**结束C++特定**
 
 ## <a name="see-also"></a>请参阅
 
-[#import 特性](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[#import 属性](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [#import 指令](../preprocessor/hash-import-directive-cpp.md)

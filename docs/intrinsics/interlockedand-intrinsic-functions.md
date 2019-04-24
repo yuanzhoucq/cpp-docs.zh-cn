@@ -57,10 +57,10 @@ helpviewer_keywords:
 - _InterlockedAnd_HLEAcquire intrinsic
 ms.assetid: ad271dc3-42cd-47d0-9f65-30d5cfeb66fc
 ms.openlocfilehash: b38a181102247ab203c86ccb6310a72135dccc8b
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59033315"
 ---
 # <a name="interlockedand-intrinsic-functions"></a>_InterlockedAnd 内部函数
@@ -175,7 +175,7 @@ __int64 _InterlockedAnd64_rel(
 *值*<br/>
 [in、 out]指向要替换为结果的第一个操作数的指针。
 
-*掩码*<br/>
+*mask*<br/>
 [in]第二个操作数。
 
 ## <a name="return-value"></a>返回值

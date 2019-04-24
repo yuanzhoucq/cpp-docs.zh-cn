@@ -1,5 +1,5 @@
 ---
-title: cpp_quote （c + + COM 属性）
+title: cpp_quote (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.cpp_quote
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - cpp_quote attribute
 ms.assetid: f75327ff-42bd-498b-9177-7ffa25427e1f
 ms.openlocfilehash: 378435ced5a541785b7b32bc9d2f408034d5a2d8
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59024671"
 ---
 # <a name="cppquote"></a>cpp_quote
@@ -25,14 +25,14 @@ ms.locfileid: "59024671"
 
 ### <a name="parameters"></a>参数
 
-*statement*<br/>
+statement<br/>
 C 的指令。
 
 ## <a name="remarks"></a>备注
 
-**Cpp_quote** c + + 特性会非常有用，如果你想要将预处理器指令放在.idl 文件中。
+**Cpp_quote** C++特性会非常有用，如果你想要将预处理器指令放在.idl 文件中。
 
-此外可以使用**cpp_quote**并生成一个.h 文件作为 MIDL 编译的一部分。 例如，如果必须使用 c + + IDL 特性，但不能使用此文件执行一些任务的 c + + 头文件，然后您可以编译它创建 MIDL 生成.h 文件，您应能够使用。
+此外可以使用**cpp_quote**并生成一个.h 文件作为 MIDL 编译的一部分。 例如，如果你有C++使用的标头文件C++然后 IDL 特性，但不能使用此文件执行一些任务，您可以将其编译为创建 MIDL 生成.h 文件，您应能够使用。
 
 **Cpp_quote**属性具有相同的功能[cpp_quote](/windows/desktop/Midl/cpp-quote) MIDL 特性。
 

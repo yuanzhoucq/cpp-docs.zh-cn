@@ -10,10 +10,10 @@ helpviewer_keywords:
 - configuring ODBC data sources
 ms.assetid: b8cabe9b-9e12-4d73-ae36-7cb12dee3213
 ms.openlocfilehash: 33269b65835812a6e1a03e091833831781d97b6d
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037944"
 ---
 # <a name="data-source-programmatically-configuring-an-odbc-data-source"></a>数据源：以编程方式配置 ODBC 数据源
@@ -53,7 +53,7 @@ ODBC 管理器 （通常在控制面板中安装） 通过将条目放在 Window
 
 ##  <a name="_core_sqlconfigdatasource_parameters"></a> SQLConfigDataSource Parameters
 
-以下说明了这些参数的`::SQLConfigDataSource`函数。 从 ODBC API 的大部分信息获取*程序员参考*提供使用 Visual c + + 1.5 和更高版本。
+以下说明了这些参数的`::SQLConfigDataSource`函数。 大部分信息取自 ODBC API*程序员参考*视觉对象提供C++版本 1.5 和更高版本。
 
 ###  <a name="_core_function_prototype"></a> 函数原型
 

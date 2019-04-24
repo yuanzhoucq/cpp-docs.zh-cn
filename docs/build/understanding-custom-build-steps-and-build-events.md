@@ -12,10 +12,10 @@ helpviewer_keywords:
 - builds [C++], custom build steps
 ms.assetid: beb2f017-3e9f-4b2c-9b57-2572fd2628e4
 ms.openlocfilehash: fc12689148e3bf23c233e4656249625d1156f9a7
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59028501"
 ---
 # <a name="understanding-custom-build-steps-and-build-events"></a>了解自定义生成步骤和生成事件
@@ -68,10 +68,10 @@ ms.locfileid: "59028501"
 
 [指定自定义生成工具](specifying-custom-build-tools.md)<br/>
 [指定生成事件](specifying-build-events.md)<br/>
-[生成自定义项进行故障排除](troubleshooting-build-customizations.md)<br/>
-[自定义生成步骤或生成事件的输出格式](formatting-the-output-of-a-custom-build-step-or-build-event.md)<br/>
+[排除生成自定义项故障](troubleshooting-build-customizations.md)<br/>
+[设置自定义生成步骤或生成事件的输出格式](formatting-the-output-of-a-custom-build-step-or-build-event.md)<br/>
 
 ## <a name="see-also"></a>请参阅
 
-[Visual Studio 项目的 c + +](creating-and-managing-visual-cpp-projects.md)<br>
+[Visual Studio 项目 - C++](creating-and-managing-visual-cpp-projects.md)<br>
 [用于生成命令和属性的常用宏](reference/common-macros-for-build-commands-and-properties.md)

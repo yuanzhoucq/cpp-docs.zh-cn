@@ -1,5 +1,5 @@
 ---
-title: importidl （c + + COM 属性）
+title: importidl (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.importidl
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - importidl attribute
 ms.assetid: 4b0a4b55-6c57-4e6e-bc7b-a12cc8063941
 ms.openlocfilehash: 9db62d4f2a36b8cc0592c924b113077a758915c0
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59029909"
 ---
 # <a name="importidl"></a>importidl
@@ -30,7 +30,7 @@ ms.locfileid: "59029909"
 
 ## <a name="remarks"></a>备注
 
-**Importidl** c + + 属性会放置在库块之外的部分 (在*idl_file*) 到您的程序生成的.idl 文件和库部分 (在*idl_file*) 到库的应用程序的部分生成的.idl 文件。
+**Importidl** C++属性将放置在库块之外的部分 (在*idl_file*) 到您的程序生成的.idl 文件和库部分 (在*idl_file*)到程序的生成的.idl 文件的库的一部分。
 
 您可能想要使用**importidl**，例如，如果你想要生成的.idl 文件中使用手工编码.idl 文件。
 

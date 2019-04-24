@@ -7,10 +7,10 @@ helpviewer_keywords:
 - __shiftleft128 intrinsic
 ms.assetid: 557b846a-8fb0-469d-91ac-1b1fad80dc2a
 ms.openlocfilehash: 5fcb797694c7a45dc4f2113f3d2ed4a2f578c894
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59024850"
 ---
 # <a name="shiftleft128"></a>__shiftleft128
@@ -37,7 +37,7 @@ unsigned __int64 __shiftleft128(
 *HighPart*<br/>
 [in]要位移的 128 位数量高 64 位。
 
-*移位*<br/>
+*Shift*<br/>
 [in]移动的位数数。
 
 ## <a name="return-value"></a>返回值

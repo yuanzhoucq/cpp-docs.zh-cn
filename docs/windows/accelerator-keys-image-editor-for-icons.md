@@ -1,5 +1,5 @@
 ---
-title: 快捷键 （图标的图像编辑器 c + +）
+title: 加速键 (C++图标的图像编辑器)
 ms.date: 02/15/2019
 f1_keywords:
 - vc.editors.bitmap
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - Image editor [C++], accelerator keys
 ms.assetid: add37861-3e17-4a6f-89e8-46df12e74a90
 ms.openlocfilehash: 45afdf4b3b557b560d7597b1bb4330c36a1fc84d
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59025080"
 ---
-# <a name="accelerator-keys-c-image-editor-for-icons"></a>快捷键 （图标的图像编辑器 c + +）
+# <a name="accelerator-keys-c-image-editor-for-icons"></a>加速键 (C++图标的图像编辑器)
 
 下面是默认情况下绑定到键的图像编辑器命令的快捷键。 若要更改快捷键，请转到菜单**工具** > **选项**，然后选择**键盘**下**环境**文件夹。 有关详细信息，请参阅[标识并自定义键盘快捷方式](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio)。
 
@@ -40,7 +40,7 @@ ms.locfileid: "59025080"
 |图像.直线工具|Ctrl  +  L|用选定形状、大小和颜色绘制一条直线。|
 |图像.放大工具|**Ctrl** + **M**|激活**Magnify**工具，它允许您放大你的映像的特定部分。|
 |图像.放大|Ctrl + Shift + M|在当前放大倍数和 1:1 放大倍数之间切换。|
-|图像.新建图像类型|**Insert**|将启动[新建\<设备 > 图像类型对话框](../windows/new-device-image-type-dialog-box-image-editor-for-icons.md)使用它创建不同的图像类型的图像。|
+|图像.新建图像类型|**插入**|将启动[新建\<设备 > 图像类型对话框](../windows/new-device-image-type-dialog-box-image-editor-for-icons.md)使用它创建不同的图像类型的图像。|
 |图像.下一种颜色|Ctrl + ]<br /><br /> - 或 -<br /><br /> **Ctrl** + **右箭头**|将绘制前景色更改为下一个调色板颜色。|
 |Image.NextRightColor|Ctrl + Shift + ]<br /><br /> - 或 -<br /><br /> **Shift** + **Ctrl** + **右箭头**|将绘制背景色更改为下一个调色板颜色。|
 |图像.空心椭圆工具|**Shift** + **Alt** + **P**|用一个轮廓绘制实心椭圆。|

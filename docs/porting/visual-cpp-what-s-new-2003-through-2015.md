@@ -3,10 +3,10 @@ title: Visual C++ 新增功能（2003 - 2015）
 ms.date: 11/04/2016
 ms.assetid: c4afde6f-3d75-40bf-986f-be57e3818e26
 ms.openlocfilehash: ae21a81869bd68c5a2641dba47b89d7e10b67567
-ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58898851"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Visual C++ 新增功能（2003 - 2015）
@@ -57,13 +57,13 @@ ms.locfileid: "58898851"
     }
    ```
 
-- **Zg 编译器选项。**
+- **/Zg 编译器选项**
 
    `/Zg` 编译器选项（生成函数原型）不再可用。 此此编译器选项已被弃用。
 
 - 你无法再使用 mstest.exe 从命令行运行 C++/CLI 单元测试。 请改用 vstest.console.exe
 
-- **可变关键字。**
+- **可变关键字**
 
    在其之前正确编译的位置，不再允许存在可变存储类说明符。 现在，编译器报告错误 C2071（非法存储类）。 根据标准，可变说明符仅可应用于类数据成员的名称，不能应用于声明为 const 或 static 的名称，也不能应用于引用成员。
 
@@ -1104,7 +1104,7 @@ ms.locfileid: "58898851"
     };
    ```
 
-- `volatile` *成员变量将防止出现隐式定义的构造函数和赋值运算符：在早期版本的编译器，具有 volatile 成员变量的类可自动生成默认的复制/移动构造函数和默认的复制/移动赋值运算符。T这种旧行为不正确，也不符合 C++ 标准。T编译器现在认为拥有可变成员变量的类具有非常用构造函数和赋值运算符，这将防止自动生成这些运算符的默认实现。W当此类为某一联合（或类中的匿名联合）的成员时，会将联合（或包含匿名联合的类）的复制/移动构造函数和复制/移动赋值运算符的隐式定义为已删除。A如果尝试构造或复制联合（或包含匿名联合的类）而不显示定义它们是错误的，将导致编译器发出编译器错误 C2280。
+- `volatile` 成员变量将防止出现隐式定义的构造函数和赋值运算符：在早期版本的编译器，具有 volatile 成员变量的类可自动生成默认的复制/移动构造函数和默认的复制/移动赋值运算符。 这种旧行为不正确，也不符合 C++ 标准。 编译器现在认为拥有可变成员变量的类具有非常用构造函数和赋值运算符，这将防止自动生成这些运算符的默认实现。 当此类为某一联合（或类中的匿名联合）的成员时，会将联合（或包含匿名联合的类）的复制/移动构造函数和复制/移动赋值运算符的隐式定义为已删除。 如果尝试构造或复制联合（或包含匿名联合的类）而不显示定义它们是错误的，将导致编译器发出编译器错误 C2280。
 
    ```Output
     error C2280: 'B::B(const B &)': attempting to reference a deleted function
@@ -1646,7 +1646,7 @@ Microsoft Visual C++ 编译器支持以下 ISO C++11 语言功能：
 
 **切换标题/代码文件。** 现在，通过使用快捷菜单或键盘快捷方式上的命令，可以在标题及其相应代码文件之间切换。
 
-**可调整大小的 C++ 项目属性窗口**
+**可调整大小的 C++ 项目属性窗口。**
 
 **在 C++/CX 和 C++/CLI 中自动生成事件处理程序代码。**  在键入代码向 C++/CX 或 C++/CLI 代码文件中添加事件处理程序时，编辑器可以自动生成委托实例和事件处理程序定义。 可以自动生成事件处理程序代码时，会显示工具提示窗口。
 
@@ -1790,7 +1790,7 @@ Visual Studio 2012 的大部分版本都包含代码分析。 Professional 版�
 **nullptr 和 __nullptr 关键字。** 通过 Visual C++ 编译器，可以对本机代码或托管代码使用 nullptr 关键字。 nullptr 关键字指示对象句柄、内部指针或本机指针类型不指向对象。 如果使用 `/clr` 编译器选项，编译器会将 nullptr 解释为托管代码；如果不使用 `/clr` 选项，则解释为本机代码。
 Microsoft 特定的 __nullptr 关键字与 nullptr 的含义相同，但前者仅适用于本机代码。 如果使用 `/clr` 编译器选项编译本机 C/C++ 代码，则编译器无法确定 nullptr 关键字是本机项还是托管项。 若要使编译器清楚地了解你的意图，请使用 nullptr 关键字指定托管项，使用 __nullptr 指定本机项。
 
-**/Zc:trigraphs 编译器选项。** 默认情况下，禁用对三元组的支持。 使用 `/Zc:trigraphs` 编译器选项实现三字符组支持。
+**/Zc: trigraphs 编译器选项。** 默认情况下，禁用对三元组的支持。 使用 `/Zc:trigraphs` 编译器选项实现三字符组支持。
 三元祖由两个连续的问号 (??) 及后跟的唯一的第三个字符组成。 编译器将三元组替换为相应的标点字符。 例如，编译器会将三元祖 ??= 替换为字符 #（数字字符）。 对于使用的字符集未包含某些标点字符的 C 源文件，可在其中使用三元组。
 
 **新的按配置优化选项。** PogoSafeMode 是一个新的按配置优化选项，使用此选项可以指定在优化应用程序时使用安全模式还是快速模式。 安全模式是线程安全的，但比快速模式的运行速度慢。 快速模式是默认行为。
@@ -1803,7 +1803,7 @@ Microsoft 特定的 __nullptr 关键字与 nullptr 的含义相同，但前者�
 
 ### <a name="visual-c-projects-and-the-build-system"></a>Visual C++ 项目和生成系统
 
-**MSBuild。** Visual C++ 解决方案和项目现在使用 MSBuild.exe（取代了 VCBuild.exe）生成。 MSBuild 同样是基于 XML 的、灵活的、可扩展的生成工具，可由其他 Visual Studio 语言和项目类型使用。 由于此更改，Visual C++ 项目文件现在使用 XML 文件格式并具有文件扩展名 .vcxproj。 Visual Studio 早期版本的 Visual C++ 项目文件会自动转换为新文件格式。
+**。** Visual C++ 解决方案和项目现在使用 MSBuild.exe（取代了 VCBuild.exe）生成。 MSBuild 同样是基于 XML 的、灵活的、可扩展的生成工具，可由其他 Visual Studio 语言和项目类型使用。 由于此更改，Visual C++ 项目文件现在使用 XML 文件格式并具有文件扩展名 .vcxproj。 Visual Studio 早期版本的 Visual C++ 项目文件会自动转换为新文件格式。
 
 **VC++ 目录。** VC++ 目录设置现在位于两个位置。 使用项目属性页可为 VC++ 目录设置每个项目的值。 使用“属性管理器”和属性表可为 VC++ 目录设置每个配置的全局值。
 
@@ -1813,7 +1813,7 @@ Microsoft 特定的 __nullptr 关键字与 nullptr 的含义相同，但前者�
 
 ### <a name="visual-c-libraries"></a>Visual C++ 库
 
-**并发运行时库。** 并发运行时框架支持同时运行的应用程序和组件，并且它是在 Visual C++ 中进行并发应用程序编程的框架。 为了支持并发应用程序编程，并行模式库 (PPL) 提供了用于执行细粒度并行操作的通用容器和算法。 异步代理库提供了用于粗粒度数据流和管道任务的基于角色的编程模型和消息传递接口。
+**并发运行库。** 并发运行时框架支持同时运行的应用程序和组件，并且它是在 Visual C++ 中进行并发应用程序编程的框架。 为了支持并发应用程序编程，并行模式库 (PPL) 提供了用于执行细粒度并行操作的通用容器和算法。 异步代理库提供了用于粗粒度数据流和管道任务的基于角色的编程模型和消息传递接口。
 
 **标准 C++ 库。** 下表描述了对标准 C++ 库进行的很多更改。
 
@@ -1834,7 +1834,7 @@ Microsoft 特定的 __nullptr 关键字与 nullptr 的含义相同，但前者�
 
 **多点触控感知。** MFC 支持具有多点触控用户界面的应用程序，例如，针对 Microsoft Surface 操作系统编写的应用程序。 多点触控应用程序可处理 Windows 触控消息和手势消息，也就是触控消息的组合。 为应用程序注册触控事件和手势事件之后，操作系统就会将多点触控事件路由至事件处理程序。
 
-**高 DPI 感知。** 默认情况下，MFC 应用程序现在可以识别高 DPI。 如果应用程序可以识别高 DPI（每英寸像素数），则操作系统可将窗口、文本和其他 UI 元素缩放至当前屏幕分辨率。 这意味着，缩放的图像更可能是经过正确布局的，而不是经过剪切或像素化的。
+**高 DPI 识别。** 默认情况下，MFC 应用程序现在可以识别高 DPI。 如果应用程序可以识别高 DPI（每英寸像素数），则操作系统可将窗口、文本和其他 UI 元素缩放至当前屏幕分辨率。 这意味着，缩放的图像更可能是经过正确布局的，而不是经过剪切或像素化的。
 
 **重启管理器。** 重新启动管理器会在应用程序意外关闭或重新启动时，自动保存文档并重新启动该应用程序。 例如，在自动更新关闭了某个应用程序后，可以使用重新启动管理器来启动该应用程序。 要详细了解如何将应用程序配置为使用重启管理器，请参阅**如何：添加重启管理器支持**。
 
@@ -1866,7 +1866,7 @@ MFC 现在支持动画和 Direct2D 图形。 MFC 库中新增了一些 MFC 类�
 
 **#include 自动完成功能。** IDE 支持 `#include` 关键字自动完成。 在键入 `#include` 时，IDE 会创建一个包含有效头文件的下拉列表框。 如果继续键入文件名，则 IDE 会基于输入内容筛选该列表。 可以随时从该列表中选择要包含的文件。 这样可快速地包含文件，而无需知道确切的文件名。
 
-**导航到。** 可以利用“导航到”对话框搜索项目中与指定字符串匹配的所有符号和文件。 随着你在搜索字符串中键入其他字符，搜索结果会即时进行修改。 “结果”反馈字段会告知已找到的项数，并帮助决定是否要限制搜索。 “种类/范围”、“位置”和“预览”反馈字段可帮助排除名称类似的项。 此外，你可以扩展此功能以支持其他编程语言。
+**定位到。** 可以利用“导航到”对话框搜索项目中与指定字符串匹配的所有符号和文件。 随着你在搜索字符串中键入其他字符，搜索结果会即时进行修改。 “结果”反馈字段会告知已找到的项数，并帮助决定是否要限制搜索。 “种类/范围”、“位置”和“预览”反馈字段可帮助排除名称类似的项。 此外，你可以扩展此功能以支持其他编程语言。
 
 **并行调试和分析。** Visual Studio 调试器可识别并发运行时，帮助排除并行处理应用程序故障。 可使用新的并发探查器工具直观地显示应用程序的总体行为。 此外，可使用新的工具窗口直观地显示任务及其调用堆栈的状态。
 
@@ -1985,71 +1985,71 @@ __sptr、__uptr
 此版本对编译器进行了重大更改。
 
 - 64 位本机和跨平台编译器。
-- `/analyze` （企业代码分析）编译器选项已添加。
-- `/bigobj` 编译器选项已添加。
-- `/clr:pure`、`/clr:safe` 和 `/clr:oldSyntax` 已添加。 （后来已在 Visual Studio 2015 中弃用，并已从 Visual Studio 2017 中删除。）
+- 添加了 `/analyze`（企业代码分析）编译器选项。
+- 添加了 `/bigobj` 编译器选项。
+- 添加了 `/clr:pure`、`/clr:safe` 和 `/clr:oldSyntax`。 （后来已在 Visual Studio 2015 中弃用，并已从 Visual Studio 2017 中删除。）
 - 已弃用的编译器选项：此版本中很多编译器选项已弃用，请参阅“已弃用的编译器选项”以获取详细信息。
 - 减少了 `/clr` 代码中的双重形式转换；详情请参阅“双重形式转换 (C++)”。
-- `/EH` （异常处理模型）或 `/EHs` 无法再用于捕捉非引发性异常；请使用 `/EHa`。
-- `/errorReport` （报告内部编译器错误）编译器选项已添加。
-- `/favor` （64 位优化）编译器选项已添加。
-- `/FA`、`/Fa`（列表文件）编译器选项已添加。
-- `/FC` （所诊断源代码文件的完整路径）编译器选项已添加。
-- `/fp` （指定浮点行为）编译器选项已添加。
-- `/G` （处理器优化）选项编译器选项已添加。
-- `/G` （处理器优化）选项编译器选项已添加。
-- `/G3`、`/G4`、`/G5`、`/G6`、`/G7` 和 `/GB` 编译器选项已删除。 该编译器现在使用“混合模式”，会尝试为所有体系结构创建最佳输出文件。
-- `/Gf` 已删除。 请改用 `/GF`（消除重复的字符串）。
-- `/GL` （全程序优化）现与 `/CLRHEADER` 兼容。
+- `/EH`（异常处理模型）或 `/EHs` 无法再用于捕捉非引发性异常；请使用 `/EHa`。
+- 添加了 `/errorReport`（报告内部编译器错误）编译器选项。
+- 添加了 `/favor`（64 位优化）编译器选项。
+- 添加了 `/FA`、`/Fa`（列表文件）编译器选项。
+- 添加了 `/FC`（所诊断源代码文件的完整路径）编译器选项。
+- 添加了 `/fp`（指定浮点行为）编译器选项。
+- 添加了 `/G`（处理器优化）选项编译器选项。
+- 添加了 `/G`（处理器优化）选项编译器选项。
+- 删除了 `/G3`、`/G4`、`/G5`、`/G6`、`/G7` 和 `/GB` 编译器选项。 该编译器现在使用“混合模式”，会尝试为所有体系结构创建最佳输出文件。
+- 删除了 `/Gf`。 请改用 `/GF`（消除重复的字符串）。
+- `/GL`（全程序优化）现与 `/CLRHEADER` 兼容。
 - `/GR` 现默认为打开状态。
-- `/GS` （缓冲区安全检查）现可对容易受到攻击的指针参数提供安全保护。 `/GS` 现默认为打开状态。 `/GS` 现在也适用于使用 `/clr`（公共语言运行时编译）编译到 MSIL 的函数。
-- `/homeparams` （将寄存器参数复制到堆栈）编译器选项已添加。
-- `/hotpatch` （创建可热修补的映像）编译器选项已添加。
+- `/GS`（缓冲区安全检查）现可对容易受到攻击的指针参数提供安全保护。 `/GS` 现默认为打开状态。 `/GS` 现在也可用于通过 `/clr`（公共语言运行时编译）编译为 MSIL 的函数。
+- 添加了 `/homeparams`（将寄存器参数复制到堆栈）编译器选项。
+- 添加了 `/hotpatch`（创建可热修补的映像）编译器选项。
 - 更新了内联函数试探法；详情请参阅 inline、__inline、__forceinline 和 inline_depth
 - 添加了很多内部函数，而且很多以前未记录的内部函数现在都已记录。
 - 默认情况下，任何对 new 的调用失败都将引发异常。
-- `/ML` 和 `/MLd` 编译器选项已删除。 Visual C++ 不再支持单线程静态链接的 CRT 库支持。
+- 删除了 `/ML` 和 `/MLd` 编译器选项。 Visual C++ 不再支持单线程静态链接的 CRT 库支持。
 - 编译器实现了命名返回值优化。当你使用 `/O1`、`/O2`（最小化大小、最大化速度）、`/Og`（全局优化）和 `/Ox`（完全优化）进行编译时，会启用此优化。
-- `/Oa` 编译器选项已删除，它将被忽略且没有提示；请使用 `noalias` 或 `restrict__declspec` 修饰符来指定编译器命名别名的方式。
-- `/Op` 编译器选项已删除。 请改用 `/fp`（指定浮点行为）。
+- 删除了 `/Oa` 编译器选项，它将被忽略且没有提示；请使用 `noalias` 或 `restrict__declspec` 修饰符来指定编译器命名别名的方式。
+- 删除了 `/Op` 编译器选项。 请改用 `/fp`（指定浮点行为）。
 - Visual C++ 现在支持 OpenMP。
-- `/openmp` （启用 OpenMP 2.0 支持）编译器选项已添加。
-- `/Ow` 编译器选项已删除，它将被忽略且没有提示。 请使用 `noalias` 或 `restrict__declspec` 修饰符来指定编译器命名别名的方式。
+- 添加了 `/openmp`（启用 OpenMP 2.0 支持）编译器选项。
+- 删除了 `/Ow` 编译器选项，它将被忽略且没有提示。 请使用 `noalias` 或 `restrict__declspec` 修饰符来指定编译器命名别名的方式。
 
 ### <a name="profile-guided-optimizations"></a>按配置文件优化
 
-- `/QI0f` 已删除。
-- `/QIfdiv` 已删除。
-- `/QIPF_B` （B CPU 单步执行的勘误表）编译器选项已添加。
-- `/QIPF_C` （C CPU 单步执行的勘误表）编译器选项已添加。
-- `/QIPF_fr32` （不使用高 96 浮点寄存器）编译器选项已添加。
-- `/QIPF_noPIC` （生成依赖于位置的代码）编译器选项已添加。
-- `/QIPF_restrict_plabels` （假定运行时不创建任何函数）编译器选项已添加。
+- 删除了 `/QI0f`。
+- 删除了 `/QIfdiv`。
+- 添加了 `/QIPF_B`（B CPU 单步执行的勘误表）编译器选项。
+- 添加了 `/QIPF_C`（C CPU 单步执行的勘误表）编译器选项。
+- 添加了 `/QIPF_fr32`（不使用高 96 浮点寄存器）编译器选项。
+- 添加了 `/QIPF_noPIC`（生成依赖于位置的代码）编译器选项。
+- 添加了 `/QIPF_restrict_plabels`（假定运行时不创建任何函数）编译器选项。
 
 ### <a name="unicode-support-in-the-compiler-and-linker"></a>编译器和链接器中的 Unicode 支持
 
-- `/vd` （禁用构造置换）现在允许你对正在构造（使用 /vd2）的对象使用 dynamic_cast 运算符
-- `/YX` 编译器选项已删除。 请改用 `/Yc`（创建预编译头文件） 或 `/Yu`（使用预编译头文件）。 如果从生成配置中删除 `/YX`，且不提供替换项，则可能会加快生成速度。
+- `/vd`（禁用构造置换）现在允许你对正在构造（使用 /vd2）的对象使用 dynamic_cast 运算符
+- 删除了 `/YX` 编译器选项。 请改用 `/Yc`（创建预编译头文件） 或 `/Yu`（使用预编译头文件）。 如果从生成配置中删除 `/YX`，且不提供替换项，则可能会加快生成速度。
 - `/Zc:forScope` 现默认为打开状态。
 - `/Zc:wchar_t` 现默认为打开状态。
-- `/Zd` 编译器选项已删除。 不再支持仅限行号的调试信息。 请改用 `/Zi`（详情请参见 /Z7、/Zi、/ZI（调试信息格式））。
+- 删除了 `/Zd` 编译器选项。 不再支持仅限行号的调试信息。 请改用 `/Zi`（详情请参见 /Z7、/Zi、/ZI（调试信息格式））。
 - `/Zg` 现仅对 C 源代码文件有效，对 C++ 源代码文件无效。
-- `/Zx` （调试经过优化的 Itanium 代码）编译器选项已添加。
+- 添加了 `/Zx`（调试经过优化的 Itanium 代码）编译器选项。
 
 ### <a name="new-language-features"></a>新语言功能
 
 - Attributeattribute 现已弃用。
-- `appdomain__declspec` 修饰符已添加。
-- `__clrcall` 调用约定已添加。
+- 添加了 `appdomain__declspec` 修饰符。
+- 添加了 `__clrcall` 调用约定。
 - 借助于已弃用的 (C++) declspec 修饰符，用户可以在试图访问已弃用的类或函数时，指定将在编译时显示的字符串。
 - dynamic_cast 运算符有重大更改。
 - 本机枚举现在允许指定基础类型。
-- `jitintrinsicdeclspec` 修饰符已添加。
-- `noaliasdeclspec` 修饰符已添加。
-- `process__declspec` 修饰符已添加。
+- 添加了 `jitintrinsicdeclspec` 修饰符。
+- 添加了 `noaliasdeclspec` 修饰符。
+- 添加了 `process__declspec` 修饰符。
 - abstract、override 和 sealed 对本机编译有效。
 - 添加了 __restrict 关键字。
-- `restrictdeclspec` 修饰符已添加。
+- 添加了 `restrictdeclspec` 修饰符。
 - __thiscall 现在是关键字。
 - __unaligned 关键字现已记录。
 - volatile (C++) 已更新与优化相关的行为。
@@ -2059,9 +2059,9 @@ __sptr、__uptr
 - 添加了预定义宏 __CLR_VER。
 - 注释 (C/C++) 杂注现在接受 `/MANIFESTDEPENDENCY` 作为链接器注释。 注释的 exestr 选项现已弃用。
 - `embedded_idl` 属性（`#import` 指令）现具有可选参数。
-- `fenv_access` pragma
-- `float_control` pragma
-- `fp_contract` pragma
+- `fenv_access` 杂注
+- `float_control` 杂注
+- `fp_contract` 杂注
 - 如果杂注的托管和非托管部分中存在全局变量，则不会按照声明全局变量的顺序初始化全局变量。 这是一项潜在的重大更改，例如，如果使用托管的全局变量来初始化非托管全局变量，则需要一个构造完整的托管对象。
 - 用 init_seg 指定的部分现为只读状态，而不是早期版本中的读/写。
 - inline_depth 默认值现为 16。 在 Visual C++ .NET 2003 中，默认值 16 也有效。
@@ -2069,13 +2069,13 @@ __sptr、__uptr
 - 添加了预定义宏 _M_CEE、_M_CEE_PURE 和 _M_CEE_SAFE，请参阅“预定义宏”。
 - 添加了预定义宏 _M_IX86_FP。
 - 添加了预定义宏 _M_X64。
-- `make_public` pragma
-- `managed`、`unmanaged` 杂注语法已更新（现具有 `push` 和 `pop`）
+- `make_public` 杂注
+- 更新了 `managed`、`unmanaged` 杂注语法（现具有 `push` 和 `pop`）
 - `#using` 指令现在所有 `/clr` 编译中隐式引用 mscorlib.dll。
 - 添加了预定义宏 _OPENMP。
 - 更新了优化杂注，a 和 w 不再是有效参数。
 - 添加了 no_registry#import 属性。
-- `region`、`endregion` 杂注已添加
+- 添加了 `region`、`endregion` 杂注
 - 添加了预定义宏 _VC_NODEFAULTLIB。
 - 现在实现了 Variadic 宏。
 - `vtordisp` 已弃用，并将从 Visual C++ 的未来版本中移除。
@@ -2084,46 +2084,46 @@ __sptr、__uptr
 ### <a name="new-linker-features"></a>链接器的新增功能
 
 - 现在允许将模块（非程序集 MSIL 输出文件）作为链接器的输入内容。
-- `/ALLOWISOLATION` （清单查找）链接器选项已添加。
-- `/ASSEMBLYRESOURCE` （嵌入托管资源）已更新，现可指定程序集中的资源名称，还可在程序集中将此资源指定为“私有”。
-- `/CLRIMAGETYPE` （指定 CLR 映像的类型）链接器选项已添加。
-- `/CLRSUPPORTLASTERROR` （为 PInvoke 调用保留上次的错误代码）链接器选项已添加。
-- `/CLRTHREADATTRIBUTE` （设置 CLR 线程属性）链接器选项已添加。
-- `/CLRUNMANAGEDCODECHECK` （添加 SuppressUnmanagedCodeSecurityAttribute）链接器选项已添加。
-- `/ERRORREPORT` （报告内部链接器错误）链接器选项已添加。
-- `/EXETYPE` 链接器选项已删除。 链接器不再支持创建 Windows 95 和 Windows 98 设备驱动程序。 使用适当的 DDK 来创建这些设备驱动程序。 EXETYPE 关键字不再对模块定义文件有效。
-- `/FUNCTIONPADMIN` （创建可热修补的映像）链接器选项已添加。
-- `/LTCG` 链接器选项现受使用 `/clr` 编译的模块的支持。 `/LTCG` 也已更新，使其支持按配置优化。
-- `/MANIFEST` （创建并行程序集清单）链接器选项已添加。
-- `/MANIFESTDEPENDENCY` （指定清单依赖项）连接器选项已添加。
-- `/MANIFESTFILE` （命名清单文件）链接器选项已添加。
-- `/MAPINFO:LINES` 链接器选项已删除。
-- `/NXCOMPAT` （与数据执行保护兼容）链接器选项已添加。
-- `/PGD` （为按配置文件优化指定数据库）链接器选项已添加。
-- `/PROFILE` （性能工具分析器）链接器选项已添加。
-- `/SECTION` （指定节属性）链接器选项现支持属性求反，而不再支持 L 或 D（与 VxD 相关）属性。
+- 添加了 `/ALLOWISOLATION`（清单查找）链接器选项。
+- 更新了 `/ASSEMBLYRESOURCE`（嵌入托管资源），现可指定程序集中的资源名称，还可在程序集中将此资源指定为“私有”。
+- 添加了 `/CLRIMAGETYPE`（指定 CLR 映像的类型）链接器选项。
+- 添加了 `/CLRSUPPORTLASTERROR`（为 PInvoke 调用保留上次的错误代码）链接器选项。
+- 添加了 `/CLRTHREADATTRIBUTE`（设置 CLR 线程属性）链接器选项。
+- 添加了 `/CLRUNMANAGEDCODECHECK`（添加 SuppressUnmanagedCodeSecurityAttribute）链接器选项。
+- 添加了 `/ERRORREPORT`（报告内部链接器错误）链接器选项。
+- 删除了 `/EXETYPE` 链接器选项。 链接器不再支持创建 Windows 95 和 Windows 98 设备驱动程序。 使用适当的 DDK 来创建这些设备驱动程序。 EXETYPE 关键字不再对模块定义文件有效。
+- 添加了 `/FUNCTIONPADMIN`（创建可热修补的映像）链接器选项。
+- 使用 `/clr` 编译的模块现支持 `/LTCG` 链接器选项。 还更新了 `/LTCG`，使其支持按配置优化。
+- 添加了 `/MANIFEST`（创建并行程序集清单）链接器选项。
+- 添加了 `/MANIFESTDEPENDENCY`（指定清单依赖项）连接器选项。
+- 添加了 `/MANIFESTFILE`（命名清单文件）链接器选项。
+- 删除了 `/MAPINFO:LINES` 链接器选项。
+- 添加了 `/NXCOMPAT`（与数据执行保护兼容）链接器选项。
+- 添加了 `/PGD`（为按配置文件优化指定数据库）链接器选项。
+- 添加了 `/PROFILE`（性能工具分析器）链接器选项。
+- `/SECTION`（指定节属性）链接器选项现支持属性求反，而不再支持 L 或 D（与 VxD 相关）属性。
 - 编译器和链接器中的 Unicode 支持
-- `/VERBOSE` （打印进度消息）链接器选项现还接受 ICF 和 REF。
-- `/VXD` 链接器选项已删除。 链接器不再支持创建 Windows 95 和 Windows 98 设备驱动程序。 使用适当的 DDK 来创建这些设备驱动程序。 VXD 关键字不再对模块定义文件有效。
-- `/WS` 链接器选项已删除。 `/WS` 用于修改针对 Windows NT 4.0 的映像。 可使用 IMAGECFG.exe -R 文件名代替 `/WS`。 可在 Windows NT 4.0 CD-ROM 上找到 IMAGECFG.exe，路径为 SUPPORT\DEBUG\I386\IMAGECFG.EXE。
-- `/WX` （将链接器警告视为错误）链接器选项现已记录。
+- `/VERBOSE`（打印进度消息）链接器选项现还接受 ICF 和 REF。
+- 删除了 `/VXD` 链接器选项。 链接器不再支持创建 Windows 95 和 Windows 98 设备驱动程序。 使用适当的 DDK 来创建这些设备驱动程序。 VXD 关键字不再对模块定义文件有效。
+- 删除了 `/WS` 链接器选项。 `/WS` 用于修改针对 Windows NT 4.0 的映像。 可使用 IMAGECFG.exe -R 文件名代替 `/WS`。 可在 Windows NT 4.0 CD-ROM 上找到 IMAGECFG.exe，路径为 SUPPORT\DEBUG\I386\IMAGECFG.EXE。
+- `/WX`（将链接器警告视为错误）链接器选项现已记录。
 
 ### <a name="new-linker-utility-features"></a>链接器实用工具的新增功能
 
-- `/ALLOWISOLATION` editbin 选项已添加
+- 添加了 `/ALLOWISOLATION` editbin 选项
 - 删除了 DESCRIPTION 模块定义文件语句。 链接器不再支持生成虚拟设备驱动程序。
-- `/ERRORREPORT` 选项已在 bscmake.exe、dumpbin.exe、editbin.exe 和 lib.exe 中添加。
-- `/LTCG` lib 选项已添加。
-- `/NXCOMPAT` editbin 选项已添加。
-- `/RANGE` dumpbin 选项已添加。
-- `/TLS` dumpbin 选项已添加。
-- `/WS` editbin 选项已添加。 `/WS` 用于修改针对 Windows NT 4.0 的映像。 可使用 IMAGECFG.exe -R 文件名代替 `/WS`。 可在 Windows NT 4.0 CD-ROM 上找到 IMAGECFG.exe，路径为 SUPPORT\DEBUG\I386\IMAGECFG.EXE。
+- 在 bscmake.exe、dumpbin.exe、editbin.exe 和 lib.exe 中添加了 `/ERRORREPORT` 选项。
+- 添加了 `/LTCG` lib 选项。
+- 添加了 `/NXCOMPAT` editbin 选项。
+- 添加了 `/RANGE` dumpbin 选项。
+- 添加了 `/TLS` dumpbin 选项。
+- 删除了 `/WS` editbin 选项。 `/WS` 用于修改针对 Windows NT 4.0 的映像。 可使用 IMAGECFG.exe -R 文件名代替 `/WS`。 可在 Windows NT 4.0 CD-ROM 上找到 IMAGECFG.exe，路径为 SUPPORT\DEBUG\I386\IMAGECFG.EXE。
 - 添加了 /WX[:NO] lib 选项。
 
 ### <a name="new-nmake-features"></a>NMAKE 的新增功能
 
-- `/ERRORREPORT` 已添加。
-- `/G` 已添加。
+- 添加了 `/ERRORREPORT`。
+- 添加了 `/G`。
 - 更新了预定义规则。
 - 递归宏中记录的 $(MAKE) 宏现在提供 nmake.exe 的完整路径。
 
@@ -2132,7 +2132,7 @@ __sptr、__uptr
 - MASM 表达式现在为 64 位值。 在早期版本中，MASM 表达式为 32 位值。
 - 现在指令 __asm int 3 可使函数被编译到本机中。
 - ALIAS (MASM) 现已记录。
-- `/ERRORREPORT` ml.exe 和 ml64.exe 选项已添加。
+- 添加了 `/ERRORREPORT` ml.exe 和 ml64.exe 选项。
 - .FPO 现已记录。
 - Visual C++ 2005 中将不提供 H2INC.exe。 如果需要继续使用 H2INC，请使用 Visual C++ 早期版本中的 H2INC.exe。
 - 添加了运算符 IMAGEREL。
@@ -2147,7 +2147,7 @@ __sptr、__uptr
 - .SAVEXMM128
 - .SETFRAME。此外，已用仅适用于 x64 的语法更新了 PROC 指令。
 - 添加了 MMWORD 指令
-- `/omf` （ML.exe 命令行选项）现表示 `/c`。 ML.exe 不支持链接 OMF 格式对象。
+- `/omf`（ML.exe 命令行选项）现表示 `/c`。 ML.exe 不支持链接 OMF 格式对象。
 - SEGMENT 指令现支持附加属性。
 - 添加了运算符 SECTIONREL。
 - 添加了 XMMWORD 指令
@@ -2158,7 +2158,7 @@ __sptr、__uptr
 - 已弃用许多函数现有的安全性较低的版本。 若要禁用弃用警告，请定义 _CRT_SECURE_NO_WARNINGS。
 - 许多现有函数现在会验证其参数，并在传递了无效参数时调用无效参数处理程序。
 - 许多现有函数现在之前未设置 `errno` 的位置对其进行了设置。
-- 添加了具有整数类型的 typedef `errno_t`。 `errno_t` 在函数返回类型或参数处理来自 `errno` 的错误代码时使用。 `errno_t` 替代 `errcode`。
+- 添加了具有整数类型的 typedef `errno_t`。 每当函数返回类型或参数处理来自 `errno` 的错误代码时，就会使用 `errno_t`。 `errno_t` 替代 `errcode`。
 - 依赖于区域设置的函数现在有了新的版本，这些版本将区域设置作为参数，而不是使用当前的区域设置。 这些新的函数具有 _l 后缀。 添加了一些新函数，用于区域设置对象。 新函数包括 `_get_current_locale`、`_create_locale` 和 `_free_locale`。
 - 添加了新函数，以支持锁定和解锁文件句柄。
 - `_spawn` 系列函数不会像在早期版本中那样，在成功时将 errno 重置为零。
@@ -2184,8 +2184,8 @@ __sptr、__uptr
 - 添加了新的 `_countof` 宏，用于计算数组中的元素数量。
 - 在每个函数主题中，添加了一节有关 .NET Framework 等效项的内容。
 - 一些字符串函数现在可以选择在输出缓冲区太小时截断字符串，而不会失败；请参阅“_TRUNCATE”。
-- `_set_se_translator` 现需要使用 `/EHa` 编译器选项。
-- `fpos_t` 现会在 `/Za` 下（对于 C 代码）和手动设置 __STDC__（对于 C++ 代码）时变为 **__int64**。 以前它是一个结构。
+- `_set_se_translator` 现需要使用`/EHa` 编译器选项。
+- 现在，在 `/Za` 下（对于 C 代码）和手动设置 STDC（对于 C++ 代码）时，`fpos_t` 会变为 __int64。 以前它是一个结构。
 - _CRT_DISABLE_PERFCRIT_LOCKS 可以提高单线程程序的 I/O 性能。
 - 在对符合 ISO C++ 名称的优选中，弃用了 POSIX 名称（例如使用 `_getch` 而不是 `getch`）。
 - 新的链接选项 .obj 文件可用于纯模式
@@ -2200,9 +2200,9 @@ __sptr、__uptr
 - 添加了一个演练，演示如何移植现有本机应用程序以使用 Managed Extensions for C++：演练：移植现有本机 C++ 应用程序以与 .NET Framework 组件互操作。
 - 现在可以在值类型的方法上创建委托。
 - Visual C++ .NET 2003 已极大地增强了编译器与 C++ 标准的符合性。
-- `/arch` 编译器选项已添加。
-- `/Gf` 已弃用，并将从 Visual C++ 的下一版本中删除。
-- `/G7` 编译器选项已添加。
+- 添加了 `/arch` 编译器选项。
+- 已弃用 `/Gf`，并将从 Visual C++ 的下一版本中删除。
+- 添加了 `/G7` 编译器选项。
 - 改进了 `/GS` 编译器选项，使其帮助保护本地变量，防止直接缓冲区溢出。
 - 删除了 `/noBool` 编译器选项。 编译器现在允许 bool 在 C++ 源代码文件中仅作为关键字（而不是标识符）出现。
 - long long 类型现在可用作 __int64 的 typedef。请注意，在 CRT 中还不支持 longlong。

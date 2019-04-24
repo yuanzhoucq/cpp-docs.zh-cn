@@ -1,5 +1,5 @@
 ---
-title: 加速键 （c + +）
+title: 加速键 (C++)
 ms.date: 02/14/2019
 f1_keywords:
 - vc.editors.accelerator
@@ -11,13 +11,13 @@ helpviewer_keywords:
 - keyboard shortcuts [C++], menu association
 ms.assetid: f234c5f2-4ec3-4c9e-834a-b5dd297625b9
 ms.openlocfilehash: bb407538f254df5f187ff91b85a8eaa753a52287
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59027505"
 ---
-# <a name="accelerator-keys-c"></a>加速键 （c + +）
+# <a name="accelerator-keys-c"></a>加速键 (C++)
 
 ## <a name="predefined-accelerator-keys"></a>预定义快捷键
 
@@ -63,7 +63,7 @@ ms.locfileid: "59027505"
 |VK_OEM_6|(Windows)适用于美国标准键盘， **]}** 密钥|
 |VK_OEM_7|(Windows)适用于美国标准键盘，单-单引号/双引号键|
 |VK_OEM_COMMA|(Windows)适用于任何国家/地区 **，** 密钥|
-|VK_OEM_MINUS|(Windows)适用于任何国家/地区**-** 密钥|
+|VK_OEM_MINUS|(Windows)适用于任何国家/地区 **-** 密钥|
 |VK_OEM_PERIOD|(Windows)适用于任何国家/地区， **。** 密钥|
 |VK_OEM_PLUS|(Windows)适用于任何国家/地区 **+** 密钥|
 |VK_PACKET|(Windows)用于传递 Unicode 字符，如同它们是击键。|

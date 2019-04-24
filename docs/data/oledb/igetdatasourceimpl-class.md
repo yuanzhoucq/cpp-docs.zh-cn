@@ -15,10 +15,10 @@ helpviewer_keywords:
 - GetDataSource method
 ms.assetid: d63f3178-d663-4f01-8c09-8aab2dd6805a
 ms.openlocfilehash: 2056b93fd6c1d32b72996970352e87670ff406de
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59034204"
 ---
 # <a name="igetdatasourceimpl-class"></a>IGetDataSourceImpl 类

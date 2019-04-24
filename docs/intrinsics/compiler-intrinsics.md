@@ -8,10 +8,10 @@ helpviewer_keywords:
 - cl.exe compiler, intrinsics
 ms.assetid: 48bb9929-7d78-4fd8-a092-ae3c9f971858
 ms.openlocfilehash: 9a014e870d731d7e7d443c3bfefd66884aa50d5d
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59029273"
 ---
 # <a name="compiler-intrinsics"></a>编译器内部函数
@@ -40,9 +40,9 @@ ms.locfileid: "59029273"
 
 - [x64 (amd64) 内部函数列表](../intrinsics/x64-amd64-intrinsics-list.md)
 
-- [在所有体系结构上的可用内部函数](../intrinsics/intrinsics-available-on-all-architectures.md)
+- [在所有体系结构上都可用的内部函数](../intrinsics/intrinsics-available-on-all-architectures.md)
 
-- [按字母顺序列出的内部函数](../intrinsics/alphabetical-listing-of-intrinsic-functions.md)
+- [按字母顺序排序的内部函数列表](../intrinsics/alphabetical-listing-of-intrinsic-functions.md)
 
 ## <a name="see-also"></a>请参阅
 

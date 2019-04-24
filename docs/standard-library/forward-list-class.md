@@ -81,11 +81,11 @@ helpviewer_keywords:
 - std::forward_list::unique
 ms.assetid: 89a3b805-ab60-4858-b772-5855130c11b1
 ms.openlocfilehash: 5eaa8eba1904dc0a729fb66b280b8d3fa4bb78f1
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524542"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62159777"
 ---
 # <a name="forwardlist-class"></a>forward_list 类
 
@@ -104,7 +104,7 @@ class forward_list
 |参数|描述|
 |---------------|-----------------|
 |*Type*|要存储在 forward_list 中的元素数据类型。|
-|*分配器*|存储的分配器对象，用于封装有关 forward_list 的内存分配和解除分配的详细信息。 此参数可选。 默认值为 allocator< `Type`>。|
+|*Allocator*|存储的分配器对象，用于封装有关 forward_list 的内存分配和解除分配的详细信息。 此参数可选。 默认值为 allocator< `Type`>。|
 
 ## <a name="remarks"></a>备注
 
@@ -215,11 +215,11 @@ void assign(InputIterator First, InputIterator Last);
 |参数|描述|
 |---------------|-----------------|
 |*first*|替换范围的起始处。|
-|*最后一个*|替换范围的结束处。|
+|*last*|替换范围的结束处。|
 |*count*|要分配的元素数。|
 |*val*|要分配每个元素的值。|
 |*Type*|值的类型。|
-|* IList|要复制的 initializer_list。|
+|* IList |要复制的 initializer_list。|
 
 ### <a name="remarks"></a>备注
 
@@ -468,7 +468,7 @@ iterator erase_after(const_iterator first, const_iterator last);
 |---------------|-----------------|
 |*Where*|目标转发列表中擦除元素的位置。|
 |*first*|要擦除范围的起始处。|
-|*最后一个*|要擦除范围的结尾处。|
+|*last*|要擦除范围的结尾处。|
 
 ### <a name="return-value"></a>返回值
 
@@ -511,7 +511,7 @@ forward_list(InputIterator First, InputIterator Last, const Allocator& Al);
 |---------------|-----------------|
 |*Al*|要用于此对象的分配器类。|
 |“计数”|所构造列表中元素的数目。|
-|*val*|构造的列表中的元素值。|
+|*Val*|构造的列表中的元素值。|
 |右侧|所构造列表要作为其副本的列表。|
 |*第一个*|要复制的范围元素中的第一个元素的位置。|
 |*最后一个*|要复制的元素范围以外的第一个元素的位置。|
@@ -579,7 +579,7 @@ void insert_after(const_iterator Where, InputIterator First, InputIterator Last)
 |“计数”|要插入的元素数。|
 |*第一个*|插入范围的起始处。|
 |*最后一个*|插入范围的结束处。|
-|*val*|添加到转发列表的元素。|
+|*Val*|添加到转发列表的元素。|
 |*IList*|要插入的 initializer_list。|
 
 ### <a name="return-value"></a>返回值
@@ -768,7 +768,7 @@ void remove_if(Predicate pred);
 
 |参数|描述|
 |---------------|-----------------|
-|*Pred*|一元谓词，如果元素满足该谓词，则该谓词会导致此元素从列表删除。|
+|*pred*|一元谓词，如果元素满足该谓词，则该谓词会导致此元素从列表删除。|
 
 ### <a name="remarks"></a>备注
 
@@ -832,7 +832,7 @@ void sort(Predicate pred);
 
 |参数|描述|
 |---------------|-----------------|
-|*Pred*|排序谓词。|
+|*pred*|排序谓词。|
 
 ### <a name="remarks"></a>备注
 

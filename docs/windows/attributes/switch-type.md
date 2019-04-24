@@ -1,5 +1,5 @@
 ---
-title: switch_type （c + + COM 属性）
+title: switch_type (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.switch_type
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - switch_type attribute
 ms.assetid: e24544dc-b3bc-48ae-b249-f967db49271e
 ms.openlocfilehash: b461769d3d988efae0be7380e1e0112e3f3cf801
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59027852"
 ---
 # <a name="switchtype"></a>switch_type
@@ -27,14 +27,14 @@ type
 
 ### <a name="parameters"></a>参数
 
-*类型*<br/>
+*type*<br/>
 开关类型可以是整数、 字符、 布尔值或枚举类型。
 
 ## <a name="remarks"></a>备注
 
-**Switch_type** c + + 属性具有相同的功能[switch_type](/windows/desktop/Midl/switch-type) MIDL 特性。
+**Switch_type** C++属性具有相同的功能[switch_type](/windows/desktop/Midl/switch-type) MIDL 特性。
 
-不支持 c + + 特性[封装联合](/windows/desktop/Midl/encapsulated-unions)。 [Nonencapsulated 的联合](/windows/desktop/Midl/nonencapsulated-unions)支持仅按以下格式：
+C++特性不支持[封装联合](/windows/desktop/Midl/encapsulated-unions)。 [Nonencapsulated 的联合](/windows/desktop/Midl/nonencapsulated-unions)支持仅按以下格式：
 
 ```cpp
 // cpp_attr_ref_switch_type.cpp

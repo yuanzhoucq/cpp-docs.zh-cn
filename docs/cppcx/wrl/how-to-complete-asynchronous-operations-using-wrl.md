@@ -4,31 +4,31 @@ ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 02173eae-731b-49bc-b412-f1f69388b99d
 ms.openlocfilehash: 09c341e5e3d4f6007d5d5f66b7c06e1f0af5a65c
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59040220"
 ---
 # <a name="how-to-complete-asynchronous-operations-using-wrl"></a>如何：使用 WRL 完成异步操作
 
-本文档演示如何使用 Windows 运行时 c + + 模板库 (WRL) 来启动异步操作并在操作完成时执行工作。
+本文档演示如何使用 Windows 运行时C++模板库 (WRL) 启动异步操作并在操作完成时执行工作。
 
 本文档演示两个示例。 第一个示例将启动异步计时器，并等待计时器过期。 在此示例中，在创建计时器对象时指定的异步操作。 第二个示例运行后台辅助线程。 此示例演示如何使用返回的 Windows 运行时方法`IAsyncInfo`接口。 [回调](callback-function-wrl.md)函数是这两个示例的重要组成部分，因为它可以让管理员指定事件处理程序以处理异步操作的结果。
 
 创建组件的实例，并检索属性值的更多基础示例，请参阅[如何：激活和使用 Windows 运行时组件](how-to-activate-and-use-a-windows-runtime-component-using-wrl.md)。
 
 > [!TIP]
-> 这些示例使用 lambda 表达式来定义回调。 此外可以使用函数对象 （函子） 函数指针或[std:: function](../../standard-library/function-class.md)对象。 有关 c + + lambda 表达式的详细信息，请参阅[Lambda 表达式](../../cpp/lambda-expressions-in-cpp.md)。
+> 这些示例使用 lambda 表达式来定义回调。 此外可以使用函数对象 （函子） 函数指针或[std:: function](../../standard-library/function-class.md)对象。 有关详细信息C++lambda 表达式，请参阅[Lambda 表达式](../../cpp/lambda-expressions-in-cpp.md)。
 
 ## <a name="example-working-with-a-timer"></a>示例:使用计时器
 
 以下步骤启动异步计时器，并等待计时器过期。 以下是完整的示例。
 
 > [!WARNING]
-> 虽然通常使用 Windows 运行时 c + + 模板库中的通用 Windows 平台 (UWP) 应用，但此示例使用一个控制台应用程序是为了进行说明。 函数如`wprintf_s`UWP 应用中不可用。 有关类型和可以在 UWP 应用中使用的函数的详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)并[Win32 和 COM 适用于 UWP 应用](/uwp/win32-and-com/win32-and-com-for-uwp-apps)。
+> 虽然通常使用 Windows 运行时C++模板库在通用 Windows 平台 (UWP) 应用中，此示例使用一个控制台应用程序是为了进行说明。 函数如`wprintf_s`UWP 应用中不可用。 有关类型和可以在 UWP 应用中使用的函数的详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)并[Win32 和 COM 适用于 UWP 应用](/uwp/win32-and-com/win32-and-com-for-uwp-apps)。
 
-1. 包括 (`#include`) 所需的任何 Windows 运行时、 Windows 运行时 c + + 模板库或 c + + 标准库标头。
+1. 包括 (`#include`) 所需 Windows 运行时，Windows 运行时的任何C++模板库，或C++标准库标头。
 
    [!code-cpp[wrl-consume-async#2](../codesnippet/CPP/how-to-complete-asynchronous-operations-using-wrl_1.cpp)]
 
@@ -78,7 +78,7 @@ ms.locfileid: "59040220"
 > [!TIP]
 > 此示例演示如何使用`ABI::Windows::Foundation::IAsyncAction`接口。 可以将此模式应用于实现任何接口`IAsyncInfo`: `IAsyncAction`， `IAsyncActionWithProgress`， `IAsyncOperation`，和`IAsyncOperationWithProgress`。
 
-1. 包括 (`#include`) 所需的任何 Windows 运行时、 Windows 运行时 c + + 模板库或 c + + 标准库标头。
+1. 包括 (`#include`) 所需 Windows 运行时，Windows 运行时的任何C++模板库，或C++标准库标头。
 
    [!code-cpp[wrl-consume-asyncOp#2](../codesnippet/CPP/how-to-complete-asynchronous-operations-using-wrl_8.cpp)]
 

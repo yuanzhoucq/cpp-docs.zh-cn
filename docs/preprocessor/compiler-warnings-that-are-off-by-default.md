@@ -6,15 +6,15 @@ helpviewer_keywords:
 - cl.exe compiler, setting options
 ms.assetid: 69809cfb-a38a-4035-b154-283a61938df8
 ms.openlocfilehash: ee2b6097a62a8f1030dc631354f96ec7a33d2f11
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59039392"
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>默认情况下处于关闭状态的编译器警告
 
-编译器支持默认情况下，关闭的警告，因为大多数开发人员不发现它们很有用。 在某些情况下，它们发出警告有关样式的选择，或在较旧代码中常见的惯用语言。 有关使用语言的 Microsoft 扩展的其他警告。 在其他情况下，它们指示程序员经常做出错误的假设，这可能会导致意外的或未定义行为的区域。 如果启用，有些警告可能会很多时候显示库标头中。 C 运行时库以及 c + + 标准库设计用于不发出任何警告仅在警告等级[/w4](../build/reference/compiler-option-warning-level.md)。
+编译器支持默认情况下，关闭的警告，因为大多数开发人员不发现它们很有用。 在某些情况下，它们发出警告有关样式的选择，或在较旧代码中常见的惯用语言。 有关使用语言的 Microsoft 扩展的其他警告。 在其他情况下，它们指示程序员经常做出错误的假设，这可能会导致意外的或未定义行为的区域。 如果启用，有些警告可能会很多时候显示库标头中。 C 运行时库和C++标准库旨在不发出任何警告仅在警告级别[/w4](../build/reference/compiler-option-warning-level.md)。
 
 ## <a name="enable-warnings-that-are-off-by-default"></a>启用默认情况下处于关闭状态的警告
 
@@ -30,7 +30,7 @@ ms.locfileid: "59039392"
 
 - [/Wall](../build/reference/compiler-option-warning-level.md)
 
-   `/Wall` 启用默认情况下处于关闭状态的所有警告。 如果使用此选项，您可以通过使用将关闭单个警告[/wd](../build/reference/compiler-option-warning-level.md)选项。
+   `/Wall` 将启用默认情况下禁用的所有警告。 如果使用此选项，您可以通过使用将关闭单个警告[/wd](../build/reference/compiler-option-warning-level.md)选项。
 
 - [/w*Lnnnn*](../build/reference/compiler-option-warning-level.md)
 
@@ -64,7 +64,7 @@ ms.locfileid: "59039392"
 |C4370 （级别 3）|为了更好地封装，类的布局与早期版本的编译器已有所不同|
 |[C4371](../error-messages/compiler-warnings/c4371.md) （级别 3）|'*classname*： 类的布局可能已更改从以前版本的编译器更好地封装成员*成员*|
 |C4388 （级别 4）|有符号/无符号不匹配|
-|[C4412](../error-messages/compiler-warnings/compiler-warning-level-2-c4412.md) （级别 2）|'*函数*： 函数签名包含类型*类型*';纯代码之间传递的不安全和混合或本机 c + + 对象是|
+|[C4412](../error-messages/compiler-warnings/compiler-warning-level-2-c4412.md) （级别 2）|'*函数*： 函数签名包含类型*类型*';C++对象是不安全纯代码之间传递与混合或本机|
 |C4426 （级别 1）|优化标志发生更改后包括标头，可能是由于 #pragma optimize （） 超出<sup>14.1</sup>|
 |[C4435](../error-messages/compiler-warnings/compiler-warning-level-4-c4435.md) （级别 4）|'*class1*:/ Vd2 下的对象布局将因虚拟基而更改*class2*|
 |[C4437](../error-messages/compiler-warnings/compiler-warning-level-4-c4437.md) （级别 4）|从虚拟基的 dynamic_cast '*class1*到*class2*在某些上下文中可能会失败|
@@ -81,7 +81,7 @@ ms.locfileid: "59039392"
 |[C4549](../error-messages/compiler-warnings/compiler-warning-level-1-c4549.md) （级别 1）|'*operator1*： 逗号前的运算符不起作用; 是否打算'*operator2*？|
 |[C4555](../error-messages/compiler-warnings/compiler-warning-level-1-c4555.md) （级别 1）|表达式无效；应输入带副作用的表达式|
 |[C4557](../error-messages/compiler-warnings/compiler-warning-level-3-c4557.md) （级别 3）|__assume 包含效果*效果*|
-|[C4571](../error-messages/compiler-warnings/compiler-warning-level-4-c4571.md) （级别 4）|Visual c + + 7.1; 之后更改的信息： 自语义不再捕获结构化的异常 (SEH)|
+|[C4571](../error-messages/compiler-warnings/compiler-warning-level-4-c4571.md) （级别 4）|信息性： 自 Visual 更改自语义C++7.1;不再捕获结构化的异常 (SEH)|
 |C4574 （级别 4）|'*标识符*定义为"0： 您是否希望使用 #if*标识符*？|
 |C4577 （级别 1）|noexcept 与任何异常处理模式，以指定; 一起使用不能保证在异常终止。 指定 /EHsc|
 |C4582 （级别 4）|'*类型*： 构造函数未隐式调用|
@@ -90,7 +90,7 @@ ms.locfileid: "59039392"
 |C4588 （级别 1）|'*anonymous_structure*： 行为更改： 不再隐式调用析构函数|
 |C4596 （级别 4）|'*标识符*： 成员声明中的非法限定的名<sup>14.3</sup> <sup>为永久</sup>|
 |C4598 （级别 1 和等级 3）|#include"*标头*"： 标头数*数量*预编译标头中不匹配该位置处的当前编译<sup>14.3</sup>|
-|C4599 （级别 3）|'*选项**路径*： 命令行参数号*数*与预编译标头不匹配<sup>14.3</sup>|
+|C4599 （级别 3）|'*选项* *路径*： 命令行参数号*数*与预编译标头不匹配<sup>14.3</sup>|
 |C4605 （级别 1）|/D*宏*当前的命令行上指定但未指定生成预编译标头时|
 |[C4608](../error-messages/compiler-warnings/compiler-warning-level-3-c4608.md) （级别 3）|'*union_member*已初始化的另一个联合成员初始值设定项列表中，'*union_member*<sup>为永久</sup>|
 |[C4619](../error-messages/compiler-warnings/compiler-warning-level-3-c4619.md) （级别 3）|#pragma 警告： 无警告编号*数*|
@@ -99,7 +99,7 @@ ms.locfileid: "59039392"
 |[C4626](../error-messages/compiler-warnings/compiler-warning-level-4-c4626.md) （级别 4）|“derived class”: 未能生成赋值运算符，因为基类赋值运算符不可访问|
 |[C4628](../error-messages/compiler-warnings/compiler-warning-level-1-c4628.md) （级别 1）|-Ze 不支持二合字母。 字符序列*有向图时会*未解释的替换标记为*char*|
 |[C4640](../error-messages/compiler-warnings/compiler-warning-level-3-c4640.md) （级别 3）|'*实例*： 本地静态对象的结构不是线程安全|
-| C4643 （级别 4） | 向前声明 '*标识符*c + + 标准不允许使用标准的命名空间中。 <sup>15.8</sup> |
+| C4643 （级别 4） | 向前声明 '*标识符*不允许 std 命名空间中C++标准。 <sup>15.8</sup> |
 |C4647 （级别 3）|行为更改： __is_pod (*类型*) 在早期版本中具有不同的值|
 |C4654 （级别 4）|代码放在包含的预编译标头行中将被忽略。 将代码添加到预编译标头。 <sup>14.1</sup>|
 |[C4668](../error-messages/compiler-warnings/compiler-warning-level-4-c4668.md) （级别 4）|'*符号*未定义为预处理器宏，用"0"替换为中'*指令*|
@@ -139,7 +139,7 @@ ms.locfileid: "59039392"
 |C5025 （级别 4）|'*类型*： 移动赋值运算符已隐式定义为已删除|
 |C5026 （级别 1 和级别 4）|'*类型*： 移动构造函数被隐式定义为已删除|
 |C5027 （级别 1 和级别 4）|'*类型*： 移动赋值运算符已隐式定义为已删除|
-|C5029 （级别 4）|使用了非标准扩展： c + + 中的对齐属性适用于变量、 数据成员和仅标记类型|
+|C5029 （级别 4）|使用了非标准扩展： 对齐方式中的属性C++适用于变量、 数据成员和仅标记类型|
 |C5031 （第 4 层）|#pragma warning （pop): 可能不匹配，弹出推入不同文件的警告状态<sup>14.1</sup>|
 |C5032 （级别 4）|检测到 #pragma warning (push) 测试 warning （没有相应 #pragma pop) <sup>14.1</sup>|
 |C5034|使用的内部函数*内部函数*将导致函数*函数*编译为来宾代码<sup>15.3</sup>|
@@ -147,7 +147,7 @@ ms.locfileid: "59039392"
 |C5036 （级别 1）|将/hybrid:x86arm64 编译时的 varargs 函数指针转换*type1*到*type2* <sup>15.3</sup>|
 |[C5038](../error-messages/compiler-warnings/c5038.md) （级别 4）|数据成员*member1*将之后被初始化数据成员*member2* <sup>15.3</sup>|
 |C5039 （级别 4）|'*函数*： 指针或引用可能引发函数传递到-EHc 下 extern C 函数。 如果此函数将引发异常，则可能会出现未定义的行为。 <sup>15.5</sup>|
-|C5042 （级别 3）|'*函数*： 在块范围内的函数声明不能在标准 c + + 中为指定的内联; 删除内联说明符<sup>15.5</sup>|
+|C5042 （级别 3）|'*函数*： 在块范围内的函数声明不能为标准中的指定内联C++; 中删除内联说明符<sup>15.5</sup>|
 |[C5045](../error-messages/compiler-warnings/c5045.md)|如果指定 /Qspectre 开关，编译器将插入内存负载的 Spectre 缓解<sup>15.7</sup>|
 
 <sup>第 14.1</sup>此警告是从 Visual Studio 2015 Update 1 开始，提供。<br/>
@@ -180,4 +180,4 @@ ms.locfileid: "59039392"
 
 ## <a name="see-also"></a>请参阅
 
-[警告](../preprocessor/warning.md)
+[warning](../preprocessor/warning.md)

@@ -1932,10 +1932,10 @@ helpviewer_keywords:
 - intrinsics, ARM
 ms.assetid: d3d7dadd-7bd5-4508-8bff-371a66913e20
 ms.openlocfilehash: 47fd2f449568494bafde993e035d3ec37c44f6fe
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59027620"
 ---
 # <a name="arm-intrinsics"></a>ARM 内部函数
@@ -1946,7 +1946,7 @@ Visual C++ 编译器使下面的内部函数在 ARM 架构上可用。 有关 AR
 
 ARM 的霓虹灯矢量指令设置扩展提供了单指令多数据 (SIMD) 功能，这些功能类似于 x86 和 x64 架构处理器通用的 MMX 和 SSE 矢量指令中的功能。
 
-根据头文件 `arm_neon.h`，霓虹灯内部函数受到支持。 Visual c + + 编译器对霓虹灯内部函数支持类似于 ARM 编译器，详见附录 G [ARM 编译器工具链、 版本 4.1 编译器参考](http://go.microsoft.com/fwlink/p/?LinkId=251083)ARM 信息中心网站上。
+根据头文件 `arm_neon.h`，霓虹灯内部函数受到支持。 视觉对象C++编译器对霓虹灯内部函数支持类似于 ARM 编译器，详见附录 G [ARM 编译器工具链、 版本 4.1 编译器参考](http://go.microsoft.com/fwlink/p/?LinkId=251083)ARM 信息中心网站上。
 
 Visual C++ 编译器和 ARM 编译器之间的主要差别在于 Visual C++ 编译器添加了 `_ex` 的 `vldX` 变量和 `vstX` 矢量加载和存储指令。 `_ex` 变量采用附加参数，该参数指定指针参数的对齐情况但在其他方面与其非 `_ex` 对应项相同。
 
@@ -2225,7 +2225,7 @@ int _MoveFromCoprocessor2(
 
 此内部函数的所有五个参数的值必须是在编译时已知的常量表达式。
 
-`_MoveFromCoprocessor` 使用 MRC 指令;`_MoveFromCoprocessor2`使用 MRC2。 此参数对应于直接编码到指令字中的位字段。 参数的解释与协处理器相关。 有关详细信息，请参见有问题的协处理器的手册。
+`_MoveFromCoprocessor` 使用 MRC 指令；`_MoveFromCoprocessor2` 使用 MRC2。 此参数对应于直接编码到指令字中的位字段。 参数的解释与协处理器相关。 有关详细信息，请参见有问题的协处理器的手册。
 
 ###  <a name="MoveFromCo64"></a> _MoveFromCoprocessor64
 
@@ -2312,7 +2312,7 @@ void _MoveToCoprocessor2(
 
 此内部函数的 `coproc`、`opcode1`、`crn`、`crm` 和 `opcode2` 参数的值必须是在编译时已知的常量表达式。
 
-`_MoveToCoprocessor` 使用 MCR 指令;`_MoveToCoprocessor2`使用 MCR2。 此参数对应于直接编码到指令字中的位字段。 参数的解释与协处理器相关。 有关详细信息，请参见有问题的协处理器的手册。
+`_MoveToCoprocessor` 使用 MCR 指令；`_MoveToCoprocessor2` 使用 MCR2。 此参数对应于直接编码到指令字中的位字段。 参数的解释与协处理器相关。 有关详细信息，请参见有问题的协处理器的手册。
 
 ###  <a name="MoveToCo64"></a> _MoveToCoprocessor64
 

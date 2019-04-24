@@ -1,5 +1,5 @@
 ---
-title: retval （c + + COM 属性）
+title: retval (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.retval
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - retval attribute
 ms.assetid: bfa16f08-157d-4eea-afde-1232c54b8501
 ms.openlocfilehash: 9f5ad86a289f8904278a58636e66809ae0edd55b
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59035086"
 ---
 # <a name="retval"></a>retval
@@ -25,7 +25,7 @@ ms.locfileid: "59035086"
 
 ## <a name="remarks"></a>备注
 
-**Retval** c + + 属性具有相同的功能[retval](/windows/desktop/Midl/retval) MIDL 特性。
+**Retval** C++属性具有相同的功能[retval](/windows/desktop/Midl/retval) MIDL 特性。
 
 **retval**必须出现在函数声明中的最后一个参数。
 
@@ -42,12 +42,12 @@ ms.locfileid: "59035086"
 |**适用对象**|接口参数，接口方法|
 |**可重复**|否|
 |**必需的特性**|**out**|
-|**无效的特性**|**中的**|
+|**无效的特性**|**in**|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
 ## <a name="see-also"></a>请参阅
 
 [IDL 特性](idl-attributes.md)<br/>
-[Parameter 特性](parameter-attributes.md)<br/>
+[参数特性](parameter-attributes.md)<br/>
 [方法特性](method-attributes.md)
