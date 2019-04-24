@@ -1,5 +1,5 @@
 ---
-title: 隐藏 （c + + COM 属性）
+title: 隐藏 (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.hidden
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - hidden attribute
 ms.assetid: 199c96dd-fc07-46c7-af93-92020aebebe7
 ms.openlocfilehash: d1d87ea057b22984a0e0f8f5518899e36f7d0221
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59038416"
 ---
 # <a name="hidden"></a>隐藏
@@ -25,7 +25,7 @@ ms.locfileid: "59038416"
 
 ## <a name="remarks"></a>备注
 
-**隐藏**c + + 属性具有相同的功能[隐藏](/windows/desktop/Midl/hidden)MIDL 特性。
+**隐藏**C++属性具有相同的功能[隐藏](/windows/desktop/Midl/hidden)MIDL 特性。
 
 ## <a name="example"></a>示例
 

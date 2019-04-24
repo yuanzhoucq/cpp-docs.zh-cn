@@ -50,10 +50,10 @@ helpviewer_keywords:
 - Unprepare method
 ms.assetid: 0760bfc5-b9ee-4aee-8e54-31bd78714d3a
 ms.openlocfilehash: 406a78ff1958d565fcc74781f6a63d4784f48bfc
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59039723"
 ---
 # <a name="ccommand-class"></a>CCommand 类
@@ -104,7 +104,7 @@ class CCommand :
 |[创建](#create)|为指定会话创建新命令，然后设置命令文本。|
 |[CreateCommand](#createcommand)|创建新的命令。|
 |[GetParameterInfo](#getparameterinfo)|获取命令的参数、参数名称和参数类型的列表。|
-|[Prepare](#prepare)|验证并优化当前命令。|
+|[准备](#prepare)|验证并优化当前命令。|
 |[ReleaseCommand](#releasecommand)|在必要时释放参数访问器，然后释放命令。|
 |[SetParameterInfo](#setparameterinfo)|指定每个命令参数的本机类型。|
 |[Unprepare](#unprepare)|放弃当前命令执行计划。|
@@ -209,7 +209,7 @@ HRESULT Open(DBPROPSET *pPropSet = NULL,
 
 #### <a name="parameters"></a>参数
 
-*会话*<br/>
+*session*<br/>
 [in]在其中执行命令会话。
 
 *wszCommand*<br/>
@@ -276,7 +276,7 @@ HRESULT CCommandBase::Create(const CSession& session,
 
 #### <a name="parameters"></a>参数
 
-*会话*<br/>
+*session*<br/>
 [in]在其上创建命令会话。
 
 *wszCommand*<br/>
@@ -308,7 +308,7 @@ HRESULT CCommandBase::CreateCommand(const CSession& session) throw ();
 
 #### <a name="parameters"></a>参数
 
-*会话*<br/>
+*session*<br/>
 [in]一个`CSession`对象要与新的命令相关联。
 
 ### <a name="return-value"></a>返回值

@@ -9,15 +9,15 @@ f1_keywords:
 - C5012
 ms.assetid: d8f4844a-f414-42ab-b9a5-925a5da9d365
 ms.openlocfilehash: 6f80bc9d2a2438a6003c93ce7e60de50fd639a16
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59023901"
 ---
 # <a name="vectorizer-and-parallelizer-messages"></a>矢量化程序和并行化程序消息
 
-你可以使用 Visual c + + 编译器选项[/Qpar-report](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md)并[/Qvec-report](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md)若要设置[自动并行化和自动矢量化](../../parallel/auto-parallelization-and-auto-vectorization.md)到输出原因代码和有关其活动的信息性消息。 本文说明原因代码和消息。
+可以使用视觉对象C++编译器选项[/Qpar-report](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md)并[/Qvec-report](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md)设置[自动并行化和自动矢量化](../../parallel/auto-parallelization-and-auto-vectorization.md)到输出原因代码和有关其活动的信息性消息。 本文说明原因代码和消息。
 
 - [信息性消息](#BKMK_InformationalMessages)
 

@@ -18,10 +18,10 @@ helpviewer_keywords:
 - user interface [C++], drawing information
 ms.assetid: 15bf52d4-91cf-4b1d-8b37-87c3ae70123a
 ms.openlocfilehash: ab9946609fa20c4644873a684a754cbc8a41742f
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59024629"
 ---
 # <a name="mfc-using-database-classes-without-documents-and-views"></a>MFC:使用数据库类不结合文档和视图
@@ -52,9 +52,9 @@ ms.locfileid: "59024629"
 
 MFC 应用程序向导提供了若干选项**选择数据库支持**下, 表中列出的。 如果使用 MFC 应用程序向导创建的应用程序，所有这些选项将生成具有文档和视图的应用程序。 某些选项提供文档和省略不必要的文档功能的视图。 有关详细信息，请参阅[数据库支持，MFC 应用程序向导](../mfc/reference/database-support-mfc-application-wizard.md)。
 
-|Option|视图|Document|
+|选项|视图|Document|
 |------------|----------|--------------|
-|**None**|从 `CView`派生。|提供了不支持数据库。 这是默认选项。<br /><br /> 如果选择**文档/视图体系结构支持**选项卡上[应用程序类型、 MFC 应用程序向导](../mfc/reference/application-type-mfc-application-wizard.md)页中，获取完整的文档支持，包括序列化和**新建**，**开放**，**保存**，并且**另存为**上命令**文件**菜单。 请参阅[应用程序与任何文档](#_core_applications_with_no_document)。|
+|**无**|从 `CView`派生。|提供了不支持数据库。 这是默认选项。<br /><br /> 如果选择**文档/视图体系结构支持**选项卡上[应用程序类型、 MFC 应用程序向导](../mfc/reference/application-type-mfc-application-wizard.md)页中，获取完整的文档支持，包括序列化和**新建**，**开放**，**保存**，并且**另存为**上命令**文件**菜单。 请参阅[应用程序与任何文档](#_core_applications_with_no_document)。|
 |**仅头文件**|从 `CView`派生。|为应用程序提供基本级别的数据库支持。<br /><br /> 包括 Afxdb.h。 添加链接库，但不会创建任何数据库特定的类。 您可以更高版本创建记录集，并使用它们来检查和更新记录。|
 |**不支持文件的数据库视图**|派生自 `CRecordView`|提供文档支持，但没有序列化支持。 文档可以存储记录集和协调多个视图;不支持序列化或**新建**，**打开**，**保存**，以及**另存为**命令。 请参阅[应用程序的最小的文档](#_core_applications_with_minimal_documents)。 如果包含的数据库视图，则必须指定数据源。<br /><br /> 包括数据库标头文件、 链接库、 记录视图和一个记录集。 (仅适用于应用程序与**文档/视图体系结构支持**上选择的选项[应用程序类型、 MFC 应用程序向导](../mfc/reference/application-type-mfc-application-wizard.md)页。)|
 |**提供文件支持的数据库视图**|派生自 `CRecordView`|提供了完整的文档支持，包括序列化和与文档相关**文件**菜单命令。 数据库应用程序通常运行在每个记录的基础上而不是每个文件中的基础，因此不需要序列化。 但是，您可能必须序列化的特殊用法。 请参阅[应用程序的最小的文档](#_core_applications_with_minimal_documents)。 如果包含的数据库视图，则必须指定数据源。<br /><br /> 包括数据库标头文件、 链接库、 记录视图和一个记录集。 (仅适用于应用程序与**文档/视图体系结构支持**上选择的选项[应用程序类型、 MFC 应用程序向导](../mfc/reference/application-type-mfc-application-wizard.md)页。)|

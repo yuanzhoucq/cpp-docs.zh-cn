@@ -7,17 +7,17 @@ helpviewer_keywords:
 - C3393
 ms.assetid: d57f7c69-0a02-4fe3-9e45-bc62644fd77c
 ms.openlocfilehash: 5147e3e406fde73a05b7069e2a9336f27b3db622
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58767127"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59776257"
 ---
 # <a name="compiler-error-c3393"></a>编译器错误 C3393
 
 constraint 子句有语法错误：“identifier”不是一个类型
 
-传递给约束的标识符必须是一种类型，但该标识符不是一种类型。  有关详细信息，请参阅[泛型类型参数的约束 (C + + CLI)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md)。
+传递给约束的标识符必须是一种类型，但该标识符不是一种类型。  有关详细信息，请参阅[泛型类型参数的约束 (C++/CLI)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md)。
 
 ## <a name="example"></a>示例
 

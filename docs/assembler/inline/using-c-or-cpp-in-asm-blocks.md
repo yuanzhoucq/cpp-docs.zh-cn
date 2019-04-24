@@ -15,11 +15,11 @@ helpviewer_keywords:
 - __asm keyword [C++], C/C++ elements in
 ms.assetid: ae8b2b52-6b75-42e3-ac0c-ad02d922ed97
 ms.openlocfilehash: 0949eba769bed33da8fe39bb41500a2ba02af224
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50602145"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62166550"
 ---
 # <a name="using-c-or-c-in-asm-blocks"></a>在 __asm 块中使用 C 或 C++
 
@@ -47,7 +47,7 @@ ms.locfileid: "50602145"
 
 - [在 __asm 块中使用运算符](../../assembler/inline/using-operators-in-asm-blocks.md)
 
-- [使用 C 或 c + + 中 __asm 块](../../assembler/inline/using-c-or-cpp-symbols-in-asm-blocks.md)
+- [使用 C 或C++中将 __asm 块](../../assembler/inline/using-c-or-cpp-symbols-in-asm-blocks.md)
 
 - [在 __asm 块中访问 C 或 C++ 数据](../../assembler/inline/accessing-c-or-cpp-data-in-asm-blocks.md)
 

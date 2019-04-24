@@ -13,10 +13,10 @@ helpviewer_keywords:
 - SetString method
 ms.assetid: 138dc4de-c7c3-478c-863e-431e48249027
 ms.openlocfilehash: 6ba56143beb3411734899839a46ab42992dfa4d8
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59035658"
 ---
 # <a name="cdynamicstringaccessor-class"></a>CDynamicStringAccessor 类
@@ -110,7 +110,7 @@ HRESULT SetString(const WCHAR* pColumnName,
 *pColumnName*<br/>
 [in]指向包含的列名称的字符串的指针。
 
-*数据*<br/>
+*data*<br/>
 [in]指向要写入到指定的列的字符串数据的指针。
 
 ### <a name="return-value"></a>返回值

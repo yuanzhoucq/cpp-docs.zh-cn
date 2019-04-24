@@ -1,5 +1,5 @@
 ---
-title: '#define 指令 （C/c + +）'
+title: '#define 指令 (C /C++)'
 ms.date: 11/04/2016
 f1_keywords:
 - '#define'
@@ -11,10 +11,10 @@ helpviewer_keywords:
 - '#define directive'
 ms.assetid: 33cf25c6-b24e-40bf-ab30-9008f0391710
 ms.openlocfilehash: 8a0cc7e7836a0c82c72055fe8d9e7497995485d0
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59039490"
 ---
 # <a name="define-directive-cc"></a>#define 指令 (C/C++)
@@ -66,7 +66,7 @@ ms.locfileid: "59039490"
 
 如果新定义在语法上与原始定义相同，则 Microsoft C/C++ 允许您重新定义宏。 换言之，这两个定义可以具有不同的参数名称。 此行为不同于 ANSI C 中，这需要两个定义会从词法上完全相同。
 
-例如，下面两个宏除参数名称外完全相同。 ANSI C 不允许此类重新定义，但 Microsoft C/c + + 编译它时没有错误。
+例如，下面两个宏除参数名称外完全相同。 ANSI C 不允许此类重新定义，但 Microsoft C /C++将它编译没有错误。
 
 ```C
 #define multiply( f1, f2 ) ( f1 * f2 )

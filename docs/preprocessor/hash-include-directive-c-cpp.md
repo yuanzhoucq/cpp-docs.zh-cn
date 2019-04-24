@@ -1,5 +1,5 @@
 ---
-title: '#include 指令 （C/c + +）'
+title: '#include 指令 (C /C++)'
 ms.date: 11/04/2016
 f1_keywords:
 - '#include'
@@ -9,10 +9,10 @@ helpviewer_keywords:
 - include directive (#include)
 ms.assetid: 17067dc0-8db1-4f2d-b43e-ec12ecf83238
 ms.openlocfilehash: 7ffccb34d52f8ffa1e6b9cc64a58d3471d02ac92
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59038976"
 ---
 # <a name="include-directive-cc"></a>#include 指令 (C/C++)
@@ -32,7 +32,7 @@ ms.locfileid: "59038976"
 
 *路径规范*可能可跟目录规范是文件名。 文件名必须命名现有文件。 语法*路径规范*取决于其编译该程序的操作系统。
 
-有关如何通过使用编译的 c + + 应用程序中引用程序集信息[/clr](../build/reference/clr-common-language-runtime-compilation.md)，请参阅[#using](../preprocessor/hash-using-directive-cpp.md)。
+有关如何在引用程序集信息C++通过使用编译的应用程序[/clr](../build/reference/clr-common-language-runtime-compilation.md)，请参阅[#using](../preprocessor/hash-using-directive-cpp.md)。
 
 两种语法形式都会导致指令被替换为指定包含文件的整个内容。 两种形式之间的区别在于，在未完全指定路径时预处理器搜索标头文件的顺序。 下表显示了这两种语法形式之间的差异。
 

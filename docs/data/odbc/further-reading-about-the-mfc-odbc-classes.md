@@ -5,10 +5,10 @@ helpviewer_keywords:
 - MFC ODBC classes
 ms.assetid: 155c092b-3577-4cb8-b00e-f1adf4cb2adc
 ms.openlocfilehash: 96286fc7a60a6ab43190dae6262948ac99ca30d6
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59035184"
 ---
 # <a name="further-reading-about-the-mfc-odbc-classes"></a>有关 MFC ODBC 类的其他阅读材料
@@ -23,7 +23,7 @@ ms.locfileid: "59035184"
 
 - [动态集](../../data/odbc/dynaset.md)
 
-- [异常:“数据库异常”](../../mfc/exceptions-database-exceptions.md)
+- [异常：数据库异常](../../mfc/exceptions-database-exceptions.md)
 
 - [MFC:结合文档和视图使用数据库类](../../data/mfc-using-database-classes-with-documents-and-views.md)
 

@@ -7,17 +7,17 @@ helpviewer_keywords:
 - C3869
 ms.assetid: 85b2ad72-95c1-4ed6-9761-6ef66c3802b7
 ms.openlocfilehash: 1a3d0d754557bbc811d1017ed1491181333e82dc
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58766776"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59776465"
 ---
 # <a name="compiler-error-c3869"></a>C3869
 
 gcnew 约束缺少空参数列表 （）
 
-`gcnew`特殊约束被指定了不含空参数列表。 请参阅[泛型类型参数的约束 (C + + CLI)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md)有关详细信息。
+`gcnew`特殊约束被指定了不含空参数列表。 请参阅[泛型类型参数的约束 (C++/CLI)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md)有关详细信息。
 
 ## <a name="example"></a>示例
 

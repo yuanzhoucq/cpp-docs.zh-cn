@@ -1,5 +1,5 @@
 ---
-title: db_param （c + + COM 属性）
+title: db_param (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.db_param
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - db_param attribute
 ms.assetid: a28315f5-4722-459e-92ef-32e83c0b205a
 ms.openlocfilehash: a3cfcf3c7ce3313eaff9a3b35854e1e077fc906f
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59038091"
 ---
 # <a name="dbparam"></a>db_param
@@ -40,10 +40,10 @@ ms.locfileid: "59038091"
 *dbtype*<br/>
 （可选）OLE DB[类型指示符](/previous-versions/windows/desktop/ms711251(v=vs.85))列条目。
 
-*精度*<br/>
+*precision*<br/>
 （可选）要用于列条目精度。 有关详细信息，请参阅的说明`bPrecision`元素的[DBBINDING 结构](/previous-versions/windows/desktop/ms716845(v=vs.85))
 
-*小数位数*<br/>
+*scale*<br/>
 （可选）要用于列项目的比例。 有关详细信息，请参阅的说明`bScale`元素的[DBBINDING 结构](/previous-versions/windows/desktop/ms716845(v=vs.85))
 
 *status*<br/>

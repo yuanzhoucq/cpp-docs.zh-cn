@@ -1,5 +1,5 @@
 ---
-title: 同步 （c + + COM 属性）
+title: 同步 (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.synchronize
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - synchronize attribute
 ms.assetid: 15fc8544-955d-4765-b3d5-0f619c8b3f40
 ms.openlocfilehash: ea5236b887fb0df2a0acdd1e4050c66a4719072b
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037042"
 ---
 # <a name="synchronize"></a>synchronize
@@ -25,7 +25,7 @@ ms.locfileid: "59037042"
 
 ## <a name="remarks"></a>备注
 
-**同步**c + + 属性实现为同步对象的目标方法的支持。 同步通过控制目标方法的访问权限允许多个对象使用公共资源 （如类的方法）。
+**同步**C++属性实现为同步对象的目标方法的支持。 同步通过控制目标方法的访问权限允许多个对象使用公共资源 （如类的方法）。
 
 此属性由插入该代码调用了正确`Lock`目标方法的开头 （由线程模型） 的方法。 该方法退出时,`Unlock`自动调用。 有关这些函数的详细信息，请参阅[CComAutoThreadModule::Lock](../../atl/reference/ccomautothreadmodule-class.md#lock)
 

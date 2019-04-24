@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4958
 ms.assetid: e79b9e9c-d572-4a3a-a3b6-60962b70864a
 ms.openlocfilehash: 96b73975f391493340dd01d85ad30a8c888b44c0
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58769402"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59779344"
 ---
 # <a name="compiler-warning-c4958"></a>编译器警告 C4958
 
@@ -21,7 +21,7 @@ ms.locfileid: "58769402"
 
 使用指针算法将产生不可验证的映像。
 
-有关详细信息，请参阅[纯代码和可验证代码 (C + + CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md)。
+有关详细信息，请参阅[纯代码和可验证代码 (C++/CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md)。
 
 **/Clr: safe**编译器选项在 Visual Studio 2015 中弃用并在 Visual Studio 2017 中不受支持。
 

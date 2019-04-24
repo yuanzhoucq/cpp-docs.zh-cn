@@ -335,10 +335,10 @@ helpviewer_keywords:
 - COleControl [MFC], SetInitialDataFormats
 ms.assetid: 53e95299-38e8-447b-9c5f-a381d27f5123
 ms.openlocfilehash: 30d73d546ee68a25f1e59776020477d038da65e8
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58771495"
 ---
 # <a name="colecontrol-class"></a>COleControl 类
@@ -536,7 +536,7 @@ class COleControl : public CWnd
 
 派生自`CWnd`，此类继承的 Windows 窗口对象的所有功能以及其他功能特定于 OLE，如事件触发和支持方法和属性的能力。
 
-OLE 控件可以插入到 OLE 容器应用程序，并使用双向系统的事件激发和公开方法和属性添加到容器与容器通信。 请注意，标准 OLE 容器仅支持 OLE 控件的基本功能。 它们不能支持 OLE 控件的扩展的功能。 当事件被发送到控件中发生某些操作，由于容器时发生事件触发。 反过来，容器与控件通信通过使用一组公开的方法和属性类似于成员函数和 c + + 类的数据成员。 此方法允许开发人员控制控件的外观和特定操作发生时通知该容器。
+OLE 控件可以插入到 OLE 容器应用程序，并使用双向系统的事件激发和公开方法和属性添加到容器与容器通信。 请注意，标准 OLE 容器仅支持 OLE 控件的基本功能。 它们不能支持 OLE 控件的扩展的功能。 当事件被发送到控件中发生某些操作，由于容器时发生事件触发。 反过来，容器与控件通信通过使用一组公开的方法和属性类似于成员函数和数据成员的C++类。 此方法允许开发人员控制控件的外观和特定操作发生时通知该容器。
 
 ## <a name="windowless-controls"></a>无窗口控件
 

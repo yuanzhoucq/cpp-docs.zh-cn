@@ -7,10 +7,10 @@ helpviewer_keywords:
 - custom attributes, defining
 ms.assetid: 3abac928-4d55-4ea6-8cf6-8427a4ad79f1
 ms.openlocfilehash: 227e67696e679452a9c6c0e18c04e3d918f7a93f
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59029429"
 ---
 # <a name="custom-c"></a>custom (C++)
@@ -36,7 +36,7 @@ ms.locfileid: "59029429"
 
 ## <a name="remarks"></a>备注
 
-**自定义**c + + 属性会导致信息会放入类型库。 你将需要一种工具，从类型库中读取自定义值。
+**自定义**C++属性将可能会放入类型库的信息。 你将需要一种工具，从类型库中读取自定义值。
 
 **自定义**属性具有相同的功能[自定义](/windows/desktop/Midl/custom)MIDL 特性。
 
@@ -58,7 +58,7 @@ ms.locfileid: "59029429"
 [IDL 特性](idl-attributes.md)<br/>
 [独立特性](stand-alone-attributes.md)<br/>
 [Typedef、Enum、Union 和 Struct 特性](typedef-enum-union-and-struct-attributes.md)<br/>
-[Parameter 特性](parameter-attributes.md)<br/>
+[参数特性](parameter-attributes.md)<br/>
 [方法特性](method-attributes.md)<br/>
 [类特性](class-attributes.md)<br/>
 [接口特性](interface-attributes.md)

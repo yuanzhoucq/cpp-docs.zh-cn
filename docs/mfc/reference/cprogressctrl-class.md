@@ -43,10 +43,10 @@ helpviewer_keywords:
 - CProgressCtrl [MFC], StepIt
 ms.assetid: 222630f4-1598-4026-8198-51649b1192ab
 ms.openlocfilehash: 15241485278f09d16c86fc7274f2fc1d85a7a2f7
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58778944"
 ---
 # <a name="cprogressctrl-class"></a>CProgressCtrl 类
@@ -297,7 +297,7 @@ int GetState() const;
 
 当前的进度栏控件，这是以下值之一的状态：
 
-|值|状态|
+|“值”|状态|
 |-----------|-----------|
 |PBST_NORMAL|正在进行|
 |PBST_ERROR|Error|

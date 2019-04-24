@@ -1,5 +1,5 @@
 ---
-title: 导入 （c + + COM 属性）
+title: 导入 (C++ COM 属性)
 ms.date: 10/03/2018
 f1_keywords:
 - vc-attr.import
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - import attribute
 ms.assetid: ebf07cae-39fb-4047-8b57-54af0a9a83de
 ms.openlocfilehash: d458ce9d938da5f3650eb2478385165de6a140ec
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59035778"
 ---
 # <a name="import"></a>import
@@ -32,7 +32,7 @@ ms.locfileid: "59035778"
 
 ## <a name="remarks"></a>备注
 
-**导入**c + + 属性会导致`#import`语句下面放置`import "docobj.idl"`语句生成的.idl 文件中。 **导入**属性具有相同的功能[导入](/windows/desktop/Midl/import)MIDL 特性。
+**导入**C++属性的原因`#import`语句下面放置`import "docobj.idl"`语句生成的.idl 文件中。 **导入**属性具有相同的功能[导入](/windows/desktop/Midl/import)MIDL 特性。
 
 **导入**属性仅将指定的文件放入你的项目; 将生成的.idl 文件**导入**属性不允许您从源代码中指定的文件调用构造在你的项目。  若要从项目中的源代码在指定的文件中调用的构造，使用[#import](../../preprocessor/hash-import-directive-cpp.md)并`embedded_idl`属性也可以将的.h 文件*idl_file*，如果存在的.h 文件。
 

@@ -10,10 +10,10 @@ helpviewer_keywords:
 - files [C++], translation
 ms.assetid: a7f7a8c9-e8ba-4321-9e50-ebfbbdcce9db
 ms.openlocfilehash: 11e36e06adc4fa95cb9aa607704e72f64c812429
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59036148"
 ---
 # <a name="phases-of-translation"></a>转换阶段
@@ -54,7 +54,7 @@ C 和 C++ 程序包含一个或多个源文件，每个源文件包含程序的�
 *字符串串联*<br/>
 所有相邻字符串和宽字符串文本是串联的。 例如，将 `"String " "concatenation"` 变为 `"String concatenation"`。
 
-*转换*<br/>
+*翻译*<br/>
 将从语法和语义上分析所有标记；这些标记将转换为对象代码。
 
 *链接*<br/>

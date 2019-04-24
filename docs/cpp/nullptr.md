@@ -7,10 +7,10 @@ helpviewer_keywords:
 - nullptr keyword [C++]
 ms.assetid: e9d80ea6-2506-4eb5-b47b-2349df085832
 ms.openlocfilehash: 57be8d71f1dac4f347ea6567c02a385719bb7306
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58781076"
 ---
 # <a name="nullptr"></a>nullptr
@@ -18,7 +18,7 @@ ms.locfileid: "58781076"
 指定 `std::nullptr_t` 类型的 null 指针常量，该类型可转换为任何原始指针类型。  尽管可以使用关键字**nullptr**而不包含任何标头，如果您的代码使用类型`std::nullptr_t`，然后，必须通过包含标头定义它`<cstddef>`。
 
 > [!NOTE]
->  **Nullptr**关键字也是在 C + + /cli 适用于 CLI 托管代码应用程序和与 ISO 标准 c + + 关键字不可互换。 如果你的代码可能会通过编译[/clr](../build/reference/clr-common-language-runtime-compilation.md)编译器选项，以托管的代码为目标，然后使用`__nullptr`代码，必须保证编译器使用本机 C++ 解释的任何行中。 有关详细信息，请参阅[nullptr](../extensions/nullptr-cpp-component-extensions.md)。
+>  **Nullptr**中也定义关键字C++适用于 CLI 的托管代码应用程序和与 ISO 标准不可互换C++关键字。 如果你的代码可能会通过编译[/clr](../build/reference/clr-common-language-runtime-compilation.md)编译器选项，以托管的代码为目标，然后使用`__nullptr`代码，必须保证编译器使用本机 C++ 解释的任何行中。 有关详细信息，请参阅[nullptr](../extensions/nullptr-cpp-component-extensions.md)。
 
 ## <a name="remarks"></a>备注
 

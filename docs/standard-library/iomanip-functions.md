@@ -27,11 +27,11 @@ helpviewer_keywords:
 - std::setprecision [C++]
 - std::setw [C++]
 ms.openlocfilehash: b5ead8b1000fd6c2708b2450f71da3dc612dc51d
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524581"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62158555"
 ---
 # <a name="ltiomanipgt-functions"></a>&lt;iomanip&gt; 函数
 
@@ -150,10 +150,10 @@ quoted(const char* str, char delimiter, char escape) // or wide versions
 *str*<br/>
 Std:: string、 char\*，字符串文本或原始字符串文本或上述任何一个宽版本 (例如 std:: wstring、 wchar_t\*)。
 
-*分隔符*<br/>
+*delimiter*<br/>
 一个用户指定的字符或宽字符，用作字符串开头和结尾的分隔符。
 
-*转义*<br/>
+*escape*<br/>
 一个用户指定的字符或宽字符，用作字符串内转义序列的转义字符。
 
 ### <a name="remarks"></a>备注
@@ -332,7 +332,7 @@ T3 setbase(int _Base);
 
 ### <a name="parameters"></a>参数
 
-*（_b)*<br/>
+*_Base*<br/>
 数基。
 
 ### <a name="return-value"></a>返回值
@@ -362,7 +362,7 @@ T4 setfill(Elem Ch);
 
 ### <a name="parameters"></a>参数
 
-*ch*<br/>
+*Ch*<br/>
 用于在右对齐显示中填充空格的字符。
 
 ### <a name="return-value"></a>返回值
@@ -404,7 +404,7 @@ T5 setprecision(streamsize Prec);
 
 ### <a name="parameters"></a>参数
 
-*prec*<br/>
+*Prec*<br/>
 浮点值的精度。
 
 ### <a name="return-value"></a>返回值
@@ -425,7 +425,7 @@ T6 setw(streamsize Wide);
 
 ### <a name="parameters"></a>参数
 
-*宽*<br/>
+*Wide*<br/>
 显示字段的宽度。
 
 ### <a name="return-value"></a>返回值

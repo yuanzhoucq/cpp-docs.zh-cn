@@ -3,12 +3,12 @@ title: 在 Visual Studio 中自定义 CMake 生成设置
 ms.date: 03/05/2019
 helpviewer_keywords:
 - CMake build settings
-ms.openlocfilehash: 1bdf4ef3e20b055b6fa3d5449a880ddb7aab44a0
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.openlocfilehash: 4864e094ab967a563b153fa79fd0bf5c375f40f7
+ms.sourcegitcommit: 14b292596bc9b9b883a9c58cd3e366b282a1f7b3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59037518"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60124884"
 ---
 # <a name="customize-cmake-build-settings"></a>自定义 CMake 生成设置
 
@@ -79,14 +79,18 @@ Visual Studio 提供多个 CMake 配置，这些配置定义如何调用 CMake.e
 "variables": [
     {
       "name": "CMAKE_CXX_COMPILER",
-      "value": "C:/Program Files (x86)/Microsoft Visual Studio/157/Enterprise/VC/Tools/MSVC/14.14.26428/bin/HostX86/x86/cl.exe"
+      "value": "C:/Program Files (x86)/Microsoft Visual Studio/157/Enterprise/VC/Tools/MSVC/14.14.26428/bin/HostX86/x86/cl.exe",
+      "type": "FILEPATH"
     },
     {
       "name": "CMAKE_C_COMPILER",
-      "value": "C:/Program Files (x86)/Microsoft Visual Studio/157/Enterprise/VC/Tools/MSVC/14.14.26428/bin/HostX86/x86/cl.exe"
+      "value": "C:/Program Files (x86)/Microsoft Visual Studio/157/Enterprise/VC/Tools/MSVC/14.14.26428/bin/HostX86/x86/cl.exe",
+      "type": "FILEPATH"
     }
   ]
 ```
+
+请注意，如果未定义`"type"`，将默认采用"STRING"类型。
 
 - **cmakeCommandArgs**：指定任何要传递到 CMake.exe 的其他开关。
 
@@ -100,16 +104,16 @@ Visual Studio 提供多个 CMake 配置，这些配置定义如何调用 CMake.e
 
 ## <a name="environment-variables"></a>环境变量
 
- `CMakeSettings.json` 此外支持任何上面提到的属性中使用环境变量。 所使用的语法为 `${env.FOO}`，用于展开环境变量 %FOO%。
+ `CMakeSettings.json` 还支持使用上述任何属性中的环境变量。 所使用的语法为 `${env.FOO}`，用于展开环境变量 %FOO%。
 此外，还可以使用此文件中内置的宏：
 
-- `${workspaceRoot}` -提供工作区文件夹的完整路径
-- `${workspaceHash}` – 哈希的工作区的位置;可用于创建当前工作区 （例如，若要在文件夹路径中使用） 的唯一标识符
-- `${projectFile}` – 根 CMakeLists.txt 文件的完整路径
-- `${projectDir}` – 根 CMakeLists.txt 文件的文件夹的完整路径
-- `${thisFile}` – 的完整路径`CMakeSettings.json`文件
-- `${name}` – 配置的名称
-- `${generator}` – 此配置中使用 CMake 生成器的名称
+- `${workspaceRoot}`：提供工作区文件夹的完整路径
+- `${workspaceHash}`：工作区位置的哈希；可用于创建当前工作区的唯一标识符（例如用于文件路径）
+- `${projectFile}`：根 CMakeLists.txt 文件的完整路径
+- `${projectDir}`：根 CMakeLists.txt 文件的文件夹完整路径
+- `${thisFile}` - `CMakeSettings.json` 文件的完整路径
+- `${name}`：配置的名称
+- `${generator}`：配置中使用的 CMake 生成器的名称
 
 ## <a name="ninja-command-line-arguments"></a>Ninja 命令行参数
 
@@ -121,7 +125,7 @@ ninja: invalid option -- `-?'
 usage: ninja [options] [targets...]
 ```
 
-|Option|描述|
+|选项|描述|
 |--------------|------------|
 | --version  | 打印 ninja 版本（“1.7.1”）|
 |   -C DIR   | 在执行任何其他操作前更改为 DIR|
@@ -210,7 +214,9 @@ usage: ninja [options] [targets...]
       "environments": [
         {
           // Replace the global property entirely.
-          "BuildDir": "D:\\custom-builddir",
+          "BuildDir": "D:\\custom-builddir"
+          // This environment does not specify a namespace, hence by default "env" will be assumed.
+          // "namespace" : "name" would require that this variable be referenced with "${name.BuildDir}".
         }
       ],
 
@@ -236,7 +242,7 @@ usage: ninja [options] [targets...]
 
 ## <a name="see-also"></a>请参阅
 
-[在 Visual Studio 中的 CMake 项目](cmake-projects-in-visual-studio.md)<br/>
+[Visual Studio 中的 CMake 项目](cmake-projects-in-visual-studio.md)<br/>
 [配置 Linux CMake 项目](../linux/cmake-linux-project.md)<br/>
 [连接到远程 Linux 计算机](../linux/connect-to-your-remote-linux-computer.md)<br/>
 [配置 CMake 调试会话](configure-cmake-debugging-sessions.md)<br/>

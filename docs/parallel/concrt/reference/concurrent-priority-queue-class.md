@@ -16,16 +16,15 @@ helpviewer_keywords:
 - concurrent_priority_queue class
 ms.assetid: 3e740381-0f4e-41fc-8b66-ad0bb55f17a3
 ms.openlocfilehash: 5804675ffdaf6de2e73327103398316566b41627
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304777"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62160030"
 ---
 # <a name="concurrentpriorityqueue-class"></a>concurrent_priority_queue 类
 
-
-  `concurrent_priority_queue` 类是允许多个线程并发推送和弹出项的容器。 项按优先级顺序弹出，其中优先级由作为模板参数提供的涵子确定。
+`concurrent_priority_queue` 类是允许多个线程并发推送和弹出项的容器。 项按优先级顺序弹出，其中优先级由作为模板参数提供的涵子确定。
 
 ## <a name="syntax"></a>语法
 
@@ -151,8 +150,7 @@ concurrent_priority_queue(
 要用于此对象的分配器类。
 
 *_Init_capacity*<br/>
-
-  `concurrent_priority_queue` 对象的初始容量。
+`concurrent_priority_queue` 对象的初始容量。
 
 *_Begin*<br/>
 要复制的范围元素中的第一个元素的位置。

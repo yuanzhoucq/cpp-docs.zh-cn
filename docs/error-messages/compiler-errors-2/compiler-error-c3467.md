@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C3467
 ms.assetid: e2b844d0-4920-412f-99fd-cd8051c4aa41
 ms.openlocfilehash: 70375950543b9525fca10fff3084c923095fa35e
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "58780751"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59776088"
 ---
 # <a name="compiler-error-c3467"></a>编译器错误 C3467
 
@@ -19,7 +19,7 @@ ms.locfileid: "58780751"
 
 编译器找到了同一类型的多个转发类型声明。 每个类型只允许具有一个声明。
 
-有关详细信息，请参阅[类型转发 (C + + CLI)](../../extensions/type-forwarding-cpp-cli.md)。
+有关详细信息，请参阅[类型转发 (C++/CLI)](../../extensions/type-forwarding-cpp-cli.md)。
 
 ## <a name="example"></a>示例
 

@@ -6,10 +6,10 @@ ms.assetid: 475da6e9-0d78-4b4e-bd23-f41c406c4efe
 author: corob-msft
 ms.author: corob
 ms.openlocfilehash: 69591186550a915edb49889617740e454817f154
-ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58898799"
 ---
 # <a name="visual-c-language-conformance"></a>Visual C++ 语言一致性
@@ -31,7 +31,7 @@ ms.locfileid: "58898799"
 |&nbsp;&nbsp;[N2634 表达式 SFINAE](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2008/n2634.html)|VS 2017 15.7|
 |&nbsp;&nbsp;[N1653 C99 预处理器](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2004/n1653.htm)|部分 <sup>[D](#note_D)</sup>|
 |&nbsp;&nbsp;[N1988 扩展的整型](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2006/n1988.pdf)|N/A <sup>[E](#note_E)</sup>|
-|__C++14 核心语言功能__|__支持__|
+|__C++ 14 核心语言功能__|__支持__|
 |&nbsp;&nbsp;[N3323 上下文转换的已调整 wording](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2012/n3323.pdf)|VS 2013|
 |&nbsp;&nbsp;[N3472 二进制文本](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2012/n3472.pdf)|VS 2015|
 |&nbsp;&nbsp;[N3638 auto 和 decltype(auto) 返回类型](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3638.html)|VS 2015|
@@ -44,7 +44,7 @@ ms.locfileid: "58898799"
 |&nbsp;&nbsp;[N3652 扩展的 constexpr](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3652.html)|VS 2017|
 |&nbsp;&nbsp;[N3653 聚合的 NSDMI](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3653.html)|VS 2017|
 |&nbsp;&nbsp;[N3664 避免/合成分配](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3664.html)|N/A <sup>[F](#note_F)</sup>|
-|__C++17 核心语言功能__|__支持__|
+|__C++ 17 核心语言功能__|__支持__|
 |&nbsp;&nbsp;[N4086 删除三字符组](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4086.html)|VS 2010 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[N3922 针对自动使用大括号内的初始值设定项列表的新建规则](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n3922.html)|VS 2015 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[N4051 模板-参数模板的类型名称](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4051.html)|VS 2015 <sup>[14](#note_14)</sup>|
@@ -316,7 +316,7 @@ __VS 2017 15.7__ 表示 Visual Studio 2017 15.7 版中支持的功能。<br/>
 [C++ 语言参考](../cpp/cpp-language-reference.md)<br/>
 [C++ 标准库](../standard-library/cpp-standard-library-reference.md)<br/>
 [Visual Studio 中的 C++ 符合性改进](cpp-conformance-improvements.md)<br/>
-[Visual Studio 2017 中 Visual C++ 的新增功能](what-s-new-for-visual-cpp-in-visual-studio.md)<br/>
-[Visual C++ 更改历史记录 (2003 - 2015)](../porting/visual-cpp-change-history-2003-2015.md)<br/>
-[Visual C++ 新增功能 (2003 - 2015)](../porting/visual-cpp-what-s-new-2003-through-2015.md)<br/>
+[Visual Studio 中 Visual C++ 的新增功能](what-s-new-for-visual-cpp-in-visual-studio.md)<br/>
+[Visual C++ 更改历史记录（2003 - 2015）](../porting/visual-cpp-change-history-2003-2015.md)<br/>
+[Visual C++ 新增功能（2003 - 2015）](../porting/visual-cpp-what-s-new-2003-through-2015.md)<br/>
 [Visual C++ 团队博客](https://blogs.msdn.microsoft.com/vcblog/)

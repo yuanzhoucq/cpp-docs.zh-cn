@@ -5,10 +5,10 @@ helpviewer_keywords:
 - user-defined conversions [C++]
 ms.assetid: 8010fd59-2775-4e9a-a6ed-58055032d66f
 ms.openlocfilehash: 8f168582e56e77f1ec848928b7ffd36879ba341a
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58772418"
 ---
 # <a name="user-defined-conversions-ccli"></a>用户定义的转换 (C++/CLI)
@@ -80,7 +80,7 @@ in N::N
 
 转换自运算符从一些其他类的对象创建在其中定义了运算符的类的对象。
 
-标准 c + + 不支持转换自运算符;标准 c + + 使用构造函数用于此目的。 但是，使用 CLR 类型时，Visual c + + 来调用转换自运算符提供语法支持。
+标准C++不支持转换自运算符;标准C++使用构造函数用于此目的。 但是，使用 CLR 类型，视觉对象时C++来调用转换自运算符提供语法支持。
 
 若要也与其他符合 cls 的语言进行互操作，可能希望与相应的转换自运算符包装给定类的每个用户定义一元构造函数。
 

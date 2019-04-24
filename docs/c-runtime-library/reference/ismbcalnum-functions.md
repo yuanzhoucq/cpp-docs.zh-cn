@@ -47,11 +47,11 @@ helpviewer_keywords:
 - ismbcalpha_l function
 ms.assetid: 12d57925-aebe-46e0-80b0-82b84c4c31ec
 ms.openlocfilehash: 1a2f928d826b70b788220130f69c53cc351b4910
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532218"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157269"
 ---
 # <a name="ismbcalnum-ismbcalnuml-ismbcalpha-ismbcalphal-ismbcdigit-ismbcdigitl"></a>_ismbcalnum、_ismbcalnum_l、_ismbcalpha、_ismbcalpha_l、_ismbcdigit、_ismbcdigit_l
 
@@ -112,9 +112,9 @@ int _ismbcdigit_l
 
 |例程所返回的值|测试条件|代码页 932 示例|
 |-------------|--------------------|---------------------------|
-|**_ismbcalnum**， **_ismbcalnum_l**|字母数字|返回非零值，当且仅当*c*是 ASCII 英文字母的单字节表示形式： 请参阅示例 **_ismbcdigit**并 **_ismbcalpha**。|
-|**_ismbcalpha**， **_ismbcalpha_l**|Alphabetic|返回非零值，当且仅当*c*是 ASCII 英文字母的单字节表示形式： 0x41 < =*c*< = 0x5A 或 0x61 < =*c*< = 0x7A; 或是片假名字母：0xa6< < =*c*< = 0xDF。|
-|**_ismbcdigit**， **_ismbcdigit**|数字|返回非零值，当且仅当*c*是 ASCII 数字的单字节表示形式： 0x30 < =*c*< = 0x39。|
+|**_ismbcalnum**， **_ismbcalnum_l**|字母数字|返回非零值，当且仅当*c*是 ASCII 英文字母的单字节表示形式：请参阅示例 **_ismbcdigit**并 **_ismbcalpha**。|
+|**_ismbcalpha**， **_ismbcalpha_l**|Alphabetic|返回非零值，当且仅当*c*是 ASCII 英文字母的单字节表示形式：将 0x41 向 < =*c*< = 0x5A 或 0x61 < =*c*< = 0x7A; 或是片假名字母：0xA6<=*c*<=0xDF.|
+|**_ismbcdigit**， **_ismbcdigit**|数字|返回非零值，当且仅当*c*是 ASCII 数字的单字节表示形式：0x30<=*c*<=0x39.|
 
 ## <a name="requirements"></a>要求
 

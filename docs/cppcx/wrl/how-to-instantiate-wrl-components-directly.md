@@ -4,24 +4,24 @@ ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 1a9fa011-0cee-4abf-bf83-49adf53ff906
 ms.openlocfilehash: 3f622a79aed6a1e42feccb92e1a01b3bc1277151
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59035739"
 ---
 # <a name="how-to-instantiate-wrl-components-directly"></a>如何：直接实例化 WRL 组件
 
-了解如何使用 Windows 运行时 c + + 模板库 (WRL)[Microsoft::WRL::Make](make-function.md)并[Microsoft::WRL::Details::MakeAndInitialize](makeandinitialize-function.md)函数来实例化组件的模块中的将其定义。
+了解如何使用 Windows 运行时C++模板库 (WRL)[Microsoft::WRL::Make](make-function.md)并[Microsoft::WRL::Details::MakeAndInitialize](makeandinitialize-function.md)函数来实例化的模块中的组件它定义它。
 
 通过直接实例化组件，您可以减少开销时，不需要类工厂或其他机制。 您可以实例化组件直接在这两个通用 Windows 平台应用和桌面应用中。
 
-若要了解如何使用 Windows 运行时 c + + 模板库创建传统型 COM 组件并将其实例从外部桌面应用程序，请参阅[如何：创建经典的 COM 组件](how-to-create-a-classic-com-component-using-wrl.md)。
+若要了解如何使用 Windows 运行时C++模板库创建传统型 COM 组件并将其实例从外部桌面应用程序，请参阅[如何：创建经典的 COM 组件](how-to-create-a-classic-com-component-using-wrl.md)。
 
 本文档演示两个示例。 第一个示例使用`Make`函数来实例化组件。 第二个示例使用`MakeAndInitialize`函数来实例化一个组件，它在构造期间可能会失败。 （由于 COM 通常使用而不是异常的 HRESULT 值，以指示错误，COM 类型通常不会引发从其构造函数。 `MakeAndInitialize` 使组件可以验证通过其构造参数`RuntimeClassInitialize`方法。)这两个示例定义基本记录器接口，并通过定义向控制台写入消息的类中实现该接口。
 
 > [!IMPORTANT]
-> 不能使用`new`运算符来实例化 Windows 运行时 c + + 模板库组件。 因此，我们建议始终使用`Make`或`MakeAndInitialize`直接实例化组件。
+> 不能使用`new`运算符来实例化 Windows 运行时C++模板库组件。 因此，我们建议始终使用`Make`或`MakeAndInitialize`直接实例化组件。
 
 ### <a name="to-create-and-instantiate-a-basic-logger-component"></a>若要创建并实例化一个基本的记录器组件
 

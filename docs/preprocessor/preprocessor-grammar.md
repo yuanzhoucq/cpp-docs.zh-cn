@@ -7,10 +7,10 @@ helpviewer_keywords:
 - preprocessor, grammar
 ms.assetid: 6cd33fad-0b08-4592-9be8-7359c43e24e9
 ms.openlocfilehash: 6177cf5fddba549e410842ef3f270edcc13d4782
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59032409"
 ---
 # <a name="preprocessor-grammar"></a>预处理器语法
@@ -84,7 +84,7 @@ ms.locfileid: "59032409"
 &nbsp;&nbsp;&nbsp;&nbsp;文本的任何序列
 
 > [!NOTE]
-> 在中展开以下非终止符[词法约定](../cpp/lexical-conventions.md)一部分*c + + 语言参考*:*常量*，*常量表达式*，*标识符*，*关键字*，*运算符*，并且*标点符号*。
+> 在中展开以下非终止符[词法约定](../cpp/lexical-conventions.md)一部分*C++语言参考*:*常量*， *常量表达式*，*标识符*，*关键字*，*运算符*，并且*标点符号*。
 
 ## <a name="see-also"></a>请参阅
 

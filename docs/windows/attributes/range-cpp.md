@@ -1,5 +1,5 @@
 ---
-title: 范围 （c + + COM 属性）
+title: 范围 (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.range
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - range attribute
 ms.assetid: f352f79e-ecb3-4cdd-9cdd-8406ef473594
 ms.openlocfilehash: 9ce941fe95f2bbef3895c039984db1e1d2985ae1
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59029533"
 ---
 # <a name="range-c"></a>range (C++)
@@ -25,15 +25,15 @@ ms.locfileid: "59029533"
 
 ### <a name="parameters"></a>参数
 
-*低*<br/>
+*low*<br/>
 范围下限值。
 
-*高*<br/>
+*high*<br/>
 高范围值。
 
 ## <a name="remarks"></a>备注
 
-**范围**c + + 属性具有相同的功能[范围](/windows/desktop/Midl/range)MIDL 特性。
+**范围**C++属性具有相同的功能[范围](/windows/desktop/Midl/range)MIDL 特性。
 
 ## <a name="example"></a>示例
 
@@ -68,5 +68,5 @@ __interface ICustom {
 
 [IDL 特性](idl-attributes.md)<br/>
 [方法特性](method-attributes.md)<br/>
-[Parameter 特性](parameter-attributes.md)<br/>
+[参数特性](parameter-attributes.md)<br/>
 [数据成员特性](data-member-attributes.md)

@@ -41,10 +41,10 @@ helpviewer_keywords:
 - CDateTimeCtrl [MFC], SetTime
 ms.assetid: 7113993b-5d37-4148-939f-500a190c5bdc
 ms.openlocfilehash: 8c69473ab813c2fa692044fddc406a74a5aeb197
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58779815"
 ---
 # <a name="cdatetimectrl-class"></a>CDateTimeCtrl 类
@@ -446,7 +446,7 @@ COLORREF SetMonthCalColor(
 *iColor*<br/>
 **int**值，该值指定要设置的月份的日历控件的区域。 此值可以是以下值之一。
 
-|值|含义|
+|“值”|含义|
 |-----------|-------------|
 |MCSC_BACKGROUND|设置显示不同的月份的背景色。|
 |MCSC_MONTHBK|设置显示在一个月中的背景色。|

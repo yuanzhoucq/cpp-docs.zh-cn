@@ -5,10 +5,10 @@ helpviewer_keywords:
 - try-catch keyword [C++], exception handling
 ms.assetid: a6aa08de-669d-4ce8-9ec3-ec20d1354fcf
 ms.openlocfilehash: 506ead1b6e96f59717a92b6b0c48db0270b1822f
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58779516"
 ---
 # <a name="exception-handling-in-visual-c"></a>Visual C++ 中的异常处理
@@ -31,9 +31,9 @@ Visual C++ 支持三种异常处理：
 
    自 3.0 版开始，MFC 已使用 C++ 异常，但仍支持其较早的异常处理宏，这些宏在形式上与 C++ 异常类似。 虽然建议不要将这些宏用于新编程，但仍可使用它们实现向后兼容。 在已使用宏的程序中，你也可以随意使用 C++ 异常。 从 Visual C++ 2.0 版开始，在预处理期间，宏的计算结果为 C++ 语言的 Visual C++ 实现中定义的异常处理关键字。 当你开始使用 C++ 异常时，可以保留现有异常宏。
 
-使用[/EH](../build/reference/eh-exception-handling-model.md)编译器选项指定的异常处理的项目中; 中使用的类型默认值为 C++ 异常处理。 不要混合错误处理机制；例如，不要将 C++ 异常用于结构化异常处理。 使用 C++ 异常处理可以使你的代码更具可移植性，并且它使你可以处理任何类型的异常。 结构化的异常处理的缺点的详细信息，请参阅[结构化异常处理](../cpp/structured-exception-handling-c-cpp.md)。 有关混合使用 MFC 宏和 c + + 异常的建议，请参阅[异常：使用 MFC 宏和 c + + 异常](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md)。
+使用[/EH](../build/reference/eh-exception-handling-model.md)编译器选项指定的异常处理的项目中; 中使用的类型默认值为 C++ 异常处理。 不要混合错误处理机制；例如，不要将 C++ 异常用于结构化异常处理。 使用 C++ 异常处理可以使你的代码更具可移植性，并且它使你可以处理任何类型的异常。 结构化的异常处理的缺点的详细信息，请参阅[结构化异常处理](../cpp/structured-exception-handling-c-cpp.md)。 获取有关混合 MFC 宏的建议和C++异常，请参阅[异常：使用 MFC 宏和C++异常](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md)。
 
-有关在 CLR 应用程序中处理异常的信息，请参阅[异常处理 (C + + /cli 和 C + + /cli CX)](../extensions/exception-handling-cpp-component-extensions.md)。
+有关在 CLR 应用程序中处理异常的信息，请参阅[异常处理 (C++/CLI 和C++/CX)](../extensions/exception-handling-cpp-component-extensions.md)。
 
 有关异常处理在 x64 上的处理器，请参阅[x64 异常处理](../build/exception-handling-x64.md)。
 

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - rep outsd instruction
 ms.assetid: 55b31a65-aab7-4b5c-b61d-d9e2fb0c497a
 ms.openlocfilehash: 51cb4a97d271d6d41d39d1025e3a5d34b273cdc4
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59035249"
 ---
 # <a name="outdwordstring"></a>__outdwordstring
@@ -36,10 +36,10 @@ void __outdwordstring(
 *端口*<br/>
 [in]要向其发送数据的端口。
 
-*缓冲区*<br/>
+*Buffer*<br/>
 [in]指向要指定的端口发送的数据的指针。
 
-*计数*<br/>
+“计数”<br/>
 [in]双字数组发送的数。
 
 ## <a name="requirements"></a>要求

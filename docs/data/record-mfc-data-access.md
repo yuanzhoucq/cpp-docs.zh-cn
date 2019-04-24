@@ -7,11 +7,11 @@ helpviewer_keywords:
 - records [C++], database
 ms.assetid: d9888635-8121-452c-8cb9-a1c5bf268010
 ms.openlocfilehash: 9b308f98a597a080048377b345c27cb5862e5f12
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59033263"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62161157"
 ---
 # <a name="record-mfc-data-access"></a>记录（MFC 数据访问）
 

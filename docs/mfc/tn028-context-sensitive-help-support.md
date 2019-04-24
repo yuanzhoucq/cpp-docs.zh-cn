@@ -9,10 +9,10 @@ helpviewer_keywords:
 - resource identifiers, context-sensitive Help
 ms.assetid: 884f1c55-fa27-4d4c-984f-30907d477484
 ms.openlocfilehash: 5689e314c2ba94068619a066e5f458e06819b2b7
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58773471"
 ---
 # <a name="tn028-context-sensitive-help-support"></a>TN028:上下文相关帮助支持
@@ -68,7 +68,7 @@ F1 键通常由放置到主窗口加速器表转换为具有 ID ID_HELP 命令�
 
 ID_HELP 命令的生成方式，无论它是作为标准命令路由，直到它到达命令处理程序。 有关 MFC 命令路由体系结构的详细信息，请参阅[技术说明 21](../mfc/tn021-command-and-message-routing.md)。 如果应用程序启用帮助，将由处理 ID_HELP 命令[CWinApp::OnHelp](../mfc/reference/cwinapp-class.md#onhelp)。 应用程序对象将收到帮助消息，然后正确路由命令。 由于默认命令路由不适合确定最特定的上下文，因此这是必需的。
 
-`CWinApp::OnHelp` 尝试按以下顺序启动 WinHelp:
+`CWinApp::OnHelp` 将尝试按以下顺序启动 WinHelp：
 
 1. 使用帮助 ID 检查有效的 `AfxMessageBox` 调用。 如果消息框当前处于活动状态，则将使用适合消息框的上下文启动 WinHelp。
 
@@ -107,7 +107,7 @@ WM_COMMANDHELP 是活动窗口在请求“帮助”时收到的私有 Windows MF
 
 如果发生的特定转换或操作将放入`PreTranslateMessage`函数不应发生在 shift+f1 帮助模式期间应检查*m_bHelpMode*的成员`CWinApp`执行那些之前操作。 例如，在调用 `CDialog` 之前，`PreTranslateMessage` 的 `IsDialogMessage` 实现将检查此成员。 这将在 Shift+F1 模式下禁用无模式对话框上的“对话框导航”键。 此外，仍将在此循环期间调用 `CWinApp::OnIdle`。
 
-如果用户从菜单中选择一个命令，则将它当作有关命令的帮助 （通过 WM_COMMANDHELP，请参阅下文）。 如果用户单击应用程序窗口的可见区域，则将确定单击是非工作区单击还是工作区单击。 `OnContextHelp` 非工作区的句柄映射自动单击客户端的单击。 如果它是工作区单击，然后将发送 WM_HELPHITTEST 对被单击的窗口。 如果该窗口返回一个非零值，则该值将用作帮助上下文。 如果返回零，则 `OnContextHelp` 将尝试父窗口（如果失败，则将尝试该窗口的父级，以此类推）。 如果不能确定帮助上下文，默认值是将一条 ID_DEFAULT_HELP 命令发送到主窗口，然后 （通常） 映射到`CWinApp::OnHelpIndex`。
+如果用户从菜单中选择一个命令，则将它当作有关命令的帮助 （通过 WM_COMMANDHELP，请参阅下文）。 如果用户单击应用程序窗口的可见区域，则将确定单击是非工作区单击还是工作区单击。 `OnContextHelp` 会自动处理非工作区单击到工作区单击的映射。 如果它是工作区单击，然后将发送 WM_HELPHITTEST 对被单击的窗口。 如果该窗口返回一个非零值，则该值将用作帮助上下文。 如果返回零，则 `OnContextHelp` 将尝试父窗口（如果失败，则将尝试该窗口的父级，以此类推）。 如果不能确定帮助上下文，默认值是将一条 ID_DEFAULT_HELP 命令发送到主窗口，然后 （通常） 映射到`CWinApp::OnHelpIndex`。
 
 ## <a name="wmhelphittest"></a>WM_HELPHITTEST
 

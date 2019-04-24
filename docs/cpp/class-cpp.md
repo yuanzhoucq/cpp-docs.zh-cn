@@ -8,10 +8,10 @@ helpviewer_keywords:
 - class keyword [C++]
 ms.assetid: dd23c09f-6598-4069-8bff-69c7f2518b9f
 ms.openlocfilehash: c4ef9690a41737147354ee0976f6912c4711ff67
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58774810"
 ---
 # <a name="class-c"></a>class (C++)
@@ -66,7 +66,7 @@ class [ms-decl-spec] [tag [: base-list ]]
 
 - [__virtual_inheritance](../cpp/inheritance-keywords.md)
 
-有关托管的类和结构在 C + + /cli 和 C + + /CX 中，请参阅[类和结构](../extensions/classes-and-structs-cpp-component-extensions.md)
+有关托管的类和结构中的信息C++/CLI 和C++/CX，请参阅[类和结构](../extensions/classes-and-structs-cpp-component-extensions.md)
 
 ## <a name="example"></a>示例
 

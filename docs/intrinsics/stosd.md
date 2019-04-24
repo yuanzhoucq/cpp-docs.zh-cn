@@ -9,10 +9,10 @@ helpviewer_keywords:
 - __stosd intrinsic
 ms.assetid: 03104247-1cea-49f6-b6f8-287917bf5680
 ms.openlocfilehash: 43a0efcfb94b7e53dacec16caccdacf86a96f5bb
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59032162"
 ---
 # <a name="stosd"></a>__stosd
@@ -36,10 +36,10 @@ void __stosd(
 *dest*<br/>
 [out]该操作的目标。
 
-*数据*<br/>
+*Data*<br/>
 [in]要存储的数据。
 
-*计数*<br/>
+“计数”<br/>
 [in]双字写入的块的长度。
 
 ## <a name="requirements"></a>要求

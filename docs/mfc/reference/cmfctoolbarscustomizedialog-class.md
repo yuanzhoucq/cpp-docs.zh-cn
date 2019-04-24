@@ -25,10 +25,10 @@ helpviewer_keywords:
 - CMFCToolBarsCustomizeDialog [MFC], PostNcDestroy
 ms.assetid: 78e2cddd-4f13-4097-afc3-1ad646a113f1
 ms.openlocfilehash: e1dd6fff9fa4f03dbf93510da26c78c73e86c6ab
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58780959"
 ---
 # <a name="cmfctoolbarscustomizedialog-class"></a>CMFCToolBarsCustomizeDialog 类
@@ -137,7 +137,7 @@ void AddButton(
 *uiCategoryId*<br/>
 [in]指定要将按钮插入到其中的类别 ID。
 
-*按钮*<br/>
+*button*<br/>
 [in]指定要插入的按钮。
 
 *iInsertBefore*<br/>
@@ -716,7 +716,7 @@ void ReplaceButton(
 *uiCmd*<br/>
 [in]指定要替换为按钮的命令。
 
-*按钮*<br/>
+*button*<br/>
 [in]一个**const**替换旧的按钮的工具栏按钮对象的引用。
 
 ### <a name="remarks"></a>备注

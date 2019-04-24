@@ -10,10 +10,10 @@ helpviewer_keywords:
 - distributed transactions [C++]
 ms.assetid: 3d72e583-ad38-42ff-8f11-e2166d60a5a7
 ms.openlocfilehash: 3c71200e39641a69443599e0445f89f469aceeda
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59038743"
 ---
 # <a name="supporting-transactions-in-ole-db"></a>在 OLE DB 中支持事务
@@ -36,7 +36,7 @@ OLE DB 提供以下三种方法支持事务：
 
 当一个会话进入事务时，对数据存储在该会话中所做的所有工作是该事务的一部分并提交或中止作为单个单元。 （这有时称为手动提交模式。）
 
-事务支持是特定于提供程序。 如果要使用的提供程序支持事务，支持的会话对象`ITransaction`和`ITransactionLocal`可以输入 （非嵌套） 事务。 OLE DB 模板类[CSession](../../data/oledb/csession-class.md)并支持这些接口，则在 Visual c + + 中实现事务支持的建议的方法。
+事务支持是特定于提供程序。 如果要使用的提供程序支持事务，支持的会话对象`ITransaction`和`ITransactionLocal`可以输入 （非嵌套） 事务。 OLE DB 模板类[CSession](../../data/oledb/csession-class.md)并支持这些接口，则建议在视觉对象中实现事务支持C++。
 
 ## <a name="starting-and-ending-the-transaction"></a>起始和结束事务
 

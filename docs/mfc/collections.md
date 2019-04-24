@@ -18,17 +18,17 @@ helpviewer_keywords:
 - collection classes [MFC], shapes
 ms.assetid: 02586e4c-851d-41d0-a722-feb11c17c74c
 ms.openlocfilehash: f3dea68deaae73313fe389be49e8bbed7da3c93a
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58767173"
 ---
 # <a name="collections"></a>集合
 
 Microsoft 基础类库提供了用来管理对象的组的集合类。 这些类有两种类型：
 
-- [从 c + + 模板创建的集合类](#_core_the_template_based_collection_classes)
+- [从创建的集合类C++模板](#_core_the_template_based_collection_classes)
 
 - [并非从模板创建的集合类](#_core_the_collection_classes_not_based_on_templates)
 

@@ -43,10 +43,10 @@ helpviewer_keywords:
 - registry, deleting keys
 ms.assetid: 3afce82b-ba2c-4c1a-8404-dc969e1af74b
 ms.openlocfilehash: 1215c66f1f40cfbc96b813d4eb5084f07698bc01
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58778294"
 ---
 # <a name="cregkey-class"></a>CRegKey 类
@@ -414,7 +414,7 @@ LONG NotifyChangeKeyValue(
 *dwNotifyFilter*<br/>
 指定应报告的一组标志，用于控制哪些更改。 此参数可以是以下值的组合：
 
-|值|含义|
+|“值”|含义|
 |-----------|-------------|
 |REG_NOTIFY_CHANGE_NAME|如果在添加或删除一个子项，请通知调用方。|
 |REG_NOTIFY_CHANGE_ATTRIBUTES|通知调用方的密钥，如安全描述符信息的属性的更改。|
@@ -887,7 +887,7 @@ LONG SetKeySecurity(SECURITY_INFORMATION si, PSECURITY_DESCRIPTOR psd) throw();
 *si*<br/>
 指定要设置的安全描述符的组件。 值可以是以下值的组合：
 
-|值|含义|
+|“值”|含义|
 |-----------|-------------|
 |DACL_SECURITY_INFORMATION|设置密钥的自由访问控制列表 (DACL)。 该密钥必须拥有 WRITE_DAC 访问权限，或调用进程必须是对象的所有者。|
 |GROUP_SECURITY_INFORMATION|设置密钥的主要组安全标识符 (SID)。 该密钥必须拥有 WRITE_OWNER 访问权限，或调用进程必须是对象的所有者。|

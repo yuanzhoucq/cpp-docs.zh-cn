@@ -83,10 +83,10 @@ helpviewer_keywords:
 - COleServerDoc [MFC], OnShowDocument
 ms.assetid: a9cdd96a-e0ac-43bb-9203-2c29237e965c
 ms.openlocfilehash: 4cada70723c7fadc9c91c40380b8a7e9fc46a07a
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58777254"
 ---
 # <a name="coleserverdoc-class"></a>COleServerDoc 类
@@ -642,7 +642,7 @@ OLECMDEXECOPT_SHOWHELP
 
 如果成功，则为 S_OK 返回否则为台以下的错误代码：
 
-|值|描述|
+|“值”|描述|
 |-----------|-----------------|
 |E_UNEXPECTED|出现意外的错误|
 |E_FAIL|出现错误|

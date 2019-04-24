@@ -9,10 +9,10 @@ helpviewer_keywords:
 - const_seg pragma
 ms.assetid: 1eb58ee2-fb0e-4a39-9621-699c8f5ef957
 ms.openlocfilehash: c58f154f5e1ab6906b45d59f454a7dc2b5c0bfbe
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59029617"
 ---
 # <a name="constseg"></a>const_seg
@@ -41,7 +41,7 @@ ms.locfileid: "59029617"
 （可选）段的名称。 与一起使用时**pop**，在堆栈中弹出和*段名称*将成为活动段名称。
 
 "*segment-class*"<br/>
-（可选）包含有关使用 c + + 2.0 版之前的兼容性。 它将被忽略。
+（可选）包含与的兼容性C++之前的版本 2.0。 它将被忽略。
 
 ## <a name="remarks"></a>备注
 
@@ -51,7 +51,7 @@ ms.locfileid: "59029617"
 
 在 `const_seg` 中定义需要动态初始化的对象会导致未定义的行为。
 
-`#pragma const_seg` 不带任何参数将段重置为.rdata。
+不带参数的 `#pragma const_seg` 会将段重置为 .rdata。
 
 ## <a name="example"></a>示例
 

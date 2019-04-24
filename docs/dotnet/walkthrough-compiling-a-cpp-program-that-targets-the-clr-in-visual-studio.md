@@ -1,5 +1,5 @@
 ---
-title: 编译 C + + /cli 面向 CLR 的 CLI 程序
+title: 编译C++面向 CLR 的 /CLI 程序
 ms.date: 09/17/2018
 helpviewer_keywords:
 - command-line applications [C++], managed code
@@ -8,17 +8,17 @@ helpviewer_keywords:
 - managed code [C++]
 ms.assetid: 339f89df-a5d2-4040-831a-ddbe25b5dce4
 ms.openlocfilehash: fcac0079185b6ceef981b9acfeb555ef29d464e0
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59034665"
 ---
-# <a name="walkthrough-compile-a-ccli-program-that-targets-the-clr-in-visual-studio"></a>演练：编译 C + + /cli 面向 Visual Studio 中的 CLR 的 CLI 程序
+# <a name="walkthrough-compile-a-ccli-program-that-targets-the-clr-in-visual-studio"></a>演练：编译C++面向 Visual Studio 中的 CLR 的 /CLI 程序
 
-通过使用 C + + /cli 语言扩展可以创建使用.NET 类并通过使用 Visual Studio 开发环境对其进行编译的 c + + 程序。
+通过使用C++/CLI 语言扩展可以创建C++使用的.NET 类并通过使用 Visual Studio 开发环境对其进行编译的程序。
 
-对于此过程，可以键入自己的 c + + 程序也可以使用示例程序之一。 我们在此过程中使用的示例程序创建了名为“textfile.txt”的文本文件，并将其保存到项目目录。
+对于此过程，您可以键入自己C++程序或使用示例程序之一。 我们在此过程中使用的示例程序创建了名为“textfile.txt”的文本文件，并将其保存到项目目录。
 
 ## <a name="prerequisites"></a>系统必备
 

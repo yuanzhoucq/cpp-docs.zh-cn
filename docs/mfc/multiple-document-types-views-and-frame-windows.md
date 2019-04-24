@@ -16,10 +16,10 @@ helpviewer_keywords:
 - splitter windows [MFC], static
 ms.assetid: c6b9e4e0-7c9c-45f1-a804-aeac39c9a128
 ms.openlocfilehash: 154fc67dc35d5e5633c72c27100da9be56c0c68c
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58779672"
 ---
 # <a name="multiple-document-types-views-and-frame-windows"></a>多文档类型、视图和框架窗口
@@ -28,11 +28,11 @@ ms.locfileid: "58779672"
 
 ## <a name="what-do-you-want-to-know-more-about"></a>你想要了解更多信息
 
-- [多文档类型](#_core_multiple_document_types)
+- [Multiple document types](#_core_multiple_document_types)
 
-- [多视图](#_core_multiple_views)
+- [Multiple views](#_core_multiple_views)
 
-- [多框架窗口](#_core_multiple_frame_windows)
+- [Multiple frame windows](#_core_multiple_frame_windows)
 
 - [拆分窗口](#_core_splitter_windows)
 

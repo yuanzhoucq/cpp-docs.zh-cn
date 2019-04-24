@@ -1,19 +1,19 @@
 ---
-title: 如何：使用数组中 C + + /cli CLI
+title: 如何：使用中的数组C++/CLI
 ms.date: 11/04/2016
 helpviewer_keywords:
 - arrays [C++], single-dimension
 ms.assetid: 301cfb3e-199f-42c8-8151-629dce9e87f3
 ms.openlocfilehash: 65d384cbac7691d000ae6e895c9cf63e71726689
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58780920"
 ---
-# <a name="how-to-use-arrays-in-ccli"></a>如何：使用数组中 C + + /cli CLI
+# <a name="how-to-use-arrays-in-ccli"></a>如何：使用中的数组C++/CLI
 
-本文介绍如何使用数组中 C + + /cli CLI。
+本文介绍如何使用中的数组C++/CLI。
 
 ## <a name="single-dimension-arrays"></a>一维数组
 
@@ -501,7 +501,7 @@ int main() {
 
 ## <a name="sorting-arrays"></a>对数组进行排序
 
-标准 c + + 与数组不同，托管的数组隐式派生自数组基类它们均从中继承常见行为。 例如，`Sort`方法，可用于任何数组中的项进行排序。
+与标准C++数组，托管数组隐式派生自数组基类它们均从中继承常见行为。 例如，`Sort`方法，可用于任何数组中的项进行排序。
 
 对于包含基本的内部类型的数组，可以调用`Sort`方法。 您可以重写的排序条件，而这又是必需时想要为复杂类型的数组进行排序。 在这种情况下，数组元素类型必须实现<xref:System.IComparable.CompareTo%2A>方法。
 

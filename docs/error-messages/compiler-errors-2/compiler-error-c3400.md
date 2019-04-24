@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C3400
 ms.assetid: d44169a8-73b6-4766-b406-b3a6c93f2a4d
 ms.openlocfilehash: c4b4cb64da83115ab5b6a5234cda2ea3c7ba3a53
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58768622"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59778847"
 ---
 # <a name="compiler-error-c3400"></a>编译器错误 C3400
 
@@ -19,7 +19,7 @@ ms.locfileid: "58768622"
 
 编译器检测到循环约束。
 
-有关详细信息，请参阅[泛型类型参数的约束 (C + + CLI)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md)。
+有关详细信息，请参阅[泛型类型参数的约束 (C++/CLI)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md)。
 
 ## <a name="example"></a>示例
 

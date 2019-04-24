@@ -23,10 +23,10 @@ helpviewer_keywords:
 - CTypedPtrArray [MFC], SetAtGrow
 ms.assetid: e3ecdf1a-a889-4156-92dd-ddbd36ccd919
 ms.openlocfilehash: 080e47746b83b6ff12db9f6df0fc27bcd202bb51
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58768680"
 ---
 # <a name="ctypedptrarray-class"></a>CTypedPtrArray 类
@@ -71,7 +71,7 @@ class CTypedPtrArray : public BASE_CLASS
 
 ## <a name="remarks"></a>备注
 
-当你使用`CTypedPtrArray`而非`CPtrArray`或`CObArray`，c + + 类型检查功能可帮助消除错误引起的不匹配的指针类型。
+当你使用`CTypedPtrArray`而非`CPtrArray`或`CObArray`、C++类型检查的工具可帮助消除错误引起的不匹配的指针类型。
 
 此外，`CTypedPtrArray`包装执行大量的强制转换，如果您使用，则将需要`CObArray`或`CPtrArray`。
 

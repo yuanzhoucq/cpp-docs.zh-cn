@@ -121,10 +121,10 @@ helpviewer_keywords:
 - CDocument [MFC], m_lfRichPreviewFont
 ms.assetid: e5a2891d-e1e1-4599-8c7e-afa9b4945446
 ms.openlocfilehash: 2d87ff67000fb5b70c0a5c965638875e6f50b22c
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58774174"
 ---
 # <a name="cdocument-class"></a>CDocument 类
@@ -375,7 +375,7 @@ virtual POSITION FindChunk(
 *guid*<br/>
 指定要查找块的 GUID。
 
-*pid*<br/>
+pid<br/>
 指定块区的 PID 查找。
 
 ### <a name="return-value"></a>返回值
@@ -734,7 +734,7 @@ virtual void OnDocumentEvent(DocumentEvent deEvent);
 
 下表列出了可能的值为*deEvent*以及与其对应的事件。
 
-|值|相应的事件|
+|“值”|相应的事件|
 |-----------|-------------------------|
 |`onAfterNewDocument`|已创建新文档。|
 |`onAfterOpenDocument`|打开一个新的文档。|
@@ -1070,7 +1070,7 @@ virtual void RemoveChunk(
 
 ### <a name="parameters"></a>参数
 
-*GUID*<br/>
+*Guid*<br/>
 指定要删除一个块的 GUID。
 
 *pid*<br/>
@@ -1116,7 +1116,7 @@ virtual void ReportSaveLoadException(
 *lpszPathName*<br/>
 指向在时的文档的名称保存或加载。
 
-*E*<br/>
+*e*<br/>
 指向所引发的异常。 可以为 NULL。
 
 *bSaving*<br/>

@@ -1,5 +1,5 @@
 ---
-title: 默认值 （c + + COM 属性）
+title: 默认值 (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.default
@@ -9,10 +9,10 @@ helpviewer_keywords:
 - defaults, default attribute
 ms.assetid: 0cdca716-1ba8-46d7-9399-167e55492870
 ms.openlocfilehash: c6448b00fef50a7654816a2c39af2943db12d314
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59024577"
 ---
 # <a name="default-c"></a>default (C++)
@@ -32,7 +32,7 @@ ms.locfileid: "59024577"
 
 如果未指定默认接口，则第一个出现的非源接口用作默认接口。
 
-*接口 2*<br/>
+*interface2*<br/>
 （可选）默认源接口。 你还必须使用 [source](source-cpp.md) 属性指定此接口。
 
 如果未指定默认源接口，则第一个源接口用作默认接口。

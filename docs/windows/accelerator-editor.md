@@ -1,5 +1,5 @@
 ---
-title: 快捷键编辑器 （c + +）
+title: 快捷键编辑器 (C++)
 ms.date: 02/14/2019
 f1_keywords:
 - vc.editors.accelerator.F1
@@ -34,15 +34,15 @@ helpviewer_keywords:
 - accelerator tables [C++], changing properties
 ms.assetid: 013c30b6-5d61-4f1c-acef-8bd15bed7060
 ms.openlocfilehash: f5ae9880719a3a8b799ea8deb751b6f0a85542bd
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59041119"
 ---
-# <a name="accelerator-editor-c"></a>快捷键编辑器 （c + +）
+# <a name="accelerator-editor-c"></a>快捷键编辑器 (C++)
 
-快捷键对应表是 c + + Windows 资源，其中包含加速键，称为键盘快捷方式，并与之关联的命令标识符的列表。 一个程序可以拥有多个快捷键对应表。
+快捷键对应表是C++Windows 资源，其中包含加速键，称为键盘快捷方式，并与之关联的命令标识符的列表。 一个程序可以拥有多个快捷键对应表。
 
 通常情况下，快捷键用作程序命令的键盘快捷键，也可用于菜单或工具栏。 但是，快捷键对应表可用于为没有关联用户界面对象的命令定义组合键。
 
@@ -69,12 +69,12 @@ ms.locfileid: "59041119"
 
 以下是合法的条目**修饰符**快捷键对应表中的属性：
 
-   |值|描述|
+   |“值”|描述|
    |-----------|-----------------|
-   |**None**|用户仅按**密钥**值。<br/><br/>使用此值是最有效地使用 ASCII/ANSI 值 001 026，通过它解释为 ^ A 到 ^ Z (**Ctrl + A**通过**Ctrl + Z**)。|
+   |**无**|用户仅按**密钥**值。<br/><br/>使用此值是最有效地使用 ASCII/ANSI 值 001 026，通过它解释为 ^ A 到 ^ Z (**Ctrl + A**通过**Ctrl + Z**)。|
    |**Alt**|用户必须按**Alt**之前**密钥**值。|
    |**Ctrl**|用户必须按**Ctrl**之前**密钥**值，与 ASCII 类型无效。|
-   |**移位**|用户必须按**Shift**之前**密钥**值。|
+   |**Shift**|用户必须按**Shift**之前**密钥**值。|
    |**Ctrl+Alt**|用户必须按**Ctrl**并**Alt**之前**密钥**值，与 ASCII 类型无效。|
    |**Ctrl+Shift**|用户必须按**Ctrl**并**Shift**之前**密钥**值，与 ASCII 类型无效。|
    |**Alt+Shift**|用户必须按**Alt**并**Shift**之前**密钥**值，与 ASCII 类型无效。|
@@ -84,7 +84,7 @@ ms.locfileid: "59041119"
 
 以下是合法的条目**密钥**快捷键对应表中的属性：
 
-   |值|描述|
+   |“值”|描述|
    |-----------|-----------------|
    |0 到 255 以十进制格式之间的整数。|值确定是否值视为 ASCII 或 ANSI，如下所示：<br/><br/>   -一位数字始终解释为相应的项，而不是作为 ASCII 或 ANSI 值。<br/>   值从 1 到 26 的前面加零上, 时被解释为 ^ A 到 ^ Z，表示与按下时的字母表的字母的 ASCII 值**Ctrl**按下键。<br/>   -27-32 中的值始终被解释为三位十进制值 027 到 032。<br/>   -值从 033 到 255，0 的前面还是不被解释为 ANSI 值。|
    |单个键盘字符。|大写字母 A-Z 或数字 0-9 可以是 ASCII 或虚拟键值。 任何其他字符仅为 ASCII。|
@@ -110,7 +110,7 @@ ms.locfileid: "59041119"
 
 ## <a name="accelerator-tables"></a>快捷键对应表
 
-在 c + + 项目中，可以直接使用就地编辑中编辑快捷键对应表**快捷键编辑器**。
+在C++项目中，您可以直接使用就地编辑中编辑快捷键对应表**快捷键编辑器**。
 
 下面的过程涉及到使用标准属性页，但是，就地编辑和属性页面方法都具有相同的结果。 所做的更改使用属性页或使用就地编辑将立即反映在快捷键对应表中。
 

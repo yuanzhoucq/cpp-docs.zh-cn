@@ -9,10 +9,10 @@ helpviewer_keywords:
 - pragmas, hdrstop
 ms.assetid: 5ea8370a-10d1-4538-ade6-4c841185da0e
 ms.openlocfilehash: 1590b5916a8d9c00b6e988bacc7cd857c29d6775
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59035210"
 ---
 # <a name="hdrstop"></a>hdrstop
@@ -28,9 +28,9 @@ ms.locfileid: "59035210"
 
 *文件名*是要使用或创建的预编译标头文件的名称 (具体取决于是否[/Yu](../build/reference/yu-use-precompiled-header-file.md)或[/Yc](../build/reference/yc-create-precompiled-header-file.md)指定)。 如果*文件名*不包含路径说明，预编译的头文件被假定为与源文件相同的目录中。
 
-如果 C 或 c + + 文件包含**hdrstop**杂注编译时使用`/Yc`，则编译器将保存到的位置的杂注在编译的状态。 不会保存遵循杂注的任何代码的编译状态。
+如果 C 或C++文件包含**hdrstop**编译时使用的杂注`/Yc`，则编译器将保存到的位置的杂注在编译的状态。 不会保存遵循杂注的任何代码的编译状态。
 
-使用*文件名*命名预编译标头文件在其中保存编译的状态。 之间有空格**hdrstop**并*filename*是可选的。 中指定的文件名称**hdrstop**杂注是一个字符串，因此会受到任何 C 或 c + + 字符串的约束。 具体来说，您必须将其包含在引号中并使用转义符（反斜杠）来指定目录名称。 例如：
+使用*文件名*命名预编译标头文件在其中保存编译的状态。 之间有空格**hdrstop**并*filename*是可选的。 中指定的文件名称**hdrstop**杂注是一个字符串，因此会受到任何 C 的约束或C++字符串。 具体来说，您必须将其包含在引号中并使用转义符（反斜杠）来指定目录名称。 例如：
 
 ```
 #pragma hdrstop( "c:\\projects\\include\\myinc.pch" )

@@ -5,11 +5,11 @@ f1_keywords:
 - <future>
 ms.assetid: 2f5830fc-455d-44f9-9e3d-94ea051596a2
 ms.openlocfilehash: 189a9f16b65ae74fc2a86bee62bf8bd548c486aa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50555732"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62159855"
 ---
 # <a name="ltfuturegt"></a>&lt;future&gt;
 
@@ -40,7 +40,7 @@ ms.locfileid: "50555732"
 
 每个模板类`promise`， `future`，并`shared_future`有类型专用化**void**和用于存储和检索一个值，通过引用的部分专用化。 这些专用化与主模板的唯一区别是用于存储和检索返回值的函数的签名和语义。
 
-除保留后向兼容性的情况外，模板类 `future` 和 `shared_future` 从不会在其析构函数中阻塞：不同于其他所有 future，对于附加到以 `std::async` 开始的任务的 `future`（或最后一个 `shared_future`），如果任务尚未完成，则析构函数会阻塞；即，如果此线程尚未调用 `.get()` 或 `.wait()` 且任务仍在运行，则此析构函数会阻塞。 如下可用性注释已添加到草案标准中 `std::async` 的描述中：“[注意：如果将从 std::async 获取的 future 移出本地范围外，则使用此 future 的其他代码必须意识到此 future 的析构函数可能阻塞，直到共享状态变为准备就绪。—尾注]”在其他所有情况下，需要使用 `future` 和 `shared_future` 析构函数，且需保证其永不阻塞。
+模板类`future`和`shared_future`永远不会阻止在其析构函数中，除在保留用于向后兼容的一种方案：与其他所有 future，对于`future`— 或最后一个`shared_future`— 附加到任务`std::async`、 析构函数块如果任务尚未完成; 也就是说，它将阻塞此线程尚未调用`.get()`或`.wait()`并且仍在运行任务。 以下可用性注释已添加到的说明`std::async`草稿标准中:"[注意：如果从 std::async 获取 future 移出本地作用域中，使用未来的其他代码必须了解未来的析构函数可能会阻止在共享状态变为准备就绪。 — 尾注]"在所有其他情况下，`future`和`shared_future`析构函数所需和保证永远不会阻止。
 
 ## <a name="members"></a>成员
 
@@ -73,11 +73,11 @@ ms.locfileid: "50555732"
 
 ### <a name="enumerations"></a>枚举
 
-|name|描述|
+|名称|描述|
 |----------|-----------------|
 |[future_errc](../standard-library/future-enums.md#future_errc)|为 `future_error` 类报告的错误提供符号名称。|
 |[future_status](../standard-library/future-enums.md#future_status)|为计时等待函数可返回的原因提供符号名称。|
-|[启动](../standard-library/future-enums.md#launch)|表示描述模板函数 `async` 的可能模式的位掩码类型。|
+|[launch](../standard-library/future-enums.md#launch)|表示描述模板函数 `async` 的可能模式的位掩码类型。|
 
 ## <a name="see-also"></a>请参阅
 

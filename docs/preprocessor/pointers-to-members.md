@@ -11,15 +11,15 @@ helpviewer_keywords:
 - pointers_to_members pragma
 ms.assetid: 8325428c-c90a-4aed-9e82-cb1dda23f4ca
 ms.openlocfilehash: 5ee45a77a7094fb1ef9ba536bae391aaad00e812
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59032058"
 ---
 # <a name="pointerstomembers"></a>pointers_to_members
 
-**C++ 专用**
+**C++特定**
 
 指定是否可以在类成员关联的类定义之前声明指向类成员的指针，以及类成员是否用于控制指针大小和解释指针所需的代码。
 

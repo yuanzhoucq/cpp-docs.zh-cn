@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Platform::Array Class
 ms.assetid: 7815ab40-88c5-42b0-83b8-081cef0cda31
 ms.openlocfilehash: 597f8e32e2da95370169cdbfe2ccd209296322cc
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57751656"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62161651"
 ---
 # <a name="platformarray-class"></a>Platform::Array 类
 
@@ -43,7 +43,7 @@ Platform:: array 继承其所有方法从[platform:: writeonlyarray 类](../cppc
 
 请参阅[platform:: writeonlyarray 类](../cppcx/platform-writeonlyarray-class.md)。
 
-### <a name="properties"></a>Properties
+### <a name="properties"></a>属性
 
 |||
 |-|-|
@@ -108,8 +108,7 @@ T& get(unsigned int index)  const;
 
 ### <a name="return-value"></a>返回值
 
-
-  `index` 参数指定的数组元素。
+`index` 参数指定的数组元素。
 
 ## <a name="value"></a>  Array:: value 属性
 
@@ -127,5 +126,5 @@ property Array^ Value;
 
 ## <a name="see-also"></a>请参阅
 
-[平台命名空间](../cppcx/platform-namespace-c-cx.md)<br/>
+[Platform 命名空间](../cppcx/platform-namespace-c-cx.md)<br/>
 [Array 和 WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)

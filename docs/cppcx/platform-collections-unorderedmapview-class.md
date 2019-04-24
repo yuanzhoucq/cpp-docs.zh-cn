@@ -6,11 +6,11 @@ f1_keywords:
 - collection/Platform::Collections::UnorderedMapView
 ms.assetid: 545a3725-2efd-4cc1-b590-4a7cd2351f61
 ms.openlocfilehash: ebda6f179c365aaa009eb45425a36058105def10
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57743444"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62161613"
 ---
 # <a name="platformcollectionsunorderedmapview-class"></a>Platform::Collections::UnorderedMapView 类
 
@@ -39,7 +39,7 @@ ref class UnorderedMapView sealed;
 
 ### <a name="remarks"></a>备注
 
-UnorderedMapView 是具体的 c + + 实现[Windows::Foundation::Collections::IMapView\<K，V >](/uwp/api/Windows.Foundation.Collections.IMapView_K_V_)跨应用程序二进制接口 (ABI) 传递的接口。 有关更多信息，请参见 [集合 (C++/CX)](../cppcx/collections-c-cx.md)。
+UnorderedMapView 是具体的C++的实现[Windows::Foundation::Collections::IMapView\<K，V >](/uwp/api/Windows.Foundation.Collections.IMapView_K_V_)跨应用程序二进制接口 (ABI) 传递的接口。 有关更多信息，请参见 [集合 (C++/CX)](../cppcx/collections-c-cx.md)。
 
 ### <a name="members"></a>成员
 

@@ -88,10 +88,10 @@ helpviewer_keywords:
 - images [C++], converting formats
 ms.assetid: 66db3fb2-cfc1-48a2-9bdd-53f61eb7ee30
 ms.openlocfilehash: d10593ffbae7aef55adc3334057402b6952d8ba7
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59027592"
 ---
 # <a name="how-to-create-an-icon-or-other-image"></a>如何：创建图标或其他图像
@@ -155,11 +155,11 @@ ms.locfileid: "59027592"
 
 |属性|描述|
 |---|---|
-|**宽度**|提供空间以输入自定义图像的宽度以像素为单位 （1-512，限制 2048年）。|
-|**高度**|提供空间以输入自定义映像以像素为单位 （1-512，限制 2048年） 的高度。|
+|**Width**|提供空间以输入自定义图像的宽度以像素为单位 （1-512，限制 2048年）。|
+|**Height**|提供空间以输入自定义映像以像素为单位 （1-512，限制 2048年） 的高度。|
 |**颜色**|提供空间以选择自定义图像的颜色数：2、 16 或 256。|
 
-使用**打开&lt;设备&gt;映像**对话框可以在 c + + 项目中打开设备图像。 它列出了当前资源 （属于当前资源的映像） 中的现有设备图像。 是包含以下属性：
+使用**打开&lt;设备&gt;映像**对话框以打开设备图像中的C++项目。 它列出了当前资源 （属于当前资源的映像） 中的现有设备图像。 是包含以下属性：
 
 |属性|描述|
 |---|---|
@@ -266,7 +266,7 @@ ms.locfileid: "59027592"
 
 1. 转到菜单**文件** > **打开**，然后选择**文件**。
 
-1. 在中**新文件对话框**，选择**Visual c + +** 文件夹，然后选择**位图文件 (.bmp)** 中**模板**框并选择**打开**。
+1. 在中**新文件对话框**，选择**Visual C++** 文件夹，然后选择**位图文件 (.bmp)** 中**模板**框和选择**打开**。
 
    在中打开位图**的图像编辑器**。
 
@@ -293,7 +293,7 @@ ms.locfileid: "59027592"
 
 1. 选择“保存”。
 
-### <a name="to-add-a-new-image-resource-to-an-unmanaged-c-project"></a>若要将新的图像资源添加到非托管的 c + + 项目
+### <a name="to-add-a-new-image-resource-to-an-unmanaged-c-project"></a>若要将新的图像资源添加到非托管C++项目
 
 1. 在中[资源视图](how-to-create-a-resource-script-file.md#create-resources)，右键单击你 *.rc*文件，然后选择**插入资源**。 如果已有现有的图像资源您 *.rc*文件中，可以如游标，您只需右键单击**光标**文件夹，然后选择**插入光标**。
 

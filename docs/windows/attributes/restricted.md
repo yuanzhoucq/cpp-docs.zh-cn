@@ -1,5 +1,5 @@
 ---
-title: 受限制 （c + + COM 属性）
+title: 受限制 (C++ COM 属性)
 ms.date: 10/03/2018
 f1_keywords:
 - vc-attr.restricted
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - restricted attribute
 ms.assetid: 504a96be-b904-4269-8be1-920feba201b4
 ms.openlocfilehash: 86f40fa49daf88668e37bef07f0db33d01cf1942
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59029495"
 ---
 # <a name="restricted"></a>restricted
@@ -27,12 +27,12 @@ ms.locfileid: "59029495"
 
 ### <a name="parameters"></a>参数
 
-*接口*<br/>
+*interfaces*<br/>
 可能不会调用任意 COM 对象的一个或多个接口。 此参数才有效时应用于类。
 
 ## <a name="remarks"></a>备注
 
-**受限**c + + 属性具有相同的功能[受限](/windows/desktop/Midl/restricted)MIDL 特性。
+**受限**C++属性具有相同的功能[受限](/windows/desktop/Midl/restricted)MIDL 特性。
 
 ## <a name="example"></a>示例
 

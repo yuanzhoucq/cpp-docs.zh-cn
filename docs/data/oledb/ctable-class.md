@@ -14,10 +14,10 @@ helpviewer_keywords:
 - Open method
 ms.assetid: f13fdaa3-e198-4557-977d-54b0bbc3454d
 ms.openlocfilehash: fab1ba2e496f4945eb56c0a67b833f6bf063404e
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59038760"
 ---
 # <a name="ctable-class"></a>CTable 类
@@ -82,7 +82,7 @@ HRESULT Open(const CSession& session,
 
 #### <a name="parameters"></a>参数
 
-*会话*<br/>
+*session*<br/>
 [in]为其打开的表的会话。
 
 *wszTableName*<br/>

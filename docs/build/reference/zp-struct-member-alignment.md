@@ -12,10 +12,10 @@ helpviewer_keywords:
 - -Zp compiler option [C++]
 ms.assetid: 5242f656-ed9b-48a3-bc73-cfcf3ed2520f
 ms.openlocfilehash: d76cd93c7af4228bff8f73fa3bcbf40fa149b0be
-ms.sourcegitcommit: 35c4b3478f8cc310ebbd932a18963ad8ab846ed9
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59237159"
 ---
 # <a name="zp-struct-member-alignment"></a>/Zp（结构成员对齐）
@@ -43,7 +43,7 @@ ms.locfileid: "59237159"
 不要使用此选项，除非有特定的对齐要求。
 
 > [!WARNING]
-> Windows SDK 中的 c + + 标头设置和假设 **/zp8**打包在内部。 如果可能发生损坏的内存 **/Zp** Windows SDK 标头内更改设置。 标头，不会影响任何 **/Zp**命令行设置的选项。
+> C++Windows SDK 中的标头设置和假设 **/zp8**打包在内部。 如果可能发生损坏的内存 **/Zp** Windows SDK 标头内更改设置。 标头，不会影响任何 **/Zp**命令行设置的选项。
 
 此外可以使用[pack](../../preprocessor/pack.md)控制结构封装。 有关对齐的详细信息，请参阅：
 
@@ -57,9 +57,9 @@ ms.locfileid: "59237159"
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[Visual Studio 中的设置 c + + 编译器和生成属性](../working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
 
-1. 选择**配置属性** > **C/c + +** > **代码生成**属性页。
+1. 选择**配置属性** > **C /C++** > **代码生成**属性页。
 
 1. 修改**结构成员对齐**属性。
 

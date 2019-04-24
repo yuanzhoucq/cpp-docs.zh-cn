@@ -33,10 +33,10 @@ helpviewer_keywords:
 - m_rgbookmarks
 ms.assetid: a8aa3149-7ce8-4976-a680-2da193fd3234
 ms.openlocfilehash: e3513084697a60a33b9fa2ab02222a9b332cce79
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59039814"
 ---
 # <a name="irowsetlocateimpl-class"></a>IRowsetLocateImpl 类
@@ -94,10 +94,10 @@ class ATL_NO_VTABLE IRowsetLocateImpl : public IRowsetImpl<
 
 |||
 |-|-|
-|[比较](#compare)|比较两个的书签。|
+|[Compare](#compare)|比较两个的书签。|
 |[GetRowsAt](#getrowsat)|提取从指定的偏移量从书签的行开始的行。|
 |[GetRowsByBookmark](#getrowsbybookmark)|提取匹配指定的书签的行。|
-|[Hash](#hash)|返回哈希值用于指定书签。|
+|[哈希](#hash)|返回哈希值用于指定书签。|
 
 ### <a name="data-members"></a>数据成员
 
@@ -113,7 +113,7 @@ class ATL_NO_VTABLE IRowsetLocateImpl : public IRowsetImpl<
 
 若要在行集中支持 OLE DB 的书签，请从此类继承的行集。
 
-实现书签支持的信息，请参阅[提供程序支持书签](../../data/oledb/provider-support-for-bookmarks.md)中*Visual c + + 程序员指南*并[书签](/previous-versions/windows/desktop/ms709728(v=vs.85))中*OLE DB 程序员参考*平台 SDK 中。
+有关实现书签支持的信息，请参阅[提供程序支持书签](../../data/oledb/provider-support-for-bookmarks.md)中*VisualC++程序员指南*和[书签](/previous-versions/windows/desktop/ms709728(v=vs.85))中*OLE DB 程序员参考*平台 SDK 中。
 
 ## <a name="compare"></a> IRowsetLocateImpl::Compare
 
@@ -239,4 +239,4 @@ CAtlArray<DBROWCOUNT> m_rgBookmarks;
 [OLE DB 提供程序模板体系结构](../../data/oledb/ole-db-provider-template-architecture.md)<br/>
 [IRowsetLocate:IRowset](/previous-versions/windows/desktop/ms721190(v=vs.85))
 [用于书签的提供程序支持](../../data/oledb/provider-support-for-bookmarks.md)<br/>
-[书签](/previous-versions/windows/desktop/ms709728(v=vs.85))
+[定位标记](/previous-versions/windows/desktop/ms709728(v=vs.85))

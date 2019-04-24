@@ -9,10 +9,10 @@ helpviewer_keywords:
 - security [C++], best practices
 ms.assetid: 86acaccf-cdb4-4517-bd58-553618e3ec42
 ms.openlocfilehash: bc449d0bbf222391868dc7586e0245fd6e8cd2ac
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
-ms.translationtype: MT
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58769857"
 ---
 # <a name="security-best-practices-for-c"></a>C++ 安全性最佳做法
@@ -35,7 +35,7 @@ ms.locfileid: "58769857"
 [/NXCOMPAT](../build/reference/nxcompat.md)， [/NXCOMPAT （与数据执行保护兼容）](../build/reference/nxcompat-compatible-with-data-execution-prevention.md)这些编译器和链接器选项启用数据执行保护 (DEP) 兼容性。 DEP 可防止 CPU 执行非代码页。
 
 [/analyze（代码分析）](../build/reference/analyze-code-analysis.md)<br/>
-此编译器选项将激活报告潜在安全问题（比如缓冲区溢出、未初始化的内存、null 指针取消引用和内存泄漏）的代码分析。 默认情况下关闭此选项。 有关详细信息，请参阅[的代码分析 C/c + + 概述](/visualstudio/code-quality/code-analysis-for-c-cpp-overview)。
+此编译器选项将激活报告潜在安全问题（比如缓冲区溢出、未初始化的内存、null 指针取消引用和内存泄漏）的代码分析。 默认情况下关闭此选项。 有关详细信息，请参阅[于 c 语言的代码分析 /C++概述](/visualstudio/code-quality/code-analysis-for-c-cpp-overview)。
 
 [/DYNAMICBASE（使用地址空间布局随机化）](../build/reference/dynamicbase-use-address-space-layout-randomization.md)<br/>
 通过使用此链接器选项，可以生成一个在执行开始时可在内存的不同位置加载的可执行映像。 此选项还使内存中的堆栈位置更加不可预测。
@@ -54,7 +54,7 @@ ms.locfileid: "58769857"
 
 ## <a name="checked-iterators"></a>Checked Iterators
 
-经过检查的迭代器强制实施容器边界。 默认情况下，当检查的迭代器超出范围时，它将生成异常并终止程序的执行。 检查迭代器提供了其他级别的响应取决于分配给预处理器的值定义，如 **\_SECURE\_SCL\_引发**和 **\_迭代器\_调试\_级别**。 例如，在**\_迭代器\_调试\_LEVEL = 2**，经检查迭代器提供了全面的正确性检查处于调试模式，这可供使用断言。 有关详细信息，请参阅[Checked Iterators](../standard-library/checked-iterators.md)并[\_迭代器\_调试\_级别](../standard-library/iterator-debug-level.md)。
+经过检查的迭代器强制实施容器边界。 默认情况下，当检查的迭代器超出范围时，它将生成异常并终止程序的执行。 检查迭代器提供了其他级别的响应取决于分配给预处理器的值定义，如 **\_SECURE\_SCL\_引发**和 **\_迭代器\_调试\_级别**。 例如，在 **\_迭代器\_调试\_LEVEL = 2** ，经检查迭代器提供了全面的正确性检查处于调试模式，这可供使用断言。 有关详细信息，请参阅[Checked Iterators](../standard-library/checked-iterators.md)并[\_迭代器\_调试\_级别](../standard-library/iterator-debug-level.md)。
 
 ## <a name="code-analysis-for-managed-code"></a>托管代码的代码分析
 
@@ -91,7 +91,7 @@ AppVerifier 可监视应用程序使用操作系统的方式。 在应用程序�
 
 ## <a name="guidance-for-speculative-execution-side-channels"></a>推理执行端通道的指南
 
-有关如何识别和缓解针对 c + + 软件中的推理执行端通道硬件漏洞的信息，请参阅[推理执行端通道的 c + + 开发人员指南](developer-guidance-speculative-execution.md)。
+了解如何识别和缓解推理执行端通道硬件中的漏洞针对C++软件，请参阅[C++推理执行端通道的开发人员指南](developer-guidance-speculative-execution.md)。
 
 ## <a name="see-also"></a>请参阅
 

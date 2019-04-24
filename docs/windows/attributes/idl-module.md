@@ -1,5 +1,5 @@
 ---
-title: idl_module （c + + COM 属性）
+title: idl_module (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.idl_module
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - idl_module attribute
 ms.assetid: 3578b337-e38a-4334-b747-15404c02dbc0
 ms.openlocfilehash: 80e4909a61b5b53ecde19471f2c838dd4c425874
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59034973"
 ---
 # <a name="idlmodule"></a>idl_module
@@ -29,7 +29,7 @@ function declaration
 *name*<br/>
 用户定义的名称，会在.idl 文件中显示的代码块。
 
-*dll 名称*<br/>
+*dllname*<br/>
 （可选）包含导出的.dll 文件。
 
 *uuid*<br/>
@@ -44,7 +44,7 @@ function declaration
 *helpcontext*<br/>
 （可选）此类型库的帮助 ID。
 
-*隐藏*<br/>
+*hidden*<br/>
 （可选）一个参数，阻止显示库。 更多详细信息，请参阅 [隐藏](/windows/desktop/Midl/hidden) MIDL 特性。
 
 *restricted*<br/>
@@ -55,7 +55,7 @@ function declaration
 
 ## <a name="remarks"></a>备注
 
-**Idl_module** c + + 属性可以在.dll 文件，这允许您从一个.dll 文件导入指定的入口点。
+**Idl_module** C++属性允许您在.dll 文件，这允许您从一个.dll 文件导入指定的入口点。
 
 **Idl_module**属性具有类似于的功能[模块](/windows/desktop/Midl/module)MIDL 特性。
 

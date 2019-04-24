@@ -1,5 +1,5 @@
 ---
-title: 对象 （c + + COM 特性）
+title: 对象 (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.object
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - object attribute
 ms.assetid: f2d3c231-630d-4b4c-bd15-b1c30df362dd
 ms.openlocfilehash: c0f544e84e5110761dfd01e25abef4352f055ff5
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59022354"
 ---
 # <a name="object-c"></a>object (C++)
@@ -25,7 +25,7 @@ ms.locfileid: "59022354"
 
 ## <a name="remarks"></a>备注
 
-前面的接口定义中，当**对象**c + + 属性导致将接口置于.idl 文件作为自定义的接口。
+前面的接口定义中，当**对象**C++属性导致将接口置于.idl 文件作为自定义的接口。
 
 使用对象标记任何接口必须继承自`IUnknown`。 如果从任何基接口继承，则满足此条件`IUnknown`。 如果没有基接口继承自`IUnknown`，编译器将导致使用标记的接口**对象**为派生`IUnknown`。
 
@@ -52,5 +52,5 @@ ms.locfileid: "59022354"
 [接口特性](interface-attributes.md)<br/>
 [dual](dual.md)<br/>
 [dispinterface](dispinterface.md)<br/>
-[自定义](custom-cpp.md)<br/>
+[custom](custom-cpp.md)<br/>
 [__interface](../../cpp/interface.md)
