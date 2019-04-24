@@ -10,7 +10,7 @@ helpviewer_keywords:
 ms.assetid: 86acaccf-cdb4-4517-bd58-553618e3ec42
 ms.openlocfilehash: bc449d0bbf222391868dc7586e0245fd6e8cd2ac
 ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/18/2019
 ms.locfileid: "58769857"
@@ -54,7 +54,7 @@ ms.locfileid: "58769857"
 
 ## <a name="checked-iterators"></a>Checked Iterators
 
-经过检查的迭代器强制实施容器边界。 默认情况下，当检查的迭代器超出范围时，它将生成异常并终止程序的执行。 检查迭代器提供了其他级别的响应取决于分配给预处理器的值定义，如 **\_SECURE\_SCL\_引发**和 **\_迭代器\_调试\_级别**。 例如，在**\_迭代器\_调试\_LEVEL = 2**，经检查迭代器提供了全面的正确性检查处于调试模式，这可供使用断言。 有关详细信息，请参阅[Checked Iterators](../standard-library/checked-iterators.md)并[\_迭代器\_调试\_级别](../standard-library/iterator-debug-level.md)。
+经过检查的迭代器强制实施容器边界。 默认情况下，当检查的迭代器超出范围时，它将生成异常并终止程序的执行。 检查迭代器提供了其他级别的响应取决于分配给预处理器的值定义，如 **\_SECURE\_SCL\_引发**和 **\_迭代器\_调试\_级别**。 例如，在 **\_迭代器\_调试\_LEVEL = 2** ，经检查迭代器提供了全面的正确性检查处于调试模式，这可供使用断言。 有关详细信息，请参阅[Checked Iterators](../standard-library/checked-iterators.md)并[\_迭代器\_调试\_级别](../standard-library/iterator-debug-level.md)。
 
 ## <a name="code-analysis-for-managed-code"></a>托管代码的代码分析
 
