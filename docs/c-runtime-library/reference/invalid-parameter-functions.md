@@ -20,11 +20,11 @@ f1_keywords:
 - _invoke_watson
 ms.assetid: a4d6f1fd-ce56-4783-8719-927151a7a814
 ms.openlocfilehash: e43d5caaeebb6303d209d870c804357117812985
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50478359"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157534"
 ---
 # <a name="invalidparameter-invalidparameternoinfo-invalidparameternoinfonoreturn-invokewatson"></a>_invalid_parameter, _invalid_parameter_noinfo, _invalid_parameter_noinfo_noreturn, _invoke_watson
 
@@ -58,7 +58,7 @@ _invoke_watson(
 
 ## <a name="parameters"></a>参数
 
-*表达式*<br/>
+*expression*<br/>
 一个表示源代码参数表达式无效的字符串。
 
 *function_name*<br/>
@@ -70,7 +70,7 @@ _invoke_watson(
 *line_number*<br/>
 在其中调用处理程序的源代码中的行号。
 
-*保留*<br/>
+*reserved*<br/>
 未使用。
 
 ## <a name="return-value"></a>返回值
@@ -91,7 +91,7 @@ C 运行时库函数传递非有效参数时，库函数会调用一个*无效�
 
 |函数|必需的标头|
 |--------------|------------------|
-|**_invalid_parameter**， **_invalid_parameter_noinfo**， **_invalid_parameter_noinfo_noreturn**， **_invoke_watson**|\<corecrt.h 1>|
+|**_invalid_parameter**, **_invalid_parameter_noinfo**, **_invalid_parameter_noinfo_noreturn**, **_invoke_watson**|\<corecrt.h 1>|
 
 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 

@@ -15,11 +15,11 @@ helpviewer_keywords:
 - std::make_error_condition [C++]
 - std::swap [C++]
 ms.openlocfilehash: 56ae0da7e86e092cee46d24d1a2a27d9d54709e4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50487706"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62159504"
 ---
 # <a name="ltfuturegt-functions"></a>&lt;future&gt; 函数
 
@@ -44,7 +44,7 @@ future<typename result_of<Fn(ArgTypes...)>::type>
 
 ### <a name="parameters"></a>参数
 
-*策略*<br/>
+*policy*<br/>
 一个 [launch](../standard-library/future-enums.md#launch) 值。
 
 ### <a name="remarks"></a>备注
@@ -63,7 +63,7 @@ future<typename result_of<Fn(ArgTypes...)>::type>
 
 除非 `decay<Fn>::type` 是一种不同于 launch 的类型，否则第二个函数将不参与重载解析。
 
-C + + 标准规定，是否策略为 launch::async，该函数创建一个新线程。 但是 Microsoft 实现当前不符合要求。 它从 Windows 线程池，这在某些情况下可能会提供回收的线程而不是一个新获取其线程。 这意味着`launch::async`策略实际上作为`launch::async|launch::deferred`。  基于线程池的实现的另一个含义是不能保证线程完成时，将销毁线程本地变量。 如果线程是回收和提供的新调用`async`，仍存在旧的变量。 因此我们建议不使用线程本地变量`async`。
+C++标准声明策略是否 launch::async，该函数创建一个新线程。 但是 Microsoft 实现当前不符合要求。 它从 Windows 线程池，这在某些情况下可能会提供回收的线程而不是一个新获取其线程。 这意味着`launch::async`策略实际上作为`launch::async|launch::deferred`。  基于线程池的实现的另一个含义是不能保证线程完成时，将销毁线程本地变量。 如果线程是回收和提供的新调用`async`，仍存在旧的变量。 因此我们建议不使用线程本地变量`async`。
 
 如果*策略*是`launch::deferred`，则函数会标记为包含其关联异步状态*延迟函数*，并返回。 对任何等待关联异步状态生效的非计时函数的第一次调用都将通过计算 `INVOKE(dfn, dargs..., Ty)` 来调用延迟函数。
 
@@ -92,7 +92,7 @@ inline error_code make_error_code(future_errc Errno) noexcept;
 
 ### <a name="parameters"></a>参数
 
-*errno*<br/>
+*Errno*<br/>
 一个标识已报告错误的 [future_errc](../standard-library/future-enums.md#future_errc) 值。
 
 ### <a name="return-value"></a>返回值
@@ -109,7 +109,7 @@ inline error_condition make_error_condition(future_errc Errno) noexcept;
 
 ### <a name="parameters"></a>参数
 
-*errno*<br/>
+*Errno*<br/>
 一个标识已报告错误的 [future_errc](../standard-library/future-enums.md#future_errc) 值。
 
 ### <a name="return-value"></a>返回值

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - VARIANT object [C++], COM encapsulation
 ms.assetid: 6a3cbd4e-0ae8-425e-b4cf-ca0df894c93f
 ms.openlocfilehash: 69976cab9caed653a8278f80821569b613f690eb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50502734"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62165940"
 ---
 # <a name="variantt-class"></a>_variant_t 类
 
@@ -43,8 +43,8 @@ ms.locfileid: "50502734"
 
 |||
 |-|-|
-|[运算符 =](../cpp/variant-t-operator-equal.md)|将新值分配到现有 **_variant_t**对象。|
-|[运算符 = =、 ！ =](../cpp/variant-t-relational-operators.md)|比较两个 **_variant_t**对象是否相等。|
+|[Operator =](../cpp/variant-t-operator-equal.md)|将新值分配到现有 **_variant_t**对象。|
+|[operator ==, !=](../cpp/variant-t-relational-operators.md)|比较两个 **_variant_t**对象是否相等。|
 |[提取器](../cpp/variant-t-extractors.md)|从封装中提取数据`VARIANT`对象。|
 
 **结束 Microsoft 专用**

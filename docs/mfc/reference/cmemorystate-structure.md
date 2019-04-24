@@ -9,11 +9,11 @@ helpviewer_keywords:
 - detecting memory leaks [MFC]
 ms.assetid: 229d9de7-a6f3-4cc6-805b-5a9d9b1bfe1d
 ms.openlocfilehash: a110e1345cb970c117de125bd8105e1bc86eaf94
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57288124"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62163749"
 ---
 # <a name="cmemorystate-structure"></a>CMemoryState 结构
 
@@ -52,9 +52,9 @@ struct CMemoryState
 
 - 使用 Windows API 内存管理函数， `LocalAlloc` /  `LocalFree`并`GlobalAlloc` /  `GlobalFree`。
 
-- 使用 c + +**新**并**删除**运算符。
+- 使用C++**新**并**删除**运算符。
 
-`CMemoryState`诊断仅帮助检测内存泄漏时使用的内存分配导致**新**运算符会释放使用**删除**。 内存管理函数中的其他两个组适用于非 c + + 程序，并将它们与混合**新**并**删除**不建议在同一个程序。 提供附加的宏，DEBUG_NEW，替换**新**运算符时所需文件和行号跟踪内存分配。 每当你通常会使用时使用 DEBUG_NEW**新**运算符。
+`CMemoryState`诊断仅帮助检测内存泄漏时使用的内存分配导致**新**运算符会释放使用**删除**。 内存管理函数中的其他两个组都为非C++程序，并将它们与混合**新**并**删除**不建议在同一个程序。 提供附加的宏，DEBUG_NEW，替换**新**运算符时所需文件和行号跟踪内存分配。 每当你通常会使用时使用 DEBUG_NEW**新**运算符。
 
 与其他诊断`CMemoryState`诊断程序仅在应用程序的调试版本中可用。 调试版本必须具有定义 _DEBUG 常量。
 
