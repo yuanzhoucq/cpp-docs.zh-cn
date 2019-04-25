@@ -6,11 +6,11 @@ helpviewer_keywords:
 - operators [C++], preprocessor
 ms.assetid: 884126d1-0ce2-48b6-9e06-8a2d7c4a9656
 ms.openlocfilehash: 0b105cc2039e2aa50c11b796e5474a97d8c5c702
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59035684"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62179888"
 ---
 # <a name="preprocessor-operators"></a>预处理器运算符
 四个预处理器特定运算符的上下文中使用`#define`指令 （请参阅以下有关每个摘要列表）。 字符串化、 charizing，和标记粘贴运算符接下来的三各节所述。 有关的信息`defined`运算符，请参阅[#if、 #elif，#else 和 #endif 指令](../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md)。

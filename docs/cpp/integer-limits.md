@@ -8,11 +8,11 @@ helpviewer_keywords:
 - integer limits
 ms.assetid: 6922bdbf-0f49-443b-bc03-ee182e4cbd57
 ms.openlocfilehash: 0d14f6246dd2ec71c4e0b2286bb1f2b3325085b5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50522962"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62183361"
 ---
 # <a name="integer-limits"></a>整数限制
 
@@ -41,7 +41,7 @@ ms.locfileid: "50522962"
 |LONG_MAX|**long** 类型的变量的最大值。|2147483647|
 |ULONG_MAX|unsigned long 类型的变量的最大值。|4294967295 (0xffffffff)|
 |LLONG_MIN|最小值的变量的类型**长时间长**|-9223372036854775808|
-|与 LLONG_MAX|最大值类型的变量的**长时间长**|9223372036854775807|
+|LLONG_MAX|最大值类型的变量的**长时间长**|9223372036854775807|
 |ULLONG_MAX|最大值类型的变量的**无符号长时间长**|18446744073709551615 (0xffffffffffffffff)|
 
 如果值超出了最大整数表示形式，则 Microsoft 编译器会产生错误。

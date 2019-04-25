@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Platform::Boolean Struct
 ms.assetid: 8518a1db-7139-4187-9c7a-1ae3943373f2
 ms.openlocfilehash: c97ce0171fcf8f28254ce3f91b91f4d1711ad813
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57748406"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62161688"
 ---
 # <a name="platformboolean-value-class"></a>Platform::Boolean 值类
 
@@ -34,10 +34,10 @@ Boolean 具有从 [Platform::Object Class](../cppcx/platform-object-class.md)派
 
 **支持的最低服务器：** Windows Server 2012
 
-**命名空间：** 平台
+**命名空间：** Platform
 
 **元数据：** platform.winmd
 
 ## <a name="see-also"></a>请参阅
 
-[平台命名空间](../cppcx/platform-namespace-c-cx.md)
+[Platform 命名空间](../cppcx/platform-namespace-c-cx.md)

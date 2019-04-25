@@ -269,11 +269,11 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::int_4::yxz
 ms.assetid: 01768c28-23a8-4965-8267-96834864f4eb
 ms.openlocfilehash: 7bcdd005ab5f530e08fc6e5326404d19f85faf4b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57273421"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62180202"
 ---
 # <a name="int4-class"></a>int_4 类
 
@@ -462,7 +462,7 @@ class int_4;
 
 ### <a name="public-constants"></a>公共常量
 
-|name|描述|
+|名称|描述|
 |----------|-----------------|
 |[大小常量](#int_4__size)||
 

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - _com_error method [C++]
 ms.assetid: 0a69e46c-caab-49ef-b091-eee401253ce6
 ms.openlocfilehash: 8856289605cce430fdab36d6e3e8b743190e02ea
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631733"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62155119"
 ---
 # <a name="comerrorcomerror"></a>_com_error::_com_error
 
@@ -51,7 +51,7 @@ throw _com_error(hr, perrinfo);
 _com_error err(hr, perrinfo, true);
 ```
 
-*的*<br/>
+*that*<br/>
 将现有 **_com_error**对象。
 
 ## <a name="remarks"></a>备注

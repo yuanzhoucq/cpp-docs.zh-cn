@@ -3,11 +3,11 @@ title: 对齐方式（C++ 声明）
 ms.date: 11/04/2016
 ms.assetid: a986d510-ccb8-41f8-b905-433df9183485
 ms.openlocfilehash: 0709ad414af3f167a64d9c89c342690015190287
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51522865"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62155389"
 ---
 # <a name="alignment-c-declarations"></a>对齐方式（C++ 声明）
 

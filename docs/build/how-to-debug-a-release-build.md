@@ -6,11 +6,11 @@ helpviewer_keywords:
 - release builds, debugging
 ms.assetid: d333e4d1-4e6c-4384-84a9-cb549702da25
 ms.openlocfilehash: 6d93fac4e980085c322acb55e6f8758e6cea0a00
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57825180"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62188954"
 ---
 # <a name="how-to-debug-a-release-build"></a>如何：调试发行版本
 
@@ -18,9 +18,9 @@ ms.locfileid: "57825180"
 
 ### <a name="to-debug-a-release-build"></a>若要调试发行版本
 
-1. 打开**属性页**项目对话框。 有关详细信息，请参阅[Visual Studio 中的设置 c + + 编译器和生成属性](working-with-project-properties.md)。
+1. 打开**属性页**项目对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](working-with-project-properties.md)。
 
-1. 单击**C/c + +** 节点。 设置**调试信息格式**到[C7 兼容 (/ Z7)](reference/z7-zi-zi-debug-information-format.md)或**程序数据库 (/Zi)**。
+1. 单击**C /C++** 节点。 设置**调试信息格式**到[C7 兼容 (/ Z7)](reference/z7-zi-zi-debug-information-format.md)或**程序数据库 (/Zi)**。
 
 1. 展开**链接器**然后单击**常规**节点。 设置**启用增量链接**到[否 (/ /INCREMENTAL: NO)](reference/incremental-link-incrementally.md)。
 

@@ -23,11 +23,11 @@ helpviewer_keywords:
 - memory allocation
 ms.assetid: 144fcee2-be34-4a03-bb7e-ed6d4b99eea0
 ms.openlocfilehash: e6a007fb6f089ebf1c9f5fc9ce59cbcbf0b13888
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50520362"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157173"
 ---
 # <a name="malloc"></a>malloc
 
@@ -48,7 +48,7 @@ void *malloc(
 
 ## <a name="return-value"></a>返回值
 
-**malloc**到分配的空间，将返回 void 的指针或**NULL**如果没有足够的内存可用。 若要返回一个指向类型而不**void**，使用类型强制转换返回值上。 返回值指向的存储空间确保可以正好与对齐要求小于或等于基本对齐要求的任意对象类型的存储对齐。 (在 Visual c + +，基本对齐是所需的对齐方式**double**，或 8 个字节。 在针对 64 位平台的代码中，是 16 个字节。）使用[_aligned_malloc](aligned-malloc.md)若要为具有更大对齐要求的对象分配存储空间 — 例如，SSE 类型[__m128](../../cpp/m128.md)并 **__m256**，和的类型使用声明`__declspec(align( n ))`其中**n**大于 8。 如果*大小*为 0， **malloc**分配零长度的项在堆中并向该项返回有效的指针。 始终检查从返回**malloc**，即使请求的内存量很小。
+**malloc**到分配的空间，将返回 void 的指针或**NULL**如果没有足够的内存可用。 若要返回一个指向类型而不**void**，使用类型强制转换返回值上。 返回值指向的存储空间确保可以正好与对齐要求小于或等于基本对齐要求的任意对象类型的存储对齐。 (在视觉对象C++，基本对齐是所需的对齐方式**双精度**，或 8 个字节。 在针对 64 位平台的代码中，是 16 个字节。）使用[_aligned_malloc](aligned-malloc.md)若要为具有更大对齐要求的对象分配存储空间 — 例如，SSE 类型[__m128](../../cpp/m128.md)并 **__m256**，和的类型使用声明`__declspec(align( n ))`其中**n**大于 8。 如果*大小*为 0， **malloc**分配零长度的项在堆中并向该项返回有效的指针。 始终检查从返回**malloc**，即使请求的内存量很小。
 
 ## <a name="remarks"></a>备注
 

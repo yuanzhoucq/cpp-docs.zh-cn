@@ -31,11 +31,11 @@ helpviewer_keywords:
 - lgammaf function
 ms.assetid: 6e326c58-7077-481a-a329-c82ae56ae9e6
 ms.openlocfilehash: 43ce1599ab9161b9fadf5643ddd2ec739ab2d8b8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50533479"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157268"
 ---
 # <a name="lgamma-lgammaf-lgammal"></a>lgamma、lgammaf、lgammal
 
@@ -67,7 +67,7 @@ long double lgamma( long double x ); //C++ only
 |-----------|------------|
 |*x* = NaN|NaN|
 |*x* = ±0|+INFINITY|
-|*x*= 负整数|+INFINITY|
+|*x*= negative integer|+INFINITY|
 |±INFINITY|+INFINITY|
 |极点错误|+ HUGE_VAL、+ HUGE_VALF，或 + HUGE_VALL|
 |溢出范围错误|±HUGE_VAL、 ±HUGE_VALF 或 ±HUGE_VALL|
@@ -76,7 +76,7 @@ long double lgamma( long double x ); //C++ only
 
 ## <a name="remarks"></a>备注
 
-由于 c + + 允许重载，可以调用的重载**lgamma**采用并返回**float**并**长** **double**类型。 在 C 程序中， **lgamma**始终采用并返回**double**。
+因为C++允许重载，可以调用的重载**lgamma**采用并返回**float**并**长** **double**类型。 在 C 程序中， **lgamma**始终采用并返回**double**。
 
 如果 x 是有理数，则此函数返回 (x-1) 的阶乘的对数。
 

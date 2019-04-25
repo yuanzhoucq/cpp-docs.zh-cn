@@ -73,11 +73,11 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::double_3::get_yxz
 ms.assetid: baeb3ff0-2862-4c81-857e-b1a4c085be25
 ms.openlocfilehash: 6423220d8203b0d0fba73a4888f967e159db26de
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57326733"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62180346"
 ---
 # <a name="double3-class"></a>double_3 类
 
@@ -159,7 +159,7 @@ class double_3;
 
 ### <a name="public-constants"></a>公共常量
 
-|name|描述|
+|名称|描述|
 |----------|-----------------|
 |[大小常量](#double_3__size)||
 

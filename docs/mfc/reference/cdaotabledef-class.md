@@ -73,11 +73,11 @@ helpviewer_keywords:
 - CDaoTableDef [MFC], m_pDatabase
 ms.assetid: 7c5d2254-8475-43c4-8a6c-2d32ead194c9
 ms.openlocfilehash: 485fe3533916e5e59bc87084f58acfb37368ac32
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270223"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62151210"
 ---
 # <a name="cdaotabledef-class"></a>CDaoTableDef 类
 
@@ -876,7 +876,7 @@ void SetConnect(LPCTSTR lpszConnect);
 |HTML 导入|"导入 HTML;"|" `drive`:\\\ *路径*\ *文件名*"|
 |HTML 导出|"HTML 导出;"|" `drive`:\\\ *路径*"|
 |Text|"Text";|"驱动器：\\\path"|
-|ODBC|"ODBC;数据库 = `database`;UID =*用户*;PWD =*密码*;DSN = *datasourcename;* LOGINTIMEOUT =*秒;*"（这可能不是所有服务器的完整连接字符串; 它只是一个示例。 它是非常重要，不以参数之间有空格。）|无|
+|ODBC|"ODBC;数据库 = `database`;UID =*用户*;PWD =*密码*;DSN = *datasourcename;* LOGINTIMEOUT =*秒;*"（这可能不是所有服务器的完整连接字符串; 它只是一个示例。 它是非常重要，不以参数之间有空格。）|None|
 |Exchange|"被 Exchange;<br /><br /> MAPILEVEL = *folderpath*;<br /><br /> [TABLETYPE={ 0 &#124; 1 };]<br /><br /> [PROFILE= *profile*;]<br /><br /> [PWD= *password*;]<br /><br /> [DATABASE= `database`;]"|*"驱动器*:\\\ *路径*\\\ *filename*。MDB"|
 
 > [!NOTE]

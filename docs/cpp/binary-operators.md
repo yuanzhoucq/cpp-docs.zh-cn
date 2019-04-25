@@ -7,11 +7,11 @@ helpviewer_keywords:
 - binary operators [C++]
 ms.assetid: c0e7fbff-bc87-4708-8333-504ac09ee83e
 ms.openlocfilehash: 700d8fd784862c3e9f81fcde839063ff0a4696bb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50602395"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62176650"
 ---
 # <a name="binary-operators"></a>二元运算符
 
@@ -19,7 +19,7 @@ ms.locfileid: "50602395"
 
 ## <a name="redefinable-binary-operators"></a>可重新定义的二进制运算符
 
-|运算符|name|
+|运算符|名称|
 |--------------|----------|
 |**，**|逗号|
 |**\!=**|不相等|
@@ -29,7 +29,7 @@ ms.locfileid: "50602395"
 |**&&**|逻辑“与”|
 |**&=**|按位“与”/赋值|
 |**&#42;**|乘法|
-|**&#42;=**|乘法/赋值|
+|&#42;=|乘法/赋值|
 |**+**|添加|
 |**+=**|加法/赋值|
 |**-**|减法|
@@ -51,20 +51,20 @@ ms.locfileid: "50602395"
 |**^**|异或|
 |**^=**|异或/赋值|
 |**&#124;**|按位“与或”|
-|**&#124;=**|按位“与或”/赋值|
+|&#124;=|按位“与或”/赋值|
 |**&#124;&#124;**|逻辑“或”|
 
 若要将二元运算符函数声明为非静态成员，您必须用以下形式声明它：
 
-> *ret 类型***运算符** *op* **(** *arg* **)**
+> *ret-type* **operator** *op* **(** *arg* **)**
 
 其中*ret 类型*是返回类型*op*是上表中列出的运算符之一并*arg*是任何类型的自变量。
 
 若要将二元运算符函数声明为全局函数，您必须用以下形式声明它：
 
-> *ret 类型***运算符** *op* **(** _arg1_**，** _arg2_**)**
+> *ret-type* **operator** *op* **(** _arg1_**,** _arg2_ **)**
 
-其中*ret 类型*并*op*如上所述用于成员运算符函数和*arg1*并*arg2*自变量。 至少有一个自变量必须是类类型。
+其中*ret 类型*并*op*如上所述用于成员运算符函数和*arg1*并*arg2*自变量。 至少有一个参数必须是类类型。
 
 > [!NOTE]
 > 对二元运算符的返回类型没有限制；但是，大多数用户定义的二元运算符将返回类类型或对类类型的引用。
