@@ -8,11 +8,11 @@ helpviewer_keywords:
 - __asm keyword [C++], in functions
 ms.assetid: b5df8a04-fdc7-4622-8c9e-e4b618927497
 ms.openlocfilehash: 7848a8f071f50f8d809a999a96a9c0f8193c480e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445183"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62166849"
 ---
 # <a name="writing-functions-with-inline-assembly"></a>使用内联程序集编写函数
 
@@ -42,7 +42,7 @@ _TEXT   ENDS
         END
 ```
 
-由于此函数是为单独汇编程序编写的，因此它需要单独的源文件、程序集和链接步骤。 C 和 C++ 函数自变量通常在堆栈上传递，因此该版本的 `power2` 函数通过其在堆栈上的位置访问其自变量。 (请注意，**模型**指令，MASM 和一些其他汇编程序中还可以按名称访问堆栈参数和局部堆栈变量。)
+由于此函数是为单独汇编程序编写的，因此它需要单独的源文件、程序集和链接步骤。 C 和 C++ 函数参数通常在堆栈上传递，因此该版本的 `power2` 函数通过其在堆栈上的位置访问其参数。 (请注意，**模型**指令，MASM 和一些其他汇编程序中还可以按名称访问堆栈参数和局部堆栈变量。)
 
 ## <a name="example"></a>示例
 
@@ -74,7 +74,7 @@ int power2( int num, int power )
 }
 ```
 
-`power2` 函数的内联版本按名称引用其参数并显示在程序的其余部分所在的同一源文件中。 此外，该版本需要的程序集指令更少。
+`power2` 函数的内联版本按名称引用其自变量并显示在程序的其余部分所在的同一源文件中。 此外，该版本需要的程序集指令更少。
 
 由于 `power2` 的内联版本不执行 C `return` 语句，因此它将生成一个无害警告（如果您在警告等级 2 或更高等级进行编译）。 函数将返回一个值，但编译器无法告知缺少 `return` 语句。 可以使用[#pragma 警告](../../preprocessor/warning.md)禁止生成此警告。
 

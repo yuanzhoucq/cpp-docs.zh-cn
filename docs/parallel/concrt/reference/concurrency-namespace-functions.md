@@ -34,11 +34,11 @@ f1_keywords:
 - ppltasks/concurrency::when_any
 ms.assetid: 520a6dff-9324-4df2-990d-302e3050af6a
 ms.openlocfilehash: 9cb726ccc475d6d08e036229d0d06089e3fac31c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57278205"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62163736"
 ---
 # <a name="concurrency-namespace-functions"></a>并发命名空间函数
 
@@ -171,12 +171,11 @@ lambda 的返回类型确定该构造是一个行为还是一项操作。
 
 lambda 可能还返回 `task<TResult>`（在自身中封装异步工作或是表示异步工作的任务链的延续）。 在此示例中，由于任务是异步执行的，所以将以内联方式执行 lambda，并且将解包 lambda 的返回类型以生成 `create_async` 返回的异步构造。 这意味着，lambda 返回 task\<void > 将导致的操作，并返回一个任务的 lambda 创建\<TResult > 将导致创建 TResult 操作。
 
-lambda 可采用零个、一个或两个自变量。 有效的参数是 `progress_reporter<TProgress>` 和 `cancellation_token`（此顺序为同时使用两个参数的顺序）。 无自变量的 lambda 将导致创建一个缺少进度报告功能的异步构造。 Lambda 采用 progress_reporter\<TProgress > 将导致`create_async`要返回的异步构造将报告 TProgress 类型的进度每次`report`调用 progress_reporter 对象的方法。 采用 cancellation_token 的 lambda 可以使用该标记来检查取消情况，或将该标记传递给它创建的任务，以便取消异步构造可导致取消这些任务。
+lambda 可采用零个、一个或两个自变量。 有效的自变量是 `progress_reporter<TProgress>` 和 `cancellation_token`（此顺序为同时使用两个自变量的顺序）。 无自变量的 lambda 将导致创建一个缺少进度报告功能的异步构造。 Lambda 采用 progress_reporter\<TProgress > 将导致`create_async`要返回的异步构造将报告 TProgress 类型的进度每次`report`调用 progress_reporter 对象的方法。 采用 cancellation_token 的 lambda 可以使用该标记来检查取消情况，或将该标记传递给它创建的任务，以便取消异步构造可导致取消这些任务。
 
-如果 lambda 或函数对象的主体返回的结果 (并且不是 task\<TResult >)，则将为其隐式创建的任务运行时上下文中的 MTA 在过程内以异步方式执行。 
-  `IAsyncInfo::Cancel` 方法将导致取消隐式任务。
+如果 lambda 或函数对象的主体返回的结果 (并且不是 task\<TResult >)，则将为其隐式创建的任务运行时上下文中的 MTA 在过程内以异步方式执行。 `IAsyncInfo::Cancel` 方法将导致取消隐式任务。
 
-如果 lambda 的主体返回一个任务，则 lamba 将通过声明 lambda 采用类型为 `cancellation_token` 的参数，以内联方式执行，您可以通过在创建任务时将此标记传入，从而触发对在 lambda 中创建的任何任务的取消。 您还可对此标记使用 `register_callback` 方法，以使运行时在您对产生的异步操作或行为调用 `IAsyncInfo::Cancel` 时调用回调。
+如果 lambda 的主体返回一个任务，则 lamba 将通过声明 lambda 采用类型为 `cancellation_token` 的自变量，以内联方式执行，你可以通过在创建任务时将此标记传入，从而触发对在 lambda 中创建的任何任务的取消。 您还可对此标记使用 `register_callback` 方法，以使运行时在您对产生的异步操作或行为调用 `IAsyncInfo::Cancel` 时调用回调。
 
 此函数是仅适用于 Windows 运行时应用。
 
@@ -665,7 +664,7 @@ inline void parallel_buffered_sort(
 输入范围的迭代器类型。
 
 *_Allocator*<br/>
-C + + 标准库兼容的内存分配器的类型。
+类型C++标准库兼容的内存分配器。
 
 *_Function*<br/>
 二进制比较器的类型。
@@ -677,7 +676,7 @@ C + + 标准库兼容的内存分配器的类型。
 一种随机访问迭代器，用于定址要排序的范围中最后元素之后下一个元素的位置。
 
 *_Alloc*<br/>
-C + + 标准库兼容的内存分配器的实例。
+实例C++标准库兼容的内存分配器。
 
 *_Func*<br/>
 用户定义的谓词函数对象，定义排序中连续元素要满足的比较条件。 二元谓词采用两个参数并在条件满足时返回 **true** ，不满足时返回 **false**。 该比较器函数必须对序列中的元素对进行严格弱排序。
@@ -691,9 +690,9 @@ C + + 标准库兼容的内存分配器的实例。
 
 如果不提供二进制比较运算符`std::less`用作默认情况下，需要提供操作员的元素类型`operator<()`。
 
-如果未提供的分配器类型或实例，c + + 标准库内存分配器`std::allocator<T>`用于分配的缓冲区。
+如果未提供的分配器类型或实例，C++标准库内存分配器`std::allocator<T>`用于分配的缓冲区。
 
-算法将输入范围分为两个区块，然后将每个区块分成两个以并行方式执行的子区块。 可选参数 `_Chunk_size` 可用于向算法指示它应按顺序处理区块的大小 <  `_Chunk_size`。
+算法将输入范围分为两个区块，然后将每个区块分成两个以并行方式执行的子区块。 可选参数`_Chunk_size`可用于向算法指示它应处理区块的大小 <`_Chunk_size`按顺序。
 
 ##  <a name="parallel_for"></a>  parallel_for
 
@@ -1074,7 +1073,7 @@ inline void parallel_radixsort(
 输入范围的迭代器类型。
 
 *_Allocator*<br/>
-C + + 标准库兼容的内存分配器的类型。
+类型C++标准库兼容的内存分配器。
 
 *_Function*<br/>
 投影函数的类型。
@@ -1086,7 +1085,7 @@ C + + 标准库兼容的内存分配器的类型。
 一种随机访问迭代器，用于定址要排序的范围中最后元素之后下一个元素的位置。
 
 *_Alloc*<br/>
-C + + 标准库兼容的内存分配器的实例。
+实例C++标准库兼容的内存分配器。
 
 *_Proj_func*<br/>
 将元素转换为整数值用户定义投影函数对象。
@@ -1100,9 +1099,9 @@ C + + 标准库兼容的内存分配器的实例。
 
 如果未提供的投影函数，只需返回的元素的默认投影函数用于整数类型。 该函数将无法编译如果元素不是整数类型中不存在的投影函数。
 
-如果未提供的分配器类型或实例，c + + 标准库内存分配器`std::allocator<T>`用于分配的缓冲区。
+如果未提供的分配器类型或实例，C++标准库内存分配器`std::allocator<T>`用于分配的缓冲区。
 
-算法将输入范围分为两个区块，然后将每个区块分成两个以并行方式执行的子区块。 可选参数 `_Chunk_size` 可用于向算法指示它应按顺序处理区块的大小 <  `_Chunk_size`。
+算法将输入范围分为两个区块，然后将每个区块分成两个以并行方式执行的子区块。 可选参数`_Chunk_size`可用于向算法指示它应处理区块的大小 <`_Chunk_size`按顺序。
 
 ##  <a name="parallel_reduce"></a>  parallel_reduce
 
@@ -1221,7 +1220,7 @@ inline void parallel_sort(
 
 第二个重载使用提供的应具有签名 `bool _Func(T, T)`（其中 `T` 是输入范围中元素的类型）的二进制比较器。
 
-算法将输入范围分为两个区块，然后将每个区块分成两个以并行方式执行的子区块。 可选参数 `_Chunk_size` 可用于向算法指示它应按顺序处理区块的大小 <  `_Chunk_size`。
+算法将输入范围分为两个区块，然后将每个区块分成两个以并行方式执行的子区块。 可选参数`_Chunk_size`可用于向算法指示它应处理区块的大小 <`_Chunk_size`按顺序。
 
 ##  <a name="parallel_transform"></a>  parallel_transform
 
@@ -1496,8 +1495,7 @@ void __cdecl set_task_execution_resources(
 数组中参数 `GROUP_AFFINITY` 指定的 `_PGroupAffinity` 项的数目。
 
 *_PGroupAffinity*<br/>
-
-  `GROUP_AFFINITY` 项的数组。
+`GROUP_AFFINITY` 项的数组。
 
 ### <a name="remarks"></a>备注
 

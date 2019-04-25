@@ -1,5 +1,5 @@
 ---
-title: 自变量传递和命名约定
+title: 参数传递和命名约定
 ms.date: 12/17/2018
 helpviewer_keywords:
 - argument passing [C++], conventions
@@ -14,13 +14,13 @@ helpviewer_keywords:
 - conventions [C++], argument names
 ms.assetid: de468979-eab8-4158-90c5-c198932f93b9
 ms.openlocfilehash: ca09d31d3d8d50ca94543c5e02262edd7b2deefc
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627236"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62184395"
 ---
-# <a name="argument-passing-and-naming-conventions"></a>自变量传递和命名约定
+# <a name="argument-passing-and-naming-conventions"></a>参数传递和命名约定
 
 **Microsoft 专用**
 

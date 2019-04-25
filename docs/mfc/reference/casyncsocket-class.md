@@ -75,11 +75,11 @@ helpviewer_keywords:
 - CAsyncSocket [MFC], m_hSocket
 ms.assetid: cca4d5a1-aa0f-48bd-843e-ef0e2d7fc00b
 ms.openlocfilehash: ef486e653eaf78914ea25663e0c1ab744ab30cd4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57260005"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62164900"
 ---
 # <a name="casyncsocket-class"></a>CAsyncSocket 类
 
@@ -1161,7 +1161,7 @@ virtual int Receive(
 长度*lpBuf*以字节为单位。
 
 *nFlags*<br/>
-指定的方式进行调用。 此函数的语义由套接字选项和*nFlags*参数。 通过将以下值之一结合使用 c + + 构造后者**或**运算符：
+指定的方式进行调用。 此函数的语义由套接字选项和*nFlags*参数。 后一种构造通过组合使用以下值中的任何C++**或者**运算符：
 
 - MSG_PEEK 查看传入数据。 将数据复制到缓冲区，但不是会从输入队列中。
 
@@ -1252,7 +1252,7 @@ int ReceiveFrom(
 中的源地址的长度的指针*lpSockAddr*以字节为单位。
 
 *nFlags*<br/>
-指定的方式进行调用。 此函数的语义由套接字选项和*nFlags*参数。 通过将以下值之一结合使用 c + + 构造后者**或**运算符：
+指定的方式进行调用。 此函数的语义由套接字选项和*nFlags*参数。 后一种构造通过组合使用以下值中的任何C++**或者**运算符：
 
 - MSG_PEEK 查看传入数据。 将数据复制到缓冲区，但不是会从输入队列中。
 
@@ -1330,7 +1330,7 @@ int ReceiveFromEx(
 对将存储一个端口是 UINT 引用。
 
 *nFlags*<br/>
-指定的方式进行调用。 此函数的语义由套接字选项和*nFlags*参数。 通过将以下值之一结合使用 c + + 构造后者**或**运算符：
+指定的方式进行调用。 此函数的语义由套接字选项和*nFlags*参数。 后一种构造通过组合使用以下值中的任何C++**或者**运算符：
 
 - MSG_PEEK 查看传入数据。 将数据复制到缓冲区，但不是会从输入队列中。
 
@@ -1400,7 +1400,7 @@ virtual int Send(
 中的数据的长度*lpBuf*以字节为单位。
 
 *nFlags*<br/>
-指定的方式进行调用。 此函数的语义由套接字选项和*nFlags*参数。 通过将以下值之一结合使用 c + + 构造后者**或**运算符：
+指定的方式进行调用。 此函数的语义由套接字选项和*nFlags*参数。 后一种构造通过组合使用以下值中的任何C++**或者**运算符：
 
 - MSG_DONTROUTE 指定的数据不应受约束路由。 Windows 套接字供应商可以选择忽略此标志。
 
@@ -1489,7 +1489,7 @@ int SendTo(
 此对象连接的套接字的网络地址： 例如"ftp.microsoft.com，"或一个以点分隔的数字，如"128.56.22.8"的计算机的名称。
 
 *nFlags*<br/>
-指定的方式进行调用。 此函数的语义由套接字选项和*nFlags*参数。 通过将以下值之一结合使用 c + + 构造后者**或**运算符：
+指定的方式进行调用。 此函数的语义由套接字选项和*nFlags*参数。 后一种构造通过组合使用以下值中的任何C++**或者**运算符：
 
 - MSG_DONTROUTE 指定的数据不应受约束路由。 Windows 套接字供应商可以选择忽略此标志。
 
@@ -1585,7 +1585,7 @@ int SendToEx(
 此对象连接的套接字的网络地址： 例如"ftp.microsoft.com，"或一个以点分隔的数字，如"128.56.22.8"的计算机的名称。
 
 *nFlags*<br/>
-指定的方式进行调用。 此函数的语义由套接字选项和*nFlags*参数。 通过将以下值之一结合使用 c + + 构造后者**或**运算符：
+指定的方式进行调用。 此函数的语义由套接字选项和*nFlags*参数。 后一种构造通过组合使用以下值中的任何C++**或者**运算符：
 
 - MSG_DONTROUTE 指定的数据不应受约束路由。 Windows 套接字供应商可以选择忽略此标志。
 

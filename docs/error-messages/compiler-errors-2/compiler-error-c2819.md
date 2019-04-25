@@ -7,15 +7,15 @@ helpviewer_keywords:
 - C2819
 ms.assetid: fcc7762d-cb82-4bb1-a715-0d82da832edf
 ms.openlocfilehash: 17b863d24d43f0dc7afb0fc4776953dcb41929e5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50457522"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62174934"
 ---
 # <a name="compiler-error-c2819"></a>编译器错误 C2819
 
-“type”类型没有重载成员“operator ->”
+类型 type 不具有-> 重载的成员 operator
 
 您需要定义`operator->()`方法是使用此指针操作。
 
@@ -49,7 +49,7 @@ void F(D j) {
 }
 ```
 
-当使用，也会发生 C2819[的引用类型的 c + + 堆栈语义](../../dotnet/cpp-stack-semantics-for-reference-types.md)。 下面的示例生成 C2819:
+当使用，也会发生 C2819 [ C++引用类型的堆栈语义](../../dotnet/cpp-stack-semantics-for-reference-types.md)。 下面的示例生成 C2819:
 
 ```
 // C2819_b.cpp

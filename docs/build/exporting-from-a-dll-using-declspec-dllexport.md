@@ -11,19 +11,19 @@ helpviewer_keywords:
 - exporting DLLs [C++], __declspec(dllexport) keyword
 ms.assetid: a35e25e8-7263-4a04-bad4-00b284458679
 ms.openlocfilehash: 3b6b9733776f30fc8dcbfeee709b7d24e0f0187b
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57810232"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62195311"
 ---
 # <a name="exporting-from-a-dll-using-declspecdllexport"></a>使用 __declspec(dllexport) 从 DLL 导出
 
-Microsoft 引入 **__export** 16 位编译器版本的 Visual c + + 允许编译器自动生成导出名并将它们放在一个.lib 文件中。 此.lib 文件然后可就像静态.lib 那样与 DLL 链接。
+Microsoft 引入 **__export**视觉对象的 16 位编译器版本中C++以允许编译器自动生成导出名并将它们放在一个.lib 文件。 此.lib 文件然后可就像静态.lib 那样与 DLL 链接。
 
 在较新编译器版本中，您可以导出数据、 函数、 类或类成员函数从 DLL 使用 **__declspec （dllexport)** 关键字。 **__declspec （dllexport)** 将导出指令添加到对象文件，因此不需要使用.def 文件。
 
-当尝试导出修饰 c + + 函数名时，这种便利是非常明显。 由于没有对名称修饰没有标准规范，导出函数的名称可能会更改不同的编译器版本。 如果您使用 **__declspec （dllexport)**，重新编译的 DLL 和依赖.exe 文件是仅对帐户的任何命名约定更改是必需的。
+这种便利是最明显时尝试导出修饰C++函数名。 由于没有对名称修饰没有标准规范，导出函数的名称可能会更改不同的编译器版本。 如果您使用 **__declspec （dllexport)**，重新编译的 DLL 和依赖.exe 文件是仅对帐户的任何命名约定更改是必需的。
 
 许多导出指令，如序号、 NONAME 和私有，可为仅在.def 文件中，并没有方法来指定这些特性.def 文件。 但是，使用 **__declspec （dllexport)** 除了在.def 文件不会导致生成错误。
 
@@ -62,13 +62,13 @@ class __declspec(dllexport) CExampleExport : public CObject
 
 - [导出和导入使用 AFX_EXT_CLASS](exporting-and-importing-using-afx-ext-class.md)
 
-- [导出 c + + 函数以用于 C 语言可执行文件](exporting-cpp-functions-for-use-in-c-language-executables.md)
+- [导出C++函数以用于 C 语言可执行文件](exporting-cpp-functions-for-use-in-c-language-executables.md)
 
-- [导出 C 函数以用于 C 或 c + + 语言可执行文件](exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
+- [导出 C 函数以用于 C 或C++-语言可执行文件](exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
 
 - [确定要使用的导出方法](determining-which-exporting-method-to-use.md)
 
-- [导入到使用 __declspec （dllimport） 的应用程序](importing-into-an-application-using-declspec-dllimport.md)
+- [使用 __declspec(dllimport) 导入到应用程序中](importing-into-an-application-using-declspec-dllimport.md)
 
 - [初始化 DLL](run-time-library-behavior.md#initializing-a-dll)
 

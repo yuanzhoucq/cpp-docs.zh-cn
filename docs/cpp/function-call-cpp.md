@@ -12,11 +12,11 @@ helpviewer_keywords:
 - function call operator ()
 ms.assetid: 5094254a-045b-46f7-8653-69bc91e80dce
 ms.openlocfilehash: 0064b17f0adf5cadf732321fbb62403a1da5db76
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50649145"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62154225"
 ---
 # <a name="function-call-c"></a>函数调用 (C++)
 
@@ -30,7 +30,7 @@ primary-expression ( expression-list )
 
 ## <a name="remarks"></a>备注
 
-在此上下文中，`primary-expression` 为第一个操作数，并且 `expression-list`（可能为参数的空列表）为第二个操作数。 函数调用运算符用于需要大量参数的操作。 这之所以有效，是因为 `expression-list` 是列表而非单一操作数。 函数调用运算符必须是非静态成员函数。
+在此上下文中，`primary-expression` 为第一个操作数，并且 `expression-list`（可能为自变量的空列表）为第二个操作数。 函数调用运算符用于需要大量参数的操作。 这之所以有效，是因为 `expression-list` 是列表而非单一操作数。 函数调用运算符必须是非静态成员函数。
 
 函数调用运算符在重载时不会修改函数的调用方式；相反，它会在运算符应用于给定类的类型的对象时修改解释该运算符的方式。 例如，以下代码通常没有意义：
 

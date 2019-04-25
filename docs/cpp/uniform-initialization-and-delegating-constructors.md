@@ -3,15 +3,15 @@ title: 初始化和委派构造函数
 ms.date: 11/04/2016
 ms.assetid: aa4daa64-eaec-4a3c-ade4-d9325e31e9d4
 ms.openlocfilehash: 5c5cb6421d9c8ce20f0c5e24de986ee50d9b2238
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496598"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62162104"
 ---
 # <a name="uniform-initialization-and-delegating-constructors"></a>初始化和委派构造函数
 
-在现代 C++ 中，你可以使用*大括号初始化*对于任何类型，而无需等号。 此外，当你具有执行类似工作的多个构造函数时，你可使用委托构造函数简化代码。
+在现代 C++ 中，你可以使用*大括号初始化*对于任何类型，而无需等号。 此外，当您具有执行类似工作的多个构造函数时，您可使用委托构造函数简化代码。
 
 ## <a name="brace-initialization"></a>大括号初始化
 
@@ -146,7 +146,7 @@ public:
 };
 ```
 
-您可以通过添加一个执行所有验证的函数来减少重复的代码，但是如果一个构造函数可以将部分工作委托给其他构造函数，则 `class_c` 的代码更易于了解和维护。 若要添加委托构造函数，请使用 `constructor (. . .) : constructor (. . .)` 语法：
+你可以通过添加一个执行所有验证的函数来减少重复的代码，但是如果一个构造函数可以将部分工作委托给其他构造函数，则 `class_c` 的代码更易于了解和维护。 若要添加委托构造函数，请使用 `constructor (. . .) : constructor (. . .)` 语法：
 
 ```cpp
 class class_c {

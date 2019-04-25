@@ -3,15 +3,15 @@ title: 显式默认设置的函数和已删除的函数
 ms.date: 11/04/2016
 ms.assetid: 5a588478-fda2-4b3f-a279-db3967f5e07e
 ms.openlocfilehash: aa03ca826eebe467e45e2bb7e0bc47537d40f366
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327013"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62184321"
 ---
 # <a name="explicitly-defaulted-and-deleted-functions"></a>显式默认设置的函数和已删除的函数
 
-在 C++11 中，默认函数和已删除函数使你可以显式控制是否自动生成特殊成员函数。 已删除的函数还可为您提供简单语言，以防止所有类型的函数（特殊成员函数和普通成员函数以及非成员函数）的参数中出现有问题的类型提升，这会导致意外的函数调用。
+在 C++11 中，默认函数和已删除函数使你可以显式控制是否自动生成特殊成员函数。 已删除的函数还可为你提供简单语言，以防止所有类型的函数（特殊成员函数和普通成员函数以及非成员函数）的自变量中出现有问题的类型提升，这会导致意外的函数调用。
 
 ## <a name="benefits-of-explicitly-defaulted-and-deleted-functions"></a>显式默认设置的函数和已删除函数的好处
 

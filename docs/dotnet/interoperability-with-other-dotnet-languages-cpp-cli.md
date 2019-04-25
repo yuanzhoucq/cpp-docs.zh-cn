@@ -10,19 +10,19 @@ helpviewer_keywords:
 - lock C# keyword [C++]
 ms.assetid: a5902cf8-a14d-4559-aefb-c178615d45bb
 ms.openlocfilehash: ffdf9a8b11912bde38e15408228670c8cff9a503
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57741726"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62188317"
 ---
 # <a name="interoperability-with-other-net-languages-ccli"></a>与其他 .NET 语言的互操作性 (C++/CLI)
 
-在本部分中的主题说明如何在从使用或对用 C# 或 Visual Basic 编写的程序集提供的功能的 Visual c + + 中创建程序集。
+在本部分中的主题说明如何在视觉对象中创建程序集C++，从使用或提供的功能编写的程序集到C#或 Visual Basic。
 
 ## <a name="consume_indexer"></a> 使用 C# 索引器
 
-Visual c + + 不包含索引器;它具有索引属性。 若要使用 C# 索引器，访问索引器，就好像索引的属性。
+VisualC++不包含索引器;它具有索引属性。 若要使用 C# 索引器，访问索引器，就好像索引的属性。
 
 有关索引器的详细信息，请参阅：
 
@@ -70,7 +70,7 @@ public class MainClass {
 
 ### <a name="example"></a>示例
 
-此 Visual c + + 程序使用该索引器。
+此视觉对象C++程序使用该索引器。
 
 ```cpp
 // consume_cs_indexers_2.cpp
@@ -102,7 +102,7 @@ Element #10 = 0
 
 ## <a name="implement_isas"></a> 实现是和为 C# 关键字
 
-本主题演示如何实现的功能`is`和`as`Visual c + + 中的 C# 关键字。
+本主题演示如何实现的功能`is`并`as`C#视觉对象中的关键字C++。
 
 ### <a name="example"></a>示例
 
@@ -143,9 +143,9 @@ o is a string
 
 ## <a name="implement_locak"></a> 实现 C# 的 lock 关键字
 
-本主题演示如何实现 C# `lock` Visual c + + 中的关键字。
+本主题演示如何实现C#`lock`视觉对象中的关键字C++。
 
-此外可以使用`lock`c + + 支持库中的类。 请参阅[同步 (lock 类)](../dotnet/synchronization-lock-class.md)有关详细信息。
+此外可以使用`lock`类中C++支持库。 请参阅[同步 (lock 类)](../dotnet/synchronization-lock-class.md)有关详细信息。
 
 ### <a name="example"></a>示例
 

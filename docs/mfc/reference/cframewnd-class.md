@@ -107,11 +107,11 @@ helpviewer_keywords:
 - CFrameWnd [MFC], rectDefault
 ms.assetid: e2220aba-5bf4-4002-b960-fbcafcad01f1
 ms.openlocfilehash: 7bdb681754a500ab86538f3397b4c07284b850d0
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57300878"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62182056"
 ---
 # <a name="cframewnd-class"></a>CFrameWnd 类
 
@@ -207,7 +207,7 @@ class CFrameWnd : public CWnd
 
 - 间接构造它使用文档模板。
 
-您调用之前`Create`或`LoadFrame`，必须构造上使用 c + + 堆的框架窗口对象**新**运算符。 然后再调用`Create`，您还可以注册窗口类[AfxRegisterWndClass](../../mfc/reference/application-information-and-management.md#afxregisterwndclass)全局函数设置的帧的图标和类样式。
+您调用之前`Create`或`LoadFrame`，必须构造上堆使用的框架窗口对象C++**新**运算符。 然后再调用`Create`，您还可以注册窗口类[AfxRegisterWndClass](../../mfc/reference/application-information-and-management.md#afxregisterwndclass)全局函数设置的帧的图标和类样式。
 
 使用`Create`成员函数将为快速参数传递的帧创建参数。
 
@@ -239,7 +239,7 @@ class CFrameWnd : public CWnd
 
 - 如果框架窗口，应用程序主窗口的框架窗口是运行 WinHelp 的上下文。 关闭帧窗口将关闭 WINHELP。如果启动为此应用程序的，EXE。
 
-不使用 c + +**删除**运算符来销毁框架窗口。 请改用 `CWnd::DestroyWindow`。 `CFrameWnd`的实现`PostNcDestroy`销毁窗口时，将删除 c + + 对象。 当用户关闭帧窗口时，默认值`OnClose`处理程序将调用`DestroyWindow`。
+不要使用C++**删除**运算符来销毁框架窗口。 请改用 `CWnd::DestroyWindow`。 `CFrameWnd`的实现`PostNcDestroy`将删除C++时销毁窗口对象。 当用户关闭帧窗口时，默认值`OnClose`处理程序将调用`DestroyWindow`。
 
 有关详细信息`CFrameWnd`，请参阅[帧 Windows](../../mfc/frame-windows.md)。
 

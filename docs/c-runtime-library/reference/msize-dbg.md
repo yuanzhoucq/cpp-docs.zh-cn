@@ -24,11 +24,11 @@ helpviewer_keywords:
 - msize_dbg function
 ms.assetid: a333f4b6-f8a2-4e61-bb69-cb34063b8cef
 ms.openlocfilehash: 3b6d08d44162d8263ca88147fe86166924d7d162
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629120"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62156299"
 ---
 # <a name="msizedbg"></a>_msize_dbg
 
@@ -57,7 +57,7 @@ size_t _msize_dbg(
 
 ## <a name="remarks"></a>备注
 
-**_msize_dbg**是调试版本的 _[msize](msize.md)函数。 当[_DEBUG](../../c-runtime-library/debug.md)未定义，则每次调用 **_msize_dbg**缩减为调用 **_msize**。 这两 **_msize**并 **_msize_dbg**计算基堆中的内存块的大小，但 **_msize_dbg**添加两个调试功能： 它包括两侧的缓冲区用户在返回的大小和它的内存块部分，以允许特定的块类型的大小计算。
+**_msize_dbg**是调试版本的 _[msize](msize.md)函数。 当[_DEBUG](../../c-runtime-library/debug.md)未定义，则每次调用 **_msize_dbg**缩减为调用 **_msize**。 这两 **_msize**并 **_msize_dbg**计算基堆中的内存块的大小，但 **_msize_dbg**添加两个调试功能：它包括在返回大小的内存块用户部分两侧的缓冲区，它允许特定的块类型的大小计算。
 
 有关如何在基堆的调试版本中分配、初始化和管理内存块的信息，请参阅 [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details)。 有关分配块类型及其使用方式的信息，请参阅[调试堆上的块类型](/visualstudio/debugger/crt-debug-heap-details)。 有关在应用程序的调试版本中调用标准堆函数及其调试版本之间差异的信息，请参阅[堆分配函数的调试版本](/visualstudio/debugger/debug-versions-of-heap-allocation-functions)。
 
@@ -127,7 +127,7 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>输出
+### <a name="output"></a>Output
 
 ```Output
 Size of block after _malloc_dbg of 40 longs: 160

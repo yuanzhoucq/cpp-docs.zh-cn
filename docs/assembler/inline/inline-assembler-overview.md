@@ -8,11 +8,11 @@ helpviewer_keywords:
 - inline assembly, inline assembler
 ms.assetid: d990331a-0e33-4760-8d7a-b720b0288335
 ms.openlocfilehash: 21e0d9ca0e64922b83518eb79c19d2f2e67813bd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543203"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62167006"
 ---
 # <a name="inline-assembler-overview"></a>内联汇编概述
 
@@ -22,7 +22,7 @@ ms.locfileid: "50543203"
 
 由于内联汇编程序不需要单独的程序集和链接步骤，因此它比单独的汇编程序更方便。 内联汇编代码可以使用范围中的任何 C 或 C++ 变量或函数名称，因此，将其与程序的 C 和 C++ 代码结合非常容易。 由于汇编代码可以与 C 和 C++ 语句结合，因此它可以完成单独用 C 或 C++ 难以完成或无法完成的任务。
 
-[__Asm](../../assembler/inline/asm.md)关键字调用内联汇编程序，并且可以出现在 C 或 c + + 语句是合法的任何位置。 它不能单独出现。 它必须后跟一个程序集指令、一组括在大括号中的指令或者至少一对空大括号。 此处的术语“`__asm` 块”指任何指令或指令组（无论是否在大括号中）。
+[__Asm](../../assembler/inline/asm.md)关键字调用内联汇编程序，并且可以出现位置 C 或C++是合法的语句。 它不能单独出现。 它必须后跟一个程序集指令、一组括在大括号中的指令或者至少一对空大括号。 此处的术语“`__asm` 块”指任何指令或指令组（无论是否在大括号中）。
 
 以下代码是括在大括号中的简单 `__asm` 块。 （此代码是一个自定义函数 prolog 序列。）
 

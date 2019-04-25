@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Platform::ValueType Class
 ms.assetid: 79aa8754-b140-4974-a5b1-be046938a10a
 ms.openlocfilehash: 889cf3a53468491517d37978ca09472756ad9b7e
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57747146"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62182946"
 ---
 # <a name="platformvaluetype-class"></a>Platform::ValueType 类
 
@@ -40,7 +40,7 @@ ValueType 类用于构造值类型。 ValueType 派生自有基本成员的 Obje
 
 **支持的最低服务器：** Windows Server 2012
 
-**命名空间：** 平台
+**命名空间：** Platform
 
 **元数据：** platform.winmd
 
@@ -60,4 +60,4 @@ Platform:: string 表示的值。
 
 ## <a name="see-also"></a>请参阅
 
-[平台命名空间](../cppcx/platform-namespace-c-cx.md)
+[Platform 命名空间](../cppcx/platform-namespace-c-cx.md)

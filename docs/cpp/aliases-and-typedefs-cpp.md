@@ -5,11 +5,11 @@ f1_keywords:
 - typedef_cpp
 ms.assetid: af1c24d2-4bfd-408a-acfc-482e264232f5
 ms.openlocfilehash: 155f1868123514dfec89ab448ef22f2da225c4d3
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521462"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62155285"
 ---
 # <a name="aliases-and-typedefs-c"></a>别名和 typedef (C++)
 
@@ -81,7 +81,7 @@ ptr<int> ptr_int;
 
 ## <a name="example"></a>示例
 
-以下示例说明如何将别名模板与自定义分配器一起使用 - 在此示例中，它是一个整数矢量类型。 你可以替换为任何类型**int**在主功能代码中创建方便的别名，以便隐藏复杂的参数列表。 通过在代码中使用自定义分配器，你可以提高可读性并降低引入由拼写错误导致的 Bug 的风险。
+以下示例说明如何将别名模板与自定义分配器一起使用 - 在此示例中，它是一个整数矢量类型。 你可以替换为任何类型**int**在主功能代码中创建方便的别名，以便隐藏复杂的参数列表。 通过在代码中使用自定义分配器，您可以提高可读性并降低引入由拼写错误导致的 Bug 的风险。
 
 ```cpp
 #include <stdlib.h>
@@ -335,7 +335,7 @@ POINT ptOrigin;
 struct point_t ptOrigin;
 ```
 
-在 c + + 之间的差异**typedef**名称和实际类型 (使用声明**类**，**结构**，**联合**，和**枚举**关键字) 更为明显。 尽管声明无名称结构中的 C 做法**typedef**语句仍有效，它提供了无符号的优势，在 C 中一样
+在C++，之间的差异**typedef**名称和实际类型 (使用声明**类**，**结构**，**联合**，和**枚举**关键字) 更为明显。 尽管声明无名称结构中的 C 做法**typedef**语句仍有效，它提供了无符号的优势，在 C 中一样
 
 ```cpp
 // typedef_with_class_types2.cpp

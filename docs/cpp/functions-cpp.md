@@ -9,11 +9,11 @@ helpviewer_keywords:
 - declarators, functions
 ms.assetid: 33ba01d5-75b5-48d2-8eab-5483ac7d2274
 ms.openlocfilehash: aafd3be3b27fbe134b380a29083b4ca36177e702
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176479"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62154125"
 ---
 # <a name="functions-c"></a>函数 (C++)
 
@@ -165,7 +165,7 @@ int sum(int a, int b)
 
 ## <a name="function-templates"></a>函数模板
 
-函数模板类似于类模板；它基于模板参数生成具体功能。 在许多情况下，模板能够推断类型参数，因此无需显式指定它们。
+函数模板类似于类模板；它基于模板自变量生成具体功能。 在许多情况下，模板能够推断类型参数，因此无需显式指定它们。
 
 ```cpp
 template<typename Lhs, typename Rhs>
@@ -180,7 +180,7 @@ auto b = Add2(string{ "Hello" }, string{ " World" }); // b is a std::string
 
 有关详细信息，请参阅[函数模板](../cpp/function-templates.md)
 
-## <a name="function-parameters-and-arguments"></a>函数参数和自变量
+## <a name="function-parameters-and-arguments"></a>函数形参和实参
 
 函数具有零种或多种类型的逗号分隔参数列表，其中每个参数都具有可以用于在函数体内访问它的名称。 函数模板可以指定其他类型或值参数。 调用方传递实参（其类型与形参列表兼容的具体值）。
 
@@ -190,13 +190,13 @@ auto b = Add2(string{ "Hello" }, string{ " World" }); // b is a std::string
 void DoSomething(std::string& input){...}
 ```
 
-当函数修改通过引用传递的自变量时，它会修改原始对象，而不是本地副本。 若要防止函数修改这类自变量，请将参数限定为 const&：
+当函数修改通过引用传递的参数时，它会修改原始对象，而不是本地副本。 若要防止函数修改这类参数，将参数限定为常量 （& a):
 
 ```cpp
 void DoSomething(const std::string& input){...}
 ```
 
-**C++ 11:** 若要显式处理通过右值引用或左值引用传递的参数，使用双与号参数以指示通用引用：
+**C++11:** 若要显式处理通过右值引用或左值引用传递的参数，使用的参数上双与号以指示通用引用：
 
 ```cpp
 void DoSomething(const std::string&& input){...}
@@ -214,7 +214,7 @@ long GetTickCount( void );
 
 ### <a name="default-arguments"></a>默认自变量
 
-函数签名中的最后一个或几个形参可能会分配有默认实参，这意味着调用方可能会在调用函数时省略实参（除非要指定某个其他值）。
+函数签名中的最后一个或几个参数可能会分配有默认自变量，这意味着调用方可能会在调用函数时省略自变量（除非要指定某个其他值）。
 
 ```cpp
 int DoSomething(int num,
@@ -363,7 +363,7 @@ template<typename F, typename Tuple = tuple<T...>,
     }
     ```
 
-1. **Visual Studio 2017 15.3 及更高版本**(适用于[/std:C++ 17](../build/reference/std-specify-language-standard-version.md)): 使用结构化绑定。 结构化绑定的优点是，存储返回值的变量都初始化声明它们的同时，在某些情况下可以变得更加有效。 在此语句-`auto[x, y, z] = f();`-括号引入并初始化整个函数块的作用域中的名称。
+1. **Visual Studio 2017 版本 15.3 及更高版本**(适用于[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)):使用结构化的绑定。 结构化绑定的优点是，存储返回值的变量都初始化声明它们的同时，在某些情况下可以变得更加有效。 在此语句-`auto[x, y, z] = f();`-括号引入并初始化整个函数块的作用域中的名称。
 
     ```cpp
     #include <tuple>

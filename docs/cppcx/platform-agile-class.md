@@ -13,11 +13,11 @@ helpviewer_keywords:
 - Platform::Agile
 ms.assetid: e34459a9-c429-4c79-97fd-030c43ca4155
 ms.openlocfilehash: 86a535bc106e17b276dc5f42a59773aa0de8c361
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57749265"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62161650"
 ---
 # <a name="platformagile-class"></a>Platform::Agile 类
 
@@ -78,7 +78,7 @@ Windows 运行时中的类的大部分都是敏捷的。 敏捷对象可以调�
 
 **支持的最低服务器：** Windows Server 2012
 
-**命名空间：** 平台
+**命名空间：** Platform
 
 **标头：** agile.h
 
@@ -154,7 +154,7 @@ T^* GetAddressOf() throw();
 
 ### <a name="return-value"></a>返回值
 
- `T` 类型的对象的句柄地址。
+`T` 类型的对象的句柄地址。
 
 ### <a name="remarks"></a>备注
 
@@ -239,7 +239,7 @@ T^ operator=( IUnknown* lp ) throw();
 
 ### <a name="return-value"></a>返回值
 
- `T` 类型的对象的句柄
+`T` 类型的对象的句柄
 
 ### <a name="remarks"></a>备注
 

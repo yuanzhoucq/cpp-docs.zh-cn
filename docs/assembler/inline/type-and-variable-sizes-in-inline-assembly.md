@@ -17,11 +17,11 @@ helpviewer_keywords:
 - variables, size
 ms.assetid: b62c2f2b-a7ad-4145-bae4-d890db86d348
 ms.openlocfilehash: 36c97ee866ca449e9bbcf514e464a13f24f12cd9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539095"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62166888"
 ---
 # <a name="type-and-variable-sizes-in-inline-assembly"></a>内联程序集中的类型和变量大小
 
@@ -31,9 +31,9 @@ ms.locfileid: "50539095"
 
 - **长度**运算符可返回数组中的元素数。 它为非数组变量返回值 1。
 
-- **大小**运算符可返回 C 或 c + + 变量的大小。 变量的大小是数组的乘积及其**长度**并**类型**。
+- **大小**运算符可返回 C 的大小或C++变量。 变量的大小是数组的乘积及其**长度**并**类型**。
 
-- **类型**运算符可返回 C 或 c + + 类型或变量的大小。 如果变量是一个数组**类型**返回的单个元素数组的大小。
+- **类型**运算符可返回 C 的大小或C++类型或变量。 如果变量是一个数组**类型**返回的单个元素数组的大小。
 
 例如，如果您的程序有一个 8 元素**int**数组，
 

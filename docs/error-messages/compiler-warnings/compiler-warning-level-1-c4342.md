@@ -7,17 +7,17 @@ helpviewer_keywords:
 - C4342
 ms.assetid: 47d4d5ab-069f-4cdc-98c3-10d649577a37
 ms.openlocfilehash: 439c4976f25688fd9220c3f58ceb933266b5f15c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447329"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62187500"
 ---
 # <a name="compiler-warning-level-1-c4342"></a>编译器警告（等级 1）C4342
 
 行为更改: '*函数*调用，但在以前的版本中，称为成员运算符
 
-在 Visual Studio 2002 之前的 Visual c + + 的版本中，调用了成员，但此行为已更改和编译器现在在命名空间范围内找到最佳匹配项。
+在视觉对象的版本C++Visual Studio 2002 年之前调用了成员，但此行为已更改，编译器现在在命名空间范围内找到最佳匹配项。
 
 如果找到一个成员运算符，编译器会以前不考虑任何命名空间范围运算符。 如果在命名空间范围更好地匹配，当前编译器正确调用它，而早期的编译器则不予以考虑。
 

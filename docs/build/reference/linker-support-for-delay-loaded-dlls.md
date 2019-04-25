@@ -5,21 +5,21 @@ helpviewer_keywords:
 - delayed loading of DLLs, linker support
 ms.assetid: b2d7e449-2809-42b1-9c90-2c0ca5e31a14
 ms.openlocfilehash: b6e514a6b13aced4fcd765df091810504f948588
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57809569"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62176247"
 ---
 # <a name="linker-support-for-delay-loaded-dlls"></a>链接器的延迟加载 DLL 支持
 
 MSVC 链接器现在支持 Dll 的延迟的加载。 这使你的需要使用 Windows SDK 函数**LoadLibrary**并**GetProcAddress**来实现延迟加载的 DLL。
 
-在 Visual c + + 6.0 中之前, 在运行时加载 DLL 的唯一方法是通过使用**LoadLibrary**并**GetProcAddress**; 操作系统将加载 DLL 时可执行文件或 DLL 使用已加载。
+视觉对象之前C++6.0，在运行时加载 DLL 的唯一方法是通过使用**LoadLibrary**并**GetProcAddress**; 操作系统将加载 DLL 时可执行文件或 DLL 使用已加载。
 
-从开始 Visual c + + 6.0 中，隐式链接与 DLL 时，链接器提供了选项，若要延迟加载 DLL，直到该程序调用一个函数，该 DLL 中。
+从开始 Visual C++ 6.0，隐式链接与 DLL 时，链接器提供了选项要延迟加载 DLL 直到程序调用一个函数，该 DLL 中。
 
-应用程序可能会延迟加载 DLL 使用[/DELAYLOAD （延迟加载导入）](delayload-delay-load-import.md)链接器选项的帮助器函数 （Visual c + + 提供的默认实现）。 帮助器函数将加载 DLL 在运行时通过调用**LoadLibrary**并**GetProcAddress**为您。
+应用程序可能会延迟加载 DLL 使用[/DELAYLOAD （延迟加载导入）](delayload-delay-load-import.md)帮助程序函数使用链接器选项 (默认实现提供视觉对象的C++)。 帮助器函数将加载 DLL 在运行时通过调用**LoadLibrary**并**GetProcAddress**为您。
 
 应考虑延迟加载 DLL，如果：
 
@@ -52,4 +52,4 @@ DLL 的延迟的加载可以指定的生成过程。EXE 或。DLL 项目。 答:
 ## <a name="see-also"></a>请参阅
 
 [Visual C++ 中的 DLL](../dlls-in-visual-cpp.md)<br/>
-[MSVC 链接器引用](linking.md)
+[MSVC 链接器参考](linking.md)

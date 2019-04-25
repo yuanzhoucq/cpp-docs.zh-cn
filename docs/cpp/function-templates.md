@@ -7,11 +7,11 @@ helpviewer_keywords:
 - function templates, about function templates
 ms.assetid: 59b56a4b-0689-4161-9c07-25021562e2a7
 ms.openlocfilehash: 77f3d1ee704c8094fd3bd94597311976e54ba6a6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50493517"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62154162"
 ---
 # <a name="function-templates"></a>函数模板
 
@@ -44,7 +44,7 @@ MySwap( j, Hello );      //error
 
 第二个 `MySwap` 调用触发了编译时错误，因为编译器无法生成具有不同类型的参数的 `MySwap` 函数。 如果使用了 void 指针，两个函数调用都将正确编译，但函数在运行时无法正常工作。
 
-允许显式指定函数模板的模板自变量。 例如：
+允许显式指定函数模板的模板参数。 例如：
 
 ```cpp
 // function_templates2.cpp

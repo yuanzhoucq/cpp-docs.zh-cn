@@ -7,17 +7,17 @@ helpviewer_keywords:
 - C4395
 ms.assetid: 8051469a-3a39-4677-80f7-1300fbffe8ea
 ms.openlocfilehash: 27503b94a18b949637293201203e18793f5e7788
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50676351"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62182400"
 ---
 # <a name="compiler-warning-level-1-c4395"></a>编译器警告（等级 1）C4395
 
 function: initonly 数据成员 member 的副本将调用成员函数
 
-在调用成员函数[initonly (C + + CLI)](../../dotnet/initonly-cpp-cli.md)数据成员。  C4395 警告**initonly**该函数不能修改数据成员。
+在调用成员函数[initonly (C++/CLI)](../../dotnet/initonly-cpp-cli.md)数据成员。  C4395 警告**initonly**该函数不能修改数据成员。
 
 下面的示例生成 C4395:
 

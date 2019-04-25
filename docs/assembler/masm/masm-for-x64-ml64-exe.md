@@ -7,17 +7,17 @@ helpviewer_keywords:
 - masm for x64
 ms.assetid: 89059103-f372-4968-80ea-0c7f90bb9c91
 ms.openlocfilehash: 0404bff54a08988a72fcb0a0c075a4446bf90f48
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596217"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62178236"
 ---
 # <a name="masm-for-x64-ml64exe"></a>MASM for x64 (ml64.exe)
 
 Visual Studio 同时包含面向x64 代码的 32 位和 64 位托管版本的 Microsoft Assembler (MASM)。 该汇编程序名为 ml64.exe，接受 x64 汇编语言。 在 Visual Studio 安装期间选择 C++ 工作负载时，会安装 MASM 命令行工具。 MASM 工具不可单独下载。 有关如何下载和安装 Visual Studio 的副本的说明，请参阅[安装 Visual Studio](/visualstudio/install/install-visual-studio)。 如果不想安装完整的 Visual Studio IDE，而只需要命令行工具，请下载[Visual Studio 2017 的生成工具](https://go.microsoft.com/fwlink/p/?linkid=875721)。
 
-若要使用 MASM 构建适用于 x64 的代码在命令行上的目标，则必须为 x64 使用开发人员命令提示设置所需的路径和其他环境变量的目标。 有关如何启动开发人员命令提示的信息，请参阅[命令行上的生成 C/c + + 代码](../../build/building-on-the-command-line.md)。
+若要使用 MASM 构建适用于 x64 的代码在命令行上的目标，则必须为 x64 使用开发人员命令提示设置所需的路径和其他环境变量的目标。 有关如何启动开发人员命令提示的信息，请参阅[生成 C /C++命令行上的代码](../../build/building-on-the-command-line.md)。
 
 Ml64.exe 命令行选项的信息，请参阅[ML 和 ML64 命令行参考](../../assembler/masm/ml-and-ml64-command-line-reference.md)。
 
@@ -31,11 +31,11 @@ Visual Studio 项目系统支持在 C + + 项目中使用 MASM 生成汇编程�
 
 1. 在解决方案资源管理器中，选择项目。 在菜单栏上依次选择**项目**，**生成自定义**。
 
-1. 在中**Visual c + + 生成自定义文件**对话框框中，选中复选框旁边**masm(.targets,.props)**。 选择**确定**以保存你的选择并关闭对话框。
+1. 在中**可视化C++生成自定义文件**对话框框中，选中复选框旁边**masm(.targets,.props)**。 选择**确定**以保存你的选择并关闭对话框。
 
 1. 在菜单栏上依次选择**项目**，**添加新项**。
 
-1. 在中**添加新项**对话框中，选择**c + + 文件 (.cpp)** 的中心窗格中。 在中**名称**编辑控件中，输入新的文件名的未 **.asm**而不是.cpp 扩展名。 选择**添加**若要将文件添加到你的项目并关闭对话框。
+1. 在中**添加新项**对话框中，选择**C++文件 (.cpp)** 的中心窗格中。 在中**名称**编辑控件中，输入新的文件名的未 **.asm**而不是.cpp 扩展名。 选择**添加**若要将文件添加到你的项目并关闭对话框。
 
 在添加的 .asm 文件中创建汇编语言代码。 生成解决方案时，会调用 MASM 汇编程序，将该 .asm 文件汇编为一个之后要链接到项目的对象文件。 若要使符号访问更容易，应在 C++ 源代码中将汇编程序函数声明为 `extern "C"`，而不是在汇编语言源文件中使用 C++ 名称修饰约定。
 
