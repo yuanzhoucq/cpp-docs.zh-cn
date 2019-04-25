@@ -7,11 +7,11 @@ helpviewer_keywords:
 - applications [MFC], managing
 ms.assetid: b72f4154-24db-4e75-bca3-6873e2459c15
 ms.openlocfilehash: 78b9ae467d3504f3922c540a3e4cd100322d8f4e
-ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "57808386"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62151274"
 ---
 # <a name="application-information-and-management"></a>应用程序信息和管理
 
@@ -112,7 +112,7 @@ CWinThread* AfxBeginThread(
 
 `AfxBeginThread` 创建一个新`CWinThread`对象，调用其[CreateThread](../../mfc/reference/cwinthread-class.md#createthread)函数开始执行线程，并将指针返回到线程。 整个过程进行检查以确保所有对象都都已解除分配正确应创建的任何部分出现故障。 若要结束该线程，请调用[AfxEndThread](#afxendthread)从中的线程或从工作线程控制函数返回。
 
-多线程处理必须启用该应用程序。否则，此函数将失败。 有关启用多线程处理的详细信息，请参阅[/MD、 /MT、 /LD （使用运行时库）](../../build/reference/md-mt-ld-use-run-time-library.md)下*Visual c + + 编译器选项*。
+多线程处理必须启用该应用程序。否则，此函数将失败。 有关启用多线程处理的详细信息，请参阅[/MD、 /MT、 /LD （使用运行时库）](../../build/reference/md-mt-ld-use-run-time-library.md)下*VisualC++编译器选项*。
 
 有关详细信息`AfxBeginThread`，请参阅文章[多线程处理：创建辅助线程](../../parallel/multithreading-creating-worker-threads.md)和[多线程处理：创建用户界面线程](../../parallel/multithreading-creating-user-interface-threads.md)。
 
@@ -208,8 +208,7 @@ HINSTANCE AFXAPI AfxFindResourceHandle( LPCTSTR lpszName,  LPCTSTR lpszType );
 
 ##  <a name="afxfreelibrary"></a>  AfxFreeLibrary
 
-
-  `AfxFreeLibrary` 和 `AfxLoadLibrary` 用于维护每个已加载库模块的引用计数。
+`AfxFreeLibrary` 和 `AfxLoadLibrary` 用于维护每个已加载库模块的引用计数。
 
 ```
 BOOL AFXAPI AfxFreeLibrary(HINSTANCE hInstLib);
@@ -397,7 +396,7 @@ CWinThread* AfxGetThread();
 必须从所需线程内部调用。
 
 > [!NOTE]
->  如果要将迁移 MFC 项目调用`AfxGetThread`Visual c + + 版本 4.2、 5.0 或 6.0 中，从`AfxGetThread`调用[AfxGetApp](#afxgetapp)如果未找到线程时。 在较新版本的编译器，`AfxGetThread`如果未找到线程时，则返回 NULL。 如果需要应用程序线程，则必须调用 `AfxGetApp`。
+>  如果要将迁移 MFC 项目调用`AfxGetThread`从视觉对象C++版本 4.2、 5.0 或 6.0`AfxGetThread`调用[AfxGetApp](#afxgetapp)如果未找到线程时。 在较新版本的编译器，`AfxGetThread`如果未找到线程时，则返回 NULL。 如果需要应用程序线程，则必须调用 `AfxGetApp`。
 
 ### <a name="example"></a>示例
 
@@ -421,7 +420,7 @@ BOOL AFXAPI AfxInitRichEdit();
 
 `AfxInitRichEdit` 加载 RICHED32。若要初始化 rich edit 控件的 1.0 版的 DLL。 若要使用版本 2.0 和 3.0 rich edit 控件，RICHED20。需要加载 DLL。 这通过调用来实现[AfxInitRichEdit2](#afxinitrichedit2)。
 
-若要更新到版本 2.0 的现有 Visual c + + 应用程序中的格式文本编辑控件，请打开。RC 文件作为文本，更改每个格式文本编辑控件从"RICHEDIT"到"RichEdit20a"的类名。 然后将为调用`AfxInitRichEdit`与`AfxInitRichEdit2`。
+若要更新丰富编辑现有视觉对象中的控件C++到版本 2.0 中，应用程序打开。RC 文件作为文本，更改每个格式文本编辑控件从"RICHEDIT"到"RichEdit20a"的类名。 然后将为调用`AfxInitRichEdit`与`AfxInitRichEdit2`。
 
 此函数还可以初始化公共控件库，如果库尚未初始化的进程。 如果你直接从 MFC 应用程序使用 rich edit 控件，则应调用此函数可确保 MFC 程序正确初始化格式文本编辑控件运行时。 如果调用的 Create 方法[CRichEditCtrl](../../mfc/reference/cricheditctrl-class.md)， [CRichEditView](../../mfc/reference/cricheditview-class.md)，或[CRichEditDoc](../../mfc/reference/cricheditdoc-class.md)，通常无需调用此函数，但在某些情况下可能会必需。
 
@@ -683,7 +682,7 @@ Microsoft 基础类库将自动为您注册若干标准窗口类。 如果要注
 
 由 `AfxRegisterWndClass` 为类注册的名称仅依赖于参数。 如果使用相同的参数调用 `AfxRegisterWndClass` 多次，它只会在首次调用时注册类。 如果使用相同的参数继续对 `AfxRegisterWndClass` 进行调用，则只会返回已注册的类名。
 
-如果使用相同的参数为多个 CWnd 派生类调用 `AfxRegisterWndClass`，而不是为每个类获得单独的窗口类，则每个类都将共享同一窗口类。 如果使用 CS_CLASSDC 类样式，这会导致问题。 而不是多个 CS_CLASSDC 窗口类，您最终得到一个 CS_CLASSDC 窗口类，并使用该类共享同一个域控制器的所有 c + + 窗口。 若要避免此问题，请调用[AfxRegisterClass](#afxregisterclass)以注册类。
+如果使用相同的参数为多个 CWnd 派生类调用 `AfxRegisterWndClass`，而不是为每个类获得单独的窗口类，则每个类都将共享同一窗口类。 如果使用 CS_CLASSDC 类样式，这会导致问题。 而不是多个 CS_CLASSDC 窗口类，最终会得到一个 CS_CLASSDC 窗口类及其所有C++中使用该类的 windows 共享同一个域控制器。 若要避免此问题，请调用[AfxRegisterClass](#afxregisterclass)以注册类。
 
 请参阅技术说明[TN001:窗口类注册](../../mfc/tn001-window-class-registration.md)有关详细信息窗口类注册和`AfxRegisterWndClass`函数。
 

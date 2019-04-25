@@ -9,11 +9,11 @@ helpviewer_keywords:
 - __fastcall keyword [C++]
 ms.assetid: bb5b9c8a-dfad-450c-9119-0ac2bc59544f
 ms.openlocfilehash: 3e7cd4b1202ee717abf9a9767785ed8abe96bd69
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627359"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62154316"
 ---
 # <a name="fastcall"></a>__fastcall
 
@@ -23,8 +23,8 @@ ms.locfileid: "53627359"
 
 |元素|实现|
 |-------------|--------------------|
-|自变量传递顺序|在参数列表中按从左到右的顺序找到的前两个 DWORD 或更小参数将在 ECX 和 EDX 寄存器中传递；所有其他参数在堆栈上从右向左传递。|
-|堆栈维护职责|已调用函数会弹出显示堆栈中的自变量。|
+|参数传递顺序|在自变量列表中按从左到右的顺序找到的前两个 DWORD 或更小自变量将在 ECX 和 EDX 寄存器中传递；所有其他自变量在堆栈上从右向左传递。|
+|堆栈维护职责|已调用函数会弹出显示堆栈中的参数。|
 |名称修饰约定|At 符号 (\@) 前缀的名称; 名称的列表后缀在号后跟 （采用十进制） 的参数中的字节数。|
 |大小写转换约定|不执行任何大小写转换。|
 
@@ -33,7 +33,7 @@ ms.locfileid: "53627359"
 
 使用[/Gr](../build/reference/gd-gr-gv-gz-calling-convention.md)编译器选项将导致每个函数中要作为编译的模块 **__fastcall**除非使用冲突特性声明函数或函数的名称为`main`.
 
-**__Fastcall**关键字是由接受和忽略编译器面向 ARM 和 x64 体系结构; 在 x64 芯片，按照约定前, 四个参数将传入寄存器在可能的情况下，并传递其他参数在堆栈中。 有关详细信息，请参阅[x64 调用约定](../build/x64-calling-convention.md)。 在 ARM 芯片上，寄存器中可以传递最多四个整数自变量和八个浮点自变量，而其他自变量在堆栈上传递。
+**__Fastcall**关键字是由接受和忽略编译器面向 ARM 和 x64 体系结构; 在 x64 芯片，按照约定前, 四个参数将传入寄存器在可能的情况下，并传递其他参数在堆栈中。 有关详细信息，请参阅[x64 调用约定](../build/x64-calling-convention.md)。 在 ARM 芯片上，寄存器中可以传递最多四个整数参数和八个浮点参数，而其他参数在堆栈上传递。
 
 对于非静态类函数，如果函数是超行定义的，则调用约定修饰符不必在超行定义中指定。 也就是说，对于类非静态成员方法，在定义时假定声明期间指定的调用约定。 给定此类定义：
 
@@ -59,7 +59,7 @@ void __fastcall CMyClass::mymethod() { return; }
 
 ## <a name="example"></a>示例
 
-在下面的示例中，函数 `DeleteAggrWrapper` 是寄存器中传递的自变量：
+在下面的示例中，函数 `DeleteAggrWrapper` 是寄存器中传递的参数：
 
 ```cpp
 // Example of the __fastcall keyword

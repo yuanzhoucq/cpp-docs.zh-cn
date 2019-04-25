@@ -22,11 +22,11 @@ helpviewer_keywords:
 - Vector Class (C++/Cx)
 ms.assetid: aee8c076-9700-47c3-99b6-799fd3edb0ca
 ms.openlocfilehash: 5466f1d1c8987724aa0768cd8915e06b62b031ad
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57747120"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62161615"
 ---
 # <a name="platformcollectionsvector-class"></a>Platform::Collections::Vector 类
 
@@ -61,7 +61,7 @@ template <typename T, typename E>
 
 1. 公共枚举类
 
-**向量**类是 c + + 具体实现[Windows::Foundation::Collections::IVector](/uwp/api/Windows.Foundation.Collections.IVector_T_)接口。
+**向量**类是C++的具体实现[Windows::Foundation::Collections::IVector](/uwp/api/Windows.Foundation.Collections.IVector_T_)接口。
 
 如果尝试使用**向量**在公共返回值或参数，编译器将引发的错误 C3986 中的类型。 通过将参数或返回值的类型更改为 [Windows::Foundation::Collections::IVector](/uwp/api/Windows.Foundation.Collections.IVector_T_)可修复该错误。 有关更多信息，请参见 [集合 (C++/CX)](../cppcx/collections-c-cx.md)。
 
@@ -95,7 +95,7 @@ template <typename T, typename E>
 
 |||
 |-|-|
-|name|描述|
+|名称|描述|
 |事件[Windows::Foundation::Collection::VectorChangedEventHandler\<T > ^ VectorChanged](/uwp/api/windows.foundation.collections.vectorchangedeventhandler)|当向量更改时发生。|
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构

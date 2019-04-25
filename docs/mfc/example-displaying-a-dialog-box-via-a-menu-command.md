@@ -11,11 +11,11 @@ helpviewer_keywords:
 - menu items [MFC], examples
 ms.assetid: e8692549-acd7-478f-9c5e-ba310ce8cccd
 ms.openlocfilehash: 1e730125e47609f0bf87814b32962336cb752b04
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328254"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62173276"
 ---
 # <a name="example-displaying-a-dialog-box-via-a-menu-command"></a>示例:显示一个对话框，通过菜单命令
 

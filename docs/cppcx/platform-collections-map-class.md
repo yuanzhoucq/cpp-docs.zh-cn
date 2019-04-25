@@ -16,11 +16,11 @@ helpviewer_keywords:
 - Map Class (C++/Cx)
 ms.assetid: 2b8cf968-1167-4898-a149-1195b32c1785
 ms.openlocfilehash: ce50290217c7c06e26f26fc50564d3e37c873157
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58565277"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62161753"
 ---
 # <a name="platformcollectionsmap-class"></a>Platform::Collections::Map 类
 
@@ -63,7 +63,7 @@ ref class Map sealed;
 
 - 公共枚举类
 
-映射基本上是 [std::map](../standard-library/map-class.md)的包装器。 它是 c + + 具体实现[Windows::Foundation::Collections::IMap < Windows::Foundation::Collections::IKeyValuePair\<K，V >>](/uwp/api/Windows.Foundation.Collections.IMap_K_V_)并[IObservableMap](/uwp/api/Windows.Foundation.Collections.IObservableMap_K_V_)Windows 运行时接口的公共之间传递的类型。 如果你尝试在公共返回值或参数中使用 `Platform::Collections::Map` 类型，则将引发编译器错误 C3986。 可通过更改参数或返回值的类型来修复该错误[Windows::Foundation::Collections::IMap\<K，V >](/uwp/api/Windows.Foundation.Collections.IMap_K_V_)。
+映射基本上是 [std::map](../standard-library/map-class.md)的包装器。 它是C++的具体实现[Windows::Foundation::Collections::IMap < Windows::Foundation::Collections::IKeyValuePair\<K，V >>](/uwp/api/Windows.Foundation.Collections.IMap_K_V_)并[IObservableMap](/uwp/api/Windows.Foundation.Collections.IObservableMap_K_V_)Windows 运行时接口公共之间传递的类型。 如果你尝试在公共返回值或参数中使用 `Platform::Collections::Map` 类型，则将引发编译器错误 C3986。 可通过更改参数或返回值的类型来修复该错误[Windows::Foundation::Collections::IMap\<K，V >](/uwp/api/Windows.Foundation.Collections.IMap_K_V_)。
 
 有关详细信息，请参阅[集合](../cppcx/collections-c-cx.md)。
 

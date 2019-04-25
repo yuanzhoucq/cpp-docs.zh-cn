@@ -39,11 +39,11 @@ helpviewer_keywords:
 - _iswctype function
 ms.assetid: cf7509b7-12fc-4d95-8140-ad2eb98173d3
 ms.openlocfilehash: c5eb0b51cf0371100ed884221ee04885dfbe9ad9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50563149"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157284"
 ---
 # <a name="isctype-iswctype-isctypel-iswctypel"></a>_isctype、iswctype、_isctype_l、_iswctype_l
 
@@ -77,7 +77,7 @@ int _iswctype_l(
 *c*<br/>
 要测试的整数。
 
-*Desc*<br/>
+*desc*<br/>
 用于测试的属性。 这通常使用 ctype 或 [wctype](wctype.md) 进行检索。
 
 *locale*<br/>

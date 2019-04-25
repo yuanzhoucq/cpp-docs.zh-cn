@@ -10,17 +10,17 @@ helpviewer_keywords:
 - callback functions [MFC]
 ms.assetid: b2a6857c-fdd3-45ec-8fd8-2e71fac77582
 ms.openlocfilehash: e3440530dfe30b6667012c76b2904dbb2786c199
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57262293"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62152135"
 ---
 # <a name="callback-functions-used-by-mfc"></a>MFC 使用的回调函数
 
 在 Microsoft 基础类库中显示三个回调函数。 这些回调函数传递给[cdc:: enumobjects](../../mfc/reference/cdc-class.md#enumobjects)， [cdc:: graystring](../../mfc/reference/cdc-class.md#graystring)，并[cdc:: setabortproc](../../mfc/reference/cdc-class.md#setabortproc)。 请注意所有回调函数必须返回到 Windows，因为不能跨回调边界引发异常之前都捕获 MFC 异常。 有关异常的详细信息，请参阅文章[异常](../../mfc/exception-handling-in-mfc.md)。
 
-|name||
+|名称||
 |----------|-----------------|
 |[CDC::EnumObjects 的回调函数](#enum_objects)||
 |[CDC::GrayString 的回调函数](#graystring)||

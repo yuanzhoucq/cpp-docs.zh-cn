@@ -3,15 +3,15 @@ title: DLL (C++/CX)
 ms.date: 02/06/2018
 ms.assetid: 5b8bcc57-64dd-4c54-9f24-26a25bd5dddd
 ms.openlocfilehash: 1a72ecc5eb46abfbc7b9a52a168510ce0873ee04
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445703"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62183267"
 ---
 # <a name="dlls-ccx"></a>DLL (C++/CX)
 
-可以使用 Visual Studio 来创建标准的 Win32 DLL 或 Windows 运行时组件可供通用 Windows 平台 (UWP) 应用的 DLL。 通过使用 Visual Studio 或早于 Visual Studio 2012 中的 UWP 应用可能无法正确加载和在 Microsoft Store 中可能无法通过应用程序验证测试的 Visual c + + 编译器的版本创建标准 DLL。
+可以使用 Visual Studio 来创建标准的 Win32 DLL 或 Windows 运行时组件可供通用 Windows 平台 (UWP) 应用的 DLL。 通过使用 Visual Studio 或视觉对象的版本创建的标准 DLLC++早于 Visual Studio 2012 中的 UWP 应用可能无法正确加载和可能无法通过应用程序验证测试在 Microsoft Store 中的编译器。
 
 ## <a name="windows-runtime-component-dlls"></a>Windows 运行时组件 Dll
 
@@ -27,7 +27,7 @@ ms.locfileid: "50445703"
 
 ## <a name="standard-dlls"></a>标准 DLL
 
-您可以创建标准 DLL 不会使用或生成公共 Windows 运行时类型和从 UWP 应用中使用 c + + 代码。 如果只是想要迁移的现有 DLL 在此版本的 Visual Studio 中编译，但不将代码转换为 Windows 运行时组件项目，使用动态链接库 (DLL) 项目类型。 在使用下列步骤时，将在 .appx 包中的应用程序可执行文件旁边部署 DLL。
+您可以创建标准 DLL 的C++不使用或生成公共 Windows 运行时类型和从 UWP 应用中使用的代码。 如果只是想要迁移的现有 DLL 在此版本的 Visual Studio 中编译，但不将代码转换为 Windows 运行时组件项目，使用动态链接库 (DLL) 项目类型。 在使用下列步骤时，将在 .appx 包中的应用程序可执行文件旁边部署 DLL。
 
 ### <a name="to-create-a-standard-dll-in-visual-studio"></a>在 Visual Studio 中创建标准 DLL
 

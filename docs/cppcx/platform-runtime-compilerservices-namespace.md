@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Platform::Runtime::CompilerServices Namespace
 ms.assetid: 8613b6b3-b193-45d1-b956-881a4a700788
 ms.openlocfilehash: 88eac06eeb97fce26f321e8beb494b6b9e66be41
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57745979"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62183140"
 ---
 # <a name="platformruntimecompilerservices-namespace"></a>Platform::Runtime::CompilerServices 命名空间
 
@@ -30,7 +30,7 @@ namespace Platform {
 
 虽然此命名空间供内部使用，但是浏览器可以显示此命名空间的以下成员。
 
-|name|备注|
+|名称|备注|
 |----------|------------|
 |CallConvCdecl||
 |CallConvFastcall||

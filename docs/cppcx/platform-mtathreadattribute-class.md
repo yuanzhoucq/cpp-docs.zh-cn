@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Platform::MTAThreadAttribute Class
 ms.assetid: bfc546a7-4333-4407-85b4-4721565e1f44
 ms.openlocfilehash: 4564def412834ae0586292e8aa533d3b2bd0d679
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57745260"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62152665"
 ---
 # <a name="platformmtathreadattribute-class"></a>Platform::MTAThreadAttribute 类
 
@@ -38,7 +38,7 @@ public ref class MTAThreadAttribute sealed : Attribute
 
 MTAThreadAttribute 属性继承[platform:: object 类](../cppcx/platform-object-class.md)。 MTAThreadAttribute 还会重载或具有以下成员：
 
-|name|描述|
+|名称|描述|
 |----------|-----------------|
 |[MTAThreadAttribute::Equals](#equals)|确定指定的对象是否等于当前对象。|
 |[MTAThreadAttribute::GetHashCode](#gethashcode)|返回此实例的哈希代码。|
@@ -52,7 +52,7 @@ MTAThreadAttribute 属性继承[platform:: object 类](../cppcx/platform-object-
 
 **元数据：** platform.winmd
 
-**命名空间：** 平台
+**命名空间：** Platform
 
 ## <a name="ctor"></a> MTAThreadAttribute 构造函数
 

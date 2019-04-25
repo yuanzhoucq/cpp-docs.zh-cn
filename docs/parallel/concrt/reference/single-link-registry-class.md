@@ -14,16 +14,15 @@ helpviewer_keywords:
 - single_link_registry class
 ms.assetid: 09540a4e-c34e-4ff9-af49-21b8612b6ab3
 ms.openlocfilehash: 20032f393964c8919d2c1a49ec8545400cd9e392
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57290126"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62160061"
 ---
 # <a name="singlelinkregistry-class"></a>single_link_registry 类
 
-
-  `single_link_registry` 对象是仅管理单个源块或目标块的 `network_link_registry`。
+`single_link_registry` 对象是仅管理单个源块或目标块的 `network_link_registry`。
 
 ## <a name="syntax"></a>语法
 

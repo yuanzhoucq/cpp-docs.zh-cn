@@ -24,11 +24,11 @@ helpviewer_keywords:
 - _malloca function
 ms.assetid: 293992df-cfca-4bc9-b313-0a733a6bb936
 ms.openlocfilehash: 22a63002c900d69e8a7706a54acedf0b4b4f6376
-ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55850405"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62156864"
 ---
 # <a name="malloca"></a>_malloca
 
@@ -51,7 +51,7 @@ void *_malloca(
 
 **_Malloca**例程返回**void**指向保证适当对齐任何类型的对象的存储的已分配空间。 如果*大小*为 0， **_malloca**分配零长度的项并向该项返回有效的指针。
 
-如果*大小*大于 **_ALLOCA_S_THRESHOLD**，然后 **_malloca**尝试在堆上分配和返回一个空指针，如果不能分配的空间。 如果*大小*小于或等于 **_ALLOCA_S_THRESHOLD**，然后 **_malloca**如果空间不能则会生成尝试堆栈和堆栈溢出异常上要分配给分配。 堆栈溢出异常不是 c + + 异常;这是结构化的异常。 而不是使用 c + + 异常处理，则必须使用[结构化异常处理](../../cpp/structured-exception-handling-c-cpp.md)(SEH) 来捕获该异常。
+如果*大小*大于 **_ALLOCA_S_THRESHOLD**，然后 **_malloca**尝试在堆上分配和返回一个空指针，如果不能分配的空间。 如果*大小*小于或等于 **_ALLOCA_S_THRESHOLD**，然后 **_malloca**如果空间不能则会生成尝试堆栈和堆栈溢出异常上要分配给分配。 堆栈溢出异常不是C++异常;这是结构化的异常。 而不是使用C++异常处理，则必须使用[结构化异常处理](../../cpp/structured-exception-handling-c-cpp.md)(SEH) 来捕获该异常。
 
 ## <a name="remarks"></a>备注
 

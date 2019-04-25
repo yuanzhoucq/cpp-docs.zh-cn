@@ -7,11 +7,11 @@ helpviewer_keywords:
 - expressions [C++], binary operators
 ms.assetid: 6dea3df4-a4bd-42c3-9807-4a27c120ac9a
 ms.openlocfilehash: d3a966a7922c1888defbebf970ac409872fe18ec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505116"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62154303"
 ---
 # <a name="expressions-with-binary-operators"></a>使用二元运算符的表达式
 
@@ -33,9 +33,9 @@ ms.locfileid: "50505116"
 
 - [移位运算符](../cpp/left-shift-and-right-shift-operators-input-and-output.md)
 
-   - 右移 (>>)
+   - 右移位 (>>)
 
-   - 左移 (<<)
+   - 左的移 (<<)
 
 - [关系运算符和相等运算符](../cpp/relational-operators-equal-and-equal.md)
 
@@ -45,7 +45,7 @@ ms.locfileid: "50505116"
 
    - 小于或等于 (\<=)
 
-   - 大于或等于 (>=)
+   - 大于或等于 (> =)
 
    - 等于 (==)
 
@@ -81,9 +81,9 @@ ms.locfileid: "50505116"
 
    - 左移赋值 (<\<=)
 
-   - 右移赋值 (>>=)
+   - 右移赋值 (>> =)
 
-   - 按位“与”赋值 (&=)
+   - 按位与赋值 (& =)
 
    - 按位“异或”赋值 (^=)
 
