@@ -19,16 +19,15 @@ helpviewer_keywords:
 - timer class
 ms.assetid: 4f4dea51-de9f-40f9-93f5-dd724c567b49
 ms.openlocfilehash: e36441f53c9b53c9826ee92b2892142a522d7243
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57298147"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62180116"
 ---
 # <a name="timer-class"></a>timer 类
 
-
-  `timer` 消息块是单目标的 `source_block`，能够在经过指定的时间段后或在特定时间间隔向其目标发送消息。
+`timer` 消息块是单目标的 `source_block`，能够在经过指定的时间段后或在特定时间间隔向其目标发送消息。
 
 ## <a name="syntax"></a>语法
 

@@ -1,16 +1,16 @@
 ---
-title: 标头文件 （c + +）
+title: 标头文件 (C++)
 ms.date: 04/20/2018
 helpviewer_keywords:
 - header files [C++]
 ms.openlocfilehash: ea163f4d47022d886e40a09c47c252ffa186aee0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588807"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62153603"
 ---
-# <a name="header-files-c"></a>标头文件 （c + +）
+# <a name="header-files-c"></a>标头文件 (C++)
 
 必须声明变量、 函数、 类等的程序元素的名称，然后才能使用。 例如，你不能只需编写`x = 42`而无需第一个声明 x。
 
@@ -21,7 +21,7 @@ x = 42; // use x
 
 声明会告知编译器是否是**int**、 **double**即**函数**、**类**或一些其他事情。  此外，每个名称必须声明 （直接或间接） 在每个.cpp 文件中使用它。 当编译的程序时，每个.cpp 文件单独编译到编译单元。 编译器并不知道哪些名称在其他编译单元中声明。 这意味着，如果你定义类或函数或全局变量，你必须提供在使用它的每个其他.cpp 文件中的该操作的声明。 该操作的每个声明中的所有文件必须完全相同。 当链接器尝试将所有编译单元都合并为单个程序时，略微不一致将导致错误或意外的行为。
 
-为了尽量减少出错的危险，c + + 已采用使用的约定*标头文件*包含声明。 在标头文件中，进行声明，然后使用 #include 指令中的每个.cpp 文件或其他标头文件所需的声明。 #Include 指令插入标头文件的副本直接在之前编译的.cpp 文件。
+若要最大程度减少可能出现的错误，C++已采用使用的约定*标头文件*包含声明。 在标头文件中，进行声明，然后使用 #include 指令中的每个.cpp 文件或其他标头文件所需的声明。 #Include 指令插入标头文件的副本直接在之前编译的.cpp 文件。
 
 ## <a name="example"></a>示例
 

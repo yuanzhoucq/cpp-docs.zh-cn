@@ -14,23 +14,23 @@ f1_keywords:
 - amp/Concurrency::tile_static_memory_fence
 ms.assetid: 2bef0985-cb90-4ece-90b9-66529aec73c9
 ms.openlocfilehash: 7baae51480c273ca023856253af7963ac83d7c92
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57284835"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62180383"
 ---
 # <a name="concurrency-namespace-functions-amp"></a>并发命名空间函数 (AMP)
 
 ||||
 |-|-|-|
 |[all_memory_fence](#all_memory_fence)|[amp_uninitialize](#amp_uninitialize)|[atomic_compare_exchange](#atomic_compare_exchange)|
-|[atomic_exchange 函数 (c + + AMP)](#atomic_exchange)|[atomic_fetch_add 函数 (c + + AMP)](#atomic_fetch_add)|[atomic_fetch_and 函数 (c + + AMP)](#atomic_fetch_and)|
+|[atomic_exchange 函数 (C++ a m P)](#atomic_exchange)|[atomic_fetch_add 函数 (C++ a m P)](#atomic_fetch_add)|[atomic_fetch_and 函数 (C++ a m P)](#atomic_fetch_and)|
 |[atomic_fetch_dec](#atomic_fetch_dec)|[atomic_fetch_inc](#atomic_fetch_inc)|[atomic_fetch_max](#atomic_fetch_max)|
-|[atomic_fetch_min](#atomic_fetch_min)|[atomic_fetch_or 函数 (c + + AMP)](#atomic_fetch_or)|[atomic_fetch_sub 函数 (c + + AMP)](#atomic_fetch_sub)|
-|[atomic_fetch_xor 函数 (c + + AMP)](#atomic_fetch_xor)|[copy](#copy)|[copy_async](#copy_async)|
+|[atomic_fetch_min](#atomic_fetch_min)|[atomic_fetch_or 函数 (C++ a m P)](#atomic_fetch_or)|[atomic_fetch_sub 函数 (C++ a m P)](#atomic_fetch_sub)|
+|[atomic_fetch_xor 函数 (C++ a m P)](#atomic_fetch_xor)|[copy](#copy)|[copy_async](#copy_async)|
 |[direct3d_abort](#direct3d_abort)|[direct3d_errorf](#direct3d_errorf)|[direct3d_printf](#direct3d_printf)|
-|[global_memory_fence](#global_memory_fence)|[parallel_for_each 函数 (c + + AMP)](#parallel_for_each)|[tile_static_memory_fence](#tile_static_memory_fence)|
+|[global_memory_fence](#global_memory_fence)|[parallel_for_each 函数 (C++ a m P)](#parallel_for_each)|[tile_static_memory_fence](#tile_static_memory_fence)|
 
 ##  <a name="all_memory_fence"></a>  all_memory_fence
 
@@ -47,7 +47,7 @@ inline void all_memory_fence(const tile_barrier& _Barrier) restrict(amp);
 
 ##  <a name="amp_uninitialize"></a>  amp_uninitialize
 
-取消初始化 c + + AMP 运行时。 它是合法的应用程序生命周期内多次调用此函数。 调用任何调用此函数的 c + + AMP API 后，将重新初始化 c + + AMP 运行时。 请注意，它是非法中对此函数的调用中使用 c + + AMP 对象这样做将导致未定义的行为。 此外，同时调用此函数和任何其他 AMP Api 是非法的并会导致未定义的行为。
+取消初始化C++AMP 运行时。 它是合法的应用程序生命周期内多次调用此函数。 调用任何C++调用此函数的 AMP API 后将重新初始化C++AMP 运行时。 请注意，您不能使用C++AMP 对象的每次调用此函数和这样做将导致未定义的行为。 此外，同时调用此函数和任何其他 AMP Api 是非法的并会导致未定义的行为。
 
 ```
 void __cdecl amp_uninitialize();
@@ -86,7 +86,7 @@ inline bool atomic_compare_exchange(
 
 **true**如果操作成功; 否则为**false**。
 
-##  <a name="atomic_exchange"></a>  atomic_exchange 函数 (c + + AMP)
+##  <a name="atomic_exchange"></a>  atomic_exchange 函数 (C++ a m P)
 
 像原子运算那样设置目标位置的值。
 
@@ -119,7 +119,7 @@ inline float atomic_exchange(
 
 目标位置的初始值。
 
-##  <a name="atomic_fetch_add"></a>  atomic_fetch_add 函数 (c + + AMP)
+##  <a name="atomic_fetch_add"></a>  atomic_fetch_add 函数 (C++ a m P)
 
 以原子方式将值添加到的内存位置的值。
 
@@ -147,7 +147,7 @@ inline unsigned int atomic_fetch_add(
 
 内存位置的初始值。
 
-##  <a name="atomic_fetch_and"></a>  atomic_fetch_and 函数 (c + + AMP)
+##  <a name="atomic_fetch_and"></a>  atomic_fetch_and 函数 (C++ a m P)
 
 以原子方式执行值和一个内存位置的值的按位 AND 运算。
 
@@ -270,7 +270,7 @@ inline unsigned int atomic_fetch_min(
 
 存储在指定的位置的原始值。
 
-##  <a name="atomic_fetch_or"></a>  atomic_fetch_or 函数 (c + + AMP)
+##  <a name="atomic_fetch_or"></a>  atomic_fetch_or 函数 (C++ a m P)
 
 通过一个值和一个内存位置的值在原子级别执行按位或运算。
 
@@ -298,7 +298,7 @@ inline unsigned int atomic_fetch_or(
 
 内存位置的初始值。
 
-##  <a name="atomic_fetch_sub"></a>  atomic_fetch_sub 函数 (c + + AMP)
+##  <a name="atomic_fetch_sub"></a>  atomic_fetch_sub 函数 (C++ a m P)
 
 以原子方式从减去的值的内存位置。
 
@@ -326,7 +326,7 @@ inline unsigned int atomic_fetch_sub(
 
 内存位置的初始值。
 
-##  <a name="atomic_fetch_xor"></a>  atomic_fetch_xor 函数 (c + + AMP)
+##  <a name="atomic_fetch_xor"></a>  atomic_fetch_xor 函数 (C++ a m P)
 
 以原子方式为 peforms 值和内存位置的按位 XOR 运算。
 
@@ -356,7 +356,7 @@ inline unsigned int atomic_fetch_xor(
 
 ##  <a name="copy"></a>  copy
 
-复制 c + + AMP 对象。 满足所有同步数据传输要求。 当在加速器上运行代码时，不能将数据复制。 此函数的一般形式为`copy(src, dest)`。
+副本C++AMP 对象。 满足所有同步数据传输要求。 当在加速器上运行代码时，不能将数据复制。 此函数的一般形式为`copy(src, dest)`。
 
 ```
 template <typename value_type, int _Rank>
@@ -453,7 +453,7 @@ void copy(
 
 ##  <a name="copy_async"></a>  copy_async
 
-复制 c + + AMP 对象并返回[completion_future](completion-future-class.md)可等待的对象。 当在加速器上运行代码时，不能将数据复制。  此函数的一般形式为`copy(src, dest)`。
+副本C++AMP 对象并返回[completion_future](completion-future-class.md)可等待的对象。 当在加速器上运行代码时，不能将数据复制。  此函数的一般形式为`copy(src, dest)`。
 
 ```
 template <typename value_type, int _Rank>
@@ -585,9 +585,9 @@ inline void global_memory_fence(const tile_barrier& _Barrier) restrict(amp);
 *_Barrier*<br/>
 Tile_barrier 对象
 
-##  <a name="parallel_for_each"></a>  parallel_for_each 函数 (c + + AMP)
+##  <a name="parallel_for_each"></a>  parallel_for_each 函数 (C++ a m P)
 
-计算域之间运行函数。 有关详细信息，请参阅[c + + AMP 概述](../../../parallel/amp/cpp-amp-overview.md)。
+计算域之间运行函数。 有关详细信息，请参阅[ C++ AMP 概述](../../../parallel/amp/cpp-amp-overview.md)。
 
 ```
 template <int _Rank, typename _Kernel_type>

@@ -31,11 +31,11 @@ helpviewer_keywords:
 - registering to be called on exit
 ms.assetid: 45743298-0e2f-46cf-966d-1ca44babb443
 ms.openlocfilehash: c190f777032904802f771bab9fc323ba305ff32e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50609595"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62156040"
 ---
 # <a name="onexit-onexitm"></a>_onexit、_onexit_m
 
@@ -54,7 +54,7 @@ _onexit_t_m _onexit_m(
 
 ### <a name="parameters"></a>参数
 
-*函数*<br/>
+*function*<br/>
 指向在退出时要调用的函数的指针。
 
 ## <a name="return-value"></a>返回值
@@ -122,7 +122,7 @@ int fn4()
 }
 ```
 
-### <a name="output"></a>输出
+### <a name="output"></a>Output
 
 ```Output
 This is executed first.
