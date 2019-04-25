@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Platform::OperationCanceledException
 ms.assetid: 5351bc20-5408-423a-8169-f09acc8a3fbb
 ms.openlocfilehash: f129c49077a5c6bde54c5afb0ede2cfd9adf9db2
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57747912"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62184075"
 ---
 # <a name="platformoperationcanceledexception-class"></a>Platform::OperationCanceledException 类
 
@@ -35,7 +35,7 @@ public ref class OperationCanceledException : COMException,    IException,    IP
 
 **支持的最低服务器：** Windows Server 2012
 
-**命名空间：** 平台
+**命名空间：** Platform
 
 **元数据：** platform.winmd
 

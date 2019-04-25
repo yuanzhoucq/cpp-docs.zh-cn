@@ -14,11 +14,11 @@ helpviewer_keywords:
 - CObject class [MFC], deriving from
 ms.assetid: 5ea4ea41-08b5-4bd8-b247-c5de8c152a27
 ms.openlocfilehash: 26fdab5165ca098c5d7813ebf44983c261094449
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328436"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62152054"
 ---
 # <a name="deriving-a-class-from-cobject"></a>从 CObject 派生类
 
@@ -47,13 +47,13 @@ ms.locfileid: "58328436"
 |使用宏|CObject::IsKindOf|CRuntimeClass::<br /><br /> CreateObject|CArchive::operator >><br /><br /> CArchive::operator <<|
 |----------------|-----------------------|--------------------------------------|-------------------------------------------------------|
 |基本`CObject`功能|否|否|否|
-|`DECLARE_DYNAMIC`|是|No|否|
+|`DECLARE_DYNAMIC`|是|否|否|
 |`DECLARE_DYNCREATE`|是|是|No|
 |`DECLARE_SERIAL`|是|是|是|
 
 #### <a name="to-use-basic-cobject-functionality"></a>若要使用基本 CObject 功能
 
-1. 使用普通的 c + + 语法来派生您的类从`CObject`(或从派生自的类`CObject`)。
+1. 使用普通C++语法来派生您的类从`CObject`(或从派生自的类`CObject`)。
 
    下面的示例显示了简单的情况下，从类派生`CObject`:
 

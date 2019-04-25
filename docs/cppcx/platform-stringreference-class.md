@@ -10,11 +10,11 @@ f1_keywords:
 - VCCORLIB/Platform::StringReference::GetString
 ms.assetid: 2d09c7ec-0f16-458e-83ed-7225a1b9221e
 ms.openlocfilehash: 7b6ab42dc630ce7e0014534064e8f1ce6da00857
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750918"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62182985"
 ---
 # <a name="platformstringreference-class"></a>Platform::StringReference 类
 
@@ -58,7 +58,7 @@ class StringReference
 
 **支持的最低服务器：** Windows Server 2012
 
-**命名空间：** 平台
+**命名空间：** Platform
 
 **标头：** vccorlib.h
 
@@ -148,7 +148,7 @@ StringReference& operator=(const ::default::char16* __strArg);
 
 ### <a name="remarks"></a>备注
 
-因为`StringReference`是标准 c + + 类而不是 ref 类，它不会出现在**对象浏览器**。
+因为`StringReference`是一种标准C++类并不是 ref 类，它不会出现在**对象浏览器**。
 
 ## <a name="operator-call"></a>  StringReference::operator() 运算符
 
@@ -163,8 +163,7 @@ __declspec(no_release_return) __declspec(no_refcount)
 
 ### <a name="return-value"></a>返回值
 
-
-  `Platform::String` 类型的对象的句柄。
+`Platform::String` 类型的对象的句柄。
 
 ## <a name="ctor"></a>  StringReference::StringReference 构造函数
 
@@ -188,8 +187,7 @@ StringReference(const ::default::char16* __strArg, size_t __lenArg);
 指向用于初始化新实例的 char16 值数组的指针。
 
 *__lenArg*<br/>
-
-  `__strArg` 中的元素数。
+`__strArg` 中的元素数。
 
 ### <a name="remarks"></a>备注
 

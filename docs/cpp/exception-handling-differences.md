@@ -1,5 +1,5 @@
 ---
-title: 处理 c + + 中的结构化的异常
+title: 处理中的结构化的异常C++
 ms.date: 08/14/2018
 helpviewer_keywords:
 - structured exception handling [C++], vs. C++ exception handling
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - wrapper classes [C++], C exception
 ms.assetid: f21d1944-4810-468e-b02a-9f77da4138c9
 ms.openlocfilehash: 2c4f1a8c3729e2b4d49a0152425e57717f7e9997
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50482844"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62154396"
 ---
-# <a name="handle-structured-exceptions-in-c"></a>处理 c + + 中的结构化的异常
+# <a name="handle-structured-exceptions-in-c"></a>处理中的结构化的异常C++
 
-C 之间的主要区别结构化异常处理 (SEH) 和 c + + 异常处理的方法是，c + + 异常处理模式处理的类型，而 C 结构化的异常处理模型处理异常的一种类型;具体而言，**无符号的 int**。即，C 异常由无符号整数值标识，而 C++ 异常由数据类型标识。 当在 C 中引发结构化的异常时，每个可能的处理程序执行的筛选器检查 C 异常上下文并确定是否接受该异常、 将其传递给其他处理，或将其忽略。 当 C++ 中引发了异常时，该异常可以是任何类型。
+C 之间的主要区别结构化异常处理 (SEH) 和C++，异常处理是指C++类型中处理的异常处理模型，而 C 结构化的异常处理模型的处理是一种类型; 的异常具体而言，**无符号的 int**。即，C 异常由无符号整数值标识，而 C++ 异常由数据类型标识。 当在 C 中引发结构化的异常时，每个可能的处理程序执行的筛选器检查 C 异常上下文并确定是否接受该异常、 将其传递给其他处理，或将其忽略。 当 C++ 中引发了异常时，该异常可以是任何类型。
 
-第二个区别是，C 结构化的异常处理模型被称为*异步*，因为次要的正常控制流发生的异常。 C + + 异常处理机制是完全*同步*，这意味着，会发生异常，仅在被引发。
+第二个区别是，C 结构化的异常处理模型被称为*异步*，因为次要的正常控制流发生的异常。 C++异常处理机制是完全*同步*，这意味着，会发生异常，仅在被引发。
 
-当你使用[/EHs 或 /EHsc](../build/reference/eh-exception-handling-model.md)编译器选项，没有 c + + 异常处理程序处理结构化异常。 仅可由处理这些异常 **__catch**结构化异常处理程序或 **__finally**结构化终止处理程序。 有关信息，请参阅[结构化异常处理 （C/c + +）](structured-exception-handling-c-cpp.md)。
+当你使用[/EHs 或 /EHsc](../build/reference/eh-exception-handling-model.md)编译器选项，则不C++异常处理程序处理结构化的异常。 仅可由处理这些异常 **__catch**结构化异常处理程序或 **__finally**结构化终止处理程序。 有关信息，请参阅[结构化异常处理 (C /C++)](structured-exception-handling-c-cpp.md)。
 
-下[/EHa](../build/reference/eh-exception-handling-model.md)编译器选项时，如果在 c + + 程序中引发了 C 异常，则它可以处理通过与其关联筛选器的结构化的异常处理程序或 c + +**捕获**两者中较处理程序，动态接近异常上下文。 例如，下面的 C++ 程序引发了 C 异常在 C++**重**上下文：
+下[/EHa](../build/reference/eh-exception-handling-model.md)编译器选项时，如果在引发 C 异常，则C++程序，它可以处理结构化的异常处理程序与其关联筛选器或通过C++**捕获**处理程序，无论是动态接近异常上下文。 例如，下面的 C++ 程序引发了 C 异常在 C++**重**上下文：
 
-## <a name="example---catch-a-c-exception-in-a-c-catch-block"></a>示例-在 c + + Catch C 异常 catch 块
+## <a name="example---catch-a-c-exception-in-a-c-catch-block"></a>示例-在 Catch C 异常C++catch 块
 
 ```cpp
 // exceptions_Exception_Handling_Differences.cpp
@@ -62,7 +62,7 @@ Caught a C exception.
 
 ## <a name="c-exception-wrapper-classes"></a>C 异常包装器类
 
-可以在类似上面的简单示例中，捕获的 C 异常只能由省略号 (**...**)**捕获**处理程序。 有关类型或异常性质的信息不传递给该处理程序。 尽管此方法有效，在某些情况下您可能想要定义两个异常处理模式之间进行转换，使每个 C 异常不与特定的类相关联。 为此，您可以定义 C 异常“包装器”类，可以使用该类或从中进行派生以将特定类类型特性化为 C 异常。 通过此操作，每个 C 异常可以单独处理由特定的 c + +**捕获**处理程序，而不是所有这些单个处理程序中。
+可以在类似上面的简单示例中，捕获的 C 异常只能由省略号 (**...**)**捕获**处理程序。 有关类型或异常性质的信息不传递给该处理程序。 尽管此方法有效，在某些情况下您可能想要定义两个异常处理模式之间进行转换，使每个 C 异常不与特定的类相关联。 为此，您可以定义 C 异常“包装器”类，可以使用该类或从中进行派生以将特定类类型特性化为 C 异常。 通过此操作，每个 C 异常可以单独处理由特定C++**捕获**处理程序，而不是所有这些单个处理程序中。
 
 您的包装器类可能有一个接口，该接口包含一些成员函数，用来确定异常的值以及访问 C 异常模型提供的扩展异常上下文信息。 您可能还需要定义默认构造函数和构造函数接受**无符号的 int**参数 （用于提供基础 C 异常表示形式），和一个按位复制构造函数。 下面是可能的 C 异常包装器类实现：
 
@@ -145,4 +145,4 @@ nSE = 0xc0000094
 
 ## <a name="see-also"></a>请参阅
 
-[混合使用 C （结构化） 和 c + + 异常](../cpp/mixing-c-structured-and-cpp-exceptions.md)
+[混合 C （结构化） 和C++异常](../cpp/mixing-c-structured-and-cpp-exceptions.md)

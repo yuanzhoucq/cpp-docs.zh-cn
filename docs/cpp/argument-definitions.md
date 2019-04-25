@@ -9,11 +9,11 @@ helpviewer_keywords:
 - argc argument
 ms.assetid: 6148cbf3-ebe8-44f2-b277-de4b723991c7
 ms.openlocfilehash: 92e213b5accbf8fd5f48ac2111a169e585d82a1d
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51328118"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62184433"
 ---
 # <a name="argument-definitions"></a>自变量定义
 
@@ -40,7 +40,7 @@ int wmain( int argc, wchar_t* argv[], wchar_t* envp[]);
 ## <a name="microsoft-specific"></a>Microsoft 专用
 
 *envp*<br/>
-*Envp*数组，它是在许多 UNIX 系统中的一个常见扩展，在 Microsoft c + + 中使用。 它是表示用户环境中的变量集的字符串的数组。 该数组由 NULL 项终止。 它可以声明为指向的指针的数组**char** (`char *envp[]`) 或作为指针到指向**char** (`char **envp`)。 如果程序使用`wmain`而不是`main`，使用**wchar_t**数据类型而非**char**。 环境块传递给`main`和`wmain`是当前环境的"冻结"副本。 如果随后更改通过调用环境`putenv`或`_wputenv`，在当前环境 (返回的`getenv`或`_wgetenv`并`_environ`或`_wenviron`变量) 将发生更改，但通过指向的块envp 不会更改。 请参阅[自定义命令行处理](../cpp/customizing-cpp-command-line-processing.md)有关取消环境处理的信息。 此自变量在 C 中是 ANSI 兼容的，但在 C++ 中不是这样。
+*Envp*在 Microsoft 中使用数组，它是在许多 UNIX 系统中的一个常见扩展， C++。 它是表示用户环境中的变量集的字符串的数组。 该数组由 NULL 项终止。 它可以声明为指向的指针的数组**char** (`char *envp[]`) 或作为指针到指向**char** (`char **envp`)。 如果程序使用`wmain`而不是`main`，使用**wchar_t**数据类型而非**char**。 环境块传递给`main`和`wmain`是当前环境的"冻结"副本。 如果随后更改通过调用环境`putenv`或`_wputenv`，在当前环境 (返回的`getenv`或`_wgetenv`并`_environ`或`_wenviron`变量) 将发生更改，但通过指向的块envp 不会更改。 请参阅[自定义命令行处理](../cpp/customizing-cpp-command-line-processing.md)有关取消环境处理的信息。 此参数在 C 中是 ANSI 兼容的，但在 C++ 中不是这样。
 
 **结束 Microsoft 专用**
 

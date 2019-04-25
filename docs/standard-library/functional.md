@@ -10,15 +10,15 @@ helpviewer_keywords:
 - functional header
 ms.assetid: 7dd463e8-a29f-49bc-aedd-8fa53b54bfbc
 ms.openlocfilehash: 317344db856a7a0568aca422ecfe8280b80db097
-ms.sourcegitcommit: 4299caac2dc9e806c74ac833d856a3838b0f52a1
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "57006664"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62159413"
 ---
 # <a name="ltfunctionalgt"></a>&lt;functional&gt;
 
-定义 c + + 标准库函数，用于帮助构造*函数对象*，也称为*函子*，及其绑定程序。 函数对象是用于定义 `operator()` 的类型的对象。 函数对象可以是函数指针，但该对象更常用于存储可在函数调用过程中访问的其他信息。
+定义C++标准库函数的帮助构造*函数对象*，也称为*函子*，及其绑定程序。 函数对象是用于定义 `operator()` 的类型的对象。 函数对象可以是函数指针，但该对象更常用于存储可在函数调用过程中访问的其他信息。
 
 ## <a name="syntax"></a>语法
 

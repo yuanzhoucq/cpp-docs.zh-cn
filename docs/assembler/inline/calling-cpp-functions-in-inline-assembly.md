@@ -10,11 +10,11 @@ helpviewer_keywords:
 - __asm keyword [C++], calling functions
 ms.assetid: 1f0d1eb3-54cf-45d5-838d-958188616b38
 ms.openlocfilehash: 666f7b2a59f0d48a14be54a439b6402f2a4d3128
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50458214"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62167265"
 ---
 # <a name="calling-c-functions-in-inline-assembly"></a>在内联汇编程序内调用 C++ 函数
 
@@ -22,7 +22,7 @@ ms.locfileid: "50458214"
 
 `__asm` 块只能调用未重载的全局 C++ 函数。 如果调用重载的全局 C++ 函数或 C++ 成员函数，则编译器会发出错误。
 
-您还可以调用任何函数使用声明**extern"C"** 链接。 这允许`__asm`块内调用 C 库函数，因为所有标准标头文件都声明库函数具有 c + + 程序**extern"C"** 链接。
+您还可以调用任何函数使用声明**extern"C"** 链接。 这允许`__asm`块内C++程序以调用 C 库函数，因为所有标准标头文件都声明库函数具有**extern"C"** 链接。
 
 **结束 Microsoft 专用**
 

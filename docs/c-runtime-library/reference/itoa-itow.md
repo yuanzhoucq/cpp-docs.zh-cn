@@ -100,11 +100,11 @@ helpviewer_keywords:
 - _itoa function
 ms.assetid: 46592a00-77bb-4e73-98c0-bf629d96cea6
 ms.openlocfilehash: 016f3474345b623415be9fe33556bb9f466542ad
-ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57210531"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157365"
 ---
 # <a name="itoa-itoa-ltoa-ltoa-ultoa-ultoa-i64toa-ui64toa-itow-ltow-ultow-i64tow-ui64tow"></a>itoa、 _itoa、 ltoa、 _ltoa、 ultoa、 _ultoa、 _i64toa、 _ui64toa、 _itow、 _ltow、 _ultow、 _i64tow、 _ui64tow
 
@@ -175,7 +175,7 @@ wchar_t * _ui64tow( unsigned long long value, wchar_t (&buffer)[size],
 若要使用的转换的基*值*，它必须是 2 36 的范围中。
 
 *size*<br/>
-中的字符类型的单位的缓冲区的长度。 此参数来推断*缓冲区*c + + 中的参数。
+中的字符类型的单位的缓冲区的长度。 此参数来推断*缓冲区*中的参数C++。
 
 ## <a name="return-value"></a>返回值
 
@@ -197,9 +197,9 @@ wchar_t * _ui64tow( unsigned long long value, wchar_t (&buffer)[size],
 #include <stdlib.h>
 ```
 
-在 c + +，这些函数具有模板重载，可调用它们更安全的对应项。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
+在C++，这些函数具有模板重载，调用其更安全的版本。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 
-Posix 名称**itoa**， **ltoa**，并**ultoa**作为别名存在 **_itoa**， **_ltoa**，和 **_ultoa**函数。 Posix 名称已弃用，因为它们不遵循特定于实现的函数名称约定的 ISO c。默认情况下，这些函数会导致弃用警告[C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md):**此项的 POSIX 名称已弃用。请改用与 ISO C 和 c + + 一致的名称：** *new_name*。 我们建议你更改源代码才能使用这些函数的更安全版本 **_itoa_s**， **_ltoa_s**，或 **_ultoa_s**。 有关详细信息，请参阅[_itoa_s、 _itow_s 函数](itoa-s-itow-s.md)。
+Posix 名称**itoa**， **ltoa**，并**ultoa**作为别名存在 **_itoa**， **_ltoa**，和 **_ultoa**函数。 Posix 名称已弃用，因为它们不遵循特定于实现的函数名称约定的 ISO c。默认情况下，这些函数会导致弃用警告[C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md):**此项的 POSIX 名称已弃用。请改用 ISO C 和C++一致的名称：** *new_name*。 我们建议你更改源代码才能使用这些函数的更安全版本 **_itoa_s**， **_ltoa_s**，或 **_ultoa_s**。 有关详细信息，请参阅[_itoa_s、 _itow_s 函数](itoa-s-itow-s.md)。
 
 源代码可移植性，您可能想要保留在代码中的 Posix 名称。 若要使用这些功能而无需弃用警告，可以同时定义 **_CRT_NONSTDC_NO_WARNINGS**并 **_CRT_SECURE_NO_WARNINGS**包含任何 CRT 标头之前预处理器宏。 你可以执行此操作开发人员命令提示中的命令行通过添加 **/D_CRT_SECURE_NO_WARNINGS**并 **/D_CRT_NONSTDC_NO_WARNINGS**编译器选项，到**cl**命令。 否则，在源文件中定义的宏。 如果使用预编译标头，定义顶部预编译标头的宏包括文件中，通常 stdafx.h。 若要在源代码中定义的宏，请使用 **#define**指令之前包括任何 CRT 标头，如本例所示：
 
