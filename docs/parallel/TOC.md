@@ -16,7 +16,7 @@
 ### [线程本地存储 (TLS)](thread-local-storage-tls.md)
 ## [使用 C++ 和 MFC 进行多线程编程](multithreading-with-cpp-and-mfc.md)
 ### [多线程处理：创建用户界面线程](multithreading-creating-user-interface-threads.md)
-### [多线程处理：创建辅助线程](multithreading-creating-worker-threads.md)
+### [多线程处理：创建工作线程](multithreading-creating-worker-threads.md)
 ### [多线程处理：何时使用同步类](multithreading-when-to-use-the-synchronization-classes.md)
 ### [多线程处理：如何使用同步类](multithreading-how-to-use-the-synchronization-classes.md)
 ### [多线程处理：终止线程](multithreading-terminating-threads.md)

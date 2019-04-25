@@ -6,11 +6,11 @@ ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
 author: mikeblome
 ms.author: mblome
 ms.openlocfilehash: 493b96a8ce3359cc18287adbae8cbd6c374671ec
-ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58899403"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59779481"
 ---
 <!--NOTE all https:// links to docs.microsoft.com need to be converted to site-relative links prior to publishing-->
 
@@ -58,7 +58,7 @@ Visual Studio 2019 向 Microsoft C++ 环境引入了许多更新和修补程序�
 
 - 添加了对 OpenMP SIMD 矢量化的基本支持。 可以使用新的 CL 开关 `-openmp:experimental` 启用它。 此选项可能使带 `#pragma omp simd` 注释的循环被矢量化。 无法保证矢量化，已注释但未矢量化的循环将收到系统警告。 不支持 SIMD 子句，只需将其忽略并报告警告。
 
-- 添加了一个新的内联命令行开关 `-Ob3`，它是 `-Ob2` 的更高版本。 `-O2` （优化速度二进制）仍默认为 `-Ob2`。 如果发现编译器内联不足，请考虑传递 `-O2 -Ob3`。
+- 添加了一个新的内联命令行开关 `-Ob3`，它是 `-Ob2` 的更高版本。 `-O2`（优化二进制以提高速度）仍默认指代 `-Ob2`。 如果发现编译器内联不足，请考虑传递 `-O2 -Ob3`。
 
 - 为了支持循环（包含对数学库函数的调用和整数除法等某些其他操作）的手动矢量化，添加了对短向量数学库 (SVML) 内部函数的支持。 这些函数计算 128 位、256 位或 512 位的向量等效项。 有关支持的函数的定义，请参阅 [Intel 内部函数指南](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#!=undefined&techs=SVML)。
 

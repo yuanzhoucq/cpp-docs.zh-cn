@@ -3,10 +3,10 @@ title: Visual C++ 移植和升级指南
 ms.date: 09/18/2018
 ms.assetid: f5fbcc3d-aa72-41a6-ad9a-a706af2166fb
 ms.openlocfilehash: 8798d8b3da5a91adfc6f77912d4f34bf62549f54
-ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58898786"
 ---
 # <a name="visual-c-porting-and-upgrading-guide"></a>Visual C++ 移植和升级指南
@@ -76,15 +76,15 @@ Visual Studio 中的生成系统和项目文件格式从 Visual Studio 2008 及�
 |Title|说明|
 |-----------|-----------------|
 |[从 Visual C++ 早期版本升级项目](upgrading-projects-from-earlier-versions-of-visual-cpp.md)|讨论如何使用在早期版本的 Visual C++ 中创建的项目。|
-|[Visual Studio 中 C++ 编译器的新增功能](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)|当前版本 Visual Studio 的 IDE 和工具更改|
+|[Visual Studio 中的 C++ 编译器新变化](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)|当前版本 Visual Studio 的 IDE 和工具更改|
 |[Visual Studio 中的 C++ 符合性改进](../overview/cpp-conformance-improvements.md)|从 Visual Studio 2015 到 Visual Studio 的标准符合性改进|
 |[Visual C++ 更改历史记录（2003 - 2015）](visual-cpp-change-history-2003-2015.md)|导致代码可能需要更改的 Visual C++ 库和生成工具中的所有更改的列表（从 Visual Studio 2003 到 Visual Studio 2015）。|
-|[Visual C++ 新增功能 (2003 - 2015)](visual-cpp-what-s-new-2003-through-2015.md)|从 Visual Studio 2003 到 Visual Studio 2015 的所有 Visual C++“新增功能”信息。|
+|[Visual C++ 新增功能（2003 - 2015）](visual-cpp-what-s-new-2003-through-2015.md)|从 Visual Studio 2003 到 Visual Studio 2015 的所有 Visual C++“新增功能”信息。|
 |[移植第三方库](porting-third-party-libraries.md)|如何使用 **vcpkg** 命令行工具将较旧的开源库移植到使用较新的 Visual C++ 工具集编译的版本。|
 |[移植和升级：示例和案例研究](porting-and-upgrading-examples-and-case-studies.md)|本部分中，我们移植和升级了多个示例和应用程序并讨论了体验和结果。 你可能会发现阅读这些内容会使你了解移植和升级过程中所涉及的内容。 在整个过程中，我们讨论了升级所用的提示和技巧，并演示如何修复特定错误。|
 |[移植到通用 Windows 平台](porting-to-the-universal-windows-platform-cpp.md)|包含有关移植代码到 Windows 10 的信息|
 |[Visual C++ 简介（针对 UNIX 用户）](introduction-to-visual-cpp-for-unix-users.md)|为不熟悉 Visual C++ 并想要有效率的使用它的 UNIX 用户提供信息。|
-|[从 UNIX 到 Win32 的迁移](porting-from-unix-to-win32.md)|讨论用于将 UNIX 应用程序迁移到 Windows 的选项。|
+|[从 UNIX 移植到 Win32](porting-from-unix-to-win32.md)|讨论用于将 UNIX 应用程序迁移到 Windows 的选项。|
 
 ## <a name="see-also"></a>请参阅
 
