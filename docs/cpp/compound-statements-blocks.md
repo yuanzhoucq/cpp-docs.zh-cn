@@ -9,11 +9,11 @@ helpviewer_keywords:
 - compound statements
 ms.assetid: 23855939-7430-498e-8936-0c70055ea701
 ms.openlocfilehash: 6aef2a0b5716ab501fabe80f0dda15080abe3ff5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50591781"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62154859"
 ---
 # <a name="compound-statements-blocks"></a>复合语句（块）
 

@@ -1,5 +1,5 @@
 ---
-title: TN071：MFC IOleCommandTarget 实现
+title: TN071:IOleCommandTarget 实现
 ms.date: 06/28/2018
 f1_keywords:
 - IOleCommandTarget
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - IOleCommandTarget interface [MFC]
 ms.assetid: 3eef571e-6357-444d-adbb-6f734a0c3161
 ms.openlocfilehash: dca1183a17fe8f3022f517d1ad0c3932ea272417
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50522221"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62167993"
 ---
-# <a name="tn071-mfc-iolecommandtarget-implementation"></a>TN071：MFC IOleCommandTarget 实现
+# <a name="tn071-mfc-iolecommandtarget-implementation"></a>TN071:IOleCommandTarget 实现
 
 > [!NOTE]
 > 以下技术说明在首次包括在联机文档中后未更新。 因此，某些过程和主题可能已过时或不正确。 要获得最新信息，建议你在联机文档索引中搜索热点话题。
@@ -23,7 +23,7 @@ ms.locfileid: "50522221"
 
 `IOleCommandTarget` 客户端使用它调用的服务器上的方法是一个类似于自动化的接口。 但是，使用`IOleCommandTarget`将保存通过自动化接口进行调用，因为程序员无需使用高昂的开销`Invoke`方法的`IDispatch`。
 
-在 MFC 中，`IOleCommandTarget`活动文档服务器使用接口以允许活动文档容器要调度到服务器的命令。 活动文档服务器类， `CDocObjectServerItem`，使用 MFC 接口映射 (请参阅[TN038: MFC/OLE IUnknown 实现](../mfc/tn038-mfc-ole-iunknown-implementation.md)) 来实现`IOleCommandTarget`接口。
+在 MFC 中，`IOleCommandTarget`活动文档服务器使用接口以允许活动文档容器要调度到服务器的命令。 活动文档服务器类， `CDocObjectServerItem`，使用 MFC 接口映射 (请参阅[TN038:MFC/OLE IUnknown 实现](../mfc/tn038-mfc-ole-iunknown-implementation.md)) 来实现`IOleCommandTarget`接口。
 
 `IOleCommandTarget` 此外实现在`COleFrameHook`类。 `COleFrameHook` 是一个未记录的 MFC 类，实现就地编辑容器的框架窗口功能。 `COleFrameHook` 此外使用 MFC 接口映射实现`IOleCommandTarget`接口。 `COleFrameHook`实现`IOleCommandTarget`OLE 将命令转发给`COleDocObjectItem`-派生的活动文档容器。 这样，任何 MFC 活动文档容器中包含的活动文档服务器接收消息。
 
@@ -49,7 +49,7 @@ DECLARE_OLECMD_MAP ()
 BEGIN_OLECMD_MAP(theClass, baseClass)
 ```
 
-*类*<br/>
+*theClass*<br/>
 包含命令映射的类的名称。
 
 *baseClass*<br/>

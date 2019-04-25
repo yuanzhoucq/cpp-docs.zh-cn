@@ -1,6 +1,6 @@
 ---
 title: index 类
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - AMP/index
 - AMP/Concurrency::index::index
@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - index structure
 ms.assetid: cbe79b08-0ba7-474c-9828-f1a71da39eb3
-ms.openlocfilehash: 054db83e4d8e140af37dcff9a7664ffdf7902325
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 5226440e49aab5766fc7992e0651e2b5ee5d4981
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57284640"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62180227"
 ---
 # <a name="index-class"></a>index 类
 
@@ -37,14 +37,14 @@ class index;
 
 |名称|描述|
 |----------|-----------------|
-|[索引构造函数](#ctor)|初始化 `index` 类的新实例。|
+|[索引构造函数](#index_ctor)|初始化 `index` 类的新实例。|
 
 ### <a name="public-operators"></a>公共运算符
 
 |名称|描述|
 |----------|-----------------|
 |[operator--](#operator--)|递减的每个元素`index`对象。|
-|[operator(mod)=](#operator_mod_eq)|计算的每个元素的模数 （余数）`index`对象时该元素除以一个数字。|
+|[operator%=](#operator_mod_eq)|计算的每个元素的模数 （余数）`index`对象时该元素除以一个数字。|
 |[operator*=](#operator_star_eq)|每个元素乘以`index`由许多对象。|
 |[operator/=](#operator_div_eq)|每个元素除以`index`由许多对象。|
 |[index::operator\[\]](#operator_at)|返回位于指定索引处的元素。|
@@ -55,7 +55,7 @@ class index;
 
 ### <a name="public-constants"></a>公共常量
 
-|name|描述|
+|名称|描述|
 |----------|-----------------|
 |[rank 常量](#rank)|将存储的秩`index`对象。|
 
@@ -139,7 +139,7 @@ index operator--(
 
 针对前缀运算符，该索引对象 (* 这)。 针对后缀运算符，新的索引对象。
 
-## <a name="operator_mod_eq"></a>  operator(mod)=
+## <a name="operator_mod_eq"></a>  operator%=
 
 该元素除以指定数目时将计算索引对象的每个元素的模数 （余数）。
 

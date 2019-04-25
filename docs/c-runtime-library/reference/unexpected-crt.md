@@ -21,11 +21,11 @@ helpviewer_keywords:
 - unexpected function
 ms.assetid: 2f873763-15ad-4556-a924-dcf28f2b52b4
 ms.openlocfilehash: 78538c0a10e183e72c742b041b297275c0859a03
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534013"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62155480"
 ---
 # <a name="unexpected-crt"></a>unexpected (CRT)
 
@@ -39,7 +39,7 @@ void unexpected( void );
 
 ## <a name="remarks"></a>备注
 
-**意外**c + + 异常处理的当前实现中未使用例程。 **意外**调用**终止**默认情况下。 您可以更改此默认行为： 编写自定义终止函数并调用**set_unexpected**与作为其参数函数的名称。 **意外**调用的最后一个函数的参数被当作**set_unexpected**。
+**意外**例程的当前实现中未使用C++异常处理。 **意外**调用**终止**默认情况下。 您可以更改此默认行为： 编写自定义终止函数并调用**set_unexpected**与作为其参数函数的名称。 **意外**调用的最后一个函数的参数被当作**set_unexpected**。
 
 ## <a name="requirements"></a>要求
 

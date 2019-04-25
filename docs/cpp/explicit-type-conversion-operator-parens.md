@@ -9,11 +9,11 @@ helpviewer_keywords:
 - type conversion [C++], explicit conversions
 ms.assetid: 54272006-5ffb-45ed-8283-27152ab97529
 ms.openlocfilehash: 9dc9440db9ea1ff7285ff9b682f6be9900c2a1ff
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50527694"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62184308"
 ---
 # <a name="explicit-type-conversion-operator-"></a>显式类型转换运算符：()
 
@@ -81,7 +81,7 @@ int main()
 }
 ```
 
-## <a name="output"></a>输出
+## <a name="output"></a>Output
 
 ```Output
 x = 20, y = 10
@@ -103,7 +103,7 @@ d = float( i );
 d = (float)i;
 ```
 
-当从单个值转换时，强制转换和函数样式转换都有相同的结果。 但是，在函数样式语法中，可以为转换指定多个参数。 此差异对用户定义的类型非常重要。 请考虑 `Point` 类及其转换：
+当从单个值转换时，强制转换和函数样式转换都有相同的结果。 但是，在函数样式语法中，可以为转换指定多个自变量。 此差异对用户定义的类型非常重要。 请考虑 `Point` 类及其转换：
 
 ```cpp
 struct Point

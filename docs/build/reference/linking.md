@@ -3,15 +3,15 @@ title: MSVC 链接器引用
 ms.date: 12/10/2018
 ms.assetid: bb736587-d13b-4f3c-8982-3cc2c015c59c
 ms.openlocfilehash: 3a9eebef0a264b0131311b5ca96011a4d56264a1
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57820372"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62176624"
 ---
 # <a name="linking"></a>链接
 
-在 c + + 项目中，*链接*编译器已将源代码编译到对象文件 (*.obj) 后，执行步骤。 链接器 (link.exe) 将对象文件合并到单个可执行文件。 
+在C++项目中，*链接*编译器已将源代码编译到对象文件 (*.obj) 后，执行步骤。 链接器 (link.exe) 将对象文件合并到单个可执行文件。 
 
 内部或外部 Visual Studio，可以设置链接器选项。 通过右键单击项目节点，在 Visual Studio 中，访问链接器选项**解决方案资源管理器**，然后选择**属性**显示属性页。 选择**链接器**在左窗格中展开节点，并查看所有选项。 
 
@@ -83,7 +83,7 @@ LINK 工具使用以下环境变量：
 
 ## <a name="see-also"></a>请参阅
 
-[C/c + + 生成参考](c-cpp-building-reference.md)
+[C /C++生成参考](c-cpp-building-reference.md)
 [MSVC 链接器选项](linker-options.md)
 [模块定义 (.def) 文件](module-definition-dot-def-files.md)
-[的链接器支持延迟加载 Dll](linker-support-for-delay-loaded-dlls.md)
+[链接器支持延迟加载 Dll 的](linker-support-for-delay-loaded-dlls.md)

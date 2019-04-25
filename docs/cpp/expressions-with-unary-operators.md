@@ -7,11 +7,11 @@ helpviewer_keywords:
 - expressions [C++], operators
 ms.assetid: 1217685b-b85d-4b48-9ff4-d90f56a26c1b
 ms.openlocfilehash: a13b86755a5e309a51a0e2e14faa1157b7e95ea0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559045"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62183865"
 ---
 # <a name="expressions-with-unary-operators"></a>使用一元运算符的表达式
 
@@ -43,7 +43,7 @@ ms.locfileid: "50559045"
 
 - [new 运算符](../cpp/new-operator-cpp.md)
 
-- [delete 运算符](../cpp/delete-operator-cpp.md)
+- [delete operator](../cpp/delete-operator-cpp.md)
 
 这些运算符具有从右向左的关联性。 一元表达式通常涉及后缀或主表达式前面的语法。
 
@@ -51,21 +51,21 @@ ms.locfileid: "50559045"
 
 - *postfix-expression*
 
-- `++` *一元表达式*
+- `++` *unary-expression*
 
-- `--` *一元表达式*
+- `--` *unary-expression*
 
-- *一元运算符**强制转换表达式*
+- *unary-operator* *cast-expression*
 
-- **sizeof** *一元表达式*
+- **sizeof** *unary-expression*
 
-- `sizeof(` *类型名称* `)`
+- `sizeof(` *type-name* `)`
 
 - `decltype(` *表达式* `)`
 
-- *分配表达式*
+- *allocation-expression*
 
-- *解除分配表达式*
+- *deallocation-expression*
 
 任何*后缀表达式*被视为*一元表达式*，并且因为任何主表达式被视为*后缀表达式*，任何主表达式是被视为*一元表达式*还。 有关详细信息，请参阅[后缀表达式](../cpp/postfix-expressions.md)并[主表达式](../cpp/primary-expressions.md)。
 

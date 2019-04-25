@@ -3,11 +3,11 @@ title: 动态布局
 ms.date: 11/19/2018
 ms.assetid: 8598cfb2-c8d4-4f5a-bf2b-59dc4653e042
 ms.openlocfilehash: 396aad5b33a00021ddb5c1143c1d15c130e97eaa
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175678"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62175265"
 ---
 # <a name="dynamic-layout"></a>动态布局
 
@@ -61,7 +61,7 @@ ms.locfileid: "52175678"
     CMFCDynamicLayout* dynamicLayout = pDialog->GetDynamicLayout();
     ```
 
-1. 对于你想要添加动态行为的第一个控件，使用静态方法的动态布局类上创建[MoveSettings](../mfc/reference/cmfcdynamiclayout-class.md#movesettings_structure)控件的调整的方式进行编码的结构。 执行此操作通过首先选择适当的静态方法： [cmfcdynamiclayout:: Movehorizontal](../mfc/reference/cmfcdynamiclayout-class.md#movehorizontal)， [cmfcdynamiclayout:: Movevertical](../mfc/reference/cmfcdynamiclayout-class.md#movevertical)， [cmfcdynamiclayout:: Movenone](../mfc/reference/cmfcdynamiclayout-class.md#movenone)，或[cmfcdynamiclayout:: Movehorizontalandvertical](../mfc/reference/cmfcdynamiclayout-class.md#movehorizontalandvertical)。 对移动的水平和/或垂直特性传入一个百分比。 这些静态方法都将返回新创建的 MoveSettings 对象，你可以使用该对象来指定控件的移动行为。
+1. 对于你想要添加动态行为的第一个控件，使用静态方法的动态布局类上创建[MoveSettings](../mfc/reference/cmfcdynamiclayout-class.md#movesettings_structure)控件的调整的方式进行编码的结构。 通过首先选择适当的静态方法执行此操作：[Cmfcdynamiclayout:: Movehorizontal](../mfc/reference/cmfcdynamiclayout-class.md#movehorizontal)， [cmfcdynamiclayout:: Movevertical](../mfc/reference/cmfcdynamiclayout-class.md#movevertical)， [cmfcdynamiclayout:: Movenone](../mfc/reference/cmfcdynamiclayout-class.md#movenone)，或[CMFCDynamicLayout::MoveHorizontalAndVertical](../mfc/reference/cmfcdynamiclayout-class.md#movehorizontalandvertical)。 对移动的水平和/或垂直特性传入一个百分比。 这些静态方法都将返回新创建的 MoveSettings 对象，你可以使用该对象来指定控件的移动行为。
 
    记住，100 表示完全根据该对话框更改的大小进行移动，这会导致控件的边缘与新边框保持固定的距离。
 
@@ -147,4 +147,4 @@ ms.locfileid: "52175678"
 [控件类](../mfc/control-classes.md)<br/>
 [对话框类](../mfc/dialog-box-classes.md)<br/>
 [对话框编辑器](../windows/dialog-editor.md)<br/>
-[在 Visual c + + 2015年中的 mfc 动态对话框布局](https://mariusbancila.ro/blog/2015/07/27/dynamic-dialog-layout-for-mfc-in-visual-c-2015/)
+[对于视觉对象中的 MFC 动态对话框布局C++2015年](https://mariusbancila.ro/blog/2015/07/27/dynamic-dialog-layout-for-mfc-in-visual-c-2015/)

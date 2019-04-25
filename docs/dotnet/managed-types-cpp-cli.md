@@ -18,15 +18,15 @@ helpviewer_keywords:
 - compatibility, between assemblies
 ms.assetid: 679b8ed3-d966-4a0c-b627-2a3f3ec96b74
 ms.openlocfilehash: b91918d526d83d4cf47436d02b7c67038576bafb
-ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58356174"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62152758"
 ---
 # <a name="managed-types-ccli"></a>托管类型 (C++/CLI)
 
-Visual c + + 允许对通过托管类型，为公共语言运行时功能提供支持，同时受影响的优点和限制的运行时的.NET 功能的访问。
+VisualC++允许通过托管类型，为公共语言运行时功能提供支持，同时受影响的优点和限制的运行时的.NET 功能的访问。
 
 ## <a name="main_functions"></a> 托管的类型和 main 函数
 
@@ -40,11 +40,11 @@ Visual c + + 允许对通过托管类型，为公共语言运行时功能提供�
 int main(int, char*[], char*[]) {}
 ```
 
-## <a name="dotnet"></a> 对应于 c + + 本机类型的.NET framework
+## <a name="dotnet"></a> 对应于.NET frameworkC++的本机类型
 
-下表显示了内置的 Visual c + + 类型，它们是预定义类型的别名的关键字在**系统**命名空间。
+下表显示了内置的视觉对象的关键字C++类型，它们是预定义类型的别名中**系统**命名空间。
 
-|Visual c + + 类型|.NET Framework 类型|
+|VisualC++类型|.NET Framework 类型|
 |-----------------------|-------------------------|
 |**void**|<xref:System.Void?displayProperty=nameWithType>|
 |**bool**|<xref:System.Boolean?displayProperty=nameWithType>|
@@ -114,7 +114,7 @@ int main() {
 }
 ```
 
-### <a name="output"></a>输出
+### <a name="output"></a>Output
 
 ```Output
 S.i = 5
@@ -129,7 +129,7 @@ S.i = 11
 
 ## <a name="test_equality"></a> 操作说明：确定相等性的测试
 
-在下面的示例中，使用 Managed Extensions for c + + 的相等性测试基于句柄的引用。
+在以下示例中，为确定相等性测试，使用托管扩展C++基于句柄的引用。
 
 ### <a name="example"></a>示例
 

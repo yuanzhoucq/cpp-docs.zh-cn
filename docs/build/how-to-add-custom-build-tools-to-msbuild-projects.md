@@ -7,11 +7,11 @@ helpviewer_keywords:
 - 'msbuild (c++), howto: add custom build tools'
 ms.assetid: de03899a-371d-4396-9bf9-34f45a65e909
 ms.openlocfilehash: 05f160e650c0dd717d7ce0f29259f866d751fdba
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57815263"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62188894"
 ---
 # <a name="how-to-add-custom-build-tools-to-msbuild-projects"></a>如何：向 MSBuild 项目添加自定义生成工具
 
@@ -19,7 +19,7 @@ ms.locfileid: "57815263"
 
 对于特定的文件，请指定要执行的项目文件 (.vcxproj) 命令行中，任何其他输入或输出文件和要显示的消息中。 如果**MSBuild**确定输出文件已过期的相对于输入文件而言，它将显示该消息并执行命令行工具。
 
-若要指定自定义生成工具的执行时，使用一个或两个`CustomBuildBeforeTargets`和`CustomBuildAfterTargets`项目文件中的 XML 元素。 例如，可以指定自定义生成工具运行之后 MIDL 编译器和 C/c + + 编译器之前。 指定`CustomBuildBeforeTargets`元素来执行该工具之前运行的特定目标;`CustomBuildAfterTargets`元素后要执行该工具的特定目标; 或这两个元素执行的两个目标之间运行该工具。 如果指定两个元素中，将在其默认位置，即之前执行自定义生成工具**MIDL**目标。
+若要指定自定义生成工具的执行时，使用一个或两个`CustomBuildBeforeTargets`和`CustomBuildAfterTargets`项目文件中的 XML 元素。 例如，可以指定自定义生成工具运行之后 MIDL 编译器和 C 之前 /C++编译器。 指定`CustomBuildBeforeTargets`元素来执行该工具之前运行的特定目标;`CustomBuildAfterTargets`元素后要执行该工具的特定目标; 或这两个元素执行的两个目标之间运行该工具。 如果指定两个元素中，将在其默认位置，即之前执行自定义生成工具**MIDL**目标。
 
 自定义生成工具和自定义生成步骤共享中指定的信息`CustomBuildBeforeTargets`和`CustomBuildAfterTargets`XML 元素。 在项目文件中指定这些目标一次。
 

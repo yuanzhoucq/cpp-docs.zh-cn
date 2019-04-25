@@ -8,17 +8,17 @@ helpviewer_keywords:
 - THROW_LAST macro [MFC]
 ms.assetid: 3aa20d8c-229e-449c-995c-ab879eac84bc
 ms.openlocfilehash: fb51ad91e001f0ed153bf4fdb5aa598ab5ba5042
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57291218"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62173258"
 ---
 # <a name="exceptions-changes-to-exception-macros-in-version-30"></a>异常:对异常宏的修改版本 3.0 中的更改
 
 这是一个高级的主题。
 
-在 MFC 3.0 版及更高版本中，已更改的异常处理宏以使用 c + + 异常。 本文介绍这些更改如何影响使用宏的现有代码的行为。
+在 MFC 3.0 版及更高版本中，已更改了异常处理宏以使用C++异常。 本文介绍这些更改如何影响使用宏的现有代码的行为。
 
 本文介绍了以下主题：
 
@@ -28,7 +28,7 @@ ms.locfileid: "57291218"
 
 ##  <a name="_core_exception_types_and_the_catch_macro"></a> 异常类型和 CATCH 宏
 
-在早期版本的 MFC 中，**捕获**宏使用 MFC 运行时类型信息以确定异常的类型; 异常的类型确定，换而言之，在 catch 站点。 使用 c + + 异常，但是，异常的类型是始终在确定的引发站点由引发的异常对象类型。 这将导致不兼容性的情况很少而引发的对象的指针的类型不同于引发的对象的类型。
+在早期版本的 MFC 中，**捕获**宏使用 MFC 运行时类型信息以确定异常的类型; 异常的类型确定，换而言之，在 catch 站点。 使用C++异常，但是，异常的类型始终由 throw 站点上引发的异常对象的类型。 这将导致不兼容性的情况很少而引发的对象的指针的类型不同于引发的对象的类型。
 
 下面的示例演示了 MFC 3.0 版及更早版本之间的这种差异的结果：
 
@@ -42,7 +42,7 @@ ms.locfileid: "57291218"
 
 [!code-cpp[NVC_MFCExceptions#20](../mfc/codesnippet/cpp/exceptions-changes-to-exception-macros-in-version-3-0_3.cpp)]
 
-为 true，第一个 catch 块捕获异常。 在版本 3.0 中，使用 c + + 异常来实现许多异常处理宏，第二个 catch 块匹配引发`CException`。
+为 true，第一个 catch 块捕获异常。 在版本 3.0 中，使用C++异常来实现异常处理宏，第二个 catch 块的许多匹配引发`CException`。
 
 此类代码并不常见。 它通常会显示在异常对象传递给另一个函数接受泛型`CException*`、 执行"预 throw"处理，并最后引发异常。
 

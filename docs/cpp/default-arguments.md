@@ -11,11 +11,11 @@ helpviewer_keywords:
 - defaults [C++], arguments
 ms.assetid: d32cf516-05cb-4d4d-b169-92f5649fdfa2
 ms.openlocfilehash: 5ffc0301e7a89a379a2ea1eda9a113276df7a88e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528916"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62154511"
 ---
 # <a name="default-arguments"></a>默认自变量
 
@@ -81,7 +81,7 @@ print( d, 0 ); // Override default argument to achieve other
 
 使用默认参数时，请注意以下几点：
 
-- 默认自变量仅在其中省略了尾随自变量的函数调用中使用 - 它们必须是最后的自变量。 因此，以下代码是非法的：
+- 默认参数仅在其中省略了尾随参数的函数调用中使用 - 它们必须是最后的参数。 因此，以下代码是非法的：
 
     ```cpp
     int print( double dvalue = 0.0, int prec );
@@ -106,7 +106,7 @@ print( d, 0 ); // Override default argument to achieve other
 
 - 以后的声明可添加额外的默认自变量。
 
-- 可为指向函数的指针提供默认参数。 例如：
+- 可为指向函数的指针提供默认自变量。 例如：
 
     ```cpp
     int (*pShowIntVal)( int i = 0 );

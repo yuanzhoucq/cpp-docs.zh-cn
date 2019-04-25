@@ -16,11 +16,11 @@ helpviewer_keywords:
 - extension DLLs [C++], about MFC extension DLLs
 ms.assetid: f69ac3d4-e474-4b1c-87a1-6738843a135c
 ms.openlocfilehash: eca33b60b8fa6ba812bf5fa68520f51ceb1d164b
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57820437"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62195655"
 ---
 # <a name="mfc-extension-dlls"></a>MFC 扩展 Dll
 
@@ -52,7 +52,7 @@ MFC 扩展 DLL 使用共享的版本的 MFC 应用程序使用共享的 DLL 版�
 
 之前版本的 MFC 4.0，这种类型的 DLL 调用 AFXDLL。 AFXDLL 指`_AFXDLL`生成 DLL 时定义的预处理器符号。
 
-根据所述的约定命名共享版本的 MFC 导入库[MFC Dll 命名约定](../mfc/mfc-library-versions.md#mfc-static-library-naming-conventions)。 Visual c + + 提供了 MFC Dll 和一个数字的非 MFC Dll，您可以使用和与您的应用程序一起分发的预构建的版本。 这些记录在 Redist.txt，安装到 Program Files\Microsoft Visual Studio 文件夹中。
+根据所述的约定命名共享版本的 MFC 导入库[MFC Dll 命名约定](../mfc/mfc-library-versions.md#mfc-static-library-naming-conventions)。 VisualC++提供 MFC Dll 和一个数字的非 MFC Dll，您可以使用和与您的应用程序一起分发的预构建的版本。 这些记录在 Redist.txt，安装到 Program Files\Microsoft Visual Studio 文件夹中。
 
 如果要导出使用.def 文件，在开头和末尾标头文件中放置以下代码：
 
@@ -68,7 +68,7 @@ MFC 扩展 DLL 使用共享的版本的 MFC 应用程序使用共享的 DLL 版�
 
 如果您需要传递 MFC 或到或从非 MFC DLL，DLL 的 MFC 派生的对象指针应为 MFC 扩展 DLL。 创建对象时的模块中存在与所传递的对象相关联的成员函数。 由于使用共享的 MFC DLL 版本时正确导出了这些函数，因此可以自由地传递 MFC 或应用程序和 MFC 扩展 Dll 加载之间 MFC 派生的对象指针。
 
-由于 c + + 名称重整和导出问题，导出列表从 MFC 扩展 DLL 可能会有所不同的同一个 DLL 的调试和零售版本和 Dll 之间针对不同的平台。 零售 MFCx0.dll 具有大约 2,000 导出入口点;调试 MFCx0D.dll 有大约 3,000 名已导出的入口点。
+由于C++名称重整和导出问题中的 MFC 扩展 DLL 的导出列表可能不同的同一个 DLL 的调试和零售版本和 Dll 之间针对不同平台。 零售 MFCx0.dll 具有大约 2,000 导出入口点;调试 MFCx0D.dll 有大约 3,000 名已导出的入口点。
 
 ## <a name="memory-management"></a>内存管理
 
@@ -86,7 +86,7 @@ MFC 扩展 DLL 分配内存，如果该内存可以随便与任何其他应用�
 
 如果您不想要浏览列表，而只能从特定位置加载资源，使用函数`AfxGetResourceHandle`和`AfxSetResourceHandle`保存旧句柄并设置新的句柄。 请确保还原旧资源句柄，然后返回到客户端应用程序。 使用这种方法来显式加载一个菜单的示例，请参阅 MFC 示例中的 Testdll2.cpp [DLLHUSK](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/advanced/dllhusk)。
 
-动态创建 MFC 对象 MFC 名称是类似的。 MFC 对象反序列化机制需要具有的所有`CRuntimeClass`对象注册，以便它可以通过动态创建基于以前存储的内容所需类型的 c + + 对象重新构造。
+动态创建 MFC 对象 MFC 名称是类似的。 MFC 对象反序列化机制需要具有的所有`CRuntimeClass`对象进行注册，以便它可以通过动态创建重新构造C++对象所需类型的基础以前存储的内容。
 
 在 MFC 示例的情况下[DLLHUSK](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/advanced/dllhusk)，列表看起来类似于：
 
