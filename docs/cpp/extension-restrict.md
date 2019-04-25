@@ -9,11 +9,11 @@ helpviewer_keywords:
 - __restrict keyword [C++]
 ms.assetid: 2d151b4d-f930-49df-bd16-d8757ec7fa83
 ms.openlocfilehash: 76cdf9424e6eab33a3a92b3f98d9c2b0b04ff667
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50454543"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62183747"
 ---
 # <a name="restrict"></a>__restrict
 
@@ -21,7 +21,7 @@ ms.locfileid: "50454543"
 
 - **__Restrict**关键字是仅在变量上有效和`__declspec ( restrict )`仅适用于函数声明和定义。
 
-- **__restrict**类似于**限制**于 C99 规范中，但 **__restrict**可以在 c + + 或 C 程序中使用。
+- **__restrict**类似于**限制**于 C99 规范中，但 **__restrict**可在C++或 C 程序。
 
 - 当 **__restrict**是使用，编译器将不会传播变量的非别名属性。 也就是说，如果将分配 **__restrict**变量为非 **__restrict**变量时，编译器仍允许非 __restrict 变量使用别名。 这是不同的行为**限制**C99 规范中的关键字。
 
@@ -29,7 +29,7 @@ ms.locfileid: "50454543"
 
 与以前版本的兼容性 **_restrict**是的同义词 **__restrict**除非编译器选项[/Za\(禁用语言扩展)](../build/reference/za-ze-disable-language-extensions.md)是指定。
 
-在 Visual Studio 2015 及更高版本， **__restrict**可应用于 c + + 引用。
+在 Visual Studio 2015 及更高版本， **__restrict**可应用于C++的引用。
 
 > [!NOTE]
 >  此外具有变量上使用时[可变](../cpp/volatile-cpp.md)关键字**易失性**将优先。

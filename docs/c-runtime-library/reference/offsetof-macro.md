@@ -20,11 +20,11 @@ helpviewer_keywords:
 - offsetof macro
 ms.assetid: f3b4eb16-a882-4d38-afc9-eebd976a7352
 ms.openlocfilehash: a0f367dbe6fa2681a7d413304f32b5699b8f7cee
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50458314"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62156055"
 ---
 # <a name="offsetof-macro"></a>offsetof 宏
 
@@ -44,7 +44,7 @@ size_t offsetof(
 *structName*<br/>
 父数据结构的名称。
 
-*成员名称*<br/>
+*memberName*<br/>
 确定其偏移量的父数据结构中成员的名称。
 
 ## <a name="return-value"></a>返回值

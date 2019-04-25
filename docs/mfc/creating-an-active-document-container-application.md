@@ -9,11 +9,11 @@ helpviewer_keywords:
 - applications [MFC], active document container
 ms.assetid: 14e2d022-a6c5-4249-8712-706b0f4433f7
 ms.openlocfilehash: 965778fd5d17aa416b198c101edc3a445a39580b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57257283"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62152938"
 ---
 # <a name="creating-an-active-document-container-application"></a>创建活动文档容器应用程序
 
@@ -23,7 +23,7 @@ ms.locfileid: "57257283"
 
 1. 从**文件**菜单上，单击**项目**从**新建**子菜单。
 
-1. 在左窗格中，单击**Visual c + +** 项目类型。
+1. 在左窗格中，单击**可视化C++** 项目类型。
 
 1. 选择**MFC 应用程序**在右窗格中。
 

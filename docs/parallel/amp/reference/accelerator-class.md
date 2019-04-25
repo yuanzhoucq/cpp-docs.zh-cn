@@ -41,11 +41,11 @@ helpviewer_keywords:
 - accelerator class
 ms.assetid: 37eed593-cf87-4611-9cdc-e98df6c2377a
 ms.openlocfilehash: 31008b398d17ac0c226f9359745067c4fefc08a9
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57326607"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62180430"
 ---
 # <a name="accelerator-class"></a>accelerator 类
 
@@ -108,7 +108,7 @@ class accelerator;
 |[description](#description)|获取的简短说明`accelerator`设备。|
 |[device_path](#device_path)|获取设备的路径。|
 |[direct3d_ref](#direct3d_ref)|获取 Direct3D 引用一个字符串常数`accelerator`。|
-|[direct3d_warp](#direct3d_warp)|获取的字符串常量的`accelerator`对象可以使用用于使用流式处理 SIMD 扩展 (SSE) 的多核 Cpu 上执行 c + + AMP 代码。|
+|[direct3d_warp](#direct3d_warp)|获取字符串的常数`accelerator`对象，它可用于执行C++上使用流式处理 SIMD 扩展 (SSE) 的多核 Cpu 的 AMP 代码。|
 |[has_display](#has_display)|获取一个布尔值，该值指示是否`accelerator`附加到显示屏。|
 |[is_debug](#is_debug)|指示是否`accelerator`具有为广泛错误报告启用了调试层。|
 |[is_emulated](#is_emulated)|指示是否`accelerator`被模拟。|
@@ -246,7 +246,7 @@ static const wchar_t direct3d_ref[];
 
 ##  <a name="direct3d_warp"></a> direct3d_warp
 
-获取的字符串常量的`accelerator`对象可以使用用于使用流式处理 SIMD 扩展 (SSE) 的多核 Cpu 上执行 c + + AMP 代码。
+获取的字符串变`accelerator`对象，它可用于执行在C++上使用流式处理 SIMD 扩展 (SSE) 的多核 Cpu 的 AMP 代码。
 
 ```
 static const wchar_t direct3d_warp[];
@@ -286,8 +286,7 @@ size_t get_dedicated_memory() const;
 
 ### <a name="return-value"></a>返回值
 
-
-  `accelerator` 的专用内存（单位为 KB）。
+`accelerator` 的专用内存（单位为 KB）。
 
 ##  <a name="get_default_cpu_access_type"></a> get_default_cpu_access_type
 
@@ -323,8 +322,7 @@ std::wstring get_description() const;
 
 ### <a name="return-value"></a>返回值
 
-
-  `accelerator` 设备的简短说明。
+`accelerator` 设备的简短说明。
 
 ##  <a name="get_device_path"></a> get_device_path
 
@@ -664,8 +662,7 @@ queuing_mode get_queuing_mode() const;
 
 ### <a name="return-value"></a>返回值
 
-
-  `accelerator_view` 对象的排队模式。
+`accelerator_view` 对象的排队模式。
 
 ##  <a name="get_version"></a> get_version
 

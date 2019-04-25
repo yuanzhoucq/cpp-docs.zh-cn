@@ -11,17 +11,17 @@ f1_keywords:
 - vc.appwiz.importwiz.releasesettings
 ms.assetid: e328a938-395c-48ea-9e35-dd433de12b31
 ms.openlocfilehash: 1658e19595d8cfc7966ca881abfdd2aa8acf76ab
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57825034"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62189009"
 ---
 # <a name="how-to-create-a-c-project-from-existing-code"></a>如何：从现有代码创建 C++ 项目
 
 在 Visual Studio 中，你可以使用“从现有代码文件创建新项目”向导将现有代码文件移植到 C++ 项目中。 此向导创建使用 MSBuild 系统来管理源文件和生成配置的项目解决方案。 它最适用于没有复杂文件夹层次结构的相对简单的项目。 Visual Studio 的较旧 Express 版本中不提供该向导。 
 
-通过将现有代码文件移植到 C++ 项目，即可使用内置于 IDE 的本机 MSBuild 项目管理功能。 如果更想使用现有的生成系统（例如 nmake 生成文件、CMake 或其他生成系统），则可以改为使用“打开文件夹或 CMake”选项。 有关详细信息，请参阅[c + + 的打开文件夹项目](open-folder-projects-cpp.md)或[Visual Studio 中的 CMake 项目](cmake-projects-in-visual-studio.md)。 通过这两个选项都可以使用 IDE 功能，例如 [IntelliSense](/visualstudio/ide/using-intellisense) 和 [项目属性](working-with-project-properties.md)。
+通过将现有代码文件移植到 C++ 项目，即可使用内置于 IDE 的本机 MSBuild 项目管理功能。 如果更想使用现有的生成系统（例如 nmake 生成文件、CMake 或其他生成系统），则可以改为使用“打开文件夹或 CMake”选项。 有关详细信息，请参阅[打开文件夹项目的C++](open-folder-projects-cpp.md)或[Visual Studio 中的 CMake 项目](cmake-projects-in-visual-studio.md)。 通过这两个选项都可以使用 IDE 功能，例如 [IntelliSense](/visualstudio/ide/using-intellisense) 和 [项目属性](working-with-project-properties.md)。
 
 ### <a name="to-create-a-c-project-from-existing-code"></a>从现有代码创建 C++ 项目
 
