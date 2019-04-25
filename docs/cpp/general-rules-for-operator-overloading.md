@@ -5,11 +5,11 @@ helpviewer_keywords:
 - operator overloading [C++], rules
 ms.assetid: eb2b3754-35f7-4832-b1da-c502893dc0c7
 ms.openlocfilehash: 1eceb26a244bc6dd2d5243e54f5e3b8391d88ed1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668151"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62153757"
 ---
 # <a name="general-rules-for-operator-overloading"></a>运算符重载的一般规则
 
@@ -19,7 +19,7 @@ ms.locfileid: "50668151"
 
 - 将运算符应用于内置数据类型时，不能重新定义其含义。
 
-- 重载运算符必须是非静态类成员函数或全局函数。 需要访问私有或受保护的类成员的全局函数必须声明为该类的友元。 全局函数必须至少采用一个类类型或枚举类型的参数，或者作为对类类型或枚举类型的引用的参数。 例如：
+- 重载运算符必须是非静态类成员函数或全局函数。 需要访问私有或受保护的类成员的全局函数必须声明为该类的友元。 全局函数必须至少采用一个类类型或枚举类型的自变量，或者作为对类类型或枚举类型的引用的自变量。 例如：
 
     ```cpp
     // rules_for_operator_overloading.cpp
