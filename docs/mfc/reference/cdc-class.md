@@ -403,11 +403,11 @@ helpviewer_keywords:
 - CDC [MFC], m_hDC
 ms.assetid: 715b3334-cb2b-4c9c-8067-02eb7c66c8b2
 ms.openlocfilehash: fc5d41221ab0f9679e7d38a399464efc1a38dd52
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305076"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62173536"
 ---
 # <a name="cdc-class"></a>CDC 类
 
@@ -2047,7 +2047,7 @@ int EnumObjects(
 
 对于给定类型的每个对象，您传递的回调函数调用替换为该对象的信息。 系统调用的回调函数，直到没有更多对象或回调函数将返回 0。
 
-请注意 Microsoft Visual c + + 的新功能，可以使用普通函数，因为该函数传递给`EnumObjects`。 地址传递给`EnumObjects`指向与导出的函数的指针**导出**和使用 Pascal 调用约定。 在保护模式的应用程序，无需使用 Windows MakeProcInstance 函数创建此函数或使用 FreeProcInstance Windows 函数的使用后释放该函数。
+请注意，新的 Microsoft Visual 功能C++允许您使用的普通函数，为该函数传递给`EnumObjects`。 地址传递给`EnumObjects`指向与导出的函数的指针**导出**和使用 Pascal 调用约定。 在保护模式的应用程序，无需使用 Windows MakeProcInstance 函数创建此函数或使用 FreeProcInstance Windows 函数的使用后释放该函数。
 
 也不需要导出中的函数名称**导出**应用程序的模块定义文件中的语句。 你可以改用**导出**函数修饰符，如
 
@@ -5738,7 +5738,7 @@ int SetAbortProc(BOOL (CALLBACK* lpfn)(HDC, int));
 
 如果应用程序，以允许在后台处理过程中取消打印作业打印作业开始使用之前，它必须设置中止函数[StartDoc](#startdoc)成员函数。 打印管理器在后台处理，以允许应用程序来取消打印作业，或处理的磁盘空间不足条件调用中止函数。 如果设置中止函数，打印作业将失败，如果没有足够的磁盘空间用于后台打印。
 
-请注意，Microsoft Visual c + + 的功能简化传递给回调函数的创建`SetAbortProc`。 地址传递给`EnumObjects`成员函数是指向与导出的函数的指针`__declspec(dllexport)`且`__stdcall`调用约定。
+请注意，Microsoft 视觉对象的功能C++简化的传递给回调函数创建`SetAbortProc`。 地址传递给`EnumObjects`成员函数是指向与导出的函数的指针`__declspec(dllexport)`且`__stdcall`调用约定。
 
 也不需要导出中的函数名称**导出**应用程序的模块定义文件中的语句。 你可以改用**导出**函数修饰符，如
 
@@ -6022,7 +6022,7 @@ DWORD SetLayout(DWORD dwLayout);
 *dwLayout*<br/>
 设备上下文布局和位图控制标志。 它可以是以下值的组合。
 
-|值|含义|
+|“值”|含义|
 |-----------|-------------|
 |LAYOUT_BITMAPORIENTATIONPRESERVED|禁用对调用任何反射[cdc:: bitblt](#bitblt)并[CDC::StretchBlt](#stretchblt)。|
 |LAYOUT_RTL|设置默认水平布局为从右向左。|
@@ -6816,8 +6816,7 @@ BOOL StretchBlt(
 
 `StretchBlt`函数创建的位图的镜像，如果的迹象*nSrcWidth*并*nWidth*或*nSrcHeight*和*nHeight*参数不同。 如果*nSrcWidth*并*nWidth*符号不同，该函数将创建的沿 x 轴的位图的镜像。 如果*nSrcHeight*并*nHeight*符号不同，该函数将创建的沿 y 轴的位图的镜像。
 
-
-  `StretchBlt` 函数将在内存中拉伸或压缩源位图，然后将结果复制到目标。 如果一个模式将与该结果合并，则合并操作会等到拉伸的源位图复制到目标后执行。 如果使用画笔，则为在目标设备上下文中选择的画笔。 目标坐标将根据目标设备上下文进行转换；源坐标将根据源设备上下文进行转换。
+`StretchBlt` 函数将在内存中拉伸或压缩源位图，然后将结果复制到目标。 如果一个模式将与该结果合并，则合并操作会等到拉伸的源位图复制到目标后执行。 如果使用画笔，则为在目标设备上下文中选择的画笔。 目标坐标将根据目标设备上下文进行转换；源坐标将根据源设备上下文进行转换。
 
 如果目标位图、源位图和模式位图没有相同的颜色格式，`StretchBlt` 将转换源位图和模式位图，以与目标位图匹配。 在转换中将使用目标设备上下文的前景色和背景色。
 

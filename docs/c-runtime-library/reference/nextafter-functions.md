@@ -49,11 +49,11 @@ helpviewer_keywords:
 - nexttowardl function
 ms.assetid: 9785bfb9-de53-4bd0-9637-f05fa0c1f6ab
 ms.openlocfilehash: 0e0a60dc9f7c068d8c18c10f3c6b819b9e06d3b7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50444851"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62156182"
 ---
 # <a name="nextafter-nextafterf-nextafterl-nextafter-nextafterf-nexttoward-nexttowardf-nexttowardl"></a>nextafter、nextafterf、nextafterl、_nextafter、_nextafterf、nexttoward、nexttowardf、nexttowardl
 
@@ -98,7 +98,7 @@ long double nexttoward( long double x, long double y ); /* C++ only, requires <c
 
 **Nextafter**并**nexttoward**函数系列是等同的只不过参数类型的*y*。 如果*x*并*y*相等，则返回该值*y*转换为返回类型。
 
-由于 c + + 允许重载，如果包括\<cmath > 可以调用的重载**nextafter**并**nexttoward**返回**float**和**长****双**类型。 在 C 程序中， **nextafter**并**nexttoward**始终返回**double**。
+因为C++允许重载，如果包含\<cmath > 可以调用的重载**nextafter**并**nexttoward**返回**float**和**长** **double**类型。 在 C 程序中， **nextafter**并**nexttoward**始终返回**double**。
 
 **_Nextafter**并 **_nextafterf**是 Microsoft 特定函数的函数。 **_Nextafterf**编译 x64 时，函数才可用。
 

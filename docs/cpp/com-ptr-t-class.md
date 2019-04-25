@@ -7,11 +7,11 @@ helpviewer_keywords:
 - _com_ptr_t class
 ms.assetid: 3753a8a0-03d4-4cfd-8a9a-74872ea53971
 ms.openlocfilehash: ce19dbc5f55460bb4bdbdee17f4fbbbcc8c6fd60
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50547116"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62154898"
 ---
 # <a name="comptrt-class"></a>_com_ptr_t 类
 
@@ -53,7 +53,7 @@ _COM_SMARTPTR_TYPEDEF(IMyInterface, __uuidof(IMyInterface));
 |||
 |-|-|
 |[operator =](../cpp/com-ptr-t-operator-equal.md)|将新值分配到现有 **_com_ptr_t**对象。|
-|[运算符 = =、 ！ =、 \<，>， \<=、 > =](../cpp/com-ptr-t-relational-operators.md)|比较的智能指针对象与另一个智能指针、 原始接口指针，则为 NULL。|
+|[operators ==, !=, \<, >, \<=, >=](../cpp/com-ptr-t-relational-operators.md)|比较的智能指针对象与另一个智能指针、 原始接口指针，则为 NULL。|
 |[提取器](../cpp/com-ptr-t-extractors.md)|提取封装的 COM 接口指针。|
 
 **结束 Microsoft 专用**

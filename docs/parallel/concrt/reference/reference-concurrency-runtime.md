@@ -454,24 +454,24 @@ helpviewer_keywords:
 - HRESULT typedef
 ms.assetid: a057c776-7caa-4605-8f33-9815cf6f9b27
 ms.openlocfilehash: fa1156aa6406f1c34712e845612147a42b753184
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50663328"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62180142"
 ---
 # <a name="reference-concurrency-runtime"></a>参考（并发运行时）
 
 本部分包含有关并发运行时参考信息。
 
 > [!Note]
-> C + + 语言标准保留的实现，如库以下划线 (_) 字符开头的标识符的使用。 请勿在代码中使用这些名称。 其名称遵循此约定的代码元素的行为尚未得到保证，在将来发布的版本中可能会有更改。 出于这些原因，并发运行时文档中省略此类代码元素。
+> C++语言标准将保留的实现，如库以下划线 (_) 字符开头的标识符的使用。 请勿在代码中使用这些名称。 其名称遵循此约定的代码元素的行为尚未得到保证，在将来发布的版本中可能会有更改。 出于这些原因，并发运行时文档中省略此类代码元素。
 
 ## <a name="in-this-section"></a>本节内容
 
 [并发命名空间](concurrency-namespace.md)<br/>
-并发命名空间提供类和函数，使您可以访问为并发运行时，c + + 的并发编程框架。 有关详细信息，请参阅 [Concurrency Runtime](../concurrency-runtime.md)。
+并发命名空间提供类和函数，使您可以访问为并发运行时，并发编程框架的C++。 有关详细信息，请参阅 [Concurrency Runtime](../concurrency-runtime.md)。
 
 [std 命名空间](std-namespace.md)
 
-[stdx 命名空间](stdx-namespace.md)
+[stdx namespace](stdx-namespace.md)

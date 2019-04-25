@@ -1,5 +1,5 @@
 ---
-title: 推理执行端通道的 c + + 开发人员指南
+title: C++推理执行端通道的开发人员指南
 ms.date: 07/10/2018
 helpviewer_keywords:
 - Visual C++, security
@@ -9,19 +9,19 @@ helpviewer_keywords:
 - CVE-2017-5753
 - Speculative Execution
 ms.openlocfilehash: 20e6d45c088fe92fa736539e485d6807802b368a
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750541"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62179314"
 ---
-# <a name="c-developer-guidance-for-speculative-execution-side-channels"></a>推理执行端通道的 c + + 开发人员指南
+# <a name="c-developer-guidance-for-speculative-execution-side-channels"></a>C++推理执行端通道的开发人员指南
 
-本文包含面向开发人员以帮助识别和防御推理执行端通道硬件在 c + + 软件中的漏洞的指南。 这些漏洞可能会泄露敏感信息跨信任边界和可能会影响支持推理、 扩展的顺序执行的指令处理器运行的软件。 此类漏洞已在 2018 年 1 月中, 所述的第一个和其他背景和指南可在[Microsoft 安全公告](https://portal.msrc.microsoft.com/security-guidance/advisory/ADV180002)。
+本文包含用于帮助识别和缓解推理执行端通道硬件中的漏洞的开发人员指南C++软件。 这些漏洞可能会泄露敏感信息跨信任边界和可能会影响支持推理、 扩展的顺序执行的指令处理器运行的软件。 此类漏洞已在 2018 年 1 月中, 所述的第一个和其他背景和指南可在[Microsoft 安全公告](https://portal.msrc.microsoft.com/security-guidance/advisory/ADV180002)。
 
 本文提供的指导与漏洞所表示的类：
 
-1. CVE-2017-5753，也称为 Spectre 变体 1。 此硬件漏洞类与相关端通道可能会出现由于条件分支预测时，会出现的推理执行。 （从 15.5.5 版开始） 的 Visual Studio 2017 中 Visual c + + 编译器支持`/Qspectre`开关这提供了一组有限的潜在易受攻击的编码模式编译时缓解与相关的 CVE 2017-5753。 `/Qspectre`开关也会出现在通过 Visual Studio 2015 Update 3 [KB 4338871](https://support.microsoft.com/help/4338871)。 文档[/Qspectre](https://docs.microsoft.com/cpp/build/reference/qspectre)标志提供有关其效果和使用情况详细信息。
+1. CVE-2017-5753，也称为 Spectre 变体 1。 此硬件漏洞类与相关端通道可能会出现由于条件分支预测时，会出现的推理执行。 视觉对象C++（从 15.5.5 版开始） 的 Visual Studio 2017 中的编译器支持`/Qspectre`开关，它提供一组有限的潜在易受攻击的编码模式编译时缓解与相关的 CVE 2017-5753。 `/Qspectre`开关也会出现在通过 Visual Studio 2015 Update 3 [KB 4338871](https://support.microsoft.com/help/4338871)。 文档[/Qspectre](https://docs.microsoft.com/cpp/build/reference/qspectre)标志提供有关其效果和使用情况详细信息。
 
 2. CVE-2018年-3639，也称为[推理存储区绕过 (SSB)](https://aka.ms/sescsrdssb)。 此硬件漏洞类与相关端通道可能会出现由于之前作为内存访问预测结果依赖于存储的负载的推理执行。
 
@@ -174,7 +174,7 @@ unsigned char WriteSlot(unsigned int untrusted_index, void *ptr) {
 }
 ```
 
-应注意，这两个示例涉及推理修改堆栈分配间接分支指针。 有可能推测性修改的全局变量、 堆分配内存和甚至只读内存上一些 Cpu 也可能发生。 对于堆栈分配内存，Visual c + + 编译器已采用步骤以使其更难推测性地修改堆栈分配间接分支目标，例如通过对本地变量进行重新排序，以便与作为安全 cookie 相邻放置缓冲区属于[/GS](https://docs.microsoft.com/cpp/build/reference/gs-buffer-security-check)编译器安全功能。
+应注意，这两个示例涉及推理修改堆栈分配间接分支指针。 有可能推测性修改的全局变量、 堆分配内存和甚至只读内存上一些 Cpu 也可能发生。 对于堆栈分配内存，视觉对象C++编译器已采用使其更难推测性地修改堆栈分配间接分支目标，例如通过对本地变量进行重新排序，以便缓冲区放置到安全相邻的步骤cookie 的一部分[/GS](https://docs.microsoft.com/cpp/build/reference/gs-buffer-security-check)编译器安全功能。
 
 ## <a name="speculative-type-confusion"></a>推理类型混淆
 
@@ -331,7 +331,7 @@ unsigned char ReadByte(unsigned char *buffer, unsigned int buffer_size, unsigned
 
 ### <a name="speculation-barrier-via-compiler-time-instrumentation"></a>通过编译器时检测推理屏障
 
-（从 15.5.5 版开始） 的 Visual Studio 2017 中 Visual c + + 编译器支持`/Qspectre`开关，这样将自动插入推理屏障的一组有限的潜在易受攻击的编码模式与相关的 CVE 2017-5753。 文档[/Qspectre](https://docs.microsoft.com/cpp/build/reference/qspectre)标志提供有关其效果和使用情况详细信息。 请务必请注意，此标志不涵盖所有可能有漏洞的编码模式，这种情况下开发人员不应依赖于它作为一种全面缓解此类漏洞。
+视觉对象C++（从 15.5.5 版开始） 的 Visual Studio 2017 中的编译器支持`/Qspectre`开关，这样将自动插入推理屏障的一组有限的潜在易受攻击的编码模式与CVE-2017-5753。 文档[/Qspectre](https://docs.microsoft.com/cpp/build/reference/qspectre)标志提供有关其效果和使用情况详细信息。 请务必请注意，此标志不涵盖所有可能有漏洞的编码模式，这种情况下开发人员不应依赖于它作为一种全面缓解此类漏洞。
 
 ### <a name="masking-array-indices"></a>屏蔽数组索引
 

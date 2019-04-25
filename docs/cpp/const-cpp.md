@@ -7,11 +7,11 @@ helpviewer_keywords:
 - const keyword [C++]
 ms.assetid: b21c0271-1ad0-40a0-b21c-5e812bba0318
 ms.openlocfilehash: 759ee503acb12f6c1a30fbbfaf87a8f66433e571
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463240"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62154745"
 ---
 # <a name="const-c"></a>const (C++)
 
@@ -124,7 +124,7 @@ int main()
 }
 ```
 
-## <a name="c-and-c-const-differences"></a>C 和 c + + const 的差异
+## <a name="c-and-c-const-differences"></a>C 和C++const 的差异
 
 当你声明一个变量，作为**const** C 源代码文件，在此，作为：
 
@@ -144,7 +144,7 @@ extern const int i;
 extern const int i = 2;
 ```
 
-如果你想要声明**extern**变量用于 C 源代码文件中，使用 c + + 源代码文件中：
+如果你想要声明**extern**变量中C++源代码文件用于 C 源代码文件中，使用：
 
 ```cpp
 extern "C" const int x=10;
