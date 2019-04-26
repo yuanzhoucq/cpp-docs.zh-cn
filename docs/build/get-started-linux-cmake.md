@@ -1,57 +1,57 @@
 ---
-title: 在 Visual Studio 中创建 c + + 跨平台项目
-description: 本教程演示如何设置、 编译和调试 c + + 的开源 CMake 项目面向 Linux 和 Windows 的 Visual Studio 中。
+title: 在 Visual Studio 中创建 C++ 跨平台项目
+description: 本教程介绍如何在同时面向 Linux 和 Windows 的 Visual Studio 中设置、编译和调试 C++ 开源 CMake 项目。
 author: mikeblome
 ms.topic: tutorial
 ms.date: 03/05/2019
 ms.openlocfilehash: deb2c91d6d09d8945e5eb57a7ac742c5b1705e83
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57824468"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62196295"
 ---
-# <a name="tutorial-create-c-cross-platform-projects-in-visual-studio"></a>教程：在 Visual Studio 中创建 c + + 跨平台项目 
+# <a name="tutorial-create-c-cross-platform-projects-in-visual-studio"></a>教程：在 Visual Studio 中创建 C++ 跨平台项目 
 
-Visual Studio C 和 c + + 开发不再仅用于 Windows。 本教程演示如何使用 Visual Studio for c + + 跨平台开发基于 CMake 而无需创建或生成 Visual Studio 项目。 当打开包含 CMakeLists.txt 文件的文件夹时，Visual Studio 配置智能感知和生成设置自动。 快速可以进行编辑、 构建和调试本地 Windows，你的代码，然后切换您的配置以在 Visual Studio 中执行在 Linux 上，相同操作中的所有内容。
+Visual Studio C 和 C++ 开发不再仅适用于 Windows。 本教程介绍如何使用基于 CMake 的 Visual Studio for C++ 跨平台开发，而无需创建或生成 Visual Studio 项目。 当打开包含 CMakeLists.txt 文件的文件夹时，Visual Studio 会自动配置 IntelliSense 并生成设置。 可以在 Windows 上快速编辑、生成和调试代码，然后在 Visual Studio 中切换配置以在 Linux 上执行相同的操作。
 
 在本教程中，你将了解：
 
 > [!div class="checklist"]
-> * 克隆 GitHub 中的开放源代码 CMake 项目
+> * 从 GitHub 克隆一个开源 CMake 项目
 > * 在 Visual Studio 中打开项目 
-> * 生成和调试在 Windows 上的可执行文件目标
-> * 添加到 Linux 计算机的连接
-> * 生成和调试在 Linux 上相同的目标
+> * 在 Windows 上生成和调试可执行目标
+> * 添加与 Linux 计算机的连接
+> * 在 Linux 上生成和调试相同的目标
 
 ## <a name="prerequisites"></a>系统必备
 
-- 跨平台 c + + 开发设置 Visual Studio
-    - 首先您需要具有[安装 Visual Studio](https://visualstudio.microsoft.com/vs/)。 接下来，确认你具有**使用 c + + 的桌面开发**并**使用 c + + 工作负荷的 Linux 开发**安装。 此最小安装仅为 3 GB，具体取决于您的下载速度安装不应超过 10 分钟。
-- 跨平台 c + + 开发设置 Linux 计算机
-    - Visual Studio 不需要任何特定 Linux 分发版。 用于 Linux (WSL) 可以在虚拟机、 云或 Windows 子系统物理机上运行操作系统。 但是，本教程中的图形环境是必需的;因此，因为它是主要用于命令行操作，不建议 WSL。
-    - Visual Studio 需要 Linux 计算机的工具有：C + + 编译器，GDB，ssh，和 zip。 在 Debian 基于系统中，可以按如下所示安装这些依赖项。
+- 设置适用于跨平台 C++ 开发的 Visual Studio
+    - 首先你需要[安装 Visual Studio](https://visualstudio.microsoft.com/vs/)。 接下来，确认安装了“使用 C++ 的桌面开发”和“使用 C++ 的 Linux 开发”工作负载。 此最小安装仅有 3 GB，根据下载速度安装不应超过 10 分钟。
+- 设置适用于跨平台 C++ 开发的 Linux 计算机
+    - Visual Studio 不需要任何特定的 Linux 发行版。 OS 可以在物理计算机、VM 种、云或 Linux Windows 子系统 (WSL) 上运行。 但是，本教程需要一个图形环境；因此不推荐 WSL，因为它主要用于命令行操作。
+    - Visual Studio 在 Linux 计算机上需要的工具是：C++ 编译器、GDB、ssh 和 zip。 在基于 Debian 的系统上，可以按如下方式安装这些依赖项。
     
     ```cmd
         sudo apt install -y openssh-server build-essential gdb zip
     ```
-    - Visual Studio 需要的 Linux 计算机具有最新版本的 CMake 服务器启用了模式 (至少 3.8)。 Microsoft 生成 CMake 可以在任何 Linux 发行版上安装一个通用版本。 我们建议使用此生成以确保拥有最新功能。 你可以获取从 CMake 的二进制文件[CMake 存储库的 Microsoft 分叉](https://github.com/Microsoft/CMake/releases)GitHub 上。 转到该页面并下载匹配您系统的体系结构在 Linux 上，然后将其标记为可执行文件的版本：
+    - Visual Studio 要求 Linux 计算机具有启用服务器模式的最新版 CMake（至少为 3.8 版）。 Microsoft 生成可以在任何 Linux 发行版上安装的通用 CMake 版本。 建议使用此版本以确保拥有最新功能。 可从 GitHub 上的 [CMake 存储库 Microsoft 分支](https://github.com/Microsoft/CMake/releases)获得 CMake 二进制文件。 转到该页面并下载与 Linux 计算机上的系统架构匹配的版本，然后将其标记为可执行文件：
     
     ```cmd
         wget <path to binary>
         chmod +x cmake-3.11.18033000-MSVC_2-Linux-x86_64.sh
     ```
-    - 可以查看有关运行该脚本的选项`-–help`。 我们建议你使用`–prefix`选项以指定在安装 **/usr/local**路径因为这是 Visual Studio 在何处查找针对 CMake 的默认位置。 下面的示例显示了 Linux x86_64 脚本。 如果你正在使用不同的目标平台根据需要更改的。 
+    - 可以使用 `-–help` 查看运行脚本的选项。 建议使用 `–prefix` 选项在“/usr/local”路径中指定安装，因为这是 Visual Studio 查找 CMake 的默认位置。 以下示例显示了 Linux-x86_64 脚本。 如果使用其他目标平台，请根据需要进行更改。 
     
     ```cmd
         sudo ./cmake-3.11.18033000-MSVC_2-Linux-x86_64.sh --skip-license --prefix=/usr/local
     ```
-- 在 Windows 计算机上安装适用于 windows 的 Git。
+- 在 Windows 计算机上安装的适用于 Windows 的 Git。
 - 一个 GitHub 帐户。
 
-## <a name="clone-an-open-source-cmake-project-from-github"></a>克隆 GitHub 中的开放源代码 CMake 项目
+## <a name="clone-an-open-source-cmake-project-from-github"></a>从 GitHub 克隆一个开源 CMake 项目
 
-本教程，它提供各种不同的应用程序用于冲突检测和物理模拟在 GitHub 上使用项目符号的物理 SDK。 它包括示例可执行程序，编译并运行，而无需编写其他代码。 本教程不会修改任何源代码或生成脚本。 若要开始，bullet3 存储库克隆 GitHub 中在计算机上必须安装 Visual Studio。 
+本教程使用 GitHub 上的 Bullet Physics SDK，为各种不同的应用程序提供冲突检测和物理模拟。 它包括示例可执行程序，这些程序无需编写额外代码即可编译和运行。 本教程未修改任何源代码或生成脚本。 首先，从安装了 Visual Studio 的计算机上的 GitHub 克隆 bullet3 存储库。 
 
 ```cmd
 
@@ -59,139 +59,139 @@ git clone https://github.com/bulletphysics/bullet3.git
 
 ```
 
-1. 从 Visual Studio 主菜单中，选择**文件 > 打开 > CMake**并导航到刚下载的 bullet3 存储库的根目录中 CMakeLists.txt 文件。
+1. 从 Visual Studio 主菜单中，选择“文件”>“打开”>“CMake”，然后导航到刚刚下载的 bullet3 存储库的根目录中的 CMakeLists.txt 文件。
 
-    ![Visual Studio 菜单中的文件 > 打开 > CMake](media/cmake-open-cmake.png)
+    ![“文件”>“打开”>“CMake”的 Visual Studio 菜单](media/cmake-open-cmake.png)
 
-    只要打开文件夹时，会显示在您的文件夹结构**解决方案资源管理器**。
+    打开文件夹后，文件夹结构将显示在“解决方案资源管理器”中。
 
     ![Visual Studio 解决方案资源管理器文件夹视图](media/cmake-bullet3-solution-explorer.png)
 
-    此视图显示究竟什么是磁盘，不是逻辑或已筛选视图上。 默认情况下，它不显示隐藏的文件。 
+    此视图可以准确显示磁盘上的内容，而不是逻辑或筛选视图。 默认情况下，该视图不显示隐藏文件。 
 
-2. 按**显示所有文件**按钮以查看文件夹中的所有文件。
+2. 按“显示所有文件”按钮以查看文件夹中的所有文件。
 
-    ![Visual Studio 解决方案资源管理器中显示所有文件按钮](media/cmake-bullet3-show-all-files.png)
+    ![Visual Studio 解决方案资源管理器中“显示所有文件”按钮](media/cmake-bullet3-show-all-files.png)
 
 ## <a name="switch-to-targets-view"></a>切换到目标视图
 
-当您打开使用 CMake 的文件夹时，Visual Studio 会自动生成 CMake 缓存。 此操作可能需要一些时间，具体取决于你的项目的大小。 
+打开使用 CMake 的文件夹时，Visual Studio 会自动生成 CMake 缓存。 此操作可能需要一些时间，具体取决于项目的大小。 
 
-1. 在中**输出窗口**，选择**显示输出来源**，然后选择**CMake**来监视缓存生成过程的状态。 该操作完成后，状态显示"目标信息提取完成"。
+1. 在“输出窗口”中，选择“显示输出源”，然后选择“CMake”以监控缓存生成过程的状态。 操作完成后，会显示“目标信息提取已完成”。
 
-    ![显示输出从 CMake 的 visual Studio 输出窗口](media/cmake-bullet3-output-window.png)
+    ![显示 CMake 的输出的 Visual Studio 输出窗口](media/cmake-bullet3-output-window.png)
 
-    此操作完成后，配置 IntelliSense，可以生成项目，并可以调试应用程序。 Visual Studio 现在可以提供基于 CMakeLists 文件中指定的目标的解决方案的逻辑视图。 
+    完成此操作后，将配置 IntelliSense，可以生成项目，你可以调试应用程序。 Visual Studio 现在可以根据 CMakeLists 文件中指定的目标提供解决方案的逻辑视图。 
 
-2. 使用**解决方案和文件夹**按钮**解决方案资源管理器**切换到 CMake 目标视图。
+2. 使用“解决方案资源管理器”中的“解决方案和文件夹”按钮切换到 CMake 目标视图。
 
-    ![解决方案和文件夹按钮，在解决方案资源管理器以显示 CMake 目标视图](media/cmake-bullet3-show-targets.png)
+    ![显示 CMake 目标视图的解决方案资源管理器中的“解决方案和文件夹”按钮](media/cmake-bullet3-show-targets.png)
 
-    下面是哪些视图如下所示的项目符号 SDK:
+    以下是 Bullet SDK 的视图：
 
     ![解决方案资源管理器 CMake 目标视图](media/cmake-bullet3-targets-view.png)
 
-    目标视图提供了此源库中的内容更直观的视图。 您可以看到某些目标是库和其他一些则是可执行文件。 
+    目标视图提供了此源基础内容更直观的视图。 你可以看到一些目标是库，其他目标是可执行文件。 
 
-3. 展开 CMake 目标视图以查看其源代码文件中的节点，只要这些文件可能位于磁盘上。
+3. 在 CMake 目标视图中展开节点以查看其源代码文件，无论这些文件位于磁盘上的哪个位置。
 
-## <a name="set-a-breakpoint-build-and-run"></a>设置断点、 生成和运行
+## <a name="set-a-breakpoint-build-and-run"></a>设置断点、生成和运行
 
-在此步骤中，我们将调试演示项目符号的物理库的示例程序。
+在此步骤中，我们将调试一个演示 Bullet Physics 库的示例程序。
   
-1. 在中**解决方案资源管理器**、 选择 AppBasicExampleGui 并将其展开。 
-1. 打开文件`BasicExample.cpp`。 
-1. 设置在运行的应用程序中单击时将命中断点。 中的帮助器类的一个方法中处理单击事件。 若要快速转至此处：
+1. 在“解决方案资源管理器”中，选择 AppBasicExampleGui 并展开它。 
+1. 打开文件 `BasicExample.cpp`。 
+1. 设置在单击正在运行的应用程序时将触发的断点。 单击事件在 helper 类中的方法中进行处理。 快速转至此处：
 
-    1. 选择`CommonRigidBodyBase`，该结构`BasicExample`围绕第 30 行派生自。
-    1. 右键单击并选择**转到定义**。 现在，已在标头 CommonRigidBodyBase.h 中。 
-    1. 在浏览器视图中更高版本，您的源应看到处于`CommonRigidBodyBase`。 右侧，可以选择要检查的成员。 单击下拉列表，然后选择`mouseButtonCallback`以转到标头中该函数的定义。
+    1. 选择结构 `BasicExample` 派生自第 30 行的 `CommonRigidBodyBase`。
+    1. 右键单击并选择“转到定义”。 现在已在标头 CommonRigidBodyBase.h 中。 
+    1. 在上面的浏览器视图中，应看到自己位于 `CommonRigidBodyBase`。 转到右侧，可以选择要检查的成员。 单击下拉列表并选择 `mouseButtonCallback` 以转到标头中该函数的定义。
 
         ![Visual Studio 成员列表工具栏](media/cmake-bullet3-member-list-toolbar.png)
 
-1. 此函数中的第一行上放置一个断点。 这将被命中时单击鼠标按钮时在 Visual Studio 调试器中启动的应用程序的窗口中。
+1. 在此函数的第一行设置一个断点。 在 Visual Studio 调试器下启动时，在应用程序窗口中单击鼠标按钮时会触发此断点。
 
-1. 若要启动该应用程序，请选择启动有 play 图标的工具栏中显示"选择启动项"下拉列表。 在下拉列表选择 AppBasicExampleGui.exe。 可执行文件的名称现在显示启动按钮：
+1. 若要启动应用程序，请使用工具栏中显示“选择启动项”的播放图标选择启动下拉列表。 在下拉列表中选择 AppBasicExampleGui.exe。 可执行文件名现在显示在启动按钮上：
 
-    ![Visual Studio 工具栏中启动下拉列表选择启动项](media/cmake-bullet3-launch-button.png)
+    ![“选择启动项”的 Visual Studio 工具栏启动下拉列表](media/cmake-bullet3-launch-button.png)
 
-5.  按启动按钮以生成应用程序和所需的依赖关系，然后启动带有附加 Visual Studio 调试程序。 几分钟后将显示运行的应用程序：
+5.  按“启动”按钮生成应用程序和必要的依赖项，然后使用附加的 Visual Studio 调试器启动它。 几分钟后将显示正在运行的应用程序：
 
-    ![Visual Studio 调试 Windows 应用程序](media/cmake-bullet3-launched.png)
+    ![调试 Windows 应用程序的 Visual Studio](media/cmake-bullet3-launched.png)
 
-6. 将鼠标移到应用程序窗口中，然后单击一个按钮以触发断点。 这将返回到前台显示一行执行会暂停编辑器与 Visual Studio。 你将能够检查应用程序变量、 对象、 线程和内存。 可以以交互方式逐句通过代码。 可以单击**继续**让恢复和正常退出或停止在 Visual Studio 中使用停止按钮执行的应用程序。
+6. 将鼠标移动到应用程序窗口，然后单击按钮以触发断点。 此操作会将 Visual Studio 带回到前台，其中编辑器显示执行暂停的行。 你将能够检查应用程序变量、对象、线程和内存。 可以以交互方式单步执行代码。 可以单击“继续”，让应用程序恢复并正常退出或使用“停止”按钮停止在 Visual Studio 中执行。
 
-## <a name="add-an-explicit-windows-x64-debug-configuration"></a>添加显式 Windows x64 调试配置
+## <a name="add-an-explicit-windows-x64-debug-configuration"></a>添加显式的 Windows x64-Debug 配置
 
-到目前为止，一直在使用默认值**x64 调试**的 Windows 配置。 Visual Studio 如何了解哪些平台配置是它要使用 CMake 的目标。 在磁盘上表示不是默认配置。 时显式添加配置，Visual Studio 将创建使用指定的所有配置设置的调用 CMakeSettings.json 中已填充的文件。 
+到目前为止，一直使用的是 Windows 的默认“x64-Debug”配置。 Visual Studio 可借助配置了解将在 CMake 中使用的平台目标。 磁盘上未显示默认配置。 显式添加配置时，Visual Studio 会创建一个名为 CMakeSettings.json 的文件，该文件将填充指定的所有配置的设置。 
 
-1. 通过单击来添加新的配置配置工具栏中的下拉列表中，选择**管理配置...**
+1. 单击工具栏中的“配置”下拉列表，然后选择“管理配置...”，添加新配置
 
-    ![管理配置下拉列表](media/cmake-bullet3-manage-configurations.png)
+    ![“管理配置”下拉列表](media/cmake-bullet3-manage-configurations.png)
 
-    **将配置添加到出现 CMakeSettings**对话框将出现。
+    随即将出现“将配置添加到 CMakeSettings”对话框。
 
-    ![将配置添加到出现 CMakeSettings 对话框](media/cmake-bullet3-add-configuration-x64-debug.png)
+    ![将配置添加到 CMakeSettings 对话框](media/cmake-bullet3-add-configuration-x64-debug.png)
 
-    此对话框显示包含在 Visual Studio 的所有配置，以及可能会创建任何自定义配置。 如果你想要继续使用默认值**x64 调试**配置中，应添加的第一个。 通过添加该配置，你将能够来回切换 Windows 和 Linux 之间配置。 选择**x64 调试**然后单击**选择**。 这将创建具有配置的 CMakeSettings.json 文件**x64 调试**和切换 Visual Studio 以使用该配置，而不是默认值。 你将看到配置下拉列表不会再显示"(default)"作为名称的一部分。 可以使用您喜欢通过更改直接在 CMakeSettings.json 中的 name 参数配置的任何名称。
+    此对话框显示 Visual Studio 附带的所有配置，以及可能创建的任何自定义配置。 如果要继续使用默认的“x64-Debug”配置，首先就应添加该配置。 通过添加该配置，将能够在 Windows 和 Linux 配置之间来回切换。 选择“x64-Debug”，然后单击“选择”。 这将创建具有“x64-Debug”配置的 CMakeSettings.json 文件，并切换 Visual Studio 以使用该配置而不是默认配置。 你将看到配置下拉列表不再显示“(默认)”作为名称的一部分。 可通过直接在 CMakeSettings.json 中更改名称参数来使用你喜欢的任何名称。
 
 ##  <a name="add-a-linux-configuration-and-connect-to-the-remote-machine"></a>添加 Linux 配置并连接到远程计算机
 
-1. 现在，添加 Linux 配置。 右键单击中的 CMakeSettings.json 文件**解决方案资源管理器**视图，然后选择**添加配置**。 请参阅到出现 CMakeSettings 对话框作为之前相同的添加配置。 选择**Linux 调试**这一次，然后保存 CMakeSettings.json 文件。 
-2. 现在，选择**Linux 调试**配置下拉列表中。
+1. 现在，添加 Linux 配置。 右键单击“解决方案资源管理器”视图中的 CMakeSettings.json 文件，然后选择“添加配置”。 此时将出现与之前相同的“将配置添加到 CMakeSettings”对话框。 选择“Linux-Debug”，然后保存 CMakeSettings.json 文件。 
+2. 现在在配置下拉列表中选择“Linux-Debug”。
 
-    ![启动配置 X64 调试和 Linux 调试选项的下拉列表](media/cmake-bullet3-linux-configuration-item.png)
+    ![使用“X64-Debug”和“Linux-Debug”选项启动配置下拉列表](media/cmake-bullet3-linux-configuration-item.png)
 
-    如果这是要连接到 Linux 系统，第一次**连接到远程系统**对话框将出现。
+    如果这是首次连接到 Linux 系统，则会出现“连接到远程系统”对话框。
 
-    ![Visual Studio 连接到远程系统对话框](media/cmake-bullet3-connection-manager.png)
+    ![Visual Studio 中“连接到远程系统”对话框](media/cmake-bullet3-connection-manager.png)
 
-    如果你已添加的远程连接可以通过导航到打开此窗口**工具 > 选项 > 跨平台 > 连接管理器**。
+    如果已添加远程连接，则可以通过导航到“工具”>“选项”>“跨平台”>“连接管理器”来打开此窗口。
  
-3. 提供在 Linux 计算机的连接信息，然后单击**Connect**。 Visual Studio 将 CMakeSettings.json 关于该计算机添加作为默认设置**Linux 调试**。 它还会拉取在远程计算机中的标头，以便获取 IntelliSense 特定于该计算机时使用它。 现在 Visual Studio 会将文件发送到远程计算机，然后生成 CMake 缓存，并创建完成后将为该远程 Linux 计算机中使用相同的源基配置 Visual Studio。 这些步骤可能需要一些时间，具体取决于网络速度和远程计算机的电源。 您将知道 CMake 输出窗口中显示消息"目标信息提取完成"时，这是完整。
+3. 提供 Linux 计算机的连接信息，然后单击“连接”。 Visual Studio 会将该计算机添加为 CMakeSettings.json 作为“Linux-Debug”的默认值。 它还会从远程计算机中下拉标头，以便在使用时获得特定于该计算机的 IntelliSense。 现在，Visual Studio 会将文件发送到远程计算机，然后在那里生成 CMake 缓存，完成后，Visual Studio 将配置为使用与该远程 Linux 计算机相同的源代码库。 这些步骤可能需要一些时间，具体取决于网络速度和远程计算机的功率。 当 CMake 输出窗口中出现“目标信息提取完成”消息时，你将知道这已完成。
 
-## <a name="set-a-breakpoint-build-and-run-on-linux"></a>设置断点、 生成和运行在 Linux 上
+## <a name="set-a-breakpoint-build-and-run-on-linux"></a>在 Linux 上设置断点、生成和运行
 
-由于这是一个桌面应用程序，你需要提供到调试配置一些其他配置信息。 
+由于这是桌面应用程序，因此你需要为调试配置提供一些其他配置信息。 
 
-1. 在 CMake 目标视图中，右键单击 AppBasicExampleGui 并选择**调试和启动设置**以打开 launch.vs.json 文件中隐藏 **.vs**子文件夹。 此文件是本地的开发环境。 您可以将其移动到在项目的根目录如果你想要其签入并将其保存与你的团队。 在此文件中配置已添加对 AppBasicExampleGui。 在大多数情况下，这些默认设置工作，但由于这是你需要提供一些其他信息来启动程序的方式的桌面应用程序可以看到它在我们的 Linux 计算机上。 
-2. 您需要了解的环境变量的值`DISPLAY`在 Linux 上运行此命令可获取它。
+1. 在“CMake 目标”视图中，右键单击“AppBasicExampleGui”并选择“调试并启动设置”以打开隐藏的“.vs”子文件夹中的 launch.vs.json 文件。 此文件是开发环境的本地文件。 如果希望签入该文件并将其保存到团队中，则可以将该文件移动到项目的根目录中。 在此文件中，已为 AppBasicExampleGui 添加了一个配置。 这些默认设置在大多数情况下都有效，但由于这是一个桌面应用程序，你需要提供一些额外的信息来启动程序，以便在 Linux 计算机上看到它。 
+2. 你需要知道 Linux 计算机上环境变量 `DISPLAY` 的值，运行此命令才能获得它。
 
     ```cmd
     echo $DISPLAY
     ```
 
-    在配置中为 AppBasicExampleGui 是参数数组"pipeArgs"。 在这里是一个行"${debuggerCommand}"。 这是启动远程计算机上的 gdb 命令。 Visual Studio 需要先运行该命令将导出到此上下文中显示。 例如，如果您的显示的值： 1，相应行修改，如下所示：
+    在 AppBasicExampleGui 的配置中，有一个参数数组“pipeArgs”。 其中有一行“${debuggerCommand}”。 这是在远程计算机上启动 gdb 的命令。 Visual Studio 需要在该命令运行之前将显示内容导出到此上下文中。 例如，如果显示值为 1，请修改该行，如下所示：
 
     ```cmd
     "export DISPLAY=:1;${debuggerCommand}",
     ```
-3. 现在为了启动并调试我们的应用程序，选择**选择启动项**工具栏中的下拉列表中，选择 AppBasicExampleGui。 现在按下该按钮或命中**F5**。 这将生成应用程序，在远程 Linux 计算机上的其依赖项然后附带 Visual Studio 调试器启动它。 在远程 Linux 计算机，你会看到显示的应用程序窗口。
+3. 现在，若要启动和调试应用程序，请选择工具栏中的“选择启动项”下拉列表，然后选择 AppBasicExampleGui。 现在按下该按钮或按 F5。 这将在远程 Linux 计算机上生成应用程序及其依赖项，然后使用附加的 Visual Studio 调试器启动它。 在远程 Linux 计算机上，你应看到一个应用程序窗口。
 
-4. 将鼠标移到应用程序窗口中，单击一个按钮，并将命中断点。 程序执行暂停，Visual Studio 返回转入前台，并且将在断点处。 您应看到 Linux 控制台窗口在 Visual Studio 中显示。 此窗口提供输出从远程 Linux 计算机，并还可以接受的输入`stdin`。 它可以像任何 Visual Studio 窗口中，停靠其中想要查看它，它的位置将保留在将来的会话。
+4. 将鼠标移动到应用程序窗口，单击按钮，将触发断点。 程序执行暂停，Visual Studio 回到前台，你将位于该断点位置。 你还应看到 Visual Studio 中出现了一个 Linux 控制台窗口。 此窗口提供远程 Linux 计算机的输出，它还可接受 `stdin` 的输入。 与任何 Visual Studio 窗口一样，它可以停靠在你希望看到它的位置，并且它的位置将在将来的会话中保留。
 
     ![Visual Studio Linux 控制台窗口](media/cmake-bullet3-linux-console.png)
 
-5. 可以通过使用 Visual Studio 以交互方式在代码中检查应用程序变量、 对象、 线程、 内存和步骤。 但这次实现所有这在远程 Linux 计算机上而不本地 Windows 环境。 可以单击**继续**让应用程序恢复并退出通常情况下，或者您可以按停止按钮，就像使用本地执行一样。
+5. 可以使用 Visual Studio 以交互方式检查应用程序变量、对象、线程、内存和步骤。 但是这次是在远程 Linux 计算机而不是本地 Windows 环境中完成所有这些工作。 可以单击“继续”，让应用程序恢复并正常退出，或者也可以按“停止”按钮，就像本地执行一样。
 
-6. 查看调用堆栈窗口，并查看对调用`x11OpenGLWindow`由于 Visual Studio 启动 Linux 上的应用程序。
+6. 查看“调用堆栈”窗口，并查看自 Visual Studio 在 Linux 上启动应用程序后对 `x11OpenGLWindow` 的调用。
 
-    ![调用堆栈窗口显示 Linux 调用堆栈](media/cmake-bullet3-linux-callstack.png)
+    ![显示 Linux 调用堆栈的“调用堆栈”窗口](media/cmake-bullet3-linux-callstack.png)
 
 ## <a name="what-you-learned"></a>已了解的内容 
 
-在本教程中，已了解基于直接从 GitHub 克隆和生成、 运行，并调试 Windows 不作任何修改的代码。 这是代码库，与配置做出细微更改，已生成、 运行和调试远程 Linux 计算机上。 
+在本教程中，已了解直接从 GitHub 克隆的代码库，并在 Windows 上生成、运行和调试，且无需修改。 在远程 Linux 计算机上生成、运行和调试了代码库，并进行了少量配置更改。 
 
 ## <a name="next-steps"></a>后续步骤
 
-了解有关配置和调试 Visual Studio 中的 CMake 项目的详细信息：
+了解有关在 Visual Studio 中配置和调试 CMake 项目的更多信息：
 
 > [!div class="nextstepaction"]
-> [在 Visual Studio 中的 CMake 项目](cmake-projects-in-visual-studio.md)<br/><br/>
+> [Visual Studio 中的 CMake 项目](cmake-projects-in-visual-studio.md)<br/><br/>
 > [配置 Linux CMake 项目](../linux/cmake-linux-project.md)<br/><br/>
 > [连接到远程 Linux 计算机](../linux/connect-to-your-remote-linux-computer.md)<br/><br/>
 > [自定义 CMake 生成设置](customize-cmake-settings.md)<br/><br/>
 > [配置 CMake 调试会话](configure-cmake-debugging-sessions.md)<br/><br/>
 > [部署、运行和调试 Linux 项目](../linux/deploy-run-and-debug-your-linux-project.md)<br/><br/>
-> [CMake 预定义的配置参考](cmake-predefined-configuration-reference.md)
+> [CMake 预定义配置引用](cmake-predefined-configuration-reference.md)
 > 

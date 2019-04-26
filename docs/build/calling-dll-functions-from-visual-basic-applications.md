@@ -11,15 +11,15 @@ helpviewer_keywords:
 - DLL functions [C++], calling
 ms.assetid: 282f7fbf-a0f2-4b9f-b277-1982710be56c
 ms.openlocfilehash: 1e4f1a538da2394c6cead6ea011faf126b022a3f
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57814964"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62195337"
 ---
 # <a name="calling-dll-functions-from-visual-basic-applications"></a>从 Visual Basic 应用程序调用 DLL 函数
 
-对于 Visual Basic 应用程序 （或 Pascal 或 Fortran 等其他语言中的应用程序） 在 C/c + + DLL 中调用函数，函数必须使用导出正确的调用约定而无需由编译器进行任何名称修饰
+对于 Visual Basic 应用程序 （或 Pascal 或 Fortran 等其他语言中的应用程序） 在 C 中调用函数 /C++ DLL，必须使用正确的调用约定而无需由编译器进行任何名称修饰导出函数
 
 `__stdcall` 创建正确的函数的调用约定 （被调用的函数清理堆栈和从右到左传递的参数），但以不同的方式修饰函数名。 因此，当 **__declspec （dllexport)** 使用在 DLL 中导出的函数，修饰的名被导出。
 
@@ -64,7 +64,7 @@ EXPORTS
 
 - [使用 __declspec （dllexport） 从 DLL 导出](exporting-from-a-dll-using-declspec-dllexport.md)
 
-- [导出 c + + 函数以用于 C 语言可执行文件](exporting-cpp-functions-for-use-in-c-language-executables.md)
+- [导出C++函数以用于 C 语言可执行文件](exporting-cpp-functions-for-use-in-c-language-executables.md)
 
 - [确定要使用的导出方法](determining-which-exporting-method-to-use.md)
 
