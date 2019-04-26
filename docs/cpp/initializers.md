@@ -9,11 +9,11 @@ helpviewer_keywords:
 - initializers, array element
 ms.assetid: ce301ed8-aa1c-47b2-bb39-9f0541b4af85
 ms.openlocfilehash: 1890899fb2ad63bff06d514ae8b18f9dc3ff9e21
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176284"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62183517"
 ---
 # <a name="initializers"></a>初始值设定项
 
@@ -323,9 +323,9 @@ int main(){
 
 - 从函数返回对象
 
-- 参数传递给函数
+- 自变量传递给函数
 
-- 直接初始化中的参数之一
+- 直接初始化中的自变量之一
 
 - 在非静态数据成员的初始值设定项中
 
@@ -498,7 +498,7 @@ int main()
 
 尽管语法可以相同，但引用类型变量的引用和引用类型变量的赋值在语义上不同。 在前面的示例中，更改 `iVar` 和 `lVar` 的赋值看起来像初始化，但它们有不同的效果。 初始化指定引用类型变量指向的对象；赋值通过引用向引用目标对象赋值。
 
-由于将引用类型的参数传递给函数或从函数返回引用类型的值都是初始化，因此会正确初始化函数的形参，就像它们是返回的引用一样。
+由于将引用类型的自变量传递给函数或从函数返回引用类型的值都是初始化，因此会正确初始化函数的形式自变量，就像它们是返回的引用一样。
 
 只有在下列声明中才能在没有初始值设定项的情况下声明引用类型变量：
 

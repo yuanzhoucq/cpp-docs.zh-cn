@@ -1,5 +1,5 @@
 ---
-title: 在 Visual Studio 中创建 C/c + + Dll
+title: 创建 C /C++ Visual Studio 中的 Dll
 ms.date: 12/10/2018
 helpviewer_keywords:
 - executable files [C++]
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - DLLs [C++], about DLLs
 ms.assetid: 5216bca4-51e2-466b-b221-0e3e776056f0
 ms.openlocfilehash: 5bd30c84ba202c3f772ad4451368efde10285e6c
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57815809"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62195457"
 ---
-# <a name="create-cc-dlls-in-visual-studio"></a>在 Visual Studio 中创建 C/c + + Dll
+# <a name="create-cc-dlls-in-visual-studio"></a>创建 C /C++ Visual Studio 中的 Dll
 
 在 Windows 中，动态链接库 (DLL) 是一种作为函数和资源的共享库的可执行文件。 动态链接是操作系统功能，使可执行文件调用的函数或使用存储在单独的文件的资源。 可从使用这些函数和资源的可执行文件中对其分别进行编译和部署。 DLL 不是独立的可执行文件;它在调用它的应用程序的上下文中运行。 操作系统可以将 DLL 加载到应用程序的内存空间时加载该应用程序 (*隐式链接*)，或按需在运行时 (*显式链接*)。 DLL 还可以在可执行文件之间轻松共享函数和资源。 多个应用程序可同时访问内存中单个 DLL 副本的内容。
 
@@ -59,7 +59,7 @@ ms.locfileid: "57815809"
 
 ## <a name="more-information-on-how-to-create-and-use-dlls"></a>如何创建和使用 Dll 的详细信息
 
-以下主题提供有关如何的详细的信息中 Visual c + + 程序 dll。
+以下主题提供有关如何的详细的信息为视觉对象中的程序 Dll C++。
 
 [演练：创建和使用动态链接库 (C++)](walkthrough-creating-and-using-a-dynamic-link-library-cpp.md)<br/>
 介绍如何使用 Visual Studio 创建和使用 DLL。

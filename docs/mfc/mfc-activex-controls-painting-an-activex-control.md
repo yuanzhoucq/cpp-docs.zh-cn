@@ -6,11 +6,11 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], optimizing
 ms.assetid: 25fff9c0-4dab-4704-aaae-8dfb1065dee3
 ms.openlocfilehash: b90aa331c289caf827785af2eeba037e70f686ab
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57281925"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62186874"
 ---
 # <a name="mfc-activex-controls-painting-an-activex-control"></a>MFC ActiveX 控件：绘制 ActiveX 控件
 
@@ -39,8 +39,7 @@ ms.locfileid: "57281925"
 
 如上面几段中所述，ActiveX 控件的更新方式取决于控件的状态。 但是，由于在这两种情况下，框架都会调用 `OnDraw` 成员函数，因此你需要在此成员函数中添加你自己的大部分绘制代码。
 
-
-  `OnDraw` 成员函数处理控件绘制。 当控件处于不活动状态时，控件容器调用 `OnDraw`，并传递控件容器的设备上下文以及控件占用的矩形区域的坐标。
+`OnDraw` 成员函数处理控件绘制。 当控件处于不活动状态时，控件容器调用 `OnDraw`，并传递控件容器的设备上下文以及控件占用的矩形区域的坐标。
 
 框架传递给 `OnDraw` 成员函数的矩形包含控件占用的区域。 如果控件处于活动状态，则左上角的坐标为 (0，0)，且传递的设备上下文是针对包含控件的子窗口的。 如果控件处于不活动状态，则左上角的坐标不一定为 (0，0)，且传递的设备上下文是针对包含控件的控件容器的。
 

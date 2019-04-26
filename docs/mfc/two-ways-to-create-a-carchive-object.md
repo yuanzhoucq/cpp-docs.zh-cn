@@ -14,11 +14,11 @@ helpviewer_keywords:
 - CArchive class [MFC], constructor
 ms.assetid: aefa28ce-b55c-40dc-9e42-5f038030985d
 ms.openlocfilehash: 80e3e73840bce53691c3f5fdafb62c60bdb8f832
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57273798"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62181505"
 ---
 # <a name="two-ways-to-create-a-carchive-object"></a>创建 CArchive 对象的两种方法
 
@@ -70,4 +70,4 @@ ms.locfileid: "57273798"
 
 ## <a name="see-also"></a>请参阅
 
-[序列化：对象的序列化](../mfc/serialization-serializing-an-object.md)
+[序列化：序列化对象](../mfc/serialization-serializing-an-object.md)
