@@ -12,11 +12,11 @@ helpviewer_keywords:
 - exporting DLLs [C++], AFX_EXT_CLASS macro
 ms.assetid: 6b72cb2b-e92e-4ecd-bcab-c335e1d1cfde
 ms.openlocfilehash: bcfdc94e8db80daec227d77c20ecec6b14d5af11
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57821217"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62195324"
 ---
 # <a name="exporting-and-importing-using-afxextclass"></a>使用 AFX_EXT_CLASS 导出和导入
 
@@ -108,13 +108,13 @@ class CExampleView : public CView
 
 - [使用 __declspec （dllexport） 从 DLL 导出](exporting-from-a-dll-using-declspec-dllexport.md)
 
-- [导出 c + + 函数以用于 C 语言可执行文件](exporting-cpp-functions-for-use-in-c-language-executables.md)
+- [导出C++函数以用于 C 语言可执行文件](exporting-cpp-functions-for-use-in-c-language-executables.md)
 
-- [导出 C 函数以用于 C 或 c + + 语言可执行文件](exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
+- [导出 C 函数以用于 C 或C++-语言可执行文件](exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
 
 - [确定要使用的导出方法](determining-which-exporting-method-to-use.md)
 
-- [导入到使用 __declspec （dllimport） 的应用程序](importing-into-an-application-using-declspec-dllimport.md)
+- [使用 __declspec(dllimport) 导入到应用程序中](importing-into-an-application-using-declspec-dllimport.md)
 
 - [初始化 DLL](run-time-library-behavior.md#initializing-a-dll)
 

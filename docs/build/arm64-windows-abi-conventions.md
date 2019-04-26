@@ -2,11 +2,11 @@
 title: ARM64 ABI 约定概述
 ms.date: 03/27/2019
 ms.openlocfilehash: 4c0f89f97529d4cd70e1449c90b131d25d30f9ee
-ms.sourcegitcommit: ac5c04b347e817eeece6e2c98e60236fc0e307a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58639441"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62195497"
 ---
 # <a name="overview-of-arm64-abi-conventions"></a>ARM64 ABI 约定概述
 
@@ -129,7 +129,7 @@ AArch64 体系结构还支持 32 point 浮点/SIMD 寄存器，总结如下：
 
 对于每个自变量列表中，应用以下列表中的第一个匹配规则。 如果不使用任何规则匹配，参数保持不变。
 
-1. 其大小不能由调用方和被调用方静态确定的复合类型的参数类型时，将参数复制到内存和自变量替换为指向该副本的指针。 （C/c + + 中不存在此类类型，但它们存在于其他语言或语言扩展中）。
+1. 其大小不能由调用方和被调用方静态确定的复合类型的参数类型时，将参数复制到内存和自变量替换为指向该副本的指针。 (在 C 中没有此类类型 /C++ ，但它们存在于其他语言或语言扩展中)。
 
 1. 如果自变量类型是 HFA 或有关 HVA，则使用此参数未修改。
 
@@ -231,7 +231,7 @@ ARM EABI 还指定使用的异常展开模式展开代码。 但是，因为提�
 
 ## <a name="cycle-counter"></a>时钟周期计数器
 
-支持循环计数器所需的所有 ARMv8 Cpu 注册 Windows 配置为在任何异常级别，包括用户模式下可读的 64 位寄存器。 它可以通过特殊 PMCCNTR_EL0 访问程序集代码中使用 MSR 操作码的注册或`_ReadStatusReg`C/c + + 代码中内部函数。
+支持循环计数器所需的所有 ARMv8 Cpu 注册 Windows 配置为在任何异常级别，包括用户模式下可读的 64 位寄存器。 它可以通过特殊 PMCCNTR_EL0 访问程序集代码中使用 MSR 操作码的注册或`_ReadStatusReg`内部函数在 C /C++代码。
 
 时钟周期计数器此处是一个真循环计数器，不时钟。 计数频率会因处理器的频率。 如果您认为您必须知道的时钟周期计数器的频率，则不应使用循环计数器。 相反，你想要测量时钟时间，应使用`QueryPerformanceCounter`。
 
