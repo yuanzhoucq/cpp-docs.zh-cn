@@ -7,11 +7,11 @@ helpviewer_keywords:
 - nonstandard behavior, compliance and compatibility
 ms.assetid: a57dea27-dc79-4f64-8a83-017e84841773
 ms.openlocfilehash: b7546914f4cd417f127af56fb7342903989d8330
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50638199"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62245369"
 ---
 # <a name="nonstandard-behavior"></a>非标准行为
 
@@ -21,7 +21,7 @@ ms.locfileid: "50638199"
 
 ## <a name="covariant-return-types"></a>协变返回类型
 
-当虚函数具有可变数量的参数时，不支持虚拟基类作为协变返回类型。 这不符合 C++ ISO 规范第 10.3 节第 7 段。 下面的示例不编译，编译器错误[C2688](../error-messages/compiler-errors-2/compiler-error-c2688.md)
+当虚函数具有可变数量的自变量时，不支持虚拟基类作为协变返回类型。 这不符合 C++ ISO 规范第 10.3 节第 7 段。 下面的示例不编译，编译器错误[C2688](../error-messages/compiler-errors-2/compiler-error-c2688.md)
 
 ```cpp
 // CovariantReturn.cpp
@@ -75,7 +75,7 @@ void g() throw();    // parsed and used
 
 ## <a name="chartraitseof"></a>char_traits::eof()
 
-C++ 标准声明[char_traits:: eof](../standard-library/char-traits-struct.md#eof)不能对应于一个有效`char_type`值。 Visual c + + 编译器可强制此约束的类型**char**，而不是类型**wchar_t**。 这不符合 C++ ISO 规范的第 12.1.1 节中表 62 的需求。 下面的示例将说明这一点。
+C++ 标准声明[char_traits:: eof](../standard-library/char-traits-struct.md#eof)不能对应于一个有效`char_type`值。 视觉对象C++编译器可强制此约束的类型**char**，而不是类型**wchar_t**。 这不符合 C++ ISO 规范的第 12.1.1 节中表 62 的要求。 下面的示例将说明这一点。
 
 ```cpp
 #include <iostream>

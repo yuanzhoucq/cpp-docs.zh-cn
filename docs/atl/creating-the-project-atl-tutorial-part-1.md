@@ -4,11 +4,11 @@ ms.custom: get-started-article
 ms.date: 09/26/2018
 ms.assetid: f6b727d1-390a-4b27-b82f-daadcd9fc059
 ms.openlocfilehash: 4a608fb3a096dee2420ef652ba213c534d8fb426
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57273920"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62262081"
 ---
 # <a name="creating-the-project-atl-tutorial-part-1"></a>创建项目（ATL 教程，第 1 部分）
 
@@ -38,7 +38,7 @@ ms.locfileid: "57273920"
 
 1. 在 Visual Studio 开发环境中，单击**新建**上**文件**菜单，并单击**项目**。
 
-1. 打开**Visual c + +** 选项卡并选择**MFC/ATL**。 选择**ATL 项目**。
+1. 打开**可视化C++** 选项卡并选择**MFC/ATL**。 选择**ATL 项目**。
 
 1. 类型*多边形*作为项目名称。
 

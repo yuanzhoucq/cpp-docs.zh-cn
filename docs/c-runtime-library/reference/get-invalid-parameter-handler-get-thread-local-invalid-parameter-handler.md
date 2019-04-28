@@ -27,11 +27,11 @@ helpviewer_keywords:
 - _get_invalid_parameter_handler function
 ms.assetid: a176da0e-38ca-4d99-92bb-b0e2b8072f53
 ms.openlocfilehash: 7d1a87f9ade0845994918d5a4d59dc56e190d2b6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50623971"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62287477"
 ---
 # <a name="getinvalidparameterhandler-getthreadlocalinvalidparameterhandler"></a>_get_invalid_parameter_handler、_get_thread_local_invalid_parameter_handler
 
@@ -70,7 +70,7 @@ typedef void (__cdecl* _invalid_parameter_handler)(
 
 |例程所返回的值|必需的标头|
 |-------------|---------------------|
-|**_get_invalid_parameter_handler**， **_get_thread_local_invalid_parameter_handler**|C: \<stdlib.h><br /><br /> C++: \<cstdlib> 或 \<stdlib.h>|
+|**_get_invalid_parameter_handler**, **_get_thread_local_invalid_parameter_handler**|C: \<stdlib.h><br /><br /> C++: \<cstdlib> 或 \<stdlib.h>|
 
 **_Get_invalid_parameter_handler**并 **_get_thread_local_invalid_parameter_handler**是 Microsoft 特定函数的函数。 有关兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 

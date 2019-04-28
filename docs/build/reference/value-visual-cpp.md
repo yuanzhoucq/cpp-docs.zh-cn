@@ -1,5 +1,5 @@
 ---
-title: '&lt;值 > （c + + 文档注释）'
+title: '&lt;值 > (C++文档注释)'
 ms.date: 11/04/2016
 f1_keywords:
 - value
@@ -9,11 +9,11 @@ helpviewer_keywords:
 - <value> C++ XML tag
 ms.assetid: 0ba0a0d5-bcd7-4862-a169-83f2721ad80e
 ms.openlocfilehash: c0863b41791254992d16d373328ff6c8a5d6f94f
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57824521"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62317024"
 ---
 # <a name="ltvaluegt"></a>&lt;值&gt;
 

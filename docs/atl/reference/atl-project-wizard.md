@@ -8,15 +8,15 @@ helpviewer_keywords:
 - ATL Project Wizard
 ms.assetid: 564d2aaf-5b8e-4c2a-a925-ca40a283ea34
 ms.openlocfilehash: 4059961d70e6486f7417a5eff034b194d9860558
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57807788"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62261428"
 ---
 # <a name="atl-project-wizard"></a>ATL 项目向导
 
-活动模板库 (ATL) 是一组简化编写小巧快捷的 COM 对象的 c + + 基于模板的类。 ATL 项目向导创建一个项目使用的结构，以包含 COM 对象。
+活动模板库 (ATL) 是一套基于模板的C++类，用于简化编写小巧快捷的 COM 对象。 ATL 项目向导创建一个项目使用的结构，以包含 COM 对象。
 
 ## <a name="overview"></a>概述
 
@@ -30,7 +30,7 @@ ms.locfileid: "57807788"
 
 有关默认项目设置的信息，包括选择的字符集，以及链接默认设置，请参阅[默认 ATL 项目配置](../../atl/reference/default-atl-project-configurations.md)。
 
-创建 ATL 项目后，可以将对象或控件添加到你的项目使用 Visual c + +[代码向导](../../ide/adding-functionality-with-code-wizards-cpp.md)。 您可以进行以下类型的使用代码向导的基本 ATL 项目的增强功能：
+创建 ATL 项目后，可以将对象或控件添加到你的项目使用视觉对象C++[代码向导](../../ide/adding-functionality-with-code-wizards-cpp.md)。 您可以进行以下类型的使用代码向导的基本 ATL 项目的增强功能：
 
 - [将对象和控件添加到 ATL 项目](../../atl/reference/adding-objects-and-controls-to-an-atl-project.md)
 

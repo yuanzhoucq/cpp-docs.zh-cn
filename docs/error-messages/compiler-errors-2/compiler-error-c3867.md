@@ -7,15 +7,15 @@ helpviewer_keywords:
 - C3867
 ms.assetid: bc5de03f-e01a-4407-88c3-2c63f0016a1e
 ms.openlocfilehash: 9308e238c86c7b8a957720228a823688fac289d3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50571192"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62242872"
 ---
 # <a name="compiler-error-c3867"></a>编译器错误 C3867
 
-“func”: 函数调用缺少自变量列表；请使用“&func”创建指向成员的指针
+func： 函数调用缺少参数列表;使用 & f u n c 以创建指向成员的指针
 
 你曾尝试在不使用成员函数的类名称和 address-of 运算符限定成员函数的情况下采用其地址。
 

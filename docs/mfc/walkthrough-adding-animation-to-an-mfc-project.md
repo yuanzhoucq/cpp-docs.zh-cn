@@ -6,15 +6,15 @@ helpviewer_keywords:
 - MFC, animation
 ms.assetid: 004f832c-9fd5-4f88-9ca9-ae65dececdc2
 ms.openlocfilehash: 25e29654f1e192e03a078e4a963f27abeea6056d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50522234"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62358599"
 ---
 # <a name="walkthrough-adding-animation-to-an-mfc-project"></a>演练：向 MFC 项目添加动画
 
-本演练介绍了如何将基本动画的对象添加到 Visual c + +，Microsoft 基础类库 (MFC) 项目。
+本演练介绍了如何将基本动画的对象添加到视觉对象C++，Microsoft 基础类库 (MFC) 项目。
 
 本演练演示如何完成这些任务：
 
@@ -40,7 +40,7 @@ ms.locfileid: "50522234"
 
 1. 在 **“文件”** 菜单上指向 **“新建”** ，然后单击 **“项目”**。
 
-1. 在中**新的项目**对话框中，在下的左窗格**已安装的模板**，展开**Visual c + +** ，然后选择**MFC**。 在中间窗格中，选择**MFC 应用程序**。 在中**名称**框中，键入*MFCAnimationWalkthrough*。 单击 **“确定”**。
+1. 在中**新的项目**对话框中，在下的左窗格**已安装的模板**，展开**Visual C++**  ，然后选择**MFC**。 在中间窗格中，选择**MFC 应用程序**。 在中**名称**框中，键入*MFCAnimationWalkthrough*。 单击 **“确定”**。
 
 1. 在中**MFC 应用程序向导**对话框框中，确保**应用程序类型**是**多个文档**，**项目样式**是**Visual Studio**，并**文档/视图体系结构支持**选择选项。 单击 **“完成”**。
 

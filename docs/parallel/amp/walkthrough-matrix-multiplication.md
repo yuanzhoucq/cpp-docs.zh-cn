@@ -3,21 +3,21 @@ title: 演练：矩阵乘法
 ms.date: 11/19/2018
 ms.assetid: 61172e8b-da71-4200-a462-ff3a908ab0cf
 ms.openlocfilehash: 597ba0f47c7b081f62c82bf8e1ca01c286d35140
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57300968"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62237199"
 ---
 # <a name="walkthrough-matrix-multiplication"></a>演练：矩阵乘法
 
-此分步演练演示如何使用 c + + AMP 加快执行矩阵乘法。 显示这两种算法，另一个不包含平铺，另一个使用平铺。
+此分步演练演示如何使用C++AMP 可加速执行矩阵乘法。 显示这两种算法，另一个不包含平铺，另一个使用平铺。
 
 ## <a name="prerequisites"></a>系统必备
 
 开始之前：
 
-- 读取[c + + AMP 概述](../../parallel/amp/cpp-amp-overview.md)。
+- 读取[ C++ AMP 概述](../../parallel/amp/cpp-amp-overview.md)。
 
 - 读取[使用平铺](../../parallel/amp/using-tiles.md)。
 
@@ -27,7 +27,7 @@ ms.locfileid: "57300968"
 
 1. 在 Visual Studio 中菜单栏上依次选择**文件** > **新建** > **项目**。
 
-1. 下**已安装**在模板窗格中选择**Visual c + +**。
+1. 下**已安装**在模板窗格中选择**Visual C++** 。
 
 1. 选择**空项目**，输入*MatrixMultiply*中**名称**，然后再选择**确定**按钮。
 
@@ -35,7 +35,7 @@ ms.locfileid: "57300968"
 
 1. 在中**解决方案资源管理器**，打开快捷菜单**源文件**，然后选择**添加** > **新项**。
 
-1. 在中**添加新项**对话框中，选择**c + + 文件 (.cpp)**，输入*MatrixMultiply.cpp*中**名称**框中，，然后选择**添加**按钮。
+1. 在中**添加新项**对话框中，选择**C++文件 (.cpp)**，输入*MatrixMultiply.cpp*中**名称**框中，，然后选择**添加**按钮。
 
 ## <a name="multiplication-without-tiling"></a>而无需平铺的乘法
 
@@ -49,7 +49,7 @@ ms.locfileid: "57300968"
 
 ![3&#45;的&#45;3 个产品矩阵](../../parallel/amp/media/campmatrixproductnontiled.png "3&#45;的&#45;3 个产品矩阵")
 
-### <a name="to-multiply-without-using-c-amp"></a>要相乘而无需使用 c + + AMP
+### <a name="to-multiply-without-using-c-amp"></a>要相乘而无需使用C++a m P
 
 1. 打开 MatrixMultiply.cpp 并使用下面的代码替换现有代码。
 
@@ -87,7 +87,7 @@ void main() {
 
 1. 选择**Enter**退出该应用程序。
 
-### <a name="to-multiply-by-using-c-amp"></a>要通过使用 c + + AMP 相乘
+### <a name="to-multiply-by-using-c-amp"></a>要相乘通过使用C++a m P
 
 1. 在 MatrixMultiply.cpp，添加以下代码之前`main`方法。
 
@@ -296,4 +296,4 @@ void main() {
 ## <a name="see-also"></a>请参阅
 
 [C++ AMP (C++ Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)<br/>
-[演练：调试 c + + AMP 应用程序](../../parallel/amp/walkthrough-debugging-a-cpp-amp-application.md)
+[演练：调试 C++ AMP 应用程序](../../parallel/amp/walkthrough-debugging-a-cpp-amp-application.md)

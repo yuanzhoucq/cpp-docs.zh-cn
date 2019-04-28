@@ -9,11 +9,11 @@ helpviewer_keywords:
 - MFC, wizards
 ms.assetid: f8ac0491-3302-4e46-981d-0790624eb8a2
 ms.openlocfilehash: cb45c8ffae15628b0b99a1ebcd962d88d845f83b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57266258"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62241571"
 ---
 # <a name="cwinapp-and-the-mfc-application-wizard"></a>CWinApp 和 MFC 应用程序向导
 
@@ -33,6 +33,6 @@ MFC 应用程序向导创建主干应用程序时, 声明应用程序类派生�
 
 ## <a name="see-also"></a>请参阅
 
-[CWinApp:应用程序类](../mfc/cwinapp-the-application-class.md)<br/>
+[CWinApp：应用程序类](../mfc/cwinapp-the-application-class.md)<br/>
 [可重写的 CWinApp 成员函数](../mfc/overridable-cwinapp-member-functions.md)<br/>
 [特殊的 CWinApp 服务](../mfc/special-cwinapp-services.md)

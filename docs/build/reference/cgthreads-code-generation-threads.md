@@ -10,11 +10,11 @@ helpviewer_keywords:
 - cgthreads
 ms.assetid: 64bc768c-6caa-4baf-9dea-7cfa1ffb01c2
 ms.openlocfilehash: df353eb255c731478863ed6088cafa1cc38053fb
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57807424"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62294682"
 ---
 # <a name="cgthreads-code-generation-threads"></a>/cgthreads（代码生成线程）
 
@@ -39,9 +39,9 @@ ms.locfileid: "57807424"
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[Visual Studio 中的设置 c + + 编译器和生成属性](../working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
 
-1. 选择**配置属性**， **C/c + +** 文件夹。
+1. 选择**配置属性**， **C /C++** 文件夹。
 
 1. 选择**命令行**属性页。
 

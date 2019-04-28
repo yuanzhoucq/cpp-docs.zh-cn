@@ -8,11 +8,11 @@ helpviewer_keywords:
 - CSocket class [MFC], programming model
 ms.assetid: 17e71a99-a09e-4e1a-9fda-13d62805c824
 ms.openlocfilehash: 71a7ed1f1b67bed157805328679a18ceabf201d3
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57261500"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62358277"
 ---
 # <a name="windows-sockets-using-sockets-with-archives"></a>Windows 套接字：对存档使用套接字
 
@@ -74,7 +74,7 @@ ms.locfileid: "57261500"
 
 有关详细信息，请参见:
 
-- [Windows 套接字：Stream 套接字](../mfc/windows-sockets-stream-sockets.md)
+- [Windows 套接字：流套接字](../mfc/windows-sockets-stream-sockets.md)
 
 - [Windows 套接字：数据报套接字](../mfc/windows-sockets-datagram-sockets.md)
 

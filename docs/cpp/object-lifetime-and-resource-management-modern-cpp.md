@@ -4,11 +4,11 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 8aa0e1a1-e04d-46b1-acca-1d548490700f
 ms.openlocfilehash: 5964078960a5b241cb5af369aeddba45a06e48ad
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220618"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62245006"
 ---
 # <a name="object-lifetime-and-resource-management-modern-c"></a>对象生存期和资源管理（现代 C++）
 
@@ -18,7 +18,7 @@ C++ 没有 GC 的主要原因是它不会处理非内存资源。 仅类似 C++ 
 
 ## <a name="concepts"></a>概念
 
-对象生存期管理中一个重要的事项是封装 - 使用对象不必知道对象拥有的资源，或如何摆脱资源，或者甚至它是否拥有任何资源。 它只需销毁对象即可。 C++ 核心语言旨在确保在正确的时间（即，当块退出时）以构造的倒序销毁对象。 销毁对象时，将按特定顺序销毁其基项和成员。  除非您进行诸如堆分配或放置新对象等特殊操作，否则此语言将自动销毁对象。  例如，[智能指针](../cpp/smart-pointers-modern-cpp.md)等`unique_ptr`并`shared_ptr`，和 c + + 标准库容器类似`vector`，封装**新**/ **删除**并`new[]` / `delete[]`在对象中，其中具有析构函数。 这就是为什么因此，务必使用智能指针和 C++ 标准库容器。
+对象生存期管理中一个重要的事项是封装 - 使用对象不必知道对象拥有的资源，或如何摆脱资源，或者甚至它是否拥有任何资源。 它只需销毁对象即可。 C++ 核心语言旨在确保在正确的时间（即，当块退出时）以构造的倒序销毁对象。 销毁对象时，将按特定顺序销毁其基项和成员。  除非您进行诸如堆分配或放置新对象等特殊操作，否则此语言将自动销毁对象。  例如，[智能指针](../cpp/smart-pointers-modern-cpp.md)等`unique_ptr`并`shared_ptr`，和C++标准库容器类似`vector`，封装**新**/ **删除**并`new[]` / `delete[]`在对象中，其中具有析构函数。 这就是为什么因此，务必使用智能指针和 C++ 标准库容器。
 
 生存期管理中另一个重要概念：析构函数。 析构函数封装资源释放。  （常用的助记键是 RRID，资源释放是析构。）资源是您从“系统”中获取并且之后必须归还的内容。  内存是最常见的资源，但还有文件、套接字、纹理和其他非内存资源。 “拥有”资源意味着您可以在需要时使用资源，但还必须在用完时释放。  销毁对象时，其析构函数将释放它拥有的资源。
 

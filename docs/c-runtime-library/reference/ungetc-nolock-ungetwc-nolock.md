@@ -33,11 +33,11 @@ helpviewer_keywords:
 - ungetc_nolock function
 ms.assetid: aa02d5c2-1be1-46d2-a8c4-b61269e9d465
 ms.openlocfilehash: 55888f122af0848c92204168a23cca93e2517904
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51331498"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62268879"
 ---
 # <a name="ungetcnolock-ungetwcnolock"></a>_ungetc_nolock、_ungetwc_nolock
 
@@ -61,7 +61,7 @@ wint_t _ungetwc_nolock(
 *c*<br/>
 要推送的字符。
 
-*流*<br/>
+*stream*<br/>
 指向**文件**结构的指针。
 
 ## <a name="return-value"></a>返回值

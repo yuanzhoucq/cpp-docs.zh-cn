@@ -8,15 +8,15 @@ helpviewer_keywords:
 - window objects [MFC], removing
 ms.assetid: 3241fea0-c614-4a25-957d-20f21bd5fd0c
 ms.openlocfilehash: f50d198f9868a70d25370f6c1399b66efaa5490b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57289840"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62297237"
 ---
 # <a name="destroying-window-objects"></a>销毁窗口对象
 
-必须格外小心使用你自己的子窗口用于当用户完成与该窗口时销毁 c + + 窗口对象。 如果这些对象不会被销毁，你的应用程序将恢复其内存。 幸运的是，框架管理窗口析构，以及创建框架窗口、 视图和对话框。 如果您创建其他窗口，您有责任销毁它们。
+必须小心使用你自己的子窗口要销毁C++当用户完成与窗口的窗口对象。 如果这些对象不会被销毁，你的应用程序将恢复其内存。 幸运的是，框架管理窗口析构，以及创建框架窗口、 视图和对话框。 如果您创建其他窗口，您有责任销毁它们。
 
 ## <a name="what-do-you-want-to-know-more-about"></a>你想要了解更多信息
 

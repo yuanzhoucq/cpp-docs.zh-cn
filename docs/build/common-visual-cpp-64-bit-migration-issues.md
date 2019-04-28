@@ -13,11 +13,11 @@ helpviewer_keywords:
 - Win64 [C++]
 ms.assetid: d17fb838-7513-4e2d-8b27-a1666f17ad76
 ms.openlocfilehash: 937c00b7d3c40d9a5b92d53582ab1ebf4418ebc7
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816108"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62200072"
 ---
 # <a name="common-visual-c-64-bit-migration-issues"></a>Visual C++ 64 位迁移的常见问题
 
@@ -47,5 +47,5 @@ ms.locfileid: "57816108"
 
 ## <a name="see-also"></a>请参阅
 
-[配置 64 位 x64 的 c + + 项目目标](configuring-programs-for-64-bit-visual-cpp.md)<br/>
+[配置C++适用于 64 位 x64 目标项目](configuring-programs-for-64-bit-visual-cpp.md)<br/>
 [Visual C++ 移植和升级指南](../porting/visual-cpp-porting-and-upgrading-guide.md)

@@ -6,17 +6,17 @@ helpviewer_keywords:
 - command modifiers
 ms.assetid: b661c432-210f-4f05-bc56-744a46e0fc0b
 ms.openlocfilehash: 6131b94a6ee78026b8d5337061a6238df785b64d
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57824439"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62272396"
 ---
 # <a name="command-modifiers"></a>命令修饰符
 
 可以指定前面的命令，可以选择用空格或制表符分隔的一个或多个命令修饰符。 与命令一样，必须缩进修饰符。
 
-|修饰符|目标|
+|修饰符|用途|
 |--------------|-------------|
 |\@*命令*|禁止显示该命令。 不取消显示由命令。 默认情况下，NMAKE 回显所有执行的命令。 使用 /S 取消显示整个生成文件;使用 **。无提示**取消生成文件的一部分显示。|
 |**-**\[*number*] *command*|关闭的错误检查*命令*。 默认情况下，当命令返回非零退出代码时，NMAKE 暂停。 如果-*数量*是使用，NMAKE 停止如果退出代码超过*数*。 空格或制表符不能出现之间短划线和*数。* 之间必须有至少一个空格或制表符`number`并*命令*。 使用 /I 关闭检查整个生成文件; 时出错使用 **。忽略**关闭检查生成文件的一部分时出错。|

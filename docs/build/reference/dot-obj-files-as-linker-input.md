@@ -10,11 +10,11 @@ helpviewer_keywords:
 - OBJ files as linker input
 - .obj files as linker input
 ms.openlocfilehash: c55c3181c2ddfabddce882a473e56d952a7e5d81
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816394"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62293272"
 ---
 # <a name="obj-files-as-linker-input"></a>用作链接器输入的 .Obj 文件
 
@@ -26,7 +26,7 @@ Microsoft 提供了通用对象文件格式的完整说明。 有关详细信息
 
 ## <a name="unicode-support"></a>Unicode 支持
 
-从 Visual Studio 2005 开始，Microsoft MSVC 编译器支持在标识符 ISO/IEC C 和 c + + 标准定义的 Unicode 字符。 以前版本的编译器支持在标识符中仅包含 ASCII 字符。 若要支持 Unicode 的函数、 类和静态变量的名称中，编译器和链接器，请使用.obj 文件中的 COFF 符号的 Unicode utf-8 编码。 Utf-8 编码是与使用 Visual Studio 的早期版本的 ASCII 编码向上兼容。
+从 Visual Studio 2005 开始，Microsoft MSVC 编译器支持 Unicode 字符在标识符中定义的 ISO/IEC C 和C++标准。 以前版本的编译器支持在标识符中仅包含 ASCII 字符。 若要支持 Unicode 的函数、 类和静态变量的名称中，编译器和链接器，请使用.obj 文件中的 COFF 符号的 Unicode utf-8 编码。 Utf-8 编码是与使用 Visual Studio 的早期版本的 ASCII 编码向上兼容。
 
 有关编译器和链接器的详细信息，请参阅[编译器和链接器中的 Unicode 支持](unicode-support-in-the-compiler-and-linker.md)。 有关 Unicode 标准的详细信息，请参阅[Unicode](http://www.unicode.org/)组织。
 

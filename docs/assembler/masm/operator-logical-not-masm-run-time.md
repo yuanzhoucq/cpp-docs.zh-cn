@@ -8,11 +8,11 @@ helpviewer_keywords:
 - '! operator'
 ms.assetid: e94f737a-8251-4a3d-95ec-e95c35689b37
 ms.openlocfilehash: 4a10fa603449e72108977604697227bbb24c3bfc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50597621"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62199934"
 ---
 # <a name="operator--masm-run-time"></a>运算符 ! （MASM 运行的时间）
 
@@ -20,7 +20,7 @@ ms.locfileid: "50597621"
 
 ## <a name="syntax"></a>语法
 
-> ! *表达式*
+> ! *expression*
 
 ## <a name="see-also"></a>请参阅
 

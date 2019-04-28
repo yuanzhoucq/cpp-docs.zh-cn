@@ -6,11 +6,11 @@ helpviewer_keywords:
 - DHTML controls, ATL support
 ms.assetid: b627547a-3768-4346-9900-4b7a21fb8e27
 ms.openlocfilehash: 32b1c00e3ad3ed15fa56f7718789fe1a2e3ecbab
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424374"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62261941"
 ---
 # <a name="identifying-the-elements-of-the-dhtml-control-project"></a>标识 DHTML 控件项目的元素
 
@@ -18,7 +18,7 @@ ms.locfileid: "57424374"
 
 DHTML 控件是类似于任何 ATL 控件除外：
 
-- 除了常见的接口，控件实现，它实现了使用 c + + 代码和 HTML 用户界面 (UI) 之间进行通信的其他接口。 HTML UI 会调入 c + + 代码使用此接口。
+- 除了常见的接口，控件实现，它实现了使用之间进行通信的其他接口C++代码和 HTML 用户界面 (UI)。 HTML UI 调入C++代码使用此接口。
 
 - 它创建 UI 控件的 HTML 资源。
 
@@ -39,7 +39,7 @@ DHTML 控件是类似于任何 ATL 控件除外：
 
    - `IDHCTL1` 仅供容器使用的控件所公开的接口。
 
-   - `IDHCTLUI1` 用于 c + + 代码和 HTML 用户界面之间进行通信的调度接口。 Web 浏览器使用控件的调度接口来显示该控件。 可以从控件的用户界面中调用此调度接口的各种方法通过调用`window.external`后, 跟上你想要调用此调度接口的方法名称。 将访问`window.external`从构成此控件的 UI 的 HTML 内的脚本标记。 有关调用外部方法中的资源文件的详细信息，请参阅[从 DHTML 调用 c + + 代码](../atl/calling-cpp-code-from-dhtml.md)。
+   - `IDHCTLUI1` 之间进行通信的调度接口C++代码和 HTML 用户界面。 Web 浏览器使用控件的调度接口来显示该控件。 可以从控件的用户界面中调用此调度接口的各种方法通过调用`window.external`后, 跟上你想要调用此调度接口的方法名称。 将访问`window.external`从构成此控件的 UI 的 HTML 内的脚本标记。 有关调用外部方法中的资源文件的详细信息，请参阅[调用C++从 DHTML 代码](../atl/calling-cpp-code-from-dhtml.md)。
 
 - **IDR_CTL1** HTML 资源的资源 ID。 其文件名，在这种情况下，为 DHCTL1UI.htm。 DHTML 控件使用 HTML 资源，其中包含标准的 HTML 标记和外部窗口调度命令，可以使用文本编辑器进行编辑。
 

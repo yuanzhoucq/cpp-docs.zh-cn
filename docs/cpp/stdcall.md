@@ -9,11 +9,11 @@ helpviewer_keywords:
 - __stdcall keyword [C++]
 ms.assetid: e212594b-1827-4d07-9527-7d412b300df8
 ms.openlocfilehash: b9efac6f729a78db945ff3bd9ab16ebe315b7a5a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50560632"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62266954"
 ---
 # <a name="stdcall"></a>__stdcall
 
@@ -23,7 +23,7 @@ ms.locfileid: "50560632"
 
 ## <a name="syntax"></a>语法
 
-> *返回类型*  **\_ \_stdcall** *函数名称*[**(** *参数列表* **)**]
+> *return-type* **\_\_stdcall** *function-name*[**(** *argument-list* **)**]
 
 ## <a name="remarks"></a>备注
 
@@ -31,11 +31,11 @@ ms.locfileid: "50560632"
 
 |元素|实现|
 |-------------|--------------------|
-|自变量传递顺序|从右到左。|
+|参数传递顺序|从右到左。|
 |参数传递约定|按值，除非传递指针或引用类型。|
-|堆栈维护职责|调用的函数从堆栈中弹出自己的自变量。|
-|名称修饰约定|下划线 (_) 是名称的前缀。 名称后跟后面是参数列表中的字节数（采用十进制）的符号 (@)。 因此，声明为 `int func( int a, double b )` 的函数按如下所示进行修饰：`_func@12`|
-|大小写转换约定|无|
+|堆栈维护职责|调用的函数从堆栈中弹出自己的参数。|
+|名称修饰约定|下划线 (_) 是名称的前缀。 名称后跟后面是自变量列表中的字节数（采用十进制）的符号 (@)。 因此，声明为 `int func( int a, double b )` 的函数按如下所示进行修饰：`_func@12`|
+|大小写转换约定|None|
 
 [/Gz](../build/reference/gd-gr-gv-gz-calling-convention.md)编译器选项指定 **__stdcall**适用于使用不同的调用约定不显式声明的所有功能。
 

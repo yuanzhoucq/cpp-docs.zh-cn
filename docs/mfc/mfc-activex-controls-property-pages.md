@@ -11,11 +11,11 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], property pages
 ms.assetid: 1506f87a-9fd6-4505-8380-0dbc9636230e
 ms.openlocfilehash: 3fe092e412cf11f7bf8600e8d0d7d43abb0e11c7
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57303893"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62239944"
 ---
 # <a name="mfc-activex-controls-property-pages"></a>MFC ActiveX 控件：属性页
 
@@ -47,7 +47,7 @@ ActiveX 控件属性页会显示在两种方法：
 
 - [MFC ActiveX 控件：添加另一个自定义属性页](../mfc/mfc-activex-controls-adding-another-custom-property-page.md)
 
-- [MFC ActiveX 控件：使用常用属性页](../mfc/mfc-activex-controls-using-stock-property-pages.md)
+- [MFC ActiveX 控件：使用内置属性页](../mfc/mfc-activex-controls-using-stock-property-pages.md)
 
 以外的 ActiveX 控件的 MFC 应用程序中使用属性表的信息，请参阅[属性表](../mfc/property-sheets-mfc.md)。
 

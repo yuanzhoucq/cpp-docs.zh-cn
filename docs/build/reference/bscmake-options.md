@@ -30,11 +30,11 @@ helpviewer_keywords:
 - Ei BSCMAKE option
 ms.assetid: fa2f1e06-c684-41cf-80dd-6a554835ebd2
 ms.openlocfilehash: b1d62e8d122cb4f08feef60d6936359b3e246749
-ms.sourcegitcommit: 06fc71a46e3c4f6202a1c0bc604aa40611f50d36
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58508775"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62272866"
 ---
 # <a name="bscmake-options"></a>BSCMAKE 选项
 
@@ -43,7 +43,7 @@ ms.locfileid: "58508775"
 
 本部分介绍可用于控制 BSCMAKE 选项。 多个选项控制通过排除或包括特定的信息的浏览信息文件的内容。 排除选项可以允许 BSCMAKE 运行得更快，并可能会导致较小的.bsc 文件。 选项名称不区分大小写 (除 **/help**并 **/NOLOGO**)。
 
-仅 **/NOLOGO**并 **/o**可从 Visual Studio 开发环境。  请参阅[Visual Studio 中的设置 c + + 编译器和生成属性](../working-with-project-properties.md)有关的信息访问项目的属性页。
+仅 **/NOLOGO**并 **/o**可从 Visual Studio 开发环境。  请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)有关的信息访问项目的属性页。
 
 **/Ei (** *文件名*...**)**<br/>
 从浏览信息文件中排除指定的包含文件的内容。 若要指定多个文件，请用空格分隔这些名称，并将列表括在括号中。 括号不是必需的如果只指定一个*文件名*。 使用 **/Ei**连同 **/Es**选项以排除未排除的文件 **/Es**。

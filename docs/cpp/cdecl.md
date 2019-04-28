@@ -10,22 +10,22 @@ helpviewer_keywords:
 - __cdecl keyword [C++]
 ms.assetid: 1ff1d03e-fb4e-4562-8be1-74f1ad6427f1
 ms.openlocfilehash: 298485d310ee4039b13781a8b5cd88a489af3b8b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50550210"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62232397"
 ---
 # <a name="cdecl"></a>__cdecl
 
 **Microsoft 专用**
 
-**__cdecl**是默认调用约定的 C 和 c + + 程序。 由调用方清理堆栈，因为它可以执行`vararg`函数。 **__Cdecl**调用约定创建更大的可执行文件比[__stdcall](../cpp/stdcall.md)，因为它要求每个函数调用包括堆栈清理代码。 以下列表显示此调用约定的实现。
+**__cdecl**是默认值为 C 调用约定和C++程序。 由调用方清理堆栈，因为它可以执行`vararg`函数。 **__Cdecl**调用约定创建更大的可执行文件比[__stdcall](../cpp/stdcall.md)，因为它要求每个函数调用包括堆栈清理代码。 以下列表显示此调用约定的实现。
 
 |元素|实现|
 |-------------|--------------------|
-|自变量传递顺序|从右到左。|
-|堆栈维护职责|调用函数从堆栈中弹出参数。|
+|参数传递顺序|从右到左。|
+|堆栈维护职责|调用函数从堆栈中弹出自变量。|
 |名称修饰约定|下划线字符 (_) 前缀的名称，除非当\_导出使用 C 链接的 _cdecl 函数。|
 |大小写转换约定|不执行任何大小写转换。|
 

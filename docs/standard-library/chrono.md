@@ -11,17 +11,17 @@ f1_keywords:
 - chrono/std::chrono::microseconds
 ms.assetid: 844de749-f306-482e-89bc-6f53c99c8324
 ms.openlocfilehash: 1fcf87d84b2c99b89217b7f2e0fc7fecd55fff02
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51331472"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62279094"
 ---
 # <a name="ltchronogt"></a>&lt;chrono&gt;
 
 包括标准标头 \< chrono > 来定义表示和操作持续时间及时刻的类和函数。
 
-开始在 Visual Studio 2015 中，实现`steady_clock`发生更改，以满足 c + + 标准对稳定性和单一性的需求。 `steady_clock` 现在基于 QueryPerformanceCounter()，且 `high_resolution_clock` 现在是 `steady_clock` 的 typedef。 因此，在 Visual C++ 中，`steady_clock::time_point` 现在是 `chrono::time_point<steady_clock>` 的 typedef；但是，其他实现不一定是这种情况。
+开始在 Visual Studio 2015 中，实现`steady_clock`发生更改，以满足C++标准对稳定性和单一性的需求。 `steady_clock` 现在基于 QueryPerformanceCounter()，且 `high_resolution_clock` 现在是 `steady_clock` 的 typedef。 因此，在 Visual C++ 中，`steady_clock::time_point` 现在是 `chrono::time_point<steady_clock>` 的 typedef；但是，其他实现不一定是这种情况。
 
 ## <a name="syntax"></a>语法
 
@@ -38,7 +38,7 @@ ms.locfileid: "51331472"
 
 ### <a name="structs"></a>结构
 
-|name|描述|
+|名称|描述|
 |----------|-----------------|
 |[common_type 结构](../standard-library/common-type-structure.md)|介绍有关 `duration` 和 `time_point` 实例化的 [common_type](../standard-library/common-type-class.md) 模板类的专用化。|
 |[duration_values 结构](../standard-library/duration-values-structure.md)|提供 `duration` 模板参数 `Rep` 的特定值。|
@@ -89,7 +89,7 @@ ms.locfileid: "51331472"
 |Literal|描述|
 |-------------|-----------------|
 |chrono::hours operator "" h(unsigned long long Val)|指定整数值形式的小时数。|
-|chrono:: duration\<双倍，比\<3600 >> 运算符""h （长双精度值）|指定浮点值形式的小时数。|
+|chrono::duration\<double, ratio\<3600> > operator "" h(long double Val)|指定浮点值形式的小时数。|
 |chrono::minutes (operator "" min)(unsigned long long Val)|指定整数值形式的分钟数。|
 |chrono:: duration\<双倍，比\<60 >> (运算符""最小值) （长双精度值）|指定浮点值形式的分钟数。|
 |chrono::seconds operator "" s(unsigned long long Val)|指定整数值形式的分钟数。|

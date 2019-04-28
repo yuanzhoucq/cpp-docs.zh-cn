@@ -5,17 +5,17 @@ helpviewer_keywords:
 - shared classes, classes
 ms.assetid: ca8b4b6b-744d-430b-b31f-d5b2f17bf210
 ms.openlocfilehash: 5376a87aac2b82615cd48f80e0e95208b8132bf0
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750476"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62235141"
 ---
 # <a name="classes-shared-by-mfc-and-atl"></a>由 MFC 和 ATL 共享的类
 
 下表列出了 MFC 和 atl。 之间共享的类
 
-|类|描述|头文件|
+|类|描述|标头文件|
 |-----------|-----------------|-----------------|
 |[CFileTime](../../atl-mfc-shared/reference/cfiletime-class.md)|提供用于管理与文件相关联的日期和时间值的方法。|atltime.h|
 |[CFileTimeSpan](../../atl-mfc-shared/reference/cfiletimespan-class.md)|提供用于管理相对日期和时间值与文件关联的方法。|atltime.h|

@@ -15,11 +15,11 @@ helpviewer_keywords:
 - include directories, compiler option [C++]
 ms.assetid: 3e9add2a-5ed8-4d15-ad79-5b411e313a49
 ms.openlocfilehash: 6ec8b15e77fec5214013c484e617904ed29e8197
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57807632"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62270137"
 ---
 # <a name="i-additional-include-directories"></a>/I （附加包含目录）
 
@@ -50,9 +50,9 @@ ms.locfileid: "57807632"
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[Visual Studio 中的设置 c + + 编译器和生成属性](../working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
 
-1. 选择**配置属性** > **C/c + +** > **常规**属性页。
+1. 选择**配置属性** > **C /C++** > **常规**属性页。
 
 1. 修改**附加包含目录**属性。
 

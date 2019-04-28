@@ -17,11 +17,11 @@ helpviewer_keywords:
 - assembly-only listing
 ms.assetid: c7507d0e-c69d-44f9-b8e2-d2c398697402
 ms.openlocfilehash: b78704ea12365d9e10222d75c6807517f7cdb893
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57812507"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62292830"
 ---
 # <a name="fa-fa-listing-file"></a>/FA、/Fa（列出文件）
 
@@ -33,7 +33,7 @@ ms.locfileid: "57812507"
 
 ## <a name="remarks"></a>备注
 
-**/FA**编译器选项为每个翻译单元中在编译中，通常对应于 C 或 c + + 源文件生成组装器列表文件。 默认情况下，仅组装器会包含在列表文件中，编码为 ANSI。 可选**c**， **s**，并**u**参数 **/FA**控件是否机器代码或源代码以及汇编程序输出列出，并且是否在列表编码为 utf-8。
+**/FA**编译器选项生成组装器列表文件的每个翻译单元中编译，这通常对应于 C 或C++源文件。 默认情况下，仅组装器会包含在列表文件中，编码为 ANSI。 可选**c**， **s**，并**u**参数 **/FA**控件是否机器代码或源代码以及汇编程序输出列出，并且是否在列表编码为 utf-8。
 
 默认情况下，每个列表文件获取与源文件相同的基名称和扩展名为.asm。 当机器代码包含使用**c**选项，列表文件的扩展名为.cod。 您可以更改的名称和扩展名的列表文件并创建使用的目录 **/Fa**选项。
 
@@ -75,9 +75,9 @@ ms.locfileid: "57812507"
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[Visual Studio 中的设置 c + + 编译器和生成属性](../working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
 
-1. 选择**配置属性** > **C/c + +** > **输出文件**属性页。
+1. 选择**配置属性** > **C /C++** > **输出文件**属性页。
 
 1. 修改**汇编程序输出**属性来设置 **/FAc**并 **/FAs**组装器、 计算机和源代码的选项。 修改**使用 Unicode 对于组装器列出**属性来设置 **/fau 则**ANSI 或 utf-8 输出的选项。 修改**ASM 列表位置**若要设置 **/Fa**用于列出文件的名称和位置选项。
 

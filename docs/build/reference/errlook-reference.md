@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Error lookup tool
 ms.assetid: 6040ffc1-2355-4a45-8998-84cbcba4ca91
 ms.openlocfilehash: c8afcafa7d1b8cd666eb5b02f09a14782f8621ca
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57813365"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62271770"
 ---
 # <a name="errlook-reference"></a>ERRLOOK 参考
 
@@ -35,4 +35,4 @@ ms.locfileid: "57813365"
 ## <a name="related-sections"></a>相关章节
 
 [其他 MSVC 生成工具](c-cpp-build-tools.md)<br/>
-提供指向探讨 C/c + + 生成工具在 Visual c + + 中提供。
+提供指向探讨 C /C++生成视觉对象中提供的工具C++。

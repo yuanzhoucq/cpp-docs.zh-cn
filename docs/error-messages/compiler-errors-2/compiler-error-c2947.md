@@ -7,15 +7,15 @@ helpviewer_keywords:
 - C2947
 ms.assetid: 6c056f62-ec90-4883-8a67-aeeb6ec13546
 ms.openlocfilehash: 3738c257192134eedb8554b0d875023862441416
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566748"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62227205"
 ---
 # <a name="compiler-error-c2947"></a>编译器错误 C2947
 
-应由“>”终止构造，却找到“syntax”
+应为 > 终止构造，找到 syntax
 
 泛型或模板的参数列表可能未正确终止。
 
