@@ -7,15 +7,15 @@ helpviewer_keywords:
 - C2955
 ms.assetid: 77709fb6-d69b-46fd-a62f-e8564563d01b
 ms.openlocfilehash: c012e5189b9ca1d0b0e786cbddacedee7c6728d2
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519992"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62300734"
 ---
 # <a name="compiler-error-c2955"></a>编译器错误 C2955
 
-“标识符”：类模板或别名泛型的使用需要模板或泛型自变量列表
+“标识符”：类模板或别名泛型的使用需要模板或泛型参数列表
 
 在没有模板和泛型自变量列表的情况下，你不能将类模板或类泛型用作标识符。
 
@@ -70,7 +70,7 @@ int main() {
 
 ## <a name="example"></a>示例
 
-**Visual Studio 2017 和更高版本：** 编译器正确地诊断缺少的模板参数列表，当模板出现在模板参数列表中 （例如作为默认模板自变量或非类型模板参数的一部分）。 下列代码在 Visual Studio 2015 中进行编译，但在 Visual Studio 2017 中引发错误。
+**Visual Studio 2017 和更高版本：** 当模板出现在模板参数列表中 （例如作为默认模板自变量或非类型模板参数的一部分），编译器正确地诊断缺少的模板参数列表。 下列代码在 Visual Studio 2015 中进行编译，但在 Visual Studio 2017 中引发错误。
 
 ```
 template <class T> class ListNode;

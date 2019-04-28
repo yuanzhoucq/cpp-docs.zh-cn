@@ -13,11 +13,11 @@ helpviewer_keywords:
 - paging, optimizing
 ms.assetid: ecf5eb3e-e404-4e86-9a91-4e5ec157261a
 ms.openlocfilehash: b1927ffd2efc923157fe1956fe905c939bc62719
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57807879"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62320183"
 ---
 # <a name="order-put-functions-in-order"></a>/ORDER（按顺序放置函数）
 
@@ -38,7 +38,7 @@ ms.locfileid: "57807879"
 
 在你的源代码编译对象文件，可以指示编译器将放入其自己的部分，名为每个函数*COMDAT*，通过使用[/Gy （启用函数级链接）](gy-enable-function-level-linking.md)编译器选项。 **/O**链接器选项通知链接器将 comdat 放置到可执行映像中所指定的顺序。
 
-若要指定 COMDAT 顺序，请创建*响应文件*，按名称，每行，你希望它们由链接器放置的顺序列出每个 COMDAT 的文本文件。 将为此文件的名称传递*文件名*的参数 **/O**选项。 对于 c + + 函数的 COMDAT 名称是函数名称的修饰的形式。 使用 C 函数的未修饰的名`main`，并为 c + + 函数声明为`extern "C"`。 函数名称和修饰的名是区分大小写。 修饰名的详细信息，请参阅[修饰名](decorated-names.md)。
+若要指定 COMDAT 顺序，请创建*响应文件*，按名称，每行，你希望它们由链接器放置的顺序列出每个 COMDAT 的文本文件。 将为此文件的名称传递*文件名*的参数 **/O**选项。 有关C++函数的 COMDAT 名称是函数名称的修饰的形式。 使用 C 函数的未修饰的名`main`，并为C++函数声明为`extern "C"`。 函数名称和修饰的名是区分大小写。 修饰名的详细信息，请参阅[修饰名](decorated-names.md)。
 
 若要查找你的 Comdat 的修饰的名，请使用[DUMPBIN](dumpbin-reference.md)工具的[/ 符号](symbols.md)上的对象文件的选项。 链接器会自动将前面添加下划线 (**\_**) 函数名称在响应中的文件的名称开头问号除非 (**？**) 或 at 符号 ( **\@**). 例如，如果源文件，example.cpp，包含的函数`int cpp_func(int)`，`extern "C" int c_func(int)`并`int main(void)`，该命令`DUMPBIN /SYMBOLS example.obj`列出了这些修饰的名：
 
@@ -61,7 +61,7 @@ ms.locfileid: "57807879"
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此链接器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[Visual Studio 中的设置 c + + 编译器和生成属性](../working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
 
 1. 选择**配置属性** > **链接器** > **优化**属性页。
 
@@ -73,5 +73,5 @@ ms.locfileid: "57807879"
 
 ## <a name="see-also"></a>请参阅
 
-[MSVC 链接器引用](linking.md)<br/>
+[MSVC 链接器参考](linking.md)<br/>
 [MSVC 链接器选项](linker-options.md)

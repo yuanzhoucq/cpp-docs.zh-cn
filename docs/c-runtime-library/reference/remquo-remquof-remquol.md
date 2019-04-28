@@ -28,11 +28,11 @@ helpviewer_keywords:
 - remquo function
 ms.assetid: a1d3cb8b-8027-4cd3-8deb-04eb17f299fc
 ms.openlocfilehash: 4c7e93806600ff674baf186a66662aafdeceeaca
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605099"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62357546"
 ---
 # <a name="remquo-remquof-remquol"></a>remquo、remquof、remquol
 
@@ -53,13 +53,13 @@ long double remquo( long double numer, long double denom, int* quo ); /* C++ onl
 
 ### <a name="parameters"></a>参数
 
-*号码*<br/>
+*numer*<br/>
 分子。
 
 *denom*<br/>
 分母。
 
-*现有*<br/>
+*quo*<br/>
 指向整数值的指针，以存储带有商的符号和近似值的值。
 
 ## <a name="return-value"></a>返回值
@@ -70,7 +70,7 @@ long double remquo( long double numer, long double denom, int* quo ); /* C++ onl
 
 **Remquo**函数计算的浮点余数*f*的*x* / *y*以便*x*  = *我* \* *y* + *f*，其中*我*是一个整数*f*具有相同的符号*x*，和值的绝对值*f*是值的绝对值小于*y*。
 
-C + + 允许重载，因此可以调用的重载**remquo**采用并返回**float**或**长** **double**值。 在 C 程序中， **remquo**始终采用两个**double**自变量并返回**double**。
+C++允许重载，因此可以调用的重载**remquo**采用并返回**float**或**长** **double**值。 在 C 程序中， **remquo**始终采用两个**double**自变量并返回**double**。
 
 ## <a name="requirements"></a>要求
 

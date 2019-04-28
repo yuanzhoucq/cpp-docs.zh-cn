@@ -8,11 +8,11 @@ helpviewer_keywords:
 - -CLRTHREADATTRIBUTE linker option
 ms.assetid: 4907e9ef-5031-446c-aecf-0a0b32fae1e8
 ms.openlocfilehash: ad07c84a5c470cd5fa1ac10ff6d2baed5c35c025
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57806774"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62272463"
 ---
 # <a name="clrthreadattribute-set-clr-thread-attribute"></a>/CLRTHREADATTRIBUTE（设置 CLR 线程特性）
 
@@ -49,7 +49,7 @@ STAThreadAttribute 特性应用于您的程序的入口点。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此链接器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[Visual Studio 中的设置 c + + 编译器和生成属性](../working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
 
 1. 展开“配置属性”节点。
 
@@ -65,5 +65,5 @@ STAThreadAttribute 特性应用于您的程序的入口点。
 
 ## <a name="see-also"></a>请参阅
 
-[MSVC 链接器引用](linking.md)<br/>
+[MSVC 链接器参考](linking.md)<br/>
 [MSVC 链接器选项](linker-options.md)

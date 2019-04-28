@@ -1,5 +1,5 @@
 ---
-title: MIDL 属性页：常规
+title: “MIDL”属性页：常规
 ms.date: 11/04/2016
 f1_keywords:
 - VC.Project.VCMidlTool.PreprocessorDefinitions
@@ -16,13 +16,13 @@ helpviewer_keywords:
 - MIDL, property pages
 ms.assetid: 0692484c-a7e6-4270-8df7-981589368399
 ms.openlocfilehash: 2ce9e9a713a3d62bf64e5eb4e596c38148eef81e
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57824440"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62321145"
 ---
-# <a name="midl-property-pages-general"></a>MIDL 属性页：常规
+# <a name="midl-property-pages-general"></a>“MIDL”属性页：常规
 
 MIDL 文件夹中的“常规”属性页指定以下 MIDL 编译器选项：
 
@@ -46,7 +46,7 @@ MIDL 文件夹中的“常规”属性页指定以下 MIDL 编译器选项：
 
 - 生成无存根(Stub)代理 ([/Oicf](https://msdn.microsoft.com/library/windows/desktop/aa367352))
 
-有关如何访问的信息**常规**中的属性页**MIDL**文件夹，请参阅[Visual Studio 中的设置 c + + 编译器和生成属性](../working-with-project-properties.md)。
+有关如何访问的信息**常规**中的属性页**MIDL**文件夹，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
 
 有关如何以编程方式访问 C++ 项目的 MIDL 选项的信息，请参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCMidlTool> 对象。
 

@@ -15,11 +15,11 @@ helpviewer_keywords:
 - exporting DLLs [C++], mutual imports
 ms.assetid: 2cc29537-92ee-4d92-af39-8b8b3afd808f
 ms.openlocfilehash: f01e69138a6ca1744645a1c2fa8525b7088e260d
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57814548"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62295666"
 ---
 # <a name="mutual-imports"></a>相互导入
 
@@ -117,11 +117,11 @@ class CExampleA : public CObject
 
 - [导出和导入使用 AFX_EXT_CLASS](exporting-and-importing-using-afx-ext-class.md)
 
-- [导出 c + + 函数以用于 C 语言可执行文件](exporting-cpp-functions-for-use-in-c-language-executables.md)
+- [导出C++函数以用于 C 语言可执行文件](exporting-cpp-functions-for-use-in-c-language-executables.md)
 
 - [确定要使用的导出方法](determining-which-exporting-method-to-use.md)
 
-- [导入到使用 __declspec （dllimport） 的应用程序](importing-into-an-application-using-declspec-dllimport.md)
+- [使用 __declspec(dllimport) 导入到应用程序中](importing-into-an-application-using-declspec-dllimport.md)
 
 ### <a name="what-do-you-want-to-know-more-about"></a>你想进一步了解什么？
 

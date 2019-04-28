@@ -11,15 +11,15 @@ helpviewer_keywords:
 - TN002
 ms.assetid: 553fe01d-c587-4c8d-a181-3244a15c2be9
 ms.openlocfilehash: 6d64799dc17b4b3ddc5c455333b10282e4748b09
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57282001"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62306189"
 ---
 # <a name="tn002-persistent-object-data-format"></a>TN002:持久性对象数据格式
 
-此注释描述 MFC 例程，支持 c + + 的持久性对象和对象数据的格式存储在文件中时。 这仅适用于具有类[DECLARE_SERIAL](../mfc/reference/run-time-object-model-services.md#declare_serial)并[IMPLEMENT_SERIAL](../mfc/reference/run-time-object-model-services.md#implement_serial)宏。
+此注释描述 MFC 例程，支持持久性C++对象和对象数据存储在文件中时的格式。 这仅适用于具有类[DECLARE_SERIAL](../mfc/reference/run-time-object-model-services.md#declare_serial)并[IMPLEMENT_SERIAL](../mfc/reference/run-time-object-model-services.md#implement_serial)宏。
 
 ## <a name="the-problem"></a>问题
 

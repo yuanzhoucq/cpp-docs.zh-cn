@@ -8,11 +8,11 @@ helpviewer_keywords:
 - -Gw compiler option [C++]
 ms.assetid: 6f90f4e9-5eb8-4c47-886e-631278a5a4a9
 ms.openlocfilehash: 5796f353414a021908147bdd2f296ef8e02f69ad
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816901"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62270706"
 ---
 # <a name="gw-optimize-global-data"></a>/Gw（优化全局数据）
 
@@ -32,13 +32,13 @@ ms.locfileid: "57816901"
 
 此外可以使用[/opt: icf](opt-optimizations.md)并[/LTCG](ltcg-link-time-code-generation.md)链接器选项，可以在多个对象文件任何相同只读全局数据使用编译的可执行文件中执行 merge **/Gw**选项。
 
-有关详细信息，请参阅[简介 /Gw 编译器开关](http://blogs.msdn.com/b/vcblog/archive/2013/09/11/introducing-gw-compiler-switch.aspx)Visual c + + 团队博客上。
+有关详细信息，请参阅[简介 /Gw 编译器开关](http://blogs.msdn.com/b/vcblog/archive/2013/09/11/introducing-gw-compiler-switch.aspx)视觉对象上C++团队博客。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[Visual Studio 中的设置 c + + 编译器和生成属性](../working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
 
-1. 选择**C/c + +** 文件夹。
+1. 选择**C /C++** 文件夹。
 
 1. 选择**命令行**属性页。
 

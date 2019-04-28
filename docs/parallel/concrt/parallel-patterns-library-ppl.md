@@ -5,11 +5,11 @@ helpviewer_keywords:
 - Parallel Patterns Library (PPL)
 ms.assetid: 40fd86b2-69fa-45e5-93d8-98a75636c242
 ms.openlocfilehash: 11440d56b9618d4763e1b7e47a21b365bbdc0c15
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57290711"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62301846"
 ---
 # <a name="parallel-patterns-library-ppl"></a>并行模式库 (PPL)
 
@@ -25,14 +25,13 @@ PPL 提供以下功能：
 
 ## <a name="example"></a>示例
 
-PPL 提供类似于 c + + 标准库的编程模型。 下面的示例展示 PPL 的多种功能。 串行和并行计算若干 Fibonacci 数字。 这两种计算都作用于[std:: array](../../standard-library/array-class-stl.md)对象。 示例还控制台输出了进行两种计算所需的时间。
+PPL 提供类似于编程模型C++标准库。 下面的示例展示 PPL 的多种功能。 串行和并行计算若干 Fibonacci 数字。 这两种计算都作用于[std:: array](../../standard-library/array-class-stl.md)对象。 示例还控制台输出了进行两种计算所需的时间。
 
-串行版本使用 c + + 标准库[std:: for_each](../../standard-library/algorithm-functions.md#for_each)算法来遍历该数组，并将存储中的结果[std:: vector](../../standard-library/vector-class.md)对象。 并行版本执行相同的任务，但使用的是 PPL [concurrency:: parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each)算法，并将存储中的结果[concurrency:: concurrent_vector](../../parallel/concrt/reference/concurrent-vector-class.md)对象。 
-  `concurrent_vector` 类可以使每个循环迭代并发添加元素，而无需同步对容器的写访问。
+串行版本使用C++标准库[std:: for_each](../../standard-library/algorithm-functions.md#for_each)算法来遍历该数组，并将存储中的结果[std:: vector](../../standard-library/vector-class.md)对象。 并行版本执行相同的任务，但使用的是 PPL [concurrency:: parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each)算法，并将存储中的结果[concurrency:: concurrent_vector](../../parallel/concrt/reference/concurrent-vector-class.md)对象。 `concurrent_vector` 类可以使每个循环迭代并发添加元素，而无需同步对容器的写访问。
 
 由于 `parallel_for_each` 并发操作，因此本示例的并行版本必须排列 `concurrent_vector` 对象的顺序才能生成与串行版本相同的结果。
 
-注意，示例使用 naïve 方法来计算 Fibonacci 数字；然而，这种方法却说明了并发运行时是如何提高长计算性能的。
+请注意，该示例使用一个简单方法来计算斐波那契数字;但是，此方法说明了并发运行时如何提高的长计算性能。
 
 [!code-cpp[concrt-parallel-fibonacci#1](../../parallel/concrt/codesnippet/cpp/parallel-patterns-library-ppl_1.cpp)]
 
@@ -52,7 +51,7 @@ fib(42): 267914296
 
 ## <a name="related-topics"></a>相关主题
 
-|标题|描述|
+|Title|描述|
 |-----------|-----------------|
 |[任务并行](../../parallel/concrt/task-parallelism-concurrency-runtime.md)|描述 PPL 中任务和任务组的角色。|
 |[并行算法](../../parallel/concrt/parallel-algorithms.md)|描述如何使用并行算法，如 `parallel_for` 和 `parallel_for_each`。|

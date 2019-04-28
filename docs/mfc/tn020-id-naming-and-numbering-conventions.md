@@ -9,11 +9,11 @@ helpviewer_keywords:
 - resource identifiers
 ms.assetid: aecbd2cf-68b3-47f6-ae21-b1f507917245
 ms.openlocfilehash: f1cd44ed448cc4c0fc60d490a613f0ad91071376
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57267389"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62306059"
 ---
 # <a name="tn020-id-naming-and-numbering-conventions"></a>TN020:ID 命名和编号约定
 
@@ -21,13 +21,13 @@ ms.locfileid: "57267389"
 
 MFC ID 命名和编号约定旨在满足以下要求：
 
-- 提供跨 MFC 库和 MFC 应用程序支持的 Visual c + + 资源编辑器使用一致的 ID 命名标准。 这便于程序员能够解释的类型和其 id。 从资源来源
+- 提供在 MFC 库和 MFC 应用程序支持的视觉对象之间使用一致的 ID 命名标准C++资源编辑器。 这便于程序员能够解释的类型和其 id。 从资源来源
 
 - 强调某些类型的 Id 之间的强 1 对 1 关系。
 
 - 符合已广泛使用标准命名 Windows 中的 Id。
 
-- 分区的 ID 编号的空间。 可由程序员、 MFC、 Windows 和 Visual c + + 编辑资源分配的 ID 号。 适当的分区将有助于避免重复的 ID 号。
+- 分区的 ID 编号的空间。 程序员、 MFC、 Windows 和视觉对象可以分配的 ID 号C++-编辑的资源。 适当的分区将有助于避免重复的 ID 号。
 
 ## <a name="the-id-prefix-naming-convention"></a>ID 前缀命名约定
 

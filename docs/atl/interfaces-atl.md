@@ -7,15 +7,15 @@ helpviewer_keywords:
 - interfaces, COM
 ms.assetid: de6c8b12-6230-4fdc-af66-a28b91d5ee55
 ms.openlocfilehash: 5416fb8a99420f0f6c84318753ee3399ccf5db2a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57287370"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62250304"
 ---
 # <a name="interfaces-atl"></a>接口 (ATL)
 
-接口是一个对象用于公开到外界其功能的方法。 在 COM 中，接口是由对象实现的函数的指针 （如 c + + vtable) 的表。 表表示的接口，和它所指向的函数是该接口的方法。 对象可以公开它选择任意数目的接口。
+接口是一个对象用于公开到外界其功能的方法。 在 COM 中，接口是一个表的指针 (如C++vtable) 对由对象实现的函数。 表表示的接口，和它所指向的函数是该接口的方法。 对象可以公开它选择任意数目的接口。
 
 在基本的 COM 接口上基于每个接口[IUnknown](../atl/iunknown.md)。 方法`IUnknown`允许导航到由对象公开其他接口。
 

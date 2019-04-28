@@ -7,11 +7,11 @@ helpviewer_keywords:
 - SECTIONS .def file statement
 ms.assetid: 7b974366-9ef5-4e57-bbcc-73a1df6f8857
 ms.openlocfilehash: 5125b09675969c784aafe375faf1fdbc36d8c5d9
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57815107"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62318623"
 ---
 # <a name="sections-cc"></a>SECTIONS (C/C++)
 
@@ -50,7 +50,7 @@ SECTIONS
 
 `SECTIONS` 表示一组部分的开头`definitions`。 每个`definition`必须位于一个单独的行上。 `SECTIONS`关键字可以是在同一行与第一个`definition`或在前面的行上。 .Def 文件可以包含一个或多个`SECTIONS`语句。 `SEGMENTS`的同义词支持关键字`SECTIONS`。
 
-较旧版本的 Visual c + + 支持：
+较旧版本的视觉对象C++支持：
 
 ```
 section [CLASS 'classname'] specifier

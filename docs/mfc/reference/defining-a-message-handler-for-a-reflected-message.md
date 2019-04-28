@@ -8,11 +8,11 @@ helpviewer_keywords:
 - message handling [MFC], reflected messages
 ms.assetid: 5a403528-58c5-46e7-90d5-4a77f0ab9b9c
 ms.openlocfilehash: 250d1a838787d1ace682c084bdceeb0e1e6d3c92
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57278959"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62322990"
 ---
 # <a name="defining-a-message-handler-for-a-reflected-message"></a>为反射消息定义消息处理程序
 

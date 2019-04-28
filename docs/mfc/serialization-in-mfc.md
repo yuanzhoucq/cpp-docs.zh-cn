@@ -9,17 +9,17 @@ helpviewer_keywords:
 - serialization [MFC], bypassing
 ms.assetid: fb596a18-4522-47e0-96e0-192732d24c12
 ms.openlocfilehash: 5c7dec140635b6d83bdae936d1bb0cef144f825b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57262137"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62308207"
 ---
 # <a name="serialization-in-mfc"></a>MFC 中的序列化
 
 本文介绍了提供在 Microsoft 基础类库 (MFC) 以允许对象之间保持不变的序列化机制在程序运行。
 
-序列化是从永久存储媒体，如磁盘文件写入或读取到或对象的过程。 序列化是理想的情况下它想要维护期间或之后执行程序 （如 c + + 类或结构） 的结构化数据的状态。 使用 MFC 提供的序列化对象，这发生在标准且一致的方式，从而减轻用户将不再需要手动执行文件操作。
+序列化是从永久存储媒体，如磁盘文件写入或读取到或对象的过程。 序列化是理想的情况下它想要维护结构化数据的状态 (如C++类或结构) 期间或之后执行程序。 使用 MFC 提供的序列化对象，这发生在标准且一致的方式，从而减轻用户将不再需要手动执行文件操作。
 
 MFC 提供了对序列化的类中的内置支持`CObject`。 因此，所有类都派生自`CObject`可以充分利用`CObject`的序列化协议。
 
@@ -36,9 +36,9 @@ MFC 使用的对象`CArchive`类作为要进行序列化的对象与该存储介
 
 以下文章介绍了序列化所需的两个主要任务：
 
-- [序列化：定义可序列化的类](../mfc/serialization-making-a-serializable-class.md)
+- [序列化：创建可序列化类](../mfc/serialization-making-a-serializable-class.md)
 
-- [序列化：对象的序列化](../mfc/serialization-serializing-an-object.md)
+- [序列化：序列化对象](../mfc/serialization-serializing-an-object.md)
 
 文章[序列化：序列化与数据库输入/输出](../mfc/serialization-serialization-vs-database-input-output.md)描述序列化时在数据库应用程序中适当的输入/输出方法。
 

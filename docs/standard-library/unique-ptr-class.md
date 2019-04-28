@@ -23,11 +23,11 @@ helpviewer_keywords:
 - std::unique_ptr [C++], swap
 ms.assetid: acdf046b-831e-4a4a-83aa-6d4ee467db9a
 ms.openlocfilehash: b0751d7716e2f8587ab410e57c2bea17c5dd3e21
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51520967"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62295456"
 ---
 # <a name="uniqueptr-class"></a>unique_ptr 类
 
@@ -99,10 +99,10 @@ public:
 *Nptr*<br/>
 类型为 `rvalue` 的 `std::nullptr_t`。
 
-*ptr*<br/>
+*Ptr*<br/>
 `pointer`。
 
-*删除器*<br/>
+*Deleter*<br/>
 绑定到 `deleter` 的 `unique_ptr` 函数。
 
 ## <a name="exceptions"></a>异常
@@ -117,7 +117,7 @@ public:
 
 `unique_ptr` 唯一管理资源。 每个 `unique_ptr` 对象均存储一个指向其拥有的对象的指针，或存储一个 null 指针。 资源只能由一个 `unique_ptr` 对象拥有；当拥有特定资源的 `unique_ptr` 对象被销毁后，资源将释放。 `unique_ptr` 对象可以移动，但不能复制；有关详细信息，请参阅[右值引用声明符 &&](../cpp/rvalue-reference-declarator-amp-amp.md)。
 
-资源通过调用 `deleter` 类型的已存储 `Del` 对象来释放，此对象知道如何为特定 `unique_ptr` 分配资源。 默认值`deleter``default_delete<T>`假定指向到的资源的`ptr`分配带有`new`，并可以通过调用释放`delete _Ptr`。 （部分专用化 `unique_ptr<T[]>` 管理通过 `new[]` 分配的数组对象，并具有经过专用化以调用 delete[] `deleter` 的默认 `default_delete<T[]>` `ptr`。）
+资源通过调用 `deleter` 类型的已存储 `Del` 对象来释放，此对象知道如何为特定 `unique_ptr` 分配资源。 默认值`deleter``default_delete<T>`假定指向到的资源的`ptr`分配带有`new`，并可以通过调用释放`delete _Ptr`。 (部分专用化`unique_ptr<T[]>`管理与分配的数组对象`new[]`，并具有默认`deleter``default_delete<T[]>`经过专用化以调用 delete [] `ptr`。)
 
 指向拥有的资源的存储指针 `stored_ptr` 具有类型 `pointer`。 如果已定义，此为 `Del::pointer`，如果未定义，则为 `T *`。 如果 `deleter` 无状态，则存储的 `stored_deleter` 对象 `deleter` 不占用任何空间。 请注意，`Del` 可以为引用类型。
 

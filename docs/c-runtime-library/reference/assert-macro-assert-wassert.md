@@ -29,11 +29,11 @@ helpviewer_keywords:
 - assert macro
 ms.assetid: a9ca031a-648b-47a6-bdf1-65fc7399dd40
 ms.openlocfilehash: 7ac299213ba3de878f7cf2dc99b44c45273bc3b2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50590952"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62341361"
 ---
 # <a name="assert-macro-assert-wassert"></a>assert 宏、_assert、_wassert
 
@@ -59,7 +59,7 @@ void _wassert(
 
 ### <a name="parameters"></a>参数
 
-*表达式*<br/>
+*expression*<br/>
 计算结果不为零的标量表达式 （包括指针表达式） (**，则返回 true**) 或 0 (**false**)。
 
 *message*<br/>
@@ -68,7 +68,7 @@ void _wassert(
 *filename*<br/>
 断言失败的源文件的名称。
 
-*行*<br/>
+*line*<br/>
 断言失败处所在的源文件行号。
 
 ## <a name="remarks"></a>备注
@@ -81,7 +81,7 @@ void _wassert(
 
 诊断消息的目标取决于调用例程的应用程序的类型。 控制台应用程序一定会收到消息传递**stderr**。 在基于 Windows 的应用程序中，**断言**调用 Windows [MessageBox](/windows/desktop/api/winuser/nf-winuser-messagebox)函数来创建一个消息框显示消息以及**确定**按钮。 当用户单击 **“确定”** 后，程序将立即中止。
 
-当与运行时库的调试版本链接应用程序**断言**创建带三个按钮的消息框：**中止**，**重试**，以及**忽略**。 如果用户单击 **“中止”**，则程序将立即中止。 如果用户单击 **“重试”**，则将调用调试器，之后用户可以调试程序，前提是启用了实时 (JIT) 调试。 如果用户单击**忽略**，**断言**继续其常规执行： 创建具有消息框**确定**按钮。 请注意，当存在错误条件时单击 **“忽略”** 可能导致未定义的行为。
+当与运行时库的调试版本链接应用程序**断言**创建带三个按钮的消息框：**中止**，**重试**，和**忽略**。 如果用户单击 **“中止”**，则程序将立即中止。 如果用户单击 **“重试”**，则将调用调试器，之后用户可以调试程序，前提是启用了实时 (JIT) 调试。 如果用户单击**忽略**，**断言**继续其常规执行： 创建具有消息框**确定**按钮。 请注意，当存在错误条件时单击 **“忽略”** 可能导致未定义的行为。
 
 有关 CRT 调试的详细信息，请参阅 [CRT 调试技术](/visualstudio/debugger/crt-debugging-techniques)。
 

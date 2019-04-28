@@ -26,11 +26,11 @@ helpviewer_keywords:
 - -RTCc compiler option [C++]
 ms.assetid: 9702c558-412c-4004-acd5-80761f589368
 ms.openlocfilehash: a830ff5b8ba4b7fcd95eb462f899f2eadce6de11
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57815887"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62318545"
 ---
 # <a name="rtc-run-time-error-checks"></a>/RTC（运行时错误检查）
 
@@ -91,11 +91,11 @@ b = &a;
 c = a;  // No run-time error with /RTCu
 ```
 
-如果变量可能已初始化，它将不会报告在运行时 **/RTC**`u`。 例如，变量是通过指针使用别名后，编译器将不跟踪变量并报告未初始化的使用。 实际上，您可以通过获取它的地址初始化变量。 在这种情况下，&运算符的作用类似于赋值运算符。
+如果变量可能已初始化，它将不会报告在运行时 **/RTC**`u`。 例如，变量是通过指针使用别名后，编译器将不跟踪变量并报告未初始化的使用。 实际上，您可以通过获取它的地址初始化变量。 & 运算符工作方式类似于在此情况下的赋值运算符。
 
 ## <a name="remarks"></a>备注
 
-运行时错误检查是一种方法，以便查找你正在运行的代码; 中的问题有关详细信息，请参阅[如何：使用本机运行时检查](/visualstudio/debugger/how-to-use-native-run-time-checks)。
+运行时错误检查是一种方法，以便查找你正在运行的代码; 中的问题有关详细信息，请参阅[如何：使用本机运行时检查](/visualstudio/debugger/how-to-use-native-run-time-checks)
 
 如果您编译你的程序在命令行使用任一 **/RTC**编译器选项、 任何杂注[优化](../../preprocessor/optimize.md)在代码中的说明将以静默方式失败。 这是因为运行时错误检查 （已优化） 的发布版本中无效。
 
@@ -105,7 +105,7 @@ c = a;  // No run-time error with /RTCu
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[Visual Studio 中的设置 c + + 编译器和生成属性](../working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
 
 1. 单击 **“C/C++”** 文件夹。
 

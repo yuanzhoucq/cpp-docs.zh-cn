@@ -11,15 +11,15 @@ f1_keywords:
 - VC.Project.FXCompilerTool.EntryPointName
 ms.assetid: 0e02f2a6-f123-43da-b04b-a0719a7c2b03
 ms.openlocfilehash: 0fce8a3b2a43cf05024a028a9e3325a929922abb
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57824502"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62291465"
 ---
 # <a name="hlsl-property-pages-general"></a>HLSL 属性页：常规
 
-若要配置 HLSL 编译器 (fxc.exe) 的以下属性，请使用其“常规”属性页。 有关如何访问信息**常规**HLSL 文件夹中的属性页上看到[在 Visual Studio 中的设置 c + + 编译器和生成属性](../working-with-project-properties.md)。
+若要配置 HLSL 编译器 (fxc.exe) 的以下属性，请使用其“常规”属性页。 有关如何访问信息**常规**HLSL 文件夹中的属性页上看到[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
 
 ## <a name="uielement-list"></a>UIElement 列表
 

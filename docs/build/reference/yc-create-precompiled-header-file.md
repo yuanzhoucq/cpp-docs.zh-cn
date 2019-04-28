@@ -16,11 +16,11 @@ helpviewer_keywords:
 - Yc compiler option [C++]
 ms.assetid: 47c2e555-b4f5-46e6-906e-ab5cf21f0678
 ms.openlocfilehash: 0d902b9ebb35bc7f267cb67861b7be0763f378a6
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57821425"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62316699"
 ---
 # <a name="yc-create-precompiled-header-file"></a>/Yc（创建预编译标头文件）
 
@@ -56,9 +56,9 @@ ms.locfileid: "57821425"
 
 1. 选择的.cpp 文件。 .Cpp 文件必须 #include 包含预编译标头信息的.h 文件。 项目的 **/Yc**设置可以在文件级别重写。
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[Visual Studio 中的设置 c + + 编译器和生成属性](../working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
 
-1. 打开**配置属性**， **C/c + +**，**预编译标头**属性页。
+1. 打开**配置属性**， **C /C++**，**预编译标头**属性页。
 
 1. 修改**预编译标头**属性。
 

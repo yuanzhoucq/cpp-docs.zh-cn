@@ -7,11 +7,11 @@ helpviewer_keywords:
 - interface map macros [MFC]
 ms.assetid: 3840e642-ff7d-4bdc-998b-c7d8fc50890e
 ms.openlocfilehash: 8f48b916f7130551fc8d4da5bb2ebc75d8d728d5
-ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55850198"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62322977"
 ---
 # <a name="delegate-and-interface-map-macros"></a>委托和接口映射宏
 
@@ -197,7 +197,7 @@ EVENT_DELEGATE_ENTRY(MEMBER, ARG0, ARG1);
 
 ### <a name="example"></a>示例
 
-下面的代码示例演示如何使用 EVENT_DELEGATE_ENTRY 在委托映射中创建一个条目`OnClick`事件处理程序; 还 MAKE_DELEGATE 中的代码示例，请参阅。 有关详细信息，请参阅[如何：接收来自本机 c + + 类的 Windows 窗体事件](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)。
+下面的代码示例演示如何使用 EVENT_DELEGATE_ENTRY 在委托映射中创建一个条目`OnClick`事件处理程序; 还 MAKE_DELEGATE 中的代码示例，请参阅。 有关详细信息，请参阅[如何：接收来自本机 Windows 窗体事件C++类](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)。
 
 ```cpp
 BEGIN_DELEGATE_MAP(CMyView)
@@ -262,7 +262,7 @@ MAKE_DELEGATE( DELEGATE,  MEMBER) ;
 
 ### <a name="example"></a>示例
 
-下面的代码示例演示如何调用`MAKE_DELEGATE`附加`OnClick`事件处理程序到 MFC 控件`MyControl`。 此宏的 MFC 应用程序中的工作原理的更广泛的说明，请参阅[如何：接收来自本机 c + + 类的 Windows 窗体事件](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)。
+下面的代码示例演示如何调用`MAKE_DELEGATE`附加`OnClick`事件处理程序到 MFC 控件`MyControl`。 此宏的 MFC 应用程序中的工作原理的更广泛的说明，请参阅[如何：接收来自本机 Windows 窗体事件C++类](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)。
 
 ```cpp
 // CMyView derives from CWinFormsView.

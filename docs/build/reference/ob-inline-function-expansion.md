@@ -25,11 +25,11 @@ helpviewer_keywords:
 - inline expansion, compiler option
 ms.assetid: f134e6df-e939-4980-a01d-47425dbc562a
 ms.openlocfilehash: 6bf16e5725916e81e64d80c0a1f96bf502c8826c
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57807490"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62320222"
 ---
 # <a name="ob-inline-function-expansion"></a>/Ob（内联函数展开）
 
@@ -45,7 +45,7 @@ ms.locfileid: "57807490"
 禁用内联扩展。 默认情况下，展开发生在编译器的自行对所有函数，通常称为*自动内联*。
 
 **1**<br/>
-允许的标记的函数仅扩展[内联](../../cpp/inline-functions-cpp.md)， `__inline`，或`__forceinline`，或在类声明中定义的 c + + 成员函数中。
+允许的标记的函数仅扩展[内联](../../cpp/inline-functions-cpp.md)， `__inline`，或`__forceinline`，或在C++类声明中定义的成员函数。
 
 **2**<br/>
 默认值。 允许对标记为 `inline`、`__inline` 或 `__forceinline` 的函数或是编译器选择的任何其他函数进行扩展。
@@ -65,9 +65,9 @@ ms.locfileid: "57807490"
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[Visual Studio 中的设置 c + + 编译器和生成属性](../working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
 
-1. 展开**配置属性**， **C/c + +**，然后选择**优化**。
+1. 展开**配置属性**， **C /C++**，然后选择**优化**。
 
 1. 修改**内联函数扩展**属性。
 

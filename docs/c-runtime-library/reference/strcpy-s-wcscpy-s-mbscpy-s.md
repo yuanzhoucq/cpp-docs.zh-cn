@@ -38,11 +38,11 @@ helpviewer_keywords:
 - wcscpy_s function
 ms.assetid: 611326f3-7929-4a5d-a465-a4683af3b053
 ms.openlocfilehash: 9763ba66867faba080ed8729b4fe07b96c56ee0d
-ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57210518"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62354166"
 ---
 # <a name="strcpys-wcscpys-mbscpys-mbscpysl"></a>strcpy_s、 wcscpy_s、 _mbscpy_s、 _mbscpy_s_l
 
@@ -190,7 +190,7 @@ int main(void)
 String = Hello world from strcpy_s and strcat_s!
 ```
 
-在生成 c + + 代码时，可能更易于使用的模板版本。
+在生成时C++代码，可能更易于使用的模板版本。
 
 ```cpp
 // crt_wcscpy_s.cpp

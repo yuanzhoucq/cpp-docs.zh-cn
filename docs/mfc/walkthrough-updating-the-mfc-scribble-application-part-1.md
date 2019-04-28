@@ -10,11 +10,11 @@ helpviewer_keywords:
 - walkthroughs [MFC], update existing application
 ms.assetid: aa6330d3-6cfc-4c79-8fcb-0282263025f7
 ms.openlocfilehash: 213bc8087b58eac232cc8fcfccc88e13785a807e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
-ms.translationtype: MT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258757"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62358278"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>演练：正在更新 MFC 随意画图应用程序 （第 1 部分）
 
@@ -269,4 +269,4 @@ ms.locfileid: "57258757"
 ## <a name="see-also"></a>请参阅
 
 [演练](../mfc/walkthroughs-mfc.md)<br/>
-[演练：正在更新 MFC 随意画图应用程序 （第 2 部分）](../mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md)
+[演练：更新 MFC 自由曲线应用程序（第 2 部分）](../mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md)

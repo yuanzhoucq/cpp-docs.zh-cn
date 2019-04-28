@@ -9,11 +9,11 @@ helpviewer_keywords:
 - SUBSYSTEM editbin option
 ms.assetid: 515e4cdf-3cc4-4659-8764-1f2757b49215
 ms.openlocfilehash: b13313d57226719086cb73584543488f842057c1
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57820489"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62317713"
 ---
 # <a name="subsystem"></a>/SUBSYSTEM
 
@@ -63,8 +63,7 @@ WINDOWSCE 子系统指示应用要在具有 Windows CE 内核版本的设备上�
 
 - 版本号的小数部分（小数点右侧的部分）由 `minor` 表示。
 
-- 
-  `major` 和 `minor` 的值必须从 0 到 65,535。
+- `major` 和 `minor` 的值必须从 0 到 65,535。
 
 子系统的选择会影响程序的默认开始地址。 有关详细信息，请参阅[/ENTRY （入口点符号）](entry-entry-point-symbol.md)，链接器 /ENTRY:*函数*选项。
 

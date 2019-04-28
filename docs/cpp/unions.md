@@ -8,11 +8,11 @@ helpviewer_keywords:
 - union keyword [C++]
 ms.assetid: 25c4e219-fcbb-4b7b-9b64-83f3252a92ca
 ms.openlocfilehash: f14f1197c4c835e9dfb753b1396e12e2d2f12772
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176518"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62312166"
 ---
 # <a name="unions"></a>Unions
 
@@ -31,7 +31,7 @@ union [name]  { member-list };
 *name*<br/>
 为联合提供的类型名称。
 
-*成员的列表*<br/>
+*member-list*<br/>
 联合可以包含的成员。 请参阅“备注”。
 
 ## <a name="remarks"></a>备注

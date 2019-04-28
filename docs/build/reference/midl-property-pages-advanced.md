@@ -1,5 +1,5 @@
 ---
-title: MIDL 属性页：高级
+title: “MIDL”属性页：高级
 ms.date: 11/04/2016
 f1_keywords:
 - VC.Project.VCMidlTool.ErrorCheckBounds
@@ -17,13 +17,13 @@ helpviewer_keywords:
 - MIDL, property pages
 ms.assetid: d1c92e01-f403-4ed6-ab45-4043a3c9c6bb
 ms.openlocfilehash: 350563d140823910667812930f9283c7640cc1ff
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57824817"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62321470"
 ---
-# <a name="midl-property-pages-advanced"></a>MIDL 属性页：高级
+# <a name="midl-property-pages-advanced"></a>“MIDL”属性页：高级
 
 MIDL 文件夹中的“高级”属性页指定以下 MIDL 编译器选项：
 
@@ -57,7 +57,7 @@ to
 #define _WIN32_WINNT 0x0500   //for Windows NT 4.0 or Windows 95 with DCOM
 ```
 
-有关如何访问的信息**高级**中的属性页**MIDL**文件夹，请参阅[Visual Studio 中的设置 c + + 编译器和生成属性](../working-with-project-properties.md)。
+有关如何访问的信息**高级**中的属性页**MIDL**文件夹，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
 
 有关如何以编程方式访问 C++ 项目的 MIDL 选项的详细信息，请参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCMidlTool>。
 

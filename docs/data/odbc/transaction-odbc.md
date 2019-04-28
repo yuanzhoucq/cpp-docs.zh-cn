@@ -11,11 +11,11 @@ helpviewer_keywords:
 - ODBC recordsets [C++], transactions
 ms.assetid: a2ec0995-2029-45f2-8092-6efd6f2a77f4
 ms.openlocfilehash: a151ec5ca2b4bdc19bfa7dc626aebda0740a2c9e
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59023665"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62329915"
 ---
 # <a name="transaction-odbc"></a>事务 (ODBC)
 
@@ -43,7 +43,7 @@ ms.locfileid: "59023665"
 
 以下主题提供有关如何执行事务的详细信息：
 
-- [事务：在记录集 (ODBC) 执行事务](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)
+- [事务：在记录集中执行事务 (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)
 
 - [事务：事务如何影响更新 (ODBC)](../../data/odbc/transaction-how-transactions-affect-updates-odbc.md)
 

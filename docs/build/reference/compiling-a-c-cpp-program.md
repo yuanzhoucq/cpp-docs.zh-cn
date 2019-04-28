@@ -1,5 +1,5 @@
 ---
-title: MSVC C/c + + 编译器引用-Visual Studio
+title: MSVC C /C++编译器参考-Visual Studio
 description: MSVC 编译器工具集选项。
 ms.date: 12/10/2018
 helpviewer_keywords:
@@ -7,19 +7,19 @@ helpviewer_keywords:
 - cl.exe compiler, setting options
 ms.assetid: f3eef5ab-d0be-4fb2-90f9-927e6ed58736
 ms.openlocfilehash: 2269ba69cea2702ff190c791eb6753acb3619f7d
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57810297"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62294143"
 ---
-# <a name="compiling-a-cc-project"></a>编译 C/c + + 项目
+# <a name="compiling-a-cc-project"></a>编译 C /C++项目
 
-在 Visual Studio IDE 或命令行上，可以设置 C 和 c + + 编译器选项。 
+C 和C++Visual Studio IDE 中或在命令行上，可以设置编译器选项。 
 
 ## <a name="in-visual-studio"></a>在 Visual Studio 中
 
-可以在其 Visual Studio 中设置每个项目的编译器选项**属性页**对话框。 在左窗格中，选择**配置属性**， **C/c + +** ，然后选择编译器选项类别。 每个编译器选项的主题描述如何在开发环境中设置和查找它。 请参阅[MSVC 编译器选项](compiler-options.md)有关的完整列表。
+可以在其 Visual Studio 中设置每个项目的编译器选项**属性页**对话框。 在左窗格中，选择**配置属性**， **C /C++**  ，然后选择编译器选项类别。 每个编译器选项的主题描述如何在开发环境中设置和查找它。 请参阅[MSVC 编译器选项](compiler-options.md)有关的完整列表。
 
 ## <a name="from-the-command-line"></a>从命令行
 
@@ -43,7 +43,7 @@ ms.locfileid: "57810297"
 
 - [CL 调用链接器](cl-invokes-the-linker.md)
 
-选择编译器主机和目标体系结构的信息，请参阅[64 位 x64 目标配置 c + + 项目](../configuring-programs-for-64-bit-visual-cpp.md)。
+选择编译器主机和目标体系结构的信息，请参阅[配置C++项目的 64 位 x64 目标](../configuring-programs-for-64-bit-visual-cpp.md)。
 
 ## <a name="see-also"></a>请参阅
 

@@ -1,5 +1,5 @@
 ---
-title: TN016：对 MFC 使用 C++ 多重继承
+title: TN016： 对使用C++使用 MFC 的多个继承
 ms.date: 06/28/2018
 f1_keywords:
 - vc.inheritance
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - multiple inheritance, MFC support for
 ms.assetid: 4ee27ae1-1410-43a5-b111-b6af9b84535d
 ms.openlocfilehash: 76dc2e856ca7db783ee542aa2dbb498fd4c1a769
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668866"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62306124"
 ---
-# <a name="tn016-using-c-multiple-inheritance-with-mfc"></a>TN016：对 MFC 使用 C++ 多重继承
+# <a name="tn016-using-c-multiple-inheritance-with-mfc"></a>TN016： 对使用C++使用 MFC 的多个继承
 
 本说明介绍如何将多重继承 (MI) 与 Microsoft 基础类一起使用。 MI 不一定要与 MFC 一起使用。 MI 不在任何 MFC 类中使用，并且不需要编写类库。
 
@@ -29,7 +29,7 @@ ms.locfileid: "50668866"
 
 `CRuntimeClass` 的当前实现不支持 MI 运行时类型信息。 这并不意味着您在不能在 MFC 应用程序中使用 MI。 但是，当您使用具有多个基类的对象时，您将负有某些责任。
 
-[CObject::IsKindOf](../mfc/reference/cobject-class.md#iskindof)方法将不正确确定对象类型具有多个基类。 因此，不能使用[CObject](../mfc/reference/cobject-class.md)为虚拟基类，并为所有调用`CObject`之类的成员函数[cobject:: Serialize](../mfc/reference/cobject-class.md#serialize)和[CObject::operator 新](../mfc/reference/cobject-class.md#operator_new)必须具有范围限定符，因此该 c + + 可以消除相应函数调用。 当程序在 MFC 中使用 MI 时，包含 `CObject` 基类的类需要是基类列表中最左侧的类。
+[CObject::IsKindOf](../mfc/reference/cobject-class.md#iskindof)方法将不正确确定对象类型具有多个基类。 因此，不能使用[CObject](../mfc/reference/cobject-class.md)为虚拟基类，并为所有调用`CObject`之类的成员函数[cobject:: Serialize](../mfc/reference/cobject-class.md#serialize)和[CObject::operator 新](../mfc/reference/cobject-class.md#operator_new)必须具有范围限定符，以便C++可以消除相应函数调用。 当程序在 MFC 中使用 MI 时，包含 `CObject` 基类的类需要是基类列表中最左侧的类。
 
 替代方法是使用 `dynamic_cast` 运算符。 如果将具有 MI 的对象强制转换为其基类之一，则会强制编译器使用指定基类中的函数。 有关详细信息，请参阅[dynamic_cast 运算符](../cpp/dynamic-cast-operator.md)。
 

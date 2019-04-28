@@ -3,11 +3,11 @@ title: 装箱 (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: edfb12fa-2a9b-42f6-bdac-d4d76cb8274e
 ms.openlocfilehash: 3c281229b509ef72d37400b2088a6663be1afe42
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750749"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62257954"
 ---
 # <a name="boxing-ccx"></a>装箱 (C++/CX)
 
@@ -21,7 +21,7 @@ ms.locfileid: "57750749"
 
 ### <a name="using-platformiboxt-to-support-nullable-value-types"></a>使用 platform:: ibox\<T > 若要支持可以为 null 值类型
 
-C# 和 Visual Basic 支持可以为 null 的值类型的概念。 在 C + + /CX 中，可以使用`Platform::IBox<T>`类型以公开支持可以为 null 的值类型参数的公共方法。 下面的示例演示 C + + /cli CX 公共方法，在 C# 调用方传递一个参数为 null 时返回 null。
+C# 和 Visual Basic 支持可以为 null 的值类型的概念。 在C++//CX 中，可以使用`Platform::IBox<T>`类型以公开支持可以为 null 的值类型参数的公共方法。 下面的示例演示C++/CX 公共方法，该方法返回 nullC#调用方传递一个参数为 null。
 
 [!code-cpp[cx_boxing#02](../cppcx/codesnippet/CPP/cx_boxing/class1.h#02)]
 
@@ -40,5 +40,5 @@ C# 和 Visual Basic 支持可以为 null 的值类型的概念。 在 C + + /CX 
 
 [类型系统 (C++/CX)](../cppcx/type-system-c-cx.md)<br/>
 [强制转换 (C++/CX)](../cppcx/casting-c-cx.md)<br/>
-[Visual c + + 语言参考](../cppcx/visual-c-language-reference-c-cx.md)<br/>
+[VisualC++语言参考](../cppcx/visual-c-language-reference-c-cx.md)<br/>
 [命名空间参考](../cppcx/namespaces-reference-c-cx.md)

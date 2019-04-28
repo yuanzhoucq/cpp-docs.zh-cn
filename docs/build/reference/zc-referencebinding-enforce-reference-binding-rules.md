@@ -12,11 +12,11 @@ helpviewer_keywords:
 - Zc compiler options (C++)
 ms.assetid: 0c6cfaac-9c2a-41a3-aa94-64ca8ef261fc
 ms.openlocfilehash: 9dfe8f5b4713d9567f6e98af6685c552fb51160e
-ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "57822153"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62316101"
 ---
 # <a name="zcreferencebinding-enforce-reference-binding-rules"></a>/Zc: referencebinding （强制引用绑定规则）
 
@@ -59,9 +59,9 @@ void main() {
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[Visual Studio 中的设置 c + + 编译器和生成属性](../working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
 
-1. 选择**配置属性** > **C/c + +** > **命令行**属性页。
+1. 选择**配置属性** > **C /C++** > **命令行**属性页。
 
 1. 修改**其他选项**属性以包含 **/zc: referencebinding** ，然后选择**确定**。
 

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - -MANIFESTDEPENDENCY linker option
 ms.assetid: e4b68313-33a2-4c3e-908e-ac2b9f7d6a73
 ms.openlocfilehash: 676059b8d398fd108d8f8fc163c85a3da3c657b4
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57812221"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62321587"
 ---
 # <a name="manifestdependency-specify-manifest-dependencies"></a>/MANIFESTDEPENDENCY（指定清单依赖项）
 
@@ -61,7 +61,7 @@ ms.locfileid: "57812221"
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此链接器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[Visual Studio 中的设置 c + + 编译器和生成属性](../working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
 
 1. 选择**配置属性** > **链接器** > **清单文件**属性页。
 
@@ -73,5 +73,5 @@ ms.locfileid: "57812221"
 
 ## <a name="see-also"></a>请参阅
 
-[MSVC 链接器引用](linking.md)<br/>
+[MSVC 链接器参考](linking.md)<br/>
 [MSVC 链接器选项](linker-options.md)

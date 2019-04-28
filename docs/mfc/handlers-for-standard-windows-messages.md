@@ -11,11 +11,11 @@ helpviewer_keywords:
 - messages [MFC], Windows
 ms.assetid: 19412a8b-2c38-4502-81da-13c823c7e36c
 ms.openlocfilehash: d60ae52225ddd993c1768d0b5ce1989ab0192e45
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57275384"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62358224"
 ---
 # <a name="handlers-for-standard-windows-messages"></a>标准 Windows 消息的处理程序
 
@@ -23,7 +23,7 @@ ms.locfileid: "57275384"
 
 `afx_msg void OnPaint();`
 
-**Afx_msg**关键字建议的 c + + 的效果**虚拟**关键字通过区分处理程序与其他`CWnd`成员函数。 但请注意，这些函数实际上都不是虚函数；它们是通过消息映射实现的。 消息映射仅取决于标准预处理器宏，而不是 C++ 语言的任何扩展。 **Afx_msg**关键字在预处理后解析为空格。
+**Afx_msg**关键字建议的影响C++**虚拟**关键字通过区分处理程序与其他`CWnd`成员函数。 但请注意，这些函数实际上都不是虚函数；它们是通过消息映射实现的。 消息映射仅取决于标准预处理器宏，而不是 C++ 语言的任何扩展。 **Afx_msg**关键字在预处理后解析为空格。
 
 若要重写基类中定义的处理程序，只需使用派生类中相同的原型定义一个函数，并为处理程序生成一个消息映射条目。 您的处理程序将“重写”任何类的基类中名称相同的任意处理程序。
 

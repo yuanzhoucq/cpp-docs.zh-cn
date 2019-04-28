@@ -10,11 +10,11 @@ helpviewer_keywords:
 - KEYFILE linker option
 ms.assetid: 9b71f8c0-541c-4fe5-a0c7-9364f42ecb06
 ms.openlocfilehash: d309390c1ac1a19d9d4a982908dbbbac0bd52714
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57813768"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62291556"
 ---
 # <a name="keyfile-specify-key-or-key-pair-to-sign-an-assembly"></a>/KEYFILE（指定密钥或密钥对以便为程序集签名）
 
@@ -33,7 +33,7 @@ ms.locfileid: "57813768"
 
 如果使用编译[/LN](ln-create-msil-module.md)，保存在模块和合并到编译通过包括对该模块的显式引用的程序集时创建的程序集密钥文件的名称[#using](../../preprocessor/hash-using-directive-cpp.md)，或使用链接时[/ASSEMBLYMODULE](assemblymodule-add-a-msil-module-to-the-assembly.md)。
 
-您可以将加密信息传递到链接器使用[/KEYCONTAINER](keycontainer-specify-a-key-container-to-sign-an-assembly.md)。 使用[/DELAYSIGN](delaysign-partially-sign-an-assembly.md)如果需要部分签名的程序集。 请参阅[强名称程序集 （程序集签名） (C + + CLI)](../../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md)有关为程序集签名的详细信息。
+您可以将加密信息传递到链接器使用[/KEYCONTAINER](keycontainer-specify-a-key-container-to-sign-an-assembly.md)。 使用[/DELAYSIGN](delaysign-partially-sign-an-assembly.md)如果需要部分签名的程序集。 请参阅[强名称程序集 （程序集签名） (C++/CLI)](../../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md)有关签名程序集的详细信息。
 
 两者 **/KEYFILE**并 **/KEYCONTAINER**指定 （通过命令行选项或通过自定义特性），链接器将首先尝试用密钥容器。 如果成功，则使用密钥容器中的信息对程序集签名。 如果链接器没有找到密钥容器，它将尝试用 /KEYFILE 指定的文件。 如果成功，则使用密钥文件中的信息对程序集签名，并且将密钥信息安装到密钥容器中（类似于 sn -i），以便在下一次编译中，密钥容器选项将生效。
 
@@ -55,7 +55,7 @@ ms.locfileid: "57813768"
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此链接器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[Visual Studio 中的设置 c + + 编译器和生成属性](../working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
 
 1. 单击**链接器**文件夹。
 
@@ -69,5 +69,5 @@ ms.locfileid: "57813768"
 
 ## <a name="see-also"></a>请参阅
 
-[MSVC 链接器引用](linking.md)<br/>
+[MSVC 链接器参考](linking.md)<br/>
 [MSVC 链接器选项](linker-options.md)

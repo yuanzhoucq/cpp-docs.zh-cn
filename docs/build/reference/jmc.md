@@ -10,11 +10,11 @@ helpviewer_keywords:
 - User code, debugging
 - JMC compiler option [C++]
 ms.openlocfilehash: c107ad7107d2a65ed19719933aa127c0557916ce
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57808048"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62291634"
 ---
 # <a name="jmc-just-my-code-debugging"></a>/ JMC （仅我的代码调试）
 
@@ -26,19 +26,19 @@ ms.locfileid: "57808048"
 
 ## <a name="remarks"></a>备注
 
-Visual Studio[仅我的代码](/visualstudio/debugger/just-my-code)设置指定是否在 Visual Studio 调试器将逐过程执行系统、 框架、 库和其他非用户调用。 **/JMC**编译器选项启用仅我的代码在你的本机 c + + 代码中进行调试的支持。 当 **/JMC**已启用，编译器将插入到帮助程序函数的调用`__CheckForDebuggerJustMyCode`，函数 prolog 中。 帮助器函数提供挂钩，支持 Visual Studio 调试器仅我的代码的步骤操作。 若要启用仅我的代码在 Visual Studio 调试器中，在菜单栏上，选择**工具** > **选项**，，然后在设置选项**调试** > **常规** > **启用仅我的代码**。
+Visual Studio[仅我的代码](/visualstudio/debugger/just-my-code)设置指定是否在 Visual Studio 调试器将逐过程执行系统、 框架、 库和其他非用户调用。 **/JMC**编译器选项启用仅我的代码中本机调试支持C++代码。 当 **/JMC**已启用，编译器将插入到帮助程序函数的调用`__CheckForDebuggerJustMyCode`，函数 prolog 中。 帮助器函数提供挂钩，支持 Visual Studio 调试器仅我的代码的步骤操作。 若要启用仅我的代码在 Visual Studio 调试器中，在菜单栏上，选择**工具** > **选项**，，然后在设置选项**调试** > **常规** > **启用仅我的代码**。
 
 **/JMC**选项要求您的代码链接到 C 运行时库 (CRT)，它提供`__CheckForDebuggerJustMyCode`帮助器函数。 如果在你的项目不会链接到 CRT，可能会看到链接器错误**LNK2019： 无法解析的外部符号 __CheckForDebuggerJustMyCode**。 若要解决此错误，请将链接到 CRT，或禁用 **/JMC**选项。
 
-默认情况下 **/JMC**编译器选项处于关闭状态。 但是，在 Visual Studio 2017 版本 15.8 开始使用此选项将启用大多数 Visual Studio 项目模板。 若要显式禁用此选项，请使用 **/JMC-** 命令行上的选项。 在 Visual Studio 中，打开项目属性页对话框中，并将更改**支持只我的代码进行调试**属性中的**配置属性** > **C/c + +** > **常规**到属性页**否**。
+默认情况下 **/JMC**编译器选项处于关闭状态。 但是，在 Visual Studio 2017 版本 15.8 开始使用此选项将启用大多数 Visual Studio 项目模板。 若要显式禁用此选项，请使用 **/JMC-** 命令行上的选项。 在 Visual Studio 中，打开项目属性页对话框中，并将更改**支持只我的代码进行调试**属性中的**配置属性** > **C /C++**   > **常规**到属性页**否**。
 
-有关详细信息，请参阅[c + + ' 仅我的代码](/visualstudio/debugger/just-my-code#BKMK_C___Just_My_Code)中[指定是否仅在 Visual Studio 中使用仅我的代码的用户代码进行调试](/visualstudio/debugger/just-my-code)，和 Visual c + + 团队博客文章[宣布推出 c + + 仅我的代码在 Visual Studio 中单步执行](https://blogs.msdn.microsoft.com/vcblog/2018/06/29/announcing-jmc-stepping-in-visual-studio/)。
+有关详细信息，请参阅[C++仅我的代码](/visualstudio/debugger/just-my-code#BKMK_C___Just_My_Code)中[指定是否仅在 Visual Studio 中使用仅我的代码的用户代码进行调试](/visualstudio/debugger/just-my-code)，和视觉对象C++团队博客文章[宣布C++只是我在 Visual Studio 中单步执行的代码](https://blogs.msdn.microsoft.com/vcblog/2018/06/29/announcing-jmc-stepping-in-visual-studio/)。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[Visual Studio 中的设置 c + + 编译器和生成属性](../working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
 
-1. 选择**配置属性** > **C/c + +** > **常规**属性页。
+1. 选择**配置属性** > **C /C++** > **常规**属性页。
 
 1. 修改**支持只我的代码进行调试**属性。
 

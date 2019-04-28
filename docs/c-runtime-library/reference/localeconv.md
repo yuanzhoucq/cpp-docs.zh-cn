@@ -24,11 +24,11 @@ helpviewer_keywords:
 - locales, getting information on
 ms.assetid: 7ecdb1f2-88f5-4037-a0e7-c754ab003660
 ms.openlocfilehash: bf26e4f7b7fb4f0334b57604fe5c4996312bd62a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50628133"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62286301"
 ---
 # <a name="localeconv"></a>localeconv
 
@@ -50,16 +50,16 @@ struct lconv *localeconv( void );
 
 |字段|含义|
 |-|-|
-decimal_point，<br/>_W_decimal_point|以十进制点非货币数量的字符的指针。
+decimal_point,<br/>_W_decimal_point|以十进制点非货币数量的字符的指针。
 thousands_sep，<br/>_W_thousands_sep|字符的指针分隔到小数点左侧的非货币数量的数字进行分组。
 分组|指向**char**-调整大小的整数，其中包含每个组的非货币数量中的数字的大小。
-int_curr_symbol，<br/>_W_int_curr_symbol|指向当前区域设置的国际货币符号。 前三个字符指定字母国际货币符号，如*货币和资金表示形式的 ISO 4217 代码*标准中定义。 第四个字符（前面紧邻 null 字符）将国际货币符号与货币数量分隔开来。
+int_curr_symbol,<br/>_W_int_curr_symbol|指向当前区域设置的国际货币符号。 前三个字符指定字母国际货币符号，如*货币和资金表示形式的 ISO 4217 代码*标准中定义。 第四个字符（前面紧邻 null 字符）将国际货币符号与货币数量分隔开来。
 currency_symbol，<br/>_W_currency_symbol|指向当前区域设置的本地货币符号。
-mon_decimal_point，<br/>_W_mon_decimal_point|以十进制点货币数量的字符的指针。
-mon_thousands_sep，<br/>_W_mon_thousands_sep|指向货币数量中小数点位置左边的数字分隔符。
+mon_decimal_point,<br/>_W_mon_decimal_point|以十进制点货币数量的字符的指针。
+mon_thousands_sep,<br/>_W_mon_thousands_sep|指向货币数量中小数点位置左边的数字分隔符。
 mon_grouping|指向**char**-调整大小的整数，它包含数字货币数量中每个组的大小。
 positive_sign，<br/>_W_positive_sign|非负货币数量的字符串指示符号。
-negative_sign，<br/>_W_negative_sign|负货币数量的字符串指示符号。
+negative_sign,<br/>_W_negative_sign|负货币数量的字符串指示符号。
 int_frac_digits|带国际格式的货币数量中小数点右侧的数字个数。
 frac_digits|带格式的货币数量中小数点右侧的数字个数。
 p_cs_precedes|如果货币符号位于带格式的非负货币数量值的前面，则设置为 1。 如果符号紧随值后，则设置为 0。

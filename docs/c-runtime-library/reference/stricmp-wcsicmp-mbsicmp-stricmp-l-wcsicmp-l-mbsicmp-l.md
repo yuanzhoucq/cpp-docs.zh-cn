@@ -57,11 +57,11 @@ helpviewer_keywords:
 - _strcmpi function
 ms.assetid: 0e1ee515-0d75-435a-a445-8875d4669b50
 ms.openlocfilehash: d27b2128d79d7ff3ab0150e182d494fed52d46ca
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559053"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62353829"
 ---
 # <a name="stricmp-wcsicmp-mbsicmp-stricmpl-wcsicmpl-mbsicmpl"></a>_stricmp、_wcsicmp、_mbsicmp、_stricmp_l、_wcsicmp_l、_mbsicmp_l
 
@@ -141,7 +141,7 @@ int _mbsicmp_l(
 
 **_wcsicmp**并**wcscmp**行为方式相同，只不过**wcscmp**不转换为小写进行比较前其自变量。 **_mbsicmp**并 **_mbscmp**行为方式相同，只不过 **_mbscmp**不转换为小写进行比较前其自变量。
 
-将需要调用[setlocale](setlocale-wsetlocale.md)有关 **_wcsicmp**使用 Latin 1 字符。 默认情况下，C 区域设置有效，因此，例如，ä 比较时不会等于 Ä。 调用**setlocale**的调用之前的 C 区域设置以外的任何区域设置 **_wcsicmp**。 下面的示例演示如何 **_wcsicmp**是区域设置影响：
+将需要调用[setlocale](setlocale-wsetlocale.md)有关 **_wcsicmp**使用 Latin 1 字符。 C 区域设置是有效的默认值，因此，例如，ä 将不之间的比较等于 Ä。 调用**setlocale**的调用之前的 C 区域设置以外的任何区域设置 **_wcsicmp**。 下面的示例演示如何 **_wcsicmp**是区域设置影响：
 
 ```C
 // crt_stricmp_locale.c

@@ -1,14 +1,14 @@
 ---
-title: 在 Visual Studio 项目的 c + + 中的属性继承
+title: 在 Visual Studio 项目中的属性继承C++
 ms.date: 12/10/2018
 helpviewer_keywords:
 - Visual C++ projects, property inheritance
 ms.openlocfilehash: edd6d3bf82f7a13cf6687abeba3758dcceca5e84
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57825014"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62295434"
 ---
 # <a name="property-inheritance-in-visual-studio-projects"></a>在 Visual Studio 项目中的属性继承
 
@@ -67,7 +67,7 @@ Visual Studio 项目系统基于 MSBuild，定义文件格式和生成项目的�
 
 如果转到属性页中的常规窗格和字符集属性设置为"未设置"而不是"使用 Unicode"，再单击**确定**，将显示属性管理器没有**Unicode 支持**属性表当前配置，但它仍会出现的其他配置。
 
-有关属性管理器和属性表的详细信息，请参阅[共享或重新 Visual Studio c + + 项目设置](create-reusable-property-configurations.md)。
+有关属性管理器和属性表的详细信息，请参阅[共享或重新 Visual StudioC++项目设置](create-reusable-property-configurations.md)。
 
 > [!TIP]
 > .user 文件是一项旧功能，我们建议将其删除以便根据配置/平台正确地对属性分组。

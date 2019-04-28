@@ -27,11 +27,11 @@ helpviewer_keywords:
 - _free_locale function
 ms.assetid: 1f08d348-ab32-4028-a145-6cbd51b49af9
 ms.openlocfilehash: 92dc8cd711087e8e797b484d6c7e3c6c3b031b5c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50537379"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62333035"
 ---
 # <a name="freelocale"></a>_free_locale
 
@@ -58,7 +58,7 @@ void _free_locale(
 
 ## <a name="requirements"></a>要求
 
-|**例程**|必需的标头|
+|**Routine**|必需的标头|
 |---------------|---------------------|
 |**_free_locale**|\<locale.h>|
 

@@ -47,11 +47,11 @@ helpviewer_keywords:
 - std::moneypunct [C++], thousands_sep
 ms.assetid: cf2650da-3e6f-491c-95d5-23e57f582ee6
 ms.openlocfilehash: 750b61100f7e3fe15851fffbedeb5b60d4d7034f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468648"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62349116"
 ---
 # <a name="moneypunct-class"></a>moneypunct 类
 
@@ -530,11 +530,11 @@ explicit moneypunct(size_t _Refs = 0);
 
 可能的值 *_Refs*参数和其重要性：
 
-- 0：对象的生存期由包含该对象的区域设置管理。
+- 0:对象的生存期由包含它的区域设置管理。
 
-- 1：必须手动管理对象的生存期。
+- 1:必须手动管理的对象的生存期。
 
-- \> 1： 未定义这些值。
+- \> 1:未定义这些值。
 
 由于该析构函数受到保护，可能没有直接的示例。
 

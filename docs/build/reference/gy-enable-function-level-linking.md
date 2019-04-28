@@ -14,11 +14,11 @@ helpviewer_keywords:
 - packaged functions
 ms.assetid: 0d3cf14c-ed7d-4ad3-b4b6-104e56f61046
 ms.openlocfilehash: 9643b8b4b4b26b3f7a8a59ed0085601b1a53094d
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57817967"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62270719"
 ---
 # <a name="gy-enable-function-level-linking"></a>/Gy（启用函数级链接）
 
@@ -38,14 +38,14 @@ ms.locfileid: "57817967"
 
 可以使用链接器选项[/ORDER （按顺序放置函数）](order-put-functions-in-order.md)将封装的函数包括.exe 文件中指定的顺序。
 
-如果实例化为调用内联函数则始终打包 (其中发生，例如，如果内联已关闭或采用函数地址)。 此外，自动打包在类声明中定义的 c + + 成员函数;其他函数是不是，并选择此选项所需将其编译为封装函数。
+如果实例化为调用内联函数则始终打包 (其中发生，例如，如果内联已关闭或采用函数地址)。 此外，C++自动打包在类声明中定义的成员函数;其他函数是不是，并选择此选项所需将其编译为封装函数。
 
 > [!NOTE]
 >  [/ZI](z7-zi-zi-debug-information-format.md)选项，用于编辑并继续，将自动设置 **/Gy**选项。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[Visual Studio 中的设置 c + + 编译器和生成属性](../working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
 
 1. 单击 **“C/C++”** 文件夹。
 

@@ -12,11 +12,11 @@ helpviewer_keywords:
 - /fp compiler option [C++]
 ms.assetid: 10469d6b-e68b-4268-8075-d073f4f5d57e
 ms.openlocfilehash: 25b228c16f534ca227d50bfdf632fdacb5703cd9
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58565433"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62292349"
 ---
 # <a name="fp-specify-floating-point-behavior"></a>/fp （指定浮点行为）
 
@@ -85,7 +85,7 @@ ms.locfileid: "58565433"
 
 ### <a name="floating-point-environment-access-and-modification"></a>浮点环境访问和修改
 
-Microsoft Visual c + + 运行时提供多个函数来访问和修改的浮点环境。 其中包括[_controlfp](../../c-runtime-library/reference/control87-controlfp-control87-2.md)， [_clearfp](../../c-runtime-library/reference/clear87-clearfp.md)，并[_statusfp](../../c-runtime-library/reference/status87-statusfp-statusfp2.md)及其变量。 若要确保正确的程序行为时，你的代码访问或修改的浮点环境`fenv_access`必须启用，或者通过`/fp:strict`选项，或通过使用的`fenv_access`杂注，这些函数来产生任何影响。 当`fenv_access`是未启用，请访问或修改的浮点环境可能会导致意外的程序行为： 代码可能不接受请求对浮点环境进行更改; 可能不会报告浮点状态注册预期或当前结果;和意外的浮点异常可能会或可能不是预期的浮点异常。
+Microsoft VisualC++运行时提供多个函数来访问和修改的浮点环境。 其中包括[_controlfp](../../c-runtime-library/reference/control87-controlfp-control87-2.md)， [_clearfp](../../c-runtime-library/reference/clear87-clearfp.md)，并[_statusfp](../../c-runtime-library/reference/status87-statusfp-statusfp2.md)及其变量。 若要确保正确的程序行为时，你的代码访问或修改的浮点环境`fenv_access`必须启用，或者通过`/fp:strict`选项，或通过使用的`fenv_access`杂注，这些函数来产生任何影响。 当`fenv_access`是未启用，请访问或修改的浮点环境可能会导致意外的程序行为： 代码可能不接受请求对浮点环境进行更改; 可能不会报告浮点状态注册预期或当前结果;和意外的浮点异常可能会或可能不是预期的浮点异常。
 
 时你的代码访问或修改的浮点环境，您必须小心结合使用代码时，`fenv_access`启用了代码并没有`fenv_access`启用。 在代码中其中`fenv_access`未启用，则编译器将假定平台默认浮点环境正在起作用，和浮点状态不是访问或修改。 我们建议您保存和之前控制转移到其中一个函数，但没有为其默认状态还原本地浮点环境`fenv_access`启用。 此示例演示如何将`float_control`杂注可进行设置，还原：
 
@@ -256,9 +256,9 @@ float casting(float a, float b)
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[Visual Studio 中的设置 c + + 编译器和生成属性](../working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
 
-1. 选择**配置属性** > **C/c + +** > **代码生成**属性页。
+1. 选择**配置属性** > **C /C++** > **代码生成**属性页。
 
 1. 修改**浮点模型**属性。
 

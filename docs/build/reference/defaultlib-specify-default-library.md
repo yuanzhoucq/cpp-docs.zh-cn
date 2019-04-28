@@ -11,11 +11,11 @@ helpviewer_keywords:
 - libraries, adding to list of
 ms.assetid: 6af7ff49-c170-4a13-97e2-2b9ae2de20c9
 ms.openlocfilehash: 0b7d4569c7be70bd97094ebbe09a7ae462331983
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57815952"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62293857"
 ---
 # <a name="defaultlib-specify-default-library"></a>/DEFAULTLIB（指定默认库）
 
@@ -38,7 +38,7 @@ ms.locfileid: "57815952"
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此链接器选项
 
-1. 打开项目“属性页”  对话框。 有关详细信息，请参阅[Visual Studio 中的设置 c + + 编译器和生成属性](../working-with-project-properties.md)。
+1. 打开项目“属性页”  对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
 
 1. 选择**配置属性** > **链接器** > **命令行**属性页。
 
@@ -50,5 +50,5 @@ ms.locfileid: "57815952"
 
 ## <a name="see-also"></a>请参阅
 
-- [MSVC 链接器引用](linking.md)
+- [MSVC 链接器参考](linking.md)
 - [MSVC 链接器选项](linker-options.md)

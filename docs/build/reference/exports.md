@@ -7,11 +7,11 @@ helpviewer_keywords:
 - EXPORTS .def file statement
 ms.assetid: dbcd7579-b855-44c4-bd27-931e157657f7
 ms.openlocfilehash: 33b70c680bfc3db24f5326a2027fa9ec4740e3f2
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57814132"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62271341"
 ---
 # <a name="exports"></a>EXPORTS
 
@@ -51,7 +51,7 @@ EXPORTS
    func2=other_module.#42
 ```
 
-MSVC 编译器针对 c + + 函数使用名称修饰，因为您必须使用修饰的名*internal_name*或者通过使用定义导出的函数`extern "C"`的源代码中。 编译器还将修饰使用的 C 函数[__stdcall](../../cpp/stdcall.md)调用约定以下划线 (\_) 前缀和后缀组成 at 符号 (\@) 跟 in （采用十进制） 的字节数参数列表。
+因为 MSVC 编译器使用名称修饰的C++函数，您必须使用修饰的名*internal_name*或者通过使用定义导出的函数`extern "C"`中的源代码。 编译器还将修饰使用的 C 函数[__stdcall](../../cpp/stdcall.md)调用约定以下划线 (\_) 前缀和后缀组成 at 符号 (\@) 跟 in （采用十进制） 的字节数参数列表。
 
 若要查找由编译器产生的修饰的名，请使用[DUMPBIN](dumpbin-reference.md)工具或链接器[/map](map-generate-mapfile.md)选项。 修饰名特定于编译器。 如果要将修饰名导出到 .DEF 文件中，则链接到 DLL 的可执行文件也必须通过使用同一版本的编译器生成。 这可确保调用方中的修饰名与 .DEF 文件中的导出名相匹配。
 

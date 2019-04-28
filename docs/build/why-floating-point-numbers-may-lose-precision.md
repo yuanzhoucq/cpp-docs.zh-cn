@@ -7,11 +7,11 @@ helpviewer_keywords:
 - floating-point numbers, precision
 ms.assetid: 1acb1add-ac06-4134-a2fd-aff13d8c4c15
 ms.openlocfilehash: 387b2f4a7156e42e59bd70c5a6f747943fb54ca7
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57825147"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62313579"
 ---
 # <a name="why-floating-point-numbers-may-lose-precision"></a>为何浮点数可能丢失精度
 
@@ -25,7 +25,7 @@ ms.locfileid: "57825147"
 
 若要解决此问题，大多数程序员或是确保的值大于或小于什么需要或他们获取并使用可以维护精度的二进制编码的十进制 (BCD) 库。
 
-浮点值的二进制表示形式会影响精度和浮点计算的准确性。 使用 Microsoft Visual c + + [IEEE 浮点格式](ieee-floating-point-representation.md)。
+浮点值的二进制表示形式会影响精度和浮点计算的准确性。 Microsoft VisualC++使用[IEEE 浮点格式](ieee-floating-point-representation.md)。
 
 ## <a name="example"></a>示例
 

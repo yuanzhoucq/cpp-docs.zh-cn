@@ -14,17 +14,17 @@ helpviewer_keywords:
 - exceptions [MFC], MFC throwing functions
 ms.assetid: 26d4457c-8350-48f5-916e-78f919787c30
 ms.openlocfilehash: 3db919f40caf4e5dbf42b4e10c549b165c0a9fe4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293740"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62322210"
 ---
 # <a name="exception-processing"></a>异常处理
 
 程序执行时，会发生的异常情况和名为"异常"的错误数。 其中可能包括耗尽内存、 资源分配错误和查找文件失败。
 
-Microsoft 基础类库使用只现代性密切 ANSI 标准委员会建议的 c + + 异常处理方案。 调用函数可能会遇到不正常情况之前，必须设置异常处理程序。 如果该函数时遇到异常条件，它引发异常，并控制传递到异常处理程序。
+Microsoft 基础类库使用只现代性密切的一个建议的 ANSI 标准委员会的异常处理方案C++。 调用函数可能会遇到不正常情况之前，必须设置异常处理程序。 如果该函数时遇到异常条件，它引发异常，并控制传递到异常处理程序。
 
 Microsoft 基础类库中包含的几个宏将设置异常处理程序。 多个其他全局函数帮助引发特殊的异常并终止程序，如有必要。 这些宏和全局函数划分为以下类别：
 
@@ -135,7 +135,7 @@ CATCH(exception_class, exception_object_pointer_name)
 由宏创建异常对象指针。 不需要自行声明。
 
 > [!NOTE]
->  **捕获**块被定义为用大括号分隔的 c + + 作用域。 如果您在此范围中声明变量，则只能在该范围中访问它们。 这同样适用于*exception_object_pointer_name*。
+>  **捕获**块定义为C++用大括号分隔的范围。 如果您在此范围中声明变量，则只能在该范围中访问它们。 这同样适用于*exception_object_pointer_name*。
 
 异常和 CATCH 宏的详细信息，请参阅文章[异常](../../mfc/exception-handling-in-mfc.md)。
 
@@ -161,7 +161,7 @@ CATCH_ALL(exception_object_pointer_name)
 适当时，异常处理代码可以询问异常对象以获取有关异常的具体原因的详细信息。 调用 `THROW_LAST` 宏以将处理移动到下一个外部异常帧。 如果您使用**CATCH_ALL**，最终**尝试**END_CATCH_ALL 宏块。
 
 > [!NOTE]
->  **CATCH_ALL**块被定义为用大括号分隔的 c + + 作用域。 如果您在此范围中声明变量，则只能在该范围中访问它们。
+>  **CATCH_ALL**块定义为C++用大括号分隔的范围。 如果您在此范围中声明变量，则只能在该范围中访问它们。
 
 有关异常的详细信息，请参阅文章[异常](../../mfc/exception-handling-in-mfc.md)。
 
@@ -196,7 +196,7 @@ AND_CATCH(exception_class, exception_object_pointer_name)
 适当时，异常处理代码可以询问异常对象以获取有关异常的具体原因的详细信息。 调用内的 THROW_LAST 宏**AND_CATCH**阻止把处理转移到下一个外部异常帧。 **AND_CATCH**标记前面的末尾**捕获**或**AND_CATCH**块。
 
 > [!NOTE]
->  **AND_CATCH**块定义为 c + + 作用域 （用大括号分开）。 如果声明此范围中的变量，请记住它们是只能在该作用域中访问。 这同样适用于*exception_object_pointer_name*变量。
+>  **AND_CATCH**块定义为C++作用域 （用大括号分开）。 如果声明此范围中的变量，请记住它们是只能在该作用域中访问。 这同样适用于*exception_object_pointer_name*变量。
 
 ### <a name="example"></a>示例
 
@@ -225,7 +225,7 @@ AND_CATCH_ALL(exception_object_pointer_name)
 适当时，异常处理代码可以询问异常对象以获取有关异常的具体原因的详细信息。 调用内的 THROW_LAST 宏**AND_CATCH_ALL**阻止把处理转移到下一个外部异常帧。 **AND_CATCH_ALL**标记前面的末尾**捕获**或**AND_CATCH_ALL**块。
 
 > [!NOTE]
->  **AND_CATCH_ALL**块定义为 c + + 作用域 （用大括号分隔）。 如果声明此范围中的变量，请记住它们是只能在该作用域中访问。
+>  **AND_CATCH_ALL**块定义为C++作用域 （用大括号分隔）。 如果声明此范围中的变量，请记住它们是只能在该作用域中访问。
 
 ### <a name="requirements"></a>要求
 

@@ -6,11 +6,11 @@ f1_keywords:
 helpviewer_keywords:
 - /Qspectre
 ms.openlocfilehash: 42adff6564dc1c2ef47abffe9f9e6e630279ea7d
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57812455"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62319182"
 ---
 # <a name="qspectre"></a>/Qspectre
 
@@ -28,7 +28,7 @@ ms.locfileid: "57812455"
 
 在其初始版本中， **/Qspectre**选项仅处理优化的代码。 在 Visual Studio 2017 版本 15.7 及更高版本， **/Qspectre**选项支持所有优化级别。
 
-Microsoft Visual c + + 库中也会提供与 Spectre 缓解版本。 可以在 Visual Studio 安装程序下载用于 Visual Studio 2017 的 Spectre 缓解库。 在中找到**各个组件**选项卡上的**编译器、 生成工具和运行时**，并且在名称中具有"Libs 有关 Spectre"。 DLL 和静态运行时库与已启用的缓解是可用于 Visual c + + 运行时的子集：VC + + 启动代码、 vcruntime140、 msvcp140、 concrt140 和 vcamp140。 应用程序本地的部署; 仅支持 Dll尚未修改的 Visual c + + 2017年运行时库可再发行的内容。 也可为 MFC 和 ATL 中, 找到安装 Spectre 缓解库**各个组件**选项卡上的**Sdk、 库和框架**。
+Microsoft VisualC++库中也会提供与 Spectre 缓解版本。 可以在 Visual Studio 安装程序下载用于 Visual Studio 2017 的 Spectre 缓解库。 在中找到**各个组件**选项卡上的**编译器、 生成工具和运行时**，并且在名称中具有"Libs 有关 Spectre"。 DLL 和静态运行时库与已启用的缓解是适用于视觉对象的子集C++运行时：VC + + 启动代码、 vcruntime140、 msvcp140、 concrt140 和 vcamp140。 应用程序本地的部署; 仅支持 Dll视觉对象的内容C++2017年运行时库可再发行组件尚未修改。 也可为 MFC 和 ATL 中, 找到安装 Spectre 缓解库**各个组件**选项卡上的**Sdk、 库和框架**。
 
 ### <a name="applicability"></a>适用性
 
@@ -55,20 +55,20 @@ Microsoft Visual c + + 库中也会提供与 Spectre 缓解版本。 可以在 V
 **/Qspectre**编译器选项生成的隐式链接的已生成提供 Spectre 缓解措施的运行时库版本的代码。 这些库都必须通过使用 Visual Studio 安装程序安装的可选组件：
 
 - VC + + 2017年版本*version_numbers*面向 Spectre 的 Libs \[（x86 和 x64） |(ARM) |(ARM64)]
-- Visual c + + ATL for \[(x86/x64) |ARM |ARM64] 带有 Spectre 缓解措施
-- Visual c + + MFC for \[x86/x64 |ARM |ARM64] 带有 Spectre 缓解措施
+- VisualC++的 ATL \[(x86/x64) |ARM |ARM64] 带有 Spectre 缓解措施
+- VisualC++的 MFC \[x86/x64 |ARM |ARM64] 带有 Spectre 缓解措施
 
 如果使用生成你的代码 **/Qspectre**和这些库并不安装，生成系统报告**警告 MSB8038:已启用 spectre 缓解措施，但找不到 Spectre 缓解库**。 如果在 MFC 或 ATL 代码生成失败，并且链接器报表错误，例如**错误 LNK1104： 无法打开文件 oldnames.lib**，这些缺少的库可能就是原因。
 
 ### <a name="additional-information"></a>其他信息
 
-有关更多详细信息，请参阅官方[Microsoft 安全公告 ADV180002，指南，以缓解推理执行旁道漏洞](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/ADV180002)。 指南也是可从 Intel[推理执行端通道缓解措施](https://software.intel.com/sites/default/files/managed/c5/63/336996-Speculative-Execution-Side-Channel-Mitigations.pdf)，和 ARM，[缓存推理端通道](https://developer.arm.com/-/media/Files/pdf/Cache_Speculation_Side-channels.pdf)。 有关 Spectre 和 Meltdown 缓解措施的特定于 Windows 的概述，请参阅[了解 Windows 系统上的 Spectre 和 Meltdown 缓解措施的性能影响](https://cloudblogs.microsoft.com/microsoftsecure/2018/01/09/understanding-the-performance-impact-of-spectre-and-meltdown-mitigations-on-windows-systems/)Microsoft 安全博客上。 MSVC 缓解措施针对 Spectre 漏洞的概述，请参阅[Spectre 缓解措施在 MSVC](https://blogs.msdn.microsoft.com/vcblog/2018/01/15/spectre-mitigations-in-msvc./) Visual c + + 团队博客上。
+有关更多详细信息，请参阅官方[Microsoft 安全公告 ADV180002，指南，以缓解推理执行旁道漏洞](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/ADV180002)。 指南也是可从 Intel[推理执行端通道缓解措施](https://software.intel.com/sites/default/files/managed/c5/63/336996-Speculative-Execution-Side-Channel-Mitigations.pdf)，和 ARM，[缓存推理端通道](https://developer.arm.com/-/media/Files/pdf/Cache_Speculation_Side-channels.pdf)。 有关 Spectre 和 Meltdown 缓解措施的特定于 Windows 的概述，请参阅[了解 Windows 系统上的 Spectre 和 Meltdown 缓解措施的性能影响](https://cloudblogs.microsoft.com/microsoftsecure/2018/01/09/understanding-the-performance-impact-of-spectre-and-meltdown-mitigations-on-windows-systems/)Microsoft 安全博客上。 MSVC 缓解措施针对 Spectre 漏洞的概述，请参阅[Spectre 缓解措施在 MSVC](https://blogs.msdn.microsoft.com/vcblog/2018/01/15/spectre-mitigations-in-msvc./)视觉对象上C++团队博客。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[Visual Studio 中的设置 c + + 编译器和生成属性](../working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
 
-1. 选择**配置属性** > **C/c + +** > **命令行**属性页。
+1. 选择**配置属性** > **C /C++** > **命令行**属性页。
 
 1. 在**其他选项**框中输入 **/Qspectre** 编译器选项。 选择**确定**以应用更改。
 
