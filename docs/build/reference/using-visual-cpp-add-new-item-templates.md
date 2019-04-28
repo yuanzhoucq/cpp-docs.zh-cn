@@ -8,11 +8,11 @@ helpviewer_keywords:
 - templates, Add New Item
 ms.assetid: 286d1be6-0473-407f-9a51-437dff1bfab7
 ms.openlocfilehash: afa6f7e3a1e3a6ac293a23fc18ecd0834d70555f
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57824451"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62317141"
 ---
 # <a name="using-visual-c-add-new-item-templates"></a>使用 Visual C++ 的“添加新项”模板
 
@@ -35,7 +35,7 @@ ms.locfileid: "57824451"
 |头文件 (.h)|创建 C++ 头文件。|
 |HTML 页 (.htm)|创建空白 HTML 文件。|
 |图标文件 (.ico)|创建 Win32 图标文件。|
-|安装程序类|添加继承的类<xref:System.Configuration.Install.Installer>使用 CLR 功能。|
+|安装程序类|使用 CLR 功能添加从 <xref:System.Configuration.Install.Installer> 继承的类。|
 |MIDL 文件 (.idl)|创建接口定义语言文件。|
 |模块定义文件 (.def)|创建 DLL 导出定义文件。|
 |属性表 (.props)|创建 Visual C++ 属性表文件。|
@@ -45,7 +45,7 @@ ms.locfileid: "57824451"
 |资源模板文件 (.rct)|创建资源模板文件。|
 |功能区 (.mfcribbon-ms)|创建功能区文件。|
 |服务器响应文件 (.srf)|创建与 ATL 服务器一起使用的服务器响应文件。|
-|SQL 脚本文件 (.sql)|创建 SQL 脚本文件。 **注意：** 此模板不是 Professional Edition 功能。|
+|SQL 脚本文件 (.sql)|创建 SQL 脚本文件。 **注意：** 该专业版功能不提供此模板。|
 |样式表 (.css)|添加用于 Rich HTML 样式定义的级联样式表。|
 |文本文件 (.txt)|添加空白文本文件。|
 |用户控件|使用 CLR 功能添加用户控件。|

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - -Zo compiler option [C++]
 ms.assetid: eea8d89a-7fe0-4fe1-86b2-7689bbebbd7f
 ms.openlocfilehash: 2fb64b0cc39d5b7ff0c96d3eae47197c455526f5
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57809933"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62315347"
 ---
 # <a name="zo-enhance-optimized-debugging"></a>/Zo（增强优化调试）
 
@@ -34,9 +34,9 @@ ms.locfileid: "57809933"
 
 ### <a name="to-set-the-zo-compiler-option-in-visual-studio"></a>在 Visual Studio 中设置 /Zo 编译器选项
 
-1. 打开**属性页**项目对话框。 有关详细信息，请参阅[Visual Studio 中的设置 c + + 编译器和生成属性](../working-with-project-properties.md)。
+1. 打开**属性页**项目对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
 
-1. 选择**配置属性**， **C/c + +** 文件夹。
+1. 选择**配置属性**， **C /C++** 文件夹。
 
 1. 选择**命令行**属性页。
 

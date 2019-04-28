@@ -5,11 +5,11 @@ f1_keywords:
 - VC.Project.VCCLCompilerTool.EnableParallelCodeGeneration
 ms.assetid: 33ecf49d-c0d5-4f34-bce3-84ff03f38918
 ms.openlocfilehash: c1ddea73c5aa8d3e7e70b45834cb04154bf3b4bb
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57809556"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62319221"
 ---
 # <a name="qpar-auto-parallelizer"></a>/Qpar（自动并行化程序）
 
@@ -33,7 +33,7 @@ ms.locfileid: "57809556"
 
 1. 在“解决方案资源管理器” 中，打开项目的快捷菜单，然后选择“属性” 。
 
-1. 在中**属性页**对话框中的**C/c + +**，选择**命令行**。
+1. 在中**属性页**对话框中的**C /C++**，选择**命令行**。
 
 1. 在中**其他选项**框中，输入`/Qpar`。
 

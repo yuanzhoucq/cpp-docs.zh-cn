@@ -16,11 +16,11 @@ helpviewer_keywords:
 - custom build tools (C++), specifying
 - builds (C++), custom build tools
 ms.openlocfilehash: dbce226b34503a9e8e70b6f19d9aa0c68ef487f3
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57825181"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62314749"
 ---
 # <a name="specify-custom-build-tools"></a>指定自定义生成工具
 
@@ -30,7 +30,7 @@ ms.locfileid: "57825181"
 
 ### <a name="to-specify-a-custom-build-tool"></a>指定自定义生成工具
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[Visual Studio 中的设置 c + + 编译器和生成属性](working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](working-with-project-properties.md)。
 
 1. 选择“配置属性”以启用“配置”框。 在“配置”框中，选择要为其指定自定义生成工具的配置。
 

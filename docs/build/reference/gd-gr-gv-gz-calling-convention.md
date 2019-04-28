@@ -22,11 +22,11 @@ helpviewer_keywords:
 - /Gr compiler option [C++]
 ms.assetid: fd3110cb-2d77-49f2-99cf-a03f9ead00a3
 ms.openlocfilehash: 7c4f7e6edb020f5c8d2abf80f14df33e18a915c5
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57817457"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62270947"
 ---
 # <a name="gd-gr-gv-gz-calling-convention"></a>/Gd、/Gr、/Gv、/Gz（调用约定）
 
@@ -41,24 +41,24 @@ ms.locfileid: "57817457"
 
 ## <a name="remarks"></a>备注
 
-**/Gd**，默认设置，指定[__cdecl](../../cpp/cdecl.md)函数和函数以及标记为除 c + + 成员以外的所有函数调用约定[__stdcall](../../cpp/stdcall.md)， [__fastcall](../../cpp/fastcall.md)，或[__vectorcall](../../cpp/vectorcall.md)。
+**/Gd**，默认设置，指定[__cdecl](../../cpp/cdecl.md)除以外的所有函数的调用约定C++成员函数和函数以及标记[__stdcall](../../cpp/stdcall.md)， [__fastcall](../../cpp/fastcall.md)，或[__vectorcall](../../cpp/vectorcall.md)。
 
-**/Gr**指定`__fastcall`除 c + + 成员函数的所有函数的调用约定，函数名为`main`，和标记的函数`__cdecl`， `__stdcall`，或`__vectorcall`。 所有`__fastcall`函数必须具有原型。 此调用约定仅在面向 x86 的编译器中可用，面向其他体系结构的编译器忽略。
+**/Gr**指定`__fastcall`除以外的所有函数的调用约定C++成员函数、 函数名为`main`，并标记为`__cdecl`， `__stdcall`，或者`__vectorcall`。 所有`__fastcall`函数必须具有原型。 此调用约定仅在面向 x86 的编译器中可用，面向其他体系结构的编译器忽略。
 
-**/Gz**指定`__stdcall`除 c + + 成员函数的所有函数的调用约定，函数名为`main`，和标记的函数`__cdecl`， `__fastcall`，或`__vectorcall`。 所有`__stdcall`函数必须具有原型。 此调用约定仅在面向 x86 的编译器中可用，面向其他体系结构的编译器忽略。
+**/Gz**指定`__stdcall`除以外的所有函数的调用约定C++成员函数、 函数名为`main`，并标记为`__cdecl`， `__fastcall`，或者`__vectorcall`。 所有`__stdcall`函数必须具有原型。 此调用约定仅在面向 x86 的编译器中可用，面向其他体系结构的编译器忽略。
 
-**/Gv**指定`__vectorcall`除 c + + 成员函数的所有函数的调用约定，函数名的为主，函数与`vararg`变量自变量列表中或标记有冲突的函数`__cdecl`，`__stdcall`，或`__fastcall`属性。 此调用约定在 x86 和 x64 体系结构支持/arch:sse2 及以上版本才可用，并忽略由面向 ARM 体系结构的编译器。
+**/Gv**指定`__vectorcall`除以外的所有函数的调用约定C++成员函数、 函数名为 main 中，与函数`vararg`变量参数列表或函数的标记有冲突`__cdecl`， `__stdcall`，或`__fastcall`属性。 此调用约定在 x86 和 x64 体系结构支持/arch:sse2 及以上版本才可用，并忽略由面向 ARM 体系结构的编译器。
 
 采用可变数量的参数的函数必须标记为`__cdecl`。
 
 **/Gd**， **/Gr**， **/Gv**并 **/Gz**都不符合[/clr: safe](clr-common-language-runtime-compilation.md)或 **/clr: pure**. **/Clr: pure**并 **/clr: safe**编译器选项在 Visual Studio 2015 中弃用，在 Visual Studio 2017 中不受支持。
 
 > [!NOTE]
-> 默认情况下，对于 x86 处理器，c + + 成员函数使用[__thiscall](../../cpp/thiscall.md)。
+> 默认情况下，对于 x86 处理器，C++成员函数使用[__thiscall](../../cpp/thiscall.md)。
 
 适用于所有处理器，显式标记为一个成员函数`__cdecl`， `__fastcall`， `__vectorcall`，或`__stdcall`如果它不会忽略该体系结构上使用指定的调用约定。 始终采用可变数量的参数，则会使用一个成员函数`__cdecl`调用约定。
 
-这些编译器选项对 c + + 方法和函数的名称修饰无效。 除非声明为`extern "C"`，c + + 方法和函数使用不同的名称修饰方案。 有关详细信息，请参阅[修饰名](decorated-names.md)。
+这些编译器选项不起作用的名称修饰的C++方法和函数。 除非声明为`extern "C"`，C++方法和函数使用不同的名称修饰方案。 有关详细信息，请参阅[修饰名](decorated-names.md)。
 
 有关调用约定的详细信息，请参阅[调用约定](../../cpp/calling-conventions.md)。
 
@@ -66,7 +66,7 @@ ms.locfileid: "57817457"
 
 在 x86 处理器，所有函数参数都传递到堆栈上从右到左。 在 ARM 和 x64 体系结构中，某些参数通过寄存器进行传递和从右到左，在堆栈上的其余部分传递。 调用的例程中弹出参数在堆栈。
 
-对于 C，`__cdecl`命名的函数名称的约定使用前面带下划线 ( `_` ); 执行没有任何大小写转换。 除非声明为`extern "C"`，c + + 函数使用不同的名称修饰方案。 有关详细信息，请参阅[修饰名](decorated-names.md)。
+对于 C，`__cdecl`命名的函数名称的约定使用前面带下划线 ( `_` ); 执行没有任何大小写转换。 除非声明为`extern "C"`，C++函数将使用不同的名称修饰方案。 有关详细信息，请参阅[修饰名](decorated-names.md)。
 
 ## <a name="fastcall-specifics"></a>__fastcall 细节
 
@@ -99,9 +99,9 @@ ms.locfileid: "57817457"
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[Visual Studio 中的设置 c + + 编译器和生成属性](../working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
 
-1. 选择**C/c + +** > **高级**属性页。
+1. 选择**C /C++** > **高级**属性页。
 
 1. 修改**调用约定**属性。
 

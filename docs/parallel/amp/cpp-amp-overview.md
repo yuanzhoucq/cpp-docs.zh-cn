@@ -9,15 +9,15 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism
 ms.assetid: 9e593b06-6e3c-43e9-8bae-6d89efdd39fc
 ms.openlocfilehash: 258266768d3f456fb761a9d5a403a92c502dbe32
-ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58356239"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62349892"
 ---
 # <a name="c-amp-overview"></a>C++ AMP 概述
 
-C + + Accelerated Massive Parallelism (c + + AMP) 通过利用离散图像卡上的数据并行硬件，例如图形处理单元 (GPU) 加快了 c + + 代码的执行。 通过使用 c + + AMP，可使用，以便可以通过使用并行性异类硬件上加速执行代码多维数据算法。 C++ AMP 编程模型包括多维数组、索引、内存传输、平铺和数学函数库。 C + + AMP 语言扩展可用于控制数据如何从 CPU 移动到 GPU 并返回，以便您可以提高性能。
+C++Accelerated Massive Parallelism (C++ AMP) 加速执行的C++通过利用数据并行硬件图形处理单元 (GPU) 例如离散图像卡上的代码。 通过使用C++AMP 中，您可以编写代码多维数据算法，以便执行进行加速异类硬件上使用并行度。 C++ AMP 编程模型包括多维数组、索引、内存传输、平铺和数学函数库。 可以使用C++AMP 语言扩展控制数据移动的方式在 CPU 和 GPU 之间相互后，以便您可以提高性能。
 
 ## <a name="system-requirements"></a>系统要求
 
@@ -33,7 +33,7 @@ C + + Accelerated Massive Parallelism (c + + AMP) 通过利用离散图像卡上
 
 ## <a name="introduction"></a>介绍
 
-以下两个示例演示了 c + + AMP 的主要组件。 假设你想要添加两个一维数组的相应元素。 例如，你可能想要添加`{1, 2, 3, 4, 5}`并`{6, 7, 8, 9, 10}`若要获取`{7, 9, 11, 13, 15}`。 如果不使用 c + + AMP，您可以编写以下代码以添加数字并显示结果。
+以下两个示例说明了的主要组件C++a m P。 假设你想要添加两个一维数组的相应元素。 例如，你可能想要添加`{1, 2, 3, 4, 5}`并`{6, 7, 8, 9, 10}`若要获取`{7, 9, 11, 13, 15}`。 而无需使用C++AMP 中，您可以编写以下代码以添加数字并显示结果。
 
 ```cpp
 #include <iostream>
@@ -64,7 +64,7 @@ void StandardMethod() {
 
 - 索引：`idx`变量访问数组的各个元素。
 
-使用 c + + AMP，您可以改为编写以下代码。
+使用C++AMP 中，您可以编写以下代码改为。
 
 ```cpp
 #include <amp.h>
@@ -100,11 +100,11 @@ void CppAmpMethod() {
 }
 ```
 
-相同的基本元素不存在，但使用 c + + AMP 构造：
+相同的基本元素不存在，但C++使用 AMP 构造：
 
-- 数据：使用 c + + 数组构造三个 c + + AMP [array_view](../../parallel/amp/reference/array-view-class.md)对象。 提供四个值来构造`array_view`对象： 数据值、 秩、 元素类型和长度的`array_view`每个维度中的对象。 等级和类型作为类型参数传递。 数据和长度作为构造函数参数传递。 在此示例中，传递给构造函数的 c + + 数组是一维的。 等级和长度用于构造中的数据的矩形形状`array_view`对象和值用于填充数组的数据。 运行时库还包括[array 类](../../parallel/amp/reference/array-class.md)，其中包含类似于一个接口`array_view`类和更高版本在本文中讨论。
+- 数据：使用C++数组构造三个C++a m P [array_view](../../parallel/amp/reference/array-view-class.md)对象。 提供四个值来构造`array_view`对象： 数据值、 秩、 元素类型和长度的`array_view`每个维度中的对象。 等级和类型作为类型参数传递。 数据和长度作为构造函数参数传递。 在此示例中，C++是一维数组传递给构造函数。 等级和长度用于构造中的数据的矩形形状`array_view`对象和值用于填充数组的数据。 运行时库还包括[array 类](../../parallel/amp/reference/array-class.md)，其中包含类似于一个接口`array_view`类和更高版本在本文中讨论。
 
-- 迭代:[Parallel_for_each 函数 (c + + AMP)](reference/concurrency-namespace-functions-amp.md#parallel_for_each)提供了一种机制，用于循环访问的数据元素，或*计算域*。 在此示例中，计算域由`sum.extent`。 你想要执行的代码包含在 lambda 表达式，或*内核函数*。 `restrict(amp)`指示使用仅 c + + AMP 可以加快的 c + + 语言的子集。
+- 迭代:[Parallel_for_each 函数 (C++ AMP)](reference/concurrency-namespace-functions-amp.md#parallel_for_each)提供了一种机制，用于循环访问的数据元素，或*计算域*。 在此示例中，计算域由`sum.extent`。 你想要执行的代码包含在 lambda 表达式，或*内核函数*。 `restrict(amp)`指示，只有的子集C++语言的C++AMP 可以加快使用。
 
 - 索引：[Index 类](../../parallel/amp/reference/index-class.md)变量`idx`，声明了一个要匹配的秩的一个级别`array_view`对象。 通过使用索引，您可以访问的各个元素`array_view`对象。
 
@@ -318,7 +318,7 @@ void AddArrays() {
 
 *计算域*是`extent`对象或`tiled_extent`定义要创建并行执行的线程组的对象。 计算域中每个元素生成一个线程。 在这种情况下，`extent`对象是一维的并具有五个元素。 因此，启动了五个线程。
 
-*Lambda 表达式*定义每个线程上运行的代码。 Capture 子句`[=]`，指定 lambda 表达式的主体通过值，在这种情况下访问所有捕获的变量`a`， `b`，和`sum`。 在此示例中，参数列表创建一维`index`名为变量`idx`。 值`idx[0]`是中的第一个线程为 0，将会增加一个在每个后续线程中。 `restrict(amp)`指示使用仅 c + + AMP 可以加快的 c + + 语言的子集。  对有限制修饰符的函数的限制中所述[限制 (c + + AMP)](../../cpp/restrict-cpp-amp.md)。 有关详细信息，请参阅， [Lambda 表达式语法](../../cpp/lambda-expression-syntax.md)。
+*Lambda 表达式*定义每个线程上运行的代码。 Capture 子句`[=]`，指定 lambda 表达式的主体通过值，在这种情况下访问所有捕获的变量`a`， `b`，和`sum`。 在此示例中，参数列表创建一维`index`名为变量`idx`。 值`idx[0]`是中的第一个线程为 0，将会增加一个在每个后续线程中。 `restrict(amp)`指示，只有的子集C++语言的C++AMP 可以加快使用。  对有限制修饰符的函数的限制中所述[限制 (C++ AMP)](../../cpp/restrict-cpp-amp.md)。 有关详细信息，请参阅， [Lambda 表达式语法](../../cpp/lambda-expression-syntax.md)。
 
 Lambda 表达式可以包括要执行的代码也可以调用单独的核函数。 核函数必须包含`restrict(amp)`修饰符。 下面的示例等效于上述示例中，但它会调用单独的核函数。
 
@@ -431,7 +431,7 @@ for (int i = 0; i <4; i++) {
 
 ## <a name="math-libraries"></a>数学库
 
-C + + AMP 包括两个数学库。 中的双精度库[concurrency:: precise_math Namespace](../../parallel/amp/reference/concurrency-precise-math-namespace.md)为双精度函数提供支持。 它还支持单精度功能，尽管仍需要的硬件上的双精度支持。 其遵守[C99 规范 (ISO/IEC 9899)](http://go.microsoft.com/fwlink/p/?linkid=225887)。 快捷键必须支持完全双精度。 您可以确定它是否是通过检查的值[accelerator:: supports_double_precision 数据成员](reference/accelerator-class.md#supports_double_precision)。 快速数学库，请在[concurrency:: fast_math Namespace](../../parallel/amp/reference/concurrency-fast-math-namespace.md)，包含另一组数学函数。 这些函数，仅支持`float`操作数，更快地执行，但精确度不如双精度数学库中。 函数包含在\<amp_math.h > 标头文件和所有声明与`restrict(amp)`。 中的函数\<cmath > 标头文件导入这两`fast_math`和`precise_math`命名空间。 **限制**关键字用于区分\<cmath > 版本和 c + + AMP 版本。 以下代码计算使用快速方法，每个值的计算域中的以 10 为基数的对数。
+C++AMP 包括两个数学库。 中的双精度库[concurrency:: precise_math Namespace](../../parallel/amp/reference/concurrency-precise-math-namespace.md)为双精度函数提供支持。 它还支持单精度功能，尽管仍需要的硬件上的双精度支持。 其遵守[C99 规范 (ISO/IEC 9899)](http://go.microsoft.com/fwlink/p/?linkid=225887)。 快捷键必须支持完全双精度。 您可以确定它是否是通过检查的值[accelerator:: supports_double_precision 数据成员](reference/accelerator-class.md#supports_double_precision)。 快速数学库，请在[concurrency:: fast_math Namespace](../../parallel/amp/reference/concurrency-fast-math-namespace.md)，包含另一组数学函数。 这些函数，仅支持`float`操作数，更快地执行，但精确度不如双精度数学库中。 函数包含在\<amp_math.h > 标头文件和所有声明与`restrict(amp)`。 中的函数\<cmath > 标头文件导入这两`fast_math`和`precise_math`命名空间。 **限制**关键字用于区分\<cmath > 版本和C++AMP 版本。 以下代码计算使用快速方法，每个值的计算域中的以 10 为基数的对数。
 
 ```cpp
 #include <amp.h>
@@ -459,9 +459,9 @@ void MathExample() {
 
 ## <a name="graphics-library"></a>图形库
 
-C + + AMP 包括为加速的图形编程设计的图形库。 仅在支持本地图形功能的设备上使用此库。 方法是在[concurrency:: graphics Namespace](../../parallel/amp/reference/concurrency-graphics-namespace.md)和包含在\<amp_graphics.h > 标头文件。 图形库的关键组件包括：
+C++AMP 包括为加速的图形编程设计的图形库。 仅在支持本地图形功能的设备上使用此库。 方法是在[concurrency:: graphics Namespace](../../parallel/amp/reference/concurrency-graphics-namespace.md)和包含在\<amp_graphics.h > 标头文件。 图形库的关键组件包括：
 
-- [texture 类](../../parallel/amp/reference/texture-class.md):纹理类可用于从内存或从文件创建纹理。 纹理类似于数组，因为它们包含的数据，并且它们类似于 c + + 标准库分配和复制构造方面中的容器。 有关详细信息，请参阅 [C++ 标准库容器](../../standard-library/stl-containers.md)。 有关模板参数`texture`类是元素类型和秩。 秩可以是 1、 2 或 3。 元素类型可以是本文稍后介绍的短矢量类型之一。
+- [texture 类](../../parallel/amp/reference/texture-class.md):纹理类可用于从内存或从文件创建纹理。 纹理类似于数组，因为它们包含的数据，并且它们类似于中的容器C++分配和复制构造方面的标准库。 有关详细信息，请参阅 [C++ 标准库容器](../../standard-library/stl-containers.md)。 有关模板参数`texture`类是元素类型和秩。 秩可以是 1、 2 或 3。 元素类型可以是本文稍后介绍的短矢量类型之一。
 
 - [writeonly_texture_view 类](../../parallel/amp/reference/writeonly-texture-view-class.md):提供对任何纹理的只写访问。
 
@@ -469,23 +469,23 @@ C + + AMP 包括为加速的图形编程设计的图形库。 仅在支持本地
 
 ## <a name="universal-windows-platform-uwp-apps"></a>通用 Windows 平台 (UWP) 应用
 
-像其他 c + + 库，可以在 UWP 应用中使用 c + + AMP。 这些文章介绍了如何在应用中包含 c + + AMP 代码通过使用 c + +、 C#、 Visual Basic 或 JavaScript 创建的：
+像其他C++库，可以使用C++a m P UWP 应用程序中的。 这些文章介绍了如何包括C++在应用中使用创建的 AMP 代码C++， C#，Visual Basic 或 JavaScript:
 
 - [在 UWP 应用中使用 C++ AMP](../../parallel/amp/using-cpp-amp-in-windows-store-apps.md)
 
-- [演练：在 c + + 中创建一个基本的 Windows 运行时组件并从 JavaScript 调用它](http://go.microsoft.com/fwlink/p/?linkid=249077)
+- [演练：创建基本 Windows 运行时组件中的C++并从 JavaScript 调用它](http://go.microsoft.com/fwlink/p/?linkid=249077)
 
-- [必应地图行程优化器中 JavaScript 和 c + + 的 Windows 应用商店应用](http://go.microsoft.com/fwlink/p/?linkid=249078)
+- [必应地图行程优化器，在 JavaScript 中的 Windows 应用商店应用和C++](http://go.microsoft.com/fwlink/p/?linkid=249078)
 
-- [如何使用 C# 中使用 Windows 运行时中的 c + + AMP](http://go.microsoft.com/fwlink/p/?linkid=249080)
+- [如何使用C++中的 AMPC#使用 Windows 运行时](http://go.microsoft.com/fwlink/p/?linkid=249080)
 
-- [如何使用 C# 中的 c + + AMP](http://go.microsoft.com/fwlink/p/?linkid=249081)
+- [如何使用C++中的 AMPC#](http://go.microsoft.com/fwlink/p/?linkid=249081)
 
 - [从托管代码调用本机函数](../../dotnet/calling-native-functions-from-managed-code.md)
 
 ## <a name="c-amp-and-concurrency-visualizer"></a>C++ AMP 和并发可视化工具
 
-并发可视化工具包括用于分析的 c + + AMP 代码性能的支持。 这些文章介绍了这些功能：
+并发可视化工具包括用于分析的性能的支持C++AMP 代码。 这些文章介绍了这些功能：
 
 - [GPU 活动关系图](/visualstudio/profiling/gpu-activity-graph)
 
@@ -497,7 +497,7 @@ C + + AMP 包括为加速的图形编程设计的图形库。 仅在支持本地
 
 - [通道（线程视图）](/visualstudio/profiling/channels-threads-view)
 
-- [使用并发可视化工具分析 c + + AMP 代码](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/03/09/analyzing-c-amp-code-with-the-concurrency-visualizer/)
+- [分析C++使用并发可视化工具的 AMP 代码](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/03/09/analyzing-c-amp-code-with-the-concurrency-visualizer/)
 
 ## <a name="performance-recommendations"></a>性能建议
 

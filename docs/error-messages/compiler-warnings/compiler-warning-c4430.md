@@ -7,17 +7,17 @@ helpviewer_keywords:
 - C4430
 ms.assetid: 12efbfff-aa58-4a86-a7d6-2c6a12d01dd3
 ms.openlocfilehash: 1d58efd57433a065f08e4111302f358405e3b9ab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50639863"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62311431"
 ---
 # <a name="compiler-warning-c4430"></a>编译器警告 C4430
 
-缺少类型说明符 - 假定为 int。 注意： c + + 不支持默认 int
+缺少类型说明符 - 假定为 int。 注意:C++不支持默认 int
 
-为 Visual c + + 2005年执行的编译器一致性工作可以生成此错误： 所有声明必须显式都指定类型;不再被假定为 int。
+视觉对象执行的编译器一致性工作可以导致此错误C++2005年： 所有声明必须显式都指定类型;不再被假定为 int。
 
 C4430 始终作为错误发出。  您可以关闭此警告，其中包含`#pragma warning`或 **/wd**; 请参阅[警告](../../preprocessor/warning.md)或[/w、 /W0、 /W1、 /W2、 /W3、 / w4、 /w1、 /w2、 /w3、 /w4、 /Wall、 /wd、 / /we、 /wo、 /Wv、 /WX （警告级别）](../../build/reference/compiler-option-warning-level.md)有关详细信息。
 

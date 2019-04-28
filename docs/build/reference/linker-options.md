@@ -10,11 +10,11 @@ helpviewer_keywords:
 - LINK tool [C++], linker options
 ms.assetid: c1d51b8a-bd23-416d-81e4-900e02b2c129
 ms.openlocfilehash: 7ff8ecd6a607aac59fca6d32fa2784e7e3e4268f
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57817344"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62301755"
 ---
 # <a name="linker-options"></a>链接器选项
 
@@ -34,7 +34,7 @@ LINK.exe 将通用对象文件格式 (COFF) 对象文件和库链接起来，以
 
 可以使用 [注释](../../preprocessor/comment-c-cpp.md) 杂注指定一些链接器选项。
 
-|选项|目标|
+|选项|用途|
 |------------|-------------|
 |[@](at-specify-a-linker-response-file.md)|指定响应文件。|
 |[/ALIGN](align-section-alignment.md)|指定每一节的对齐方式。|
@@ -137,4 +137,4 @@ LINK.exe 将通用对象文件格式 (COFF) 对象文件和库链接起来，以
 ## <a name="see-also"></a>请参阅
 
 [C/C++ 生成参考](c-cpp-building-reference.md)<br/>
-[MSVC 链接器引用](linking.md)
+[MSVC 链接器参考](linking.md)

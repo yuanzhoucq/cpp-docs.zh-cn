@@ -7,11 +7,11 @@ helpviewer_keywords:
 - run-time object model services macros
 ms.assetid: 4a3e79df-2ee3-43a4-8193-20298828de85
 ms.openlocfilehash: 59f5be1d8bb38295b50732583fea47924160cecf
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58565887"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62310027"
 ---
 # <a name="run-time-object-model-services"></a>运行时对象模型服务
 
@@ -217,7 +217,7 @@ DECLARE_PROPPAGEIDS( class_name )
 
 ##  <a name="declare_serial"></a>  DECLARE_SERIAL
 
-生成所需的 c + + 标头代码`CObject`-派生可序列化的类。
+生成C++所需的标头代码`CObject`-派生可序列化的类。
 
 ```
 DECLARE_SERIAL(class_name)
@@ -254,7 +254,7 @@ DECLARE_SERIAL 宏的详细信息，请参阅[CObject 类主题](../../mfc/using
 
 ##  <a name="implement_dynamic"></a>  IMPLEMENT_DYNAMIC
 
-生成为动态所必需的 c + + 代码`CObject`-派生的类名称和位置在层次结构中的类的运行时访问。
+生成C++为动态所需的代码`CObject`-派生的类名称和位置在层次结构中的类的运行时访问。
 
 ```
 IMPLEMENT_DYNAMIC(class_name, base_class_name)
@@ -399,7 +399,7 @@ DECLARE_OLECTLTYPE( class_name, idsUserTypeName, dwOleMisc )
 
 ##  <a name="implement_serial"></a>  IMPLEMENT_SERIAL
 
-生成为动态所必需的 c + + 代码`CObject`-派生的类名称和位置在层次结构中的类的运行时访问。
+生成C++为动态所需的代码`CObject`-派生的类名称和位置在层次结构中的类的运行时访问。
 
 ```
 IMPLEMENT_SERIAL(class_name, base_class_name, wSchema)
@@ -436,7 +436,7 @@ IMPLEMENT_SERIAL(class_name, base_class_name, wSchema)
 
 ##  <a name="runtime_class"></a>  RUNTIME_CLASS
 
-获取运行时类结构从 c + + 类的名称。
+获取运行时类结构的名称从C++类。
 
 ```
 RUNTIME_CLASS(class_name)

@@ -28,11 +28,11 @@ helpviewer_keywords:
 - roundf function
 ms.assetid: 6be90877-193c-4b80-a32b-c3eca33f9c6f
 ms.openlocfilehash: 126c6bace2b79123094a7f8bcc8f3d3378391d96
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50591761"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62357442"
 ---
 # <a name="round-roundf-roundl"></a>round、roundf、roundl
 
@@ -69,11 +69,11 @@ long double roundl(
 
 |输入|SEH 异常|Matherr 异常|
 |-----------|-------------------|-----------------------|
-|为**QNAN**， **IND**|无|**（_D)**|
+|为**QNAN**， **IND**|无|**_DOMAIN**|
 
 ## <a name="remarks"></a>备注
 
-由于 c + + 允许重载，可以调用的重载**舍入**采用并返回**float**并**长** **double**值。 在 C 程序中，**舍入**始终采用并返回**double**。
+因为C++允许重载，可以调用的重载**舍入**采用并返回**float**并**长** **double**值。 在 C 程序中，**舍入**始终采用并返回**double**。
 
 ## <a name="requirements"></a>要求
 

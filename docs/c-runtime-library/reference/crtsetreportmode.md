@@ -23,11 +23,11 @@ helpviewer_keywords:
 - CrtSetReportMode function
 ms.assetid: 3ecc6a12-afdd-4242-b046-8187ff6d4b36
 ms.openlocfilehash: 2096d39a8ba316fc76c97517a16e34231940e7f4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50595528"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62335290"
 ---
 # <a name="crtsetreportmode"></a>_CrtSetReportMode
 
@@ -83,7 +83,7 @@ int _CrtSetReportMode(
 |**_CRTDBG_MODE_DEBUG**|将消息写入调试器的输出窗口。|
 |**_CRTDBG_MODE_FILE**|将消息写入用户提供的文件句柄。 应调用 [_CrtSetReportFile](crtsetreportfile.md) 来定义要用作目标的特定文件或流。|
 |**_CRTDBG_MODE_WNDW**|创建一个消息框显示消息以及[中止](abort.md)，**重试**，并**忽略**按钮。|
-|**_CRTDBG_REPORT_MODE**|返回*reportMode*指定*reportType*:<br /><br /> 1 **_CRTDBG_MODE_FILE**<br /><br /> 2 **_CRTDBG_MODE_DEBUG**<br /><br /> 4 **_CRTDBG_MODE_WNDW**|
+|**_CRTDBG_REPORT_MODE**|返回*reportMode*指定*reportType*:<br /><br /> 1   **_CRTDBG_MODE_FILE**<br /><br /> 2   **_CRTDBG_MODE_DEBUG**<br /><br /> 4   **_CRTDBG_MODE_WNDW**|
 
 可以使用一种、两种或三种模式，或不使用任何模式报告每种报告类型。 因此，可以为单个报告类型定义多个目标。 例如，下面的代码段导致将断言失败发送到这两个调试消息窗口和**stderr**:
 
@@ -102,7 +102,7 @@ _CrtSetReportFile( _CRT_ASSERT, _CRTDBG_FILE_STDERR );
 
 有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 
-**库：** 仅限 [CRT 库功能](../../c-runtime-library/crt-library-features.md)的调试版本。
+**库：** 调试版本[CRT 库功能](../../c-runtime-library/crt-library-features.md)仅。
 
 ## <a name="see-also"></a>请参阅
 

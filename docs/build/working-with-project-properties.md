@@ -1,6 +1,6 @@
 ---
-title: 设置 c + + 编译器和生成 Visual Studio 中的属性
-description: 使用 Visual Studio IDE 更改 c + + 编译器和链接器选项和其他生成设置。
+title: 设置C++在 Visual Studio 中的编译器和生成属性
+description: 使用 Visual Studio IDE 来更改C++编译器和链接器选项和其他生成设置。
 ms.date: 03/27/2019
 helpviewer_keywords:
 - project properties [C++], modifying
@@ -9,11 +9,11 @@ helpviewer_keywords:
 - projects [C++], properties
 ms.assetid: 9b0d6f8b-7d4e-4e61-aa75-7d14944816cd
 ms.openlocfilehash: ab5456bfc8a1b8305813f4ee4a4399091de15aee
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58564903"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62314045"
 ---
 # <a name="set-compiler-and-build-properties"></a>设置编译器和生成属性
 
@@ -48,14 +48,14 @@ ms.locfileid: "58564903"
 
 - [C++ 调试配置的项目设置](/visualstudio/debugger/project-settings-for-a-cpp-debug-configuration)
 - [调试器设置和准备](/visualstudio/debugger/debugger-settings-and-preparation)
-- [调试准备：Visual c + + 项目类型](/visualstudio/debugger/debugging-preparation-visual-cpp-project-types)
+- [调试准备：VisualC++项目类型](/visualstudio/debugger/debugging-preparation-visual-cpp-project-types)
 - [在 Visual Studio 调试器中指定符号 (.pdb) 和源文件](/visualstudio/debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger)
 
-## <a name="c-compiler-and-linker-options"></a>C + + 编译器和链接器选项
+## <a name="c-compiler-and-linker-options"></a>C++编译器和链接器选项
 
-C + + 编译器和链接器选项位于**C/c + +** 并**链接器**下的左窗格中的节点**配置属性**。 将上述内容转换直接向将传递给编译器的命令行选项。 若要阅读有关特定选项的文档，该选项中选择中心窗格中，按**F1**。 或者，您可以浏览所有选项的文档[MSVC 编译器选项](reference/compiler-options.md)并[MSVC 链接器选项](reference/linker-options.md)。 
+C++编译器和链接器选项位于**C /C++** 并**链接器**下的左窗格中的节点**配置属性**。 将上述内容转换直接向将传递给编译器的命令行选项。 若要阅读有关特定选项的文档，该选项中选择中心窗格中，按**F1**。 或者，您可以浏览所有选项的文档[MSVC 编译器选项](reference/compiler-options.md)并[MSVC 链接器选项](reference/linker-options.md)。 
 
-**属性页**对话框将显示与当前项目相关的属性页。 例如，如果该项目没有 .idl 文件则不会显示 MIDL 属性页。 在每个属性页上设置的详细信息，请参阅[属性页 （c + +）](reference/property-pages-visual-cpp.md)。 
+**属性页**对话框将显示与当前项目相关的属性页。 例如，如果该项目没有 .idl 文件则不会显示 MIDL 属性页。 在每个属性页上设置的详细信息，请参阅[属性页 (C++)](reference/property-pages-visual-cpp.md)。 
 
 ## <a name="directory-and-path-values"></a>目录和路径值
 

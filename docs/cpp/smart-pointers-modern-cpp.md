@@ -4,11 +4,11 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 909ef870-904c-49b6-b8cd-e9d0b7dc9435
 ms.openlocfilehash: c976f9ec72929f2c8ff91fb9f9594d91c7457365
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220655"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62331020"
 ---
 # <a name="smart-pointers-modern-c"></a>智能指针（现代 C++）
 
@@ -49,7 +49,7 @@ C++ 智能指针思路类似于在语言（如 C#）中创建对象的过程：�
 
 1. 允许智能指针删除对象。
 
-智能指针的设计原则是在内存和性能上尽可能高效。 例如，`unique_ptr` 中的唯一数据成员是封装的指针。 这意味着，`unique_ptr` 与该指针的大小完全相同，不是四个字节就是八个字节。 使用重载了 * 和 -> 运算符的智能指针访问封装指针的速度不会明显慢于直接访问原始指针的速度。
+智能指针的设计原则是在内存和性能上尽可能高效。 例如，`unique_ptr` 中的唯一数据成员是封装的指针。 这意味着，`unique_ptr` 与该指针的大小完全相同，不是四个字节就是八个字节。 使用重载的智能指针访问封装的指针 * 和-> 运算符不是明显慢于直接访问原始指针。
 
 智能指针具有通过使用“点”表示法访问的成员函数。 例如，某些 C++ 标准库智能指针具有释放指针的所有权的重置成员函数。 如果你想要在智能指针超出范围之前释放其内存将很有用，这会很有用，如以下示例所示：
 
@@ -68,23 +68,23 @@ C++ 智能指针思路类似于在语言（如 C#）中创建对象的过程：�
 使用这些智能指针作为将指针封装为纯旧 C++ 对象 (POCO) 的首选项。
 
 - `unique_ptr`<br/>
-   只允许基础指针的一个所有者。 除非你确信需要 `shared_ptr`，否则请将该指针用作 POCO 的默认选项。 可以移到新所有者，但不会复制或共享。  替换已弃用的 `auto_ptr`。 与 `boost::scoped_ptr` 比较。 `unique_ptr` 小巧高效;大小为一个指针且支持 rvalue 引用，实现快速插入和 C++ 标准库集合的检索。 头文件：`<memory>`。 有关更多信息，请参见[如何：创建和使用 unique_ptr 实例](../cpp/how-to-create-and-use-unique-ptr-instances.md)并[unique_ptr 类](../standard-library/unique-ptr-class.md)。
+   只允许基础指针的一个所有者。 除非你确信需要 `shared_ptr`，否则请将该指针用作 POCO 的默认选项。 可以移到新所有者，但不会复制或共享。  替换已弃用的 `auto_ptr`。 与 `boost::scoped_ptr` 比较。 `unique_ptr` 小巧高效;大小为一个指针且支持 rvalue 引用，实现快速插入和 C++ 标准库集合的检索。 头文件：`<memory>`。 有关详细信息，请参阅[如何：创建和使用 unique_ptr 实例](../cpp/how-to-create-and-use-unique-ptr-instances.md)并[unique_ptr 类](../standard-library/unique-ptr-class.md)。
 
 - `shared_ptr`<br/>
-   采用引用计数的智能指针。 如果你想要将一个原始指针分配给多个所有者（例如，从容器返回了指针副本又想保留原始指针时），请使用该指针。 直至所有 `shared_ptr` 所有者超出了范围或放弃所有权，才会删除原始指针。 大小为两个指针；一个用于对象，另一个用于包含引用计数的共享控制块。 头文件：`<memory>`。 有关更多信息，请参见[如何：创建和使用 shared_ptr 实例](../cpp/how-to-create-and-use-shared-ptr-instances.md)并[shared_ptr 类](../standard-library/shared-ptr-class.md)。
+   采用引用计数的智能指针。 如果你想要将一个原始指针分配给多个所有者（例如，从容器返回了指针副本又想保留原始指针时），请使用该指针。 直至所有 `shared_ptr` 所有者超出了范围或放弃所有权，才会删除原始指针。 大小为两个指针；一个用于对象，另一个用于包含引用计数的共享控制块。 头文件：`<memory>`。 有关详细信息，请参阅[如何：创建和使用 shared_ptr 实例](../cpp/how-to-create-and-use-shared-ptr-instances.md)并[shared_ptr 类](../standard-library/shared-ptr-class.md)。
 
 - `weak_ptr`<br/>
-    结合 `shared_ptr` 使用的特例智能指针。 `weak_ptr` 提供对一个或多个 `shared_ptr` 实例拥有的对象的访问，但不参与引用计数。 如果你想要观察某个对象但不需要其保持活动状态，请使用该实例。 在某些情况下，需要断开 `shared_ptr` 实例间的循环引用。 头文件：`<memory>`。 有关更多信息，请参见[如何：创建和使用共享 weak_ptr 实例](../cpp/how-to-create-and-use-weak-ptr-instances.md)并[weak_ptr 类](../standard-library/weak-ptr-class.md)。
+    结合 `shared_ptr` 使用的特例智能指针。 `weak_ptr` 提供对一个或多个 `shared_ptr` 实例拥有的对象的访问，但不参与引用计数。 如果你想要观察某个对象但不需要其保持活动状态，请使用该实例。 在某些情况下，需要断开 `shared_ptr` 实例间的循环引用。 头文件：`<memory>`。 有关详细信息，请参阅[如何：创建和使用共享 weak_ptr 实例](../cpp/how-to-create-and-use-weak-ptr-instances.md)并[weak_ptr 类](../standard-library/weak-ptr-class.md)。
 
 ### <a name="smart-pointers-for-com-objects-classic-windows-programming"></a>COM 对象的智能指针（经典 Windows 编程）
 
 当你使用 COM 对象时，请将接口指针包装到适当的智能指针类型中。 活动模板库 (ATL) 针对各种目的定义了多种智能指针。 你还可以使用 `_com_ptr_t` 智能指针类型，编译器在从 .tlb 文件创建包装器类时会使用该类型。 无需包含 ATL 标头文件时，它是最好的选择。
 
 [CComPtr 类](../atl/reference/ccomptr-class.md)<br/>
-除非你无法使用 ATL，否则使用此类型。 使用 `AddRef` 和 `Release` 方法执行引用计数。 有关更多信息，请参见[如何：创建和使用 CComPtr 和 CComQIPtr 实例](../cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md)。
+除非你无法使用 ATL，否则使用此类型。 使用 `AddRef` 和 `Release` 方法执行引用计数。 有关详细信息，请参阅[如何：创建和使用 CComPtr 和 CComQIPtr 实例](../cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md)。
 
 [CComQIPtr 类](../atl/reference/ccomqiptr-class.md)<br/>
-类似于 `CComPtr`，但还提供了用于在 COM 对象上调用 `QueryInterface` 的简化语法。 有关更多信息，请参见[如何：创建和使用 CComPtr 和 CComQIPtr 实例](../cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md)。
+类似于 `CComPtr`，但还提供了用于在 COM 对象上调用 `QueryInterface` 的简化语法。 有关详细信息，请参阅[如何：创建和使用 CComPtr 和 CComQIPtr 实例](../cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md)。
 
 [CComHeapPtr 类](../atl/reference/ccomheapptr-class.md)<br/>
 指向使用 `CoTaskMemFree` 释放内存的对象的智能指针。

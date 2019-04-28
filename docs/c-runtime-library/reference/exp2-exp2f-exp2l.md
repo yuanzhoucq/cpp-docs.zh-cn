@@ -31,11 +31,11 @@ helpviewer_keywords:
 - exp2l function
 ms.assetid: 526e3e10-201a-4610-a886-533f44ece344
 ms.openlocfilehash: 70a3b7eb610556d4a26de7cf0aad55affcdbdc94
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562755"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62338826"
 ---
 # <a name="exp2-exp2f-exp2l"></a>exp2、exp2f、exp2l
 
@@ -77,8 +77,8 @@ long double exp2l(
 |问题|返回|
 |-----------|------------|
 |*x* = ±0|1|
-|*x* =-无穷大|+0|
-|*x* = 无穷大|+INFINITY|
+|*x* = -INFINITY|+0|
+|*x* = +INFINITY|+INFINITY|
 |*x* = NaN|NaN|
 |溢出范围错误|+ HUGE_VAL、+ HUGE_VALF，或 + HUGE_VALL|
 |下溢范围错误|正确的结果，舍入后|
@@ -87,7 +87,7 @@ long double exp2l(
 
 ## <a name="remarks"></a>备注
 
-由于 c + + 允许重载，可以调用的重载**exp2**采用并返回**float**并**长双精度型**类型。 在 C 程序中， **exp2**始终采用并返回**double**。
+因为C++允许重载，可以调用的重载**exp2**采用并返回**float**并**长双精度型**类型。 在 C 程序中， **exp2**始终采用并返回**double**。
 
 ## <a name="requirements"></a>要求
 

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2244
 ms.assetid: d9911c12-ceb5-4f93-ac47-b44a485215c2
 ms.openlocfilehash: 7cfa0cd7ff4290ca5f07fb712bbcac7dabf55f29
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50615193"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62301391"
 ---
 # <a name="compiler-error-c2244"></a>编译器错误 C2244
 
@@ -19,7 +19,7 @@ identifier： 无法匹配函数定义与现有的声明
 
 没有括号的函数调用前使用一元 + 运算符的异常用法。
 
-此错误仅出现在 c + + 项目中。
+此错误仅出现在C++项目。
 
 下面的示例生成 C2244:
 

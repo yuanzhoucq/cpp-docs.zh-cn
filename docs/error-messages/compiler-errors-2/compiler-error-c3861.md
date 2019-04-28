@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C3861
 ms.assetid: 0a1eee30-b3db-41b1-b1e5-35949c3924d7
 ms.openlocfilehash: 4ebfd3b0129e25cf543cac803a3b33fb074f3d70
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50530801"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62302405"
 ---
 # <a name="compiler-error-c3861"></a>编译器错误 C3861
 
@@ -66,7 +66,7 @@ int f() {  // declared and defined here
 
 ### <a name="namespace-qualification-required"></a>所需的 Namespace 限定
 
-C + + 标准库中的异常类需要`std`命名空间。
+中的异常类C++标准库要求`std`命名空间。
 
 ```cpp
 // C3861_b.cpp

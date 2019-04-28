@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2653
 ms.assetid: 3f49e731-affd-43a0-a8d0-181db7650bc3
 ms.openlocfilehash: d4a3a8a74483317b87e16458f44016f0aeca1379
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471144"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62350775"
 ---
 # <a name="compiler-error-c2653"></a>编译器错误 C2653
 
@@ -21,7 +21,7 @@ ms.locfileid: "50471144"
 
 使用尚未声明为类、 结构、 联合或范围运算符的前面的命名空间的名称时，可能出现此错误。 若要解决此问题，请声明名称或包括声明的名称，然后使用它的标头。
 
-C2653 也可能是如果你尝试定义*复合命名空间*，包含一个或多个作用域嵌套命名空间名称的命名空间。 复合命名空间定义中不允许使用 c + + 在 C + + 17 之前。 指定时，Visual Studio 2015 Update 3 开始支持复合的命名空间[/std: c + + 最新](../../build/reference/std-specify-language-standard-version.md)编译器选项。 从 Visual c + + 2017 版本 15.5 中，编译器支持复合命名空间定义时[/std: c + + 17](../../build/reference/std-specify-language-standard-version.md)指定选项。
+C2653 也可能是如果你尝试定义*复合命名空间*，包含一个或多个作用域嵌套命名空间名称的命名空间。 中不允许使用复合命名空间定义C++在 c++17 之前。 指定时，Visual Studio 2015 Update 3 开始支持复合的命名空间[/std: c + + 最新](../../build/reference/std-specify-language-standard-version.md)编译器选项。 视觉对象中启动C++2017年版本 15.5 中，编译器支持复合命名空间定义时[/std: c + + 17](../../build/reference/std-specify-language-standard-version.md)指定选项。
 
 ## <a name="examples"></a>示例
 

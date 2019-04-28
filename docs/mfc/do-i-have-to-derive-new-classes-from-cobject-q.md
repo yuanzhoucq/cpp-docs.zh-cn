@@ -8,11 +8,11 @@ helpviewer_keywords:
 - CObject class [MFC], when to use
 ms.assetid: 26021031-feaf-424c-80d1-9547c4409d6a
 ms.openlocfilehash: 30eb3ce5bbb72ab685ed891644a478a36026ebea
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58772301"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62352380"
 ---
 # <a name="do-i-have-to-derive-new-classes-from-cobject"></a>我是否必须从 CObject 中派生新类？
 
@@ -22,4 +22,4 @@ ms.locfileid: "58772301"
 
 ## <a name="see-also"></a>请参阅
 
-[CObject 类：方面的常见问题](../mfc/cobject-class-frequently-asked-questions.md)
+[CObject 类：常见问题解答](../mfc/cobject-class-frequently-asked-questions.md)

@@ -31,11 +31,11 @@ helpviewer_keywords:
 - casinhl function
 ms.assetid: bd18340b-21dd-4c86-a14e-e8e15dd97e3b
 ms.openlocfilehash: c274f4dcdfb16317820ce5c39918fa6135210eea
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50580744"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62340672"
 ---
 # <a name="casinh-casinhf-casinhl"></a>casinh、casinhf、casinhl
 
@@ -72,7 +72,7 @@ _Lcomplex casinhl(
 
 ## <a name="remarks"></a>备注
 
-由于 c + + 允许重载，可以调用的重载**casinh**采用并返回 **_Fcomplex**并 **_Lcomplex**值。 在 C 程序中， **casinh**始终采用并返回 **_Dcomplex**值。
+因为C++允许重载，可以调用的重载**casinh**采用并返回 **_Fcomplex**并 **_Lcomplex**的值。 在 C 程序中， **casinh**始终采用并返回 **_Dcomplex**值。
 
 ## <a name="requirements"></a>要求
 

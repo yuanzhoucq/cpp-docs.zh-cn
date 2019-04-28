@@ -8,17 +8,17 @@ helpviewer_keywords:
 - window objects [MFC], MFC Framework
 ms.assetid: dd92bf34-842e-40fe-8aea-3028b55314d5
 ms.openlocfilehash: ee5e6fef58b9ddfa2172b9024d414bdb03e93283
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57326655"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62337994"
 ---
 # <a name="windows"></a>Windows
 
 本系列文章介绍 MFC 框架中的窗口对象。 所有 MFC 窗口都派生自类[CWnd](../mfc/reference/cwnd-class.md)，包括框架窗口、 视图、 对话框和控件。
 
-第一系列文章介绍了[窗口对象](../mfc/window-objects.md)一般情况下。 为此组以 c + + 窗口对象的常规信息，请参阅它们将封装`HWND`，并创建你自己的窗口，如子窗口时的使用方式。
+第一系列文章介绍了[窗口对象](../mfc/window-objects.md)一般情况下。 有关引用此组的一般信息C++窗口对象，它们将封装`HWND`，并创建你自己的窗口，如子窗口时的使用方式。
 
 第二个系列文章介绍了[框架窗口](../mfc/frame-windows.md)— 将周围内容框架的 windows — 特别是。 请参阅 MFC 框架如何管理框架窗口和框架，包括控件条和视图的内容了解此组。
 
@@ -28,7 +28,7 @@ ms.locfileid: "57326655"
 
 - [窗口对象](../mfc/window-objects.md)
 
-- [C + + 之间的关系处理窗口对象和 HWND](../mfc/relationship-between-a-cpp-window-object-and-an-hwnd.md)
+- [之间的关系C++窗口对象和 HWND 处理](../mfc/relationship-between-a-cpp-window-object-and-an-hwnd.md)
 
 - [派生的窗口类](../mfc/derived-window-classes.md)
 

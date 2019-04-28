@@ -26,11 +26,11 @@ helpviewer_keywords:
 - fpieee_flt function
 ms.assetid: 2bc4801e-0eed-4e73-b518-215da8cc9740
 ms.openlocfilehash: 9a49ec403b1cb95407b0a366accf1d9374d9cb22
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50458612"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62333243"
 ---
 # <a name="fpieeeflt"></a>_fpieee_flt
 
@@ -54,7 +54,7 @@ int _fpieee_flt(
 *excInfo*<br/>
 指向 Windows NT 异常信息结构的指针。
 
-*处理程序*<br/>
+*handler*<br/>
 指向用户的 IEEE 陷阱处理程序例程的指针。
 
 ## <a name="return-value"></a>返回值
@@ -70,7 +70,7 @@ int _fpieee_flt(
 |_FPIEEE_RECORD 字段|描述|
 |----------------------------|-----------------|
 |**RoundingMode**<br/>**精度**|这些**无符号** **int**字段包含浮点环境信息时出现异常。|
-|**操作**|这**无符号** **int**字段指示导致陷阱的操作的类型。 如果类型是一个比较 (**_FpCodeCompare**)，您可以提供一个特殊 **_FPIEEE_COMPARE_RESULT**中的值 （如 Fpieee.h 中定义） **Result.Value**字段。 转换类型 (**_FpCodeConvert**) 指示浮点转换操作期间出现了陷阱。 您可以查看**Operand1**并**结果**类型以确定要尝试的转换类型。|
+|**Operation**|这**无符号** **int**字段指示导致陷阱的操作的类型。 如果类型是一个比较 (**_FpCodeCompare**)，您可以提供一个特殊 **_FPIEEE_COMPARE_RESULT**中的值 （如 Fpieee.h 中定义） **Result.Value**字段。 转换类型 (**_FpCodeConvert**) 指示浮点转换操作期间出现了陷阱。 您可以查看**Operand1**并**结果**类型以确定要尝试的转换类型。|
 |**Operand1**<br/>**Operand2**<br/>**结果**|这些 **_FPIEEE_VALUE**结构指示的类型和建议的结果和操作数的值。 每个结构包含以下字段：<br /><br /> **OperandValid** -标志，指示响应值是否有效。<br />**格式**的相应值的数据类型。 可返回格式类型，即使相应的值无效。<br />**值**-结果或操作数的数据值。|
 |**原因**<br/>**Enable**<br/>**状态**|**_Fpieee_exception_flags 为**包含每种类型的浮动点异常的一个 1 位字段。 这些字段和用于屏蔽提供给 [_controlfp](control87-controlfp-control87-2.md) 的异常的自变量之间存在对应关系。 每个位的确切含义取决于上下文：<br /><br /> **原因**-每个设置位指示已引发的特定异常。<br />**启用**-每个设置位指示特定异常当前未屏蔽。<br />**状态**-每个设置位指示特定异常当前处于挂起状态。 这包括由于它们通过屏蔽而未引发的异常 **_controlfp**。|
 

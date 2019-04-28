@@ -31,11 +31,11 @@ helpviewer_keywords:
 - csqrtl function
 ms.assetid: b65f086b-0f55-4622-a7a3-4e79d9c9c05c
 ms.openlocfilehash: 00fe12d4f9c136278e56ceaf3fa62443092d0ec4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50449876"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62288831"
 ---
 # <a name="csqrt-csqrtf-csqrtl"></a>csqrt、csqrtf、csqrtl
 
@@ -77,13 +77,13 @@ _Lcomplex csqrtl(
 
 ## <a name="remarks"></a>备注
 
-由于 c + + 允许重载，可以调用的重载**csqrt**采用并返回 **_Fcomplex**并 **_Lcomplex**值。 在 C 程序中， **csqrt**始终采用并返回 **_Dcomplex**值。
+因为C++允许重载，可以调用的重载**csqrt**采用并返回 **_Fcomplex**并 **_Lcomplex**的值。 在 C 程序中， **csqrt**始终采用并返回 **_Dcomplex**值。
 
 ## <a name="requirements"></a>要求
 
 |例程所返回的值|C 标头|C++ 标头|
 |-------------|--------------|------------------|
-|**csqrt**， **csqrtf**， **csqrtl**|\<complex.h>|\<ccomplex>|
+|**csqrt**,               **csqrtf**, **csqrtl**|\<complex.h>|\<ccomplex>|
 
 有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 

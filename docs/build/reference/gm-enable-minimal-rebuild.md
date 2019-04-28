@@ -14,11 +14,11 @@ helpviewer_keywords:
 - -Gm compiler option [C++]
 ms.assetid: d8869ce0-d2ea-40eb-8dae-6d2cdb61dd59
 ms.openlocfilehash: 4a66dda37b84119a4b8bc23f7fc719d50e8786f9
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57808204"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62292056"
 ---
 # <a name="gm-enable-minimal-rebuild"></a>/Gm（启用最小重新生成）
 
@@ -43,9 +43,9 @@ ms.locfileid: "57808204"
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[Visual Studio 中的设置 c + + 编译器和生成属性](../working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
 
-1. 选择**配置属性** > **C/c + +** > **代码生成**属性页。
+1. 选择**配置属性** > **C /C++** > **代码生成**属性页。
 
 1. 修改**启用最小重新生成**属性。
 

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Windows messages [MFC], routing
 ms.assetid: b5952c8b-123e-406c-a36d-a6ac7c6df307
 ms.openlocfilehash: ce8aa2013c8f2f351ca1028f0d6103135ba5ecd8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57294390"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62306176"
 ---
 # <a name="tn021-command-and-message-routing"></a>TN021:命令和消息路由
 
@@ -22,7 +22,7 @@ ms.locfileid: "57294390"
 
 此说明描述命令路由和调度体系结构以及常规窗口消息路由中的高级的主题。
 
-请参阅 Visual c + + 作介绍，在体系结构上的常规详细信息尤其是 Windows 消息、 控件通知和命令之间的区别。 本说明假定您非常熟悉打印文档中所述的问题，以及仅处理非常高级的主题。
+视觉对象，请参阅C++常规详细信息在本文所述的体系结构上尤其是 Windows 消息、 控件通知和命令之间的区别。 本说明假定您非常熟悉打印文档中所述的问题，以及仅处理非常高级的主题。
 
 ## <a name="command-routing-and-dispatch-mfc-10-functionality-evolves-to-mfc-20-architecture"></a>命令路由和调度 MFC 1.0 功能发展到 MFC 2.0 体系结构
 
@@ -38,7 +38,7 @@ MFC 1.0 使用的有限的意义上实现的多文档界面 (MDI) 中的命令�
 
 ## <a name="command-ids"></a>命令 ID
 
-命令路由和绑定过程的说明，请参阅 Visual c + +。 [技术说明 20](../mfc/tn020-id-naming-and-numbering-conventions.md)包含 ID 命名的信息。
+请参阅 VisualC++命令路由和绑定过程的说明。 [技术说明 20](../mfc/tn020-id-naming-and-numbering-conventions.md)包含 ID 命名的信息。
 
 我们使用的命令 Id 的通用前缀"ID_"。 命令 Id 是 > = 0x8000。 消息行或状态栏将显示命令说明字符串是否存在具有相同的命令 id。 Id 的 STRINGTABLE 资源
 
@@ -80,7 +80,7 @@ MFC 1.0 使用的有限的意义上实现的多文档界面 (MDI) 中的命令�
 
 `CFrameWnd` 此外可以处理 WM_ENTERIDLE 消息来描述当前所选菜单项 （也称为消息行） 的状态栏上。
 
-应用程序的菜单结构，编辑由 Visual c + +，用于表示在 WM_INITMENUPOPUP 时可用的潜在命令。 ON_UPDATE_COMMAND_UI 处理程序可以修改的状态或文本的菜单中，或有关 （如文件 MRU 列表或 OLE 谓词弹出菜单） 的高级用法，实际修改菜单结构在绘制菜单之前。
+应用程序的菜单结构，编辑视觉对象C++，用于表示在 WM_INITMENUPOPUP 时可用的潜在命令。 ON_UPDATE_COMMAND_UI 处理程序可以修改的状态或文本的菜单中，或有关 （如文件 MRU 列表或 OLE 谓词弹出菜单） 的高级用法，实际修改菜单结构在绘制菜单之前。
 
 工具栏 （以及其他控件栏） 进行 ON_UPDATE_COMMAND_UI 处理相同排序应用程序时进入其空闲循环。 请参阅*类库参考*并[技术说明 31](../mfc/tn031-control-bars.md)的控件条的详细信息。
 
@@ -153,7 +153,7 @@ void CMyApp::OnUpdateNewChart(CCmdUI* pCmdUI)
 
 ## <a name="cwnd-issues"></a>CWnd 问题
 
-实现成员函数**CWnd::OnChildNotify**提供子窗口 （也称为控件），以挂钩或否则通知消息、 命令和控件的一个功能强大且可扩展的体系结构请转到其父 （或"所有者"） 的通知。 如果子窗口 （/ 控件） 是 c + + **CWnd**对象本身，虚函数**OnChildNotify**首次使用的参数调用原始消息中 (即， **MSG**结构)。 子窗口可以保留不动，消息、 吃掉它，或父级 （极少见的） 修改消息。
+实现成员函数**CWnd::OnChildNotify**提供子窗口 （也称为控件），以挂钩或否则通知消息、 命令和控件的一个功能强大且可扩展的体系结构请转到其父 （或"所有者"） 的通知。 如果子窗口 （/ 控件） 是C++ **CWnd**对象本身，虚函数**OnChildNotify**首次使用的参数调用原始消息中 (即**消息**结构)。 子窗口可以保留不动，消息、 吃掉它，或父级 （极少见的） 修改消息。
 
 默认值**CWnd**实现处理以下消息，并使用**OnChildNotify**挂钩允许子窗口 （控件） 到第一次访问的消息：
 

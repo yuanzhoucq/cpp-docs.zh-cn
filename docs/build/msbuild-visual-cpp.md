@@ -1,5 +1,5 @@
 ---
-title: 在命令行-c + + 的 MSBuild
+title: 在命令行中的 MSBuildC++
 ms.date: 12/12/2018
 f1_keywords:
 - MSBuild
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - MSBuild
 ms.assetid: 7a1be7ff-0312-4669-adf2-5f5bf507d560
 ms.openlocfilehash: 565b1c47b4476fa7cb830e15b978b389f4344ee1
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57820463"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62273308"
 ---
-# <a name="msbuild-on-the-command-line---c"></a>在命令行-c + + 的 MSBuild
+# <a name="msbuild-on-the-command-line---c"></a>在命令行中的 MSBuildC++
 
 一般情况下，我们建议使用 Visual Studio 设置项目属性以及调用 MSBuild 系统。 但是，可以使用**MSBuild**直接从命令提示符工具。 您可以创建和编辑的项目文件 (.vcxproj) 中的信息由控制生成过程。 项目文件指定生成选项基于生成阶段、 条件和事件。 此外，可以指定零或多个命令行*选项*参数。
 
@@ -47,13 +47,13 @@ ms.locfileid: "57820463"
 
 - [命令行参考](/visualstudio/msbuild/msbuild-command-line-reference)介绍的命令行参数和可用于 msbuild.exe 的选项。
 
-- [任务参考](/visualstudio/msbuild/msbuild-task-reference)介绍 MSBuild 任务。 尤其注意这些任务，特定于 Visual c + +:[BscMake 任务](/visualstudio/msbuild/bscmake-task)， [CL 任务](/visualstudio/msbuild/cl-task)， [CPPClean 任务](/visualstudio/msbuild/cppclean-task)， [LIB 任务](/visualstudio/msbuild/lib-task)，[链接任务](/visualstudio/msbuild/link-task)， [MIDL 任务](/visualstudio/msbuild/midl-task)， [MT 任务](/visualstudio/msbuild/mt-task)， [RC 任务](/visualstudio/msbuild/rc-task)， [SetEnv 任务](/visualstudio/msbuild/setenv-task)， [VCMessage 任务](/visualstudio/msbuild/vcmessage-task)
+- [任务参考](/visualstudio/msbuild/msbuild-task-reference)介绍 MSBuild 任务。 尤其注意这些任务，特定于视觉对象C++:[BscMake 任务](/visualstudio/msbuild/bscmake-task)， [CL 任务](/visualstudio/msbuild/cl-task)， [CPPClean 任务](/visualstudio/msbuild/cppclean-task)， [LIB 任务](/visualstudio/msbuild/lib-task)，[链接任务](/visualstudio/msbuild/link-task)， [MIDL 任务](/visualstudio/msbuild/midl-task)， [MT 任务](/visualstudio/msbuild/mt-task)， [RC 任务](/visualstudio/msbuild/rc-task)， [SetEnv 任务](/visualstudio/msbuild/setenv-task)， [VCMessage 任务](/visualstudio/msbuild/vcmessage-task)
 
 ## <a name="in-this-section"></a>本节内容
 
 |术语|定义|
 |----------|----------------|
-|[演练：使用 MSBuild 创建 Visual C++ 项目](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)|演示如何创建 Visual c + + 项目中使用**MSBuild**。|
+|[演练：使用 MSBuild 创建 Visual C++ 项目](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)|演示如何创建视觉对象C++使用项目**MSBuild**。|
 |[如何：在 MSBuild 项目中使用生成事件](how-to-use-build-events-in-msbuild-projects.md)|演示如何指定在生成中的某个特定阶段发生的操作： 在生成开始前;之前在链接步骤开始;或在生成结束之后。|
 |[如何：向 MSBuild 项目添加自定义生成步骤](how-to-add-a-custom-build-step-to-msbuild-projects.md)|演示如何将用户定义的阶段添加到生成序列。|
 |[如何：向 MSBuild 项目添加自定义生成工具](how-to-add-custom-build-tools-to-msbuild-projects.md)|演示如何将生成工具关联与特定文件。|
@@ -62,4 +62,4 @@ ms.locfileid: "57820463"
 
 ## <a name="see-also"></a>请参阅
 
-[使用命令行中的 MSVC 工具集](building-on-the-command-line.md)
+[通过命令行使用 MSVC 工具集](building-on-the-command-line.md)

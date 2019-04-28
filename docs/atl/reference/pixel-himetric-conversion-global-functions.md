@@ -6,11 +6,11 @@ f1_keywords:
 - atlwin/ATL::AtlPixelToHiMetric
 ms.assetid: ecb1b1b2-7e9d-4fbc-a855-16252d2d794c
 ms.openlocfilehash: 43a12985f259603a9b67f22f7a7891bf847c0b0f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57272329"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62276830"
 ---
 # <a name="pixelhimetric-conversion-global-functions"></a>像素/HIMETRIC 转换全局函数
 

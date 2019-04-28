@@ -6,21 +6,21 @@ helpviewer_keywords:
 - optimization, best practices
 ms.assetid: f3433148-7255-4ca6-8a4f-7c31aac88508
 ms.openlocfilehash: edb036292b87593a3f8bb9b3f5ec5f7beb84c3a5
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57825118"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62274165"
 ---
 # <a name="optimization-best-practices"></a>优化最佳做法
 
-本文档介绍了 Visual c + + 中的优化一些最佳做法。
+本文档介绍了一些最佳做法优化视觉对象中C++。
 
 ## <a name="compiler-and-linker-options"></a>编译器和链接器选项
 
 ### <a name="profile-guided-optimization"></a>按配置优化
 
-Visual c + + 支持*的按配置优化*(PGO)。 这种优化使用中的应用程序的受检测版本培训执行的配置文件数据来驱动更高版本的应用程序的优化。 使用 PGO 会耗费大量时间，因此它可能不是指每个开发人员使用，但我们建议为最终发布版本的产品使用 PGO。 有关详细信息，请参阅[按配置文件优化](profile-guided-optimizations.md)。
+VisualC++支持*的按配置优化*(PGO)。 这种优化使用中的应用程序的受检测版本培训执行的配置文件数据来驱动更高版本的应用程序的优化。 使用 PGO 会耗费大量时间，因此它可能不是指每个开发人员使用，但我们建议为最终发布版本的产品使用 PGO。 有关详细信息，请参阅[按配置文件优化](profile-guided-optimizations.md)。
 
 此外，*全程序优化*（也称作链接时间代码生成） 和 **/o1**并 **/o2**改进了优化。 一般情况下，使用以下选项之一编译的应用程序将使用早期的编译器编译的相同应用程序更快。
 
@@ -93,13 +93,13 @@ int myFunc() {...}
 
 ## <a name="restrict-and-assume"></a>__restrict 和\__assume
 
-有几个可以帮助提高性能的 Visual c + + 中的关键字： [__restrict](../cpp/extension-restrict.md)并[__assume](../intrinsics/assume.md)。
+有几个视觉对象中的关键字C++，可以帮助提高性能： [__restrict](../cpp/extension-restrict.md)并[__assume](../intrinsics/assume.md)。
 
 首先，应注意的是，`__restrict`和`__declspec(restrict)`是两个不同的事物。 尽管它们在某种程度上相关，其语义会不同。 `__restrict` 是类型限定符，如`const`或`volatile`，但专用于指针类型。
 
 使用修改的指针`__restrict`被称为 *__restrict 指针*。 __Restrict 指针是一个指针，它只能通过访问\__restrict 指针。 换而言之，另一个指针不能用于访问指向的数据\__restrict 指针。
 
-`__restrict` 可以是功能强大的工具的 Visual c + + 优化器，但谨慎使用。 如果使用不当，则优化器可能会执行将会破坏您的应用程序的优化。
+`__restrict` 视觉对象可以是一个强大的工具C++优化器，但谨慎使用。 如果使用不当，则优化器可能会执行将会破坏您的应用程序的优化。
 
 `__restrict`关键字将替换 **/Oa**从以前的版本切换。
 
@@ -107,7 +107,7 @@ int myFunc() {...}
 
 例如`__assume(a < 5);`告知优化器在该行代码变量的`a`小于 5。 同样，这是对编译器的一个承诺。 如果`a`为实际 6 此时在程序中的，则程序编译器经过优化后的行为可能不为所期望的内容。 `__assume` 是 switch 语句和/或条件表达式之前最有用。
 
-有一些限制`__assume`。 首先，如`__restrict`，它仅仅是一个建议，因此编译器可以自由地将其忽略。 此外，`__assume`目前仅适用于针对常量变量不相等。 它并不传播不相等符号，例如，assume(a<b)。
+有一些限制`__assume`。 首先，如`__restrict`，它仅仅是一个建议，因此编译器可以自由地将其忽略。 此外，`__assume`目前仅适用于针对常量变量不相等。 它不会传播不相等符号，例如，assume(a < b)。
 
 ## <a name="intrinsic-support"></a>内部函数支持
 
@@ -117,7 +117,7 @@ int myFunc() {...}
 
 - 你的代码是可移植性。 几个内部函数是在多个 CPU 体系结构上可用。
 
-- 你的代码是易于阅读，因为仍在 C/c + + 中编写代码。
+- 你的代码是易于阅读，因为代码仍用 C 编写 /C++。
 
 - 在代码中受益的编译器优化。 因为编译器做得更好，提高了内部函数的代码生成。
 

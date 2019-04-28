@@ -23,11 +23,11 @@ helpviewer_keywords:
 - _cwait function
 ms.assetid: d9b596b5-45f4-4e03-9896-3f383cb922b8
 ms.openlocfilehash: f7a49497ac71ec15261e1215bd2bbed2e49f42ab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50489617"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62288779"
 ---
 # <a name="cwait"></a>_cwait
 
@@ -55,7 +55,7 @@ intptr_t _cwait(
 要等待的进程的句柄 (即之前, 必须终止的进程 **_cwait**可以返回)。
 
 *action*<br/>
-NULL： 忽略由 Windows 操作系统应用程序;对于其他应用程序： 若要执行的操作代码*procHandle*。
+NULL Windows 操作系统应用程序; 被忽略对于其他应用程序： 若要执行的操作代码*procHandle*。
 
 ## <a name="return-value"></a>返回值
 

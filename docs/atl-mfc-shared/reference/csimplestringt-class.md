@@ -37,11 +37,11 @@ helpviewer_keywords:
 - CSimpleStringT class
 ms.assetid: 15814fcb-5b8f-4425-a97e-3b61fc9b48d8
 ms.openlocfilehash: 1ec28ed5b2f5428cabcf7570c7ac53904e9a64f0
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57748224"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62252627"
 ---
 # <a name="csimplestringt-class"></a>CSimpleStringT 类
 
@@ -121,7 +121,7 @@ class CSimpleStringT
 
 ### <a name="remarks"></a>备注
 
-`CSimpleStringT` 是由 Visual c + + 支持的各种字符串类的基类。 它提供对基本缓冲区操作的字符串对象的内存管理的最小支持。 对于更高级的字符串对象，请参阅[CStringT 类](../../atl-mfc-shared/reference/cstringt-class.md)。
+`CSimpleStringT` 是视觉对象支持的各种字符串类的基类C++。 它提供对基本缓冲区操作的字符串对象的内存管理的最小支持。 对于更高级的字符串对象，请参阅[CStringT 类](../../atl-mfc-shared/reference/cstringt-class.md)。
 
 ### <a name="requirements"></a>要求
 

@@ -21,11 +21,11 @@ helpviewer_keywords:
 - diagnostic functions and variables [MFC]
 ms.assetid: 8d78454f-9fae-49c2-88c9-d3fabd5393e8
 ms.openlocfilehash: a4979ab7bbc0e396de5629fba1b86f3bfb602dcf
-ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55850435"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62322717"
 ---
 # <a name="diagnostic-services"></a>诊断服务
 
@@ -416,7 +416,7 @@ CDumpContext  afxDump;
 
 `afxDump` 是预定义[CDumpContext](../../mfc/reference/cdumpcontext-class.md)对象，它使你能够发送`CDumpContext`给调试器输出窗口或调试终端的信息。 通常情况下，提供`afxDump`作为参数`CObject::Dump`。
 
-在 Windows NT 和所有版本的 Windows，`afxDump`调试你的应用程序时，将输出发送到输出调试窗口的 Visual c + +。
+在 Windows NT 和所有版本的 Windows，`afxDump`输出发送到输出调试窗口视觉对象的C++当你调试应用程序。
 
 仅在调试版本的 MFC 中定义此变量。 有关详细信息`afxDump`，请参阅[调试 MFC 应用程序](/visualstudio/debugger/mfc-debugging-techniques)。
 
@@ -493,7 +493,7 @@ throw COleException*
 
 如果为错误，则此函数将引发异常。 如果传递的 SCODE E_OUTOFMEMORY，该函数将引发[CMemoryException](../../mfc/reference/cmemoryexception-class.md)通过调用[AfxThrowMemoryException](exception-processing.md#afxthrowmemoryexception)。 否则，函数将引发[COleException](../../mfc/reference/coleexception-class.md)通过调用[AfxThrowOleException](exception-processing.md#afxthrowoleexception)。
 
-此函数可用于检查调用应用程序中的 OLE 函数返回的值。 通过在您的应用程序中使用此函数测试返回值，您可使用最少的代码正确反映错误条件。
+此函数可用于检查调用应用程序中的 OLE 函数返回的值。 通过在你的应用程序中使用此函数测试返回值，你可使用最少的代码正确反映错误条件。
 
 > [!NOTE]
 >  此函数的效果与调试生成和不调试生成的相同。
@@ -623,7 +623,7 @@ BFF928E0: WINDOWS\SYSTEM\KERNEL32.DLL! UTUnRegister + 2492 bytes
 
 例如下, 表描述上面的输出的第一行：
 
-|输出|描述|
+|Output|描述|
 |------------|-----------------|
 |`00427D55:`|最后一个函数调用的返回地址。|
 |`DUMP2\DEBUG\DUMP2.EXE!`|包含函数调用的模块的完整路径名称。|

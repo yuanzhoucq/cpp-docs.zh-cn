@@ -8,11 +8,11 @@ helpviewer_keywords:
 - expression evaluation, about expression evaluation
 ms.assetid: 4a792154-533b-48b9-8709-31bfc170f0a7
 ms.openlocfilehash: d2ce510478bcf1574429c85f704552e6b73100ea
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175773"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62331192"
 ---
 # <a name="semantics-of-expressions"></a>表达式的语义
 
@@ -52,7 +52,7 @@ int main()
 
 1. 加法 (+) 具有第二高的优先级，因此，`a` 将与 `b` 和 `c` 的乘积相加。
 
-1. 左移 (<<) 在此表达式中具有最低的优先级，但有两个匹配项。 由于左移运算符从左到右分组，因此先计算左子表达式，再计算右子表达式。
+1. 左的移 (<<) 具有最低的优先级在表达式中，但有两个匹配项。 由于左移运算符从左到右分组，因此先计算左子表达式，再计算右子表达式。
 
 当使用括号为子表达式分组时，它们将更改表达式的计算优先级和顺序，如下图所示。
 
@@ -69,10 +69,10 @@ int main()
 
 |应为类型|允许的类型|
 |-------------------|-------------------|
-|*type*|`const` *类型*<br /> `volatile` *类型*<br /> *type*&<br /> `const` *类型*&<br /> `volatile` *类型*&<br /> `volatile const` *类型*<br /> `volatile const` *类型*&|
-|*类型* \*|*类型* \*<br /> `const` *类型* \*<br /> `volatile` *类型* \*<br /> `volatile const` *类型* \*|
-|`const` *类型*|*type*<br /> `const` *类型*<br />`const` *类型*&|
-|`volatile` *类型*|*type*<br /> `volatile` *类型*<br /> `volatile` *类型*&|
+|*type*|`const` *type*<br /> `volatile` *type*<br /> *type*&<br /> `const` *type*&<br /> `volatile` *type*&<br /> `volatile const` *type*<br /> `volatile const` *type*&|
+|*type* \*|*type* \*<br /> `const` *type* \*<br /> `volatile` *type* \*<br /> `volatile const` *type* \*|
+|`const` *type*|*type*<br /> `const` *type*<br />`const` *type*&|
+|`volatile` *type*|*type*<br /> `volatile` *type*<br /> `volatile` *type*&|
 
 由于上述规则始终可以组合使用，因此，可以在指针所需的位置提供指向可变对象的 const 指针。
 
@@ -94,13 +94,13 @@ C++ 语言不保证计算函数调用的参数的顺序。 因此，在前面的
 
 C++ 语言定义当前未指定序列点。 Microsoft C++ 对涉及 C 运算符但不涉及重载运算符的任何表达式使用与 ANSI C 相同的序列点。 当重载运算符时，语义从运算符排序更改为函数调用排序。 Microsoft C++ 使用以下序列点：
 
-- 逻辑“与”运算符 (&&) 的左操作数。 完全计算逻辑“与”运算符的左操作数，并在继续之前完成所有副作用。 不保证一定会计算逻辑“与”运算符的右操作数。
+- 左操作数的逻辑 AND 运算符 (& &)。 完全计算逻辑“与”运算符的左操作数，并在继续之前完成所有副作用。 不保证一定会计算逻辑“与”运算符的右操作数。
 
 - 逻辑 OR 运算符的左操作数 (&#124;&#124;)。 完全计算逻辑“或”运算符的左操作数，并在继续之前完成所有副作用。 不保证一定会计算逻辑“或”运算符的右操作数。
 
 - 逗号运算符的左操作数。 完全计算逗号运算符的左操作数，并在继续之前完成所有副作用。 始终计算逗号运算符的两个操作数。
 
-- 函数调用运算符。 计算函数调用表达式以及函数的所有自变量（包括默认自变量），并在进入函数之前完成所有副作用。 在参数或函数调用表达式之间没有指定的计算顺序。
+- 函数调用运算符。 计算函数调用表达式以及函数的所有自变量（包括默认自变量），并在进入函数之前完成所有副作用。 在自变量或函数调用表达式之间没有指定的计算顺序。
 
 - 条件运算符的第一个操作数。 完全计算条件运算符的第一个操作数，并在继续之前完成所有副作用。
 

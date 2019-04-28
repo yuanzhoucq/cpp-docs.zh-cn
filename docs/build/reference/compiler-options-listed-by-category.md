@@ -5,11 +5,11 @@ helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
 ms.openlocfilehash: d3ebfbc3661ba648c2fdb73c697db42735faf422
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816329"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62294156"
 ---
 # <a name="compiler-options-listed-by-category"></a>按类别列出的编译器选项
 
@@ -17,7 +17,7 @@ ms.locfileid: "57816329"
 
 ## <a name="optimization"></a>优化
 
-|选项|目标|
+|选项|用途|
 |------------|-------------|
 |[/O1](o1-o2-minimize-size-maximize-speed.md)|创建小代码。|
 |[/O2](o1-o2-minimize-size-maximize-speed.md)|创建快速代码。|
@@ -33,7 +33,7 @@ ms.locfileid: "57816329"
 
 ## <a name="code-generation"></a>代码生成
 
-|选项|目标|
+|选项|用途|
 |------------|-------------|
 |[/arch](arch-x86.md)|使用 SSE 或 SSE2 指令生成代码。 (仅限 x86)|
 |[/clr](clr-common-language-runtime-compilation.md)|生成要在公共语言运行时上运行的输出文件。|
@@ -89,7 +89,7 @@ ms.locfileid: "57816329"
 
 ## <a name="preprocessor"></a>预处理器
 
-|选项|目标|
+|选项|用途|
 |------------|-------------|
 |[/AI](ai-specify-metadata-directories.md)|指定在解析传递到 [#using](../../preprocessor/hash-using-directive-cpp.md) 指令的文件引用时搜索的目录。|
 |[/C](c-preserve-comments-during-preprocessing.md)|在预处理期间保留注释。|
@@ -107,7 +107,7 @@ ms.locfileid: "57816329"
 
 ## <a name="language"></a>语言
 
-|选项|目标|
+|选项|用途|
 |------------|-------------|
 |[/constexpr](constexpr-control-constexpr-evaluation.md)|在编译时控制 constexpr 计算。|
 |[/openmp](openmp-enable-openmp-2-0-support.md)|在源代码中启用 [#pragma omp](../../preprocessor/omp.md) 。|
@@ -131,7 +131,7 @@ ms.locfileid: "57816329"
 
 ## <a name="linking"></a>链接
 
-|选项|目标|
+|选项|用途|
 |------------|-------------|
 |[/F](f-set-stack-size.md)|设置堆栈大小。|
 |[/LD](md-mt-ld-use-run-time-library.md)|创建动态链接库。|
@@ -145,7 +145,7 @@ ms.locfileid: "57816329"
 
 ## <a name="miscellaneous"></a>杂项
 
-|选项|目标|
+|选项|用途|
 |------------|-------------|
 |[/?](help-compiler-command-line-help.md)|列出编译器选项。|
 |[@](at-specify-a-compiler-response-file.md)|指定响应文件。|
@@ -159,7 +159,7 @@ ms.locfileid: "57816329"
 |[/H](h-restrict-length-of-external-names.md)|已否决。 限制外部（公共）名称的长度。|
 |[/HELP](help-compiler-command-line-help.md)|列出编译器选项。|
 |[/J](j-default-char-type-is-unsigned.md)|更改默认的 `char` 类型。|
-|[/JMC](jmc.md)|支持本机 c + + ' 仅我的代码进行调试。|
+|[/JMC](jmc.md)|支持本机C++仅我的代码调试。|
 |[/kernel](kernel-create-kernel-mode-binary.md)|编译器和链接器将创建可在 Windows 内核中执行的二进制文件。|
 |[/MP](mp-build-with-multiple-processes.md)|同时生成多个源文件。|
 |[/nologo](nologo-suppress-startup-banner-c-cpp.md)|取消显示登录版权标志。|
@@ -168,7 +168,7 @@ ms.locfileid: "57816329"
 |[/Tc](tc-tp-tc-tp-specify-source-file-type.md)|指定 C 源文件。|
 |[/TC](tc-tp-tc-tp-specify-source-file-type.md)|指定源的所有文件都都 c。|
 |[/Tp](tc-tp-tc-tp-specify-source-file-type.md)|指定 C++ 源文件。|
-|[/TP](tc-tp-tc-tp-specify-source-file-type.md)|指定源的所有文件都的 c + +。|
+|[/TP](tc-tp-tc-tp-specify-source-file-type.md)|指定源的所有文件都都C++。|
 |[/V](v-version-number.md)|已否决。 设置版本字符串。|
 |[/w](compiler-option-warning-level.md)|禁用所有警告。|
 |[/W0、/W1、/W2、/W3、/W4](compiler-option-warning-level.md)|设置输出警告级别。|
@@ -193,11 +193,11 @@ ms.locfileid: "57816329"
 |[/validate-charset](validate-charset-validate-for-compatible-characters.md)|验证 utf-8 文件兼容的字符。|
 |[/diagnostics](diagnostics-compiler-diagnostic-options.md)|控制诊断消息的格式。|
 |[/permissive-](permissive-standards-conformance.md)|将标准符合性模式设置。|
-|[/std](std-specify-language-standard-version.md)|C + + 标准的版本兼容性选择器。|
+|[/std](std-specify-language-standard-version.md)|C++标准版本兼容性的选择器。|
 
 ## <a name="deprecated-and-removed-compiler-options"></a>已弃用并删除编译器选项
 
-|选项|目标|
+|选项|用途|
 |------------|-------------|
 |[/clr:noAssembly](clr-common-language-runtime-compilation.md)|已否决。 请改用 [/LN (Create MSIL Module)](ln-create-msil-module.md) 。|
 |[/Fr](fr-fr-create-dot-sbr-file.md)|已否决。 创建无局部变量的浏览信息文件。|

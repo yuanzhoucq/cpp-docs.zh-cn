@@ -8,15 +8,15 @@ helpviewer_keywords:
 - extern constexpr variables (C++)
 ms.assetid: 4da5e33a-2e4d-4ed2-8616-bd8f43265c27
 ms.openlocfilehash: 3c18a5310646ea39c0599f709e9fddc3990b7a2b
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57813053"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62315750"
 ---
 # <a name="zcexternconstexpr-enable-extern-constexpr-variables"></a>/Zc: externconstexpr （启用 extern constexpr 变量）
 
-**/Zc: externconstexpr**编译器选项告知编译器符合 c + + 标准，并允许的外部链接`constexpr`变量。 默认情况下，Visual Studio 始终都提供`constexpr`变量内部链接，即使您指定`extern`关键字。
+**/Zc: externconstexpr**编译器选项告知编译器为与C++标准，并允许的外部链接`constexpr`变量。 默认情况下，Visual Studio 始终都提供`constexpr`变量内部链接，即使您指定`extern`关键字。
 
 ## <a name="syntax"></a>语法
 
@@ -30,9 +30,9 @@ ms.locfileid: "57813053"
 
 ### <a name="to-set-this-compiler-option-in-visual-studio"></a>在 Visual Studio 中设置此编译器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[Visual Studio 中的设置 c + + 编译器和生成属性](../working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
 
-1. 选择**配置属性** > **C/c + +** > **命令行**属性页。
+1. 选择**配置属性** > **C /C++** > **命令行**属性页。
 
 1. 添加 **/zc: externconstexpr**或 **/Zc:externConstexpr-** 到**附加选项：** 窗格。
 

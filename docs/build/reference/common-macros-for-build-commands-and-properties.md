@@ -94,11 +94,11 @@ helpviewer_keywords:
 - SolutionPath macro $(SolutionPath)
 ms.assetid: 239bd708-2ea9-4687-b264-043f1febf98b
 ms.openlocfilehash: 46fdd5e356ded96388a154ff459ef4cc3c02267f
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58327673"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62294433"
 ---
 # <a name="common-macros-for-msbuild-commands-and-properties"></a>有关 MSBuild 命令和属性的常用宏
 
@@ -106,7 +106,7 @@ ms.locfileid: "58327673"
 
 ## <a name="view-the-current-properties-and-macros"></a>查看当前属性和宏
 
-若要显示所有当前可用的宏，**属性页**对话框下**VC + + 目录**，选择某一属性行末尾的下拉箭头。 单击**编辑**，然后在编辑对话框中，选择**宏**按钮。 对 Visual Studio 可见的当前属性和宏集，连同每个属性和宏的当前值一起列出。 有关详细信息，请参阅**Specifying User-Defined 值**一部分[c + + 项目属性页引用](property-pages-visual-cpp.md)。
+若要显示所有当前可用的宏，**属性页**对话框下**VC + + 目录**，选择某一属性行末尾的下拉箭头。 单击**编辑**，然后在编辑对话框中，选择**宏**按钮。 对 Visual Studio 可见的当前属性和宏集，连同每个属性和宏的当前值一起列出。 有关详细信息，请参阅**Specifying User-Defined 值**一部分[C++项目属性页引用](property-pages-visual-cpp.md)。
 
 ![VC + + 宏按钮](../media/vcppdir_libdir_macros.png "宏菜单")
 

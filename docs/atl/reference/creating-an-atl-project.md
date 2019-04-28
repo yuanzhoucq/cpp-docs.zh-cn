@@ -10,11 +10,11 @@ helpviewer_keywords:
 - distributing files with ATL components
 ms.assetid: 061d5f98-f669-440e-9380-42f017a0f9e8
 ms.openlocfilehash: d44434a36c8d757fb8f79d36a672c4c77de64ade
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57820320"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62278106"
 ---
 # <a name="creating-an-atl-project"></a>创建 ATL 项目
 
@@ -33,7 +33,7 @@ ms.locfileid: "57820320"
 
 1. 单击**完成**关闭向导并在开发环境中打开新项目。
 
-你的项目创建后，可以查看中创建的文件**解决方案资源管理器**。 有关向导为项目创建的文件的更多信息，请参见项目生成的文件 ReadMe.txt。 有关文件类型的详细信息，请参阅[Visual c + + 项目创建的文件类型](../../build/reference/file-types-created-for-visual-cpp-projects.md)。 有关新的 ATL 项目中，以及如何更改它们的配置详细信息，请参阅[默认 ATL 项目配置](../../atl/reference/default-atl-project-configurations.md)。
+你的项目创建后，可以查看中创建的文件**解决方案资源管理器**。 有关向导为项目创建的文件的更多信息，请参见项目生成的文件 ReadMe.txt。 有关文件类型的详细信息，请参阅[视觉对象创建的文件类型C++项目](../../build/reference/file-types-created-for-visual-cpp-projects.md)。 有关新的 ATL 项目中，以及如何更改它们的配置详细信息，请参阅[默认 ATL 项目配置](../../atl/reference/default-atl-project-configurations.md)。
 
 ## <a name="see-also"></a>请参阅
 

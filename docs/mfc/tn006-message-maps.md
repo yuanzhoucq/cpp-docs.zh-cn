@@ -20,11 +20,11 @@ helpviewer_keywords:
 - message maps [MFC], Windows messaging
 ms.assetid: af4b6794-4b40-4f1e-ad41-603c3b7409bb
 ms.openlocfilehash: 3536cb215da04fb7114853d3fa5d764585cbb58e
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54894076"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62306138"
 ---
 # <a name="tn006-message-maps"></a>TN006:消息映射
 
@@ -38,7 +38,7 @@ Microsoft Windows 中使用其消息传递功能的窗口类实现虚函数。 �
 
 ## <a name="overview"></a>概述
 
-MFC 提供了用于在传统的基于 Windows 的程序中处理消息发送到的窗口在 switch 语句的替代方法。 可以定义从消息到方法的映射，以便当窗口收到一条消息时，自动调用适当的方法。 此消息映射工具专为类似于虚函数，但还有其他好处不可能具有 c + + 虚函数。
+MFC 提供了用于在传统的基于 Windows 的程序中处理消息发送到的窗口在 switch 语句的替代方法。 可以定义从消息到方法的映射，以便当窗口收到一条消息时，自动调用适当的方法。 此消息映射工具设计为类似于虚函数，但具有更多好处，无法实现的C++虚函数。
 
 ## <a name="defining-a-message-map"></a>定义消息映射
 
@@ -117,7 +117,7 @@ pWnd->SendMessage(WM_MYMESSAGE);
 使用此方法的用户定义消息的范围必须是介于 WM_USER 到 0x7fff。
 
 > [!NOTE]
-> 类向导不支持从类向导用户界面的输入 ON_MESSAGE 处理程序例程。 您必须手动输入这些在 Visual c + + 编辑器中。 类向导将分析这些条目，并可以就像任何其他消息映射条目一样对其进行浏览。
+> 类向导不支持从类向导用户界面的输入 ON_MESSAGE 处理程序例程。 必须从视觉对象中手动输入这些C++编辑器。 类向导将分析这些条目，并可以就像任何其他消息映射条目一样对其进行浏览。
 
 ## <a name="registered-windows-messages"></a>已注册的 Windows 消息
 
@@ -170,7 +170,7 @@ ON_UPDATE_COMMAND_UI(id, memberFxn)
 
 这些窗体的示例：
 
-- 深入了解 Resource.h （通常由 Visual c + + 生成）
+- 在 Resource.h 内 (通常会生成视觉对象C++)
 
     ```cpp
     #define    ID_MYCMD      100

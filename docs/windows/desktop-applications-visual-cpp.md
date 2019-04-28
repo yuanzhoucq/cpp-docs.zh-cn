@@ -3,11 +3,11 @@ title: 桌面应用程序 (Visual C++)
 ms.date: 11/04/2016
 ms.assetid: a020b534-293c-44e2-aa48-516c43ddeb8f
 ms.openlocfilehash: 4576f77f7806787c4ab2a16cc279107ec9af32e5
-ms.sourcegitcommit: 14b292596bc9b9b883a9c58cd3e366b282a1f7b3
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60124897"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62345352"
 ---
 # <a name="desktop-applications-visual-c"></a>桌面应用程序 (Visual C++)
 

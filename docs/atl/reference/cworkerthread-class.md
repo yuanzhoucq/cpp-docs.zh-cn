@@ -16,11 +16,11 @@ helpviewer_keywords:
 - CWorkerThread class
 ms.assetid: be79a832-1345-4a36-a13e-a406cc65286f
 ms.openlocfilehash: d4645f4a57ce70c3683972c22e0f99cbce87ca6b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57287773"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62276649"
 ---
 # <a name="cworkerthread-class"></a>CWorkerThread 类
 
@@ -45,7 +45,7 @@ class CWorkerThread
 
 ### <a name="protected-structures"></a>受保护的结构
 
-|name|描述|
+|名称|描述|
 |----------|-----------------|
 |`WorkerClientEntry`||
 
@@ -277,5 +277,5 @@ HRESULT Shutdown(DWORD dwWait = ATL_WORKER_THREAD_WAIT) throw();
 
 [DefaultThreadTraits](atl-typedefs.md#defaultthreadtraits)<br/>
 [类](../../atl/reference/atl-classes.md)<br/>
-[多线程处理：创建辅助线程](../../parallel/multithreading-creating-worker-threads.md)<br/>
+[多线程处理：创建工作线程](../../parallel/multithreading-creating-worker-threads.md)<br/>
 [IWorkerThreadClient 接口](../../atl/reference/iworkerthreadclient-interface.md)

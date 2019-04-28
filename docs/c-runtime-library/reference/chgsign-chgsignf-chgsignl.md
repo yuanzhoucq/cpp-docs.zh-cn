@@ -30,11 +30,11 @@ helpviewer_keywords:
 - _chgsign function
 ms.assetid: a6646f8e-213d-4564-8617-f43bc66f989f
 ms.openlocfilehash: dad60b1fec4d402d340eeb4c87028975ef09e3ad
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50652629"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62340232"
 ---
 # <a name="chgsign-chgsignf-chgsignl"></a>_chgsign、_chgsignf、_chgsignl
 
@@ -68,7 +68,7 @@ long double _chgsignl(
 |例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_chgsign**|\<float.h>|
-|**_chgsignf**， **_chgsignl**|\<math.h>|
+|**_chgsignf**, **_chgsignl**|\<math.h>|
 
 有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 

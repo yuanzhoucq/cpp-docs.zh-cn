@@ -31,11 +31,11 @@ helpviewer_keywords:
 - function calls, terminating
 - process termination, calling
 ms.openlocfilehash: 7b2a22649d779f382bb4055b1e44c14312627ccd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50451748"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62339346"
 ---
 # <a name="exit-exit-exit"></a>exit, _Exit, _exit
 
@@ -67,7 +67,7 @@ void _exit(
 
 **退出**， **_Exit**并 **_exit**函数会终止调用进程。 **退出**函数会调用析构函数的线程本地对象，然后调用-先出 (LIFO) 顺序-由注册的函数**atexit**和 **_onexit**，它会终止进程之前刷新所有文件缓冲区。 **_Exit**并 **_exit**函数而无需销毁线程本地对象或处理会终止进程**atexit**或 **_onexit**函数，且无需刷新流缓冲区。
 
-尽管**退出**， **_Exit**并 **_exit**调用不会返回一个值，在值*状态*提供给主机环境或者，如果存在，在进程退出后等待调用进程。 通常情况下，调用方集*状态*值为 0 来指示正常退出，或为其他值以指示错误。 *状态*值是可用于操作系统批处理命令**ERRORLEVEL** ，并且由两个常量之一： **EXIT_SUCCESS**，后者表示值为 0，或**EXIT_FAILURE**，它表示的值为 1。
+尽管**退出**， **_Exit**并 **_exit**调用不会返回一个值，在值*状态*提供给主机环境或者，如果存在，在进程退出后等待调用进程。 通常情况下，调用方集*状态*值为 0 来指示正常退出，或为其他值以指示错误。 *状态*值是可用于操作系统批处理命令**ERRORLEVEL**和由两个常量之一表示：**EXIT_SUCCESS**，它表示值为 0，或**EXIT_FAILURE**，它表示的值为 1。
 
 **退出**， **_Exit**， **_exit**， **quick_exit**， **_cexit**，和 **_c_exit**函数的行为，如下所示。
 

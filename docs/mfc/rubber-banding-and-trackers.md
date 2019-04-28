@@ -9,11 +9,11 @@ helpviewer_keywords:
 - WM_LBUTTONDOWN [MFC]
 ms.assetid: 0d0fa64c-6418-4baf-ab7f-2d16ca039230
 ms.openlocfilehash: a6a9c9848e21129d4e6a8ce300e8750b4a0c6126
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57281039"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62308844"
 ---
 # <a name="rubber-banding-and-trackers"></a>橡皮筋和跟踪器
 
@@ -31,5 +31,5 @@ ms.locfileid: "57281039"
 
 ## <a name="see-also"></a>请参阅
 
-[跟踪器：在 OLE 应用程序内实现跟踪器](../mfc/trackers-implementing-trackers-in-your-ole-application.md)<br/>
+[跟踪器：在 OLE 应用程序中实现跟踪器](../mfc/trackers-implementing-trackers-in-your-ole-application.md)<br/>
 [CRectTracker 类](../mfc/reference/crecttracker-class.md)

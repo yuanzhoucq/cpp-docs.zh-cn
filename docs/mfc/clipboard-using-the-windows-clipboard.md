@@ -12,11 +12,11 @@ helpviewer_keywords:
 - Clipboard [MFC], Windows Clipboard API
 ms.assetid: 24415b42-9301-4a70-b69a-44c97918319f
 ms.openlocfilehash: 49111e4efd2a12264d61030fe038d80b974514c1
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57264789"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62326984"
 ---
 # <a name="clipboard-using-the-windows-clipboard"></a>剪贴板：使用 Windows 剪贴板
 
@@ -32,7 +32,7 @@ ms.locfileid: "57264789"
 
 Microsoft 基础类库提供剪贴板支持进行文本编辑与`CEdit`和`CEditView`类。 OLE 类还简化了实现涉及 OLE 项的剪贴板操作。 OLE 类的详细信息，请参阅[剪贴板：使用 OLE 剪贴板机制](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)。
 
-实现其他编辑菜单命令，例如撤消 (**ID_EDIT_UNDO**) 和重做 (**ID_EDIT_REDO**)，同时也预留给你。 如果你的应用程序不支持这些命令，因此您可以轻松地从使用 Visual c + + 资源编辑器在资源文件删除它们。
+实现其他编辑菜单命令，例如撤消 (**ID_EDIT_UNDO**) 和重做 (**ID_EDIT_REDO**)，同时也预留给你。 如果你的应用程序不支持这些命令，你可以轻松地删除它们使用视觉对象的资源文件从C++资源编辑器。
 
 ## <a name="what-do-you-want-to-know-more-about"></a>你想要了解更多信息
 

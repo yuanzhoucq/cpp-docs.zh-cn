@@ -14,11 +14,11 @@ helpviewer_keywords:
 - symbolic browser information
 ms.assetid: 3fd8f88b-3924-4feb-9393-287036a28896
 ms.openlocfilehash: 73642baba77a62cac531ae7b2842ec9953b338ec
-ms.sourcegitcommit: 06fc71a46e3c4f6202a1c0bc604aa40611f50d36
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58508697"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62292791"
 ---
 # <a name="fr-fr-create-sbr-file"></a>/FR、/Fr（创建 .Sbr 文件）
 
@@ -51,7 +51,7 @@ ms.locfileid: "58508697"
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[Visual Studio 中的设置 c + + 编译器和生成属性](../working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
 
 1. 在导航窗格中，选择“C/C++” 、“浏览信息”  属性页。
 

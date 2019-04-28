@@ -13,11 +13,11 @@ helpviewer_keywords:
 - Zc compiler options [C++]
 ms.assetid: b0de5a84-da72-4e5a-9a4e-541099f939e0
 ms.openlocfilehash: b2563ba0ae2a07bc9f9d81128745ed4b9651fb6c
-ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "57815172"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62315633"
 ---
 # <a name="zcwchart-wchart-is-native-type"></a>/Zc:wchar_t（wchar_t 是本机类型）
 
@@ -29,11 +29,11 @@ ms.locfileid: "57815172"
 
 ## <a name="remarks"></a>备注
 
-如果 **/zc: wchar_t**处于打开状态，`wchar_t`是编译为 c + + 代码中的内置整型类型的关键字。 如果 **/zc: wchar_t-** （带有一个减号） 指定，或在代码中作为 C 编译，`wchar_t`不是内置类型。 相反，`wchar_t`指`typedef`为`unsigned short`规范标头 stddef.h 中。 （Microsoft 实现将其定义中包含通过 stddef.h 的另一个标头和其他标准标头。）
+如果 **/zc: wchar_t**为 on 时，`wchar_t`是编译为代码中的内置整型类型的关键字C++。 如果 **/zc: wchar_t-** （带有一个减号） 指定，或在代码中作为 C 编译，`wchar_t`不是内置类型。 相反，`wchar_t`指`typedef`为`unsigned short`规范标头 stddef.h 中。 （Microsoft 实现将其定义中包含通过 stddef.h 的另一个标头和其他标准标头。）
 
-我们不建议 **/zc: wchar_t-** 因为 c + + 标准要求`wchar_t`是内置类型。 使用 `typedef` 版本可能导致可移植性问题。 如果从 Visual c + + 的早期版本升级并遇到编译器错误[C2664](../../error-messages/compiler-errors-2/compiler-error-c2664.md)因为代码尝试将隐式转换`wchar_t`到`unsigned short`，我们建议更改代码以修复此错误，而是设置的 **/zc: wchar_t-**。
+我们不建议 **/zc: wchar_t-** 由于C++标准要求`wchar_t`是内置类型。 使用 `typedef` 版本可能导致可移植性问题。 如果从视觉对象的早期版本升级C++并遇到编译器错误[C2664](../../error-messages/compiler-errors-2/compiler-error-c2664.md)因为代码尝试将隐式转换`wchar_t`到`unsigned short`，我们建议更改代码以修复此错误，而不是设置 **/zc: wchar_t-**。
 
-**/Zc: wchar_t**选项在 c + + 编译中默认情况下，忽略 C 编译中。 [触发-](permissive-standards-conformance.md)选项不会影响 **/zc: wchar_t**。
+**/Zc: wchar_t**选项在默认情况下位于C++编译，并且将忽略在 C 编译中。 [触发-](permissive-standards-conformance.md)选项不会影响 **/zc: wchar_t**。
 
 Microsoft 将 `wchar_t` 作为两位无符号值实现。 它映射到特定于 Microsoft 的本机类型`__wchar_t`。 有关详细信息`wchar_t`，请参阅[数据类型范围](../../cpp/data-type-ranges.md)并[基本类型](../../cpp/fundamental-types-cpp.md)。
 
@@ -43,13 +43,13 @@ Microsoft 将 `wchar_t` 作为两位无符号值实现。 它映射到特定于 
 
 如果你的代码使用编译器 COM 全局函数，因为 **/zc: wchar_t**现在在默认情况下，我们建议您更改对 comsupp.lib 的显式引用 (从[注释杂注](../../preprocessor/comment-c-cpp.md)或在命令行） 到 comsuppw.lib 或 comsuppwd.lib。 (如果必须使用进行编译 **/zc: wchar_t-**，使用 comsupp.lib。)如果你包含了 comdef.h 头文件，则会为你指定正确的库。 有关编译器 COM 支持的信息，请参阅[编译器 COM 支持](../../cpp/compiler-com-support.md)。
 
-`wchar_t`编译 C 代码时不支持内置类型。 使用 Visual c + + 的一致性问题的详细信息，请参阅[非标准行为](../../cpp/nonstandard-behavior.md)。
+`wchar_t`编译 C 代码时不支持内置类型。 有关使用视觉对象的一致性问题的详细信息C++，请参阅[非标准行为](../../cpp/nonstandard-behavior.md)。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[Visual Studio 中的设置 c + + 编译器和生成属性](../working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
 
-1. 选择**配置属性** > **C/c + +** > **语言**页。
+1. 选择**配置属性** > **C /C++** > **语言**页。
 
 1. 修改**将 wchar_t 视为内置类型**属性。
 

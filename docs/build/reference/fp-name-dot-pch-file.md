@@ -16,11 +16,11 @@ helpviewer_keywords:
 - /Fp compiler option [C++]
 ms.assetid: 0fcd9cbd-e09f-44d3-9715-b41efb5d0be2
 ms.openlocfilehash: 95506e17dff47e51cb7a3d83b629880f63422d26
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57820385"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62270987"
 ---
 # <a name="fp-name-pch-file"></a>/Fp（命名 .Pch 文件）
 
@@ -34,13 +34,13 @@ ms.locfileid: "57820385"
 
 使用此选项与[/Yc （创建预编译标头文件）](yc-create-precompiled-header-file.md)或[/Yu （使用预编译标头文件）](yu-use-precompiled-header-file.md)提供而不是使用默认路径名称的预编译标头的路径名称。 此外可以使用 **/Fp**与 **/Yc**若要指定不同于预编译的头文件使用 **/Yc**<em>文件名</em>参数和从源代码文件的基名称。
 
-如果未指定扩展的路径名称的一部分，则假定.pch 的扩展名。 如果指定的目录不包含文件名称，默认文件名称是 VC*x*0.pch，其中*x*是 Visual c + + 中使用的主要版本。
+如果未指定扩展的路径名称的一部分，则假定.pch 的扩展名。 如果指定的目录不包含文件名称，默认文件名称是 VC*x*0.pch，其中*x*是视觉对象的主要版本C++中使用。
 
 此外可以使用 **/Fp**选项与 **/Yu**。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[Visual Studio 中的设置 c + + 编译器和生成属性](../working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
 
 1. 单击 **“C/C++”** 文件夹。
 

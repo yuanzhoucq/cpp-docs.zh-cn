@@ -1,5 +1,5 @@
 ---
-title: 文件处理和 I-o (C + + CLI)
+title: 文件处理和 I/o (C++/CLI)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - .NET Framework [C++], file handling
@@ -25,11 +25,11 @@ helpviewer_keywords:
 - text files, writing in C++
 ms.assetid: 3296fd59-a83a-40d4-bd4a-6096cc13101b
 ms.openlocfilehash: 7009c0b017c403c3f0108aa84b8ddb25a1d1564f
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57749368"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62324995"
 ---
 # <a name="file-handling-and-io-ccli"></a>文件处理和 I/O (C++/CLI)
 
@@ -136,7 +136,7 @@ int main()
 
 下面的代码示例演示如何通过使用从两个类从文件读取二进制数据<xref:System.IO?displayProperty=fullName>命名空间：<xref:System.IO.FileStream>和<xref:System.IO.BinaryReader>。 <xref:System.IO.FileStream> 表示实际文件。 <xref:System.IO.BinaryReader> 提供允许二进制访问流的接口。
 
-代码示例读取的文件，名为 data.bin 包含以二进制格式的整数。 有关此类型的文件的信息，请参阅[如何：编写二进制文件 (C + + CLI)](../dotnet/how-to-write-a-binary-file-cpp-cli.md)。
+代码示例读取的文件，名为 data.bin 包含以二进制格式的整数。 有关此类型的文件的信息，请参阅[如何：编写二进制文件 (C++/CLI)](../dotnet/how-to-write-a-binary-file-cpp-cli.md)。
 
 ### <a name="example"></a>示例
 
@@ -177,7 +177,7 @@ int main()
 
 下面的代码示例演示如何打开和使用一次读取一行文本文件<xref:System.IO.StreamReader>类中定义的<xref:System.IO?displayProperty=fullName>命名空间。 此类的实例用于打开文本文件，然后<xref:System.IO.StreamReader.ReadLine%2A?displayProperty=fullName>方法用于检索每个行。
 
-此代码示例读取名为 textfile.txt 并包含文本的文件。 有关此类型的文件的信息，请参阅[如何：写入一个文本文件 (C + + CLI)](../dotnet/how-to-write-a-text-file-cpp-cli.md)。
+此代码示例读取名为 textfile.txt 并包含文本的文件。 有关此类型的文件的信息，请参阅[如何：写入一个文本文件 (C++/CLI)](../dotnet/how-to-write-a-text-file-cpp-cli.md)。
 
 ### <a name="example"></a>示例
 
@@ -261,7 +261,7 @@ int main()
 
 下面的代码示例演示如何向文件中写入二进制数据。 两个类从<xref:System.IO>使用命名空间：<xref:System.IO.FileStream>和<xref:System.IO.BinaryWriter>。 <xref:System.IO.FileStream> 表示实际文件，而<xref:System.IO.BinaryWriter>提供允许二进制访问流的接口。
 
-下面的代码示例将包含整数以二进制格式的文件。 可以使用中的代码读取此文件[如何：读取二进制文件 (C + + CLI)](../dotnet/how-to-read-a-binary-file-cpp-cli.md)。
+下面的代码示例将包含整数以二进制格式的文件。 可以使用中的代码读取此文件[如何：读取二进制文件 (C++/CLI)](../dotnet/how-to-read-a-binary-file-cpp-cli.md)。
 
 ### <a name="example"></a>示例
 

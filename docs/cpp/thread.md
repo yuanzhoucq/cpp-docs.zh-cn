@@ -10,11 +10,11 @@ helpviewer_keywords:
 - __declspec keyword [C++], thread
 ms.assetid: 667f2a77-6d1f-4b41-bee8-05e67324fab8
 ms.openlocfilehash: 089f339e5d203fe44789a7df1607f73ab13b8a24
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50440074"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62330513"
 ---
 # <a name="thread"></a>thread
 
@@ -24,7 +24,7 @@ ms.locfileid: "50440074"
 
 ## <a name="syntax"></a>语法
 
-> **__declspec （线程）** *声明符*
+> **__declspec( thread )** *declarator*
 
 ## <a name="remarks"></a>备注
 
@@ -42,7 +42,7 @@ __declspec( thread ) int tls_i = 1;
 
 1. 使用常量值以静态方式初始化的线程本地变量通常在所有线程上正确初始化。 但是，自 2017 年 12 月起时会出现已知的一致性问题凭此 constexpr 变量接收的 Microsoft Visual C++ 编译器中动态而不是静态初始化。
 
-   注意： 这两个问题应该在将来的编译器更新修复。
+   注意:这两个问题需要解决在将来的编译器更新。
 
 此外，声明线程本地对象和变量时必须遵守以下准则：
 

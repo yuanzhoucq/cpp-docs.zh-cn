@@ -19,12 +19,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::String
 ms.assetid: 72dd04a4-a694-40d3-b899-eaa0b503eab8
-ms.openlocfilehash: ac9ee843f5f11d4a42377b16ec77b266238fc461
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 0b8a29efc5b18432eabfeddc75af12737538281c
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57746183"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62330201"
 ---
 # <a name="platformstring-class"></a>Platform::String 类
 
@@ -85,11 +85,11 @@ public ref class String sealed : Object,
 
 |成员|描述|
 |------------|-----------------|
-|[String:: operator = = 运算符](#operator-equality)|指示指定的字符串对象是否具有相同的值。|
+|[String:: operator = = 运算符](#operator-equality)|指示两个指定的字符串对象是否具有相同的值。|
 |[operator+ 运算符](#operator-plus)|将两个字符串对象串联成一个新的字符串对象。|
 |[String:: operator > 运算符](#operator-greater-than)|指示一个字符串对象的值是否大于或等于第二个字符串对象的值。|
 |[String:: operator > = 运算符](#operator-greater-than-or-equals)|指示一个字符串对象的值是否大于或等于第二个字符串对象的值。|
-|[String:: operator ！ = 运算符](#operator-inequality)|指示两个指定字符串对象是否具有不同的值。|
+|[String:: operator ！ = 运算符](#operator-inequality)|指示两个指定的字符串对象是否具有不同的值。|
 |[String:: operator < 运算符](#operator-less-than)|指示一个字符串对象的值是否小于第二个字符串对象的值。|
 
 ### <a name="requirements"></a>要求
@@ -98,7 +98,7 @@ public ref class String sealed : Object,
 
 **支持的最低服务器：** Windows Server 2012
 
-**命名空间：** 平台
+**命名空间：** Platform
 
 **头文件** vccorlib.h（默认包含在内）
 
@@ -138,7 +138,7 @@ int CompareOrdinal( String^ str1, String^ str2 );
 
 一个整数，指示两个比较字之间的词法关系。 下表列出可能的返回值。
 
-|值|条件|
+|“值”|条件|
 |-----------|---------------|
 |-1|`str1` 小于 `str2`。|
 |0|`str1` 等于 `str2`。|
@@ -411,7 +411,7 @@ bool String::operator>=( String^ str1, String^ str2);
 
 ## <a name="operator-inequality"></a> String:: operator ！ =
 
-指示两个指定`String`对象具有不同的值。
+指示两个`String`对象具有不同的值。
 
 ### <a name="syntax"></a>语法
 
@@ -498,4 +498,4 @@ String^ String::ToString();
 
 ## <a name="see-also"></a>请参阅
 
-[平台命名空间](../cppcx/platform-namespace-c-cx.md)
+[Platform 命名空间](../cppcx/platform-namespace-c-cx.md)

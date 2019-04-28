@@ -24,11 +24,11 @@ helpviewer_keywords:
 - _alloca function
 ms.assetid: 74488eb1-b71f-4515-88e1-cdd03b6f8225
 ms.openlocfilehash: 7c083e791301d3224709a5fc6c711ceaa6397d38
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668062"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62341595"
 ---
 # <a name="alloca"></a>_alloca
 
@@ -57,7 +57,7 @@ void *_alloca(
 
 **_alloca**分配*大小*从程序堆栈的字节数。 调用函数退出 （而不是在分配仅传递超出范围） 时，会自动释放已分配的空间。 因此，不传递返回的指针值 **_alloca**的参数作为[免费](free.md)。
 
-存在一些限制显式调用 **_alloca**异常处理程序 (EH) 中。 在 x86 类处理器上运行的 EH 例程在自己的内存框架中工作：它们在未基于封闭函数堆栈指针当前位置的内存空间中执行其任务。 最常见的实现包括 Windows NT 结构化异常处理 (SEH) 和 C++ catch 子句表达式。 因此，显式调用 **_alloca**中任何以下方案结果在返回至调用 EH 例程时程序失败：
+存在一些限制显式调用 **_alloca**异常处理程序 (EH) 中。 在 x86 类处理器运行的 EH 例程在自己的内存框架操作：他们未基于封闭函数的堆栈指针的当前位置的内存空间中执行其任务。 最常见的实现包括 Windows NT 结构化异常处理 (SEH) 和 C++ catch 子句表达式。 因此，显式调用 **_alloca**中任何以下方案结果在返回至调用 EH 例程时程序失败：
 
 - Windows NT SEH 异常筛选器表达式： `__except ( _alloca() )`
 

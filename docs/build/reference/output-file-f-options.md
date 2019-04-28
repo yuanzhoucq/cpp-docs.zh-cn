@@ -9,15 +9,15 @@ helpviewer_keywords:
 - cl.exe compiler, output files
 ms.assetid: f6367f30-2710-4178-b43a-639eed824acb
 ms.openlocfilehash: 38db548bb71f8dc3e21cb1d544ba70d4fdebb6b7
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57807372"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62320105"
 ---
 # <a name="output-file-f-options"></a>输出文件 (/F) 选项
 
-输出文件选项创建或重命名输出文件。 它们会影响在 CL 环境变量中，命令行中，或任何命令文件中指定的所有 C 或 c + + 源代码文件。
+输出文件选项创建或重命名输出文件。 它们会影响所有 C 或C++源中在 CL 环境变量，命令行中，或任何命令文件中指定的文件。
 
 - [/FA、/Fa（列出文件）](fa-fa-listing-file.md)
 

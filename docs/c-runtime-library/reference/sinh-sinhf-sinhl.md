@@ -32,11 +32,11 @@ helpviewer_keywords:
 - sinhl function
 - hyperbolic functions
 ms.openlocfilehash: 7327809a20569c520aa799690203458d54e30fb5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50569801"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62356272"
 ---
 # <a name="sinh-sinhf-sinhl"></a>sinh、 sinhf、 sinhl
 
@@ -66,14 +66,14 @@ long double sinh(long double x);  // C++ only
 
 |输入|SEH 异常|Matherr 异常|
 |-----------|-------------------|-----------------------|
-|± QNAN,IND|无|_DOMAIN|
+|± QNAN,IND|None|_DOMAIN|
 |&#124;x&#124; ≥ 7.104760e+002|溢出 + 不准确|OVERFLOW|
 
 有关返回代码的详细信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>备注
 
-由于 c + + 允许重载，可以调用的重载**sinh**采用并返回**float**或**长** **double**值。 在 C 程序中， **sinh**始终采用并返回**double**。
+因为C++允许重载，可以调用的重载**sinh**采用并返回**float**或**长** **double**值。 在 C 程序中， **sinh**始终采用并返回**double**。
 
 ## <a name="requirements"></a>要求
 

@@ -23,11 +23,11 @@ helpviewer_keywords:
 - exception handling, termination
 ms.assetid: ebcef032-4771-48e5-88aa-2a1ab8750aa6
 ms.openlocfilehash: 6c38421e447ca7b3f263148f51f0ade5c59e2804
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50484222"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62356380"
 ---
 # <a name="setunexpected-crt"></a>set_unexpected (CRT)
 
@@ -50,7 +50,7 @@ unexpected_function set_unexpected( unexpected_function unexpFunction );
 
 ## <a name="remarks"></a>备注
 
-**Set_unexpected**函数安装*unexpFunction*由调用的函数作为**意外**。 **意外**不在当前 c + + 异常处理实现中使用。 **Unexpected_function** EH 中定义类型。为指向用户定义的意外函数，H *unexpFunction* ，它返回**void**。 您的自定义*unexpFunction*函数不应返回到其调用方。
+**Set_unexpected**函数安装*unexpFunction*由调用的函数作为**意外**。 **意外**中当前不使用C++异常处理实现。 **Unexpected_function** EH 中定义类型。为指向用户定义的意外函数，H *unexpFunction* ，它返回**void**。 您的自定义*unexpFunction*函数不应返回到其调用方。
 
 ```cpp
 typedef void ( *unexpected_function )( );
@@ -62,7 +62,7 @@ typedef void ( *unexpected_function )( );
 
 在多线程环境中，单独为每个线程维护意外函数。 每个新线程都需要安装它自己的意外函数。 因此，每个线程都负责它自己的意外处理。
 
-在当前的 Microsoft 实现的 c + + 异常处理**意外**调用**终止**默认情况下，永远不会调用异常处理运行时库。 没有特定于调用优势**意外**而非**终止**。
+在当前的 Microsoft 实现的C++异常处理**意外**调用**终止**默认情况下，永远不会调用异常处理运行时库。 没有特定于调用优势**意外**而非**终止**。
 
 没有单个**set_unexpected**处理程序的所有动态链接的 Dll 或 Exe; 即使你调用**set_unexpected**可能由另一个替换您的处理程序，或要替换处理程序集另一个 DLL 或 EXE。
 
