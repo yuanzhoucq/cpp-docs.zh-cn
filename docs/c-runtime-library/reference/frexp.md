@@ -28,11 +28,11 @@ helpviewer_keywords:
 - floating-point functions, mantissa and exponent
 ms.assetid: 9b020f2e-3967-45ec-a6a8-d467a071aa55
 ms.openlocfilehash: c9e259f730d2d63d07032735be930f6f0fdb17e5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50563834"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62332970"
 ---
 # <a name="frexp-frexpf-frexpl"></a>frexp、 frexpf、 frexpl
 
@@ -79,7 +79,7 @@ long double frexp(
 
 **Frexp**函数将分解的浮点值 (*x*) 分解为一个尾数 (*m*) 和一个指数 (*n*)，这样，绝对值*m*大于或等于 0.5 且小于 1.0，并*x* = *m* * 2<sup>*n*</sup>. 整数指数*n*指向的位置处存储*expptr*。
 
-C + + 允许重载，因此可以调用的重载**frexp**。 在 C 程序中， **frexp**始终采用**double**和一个**int**指针和返回**double**。
+C++允许重载，因此可以调用的重载**frexp**。 在 C 程序中， **frexp**始终采用**double**和一个**int**指针和返回**double**。
 
 ## <a name="requirements"></a>要求
 

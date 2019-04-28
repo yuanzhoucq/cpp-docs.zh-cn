@@ -23,11 +23,11 @@ helpviewer_keywords:
 - feof function
 ms.assetid: 09081eee-7c4b-4189-861f-2fad95d3ec6d
 ms.openlocfilehash: 9c023290df601bfc48f9708af86d32d91cd52dc4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50580687"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62334393"
 ---
 # <a name="feof"></a>feof
 
@@ -43,7 +43,7 @@ int feof(
 
 ### <a name="parameters"></a>参数
 
-*流*<br/>
+*stream*<br/>
 指向**文件**结构的指针。
 
 ## <a name="return-value"></a>返回值
@@ -113,7 +113,7 @@ Line one.
 Line two.
 ```
 
-### <a name="output"></a>输出
+### <a name="output"></a>Output
 
 ```Output
 Number of bytes read = 19

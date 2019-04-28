@@ -8,11 +8,11 @@ f1_keywords:
 - VC.Project.VCManifestTool.ReplacementsFile
 ms.assetid: 457582b8-cfde-49c0-92e3-3a6b9e8c08eb
 ms.openlocfilehash: 2fda169ecf304373d27d699bf313bde124dc399f
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57825063"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62269708"
 ---
 # <a name="isolated-com-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>“&lt;项目名&gt; 属性页”对话框 ->“配置属性”->“清单工具”->“独立 COM”
 
@@ -47,4 +47,4 @@ ms.locfileid: "57825063"
 [独立的应用程序](/windows/desktop/SbsCs/isolated-applications)<br>
 [ndptecclick](/visualstudio/deployment/clickonce-application-manifest)<br>
 [清单工具属性页](manifest-tool-property-pages.md)<br>
-[设置 c + + 编译器和生成 Visual Studio 中的属性](../working-with-project-properties.md)
+[在 Visual Studio 中设置 C++ 编译器并生成属性](../working-with-project-properties.md)

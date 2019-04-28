@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4275
 ms.assetid: 18de967a-0a44-4dbc-a2e8-fc4c067ba909
 ms.openlocfilehash: 6e0e80d465d77bd4fe99fbcaa98e289b8a4c8b63
-ms.sourcegitcommit: 966e4466f10c93fc12faf33d28e03b39489423fc
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "55987022"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62349680"
 ---
 # <a name="compiler-warning-level-2-c4275"></a>编译器警告（等级 2）C4275
 
@@ -33,7 +33,7 @@ ms.locfileid: "55987022"
 
 您可以避免通过定义一个 DLL，它定义了具有虚函数的类和函数，可以调用来实例化并删除对象类型的导出类。  然后，可以只需调用虚函数的类型。
 
-如果从 c + + 标准库，编译调试版本中的类型派生，可以在 Visual c + + 中忽略 C4275 (**/MTd**)，其中编译器错误消息是指`_Container_base`。
+C4275 可以忽略视觉对象中C++如果派生的类型C++标准库，编译调试版本 (**/MTd**)，其中编译器错误消息是指`_Container_base`。
 
 ```cpp
 // C4275.cpp

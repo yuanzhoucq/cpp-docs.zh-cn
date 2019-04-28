@@ -14,16 +14,15 @@ helpviewer_keywords:
 - call class
 ms.assetid: 1521970a-1e9c-4b0c-a681-d18e40976f49
 ms.openlocfilehash: 9651a74fdb07ad96d6f01edb6818ea48d697c37c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57271952"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62337903"
 ---
 # <a name="call-class"></a>call 类
 
-
-  `call` 消息块是多源、有序的 `target_block`，可以在接收消息时调用指定函数。
+`call` 消息块是多源、有序的 `target_block`，可以在接收消息时调用指定函数。
 
 ## <a name="syntax"></a>语法
 

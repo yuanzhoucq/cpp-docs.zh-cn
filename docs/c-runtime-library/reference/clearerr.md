@@ -24,11 +24,11 @@ helpviewer_keywords:
 - clearerr function
 ms.assetid: a9711cd4-3335-43d4-a018-87bbac5b3bac
 ms.openlocfilehash: c282a577bb7496f899f18abeac857c08388d12f6
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51328248"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62340545"
 ---
 # <a name="clearerr"></a>clearerr
 
@@ -44,7 +44,7 @@ void clearerr(
 
 ### <a name="parameters"></a>参数
 
-*流*<br/>
+*stream*<br/>
 指向**文件**结构的指针。
 
 ## <a name="remarks"></a>备注
@@ -103,7 +103,7 @@ int main( void )
 n
 ```
 
-### <a name="output"></a>输出
+### <a name="output"></a>Output
 
 ```Output
 Write error: No error

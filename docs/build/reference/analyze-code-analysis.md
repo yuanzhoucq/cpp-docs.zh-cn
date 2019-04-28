@@ -12,11 +12,11 @@ helpviewer_keywords:
 - analyze compiler option [C++]
 ms.assetid: 81da536a-e030-4bd4-be18-383927597d08
 ms.openlocfilehash: 63cfd2bd206a361301c75110a684e1d2c642a1f2
-ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "57819501"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62273152"
 ---
 # <a name="analyze-code-analysis"></a>/analyze（代码分析）
 
@@ -75,11 +75,11 @@ set Esp.Extensions=CppCoreCheck.dll
 
 ## <a name="remarks"></a>备注
 
-有关详细信息，请参阅[的代码分析 C/c + + 概述](/visualstudio/code-quality/code-analysis-for-c-cpp-overview)并[的代码分析 C/c + + 警告](/visualstudio/code-quality/code-analysis-for-c-cpp-warnings)。
+有关详细信息，请参阅[于 c 语言的代码分析 /C++概述](/visualstudio/code-quality/code-analysis-for-c-cpp-overview)并[于 c 语言的代码分析 /C++警告](/visualstudio/code-quality/code-analysis-for-c-cpp-warnings)。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[Visual Studio 中的设置 c + + 编译器和生成属性](../working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
 
 1. 展开“配置属性”节点。
 

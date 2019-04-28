@@ -33,11 +33,11 @@ helpviewer_keywords:
 - _finitef function
 ms.assetid: 5a7d7ca7-befb-4e1f-831d-28713c6eb805
 ms.openlocfilehash: d727839521978be66c3dc9ee173ee2ba0a567445
-ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57210375"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62333711"
 ---
 # <a name="isfinite-finite-finitef"></a>isfinite，_finite、 _finitef
 
@@ -71,11 +71,11 @@ int _finitef(
 
 ## <a name="return-value"></a>返回值
 
-`isfinite`宏并`_finite`并`_finitef`函数返回一个非零值，如果*x*可以正常或次正常有限值。 它们将返回 0，如果参数为无限或为 NaN。 C + + 内联模板函数`isfinite`行为方式相同，但会返回**true**或**false**。
+`isfinite`宏并`_finite`并`_finitef`函数返回一个非零值，如果*x*可以正常或次正常有限值。 它们将返回 0，如果参数为无限或为 NaN。 C++内联模板函数`isfinite`行为方式相同，但会返回 **，则返回 true**或**false**。
 
 ## <a name="remarks"></a>备注
 
-`isfinite` 是一个宏时编译为 C 和内联模板函数在作为 c + + 编译时。 `_finite`和`_finitef`函数是特定于 Microsoft 的。 `_finitef` 函数仅在编译 x86、ARM、或 ARM64 平台时可用。
+`isfinite` 是一个宏时编译为 C 和内联模板函数在作为编译时C++。 `_finite`和`_finitef`函数是特定于 Microsoft 的。 `_finitef` 函数仅在编译 x86、ARM、或 ARM64 平台时可用。
 
 ## <a name="requirements"></a>要求
 

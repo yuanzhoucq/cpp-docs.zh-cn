@@ -8,15 +8,15 @@ helpviewer_keywords:
 - ATL Simple Object Wizard
 ms.assetid: f7f85741-9aad-4543-a917-a29b996364da
 ms.openlocfilehash: e18c1848c55208b02026aba7684db928e0d6fc0a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258510"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62260891"
 ---
 # <a name="atl-simple-object-wizard"></a>ATL 简单对象向导
 
-此向导将最小的 COM 对象插入到项目中。 在向导的此页用于指定标识的 c + + 类和您的对象和其 COM 功能文件的名称。
+此向导将最小的 COM 对象插入到项目中。 使用向导的此页指定用于标识的名称C++类和文件进行您的对象和其 COM 功能。
 
 使用[选项](../../atl/reference/options-atl-simple-object-wizard.md)指定对象的线程模型，其聚合此向导页支持，以及它是否支持双重接口和自动化。 您还可以指示支持错误信息接口、 连接点、 Internet Explorer 支持和自由线程封送处理。
 
@@ -33,7 +33,7 @@ ms.locfileid: "57258510"
 
 ## <a name="c"></a>C++
 
-提供为对象创建的 c + + 类的信息。
+提供的信息C++为对象创建的类。
 
 - **短名称**
 

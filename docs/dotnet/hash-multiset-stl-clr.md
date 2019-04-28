@@ -96,11 +96,11 @@ helpviewer_keywords:
 - value_type member [STL/CLR]
 ms.assetid: 8462bd21-6829-4dd3-ac81-c42d6fdf92f0
 ms.openlocfilehash: 8d8e7ab9bcbaf9ea8ce95558c53d5936473f9c8f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50527170"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62222970"
 ---
 # <a name="hashmultiset-stlclr"></a>hash_multiset (STL/CLR)
 
@@ -236,7 +236,7 @@ Hash_multiset 迭代器，用于存储其关联的 hash_multiset 节点，后者
 
 ## <a name="members"></a>成员
 
-## <a name="begin"></a> hash_multiset:: begin (STL/CLR)
+## <a name="begin"></a> hash_multiset::begin (STL/CLR)
 
 指定受控序列的开头。
 
@@ -705,7 +705,7 @@ size() = 0
 empty() = True
 ```
 
-## <a name="end"></a> hash_multiset:: end (STL/CLR)
+## <a name="end"></a> hash_multiset::end (STL/CLR)
 
 指定受控序列的末尾。
 
@@ -754,7 +754,7 @@ a b c
 *--end() = c
 ```
 
-## <a name="equal_range"></a> hash_multiset:: equal_range (STL/CLR)
+## <a name="equal_range"></a> hash_multiset::equal_range (STL/CLR)
 
 查找与指定键匹配的范围。
 
@@ -814,7 +814,7 @@ equal_range(L'x') empty = True
 b
 ```
 
-## <a name="erase"></a> hash_multiset:: erase (STL/CLR)
+## <a name="erase"></a> hash_multiset::erase (STL/CLR)
 
 移除指定位置处的元素。
 
@@ -834,7 +834,7 @@ bool erase(key_type key)
 *key*<br/>
 若要清除的键值。
 
-*最后一个*<br/>
+*last*<br/>
 要清除范围的末尾。
 
 *where*<br/>
@@ -898,7 +898,7 @@ erase(begin(), end()-1) = e
 size() = 1
 ```
 
-## <a name="find"></a> hash_multiset:: find (STL/CLR)
+## <a name="find"></a> hash_multiset::find (STL/CLR)
 
 查找与指定键匹配的元素。
 
@@ -1222,7 +1222,7 @@ hash(L'a') = 1616896120
 hash(L'b') = 570892832
 ```
 
-## <a name="hash_multiset"></a> hash_multiset:: hash_multiset (STL/CLR)
+## <a name="hash_multiset"></a> hash_multiset::hash_multiset (STL/CLR)
 
 构造容器对象。
 
@@ -1257,10 +1257,10 @@ hash_multiset(System::Collections::Generic::IEnumerable<GValue>^ right,
 *hashfn*<br/>
 哈希函数映射到存储桶的密钥。
 
-*最后一个*<br/>
+*last*<br/>
 要插入的范围的下限。
 
-*Pred*<br/>
+*pred*<br/>
 排序谓词对受控序列。
 
 *right*<br/>
@@ -1501,7 +1501,7 @@ hash(L'a') = 1616896120
 hash(L'b') = 570892832
 ```
 
-## <a name="insert"></a> hash_multiset:: insert (STL/CLR)
+## <a name="insert"></a> hash_multiset::insert (STL/CLR)
 
 添加元素。
 
@@ -1520,7 +1520,7 @@ void insert(System::Collections::Generic::IEnumerable<value_type>^ right);
 *first*<br/>
 要插入范围的起始处。
 
-*最后一个*<br/>
+*last*<br/>
 要插入的范围的下限。
 
 *right*<br/>
@@ -1656,7 +1656,7 @@ int main()
 a b c
 ```
 
-## <a name="key_comp"></a> hash_multiset:: key_comp (STL/CLR)
+## <a name="key_comp"></a> hash_multiset::key_comp (STL/CLR)
 
 将复制两个键的排序委托。
 
@@ -1715,7 +1715,7 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="key_compare"></a> hash_multiset:: key_compare (STL/CLR)
+## <a name="key_compare"></a> hash_multiset::key_compare (STL/CLR)
 
 两个键排序委托。
 
@@ -1775,7 +1775,7 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="key_type"></a> hash_multiset:: key_type (STL/CLR)
+## <a name="key_type"></a> hash_multiset::key_type (STL/CLR)
 
 排序键的类型。
 
@@ -2079,7 +2079,7 @@ load_factor() = 0.0234375
 max_load_factor() = 0.25
 ```
 
-## <a name="op"></a> hash_multiset::operator = (STL/CLR)
+## <a name="op"></a> hash_multiset::operator= (STL/CLR)
 
 替换受控序列。
 
@@ -2134,7 +2134,7 @@ a b c
 a b c
 ```
 
-## <a name="rbegin"></a> hash_multiset:: rbegin (STL/CLR)
+## <a name="rbegin"></a> hash_multiset::rbegin (STL/CLR)
 
 指定反向受控序列的开头。
 
@@ -2182,7 +2182,7 @@ a b c
 *++rbegin() = b
 ```
 
-## <a name="reference"></a> hash_multiset:: reference (STL/CLR)
+## <a name="reference"></a> hash_multiset::reference (STL/CLR)
 
 元素的引用的类型。
 
@@ -2301,7 +2301,7 @@ load_factor() = 0.0234375
 max_load_factor() = 0.25
 ```
 
-## <a name="rend"></a> hash_multiset:: rend (STL/CLR)
+## <a name="rend"></a> hash_multiset::rend (STL/CLR)
 
 指定反向受控序列的末尾。
 
@@ -2350,7 +2350,7 @@ a b c
 *--rend() = a
 ```
 
-## <a name="reverse_iterator"></a> hash_multiset:: reverse_iterator (STL/CLR)
+## <a name="reverse_iterator"></a> hash_multiset::reverse_iterator (STL/CLR)
 
 受控序列的反向迭代器的类型。
 
@@ -2494,7 +2494,7 @@ a b c
 end()-begin() = 3
 ```
 
-## <a name="swap"></a> hash_multiset:: swap (STL/CLR)
+## <a name="swap"></a> hash_multiset::swap (STL/CLR)
 
 交换两个容器的内容。
 
@@ -2612,7 +2612,7 @@ a b c d
 a b c
 ```
 
-## <a name="upper_bound"></a> hash_multiset:: upper_bound (STL/CLR)
+## <a name="upper_bound"></a> hash_multiset::upper_bound (STL/CLR)
 
 查找与指定的键匹配的范围末尾。
 
@@ -2669,7 +2669,7 @@ upper_bound(L'x')==end() = True
 *upper_bound(L'b') = c
 ```
 
-## <a name="value_comp"></a> hash_multiset:: value_comp (STL/CLR)
+## <a name="value_comp"></a> hash_multiset::value_comp (STL/CLR)
 
 将复制两个元素值的排序委托。
 
@@ -2713,7 +2713,7 @@ compare(L'a', L'b') = True
 compare(L'b', L'a') = False
 ```
 
-## <a name="value_compare"></a> hash_multiset:: value_compare (STL/CLR)
+## <a name="value_compare"></a> hash_multiset::value_compare (STL/CLR)
 
 两个元素值排序委托。
 
@@ -2758,7 +2758,7 @@ compare(L'a', L'b') = True
 compare(L'b', L'a') = False
 ```
 
-## <a name="value_type"></a> hash_multiset:: value_type (STL/CLR)
+## <a name="value_type"></a> hash_multiset::value_type (STL/CLR)
 
 元素的类型。
 

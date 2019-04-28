@@ -23,11 +23,11 @@ helpviewer_keywords:
 - abort function
 - processes, aborting
 ms.openlocfilehash: d8cb190e36a64e8bd8cfcb75bc9a19c2a394fc48
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532786"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62342193"
 ---
 # <a name="abort"></a>abort
 
@@ -50,7 +50,7 @@ void abort( void );
 
 **Microsoft 专用**
 
-默认情况下，当使用调试运行时库，生成应用**中止**例程会显示错误消息之前`SIGABRT`引发。 对于在控制台模式下运行的控制台应用程序，该消息发送到 `STDERR`。 以窗口模式运行的 Windows 桌面应用程序和控制台应用程序在消息框中显示此消息。 要取消该消息，请使用 [_set_abort_behavior](set-abort-behavior.md) 来清除 `_WRITE_ABORT_MSG` 标志。 所显示的消息取决于使用的运行时环境的版本。 对于使用最新版本的 Visual c + + 生成的应用程序，该消息类似于下面这样：
+默认情况下，当使用调试运行时库，生成应用**中止**例程会显示错误消息之前`SIGABRT`引发。 对于在控制台模式下运行的控制台应用程序，该消息发送到 `STDERR`。 以窗口模式运行的 Windows 桌面应用程序和控制台应用程序在消息框中显示此消息。 要取消该消息，请使用 [_set_abort_behavior](set-abort-behavior.md) 来清除 `_WRITE_ABORT_MSG` 标志。 所显示的消息取决于使用的运行时环境的版本。 使用视觉对象的最新版本构建的应用程序C++，该消息类似于下面这样：
 
 > R6010-已调用 abort （）
 

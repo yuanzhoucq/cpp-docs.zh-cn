@@ -9,11 +9,11 @@ helpviewer_keywords:
 - /DYNAMICBASE editbin option
 ms.assetid: edb3df90-7b07-42fb-a94a-f5a4c1d325d6
 ms.openlocfilehash: 13987b4ba9c25db0f5417da562ff86f4230937d7
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57808295"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62271822"
 ---
 # <a name="dynamicbase"></a>/DYNAMICBASE
 
@@ -21,7 +21,7 @@ ms.locfileid: "57808295"
 
 ## <a name="syntax"></a>语法
 
-> **/DYNAMICBASE**[**： 否**]
+> **/DYNAMICBASE**[**:NO**]
 
 ## <a name="remarks"></a>备注
 
