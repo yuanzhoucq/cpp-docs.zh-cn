@@ -33,11 +33,11 @@ helpviewer_keywords:
 - std::next [C++]
 - std::prev [C++]
 ms.openlocfilehash: f6ea1ac49dabbfc34af9c8ddd020543f606d37a4
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523671"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62224137"
 ---
 # <a name="ltiteratorgt-functions"></a>&lt;iterator&gt; 函数
 
@@ -376,7 +376,7 @@ typename iterator_traits<InputIterator>::difference_type distance(InputIterator 
 *first*<br/>
 第一个迭代器，将要确定其与第二个迭代器之间的距离。
 
-*最后一个*<br/>
+*last*<br/>
 第二个迭代器，将要确定其与第一个迭代器之间的距离。
 
 ### <a name="return-value"></a>返回值
@@ -630,7 +630,7 @@ Iter Ptr,
 
 ### <a name="parameters"></a>参数
 
-*ptr*<br/>
+*Ptr*<br/>
 指向目标数组的指针。
 
 *Size*<br/>
@@ -740,7 +740,7 @@ unchecked_array_iterator<Iter>
 
 ### <a name="parameters"></a>参数
 
-*ptr*<br/>
+*Ptr*<br/>
 指向目标数组的指针。
 
 ### <a name="return-value"></a>返回值

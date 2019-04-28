@@ -3,15 +3,15 @@ title: 强制转换 (C++/CX)
 ms.date: 06/19/2018
 ms.assetid: 5247f6c7-6a0a-4021-97c9-21c868bd9455
 ms.openlocfilehash: 65d489d14c91b462e5a2bbe8bd60fce2657904a7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50454816"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62258208"
 ---
 # <a name="casting-ccx"></a>强制转换 (C++/CX)
 
-有四种不同的强制转换运算符适用于 Windows 运行时类型： [static_cast 运算符](../cpp/static-cast-operator.md)， [dynamic_cast 运算符](../cpp/dynamic-cast-operator.md)， **safe_cast 运算符**，和[reinterpret_cast 运算符](../cpp/reinterpret-cast-operator.md)。 **safe_cast**并**static_cast**时不能执行转换; 引发异常[static_cast 运算符](../cpp/static-cast-operator.md)还执行编译时类型检查。 **dynamic_cast**将返回**nullptr**如果它无法将类型转换。 尽管**reinterpret_cast**返回一个非 null 值，则可能无效。 出于此原因，我们建议您不要使用**reinterpret_cast**除非你知道该强制转换会成功。 此外，我们建议你使用 C 样式强制转换中将 C + + /cli CX 代码，因为它们是相同**reinterpret_cast**。
+有四种不同的强制转换运算符适用于 Windows 运行时类型： [static_cast 运算符](../cpp/static-cast-operator.md)， [dynamic_cast 运算符](../cpp/dynamic-cast-operator.md)， **safe_cast 运算符**，和[reinterpret_cast 运算符](../cpp/reinterpret-cast-operator.md)。 **safe_cast**并**static_cast**时不能执行转换; 引发异常[static_cast 运算符](../cpp/static-cast-operator.md)还执行编译时类型检查。 **dynamic_cast**将返回**nullptr**如果它无法将类型转换。 尽管**reinterpret_cast**返回一个非 null 值，则可能无效。 出于此原因，我们建议您不要使用**reinterpret_cast**除非你知道该强制转换会成功。 此外，我们建议您不要使用中的 C 样式强制转换在C++/CX 代码，因为它们是相同**reinterpret_cast**。
 
 编译器和运行时也执行隐式强制转换，例如，在装箱操作中（当值类型或内置类型作为参数传递到其参数类型为 `Object^`的方法时）。 理论上，隐式强制转换不应在运行时引起异常；如果编译器无法执行隐式转换，它会在编译时引发错误。
 
@@ -92,7 +92,7 @@ ComPtr<IInspectable> inspectable = reinterpret_cast<IInspectable*>(winRtObject);
 // ...
 ```
 
-如果您使用**reinterpret_cast**要从 oneWindows 运行时接口转换为另一个，则会导致对象释放两次。 因此，仅使用此强制转换将它们转换为一个非-Visual c + + 组件扩展接口时如此。
+如果您使用**reinterpret_cast**要从 oneWindows 运行时接口转换为另一个，则会导致对象释放两次。 因此，在要将转换为非视觉对象时仅使用此强制转换C++组件扩展接口。
 
 ## <a name="abi-types"></a>ABI 类型
 
@@ -122,5 +122,5 @@ ComPtr<IInspectable> inspectable = reinterpret_cast<IInspectable*>(winRtObject);
 ## <a name="see-also"></a>请参阅
 
 - [类型系统](../cppcx/type-system-c-cx.md)
-- [Visual c + + 语言参考](../cppcx/visual-c-language-reference-c-cx.md)
+- [VisualC++语言参考](../cppcx/visual-c-language-reference-c-cx.md)
 - [命名空间参考](../cppcx/namespaces-reference-c-cx.md)

@@ -13,11 +13,11 @@ helpviewer_keywords:
 - CDBException [MFC], m_strStateNativeOrigin
 ms.assetid: eb9e1119-89f5-49a7-b9d4-b91cee1ccc82
 ms.openlocfilehash: 755b89635eedd7808f900dc63cd3039845db1dd3
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328527"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62253408"
 ---
 # <a name="cdbexception-class"></a>CDBException 类
 
@@ -33,7 +33,7 @@ class CDBException : public CException
 
 ### <a name="public-data-members"></a>公共数据成员
 
-|name|描述|
+|名称|描述|
 |----------|-----------------|
 |[CDBException::m_nRetCode](#m_nretcode)|包含类型 RETCODE 的开放式数据库连接 (ODBC) 返回代码。|
 |[CDBException::m_strError](#m_strerror)|包含在字母数字术语描述错误的字符串。|

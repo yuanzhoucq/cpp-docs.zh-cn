@@ -1,5 +1,5 @@
 ---
-title: 清单工具配置属性 （c + + 文档注释）
+title: 清单工具配置属性 (C++文档注释)
 ms.date: 11/04/2016
 f1_keywords:
 - VC.Project.VCManifestTool.MergeRulesFile
@@ -10,11 +10,11 @@ f1_keywords:
 - VC.Project.VCManifestTool.AssemblyIdentity
 ms.assetid: b99368a5-6819-482c-a06e-f2409290cfd1
 ms.openlocfilehash: 9acdb7f5c934a8cabdd1803074778ac9f01f4960
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57825117"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62271019"
 ---
 # <a name="general-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>“&lt;项目名&gt; 属性页”对话框 ->“配置属性”->“清单工具”->“常规”
 
@@ -44,4 +44,4 @@ ms.locfileid: "57825117"
 
 [ndptecclick](/visualstudio/deployment/clickonce-application-manifest)<br>
 [清单工具属性页](manifest-tool-property-pages.md)<br>
-[设置 c + + 编译器和生成 Visual Studio 中的属性](../working-with-project-properties.md)
+[在 Visual Studio 中设置 C++ 编译器并生成属性](../working-with-project-properties.md)

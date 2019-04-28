@@ -10,11 +10,11 @@ helpviewer_keywords:
 - CComClassFactorySingleton class
 ms.assetid: debb983c-382b-487b-8d42-7ea26dc158b8
 ms.openlocfilehash: 480b4c2a6e052e8e0823b97b548fc5d07b55230f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57290386"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62260170"
 ---
 # <a name="ccomclassfactorysingleton-class"></a>CComClassFactorySingleton 类
 
@@ -108,7 +108,7 @@ CComPtr<IUnknown> m_spObj;
 
 每次调用[CreateInstance](#createinstance)方法只需将查询此对象的接口指针。
 
-请注意，当前的窗体`m_spObj`提供了一项重大更改的一种方式，`CComClassFactorySingleton`曾在以前版本的 atl。 在早期版本中`CComClassFactorySingleton`用作类工厂，同时在服务器初始化过程中创建对象。 在 Visual c + +.NET 2003 中，创建对象，第一次请求。 此更改可能导致程序依赖于早期的初始化错误。
+请注意，当前的窗体`m_spObj`提供了一项重大更改的一种方式，`CComClassFactorySingleton`曾在以前版本的 atl。 在早期版本中`CComClassFactorySingleton`用作类工厂，同时在服务器初始化过程中创建对象。 视觉对象中C++.NET 2003 中，创建对象时，第一次请求。 此更改可能导致程序依赖于早期的初始化错误。
 
 ## <a name="see-also"></a>请参阅
 

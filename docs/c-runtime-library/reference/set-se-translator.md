@@ -24,15 +24,15 @@ helpviewer_keywords:
 - _set_se_translator function
 ms.assetid: 280842bc-d72a-468b-a565-2d3db893ae0f
 ms.openlocfilehash: 18ee500d7b884d1934c29dc91d9bcb03d507680d
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57808373"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62356545"
 ---
 # <a name="setsetranslator"></a>_set_se_translator
 
-设置每个线程的回调函数将转换到 c + + Win32 异常 （C 结构化异常） 类型的异常。
+设置每个线程的回调函数将 Win32 异常 （C 结构化异常） 转换到C++类型的异常。
 
 ## <a name="syntax"></a>语法
 
@@ -53,7 +53,7 @@ _se_translator_function _set_se_translator(
 
 ## <a name="remarks"></a>备注
 
-**_Set_se_translator**函数提供了一种方法来处理 Win32 异常 （C 结构化异常） 作为 c + + 类型的异常。 若要允许每个 C 异常均由 c + +**捕获**处理程序，首先定义 C 异常包装器类，可使用，或派生自，若要将特定类类型归于 C 异常。 若要使用此类，请安装自定义 C 异常转换器函数，该函数在每次引发 C 异常时由内部异常处理机制调用。 在转换器函数，可以引发可由匹配的 c + + 捕获任何类型化的异常**捕获**处理程序。
+**_Set_se_translator**函数提供了一种方法来处理 Win32 异常 （C 结构化异常），为C++类型的异常。 若要允许每个 C 异常均由C++**捕获**处理程序，首先定义 C 异常包装器类，可使用，或派生自，若要将特定类类型归于 C 异常。 若要使用此类，请安装自定义 C 异常转换器函数，该函数在每次引发 C 异常时由内部异常处理机制调用。 在转换器函数，可以引发可捕获是匹配的任何类型化的异常C++**捕获**处理程序。
 
 必须使用[/EHa](../../build/reference/eh-exception-handling-model.md)使用时 **_set_se_translator**。
 

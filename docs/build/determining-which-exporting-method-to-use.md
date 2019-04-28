@@ -8,11 +8,11 @@ helpviewer_keywords:
 - .def files [C++], exporting from DLLs
 ms.assetid: 66d773ed-935c-45c2-ad03-1a060874b34d
 ms.openlocfilehash: 974c32cef87801599ba0d14fd146e84ad874467f
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816290"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62273732"
 ---
 # <a name="determine-which-exporting-method-to-use"></a>确定要使用的导出方法
 
@@ -28,7 +28,7 @@ ms.locfileid: "57816290"
 
 使用 .def 文件的另一个优点是您可以使用 `NONAME` 特性导出函数。 这只会将序号放入 DLL 中的导出表。 对于具有大量导出函数的 DLL，使用 `NONAME` 特性可以减小 DLL 文件的大小。 有关如何编写模块定义语句的信息，请参阅[模块定义语句的规则](reference/rules-for-module-definition-statements.md)。 有关序号导出的信息，请参阅[从按序号而不是按名称的 DLL 导出函数](exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md)。
 
-使用.def 文件的一个缺点是，如果导出 c + + 文件中的函数，则必须将修饰的名放入.def 文件或通过使用 extern"C"，以避免名称修饰已完成的定义导出的函数的 MSVC 编译器。
+使用.def 文件的缺点是，如果要导出中的函数C++文件中，您必须将修饰的名放入.def 文件或者通过使用 extern"C"，以避免名称修饰已完成的定义导出的函数的 MSVC 编译器。
 
 如果将修饰的名放在.def 文件中，你可以通过使用获取它们[DUMPBIN](reference/dumpbin-reference.md)工具或通过使用链接器[/map](reference/map-generate-mapfile.md)选项。 编译器生成的修饰名是编译器特定的；因此，如果将编译器生成的修饰名放入.def 文件，则链接到 DLL 的应用程序也必须使用相同版本的编译器生成，以便让调用应用程序中的修饰名与 DLL 的 .def 文件中的导出的名称相匹配。
 
@@ -44,11 +44,11 @@ ms.locfileid: "57816290"
 
 - [导出和导入使用 AFX_EXT_CLASS](exporting-and-importing-using-afx-ext-class.md)
 
-- [导出 c + + 函数以用于 C 语言可执行文件](exporting-cpp-functions-for-use-in-c-language-executables.md)
+- [导出C++函数以用于 C 语言可执行文件](exporting-cpp-functions-for-use-in-c-language-executables.md)
 
-- [导出 C 函数以用于 C 或 c + + 语言可执行文件](exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
+- [导出 C 函数以用于 C 或C++-语言可执行文件](exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
 
-- [导入到使用 __declspec （dllimport） 的应用程序](importing-into-an-application-using-declspec-dllimport.md)
+- [使用 __declspec(dllimport) 导入到应用程序中](importing-into-an-application-using-declspec-dllimport.md)
 
 - [初始化 DLL](run-time-library-behavior.md#initializing-a-dll)
 

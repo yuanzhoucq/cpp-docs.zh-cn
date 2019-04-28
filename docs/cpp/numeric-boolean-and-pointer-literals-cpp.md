@@ -7,11 +7,11 @@ helpviewer_keywords:
 - literals [C++]
 ms.assetid: 17c09fc3-3ad7-47e2-8b48-ba8ae994edc8
 ms.openlocfilehash: f263e9a2ed357cdc80ec29fc5d1b6d58c9e093e4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50545790"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62245097"
 ---
 # <a name="numeric-boolean-and-pointer-literals--c"></a>数值、 布尔和指针文本 （C++）
 
@@ -71,7 +71,7 @@ auto val_4 = 108LL;                           // signed long long
 auto val_4 = 0x8000000000000000ULL << 16;     // unsigned long long
 ```
 
-**数字分隔符**： 可以使用单引号字符 （撇号） 分隔中较大的数，以使其更易于供人阅读的位置值。 分隔符不会对编译产生任何影响。
+**数字分隔符**:可以使用单引号字符 （撇号） 分隔中较大的数，以使其更易于供人阅读的位置值。 分隔符不会对编译产生任何影响。
 
 ```cpp
 long long i = 24'847'458'121
@@ -142,5 +142,5 @@ if (num < 100)
 ## <a name="see-also"></a>请参阅
 
 [词法约定](../cpp/lexical-conventions.md)<br/>
-[C + + 字符串文本](../cpp/string-and-character-literals-cpp.md)<br/>
+[C++字符串文本](../cpp/string-and-character-literals-cpp.md)<br/>
 [C++ 用户定义的文本](../cpp/user-defined-literals-cpp.md)

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - __declspec keyword [C++], align
 ms.assetid: 9cb63f58-658b-4425-ac47-af8eabfc5878
 ms.openlocfilehash: 1bfe6e7a4646be8cea622078b4d85f20f458e1c5
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627327"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62258144"
 ---
 # <a name="align-c"></a>align (C++)
 
@@ -36,7 +36,7 @@ ms.locfileid: "53627327"
 
 可以使用`__declspec(align(#))`定义时**struct**，**联合**，或**类**，或当你声明一个变量。
 
-编译器不保证或不尝试保留复制过程中或数据转换操作中数据的对齐特性。 例如， [memcpy](../c-runtime-library/reference/memcpy-wmemcpy.md)可以将复制与声明的结构`__declspec(align(#))`到任何位置。 请注意，普通分配器 — 例如， [malloc](../c-runtime-library/reference/malloc.md)，c + +[运算符 new](new-operator-cpp.md)，和 Win32 分配器，返回的通常不充分对齐的内存`__declspec(align(#))`结构或数组结构。 若要保证复制或数据转换操作的目标正确对齐，请使用[_aligned_malloc](../c-runtime-library/reference/aligned-malloc.md)，或编写你自己的分配器。
+编译器不保证或不尝试保留复制过程中或数据转换操作中数据的对齐特性。 例如， [memcpy](../c-runtime-library/reference/memcpy-wmemcpy.md)可以将复制与声明的结构`__declspec(align(#))`到任何位置。 请注意，普通分配器 — 例如， [malloc](../c-runtime-library/reference/malloc.md)， C++ [new 运算符](new-operator-cpp.md)，和 Win32 分配器，返回的通常不充分对齐的内存`__declspec(align(#))`结构或结构的数组。 若要保证复制或数据转换操作的目标正确对齐，请使用[_aligned_malloc](../c-runtime-library/reference/aligned-malloc.md)，或编写你自己的分配器。
 
 不能指定函数参数的对齐方式。 当通过堆栈上的值传递具有对齐特性的数据，它的对齐由调用约定控制。 如果数据对齐在所调用函数中很重要，请在使用前将参数复制到正确对齐的内存中。
 
@@ -117,7 +117,7 @@ struct S3 {
 };
 ```
 
-在此示例中，注意 `a` 具有自然类型的对齐方式，在这种情况下为 4 字节。 但是，`S1` 必须是对齐的 32 字节。 填充的 28 个字节遵循 `a`，因此 `s1` 从偏移量 32 开始。 然后，`S4` 将继承 `S1` 的对齐要求，因为这是结构中的最大对齐要求。 `sizeof(struct S4)` 返回 64。
+在此示例中，注意 `a` 具有自然类型的对齐方式，在这种情况下为 4 字节。 但是，`S1` 必须是对齐的 32 字节。 填充的 28 个字节遵循 `a`，因此 `s1` 从偏移量 32 开始。 然后，`S4` 将继承 `S1` 的对齐需求，因为这是结构中的最大对齐要求。 `sizeof(struct S4)` 返回 64。
 
 ```cpp
 struct S4 {
@@ -230,7 +230,7 @@ struct S {
 |b|1|2|2|2|
 |c|3|4|4|8|
 |d|32|32|32|32|
-|e|40|40|40|40|
+|E|40|40|40|40|
 |f|41|42|44|48|
 |sizeof(S)|64|64|64|64|
 

@@ -17,11 +17,11 @@ helpviewer_keywords:
 - compiler options, macros
 ms.assetid: a869adc6-b3de-4299-b040-9ae20b45f82c
 ms.openlocfilehash: 79b1cabc0304e905012db5f6dd73ed71073c0c1e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258471"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62278418"
 ---
 # <a name="compiler-options-macros"></a>编译器选项宏
 
@@ -32,7 +32,7 @@ ms.locfileid: "57258471"
 |[_ATL_ALL_WARNINGS](#_atl_all_warnings)|这样项目中的错误的符号转换从早期版本的 atl。|
 |[_ATL_APARTMENT_THREADED](#_atl_apartment_threaded)|如果一个或多个对象使用单元线程处理，定义。|
 |[_ATL_CSTRING_EXPLICIT_CONSTRUCTORS](#_atl_cstring_explicit_constructors)|可确保`CString`显式，防止任何意外的转换构造函数。|
-|[_ATL_ENABLE_PTM_WARNING](#_atl_enable_ptm_warning)|定义此宏，以便使用 c + + 标准兼容的语法，它在非标准语法用于初始化的指针到成员函数时生成 C4867 编译器错误。|
+|[_ATL_ENABLE_PTM_WARNING](#_atl_enable_ptm_warning)|定义此宏，以便使用C++标准兼容的语法，非标准语法用来初始化指向成员函数的指针时，将生成 C4867 编译器错误。|
 |[_ATL_FREE_THREADED](#_atl_free_threaded)|如果一个或多个对象使用免费的还是中立线程，定义。|
 |[_ATL_MULTI_THREADED](#_atl_multi_threaded)|指示项目符号会标记为两者，免费或非特定于的对象。 该宏[_ATL_FREE_THREADED](#_atl_free_threaded)应改为使用。|
 |[_ATL_NO_AUTOMATIC_NAMESPACE](#_atl_no_automatic_namespace)|一个符号，这将阻止默认使用命名空间作为 atl。|
@@ -51,7 +51,7 @@ ms.locfileid: "57258471"
 
 ### <a name="remarks"></a>备注
 
-Visual c + +.NET 2002年之前 ATL 禁用的警告的很多并保留其禁用，以便它们永远不会显示在用户代码中。 尤其是在下列情况下：
+视觉对象之前C++.NET 2002年，ATL 禁用的警告的很多，把他们被禁用，这样它们永远不会显示在用户代码中。 尤其是在下列情况下：
 
 - C4127 条件表达式是常量
 
@@ -105,7 +105,7 @@ _ATL_CSTRING_EXPLICIT_CONSTRUCTORS
 
 ##  <a name="_atl_enable_ptm_warning"></a>  _ATL_ENABLE_PTM_WARNING
 
-定义此宏，以便强制对成员函数的指针的 ANSI c + + 的符合标准的语法的使用。 使用此宏将导致 C4867 编译器错误生成时使用非标准语法来初始化指向成员函数的指针。
+若要强制使用 ANSI 定义此宏C++的指针，指向成员函数的符合标准的语法。 使用此宏将导致 C4867 编译器错误生成时使用非标准语法来初始化指向成员函数的指针。
 
 ```
 #define _ATL_ENABLE_PTM_WARNING
@@ -113,11 +113,11 @@ _ATL_CSTRING_EXPLICIT_CONSTRUCTORS
 
 ### <a name="remarks"></a>备注
 
-已更改的 ATL 和 MFC 库以匹配 Visual c + + 编译器改进标准 c + + 合规性。 根据 ANSI c + + 标准中，指向类成员函数的指针的语法应为`&CMyClass::MyFunc`。
+ATL 和 MFC 库已更改，以匹配该视觉对象C++编译器的改进了的标准C++符合性。 根据 ANSIC++标准，应该是指向类成员函数的指针的语法`&CMyClass::MyFunc`。
 
-当[_ATL_ENABLE_PTM_WARNING](#_atl_enable_ptm_warning)未定义 （默认情况下），以便在早期版本中创建的代码可以继续像以前那样生成 ATL/MFC 禁用 C4867 错误 （值得注意的是消息映射） 的宏映射中。 如果定义了 **_ATL_ENABLE_PTM_WARNING**，你的代码应为 c + + 标准合规。
+当[_ATL_ENABLE_PTM_WARNING](#_atl_enable_ptm_warning)未定义 （默认情况下），以便在早期版本中创建的代码可以继续像以前那样生成 ATL/MFC 禁用 C4867 错误 （值得注意的是消息映射） 的宏映射中。 如果定义了 **_ATL_ENABLE_PTM_WARNING**，你的代码应为C++符合标准。
 
-但是，非标准窗体已被弃用，因此您需要将现有代码移到 c + + 标准的符合语法。 例如，以下内容：
+但是，非标准窗体已被弃用，因此需要移动到的现有代码C++标准兼容的语法。 例如，以下内容：
 
 [!code-cpp[NVC_MFCListView#14](../../atl/reference/codesnippet/cpp/compiler-options-macros_2.cpp)]
 

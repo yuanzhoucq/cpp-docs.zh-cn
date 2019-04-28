@@ -1,6 +1,6 @@
 ---
-title: 编译器错误 C2900-C2999
-ms.date: 11/17/2017
+title: 编译器错误 C2900 - C2999
+ms.date: 04/21/2019
 f1_keywords:
 - C2900
 - C2901
@@ -72,14 +72,14 @@ helpviewer_keywords:
 - C2997
 - C2999
 ms.assetid: e3440738-e11b-4878-9ae3-6bc6c53ba461
-ms.openlocfilehash: 4d430d1d446147c662f7f6405185aee75d95bc0b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: 5d443153582921775a72e5af647d65b102b80b0b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50466887"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62281648"
 ---
-# <a name="compiler-errors-c2900-through-c2999"></a>编译器错误 C2900-C2999
+# <a name="compiler-errors-c2900-through-c2999"></a>编译器错误 C2900 - C2999
 
 在本部分文档中的文章说明了由编译器生成的错误消息的子集。
 
@@ -90,7 +90,7 @@ ms.locfileid: "50466887"
 |Error|消息|
 |-----------|-------------|
 |编译器错误 C2900-|'*声明符*: WinRT 类中的成员函数模板必须为 private、 内部或 protected private|
-|编译器错误 C2901|'*标识符*： 泛型接口或委托不能是公共|
+|编译器错误 C2901|'*标识符*:泛型接口或委托不能是公共|
 |[编译器错误 C2902](compiler-error-c2902.md)|'*令牌*： 意外令牌以下模板/泛型，应为标识符|
 |[编译器错误 C2903](compiler-error-c2903.md)|'*标识符*： 符号不是类模板/泛型或模板/泛型函数|
 |[编译器错误 C2904](compiler-error-c2904.md)|'*标识符*： 名称已经用于当前范围内的模板|
@@ -107,11 +107,11 @@ ms.locfileid: "50466887"
 |编译器错误 C2915|'*标识符*':'*类型*不能在 WinRT 类型的发布接口上直接使用。 使用 platform:: object ^ 改为传递此类型|
 |编译器错误 C2916|'*标识符*: [FlagsAttribute] 必须 （仅限） 指定的公共枚举具有 unsigned int 基础类型。|
 |[编译器错误 C2917](compiler-error-c2917.md)|'*标识符*： 无效的模板参数|
-|[编译器错误 C2918](compiler-error-c2918.md)|'*标识符*： 不能在 WinRT 类型的发布接口上使用索引的属性|
-|[编译器错误 C2919](compiler-error-c2919.md)|'*类型*： 不能在 WinRT 类型的发布接口上使用运算符|
+|[编译器错误 C2918](compiler-error-c2918.md)|'*标识符*:不能在 WinRT 类型的发布接口上使用索引的属性|
+|[编译器错误 C2919](compiler-error-c2919.md)|'*类型*:不能在 WinRT 类型的发布接口上使用运算符|
 |[编译器错误 C2920](compiler-error-c2920.md)|重定义:*类型*： 类模板/泛型已声明为*声明*|
 |[编译器错误 C2921](compiler-error-c2921.md)|重定义:*类型*： 类模板/泛型被重新声明为*声明*|
-|编译器错误 C2922|'*接口*: WinRT 接口不能包含静态成员|
+|编译器错误 C2922|'*接口*:WinRT 接口不能包含静态成员|
 |[编译器错误 C2923](compiler-error-c2923.md)|'*类型*':'*标识符*不是有效的模板/泛型类型参数为参数'*参数*|
 |编译器错误 C2924|__declspec （interrupt） 例程参数不在 R2|
 |编译器错误 C2925|__declspec （interrupt） 例程不能使用浮点|
@@ -127,7 +127,7 @@ ms.locfileid: "50466887"
 |[编译器错误 C2935](compiler-error-c2935.md)|'*类型*： 模板 id 泛型标识符重新定义为全局函数|
 |[编译器错误 C2936](compiler-error-c2936.md)|'*类型*： 模板 id 泛型标识符重新定义为全局数据变量|
 |[编译器错误 C2937](compiler-error-c2937.md)|'*类型*： 模板 id 泛型标识符重新定义为全局 typedef|
-|编译器错误 C2938|'*标识符*： 未能使别名模板专用化|
+|编译器错误 C2938|'*标识符*:未能使别名模板专用化|
 |[编译器错误 C2939](compiler-error-c2939.md)|'*类型*： 模板 id 泛型标识符重新定义为局部数据变量|
 |[编译器错误 C2940](compiler-error-c2940.md)|'*类型*： 模板 id 泛型标识符重新定义为局部 typedef|
 |[编译器错误 C2941](compiler-error-c2941.md)|'*类型*： 模板 id 泛型标识符重新定义为本地'*项*|
@@ -154,7 +154,7 @@ ms.locfileid: "50466887"
 |[编译器错误 C2962](compiler-error-c2962.md)|语法错误: '*令牌*： 模板类成员函数定义应以结尾}|
 |编译器错误 C2963|已过时。|
 |编译器错误 C2964|已过时。|
-|编译器错误 C2965|__declspec (*说明符*) 不受 /kernel 支持|
+|编译器错误 C2965|__declspec(*specifier*) is not supported with /kernel|
 |编译器错误 C2966|'*identifier1*： 必须具有为其基类的相同 __declspec(code_seg(...))*identifier2*|
 |编译器错误 C2967|'*标识符*： 重写虚拟函数必须具有相同 __declspec(code_seg(...)) 用作重写虚拟函数|
 |编译器错误 C2968|'*标识符*： 递归的别名声明|
@@ -169,7 +169,7 @@ ms.locfileid: "50466887"
 |[编译器错误 C2977](compiler-error-c2977.md)|'*类型*： 模板/泛型参数太多|
 |[编译器错误 C2978](compiler-error-c2978.md)|语法错误： 预期 '*keyword1*或*keyword2*; 却发现类型*类型*; 非类型泛型中不支持参数|
 |[编译器错误 C2979](compiler-error-c2979.md)|泛型中不支持显式专用化|
-|编译器错误 C2980|C + + 异常处理不受 /kernel 支持|
+|编译器错误 C2980|C++异常处理不受 /kernel 支持|
 |编译器错误 C2981|动态形式的 '*关键字*不受 /kernel 支持|
 |编译器错误 C2982|'*声明*： 使用不同 __declspec(code_seg(...))： 已'*identifier1*立即*identifier2*|
 |编译器错误 C2983|'*声明*： 所有声明必须都具有相同 __declspec(code_seg(...))|
@@ -188,4 +188,9 @@ ms.locfileid: "50466887"
 |[编译器错误 C2996](compiler-error-c2996.md)|'*函数*： 递归函数模板定义|
 |编译器错误 C2997|'*函数*： 不能从默认成员初始值设定项推导数组界限|
 |[编译器错误 C2998](compiler-error-c2998.md)|'*声明符*： 不能为模板定义|
-|编译器错误 C2999|未知错误请选择 Visual c + + 帮助菜单上的技术支持命令或打开技术支持帮助文件了解详细信息|
+|编译器错误 C2999|未知的错误请选择视觉对象上的技术支持命令C++帮助菜单中，或打开技术支持帮助文件了解详细信息|
+
+## <a name="see-also"></a>请参阅
+
+[C /C++编译器和生成工具错误和警告](../compiler-errors-1/c-cpp-build-errors.md) \
+[编译器错误 C2000-C3999](../compiler-errors-1/compiler-errors-c2000-c3999.md)

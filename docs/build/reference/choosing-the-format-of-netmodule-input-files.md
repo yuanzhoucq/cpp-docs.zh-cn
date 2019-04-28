@@ -3,11 +3,11 @@ title: 选择 .netmodule 输入文件的格式
 ms.date: 11/04/2016
 ms.assetid: 4653d1bd-300f-4083-86f5-d1a06f44e61c
 ms.openlocfilehash: d48bfe84210143db333d1e6b081acf1aa66980cf
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57807320"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62294572"
 ---
 # <a name="choosing-the-format-of-netmodule-input-files"></a>选择 .netmodule 输入文件的格式
 
@@ -32,7 +32,7 @@ MSIL.obj 文件 (使用编译[/clr](clr-common-language-runtime-compilation.md))
 
 - 如果模块将用于构建托管库，并且链接器的所有模块输入都是可验证的（使用 /clr:safe 生成），则使用 .obj 文件作为链接器的模块输入并生成 .dll（程序集）或 .netmodule（模块）库文件。
 
-- 如果模块将用于构建托管的库，并且将仅用 /clr 生成生成链接器的一个或多个模块输入，则使用.obj 文件作为链接器的模块输入并生成.dll （程序集）。  如果你想要公开库中的托管的类型，但如果还需要 c + + 应用程序使用库中的本机类型，你的库将包含的 （您还需要为每个模块的.h 文件的库组件模块的.obj 文件以便它们可以引用使用 #include 源代码中的代码)。
+- 如果模块将用于构建托管的库，并且将仅用 /clr 生成生成链接器的一个或多个模块输入，则使用.obj 文件作为链接器的模块输入并生成.dll （程序集）。  如果你想要公开托管的类型库中，如果还希望C++应用程序使用的库，你的库中的本机类型将包含 （您还需要每个 mod 的.h 文件的库组件模块的.obj 文件ule，以便它们可以引用使用 #include 源代码中的代码)。
 
 ## <a name="see-also"></a>请参阅
 

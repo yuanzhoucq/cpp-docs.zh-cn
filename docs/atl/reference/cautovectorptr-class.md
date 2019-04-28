@@ -14,11 +14,11 @@ helpviewer_keywords:
 - CAutoVectorPtr class
 ms.assetid: 0030362b-6bc4-4a47-9b5b-3c3899dceab4
 ms.openlocfilehash: f614318125f3c6bce4003fee5fb4a945c7c88129
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259550"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62260378"
 ---
 # <a name="cautovectorptr-class"></a>CAutoVectorPtr 类
 
@@ -72,7 +72,7 @@ class CAutoVectorPtr
 
 ## <a name="remarks"></a>备注
 
-此类提供用于创建和管理可帮助保护用户免受内存泄漏，它不再处于作用域时，会自动释放资源的智能指针的方法。 `CAutoVectorPtr` 类似于`CAutoPtr`，唯一的区别在于`CAutoVectorPtr`使用[向量新&#91;&#93; ](../../standard-library/new-operators.md#op_new_arr)并[向量删除&#91;&#93; ](../../standard-library/new-operators.md#op_delete_arr)来分配和释放内存而不是 c + +**新**并**删除**运算符。 请参阅[CAutoVectorPtrElementTraits](../../atl/reference/cautovectorptrelementtraits-class.md)如果的集合类`CAutoVectorPtr`所需。
+此类提供用于创建和管理可帮助保护用户免受内存泄漏，它不再处于作用域时，会自动释放资源的智能指针的方法。 `CAutoVectorPtr` 类似于`CAutoPtr`，唯一的区别在于`CAutoVectorPtr`使用[向量新&#91;&#93; ](../../standard-library/new-operators.md#op_new_arr)并[向量删除&#91;&#93; ](../../standard-library/new-operators.md#op_delete_arr)来分配和释放内存而不是C++**新**并**删除**运算符。 请参阅[CAutoVectorPtrElementTraits](../../atl/reference/cautovectorptrelementtraits-class.md)如果的集合类`CAutoVectorPtr`所需。
 
 请参阅[CAutoPtr](../../atl/reference/cautoptr-class.md)有关使用智能指针类的示例。
 

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - GL compiler option [C++]
 ms.assetid: 09d51e2d-9728-4bd0-b5dc-3b8284aca1d1
 ms.openlocfilehash: 6251209dac74a504bb0635f0c544c39935090a42
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57812377"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62292128"
 ---
 # <a name="gl-whole-program-optimization"></a>/GL（全程序优化）
 
@@ -49,7 +49,7 @@ ms.locfileid: "57812377"
 
 [/ZI](z7-zi-zi-debug-information-format.md)不能用于 **/GL**
 
-使用生成的文件格式 **/GL**当前版本中可能无法读取由 Visual c + + 的后续版本。 不应提供与生成的.obj 文件组成的.lib 文件 **/GL**除非您是愿意提供的所有版本的 Visual c + + 的.lib 文件副本在你希望用户使用，现在和将来。
+使用生成的文件格式 **/GL**当前版本中可能无法读取视觉对象的后续版本C++。 不应提供与生成的.obj 文件组成的.lib 文件 **/GL**除非您是愿意提供视觉对象的所有版本的.lib 文件的副本C++在你希望用户使用，现在和将来。
 
 使用生成的.obj 文件 **/GL**预编译标头文件不应该用于生成的.lib 文件，除非将生成在同一台计算机上链接的.lib 文件 **/GL** .obj 文件。 在链接时，将需要从.obj 文件的预编译的头文件的信息。
 

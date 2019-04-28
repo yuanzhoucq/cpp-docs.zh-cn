@@ -15,11 +15,11 @@ helpviewer_keywords:
 - .lib files
 ms.assetid: dc5d2b1c-2487-41fa-aa71-ad1e0647958b
 ms.openlocfilehash: 02f719b3101b04ad6b219bf882a50a994061af0c
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57822608"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62293636"
 ---
 # <a name="lib-files-as-linker-input"></a>用作链接器输入的 .Lib 文件
 
@@ -29,7 +29,7 @@ ms.locfileid: "57822608"
 
 ## <a name="to-add-lib-files-as-linker-input-in-the-development-environment"></a>若要添加作为开发环境中的链接器输入的.lib 文件
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[Visual Studio 中的设置 c + + 编译器和生成属性](../working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
 
 1. 选择**输入**中的属性页**链接器**文件夹。
 

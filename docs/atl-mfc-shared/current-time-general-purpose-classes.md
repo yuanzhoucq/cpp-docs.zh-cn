@@ -1,5 +1,5 @@
 ---
-title: 当前时间： 通用类
+title: 当前时间：常规用途类
 ms.date: 11/04/2016
 helpviewer_keywords:
 - time, setting current
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - time, getting current
 ms.assetid: c39e6775-6a92-4b27-95a7-5c86ed371d8a
 ms.openlocfilehash: e883a47243feb7ad1555748ffdda9b8ae9594644
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539251"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62236209"
 ---
-# <a name="current-time-general-purpose-classes"></a>当前时间： 通用类
+# <a name="current-time-general-purpose-classes"></a>当前时间：常规用途类
 
 下面的过程演示如何创建`CTime`对象并将其初始化与当前时间。
 

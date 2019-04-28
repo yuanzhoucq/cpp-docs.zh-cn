@@ -1,6 +1,6 @@
 ---
-title: 编译器错误s C2100 through C2199
-ms.date: 11/17/2017
+title: 编译器错误 C2100 - C2199
+ms.date: 04/21/2019
 f1_keywords:
 - C2119
 - C2123
@@ -23,14 +23,14 @@ helpviewer_keywords:
 - C2187
 - C2189
 ms.assetid: 1ccab076-0954-4386-b959-d3112a6793ae
-ms.openlocfilehash: 31974bb830364b2ef41a7da17cb0ad95d931f771
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
-ms.translationtype: MT
+ms.openlocfilehash: 3a5a5368700eb1c4c585826021fefc21c25ecedf
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57423529"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62360536"
 ---
-# <a name="compiler-errors-c2100-through-c2199"></a>编译器错误s C2100 through C2199
+# <a name="compiler-errors-c2100-through-c2199"></a>编译器错误 C2100 - C2199
 
 在本部分文档中的文章说明了由编译器生成的错误消息的子集。
 
@@ -44,7 +44,7 @@ ms.locfileid: "57423529"
 |[编译器错误 C2101](compiler-error-c2101.md)|常量上的“&”|
 |[编译器错误 C2102](compiler-error-c2102.md)|"&" 要求左值|
 |[编译器错误 C2103](compiler-error-c2103.md)|寄存器变量上的“&”|
-|[编译器错误 C2104](compiler-error-c2104.md)|位域上的“&”被忽略|
+|[编译器错误 C2104](compiler-error-c2104.md)|& 被忽略的位域上|
 |[编译器错误 C2105](compiler-error-c2105.md)|'*operator*' needs l-value|
 |[编译器错误 C2106](compiler-error-c2106.md)|'*运算符*： 左的操作数必须为左值|
 |[编译器错误 C2107](compiler-error-c2107.md)|非法索引，不允许间接寻址|
@@ -140,3 +140,8 @@ ms.locfileid: "57423529"
 |[编译器错误 C2197](compiler-error-c2197.md)|'*函数*： 调用的参数太多|
 |[编译器错误 C2198](compiler-error-c2198.md)|'*函数*： 调用的参数太少|
 |[编译器错误 C2199](compiler-error-c2199.md)|语法错误： 找到 '*标识符*(在全局范围内 （是否使用声明？）|
+
+## <a name="see-also"></a>请参阅
+
+[C /C++编译器和生成工具错误和警告](../compiler-errors-1/c-cpp-build-errors.md) \
+[编译器错误 C2000-C3999](../compiler-errors-1/compiler-errors-c2000-c3999.md)

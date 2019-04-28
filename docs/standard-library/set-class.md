@@ -87,11 +87,11 @@ helpviewer_keywords:
 - std::set [C++], value_comp
 ms.assetid: 8991f9aa-5509-4440-adc1-371512d32018
 ms.openlocfilehash: 8f4ad77c28b4643a979d7c3fb22e44e4aebd43dd
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694733"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62295482"
 ---
 # <a name="set-class"></a>set 类
 
@@ -116,7 +116,7 @@ class set
 
 在 C++ 14 中可以通过指定没有类型参数的 `std::less<>` 或 `std::greater<>` 谓词来启用异类查找。 有关详细信息，请参阅[关联容器中的异类查找](../standard-library/stl-containers.md#sequence_containers)
 
-*分配器*<br/>
+*Allocator*<br/>
 一种表示存储的分配器对象的类型，该分配器对象封装有关集的内存分配和解除分配的详细信息。 此参数是可选参数，默认值为 `allocator<Key>`。
 
 ## <a name="remarks"></a>备注
@@ -488,7 +488,7 @@ size_type count(const Key& key) const;
 
 成员函数返回在以下范围内的元素数目：
 
-\[ lower_bound (*键*)、 upper_bound (*密钥*))。
+\[ lower_bound(*key*), upper_bound(*key*) ).
 
 ### <a name="example"></a>示例
 
@@ -703,7 +703,7 @@ emplace(
 
 |参数|描述|
 |-|-|
-|*参数*|用于构造要插入到集中的元素的转发参数（除非它已包含一个具有相对有序的值的元素）。|
+|*args*|用于构造要插入到集中的元素的转发参数（除非它已包含一个具有相对有序的值的元素）。|
 
 ### <a name="return-value"></a>返回值
 
@@ -784,7 +784,7 @@ iterator emplace_hint(
 
 |参数|描述|
 |-|-|
-|*参数*|用于构造要插入集中的元素的转发自变量，除非集已包含该元素，或更普遍的情况是除非它已包含其值已经过相同排序的元素。|
+|*args*|用于构造要插入集中的元素的转发自变量，除非集已包含该元素，或更普遍的情况是除非它已包含其值已经过相同排序的元素。|
 |*where*|开始搜索正确插入点的位置。 (如果该点紧贴*其中*，插入可发生在分期常量时间内而非对数时间。)|
 
 ### <a name="return-value"></a>返回值
@@ -1305,7 +1305,7 @@ IList);
 
 |参数|描述|
 |-|-|
-|*val*|要插入到集中的元素的值（除非它已经包含一个具有相对有序的值的元素）。|
+|*Val*|要插入到集中的元素的值（除非它已经包含一个具有相对有序的值的元素）。|
 |*Where*|开始搜索正确插入点的位置。 (如果该点紧贴*其中*，插入可发生在分期常量时间内而非对数时间。)|
 |*ValTy*|指定一组可用于构造的元素的自变量类型的模板参数[value_type](../standard-library/map-class.md#value_type)，和完美转发*Val*作为自变量。|
 |*第一个*|要复制的第一个元素的位置。|
@@ -1991,7 +1991,7 @@ set(
 |-|-|
 |*Al*|存储分配器类要用于此集对象，它默认为`Allocator`。|
 |*Comp*|用于对集中元素排序的 `const Traits` 类型比较函数，默认为 `Compare`。|
-|*右*|要以构造的集为副本的集。|
+|*Rght*|要以构造的集为副本的集。|
 |*第一个*|要复制的范围元素中的第一个元素的位置。|
 |*最后一个*|要复制的元素范围以外的第一个元素的位置。|
 |*IList*|从中复制元素的 initializer_list。|

@@ -14,11 +14,11 @@ helpviewer_keywords:
 - class information, ATL
 ms.assetid: d74956e8-9c69-4cba-b99d-ca1ac031bb9d
 ms.openlocfilehash: 41a0756250e749a07d48ad4f090c2f1c322aa558
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57289931"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62276037"
 ---
 # <a name="iprovideclassinfo2impl-class"></a>IProvideClassInfo2Impl Class
 
@@ -59,7 +59,7 @@ class ATL_NO_VTABLE IProvideClassInfo2Impl : public IProvideClassInfo2
 
 ### <a name="constructors"></a>构造函数
 
-|name|描述|
+|名称|描述|
 |----------|-----------------|
 |[IProvideClassInfo2Impl::IProvideClassInfo2Impl](#iprovideclassinfo2impl)|构造函数。|
 

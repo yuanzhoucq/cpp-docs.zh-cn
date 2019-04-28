@@ -7,11 +7,11 @@ helpviewer_keywords:
 - LNK1211
 ms.assetid: 607400eb-4180-4892-817f-eedfa628af61
 ms.openlocfilehash: 7c918cacb87460c2aad30285b750d9b170425534
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456142"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62242664"
 ---
 # <a name="linker-tools-error-lnk1211"></a>链接器工具错误 LNK1211
 
@@ -19,7 +19,7 @@ ms.locfileid: "50456142"
 
 *文件名*通过使用编译的对象文件[/Yc](../../build/reference/yc-create-precompiled-header-file.md)、 LINK 命令中未指定或已被覆盖。
 
-如果要创建的调试库使用预编译标头，如果您指定 **/Yc**并[/z7](../../build/reference/z7-zi-zi-debug-information-format.md)，Visual c + + 生成预编译的对象文件包含调试信息。 出错仅存储时的预编译的对象文件在库中，使用库来生成可执行文件的映像，并且引用的对象文件具有对预编译的对象文件定义的任何的函数可传递的引用。
+如果要创建的调试库使用预编译标头，如果您指定 **/Yc**并[/z7](../../build/reference/z7-zi-zi-debug-information-format.md)、 VisualC++生成包含调试信息的预编译的对象文件。 出错仅存储时的预编译的对象文件在库中，使用库来生成可执行文件的映像，并且引用的对象文件具有对预编译的对象文件定义的任何的函数可传递的引用。
 
 有两种方法，若要解决这种情况：
 

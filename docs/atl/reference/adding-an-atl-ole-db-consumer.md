@@ -7,11 +7,11 @@ helpviewer_keywords:
 - ATL OLE DB consumers
 ms.assetid: f940a513-4e42-4148-b521-dd0d7dc89fa2
 ms.openlocfilehash: d93bf715f8fd8a03c75b1d1bf2e44f12c1d1b9c0
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57277646"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62261372"
 ---
 # <a name="adding-an-atl-ole-db-consumer"></a>添加 ATL OLE DB 使用者
 
@@ -24,7 +24,7 @@ ms.locfileid: "57277646"
 
 1. 在中**类视图**，右键单击该项目。 在快捷菜单上，单击**外**，然后单击**添加类**。
 
-1. 在 Visual c + + 文件夹中，双击**ATL OLE DB 使用者**图标或选择它，然后单击**打开**。
+1. 在视觉对象C++文件夹中，双击**ATL OLE DB 使用者**图标或选择它，然后单击**打开**。
 
    ATL OLE DB 使用者向导随即打开。
 

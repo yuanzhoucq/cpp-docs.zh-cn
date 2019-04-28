@@ -23,11 +23,11 @@ helpviewer_keywords:
 - simple list collection classes [MFC]
 ms.assetid: c69fc95b-c8f6-4a99-abed-517c9898ef0c
 ms.openlocfilehash: 40633c8b2b09d27e97443364ed3ce711ee217e18
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57284653"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62306373"
 ---
 # <a name="template-based-classes"></a>基于模板的类
 
@@ -45,7 +45,7 @@ MFC 预定义了两种类别的基于模板的集合：
 
 简单的集合类都派生自类`CObject`，因此它们继承序列化、 动态创建和其他属性`CObject`。 类型化的指针集合类需要你指定从派生的类，它必须是一个预定义 mfc，如非模板指针集合`CPtrList`或`CPtrArray`。 新集合类继承自指定的基类，并用新类的成员函数对基类成员的封装的调用来强制实施类型安全性。
 
-有关 c + + 模板的详细信息，请参阅[模板](../cpp/templates-cpp.md)中*c + + 语言参考*。
+有关详细信息C++模板，请参阅[模板](../cpp/templates-cpp.md)中*C++语言参考*。
 
 ##  <a name="_core_using_simple_array.2c_.list.2c_.and_map_templates"></a> 使用简单的数组、 列表和映射模板
 
@@ -55,9 +55,9 @@ MFC 预定义了两种类别的基于模板的集合：
 
 简单数组和列表类[CArray](../mfc/reference/carray-class.md)并[CList](../mfc/reference/clist-class.md)，采用两个参数：*类型*和`ARG_TYPE`。 这些类可以存储任何数据类型，在中指定*类型*参数：
 
-- 基本的 c + + 数据类型，如**int**， **char**，和**float**
+- 基本C++数据类型，如**int**， **char**，并**float**
 
-- C + + 结构和类
+- C++结构和类
 
 - 您定义其他类型
 

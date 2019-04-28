@@ -7,11 +7,11 @@ helpviewer_keywords:
 - hosting Windows Forms control [C++]
 ms.assetid: 0434a9d7-8b14-48e6-ad69-9ba9a684677a
 ms.openlocfilehash: 4c4ee8c8b4570b598ba20b3bd5e1cf4c706ee885
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57740779"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62222944"
 ---
 # <a name="hosting-a-windows-form-user-control-as-an-mfc-dialog-box"></a>以 MFC 对话框的形式承载 Windows 窗体用户控件
 
@@ -25,7 +25,7 @@ MFC 提供模板类[CWinFormsDialog](../mfc/reference/cwinformsdialog-class.md) 
 
 1. 创建 MFC 应用程序项目。
 
-   上**文件**菜单中，选择**新建**，然后单击**项目**。 在中**Visual c + +** 文件夹，选择**MFC 应用程序**。
+   上**文件**菜单中，选择**新建**，然后单击**项目**。 在中**可视化C++** 文件夹中，选择**MFC 应用程序**。
 
    在中**名称**框中，输入`MFC03`并将解决方案设置更改为**将添加到解决方案**。单击**确定**。
 
