@@ -27,11 +27,11 @@ helpviewer_keywords:
 - _controlfp_s function
 ms.assetid: a51fc3f6-ab13-41f0-b227-6bf02d98e987
 ms.openlocfilehash: 0624cbfb4870ca87efebac01a8de682b588a4ca3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506673"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62335369"
 ---
 # <a name="controlfps"></a>_controlfp_s
 
@@ -55,7 +55,7 @@ errno_t _controlfp_s(
 *newControl*<br/>
 新的控制字位值。
 
-*掩码*<br/>
+*mask*<br/>
 要设置的新控制字位掩码。
 
 ## <a name="return-value"></a>返回值
@@ -68,7 +68,7 @@ errno_t _controlfp_s(
 
 如果为值*掩码*等于 0， **_controlfp_s**获取浮点控制字，并将存储中检索到的值*currentControl*。
 
-如果*掩码*是为非零，将设置为控制字为新值： 设置任何位 （即等于 1） 在*掩码*中的对应位*新*用于更新管理word。 换而言之， *fpcntrl* = ((*fpcntrl* & ~*掩码*) &#124; (*newControl* & *掩码*)) 其中*fpcntrl*是浮点控制字。 在此方案中， *currentControl*后的值设置在更改完成; 它不是旧的控制字位值。
+如果*掩码*为非零值，将设置为控制字为新值：设置为任何位的 （即等于 1） 中*掩码*中的对应位*新*用于更新控制字。 换而言之， *fpcntrl* = ((*fpcntrl* & ~*掩码*) &#124; (*newControl* & *掩码*)) 其中*fpcntrl*是浮点控制字。 在此方案中， *currentControl*后的值设置在更改完成; 它不是旧的控制字位值。
 
 > [!NOTE]
 > 默认情况下，运行时库屏蔽所有浮点异常。

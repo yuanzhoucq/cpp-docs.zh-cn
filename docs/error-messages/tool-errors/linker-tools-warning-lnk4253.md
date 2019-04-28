@@ -7,11 +7,11 @@ helpviewer_keywords:
 - LNK4253
 ms.assetid: ec7433a9-aa9c-495a-a9f2-075e7bc3e7bc
 ms.openlocfilehash: d2fd7238a3f57b11b91813bd40b66cb3e9f47202
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50628821"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62352512"
 ---
 # <a name="linker-tools-warning-lnk4253"></a>链接器工具警告 LNK4253
 
@@ -23,7 +23,7 @@ ms.locfileid: "50628821"
 
 若要解决 LNK4253，删除其中一个合并请求。
 
-面向 x86 时计算机和使用 Visual c + +，Windows CE 目标 （ARM、 MIPS、 SH4 和滚动块）。CRT 部分现在为只读。 如果你的代码依赖于以前的行为 (。CRT 部分是读/写），您可能会看到意外的行为。
+面向 x86 时计算机和 Windows CE 目标 （ARM、 MIPS、 SH4 和滚动块） 通过视觉对象C++，则。CRT 部分现在为只读。 如果你的代码依赖于以前的行为 (。CRT 部分是读/写），您可能会看到意外的行为。
 
 有关详细信息，请参阅
 

@@ -24,11 +24,11 @@ helpviewer_keywords:
 - _aligned_offset_recalloc function
 ms.assetid: a258f54e-eeb4-4853-96fc-007d710f98e9
 ms.openlocfilehash: 5ee163d257665b5481d6ab1ead54698ace1ef210
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50561988"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62335646"
 ---
 # <a name="alignedoffsetrecalloc"></a>_aligned_offset_recalloc
 
@@ -51,13 +51,13 @@ void * _aligned_offset_recalloc(
 *memblock*<br/>
 当前的内存块指针。
 
-*数量*<br/>
+*number*<br/>
 元素数量。
 
 *size*<br/>
 每个元素的长度（以字节为单位）。
 
-*对齐方式*<br/>
+*alignment*<br/>
 对齐值，必须是 2 的整数次幂。
 
 *offset*<br/>

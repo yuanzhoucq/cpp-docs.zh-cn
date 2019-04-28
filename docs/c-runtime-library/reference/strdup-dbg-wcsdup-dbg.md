@@ -32,11 +32,11 @@ helpviewer_keywords:
 - wcsdup_dbg function
 ms.assetid: 681db70c-d124-43ab-b83e-5eeea9035097
 ms.openlocfilehash: 3092c27df1e39c7b719f6e7037efa202d29c9e81
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50531148"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62353869"
 ---
 # <a name="strdupdbg-wcsdupdbg"></a>_strdup_dbg、_wcsdup_dbg
 
@@ -93,7 +93,7 @@ null 终止的源字符串。
 
 |例程所返回的值|必需的标头|
 |-------------|---------------------|
-|**_strdup_dbg**， **_wcsdup_dbg**|\<crtdbg.h>|
+|**_strdup_dbg**, **_wcsdup_dbg**|\<crtdbg.h>|
 
 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 

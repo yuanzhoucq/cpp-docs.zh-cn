@@ -11,18 +11,18 @@ helpviewer_keywords:
 - apartment model threading [MFC]
 ms.assetid: b2ab4c88-6954-48e2-9a74-01d4a60df073
 ms.openlocfilehash: d6f02b2106693226f6380e935a54e04e10d5b4f8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57261162"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62351821"
 ---
 # <a name="tn064-apartment-model-threading-in-activex-controls"></a>TN064:单元模型线程中的 ActiveX 控件
 
 > [!NOTE]
 >  以下技术说明在首次包括在联机文档中后未更新。 因此，某些过程和主题可能已过时或不正确。 要获得最新信息，建议你在联机文档索引中搜索热点话题。
 
-此技术说明介绍如何启用 ActiveX 控件中的单元模型线程。 请注意，单元模型线程处理仅支持在 Visual c + + 版本 4.2 或更高版本。
+此技术说明介绍如何启用 ActiveX 控件中的单元模型线程。 请注意，单元模型线程处理仅支持在视觉对象中C++版本 4.2 或更高版本。
 
 ## <a name="what-is-apartment-model-threading"></a>什么是单元模型线程处理
 
@@ -101,7 +101,7 @@ else
 }
 ```
 
-如果由 Visual c + + 4.1 或更高版本中的 controlwizard 可生成控件项目，此标志将存在于代码中。 需要注册的线程模型不不进行任何更改。
+如果由控件的视觉对象中的向导生成控件项目的C++4.1 或更高版本，此标志已将会出现在你的代码。 需要注册的线程模型不不进行任何更改。
 
 如果由早期版本的 controlwizard 可生成你的项目，您的现有代码将作为第六个参数具有一个布尔值。 如果现有的参数为 TRUE，将其更改为*afxRegInsertable | afxregapartmentthreading 改*。 如果现有的参数为 FALSE，将其更改为*afxregapartmentthreading 改*。
 

@@ -19,11 +19,11 @@ helpviewer_keywords:
 - stream sockets [MFC]
 ms.assetid: f60d4ed2-bf23-4a0e-98d2-fee77e8473dd
 ms.openlocfilehash: 6ab866609d0b75aaf9d06a01c204433d80e7e3d8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57274916"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62217873"
 ---
 # <a name="windows-sockets-background"></a>Windows 套接字：背景
 
@@ -93,9 +93,9 @@ Windows 套接字规范，Windows 套接字：为网络计算在 Microsoft Windo
 
 有关详细信息，请参阅 Windows 套接字规范： **ntohs**， **ntohl**， **htons**， **htonl**。 此外，请参阅以下主题：
 
-- [Windows 套接字：对存档使用套接字](../mfc/windows-sockets-using-sockets-with-archives.md)
+- [Windows 套接字：结合使用套接字和存档](../mfc/windows-sockets-using-sockets-with-archives.md)
 
-- [Windows 套接字：使用存档的套接字的示例](../mfc/windows-sockets-example-of-sockets-using-archives.md)
+- [Windows 套接字：使用存档的套接字示例](../mfc/windows-sockets-example-of-sockets-using-archives.md)
 
 - [Windows 套接字：使用类 CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
 

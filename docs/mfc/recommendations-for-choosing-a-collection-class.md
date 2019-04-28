@@ -17,11 +17,11 @@ helpviewer_keywords:
 - collection classes [MFC], shapes
 ms.assetid: a82188cd-443f-40d8-a244-edf292a53db4
 ms.openlocfilehash: c72a57385b0036d98629d1ee24111500b9d2f8ad
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57288033"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62218607"
 ---
 # <a name="recommendations-for-choosing-a-collection-class"></a>关于选择集合类的建议
 
@@ -66,23 +66,23 @@ ms.locfileid: "57288033"
 |`CDWordArray`|否|是|是|是 3|
 |`CList`|是|是 1|是 1|否|
 |`CMap`|是|是 1|是 1|否|
-|`CMapPtrToPtr`|否|否|是|No|
-|`CMapPtrToWord`|否|否|是|No|
-|`CMapStringToOb`|否|是|是|No|
-|`CMapStringToPtr`|否|否|是|No|
+|`CMapPtrToPtr`|否|否|是|否|
+|`CMapPtrToWord`|否|否|是|否|
+|`CMapStringToOb`|否|是|是|否|
+|`CMapStringToPtr`|否|否|是|否|
 |`CMapStringToString`|否|是|是|是 3|
-|`CMapWordToOb`|否|是|是|No|
-|`CMapWordToPtr`|否|否|是|No|
-|`CObArray`|否|是|是|No|
-|`CObList`|否|是|是|No|
-|`CPtrArray`|否|否|是|No|
-|`CPtrList`|否|否|是|No|
+|`CMapWordToOb`|否|是|是|否|
+|`CMapWordToPtr`|否|否|是|否|
+|`CObArray`|否|是|是|否|
+|`CObList`|否|是|是|否|
+|`CPtrArray`|否|否|是|否|
+|`CPtrList`|否|否|是|否|
 |`CStringArray`|否|是|是|是 3|
 |`CStringList`|否|是|是|是 3|
 |`CTypedPtrArray`|是|取决于 2|是|是|
 |`CTypedPtrList`|是|取决于 2|是|是|
 |`CTypedPtrMap`|是|取决于 2|是|是|
-|`CUIntArray`|No|否|是|是 3|
+|`CUIntArray`|否|否|是|是 3|
 |`CWordArray`|否|是|是|是 3|
 
 1. 要序列化，你必须明确地调用集合对象的 `Serialize` 函数；要转储，你必须明确地调用其 `Dump` 函数。 不能使用表单 `ar << collObj` 来进行序列化或使用表单 `dmp` `<< collObj` 来进行转储。

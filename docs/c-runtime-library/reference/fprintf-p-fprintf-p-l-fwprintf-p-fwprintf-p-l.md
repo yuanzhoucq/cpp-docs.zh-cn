@@ -42,11 +42,11 @@ helpviewer_keywords:
 - fwprintf_p_l function
 ms.assetid: 46b082e1-45ba-4383-9ee4-97015aa50bc6
 ms.openlocfilehash: db9e9a746193c7bf35913d6792d87aa9ba85fa79
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462772"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62333139"
 ---
 # <a name="fprintfp-fprintfpl-fwprintfp-fwprintfpl"></a>_fprintf_p、_fprintf_p_l、_fwprintf_p、_fwprintf_p_l
 
@@ -81,13 +81,13 @@ int _fwprintf_p_l(
 
 ### <a name="parameters"></a>参数
 
-*流*<br/>
+*stream*<br/>
 指向**文件**结构的指针。
 
 *format*<br/>
 窗体控件字符串。
 
-*自变量*<br/>
+*argument*<br/>
 可选参数。
 
 *locale*<br/>

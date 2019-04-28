@@ -10,11 +10,11 @@ helpviewer_keywords:
 - TN024
 ms.assetid: c65353ce-8096-454b-ad22-1a7a1dd9a788
 ms.openlocfilehash: 029177821d37d5d26abe0b39ea1581e8a5ad602b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57278127"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62306020"
 ---
 # <a name="tn024-mfc-defined-messages-and-resources"></a>TN024:定义的消息和资源
 
@@ -33,7 +33,7 @@ MFC 私有资源类型处于范围内 0xF0-> 0xFF。
 
 **MFC 私有 Windows 消息**
 
-这些 Windows 消息用于代替 c + + 虚函数比较松散的耦合需要的窗口对象之间，其中 c + + 虚函数将不适用。
+这些 Windows 消息，用来代替C++窗口对象之间需要比较松散耦合的虚函数和位置C++虚函数不会适当。
 
 MFC 私有标头中声明这些私有 Windows 消息和关联的参数结构 AFXPRIV。H。 请注意，任何你包括此标头的代码可能依赖于未记录的行为并可能会中断在将来版本的 MFC。
 
@@ -170,9 +170,9 @@ MFC 私有标头中声明这些私有 Windows 消息和关联的参数结构 AFX
 
 ## <a name="rtdlginit-resource-format"></a>RT_DLGINIT 资源格式
 
-一种 MFC 专用的资源格式用于存储额外对话框初始化信息。 这包括初始字符串存储在组合框中。 此资源的格式不是手动编辑，但在处理 Visual c + +。
+一种 MFC 专用的资源格式用于存储额外对话框初始化信息。 这包括初始字符串存储在组合框中。 此资源的格式不是手动编辑，但在处理视觉对象C++。
 
-Visual c + + 和此 RT_DLGINIT 资源不需要使用 MFC 的相关的功能，因为有 API 替代资源中使用的信息。 使用 Visual c + + 可以更轻松地编写、 维护和转换你的应用程序从长远来看。
+VisualC++和此 RT_DLGINIT 资源无需使用 MFC 的相关的功能，由于没有 API 替代资源中使用的信息。 使用视觉对象C++使其更易于编写、 维护和转换你的应用程序从长远来看。
 
 RT_DLGINIT 资源的基本结构是按如下所示：
 
@@ -197,7 +197,7 @@ RT_DLGINIT 资源的基本结构是按如下所示：
 SendDlgItemMessage(<Control ID>, <Message #>, 0, &<Data>);
 ```
 
-这是非常一般格式，允许任何 Windows 消息和数据内容。 Visual c + + 资源编辑器和 MFC 仅支持 Windows 消息的有限的子集：CB_ADDSTRING （数据是一个文本字符串） 的组合框的初始列表选项。
+这是非常一般格式，允许任何 Windows 消息和数据内容。 视觉对象C++资源编辑器和 MFC 仅支持 Windows 消息的有限的子集：CB_ADDSTRING （数据是一个文本字符串） 的组合框的初始列表选项。
 
 ## <a name="see-also"></a>请参阅
 
