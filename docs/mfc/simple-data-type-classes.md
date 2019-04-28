@@ -9,15 +9,15 @@ helpviewer_keywords:
 - simple data type classes [MFC]
 ms.assetid: 0d591d68-0a33-49e9-8a6d-90c90de5c16a
 ms.openlocfilehash: 4e415805301d7d12bd418a3b55509a7732851492
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57298472"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62307413"
 ---
 # <a name="simple-data-type-classes"></a>简单数据类型类
 
-下列类封装绘制坐标、字符串以及时间和日期信息，从而能够方便地使用 C++ 语法。 这些对象将作为参数广泛用于类库中 Windows 类的成员函数。 因为`CPoint`， `CSize`，并`CRect`对应于**点**，**大小**，并且**RECT**结构，分别在 Windows SDK 中，只要您可使用这些 C 语言结构，可以使用这些 c + + 类的对象。 这些类通过其成员函数提供有用的接口。 `CStringT` 提供了非常灵活的动态字符串。 `CTime``COleDateTime`， `CTimeSpan`，和`COleTimeSpan`表示的日期和时间值。 有关这些类的详细信息，请参阅文章[日期和时间](../atl-mfc-shared/date-and-time.md)。
+下列类封装绘制坐标、字符串以及时间和日期信息，从而能够方便地使用 C++ 语法。 这些对象将作为参数广泛用于类库中 Windows 类的成员函数。 因为`CPoint`， `CSize`，并`CRect`对应于**点**，**大小**，并且**RECT**结构，分别在 Windows SDK 中，可以使用这些对象C++类只要您可使用这些 C 语言结构。 这些类通过其成员函数提供有用的接口。 `CStringT` 提供了非常灵活的动态字符串。 `CTime``COleDateTime`， `CTimeSpan`，和`COleTimeSpan`表示的日期和时间值。 有关这些类的详细信息，请参阅文章[日期和时间](../atl-mfc-shared/date-and-time.md)。
 
 以开头的类"`COle`"是由 OLE 提供的数据类型的封装。 这些数据类型可在 Windows 程序中使用，而不管是否使用其他 OLE 功能。
 

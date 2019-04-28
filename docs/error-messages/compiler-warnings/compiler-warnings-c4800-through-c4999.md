@@ -1,6 +1,6 @@
 ---
-title: 编译器警告 C4800-通过 C5999
-ms.date: 03/14/2019
+title: 编译器警告 C4800 - C5999
+ms.date: 04/21/2019
 f1_keywords:
 - C4808
 - C4809
@@ -153,14 +153,14 @@ helpviewer_keywords:
 - C5105
 - C5106
 - C5107
-ms.openlocfilehash: 46bb439b490295b7f3279f06421d3fd6b8d6ba8b
-ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
-ms.translationtype: MT
+ms.openlocfilehash: 93ff809d640efab6852e855f85e7b6e0109d9c1d
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58356252"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62280305"
 ---
-# <a name="compiler-warnings-c4800-through-c5999"></a>编译器警告 C4800-通过 C5999
+# <a name="compiler-warnings-c4800-through-c5999"></a>编译器警告 C4800 - C5999
 
 在本部分文档中的文章说明了由编译器生成警告消息的一个子集。
 
@@ -171,9 +171,9 @@ ms.locfileid: "58356252"
 |警告|消息|
 |-------------|------------|
 |[编译器警告 （等级 C4800](compiler-warning-level-3-c4800.md)| 从隐式转换*类型*为布尔值。 可能会丢失信息 |
-|[编译器警告（等级 1）C4803](compiler-warning-level-1-c4803.md)|'*方法*： 引发方法具有不同的存储类从与事件*事件*|
-|[编译器警告（等级 1）C4804](compiler-warning-level-1-c4804.md)|'*操作*： 不安全地使用操作中的 bool 类型|
-|[编译器警告（等级 1）C4805](compiler-warning-level-1-c4805.md)|'*操作*： 类型的混合不安全*type1*和类型*type2*操作中|
+|[编译器警告 （等级 1） C4803](compiler-warning-level-1-c4803.md)|'*方法*： 引发方法具有不同的存储类从与事件*事件*|
+|[编译器警告 （等级 1） C4804](compiler-warning-level-1-c4804.md)|'*操作*： 不安全地使用操作中的 bool 类型|
+|[编译器警告 （等级 1） C4805](compiler-warning-level-1-c4805.md)|'*操作*： 类型的混合不安全*type1*和类型*type2*操作中|
 |[编译器警告 （等级 1） C4806](compiler-warning-level-1-c4806.md)|'*操作*： 不安全的操作： 没有值的类型*type1*升级为类型*y p e 2*可以为给定的常量|
 |[编译器警告 （等级 1） C4807](compiler-warning-level-1-c4807.md)|'*操作*： 类型的混合不安全*type1*和签名的类型的位域*type2*|
 |编译器警告 （等级 1） C4808|用例 '*值*是 bool 的切换条件的类型不是有效的值|
@@ -184,17 +184,17 @@ ms.locfileid: "58356252"
 |[编译器警告 （等级 1） C4813](compiler-warning-level-1-c4813.md)|'*函数*： 局部类的友元函数必须具有已以前声明|
 |[编译器警告 （等级 C4816](compiler-warning-level-4-c4816.md)|'*param*： 参数具有一个零大小的数组，它将被截断 （除非该对象通过引用传递）|
 |[编译器警告 （等级 1） C4817](compiler-warning-level-1-c4817.md)|'*成员*： 非法使用了。' 若要访问该成员; 编译器替换为->|
-|[编译器警告（等级 1）C4819](compiler-warning-level-1-c4819.md)|该文件包含不能在当前代码页（数字）中表示的字符。 将文件保存以 Unicode 格式，以防止数据丢失|
-|[编译器警告（等级 4）C4820](compiler-warning-level-4-c4820.md)|'*字节*字节填充添加在构造之后*member_name*|
-|[编译器警告（等级 1）C4821](compiler-warning-level-1-c4821.md)|无法确定 Unicode 编码类型，请用签名 (BOM) 保存文件|
+|[编译器警告 （等级 1） C4819](compiler-warning-level-1-c4819.md)|该文件包含不能在当前代码页（数字）中表示的字符。 将文件保存以 Unicode 格式，以防止数据丢失|
+|[编译器警告 （等级 C4820](compiler-warning-level-4-c4820.md)|'*字节*字节填充添加在构造之后*member_name*|
+|[编译器警告 （等级 1） C4821](compiler-warning-level-1-c4821.md)|无法确定 Unicode 编码类型，请用签名 (BOM) 保存文件|
 |[编译器警告 （等级 1） C4822](compiler-warning-level-1-c4822.md)|member function： 局部类成员函数没有正文|
-|[编译器警告（等级 3）C4823](compiler-warning-level-3-c4823.md)|'*函数*： 使用钉住指针但展开语义不会启用。 请考虑使用 /EHa|
+|[编译器警告 （等级 3） C4823](compiler-warning-level-3-c4823.md)|'*函数*： 使用钉住指针但展开语义不会启用。 请考虑使用 /EHa|
 |编译器警告 （等级 2） C4826|从转换*type1*到*type2*将进行符号扩展。 这可能会导致意外的运行时行为。|
 |编译器警告 （等级 3） C4827|不带参数的公共 ToString 方法应标记为虚拟和重写|
-|[编译器警告（等级 1）C4829](compiler-warning-level-1-c4829.md)|函数 main 的参数可能不正确。 请考虑 int main (platform:: array\<platform:: string ^ > ^ argv)|
-|[编译器警告（等级 1）C4835](compiler-warning-level-1-c4835.md)|'*变量*： 在主机程序集中首次执行托管的代码之后，将不会运行导出的数据的初始值设定项|
+|[编译器警告 （等级 1） C4829](compiler-warning-level-1-c4829.md)|函数 main 的参数可能不正确。 请考虑 int main (platform:: array\<platform:: string ^ > ^ argv)|
+|[编译器警告 （等级 1） C4835](compiler-warning-level-1-c4835.md)|'*变量*： 在主机程序集中首次执行托管的代码之后，将不会运行导出的数据的初始值设定项|
 |编译器警告 （等级 C4837|检测到三元祖:??*字符*替换为*字符*|
-|[编译器警告（等级 1）C4838](compiler-warning-level-1-c4838.md)|从转换*type_1*到*type_2*需要收缩转换|
+|[编译器警告 （等级 1） C4838](compiler-warning-level-1-c4838.md)|从转换*type_1*到*type_2*需要收缩转换|
 |[编译器警告 （等级 3） C4839](compiler-warning-level-3-c4839.md)|类的非标准用法*类型*作为可变参数函数的参数|
 |[编译器警告 （等级 C4840](compiler-warning-level-4-c4840.md)|类的不可移植用法*类型*作为可变参数函数的参数|
 |编译器警告 （等级 C4841|使用非标准扩展： offsetof 中使用的复合成员指示符|
@@ -206,30 +206,30 @@ ms.locfileid: "58356252"
 | 编译器警告 （等级 C4847 | '\_\_declspec (无\_init\_全部) 只能应用到一个函数、 类类型或本地变量： 忽略 |
 | 编译器警告 （等级 1） C4848 | 支持标准属性为无\_唯一\_地址的 C + + 17 中及更早版本是供应商扩展 |
 |[编译器警告 （等级 C4866](c4866.md)| 编译器不会强制从左到右计算顺序调用*operator_name*|
-|[编译器警告 （错误） C4867](compiler-warning-c4867.md)|'*函数*： 函数调用缺少参数列表; 使用'*调用*以创建指向成员的指针|
+|[编译器警告 C4867 （错误）](compiler-warning-c4867.md)|'*函数*： 函数调用缺少参数列表; 使用'*调用*以创建指向成员的指针|
 |[编译器警告 （等级 C4868](compiler-warning-c4868.md)|'_文件_(*line_number*) 编译器不会强制在括号内的初始化列表中的从左到右计算顺序|
 |编译器警告 （等级 2） C4872|浮点编译在 concurrency:: parallel_for_each 的调用关系图时检测到的零除以: '*位置*|
 |编译器警告 （等级 1） C4880|从执行强制转换 const *type_1*到*type_2*： 转换 constness 从指针或引用可能会导致在 amp 限制函数中未定义的行为|
 |编译器警告 （等级 C4881|构造函数和/或析构函数将不会调用为 tile_static 变量*变量*|
 |编译器警告 （等级 1） C4882|将带非常量调用运算符函子传递给 concurrency:: parallel_for_each 已弃用|
 |[编译器警告 C4900](compiler-warning-level-1-c4900.md)|之间的 Il 不匹配*tool1*版本*version1*'和'*tool2*版本*version2*|
-|[编译器警告（等级 1）C4905](compiler-warning-level-1-c4905.md)|宽字符串强制转换为“LPSTR”|
-|[编译器警告（等级 1）C4906](compiler-warning-level-1-c4906.md)|字符串强制转换为“LPWSTR”|
+|[编译器警告 （等级 1） C4905](compiler-warning-level-1-c4905.md)|宽字符串强制转换为“LPSTR”|
+|[编译器警告 （等级 1） C4906](compiler-warning-level-1-c4906.md)|字符串强制转换为“LPWSTR”|
 |[编译器警告 （等级 1） C4910](compiler-warning-level-1-c4910.md)|\<标识符 >: __declspec （dllexport） 和 extern 在显式实例化上不兼容|
 |[编译器警告 （等级 1） C4912](compiler-warning-level-1-c4912.md)|'*特性*： 特性有未定义在嵌套 UDT 上的行为|
 |[编译器警告 （等级 C4913](compiler-warning-level-4-c4913.md)|存在用户定义的二进制运算符“,”，但没有重载可以转换所有操作数，使用了默认的内置二进制运算符“,”|
 |编译器警告 （等级 1） C4916|为具有 dispid，'*说明*： 必须通过接口引入|
-|[编译器警告（等级 1）C4917](compiler-warning-level-1-c4917.md)|'*声明符*: GUID 只能与类、 接口或命名空间相关联|
+|[编译器警告 （等级 1） C4917](compiler-warning-level-1-c4917.md)|'*声明符*: GUID 只能与类、 接口或命名空间相关联|
 |[编译器警告 （等级 C4918](compiler-warning-level-4-c4918.md)|'*字符*： 杂注优化列表中的字符无效|
 |[编译器警告 （等级 1） C4920](compiler-warning-level-1-c4920.md)|枚举的枚举成员 member_1 = value_1 已在 enum enum 中视为 member_2 = value_2|
 |编译器警告 （等级 3） C4921|'*描述*： 属性值*属性*不应累积指定|
 |[编译器警告 （等级 1） C4925](compiler-warning-level-1-c4925.md)|'*方法*： 不能从脚本调用调度接口方法|
 |[编译器警告 （等级 1） C4926](compiler-warning-level-1-c4926.md)|'*标识符*： 已定义符号： 忽略特性|
-|[编译器警告（等级 1）C4927](compiler-warning-level-1-c4927.md)|转换非法;隐式应用了多个用户定义的转换|
-|[编译器警告（等级 1）C4928](compiler-warning-level-1-c4928.md)|副本初始化非法；隐式应用了多个用户定义的转换|
-|[编译器警告（等级 1）C4929](compiler-warning-level-1-c4929.md)|'*文件*： 类型库包含联合; 忽略 embedded_idl 限定符|
-|[编译器警告（等级 1）C4930](compiler-warning-level-1-c4930.md)|'*原型*： 未调用原型函数 （是否有意用变量定义？）|
-|[编译器警告（等级 4）C4931](compiler-warning-level-4-c4931.md)|我们假定类型库是为 number 位指针生成的|
+|[编译器警告 （等级 1） C4927](compiler-warning-level-1-c4927.md)|转换非法;隐式应用了多个用户定义的转换|
+|[编译器警告 （等级 1） C4928](compiler-warning-level-1-c4928.md)|副本初始化非法；隐式应用了多个用户定义的转换|
+|[编译器警告 （等级 1） C4929](compiler-warning-level-1-c4929.md)|'*文件*： 类型库包含联合; 忽略 embedded_idl 限定符|
+|[编译器警告 （等级 1） C4930](compiler-warning-level-1-c4930.md)|'*原型*： 未调用原型函数 （是否有意用变量定义？）|
+|[编译器警告 （等级 C4931](compiler-warning-level-4-c4931.md)|我们假定类型库是为 number 位指针生成的|
 |[编译器警告 （等级 C4932](compiler-warning-level-4-c4932.md)|__identifier (*标识符*) 和\_标识符 （_i) (*标识符*) 无法区分|
 |编译器警告 （等级 1） C4934|__delegate （multicast） 已弃用，请使用\__delegate 改为|
 |[编译器警告 （等级 1） C4935](compiler-warning-level-1-c4935.md)|程序集访问说明符修改从*访问*|
@@ -238,11 +238,11 @@ ms.locfileid: "58356252"
 |[编译器警告 （等级 C4938](compiler-warning-level-4-c4938.md)|'*var*':浮点 reduction 变量可能会导致不一致的结果在 /fp: strict 或 #pragma fenv_access|
 |[编译器警告 C4939](compiler-warning-level-1-c4939.md)|#pragma vtordisp 已被否决，并将在 Visual C++ 将来的版本移除|
 |[编译器警告 （等级 1） C4944](compiler-warning-level-1-c4944.md)|*符号*： 不能从导入符号*assembly1*： 作为*符号*已存在于当前作用域|
-|[编译器警告（等级 1）C4945](compiler-warning-level-1-c4945.md)|'*符号*： 不能从导入符号*assembly1*： 作为*符号*具有已导入从另一个程序集*assembly2*'|
-|[编译器警告（等级 1）C4946](compiler-warning-level-1-c4946.md)|reinterpret_cast 在相关类之间使用:*class1*和*class2*|
+|[编译器警告 （等级 1） C4945](compiler-warning-level-1-c4945.md)|'*符号*： 不能从导入符号*assembly1*： 作为*符号*具有已导入从另一个程序集*assembly2*'|
+|[编译器警告 （等级 1） C4946](compiler-warning-level-1-c4946.md)|reinterpret_cast 在相关类之间使用:*class1*和*class2*|
 |[编译器警告 （等级 1） C4947](compiler-warning-level-1-c4947.md)|'*type_or_member*： 标记为已过时|
-|[编译器警告（等级 2）C4948](compiler-warning-level-2-c4948.md)|返回类型*访问器*与相应的 setter 的最后一个参数类型不匹配|
-|[编译器警告（等级 1 和等级 4）C4949](compiler-warning-level-1-and-level-4-c4949.md)|杂注 managed 和 unmanaged 是仅当使用编译时，才有意义 / clr [: 选项]|
+|[编译器警告 （等级 2） C4948](compiler-warning-level-2-c4948.md)|返回类型*访问器*与相应的 setter 的最后一个参数类型不匹配|
+|[编译器警告 （等级 1 和 4） C4949](compiler-warning-level-1-and-level-4-c4949.md)|杂注 managed 和 unmanaged 是仅当使用编译时，才有意义 / clr [: 选项]|
 |[编译器警告 （等级 1，错误） C4950](compiler-warning-c4950.md)|'*type_or_member*： 标记为已过时|
 |[编译器警告 （等级 1） C4951](compiler-warning-level-1-c4951.md)|'*函数*已编辑过收集配置文件数据后，没有使用函数配置文件数据|
 |[编译器警告 （等级 1） C4952](compiler-warning-level-1-c4952.md)|'*函数*： 在程序数据库中找到的任何配置文件数据'*pgd_file*|
@@ -257,8 +257,8 @@ ms.locfileid: "58356252"
 |[编译器警告 （等级 1） C4961](compiler-warning-c4961.md)|没有将任何配置文件数据合并到“.pgd file”，因此已禁用按配置文件优化|
 |[编译器警告 （等级 C4962](compiler-warning-c4962.md)|'*函数*:按配置文件已禁用优化，原因在于优化导致了配置文件数据变得不一致|
 |编译器警告 （等级 1） C4963|'*说明*： 没有配置文件数据找到; 检测的生成中使用不同的编译器选项|
-|[编译器警告（等级 1）C4964](compiler-warning-level-1-c4964.md)|未不指定任何优化选项;将不会收集个人资料信息|
-|[编译器警告（等级 1）C4965](compiler-warning-level-1-c4965.md)|整数 0; 的隐式装箱请使用 nullptr 或显式强制转换|
+|[编译器警告 （等级 1） C4964](compiler-warning-level-1-c4964.md)|未不指定任何优化选项;将不会收集个人资料信息|
+|[编译器警告 （等级 1） C4965](compiler-warning-level-1-c4965.md)|整数 0; 的隐式装箱请使用 nullptr 或显式强制转换|
 |编译器警告 （等级 1） C4966|'*函数*具有 __code_seg 批注具有不受支持的段名称，忽略批注|
 |编译器警告 C4970|委托构造函数： 因为忽略目标对象*类型*' 是静态的|
 |编译器警告 （等级 1） C4971|参数顺序：\<目标对象 >，\<目标函数 > 委托构造函数已被弃用，请使用\<目标函数 >，\<目标对象 ="">|
@@ -274,11 +274,11 @@ ms.locfileid: "58356252"
 |编译器警告 （等级 3） C4990|Warbird:*消息*|
 |编译器警告 （等级 3） C4991|Warbird： 函数*函数*标记为 __forceinline 未内联，因为已被内联方的保护级别高于父级|
 |编译器警告 （等级 3） C4992|Warbird： 函数*函数*标记为 __forceinline 未内联，因为它包含无法保护的内联程序集|
-|[编译器警告（等级 3）C4995](compiler-warning-level-3-c4995.md)|'*函数*： 名称被标记为不推荐使用的 #pragma|
-|[编译器警告（等级 3）C4996](compiler-warning-level-3-c4996.md)|'*描述*:*消息*|
+|[编译器警告 （等级 3） C4995](compiler-warning-level-3-c4995.md)|'*函数*： 名称被标记为不推荐使用的 #pragma|
+|[编译器警告 （等级 3） C4996](compiler-warning-level-3-c4996.md)|'*描述*:*消息*|
 |[编译器警告 （等级 1） C4997](compiler-warning-level-1-c4997.md)|'*类*： 组件类不实现 COM 接口或伪接口|
 |编译器警告 （等级 1） C4998|预期失败：*期望*(*值*)|
-|[编译器警告 C4999](compiler-warning-level-1-c4999.md)|请未知警告选择技术支持命令的 Visual c + + 帮助菜单上，或打开技术支持帮助文件了解详细信息|
+|[编译器警告 C4999](compiler-warning-level-1-c4999.md)|未知警告请选择视觉对象上的技术支持命令C++帮助菜单中，或打开技术支持帮助文件了解详细信息|
 |编译器警告 C5022|'*类型*： 指定了多个移动构造函数|
 |编译器警告 C5023|'*类型*： 指定的多个移动赋值运算符|
 |编译器警告 （等级 C5024|'*类型*： 移动构造函数被隐式定义为已删除|
@@ -286,7 +286,7 @@ ms.locfileid: "58356252"
 |编译器警告 （等级 1 和 4） C5026|'*类型*： 移动构造函数被隐式定义为已删除|
 |编译器警告 （等级 1 和 4） C5027|'*类型*： 移动赋值运算符已隐式定义为已删除|
 |编译器警告 （等级 1） C5028|'*名称*:在上一个声明中指定的对齐方式 (*数*) 定义中未指定|
-|编译器警告 （等级 C5029|使用了非标准扩展： c + + 中的对齐属性适用于变量、 数据成员和仅标记类型|
+|编译器警告 （等级 C5029|使用了非标准扩展： 对齐方式中的属性C++适用于变量、 数据成员和仅标记类型|
 |编译器警告 （等级 3） C5030|属性*特性*无法识别|
 |编译器警告 （等级 C5031|#pragma warning （pop): 可能不匹配，弹出推入不同文件的警告状态|
 |编译器警告 （等级 C5032|检测到 #pragma warning (push) 测试 warning （没有相应 #pragma pop)|
@@ -299,7 +299,7 @@ ms.locfileid: "58356252"
 |编译器警告 （等级 C5039|'*函数*： 指针或引用可能引发函数传递到-EHc 下 extern C 函数。 如果此函数将引发异常，则可能会出现未定义的行为。|
 |编译器警告 （等级 3） C5040|动态异常规范是有效的仅在 C + + 14 和更早版本;将视为 noexcept （false）|
 |编译器警告 （等级 1） C5041|'*定义*： 对 constexpr 静态数据成员的外部定义，则不需要和在 C + + 17 中弃用|
-|编译器警告 （等级 3） C5042|'*声明*： 在块范围内的函数声明不能在标准 c + + 中为指定的内联; 删除内联说明符|
+|编译器警告 （等级 3） C5042|'*声明*： 在块范围内的函数声明不能为标准中的指定内联C++; 中删除内联说明符|
 |编译器警告 （等级 2） C5043|'*规范*： 异常规范与前面的声明不匹配|
 |编译器警告 （等级 C5044|命令行选项的参数*选项*指向的路径*路径*不存在|
 |[编译器警告 C5045](c5045.md)|为内存负载如果 /Qspectre 开关指定，编译器将插入 Spectre 缓解措施|
@@ -316,3 +316,8 @@ ms.locfileid: "58356252"
 | 编译器警告 （等级 1） C5105 | 生成定义的宏扩展具有未定义的行为 |
 | 编译器警告 （等级 1） C5106 | 重新定义为不同的参数名称的宏 |
 | 编译器警告 （等级 1） C5107 | 缺少终止 '*char*字符 |
+
+## <a name="see-also"></a>请参阅
+
+[C /C++编译器和生成工具错误和警告](../compiler-errors-1/c-cpp-build-errors.md) \
+[编译器警告 C4000-C5999](compiler-warnings-c4000-c5999.md)

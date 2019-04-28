@@ -63,11 +63,11 @@ helpviewer_keywords:
 - CDaoWorkspace [MFC], m_pDAOWorkspace
 ms.assetid: 64f60de6-4df1-4d4a-a65b-c489b5257d52
 ms.openlocfilehash: 6aa404c5eb543db198043dba68d55a4b925739c8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57263450"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62253704"
 ---
 # <a name="cdaoworkspace-class"></a>CDaoWorkspace 类
 
@@ -239,7 +239,7 @@ CDaoWorkspace();
 
 ### <a name="remarks"></a>备注
 
-后构造 c + + 对象时，有两个选项：
+在构造C++对象，具有两个选项：
 
 - 调用对象的[打开](#open)成员函数将打开默认工作区，或者若要打开的工作区集合中的现有对象。
 
@@ -310,7 +310,7 @@ static void PASCAL CompactDatabase(
 ### <a name="parameters"></a>参数
 
 *lpszSrcName*<br/>
-对现有的名称已关闭数据库。 它可以完整路径和文件名，如"c:\\\MYDB。MDB"。 如果文件名的扩展名，则必须指定它。 如果网络支持的统一命名约定 (UNC)，您还可以指定网络路径，如"\\\\\\\MYSERVER\\\MYSHARE\\\MYDIR\\\MYDB。MDB"。 (双反斜杠需要在路径的字符串，因为"\\"c + + 转义符。)
+对现有的名称已关闭数据库。 它可以完整路径和文件名，如"c:\\\MYDB。MDB"。 如果文件名的扩展名，则必须指定它。 如果网络支持的统一命名约定 (UNC)，您还可以指定网络路径，如"\\\\\\\MYSERVER\\\MYSHARE\\\MYDIR\\\MYDB。MDB"。 (双反斜杠需要在路径的字符串，因为"\\"是C++转义符。)
 
 *lpszDestName*<br/>
 要创建压缩的数据库的完整路径。 此外可以指定与作为网络路径*lpszSrcName*。 不能使用*lpszDestName*参数，以指定相同数据库文件作为*lpszSrcName*。
@@ -718,7 +718,7 @@ virtual void Open(LPCTSTR lpszName = NULL);
 
 `Open` 将工作区对象放入打开状态，如果它已被初始化，不能应用程序还会初始化数据库引擎。
 
-尽管许多`CDaoWorkspace`成员函数仅在工作区打开后调用，以下成员函数，对数据库引擎，可构造的 c + + 对象，但之前调用后`Open`:
+尽管许多`CDaoWorkspace`成员函数只能在调用后打开工作区，以下成员函数，它们对数据库引擎的操作，是可用后的构造C++对象之前调用`Open`:
 
 ||||
 |-|-|-|
@@ -737,7 +737,7 @@ static void PASCAL RepairDatabase(LPCTSTR lpszName);
 ### <a name="parameters"></a>参数
 
 *lpszName*<br/>
-路径和文件名的现有 Microsoft Jet 引擎的数据库文件。 如果省略路径，搜索仅在当前目录。 如果您的系统支持的统一命名约定 (UNC)，您还可以指定网络路径，例如:"\\\\\\\MYSERVER\\\MYSHARE\\\MYDIR\\\MYDB。MDB"。 (因为中的路径字符串需要双反斜杠"\\"c + + 转义符。)
+路径和文件名的现有 Microsoft Jet 引擎的数据库文件。 如果省略路径，搜索仅在当前目录。 如果您的系统支持的统一命名约定 (UNC)，您还可以指定网络路径，例如:"\\\\\\\MYSERVER\\\MYSHARE\\\MYDIR\\\MYDB。MDB"。 (双反斜杠中的路径字符串需要，因为"\\"是C++转义符。)
 
 ### <a name="remarks"></a>备注
 

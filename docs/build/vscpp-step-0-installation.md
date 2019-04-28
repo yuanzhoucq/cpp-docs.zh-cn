@@ -7,11 +7,11 @@ ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
 ms.openlocfilehash: 2c2bed4063194bdc3c0f3fbc405be6bf9a4031e7
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58870775"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62315114"
 ---
 # <a name="install-c-support-in-visual-studio"></a>在 Visual Studio 中安装 C++ 支持
 
@@ -21,7 +21,7 @@ ms.locfileid: "58870775"
 
 ## <a name="visual-studio-2019-installation"></a>Visual Studio 2019 安装
 
-欢迎使用 Visual Studio 2019 ！ 在此版本中，很容易选择并安装所需的功能。 并且由于其降低的最小内存需求量，安装速度快、 系统影响更小。
+欢迎使用 Visual Studio 2019！ 在此版本中，可轻松选择并仅安装所需功能。 并且由于其最小占用减小，因此其安装速度快且对系统的影响极小。
 
 > [!NOTE]
 > 本主题适用于 Windows 上的 Visual Studio 的安装。 [Visual Studio Code](https://code.visualstudio.com/)是一个轻型的跨平台开发环境，在 Windows、 Mac 和 Linux 系统上运行。 在 Microsoft [C /C++用于 Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools)扩展插件支持 IntelliSense、 调试、 代码格式设置、 自动完成功能。 Visual Studio for Mac 不支持 Microsoft C++，但.NET 语言和跨平台开发支持。 有关安装说明，请参阅[安装 Visual Studio for Mac](/visualstudio/mac/installation/)。
@@ -42,18 +42,18 @@ ms.locfileid: "58870775"
 
 1. 释放空间。 通过运行磁盘清理应用程序等方式，从 %SystemDrive% 删除不需要的文件和应用程序。
 
-有关使用 Visual Studio 2019 运行以前版本的 Visual Studio 并行问题，请参阅[Visual Studio 2019 平台目标以及兼容性](/visualstudio/releases/2019/compatibility/)页。
+有关使用 Visual Studio 2019 并排运行 Visual Studio 先前版本的问题，请参阅 [Visual Studio 2019 平台目标和兼容性](/visualstudio/releases/2019/compatibility/)页面。
 
 ### <a name="step-2---download-visual-studio"></a>第 2 步 - 下载 Visual Studio
 
-接下来，下载 Visual Studio 引导程序文件。 为此，请选择下面的按钮，选择你想选择的 Visual studio 的版本**保存**，然后选择**打开文件夹**。
+接下来，下载 Visual Studio 引导程序文件。 为此，请选择下面的按钮，选择所需的 Visual Studio 版本，选择“保存”，然后选择“打开文件夹”。
 
  > [!div class="button"]
  > [下载 Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2019+rc)
 
 ### <a name="step-3---install-the-visual-studio-installer"></a>第 3 步 - 卸载 Visual Studio 安装程序
 
-运行引导程序文件以安装 Visual Studio 安装程序。 这个新的轻型安装程序包括来安装和自定义 Visual Studio 所需的一切。
+运行引导程序文件以安装 Visual Studio 安装程序。 这个新的轻型安装程序包括安装和自定义 Visual Studio 所需的一切。
 
 1. 在“下载”文件夹中，双击与下列文件之一匹配或类似的引导程序文件：
 
@@ -61,17 +61,17 @@ ms.locfileid: "58870775"
    * 对于 Visual Studio Professional，请运行 **vs_professional.exe**
    * 对于 Visual Studio Enterprise，请运行 **vs_enterprise.exe**
 
-   如果收到用户帐户控制通知，请选择**是**。
+   如果收到用户帐户控制通知，请选择“是”。
 
-1. 我们会要求确认 Microsoft [许可条款](https://visualstudio.microsoft.com/license-terms/)和 Microsoft [隐私声明](https://privacy.microsoft.com/privacystatement)。 选择**继续**。
+1. 我们会要求确认 Microsoft [许可条款](https://visualstudio.microsoft.com/license-terms/)和 Microsoft [隐私声明](https://privacy.microsoft.com/privacystatement)。 选择“继续”。
 
-### <a name="step-4---choose-workloads"></a>步骤 4-选择工作负荷
+### <a name="step-4---choose-workloads"></a>第 4 步 - 选择工作负载
 
 安装程序安装后，可以使用它通过选择自定义安装*工作负荷*，或功能集，所需。 操作方法如下。
 
 1. 在“安装 Visual Studio”屏幕中找到所需的工作负载。
 
-   ![Visual Studio 2019：安装工作负荷](../get-started/media/vs-installer-workloads.png)
+   ![Visual Studio 2019：安装工作负载](../get-started/media/vs-installer-workloads.png)
 
    Core 的C++支持中，选择"使用的桌面开发C++"工作负荷。 它附带默认核心编辑器，该编辑器针对超过 20 种语言提供基本代码编辑支持，能够打开和编辑任意文件夹中的代码（而无需使用项目），还提供集成的源代码管理。
 
@@ -84,19 +84,19 @@ ms.locfileid: "58870775"
     接下来，会出现多个显示 Visual Studio 安装进度的状态屏幕。
 
 > [!TIP]
-> 在安装之后，可以随时安装最初未安装的工作负荷或组件。 如果已打开 Visual Studio，请转到“工具” > “获取工具和功能...”，这会打开 Visual Studio 安装程序。 或者，从“开始”菜单打开“Visual Studio 安装程序”。 在这里，可以选择的工作负荷或你想要安装的组件。 然后，选择**修改**。
+> 在安装之后，可以随时安装最初未安装的工作负荷或组件。 如果已打开 Visual Studio，请转到“工具” > “获取工具和功能...”，这会打开 Visual Studio 安装程序。 或者，从“开始”菜单打开“Visual Studio 安装程序”。 在此处可以选择要安装的工作负载或组件。 然后，选择“修改”。
 
-## <a name="step-5---choose-individual-components-optional"></a>步骤 5-选择各个组件 （可选）
+## <a name="step-5---choose-individual-components-optional"></a>第 5 步 - 选择各个组件（可选）
 
-如果不想要使用的工作负载功能来自定义 Visual Studio 安装，或者想要添加更多组件不是工作负载安装，就可以做到安装或添加各个组件从**各个组件**选项卡。选择你想要，然后按照提示进行操作。
+如果不想使用工作负载功能来自定义 Visual Studio 安装，或者想要添加比工作负载安装更多的组件，可通过从“各个组件”选项卡上安装或添加各个组件来完成此操作。选择所需组件，然后按照提示进行操作。
 
-  ![Visual Studio 2019-安装各个组件](../get-started/media/vs-installer-individual-components.png "安装 Visual Studio 各个组件")
+  ![Visual Studio 2019 - 安装各个组件](../get-started/media/vs-installer-individual-components.png "安装 Visual Studio 各个组件")
 
 ## <a name="step-6---install-language-packs-optional"></a>第 6 步 - 安装语言包（可选）
 
-默认情况下，安装程序首次运行时会尝试匹配操作系统语言。 若要在所选的语言安装 Visual Studio，选择**语言包**从 Visual Studio 安装程序，选项卡，然后按照提示进行操作。
+默认情况下，安装程序首次运行时会尝试匹配操作系统语言。 若要以所选语言安装 Visual Studio，请从 Visual Studio 安装程序中选择“语言包”选项卡，然后按照提示进行操作。
 
-  ![Visual Studio 2019-安装语言包](../get-started/media/vs-installer-language-packs.png "安装 Visual Studio 语言包")
+  ![Visual Studio 2019 - 安装语言包](../get-started/media/vs-installer-language-packs.png "安装 Visual Studio 语言包")
 
 ### <a name="change-the-installer-language-from-the-command-line"></a>从命令行更改安装程序语言
 
@@ -104,24 +104,24 @@ ms.locfileid: "58870775"
 
 ### <a name="step-7---change-the-installation-location-optional"></a>第 7 步 - 更改安装位置（可选）
 
-系统驱动器上，可以减少 Visual Studio 的安装空间占用量。 可以选择将下载缓存、共享组件、SDK 和工具移动到不同驱动器，并将 Visual Studio 安装在其运行速度最快的驱动器上。
+可减少系统驱动器上 Visual Studio 的安装占用。 可以选择将下载缓存、共享组件、SDK 和工具移动到不同驱动器，并将 Visual Studio 安装在其运行速度最快的驱动器上。
 
-  ![Visual Studio 2019-更改安装位置](../get-started/media/vs-installer-installation-locations.png "更改安装位置")
+  ![Visual Studio 2019 - 更改安装位置](../get-started/media/vs-installer-installation-locations.png "更改安装位置")
 
 > [!IMPORTANT]
-> 仅当首次安装 Visual Studio 时，可以选择一个不同的驱动器。 如果你已安装它，并想要更改驱动器，必须卸载 Visual Studio，然后重新安装它。
+> 仅当首次安装 Visual Studio 时，才可选择其他驱动器。 如果已安装 Visual Studio 并要更改驱动器，则必须先将其卸载然后再重新安装。
 
 ## <a name="step-8---start-developing"></a>第 8 步 - 开始开发
 
-1. Visual Studio 安装完成后，选择**启动**按钮以开始使用 Visual Studio 进行开发。
+1. 在 Visual Studio 安装完成后，选择“启动”按钮，开始使用 Visual Studio 进行开发。
 
 1. 在“开始”窗口上，选择“创建新项目”。
 
-1. 在搜索框中，输入你想要创建以查看可用模板列表的应用程序的类型。 模板列表取决于在安装期间选择的工作负载。 若要查看不同的模板，请选择不同的工作负荷。
+1. 在搜索框中，输入要创建的应用类型，查看可用模板列表。 模板列表取决于在安装期间选择的工作负载。 若要查看其他模板，请选择其他工作负载。
 
-   此外可以通过筛选特定编程语言搜索**语言**下拉列表。 可以使用筛选**平台**列表和**项目类型**列出，请过。
+   此外，还可使用“语言”下拉列表筛选搜索特定编程语言。 也可使用“平台”列表和“项目类型”列表进行筛选。
 
-1. Visual Studio 会打开新的项目，然后便可以对代码 ！
+1. Visual Studio 会打开新的项目，然后便可开始编码！
 
 ::: moniker-end
 
@@ -129,7 +129,7 @@ ms.locfileid: "58870775"
 
 ## <a name="visual-studio-2017-installation"></a>Visual Studio 2017 安装
 
-在 Visual Studio 2017 中，很容易选择并安装所需的功能。 并且由于其降低的最小内存需求量，安装速度快、 系统影响更小。
+在 Visual Studio 2017 中，很容易选择并安装所需的功能。 并且由于其最小占用减小，因此其安装速度快且对系统的影响极小。
 
 ### <a name="prerequisites"></a>系统必备
 

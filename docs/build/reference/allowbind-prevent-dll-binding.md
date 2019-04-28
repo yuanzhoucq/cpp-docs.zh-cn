@@ -13,11 +13,11 @@ helpviewer_keywords:
 - DLLs [C++], preventing binding
 ms.assetid: 30e37e24-12e4-407e-988a-39d357403598
 ms.openlocfilehash: bd9976e434441d2480386ee6fa3d0315fd8d2ef5
-ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "57818838"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62295137"
 ---
 # <a name="allowbind-prevent-dll-binding"></a>/ALLOWBIND（禁止 DLL 绑定）
 
@@ -33,7 +33,7 @@ ms.locfileid: "57818838"
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此链接器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[Visual Studio 中的设置 c + + 编译器和生成属性](../working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
 
 1. 展开**配置属性**，**链接器**，然后选择**命令行**。
 
@@ -45,7 +45,7 @@ ms.locfileid: "57818838"
 
 ## <a name="see-also"></a>请参阅
 
-[MSVC 链接器引用](linking.md)<br/>
+[MSVC 链接器参考](linking.md)<br/>
 [MSVC 链接器选项](linker-options.md)<br/>
 [执行 bindimage 操作函数](/windows/desktop/api/imagehlp/nf-imagehlp-bindimage)<br/>
 [BindImageEx 函数](/windows/desktop/api/imagehlp/nf-imagehlp-bindimageex)

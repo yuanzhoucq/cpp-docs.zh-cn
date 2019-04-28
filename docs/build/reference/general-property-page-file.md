@@ -6,11 +6,11 @@ f1_keywords:
 - VC.Project.VCFileConfiguration.Tool
 ms.assetid: 26e3711e-9e7d-4e8d-bc4c-2474538efdad
 ms.openlocfilehash: 66e26cabf5af85091000e6cda144898789c581df
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57824464"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62292219"
 ---
 # <a name="general-property-page-file"></a>“常规”属性页（文件）
 
@@ -28,10 +28,10 @@ ms.locfileid: "57824464"
 
    若要以编程方式访问此属性，请参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCFileConfiguration.Tool%2A>。
 
-有关如何访问的信息**常规**下的属性页**配置属性**节点，请参阅[Visual Studio 中的设置 c + + 编译器和生成属性](../working-with-project-properties.md)。
+有关如何访问的信息**常规**下的属性页**配置属性**节点，请参阅[设置C++编译器和生成的属性，在 Visual Studio](../working-with-project-properties.md).
 
-对于非 Windows 项目，请参阅[Linux c + + 属性页引用](../../linux/prop-pages-linux.md)。
+对于非 Windows 项目，请参阅[LinuxC++属性页引用](../../linux/prop-pages-linux.md)。
 
 ## <a name="see-also"></a>请参阅
 
-[C + + 项目属性页引用](property-pages-visual-cpp.md)
+[C++项目属性页引用](property-pages-visual-cpp.md)

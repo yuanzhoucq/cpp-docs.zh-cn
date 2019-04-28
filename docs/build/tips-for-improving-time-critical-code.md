@@ -31,11 +31,11 @@ helpviewer_keywords:
 - heap allocation, time-critical code performance
 ms.assetid: 3e95a8cc-6239-48d1-9d6d-feb701eccb54
 ms.openlocfilehash: 97a9a54be1b322edfe8cfeca84e03f9a6766b8fe
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57824441"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62314710"
 ---
 # <a name="tips-for-improving-time-critical-code"></a>提高时间关键代码的技巧
 
@@ -105,7 +105,7 @@ CPU 缓存命中可以花费程序 10 20 个时钟周期。 外部缓存命中�
 
 ##  <a name="_core_mfc_and_class_libraries"></a> MFC 和类库
 
-Microsoft 基础类 (MFC) 可以在很大程度上简化代码的编写。 当编写时间关键代码时，应该注意一些类中的固有系统开销。 检查时间关键代码使用的 MFC 代码，查看它是否满足性能要求。 下面的列表标识了应该注意的 MFC 类和函数：
+Microsoft 基础类 (MFC) 可以在很大程度上简化代码的编写。 当编写时间关键代码时，应该注意一些类中的固有系统开销。 检查时间关键代码使用的 MFC 代码，查看它是否满足性能需求。 下面的列表标识了应该注意的 MFC 类和函数：
 
 - `CString` MFC 调用 C 运行时库分配的内存[CString](../atl-mfc-shared/reference/cstringt-class.md)动态。 一般而言，`CString` 与其他任何动态分配的字符串一样有效。 与任何动态分配的字符串一样，它也有动态分配和释放的系统开销。 堆栈上的简单 `char` 数组通常可以用于相同的目的并且更快。 不要使用 `CString` 存储常数字符串。 请改用 `const char *`。 使用 `CString` 对象执行的任何操作都有一些系统开销。 使用运行时库[字符串函数](../c-runtime-library/string-manipulation-crt.md)可能会更快。
 

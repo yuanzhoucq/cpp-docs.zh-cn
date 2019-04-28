@@ -8,15 +8,15 @@ helpviewer_keywords:
 - libraries [C++], mixed assemblies
 ms.assetid: 1229595c-9e9d-414d-b018-b4e4c727576d
 ms.openlocfilehash: 42116c09d5b31cf669eb6d5d1e75eae60b2610a7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50474732"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62312003"
 ---
 # <a name="library-support-for-mixed-assemblies"></a>混合程序集的库支持
 
-Visual c + + 支持 c + + 标准库，C 运行时库 (CRT) 的使用 ATL 和 MFC 与编译的应用程序[/clr （公共语言运行时编译）](../build/reference/clr-common-language-runtime-compilation.md)。 这样，使用这些库使用.NET Framework 的功能的现有应用程序。
+VisualC++支持使用C++标准库，C 运行时库 (CRT)、 ATL 和 MFC 与编译的应用程序[/clr （公共语言运行时编译）](../build/reference/clr-common-language-runtime-compilation.md)。 这样，使用这些库使用.NET Framework 的功能的现有应用程序。
 
 > [!IMPORTANT]
 > **/Clr: pure**并 **/clr: safe**编译器选项在 Visual Studio 2015 中弃用，在 Visual Studio 2017 中不受支持。
@@ -27,11 +27,11 @@ Visual c + + 支持 c + + 标准库，C 运行时库 (CRT) 的使用 ATL 和 MFC
 
 这一支持提供了多个相关优势：
 
-- CRT 和 c + + 标准库可供混合代码。 CRT 和 c + + 标准库提供不是可验证;从根本上讲，你的调用仍传送到相同的 CRT 和 c + + 标准库使用从本机代码。
+- CRT 和C++标准库可供混合代码。 CRT 和C++标准库提供的不是可验证;从根本上讲，你的调用仍传送到相同的 CRT 和C++为您的标准库使用从本机代码。
 
 - 正确统一的异常处理在混合映像中。
 
-- 混合映像中的 c + + 变量的静态初始化。
+- 静态初始化的C++混合映像中的变量。
 
 - 支持在托管代码中的每个 AppDomain 和每个进程变量。
 

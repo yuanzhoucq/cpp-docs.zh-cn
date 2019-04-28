@@ -3,11 +3,11 @@ title: x64 堆栈使用情况
 ms.date: 12/17/2018
 ms.assetid: 383f0072-0438-489f-8829-cca89582408c
 ms.openlocfilehash: 902e4304ac124be46c6edf0860118dc522b34890
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57425596"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62314805"
 ---
 # <a name="x64-stack-usage"></a>x64 堆栈使用情况
 
@@ -47,9 +47,9 @@ ms.locfileid: "57425596"
 
 ## <a name="malloc-alignment"></a>malloc 对齐
 
-[malloc](../c-runtime-library/reference/malloc.md)保证返回的存储具有基础对齐方式，且任何对象分配的内存量无法容纳，适当对齐的内存。 一个*基本对齐*是小于或等于而无需对齐方式规范实现支持的最大对齐对齐方式。 (在 Visual c + +，这是所需的对齐方式`double`，或 8 个字节。 在针对 64 位平台的代码中，是 16 个字节。）例如，将支持四个字节或更小的任何对象的边界上对齐 4 字节分配。
+[malloc](../c-runtime-library/reference/malloc.md)保证返回的存储具有基础对齐方式，且任何对象分配的内存量无法容纳，适当对齐的内存。 一个*基本对齐*是小于或等于而无需对齐方式规范实现支持的最大对齐对齐方式。 (在视觉对象C++，这是所需的对齐方式`double`，或 8 个字节。 在针对 64 位平台的代码中，是 16 个字节。）例如，将支持四个字节或更小的任何对象的边界上对齐 4 字节分配。
 
-Visual c + + 允许具有*扩展对齐方式*，也称为*过对齐*类型。 例如，SSE 类型[__m128](../cpp/m128.md)并`__m256`，并通过使用声明的类型`__declspec(align( n ))`其中`n`大于 8、 具有扩展对齐方式。 不保证适用于需要扩展对齐方式的对象的边界上的内存对齐`malloc`。 若要为过对齐类型分配内存，请使用[_aligned_malloc](../c-runtime-library/reference/aligned-malloc.md)和相关函数。
+VisualC++允许具有*扩展对齐方式*，也称为*过对齐*类型。 例如，SSE 类型[__m128](../cpp/m128.md)并`__m256`，并通过使用声明的类型`__declspec(align( n ))`其中`n`大于 8、 具有扩展对齐方式。 不保证适用于需要扩展对齐方式的对象的边界上的内存对齐`malloc`。 若要为过对齐类型分配内存，请使用[_aligned_malloc](../c-runtime-library/reference/aligned-malloc.md)和相关函数。
 
 ## <a name="alloca"></a>alloca
 

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - RFX (record field exchange)
 ms.assetid: f552d0c1-2c83-4389-b472-42c9940aa713
 ms.openlocfilehash: 18820c7d17ddea355490ee32679d5d690ec3533e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57294481"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62305393"
 ---
 # <a name="tn043-rfx-routines"></a>TN043:例程
 
@@ -24,7 +24,7 @@ ms.locfileid: "57294481"
 
 ## <a name="overview-of-record-field-exchange"></a>记录字段交换的概述
 
-记录集字段的所有函数已都完成 c + + 代码。 没有任何特殊资源或神奇的宏。 该机制的核心是必须在每个派生的记录集类中重写虚函数。 它始终位于此窗体中：
+记录集字段的所有函数已都完成了C++代码。 没有任何特殊资源或神奇的宏。 该机制的核心是必须在每个派生的记录集类中重写虚函数。 它始终位于此窗体中：
 
 ```cpp
 void CMySet::DoFieldExchange(CFieldExchange* pFX)
@@ -62,7 +62,7 @@ RFX_Custom(pFX, "Col2", m_Col2);
 
 记录集字段函数用于处理仅`CRecordset`类。 它们不是通常可由任何其他 MFC 类。
 
-标准 c + + 中的构造函数，通常具有的块中设置的数据的初始值`//{{AFX_FIELD_INIT(CMylSet)`和`//}}AFX_FIELD_INIT`注释。
+初始数据值设置在标准C++构造函数中包含的块通常`//{{AFX_FIELD_INIT(CMylSet)`并`//}}AFX_FIELD_INIT`注释。
 
 每个**RFX_** 函数必须支持各种操作，范围从存档中准备用于编辑字段的字段返回该字段的更新状态。
 
@@ -126,7 +126,7 @@ RFX_Custom(pFX, "Col2", m_Col2);
         BIGINT& value);
     ```
 
-- 具有`DoFieldExchange`成员函数有条件地包括其他 RFX 调用或任何其他有效的 c + + 语句。
+- 具有`DoFieldExchange`成员函数有条件地包括其他 RFX 调用或任何其他有效C++语句。
 
     ```cpp
     while (posExtraFields != NULL)
@@ -150,7 +150,7 @@ RFX_Custom(pFX, "Col2", m_Col2);
 
 `RFX_Text` 和`RFX_Binary`:这两个函数预分配静态缓冲区来存放字符串/二进制文件的信息，并且必须向 ODBC SQLBindCol 注册这些缓冲区而不是注册 （& v）。 因此，这两个函数有很多特例代码。
 
-`RFX_Date`：ODBC 返回自己 TIMESTAMP_STRUCT 数据结构中的日期和时间信息。 此函数为动态分配 TIMESTAMP_STRUCT"代理"作为发送和接收日期时间数据。 各种操作必须 c + + 之间传输的日期和时间信息`CTime`对象和 TIMESTAMP_STRUCT 代理。 这会增加复杂性此函数相当，但它是如何使用代理服务器进行数据传输的一个很好示例。
+`RFX_Date`：ODBC 返回自己 TIMESTAMP_STRUCT 数据结构中的日期和时间信息。 此函数为动态分配 TIMESTAMP_STRUCT"代理"作为发送和接收日期时间数据。 各种操作必须传输之间的日期和时间信息C++`CTime`对象和 TIMESTAMP_STRUCT 代理。 这会增加复杂性此函数相当，但它是如何使用代理服务器进行数据传输的一个很好示例。
 
 `RFX_LongBinary`：这是唯一的类库 RFX 函数，不使用列绑定来接收和发送数据。 此函数将忽略 BindFieldToColumn 操作相反，在修复操作时，会分配存储区来存放传入 SQL_LONGVARCHAR 或 SQL_LONGVARBINARY 数据，然后执行 SQLGetData 呼叫将检索到的已分配存储的值。 当准备将发送回数据源 （如名称值和值的操作） 的数据值时，此函数将使用 ODBC 的 DATA_AT_EXEC 功能。 请参阅[技术说明 45](../mfc/tn045-mfc-database-support-for-long-varchar-varbinary.md)有关使用 SQL_LONGVARBINARY 和 SQL_LONGVARCHARs 的详细信息。
 

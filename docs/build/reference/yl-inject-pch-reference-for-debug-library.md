@@ -9,11 +9,11 @@ helpviewer_keywords:
 - /Yl compiler option [C++]
 ms.assetid: 8e4a396a-6790-4a9f-8387-df015a3220e7
 ms.openlocfilehash: 92e47836e0fdae077defa0fe35b515ab4ca20a66
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57810284"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62316244"
 ---
 # <a name="yl-inject-pch-reference-for-debug-library"></a>/Yl（为调试库插入 PCH 引用）
 
@@ -53,9 +53,9 @@ ms.locfileid: "57810284"
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[Visual Studio 中的设置 c + + 编译器和生成属性](../working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
 
-1. 选择**配置属性** > **C/c + +** > **命令行**属性页。
+1. 选择**配置属性** > **C /C++** > **命令行**属性页。
 
 1. 添加 **/Yl**_名称_中的编译器选项**其他选项**框。 选择“确定”以保存更改。
 

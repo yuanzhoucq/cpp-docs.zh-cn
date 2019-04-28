@@ -10,17 +10,17 @@ helpviewer_keywords:
 - NMake property page
 ms.assetid: bd20cb52-9f1d-4240-b4fc-4f43205ac94b
 ms.openlocfilehash: c0dbe537635fe6698f814f3d8456f0caa9c8c796
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57824813"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62320599"
 ---
 # <a name="nmake-property-page"></a>“NMake”属性页
 
 借助“NMake”属性页，可以指定 NMake 项目的生成设置。 (NMAKE 是 Microsoft 的实现[使](https://wikipedia.org/wiki/Make_(software))。)
 
-有关 NMake 项目的详细信息，请参阅[创建生成文件项目](creating-a-makefile-project.md)。 对于非 Windows 生成项目，请参阅[生成文件项目属性 （Linux c + +）](../../linux/prop-pages/makefile-linux.md)，[常规项目属性 （Android c + + 生成文件）](/visualstudio/cross-platform/general-makefile-android-prop-page)或[NMake 属性 （Android c + +）](/visualstudio/cross-platform/nmake-android-prop-page).
+有关 NMake 项目的详细信息，请参阅[创建生成文件项目](creating-a-makefile-project.md)。 对于非 Windows 生成项目，请参阅[生成文件项目属性 (Linux C++)](../../linux/prop-pages/makefile-linux.md)，[常规项目属性 (AndroidC++生成文件)](/visualstudio/cross-platform/general-makefile-android-prop-page)或[NMake 属性 (AndroidC++)](/visualstudio/cross-platform/nmake-android-prop-page).
 
 “NMake”属性页包含下列属性。
 
@@ -66,10 +66,10 @@ ms.locfileid: "57824813"
 
    指定在 IntelliSense C++ 分析文件时要使用的任何其他编译器开关。
 
-有关如何访问信息**NMake**属性页中，请参阅[在 Visual Studio 中的设置 c + + 编译器和生成属性](../working-with-project-properties.md)。
+有关如何访问信息**NMake**属性页中，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
 
 有关如何以编程方式访问此对象的成员的信息，请参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCNMakeTool>。
 
 ## <a name="see-also"></a>请参阅
 
-[C + + 项目属性页引用](property-pages-visual-cpp.md)<br>
+[C++项目属性页引用](property-pages-visual-cpp.md)<br>

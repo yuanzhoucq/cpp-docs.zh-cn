@@ -12,11 +12,11 @@ helpviewer_keywords:
 - cl.exe compiler [C++], passing options to linker
 ms.assetid: 16902a94-c094-4328-841f-3ac94ca04848
 ms.openlocfilehash: ef81a6617df811660506c08434f3b65e29155794
-ms.sourcegitcommit: 6e4dd21759caaed262a7255735cf8d6e8fb9f4d7
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58476833"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62290673"
 ---
 # <a name="link-pass-options-to-linker"></a>/link（将选项传递到链接器）
 
@@ -45,7 +45,7 @@ ms.locfileid: "58476833"
 
 通常情况下，IDE 将发送单独的命令来编译和链接你的代码。 在项目属性页中，可以设置链接器选项。
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[Visual Studio 中的设置 c + + 编译器和生成属性](../working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
 
 1. 选择**配置属性** > **链接器**文件夹。
 

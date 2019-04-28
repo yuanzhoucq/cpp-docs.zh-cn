@@ -26,11 +26,11 @@ helpviewer_keywords:
 - _fcloseall function
 ms.assetid: c3c6ea72-92c6-450a-a33e-3e568d2784a4
 ms.openlocfilehash: 4713ffb7ecdf8da73e5f949bbef7be124dfaf28a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536508"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62334874"
 ---
 # <a name="fclose-fcloseall"></a>fclose、_fcloseall
 
@@ -47,7 +47,7 @@ int _fcloseall( void );
 
 ### <a name="parameters"></a>参数
 
-*流*<br/>
+*stream*<br/>
 指向**文件**结构的指针。
 
 ## <a name="return-value"></a>返回值
@@ -62,7 +62,7 @@ int _fcloseall( void );
 
 **_Fcloseall**函数将关闭所有打开的流，除了**stdin**， **stdout**， **stderr** (以及在 MS-DOS， **_stdaux**并 **_stdprn**)。 它还将关闭并删除创建的任何临时文件**tmpfile**。 在这两个函数中，与流相关联的所有缓冲区在关闭前都会进行刷新。 系统分配的缓冲区在流关闭时释放。 使用用户分配的缓冲区**setbuf**并**setvbuf**不会自动释放。
 
-**注意：** 将这些函数用于关闭流时，基础文件描述符和 OS 文件句柄（或套接字）以及流都将被关闭。 因此，如果最初打开该文件作为文件处理文件描述符和关闭或与**fclose**，不要同时调用 **_close**到关闭的文件描述符; 不要调用 Win32 函数**CloseHandle**关闭文件句柄。
+**注意：** 当这些函数用于关闭流时，基础文件描述符和 OS 文件句柄 （或套接字） 都将关闭，以及流。 因此，如果最初打开该文件作为文件处理文件描述符和关闭或与**fclose**，不要同时调用 **_close**到关闭的文件描述符; 不要调用 Win32 函数**CloseHandle**关闭文件句柄。
 
 **fclose**并 **_fcloseall**包含代码，从而防止出现来自其他线程的干扰。 有关非锁定版本的**fclose**，请参阅 **_fclose_nolock**。
 

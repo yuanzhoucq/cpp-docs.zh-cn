@@ -7,11 +7,11 @@ helpviewer_keywords:
 - EDITBIN program, options
 ms.assetid: 2da9f88e-cbab-4d64-bb66-ef700535230f
 ms.openlocfilehash: e7338c6a45d74aa8efac1b72683cca7661c62e0a
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57820099"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62271848"
 ---
 # <a name="editbin-options"></a>EDITBIN 选项
 
@@ -21,7 +21,7 @@ ms.locfileid: "57820099"
 
 EDITBIN 提供以下选项：
 
-|选项|目标|
+|选项|用途|
 |------------|-------------|
 |[/ALLOWBIND](allowbind.md)|指定一个 DLL 是否可以绑定。|
 |[/ALLOWISOLATION](allowisolation.md)|指定 DLL 或可执行文件清单查找行为。|

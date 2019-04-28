@@ -27,11 +27,11 @@ helpviewer_keywords:
 - CSmartDockingInfo [MFC], m_uiMarkerLightBmpResID
 ms.assetid: cab04f38-4bc1-4378-9337-c56fc87fbd68
 ms.openlocfilehash: d5f918b591e1db9ff67288a8761f7554698fa761
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57273460"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62323984"
 ---
 # <a name="csmartdockinginfo-class"></a>CSmartDockingInfo Class
 
@@ -59,7 +59,7 @@ class CSmartDockingInfo : public CObject
 
 ### <a name="data-members"></a>数据成员
 
-|name|描述|
+|名称|描述|
 |----------|-----------------|
 |[CSmartDockingInfo::m_bUseThemeColorInShading](#m_busethemecolorinshading)|指定是否使用当前的主题颜色时框架显示智能停靠标记。|
 |[CSmartDockingInfo::m_clrBaseBackground](#m_clrbasebackground)|指定智能停靠标记的基本的背景色。|

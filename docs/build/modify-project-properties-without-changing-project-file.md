@@ -1,16 +1,16 @@
 ---
-title: 如何：而无需更改项目文件中修改 c + + 项目属性和目标
+title: 如何：修改C++项目属性和目标，而无需更改项目文件
 ms.date: 11/28/2018
 helpviewer_keywords:
 - project properties [C++], modifying outside project file
 ms.openlocfilehash: ad527d8ee69a1786be7d325571f9c9ac4f9a8574
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57825154"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62273334"
 ---
-# <a name="how-to-modify-c-project-properties-and-targets-without-changing-the-project-file"></a>如何：而无需更改项目文件中修改 c + + 项目属性和目标
+# <a name="how-to-modify-c-project-properties-and-targets-without-changing-the-project-file"></a>如何：修改C++项目属性和目标，而无需更改项目文件
 
 可以从 MSBuild 命令提示符处重写项目属性和目标而无需更改项目文件。 当你想要暂时或偶尔应用某些属性时，这非常有用。 它假定你对 MSBuild 有一定了解。 有关详细信息，请参阅 [MSBUild](https://docs.microsoft.com/visualstudio/msbuild/msbuild)。
 

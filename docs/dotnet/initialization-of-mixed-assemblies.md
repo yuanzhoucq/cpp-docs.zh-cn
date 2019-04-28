@@ -11,15 +11,15 @@ helpviewer_keywords:
 - mixed assemblies [C++], initilizing
 ms.assetid: bfab7d9e-f323-4404-bcb8-712b15f831eb
 ms.openlocfilehash: 1f4ea7f5cfc6e99390c93ba9c2beadc46fce8584
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50665005"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62339034"
 ---
 # <a name="initialization-of-mixed-assemblies"></a>混合程序集的初始化
 
-Windows 开发人员必须始终为持谨慎态度的加载程序锁时运行过程中的代码`DllMain`。 但是，有一些其他注意事项的派上用场时面对的 C + + /cli clr 混合模式程序集。
+Windows 开发人员必须始终为持谨慎态度的加载程序锁时运行过程中的代码`DllMain`。 但是，有处理时派上用场的一些其他注意事项C++/clr 混合模式程序集。
 
 [DllMain](/windows/desktop/Dlls/dllmain) 中的代码不能访问 CLR。 这意味着 `DllMain` 不应直接或间接调用托管函数；在 `DllMain`中不应声明或实现托管代码；并且在 `DllMain`中不应发生垃圾回收或自动库加载。
 
@@ -86,7 +86,7 @@ CObject* op = new CObject(arg1, arg2);
 
 ### <a name="user-supplied-functions-affecting-startup"></a>影响启动的用户提供的函数
 
-在启动过程中，库依赖一些由用户提供的函数进行初始化。 有关示例，如全局重载 c + + 中的运算符时`new`和`delete`运算符，用户提供的版本随处使用，包括 c + + 标准库初始化和析构中的。 因此，c + + 标准库和用户提供的静态初始值设定项将调用这些运算符的任何用户提供的版本。
+在启动过程中，库依赖一些由用户提供的函数进行初始化。 例如，当中全局重载运算符C++如`new`并`delete`运算符，用户提供的版本随处使用，包括中的C++标准库初始化和析构。 因此，C++标准库和用户提供的静态初始值设定项将调用这些运算符的任何用户提供的版本。
 
 如果将用户提供的版本编译为 MSIL，这些初始值设定项在加载程序锁被保留时会尝试执行 MSIL 指令。 用户提供`malloc`具有同样的结果。 若要解决此问题，必须使用 #pragma `unmanaged` 指令将所有这些重载或用户提供的定义实现为本机代码。
 
@@ -114,7 +114,7 @@ CObject* op = new CObject(arg1, arg2);
 
 在 Visual Studio 2005 中之前, 链接器只需选择这些在语义上等效的定义，则还以适应前向声明和方案，不同的优化选项用于不同的源文件时的最大值。 对于混合本机 .NET DLL 来说，这就会产生问题。
 
-因为相同的标头可能包含 c + + 文件 **/clr**启用和禁用，或 #include 可以被包装在 #pragma`unmanaged`块，就可以具有 MSIL 和本机版本的提供的函数标头中的实现。 MSIL 和本机实现在有加载程序锁时的初始化方面具有不同的语义，而这实际上违反了单一定义规则。 因此，当链接器选择最大的实现时，即使在其他位置使用 #pragma unmanaged 指令将一个函数显式编译为本机代码，它也可能选择该函数的 MSIL 版本。 为确保模板或内联函数的 MSIL 版本永远不会在有加载程序锁时被调用，在有加载程序锁时调用的每个此类函数的每个定义都必须用 #pragma `unmanaged` 指令进行修改。 如果头文件来自第三方，实现此操作的最简单的方法是为有问题的头文件推送 #pragma unmanaged 指令，然后在 #include 指令周围弹出 #pragma unmanaged 指令。 (请参阅[managed、 unmanaged](../preprocessor/managed-unmanaged.md)有关的示例。)但是，对于那些包含必须直接调用 .NET API 的其他代码的头文件，该策略无效。
+因为相同的标头可能包含C++文件的工具 **/clr**启用和禁用，或 #include 可以被包装在 #pragma`unmanaged`块中，就可以具有 MSIL 和本机版本的函数，提供了标头中的实现。 MSIL 和本机实现在有加载程序锁时的初始化方面具有不同的语义，而这实际上违反了单一定义规则。 因此，当链接器选择最大的实现时，即使在其他位置使用 #pragma unmanaged 指令将一个函数显式编译为本机代码，它也可能选择该函数的 MSIL 版本。 为确保模板或内联函数的 MSIL 版本永远不会在有加载程序锁时被调用，在有加载程序锁时调用的每个此类函数的每个定义都必须用 #pragma `unmanaged` 指令进行修改。 如果头文件来自第三方，实现此操作的最简单的方法是为有问题的头文件推送 #pragma unmanaged 指令，然后在 #include 指令周围弹出 #pragma unmanaged 指令。 (请参阅[managed、 unmanaged](../preprocessor/managed-unmanaged.md)有关的示例。)但是，对于那些包含必须直接调用 .NET API 的其他代码的头文件，该策略无效。
 
 为方便用户处理加载程序锁，当两种版本同时出现时，链接器将选择本机实现，而不选择托管实现。 这样可以避免上述问题。 但是，由于编译器中有两个未解决的问题，所以在此发行版中此规则有两种例外情况：
 

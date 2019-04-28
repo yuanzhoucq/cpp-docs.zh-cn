@@ -7,11 +7,11 @@ helpviewer_keywords:
 - event maps [MFC]
 ms.assetid: 1ed53aee-bc53-43cd-834a-6fb935c0d29b
 ms.openlocfilehash: 512170d7eaa891b3616ca1ea56c29a8bb5cccda9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492221"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62322236"
 ---
 # <a name="event-maps"></a>事件映射
 
@@ -21,7 +21,7 @@ Microsoft 基础类库提供了针对触发事件而优化的编程模型。 在
 
 [!code-cpp[NVC_MFCAxCtl#16](../../mfc/reference/codesnippet/cpp/event-maps_1.cpp)]
 
-`EVENT_STOCK_CLICK`宏指示控件将触发常用 Click 事件，每次检测到鼠标单击。 其他常用事件的详细列表，请参阅文章[ActiveX 控件： 事件](../../mfc/mfc-activex-controls-events.md)。 宏还可用于指示自定义事件。
+`EVENT_STOCK_CLICK`宏指示控件将触发常用 Click 事件，每次检测到鼠标单击。 其他常用事件的详细列表，请参阅文章[ActiveX 控件：事件](../../mfc/mfc-activex-controls-events.md)。 宏还可用于指示自定义事件。
 
 虽然事件映射宏很重要，但您一般不会直接插入这些宏。 这是因为“属性”窗口将在您将其用于将事件触发函数与事件关联时，自动在源文件中创建时间映射条目。 每当您需要编辑或添加事件映射条目时，均可使用“属性”窗口。
 
@@ -63,7 +63,7 @@ DECLARE_EVENT_MAP()
 
 在类声明的末尾使用 DECLARE_EVENT_MAP 宏。 然后，在.cpp 文件中定义类的成员函数，使用 BEGIN_EVENT_MAP 宏，宏项的每个控件的事件和 END_EVENT_MAP 宏来声明事件列表的末尾。
 
-事件映射的详细信息，请参阅文章[ActiveX 控件： 事件](../../mfc/mfc-activex-controls-events.md)。
+事件映射的详细信息，请参阅文章[ActiveX 控件：事件](../../mfc/mfc-activex-controls-events.md)。
 
 ### <a name="requirements"></a>要求
 
@@ -79,7 +79,7 @@ BEGIN_EVENT_MAP(theClass,  baseClass)
 
 ### <a name="parameters"></a>参数
 
-*类*<br/>
+*theClass*<br/>
 指定其事件将此映射的控件类的名称。
 
 *baseClass*<br/>
@@ -89,7 +89,7 @@ BEGIN_EVENT_MAP(theClass,  baseClass)
 
 在实现 (.cpp) 文件中定义您的类的成员函数，事件映射开始 BEGIN_EVENT_MAP 宏，然后为每个事件，添加宏条目并完成 END_EVENT_MAP 宏与事件映射。
 
-事件映射和 BEGIN_EVENT_MAP 宏的详细信息，请参阅文章[ActiveX 控件： 事件](../../mfc/mfc-activex-controls-events.md)。
+事件映射和 BEGIN_EVENT_MAP 宏的详细信息，请参阅文章[ActiveX 控件：事件](../../mfc/mfc-activex-controls-events.md)。
 
 ### <a name="requirements"></a>要求
 

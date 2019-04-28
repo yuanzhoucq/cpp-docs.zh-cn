@@ -7,17 +7,17 @@ helpviewer_keywords:
 - C3365
 ms.assetid: 875ec3a4-522c-4e3d-9b67-48808b857f6d
 ms.openlocfilehash: fa11ac57205574da29c55344fedb0e996ab30557
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50449811"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62300565"
 ---
 # <a name="compiler-error-c3365"></a>编译器错误 C3365
 
 运算符“operator”: 区分类型为“type1”和“type2”的操作数
 
-已尝试撰写具有不同类型的委托。  请参阅[如何： 定义和使用委托 (C + + CLI)](../../dotnet/how-to-define-and-use-delegates-cpp-cli.md)有关委托的详细信息。
+已尝试撰写具有不同类型的委托。  请参阅[如何：定义和使用委托 (C++/CLI)](../../dotnet/how-to-define-and-use-delegates-cpp-cli.md)有关委托的详细信息。
 
 ## <a name="example"></a>示例
 

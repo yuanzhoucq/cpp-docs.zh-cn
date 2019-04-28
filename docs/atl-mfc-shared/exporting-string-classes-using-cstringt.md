@@ -5,21 +5,21 @@ helpviewer_keywords:
 - CStringT class, exporting strings
 ms.assetid: bdfc441e-8d2a-461c-9885-46178066c09f
 ms.openlocfilehash: a4ee73d2ae5cfb7bf9834fb23eed8470b7d29445
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750228"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62252735"
 ---
 # <a name="exporting-string-classes-using-cstringt"></a>使用 CStringT 导出字符串类
 
-在过去，MFC 开发人员具有派生自`CString`专用化其自己的字符串类。 Microsoft Visual c + +.NET (MFC 8.0) 中[CString](../atl-mfc-shared/using-cstring.md)类由一个名为模板类所取代[CStringT](../atl-mfc-shared/reference/cstringt-class.md)。 这提供以下几个好处：
+在过去，MFC 开发人员具有派生自`CString`专用化其自己的字符串类。 在 Microsoft 的视觉对象C++.NET (MFC 8.0) [CString](../atl-mfc-shared/using-cstring.md)类由一个名为模板类所取代[CStringT](../atl-mfc-shared/reference/cstringt-class.md)。 这提供以下几个好处：
 
 - 它允许 MFC`CString`类用于 ATL 项目中的较大的 MFC 静态库或 DLL 链接的情况下。
 
-- 与新`CStringT`你可以自定义模板类`CString`使用指定字符特征，类似于 c + + 标准库中的模板的模板参数的行为。
+- 与新`CStringT`你可以自定义模板类`CString`行为使用指定字符特征，类似于在模板的模板参数C++标准库。
 
-- 当您从 DLL 使用导出字符串类`CStringT`，编译器还会自动将导出`CString`基类。 由于`CString`本身是一种模板类，它可能实例化，由编译器使用时，除非编译器已注意到，`CString`从 DLL 导入。 如果你已迁移项目从 Visual c + + 6.0 到 Visual c + +.NET，可以看到链接器的多重定义的符号错误`CString`由于冲突而`CString`导入从 DLL 和本地实例化的版本。 若要执行此操作的正确方法如下所述。
+- 当您从 DLL 使用导出字符串类`CStringT`，编译器还会自动将导出`CString`基类。 由于`CString`本身是一种模板类，它可能实例化，由编译器使用时，除非编译器已注意到，`CString`从 DLL 导入。 如果已从 Visual 迁移项目C++6.0 到 Visual C++.NET 中，您可以看到链接器的多重定义的符号错误`CString`由于的冲突`CString`导入从 DLL 和本地实例化的版本. 若要执行此操作的正确方法如下所述。
 
 以下方案会导致链接器生成的符号错误多次定义的类。 假设您要导出`CString`的派生类 (`CMyString`) 从 MFC 扩展 DLL:
 

@@ -13,11 +13,11 @@ helpviewer_keywords:
 - document data [MFC]
 ms.assetid: b42a0c68-4bc4-4012-9938-5433a26d2c24
 ms.openlocfilehash: af3cde9445ae4b128e7e54a5f154db01b2eecd3b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57279258"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62308056"
 ---
 # <a name="serializing-data-to-and-from-files"></a>针对文件进行数据序列化
 
@@ -25,7 +25,7 @@ ms.locfileid: "57279258"
 
 框架提供了用于将文档保存到磁盘文件保存到的响应中的默认实现和另存为命令和打开命令的响应中的磁盘文件中加载文档的文件菜单上。 随着工作很少，您可以实现写入和读取其数据传入和传出文件文档的功能。 必须执行的主要操作是重写[Serialize](../mfc/reference/cobject-class.md#serialize)成员函数在您的文档类。
 
-MFC 应用程序向导会放置的主干重写`CDocument`成员函数`Serialize`中将为你创建的文档类。 在实现应用程序的成员变量后，您可以填充你`Serialize`重写，将数据发送到"存档对象"连接到一个文件的代码。 一个[CArchive](../mfc/reference/carchive-class.md)对象都类似于**cin**并**cout**输入/输出 c + + iostream 库中的对象。 但是，`CArchive`写入和读取二进制格式，而非格式化文本。
+MFC 应用程序向导会放置的主干重写`CDocument`成员函数`Serialize`中将为你创建的文档类。 在实现应用程序的成员变量后，您可以填充你`Serialize`重写，将数据发送到"存档对象"连接到一个文件的代码。 一个[CArchive](../mfc/reference/carchive-class.md)对象都类似于**cin**并**cout**输入/输出从对象C++iostream 库。 但是，`CArchive`写入和读取二进制格式，而非格式化文本。
 
 ## <a name="what-do-you-want-to-know-more-about"></a>你想要了解更多信息
 

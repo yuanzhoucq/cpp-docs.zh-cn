@@ -20,11 +20,11 @@ helpviewer_keywords:
 - _set_FMA3_enable
 ms.assetid: 4c1dc4bc-e86b-451b-9211-5a2ba6c98ee4
 ms.openlocfilehash: 19eabc3b5a11246d5b0056bdafbb169e2a7de9f2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544360"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62332190"
 ---
 # <a name="getfma3enable-setfma3enable"></a>_get_fma3_enable、_set_fma3_enable
 
@@ -58,7 +58,7 @@ FMA3 实现使用不同的算法，因此，略有差异的计算结果可能是
 
 |例程所返回的值|必需的标头|
 |-------------|---------------------|
-|**_set_FMA3_enable**， **_get_FMA3_enable**| C：\<math.h><br />C + +: \<cmath > 或\<math.h >|
+|**_set_FMA3_enable**， **_get_FMA3_enable**| C：\<math.h><br />C++: \<cmath > 或\<math.h >|
 
 **_Set_FMA3_enable**并 **_get_FMA3_enable**是 Microsoft 特定函数的函数。 有关兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 

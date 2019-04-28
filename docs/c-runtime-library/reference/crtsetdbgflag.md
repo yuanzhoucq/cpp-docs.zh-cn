@@ -51,11 +51,11 @@ helpviewer_keywords:
 - _CRTDBG_CHECK_CRT_DF macro
 ms.assetid: b5657ffb-6178-4cbf-9886-1af904ede94c
 ms.openlocfilehash: dcb8e37090e4c15ba849e76ca1cb1cc646a7bcc0
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556798"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62348180"
 ---
 # <a name="crtsetdbgflag"></a>_CrtSetDbgFlag
 
@@ -86,11 +86,11 @@ int _CrtSetDbgFlag(
 
 |位域|默认|描述|
 |---------------|-------------|-----------------|
-|**_CRTDBG_ALLOC_MEM_DF**|打开|打开： 启用调试堆分配和使用的内存块类型标识符，例如 **_CLIENT_BLOCK**。 关闭：将新的分配添加到堆链接列表，但是将块类型设置为 **_IGNORE_BLOCK**。<br /><br /> 还可以与任何堆频率检查宏组合。|
-|**_CRTDBG_CHECK_ALWAYS_DF**|关闭|打开：在每次分配和解除分配请求时调用 [_CrtCheckMemory](crtcheckmemory.md)。 OFF: **_CrtCheckMemory**必须显式调用。<br /><br /> 设置此标志后，堆频率检查宏不会产生任何影响。|
-|**_CRTDBG_CHECK_CRT_DF**|关闭|打开： 包括 **_CRT_BLOCK**类型在泄漏检测和内存状态差异操作。 关闭：这些操作将忽略运行时库在内部使用的内存。<br /><br /> 还可以与任何堆频率检查宏组合。|
-|**_CRTDBG_DELAY_FREE_MEM_DF**|关闭|打开：将已释放的内存块保留在堆链接列表中、向其分配 **_FREE_BLOCK** 类型，然后使用字节值 0xDD 进行填充。 关闭：不要将已释放的块保留在堆链接列表中。<br /><br /> 还可以与任何堆频率检查宏组合。|
-|**_CRTDBG_LEAK_CHECK_DF**|关闭|打开：在程序退出时通过对 [_CrtDumpMemoryLeaks](crtdumpmemoryleaks.md) 的调用执行自动泄露检查，如果应用程序无法释放它分配的所有内存，则生成错误报告。 关闭：不要在程序退出时自动执行泄露检查。<br /><br /> 还可以与任何堆频率检查宏组合。|
+|**_CRTDBG_ALLOC_MEM_DF**|打开|打开：启用调试堆分配和使用的内存块类型标识符，例如 **_CLIENT_BLOCK**。 关闭：将新分配添加到堆链接列表，但设置阻止类型设置为 **_IGNORE_BLOCK**。<br /><br /> 还可以与任何堆频率检查宏组合。|
+|**_CRTDBG_CHECK_ALWAYS_DF**|关闭|打开：调用[_CrtCheckMemory](crtcheckmemory.md)在每次分配和解除分配请求。 OFF: **_CrtCheckMemory**必须显式调用。<br /><br /> 设置此标志后，堆频率检查宏不会产生任何影响。|
+|**_CRTDBG_CHECK_CRT_DF**|关闭|打开：包括 **_CRT_BLOCK**类型在泄漏检测和内存状态差异操作。 关闭：这些操作将忽略由运行时库在内部使用的内存。<br /><br /> 还可以与任何堆频率检查宏组合。|
+|**_CRTDBG_DELAY_FREE_MEM_DF**|关闭|打开：释放的内存块保留在堆链接列表中，将其分配 **_FREE_BLOCK**类型，然后使用字节值 0xDD 填充它们。 关闭：不在堆链接列表中保留已释放的块。<br /><br /> 还可以与任何堆频率检查宏组合。|
+|**_CRTDBG_LEAK_CHECK_DF**|关闭|打开：执行自动泄露检查在程序退出时通过调用[_CrtDumpMemoryLeaks](crtdumpmemoryleaks.md) ，则生成错误报告，如果应用程序无法释放它分配的所有内存。 关闭：不要自动执行泄露检查在程序退出。<br /><br /> 还可以与任何堆频率检查宏组合。|
 
 **堆频率检查宏**
 

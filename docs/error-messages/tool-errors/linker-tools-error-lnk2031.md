@@ -7,11 +7,11 @@ helpviewer_keywords:
 - LNK2031
 ms.assetid: 18ed4b6e-3e75-443c-bbd8-2f6030dc89ee
 ms.openlocfilehash: 003b9a58bfb08130f034530f59e2de27efa2ae8d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50484819"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62298914"
 ---
 # <a name="linker-tools-error-lnk2031"></a>链接器工具错误 LNK2031
 
@@ -19,7 +19,7 @@ ms.locfileid: "50484819"
 
 ## <a name="remarks"></a>备注
 
-在尝试导入纯映像的本机函数时，请记住，本机和纯各编译间不同的隐式调用约定。 有关纯映像的详细信息，请参阅[纯代码和可验证代码 (C + + CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md)。
+在尝试导入纯映像的本机函数时，请记住，本机和纯各编译间不同的隐式调用约定。 有关纯映像的详细信息，请参阅[纯代码和可验证代码 (C++/CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md)。
 
 **/Clr: pure**编译器选项在 Visual Studio 2015 中弃用并在 Visual Studio 2017 中不受支持。
 

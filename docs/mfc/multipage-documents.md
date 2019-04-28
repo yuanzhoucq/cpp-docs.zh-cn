@@ -26,11 +26,11 @@ helpviewer_keywords:
 - documents [MFC], paginating
 ms.assetid: 69626b86-73ac-4b74-b126-9955034835ef
 ms.openlocfilehash: 81e03657977d31827c5c7c3d3272e3d4255a4a8b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57295001"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62238463"
 ---
 # <a name="multipage-documents"></a>多页文档
 
@@ -56,7 +56,7 @@ ms.locfileid: "57295001"
 
 ### <a name="cviews-overridable-functions-for-printing"></a>CView 的可重写的打印函数
 
-|name|重写的原因|
+|名称|重写的原因|
 |----------|---------------------------|
 |[OnPreparePrinting](../mfc/reference/cview-class.md#onprepareprinting)|在“打印”对话框中插入值，尤其是文档的长度|
 |[OnBeginPrinting](../mfc/reference/cview-class.md#onbeginprinting)|分配字体或其他 GDI 资源|
@@ -73,8 +73,7 @@ ms.locfileid: "57295001"
 
 ##  <a name="_core_pagination"></a> 分页
 
-框架将存储中的打印作业有关的信息的大部分[CPrintInfo](../mfc/reference/cprintinfo-structure.md)结构。 
-  `CPrintInfo` 中的某些值与分页有关；这些值是可访问的，如下表所示。
+框架将存储中的打印作业有关的信息的大部分[CPrintInfo](../mfc/reference/cprintinfo-structure.md)结构。 `CPrintInfo` 中的某些值与分页有关；这些值是可访问的，如下表所示。
 
 ### <a name="page-number-information-stored-in-cprintinfo"></a>存储在 CPrintInfo 中的页码信息
 

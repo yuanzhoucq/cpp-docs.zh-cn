@@ -35,11 +35,11 @@ helpviewer_keywords:
 - CDBVariant [MFC], m_pstringW
 ms.assetid: de23609c-c560-4b24-bd6b-9d8903fd5b49
 ms.openlocfilehash: 48a2e08d056e3bfef8a06b80ae6607947923cbcb
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328943"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62253317"
 ---
 # <a name="cdbvariant-class"></a>CDBVariant 类
 
@@ -67,13 +67,13 @@ class CDBVariant
 
 ### <a name="public-data-members"></a>公共数据成员
 
-|name|描述|
+|名称|描述|
 |----------|-----------------|
 |[CDBVariant::m_dwType](#m_dwtype)|包含当前存储的值的数据类型。 键入 `DWORD`。|
 
 ### <a name="public-union-members"></a>公共联合成员
 
-|name|描述|
+|名称|描述|
 |----------|-----------------|
 |[CDBVariant::m_boolVal](#m_boolval)|包含类型的值**BOOL**。|
 |[CDBVariant::m_chVal](#m_chval)|包含类型的值**无符号 char**。|

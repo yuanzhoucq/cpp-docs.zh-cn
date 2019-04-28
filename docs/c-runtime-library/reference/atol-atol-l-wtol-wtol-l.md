@@ -44,11 +44,11 @@ helpviewer_keywords:
 - _wtol function
 ms.assetid: cedfc21c-2d64-4e9c-bd04-bdf60b12db46
 ms.openlocfilehash: 486b6dc3bdfbbaf4b7becadde76768a0bb1c7c00
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50537184"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62347803"
 ---
 # <a name="atol-atoll-wtol-wtoll"></a>ato，_atol_l，_wtol，_wtol_l
 
@@ -95,7 +95,7 @@ long _wtol_l(
 
 *Str*自变量**atol**具有以下形式：
 
-> [*空格*] [*登录*] [*数字*]]
+> [*whitespace*] [*sign*] [*digits*]]
 
 一个*空格*包含的空格或制表符字符，将被忽略;*符号*可以是加号 （+） 或减号 （–）; 并且*数字*是一个或多个数字。
 

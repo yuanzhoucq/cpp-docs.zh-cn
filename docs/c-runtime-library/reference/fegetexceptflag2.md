@@ -23,11 +23,11 @@ helpviewer_keywords:
 - fegetexceptflag function
 ms.assetid: 2d28f0ca-70c9-4cff-be8b-3d876eacde71
 ms.openlocfilehash: 43259001bd05bb7df9e2e1636c174018dcdaef3c
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51522644"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62334419"
 ---
 # <a name="fegetexceptflag"></a>fegetexceptflag
 
@@ -47,7 +47,7 @@ int fegetexceptflag(
 *pstatus*<br/>
 一个指向**fexcept_t**对象，以包含由指定的异常标志的当前值*除*。
 
-*除*<br/>
+*excepts*<br/>
 若要在中存储的浮点异常标志*pstatus*。
 
 ## <a name="return-value"></a>返回值

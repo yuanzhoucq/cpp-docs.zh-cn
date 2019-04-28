@@ -7,11 +7,11 @@ helpviewer_keywords:
 - batch-mode inference rules in NMAKE
 ms.assetid: 0650b547-ef19-4455-9bba-fa567dcf88f2
 ms.openlocfilehash: f01866e347b2734b5adfd111e3ae9de4f9edcf9f
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57824460"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62295014"
 ---
 # <a name="batch-mode-rules"></a>批模式规则
 
@@ -22,14 +22,14 @@ ms.locfileid: "57824460"
 
 批模式推理规则提供推理规则仅一次的调用时 N 命令经历此推断规则。 不批模式推理规则，它将要求要调用的 N 命令。 N 是触发推理规则的依赖项的数目。
 
-包含批模式推理规则生成文件必须使用 NMAKE 1.62 或更高版本。 若要检查的 NMAKE 版本，运行 _NMAKE_VER 宏可用于 NMAKE 版本 1.62 或更高版本。 此宏将返回一个字符串，表示 Visual c + + 产品版本。
+包含批模式推理规则生成文件必须使用 NMAKE 1.62 或更高版本。 若要检查的 NMAKE 版本，运行 _NMAKE_VER 宏可用于 NMAKE 版本 1.62 或更高版本。 此宏将返回一个字符串，表示视觉对象C++产品版本。
 
 与标准的推理规则仅语法上的差异是： 批模式推理规则以双冒号 （:）
 
 > [!NOTE]
 >  正在调用的工具必须能够处理多个文件。 批模式推理规则必须使用`$<`为宏来访问依赖文件。
 
-批模式推理规则可以加快生成过程。 它是更快地提供文件复制到的编译器中批处理，因为编译器驱动程序调用一次。 例如，C 和 c + + 编译器更好地执行将处理一组文件，因为它可以保持内存驻留在过程中时。
+批模式推理规则可以加快生成过程。 它是更快地提供文件复制到的编译器中批处理，因为编译器驱动程序调用一次。 例如，C 和C++编译器时处理一组文件，因为它可以保持内存驻留在过程中会更好地执行。
 
 下面的示例演示如何使用批处理模式推理规则：
 

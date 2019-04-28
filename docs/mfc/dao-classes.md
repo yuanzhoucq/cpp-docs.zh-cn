@@ -8,11 +8,11 @@ helpviewer_keywords:
 - DAO [MFC], classes
 ms.assetid: b15d0cd6-328b-4288-9c19-d037a795db57
 ms.openlocfilehash: 238aab0a1948f16a85b8ea16719b75b49f5e69c8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57287487"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62241596"
 ---
 # <a name="dao-classes"></a>DAO 类
 
@@ -21,7 +21,7 @@ ms.locfileid: "57287487"
 使用 DAO 数据库的程序将具有最少`CDaoDatabase`对象和一个`CDaoRecordset`对象。
 
 > [!NOTE]
->  Visual c + + 环境和向导不再支持 DAO （尽管 DAO 类包含并且仍可以使用它们）。 Microsoft 建议为新 MFC 项目使用 ODBC。 仅应在维护现有应用程序使用 DAO。
+>  视觉对象C++环境和向导不再支持 DAO （尽管 DAO 类包含并且仍可以使用它们）。 Microsoft 建议为新 MFC 项目使用 ODBC。 仅应在维护现有应用程序使用 DAO。
 
 [CDaoWorkspace](../mfc/reference/cdaoworkspace-class.md)<br/>
 从登录名的名称时，受密码保护的数据库会话管理以注销。 大多数程序使用默认工作区。

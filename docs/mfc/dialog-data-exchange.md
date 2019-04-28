@@ -20,16 +20,15 @@ helpviewer_keywords:
 - retrieving dialog box data [MFC]
 ms.assetid: 4675f63b-41d2-45ed-b6c3-235ad8ab924b
 ms.openlocfilehash: 338630aef358d9490461179288d5c45a2d3b821c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57302298"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62348782"
 ---
 # <a name="dialog-data-exchange"></a>对话框数据交换
 
-如果使用 DDX 机制，则可设置对话框对象的成员变量的初始值（通常在 `OnInitDialog` 处理程序或对话框构造函数中）。 立即在显示对话框之前，框架的 DDX 机制会将成员变量的值传输到的控件在对话框中，它们显示的位置对话框本身中出现时响应`DoModal`或`Create`。 
-  `OnInitDialog` 中的 `CDialog` 的默认实现调用 `UpdateData` 类的 `CWnd` 成员函数以在对话框中初始化控件。
+如果使用 DDX 机制，则可设置对话框对象的成员变量的初始值（通常在 `OnInitDialog` 处理程序或对话框构造函数中）。 立即在显示对话框之前，框架的 DDX 机制会将成员变量的值传输到的控件在对话框中，它们显示的位置对话框本身中出现时响应`DoModal`或`Create`。 `OnInitDialog` 中的 `CDialog` 的默认实现调用 `UpdateData` 类的 `CWnd` 成员函数以在对话框中初始化控件。
 
 相同的机制将传输值从控件到成员变量当用户单击确定按钮 (或每次调用`UpdateData`具有参数的成员函数**TRUE**)。 对话框数据验证机制将验证为其指定了验证规则的所有数据项。
 
@@ -46,8 +45,7 @@ MFC 提供了许多用于不同类型交换的 DDX 函数。 以下示例演示�
 
 [!code-cpp[NVC_MFCControlLadenDialog#49](../mfc/codesnippet/cpp/dialog-data-exchange_1.cpp)]
 
-
-  `DDX_` 和 `DDV_` 行是数据映射。 显示的示例 DDX 和 DDV 函数分别为复选框控件和编辑框控件。
+`DDX_` 和 `DDV_` 行是数据映射。 显示的示例 DDX 和 DDV 函数分别为复选框控件和编辑框控件。
 
 如果用户取消模式对话框`OnCancel`成员函数终止该对话框和`DoModal`返回的值**IDCANCEL**。 在这种情况下，对话框和对话框对象之间不交换数据。
 

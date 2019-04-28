@@ -1,5 +1,5 @@
 ---
-title: 自定义生成步骤属性页：常规
+title: “自定义生成步骤”属性页：常规
 ms.date: 11/04/2016
 f1_keywords:
 - VC.Project.VCCustomBuildStep.AdditionalInputs
@@ -13,13 +13,13 @@ helpviewer_keywords:
 - custom build step (general)
 ms.assetid: bd319741-0491-46c4-a428-7c61b4b46a02
 ms.openlocfilehash: 329923140cf5a8f05e5c032ddb9e25c0ea45ec2a
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57825115"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62273074"
 ---
-# <a name="custom-build-step-property-page-general"></a>自定义生成步骤属性页：常规
+# <a name="custom-build-step-property-page-general"></a>“自定义生成步骤”属性页：常规
 
 对于你的项目中项目配置和目标平台的每种组合，你可以在项目生成时指定要执行的自定义步骤。
 
@@ -53,7 +53,7 @@ ms.locfileid: "57825115"
 
 ### <a name="to-specify-a-custom-build-step"></a>指定自定义生成步骤
 
-1. 在菜单栏上，依次选择“项目”、“属性”。 有关详细信息，请参阅[Visual Studio 中的设置 c + + 编译器和生成属性](../working-with-project-properties.md)。
+1. 在菜单栏上，依次选择“项目”、“属性”。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
 
 1. 在“属性页”对话框中，导航到“配置属性”->“自定义生成步骤”->“常规”页面。
 
@@ -61,4 +61,4 @@ ms.locfileid: "57825115"
 
 ## <a name="see-also"></a>请参阅
 
-[C + + 项目属性页引用](property-pages-visual-cpp.md)
+[C++项目属性页引用](property-pages-visual-cpp.md)

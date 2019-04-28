@@ -39,11 +39,11 @@ helpviewer_keywords:
 - atan2f function
 ms.assetid: 7a87a18e-c94d-4727-9cb1-1bb5c2725ae4
 ms.openlocfilehash: 59a67b0d213a11630f551fd7582b44aab60e314f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50541721"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62341712"
 ---
 # <a name="atan-atanf-atanl-atan2-atan2f-atan2l"></a>atan、atanf、atanl、atan2、atan2f、atan2l
 
@@ -82,7 +82,7 @@ long double atan2( long double y, long double x );  // C++ only
 
 |输入|SEH 异常|Matherr 异常|
 |-----------|-------------------|-----------------------|
-|为**QNAN**， **IND**|无|**（_D)**|
+|为**QNAN**， **IND**|无|**_DOMAIN**|
 
 ## <a name="remarks"></a>备注
 
@@ -90,7 +90,7 @@ long double atan2( long double y, long double x );  // C++ only
 
 **atan**具有使用流式处理 SIMD 扩展 2 (SSE2) 的实现。 有关使用 SSE2 实现的信息和限制，请参阅 [_set_SSE2_enable](set-sse2-enable.md)。
 
-由于 c + + 允许重载，可以调用的重载**atan**并**atan2**采用**float**或者**长****双精度**参数。 在 C 程序中， **atan**并**atan2**始终采用**double**参数和返回**double**。
+因为C++允许重载，可以调用的重载**atan**并**atan2**采用**float**或**长** **双精度**参数。 在 C 程序中， **atan**并**atan2**始终采用**double**参数和返回**double**。
 
 ## <a name="requirements"></a>要求
 

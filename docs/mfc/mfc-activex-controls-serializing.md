@@ -16,11 +16,11 @@ helpviewer_keywords:
 - wVerMajor global constant
 ms.assetid: 9d57c290-dd8c-4853-b552-6f17f15ebedd
 ms.openlocfilehash: 0c1c845640be2dfaa6aeda2defb478afb650b83b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57303334"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62324735"
 ---
 # <a name="mfc-activex-controls-serializing"></a>MFC ActiveX 控件：序列化
 
@@ -52,7 +52,7 @@ ActiveX 控件向导用于生成控件项目，当多个默认处理程序函数
 
 下表列出了可能的属性交换函数可用于序列化该控件的属性：
 
-|属性交换函数|目标|
+|属性交换函数|用途|
 |---------------------------------|-------------|
 |**PX_Blob( )**|序列化为二进制大型对象 (BLOB) 数据属性的类型。|
 |**PX_Bool( )**|序列化类型的布尔值属性。|

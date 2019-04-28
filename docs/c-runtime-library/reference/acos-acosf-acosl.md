@@ -32,11 +32,11 @@ helpviewer_keywords:
 - arccosine function
 ms.assetid: 00b89c48-8faf-4824-aa95-fa4349a4975d
 ms.openlocfilehash: 22149e9ff552015238d34a15166d04115438534b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636587"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62335667"
 ---
 # <a name="acos-acosf-acosl"></a>acos、acosf、acosl
 
@@ -74,7 +74,7 @@ long double acos( long double x );   // C++ only
 
 ## <a name="remarks"></a>备注
 
-由于 c + + 允许重载，可以调用的重载**acos**采用并返回**float**并**长** **double**类型。 在 C 程序中， **acos**始终采用并返回**double**。
+因为C++允许重载，可以调用的重载**acos**采用并返回**float**并**长** **double**类型。 在 C 程序中， **acos**始终采用并返回**double**。
 
 ## <a name="requirements"></a>要求
 

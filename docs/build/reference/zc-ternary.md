@@ -8,15 +8,15 @@ helpviewer_keywords:
 - Zc:ternary
 - -Zc:ternary
 ms.openlocfilehash: cb9a4f8468a9cb57af711cdca36ee343e5092493
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816485"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62315425"
 ---
 # <a name="zcternary-enforce-conditional-operator-rules"></a>/Zc: ternary （强制实施条件运算符规则）
 
-启用强制类型的 c + + 标准规则和条件运算符表达式中的第二个和第三个操作数的 const 或 volatile (cv) 限定。
+启用强制实施C++类型和条件运算符表达式中的第二个和第三个操作数的 const 或 volatile (cv) 限定的标准规则。
 
 ## <a name="syntax"></a>语法
 
@@ -24,7 +24,7 @@ ms.locfileid: "57816485"
 
 ## <a name="remarks"></a>备注
 
-Visual Studio 版本 15.3 启用编译器支持的 c + + 标准条件 （或三元） 运算符 (**？:**) 行为。 C + + 标准要求任一操作数是相同的类型和 cv 限定，或只有一个操作数是明确转换为相同的类型和 cv 限定为其他，或一个或两个操作数均为 throw 表达式。 在 Visual Studio 版本 15.5 之前的版本中，编译器允许由标准被视为不明确的转换。 当 **/zc: ternary**指定选项，编译器符合标准，并拒绝不满足匹配的类型和的第二个和第三个操作数的 cv 限定的规则的代码。
+Visual Studio 版本 15.3 启用的编译器支持C++标准条件 （或三元） 运算符 (**？:**) 的行为。 C++标准版需要任一操作数是相同的类型和 cv 限定，或只有一个操作数是明确转换为相同的类型和 cv 限定为其他，或一个或两个操作数均为 throw 表达式。 在 Visual Studio 版本 15.5 之前的版本中，编译器允许由标准被视为不明确的转换。 当 **/zc: ternary**指定选项，编译器符合标准，并拒绝不满足匹配的类型和的第二个和第三个操作数的 cv 限定的规则的代码。
 
 **/Zc: ternary**选项默认情况下处于关闭状态。 使用 **/zc: ternary**若要启用符合标准行为，或 **/Zc:ternary-** 显式指定以前的不符合要求的编译器行为。 [触发-](permissive-standards-conformance.md)选项隐式启用此选项，但它可以通过重写 **/Zc:ternary-**。
 
@@ -151,9 +151,9 @@ int main(int argc, char**) {
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[Visual Studio 中的设置 c + + 编译器和生成属性](../working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
 
-1. 选择**配置属性** > **C/c + +** > **命令行**属性页。
+1. 选择**配置属性** > **C /C++** > **命令行**属性页。
 
 1. 修改**其他选项**属性以包含 **/zc: ternary**或 **/Zc:ternary-** ，然后选择**确定**。
 

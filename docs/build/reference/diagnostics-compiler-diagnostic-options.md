@@ -10,11 +10,11 @@ helpviewer_keywords:
 - diagnostics compiler diagnostic options [C++]
 ms.assetid: db1cc175-6e93-4a2e-9396-c3725d2d8f71
 ms.openlocfilehash: 6b7d043e00204fa191530f03bbed069d71a25fc5
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57822297"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62293818"
 ---
 # <a name="diagnostics-compiler-diagnostic-options"></a>/diagnostics （编译器诊断选项）
 
@@ -46,7 +46,7 @@ ms.locfileid: "57822297"
 
 1. 打开你的项目**属性页**对话框。
 
-1. 下**配置属性**，展开**C/c + +** 文件夹，然后选择**常规**属性页。
+1. 下**配置属性**，展开**C /C++** 文件夹，然后选择**常规**属性页。
 
 1. 使用中的下拉列表控件**诊断格式**字段来选择诊断显示选项。 选择**确定**或**应用**以保存所做的更改。
 

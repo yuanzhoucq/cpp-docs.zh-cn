@@ -1,5 +1,5 @@
 ---
-title: 演练：调试 c + + AMP 应用程序
+title: 演练：调试C++AMP 应用程序
 ms.date: 11/19/2018
 helpviewer_keywords:
 - debugging, C++ Accelerated Massive Parallelism
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - debugging, C++ AMP
 ms.assetid: 40e92ecc-f6ba-411c-960c-b3047b854fb5
 ms.openlocfilehash: 5312ba7354c28286cafb092711d66d56a920581a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57286905"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62237922"
 ---
-# <a name="walkthrough-debugging-a-c-amp-application"></a>演练：调试 c + + AMP 应用程序
+# <a name="walkthrough-debugging-a-c-amp-application"></a>演练：调试C++AMP 应用程序
 
 本主题演示如何调试使用 C++ Accelerated Massive Parallelism (C++ AMP) 应用程序以便利用图形处理单元 (GPU)。 它使用总结大整数数组的并行缩减程序。 本演练阐释了以下任务：
 
@@ -34,7 +34,7 @@ ms.locfileid: "57286905"
 
 在开始本演练之前：
 
-- 读取[c + + AMP 概述](../../parallel/amp/cpp-amp-overview.md)。
+- 读取[ C++ AMP 概述](../../parallel/amp/cpp-amp-overview.md)。
 
 - 确保文本编辑器中显示行号。 有关详细信息，请参阅[如何：在编辑器中显示行号](/visualstudio/ide/reference/how-to-display-line-numbers-in-the-editor)。
 
@@ -48,7 +48,7 @@ ms.locfileid: "57286905"
 
 2. 在菜单栏上，依次选择“文件” > “新建” > “项目”。
 
-3. 下**已安装**在模板窗格中，选择**Visual c + +**。
+3. 下**已安装**在模板窗格中，选择**Visual C++** 。
 
 4. 选择**Win32 控制台应用程序**，类型`AMPMapReduce`中**名称**框中，，然后选择**确定**按钮。
 
@@ -181,7 +181,7 @@ ms.locfileid: "57286905"
 
 10. 在中**解决方案资源管理器**，打开快捷菜单**AMPMapReduce**，然后选择**属性**。
 
-11. 在中**属性页**对话框中的**配置属性**，选择**C/c + +** > **预编译标头**。
+11. 在中**属性页**对话框中的**配置属性**，选择**C /C++** > **预编译标头**.
 
 12. 有关**预编译标头**属性中，选择**不使用预编译头**，然后选择**确定**按钮。
 
@@ -389,4 +389,4 @@ ms.locfileid: "57286905"
 [调试 GPU 代码](/visualstudio/debugger/debugging-gpu-code)<br/>
 [如何：使用“GPU 线程”窗口](/visualstudio/debugger/how-to-use-the-gpu-threads-window)<br/>
 [如何：使用“并行监视”窗口](/visualstudio/debugger/how-to-use-the-parallel-watch-window)<br/>
-[使用并发可视化工具分析 c + + AMP 代码](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/03/09/analyzing-c-amp-code-with-the-concurrency-visualizer/)
+[分析C++使用并发可视化工具的 AMP 代码](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/03/09/analyzing-c-amp-code-with-the-concurrency-visualizer/)

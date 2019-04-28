@@ -7,17 +7,17 @@ helpviewer_keywords:
 - C4700
 ms.assetid: 2da0deb4-77dd-4b05-98d3-b78d74ac4ca7
 ms.openlocfilehash: fa3326bd5ab495dbc4c54130bb168422eb827dce
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463214"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62300285"
 ---
 # <a name="compiler-warning-level-1-and-level-4-c4700"></a>编译器警告（等级 1 和等级 4）C4700
 
 > 未初始化的局部变量*名称*使用
 
-本地变量*名称*已*使用*，即从阅读，它具有之前尚未分配值。 在 C 和 c + + 中，默认情况下不初始化局部变量。 未初始化的变量可以包含任何值，并使用会导致未定义的行为。 警告 C4700 几乎总是指示在程序中可能导致不可预知的结果或崩溃的 bug。
+本地变量*名称*已*使用*，即从阅读，它具有之前尚未分配值。 在 C 和C++，默认情况下不初始化局部变量。 未初始化的变量可以包含任何值，并使用会导致未定义的行为。 警告 C4700 几乎总是指示在程序中可能导致不可预知的结果或崩溃的 bug。
 
 若要解决此问题，可以在声明时初始化的局部变量，或为它们赋值，在使用之前。 可以使用函数来初始化的变量，它传递作为引用参数，或当其地址传递作为指针参数。
 

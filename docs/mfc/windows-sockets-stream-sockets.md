@@ -7,11 +7,11 @@ helpviewer_keywords:
 - stream sockets [MFC]
 ms.assetid: 31faaa34-a995-493f-a30b-b8115293d619
 ms.openlocfilehash: 91f06c4a36e76638708edf085987e51418913fd6
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57271289"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62337825"
 ---
 # <a name="windows-sockets-stream-sockets"></a>Windows 套接字：Stream 套接字
 
@@ -19,8 +19,7 @@ ms.locfileid: "57271289"
 
 流套接字适用于没有记录边界的数据流：可双向传输的字节流（应用程序是全双工的：它可以通过套接字进行传输和接收）。 流可以用于传递序列化的、无重复的数据。 （“序列化”表示数据包是按发送顺序传递的。 “无重复”意味着您只能获取特定数据包一次。流消息的接收是有保障的，并且流非常适合于处理大量数据。
 
-网络传输层会将数据拆分或组合到大小合适的数据包中。 
-  `CSocket` 类将为您处理打包和解包操作。
+网络传输层会将数据拆分或组合到大小合适的数据包中。 `CSocket` 类将为您处理打包和解包操作。
 
 流基于显式连接：套接字 A 请求连接到套接字 B；套接字 B 接受或拒绝连接请求。
 

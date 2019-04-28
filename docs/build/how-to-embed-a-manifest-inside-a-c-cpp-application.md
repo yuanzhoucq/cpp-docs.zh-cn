@@ -1,5 +1,5 @@
 ---
-title: 如何：将 C/c + + 应用程序清单嵌入
+title: 如何：将 C 清单嵌入 /C++应用程序
 ms.date: 11/04/2016
 helpviewer_keywords:
 - manifests [C++]
@@ -7,15 +7,15 @@ helpviewer_keywords:
 - makefiles, updating to embed manifest
 ms.assetid: ec0bac69-2fdc-466c-ab0d-710a22974e5d
 ms.openlocfilehash: 332d6d75080be3fdde6b8238ab79b8e5b1d1121e
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57809777"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62274377"
 ---
-# <a name="how-to-embed-a-manifest-inside-a-cc-application"></a>如何：将 C/c + + 应用程序清单嵌入
+# <a name="how-to-embed-a-manifest-inside-a-cc-application"></a>如何：将 C 清单嵌入 /C++应用程序
 
-建议 C/c + + 应用程序 （或库） 将其清单嵌入到最终二进制文件，因为这可保证正确的运行时行为在大多数情况下。 默认情况下，Visual Studio 尝试生成源代码文件; 一个项目时嵌入清单请参阅[Visual Studio 中的清单生成](manifest-generation-in-visual-studio.md)有关详细信息。 但是，如果使用 nmake 生成应用程序，则需要对现有生成文件进行一些更改。 本部分演示如何更改现有生成文件将自动嵌入最终二进制文件中的清单。
+建议 C /C++应用程序 （或库） 将其清单嵌入到最终二进制文件，因为这可保证正确的运行时行为在大多数情况下。 默认情况下，Visual Studio 尝试生成源代码文件; 一个项目时嵌入清单请参阅[Visual Studio 中的清单生成](manifest-generation-in-visual-studio.md)有关详细信息。 但是，如果使用 nmake 生成应用程序，则需要对现有生成文件进行一些更改。 本部分演示如何更改现有生成文件将自动嵌入最终二进制文件中的清单。
 
 ## <a name="two-approaches"></a>两种方法
 
@@ -63,7 +63,7 @@ clean :
     del MyApp.obj MyApp.exe
 ```
 
-如果运行此脚本使用 Visual c + + 不变，它已成功创建 MyApp.exe。 它还会创建由操作系统加载依赖程序集在运行时使用的外部清单文件 MyApp.exe.manifest。
+如果运行此脚本保持不变通过视觉对象C++，它已成功创建 MyApp.exe。 它还会创建由操作系统加载依赖程序集在运行时使用的外部清单文件 MyApp.exe.manifest。
 
 MyLibrary.dll nmake 脚本看起来非常类似：
 

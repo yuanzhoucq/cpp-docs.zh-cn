@@ -34,11 +34,11 @@ helpviewer_keywords:
 - _atoll_l function
 ms.assetid: 5e85fcac-b351-4882-bff2-6e7c469b7fa8
 ms.openlocfilehash: 7933b3e25185b5abdbd10c1b3fd616742bb28f92
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521565"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62341179"
 ---
 # <a name="atoll-atolll-wtoll-wtolll"></a>atoll、_atoll_l、_wtoll、_wtoll_l
 
@@ -87,7 +87,7 @@ long long _wtoll_l(
 
 *Str*自变量**atoll**具有以下形式：
 
-> [*空格*] [*登录*] [*数字*]
+> [*whitespace*] [*sign*] [*digits*]
 
 一个*空格*包含的空格或制表符字符，将被忽略;*符号*可以是加号 （+） 或减号 （–）; 并且*数字*是一个或多个数字。
 
