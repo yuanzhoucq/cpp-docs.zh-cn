@@ -31,11 +31,11 @@ helpviewer_keywords:
 - CMFCTasksPaneTask [MFC], m_uiCommandID
 ms.assetid: c5a7513b-cd8f-4e2e-b16f-650e1fe30954
 ms.openlocfilehash: 95a2e4f2a1f2e3344936af33fb2258b496b1be93
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57279245"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62218689"
 ---
 # <a name="cmfctaskspanetask-class"></a>CMFCTasksPaneTask 类
 
@@ -64,7 +64,7 @@ class CMFCTasksPaneTask : public CObject
 
 ### <a name="data-members"></a>数据成员
 
-|name|描述|
+|名称|描述|
 |----------|-----------------|
 |[CMFCTasksPaneTask::m_bAutoDestroyWindow](#m_bautodestroywindow)|确定是否自动销毁任务窗口。|
 |[CMFCTasksPaneTask::m_bIsBold](#m_bisbold)|确定是否该框架在绘制任务标签显示为粗体文本。|

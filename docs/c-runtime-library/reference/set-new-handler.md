@@ -26,11 +26,11 @@ helpviewer_keywords:
 - transferring control to error handler
 ms.assetid: 1d1781b6-5cf8-486a-b430-f365e0bb023f
 ms.openlocfilehash: bc7718503f59c69868a75cac9383286a548fc307
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50640305"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62356493"
 ---
 # <a name="setnewhandler"></a>_set_new_handler
 
@@ -53,7 +53,7 @@ _PNH _set_new_handler( _PNH pNewHandler );
 
 ## <a name="remarks"></a>备注
 
-C + + **_set_new_handler**函数指定如果获取控制权的异常处理函数**新**运算符无法分配内存。 如果**新**失败，运行时系统会自动调用作为参数传递的异常处理函数 **_set_new_handler**。 **_PNH**（New.h 中定义) 是指向函数的返回类型**int**和采用类型作为参数**size_t**。 使用**size_t**来指定要分配的空间量。
+C++ **_Set_new_handler**函数指定如果获取控制权的异常处理函数**新**运算符无法分配内存。 如果**新**失败，运行时系统会自动调用作为参数传递的异常处理函数 **_set_new_handler**。 **_PNH**（New.h 中定义) 是指向函数的返回类型**int**和采用类型作为参数**size_t**。 使用**size_t**来指定要分配的空间量。
 
 没有默认处理程序。
 

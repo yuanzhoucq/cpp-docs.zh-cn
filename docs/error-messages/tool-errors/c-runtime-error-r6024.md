@@ -7,24 +7,24 @@ helpviewer_keywords:
 - R6024
 ms.assetid: 0fb11c0f-9b81-4cab-81bd-4785742946a5
 ms.openlocfilehash: 89b99a93512603eaf2273a6ff3f434f1ad3b3bb8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50497030"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62214106"
 ---
 # <a name="c-runtime-error-r6024"></a>C 运行时错误 R6024
 
 _onexit/atexit 表没有足够的空间
 
 > [!NOTE]
-> 如果运行应用时遇到此错误消息，该应用已关闭，因为它具有内部内存问题。 此错误通常是通过极低内存条件或很少，该程序中的 bug 或它使用的 Visual c + + 库损坏引起的。
+> 如果运行应用时遇到此错误消息，该应用已关闭，因为它具有内部内存问题。 此错误通常通过极低内存条件或很少，该程序中的 bug 或视觉对象的损坏引起C++它使用的库。
 >
 > 可以尝试以下步骤来修复此错误：
 >
 > - 关闭其他正在运行的应用程序或重新启动计算机以释放内存。
 > - 使用**应用程序和功能**或**程序和功能**页**控制面板**来修复或重新安装该程序。
-> - 使用**应用程序和功能**或**程序和功能**页**控制面板**修复或重新安装的 Microsoft Visual c + + 可再发行的所有副本。
+> - 使用**应用程序和功能**或**程序和功能**页**控制面板**修复或重新安装 Microsoft 视觉对象的所有副本C++可再发行组件。
 > - 检查**Windows Update**中**控制面板**的软件更新。
 > - 检查应用程序的更新版本。 如果问题仍然存在，请与应用供应商联系。
 

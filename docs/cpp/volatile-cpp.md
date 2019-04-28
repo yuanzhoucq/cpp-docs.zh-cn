@@ -10,11 +10,11 @@ helpviewer_keywords:
 - objects [C++], volatile
 ms.assetid: 81db4a85-ed5a-4a2c-9a53-5d07a771d2de
 ms.openlocfilehash: 73243841b2ad02bcc165b2910ac54283028e6cf3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50664017"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62243925"
 ---
 # <a name="volatile-c"></a>volatile (C++)
 
@@ -50,7 +50,7 @@ Visual Studio 将解释**易失性**以不同的方式具体取决于目标体�
 
 ## <a name="iso-compliant"></a>符合 ISO
 
-如果您是熟悉 C# volatile 关键字，或熟悉的行为**可变**在 Visual c + + 的早期版本，请注意，C + + 11 ISO 标准**易失性**关键字是不同的且是在 Visual Studio 中受支持时[/volatile: iso](../build/reference/volatile-volatile-keyword-interpretation.md)指定编译器选项。 （对于 ARM，默认情况下将指定它。） **易失性**C + + 11 ISO 标准代码中的关键字是仅用于硬件访问; 因此，不要将其用于线程间的通信。 对于线程间通信使用机制例如[std::atomic\<T >](../standard-library/atomic.md)从[C++ 标准库](../standard-library/cpp-standard-library-reference.md)。
+如果您熟悉C#易失关键字或熟悉的行为**易失性**在早期版本的 Visual C++，请注意，C + + 11 ISO 标准**易失性**关键字是不同，在 Visual Studio 中受支持时[/volatile: iso](../build/reference/volatile-volatile-keyword-interpretation.md)指定编译器选项。 （对于 ARM，默认情况下将指定它。） **易失性**C + + 11 ISO 标准代码中的关键字是仅用于硬件访问; 因此，不要将其用于线程间的通信。 对于线程间通信使用机制例如[std::atomic\<T >](../standard-library/atomic.md)从[C++ 标准库](../standard-library/cpp-standard-library-reference.md)。
 
 ## <a name="end-of-iso-compliant"></a>符合 ISO 的末尾
 

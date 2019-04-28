@@ -9,11 +9,11 @@ helpviewer_keywords:
 - bss_seg pragma
 ms.assetid: 755f0154-de51-4778-97d3-c9b24e445079
 ms.openlocfilehash: 489ced11bb6024fdf9818872c07ab7feebfeabf3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566304"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62212407"
 ---
 # <a name="bssseg"></a>bss_seg
 
@@ -36,11 +36,11 @@ ms.locfileid: "50566304"
 *identifier*<br/>
 （可选）与一起使用时**推送**，将名称分配给内部编译器堆栈上的记录。 *标识符*使多个记录只用一个**pop**命令。 与一起使用时**pop**，弹出之前内部堆栈中弹出记录，该指令*标识符*被删除; 如果*标识符*未在执行任何操作在内部堆栈中，找到弹出。
 
-*"段名称"*<br/>
+*"segment-name"*<br/>
 （可选）段的名称。 与一起使用时**pop**，在堆栈中弹出和*段名称*将成为活动段名称。
 
-*"段类"*<br/>
-（可选）包含有关使用 c + + 2.0 版之前的兼容性。 它将被忽略。
+*"segment-class"*<br/>
+（可选）包含与的兼容性C++之前的版本 2.0。 它将被忽略。
 
 ## <a name="remarks"></a>备注
 

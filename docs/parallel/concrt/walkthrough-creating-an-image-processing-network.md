@@ -1,16 +1,16 @@
 ---
 title: 演练：创建图像处理网络
-ms.date: 11/19/2018
+ms.date: 04/25/2019
 helpviewer_keywords:
 - image-processing networks, creating [Concurrency Runtime]
 - creating image-processing networks [Concurrency Runtime]
 ms.assetid: 78ccadc9-5ce2-46cc-bd62-ce0f99d356b8
 ms.openlocfilehash: 035d73190f3596044a35cbc45681807801385eab
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
-ms.translationtype: MT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57262801"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62205814"
 ---
 # <a name="walkthrough-creating-an-image-processing-network"></a>演练：创建图像处理网络
 
@@ -132,7 +132,7 @@ ms.locfileid: "57262801"
 
 如果应用程序需要多个消息块处理该消息，而不是只是一条消息块的第一个接受消息，你可以使用另一个消息块类型，如`overwrite_buffer`。 `overwrite_buffer`类包含一条消息一次，但它可传播到其每个目标的消息。
 
-下图显示了图像处理网络：
+下图显示图像处理网络：
 
 ![图像处理网络](../../parallel/concrt/media/concrt_imageproc.png "图像处理网络")
 

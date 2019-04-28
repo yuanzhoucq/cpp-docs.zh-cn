@@ -7,11 +7,11 @@ helpviewer_keywords:
 - PROTO directive
 ms.assetid: 0487ee16-9dc7-43d1-9445-cd1601f5a080
 ms.openlocfilehash: 616b6be2a5c191ebc67d61288cb5fa6c183091fa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536699"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62210516"
 ---
 # <a name="proto"></a>PROTO
 
@@ -19,11 +19,11 @@ ms.locfileid: "50536699"
 
 ## <a name="syntax"></a>语法
 
-> *标签* **PROTO** \[*距离*] \[ *langtype*] \[ __，__ \[*参数*]__:__*标记*]...
+> *label* **PROTO** \[*distance*] \[*langtype*] \[__,__ \[*parameter*]__:__*tag*] ...
 
 ### <a name="parameters"></a>参数
 
-*标签*<br/>
+*label*<br/>
 原型的函数的名称。
 
 *distance*<br/>
@@ -32,14 +32,14 @@ ms.locfileid: "50536699"
 *langtype*<br/>
 （可选）设置过程和公共符号的调用和命名约定。 受支持的约定如下：
 
-- 32 位**平面**模型： **C**， **STDCALL**
+- 32 位**平面**模型：**C**， **STDCALL**
 
-- 16 位模型： **C**， **BASIC**， **FORTRAN**， **PASCAL**， **SYSCALL**， **STDCALL**
+- 16 位模型：**C**， **BASIC**， **FORTRAN**， **PASCAL**， **SYSCALL**， **STDCALL**
 
 *parameter*<br/>
 函数参数的可选名称。
 
-*标记*<br/>
+*tag*<br/>
 函数参数的类型。
 
 *参数*并*标记*参数可能会出现多次，一次为每个传递的参数。

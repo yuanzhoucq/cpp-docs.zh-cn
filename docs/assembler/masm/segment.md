@@ -7,11 +7,11 @@ helpviewer_keywords:
 - SEGMENT directive
 ms.assetid: e6f68367-6714-4f06-a79c-edfa88014430
 ms.openlocfilehash: f37be47b92a71e20821cd1e40f8cf1350dfedaff
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50615418"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62210370"
 ---
 # <a name="segment"></a>SEGMENT
 
@@ -19,8 +19,8 @@ ms.locfileid: "50615418"
 
 ## <a name="syntax"></a>语法
 
-> *名称*段 [[只读]] [[*对齐*]] [[*合并*]] [[*使用*]] [[*特征*]] 别名 (*字符串*) [['*类*]]<br/>
-> *语句*<br/>
+> *name* SEGMENT [[READONLY]] [[*align*]] [[*combine*]] [[*use*]] [[*characteristics*]] ALIAS(*string*) [['*class*']]<br/>
+> *statements*<br/>
 > *名称*结束
 
 #### <a name="parameters"></a>参数
@@ -35,7 +35,7 @@ ms.locfileid: "50615418"
 |**DWORD**|下一个可用的双字地址 （每个双字 4 个字节）。|
 |**PARA**|下一个可用段落地址 （每个段落 16 个字节）。|
 |**PAGE**|下一个可用的页地址 （每页 256 个字节）。|
-|**对齐**(*n*)|下一个可用*n*个字节的地址。 有关详细信息，请参阅备注部分。|
+|**ALIGN**(*n*)|下一个可用*n*个字节的地址。 有关详细信息，请参阅备注部分。|
 
 如果未指定此参数， **PARA**默认情况下使用。
 
@@ -45,7 +45,7 @@ ms.locfileid: "50615418"
 *use*<br/>
 **USE16**， **USE32**，**平面**
 
-*特征*<br/>
+*characteristics*<br/>
 **INFO**，**读取**，**编写**， **EXECUTE**，**共享**， **NOPAGE**， **NOCACHE**，和**放弃**
 
 这些仅支持为 COFF，对应于类似名称的 COFF 节特征 (例如，**共享**对应于 IMAGE_SCN_MEM_SHARED)。 读取设置 IMAGE_SCN_MEM_READ 标志。 已过时的只读标志导致要清除 IMG_SCN_MEM_WRITE 标志的部分。 如果有的话*特征*进行设置，未使用的默认特性，并仅程序员指定标志是在起作用。

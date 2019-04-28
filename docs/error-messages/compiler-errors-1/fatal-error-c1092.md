@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C1092
 ms.assetid: bcaa87f0-fbfc-4a33-844b-3b9f5d67f279
 ms.openlocfilehash: 3268e5b124be40313bdc97b4c95d935ddd4f9160
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462720"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62208534"
 ---
 # <a name="fatal-error-c1092"></a>错误 C1092
 
@@ -21,7 +21,7 @@ ms.locfileid: "50462720"
 
 - 编辑并继续不支持对现有数据类型，包括类、 结构或枚举定义的更改。 必须停止调试并生成应用程序。
 
-- 编辑并继续不支持添加新的数据类型，如果程序数据库文件，如 vc*x*0.pdb (其中*x*是 Visual c + + 中使用的主要版本) 是只读的。 若要添加的数据类型，编译器必须在写入模式下打开的.pdb 文件。
+- 编辑并继续不支持添加新的数据类型，如果程序数据库文件，如 vc*x*0.pdb (其中*x*是视觉对象的主要版本C++中使用) 是只读的。 若要添加的数据类型，编译器必须在写入模式下打开的.pdb 文件。
 
 ### <a name="to-remove-this-error-without-ending-the-current-debug-session"></a>若要删除此错误，但不结束当前调试会话
 

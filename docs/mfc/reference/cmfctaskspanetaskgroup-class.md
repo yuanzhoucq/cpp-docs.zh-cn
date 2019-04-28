@@ -25,11 +25,11 @@ helpviewer_keywords:
 - CMFCTasksPaneTaskGroup [MFC], m_strName
 ms.assetid: 2111640b-a46e-4b27-b033-29e88632b86a
 ms.openlocfilehash: a28f00fb732727ec1334946a9e752679307cd3a0
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57295222"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62222217"
 ---
 # <a name="cmfctaskspanetaskgroup-class"></a>CMFCTasksPaneTaskGroup 类
 
@@ -58,7 +58,7 @@ class CMFCTasksPaneTaskGroup : public CObject
 
 ### <a name="data-members"></a>数据成员
 
-|name|描述|
+|名称|描述|
 |----------|-----------------|
 |[CMFCTasksPaneTaskGroup::m_bIsBottom](#m_bisbottom)|确定是否将任务组对齐到任务窗格控件的底部。|
 |[CMFCTasksPaneTaskGroup::m_bIsCollapsed](#m_biscollapsed)|确定任务组处于折叠状态。|

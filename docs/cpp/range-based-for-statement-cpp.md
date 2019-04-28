@@ -3,11 +3,11 @@ title: 基于范围的 for 语句 (C++)
 ms.date: 11/04/2016
 ms.assetid: 5750ba1d-ba48-4236-a923-e32de8345c2d
 ms.openlocfilehash: 1cbdb4e1636f471c26f6742b9e8686a332ed845f
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330926"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62244126"
 ---
 # <a name="range-based-for-statement-c"></a>基于范围的 for 语句 (C++)
 
@@ -22,9 +22,9 @@ for ( for-range-declaration : expression )
 
 ## <a name="remarks"></a>备注
 
-使用基于范围的**有关**语句可构建必须通过在"范围"，该常数定义为可循环访问的任何内容执行的循环 — 例如， `std::vector`，或任何其他 c + + 标准库序列化其范围定义由`begin()`和`end()`。 中声明的名称`for-range-declaration`部分是到本地**有关**语句且不能为中重新声明`expression`或`statement`。 请注意，[自动](../cpp/auto-cpp.md)关键字首选的在`for-range-declaration`语句部分。
+使用基于范围的**有关**语句可构建必须通过在"范围"，该常数定义为可循环访问的任何内容执行的循环 — 例如， `std::vector`，或任何其他C++标准库序列通过定义其范围`begin()`和`end()`。 中声明的名称`for-range-declaration`部分是到本地**有关**语句且不能为中重新声明`expression`或`statement`。 请注意，[自动](../cpp/auto-cpp.md)关键字首选的在`for-range-declaration`语句部分。
 
-**Visual Studio 2017 中的新增功能：** 基于范围的 for 循环不再需要 begin （） 和 end （） 返回相同类型的对象。 这使得 end() 能够返回类似于 Ranges-V3 方案中定义的 ranges 所使用的那种 sentinel 对象。 有关详细信息，请参阅 [Generalizing the Range-Based For Loop](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0184r0.html)（通用化基于范围的 for 循环）和 [range-v3 library on GitHub](https://github.com/ericniebler/range-v3)（GitHub 上的 range-v3 库）。
+**Visual Studio 2017： 中的新增功能**基于范围的 for 循环不再需要 begin() 和 end() 返回相同类型的对象。 这使得 end() 能够返回类似于 Ranges-V3 方案中定义的 ranges 所使用的那种 sentinel 对象。 有关详细信息，请参阅 [Generalizing the Range-Based For Loop](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0184r0.html)（通用化基于范围的 for 循环）和 [range-v3 library on GitHub](https://github.com/ericniebler/range-v3)（GitHub 上的 range-v3 库）。
 
 此代码显示了如何使用范围基于**为**循环来循环访问数组和矢量：
 

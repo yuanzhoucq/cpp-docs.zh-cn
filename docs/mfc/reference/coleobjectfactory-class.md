@@ -37,11 +37,11 @@ helpviewer_keywords:
 - COleObjectFactory [MFC], VerifyUserLicense
 ms.assetid: ab179c1e-4af2-44aa-a576-37c48149b427
 ms.openlocfilehash: 25dce92f49ba9de08fcf33d54db8e97d520f5ea4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57266375"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62224379"
 ---
 # <a name="coleobjectfactory-class"></a>COleObjectFactory 类
 
@@ -136,7 +136,7 @@ COleObjectFactory(
 对此对象工厂表示 OLE 类 ID 的引用。
 
 *pRuntimeClass*<br/>
-指向此工厂可以创建的 c + + 对象的运行时类的指针。
+指针到运行时类的C++对象可以创建此工厂。
 
 *bMultiInstance*<br/>
 指示是否在应用程序的单个实例可以支持多个实例化。 如果为 TRUE，为每个请求创建的对象启动的应用程序的多个实例。

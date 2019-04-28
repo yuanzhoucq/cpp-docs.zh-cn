@@ -56,11 +56,11 @@ helpviewer_keywords:
 - AFX_GLOBAL_DATA constructor
 ms.assetid: c7abf2fb-ad5e-4336-a01d-260c29ed53a2
 ms.openlocfilehash: 0fd8143564beecccd8943f3ceba531e8697151d1
-ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55850319"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62212917"
 ---
 # <a name="afxglobaldata-structure"></a>AFX_GLOBAL_DATA 结构
 
@@ -125,7 +125,7 @@ struct AFX_GLOBAL_DATA
 
 ### <a name="data-members"></a>数据成员
 
-|name|描述|
+|名称|描述|
 |----------|-----------------|
 |[AFX_GLOBAL_DATA::bIsOSAlphaBlendingSupport](#bisosalphablendingsupport)|指示当前操作系统是否支持 alpha 值混合处理。|
 |[AFX_GLOBAL_DATA::bIsWindows7](#biswindows7)|指示应用程序在 Windows 7 OS 还是更高版本下执行|

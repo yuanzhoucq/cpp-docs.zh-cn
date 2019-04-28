@@ -8,11 +8,11 @@ helpviewer_keywords:
 - CComEnum class
 ms.assetid: bff7dd7b-eb6e-4d6e-96ed-2706e66c8b3b
 ms.openlocfilehash: 4d83b06f37c132c0d2325304e2cc155ccb490690
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57290360"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62246390"
 ---
 # <a name="ccomenum-class"></a>CComEnum 类
 
@@ -48,7 +48,7 @@ COM 枚举器接口。 请参阅[IEnumString](/windows/desktop/api/objidl/nn-obj
 
 ## <a name="remarks"></a>备注
 
-`CComEnum` 定义基于数组的 COM 枚举器对象。 此类是类似于[CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md)它可实现基于 c + + 标准库容器的枚举器。 使用此类的典型步骤如下所述。 有关详细信息，请参阅[ATL 集合和枚举器](../../atl/atl-collections-and-enumerators.md)。
+`CComEnum` 定义基于数组的 COM 枚举器对象。 此类是类似于[CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md)它可实现基于的枚举器C++标准库容器。 使用此类的典型步骤如下所述。 有关详细信息，请参阅[ATL 集合和枚举器](../../atl/atl-collections-and-enumerators.md)。
 
 ## <a name="to-use-this-class"></a>若要使用此类：
 

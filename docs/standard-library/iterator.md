@@ -8,11 +8,11 @@ helpviewer_keywords:
 - iterator header
 ms.assetid: c61a3962-f3ed-411a-b5a3-e8b3c2b500bd
 ms.openlocfilehash: 1b0d3282075246f3b217f0c8acac19ed8ece79cb
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51520746"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62224085"
 ---
 # <a name="ltiteratorgt"></a>&lt;Iterator&gt;
 
@@ -40,7 +40,7 @@ ms.locfileid: "51520746"
 
 可使用要求较高、因而需要更强大元素访问的迭代器来代替要求较低的迭代器。 例如，如果调用向前迭代器，则可使用随机访问迭代器来代替。
 
-Visual Studio 为 C++ 标准库迭代器增加了一些扩展，以便支持多种检查迭代器和未检查迭代器的调试模式情形。 有关详细信息，请参阅[安全库：C++ 标准库](../standard-library/safe-libraries-cpp-standard-library.md)。
+Visual Studio 为 C++ 标准库迭代器增加了一些扩展，以便支持多种检查迭代器和未检查迭代器的调试模式情形。 有关详细信息，请参阅[安全库：C++标准库](../standard-library/safe-libraries-cpp-standard-library.md)。
 
 ### <a name="functions"></a>函数
 

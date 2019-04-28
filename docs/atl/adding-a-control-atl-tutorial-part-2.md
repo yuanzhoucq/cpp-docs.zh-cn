@@ -4,11 +4,11 @@ ms.custom: get-started-article
 ms.date: 09/26/2018
 ms.assetid: c9575a75-1064-41f1-9697-7aada560c669
 ms.openlocfilehash: 45841c33ad30ff427f9b792a779d135b4f6e7eca
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283223"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62223540"
 ---
 # <a name="adding-a-control-atl-tutorial-part-2"></a>添加控件（ATL 教程，第 2 部分）
 
@@ -35,9 +35,9 @@ ms.locfileid: "57283223"
 |字段|内容|
 |-----------|--------------|
 |**短名称**|输入控件的名称。|
-|**类**|创建实现控件的 c + + 类名称。|
-|**.h 文件**|创建用于包含 c + + 类的定义文件。|
-|**.cpp 文件**|创建用于包含 c + + 类的实现文件。|
+|**类**|C++创建实现控件的类名称。|
+|**.h 文件**|创建用于包含的定义文件C++类。|
+|**.cpp 文件**|创建要包含的实现的文件C++类。|
 |**CoClass**|此控件的组件类的名称。|
 |**Interface**|该控件将在其实现其自定义方法和属性的接口的名称。|
 |**Type**|关于控件的说明。|
@@ -83,7 +83,7 @@ ms.locfileid: "57283223"
 
 |文件|描述|
 |----------|-----------------|
-|PolyCtl.h|包含 c + + 类的实现大部分`CPolyCtl`。|
+|PolyCtl.h|包含了大部分的实现的C++类`CPolyCtl`。|
 |PolyCtl.cpp|包含的其余部分`CPolyCtl`。|
 |PolyCtl.rgs|包含用来注册该控件的注册表脚本的文本文件。|
 |PolyCtl.htm|包含对新创建的控件的引用的网页。|

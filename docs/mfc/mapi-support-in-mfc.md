@@ -10,11 +10,11 @@ helpviewer_keywords:
 - OnFileSendMail method [MFC]
 ms.assetid: cafbecb1-0427-4077-b4b8-159bae5b49b8
 ms.openlocfilehash: 9b873ca1b3384adab6487fb3af9dc1401aaad12c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57281637"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62225514"
 ---
 # <a name="mapi-support-in-mfc"></a>MFC 中的 MAPI 支持
 
@@ -32,7 +32,7 @@ MAPI 需要读取要发送附件的文件。 如果应用程序将其数据文�
 
 #### <a name="to-implement-a-send-mail-command-with-mfc"></a>若要实现与 MFC 的发送邮件命令
 
-1. 使用 Visual c + + 菜单编辑器中添加其命令 ID 是 ID_FILE_SEND_MAIL 菜单项。
+1. 使用视觉对象C++菜单编辑器添加的命令 ID 是 ID_FILE_SEND_MAIL 的菜单项。
 
    此命令 ID 提供的 AFXRES 中的框架。H. 该命令可添加到任何菜单上，但通常将其添加到**文件**菜单。
 

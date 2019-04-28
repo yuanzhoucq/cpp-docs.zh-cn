@@ -7,11 +7,11 @@ helpviewer_keywords:
 - lambda expressions [C++], vs. function objects
 ms.assetid: 713c7638-92be-4ade-ab22-fa33417073bf
 ms.openlocfilehash: 9ebe4fec06996e908c619b6ac14af098b1c07a01
-ms.sourcegitcommit: fe1e21df175cd004d21c6e4659082efceb649a8b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53978304"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62216484"
 ---
 # <a name="lambda-expressions-in-c"></a>C++ 中的 Lambda 表达式
 
@@ -147,7 +147,7 @@ auto y = [] (auto first, auto second)
 };
 ```
 
-lambda 表达式可以将另一个 lambda 表达式作为其自变量。 详细信息，请参阅"高阶 Lambda 表达式"主题中[Lambda 表达式的示例](../cpp/examples-of-lambda-expressions.md)。
+Lambda 表达式可以将另一个 Lambda 表达式作为其自变量。 详细信息，请参阅"高阶 Lambda 表达式"主题中[Lambda 表达式的示例](../cpp/examples-of-lambda-expressions.md)。
 
 参数列表是可选的因为如果不执行操作将参数传递到 lambda 表达式和 lambda 声明符不包含，则可以省略空括号*异常规范*， *尾随返回类型*，或**可变**。
 

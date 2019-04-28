@@ -8,11 +8,11 @@ helpviewer_keywords:
 - troubleshooting [C++], multithreading
 ms.assetid: 06cc231d-bb5a-409d-8bd3-676c9e2a8c5b
 ms.openlocfilehash: 3ceae832599243ffa0aad2b6fa67148e7ea30510
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57288177"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62237059"
 ---
 # <a name="avoiding-problem-areas-with-multithread-programs"></a>避免与多线程程序有关的问题
 
@@ -20,7 +20,7 @@ ms.locfileid: "57288177"
 
 |问题|可能的原因|
 |-------------|--------------------|
-|获取一个消息框，显示您的程序导致保护冲突。|很多 Win32 编程错误导致保护冲突。 保护冲突的常见原因是间接分配给 null 指针的数据。 因为这会导致程序试图访问不属于它的内存，则会发出保护冲突。<br /><br /> 轻松地检测保护违规的原因是编译您的程序与调试信息并运行通过 Visual c + + 环境中的调试器。 保护错误发生时，Windows 将控制转移到调试器，并将光标置于引起问题的行。|
+|获取一个消息框，显示您的程序导致保护冲突。|很多 Win32 编程错误导致保护冲突。 保护冲突的常见原因是间接分配给 null 指针的数据。 因为这会导致程序试图访问不属于它的内存，则会发出保护冲突。<br /><br /> 轻松地检测保护违规的原因是编译您的程序与调试信息并运行通过视觉对象中的调试器C++环境。 保护错误发生时，Windows 将控制转移到调试器，并将光标置于引起问题的行。|
 |您的程序会生成大量的编译和链接错误。|可以通过编译器的警告级别设置为其最大的值之一，并注意警告消息来消除许多潜在的问题。 通过使用级别 3 或 4 级警告级别选项，则可以检测到意外的数据转换、 缺少函数原型，并使用非 ANSI 功能。|
 
 ## <a name="see-also"></a>请参阅

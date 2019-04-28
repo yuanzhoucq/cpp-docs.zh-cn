@@ -10,11 +10,11 @@ helpviewer_keywords:
 - MFC, library versions
 - libraries [MFC], versions
 ms.openlocfilehash: c0dc724566063066175ea54e2b7734892e3c6e05
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50537652"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62238490"
 ---
 # <a name="mfc-library-versions"></a>MFC 库版本
 
@@ -85,7 +85,7 @@ MFC 项目使用的预处理器符号\_UNICODE 以指示 utf-16 的宽字符 Uni
 
 Mfc 静态库使用以下命名约定。 库名采用以下格式
 
-> <em>u</em>AFX<em>cd</em>。LIB
+> <em>u</em>AFX<em>cd</em>.LIB
 
 其中，使用斜体小写字母形式显示的字母是说明符的占位符，下表中显示了说明符的含义：
 
@@ -93,7 +93,7 @@ Mfc 静态库使用以下命名约定。 库名采用以下格式
 |---------------|-------------------------|
 |*u*|ANSI/MBCS (N) 或 Unicode (U);对于不带 MFC 控件在对话框中的版本可以省略参数|
 |*c*|使用 MFC 控件在对话框 (CW) 或不 (NMCD) 版本|
-|*d*|调试或发布：D 表示调试；省略说明符表示发布|
+|*d*|调试或发布：D = 调试;省略说明符表示发布|
 
 下表中列出的所有库都都包含预构建支持的生成体系结构的 \atlmfc\lib 目录中。
 
@@ -101,7 +101,7 @@ Mfc 静态库使用以下命名约定。 库名采用以下格式
 |-------------|-----------------|
 |NAFXCW.LIB|MFC 静态链接库，发布版本|
 |NAFXCWD.LIB|MFC 静态链接库，调试版本|
-|UAFXCW。LIB|具有 Unicode 支持的 MFC 静态链接库，发布版本|
+|UAFXCW.LIB|具有 Unicode 支持的 MFC 静态链接库，发布版本|
 |UAFXCWD.LIB|具有 Unicode 支持的 MFC 静态链接库，调试版本|
 |AFXNMCD.LIB|不带 MFC 对话框控件，发行版的 MFC 静态链接库|
 |AFXNMCDD.LIB|不带 MFC 对话框控件，调试版本的 MFC 静态链接库|
@@ -117,11 +117,11 @@ MFC Dll 已*版本*指示二进制文件兼容性的数字。 使用 MFC Dll 具
 |DLL|描述|
 |---------|-----------------|
 |MFC*version*.DLL|MFC DLL、 ANSI 或 MBCS 版本的版本|
-|MFC*版本*U.DLL|MFC DLL，Unicode 版本|
+|MFC*version*U.DLL|MFC DLL，Unicode 版本|
 |MFC*version*D.DLL|MFC DLL、 ANSI 或 MBCS 调试版本|
 |MFC*version*UD.DLL|MFC DLL，Unicode 调试版本|
 |MFCM*version*.DLL|与 Windows 窗体控件，MFC DLL ANSI 或 MBCS 版本的版本|
-|MFCM*版本*U.DLL|与 Windows 窗体控件，Unicode 版本的 MFC DLL|
+|MFCM*version*U.DLL|与 Windows 窗体控件，Unicode 版本的 MFC DLL|
 |MFCM*version*D.DLL|与 Windows 窗体控件，MFC DLL ANSI 或 MBCS 调试版本|
 |MFCM*version*UD.DLL|与 Windows 窗体控件，Unicode 调试版本的 MFC DLL|
 
@@ -129,7 +129,7 @@ MFC Dll 已*版本*指示二进制文件兼容性的数字。 使用 MFC Dll 具
 
 如果您要动态链接到共享的 DLL 版本的 MFC，，是否从应用程序或从 MFC 扩展 DLL，则必须包含匹配的 MFC*版本*。DLL 或 MFC*版本*U.DLL 时部署您的产品。
 
-可以使用你的应用程序分发的 Visual c + + Dll 的列表，请参阅[Microsoft Visual Studio 2017 和 Microsoft Visual Studio 2017 SDK （包括实用程序和 BuildServer 文件） 的可分发代码](http://go.microsoft.com/fwlink/p/?LinkId=823098)。
+有关视觉对象的列表C++Dll 可以随您的应用程序分发，请参阅[Microsoft Visual Studio 2017 和 Microsoft Visual Studio 2017 SDK （包括实用程序和 BuildServer 文件） 的可分发代码](http://go.microsoft.com/fwlink/p/?LinkId=823098)。
 
 MFC 中的 MBCS 和 Unicode 支持的详细信息，请参阅[Unicode 和多字节字符集 (MBCS) 支持](../atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md)。
 

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2143
 ms.assetid: 1d8d1456-e031-4965-9240-09a6e33ba81c
 ms.openlocfilehash: ed4bc7eea85e5263d59817082caed99bde3d75d5
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51520109"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62353477"
 ---
 # <a name="compiler-error-c2143"></a>编译器错误 C2143
 
@@ -19,7 +19,7 @@ ms.locfileid: "51520109"
 
 编译器需要特定的标记 （即，空白区域以外的语言元素），但发现另一个标记。
 
-检查[c + + 语言参考](../../cpp/cpp-language-reference.md)以确定代码是否语法不正确。 因为编译器可能会报告此错误，在遇到导致问题的行之后，检查代码的多个错误之前的行。
+检查[C++语言参考](../../cpp/cpp-language-reference.md)来确定代码是否语法不正确。 因为编译器可能会报告此错误，在遇到导致问题的行之后，检查代码的多个错误之前的行。
 
 在不同情况下可能发生 C2143。
 
@@ -122,7 +122,7 @@ void func1() {
 }
 ```
 
-对 c + + 标准库中的类型进行非限定的调用时，可能出现此错误：
+中的类型进行非限定的调用时可能出现此错误C++标准库：
 
 ```cpp
 // C2143g.cpp

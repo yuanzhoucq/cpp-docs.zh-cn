@@ -21,11 +21,11 @@ helpviewer_keywords:
 - reference counting
 ms.assetid: 894a3d7c-2daf-4fd0-8fa4-e6a05bcfb631
 ms.openlocfilehash: 06a0c0e4b650945e10015c3220b926399ec9c6fd
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57280636"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62246308"
 ---
 # <a name="ccomobjectrootex-class"></a>CComObjectRootEx 类
 
@@ -305,7 +305,7 @@ static void WINAPI ObjectMain(bool bStarting);
 
 值*bStarting*参数指示是否将模块正在初始化或终止。 默认实现`ObjectMain`不执行任何操作，但可以在您的类初始化或清理资源，你想要分配的类中重写此函数。 请注意，`ObjectMain`类的任何实例都请求之前调用。
 
-`ObjectMain` 从调用的 dll 的入口点的入口点函数可以执行的操作的类型是受限制。 有关这些限制的详细信息，请参阅[Dll 和 Visual c + + 运行时库行为](../../build/run-time-library-behavior.md)并[DllMain](/windows/desktop/Dlls/dllmain)。
+`ObjectMain` 从调用的 dll 的入口点的入口点函数可以执行的操作的类型是受限制。 有关这些限制的详细信息，请参阅[Dll 和 VisualC++运行时库行为](../../build/run-time-library-behavior.md)并[DllMain](/windows/desktop/Dlls/dllmain)。
 
 ### <a name="example"></a>示例
 
