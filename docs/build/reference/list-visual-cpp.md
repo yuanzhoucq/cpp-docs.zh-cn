@@ -1,5 +1,5 @@
 ---
-title: '&lt;列表 > （c + + 文档注释）'
+title: '&lt;列表 > (C++文档注释)'
 ms.date: 11/04/2016
 f1_keywords:
 - list
@@ -9,11 +9,11 @@ helpviewer_keywords:
 - <list> C++ XML tag
 ms.assetid: c792a10b-0451-422c-9aa0-604116e69d64
 ms.openlocfilehash: fd5b97ac518bc4075697da7b6ed88ed46bdd8814
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57825110"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62305263"
 ---
 # <a name="ltlistgt"></a>&lt;list&gt;
 

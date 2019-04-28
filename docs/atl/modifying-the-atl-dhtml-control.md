@@ -7,15 +7,15 @@ helpviewer_keywords:
 - DHTML controls, modifying
 ms.assetid: c053f35f-8629-4600-9595-721f5956777a
 ms.openlocfilehash: 6c8976c013d0114a3115d3b0bc38fa4bc6acb5b7
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57275683"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62261652"
 ---
 # <a name="modifying-the-atl-dhtml-control"></a>修改 ATL DHTML 控件
 
-ATL 控件向导提供了起始代码，这样可以生成并运行该控件，因此您可以查看项目文件中写入方法的方式以及如何 DHTML 调用到控件的 c + + 代码中使用的调度方法。 可以将任何 dispatch 方法添加到该接口。 然后，您可以在 HTML 资源调用方法。
+ATL 控件向导提供了起始代码，这样可以生成并运行该控件，因此您可以查看项目文件中写入方法的方式以及如何将 DHTML 对控件的C++代码使用调度方法。 可以将任何 dispatch 方法添加到该接口。 然后，您可以在 HTML 资源调用方法。
 
 ## <a name="to-modify-the-atl-dhtml-control"></a>若要修改的 ATL DHTML 控件
 

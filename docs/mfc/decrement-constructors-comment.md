@@ -12,15 +12,15 @@ helpviewer_keywords:
 - instance constructors, code comments
 ms.assetid: f400774e-ba85-49ed-85b7-70ef2f7dcb2b
 ms.openlocfilehash: e0d02af016a0c7bfb0869b7cdd30fe0db2975102
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57265803"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62240856"
 ---
 # <a name="-constructors-comment"></a>// Constructors 注释
 
-`// Constructors` MFC 类声明的部分用于声明构造函数 （在 c + + 意义上说），以及实际使用该对象所需的任何初始化函数。 例如，`CWnd::Create`是在构造函数部分，因为使用之前`CWnd`对象，它必须"完全"通过构造第一次调用的 c + + 构造函数，然后再调用`Create`函数。 通常情况下，这些成员是公共的。
+`// Constructors` MFC 类声明的部分用于声明构造函数 (在C++意义上) 以及任何真正使用该对象所需的初始化函数。 例如，`CWnd::Create`是在构造函数部分，因为使用之前`CWnd`对象，它必须"完全构造"通过首先调用C++构造函数，然后再调用`Create`函数。 通常情况下，这些成员是公共的。
 
 例如，类`CStdioFile`有三个构造函数，其中之一下的列表中所示[注释示例](../mfc/an-example-of-the-comments.md)。
 

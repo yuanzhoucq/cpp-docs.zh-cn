@@ -25,11 +25,11 @@ helpviewer_keywords:
 - multibyte code pages
 ms.assetid: cfde53b5-0b73-4684-81b1-a8d3aafc85de
 ms.openlocfilehash: c1f4967baa5fda68a7df33bcd08935dca23fab16
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532205"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62356454"
 ---
 # <a name="setmbcp"></a>_setmbcp
 
@@ -45,7 +45,7 @@ int _setmbcp(
 
 ### <a name="parameters"></a>参数
 
-*代码页*<br/>
+*codepage*<br/>
 独立于区域设置的多字节例程的新代码页设置。
 
 ## <a name="return-value"></a>返回值

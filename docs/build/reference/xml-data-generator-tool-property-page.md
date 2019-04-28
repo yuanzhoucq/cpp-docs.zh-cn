@@ -9,11 +9,11 @@ helpviewer_keywords:
 - XML Data Generator Tool property page
 ms.assetid: b2ef1c12-3419-429d-bb9d-bd7d9ffe1ffb
 ms.openlocfilehash: 51042e3eab0c789d2e923f40de2d0ee82d06a5ab
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57825046"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62316439"
 ---
 # <a name="xml-data-generator-tool-property-page"></a>“XML 数据生成器工具”属性页
 
@@ -33,10 +33,10 @@ ms.locfileid: "57825046"
 
    确定是否发出托管代码。
 
-有关如何访问的信息**XML 数据生成器工具**属性页中，请参阅[在 Visual Studio 中的设置 c + + 编译器和生成属性](../working-with-project-properties.md)。
+有关如何访问的信息**XML 数据生成器工具**属性页中，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
 
 有关如何以编程方式访问此对象的成员的详细信息，请参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCXMLDataGeneratorTool>
 
 ## <a name="see-also"></a>请参阅
 
-[C + + 项目属性页引用](property-pages-visual-cpp.md)
+[C++项目属性页引用](property-pages-visual-cpp.md)

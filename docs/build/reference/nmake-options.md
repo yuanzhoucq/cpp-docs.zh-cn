@@ -5,17 +5,17 @@ helpviewer_keywords:
 - NMAKE program, options
 ms.assetid: 00ba1aec-ef27-44cf-8d82-c5c095e45bae
 ms.openlocfilehash: c60b6d821d8e16e87f86e3b79825aa1dee7867c8
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57824466"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62320534"
 ---
 # <a name="nmake-options"></a>NMAKE 选项
 
 NMAKE 选项如下表所述。 选项的前面有反斜杠 （/） 或短划线 （-） 和不区分大小写。 使用[！CMDSWITCHES](makefile-preprocessing-directives.md)更改生成文件中或在 Tools.ini 选项设置。
 
-|选项|目标|
+|选项|用途|
 |------------|-------------|
 |/A|强制生成的所有计算目标，即使对于的依赖项未过期。 不会强制生成不相关的目标。|
 |/B|即使时间戳相等，则强制生成。 建议仅用于非常快的系统 （解析为两秒或更少）。|

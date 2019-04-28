@@ -12,11 +12,11 @@ helpviewer_keywords:
 - precompiled header files, use existing
 ms.assetid: 24f1bd0e-b624-4296-a17e-d4b53e374e1f
 ms.openlocfilehash: c0dcb045450d6e6eca31b8c76a92726e62400656
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57810112"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62316140"
 ---
 # <a name="yu-use-precompiled-header-file"></a>/Yu（使用预编译标头文件）
 
@@ -63,7 +63,7 @@ ms.locfileid: "57810112"
 
 1. 指定[/Yc （创建预编译标头文件）](yc-create-precompiled-header-file.md)在项目中的.cpp 文件。
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[Visual Studio 中的设置 c + + 编译器和生成属性](../working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
 
 1. 单击 **“C/C++”** 文件夹。
 

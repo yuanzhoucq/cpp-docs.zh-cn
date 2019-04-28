@@ -23,11 +23,11 @@ helpviewer_keywords:
 - calloc_dbg function
 ms.assetid: 7f62c42b-eb9f-4de5-87d0-df57036c87de
 ms.openlocfilehash: c525aa2f19b39ba3cb8304c59c96196707ad859c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50454387"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62340855"
 ---
 # <a name="callocdbg"></a>_calloc_dbg
 
@@ -47,7 +47,7 @@ void *_calloc_dbg(
 
 ### <a name="parameters"></a>参数
 
-*数量*<br/>
+*number*<br/>
 内存块的请求数量。
 
 *size*<br/>

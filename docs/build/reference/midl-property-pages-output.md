@@ -1,5 +1,5 @@
 ---
-title: MIDL 属性页：输出
+title: “MIDL”属性页：Output
 ms.date: 11/04/2016
 f1_keywords:
 - VC.Project.VCMidlTool.ProxyFileName
@@ -13,13 +13,13 @@ helpviewer_keywords:
 - MIDL, property pages
 ms.assetid: b850b21b-ed38-46dd-a712-807e8eabd9aa
 ms.openlocfilehash: 44397eb0c5d14e63a5d971d86356225d63faa431
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57824435"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62321171"
 ---
-# <a name="midl-property-pages-output"></a>MIDL 属性页：输出
+# <a name="midl-property-pages-output"></a>“MIDL”属性页：Output
 
 MIDL 文件夹中的“输出”属性页指定以下 MIDL 编译器选项：
 
@@ -37,7 +37,7 @@ MIDL 文件夹中的“输出”属性页指定以下 MIDL 编译器选项：
 
 - 类型库 ([/tlb](https://msdn.microsoft.com/library/windows/desktop/aa367372))
 
-有关如何访问的信息**输出**中的属性页**MIDL**文件夹，请参阅[Visual Studio 中的设置 c + + 编译器和生成属性](../working-with-project-properties.md)。
+有关如何访问的信息**输出**中的属性页**MIDL**文件夹，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
 
 有关如何以编程方式访问 C++ 项目的 MIDL 选项的详细信息，请参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCMidlTool>。
 

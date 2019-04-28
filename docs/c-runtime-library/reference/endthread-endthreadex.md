@@ -31,11 +31,11 @@ helpviewer_keywords:
 - threading [C++], terminating threads
 ms.assetid: 18a91f2f-659e-40b4-b266-ec12dcf2abf5
 ms.openlocfilehash: 2f54ca9c4cd5e863ca960f1d9c3634b85e7896dd
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54893296"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62288818"
 ---
 # <a name="endthread-endthreadex"></a>_endthread、_endthreadex
 
@@ -67,7 +67,7 @@ void _endthreadex(
 与 Win32 **ExitThread** API， **_endthreadex**不会关闭线程句柄。 因此，当你使用 **_beginthreadex**并 **_endthreadex**，您必须通过调用 Win32 关闭线程句柄**CloseHandle** API。
 
 > [!NOTE]
-> **_endthread**并 **_endthreadex**不会调用线程会导致挂起的 c + + 析构函数。
+> **_endthread**并 **_endthreadex**导致C++中不会调用线程挂起的析构函数。
 
 ## <a name="requirements"></a>要求
 

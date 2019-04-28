@@ -5,18 +5,18 @@ f1_keywords:
 - <mutex>
 ms.assetid: efb60c89-687a-4e38-8fe4-694e11c4e8a3
 ms.openlocfilehash: 4655278e312647f4e69cf48cb772df854260ce57
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50482550"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62224072"
 ---
 # <a name="ltmutexgt"></a>&lt;mutex&gt;
 
 包括：用于定义类 `mutex`、`recursive_mutex`、`timed_mutex` 和 `recursive_timed_mutex` 的标准标头 \<mutex>，模板 `lock_guard` 和 `unique_lock`，以及用于定义互斥代码区域的支持类型和函数。
 
 > [!WARNING]
-> 从 Visual Studio 2015 开始，c + + 标准库同步类型基于 Windows 同步基元和不再使用 ConcRT （除非目标平台是 Windows XP）。 \<mutex> 中定义的类型不应与任何 ConcRT 类型或函数共同使用。
+> 在 Visual Studio 2015 中，从C++标准库同步类型基于 Windows 同步基元，且不再使用 ConcRT （除非目标平台是 Windows XP）。 \<mutex> 中定义的类型不应与任何 ConcRT 类型或函数共同使用。
 
 ## <a name="syntax"></a>语法
 
@@ -67,7 +67,7 @@ ms.locfileid: "50482550"
 
 ### <a name="structs"></a>结构
 
-|name|描述|
+|名称|描述|
 |----------|-----------------|
 |[adopt_lock_t 结构](../standard-library/adopt-lock-t-structure.md)|表示用于定义 `adopt_lock` 的类型。|
 |[defer_lock_t 结构](../standard-library/defer-lock-t-structure.md)|表示定义用于选择 `unique_lock` 的重载构造函数之一的 `defer_lock` 对象的类型。|
@@ -76,7 +76,7 @@ ms.locfileid: "50482550"
 
 ### <a name="variables"></a>变量
 
-|name|描述|
+|名称|描述|
 |----------|-----------------|
 |[adopt_lock](../standard-library/mutex-functions.md#adopt_lock)|表示可传递给 `lock_guard` 和 `unique_lock` 的构造函数，以指示同样传递给该构造函数的互斥体对象已锁定的对象。|
 |[defer_lock](../standard-library/mutex-functions.md#defer_lock)|表示可以传递给 `unique_lock` 的构造函数的对象，以指示该构造函数不应锁定同样传递给它的互斥体对象。|

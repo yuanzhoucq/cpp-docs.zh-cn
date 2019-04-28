@@ -1,5 +1,5 @@
 ---
-title: 如何：配置 Visual c + + 项目以面向 64 位 x64 平台
+title: 如何：配置 VisualC++项目面向 64 位 x64 平台
 ms.date: 11/04/2016
 helpviewer_keywords:
 - platforms [C++], 64-bit
@@ -7,21 +7,21 @@ helpviewer_keywords:
 - project configurations [C++]
 ms.assetid: 2b9ae001-df36-4750-83b2-982145d632ad
 ms.openlocfilehash: 21c812efd101c64e250a545d2a40df6adc31c414
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57813950"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62274468"
 ---
-# <a name="how-to-configure-visual-c-projects-to-target-64-bit-x64-platforms"></a>如何：配置 Visual c + + 项目以面向 64 位 x64 平台
+# <a name="how-to-configure-visual-c-projects-to-target-64-bit-x64-platforms"></a>如何：配置 VisualC++项目面向 64 位 x64 平台
 
-可以使用 Visual Studio IDE 中的项目配置来设置 c + + 应用程序以面向 64 位 x64 平台。 还可以将 Win32 项目设置迁移到 64 位项目配置。
+可以使用 Visual Studio IDE 中的项目配置设置C++应用程序以面向 64 位 x64 平台。 还可以将 Win32 项目设置迁移到 64 位项目配置。
 
 ### <a name="to-set-up-c-applications-to-target-64-bit-platforms"></a>设置项目以面向 64 位平台
 
 1. 打开要配置的 C++ 项目。
 
-1. 打开该项目的属性页面。 有关详细信息，请参阅[Visual Studio 中的设置 c + + 编译器和生成属性](working-with-project-properties.md)。
+1. 打开该项目的属性页面。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](working-with-project-properties.md)。
 
    > [!NOTE]
    > 对于.NET 项目，请确保 **配置属性** 中选择节点或子节点之一 **\<项目名称> 属性页** 对话框; 否则为 **配置管理器** 按钮仍然不可用。
@@ -58,5 +58,5 @@ ms.locfileid: "57813950"
 
 ## <a name="see-also"></a>请参阅
 
-[配置 64 位 x64 的 c + + 项目目标](configuring-programs-for-64-bit-visual-cpp.md)<br/>
+[配置C++适用于 64 位 x64 目标项目](configuring-programs-for-64-bit-visual-cpp.md)<br/>
 [调试 64 位应用程序](/visualstudio/debugger/debug-64-bit-applications)

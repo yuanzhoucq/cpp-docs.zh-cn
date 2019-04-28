@@ -26,11 +26,11 @@ helpviewer_keywords:
 - remainder computing
 ms.assetid: 8ae80d97-54fd-499e-b14c-e30993b58119
 ms.openlocfilehash: 0ee1b3b6a5d7b15470ffe1e667b4077d1f9581e4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50653422"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62339255"
 ---
 # <a name="div-ldiv-lldiv"></a>div、 ldiv、 lldiv
 
@@ -66,7 +66,7 @@ lldiv_t div(
 
 ### <a name="parameters"></a>参数
 
-*号码*<br/>
+*numer*<br/>
 分子。
 
 *denom*<br/>
@@ -80,7 +80,7 @@ lldiv_t div(
 
 **Div**函数划分*号码*由*denom* ，从而计算商和余数。 [Div_t](../../c-runtime-library/standard-types.md)结构包含商， **q u o t**，，其余**rem**。商的符号与数学商的符号相同。 其绝对值是小于数学商的绝对值的最大整数。 如果分母为 0，程序将终止并显示错误消息。
 
-重载**div**需要类型的自变量**长**或**长****长**仅可供 c + + 代码。 返回类型[ldiv_t](../../c-runtime-library/standard-types.md)并[lldiv_t](../../c-runtime-library/standard-types.md)包含成员**q u o t**并**rem**，它具有相同的含义的成员**div_t**。
+重载**div**需要类型的自变量**长**或**长****长**仅可供C++代码。 返回类型[ldiv_t](../../c-runtime-library/standard-types.md)并[lldiv_t](../../c-runtime-library/standard-types.md)包含成员**q u o t**并**rem**，它具有相同的含义的成员**div_t**。
 
 ## <a name="requirements"></a>要求
 

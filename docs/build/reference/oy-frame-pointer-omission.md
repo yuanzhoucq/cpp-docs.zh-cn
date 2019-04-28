@@ -14,11 +14,11 @@ helpviewer_keywords:
 - /Oy compiler option [C++]
 ms.assetid: c451da86-5297-4c5a-92bc-561d41379853
 ms.openlocfilehash: 7884f52cc22766c6b1a864fc01abcd73f92cfabb
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57817954"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62319962"
 ---
 # <a name="oy-frame-pointer-omission"></a>/Oy（框架指针省略）
 
@@ -42,9 +42,9 @@ ms.locfileid: "57817954"
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[Visual Studio 中的设置 c + + 编译器和生成属性](../working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
 
-1. 选择**配置属性** > **C/c + +** > **优化**属性页。
+1. 选择**配置属性** > **C /C++** > **优化**属性页。
 
 1. 修改**省略框架指针**属性。 此属性仅添加或移除 **/Oy**选项。 如果你想要添加 **/Oy-** 选项，选中**命令行**属性页，并修改**其他选项**。
 

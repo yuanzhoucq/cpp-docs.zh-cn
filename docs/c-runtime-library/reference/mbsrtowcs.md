@@ -22,11 +22,11 @@ helpviewer_keywords:
 - mbsrtowcs function
 ms.assetid: f3a29de8-e36e-425b-a7fa-a258e6d7909d
 ms.openlocfilehash: 2bc0c8c9e2d871b6d1748c42dc02c627244dbf69
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50597140"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62331137"
 ---
 # <a name="mbsrtowcs"></a>mbsrtowcs
 
@@ -84,7 +84,7 @@ size_t mbsrtowcs(
 
 在 C++ 中，此函数具有一个调用此函数的更新、更安全副本的模板重载。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 
-## <a name="exceptions"></a>异常
+## <a name="exceptions"></a>Exceptions
 
 **Mbsrtowcs**函数是多线程安全，只要当前线程中的函数不调用**setlocale**只要此函数正在执行并*mbstate*参数不是 null 指针。
 

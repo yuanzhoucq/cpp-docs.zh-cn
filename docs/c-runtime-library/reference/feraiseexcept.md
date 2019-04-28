@@ -22,11 +22,11 @@ helpviewer_keywords:
 - feraiseexcept function
 ms.assetid: 87e89151-83c2-4563-9a9a-45666245d437
 ms.openlocfilehash: 581dd4026a20ce7221945c5815af3ae102f132fa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532244"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62334354"
 ---
 # <a name="feraiseexcept"></a>feraiseexcept
 
@@ -42,7 +42,7 @@ int feraiseexcept(
 
 ### <a name="parameters"></a>参数
 
-*除*<br/>
+*excepts*<br/>
 要引发的浮点异常。
 
 ## <a name="return-value"></a>返回值
@@ -66,7 +66,7 @@ int feraiseexcept(
 
 若要使用此函数，必须在调用前先使用 `#pragma fenv_access(on)` 指令关闭可能会阻止访问的浮点优化。 有关详细信息，请参阅 [fenv_access](../../preprocessor/fenv-access.md)。
 
-**Microsoft 专用：** 中指定的异常*除*引发顺序 FE_INVALID、 FE_DIVBYZERO、 FE_OVERFLOW、 FE_UNDERFLOW、 FE_INEXACT。 但是，可能引发 FE_INEXACT 当引发 FE_OVERFLOW 或 FE_UNDERFLOW 时，即使在未指定*除*。 **结束 Microsoft 专用**
+**特定于 Microsoft:** 中指定的异常*除*引发顺序 FE_INVALID、 FE_DIVBYZERO、 FE_OVERFLOW、 FE_UNDERFLOW、 FE_INEXACT。 但是，可能引发 FE_INEXACT 当引发 FE_OVERFLOW 或 FE_UNDERFLOW 时，即使在未指定*除*。 **结束 Microsoft 专用**
 
 ## <a name="requirements"></a>要求
 

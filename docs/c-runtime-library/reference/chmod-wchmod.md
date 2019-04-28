@@ -30,11 +30,11 @@ helpviewer_keywords:
 - _wchmod function
 ms.assetid: 92f7cb86-b3b0-4232-a599-b8c04a2f2c19
 ms.openlocfilehash: 278ee1e6dda9e153b55676ce5c0ca389f383efd1
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518406"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62348466"
 ---
 # <a name="chmod-wchmod"></a>_chmod、_wchmod
 
@@ -67,7 +67,7 @@ int _wchmod( const wchar_t *filename, int pmode );
 |-|-|
 | **\_S\_IREAD** | 只允许读取。 |
 | **\_S\_IWRITE** | 允许写入。 （实际上，允许读取和写入。） |
-| **\_S\_IREAD** &AMP;#124;  **\_S\_IWRITE** | 允许读取和写入。 |
+| **\_S\_IREAD** &#124; **\_S\_IWRITE** | 允许读取和写入。 |
 
 当给定这两个常量时，它们联接与按位或运算符 (**\|**)。 如果未授予写入权限，则该文件为只读。 注意，所有文件始终具有可读性；不能提供只写权限。 因此，模式 **_S_IWRITE**并 **_S_IREAD** \| **_S_IWRITE**是等效的。
 

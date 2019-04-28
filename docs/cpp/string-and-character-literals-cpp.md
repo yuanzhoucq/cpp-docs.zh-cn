@@ -17,11 +17,11 @@ helpviewer_keywords:
 - wide characters, strings
 ms.assetid: 61de8f6f-2714-4e7b-86b6-a3f885d3b9df
 ms.openlocfilehash: d3721f3624a64a24de0a5458d88de4836b07a9c1
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329834"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62330838"
 ---
 # <a name="string-and-character-literals--c"></a>字符串和字符文本 （C++）
 
@@ -106,17 +106,17 @@ int main()
 
 有三种类型的转义序列：简单、八进制和十六进制。 转义序列可以是以下任一项：
 
-|值|转义序列|
+|“值”|转义序列|
 |-----------|---------------------|
 | 换行符 | \\n |
 | 反斜杠 | \\\\ |
 | 水平制表符 | \\t |
 | 问号 | ? 或 \\? |
-| 垂直制表符 | \\V |
+| 垂直制表符 | \\v |
 | 单引号 | \\' |
-| 退格符 | \\B |
+| 退格符 | \\b |
 | 双引号 | \\" |
-| 回车符 | \\R |
+| 回车符 | \\r |
 | null 字符 | \\0 |
 | 换页符 | \\f |
 | 八进制 | \\ooo |
@@ -254,7 +254,7 @@ auto s4 = U"hello"; // const char32_t*
 
 ### <a name="raw-string-literals-c11"></a>原始字符串 (C++11)
 
-原始字符串文本是一个以 null 结尾的数组-任何字符类型，包含的任何图形字符，包括双引号 （"）、 反斜杠 (\\)，或换行字符。 原始字符串通常用于使用字符类的正则表达式，还用于 HTML 字符串和 XML 字符串。 有关示例，请参阅以下文章：[关于 C++ 11 的 Bjarne Stroustrup 常见问题](http://www.stroustrup.com/C++11FAQ.html)。
+原始字符串文本是一个以 null 结尾的数组-任何字符类型，包含的任何图形字符，包括双引号 （"）、 反斜杠 (\\)，或换行字符。 原始字符串通常用于使用字符类的正则表达式，还用于 HTML 字符串和 XML 字符串。 有关示例，请参阅以下文章：[关于 c++11 的 Bjarne Stroustrup 常见问题](http://www.stroustrup.com/C++11FAQ.html)。
 
 ```cpp
 // represents the string: An unescaped \ character
@@ -328,7 +328,7 @@ const size_t byteSize = (wcslen(str) + 1) * sizeof(wchar_t);
 
 **Microsoft 专用**
 
-在 Visual c + + 可以使用字符串文字，若要将指针初始化为非常量**char**或**wchar_t**。 可以在 C99 代码中使用，但 C++98 中已弃用，C++11 中已删除。 尝试修改该字符串将导致访问冲突，例如：
+视觉对象中C++可以使用字符串文本以将指针初始化为非常量**char**或**wchar_t**。 可以在 C99 代码中使用，但 C++98 中已弃用，C++11 中已删除。 尝试修改该字符串将导致访问冲突，例如：
 
 ```cpp
 wchar_t* str = L"hello";

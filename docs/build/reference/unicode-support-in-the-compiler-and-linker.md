@@ -9,15 +9,15 @@ f1_keywords:
 helpviewer_keywords:
 - Unicode, Visual C++
 ms.openlocfilehash: 71458ab345670c0a5715576a7da80c4e6ff2955b
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57807495"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62317323"
 ---
 # <a name="unicode-support-in-the-compiler-and-linker"></a>编译器和链接器中的 Unicode 支持
 
-大多数 Visual c + + 生成工具支持 Unicode 输入和输出。
+最 VisualC++生成工具支持 Unicode 输入和输出。
 
 ## <a name="filenames"></a>文件名
 
@@ -35,7 +35,7 @@ Unicode 可以输入到源代码文件中的以下编码：
 
 - 具有 BOM 的 utf-8
 
-## <a name="output"></a>输出
+## <a name="output"></a>Output
 
 在编译期间，编译器将诊断输出到控制台以 utf-16。  可以在控制台中显示的字符取决于控制台窗口属性。  编译器输出重定向到一个文件位于当前 ANSI 控制台代码页。
 
@@ -49,4 +49,4 @@ Unicode 可以输入到源代码文件中的以下编码：
 
 ## <a name="see-also"></a>请参阅
 
-[使用命令行中的 MSVC 工具集](../building-on-the-command-line.md)
+[通过命令行使用 MSVC 工具集](../building-on-the-command-line.md)

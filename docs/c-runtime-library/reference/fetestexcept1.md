@@ -23,11 +23,11 @@ helpviewer_keywords:
 - fetestexept function
 ms.assetid: ca4dc43f-5573-440d-bc19-ead7571b13dc
 ms.openlocfilehash: ed75ab0ff13029f6ec10c1aafbcb7f7b23b46fd6
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521350"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62334160"
 ---
 # <a name="fetestexcept"></a>fetestexcept
 
@@ -43,7 +43,7 @@ int fetestexcept(
 
 ### <a name="parameters"></a>参数
 
-*除*<br/>
+*excepts*<br/>
 要测试的浮点     状态标志的按位 OR。
 
 ## <a name="return-value"></a>返回值

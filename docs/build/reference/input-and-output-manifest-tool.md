@@ -1,5 +1,5 @@
 ---
-title: 清单工具 c + + 输入和输出属性
+title: 清单工具C++输入和输出属性
 ms.date: 08/27/2018
 f1_keywords:
 - VC.Project.VCManifestTool.OutputManifestFile
@@ -11,11 +11,11 @@ f1_keywords:
 - VC.Project.VCManifestTool.GenerateCatalogFiles
 ms.assetid: a8bb20f6-7ace-45ca-bab0-b4f4a5caf170
 ms.openlocfilehash: 1731665ffa6117896490115028b4744e195beae2
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57825113"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62291050"
 ---
 # <a name="input-and-output-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>“配置属性”->“清单工具”->“输入和输出”->“&lt;项目名&gt; 属性页”对话框
 
@@ -65,4 +65,4 @@ ms.locfileid: "57825113"
 
 [ndptecclick](/visualstudio/deployment/clickonce-application-manifest)<br/>
 [清单工具属性页](manifest-tool-property-pages.md)<br/>
-[设置 c + + 编译器和生成 Visual Studio 中的属性](../working-with-project-properties.md)<br/>
+[在 Visual Studio 中设置 C++ 编译器并生成属性](../working-with-project-properties.md)<br/>

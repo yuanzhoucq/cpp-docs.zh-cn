@@ -21,11 +21,11 @@ helpviewer_keywords:
 - shared classes, CFileTime
 ms.assetid: 1a358a65-1383-4124-b0d4-59b026e6860f
 ms.openlocfilehash: 07b888b031a38dc2f09404a14e729e26b3eaa019
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57746092"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62235121"
 ---
 # <a name="cfiletime-class"></a>CFileTime 类
 
@@ -73,7 +73,7 @@ class CFileTime :  public FILETIME
 
 ### <a name="public-constants"></a>公共常量
 
-|name|描述|
+|名称|描述|
 |----------|-----------------|
 |[CFileTime::Day](#day)|静态数据成员存储构成了一天的 100 纳秒间隔数。|
 |[CFileTime::Hour](#hour)|静态数据成员存储组成一小时的 100 纳秒间隔数。|

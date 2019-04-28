@@ -8,17 +8,17 @@ helpviewer_keywords:
 - browse information files (.bsc), creating
 ms.assetid: b5c12832-51f6-4953-8044-4264dd0fb242
 ms.openlocfilehash: 4f12bd25ca3ab718a845dbb04aba3169cc6d4b19
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57820597"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62272879"
 ---
 # <a name="building-browse-information-files-overview"></a>生成浏览信息文件：概述
 
 若要创建符号浏览的浏览信息，编译器在项目中，然后 BSCMAKE 创建每个源文件的.sbr 文件。EXE 串联到一个.bsc 文件中的.sbr 文件。
 
-生成.sbr 和.bsc 文件需要时间，因此 Visual c + + 将关闭默认情况下的这些函数。 如果你想要浏览当前信息，必须开启浏览选项，并再次生成项目。
+时间，因此 Visual 生成.sbr 和.bsc 文件采用C++默认情况下关闭这些函数。 如果你想要浏览当前信息，必须开启浏览选项，并再次生成项目。
 
 使用[/FR](fr-fr-create-dot-sbr-file.md)或[/Fr](fr-fr-create-dot-sbr-file.md)以告知编译器创建.sbr 文件。 若要创建.bsc 文件，可以调用[BSCMAKE](bscmake-command-line.md)从命令行。 从命令行使用 BSCMAKE 可以更加精确地控制浏览信息文件的操作。 请参阅[BSCMAKE 参考](bscmake-reference.md)有关详细信息。
 

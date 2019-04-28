@@ -1,6 +1,6 @@
 ---
-title: 编译器错误 C3400-C3499
-ms.date: 11/17/2017
+title: 编译器错误 C3400 - C3499
+ms.date: 04/21/2019
 f1_keywords:
 - C3401
 - C3402
@@ -98,14 +98,14 @@ helpviewer_keywords:
 - C3494
 - C3497
 ms.assetid: a5651dfb-c402-4e01-b3ae-28f371e51d6a
-ms.openlocfilehash: 24915a52bffb6826599e4d64d60a3ece6bee7675
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: 587b28cedb0ab8b11c244be4278c7dc17d1f4247
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50576717"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62281382"
 ---
-# <a name="compiler-errors-c3400-through-c3499"></a>编译器错误 C3400-C3499
+# <a name="compiler-errors-c3400-through-c3499"></a>编译器错误 C3400 - C3499
 
 在本部分文档中的文章说明了由编译器生成的错误消息的子集。
 
@@ -154,7 +154,7 @@ ms.locfileid: "50576717"
 |编译器错误 C3436|已指定 /source-charset、 /execution-charset 或 /utf-8 时，不支持 #pragma setlocale|
 |编译器错误 C3437|已指定 /source-charset、 /execution-charset 或 /utf-8 时，不支持 #pragma execution_character_set|
 |编译器错误 C3438|'*上下文*':'*值*不能应用于托管/WinRT 类|
-|编译器错误 C3439|layout_version (*数*): 无效的版本号|
+|编译器错误 C3439|layout_version(*number*): invalid version number|
 |编译器错误 C3440|'*声明*: layout_version (*数*) 与之前的声明不兼容|
 |编译器错误 C3441|'*声明*':'*关键字*' 类定义后不能应用|
 |编译器错误 C3442|正在初始化多个联合成员: '*member1*和*member2*|
@@ -216,3 +216,7 @@ ms.locfileid: "50576717"
 |[编译器错误 C3498](compiler-error-c3498.md)|'*标识符*： 无法捕获具有托管/WinRT 类型的变量|
 |[编译器错误 C3499](compiler-error-c3499.md)|已指定返回类型为 void 的 lambda 无法返回值|
 
+## <a name="see-also"></a>请参阅
+
+[C /C++编译器和生成工具错误和警告](../compiler-errors-1/c-cpp-build-errors.md) \
+[编译器错误 C2000-C3999](../compiler-errors-1/compiler-errors-c2000-c3999.md)

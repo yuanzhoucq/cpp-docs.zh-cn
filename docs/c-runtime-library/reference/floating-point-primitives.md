@@ -123,11 +123,11 @@ helpviewer_keywords:
 - _ldsin
 - _fdsin
 ms.openlocfilehash: 230d0def145bcb443437b59303b2b36e348da2bb
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55703418"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62333607"
 ---
 # <a name="floating-point-primitives"></a>浮点基元
 
@@ -200,7 +200,7 @@ int __cdecl _fdpcomp(float x, float y);
 
 这些浮点基元不采用两个自变量*x*并*y*，并返回一个值，显示了其排序的关系，表示为按位或两个常数，在 math.h 中定义的：
 
-| 值 | 描述 |
+| “值” | 描述 |
 |------------|-----------------|
 | **_FP_LT** | *x*可被视为小于*y* |
 | **_FP_EQ** | *x*可被视为等于*y* |
@@ -225,7 +225,7 @@ short __cdecl _fdtest(float* px);
 
 ### <a name="remarks"></a>备注
 
-这些浮点基元实现 c + + 版本的 CRT 函数[fpclassify](fpclassify.md)对浮点类型。 自变量*x*计算和分类将作为在 math.h 中定义以下常量之一：
+这些浮点基元实现C++版本的 CRT 函数[fpclassify](fpclassify.md)对浮点类型。 自变量*x*计算和分类将作为在 math.h 中定义以下常量之一：
 
 |“值”|描述|
 |-----------|-----------------|
@@ -426,7 +426,7 @@ float __cdecl _fdsin(float x, unsigned int quadrant);
 [浮点支持](../floating-point-support.md)<br/>
 [fpclassify](fpclassify.md)<br/>
 [_fpclass、_fpclassf](fpclass-fpclassf.md)<br/>
-[isfinite，_finite、 _finitef](finite-finitef.md)<br/>
+[isfinite、_finite、_finitef](finite-finitef.md)<br/>
 [isinf](isinf.md)<br/>
 [isnan、_isnan、_isnanf](isnan-isnan-isnanf.md)<br/>
 [isnormal](isnormal.md)<br/>

@@ -13,11 +13,11 @@ helpviewer_keywords:
 - CMiniFrameWnd [MFC], CreateEx
 ms.assetid: b8f534ed-0532-4d8e-9657-5595cf677749
 ms.openlocfilehash: 70f090e2d9830ccfdd98640b54ff07440064d542
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293259"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62337812"
 ---
 # <a name="cminiframewnd-class"></a>CMiniFrameWnd 类
 
@@ -202,7 +202,7 @@ virtual BOOL CreateEx(
 
 *DwStyle*参数可以是任何组合[窗口样式](../../mfc/reference/styles-used-by-mfc.md#window-styles)。
 
-不再支持旧样式调色板工具箱窗口。 在以前版本的 Windows，运行 MFC 应用程序时支持的旧样式，不具有"X"关闭按钮，但在 Visual c + +.NET 中不再受支持。 现在支持只是新的 WS_EX_TOOLWINDOW 样式;此样式的说明，请参阅[扩展窗口样式](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)。
+不再支持旧样式调色板工具箱窗口。 在以前版本的 Windows，运行 MFC 应用程序时支持的旧样式，不具有"X"关闭按钮，但在 Visual 中不再支持C++.NET。 现在支持只是新的 WS_EX_TOOLWINDOW 样式;此样式的说明，请参阅[扩展窗口样式](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)。
 
 ## <a name="see-also"></a>请参阅
 

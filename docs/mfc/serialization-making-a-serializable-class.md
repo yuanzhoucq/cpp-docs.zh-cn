@@ -17,11 +17,11 @@ helpviewer_keywords:
 - no default constructor
 ms.assetid: 59a14d32-1cc8-4275-9829-99639beee27c
 ms.openlocfilehash: 995744381c8f82dc637e4aa0452e37af170b168b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57281455"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62308092"
 ---
 # <a name="serialization-making-a-serializable-class"></a>序列化：定义可序列化的类
 
@@ -45,8 +45,7 @@ ms.locfileid: "57281455"
 
 ##  <a name="_core_overriding_the_serialize_member_function"></a> 重写 Serialize 成员函数
 
-在 `Serialize` 类中定义的 `CObject` 成员函数负责实际上序列化捕获对象的当前状态所需的数据。 
-  `Serialize` 函数具有一个 `CArchive` 参数，供它读取和写入对象数据。 [CArchive](../mfc/reference/carchive-class.md)对象具有成员函数时， `IsStoring`，指示是否`Serialize`存储 （写入数据） 或加载 （读取数据）。 使用结果`IsStoring`作为指南，您可以插入对象的数据`CArchive`对象使用插入运算符 (**<\<**) 或使用提取运算符 (提取数据**>>**).
+在 `Serialize` 类中定义的 `CObject` 成员函数负责实际上序列化捕获对象的当前状态所需的数据。 `Serialize` 函数具有一个 `CArchive` 参数，供它读取和写入对象数据。 [CArchive](../mfc/reference/carchive-class.md)对象具有成员函数时， `IsStoring`，指示是否`Serialize`存储 （写入数据） 或加载 （读取数据）。 使用结果`IsStoring`作为指南，您可以插入对象的数据`CArchive`对象使用插入运算符 (**<\<**) 或使用提取运算符 (提取数据**>>**).
 
 请考虑派生自类`CObject`并且具有的类型的两个新成员变量`CString`并**WORD**。 以下类声明片段显示了新成员变量以及重写的 `Serialize` 成员函数的声明：
 

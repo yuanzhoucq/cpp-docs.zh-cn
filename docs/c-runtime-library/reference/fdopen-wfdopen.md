@@ -34,11 +34,11 @@ helpviewer_keywords:
 - streams, associating with files
 ms.assetid: 262757ff-1e09-4472-a5b6-4325fc28f971
 ms.openlocfilehash: 0cde110bf1dd12c23a6b0b658809502743d9edd3
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327156"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62334770"
 ---
 # <a name="fdopen-wfdopen"></a>_fdopen、_wfdopen
 
@@ -114,15 +114,15 @@ FILE *_wfdopen(
 |中的字符*模式下*字符串|等效*oflag*值 **_open**和 **_sopen**|
 |---------------------------------|---------------------------------------------------|
 |**a**|**\_O\_WRONLY &#124; \_O\_追加**(通常 **\_O\_WRONLY &#124; \_O\_创建&#124; \_O\_追加**)|
-|**+**|**\_O\_RDWR &#124; \_O\_追加**(通常 **\_O\_RDWR &#124; \_O\_追加&#124; \_O\_创建**)|
+|**a+**|**\_O\_RDWR &#124; \_O\_APPEND** (usually **\_O\_RDWR &#124; \_O\_APPEND &#124; \_O\_CREAT** )|
 |**r**|**\_O\_RDONLY**|
-|**r +**|**\_O\_RDWR**|
-|**w**|**\_O\_WRONLY** (通常 **\_O\_WRONLY &#124; \_O\_创建&#124; \_O\_TRUNC**)|
-|**w +**|**\_O\_RDWR** (通常 **\_O\_RDWR &#124; \_O\_创建&#124; \_O\_TRUNC**)|
+|**r+**|**\_O\_RDWR**|
+|**w**|**\_O\_WRONLY** (usually **\_O\_WRONLY &#124; \_O\_CREAT &#124; \_O\_TRUNC**)|
+|**w+**|**\_O\_RDWR** (usually **\_O\_RDWR &#124; \_O\_CREAT &#124; \_O\_TRUNC**)|
 |**b**|**\_O\_BINARY**|
 |**t**|**\_O\_TEXT**|
-|**c**|无|
-|**n**|无|
+|**c**|None|
+|**n**|None|
 
 ## <a name="requirements"></a>要求
 
@@ -177,7 +177,7 @@ Line one
 Line two
 ```
 
-### <a name="output"></a>输出
+### <a name="output"></a>Output
 
 ```Output
 Lines in file: 2

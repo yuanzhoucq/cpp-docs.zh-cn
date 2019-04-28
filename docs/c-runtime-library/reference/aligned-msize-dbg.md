@@ -21,11 +21,11 @@ helpviewer_keywords:
 - _aligned_msize_dbg
 ms.assetid: f1c44af0-3f66-4033-81d1-d71d3afecba0
 ms.openlocfilehash: 054f7b88f93eef37a9a88fbb7895452f7c158716
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50451293"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62342025"
 ---
 # <a name="alignedmsizedbg"></a>_aligned_msize_dbg
 
@@ -46,7 +46,7 @@ size_t _aligned_msize_dbg(
 *memblock*<br/>
 指向内存块的指针。
 
-*对齐方式*<br/>
+*alignment*<br/>
 对齐值，必须是 2 的整数次幂。
 
 *offset*<br/>
@@ -60,7 +60,7 @@ size_t _aligned_msize_dbg(
 
 *对齐*并*偏移量*值必须与传递给分配该块的函数的值相同。
 
-**_aligned_msize_dbg**是调试版[_aligned_msize](aligned-msize.md)函数。 当[_DEBUG](../../c-runtime-library/debug.md)未定义，则每次调用 **_aligned_msize_dbg**缩减为调用 **_aligned_msize**。 这两 **_aligned_msize**并 **_aligned_msize_dbg**计算基堆中的内存块的大小，但 **_aligned_msize_dbg**添加了一种调试功能： 它包括在返回大小阻止内存的用户部分两侧的缓冲区。
+**_aligned_msize_dbg**是调试版[_aligned_msize](aligned-msize.md)函数。 当[_DEBUG](../../c-runtime-library/debug.md)未定义，则每次调用 **_aligned_msize_dbg**缩减为调用 **_aligned_msize**。 这两 **_aligned_msize**并 **_aligned_msize_dbg**计算基堆中的内存块的大小，但 **_aligned_msize_dbg**添加了一种调试功能：它包括在返回大小的内存块用户部分两侧的缓冲区。
 
 此函数验证其参数。 如果*memblock*是空指针或*对齐*不是 2 的幂 **_msize**中所述将调用无效参数处理程序，[参数验证](../../c-runtime-library/parameter-validation.md). 如果处理了错误，该函数将设置**errno**到**EINVAL**并返回-1。
 

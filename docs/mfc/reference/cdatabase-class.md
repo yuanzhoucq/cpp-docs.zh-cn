@@ -51,11 +51,11 @@ helpviewer_keywords:
 - CDatabase [MFC], m_hdbc
 ms.assetid: bd0de70a-e3c3-4441-bcaa-bbf434426ca8
 ms.openlocfilehash: ebc36d82af9bfe12ab30a86214e58610b5eaab95
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328995"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62253701"
 ---
 # <a name="cdatabase-class"></a>CDatabase 类
 
@@ -102,7 +102,7 @@ class CDatabase : public CObject
 
 ### <a name="public-data-members"></a>公共数据成员
 
-|name|描述|
+|名称|描述|
 |----------|-----------------|
 |[CDatabase::m_hdbc](#m_hdbc)|打开数据库连接 (ODBC) 连接到数据源的句柄。 类型*HDBC*。|
 

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - C++ exception handling, macros
 ms.assetid: a8385d34-3fb0-4006-a42a-de045cacf0f4
 ms.openlocfilehash: 8afb2019e38f7548467e85d9a2c1c12c538cf744
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258601"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62276235"
 ---
 # <a name="exception-handling-macros"></a>异常处理宏
 
@@ -45,7 +45,7 @@ _ATLCATCH(e)
 
 ### <a name="remarks"></a>备注
 
-结合使用`_ATLTRY`。 解析为 c + +[捕获 (CAtlException e)](../../cpp/try-throw-and-catch-statements-cpp.md)用于处理给定的类型的 c + + 异常。
+结合使用`_ATLTRY`。 解析为C++[捕获 (CAtlException e)](../../cpp/try-throw-and-catch-statements-cpp.md)用于处理给定的类型的C++异常。
 
 ##  <a name="_atlcatchall"></a>  _ATLCATCHALL
 
@@ -57,7 +57,7 @@ _ATLCATCHALL
 
 ### <a name="remarks"></a>备注
 
-结合使用`_ATLTRY`。 解析为 c + +[自](../../cpp/try-throw-and-catch-statements-cpp.md)用于处理所有类型的 c + + 异常。
+结合使用`_ATLTRY`。 解析为C++[自](../../cpp/try-throw-and-catch-statements-cpp.md)用于处理所有类型的C++异常。
 
 ##  <a name="_atltry"></a>  _ATLTRY
 
@@ -69,7 +69,7 @@ _ATLTRY
 
 ### <a name="remarks"></a>备注
 
-结合使用[_ATLCATCH](#_atlcatch)或[_ATLCATCHALL](#_atlcatchall)。 解析为 c + + 符号[尝试](../../cpp/try-throw-and-catch-statements-cpp.md)。
+结合使用[_ATLCATCH](#_atlcatch)或[_ATLCATCHALL](#_atlcatchall)。 解析为C++符号[尝试](../../cpp/try-throw-and-catch-statements-cpp.md)。
 
 ## <a name="see-also"></a>请参阅
 

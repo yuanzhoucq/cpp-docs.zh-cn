@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Rollback method, ODBC transactions
 ms.assetid: 9e00bbf4-e9fb-4332-87fc-ec8ac61b3f68
 ms.openlocfilehash: 996b8410366661cb91cf82cfff823f17d3aad8b4
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59033096"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62329902"
 ---
 # <a name="transaction-how-transactions-affect-updates-odbc"></a>事务：事务如何影响更新 (ODBC)
 
@@ -56,6 +56,6 @@ ms.locfileid: "59033096"
 
 [事务 (ODBC)](../../data/odbc/transaction-odbc.md)<br/>
 [事务 (ODBC)](../../data/odbc/transaction-odbc.md)<br/>
-[事务：在记录集 (ODBC) 执行事务](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)<br/>
+[事务：在记录集中执行事务 (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)<br/>
 [CDatabase 类](../../mfc/reference/cdatabase-class.md)<br/>
 [CRecordset 类](../../mfc/reference/crecordset-class.md)

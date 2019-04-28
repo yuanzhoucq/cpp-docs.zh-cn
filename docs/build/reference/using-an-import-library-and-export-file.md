@@ -7,11 +7,11 @@ helpviewer_keywords:
 - export files
 ms.assetid: 2634256a-8aa5-4495-8c9e-6cde10e4ed76
 ms.openlocfilehash: 030b792d4bbebecef9d9303238657a564a142ecf
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57810947"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62317778"
 ---
 # <a name="using-an-import-library-and-export-file"></a>使用导入库和导出文件
 

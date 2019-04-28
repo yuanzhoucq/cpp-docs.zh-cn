@@ -8,11 +8,11 @@ helpviewer_keywords:
 - URLs, parsing
 ms.assetid: 46c6384f-e4a6-4dbd-9196-219c19040ec5
 ms.openlocfilehash: 0831d94f1a6f0293d3605a5e2e9ebde0564baf24
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293467"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62321996"
 ---
 # <a name="internet-url-parsing-globals-and-helpers"></a>Internet URL 分析全局函数和帮助程序
 
@@ -189,7 +189,7 @@ URL 引用的对象 （可能为空）。
 *dwFlags*<br/>
 控制如何分析的 URL 的标志。 可以是以下值的组合：
 
-|值|含义|
+|“值”|含义|
 |-----------|-------------|
 |ICU_DECODE|将 %xx 转义序列转换为字符。|
 |ICU_NO_ENCODE|不会转换不安全字符进行转义序列。|

@@ -30,11 +30,11 @@ helpviewer_keywords:
 - floating-point numbers, calculating remainders
 ms.assetid: 6962d369-d11f-40b1-a6d7-6f67239f8a23
 ms.openlocfilehash: 78677be1a0c9921c35e54d43a00b8956a9d858b6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605310"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62333347"
 ---
 # <a name="fmod-fmodf-fmodl"></a>fmod、 fmodf、 fmodl
 
@@ -78,7 +78,7 @@ long double fmodl(
 
 **Fmod**函数计算的浮点余数*f*的*x* / *y*以便*x* = *我* \* *y* + *f*，其中*我*是一个整数， *f*具有相同的符号*x*，和值的绝对值*f*是值的绝对值小于*y*。
 
-C + + 允许重载，因此可以调用的重载**fmod**采用并返回**float**并**长** **double**值。 在 C 程序中， **fmod**始终采用两个**double**自变量并返回**double**。
+C++允许重载，因此可以调用的重载**fmod**采用并返回**float**并**长** **double**值。 在 C 程序中， **fmod**始终采用两个**double**自变量并返回**double**。
 
 ## <a name="requirements"></a>要求
 

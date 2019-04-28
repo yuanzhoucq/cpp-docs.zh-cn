@@ -1,5 +1,5 @@
 ---
-title: 'TN039: MFC OLE 自动化实现'
+title: TN039:MFC OLE 自动化实现
 ms.date: 06/28/2018
 f1_keywords:
 - vc.mfc.ole
@@ -11,13 +11,13 @@ helpviewer_keywords:
 - Automation, MFC COM interface entry points
 ms.assetid: 765fa3e9-dd54-4f08-9ad2-26e0546ff8b6
 ms.openlocfilehash: cd6f8d681ef7e6517f2172ca6b22b13723a962fd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658980"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62305484"
 ---
-# <a name="tn039-mfcole-automation-implementation"></a>TN039：MFC/OLE 自动化实现
+# <a name="tn039-mfcole-automation-implementation"></a>TN039:MFC/OLE 自动化实现
 
 > [!NOTE]
 > 以下技术说明在首次包括在联机文档中后未更新。 因此，某些过程和主题可能已过时或不正确。 要获得最新信息，建议你在联机文档索引中搜索热点话题。
@@ -97,11 +97,11 @@ Z 属性赋**DISPID**带零**HIWORD**由于它公开的属性，CDisp3DPoint 类
 
 ## <a name="advanced-mfc-dispatch-map-features"></a>高级 MFC 调度映射功能
 
-有很多其他功能，ClassWizard 不支持此版本的 Visual c + +。 支持 ClassWizard `DISP_FUNCTION`， `DISP_PROPERTY`，和`DISP_PROPERTY_EX`用于定义应用程序的方法、 成员变量属性和 get/set 成员函数属性，分别。 这些功能通常所创建大多数自动化服务器所需的所有内容。
+有很多其他功能 ClassWizard 不支持此版本中视觉对象的C++。 支持 ClassWizard `DISP_FUNCTION`， `DISP_PROPERTY`，和`DISP_PROPERTY_EX`用于定义应用程序的方法、 成员变量属性和 get/set 成员函数属性，分别。 这些功能通常所创建大多数自动化服务器所需的所有内容。
 
 支持的 ClassWizard 宏不足够时，可以使用以下其他宏： `DISP_PROPERTY_NOTIFY`，和`DISP_PROPERTY_PARAM`。
 
-## <a name="disppropertynotify--macro-description"></a>DISP_PROPERTY_NOTIFY-宏说明
+## <a name="disppropertynotify--macro-description"></a>DISP_PROPERTY_NOTIFY — Macro Description
 
 ```cpp
 DISP_PROPERTY_NOTIFY(
@@ -114,13 +114,13 @@ DISP_PROPERTY_NOTIFY(
 
 ### <a name="parameters"></a>参数
 
-*类*<br/>
+*theClass*<br/>
 类的名称。
 
 *pszName*<br/>
 属性的外部名称。
 
-*成员名称*<br/>
+*memberName*<br/>
 在其中存储属性的成员变量的名称。
 
 *pfnAfterSet*<br/>
@@ -133,7 +133,7 @@ DISP_PROPERTY_NOTIFY(
 
 此宏非常类似 DISP_PROPERTY，只不过它接受一个附加参数。 其他参数， *pfnAfterSet，* 应为不返回任何内容并不带任何参数，void OnPropertyNotify() 的成员函数。 它将叫做**后**成员变量已被修改。
 
-## <a name="disppropertyparam--macro-description"></a>DISP_PROPERTY_PARAM-宏说明
+## <a name="disppropertyparam--macro-description"></a>DISP_PROPERTY_PARAM — Macro Description
 
 ```cpp
 DISP_PROPERTY_PARAM(
@@ -147,7 +147,7 @@ DISP_PROPERTY_PARAM(
 
 ### <a name="parameters"></a>参数
 
-*类*<br/>
+*theClass*<br/>
 类的名称。
 
 *pszName*<br/>
@@ -156,7 +156,7 @@ DISP_PROPERTY_PARAM(
 *memberGet*<br/>
 用来获取属性的成员函数的名称。
 
-*成员集*<br/>
+*memberSet*<br/>
 用于设置属性的成员函数的名称。
 
 *vtPropType*<br/>
@@ -222,7 +222,7 @@ DISP_PROPERTY_PARAM_ID(
 
 ### <a name="parameters"></a>参数
 
-*类*<br/>
+*theClass*<br/>
 类的名称。
 
 *pszName*<br/>
@@ -237,7 +237,7 @@ DISP_PROPERTY_PARAM_ID(
 *pfnSet*<br/>
 用于设置属性的成员函数的名称。
 
-*成员名称*<br/>
+*memberName*<br/>
 要映射到属性的成员变量的名称
 
 *vtPropType*<br/>

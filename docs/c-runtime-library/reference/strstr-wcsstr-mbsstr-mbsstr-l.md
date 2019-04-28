@@ -45,11 +45,11 @@ helpviewer_keywords:
 - strstr function
 ms.assetid: 03d70c3f-2473-45cb-a5f8-b35beeb2748a
 ms.openlocfilehash: 42e02473e062c3af9524ed432aa163b7574342de
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50541058"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62223074"
 ---
 # <a name="strstr-wcsstr-mbsstr-mbsstrl"></a>strstr、wcsstr、_mbsstr、_mbsstr_l
 
@@ -136,7 +136,7 @@ const unsigned char *_mbsstr_l(
 > [!IMPORTANT]
 > 这些函数可能从缓冲区溢出问题引发威胁。 缓冲区溢出问题可用来攻击系统，因为它们可能允许执行任意代码，这可能导致没有保证的权限提升。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/desktop/SecBP/avoiding-buffer-overruns)。
 
-在 C 中，这些函数采用**const**的第一个参数的指针。 在 C++ 中，有两个重载可用。 将指针传递到重载**const**返回一个指向**const**; 采用指向非版本**const**返回一个指向非**const**。 如果这两个定义宏 _CRT_CONST_CORRECT_OVERLOADS **const**和非-**const**提供了这些函数的版本。 如果需要非**const**行为对于这两个 c + + 重载，定义符号 _CONST_RETURN。
+在 C 中，这些函数采用**const**的第一个参数的指针。 在 C++ 中，有两个重载可用。 将指针传递到重载**const**返回一个指向**const**; 采用指向非版本**const**返回一个指向非**const**。 如果这两个定义宏 _CRT_CONST_CORRECT_OVERLOADS **const**和非-**const**提供了这些函数的版本。 如果需要非**const**两个行为C++重载，定义符号 _CONST_RETURN。
 
 输出值受区域设置类别设置的 LC_CTYPE;有关详细信息，请参阅[setlocale、 _wsetlocale](setlocale-wsetlocale.md)。 不具有这些函数的版本 **_l**后缀，请使用当前区域设置的区域设置相关的行为; 版本中，将 **_l**后缀完全相同，只不过它们改用在传入的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 

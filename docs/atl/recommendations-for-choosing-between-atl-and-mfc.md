@@ -6,11 +6,11 @@ helpviewer_keywords:
 - ATL, vs. MFC
 ms.assetid: 269325bb-11a8-4330-ad2b-a14a2458679e
 ms.openlocfilehash: e4e51f81bbdc54ff09980acfba22037df77abac9
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259771"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62261333"
 ---
 # <a name="recommendations-for-choosing-between-atl-and-mfc"></a>关于选择 ATL 和 MFC 的建议
 
@@ -18,7 +18,7 @@ ms.locfileid: "57259771"
 
 ## <a name="using-atl"></a>使用 ATL
 
-ATL 是快速、 简单的方法，以在 c + + 中创建 COM 组件并维护内存占用较小。 使用 ATL 创建控件，如果你不需要所有 MFC 自动提供的内置功能。
+ATL 是为快速、 简单的方法同时创建 COM 组件在C++和维护内存占用较小。 使用 ATL 创建控件，如果你不需要所有 MFC 自动提供的内置功能。
 
 ## <a name="using-mfc"></a>使用 MFC
 

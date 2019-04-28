@@ -9,11 +9,11 @@ helpviewer_keywords:
 - dispatch map macros [MFC]
 ms.assetid: bef9d08b-ad35-4c3a-99d8-04150c7c04e2
 ms.openlocfilehash: 5ebedaa02a03bcc7802110977b96659dae45f174
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585076"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62322509"
 ---
 # <a name="dispatch-maps"></a>调度映射
 
@@ -66,7 +66,7 @@ BEGIN_DISPATCH_MAP(theClass, baseClass)
 
 ### <a name="parameters"></a>参数
 
-*类*<br/>
+*theClass*<br/>
 指定拥有此调度映射的类的名称。
 
 *baseClass*<br/>
@@ -111,7 +111,7 @@ DISP_FUNCTION(
 
 ### <a name="parameters"></a>参数
 
-*类*<br/>
+*theClass*<br/>
 类的名称。
 
 *pszName*<br/>
@@ -169,9 +169,9 @@ DISP_FUNCTION(
 |VTS_VARIANT|`const VARIANT*` 或 `VARIANT&`|
 |VTS_UNKNOWN|LPUNKNOWN|
 |VTS_PI2|__short\*__|
-|VTS_PI4|__长\*__|
-|VTS_PR4|__Float\*__|
-|VTS_PR8|__双精度\*__|
+|VTS_PI4|__long\*__|
+|VTS_PR4|__float\*__|
+|VTS_PR8|__double\*__|
 |VTS_PCY|`CY*`|
 |VTS_PDATE|`DATE*`|
 |VTS_PBSTR|`BSTR*`|
@@ -200,13 +200,13 @@ DISP_PROPERTY(
 
 ### <a name="parameters"></a>参数
 
-*类*<br/>
+*theClass*<br/>
 类的名称。
 
 *pszName*<br/>
 属性的外部名称。
 
-*成员名称*<br/>
+*memberName*<br/>
 在其中存储属性的成员变量的名称。
 
 *vtPropType*<br/>
@@ -252,7 +252,7 @@ DISP_PROPERTY_EX(
 
 ### <a name="parameters"></a>参数
 
-*类*<br/>
+*theClass*<br/>
 类的名称。
 
 *pszName*<br/>
@@ -261,7 +261,7 @@ DISP_PROPERTY_EX(
 *memberGet*<br/>
 用来获取属性的成员函数的名称。
 
-*成员集*<br/>
+*memberSet*<br/>
 用于设置属性的成员函数的名称。
 
 *vtPropType*<br/>
@@ -292,13 +292,13 @@ DISP_PROPERTY_NOTIFY(
 
 ### <a name="parameters"></a>参数
 
-*类*<br/>
+*theClass*<br/>
 类的名称。
 
 *szExternalName*<br/>
 属性的外部名称。
 
-*成员名称*<br/>
+*memberName*<br/>
 在其中存储属性的成员变量的名称。
 
 *pfnAfterSet*<br/>
@@ -348,7 +348,7 @@ DISP_PROPERTY_PARAM(
 
 ### <a name="parameters"></a>参数
 
-*类*<br/>
+*theClass*<br/>
 类的名称。
 
 *pszExternalName*<br/>
@@ -402,7 +402,7 @@ DISP_DEFVALUE(theClass, pszName)
 
 ### <a name="parameters"></a>参数
 
-*类*<br/>
+*theClass*<br/>
 类的名称。
 
 *pszName*<br/>

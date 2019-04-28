@@ -1,6 +1,6 @@
 ---
-title: 编译器错误 C3200-C3299
-ms.date: 11/17/2017
+title: 编译器错误 C3200 - C3299
+ms.date: 04/21/2019
 f1_keywords:
 - C3220
 - C3221
@@ -34,14 +34,14 @@ helpviewer_keywords:
 - C3281
 - C3294
 ms.assetid: 6b3104f6-63bc-4823-b6f3-b8a16be4b87f
-ms.openlocfilehash: e8a9c1db4cba837a5780e51f84035492cd0e9e76
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: 6965fcde5f7cc93464593e83f787d0a5838398dd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50490583"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62281490"
 ---
-# <a name="compiler-errors-c3200-through-c3299"></a>编译器错误 C3200-C3299
+# <a name="compiler-errors-c3200-through-c3299"></a>编译器错误 C3200 - C3299
 
 在本部分文档中的文章说明了由编译器生成的错误消息的子集。
 
@@ -124,7 +124,7 @@ ms.locfileid: "50490583"
 |[编译器错误 C3270](compiler-error-c3270.md)|'*字段*: FieldOffset 特性只能在 StructLayout(LayoutKind::Explicit) 的上下文中|
 |[编译器错误 C3271](compiler-error-c3271.md)|'*字段*： 无效的值*数*FieldOffset 特性的|
 |[编译器错误 C3272](compiler-error-c3272.md)|'*符号*： 符号需要 FieldOffset，因为它是结构/类的成员*type_name*使用 StructLayout(LayoutKind::Explicit) 定义|
-|[编译器错误 C3273](compiler-error-c3273.md)|'*关键字*： 不允许在 c + + try 块|
+|[编译器错误 C3273](compiler-error-c3273.md)|'*关键字*： 不允许对C++try 块|
 |[编译器错误 C3274](compiler-error-c3274.md)|最后 /&#95;&#95;最后没有匹配的 try|
 |[编译器错误 C3275](compiler-error-c3275.md)|'*标识符*： 不能使用该无限定符的符号|
 |[编译器错误 C3276](compiler-error-c3276.md)|'*关键字*： 最后的跳转 /&#95;&#95;最后块有未定义的行为在终止处理期间|
@@ -145,9 +145,14 @@ ms.locfileid: "50490583"
 |[编译器错误 C3291](compiler-error-c3291.md)|default： 不能作为 trivial 属性的名称|
 |[编译器错误 C3292](compiler-error-c3292.md)|cli 命名空间不能重新打开|
 |[编译器错误 C3293](compiler-error-c3293.md)|'*标识符*： 使用 default 访问类的默认属性 （索引器）*类*|
-|编译器错误 C3294|已过时。|
+|编译器错误 c3294:|已过时。|
 |[编译器错误 C3295](compiler-error-c3295.md)|#pragma*说明符*只能在全局或命名空间范围|
 |[编译器错误 C3296](compiler-error-c3296.md)|'*标识符*： 已存在具有此名称的属性|
 |[编译器错误 C3297](compiler-error-c3297.md)|' *constraint2*： 不能使用' *constraint1*作为约束因为 ' *constraint1*具有值约束|
 |[编译器错误 C3298](compiler-error-c3298.md)|' *constraint1*： 不能使用' *constraint2*作为约束因为 ' *constraint2*具有 ref 约束和*constraint1*具有值约束|
 |[编译器错误 C3299](compiler-error-c3299.md)|'*函数*： 不能指定约束，它们都继承自基方法|
+
+## <a name="see-also"></a>请参阅
+
+[C /C++编译器和生成工具错误和警告](../compiler-errors-1/c-cpp-build-errors.md) \
+[编译器错误 C2000-C3999](../compiler-errors-1/compiler-errors-c2000-c3999.md)

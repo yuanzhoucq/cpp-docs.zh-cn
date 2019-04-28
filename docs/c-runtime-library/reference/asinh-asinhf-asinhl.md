@@ -28,11 +28,11 @@ helpviewer_keywords:
 - asinhf function
 ms.assetid: 4488babe-1a7e-44ca-8b7b-c2db0a70084f
 ms.openlocfilehash: f6100268b77178487b7a7aa1cc3f10ac3ea7e9dc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50662948"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62341777"
 ---
 # <a name="asinh-asinhf-asinhl"></a>asinh、asinhf、asinhl
 
@@ -62,11 +62,11 @@ long double asinh( long double x );  // C++ only
 
 |输入|SEH 异常|**_matherr**异常|
 |-----------|-------------------|--------------------------|
-|± QNAN、IND、INF|无|无|
+|为 QNAN，IND INF|无|无|
 
 ## <a name="remarks"></a>备注
 
-当你使用 c + + 时，可以调用的重载**asinh**采用并返回**float**或**长** **double**值。 在 C 程序中， **asinh**始终采用并返回**double**。
+当你使用C++，可以调用的重载**asinh**采用并返回**float**或**长** **double**值。 在 C 程序中， **asinh**始终采用并返回**double**。
 
 ## <a name="requirements"></a>要求
 

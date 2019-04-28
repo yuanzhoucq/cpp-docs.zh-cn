@@ -26,11 +26,11 @@ helpviewer_keywords:
 - _fcvt_s function
 ms.assetid: 48671197-1d29-4c2b-a5d8-d2368f5f68a1
 ms.openlocfilehash: 51ff3c675f1f53aee9beab629b17193164a2e7eb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536839"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62334861"
 ---
 # <a name="fcvts"></a>_fcvt_s
 
@@ -65,7 +65,7 @@ errno_t _fcvt_s(
 *sizeInBytes*<br/>
 缓冲区的大小（以字节为单位）。
 
-*value*<br/>
+*值*<br/>
 要转换的数字。
 
 *count*<br/>
@@ -118,7 +118,7 @@ errno_t _fcvt_s(
 
 有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 
-**库：** [CRT 库功能](../../c-runtime-library/crt-library-features.md)的所有版本。
+**库：** 所有版本的[CRT 库功能](../../c-runtime-library/crt-library-features.md)。
 
 ## <a name="example"></a>示例
 

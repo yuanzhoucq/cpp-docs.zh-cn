@@ -193,11 +193,11 @@ helpviewer_keywords:
 - CWinApp [MFC], m_pDataRecoveryHandler
 ms.assetid: e426a3cd-0d15-40d6-bd55-beaa5feb2343
 ms.openlocfilehash: 6366638ebfd5e78ad517a8913e4276d5cd820670
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57264665"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62323354"
 ---
 # <a name="cwinapp-class"></a>CWinApp 类
 
@@ -333,7 +333,7 @@ class CWinApp : public CWinThread
 
 应用程序对象用于初始化你的应用程序 （和它的每个实例） 以及用于运行应用程序提供成员函数。
 
-使用 Microsoft 基础类每个应用程序只能包含一个对象派生自`CWinApp`。 此对象构造其他 c + + 的全局对象时，会构造并调用 Windows 时已提供`WinMain`函数，由 Microsoft 基础类库提供。 声明你派生`CWinApp`在全局级别的对象。
+使用 Microsoft 基础类每个应用程序只能包含一个对象派生自`CWinApp`。 将构造此对象时其他C++全局对象构造，并调用 Windows 时已提供`WinMain`函数，由 Microsoft 基础类库提供。 声明你派生`CWinApp`在全局级别的对象。
 
 从应用程序类派生时`CWinApp`，重写[InitInstance](#initinstance)成员函数来创建应用程序的主窗口对象。
 
@@ -2395,4 +2395,4 @@ void SetAppID(LPCTSTR lpcszAppID);
 
 [CWinThread 类](../../mfc/reference/cwinthread-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>
-[如何：添加重新启动管理器支持](../../mfc/how-to-add-restart-manager-support.md)
+[如何：添加重启管理器支持](../../mfc/how-to-add-restart-manager-support.md)

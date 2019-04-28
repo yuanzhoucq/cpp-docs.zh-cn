@@ -3,11 +3,11 @@ title: 事件 (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 31c8e08a-00ad-40f9-8f7e-124864aaad58
 ms.openlocfilehash: 8e7e8616831e66a7f59ed849fc92ef2553aadb5b
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57745080"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62301534"
 ---
 # <a name="events-ccx"></a>事件 (C++/CX)
 
@@ -62,5 +62,5 @@ Windows 运行时中的许多组件公开的事件。 例如，当传感器报�
 
 [类型系统](../cppcx/type-system-c-cx.md)<br/>
 [委托](../cppcx/delegates-c-cx.md)<br/>
-[Visual c + + 语言参考](../cppcx/visual-c-language-reference-c-cx.md)<br/>
+[VisualC++语言参考](../cppcx/visual-c-language-reference-c-cx.md)<br/>
 [命名空间参考](../cppcx/namespaces-reference-c-cx.md)

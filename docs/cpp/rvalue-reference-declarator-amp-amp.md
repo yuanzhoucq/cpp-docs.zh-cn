@@ -7,11 +7,11 @@ helpviewer_keywords:
 - '&& rvalue reference declarator'
 ms.assetid: eab0ce3a-c5a3-4992-aa70-6a8ab1f7491d
 ms.openlocfilehash: 185c2de5dc21dd305a2792d4ee8e6baf69c35b28
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328904"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62331085"
 ---
 # <a name="rvalue-reference-declarator-ampamp"></a>右值引用声明符： &amp;&amp;
 
@@ -51,7 +51,7 @@ int main()
 }
 ```
 
-在 Visual c + + 2010 中之前, 每个调用到**operator +** 分配并返回新的临时`string`对象 （右值）。 **operator +** 由于不知道源字符串是左值还是右值，因此无法追加到另一个字符串。 如果两个源字符串都是左值，则它们可能会在程序中的其他位置引用，因此不能修改。 利用右值引用**operator +** 可以修改为采用右值，不能在程序中其他位置引用。 因此， **operator +** 现在可以将一个字符串追加到另一个。 这可以显著减少 `string` 类必须执行的动态内存分配的数量。 有关详细信息`string`类，请参阅[asic_string 类](../standard-library/basic-string-class.md)。
+视觉对象之前C++2010 中，每次调用**operator +** 分配并返回新的临时`string`对象 （右值）。 **operator +** 由于不知道源字符串是左值还是右值，因此无法追加到另一个字符串。 如果两个源字符串都是左值，则它们可能会在程序中的其他位置引用，因此不能修改。 利用右值引用**operator +** 可以修改为采用右值，不能在程序中其他位置引用。 因此， **operator +** 现在可以将一个字符串追加到另一个。 这可以显著减少 `string` 类必须执行的动态内存分配的数量。 有关详细信息`string`类，请参阅[asic_string 类](../standard-library/basic-string-class.md)。
 
 当编译器无法使用返回值优化 (RVO) 或命名返回值优化 (NRVO) 时，移动语义也很有用。 在这些情况下，如果类型定义了移动构造函数，则编译器将调用该函数。 有关命名返回值优化的详细信息，请参阅[Visual C++ 2005年中名为返回值优化](https://msdn.microsoft.com/library/ms364057.aspx)。
 
@@ -148,8 +148,7 @@ int main()
 
 **您可以重载采用左值引用和右值引用的函数。**
 
-通过重载函数以采用**const**左值引用或右值引用，可以编写代码来区分不可更改的对象 （左值） 和可修改的临时值 （右值）。 可以将对象传递给采用右值引用，除非该对象标记为一个函数**const**。 以下示例演示了函数 `f`，该函数将被重载以采用左值引用和右值引用。 
-  `main` 函数同时使用左值和右值来调用 `f`。
+通过重载函数以采用**const**左值引用或右值引用，可以编写代码来区分不可更改的对象 （左值） 和可修改的临时值 （右值）。 可以将对象传递给采用右值引用，除非该对象标记为一个函数**const**。 以下示例演示了函数 `f`，该函数将被重载以采用左值引用和右值引用。 `main` 函数同时使用左值和右值来调用 `f`。
 
 ```cpp
 // reference-overload.cpp
@@ -237,8 +236,7 @@ In g(const MemoryBlock&).
 In g(MemoryBlock&&).
 ```
 
-在此示例中，`main` 函数将右值传递给 `f`。 
-  `f` 的主体将其命名参数视为左值。 从 `f` 到 `g` 的调用会将参数绑定到左值引用（第一个重载版本的 `g`）。
+在此示例中，`main` 函数将右值传递给 `f`。 `f` 的主体将其命名参数视为左值。 从 `f` 到 `g` 的调用会将参数绑定到左值引用（第一个重载版本的 `g`）。
 
 - **您可以强制转换为右值引用的左值。**
 
@@ -287,9 +285,7 @@ In g(MemoryBlock&&).
 
 如果函数参数是右值，则编译器将参数推导为右值引用。 例如，如果将对 `X` 类型的对象的右值引用传递给采用类型 `T&&` 作为其参数的模板函数，则模板自变量推导会将 `T` 推导为 `X`。 因此，参数具有类型 `X&&`。 如果函数自变量是左值或**const**左值，编译器可以推断其类型为左值引用或**const**该类型的左值引用。
 
-以下示例声明了一个结构模板，然后针对不同引用类型对其进行了专用化。 
-  `print_type_and_value` 函数采用右值引用作为其参数，并将它转发给适当专用版本的 `S::print` 方法。 
-  `main` 函数演示了调用 `S::print` 方法的各种方式。
+以下示例声明了一个结构模板，然后针对不同引用类型对其进行了专用化。 `print_type_and_value` 函数采用右值引用作为其参数，并将它转发给适当专用版本的 `S::print` 方法。 `main` 函数演示了调用 `S::print` 方法的各种方式。
 
 ```cpp
 // template-type-deduction.cpp

@@ -65,11 +65,11 @@ helpviewer_keywords:
 - stock properties, ATL controls
 ms.assetid: 45f11d7d-6580-4a0e-872d-3bc8b836cfda
 ms.openlocfilehash: 148c9571bb37e2b9063ca9290f51caa1fabb2d21
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270782"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62277482"
 ---
 # <a name="cstockpropimpl-class"></a>CStockPropImpl 类
 
@@ -182,7 +182,7 @@ class ATL_NO_VTABLE CStockPropImpl :
 
 `CStockPropImpl` 提供了**放**并**获取**用于每个常用的属性的方法。 这些方法提供所必需的代码来设置或获取与每个属性关联的数据成员和通知和任何属性发生更改时，将容器与同步。
 
-Visual c + + 的常用属性通过其向导页提供支持。 有关向控件添加常用属性的详细信息，请参阅[ATL 教程](../../atl/active-template-library-atl-tutorial.md)。
+VisualC++的常用属性通过其向导页提供支持。 有关向控件添加常用属性的详细信息，请参阅[ATL 教程](../../atl/active-template-library-atl-tutorial.md)。
 
 为了向后兼容`CStockPropImpl`还公开`get_Window`并`put_Window`只需调用的方法`get_HWND`和`put_HWND`分别。 默认实现`put_HWND`返回 E_FAIL，因为 HWND 应为只读属性。
 

@@ -34,11 +34,11 @@ helpviewer_keywords:
 - Unicode [C++], files
 ms.assetid: c534857e-39ee-4a3f-bd26-dfe551ac96c3
 ms.openlocfilehash: 1309f991b8251bde7d614aa274d8d2e9da7a8ed3
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51333340"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62333321"
 ---
 # <a name="fopens-wfopens"></a>fopen_s、_wfopen_s
 
@@ -98,7 +98,7 @@ errno_t _wfopen_s(
 
 **fopen_s**支持 Unicode 文件流。 若要打开新的或现有的 Unicode 文件，请将传递*ccs*指定为所需的编码的标志**fopen_s**:
 
-**fopen_s (& fp、"newfile.txt"，"rw，ccs =**_编码_**");**
+**fopen_s(&fp, "newfile.txt", "rw, ccs=**_encoding_**");**
 
 允许的值为*编码*都**UNICODE**， **utf-8**，以及**UTF 16LE**。 如果存在用于不指定任何值*编码*， **fopen_s**使用 ANSI 编码。
 
@@ -111,11 +111,11 @@ errno_t _wfopen_s(
 
 ### <a name="encodings-used-based-on-ccs-flag-and-bom"></a>基于 ccs 标志和 BOM 使用的编码
 
-|ccs 标志|无 BOM（或新文件）|BOM：UTF-8|BOM：UTF-16|
+|ccs 标志|无 BOM（或新文件）|物料清单：UTF-8|物料清单：UTF-16|
 |----------------|----------------------------|-----------------|------------------|
-|**UNICODE**|**UTF 16LE**|**UTF-8**|**UTF 16LE**|
-|**UTF-8**|**UTF-8**|**UTF-8**|**UTF 16LE**|
-|**UTF 16LE**|**UTF 16LE**|**UTF-8**|**UTF 16LE**|
+|**UNICODE**|**UTF-16LE**|**UTF-8**|**UTF-16LE**|
+|**UTF-8**|**UTF-8**|**UTF-8**|**UTF-16LE**|
+|**UTF-16LE**|**UTF-16LE**|**UTF-8**|**UTF-16LE**|
 
 在 Unicode 模式下打开用于写入的文件将自动在其中写入 BOM。
 
@@ -168,29 +168,29 @@ errno_t _wfopen_s(
 | **R** | 指定缓存针对（但不限于）从磁盘的随机访问进行优化。 |
 | **T** | 将文件指定为临时。 如果可能，它不会刷新到磁盘。 |
 | **D** | 将文件指定为临时。 最后一个文件指针关闭时，它将被删除。 |
-| **ccs =**_编码_ | 指定设置为使用的编码的字符 (之一**utf-8**， **UTF 16LE**，或**UNICODE**) 此文件。 如果需要 ANSI 编码，请不要指定此字符集。 |
+| **ccs=**_encoding_ | 指定设置为使用的编码的字符 (之一**utf-8**， **UTF 16LE**，或**UNICODE**) 此文件。 如果需要 ANSI 编码，请不要指定此字符集。 |
 
 有效字符*模式下*中使用字符串**fopen_s**并[_fdopen](fdopen-wfdopen.md)对应于*oflag*中使用的参数[_打开](open-wopen.md)并[_sopen](sopen-wsopen.md)，按如下所示。
 
 |中的字符*模式下*字符串|等效*oflag* _open/_sopen 值|
 |-------------------------------|----------------------------------------------------|
-|**a**|**_O_WRONLY** &#124; **_O_APPEND** (通常 **_O_WRONLY** &#124; **_open** &#124;* * _O_APPEND * *)|
-|**+**|**_O_RDWR** &#124; **_O_APPEND** (通常 **_O_RDWR** &#124; **_O_APPEND** &#124; **_open** )|
+|**a**|**_O_WRONLY** &#124; **_O_APPEND** (usually **_O_WRONLY** &#124; **_O_CREAT** &#124;** _O_APPEND**)|
+|**a+**|**_O_RDWR** &#124; **_O_APPEND** (usually **_O_RDWR** &#124; **_O_APPEND** &#124; **_O_CREAT** )|
 |**r**|**_O_RDONLY**|
-|**r +**|**_O_RDWR**|
-|**w**|**_O_WRONLY** (通常 **_O_WRONLY** &#124; **_open** &#124;* * _O_TRUNC * *)|
-|**w +**|**_O_RDWR** (通常 **_O_RDWR** &#124; **_open** &#124; **_O_TRUNC**)|
+|**r+**|**_O_RDWR**|
+|**w**|**_O_WRONLY** (usually **_O_WRONLY** &#124; **_O_CREAT** &#124;** _O_TRUNC**)|
+|**w+**|**_O_RDWR** (usually **_O_RDWR** &#124; **_O_CREAT** &#124; **_O_TRUNC**)|
 |**b**|**_O_BINARY**|
 |**t**|**_O_TEXT**|
-|**c**|无|
-|**n**|无|
+|**c**|None|
+|**n**|None|
 |**S**|**_O_SEQUENTIAL**|
 |**R**|**_O_RANDOM**|
 |**T**|**_O_SHORTLIVED**|
 |**D**|**_O_TEMPORARY**|
-|**ccs = UNICODE**|**_O_WTEXT**|
-|**ccs = utf-8**|**_O_TEXTW、_O_UTF8**|
-|**ccs = UTF 16LE**|**_O_UTF16**|
+|**ccs=UNICODE**|**_O_WTEXT**|
+|**ccs=UTF-8**|**_O_UTF8**|
+|**ccs=UTF-16LE**|**_O_UTF16**|
 
 如果使用的**rb**模式下，无需移植代码，并且预计将读取大量文件和/或不关心网络性能、 内存映射的 Win32 文件也可能是一个选项。
 
