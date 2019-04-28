@@ -7,11 +7,11 @@ helpviewer_keywords:
 - .MODEL directive
 ms.assetid: 057f00df-1515-4c55-852a-d936c8a34b53
 ms.openlocfilehash: c3917fea0f13e54d5f8f73599a2d28482bb6d259
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57743933"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62204092"
 ---
 # <a name="model"></a>.MODEL
 
@@ -50,7 +50,7 @@ ms.locfileid: "57743933"
 
 ## <a name="code"></a>代码
 
-MASM 相关的示例，用于下载从编译器示例[Visual c + + 示例和相关文档的 Visual Studio 2010](http://go.microsoft.com/fwlink/p/?linkid=178749)。
+MASM 相关的示例，用于下载从编译器示例[可视化C++示例和相关文档的 Visual Studio 2010](http://go.microsoft.com/fwlink/p/?linkid=178749)。
 
 下面的示例演示如何将`.MODEL`指令。
 

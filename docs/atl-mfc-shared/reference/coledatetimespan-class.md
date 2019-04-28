@@ -27,11 +27,11 @@ helpviewer_keywords:
 - COleDateTimeSpan class
 ms.assetid: 7441526d-a30a-4019-8fb3-3fee6f897cbe
 ms.openlocfilehash: b68a984488f37326f3b0c1249a5f17a3eb76548b
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58565644"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62198195"
 ---
 # <a name="coledatetimespan-class"></a>COleDateTimeSpan 类
 
@@ -391,7 +391,7 @@ enum DateTimeSpanStatus{
 
 - `COleDateTimeSpan::invalid` 指示此`COleDateTimeSpan`对象无效; 即，其值可能不正确。
 
-- `COleDateTimeSpan::null` 指示此`COleDateTimeSpan`对象为 null，也即，已为此对象提供任何值。 （此为"null"数据库意义上的"无任何值，"，而不 c + + 为 NULL。）
+- `COleDateTimeSpan::null` 指示此`COleDateTimeSpan`对象为 null，也即，已为此对象提供任何值。 (这是"null"数据库意义上的"无任何值，"，而不C++为 NULL。)
 
 状态`COleDateTimeSpan`对象是在以下情况下无效：
 
@@ -588,7 +588,7 @@ enum DateTimeSpanStatus{
 
 - `COleDateTimeSpan::invalid` 指示此`COleDateTimeSpan`对象无效; 即，其值可能不正确。
 
-- `COleDateTimeSpan::null` 指示此`COleDateTimeSpan`对象为 null，也即，已为此对象提供任何值。 （此为"null"数据库意义上的"无任何值，"，而不 c + + 为 NULL。）
+- `COleDateTimeSpan::null` 指示此`COleDateTimeSpan`对象为 null，也即，已为此对象提供任何值。 (这是"null"数据库意义上的"无任何值，"，而不C++为 NULL。)
 
 状态`COleDateTimeSpan`对象是在以下情况下无效：
 
@@ -742,7 +742,7 @@ enum DateTimeSpanStatus{
 
 - `COleDateTimeSpan::invalid` 指示此`COleDateTimeSpan`对象无效; 即，其值可能不正确。
 
-- `COleDateTimeSpan::null` 指示此`COleDateTimeSpan`对象为 null，也即，已为此对象提供任何值。 （此为"null"数据库意义上的"无任何值，"，而不 c + + 为 NULL。）
+- `COleDateTimeSpan::null` 指示此`COleDateTimeSpan`对象为 null，也即，已为此对象提供任何值。 (这是"null"数据库意义上的"无任何值，"，而不C++为 NULL。)
 
    > [!CAUTION]
    > 此函数是针对高级编程情况。 此函数不会更改此对象中的数据。 通常将用于将状态设置为**null**或**无效**。 请注意，赋值运算符 ([运算符 =](#operator_eq)) 和[SetDateTimeSpan](#setdatetimespan)设置基于源值的对象的状态。

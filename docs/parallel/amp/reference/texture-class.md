@@ -18,15 +18,15 @@ f1_keywords:
 - AMP_GRAPHICS/concurrency::graphics::texture::row_pitch
 ms.assetid: 16e85d4d-e80a-474a-995d-8bf63fbdf34c
 ms.openlocfilehash: cfcb65fa23fe4593e7dcf11da3b5da4b1785ce71
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57279739"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62351529"
 ---
 # <a name="texture-class"></a>texture 类
 
-纹理是上的数据聚合`accelerator_view`在范围域中。 它是变量，一个用于在范围域中的每个元素的集合。 每个变量可保留与 c + + 基元类型相对应的值 ( `unsigned int`， `int`， `float`， `double`)、 标量类型 ( `norm`，或`unorm`)，或短矢量类型。
+纹理是上的数据聚合`accelerator_view`在范围域中。 它是变量，一个用于在范围域中的每个元素的集合。 每个变量包含一个值，对应于C++基元类型 ( `unsigned int`， `int`， `float`， `double`)、 标量类型 ( `norm`，或者`unorm`)，或短矢量类型。
 
 ## <a name="syntax"></a>语法
 
@@ -81,7 +81,7 @@ class texture;
 
 ### <a name="public-constants"></a>公共常量
 
-|name|描述|
+|名称|描述|
 |----------|-----------------|
 |[rank 常量](#rank)|获取的排名`texture`对象。|
 

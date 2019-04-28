@@ -7,15 +7,15 @@ helpviewer_keywords:
 - C4544
 ms.assetid: 11ee04df-41ae-435f-af44-881e801315a8
 ms.openlocfilehash: f2a3f2e64a6a859add8182de4fc883c735563e92
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532894"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62352918"
 ---
 # <a name="compiler-warning-level-1-c4544"></a>编译器警告（等级 1）C4544
 
-“declaration”：已忽略此模板声明中的默认模板自变量
+declaration:忽略此模板声明的默认模板自变量
 
 默认模板自变量在错误的位置指定，并且已被忽略。 类模板的默认模板参数只能在类模板的声明或定义中指定，不能在类模板的成员上指定。
 

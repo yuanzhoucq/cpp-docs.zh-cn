@@ -3,15 +3,15 @@ title: Array 和 WriteOnlyArray (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: ef7cc5f9-cae6-4636-8220-f789e5b6aea4
 ms.openlocfilehash: fd616487bd3c11544f12e84a7dc64f41e63d501a
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57739413"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62209411"
 ---
 # <a name="array-and-writeonlyarray-ccx"></a>Array 和 WriteOnlyArray (C++/CX)
 
-你可以自由使用常规 C 样式数组或[std:: array](../standard-library/array-class-stl.md)在 C + + /CX 程序 (尽管[std:: vector](../standard-library/vector-class.md)通常是更好的选择)，但在任何 API 中的元数据中发布，您必须将转换为 C 样式数组或到矢量[platform:: array](../cppcx/platform-array-class.md)或[platform:: writeonlyarray](../cppcx/platform-writeonlyarray-class.md)根据使用方式的类型。 [Platform::Array](../cppcx/platform-array-class.md) 类型既不像 [std::vector](../standard-library/vector-class.md)那样高效也不像它那样功能强大，因此，一般原则是，应避免在对数组元素执行大量操作的内部代码中使用该类型。
+你可以自由使用常规 C 样式数组或[std:: array](../standard-library/array-class-stl.md)中C++/CX 程序 (尽管[std:: vector](../standard-library/vector-class.md)通常是更好的选择)，但在任何 API 中的元数据中发布，必须将转换C 样式数组或向量对[platform:: array](../cppcx/platform-array-class.md)或[platform:: writeonlyarray](../cppcx/platform-writeonlyarray-class.md)根据使用方式的类型。 [Platform::Array](../cppcx/platform-array-class.md) 类型既不像 [std::vector](../standard-library/vector-class.md)那样高效也不像它那样功能强大，因此，一般原则是，应避免在对数组元素执行大量操作的内部代码中使用该类型。
 
 以下数组类型可在 ABI 中传递：
 
@@ -25,9 +25,9 @@ ms.locfileid: "57739413"
 
 使用这些数组类型实现的三类数组模式定义的 Windows 运行时。
 
-PassArray 使用调用方将数组传递给方法时。 C + + 输入的参数类型是`const` [platform:: array](../cppcx/platform-array-class.md)\<T >。
+PassArray 使用调用方将数组传递给方法时。 C++输入的参数类型是`const` [platform:: array](../cppcx/platform-array-class.md)\<T >。
 
-调用方传递一个数组以便方法填充时，将使用 FillArray。 C + + 输入的参数类型是[platform:: writeonlyarray](../cppcx/platform-writeonlyarray-class.md)\<T >。
+调用方传递一个数组以便方法填充时，将使用 FillArray。 C++输入的参数类型是[platform:: writeonlyarray](../cppcx/platform-writeonlyarray-class.md)\<T >。
 
 调用方接收方法分配的数组时，将使用 ReceiveArray。 在 C++/CX 中，你可以在返回值中将数组返回为 Array^，也可以将其作为类型 Array^* 的输出参数返回。
 
@@ -43,7 +43,7 @@ PassArray 使用调用方将数组传递给方法时。 C + + 输入的参数类
 
 ## <a name="receivearray-pattern"></a>ReceiveArray 模式
 
-在 ReceiveArray 模式中，客户端代码声明一个数组，然后将数组传递给为其分配内存的方法并初始化它。 C + + 输入的参数类型是指针到 hat: `Array<T>^*`。 下面的示例演示如何在 JavaScript 中声明一个数组对象并将其传递给一个 C++ 函数，该函数分配内存，初始化元素，并将其返回到 JavaScript。 JavaScript 将分配的数组视为返回值，而 C++ 将其视为输出参数。
+在 ReceiveArray 模式中，客户端代码声明一个数组，然后将数组传递给为其分配内存的方法并初始化它。 C++输入的参数类型是指针到 hat: `Array<T>^*`。 下面的示例演示如何在 JavaScript 中声明一个数组对象并将其传递给一个 C++ 函数，该函数分配内存，初始化元素，并将其返回到 JavaScript。 JavaScript 将分配的数组视为返回值，而 C++ 将其视为输出参数。
 
 [!code-javascript[cx_arrays#102](../cppcx/codesnippet/JavaScript/array-and-writeonlyarray-c-_3.js)]
 
@@ -90,5 +90,5 @@ Windows 运行时类型系统不支持交错数组的概念，因此无法在公
 ## <a name="see-also"></a>请参阅
 
 [类型系统](../cppcx/type-system-c-cx.md)<br/>
-[Visual c + + 语言参考](../cppcx/visual-c-language-reference-c-cx.md)<br/>
+[VisualC++语言参考](../cppcx/visual-c-language-reference-c-cx.md)<br/>
 [命名空间参考](../cppcx/namespaces-reference-c-cx.md)

@@ -24,11 +24,11 @@ helpviewer_keywords:
 - setvbuf function
 ms.assetid: 6aa5aa37-3408-4fa0-992f-87f9f9c4baea
 ms.openlocfilehash: d4336c6cc478a035fcc0b9b059a7161d58bc4442
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51328092"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62356311"
 ---
 # <a name="setvbuf"></a>setvbuf
 
@@ -47,7 +47,7 @@ int setvbuf(
 
 ### <a name="parameters"></a>参数
 
-*流*<br/>
+*stream*<br/>
 指向**文件**结构的指针。
 
 *buffer*<br/>
@@ -57,7 +57,7 @@ int setvbuf(
 缓冲模式。
 
 *size*<br/>
-缓冲区大小（以字节为单位）。 允许的范围： 2 < =*大小*< = INT_MAX (2147483647)。 在内部，为提供的值*大小*向下舍入为 2 最接近倍数。
+缓冲区大小（以字节为单位）。 允许的范围：2 < =*大小*< = INT_MAX (2147483647)。 在内部，为提供的值*大小*向下舍入为 2 最接近倍数。
 
 ## <a name="return-value"></a>返回值
 

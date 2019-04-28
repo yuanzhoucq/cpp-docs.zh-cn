@@ -167,11 +167,11 @@ helpviewer_keywords:
 - CDaoRecordset [MFC], m_strSort
 ms.assetid: 2322067f-1027-4662-a5d7-aa2fc7488630
 ms.openlocfilehash: 96118645aa656e97fcb93a0fd223045208ab03a3
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57273889"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62206354"
 ---
 # <a name="cdaorecordset-class"></a>CDaoRecordset 类
 
@@ -315,7 +315,7 @@ class CDaoRecordset : public CObject
 
 使用对象的成员函数和数据成员来滚动浏览记录并进行这些操作。 可使用的操作取决于该对象是类型一个表的记录集、 动态集类型的记录集或快照类型的记录集，以及它是否可更新或只读的这取决于数据库或开放式数据库连接 (ODBC) 的功能数据源。 若要刷新记录可能已更改或添加以来`Open`调用，调用对象的[再次查询](#requery)成员函数。 调用对象的`Close`成员函数，并使用它完成后销毁对象。
 
-`CDaoRecordset` 使用 DAO 记录字段交换 (DFX) 来支持读取和更新记录的字段类型安全的 c + + 成员通过你`CDaoRecordset`或`CDaoRecordset`-派生的类。 您还可以实现动态绑定列的数据库中而无需使用 DFX 机制使用[GetFieldValue](#getfieldvalue)并[SetFieldValue](#setfieldvalue)。
+`CDaoRecordset` 使用 DAO 记录字段交换 (DFX) 通过类型安全来支持读取和更新记录的字段C++的成员应用`CDaoRecordset`或`CDaoRecordset`的派生类。 您还可以实现动态绑定列的数据库中而无需使用 DFX 机制使用[GetFieldValue](#getfieldvalue)并[SetFieldValue](#setfieldvalue)。
 
 有关相关信息，请参阅主题 DAO 帮助中的"记录集对象"。
 
@@ -339,7 +339,7 @@ virtual void AddNew();
 
 ### <a name="remarks"></a>备注
 
-记录的字段是最初为 Null。 （在数据库术语中，Null 意味着"无值"，并且不为 NULL，c + + 中相同。）若要完成该操作，必须调用[更新](#update)成员函数。 `Update` 将所做的更改保存到数据源。
+记录的字段是最初为 Null。 (在数据库术语中，Null 意味着"无值"，并且不同时，则为 NULL C++。)若要完成该操作，必须调用[更新](#update)成员函数。 `Update` 将所做的更改保存到数据源。
 
 > [!CAUTION]
 >  如果编辑记录，然后滚动到另一条记录，而无需调用`Update`，所做的更改都将丢失而不发出警告。
@@ -1077,7 +1077,7 @@ short GetEditMode();
 
 ### <a name="remarks"></a>备注
 
-|值|描述|
+|“值”|描述|
 |-----------|-----------------|
 |`dbEditNone`|不正在编辑的任何操作。|
 |`dbEditInProgress`|`Edit` 已调用。|
@@ -1633,7 +1633,7 @@ BOOL IsFieldNull(void* pv);
 
 ### <a name="remarks"></a>备注
 
-（在数据库术语中，Null 意味着"无值"，并且不为 NULL，c + + 中相同。）如果字段数据成员标记为 Null，它被解释为当前记录没有值的列。
+(在数据库术语中，Null 意味着"无值"，并且不同时，则为 NULL C++。)如果字段数据成员标记为 Null，它被解释为当前记录没有值的列。
 
 > [!NOTE]
 >  在某些情况下，使用`IsFieldNull`可能效率很低，如下面的代码示例所示：
@@ -1645,7 +1645,7 @@ BOOL IsFieldNull(void* pv);
 
 ##  <a name="isfieldnullable"></a>  CDaoRecordset::IsFieldNullable
 
-调用以确定是否可为"null"指定的字段数据成员 （可以是设置为一个 Null 值; 如果此成员函数C + + NULL 不是 Null，这意味着，在数据库术语中，相同"having 没有值")。
+调用以确定是否可为"null"指定的字段数据成员 （可以是设置为一个 Null 值; 如果此成员函数C++ NULL 不是 Null，这意味着，在数据库术语中，相同"having 没有值")。
 
 ```
 BOOL IsFieldNullable(void* pv);
@@ -2006,8 +2006,7 @@ virtual void Open(
 
 第一个版本的`Open`，它使用`lpszSQL`参数，记录的所选基于的条件下表中所示。
 
-|
-  `lpszSQL` 参数的值|取决于选择的记录|示例|
+|`lpszSQL` 参数的值|取决于选择的记录|示例|
 |--------------------------------------|----------------------------------------|-------------|
 |NULL|返回的字符串`GetDefaultSQL`。||
 |以逗号分隔的一个或多个 tabledefs 和/或 querydef 名称列表。|所有列中都表示`DoFieldExchange`。|`"Customer"`|
@@ -2263,7 +2262,7 @@ void SetFieldDirty(
 ### <a name="parameters"></a>参数
 
 *pv*<br/>
-包含中的记录集或为 NULL 的字段数据成员的地址。 如果为 NULL，将标记为记录集中的所有字段数据成员。 (C + + NULL 不是 Null 相同数据库术语中，这意味着"无任何值。")
+包含中的记录集或为 NULL 的字段数据成员的地址。 如果为 NULL，将标记为记录集中的所有字段数据成员。 (C++ NULL 不是 Null 相同数据库术语中，这意味着"无任何值。")
 
 *bDirty*<br/>
 如果字段数据成员是被标记为"更新"（更改），则为 TRUE。 如果字段数据成员将会被标记为"清理"（未更改）; 否则为 FALSE。
@@ -2306,7 +2305,7 @@ void SetFieldNull(
 ### <a name="parameters"></a>参数
 
 *pv*<br/>
-包含中的记录集或为 NULL 的字段数据成员的地址。 如果为 NULL，将标记为记录集中的所有字段数据成员。 (C + + NULL 不是 Null 相同数据库术语中，这意味着"无任何值。")
+包含中的记录集或为 NULL 的字段数据成员的地址。 如果为 NULL，将标记为记录集中的所有字段数据成员。 (C++ NULL 不是 Null 相同数据库术语中，这意味着"无任何值。")
 
 *bNull*<br/>
 如果字段数据成员是被标记为不具有任何值 (Null)，非零值。 否则为 0 的字段数据成员是否被标记为非 Null。
@@ -2395,7 +2394,7 @@ void SetFieldValueNull(LPCTSTR lpszName);
 
 ### <a name="remarks"></a>备注
 
-C + + NULL 不是 Null，这意味着，在数据库术语中，相同"具有任何值。"
+C++NULL 不是 Null，这意味着，在数据库术语中，相同"具有任何值。"
 
 有关相关信息，请参阅主题"字段对象"和 DAO 帮助中的"值属性"。
 
@@ -2474,7 +2473,7 @@ void SetParamValueNull(LPCTSTR lpszName);
 
 ### <a name="remarks"></a>备注
 
-C + + NULL 不是 Null，这意味着，在数据库术语中，相同"具有任何值。"
+C++NULL 不是 Null，这意味着，在数据库术语中，相同"具有任何值。"
 
 ##  <a name="setpercentposition"></a>  CDaoRecordset::SetPercentPosition
 

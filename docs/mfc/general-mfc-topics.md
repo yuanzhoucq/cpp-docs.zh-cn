@@ -7,11 +7,11 @@ helpviewer_keywords:
 - MFC, application development
 ms.assetid: 617e9945-9bb3-471d-a3ba-e235fcfb55d1
 ms.openlocfilehash: 71cdda0abea8cec29c3b6e17ddfb584e32a931c6
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58769714"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62219725"
 ---
 # <a name="general-mfc-topics"></a>常规 MFC 主题
 
@@ -33,7 +33,7 @@ MFC 框架是一种让您基于 Windows 专家程序员的工作来进行开发�
 
 [基于框架生成](../mfc/building-on-the-framework.md)
 
-[CWinApp:应用程序类](../mfc/cwinapp-the-application-class.md)
+[CWinApp：应用程序类](../mfc/cwinapp-the-application-class.md)
 
 [文档模板和文档/视图创建过程](../mfc/document-templates-and-the-document-view-creation-process.md)
 
@@ -47,7 +47,7 @@ MFC 框架是一种让您基于 Windows 专家程序员的工作来进行开发�
 
 [Windows Vista 公用控件的生成要求](../mfc/build-requirements-for-windows-vista-common-controls.md)
 
-[如何：添加重新启动管理器支持](../mfc/how-to-add-restart-manager-support.md)
+[如何：添加重启管理器支持](../mfc/how-to-add-restart-manager-support.md)
 
 [动态布局](../mfc/dynamic-layout.md)
 

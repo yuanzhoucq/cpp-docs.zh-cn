@@ -15,11 +15,11 @@ helpviewer_keywords:
 - std::num_get [C++], get
 ms.assetid: 9933735d-3918-4b17-abad-5fca2adc62d7
 ms.openlocfilehash: c0984c15e2bf1682fc902264f47f340d0bd3c859
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50472756"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62223741"
 ---
 # <a name="numget-class"></a>num_get 类
 
@@ -170,13 +170,13 @@ virtual iter_type do_get(
 *first*<br/>
 从其中读取数字的字符范围的起始处。
 
-*最后一个*<br/>
+*last*<br/>
 从其中读取数字的字符范围的末尾处。
 
 *_Iosbase*<br/>
 [Ios_base](../standard-library/ios-base-class.md)，其标志由转换使用。
 
-*（_s)*<br/>
+*_State*<br/>
 发生故障时向其添加 failbit（请参阅 [ios_base::iostate](../standard-library/ios-base-class.md#iostate)）的状态。
 
 *val*<br/>
@@ -417,13 +417,13 @@ iter_type get(
 *first*<br/>
 从其中读取数字的字符范围的起始处。
 
-*最后一个*<br/>
+*last*<br/>
 从其中读取数字的字符范围的末尾处。
 
 *_Iosbase*<br/>
 [Ios_base](../standard-library/ios-base-class.md)，其标志由转换使用。
 
-*（_s)*<br/>
+*_State*<br/>
 发生故障时向其添加 failbit（请参阅 [ios_base::iostate](../standard-library/ios-base-class.md#iostate)）的状态。
 
 *val*<br/>
@@ -580,11 +580,11 @@ explicit num_get(size_t _Refs = 0);
 
 可能的值 *_Refs*参数和其重要性：
 
-- 0：对象的生存期由包含该对象的区域设置管理。
+- 0:对象的生存期由包含它的区域设置管理。
 
-- 1：必须手动管理对象的生存期。
+- 1:必须手动管理的对象的生存期。
 
-- \> 1： 未定义这些值。
+- \> 1:未定义这些值。
 
 由于该析构函数受到保护，可能没有直接的示例。
 

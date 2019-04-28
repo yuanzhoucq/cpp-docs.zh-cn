@@ -17,11 +17,11 @@ helpviewer_keywords:
 - CEvent [MFC], Unlock
 ms.assetid: df676042-ce27-4702-800a-e73ff4f44395
 ms.openlocfilehash: d7731c87c6d6b0ebdec9a0c72c24b04334aa0662
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57300266"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62206038"
 ---
 # <a name="cevent-class"></a>CEvent 类
 
@@ -107,8 +107,7 @@ CEvent(
 如果为 TRUE，则指定事件对象手动事件，否则事件对象是自动的事件。
 
 *lpszName*<br/>
-
-  `CEvent` 对象的名称。 如果将跨进程边界使用的对象必须提供。 如果名称匹配的现有事件，构造函数将生成新`CEvent`对象引用该名称的事件。 如果名称与现有同步对象的不是事件相匹配，则构造将失败。 如果为 NULL，则名称将为 null。
+`CEvent` 对象的名称。 如果将跨进程边界使用的对象必须提供。 如果名称匹配的现有事件，构造函数将生成新`CEvent`对象引用该名称的事件。 如果名称与现有同步对象的不是事件相匹配，则构造将失败。 如果为 NULL，则名称将为 null。
 
 *lpsaAttribute*<br/>
 事件对象的安全特性。 此结构的完整说明，请参阅[SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) Windows SDK 中。

@@ -28,11 +28,11 @@ helpviewer_keywords:
 - remainder
 ms.assetid: 5f721fb3-8b78-4597-9bc0-ca9bcd1f1d0e
 ms.openlocfilehash: 9a9abe82e69122ca87f44e293e1da725c97045d4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50572739"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62357637"
 ---
 # <a name="remainder-remainderf-remainderl"></a>remainder、remainderf、remainderl
 
@@ -67,7 +67,7 @@ long double remainder( long double x, long double y ); /* C++ only */
 
 **余数**函数计算的浮点余数*r*的*x* / *y*以便*x*  =  *n* \* *y* + *r*，其中*n*是整数值到最接近*x* / *y*并*n*甚至是每当&#124; *n*  - *x* / *y* &#124; = 1/2。 当*r* = 0， *r*具有相同的符号*x*。
 
-由于 c + + 允许重载，可以调用的重载**余数**采用并返回**float**或**长** **double**值。 在 C 程序中，**余数**始终采用两个**double**自变量并返回**double**。
+因为C++允许重载，可以调用的重载**余数**采用并返回**float**或**长** **double**值。 在 C 程序中，**余数**始终采用两个**double**自变量并返回**double**。
 
 ## <a name="requirements"></a>要求
 

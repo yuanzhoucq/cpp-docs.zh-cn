@@ -7,11 +7,11 @@ helpviewer_keywords:
 - DHTML controls
 ms.assetid: 4ba98098-da5d-4362-96ad-8372f816c307
 ms.openlocfilehash: dd8ac616d127c3307c1c432c0b3c9bc2ef1d6181
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57265257"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62223285"
 ---
 # <a name="atl-support-for-dhtml-controls"></a>ATL 支持 DHTML 控件
 
@@ -23,7 +23,7 @@ ms.locfileid: "57265257"
 
 - 通过其界面，可访问的 web 浏览器对象和其方法[IWebBrowser2](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752127\(v=vs.85\))。
 
-- 管理 c + + 代码和 HTML 之间的通信。
+- 管理之间的通信C++代码和 HTML。
 
 DHTML 控件非常到任何其他 ATL 控件相似，但 DHTML 控件包含其他调度接口。 请参阅中的图形[标识 DHTML 控件项目的元素](../atl/identifying-the-elements-of-the-dhtml-control-project.md)有关默认 DHTML 项目中提供的接口的说明。
 
@@ -35,7 +35,7 @@ DHTML 控件非常到任何其他 ATL 控件相似，但 DHTML 控件包含其�
 介绍 DHTML 控件项目的元素。
 
 [从 DHTML 调用 C++ 代码](../atl/calling-cpp-code-from-dhtml.md)<br/>
-提供从 DHTML 控件调用 c + + 代码的示例。
+提供了一个示例调用C++DHTML 控件中的代码。
 
 [创建 ATL DHTML 控件](../atl/creating-an-atl-dhtml-control.md)<br/>
 列出了用于创建 DHTML 控件的步骤。

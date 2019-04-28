@@ -8,11 +8,11 @@ helpviewer_keywords:
 - clients
 ms.assetid: 84e34a79-06f6-4752-a33b-ae0ede1d8ecf
 ms.openlocfilehash: 098c41ea981d9d0069130d5439632aa7b0d6cbbd
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304491"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62254357"
 ---
 # <a name="automation-clients"></a>自动化客户端
 
@@ -28,11 +28,11 @@ ms.locfileid: "57304491"
 
 第一种客户端获取有关服务器的方法和属性的信息通过查询 OLE 系统`IDispatch`机制。 尽管它足以用于动态客户端，`IDispatch`很难驱动必须在已知的对象的编译时为静态客户端使用。 有关静态绑定客户端，Microsoft 基础类提供[COleDispatchDriver](../mfc/reference/coledispatchdriver-class.md)类。
 
-静态绑定的客户端与客户端应用程序使用静态链接的代理类。 此类提供类型安全的 c + + 封装的服务器应用程序的属性和操作。
+静态绑定的客户端与客户端应用程序使用静态链接的代理类。 此类提供类型安全C++的服务器应用程序的属性和操作封装。
 
 类`COleDispatchDriver`提供主体自动化客户端的支持。 使用**添加新项**对话框中，创建派生自的类`COleDispatchDriver`。
 
-然后指定描述的属性和函数的服务器应用程序的对象的类型库文件。 添加项对话框中读取此文件并创建`COleDispatchDriver`-派生的类，与你的应用程序可以调用以类型安全的方式访问 c + + 中的服务器应用程序的对象的成员函数。 其他功能继承自`COleDispatchDriver`简化了调用适当的自动化服务器的过程。
+然后指定描述的属性和函数的服务器应用程序的对象的类型库文件。 添加项对话框中读取此文件并创建`COleDispatchDriver`的派生的类，与你的应用程序可以调用访问中的服务器应用程序的对象的成员函数C++以类型安全的方式。 其他功能继承自`COleDispatchDriver`简化了调用适当的自动化服务器的过程。
 
 ### <a name="handling-events-in-automation-clients"></a>在自动化客户端中处理事件
 

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - Linker property pages
 ms.assetid: 7e7671e5-a35a-4e67-9bdb-661d75c4d11e
 ms.openlocfilehash: 1412531ae0ca9c0f5270df6df7b79ddc9be425ad
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57824849"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62216640"
 ---
 # <a name="linker-property-pages"></a>“链接器”属性页
 
@@ -51,9 +51,9 @@ Per-user Redirection 强制将任何对 HKCR 的写入重定向到 HKEY\_CURRENT
 
 在大型项目中，当依赖项目生成 .lib 文件时，将禁用增量链接。 如果有许多依赖项目生成 .lib 文件，则生成应用程序可能需要很长时间。 当此属性设置为“是”时，项目系统链接 .obj 文件中依赖项目生成的 .lib 文件，从而启用增量链接。
 
-有关如何访问信息**常规**链接器属性页上，请参阅[在 Visual Studio 中的设置 c + + 编译器和生成属性](../working-with-project-properties.md)。
+有关如何访问信息**常规**链接器属性页上，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
 
 ## <a name="see-also"></a>请参阅
 
 [“选项”对话框 ->“项目和解决方案”->“VC++ 项目设置”](/visualstudio/ide/reference/vcpp-project-settings-projects-and-solutions-options-dialog-box)<br>
-[C + + 项目属性页引用](property-pages-visual-cpp.md)
+[C++项目属性页引用](property-pages-visual-cpp.md)

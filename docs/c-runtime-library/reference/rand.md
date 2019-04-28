@@ -27,15 +27,15 @@ helpviewer_keywords:
 - pseudorandom numbers
 - numbers, generating pseudorandom
 ms.openlocfilehash: 868c6239ac1b86dfc9ac72cc8cc83d1ba3002b4a
-ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57210414"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62357767"
 ---
 # <a name="rand"></a>rand
 
-通过使用已知且完全可重现的算法生成一个伪随机数。 此函数的以编程方式更安全版本可用，请参阅[rand_s](rand-s.md)。 由生成编号**rand**不是安全加密。 有关详细信息进行了安全加密随机数字生成，使用[rand_s](rand-s.md)或函数声明的 c + + 标准库中[\<随机 >](../../standard-library/random.md)。
+通过使用已知且完全可重现的算法生成一个伪随机数。 此函数的以编程方式更安全版本可用，请参阅[rand_s](rand-s.md)。 由生成编号**rand**不是安全加密。 有关详细信息进行了安全加密随机数字生成，使用[rand_s](rand-s.md)函数中声明的或C++中的标准库[\<随机 >](../../standard-library/random.md)。
 
 ## <a name="syntax"></a>语法
 
@@ -51,7 +51,7 @@ int rand( void );
 
 **Rand**函数在范围 0 到返回一个伪随机整数**RAND_MAX** (32767)。 使用[srand](srand.md)函数之前调用伪随机数生成器的种子**rand**。
 
-**Rand**函数生成的已知序列并不适合用作加密功能。 有关详细信息进行了安全加密随机数字生成，使用[rand_s](rand-s.md)或函数声明的 c + + 标准库中[\<随机 >](../../standard-library/random.md)。 有关什么是不妥**rand**以及如何\<随机 > 处理这些不足，请参阅本视频中标题为[rand 视为有害](https://channel9.msdn.com/Events/GoingNative/2013/rand-Considered-Harmful)。
+**Rand**函数生成的已知序列并不适合用作加密功能。 有关详细信息进行了安全加密随机数字生成，使用[rand_s](rand-s.md)函数中声明的或C++中的标准库[\<随机 >](../../standard-library/random.md)。 有关什么是不妥**rand**以及如何\<随机 > 处理这些不足，请参阅本视频中标题为[rand 视为有害](https://channel9.msdn.com/Events/GoingNative/2013/rand-Considered-Harmful)。
 
 ## <a name="requirements"></a>要求
 

@@ -35,11 +35,11 @@ helpviewer_keywords:
 - time, handling in MFC
 ms.assetid: e718f294-16ec-4649-88b6-a4dbae5178fb
 ms.openlocfilehash: 46b5f15a2f6048745a12b8c3a8c8a63404f71aa2
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58565930"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62252696"
 ---
 # <a name="coledatetime-class"></a>COleDateTime 类
 
@@ -108,7 +108,7 @@ class COleDateTime
 
 `DATE`类型作为浮点值。 天是从 1899 年 12 月 30 日，在午夜测量的。 下表显示了某些日期和相关联的值：
 
-|日期|值|
+|日期|“值”|
 |----------|-----------|
 |1899 年 12 月 29日日午夜|-1.0|
 |1899 年 12 月 29日日，6 点|-1.25|
@@ -708,7 +708,7 @@ enum DateTimeStatus
 
 - `COleDateTime::invalid` 指示此`COleDateTime`对象无效; 即，其值可能不正确。
 
-- `COleDateTime::null` 指示此`COleDateTime`对象为 null，也即，已为此对象提供任何值。 （此为"null"数据库意义上的"无任何值，"，而不 c + + 为 NULL。）
+- `COleDateTime::null` 指示此`COleDateTime`对象为 null，也即，已为此对象提供任何值。 (这是"null"数据库意义上的"无任何值，"，而不C++为 NULL。)
 
 状态`COleDateTime`对象是在以下情况下无效：
 
@@ -838,7 +838,7 @@ COleDateTime& operator=(const UDATE& uDate) throw();
 
 - **运算符 = (** `uDate` **)** `UDATE`值转换，并复制到此`COleDateTime`对象。 如果转换成功，该对象的状态设置为有效，则为如果不成功，它将设置为无效。 一个`UDATE`结构表示"已解包"的日期。 有关详细信息，请参阅函数[VarDateFromUdate](/windows/desktop/api/oleauto/nf-oleauto-vardatefromudate)。
 
-- **运算符 = (** `filetimeSrc` **)** [FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime)值转换，并复制到此`COleDateTime`对象。 如果转换成功，该对象的状态设置为有效，则为否则设置为无效。 `FILETIME` 使用协调世界时 (UTC)，因此，如果结构中传递 UTC 时间，结果将被转换从 UTC 时间为本地时间，并且将存储为变量时间。 此行为是与 Visual c + + 6.0 和 Visual c + +.NET 2003 SP2 中的相同。 有关详细信息，请参阅[文件时间](/windows/desktop/SysInfo/file-times)Windows SDK 中。
+- **运算符 = (** `filetimeSrc` **)** [FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime)值转换，并复制到此`COleDateTime`对象。 如果转换成功，该对象的状态设置为有效，则为否则设置为无效。 `FILETIME` 使用协调世界时 (UTC)，因此，如果结构中传递 UTC 时间，结果将被转换从 UTC 时间为本地时间，并且将存储为变量时间。 此行为是与视觉对象中的相同C++6.0 和 Visual C++.NET 2003 SP2。 有关详细信息，请参阅[文件时间](/windows/desktop/SysInfo/file-times)Windows SDK 中。
 
 有关详细信息，请参阅[变体](/windows/desktop/api/oaidl/ns-oaidl-tagvariant)Windows SDK 中的条目。
 
@@ -1014,7 +1014,7 @@ int SetDate(
 
 下面是日期值的一些示例：
 
-|*nYear*|*nMonth*|*nDay*|值|
+|*nYear*|*nMonth*|*nDay*|“值”|
 |-------------|--------------|------------|-----------|
 |2000|2|29|29 2000 年 2 月|
 |1776|7|4|4 年 7 月圣瓦伦丁节|
@@ -1089,7 +1089,7 @@ int SetDateTime(
 
 下面是时间值的一些示例：
 
-|*nHour*|*nMin*|*nSec*|值|
+|*nHour*|*nMin*|*nSec*|“值”|
 |-------------|------------|------------|-----------|
 |1|3|3|01:03:03|
 |23|45|0|23:45:00|
@@ -1098,7 +1098,7 @@ int SetDateTime(
 
 下面是日期值的一些示例：
 
-|*nYear*|*nMonth*|*nDay*|值|
+|*nYear*|*nMonth*|*nDay*|“值”|
 |-------------|--------------|------------|-----------|
 |1995|4|15|1995 年 4 月 15日|
 |1789|7|14|17 年 7 月版|
@@ -1191,7 +1191,7 @@ int SetTime(
 
 下面是时间值的一些示例：
 
-|*nHour*|*nMin*|*nSec*|值|
+|*nHour*|*nMin*|*nSec*|“值”|
 |-------------|------------|------------|-----------|
 |1|3|3|01:03:03|
 |23|45|0|23:45:00|

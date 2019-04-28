@@ -28,11 +28,11 @@ helpviewer_keywords:
 - rintl function
 ms.assetid: 312ae3e6-278c-459a-9393-11b8f87d9184
 ms.openlocfilehash: 9e0e3875b7484735b5439c6c0e0a7252940d4552
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50609477"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62357585"
 ---
 # <a name="rint-rintf-rintl"></a>rint, rintf, rintl
 
@@ -62,12 +62,12 @@ long double rint( long double x );  // C++ only
 
 |输入|SEH 异常|**_matherr**异常|
 |-----------|-------------------|--------------------------|
-|± ∞、QNAN、IND|无|无|
+|为 ∞，QNAN IND|无|无|
 |非规格化数|EXCEPTION_FLT_UNDERFLOW|无|
 
 ## <a name="remarks"></a>备注
 
-由于 c + + 允许重载，可以调用的重载**rint**采用并返回**float**并**长** **double**值。 在 C 程序中， **rint**始终采用并返回**double**。
+因为C++允许重载，可以调用的重载**rint**采用并返回**float**并**长** **double**值。 在 C 程序中， **rint**始终采用并返回**double**。
 
 ## <a name="requirements"></a>要求
 

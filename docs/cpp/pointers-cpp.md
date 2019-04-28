@@ -8,21 +8,21 @@ helpviewer_keywords:
 - pointers, declarations
 ms.assetid: 595387c5-8e58-4670-848f-344c7caf985e
 ms.openlocfilehash: a258a71b8b89643ee98785ee9dfbf30cdf128db7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667865"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62223061"
 ---
 # <a name="pointers-c"></a>指针 （C++）
 
 使用以下序列声明指针。
 
-> \[*存储类说明符*] \[ *cv 限定符*]*类型说明符* \[ *ms 修饰符*] *声明符* **;**
+> \[*storage-class-specifiers*] \[*cv-qualifiers*] *type-specifiers* \[*ms-modifier*] *declarator* **;**
 
 其中可能会使用任何有效指针声明符*声明符*。 简单指针声明符的语法如下所示：
 
-> __\*__ \[*cv 限定符*]*标识符* \[ **=** *表达式*]
+> __\*__ \[*cv-qualifiers*] *identifier* \[**=** *expression*]
 
 1. 声明说明符：
 
@@ -50,7 +50,7 @@ ms.locfileid: "50667865"
 
 对于指针数组，语法如下所示：
 
-> __\*__ *标识符* **\[** \[*常量表达式*] **]**
+> __\*__ *identifier* **\[** \[*constant-expression*] **]**
 
 多个声明符及其初始值设定项可能同时出现在前面有声明说明符且以逗号分隔的列表中的一个声明中。
 

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C1189
 ms.assetid: 2e5c8a78-edd4-411c-b619-558a96be148a
 ms.openlocfilehash: 06d42316a0109ac063bba43cefebd9aab71c2e72
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50565524"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62229054"
 ---
 # <a name="fatal-error-c1189"></a>错误 C1189
 
@@ -19,7 +19,7 @@ ms.locfileid: "50565524"
 
 ## <a name="remarks"></a>备注
 
-由生成 C1189`#error`指令。 开发人员代码指令指定的错误消息的文本。 有关详细信息，请参阅[#error 指令 （C/c + +）](../../preprocessor/hash-error-directive-c-cpp.md)。
+由生成 C1189`#error`指令。 开发人员代码指令指定的错误消息的文本。 有关详细信息，请参阅[#error 指令 (C /C++)](../../preprocessor/hash-error-directive-c-cpp.md)。
 
 ## <a name="example"></a>示例
 

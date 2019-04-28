@@ -7,15 +7,15 @@ helpviewer_keywords:
 - .DOSSEG directive
 ms.assetid: 175ad470-0a2b-4e2b-b078-65e224fec040
 ms.openlocfilehash: 28b3e351030ee83693c0fec5568aacf9b4b77c27
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50639434"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62204356"
 ---
 # <a name="dosseg"></a>.DOSSEG
 
-根据 MS-DOS 段约定的段进行排序： 代码首先，然后段不在 DGROUP，并在 DGROUP 然后细分。
+根据 MS-DOS 段约定的段进行排序：代码优先，然后不在 DGROUP，段，然后 DGROUP 中的段。
 
 ## <a name="syntax"></a>语法
 

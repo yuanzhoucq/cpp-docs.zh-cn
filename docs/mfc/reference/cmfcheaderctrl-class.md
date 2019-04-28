@@ -31,11 +31,11 @@ helpviewer_keywords:
 - CMFCHeaderCtrl [MFC], OnFillBackground
 ms.assetid: 2f5fbf7b-5c75-42db-9216-640b1628f777
 ms.openlocfilehash: 86674e086da482e59b2711f5ba9154848ff05a6f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57269430"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62218380"
 ---
 # <a name="cmfcheaderctrl-class"></a>CListCtrl
 
@@ -116,14 +116,14 @@ CMFCHeaderCtrl::CMFCHeaderCtrl()
 
 此构造函数初始化为指定值的以下成员变量：
 
-|成员变量|值|
+|成员变量|“值”|
 |---------------------|-----------|
 |`m_bIsMousePressed`|false|
 |`m_bMultipleSort`|false|
 |`m_bAscending`|true|
 |`m_nHighlightedItem`|-1|
 |`m_bTracked`|false|
-|`m_bIsDlgControl`|FALSE|
+|`m_bIsDlgControl`|false|
 |`m_hFont`|NULL|
 
 ##  <a name="enablemultiplesort"></a>  CMFCHeaderCtrl::EnableMultipleSort
@@ -160,7 +160,7 @@ int GetColumnState(int iColumn) const;
 
 一个值，指示指定列的排序状态。 下表列出了可能的值：
 
-|值|描述|
+|“值”|描述|
 |-----------|-----------------|
 |-1|按降序排序。|
 |0|未排序。|

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - ATL Control Wizard, options
 ms.assetid: 4607c51a-992d-433e-9281-919c6f519a3d
 ms.openlocfilehash: 1dd136739162c72d8064deb9b1498794f1985e1b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57282976"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62197349"
 ---
 # <a name="options-atl-control-wizard"></a>选项，ATL 控件向导
 
@@ -31,7 +31,7 @@ ms.locfileid: "57282976"
 
   - 自定义资源，注册表，会自动注册复合控件时调用。
 
-  - 实现复合控件的 c + + 类。
+  - 一个C++类，该类实现复合控件。
 
   - 复合控件公开一个 COM 接口。
 

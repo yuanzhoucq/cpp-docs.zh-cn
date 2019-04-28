@@ -12,11 +12,11 @@ helpviewer_keywords:
 - threading [MFC], user interface threads
 ms.assetid: 446925c1-db59-46ea-ae5b-d5ae5d5b91d8
 ms.openlocfilehash: ac22fad95041b07e132d31a2d246e58c3b40d30c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293311"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62212904"
 ---
 # <a name="multithreading-creating-mfc-user-interface-threads"></a>多线程处理：创建 MFC 用户界面线程
 
@@ -26,7 +26,7 @@ ms.locfileid: "57293311"
 
 ### <a name="functions-to-override-when-creating-a-user-interface-thread"></a>要创建用户界面线程时重写函数
 
-|函数|目标|
+|函数|用途|
 |--------------|-------------|
 |[ExitInstance](../mfc/reference/cwinthread-class.md#exitinstance)|当线程终止时执行清理。 通常被重写。|
 |[InitInstance](../mfc/reference/cwinthread-class.md#initinstance)|执行线程实例初始化。 必须重写。|
@@ -53,7 +53,7 @@ MFC 通过参数重载提供两个版本的 `AfxBeginThread`：一个只能创�
 
 - [多线程处理：终止线程](multithreading-terminating-threads.md)
 
-- [多线程处理：创建辅助线程](multithreading-creating-worker-threads.md)
+- [多线程处理：创建工作线程](multithreading-creating-worker-threads.md)
 
 - [进程和线程](/windows/desktop/ProcThread/processes-and-threads)
 

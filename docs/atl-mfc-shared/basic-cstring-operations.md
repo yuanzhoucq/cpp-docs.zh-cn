@@ -10,11 +10,11 @@ helpviewer_keywords:
 - characters, accessing in CStrings
 ms.assetid: 41db66b2-9427-4bb3-845a-9b6869159a6c
 ms.openlocfilehash: 08c496038efc9e24e1c1610da07b6824c3a50b64
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57746209"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62216852"
 ---
 # <a name="basic-cstring-operations"></a>基本 CString 操作
 
@@ -36,7 +36,7 @@ ms.locfileid: "57746209"
 
 `CString``CStringA`，并`CStringW`每个获取一组方法和运算符定义的`CStringT`与它们支持的字符串数据一起使用。 某些方法重复的并在某些情况下，超过 C 运行时库的字符串服务。
 
-注意：`CString`是本机类。 字符串类，用于在 C + + /cli CLI 托管项目中，使用`System.String`。
+注意：`CString`是本机类。 有关在中使用的字符串类C++/CLI 托管项目中，使用`System.String`。
 
 ##  <a name="_core_creating_cstring_objects_from_standard_c_literal_strings"></a> 从标准 C 文本字符串创建 CString 对象
 
@@ -97,7 +97,7 @@ CString cs("meow");
 wcout << (const wchar_t*) cs << endl;
 ```
 
-无需转换，`cs`被视为`void*`和`wcout`打印对象的地址。 此行为是由 c + + 标准模板参数推导和重载解析中正确本身，并且符合之间进行细微交互引起的。
+无需转换，`cs`被视为`void*`和`wcout`打印对象的地址。 此行为由模板参数推导和重载解析中正确本身和与之间的细微交互C++标准。
 
 ## <a name="see-also"></a>请参阅
 

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4251
 ms.assetid: a9992038-f0c2-4fc4-a9be-4509442cbc1e
 ms.openlocfilehash: d2fff1d2f30c4ac80af6d5b9ca452fa5f30f5a15
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50649652"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62207341"
 ---
 # <a name="compiler-warning-level-1-c4251"></a>编译器警告（等级 1）C4251
 
@@ -29,7 +29,7 @@ identifier： 类 type 需要有 dll 接口的类 type2 的客户端使用
 
 您可以避免通过定义一个 DLL，它定义了具有虚函数的类和函数，可以调用来实例化并删除对象类型的导出类。  然后，可以只需调用虚函数的类型。
 
-如果从 c + + 标准库，编译调试版本中的类型派生，则可以忽略 C4251 (**/MTd**)，其中编译器错误消息是指 _Container_base。
+如果派生的类型，则可以忽略 C4251C++标准库，编译调试版本 (**/MTd**)，其中编译器错误消息是指 _Container_base。
 
 ```cpp
 // C4251.cpp

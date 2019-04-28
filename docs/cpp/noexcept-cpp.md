@@ -5,19 +5,19 @@ f1_keywords:
 - noexcept_cpp
 ms.assetid: df24edb9-c6a6-4e37-9914-fd5c0c3716a8
 ms.openlocfilehash: c314b554abb6c10e62b143f554777af50267e4e0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620527"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62245356"
 ---
 # <a name="noexcept-c"></a>noexcept (C++)
 
-**C++ 11:** 指定函数是否可能引发异常。
+**C + + 11:** 指定函数是否可能引发异常。
 
 ## <a name="syntax"></a>语法
 
-> *noexcept 表达式*: &nbsp; &nbsp; &nbsp; &nbsp; **noexcept** &nbsp; &nbsp; &nbsp; &nbsp; **noexcept(** *常数表达式* **)**
+> *noexcept-expression*: &nbsp;&nbsp;&nbsp;&nbsp;**noexcept** &nbsp;&nbsp;&nbsp;&nbsp;**noexcept(** *constant-expression* **)**
 
 ### <a name="parameters"></a>参数
 

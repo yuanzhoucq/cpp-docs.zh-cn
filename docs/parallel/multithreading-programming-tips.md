@@ -17,11 +17,11 @@ helpviewer_keywords:
 - Windows handle maps [C++]
 ms.assetid: ad14cc70-c91c-4c24-942f-13a75e58bf8a
 ms.openlocfilehash: e89d0d534638f7216f142bc3f86633a59b8b0ff7
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57290790"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62212420"
 ---
 # <a name="multithreading-mfc-programming-tips"></a>多线程处理：MFC 编程提示
 
@@ -47,9 +47,9 @@ MFC 对象不是单独线程安全。 两个单独的线程无法处理同一对
 
 ##  <a name="_core_windows_handle_maps"></a> Windows 句柄映射
 
-作为一般规则是，线程可以访问它创建的 MFC 对象。 这是因为临时和永久的 Windows 句柄映射保留在线程本地存储，以帮助保护，从多个线程同时访问。 例如，一个工作线程不能执行计算并调用文档的`UpdateAllViews`成员函数来包含视图上修改的新数据的窗口。 这没有任何影响，因为从映射`CWnd`对象与 Hwnd 是主线程的本地。 这意味着一个线程可能必须从 Windows 句柄映射到 c + + 对象，但另一个线程可能会将此句柄映射到不同的 c + + 对象。 在一个线程中所做的更改将不会反映在其他。
+作为一般规则是，线程可以访问它创建的 MFC 对象。 这是因为临时和永久的 Windows 句柄映射保留在线程本地存储，以帮助保护，从多个线程同时访问。 例如，一个工作线程不能执行计算并调用文档的`UpdateAllViews`成员函数来包含视图上修改的新数据的窗口。 这没有任何影响，因为从映射`CWnd`对象与 Hwnd 是主线程的本地。 这意味着一个线程可能必须从 Windows 句柄的映射C++对象，而另一个线程可能会将该句柄映射到不同C++对象。 在一个线程中所做的更改将不会反映在其他。
 
-有几种方法解决此问题。 第一个是传递 （例如 HWND) 的各个句柄而不是 c + + 对象与工作线程。 工作线程然后将这些对象添加到其临时映射，通过调用适当`FromHandle`成员函数。 您还可以将该对象通过调用添加到线程的永久映射`Attach`，但仅当可以保证该对象将存在时间超过该线程时，才应进行此操作。
+有几种方法解决此问题。 第一种是传递 （例如 HWND) 的各个句柄而不是C++对象与工作线程。 工作线程然后将这些对象添加到其临时映射，通过调用适当`FromHandle`成员函数。 您还可以将该对象通过调用添加到线程的永久映射`Attach`，但仅当可以保证该对象将存在时间超过该线程时，才应进行此操作。
 
 另一种方法是创建用户定义的新消息对应于不同的任务工作线程将执行，并将这些消息发布到应用程序的主窗口使用`::PostMessage`。 此方法是通信的类似于对话，只不过这两个线程正在执行的相同地址空间中的两个不同应用程序。
 

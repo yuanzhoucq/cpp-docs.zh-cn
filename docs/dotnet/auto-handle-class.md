@@ -16,11 +16,11 @@ helpviewer_keywords:
 - msclr::auto_handle class
 ms.assetid: a65604d1-ecbb-44fd-ae2f-696ddeeed9d6
 ms.openlocfilehash: ad98bfa9ff447f08c458427961b427e0f2087e62
-ms.sourcegitcommit: 9813e146a4eb30929d8352872859e8fcb7ff6d2f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54806002"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62209264"
 ---
 # <a name="autohandle-class"></a>auto_handle 类
 
@@ -42,14 +42,14 @@ ref class auto_handle;
 
 ### <a name="public-constructors"></a>公共构造函数  
 
-|name|描述|  
+|名称|描述|  
 |---------|-----------|  
 |[auto_handle::auto_handle](#auto-handle)|`auto_handle`构造函数。|  
 |[auto_handle::~auto_handle](#tilde-auto-handle)|`auto_handle`析构函数。|  
 
 ### <a name="public-methods"></a>公共方法  
 
-|name|描述|  
+|名称|描述|  
 |---------|-----------|  
 |[auto_handle::get](#get)|获取包含的对象。|  
 |[auto_handle::release](#release)|释放该对象从`auto_handle`管理。|
@@ -58,7 +58,7 @@ ref class auto_handle;
 
 ### <a name="public-operators"></a>公共运算符 
 
-|name|描述|  
+|名称|描述|  
 |---------|-----------| 
 |[auto_handle::operator-&gt;](#operator-arrow)|成员访问运算符。|   
 |[auto_handle::operator=](#operator-assign)|赋值运算符。| 

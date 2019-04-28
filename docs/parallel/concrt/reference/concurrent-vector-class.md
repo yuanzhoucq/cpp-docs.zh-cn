@@ -34,16 +34,15 @@ helpviewer_keywords:
 - concurrent_vector class
 ms.assetid: a217b4ac-af2b-4d41-94eb-09a75ee28622
 ms.openlocfilehash: 7c2ca35239dfb3ce4c0f710259f54005ff9f3c94
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283171"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62224202"
 ---
 # <a name="concurrentvector-class"></a>concurrent_vector 类
 
-
-  `concurrent_vector` 类是允许对任意元素进行随机访问的序列容器类。 它支持并发安全追加、元素访问、迭代器访问和迭代器遍历操作。
+`concurrent_vector` 类是允许对任意元素进行随机访问的序列容器类。 它支持并发安全追加、元素访问、迭代器访问和迭代器遍历操作。
 
 ## <a name="syntax"></a>语法
 
@@ -245,7 +244,7 @@ size_type capacity() const;
 
 ### <a name="remarks"></a>备注
 
-与 c + + 标准库不同`vector`、`concurrent_vector`对象不会移动现有元素，前提是它分配更多的内存。
+不同于C++标准库`vector`、 一个`concurrent_vector`对象不会移动现有元素，前提是它分配更多的内存。
 
 ##  <a name="cbegin"></a> cbegin
 
@@ -332,8 +331,7 @@ concurrent_vector(_InputIterator _Begin,
 要从中复制或移动元素的源 `concurrent_vector` 对象。
 
 *_N*<br/>
-
-  `concurrent_vector` 对象的初始容量。
+`concurrent_vector` 对象的初始容量。
 
 *_Item*<br/>
 构造的对象中的元素的值。
