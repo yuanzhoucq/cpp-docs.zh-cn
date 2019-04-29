@@ -4,12 +4,12 @@ ms.date: 05/11/2018
 helpviewer_keywords:
 - deploying the CRT [C++]
 - application CRT deployment [C++]
-ms.openlocfilehash: 90f859eb0e9134c997e7eecad118cfb8ec00b782
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
-ms.translationtype: MT
+ms.openlocfilehash: 7952d2ec6e8f502b0edf776811a492c67f495cce
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58786204"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64344176"
 ---
 # <a name="universal-crt-deployment"></a>通用 CRT 部署
 
@@ -23,7 +23,9 @@ ms.locfileid: "58786204"
 
 并非所有 Microsoft Windows 计算机都使用 Windows 更新定期安装更新，有些计算机可能不会安装所有推荐的更新。 为支持在这些计算机上使用通过 Visual Studio 2015 及更高版本的 C++ 工具集生成的应用程序，通用 CRT 可再发行组件可用于脱机分发。 这些可再发行组件可从上述任一知识库链接下载。 请注意，通用 CRT 可再发行组件要求计算机已更新到当前服务包。 举个例子，Windows 7 的可再发行组件仅安装到 Windows 7 SP1 上，而不会安装到 Windows 7 RTM 上。
 
-由于通用 CRT 是 C++ 库的基本依赖项，因此 Visual C++ 可再发行组件 (VCRedist) 会在未安装任何版本的计算机上安装通用 CRT 的基础版本，这足以满足 C++ 库依赖项。 如果应用程序依赖于最新版本的通用 CRT，则必须显式安装该最新版本。 最好在安装 VCRedist 之前安装它，以避免可能的多次重新启动。
+因为通用 CRT 的基本依赖项C++库，视觉对象C++可再发行组件 (VCRedist) 未安装版本已安装的计算机上安装的通用 CRT （版本 10.0.10240） 的初始版本。 此版本就足以满足C++库依赖项。 如果你的应用程序依赖于最新版本的通用 CRT，则必须使用 Windows 更新来使你完全保持最新的计算机或显式安装该版本。 最好是具有多个所需的重新启动的通用 C 运行时已通过 Windows Update 或通过安装 MSU 安装 VCRedist，以避免潜在之前。
+
+并非所有操作系统都有资格获得最新的通用 C 运行时通过 Windows Update。 Windows 10 上的集中部署的版本匹配的操作系统版本。 此外，若要更新通用 C 运行时必须更新操作系统。 对于通过 Windows 8.1 的 Windows Vista，最新可用通用 C 运行时当前基于 Windows 10 周年更新中，使用额外的修补程序 （版本号为 10.0.14393） 中包含的版本。
 
 ## <a name="local-deployment"></a>本地部署
 
