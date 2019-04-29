@@ -13,15 +13,15 @@ helpviewer_keywords:
 - /EH compiler option [C++]
 ms.assetid: 754b916f-d206-4472-b55a-b6f1b0f2cb4d
 ms.openlocfilehash: 9f5eed60ecb51abc1d8fbd3c38773bbf782b23a5
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57808253"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62271796"
 ---
 # <a name="eh-exception-handling-model"></a>/EH（异常处理模型）
 
-指定当编译器使用的异常处理类型、何时优化掉异常检查以及是否销毁由于异常而超出范围的 C++ 对象。 如果 **/EH**未指定，则编译器使代码能够捕获异步结构化的异常和 c + + 异常，但不会销毁由于异步异常超出范围的 c + + 对象。
+指定当编译器使用的异常处理类型、何时优化掉异常检查以及是否销毁由于异常而超出范围的 C++ 对象。 如果 **/EH**未指定，编译器使代码能够捕获这两个异步结构化的异常和C++异常，但不会销毁C++由于异步异常超出范围的对象。
 
 ## <a name="syntax"></a>语法
 
@@ -30,13 +30,13 @@ ms.locfileid: "57808253"
 ## <a name="arguments"></a>自变量
 
 **a**<br/>
-异常处理模型同时捕获异步 （结构化） 和 c + + 的同步 （c + +） 异常情况下使用`catch(...)`语法。
+异常处理模型同时捕获异步 （结构化） 和同步 (C++) 异常按使用的C++`catch(...)`语法。
 
 **s**<br/>
-异常处理模型的同步 （c + +） 仅捕获异常并通知编译器假定函数声明为**extern"C"** 可能会引发异常。
+捕获同步异常处理模型 (C++) 仅异常并通知编译器假定函数声明为**extern"C"** 可能会引发异常。
 
 **c**<br/>
-如果用于**s** (**/EHsc**)、 c + + 仅捕获异常并通知编译器假定函数声明为**extern"C"** 从未引发 c + + 异常。 **/EHca** 与 **/EHa**相等。
+如果用于**s** (**/EHsc**)，会捕获C++仅异常并通知编译器假定函数声明为**extern"C"** 永远不会引发C++异常。 **/EHca** 与 **/EHa**相等。
 
 **r**<br/>
 告知编译器始终生成运行时终止检查所有**noexcept**函数。 默认情况下，运行时检查**noexcept**可能被优化掉如果编译器确定该函数调用仅非引发函数。
@@ -98,9 +98,9 @@ int main() {
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[Visual Studio 中的设置 c + + 编译器和生成属性](../working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
 
-1. 选择**配置属性** > **C/c + +** > **代码生成**。
+1. 选择**配置属性** > **C /C++** > **代码生成**。
 
 1. 修改 **“启用 C++ 异常”** 属性。
 
