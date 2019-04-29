@@ -11,11 +11,11 @@ helpviewer_keywords:
 - -H compiler option [C++]
 ms.assetid: de701dd3-ed04-4c88-8195-960d2520ec2e
 ms.openlocfilehash: bdd3da8d3a5165262c00bc3475122e31f5770726
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57811259"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62270381"
 ---
 # <a name="h-restrict-length-of-external-names"></a>/H（限制外部名称长度）
 
@@ -32,7 +32,7 @@ ms.locfileid: "57811259"
 
 ## <a name="remarks"></a>备注
 
-默认情况下，外部 （公共） 名称的长度为 2047 个字符。 这适用于 C 和 c + + 程序。 使用 **/H**只能减少标识符的最大长度，而不增加。 之间有空格 **/H**并*数*是可选的。
+默认情况下，外部 （公共） 名称的长度为 2047 个字符。 这适用于 C 和C++程序。 使用 **/H**只能减少标识符的最大长度，而不增加。 之间有空格 **/H**并*数*是可选的。
 
 如果程序包含外部名称长度超过*数*，会忽略多余字符。 如果编译的程序而无需 **/H** ，然后如果标识符包含超过 2047 个字符，编译器将生成[致命错误 C1064](../../error-messages/compiler-errors-1/fatal-error-c1064.md)。
 
@@ -40,7 +40,7 @@ ms.locfileid: "57811259"
 
 - 编译器将添加前导下划线 (**\_**) 到名称修改`__cdecl`（默认值） 和`__stdcall`注册时调用约定和前导 (**\@**) 修改名称为`__fastcall`调用约定。
 
-- 编译器将参数大小信息追加到名称修改`__fastcall`和`__stdcall`调用约定，并将类型信息添加到 c + + 名称。
+- 编译器将参数大小信息追加到名称修改`__fastcall`并`__stdcall`调用约定，并将添加类型信息传递给C++名称。
 
 您可能会发现 **/H**有用：
 
@@ -74,9 +74,9 @@ void func2(void) {}
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[Visual Studio 中的设置 c + + 编译器和生成属性](../working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
 
-1. 选择**配置属性** > **C/c + +** > **命令行**属性页。
+1. 选择**配置属性** > **C /C++** > **命令行**属性页。
 
 1. 输入中的编译器选项**其他选项**框。
 
