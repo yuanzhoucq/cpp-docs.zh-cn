@@ -12,11 +12,11 @@ helpviewer_keywords:
 - -doc compiler option [C++]
 ms.assetid: b54f7e2c-f28f-4f46-9ed6-0db09be2cc63
 ms.openlocfilehash: 90f63a972245114424b64d4131420dcb4e1e925a
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57809790"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64342909"
 ---
 # <a name="doc-process-documentation-comments-cc"></a>/doc（处理文档注释）(C/C++)
 
@@ -41,9 +41,9 @@ ms.locfileid: "57809790"
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[Visual Studio 中的设置 c + + 编译器和生成属性](../working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
 
-1. 选择**配置属性** > **C/c + +** > **输出文件**属性页。
+1. 选择**配置属性** > **C /C++** > **输出文件**属性页。
 
 1. 修改**生成 XML 文档文件**属性。
 

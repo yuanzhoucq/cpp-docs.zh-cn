@@ -3,11 +3,11 @@ title: 装箱 (C++/CLI)
 ms.date: 11/04/2016
 ms.assetid: f4ee27a8-6a34-432d-b9ec-39285d513b23
 ms.openlocfilehash: 3f756eaef59c24ca5b82c485bd8352dffe9fb1db
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614495"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64345758"
 ---
 # <a name="boxing-ccli"></a>装箱 (C++/CLI)
 
@@ -15,7 +15,7 @@ ms.locfileid: "50614495"
 
 ## <a name="related-articles"></a>相关文章
 
-|标题|描述|
+|标题|说明|
 |-----------|-----------------|
 |[如何：显式请求装箱](../dotnet/how-to-explicitly-request-boxing.md)|介绍如何显式请求装箱的变量上。|
 |[如何：使用 gcnew 创建值类型和使用隐式装箱](../dotnet/how-to-use-gcnew-to-create-value-types-and-use-implicit-boxing.md)|演示如何使用`gcnew`创建可以在托管的垃圾回收堆放置一个装箱的值类型。|

@@ -2,11 +2,11 @@
 title: ARM64 异常处理
 ms.date: 11/19/2018
 ms.openlocfilehash: 55476119499a3216f6801877dba692b2a0d1d9ee
-ms.sourcegitcommit: 88631cecbe3e3fa752eae3ad05b7f9d9f9437b4d
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59534118"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64342302"
 ---
 # <a name="arm64-exception-handling"></a>ARM64 异常处理
 
@@ -357,7 +357,7 @@ ULONG ComputeXdataSize(PULONG *Xdata)
 
 属于类别 1、 2 （不带传出参数区域）、 3 和 4 上面部分中的规范 prolog 可以由已打包的展开格式表示。  Epilog 规范函数按照非常类似的形式，除非**H**不起作用，`set_fp`省略指令，和步骤，以及每个步骤中的说明的顺序反转在 epilog 中。 下表中详细介绍这些步骤为已打包的 xdata 的算法：
 
-步骤 0:执行预先计算的每个区域的大小。
+步骤 0：执行预先计算的每个区域的大小。
 
 步骤 1：保存 Int 被调用方保存的寄存器。
 

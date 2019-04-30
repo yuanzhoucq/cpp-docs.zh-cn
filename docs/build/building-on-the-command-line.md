@@ -1,6 +1,6 @@
 ---
 title: 使用命令行-Visual Studio 中的 MSVC 工具集
-description: 使用 Microsoft c + + 编译器工具链 (MSVC) 从 Visual Studio IDE 外部命令行。
+description: 使用 MicrosoftC++从 Visual Studio IDE 外部命令行编译器工具链 （msvc） 编写。
 ms.custom: conceptual
 ms.date: 12/10/2018
 helpviewer_keywords:
@@ -11,21 +11,21 @@ helpviewer_keywords:
 - command line [C++], compilers
 ms.assetid: 7ca9daed-a003-4162-842d-908f79058365
 ms.openlocfilehash: 21d1c9063a1d6dd154de8d2caca913ea3fd0ce37
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
-ms.translationtype: MT
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57812117"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64342158"
 ---
 # <a name="use-the-msvc-toolset-from-the-command-line"></a>使用命令行中的 MSVC 工具集
 
-可以使用 Visual Studio 中包含的工具来生成命令行上的 C 和 c + + 应用程序。 此外可以将其作为独立包从下载的编译器工具集[Visual Studio 2017 生成工具](https://go.microsoft.com/fwlink/p/?linkid=875721)。
+您可以生成 C 和C++使用 Visual Studio 中包含的工具在命令行上的应用程序。 此外可以将其作为独立包从下载的编译器工具集[Visual Studio 2017 生成工具](https://go.microsoft.com/fwlink/p/?linkid=875721)。
 
 ## <a name="how-to-use-the-command-line-tools"></a>如何使用命令行工具
 
-时在 Visual Studio 安装程序中选择了一个 c + + 工作负载，它将安装 Visual Studio*平台工具集*。 平台工具集已针对特定的 Visual Studio 版本，包括 C/c + + 编译器、 链接器、 组装器，和其他生成工具，以及匹配的库的所有 C 和 c + + 工具。 可以使用所有这些工具在命令行中，并且它们还内部使用的 Visual Studio IDE。 有单独的 x86 承载和 x64 托管编译器和工具，用于构建代码的 x86、 x64、 ARM 和 ARM64 目标。 每个组的特定主机和目标生成体系结构工具存储在其自己的目录。
+当你选择的一个C++工作负荷在 Visual Studio 安装程序，它会安装 Visual Studio*平台工具集*。 平台工具集具有所有 C 和C++适用于特定的 Visual Studio 版本，包括 C 工具 /C++编译器、 链接器和组装器，其他生成工具，以及匹配的库。 可以使用所有这些工具在命令行中，并且它们还内部使用的 Visual Studio IDE。 有单独的 x86 承载和 x64 托管编译器和工具，用于构建代码的 x86、 x64、 ARM 和 ARM64 目标。 每个组的特定主机和目标生成体系结构工具存储在其自己的目录。
 
-安装的编译器工具集取决于您计算机的处理器和在安装过程中选择的选项。 至少安装了 32 位 x86 承载的工具生成 32 位 x86 本机代码和跨生成 64 位 x64 本机代码的工具。 如果您有 64 位 Windows，还会安装的 64 位 x64 托管工具生成 64 位本机代码和跨生成 32 位本机代码的工具。 如果您选择安装可选的 c + + 通用 Windows 平台工具，都还会安装生成 ARM 代码的 32 位和 64 位本机工具。 其他工作负荷可能安装其他工具。
+安装的编译器工具集取决于您计算机的处理器和在安装过程中选择的选项。 至少安装了 32 位 x86 承载的工具生成 32 位 x86 本机代码和跨生成 64 位 x64 本机代码的工具。 如果您有 64 位 Windows，还会安装的 64 位 x64 托管工具生成 64 位本机代码和跨生成 32 位本机代码的工具。 如果您选择安装可选的C++通用 Windows 平台工具，然后生成 ARM 代码的 32 位和 64 位本机工具还会安装。 其他工作负荷可能安装其他工具。
 
 ## <a name="environment-variables-and-developer-command-prompts"></a>环境变量和开发人员命令提示
 
@@ -132,7 +132,7 @@ ms.locfileid: "57812117"
 
 ## <a name="command-line-tools"></a>命令行工具
 
-若要在命令行上生成 C/c + + 项目，Visual Studio 提供了这些命令行工具：
+若要生成 C /C++在命令行中，Visual Studio 项目提供了这些命令行工具：
 
 [CL](reference/compiling-a-c-cpp-program.md)<br/>
 使用编译器 (cl.exe) 可编译源代码文件，并将其链接到应用、库和 DLL 中。
@@ -147,7 +147,7 @@ ms.locfileid: "57812117"
 与命令行开关结合将 DEVENV (devenv.exe) — 例如， **/build**或 **/clean**— 执行某些生成命令而不会显示在 Visual Studio IDE。 一般情况下这是首选对使用 MSBuild，因为您可以让 Visual Studio 处理 MSBuild 的复杂性直接。
 
 [NMAKE](reference/nmake-reference.md)<br/>
-在 Windows 上使用 NMAKE (nmake.exe) 生成基于传统的生成文件的 c + + 项目。
+在 Windows 上使用 NMAKE (nmake.exe) 生成C++项目基于传统的生成文件。
 
 在命令行上生成时，F1 命令不可用的即时帮助。 相反，您可以使用搜索引擎来获取有关警告、 错误和消息的信息，或者可以使用脱机帮助文件。 若要使用搜索范围[docs.microsoft.com](https://docs.microsoft.com/cpp/)，在页面顶部的搜索框中输入搜索字符串。
 
@@ -158,7 +158,7 @@ ms.locfileid: "57812117"
 [演练：在命令行上编译本机 C++ 程序](walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)<br/>
 提供显示了如何在命令行上创建和编译简单 C++ 程序的示例。
 
-[演练：编译 C 程序命令行上](walkthrough-compile-a-c-program-on-the-command-line.md)<br/>
+[演练：在命令行上编译 C 程序](walkthrough-compile-a-c-program-on-the-command-line.md)<br/>
 介绍了如何编译采用 C 编程语言编写的程序。
 
 [演练：在命令行上编译 C++/CLI 程序](walkthrough-compiling-a-cpp-cli-program-on-the-command-line.md)<br/>
@@ -173,7 +173,7 @@ ms.locfileid: "57812117"
 [NMAKE 参考](reference/nmake-reference.md)<br/>
 提供指向介绍了 Microsoft 程序维护实用工具 (NMAKE.EXE) 的文章的链接。
 
-[在命令行-c + + 的 MSBuild](msbuild-visual-cpp.md)<br/>
+[在命令行中的 MSBuildC++](msbuild-visual-cpp.md)<br/>
 提供指向讨论如何使用命令行中的 msbuild.exe 的文章。
 
 ## <a name="related-sections"></a>相关章节
@@ -181,14 +181,14 @@ ms.locfileid: "57812117"
 [/MD、/MT、/LD（使用运行时库）](reference/md-mt-ld-use-run-time-library.md)<br/>
 介绍了如何使用这些编译器选项来使用“Debug”或“Release”运行时库。
 
-[C/c + + 编译器选项](reference/compiler-options.md)<br/>
+[C /C++编译器选项](reference/compiler-options.md)<br/>
 提供指向探讨 C 和 C++ 编译器选项和 CL.exe 的文章的链接。
 
 [MSVC 链接器选项](reference/linker-options.md)<br/>
 提供指向探论链接器选项和 LINK.exe 的文章的链接。
 
 [其他 MSVC 生成工具](reference/c-cpp-build-tools.md)<br/>
-提供指向 C/c + + 生成 Visual Studio 中包含的工具。
+提供链接到 C /C++生成 Visual Studio 中包含的工具。
 
 ## <a name="see-also"></a>请参阅
 

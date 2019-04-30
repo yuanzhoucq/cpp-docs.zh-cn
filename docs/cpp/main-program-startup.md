@@ -13,15 +13,15 @@ helpviewer_keywords:
 - main function, program startup
 ms.assetid: f9581cd6-93f7-4bcd-99ec-d07c3c107dd4
 ms.openlocfilehash: 358ae8ec88281bab741393b1196ee2a1e615e896
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54894297"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64345039"
 ---
 # <a name="main-program-startup"></a>主要：程序启动
 
-名为的特殊函数**主要**是执行的所有 C 和 c + + 程序的起始点。 如果你正在遵循 Unicode 编程模型的编写代码，则可以使用`wmain`，它是宽字符版本**主**。
+名为的特殊函数**主要**是执行所有 c 的起始点和C++程序。 如果你正在遵循 Unicode 编程模型的编写代码，则可以使用`wmain`，它是宽字符版本**主**。
 
 **主要**函数未由编译器预定义。 必须在程序文本中提供此函数。
 
