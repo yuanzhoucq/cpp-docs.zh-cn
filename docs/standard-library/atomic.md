@@ -49,11 +49,11 @@ f1_keywords:
 - atomic/std::atomic_uint_least64_t
 ms.assetid: e79a6b9f-52ff-48da-9554-654c4e1999f6
 ms.openlocfilehash: e2146c7424d4903523372ad54b0cd2eece525cbe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50600481"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62376596"
 ---
 # <a name="ltatomicgt"></a>&lt;atomic&gt;
 
@@ -78,7 +78,7 @@ ms.locfileid: "50600481"
 
 在某些平台上，如果不使用 `mutex` 锁，可能无法有效地实施某些类型的原子操作。 如果对该类型执行的原子操作都没有使用锁，则原子类型为*无锁*。
 
-**C + + 11**：在信号处理程序中，如果 `obj.is_lock_free()` 或 `atomic_is_lock_free(x)` 为 true，则可以对对象 `obj` 执行原子操作。
+**C + + 11**:信号处理程序中可以执行原子操作对某个对象`obj`如果`obj.is_lock_free()`或`atomic_is_lock_free(x)`成立。
 
 该类[atomic_flag](../standard-library/atomic-flag-structure.md)提供了一种最小的原子类型，保留**bool**标志。 其操作始终为无锁操作。
 
@@ -152,14 +152,14 @@ ms.locfileid: "50600481"
 
 ## <a name="structs"></a>结构
 
-|name|描述|
+|名称|描述|
 |----------|-----------------|
 |[atomic 结构](../standard-library/atomic-structure.md)|描述对存储值执行原子操作的对象。|
 |[atomic_flag 结构](../standard-library/atomic-flag-structure.md)|描述一个对象，以原子方式设置并清除**bool**标志。|
 
 ## <a name="enums"></a>枚举
 
-|name|描述|
+|名称|描述|
 |----------|-----------------|
 |[memory_order 枚举](../standard-library/atomic-enums.md#memory_order_enum)|为内存位置上的同步操作提供符号名称。 这些操作将影响一个线程内的分配如何在另一个线程内变得可见。|
 
@@ -167,7 +167,7 @@ ms.locfileid: "50600481"
 
 在下面的列表中，不是以 `_explicit` 结尾的函数具有对应的 `_explicit` 的语义，只不过它们具有 `memory_order_seq_cst` 的隐式 [memory_order](../standard-library/atomic-enums.md#memory_order_enum) 参数。
 
-|name|描述|
+|名称|描述|
 |----------|-----------------|
 |[atomic_compare_exchange_strong](../standard-library/atomic-functions.md#atomic_compare_exchange_strong)|执行*原子比较和交换*操作。|
 |[atomic_compare_exchange_strong_explicit](../standard-library/atomic-functions.md#atomic_compare_exchange_strong_explicit)|执行*原子比较和交换*操作。|

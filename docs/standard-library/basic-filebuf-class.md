@@ -41,11 +41,11 @@ helpviewer_keywords:
 - std::basic_filebuf [C++], underflow
 ms.assetid: 3196ba5c-bf38-41bd-9a95-70323ddfca1a
 ms.openlocfilehash: 817e7fb2b434d06d6c0dfdfc100be8004f6fa4ef
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51332642"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62377138"
 ---
 # <a name="basicfilebuf-class"></a>basic_filebuf 类
 
@@ -405,7 +405,7 @@ basic_filebuf<Elem, Tr> *open(
 *_Filename*<br/>
 要打开的文件的名称。
 
-*模式 （_m)*<br/>
+*_Mode*<br/>
 [ios_base::openmode](../standard-library/ios-base-class.md#openmode) 中的枚举之一。
 
 *_Prot*<br/>
@@ -433,7 +433,7 @@ basic_filebuf<Elem, Tr> *open(
 
 如果**mode & ios_base:: binary**为非零值，该函数将追加`b`到`strmode`以打开一个二进制流而不是文本流。 然后将存储返回的值`fopen`在文件指针`fp`。 如果 **mode & ios_base::ate** 为非零值，并且文件指针不是 null 指针，则函数调用 `fseek`( **fp**, 0, `SEEK_END`) 将流定位至文件的末尾。 如果该定位操作失败，函数调用[关闭](#close)( `fp`)，并将 null 指针存储在文件指针。
 
-如果文件指针不是 null 指针，此函数将确定文件转换方面：`use_facet`< `codecvt`< **Elem**, `char`, **traits_type::**[state_type](../standard-library/char-traits-struct.md#state_type)> >( [getloc](../standard-library/basic-streambuf-class.md#getloc))，以供 [underflow](#underflow) 和 [overflow](#overflow) 使用。
+如果文件指针不是 null 指针，此函数将确定文件转换方面：`use_facet`< `codecvt`< **Elem**， `char`， **traits_type::**[state_type](../standard-library/char-traits-struct.md#state_type)>> ( [getloc](../standard-library/basic-streambuf-class.md#getloc))，以供[下溢](#underflow)和[溢出](#overflow)。
 
 如果文件指针为 null 指针，则该函数返回 null 指针。 否则，返回 **this**。
 

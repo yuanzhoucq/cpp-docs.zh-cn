@@ -10,11 +10,11 @@ helpviewer_keywords:
 - run-time class [MFC], CRuntimeClass structure
 ms.assetid: de62b6ef-90d4-420f-8c70-f58b36976a2b
 ms.openlocfilehash: 92979a10c18d9759e0ecc9f0785e56a97c0f0642
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57274292"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62372044"
 ---
 # <a name="cruntimeclass-structure"></a>CRuntimeClass 结构
 
@@ -53,7 +53,7 @@ struct CRuntimeClass
 
 当需要额外的类型检查函数自变量时，或者必须编写特殊用途的代码基于对象的类时，在运行时确定对象的类的功能非常有用。 C++ 语言不直接支持运行时类信息。
 
-`CRuntimeClass` 提供有关相关的 c + + 对象，例如指向指针的信息`CRuntimeClass`的基本类和相关类的 ASCII 类名称。 此结构还实现了可用于动态创建对象，指定通过使用熟悉的名称，并确定是否相关的类派生自特定类的对象的类型的各种函数。
+`CRuntimeClass` 提供有关相关的信息C++对象，例如指向的指针`CRuntimeClass`的基本类和相关类的 ASCII 类名称。 此结构还实现了可用于动态创建对象，指定通过使用熟悉的名称，并确定是否相关的类派生自特定类的对象的类型的各种函数。
 
 有关使用的详细信息`CRuntimeClass`，请参阅文章[访问运行时类信息](../../mfc/accessing-run-time-class-information.md)。
 

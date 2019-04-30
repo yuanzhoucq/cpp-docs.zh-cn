@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Visual C++, preprocessor macros
 ms.assetid: a7bfc5d4-2537-4fe0-bef0-70cec0b43388
 ms.openlocfilehash: 281aaf686c07894b5cb1fab187ba903179c51de8
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59032175"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62371771"
 ---
 # <a name="macros-cc"></a>宏 (C/C++)
 预处理中展开宏不是预处理器指令的所有行 (不具有的行**#** 作为第一个非空白字符) 和中的指令的一部分不跳过的某些部分条件编译。 利用“条件编译”指令，您可以通过测试一个常量表达式或标识符取消对源文件的某些部分的编译，以确定将哪些文本块传递给编译器以及在预处理期间将从源文件中删除哪些文本块。

@@ -11,15 +11,15 @@ helpviewer_keywords:
 - messages to dialog class [MFC], mapping
 ms.assetid: a4c6fd1f-1d33-47c9-baa0-001755746d6d
 ms.openlocfilehash: 7e15f52e41d4ac91a839629342258128db86e2d5
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57326668"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62363838"
 ---
 # <a name="mapping-windows-messages-to-your-class"></a>将 Windows 消息映射到您的类
 
-如果您需要处理 Windows 消息在对话框中，重写相应的处理程序函数。 若要执行此操作，请使用属性窗口[映射消息](../mfc/reference/mapping-messages-to-functions.md)到对话框类。 这将为每个消息的消息映射项，并向类添加消息处理程序成员函数。 使用 Visual c + + 源代码编辑器在消息处理程序中编写代码。
+如果您需要处理 Windows 消息在对话框中，重写相应的处理程序函数。 若要执行此操作，请使用属性窗口[映射消息](../mfc/reference/mapping-messages-to-functions.md)到对话框类。 这将为每个消息的消息映射项，并向类添加消息处理程序成员函数。 使用视觉对象C++若要在消息处理程序中编写代码的源代码编辑器。
 
 此外可以重写的成员函数[CDialog](../mfc/reference/cdialog-class.md)及其基类，尤其是[CWnd](../mfc/reference/cwnd-class.md)。
 

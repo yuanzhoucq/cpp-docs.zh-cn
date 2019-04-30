@@ -24,11 +24,11 @@ helpviewer_keywords:
 - files [C++], writing to
 ms.assetid: 7b868c33-766f-4e1a-95a7-e8d25f0604c4
 ms.openlocfilehash: b3fa53b21d4ea23c5f8e59de673f4074deedb505
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519244"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62383407"
 ---
 # <a name="write"></a>_write
 
@@ -57,7 +57,7 @@ int _write(
 
 ## <a name="return-value"></a>返回值
 
-如果成功， **_write**返回实际写入的字节数。 如果磁盘上剩余的实际空间小于函数尝试将写入到磁盘，缓冲区的大小 **_write**失败，并且不将任何缓冲区的内容刷新到磁盘。 返回值-1 指示错误。 如果传递的参数无效，则此函数将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许继续执行，该函数返回-1 和**errno**设置为三个值之一： **EBADF**，这意味着文件描述符无效或不打开文件进行写入;**ENOSPC**，这意味着没有足够的空间保留在设备上为该操作; 或**EINVAL**，这意味着*缓冲区*是 null 指针，或为奇数*计数*的字节传递要写入到在 Unicode 模式下的文件。
+如果成功， **_write**返回实际写入的字节数。 如果磁盘上剩余的实际空间小于函数尝试将写入到磁盘，缓冲区的大小 **_write**失败，并且不将任何缓冲区的内容刷新到磁盘。 返回值-1 指示错误。 如果传递的参数无效，则此函数将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许继续执行，该函数返回-1 和**errno**设置为三个值之一：**EBADF**，这意味着文件描述符无效或不打开文件进行写入;**ENOSPC**，这意味着没有足够的空间保留在设备上为该操作; 或**EINVAL**，这意味着*缓冲区*是 null 指针，或为奇数*计数*的字节传递要写入到在 Unicode 模式下的文件。
 
 有关这些代码及其他返回代码的详细信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
