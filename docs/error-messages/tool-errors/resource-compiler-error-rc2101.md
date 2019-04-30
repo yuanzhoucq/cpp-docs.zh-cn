@@ -7,11 +7,11 @@ helpviewer_keywords:
 - RC2101
 ms.assetid: 580f9d74-162f-41e9-9438-ddbe3457c359
 ms.openlocfilehash: 595e87b73d79a01993e0e9b3aaa814332b21413f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50448017"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64345278"
 ---
 # <a name="resource-compiler-error-rc2101"></a>资源编译器错误 RC2101
 
@@ -19,7 +19,7 @@ ms.locfileid: "50448017"
 
 资源编译器文件包含 **#pragma**指令。
 
-使用 **#ifndef** RC_INVOKED 常量资源编译器定义处理的包含文件时使用的预处理器指令。 位置 **#pragma**指令定义 RC_INVOKED 常量时不处理的代码块。 仅由 C/c + + 编译器，而不是由资源编译器处理代码块中。 下面的示例代码演示了此种方法：
+使用 **#ifndef** RC_INVOKED 常量资源编译器定义处理的包含文件时使用的预处理器指令。 位置 **#pragma**指令定义 RC_INVOKED 常量时不处理的代码块。 仅由 C 处理块中的代码 /C++编译器而不是由资源编译器。 下面的示例代码演示了此种方法：
 
 ```
 #ifndef RC_INVOKED

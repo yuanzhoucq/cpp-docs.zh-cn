@@ -6,17 +6,17 @@ helpviewer_keywords:
 - dot directives in NMAKE
 ms.assetid: ab35da65-30b6-48b7-87d6-61503d7faf9f
 ms.openlocfilehash: 2c21e8a18c76331f86a4e8966b4f67c9c9bc9b7d
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57824990"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64342827"
 ---
 # <a name="dot-directives"></a>点指令
 
 指定块外的说明，在行的开始点指令。 点指令以句点开头 (。 ) 后, 跟一个冒号 （:）。 允许空格和制表符。 点指令名称区分大小写，大写字母。
 
-|指令|目标|
+|指令|用途|
 |---------------|-------------|
 |**.忽略：**|忽略非零退出代码返回的命令，从指定到生成文件的末尾的位置。 默认情况下，如果命令返回非零退出代码，NMAKE 暂停。 若要还原错误检查，请使用 **！CMDSWITCHES**。 若要忽略的单个命令的退出代码，请使用短划线 （-） 修饰符。 若要忽略整个文件的退出代码，请使用 / 我。|
 |**.贵重：** *目标*|将保留*目标*磁盘上的命令将其更新都将暂停; 如果不起如果命令通过删除该文件来处理中断。 使用一个或多个空格或制表符分隔的目标名称。 默认情况下，NMAKE 删除目标，如果按 CTRL + C 或 CTRL + BREAK 中断生成。 每次使用都 **。宝贵**适用于整个生成文件; 多个规范是累积性。|
