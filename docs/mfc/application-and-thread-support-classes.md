@@ -12,11 +12,11 @@ helpviewer_keywords:
 - application support classes [MFC]
 ms.assetid: 3c1d14fd-c35c-48f1-86ce-1e0f9a32c36d
 ms.openlocfilehash: 667725a60fb0c907a9c2d017674f9d097d1f4946
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57262033"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62394671"
 ---
 # <a name="application-and-thread-support-classes"></a>应用程序和线程支持类
 
@@ -24,7 +24,7 @@ ms.locfileid: "57262033"
 
 Microsoft 基础类 (MFC) 库支持多个应用程序中的执行线程。 所有应用程序必须具有至少一个线程;通过使用的线程在`CWinApp`对象是此主线程。
 
-`CWinThread` 封装操作系统的线程处理功能的一部分。 若要使多个线程的使用，MFC 还提供同步的对象类来提供对 Win32 同步对象的 c + + 接口。
+`CWinThread` 封装操作系统的线程处理功能的一部分。 若要使多个线程的使用，MFC 还提供了同步的对象类来提供C++Win32 同步对象的接口。
 
 ## <a name="application-and-thread-classes"></a>应用程序和线程类
 

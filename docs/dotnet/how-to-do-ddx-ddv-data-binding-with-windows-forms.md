@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Windows Forms [C++], MFC support
 ms.assetid: b2957370-cf1f-4779-94ac-228cd393686c
 ms.openlocfilehash: 558c763fd18cd1569ff23435bf6156b3117f117d
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57740946"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62387313"
 ---
 # <a name="how-to-do-ddxddv-data-binding-with-windows-forms"></a>如何：执行 DDX/DDV 数据绑定与 Windows 窗体
 
@@ -19,7 +19,7 @@ ms.locfileid: "57740946"
 
 调用`DDX_ManagedControl`中[CWnd::DoDataExchange](../mfc/reference/cwnd-class.md#dodataexchange)资源 Id 从创建控件。 数据交换，不需要将 DDX/DDV 函数与 Windows 窗体控件。 相反，可以将代码访问中的托管控件的属性放`DoDataExchange`对话框 （或视图） 类，如以下示例所示的方法。
 
-下面的示例演示如何将本机 c + + 字符串绑定到.NET 用户控件。
+下面的示例演示如何将绑定一个本机C++.NET 用户控件的字符串。
 
 ## <a name="example"></a>示例
 

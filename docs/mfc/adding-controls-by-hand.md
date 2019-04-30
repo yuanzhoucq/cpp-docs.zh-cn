@@ -11,17 +11,17 @@ helpviewer_keywords:
 - common controls [MFC], adding
 ms.assetid: bc843e59-0c51-4b5b-8bf2-343f716469d2
 ms.openlocfilehash: c70539b49fcf2aa87f0bee375a87b38277b6ed42
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270756"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62394801"
 ---
 # <a name="adding-controls-by-hand"></a>手动添加控件
 
 你可以[将控件添加到对话框中，使用对话框编辑器](../mfc/using-the-dialog-editor-to-add-controls.md)或将它们添加你自己，使用代码。
 
-若要自行创建控件对象，通常将嵌入在 c + + 对话框中，c + + 控件对象或框架窗口对象。 类似于 framework 中的许多其他对象，控件需要两阶段构造。 应调用控件的**创建**成员函数作为创建父对话框的框或框架窗口的一部分。 对于对话框，这通常是[OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog)，和的框架窗口中[OnCreate](../mfc/reference/cwnd-class.md#oncreate)。
+若要自行创建控件对象，通常将嵌入C++控件中的对象C++对话框或框架窗口对象。 类似于 framework 中的许多其他对象，控件需要两阶段构造。 应调用控件的**创建**成员函数作为创建父对话框的框或框架窗口的一部分。 对于对话框，这通常是[OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog)，和的框架窗口中[OnCreate](../mfc/reference/cwnd-class.md#oncreate)。
 
 下面的示例演示如何声明`CEdit`对象中派生的对话框类的类声明，然后调用`Create`成员函数在`OnInitDialog`。 因为`CEdit`对象声明为嵌入的对象，它会自动构建时构造对话框对象，但仍必须使用其自己初始化`Create`成员函数。
 

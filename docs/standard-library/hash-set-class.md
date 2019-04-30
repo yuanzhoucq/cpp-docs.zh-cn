@@ -87,11 +87,11 @@ helpviewer_keywords:
 - stdext::hash_set::value_comp
 ms.assetid: c765c06e-cbb6-48c2-93ca-d15468eb28d7
 ms.openlocfilehash: c7d5df87dc6c8529d18b9f5fb960148c7362129a
-ms.sourcegitcommit: d441305fb19131afbd7fc259d8cda63ea26f2343
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51678569"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405035"
 ---
 # <a name="hashset-class"></a>hash_set 类
 
@@ -117,7 +117,7 @@ class hash_set
 *特征*<br/>
 该类型包括两个函数对象，其中一个类，它是比较二元谓词，能够将两个元素值作为排序键以确定其相对顺序是为无符号的元素的一元谓词映射键值的哈希函数进行比较类型的整数`size_t`。 此自变量是可选自变量，默认值为 `hash_compare<Key, less<Key> >`。
 
-*分配器*<br/>
+*Allocator*<br/>
 一种表示存储的分配器对象的类型，该分配器对象封装有关 hash_set 的内存分配和解除分配的详细信息。 此参数是可选参数，默认值为 `allocator<Key>`。
 
 ## <a name="remarks"></a>备注
@@ -565,7 +565,7 @@ size_type count(const Key& key) const;
 
 成员函数返回在以下范围内的元素数目：
 
-\[ lower_bound (*键*)、 upper_bound (*密钥*))。
+\[ lower_bound(*key*), upper_bound(*key*) ).
 
 ### <a name="example"></a>示例
 
@@ -1112,7 +1112,7 @@ size_type erase(const key_type& key);
 *first*<br/>
 要从 hash_set 中删除的第一个元素的位置。
 
-*最后一个*<br/>
+*last*<br/>
 紧接要从 hash_set 中删除的最后一个元素的位置。
 
 *key*<br/>
@@ -1474,7 +1474,7 @@ void insert(
 
 |参数|描述|
 |-|-|
-|*val*|要插入 `hash_set` 的元素的值，除非 `hash_set` 已包含该元素（更宽泛地说，是其键经等效排序的元素）。|
+|*Val*|要插入 `hash_set` 的元素的值，除非 `hash_set` 已包含该元素（更宽泛地说，是其键经等效排序的元素）。|
 |*Where*|开始搜索正确插入点的位置。 （如果插入点紧随 `_Where`，则插入可发生在分期常量时间内，而非对数时间内。）|
 |*第一个*|要从 `hash_set` 中复制的第一个元素的位置。|
 |*最后一个*|要从 `hash_set` 中复制的最后一个元素以外的位置。|

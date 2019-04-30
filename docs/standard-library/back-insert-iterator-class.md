@@ -11,11 +11,11 @@ helpviewer_keywords:
 - std::back_insert_iterator [C++], reference
 ms.assetid: a1ee07f2-cf9f-46a1-8608-cfaf207f9713
 ms.openlocfilehash: 2a0510b6df656b7925fd42a4c97d768336537424
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557438"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62376440"
 ---
 # <a name="backinsertiterator-class"></a>back_insert_iterator 类
 
@@ -30,7 +30,7 @@ class back_insert_iterator;
 
 ### <a name="parameters"></a>参数
 
-*容器*<br/>
+*Container*<br/>
 要通过 `back_insert_iterator` 将元素插入后端的容器的类型。
 
 ## <a name="remarks"></a>备注
@@ -183,7 +183,7 @@ The original vector vec is: ( 1 2 3 ).
 After the insertion, the vector is: ( 1 2 3 40 ).
 ```
 
-## <a name="op_star"></a>  back_insert_iterator:: operator\*
+## <a name="op_star"></a>  back_insert_iterator::operator\*
 
 用于实现输出迭代器表达式 \* *i* = *x* 的取消引用运算符。
 

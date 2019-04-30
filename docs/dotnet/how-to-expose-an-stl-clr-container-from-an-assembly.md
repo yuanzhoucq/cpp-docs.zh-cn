@@ -6,23 +6,23 @@ helpviewer_keywords:
 - STL/CLR, cross-assembly issues
 ms.assetid: 87efb41b-3db3-4498-a2e7-f3ef8a99f04d
 ms.openlocfilehash: 206a95cbaa808f54d7ae0e500b5a2bea272d974b
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57748432"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62387326"
 ---
 # <a name="how-to-expose-an-stlclr-container-from-an-assembly"></a>如何：公开从程序集中的 STL/CLR 容器
 
-STL/CLR 容器，如`list`和`map`作为模板 ref 类实现。 因为在编译时实例化 c + + 模板，具有相同的签名，但位于不同的程序集的两个模板类是实际不同的类型。 这意味着不能跨程序集边界使用模板类。
+STL/CLR 容器，如`list`和`map`作为模板 ref 类实现。 因为C++在编译时实例化模板，具有相同的签名，但位于不同的程序集的两个模板类是实际不同的类型。 这意味着不能跨程序集边界使用模板类。
 
-若要使跨程序集共享成为可能，STL/CLR 容器实现泛型接口<xref:System.Collections.Generic.ICollection%601>。 通过使用此泛型接口，支持泛型，包括 c + +、 C# 和 Visual Basic 中的所有语言都可以都访问 STL/CLR 容器。
+若要使跨程序集共享成为可能，STL/CLR 容器实现泛型接口<xref:System.Collections.Generic.ICollection%601>。 通过使用此泛型接口，所有语言的都支持泛型，包括C++， C#，和 Visual Basic 中，可以访问 STL/CLR 容器。
 
-本主题演示如何显示在 c + + 程序集中名为编写的几个 STL/CLR 容器元素`StlClrClassLibrary`。 我们显示两个程序集访问`StlClrClassLibrary`。 用 c + + 和 C# 中的第二个编写第一个程序集。
+本主题演示如何显示几个 STL/CLR 容器写入的元素C++程序集名为`StlClrClassLibrary`。 我们显示两个程序集访问`StlClrClassLibrary`。 第一个程序集用C++，并在第二个C#。
 
-如果两个程序集用 c + + 编写的您可以使用访问容器的泛型接口及其`generic_container`typedef。 例如，如果你有一个类型的容器`cliext::vector<int>`，则其泛型接口是： `cliext::vector<int>::generic_container`。 同样，您可以获取一个迭代器，通过泛型接口使用`generic_iterator`typedef，如下所示： `cliext::vector<int>::generic_iterator`。
+如果两个程序集用C++，可以使用访问容器的泛型接口及其`generic_container`typedef。 例如，如果你有一个类型的容器`cliext::vector<int>`，则其泛型接口是： `cliext::vector<int>::generic_container`。 同样，您可以获取一个迭代器，通过泛型接口使用`generic_iterator`typedef，如下所示： `cliext::vector<int>::generic_iterator`。
 
-由于这些 typedef 声明在 c + + 头文件中，用其他语言编写的程序集不能使用它们。 因此，若要访问的泛型接口`cliext::vector<int>`在 C# 或任何其他.NET 语言中，使用`System.Collections.Generic.ICollection<int>`。 若要循环访问此集合，使用`foreach`循环。
+由于这些 typedef 声明中C++标头文件，用其他语言编写的程序集不能使用它们。 因此，若要访问的泛型接口`cliext::vector<int>`在 C# 或任何其他.NET 语言中，使用`System.Collections.Generic.ICollection<int>`。 若要循环访问此集合，使用`foreach`循环。
 
 下表列出了每个 STL/CLR 容器实现的泛型接口：
 
@@ -47,7 +47,7 @@ STL/CLR 容器，如`list`和`map`作为模板 ref 类实现。 因为在编译�
 
 ### <a name="description"></a>描述
 
-在此示例中，我们声明包含专用的 STL/CLR 成员数据的 c + + 类。 然后，我们声明用于授予访问权限的专用集合类的公共方法。 我们来执行它两个不同的方式、 c + + 客户端和其他.NET 客户端。
+在此示例中，我们声明C++类，该类包含专用的 STL/CLR 成员数据。 然后，我们声明用于授予访问权限的专用集合类的公共方法。 我们在两种不同方法，一个用于C++客户端，另一个用于其他.NET 客户端。
 
 ### <a name="code"></a>代码
 
@@ -107,7 +107,7 @@ namespace StlClrClassLibrary {
 
 在此示例中，我们实现在示例 1 中声明的类。 为了使客户端使用此类库，我们使用该清单工具**mt.exe**将嵌入到该 DLL 的清单文件。 有关详细信息，请参阅代码注释。
 
-清单工具和通过并行程序集的详细信息，请参阅[生成 C/c + + 独立应用程序和通过并行程序集](../build/building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)。
+清单工具和通过并行程序集的详细信息，请参阅[生成 C /C++独立应用程序和通过并行程序集](../build/building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)。
 
 ### <a name="code"></a>代码
 
@@ -199,7 +199,7 @@ namespace StlClrClassLibrary
 
 ### <a name="description"></a>描述
 
-在此示例中，我们将创建使用示例 1 和 2 中创建的类库的 c + + 客户端。 此客户端使用`generic_container`来循环访问容器，并显示其内容的 STL/CLR 容器的 typedef。
+在此示例中，我们将创建C++使用示例 1 和 2 中创建的类库的客户端。 此客户端使用`generic_container`来循环访问容器，并显示其内容的 STL/CLR 容器的 typedef。
 
 ### <a name="code"></a>代码
 
@@ -265,7 +265,7 @@ int main(array<System::String ^> ^args)
 }
 ```
 
-### <a name="output"></a>输出
+### <a name="output"></a>Output
 
 ```Output
 cliext::deque contents:
@@ -360,7 +360,7 @@ namespace CsConsoleApp
 }
 ```
 
-### <a name="output"></a>输出
+### <a name="output"></a>Output
 
 ```Output
 cliext::deque contents:

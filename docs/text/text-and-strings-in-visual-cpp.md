@@ -25,11 +25,11 @@ helpviewer_keywords:
 - MBCS [C++], international programming
 ms.assetid: a1bb27ac-abe5-4c6b-867d-f761d4b93205
 ms.openlocfilehash: c6083fcf9db8236df15d1cb5e7de4cc15fe5916e
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626716"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62411794"
 ---
 # <a name="text-and-strings-in-visual-c"></a>Visual C++ 中的文本和字符串
 
@@ -38,7 +38,7 @@ ms.locfileid: "53626716"
 ## <a name="in-this-section"></a>本节内容
 
 [Unicode 和 MBCS](../text/unicode-and-mbcs.md)<br/>
-讨论对 Unicode 和 MBCS 编程的 Visual c + + 支持。
+讨论 VisualC++对 Unicode 和 MBCS 编程的支持。
 
 [支持 Unicode](../text/support-for-unicode.md)<br/>
 介绍 Unicode，支持所有字符集，包括字符不能表示单字节的规范。
@@ -49,8 +49,8 @@ ms.locfileid: "53626716"
 [Tchar.h 中的一般文本映射](../text/generic-text-mappings-in-tchar-h.md)<br/>
 为多种数据类型、 例程和其他对象提供特定于 Microsoft 的一般文本映射。
 
-[如何：各种字符串类型之间转换](../text/how-to-convert-between-various-string-types.md)<br/>
-演示如何将各种 Visual c + + 字符串类型转换为其他字符串。
+[如何：在各种字符串类型之间进行转换](../text/how-to-convert-between-various-string-types.md)<br/>
+演示如何将各种视觉对象C++的其他字符串到字符串类型。
 
 ## <a name="related-sections"></a>相关章节
 
@@ -58,7 +58,7 @@ ms.locfileid: "53626716"
 讨论 C 运行时库中的国际支持。
 
 [国际示例](https://github.com/Microsoft/VCSamples)<br/>
-提供指向演示 Visual c + + 中的国际化示例。
+提供指向演示国际化视觉对象中的示例C++。
 
 [语言和国家/地区字符串](../c-runtime-library/locale-names-languages-and-country-region-strings.md)<br/>
 提供了 C 运行时库中的语言和国家/地区字符串。

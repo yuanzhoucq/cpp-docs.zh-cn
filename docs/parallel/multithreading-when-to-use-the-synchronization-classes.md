@@ -12,11 +12,11 @@ helpviewer_keywords:
 - multithreading [C++], synchronization classes
 ms.assetid: 4914f54e-68ac-438f-93c9-c013455a657e
 ms.openlocfilehash: 72cf5310704c1ae959cc012146a03dd32cff4068
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57284367"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62407648"
 ---
 # <a name="multithreading-when-to-use-the-mfc-synchronization-classes"></a>多线程处理：何时使用同步类
 
@@ -52,7 +52,7 @@ MFC 提供的多线程的类分为两类： 同步对象 ([CSyncObject](../mfc/r
 
 选择要使用的同步访问类更简单。 如果你的应用程序与访问单个的受控的资源仅而言，使用`CSingleLock`。 如果它需要访问多个受控任何的资源一个，请使用`CMultiLock`。 示例 1 中，`CSingleLock`应使用，因为每种情况下在任何特定时间需要一个资源。
 
-有关如何使用同步类的信息，请参阅[多线程处理：如何使用同步类](multithreading-how-to-use-the-synchronization-classes.md)。 有关同步的信息，请参阅[同步](/windows/desktop/Sync/synchronization)Windows SDK 中。 有关在 MFC 中的多线程处理支持信息，请参阅[使用 c + + 和 MFC 多线程处理](multithreading-with-cpp-and-mfc.md)。
+有关如何使用同步类的信息，请参阅[多线程处理：如何使用同步类](multithreading-how-to-use-the-synchronization-classes.md)。 有关同步的信息，请参阅[同步](/windows/desktop/Sync/synchronization)Windows SDK 中。 有关在 MFC 中的多线程处理支持信息，请参阅[使用多线程处理C++和 MFC](multithreading-with-cpp-and-mfc.md)。
 
 ## <a name="see-also"></a>请参阅
 

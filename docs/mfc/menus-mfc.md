@@ -8,11 +8,11 @@ helpviewer_keywords:
 - menus [MFC]
 ms.assetid: 6a181495-47a9-4356-83fc-b89152d6cb4c
 ms.openlocfilehash: 202a8c791f3ecaa6180eb91134b28a86572f6e19
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57326031"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62396374"
 ---
 # <a name="menus-mfc"></a>菜单 (MFC)
 
@@ -22,7 +22,7 @@ MFC 提供了两个元素来帮助您使用菜单：
 
 - 用于更新菜单和工具栏按钮的机制：即时启用或禁用这些菜单和按钮以适应当前程序状况。
 
-Visual c + + 还提供了[菜单编辑器](../windows/menu-editor.md)用于创建和编辑程序的菜单资源。
+VisualC++还提供了[菜单编辑器](../windows/menu-editor.md)用于创建和编辑程序的菜单资源。
 
 ## <a name="what-do-you-want-to-know-more-about"></a>你想要了解更多信息
 

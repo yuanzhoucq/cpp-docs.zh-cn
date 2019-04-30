@@ -19,11 +19,11 @@ helpviewer_keywords:
 - database connections [C++], MFC ODBC classes
 ms.assetid: c0adbcdd-c000-40c6-b199-09ffdc7b6ef2
 ms.openlocfilehash: 5b646ca0eb86d3addabaad59ca23f56cfe914114
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59041158"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62395945"
 ---
 # <a name="data-source-managing-connections-odbc"></a>数据源：管理连接 (ODBC)
 

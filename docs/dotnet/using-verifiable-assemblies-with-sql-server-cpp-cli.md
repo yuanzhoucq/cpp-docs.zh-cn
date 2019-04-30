@@ -5,15 +5,15 @@ helpviewer_keywords:
 - verifiable assemblies [C++], with SQL Server
 ms.assetid: 5248a60d-aa88-4ff3-b30a-b791c3ea2de9
 ms.openlocfilehash: 27dec67cc0932a784cdd041ba346bb8c635b280d
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57747691"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384408"
 ---
 # <a name="using-verifiable-assemblies-with-sql-server-ccli"></a>结合使用 SQL Server 和可验证的程序集 (C++/CLI)
 
-扩展存储的过程，打包为动态链接库 (Dll)，提供一种方法来扩展 SQL Server 功能，通过使用 Visual c + + 开发的函数。 扩展存储的过程将作为 Dll 中的函数。 除了函数外，还可以定义扩展存储的过程[用户定义类型](../cpp/classes-and-structs-cpp.md)和聚合函数 （如 SUM 或 AVG）。
+扩展存储的过程，打包为动态链接库 (Dll)，提供一种方法来扩展 SQL Server 功能，通过使用视觉对象开发的函数C++。 扩展存储的过程将作为 Dll 中的函数。 除了函数外，还可以定义扩展存储的过程[用户定义类型](../cpp/classes-and-structs-cpp.md)和聚合函数 （如 SUM 或 AVG）。
 
 当客户端执行扩展存储的过程时，SQL Server DLL 的搜索与扩展存储过程相关联，并加载此 DLL。 SQL Server 调用请求的扩展存储的过程，并指定的安全上下文下执行。 扩展存储，然后传递结果集，并将参数返回给服务器的过程。
 

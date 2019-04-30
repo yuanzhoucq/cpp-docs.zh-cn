@@ -22,15 +22,15 @@ helpviewer_keywords:
 - accelerator_view class
 ms.assetid: 9f298c21-bf62-46e0-88b8-01c5c78ef144
 ms.openlocfilehash: 4075051ec07fc1331d815534a715c0411160fe14
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58566021"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405633"
 ---
 # <a name="acceleratorview-class"></a>accelerator_view 类
 
-表示 c + + AMP 数据并行快捷键上的虚拟设备抽象。
+表示针对虚拟设备抽象C++AMP 数据并行快捷键。
 
 ### <a name="syntax"></a>语法
 

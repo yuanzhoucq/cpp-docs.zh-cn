@@ -64,11 +64,11 @@ helpviewer_keywords:
 - unary_negate function [STL/CLR]
 ms.assetid: 88738b8c-5d37-4375-970e-a4442bf5efde
 ms.openlocfilehash: f4a99ea972c6d2ea9b9721664cc75dec257fd7b3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50472899"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62393748"
 ---
 # <a name="functional-stlclr"></a>functional (STL/CLR)
 
@@ -141,7 +141,7 @@ generic<typename Arg1,
 
 #### <a name="parameters"></a>参数
 
-*arg1*<br/>
+*Arg1*<br/>
 第一个参数的类型。
 
 *Arg2*<br/>
@@ -216,7 +216,7 @@ generic<typename Arg1,
 
 #### <a name="parameters"></a>参数
 
-*arg1*<br/>
+*Arg1*<br/>
 第一个参数的类型。
 
 *Arg2*<br/>
@@ -302,7 +302,7 @@ public:
 
 #### <a name="parameters"></a>参数
 
-*乐趣*<br/>
+*Fun*<br/>
 存储函子的类型。
 
 ## <a name="member-functions"></a>成员函数
@@ -322,7 +322,7 @@ public:
 |运算符|描述|
 |--------------|-----------------|
 |operator()|计算所需的函数。|
-|运算符 delegate_type^()|将强制转换为委托的仿函数。|
+|operator delegate_type^()|将强制转换为委托的仿函数。|
 
 ### <a name="remarks"></a>备注
 
@@ -404,12 +404,12 @@ template<typename Fun,
 *arg*<br/>
 自变量类型。
 
-*乐趣*<br/>
+*Fun*<br/>
 函子的类型。
 
 #### <a name="function-parameters"></a>函数参数
 
-*伪函数*<br/>
+*functor*<br/>
 要包装仿函数。
 
 *left*<br/>
@@ -485,12 +485,12 @@ template<typename Fun,
 *arg*<br/>
 自变量类型。
 
-*乐趣*<br/>
+*Fun*<br/>
 函子的类型。
 
 #### <a name="function-parameters"></a>函数参数
 
-*伪函数*<br/>
+*functor*<br/>
 要包装仿函数。
 
 *right*<br/>
@@ -577,7 +577,7 @@ public:
 
 #### <a name="parameters"></a>参数
 
-*乐趣*<br/>
+*Fun*<br/>
 存储函子的类型。
 
 ### <a name="member-functions"></a>成员函数
@@ -597,7 +597,7 @@ public:
 |运算符|描述|
 |--------------|-----------------|
 |operator()|计算所需的函数。|
-|运算符 delegate_type^()|将强制转换为委托的仿函数。|
+|operator delegate_type^()|将强制转换为委托的仿函数。|
 
 ### <a name="remarks"></a>备注
 
@@ -682,7 +682,7 @@ public:
 
 #### <a name="parameters"></a>参数
 
-*乐趣*<br/>
+*Fun*<br/>
 存储函子的类型。
 
 ## <a name="member-functions"></a>成员函数
@@ -702,7 +702,7 @@ public:
 |运算符|描述|
 |--------------|-----------------|
 |operator()|计算所需的函数。|
-|运算符 delegate_type^()|将强制转换为委托的仿函数。|
+|operator delegate_type^()|将强制转换为委托的仿函数。|
 
 ### <a name="remarks"></a>备注
 
@@ -758,7 +758,7 @@ int main()
 0 -1
 ```
 
-## <a name="divides"></a> 将划分 (STL/CLR)
+## <a name="divides"></a> divides (STL/CLR)
 
 此模板类描述某个函数，调用时，返回第一个参数除以第二个。 使用它指定根据其自变量类型的函数对象。
 
@@ -806,7 +806,7 @@ public:
 |运算符|描述|
 |--------------|-----------------|
 |operator()|计算所需的函数。|
-|运算符 delegate_type^()|将强制转换为委托的仿函数。|
+|operator delegate_type^()|将强制转换为委托的仿函数。|
 
 ### <a name="remarks"></a>备注
 
@@ -907,7 +907,7 @@ public:
 |运算符|描述|
 |--------------|-----------------|
 |operator()|计算所需的函数。|
-|运算符 delegate_type^()|将强制转换为委托的仿函数。|
+|operator delegate_type^()|将强制转换为委托的仿函数。|
 
 ### <a name="remarks"></a>备注
 
@@ -1757,7 +1757,7 @@ int main()
 2 2
 ```
 
-## <a name="modulus"></a> 取模 (STL/CLR)
+## <a name="modulus"></a> modulus (STL/CLR)
 
 此模板类描述某个函数，调用时，返回第二个模的第一个参数。 使用它指定根据其自变量类型的函数对象。
 
@@ -1959,7 +1959,7 @@ int main()
 8 3
 ```
 
-## <a name="negate"></a> 求反 (STL/CLR)
+## <a name="negate"></a> negate (STL/CLR)
 
 此模板类描述某个函数，调用时，返回其参数求反。 使用它指定根据其自变量类型的函数对象。
 
@@ -2163,12 +2163,12 @@ template<typename Fun>
 
 #### <a name="template-parameters"></a>模板参数
 
-*乐趣*<br/>
+*Fun*<br/>
 函子的类型。
 
 #### <a name="function-parameters"></a>函数参数
 
-*伪函数*<br/>
+*functor*<br/>
 要包装仿函数。
 
 ### <a name="remarks"></a>备注
@@ -2235,12 +2235,12 @@ template<typename Fun>
 
 #### <a name="template-parameters"></a>模板参数
 
-*乐趣*<br/>
+*Fun*<br/>
 函子的类型。
 
 #### <a name="function-parameters"></a>函数参数
 
-*伪函数*<br/>
+*functor*<br/>
 要包装仿函数。
 
 ### <a name="remarks"></a>备注
@@ -2303,7 +2303,7 @@ int main()
 1 0
 ```
 
-## <a name="plus"></a> 加 (STL/CLR)
+## <a name="plus"></a> plus (STL/CLR)
 
 此模板类描述某个函数，调用时，返回的第一个参数加上第二个。 使用它指定根据其自变量类型的函数对象。
 
@@ -2561,7 +2561,7 @@ public:
 
 #### <a name="parameters"></a>参数
 
-*乐趣*<br/>
+*Fun*<br/>
 存储函子的类型。
 
 ### <a name="member-functions"></a>成员函数
@@ -2579,7 +2579,7 @@ public:
 |运算符|描述|
 |--------------|-----------------|
 |operator()|计算所需的函数。|
-|delegate_type ^|将强制转换为委托的仿函数。|
+|delegate_type^|将强制转换为委托的仿函数。|
 
 ### <a name="remarks"></a>备注
 

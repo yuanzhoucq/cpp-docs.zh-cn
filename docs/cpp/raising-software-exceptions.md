@@ -14,11 +14,11 @@ helpviewer_keywords:
 - formats [C++], exception codes
 ms.assetid: be1376c3-c46a-4f52-ad1d-c2362840746a
 ms.openlocfilehash: 49ee800bafff017c29b73c5f6fd64318009a140a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562040"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62403459"
 ---
 # <a name="raising-software-exceptions"></a>引发软件异常
 
@@ -32,7 +32,7 @@ ms.locfileid: "50562040"
 
 - 调用`RaiseException`当检测到问题。
 
-- 使用异常处理筛选器来测试你定义的异常代码。
+- 使用异常处理筛选器来测试您定义的异常代码。
 
 \<Winerror.h > 文件显示异常代码的格式。 若要确保不定义与现有异常代码发生冲突的代码，请将第三个最高有效位设置为 1。 应设置四个最高有效位，如下表所示。
 
@@ -61,7 +61,7 @@ if (lpstr == NULL)
 
 如果只需引发异常，则可以将最后三个参数设置为 0。 最后三个参数对于传递附加信息和设置阻止处理程序继续执行的标记很有用。 请参阅[RaiseException](https://msdn.microsoft.com/library/windows/desktop/ms680552) Windows SDK for 的详细信息中的函数。
 
-在异常处理筛选器中，你随后可以测试已定义的代码。 例如：
+在异常处理筛选器中，您随后可以测试已定义的代码。 例如：
 
 ```cpp
 __try {

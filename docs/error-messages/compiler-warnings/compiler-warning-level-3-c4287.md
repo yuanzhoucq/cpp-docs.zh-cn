@@ -7,15 +7,15 @@ helpviewer_keywords:
 - C4287
 ms.assetid: 1bf3bff8-6402-4d06-95ba-431678a790a7
 ms.openlocfilehash: da051bb27ec877fd6347469c9f06b09bd4e0db32
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50466100"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62402094"
 ---
 # <a name="compiler-warning-level-3-c4287"></a>编译器警告（等级 3）C4287
 
-operator： 无符号/负常量不匹配
+'operator' : unsigned/negative constant mismatch
 
 使用负数的操作中使用的无符号的变量。
 

@@ -14,16 +14,16 @@ helpviewer_keywords:
 - custom DFX routines [MFC]
 ms.assetid: fdcf3c51-4fa8-4517-9222-58aaa4f25cac
 ms.openlocfilehash: b610604c1b7a68128dc9eb6fb5515225ed22b16e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57282404"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399676"
 ---
 # <a name="tn053-custom-dfx-routines-for-dao-database-classes"></a>TN053:DAO 数据库类的自定义 DFX 例程
 
 > [!NOTE]
->  Visual c + + 环境和向导不支持 DAO （尽管 DAO 类包含并且仍可以使用它们）。 Microsoft 建议您使用[OLE DB 模板](../data/oledb/ole-db-templates.md)或[ODBC 和 MFC](../data/odbc/odbc-and-mfc.md)为新项目。 仅应在维护现有应用程序使用 DAO。
+>  视觉对象C++环境和向导不支持 DAO （尽管 DAO 类包含并且仍可以使用它们）。 Microsoft 建议您使用[OLE DB 模板](../data/oledb/ole-db-templates.md)或[ODBC 和 MFC](../data/odbc/odbc-and-mfc.md)为新项目。 仅应在维护现有应用程序使用 DAO。
 
 此技术说明描述的 DAO 记录字段交换 (DFX) 机制。 若要帮助您了解 DFX 例程中发生的情况`DFX_Text`函数将作为示例的详细信息中所述。 作为附加到此技术说明的信息源，您可以检查的代码适用于其他各个 DFX 函数。 您可能不需要自定义 DFX 例程通常可能需要自定义 RFX 例程 （与 ODBC 数据库类一起使用）。
 

@@ -12,11 +12,11 @@ helpviewer_keywords:
 - plus operator
 ms.assetid: 7683ef08-42a4-4283-928f-d3dd4f3ab4c0
 ms.openlocfilehash: 802380bad59534e8402020142e394b3948032476
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50497208"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62377219"
 ---
 # <a name="overloading-unary-operators"></a>重载一元运算符
 
@@ -24,7 +24,7 @@ ms.locfileid: "50497208"
 
 1. `!` ([逻辑非](../cpp/logical-negation-operator-exclpt.md))
 
-1. `&` ([地址的](../cpp/address-of-operator-amp.md))
+1. `&` ([address-of](../cpp/address-of-operator-amp.md))
 
 1. `~` ([的二进制反码](../cpp/one-s-complement-operator-tilde.md))
 
@@ -46,13 +46,13 @@ ms.locfileid: "50497208"
 
 以下规则适用于所有其他一元运算符。 若要将一元运算符函数声明为非静态成员，则必须用以下形式声明它：
 
-> *ret 类型***运算符** *op* **（)**
+> *ret-type* **operator** *op* **()**
 
 其中*ret 类型*是返回类型和*op*运算符之一上表中列出。
 
 若要将一元运算符函数声明为全局函数，则必须用以下形式声明它：
 
-> *ret 类型***运算符** *op* **(** *arg* **)**
+> *ret-type* **operator** *op* **(** *arg* **)**
 
 其中*ret 类型*并*op*如上所述用于成员运算符函数并*arg*是用于执行操作的类类型的自变量。
 

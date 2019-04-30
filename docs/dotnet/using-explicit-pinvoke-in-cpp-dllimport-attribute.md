@@ -9,15 +9,15 @@ helpviewer_keywords:
 - data marshaling [C++], platform invoke
 ms.assetid: 18e5218c-6916-48a1-a127-f66e22ef15fc
 ms.openlocfilehash: ee9d77920f04f7eba5112c66a906b02b7fc4a658
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57740538"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384421"
 ---
 # <a name="using-explicit-pinvoke-in-c-dllimport-attribute"></a>在 C++ 中使用显式 PInvoke（DllImport 特性）
 
-.NET Framework 提供了显式的平台调用 （简称 PInvoke） 功能与`Dllimport`属性以允许托管应用程序调用 Dll 中打包的非托管的函数。 其中的非托管的 Api 打包为 Dll，并且源代码不可用的情况下需要显式 PInvoke。 例如，调用 Win32 函数要求 PInvoke。 否则，请使用隐式 P {Invoke，请参见[使用 c + + 互操作 (隐式 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)有关详细信息。
+.NET Framework 提供了显式的平台调用 （简称 PInvoke） 功能与`Dllimport`属性以允许托管应用程序调用 Dll 中打包的非托管的函数。 其中的非托管的 Api 打包为 Dll，并且源代码不可用的情况下需要显式 PInvoke。 例如，调用 Win32 函数要求 PInvoke。 否则，请使用隐式 P {Invoke，请参见[使用C++互操作 (隐式 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)有关详细信息。
 
 PInvoke 的工作原理是使用<xref:System.Runtime.InteropServices.DllImportAttribute>。 此属性，将 DLL 作为其第一个参数的名称，将使用每个 DLL 入口点的函数声明之前放置。 函数的签名必须与 DLL 导出函数的名称匹配 (但是，可以通过定义隐式执行某些类型转换`DllImport`根据托管类型的声明。)
 

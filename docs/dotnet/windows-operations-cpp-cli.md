@@ -44,17 +44,17 @@ helpviewer_keywords:
 - Visual C++, writing to Windows Registry
 ms.assetid: b9a75cb4-0589-4d5b-92cb-5e8be42b4ac0
 ms.openlocfilehash: 413ccc3b66d76f8779861d4d65eb262ee8640725
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750892"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384369"
 ---
 # <a name="windows-operations-ccli"></a>Windows 操作 (C++/CLI)
 
 演示如何使用 Windows SDK 的各种特定于 Windows 的任务。
 
-以下主题演示使用 Visual c + + 的 Windows sdk 执行的各种 Windows 操作。
+以下主题演示如何使用 Windows SDK 使用视觉对象执行的各种 Windows 操作C++。
 
 ## <a name="determine_shutdown"></a> 确定关闭是否已启动
 
@@ -144,7 +144,7 @@ int main( )
 
 <xref:Microsoft.Win32.Registry>类是只是静态的实例的容器<xref:Microsoft.Win32.RegistryKey>。 每个实例表示的根注册表节点。 两个实例<xref:Microsoft.Win32.Registry.ClassesRoot>， <xref:Microsoft.Win32.Registry.CurrentConfig>， <xref:Microsoft.Win32.Registry.CurrentUser>， <xref:Microsoft.Win32.Registry.LocalMachine>，和<xref:Microsoft.Win32.Registry.Users>。
 
-除了为静态的中的对象<xref:Microsoft.Win32.Registry>类是只读的。 此外，实例的<xref:Microsoft.Win32.RegistryKey>创建注册表的内容进行访问的类对象也是只读的。 有关如何重写此行为的示例，请参阅[如何：将数据写入到 Windows 注册表 (C + + CLI)](../dotnet/how-to-write-data-to-the-windows-registry-cpp-cli.md)。
+除了为静态的中的对象<xref:Microsoft.Win32.Registry>类是只读的。 此外，实例的<xref:Microsoft.Win32.RegistryKey>创建注册表的内容进行访问的类对象也是只读的。 有关如何重写此行为的示例，请参阅[如何：将数据写入到 Windows 注册表 (C++/CLI)](../dotnet/how-to-write-data-to-the-windows-registry-cpp-cli.md)。
 
 有两个其他对象中的<xref:Microsoft.Win32.Registry>类：<xref:Microsoft.Win32.Registry.DynData>和<xref:Microsoft.Win32.Registry.PerformanceData>。 二者都为实例的<xref:Microsoft.Win32.RegistryKey>类。 <xref:Microsoft.Win32.Registry.DynData>对象包含动态注册表信息，仅支持在 Windows 98 和 Windows me 一起提供。 <xref:Microsoft.Win32.Registry.PerformanceData>对象可以用于访问使用 Windows 性能监视系统的应用程序的性能计数器信息。 <xref:Microsoft.Win32.Registry.PerformanceData>节点表示信息实际上并不存储在注册表中，因此不能使用查看 Regedit.exe。
 

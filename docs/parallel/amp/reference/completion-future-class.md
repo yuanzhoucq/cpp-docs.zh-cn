@@ -14,15 +14,15 @@ f1_keywords:
 - AMPRT/Concurrency::completion_future::wait_until
 ms.assetid: 1303c62e-546d-4b02-a578-251ed3fc0b6b
 ms.openlocfilehash: 663122c2d8cd430e921773e75dfd7975e4a41516
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57272914"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405568"
 ---
 # <a name="completionfuture-class"></a>completion_future 类
 
-表示一个未来，对应于 c + + AMP 的异步操作。
+表示一个未来，对应于C++AMP 的异步操作。
 
 ### <a name="syntax"></a>语法
 
@@ -91,7 +91,7 @@ completion_future(
 
 ### <a name="overloads-list"></a>重载列表
 
-|name|描述|
+|名称|描述|
 |----------|-----------------|
 |`completion_future();`|初始化 `completion_future` 类的新实例。|
 |`completion_future(const completion_future& _Other);`|通过复制构造函数来初始化 `completion_future` 类的新实例。|
@@ -143,7 +143,7 @@ completion_future&  operator= (completion_future&& _Other );
 
 ## <a name="overloads-list"></a>重载列表
 
-|name|描述|
+|名称|描述|
 |----------|-----------------|
 |`completion_future& operator=(const completion_future& _Other);`|使用深层复制将指定 `completion_future` 对象的内容复制到此对象中。|
 |`completion_future& operator=(completion_future&& _Other);`|使用移动赋值将指定 `completion_future` 对象的内容复制到此对象中。|

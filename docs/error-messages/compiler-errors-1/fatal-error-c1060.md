@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C1060
 ms.assetid: feaf305c-c84c-4160-b974-50e283412849
 ms.openlocfilehash: 876ae7a368d2d1a1ee94a04fc9ecf50d0f4b8d78
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607055"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62364228"
 ---
 # <a name="fatal-error-c1060"></a>错误 C1060
 
@@ -25,7 +25,7 @@ ms.locfileid: "50607055"
 
    如果[/Zm](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md)选项已设置，请尝试将其删除。 堆空间可能已用完，因为选项中指定的内存分配限制太高。 编译器使用的默认限制，如果删除[/Zm](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md)选项。
 
-1. 如果你正在 64 位平台上进行编译，请使用 64 位编译器工具集。 有关信息，请参阅[如何： 启用 64 位 Visual c + + 工具集在命令行上的](../../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md)。
+1. 如果你正在 64 位平台上进行编译，请使用 64 位编译器工具集。 有关详细信息，请参阅[如何：启用 64 位视觉对象C++命令行上的工具集](../../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md)。
 
 1. 在 32 位 Windows，请尝试使用[3GB](https://support.microsoft.com/help/833721/available-switch-options-for-the-windows-xp-and-the-windows-server-200) boot.ini 开关。
 

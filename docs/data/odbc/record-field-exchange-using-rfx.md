@@ -5,11 +5,11 @@ helpviewer_keywords:
 - RFX (ODBC), implementing
 ms.assetid: ada8f043-37e6-4d41-9db3-92c997a61957
 ms.openlocfilehash: 2a029f653753363e08b3c4f8b9fceab6295924af
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59034110"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62395646"
 ---
 # <a name="record-field-exchange-using-rfx"></a>记录字段交换：使用 RFX
 
@@ -41,8 +41,8 @@ ms.locfileid: "59034110"
 ## <a name="see-also"></a>请参阅
 
 [记录字段交换 (RFX)](../../data/odbc/record-field-exchange-rfx.md)<br/>
-[记录字段交换：RFX 的工作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)<br/>
-[记录集：获取 Sum 及其他聚合结果 (ODBC)](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)<br/>
+[记录字段交换：RFX 工作原理](../../data/odbc/record-field-exchange-how-rfx-works.md)<br/>
+[记录集：获取 SUM 及其他聚合结果 (ODBC)](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)<br/>
 [CRecordset 类](../../mfc/reference/crecordset-class.md)<br/>
 [CFieldExchange 类](../../mfc/reference/cfieldexchange-class.md)<br/>
 [宏、 全局函数和全局变量](../../mfc/reference/mfc-macros-and-globals.md)

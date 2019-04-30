@@ -10,11 +10,11 @@ helpviewer_keywords:
 - MFC, Internet applications
 ms.assetid: a2c4a40c-a94e-4b3e-9dbf-f8a8dc8e5428
 ms.openlocfilehash: 6e32210217321e4eb59d7d3e666a4f5494eb3642
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57287695"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399468"
 ---
 # <a name="writing-an-internet-client-application-using-mfc-wininet-classes"></a>使用 MFC WinInet 类编写 Internet 客户端应用程序
 

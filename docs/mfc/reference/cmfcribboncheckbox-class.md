@@ -25,16 +25,15 @@ helpviewer_keywords:
 - CMFCRibbonCheckBox [MFC], SetACCData
 ms.assetid: 3a6c3891-c8d1-4af0-b954-7b9ab048782a
 ms.openlocfilehash: 34af1ae818125abd51b9eaf04cd98f9ac24addb3
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57281429"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392539"
 ---
 # <a name="cmfcribboncheckbox-class"></a>CMFCRibbonCheckBox 类
 
-
-  `CMFCRibbonCheckBox` 类实现可添加到功能区面板、快速访问工具栏或弹出菜单的复选框。
+`CMFCRibbonCheckBox` 类实现可添加到功能区面板、快速访问工具栏或弹出菜单的复选框。
 
 ## <a name="syntax"></a>语法
 

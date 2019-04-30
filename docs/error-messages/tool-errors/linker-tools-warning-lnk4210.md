@@ -7,11 +7,11 @@ helpviewer_keywords:
 - LNK4210
 ms.assetid: db48cff8-a2be-4a77-8d03-552b42c228fa
 ms.openlocfilehash: 75376129ce0033c717a4da3074cee9de132d357d
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816264"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62395061"
 ---
 # <a name="linker-tools-warning-lnk4210"></a>链接器工具警告 LNK4210
 
@@ -37,7 +37,7 @@ ms.locfileid: "57816264"
 
 [/GS](../../build/reference/gs-buffer-security-check.md)编译器选项需要通过初始化`__security_init_cookie`函数。 默认情况下，在运行在 VCRuntime 库启动代码中提供此初始化`_DllMainCRTStartup`。
 
-- 如果使用 /ENTRY，生成你的项目和 /ENTRY 而不传递一个函数`_DllMainCRTStartup`，该函数必须调用`_CRT_INIT`初始化 CRT。 如果 DLL 使用 /GS、 需要静态初始值设定项，或在 MFC 或 ATL 代码的上下文中调用此单独的调用是不够的。 请参阅[Dll 和 Visual c + + 运行时库行为](../../build/run-time-library-behavior.md)有关详细信息。
+- 如果使用 /ENTRY，生成你的项目和 /ENTRY 而不传递一个函数`_DllMainCRTStartup`，该函数必须调用`_CRT_INIT`初始化 CRT。 如果 DLL 使用 /GS、 需要静态初始值设定项，或在 MFC 或 ATL 代码的上下文中调用此单独的调用是不够的。 请参阅[Dll 和 VisualC++运行时库行为](../../build/run-time-library-behavior.md)有关详细信息。
 
 ## <a name="see-also"></a>请参阅
 

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - ODBC recordsets, selecting records
 ms.assetid: 343a6a91-aa4c-4ef7-b21f-2f2bfd0d3787
 ms.openlocfilehash: 310481a6ea6637de817bf29d528cbdfe70ae70db
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59041320"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62397817"
 ---
 # <a name="recordset-how-recordsets-select-records-odbc"></a>记录集：如何记录集选择记录 (ODBC)
 
@@ -99,7 +99,7 @@ ms.locfileid: "59041320"
 ## <a name="see-also"></a>请参阅
 
 [记录集 (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[记录集：如何记录集更新记录 (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)<br/>
+[记录集：记录集如何更新记录 (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)<br/>
 [ODBC 基础](../../data/odbc/odbc-basics.md)<br/>
 [SQL](../../data/odbc/sql.md)<br/>
 [记录集：锁定记录 (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)

@@ -7,17 +7,17 @@ helpviewer_keywords:
 - C2477
 ms.assetid: 60bc324b-6605-4833-8099-a291efc712e7
 ms.openlocfilehash: 27db194cb308d711a259127b628c60b4d10b94ff
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50458157"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62383225"
 ---
 # <a name="compiler-error-c2477"></a>编译器错误 C2477
 
 member： 不能通过派生类中初始化静态数据成员
 
-一种模板类的静态数据成员未正确初始化。 这是为了符合 ISO c + + 标准的版本早于 Visual Studio.NET 2003年的 Visual c + + 编译器进行了重大更改。
+一种模板类的静态数据成员未正确初始化。 这是一项重大更改与视觉对象的版本C++在 Visual Studio.NET 2003 中，为了符合 ISO 之前的编译器C++标准。
 
 下面的示例生成 C2477:
 

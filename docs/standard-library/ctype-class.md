@@ -37,11 +37,11 @@ helpviewer_keywords:
 - std::ctype [C++], widen
 ms.assetid: 3627154c-49d9-47b5-b28f-5bbedee38e3b
 ms.openlocfilehash: e7c474e9112acadc11af889471b1e126dfeeb23f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438943"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62394138"
 ---
 # <a name="ctype-class"></a>ctype 类
 
@@ -147,11 +147,11 @@ explicit ctype(size_t _Refs = 0);
 
 可能的值 *_Refs*参数和其重要性：
 
-- 0：对象的生存期由包含该对象的区域设置管理。
+- 0:对象的生存期由包含它的区域设置管理。
 
-- 1：必须手动管理对象的生存期。
+- 1:必须手动管理的对象的生存期。
 
-- \> 1： 未定义这些值。
+- \> 1:未定义这些值。
 
 由于该析构函数受到保护，可能没有直接的示例。
 
@@ -183,7 +183,7 @@ virtual const CharType *do_is(
 *first*<br/>
 指向范围内要对其属性进行分类的第一个字符的指针。
 
-*最后一个*<br/>
+*last*<br/>
 指向范围内要对其属性进行分类的最后一个字符之后紧跟的字符的指针。
 
 *dest*<br/>
@@ -230,7 +230,7 @@ virtual const CharType* do_narrow(
 *first*<br/>
 指向要转换的字符范围内的第一个字符的指针。
 
-*最后一个*<br/>
+*last*<br/>
 指向要转换的字符范围内最后一个字符之后紧跟的字符的指针。
 
 *dest*<br/>
@@ -269,7 +269,7 @@ virtual const CharType *do_scan_is(
 *first*<br/>
 指向要扫描的范围内的第一个字符的指针。
 
-*最后一个*<br/>
+*last*<br/>
 指向要扫描的范围内最后一个字符之后紧跟的字符的指针。
 
 ### <a name="return-value"></a>返回值
@@ -303,7 +303,7 @@ virtual const CharType *do_scan_not(
 *first*<br/>
 指向要扫描的范围内的第一个字符的指针。
 
-*最后一个*<br/>
+*last*<br/>
 指向要扫描的范围内最后一个字符之后紧跟的字符的指针。
 
 ### <a name="return-value"></a>返回值
@@ -338,7 +338,7 @@ virtual const CharType *do_tolower(
 *first*<br/>
 指向要转换大小写的字符范围内的第一个字符的指针。
 
-*最后一个*<br/>
+*last*<br/>
 指向要转换大小写的字符范围内第一个字符之后紧跟的字符的指针。
 
 ### <a name="return-value"></a>返回值
@@ -373,7 +373,7 @@ virtual const CharType *do_toupper(
 *first*<br/>
 指向要转换大小写的字符范围内的第一个字符的指针。
 
-*最后一个*<br/>
+*last*<br/>
 指向要转换大小写的字符范围内的第一个字符之后紧跟的字符的指针。
 
 ### <a name="return-value"></a>返回值
@@ -409,7 +409,7 @@ virtual const char *do_widen(
 *first*<br/>
 指向要转换的字符范围内的第一个字符的指针。
 
-*最后一个*<br/>
+*last*<br/>
 指向要转换的字符范围内最后一个字符之后紧跟的字符的指针。
 
 *dest*<br/>
@@ -453,7 +453,7 @@ const CharType *is(
 *first*<br/>
 指向范围内要对其属性进行分类的第一个字符的指针。
 
-*最后一个*<br/>
+*last*<br/>
 指向范围内要对其属性进行分类的最后一个字符之后紧跟的字符的指针。
 
 *dest*<br/>
@@ -533,7 +533,7 @@ const CharType* narrow(
 *first*<br/>
 指向要转换的字符范围内的第一个字符的指针。
 
-*最后一个*<br/>
+*last*<br/>
 指向要转换的字符范围内最后一个字符之后紧跟的字符的指针。
 
 *dest*<br/>
@@ -594,7 +594,7 @@ const CharType *scan_is(
 *first*<br/>
 指向要扫描的范围内的第一个字符的指针。
 
-*最后一个*<br/>
+*last*<br/>
 指向要扫描的范围内最后一个字符之后紧跟的字符的指针。
 
 ### <a name="return-value"></a>返回值
@@ -650,7 +650,7 @@ const CharType *scan_not(
 *first*<br/>
 指向要扫描的范围内的第一个字符的指针。
 
-*最后一个*<br/>
+*last*<br/>
 指向要扫描的范围内最后一个字符之后紧跟的字符的指针。
 
 ### <a name="return-value"></a>返回值
@@ -705,7 +705,7 @@ const CharType *tolower(CharType* first, const CharType* last) const;
 *first*<br/>
 指向要转换大小写的字符范围内的第一个字符的指针。
 
-*最后一个*<br/>
+*last*<br/>
 指向要转换大小写的字符范围内第一个字符之后紧跟的字符的指针。
 
 ### <a name="return-value"></a>返回值
@@ -760,7 +760,7 @@ const CharType *toupper(CharType* first, const CharType* last) const;
 *first*<br/>
 指向要转换大小写的字符范围内的第一个字符的指针。
 
-*最后一个*<br/>
+*last*<br/>
 指向要转换大小写的字符范围内第一个字符之后紧跟的字符的指针。
 
 ### <a name="return-value"></a>返回值
@@ -815,7 +815,7 @@ const char *widen(const char* first, const char* last, CharType* dest) const;
 *first*<br/>
 指向要转换的字符范围内的第一个字符的指针。
 
-*最后一个*<br/>
+*last*<br/>
 指向要转换的字符范围内最后一个字符之后紧跟的字符的指针。
 
 *dest*<br/>

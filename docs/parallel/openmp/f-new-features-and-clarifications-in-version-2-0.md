@@ -3,15 +3,15 @@ title: F. 2.0 版中新功能和说明
 ms.date: 01/22/2019
 ms.assetid: 0d4beb66-f2d5-468c-8cd3-4b00dcbab061
 ms.openlocfilehash: 2e186bbc82f4f43e831dd05cdded2a9e946d1dd2
-ms.sourcegitcommit: 382e247c0f1b4cb7c2dab837b8b6fdff24bff47a
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087205"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62362707"
 ---
 # <a name="f-new-features-and-clarifications-in-version-20"></a>F. 2.0 版中新功能和说明
 
-本附录总结了对从版本 1.0 迁移到 2.0 版中的 OpenMP C/c + + 规范所做的关键更改。 以下各项是新功能添加到规范：
+本附录总结了对 OpenMP C 的键的更改 /C++中从版本 1.0 迁移到版本 2.0 规范。 以下各项是新功能添加到规范：
 
 - OpenMP 中允许使用逗号[指令](2-directives.md#21-directive-format)。
 
@@ -27,9 +27,9 @@ ms.locfileid: "55087205"
 
 - 添加了计时例程[omp_get_wtick](3-run-time-library-functions.md#332-omp_get_wtick-function)并[omp_get_wtime](3-run-time-library-functions.md#331-omp_get_wtime-function)类似于 MPI 例程。 这些函数所需执行墙上的时钟计时。
 
-- 附录介绍了一系列[实现定义的行为](e-implementation-defined-behaviors-in-openmp-c-cpp.md)OpenMP C/c + + 中已添加。 需要定义并记录其行为在这些情况下实现。
+- 附录介绍了一系列[实现定义的行为](e-implementation-defined-behaviors-in-openmp-c-cpp.md)OpenMP c /C++已添加。 需要定义并记录其行为在这些情况下实现。
 
-- 以下更改用来阐明或更正以前 OpenMP API 规范中为 C/c + + 的功能：
+- 以下更改用来阐明或更正以前 OpenMP API 规范中为 C 的功能 /C++:
 
   - 阐明了的行为[omp_set_nested](3-run-time-library-functions.md#319-omp_set_nested-function)并[omp_set_dynamic](3-run-time-library-functions.md#317-omp_set_dynamic-function)时`omp_in_parallel`返回非零值是不确定。
 

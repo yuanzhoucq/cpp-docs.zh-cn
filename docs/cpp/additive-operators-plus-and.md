@@ -13,11 +13,11 @@ helpviewer_keywords:
 - '- operator [C++], additive operators in C++'
 ms.assetid: d4afafe7-e201-4c69-a649-37f17756e784
 ms.openlocfilehash: be9e1830ea44223aa46ad9a7f5c6cee6734fa9e6
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330367"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62385045"
 ---
 # <a name="additive-operators--and--"></a>加法运算符：+ 和 -
 
@@ -46,19 +46,19 @@ expression - expression
 
 |类型|含义|
 |----------|-------------|
-|*算术运算*|整型和浮点类型统称为“算术”类型。|
+|*arithmetic*|整型和浮点类型统称为“算术”类型。|
 |*integral*|所有大小（long、short）和枚举数的 char 和 int 类型为“整数”类型。|
 |*scalar*|标量操作数是算术类型或指针类型的操作数。|
 
 这些运算符的合法组合为：
 
-*算术* + *算术*
+*arithmetic* + *arithmetic*
 
 *scalar* + *integral*
 
 *integral* + *scalar*
 
-*算术* - *算术*
+*arithmetic* - *arithmetic*
 
 *scalar* - *scalar*
 

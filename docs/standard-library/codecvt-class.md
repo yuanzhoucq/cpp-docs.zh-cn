@@ -41,11 +41,11 @@ helpviewer_keywords:
 - std::codecvt [C++], unshift
 ms.assetid: 37d3efa1-2b7f-42b6-b04f-7a972c8c2c86
 ms.openlocfilehash: be1075da65284ac3f9672a839622b59c8926bfb9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50439269"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405230"
 ---
 # <a name="codecvt-class"></a>codecvt 类
 
@@ -209,11 +209,11 @@ explicit codecvt(size_t _Refs = 0);
 
 可能的值 *_Refs*参数和其重要性：
 
-- 0：对象的生存期由包含该对象的区域设置管理。
+- 0:对象的生存期由包含它的区域设置管理。
 
-- 1：必须手动管理对象的生存期。
+- 1:必须手动管理的对象的生存期。
 
-- 2： 未定义这些值。
+- 2:未定义这些值。
 
 构造函数初始化其`locale::facet`基对象**区域设置::**[方面](../standard-library/locale-class.md#facet_class)(`_Refs`)。
 
@@ -274,22 +274,22 @@ virtual result do_in(
 
 ### <a name="parameters"></a>参数
 
-*（_s)*<br/>
+*_State*<br/>
 每次调用成员函数时保留的转换状态。
 
-*First1*<br/>
+*first1*<br/>
 指向待转换序列开头的指针。
 
-*Last1*<br/>
+*last1*<br/>
 指向待转换序列末尾的指针。
 
 *next1*<br/>
 指向超出已转换序列末尾到第一个未转换字符的指针。
 
-*First2*<br/>
+*first2*<br/>
 指向已转换序列开头的指针。
 
-*Last2*<br/>
+*last2*<br/>
 指向已转换序列末尾的指针。
 
 *next2*<br/>
@@ -329,13 +329,13 @@ virtual int do_length(
 
 ### <a name="parameters"></a>参数
 
-*（_s)*<br/>
+*_State*<br/>
 每次调用成员函数时保留的转换状态。
 
-*First1*<br/>
+*first1*<br/>
 指向外部序列开头的指针。
 
-*Last1*<br/>
+*last1*<br/>
 指向外部序列末尾的指针。
 
 *_Len2*<br/>
@@ -394,22 +394,22 @@ virtual result do_out(
 
 ### <a name="parameters"></a>参数
 
-*（_s)*<br/>
+*_State*<br/>
 每次调用成员函数时保留的转换状态。
 
-*First1*<br/>
+*first1*<br/>
 指向待转换序列开头的指针。
 
-*Last1*<br/>
+*last1*<br/>
 指向待转换序列末尾的指针。
 
 *next1*<br/>
 引用指向第一个已`CharType`，在最后一个`CharType`转换。
 
-*First2*<br/>
+*first2*<br/>
 指向已转换序列开头的指针。
 
-*Last2*<br/>
+*last2*<br/>
 指向已转换序列末尾的指针。
 
 *next2*<br/>
@@ -449,13 +449,13 @@ virtual result do_unshift(
 
 ### <a name="parameters"></a>参数
 
-*（_s)*<br/>
+*_State*<br/>
 每次调用成员函数时保留的转换状态。
 
-*First2*<br/>
+*first2*<br/>
 指向目标范围内第一个位置的指针。
 
-*Last2*<br/>
+*last2*<br/>
 指向目标范围内最后一个位置的指针。
 
 *next2*<br/>
@@ -563,22 +563,22 @@ result in(
 
 ### <a name="parameters"></a>参数
 
-*（_s)*<br/>
+*_State*<br/>
 每次调用成员函数时保留的转换状态。
 
-*First1*<br/>
+*first1*<br/>
 指向待转换序列开头的指针。
 
-*Last1*<br/>
+*last1*<br/>
 指向待转换序列末尾的指针。
 
 *next1*<br/>
 指向超出已转换序列末尾到第一个未转换字符的指针。
 
-*First2*<br/>
+*first2*<br/>
 指向已转换序列开头的指针。
 
-*Last2*<br/>
+*last2*<br/>
 指向已转换序列末尾的指针。
 
 *next2*<br/>
@@ -665,13 +665,13 @@ int length(
 
 ### <a name="parameters"></a>参数
 
-*（_s)*<br/>
+*_State*<br/>
 每次调用成员函数时保留的转换状态。
 
-*First1*<br/>
+*first1*<br/>
 指向外部序列开头的指针。
 
-*Last1*<br/>
+*last1*<br/>
 指向外部序列末尾的指针。
 
 *_Len2*<br/>
@@ -770,22 +770,22 @@ result out(
 
 ### <a name="parameters"></a>参数
 
-*（_s)*<br/>
+*_State*<br/>
 每次调用成员函数时保留的转换状态。
 
-*First1*<br/>
+*first1*<br/>
 指向待转换序列开头的指针。
 
-*Last1*<br/>
+*last1*<br/>
 指向待转换序列末尾的指针。
 
 *next1*<br/>
 引用指向第一个已`CharType`后的最后一个`CharType`转换。
 
-*First2*<br/>
+*first2*<br/>
 指向已转换序列开头的指针。
 
-*Last2*<br/>
+*last2*<br/>
 指向已转换序列末尾的指针。
 
 *next2*<br/>
@@ -862,13 +862,13 @@ result unshift(
 
 ### <a name="parameters"></a>参数
 
-*（_s)*<br/>
+*_State*<br/>
 每次调用成员函数时保留的转换状态。
 
-*First2*<br/>
+*first2*<br/>
 指向目标范围内第一个位置的指针。
 
-*Last2*<br/>
+*last2*<br/>
 指向目标范围内最后一个位置的指针。
 
 *next2*<br/>

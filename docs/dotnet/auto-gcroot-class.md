@@ -17,11 +17,11 @@ helpviewer_keywords:
 - msclr::auto_gcroot
 ms.assetid: b5790912-265d-463e-a486-47302e91042a
 ms.openlocfilehash: 81d4174943543db708090ad654a911980ecf026d
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54893428"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62388925"
 ---
 # <a name="autogcroot-class"></a>auto_gcroot 类
 
@@ -43,7 +43,7 @@ class auto_gcroot;
  
 ### <a name="public-constructors"></a>公共构造函数 
  
-|name|描述| 
+|名称|描述| 
 |---------|-----------| 
 |[auto_gcroot::auto_gcroot](#auto-gcroot)|`auto_gcroot`构造函数。| 
 |[auto_gcroot::~auto_gcroot](#tilde-auto-gcroot)|`auto_gcroot`析构函数。
@@ -51,7 +51,7 @@ class auto_gcroot;
 
 ### <a name="public-methods"></a>公共方法 
 
-|name|描述| 
+|名称|描述| 
 |---------|-----------| 
 |[auto_gcroot::attach](#attach)|附加`auto_gcroot`的对象。| 
 |[auto_gcroot::get](#get)|获取包含的对象。| 
@@ -62,7 +62,7 @@ class auto_gcroot;
  
 ### <a name="public-operators"></a>公共运算符
  
-|name|描述| 
+|名称|描述| 
 |---------|-----------|
 |[auto_gcroot::operator-&gt;](#operator-arrow)|成员访问运算符。|  
 |[auto_gcroot::operator=](#operator-assign)|赋值运算符。|
