@@ -1,18 +1,39 @@
 ---
-title: CVTRES 错误 CVT1100 到 CVT4001
-ms.date: 11/17/2017
+title: CVTRES 错误和警告
+ms.date: 04/16/2019
 f1_keywords:
-- cvtres
+- CVT1101
+- CVT1102
+- CVT1104
+- CVT1106
+- CVT1107
+- CVT1108
+- CVT1109
+- CVT1110
 ms.assetid: ac94d0fb-0da3-4327-b3d9-ceaeb3fc2e4d
-ms.openlocfilehash: a76d19989ced06cf97d514b23b66d9664d32c917
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: 81dbac6b0408a7cf1cc319c1eed90bad5f742890
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50628548"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62406335"
 ---
-# <a name="cvtres-errors-cvt1100-through-cvt4001"></a>CVTRES 错误 CVT1100 到 CVT4001
+# <a name="cvtres-errors-and-warnings-cvtxxxx"></a>CVTRES 错误和警告 (CVTxxxx)
 
-本部分是对错误的引用，生成的 CVTRES 警告的生成工具。
+本部分是对错误的引用，生成的 CVTRES 警告的生成工具。 CVTRES 生成消息的窗体 CVT*xxxx*，其中*xxxx*是一个四位数字。
 
 [!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]
+
+## <a name="fatal-error-messages"></a>错误消息
+
+[CVTRES 错误 CVT1100](cvtres-fatal-error-cvt1100.md) \
+[CVTRES 错误 CVT1103](cvtres-fatal-error-cvt1103.md) \
+[CVTRES 错误 CVT1105](cvtres-fatal-error-cvt1105.md)
+
+## <a name="warning-messages"></a>警告消息
+
+[CVTRES 警告 CVT4001](cvtres-warning-cvt4001.md)
+
+## <a name="see-also"></a>请参阅
+
+[C /C++编译器和生成工具错误和警告](../compiler-errors-1/c-cpp-build-errors.md)

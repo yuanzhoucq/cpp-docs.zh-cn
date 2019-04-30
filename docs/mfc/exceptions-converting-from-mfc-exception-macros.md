@@ -1,5 +1,5 @@
 ---
-title: 异常：从 MFC 异常宏转换
+title: 异常:从 MFC 异常宏转换
 ms.date: 08/27/2018
 helpviewer_keywords:
 - converting exceptions [MFC]
@@ -15,33 +15,33 @@ helpviewer_keywords:
 - exception handling [MFC], converting exceptions
 ms.assetid: bd3ac3b3-f3ce-4fdd-a168-a2cff13ed796
 ms.openlocfilehash: 59b83438d5341fd6a139af64a2f365a739438741
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525887"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62394502"
 ---
-# <a name="exceptions-converting-from-mfc-exception-macros"></a>异常：从 MFC 异常宏转换
+# <a name="exceptions-converting-from-mfc-exception-macros"></a>异常:从 MFC 异常宏转换
 
 这是一个高级的主题。
 
-此文章介绍了如何使用 Microsoft 基础类宏编写的现有代码转换 —**尝试**，**捕获**，**引发**，等等 — 若要使用 c + + 异常处理关键字**尝试**，**捕获**，并**引发**。 包括以下主题：
+此文章介绍了如何使用 Microsoft 基础类宏编写的现有代码转换 —**尝试**，**捕获**，**引发**，等等 — 若要使用C++异常处理关键字**尝试**，**捕获**，并**引发**。 包括以下主题：
 
 - [转换的优点](#_core_advantages_of_converting)
 
-- [将代码与使用 c + + 异常的异常宏转换](#_core_doing_the_conversion)
+- [转换使用异常宏，若要使用的代码C++异常](#_core_doing_the_conversion)
 
 ##  <a name="_core_advantages_of_converting"></a> 将转换的优点
 
-可能不需要转换现有的代码，但应注意的 MFC 版本 3.0 中的宏实现与早期版本中的实现之间的差异。 中讨论了这些差异和代码行为中的后续更改[异常： 3.0 版中的异常宏将变为](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md)。
+可能不需要转换现有的代码，但应注意的 MFC 版本 3.0 中的宏实现与早期版本中的实现之间的差异。 中讨论了这些差异和代码行为中的后续更改[异常：将更改为 3.0 版本中的异常宏](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md)。
 
 转换的主要优势是：
 
-- 使用 c + + 异常处理关键字的代码编译为略小。EXE 或。DLL。
+- 使用的代码C++异常处理关键字将编译为略小。EXE 或。DLL。
 
-- C + + 异常处理关键字是更灵活： 它们可以处理可以复制任何数据类型的异常 (**int**， **float**， **char**，依此类推)，而宏处理异常的类仅`CException`和从它派生的类。
+- C++异常处理关键字是更灵活：它们可以处理可以复制任何数据类型的异常 (**int**， **float**， **char**，等等)，而宏处理异常的类仅`CException`并从它派生的类。
 
-宏和关键字之间的主要区别是"自动"使用宏的代码，当异常超出范围时将删除捕获的异常。 使用关键字的代码却没有，因此您必须显式删除捕获的异常。 有关详细信息，请参阅文章[异常： 捕捉和删除异常](../mfc/exceptions-catching-and-deleting-exceptions.md)。
+宏和关键字之间的主要区别是"自动"使用宏的代码，当异常超出范围时将删除捕获的异常。 使用关键字的代码却没有，因此您必须显式删除捕获的异常。 有关详细信息，请参阅文章[异常：捕捉和删除异常](../mfc/exceptions-catching-and-deleting-exceptions.md)。
 
 另一个区别是语法。 宏和关键字的语法与以下三个方面不同：
 
@@ -49,13 +49,13 @@ ms.locfileid: "50525887"
 
    一个**捕获**宏调用具有以下语法：
 
-   **捕获 (** *exception_class*， *exception_object_pointer_name* **)**
+   **CATCH(** *exception_class*, *exception_object_pointer_name* **)**
 
    请注意，类名和对象指针名称之间的逗号。
 
    异常声明**捕获**关键字将使用此语法：
 
-   **捕获 (** *exception_type* *exception_name* **)**
+   **catch(** *exception_type* *exception_name* **)**
 
    此异常声明语句指示的类型的异常 catch 块处理。
 
@@ -71,7 +71,7 @@ ms.locfileid: "50525887"
 
 ##  <a name="_core_doing_the_conversion"></a> 执行转换
 
-#### <a name="to-convert-code-using-macros-to-use-the-c-exception-handling-keywords"></a>要转换使用宏来使用 c + + 异常处理关键字的代码
+#### <a name="to-convert-code-using-macros-to-use-the-c-exception-handling-keywords"></a>将使用宏来使用代码为C++异常处理关键字
 
 1. 查找所有匹配项的 MFC 宏**尝试**，**捕获**， **AND_CATCH**， **END_CATCH**，**引发**，并**THROW_LAST**。
 
@@ -99,17 +99,17 @@ ms.locfileid: "50525887"
 
    [!code-cpp[NVC_MFCExceptions#7](../mfc/codesnippet/cpp/exceptions-converting-from-mfc-exception-macros_2.cpp)]
 
-4. 修改在 catch 块中的代码，以便删除根据异常对象。 有关详细信息，请参阅文章[异常： 捕捉和删除异常](../mfc/exceptions-catching-and-deleting-exceptions.md)。
+4. 修改在 catch 块中的代码，以便删除根据异常对象。 有关详细信息，请参阅文章[异常：捕捉和删除异常](../mfc/exceptions-catching-and-deleting-exceptions.md)。
 
 下面是使用 MFC 异常宏的异常处理代码的示例。 请注意，因为在下面的示例代码使用宏，该异常`e`自动删除：
 
 [!code-cpp[NVC_MFCExceptions#8](../mfc/codesnippet/cpp/exceptions-converting-from-mfc-exception-macros_3.cpp)]
 
-下一示例中的代码使用 c + + 异常关键字，因此必须显式删除异常：
+下一个示例中的代码使用C++异常关键字，因此必须显式删除异常：
 
 [!code-cpp[NVC_MFCExceptions#9](../mfc/codesnippet/cpp/exceptions-converting-from-mfc-exception-macros_4.cpp)]
 
-有关详细信息，请参阅[异常： 使用 MFC 宏和 c + + 异常](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md)。
+有关详细信息，请参阅[异常：使用 MFC 宏和C++异常](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md)。
 
 ## <a name="see-also"></a>请参阅
 

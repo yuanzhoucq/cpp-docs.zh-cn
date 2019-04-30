@@ -3,11 +3,11 @@ title: 答： 示例
 ms.date: 01/18/2019
 ms.assetid: c0f6192f-a205-449b-b84c-cb30dbcc8b8f
 ms.openlocfilehash: 061490d34829175bfbdcd84d6208aa396bb19671
-ms.sourcegitcommit: 382e247c0f1b4cb7c2dab837b8b6fdff24bff47a
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087296"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62362967"
 ---
 # <a name="a-examples"></a>答： 示例
 
@@ -202,7 +202,7 @@ omp_set_num_threads(16);
 
 使用的优点`atomic`指令在此示例中是允许更新的 x 会并行发生两个不同元素。 如果[关键](2-directives.md#262-critical-construct)然后所有更新的元素到相反，使用指令*x*按顺序 （尽管不在任何有保证的顺序） 执行。
 
-`atomic`指令仅适用于紧随的 C 或 c + + 语句。  因此中的元素*y*不会在此示例中以原子方式更新。
+`atomic`指令仅适用于 C 或C++其后面的语句。  因此中的元素*y*不会在此示例中以原子方式更新。
 
 ## <a name="a13-a-flush-directive-with-a-list"></a>A.13 一个列表的 flush 指令
 
@@ -735,7 +735,7 @@ void g(int k, int n)
 
 ## <a name="a25-examples-of-the-copyprivate-data-attribute-clause"></a>A.25 copyprivate 数据特性子句示例
 
-**示例 1:**[Copyprivate](2-directives.md#2728-copyprivate)子句可用于广播由单线程直接向私有变量在其他线程中的所有实例获取的值。
+**示例 1：**[Copyprivate](2-directives.md#2728-copyprivate)子句可用于广播由单线程直接向私有变量在其他线程中的所有实例获取的值。
 
 ```cpp
 float x, y;
@@ -757,7 +757,7 @@ void init( )
 
 如果例行*init*称为从串行区域，其行为不受影响的指令的存在。 在调用*get_values*例程已执行由一个线程，没有线程直到指定的专用对象使构造， *b*， *x*，并*y*中所有线程变得与定义为具有读取的值。
 
-**示例 2:** 与前面的示例，假设必须由特定线程，说的主线程执行读取。 在这种情况下，`copyprivate`子句不能用于执行广播直接，但它可用于提供对临时共享对象的访问。
+**示例 2：** 与前面的示例，假设必须由特定线程，说的主线程执行读取。 在这种情况下，`copyprivate`子句不能用于执行广播直接，但它可用于提供对临时共享对象的访问。
 
 ```cpp
 float read_next( )
@@ -841,7 +841,7 @@ int sub()
 下面的示例演示如何使用 C99 变量长度数组 (VLAs) 中[firstprivate](2-directives.md#2722-firstprivate)指令。
 
 > [!NOTE]
-> 在 Visual c + + 中目前不支持可变长度数组。
+> 可变长度数组目前不支持在视觉对象中C++。
 
 ```cpp
 void f(int m, int C[m][m])
@@ -917,7 +917,7 @@ int i, a;
 
 ## <a name="a31-thread-safe-lock-functions"></a>A.31 线程安全的锁函数
 
-下面的 c + + 示例演示如何通过使用初始化数组的并行区域中的锁[omp_init_lock](3-run-time-library-functions.md#321-omp_init_lock-and-omp_init_nest_lock-functions)。
+以下C++的示例演示如何通过使用初始化数组的并行区域中的锁[omp_init_lock](3-run-time-library-functions.md#321-omp_init_lock-and-omp_init_nest_lock-functions)。
 
 ```cpp
 // A_13_omp_init_lock.cpp

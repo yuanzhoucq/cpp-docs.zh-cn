@@ -1,5 +1,5 @@
 ---
-title: 异常:使用 MFC 宏和 c + + 异常
+title: 异常:使用 MFC 宏和C++异常
 ms.date: 11/04/2016
 helpviewer_keywords:
 - exception objects [MFC]
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - nested catch blocks [MFC]
 ms.assetid: d664a83d-879b-44d4-bdf0-029f0aca69e9
 ms.openlocfilehash: 00e88ddabf3a8e8b591bebae7ebc8ced0e1dc637
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57297705"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62406010"
 ---
-# <a name="exceptions-using-mfc-macros-and-c-exceptions"></a>异常:使用 MFC 宏和 c + + 异常
+# <a name="exceptions-using-mfc-macros-and-c-exceptions"></a>异常:使用 MFC 宏和C++异常
 
-本文讨论有关编写使用 MFC 异常处理宏和 c + + 异常处理关键字的代码的注意事项。
+本文讨论有关编写使用 MFC 异常处理宏的代码的注意事项和C++异常处理关键字。
 
 本文介绍了以下主题：
 
@@ -35,9 +35,9 @@ ms.locfileid: "57297705"
 
 ##  <a name="_core_mixing_exception_keywords_and_macros"></a> 混合使用异常关键字和宏
 
-可以混合使用 MFC 异常宏和 c + + 异常关键字在同一程序中。 但不能与同一个块中的 c + + 异常关键字混合 MFC 宏，因为宏异常对象时自动删除它们超出范围，而不使用异常处理关键字的代码。 有关详细信息，请参阅文章[异常：捕捉和删除异常](../mfc/exceptions-catching-and-deleting-exceptions.md)。
+您可以混合使用 MFC 异常宏和C++在同一程序中的异常关键字。 但不能混合 MFC 宏与C++同一个块中的异常关键字，因为宏中删除对象时自动启动它们超出范围，而代码中使用异常处理关键字的异常却没有。 有关详细信息，请参阅文章[异常：捕捉和删除异常](../mfc/exceptions-catching-and-deleting-exceptions.md)。
 
-宏和关键字之间的主要区别是当异常超出范围时，宏将"自动"删除捕获的异常。 使用关键字的代码却不;必须显式删除的 catch 块中捕获的异常。 混合使用宏和 c + + 异常关键字可以导致内存泄漏时未删除异常对象，或堆损坏时两次删除异常。
+宏和关键字之间的主要区别是当异常超出范围时，宏将"自动"删除捕获的异常。 使用关键字的代码却不;必须显式删除的 catch 块中捕获的异常。 混合使用宏和C++异常关键字会导致内存泄漏时未删除异常对象，或堆损坏时两次删除异常。
 
 例如，将以下代码，使失效异常指针：
 

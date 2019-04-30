@@ -7,11 +7,11 @@ helpviewer_keywords:
 - RW2002
 ms.assetid: b1d1a49b-b50b-4b0b-9f09-c7762e2dbe8f
 ms.openlocfilehash: 4cd922fff691b524ec9d278ac5948992fc096e09
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523484"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62396768"
 ---
 # <a name="resource-compiler-error-rw2002"></a>资源编译器错误 RW2002
 
@@ -69,7 +69,7 @@ ms.locfileid: "51523484"
 
 1. **预期的控件类名**
 
-   `class`字段**控制**中的语句**对话框**语句必须是以下类型之一： 按钮、 组合框、 编辑、 列表框、 滚动条、 静态的或用户定义。 请确保类的拼写正确。
+   `class`字段**控制**中的语句**对话框**语句必须是以下类型之一：按钮、 组合框、 编辑、 列表框、 滚动条、 静态的或用户定义。 请确保类的拼写正确。
 
 1. **预期字体名称**
 
@@ -141,7 +141,7 @@ ms.locfileid: "51523484"
 
 1. **无效的控件类型**
 
-   在每个控制语句**对话框**语句必须是以下值之一： 复选框、 组合框、 控件、 CTEXT、 DEFPUSHBUTTON、 EDITTEXT、 GROUPBOX、 图标、 列表框、 LTEXT、 PUSHBUTTON、 RADIOBUTTON、 RTEXT、 滚动条。 请确保这些控制语句拼写正确。
+   在每个控制语句**对话框**语句必须是以下值之一：复选框、 组合框、 控件、 CTEXT、 DEFPUSHBUTTON、 EDITTEXT、 GROUPBOX、 图标、 列表框、 LTEXT、 PUSHBUTTON、 RADIOBUTTON、 RTEXT、 滚动条。 请确保这些控制语句拼写正确。
 
 1. **无效的类型**
 

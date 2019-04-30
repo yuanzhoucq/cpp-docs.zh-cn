@@ -3,15 +3,15 @@ title: 委托 (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 3175bf1c-86d8-4eda-8d8f-c5b6753d8e38
 ms.openlocfilehash: e2158adad288045c9a98889dbe97e834dc93ea71
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57745597"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62406920"
 ---
 # <a name="delegates-ccx"></a>委托 (C++/CX)
 
-`delegate`关键字用于声明 Windows 运行时等效于标准 c + + 中的函数对象的引用类型。 委托声明类似于函数声明；它指定被包装的函数必须具有的返回类型和参数类型。 以下是用户定义的委托声明：
+`delegate`关键字用于声明 Windows 运行时等效于标准中的函数对象的引用类型C++。 委托声明类似于函数声明；它指定被包装的函数必须具有的返回类型和参数类型。 以下是用户定义的委托声明：
 
 ```cpp
 public delegate void PrimeFoundHandler(int result);
@@ -133,5 +133,5 @@ event PrimeFoundHandler^ primeFoundEvent;
 ## <a name="see-also"></a>请参阅
 
 [类型系统](../cppcx/type-system-c-cx.md)<br/>
-[Visual c + + 语言参考](../cppcx/visual-c-language-reference-c-cx.md)<br/>
+[VisualC++语言参考](../cppcx/visual-c-language-reference-c-cx.md)<br/>
 [命名空间参考](../cppcx/namespaces-reference-c-cx.md)

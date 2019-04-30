@@ -24,11 +24,11 @@ helpviewer_keywords:
 - std::thread [C++], native_handle
 - std::thread [C++], swap
 ms.openlocfilehash: d1405062ef553dbfea3b60b5f39e0546707343b6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519491"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412067"
 ---
 # <a name="thread-class"></a>thread 类
 
@@ -68,7 +68,7 @@ class thread;
 |[get_id](#get_id)|返回关联线程的唯一标识符。|
 |[hardware_concurrency](#hardware_concurrency)|静态。 返回硬件线程上下文的估计数量。|
 |[join](#join)|阻止，直到完成关联的线程。|
-|[可加入](#joinable)|指定关联的线程是否可联接。|
+|[joinable](#joinable)|指定关联的线程是否可联接。|
 |[native_handle](#native_handle)|返回表示线程句柄的特定于实现的类型。|
 |[swap](#swap)|交换对象状态与指定**线程**对象。|
 
@@ -84,7 +84,7 @@ class thread;
 
 **命名空间：** std
 
-## <a name="detach"></a>  thread:: detach
+## <a name="detach"></a>  thread::detach
 
 拆离相关联的线程。 操作系统负责释放终止的线程资源。
 
@@ -152,7 +152,7 @@ void join();
 
 调用成功后，再继续调用 [get_id](#get_id)，以便调用对象返回默认值 [thread:: id](#id_class)，该默认值与任何现有线程的 `thread::id` 都不相等；如果调用不成功，`get_id` 返回的值保持不变。
 
-## <a name="joinable"></a>  thread:: joinable
+## <a name="joinable"></a>  thread::joinable
 
 指定关联的线程是否可联接。
 
@@ -168,7 +168,7 @@ bool joinable() const noexcept;
 
 如果 `get_id() != id()`，则线程对象可联接。
 
-## <a name="native_handle"></a>  thread:: native_handle
+## <a name="native_handle"></a>  thread::native_handle
 
 返回表示线程句柄的特定于实现的类型。 可以以特定于实现的方式使用线程句柄。
 

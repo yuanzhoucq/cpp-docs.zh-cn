@@ -11,11 +11,11 @@ helpviewer_keywords:
 - OLE controls [MFC]
 ms.assetid: f19d698c-bdc3-4c74-af97-3d6ccb441b75
 ms.openlocfilehash: cec4c3aa6aedfa7a1f8234c6cc2355970d453f56
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57822673"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412758"
 ---
 # <a name="mfc-activex-control-wizard"></a>MFC ActiveX 控件向导
 
@@ -32,7 +32,7 @@ ActiveX 控件可以具有复杂的用户界面。 某些控件可能类似于�
 
 如果需要创建 ActiveX 对象的容器，请参阅[创建 ActiveX 控件容器](../../mfc/reference/creating-an-mfc-activex-control-container.md)。
 
-MFC starter 项目包括 c + + 源文件 (.cpp)、 资源 (.rc) 文件和项目 (.vcxproj) 文件。 在这些初学者文件中生成的代码基于 MFC。
+MFC starter 项目包括C++源文件 (.cpp)、 资源 (.rc) 文件和项目 (.vcxproj) 文件。 在这些初学者文件中生成的代码基于 MFC。
 
 下面的示例列表显示了任务和类型的增强功能的 ActiveX 控件：
 

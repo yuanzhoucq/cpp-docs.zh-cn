@@ -32,11 +32,11 @@ f1_keywords:
 - ratio/std::deca
 ms.assetid: 8543e912-2d84-45ea-b3c0-bd7bfacee405
 ms.openlocfilehash: 4279aa75bf4e9b8a0c7a86f102f70164bbb620e0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608999"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62369626"
 ---
 # <a name="ltratiogt"></a>&lt;ratio&gt;
 
@@ -70,7 +70,7 @@ struct ratio // holds the ratio of Numerator to Denominator
 
 每个专用化采用两个同时必须为 `ratio` 的专用化的模板参数。 `type` 的值由关联的逻辑操作确定。
 
-|name|`type` 值|
+|名称|`type` 值|
 |----------|------------------|
 |`ratio_add`|`R1 + R2`|
 |`ratio_divide`|`R1 / R2`|

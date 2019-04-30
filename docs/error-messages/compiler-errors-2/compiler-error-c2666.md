@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2666
 ms.assetid: 78364d15-c6eb-439a-9088-e04a0176692b
 ms.openlocfilehash: 4a1d46f3b000b5054564b05ca2c3c94a9e7b6398
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50479273"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62386871"
 ---
 # <a name="compiler-error-c2666"></a>编译器错误 C2666
 
@@ -43,7 +43,7 @@ int main() {
 
 对于二元运算符\<，>， \<=、 和 > =、 传递参数现在隐式转换为操作数的类型如果参数的类型定义了一个用户定义的转换运算符，以将转换为操作数的类型。 现在可能会不明确。
 
-对于 Visual Studio.NET 2003年和 Visual Studio.NET 版本的 Visual c + + 中有效的代码，调用函数的语法使用显式类运算符。
+在 Visual Studio.NET 2003年和 Visual Studio.NET 版本的视觉对象中是有效的代码的C++，调用类运算符显式使用函数的语法。
 
 ## <a name="example"></a>示例
 

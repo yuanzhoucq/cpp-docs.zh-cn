@@ -1,5 +1,5 @@
 ---
-title: TN055：将 MFC ODBC 数据库类应用程序迁移到 MFC DAO 类
+title: TN055:MFC ODBC 数据库类应用程序迁移到 MFC DAO 类
 ms.date: 06/20/2018
 f1_keywords:
 - vc.mfc.odbc
@@ -15,16 +15,16 @@ helpviewer_keywords:
 - migrating database applications [MFC]
 ms.assetid: 0f858bd1-e168-4e2e-bcd1-8debd82856e4
 ms.openlocfilehash: f8e0d8e50f05e86c35e0f8b7f324533bffea6f25
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50487095"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399663"
 ---
-# <a name="tn055-migrating-mfc-odbc-database-class-applications-to-mfc-dao-classes"></a>TN055：将 MFC ODBC 数据库类应用程序迁移到 MFC DAO 类
+# <a name="tn055-migrating-mfc-odbc-database-class-applications-to-mfc-dao-classes"></a>TN055:MFC ODBC 数据库类应用程序迁移到 MFC DAO 类
 
 > [!NOTE]
-> Visual c + + 环境和向导不支持 DAO （尽管 DAO 类包含并且仍可以使用它们）。 Microsoft 建议您使用[OLE DB 模板](../data/oledb/ole-db-templates.md)或[ODBC 和 MFC](../data/odbc/odbc-and-mfc.md)为新项目。 仅应在维护现有应用程序使用 DAO。
+> 视觉对象C++环境和向导不支持 DAO （尽管 DAO 类包含并且仍可以使用它们）。 Microsoft 建议您使用[OLE DB 模板](../data/oledb/ole-db-templates.md)或[ODBC 和 MFC](../data/odbc/odbc-and-mfc.md)为新项目。 仅应在维护现有应用程序使用 DAO。
 
 ## <a name="overview"></a>概述
 
@@ -38,7 +38,7 @@ ms.locfileid: "50487095"
 
 当您的数据存在于服务器或各种不同的服务器上时，将出现更复杂的情况。 在这种情况下，很难决定使用 ODBC 数据库类还是 DAO 数据库类。 如果您需要执行如异类联接（联接多种格式（如 SQL Server 和 Oracle）的服务器中的数据）等操作，则在您使用 ODBC 数据库类或直接调用 ODBC 时，Microsoft Jet 数据库引擎将为您执行此联接，而不是强制您必需执行此操作。 如果您使用的是支持驱动程序光标的 ODBC 驱动程序，则最佳选择可能是 ODBC 数据库类。
 
-此选择可能很复杂，因此鉴于你的特殊需求，你可能希望编写一些代码示例来测试各种方法的性能。 此技术说明假定您已决定从 ODBC 数据库类迁移到 DAO 数据库类。
+此选择可能很复杂，因此鉴于您的特殊需求，您可能希望编写一些代码示例来测试各种方法的性能。 此技术说明假定您已决定从 ODBC 数据库类迁移到 DAO 数据库类。
 
 ## <a name="similarities-between-odbc-database-classes-and-mfc-dao-database-classes"></a>ODBC 数据库类与 MFC DAO 数据库类之间的相似之处
 

@@ -89,11 +89,11 @@ helpviewer_keywords:
 - stdext::hash_map::value_comp
 ms.assetid: 40879dfc-51ba-4a59-9f9e-26208de568a8
 ms.openlocfilehash: da046a467333fba9aa106b97e21cf583c8cef75d
-ms.sourcegitcommit: d441305fb19131afbd7fc259d8cda63ea26f2343
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51678556"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405061"
 ---
 # <a name="hashmap-class"></a>hash_map 类
 
@@ -121,9 +121,9 @@ class hash_map
 要存储在 hash_map 中的元素数据类型。
 
 *特征*<br/>
-此类型包括两个函数对象，其中一个是类 compare，可与作为排序关键字的两个元素值进行比较以确定其相对顺序；另一个是哈希函数，这是一个一元谓词，用于将元素的关键字值映射到 `size_t` 类型的无符号整数。 此自变量为可选自变量，其默认值为 hash_compare<`Key`, less<`Key`> >。
+此类型包括两个函数对象，其中一个是类 compare，可与作为排序关键字的两个元素值进行比较以确定其相对顺序；另一个是哈希函数，这是一个一元谓词，用于将元素的关键字值映射到 `size_t` 类型的无符号整数。 此参数是可选的并且 hash_compare <`Key`、 更少 <`Key`>> 是默认值。
 
-*分配器*<br/>
+*Allocator*<br/>
 一种表示存储的分配器对象的类型，该分配器对象封装有关 hash_map 的内存分配和解除分配的详细信息。 此参数为可选参数，其默认值为 allocator<pair <const `Key`, `Type`>>。
 
 ## <a name="remarks"></a>备注
@@ -648,7 +648,7 @@ size_type count(const Key& key) const;
 
 成员函数返回以下范围内的元素 *x* 的数量
 
-\[ lower_bound (*键*)、 upper_bound (*密钥*))
+\[ lower_bound(*key*), upper_bound(*key*) )
 
 对于唯一的关联容器 hash_map，数量为 0 或 1。
 
@@ -1224,7 +1224,7 @@ size_type erase(const key_type& key);
 *first*<br/>
 要从 hash_map 中移除的第一个元素的位置。
 
-*最后一个*<br/>
+*last*<br/>
 紧接要从 hash_map 中移除的最后一个元素的位置。
 
 *key*<br/>
@@ -1596,7 +1596,7 @@ iterator insert(
 |*val*|要插入 hash_map 的元素的值，除非 hash_map 已包含该元素（更宽泛地说，是其键经等效排序的元素）。|
 |*_Where*|有关开始搜索正确插入点的位置的提示。|
 |*first*|要从 hash_map 复制的第一个元素的位置。|
-|*最后一个*|刚超出要从 hash_map 复制的最后一个元素的位置。|
+|*last*|刚超出要从 hash_map 复制的最后一个元素的位置。|
 
 ### <a name="return-value"></a>返回值
 

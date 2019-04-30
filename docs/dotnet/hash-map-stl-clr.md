@@ -100,11 +100,11 @@ helpviewer_keywords:
 - value_type member [STL/CLR]
 ms.assetid: c3cfc69b-04c6-42ae-a30e-0eda953fe883
 ms.openlocfilehash: fb7db25785d041786f5dfc0d2c3986a76d776d5d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658505"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62404411"
 ---
 # <a name="hashmap-stlclr"></a>hash_map (STL/CLR)
 
@@ -256,7 +256,7 @@ Hash_map 迭代器，用于存储其关联的 hash_map 节点，后者又将存�
 
 ## <a name="members"></a>成员
 
-## <a name="begin"></a> hash_map:: begin (STL/CLR)
+## <a name="begin"></a> hash_map::begin (STL/CLR)
 
 指定受控序列的开头。
 
@@ -862,7 +862,7 @@ bool erase(key_type key)
 *key*<br/>
 若要清除的键值。
 
-*最后一个*<br/>
+*last*<br/>
 要清除范围的末尾。
 
 *where*<br/>
@@ -1263,7 +1263,7 @@ hash(L'a') = 1616896120
 hash(L'b') = 570892832
 ```
 
-## <a name="hash_map"></a> hash_map:: hash_map (STL/CLR)
+## <a name="hash_map"></a> hash_map::hash_map (STL/CLR)
 
 构造容器对象。
 
@@ -1298,10 +1298,10 @@ hash_map(System::Collections::Generic::IEnumerable<GValue>^ right,
 *hashfn*<br/>
 哈希函数映射到存储桶的密钥。
 
-*最后一个*<br/>
+*last*<br/>
 要插入的范围的下限。
 
-*Pred*<br/>
+*pred*<br/>
 排序谓词对受控序列。
 
 *right*<br/>
@@ -1564,7 +1564,7 @@ void insert(System::Collections::Generic::IEnumerable<value_type>^ right);
 *first*<br/>
 要插入范围的起始处。
 
-*最后一个*<br/>
+*last*<br/>
 要插入的范围的下限。
 
 *right*<br/>
@@ -1707,7 +1707,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="key_comp"></a> hash_map:: key_comp (STL/CLR)
+## <a name="key_comp"></a> hash_map::key_comp (STL/CLR)
 
 将复制两个键的排序委托。
 
@@ -1766,7 +1766,7 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="key_compare"></a> hash_map:: key_compare (STL/CLR)
+## <a name="key_compare"></a> hash_map::key_compare (STL/CLR)
 
 两个键排序委托。
 
@@ -2019,7 +2019,7 @@ static value_type make_value(key_type key, mapped_type mapped);
 *key*<br/>
 若要使用的密钥值。
 
-*映射*<br/>
+*mapped*<br/>
 要搜索的映射的值。
 
 ### <a name="remarks"></a>备注
@@ -2053,7 +2053,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="mapped_type"></a> hash_map:: mapped_type (STL/CLR)
+## <a name="mapped_type"></a> hash_map::mapped_type (STL/CLR)
 
 与每个键关联的映射值的类型。
 
@@ -2180,7 +2180,7 @@ load_factor() = 0.0234375
 max_load_factor() = 0.25
 ```
 
-## <a name="op_as"></a> hash_map:: operator = (STL/CLR)
+## <a name="op_as"></a> hash_map::operator= (STL/CLR)
 
 替换受控序列。
 
@@ -2302,7 +2302,7 @@ c1[b] = 2
 [a 1] [A 10] [b 2] [c 13]
 ```
 
-## <a name="rbegin"></a> hash_map:: rbegin (STL/CLR)
+## <a name="rbegin"></a> hash_map::rbegin (STL/CLR)
 
 指定反向受控序列的开头。
 
@@ -2525,7 +2525,7 @@ int main()
 *--rend() = [a 1]
 ```
 
-## <a name="reverse_iterator"></a> hash_map:: reverse_iterator (STL/CLR)
+## <a name="reverse_iterator"></a> hash_map::reverse_iterator (STL/CLR)
 
 受控序列的反向迭代器的类型。
 
@@ -2619,7 +2619,7 @@ size() = 0 after clearing
 size() = 2 after adding 2
 ```
 
-## <a name="size_type"></a> hash_map:: size_type (STL/CLR)
+## <a name="size_type"></a> hash_map::size_type (STL/CLR)
 
 两个元素间的带符号距离的类型。
 
@@ -2667,7 +2667,7 @@ int main()
 end()-begin() = 3
 ```
 
-## <a name="swap"></a> hash_map:: swap (STL/CLR)
+## <a name="swap"></a> hash_map::swap (STL/CLR)
 
 交换两个容器的内容。
 
@@ -2844,7 +2844,7 @@ upper_bound(L'x')==end() = True
 *upper_bound(L'b') = [c 3]
 ```
 
-## <a name="value_comp"></a> hash_map:: value_comp (STL/CLR)
+## <a name="value_comp"></a> hash_map::value_comp (STL/CLR)
 
 将复制两个元素值的排序委托。
 
@@ -2939,7 +2939,7 @@ compare([L'a', 1], [L'b', 2]) = True
 compare([L'b', 2], [L'a', 1]) = False
 ```
 
-## <a name="value_type"></a> hash_map:: value_type (STL/CLR)
+## <a name="value_type"></a> hash_map::value_type (STL/CLR)
 
 元素的类型。
 

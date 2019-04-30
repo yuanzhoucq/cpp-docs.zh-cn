@@ -6,17 +6,17 @@ helpviewer_keywords:
 - Marshaling Library, extending
 ms.assetid: 4c4a56d7-1d44-4118-b85f-f9686515e6e9
 ms.openlocfilehash: f289539807b1e9499cef51427d3f6a494545cc60
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750358"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62387300"
 ---
 # <a name="how-to-extend-the-marshaling-library"></a>如何：扩展封送处理库
 
 本主题说明如何扩展封送处理库，以提供更多数据类型之间转换。 用户可以扩展目前不支持库的任何数据转换的封送处理库。
 
-您可以扩展的封送处理库中有两种-带或不带[marshal_context 类](../dotnet/marshal-context-class.md)。 审阅[Overview of Marshaling c + + 中](../dotnet/overview-of-marshaling-in-cpp.md)主题，以确定新转换是否需要上下文。
+您可以扩展的封送处理库中有两种-带或不带[marshal_context 类](../dotnet/marshal-context-class.md)。 审阅[Overview of Marshaling 中C++](../dotnet/overview-of-marshaling-in-cpp.md)主题，以确定新转换是否需要上下文。
 
 在这两种情况下，首先创建新的封送处理转换的文件。 这样做是为了保持标准封送处理库文件的完整性。 如果你想要移植到另一台计算机或另一个程序员的项目，则必须复制项目的其余部分以及新的封送处理文件。 在这种方式，接收项目的用户将保证能够收到新的转换，并将无需修改任何库文件。
 
@@ -30,7 +30,7 @@ ms.locfileid: "57750358"
 
    - windows 数据类型为 marshal_windows.h。
 
-   - marshal_cppstd.h 适用于 c + + 标准库的数据类型。
+   - 有关 marshal_cppstd.hC++标准库的数据类型。
 
    - marshal_atl.h ATL 数据类型。
 
@@ -59,7 +59,7 @@ namespace msclr {
 
    - windows 数据类型为 marshal_windows.h。
 
-   - marshal_cppstd.h 适用于 c + + 标准库的数据类型。
+   - 有关 marshal_cppstd.hC++标准库的数据类型。
 
    - marshal_atl.h ATL 数据类型。
 

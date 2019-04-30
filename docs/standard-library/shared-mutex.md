@@ -46,11 +46,11 @@ f1_keywords:
 - shared_mutex/std::shared_timed_mutex::unlock_shared
 ms.assetid: 0b37a97d-ee5d-4050-b29f-09db9f76beb3
 ms.openlocfilehash: 97d77399357030feaa90228a1b0cdeb80d48034c
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58565381"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412561"
 ---
 # <a name="ltsharedmutex"></a>&lt;shared_mutex>
 
@@ -104,7 +104,7 @@ void swap(shared_lock<Mutex>& x, shared_lock<Mutex>& y) noexcept;
 `shared_lock` 模板类扩展对定时锁定和所有权转移给共享 mutex 的支持。 Mutex 所有权可以在构造之时或之后获得，也可转移到另一个 `shared_lock` 对象。 可移动 `shared_lock` 类型的对象，但不能复制。
 
 > [!WARNING]
-> 从 Visual Studio 2015 开始，c + + 标准库同步类型基于 Windows 同步基元和不再使用 ConcRT （除非目标平台是 Windows XP）。 中定义的类型&lt;shared_mutex > 不能与任何 ConcRT 类型或函数。
+> 在 Visual Studio 2015 中，从C++标准库同步类型基于 Windows 同步基元，且不再使用 ConcRT （除非目标平台是 Windows XP）。 中定义的类型&lt;shared_mutex > 不能与任何 ConcRT 类型或函数。
 
 ## <a name="classes"></a>类
 

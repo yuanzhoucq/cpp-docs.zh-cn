@@ -1,5 +1,5 @@
 ---
-title: TN061：ON_NOTIFY 和 WM_NOTIFY 消息
+title: TN061:ON_NOTIFY 和 WM_NOTIFY 消息
 ms.date: 06/28/2018
 f1_keywords:
 - ON_NOTIFY
@@ -14,13 +14,13 @@ helpviewer_keywords:
 - WM_NOTIFY message
 ms.assetid: 04a96dde-7049-41df-9954-ad7bb5587caf
 ms.openlocfilehash: 74eb39a855da3ff3e6da7f14a76bf0804919826d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658843"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399572"
 ---
-# <a name="tn061-onnotify-and-wmnotify-messages"></a>TN061：ON_NOTIFY 和 WM_NOTIFY 消息
+# <a name="tn061-onnotify-and-wmnotify-messages"></a>TN061:ON_NOTIFY 和 WM_NOTIFY 消息
 
 > [!NOTE]
 > 以下技术说明在首次包括在联机文档中后未更新。 因此，某些过程和主题可能已过时或不正确。 要获得最新信息，建议你在联机文档索引中搜索热点话题。
@@ -31,7 +31,7 @@ ms.locfileid: "50658843"
 
 在 Windows 3.x 中，通过将一条消息发送到父控件通知的事件，例如鼠标单击其父级更改内容和所选内容，以及控件背景的绘制。 简单的通知作为特殊 WM_COMMAND 消息通知代码 （如 BN_CLICKED) 发送，并且控制 ID 打包到*wParam*和中的控件的句柄*lParam*。 请注意，由于*wParam*并*lParam*是否完整，没有方法传递任何其他数据，这些消息可以是简单的通知。 例如，在 BN_CLICKED 通知中，没有发送有关鼠标光标的位置的信息，当单击此按钮的任何方法。
 
-当控件在 Windows 3.x 需要发送通知消息，其中包含其他数据时，它们使用不同的专用的消息，包括 WM_CTLCOLOR、 WM_VSCROLL、 WM_HSCROLL、 WM_DRAWITEM、 WM_MEASUREITEM、 WM_COMPAREITEM、 WM_DELETEITEM、 WM_CHARTOITEM、 WM_VKEYTOITEM，等等。 这些消息可以反映给向他们发送的控件。 有关详细信息，请参阅[TN062: Windows 控件消息反射](../mfc/tn062-message-reflection-for-windows-controls.md)。
+当控件在 Windows 3.x 需要发送通知消息，其中包含其他数据时，它们使用不同的专用的消息，包括 WM_CTLCOLOR、 WM_VSCROLL、 WM_HSCROLL、 WM_DRAWITEM、 WM_MEASUREITEM、 WM_COMPAREITEM、 WM_DELETEITEM、 WM_CHARTOITEM、 WM_VKEYTOITEM，等等。 这些消息可以反映给向他们发送的控件。 有关详细信息，请参阅[TN062:消息反射的 Windows 控件](../mfc/tn062-message-reflection-for-windows-controls.md)。
 
 **Win32 中的通知消息**
 
@@ -80,7 +80,7 @@ typedef struct tagLV_KEYDOWN {
 |NM_KILLFOCUS|控件已丢失输入的焦点|
 |NM_OUTOFMEMORY|控件无法完成操作，因为没有足够的内存|
 
-##  <a name="_mfcnotes_on_notify.3a_.handling_wm_notify_messages_in_mfc_applications"></a> ON_NOTIFY： 处理在 MFC 应用程序中的 WM_NOTIFY 消息
+##  <a name="_mfcnotes_on_notify.3a_.handling_wm_notify_messages_in_mfc_applications"></a> ON_NOTIFY:处理 MFC 应用程序中的 WM_NOTIFY 消息
 
 该函数`CWnd::OnNotify`处理通知消息。 其默认实现将检查通知处理程序调用的消息映射。 一般情况下，您不会重写`OnNotify`。 相反，提供处理程序函数，并将该处理程序的消息映射项添加到所有者窗口的类的消息映射。
 
@@ -114,7 +114,7 @@ afx_msg void memberFxn(NMHDR* pNotifyStruct, LRESULT* result);
 *pNotifyStruct*<br/>
 指向通知结构，如上面的部分中所述的指针。
 
-*结果*<br/>
+*result*<br/>
 您将设置指向结果代码的步骤，再返回。
 
 ## <a name="example"></a>示例
@@ -183,10 +183,10 @@ afx_msg void memberFxn(UINT id, NMHDR* pNotifyStruct, LRESULT* result);
 *pNotifyStruct*<br/>
 指向通知结构，如上文所述的指针。
 
-*结果*<br/>
+*result*<br/>
 您将设置指向结果代码的步骤，再返回。
 
-##  <a name="_mfcnotes_tn061_on_notify_ex.2c_.on_notify_ex_range"></a> ON_NOTIFY_EX ON_NOTIFY_EX_RANGE
+##  <a name="_mfcnotes_tn061_on_notify_ex.2c_.on_notify_ex_range"></a> ON_NOTIFY_EX, ON_NOTIFY_EX_RANGE
 
 如果你想路由以处理一条消息通知中的多个对象，可以使用 ON_NOTIFY_EX （或 ON_NOTIFY_EX_RANGE），而不是 ON_NOTIFY （或 ON_NOTIFY_RANGE）。 之间的唯一区别**EX**版本和正式版本是用于调用的成员函数**EX**版本返回**BOOL** ，该值指示是否消息处理应继续。 返回**FALSE**从此函数使你可以处理同一消息中多个对象。
 

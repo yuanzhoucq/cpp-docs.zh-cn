@@ -8,11 +8,11 @@ helpviewer_keywords:
 - limits header
 ms.assetid: e07d6379-5b00-4a3d-a789-40d41538b59e
 ms.openlocfilehash: c029095d5298048874a7eb6f1a41209d6a6f4779
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524880"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62413237"
 ---
 # <a name="ltlimitsgt"></a>&lt;limits&gt;
 
@@ -26,7 +26,7 @@ ms.locfileid: "51524880"
 
 ## <a name="remarks"></a>备注
 
-显式专用化`numeric_limits`类描述的基本类型，包括字符、 整数和浮点类型的许多属性和**bool**是实现定义而不是通过修复c + + 语言的规则。 \<limits> 中描述的属性包括准确性、最小和最大尺寸表示形式、舍入和信号类型错误。
+显式专用化`numeric_limits`类描述的基本类型，包括字符、 整数和浮点类型的许多属性和**bool**是实现定义而不是通过修复规则的C++语言。 \<limits> 中描述的属性包括准确性、最小和最大尺寸表示形式、舍入和信号类型错误。
 
 ### <a name="enumerations"></a>枚举
 

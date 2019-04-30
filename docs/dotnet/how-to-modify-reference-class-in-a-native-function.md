@@ -7,11 +7,11 @@ helpviewer_keywords:
 - reference types, modifying in a C++ native function
 ms.assetid: c701145b-62a0-4c4b-b32a-db8d69a59720
 ms.openlocfilehash: c24bca5269cc924482c727d921fd24310f016824
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57738125"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62404385"
 ---
 # <a name="how-to-modify-reference-class-in-a-native-function"></a>如何：修改本机函数中的引用类
 

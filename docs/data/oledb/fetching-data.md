@@ -1,5 +1,5 @@
 ---
-title: 提取数据
+title: 获取数据
 ms.date: 10/19/2018
 helpviewer_keywords:
 - data [C++], fetching
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - OLE DB consumer templates [C++], fetching data
 ms.assetid: b07f747f-9855-4f27-a03d-b1d5b10fa284
 ms.openlocfilehash: 441f036d1677806e81bc419ec6a45e810e63a34f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50651905"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62409054"
 ---
-# <a name="fetching-data"></a>提取数据
+# <a name="fetching-data"></a>获取数据
 
 打开数据源、 会话和行集对象后，可以提取数据。 具体取决于正在使用的访问器的类型，可能需要将列绑定。
 

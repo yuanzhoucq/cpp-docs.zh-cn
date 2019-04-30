@@ -9,11 +9,11 @@ helpviewer_keywords:
 - refreshing recordsets
 ms.assetid: 4ebc3b5b-5b91-4f51-a967-245223c6b8e1
 ms.openlocfilehash: 7edc1c04da617f96165b25a47ce169b266ae0003
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59024590"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62397700"
 ---
 # <a name="recordset-requerying-a-recordset-odbc"></a>记录集：再次查询记录集 (ODBC)
 

@@ -5,11 +5,11 @@ f1_keywords:
 - <thread>
 ms.assetid: 0c858405-4efb-449d-bf76-70d3693c9234
 ms.openlocfilehash: 43fb79ceda6de7409e6f93797ce2f4ff213c43ee
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50487511"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62411976"
 ---
 # <a name="ltthreadgt"></a>&lt;thread&gt;
 
@@ -38,13 +38,13 @@ ms.locfileid: "50487511"
 
 ### <a name="public-structures"></a>公共结构
 
-|name|描述|
+|名称|描述|
 |----------|-----------------|
 |[hash 结构（C++ 标准库）](../standard-library/hash-structure-stl.md)|定义了成员函数返回一个值，通过唯一确定`thread::id`。 此成员函数定义[哈希](../standard-library/hash-class.md)适用于类型的映射值的函数`thread::id`到索引值的分布。|
 
 ### <a name="public-functions"></a>公共函数
 
-|name|描述|
+|名称|描述|
 |----------|-----------------|
 |[get_id](../standard-library/thread-functions.md#get_id)|唯一标识当前的执行线程。|
 |[sleep_for](../standard-library/thread-functions.md#sleep_for)|阻止调用线程。|
@@ -56,13 +56,13 @@ ms.locfileid: "50487511"
 
 |名称|描述|
 |----------|-----------------|
-|[运算符 > = 运算符](../standard-library/thread-operators.md#op_gt_eq)|确定一个 `thread::id` 对象是否大于或等于另一个。|
+|[operator>= Operator](../standard-library/thread-operators.md#op_gt_eq)|确定一个 `thread::id` 对象是否大于或等于另一个。|
 |[运算符 > 运算符](../standard-library/thread-operators.md#op_gt)|确定一个 `thread::id` 对象是否大于另一个。|
 |[运算符 < = 运算符](../standard-library/thread-operators.md#op_lt_eq)|确定一个 `thread::id` 对象是否小于或等于另一个。|
 |[运算符 < 运算符](../standard-library/thread-operators.md#op_lt)|确定一个 `thread::id` 对象是否小于另一个。|
-|[运算符 ！ = 运算符](../standard-library/thread-operators.md#op_neq)|比较两个 `thread::id` 对象是否相等。|
+|[operator!= Operator](../standard-library/thread-operators.md#op_neq)|比较两个 `thread::id` 对象是否相等。|
 |[运算符 = = 运算符](../standard-library/thread-operators.md#op_eq_eq)|比较两个 `thread::id` 对象是否相等。|
-|[运算符 << 运算符](../standard-library/thread-operators.md#op_lt_lt)|将 `thread::id` 对象的文本表示形式插入流。|
+|[operator<< Operator](../standard-library/thread-operators.md#op_lt_lt)|将 `thread::id` 对象的文本表示形式插入流。|
 
 ## <a name="see-also"></a>请参阅
 

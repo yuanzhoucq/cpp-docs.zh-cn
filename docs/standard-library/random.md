@@ -7,11 +7,11 @@ helpviewer_keywords:
 - random header
 ms.assetid: 60afc25c-b162-4811-97c1-1b65398d4c57
 ms.openlocfilehash: 5b246be02c860ede6691db1c4d21af7e6b4da26a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50511847"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62369797"
 ---
 # <a name="ltrandomgt"></a>&lt;random&gt;
 
@@ -212,11 +212,11 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
 
 通常根据这些属性来描述 URNG：
 
-1. **周期长度**：重复生成的数字序列所需的迭代数。 越长越好。
+1. **周期长度**:重复生成的数字序列所需的迭代数。 越长越好。
 
-2. **性能**：生成数字的速度和所需的内存量。 越小越好。
+2. **性能**:可以生成数字的速度和内存量所需。 越小越好。
 
-3. **质量**：生成的序列与真正的随机数的接近程度。 这通常称为“*随机性*”。
+3. **质量**:与真正的随机数生成的序列的接近程度。 这通常称为“*随机性*”。
 
 以下各节列出均匀随机数生成器 (Urng) 中提供\<随机 > 标头。
 
@@ -493,10 +493,10 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
 
 Visual Studio 中存在两个非常有用的 URNG（`mt19937` 和 `random_device`），如此比较表中所示：
 
-|URNG|快速|安全加密|可设定种子|是确定的|
+|URNG|快速|安全加密|可设定种子|Deterministic|
 |----------|-----------|---------------------|---------------|--------------------|
 |`mt19937`|是|No|是|是<sup>*</sup>|
-|`random_device`|否|是|No|否|
+|`random_device`|否|是|否|否|
 
 <sup>* 在提供了已知种子的情况下。</sup>
 

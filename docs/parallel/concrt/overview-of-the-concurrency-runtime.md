@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Concurrency Runtime, lambda expressions
 ms.assetid: 56237d96-10b0-494a-9cb4-f5c5090436c5
 ms.openlocfilehash: 810d77abd37ff2c6f29e980b84645d16526744d8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305232"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412682"
 ---
 # <a name="overview-of-the-concurrency-runtime"></a>并发运行时的概述
 
@@ -28,7 +28,7 @@ ms.locfileid: "57305232"
 
 - [体系结构](#architecture)
 
-- [C + + Lambda 表达式](#lambda)
+- [C++Lambda 表达式](#lambda)
 
 - [要求](#requirements)
 
@@ -103,7 +103,7 @@ ms.locfileid: "57305232"
 
 [[返回页首](#top)]
 
-##  <a name="lambda"></a> C + + Lambda 表达式
+##  <a name="lambda"></a> C++Lambda 表达式
 
 并发运行时定义的许多类型和算法作为 C++ 模板实现。 其中某些类型和算法采用执行工作的例程作为参数。 此参数可以是 lambda 函数、函数对象或函数指针。 这些实体也称为*工作函数*或*工作例程*。
 
@@ -123,7 +123,7 @@ Lambda 表达式是重要的新 Visual C++ 语言功能，因为它们提供了�
 390625
 ```
 
-有关 c + + 中的 lambda 函数的详细信息，请参阅[Lambda 表达式](../../cpp/lambda-expressions-in-cpp.md)。
+有关中的 lambda 函数的详细信息C++，请参阅[Lambda 表达式](../../cpp/lambda-expressions-in-cpp.md)。
 
 [[返回页首](#top)]
 

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - canceling parallel tasks [Concurrency Runtime]
 ms.assetid: baaef417-b2f9-470e-b8bd-9ed890725b35
 ms.openlocfilehash: fae45e04d8b573cca29cc31403a39fc7ee53cc6a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57271731"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62394584"
 ---
 # <a name="cancellation-in-the-ppl"></a>PPL 中的取消操作
 
@@ -242,7 +242,7 @@ Caught 50
 
 ## <a name="related-topics"></a>相关主题
 
-|标题|描述|
+|Title|说明|
 |-----------|-----------------|
 |[如何：通过取消来中断并行循环](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md)|演示如何使用取消来实现并行搜索算法。|
 |[如何：通过异常处理中断并行循环](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md)|演示如何使用 `task_group` 类编写基本树结构的搜索算法。|

@@ -1,5 +1,5 @@
 ---
-title: TN054：使用 MFC DAO 类时直接调用 DAO
+title: TN054:使用 MFC DAO 类时直接调用 DAO
 ms.date: 06/28/2018
 f1_keywords:
 - vc.mfc.dao
@@ -14,16 +14,16 @@ helpviewer_keywords:
 - DAO (Data Access Objects), and MFC
 ms.assetid: f7de7d85-8d6c-4426-aa05-2e617c0da957
 ms.openlocfilehash: 938381f55b598911b69bb25bf7af576dfdfb2e4f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505737"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399650"
 ---
-# <a name="tn054-calling-dao-directly-while-using-mfc-dao-classes"></a>TN054：使用 MFC DAO 类时直接调用 DAO
+# <a name="tn054-calling-dao-directly-while-using-mfc-dao-classes"></a>TN054:使用 MFC DAO 类时直接调用 DAO
 
 > [!NOTE]
-> Visual c + + 环境和向导不支持 DAO （尽管 DAO 类包含并且仍可以使用它们）。 Microsoft 建议您使用[OLE DB 模板](../data/oledb/ole-db-templates.md)或[ODBC 和 MFC](../data/odbc/odbc-and-mfc.md)为新项目。 仅应在维护现有应用程序使用 DAO。
+> 视觉对象C++环境和向导不支持 DAO （尽管 DAO 类包含并且仍可以使用它们）。 Microsoft 建议您使用[OLE DB 模板](../data/oledb/ole-db-templates.md)或[ODBC 和 MFC](../data/odbc/odbc-and-mfc.md)为新项目。 仅应在维护现有应用程序使用 DAO。
 
 使用 MFC DAO 数据库类时，可能必须要直接使用 DAO 的情况。 通常情况下，这将不是这种情况，但 MFC 提供了一些帮助程序机制以便进行直接 DAO 调用简单时将使用 MFC 类与 DAO 的直接调用相结合。 进行直接的 DAO MFC 托管 DAO 对象的方法调用应需要仅几行代码。 如果需要创建和使用的 DAO 对象*不*由 MFC 管理，您将只需稍微复杂一点的实际调用`Release`对象上。 此技术说明介绍了你可能想要直接调用 DAO、 MFC 帮助程序可以如何帮助你，以及如何使用 DAO OLE 接口。 最后，此说明提供了显示如何 DAO 安全功能直接调用 DAO 一些示例函数。
 

@@ -117,11 +117,11 @@ helpviewer_keywords:
 - std::basic_string [C++], swap
 ms.assetid: a9c3e0a2-39bf-4c8a-b093-9abe30839591
 ms.openlocfilehash: ab93f8b225e27c0cf4d294d176c566bd6f2b5d02
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50518568"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62409780"
 ---
 # <a name="basicstring-class"></a>basic_string 类
 
@@ -137,12 +137,12 @@ class basic_string;
 ### <a name="parameters"></a>参数
 
 *CharType*<br/>
-要存储在字符串中的单个字符的数据类型。 C + + 标准库提供的类型定义此模板类专用化[字符串](../standard-library/string-typedefs.md#string)类型的元素**char**， [wstring](../standard-library/string-typedefs.md#wstring)，对于**wchar_t**， [u16string](../standard-library/string-typedefs.md#u16string)有关`char16_t`，并[u32string](../standard-library/string-typedefs.md#u32string)有关`char32_t`。
+要存储在字符串中的单个字符的数据类型。 C++标准库提供的类型定义此模板类专用化[字符串](../standard-library/string-typedefs.md#string)类型的元素**char**， [wstring](../standard-library/string-typedefs.md#wstring)，的**wchar_t**， [u16string](../standard-library/string-typedefs.md#u16string)有关`char16_t`，并且[u32string](../standard-library/string-typedefs.md#u32string)为`char32_t`。
 
 *特征*<br/>
 各种重要属性`CharType`basic_string 专用化中的元素描述由类`Traits`。 默认值为 `char_traits`< `CharType`>。
 
-*分配器*<br/>
+*Allocator*<br/>
 一种表示存储的分配器对象的类型，该分配器对象封装有关字符串的内存分配和解除分配的详细信息。 默认值为 **allocator**< `CharType`>。
 
 ### <a name="constructors"></a>构造函数
@@ -325,7 +325,7 @@ basic_string<CharType, Traits, Allocator>& append(
 *first*<br/>
 一种输入迭代器。用于寻址要追加的范围中的第一个元素。
 
-*最后一个*<br/>
+*last*<br/>
 一种输入迭代器（const_pointer 或 const_iterator），用于寻址要追加的范围中超出最后一个元素的元素位置。
 
 ### <a name="return-value"></a>返回值
@@ -483,10 +483,10 @@ basic_string<CharType, Traits, Allocator>& assign(
 *first*<br/>
 一种输入迭代器（const_pointer 或 const_iterator），用于寻址要分配给目标范围的源字符串范围中的第一个字符。
 
-*最后一个*<br/>
+*last*<br/>
 一种输入迭代器（const_pointer 或 const_iterator），用于寻址要分配给目标范围的源字符串范围中超出最后一个字符的字符。
 
-*关闭*<br/>
+*off*<br/>
 开始分配新字符的位置。
 
 ### <a name="return-value"></a>返回值
@@ -768,7 +768,7 @@ C 字符串，其字符将用于初始化正在构造的 `string`。 此值不�
 *first*<br/>
 输入迭代器（const_pointer 或 const_iterator），用于寻址要插入的源范围中的第一个元素。
 
-*最后一个*<br/>
+*last*<br/>
 输入迭代器（const_pointer 或 const_iterator），用于寻址要插入的源范围中超出最后一个元素的元素的位置。
 
 ### <a name="return-value"></a>返回值
@@ -1913,7 +1913,7 @@ basic_string<CharType, Traits, Allocator>& erase(
 *first*<br/>
 一种迭代器，用于寻址要清除范围中的第一个元素的位置。
 
-*最后一个*<br/>
+*last*<br/>
 一种迭代器，用于寻址要清除范围中最后一个元素之后下一个元素的位置。
 
 *_It*<br/>
@@ -3049,7 +3049,7 @@ void insert(
 *first*<br/>
 输入迭代器（const_pointer 或 const_iterator），用于寻址要插入的源范围中的第一个元素。
 
-*最后一个*<br/>
+*last*<br/>
 输入迭代器（const_pointer 或 const_iterator），用于寻址要插入的源范围中超出最后一个元素的元素的位置。
 
 ### <a name="return-value"></a>返回值
@@ -3951,7 +3951,7 @@ basic_string<CharType, Traits, Allocator>& replace(
 *first*<br/>
 一种迭代器（const_pointer 或 const_iterator），用于寻址参数字符串中进行复制的第一个字符。
 
-*最后一个*<br/>
+*last*<br/>
 一种迭代器（const_pointer 或 const_iterator），用于寻址参数字符串中进行复制的最后一个字符。
 
 *count*<br/>

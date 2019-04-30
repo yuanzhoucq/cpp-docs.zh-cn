@@ -89,11 +89,11 @@ helpviewer_keywords:
 - std::map [C++], value_comp
 ms.assetid: 7876f4c9-ebb4-4878-af1e-09364c43af0a
 ms.openlocfilehash: 52a24bb2372cc7f22797ae7122b6659724c47b55
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694863"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62413003"
 ---
 # <a name="map-class"></a>map 类
 
@@ -124,7 +124,7 @@ class map;
 
 在 C++ 14 中可以通过指定没有类型参数的 std:: less <> 谓词来启用异类查找。 有关详细信息，请参阅[关联容器中的异类查找](../standard-library/stl-containers.md#sequence_containers)
 
-*分配器*<br/>
+*Allocator*<br/>
 一种表示存储的分配器对象的类型，该分配器对象封装有关映射的内存分配和解除分配的详细信息。 此参数为可选参数，默认值为 `allocator<pair<const Key, Type> >`。
 
 ## <a name="remarks"></a>备注
@@ -577,7 +577,7 @@ size_type count(const Key& key) const;
 
 成员函数返回以下范围内的元素 *x* 的数量
 
-\[ lower_bound (*键*)、 upper_bound (*密钥*))
+\[ lower_bound(*key*), upper_bound(*key*) )
 
 对于 map（唯一的关联容器），数量为 0 或 1。
 
@@ -799,7 +799,7 @@ emplace(
 |参数|描述|
 |-|-|
 |参数|描述|
-|*参数*|被转发的参数，用于构造要插入到映射中的元素（除非它已包含一个具有相对有序的值的元素）。|
+|*args*|被转发的参数，用于构造要插入到映射中的元素（除非它已包含一个具有相对有序的值的元素）。|
 
 ### <a name="return-value"></a>返回值
 
@@ -887,7 +887,7 @@ iterator emplace_hint(
 |参数|描述|
 |-|-|
 |参数|描述|
-|*参数*|用于构造要插入 map 中的元素的转发参数，除非 map 已包含该元素，或更普遍的情况是，除非它已包含其键已经过相同排序的元素。|
+|*args*|用于构造要插入 map 中的元素的转发参数，除非 map 已包含该元素，或更普遍的情况是，除非它已包含其键已经过相同排序的元素。|
 |*where*|开始搜索正确插入点的位置。 (如果该点紧贴*其中*，插入可发生在分期常量时间内而非对数时间。)|
 
 ### <a name="return-value"></a>返回值
@@ -1410,7 +1410,7 @@ IList);
 |参数|描述|
 |-|-|
 |参数|描述|
-|*val*|要插入到映射中的元素的值（除非它已经包含一个具有相对有序的键的元素）。|
+|*Val*|要插入到映射中的元素的值（除非它已经包含一个具有相对有序的键的元素）。|
 |*Where*|开始搜索正确插入点的位置。 (如果该点紧贴*其中*，插入可发生在分期常量时间内而非对数时间。)|
 |*ValTy*|指定映射可用于构造的元素的自变量类型的模板参数[value_type](#value_type)，和完美转发*Val*作为自变量。|
 |*第一个*|要复制的第一个元素的位置。|

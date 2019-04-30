@@ -22,11 +22,11 @@ f1_keywords:
 - amp/Concurrency::direct3d::umin
 ms.assetid: 28943b62-52c9-42dc-baf1-ca7b095c1a19
 ms.openlocfilehash: 0a2977faf094aafb6290063e39e062ffaeaaec81
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57281325"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405581"
 ---
 # <a name="concurrencydirect3d-namespace-functions-amp"></a>Concurrency::direct3d 命名空间函数 (AMP)
 
@@ -152,11 +152,11 @@ accelerator_view create_accelerator_view(
 
 `accelerator_view`通过使用此函数创建的对象是线程安全。 你必须同步并发使用`accelerator_view`对象。 非同步并发使用的`accelerator_view`对象和原始 ID3D11Device 接口导致未定义的行为。
 
-C + + AMP 运行时提供详细的错误信息在调试模式下使用 D3D 调试层，如果您使用`D3D11_CREATE_DEVICE_DEBUG`标志。
+C++ AMP 运行时提供详细的错误信息在调试模式下使用 D3D 调试层，如果您使用`D3D11_CREATE_DEVICE_DEBUG`标志。
 
 ##  <a name="d3d_access_lock"></a>  d3d_access_lock
 
-获取一个锁出于安全执行 D3D 操作在与 accelerator_view 共享的资源。 Accelerator_view 和所有与此 accelerator_view 内部关联的 c + + AMP 资源会采用此锁时执行的操作和其他线程占有 D3D 访问锁时，将阻止。 此锁为非递归锁：它是未定义从已经持有锁的线程调用此函数的行为。 它是未定义的行为来执行操作的 accelerator_view 或任何与保留 D3D 访问锁的线程的 accelerator_view 相关联的数据容器。 也可参见 scoped_d3d_access_lock，基于范围的 D3D 访问锁的 RAII 样式类。
+获取一个锁出于安全执行 D3D 操作在与 accelerator_view 共享的资源。 Accelerator_view 和所有C++在内部与此 accelerator_view 相关联的 AMP 资源会采用此锁时执行的操作和其他线程占有 D3D 访问锁时，将阻止。 此锁为非递归锁：它是未定义从已经持有锁的线程调用此函数的行为。 它是未定义的行为来执行操作的 accelerator_view 或任何与保留 D3D 访问锁的线程的 accelerator_view 相关联的数据容器。 也可参见 scoped_d3d_access_lock，基于范围的 D3D 访问锁的 RAII 样式类。
 
 ```
 void __cdecl d3d_access_lock(accelerator_view& _Av);

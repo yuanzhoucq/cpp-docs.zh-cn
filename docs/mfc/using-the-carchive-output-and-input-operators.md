@@ -9,11 +9,11 @@ helpviewer_keywords:
 - CArchive class [MFC], operators
 ms.assetid: 56aef326-02dc-4992-8282-f0a4b78a064e
 ms.openlocfilehash: 9b4192e79b68388e45eb9837e056bbd881de2933
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259667"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62411495"
 ---
 # <a name="using-the-carchive-ltlt-and-gtgt-operators"></a>使用 CArchive &lt; &lt;并&gt;&gt;运算符
 
@@ -61,4 +61,4 @@ ms.locfileid: "57259667"
 
 ## <a name="see-also"></a>请参阅
 
-[序列化：对象的序列化](../mfc/serialization-serializing-an-object.md)
+[序列化：序列化对象](../mfc/serialization-serializing-an-object.md)

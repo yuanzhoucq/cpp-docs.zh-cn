@@ -7,19 +7,19 @@ helpviewer_keywords:
 - C3203
 ms.assetid: 6356770e-22c1-434c-91fe-f60b0aa23b91
 ms.openlocfilehash: 65b7e1d8f03b5e59bd21091531bc9d21472e4ae4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50535182"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62402731"
 ---
 # <a name="compiler-error-c3203"></a>编译器错误 C3203
 
 “类型”：未专用化的类模板或泛型不能用作模板或模板的泛型自变量或泛型参数“param”，应为 real 类型
 
-你传递了一个无效的自变量到类模板或泛型。 类模板或泛型需要一种类型作为参数。
+你传递了一个无效的参数到类模板或泛型。 类模板或泛型需要一种类型作为参数。
 
-为 Visual C++ 2005 执行的编译器一致性工作可以导致此错误：专用的类模板不能用作基类列表中的模板参数。 若要解决 C3203，则当将模板类型参数用作基类列表中的模板参数时，将其显式添加到模板类名称。
+为 Visual C++ 2005 执行的编译器一致性工作可以导致此错误：专用的类模板不能用作基类列表中的模板自变量。 若要解决 C3203，则当将模板类型参数用作基类列表中的模板参数时，将其显式添加到模板类名称。
 
 ```
 // C3203.cpp

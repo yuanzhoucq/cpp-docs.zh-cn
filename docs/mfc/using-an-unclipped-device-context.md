@@ -5,11 +5,11 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], unclipped device context
 ms.assetid: 9c020063-73da-4803-bf7b-2e1fd950c9ed
 ms.openlocfilehash: 0f129c0bfa5bd76df4ba34b117e7ed8aa08c2ecb
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270665"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62411807"
 ---
 # <a name="using-an-unclipped-device-context"></a>使用未剪辑的设备上下文
 
