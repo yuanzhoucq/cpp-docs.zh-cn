@@ -7,11 +7,11 @@ helpviewer_keywords:
 - R6030
 ms.assetid: 0238a6c3-a033-4046-8adc-f8f99d961153
 ms.openlocfilehash: 7f5c61d9b39b1d655bcbf3d42ea870370ddf2842
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50461615"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62400014"
 ---
 # <a name="c-runtime-error-r6030"></a>C 运行时错误 R6030
 
@@ -31,4 +31,4 @@ ms.locfileid: "50461615"
 
 如果你正在使用 C 运行时 (CRT)，但不是执行 CRT 启动代码，会发生此错误。 可能出现此错误，如果链接器开关[/ENTRY](../../build/reference/entry-entry-point-symbol.md)用于重写的默认开始地址，通常**mainCRTStartup**， **wmainCRTStartup**为控制台 exe 文件， **WinMainCRTStartup**或**wWinMainCRTStartup**为 Windows exe 文件，或 **_DllMainCRTStartup** dll。 除非在启动时调用上面的函数之一，C 运行时将不会初始化。 链接到 C 运行时库和使用普通时，默认情况下通常调用这些启动函数**主要**， **wmain**， **WinMain**，或**DllMain**入口点。
 
-还有可能出现此错误，另一个程序使用代码注入技术来捕获某些 DLL 库调用时。 某些具有侵入性安全程序使用此方法。 在 Visual Studio 2015 之前的 Visual c + + 版本，则可以使用静态链接的 CRT 库为解决问题，但不是建议这样做的安全性和应用程序更新的原因。 更正此问题可能需要最终用户操作。
+还有可能出现此错误，另一个程序使用代码注入技术来捕获某些 DLL 库调用时。 某些具有侵入性安全程序使用此方法。 在视觉对象的版本C++之前 Visual Studio 2015，则可以使用静态链接的 CRT 库为解决问题，但不是建议这样做的安全性和应用程序更新的原因。 更正此问题可能需要最终用户操作。

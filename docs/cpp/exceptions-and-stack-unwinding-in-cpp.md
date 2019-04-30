@@ -3,11 +3,11 @@ title: C++ 中的异常和堆栈展开
 ms.date: 11/04/2016
 ms.assetid: a1a57eae-5fc5-4c49-824f-3ce2eb8129ed
 ms.openlocfilehash: 5e094101557469a189311ce2c5344bb895696649
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330940"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62398883"
 ---
 # <a name="exceptions-and-stack-unwinding-in-c"></a>C++ 中的异常和堆栈展开
 
@@ -25,7 +25,7 @@ ms.locfileid: "51330940"
 
 ## <a name="stack-unwinding-example"></a>堆栈展开示例
 
-以下示例演示引发异常时如何展开堆栈。 线程执行将从 `C` 中的 throw 语句跳转到 `main` 中的 catch 语句，并在此过程中展开每个函数。 请注意创建 `Dummy` 对象的顺序，并且会在它们超出范围时将其销毁。 还请注意，除了包含 catch 语句的 `main` 之外，其他函数均未完成。 函数 `A` 绝不会从其对 `B()` 的调用返回，并且 `B` 绝不会从其对 `C()` 的调用返回。 如果取消注释 `Dummy` 指针和相应的 delete 语句的定义并运行程序，请注意绝不会删除该指针。 这说明了当函数不提供异常保证时会发生的情况。 有关详细信息，请参阅“如何：针对异常进行设计”。 如果注释掉 catch 语句，则可以观察当程序因未经处理的异常而终止时将发生的情况。
+以下示例演示引发异常时如何展开堆栈。 线程执行将从 `C` 中的 throw 语句跳转到 `main` 中的 catch 语句，并在此过程中展开每个函数。 请注意创建 `Dummy` 对象的顺序，并且会在它们超出范围时将其销毁。 还请注意，除了包含 catch 语句的 `main` 之外，其他函数均未完成。 函数 `A` 绝不会从其对 `B()` 的调用返回，并且 `B` 绝不会从其对 `C()` 的调用返回。 如果取消注释 `Dummy` 指针和相应的 delete 语句的定义并运行程序，请注意绝不会删除该指针。 这说明了当函数不提供异常保证时会发生的情况。 有关详细信息，请参阅“操作说明：针对异常进行设计。 如果注释掉 catch 语句，则可以观察当程序因未经处理的异常而终止时将发生的情况。
 
 ```cpp
 #include <string>

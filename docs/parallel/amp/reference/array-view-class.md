@@ -27,11 +27,11 @@ helpviewer_keywords:
 - array_view class
 ms.assetid: 7e7ec9bc-05a2-4372-b05d-752b50006c5a
 ms.openlocfilehash: e73639ffd11e08edb2fdb03471f2c6c88730f02d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57268464"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405555"
 ---
 # <a name="arrayview-class"></a>array_view 类
 
@@ -99,13 +99,13 @@ class array_view<const value_type, _Rank> : public _Array_view_base<_Rank, sizeo
 
 ### <a name="public-constants"></a>公共常量
 
-|name|描述|
+|名称|描述|
 |----------|-----------------|
 |[rank 常量](#rank)|将存储的秩`array_view`对象。|
 
 ### <a name="data-members"></a>数据成员
 
-|name|描述|
+|名称|描述|
 |----------|-----------------|
 |[extent](#extent)|获取定义 `extent` 对象形状的 `array_view` 对象。|
 |[source_accelerator_view](#source_accelerator_view)|获取[accelerator_view](accelerator-view-class.md)其中的数据源的`array_view`所在|
@@ -413,8 +413,7 @@ Concurrency::extent<_Rank> get_extent() const restrict(cpu, amp);
 
 ### <a name="return-value"></a>返回值
 
-
-  `extent` 对象的  `array_view` 对象。
+`extent` 对象的  `array_view` 对象。
 
 ##  <a name="get_ref"></a> get_ref
 

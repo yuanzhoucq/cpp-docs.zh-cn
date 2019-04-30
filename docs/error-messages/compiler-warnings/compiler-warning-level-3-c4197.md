@@ -7,15 +7,15 @@ helpviewer_keywords:
 - C4197
 ms.assetid: f766feef-82b0-4d81-8a65-33628c7db196
 ms.openlocfilehash: 15b2fba94bfc956775a1e454893e7509a32000e5
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51522618"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62402237"
 ---
 # <a name="compiler-warning-level-3-c4197"></a>编译器警告 （等级 3） C4197
 
-type： 忽略强制转换中的顶级 volatile 变量
+'type' : top-level volatile in cast is ignored
 
 编译器检测到强制转换为右值类型用限定[易失性](../../cpp/volatile-cpp.md)，或强制转换为易失性使用限定某些类型的右值类型。 根据 C 标准 (6.5.3)，与限定的类型相关联的属性是仅对左值表达式有意义。
 

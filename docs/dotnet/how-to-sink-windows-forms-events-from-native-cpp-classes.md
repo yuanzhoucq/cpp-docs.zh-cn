@@ -1,5 +1,5 @@
 ---
-title: 如何：接收来自本机 c + + 类的 Windows 窗体事件
+title: 如何：接收来自本机 Windows 窗体事件C++类
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,15 +9,15 @@ helpviewer_keywords:
 - event handling, Windows Forms in C++
 ms.assetid: 6e30ddee-d058-4c8d-9956-2a43d86f19d5
 ms.openlocfilehash: d02bcea4efce03c8fb11650d344468236737cfbd
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57738776"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62387261"
 ---
-# <a name="how-to-sink-windows-forms-events-from-native-c-classes"></a>如何：接收来自本机 c + + 类的 Windows 窗体事件
+# <a name="how-to-sink-windows-forms-events-from-native-c-classes"></a>如何：接收来自本机 Windows 窗体事件C++类
 
-你可以启用本机 c + + 类中引发的 Windows 窗体控件或其他使用 MFC 宏映射格式的窗体的托管事件接收回调。 接收器在视图和对话框中的事件是类似于执行操作的控件相同的任务。
+您可以启用本机C++类，以接收回调从托管 Windows 窗体控件或其他使用 MFC 宏映射格式的窗体中引发的事件。 接收器在视图和对话框中的事件是类似于执行操作的控件相同的任务。
 
 若要执行此操作，需要：
 

@@ -11,15 +11,15 @@ helpviewer_keywords:
 - multithreading [C++]
 ms.assetid: 24425b1f-5031-4c6b-aac7-017115a40e7c
 ms.openlocfilehash: 649e26c3f0704dfd6740b1a250613545e29316a3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50457728"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62407739"
 ---
 # <a name="multithreading-support-for-older-code-visual-c"></a>针对旧代码的多线程支持 (Visual C++)
 
-Visual c + + 可以具有多个并发线程的同时运行的执行。 使用多线程处理，可以派生出后台任务、 管理同时发生的输入流、 管理用户界面，以及更多内容。
+Visual C++ ，你可以同时运行的执行的多个并发线程。 使用多线程处理，可以派生出后台任务、 管理同时发生的输入流、 管理用户界面，以及更多内容。
 
 ## <a name="in-this-section"></a>本节内容
 
@@ -30,7 +30,7 @@ Visual c + + 可以具有多个并发线程的同时运行的执行。 使用多
 描述什么是进程和线程以及 MFC 的方法的多线程处理是。
 
 [多线程和区域设置](multithreading-and-locales.md)<br/>
-讨论如何使用 C 运行时库和 c + + 标准库中的多线程应用程序的区域设置功能时出现的问题。
+讨论如何使用 C 运行时库的区域设置功能时出现的问题和C++在多线程应用程序中的标准库。
 
 ## <a name="related-sections"></a>相关章节
 

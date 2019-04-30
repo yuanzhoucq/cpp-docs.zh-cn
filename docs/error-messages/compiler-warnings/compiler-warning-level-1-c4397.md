@@ -7,17 +7,17 @@ helpviewer_keywords:
 - C4397
 ms.assetid: 6346fdc2-dbbf-4fba-803a-32b0d0a707be
 ms.openlocfilehash: 4ad690d78c1544adbe365a35ba3b5921c883631e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498759"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62365385"
 ---
 # <a name="compiler-warning-level-1-c4397"></a>编译器警告（等级 1）C4397
 
 已忽略 DefaultCharSetAttribute
 
-<xref:System.Runtime.InteropServices.DefaultCharSetAttribute> Visual c + + 编译器将忽略。 若要指定为 DLL 设置的字符，使用 DllImport 的 CharSet 选项。 有关详细信息，请参阅[使用 c + + 互操作 (隐式 PInvoke)](../../dotnet/using-cpp-interop-implicit-pinvoke.md)。
+<xref:System.Runtime.InteropServices.DefaultCharSetAttribute> 视觉对象将忽略C++编译器。 若要指定为 DLL 设置的字符，使用 DllImport 的 CharSet 选项。 有关详细信息，请参阅[使用C++互操作 (隐式 PInvoke)](../../dotnet/using-cpp-interop-implicit-pinvoke.md)。
 
 ## <a name="example"></a>示例
 

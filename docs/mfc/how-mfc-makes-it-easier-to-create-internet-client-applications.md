@@ -7,11 +7,11 @@ helpviewer_keywords:
 - MFC, Internet applications
 ms.assetid: 94437b3f-f15c-437d-b5fd-264a2efec9ab
 ms.openlocfilehash: ffeed3a844fb86acf1bf8c5181c59529824c27f9
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57300734"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405750"
 ---
 # <a name="how-mfc-makes-it-easier-to-create-internet-client-applications"></a>MFC 如何简化 Internet 客户端应用程序的创建
 

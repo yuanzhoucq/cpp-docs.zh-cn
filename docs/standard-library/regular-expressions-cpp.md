@@ -7,34 +7,34 @@ helpviewer_keywords:
 - regular expressions
 ms.assetid: aafe202a-1d96-4b36-a270-d676dfd3c51c
 ms.openlocfilehash: dafbe7c7ba10db2b0f34fdc6065c1475d63be284
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50443455"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62369028"
 ---
 # <a name="regular-expressions-c"></a>正则表达式 (C++)
 
-C + + 标准库支持多个正则表达式语法。 使用正则表达式时，本主题讨论可用的语法变体。
+C++标准库支持多个正则表达式语法。 使用正则表达式时，本主题讨论可用的语法变体。
 
 ## <a name="regexgrammar"></a>正则表达式语法
 
 若要使用的正则表达式语法通过指定通过使用其中一个`std::regex_constants::syntax_option_type`枚举值。 Std::regex_constants 中定义了这些正则表达式语法：
 
-- `ECMAScript`： 这是由 JavaScript 和.NET 语言的语法最接近。
-- `basic`： 的 POSIX 基本正则表达式或 BRE。
-- `extended`: POSIX 扩展正则表达式或 ERE。
-- `awk`： 这是`extended`，但它具有附加的非打印字符的转义符。
-- `grep`： 这是`basic`，但它还允许换行符 ('\n') 字符来分隔分支结构。
-- `egrep`： 这是`extended`，但它还允许换行字符来分隔分支结构。
+- `ECMAScript`：这是由 JavaScript 和.NET 语言的语法最接近。
+- `basic`：POSIX 基本正则表达式或 BRE。
+- `extended`：POSIX 扩展正则表达式或 ERE。
+- `awk`：这是`extended`，但它具有附加的非打印字符的转义符。
+- `grep`：这是`basic`，但它还允许换行符 ('\n') 字符来分隔分支结构。
+- `egrep`：这是`extended`，但它还允许换行字符来分隔分支结构。
 
 默认情况下，如果指定没有语法，`ECMAScript`假定。 可以指定只有一个语法。
 
 语法，除了可以应用多个标志：
-- `icase`： 匹配时忽略大小写。
-- `nosubs`： 忽略标记匹配项 （即，括号中的表达式）;不存储任何替换项。
-- `optimize`： 生成匹配的速度更快，以更高版本构造时可能费用。
-- `collate`： 使用区分区域设置的排序规则序列 （例如，窗体"[a-z]"的范围）。
+- `icase`：匹配时忽略大小写。
+- `nosubs`：忽略标记匹配项 （即，括号中的表达式）;不存储任何替换项。
+- `optimize`：请以更高版本构造时可能费用更快地匹配。
+- `collate`：使用区分区域设置的排序规则序列 （例如，窗体"[a-z]"的范围）。
 
 零个或多个标志可能会与指定正则表达式引擎行为的语法结合使用。 如果仅指定标志，`ECMAScript`语法，假定。
 
@@ -304,7 +304,7 @@ C + + 标准库支持多个正则表达式语法。 使用正则表达式时，�
 |“\s”|“[[:s:]]”|“[[:space:]]”|
 |“\S”|“[^[:s:]]”|“[^[:space:]]”|
 |“\w”|“[[:w:]]”|"[a-zA-Z0-9_]"\*|
-|“\W”|“[^[:w:]]”|"[^ a-zA-Z0-9_]"\*|
+|“\W”|“[^[:w:]]”|"[^a-zA-Z0-9_]"\*|
 
 \*ASCII 字符集
 
@@ -393,7 +393,7 @@ C + + 标准库支持多个正则表达式语法。 使用正则表达式时，�
 
 在 `ECMAScript` 中，下列字符具有特殊含义：
 
-- ^  $  \  .  \*  +  ?  (  )  \[  ]  {  }&#124;
+- ^  $  \  .  \*  +  ?  (  )  \[  ]  {  }  &#124;
 
 在 `basic` 和 `grep` 中，下列字符具有特殊含义：
 
@@ -480,7 +480,7 @@ Unicode 转义序列包含一个反斜杠，后跟字母“u”，然后再跟�
 |“$&”|"&"|与整个正则表达式相匹配的字符序列 (`[match[0].first, match[0].second)`)|
 |"$$"||"$"|
 ||"\\&"|"&"|
-|"$\`"（美元符号后跟反引号）||与正则表达式相匹配的子序列之前的字符序列 (`[match.prefix().first, match.prefix().second)`)|
+|"$\`"（美元符号后跟反引号） | |与正则表达式匹配的子序列之前的字符序列 (`[match.prefix().first, match.prefix().second)`)|
 |“$'”（美元符号后跟正撇号）||与正则表达式相匹配的子序列之后的字符序列 (`[match.suffix().first, match.suffix().second)`)|
 |“$n”|“\n”|与位置处的捕获组匹配的字符序列`n`，其中`n`是介于 0 到 9 之间的数字 (`[match[n].first, match[n].second)`)|
 ||"\\\n"|“\n”|

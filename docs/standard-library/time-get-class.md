@@ -39,11 +39,11 @@ helpviewer_keywords:
 - std::time_get [C++], get_year
 ms.assetid: 869d5f5b-dbab-4628-8333-bdea7e272023
 ms.openlocfilehash: df5a6da3995b1485585a3105ac027f19a27dc8eb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505178"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412028"
 ---
 # <a name="timeget-class"></a>time_get 类
 
@@ -220,7 +220,7 @@ iter_type first,
 *first*<br/>
 一个输入迭代器，它指示要转换的序列的开始位置。
 
-*最后一个*<br/>
+*last*<br/>
 一个输入迭代器，它指示序列的结束位置。
 
 *iosbase*<br/>
@@ -313,7 +313,7 @@ virtual iter_type do_get_date(iter_type first,
 *first*<br/>
 确定待转换序列开头位置的输入迭代器。
 
-*最后一个*<br/>
+*last*<br/>
 确定待转换序列末尾位置的输入迭代器。
 
 *iosbase*<br/>
@@ -364,7 +364,7 @@ virtual iter_type do_get_monthname(iter_type first,
 *first*<br/>
 确定待转换序列开头位置的输入迭代器。
 
-*最后一个*<br/>
+*last*<br/>
 确定待转换序列末尾位置的输入迭代器。
 
 *iosbase*<br/>
@@ -407,7 +407,7 @@ virtual iter_type do_get_time(iter_type first,
 *first*<br/>
 确定待转换序列开头位置的输入迭代器。
 
-*最后一个*<br/>
+*last*<br/>
 确定待转换序列末尾位置的输入迭代器。
 
 *iosbase*<br/>
@@ -458,7 +458,7 @@ virtual iter_type do_get_weekday(iter_type first,
 *first*<br/>
 确定待转换序列开头位置的输入迭代器。
 
-*最后一个*<br/>
+*last*<br/>
 确定待转换序列末尾位置的输入迭代器。
 
 *iosbase*<br/>
@@ -501,7 +501,7 @@ virtual iter_type do_get_year(iter_type first,
 *first*<br/>
 确定待转换序列开头位置的输入迭代器。
 
-*最后一个*<br/>
+*last*<br/>
 确定待转换序列末尾位置的输入迭代器。
 
 *iosbase*<br/>
@@ -556,7 +556,7 @@ iter_type get(
 *first*<br/>
 一个输入迭代器，它指示从何处开始转换序列。
 
-*最后一个*<br/>
+*last*<br/>
 一个输入迭代器，它指示在何处结束序列转换。
 
 *iosbase*<br/>
@@ -590,7 +590,7 @@ iter_type get(
 
 第二个成员函数调用以 `[fmt_first, fmt_last)` 分隔的格式的控件下的 `do_get`。 它将格式视为一个字段序列，其中每个字段确定了以 `[first, last)` 分隔的 0 个或多个输入元素的转换。 它返回一个迭代器，指定第一个未转换的元素。 有三种类型的字段：
 
-中的百分号 （%） 格式后, 跟一个可选修饰符*mod*集中跟 [EOQ #] 后, 跟一个转换说明符*fmt*，将替换*第一个*与返回的值`do_get(first, last, iosbase, state, ptm, fmt, mod)`. 设置转换失败`ios_base::failbit`中*状态*，并返回。
+百分号 （%）在格式中后, 跟一个可选修饰符*mod*集中跟 [EOQ #] 后, 跟一个转换说明符*fmt*，将替换*第一个*返回的值与`do_get(first, last, iosbase, state, ptm, fmt, mod)`. 设置转换失败`ios_base::failbit`中*状态*，并返回。
 
 格式中的空白元素会跳过零个或多个输入空白元素。
 
@@ -613,7 +613,7 @@ iter_type get_date(iter_type first,
 *first*<br/>
 确定待转换序列开头位置的输入迭代器。
 
-*最后一个*<br/>
+*last*<br/>
 确定待转换序列末尾位置的输入迭代器。
 
 *iosbase*<br/>
@@ -707,7 +707,7 @@ iter_type get_monthname(iter_type first,
 *first*<br/>
 确定待转换序列开头位置的输入迭代器。
 
-*最后一个*<br/>
+*last*<br/>
 确定待转换序列末尾位置的输入迭代器。
 
 *iosbase*<br/>
@@ -799,7 +799,7 @@ iter_type get_time(iter_type first,
 *first*<br/>
 确定待转换序列开头位置的输入迭代器。
 
-*最后一个*<br/>
+*last*<br/>
 确定待转换序列末尾位置的输入迭代器。
 
 *iosbase*<br/>
@@ -880,7 +880,7 @@ iter_type get_weekday(iter_type first,
 *first*<br/>
 确定待转换序列开头位置的输入迭代器。
 
-*最后一个*<br/>
+*last*<br/>
 确定待转换序列末尾位置的输入迭代器。
 
 *iosbase*<br/>
@@ -957,7 +957,7 @@ iter_type get_year(iter_type first,
 *first*<br/>
 确定待转换序列开头位置的输入迭代器。
 
-*最后一个*<br/>
+*last*<br/>
 确定待转换序列末尾位置的输入迭代器。
 
 *iosbase*<br/>
@@ -1047,11 +1047,11 @@ explicit time_get(size_t refs = 0);
 
 可能的值*refs*参数和其重要性：
 
-- 0：对象的生存期由包含该对象的区域设置管理。
+- 0:对象的生存期由包含它的区域设置管理。
 
-- 1：必须手动管理对象的生存期。
+- 1:必须手动管理的对象的生存期。
 
-- \> 1： 未定义这些值。
+- \> 1:未定义这些值。
 
 由于该析构函数受到保护，可能没有直接的示例。
 

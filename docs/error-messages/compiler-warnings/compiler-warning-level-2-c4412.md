@@ -7,15 +7,15 @@ helpviewer_keywords:
 - C4412
 ms.assetid: f28dc531-1a98-497b-a366-0a13e1bc81c7
 ms.openlocfilehash: 2c9d50fc3433321c0ca92366a512892212545754
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50665512"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62402432"
 ---
 # <a name="compiler-warning-level-2-c4412"></a>编译器警告（等级 2）C4412
 
-> '*函数*： 函数签名包含类型*类型*';C + + 对象是不安全纯代码之间传递与混合或本机。
+> '*函数*： 函数签名包含类型*类型*';C++对象是不安全纯代码之间传递与混合或本机。
 
 ## <a name="remarks"></a>备注
 

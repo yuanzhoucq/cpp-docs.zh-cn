@@ -23,11 +23,11 @@ helpviewer_keywords:
 - std::collate [C++], transform
 ms.assetid: 92168798-9628-4a2e-be6e-fa62dcd4d6a6
 ms.openlocfilehash: 21d5825f8d9ea00359f2aa1c87291b831d1f330f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630108"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405165"
 ---
 # <a name="collate-class"></a>collate 类
 
@@ -118,11 +118,11 @@ const char* _Locname,
 
 可能的值 *_Refs*参数和其重要性：
 
-- 0：对象的生存期由包含该对象的区域设置管理。
+- 0:对象的生存期由包含它的区域设置管理。
 
-- 1：必须手动管理对象的生存期。
+- 1:必须手动管理的对象的生存期。
 
-- \> 1： 未定义这些值。
+- \> 1:未定义这些值。
 
 构造函数初始化其基对象与**区域设置::**[方面](../standard-library/locale-class.md#facet_class)(`_Refs`)。
 
@@ -139,16 +139,16 @@ int compare(const CharType* first1,
 
 ### <a name="parameters"></a>参数
 
-*First1*<br/>
+*first1*<br/>
 指向第一个序列中要比较的第一个元素的指针。
 
-*Last1*<br/>
+*last1*<br/>
 指向第一个序列中要比较的最后一个元素的指针。
 
-*First2*<br/>
+*first2*<br/>
 指向第二个序列中要比较的第一个元素的指针。
 
-*Last2*<br/>
+*last2*<br/>
 指向第二个序列中要比较的最后一个元素的指针。
 
 ### <a name="return-value"></a>返回值
@@ -205,16 +205,16 @@ virtual int do_compare(const CharType* first1,
 
 ### <a name="parameters"></a>参数
 
-*First1*<br/>
+*first1*<br/>
 指向第一个序列中要比较的第一个元素的指针。
 
-*Last1*<br/>
+*last1*<br/>
 指向第一个序列中要比较的最后一个元素的指针。
 
-*First2*<br/>
+*first2*<br/>
 指向第二个序列中要比较的第一个元素的指针。
 
-*Last2*<br/>
+*last2*<br/>
 指向第二个序列中要比较的最后一个元素的指针。
 
 ### <a name="return-value"></a>返回值
@@ -248,7 +248,7 @@ virtual long do_hash(const CharType* first, const CharType* last) const;
 *first*<br/>
 一个指向序列中具有待定值的第一个字符的指针。
 
-*最后一个*<br/>
+*last*<br/>
 一个指向序列中具有待定值的最后一个字符的指针。
 
 ### <a name="return-value"></a>返回值
@@ -276,7 +276,7 @@ virtual string_type do_transform(const CharType* first, const CharType* last) co
 *first*<br/>
 指向序列中要转换的第一个字符的指针。
 
-*最后一个*<br/>
+*last*<br/>
 指向序列中要转换的最后一个字符的指针。
 
 ### <a name="return-value"></a>返回值
@@ -304,7 +304,7 @@ long hash(const CharType* first, const CharType* last) const;
 *first*<br/>
 一个指向序列中具有待定值的第一个字符的指针。
 
-*最后一个*<br/>
+*last*<br/>
 一个指向序列中具有待定值的最后一个字符的指针。
 
 ### <a name="return-value"></a>返回值
@@ -374,7 +374,7 @@ string_type transform(const CharType* first, const CharType* last) const;
 *first*<br/>
 指向序列中要转换的第一个字符的指针。
 
-*最后一个*<br/>
+*last*<br/>
 指向序列中要转换的最后一个字符的指针。
 
 ### <a name="return-value"></a>返回值

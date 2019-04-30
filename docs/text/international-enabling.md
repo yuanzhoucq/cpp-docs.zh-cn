@@ -9,15 +9,15 @@ helpviewer_keywords:
 - Unicode [C++], enabling
 ms.assetid: b077f4ca-5865-40ef-a46e-d9e4d686ef21
 ms.openlocfilehash: 22f2dba49e894e93cb6791d76a65730f3269199e
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57748003"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62410611"
 ---
 # <a name="international-enabling"></a>国际支持
 
-大多数传统的 C 和 c + + 代码作出有关字符和字符串操作不起作用于国际应用程序。 MFC 和运行时库支持 Unicode 或 MBCS，而是仍让您做什么工作。 引导您，本部分介绍在 Visual c + + 中的"国际支持"的含义：
+大多数传统 C 和C++代码作出有关字符和字符串操作不起作用于国际应用程序。 MFC 和运行时库支持 Unicode 或 MBCS，而是仍让您做什么工作。 引导您，本部分介绍的"国际支持"的含义的视觉对象中C++:
 
 - Unicode 和 MBCS MFC 函数参数列表中的可移植数据类型通过启用和返回类型。 这些类型有条件地定义以适当的方式，具体取决于是否在生成定义的符号`_UNICODE`或符号`_MBCS`（这意味着 DBCS）。 应用程序后，这两个符号取决于你的生成定义自动链接 MFC 库的不同变体。
 

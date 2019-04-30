@@ -6,11 +6,11 @@ helpviewer_keywords:
 - C++ Standard Library, iterator conventions
 ms.assetid: 2f746be7-b37d-4bfc-bf05-be4336ca982f
 ms.openlocfilehash: 3b6713a80244d7063baac2c75ffead76fe93facc
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326494"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62396132"
 ---
 # <a name="iterators"></a>Iterators
 
@@ -86,7 +86,7 @@ for (auto num : vec)
 > [!NOTE]
 > 可以使用范围 for 循环来避免显式使用迭代器。 有关详细信息，请参阅[基于范围的 for 语句](../cpp/range-based-for-statement-cpp.md)。
 
-Visual c + + 现在提供了检查迭代器和调试迭代器，以确保不会覆盖容器的边界。 有关详细信息，请参阅[经过检查的迭代器](../standard-library/checked-iterators.md)和[调试迭代器支持](../standard-library/debug-iterator-support.md)。
+VisualC++现在提供经过检查的迭代器和调试迭代器，以确保不会覆盖容器的边界。 有关详细信息，请参阅[经过检查的迭代器](../standard-library/checked-iterators.md)和[调试迭代器支持](../standard-library/debug-iterator-support.md)。
 
 ## <a name="see-also"></a>请参阅
 

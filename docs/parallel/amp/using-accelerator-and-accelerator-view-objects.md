@@ -3,19 +3,19 @@ title: 使用 accelerator 和 accelerator_view 对象
 ms.date: 11/04/2016
 ms.assetid: 18f0dc66-8236-4420-9f46-1a14f2c3fba1
 ms.openlocfilehash: 05ca53d075867fefa43f7471bb795040d075274e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57272890"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405386"
 ---
 # <a name="using-accelerator-and-acceleratorview-objects"></a>使用 accelerator 和 accelerator_view 对象
 
-可以使用[accelerator](../../parallel/amp/reference/accelerator-class.md)并[accelerator_view](../../parallel/amp/reference/accelerator-view-class.md)类来指定设备或仿真器上运行 c + + AMP 代码。 系统可能有多个设备或仿真程序的内存量、 共享的内存支持、 调试支持或双精度支持不同的。 C + + Accelerated Massive Parallelism (c + + AMP) 提供了可用于检查可用快捷键设置一个默认值，指定对 parallel_for_each，多个调用多个加速器视图，执行特殊调试任务的 Api。
+可以使用[accelerator](../../parallel/amp/reference/accelerator-class.md)并[accelerator_view](../../parallel/amp/reference/accelerator-view-class.md)类来指定设备或仿真器以运行你C++上的 AMP 代码。 系统可能有多个设备或仿真程序的内存量、 共享的内存支持、 调试支持或双精度支持不同的。 C++Accelerated Massive Parallelism (C++ AMP) 提供了可用来检查可用快捷键的 Api 设置一个默认值，指定对 parallel_for_each，多个调用多个加速器视图和执行特殊调试任务。
 
 ## <a name="using-the-default-accelerator"></a>使用默认快捷键
 
-C + + AMP 运行时会选择默认快捷键，除非编写代码选择一个。 运行时选择默认快捷键，如下所示：
+C++ AMP 运行时会选择默认快捷键，除非编写代码选择一个。 运行时选择默认快捷键，如下所示：
 
 1. 如果在调试模式下运行应用程序，加速器支持调试。
 
@@ -96,7 +96,7 @@ void pick_with_most_memory()
 
 共享的内存是在 CPU 和加速器可以访问的内存。 使用共享内存消除或显著降低 CPU 和快捷键之间复制数据的开销。 尽管共享内存，但不能由 CPU 和加速器同时访问，这样会导致未定义的行为。 快捷键属性[supports_cpu_shared_memory](reference/accelerator-class.md#supports_cpu_shared_memory)返回**true**如果快捷键支持共享的内存，并且[default_cpu_access_type](reference/accelerator-class.md#default_cpu_access_type)属性获取默认值[access_type](reference/concurrency-namespace-enums-amp.md#access_type)上分配的内存`accelerator`— 例如，**数组**与关联`accelerator`，或`array_view`上访问的对象`accelerator`.
 
-C + + AMP 运行时会自动选择最佳默认`access_type`为每个`accelerator`，但读取共享内存的性能特征 （带宽和延迟） 可能比不上专用 （非共享） 快捷键内存从编写从和 / 或 CPU，CPU。 如果共享的内存以及读取和写入从 CPU 的专用内存执行，运行时默认为`access_type_read_write`; 否则为则运行时会选择更保守的默认`access_type`，并允许此应用可以重写它如果内存访问计算内核模式受益于其他`access_type`。
+C++ AMP 运行时自动选择最佳默认`access_type`为每个`accelerator`，但共享内存的性能特征 （带宽和延迟） 可能比不上专用 （非共享） 快捷键内存时正在从 CPU、 写入和 / 或 CPU、 读取。 如果共享的内存以及读取和写入从 CPU 的专用内存执行，运行时默认为`access_type_read_write`; 否则为则运行时会选择更保守的默认`access_type`，并允许此应用可以重写它如果内存访问计算内核模式受益于其他`access_type`。
 
 下面的代码示例演示如何确定是否默认快捷键支持共享的内存，然后重写默认访问类型并创建`accelerator_view`从它。
 
@@ -170,13 +170,13 @@ bool pick_accelerator()
 
 - [accelerator::direct3d_ref 数据成员](reference/accelerator-class.md#direct3d_ref):此单线程的快捷键使用 CPU 上的软件来模拟泛型图形卡。 使用默认情况下进行调试，但并不用于生产，因为它是比硬件快捷键慢。 此外，它仅在 DirectX SDK 和 Windows SDK 中提供，它是不太可能安装在客户的计算机上。 有关详细信息，请参阅[调试 GPU 代码](/visualstudio/debugger/debugging-gpu-code)。
 
-- [accelerator::direct3d_warp 数据成员](reference/accelerator-class.md#direct3d_warp):此快捷键提供用于使用流式处理 SIMD 扩展 (SSE) 的多核 Cpu 上执行 c + + AMP 代码的回退解决方案。
+- [accelerator::direct3d_warp 数据成员](reference/accelerator-class.md#direct3d_warp):此加速器提供的回退解决方案，用于执行C++上使用流式处理 SIMD 扩展 (SSE) 的多核 Cpu 的 AMP 代码。
 
-- [accelerator:: cpu_accelerator 数据成员](reference/accelerator-class.md#cpu_accelerator):可用于此快捷键设置暂存数组。 它不能执行 c + + AMP 代码。 有关详细信息，请参阅[c + + AMP 中的临时数组](https://blogs.msdn.microsoft.com/nativeconcurrency/2011/11/09/staging-arrays-in-c-amp/)本机代码博客中的并行编程上发布。
+- [accelerator:: cpu_accelerator 数据成员](reference/accelerator-class.md#cpu_accelerator):可用于此快捷键设置暂存数组。 它不能执行C++AMP 代码。 有关详细信息，请参阅[临时数组C++AMP](https://blogs.msdn.microsoft.com/nativeconcurrency/2011/11/09/staging-arrays-in-c-amp/)本机代码博客中的并行编程上发布。
 
 ## <a name="interoperability"></a>互操作性
 
-C + + AMP 运行时支持之间的互操作性`accelerator_view`类和 Direct3D [ID3D11Device 接口](/windows/desktop/api/d3d11/nn-d3d11-id3d11device)。 [Create_accelerator_view](reference/concurrency-direct3d-namespace-functions-amp.md#create_accelerator_view)方法采用`IUnknown`接口，并返回`accelerator_view`对象。 [Get_device](reference/concurrency-direct3d-namespace-functions-amp.md#get_device)方法采用`accelerator_view`对象，并返回`IUnknown`接口。
+C++ AMP 运行时支持之间的互操作性`accelerator_view`类和 Direct3D [ID3D11Device 接口](/windows/desktop/api/d3d11/nn-d3d11-id3d11device)。 [Create_accelerator_view](reference/concurrency-direct3d-namespace-functions-amp.md#create_accelerator_view)方法采用`IUnknown`接口，并返回`accelerator_view`对象。 [Get_device](reference/concurrency-direct3d-namespace-functions-amp.md#get_device)方法采用`accelerator_view`对象，并返回`IUnknown`接口。
 
 ## <a name="see-also"></a>请参阅
 

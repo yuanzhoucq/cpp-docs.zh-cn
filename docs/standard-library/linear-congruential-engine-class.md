@@ -7,11 +7,11 @@ helpviewer_keywords:
 - linear_congruential_engine class
 ms.assetid: 30e00ca6-1933-4701-9561-54f3e810a5a1
 ms.openlocfilehash: 83306e47995f652014682d6bcc94966aab75c062
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568142"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62413250"
 ---
 # <a name="linearcongruentialengine-class"></a>linear_congruential_engine 类
 
@@ -49,13 +49,13 @@ class linear_congruential_engine{
 无符号的整数结果类型。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
 
 *A*<br/>
-**乘数**。 **前置条件**：请参阅“备注”部分。
+**乘数**。 **不满足前提条件**:请参阅备注部分。
 
 *C*<br/>
-**递增**。 **前置条件**：请参阅“备注”部分。
+**递增**。 **不满足前提条件**:请参阅备注部分。
 
 *M*<br/>
-**取模**。 **前置条件**：请参阅“备注”。
+**取模**。 **不满足前提条件**:请参阅备注。
 
 ## <a name="members"></a>成员
 

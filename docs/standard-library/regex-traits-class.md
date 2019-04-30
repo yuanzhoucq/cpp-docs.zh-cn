@@ -39,11 +39,11 @@ helpviewer_keywords:
 - std::regex_traits [C++], getloc
 ms.assetid: bc5a5eed-32fc-4eb7-913d-71c42e729e81
 ms.openlocfilehash: 80739d3d8f4bfd38dc3d252a5f3d6308653a7bb9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50484053"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62369119"
 ---
 # <a name="regextraits-class"></a>regex_traits 类
 
@@ -95,9 +95,9 @@ class regex_traits
 |[lookup_collatename](#lookup_collatename)|将序列映射到排序规则元素。|
 |[transform](#transform)|转换为等效顺序序列。|
 |[transform_primary](#transform_primary)|转换为不区分大小写的顺序等效序列。|
-|[翻译](#translate)|转换为等效的匹配元素。|
+|[translate](#translate)|转换为等效的匹配元素。|
 |[translate_nocase](#translate_nocase)|转换为不区分大小写的等效匹配序列。|
-|[value](#value)|将元素转换为数字值。|
+|[值](#value)|将元素转换为数字值。|
 
 ## <a name="requirements"></a>要求
 
@@ -221,7 +221,7 @@ locale_type imbue(locale_type loc);
 
 ### <a name="parameters"></a>参数
 
-*Loc*<br/>
+*loc*<br/>
 要存储的区域设置对象。
 
 ### <a name="remarks"></a>备注
@@ -241,7 +241,7 @@ bool isctype(char_type ch, char_class_type cls) const;
 *ch*<br/>
 要测试的元素。
 
-*符合 cls*<br/>
+*cls*<br/>
 要测试的类。
 
 ### <a name="remarks"></a>备注
@@ -292,7 +292,7 @@ char_class_type lookup_classname(FwdIt first, FwdIt last) const;
 *first*<br/>
 要查找的序列的开头。
 
-*最后一个*<br/>
+*last*<br/>
 要查找的序列的结尾。
 
 ### <a name="remarks"></a>备注
@@ -317,7 +317,7 @@ string_type lookup_collatename(FwdIt first, FwdIt last) const;
 *first*<br/>
 要查找的序列的开头。
 
-*最后一个*<br/>
+*last*<br/>
 要查找的序列的结尾。
 
 ### <a name="remarks"></a>备注
@@ -376,7 +376,7 @@ string_type transform(FwdIt first, FwdIt last) const;
 *first*<br/>
 要转换的序列的开头。
 
-*最后一个*<br/>
+*last*<br/>
 要转换的序列的结尾。
 
 ### <a name="remarks"></a>备注
@@ -397,7 +397,7 @@ string_type transform_primary(FwdIt first, FwdIt last) const;
 *first*<br/>
 要转换的序列的开头。
 
-*最后一个*<br/>
+*last*<br/>
 要转换的序列的结尾。
 
 ### <a name="remarks"></a>备注

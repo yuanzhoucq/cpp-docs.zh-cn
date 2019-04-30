@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Thread Local Storage [C++]
 ms.assetid: 80801907-d792-45ca-b776-df0cf2e9f197
 ms.openlocfilehash: f5a75f7964b0291a980b22d36e7ce6a0a87d3dc3
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293454"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62362714"
 ---
 # <a name="thread-local-storage-tls"></a>线程本地存储 (TLS)
 
@@ -22,9 +22,9 @@ ms.locfileid: "57293454"
 
 ##  <a name="_core_compiler_implementation_for_tls"></a> TLS 的编译器实现
 
-**C + + 11:**`thread_local`存储类说明符是指定对象的线程本地存储区和类成员的建议的方法。 有关详细信息，请参阅[存储类 （c + +）](../cpp/storage-classes-cpp.md)。
+**C + + 11:**`thread_local`存储类说明符是指定对象的线程本地存储区和类成员的建议的方法。 有关详细信息，请参阅[存储类 (C++)](../cpp/storage-classes-cpp.md)。
 
-Visual c + + 还提供了一个特定于 Microsoft 的属性，[线程](../cpp/thread.md)，作为扩展的存储类修饰符。 使用 **__declspec**关键字来声明**线程**变量。 例如，以下代码声明了一个整数线程局部变量，并用一个值对其进行初始化：
+VisualC++还提供了特定于 Microsoft 的属性[线程](../cpp/thread.md)，作为扩展的存储类修饰符。 使用 **__declspec**关键字来声明**线程**变量。 例如，以下代码声明了一个整数线程局部变量，并用一个值对其进行初始化：
 
 ```
 __declspec( thread ) int tls_i = 1;
@@ -40,7 +40,7 @@ __declspec( thread ) int tls_i = 1;
     __declspec( thread )void func();     // This will generate an error.
     ```
 
-- **线程**可能仅在具有数据项上指定修饰符**静态**扩展盘区。 这包括全局数据对象 (同时**静态**并**extern**)，本地静态对象和 c + + 类的静态数据成员。 不能使用声明自动数据对象**线程**属性。 以下代码生成编译器错误：
+- **线程**可能仅在具有数据项上指定修饰符**静态**扩展盘区。 这包括全局数据对象 (同时**静态**并**extern**)，本地静态对象和静态数据成员的C++类。 不能使用声明自动数据对象**线程**属性。 以下代码生成编译器错误：
 
     ```
     void func1()
@@ -68,7 +68,7 @@ __declspec( thread ) int tls_i = 1;
     char __declspec( thread ) *ch;        // Error
     ```
 
-- 由于 c + + 声明对象使用**线程**允许特性，以下两个示例在语义上等效：
+- 由于声明的C++对象使用**线程**允许特性，以下两个示例在语义上等效：
 
     ```
     __declspec( thread ) class B

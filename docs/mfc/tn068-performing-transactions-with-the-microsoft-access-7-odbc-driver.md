@@ -1,5 +1,5 @@
 ---
-title: TN068：使用 Microsoft Access 7 ODBC 驱动程序执行事务
+title: TN068:使用 Microsoft Access 7 ODBC 驱动程序执行事务
 ms.date: 06/28/2018
 f1_keywords:
 - vc.data.odbc
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - transactions [MFC], Microsoft Access
 ms.assetid: d3f8f5d9-b118-4194-be36-a1aefb630c45
 ms.openlocfilehash: 3121587f85c4ea19cc92e39569008b597d24ea58
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50428699"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62363786"
 ---
-# <a name="tn068-performing-transactions-with-the-microsoft-access-7-odbc-driver"></a>TN068：使用 Microsoft Access 7 ODBC 驱动程序执行事务
+# <a name="tn068-performing-transactions-with-the-microsoft-access-7-odbc-driver"></a>TN068:使用 Microsoft Access 7 ODBC 驱动程序执行事务
 
 > [!NOTE]
 > 以下技术说明在首次包括在联机文档中后未更新。 因此，某些过程和主题可能已过时或不正确。 要获得最新信息，建议你在联机文档索引中搜索热点话题。
