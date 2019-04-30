@@ -5,11 +5,11 @@ helpviewer_keywords:
 - output streams [C++], member functions
 ms.assetid: 38aaf710-8035-4a34-a0c4-123a5327f28a
 ms.openlocfilehash: eba627c69437754a9c0a819167443aa00c025fef
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50621762"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62370835"
 ---
 # <a name="output-file-stream-member-functions"></a>输出文件流成员函数
 
@@ -109,7 +109,7 @@ int main( )
 |[good](basic-ios-class.md#good)|如果没有任何错误条件（不可恢复的或其他的条件），且未设置文件结束标志，则返回 **true**。|
 |[eof](basic-ios-class.md#eof)|在文件结尾时返回 **true**。|
 |[clear](basic-ios-class.md#clear)|设置内部错误状态。 如果通过默认参数调用，则它会清除所有错误位。|
-|[rdstate](basic-ios-class.md #rdstate|返回当前错误状态。|
+|[rdstate](basic-ios-class.md#rdstate|返回当前错误状态。|
 
 重载 **!** 运算符重载来执行相同的功能`fail`函数。 因此表达式：
 

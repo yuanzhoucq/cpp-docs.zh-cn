@@ -134,11 +134,11 @@ helpviewer_keywords:
 - CPane [MFC], m_recentDockInfo
 ms.assetid: 5c651a64-3c79-4d94-9676-45f6402a6bc5
 ms.openlocfilehash: b660d181aada8abeb61b397fb30b097897e74f65
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57326772"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62373149"
 ---
 # <a name="cpane-class"></a>CPane Class
 
@@ -237,7 +237,7 @@ class CPane : public CBasePane
 
 ### <a name="data-members"></a>数据成员
 
-|name|描述|
+|名称|描述|
 |----------|-----------------|
 |[CPane::m_bHandleMinSize](#m_bhandleminsize)|启用窗格的最小大小一致的处理。|
 |[CPane::m_recentDockInfo](#m_recentdockinfo)|包含新的停靠信息。|
@@ -1106,7 +1106,7 @@ BOOL MoveByAlignment(
 
 *dwAlignment*可以是任何以下值：
 
-|值|描述|
+|“值”|描述|
 |-----------|-----------------|
 |CBRS_ALIGN_TOP|使窗格停靠到框架窗口的工作区的顶部。|
 |CBRS_ALIGN_BOTTOM|使窗格停靠到框架窗口的工作区的底部。|

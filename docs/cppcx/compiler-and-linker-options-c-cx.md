@@ -3,15 +3,15 @@ title: 编译器和链接器选项 (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: ecfadce8-3a3f-40cc-bb01-b4731f8d2fcb
 ms.openlocfilehash: cc1964c57d6700995bb283c245e4c63c8e9e313b
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750905"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62383355"
 ---
 # <a name="compiler-and-linker-options-ccx"></a>编译器和链接器选项 (C++/CX)
 
-环境变量，C + + /cli CX 编译器选项和链接器选项支持的应用程序构建针对 Windows 运行时。
+环境变量， C++/CX 编译器选项和 Windows 运行时支持的应用程序生成的链接器选项。
 
 ## <a name="library-path"></a>库路径
 
@@ -43,4 +43,4 @@ ms.locfileid: "57750905"
 
 ## <a name="see-also"></a>请参阅
 
-[构建应用程序和库](../cppcx/building-apps-and-libraries-c-cx.md)
+[生成应用和库](../cppcx/building-apps-and-libraries-c-cx.md)

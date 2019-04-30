@@ -10,17 +10,17 @@ helpviewer_keywords:
 - logical OR operator
 ms.assetid: 31837c99-2655-4bf3-8ded-f13b7a9dc533
 ms.openlocfilehash: 5db1af870644d1552aeac813edce0985a31d95b3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618843"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62368677"
 ---
 # <a name="logical-or-operator-"></a>逻辑 OR 运算符: | |
 
 ## <a name="syntax"></a>语法
 
-> *逻辑或表达式* **||** *逻辑与表达式*
+> *logical-or-expression* **||** *logical-and-expression*
 
 ## <a name="remarks"></a>备注
 
@@ -36,7 +36,7 @@ ms.locfileid: "50618843"
 printf( "%d" , (x == w || x == y || x == z) );
 ```
 
-在上面的示例中，如果 `x` 与 `w`、`y` 或 `z` 相等，则 `printf` 函数的第二个参数的计算结果将为 true，并打印值 1。 否则，它的计算结果将为 false，并打印值 0。 只要其中一个条件的计算结果为 true，计算便会停止。
+在上面的示例中，如果 `x` 与 `w`、`y` 或 `z` 相等，则 `printf` 函数的第二个自变量的计算结果将为 true，并打印值 1。 否则，它的计算结果将为 false，并打印值 0。 只要其中一个条件的计算结果为 true，计算便会停止。
 
 ## <a name="operator-keyword-for-124124"></a>运算符关键字&#124;&#124;
 
@@ -64,6 +64,6 @@ int main() {
 
 ## <a name="see-also"></a>请参阅
 
-[C + + 内置运算符优先级和结合性](cpp-built-in-operators-precedence-and-associativity.md)<br/>
+[C++内置运算符优先级和结合性](cpp-built-in-operators-precedence-and-associativity.md)<br/>
 [C++ 内置运算符、优先级和关联性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
 [C 逻辑运算符](../c-language/c-logical-operators.md)

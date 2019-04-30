@@ -9,11 +9,11 @@ helpviewer_keywords:
 - blocking mode sockets
 ms.assetid: 10aca9b1-bfba-41a8-9c55-ea8082181e63
 ms.openlocfilehash: 26a361bc63da5f6e75144cc91fe837498a7f656b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57272342"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62371959"
 ---
 # <a name="windows-sockets-blocking"></a>Windows 套接字：锁定
 
@@ -42,11 +42,11 @@ ms.locfileid: "57272342"
 
 - [Windows 套接字：使用类 CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
 
-- [Windows 套接字：对存档使用套接字](../mfc/windows-sockets-using-sockets-with-archives.md)
+- [Windows 套接字：结合使用套接字和存档](../mfc/windows-sockets-using-sockets-with-archives.md)
 
 - [Windows 套接字：背景](../mfc/windows-sockets-background.md)
 
-- [Windows 套接字：Stream 套接字](../mfc/windows-sockets-stream-sockets.md)
+- [Windows 套接字：流套接字](../mfc/windows-sockets-stream-sockets.md)
 
 - [Windows 套接字：数据报套接字](../mfc/windows-sockets-datagram-sockets.md)
 
