@@ -5,11 +5,11 @@ helpviewer_keywords:
 - Parallel Diagnostic Tools [Concurrency Runtime]
 ms.assetid: b1a3f1d2-f5df-4f29-852e-906b3d8341fc
 ms.openlocfilehash: 2af1898312a4f448d618fcfc4e43ea93f5f0bc76
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57302775"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64346314"
 ---
 # <a name="parallel-diagnostic-tools-concurrency-runtime"></a>并行诊断工具（并发运行时）
 
@@ -33,7 +33,7 @@ Visual Studio 调试器包括**并行堆栈**窗口中，**并行任务**窗口�
 
 下表描述运行时将引发启用事件跟踪的事件：
 
-|事件|描述|“值”|
+|Event|描述|“值”|
 |-----------|-----------------|-----------|
 |[concurrency::ConcRT_ProviderGuid](reference/concurrency-namespace-constants1.md#concrt_providerguid)|并发运行时的 ETW 提供程序标识符。|`f7b697a3-4db5-4d3b-be71-c4d284e6592f`|
 |[concurrency::ContextEventGuid](reference/concurrency-namespace-constants1.md#contexteventguid)|将标记与上下文相关的事件。|`5727a00f-50be-4519-8256-f7699871fecb`|
