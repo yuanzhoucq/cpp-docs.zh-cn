@@ -89,11 +89,11 @@ helpviewer_keywords:
 - std::deque [C++], swap
 ms.assetid: 64842ee5-057a-4063-8c16-4267a0332584
 ms.openlocfilehash: 8a50d04751ac5b4abaf94d0d9fd16f57c6200f66
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525387"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62394008"
 ---
 # <a name="deque-class"></a>deque 类
 
@@ -111,7 +111,7 @@ class deque
 *Type*<br/>
 要存储在 deque 中的元素数据类型。
 
-*分配器*<br/>
+*Allocator*<br/>
 表示所存储分配器对象的类型，该分配器对象封装有关 deque 的内存分配和解除分配的详细信息。 该参数为可选的并且默认值是**allocator\<类型 >**。
 
 ## <a name="remarks"></a>备注
@@ -244,7 +244,7 @@ void assign(initializer_list<Type> IList);
 “计数”<br/>
 要插入 deque 中的元素副本数。
 
-*val*<br/>
+*Val*<br/>
 要插入 deque 中的元素的值。
 
 *IList*<br/>
@@ -773,11 +773,11 @@ deque(initializer_list<value_type> IList, const Allocator& Al);
 |-|-|
 |*Al*|要用于此对象的分配器类。|
 |“计数”|构造的 deque 中的元素数。|
-|*val*|构造的 deque 中的元素值。|
+|*Val*|构造的 deque 中的元素值。|
 |右侧|构造的 deque 要作为其副本的 deque。|
 |*第一个*|要复制的元素范围内的第一个元素的位置。|
 |*最后一个*|要复制的元素范围外的第一个元素的位置。|
-|* IList|要复制的 initializer_list。|
+|* IList |要复制的 initializer_list。|
 
 ### <a name="remarks"></a>备注
 
@@ -1340,7 +1340,7 @@ iterator erase(iterator first, iterator last);
 *first*<br/>
 要从 deque 中移除的第一个元素的位置。
 
-*最后一个*<br/>
+*last*<br/>
 要从 deque 中移除的刚超出最后一个元素的位置。
 
 ### <a name="return-value"></a>返回值
@@ -1518,7 +1518,7 @@ IList);
 |参数|描述|
 |-|-|
 |*Where*|目标 deque 中插入第一个元素的位置。|
-|*val*|要插入 deque 中的元素的值。|
+|*Val*|要插入 deque 中的元素的值。|
 |“计数”|要插入 deque 中的元素数。|
 |*第一个*|要从自变量 deque 中复制的一系列元素中第一个元素的位置。|
 |*最后一个*|要从自变量 deque 中复制的一系列元素以外的第一个元素的位置。|

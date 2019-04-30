@@ -6,15 +6,15 @@ helpviewer_keywords:
 - Asynchronous Agents Library
 ms.assetid: d2a72a31-8ba6-4220-ad7a-e403a6acaa42
 ms.openlocfilehash: 39ae785b602b3928f0c32f9fc599527dab5558f5
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57268039"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62371892"
 ---
 # <a name="asynchronous-agents-library"></a>异步代理库
 
-异步代理库 (或只需*代理库*) 提供了编程模型，可用于提高启用并发的应用程序开发的可靠性。 代理库是一个 c + + 模板库可提高基于角色的编程模型和进程内消息传递，以粗粒度数据流和流水线操作任务。 代理库生成并发运行时的计划和资源管理组件。
+异步代理库 (或只需*代理库*) 提供了编程模型，可用于提高启用并发的应用程序开发的可靠性。 代理库是C++模板库可提高基于角色的编程模型和进程内消息传递，以粗粒度数据流和流水线操作任务。 代理库生成并发运行时的计划和资源管理组件。
 
 ## <a name="programming-model"></a>编程模型
 

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Platform::InvalidArgumentException
 ms.assetid: 1a8d860b-3bcb-41a9-9346-6610616a0b46
 ms.openlocfilehash: 1cc4b87ded26807066c81e5da6935548d1a5ad26
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750463"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384954"
 ---
 # <a name="platforminvalidargumentexception-class"></a>Platform::InvalidArgumentException 类
 
@@ -35,7 +35,7 @@ public ref class InvalidArgumentException : COMException,    IException,    IPri
 
 **支持的最低服务器：** Windows Server 2012
 
-**命名空间：** 平台
+**命名空间：** Platform
 
 **元数据：** platform.winmd
 

@@ -9,22 +9,22 @@ helpviewer_keywords:
 - forms [MFC], adding to applications
 ms.assetid: efbe73c1-4ca4-4613-aac2-30d916e92c0e
 ms.openlocfilehash: f93f65e949c18ddb1ad5dba859ba8c4832abac8f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57289268"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392825"
 ---
 # <a name="form-views-mfc"></a>窗体视图 (MFC)
 
-您可以向支持 MFC 库，包括任何 Visual c + + 应用程序添加窗体[基于窗体的应用程序](../mfc/reference/creating-a-forms-based-mfc-application.md)(一个其视图类派生自`CFormView`)。 如果未最初创建应用程序以支持窗体，Visual c + + 将插入一个新的窗体时添加该支持。 在 SDI 或 MDI 应用程序，它可实现默认[文档/视图体系结构](../mfc/document-view-architecture.md)，当用户选择**新建**命令 (默认情况下，在**文件**菜单)，VisualC + + 会提示用户从可用的窗体中进行选择。
+可以将窗体添加到任何视觉对象C++支持的 MFC 库，包括应用程序[基于窗体的应用程序](../mfc/reference/creating-a-forms-based-mfc-application.md)(其中一个其视图类派生自`CFormView`)。 如果您未最初创建应用程序以支持窗体，视觉对象C++将插入一个新的窗体时添加这种对你支持。 在 SDI 或 MDI 应用程序，它可实现默认[文档/视图体系结构](../mfc/document-view-architecture.md)，当用户选择**新建**命令 (默认情况下，在**文件**菜单)，VisualC++会提示用户从可用的窗体中进行选择。
 
 与 SDI 应用程序，当用户选择**新建**命令时，窗体的当前实例将继续运行，但如果找不到创建与所选的窗体应用程序的新实例。 在 MDI 应用程序，在窗体的当前实例继续运行时用户选择**新建**命令。
 
 > [!NOTE]
->  你可以在基于对话框的应用程序中插入窗体 (基于其对话框类的一个`CDialog`，另一个类实现的任何视图中)。 但是，没有文档/视图体系结构，Visual c + + 不会自动实现**文件**&#124;**新建**功能。 必须创建用户可以查看附加的窗体，例如通过实现一个具有各种属性页的选项卡式的对话框一种方法。
+>  你可以在基于对话框的应用程序中插入窗体 (基于其对话框类的一个`CDialog`，另一个类实现的任何视图中)。 但是，如果文档/视图体系结构，视觉对象没有C++不会自动实现**文件**&#124;**新建**功能。 必须创建用户可以查看附加的窗体，例如通过实现一个具有各种属性页的选项卡式的对话框一种方法。
 
-当你的应用程序中插入一个新窗体时，Visual c + + 执行以下任务：
+新的窗体插入到应用程序，视觉对象时C++执行以下操作：
 
 - 创建基于你选择的窗体样式类之一的类 (`CFormView`， `CRecordView`， `CDaoRecordView`，或`CDialog`)。
 
@@ -52,7 +52,7 @@ ms.locfileid: "57289268"
 
 - 添加到调用`AddDocumentTemplate`在应用程序的`InitInstance`代码。
 
-   Visual c + + 将添加这段代码用于每个新窗体创建，这将在窗体添加到可用的窗体的列表，当用户选择**新建**命令。 此代码包括窗体的关联的资源 ID 和关联的文档、 视图和框架类一起构成新的窗体对象的名称。
+   VisualC++将每个新窗体创建，这将在窗体添加到可用的窗体的列表，当用户选择此代码添加**新建**命令。 此代码包括窗体的关联的资源 ID 和关联的文档、 视图和框架类一起构成新的窗体对象的名称。
 
    文档模板用作文档、 框架窗口和视图之间的连接。 单个文档，可以创建多个模板。
 

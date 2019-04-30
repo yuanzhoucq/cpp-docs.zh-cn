@@ -51,11 +51,11 @@ helpviewer_keywords:
 - CObList [MFC], SetAt
 ms.assetid: 80699c93-33d8-4f8b-b8cf-7b58aeab64ca
 ms.openlocfilehash: 2fc3a3643c675394de555f1411030e278bcee775
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293727"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62388236"
 ---
 # <a name="coblist-class"></a>CObList 类
 
@@ -479,7 +479,7 @@ const CObject* GetNext(POSITION& rPosition) const;
 就可以执行迭代的过程中删除元素。 有关示例，请参阅[RemoveAt](#removeat)。
 
 > [!NOTE]
->  MFC 8.0 截至此方法的 const 版本已更改为返回`const CObject*`而不是`const CObject*&`。  此更改是为了使编译器符合 c + + 标准。
+>  MFC 8.0 截至此方法的 const 版本已更改为返回`const CObject*`而不是`const CObject*&`。  此更改是为了使编译器符合C++标准。
 
 下表显示其他成员函数类似于`CObList::GetNext`。
 
@@ -528,7 +528,7 @@ const CObject* GetPrev(POSITION& rPosition) const;
 如果检索的元素的为第一个在列表中，则新值的*rPosition*设置为 NULL。
 
 > [!NOTE]
->  MFC 8.0 截至此方法的 const 版本已更改为返回`const CObject*`而不是`const CObject*&`。  此更改是为了使编译器符合 c + + 标准。
+>  MFC 8.0 截至此方法的 const 版本已更改为返回`const CObject*`而不是`const CObject*&`。  此更改是为了使编译器符合C++标准。
 
 下表显示其他成员函数类似于`CObList::GetPrev`。
 

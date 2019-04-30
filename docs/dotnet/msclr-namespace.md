@@ -15,15 +15,15 @@ helpviewer_keywords:
 - msclr
 ms.assetid: 799460e2-9ae2-4b59-a81c-611df356834f
 ms.openlocfilehash: 0054d8086c8492c79723e6b4091f102062aa3c91
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57739334"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384811"
 ---
 # <a name="msclr-namespace"></a>msclr 命名空间
 
-`msclr` 命名空间包含 C++ 支持库的所有类。 这些类的详细信息，请参阅[c + + 支持库](../dotnet/cpp-support-library.md)。
+`msclr` 命名空间包含 C++ 支持库的所有类。 这些类的详细信息，请参阅[C++支持库](../dotnet/cpp-support-library.md)。
 
 ## <a name="see-also"></a>请参阅
 

@@ -13,11 +13,11 @@ helpviewer_keywords:
 - ThrowError method [MFC]
 ms.assetid: e9e34abb-8e2d-461e-bb9c-a1aec5dcecbd
 ms.openlocfilehash: df71e2e59763644bd4aefb5d3e3afa46f82f538a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57277321"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392708"
 ---
 # <a name="mfc-activex-controls-advanced-topics"></a>MFC ActiveX 控件：高级主题
 
@@ -43,7 +43,7 @@ ms.locfileid: "57277321"
 MFC 数据库类的一般概述，请参阅[MFC 数据库类 （DAO 和 ODBC）](../data/mfc-database-classes-odbc-and-dao.md)。 文章介绍了 MFC ODBC 类和 MFC DAO 类，并将你定向到在更多详细信息。
 
 > [!NOTE]
->  Visual c + + 环境和向导不支持 DAO （尽管 DAO 类包含并且仍可以使用它们）。 Microsoft 建议您使用[OLE DB 模板](../data/oledb/ole-db-programming.md)或[ODBC 和 MFC](../data/odbc/odbc-and-mfc.md)为新项目。 仅应在维护现有应用程序使用 DAO。
+>  视觉对象C++环境和向导不支持 DAO （尽管 DAO 类包含并且仍可以使用它们）。 Microsoft 建议您使用[OLE DB 模板](../data/oledb/ole-db-programming.md)或[ODBC 和 MFC](../data/odbc/odbc-and-mfc.md)为新项目。 仅应在维护现有应用程序使用 DAO。
 
 ##  <a name="_core_implementing_a_parameterized_property"></a> 实现参数化的属性
 

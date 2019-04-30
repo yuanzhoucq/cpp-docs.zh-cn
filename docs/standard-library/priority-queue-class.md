@@ -21,11 +21,11 @@ helpviewer_keywords:
 - std::priority_queue [C++], top
 ms.assetid: 69fca9cc-a449-4be4-97b7-02ca5db9cbb2
 ms.openlocfilehash: d8f2b4ab788c82e531d1121f04dd0d422efb17cd
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51333210"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62370005"
 ---
 # <a name="priorityqueue-class"></a>priority_queue 类
 
@@ -43,7 +43,7 @@ class priority_queue
 *Type*<br/>
 要存储在 priority_queue 中的元素数据类型。
 
-*容器*<br/>
+*Container*<br/>
 用来实现 priority_queue 的基础容器的类型。
 
 *Compare*<br/>
@@ -254,7 +254,7 @@ priority_queue(InputIterator first, InputIterator last, const Traits& _comp, con
 *first*<br/>
 要复制的范围元素中的第一个元素的位置。
 
-*最后一个*<br/>
+*last*<br/>
 要复制的元素范围以外的第一个元素的位置。
 
 ### <a name="remarks"></a>备注

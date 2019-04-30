@@ -99,11 +99,11 @@ helpviewer_keywords:
 - std::list [C++], unique
 ms.assetid: d3707f4a-10fd-444f-b856-f9ca2077c1cd
 ms.openlocfilehash: d990efb7d4c363b8d8e38f42f9edac7eea0a3882
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51522527"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62413211"
 ---
 # <a name="list-class"></a>list 类
 
@@ -121,7 +121,7 @@ class list
 *Type*<br/>
 要存储在列表中的元素数据类型。
 
-*分配器*<br/>
+*Allocator*<br/>
 表示所存储分配器对象的类型，该分配器对象封装有关列表的内存分配和解除分配的详细信息。 该参数为可选的并且默认值是**allocator**\<*类型*>。
 
 ## <a name="remarks"></a>备注
@@ -251,7 +251,7 @@ void assign(
 “计数”<br/>
 要插入列表中的元素副本的数目。
 
-*val*<br/>
+*Val*<br/>
 要插入到列表中的元素的值。
 
 *IList*<br/>
@@ -986,7 +986,7 @@ iterator erase(iterator first, iterator last);
 *first*<br/>
 要从列表中移除的第一个元素的位置。
 
-*最后一个*<br/>
+*last*<br/>
 要从列表中移除的刚超出最后一个元素的位置。
 
 ### <a name="return-value"></a>返回值
@@ -1151,7 +1151,7 @@ void insert(iterator Where, InputIterator First, InputIterator Last);
 |参数|描述|
 |-|-|
 |*Where*|目标列表中插入第一个元素的位置。|
-|*val*|要插入到列表中的元素的值。|
+|*Val*|要插入到列表中的元素的值。|
 |“计数”|要插入列表中的元素数目。|
 |*第一个*|要从参数列表中复制的一系列元素中第一个元素的位置。|
 |*最后一个*|要从自变量列表中复制的一系列元素以外的第一个元素的位置。|
@@ -1274,7 +1274,7 @@ list(InputIterator First, InputIterator Last, const Allocator& Al);
 |-|-|
 |*Al*|要用于此对象的分配器类。|
 |“计数”|所构造列表中元素的数目。|
-|*val*|列表中元素的值。|
+|*Val*|列表中元素的值。|
 |右侧|所构造列表要作为其副本的列表。|
 |*第一个*|要复制的范围元素中的第一个元素的位置。|
 |*最后一个*|要复制的元素范围以外的第一个元素的位置。|
@@ -1952,7 +1952,7 @@ void remove_if(Predicate pred)
 
 ### <a name="parameters"></a>参数
 
-*Pred*<br/>
+*pred*<br/>
 一元谓词，如果元素满足该谓词，则该谓词会导致此元素从列表删除。
 
 ### <a name="example"></a>示例
@@ -2538,7 +2538,7 @@ void unique(BinaryPredicate pred);
 
 ### <a name="parameters"></a>参数
 
-*Pred*<br/>
+*pred*<br/>
 用于比较连续元素的二元谓词。
 
 ### <a name="remarks"></a>备注

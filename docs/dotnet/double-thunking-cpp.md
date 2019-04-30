@@ -9,15 +9,15 @@ helpviewer_keywords:
 - interoperability [C++], double thunking
 ms.assetid: a85090b2-dc3c-498a-b40c-340db229dd6f
 ms.openlocfilehash: f34af20ed3dd2c48659bdbf7794c443920dbb4e9
-ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58278393"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62404476"
 ---
 # <a name="double-thunking-c"></a>双重 Thunk (C++)
 
-双重形式转换是指可以体验中托管的上下文调用 Visual c + + 托管函数和程序执行的函数调用调用托管的函数调用函数的本机入口点时的性能降低。 本主题介绍了双重形式出现的位置和如何避免以提高性能。
+双重形式转换是指你可能会遇到函数调用托管上下文中的调用一个视觉对象时的性能降低C++托管的函数和程序执行调用托管的函数调用函数的本机入口点的位置。 本主题介绍了双重形式出现的位置和如何避免以提高性能。
 
 ## <a name="remarks"></a>备注
 

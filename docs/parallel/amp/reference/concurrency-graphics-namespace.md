@@ -5,11 +5,11 @@ f1_keywords:
 - AMP_GRAPHICS/Concurrency
 ms.assetid: 4529d3b1-d7da-4ffb-82bf-080915e0f23e
 ms.openlocfilehash: ef61c93e062b375377a0afe62aa7f622f6c0d4ac
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57326526"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62375595"
 ---
 # <a name="concurrencygraphics-namespace"></a>Concurrency::graphics 命名空间
 
@@ -37,7 +37,7 @@ namespace graphics;
 
 ### <a name="enumerations"></a>枚举
 
-|name|描述|
+|名称|描述|
 |----------|-----------------|
 |[address_mode 枚举](concurrency-graphics-namespace-enums.md#address_mode)。|指定纹理采样支持的地址模式。|
 |[filter_mode 枚举](concurrency-graphics-namespace-enums.md#filter_mode)|指定纹理采样支持的筛选器模式。|
@@ -46,7 +46,7 @@ namespace graphics;
 
 |名称|描述|
 |----------|-----------------|
-|[texture 类](texture-class.md)|纹理是在范围域中的 accelerator_view 上的数据聚合。 它是变量，一个用于在范围域中的每个元素的集合。 每个变量包含一个值，该值对应于 c + + 基元类型 （无符号的整型、 整型、 浮点、 双精度），或在 concurrency:: graphics 中定义的标量类型 norm 或 unorm （在 concurrency:: graphics 中定义） 或合格短向量类型。|
+|[texture 类](texture-class.md)|纹理是在范围域中的 accelerator_view 上的数据聚合。 它是变量，一个用于在范围域中的每个元素的集合。 每个变量包含一个值，对应于C++基元类型 （无符号的整型、 整型、 浮点、 双精度） 或标量类型 norm、 或 unorm （在 concurrency:: graphics 中定义） 或在 concurrency:: graphics 中定义的合格短向量类型。|
 |[writeonly_texture_view 类](writeonly-texture-view-class.md)|Writeonly_texture_view 提供对纹理的 writeonly 访问。|
 |[double_2 类](double-2-class.md)|表示 2 的短矢量`double`值。|
 |[double_3 类](double-3-class.md)|表示 3 的短矢量`double`值。|

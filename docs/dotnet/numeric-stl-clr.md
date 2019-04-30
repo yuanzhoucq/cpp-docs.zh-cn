@@ -18,11 +18,11 @@ helpviewer_keywords:
 - partial_sum function [STL/CLR]
 ms.assetid: 1dc4d9a3-e734-459c-9678-5d9be0ef4c79
 ms.openlocfilehash: 0311b36ec1190631e053eeade443939703e69103
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51328898"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384798"
 ---
 # <a name="numeric-stlclr"></a>numeric (STL/CLR)
 
@@ -66,7 +66,7 @@ template<class _InIt, class _Ty, class _Fn2> inline
 
 ### <a name="remarks"></a>备注
 
-此函数的行为与 c + + 标准库数值函数相同`accumulate`。 有关详细信息，请参阅[累积](../standard-library/numeric-functions.md#accumulate)。
+此函数的行为相同C++标准库数值函数`accumulate`。 有关详细信息，请参阅[累积](../standard-library/numeric-functions.md#accumulate)。
 
 ## <a name="adjacent_difference"></a> adjacent_difference (STL/CLR)
 
@@ -85,7 +85,7 @@ template<class _InIt, class _OutIt, class _Fn2> inline
 
 ### <a name="remarks"></a>备注
 
-此函数的行为与 c + + 标准库数值函数相同`adjacent_difference`。 有关详细信息，请参阅[adjacent_difference](../standard-library/numeric-functions.md#adjacent_difference)。
+此函数的行为相同C++标准库数值函数`adjacent_difference`。 有关详细信息，请参阅[adjacent_difference](../standard-library/numeric-functions.md#adjacent_difference)。
 
 ## <a name="inner_product"></a> inner_product (STL/CLR)
 
@@ -105,7 +105,7 @@ template<class _InIt1, class _InIt2, class _Ty, class _Fn21,
 
 ### <a name="remarks"></a>备注
 
-此函数的行为与 c + + 标准库数值函数相同`inner_product`。 有关详细信息，请参阅[inner_product](../standard-library/numeric-functions.md#inner_product)。
+此函数的行为相同C++标准库数值函数`inner_product`。 有关详细信息，请参阅[inner_product](../standard-library/numeric-functions.md#inner_product)。
 
 ## <a name="partial_sum"></a> partial_sum (STL/CLR)
 
@@ -123,4 +123,4 @@ template<class _InIt, class _OutIt, class _Fn2> inline
 
 ### <a name="remarks"></a>备注
 
-此函数的行为与 c + + 标准库数值函数相同`partial_sum`。 有关详细信息，请参阅[partial_sum](../standard-library/numeric-functions.md#partial_sum)。
+此函数的行为相同C++标准库数值函数`partial_sum`。 有关详细信息，请参阅[partial_sum](../standard-library/numeric-functions.md#partial_sum)。

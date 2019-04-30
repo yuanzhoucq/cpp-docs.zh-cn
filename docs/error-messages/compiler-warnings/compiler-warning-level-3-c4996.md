@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4996
 ms.assetid: 926c7cc2-921d-43ed-ae75-634f560dd317
 ms.openlocfilehash: ef1bc46b64ccbe1374fd795a9b5d56e091b47f48
-ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "57816420"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62401496"
 ---
 # <a name="compiler-warning-level-3-c4996"></a>编译器警告 （等级 3） C4996
 
@@ -19,11 +19,11 @@ ms.locfileid: "57816420"
 
 这些是由 C 运行时库和标准库，但未详尽列出生成的一些常见 C4996 消息。 可单击的链接，或继续阅读，以解决此问题，或若要关闭该警告的方式。
 
-- [此项的 POSIX 名称已弃用。请改用与 ISO C 和 c + + 一致的名称： *new_name*。请参阅联机帮助了解详细信息。](#posix-function-names)
+- [此项的 POSIX 名称已弃用。请改用 ISO C 和C++一致的名称： *new_name*。请参阅联机帮助了解详细信息。](#posix-function-names)
 
 - [此函数或变量可能不安全。请考虑使用*safe_version*相反。若要禁用弃用，请使用\_CRT\_SECURE\_NO\_WARNINGS。请参阅联机帮助了解详细信息。](#unsafe-crt-library-functions)
 
-- [std::*function_name*::\_选中此项\_迭代器::\_Deprecate 调用到 std::*function_name*可能不安全的参数与此调用依靠调用方检查传递的值正确。若要禁用此警告，请使用 -D_SCL_SECURE_NO_WARNINGS。有关如何使用 Visual c + + Checked Iterators，请参阅文档](#unsafe-standard-library-functions)
+- [std::*function_name*::\_选中此项\_迭代器::\_Deprecate 调用到 std::*function_name*可能不安全的参数与此调用依靠调用方检查传递的值正确。若要禁用此警告，请使用 -D_SCL_SECURE_NO_WARNINGS。有关如何使用视觉对象，请参阅文档C++检查的迭代器](#unsafe-standard-library-functions)
 
 - [此函数或变量已被较新的库或操作系统功能。请考虑使用*new_item*相反。请参阅联机帮助了解详细信息。](#obsolete-crt-functions-and-variables)
 
@@ -46,7 +46,7 @@ ms.locfileid: "57816420"
 若要关闭的警告的 Visual Studio IDE 中的整个项目：
 
 - 打开**属性页**对话框为您的项目。 有关如何使用属性页对话框的信息，请参阅[属性页](../../build/reference/property-pages-visual-cpp.md)。
-- 选择**配置属性**， **C/c + +**，**高级**页。
+- 选择**配置属性**， **C /C++**，**高级**页。
 - 编辑**禁用特定警告**属性来添加`4996`。 选择**确定**应用所做的更改。
 
 此外可以使用预处理器宏关闭弃用警告库中使用某些特定类。 下面描述了这些宏。
@@ -54,7 +54,7 @@ ms.locfileid: "57816420"
 若要在 Visual Studio 中定义预处理器宏：
 
 - 打开**属性页**对话框为您的项目。 有关如何使用属性页对话框的信息，请参阅[属性页](../../build/reference/property-pages-visual-cpp.md)。
-- 展开**配置属性 > C/c + + > 预处理器**。
+- 展开**配置属性 > C /C++ > 预处理器**。
 - 在中**预处理器定义**属性，添加宏名称。 选择“确定”  进行保存，然后重新生成项目。
 
 若要仅在特定源文件中定义的宏，请添加一个行如`#define EXAMPLE_MACRO_NAME`包含的头文件的任意行之前。
@@ -65,7 +65,7 @@ ms.locfileid: "57816420"
 
 ### <a name="posix-function-names"></a>POSIX 函数名称
 
-**此项的 POSIX 名称已弃用。请改用与 ISO C 和 c + + 一致的名称：** *new_name*。 **请参阅联机帮助了解详细信息。**
+**此项的 POSIX 名称已弃用。请改用 ISO C 和C++一致的名称：** *new_name*。 **请参阅联机帮助了解详细信息。**
 
 Microsoft 已重命名以符合 C99 和 c++03 规则的实现定义的全局函数名称的 CRT 中的一些 POSIX 函数。 仅原始 POSIX 名称已弃用，而不是函数本身。 在大多数情况下，前导下划线已添加到 POSIX 函数名称，以创建符合标准的名称。 编译器会发出弃用警告的原始函数名称，并建议首选的名称。
 
@@ -77,17 +77,17 @@ Microsoft 已重命名以符合 C99 和 c++03 规则的实现定义的全局函�
 
 **此函数或变量可能不安全。请考虑使用** *safe_version* **相反。若要禁用弃用，请使用\_CRT\_SECURE\_NO\_WARNINGS。请参阅联机帮助了解详细信息。**
 
-Microsoft 已弃用某些 CRT 和 c + + 标准库函数和全局变量以支持更多安全版本。 在大多数情况下，已弃用的函数允许未选中状态的读取或写入访问权限可能会导致严重的安全问题的缓冲区。 编译器会发出对这些函数的弃用警告，并建议首选函数。
+Microsoft 已弃用某些 CRT 和C++标准库函数和全局变量以支持更多安全版本。 在大多数情况下，已弃用的函数允许未选中状态的读取或写入访问权限可能会导致严重的安全问题的缓冲区。 编译器会发出对这些函数的弃用警告，并建议首选函数。
 
 若要解决此问题，我们建议你使用的函数或变量*safe_version*相反。 如果已验证不能为缓冲区覆盖或 overread 出现在你的代码，并且您不能更改的代码可移植性原因，您可以关闭该警告。
 
-若要关闭 CRT 中的这些函数的弃用警告，定义 **\_CRT\_SECURE\_NO\_WARNINGS**。 若要关闭有关弃用的全局变量的警告，请定义 **\_CRT\_SECURE\_否\_警告\_GLOBALS**。 有关这些不推荐使用的函数和全局变量的详细信息，请参阅[CRT 中的安全功能](../../c-runtime-library/security-features-in-the-crt.md)和[安全库：C + + 标准库](../../standard-library/safe-libraries-cpp-standard-library.md)。
+若要关闭 CRT 中的这些函数的弃用警告，定义 **\_CRT\_SECURE\_NO\_WARNINGS**。 若要关闭有关弃用的全局变量的警告，请定义 **\_CRT\_SECURE\_否\_警告\_GLOBALS**。 有关这些不推荐使用的函数和全局变量的详细信息，请参阅[CRT 中的安全功能](../../c-runtime-library/security-features-in-the-crt.md)和[安全库：C++标准库](../../standard-library/safe-libraries-cpp-standard-library.md)。
 
 ### <a name="unsafe-standard-library-functions"></a>不安全的标准库函数
 
-__std::__*function_name* __::\_选中此项\_迭代器::\_Deprecate 调用到 std::__ *function_name* **可能不安全的参数与此调用依靠调用方检查传递的值是否正确。若要禁用此警告，请使用-D\_SCL\_SECURE\_NO\_WARNINGS。有关如何使用 Visual c + + Checked Iterators，请参阅文档**
+__std::__*function_name* __::\_选中此项\_迭代器::\_Deprecate 调用到 std::__ *function_name* **可能不安全的参数与此调用依靠调用方检查传递的值是否正确。若要禁用此警告，请使用-D\_SCL\_SECURE\_NO\_WARNINGS。有关如何使用视觉对象，请参阅文档C++检查的迭代器**
 
-因为某些 c + + 标准库模板函数不会检查参数正确，在调试版本中会出现此警告。 在大多数情况下，这是因为没有足够的信息可供要检查容器边界的函数或使用该函数可能会错误地使用迭代器。 此警告有助于标识这些函数用途，因为它们可能会在程序中的严重安全漏洞的源。 有关更多信息，请参见 [Checked Iterators](../../standard-library/checked-iterators.md)。
+会出现此警告在调试版本中特定C++标准库模板函数不会检查参数是否正确。 在大多数情况下，这是因为没有足够的信息可供要检查容器边界的函数或使用该函数可能会错误地使用迭代器。 此警告有助于标识这些函数用途，因为它们可能会在程序中的严重安全漏洞的源。 有关更多信息，请参见 [Checked Iterators](../../standard-library/checked-iterators.md)。
 
 例如，会出现此警告在调试模式下如果传递到的元素指针`std::copy`而不是普通的数组。 若要解决此问题，请使用正确声明的数组，因此库可以检查数组扩展盘区，并执行边界检查。
 

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - common language runtime, /clr compiler option
 ms.assetid: 5a854822-6172-4b22-b236-320165412568
 ms.openlocfilehash: 541581e0f172c8ce2601e2e476ccd03a49757f80
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57747224"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62387339"
 ---
 # <a name="how-to-determine-if-an-image-is-native-or-clr"></a>如何：确定图像是否为本机模式或 CLR
 

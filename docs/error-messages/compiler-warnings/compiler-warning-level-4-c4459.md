@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4459
 ms.assetid: ee9f6287-9c70-4b10-82a0-add82a13997f
 ms.openlocfilehash: 0cbab7c7cca1fc88bb99210262be45c56b6be7a8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585063"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62391421"
 ---
 # <a name="compiler-warning-level-4-c4459"></a>编译器警告 （等级 C4459
 
@@ -19,7 +19,7 @@ ms.locfileid: "50585063"
 
 声明*标识符*在本地作用域中隐藏了相同名称的声明*标识符*全局作用域中。 此警告，可以了解到引用*标识符*在此范围内解析为本地声明的版本中，不是全局版本，可能会也可能不是你的意图。 通常情况下，我们建议你尽量减少使用的全局变量作为良好工程做法。 为了尽量减少污染全局命名空间，我们建议使用已命名的命名空间的全局变量。
 
-此警告是 Visual Studio 2015 中，在 Visual c + + 编译器版本 18.00 中的新增功能。 若要禁止显示警告从该版本的编译器或更高版本时迁移你的代码，请使用[/wv:18](../../build/reference/compiler-option-warning-level.md)编译器选项。
+此警告是 Visual Studio 2015 中，在视觉对象中的新增功能C++编译器版本 18.00。 若要禁止显示警告从该版本的编译器或更高版本时迁移你的代码，请使用[/wv:18](../../build/reference/compiler-option-warning-level.md)编译器选项。
 
 ## <a name="example"></a>示例
 

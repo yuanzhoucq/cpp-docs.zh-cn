@@ -10,11 +10,11 @@ helpviewer_keywords:
 - networks [MFC], downloading with ActiveX controls
 ms.assetid: 7ab943c8-2022-41df-9065-d629b616eeec
 ms.openlocfilehash: c019c922a5690d4ead861c40bed3c0c1c76cea28
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57282998"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62394820"
 ---
 # <a name="activex-controls-on-the-internet"></a>Internet 上的 ActiveX 控件
 
@@ -85,7 +85,7 @@ ActiveX 控件不受 Internet 限制。 ActiveX 控件还可在任何容器中�
 
 1. 单击**新建**上**文件**菜单。
 
-1. 选择**MFC ActiveX 控件向导**从 Visual c + + 项目，并将项目命名。
+1. 选择**MFC ActiveX 控件向导**视觉对象从C++项目，并将项目命名。
 
 1. 上**控制设置**页上，选择**异步加载属性**。 选择此选项将为您设置就绪状态属性和就绪状态更改事件。
 

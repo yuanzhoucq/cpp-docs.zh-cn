@@ -11,11 +11,11 @@ helpviewer_keywords:
 - marshaling, about marshaling
 ms.assetid: 997dd4bc-5f98-408f-b890-f35de9ce3bb8
 ms.openlocfilehash: 9e3b8f561ce6609eb2afedb527a16c4803f69c53
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57746820"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384733"
 ---
 # <a name="overview-of-marshaling-in-c"></a>C++ 中的封送处理概述
 
@@ -25,7 +25,7 @@ ms.locfileid: "57746820"
 |---------------|-----------------|
 |marshal.h|`marshal_context` 类和无上下文的封送处理函数|
 |marshal_atl.h| 用于封送处理 ATL 类型的函数|
-|marshal_cppstd.h|用于封送处理标准 c + + 类型的函数|
+|marshal_cppstd.h|为封送处理标准函数C++类型|
 |marshal_windows.h|用于封送处理 Windows 类型的函数|
 
 默认路径**msclr**文件夹是类似下面有具体取决于哪个版本和内部版本号：

@@ -98,11 +98,11 @@ helpviewer_keywords:
 - operator>= member [STL/CLR]
 ms.assetid: 7c46e2b4-cd88-49b7-a9e6-63ad5ae7feb5
 ms.openlocfilehash: e7a0551c1d75993d588f5dbb369989c42a71d903
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557720"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384772"
 ---
 # <a name="multiset-stlclr"></a>multiset (STL/CLR)
 
@@ -232,7 +232,7 @@ template<typename Key>
 
 ## <a name="members"></a>成员
 
-## <a name="begin"></a> multiset:: begin (STL/CLR)
+## <a name="begin"></a> multiset::begin (STL/CLR)
 
 指定受控序列的开头。
 
@@ -280,7 +280,7 @@ a b c
 *++begin() = b
 ```
 
-## <a name="clear"></a> multiset:: clear (STL/CLR)
+## <a name="clear"></a> multiset::clear (STL/CLR)
 
 删除所有元素。
 
@@ -338,7 +338,7 @@ a b
 size() = 0
 ```
 
-## <a name="const_iterator"></a> multiset:: const_iterator (STL/CLR)
+## <a name="const_iterator"></a> multiset::const_iterator (STL/CLR)
 
 受控序列的常量迭代器的类型。
 
@@ -380,7 +380,7 @@ int main()
 a b c
 ```
 
-## <a name="const_reference"></a> multiset:: const_reference (STL/CLR)
+## <a name="const_reference"></a> multiset::const_reference (STL/CLR)
 
 元素的常量引用的类型。
 
@@ -425,7 +425,7 @@ int main()
 a b c
 ```
 
-## <a name="const_reverse_iterator"></a> multiset:: const_reverse_iterator (STL/CLR)
+## <a name="const_reverse_iterator"></a> multiset::const_reverse_iterator (STL/CLR)
 
 受控序列的常量反向迭代器的类型...
 
@@ -467,7 +467,7 @@ int main()
 c b a
 ```
 
-## <a name="count"></a> multiset:: count (STL/CLR)
+## <a name="count"></a> multiset::count (STL/CLR)
 
 查找与指定键匹配的元素数。
 
@@ -520,7 +520,7 @@ count(L'b') = 1
 count(L'C') = 0
 ```
 
-## <a name="difference_type"></a> multiset:: difference_type (STL/CLR)
+## <a name="difference_type"></a> multiset::difference_type (STL/CLR)
 
 两个元素之间的带符号距离的类型。
 
@@ -575,7 +575,7 @@ end()-begin() = 3
 begin()-end() = -3
 ```
 
-## <a name="empty"></a> multiset:: empty (STL/CLR)
+## <a name="empty"></a> multiset::empty (STL/CLR)
 
 测试元素是否存在。
 
@@ -627,7 +627,7 @@ size() = 0
 empty() = True
 ```
 
-## <a name="end"></a> multiset:: end (STL/CLR)
+## <a name="end"></a> multiset::end (STL/CLR)
 
 指定受控序列的末尾。
 
@@ -676,7 +676,7 @@ a b c
 *--end() = c
 ```
 
-## <a name="equal_range"></a> multiset:: equal_range (STL/CLR)
+## <a name="equal_range"></a> multiset::equal_range (STL/CLR)
 
 查找与指定键匹配的范围。
 
@@ -736,7 +736,7 @@ equal_range(L'x') empty = True
 b
 ```
 
-## <a name="erase"></a> multiset:: erase (STL/CLR)
+## <a name="erase"></a> multiset::erase (STL/CLR)
 
 移除指定位置处的元素。
 
@@ -756,7 +756,7 @@ size_type erase(key_type key)
 *key*<br/>
 若要清除的键值。
 
-*最后一个*<br/>
+*last*<br/>
 要清除范围的末尾。
 
 *where*<br/>
@@ -820,7 +820,7 @@ erase(begin(), end()-1) = e
 size() = 1
 ```
 
-## <a name="find"></a> multiset:: find (STL/CLR)
+## <a name="find"></a> multiset::find (STL/CLR)
 
 查找与指定键匹配的元素。
 
@@ -1106,7 +1106,7 @@ a b c
 a
 ```
 
-## <a name="insert"></a> multiset:: insert (STL/CLR)
+## <a name="insert"></a> multiset::insert (STL/CLR)
 
 添加元素。
 
@@ -1125,7 +1125,7 @@ void insert(System::Collections::Generic::IEnumerable<value_type>^ right);
 *first*<br/>
 要插入范围的起始处。
 
-*最后一个*<br/>
+*last*<br/>
 要插入的范围的下限。
 
 *right*<br/>
@@ -1219,7 +1219,7 @@ a b b c x
 a b b c x y
 ```
 
-## <a name="iterator"></a> multiset:: iterator (STL/CLR)
+## <a name="iterator"></a> multiset::iterator (STL/CLR)
 
 受控序列的迭代器的类型。
 
@@ -1261,7 +1261,7 @@ int main()
 a b c
 ```
 
-## <a name="key_comp"></a> multiset:: key_comp (STL/CLR)
+## <a name="key_comp"></a> multiset::key_comp (STL/CLR)
 
 将复制两个键的排序委托。
 
@@ -1320,7 +1320,7 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="key_compare"></a> multiset:: key_compare (STL/CLR)
+## <a name="key_compare"></a> multiset::key_compare (STL/CLR)
 
 两个键排序委托。
 
@@ -1380,7 +1380,7 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="key_type"></a> multiset:: key_type (STL/CLR)
+## <a name="key_type"></a> multiset::key_type (STL/CLR)
 
 排序键的类型。
 
@@ -1528,7 +1528,7 @@ int main()
 a b c
 ```
 
-## <a name="multiset"></a> multiset:: multiset (STL/CLR)
+## <a name="multiset"></a> multiset::multiset (STL/CLR)
 
 构造容器对象。
 
@@ -1554,10 +1554,10 @@ multiset(System::Collections::Generic::IEnumerable<GValue>^ right,
 *first*<br/>
 要插入范围的起始处。
 
-*最后一个*<br/>
+*last*<br/>
 要插入的范围的下限。
 
-*Pred*<br/>
+*pred*<br/>
 排序谓词对受控序列。
 
 *right*<br/>
@@ -1699,7 +1699,7 @@ c b a
 a b c
 ```
 
-## <a name="op_as"></a> multiset::operator = (STL/CLR)
+## <a name="op_as"></a> multiset::operator= (STL/CLR)
 
 替换受控序列。
 
@@ -1754,7 +1754,7 @@ a b c
 a b c
 ```
 
-## <a name="rbegin"></a> multiset:: rbegin (STL/CLR)
+## <a name="rbegin"></a> multiset::rbegin (STL/CLR)
 
 指定反向受控序列的开头。
 
@@ -1802,7 +1802,7 @@ a b c
 *++rbegin() = b
 ```
 
-## <a name="reference"></a> multiset:: reference (STL/CLR)
+## <a name="reference"></a> multiset::reference (STL/CLR)
 
 元素的引用的类型。
 
@@ -1847,7 +1847,7 @@ int main()
 a b c
 ```
 
-## <a name="rend"></a> multiset:: rend (STL/CLR)
+## <a name="rend"></a> multiset::rend (STL/CLR)
 
 指定反向受控序列的末尾。
 
@@ -1896,7 +1896,7 @@ a b c
 *--rend() = a
 ```
 
-## <a name="reverse_iterator"></a> multiset:: reverse_iterator (STL/CLR)
+## <a name="reverse_iterator"></a> multiset::reverse_iterator (STL/CLR)
 
 受控序列的反向迭代器的类型。
 
@@ -1938,7 +1938,7 @@ int main()
 c b a
 ```
 
-## <a name="size"></a> multiset:: size (STL/CLR)
+## <a name="size"></a> multiset::size (STL/CLR)
 
 对元素数进行计数。
 
@@ -1992,7 +1992,7 @@ size() = 0 after clearing
 size() = 2 after adding 2
 ```
 
-## <a name="size_type"></a> multiset:: size_type (STL/CLR)
+## <a name="size_type"></a> multiset::size_type (STL/CLR)
 
 两个元素间的带符号距离的类型。
 
@@ -2040,7 +2040,7 @@ a b c
 end()-begin() = 3
 ```
 
-## <a name="swap"></a> multiset:: swap (STL/CLR)
+## <a name="swap"></a> multiset::swap (STL/CLR)
 
 交换两个容器的内容。
 
@@ -2158,7 +2158,7 @@ a b c d
 a b c
 ```
 
-## <a name="upper_bound"></a> multiset:: upper_bound (STL/CLR)
+## <a name="upper_bound"></a> multiset::upper_bound (STL/CLR)
 
 查找与指定的键匹配的范围末尾。
 
@@ -2215,7 +2215,7 @@ upper_bound(L'x')==end() = True
 *upper_bound(L'b') = c
 ```
 
-## <a name="value_comp"></a> multiset:: value_comp (STL/CLR)
+## <a name="value_comp"></a> multiset::value_comp (STL/CLR)
 
 将复制两个元素值的排序委托。
 
@@ -2259,7 +2259,7 @@ compare(L'a', L'b') = True
 compare(L'b', L'a') = False
 ```
 
-## <a name="value_compare"></a> multiset:: value_compare (STL/CLR)
+## <a name="value_compare"></a> multiset::value_compare (STL/CLR)
 
 两个元素值排序委托。
 
@@ -2304,7 +2304,7 @@ compare(L'a', L'b') = True
 compare(L'b', L'a') = False
 ```
 
-## <a name="value_type"></a> multiset:: value_type (STL/CLR)
+## <a name="value_type"></a> multiset::value_type (STL/CLR)
 
 元素的类型。
 
@@ -2349,7 +2349,7 @@ int main()
 a b c
 ```
 
-## <a name="op_neq"></a> 运算符 ！ = (multiset) (STL/CLR)
+## <a name="op_neq"></a> operator!= (multiset) (STL/CLR)
 
 列出不等于比较。
 
@@ -2419,7 +2419,7 @@ a b d
 [a b c] != [a b d] is True
 ```
 
-## <a name="op_lt"></a> 运算符&lt;(multiset) (STL/CLR)
+## <a name="op_lt"></a> operator&lt; (multiset) (STL/CLR)
 
 列表小于比较。
 
@@ -2489,7 +2489,7 @@ a b d
 [a b c] < [a b d] is True
 ```
 
-## <a name="op_lteq"></a> 运算符&lt;= (multiset) (STL/CLR)
+## <a name="op_lteq"></a> operator&lt;= (multiset) (STL/CLR)
 
 列表小于或等于比较。
 
@@ -2559,7 +2559,7 @@ a b d
 [a b d] <= [a b c] is False
 ```
 
-## <a name="op_eq"></a> 运算符 = = (multiset) (STL/CLR)
+## <a name="op_eq"></a> operator== (multiset) (STL/CLR)
 
 列表相等比较。
 
@@ -2629,7 +2629,7 @@ a b d
 [a b c] == [a b d] is False
 ```
 
-## <a name="op_gt"></a> 运算符&gt;(multiset) (STL/CLR)
+## <a name="op_gt"></a> operator&gt; (multiset) (STL/CLR)
 
 大于比较的列表。
 
@@ -2699,7 +2699,7 @@ a b d
 [a b d] > [a b c] is True
 ```
 
-## <a name="op_gteq"></a> 运算符&gt;= (multiset) (STL/CLR)
+## <a name="op_gteq"></a> operator&gt;= (multiset) (STL/CLR)
 
 列表大于或等于比较。
 

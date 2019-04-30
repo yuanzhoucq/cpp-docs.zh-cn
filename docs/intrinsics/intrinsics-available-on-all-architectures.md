@@ -5,15 +5,15 @@ helpviewer_keywords:
 - cl.exe compiler, intrinsics
 ms.assetid: 1fe3958e-d2fe-4188-8e34-5896738246eb
 ms.openlocfilehash: 0a1331f53cd8b44c8a7bfc903216cbdbaf5fec1f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50473276"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62396660"
 ---
 # <a name="intrinsics-available-on-all-architectures"></a>在所有体系结构上的可用内部函数
 
-Microsoft C/c + + 编译器和通用 C 运行时库 (UCRT) 使某些内部函数在所有体系结构。
+Microsoft C /C++编译器和通用 C 运行时库 (UCRT) 使某些内部函数在所有体系结构。
 
 ## <a name="compiler-intrinsics"></a>编译器内部函数
 

@@ -1,6 +1,6 @@
 ---
-title: 编译器错误 s C2400 Through C2499
-ms.date: 11/17/2017
+title: 编译器错误 C2400 - C2499
+ms.date: 04/21/2019
 f1_keywords:
 - C2416
 - C2442
@@ -26,14 +26,14 @@ helpviewer_keywords:
 - C2481
 - C2497
 ms.assetid: f1f05572-af0b-497b-bde4-4c81ec01af3b
-ms.openlocfilehash: 2ba9a55610c6f2e5e38733125414c6076e2c2f67
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: 569780a0716d26406c1703fa91fe5216d92ce653
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476188"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62404346"
 ---
-# <a name="compiler-errors-c2400-through-c2499"></a>编译器错误 s C2400 Through C2499
+# <a name="compiler-errors-c2400-through-c2499"></a>编译器错误 C2400 - C2499
 
 在本部分文档中的文章说明了由编译器生成的错误消息的子集。
 
@@ -139,3 +139,8 @@ ms.locfileid: "50476188"
 |编译器错误 C2497|'*标识符*: implementation_key 只能应用于函数声明|
 |[编译器错误 C2498](compiler-error-c2498.md)|'*函数*: novtable 只能应用于类声明或定义|
 |[编译器错误 C2499](compiler-error-c2499.md)|'*类*： 类不能是其自己基类|
+
+## <a name="see-also"></a>请参阅
+
+[C /C++编译器和生成工具错误和警告](../compiler-errors-1/c-cpp-build-errors.md) \
+[编译器错误 C2000-C3999](../compiler-errors-1/compiler-errors-c2000-c3999.md)

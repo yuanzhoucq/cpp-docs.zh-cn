@@ -1,5 +1,5 @@
 ---
-title: TN058：MFC 模块状态实现
+title: TN058:MFC 模块状态实现
 ms.date: 06/28/2018
 f1_keywords:
 - vc.mfc.implementation
@@ -13,13 +13,13 @@ helpviewer_keywords:
 - process state [MFC]
 ms.assetid: 72f5b36f-b3da-4009-a144-24258dcd2b2f
 ms.openlocfilehash: db34f528e70a7dcc437836684656b3ce8a4078fd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50626039"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399587"
 ---
-# <a name="tn058-mfc-module-state-implementation"></a>TN058：MFC 模块状态实现
+# <a name="tn058-mfc-module-state-implementation"></a>TN058:MFC 模块状态实现
 
 > [!NOTE]
 > 以下技术说明在首次包括在联机文档中后未更新。 因此，某些过程和主题可能已过时或不正确。 要获得最新信息，建议你在联机文档索引中搜索热点话题。
@@ -30,7 +30,7 @@ ms.locfileid: "50626039"
 
 ## <a name="overview"></a>概述
 
-有三种类型的 MFC 状态信息： 模块状态、 过程状态和线程状态。 有时可以组合这些状态类型。 例如，MFC 的句柄映射为模块本地和线程本地。 这允许两个不同的模块用于在每个其线程中具有不同的映射。
+有三种类型的 MFC 状态信息：模块状态、 过程状态和线程状态。 有时可以组合这些状态类型。 例如，MFC 的句柄映射为模块本地和线程本地。 这允许两个不同的模块用于在每个其线程中具有不同的映射。
 
 进程状态和线程状态很相似。 这些数据项是传统上是全局变量，但具有需要特定于给定进程或线程正确 Win32s 支持或正确的多线程支持的事情。 将给定的数据项所能容纳的类别取决于该项目以及有关进程和线程边界其所需的语义。
 

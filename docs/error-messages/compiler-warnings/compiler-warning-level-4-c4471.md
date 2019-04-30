@@ -7,17 +7,17 @@ helpviewer_keywords:
 - C4471
 ms.assetid: ccfd8bd5-bc1b-4be7-a6ea-0e3a7add6607
 ms.openlocfilehash: 0345b730b8fc37329f632bb5d8486c67efd8e3b8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462213"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62400781"
 ---
 # <a name="compiler-warning-level-4-c4471"></a>编译器警告 （等级 C4471
 
 '*枚举*： 无范围枚举的前向声明必须有基础类型 (假定为 int)
 
-无范围枚举的前向声明的基础类型找到不带说明符。 默认情况下，Visual c + + 假定`int`是枚举的基础类型。 如果使用不同类型在枚举定义中，例如，如果指定了不同的显式类型，或其他类型隐式设置初始值设定项，这可能会导致问题。 您可能还必须可移植性问题;其他编译器不要假定`int`是枚举的基础类型。
+无范围枚举的前向声明的基础类型找到不带说明符。 默认情况下，视觉对象C++假定`int`是一个枚举的基础类型。 如果使用不同类型在枚举定义中，例如，如果指定了不同的显式类型，或其他类型隐式设置初始值设定项，这可能会导致问题。 您可能还必须可移植性问题;其他编译器不要假定`int`是枚举的基础类型。
 
 默认情况下; 此警告处于关闭状态可以使用 /Wall 或 /w*N*4471 启用命令行上或使用 #pragma[警告](../../preprocessor/warning.md)在源文件中。
 

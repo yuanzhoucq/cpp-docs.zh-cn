@@ -11,11 +11,11 @@ helpviewer_keywords:
 - Platform::Exception Class
 ms.assetid: ca1d5a67-3a5a-48fe-8099-f9c38a2d2dce
 ms.openlocfilehash: d37d55c56e3c23d8d9129c985cb4272d2e3ee47a
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57743414"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62368729"
 ---
 # <a name="platformexception-class"></a>Platform::Exception 类
 
@@ -47,7 +47,7 @@ public ref class Exception : Object,    IException,    IPrintable,    IEquatable
 |------------|-----------------|
 |[Exception::CreateException](#createexception)|创建表示指定 HRESULT 值的异常。|
 
-### <a name="properties"></a>Properties
+### <a name="properties"></a>属性
 
 此异常类还具有以下属性。
 
@@ -62,7 +62,7 @@ public ref class Exception : Object,    IException,    IPrintable,    IEquatable
 
 **支持的最低服务器：** Windows Server 2012
 
-**命名空间：** 平台
+**命名空间：** Platform
 
 **元数据：** platform.winmd
 
@@ -149,8 +149,8 @@ public:property String^ Message;
 
 ### <a name="remarks"></a>备注
 
-在 Windows 8 中，此属性是只读的因为 abi 仅作为 HRESULTS 传输该版本的 Windows 运行时中的异常。 在 Windows 8.1 中，可跨 ABI 传输更加丰富的异常信息，你可以提供自定义消息，供其他组件以编程方式进行访问。 有关详细信息，请参阅[异常 (C + + /cli CX)](../cppcx/exceptions-c-cx.md)。
+在 Windows 8 中，此属性是只读的因为 abi 仅作为 HRESULTS 传输该版本的 Windows 运行时中的异常。 在 Windows 8.1 中，可跨 ABI 传输更加丰富的异常信息，你可以提供自定义消息，供其他组件以编程方式进行访问。 有关详细信息，请参阅[异常 (C++/CX)](../cppcx/exceptions-c-cx.md)。
 
 ## <a name="see-also"></a>请参阅
 
-[平台命名空间](../cppcx/platform-namespace-c-cx.md)
+[Platform 命名空间](../cppcx/platform-namespace-c-cx.md)

@@ -15,11 +15,11 @@ helpviewer_keywords:
 - native code [C++], .NET interoperatibility
 ms.assetid: f3ec6c99-c745-4256-b95b-f1d12ba17a5a
 ms.openlocfilehash: 486796e404ad1aee39fbeb85251d26cc078b1160
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59237141"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384785"
 ---
 # <a name="native-and-net-interoperability"></a>本机和 .NET 的互操作性
 

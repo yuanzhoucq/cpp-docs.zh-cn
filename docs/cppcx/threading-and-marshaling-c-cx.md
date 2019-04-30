@@ -9,15 +9,15 @@ helpviewer_keywords:
 - C++/CX, threading issues
 ms.assetid: 83e9ca1d-5107-4194-ae6f-e01bd928c614
 ms.openlocfilehash: c5bce60e564bef490bcfafd6f8559dffe5fd4f1d
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57751695"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62404632"
 ---
 # <a name="threading-and-marshaling-ccx"></a>线程处理和封送处理 (C++/CX)
 
-在大多数情况下，可以从任意线程访问 Windows 运行时类，类似于标准的 c + + 对象的实例。 此类称为“敏捷类”。 但是，少数预装 Windows 的 Windows 运行时类是敏捷，并且必须更常用作 COM 对象比标准 c + + 对象。 您无需是 COM 专家即可使用非敏捷类，但您需要考虑类的线程模型及其封送处理行为。 本文提供了针对您需要使用非敏捷类的实例的极少情况的背景和指南。
+在大多数情况下，Windows 运行时类的实例，如标准C++对象，可以从任意线程访问。 此类称为“敏捷类”。 但是，少量的预装 Windows 的 Windows 运行时类是敏捷，并且必须更常用作 COM 对象比标准C++对象。 您无需是 COM 专家即可使用非敏捷类，但您需要考虑类的线程模型及其封送处理行为。 本文提供了针对您需要使用非敏捷类的实例的极少情况的背景和指南。
 
 ## <a name="threading-model-and-marshaling-behavior"></a>线程模型和封送处理行为
 
@@ -93,11 +93,11 @@ ref class MyOptions
 
 请注意， `Agile` 不能在 ref 类中作为返回值或参数传递。 `Agile<T>::Get()` 方法返回句柄到对象 (^)，您可以在公共方法或属性中跨越应用程序二进制接口 (ABI) 传递它。
 
-Visual c + + 中创建对已为"None"封送处理行为的进程内 Windows 运行时类的引用时编译器会发出警告 C4451，但不建议您考虑使用`Platform::Agile<T>`。  编译器无法提供超过此警告的任何帮助，因此，你有责任正确使用该类，并确保你的代码只从用户界面线程调用 STA 组件，以及只从后台线程调用 MTA 组件。
+视觉对象中C++，当创建对具有封送处理行为的"无"，编译器将发出警告 C4451，但不建议您考虑使用进程内 Windows 运行时类的引用时`Platform::Agile<T>`。  编译器无法提供超过此警告的任何帮助，因此，你有责任正确使用该类，并确保你的代码只从用户界面线程调用 STA 组件，以及只从后台线程调用 MTA 组件。
 
 ## <a name="authoring-agile-windows-runtime-components"></a>创作敏捷 Windows 运行时组件
 
-在定义的 ref 类在 C + + /CX 中，它是默认情况下敏捷 — 也就是说，它具有`ThreadingModel`= Both 和`MarshallingType`= Agile。  如果您使用 Windows 运行时 c + + 模板库，您可以使类成为敏捷通过派生自`FtmBase`，使用`FreeThreadedMarshaller`。  如果创作具有 `ThreadingModel`=Both 或 `ThreadingModel`=MTA 的类，则请确保该类是线程安全的。
+在定义中的 ref 类C++/CX，它是默认情况下敏捷 — 也就是说，它具有`ThreadingModel`= Both 和`MarshallingType`= Agile。  如果您使用的 Windows 运行时C++模板库中，您可以使类成为敏捷通过派生自`FtmBase`，使用`FreeThreadedMarshaller`。  如果创作具有 `ThreadingModel`=Both 或 `ThreadingModel`=MTA 的类，则请确保该类是线程安全的。
 
 可以修改 ref 类的线程处理模型和封送处理行为。 但是，如果所做的更改会使类为非敏捷类，则必须了解与这些更改关联的影响。
 
