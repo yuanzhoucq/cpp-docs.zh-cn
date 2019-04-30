@@ -20,11 +20,11 @@ helpviewer_keywords:
 - std::error_code::message
 ms.assetid: c09b4a96-cb14-4281-a319-63543f9b2b4a
 ms.openlocfilehash: f4d0bc2c2922374d27bba3c0693e50f7930dbe67
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50593279"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62413692"
 ---
 # <a name="errorcode-class"></a>error_code 类
 
@@ -91,7 +91,7 @@ void assign(value_type val, const error_category& _Cat);
 |参数|描述|
 |---------------|-----------------|
 |*val*|要存储在 `error_code` 中的错误代码值。|
-|*则*|要存储在 `error_code` 中的错误类别。|
+|*_Cat*|要存储在 `error_code` 中的错误类别。|
 
 ### <a name="remarks"></a>备注
 
@@ -155,7 +155,7 @@ error_code(_Enum _Errcode,
 |参数|描述|
 |---------------|-----------------|
 |*val*|要存储在 `error_code` 中的错误代码值。|
-|*则*|要存储在 `error_code` 中的错误类别。|
+|*_Cat*|要存储在 `error_code` 中的错误类别。|
 |*_Errcode*|要存储在 `error_code` 中的枚举值。|
 
 ### <a name="remarks"></a>备注
