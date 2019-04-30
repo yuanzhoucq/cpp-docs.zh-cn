@@ -43,11 +43,11 @@ helpviewer_keywords:
 - EVENT_STOCK_KEYPRESS event
 ms.assetid: 3eeadc67-4b3d-4444-8caa-53054073988a
 ms.openlocfilehash: 9f6f3c63f0436296791df428c704bce96eca3ec0
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57291114"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392721"
 ---
 # <a name="mfc-activex-controls-adding-stock-events-to-an-activex-control"></a>MFC ActiveX 控件：向 ActiveX 控件添加常用事件
 
@@ -59,7 +59,7 @@ ms.locfileid: "57291114"
 
 ### <a name="stock-events"></a>常用事件
 
-|事件|触发函数|注释|
+|Event|触发函数|注释|
 |-----------|---------------------|--------------|
 |单击|**void FireClick( )**|触发时控制捕获鼠标，任何**BUTTONUP**接收 （左侧、 中间或右侧） 消息，并在控件上释放该按钮。 此事件之前发生的股票鼠标按下和 MouseUp 事件。<br /><br /> 事件映射条目：**EVENT_STOCK_CLICK( )**|
 |DblClick|**void FireDblClick( )**|单击与类似但时引发的**BUTTONDBLCLK**接收消息。<br /><br /> 事件映射条目：**EVENT_STOCK_DBLCLICK( )**|

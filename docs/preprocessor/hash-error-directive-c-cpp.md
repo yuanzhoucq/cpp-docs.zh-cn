@@ -9,11 +9,11 @@ helpviewer_keywords:
 - error directive (#error directive)
 ms.assetid: d550a802-ff19-4347-9597-688935d23b2b
 ms.openlocfilehash: dc229a8eae6938cba32787ecbec6a5aa6a17ab47
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59037839"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62383979"
 ---
 # <a name="error-directive-cc"></a>#error 指令 (C/C++)
 **#Error**指令在编译时发出用户指定的错误消息，然后终止编译。

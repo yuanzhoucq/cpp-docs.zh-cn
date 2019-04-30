@@ -23,11 +23,11 @@ helpviewer_keywords:
 - std::wstring_convert [C++], state
 ms.assetid: e34f5b65-d572-4bdc-ac69-20778712e376
 ms.openlocfilehash: df3b003289dcd86e8033521d8cb0cacdbb7dfbd8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636951"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62410793"
 ---
 # <a name="wstringconvert-class"></a>wstring_convert 类
 
@@ -42,7 +42,7 @@ class wstring_convert
 
 ### <a name="parameters"></a>参数
 
-*codecvt*<br/>
+*Codecvt*<br/>
 表示转换对象的[区域设置](../standard-library/locale-class.md)方面。
 
 *Elem*<br/>
@@ -139,9 +139,9 @@ wide_string from_bytes(const char* first, const char* last);
 |---------------|-----------------|
 |*Byte*|要转换的单元素字节序列。|
 |*ptr*|要转换的以 null 结尾的 C 样式字符序列。|
-|*bstr*|要转换的 [byte_string](#byte_string)。|
+|*Bstr*|要转换的 [byte_string](#byte_string)。|
 |*first*|要转换的字符范围中的第一个字符。|
-|*最后一个*|要转换的字符范围中的最后一个字符。|
+|*last*|要转换的字符范围中的最后一个字符。|
 
 ### <a name="return-value"></a>返回值
 
@@ -210,7 +210,7 @@ byte_string to_bytes(const Elem* first, const Elem* last);
 |*Wptr*|要转换的以 null 结尾的 C 样式序列（从 `wptr` 开始）。|
 |*Wstr*|要转换的 [wide_string](#wide_string)。|
 |*first*|要转换的元素范围内的第一个元素。|
-|*最后一个*|要转换的元素范围内的最后一个元素。|
+|*last*|要转换的元素范围内的最后一个元素。|
 
 ### <a name="remarks"></a>备注
 
@@ -245,7 +245,7 @@ wstring_convert(const byte_string& _Berr, const wide_string& Werr = wide_string(
 |参数|描述|
 |---------------|-----------------|
 |*\*Pcvt*|用于执行转换的 `Codecvt` 类型的对象。|
-|*（_s)*|表示转换状态的 [state_type](#state_type) 类型的对象。|
+|*_State*|表示转换状态的 [state_type](#state_type) 类型的对象。|
 |*_Berr*|用于在发生错误时显示的 [byte_string](#byte_string)。|
 |*Werr*|用于在发生错误时显示的 [wide_string](#wide_string)。|
 

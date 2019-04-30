@@ -9,11 +9,11 @@ f1_keywords:
 - AMP_GRAPHICS/Concurrency::graphics::rank Constant
 ms.assetid: 8d117ad3-0a1c-41ae-b29c-7c95fdd4d04d
 ms.openlocfilehash: 5244ae5df99b06c77f4eb27317e5829b21fabf24
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57274383"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405412"
 ---
 # <a name="writeonlytextureview-class"></a>writeonly_texture_view 类
 
@@ -73,7 +73,7 @@ class writeonly_texture_view<value_type, _Rank> : public details::_Texture_base<
 
 ### <a name="public-constants"></a>公共常量
 
-|name|描述|
+|名称|描述|
 |----------|-----------------|
 |[rank 常量](#rank)|获取的排名`writeonly_texture_view`对象。|
 

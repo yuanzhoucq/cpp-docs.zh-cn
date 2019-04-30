@@ -7,22 +7,22 @@ helpviewer_keywords:
 - IXHR2 and tasks, example
 ms.assetid: e8e12d46-604c-42a7-abfd-b1d1bb2ed6b3
 ms.openlocfilehash: f78adda7625d3a3def60de968c5e7be97f282a7f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
-ms.translationtype: MT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57266505"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62411395"
 ---
 # <a name="walkthrough-connecting-using-tasks-and-xml-http-requests"></a>演练：使用任务和 XML HTTP 请求进行连接
 
 此示例演示如何使用[IXMLHTTPRequest2](/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2)并[IXMLHTTPRequest2Callback](/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2callback)接口与任务以将 HTTP GET 和 POST 请求发送到通用 Windows 平台 (UWP 中的 web 服务结合使用) 应用。 通过将 `IXMLHTTPRequest2` 与任务组合在一起，你可以编写通过其他任务编写的代码。 例如，可以使用下载任务作为任务链的一部分。 工作取消时，下载任务也会响应。
 
 > [!TIP]
->  此外可以使用 c + + REST SDK 从使用 c + + 应用程序的 UWP 应用或桌面 c + + 应用程序执行 HTTP 请求。 有关详细信息，请参阅[c + + REST SDK (Codename"Casablanca")](https://github.com/Microsoft/cpprestsdk)。
+>  此外可以使用C++REST SDK 执行 HTTP 请求从 UWP 应用中使用C++应用程序或从桌面C++应用程序。 有关详细信息，请参阅[ C++ REST SDK (Codename"Casablanca")](https://github.com/Microsoft/cpprestsdk)。
 
-有关任务的详细信息，请参阅[任务并行](../../parallel/concrt/task-parallelism-concurrency-runtime.md)。 有关如何在 UWP 应用中使用任务的详细信息，请参阅[c + + 中的异步编程](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps)并[创建异步操作在 c + + UWP 应用的](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)。
+有关任务的详细信息，请参阅[任务并行](../../parallel/concrt/task-parallelism-concurrency-runtime.md)。 有关如何在 UWP 应用中使用任务的详细信息，请参阅[异步编程中C++](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps)并[创建异步操作C++适用于 UWP 应用](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)。
 
-本文档首先演示如何创建 `HttpRequest` 及其支持类。 然后，它演示如何使用此类从使用 c + + 和 XAML 的 UWP 应用。
+本文档首先演示如何创建 `HttpRequest` 及其支持类。 它然后演示如何使用此类使用的 UWP 应用从C++和 XAML。
 
 有关使用示例`IXMLHTTPRequest2`但不使用任务，请参阅[快速入门：使用 XML HTTP 请求 (IXMLHTTPRequest2) 进行连接](/previous-versions/windows/apps/hh770550\(v=win.10\))。
 
@@ -43,7 +43,7 @@ ms.locfileid: "57266505"
 
 #### <a name="to-define-the-httprequest-class"></a>定义 HttpRequest 类
 
-1. 使用 Visual c + +**空白应用 (XAML)** 模板来创建一个空白的 XAML 应用程序项目。 此示例将项目命名为 `UsingIXMLHTTPRequest2`。
+1. 使用视觉对象C++**空白应用 (XAML)** 模板来创建一个空白的 XAML 应用程序项目。 此示例将项目命名为 `UsingIXMLHTTPRequest2`。
 
 1. 在项目中添加一个名为 HttpRequest.h 的标头文件和一个名为 HttpRequest.cpp 的源文件。
 
@@ -110,7 +110,7 @@ ms.locfileid: "57266505"
 
 [任务并行](../../parallel/concrt/task-parallelism-concurrency-runtime.md)<br/>
 [PPL 中的取消操作](cancellation-in-the-ppl.md)<br/>
-[C + + 中的异步编程](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps)<br/>
+[中的异步编程C++](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps)<br/>
 [用 C++ 为 UWP 应用创建异步操作](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)<br/>
 [快速入门：使用 XML HTTP 请求 (IXMLHTTPRequest2) 进行连接](/previous-versions/windows/apps/hh770550\(v=win.10\))
 [task 类 （并发运行时）](../../parallel/concrt/reference/task-class.md)<br/>

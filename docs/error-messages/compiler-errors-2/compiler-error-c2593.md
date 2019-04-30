@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2593
 ms.assetid: 4a0fe9bb-2163-447d-91f6-1890ed8250f6
 ms.openlocfilehash: c358553a36104b5c389076f5a5ce02f94f85e85a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667306"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62386910"
 ---
 # <a name="compiler-error-c2593"></a>编译器错误 C2593
 
@@ -39,7 +39,7 @@ int main() {
 }
 ```
 
-此错误可能由序列化浮点变量 using`CArchive`对象。 编译器标识`<<`为不明确的运算符。 唯一的基元的 c + + 类型`CArchive`可以序列化是固定大小类型`BYTE`， `WORD`， `DWORD`，和`LONG`。 所有的整数类型必须转换为以下类型之一，以进行序列化。 必须使用存档浮点类型`CArchive::Write()`成员函数。
+此错误可能由序列化浮点变量 using`CArchive`对象。 编译器标识`<<`为不明确的运算符。 唯一的基元C++类型的`CArchive`可以序列化是固定大小类型`BYTE`， `WORD`， `DWORD`，并`LONG`。 所有的整数类型必须转换为以下类型之一，以进行序列化。 必须使用存档浮点类型`CArchive::Write()`成员函数。
 
 下面的示例演示如何将浮点变量 (`f`) 到存档`ar`:
 

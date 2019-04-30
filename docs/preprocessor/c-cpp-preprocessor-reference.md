@@ -6,14 +6,14 @@ helpviewer_keywords:
 - preprocessor, reference overview
 ms.assetid: e4a52843-7016-4f6d-8b40-cb1ace18f805
 ms.openlocfilehash: a9e5be5895d8a90d93d0060e2bd2a7d0a9f84dbd
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57814418"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62403511"
 ---
 # <a name="cc-preprocessor-reference"></a>C/C++ 预处理器参考
-*C/c + + 预处理器参考 》* 介绍实现在 Microsoft C/c + + 预处理器。 在将 C 和 C++ 文件传递到编译器之前，预处理器将对这些文件执行预先操作。 可以使用预处理器有条件地编译代码、插入文件、指定编译时错误消息以及将计算机特定规则应用于代码节。
+*C /C++预处理器参考 》* 解释是在 Microsoft C 中实现导致预处理器 /C++。 在将 C 和 C++ 文件传递到编译器之前，预处理器将对这些文件执行预先操作。 可以使用预处理器有条件地编译代码、插入文件、指定编译时错误消息以及将计算机特定规则应用于代码节。
 
 ## <a name="in-this-section"></a>本节内容
 
@@ -37,7 +37,7 @@ ms.locfileid: "57814418"
 [C 语言参考](../c-language/c-language-reference.md)<br/>
 提供有关 Microsoft 的 C 语言实现的参考材料。
 
-[生成 C/c + + 程序](../build/reference/c-cpp-building-reference.md)<br/>
+[生成 C /C++程序](../build/reference/c-cpp-building-reference.md)<br/>
 提供指向讨论编译器和链接器选项的主题的链接。
 
 [创建和管理 Visual C++ 项目](../build/creating-and-managing-visual-cpp-projects.md)<br/>

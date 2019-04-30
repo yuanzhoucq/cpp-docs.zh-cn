@@ -60,11 +60,11 @@ helpviewer_keywords:
 - value_type member [STL/CLR]
 ms.assetid: 6ee96b9f-8a33-4cf7-b7e0-6535c24bdefb
 ms.openlocfilehash: ec3863796f7c49c155af61576c15c1ca8a9d5109
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50513875"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384603"
 ---
 # <a name="stack-stlclr"></a>stack (STL/CLR)
 
@@ -89,7 +89,7 @@ template<typename Value,
 *值*<br/>
 受控序列中的元素的类型。
 
-*容器*<br/>
+*Container*<br/>
 基础容器的类型。
 
 ## <a name="requirements"></a>要求
@@ -248,7 +248,7 @@ int main()
 c b a
 ```
 
-## <a name="container_type"></a> stack:: container_type (STL/CLR)
+## <a name="container_type"></a> stack::container_type (STL/CLR)
 
 基础容器的类型。
 
@@ -565,7 +565,7 @@ int main()
 a b c
 ```
 
-## <a name="op_as"></a> stack:: operator = (STL/CLR)
+## <a name="op_as"></a> stack::operator= (STL/CLR)
 
 替换受控序列。
 
@@ -619,7 +619,7 @@ a b c
 a b c
 ```
 
-## <a name="pop"></a> stack:: pop (STL/CLR)
+## <a name="pop"></a> stack::pop (STL/CLR)
 
 删除最后一个元素。
 
@@ -667,7 +667,7 @@ a b c
 a b
 ```
 
-## <a name="push"></a> stack:: push (STL/CLR)
+## <a name="push"></a> stack::push (STL/CLR)
 
 添加一个新的最后一个元素。
 
@@ -757,7 +757,7 @@ a b c
 a b x
 ```
 
-## <a name="size"></a> stack:: size (STL/CLR)
+## <a name="size"></a> stack::size (STL/CLR)
 
 对元素数进行计数。
 
@@ -811,7 +811,7 @@ size() = 2 after popping
 size() = 4 after adding 2
 ```
 
-## <a name="size_type"></a> stack:: size_type (STL/CLR)
+## <a name="size_type"></a> stack::size_type (STL/CLR)
 
 两个元素间的带符号距离的类型。
 
@@ -860,7 +860,7 @@ a b c
 size difference = 2
 ```
 
-## <a name="stack"></a> stack:: stack (STL/CLR)
+## <a name="stack"></a> stack::stack (STL/CLR)
 
 构造容器适配器对象。
 
@@ -878,7 +878,7 @@ explicit stack(container_type% wrapped);
 *right*<br/>
 要复制的对象。
 
-*包装*<br/>
+*wrapped*<br/>
 若要使用的已包装的容器。
 
 ### <a name="remarks"></a>备注
@@ -1003,7 +1003,7 @@ a b c d
 a b c
 ```
 
-## <a name="top"></a> stack:: top (STL/CLR)
+## <a name="top"></a> stack::top (STL/CLR)
 
 访问最后一个元素。
 
@@ -1107,7 +1107,7 @@ top_item = c
 a b x
 ```
 
-## <a name="value_type"></a> stack:: value_type (STL/CLR)
+## <a name="value_type"></a> stack::value_type (STL/CLR)
 
 元素的类型。
 
@@ -1152,7 +1152,7 @@ int main()
 c b a
 ```
 
-## <a name="op_neq"></a> 运算符 ！ = （堆栈） (STL/CLR)
+## <a name="op_neq"></a> operator!= (stack) (STL/CLR)
 
 堆栈不相等比较。
 
@@ -1294,7 +1294,7 @@ a b d
 [a b c] < [a b d] is True
 ```
 
-## <a name="op_lteq"></a> 运算符&lt;= （堆栈） (STL/CLR)
+## <a name="op_lteq"></a> operator&lt;= (stack) (STL/CLR)
 
 堆栈小于或等于比较。
 
@@ -1365,7 +1365,7 @@ a b d
 [a b d] <= [a b c] is False
 ```
 
-## <a name="op_eq"></a> 运算符 = = （堆栈） (STL/CLR)
+## <a name="op_eq"></a> operator== (stack) (STL/CLR)
 
 堆栈相等比较。
 
@@ -1507,7 +1507,7 @@ a b d
 [a b d] > [a b c] is True
 ```
 
-## <a name="op_gteq"></a> 运算符&gt;= （堆栈） (STL/CLR)
+## <a name="op_gteq"></a> operator&gt;= (stack) (STL/CLR)
 
 堆栈大于或等于比较。
 

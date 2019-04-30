@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2885
 ms.assetid: 7743e5f3-a034-44b4-9ee8-5a6254c27f8c
 ms.openlocfilehash: 8174faed09bdffbdc6974390cceb7c17661eab4b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50652122"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62388762"
 ---
 # <a name="compiler-error-c2885"></a>编译器错误 C2885
 
@@ -21,7 +21,7 @@ class::identifier： 不是有效使用的声明在非类范围内
 
 ## <a name="example"></a>示例
 
-为 Visual c + + 2005年执行的编译器一致性工作可以生成此错误： 将不再有效具有`using`声明嵌套的类型，则必须显式限定对嵌套类型，将类型放在名称中进行的每个引用空间，或创建一个 typedef。
+视觉对象执行的编译器一致性工作可以导致此错误C++2005年： 不再有效能够`using`声明嵌套的类型，则必须显式限定对嵌套类型，将类型放进行的每个引用在命名空间，或创建一个 typedef。
 
 下面的示例生成 C2885。
 
@@ -54,7 +54,7 @@ int main () {
 
 ## <a name="example"></a>示例
 
-如果使用`using`类的成员，c + + 关键字需要定义该成员在另一个类 （派生类）。
+如果您使用`using`关键字与一个类成员， C++ ，必须先定义该成员在另一个类 （派生类）。
 
 下面的示例生成 C2885。
 

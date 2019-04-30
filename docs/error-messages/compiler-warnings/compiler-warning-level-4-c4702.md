@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4702
 ms.assetid: d8198c1e-8762-42a6-9e6b-cb568b7a1686
 ms.openlocfilehash: 96ae3a0742db5e3a5006f031ce62beb281c38ccd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607228"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62395243"
 ---
 # <a name="compiler-warning-level-4-c4702"></a>编译器警告（等级 4）C4702
 
@@ -19,7 +19,7 @@ ms.locfileid: "50607228"
 
 此警告是适用于 Visual Studio.NET 2003年执行的编译器一致性工作的结果： 无法访问的代码。 当编译器 （后端） 检测到无法访问的代码时，它将生成 C4702，第 4 级警告。
 
-有关在 Visual Studio.NET 2003年和 Visual Studio.NET 版本的 Visual c + + 中有效的代码，删除无法访问的代码，或确保所有的源代码是可访问的某些流的执行。
+在 Visual Studio.NET 2003年和 Visual Studio.NET 版本的视觉对象中是有效的代码的C++、 删除无法访问的代码，或确保所有的源代码是可访问的某些流的执行。
 
 ## <a name="example"></a>示例
 

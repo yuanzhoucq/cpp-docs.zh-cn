@@ -9,15 +9,15 @@ helpviewer_keywords:
 - wmain function
 ms.assetid: 41213c41-668c-40a4-8a1e-77d9eded720d
 ms.openlocfilehash: f4705e65551b57e3e52c0c8f060032a93280f67d
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57745131"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62410533"
 ---
 # <a name="support-for-using-wmain"></a>支持使用 wmain
 
-Visual c + + 支持定义**wmain**函数，并将宽字符自变量传递给 Unicode 应用程序。 您将形参声明为**wmain**，使用的格式类似于`main`。 然后可以将宽字符自变量和宽字符环境指针（可选）传递给该程序。 wmain 的 `argv` 和 `envp` 参数为 `wchar_t*` 类型。 例如：
+VisualC++支持定义**wmain**函数，并将宽字符自变量传递给 Unicode 应用程序。 您将形参声明为**wmain**，使用的格式类似于`main`。 然后可以将宽字符自变量和宽字符环境指针（可选）传递给该程序。 wmain 的 `argv` 和 `envp` 参数为 `wchar_t*` 类型。 例如：
 
 ```cpp
 wmain( int argc, wchar_t *argv[ ], wchar_t *envp[ ] )

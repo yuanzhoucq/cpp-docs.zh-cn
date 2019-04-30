@@ -43,11 +43,11 @@ helpviewer_keywords:
 - std::tan [C++]
 - std::tanh [C++]
 ms.openlocfilehash: a67955da21c1229c3492d5b52dd6e14c9caa33fd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50474277"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62389198"
 ---
 # <a name="ltcomplexgt-functions"></a>&lt;complex&gt; 函数
 
@@ -934,7 +934,7 @@ complex<Type> pow(const Type& _Base, const complex<Type>& _Power);
 
 ### <a name="parameters"></a>参数
 
-*（_b)*<br/>
+*_Base*<br/>
 复数或属于复数参数类型的数是基数由成员函数升幂的基数。
 
 *_Power*<br/>
@@ -1133,7 +1133,7 @@ complex<Type> sin(const complex<Type>& complexNum);
 
 定义复正弦的标识：
 
-sin ( *z*) = (1/2*我*)\*(exp ( *iz*)-exp (- *iz*))
+sin ( *z*) = (1/2 *i*)\*( exp ( *iz*) - exp (- *iz*) )
 
 sin ( *z*) = sin ( *a + bi*) = sin ( *a*) cosh ( *b*) + icos ( *a*) sinh ( *b*)
 
@@ -1224,7 +1224,7 @@ complex<Type> sinh(const complex<Type>& complexNum);
 
 定义复双曲正弦的标识：
 
-sinh ( *z*) = (1/2)\*(exp ( *z*)-exp (- *z*))
+sinh ( *z*) = (1/2)\*( exp ( *z*) - exp (- *z*) )
 
 sinh ( *z*) = sinh ( *a + bi*) = sinh ( *a*) cos ( *b*) + *i*cosh ( *a*) sin ( *b*)
 
@@ -1392,7 +1392,7 @@ complex<Type> tan(const complex<Type>& complexNum);
 
 定义复正切的标识：
 
-tan ( *z*) = sin ( *z*) / cos ( *z*) = (exp ( *iz*)-exp (- *iz*)) / *i*(exp ( *iz*) + exp (- *iz*))
+tan ( *z*) = sin ( *z*) / cos ( *z*) = ( exp ( *iz*) - exp (- *iz*) ) / *i*( exp ( *iz*) + exp (- *iz*) )
 
 ### <a name="example"></a>示例
 
@@ -1481,7 +1481,7 @@ complex<Type> tanh(const complex<Type>& complexNum);
 
 定义复双曲余切的标识：
 
-tanh ( *z*) = sinh ( *z*) / cosh ( *z*) = (exp ( *z*)-exp (- *z*)) / (exp ( *z*)+ exp (- *z*))
+tanh ( *z*) = sinh ( *z*) / cosh ( *z*) = ( exp ( *z*) - exp (- *z*) ) / ( exp ( *z*) + exp (- *z*) )
 
 ### <a name="example"></a>示例
 

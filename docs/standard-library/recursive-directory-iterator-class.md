@@ -5,11 +5,11 @@ f1_keywords:
 - filesystem/std::tr2::sys::recursive_directory_iterator
 ms.assetid: 79a061bd-5b64-404c-97e8-749c888c2ced
 ms.openlocfilehash: 52e6f738aa226dba26bae0cf6e97cd18d107d677
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50593332"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62370122"
 ---
 # <a name="recursivedirectoryiterator-class"></a>recursive_directory_iterator 类
 
@@ -58,9 +58,9 @@ for (recursive_directory_iterator next(path("abc")), end; next != end; ++next)
 
 |成员函数|描述|
 |-|-|
-|[深度](#depth)|返回`mystack.size() - 1`，因此`pval`深度为零。|
+|[depth](#depth)|返回`mystack.size() - 1`，因此`pval`深度为零。|
 |[disable_recursion_pending](#disable_recursion_pending)|存储 **，则返回 true**中`no_push`。|
-|[增量](#increment)|前进到序列中的下一个文件名。|
+|[increment](#increment)|前进到序列中的下一个文件名。|
 |[options](#options)|返回 `myoptions`。|
 |[pop](#pop)|返回下一个对象。|
 |[recursion_pending](#recursion_pending)|返回 `!no_push`。|
@@ -163,7 +163,7 @@ bool operator==(const recursive_directory_iterator& right) const;
 const directory_entry& operator*() const;
 ```
 
-## <a name="op_cast"></a> recursive_directory_iterator:: operator->
+## <a name="op_cast"></a> recursive_directory_iterator::operator->
 
 返回 `&**this`。
 

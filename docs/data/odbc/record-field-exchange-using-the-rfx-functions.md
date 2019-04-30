@@ -11,11 +11,11 @@ helpviewer_keywords:
 - function calls, RFX functions
 ms.assetid: c594300b-5a29-4119-a68b-e7ca32def696
 ms.openlocfilehash: dc717336a5279e7eda1b7c39b19a7c76f9055cd3
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59035979"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62395674"
 ---
 # <a name="record-field-exchange-using-the-rfx-functions"></a>记录字段交换：使用 RFX 函数
 
@@ -65,8 +65,8 @@ RFX 全局函数之间交换数据集中的记录的数据源和字段数据成�
 ## <a name="see-also"></a>请参阅
 
 [记录字段交换 (RFX)](../../data/odbc/record-field-exchange-rfx.md)<br/>
-[记录字段交换：RFX 的工作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)<br/>
-[记录集：确定记录集的参数 (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)<br/>
+[记录字段交换：RFX 工作原理](../../data/odbc/record-field-exchange-how-rfx-works.md)<br/>
+[记录集：参数化记录集 (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)<br/>
 [记录集：动态绑定数据列 (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)<br/>
 [CRecordset 类](../../mfc/reference/crecordset-class.md)<br/>
 [CFieldExchange 类](../../mfc/reference/cfieldexchange-class.md)

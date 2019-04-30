@@ -1,5 +1,5 @@
 ---
-title: 如何：创建可验证 c + + 项目 (C + + CLI)
+title: 如何：创建可验证C++项目 (C++/CLI)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - verifiable assemblies [C++], creating
@@ -7,20 +7,20 @@ helpviewer_keywords:
 - Visual C++ projects
 ms.assetid: 4ef2cc1a-e3e5-4d67-8d8d-9c614f8ec5d3
 ms.openlocfilehash: de3742717bf55c53ab4007aaed18b6ce687fbede
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57817370"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62387445"
 ---
-# <a name="how-to-create-verifiable-c-projects-ccli"></a>如何： 创建可验证 c + + 项目 (C + + CLI)
+# <a name="how-to-create-verifiable-c-projects-ccli"></a>如何： 创建可验证C++项目 (C++/CLI)
 
-Visual c + + 应用程序向导不会创建可验证的项目。
+VisualC++应用程序向导不会创建可验证的项目。
 
 > [!IMPORTANT]
 > 不推荐使用 visual Studio 2015 和 Visual Studio 2017 不支持 **/clr: pure**并 **/clr: safe**创建可验证项目。 如果需要可验证代码，我们建议将转换为 C# 代码。
 
-但是，如果使用支持的 Visual c + + 编译器工具集的较旧版本 **/clr: pure**并 **/clr: safe**，项目可以转换为可验证。 本主题介绍如何设置项目属性和修改项目源文件来转换你的 Visual c + + 项目以生成可验证应用程序。
+但是，使用较旧版本的视觉对象C++支持的编译器工具集 **/clr: pure**和 **/clr: safe**，项目可以转换为可验证。 本主题介绍如何设置项目属性和修改项目源文件来转换你的视觉对象C++项目以生成可验证应用程序。
 
 ## <a name="compiler-and-linker-settings"></a>编译器和链接器设置
 

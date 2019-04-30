@@ -3,11 +3,11 @@ title: 接口 (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 11034314-d54a-426d-923b-5ab7a6b9f8ce
 ms.openlocfilehash: 04aaf25817cade47e89f0a06c423b68538d947b4
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57740741"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62375777"
 ---
 # <a name="interfaces-ccx"></a>接口 (C++/CX)
 
@@ -63,7 +63,7 @@ ms.locfileid: "57740741"
 
 ## <a name="generic-interfaces"></a>泛型接口
 
-在 C + + /CX 中，`generic`关键字用于表示 Windows 运行时参数化类型。 参数化类型在元数据中发出，且可由用支持类型参数的任何语言编写的代码使用。 Windows 运行时定义几个泛型接口 — 例如， [Windows::Foundation::Collections::IVector\<T >](Windows::Foundation::Collections::IVector)— 但它不支持创建公共用户定义的泛型接口中 C + + /cli CX。 但可以创建私有泛型接口。
+在C++/CX，`generic`关键字用于表示 Windows 运行时参数化类型。 参数化类型在元数据中发出，且可由用支持类型参数的任何语言编写的代码使用。 Windows 运行时定义几个泛型接口 — 例如， [Windows::Foundation::Collections::IVector\<T >](Windows::Foundation::Collections::IVector)— 但它不支持创建公共用户定义的泛型接口中的C++/CX。 但可以创建私有泛型接口。
 
 下面是如何使用 Windows 运行时类型创作泛型接口：
 
@@ -98,5 +98,5 @@ ms.locfileid: "57740741"
 ## <a name="see-also"></a>请参阅
 
 [类型系统](../cppcx/type-system-c-cx.md)<br/>
-[Visual c + + 语言参考](../cppcx/visual-c-language-reference-c-cx.md)<br/>
+[VisualC++语言参考](../cppcx/visual-c-language-reference-c-cx.md)<br/>
 [命名空间参考](../cppcx/namespaces-reference-c-cx.md)

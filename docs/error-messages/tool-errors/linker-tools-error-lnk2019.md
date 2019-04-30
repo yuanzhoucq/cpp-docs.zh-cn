@@ -8,11 +8,11 @@ helpviewer_keywords:
 - LNK2019
 - _check_commonlanguageruntime_version
 ms.openlocfilehash: af40a48e36d316842ec9a744ad95d6c3b3af3731
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50555592"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62386338"
 ---
 # <a name="linker-tools-error-lnk2019"></a>链接器工具错误 LNK2019
 
@@ -48,7 +48,7 @@ ms.locfileid: "50555592"
 
 调用约定 ([__cdecl](../../cpp/cdecl.md)、 [__stdcall](../../cpp/stdcall.md)、 [__fastcall](../../cpp/fastcall.md)或 [__vectorcall](../../cpp/vectorcall.md)) 作为修饰名称的一部分进行编码。 验证调用约定是否相同。
 
-### <a name="a-symbol-is-defined-in-a-c-file-but-declared-without-using-extern-c-in-a-c-file"></a>符号在 C 文件中，定义但未使用 extern"C"在 c + + 文件中声明
+### <a name="a-symbol-is-defined-in-a-c-file-but-declared-without-using-extern-c-in-a-c-file"></a>符号在 C 文件中，定义但未使用 extern"C"中声明C++文件
 
 在作为 C 编译的文件中定义的符号拥有与在 C++ 文件中声明的符号不同的修饰名称，除非使用了 [extern "C"](../../cpp/using-extern-to-specify-linkage.md) 修饰符。 验证声明是否匹配每个符号的编译链接。 同样，如果在 C 程序将使用的 C++ 文件中定义符号，请在定义中使用 `extern "C"` 。
 
@@ -90,7 +90,7 @@ ms.locfileid: "50555592"
 
 ## <a name="third-party-library-issues-and-vcpkg"></a>第三方库问题和 Vcpkg
 
-如果尝试将第三方库配置为生成的一部分时看到此错误，请考虑使用[Vcpkg](../../vcpkg.md)，Visual c + + 包管理器，若要安装并生成库。 Vcpkg 支持大量且持续增长[的第三方库列表](https://github.com/Microsoft/vcpkg/tree/master/ports)，并设置所有配置属性和依赖项所需的成功生成项目的一部分。 有关详细信息，请参阅相关[Visual c + + 博客](https://blogs.msdn.microsoft.com/vcblog/2016/09/19/vcpkg-a-tool-to-acquire-and-build-c-open-source-libraries-on-windows/)发布。
+如果尝试将第三方库配置为生成的一部分时看到此错误，请考虑使用[Vcpkg](../../vcpkg.md)，视觉对象C++包管理器中，若要安装并生成库。 Vcpkg 支持大量且持续增长[的第三方库列表](https://github.com/Microsoft/vcpkg/tree/master/ports)，并设置所有配置属性和依赖项所需的成功生成项目的一部分。 有关详细信息，请参阅相关[可视化C++博客](https://blogs.msdn.microsoft.com/vcblog/2016/09/19/vcpkg-a-tool-to-acquire-and-build-c-open-source-libraries-on-windows/)文章。
 
 ## <a name="diagnosis-tools"></a>诊断工具
 

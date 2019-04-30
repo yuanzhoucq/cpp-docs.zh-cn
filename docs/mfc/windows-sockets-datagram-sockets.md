@@ -9,11 +9,11 @@ helpviewer_keywords:
 - sockets [MFC], bi-directional data flow
 ms.assetid: bec16a1c-74c0-4ff9-8c18-c2d87897d264
 ms.openlocfilehash: 14d33ece66d902b5705e573e9863ea78fff9737f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57266786"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62385281"
 ---
 # <a name="windows-sockets-datagram-sockets"></a>Windows 套接字：数据报套接字
 

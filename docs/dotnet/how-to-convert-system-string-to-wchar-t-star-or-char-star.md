@@ -10,11 +10,11 @@ helpviewer_keywords:
 - char data type, converting System::String to
 ms.assetid: 385da01b-5649-4543-8076-e3e251243ff0
 ms.openlocfilehash: c9bf8a6af2d48c4b2624b91e2e85f78c63aee6de
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57738823"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62387495"
 ---
 # <a name="how-to-convert-systemstring-to-wchart-or-char"></a>如何：将 system:: string 转换为 wchar_t * 或 char *
 

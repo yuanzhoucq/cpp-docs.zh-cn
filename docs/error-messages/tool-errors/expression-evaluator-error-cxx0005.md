@@ -8,11 +8,11 @@ helpviewer_keywords:
 - CAN0005
 ms.assetid: b88e83e4-10aa-4e9c-94d3-92aa8c688748
 ms.openlocfilehash: e8937ebe802c19b8ae532280c7c88814622aff01
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50598778"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62406023"
 ---
 # <a name="expression-evaluator-error-cxx0005"></a>表达式计算器错误 CXX0005
 

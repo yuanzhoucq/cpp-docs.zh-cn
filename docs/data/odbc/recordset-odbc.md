@@ -14,11 +14,11 @@ helpviewer_keywords:
 - dynasets
 ms.assetid: 333337c5-575e-4d26-b5f6-47166ad7874d
 ms.openlocfilehash: b201e152d83d3812253aa4803eebe715d726219d
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59034490"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62397739"
 ---
 # <a name="recordset-odbc"></a>记录集 (ODBC)
 
@@ -79,7 +79,7 @@ ms.locfileid: "59034490"
 
 - [记录集：体系结构 (ODBC)](../../data/odbc/recordset-architecture-odbc.md)
 
-- [记录集：声明一个类 (ODBC) 的表](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)
+- [记录集：声明表的类 (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)
 
 - [记录集：创建和关闭记录集 (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)
 
@@ -91,35 +91,35 @@ ms.locfileid: "59034490"
 
 - [记录集：排序记录 (ODBC)](../../data/odbc/recordset-sorting-records-odbc.md)
 
-- [记录集：确定记录集的参数 (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)
+- [记录集：参数化记录集 (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)
 
 ### <a name="topics-about-the-mechanics-of-modifying-recordsets"></a>有关修改记录集的技巧的主题
 
-- [记录集：添加、 更新和删除记录 (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)
+- [记录集：添加、更新和删除记录 (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)
 
 - [记录集：锁定记录 (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)
 
-- [记录集：再次查询记录集 (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)
+- [记录集：重新查询记录集 (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)
 
 ### <a name="topics-about-somewhat-more-advanced-techniques"></a>有关某种程度上的主题更高级的技术
 
 - [记录集：执行联接 (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)
 
-- [记录集：声明一个类预定义的查询 (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)
+- [记录集：声明预定义查询的类 (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)
 
 - [记录集：动态绑定数据列 (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)
 
-- [记录集：提取记录大容量 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)
+- [记录集：批量提取记录 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)
 
 - [记录集：处理大数据项 (ODBC)](../../data/odbc/recordset-working-with-large-data-items-odbc.md)
 
-- [记录集：获取 Sum 及其他聚合结果 (ODBC)](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)
+- [记录集：获取 SUM 及其他聚合结果 (ODBC)](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)
 
 ### <a name="topics-about-how-recordsets-work"></a>有关记录集的工作原理的主题
 
-- [记录集：如何记录集选择记录 (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)
+- [记录集：记录集如何选择记录 (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)
 
-- [记录集：如何记录集更新记录 (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)
+- [记录集：记录集如何更新记录 (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)
 
 ## <a name="see-also"></a>请参阅
 

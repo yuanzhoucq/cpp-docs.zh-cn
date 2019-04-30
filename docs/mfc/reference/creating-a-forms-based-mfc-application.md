@@ -8,11 +8,11 @@ helpviewer_keywords:
 - forms-based applications [MFC]
 ms.assetid: 048d2f7d-b60d-4386-ad8e-71d49af9c05e
 ms.openlocfilehash: 6810a6c7fce91865a92d048129da29305e22abc1
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57291244"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62372318"
 ---
 # <a name="creating-a-forms-based-mfc-application"></a>创建基于窗体的 MFC 应用程序
 
@@ -32,7 +32,7 @@ SDI、 MDI 和多个顶级文档应用程序是基于所有窗体，并且使用
 
 即使你使用的基类，例如[CView](../../mfc/reference/cview-class.md)，你可以更高版本进行您的应用程序的基于窗体[添加 MFC 类](../../mfc/reference/adding-an-mfc-class.md)派生自`CFormView`并检查**生成 DocTemplate资源**中的复选框[MFC 类向导](../../mfc/reference/document-template-strings-mfc-add-class-wizard.md)。
 
-一旦完成该向导时，将打开你的项目，并且选中`CFormView`(或类继承自`CFormView`) 作为基类或 Visual c + + 创建一个基于对话框的应用程序，如果打开对话框编辑器。 此时，已准备好设计第一个窗体。
+一旦完成该向导时，将打开你的项目，并且选中`CFormView`(或类继承自`CFormView`) 作为基类或如果您创建了一个基于对话框的应用程序，VisualC++打开对话框编辑器。 此时，已准备好设计第一个窗体。
 
 ### <a name="to-begin-creating-a-forms-based-mfc-executable"></a>若要开始创建一个基于窗体的 MFC 可执行文件
 

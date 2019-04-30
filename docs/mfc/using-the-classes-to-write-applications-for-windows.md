@@ -10,15 +10,15 @@ helpviewer_keywords:
 - database applications [MFC], creating
 ms.assetid: 73f63470-857d-43dd-9a54-b38b7be0f1b7
 ms.openlocfilehash: c8b3d7061c0ef06063d9c6993f24d23fc2e1f92e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57265296"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62411469"
 ---
 # <a name="using-the-classes-to-write-applications-for-windows"></a>使用类编写 Windows 应用程序
 
-合起来看，Microsoft 基础类 (MFC) 库中的类构成了一个"应用程序框架，"基于其构建用于 Windows 操作系统的应用程序。 在一般的级别，框架定义的应用程序框架，并提供标准的用户界面实现可放置到框架上。 您作为程序员的工作是主干的填写其余中，这是主干的特定于你的应用程序的事情。 可以通过使用 MFC 应用程序向导创建非常细致初学者应用程序的文件中获取一个良好的开端。 使用 Microsoft Visual c + + 资源编辑器，以直观地设计用户界面元素类视图命令连接到代码中和类库的这些元素来实现特定于应用程序逻辑。
+合起来看，Microsoft 基础类 (MFC) 库中的类构成了一个"应用程序框架，"基于其构建用于 Windows 操作系统的应用程序。 在一般的级别，框架定义的应用程序框架，并提供标准的用户界面实现可放置到框架上。 您作为程序员的工作是主干的填写其余中，这是主干的特定于你的应用程序的事情。 可以通过使用 MFC 应用程序向导创建非常细致初学者应用程序的文件中获取一个良好的开端。 使用 Microsoft VisualC++资源编辑器以直观地设计用户界面元素类视图命令连接到代码中和类库来实现特定于应用程序逻辑的这些元素。
 
 3.0 版及更高版本的 MFC 框架版本支持的 Win32 平台，包括 Microsoft Windows 95 和更高版本，编程和 Windows NT 版本 3.51 及更高版本。 MFC Win32 支持包括多线程处理。 使用版本 1.5*x*如果需要执行 16 位编程。
 

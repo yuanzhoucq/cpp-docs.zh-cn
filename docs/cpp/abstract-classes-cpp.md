@@ -8,11 +8,11 @@ helpviewer_keywords:
 - derived classes [C++], abstract classes [C++]
 ms.assetid: f0c5975b-39de-4d68-9640-6ce57f4632e6
 ms.openlocfilehash: a7b41a2cabc2cff2eca24cf50c6c30d5190d39a9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50461303"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62385084"
 ---
 # <a name="abstract-classes-c"></a>抽象类 (C++)
 
@@ -43,7 +43,7 @@ private:
 
 - 变量或成员数据
 
-- 参数类型
+- 自变量类型
 
 - 函数返回类型
 
@@ -53,7 +53,7 @@ private:
 
 可以为抽象类定义纯虚函数，但是只能通过使用以下语法直接调用：
 
-*抽象类名*::*函数名称*（)
+*abstract-class-name*::*function-name*()
 
 这有助于设计基类包括纯虚析构函数的类层次结构，因为在销毁对象的过程中始终会调用基类析构函数。 请看下面的示例：
 

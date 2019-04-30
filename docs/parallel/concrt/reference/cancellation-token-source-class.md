@@ -12,16 +12,15 @@ helpviewer_keywords:
 - cancellation_token_source class
 ms.assetid: 3548b1a0-12b0-4334-95db-4bf57141c066
 ms.openlocfilehash: 330473db1011af661e2cfa2c5861987bce786e40
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57296782"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62391018"
 ---
 # <a name="cancellationtokensource-class"></a>cancellation_token_source 类
 
-
-  `cancellation_token_source` 类表示取消某个可取消操作的功能。
+`cancellation_token_source` 类表示取消某个可取消操作的功能。
 
 ## <a name="syntax"></a>语法
 
@@ -116,10 +115,10 @@ static cancellation_token_source create_linked_source(_Iter _Begin, _Iter _End);
 一个标记，如果取消该标记，则将导致取消返回的标记源。 请注意，返回的标记源也可在此参数中包含的源之外单独取消。
 
 *_Begin*<br/>
-C + + 标准库迭代器对应于令牌的范围开始侦听取消。
+C++标准库迭代器，用于对应于令牌的范围开始侦听取消。
 
 *_End*<br/>
-C + + 标准库迭代器，用于标记范围的结尾相对应侦听取消。
+C++标准库迭代器，用于标记范围的结尾相对应侦听取消。
 
 ### <a name="return-value"></a>返回值
 

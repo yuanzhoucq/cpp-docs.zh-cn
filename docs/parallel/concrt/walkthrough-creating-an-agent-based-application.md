@@ -6,11 +6,11 @@ helpviewer_keywords:
 - agent class, example
 ms.assetid: 730f42ce-6d58-4753-b948-fd9c9ef2ce6c
 ms.openlocfilehash: 1d55c9879a3dd90bb4a40b61a3bf958dbe960bc3
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
-ms.translationtype: MT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57290054"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62378058"
 ---
 # <a name="walkthrough-creating-an-agent-based-application"></a>演练：创建基于代理的应用程序
 
@@ -40,13 +40,13 @@ ms.locfileid: "57290054"
 
 ##  <a name="createapplication"></a> 创建控制台应用程序
 
-本部分演示如何创建引用该程序将使用的标头文件的 Visual c + + 控制台应用程序。
+本部分演示如何创建视觉对象C++控制台应用程序引用该程序将使用的标头文件。
 
-#### <a name="to-create-a-visual-c-application-by-using-the-win32-console-application-wizard"></a>若要使用 Win32 控制台应用程序向导创建的 Visual c + + 应用程序
+#### <a name="to-create-a-visual-c-application-by-using-the-win32-console-application-wizard"></a>若要创建视觉对象C++应用程序通过使用 Win32 控制台应用程序向导
 
 1. 上**文件**菜单上，单击**新建**，然后单击**项目**以显示**新项目**对话框。
 
-1. 在中**新的项目**对话框中，选择**Visual c + +** 中的节点**项目类型**窗格，然后选择**Win32 控制台应用程序**在中**模板**窗格。 例如，键入项目的名称`BasicAgent`，然后单击**确定**以显示**Win32 控制台应用程序向导**。
+1. 在中**新的项目**对话框中，选择**Visual C++** 中的节点**项目类型**窗格，然后选择**Win32 控制台应用程序**中**模板**窗格。 例如，键入项目的名称`BasicAgent`，然后单击**确定**以显示**Win32 控制台应用程序向导**。
 
 1. 在中**Win32 控制台应用程序向导**对话框中，单击**完成**。
 
@@ -66,7 +66,7 @@ ms.locfileid: "57290054"
 
 #### <a name="to-create-the-filereader-class"></a>若要创建 file_reader 类
 
-1. 将新的 c + + 头文件添加到你的项目。 为此，请右键单击**标头文件**中的节点**解决方案资源管理器**，单击**添加**，然后单击**新项**。 在中**模板**窗格中，选择**标头文件 (.h)**。 在中**添加新项**对话框中，键入`file_reader.h`中**名称**框，然后单击**添加**。
+1. 添加一个新C++标头文件到你的项目。 为此，请右键单击**标头文件**中的节点**解决方案资源管理器**，单击**添加**，然后单击**新项**。 在中**模板**窗格中，选择**标头文件 (.h)**。 在中**添加新项**对话框中，键入`file_reader.h`中**名称**框，然后单击**添加**。
 
 1. 在 file_reader.h，添加以下代码。
 

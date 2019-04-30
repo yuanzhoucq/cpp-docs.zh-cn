@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C1076
 ms.assetid: 84ac1180-3e8a-48e8-9f77-7f18a778b964
 ms.openlocfilehash: 91753a49498548b4e523cd8564ee7a7ca7a3b373
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57751669"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62406946"
 ---
 # <a name="fatal-error-c1076"></a>错误 C1076
 
@@ -25,7 +25,7 @@ ms.locfileid: "57751669"
 
 1. 请考虑减少使用指定的并行进程数 **/maxcpucount** MSBUILD 选项。结合 EXE **/MP**改为 CL 选项。EXE。 有关详细信息，请参阅[预编译标头 (PCH) 问题和建议](https://devblogs.microsoft.com/cppblog/precompiled-header-pch-issues-and-recommendations/)。
 
-1. 如果正在 64 位操作系统中使用 32 位托管编译器，请改用 64 位托管编译器。 有关详细信息，请参阅[如何：启用 64 位 Visual c + + 工具集在命令行上](../../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md)。
+1. 如果正在 64 位操作系统中使用 32 位托管编译器，请改用 64 位托管编译器。 有关详细信息，请参阅[如何：启用 64 位视觉对象C++命令行上的工具集](../../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md)。
 
 1. 消除不需要的包含文件。
 

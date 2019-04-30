@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4398
 ms.assetid: b6221432-9fed-4272-a547-a73f587904e6
 ms.openlocfilehash: 4126a1267b41cdf9c0161c7e85a9057b2a301d77
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50578459"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62401964"
 ---
 # <a name="compiler-warning-level-3-c4398"></a>编译器警告（等级 3）C4398
 
@@ -23,7 +23,7 @@ ms.locfileid: "50578459"
 
 可以通过显式标记变量来解决此警告`__declspec(appdomain)`。 在 Visual Studio 2017 之前的 Visual Studio 版本中，可以通过使用进行编译解决此警告 **/clr: pure**，默认情况下生成每个 appdomain 的全局变量。 **/Clr: pure**编译器选项在 Visual Studio 2015 中弃用并在 Visual Studio 2017 中不受支持。
 
-有关详细信息，请参阅[appdomain](../../cpp/appdomain.md)并[应用程序域和 Visual c + +](../../dotnet/application-domains-and-visual-cpp.md)。
+有关详细信息，请参阅[appdomain](../../cpp/appdomain.md)并[应用程序域和视觉对象C++ ](../../dotnet/application-domains-and-visual-cpp.md)。
 
 ## <a name="example"></a>示例
 

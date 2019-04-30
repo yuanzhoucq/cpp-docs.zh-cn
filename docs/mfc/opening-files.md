@@ -17,11 +17,11 @@ helpviewer_keywords:
 - exception handling [MFC], opening files
 ms.assetid: a991b8ec-b04a-4766-b47e-7485b5dd0b01
 ms.openlocfilehash: dab7a680d9b33a6e334da99a045b709fe00f215c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57261149"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62394476"
 ---
 # <a name="opening-files"></a>打开文件
 
@@ -35,8 +35,7 @@ ms.locfileid: "57261149"
 
 1. 调用[打开](../mfc/reference/cfile-class.md#open)文件对象，提供路径和权限标志的成员函数。
 
-   如果成功打开文件，则 `Open` 的返回值不为零；否则如果指定文件未能打开，则为 0。 
-  `Open` 成员函数的原型如下所示：
+   如果成功打开文件，则 `Open` 的返回值不为零；否则如果指定文件未能打开，则为 0。 `Open` 成员函数的原型如下所示：
 
    `virtual BOOL Open( LPCTSTR lpszFileName, UINT nOpenFlags, CFileException* pError = NULL );`
 

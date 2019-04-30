@@ -7,17 +7,17 @@ helpviewer_keywords:
 - parallel_reduce function, example
 ms.assetid: 9d19fac0-4ab6-4380-a375-3b18eeb87720
 ms.openlocfilehash: ba3ffb5cdae7dcc6f108f005fab33f9a1fee6a6f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258653"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412704"
 ---
 # <a name="how-to-perform-map-and-reduce-operations-in-parallel"></a>如何：执行映射和减少并行操作
 
 此示例演示如何使用[concurrency:: parallel_transform](reference/concurrency-namespace-functions.md#parallel_transform)并[concurrency:: parallel_reduce](reference/concurrency-namespace-functions.md#parallel_reduce)算法和[concurrency:: concurrent_unordered_map](../../parallel/concrt/reference/concurrent-unordered-map-class.md)类的文件中单词出现次数进行计数。
 
-一个*映射*操作将函数应用于序列中的每个值。 一个*减少*操作组合为一个值序列的元素。 可以使用 c + + 标准库[std:: transform](../../standard-library/algorithm-functions.md#transform)并[std:: accumulate](../../standard-library/numeric-functions.md#accumulate)函数来执行映射和化简操作。 但是，为了提高许多问题的性能，你可以使用 `parallel_transform` 算法并行执行映射操作，并使用 `parallel_reduce` 算法并行执行化简操作。 在某些情况下，你可以使用 `concurrent_unordered_map` 以一步操作执行映射和化简。
+一个*映射*操作将函数应用于序列中的每个值。 一个*减少*操作组合为一个值序列的元素。 可以使用C++标准库[std:: transform](../../standard-library/algorithm-functions.md#transform)并[std:: accumulate](../../standard-library/numeric-functions.md#accumulate)函数来执行映射和化简操作。 但是，为了提高许多问题的性能，你可以使用 `parallel_transform` 算法并行执行映射操作，并使用 `parallel_reduce` 算法并行执行化简操作。 在某些情况下，你可以使用 `concurrent_unordered_map` 以一步操作执行映射和化简。
 
 ## <a name="example"></a>示例
 

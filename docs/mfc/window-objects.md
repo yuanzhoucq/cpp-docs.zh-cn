@@ -15,17 +15,15 @@ helpviewer_keywords:
 - HWND, window objects [MFC]
 ms.assetid: 28b33ce2-af05-4617-9d03-1cb9a02be687
 ms.openlocfilehash: b62f43aa0d37c5e614636b3d7543bc927d41039b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57299863"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62378071"
 ---
 # <a name="window-objects"></a>窗口对象
 
-MFC 提供类[CWnd](../mfc/reference/cwnd-class.md)封装`HWND`窗口的句柄。 
-  `CWnd` 对象是一个 C++ 窗口对象，与表示一个 Windows 窗口但包含它的 `HWND` 不同。 使用 `CWnd` 可派生您自己的子窗口类，或使用派生自 `CWnd` 的很多 MFC 类之一。 
-  `CWnd` 类是所有窗口的基类，包括框架窗口、对话框、子窗口、控件和控件条（如工具栏）。 更好地理解[c + + 窗口对象与 HWND 之间的关系](../mfc/relationship-between-a-cpp-window-object-and-an-hwnd.md)对于使用 MFC 的高效编程很重要。
+MFC 提供类[CWnd](../mfc/reference/cwnd-class.md)封装`HWND`窗口的句柄。 `CWnd` 对象是一个 C++ 窗口对象，与表示一个 Windows 窗口但包含它的 `HWND` 不同。 使用 `CWnd` 可派生您自己的子窗口类，或使用派生自 `CWnd` 的很多 MFC 类之一。 `CWnd` 类是所有窗口的基类，包括框架窗口、对话框、子窗口、控件和控件条（如工具栏）。 更好地理解[之间的关系C++窗口对象与 HWND](../mfc/relationship-between-a-cpp-window-object-and-an-hwnd.md)对于使用 MFC 的高效编程很重要。
 
 MFC 提供窗口的某些默认功能和管理，但是，可以从 `CWnd` 派生您自己的类并使用其成员函数自定义所提供的功能。 您也可以构造创建子窗口`CWnd`对象并调用其[创建](../mfc/reference/cwnd-class.md#create)成员函数，然后自定义使用的子窗口`CWnd`成员函数。 您可以嵌入对象派生自[CView](../mfc/reference/cview-class.md)，例如窗体视图或树视图，框架窗口中的。 并且可以支持多个视图的拆分器窗格中，由类提供通过文档[CSplitterWnd](../mfc/reference/csplitterwnd-class.md)。
 
@@ -43,7 +41,7 @@ MFC 提供窗口的某些默认功能和管理，但是，可以从 `CWnd` 派�
 
 ### <a name="what-do-you-want-to-know-more-about"></a>你想要了解更多信息
 
-- [C + + 窗口对象与 HWND 之间的关系](../mfc/relationship-between-a-cpp-window-object-and-an-hwnd.md)
+- [之间的关系C++窗口对象与 HWND](../mfc/relationship-between-a-cpp-window-object-and-an-hwnd.md)
 
 - [派生的窗口类](../mfc/derived-window-classes.md)
 

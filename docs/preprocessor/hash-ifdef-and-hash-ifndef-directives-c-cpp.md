@@ -12,11 +12,11 @@ helpviewer_keywords:
 - '#ifndef directive'
 ms.assetid: 2b0be69d-9e72-45d8-8e24-e4130fb2455b
 ms.openlocfilehash: d7a6a1604df03f0607f33e42880270cbdcd62e8b
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59027225"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62409871"
 ---
 # <a name="ifdef-and-ifndef-directives-cc"></a>#ifdef 和 #ifndef 指令 (C/C++)
 **#Ifdef**并 **#ifndef**指令执行相同的任务`#if`指令与一起使用时**定义**(*标识符* ).

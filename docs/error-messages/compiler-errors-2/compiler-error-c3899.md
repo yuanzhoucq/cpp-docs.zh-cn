@@ -7,17 +7,17 @@ helpviewer_keywords:
 - C3899
 ms.assetid: 14e07e4a-f7a7-4309-baaa-649d69e12e23
 ms.openlocfilehash: 26860ba0e8fd92f491ee389147605ba82cecf25c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50598388"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62376024"
 ---
 # <a name="compiler-error-c3899"></a>编译器错误 C3899
 
 var: initonly 数据成员的左值使用不允许直接在类 class 中的并行区域
 
-[Initonly (C + + CLI)](../../dotnet/initonly-cpp-cli.md)数据成员不能在该部分中的构造函数初始化[并行](../../parallel/openmp/reference/parallel.md)区域。  这样一来，就不再有效构造函数的一部分，这是因为编译器执行该代码，内部重定位。
+[Initonly (C++/CLI)](../../dotnet/initonly-cpp-cli.md)数据成员不能在该部分中的构造函数初始化[并行](../../parallel/openmp/reference/parallel.md)区域。  这样一来，就不再有效构造函数的一部分，这是因为编译器执行该代码，内部重定位。
 
 若要解决，初始化 initonly 数据成员在构造函数中，但并行区域之外。
 

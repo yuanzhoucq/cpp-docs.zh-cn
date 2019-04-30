@@ -9,11 +9,11 @@ helpviewer_keywords:
 - BSTR object [C++], COM encapsulation
 ms.assetid: 58841fef-fe21-4a84-aab9-780262b5201f
 ms.openlocfilehash: f394a48c0326058be705d14fb0413e23e8052ae2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50524679"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62386156"
 ---
 # <a name="bstrt-class"></a>_bstr_t 类
 
@@ -44,11 +44,11 @@ ms.locfileid: "50524679"
 |||
 |-|-|
 |[operator =](../cpp/bstr-t-operator-equal.md)|将新值赋给现有 `_bstr_t` 对象。|
-|[operator + =](../cpp/bstr-t-operator-add-equal-plus.md)|将字符附加到 `_bstr_t` 对象的结尾。|
+|[operator +=](../cpp/bstr-t-operator-add-equal-plus.md)|将字符附加到 `_bstr_t` 对象的结尾。|
 |[运算符 +](../cpp/bstr-t-operator-add-equal-plus.md)|串联两个字符串。|
 |[运算符 !](../cpp/bstr-t-operator-logical-not.md)|检查封装`BSTR`是一个 NULL 字符串。|
-|[运算符 = =、 ！ =、 \<，>， \<=、 > =](../cpp/bstr-t-relational-operators.md)|比较两个 `_bstr_t` 对象。|
-|[运算符 wchar_t * &#124; char\*](../cpp/bstr-t-wchar-t-star-bstr-t-char-star.md)|提取指向封装的 Unicode 或多字节 `BSTR` 对象的指针。|
+|[operator ==, !=, \<, >, \<=, >=](../cpp/bstr-t-relational-operators.md)|比较两个 `_bstr_t` 对象。|
+|[operator wchar_t* &#124; char\*](../cpp/bstr-t-wchar-t-star-bstr-t-char-star.md)|提取指向封装的 Unicode 或多字节 `BSTR` 对象的指针。|
 
 **结束 Microsoft 专用**
 

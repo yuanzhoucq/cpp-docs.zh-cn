@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2259
 ms.assetid: e458236f-bdea-4786-9aa6-a98d8bffa5f4
 ms.openlocfilehash: 0310f20854185a6f8a5ccb0ce7b087c4d7c5f29d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50440399"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62387059"
 ---
 # <a name="compiler-error-c2259"></a>编译器错误 C2259
 
@@ -50,7 +50,7 @@ B b;  // OK, B defines func()
 
 - 在派生类中实现的接口方法的使用范围解析运算符来限定实现的方法的接口的名称的名称。
 
-在 Visual c + + 2005 中，执行的一致性工作也可能导致 C2259 **/zc: wchar_t**上现在是默认值。 在此情况下，可被解析可以通过使用编译 C2599 **/zc: wchar_t-**，以获得的行为，从早期版本中，或最好是通过更新您的类型，使它们是否兼容。 有关详细信息，请参阅 [/Zc:wchar_t（wchar_t 是本机类型）](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md)。
+已完成的视觉对象中的一致性工作也可能导致 C2259 C++ 2005 中， **/zc: wchar_t**默认情况下目前所在。 在此情况下，可被解析可以通过使用编译 C2599 **/zc: wchar_t-**，以获得的行为，从早期版本中，或最好是通过更新您的类型，使它们是否兼容。 有关详细信息，请参阅 [/Zc:wchar_t（wchar_t 是本机类型）](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md)。
 
 下面的示例生成 C2259:
 

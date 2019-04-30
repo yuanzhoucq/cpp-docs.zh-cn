@@ -8,11 +8,11 @@ helpviewer_keywords:
 - CDaoIndexInfo structure [MFC]
 ms.assetid: 251d8285-78ce-4716-a0b3-ccc3395fc437
 ms.openlocfilehash: 55f64fcebc308bd0e63643cfb5447608c4e2e37c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677898"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399767"
 ---
 # <a name="cdaoindexinfo-structure"></a>CDaoIndexInfo 结构
 
@@ -61,7 +61,7 @@ struct CDaoIndexInfo {
 *m_bUnique*<br/>
 指示索引对象是否表示一个表的唯一索引。 如果此属性为 TRUE，表示是唯一的索引的索引对象。 唯一索引包含一个或多个逻辑上排列中唯一的预定义顺序的表中的所有记录的字段。 如果该索引包含的一个字段，该字段中的值必须是唯一针对整个表。 如果该索引包含的多个字段，每个字段可以包含重复值，但每个组合中所有索引的字段的值必须是唯一。
 
-如果 Unique 和主索引对象的属性设置为 TRUE，索引是唯一和主要： 它唯一地标识预定义的逻辑顺序表中的所有记录。 如果主属性设置为 FALSE，则索引是辅助索引。 辅助索引 （密钥和非键） 以逻辑方式排列预定义顺序中的记录，但不作为表中的记录的标识符。
+如果 Unique 和主索引对象的属性设置为 TRUE，则索引是唯一和主要：它唯一标识预定义的逻辑顺序表中的所有记录。 如果主属性设置为 FALSE，则索引是辅助索引。 辅助索引 （密钥和非键） 以逻辑方式排列预定义顺序中的记录，但不作为表中的记录的标识符。
 
 有关详细信息，请参阅"主属性"和"唯一属性"DAO 帮助中的主题。
 

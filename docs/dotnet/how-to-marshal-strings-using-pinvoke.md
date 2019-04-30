@@ -9,15 +9,15 @@ helpviewer_keywords:
 - platform invoke [C++], strings
 ms.assetid: bcc75733-7337-4d9b-b1e9-b95a98256088
 ms.openlocfilehash: f316e33f1711ea0053fb68c0af7e89f90b793e05
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57739248"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62404398"
 ---
 # <a name="how-to-marshal-strings-using-pinvoke"></a>如何：使用 PInvoke 封送处理字符串
 
-本主题说明如何将纯函数接受可以使用 CLR 字符串调用 C 样式字符串键入 system:: string 使用.NET Framework 平台调用支持。 建议改为使用的 c + + 互操作功能 （如果可能） visual c + + 程序员的因为 P/Invoke 提供小的编译时错误报告，不是类型安全和可能乏善可陈来实现。 如果非托管的 API 打包为 DLL，并且源代码不可用，P/Invoke 是唯一选项; 但否则请参阅[使用 c + + 互操作 (隐式 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)。
+本主题说明如何将纯函数接受可以使用 CLR 字符串调用 C 样式字符串键入 system:: string 使用.NET Framework 平台调用支持。 VisualC++编程人员建议使用C++互操作功能，而是 （如果可能） 因为 P/Invoke 提供小的编译时错误报告，不是类型安全的并可能会很麻烦的实现。 如果非托管的 API 打包为 DLL，并且源代码不可用，P/Invoke 是唯一选项; 但否则请参阅[使用C++互操作 (隐式 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)。
 
 托管和非托管字符串中列出了不同内存，因此传递字符串从托管代码流向非托管函数需要<xref:System.Runtime.InteropServices.MarshalAsAttribute>属性来指示编译器插入的封送处理字符串数据的所需的转换机制正确且安全地。
 

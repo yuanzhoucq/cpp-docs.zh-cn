@@ -8,11 +8,11 @@ helpviewer_keywords:
 - CAN0036
 ms.assetid: 383404be-df5b-4eec-b113-df21bb5d269d
 ms.openlocfilehash: d7961d92760cc5ac325b4bc9f187d4ee2298479a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50576789"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62397024"
 ---
 # <a name="expression-evaluator-error-cxx0036"></a>表达式计算器错误 CXX0036
 
@@ -24,7 +24,7 @@ ms.locfileid: "50576789"
 
    上下文运算符的语法是：
 
-     {*函数*，*模块*，*dll*}*表达式*
+     {*function*,*module*,*dll*}*expression*
 
    这将指定的上下文*表达式*。 上下文运算符类型强制转换为具有相同的优先级和使用情况。
 

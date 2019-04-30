@@ -5,11 +5,11 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], optimizing
 ms.assetid: 29ff985d-9bf5-4678-b62d-aad12def75fb
 ms.openlocfilehash: 4d0037ebdfe56690be2f18a2790b2b13967e337c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57274175"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62378305"
 ---
 # <a name="optimizing-control-drawing"></a>优化控件绘制
 

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - common_type
 ms.assetid: 02bc4e7b-c63d-49de-9f8a-511d3a5c1e7f
 ms.openlocfilehash: f627705109315d3fee84c1777390f00e1e2010ef
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605226"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405113"
 ---
 # <a name="commontype-class"></a>common_type 类
 
@@ -92,7 +92,7 @@ int main()
 }
 ```
 
-## <a name="output"></a>输出
+## <a name="output"></a>Output
 
 ```Output
 Test for typedefs of common_type int

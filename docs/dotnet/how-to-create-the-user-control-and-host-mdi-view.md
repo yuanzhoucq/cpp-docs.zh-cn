@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Windows Forms [C++], MFC support
 ms.assetid: 625b5821-f923-4701-aca0-c1a4ceca4f63
 ms.openlocfilehash: 7d535fce47be5504f6f521cda1267344206287da
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57738773"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62387430"
 ---
 # <a name="how-to-create-the-user-control-and-host-mdi-view"></a>如何：创建用户控件并承载 MDI 视图
 
@@ -28,7 +28,7 @@ ms.locfileid: "57738773"
 
 1. 创建 MFC 应用程序项目。
 
-   上**文件**菜单中，选择**新建**，然后单击**项目**。 在中**Visual c + +** 文件夹，选择**MFC 应用程序**。
+   上**文件**菜单中，选择**新建**，然后单击**项目**。 在中**可视化C++** 文件夹中，选择**MFC 应用程序**。
 
    在中**名称**框中，输入`MFC02`并将更改**解决方案**设置为**将添加到解决方案**。 单击 **“确定”**。
 
@@ -40,7 +40,7 @@ ms.locfileid: "57738773"
 
    下**配置属性**，选择**常规**。 下**项目默认值**部分中，设置**公共语言运行时支持**到**公共语言运行时支持 (/ clr)**。
 
-   下**配置属性**，展开**C/c + +** 然后单击**常规**节点。 设置**调试信息格式**到**程序数据库 (/Zi)**。
+   下**配置属性**，展开**C /C++** 然后单击**常规**节点。 设置**调试信息格式**到**程序数据库 (/Zi)**。
 
    单击**代码生成**节点。 设置**启用最小重新生成**到**否 (/ Gm-)**。 此外设置**基本运行时检查**到**默认**。
 

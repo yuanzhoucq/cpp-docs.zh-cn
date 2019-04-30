@@ -7,11 +7,11 @@ helpviewer_keywords:
 - initializing before main
 ms.assetid: 0e942aa6-8342-447c-b068-8980ed7622bd
 ms.openlocfilehash: 16e48f2e4f7544d28a1bea00e1fdf2d1cff397b5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605567"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62385071"
 ---
 # <a name="additional-startup-considerations"></a>附加启动注意事项
 
@@ -25,7 +25,7 @@ ms.locfileid: "50605567"
 
 **Microsoft 专用**
 
-Microsoft c + + 中的全局静态对象之前，将初始化进入`main`。
+在 Microsoft C++，在进入前将初始化全局静态对象`main`。
 
 **结束 Microsoft 专用**
 

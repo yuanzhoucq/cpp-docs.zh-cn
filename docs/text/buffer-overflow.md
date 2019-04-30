@@ -7,11 +7,11 @@ helpviewer_keywords:
 - MBCS [C++], buffer overflow
 ms.assetid: f2b7e40a-f02b-46d8-a449-51d26fc0c663
 ms.openlocfilehash: 7f9864e6b49446ea68d82e76e877ce9c677b893d
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57741379"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62410754"
 ---
 # <a name="buffer-overflow"></a>缓冲区溢出
 

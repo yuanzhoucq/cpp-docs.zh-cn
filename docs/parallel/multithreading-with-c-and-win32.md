@@ -11,19 +11,19 @@ helpviewer_keywords:
 - threading [C]
 ms.assetid: 67cdc99e-1ad9-452b-a042-ed246b70040e
 ms.openlocfilehash: b961671850acfc74cb72bc1c08aef74fdc7a64f8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57264217"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62407765"
 ---
 # <a name="multithreading-with-c-and-win32"></a>使用 C 和 Win32 进行多线程编程
 
-Microsoft Visual c + + 为创建多线程应用程序提供支持。 您应考虑使用多个线程，如果你的应用程序需要对其执行成本高昂的操作会导致用户界面变得无响应。
+Microsoft VisualC++用于创建多线程应用程序提供支持。 您应考虑使用多个线程，如果你的应用程序需要对其执行成本高昂的操作会导致用户界面变得无响应。
 
-使用 Visual c + +，有两个程序使用多个线程的方法： 使用 Microsoft 基础类 (MFC) 库或 C 运行时库和 Win32 API。 有关使用 MFC 创建多线程应用程序的信息，请参阅[使用 c + + 和 MFC 多线程处理](multithreading-with-cpp-and-mfc.md)在阅读以下有关多线程处理在 C 中的主题
+通过视觉对象C++，有两个程序使用多个线程的方法： 使用 Microsoft 基础类 (MFC) 库或 C 运行时库和 Win32 API。 有关使用 MFC 创建多线程应用程序的信息，请参阅[使用多线程处理C++和 MFC](multithreading-with-cpp-and-mfc.md)阅读有关在 C 中的多线程处理的以下主题后
 
-这些主题说明了 Visual c + + 中支持多线程程序创建的功能。
+这些主题说明了视觉对象中的功能C++支持创建多线程程序。
 
 ## <a name="what-do-you-want-to-know-more-about"></a>你想进一步了解什么？
 

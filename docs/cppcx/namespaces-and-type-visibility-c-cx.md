@@ -3,11 +3,11 @@ title: 命名空间和类型可见性 (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: cbc01a3a-3b69-4ded-9c42-ecbf0fd0a00e
 ms.openlocfilehash: 54bac3492991d0bd849f7476cc87a1336108bd52
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57739295"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392123"
 ---
 # <a name="namespaces-and-type-visibility-ccx-"></a>命名空间和类型可见性 (C++/CX)
 
@@ -17,7 +17,7 @@ ms.locfileid: "57739295"
 
 ## <a name="type-visibility"></a>类型可见性
 
-命名空间，Windows 运行时类型中，与标准 c + + 类型不同，具有私有或公共可访问性。 默认情况下，可访问性是私有的。 仅公共类型对元数据可见，因此可以从可能用 C++ 之外的语言编写的应用程序和组件使用该类型。 通常，可见类型的规则比不可见类型的规则具有更强的限制，因为可见类型无法公开在 .NET 语言或 JavaScript 中不受支持的 C++ 特定的概念。
+命名空间，Windows 运行时类型中，与标准不同C++类型，具有私有或公共可访问性。 默认情况下，可访问性是私有的。 仅公共类型对元数据可见，因此可以从可能用 C++ 之外的语言编写的应用程序和组件使用该类型。 通常，可见类型的规则比不可见类型的规则具有更强的限制，因为可见类型无法公开在 .NET 语言或 JavaScript 中不受支持的 C++ 特定的概念。
 
 > [!NOTE]
 > 元数据仅在运行时由 .NET 语言和 JavaScript 使用。 如果一个 C++ 应用程序或组件与另一个 C++ 应用程序或组件（这包括用 C++ 编写的 Windows 组件）通信，则无需在运行时使用元数据。
@@ -31,7 +31,7 @@ ms.locfileid: "57739295"
 ||||
 |-|-|-|
 |修饰符|含义|是否发送到元数据|
-|private|默认可访问性。 与在标准 C++ 中的含义一样。|No|
+|private|默认可访问性。 与在标准 C++ 中的含义一样。|否|
 |protected|与在标准 C++ 中的含义一样（在应用程序或组件中以及元数据中）。|是|
 |public|与在标准 C++ 中的含义一样。|是|
 |`public protected` - 或 - `protected public`|元数据中的受保护的可访问性，应用程序或组件中的公共可访问性。|是|
@@ -44,13 +44,13 @@ Windows API 包含在 Windows 中声明的类型::\*命名空间。 这些命名
 
 ## <a name="ccx-namespaces"></a>C++/CX 命名空间
 
-C + + /cli CX 定义某些类型这些命名空间中的 Windows 运行时类型系统投影的一部分。
+C++/CX 定义某些类型这些命名空间中的 Windows 运行时类型系统投影的一部分。
 
 |||
 |-|-|
 |**命名空间**|**描述**|
 |default|包含内置数值和 char16 类型。 这些类型在每个命名空间的范围中，而且从来不需要 `using` 语句。|
-|平台|包含如对应于 Windows 运行时类型的主要公共类型`Array<T>`， `String`， `Guid`，和`Boolean`。 另外还包括专用帮助程序类型（如 `Platform::Agile<T>` 和 `Platform::Box<T>`）。|
+|Platform|包含如对应于 Windows 运行时类型的主要公共类型`Array<T>`， `String`， `Guid`，和`Boolean`。 另外还包括专用帮助程序类型（如 `Platform::Agile<T>` 和 `Platform::Box<T>`）。|
 |Platform::Collections|包含实现 Windows 运行时集合接口的具体集合类`IVector`， `IMap`，依次类推。 这些类型在标头文件 collection.h 而非 platform.winmd 中定义。|
 |Platform::Details|包含编译器使用而不适合公共使用的类型。|
 

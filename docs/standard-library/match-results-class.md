@@ -7,11 +7,11 @@ helpviewer_keywords:
 - match_results class
 ms.assetid: b504fdca-e5dd-429d-9960-6e27c9167fa6
 ms.openlocfilehash: 32a5f9d20999740d4368f7901c797d87acce0be9
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657456"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412964"
 ---
 # <a name="matchresults-class"></a>match_results 类
 
@@ -29,7 +29,7 @@ class match_results
 *BidIt*<br/>
 子匹配项的迭代器类型。
 
-*分配*<br/>
+*Alloc*<br/>
 用于管理存储的分配器的类型。
 
 ## <a name="remarks"></a>备注
@@ -68,11 +68,11 @@ class match_results
 |[get_allocator](#get_allocator)|返回存储的分配器。|
 |[length](#length)|返回子匹配项的长度。|
 |[max_size](#max_size)|获取子匹配项的最大数目。|
-|[位置](#position)|获取子组的起始偏移量。|
+|[position](#position)|获取子组的起始偏移量。|
 |[prefix](#prefix)|获取第一个子匹配项之前的序列。|
 |[size](#size)|计算子匹配项的数目。|
 |[str](#str)|返回子匹配项。|
-|[后缀](#suffix)|获取最后一个子匹配项后的序列。|
+|[suffix](#suffix)|获取最后一个子匹配项后的序列。|
 |[swap](#swap)|交换两个 match_results 对象。|
 
 ### <a name="operators"></a>运算符
@@ -369,7 +369,7 @@ match_results(const match_results& right);
 
 ### <a name="parameters"></a>参数
 
-*分配*<br/>
+*alloc*<br/>
 要存储的分配器对象。
 
 *right*<br/>

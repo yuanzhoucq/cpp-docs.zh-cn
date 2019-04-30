@@ -6,11 +6,11 @@ helpviewer_keywords:
 - removing work from user-interface threads [Concurrency Runtime]
 ms.assetid: a4a65cc2-b3bc-4216-8fa8-90529491de02
 ms.openlocfilehash: 1838ad0d6adb146adacb8b3a395f44f76e2a8d3f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
-ms.translationtype: MT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304712"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62407795"
 ---
 # <a name="walkthrough-removing-work-from-a-user-interface-thread"></a>演练：从用户界面线程中删除工作
 
@@ -52,11 +52,11 @@ ms.locfileid: "57304712"
 
 本部分介绍如何创建基本的 MFC 应用程序。
 
-### <a name="to-create-a-visual-c-mfc-application"></a>若要创建 Visual c + + MFC 应用程序
+### <a name="to-create-a-visual-c-mfc-application"></a>若要创建视觉对象C++的 MFC 应用程序
 
 1. 在 **“文件”** 菜单上，单击 **“新建”**，然后单击 **“项目”**。
 
-1. 在**新的项目**对话框中**已安装的模板**窗格中，选择**Visual c + +**，然后在**模板**窗格中，选择**MFC 应用程序**。 例如，键入项目的名称`Mandelbrot`，然后单击**确定**以显示**MFC 应用程序向导**。
+1. 在**新的项目**对话框中**已安装的模板**窗格中，选择**Visual C++** ，然后在**模板**窗格中，选择**MFC 应用程序**。 例如，键入项目的名称`Mandelbrot`，然后单击**确定**以显示**MFC 应用程序向导**。
 
 1. 在中**应用程序类型**窗格中，选择**单个文档**。 絋粄**文档/视图体系结构支持**清除复选框。
 

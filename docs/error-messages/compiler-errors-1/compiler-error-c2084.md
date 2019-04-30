@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2084
 ms.assetid: 990b107f-3721-4851-ae8b-4b69a8c149ed
 ms.openlocfilehash: 9aaf3a88e63234dfb842e4b48afd6e55595e96ca
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50571309"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62391915"
 ---
 # <a name="compiler-error-c2084"></a>编译器错误 C2084
 
@@ -19,7 +19,7 @@ ms.locfileid: "50571309"
 
 已定义的函数。
 
-在 Visual Studio 2002 年之前, 的 Visual c + + 的版本
+在视觉对象的版本C++Visual Studio 2002 年之前,
 
 - 尽管将永远不能附加的定义，编译器会接受解析为相同的实际类型的多个模板专用化。 现在，编译器检测到这些多个定义。
 

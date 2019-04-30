@@ -9,15 +9,15 @@ helpviewer_keywords:
 - OLE exceptions [MFC], classes for handling
 ms.assetid: 2f8e0161-b94f-48bb-a5a2-6f644b192527
 ms.openlocfilehash: e404005a88398ec909e3043cfa55c7e8fbe2f594
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57297900"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405959"
 ---
 # <a name="exceptions-ole-exceptions"></a>异常:OLE 异常
 
-OLE 中处理异常的技术和工具与处理其他异常的技术和工具是相同的。 异常处理的详细信息，请参阅文章[c + + 异常处理](../cpp/cpp-exception-handling.md)。
+OLE 中处理异常的技术和工具与处理其他异常的技术和工具是相同的。 异常处理的详细信息，请参阅文章[C++的异常处理](../cpp/cpp-exception-handling.md)。
 
 所有异常对象都派生自抽象基类 `CException`。 MFC 提供两个用于处理 OLE 异常的类：
 

@@ -23,11 +23,11 @@ helpviewer_keywords:
 - std::messages [C++], open
 ms.assetid: c4c71f40-4f24-48ab-9f7c-daccd8d5bd83
 ms.openlocfilehash: 7a024a8cad8c536b25127d033468874de5ebd8af
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568518"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62383576"
 ---
 # <a name="messages-class"></a>messages 类
 
@@ -152,10 +152,10 @@ virtual string_type do_get(
 *_Catval*<br/>
 指定要搜索的消息目录的标识值。
 
-*（_s)*<br/>
+*_Set*<br/>
 用于在消息目录中查找消息的第一个标识。
 
-*消息 （_m)*<br/>
+*_Message*<br/>
 用于在消息目录中查找消息的第二个标识。
 
 *_Dfault*<br/>
@@ -222,10 +222,10 @@ string_type get(
 *_Catval*<br/>
 指定要搜索的消息目录的标识值。
 
-*（_s)*<br/>
+*_Set*<br/>
 用于在消息目录中查找消息的第一个标识。
 
-*消息 （_m)*<br/>
+*_Message*<br/>
 用于在消息目录中查找消息的第二个标识。
 
 *_Dfault*<br/>
@@ -264,11 +264,11 @@ protected: messages(
 
 可能的值 *_Refs*参数和其重要性：
 
-- 0：对象的生存期由包含该对象的区域设置管理。
+- 0:对象的生存期由包含它的区域设置管理。
 
-- 1：必须手动管理对象的生存期。
+- 1:必须手动管理的对象的生存期。
 
-- \> 1： 未定义这些值。
+- \> 1:未定义这些值。
 
 由于该析构函数受到保护，可能没有直接的示例。
 

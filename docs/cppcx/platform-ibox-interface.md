@@ -7,11 +7,11 @@ f1_keywords:
 - VCCORLIB/Namespace not found::Platform::Value
 ms.assetid: 774df45d-f8a7-45a3-ae24-eecc3c681040
 ms.openlocfilehash: 24e70ad646e2673869b135e8cc7657910b9b499c
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57747055"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62383290"
 ---
 # <a name="platformibox-interface"></a>Platform::IBox 接口
 
@@ -70,4 +70,4 @@ property T Value {T get();}
 
 ## <a name="see-also"></a>请参阅
 
-[平台命名空间](../cppcx/platform-namespace-c-cx.md)
+[Platform 命名空间](../cppcx/platform-namespace-c-cx.md)

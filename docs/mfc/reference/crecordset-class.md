@@ -131,11 +131,11 @@ helpviewer_keywords:
 - CRecordset [MFC], m_strSort
 ms.assetid: dd89a21d-ef39-4aab-891b-1e373d67c855
 ms.openlocfilehash: efb833a8d4cc0b801f75951bc648d6b83df5bae8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305180"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62372190"
 ---
 # <a name="crecordset-class"></a>CRecordset 类
 
@@ -271,7 +271,7 @@ virtual void AddNew();
 
 ### <a name="remarks"></a>备注
 
-必须调用[再次查询](#requery)成员函数，以查看新添加的记录。 记录的字段是最初为 Null。 （在数据库术语中，Null 意味着"无值"，并且不为 NULL，c + + 中相同。）若要完成该操作，必须调用[更新](#update)成员函数。 `Update` 将所做的更改保存到数据源。
+必须调用[再次查询](#requery)成员函数，以查看新添加的记录。 记录的字段是最初为 Null。 (在数据库术语中，Null 意味着"无值"，并且不同时，则为 NULL C++。)若要完成该操作，必须调用[更新](#update)成员函数。 `Update` 将所做的更改保存到数据源。
 
 > [!NOTE]
 >  如果已实现批量行提取，则不能调用`AddNew`。 这将导致失败的断言。 尽管类`CRecordset`不提供一种机制，用于更新的数据大容量行，可以编写您自己的函数，通过使用 ODBC API 函数`SQLSetPos`。 有关批量行提取的详细信息，请参阅文章[记录集：(ODBC) 批量提取记录](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
@@ -456,7 +456,7 @@ virtual void Close();
 
 ### <a name="remarks"></a>备注
 
-取消分配 ODBC HSTMT 和所有内存分配的记录集的框架。 通常在调用之后`Close`，如果它已分配与删除 c + + 记录集对象**新**。
+取消分配 ODBC HSTMT 和所有内存分配的记录集的框架。 通常在调用之后`Close`，则删除C++记录集对象，如果它已分配与**新**。
 
 您可以调用`Open`后调用`Close`。 这样可以重复使用记录集对象。 替代方法是调用`Requery`。
 
@@ -1118,7 +1118,7 @@ BOOL IsFieldNull(void* pv);
 
 ### <a name="remarks"></a>备注
 
-调用此成员函数可确定记录集的指定的字段数据成员是否已标记为 Null。 （在数据库术语中，Null 意味着"无值"，并且不为 NULL，c + + 中相同。）如果字段数据成员标记为 Null，它被解释为当前记录没有值的列。
+调用此成员函数可确定记录集的指定的字段数据成员是否已标记为 Null。 (在数据库术语中，Null 意味着"无值"，并且不同时，则为 NULL C++。)如果字段数据成员标记为 Null，它被解释为当前记录没有值的列。
 
 > [!NOTE]
 >  此成员函数不是适用于使用的批量行提取的记录集。 如果已实现批量行提取，然后`IsFieldNull`将始终返回 FALSE，将导致失败的断言。 有关批量行提取的详细信息，请参阅文章[记录集：(ODBC) 批量提取记录](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
@@ -1140,7 +1140,7 @@ BOOL IsFieldNullable(void* pv);
 
 ### <a name="remarks"></a>备注
 
-调用以确定是否可为"null"指定的字段数据成员 （可以是设置为一个 Null 值; 如果此成员函数C + + NULL 不是 Null，这意味着，在数据库术语中，相同"having 没有值")。
+调用以确定是否可为"null"指定的字段数据成员 （可以是设置为一个 Null 值; 如果此成员函数C++ NULL 不是 Null，这意味着，在数据库术语中，相同"having 没有值")。
 
 > [!NOTE]
 >  如果已实现批量行提取，则不能调用`IsFieldNullable`。 改为调用[GetODBCFieldInfo](#getodbcfieldinfo)成员函数以确定是否可以将字段设置为 Null 值。 请注意，您可以始终调用`GetODBCFieldInfo`，无论是否已实现批量行提取。 有关批量行提取的详细信息，请参阅文章[记录集：(ODBC) 批量提取记录](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
@@ -1524,7 +1524,7 @@ virtual BOOL Open(
 
 - `CRecordset::forwardOnly` 而只向前滚动只读的记录集。
 
-   有关`CRecordset`，默认值是`CRecordset::snapshot`。 默认值机制允许 Visual c + + 向导以便与这两个 ODBC`CRecordset`和 DAO `CDaoRecordset`，它具有不同的默认值。
+   有关`CRecordset`，默认值是`CRecordset::snapshot`。 默认值机制允许视觉对象C++向导，可使用这两个 ODBC 交互`CRecordset`和 DAO `CDaoRecordset`，它具有不同的默认值。
 
 有关这些记录集类型的详细信息，请参阅文章[记录集 (ODBC)](../../data/odbc/recordset-odbc.md)。 有关相关信息，请参阅文章"使用块游标和可滚动游标"Windows SDK 中。
 
@@ -1745,7 +1745,7 @@ void SetFieldDirty(void* pv, BOOL bDirty = TRUE);
 ### <a name="parameters"></a>参数
 
 *pv*<br/>
-包含中的记录集或为 NULL 的字段数据成员的地址。 如果为 NULL，将标记为记录集中的所有字段数据成员。 (C + + NULL 不是 Null 相同数据库术语中，这意味着"无任何值。")
+包含中的记录集或为 NULL 的字段数据成员的地址。 如果为 NULL，将标记为记录集中的所有字段数据成员。 (C++ NULL 不是 Null 相同数据库术语中，这意味着"无任何值。")
 
 *bDirty*<br/>
 如果字段数据成员是被标记为"更新"（更改），则为 TRUE。 如果字段数据成员将会被标记为"清理"（未更改）; 否则为 FALSE。
@@ -1785,7 +1785,7 @@ void SetFieldNull(void* pv, BOOL bNull = TRUE);
 ### <a name="parameters"></a>参数
 
 *pv*<br/>
-包含中的记录集或为 NULL 的字段数据成员的地址。 如果为 NULL，将标记为记录集中的所有字段数据成员。 (C + + NULL 不是 Null 相同数据库术语中，这意味着"无任何值。")
+包含中的记录集或为 NULL 的字段数据成员的地址。 如果为 NULL，将标记为记录集中的所有字段数据成员。 (C++ NULL 不是 Null 相同数据库术语中，这意味着"无任何值。")
 
 *bNull*<br/>
 如果字段数据成员是被标记为不具有任何值 (Null)，非零值。 否则为 0 的字段数据成员是否被标记为非 Null。

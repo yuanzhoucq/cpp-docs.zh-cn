@@ -87,11 +87,11 @@ helpviewer_keywords:
 - std::vector [C++], swap
 ms.assetid: a3e0a8f8-7565-4fe0-93e4-e4d74ae1b70d
 ms.openlocfilehash: 80416e3af18774a7a8bf64264dca2906995ae202
-ms.sourcegitcommit: 185b8ee6dd4e10045df730c5b957b9729813da2d
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53411957"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62410897"
 ---
 # <a name="vector-class"></a>vector 类
 
@@ -109,7 +109,7 @@ class vector
 *Type*<br/>
 要存储在矢量中的元素数据类型
 
-*分配器*<br/>
+*Allocator*<br/>
 表示所存储分配器对象的类型，该分配器对象封装有关矢量的内存分配和解除分配的详细信息。 此参数为可选参数，默认值为 `allocator<Type>`。
 
 ## <a name="remarks"></a>备注
@@ -233,7 +233,7 @@ void assign(InputIterator First, InputIterator Last);
 “计数”<br/>
 要插入到矢量的元素的副本数。
 
-*val*<br/>
+*Val*<br/>
 插入到向量中的元素的值。
 
 *IList*<br/>
@@ -1082,7 +1082,7 @@ iterator erase(
 |-|-|
 |*_Where*|要从向量中移除的元素的位置。|
 |*first*|要从向量中移除的第一个元素的位置。|
-|*最后一个*|紧接要从向量中移除的最后一个元素的位置。|
+|*last*|紧接要从向量中移除的最后一个元素的位置。|
 
 ### <a name="return-value"></a>返回值
 
@@ -1251,7 +1251,7 @@ void insert(
 |*val*|插入到向量中的元素的值。|
 |*count*|插入向量中的元素数目。|
 |*first*|要复制的范围元素中的第一个元素的位置。|
-|*最后一个*|要复制的元素范围以外的第一个元素的位置。|
+|*last*|要复制的元素范围以外的第一个元素的位置。|
 
 ### <a name="return-value"></a>返回值
 
@@ -1546,7 +1546,7 @@ void push_back(T&& Val);
 
 ### <a name="parameters"></a>参数
 
-*val*<br/>
+*Val*<br/>
 要赋给添加到矢量末尾处的元素的值。
 
 ### <a name="example"></a>示例
@@ -1756,7 +1756,7 @@ void resize(size_type Newsize, Type Val);
 *Newsize*<br/>
 矢量的新大小。
 
-*val*<br/>
+*Val*<br/>
 新大小大于旧大小时添加至矢量的新元素的初始化值。 如果省略该值，则新对象将使用其默认构造函数。
 
 ### <a name="remarks"></a>备注
@@ -2100,7 +2100,7 @@ vector(InputIterator First, InputIterator Last, const Allocator& Al);
 |-|-|
 |*Al*|要用于此对象的分配器类。 [get_allocator](#get_allocator) 返回对象的分配器类。|
 |“计数”|构造的矢量中的元素数。|
-|*val*|构造的矢量中的元素值。|
+|*Val*|构造的矢量中的元素值。|
 |右侧|要成为副本的构造的矢量中的矢量。|
 |*第一个*|要复制的元素范围内的第一个元素的位置。|
 |*最后一个*|要复制的元素范围外的第一个元素的位置。|
