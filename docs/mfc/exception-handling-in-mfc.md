@@ -34,28 +34,28 @@ helpviewer_keywords:
 - out-of-memory exceptions [MFC]
 ms.assetid: 0926627d-2ba7-44a6-babe-d851a4a2517c
 ms.openlocfilehash: afa49a4d54397cf79a3bd0af28e4a0f0a4c7639e
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57818630"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64346054"
 ---
 # <a name="exception-handling-in-mfc"></a>MFC 中的异常处理
 
 本文介绍 MFC 中可用的异常处理机制。 提供了两种机制：
 
-- 提供 MFC 版本 3.0 和更高版本的 c + + 异常
+- C++提供 MFC 版本 3.0 和更高版本的异常
 
 - MFC 异常宏，可用在 MFC 版本 1.0 及更高版本
 
-如果您要编写使用 MFC 的新应用程序，应使用 c + + 机制。 如果你的现有应用程序已广泛使用该机制，可以使用基于宏的机制。
+如果您正在编写新的应用程序使用 MFC，则应使用C++机制。 如果你的现有应用程序已广泛使用该机制，可以使用基于宏的机制。
 
-您可以轻松地转换现有代码以使用 c + + 异常，而不是 MFC 异常宏。 文章中所述将转换你的代码和执行此操作的指导原则的优点[异常：从 MFC 异常宏转换](../mfc/exceptions-converting-from-mfc-exception-macros.md)。
+可以轻松地将转换现有代码以使用C++而不是 MFC 异常宏的异常。 文章中所述将转换你的代码和执行此操作的指导原则的优点[异常：从 MFC 异常宏转换](../mfc/exceptions-converting-from-mfc-exception-macros.md)。
 
-如果您已开发了使用 MFC 异常宏的应用程序，则可以继续使用这些宏在现有代码中，同时在新代码中使用 c + + 异常。 文章[异常：将更改为版本 3.0 中的异常宏](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md)提供的指导可用于执行此操作。
+如果您已开发了使用 MFC 异常宏的应用程序，则可以继续使用这些宏在现有代码中，同时使用C++你的新代码中的异常。 文章[异常：将更改为版本 3.0 中的异常宏](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md)提供的指导可用于执行此操作。
 
 > [!NOTE]
->  若要启用 c + + 异常处理代码中，项目的 C/c + + 文件夹中的代码生成页上选择启用 c + + 异常[属性页](../build/reference/property-pages-visual-cpp.md)对话框中或使用[/EHsc](../build/reference/eh-exception-handling-model.md)编译器选项。
+>  若要启用C++异常处理在代码中，选择启用C++在 C 中页的代码生成的异常 /C++项目的文件夹[属性页](../build/reference/property-pages-visual-cpp.md)对话框中或使用[/EHsc](../build/reference/eh-exception-handling-model.md)编译器选项。
 
 本文介绍了以下主题：
 
@@ -75,7 +75,7 @@ ms.locfileid: "57818630"
 
 - 错误的执行
 
-   调用方是犯一些在将参数传递给函数或调用不适当的上下文中的函数。 这种情况下导致错误，并且应检测到通过在程序开发过程中的断言。 (有关断言的详细信息，请参阅[C/c + + 断言](/visualstudio/debugger/c-cpp-assertions)。)
+   调用方是犯一些在将参数传递给函数或调用不适当的上下文中的函数。 这种情况下导致错误，并且应检测到通过在程序开发过程中的断言。 (有关断言的详细信息，请参阅[C /C++断言](/visualstudio/debugger/c-cpp-assertions)。)
 
 - 不正常执行
 
@@ -85,7 +85,7 @@ ms.locfileid: "57818630"
 
 ##  <a name="_core_mfc_exception_support"></a> MFC 异常支持
 
-无论是直接使用 c + + 异常，还是使用 MFC 异常宏，将使用[CException 类](../mfc/reference/cexception-class.md)或`CException`-派生的对象的框架或您的应用程序可能会引发。
+是否使用C++异常直接或使用 MFC 异常宏，则将使用[CException 类](../mfc/reference/cexception-class.md)或`CException`-派生的对象的框架或您的应用程序可能会引发。
 
 下表显示了由 MFC 提供的预定义的异常。
 
@@ -103,31 +103,31 @@ ms.locfileid: "57818630"
 |[CUserException 类](../mfc/reference/cuserexception-class.md)|异常可提示用户提供一个消息框，然后引发泛型[CException 类](../mfc/reference/cexception-class.md)|
 
 > [!NOTE]
->  MFC 支持 c + + 异常和 MFC 异常宏。 MFC 不直接支持 Windows NT 结构化异常处理程序 (SEH) 中所述[结构化异常处理](/windows/desktop/debug/structured-exception-handling)。
+>  MFC 两者都支持C++异常和 MFC 异常宏。 MFC 不直接支持 Windows NT 结构化异常处理程序 (SEH) 中所述[结构化异常处理](/windows/desktop/debug/structured-exception-handling)。
 
 ##  <a name="_core_further_reading_about_exceptions"></a> 有关异常的更多参考资料
 
 以下文章说明了使用 MFC 库进行异常处理：
 
-- [异常：捕捉和删除异常](../mfc/exceptions-catching-and-deleting-exceptions.md)
+- [异常：捕获和删除异常](../mfc/exceptions-catching-and-deleting-exceptions.md)
 
 - [异常：检查异常内容](../mfc/exceptions-examining-exception-contents.md)
 
 - [异常：释放异常中的对象](../mfc/exceptions-freeing-objects-in-exceptions.md)
 
-- [异常：从您自己的函数引发异常](../mfc/exceptions-throwing-exceptions-from-your-own-functions.md)
+- [异常：从你自己的函数中抛出异常](../mfc/exceptions-throwing-exceptions-from-your-own-functions.md)
 
 - [异常：数据库异常](../mfc/exceptions-database-exceptions.md)
 
-- [异常：OLE Exceptions](../mfc/exceptions-ole-exceptions.md)
+- [异常：OLE 异常](../mfc/exceptions-ole-exceptions.md)
 
-以下文章比较 MFC 异常宏与 c + + 异常关键字并解释如何调整你的代码：
+以下文章比较 MFC 异常宏使用C++异常关键字并解释如何调整你的代码：
 
-- [异常：对异常宏的修改版本 3.0 中的更改](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md)
+- [异常：版本 3.0 中对异常宏的更改](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md)
 
 - [异常：从 MFC 异常宏转换](../mfc/exceptions-converting-from-mfc-exception-macros.md)
 
-- [异常：使用 MFC 宏和 c + + 异常](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md)
+- [异常：使用 MFC 宏和 C++ 异常](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md)
 
 ## <a name="see-also"></a>请参阅
 

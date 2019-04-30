@@ -7,11 +7,11 @@ helpviewer_keywords:
 - private keyword [C++]
 ms.assetid: 94e99983-46a5-4e21-800c-28f8a7c6a8ff
 ms.openlocfilehash: 19ea551f625cac02e639753a976eddb7a5fa164b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50622269"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64345826"
 ---
 # <a name="private-c"></a>private (C++)
 
@@ -37,7 +37,7 @@ private base-class
 
 ## <a name="clr-specific"></a>/clr 专用
 
-在 CLR 类型中，c + + 访问说明符关键字 (**公共**，**专用**，并**保护**) 可能会影响的类型和方法与程序集相关的可见性。 有关详细信息，请参阅[成员访问控制](member-access-control-cpp.md)。
+在 CLR 类型中，C++访问说明符关键字 (**公共**，**专用**，并**保护**) 可能会影响的类型和方法与程序集相关的可见性。 有关详细信息，请参阅[成员访问控制](member-access-control-cpp.md)。
 
 > [!NOTE]
 >  使用文件编译[/LN](../build/reference/ln-create-msil-module.md)不受此行为。 在这种情况下，所有托管类（公共或私有）都将可见。

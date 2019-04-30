@@ -7,17 +7,17 @@ helpviewer_keywords:
 - C3673
 ms.assetid: bb6d2079-05af-4e2c-be0e-75c892e6c590
 ms.openlocfilehash: 9fd6920956d6a48ec7e1f15bf54ea8d75bad4aa5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585479"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64345425"
 ---
 # <a name="compiler-error-c3673"></a>编译器错误 C3673
 
 type： 类没有复制构造函数
 
-用户定义的构造函数需要将复制 CLR ref 类型的对象。 有关详细信息，请参阅[的引用类型的 c + + 堆栈语义](../../dotnet/cpp-stack-semantics-for-reference-types.md)。
+用户定义的构造函数需要将复制 CLR ref 类型的对象。 有关详细信息，请参阅[C++引用类型的堆栈语义](../../dotnet/cpp-stack-semantics-for-reference-types.md)。
 
 ## <a name="example"></a>示例
 
