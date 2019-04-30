@@ -17,26 +17,24 @@ helpviewer_keywords:
 - RUNTIME_CLASS macro, using
 ms.assetid: 3445a9af-0bd6-4496-95c3-aa59b964570b
 ms.openlocfilehash: 2e4f8685033fc7a8a2f49dafa7ef4e4e019d8989
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57298823"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392942"
 ---
 # <a name="accessing-run-time-class-information"></a>访问运行时类信息
 
 本文说明了如何在运行时访问对象的类的相关信息。
 
 > [!NOTE]
->  MFC 不使用[运行时类型信息](../cpp/run-time-type-information.md)(RTTI) 支持在 Visual c + + 4.0 中引入的。
+>  MFC 不使用[运行时类型信息](../cpp/run-time-type-information.md)视觉对象中引入的 (RTTI) 支持C++4.0。
 
 如果具有派生您的类从[CObject](../mfc/reference/cobject-class.md)并用**DECLARE**_**动态**并`IMPLEMENT_DYNAMIC`，则`DECLARE_DYNCREATE`和`IMPLEMENT_DYNCREATE`，或`DECLARE_SERIAL`并`IMPLEMENT_SERIAL`宏一文中所述[从 CObject 派生类](../mfc/deriving-a-class-from-cobject.md)，则`CObject`类具有在运行时确定对象的具体类的功能。
 
 在需要函数参数的其他类型检查时，以及在必须基于对象的类编写特殊用途的代码时，此功能非常有用。 但是，通常建议不要使用此做法，因为它会复制虚函数的功能。
 
-
-  `CObject` 成员函数 `IsKindOf` 可用于确定某个特定对象是否属于某个指定类或者是否派生自某个特定类。 
-  `IsKindOf` 的自变量是一个 `CRuntimeClass` 对象，您可以将 `RUNTIME_CLASS` 宏与类名一起使用来获取此对象。
+`CObject` 成员函数 `IsKindOf` 可用于确定某个特定对象是否属于某个指定类或者是否派生自某个特定类。 `IsKindOf` 的自变量是一个 `CRuntimeClass` 对象，您可以将 `RUNTIME_CLASS` 宏与类名一起使用来获取此对象。
 
 ### <a name="to-use-the-runtimeclass-macro"></a>使用 RUNTIME_CLASS 宏
 
@@ -44,8 +42,7 @@ ms.locfileid: "57298823"
 
    [!code-cpp[NVC_MFCCObjectSample#4](../mfc/codesnippet/cpp/accessing-run-time-class-information_1.cpp)]
 
-您很少需要直接访问运行时类对象。 更常见的用法是将运行时类对象传递给 `IsKindOf` 函数，如下面的过程中所示。 
-  `IsKindOf` 函数测试一个对象来确定它是否属于某个特定类。
+您很少需要直接访问运行时类对象。 更常见的用法是将运行时类对象传递给 `IsKindOf` 函数，如下面的过程中所示。 `IsKindOf` 函数测试一个对象来确定它是否属于某个特定类。
 
 #### <a name="to-use-the-iskindof-function"></a>使用 IsKindOf 函数
 

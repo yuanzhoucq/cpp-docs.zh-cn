@@ -17,11 +17,11 @@ helpviewer_keywords:
 - std::ostreambuf_iterator [C++], failed
 ms.assetid: dad1e624-2f45-4e94-8887-a885e95f9071
 ms.openlocfilehash: 5114a658cfde965556f4663d2ba92c9ba4d1eaeb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543362"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62370940"
 ---
 # <a name="ostreambufiterator-class"></a>ostreambuf_iterator 类
 
@@ -181,7 +181,7 @@ No insertions failed.
 */
 ```
 
-## <a name="op_star"></a>  ostreambuf_iterator:: operator\*
+## <a name="op_star"></a>  ostreambuf_iterator::operator\*
 
 用于实现输出迭代器表达式 \* *i* = *x* 的非功能性的取消引用运算符。
 

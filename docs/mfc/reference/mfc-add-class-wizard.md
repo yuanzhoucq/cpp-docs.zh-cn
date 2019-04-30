@@ -8,11 +8,11 @@ helpviewer_keywords:
 - wizards [MFC]
 ms.assetid: ad3b0989-d307-43b2-9417-3f9a78889024
 ms.openlocfilehash: fa9b947ae6fc0e48aaecde61e35a5f4152c85f27
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304088"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412719"
 ---
 # <a name="mfc-add-class-wizard"></a>MFC 添加类向导
 
@@ -24,7 +24,7 @@ ms.locfileid: "57304088"
 
 - **类名**
 
-  指定新类的名称并提供的默认基础的 Id 和在此页上的文件的名称。 C + + 类通常开始于"C"，因此，例如，"CMyClass"变为"MyClass.h"，依次类推。
+  指定新类的名称并提供的默认基础的 Id 和在此页上的文件的名称。 C++类通常开始于"C"，因此，例如，"CMyClass"变为"MyClass.h"，依次类推。
 
 - **基类**
 

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - recordsets, stored procedures
 ms.assetid: d27c4df9-dad2-4484-ba72-92ab0c8ff928
 ms.openlocfilehash: d4ae9f21c4bd53a8050d6f8c3765bb9823d077ba
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59026522"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62395594"
 ---
 # <a name="recordset-declaring-a-class-for-a-predefined-query-odbc"></a>记录集：声明一个类预定义的查询 (ODBC)
 
@@ -153,6 +153,6 @@ if( rsDel.Open( CRecordset::snapshot, strSQL ) )
 ## <a name="see-also"></a>请参阅
 
 [记录集 (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[记录集：再次查询记录集 (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)<br/>
-[记录集：声明一个类 (ODBC) 的表](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)<br/>
+[记录集：重新查询记录集 (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)<br/>
+[记录集：声明表的类 (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)<br/>
 [记录集：执行联接 (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)

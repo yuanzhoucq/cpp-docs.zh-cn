@@ -15,11 +15,11 @@ helpviewer_keywords:
 - std::time_put [C++], put
 ms.assetid: df79493e-3331-48d2-97c3-ac3a745f0791
 ms.openlocfilehash: b9c6f8db26cdc67d3a1bc752b9b5eb31f7dc220b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452502"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62411924"
 ---
 # <a name="timeput-class"></a>time_put 类
 
@@ -182,7 +182,7 @@ iter_type put(iter_type next,
 *first*<br/>
 输出格式字符串的开头。 有关有效值的范围，请参阅 [strftime、wcsftime、_strftime_l、_wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)。
 
-*最后一个*<br/>
+*last*<br/>
 输出格式字符串的末尾。 有关有效值的范围，请参阅 [strftime、wcsftime、_strftime_l、_wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)。
 
 ### <a name="return-value"></a>返回值
@@ -254,11 +254,11 @@ explicit time_put(size_t _Refs = 0);
 
 可能的值 *_Refs*参数和其重要性：
 
-- 0：对象的生存期由包含该对象的区域设置管理。
+- 0:对象的生存期由包含它的区域设置管理。
 
-- 1：必须手动管理对象的生存期。
+- 1:必须手动管理的对象的生存期。
 
-- \> 1： 未定义这些值。
+- \> 1:未定义这些值。
 
 构造函数初始化其基对象与[locale:: facet](../standard-library/locale-class.md#facet_class)(*_Refs*)。
 

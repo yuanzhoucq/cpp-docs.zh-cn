@@ -8,15 +8,15 @@ helpviewer_keywords:
 - strings [C++], converting
 ms.assetid: 1fde79a0-9d0b-44e5-981b-e8f2676c199d
 ms.openlocfilehash: e1fca0e8cb614c111af80324793cf8027be333a0
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57749967"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62387508"
 ---
 # <a name="how-to-convert-standard-string-to-systemstring"></a>如何：将标准字符串转换为 system:: string
 
-本主题演示如何将 c + + 标准库字符串 ([\<字符串 >](../standard-library/string.md)) 到<xref:System.String>。
+本主题演示如何将C++标准库字符串 ([\<字符串 >](../standard-library/string.md)) 到<xref:System.String>。
 
 ## <a name="example"></a>示例
 

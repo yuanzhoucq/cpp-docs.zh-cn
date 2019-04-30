@@ -4,11 +4,11 @@ ms.date: 11/19/2018
 ms.topic: conceptual
 ms.assetid: 553c0ed6-77c4-43e9-87b1-c903eec53e80
 ms.openlocfilehash: 4dfbf408654ccc92c92d6855c15238cb07c01b58
-ms.sourcegitcommit: 6e4dd21759caaed262a7255735cf8d6e8fb9f4d7
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58476898"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392270"
 ---
 # <a name="c-type-system-modern-c"></a>C++ 类型系统（现代 C++）
 
@@ -20,7 +20,7 @@ ms.locfileid: "58476898"
 
 **对象**:为保持简单性和一致性，本文使用术语*对象*来引用任何实例的类或结构，并使用一般意义时包括所有类型甚至标量变量。
 
-**POD 类型**（纯旧数据）：C + + 中的数据类型的此非正式类别是指作为标量类型 （请参见基础类型部分） 或*POD 类*。 POD 类没有不是 POD 的静态数据成员，没有用户定义的构造函数、用户定义的析构函数或用户定义的赋值运算符。 此外，POD 类无虚函数、基类、私有的或受保护的非静态数据成员。 POD 类型通常用于外部数据交换，例如与用 C 语言编写的模块（仅具有 POD 类型）进行的数据交换。
+**POD 类型**（纯旧数据）：此非正式类别中的数据类型的C++指的是标量类型 （请参见基础类型部分） 或*POD 类*。 POD 类没有不是 POD 的静态数据成员，没有用户定义的构造函数、用户定义的析构函数或用户定义的赋值运算符。 此外，POD 类无虚函数、基类、私有的或受保护的非静态数据成员。 POD 类型通常用于外部数据交换，例如与用 C 语言编写的模块（仅具有 POD 类型）进行的数据交换。
 
 ## <a name="specifying-variable-and-function-types"></a>指定变量和函数类型
 
@@ -76,7 +76,7 @@ int maxValue;                // Not recommended! maxValue contains
 
 ## <a name="the-void-type"></a>void 类型
 
-**Void**类型是一种特殊类型; 不能声明类型的变量**void**，但可以声明类型的变量__void \*__  (指向**void**)，这有时是必要的分配原始 （非类型化） 内存时。 但是，指向**void**不是类型安全和它们的使用通常是强烈建议不要在现代 c + + 中使用。 在函数声明中， **void**返回值表示函数不返回值; 这是常见和可接受用法**void**。 尽管 C 语言所需函数具有零个参数来声明**void**在参数列表中，例如， `fou(void)`，这种做法是建议你不要在现代 c + +，应该声明为`fou()`。 有关详细信息，请参阅[类型转换和类型安全](../cpp/type-conversions-and-type-safety-modern-cpp.md)。
+**Void**类型是一种特殊类型; 不能声明类型的变量**void**，但可以声明类型的变量__void \*__  (指向**void**)，这有时是必要的分配原始 （非类型化） 内存时。 但是，指向**void**不是类型安全和通常它们的使用，强烈建议不要使用现代版中C++。 在函数声明中， **void**返回值表示函数不返回值; 这是常见和可接受用法**void**。 尽管 C 语言所需函数具有零个参数来声明**void**在参数列表中，例如， `fou(void)`，这种做法，建议不要使用现代版中C++，应声明`fou()`。 有关详细信息，请参阅[类型转换和类型安全](../cpp/type-conversions-and-type-safety-modern-cpp.md)。
 
 ## <a name="const-type-qualifier"></a>const 类型限定符
 
@@ -88,13 +88,13 @@ const double PI = 3.1415;
 PI = .75 //Error. Cannot modify const variable.
 ```
 
-**Const**限定符广泛应用于函数和变量声明和"const 有效性"是 c + + 中的重要概念; 它实质上表示使用**const**以确保在编译时，值不是无意中修改。 有关详细信息，请参阅[const](../cpp/const-cpp.md)。
+**Const**限定符在函数和变量声明中广泛使用，并且"const 有效性"中的一个重要概念C++; 它实质上表示使用**const**以确保在编译时间，不会无意中修改值。 有关详细信息，请参阅[const](../cpp/const-cpp.md)。
 
-一个**const**类型是不同于其非常量版本; 例如， **const int**是从不同的类型**int**。可以使用 c + + **const_cast**运算符时必须删除这些极少数情况下的*常量性*变量中。 有关详细信息，请参阅[类型转换和类型安全](../cpp/type-conversions-and-type-safety-modern-cpp.md)。
+一个**const**类型是不同于其非常量版本; 例如， **const int**是从不同的类型**int**。可以使用C++ **const_cast**运算符时必须删除这些极少数情况下的*常量性*变量中。 有关详细信息，请参阅[类型转换和类型安全](../cpp/type-conversions-and-type-safety-modern-cpp.md)。
 
 ## <a name="string-types"></a>字符串类型
 
-严格地说，c + + 语言不具有内置的字符串类型;**char**并**wchar_t**存储单个字符-必须声明一个数组以估计字符串，这些类型添加一个终止 null 值 (例如，ASCII `'\0'`) 到的数组元素最后一个有效字符 (也称为*C 样式字符串*)。 C 样式字符串需要编写更多的代码或者需要使用外部字符串实用工具库函数。 在现代 c + + 中，我们已有标准库类型，但是`std::string`(用于 8 位**char**-键入字符的字符串) 或`std::wstring`(对于 16 位**wchar_t**-键入字符的字符串)。 可以将这些 C++ 标准库容器视为本机字符串类型因为它们是包含在任何符合 C++ 生成环境中的标准库的一部分。 只需使用 `#include <string>` 指令即可使这些类型在你的程序中可用。 （如果使用的是 MFC 或 ATL，还可使用 CString 类，但其不符合 C++ 标准。）强烈建议你不要在现代 C++ 中使用 null 终止字符数组（前面提到的 C 样式字符串）。
+严格地说，C++语言都有没有内置的字符串类型;**char**并**wchar_t**存储单个字符-必须声明一个数组以估计字符串，这些类型添加一个终止 null 值 (例如，ASCII `'\0'`) 为数组元素一个有效的最后一个字符之后 (也称为*C 样式字符串*)。 C 样式字符串需要编写更多的代码或者需要使用外部字符串实用工具库函数。 现代版中，但是C++，我们已有标准库类型`std::string`(用于 8 位**char**-键入字符的字符串) 或`std::wstring`(对于 16 位**wchar_t**-键入字符的字符串)。 可以将这些 C++ 标准库容器视为本机字符串类型因为它们是包含在任何符合 C++ 生成环境中的标准库的一部分。 只需使用 `#include <string>` 指令即可使这些类型在你的程序中可用。 （如果使用的是 MFC 或 ATL，还可使用 CString 类，但其不符合 C++ 标准。）强烈建议你不要在现代 C++ 中使用 null 终止字符数组（前面提到的 C 样式字符串）。
 
 ## <a name="user-defined-types"></a>用户定义的类型
 

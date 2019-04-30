@@ -10,11 +10,11 @@ helpviewer_keywords:
 - strong-named assemblies [C++]
 ms.assetid: c337cd3f-e5dd-4c6f-a1ad-437e85dba1cc
 ms.openlocfilehash: ac46d069ece3c75af93f93497169d054b45267d0
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57813924"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384577"
 ---
 # <a name="strong-name-assemblies-assembly-signing-ccli"></a>强名称程序集（程序集签名）(C++/CLI)
 
@@ -22,7 +22,7 @@ ms.locfileid: "57813924"
 
 ## <a name="remarks"></a>备注
 
-当使用 Visual c + +，使用链接器选项以避免与程序集签名的 CLR 属性相关的问题在程序集进行签名：
+当使用视觉对象C++，使用链接器选项来登录您的程序集，以避免与程序集签名的 CLR 属性相关的问题：
 
 - <xref:System.Reflection.AssemblyDelaySignAttribute>
 
@@ -30,7 +30,7 @@ ms.locfileid: "57813924"
 
 - <xref:System.Reflection.AssemblyKeyNameAttribute>
 
-不使用属性的原因包括密钥的名称将显示在程序集元数据，可能会有安全风险，如果文件名称中包含机密信息的事实。 此外，使用由 Visual c + + 开发环境的生成过程将导致与该程序集已签名，如果你使用 CLR 属性来为程序集赋予强名称，然后运行程序集上 mt.exe 之类的后续处理工具的密钥无效。
+不使用属性的原因包括密钥的名称将显示在程序集元数据，可能会有安全风险，如果文件名称中包含机密信息的事实。 此外，生成过程视觉对象使用C++开发环境将导致与该程序集已签名，如果你使用 CLR 属性来为程序集赋予强名称，然后运行程序集上 mt.exe 之类的后续处理工具的密钥无效。
 
 如果你在命令行生成、 链接器选项用于对程序集签名，然后运行后续处理工具 （如 mt.exe)，您需要使用 sn.exe 程序集重新签名。 或者，可以生成和延迟签名程序集并后运行后续处理的工具，需要完成的签名。
 

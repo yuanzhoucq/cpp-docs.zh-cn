@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2910
 ms.assetid: 09c50e6a-e099-42f6-8ed6-d80e292a7a36
 ms.openlocfilehash: 58d56ad834b34425cda4ac7ba081eabd2424e451
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50547259"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62408350"
 ---
 # <a name="compiler-error-c2910"></a>编译器错误 C2910
 
@@ -56,7 +56,7 @@ template <> A<void>::A(void* p){}   // C2910
 
 此错误还将生成的 Visual Studio.NET 2003年执行的编译器一致性工作:。
 
-代码都将有效的 Visual Studio.NET 2003年和 Visual Studio.NET 版本的 Visual c + + 中，删除`template <>`。
+代码将视觉对象的 Visual Studio.NET 2003年和 Visual Studio.NET 版本中有效C++，删除`template <>`。
 
 下面的示例生成 C2910:
 

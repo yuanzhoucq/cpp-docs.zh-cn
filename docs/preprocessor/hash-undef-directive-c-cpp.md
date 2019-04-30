@@ -9,11 +9,11 @@ helpviewer_keywords:
 - preprocessor, directives
 ms.assetid: 88900e0e-2c19-4a63-b681-f3d3133c24ca
 ms.openlocfilehash: 4f4f5ce244be6d7f4e13d7a2abc5d21232c08d9d
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59039002"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62409845"
 ---
 # <a name="undef-directive-cc"></a>#undef 指令 (C/C++)
 移除（取消定义）之前使用 `#define` 创建的名称。

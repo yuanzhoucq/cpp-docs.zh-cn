@@ -15,11 +15,11 @@ helpviewer_keywords:
 - std::basic_istringstream [C++], swap
 ms.assetid: 1d5bb4b5-793d-4833-98e5-14676c451915
 ms.openlocfilehash: fdf622bbef370e8b3625f419be29f293bc06eacc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643257"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62400625"
 ---
 # <a name="basicistringstream-class"></a>basic_istringstream 类
 
@@ -34,7 +34,7 @@ class basic_istringstream : public basic_istream<Elem, Tr>
 
 ### <a name="parameters"></a>参数
 
-*分配*<br/>
+*Alloc*<br/>
 allocator 类。
 
 *Elem*<br/>
@@ -105,7 +105,7 @@ basic_istringstream(
 
 ### <a name="parameters"></a>参数
 
-*模式 （_m)*<br/>
+*_Mode*<br/>
 [ios_base::openmode](../standard-library/ios-base-class.md#openmode) 中的枚举之一。
 
 *str*<br/>

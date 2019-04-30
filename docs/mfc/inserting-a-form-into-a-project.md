@@ -7,11 +7,11 @@ helpviewer_keywords:
 - forms, adding to projects
 ms.assetid: f3bd2998-3ce2-496d-ac5c-57ca70eec7cb
 ms.openlocfilehash: 2fa344f2d84b39be4ee36fd845edb82c14b6c519
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57286525"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62383828"
 ---
 # <a name="inserting-a-form-into-a-project"></a>在项目中插入窗体
 
@@ -29,7 +29,7 @@ ms.locfileid: "57286525"
 
 1. 使用 MFC 类向导，使新类派生自[CFormView](../mfc/reference/cformview-class.md)。
 
-Visual c + + 将窗体添加到应用程序中，打开对话框编辑器内，以便可以开始添加控件和处理其整体设计。
+VisualC++将在窗体添加到应用程序中，打开对话框编辑器内，以便可以开始添加控件和处理其整体设计。
 
 您可能想要执行以下附加步骤 （不适用于基于对话框的应用程序）：
 

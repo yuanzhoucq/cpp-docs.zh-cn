@@ -9,11 +9,11 @@ helpviewer_keywords:
 - ODBC [C++], RFX
 ms.assetid: f5ddfbf0-2901-48d7-9848-4fb84de3c7ee
 ms.openlocfilehash: 8630fab11728b0c0cd16eee5035df028a8382706
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59032214"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62395711"
 ---
 # <a name="record-field-exchange-rfx"></a>记录字段交换 (RFX)
 
@@ -42,7 +42,7 @@ RFX 主要是透明的。 如果您声明您使用 MFC 应用程序向导的记�
 
 - [记录字段交换：使用 RFX 函数](../../data/odbc/record-field-exchange-using-the-rfx-functions.md)
 
-- [记录字段交换：RFX 的工作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)
+- [记录字段交换：RFX 工作原理](../../data/odbc/record-field-exchange-how-rfx-works.md)
 
 ## <a name="see-also"></a>请参阅
 

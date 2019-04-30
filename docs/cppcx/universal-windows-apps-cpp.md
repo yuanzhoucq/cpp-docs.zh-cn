@@ -3,11 +3,11 @@ title: 通用 Windows 应用 (C++)
 ms.date: 03/30/2018
 ms.assetid: 357121cc-d390-4bae-b34a-39614861a9f4
 ms.openlocfilehash: fbd5366ee52dfe32baef9458a82c16914666699e
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58783998"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392058"
 ---
 # <a name="universal-windows-apps-c"></a>通用 Windows 应用 (C++)
 
@@ -35,5 +35,5 @@ Windows 运行时 C++ 模板库提供低级别的 COM 接口，让 ISO C++ 代�
 
 ## <a name="see-also"></a>请参阅
 
-[C++在 Visual Studio 中](../overview/visual-cpp-in-visual-studio.md)<br/>
+[Visual Studio 中的 C++](../overview/visual-cpp-in-visual-studio.md)<br/>
 [C++ 中 Windows 编程概述](../windows/overview-of-windows-programming-in-cpp.md)<br/>

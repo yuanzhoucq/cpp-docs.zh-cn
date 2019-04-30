@@ -23,11 +23,11 @@ helpviewer_keywords:
 - array class
 ms.assetid: 0832b6c1-40f0-421d-9104-6b1baa0c63a7
 ms.openlocfilehash: 16d18d23c370a8a603ab6150fcee18455ae47c48
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259017"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405503"
 ---
 # <a name="array-class"></a>array 类
 
@@ -82,7 +82,7 @@ friend class array;
 
 ### <a name="public-constants"></a>公共常量
 
-|name|描述|
+|名称|描述|
 |----------|-----------------|
 |[rank 常量](#rank)|存储数组的秩。|
 

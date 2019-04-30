@@ -23,11 +23,11 @@ helpviewer_keywords:
 - COleCurrency [MFC], m_status
 ms.assetid: 3a36e345-303f-46fb-a57c-858274378a8d
 ms.openlocfilehash: 64f2b00c8a5aefe8a39c24d26af2a97625225059
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57273174"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62375738"
 ---
 # <a name="colecurrency-class"></a>COleCurrency 类
 
@@ -204,7 +204,7 @@ enum CurrencyStatus {
 
   - `COleCurrency::invalid` 指示此`COleCurrency`对象无效; 即，其值可能不正确。
 
-  - `COleCurrency::null` 指示此`COleCurrency`对象为 null，也即，已为此对象提供任何值。 （此为"null"数据库意义上的"无任何值，"，而不 c + + 为 NULL。）
+  - `COleCurrency::null` 指示此`COleCurrency`对象为 null，也即，已为此对象提供任何值。 (这是"null"数据库意义上的"无任何值，"，而不C++为 NULL。)
 
 状态`COleCurrency`对象是在以下情况下无效：
 
@@ -265,7 +265,7 @@ enum CurrencyStatus{
 
 - `COleCurrency::invalid` 指示此`COleCurrency`对象无效; 即，其值可能不正确。
 
-- `COleCurrency::null` 指示此`COleCurrency`对象为 null，也即，已为此对象提供任何值。 （此为"null"数据库意义上的"无任何值，"，而不 c + + 为 NULL。）
+- `COleCurrency::null` 指示此`COleCurrency`对象为 null，也即，已为此对象提供任何值。 (这是"null"数据库意义上的"无任何值，"，而不C++为 NULL。)
 
 状态`COleCurrency`对象是在以下情况下无效：
 
@@ -569,7 +569,7 @@ enum CurrencyStatus {
 
 - `COleCurrency::invalid` 指示此`COleCurrency`对象无效; 即，其值可能不正确。
 
-- `COleCurrency::null` 指示此`COleCurrency`对象为 null，也即，已为此对象提供任何值。 （此为"null"数据库意义上的"无任何值，"，而不 c + + 为 NULL。）
+- `COleCurrency::null` 指示此`COleCurrency`对象为 null，也即，已为此对象提供任何值。 (这是"null"数据库意义上的"无任何值，"，而不C++为 NULL。)
 
 > [!CAUTION]
 >  此函数是针对高级编程情况。 此函数不会更改此对象中的数据。 通常将用于将状态设置为 null 或无效的。 请注意，赋值运算符 ([运算符 =](#operator_eq)) 和[SetCurrency](#setcurrency)设置到的源值所基于的对象的状态。

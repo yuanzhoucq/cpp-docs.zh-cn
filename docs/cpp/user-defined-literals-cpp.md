@@ -3,11 +3,11 @@ title: 用户定义的文本 （C++）
 ms.date: 11/04/2016
 ms.assetid: ff4a5bec-f795-4705-a2c0-53788fd57609
 ms.openlocfilehash: 1de94b43423bb5b420be29d3cace146e265a1459
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50665109"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392110"
 ---
 # <a name="user-defined-literals--c"></a>用户定义的文本 （C++）
 
@@ -109,7 +109,7 @@ template<char...> ReturnType operator "" _t();       // Literal operator templat
 
 可使用原始文本提供输入序列的自定义解释，使其与编译器将执行的解释不同。 例如，可以定义一段文本，用于将序列 `4.75987` 转换为自定义的十进制类型，而不是 IEEE 754 浮点类型。 原始文本（如加工的文本）还可用于执行输入序列的编译时验证。
 
-### <a name="example-limitations-of-raw-literals"></a>原始文本的示例： 限制
+### <a name="example-limitations-of-raw-literals"></a>示例:原始文本的限制
 
 原始文本运算符和文本运算符模板仅适用于整型和浮点型用户定义文本，如下面的示例所示：
 

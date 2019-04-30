@@ -13,11 +13,11 @@ helpviewer_keywords:
 - ActiveX controls [MFC], wrapper classes
 ms.assetid: ef9b2480-92d6-4191-b16e-8055c4fd7b73
 ms.openlocfilehash: eaeb5275ce825272e1c605e7ceeefa24db7a32ab
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57278348"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62378110"
 ---
 # <a name="activex-control-containers-programming-activex-controls-in-an-activex-control-container"></a>ActiveX 控件容器：ActiveX 控件容器中的 ActiveX 控件编程
 
@@ -58,7 +58,7 @@ ms.locfileid: "57278348"
 
 ## <a name="modifications-to-the-project"></a>项目的修改
 
-若要启用容器应用程序访问 Circ 控件，Visual c + + 会自动添加包装类 (`CCirc`) 实现文件 (。CPP) 到容器项目，并包装类头文件 (。H） 对话框标头文件的文件：
+若要启用容器应用程序访问 Circ 控件，视觉对象C++会自动添加包装类 (`CCirc`) 实现文件 (。CPP) 到容器项目，并包装类头文件 (。H） 对话框标头文件的文件：
 
 [!code-cpp[NVC_MFC_AxCont#1](../mfc/codesnippet/cpp/programming-activex-controls-in-a-activex-control-container_1.h)]
 
@@ -69,11 +69,11 @@ ms.locfileid: "57278348"
 [!code-cpp[NVC_MFC_AxCont#2](../mfc/codesnippet/cpp/programming-activex-controls-in-a-activex-control-container_2.h)]
 [!code-cpp[NVC_MFC_AxCont#3](../mfc/codesnippet/cpp/programming-activex-controls-in-a-activex-control-container_3.h)]
 
-然后可以从其他应用程序的过程使用普通的 c + + 语法调用这些函数。 使用此成员函数设置为访问控件的方法和属性的详细信息，请参阅明[ActiveX 控件编程](#_core_programming_the_activex_control)。
+这些函数随后可以调用与其他应用程序的过程使用普通C++语法。 使用此成员函数设置为访问控件的方法和属性的详细信息，请参阅明[ActiveX 控件编程](#_core_programming_the_activex_control)。
 
 ##  <a name="_core_member_variable_modifications_to_the_project"></a> 项目的成员变量修改
 
-后已添加到项目中并在对话框容器中嵌入 ActiveX 控件，它可以访问的项目的其他部分。 访问控制的最简单方法是向[创建一个成员变量](../mfc/activex-control-containers-connecting-an-activex-control-to-a-member-variable.md)的对话框类中， `CContainerDlg` （步骤 2），即添加到项目中 Visual c + + 包装器类的类型相同。 成员变量然后可用于在任何时间访问嵌入的控件。
+后已添加到项目中并在对话框容器中嵌入 ActiveX 控件，它可以访问的项目的其他部分。 访问控制的最简单方法是向[创建一个成员变量](../mfc/activex-control-containers-connecting-an-activex-control-to-a-member-variable.md)对话框类的`CContainerDlg`（步骤 2），即视觉对象添加到项目中的包装器类的类型相同的C++。 成员变量然后可用于在任何时间访问嵌入的控件。
 
 当**添加成员变量**对话框中添加*m_circctl*成员变量到项目时，它还将添加以下代码行到标头文件 (。H） 的`CContainerDlg`类：
 
@@ -86,7 +86,7 @@ ms.locfileid: "57278348"
 
 ##  <a name="_core_programming_the_activex_control"></a> ActiveX 控件编程
 
-此时，已插入 ActiveX 控件到对话框模板，并为其创建的成员变量。 常见的 c + + 语法现在可用于访问的属性和嵌入控件的方法。
+此时，已插入 ActiveX 控件到对话框模板，并为其创建的成员变量。 你现在可以使用通用C++语法来访问的属性和嵌入控件的方法。
 
 如所述 (在[包装类头文件 (。H） 文件](#_core_the_wrapper_class_header_28h29_file))，该标头文件 (。H） 为`CCirc`包装器类，在此事例 CIRC.H，包含可用于获取和设置的任何公开的属性值的成员函数的列表。 此外，还提供公开的方法的成员函数。
 

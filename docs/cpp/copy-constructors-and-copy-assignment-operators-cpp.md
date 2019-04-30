@@ -11,11 +11,11 @@ helpviewer_keywords:
 - assigning values to copy objects
 ms.assetid: a94fe1f9-0289-4fb9-8633-77c654002c0d
 ms.openlocfilehash: 59f463d103e233a1d9b25da3243a16f67263c815
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50535039"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392292"
 ---
 # <a name="copy-constructors-and-copy-assignment-operators-c"></a>复制构造函数和复制赋值运算符 (C++)
 
@@ -24,7 +24,7 @@ ms.locfileid: "50535039"
 >
 > 赋值操作和初始化操作都会导致对象被复制。
 
-- **分配**： 如果一个对象的值分配给另一个对象，第一个对象复制到第二个对象。 因此，
+- **分配**:如果一个对象的值分配给另一个对象，第一个对象复制到第二个对象。 因此，
 
     ```cpp
     Point a, b;
@@ -34,7 +34,7 @@ ms.locfileid: "50535039"
 
    导致 `b` 的值被复制到 `a` 中。
 
-- **初始化**： 初始化发生时参数将传递到函数的值，声明一个新的对象或值从函数返回的值。
+- **初始化**:当声明新对象时，参数按值传递给函数时或当值从函数返回值时，发生初始化。
 
 您可以为类类型的对象定义“复制”的语义。 例如，考虑此代码：
 
@@ -76,13 +76,13 @@ int main()
 
 编译器生成的复制构造函数，如用户定义的复制构造函数具有的单个参数的类型"的引用*类名*。" 例外情况是当所有基类和成员类都具有声明为采用单个参数的类型的复制构造函数**const** <em>类名</em><strong>&</strong>。 在这种情况下，编译器生成的复制构造函数的自变量也是**const**。
 
-当复制构造函数的自变量类型不是**const**，通过复制初始化**const**对象生成一个错误。 反之不成立： 如果参数为**const**，可以通过复制不是一个对象来初始化**const**。
+当复制构造函数的自变量类型不是**const**，通过复制初始化**const**对象生成一个错误。 反之不成立：如果参数为**const**，可以通过复制不是一个对象来初始化**const**。
 
 编译器生成的赋值运算符遵循相同的模式与**const。** 它们采用单个参数的类型<em>类名</em><strong>&</strong>除非所有基类和成员类中的赋值运算符采用自变量类型的**const** <em>类名</em><strong>&</strong>。 在这种情况下，类的生成的赋值运算符采用**const**参数。
 
 > [!NOTE]
 > 当虚拟基类由复制构造函数（编译器生成或用户定义的）初始化时，将只初始化这些基类一次：在构造它们时。
 
-含义类似于复制构造函数的含义。 当自变量类型不是**const**，从赋值**const**对象生成一个错误。 反之不成立： 如果**const**值分配给值不是**const**，分配会取得成功。
+含义类似于复制构造函数的含义。 当自变量类型不是**const**，从赋值**const**对象生成一个错误。 反之不成立：如果**const**值分配给值不是**const**，分配会取得成功。
 
 有关重载的赋值运算符的详细信息，请参阅[分配](../cpp/assignment.md)。

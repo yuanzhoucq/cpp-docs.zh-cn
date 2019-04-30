@@ -9,15 +9,15 @@ helpviewer_keywords:
 - task groups, exception handling [Concurrency Runtime]
 ms.assetid: 4d1494fb-3089-4f4b-8cfb-712aa67d7a7a
 ms.openlocfilehash: 8239913c369605503134a9ea4c99789528911868
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57272628"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62413926"
 ---
 # <a name="exception-handling-in-the-concurrency-runtime"></a>并发运行时中的异常处理
 
-并发运行时使用 c + + 异常处理进行通信的许多种错误。 这些错误包括提供对任务和任务组的工作函数中使用无效的运行时、 运行时错误问题，无法获取资源，例如和发生的错误。 当任务或任务组引发了异常时，运行时保存该异常，并将其封送到等待的任务或任务组完成的上下文。 对于如轻量级任务和代理组件，运行时不管理为你的异常。 在这些情况下，必须实现您自己的异常处理机制。 本主题介绍如何在运行时处理由任务、 任务组、 轻量级任务和异步代理引发的异常以及如何在您的应用程序中响应异常。
+并发运行时使用C++进行通信的许多种错误的异常处理。 这些错误包括提供对任务和任务组的工作函数中使用无效的运行时、 运行时错误问题，无法获取资源，例如和发生的错误。 当任务或任务组引发了异常时，运行时保存该异常，并将其封送到等待的任务或任务组完成的上下文。 对于如轻量级任务和代理组件，运行时不管理为你的异常。 在这些情况下，必须实现您自己的异常处理机制。 本主题介绍如何在运行时处理由任务、 任务组、 轻量级任务和异步代理引发的异常以及如何在您的应用程序中响应异常。
 
 ## <a name="key-points"></a>关键点
 
@@ -75,7 +75,7 @@ ms.locfileid: "57272628"
 > [!CAUTION]
 >  切勿从代码中引发 `task_canceled`。 调用[concurrency:: cancel_current_task](reference/concurrency-namespace-functions.md#cancel_current_task)相反。
 
-如果任务引发了异常和任务，其延续或主应用程序之一不捕获异常，运行时终止应用程序。 如果你的应用程序崩溃，可以配置 Visual Studio 以 c + + 异常引发时才中断。 诊断的未经处理的异常位置后，使用基于任务的延续来处理它。
+如果任务引发了异常和任务，其延续或主应用程序之一不捕获异常，运行时终止应用程序。 如果你的应用程序崩溃，则可以配置 Visual Studio 时中断C++引发异常。 诊断的未经处理的异常位置后，使用基于任务的延续来处理它。
 
 部分[由运行时引发的异常](#runtime)本文档中介绍了如何使用中更详细地介绍运行时异常。
 

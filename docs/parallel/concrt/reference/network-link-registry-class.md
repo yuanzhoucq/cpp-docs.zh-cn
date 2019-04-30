@@ -13,16 +13,15 @@ helpviewer_keywords:
 - network_link_registry class
 ms.assetid: 3e7b4097-09f1-4252-964e-b15b8f7f7fc6
 ms.openlocfilehash: 2537ed857651b5210b104a270b3d827246b8339a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57273343"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62385227"
 ---
 # <a name="networklinkregistry-class"></a>network_link_registry 类
 
-
-  `network_link_registry` 抽象基类管理源块和目标块之间的链接。
+`network_link_registry` 抽象基类管理源块和目标块之间的链接。
 
 ## <a name="syntax"></a>语法
 

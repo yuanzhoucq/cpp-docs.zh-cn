@@ -9,15 +9,15 @@ helpviewer_keywords:
 - ActiveX control containers [MFC], inserting controls
 ms.assetid: 46f195b0-b8ca-4409-8cca-fbfaf2c9ab9f
 ms.openlocfilehash: 70a67a6952d5361177b89e3ba514d7036b5799b6
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57284237"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62394866"
 ---
 # <a name="activex-control-containers-using-controls-in-a-non-dialog-container"></a>ActiveX 控件容器：使用非对话框容器中的控件
 
-在某些应用程序（如 SDI 或 MDI 应用程序）中，您需要将在应用程序的窗口中嵌入一个控件。 **创建**包装器类，由 Visual c + +，插入成员函数可以动态地创建控件的实例，而无需对话框。
+在某些应用程序（如 SDI 或 MDI 应用程序）中，您需要将在应用程序的窗口中嵌入一个控件。 **创建**插入视觉对象的包装类的成员函数C++，可以无需对话框中动态创建控件的实例。
 
 **创建**成员函数具有以下参数：
 

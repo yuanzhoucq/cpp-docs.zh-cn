@@ -8,11 +8,11 @@ helpviewer_keywords:
 - CDaoFieldInfo structure [MFC]
 ms.assetid: 91b13e3f-bdb8-440c-86fc-ba4181ea0182
 ms.openlocfilehash: a5c4013a323c85ad19a3fade20f76852e053362a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57275137"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399819"
 ---
 # <a name="cdaofieldinfo-structure"></a>CDaoFieldInfo 结构
 
@@ -94,7 +94,7 @@ struct CDaoFieldInfo
 |`dbGUID`|16|是全局唯一标识符/通用唯一标识符与远程过程调用一起使用。|
 
 *m_lAttributes*<br/>
-指定包含 tabledef、 记录集、 querydef 或索引对象的字段对象的特征。 返回的值可以是两个常数，创建使用 c + + 按位 OR sum (**&#124;**) 运算符：
+指定包含 tabledef、 记录集、 querydef 或索引对象的字段对象的特征。 返回的值可以是创建使用这些常量的总和C++按位 OR (**&#124;**) 运算符：
 
 - `dbFixedField` 字段大小被固定的 （默认值为数值字段）。
 
@@ -106,7 +106,7 @@ struct CDaoFieldInfo
 
 - `dbDescending` 字段按降序 (Z-A 或 100-0) （仅适用于字段对象中的索引对象的字段集合; 在 MFC 中，对象本身包含在 tabledef 对象的索引） 的顺序。 如果省略此常量，该字段按升序 (A-Z 或 0-100) 顺序 （默认值）。
 
-在检查此属性的设置时，您可以使用 c + + 按位-和运算符 (**&**) 若要测试特定的属性。 当设置多个属性，可以将它们合并与按位 OR 组合的相应常量 (**&#124;**) 运算符。 有关详细信息，请参阅主题 DAO 帮助中的"特性属性"。
+在检查此属性的设置时，可以使用C++按位-和运算符 (**&**) 来测试特定的属性。 当设置多个属性，可以将它们合并与按位 OR 组合的相应常量 (**&#124;**) 运算符。 有关详细信息，请参阅主题 DAO 帮助中的"特性属性"。
 
 *m_nOrdinalPosition*<br/>
 一个值，指定要在其中 DAO 字段对象代表要显示相对于其他域的域的数字顺序。 可以设置此属性与[CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield)。 有关详细信息，请参阅主题 DAO 帮助中的"OrdinalPosition 属性"。

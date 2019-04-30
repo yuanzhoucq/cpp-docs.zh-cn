@@ -8,11 +8,11 @@ helpviewer_keywords:
 - parallel loops, converting from OpenMP to the Concurrency Runtime
 ms.assetid: d8a7b656-f86c-456e-9c5d-a7d52f94646e
 ms.openlocfilehash: bc408465f34f0558e9f426ae35b83d4610898414
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57296132"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62413887"
 ---
 # <a name="how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime"></a>如何：转换 OpenMP parallel for 循环以使用并发运行时
 
@@ -41,7 +41,7 @@ found 107254 prime numbers.
 
 ## <a name="example"></a>示例
 
-此示例修改上一个，以便做出[std:: array](../../standard-library/array-class-stl.md)对象而不是在本机数组。 因为对于仅在已签名整数索引类型允许使用 OpenMP 2.0 版和 2.5`parallel_for`构造，您不能使用迭代器访问并行中的 c + + 标准库容器的元素。 并行模式库 (PPL) 提供了[concurrency:: parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each)算法，将按并行，例如由 c + + 标准库提供对迭代容器执行任务。 它使用相同的分区逻辑的`parallel_for`算法使用。 `parallel_for_each`算法类似于 c + + 标准库[std:: for_each](../../standard-library/algorithm-functions.md#for_each)算法，不同之处在于`parallel_for_each`算法并发执行任务。
+此示例修改上一个，以便做出[std:: array](../../standard-library/array-class-stl.md)对象而不是在本机数组。 因为对于仅在已签名整数索引类型允许使用 OpenMP 2.0 版和 2.5`parallel_for`构造，您不能使用迭代器访问的元素的C++并行的标准库容器。 并行模式库 (PPL) 提供了[concurrency:: parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each)算法，例如由提供对迭代容器上并行执行任务，C++标准库。 它使用相同的分区逻辑的`parallel_for`算法使用。 `parallel_for_each`算法类似于C++标准库[std:: for_each](../../standard-library/algorithm-functions.md#for_each)算法，不同之处在于`parallel_for_each`算法并发执行任务。
 
 [!code-cpp[concrt-openmp#10](../../parallel/concrt/codesnippet/cpp/how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime_2.cpp)]
 

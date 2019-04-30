@@ -12,11 +12,11 @@ helpviewer_keywords:
 - operator overloading
 ms.assetid: 56ad4c4f-dd0c-45e0-adaa-08fe98cb1f8e
 ms.openlocfilehash: d6a294af3ea7ef6085eae0f7069ea2d1fdbb30e4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50621736"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62377356"
 ---
 # <a name="operator-overloading"></a>运算符重载
 
@@ -24,7 +24,7 @@ ms.locfileid: "50621736"
 
 ## <a name="syntax"></a>语法
 
-> *类型***运算符***运算符符号* **(** *参数列表* **)**
+> *type* **operator** *operator-symbol* **(** *parameter-list* **)**
 
 ## <a name="remarks"></a>备注
 
@@ -49,7 +49,7 @@ ms.locfileid: "50621736"
 |**( )**|强制转换运算符|一元|
 |**&#42;**|乘法|二进制|
 |**&#42;**|指针取消引用|一元|
-|**&#42;=**|乘法赋值|二进制|
+|&#42;=|乘法赋值|二进制|
 |**+**|添加|二进制|
 |**+**|一元加|一元|
 |**++**|增量<sup>1</sup>|一元|
@@ -60,7 +60,7 @@ ms.locfileid: "50621736"
 |**-=**|减法赋值|二进制|
 |**->**|成员选择|二进制|
 |**->&#42;**|指向成员的指针选定内容|二进制|
-|**/**|除法|二进制|
+|**/**|除号|二进制|
 |**/=**|除法赋值|二进制|
 |**\<**|小于|二进制|
 |**<<**|左移|二进制|
@@ -76,7 +76,7 @@ ms.locfileid: "50621736"
 |**^**|异或|二进制|
 |**^=**|异或赋值|二进制|
 |**&#124;**|按位“与或”|二进制|
-|**&#124;=**|按位“与或”赋值|二进制|
+|&#124;=|按位“与或”赋值|二进制|
 |**&#124;&#124;**|逻辑“或”|二进制|
 |**~**|二进制反码|一元|
 |**delete**|删除|—|
@@ -107,7 +107,7 @@ ms.locfileid: "50621736"
 
 ### <a name="nonredefinable-operators"></a>不可重定义的运算符
 
-|运算符|name|
+|运算符|名称|
 |-|-|
 |**.**|成员选择|
 |**.&#42;**|指向成员的指针选定内容|

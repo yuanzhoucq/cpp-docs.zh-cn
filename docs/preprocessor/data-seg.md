@@ -9,11 +9,11 @@ helpviewer_keywords:
 - pragmas, data_seg
 ms.assetid: 65c66466-4c98-494f-93af-106beb4caf78
 ms.openlocfilehash: 414fc542aa3f84f985e326960d8cf73b67fd1580
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456376"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62389302"
 ---
 # <a name="dataseg"></a>data_seg
 
@@ -38,11 +38,11 @@ ms.locfileid: "50456376"
 
 *标识符*使多个记录只用一个**pop**命令。
 
-*"段名称"*<br/>
+*"segment-name"*<br/>
 （可选）段的名称。 与一起使用时**pop**，在堆栈中弹出和*段名称*将成为活动段名称。
 
-*"段类"*<br/>
-（可选）包含有关使用 c + + 2.0 版之前的兼容性。 它将被忽略。
+*"segment-class"*<br/>
+（可选）包含与的兼容性C++之前的版本 2.0。 它将被忽略。
 
 ## <a name="remarks"></a>备注
 

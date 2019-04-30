@@ -3,11 +3,11 @@ title: 解决不明确声明 （C++）
 ms.date: 11/04/2016
 ms.assetid: 3d773ee7-bbea-47de-80c2-cb0a9d4ec0b9
 ms.openlocfilehash: 52e94f474d59505298cb4f78a477cedd21b90aad
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507362"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62403394"
 ---
 # <a name="resolving-ambiguous-declarations-c"></a>解决不明确声明 （C++）
 
@@ -17,7 +17,7 @@ ms.locfileid: "50507362"
 char *aName( String( s ) );
 ```
 
-不清楚是否函数声明或使用函数样式转换作为初始值设定项的对象声明： 它可以声明返回类型的函数`char *`采用一个自变量类型的`String`，也可以声明的对象`aName`并将其初始化的值与`s`强制转换为类型`String`。
+不清楚是否函数声明或使用函数样式转换作为初始值设定项的对象声明：它可以声明返回类型的函数`char *`采用一个参数的类型`String`，也可以声明对象`aName`并将其初始化值为`s`强制转换为类型`String`。
 
 如果声明可被视为有效的函数声明，则会以相同的方式处理。 只有当它不能是函数声明时（即句法不正确时），才会查看语句是否为函数样式类型转换。 因此，编译器将语句视为函数的声明并忽略标识符 `s` 周围的括号。 另一方面，语句：
 
