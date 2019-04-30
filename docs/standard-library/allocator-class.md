@@ -35,15 +35,15 @@ helpviewer_keywords:
 - std::allocator [C++], rebind
 ms.assetid: 3fd58076-56cc-43bb-ad58-b4b7c9c6b410
 ms.openlocfilehash: 40e99901d4d4105902010a9e5b71ed3edf7d00db
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518861"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62411040"
 ---
 # <a name="allocator-class"></a>allocator 类
 
-此模板类描述一个对象，用于管理存储分配和释放对象的类型数组的`Type`。 类的对象`allocator`是 c + + 标准库中的多个容器模板类的构造函数中指定的默认分配器对象。
+此模板类描述一个对象，用于管理存储分配和释放对象的类型数组的`Type`。 类的对象`allocator`是中的多个容器模板类的构造函数中指定的默认分配器对象C++标准库。
 
 ## <a name="syntax"></a>语法
 
@@ -59,7 +59,7 @@ class allocator
 
 ## <a name="remarks"></a>备注
 
-所有 c + + 标准库容器都具有一个模板参数，默认为`allocator`。 通过使用自定义分配器构造容器可控制该容器的元素的分配和释放。
+所有C++标准库容器都具有一个模板参数，默认情况下`allocator`。 通过使用自定义分配器构造容器可控制该容器的元素的分配和释放。
 
 例如，分配器对象可能会在私有堆上或共享内存中分配存储，或者可能针对小型或大型对象大小进行优化。 它可能还会通过它提供的类型定义靠指定通过管理共享内存或执行自动垃圾回收的特殊访问器对象访问元素。 因此，使用分配器对象分配存储的类应使用这些类型来声明指针和引用对象，这与 C++ 标准库中的容器所执行的操作一样。
 
@@ -77,7 +77,7 @@ class allocator
 
 这些`Type`s 指定的窗体的指针和引用必须采取的分配的元素。 ( [allocator:: pointer](#pointer)不一定是相同`Type*`的所有分配器对象，即使它具有此明显定义为类`allocator`。)
 
-**C++11 和更高版本：** 若要在你的分配器中启动移动操作，请使用最小的分配器界面并执行复制构造函数、 == and != operators、分配和释放。 有关详细信息和示例，请参阅 [Allocators](../standard-library/allocators.md)
+**C + + 11 和更高版本：** 若要启用你的分配器中的移动操作，使用最小分配器接口和实现复制构造函数、 = = 和 ！ = operators、 分配和释放。 有关详细信息和示例，请参阅 [Allocators](../standard-library/allocators.md)
 
 ## <a name="members"></a>成员
 
