@@ -5,11 +5,11 @@ helpviewer_keywords:
 - container classes [C++]
 ms.assetid: 5b1451f2-c708-45da-bbf0-9e42fd687a1a
 ms.openlocfilehash: dbfa076756b9e4829898d38e0277ad90106ba579
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536222"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62410988"
 ---
 # <a name="sample-container-class"></a>Sample Container 类
 
@@ -32,9 +32,9 @@ ms.locfileid: "50536222"
 
 即使出现上面所述的异常行为，容器模板类 [list](../standard-library/list-class.md) 也会提供明确的有用行为。 例如，如果在单个或多个元素插入过程中引发异常，容器将保持不变并重新引发异常。
 
-有关*所有*如果在对以下成员函数调用期间引发异常的 c + + 标准库定义的容器类`insert`， `push_back`，或`push_front`，该容器将保持不变，引发异常。
+有关*所有*容器类定义的C++标准库，如果在对以下成员函数调用期间引发异常`insert`， `push_back`，或`push_front`，该容器将保持不变和引发异常。
 
-有关*所有*由 c + + 标准库定义的容器类，在对以下成员函数调用期间引发任何异常： `pop_back`， `pop_front`。
+有关*所有*容器类定义的C++标准库，在对以下成员函数调用期间引发任何异常： `pop_back`， `pop_front`。
 
 仅当复制操作（分配或复制构造）引发异常时，成员函数 [erase](../standard-library/container-class-erase.md) 才会引发异常。
 
@@ -48,7 +48,7 @@ ms.locfileid: "50536222"
 
 由 C++标准库容器定义的容器类对象可为其通过类型为 `Alloc`（通常是一个模板参数）的存储对象控制的序列，分配和释放存储空间。 此类分配器对象必须具有相同的外部接口的类对象`allocator<Ty>`。 具体而言，`Alloc`必须是相同的类型 `Alloc::rebind<value_type>::other`
 
-有关*所有*由 c + + 标准库，成员函数定义的容器类`Alloc get_allocator const;`返回存储的分配器对象的副本。 请注意，分配容器对象时*不*会复制存储的分配器对象。 所有构造函数初始化中存储的值`allocator`到`Alloc`如果构造函数不包含任何分配器参数。
+有关*所有*容器类定义的C++标准库中，成员函数`Alloc get_allocator const;`返回存储的分配器对象的副本。 请注意，分配容器对象时*不*会复制存储的分配器对象。 所有构造函数初始化中存储的值`allocator`到`Alloc`如果构造函数不包含任何分配器参数。
 
 根据 C++ 标准，由 C++ 标准库定义的容器类可假设：
 
