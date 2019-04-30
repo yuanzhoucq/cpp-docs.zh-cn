@@ -21,11 +21,11 @@ helpviewer_keywords:
 - std::stack [C++], top
 ms.assetid: 02151c1e-eab0-41b8-be94-a839ead78ecf
 ms.openlocfilehash: cc18a62db3f39bc85c0a3bb7e84e6a27011c2b5a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437383"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412431"
 ---
 # <a name="stack-class"></a>stack 类
 
@@ -43,7 +43,7 @@ class stack
 *Type*<br/>
 要存储在堆栈中的元素数据类型。
 
-*容器*<br/>
+*Container*<br/>
 用来实现堆栈的基础容器的类型。 默认值为 `deque`*\<Type>* 类。
 
 ## <a name="remarks"></a>备注
