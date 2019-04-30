@@ -23,11 +23,11 @@ helpviewer_keywords:
 - _CrtSetReportFile function
 ms.assetid: 3126537e-511b-44af-9c1c-0605265eabc4
 ms.openlocfilehash: 32a560e09c47468daf48c185e23d6e289c6d1d9b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50464241"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64343023"
 ---
 # <a name="crtsetreportfile"></a>_CrtSetReportFile
 
@@ -106,7 +106,7 @@ _HFILE _CrtSetReportFile(
 
 通用 Windows 平台 (UWP) 应用中不支持控制台。 控制台中，与关联的标准流句柄**stdin**， **stdout**，并**stderr**，C 运行时函数可以在 UWP 应用中使用它们之前，必须重定向. 有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 
-**库：** 仅限 [CRT 库功能](../../c-runtime-library/crt-library-features.md)的调试版本。
+**库：** 调试版本[CRT 库功能](../../c-runtime-library/crt-library-features.md)仅。
 
 ## <a name="see-also"></a>请参阅
 

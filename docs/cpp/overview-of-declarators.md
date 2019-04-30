@@ -5,11 +5,11 @@ helpviewer_keywords:
 - declarators, about declarators
 ms.assetid: 0f2e2312-80bd-4154-8345-718bd9ed2173
 ms.openlocfilehash: e651b4422a159bf947e364c82cc4aac1b888d30d
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52177077"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64345841"
 ---
 # <a name="overview-of-declarators"></a>声明符概述
 
@@ -157,16 +157,16 @@ int a, *b, c[5], **d, &e=a;
 - `declarator` 被定义为以下项之一：
 
   - identifier
-  - 限定名称
-  - 声明符 （参数列表） [cv-qualfiers] [异常 spec]
-  - 声明符 [[常数表达式]]
-  - 指针运算符声明符
+  - qualified-name
+  - declarator ( argument-list ) [cv-qualfiers] [exception-spec]
+  - declarator [ [ constant-expression ] ]
+  - pointer-operator declarator
   - （声明符）
 
 - 并*指针运算符*是之一：
 
-  - \* [cv 限定符]
-  - & [cv 限定符]:: 嵌套名称说明符\*[cv 限定符]
+  - \* [cv-qualifiers]
+  - & [cv-qualifiers] ::nested-name-specifier \* [cv-qualifiers]
 
 由于一个声明符可能包含多个声明符，因此可以使用上述规则来构造更复杂的派生类型，如指针数组和返回函数指针数组的函数。  若要制定构造的所有步骤，请以呈现基数据类型的标识符开头，并应用上面的语法规则（将上一个表达式作为 `declarator`）。  应用语法规则的顺序应该与用英语表示表达式的方法相反。  如果将应用*指针运算符*语法规则应用于数组或函数表达式，如果你想指向数组或函数，如下面的表中的最后一行中所示使用括号。
 
@@ -179,4 +179,4 @@ int a, *b, c[5], **d, &e=a;
 |10 的数组|`(*i)[10]`|4|
 |指针|`*((*i)[10])`|6，然后 5|
 
-当使用多个指针、引用、数组或函数修饰符时，声明符可能变得十分复杂。  本主题[解释更复杂声明符](../c-language/interpreting-more-complex-declarators.md)介绍了如何读取更复杂的声明符语法。  主题是适用于 C 和 c + +，虽然在 c + +，任何地方\*用来指示指针，如 MyClass 的限定名称::\*可用于指定一个指向类的成员。
+当使用多个指针、引用、数组或函数修饰符时，声明符可能变得十分复杂。  本主题[解释更复杂声明符](../c-language/interpreting-more-complex-declarators.md)介绍了如何读取更复杂的声明符语法。  主题是适用于这两个 C 和C++，但在C++、 任何位置\*用来指示指针，如 MyClass 的限定名称::\*可用于指定一个指向类的成员。

@@ -7,17 +7,17 @@ helpviewer_keywords:
 - concurrent containers
 ms.assetid: 90ab715c-29cd-48eb-8e76-528619aab466
 ms.openlocfilehash: bcf3ead9fe945ecb2246fdb28b7f67cd51b1238b
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58565943"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64346320"
 ---
 # <a name="parallel-containers-and-objects"></a>并行容器和对象
 
 并行模式库 (PPL) 包括多个容器和对象，它提供对其元素线程安全的访问。
 
-一个*并发容器*提供对最重要的操作的并发安全访问。 这些容器的功能类似于 c + + 标准库提供。 例如， [concurrency:: concurrent_vector](../../parallel/concrt/reference/concurrent-vector-class.md)类相似[std:: vector](../../standard-library/vector-class.md)类，不同之处在于`concurrent_vector`类允许您将追加并行中的元素。 在您将需要读取和写入访问权限的相同容器的并行代码，请使用并发容器。
+一个*并发容器*提供对最重要的操作的并发安全访问。 这些容器的功能类似于那些提供的C++标准库。 例如， [concurrency:: concurrent_vector](../../parallel/concrt/reference/concurrent-vector-class.md)类相似[std:: vector](../../standard-library/vector-class.md)类，不同之处在于`concurrent_vector`类允许您将追加并行中的元素。 在您将需要读取和写入访问权限的相同容器的并行代码，请使用并发容器。
 
 一个*并发对象*同时由组件共享。 计算并行并发对象的状态的过程将生成相同的结果按顺序计算相同的状态的另一个进程。 [Concurrency:: combinable](../../parallel/concrt/reference/combinable-class.md)类是并发对象类型的一个示例。 `combinable`类，可以并行执行计算，然后将组合成最终结果这些计算。 否则将使用同步机制，例如，一个互斥体，以同步对共享的变量或资源的访问时，请使用并发对象。
 
@@ -101,7 +101,7 @@ ms.locfileid: "58565943"
 |[capacity](reference/concurrent-vector-class.md#capacity)|[grow_to_at_least](reference/concurrent-vector-class.md#grow_to_at_least)|[rend](reference/concurrent-vector-class.md#rend)|
 |[empty](reference/concurrent-vector-class.md#empty)|[max_size](reference/concurrent-vector-class.md#max_size)|[size](reference/concurrent-vector-class.md#size)|
 
-例如，与 c + + 标准库的兼容性提供运行时的操作`reserve`，不是并发安全。 下表显示了常用的方法和不是并发安全的运算符。
+在运行时提供与的兼容性的操作C++标准库，例如， `reserve`，不是并发安全。 下表显示了常用的方法和不是并发安全的运算符。
 
 |||
 |-|-|
