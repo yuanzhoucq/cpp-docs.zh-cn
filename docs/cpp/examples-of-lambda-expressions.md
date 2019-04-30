@@ -5,11 +5,11 @@ helpviewer_keywords:
 - lambda expressions [C++], examples
 ms.assetid: 52506b15-0771-4190-a966-2f302049ca86
 ms.openlocfilehash: 6854c5710d8a27093078c0f2013d691ac22c5870
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50663942"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392188"
 ---
 # <a name="examples-of-lambda-expressions"></a>Lambda 表达式的示例
 
@@ -46,7 +46,7 @@ int main()
 }
 ```
 
-### <a name="output"></a>输出
+### <a name="output"></a>Output
 
 ```Output
 5
@@ -91,7 +91,7 @@ int main()
 }
 ```
 
-### <a name="output"></a>输出
+### <a name="output"></a>Output
 
 ```Output
 47
@@ -105,7 +105,7 @@ int main()
 
 ### <a name="example-1"></a>示例 1
 
-以下示例声明的 lambda 表达式将返回两个整数的总和并使用参数 `5` 和 `4` 立即调用该表达式：
+以下示例声明的 lambda 表达式将返回两个整数的总和并使用自变量 `5` 和 `4` 立即调用该表达式：
 
 ### <a name="code"></a>代码
 
@@ -122,7 +122,7 @@ int main()
 }
 ```
 
-### <a name="output"></a>输出
+### <a name="output"></a>Output
 
 ```Output
 9
@@ -130,7 +130,7 @@ int main()
 
 ### <a name="example-2"></a>示例 2
 
-以下示例将 lambda 表达式作为自变量传递给 `find_if` 函数。 Lambda 表达式将返回 **，则返回 true**在其参数为偶数。
+以下示例将 Lambda 表达式作为自变量传递给 `find_if` 函数。 Lambda 表达式将返回 **，则返回 true**在其参数为偶数。
 
 ### <a name="code"></a>代码
 
@@ -167,7 +167,7 @@ int main()
 }
 ```
 
-### <a name="output"></a>输出
+### <a name="output"></a>Output
 
 ```Output
 The first even number in the list is 42.
@@ -183,7 +183,7 @@ The first even number in the list is 42.
 
 ### <a name="example"></a>示例
 
-你可以将 lambda 表达式嵌套在另一个中，如下例所示。 内部 lambda 表达式将其参数与 2 相乘并返回结果。 外部 lambda 表达式通过其参数调用内部 lambda 表达式并在结果上加 3。
+你可以将 lambda 表达式嵌套在另一个中，如下例所示。 内部 lambda 表达式将其自变量与 2 相乘并返回结果。 外部 lambda 表达式通过其自变量调用内部 lambda 表达式并在结果上加 3。
 
 ### <a name="code"></a>代码
 
@@ -205,7 +205,7 @@ int main()
 }
 ```
 
-### <a name="output"></a>输出
+### <a name="output"></a>Output
 
 ```Output
 13
@@ -221,7 +221,7 @@ int main()
 
 ### <a name="example"></a>示例
 
-许多编程语言都支持这一概念*高阶函数。* 高阶函数是采用另一个 lambda 表达式作为其自变量或返回 lambda 表达式的 lambda 表达式。 你可以使用[函数](../standard-library/function-class.md)类，使得 C++ lambda 表达式的行为类似高阶函数。 以下示例显示返回 `function` 对象的 lambda 表达式和采用 `function` 对象作为其参数的 lambda 表达式。
+许多编程语言都支持这一概念*高阶函数。* 高阶函数是采用另一个 lambda 表达式作为其参数或返回 lambda 表达式的 lambda 表达式。 你可以使用[函数](../standard-library/function-class.md)类，使得 C++ lambda 表达式的行为类似高阶函数。 以下示例显示返回 `function` 对象的 lambda 表达式和采用 `function` 对象作为其参数的 lambda 表达式。
 
 ### <a name="code"></a>代码
 
@@ -258,7 +258,7 @@ int main()
 }
 ```
 
-### <a name="output"></a>输出
+### <a name="output"></a>Output
 
 ```Output
 30
@@ -271,7 +271,7 @@ int main()
 ### <a name="example"></a>示例
 
 你可以在函数的主体中使用 lambda 表达式。 lambda 表达式可以访问该封闭函数可访问的任何函数或数据成员。 你可以显式或隐式捕获**这**指针，以提供对封闭类的函数和数据成员的访问权限。
-**Visual Studio 2017 版本 15.3 及更高版本**(适用于[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): 捕获**这**按值 (`[*this]`) 时将异步或并行操作中使用 lambda之后执行的代码可能会在原始对象超出范围。
+**Visual Studio 2017 版本 15.3 及更高版本**(适用于[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)):捕获**这**按值 (`[*this]`) 当 lambda，将使用异步或并行操作中的原始对象超出范围后可能执行的代码。
 
 可以使用**这**指针显式在函数中，如下所示：
 
@@ -344,7 +344,7 @@ int main()
 }
 ```
 
-### <a name="output"></a>输出
+### <a name="output"></a>Output
 
 ```Output
 3
@@ -405,7 +405,7 @@ int main()
 }
 ```
 
-### <a name="output"></a>输出
+### <a name="output"></a>Output
 
 ```Output
 34
@@ -467,7 +467,7 @@ int main()
 }
 ```
 
-### <a name="output"></a>输出
+### <a name="output"></a>Output
 
 ```Output
 Caught 'invalid vector<T> subscript'.
@@ -504,7 +504,7 @@ int main()
 }
 ```
 
-### <a name="output"></a>输出
+### <a name="output"></a>Output
 
 ```Output
 Hello!
