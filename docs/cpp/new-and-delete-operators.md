@@ -10,17 +10,17 @@ helpviewer_keywords:
 - delete keyword [C++], syntax
 ms.assetid: fa721b9e-0374-4f04-bb87-032ea775bcc8
 ms.openlocfilehash: 1ac6282ecbf45f22e7dd66b94f8bccdbc4e505ce
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441296"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64345893"
 ---
 # <a name="new-and-delete-operators"></a>new 和 delete 运算符
 
 C++ C++ 支持动态分配和释放对象使用[新](../cpp/new-operator-cpp.md)和[删除](../cpp/delete-operator-cpp.md)运算符。 这些运算符为来自称为“自由存储”的池中的对象分配内存。 **新**运算符调用特殊函数[运算符 new](../cpp/new-operator-cpp.md)，并**删除**运算符调用特殊函数[运算符 delete](../cpp/delete-operator-cpp.md).
 
-**新**c + + 标准库中的函数支持指定在 c + + 标准中，则会引发 std:: bad_alloc 异常，如果内存分配失败的行为。 如果您仍需要的非引发版本**新**，程序显式链接到 nothrownew.obj。但是，当您链接到 nothrownew.obj，默认值**运算符 new** c + + 标准库不再正常工作。
+**新**函数，在C++标准库支持中指定的行为C++标准，则会引发 std:: bad_alloc 异常，如果内存分配失败。 如果您仍需要的非引发版本**新**，程序显式链接到 nothrownew.obj。但是，当您链接到 nothrownew.obj，默认值**运算符 new**中C++标准库不再正常工作。
 
 有关包含 C 运行库和 C++ 标准库的库文件的列表，请参阅[CRT 库功能](../c-runtime-library/crt-library-features.md)。
 
@@ -87,7 +87,7 @@ Blanks *SomeBlanks = new Blanks;
 
 在 Visual C++ 5.0 和更早版本，非类类型和所有数组 (无论是否的**类**类型) 使用分配**新**运算符始终使用全局**运算符 new**函数。 
 
-从 Visual C++ 5.0 开始，编译器支持成员数组**新**和**删除**类声明中的运算符。 例如: 
+ 从 Visual C++ 5.0 开始，编译器支持成员数组**新**和**删除**类声明中的运算符。 例如: 
 
 ```cpp
 // spec1_the_operator_new_function2.cpp
@@ -203,7 +203,7 @@ int main( int argc, char *argv[] ) {
 
 前面的代码可用于检测“内存溢出”，即在自由储存中分配但从未释放过的内存。 若要执行此检测中，全局**新**并**删除**运算符会重新定义为计数分配和解除分配的内存。
 
-从 Visual C++ 5.0 开始，编译器支持成员数组**新**和**删除**类声明中的运算符。 例如：
+ 从 Visual C++ 5.0 开始，编译器支持成员数组**新**和**删除**类声明中的运算符。 例如：
 
 ```cpp
 // spec1_the_operator_delete_function2.cpp
