@@ -134,7 +134,7 @@ ms.locfileid: "62252558"
 
 1. 在中**属性**窗口中，单击**消息**图标，然后单击`WM_LBUTTONDOWN`从左侧列表。
 
-1. 从下拉列表中显示，单击**\<添加 > OnLButtonDown**。 `OnLButtonDown`处理程序声明将添加到 PolyCtl.h，和的处理程序实现将添加到 PolyCtl.cpp。
+1. 从下拉列表中显示，单击 **\<添加 > OnLButtonDown**。 `OnLButtonDown`处理程序声明将添加到 PolyCtl.h，和的处理程序实现将添加到 PolyCtl.cpp。
 
 接下来，修改该处理程序。
 

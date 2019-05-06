@@ -359,8 +359,8 @@ const CObject*& GetAt(POSITION position) const;
 
 |类|成员函数|
 |-----------|---------------------|
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**const void\*& GetAt (位置***位置* **) const;**<br /><br /> **void\*& GetAt( POSITION** *position* **);**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**const CString & GetAt (位置***位置* **) const;**<br /><br /> **CString& GetAt( POSITION** *position* **);**|
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**const void\*& GetAt (位置** *位置* **) const;**<br /><br /> **void\*& GetAt( POSITION** *position* **);**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**const CString & GetAt (位置** *位置* **) const;**<br /><br /> **CString& GetAt( POSITION** *position* **);**|
 
 ### <a name="example"></a>示例
 
