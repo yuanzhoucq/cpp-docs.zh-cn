@@ -106,7 +106,7 @@ ms.locfileid: "62198498"
 
 1. 展开`IDC_SIDES`节点在事件列表中。
 
-1. 选择`EN_CHANGE`，然后从右侧的下拉列表菜单，单击**\<添加 > OnEnChangeSides**。 `OnEnChangeSides`处理程序声明将添加到 Polyprop.h 和到 Polyprop.cpp 的处理程序实现。
+1. 选择`EN_CHANGE`，然后从右侧的下拉列表菜单，单击 **\<添加 > OnEnChangeSides** 。 `OnEnChangeSides`处理程序声明将添加到 Polyprop.h 和到 Polyprop.cpp 的处理程序实现。
 
 接下来，您将修改该处理程序。
 
