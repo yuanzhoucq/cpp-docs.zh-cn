@@ -95,7 +95,7 @@ unsigned long _wcstoul_l(
 
 ## <a name="remarks"></a>备注
 
-每个函数将输入的字符串转换*strSource*到**无符号****长**。
+每个函数将输入的字符串转换 *strSource* 到 **无符号** **长**。
 
 **strtoul**停止读取字符串*strSource*在它无法识别为数字一部分的第一个字符。 这可能是终止 null 字符，也可能会大于或等于第一个数字字符*基*。 **LC_NUMERIC**的区域设置的类别设置确定中基数字符的识别*strSource*; 有关详细信息，请参阅[setlocale](setlocale-wsetlocale.md)。 **strtoul**并**wcstoul**使用当前区域设置;**_strtoul_l**并 **_wcstoul_l**是完全相同，只不过它们改用传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
