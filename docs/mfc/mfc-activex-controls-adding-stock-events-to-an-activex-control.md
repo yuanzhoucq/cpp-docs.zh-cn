@@ -67,9 +67,9 @@ ms.locfileid: "62392721"
 |KeyDown|**void FireKeyDown( short**  `nChar` **, short**  `nShiftState`  **)**|时引发的`WM_SYSKEYDOWN`或`WM_KEYDOWN`接收消息。<br /><br /> 事件映射条目：**EVENT_STOCK_KEYDOWN( )**|
 |KeyPress|**void FireKeyPress( short** <strong>\*</strong>  `pnChar`  **)**|时引发的`WM_CHAR`接收消息。<br /><br /> 事件映射条目：**EVENT_STOCK_KEYPRESS( )**|
 |KeyUp|**void FireKeyUp (短**`nChar` **，short**`nShiftState`**)**|时引发的`WM_SYSKEYUP`或`WM_KEYUP`接收消息。<br /><br /> 事件映射条目：**EVENT_STOCK_KEYUP( )**|
-|MouseDown|**void FireMouseDown (短**`nButton` **，short** `nShiftState` **，float***x* **，float** *y***)**|如果任何激发**BUTTONDOWN**收到 （左侧、 中间或右侧）。 将鼠标捕获前激发此事件。<br /><br /> 事件映射条目：**EVENT_STOCK_MOUSEDOWN( )**|
-|MouseMove|**void FireMouseMove (短**`nButton` **，short** `nShiftState` **，float***x* **，float** *y***)**|当收到 WM_MOUSEMOVE 消息时触发。<br /><br /> 事件映射条目：**EVENT_STOCK_MOUSEMOVE( )**|
-|MouseUp|**void FireMouseUp (短**`nButton` **，short** `nShiftState` **，float***x* **，float** *y***)**|如果任何激发**BUTTONUP**收到 （左侧、 中间或右侧）。 激发此事件之前释放鼠标捕获。<br /><br /> 事件映射条目：**EVENT_STOCK_MOUSEUP( )**|
+|MouseDown|**void FireMouseDown (短**`nButton` **，short** `nShiftState` **，float** *x* **，float** *y*  **)**|如果任何激发**BUTTONDOWN**收到 （左侧、 中间或右侧）。 将鼠标捕获前激发此事件。<br /><br /> 事件映射条目：**EVENT_STOCK_MOUSEDOWN( )**|
+|MouseMove|**void FireMouseMove (短**`nButton` **，short** `nShiftState` **，float**  *x* **，float** *y*  **)**|当收到 WM_MOUSEMOVE 消息时触发。<br /><br /> 事件映射条目：**EVENT_STOCK_MOUSEMOVE( )**|
+|MouseUp|**void FireMouseUp (短**`nButton` **，short** `nShiftState` **，float**  *x*   **，float** *y*  **)**|如果任何激发**BUTTONUP**收到 （左侧、 中间或右侧）。 激发此事件之前释放鼠标捕获。<br /><br /> 事件映射条目：**EVENT_STOCK_MOUSEUP( )**|
 |ReadyStateChange|**void FireReadyStateChange( )**|当控件转换为收到的数据量由于下一步的就绪状态时引发。<br /><br /> 事件映射条目：**EVENT_STOCK_READYSTATECHANGE( )**|
 
 ##  <a name="_core_adding_a_stock_event_using_classwizard"></a> 添加常用事件使用添加事件向导

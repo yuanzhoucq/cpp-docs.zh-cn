@@ -62,7 +62,7 @@ extern "C" __declspec(dllexport) MyExportedFunction( );
 
 静态链接到 MFC 的 DLL 还可以动态不能链接到共享 MFC Dll。 静态链接到 MFC 的 DLL 是动态绑定到应用程序就像任何其他 DLL;应用程序链接到它就像任何其他 DLL。
 
-根据所述的约定命名标准 MFC 静态链接库[MFC dll 命名约定](../mfc/mfc-library-versions.md#mfc-static-library-naming-conventions)。 但是，使用 MFC 3.0 版及更高版本，就不再需要手动指定链接器所需中链接的 MFC 库版本。 MFC 标头文件相反，自动确定要根据预处理器中链接的 MFC 库的正确版本定义，如**\_调试**或 **_UNICODE**。 MFC 标头文件添加 /DEFAULTLIB 指令指示链接器以特定版本的 MFC 库中的链接。
+根据所述的约定命名标准 MFC 静态链接库[MFC dll 命名约定](../mfc/mfc-library-versions.md#mfc-static-library-naming-conventions)。 但是，使用 MFC 3.0 版及更高版本，就不再需要手动指定链接器所需中链接的 MFC 库版本。 MFC 标头文件相反，自动确定要根据预处理器中链接的 MFC 库的正确版本定义，如 **\_调试** 或 **_UNICODE**。 MFC 标头文件添加 /DEFAULTLIB 指令指示链接器以特定版本的 MFC 库中的链接。
 
 ## <a name="what-do-you-want-to-do"></a>你希望做什么？
 
