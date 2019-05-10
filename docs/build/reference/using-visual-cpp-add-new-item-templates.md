@@ -1,24 +1,24 @@
 ---
 title: 使用 Visual C++ 的“添加新项”模板
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
 - Add New Item
 - Add New Item templates
 - Add New Item command
 - templates, Add New Item
 ms.assetid: 286d1be6-0473-407f-9a51-437dff1bfab7
-ms.openlocfilehash: afa6f7e3a1e3a6ac293a23fc18ecd0834d70555f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: e6ef78d1a43bc649a31b715afd4ce1d44f25a8c6
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62317141"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65217758"
 ---
 # <a name="using-visual-c-add-new-item-templates"></a>使用 Visual C++ 的“添加新项”模板
 
-可使用“添加新项”命令轻松添加 Visual C++ 项目中常见的项。 使用“添加新项”命令时，将显示带有项模板列表的 `Add New Item` 对话框，这些模板将向项目添加相应的文件。
+您可以方便地添加通过使用 Visual Studio 项目通用的项**添加新项**命令。 使用“添加新项”命令时，将显示带有项模板列表的 `Add New Item` 对话框，这些模板将向项目添加相应的文件。
 
-下表是按字母顺序排列的 Visual C++ 的“添加新项”模板列表。
+下表是 Visual Studio 将添加新项模板的字母顺序列表。
 
 |模板|描述|
 |--------------|-----------------|
@@ -38,7 +38,7 @@ ms.locfileid: "62317141"
 |安装程序类|使用 CLR 功能添加从 <xref:System.Configuration.Install.Installer> 继承的类。|
 |MIDL 文件 (.idl)|创建接口定义语言文件。|
 |模块定义文件 (.def)|创建 DLL 导出定义文件。|
-|属性表 (.props)|创建 Visual C++ 属性表文件。|
+|属性表 (.props)|创建属性表文件。|
 |注册脚本 (.rgs)|创建 ATL 注册脚本文件。|
 |报表 (.rdlc)|创建报表文件。|
 |资源文件 (.rc)|创建 Win32 资源文件。|

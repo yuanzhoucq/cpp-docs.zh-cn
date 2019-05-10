@@ -1,12 +1,12 @@
 ---
 title: ARM64 ABI 约定概述
 ms.date: 03/27/2019
-ms.openlocfilehash: 4c0f89f97529d4cd70e1449c90b131d25d30f9ee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: bfb1b5b6be6a7a368c2ed7cab255da90ae7a22df
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62195497"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220987"
 ---
 # <a name="overview-of-arm64-abi-conventions"></a>ARM64 ABI 约定概述
 
@@ -50,6 +50,24 @@ ARMv8 规范 AArch32 和 AArch64 介绍新的可选加密和 CRC 帮助程序操
 在 ARM64 上运行的 Windows 使 CPU 硬件来以透明方式处理未对齐的访问。 从 AArch32 提高了，这种支持现在还适用于所有整数访问 （包括多个单词访问） 以及浮点访问。
 
 但是，对未缓存 （设备） 内存访问仍必须始终对齐。 如果代码可能无法读取或写入未对齐的数据从非缓存的内存，则必须确保以一致的所有访问。
+
+局部变量的默认布局对齐：
+
+| 大小 （字节） | 以字节为单位的对齐方式 |
+| - | - |
+| 1 | 1 |
+| 2 | 2 |
+| 3, 4 | 4 |
+| > 4 | 8 |
+
+对于全局和静态变量的默认布局对齐方式：
+
+| 大小 （字节） | 以字节为单位的对齐方式 |
+| - | - |
+| 1 | 1 |
+| 2 - 7 | 4 |
+| 8 - 63 | 8 |
+| >= 64 | 16 |
 
 ## <a name="integer-registers"></a>整数寄存器
 
@@ -185,7 +203,9 @@ AArch64 体系结构还支持 32 point 浮点/SIMD 寄存器，总结如下：
 
 X0 中返回整数值。
 
-浮点值 s0/d0/v0 根据形式返回。
+S0、 d0，或 v0，相应地返回浮点值。
+
+S0 s3、 d0 d3 或 v0 v3，相应地返回 HFA 和 HVA 值。
 
 返回值类型的处理方式不同，具体取决于是否具有特定属性。 具有所有这些属性的类型
 

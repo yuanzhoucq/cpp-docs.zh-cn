@@ -1,6 +1,6 @@
 ---
 title: BSCMAKE 参考
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
 - BSCMAKE, reference
 - Microsoft Browse Information Maintenance Utility
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - bsc files, building
 - BSCMAKE
 ms.assetid: b97ad994-1355-4809-98db-6abc12c6fb13
-ms.openlocfilehash: 4303e48e3d02f0f69b177e8a888157a6f90aaa89
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 72ad297ee5a24bc0c7ffd3ed25959031d0b8a309
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62294884"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220555"
 ---
 # <a name="bscmake-reference"></a>BSCMAKE 参考
 
@@ -24,7 +24,7 @@ ms.locfileid: "62294884"
 
 Microsoft 浏览信息维护实用工具 (BSCMAKE.EXE) 从编译期间创建的 .sbr 文件生成浏览信息文件 (.bsc)。 某些第三方工具进行代码分析使用.bsc 文件。
 
-生成程序时，可以使用 BSCMAKE 生成浏览信息文件，以自动为你的程序创建浏览信息文件。 如果在 Visual C++ 开发环境中创建浏览信息文件，则不需要知道如何运行 BSCMAKE。 但是，你可能需要阅读本主题以了解可用的选项。
+生成程序时，可以使用 BSCMAKE 生成浏览信息文件，以自动为你的程序创建浏览信息文件。 不需要知道如何运行 BSCMAKE，如果在 Visual Studio 开发环境中创建浏览信息文件。 但是，你可能需要阅读本主题以了解可用的选项。
 
 如果在开发环境外部生成程序，则仍可以创建一个可在该环境中检查的自定义 .bsc。 对编译期间创建 .sbr 文件运行 BSCMAKE。
 

@@ -1,6 +1,6 @@
 ---
 title: 线程之间传输异常
-ms.date: 11/04/2016
+ms.date: 05/07/2019
 helpviewer_keywords:
 - std::current_exception
 - transporting exceptions between threads
@@ -14,16 +14,16 @@ helpviewer_keywords:
 - rethrow_exception
 - move exceptions between threads
 ms.assetid: 5c95d57b-acf5-491f-8122-57c5df0edd98
-ms.openlocfilehash: f403b1448855b60f323ed582794a00c3e6ae1b3a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: e59883c75fde9938a213fb4e888e6b05a79cf4f7
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404736"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221924"
 ---
 # <a name="transporting-exceptions-between-threads"></a>线程之间传输异常
 
-Visual C++ 支持*传输异常*从到另一个线程。 通过传输异常，你可以在一个线程中捕获异常，然后使该异常看似是在另一个线程中引发的。 例如，你可以使用该功能编写多线程应用程序，其中主线程将处理其辅助线程引发的所有异常。 传输异常对创建并行编程库或系统的开发人员最有用处。 若要实现传输异常，Visual C++ 提供[exception_ptr](../standard-library/exception-typedefs.md#exception_ptr)类型和[current_exception](../standard-library/exception-functions.md#current_exception)， [rethrow_exception](../standard-library/exception-functions.md#rethrow_exception)，和[make_exception_ptr](../standard-library/exception-functions.md#make_exception_ptr)函数。
+MicrosoftC++编译器 (MSVC) 支持*传输异常*到另一个线程中。 通过传输异常，你可以在一个线程中捕获异常，然后使该异常看似是在另一个线程中引发的。 例如，你可以使用该功能编写多线程应用程序，其中主线程将处理其辅助线程引发的所有异常。 传输异常对创建并行编程库或系统的开发人员最有用处。 若要实现传输异常，MSVC 提供[exception_ptr](../standard-library/exception-typedefs.md#exception_ptr)类型并[current_exception](../standard-library/exception-functions.md#current_exception)， [rethrow_exception](../standard-library/exception-functions.md#rethrow_exception)，和[make_exception_ptr](../standard-library/exception-functions.md#make_exception_ptr)函数。
 
 ## <a name="syntax"></a>语法
 

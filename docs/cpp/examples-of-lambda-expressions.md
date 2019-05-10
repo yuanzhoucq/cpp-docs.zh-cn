@@ -1,15 +1,15 @@
 ---
 title: Lambda 表达式的示例
-ms.date: 11/04/2016
+ms.date: 05/07/2019
 helpviewer_keywords:
 - lambda expressions [C++], examples
 ms.assetid: 52506b15-0771-4190-a966-2f302049ca86
-ms.openlocfilehash: 6854c5710d8a27093078c0f2013d691ac22c5870
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: f9f2c3e014e44c9f6a9ce10dd8388a1578ba3987
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392188"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222090"
 ---
 # <a name="examples-of-lambda-expressions"></a>Lambda 表达式的示例
 
@@ -61,7 +61,7 @@ int main()
 
 ### <a name="example-2"></a>示例 2
 
-Visual C++ 编译器将在声明而非调用 lambda 表达式时，将表达式绑定到捕获的变量。 以下示例显示一个通过值捕获局部变量 `i` 并通过引用捕获局部变量 `j` 的 lambda 表达式。 由于 lambda 表达式通过值捕获 `i`，因此在程序后面部分中重新指派 `i` 不影响该表达式的结果。 但是，由于 lambda 表达式通过引用捕获 `j`，因此重新指派 `j` 会影响该表达式的结果。
+MicrosoftC++编译器将 lambda 表达式绑定到捕获的变量时调用的表达式时，而不是声明的表达式。 以下示例显示一个通过值捕获局部变量 `i` 并通过引用捕获局部变量 `j` 的 lambda 表达式。 由于 lambda 表达式通过值捕获 `i`，因此在程序后面部分中重新指派 `i` 不影响该表达式的结果。 但是，由于 lambda 表达式通过引用捕获 `j`，因此重新指派 `j` 会影响该表达式的结果。
 
 ### <a name="code"></a>代码
 

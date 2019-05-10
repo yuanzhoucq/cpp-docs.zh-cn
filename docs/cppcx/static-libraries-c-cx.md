@@ -2,12 +2,12 @@
 title: 静态库 (C++/CX)
 ms.date: 02/03/2017
 ms.assetid: 7faf53c8-fa21-42cc-8246-d32533ef9dfa
-ms.openlocfilehash: 242ba10b29a8efe0c3e9580f1d0d0c3be529a7d2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 188ba06518bf6cdd154b7d6bd61216ed1e4ffad3
+ms.sourcegitcommit: 18d3b1e9cdb4fc3a76f7a650c31994bdbd2bde64
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398857"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64877247"
 ---
 # <a name="static-libraries-ccx"></a>静态库 (C++/CX)
 
@@ -15,11 +15,32 @@ ms.locfileid: "62398857"
 
 ## <a name="creating-static-libraries"></a>创建静态库
 
-#### <a name="to-create-a-static-library-for-use-in-a-uwp-app"></a>若要创建 UWP 应用中使用的静态库
+
+说明如何创建一个新的项目已安装 Visual Studio 的版本而异。 请确保你拥有版本选择器右上角设置为正确的版本。
+
+::: moniker range="vs-2019"
+
+### <a name="to-create-a-uwp-static-library-in-visual-studio-2019"></a>若要在 Visual Studio 2019 中创建 UWP 静态库
+
+1. 在菜单栏上依次选择**文件** > **新建** > **项目**打开**创建一个新项目**对话框。
+
+1. 在对话框顶部，设置**语言**到**C++**，将**平台**到**Windows**，并设置**项目类型**到**UWP**。 
+
+1. 从已筛选的项目类型列表中，选择**静态库 (通用 Windows- C++/CX)** 然后选择**下一步**。 在下一步的页中，为项目提供一个名称，并根据需要指定项目位置。
+
+1. 选择**创建**按钮创建项目。
+
+::: moniker-end
+
+::: moniker range="<=vs-2017"
+
+### <a name="to-create-a-uwp-static-library-in-visual-studio-2017-or-visual-studio-2015"></a>若要在 Visual Studio 2017 或 Visual Studio 2015 中创建 UWP 静态库
 
 1. 在菜单栏上，依次选择“文件” > “新建” > “项目”。 下**可视化C++**   >  **Windows Universal**选择**静态库 (通用 Windows)**。
 
 1. 在“解决方案资源管理器” 中，打开项目的快捷菜单，然后选择“属性” 。 在中**属性**对话框中，在**配置属性** > **C /C++** 页上，设置**使用 Windows 运行时扩展**到**是 (/ZW)**。
+
+::: moniker-end
 
 当你编译新的静态库，如果一个适用于 UWP 应用中排除的 Win32 API 调用时，编译器将引发错误 C3861"找不到标识符"。 若要查找的 Windows 运行时支持一种替代方法，请参阅[UWP 应用中的 Windows Api 的替代方法](/uwp/win32-and-com/alternatives-to-windows-apis-uwp)。
 

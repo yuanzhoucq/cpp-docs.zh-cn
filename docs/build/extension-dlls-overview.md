@@ -1,6 +1,6 @@
 ---
 title: 扩展 Dll:概述
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
 - AFXDLL library
 - MFC DLLs [C++], MFC extension DLLs
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - shared DLL versions [C++]
 - extension DLLs [C++], about MFC extension DLLs
 ms.assetid: eb5e10b7-d615-4bc7-908d-e3e99b7b1d5f
-ms.openlocfilehash: ab9b980cbb3e89eebee945e90c54f23d6717a1a4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: ea8e950e28907ea1a4a85c1f39392d5505f08c49
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62196724"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221372"
 ---
 # <a name="mfc-extension-dlls-overview"></a>MFC 扩展 Dll:概述
 
@@ -22,8 +22,6 @@ MFC 扩展 DLL 是通常实现从现有的 Microsoft 基础类库类派生的可
 扩展 Dll 还可以用于应用程序和 DLL 之间传递 MFC 派生的对象。 创建对象时的模块中存在与所传递的对象相关联的成员函数。 由于使用共享的 MFC DLL 版本时正确导出了这些函数，因此可以自由地传递 MFC 或应用程序和 MFC 扩展 Dll 加载之间 MFC 派生的对象指针。
 
 有关以满足基本需求的 MFC 扩展 DLL 的 DLL 的示例，请参阅 MFC 示例[DLLHUSK](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/advanced/dllhusk)。 具体而言，看 Testdll1.cpp 和 Testdll2.cpp 文件。
-
-请注意，在视觉对象中不再使用的术语 AFXDLLC++文档。 MFC 扩展 DLL 具有与以前的 AFXDLL 相同的特性。
 
 ## <a name="what-do-you-want-to-do"></a>你希望做什么？
 

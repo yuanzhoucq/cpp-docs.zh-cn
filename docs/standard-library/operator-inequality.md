@@ -13,17 +13,17 @@ helpviewer_keywords:
 - operator!=
 - operator !=
 ms.assetid: ef2be7f0-1c94-4edc-b65c-731fddd519f4
-ms.openlocfilehash: a3a750565f16a0a01770cea16bf91918887095f4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e29088b64b46e3aa907f4a09ec131c6f9b68a74b
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62371420"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220505"
 ---
 # <a name="operator"></a>operator!=
 
 > [!NOTE]
-> 本主题位于 Visual C++ 文档内，作为在 C++ 标准库内使用的容器的非功能性示例。 有关详细信息，请参阅 [C++ 标准库容器](../standard-library/stl-containers.md)。
+> 本主题是在 microsoftC++作为容器中使用的非功能性示例文档C++标准库。 有关详细信息，请参阅 [C++ 标准库容器](../standard-library/stl-containers.md)。
 
 重载 `operator!=` 以比较 [Container](../standard-library/sample-container-class.md) 模板类的两个对象。
 

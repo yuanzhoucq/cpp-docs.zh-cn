@@ -1,26 +1,26 @@
 ---
 title: 优化最佳做法
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
-- Visual C++, optimization
+- C++, optimization
 - optimization, best practices
 ms.assetid: f3433148-7255-4ca6-8a4f-7c31aac88508
-ms.openlocfilehash: edb036292b87593a3f8bb9b3f5ec5f7beb84c3a5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 42178f8326def78f37bfcc905b96f37c7fc3affc
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62274165"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220267"
 ---
 # <a name="optimization-best-practices"></a>优化最佳做法
 
-本文档介绍了一些最佳做法优化视觉对象中C++。
+本文档介绍了优化一些最佳做法C++在 Visual Studio 中的程序。
 
 ## <a name="compiler-and-linker-options"></a>编译器和链接器选项
 
 ### <a name="profile-guided-optimization"></a>按配置优化
 
-VisualC++支持*的按配置优化*(PGO)。 这种优化使用中的应用程序的受检测版本培训执行的配置文件数据来驱动更高版本的应用程序的优化。 使用 PGO 会耗费大量时间，因此它可能不是指每个开发人员使用，但我们建议为最终发布版本的产品使用 PGO。 有关详细信息，请参阅[按配置文件优化](profile-guided-optimizations.md)。
+Visual Studio 支持*的按配置优化*(PGO)。 这种优化使用中的应用程序的受检测版本培训执行的配置文件数据来驱动更高版本的应用程序的优化。 使用 PGO 会耗费大量时间，因此它可能不是指每个开发人员使用，但我们建议为最终发布版本的产品使用 PGO。 有关详细信息，请参阅[按配置文件优化](profile-guided-optimizations.md)。
 
 此外，*全程序优化*（也称作链接时间代码生成） 和 **/o1**并 **/o2**改进了优化。 一般情况下，使用以下选项之一编译的应用程序将使用早期的编译器编译的相同应用程序更快。
 
@@ -93,13 +93,13 @@ int myFunc() {...}
 
 ## <a name="restrict-and-assume"></a>__restrict 和\__assume
 
-有几个视觉对象中的关键字C++，可以帮助提高性能： [__restrict](../cpp/extension-restrict.md)并[__assume](../intrinsics/assume.md)。
+有几个可以帮助提高性能的 Visual Studio 中的关键字： [__restrict](../cpp/extension-restrict.md)并[__assume](../intrinsics/assume.md)。
 
 首先，应注意的是，`__restrict`和`__declspec(restrict)`是两个不同的事物。 尽管它们在某种程度上相关，其语义会不同。 `__restrict` 是类型限定符，如`const`或`volatile`，但专用于指针类型。
 
 使用修改的指针`__restrict`被称为 *__restrict 指针*。 __Restrict 指针是一个指针，它只能通过访问\__restrict 指针。 换而言之，另一个指针不能用于访问指向的数据\__restrict 指针。
 
-`__restrict` 视觉对象可以是一个强大的工具C++优化器，但谨慎使用。 如果使用不当，则优化器可能会执行将会破坏您的应用程序的优化。
+`__restrict` 可以是一个强大的工具 microsoftC++优化器，但谨慎使用。 如果使用不当，则优化器可能会执行将会破坏您的应用程序的优化。
 
 `__restrict`关键字将替换 **/Oa**从以前的版本切换。
 

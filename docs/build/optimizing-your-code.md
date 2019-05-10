@@ -1,6 +1,6 @@
 ---
 title: 优化代码
-ms.date: 12/10/2018
+ms.date: 05/06/2019
 helpviewer_keywords:
 - performance, optimizing code
 - optimization
@@ -8,28 +8,28 @@ helpviewer_keywords:
 - optimization, C++ code
 - code, optimizing
 - performance, compiler
-ms.openlocfilehash: ae60070959c683a6365992e7b6cc510fd4111b36
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
-ms.translationtype: MT
+ms.openlocfilehash: f44fb734c8441e10b656c5326c8df4bf6879499a
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57825184"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220174"
 ---
 # <a name="optimizing-your-code"></a>优化代码
 
-通过优化可执行文件，可以实现快速执行速度和较小代码大小之间的平衡。 本主题讨论了一些 Visual c + + 提供的用于帮助您优化代码的机制。
+通过优化可执行文件，可以实现快速执行速度和较小代码大小之间的平衡。 本主题讨论了一些 Visual Studio 提供了有助于优化代码的机制。
 
 ## <a name="language-features"></a>语言功能
 
-以下主题介绍了一些 C/c + + 语言中的优化功能。
+下面的主题介绍的一些优化功能在 C /C++语言。
 
-[优化杂注和关键字](optimization-pragmas-and-keywords.md)<br/>
+[优化杂注和关键字](optimization-pragmas-and-keywords.md) \
 关键字和杂注，您可以使用在代码中以提高性能的列表。
 
-[按类别列出的编译器选项](reference/compiler-options-listed-by-category.md)<br/>
+[按类别列出的编译器选项](reference/compiler-options-listed-by-category.md) \
 一系列 **/O**专门影响执行速度或代码大小的编译器选项。
 
-[规则引用声明符：&&](../cpp/rvalue-reference-declarator-amp-amp.md)<br/>
+[右值引用声明符： & &](../cpp/rvalue-reference-declarator-amp-amp.md) \
 右值引用支持的实现*移动语义*。 如果可以显著提高的移动语义用于实现模板库，使用这些模板的应用程序的性能。
 
 ### <a name="the-optimize-pragma"></a>优化杂注
@@ -52,10 +52,10 @@ ms.locfileid: "57825184"
 
 以下主题讨论最佳编程实践。
 
-[提高时间关键代码的技巧](tips-for-improving-time-critical-code.md)<br/>
+[提高时间关键代码的技巧](tips-for-improving-time-critical-code.md) \
 更好地编码技术可产生更好的性能。 本主题建议的编码技术可以帮助您确保你的代码的时间关键部分满意地执行。
 
-[优化最佳做法](optimization-best-practices.md)<br/>
+[优化最佳做法](optimization-best-practices.md) \
 提供有关如何最好地优化您的应用程序的常规指南。
 
 ## <a name="debugging-optimized-code"></a>调试优化的代码
@@ -86,20 +86,19 @@ ms.locfileid: "57825184"
 
 ## <a name="in-this-section"></a>本节内容
 
-[优化杂注和关键字](optimization-pragmas-and-keywords.md)<br/>
-[提高编译器吞吐量](improving-compiler-throughput.md)<br/>
-[为何浮点数可能丢失精度](why-floating-point-numbers-may-lose-precision.md)<br/>
-[IEEE 浮点表示形式](ieee-floating-point-representation.md)<br/>
-[提高时间关键代码的技巧](tips-for-improving-time-critical-code.md)<br/>
-[使用没有 () 的函数名不产生代码](using-function-name-without-parens-produces-no-code.md)<br/>
-[优化最佳做法](optimization-best-practices.md)<br/>
-[按配置文件优化](profile-guided-optimizations.md)<br/>
-[用于按配置文件优化的环境变量](environment-variables-for-profile-guided-optimizations.md)<br/>
-[PgoAutoSweep](pgoautosweep.md)<br/>
-[pgomgr](pgomgr.md)<br/>
-[pgosweep](pgosweep.md)<br/>
-[如何：将多个 PGO 配置文件合并成一个配置文件](how-to-merge-multiple-pgo-profiles-into-a-single-profile.md)<br/>
-[性能和诊断中心内的 Visual Studio 2013 PGO 加载项](profile-guided-optimization-in-the-performance-and-diagnostics-hub.md)<br/>
+[优化杂注和关键字](optimization-pragmas-and-keywords.md) \
+[提高编译器吞吐量](improving-compiler-throughput.md) \
+[为何浮点数可能丢失精度](why-floating-point-numbers-may-lose-precision.md) \
+[IEEE 浮点表示形式](ieee-floating-point-representation.md) \
+[提高时间关键代码的技巧](tips-for-improving-time-critical-code.md) \
+[使用函数名 （） 不产生代码](using-function-name-without-parens-produces-no-code.md) \
+[优化最佳做法](optimization-best-practices.md) \
+[按配置优化](profile-guided-optimizations.md) \
+[按配置优化的环境变量](environment-variables-for-profile-guided-optimizations.md) \
+[PgoAutoSweep](pgoautosweep.md) \
+[pgomgr](pgomgr.md) \
+[pgosweep](pgosweep.md) \
+[如何：将多个 PGO 配置文件合并成一个配置文件](how-to-merge-multiple-pgo-profiles-into-a-single-profile.md)
 
 ## <a name="see-also"></a>请参阅
 

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - file types [C++], WinHelp files
 ms.assetid: 4fdcbd66-66b0-4866-894a-fd7b4c2557e4
-ms.openlocfilehash: 376d9faa87868cce842a1cb70273e220ff691fa4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 835300d2fe39688f3b9c41dad801f1a79984c803
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62270178"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446557"
 ---
 # <a name="help-files-winhelp"></a>帮助文件 (WinHelp)
 
@@ -35,4 +35,4 @@ ms.locfileid: "62270178"
 
 ## <a name="see-also"></a>请参阅
 
-[为 Visual C++ 项目创建的文件类型](file-types-created-for-visual-cpp-projects.md)
+[视觉对象文件类型创建C++项目](file-types-created-for-visual-cpp-projects.md)

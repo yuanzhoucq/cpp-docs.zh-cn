@@ -1,6 +1,6 @@
 ---
 title: '&lt;chrono&gt;'
-ms.date: 11/04/2016
+ms.date: 05/07/2019
 f1_keywords:
 - chrono/std::chrono::nanoseconds
 - chrono/std::chrono::minutes
@@ -10,18 +10,18 @@ f1_keywords:
 - chrono/std::chrono::milliseconds
 - chrono/std::chrono::microseconds
 ms.assetid: 844de749-f306-482e-89bc-6f53c99c8324
-ms.openlocfilehash: 1fcf87d84b2c99b89217b7f2e0fc7fecd55fff02
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 44620b6ea6c970027a8e9a023c0972c6dec43ee0
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62279094"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220242"
 ---
 # <a name="ltchronogt"></a>&lt;chrono&gt;
 
 包括标准标头 \< chrono > 来定义表示和操作持续时间及时刻的类和函数。
 
-开始在 Visual Studio 2015 中，实现`steady_clock`发生更改，以满足C++标准对稳定性和单一性的需求。 `steady_clock` 现在基于 QueryPerformanceCounter()，且 `high_resolution_clock` 现在是 `steady_clock` 的 typedef。 因此，在 Visual C++ 中，`steady_clock::time_point` 现在是 `chrono::time_point<steady_clock>` 的 typedef；但是，其他实现不一定是这种情况。
+开始在 Visual Studio 2015 中，实现`steady_clock`发生更改，以满足C++标准对稳定性和单一性的需求。 `steady_clock` 现在基于 QueryPerformanceCounter()，且 `high_resolution_clock` 现在是 `steady_clock` 的 typedef。 因此，在 MicrosoftC++编译器`steady_clock::time_point`现在是 typedef `chrono::time_point<steady_clock>`; 但是，这不一定是其他实现这种情况。
 
 ## <a name="syntax"></a>语法
 
