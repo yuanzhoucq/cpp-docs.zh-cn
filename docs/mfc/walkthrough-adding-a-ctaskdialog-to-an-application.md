@@ -1,16 +1,16 @@
 ---
 title: 演练：向应用程序添加 CTaskDialog
-ms.date: 09/19/2018
+ms.date: 04/25/2019
 helpviewer_keywords:
 - CTaskDialog, adding
 - walkthroughs [MFC], dialogs
 ms.assetid: 3a62abb8-2d86-4bec-bdb8-5784d5f9a9f8
-ms.openlocfilehash: f0992d476326e5175db799ea0f9e5667eab3704b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 8cf2223b2859a2dfa6ecc7582ec2f171a056152c
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62358234"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64558207"
 ---
 # <a name="walkthrough-adding-a-ctaskdialog-to-an-application"></a>演练：向应用程序添加 CTaskDialog
 
@@ -37,7 +37,9 @@ ms.locfileid: "62358234"
 
 ### <a name="to-replace-a-windows-message-box-with-a-ctaskdialog"></a>将 Windows 消息框替换为 CTaskDialog 的步骤
 
-1. 使用默认设置创建一个新的 MFC 应用程序项目。 调用它*MyProject*。
+1. 使用**MFC 应用程序向导**使用所有默认设置创建 MFC 应用程序。 请参阅[演练：使用新的 MFC Shell 控件](walkthrough-using-the-new-mfc-shell-controls.md)有关如何打开你的 Visual Studio 版本的向导的说明。
+
+1. 调用它*MyProject*。 
 
 1. 使用 **解决方案资源管理器** 打开文件 MyProject.cpp。
 

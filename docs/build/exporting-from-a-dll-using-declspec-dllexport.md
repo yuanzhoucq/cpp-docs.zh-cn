@@ -1,6 +1,6 @@
 ---
 title: 使用 __declspec(dllexport) 从 DLL 导出
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 f1_keywords:
 - dllexport
 - __declspec
@@ -10,18 +10,16 @@ helpviewer_keywords:
 - export directives [C++]
 - exporting DLLs [C++], __declspec(dllexport) keyword
 ms.assetid: a35e25e8-7263-4a04-bad4-00b284458679
-ms.openlocfilehash: 3b6b9733776f30fc8dcbfeee709b7d24e0f0187b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 167060d0270004b8648d32af206865bfe66c3b4b
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62195311"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220793"
 ---
 # <a name="exporting-from-a-dll-using-declspecdllexport"></a>使用 __declspec(dllexport) 从 DLL 导出
 
-Microsoft 引入 **__export**视觉对象的 16 位编译器版本中C++以允许编译器自动生成导出名并将它们放在一个.lib 文件。 此.lib 文件然后可就像静态.lib 那样与 DLL 链接。
-
-在较新编译器版本中，您可以导出数据、 函数、 类或类成员函数从 DLL 使用 **__declspec （dllexport)** 关键字。 **__declspec （dllexport)** 将导出指令添加到对象文件，因此不需要使用.def 文件。
+可以从 DLL 使用导出数据、 函数、 类或类成员函数 **__declspec （dllexport)** 关键字。 **__declspec （dllexport)** 将导出指令添加到对象文件，因此不需要使用.def 文件。
 
 这种便利是最明显时尝试导出修饰C++函数名。 由于没有对名称修饰没有标准规范，导出函数的名称可能会更改不同的编译器版本。 如果您使用 **__declspec （dllexport)**，重新编译的 DLL 和依赖.exe 文件是仅对帐户的任何命名约定更改是必需的。
 
@@ -50,11 +48,6 @@ class __declspec(dllexport) CExampleExport : public CObject
 ```
 
 **__declspec （dllexport)** 存储函数的 DLL 导出表中的名称。 如果你想要优化的表的大小，请参阅[从按序号而不是按名称的 DLL 导出函数](exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md)。
-
-> [!NOTE]
->  当移植 DLL 源代码从 Win16 到 Win32 时，将为每个实例 **__export**与 **__declspec （dllexport)**。
-
-作为参考，搜索通过 Win32 Winbase.h 头文件。 它包含的示例 **__declspec （dllimport)** 使用情况。
 
 ## <a name="what-do-you-want-to-do"></a>你希望做什么？
 

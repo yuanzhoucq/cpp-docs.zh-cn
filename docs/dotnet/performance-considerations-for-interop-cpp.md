@@ -8,12 +8,12 @@ helpviewer_keywords:
 - mixed assemblies [C++], performance considerations
 - interoperability [C++], performance considerations
 ms.assetid: bb9a282e-c3f8-40eb-a2fa-45d80d578932
-ms.openlocfilehash: c6b4456d9c75061c9a8c93f37f98b58f92adc899
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 29dbfa6465f6bcbcf4d0618b1820e59a8edbd3a3
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384746"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447254"
 ---
 # <a name="performance-considerations-for-interop-c"></a>互操作的性能注意事项 (C++)
 
@@ -21,7 +21,7 @@ ms.locfileid: "62384746"
 
 VisualC++支持相同的互操作性机制作为其他.NET 语言，如 Visual Basic 和C#(P/Invoke)，但它还提供互操作支持特定于视觉对象的C++(C++互操作)。 对于性能关键型应用程序，务必了解每个互操作技术的性能影响。
 
-无论使用的互操作技术，特殊的转换序列，称为形式转换，都是所需每次托管的函数调用非托管的函数，反之亦然。 通过视觉对象自动插入这些 thunkC++编译器，但它是务必记住，累积，这些转换可能会消耗大量的性能。
+无论使用的互操作技术，特殊的转换序列，称为形式转换，都是所需每次托管的函数调用非托管的函数，反之亦然。 由 Microsoft 自动插入这些 thunkC++编译器，但它是务必记住，累积，这些转换可能会消耗大量的性能。
 
 ## <a name="reducing-transitions"></a>减少转换
 

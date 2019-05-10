@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2065
 ms.assetid: 78093376-acb7-45f5-9323-5ed7e0aab1dc
-ms.openlocfilehash: 3daf2cd532cd07225b822c80b46fc28274d4e2a8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ff418fa332adffa1885ec9ca6d7626000e753609
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408603"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447358"
 ---
 # <a name="compiler-error-c2065"></a>编译器错误 C2065
 
@@ -222,7 +222,7 @@ int main() {
 
 ## <a name="example-ccli-attribute-parameters"></a>示例:C++/ CLI 特性参数
 
-此错误还可能来自于为 Visual C++ 2005 执行的编译器一致性工作：Visual C++ 特性的参数检查。
+此外可以为 Visual Studio 2005 执行的编译器一致性工作生成此错误： 参数检查视觉对象C++属性。
 
 ```cpp
 // C2065_attributes.cpp

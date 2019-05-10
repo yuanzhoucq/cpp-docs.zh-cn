@@ -1,23 +1,23 @@
 ---
 title: C /C++构建参考-Visual Studio
 description: 用于 c 语言参考内容 /C++项目系统和生成工具在 Visual Studio 中的。
-ms.date: 12/10/2018
+ms.date: 05/06/2019
 helpviewer_keywords:
 - compiling source code [C++], additional information
 - cl.exe compiler [C++], building programs
 - linker [C++], building reference
 - builds [C++], additional information
 ms.assetid: 100b4ccf-572c-4d1f-970c-fa0bc0cc0d2d
-ms.openlocfilehash: 4c3f7aa598a9c43af04c148ed0d4b3f555566ec7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: abe946ce516e915cd597a0f863c5949fed212bfa
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62294754"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221438"
 ---
 # <a name="cc-building-reference"></a>C/C++ 生成参考
 
-VisualC++提供了两个方法来生成 C /C++程序。 最简单的 （也是最常见的） 方法是[Visual Studio IDE 中生成](../creating-and-managing-visual-cpp-projects.md)。 另一种方法是向[中的命令提示符下使用命令行工具生成](../building-on-the-command-line.md)。 在任一情况下，可以创建和编辑使用 Visual Studio 或所选的第三方编辑器的源文件。
+Visual Studio 提供了两个方法来生成 C /C++程序。 最简单的 （也是最常见的） 方法是[Visual Studio IDE 中生成](../creating-and-managing-visual-cpp-projects.md)。 另一种方法是向[中的命令提示符下使用命令行工具生成](../building-on-the-command-line.md)。 在任一情况下，可以创建和编辑使用 Visual Studio 或所选的第三方编辑器的源文件。
 
 ## <a name="in-this-section"></a>本节内容
 

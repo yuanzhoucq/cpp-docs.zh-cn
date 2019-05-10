@@ -25,12 +25,12 @@ helpviewer_keywords:
 - Clean Build option
 - output files, setting directory
 - Unicode, creating C++ build configuration
-ms.openlocfilehash: c9b0eae9c0a1e074fb4f3f12ac38a737ef14c644
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: e6d418c1668a0757349c7e5c3bb38f7cda801223
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62270888"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446563"
 ---
 # <a name="general-property-page-project"></a>“常规”属性页（项目）
 
@@ -98,7 +98,7 @@ ms.locfileid: "62270888"
 
 - **平台工具集**
 
-   允许项目面向不同版本的 Visual C++ 库和编译器。 Visual C++ 项目可面向由 Visual Studio 安装的默认工具集或者某个由多个旧版 Visual Studio 安装的工具集，包括创建可在 Windowx XP 上运行的可执行文件的工具集。 有关更改平台工具集的信息，请参阅[如何：修改目标框架和平台工具集](../how-to-modify-the-target-framework-and-platform-toolset.md)。
+   允许项目面向不同版本的 Visual C++ 库和编译器。 Visual StudioC++项目可以针对由 Visual Studio 中，或安装多个以前版本的 Visual Studio 中，包括创建可以在 3&gt;v100&lt;3 XP 运行的可执行文件的工具集的工具集之一安装任一默认的工具集。 有关更改平台工具集的信息，请参阅[如何：修改目标框架和平台工具集](../how-to-modify-the-target-framework-and-platform-toolset.md)。
 
 - **启用托管增量生成**
 
