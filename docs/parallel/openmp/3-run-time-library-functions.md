@@ -2,12 +2,12 @@
 title: 3. 运行时库函数
 ms.date: 01/17/2019
 ms.assetid: b226e512-6822-4cbe-a2ca-74cc2bb7e880
-ms.openlocfilehash: 4e72d2d74bb26f8eeeb422881cabf92630cced43
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3eb6dc4110145a6c45dbdd772deaee3023e68e9d
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62363227"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65525036"
 ---
 # <a name="3-run-time-library-functions"></a>3.运行时库函数
 
@@ -40,7 +40,7 @@ ms.locfileid: "62363227"
 - [omp_set_nested](#319-omp_set_nested-function)
 - [omp_get_nested](#3110-omp_get_nested-function)
 
-### <a name="311-ompsetnumthreads-function"></a>3.1.1 omp_set_num_threads 函数
+### <a name="311-omp_set_num_threads-function"></a>3.1.1 omp_set_num_threads 函数
 
 `omp_set_num_threads`函数设置默认线程用于更高版本中没有指定并行区域数`num_threads`子句。 格式如下所示：
 
@@ -62,7 +62,7 @@ void omp_set_num_threads(int num_threads);
 - [OMP_NUM_THREADS](4-environment-variables.md#42-omp_num_threads)环境变量
 - [num_threads](2-directives.md#23-parallel-construct)子句
 
-### <a name="312-ompgetnumthreads-function"></a>3.1.2 omp_get_num_threads 函数
+### <a name="312-omp_get_num_threads-function"></a>3.1.2 omp_get_num_threads 函数
 
 `omp_get_num_threads`函数返回的线程数当前团队执行并行区域在调用它。 格式如下所示：
 
@@ -81,7 +81,7 @@ int omp_get_num_threads(void);
 - [num_threads](2-directives.md#23-parallel-construct)
 - [parallel](2-directives.md#23-parallel-construct)
 
-### <a name="313-ompgetmaxthreads-function"></a>3.1.3 omp_get_max_threads 函数
+### <a name="313-omp_get_max_threads-function"></a>3.1.3 omp_get_max_threads 函数
 
 `omp_get_max_threads`函数返回一个整数，一定是至少与将用于形成一个组合，如果无需并行区域的线程数一样大`num_threads`子句已在该点出现在代码中。 格式如下所示：
 
@@ -109,7 +109,7 @@ threads-used-for-next-team
 - [omp_set_dynamic](#317-omp_set_dynamic-function)
 - [num_threads](2-directives.md#23-parallel-construct)
 
-### <a name="314-ompgetthreadnum-function"></a>3.1.4 omp_get_thread_num 函数
+### <a name="314-omp_get_thread_num-function"></a>3.1.4 omp_get_thread_num 函数
 
 `omp_get_thread_num`函数将返回线程数，其团队中执行该函数的线程。 线程数作用在于它介于 0 和`omp_get_num_threads()`-1，非独占。 团队的主线程是线程 0。
 
@@ -126,7 +126,7 @@ int omp_get_thread_num(void);
 
 - [omp_get_num_threads](#312-omp_get_num_threads-function)函数
 
-### <a name="315-ompgetnumprocs-function"></a>3.1.5 omp_get_num_procs 函数
+### <a name="315-omp_get_num_procs-function"></a>3.1.5 omp_get_num_procs 函数
 
 `omp_get_num_procs`函数返回在调用该函数时可用的程序的处理器数目。 格式如下所示：
 
@@ -135,7 +135,7 @@ int omp_get_thread_num(void);
 int omp_get_num_procs(void);
 ```
 
-### <a name="316-ompinparallel-function"></a>3.1.6 omp_in_parallel 函数
+### <a name="316-omp_in_parallel-function"></a>3.1.6 omp_in_parallel 函数
 
 `omp_in_parallel`如果并行并行区域执行的动态范围内被调用的函数将返回一个非零值; 否则，它将返回 0。 格式如下所示：
 
@@ -146,7 +146,7 @@ int omp_in_parallel(void);
 
 此函数返回一个非零值时从区域并行执行，其中包括被序列化的嵌套的区域内调用。
 
-### <a name="317-ompsetdynamic-function"></a>3.1.7 omp_set_dynamic 函数
+### <a name="317-omp_set_dynamic-function"></a>3.1.7 omp_set_dynamic 函数
 
 `omp_set_dynamic`函数启用或禁用动态调整可用的并行区域执行的线程数。 格式如下所示：
 
@@ -171,7 +171,7 @@ void omp_set_dynamic(int dynamic_threads);
 - [OMP_DYNAMIC](4-environment-variables.md#43-omp_dynamic)
 - [omp_in_parallel](#316-omp_in_parallel-function)
 
-### <a name="318-ompgetdynamic-function"></a>3.1.8 omp_get_dynamic 函数
+### <a name="318-omp_get_dynamic-function"></a>3.1.8 omp_get_dynamic 函数
 
 `omp_get_dynamic`函数返回非零值，如果动态调整线程的已启用，否则返回 0。 格式如下所示：
 
@@ -186,7 +186,7 @@ int omp_get_dynamic(void);
 
 - 有关的动态线程调整说明，请参阅[omp_set_dynamic](#317-omp_set_dynamic-function)。
 
-### <a name="319-ompsetnested-function"></a>3.1.9 omp_set_nested 函数
+### <a name="319-omp_set_nested-function"></a>3.1.9 omp_set_nested 函数
 
 `omp_set_nested`函数启用或禁用嵌套并行度。 格式如下所示：
 
@@ -208,7 +208,7 @@ void omp_set_nested(int nested);
 - [OMP_NESTED](4-environment-variables.md#44-omp_nested)
 - [omp_in_parallel](#316-omp_in_parallel-function)
 
-### <a name="3110-ompgetnested-function"></a>3.1.10 omp_get_nested 函数
+### <a name="3110-omp_get_nested-function"></a>3.1.10 omp_get_nested 函数
 
 `omp_get_nested`函数返回一个非零值，如果启用了嵌套并行机制和 0，如果它处于禁用状态。 有关嵌套并行性的详细信息，请参阅[omp_set_nested](#319-omp_set_nested-function)。 格式如下所示：
 
@@ -241,7 +241,7 @@ int omp_get_nested(void);
 
 OpenMP 的锁函数访问它们始终读取和更新锁定变量的最新值的方式中的锁定变量。 因此，但并不需要包含显式的 OpenMP 程序`flush`指令以确保锁定变量的值在不同线程之间保持一致。 (可能需要`flush`指令以使其他变量的值保持一致。)
 
-### <a name="321-ompinitlock-and-ompinitnestlock-functions"></a>3.2.1 omp_init_lock 和 omp_init_nest_lock 函数
+### <a name="321-omp_init_lock-and-omp_init_nest_lock-functions"></a>3.2.1 omp_init_lock 和 omp_init_nest_lock 函数
 
 这些函数提供初始化锁的唯一方式。 每个函数初始化与参数关联的锁*锁*在即将发布的调用中使用。 格式如下所示：
 
@@ -253,7 +253,7 @@ void omp_init_nest_lock(omp_nest_lock_t *lock);
 
 初始状态处于解锁状态 （即，没有任何线程拥有该锁）。 可嵌套锁，初始嵌套计数为零。 它不符合任一这些例程使用锁的变量已初始化的调用。
 
-### <a name="322-ompdestroylock-and-ompdestroynestlock-functions"></a>3.2.2 omp_destroy_lock 和 omp_destroy_nest_lock 函数
+### <a name="322-omp_destroy_lock-and-omp_destroy_nest_lock-functions"></a>3.2.2 omp_destroy_lock 和 omp_destroy_nest_lock 函数
 
 这些函数确保锁定变量指向*锁*未初始化。 格式如下所示：
 
@@ -265,7 +265,7 @@ void omp_destroy_nest_lock(omp_nest_lock_t *lock);
 
 这是不符合任一这些例程使用具有未初始化的锁变量调用或解锁。
 
-### <a name="323-ompsetlock-and-ompsetnestlock-functions"></a>3.2.3 omp_set_lock 和 omp_set_nest_lock 函数
+### <a name="323-omp_set_lock-and-omp_set_nest_lock-functions"></a>3.2.3 omp_set_lock 和 omp_set_nest_lock 函数
 
 每个函数将阻止执行该函数，直到指定的锁可用，然后设置该锁的线程。 简单的锁定就是如果它是可解除锁定。 可嵌套锁是如果它是可解除锁定或如果其属于已执行该函数的线程。 格式如下所示：
 
@@ -279,7 +279,7 @@ void omp_set_nest_lock(omp_nest_lock_t *lock);
 
 可嵌套锁，到参数`omp_set_nest_lock`函数必须指向初始化的锁定变量。 嵌套计数会递增，并在线程授予后，或保留该锁的所有权。
 
-### <a name="324-ompunsetlock-and-ompunsetnestlock-functions"></a>3.2.4 omp_unset_lock 和 omp_unset_nest_lock 函数
+### <a name="324-omp_unset_lock-and-omp_unset_nest_lock-functions"></a>3.2.4 omp_unset_lock 和 omp_unset_nest_lock 函数
 
 这些函数提供的释放锁的所有权的方法。 格式如下所示：
 
@@ -295,7 +295,7 @@ void omp_unset_nest_lock(omp_nest_lock_t *lock);
 
 可嵌套锁，`omp_unset_nest_lock`函数逐量减小嵌套计数和发布该锁的所有权从执行该函数，如果在生成的计数为零的线程。
 
-### <a name="325-omptestlock-and-omptestnestlock-functions"></a>3.2.5 omp_test_lock 和 omp_test_nest_lock 函数
+### <a name="325-omp_test_lock-and-omp_test_nest_lock-functions"></a>3.2.5 omp_test_lock 和 omp_test_nest_lock 函数
 
 这些函数尝试设置一个锁，但不会阻止线程的执行。 格式如下所示：
 
@@ -318,7 +318,7 @@ int omp_test_nest_lock(omp_nest_lock_t *lock);
 - [Omp_get_wtime](#331-omp_get_wtime-function)函数将返回已用的时钟时间。
 - [Omp_get_wtick](#332-omp_get_wtick-function)函数返回连续的时钟计时周期之间的秒。
 
-### <a name="331-ompgetwtime-function"></a>3.3.1 omp_get_wtime 函数
+### <a name="331-omp_get_wtime-function"></a>3.3.1 omp_get_wtime 函数
 
 `omp_get_wtime`函数将返回在过去某个"时间"以来的秒的已用的挂钟时间双精度浮点值。  实际"过去的时间"是任意的但它保证不会在应用程序的执行期间更改。 格式如下所示：
 
@@ -340,7 +340,7 @@ printf_s("Work took %f sec. time.\n", end-start);
 
 返回的时间的"每个线程时间"这意味着它们不需要是全局一致参与应用程序中的所有线程。
 
-### <a name="332-ompgetwtick-function"></a>3.3.2 omp_get_wtick 函数
+### <a name="332-omp_get_wtick-function"></a>3.3.2 omp_get_wtick 函数
 
 `omp_get_wtick`函数将返回连续的时钟计时周期之间等待的秒数双精度浮点值。 格式如下所示：
 
