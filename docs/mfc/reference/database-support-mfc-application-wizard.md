@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MFC Application Wizard, database support
 ms.assetid: 9ddf4558-fd41-4ac7-8d9b-c93d9c68ab59
-ms.openlocfilehash: a1e0519e1351a48bbd969168d62f163c9dde7e7e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 94ed75ffd59294d5beb076ef4d66e57ef763f10e
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323108"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65525456"
 ---
 # <a name="database-support-mfc-application-wizard"></a>MFC 应用程序向导的数据库支持
 
@@ -46,15 +46,15 @@ ms.locfileid: "62323108"
 
 - **数据源**
 
+   > [!NOTE]
+   > ATL OLE DB 使用者向导和 MFC ODBC 使用者向导不提供在 Visual Studio 2019 及更高版本。 您仍然可以手动添加功能。 有关详细信息，请参阅[创建无需使用者使用向导](../../data/oledb/creating-a-consumer-without-using-a-wizard.md)。
+
    单击**数据源**按钮，设置使用指定的驱动程序或提供程序和数据库的数据源。 如果选择了中的 OLE DB**客户端类型**选项，此按钮将显示**数据链接属性**对话框。 如果选择了中的 ODBC**客户端类型**选项，则此按钮提供**选择数据源**对话框。 仅当你选择要包括在你的应用程序中的数据库视图，则此选项不可用。
 
    |选项|描述|
    |------------|-----------------|
    |**数据链接属性**(OLE DB)|建立指定的数据源使用指定的 OLE DB 提供程序。 必须指定 OLE DB 访问接口、 数据、 数据源、 登录 ID 和 （可选） 密码的位置。 有关此对话框的详细信息，请参阅**数据源**中[ATL OLE DB 使用者向导](../../atl/reference/atl-ole-db-consumer-wizard.md)。|
    |**选择数据源**(ODBC)|建立指定的数据源使用指定的 ODBC 驱动程序。 必须选择数据源名称来选择数据源的表。 该向导将表中的所有列都绑定到的成员变量`CRecordset`-派生的类。 有关此对话框的详细信息，请参阅**数据源**中[MFC ODBC 使用者向导](../../mfc/reference/mfc-odbc-consumer-wizard.md)。|
-
-   > [!NOTE]
-   > 在上一版本中，按住 Shift 单击**数据源**按钮打开文件打开对话框，从中可以选择数据链接 (.udl) 文件。 不再支持此功能。
 
 - **生成特性化的数据库类**
 

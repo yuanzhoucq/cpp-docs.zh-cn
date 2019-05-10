@@ -1,25 +1,27 @@
 ---
 title: 从类型库添加类向导
-ms.date: 10/03/2018
-f1_keywords:
-- vc.codewiz.class.typelib
+ms.date: 05/09/2019
 helpviewer_keywords:
-- Add Class from TypeLib Wizard [MFC]
 - COM interfaces, adding classes
 ms.assetid: 96152afd-9374-4649-a6ab-b0fa2a5592a3
-ms.openlocfilehash: a2c291e1c9e78d288bdb2d15f224520d764dfa1b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 794df6c207c2f2e93cdcc63a6b83cd3434764e87
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62297003"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65525475"
 ---
 # <a name="add-class-from-typelib-wizard"></a>从类型库添加类向导
 
-使用此向导从可用的类型库添加 MFC 类。 该向导创建用于从所选的类型库中添加每个接口的类。
+::: moniker range="vs-2019"
 
-> [!WARNING]
-> 在 Visual Studio 2017 版本 15.9 中，此代码向导已弃用，并将从 Visual Studio 的将来版本中删除。 很少用到此向导。 对 ATL 和 MFC 的常规支持不会受到删除此向导的影响。 如果你想要共享对此弃用的反馈，请完成[此调查](https://www.surveymonkey.com/r/QDWKKCN)。 你的反馈对我们很重要。
+此向导不是可在 Visual Studio 2019 及更高版本。
+
+::: moniker-end
+
+::: moniker range="vs-2017"
+
+使用此向导从可用的类型库添加 MFC 类。 该向导创建用于从所选的类型库中添加每个接口的类。
 
 - **添加类**
 
@@ -66,6 +68,8 @@ ms.locfileid: "62297003"
    为新类的头文件设置名称。 默认情况下，此名称基于你在“生成的类”中提供的名称。 单击省略号按钮以将该文件名保存至所选择的位置，或追加到某个现有文件的类声明中。 如果选择现有文件，则向导在你单击“完成”之前都不会将其保存至所选位置。
 
    向导不会覆盖文件。 如果选择现有文件的名称，当你单击“完成”时，向导会询问你是否要将该类声明追加至文件的内容中。 单击“是”，则追加该文件；单击“否”，则返回至向导并指定另一个文件名。
+
+::: moniker-end
 
 ## <a name="see-also"></a>请参阅
 
