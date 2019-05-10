@@ -1,8 +1,6 @@
 ---
 title: 扩展 DLL
-ms.date: 11/04/2016
-f1_keywords:
-- afxdll
+ms.date: 05/06/2019
 helpviewer_keywords:
 - memory [C++], DLLs
 - MFC extension DLLs [C++]
@@ -15,12 +13,12 @@ helpviewer_keywords:
 - extension DLLs [C++]
 - extension DLLs [C++], about MFC extension DLLs
 ms.assetid: f69ac3d4-e474-4b1c-87a1-6738843a135c
-ms.openlocfilehash: eca33b60b8fa6ba812bf5fa68520f51ceb1d164b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 55b1e55a9c7bdf6daaff98a7fe3f1a2a55f68334
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62195655"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220773"
 ---
 # <a name="mfc-extension-dlls"></a>MFC 扩展 Dll
 
@@ -52,7 +50,7 @@ MFC 扩展 DLL 使用共享的版本的 MFC 应用程序使用共享的 DLL 版�
 
 之前版本的 MFC 4.0，这种类型的 DLL 调用 AFXDLL。 AFXDLL 指`_AFXDLL`生成 DLL 时定义的预处理器符号。
 
-根据所述的约定命名共享版本的 MFC 导入库[MFC Dll 命名约定](../mfc/mfc-library-versions.md#mfc-static-library-naming-conventions)。 VisualC++提供 MFC Dll 和一个数字的非 MFC Dll，您可以使用和与您的应用程序一起分发的预构建的版本。 这些记录在 Redist.txt，安装到 Program Files\Microsoft Visual Studio 文件夹中。
+根据所述的约定命名共享版本的 MFC 导入库[MFC Dll 命名约定](../mfc/mfc-library-versions.md#mfc-static-library-naming-conventions)。 Visual Studio 提供了 MFC Dll 和一个数字的非 MFC Dll，您可以使用和与您的应用程序一起分发的预构建的版本。 这些记录在 Redist.txt，安装到 Program Files\Microsoft Visual Studio 文件夹中。
 
 如果要导出使用.def 文件，在开头和末尾标头文件中放置以下代码：
 
@@ -132,4 +130,4 @@ MFCxx.dll 是通常的最后一个的资源和类列表。 MFCxx.dll 包括所�
 
 ## <a name="see-also"></a>请参阅
 
-[Visual C++ 中的 DLL](dlls-in-visual-cpp.md)
+[创建 C /C++ Visual Studio 中的 Dll](dlls-in-visual-cpp.md)

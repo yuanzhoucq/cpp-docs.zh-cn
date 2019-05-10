@@ -1,17 +1,15 @@
 ---
 title: 如何：向 MSBuild 项目添加自定义生成工具
 ms.date: 11/04/2016
-f1_keywords:
-- msbuild.cpp.howto.addcustombuildtools
 helpviewer_keywords:
 - 'msbuild (c++), howto: add custom build tools'
 ms.assetid: de03899a-371d-4396-9bf9-34f45a65e909
-ms.openlocfilehash: 05f160e650c0dd717d7ce0f29259f866d751fdba
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 812932d9e668ab5ee0eb75eadbf75be3d791cddb
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188894"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220716"
 ---
 # <a name="how-to-add-custom-build-tools-to-msbuild-projects"></a>如何：向 MSBuild 项目添加自定义生成工具
 
@@ -50,6 +48,6 @@ ms.locfileid: "62188894"
 
 ## <a name="see-also"></a>请参阅
 
-[演练：使用 MSBuild 创建 Visual C++ 项目](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)<br/>
+[演练：使用 MSBuild 创建 C++ 项目](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)<br/>
 [如何：在 MSBuild 项目中使用生成事件](how-to-use-build-events-in-msbuild-projects.md)<br/>
 [如何：向 MSBuild 项目添加自定义生成步骤](how-to-add-a-custom-build-step-to-msbuild-projects.md)

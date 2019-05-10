@@ -7,12 +7,12 @@ helpviewer_keywords:
 - mixed-mode applications, intermediate language
 - projects [C++], converting to intermediate language
 ms.assetid: 855f9e3c-4f09-4bfe-8eab-a45f68292be9
-ms.openlocfilehash: 93eff646fb582e25ad70549afc714c5321e56079
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 2f63b6860157e315d44f7c050812a7f0b97f2726
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209238"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448053"
 ---
 # <a name="converting-projects-from-mixed-mode-to-pure-intermediate-language"></a>将项目从混合模式转换为纯中间语言
 
@@ -21,7 +21,7 @@ ms.locfileid: "62209238"
 > [!IMPORTANT]
 > 不推荐使用 visual Studio 2015 和 Visual Studio 2017 不再支持创建 **/clr: pure**或 **/clr: safe** CLR 应用程序代码。 如果您需要纯或安全程序集，我们建议将转换为 C# 应用程序。
 
-使用早期版本的视觉对象C++支持的编译器工具集 **/clr: pure**或 **/clr: safe**，可以使用此过程将转换为纯 MSIL 的代码：
+使用早期版本的 MicrosoftC++支持的编译器工具集 **/clr: pure**或 **/clr: safe**，可以使用此过程将转换为纯 MSIL 的代码：
 
 ### <a name="to-convert-your-mixed-mode-application-into-pure-intermediate-language"></a>将混合模式应用程序转换为纯中间语言
 

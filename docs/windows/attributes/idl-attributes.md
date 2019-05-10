@@ -8,12 +8,12 @@ helpviewer_keywords:
 - IDL files [C++], attributes
 - .idl files [C++]
 ms.assetid: 04c596f4-c97b-4952-8053-316678b1d0b6
-ms.openlocfilehash: a699e327eec056bbb36747840990bb9c7ccc259b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 29761d814505d2c2dd435d3416fe2367e1c16073
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409546"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448415"
 ---
 # <a name="idl-attributes"></a>IDL 特性
 
@@ -27,7 +27,7 @@ ms.locfileid: "62409546"
 
 如果不使用与[COM 特性](com-attributes.md)，IDL 属性，您可以定义接口。 编译的源代码时，这些属性用于定义生成的.idl 文件。 与 COM 特性的 ATL 项目中使用时，一些 IDL 特性，例如`coclass`，会导致代码注入到项目。
 
-请注意， [idl_quote](idl-quote.md)可让你使用不支持当前版本的视觉对象中的 MIDL 构造C++。 这和其他属性，如[importlib](importlib.md)并[includelib](includelib-cpp.md)帮助你使用你当前的视觉对象中的现有.idl 文件C++项目。
+请注意， [idl_quote](idl-quote.md)可让你使用不支持当前版本的视觉对象中的 MIDL 构造C++。 这和其他属性，如[importlib](importlib.md)并[includelib](includelib-cpp.md)帮助你使用你当前的 Visual Studio 中的现有.idl 文件C++项目。
 
 |特性|描述|
 |---------------|-----------------|

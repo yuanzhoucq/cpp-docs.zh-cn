@@ -8,12 +8,12 @@ helpviewer_keywords:
 - agility, C++/CX
 - C++/CX, threading issues
 ms.assetid: 83e9ca1d-5107-4194-ae6f-e01bd928c614
-ms.openlocfilehash: c5bce60e564bef490bcfafd6f8559dffe5fd4f1d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 4206dd9c675325d3141a56b0e57f6cf67dc5693d
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404632"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448149"
 ---
 # <a name="threading-and-marshaling-ccx"></a>线程处理和封送处理 (C++/CX)
 
@@ -35,7 +35,7 @@ Windows 运行时类可以多种方式支持并发线程访问，应用于它的
 
 ### <a name="compiler-warning-c4451-when-consuming-non-agile-classes"></a>编译器警告 C4451，使用非敏捷类时
 
-由于各种原因，一些类不能是敏捷类。 如果从用户界面线程和后台线程访问非敏捷类的实例，则应格外小心以确保运行时正确的行为。 在全局范围内实例化您的应用程序中的非敏捷运行时类，或者在一个自身也标记为敏捷的 ref 类中将一个非敏捷类型声明为类成员时，Visual C++ 编译器发出警告。
+由于各种原因，一些类不能是敏捷类。 如果从用户界面线程和后台线程访问非敏捷类的实例，则应格外小心以确保运行时正确的行为。 MicrosoftC++在全局范围内应用程序中实例化非敏捷运行时类或 ref 类本身中的类成员标记为敏捷声明非敏捷类型时，编译器会发出警告。
 
 在非敏捷类当中，最容易处理的是具有 `ThreadingModel`=Both 和 `MarshallingType`=Standard 的类。  只要使用 `Agile<T>` 帮助程序类就能使这些类成为敏捷类。   下面的示例演示类型 `Windows::Security::Credentials::UI::CredentialPickerOptions^`的非敏捷对象的声明，以及作为结果发出的编译器警告。
 

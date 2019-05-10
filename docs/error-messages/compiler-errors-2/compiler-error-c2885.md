@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2885
 ms.assetid: 7743e5f3-a034-44b4-9ee8-5a6254c27f8c
-ms.openlocfilehash: 8174faed09bdffbdc6974390cceb7c17661eab4b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ff5e770052301e95f694d3712f95b82732c2faba
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388762"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447697"
 ---
 # <a name="compiler-error-c2885"></a>编译器错误 C2885
 
@@ -21,7 +21,7 @@ class::identifier： 不是有效使用的声明在非类范围内
 
 ## <a name="example"></a>示例
 
-视觉对象执行的编译器一致性工作可以导致此错误C++2005年： 不再有效能够`using`声明嵌套的类型，则必须显式限定对嵌套类型，将类型放进行的每个引用在命名空间，或创建一个 typedef。
+为 Visual Studio 2005 执行的编译器一致性工作可以生成此错误： 将不再有效具有`using`声明嵌套的类型，则必须显式限定对嵌套类型，将类型放在 n 中进行的每个引用amespace，或创建一个 typedef。
 
 下面的示例生成 C2885。
 

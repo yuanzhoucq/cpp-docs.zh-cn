@@ -21,12 +21,12 @@ helpviewer_keywords:
 - properties [C++], resources
 - resources [C++], properties
 ms.assetid: e20a29ec-d6fb-4ead-98f3-431a0e23aaaf
-ms.openlocfilehash: 774575e978a8e7f94868eb1b5dad90c6ac345460
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a752122d89b3d952aec664f0dec092af1599f143
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388171"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448913"
 ---
 # <a name="resource-editors-c"></a>资源编辑器 (C++)
 
@@ -39,15 +39,15 @@ ms.locfileid: "62388171"
 
 |使用...|编辑...|
 |----------------|----------------|
-|[快捷键编辑器](../windows/accelerator-editor.md)|Visual C++ 项目中的快捷键对应表。|
+|[快捷键编辑器](../windows/accelerator-editor.md)|在 Visual Studio 中的快捷键对应表C++项目。|
 |[二进制编辑器](binary-editor.md)|二进制数据信息和 Visual C++、Visual Basic 或 Visual C# 项目中的自定义资源。|
-|[对话框编辑器](../windows/dialog-editor.md)|Visual C++ 项目中的对话框。|
+|[对话框编辑器](../windows/dialog-editor.md)|Visual Studio 中的对话框C++项目。|
 |[图像编辑器](../windows/image-editor-for-icons.md)|Visual C++、Visual Basic 或 Visual C# 项目中的位图、图标、光标以及其他图像文件。|
-|[菜单编辑器](../windows/menu-editor.md)|Visual C++ 项目中的菜单资源。|
+|[菜单编辑器](../windows/menu-editor.md)|在 Visual Studio 中的菜单资源C++项目。|
 |[Ribbon 编辑器](../mfc/ribbon-designer-mfc.md)|MFC 项目中的功能区资源。|
-|[字符串编辑器](../windows/string-editor.md)|Visual C++ 项目中的字符串表。|
-|[工具栏编辑器](../windows/toolbar-editor.md)|Visual C++ 项目中的工具栏资源。 **工具栏编辑器**属于**图像编辑器**。|
-|[版本信息编辑器](../windows/version-information-editor.md)|Visual C++ 项目中的版本信息。|
+|[字符串编辑器](../windows/string-editor.md)|Visual Studio 中的字符串表C++项目。|
+|[工具栏编辑器](../windows/toolbar-editor.md)|在 Visual Studio 中的工具栏资源C++项目。 **工具栏编辑器**属于**图像编辑器**。|
+|[版本信息编辑器](../windows/version-information-editor.md)|在 Visual Studio 中的版本信息C++项目。|
 
 > [!NOTE]
 > 如果你的项目尚未包含.rc 文件，请参阅[如何：创建资源](../windows/how-to-create-a-resource-script-file.md)。

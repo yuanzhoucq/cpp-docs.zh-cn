@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2700 通过 C2799
+title: 编译器错误 C2700 - C2799
 ms.date: 04/21/2019
 f1_keywords:
 - C2716
@@ -41,13 +41,13 @@ helpviewer_keywords:
 - C2799
 ms.assetid: 6ee257bb-94bc-42b9-af2c-3c73926afba4
 ms.openlocfilehash: a6f4391008bf9b0a066ba65f27a41697c6097c2e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62153202"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64857638"
 ---
-# <a name="compiler-errors-c2700-through-c2799"></a>编译器错误 C2700 通过 C2799
+# <a name="compiler-errors-c2700-through-c2799"></a>编译器错误 C2700 - C2799
 
 在本部分文档中的文章说明了由编译器生成的错误消息的子集。
 

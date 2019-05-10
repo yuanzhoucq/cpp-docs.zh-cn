@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data [C++], data access technologies
 - data access [C++], class libraries for databases
 ms.assetid: 95da6237-bbe2-480a-ae50-3a520051ceff
-ms.openlocfilehash: 142d067b6fbc9e2357ff8fc23fd931a1194477e9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: a68c4a9df3b439ae641c5e4cbe6f3fbc8b8e6355
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398064"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222530"
 ---
 # <a name="data-access-in-visual-c"></a>Visual C++ 中的数据访问
 
@@ -40,11 +40,11 @@ Microsoft 基础类 (MFC) 库提供使用开放式数据库连接 (ODBC) 进行�
 [用于 Microsoft Azure 存储客户端库C++](https://github.com/Azure/azure-storage-cpp)<br/>
 [Azure 存储](/azure/storage/storage-introduction)是一种云存储解决方案，用于依赖于持久性、可用性和可扩展性来满足其客户需求的现代应用程序。 使用适用于 C++ 的 Azure 存储客户端库，从 C++ 连接到 Azure 存储。
 
-[ODBC 驱动程序 13.1 for SQL Server-Windows 发布](https://blogs.msdn.microsoft.com/sqlnativeclient/2016/08/01/announcing-the-odbc-driver-13-1-for-sql-server)<br/>
-最新的 ODBC 驱动程序为基于 C/C++ 的应用程序提供对 Microsoft SQL Server 2016 Microsoft Azure SQL 数据库的可靠数据访问。 提供始终加密功能，包括支持、 Azure Active Directory 和 AlwaysOn 可用性组。 此外，还可用于 MacOS 和 Linux。
+[适用于 SQL Server 的 ODBC 驱动程序](/sql/connect/odbc/microsoft-odbc-driver-for-sql-server)<br/>
+最新的 ODBC 驱动程序提供对 Microsoft SQL Server 和 Microsoft Azure SQL 数据库于 c 语言的可靠数据访问 /C++基于应用程序。 提供始终加密功能，包括支持、 Azure Active Directory 和 AlwaysOn 可用性组。 此外，还可用于 MacOS 和 Linux。
 
-[SQL Server 本机客户端](/sql/relational-databases/native-client/sql-server-native-client-programming)<br/>
-SQL Server Native Client 是可同时用于 OLE DB 和 ODBC 的独立数据访问应用程序编程接口 (API)，支持 SQL Server 2005 到 SQL Server 2014 的各个版本。 新的应用程序应使用适用于 SQL Server 的 ODBC 驱动程序 13.1。
+[适用于 SQL Server 的 OLE DB 驱动程序](/sql/connect/oledb/oledb-driver-for-sql-server)<br/>
+最新的 OLE DB 驱动程序是独立的数据访问应用程序编程接口 (API) 支持 Microsoft SQL Server 和 Microsoft Azure SQL 数据库。
 
 [Microsoft Azure C 和C++开发人员中心](https://azure.microsoft.com/develop/cpp/)<br/>
 通过 Azure，用户可以使用喜欢的工具轻松生成更具灵活性、可扩展性和可靠性的 C++ 应用程序。

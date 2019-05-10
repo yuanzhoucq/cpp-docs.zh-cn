@@ -1,13 +1,13 @@
 ---
 title: C++ 中 Windows 编程概述
-ms.date: 03/28/2019
+ms.date: 05/06/2019
 ms.assetid: efc691d7-21f3-47ae-ae56-cab999ccf59d
-ms.openlocfilehash: 48c7f419b6c69955ab25db528c8d3d86a7249391
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 40028794a6df30db619965181f2e31d7c9a2745c
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62362343"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221324"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>C++ 中 Windows 编程概述
 
@@ -21,7 +21,7 @@ C++控制台应用程序从命令行控制台窗口中运行，并可以显示�
 
 术语*本机桌面客户端应用程序*指的是 C 或C++窗口中应用程序使用的原始本机[Windows C Api 和/或 COM Api](/windows/desktop/apiindex/windows-api-list)访问操作系统。 这些 Api 是自行写入主要是用 c 语言在创建此类应用程序时，您可以选择直接针对 C 样式消息循环，用于处理操作系统事件进行编程或使用*Microsoft 基础类*(MFC)C++包装库Win32 是某种程度上是面向对象的方式。 两种方法被视为"现代"相比通用 Windows 平台 （见下文），但同时仍是完全受支持并且具有数百万行的当今世界中运行的代码。 在窗口中运行的 Win32 应用程序需要开发人员显式使用 Windows 过程函数中的 Windows 消息。 虽然名为 32 位，但 Win32 应用程序可以编译为 32 位 (x86) 或 64 位 (x64) 二进制程序。 在 Visual Studio IDE 中，x86 和 Win32 这两个术语是同义的。
 
-若要开始使用传统的 WindowsC++编程，请参见[开始使用 Win32 和C++ ](/windows/desktop/LearnWin32/learn-to-program-for-windows)。 获取 Win32 一定了解后，可以将其更轻松地了解[MFC 桌面应用程序](/mfc/mfc-desktop-applications)。 有关的传统示例C++桌面应用程序使用复杂的图形，请参阅[Hilo:开发C++适用于 Windows 应用程序](https://msdn.microsoft.com/library/windows/desktop/ff708696.aspx)。
+若要开始使用传统的 WindowsC++编程，请参见[开始使用 Win32 和C++ ](/windows/desktop/LearnWin32/learn-to-program-for-windows)。 获取 Win32 一定了解后，可以将其更轻松地了解[MFC 桌面应用程序](../mfc/mfc-desktop-applications.md)。 有关的传统示例C++桌面应用程序使用复杂的图形，请参阅[Hilo:开发C++适用于 Windows 应用程序](https://msdn.microsoft.com/library/windows/desktop/ff708696.aspx)。
 
 ### <a name="c-or-net"></a>C++或.NET？ 
 

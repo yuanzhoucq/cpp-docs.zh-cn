@@ -1,15 +1,15 @@
 ---
 title: 按类别列出的编译器选项
-ms.date: 11/12/2018
+ms.date: 05/06/2019
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-ms.openlocfilehash: d3ebfbc3661ba648c2fdb73c697db42735faf422
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 0d12c0f82d3595ee6b61edcd21fb01dd7f49163b
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62294156"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221762"
 ---
 # <a name="compiler-options-listed-by-category"></a>按类别列出的编译器选项
 
@@ -153,7 +153,7 @@ ms.locfileid: "62294156"
 |[/bigobj](bigobj-increase-number-of-sections-in-dot-obj-file.md)|增加 .obj 文件中可寻址节的数目。|
 |[/c](c-compile-without-linking.md)|编译但不链接。|
 |[/cgthreads](cgthreads-code-generation-threads.md)|指定 cl.exe 线程数以用于优化和代码生成。|
-|[/errorReport](errorreport-report-internal-compiler-errors.md)|允许你将内部编译器错误 (ICE) 信息直接提供给 Visual C++ 团队。|
+|[/errorReport](errorreport-report-internal-compiler-errors.md)|使你可以直接向 Microsoft 提供内部编译器错误 (ICE) 信息C++团队。|
 |[/FC](fc-full-path-of-source-code-file-in-diagnostics.md)|在诊断文本中显示传递给 cl.exe 的源代码文件的完整路径。|
 |[/FS](fs-force-synchronous-pdb-writes.md)|强制写入到程序数据库 (PDB) 文件以通过 MSPDBSRV.EXE 序列化。|
 |[/H](h-restrict-length-of-external-names.md)|已否决。 限制外部（公共）名称的长度。|
@@ -213,7 +213,7 @@ ms.locfileid: "62294156"
 |[/Yd](yd-place-debug-information-in-object-file.md)|已否决。 将完整的调试信息放在所有对象文件中。 改为使用 [/Zi](z7-zi-zi-debug-information-format.md) 。|
 |[/Zc:forScope-](zc-forscope-force-conformance-in-for-loop-scope.md)|已否决。 在 for 循环范围中禁用一致性。|
 |[/Ze](za-ze-disable-language-extensions.md)|已否决。 启用语言扩展。|
-|[/Zg](zg-generate-function-prototypes.md)|已在 Visual C++ 2015 中删除。 生成函数原型。|
+|[/Zg](zg-generate-function-prototypes.md)|在 Visual Studio 2015 中删除。 生成函数原型。|
 
 ## <a name="see-also"></a>请参阅
 

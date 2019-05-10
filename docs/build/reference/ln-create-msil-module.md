@@ -7,12 +7,12 @@ helpviewer_keywords:
 - -LN compiler option [C++]
 - /LN compiler option [C++]
 ms.assetid: 4f38f4f4-3176-4caf-8200-5c7585dc1ed3
-ms.openlocfilehash: 18b0e72d50f328afc1f2856f833cec1aa7d46f30
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 2dbd5ae5ddf802185912c49caf37aa61c6a7d4c3
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62176211"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446272"
 ---
 # <a name="ln-create-msil-module"></a>/LN（创建 MSIL 模块）
 
@@ -36,7 +36,7 @@ ms.locfileid: "62176211"
 
 模块的默认文件扩展名为 .netmodule。
 
-视觉对象中C++视觉对象以前的版本C++2005 中，模块通过创建 **/clr:noAssembly**。
+在 Visual Studio 2005 之前版本中，模块通过创建 **/clr:noAssembly**。
 
 MSVC 链接器接受.netmodule 文件作为输入，链接器生成的输出文件将程序集或.netmodule 上的任何链接器输入的.netmodule 没有运行时依赖性。  有关详细信息，请参阅 [用作链接器输入的 .netmodule 文件](netmodule-files-as-linker-input.md)。
 

@@ -6,12 +6,12 @@ ms.topic: conceptual
 helpviewer_keywords:
 - attributes [C++/CLI], reference topics
 ms.assetid: 613a3611-b3eb-4347-aa38-99b654600e1c
-ms.openlocfilehash: f9d339860e9d2bdb8d66f6b7f8f49d3993b2d5cf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9b985799849a268010dff63f9f7bc25e474b365e
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148314"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448518"
 ---
 # <a name="c-attributes-for-com-and-net"></a>C++COM 和.NET 的属性
 
@@ -34,7 +34,7 @@ Microsoft 定义了一组C++属性，用于简化 COM 编程和.NET Framework �
 
 - 取代了大量的 IDL 代码所需的少量简洁属性具有的 COM 组件。
 
-例如，若要实现泛型 ATL 类的简单事件接收器，可以应用[event_receiver](event-receiver.md)特性为特定的类如`CMyReceiver`。 `event_receiver`属性然后编译该视觉对象的C++编译器，将适当的代码插入到对象文件。
+例如，若要实现泛型 ATL 类的简单事件接收器，可以应用[event_receiver](event-receiver.md)特性为特定的类如`CMyReceiver`。 `event_receiver`属性然后编译的 MicrosoftC++编译器，将适当的代码插入到对象文件。
 
 ```cpp
 [event_receiver(com)]
@@ -49,7 +49,7 @@ class CMyReceiver
 
 ## <a name="basic-mechanics-of-attributes"></a>特性的基本机制
 
-有三种方法将属性插入你的项目。 首先，您可以将它们手动插入您的源代码。 第二，您可以将它们插入在项目中使用对象的属性网格。 最后，您可以插入它们使用不同的向导。 有关使用的详细信息**属性**窗口和各种向导，请参阅[创建和管理 VisualC++项目](../../build/creating-and-managing-visual-cpp-projects.md)。
+有三种方法将属性插入你的项目。 首先，您可以将它们手动插入您的源代码。 第二，您可以将它们插入在项目中使用对象的属性网格。 最后，您可以插入它们使用不同的向导。 有关使用的详细信息**属性**窗口和各种向导，请参阅[Visual Studio 项目的C++ ](../../build/creating-and-managing-visual-cpp-projects.md)。
 
 如前面一样，生成项目时，编译器会分析每个C++源文件，生成的对象文件。 但是，当编译器遇到属性，它分析并语法验证。 然后编译器将动态调用要插入代码或在编译时进行其他修改的属性提供程序。 具体取决于属性的类型不同的提供程序实现。 例如，由 Atlprov.dll 实现与 ATL 相关的属性。
 
@@ -64,7 +64,7 @@ class CMyReceiver
 
 ## <a name="building-an-attributed-program"></a>生成特性化程序
 
-使视觉对象后C++属性插入源代码中，你可能想视觉对象C++编译器可为你生成类型库和.idl 文件。 以下链接器选项可帮助您生成.tlb 和.idl 文件：
+使视觉对象后C++属性插入源代码中，您可以在 MicrosoftC++编译器可为你生成类型库和.idl 文件。 以下链接器选项可帮助您生成.tlb 和.idl 文件：
 
 - [/IDLOUT](../../build/reference/idlout-name-midl-output-files.md)
 

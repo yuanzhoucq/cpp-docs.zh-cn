@@ -8,25 +8,25 @@ helpviewer_keywords:
 - projects [C++], types
 - templates [C++], projects
 - applications [C++], projects
-- Visual C++ projects, types
+- C++ projects, types
 ms.assetid: 7337987e-1e7b-4120-9a4b-94f0401f15e7
-ms.openlocfilehash: cac194ed2c830541711161dc139a42ed0529340f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: dce96a221804e5538929d63fa3c125a27e7fc36d
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62316751"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65217772"
 ---
 # <a name="c-project-templates"></a>C++项目模板
 
-Visual Studio 项目模板生成源代码文件、 编译器选项、 菜单、 工具栏、 图标、 引用和`#include`适用于你想要创建的项目类型的语句。 Visual Studio 包括多种类型的 Visual C++ 项目模板并为其中许多项目模板提供了向导，以便可以在创建项目时对其进行自定义。 在创建项目之后，可以立即生成它并运行应用程序；在开发应用程序时最好间歇性生成该项目。
+Visual Studio 项目模板生成源代码文件、 编译器选项、 菜单、 工具栏、 图标、 引用和`#include`适用于你想要创建的项目类型的语句。 Visual Studio 提供了几种类型的C++项目模板，然后为其中的许多提供了向导，以便您可以自定义你的项目创建它们。 在创建项目之后，可以立即生成它并运行应用程序；在开发应用程序时最好间歇性生成该项目。
 
 > [!NOTE]
 > 你可以使用 C++ 项目模板来创建 C 语言项目。 在生成的项目中，找到文件扩展名为 .cpp 的文件并将它更改为 .c。 然后，在该项目（而非解决方案）的“项目属性”  页上，依次展开“配置属性” 和“C/C++”  ，然后选择“高级” 。 将“编译为”  设置更改为“编译为 C 代码 (/TC)” 。
 
 ## <a name="project-templates"></a>项目模板
 
-Visual Studio 中包含的项目模板取决于安装的产品版本和工作负载。 如果安装的是具有 C++ 工作负载的桌面开发，则 Visual Studio 具有这些 Visual C++ 项目模板。
+Visual Studio 中包含的项目模板取决于安装的产品版本和工作负载。 如果已安装的桌面开发C++Visual Studio 的工作负荷，具有这些C++项目模板。
 
 ### <a name="windows-desktop"></a>Windows 桌面
 

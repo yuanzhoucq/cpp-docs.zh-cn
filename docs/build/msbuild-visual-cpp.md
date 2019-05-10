@@ -1,17 +1,15 @@
 ---
 title: 在命令行中的 MSBuildC++
 ms.date: 12/12/2018
-f1_keywords:
-- MSBuild
 helpviewer_keywords:
 - MSBuild
 ms.assetid: 7a1be7ff-0312-4669-adf2-5f5bf507d560
-ms.openlocfilehash: 565b1c47b4476fa7cb830e15b978b389f4344ee1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: e95d99cf5c63c824bb9bade8e76bc3ca99079669
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62273308"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220575"
 ---
 # <a name="msbuild-on-the-command-line---c"></a>在命令行中的 MSBuildC++
 
@@ -53,7 +51,7 @@ ms.locfileid: "62273308"
 
 |术语|定义|
 |----------|----------------|
-|[演练：使用 MSBuild 创建 Visual C++ 项目](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)|演示如何创建视觉对象C++使用项目**MSBuild**。|
+|[演练：使用 MSBuild 创建 C++ 项目](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)|演示如何创建 Visual StudioC++使用项目**MSBuild**。|
 |[如何：在 MSBuild 项目中使用生成事件](how-to-use-build-events-in-msbuild-projects.md)|演示如何指定在生成中的某个特定阶段发生的操作： 在生成开始前;之前在链接步骤开始;或在生成结束之后。|
 |[如何：向 MSBuild 项目添加自定义生成步骤](how-to-add-a-custom-build-step-to-msbuild-projects.md)|演示如何将用户定义的阶段添加到生成序列。|
 |[如何：向 MSBuild 项目添加自定义生成工具](how-to-add-custom-build-tools-to-msbuild-projects.md)|演示如何将生成工具关联与特定文件。|

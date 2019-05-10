@@ -10,12 +10,12 @@ helpviewer_keywords:
 - -Zg compiler option [C++]
 - generate function prototypes compiler option
 ms.assetid: c8df1b46-24ff-46f2-8356-e0a144b21dd2
-ms.openlocfilehash: 684174cf46e644c22e072e3fa60f75f9434c7e54
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 591460b78a461aa2e33f873b79d6dcec0277f99f
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62315893"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446200"
 ---
 # <a name="zg-generate-function-prototypes"></a>/Zg（生成函数原型）
 
@@ -29,7 +29,7 @@ ms.locfileid: "62315893"
 
 ## <a name="remarks"></a>备注
 
-此编译器选项不再可用。 已在 Visual C++ 2015 中删除。 此页专为 Visual C++ 较早版本的用户保留。
+此编译器选项不再可用。 在 Visual Studio 2015 中已删除它。 此页保持较旧版本的 Visual Studio 的用户。
 
 函数原型包括函数返回类型和参数类型列表。 参数类型列表是根据函数的形参类型创建的。 将忽略源文件中已存在的任何函数原型。
 

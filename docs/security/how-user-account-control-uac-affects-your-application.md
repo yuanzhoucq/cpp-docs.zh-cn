@@ -7,12 +7,12 @@ helpviewer_keywords:
 - user accounts [C++]
 - User Account Control [C++]
 ms.assetid: 0d001870-253e-4989-b689-f78035953799
-ms.openlocfilehash: 3702462ec892025cfb4f24d9c91e6db705b1b9a5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3818b0ff7d4e4c551c41726dd44935beb5d32842
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179236"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448473"
 ---
 # <a name="how-user-account-control-uac-affects-your-application"></a>用户帐户控制 (UAC) 如何影响应用程序
 
@@ -22,7 +22,7 @@ ms.locfileid: "62179236"
 
 ## <a name="building-projects-after-enabling-uac"></a>在启用 UAC 后生成项目
 
-如果在禁用 UAC 的 Windows Vista 中生成 Visual C++ 项目，并在以后启用 UAC，则必须清除并重新生成项目，该项目才能正常工作。
+如果生成 Visual StudioC++禁用了 UAC 的 Windows Vista 上的项目，并在以后启用 UAC，必须清除并重新生成该项目才能正常工作。
 
 ## <a name="applications-that-require-administrative-privileges"></a>需要管理特权的应用程序
 

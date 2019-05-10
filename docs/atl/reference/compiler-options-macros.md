@@ -1,6 +1,6 @@
 ---
 title: 编译器选项宏
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 f1_keywords:
 - _ATL_ALL_WARNINGS
 - _ATL_APARTMENT_THREADED
@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - compiler options, macros
 ms.assetid: a869adc6-b3de-4299-b040-9ae20b45f82c
-ms.openlocfilehash: 79b1cabc0304e905012db5f6dd73ed71073c0c1e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: e1d0f6e068989179dd9498e399ca5304a2b378b8
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62278418"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221116"
 ---
 # <a name="compiler-options-macros"></a>编译器选项宏
 
@@ -29,21 +29,21 @@ ms.locfileid: "62278418"
 
 |||
 |-|-|
-|[_ATL_ALL_WARNINGS](#_atl_all_warnings)|这样项目中的错误的符号转换从早期版本的 atl。|
+|[_ATL_ALL_WARNINGS](#_atl_all_warnings)|使项目中的错误的符号转换从早期版本的 atl。|
 |[_ATL_APARTMENT_THREADED](#_atl_apartment_threaded)|如果一个或多个对象使用单元线程处理，定义。|
 |[_ATL_CSTRING_EXPLICIT_CONSTRUCTORS](#_atl_cstring_explicit_constructors)|可确保`CString`显式，防止任何意外的转换构造函数。|
-|[_ATL_ENABLE_PTM_WARNING](#_atl_enable_ptm_warning)|定义此宏，以便使用C++标准兼容的语法，非标准语法用来初始化指向成员函数的指针时，将生成 C4867 编译器错误。|
+|[_ATL_ENABLE_PTM_WARNING](#_atl_enable_ptm_warning)|定义此宏，以便使用C++标准兼容的语法，使用非标准语法来初始化指向成员函数的指针时，将生成 C4867 编译器错误。|
 |[_ATL_FREE_THREADED](#_atl_free_threaded)|如果一个或多个对象使用免费的还是中立线程，定义。|
 |[_ATL_MULTI_THREADED](#_atl_multi_threaded)|指示项目符号会标记为两者，免费或非特定于的对象。 该宏[_ATL_FREE_THREADED](#_atl_free_threaded)应改为使用。|
-|[_ATL_NO_AUTOMATIC_NAMESPACE](#_atl_no_automatic_namespace)|一个符号，这将阻止默认使用命名空间作为 atl。|
-|[_ATL_NO_COM_SUPPORT](#_atl_no_com_support)|这样可防止 COM 相关的代码与你的项目正在编译的符号。|
+|[_ATL_NO_AUTOMATIC_NAMESPACE](#_atl_no_automatic_namespace)|一个符号，阻止将默认用作命名空间的 atl。|
+|[_ATL_NO_COM_SUPPORT](#_atl_no_com_support)|可以防止 COM 相关代码与你的项目正在编译的符号。|
 |[ATL_NO_VTABLE](#atl_no_vtable)|正在初始化类的构造函数和析构函数中阻止 vtable 指针符号。|
 |[ATL_NOINLINE](#atl_noinline)|符号，指示函数不应为内联。|
 |[_ATL_SINGLE_THREADED](#_atl_single_threaded)|如果所有对象都使用单线程模型中，定义。|
 
 ##  <a name="_atl_all_warnings"></a>  _ATL_ALL_WARNINGS
 
-这样项目中的错误的符号转换从早期版本的 atl。
+使项目中的错误的符号转换从早期版本的 atl。
 
 ```
 #define _ATL_ALL_WARNINGS
@@ -63,7 +63,7 @@ ms.locfileid: "62278418"
 
 - C4291 declaration： 没有匹配的删除运算符; 如果找到如果初始化引发异常，不会释放内存
 
-- C4268 identifier： 用编译器生成默认构造函数初始化 const 静态/全局数据填充了零对象
+- C4268 identifier： 用编译器生成的默认构造函数初始化 const 静态/全局数据填充了零对象
 
 - C4702 无法访问的代码
 
@@ -113,7 +113,7 @@ _ATL_CSTRING_EXPLICIT_CONSTRUCTORS
 
 ### <a name="remarks"></a>备注
 
-ATL 和 MFC 库已更改，以匹配该视觉对象C++编译器的改进了的标准C++符合性。 根据 ANSIC++标准，应该是指向类成员函数的指针的语法`&CMyClass::MyFunc`。
+ATL 和 MFC 库已更改，以匹配 MicrosoftC++编译器的改进了的标准C++符合性。 根据 ANSIC++标准，应该是指向类成员函数的指针的语法`&CMyClass::MyFunc`。
 
 当[_ATL_ENABLE_PTM_WARNING](#_atl_enable_ptm_warning)未定义 （默认情况下），以便在早期版本中创建的代码可以继续像以前那样生成 ATL/MFC 禁用 C4867 错误 （值得注意的是消息映射） 的宏映射中。 如果定义了 **_ATL_ENABLE_PTM_WARNING**，你的代码应为C++符合标准。
 
@@ -153,7 +153,7 @@ _ATL_MULTI_THREADED
 
 ##  <a name="_atl_no_automatic_namespace"></a>  _ATL_NO_AUTOMATIC_NAMESPACE
 
-一个符号，这将阻止默认使用命名空间作为 atl。
+一个符号，阻止将默认用作命名空间的 atl。
 
 ```
 _ATL_NO_AUTOMATIC_NAMESPACE
@@ -165,7 +165,7 @@ _ATL_NO_AUTOMATIC_NAMESPACE
 
 ##  <a name="_atl_no_com_support"></a>  _ATL_NO_COM_SUPPORT
 
-这样可防止 COM 相关的代码与你的项目正在编译的符号。
+可以防止 COM 相关代码与你的项目正在编译的符号。
 
 ```
 _ATL_NO_COM_SUPPORT

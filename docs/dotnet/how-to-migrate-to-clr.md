@@ -10,12 +10,12 @@ helpviewer_keywords:
 - migration [C++], /clr compiler option
 - /clr compiler option [C++], porting to
 ms.assetid: c9290b8b-436a-4510-8b56-eae51f4a9afc
-ms.openlocfilehash: 6ac470b85a14bfe32c7f3fe47168180687669ec6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 9abc85227d6091005d7e097d3305150f4ca347a1
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387248"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448082"
 ---
 # <a name="how-to-migrate-to-clr"></a>如何：迁移到 /clr
 
@@ -41,13 +41,13 @@ ms.locfileid: "62387248"
 
 以下步骤，遵循的顺序，提供的最简单路径 **/clr**编译。 务必要编译并在每个步骤后运行你的项目。
 
-### <a name="versions-prior-to-visual-c-2003"></a>视觉对象之前的版本C++2003年
+### <a name="versions-prior-to-visual-studio-2003"></a>Visual Studio 2003 之前的版本
 
-如果要从视觉对象之前的版本升级到 Visual Studio 2010 C++ 2003 中，您可能会看到编译器错误相关的增强型C++视觉对象中的标准符合性C++2003年
+如果要从 Visual Studio 2003 之前的版本升级到 Visual Studio 2010，您可能会看到编译器错误相关的增强型C++Visual Studio 2003 中的标准合规性
 
-### <a name="upgrading-from-visual-c-2003"></a>从 Visual 升级C++2003年
+### <a name="upgrading-from-visual-studio-2003"></a>从 Visual Studio 2003 升级
 
-通过视觉对象生成的项目上一个C++2003年应首先编译而无需 **/clr**如 Visual Studio 现在增加了 ANSI/ISO 符合性和一些重大更改。 可能需要最大关注的更改是[CRT 中的安全功能](../c-runtime-library/security-features-in-the-crt.md)。 使用 CRT 的代码是很有可能会生成弃用警告。 这些警告可以禁止显示，但正在迁移到新[Security-Enhanced 版本的 CRT 函数](../c-runtime-library/security-enhanced-versions-of-crt-functions.md)是首选方法，因为它们提供更佳的安全性，但可能会泄露你的代码中的安全问题。
+上一生成 Visual Studio 2003 项目应首先编译而无需 **/clr**如 Visual Studio 现在增加了 ANSI/ISO 符合性和一些重大更改。 可能需要最大关注的更改是[CRT 中的安全功能](../c-runtime-library/security-features-in-the-crt.md)。 使用 CRT 的代码是很有可能会生成弃用警告。 这些警告可以禁止显示，但正在迁移到新[Security-Enhanced 版本的 CRT 函数](../c-runtime-library/security-enhanced-versions-of-crt-functions.md)是首选方法，因为它们提供更佳的安全性，但可能会泄露你的代码中的安全问题。
 
 ### <a name="upgrading-from-managed-extensions-for-c"></a>从托管扩展升级C++
 
@@ -98,7 +98,7 @@ COMObj2->Method(args);  // C++ equivalent
 **/clr**可以通过中的说明在开发环境中选取[/clr （公共语言运行时编译）](../build/reference/clr-common-language-runtime-compilation.md)。 正如前面提到的此步骤将自动禁用冲突的项目设置。
 
 > [!NOTE]
->  从 Visual 中升级托管的库或 web 服务项目时C++2003年 **/Zl**编译器选项将添加到**命令行**属性页。 这将导致 LNK2001。 删除 **/Zl**从**命令行**属性页后，可以解决。 请参阅[/Zl （省略默认库名）](../build/reference/zl-omit-default-library-name.md)并[设置编译器和生成属性](../build/working-with-project-properties.md)有关详细信息。 或添加到链接器的 msvcrt.lib 和 msvcmrt.lib**附加依赖项**属性。
+>  从 Visual Studio 2003 中，升级托管的库或 web 服务项目时 **/Zl**编译器选项将添加到**命令行**属性页。 这将导致 LNK2001。 删除 **/Zl**从**命令行**属性页后，可以解决。 请参阅[/Zl （省略默认库名）](../build/reference/zl-omit-default-library-name.md)并[设置编译器和生成属性](../build/working-with-project-properties.md)有关详细信息。 或添加到链接器的 msvcrt.lib 和 msvcmrt.lib**附加依赖项**属性。
 
 对于使用生成文件生成的项目，不兼容的编译器选项必须处于禁用状态一次手动 **/clr**添加。 请参阅 /[/clr 限制](../build/reference/clr-restrictions.md)为与不兼容的编译器选项的信息 **/clr**。
 

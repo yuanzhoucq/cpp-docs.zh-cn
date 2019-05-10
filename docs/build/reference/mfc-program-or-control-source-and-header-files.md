@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - file types [C++], MFC source and header
 ms.assetid: f61419a8-bf69-4bbb-8f7c-1734be5e6db6
-ms.openlocfilehash: a46fedc9f9bbc888e9b59d2ed313eaf7146394ff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 89e02054b72946c4b1b773ce79b1c380da6ef01a
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62321314"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446259"
 ---
 # <a name="mfc-program-or-control-source-and-header-files"></a>MFC 程序或控件的源文件和头文件
 
@@ -34,6 +34,6 @@ ms.locfileid: "62321314"
 
 ## <a name="see-also"></a>请参阅
 
-[为 Visual C++ 项目创建的文件类型](file-types-created-for-visual-cpp-projects.md)<br>
+[视觉对象文件类型创建C++项目](file-types-created-for-visual-cpp-projects.md)<br>
 [ATL 程序或控件的源文件和头文件](atl-program-or-control-source-and-header-files.md)<br>
 [CLR 项目](files-created-for-clr-projects.md)

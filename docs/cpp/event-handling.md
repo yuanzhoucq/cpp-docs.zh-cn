@@ -1,17 +1,15 @@
 ---
 title: 事件处理
-ms.date: 11/04/2016
+ms.date: 05/07/2019
 helpviewer_keywords:
-- attributes [C++], event handling
-- intrinsic functions [C++], event handling
-- event handling [C++], Visual C++
+- event handling [C++]
 ms.assetid: 82de3f9a-2d88-470c-9527-8a5b54c8ced4
-ms.openlocfilehash: 4c6701f04544b336de97196e8b65f4d0cd4be296
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: bd74ba0b20e2058f0b04d0d0d3c22c9d526157a0
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392149"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222122"
 ---
 # <a name="event-handling"></a>事件处理
 
@@ -21,7 +19,7 @@ COM 类主要支持事件处理 (实现 COM 对象，通常使用 ATL 类的 C++
 
 事件处理支持单线程和多线程用法，并防止数据同时进行多线程访问。 它还允许您从事件源或接收器类派生子类，并支持派生类中的扩展事件源/接收。
 
-Visual C++ 包含用于声明事件和事件处理程序的特性和关键字。 事件特性和关键字可用于 CLR 程序和本机 C++ 程序中。
+MicrosoftC++编译器包含特性和关键字用于声明事件和事件处理程序。 事件特性和关键字可用于 CLR 程序和本机 C++ 程序中。
 
 |主题|描述|
 |-----------|-----------------|

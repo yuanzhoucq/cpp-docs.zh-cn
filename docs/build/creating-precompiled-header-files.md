@@ -1,20 +1,18 @@
 ---
 title: 预编译的头文件
-ms.date: 12/10/2018
-f1_keywords:
-- pch
+ms.date: 05/06/2019
 helpviewer_keywords:
 - precompiled header files, creating
 - PCH files, creating
 - cl.exe compiler, precompiling code
 - .pch files, creating
 ms.assetid: e2cdb404-a517-4189-9771-c869c660cb1b
-ms.openlocfilehash: 5afda50c43f93baa2d73e6afb68f436560c3243e
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
-ms.translationtype: MT
+ms.openlocfilehash: 1dc6ff9de94f98a4eef3d3827bec177f22672674
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64341751"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220816"
 ---
 # <a name="precompiled-header-files"></a>预编译的头文件
 
@@ -43,7 +41,7 @@ ms.locfileid: "64341751"
 
 ## <a name="two-choices-for-precompiling-code"></a>预编译代码的两种方法
 
-通过视觉对象C++，您可以预编译任何 C 或C++的代码;并不局限于预编译仅标头文件。
+您可以预编译任何 C 或C++的代码;并不局限于预编译仅标头文件。
 
 预编译需要进行规划，但它提供明显更快的编译，如果预编译简单标头文件以外的源代码。
 
@@ -133,7 +131,7 @@ PCH 文件创建的过程通常处理的杂注会影响同随后使用 PCH 文�
 
 前面几节将概括介绍预编译标头： /Yc 和 /Yu，/Fp 选项，并[hdrstop](../preprocessor/hdrstop.md)杂注。 本部分介绍的项目; 使用手动预编译标头选项的方法它结尾的示例生成文件和它所管理的代码。
 
-在项目中使用手动预编译标头选项的另一个方法，研究一个位于视觉对象的默认安装过程中创建的 MFC\SRC 目录中的生成文件C++。 这些生成文件采用的本部分中介绍的一个类似方法，但更多地利用 Microsoft 程序维护实用工具 (NMAKE) 宏并提供更好地控制生成过程。
+在项目中使用手动预编译标头选项的另一个方法，研究位于 Visual Studio 默认安装过程中创建的 MFC\SRC 目录中的生成文件之一。 这些生成文件采用的本部分中介绍的一个类似方法，但更多地利用 Microsoft 程序维护实用工具 (NMAKE) 宏并提供更好地控制生成过程。
 
 ## <a name="pch-files-in-the-build-process"></a>生成过程中的 PCH 文件
 

@@ -4,12 +4,12 @@ ms.date: 09/18/2018
 helpviewer_keywords:
 - .vcxproj file structure
 ms.assetid: 14d0c552-29db-480e-80c1-7ea89d6d8e9c
-ms.openlocfilehash: 3b7c7bdad8848a3755db4ea565117459c72e939b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: a1052d0a0eeeff177f0a22883fe06cd07d7b03f6
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62317115"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446500"
 ---
 # <a name="vcxproj-and-props-file-structure"></a>.vcxproj 和 .props 文件结构
 
@@ -21,13 +21,13 @@ ms.locfileid: "62317115"
 
 1. 文件结构必须遵循本文中所述的规定形式。
 
-1. Visual C++ 项目系统目前不支持在项目项中使用通配符。 例如，不支持此内容：
+1. Visual StudioC++项目系统目前不支持通配符项目项中。 例如，不支持此内容：
 
    ```xml
    <ClCompile Include="*.cpp"/>
    ```
 
-1. Visual C++ 项目系统目前不支持在项目项路径中使用宏。 例如，不支持此内容：
+1. Visual StudioC++项目系统目前不支持宏项目项路径中。 例如，不支持此内容：
 
    ```xml
    <ClCompile Include="$(IntDir)\generated.cpp"/>
@@ -224,7 +224,7 @@ PropertyGroup 必须位于 `<Import Project="$(VCTargetsPath)\Microsoft.Cpp.prop
 </ItemGroup>
 ```
 
-Visual C++ 项目系统目前不支持在项目项中使用通配符。
+Visual StudioC++项目系统目前不支持通配符项目项中。
 
 ```xml
 <ItemGroup>
@@ -232,7 +232,7 @@ Visual C++ 项目系统目前不支持在项目项中使用通配符。
 </ItemGroup>
 ```
 
-Visual C++ 项目系统目前不支持在项目项中使用宏。
+Visual StudioC++项目系统目前不支持宏项目项中。
 
 ```xml
 <ItemGroup>

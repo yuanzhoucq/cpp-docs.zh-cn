@@ -1,43 +1,76 @@
 ---
 title: 编译C++面向 CLR 的 /CLI 程序
-ms.date: 09/17/2018
+description: 使用 MicrosoftC++若要创建程序和库可以连接的本机C++代码和.NET 程序。
+ms.date: 04/23/2019
 helpviewer_keywords:
 - command-line applications [C++], managed code
 - compiling programs [C++]
 - Visual C++, managed code
 - managed code [C++]
 ms.assetid: 339f89df-a5d2-4040-831a-ddbe25b5dce4
-ms.openlocfilehash: fcac0079185b6ceef981b9acfeb555ef29d464e0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8462b2b031bdcdebf65d58974c521d80e57d856d
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384395"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221811"
 ---
 # <a name="walkthrough-compile-a-ccli-program-that-targets-the-clr-in-visual-studio"></a>演练：编译C++面向 Visual Studio 中的 CLR 的 /CLI 程序
 
-通过使用C++/CLI 语言扩展可以创建C++使用的.NET 类并通过使用 Visual Studio 开发环境对其进行编译的程序。
+通过使用C++/CLI 可以创建C++使用.NET 类，以及本机程序C++类型。 C++/ CLI 旨在用于在控制台应用程序和包装本机 Dll 中C++代码，并使其可从.NET 程序中访问。 若要创建基于.NET 的 Windows 用户界面，请使用C#或 Visual Basic。 
 
 对于此过程，您可以键入自己C++程序或使用示例程序之一。 我们在此过程中使用的示例程序创建了名为“textfile.txt”的文本文件，并将其保存到项目目录。
 
 ## <a name="prerequisites"></a>系统必备
 
-这些主题假定你了解 C++ 语言的基础知识。
+- 你需要了解 C++ 语言的基础知识。
+- 在 Visual Studio 2017 及更高版本， C++/CLI 的支持是一个可选组件。 若要安装它，打开**Visual Studio 安装程序**从 Windows 开始菜单。 请确保**使用的桌面开发C++** 选中磁贴，然后在**可选**组件部分中，还检查 **C++CLI 支持**。
 
-### <a name="to-create-a-new-project-in-visual-studio-and-add-a-new-source-file"></a>在 Visual Studio 中创建新项目和添加新的源文件
+## <a name="create-a-new-project"></a>创建新项目
+
+以下步骤会有所不同，具体取决于所使用的 Visual Studio 版本。 确保左上版本选择器的此页设置正确。
+
+::: moniker range="vs-2019"
+
+### <a name="to-create-a-ccli-project-in-visual-studio-2019"></a>若要创建C++在 Visual Studio 2019 /CLI 项目
+
+1. 在中**解决方案资源管理器**，右键单击顶部以打开**创建一个新项目**对话框。
+
+1. 在对话框顶部，键入**CLR**在搜索框，然后选择**CLR 空项目**从结果列表中。 
+
+1. 选择**创建**按钮创建项目。
+
+::: moniker-end
+
+::: moniker range="vs-2017"
+
+### <a name="to-create-a-ccli-project-in-visual-studio-2017"></a>若要创建C++Visual Studio 2017 中的 /CLI 项目
 
 1. 创建新项目。 在 **“文件”** 菜单上，指向 **“新建”**，然后单击 **“项目”**。
 
 1. 在 Visual C++ 项目类型中，依次单击“CLR”、“CLR 空项目”。
 
-   > [!NOTE]
-   > 如果缺少“CLR 空项目”类型（仅限 Visual Studio 2017），请选择“新建项目”对话框左窗格中的“打开 Visual Studio 安装程序”。 安装位于“可选”组件部分中“使用 C++ 的桌面开发”下名为“C++/CLI 支持”的选项。<br/>
+1. 键入项目名称。 默认情况下，包含该项目的解决方案具备和新项目一样的名称，不过可以输入一个不同的名称。 可以按需要为项目输入不同的位置。
 
-1. 键入项目名称。
+1. 单击“确定”以创建新项目。
 
-   默认情况下，包含该项目的解决方案具备和新项目一样的名称，不过可以输入一个不同的名称。 可以按需要为项目输入不同的位置。
+::: moniker-end
 
-   单击“确定”以创建新项目。
+::: moniker range="vs-2015"
+
+### <a name="to-create-a-ccli-project-in-visual-studio-2015"></a>若要创建C++Visual Studio 2015 中的 /CLI 项目
+
+1. 创建新项目。 在 **“文件”** 菜单上，指向 **“新建”**，然后单击 **“项目”**。
+
+1. 在 Visual C++ 项目类型中，依次单击“CLR”、“CLR 空项目”。
+
+1. 键入项目名称。 默认情况下，包含该项目的解决方案具备和新项目一样的名称，不过可以输入一个不同的名称。 可以按需要为项目输入不同的位置。
+
+1. 单击“确定”以创建新项目。
+
+::: moniker-end
+
+## <a name="add-a-source-file"></a>添加源文件
 
 1. 如果“解决方案资源管理器”不可见，请单击“视图”菜单上的“解决方案资源管理器”。
 
@@ -57,7 +90,7 @@ ms.locfileid: "62384395"
 
    `StreamWriter^ sw = gcnew StreamWriter(fileName);`
 
-   若要详细了解新的 Visual C++ 语法，请参阅[运行时平台的组件扩展](../extensions/component-extensions-for-runtime-platforms.md)。
+   有关详细信息C++/CLI 语法，请参阅[运行时平台的组件扩展](../extensions/component-extensions-for-runtime-platforms.md)。
 
 1. 在 **“生成”** 菜单上，单击 **“生成解决方案”**。
 

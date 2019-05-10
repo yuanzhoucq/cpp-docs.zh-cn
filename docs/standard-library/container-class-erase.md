@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - erase method
 ms.assetid: abc091c5-5a80-4bd8-93a8-a2d9bde2efec
-ms.openlocfilehash: 11e13fc74de779076b40ba338a21a6736eb04e06
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0ef4db1c14942fc896f10095ff2331648d27c820
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62211051"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221639"
 ---
 # <a name="container-classerase"></a>Container Class::erase
 
 > [!NOTE]
-> 本主题位于 Visual C++ 文档内，作为在 C++ 标准库内使用的容器的非功能性示例。 有关详细信息，请参阅 [C++ 标准库容器](../standard-library/stl-containers.md)。
+> 本主题是在 microsoftC++作为容器中使用的非功能性示例文档C++标准库。 有关详细信息，请参阅 [C++ 标准库容器](../standard-library/stl-containers.md)。
 
 删除元素。
 

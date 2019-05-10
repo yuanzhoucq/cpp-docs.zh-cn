@@ -1,15 +1,15 @@
 ---
 title: Lambda 表达式语法
-ms.date: 03/25/2019
+ms.date: 05/07/2019
 helpviewer_keywords:
 - lambda expressions [C++], syntax
 ms.assetid: 5d6154a4-f34d-4a15-970d-7e7de45f54e9
-ms.openlocfilehash: 2df2c203024e1b50cffdcb15af834fe09effaae2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 37e4a512678bf276b5244fd54945f49a37ff8d01
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62216506"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222399"
 ---
 # <a name="lambda-expression-syntax"></a>Lambda 表达式语法
 
@@ -83,7 +83,7 @@ There are 4 even numbers in the vector.
 
 ## <a name="example-2-using-a-function-object"></a>示例 2：使用函数对象
 
-有时 lambda 过于庞大，无法在上一示例的基础上大幅度扩展。 下面的示例使用而不是 lambda、 函数对象一起使用**for_each**函数，以产生与示例 1 相同的结果。 两个示例都在 `vector` 对象中存储偶数的个数。 为保持运算的状态，`FunctorClass` 类通过引用存储 `m_evenCount` 变量作为成员变量。 若要执行此操作，`FunctorClass`实现函数调用运算符**operator （)**。 Visual C++ 编译器生成的代码与示例 1 中的 lambda 代码在大小和性能上相差无几。 对于类似本文中示例的基本问题，较为简单的 lambda 设计可能优于函数对象设计。 但是，如果你认为该功能在将来可能需要重大扩展，则使用函数对象设计，这样代码维护会更简单。
+有时 lambda 过于庞大，无法在上一示例的基础上大幅度扩展。 下面的示例使用而不是 lambda、 函数对象一起使用**for_each**函数，以产生与示例 1 相同的结果。 两个示例都在 `vector` 对象中存储偶数的个数。 为保持运算的状态，`FunctorClass` 类通过引用存储 `m_evenCount` 变量作为成员变量。 若要执行此操作，`FunctorClass`实现函数调用运算符**operator （)**。 MicrosoftC++编译器生成的代码，这与在大小和性能示例 1 中的 lambda 代码。 对于类似本文中示例的基本问题，较为简单的 lambda 设计可能优于函数对象设计。 但是，如果你认为该功能在将来可能需要重大扩展，则使用函数对象设计，这样代码维护会更简单。
 
 有关详细信息**operator （)**，请参阅[函数调用](../cpp/function-call-cpp.md)。 有关详细信息**for_each**函数中，请参阅[for_each](../standard-library/algorithm-functions.md#for_each)。
 

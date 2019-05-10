@@ -12,12 +12,12 @@ helpviewer_keywords:
 - resource-only DLLs [C++], MFC applications
 - satellite DLLs [C++]
 ms.assetid: 3a1100ae-a9c8-47b5-adbd-cbedef5992ef
-ms.openlocfilehash: c593d0bae6fc23cfd765116c44b07caa2a6d8ccf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 1f512cc17832564b5eb530b97f8bfb2642c43d43
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188734"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220740"
 ---
 # <a name="localized-resources-in-mfc-applications-satellite-dlls"></a>MFC 应用程序中的本地化的资源：附属 Dll
 
@@ -53,5 +53,5 @@ MFC 将尝试为每个按顺序，停止时找到了以下语言版本加载资�
 
 ## <a name="see-also"></a>请参阅
 
-[Visual C++ 中的 DLL](dlls-in-visual-cpp.md)<br/>
-[TN057:本地化的 MFC 组件](../mfc/tn057-localization-of-mfc-components.md)
+[创建 C /C++ Visual Studio 中的 Dll](dlls-in-visual-cpp.md)<br/>
+[TN057：MFC 组件本地化](../mfc/tn057-localization-of-mfc-components.md)

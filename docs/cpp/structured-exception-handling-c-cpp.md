@@ -9,16 +9,16 @@ helpviewer_keywords:
 - try-catch keyword [C++], termination handlers
 - C++ exception handling, exception handlers
 ms.assetid: dd3b647d-c269-43a8-aab9-ad1458712976
-ms.openlocfilehash: b77a218340399578e3c9428100476787e2e60b25
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: e948d941afa1459623619e385aa67b1c60490245
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62330565"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221956"
 ---
 # <a name="structured-exception-handling-cc"></a>Structured Exception Handling (C/C++)
 
-结构化的异常处理 (SEH) 是 Microsoft 扩展到 C 来适当地处理某些异常代码的情况下，例如硬件故障。 尽管 Windows 和视觉对象C++支持 SEH，我们建议你使用 ISO 标准C++异常处理，因为它使代码更可移植并更灵活。 不过，若要维护现有代码或为特定类型的程序，您仍可能必须使用 SEH。
+结构化的异常处理 (SEH) 是 Microsoft 扩展到 C 来适当地处理某些异常代码的情况下，例如硬件故障。 尽管 Windows 和 MicrosoftC++支持 SEH，我们建议你使用 ISO 标准C++异常处理，因为它使代码更可移植并更灵活。 不过，若要维护现有代码或为特定类型的程序，您仍可能必须使用 SEH。
 
 **Microsoft 专用：**
 
@@ -34,7 +34,7 @@ ms.locfileid: "62330565"
 
 使用 SEH，可以确保正确释放内存块和文件等资源如果执行意外终止。 你还可以处理特定问题 — 例如，没有足够的内存-使用简洁的结构化的代码，不依赖于**goto**语句或返回代码的详尽测试。
 
-这篇文章中引用的 try-except 和 try-finally 语句是 C 语言的 Microsoft 扩展。 它们通过使应用程序可以在事件后获得对程序的控制（否则事件将终止执行）来支持 SEH。 尽管 SEH 使用 C++ 源文件，但它并不是专为 C++ 设计的。 如果使用 SEH 中的C++通过使用编译的程序[/EHa 或 /EHsc](../build/reference/eh-exception-handling-model.md)选项，析构函数会调用本地对象，但其他执行行为可能不是你期望的内容。 有关说明，请参阅本文后面的示例。 在大多数情况下，而不是 SEH 我们建议你使用 ISO 标准[C++ 异常处理](../cpp/try-throw-and-catch-statements-cpp.md)，Visual C++ 还支持。 使用 C++ 异常处理可以确保你的代码更具可移植性，并且你可以处理任何类型的异常。
+这篇文章中引用的 try-except 和 try-finally 语句是 C 语言的 Microsoft 扩展。 它们通过使应用程序可以在事件后获得对程序的控制（否则事件将终止执行）来支持 SEH。 尽管 SEH 使用 C++ 源文件，但它并不是专为 C++ 设计的。 如果使用 SEH 中的C++通过使用编译的程序[/EHa 或 /EHsc](../build/reference/eh-exception-handling-model.md)选项，析构函数会调用本地对象，但其他执行行为可能不是你期望的内容。 有关说明，请参阅本文后面的示例。 在大多数情况下，而不是 SEH 我们建议你使用 ISO 标准[C++异常处理](../cpp/try-throw-and-catch-statements-cpp.md)，它在 MicrosoftC++编译器还支持。 使用 C++ 异常处理可以确保你的代码更具可移植性，并且你可以处理任何类型的异常。
 
 如果你有使用 SEH 的 C 代码，可以混合使用C++使用的代码C++异常处理。 有关信息，请参阅[处理中的结构化的异常C++ ](../cpp/exception-handling-differences.md)。
 
