@@ -8,16 +8,16 @@ helpviewer_keywords:
 - Safe Libraries, C++ Standard Library
 - Safe C++ Standard Library
 ms.assetid: 3993340f-1f29-4d81-b3f5-52a52bc8e148
-ms.openlocfilehash: 340d300efb442fedb18b738c275bc0a79f874991
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0c8f2de77255015254eabe018399f913b4582b7c
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409728"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220472"
 ---
 # <a name="safe-libraries-c-standard-library"></a>安全库：C++ 标准库
 
-已对随附于 Visual C++ 的库（包括 C++ 标准库）实施了多项功能增强以使它们更加安全。
+对与 Microsoft 随附的库进行了多项增强功能C++，其中包括C++标准库，以使它们更加安全。
 
 已将 C++ 标准库中的多个方法确定为具有潜在的不安全性，因为它们可能导致缓冲区溢出或其他代码缺陷。 建议不要使用这些方法，已创建了更安全的新方法来替代这些方法。 这些新方法均以 `_s`结尾。
 

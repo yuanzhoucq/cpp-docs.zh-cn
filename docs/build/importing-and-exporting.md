@@ -1,6 +1,6 @@
 ---
 title: 导入和导出
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
 - DLLs [C++], importing
 - exporting DLLs [C++]
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - DLLs [C++], exporting from
 - __declspec(dllimport) keyword [C++]
 ms.assetid: 7c44c2aa-2117-4cec-9615-a65bfd3f8f7b
-ms.openlocfilehash: 882010cd28c291e9f49ca0f7dd9d646c70130184
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 03931f7f128ab0666890bb8e76677db67dda8fc7
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188842"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220639"
 ---
 # <a name="importing-and-exporting"></a>导入和导出
 
@@ -31,8 +31,6 @@ ms.locfileid: "62188842"
 
 ## <a name="using-declspec"></a>使用 __declspec
 
-VisualC++使用 **__declspec （dllimport)** 并 **__declspec （dllexport)** 替换 **__export** C++.
-
 不需要使用 **__declspec （dllimport)** 为你的代码来正确编译，但执行此操作允许编译器生成更好的代码。 编译器就能够生成更好的代码，因为它可以确定函数中是否存在一个 DLL，它允许编译器以生成将跳过一定程度的间接性通常会出现跨 DLL 边界函数调用中的代码。 但是，必须使用 **__declspec （dllimport)** 导入一个 DLL 中使用的变量。
 
 使用适当的.def 文件导出部分中， **__declspec （dllexport)** 不是必需的。 **__declspec （dllexport)** 添加了以可以方便地从.exe 或.dll 文件中导出函数，而无需使用.def 文件。
@@ -47,4 +45,4 @@ Win32 可移植可执行文件格式设计为最大程度减少必须打开，�
 
 ## <a name="see-also"></a>请参阅
 
-[Visual C++ 中的 DLL](dlls-in-visual-cpp.md)
+[创建 C /C++ Visual Studio 中的 Dll](dlls-in-visual-cpp.md)

@@ -5,16 +5,16 @@ helpviewer_keywords:
 - .vcxproj files
 - C++ projects, project file format
 ms.assetid: 5261cf45-3136-40a6-899e-dc1339551401
-ms.openlocfilehash: cfe40d6520187212ab77607273c555f12012fd02
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 306b6a7b39db758c3712b1d57460268fc6414726
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62319819"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65217740"
 ---
 # <a name="project-files"></a>项目文件
 
-Visual C++ 项目文件是基于 XML 的文件，具有 .vcxproj 文件扩展名并包含生成 Visual C++ 项目所需的信息。 请注意，项目文件导入扩展名为 .props 或 .targets 的各种项目文件。 这些文件包含其他生成信息，并且可能本身引用其他 .props 或 .targets 文件。 文件路径中的宏（例如 `$(VCTargetsPath)`）取决于安装的 Visual Studio。 详细了解这些宏和 *.props*并 *.targets*文件，请参阅[VC + + Directories Property Page](vcpp-directories-property-page.md)，[设置C++编译器和生成在 Visual Studio 中的属性](../working-with-project-properties.md)并[用于常见宏生成命令和属性](common-macros-for-build-commands-and-properties.md)。
+一个C++在 Visual Studio 中的项目文件是一个基于 XML 的文件具有.vcxproj 文件扩展名，并包含生成所需的信息C++项目。 请注意，项目文件导入扩展名为 .props 或 .targets 的各种项目文件。 这些文件包含其他生成信息，并且可能本身引用其他 .props 或 .targets 文件。 文件路径中的宏（例如 `$(VCTargetsPath)`）取决于安装的 Visual Studio。 详细了解这些宏和 *.props*并 *.targets*文件，请参阅[VC + + Directories Property Page](vcpp-directories-property-page.md)，[设置C++编译器和生成在 Visual Studio 中的属性](../working-with-project-properties.md)并[用于常见宏生成命令和属性](common-macros-for-build-commands-and-properties.md)。
 
 ## <a name="example"></a>示例
 

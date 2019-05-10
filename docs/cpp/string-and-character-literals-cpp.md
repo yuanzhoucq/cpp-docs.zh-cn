@@ -1,27 +1,18 @@
 ---
 title: 字符串和字符文本 （C++）
-ms.date: 11/04/2016
+ms.date: 05/07/2019
 f1_keywords:
 - R
 helpviewer_keywords:
-- L constant
-- escape sequences
-- Null strings, null-terminated strings
-- literal strings, C++
-- Null strings
-- string literals, syntax
-- string literals
-- literal strings
-- strings [C++], string literals
-- NULL, character constant
-- wide characters, strings
+- literal strings [C++]
+- string literals [C++]
 ms.assetid: 61de8f6f-2714-4e7b-86b6-a3f885d3b9df
-ms.openlocfilehash: d3721f3624a64a24de0a5458d88de4836b07a9c1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: d3c85854256816d5553959a16526ad0d13cf14b4
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62330838"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221974"
 ---
 # <a name="string-and-character-literals--c"></a>字符串和字符文本 （C++）
 
@@ -106,7 +97,7 @@ int main()
 
 有三种类型的转义序列：简单、八进制和十六进制。 转义序列可以是以下任一项：
 
-|“值”|转义序列|
+|值|转义序列|
 |-----------|---------------------|
 | 换行符 | \\n |
 | 反斜杠 | \\\\ |
@@ -328,7 +319,7 @@ const size_t byteSize = (wcslen(str) + 1) * sizeof(wchar_t);
 
 **Microsoft 专用**
 
-视觉对象中C++可以使用字符串文本以将指针初始化为非常量**char**或**wchar_t**。 可以在 C99 代码中使用，但 C++98 中已弃用，C++11 中已删除。 尝试修改该字符串将导致访问冲突，例如：
+在 MicrosoftC++可以使用字符串文本以将指针初始化为非常量**char**或**wchar_t**。 可以在 C99 代码中使用，但 C++98 中已弃用，C++11 中已删除。 尝试修改该字符串将导致访问冲突，例如：
 
 ```cpp
 wchar_t* str = L"hello";

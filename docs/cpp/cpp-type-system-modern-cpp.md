@@ -3,12 +3,12 @@ title: C++ 类型系统（现代 C++）
 ms.date: 11/19/2018
 ms.topic: conceptual
 ms.assetid: 553c0ed6-77c4-43e9-87b1-c903eec53e80
-ms.openlocfilehash: 4dfbf408654ccc92c92d6855c15238cb07c01b58
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 3fa13d2f0b274361c2ad34b0eb64421d2d1d037e
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392270"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222131"
 ---
 # <a name="c-type-system-modern-c"></a>C++ 类型系统（现代 C++）
 
@@ -53,7 +53,7 @@ int maxValue;                // Not recommended! maxValue contains
 
 ## <a name="fundamental-built-in-types"></a>基本（内置）类型
 
-不同于某些语言，C++ 中不存在派生所有其他类型的通用基类型。 语言的 Visual C++ 实现包括许多*基本类型*，也称为*内置类型*。 这包括数字类型，如**int**， **double**，**长**， **bool**，再加上**char**和**wchar_t**类型分别为 ASCII 和 UNICODE 字符。 最基本类型 (除**bool**， **double**， **wchar_t**和相关类型) 都具有未签名版本中，对其进行修改的变量可存储的值范围。 例如， **int**，它存储 32 位带符号的整数可以表示值介于-2,147,483,648 到 2,147,483,647。 **无符号的 int**，也存储为 32 位，可以存储一个介于 0 和 4,294,967,295 之间。 可能的值的总数在每种情况下都相同；仅范围不同。
+不同于某些语言，C++ 中不存在派生所有其他类型的通用基类型。 语言包括许多*基本类型*，也称为*内置类型*。 这包括数字类型，如**int**， **double**，**长**， **bool**，再加上**char**和**wchar_t**类型分别为 ASCII 和 UNICODE 字符。 最基本类型 (除**bool**， **double**， **wchar_t**和相关类型) 都具有未签名版本中，对其进行修改的变量可存储的值范围。 例如， **int**，它存储 32 位带符号的整数可以表示值介于-2,147,483,648 到 2,147,483,647。 **无符号的 int**，也存储为 32 位，可以存储一个介于 0 和 4,294,967,295 之间。 可能的值的总数在每种情况下都相同；仅范围不同。
 
 基础类型由编译器识别，编译机包含内置规则，这些规则管理可对它们执行的操作以及将它们转换为其他基础类型的方式。 有关内置类型及其大小和数值限制的完整列表，请参阅[基本类型](../cpp/fundamental-types-cpp.md)。
 

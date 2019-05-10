@@ -1,23 +1,24 @@
 ---
 title: 演练：编译一个本机C++命令行上的程序
+description: 使用 MicrosoftC++编译器从命令提示符。
 ms.custom: conceptual
-ms.date: 09/24/2018
+ms.date: 04/23/2019
 helpviewer_keywords:
 - native code [C++]
 - Visual C++, native code
 - compiling programs [C++]
 - command-line applications [C++], native
 ms.assetid: b200cfd1-0440-498f-90ee-7ecf92492dc0
-ms.openlocfilehash: d7b5bc88966f7edbb7179c36398b1dd95afb971f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 64300c8683dd5d1c40638ba7d50acfca6abc40c0
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62313878"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65217709"
 ---
 # <a name="walkthrough-compiling-a-native-c-program-on-the-command-line"></a>演练：编译一个本机C++命令行上的程序
 
-VisualC++包括一个命令行C++可用于创建从基本的控制台应用到通用 Windows 平台应用、 桌面应用程序、 设备驱动程序和.NET 组件的编译器。
+Visual Studio 提供了一个命令行C++可用于创建从基本的控制台应用到通用 Windows 平台应用、 桌面应用程序、 设备驱动程序和.NET 组件的编译器。
 
 在本演练中，您将创建一个基本的"Hello，World"的样式C++通过使用文本编辑器中，程序，然后在命令行上对其进行编译。 如果你想要试用 Visual Studio IDE 而不是使用命令行，请参阅[演练：使用项目和解决方案 (C++)](../ide/walkthrough-working-with-projects-and-solutions-cpp.md)或[使用 Visual Studio IDE 的C++桌面开发](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)。
 
@@ -29,7 +30,7 @@ VisualC++包括一个命令行C++可用于创建从基本的控制台应用到�
 
 Visual Studio 是全功能的编辑器、 资源管理器、 调试器和编译器支持多种语言和平台的强大的集成的开发环境 (IDE)。 有关如何下载并安装 Visual Studio 中，包括免费的 Visual Studio Community 版，并且包括用于 c 语言的支持信息 /C++开发，请参阅[安装C++Visual Studio 中支持](vscpp-step-0-installation.md)。
 
-Visual Studio 的生成工具安装命令行编译器、 工具和构建 C 所需的库和C++程序。 它非常适合生成实验室或教室练习和相对较快的安装。 若要安装的命令行工具，下载[Visual Studio 2017 生成工具](https://go.microsoft.com/fwlink/p/?linkid=875721)。
+Visual Studio 的生成工具安装命令行编译器、 工具和构建 C 所需的库和C++程序。 它非常适合生成实验室或教室练习和相对较快的安装。 若要安装的命令行工具，用于生成工具用于 Visual Studio 上查找[Visual Studio 下载](https://visualstudio.microsoft.com/downloads/)页。
 
 您可以生成一个 C 前或C++程序必须在命令行中，验证安装这些工具，并且，你可以从命令行访问它们。 VisualC++对要查找的工具、 标头和使用的库的命令行环境的复杂要求。 **不能使用视觉对象C++在纯命令提示符窗口中**而无需执行一些准备工作。 幸运的是，VisualC++安装，以便启动已设置为命令行生成环境的开发人员命令提示符快捷方式。 遗憾的是，开发人员命令提示符快捷方式和所处位置的名称是不同视觉对象的几乎每个版本中C++和在不同版本的 Windows。 在第一个演练任务查找适合使用。
 
@@ -38,11 +39,11 @@ Visual Studio 的生成工具安装命令行编译器、 工具和构建 C 所�
 
 ### <a name="open-a-developer-command-prompt"></a>打开开发人员命令提示
 
-1. 如果已在 Windows 10 上安装 Visual Studio 2017，打开开始菜单，然后选择**所有应用**。 向下滚动并打开**Visual Studio 2017**文件夹 （不是 Visual Studio 2017 应用程序）。 选择**VS 2017 开发人员命令提示**若要打开命令提示符窗口。
+1. 如果已安装 Visual Studio 2017 或更高版本在 Windows 10，打开开始菜单，然后选择**所有应用**。 向下滚动并打开**Visual Studio**文件夹 （而不是 Visual Studio 应用程序）。 选择**VS 开发人员命令提示**若要打开命令提示符窗口。
 
    如果已安装 Microsoft Visual C++ Windows 10 上生成工具 2015年打开**启动**菜单，然后选择**的所有应用**。 向下滚动并打开**可视化C++生成工具**文件夹。 选择**可视化C++2015 x86 本机工具命令提示**以打开命令提示符窗口。
 
-   如果要使用不同版本的 Visual Studio 或在运行不同版本的 Windows，在开始菜单中查找或包含开发人员命令提示符快捷方式的 Visual Studio 工具文件夹的起始页。 此外可以使用 Windows 搜索功能搜索"开发人员命令提示符"并选择一个与你已安装的 Visual Studio 版本匹配。 使用快捷方式打开命令提示符窗口。
+   此外可以使用 Windows 搜索功能搜索"开发人员命令提示符"并选择一个与你已安装的 Visual Studio 版本匹配。 使用快捷方式打开命令提示符窗口。
 
 1. 接下来，确保视觉对象C++开发人员命令提示设置是否正确。 在命令提示符窗口中，输入`cl`并验证输出看起来类似如下：
 
@@ -87,7 +88,7 @@ Visual Studio 的生成工具安装命令行编译器、 工具和构建 C 所�
 
 1. 保存所有内容！ 在记事本中，在“文件”  菜单上选择“保存” 。
 
-   恭喜，现已创建视觉对象C++源文件、 hello.cpp，即准备进行编译。
+   恭喜，现已创建C++源文件、 hello.cpp，即准备进行编译。
 
 1. 切换回开发人员命令提示窗口。 输入`dir`在命令提示符下，若要列出 c:\hello 目录的内容。 应会看到源文件 hello.cpp 中的目录列表中，类似于如下所示：
 

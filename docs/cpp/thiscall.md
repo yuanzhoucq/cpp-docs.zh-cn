@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - __thiscall keyword [C++]
 ms.assetid: a6a22dd2-0101-4885-b33b-22f6057965df
-ms.openlocfilehash: fc5a32fedf52377889b61103856e2125733cd696
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: e51879ae62b2881e0adadbe59859605f6cc58947
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62266773"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221913"
 ---
 # <a name="thiscall"></a>__thiscall
 
@@ -24,7 +24,7 @@ ms.locfileid: "62266773"
 
 使用编译时[/clr: pure](../build/reference/clr-common-language-runtime-compilation.md)，所有函数和函数指针`__clrcall`除非另行指定。 **/Clr: pure**并 **/clr: safe**编译器选项在 Visual Studio 2015 中弃用，在 Visual Studio 2017 中不受支持。
 
-在视觉对象之前的版本中C++2005 中， **__thiscall**调用约定无法显式指定在程序中，因为 **__thiscall**不是一个关键字。
+在 Visual Studio 2005 中以前, 的版本 **__thiscall**调用约定无法显式指定在程序中，因为 **__thiscall**未一个关键字。
 
 `vararg` 成员函数使用 **__cdecl**调用约定。 所有函数参数都推送到堆栈上，使用**这**指针将位于堆栈上最后一次
 

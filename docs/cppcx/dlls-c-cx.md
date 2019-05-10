@@ -2,16 +2,16 @@
 title: DLL (C++/CX)
 ms.date: 02/06/2018
 ms.assetid: 5b8bcc57-64dd-4c54-9f24-26a25bd5dddd
-ms.openlocfilehash: 1a72ecc5eb46abfbc7b9a52a168510ce0873ee04
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 13e733f0be27fe532af6109bdd6fc53291265e66
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62183267"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447237"
 ---
 # <a name="dlls-ccx"></a>DLL (C++/CX)
 
-可以使用 Visual Studio 来创建标准的 Win32 DLL 或 Windows 运行时组件可供通用 Windows 平台 (UWP) 应用的 DLL。 通过使用 Visual Studio 或视觉对象的版本创建的标准 DLLC++早于 Visual Studio 2012 中的 UWP 应用可能无法正确加载和可能无法通过应用程序验证测试在 Microsoft Store 中的编译器。
+可以使用 Visual Studio 来创建标准的 Win32 DLL 或 Windows 运行时组件可供通用 Windows 平台 (UWP) 应用的 DLL。 已通过使用版本的 Visual Studio 或 Microsoft 的标准 DLLC++早于 Visual Studio 2012 中的 UWP 应用可能无法正确加载和可能无法通过应用程序验证测试在 Microsoft Store 中的编译器。
 
 ## <a name="windows-runtime-component-dlls"></a>Windows 运行时组件 Dll
 

@@ -1,18 +1,18 @@
 ---
 title: 演练：调试C++AMP 应用程序
-ms.date: 11/19/2018
+ms.date: 04/23/2019
 helpviewer_keywords:
 - debugging, C++ Accelerated Massive Parallelism
 - C++ AMP, debugging
 - C++ Accelerated Massive Parallelism, debugging
 - debugging, C++ AMP
 ms.assetid: 40e92ecc-f6ba-411c-960c-b3047b854fb5
-ms.openlocfilehash: 5312ba7354c28286cafb092711d66d56a920581a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3f358f66d1e8a64c5042b60d7385de26a559642e
+ms.sourcegitcommit: 18d3b1e9cdb4fc3a76f7a650c31994bdbd2bde64
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62237922"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64877551"
 ---
 # <a name="walkthrough-debugging-a-c-amp-application"></a>演练：调试C++AMP 应用程序
 
@@ -38,15 +38,37 @@ ms.locfileid: "62237922"
 
 - 确保文本编辑器中显示行号。 有关详细信息，请参阅[如何：在编辑器中显示行号](/visualstudio/ide/reference/how-to-display-line-numbers-in-the-editor)。
 
-- 请确保正在运行 Windows 8 或 Windows Server 2012，以支持在软件模拟器上进行调试。
+- 请确保至少运行 Windows 8 或 Windows Server 2012，以支持在软件模拟器上进行调试。 
 
 [!INCLUDE[note_settings_general](../../mfc/includes/note_settings_general_md.md)]
 
 ### <a name="to-create-the-sample-project"></a>创建示例项目
 
+创建一个项目的说明根据所使用的 Visual Studio 版本而有所不同。 请确保已选择在此页的左上角的正确版本。
+
+::: moniker range="vs-2019"
+
+### <a name="to-create-the-sample-project-in-visual-studio-2019"></a>若要在 Visual Studio 2019 中创建示例项目
+
+1. 在菜单栏上依次选择**文件** > **新建** > **项目**打开**创建一个新项目**对话框。
+
+1. 在对话框顶部，设置**语言**到**C++**，将**平台**到**Windows**，并设置**项目类型**到**控制台**。 
+
+1. 从已筛选的项目类型列表中，选择**控制台应用程序**然后选择**下一步**。 在下一页上，输入`AMPMapReduce`中**名称**框来指定项目的名称并根据需要指定项目位置。
+
+   ![将项目命名](../../build/media/mathclient-project-name-2019.png "项目命名为")
+
+1. 选择**创建**按钮以创建客户端项目。
+
+::: moniker-end
+
+::: moniker range="<=vs-2017"
+
+### <a name="to-create-the-sample-project-in-visual-studio-2017-or-visual-studio-2015"></a>若要在 Visual Studio 2017 或 Visual Studio 2015 中创建示例项目
+
 1. 启动 Visual Studio。
 
-2. 在菜单栏上，依次选择“文件” > “新建” > “项目”。
+2. 在菜单栏上选择“文件”>“新建”>“项目”。
 
 3. 下**已安装**在模板窗格中，选择**Visual C++** 。
 
@@ -57,6 +79,9 @@ ms.locfileid: "62237922"
 6. 清除**预编译标头**复选框，，然后选择**完成**按钮。
 
 7. 在中**解决方案资源管理器**，删除从项目的 stdafx.h、 targetver.h 和 stdafx.cpp。
+
+::: moniker-end
+
 
 8. 打开 AMPMapReduce.cpp 并用下面的代码替换其中的内容。
 

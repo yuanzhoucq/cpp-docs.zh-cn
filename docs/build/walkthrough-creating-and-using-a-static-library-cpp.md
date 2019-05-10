@@ -1,18 +1,19 @@
 ---
 title: 演练：创建和使用静态库 (C++)
+description: 使用C++若要在 Visual Studio 中创建静态库 (.lib)。
 ms.custom: get-started-article
-ms.date: 09/18/2018
+ms.date: 04/25/2019
 helpviewer_keywords:
 - libraries [C++], static
 - static libraries [C++]
 ms.assetid: 3cc36411-7d66-4240-851e-dacb9a8fd6ac
 ms.author: corob
-ms.openlocfilehash: 0d527681abb077a01b3d902c092a21de7a052867
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: afb12cc38dbaf0af88e93a9b329a59f3b54c8557
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62313607"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65217564"
 ---
 # <a name="walkthrough-creating-and-using-a-static-library-c"></a>演练：创建和使用静态库 (C++)
 
@@ -36,30 +37,55 @@ ms.locfileid: "62313607"
 
 ##  <a name="CreateLibProject"></a> 创建静态库项目
 
-### <a name="to-create-a-static-library-project"></a>创建静态库项目
+有关如何创建项目的说明使用 Visual Studio 2019 或早期版本而异。 请确保已设置在此页的左上角的正确版本。
 
-1. 在菜单栏上，依次选择“文件” > “新建” > “项目”。
+::: moniker range="vs-2019"
+
+### <a name="to-create-a-static-library-project-in-visual-studio-2019"></a>若要在 Visual Studio 2019 中创建静态库项目
+
+1. 在菜单栏上依次选择**文件** > **新建** > **项目**打开**创建一个新项目**对话框。
+
+1. 在对话框顶部，设置**语言**到**C++**，将**平台**到**Windows**，并设置**项目类型**到**库**。 
+
+1. 从已筛选的项目类型列表中，选择**静态库**然后选择**下一步**。 在下一页上，输入*MathFuncsLib*中**名称**框来指定项目的名称并根据需要指定项目位置。
+
+1. 选择**创建**按钮以创建客户端项目。
+
+::: moniker-end
+
+::: moniker range="vs-2017"
+
+### <a name="to-create-a-static-library-project-in-visual-studio-2017"></a>若要在 Visual Studio 2017 中创建静态库项目
+
+1. 在菜单栏上选择“文件”>“新建”>“项目”。
 
 1. 在左窗格中**新的项目**对话框框中，展开**已安装** > **Visual C++** ，然后选择**Windows 桌面**. 在中心窗格中，选择**Windows 桌面向导**。
 
-   > [!NOTE]
-   > 对于版本的 Visual Studio 2017，在**新的项目**对话框框中，展开**已安装** > **模板** >  **Visual C++** ，然后选择**Win32**。 在中间窗格中，选择 **“Win32 控制台应用程序”**。
+1. 在 *“名称”* 框中为项目指定名称，例如 **MathFuncsLib** 。 在 *“解决方案名称”* 框中为解决方案指定名称，例如 **StaticLibrary** 。 选择“确定”  按钮。
+
+1. 下**应用程序类型**，选择**静态库 (.lib)**。
+
+1. 下**其他选项**，取消选中**预编译标头**复选框。
+
+1. 选择**确定**创建项目。
+
+::: moniker-end
+
+::: moniker range="vs-2015"
+
+### <a name="to-create-a-static-library-project-in-visual-studio-2015"></a>若要在 Visual Studio 2015 中创建静态库项目
+
+1. 在菜单栏上选择“文件”>“新建”>“项目”。
+
+1. 在中**新的项目**对话框框中，展开**已安装** > **模板** > **Visual C++** ，并然后选择**Win32**。 在中间窗格中，选择 **“Win32 控制台应用程序”**。
 
 1. 在 *“名称”* 框中为项目指定名称，例如 **MathFuncsLib** 。 在 *“解决方案名称”* 框中为解决方案指定名称，例如 **StaticLibrary** 。 选择“确定”  按钮。
 
-    - 对于 Visual Studio 2017，
+1. 单击 **“下一步”**。
 
-        1. 下**应用程序类型**，选择**静态库 (.lib)**。
+1. 下**应用程序类型**，选择**静态库**。 然后取消选中**预编译标头**框，然后选择**完成**。
 
-        1. 下**其他选项**，取消选中**预编译标头**复选框。
-
-        1. 选择**确定**创建项目。
-
-    - 对于版本的 Visual Studio 2017，
-
-        1. 单击 **“下一步”**。
-
-        1. 下**应用程序类型**，选择**静态库**。 然后取消选中**预编译标头**框，然后选择**完成**。
+::: moniker-end
 
 ##  <a name="AddClassToLib"></a> 向静态库添加类
 
@@ -84,30 +110,53 @@ ms.locfileid: "62313607"
 
 ##  <a name="CreateAppToRefTheLib"></a> 创建引用静态库的 C++ 控制台应用
 
-### <a name="to-create-a-c-console-app-that-references-the-static-library"></a>创建引用静态库的 C++ 控制台应用
+::: moniker range="vs-2019"
 
-1. 在菜单栏上，依次选择“文件” > “新建” > “项目”。
+### <a name="to-create-a-c-console-app-that-references-the-static-library-in-visual-studio-2019"></a>若要创建C++控制台应用，它引用静态库中 Visual Studio 2019
+
+1. 在**解决方案资源管理器**，右键单击该解决方案的顶级节点，然后选择**添加** > **新建项目**打开**添加新项目**对话框。
+
+1. 在对话框顶部，设置**语言**到**C++**，将**平台**到**Windows**，并设置**项目类型**到**控制台**。 
+
+1. 从已筛选的项目类型列表中，选择**控制台应用程序**然后选择**下一步**。 在下一页上，输入*MyExecRefsLib*中**名称**框来指定项目的名称并根据需要指定项目位置。
+
+1. 选择**创建**按钮以创建客户端项目。
+
+::: moniker-end
+
+::: moniker range="vs-2017"
+
+### <a name="to-create-a-c-console-app-that-references-the-static-library-in-visual-studio-2017"></a>若要创建C++控制台应用，它引用静态库在 Visual Studio 2017
+
+1. 在菜单栏上选择“文件”>“新建”>“项目”。
 
 1. 在左窗格中**新的项目**对话框框中，展开**已安装** > **Visual C++** ，然后选择**Windows 桌面**. 在中心窗格中，选择**Windows 桌面向导**。
 
-   > [!NOTE]
-   > 对于版本的 Visual Studio 2017，在**新的项目**对话框框中，展开**已安装** > **模板** >  **Visual C++** ，然后选择**Win32**。 在中间窗格中，选择 **“Win32 控制台应用程序”**。
+1. 在 *“名称”* 框中为项目指定名称，例如 **MyExecRefsLib** 。 在 **“解决方案”** 旁的下拉列表中选择 **“添加到解决方案”**。 该命令将新项目添加到包含静态库的解决方案。 选择“确定”  按钮。
+
+1. 下**应用程序类型**，选择**控制台应用程序 (.exe)**。
+
+1. 下**其他选项**，取消选中**预编译标头**复选框。
+
+1. 选择**确定**创建项目。
+
+::: moniker-end
+
+::: moniker range="vs-2015"
+
+### <a name="to-create-a-c-console-app-that-references-the-static-library-in-visual-studio-2015"></a>若要创建C++控制台应用，它引用静态库在 Visual Studio 2015
+
+1. 在菜单栏上选择“文件”>“新建”>“项目”。
+
+1. 在中**新的项目**对话框框中，展开**已安装** > **模板** > **Visual C++** ，并然后选择**Win32**。 在中间窗格中，选择 **“Win32 控制台应用程序”**。
 
 1. 在 *“名称”* 框中为项目指定名称，例如 **MyExecRefsLib** 。 在 **“解决方案”** 旁的下拉列表中选择 **“添加到解决方案”**。 该命令将新项目添加到包含静态库的解决方案。 选择“确定”  按钮。
 
-    - 对于 Visual Studio 2017，
+1. 单击 **“下一步”**。
 
-        1. 下**应用程序类型**，选择**控制台应用程序 (.exe)**。
+1. 请确保**控制台应用程序**处于选中状态。 然后，检查**空项目**框，然后选择**完成**。
 
-        1. 下**其他选项**，取消选中**预编译标头**复选框。
-
-        1. 选择**确定**创建项目。
-
-    - 对于版本的 Visual Studio 2017，
-
-        1. 单击 **“下一步”**。
-
-        1. 请确保**控制台应用程序**处于选中状态。 然后，检查**空项目**框，然后选择**完成**。
+::: moniker-end
 
 ##  <a name="UseLibInApp"></a> 在应用中使用静态库的功能
 

@@ -11,16 +11,16 @@ helpviewer_keywords:
 - cpp.stop
 - Class View, hint file
 ms.assetid: 17194f66-cf62-4523-abec-77db0675ab65
-ms.openlocfilehash: 3d8b3be76fea454ed3b3dd3fd2a44174f34c065c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 919cbedd0c0d7c610273d597328979d1fb449f8f
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62291879"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446307"
 ---
 # <a name="hint-files"></a>提示文件
 
-提示文件包含否则会导致代码区域被 C++ 浏览数据库分析器跳过。 打开 Visual C++ 项目时，分析器会分析项目中每个源文件内的代码，并使用每个识别符的相关信息构建数据库。 IDE 使用此信息来支持代码浏览功能，例如“类视图”浏览器和“导航栏”。
+提示文件包含否则会导致代码区域被 C++ 浏览数据库分析器跳过。 当你打开 Visual StudioC++项目中，分析器分析项目中每个源文件中的代码，并生成具有有关每个标识符的信息的数据库。 IDE 使用此信息来支持代码浏览功能，例如“类视图”浏览器和“导航栏”。
 
 C++ 浏览数据库分析器是一款模糊分析器，它可在很短的时间内分析大量代码。 其快速运行的原因之一是因为它跳过了块内容。 例如，它仅记录函数的位置和参数，而忽略其内容。 某些宏可能导致用于确定块的开头和结尾的启发出现问题。 这些问题会导致代码区域记录不当。
 
@@ -118,7 +118,7 @@ void Function() NOEXCEPT
 
 - 包含 Visual C++ 安装包 (vcpackages) 的目录。 此目录包含一个内置的提示文件，用于描述常用系统文件中的符号（如 windows.h）。 因此，项目会自动继承其所需的大部分提示。
 
-- 从源文件根目录指向包含源文件本身的目录的路径。 在典型的 Visual C++ 项目中，根目录包含解决方案或项目文件。
+- 从源文件根目录指向包含源文件本身的目录的路径。 在典型的 Visual Studio 中C++项目的根目录包含的解决方案或项目文件。
 
    此规则的例外情况是“停止”文件位于源文件的路径中。 停止文件是指名为 cpp.stop 的任意文件。 此文件可加强对搜索顺序的控制。 分析系统首先搜索的不是根目录，而是先搜索包含“停止”文件的目录，再逐一搜索到包含源文件的目录。 在典型项目中，无需停止文件。
 
@@ -162,7 +162,7 @@ void Function() NOEXCEPT
 
 此示例显示了如何从提示文件中累积提示。 本例中不使用停止文件。
 
-此图显示了 Visual C++ 项目中的一些物理目录。 `vcpackages`、`Debug``A1` 和 `A2` 目录中存在提示文件。
+该图显示了一些的物理目录的 Visual Studio 中C++项目。 `vcpackages`、`Debug``A1` 和 `A2` 目录中存在提示文件。
 
 ### <a name="hint-file-directories"></a>提示文件目录
 
@@ -244,7 +244,7 @@ void Function() NOEXCEPT
 
 ## <a name="see-also"></a>请参阅
 
-[为 Visual C++ 项目创建的文件类型](file-types-created-for-visual-cpp-projects.md)<br>
+[视觉对象文件类型创建C++项目](file-types-created-for-visual-cpp-projects.md)<br>
 [#define 指令 (C/C++)](../../preprocessor/hash-define-directive-c-cpp.md)<br>
 [#undef 指令 (C/C++)](../../preprocessor/hash-undef-directive-c-cpp.md)<br>
 [SAL 批注](../../c-runtime-library/sal-annotations.md)<br>

@@ -1,6 +1,6 @@
 ---
 title: 如何：从现有代码创建 C++ 项目
-ms.date: 01/15/2019
+ms.date: 05/06/2019
 helpviewer_keywords:
 - C++, creating projects from existing code
 - Create New Project From Existing Code Files Wizard, project settings
@@ -10,12 +10,12 @@ f1_keywords:
 - vc.appwiz.importwiz.debugsettings
 - vc.appwiz.importwiz.releasesettings
 ms.assetid: e328a938-395c-48ea-9e35-dd433de12b31
-ms.openlocfilehash: 1658e19595d8cfc7966ca881abfdd2aa8acf76ab
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: a899fe7f1b038ac1497465171098183f63f40564
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62189009"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221452"
 ---
 # <a name="how-to-create-a-c-project-from-existing-code"></a>如何：从现有代码创建 C++ 项目
 
@@ -26,8 +26,6 @@ ms.locfileid: "62189009"
 ### <a name="to-create-a-c-project-from-existing-code"></a>从现有代码创建 C++ 项目
 
 1. 在“文件”菜单上，选择“新建” > “从现有代码创建项目”。
-
-1. 在“从现有代码文件创建新项目”向导的首页，在“要创建什么类型的项目?”列表中选择“Visual C++”。 选择“下一步”  继续。
 
 1. 指定项目位置、源文件目录以及向导导入新项目的文件类型。 选择“下一步”  继续。
 
@@ -44,7 +42,7 @@ ms.locfileid: "62189009"
 
     | 设置 | 描述 |
     | --- | --- |
-    | **使用 Visual Studio** | 指定使用 Visual Studio 包含的生成工具来生成新项目。 默认情况下选择此选项。<br/><br/>选择“项目类型”以指定向导生成的项目类型。 选择“Windows 应用程序项目”、“控制台应用程序项目”、“动态链接库 (DLL) 项目”或“静态库 (LIB) 项目”。<br/><br/>检查“添加对 ATL 的支持”，以便为新项目添加 ATL 支持。<br/><br/>检查“添加对 MFC 的支持”，以便为新项目添加 MFC 支持。<br/><br/>检查“添加对公共语言运行时的支持”，以便为项目添加 CLR 编程支持。 对于符合性类型，选择“公共语言运行时支持”，例如“公共语言运行时(旧语法)”，以符合 Managed Extensions for C++ 语法（即 Visual C++ 2005 之前的 CLR 编程语法）的规定。 |
+    | **使用 Visual Studio** | 指定使用 Visual Studio 包含的生成工具来生成新项目。 默认情况下选择此选项。<br/><br/>选择“项目类型”以指定向导生成的项目类型。 选择“Windows 应用程序项目”、“控制台应用程序项目”、“动态链接库 (DLL) 项目”或“静态库 (LIB) 项目”。<br/><br/>检查“添加对 ATL 的支持”，以便为新项目添加 ATL 支持。<br/><br/>检查“添加对 MFC 的支持”，以便为新项目添加 MFC 支持。<br/><br/>检查“添加对公共语言运行时的支持”，以便为项目添加 CLR 编程支持。 选择**公共语言运行时支持**为符合性类型，如**公共语言运行时 （旧语法）** 与托管扩展的符合性C++语法，CLR 编程语法在 Visual Studio 2005 之前。 |
     | **使用外部生成系统** | 指定使用未包含在 Visual Studio 中的生成工具来生成新项目。 如果选择此选项，可在“指定调试配置设置”页和“指定发布配置设置”页上指定生成命令行。 |
 
     ![项目设置](media/settings.png)

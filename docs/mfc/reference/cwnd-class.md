@@ -818,12 +818,12 @@ helpviewer_keywords:
 - CWnd [MFC], WindowProc
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
-ms.openlocfilehash: 493fe04f34f615d9113196e3db8bc744f420d4a2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e88c375560c617e970c70adda245125ac8242ae4
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323457"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220352"
 ---
 # <a name="cwnd-class"></a>CWnd 类
 
@@ -1822,7 +1822,7 @@ CWnd* ChildWindowFromPoint(
 *nflags*<br/>
 指定要跳过的子窗口。 此参数可以是以下值的组合：
 
-|“值”|含义|
+|值|含义|
 |-----------|-------------|
 |CWP_ALL|请勿跳过任何子窗口|
 |CWP_SKIPINVISIBLE|跳过不可见的子窗口|
@@ -1970,7 +1970,7 @@ virtual HRESULT CreateAccessibleProxy(
 *wParam*<br/>
 标识由 Active Accessibility 代理服务器访问的对象。 可以是下列值之一
 
-|“值”|含义|
+|值|含义|
 |-----------|-------------|
 |OBJID_CLIENT|表示窗口的工作区。|
 
@@ -6127,7 +6127,7 @@ afx_msg void OnChar(
 *nFlags*<br/>
 包含扫描代码、 密钥转换代码、 上一项状态和上下文的代码中，如下面的列表中所示：
 
-|“值”|含义|
+|值|含义|
 |-----------|-------------|
 |0-15|指定的重复计数。 值是由于用户按下键而重复击键次数。|
 |16-23|指定扫描代码。 值取决于原始设备制造商 (OEM)|
@@ -6344,7 +6344,7 @@ afx_msg int OnCompareItem(
 
 指示两个项的相对位置。 它可能是以下值之一：
 
-|“值”|含义|
+|值|含义|
 |-----------|-------------|
 |-1|第 1 项进行排序项 2 之前。|
 |0|第 1 项和项 2 排序相同。|
@@ -6542,7 +6542,7 @@ afx_msg void OnDeadChar(
 *nFlags*<br/>
 指定扫描代码、 密钥转换代码、 上一项状态和上下文的代码中，如下面的列表中所示：
 
-|“值”|描述|
+|值|描述|
 |-----------|-----------------|
 |0-7|扫描代码 （依赖于 OEM 的值）。 高序位字低位字节。|
 |8|扩展的密钥，如功能键或 （如果它是扩展的键为 1; 否则为 0） 数字键盘上的密钥。|
@@ -7386,7 +7386,7 @@ afx_msg void OnKeyDown(
 *nFlags*<br/>
 指定扫描代码、 密钥转换代码、 上一项状态和上下文的代码中，如下面的列表中所示：
 
-|“值”|描述|
+|值|描述|
 |-----------|-----------------|
 |0-7|扫描代码 （依赖于 OEM 的值）。|
 |8|扩展的密钥，如函数密钥或数字小键盘 (如果它是一个扩展的密钥，则为 1) 上的某个项。|
@@ -7431,7 +7431,7 @@ afx_msg void OnKeyUp(
 *nFlags*<br/>
 指定扫描代码、 密钥转换代码、 上一项状态和上下文的代码中，如下面的列表中所示：
 
-|“值”|描述|
+|值|描述|
 |-----------|-----------------|
 |0-7|扫描代码 （依赖于 OEM 的值）。 高序位字低位字节。|
 |8|扩展的密钥，如功能键或 （如果它是扩展的键为 1; 否则为 0） 数字键盘上的密钥。|
@@ -7757,7 +7757,7 @@ afx_msg LRESULT OnMenuChar(
 
 返回值的高序位字应包含以下命令代码之一：
 
-|“值”|Description|
+|值|Description|
 |-----------|-----------------|
 |0|告知 Windows 放弃用户按下并在系统扬声器上创建简短的提示音的字符。|
 |1|告知 Windows，若要关闭当前菜单。|
@@ -8262,7 +8262,7 @@ afx_msg LRESULT OnNcHitTest(CPoint point);
 
 ### <a name="return-value"></a>返回值
 
-其中一个鼠标命中测试枚举下面列出的值。
+鼠标命中测试的一个枚举值。 请参阅[WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest)有关值的列表。
 
 ### <a name="remarks"></a>备注
 
@@ -8282,7 +8282,7 @@ afx_msg void OnNcLButtonDblClk(
 ### <a name="parameters"></a>参数
 
 *nHitTest*<br/>
-指定[命中测试代码](#onnchittest)。 命中的测试是一个测试，以便确定光标的位置。
+指定[命中测试代码](#onnchittest)。 命中的测试是一个测试，以便确定光标的位置。 请参阅[WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest)有关值的列表。
 
 *point*<br/>
 指定`CPoint`对象，其中包含 x 和 y 屏幕坐标的光标位置。 这些坐标始终都相对于屏幕的左上角。
@@ -8307,7 +8307,7 @@ afx_msg void OnNcLButtonDown(
 ### <a name="parameters"></a>参数
 
 *nHitTest*<br/>
-指定[命中测试代码](#onnchittest)。 命中的测试是一个测试，以便确定光标的位置。
+指定[命中测试代码](#onnchittest)。 命中的测试是一个测试，以便确定光标的位置。 请参阅[WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest)有关值的列表。
 
 *point*<br/>
 指定`CPoint`对象，其中包含 x 和 y 屏幕坐标的光标位置。 这些坐标始终都相对于屏幕的左上角。
@@ -8332,7 +8332,7 @@ afx_msg void OnNcLButtonUp(
 ### <a name="parameters"></a>参数
 
 *nHitTest*<br/>
-指定[命中测试代码](#onnchittest)。 命中的测试是一个测试，以便确定光标的位置。
+指定[命中测试代码](#onnchittest)。 命中的测试是一个测试，以便确定光标的位置。 请参阅[WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest)有关值的列表。
 
 *point*<br/>
 指定`CPoint`对象，其中包含 x 和 y 屏幕坐标的光标位置。 这些坐标始终都相对于屏幕的左上角。
@@ -9524,7 +9524,7 @@ afx_msg void OnSysChar(
 *nFlags*<br/>
 *NFlags*参数可以为下列值：
 
-|“值”|含义|
+|值|含义|
 |-----------|-------------|
 |0-15|指定的重复计数。 值是由于用户按下键而重复击键次数...|
 |16-23|指定扫描代码。 值取决于原始设备制造商 (OEM)|
@@ -9648,7 +9648,7 @@ afx_msg void OnSysDeadChar(
 *nFlags*<br/>
 指定扫描代码、 密钥转换代码、 上一项状态和上下文的代码中，如下面的列表中所示：
 
-|“值”|含义|
+|值|含义|
 |-----------|-------------|
 |0-7|扫描代码 （依赖于 OEM 的值）。 高序位字低位字节。|
 |8|扩展的密钥，如功能键或 （如果它是扩展的键为 1; 否则为 0） 数字键盘上的密钥。|
@@ -9687,7 +9687,7 @@ afx_msg void OnSysKeyDown(
 *nFlags*<br/>
 指定扫描代码、 密钥转换代码、 上一项状态和上下文的代码中，如下面的列表中所示：
 
-|“值”|含义|
+|值|含义|
 |-----------|-------------|
 |0-7|扫描代码 （依赖于 OEM 的值）。 高序位字低位字节。|
 |8|扩展的密钥，如功能键或 （如果它是扩展的键为 1; 否则为 0） 数字键盘上的密钥。|
@@ -9734,7 +9734,7 @@ afx_msg void OnSysKeyUp(
 *nFlags*<br/>
 指定扫描代码、 密钥转换代码、 上一项状态和上下文的代码中，如下面的列表中所示：
 
-|“值”|含义|
+|值|含义|
 |-----------|-------------|
 |0-7|扫描代码 （依赖于 OEM 的值）。 高序位字低位字节。|
 |8|扩展的密钥，如功能键或 （如果它是扩展的键为 1; 否则为 0） 数字键盘上的密钥。|
